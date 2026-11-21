@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006294 RID: 25236
+	// Token: 0x02006905 RID: 26885
 	public class ICameraOperationTypeT
 	{
-		// Token: 0x1700BC58 RID: 48216
-		// (get) Token: 0x0602B991 RID: 178577 RVA: 0x0060085A File Offset: 0x005FEA5A
-		// (set) Token: 0x0602B992 RID: 178578 RVA: 0x00600862 File Offset: 0x005FEA62
+		// Token: 0x1700C5E0 RID: 50656
+		// (get) Token: 0x0602E0F2 RID: 188658 RVA: 0x0064B662 File Offset: 0x00649862
+		// (set) Token: 0x0602E0F3 RID: 188659 RVA: 0x0064B66A File Offset: 0x0064986A
 		public ECameraOperationType Type { get; set; }
 
-		// Token: 0x0602B993 RID: 178579 RVA: 0x0060086B File Offset: 0x005FEA6B
+		// Token: 0x0602E0F4 RID: 188660 RVA: 0x0064B673 File Offset: 0x00649873
 		public ICameraOperationTypeT()
 		{
 			this.Type = ECameraOperationType.Enable;

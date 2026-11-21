@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F38 RID: 3896
+	// Token: 0x0200101D RID: 4125
 	public struct PinballSkillDisplayConfig : IFlatbufferObject
 	{
-		// Token: 0x170029D8 RID: 10712
-		// (get) Token: 0x0600B04F RID: 45135 RVA: 0x002C4DFD File Offset: 0x002C2FFD
+		// Token: 0x17002A3E RID: 10814
+		// (get) Token: 0x0600B670 RID: 46704 RVA: 0x002E1759 File Offset: 0x002DF959
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B050 RID: 45136 RVA: 0x002C4E0A File Offset: 0x002C300A
+		// Token: 0x0600B671 RID: 46705 RVA: 0x002E1766 File Offset: 0x002DF966
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B051 RID: 45137 RVA: 0x002C4E14 File Offset: 0x002C3014
+		// Token: 0x0600B672 RID: 46706 RVA: 0x002E1770 File Offset: 0x002DF970
 		public static PinballSkillDisplayConfig GetRootAsPinballSkillDisplayConfig(ByteBuffer _bb)
 		{
 			return PinballSkillDisplayConfig.GetRootAsPinballSkillDisplayConfig(_bb, default(PinballSkillDisplayConfig));
 		}
 
-		// Token: 0x0600B052 RID: 45138 RVA: 0x002C4E30 File Offset: 0x002C3030
+		// Token: 0x0600B673 RID: 46707 RVA: 0x002E178C File Offset: 0x002DF98C
 		public static PinballSkillDisplayConfig GetRootAsPinballSkillDisplayConfig(ByteBuffer _bb, PinballSkillDisplayConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B053 RID: 45139 RVA: 0x002C4E4D File Offset: 0x002C304D
+		// Token: 0x0600B674 RID: 46708 RVA: 0x002E17A9 File Offset: 0x002DF9A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B054 RID: 45140 RVA: 0x002C4E5C File Offset: 0x002C305C
+		// Token: 0x0600B675 RID: 46709 RVA: 0x002E17B8 File Offset: 0x002DF9B8
 		public PinballSkillDisplayConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170029D9 RID: 10713
-		// (get) Token: 0x0600B055 RID: 45141 RVA: 0x002C4E6C File Offset: 0x002C306C
+		// Token: 0x17002A3F RID: 10815
+		// (get) Token: 0x0600B676 RID: 46710 RVA: 0x002E17C8 File Offset: 0x002DF9C8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170029DA RID: 10714
-		// (get) Token: 0x0600B056 RID: 45142 RVA: 0x002C4EA8 File Offset: 0x002C30A8
+		// Token: 0x17002A40 RID: 10816
+		// (get) Token: 0x0600B677 RID: 46711 RVA: 0x002E1804 File Offset: 0x002DFA04
 		public string Name
 		{
 			get
@@ -80,20 +80,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B057 RID: 45143 RVA: 0x002C4EDF File Offset: 0x002C30DF
+		// Token: 0x0600B678 RID: 46712 RVA: 0x002E183B File Offset: 0x002DFA3B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600B058 RID: 45144 RVA: 0x002C4EEE File Offset: 0x002C30EE
+		// Token: 0x0600B679 RID: 46713 RVA: 0x002E184A File Offset: 0x002DFA4A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170029DB RID: 10715
-		// (get) Token: 0x0600B059 RID: 45145 RVA: 0x002C4F08 File Offset: 0x002C3108
+		// Token: 0x17002A41 RID: 10817
+		// (get) Token: 0x0600B67A RID: 46714 RVA: 0x002E1864 File Offset: 0x002DFA64
 		public string Desc
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B05A RID: 45146 RVA: 0x002C4F3F File Offset: 0x002C313F
+		// Token: 0x0600B67B RID: 46715 RVA: 0x002E189B File Offset: 0x002DFA9B
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600B05B RID: 45147 RVA: 0x002C4F4E File Offset: 0x002C314E
+		// Token: 0x0600B67C RID: 46716 RVA: 0x002E18AA File Offset: 0x002DFAAA
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600B05C RID: 45148 RVA: 0x002C4F68 File Offset: 0x002C3168
+		// Token: 0x0600B67D RID: 46717 RVA: 0x002E18C4 File Offset: 0x002DFAC4
 		public string ValueList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -130,8 +130,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170029DC RID: 10716
-		// (get) Token: 0x0600B05D RID: 45149 RVA: 0x002C4FA4 File Offset: 0x002C31A4
+		// Token: 0x17002A42 RID: 10818
+		// (get) Token: 0x0600B67E RID: 46718 RVA: 0x002E1900 File Offset: 0x002DFB00
 		public int ValueListLength
 		{
 			get
@@ -145,8 +145,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170029DD RID: 10717
-		// (get) Token: 0x0600B05E RID: 45150 RVA: 0x002C4FD0 File Offset: 0x002C31D0
+		// Token: 0x17002A43 RID: 10819
+		// (get) Token: 0x0600B67F RID: 46719 RVA: 0x002E192C File Offset: 0x002DFB2C
 		public bool IsCaptainSkill
 		{
 			get
@@ -156,24 +156,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B05F RID: 45151 RVA: 0x002C5010 File Offset: 0x002C3210
+		// Token: 0x0600B680 RID: 46720 RVA: 0x002E196C File Offset: 0x002DFB6C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ValueListIter()或GetValueListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ValueList()
+		public string[] ValueList()
 		{
 			return this.ValueListIter().ToArray<string>();
 		}
 
-		// Token: 0x0600B060 RID: 45152 RVA: 0x002C501D File Offset: 0x002C321D
+		// Token: 0x0600B681 RID: 46721 RVA: 0x002E1979 File Offset: 0x002DFB79
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ValueListIter()
+		public IEnumerable<string> ValueListIter()
 		{
 			PinballSkillDisplayConfig.<ValueListIter>d__24 <ValueListIter>d__ = new PinballSkillDisplayConfig.<ValueListIter>d__24(-2);
 			<ValueListIter>d__.<>3__<>4__this = this;
 			return <ValueListIter>d__;
 		}
 
-		// Token: 0x04005002 RID: 20482
+		// Token: 0x040055E7 RID: 21991
 		private Table __p;
 	}
 }

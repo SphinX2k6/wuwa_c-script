@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x02007071 RID: 28785
+	// Token: 0x020061F2 RID: 25074
 	public enum ETimeScaleSourceGroup
 	{
-		// Token: 0x04024B4F RID: 150351
+		// Token: 0x0401FE0A RID: 130570
 		Default,
-		// Token: 0x04024B50 RID: 150352
+		// Token: 0x0401FE0B RID: 130571
 		Battle,
-		// Token: 0x04024B51 RID: 150353
+		// Token: 0x0401FE0C RID: 130572
 		SelfCentered,
-		// Token: 0x04024B52 RID: 150354
+		// Token: 0x0401FE0D RID: 130573
 		AdvancedBattle,
-		// Token: 0x04024B53 RID: 150355
+		// Token: 0x0401FE0E RID: 130574
 		ULT,
-		// Token: 0x04024B54 RID: 150356
+		// Token: 0x0401FE0F RID: 130575
 		BattleFinish
 	}
 }

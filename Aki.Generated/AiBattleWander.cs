@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AE9 RID: 2793
+	// Token: 0x02000BC3 RID: 3011
 	public struct AiBattleWander : IFlatbufferObject
 	{
-		// Token: 0x1700024E RID: 590
-		// (get) Token: 0x06004652 RID: 18002 RVA: 0x001D24C1 File Offset: 0x001D06C1
+		// Token: 0x17000265 RID: 613
+		// (get) Token: 0x06004B99 RID: 19353 RVA: 0x001F1F59 File Offset: 0x001F0159
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004653 RID: 18003 RVA: 0x001D24CE File Offset: 0x001D06CE
+		// Token: 0x06004B9A RID: 19354 RVA: 0x001F1F66 File Offset: 0x001F0166
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004654 RID: 18004 RVA: 0x001D24D8 File Offset: 0x001D06D8
+		// Token: 0x06004B9B RID: 19355 RVA: 0x001F1F70 File Offset: 0x001F0170
 		public static AiBattleWander GetRootAsAiBattleWander(ByteBuffer _bb)
 		{
 			return AiBattleWander.GetRootAsAiBattleWander(_bb, default(AiBattleWander));
 		}
 
-		// Token: 0x06004655 RID: 18005 RVA: 0x001D24F4 File Offset: 0x001D06F4
+		// Token: 0x06004B9C RID: 19356 RVA: 0x001F1F8C File Offset: 0x001F018C
 		public static AiBattleWander GetRootAsAiBattleWander(ByteBuffer _bb, AiBattleWander obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004656 RID: 18006 RVA: 0x001D2511 File Offset: 0x001D0711
+		// Token: 0x06004B9D RID: 19357 RVA: 0x001F1FA9 File Offset: 0x001F01A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004657 RID: 18007 RVA: 0x001D2520 File Offset: 0x001D0720
+		// Token: 0x06004B9E RID: 19358 RVA: 0x001F1FB8 File Offset: 0x001F01B8
 		public AiBattleWander __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700024F RID: 591
-		// (get) Token: 0x06004658 RID: 18008 RVA: 0x001D2530 File Offset: 0x001D0730
+		// Token: 0x17000266 RID: 614
+		// (get) Token: 0x06004B9F RID: 19359 RVA: 0x001F1FC8 File Offset: 0x001F01C8
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004659 RID: 18009 RVA: 0x001D256C File Offset: 0x001D076C
+		// Token: 0x06004BA0 RID: 19360 RVA: 0x001F2004 File Offset: 0x001F0204
 		public int GroupIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000250 RID: 592
-		// (get) Token: 0x0600465A RID: 18010 RVA: 0x001D25AC File Offset: 0x001D07AC
+		// Token: 0x17000267 RID: 615
+		// (get) Token: 0x06004BA1 RID: 19361 RVA: 0x001F2044 File Offset: 0x001F0244
 		public int GroupIdsLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600465B RID: 18011 RVA: 0x001D25D7 File Offset: 0x001D07D7
+		// Token: 0x06004BA2 RID: 19362 RVA: 0x001F206F File Offset: 0x001F026F
 		public Span<int> GetGroupIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600465C RID: 18012 RVA: 0x001D25E6 File Offset: 0x001D07E6
+		// Token: 0x06004BA3 RID: 19363 RVA: 0x001F207E File Offset: 0x001F027E
 		public int[] GetGroupIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600465D RID: 18013 RVA: 0x001D2600 File Offset: 0x001D0800
+		// Token: 0x06004BA4 RID: 19364 RVA: 0x001F2095 File Offset: 0x001F0295
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupIdsIter()或GetGroupIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupIds()
+		public int[] GroupIds()
 		{
-			AiBattleWander aiBattleWander = this;
-			return aiBattleWander.GetGroupIdsArray() ?? Array.Empty<int>();
+			return this.GetGroupIdsArray();
 		}
 
-		// Token: 0x0600465E RID: 18014 RVA: 0x001D2624 File Offset: 0x001D0824
+		// Token: 0x06004BA5 RID: 19365 RVA: 0x001F209D File Offset: 0x001F029D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupIdsIter()
+		public IEnumerable<int> GroupIdsIter()
 		{
 			AiBattleWander.<GroupIdsIter>d__16 <GroupIdsIter>d__ = new AiBattleWander.<GroupIdsIter>d__16(-2);
 			<GroupIdsIter>d__.<>3__<>4__this = this;
 			return <GroupIdsIter>d__;
 		}
 
-		// Token: 0x04004ACA RID: 19146
+		// Token: 0x040050A4 RID: 20644
 		private Table __p;
 	}
 }

@@ -5,18 +5,18 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EDD RID: 20189
+	// Token: 0x02003EA6 RID: 16038
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleDefine : IStaticVariableResetter
 	{
-		// Token: 0x06033CFD RID: 212221 RVA: 0x00C211A0 File Offset: 0x00C1F3A0
+		// Token: 0x06028B68 RID: 166760 RVA: 0x00B6A6B8 File Offset: 0x00B688B8
 		static RogueBattleDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RogueBattleDefine.CreateStaticDefaultValue), new Action(RogueBattleDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06033CFE RID: 212222 RVA: 0x00C211BF File Offset: 0x00C1F3BF
+		// Token: 0x06028B69 RID: 166761 RVA: 0x00B6A6D7 File Offset: 0x00B688D7
 		public static void CreateStaticDefaultValue()
 		{
 			RogueBattleDefine.FetterTypeIconMap = new Dictionary<ERogueResBondEffectType, string>
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033CFF RID: 212223 RVA: 0x00C211EF File Offset: 0x00C1F3EF
+		// Token: 0x06028B6A RID: 166762 RVA: 0x00B6A707 File Offset: 0x00B68907
 		public static void ResetStaticDefaultValue()
 		{
 			RogueBattleDefine.FetterTypeIconMap = null;
 		}
 
-		// Token: 0x06033D00 RID: 212224 RVA: 0x00C211F8 File Offset: 0x00C1F3F8
+		// Token: 0x06028B6B RID: 166763 RVA: 0x00B6A710 File Offset: 0x00B68910
 		public static int SortRogueBattleRoleBondInfo(RoleBondInfo aBondInfo, RoleBondInfo bBondInfo)
 		{
 			if (aBondInfo.Level != bBondInfo.Level)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return bBondInfo.CurStar - aBondInfo.CurStar;
 		}
 
-		// Token: 0x06033D01 RID: 212225 RVA: 0x00C2124C File Offset: 0x00C1F44C
+		// Token: 0x06028B6C RID: 166764 RVA: 0x00B6A764 File Offset: 0x00B68964
 		public static int SortRogueBattleRoleBondUpdateInfo(IRogueBattleRoleBondUpdateInfo a, IRogueBattleRoleBondUpdateInfo b)
 		{
 			RoleBondInfo newRoleBondInfo = a.NewRoleBondInfo;
@@ -72,16 +72,16 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return newRoleBondInfo2.CurStar - newRoleBondInfo.CurStar;
 		}
 
-		// Token: 0x0401B855 RID: 112725
+		// Token: 0x04016228 RID: 90664
 		public static Dictionary<ERogueResBondEffectType, string> FetterTypeIconMap;
 
-		// Token: 0x0401B856 RID: 112726
+		// Token: 0x04016229 RID: 90665
 		public const int ROLELEVEL_EFFECTSHOW_TAG = 34;
 
-		// Token: 0x0401B857 RID: 112727
+		// Token: 0x0401622A RID: 90666
 		public const int SKILLLEVEL_EFFECTSHOW_TAG = 33;
 
-		// Token: 0x0401B858 RID: 112728
+		// Token: 0x0401622B RID: 90667
 		public const int WEAPONLEVEL_EFFECTSHOW_TAG = 32;
 	}
 }

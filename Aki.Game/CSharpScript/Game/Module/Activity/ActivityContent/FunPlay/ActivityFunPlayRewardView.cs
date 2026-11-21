@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 {
-	// Token: 0x02006571 RID: 25969
+	// Token: 0x020054EF RID: 21743
 	public class ActivityFunPlayRewardView : UiPanelBase
 	{
-		// Token: 0x06041147 RID: 266567 RVA: 0x00FC5AC8 File Offset: 0x00FC3CC8
+		// Token: 0x06035E0C RID: 220684 RVA: 0x00F0CAAC File Offset: 0x00F0ACAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041148 RID: 266568 RVA: 0x00FC5BF4 File Offset: 0x00FC3DF4
+		// Token: 0x06035E0D RID: 220685 RVA: 0x00F0CBD8 File Offset: 0x00F0ADD8
 		protected override void OnStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(1);
@@ -50,25 +50,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.AddEventListener();
 		}
 
-		// Token: 0x06041149 RID: 266569 RVA: 0x00FC5C2A File Offset: 0x00FC3E2A
+		// Token: 0x06035E0E RID: 220686 RVA: 0x00F0CC0E File Offset: 0x00F0AE0E
 		protected void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.ActivityFunPlayInfoRefresh, new Action(this.OnGetFunPlayReward));
 		}
 
-		// Token: 0x0604114A RID: 266570 RVA: 0x00FC5C48 File Offset: 0x00FC3E48
+		// Token: 0x06035E0F RID: 220687 RVA: 0x00F0CC2C File Offset: 0x00F0AE2C
 		protected void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.ActivityFunPlayInfoRefresh, new Action(this.OnGetFunPlayReward));
 		}
 
-		// Token: 0x0604114B RID: 266571 RVA: 0x00FC5C66 File Offset: 0x00FC3E66
+		// Token: 0x06035E10 RID: 220688 RVA: 0x00F0CC4A File Offset: 0x00F0AE4A
 		private void OnGetFunPlayReward()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0604114C RID: 266572 RVA: 0x00FC5C6E File Offset: 0x00FC3E6E
+		// Token: 0x06035E11 RID: 220689 RVA: 0x00F0CC52 File Offset: 0x00F0AE52
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreatePropItem()
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return commonItemSmallItemGrid;
 		}
 
-		// Token: 0x0604114D RID: 266573 RVA: 0x00FC5C9C File Offset: 0x00FC3E9C
+		// Token: 0x06035E12 RID: 220690 RVA: 0x00F0CC80 File Offset: 0x00F0AE80
 		private void OnClickFinishButton()
 		{
 			ActivityFunPlayChallengeData currentChallengeData = ActivityFunPlayModel.Instance.GetCurrentChallengeData();
@@ -94,14 +94,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			ActivityFunPlayController.Instance.ChallengeAwardRequest(num.Value);
 		}
 
-		// Token: 0x0604114E RID: 266574 RVA: 0x00FC5D07 File Offset: 0x00FC3F07
+		// Token: 0x06035E13 RID: 220691 RVA: 0x00F0CCEB File Offset: 0x00F0AEEB
 		public void Refresh()
 		{
 			this.RefreshReward();
 			this.RefreshContentState();
 		}
 
-		// Token: 0x0604114F RID: 266575 RVA: 0x00FC5D18 File Offset: 0x00FC3F18
+		// Token: 0x06035E14 RID: 220692 RVA: 0x00F0CCFC File Offset: 0x00F0AEFC
 		private void RefreshReward()
 		{
 			ActivityFunPlayChallengeData currentChallengeData = ActivityFunPlayModel.Instance.GetCurrentChallengeData();
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}
 		}
 
-		// Token: 0x06041150 RID: 266576 RVA: 0x00FC5D54 File Offset: 0x00FC3F54
+		// Token: 0x06035E15 RID: 220693 RVA: 0x00F0CD38 File Offset: 0x00F0AF38
 		private void RefreshContentState()
 		{
 			ActivityFunPlayChallengeData currentChallengeData = ActivityFunPlayModel.Instance.GetCurrentChallengeData();
@@ -149,13 +149,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			sprite.SetUIActive(currentChallengeData.CheckRewardStatus(FunPlayChallengeRewardStatus.FunPlayRewarded));
 		}
 
-		// Token: 0x06041151 RID: 266577 RVA: 0x00FC5DFF File Offset: 0x00FC3FFF
+		// Token: 0x06035E16 RID: 220694 RVA: 0x00F0CDE3 File Offset: 0x00F0AFE3
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x06041153 RID: 266579 RVA: 0x00FC5E0F File Offset: 0x00FC400F
+		// Token: 0x06035E18 RID: 220696 RVA: 0x00F0CDF3 File Offset: 0x00F0AFF3
 		[NullableContext(1)]
 		[CompilerGenerated]
 		private CommonItemSmallItemGrid <OnStart>g__Function1|3_0()
@@ -163,29 +163,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return this.CreatePropItem();
 		}
 
-		// Token: 0x04021E9D RID: 138909
+		// Token: 0x0401C7CE RID: 116686
 		[Nullable(1)]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x0200C767 RID: 51047
+		// Token: 0x0200B14C RID: 45388
 		private class EComponents
 		{
-			// Token: 0x0403C3E7 RID: 246759
+			// Token: 0x04036D39 RID: 224569
 			public const int Title = 0;
 
-			// Token: 0x0403C3E8 RID: 246760
+			// Token: 0x04036D3A RID: 224570
 			public const int ItemScroller = 1;
 
-			// Token: 0x0403C3E9 RID: 246761
+			// Token: 0x04036D3B RID: 224571
 			public const int UnFinishedText = 2;
 
-			// Token: 0x0403C3EA RID: 246762
+			// Token: 0x04036D3C RID: 224572
 			public const int SprDone = 3;
 
-			// Token: 0x0403C3EB RID: 246763
+			// Token: 0x04036D3D RID: 224573
 			public const int FinishButton = 4;
 
-			// Token: 0x0403C3EC RID: 246764
+			// Token: 0x04036D3E RID: 224574
 			public const int FinishedItem = 5;
 		}
 	}

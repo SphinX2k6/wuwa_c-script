@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007155 RID: 29013
+	// Token: 0x02007921 RID: 31009
 	public class ISlideRailStartT
 	{
-		// Token: 0x1700D78A RID: 55178
-		// (get) Token: 0x060336F4 RID: 210676 RVA: 0x006EE2F8 File Offset: 0x006EC4F8
-		// (set) Token: 0x060336F5 RID: 210677 RVA: 0x006EE300 File Offset: 0x006EC500
+		// Token: 0x1700E36F RID: 58223
+		// (get) Token: 0x0603699E RID: 223646 RVA: 0x0074EB04 File Offset: 0x0074CD04
+		// (set) Token: 0x0603699F RID: 223647 RVA: 0x0074EB0C File Offset: 0x0074CD0C
 		public int RailEntityId { get; set; }
 
-		// Token: 0x1700D78B RID: 55179
-		// (get) Token: 0x060336F6 RID: 210678 RVA: 0x006EE309 File Offset: 0x006EC509
-		// (set) Token: 0x060336F7 RID: 210679 RVA: 0x006EE311 File Offset: 0x006EC511
+		// Token: 0x1700E370 RID: 58224
+		// (get) Token: 0x060369A0 RID: 223648 RVA: 0x0074EB15 File Offset: 0x0074CD15
+		// (set) Token: 0x060369A1 RID: 223649 RVA: 0x0074EB1D File Offset: 0x0074CD1D
 		public string SlidePerformDaPath { get; set; }
 
-		// Token: 0x1700D78C RID: 55180
-		// (get) Token: 0x060336F8 RID: 210680 RVA: 0x006EE31A File Offset: 0x006EC51A
-		// (set) Token: 0x060336F9 RID: 210681 RVA: 0x006EE322 File Offset: 0x006EC522
+		// Token: 0x1700E371 RID: 58225
+		// (get) Token: 0x060369A2 RID: 223650 RVA: 0x0074EB26 File Offset: 0x0074CD26
+		// (set) Token: 0x060369A3 RID: 223651 RVA: 0x0074EB2E File Offset: 0x0074CD2E
 		public ISlideRailFollowConfigT SlideRailFollowConfig { get; set; }
 
-		// Token: 0x1700D78D RID: 55181
-		// (get) Token: 0x060336FA RID: 210682 RVA: 0x006EE32B File Offset: 0x006EC52B
-		// (set) Token: 0x060336FB RID: 210683 RVA: 0x006EE333 File Offset: 0x006EC533
+		// Token: 0x1700E372 RID: 58226
+		// (get) Token: 0x060369A4 RID: 223652 RVA: 0x0074EB37 File Offset: 0x0074CD37
+		// (set) Token: 0x060369A5 RID: 223653 RVA: 0x0074EB3F File Offset: 0x0074CD3F
 		public ISlideRailRTPCParamsT RTPCParams { get; set; }
 
-		// Token: 0x060336FC RID: 210684 RVA: 0x006EE33C File Offset: 0x006EC53C
+		// Token: 0x060369A6 RID: 223654 RVA: 0x0074EB48 File Offset: 0x0074CD48
 		public ISlideRailStartT()
 		{
 			this.RailEntityId = 0;

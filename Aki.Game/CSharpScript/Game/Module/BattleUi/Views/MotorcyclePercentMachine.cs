@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D9F RID: 23967
+	// Token: 0x02004D81 RID: 19841
 	public class MotorcyclePercentMachine
 	{
-		// Token: 0x0603CD96 RID: 249238 RVA: 0x00E9DAD1 File Offset: 0x00E9BCD1
+		// Token: 0x06031CF3 RID: 204019 RVA: 0x00DEE389 File Offset: 0x00DEC589
 		public void Init(float percent, float? duration = null)
 		{
 			this.CurPercent = percent;
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD97 RID: 249239 RVA: 0x00E9DB02 File Offset: 0x00E9BD02
+		// Token: 0x06031CF4 RID: 204020 RVA: 0x00DEE3BA File Offset: 0x00DEC5BA
 		public void SetTargetPercent(float percent)
 		{
 			if (percent == this.TargetPercent)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Speed = (percent - this.CurPercent) / this.Duration;
 		}
 
-		// Token: 0x0603CD98 RID: 249240 RVA: 0x00E9DB2C File Offset: 0x00E9BD2C
+		// Token: 0x06031CF5 RID: 204021 RVA: 0x00DEE3E4 File Offset: 0x00DEC5E4
 		public bool Update(float delta)
 		{
 			if (this.Speed == 0f)
@@ -56,31 +56,31 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CD99 RID: 249241 RVA: 0x00E9DBCC File Offset: 0x00E9BDCC
+		// Token: 0x06031CF6 RID: 204022 RVA: 0x00DEE484 File Offset: 0x00DEC684
 		public float GetCurPercent()
 		{
 			return this.CurPercent;
 		}
 
-		// Token: 0x0603CD9A RID: 249242 RVA: 0x00E9DBD4 File Offset: 0x00E9BDD4
+		// Token: 0x06031CF7 RID: 204023 RVA: 0x00DEE48C File Offset: 0x00DEC68C
 		public float GetTargetPercent()
 		{
 			return this.TargetPercent;
 		}
 
-		// Token: 0x0401FB30 RID: 129840
+		// Token: 0x0401A5E8 RID: 108008
 		private const int DURATION = 100;
 
-		// Token: 0x0401FB31 RID: 129841
+		// Token: 0x0401A5E9 RID: 108009
 		private float TargetPercent;
 
-		// Token: 0x0401FB32 RID: 129842
+		// Token: 0x0401A5EA RID: 108010
 		private float CurPercent;
 
-		// Token: 0x0401FB33 RID: 129843
+		// Token: 0x0401A5EB RID: 108011
 		private float Speed;
 
-		// Token: 0x0401FB34 RID: 129844
+		// Token: 0x0401A5EC RID: 108012
 		public float Duration = 100f;
 	}
 }

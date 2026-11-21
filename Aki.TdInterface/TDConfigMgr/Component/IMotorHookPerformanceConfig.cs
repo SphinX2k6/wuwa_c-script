@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200052A RID: 1322
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000591 RID: 1425
 	public class IMotorHookPerformanceConfig
 	{
-		// Token: 0x06001AE4 RID: 6884 RVA: 0x0004E060 File Offset: 0x0004C260
+		// Token: 0x06001CE0 RID: 7392 RVA: 0x00052E1C File Offset: 0x0005101C
 		private IMotorHookPerformanceConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001AE5 RID: 6885 RVA: 0x0004E098 File Offset: 0x0004C298
+		// Token: 0x06001CE1 RID: 7393 RVA: 0x00052E54 File Offset: 0x00051054
 		public static IMotorHookPerformanceConfig Create([Nullable(2)] IMotorHookPerformanceConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001AE6 RID: 6886 RVA: 0x0004E0AB File Offset: 0x0004C2AB
+		// Token: 0x06001CE2 RID: 7394 RVA: 0x00052E67 File Offset: 0x00051067
 		public static IMotorHookPerformanceConfig CreateFromSetValue([Nullable(2)] IMotorHookPerformanceConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001AE7 RID: 6887 RVA: 0x0004E0BE File Offset: 0x0004C2BE
+		// Token: 0x06001CE3 RID: 7395 RVA: 0x00052E7A File Offset: 0x0005107A
 		public IMotorHookPerformanceConfig_SetValue ToSetValue()
 		{
 			return new IMotorHookPerformanceConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000712 RID: 1810
-		// (get) Token: 0x06001AE8 RID: 6888 RVA: 0x0004E0D4 File Offset: 0x0004C2D4
-		// (set) Token: 0x06001AE9 RID: 6889 RVA: 0x0004E10E File Offset: 0x0004C30E
+		// Token: 0x17000795 RID: 1941
+		// (get) Token: 0x06001CE4 RID: 7396 RVA: 0x00052E90 File Offset: 0x00051090
+		// (set) Token: 0x06001CE5 RID: 7397 RVA: 0x00052ECA File Offset: 0x000510CA
 		public virtual long? HookEffectBuffId
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400136A RID: 4970
+		// Token: 0x040014D4 RID: 5332
 		[Nullable(2)]
 		protected IMotorHookPerformanceConfig FbInstance;
 
-		// Token: 0x0400136B RID: 4971
+		// Token: 0x040014D5 RID: 5333
 		[Nullable(2)]
 		protected IMotorHookPerformanceConfig_SetValue PocoInterface;
 	}

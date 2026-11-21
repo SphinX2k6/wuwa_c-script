@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020014E8 RID: 5352
+// Token: 0x020009A0 RID: 2464
 [NullableContext(1)]
 public interface IScratchTicketRoundResult
 {
-	// Token: 0x17000D24 RID: 3364
-	// (get) Token: 0x06009854 RID: 38996
-	// (set) Token: 0x06009855 RID: 38997
+	// Token: 0x17000D45 RID: 3397
+	// (get) Token: 0x06006C2E RID: 27694
+	// (set) Token: 0x06006C2F RID: 27695
 	List<ScratchTicketRewardResult> RewardList { get; set; }
 
-	// Token: 0x17000D25 RID: 3365
-	// (get) Token: 0x06009856 RID: 38998
-	// (set) Token: 0x06009857 RID: 38999
+	// Token: 0x17000D46 RID: 3398
+	// (get) Token: 0x06006C30 RID: 27696
+	// (set) Token: 0x06006C31 RID: 27697
 	float DelayInterval { get; set; }
 
-	// Token: 0x17000D26 RID: 3366
-	// (get) Token: 0x06009858 RID: 39000
-	// (set) Token: 0x06009859 RID: 39001
+	// Token: 0x17000D47 RID: 3399
+	// (get) Token: 0x06006C32 RID: 27698
+	// (set) Token: 0x06006C33 RID: 27699
 	string SequenceName { get; set; }
 }

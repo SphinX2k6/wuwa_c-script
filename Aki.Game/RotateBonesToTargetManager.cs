@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020030E4 RID: 12516
+// Token: 0x0200263C RID: 9788
 [NullableContext(1)]
 [Nullable(0)]
 public class RotateBonesToTargetManager : IClear
 {
-	// Token: 0x170024D4 RID: 9428
-	// (get) Token: 0x0601ACCE RID: 109774 RVA: 0x0073B1E4 File Offset: 0x007393E4
-	// (set) Token: 0x0601ACCF RID: 109775 RVA: 0x0073B1EC File Offset: 0x007393EC
+	// Token: 0x1700265E RID: 9822
+	// (get) Token: 0x060186EA RID: 100074 RVA: 0x00760C20 File Offset: 0x0075EE20
+	// (set) Token: 0x060186EB RID: 100075 RVA: 0x00760C28 File Offset: 0x0075EE28
 	public CharacterActorComponent ActorComp { get; private set; }
 
-	// Token: 0x0601ACD0 RID: 109776 RVA: 0x0073B1F8 File Offset: 0x007393F8
+	// Token: 0x060186EC RID: 100076 RVA: 0x00760C34 File Offset: 0x0075EE34
 	public RotateBonesToTargetManager(CharacterActorComponent actorComp)
 	{
 		this.ActorComp = actorComp;
@@ -21,7 +21,7 @@ public class RotateBonesToTargetManager : IClear
 		this.AiComp = this.ActorComp.Entity.GetComponent<CharacterAiComponent>();
 	}
 
-	// Token: 0x0601ACD1 RID: 109777 RVA: 0x0073B2A3 File Offset: 0x007394A3
+	// Token: 0x060186ED RID: 100077 RVA: 0x00760CDF File Offset: 0x0075EEDF
 	public bool ClearObject()
 	{
 		this.Params.RemoveAllNodeWithoutHead();
@@ -32,7 +32,7 @@ public class RotateBonesToTargetManager : IClear
 		return true;
 	}
 
-	// Token: 0x0601ACD2 RID: 109778 RVA: 0x0073B2E0 File Offset: 0x007394E0
+	// Token: 0x060186EE RID: 100078 RVA: 0x00760D1C File Offset: 0x0075EF1C
 	public void SetDefaultTarget(FVector defaultTargetOffset, float lerpSpeed, float targetUpdateThreshold)
 	{
 		this.DefaultTargetOffset.FromUeVector(defaultTargetOffset);
@@ -45,7 +45,7 @@ public class RotateBonesToTargetManager : IClear
 		}
 	}
 
-	// Token: 0x0601ACD3 RID: 109779 RVA: 0x0073B338 File Offset: 0x00739538
+	// Token: 0x060186EF RID: 100079 RVA: 0x00760D74 File Offset: 0x0075EF74
 	public long SetBoneToTarget(TArray<string> boneNames, float timeLength)
 	{
 		long num = this.HandleCount + 1L;
@@ -56,7 +56,7 @@ public class RotateBonesToTargetManager : IClear
 		return rotateBonesParams.Handle;
 	}
 
-	// Token: 0x0601ACD4 RID: 109780 RVA: 0x0073B384 File Offset: 0x00739584
+	// Token: 0x060186F0 RID: 100080 RVA: 0x00760DC0 File Offset: 0x0075EFC0
 	public void StopBoneToTarget(long handle, float timeLength)
 	{
 		DoublyLinkedNode<RotateBonesParams> headNode = this.Params.GetHeadNode();
@@ -71,7 +71,7 @@ public class RotateBonesToTargetManager : IClear
 		}
 	}
 
-	// Token: 0x0601ACD5 RID: 109781 RVA: 0x0073B3E4 File Offset: 0x007395E4
+	// Token: 0x060186F1 RID: 100081 RVA: 0x00760E20 File Offset: 0x0075F020
 	public long PauseByNames(TArray<string> boneNames, float startLerpTime)
 	{
 		long num = this.HandleCount + 1L;
@@ -82,7 +82,7 @@ public class RotateBonesToTargetManager : IClear
 		return rotateBonesParams.Handle;
 	}
 
-	// Token: 0x0601ACD6 RID: 109782 RVA: 0x0073B430 File Offset: 0x00739630
+	// Token: 0x060186F2 RID: 100082 RVA: 0x00760E6C File Offset: 0x0075F06C
 	public void ClearPause(long handle, float endLerpTime)
 	{
 		DoublyLinkedNode<RotateBonesParams> headNode = this.PauseParams.GetHeadNode();
@@ -97,7 +97,7 @@ public class RotateBonesToTargetManager : IClear
 		}
 	}
 
-	// Token: 0x0601ACD7 RID: 109783 RVA: 0x0073B490 File Offset: 0x00739690
+	// Token: 0x060186F3 RID: 100083 RVA: 0x00760ECC File Offset: 0x0075F0CC
 	public void Update(float deltaSeconds)
 	{
 		DoublyLinkedNode<RotateBonesParams> doublyLinkedNode = this.Params.GetTailNode();
@@ -165,7 +165,7 @@ public class RotateBonesToTargetManager : IClear
 		}
 	}
 
-	// Token: 0x0601ACD8 RID: 109784 RVA: 0x0073B628 File Offset: 0x00739828
+	// Token: 0x060186F4 RID: 100084 RVA: 0x00761064 File Offset: 0x0075F264
 	public void GetActivateBones(TMap<string, float> outMap)
 	{
 		outMap.Empty(0);
@@ -184,13 +184,13 @@ public class RotateBonesToTargetManager : IClear
 		}
 	}
 
-	// Token: 0x0601ACD9 RID: 109785 RVA: 0x0073B6BC File Offset: 0x007398BC
+	// Token: 0x060186F5 RID: 100085 RVA: 0x007610F8 File Offset: 0x0075F2F8
 	public void GetTargetOffset(ref FVector outVector)
 	{
 		outVector.Set((float)this.CurrentTargetOffset.X, (float)this.CurrentTargetOffset.Y, (float)this.CurrentTargetOffset.Z);
 	}
 
-	// Token: 0x0601ACDA RID: 109786 RVA: 0x0073B6E8 File Offset: 0x007398E8
+	// Token: 0x060186F6 RID: 100086 RVA: 0x00761124 File Offset: 0x0075F324
 	private void GetCurrentTargetOffset(Vector @out)
 	{
 		bool flag = false;
@@ -233,52 +233,52 @@ public class RotateBonesToTargetManager : IClear
 		@out.DeepCopy(this.DefaultTargetOffset);
 	}
 
-	// Token: 0x0400CF00 RID: 52992
+	// Token: 0x0400D2F0 RID: 54000
 	private long HandleCount;
 
-	// Token: 0x0400CF01 RID: 52993
+	// Token: 0x0400D2F1 RID: 54001
 	[Nullable(2)]
 	private readonly CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400CF02 RID: 52994
+	// Token: 0x0400D2F2 RID: 54002
 	[Nullable(2)]
 	private readonly CharacterAiComponent AiComp;
 
-	// Token: 0x0400CF03 RID: 52995
+	// Token: 0x0400D2F3 RID: 54003
 	private readonly DoublyLinkedList<RotateBonesParams> Params = new DoublyLinkedList<RotateBonesParams>(null);
 
-	// Token: 0x0400CF04 RID: 52996
+	// Token: 0x0400D2F4 RID: 54004
 	private readonly DoublyLinkedList<RotateBonesParams> PauseParams = new DoublyLinkedList<RotateBonesParams>(null);
 
-	// Token: 0x0400CF05 RID: 52997
+	// Token: 0x0400D2F5 RID: 54005
 	private readonly Dictionary<string, float> CurrentAlphaMap = new Dictionary<string, float>();
 
-	// Token: 0x0400CF06 RID: 52998
+	// Token: 0x0400D2F6 RID: 54006
 	private readonly Dictionary<string, float> PauseAlphaMap = new Dictionary<string, float>();
 
-	// Token: 0x0400CF07 RID: 52999
+	// Token: 0x0400D2F7 RID: 54007
 	private readonly Vector CurrentTargetOffset = Vector.Create();
 
-	// Token: 0x0400CF08 RID: 53000
+	// Token: 0x0400D2F8 RID: 54008
 	private bool InTargetLerp;
 
-	// Token: 0x0400CF09 RID: 53001
+	// Token: 0x0400D2F9 RID: 54009
 	private readonly Vector DefaultTargetOffset = Vector.Create();
 
-	// Token: 0x0400CF0A RID: 53002
+	// Token: 0x0400D2FA RID: 54010
 	private float LerpSpeed = 100f;
 
-	// Token: 0x0400CF0B RID: 53003
+	// Token: 0x0400D2FB RID: 54011
 	private float TargetUpdateThresholdSquared = 100f;
 
-	// Token: 0x0400CF0C RID: 53004
+	// Token: 0x0400D2FC RID: 54012
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400CF0D RID: 53005
+	// Token: 0x0400D2FD RID: 54013
 	private readonly Vector TmpTargetOffset = Vector.Create();
 
-	// Token: 0x0400CF0E RID: 53006
+	// Token: 0x0400D2FE RID: 54014
 	[StaticVariableRuleIgnore]
 	private static readonly Transform TmpTransform = Transform.Create();
 }

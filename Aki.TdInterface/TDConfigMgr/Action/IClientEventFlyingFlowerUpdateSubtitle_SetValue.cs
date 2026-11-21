@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018A9 RID: 6313
+	// Token: 0x02001A34 RID: 6708
 	public class IClientEventFlyingFlowerUpdateSubtitle_SetValue
 	{
-		// Token: 0x04005548 RID: 21832
+		// Token: 0x04005995 RID: 22933
 		public EClientEventFlyingFlowerEventType Type;
 
-		// Token: 0x04005549 RID: 21833
-		[Nullable(1)]
+		// Token: 0x04005996 RID: 22934
 		public PlayFlow Flow;
 	}
 }

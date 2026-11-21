@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F3C RID: 16188
+	// Token: 0x0200437A RID: 17274
 	public class IMonsterMergedHpBarSettingsT
 	{
-		// Token: 0x17007095 RID: 28821
-		// (get) Token: 0x0601701F RID: 94239 RVA: 0x00351897 File Offset: 0x0034FA97
-		// (set) Token: 0x06017020 RID: 94240 RVA: 0x0035189F File Offset: 0x0034FA9F
+		// Token: 0x17007686 RID: 30342
+		// (get) Token: 0x06018681 RID: 99969 RVA: 0x0037AD0B File Offset: 0x00378F0B
+		// (set) Token: 0x06018682 RID: 99970 RVA: 0x0037AD13 File Offset: 0x00378F13
 		public List<long> DisplayBuffIds { get; set; }
 
-		// Token: 0x17007096 RID: 28822
-		// (get) Token: 0x06017021 RID: 94241 RVA: 0x003518A8 File Offset: 0x0034FAA8
-		// (set) Token: 0x06017022 RID: 94242 RVA: 0x003518B0 File Offset: 0x0034FAB0
+		// Token: 0x17007687 RID: 30343
+		// (get) Token: 0x06018683 RID: 99971 RVA: 0x0037AD1C File Offset: 0x00378F1C
+		// (set) Token: 0x06018684 RID: 99972 RVA: 0x0037AD24 File Offset: 0x00378F24
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017023 RID: 94243 RVA: 0x003518B9 File Offset: 0x0034FAB9
+		// Token: 0x06018685 RID: 99973 RVA: 0x0037AD2D File Offset: 0x00378F2D
 		public IMonsterMergedHpBarSettingsT()
 		{
 			this.DisplayBuffIds = null;

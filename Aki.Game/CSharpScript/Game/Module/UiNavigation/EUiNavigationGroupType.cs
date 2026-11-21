@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200493D RID: 18749
+	// Token: 0x020038B4 RID: 14516
 	public enum EUiNavigationGroupType
 	{
-		// Token: 0x0401A3F5 RID: 107509
+		// Token: 0x04014C68 RID: 85096
 		Normal,
-		// Token: 0x0401A3F6 RID: 107510
+		// Token: 0x04014C69 RID: 85097
 		BookMark,
-		// Token: 0x0401A3F7 RID: 107511
+		// Token: 0x04014C6A RID: 85098
 		ScrollBar
 	}
 }

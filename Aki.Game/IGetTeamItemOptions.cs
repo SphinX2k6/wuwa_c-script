@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002958 RID: 10584
+// Token: 0x02001ED3 RID: 7891
 public interface IGetTeamItemOptions
 {
-	// Token: 0x17001D6A RID: 7530
-	// (get) Token: 0x06015DE1 RID: 89569
-	// (set) Token: 0x06015DE2 RID: 89570
+	// Token: 0x17001DC3 RID: 7619
+	// (get) Token: 0x060137E5 RID: 79845
+	// (set) Token: 0x060137E6 RID: 79846
 	ETeamParamType ParamType { get; set; }
 
-	// Token: 0x17001D6B RID: 7531
-	// (get) Token: 0x06015DE3 RID: 89571
-	// (set) Token: 0x06015DE4 RID: 89572
+	// Token: 0x17001DC4 RID: 7620
+	// (get) Token: 0x060137E7 RID: 79847
+	// (set) Token: 0x060137E8 RID: 79848
 	bool? OnlyMyRole { get; set; }
 
-	// Token: 0x17001D6C RID: 7532
-	// (get) Token: 0x06015DE5 RID: 89573
-	// (set) Token: 0x06015DE6 RID: 89574
+	// Token: 0x17001DC5 RID: 7621
+	// (get) Token: 0x060137E9 RID: 79849
+	// (set) Token: 0x060137EA RID: 79850
 	bool? IsControl { get; set; }
 }

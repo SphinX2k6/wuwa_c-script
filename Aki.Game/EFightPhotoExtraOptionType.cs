@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001271 RID: 4721
+// Token: 0x02000725 RID: 1829
 public enum EFightPhotoExtraOptionType
 {
-	// Token: 0x04003A66 RID: 14950
+	// Token: 0x04003AFE RID: 15102
 	Filter,
-	// Token: 0x04003A67 RID: 14951
+	// Token: 0x04003AFF RID: 15103
 	Frame
 }

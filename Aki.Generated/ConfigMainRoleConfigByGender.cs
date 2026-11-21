@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000506 RID: 1286
+	// Token: 0x0200051C RID: 1308
 	public class ConfigMainRoleConfigByGender : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E2F RID: 7727 RVA: 0x00103C77 File Offset: 0x00101E77
+		// Token: 0x06001EB3 RID: 7859 RVA: 0x0010A3CB File Offset: 0x001085CB
 		static ConfigMainRoleConfigByGender()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMainRoleConfigByGender.CreateStaticDefaultValue), new Action(ConfigMainRoleConfigByGender.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E30 RID: 7728 RVA: 0x00103C98 File Offset: 0x00101E98
+		// Token: 0x06001EB4 RID: 7860 RVA: 0x0010A3EC File Offset: 0x001085EC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMainRoleConfigByGender.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E31 RID: 7729 RVA: 0x00103D17 File Offset: 0x00101F17
+		// Token: 0x06001EB5 RID: 7861 RVA: 0x0010A46B File Offset: 0x0010866B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMainRoleConfigByGender.LogPair = null;
 			ConfigMainRoleConfigByGender.HandleId = 0;
 		}
 
-		// Token: 0x06001E32 RID: 7730 RVA: 0x00103D25 File Offset: 0x00101F25
+		// Token: 0x06001EB6 RID: 7862 RVA: 0x0010A479 File Offset: 0x00108679
 		public static void Init()
 		{
 			ConfigMainRoleConfigByGender.HandleId = ConfigCommon.InitDataStatement(ConfigMainRoleConfigByGender.HandleId, "db_main_role_change.db", "select BinData from `MainRoleConfig` where Gender = ?");
 		}
 
-		// Token: 0x06001E33 RID: 7731 RVA: 0x00103D40 File Offset: 0x00101F40
+		// Token: 0x06001EB7 RID: 7863 RVA: 0x0010A494 File Offset: 0x00108694
 		[NullableContext(2)]
 		public static IReadOnlyList<MainRoleConfig> GetConfigList(int p0Gender, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400230E RID: 8974
+		// Token: 0x040023A8 RID: 9128
 		private const string DB = "db_main_role_change.db";
 
-		// Token: 0x0400230F RID: 8975
+		// Token: 0x040023A9 RID: 9129
 		private const string FILE = "z.主角切换.xlsx";
 
-		// Token: 0x04002310 RID: 8976
+		// Token: 0x040023AA RID: 9130
 		private const string TABLE = "MainRoleConfig";
 
-		// Token: 0x04002311 RID: 8977
+		// Token: 0x040023AB RID: 9131
 		private const string COMMAND = "select BinData from `MainRoleConfig` where Gender = ?";
 
-		// Token: 0x04002312 RID: 8978
+		// Token: 0x040023AC RID: 9132
 		private const string KEY_PREFIX = "MainRoleConfigByGender";
 
-		// Token: 0x04002313 RID: 8979
+		// Token: 0x040023AD RID: 9133
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002314 RID: 8980
+		// Token: 0x040023AE RID: 9134
 		private static int HandleId;
 	}
 }

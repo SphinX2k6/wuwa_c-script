@@ -6,12 +6,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A2D RID: 18989
+	// Token: 0x020039D5 RID: 14805
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMonsterData
 	{
-		// Token: 0x060314DA RID: 201946 RVA: 0x00B6F9DB File Offset: 0x00B6DBDB
+		// Token: 0x0602626A RID: 156266 RVA: 0x00AB3962 File Offset: 0x00AB1B62
 		public static TrapDefenseMonsterData Create(TrapDefenseMonster config)
 		{
 			TrapDefenseMonsterData trapDefenseMonsterData = new TrapDefenseMonsterData(config.Id);
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseMonsterData;
 		}
 
-		// Token: 0x060314DB RID: 201947 RVA: 0x00B6F9F6 File Offset: 0x00B6DBF6
+		// Token: 0x0602626B RID: 156267 RVA: 0x00AB397D File Offset: 0x00AB1B7D
 		private TrapDefenseMonsterData(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x060314DC RID: 201948 RVA: 0x00B6FA1C File Offset: 0x00B6DC1C
+		// Token: 0x0602626C RID: 156268 RVA: 0x00AB39A4 File Offset: 0x00AB1BA4
 		private void Init()
 		{
 			this.ConfigType = TrapDefenseConfig.Instance.GetMonsterTypeConfigById(this.Config.MonsterType).Value;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SortId = this.Config.Sort;
 		}
 
-		// Token: 0x060314DD RID: 201949 RVA: 0x00B6FA80 File Offset: 0x00B6DC80
+		// Token: 0x0602626D RID: 156269 RVA: 0x00AB3A08 File Offset: 0x00AB1C08
 		public string GetShowActorLabelStr()
 		{
 			int id = this.Id;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060314DE RID: 201950 RVA: 0x00B6FB14 File Offset: 0x00B6DD14
+		// Token: 0x0602626E RID: 156270 RVA: 0x00AB3A9C File Offset: 0x00AB1C9C
 		public string GetQualityPathDesc()
 		{
 			TrapDefenseMonsterTypeData riskData = this.GetRiskData();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x060314DF RID: 201951 RVA: 0x00B6FB6C File Offset: 0x00B6DD6C
+		// Token: 0x0602626F RID: 156271 RVA: 0x00AB3AF4 File Offset: 0x00AB1CF4
 		public string GetQualityPathGrid()
 		{
 			TrapDefenseMonsterTypeData riskData = this.GetRiskData();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x060314E0 RID: 201952 RVA: 0x00B6FBC4 File Offset: 0x00B6DDC4
+		// Token: 0x06026270 RID: 156272 RVA: 0x00AB3B4C File Offset: 0x00AB1D4C
 		[NullableContext(2)]
 		public TrapDefenseMonsterTypeData GetRiskData()
 		{
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return TrapDefenseModel.Instance.ViewModelMonster.MonsterTypeDataMap.GetValueOrDefault(riskType);
 		}
 
-		// Token: 0x060314E1 RID: 201953 RVA: 0x00B6FBF2 File Offset: 0x00B6DDF2
+		// Token: 0x06026271 RID: 156273 RVA: 0x00AB3B7A File Offset: 0x00AB1D7A
 		public bool IsBoss()
 		{
 			return this.ConfigType.RiskType == 3;
 		}
 
-		// Token: 0x060314E2 RID: 201954 RVA: 0x00B6FC04 File Offset: 0x00B6DE04
+		// Token: 0x06026272 RID: 156274 RVA: 0x00AB3B8C File Offset: 0x00AB1D8C
 		public string GetRiskTypeNameKey()
 		{
 			TrapDefenseMonsterTypeData riskData = this.GetRiskData();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x060314E3 RID: 201955 RVA: 0x00B6FC5C File Offset: 0x00B6DE5C
+		// Token: 0x06026273 RID: 156275 RVA: 0x00AB3BE4 File Offset: 0x00AB1DE4
 		public string GetBodyTypeNameKey()
 		{
 			Dictionary<int, TrapDefenseMonsterBody> monsterBodyMap = TrapDefenseModel.Instance.ViewModelMonster.GetMonsterBodyMap();
@@ -128,65 +128,56 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseMonsterBody.Name;
 		}
 
-		// Token: 0x060314E4 RID: 201956 RVA: 0x00B6FCBC File Offset: 0x00B6DEBC
+		// Token: 0x06026274 RID: 156276 RVA: 0x00AB3C44 File Offset: 0x00AB1E44
 		public List<ITrapDefenseAttrItemData> GetAttrDataShowList()
 		{
 			int simpleCombatSubtypeId = this.Config.SimpleCombatSubtypeId;
 			int templateId = this.ConfigType.TemplateId;
 			KSCBaseProperty? buffData = TrapDefenseModel.Instance.ViewModelBuildingDevelop.GetBuffData(templateId, simpleCombatSubtypeId);
-			if (buffData == null)
+			if (buffData != null)
 			{
-				return new List<ITrapDefenseAttrItemData>();
-			}
-			List<ITrapDefenseAttrItemData> list = new List<ITrapDefenseAttrItemData>();
-			foreach (int id in this.Config.AttrShowIter())
-			{
-				TrapDefenseAttributeShow? attrShow = TrapDefenseConfig.Instance.GetAttrShow(id);
-				if (!StringUtils.IsEmpty(attrShow.Value.ToMonster))
+				KSCBaseProperty valueOrDefault = buffData.GetValueOrDefault();
+				List<ITrapDefenseAttrItemData> list = new List<ITrapDefenseAttrItemData>();
+				foreach (int id in this.Config.AttrShowIter())
 				{
-					PropertyInfo property = this.Config.GetType().GetProperty(attrShow.Value.ToMonster, BindingFlags.Instance | BindingFlags.Public);
-					string text;
-					if (!(property != null))
+					TrapDefenseAttributeShow? attrShow = TrapDefenseConfig.Instance.GetAttrShow(id);
+					if (!StringUtils.IsEmpty(attrShow.Value.ToMonster))
 					{
-						text = "UnFind-" + attrShow.Value.ToMonster;
+						PropertyInfo property = this.Config.GetType().GetProperty(attrShow.Value.ToMonster, BindingFlags.Instance | BindingFlags.Public);
+						string text;
+						if (!(property != null))
+						{
+							text = "UnFind-" + attrShow.Value.ToMonster;
+						}
+						else
+						{
+							object value = property.GetValue(this.Config);
+							text = (((value != null) ? value.ToString() : null) ?? ("UnFind-" + attrShow.Value.ToMonster));
+						}
+						string value2 = text;
+						list.Add(new TrapDefenseAttrItemData
+						{
+							NameKey = attrShow.Value.Name,
+							IconPath = attrShow.Value.Icon,
+							Value = value2
+						});
+						return list;
 					}
-					else
-					{
-						object value = property.GetValue(this.Config);
-						text = (((value != null) ? value.ToString() : null) ?? ("UnFind-" + attrShow.Value.ToMonster));
-					}
-					string value2 = text;
+					int num;
+					string value3 = valueOrDefault.TryGetMember(attrShow.Value.Key, out num) ? num.ToString() : ("UnFind-" + attrShow.Value.Key);
 					list.Add(new TrapDefenseAttrItemData
 					{
 						NameKey = attrShow.Value.Name,
 						IconPath = attrShow.Value.Icon,
-						Value = value2
+						Value = value3
 					});
-					return list;
 				}
-				PropertyInfo property2 = buffData.GetType().GetProperty(attrShow.Value.Key, BindingFlags.Instance | BindingFlags.Public);
-				string text2;
-				if (!(property2 != null))
-				{
-					text2 = "UnFind-" + attrShow.Value.Key;
-				}
-				else
-				{
-					object value3 = property2.GetValue(buffData);
-					text2 = (((value3 != null) ? value3.ToString() : null) ?? ("UnFind-" + attrShow.Value.Key));
-				}
-				string value4 = text2;
-				list.Add(new TrapDefenseAttrItemData
-				{
-					NameKey = attrShow.Value.Name,
-					IconPath = attrShow.Value.Icon,
-					Value = value4
-				});
+				return list;
 			}
-			return list;
+			return new List<ITrapDefenseAttrItemData>();
 		}
 
-		// Token: 0x060314E5 RID: 201957 RVA: 0x00B6FF20 File Offset: 0x00B6E120
+		// Token: 0x06026275 RID: 156277 RVA: 0x00AB3E70 File Offset: 0x00AB2070
 		public List<ITrapDefenseAttrItemData> GetTagDataShowList()
 		{
 			Dictionary<int, TrapDefenseMonsterTag> monsterTagMap = TrapDefenseModel.Instance.ViewModelMonster.GetMonsterTagMap();
@@ -205,7 +196,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314E6 RID: 201958 RVA: 0x00B6FFA8 File Offset: 0x00B6E1A8
+		// Token: 0x06026276 RID: 156278 RVA: 0x00AB3EF8 File Offset: 0x00AB20F8
 		public List<string> GetGridTagPathList()
 		{
 			List<ITrapDefenseAttrItemData> tagDataShowList = this.GetTagDataShowList();
@@ -226,34 +217,34 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x060314E7 RID: 201959 RVA: 0x00B70058 File Offset: 0x00B6E258
+		// Token: 0x06026277 RID: 156279 RVA: 0x00AB3FA8 File Offset: 0x00AB21A8
 		public void SetIsInTheInstance(bool isIn)
 		{
 			this.InTheInstance = isIn;
 		}
 
-		// Token: 0x0401A5A3 RID: 107939
+		// Token: 0x04014EF8 RID: 85752
 		public int Id;
 
-		// Token: 0x0401A5A4 RID: 107940
+		// Token: 0x04014EF9 RID: 85753
 		public string IconPath = "";
 
-		// Token: 0x0401A5A5 RID: 107941
+		// Token: 0x04014EFA RID: 85754
 		public int QualityId;
 
-		// Token: 0x0401A5A6 RID: 107942
+		// Token: 0x04014EFB RID: 85755
 		public string NameKey = "";
 
-		// Token: 0x0401A5A7 RID: 107943
+		// Token: 0x04014EFC RID: 85756
 		public TrapDefenseMonster Config;
 
-		// Token: 0x0401A5A8 RID: 107944
+		// Token: 0x04014EFD RID: 85757
 		public TrapDefenseMonsterType ConfigType;
 
-		// Token: 0x0401A5A9 RID: 107945
+		// Token: 0x04014EFE RID: 85758
 		public bool InTheInstance;
 
-		// Token: 0x0401A5AA RID: 107946
+		// Token: 0x04014EFF RID: 85759
 		public int SortId;
 	}
 }

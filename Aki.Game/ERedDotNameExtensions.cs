@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003555 RID: 13653
+// Token: 0x02002ACA RID: 10954
 public static class ERedDotNameExtensions
 {
-	// Token: 0x0601DFA5 RID: 122789 RVA: 0x00866FD4 File Offset: 0x008651D4
+	// Token: 0x0601BCCD RID: 113869 RVA: 0x0088EB98 File Offset: 0x0088CD98
 	public static string ToEnumString(this ERedDotName value)
 	{
 		string result;
@@ -966,6 +966,12 @@ public static class ERedDotNameExtensions
 		case ERedDotName.GiantCommission:
 			result = "GiantCommission";
 			break;
+		case ERedDotName.RedDotSolarSchoolQuest:
+			result = "RedDotSolarSchoolQuest";
+			break;
+		case ERedDotName.RedDotSolarSchoolQuestItem:
+			result = "RedDotSolarSchoolQuestItem";
+			break;
 		default:
 			result = value.ToString();
 			break;
@@ -973,7 +979,7 @@ public static class ERedDotNameExtensions
 		return result;
 	}
 
-	// Token: 0x0601DFA6 RID: 122790 RVA: 0x00868280 File Offset: 0x00866480
+	// Token: 0x0601BCCE RID: 113870 RVA: 0x0088FE64 File Offset: 0x0088E064
 	public static ERedDotName FromString(string name)
 	{
 		ERedDotName result;
@@ -984,7 +990,7 @@ public static class ERedDotNameExtensions
 		return result;
 	}
 
-	// Token: 0x0601DFA7 RID: 122791 RVA: 0x008682AC File Offset: 0x008664AC
+	// Token: 0x0601BCCF RID: 113871 RVA: 0x0088FE90 File Offset: 0x0088E090
 	public static bool TryFromString(string name, out ERedDotName value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -2614,25 +2620,17 @@ public static class ERedDotNameExtensions
 			case 22:
 			{
 				char c = name[15];
-				if (c <= 'T')
+				if (c <= 'M')
 				{
 					if (c != 'C')
 					{
-						if (c != 'M')
+						if (c == 'M')
 						{
-							if (c == 'T')
+							if (name == "ActivityCorniceMeeting")
 							{
-								if (name == "RedDotCyberPunkTaskTab")
-								{
-									value = ERedDotName.RedDotCyberPunkTaskTab;
-									return true;
-								}
+								value = ERedDotName.ActivityCorniceMeeting;
+								return true;
 							}
-						}
-						else if (name == "ActivityCorniceMeeting")
-						{
-							value = ERedDotName.ActivityCorniceMeeting;
-							return true;
 						}
 					}
 					else if (name == "FunctionWeatherCentral")
@@ -2641,7 +2639,7 @@ public static class ERedDotNameExtensions
 						return true;
 					}
 				}
-				else
+				else if (c != 'T')
 				{
 					switch (c)
 					{
@@ -2658,12 +2656,6 @@ public static class ERedDotNameExtensions
 							value = ERedDotName.RedDotPhantomArenaRole;
 							return true;
 						}
-						break;
-					case 'f':
-					case 'g':
-					case 'h':
-					case 'i':
-					case 'j':
 						break;
 					case 'k':
 						if (name == "RedDotMowingRiskReward")
@@ -2698,30 +2690,38 @@ public static class ERedDotNameExtensions
 							return true;
 						}
 						break;
-					default:
-						if (c != 's')
+					case 'o':
+						if (name == "RedDotSolarSchoolQuest")
 						{
-							if (c == 't')
-							{
-								if (name == "TrapDefenseLimitReward")
-								{
-									value = ERedDotName.TrapDefenseLimitReward;
-									return true;
-								}
-								if (name == "RedDotDangoLimitReward")
-								{
-									value = ERedDotName.RedDotDangoLimitReward;
-									return true;
-								}
-							}
+							value = ERedDotName.RedDotSolarSchoolQuest;
+							return true;
 						}
-						else if (name == "CiacconaProgressReward")
+						break;
+					case 's':
+						if (name == "CiacconaProgressReward")
 						{
 							value = ERedDotName.CiacconaProgressReward;
 							return true;
 						}
 						break;
+					case 't':
+						if (name == "TrapDefenseLimitReward")
+						{
+							value = ERedDotName.TrapDefenseLimitReward;
+							return true;
+						}
+						if (name == "RedDotDangoLimitReward")
+						{
+							value = ERedDotName.RedDotDangoLimitReward;
+							return true;
+						}
+						break;
 					}
+				}
+				else if (name == "RedDotCyberPunkTaskTab")
+				{
+					value = ERedDotName.RedDotCyberPunkTaskTab;
+					return true;
 				}
 				break;
 			}
@@ -3086,13 +3086,21 @@ public static class ERedDotNameExtensions
 					}
 					break;
 				default:
-					if (c == 'S')
+					if (c != 'S')
 					{
-						if (name == "MotorcycleDiyStickerPreTab")
+						if (c == 'h')
 						{
-							value = ERedDotName.MotorcycleDiyStickerPreTab;
-							return true;
+							if (name == "RedDotSolarSchoolQuestItem")
+							{
+								value = ERedDotName.RedDotSolarSchoolQuestItem;
+								return true;
+							}
 						}
+					}
+					else if (name == "MotorcycleDiyStickerPreTab")
+					{
+						value = ERedDotName.MotorcycleDiyStickerPreTab;
+						return true;
 					}
 					break;
 				}
@@ -3603,7 +3611,7 @@ public static class ERedDotNameExtensions
 		return false;
 	}
 
-	// Token: 0x0601DFA8 RID: 122792 RVA: 0x0086B128 File Offset: 0x00869328
+	// Token: 0x0601BCD0 RID: 113872 RVA: 0x00892D58 File Offset: 0x00890F58
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -3926,11 +3934,13 @@ public static class ERedDotNameExtensions
 			"GiantDeliverable",
 			"GiantAccessNew",
 			"GiantInteract",
-			"GiantCommission"
+			"GiantCommission",
+			"RedDotSolarSchoolQuest",
+			"RedDotSolarSchoolQuestItem"
 		};
 	}
 
-	// Token: 0x0601DFA9 RID: 122793 RVA: 0x0086BEAA File Offset: 0x0086A0AA
+	// Token: 0x0601BCD1 RID: 113873 RVA: 0x00893AF2 File Offset: 0x00891CF2
 	public static ERedDotName[] GetValues()
 	{
 		return new ERedDotName[]
@@ -4253,11 +4263,13 @@ public static class ERedDotNameExtensions
 			ERedDotName.GiantDeliverable,
 			ERedDotName.GiantAccessNew,
 			ERedDotName.GiantInteract,
-			ERedDotName.GiantCommission
+			ERedDotName.GiantCommission,
+			ERedDotName.RedDotSolarSchoolQuest,
+			ERedDotName.RedDotSolarSchoolQuestItem
 		};
 	}
 
-	// Token: 0x0601DFAA RID: 122794 RVA: 0x0086BEC4 File Offset: 0x0086A0C4
+	// Token: 0x0601BCD2 RID: 113874 RVA: 0x00893B0C File Offset: 0x00891D0C
 	public static string[] GetNames()
 	{
 		return new string[]
@@ -4580,7 +4592,9 @@ public static class ERedDotNameExtensions
 			"GiantDeliverable",
 			"GiantAccessNew",
 			"GiantInteract",
-			"GiantCommission"
+			"GiantCommission",
+			"RedDotSolarSchoolQuest",
+			"RedDotSolarSchoolQuestItem"
 		};
 	}
 }

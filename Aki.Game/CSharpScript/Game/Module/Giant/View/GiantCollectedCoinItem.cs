@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200597C RID: 22908
+	// Token: 0x02004955 RID: 18773
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantCollectedCoinItem : UiPanelBase, IGridProxy<IGiantCollectedCoinData>
 	{
-		// Token: 0x17008B41 RID: 35649
-		// (get) Token: 0x0603A22F RID: 238127 RVA: 0x00DD2E4D File Offset: 0x00DD104D
-		// (set) Token: 0x0603A230 RID: 238128 RVA: 0x00DD2E55 File Offset: 0x00DD1055
+		// Token: 0x17005F0E RID: 24334
+		// (get) Token: 0x0602F155 RID: 192853 RVA: 0x00D222DD File Offset: 0x00D204DD
+		// (set) Token: 0x0602F156 RID: 192854 RVA: 0x00D222E5 File Offset: 0x00D204E5
 		[Nullable(new byte[]
 		{
 			2,
@@ -38,17 +38,17 @@ namespace CSharpScript.Game.Module.Giant.View
 			1
 		})] set; }
 
-		// Token: 0x17008B42 RID: 35650
-		// (get) Token: 0x0603A231 RID: 238129 RVA: 0x00DD2E5E File Offset: 0x00DD105E
-		// (set) Token: 0x0603A232 RID: 238130 RVA: 0x00DD2E66 File Offset: 0x00DD1066
+		// Token: 0x17005F0F RID: 24335
+		// (get) Token: 0x0602F157 RID: 192855 RVA: 0x00D222EE File Offset: 0x00D204EE
+		// (set) Token: 0x0602F158 RID: 192856 RVA: 0x00D222F6 File Offset: 0x00D204F6
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008B43 RID: 35651
-		// (get) Token: 0x0603A233 RID: 238131 RVA: 0x00DD2E6F File Offset: 0x00DD106F
-		// (set) Token: 0x0603A234 RID: 238132 RVA: 0x00DD2E77 File Offset: 0x00DD1077
+		// Token: 0x17005F10 RID: 24336
+		// (get) Token: 0x0602F159 RID: 192857 RVA: 0x00D222FF File Offset: 0x00D204FF
+		// (set) Token: 0x0602F15A RID: 192858 RVA: 0x00D22307 File Offset: 0x00D20507
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x0603A235 RID: 238133 RVA: 0x00DD2E80 File Offset: 0x00DD1080
+		// Token: 0x0602F15B RID: 192859 RVA: 0x00D22310 File Offset: 0x00D20510
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603A236 RID: 238134 RVA: 0x00DD2F18 File Offset: 0x00DD1118
+		// Token: 0x0602F15C RID: 192860 RVA: 0x00D223A8 File Offset: 0x00D205A8
 		public void Refresh(IGiantCollectedCoinData data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data.ItemId;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.RefreshQualityColor();
 		}
 
-		// Token: 0x0603A237 RID: 238135 RVA: 0x00DD2F98 File Offset: 0x00DD1198
+		// Token: 0x0602F15D RID: 192861 RVA: 0x00D22428 File Offset: 0x00D20628
 		private void RefreshQualityColor()
 		{
 			string[] collectedCoinQualityColorHex = GiantDefine.CollectedCoinQualityColorHex;
@@ -99,28 +99,28 @@ namespace CSharpScript.Game.Module.Giant.View
 			sprite.SetColor(FColor.FromHex(hexStr));
 		}
 
-		// Token: 0x0603A238 RID: 238136 RVA: 0x00DD2FE5 File Offset: 0x00DD11E5
+		// Token: 0x0602F15E RID: 192862 RVA: 0x00D22475 File Offset: 0x00D20675
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603A239 RID: 238137 RVA: 0x00DD2FE7 File Offset: 0x00DD11E7
+		// Token: 0x0602F15F RID: 192863 RVA: 0x00D22477 File Offset: 0x00D20677
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603A23A RID: 238138 RVA: 0x00DD2FE9 File Offset: 0x00DD11E9
+		// Token: 0x0602F160 RID: 192864 RVA: 0x00D22479 File Offset: 0x00D20679
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603A23B RID: 238139 RVA: 0x00DD2FEB File Offset: 0x00DD11EB
+		// Token: 0x0602F161 RID: 192865 RVA: 0x00D2247B File Offset: 0x00D2067B
 		public object GetKey(IGiantCollectedCoinData data, int gridIndex)
 		{
 			return data.ItemId;
 		}
 
-		// Token: 0x0401E556 RID: 124246
+		// Token: 0x04018FF4 RID: 102388
 		private int ItemId;
 	}
 }

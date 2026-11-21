@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005511 RID: 21777
+	// Token: 0x020044E4 RID: 17636
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiScanItemMarkItemView : ServerMarkItemView
 	{
-		// Token: 0x060379C5 RID: 227781 RVA: 0x00D33AAA File Offset: 0x00D31CAA
+		// Token: 0x0602C893 RID: 182419 RVA: 0x00C81986 File Offset: 0x00C7FB86
 		public HonamiScanItemMarkItemView(HonamiScanItemMarkItem markItem) : base(markItem)
 		{
 		}
 
-		// Token: 0x060379C6 RID: 227782 RVA: 0x00D33AC0 File Offset: 0x00D31CC0
+		// Token: 0x0602C894 RID: 182420 RVA: 0x00C8199C File Offset: 0x00C7FB9C
 		public override void RegisterEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldMapViewOpened, new Action(this.LoadEffect));
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x060379C7 RID: 227783 RVA: 0x00D33B1C File Offset: 0x00D31D1C
+		// Token: 0x0602C895 RID: 182421 RVA: 0x00C819F8 File Offset: 0x00C7FBF8
 		public override void UnRegisterEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapViewOpened, new Action(this.LoadEffect));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x060379C8 RID: 227784 RVA: 0x00D33B78 File Offset: 0x00D31D78
+		// Token: 0x0602C896 RID: 182422 RVA: 0x00C81A54 File Offset: 0x00C7FC54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			HonamiScanItemMarkItemView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060379C9 RID: 227785 RVA: 0x00D33BBC File Offset: 0x00D31DBC
+		// Token: 0x0602C897 RID: 182423 RVA: 0x00C81A98 File Offset: 0x00C7FC98
 		private void LoadEffect()
 		{
 			MarkItem holder = this.Holder;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.EffectPanel.SetNiagaraAndShow("NS_Fx_LGUI_HonamiStory_Map_Burst", null);
 		}
 
-		// Token: 0x060379CA RID: 227786 RVA: 0x00D33C46 File Offset: 0x00D31E46
+		// Token: 0x0602C898 RID: 182424 RVA: 0x00C81B22 File Offset: 0x00C7FD22
 		public override void OnIconPathChanged(string iconPath)
 		{
 			base.OnIconPathChanged(iconPath);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.MarkItemChildIconHandle.ApplyModified();
 		}
 
-		// Token: 0x060379CB RID: 227787 RVA: 0x00D33C65 File Offset: 0x00D31E65
+		// Token: 0x0602C899 RID: 182425 RVA: 0x00C81B41 File Offset: 0x00C7FD41
 		protected void OnSubMapChanged(int floorIndex)
 		{
 			HonamiScanItemMarkItem honamiScanItemMarkItem = this.Holder as HonamiScanItemMarkItem;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			honamiScanItemMarkItem.RefreshSubMapState();
 		}
 
-		// Token: 0x0401D40C RID: 119820
+		// Token: 0x04017E90 RID: 97936
 		private readonly HonamiNiagaraPanel EffectPanel = new HonamiNiagaraPanel();
 	}
 }

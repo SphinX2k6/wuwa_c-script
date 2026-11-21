@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072EE RID: 29422
+	// Token: 0x02006471 RID: 25713
 	public class SpecialGameplayCamera : IStaticVariableResetter
 	{
-		// Token: 0x06048345 RID: 295749 RVA: 0x0128C75A File Offset: 0x0128A95A
+		// Token: 0x0603E791 RID: 255889 RVA: 0x0122F10E File Offset: 0x0122D30E
 		static SpecialGameplayCamera()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SpecialGameplayCamera.CreateStaticDefaultValue), new Action(SpecialGameplayCamera.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06048346 RID: 295750 RVA: 0x0128C77C File Offset: 0x0128A97C
+		// Token: 0x0603E792 RID: 255890 RVA: 0x0122F130 File Offset: 0x0122D330
 		public static void CreateStaticDefaultValue()
 		{
 			SpecialGameplayCamera.GameplayMap = new Dictionary<int, Func<ISpecialGameplayCamera>>();
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			SpecialGameplayCamera.GameplayMap.Add(4, () => new PhotoCamera());
 		}
 
-		// Token: 0x06048347 RID: 295751 RVA: 0x0128C865 File Offset: 0x0128AA65
+		// Token: 0x0603E793 RID: 255891 RVA: 0x0122F219 File Offset: 0x0122D419
 		public static void ResetStaticDefaultValue()
 		{
 			SpecialGameplayCamera.GameplayMap = null;
 		}
 
-		// Token: 0x0402624C RID: 156236
+		// Token: 0x04021537 RID: 136503
 		[Nullable(new byte[]
 		{
 			2,

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044CD RID: 17613
+	// Token: 0x02004935 RID: 18741
 	public struct IFixedDateTimeRefresh : IFlatbufferObject
 	{
-		// Token: 0x17007C51 RID: 31825
-		// (get) Token: 0x0601A52C RID: 107820 RVA: 0x003C21D2 File Offset: 0x003C03D2
+		// Token: 0x17008290 RID: 33424
+		// (get) Token: 0x0601BCFD RID: 113917 RVA: 0x003EE3DE File Offset: 0x003EC5DE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A52D RID: 107821 RVA: 0x003C21DF File Offset: 0x003C03DF
+		// Token: 0x0601BCFE RID: 113918 RVA: 0x003EE3EB File Offset: 0x003EC5EB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A52E RID: 107822 RVA: 0x003C21E8 File Offset: 0x003C03E8
+		// Token: 0x0601BCFF RID: 113919 RVA: 0x003EE3F4 File Offset: 0x003EC5F4
 		public static IFixedDateTimeRefresh GetRootAsIFixedDateTimeRefresh(ByteBuffer _bb)
 		{
 			return IFixedDateTimeRefresh.GetRootAsIFixedDateTimeRefresh(_bb, default(IFixedDateTimeRefresh));
 		}
 
-		// Token: 0x0601A52F RID: 107823 RVA: 0x003C2204 File Offset: 0x003C0404
+		// Token: 0x0601BD00 RID: 113920 RVA: 0x003EE410 File Offset: 0x003EC610
 		public static IFixedDateTimeRefresh GetRootAsIFixedDateTimeRefresh(ByteBuffer _bb, IFixedDateTimeRefresh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A530 RID: 107824 RVA: 0x003C2221 File Offset: 0x003C0421
+		// Token: 0x0601BD01 RID: 113921 RVA: 0x003EE42D File Offset: 0x003EC62D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A531 RID: 107825 RVA: 0x003C2230 File Offset: 0x003C0430
+		// Token: 0x0601BD02 RID: 113922 RVA: 0x003EE43C File Offset: 0x003EC63C
 		public IFixedDateTimeRefresh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007C52 RID: 31826
-		// (get) Token: 0x0601A532 RID: 107826 RVA: 0x003C2240 File Offset: 0x003C0440
+		// Token: 0x17008291 RID: 33425
+		// (get) Token: 0x0601BD03 RID: 113923 RVA: 0x003EE44C File Offset: 0x003EC64C
 		public ELevelPlayRefreshType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C53 RID: 31827
-		// (get) Token: 0x0601A533 RID: 107827 RVA: 0x003C227C File Offset: 0x003C047C
+		// Token: 0x17008292 RID: 33426
+		// (get) Token: 0x0601BD04 RID: 113924 RVA: 0x003EE488 File Offset: 0x003EC688
 		public ELevelPlayInteractResetTime UpdateType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A534 RID: 107828 RVA: 0x003C22B8 File Offset: 0x003C04B8
+		// Token: 0x0601BD05 RID: 113925 RVA: 0x003EE4C4 File Offset: 0x003EC6C4
 		public static Offset<IFixedDateTimeRefresh> CreateIFixedDateTimeRefresh(FlatBufferBuilder builder, ELevelPlayRefreshType Type = ELevelPlayRefreshType.None, ELevelPlayInteractResetTime UpdateType = ELevelPlayInteractResetTime.Weekly)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IFixedDateTimeRefresh.EndIFixedDateTimeRefresh(builder);
 		}
 
-		// Token: 0x0601A535 RID: 107829 RVA: 0x003C22D5 File Offset: 0x003C04D5
+		// Token: 0x0601BD06 RID: 113926 RVA: 0x003EE4E1 File Offset: 0x003EC6E1
 		public static void StartIFixedDateTimeRefresh(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601A536 RID: 107830 RVA: 0x003C22DE File Offset: 0x003C04DE
+		// Token: 0x0601BD07 RID: 113927 RVA: 0x003EE4EA File Offset: 0x003EC6EA
 		public static void AddType(FlatBufferBuilder builder, ELevelPlayRefreshType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601A537 RID: 107831 RVA: 0x003C22E9 File Offset: 0x003C04E9
+		// Token: 0x0601BD08 RID: 113928 RVA: 0x003EE4F5 File Offset: 0x003EC6F5
 		public static void AddUpdateType(FlatBufferBuilder builder, ELevelPlayInteractResetTime updateType)
 		{
 			builder.AddByte(1, (byte)updateType, 0);
 		}
 
-		// Token: 0x0601A538 RID: 107832 RVA: 0x003C22F4 File Offset: 0x003C04F4
+		// Token: 0x0601BD09 RID: 113929 RVA: 0x003EE500 File Offset: 0x003EC700
 		public static Offset<IFixedDateTimeRefresh> EndIFixedDateTimeRefresh(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixedDateTimeRefresh>(builder.EndTable());
 		}
 
-		// Token: 0x0601A539 RID: 107833 RVA: 0x003C2304 File Offset: 0x003C0504
+		// Token: 0x0601BD0A RID: 113930 RVA: 0x003EE510 File Offset: 0x003EC710
 		public IFixedDateTimeRefreshT UnPack()
 		{
 			IFixedDateTimeRefreshT fixedDateTimeRefreshT = new IFixedDateTimeRefreshT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return fixedDateTimeRefreshT;
 		}
 
-		// Token: 0x0601A53A RID: 107834 RVA: 0x003C231F File Offset: 0x003C051F
+		// Token: 0x0601BD0B RID: 113931 RVA: 0x003EE52B File Offset: 0x003EC72B
 		public void UnPackTo(IFixedDateTimeRefreshT _o)
 		{
 			_o.Type = this.Type;
 			_o.UpdateType = this.UpdateType;
 		}
 
-		// Token: 0x0601A53B RID: 107835 RVA: 0x003C233C File Offset: 0x003C053C
+		// Token: 0x0601BD0C RID: 113932 RVA: 0x003EE548 File Offset: 0x003EC748
 		public static Offset<IFixedDateTimeRefresh> Pack(FlatBufferBuilder builder, IFixedDateTimeRefreshT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IFixedDateTimeRefresh.CreateIFixedDateTimeRefresh(builder, _o.Type, _o.UpdateType);
 		}
 
-		// Token: 0x0400C4E5 RID: 50405
+		// Token: 0x0400CF13 RID: 53011
 		private Table __p;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BB9 RID: 23481
+	// Token: 0x02004B99 RID: 19353
 	public enum ECiacconaGalChapterRestartChoiceType
 	{
-		// Token: 0x0401EF21 RID: 126753
+		// Token: 0x040199D2 RID: 104914
 		FromBeginning,
-		// Token: 0x0401EF22 RID: 126754
+		// Token: 0x040199D3 RID: 104915
 		FromBranching
 	}
 }

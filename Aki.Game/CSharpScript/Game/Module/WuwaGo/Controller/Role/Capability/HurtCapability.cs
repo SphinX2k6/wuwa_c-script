@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 {
-	// Token: 0x02004764 RID: 18276
+	// Token: 0x02003695 RID: 13973
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HurtCapability : CapabilityBase
 	{
-		// Token: 0x0602FC66 RID: 195686 RVA: 0x00B116AA File Offset: 0x00B0F8AA
+		// Token: 0x06024430 RID: 148528 RVA: 0x00A4166A File Offset: 0x00A3F86A
 		public HurtCapability(WuWaGoRole role) : base(role)
 		{
 		}
 
-		// Token: 0x0602FC67 RID: 195687 RVA: 0x00B116B4 File Offset: 0x00B0F8B4
+		// Token: 0x06024431 RID: 148529 RVA: 0x00A41674 File Offset: 0x00A3F874
 		[NullableContext(2)]
 		public UniTask TakeAttack(bool playBeHitAnim, UAnimMontage deathMontage = null)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <TakeAttack>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC68 RID: 195688 RVA: 0x00B11708 File Offset: 0x00B0F908
+		// Token: 0x06024432 RID: 148530 RVA: 0x00A416C8 File Offset: 0x00A3F8C8
 		private UniTask PerformBeAttackAnim()
 		{
 			HurtCapability.<PerformBeAttackAnim>d__11 <PerformBeAttackAnim>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <PerformBeAttackAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC69 RID: 195689 RVA: 0x00B1174C File Offset: 0x00B0F94C
+		// Token: 0x06024433 RID: 148531 RVA: 0x00A4170C File Offset: 0x00A3F90C
 		[NullableContext(2)]
 		private UniTask PerformDeathAnim(UAnimMontage deathMontage = null)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <PerformDeathAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC6A RID: 195690 RVA: 0x00B11798 File Offset: 0x00B0F998
+		// Token: 0x06024434 RID: 148532 RVA: 0x00A41758 File Offset: 0x00A3F958
 		private UniTask PerformClimbDeathSequence(UAnimMontage montage)
 		{
 			HurtCapability.<PerformClimbDeathSequence>d__13 <PerformClimbDeathSequence>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <PerformClimbDeathSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC6B RID: 195691 RVA: 0x00B117E4 File Offset: 0x00B0F9E4
+		// Token: 0x06024435 RID: 148533 RVA: 0x00A417A4 File Offset: 0x00A3F9A4
 		private HurtCapability.EClimbDeathPhase OnClimbDeathTick(UAnimInstance animInstance, UAnimMontage montage, float? groundZ, float delta, HurtCapability.EClimbDeathPhase phase)
 		{
 			FVectorDouble? worldLocation = this.Role.GetWorldLocation();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return phase;
 		}
 
-		// Token: 0x0602FC6C RID: 195692 RVA: 0x00B11924 File Offset: 0x00B0FB24
+		// Token: 0x06024436 RID: 148534 RVA: 0x00A418E4 File Offset: 0x00A3FAE4
 		private float? SolveGroundZ()
 		{
 			FVectorDouble? worldLocation = this.Role.GetWorldLocation();
@@ -153,48 +153,48 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return null;
 		}
 
-		// Token: 0x0602FC6D RID: 195693 RVA: 0x00B11AD2 File Offset: 0x00B0FCD2
+		// Token: 0x06024437 RID: 148535 RVA: 0x00A41A92 File Offset: 0x00A3FC92
 		private bool ShouldWaitAnimBeforeExit()
 		{
 			return base.RoleType == EWuWaGoRoleType.AircraftSoldiers;
 		}
 
-		// Token: 0x04019C5C RID: 105564
+		// Token: 0x0401430C RID: 82700
 		[StaticVariableRuleIgnore]
 		private static readonly FName SectionLoop = new FName("Loop");
 
-		// Token: 0x04019C5D RID: 105565
+		// Token: 0x0401430D RID: 82701
 		[StaticVariableRuleIgnore]
 		private static readonly FName SectionFall = new FName("End");
 
-		// Token: 0x04019C5E RID: 105566
+		// Token: 0x0401430E RID: 82702
 		private const int FALLBACK_FALL_SPEED = 200;
 
-		// Token: 0x04019C5F RID: 105567
+		// Token: 0x0401430F RID: 82703
 		private const int GROUND_TRACE_START_OFFSET = 50;
 
-		// Token: 0x04019C60 RID: 105568
+		// Token: 0x04014310 RID: 82704
 		private const int GROUND_TRACE_END_OFFSET = -5000;
 
-		// Token: 0x04019C61 RID: 105569
+		// Token: 0x04014311 RID: 82705
 		private const int SECTION_POLL_INTERVAL_MS = 20;
 
-		// Token: 0x04019C62 RID: 105570
+		// Token: 0x04014312 RID: 82706
 		private const int MS_PER_SECOND = 1000;
 
-		// Token: 0x04019C63 RID: 105571
+		// Token: 0x04014313 RID: 82707
 		[StaticVariableRuleIgnore]
 		private static readonly Vector DeathSnapTempLocation = Vector.Create();
 
-		// Token: 0x0200A9D6 RID: 43478
+		// Token: 0x0200938B RID: 37771
 		[NullableContext(0)]
 		private enum EClimbDeathPhase
 		{
-			// Token: 0x04033AFE RID: 211710
+			// Token: 0x0402E28E RID: 189070
 			BeforeLoop,
-			// Token: 0x04033AFF RID: 211711
+			// Token: 0x0402E28F RID: 189071
 			Falling,
-			// Token: 0x04033B00 RID: 211712
+			// Token: 0x0402E290 RID: 189072
 			Done
 		}
 	}

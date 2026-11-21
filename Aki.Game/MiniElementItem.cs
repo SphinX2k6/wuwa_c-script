@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200194B RID: 6475
+// Token: 0x02000E08 RID: 3592
 public class MiniElementItem : UiPanelBase
 {
-	// Token: 0x0600BD1D RID: 48413 RVA: 0x002AC879 File Offset: 0x002AAA79
+	// Token: 0x06009120 RID: 37152 RVA: 0x002B76BD File Offset: 0x002B58BD
 	[NullableContext(2)]
 	public MiniElementItem(int elementId, UUIItem parentUiItem = null, AActor rootActor = null)
 	{
@@ -21,7 +21,7 @@ public class MiniElementItem : UiPanelBase
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600BD1E RID: 48414 RVA: 0x002AC8A5 File Offset: 0x002AAAA5
+	// Token: 0x06009121 RID: 37153 RVA: 0x002B76E9 File Offset: 0x002B58E9
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,13 +31,13 @@ public class MiniElementItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BD1F RID: 48415 RVA: 0x002AC8DE File Offset: 0x002AAADE
+	// Token: 0x06009122 RID: 37154 RVA: 0x002B7722 File Offset: 0x002B5922
 	protected override void OnStart()
 	{
 		this.RefreshMiniElement(this.ElementId);
 	}
 
-	// Token: 0x0600BD20 RID: 48416 RVA: 0x002AC8EC File Offset: 0x002AAAEC
+	// Token: 0x06009123 RID: 37155 RVA: 0x002B7730 File Offset: 0x002B5930
 	public void RefreshMiniElement(int elementId)
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -59,7 +59,7 @@ public class MiniElementItem : UiPanelBase
 		base.SetTextureByPath(elementConfig.Value.Icon5, texture, null, null);
 	}
 
-	// Token: 0x0600BD21 RID: 48417 RVA: 0x002AC978 File Offset: 0x002AAB78
+	// Token: 0x06009124 RID: 37156 RVA: 0x002B77BC File Offset: 0x002B59BC
 	[NullableContext(1)]
 	public void SetIconByPath(string iconPath)
 	{
@@ -71,15 +71,15 @@ public class MiniElementItem : UiPanelBase
 		base.SetTextureShowUntilLoaded(iconPath, texture, null);
 	}
 
-	// Token: 0x04005559 RID: 21849
+	// Token: 0x04005606 RID: 22022
 	private readonly int ElementId;
 
-	// Token: 0x02007EA8 RID: 32424
+	// Token: 0x02007037 RID: 28727
 	private enum EChildComponentType
 	{
-		// Token: 0x0402969D RID: 169629
+		// Token: 0x040249DA RID: 149978
 		ElementBg,
-		// Token: 0x0402969E RID: 169630
+		// Token: 0x040249DB RID: 149979
 		ElementTexture
 	}
 }

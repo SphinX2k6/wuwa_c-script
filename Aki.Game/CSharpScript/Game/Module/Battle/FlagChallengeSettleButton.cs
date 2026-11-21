@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C42 RID: 23618
+	// Token: 0x02004C22 RID: 19490
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeSettleButton : UiPanelBase
 	{
-		// Token: 0x0603BA9B RID: 244379 RVA: 0x00E3D280 File Offset: 0x00E3B480
+		// Token: 0x060309E6 RID: 199142 RVA: 0x00D8D5F0 File Offset: 0x00D8B7F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.Battle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603BA9C RID: 244380 RVA: 0x00E3D368 File Offset: 0x00E3B568
+		// Token: 0x060309E7 RID: 199143 RVA: 0x00D8D6D8 File Offset: 0x00D8B8D8
 		protected override void OnBeforeShow()
 		{
 			base.GetText(0).SetText(string.Empty, true);
 			base.GetText(2).SetText(string.Empty, true);
 		}
 
-		// Token: 0x0603BA9D RID: 244381 RVA: 0x00E3D390 File Offset: 0x00E3B590
+		// Token: 0x060309E8 RID: 199144 RVA: 0x00D8D700 File Offset: 0x00D8B900
 		public UniTask InitializeAsync(AActor rootActor, Action onClickCall)
 		{
 			FlagChallengeSettleButton.<InitializeAsync>d__4 <InitializeAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA9E RID: 244382 RVA: 0x00E3D3E3 File Offset: 0x00E3B5E3
+		// Token: 0x060309E9 RID: 199145 RVA: 0x00D8D753 File Offset: 0x00D8B953
 		private void OnClickedButton()
 		{
 			Action onClickEvent = this.OnClickEvent;
@@ -70,34 +70,34 @@ namespace CSharpScript.Game.Module.Battle
 			onClickEvent();
 		}
 
-		// Token: 0x0603BA9F RID: 244383 RVA: 0x00E3D3F5 File Offset: 0x00E3B5F5
+		// Token: 0x060309EA RID: 199146 RVA: 0x00D8D765 File Offset: 0x00D8B965
 		public void SetFloatText(string textId, params object[] args)
 		{
 			base.GetText(2).SetUIActive(true);
 			LguiUtil.Instance.SetLocalText(base.GetText(2), textId, args);
 		}
 
-		// Token: 0x0603BAA0 RID: 244384 RVA: 0x00E3D417 File Offset: 0x00E3B617
+		// Token: 0x060309EB RID: 199147 RVA: 0x00D8D787 File Offset: 0x00D8B987
 		public void SetBtnTextNew(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x0401F0F4 RID: 127220
+		// Token: 0x04019BA5 RID: 105381
 		[Nullable(2)]
 		private Action OnClickEvent;
 
-		// Token: 0x0200BE3D RID: 48701
+		// Token: 0x0200A845 RID: 43077
 		[NullableContext(0)]
 		private enum ESettleButtonType
 		{
-			// Token: 0x040395E8 RID: 234984
+			// Token: 0x04033FAB RID: 212907
 			ButtonText,
-			// Token: 0x040395E9 RID: 234985
+			// Token: 0x04033FAC RID: 212908
 			DescriptionItem,
-			// Token: 0x040395EA RID: 234986
+			// Token: 0x04033FAD RID: 212909
 			DescriptionText,
-			// Token: 0x040395EB RID: 234987
+			// Token: 0x04033FAE RID: 212910
 			Button
 		}
 	}

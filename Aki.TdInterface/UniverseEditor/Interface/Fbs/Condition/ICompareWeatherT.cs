@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BD2 RID: 19410
+	// Token: 0x020050BF RID: 20671
 	public class ICompareWeatherT
 	{
-		// Token: 0x17008D04 RID: 36100
-		// (get) Token: 0x0601EA5F RID: 125535 RVA: 0x0044969A File Offset: 0x0044789A
-		// (set) Token: 0x0601EA60 RID: 125536 RVA: 0x004496A2 File Offset: 0x004478A2
+		// Token: 0x17009428 RID: 37928
+		// (get) Token: 0x0602062D RID: 132653 RVA: 0x0047C5A6 File Offset: 0x0047A7A6
+		// (set) Token: 0x0602062E RID: 132654 RVA: 0x0047C5AE File Offset: 0x0047A7AE
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008D05 RID: 36101
-		// (get) Token: 0x0601EA61 RID: 125537 RVA: 0x004496AB File Offset: 0x004478AB
-		// (set) Token: 0x0601EA62 RID: 125538 RVA: 0x004496B3 File Offset: 0x004478B3
+		// Token: 0x17009429 RID: 37929
+		// (get) Token: 0x0602062F RID: 132655 RVA: 0x0047C5B7 File Offset: 0x0047A7B7
+		// (set) Token: 0x06020630 RID: 132656 RVA: 0x0047C5BF File Offset: 0x0047A7BF
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008D06 RID: 36102
-		// (get) Token: 0x0601EA63 RID: 125539 RVA: 0x004496BC File Offset: 0x004478BC
-		// (set) Token: 0x0601EA64 RID: 125540 RVA: 0x004496C4 File Offset: 0x004478C4
+		// Token: 0x1700942A RID: 37930
+		// (get) Token: 0x06020631 RID: 132657 RVA: 0x0047C5C8 File Offset: 0x0047A7C8
+		// (set) Token: 0x06020632 RID: 132658 RVA: 0x0047C5D0 File Offset: 0x0047A7D0
 		public EWeather Weather { get; set; }
 
-		// Token: 0x17008D07 RID: 36103
-		// (get) Token: 0x0601EA65 RID: 125541 RVA: 0x004496CD File Offset: 0x004478CD
-		// (set) Token: 0x0601EA66 RID: 125542 RVA: 0x004496D5 File Offset: 0x004478D5
+		// Token: 0x1700942B RID: 37931
+		// (get) Token: 0x06020633 RID: 132659 RVA: 0x0047C5D9 File Offset: 0x0047A7D9
+		// (set) Token: 0x06020634 RID: 132660 RVA: 0x0047C5E1 File Offset: 0x0047A7E1
 		public int WeatherId { get; set; }
 
-		// Token: 0x17008D08 RID: 36104
-		// (get) Token: 0x0601EA67 RID: 125543 RVA: 0x004496DE File Offset: 0x004478DE
-		// (set) Token: 0x0601EA68 RID: 125544 RVA: 0x004496E6 File Offset: 0x004478E6
+		// Token: 0x1700942C RID: 37932
+		// (get) Token: 0x06020635 RID: 132661 RVA: 0x0047C5EA File Offset: 0x0047A7EA
+		// (set) Token: 0x06020636 RID: 132662 RVA: 0x0047C5F2 File Offset: 0x0047A7F2
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601EA69 RID: 125545 RVA: 0x004496EF File Offset: 0x004478EF
+		// Token: 0x06020637 RID: 132663 RVA: 0x0047C5FB File Offset: 0x0047A7FB
 		public ICompareWeatherT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View.Components
 {
-	// Token: 0x02004CA4 RID: 19620
+	// Token: 0x02003C55 RID: 15445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RouletteAssemblyTabItem : UiPanelBase
 	{
-		// Token: 0x06032B44 RID: 207684 RVA: 0x00BD4CA0 File Offset: 0x00BD2EA0
+		// Token: 0x060278F8 RID: 162040 RVA: 0x00B19A38 File Offset: 0x00B17C38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032B45 RID: 207685 RVA: 0x00BD4D09 File Offset: 0x00BD2F09
+		// Token: 0x060278F9 RID: 162041 RVA: 0x00B19AA1 File Offset: 0x00B17CA1
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<RouletteAssemblyTab, int>(base.GetHorizontalLayout(0), new Func<RouletteAssemblyTab>(this.CreateTabItem), null, false, true);
 		}
 
-		// Token: 0x06032B46 RID: 207686 RVA: 0x00BD4D2C File Offset: 0x00BD2F2C
+		// Token: 0x060278FA RID: 162042 RVA: 0x00B19AC4 File Offset: 0x00B17CC4
 		private RouletteAssemblyTab CreateTabItem()
 		{
 			return new RouletteAssemblyTab
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			};
 		}
 
-		// Token: 0x06032B47 RID: 207687 RVA: 0x00BD4D48 File Offset: 0x00BD2F48
+		// Token: 0x060278FB RID: 162043 RVA: 0x00B19AE0 File Offset: 0x00B17CE0
 		private void OnClickToggle(int typeId, bool bSelected)
 		{
 			if (!bSelected)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			toggleCallBack(typeId);
 		}
 
-		// Token: 0x06032B48 RID: 207688 RVA: 0x00BD4DA4 File Offset: 0x00BD2FA4
+		// Token: 0x060278FC RID: 162044 RVA: 0x00B19B3C File Offset: 0x00B17D3C
 		public UniTask Refresh(int[] typeIdList)
 		{
 			RouletteAssemblyTabItem.<Refresh>d__7 <Refresh>d__;
@@ -80,20 +80,20 @@ namespace CSharpScript.Game.Module.Roulette.View.Components
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032B49 RID: 207689 RVA: 0x00BD4DEF File Offset: 0x00BD2FEF
+		// Token: 0x060278FD RID: 162045 RVA: 0x00B19B87 File Offset: 0x00B17D87
 		public void SelectTab(int selectTypeId)
 		{
 			this.Layout.GetLayoutItemByKey(selectTypeId).SetToggleState(true, true);
 		}
 
-		// Token: 0x0401AFE4 RID: 110564
+		// Token: 0x04015945 RID: 88389
 		public int SelectedTypeId = -1;
 
-		// Token: 0x0401AFE5 RID: 110565
+		// Token: 0x04015946 RID: 88390
 		[Nullable(2)]
 		public Action<int> ToggleCallBack;
 
-		// Token: 0x0401AFE6 RID: 110566
+		// Token: 0x04015947 RID: 88391
 		[Nullable(new byte[]
 		{
 			2,

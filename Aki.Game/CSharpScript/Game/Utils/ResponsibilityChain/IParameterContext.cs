@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Utils.ResponsibilityChain
 {
-	// Token: 0x02004559 RID: 17753
+	// Token: 0x02003481 RID: 13441
 	public interface IParameterContext
 	{
-		// Token: 0x0602DDB6 RID: 187830
+		// Token: 0x06022498 RID: 140440
 		bool IsValid();
 	}
 }

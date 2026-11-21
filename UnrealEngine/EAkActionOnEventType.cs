@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200026C RID: 620
+	// Token: 0x020000CF RID: 207
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/AkAudio.EAkActionOnEventType")]
 	public enum EAkActionOnEventType : byte
 	{
-		// Token: 0x04000C93 RID: 3219
+		// Token: 0x04000314 RID: 788
 		Stop,
-		// Token: 0x04000C94 RID: 3220
+		// Token: 0x04000315 RID: 789
 		Pause,
-		// Token: 0x04000C95 RID: 3221
+		// Token: 0x04000316 RID: 790
 		Resume,
-		// Token: 0x04000C96 RID: 3222
+		// Token: 0x04000317 RID: 791
 		Break,
-		// Token: 0x04000C97 RID: 3223
+		// Token: 0x04000318 RID: 792
 		ReleaseEnvelope,
-		// Token: 0x04000C98 RID: 3224
+		// Token: 0x04000319 RID: 793
 		EAkActionOnEventType_MAX
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052EE RID: 21230
+	// Token: 0x02005871 RID: 22641
 	public struct IGazeCondition : IFlatbufferObject
 	{
-		// Token: 0x17009BCF RID: 39887
-		// (get) Token: 0x06022A88 RID: 141960 RVA: 0x004CDC5E File Offset: 0x004CBE5E
+		// Token: 0x1700A400 RID: 41984
+		// (get) Token: 0x06024B22 RID: 150306 RVA: 0x0050A78A File Offset: 0x0050898A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A89 RID: 141961 RVA: 0x004CDC6B File Offset: 0x004CBE6B
+		// Token: 0x06024B23 RID: 150307 RVA: 0x0050A797 File Offset: 0x00508997
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022A8A RID: 141962 RVA: 0x004CDC74 File Offset: 0x004CBE74
+		// Token: 0x06024B24 RID: 150308 RVA: 0x0050A7A0 File Offset: 0x005089A0
 		public static IGazeCondition GetRootAsIGazeCondition(ByteBuffer _bb)
 		{
 			return IGazeCondition.GetRootAsIGazeCondition(_bb, default(IGazeCondition));
 		}
 
-		// Token: 0x06022A8B RID: 141963 RVA: 0x004CDC90 File Offset: 0x004CBE90
+		// Token: 0x06024B25 RID: 150309 RVA: 0x0050A7BC File Offset: 0x005089BC
 		public static IGazeCondition GetRootAsIGazeCondition(ByteBuffer _bb, IGazeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022A8C RID: 141964 RVA: 0x004CDCAD File Offset: 0x004CBEAD
+		// Token: 0x06024B26 RID: 150310 RVA: 0x0050A7D9 File Offset: 0x005089D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022A8D RID: 141965 RVA: 0x004CDCBC File Offset: 0x004CBEBC
+		// Token: 0x06024B27 RID: 150311 RVA: 0x0050A7E8 File Offset: 0x005089E8
 		public IGazeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BD0 RID: 39888
-		// (get) Token: 0x06022A8E RID: 141966 RVA: 0x004CDCCC File Offset: 0x004CBECC
+		// Token: 0x1700A401 RID: 41985
+		// (get) Token: 0x06024B28 RID: 150312 RVA: 0x0050A7F8 File Offset: 0x005089F8
 		public int GazeInDistance
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BD1 RID: 39889
-		// (get) Token: 0x06022A8F RID: 141967 RVA: 0x004CDD08 File Offset: 0x004CBF08
+		// Token: 0x1700A402 RID: 41986
+		// (get) Token: 0x06024B29 RID: 150313 RVA: 0x0050A834 File Offset: 0x00508A34
 		public IConeTriggerShape? ScanRange
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BD2 RID: 39890
-		// (get) Token: 0x06022A90 RID: 141968 RVA: 0x004CDD68 File Offset: 0x004CBF68
+		// Token: 0x1700A403 RID: 41987
+		// (get) Token: 0x06024B2A RID: 150314 RVA: 0x0050A894 File Offset: 0x00508A94
 		public byte NullMask
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A91 RID: 141969 RVA: 0x004CDDA4 File Offset: 0x004CBFA4
+		// Token: 0x06024B2B RID: 150315 RVA: 0x0050A8D0 File Offset: 0x00508AD0
 		public static Offset<IGazeCondition> CreateIGazeCondition(FlatBufferBuilder builder, int GazeInDistance = 0, Offset<IConeTriggerShape> ScanRangeOffset = default(Offset<IConeTriggerShape>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGazeCondition.EndIGazeCondition(builder);
 		}
 
-		// Token: 0x06022A92 RID: 141970 RVA: 0x004CDDC8 File Offset: 0x004CBFC8
+		// Token: 0x06024B2C RID: 150316 RVA: 0x0050A8F4 File Offset: 0x00508AF4
 		public static void StartIGazeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022A93 RID: 141971 RVA: 0x004CDDD1 File Offset: 0x004CBFD1
+		// Token: 0x06024B2D RID: 150317 RVA: 0x0050A8FD File Offset: 0x00508AFD
 		public static void AddGazeInDistance(FlatBufferBuilder builder, int gazeInDistance)
 		{
 			builder.AddInt(0, gazeInDistance, 0);
 		}
 
-		// Token: 0x06022A94 RID: 141972 RVA: 0x004CDDDC File Offset: 0x004CBFDC
+		// Token: 0x06024B2E RID: 150318 RVA: 0x0050A908 File Offset: 0x00508B08
 		public static void AddScanRange(FlatBufferBuilder builder, Offset<IConeTriggerShape> scanRangeOffset)
 		{
 			builder.AddOffset(1, scanRangeOffset.Value, 0);
 		}
 
-		// Token: 0x06022A95 RID: 141973 RVA: 0x004CDDEC File Offset: 0x004CBFEC
+		// Token: 0x06024B2F RID: 150319 RVA: 0x0050A918 File Offset: 0x00508B18
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06022A96 RID: 141974 RVA: 0x004CDDF7 File Offset: 0x004CBFF7
+		// Token: 0x06024B30 RID: 150320 RVA: 0x0050A923 File Offset: 0x00508B23
 		public static Offset<IGazeCondition> EndIGazeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IGazeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06022A97 RID: 141975 RVA: 0x004CDE04 File Offset: 0x004CC004
+		// Token: 0x06024B31 RID: 150321 RVA: 0x0050A930 File Offset: 0x00508B30
 		public IGazeConditionT UnPack()
 		{
 			IGazeConditionT gazeConditionT = new IGazeConditionT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return gazeConditionT;
 		}
 
-		// Token: 0x06022A98 RID: 141976 RVA: 0x004CDE20 File Offset: 0x004CC020
+		// Token: 0x06024B32 RID: 150322 RVA: 0x0050A94C File Offset: 0x00508B4C
 		public void UnPackTo(IGazeConditionT _o)
 		{
 			_o.GazeInDistance = this.GazeInDistance;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022A99 RID: 141977 RVA: 0x004CDE74 File Offset: 0x004CC074
+		// Token: 0x06024B33 RID: 150323 RVA: 0x0050A9A0 File Offset: 0x00508BA0
 		public static Offset<IGazeCondition> Pack(FlatBufferBuilder builder, IGazeConditionT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGazeCondition.CreateIGazeCondition(builder, _o.GazeInDistance, scanRangeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E490 RID: 58512
+		// Token: 0x0400F0BC RID: 61628
 		private Table __p;
 	}
 }

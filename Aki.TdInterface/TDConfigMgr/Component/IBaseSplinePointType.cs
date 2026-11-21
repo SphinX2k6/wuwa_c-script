@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E9 RID: 489
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000212 RID: 530
 	public class IBaseSplinePointType
 	{
-		// Token: 0x060007E8 RID: 2024 RVA: 0x00025C04 File Offset: 0x00023E04
+		// Token: 0x06000868 RID: 2152 RVA: 0x00027558 File Offset: 0x00025758
 		private IBaseSplinePointType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007E9 RID: 2025 RVA: 0x00025C3C File Offset: 0x00023E3C
+		// Token: 0x06000869 RID: 2153 RVA: 0x00027590 File Offset: 0x00025790
 		public static IBaseSplinePointType Create([Nullable(2)] IBaseSplinePointType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007EA RID: 2026 RVA: 0x00025C4F File Offset: 0x00023E4F
+		// Token: 0x0600086A RID: 2154 RVA: 0x000275A3 File Offset: 0x000257A3
 		public static IBaseSplinePointType CreateFromSetValue([Nullable(2)] IBaseSplinePointType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007EB RID: 2027 RVA: 0x00025C64 File Offset: 0x00023E64
+		// Token: 0x0600086B RID: 2155 RVA: 0x000275B8 File Offset: 0x000257B8
 		public IBaseSplinePointType_SetValue ToSetValue()
 		{
 			return new IBaseSplinePointType_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000274 RID: 628
-		// (get) Token: 0x060007EC RID: 2028 RVA: 0x00025CB4 File Offset: 0x00023EB4
-		// (set) Token: 0x060007ED RID: 2029 RVA: 0x00025D15 File Offset: 0x00023F15
+		// Token: 0x17000296 RID: 662
+		// (get) Token: 0x0600086C RID: 2156 RVA: 0x00027608 File Offset: 0x00025808
+		// (set) Token: 0x0600086D RID: 2157 RVA: 0x00027669 File Offset: 0x00025869
 		public virtual VectorInfo Position
 		{
 			get
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000275 RID: 629
-		// (get) Token: 0x060007EE RID: 2030 RVA: 0x00025D2C File Offset: 0x00023F2C
-		// (set) Token: 0x060007EF RID: 2031 RVA: 0x00025D8D File Offset: 0x00023F8D
+		// Token: 0x17000297 RID: 663
+		// (get) Token: 0x0600086E RID: 2158 RVA: 0x00027680 File Offset: 0x00025880
+		// (set) Token: 0x0600086F RID: 2159 RVA: 0x000276E1 File Offset: 0x000258E1
 		public virtual VectorInfo ArriveTangent
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000276 RID: 630
-		// (get) Token: 0x060007F0 RID: 2032 RVA: 0x00025DA4 File Offset: 0x00023FA4
-		// (set) Token: 0x060007F1 RID: 2033 RVA: 0x00025E05 File Offset: 0x00024005
+		// Token: 0x17000298 RID: 664
+		// (get) Token: 0x06000870 RID: 2160 RVA: 0x000276F8 File Offset: 0x000258F8
+		// (set) Token: 0x06000871 RID: 2161 RVA: 0x00027759 File Offset: 0x00025959
 		public virtual VectorInfo LeaveTangent
 		{
 			get
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000277 RID: 631
-		// (get) Token: 0x060007F2 RID: 2034 RVA: 0x00025E1A File Offset: 0x0002401A
-		// (set) Token: 0x060007F3 RID: 2035 RVA: 0x00025E45 File Offset: 0x00024045
+		// Token: 0x17000299 RID: 665
+		// (get) Token: 0x06000872 RID: 2162 RVA: 0x0002776E File Offset: 0x0002596E
+		// (set) Token: 0x06000873 RID: 2163 RVA: 0x00027799 File Offset: 0x00025999
 		public virtual ESplineLine LineType
 		{
 			get
@@ -177,9 +175,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000278 RID: 632
-		// (get) Token: 0x060007F4 RID: 2036 RVA: 0x00025E54 File Offset: 0x00024054
-		// (set) Token: 0x060007F5 RID: 2037 RVA: 0x00025EB5 File Offset: 0x000240B5
+		// Token: 0x1700029A RID: 666
+		// (get) Token: 0x06000874 RID: 2164 RVA: 0x000277A8 File Offset: 0x000259A8
+		// (set) Token: 0x06000875 RID: 2165 RVA: 0x00027809 File Offset: 0x00025A09
 		[Nullable(2)]
 		public virtual VectorInfo Rotation
 		{
@@ -210,36 +208,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008DA RID: 2266
+		// Token: 0x0400096B RID: 2411
 		[Nullable(2)]
 		protected IBaseSplinePointType FbInstance;
 
-		// Token: 0x040008DB RID: 2267
+		// Token: 0x0400096C RID: 2412
 		[Nullable(2)]
 		protected IBaseSplinePointType_SetValue PocoInterface;
 
-		// Token: 0x040008DC RID: 2268
+		// Token: 0x0400096D RID: 2413
 		private VectorInfo _PositionCache;
 
-		// Token: 0x040008DD RID: 2269
+		// Token: 0x0400096E RID: 2414
 		private bool _PositionInited;
 
-		// Token: 0x040008DE RID: 2270
+		// Token: 0x0400096F RID: 2415
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x040008DF RID: 2271
+		// Token: 0x04000970 RID: 2416
 		private bool _ArriveTangentInited;
 
-		// Token: 0x040008E0 RID: 2272
+		// Token: 0x04000971 RID: 2417
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x040008E1 RID: 2273
+		// Token: 0x04000972 RID: 2418
 		private bool _LeaveTangentInited;
 
-		// Token: 0x040008E2 RID: 2274
+		// Token: 0x04000973 RID: 2419
 		private VectorInfo _RotationCache;
 
-		// Token: 0x040008E3 RID: 2275
+		// Token: 0x04000974 RID: 2420
 		private bool _RotationInited;
 	}
 }

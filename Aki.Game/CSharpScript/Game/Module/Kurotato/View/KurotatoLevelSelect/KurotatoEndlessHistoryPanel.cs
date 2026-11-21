@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x02005755 RID: 22357
+	// Token: 0x0200472C RID: 18220
 	public class KurotatoEndlessHistoryPanel : UiPanelBase
 	{
-		// Token: 0x06038D14 RID: 232724 RVA: 0x00D7E858 File Offset: 0x00D7CA58
+		// Token: 0x0602DC24 RID: 187428 RVA: 0x00CCD238 File Offset: 0x00CCB438
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D15 RID: 232725 RVA: 0x00D7E968 File Offset: 0x00D7CB68
+		// Token: 0x0602DC25 RID: 187429 RVA: 0x00CCD348 File Offset: 0x00CCB548
 		[NullableContext(1)]
 		public void Refresh(KurotatoLevelData levelData)
 		{
@@ -72,7 +71,8 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), kurotatoRoleData.Name, Array.Empty<object>());
 			foreach (KurotatoWaveLevel kurotatoWaveLevel in KurotatoConfig.Instance.GetWaveLevelConfigList())
 			{
-				if (kurotatoWaveLevel.WaveRangeIter().ToList<int>()[0] <= levelData.HistoryWave && levelData.HistoryWave <= kurotatoWaveLevel.WaveRangeIter().ToList<int>()[1])
+				List<int> list = new List<int>(kurotatoWaveLevel.WaveRangeIter());
+				if (list[0] <= levelData.HistoryWave && levelData.HistoryWave <= list[1])
 				{
 					base.SetTextureByPath(kurotatoWaveLevel.Icon, base.GetTexture(4), null, null);
 					break;
@@ -80,22 +80,22 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			}
 		}
 
-		// Token: 0x0200B94D RID: 47437
+		// Token: 0x0200A36B RID: 41835
 		private enum EComponent
 		{
-			// Token: 0x040380A6 RID: 229542
+			// Token: 0x04032AAC RID: 207532
 			TxtKillNum,
-			// Token: 0x040380A7 RID: 229543
+			// Token: 0x04032AAD RID: 207533
 			TxtWave,
-			// Token: 0x040380A8 RID: 229544
+			// Token: 0x04032AAE RID: 207534
 			TexRole,
-			// Token: 0x040380A9 RID: 229545
+			// Token: 0x04032AAF RID: 207535
 			TxtName,
-			// Token: 0x040380AA RID: 229546
+			// Token: 0x04032AB0 RID: 207536
 			TexPoint,
-			// Token: 0x040380AB RID: 229547
+			// Token: 0x04032AB1 RID: 207537
 			ItemInfoPanel,
-			// Token: 0x040380AC RID: 229548
+			// Token: 0x04032AB2 RID: 207538
 			ItemEmptyPanel
 		}
 	}

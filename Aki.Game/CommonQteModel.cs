@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002609 RID: 9737
+// Token: 0x02001AF4 RID: 6900
 [NullableContext(2)]
 [Nullable(0)]
 [Model(0)]
 public class CommonQteModel : ModelBase
 {
-	// Token: 0x06013D8C RID: 81292 RVA: 0x004FACF4 File Offset: 0x004F8EF4
+	// Token: 0x0601126E RID: 70254 RVA: 0x00509AF4 File Offset: 0x00507CF4
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearPreloadCache(null);
@@ -28,7 +28,7 @@ public class CommonQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013D8D RID: 81293 RVA: 0x004FAD30 File Offset: 0x004F8F30
+	// Token: 0x0601126F RID: 70255 RVA: 0x00509B30 File Offset: 0x00507D30
 	public CommonQteContextBase CreateQteContext(int qteId, TCommonQteCallback onSuccess = null, TCommonQteCallback onFail = null, EQteSource source = EQteSource.Battle, IQteExtraParams extraParams = null)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(qteId);
@@ -70,7 +70,7 @@ public class CommonQteModel : ModelBase
 		return commonQteContextBase;
 	}
 
-	// Token: 0x06013D8E RID: 81294 RVA: 0x004FADF4 File Offset: 0x004F8FF4
+	// Token: 0x06011270 RID: 70256 RVA: 0x00509BF4 File Offset: 0x00507DF4
 	public CommonQteGroupContext CreateQteGroupContext(int qteGroupId, TCommonQteCallback onSuccess = null, TCommonQteCallback onFail = null, EQteSource source = EQteSource.Battle, IQteExtraParams extraParams = null)
 	{
 		SCommonQteGroup commonQteGroupConfig = this.GetCommonQteGroupConfig(qteGroupId);
@@ -105,7 +105,7 @@ public class CommonQteModel : ModelBase
 		return commonQteGroupContext;
 	}
 
-	// Token: 0x06013D8F RID: 81295 RVA: 0x004FAEDF File Offset: 0x004F90DF
+	// Token: 0x06011271 RID: 70257 RVA: 0x00509CDF File Offset: 0x00507EDF
 	[NullableContext(1)]
 	public void SetCurrentCommonQte(CommonQteContextBase context)
 	{
@@ -117,7 +117,7 @@ public class CommonQteModel : ModelBase
 		this.Contexts[context.HandleId] = context;
 	}
 
-	// Token: 0x06013D90 RID: 81296 RVA: 0x004FAF14 File Offset: 0x004F9114
+	// Token: 0x06011272 RID: 70258 RVA: 0x00509D14 File Offset: 0x00507F14
 	public SCommonQte GetCommonQteConfig(int commonQteId)
 	{
 		SCommonQte result;
@@ -161,7 +161,7 @@ public class CommonQteModel : ModelBase
 		return dataTableRow;
 	}
 
-	// Token: 0x06013D91 RID: 81297 RVA: 0x004FB008 File Offset: 0x004F9208
+	// Token: 0x06011273 RID: 70259 RVA: 0x00509E08 File Offset: 0x00508008
 	public SCommonQteGroup GetCommonQteGroupConfig(int commonQteGroupId)
 	{
 		if (this.CommonQteGroupDt == null)
@@ -192,7 +192,7 @@ public class CommonQteModel : ModelBase
 		return dataTableRow;
 	}
 
-	// Token: 0x06013D92 RID: 81298 RVA: 0x004FB0C0 File Offset: 0x004F92C0
+	// Token: 0x06011274 RID: 70260 RVA: 0x00509EC0 File Offset: 0x005080C0
 	public EUiViewName? GetCommonQteViewName(int commonQteId)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(commonQteId);
@@ -239,7 +239,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D93 RID: 81299 RVA: 0x004FB250 File Offset: 0x004F9450
+	// Token: 0x06011275 RID: 70261 RVA: 0x0050A050 File Offset: 0x00508250
 	public string GetCommonQteItemName(int commonQteId)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(commonQteId);
@@ -301,6 +301,10 @@ public class CommonQteModel : ModelBase
 				{
 					return EQteItem.PullDownItem.ToEnumString();
 				}
+				if (commonQteConfig.BaseConfig.DragConfig.ViewType == ECommonQteViewType_Drag.莉莉左滑界面)
+				{
+					return EQteItem.PullLeftItem.ToEnumString();
+				}
 				if (commonQteConfig.BaseConfig.DragConfig.ViewType == ECommonQteViewType_Drag.罗盘旋转界面)
 				{
 					return EQteItem.CompassRotateItem.ToEnumString();
@@ -341,7 +345,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D94 RID: 81300 RVA: 0x004FB588 File Offset: 0x004F9788
+	// Token: 0x06011276 RID: 70262 RVA: 0x0050A3AC File Offset: 0x005085AC
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public CommonQteItemBase CreateCommonQteItem(string itemName)
@@ -375,6 +379,10 @@ public class CommonQteModel : ModelBase
 			return new CommonQteFullScreenPullItem();
 		}
 		if (itemName == EQteItem.PullDownItem.ToEnumString())
+		{
+			return new CommonQteFullScreenPullItem();
+		}
+		if (itemName == EQteItem.PullLeftItem.ToEnumString())
 		{
 			return new CommonQteFullScreenPullItem();
 		}
@@ -425,13 +433,13 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D95 RID: 81301 RVA: 0x004FB71C File Offset: 0x004F991C
+	// Token: 0x06011277 RID: 70263 RVA: 0x0050A555 File Offset: 0x00508755
 	public int GetQteHandleId()
 	{
 		return this.HandleId;
 	}
 
-	// Token: 0x06013D96 RID: 81302 RVA: 0x004FB724 File Offset: 0x004F9924
+	// Token: 0x06011278 RID: 70264 RVA: 0x0050A560 File Offset: 0x00508760
 	public void ClearQteHandleId(int? qteHandleId = null)
 	{
 		int key = qteHandleId ?? this.HandleId;
@@ -458,7 +466,7 @@ public class CommonQteModel : ModelBase
 		this.HandleId = -1;
 	}
 
-	// Token: 0x06013D97 RID: 81303 RVA: 0x004FB7A8 File Offset: 0x004F99A8
+	// Token: 0x06011279 RID: 70265 RVA: 0x0050A5E4 File Offset: 0x005087E4
 	public CommonQteContextBase GetQteContext(int qteHandleId)
 	{
 		CommonQteContextBase result;
@@ -469,7 +477,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D98 RID: 81304 RVA: 0x004FB7D0 File Offset: 0x004F99D0
+	// Token: 0x0601127A RID: 70266 RVA: 0x0050A60C File Offset: 0x0050880C
 	public IQteResource GetQteResource(int qteId, bool init = false)
 	{
 		if (init)
@@ -494,7 +502,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D99 RID: 81305 RVA: 0x004FB834 File Offset: 0x004F9A34
+	// Token: 0x0601127B RID: 70267 RVA: 0x0050A670 File Offset: 0x00508870
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -540,7 +548,7 @@ public class CommonQteModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06013D9A RID: 81306 RVA: 0x004FB920 File Offset: 0x004F9B20
+	// Token: 0x0601127C RID: 70268 RVA: 0x0050A75C File Offset: 0x0050895C
 	public string GetQteIconPath(int qteId)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(qteId);
@@ -573,7 +581,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D9B RID: 81307 RVA: 0x004FBA14 File Offset: 0x004F9C14
+	// Token: 0x0601127D RID: 70269 RVA: 0x0050A850 File Offset: 0x00508A50
 	public string GetQteScreenEffectPath(int qteId, EQteScreenEffectType effectType)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(qteId);
@@ -589,7 +597,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D9C RID: 81308 RVA: 0x004FBA78 File Offset: 0x004F9C78
+	// Token: 0x0601127E RID: 70270 RVA: 0x0050A8B4 File Offset: 0x00508AB4
 	public string GetQteCameraShakePath(int qteId)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(qteId);
@@ -605,7 +613,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D9D RID: 81309 RVA: 0x004FBAC8 File Offset: 0x004F9CC8
+	// Token: 0x0601127F RID: 70271 RVA: 0x0050A904 File Offset: 0x00508B04
 	public string GetQteGamepadShakePath(int qteId)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(qteId);
@@ -621,7 +629,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D9E RID: 81310 RVA: 0x004FBB18 File Offset: 0x004F9D18
+	// Token: 0x06011280 RID: 70272 RVA: 0x0050A954 File Offset: 0x00508B54
 	public string GetQteScaleCurvePath(int qteId)
 	{
 		SCommonQte commonQteConfig = this.GetCommonQteConfig(qteId);
@@ -637,7 +645,7 @@ public class CommonQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013D9F RID: 81311 RVA: 0x004FBB68 File Offset: 0x004F9D68
+	// Token: 0x06011281 RID: 70273 RVA: 0x0050A9A4 File Offset: 0x00508BA4
 	[NullableContext(0)]
 	private UniTask<bool> LoadQteIcon(int qteId, [Nullable(1)] string iconPath)
 	{
@@ -651,7 +659,7 @@ public class CommonQteModel : ModelBase
 		return <LoadQteIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DA0 RID: 81312 RVA: 0x004FBBBC File Offset: 0x004F9DBC
+	// Token: 0x06011282 RID: 70274 RVA: 0x0050A9F8 File Offset: 0x00508BF8
 	[NullableContext(0)]
 	private UniTask<bool> LoadQteScreenEffectType1(int qteId, [Nullable(1)] string path)
 	{
@@ -665,7 +673,7 @@ public class CommonQteModel : ModelBase
 		return <LoadQteScreenEffectType1>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DA1 RID: 81313 RVA: 0x004FBC10 File Offset: 0x004F9E10
+	// Token: 0x06011283 RID: 70275 RVA: 0x0050AA4C File Offset: 0x00508C4C
 	[NullableContext(0)]
 	private UniTask<bool> LoadQteScreenEffectType2(int qteId, [Nullable(1)] string path)
 	{
@@ -679,7 +687,7 @@ public class CommonQteModel : ModelBase
 		return <LoadQteScreenEffectType2>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DA2 RID: 81314 RVA: 0x004FBC64 File Offset: 0x004F9E64
+	// Token: 0x06011284 RID: 70276 RVA: 0x0050AAA0 File Offset: 0x00508CA0
 	[NullableContext(0)]
 	private UniTask<bool> LoadQteCameraShake(int qteId, [Nullable(1)] string path)
 	{
@@ -693,7 +701,7 @@ public class CommonQteModel : ModelBase
 		return <LoadQteCameraShake>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DA3 RID: 81315 RVA: 0x004FBCB8 File Offset: 0x004F9EB8
+	// Token: 0x06011285 RID: 70277 RVA: 0x0050AAF4 File Offset: 0x00508CF4
 	[NullableContext(0)]
 	private UniTask<bool> LoadQteGamepadShake(int qteId, [Nullable(1)] string path)
 	{
@@ -707,7 +715,7 @@ public class CommonQteModel : ModelBase
 		return <LoadQteGamepadShake>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DA4 RID: 81316 RVA: 0x004FBD0C File Offset: 0x004F9F0C
+	// Token: 0x06011286 RID: 70278 RVA: 0x0050AB48 File Offset: 0x00508D48
 	[NullableContext(0)]
 	private UniTask<bool> LoadQteScaleCurve(int qteId, [Nullable(1)] string path)
 	{
@@ -721,7 +729,7 @@ public class CommonQteModel : ModelBase
 		return <LoadQteScaleCurve>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013DA5 RID: 81317 RVA: 0x004FBD60 File Offset: 0x004F9F60
+	// Token: 0x06011287 RID: 70279 RVA: 0x0050AB9C File Offset: 0x00508D9C
 	public void ClearPreloadCache(int? qteId = null)
 	{
 		if (qteId != null)
@@ -756,8 +764,8 @@ public class CommonQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700195F RID: 6495
-	// (get) Token: 0x06013DA6 RID: 81318 RVA: 0x004FBDC9 File Offset: 0x004F9FC9
+	// Token: 0x17001997 RID: 6551
+	// (get) Token: 0x06011288 RID: 70280 RVA: 0x0050AC05 File Offset: 0x00508E05
 	[Nullable(1)]
 	public static CommonQteModel Instance
 	{
@@ -768,7 +776,7 @@ public class CommonQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013DA7 RID: 81319 RVA: 0x004FBDD0 File Offset: 0x004F9FD0
+	// Token: 0x06011289 RID: 70281 RVA: 0x0050AC0C File Offset: 0x00508E0C
 	[NullableContext(1)]
 	public static CommonQteModel GetOrCreateInstance()
 	{
@@ -779,7 +787,7 @@ public class CommonQteModel : ModelBase
 		return CommonQteModel._Instance;
 	}
 
-	// Token: 0x06013DA8 RID: 81320 RVA: 0x004FBDE4 File Offset: 0x004F9FE4
+	// Token: 0x0601128A RID: 70282 RVA: 0x0050AC20 File Offset: 0x00508E20
 	public static bool CreateInstance()
 	{
 		if (CommonQteModel._Instance != null)
@@ -790,58 +798,58 @@ public class CommonQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013DA9 RID: 81321 RVA: 0x004FBDFA File Offset: 0x004F9FFA
+	// Token: 0x0601128B RID: 70283 RVA: 0x0050AC36 File Offset: 0x00508E36
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013DAA RID: 81322 RVA: 0x004FBDFC File Offset: 0x004F9FFC
+	// Token: 0x0601128C RID: 70284 RVA: 0x0050AC38 File Offset: 0x00508E38
 	public static void ResetStaticDefaultValue()
 	{
 		CommonQteModel._Instance = null;
 	}
 
-	// Token: 0x06013DAB RID: 81323 RVA: 0x004FBE04 File Offset: 0x004FA004
+	// Token: 0x0601128D RID: 70285 RVA: 0x0050AC40 File Offset: 0x00508E40
 	static CommonQteModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CommonQteModel.CreateStaticDefaultValue), new Action(CommonQteModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009589 RID: 38281
+	// Token: 0x040096E0 RID: 38624
 	[Nullable(1)]
 	private const string DT_COMMON_QTE_PATH = "/Game/Aki/Data/Qte/DT_CommonQte.DT_CommonQte";
 
-	// Token: 0x0400958A RID: 38282
+	// Token: 0x040096E1 RID: 38625
 	[Nullable(1)]
 	private const string DT_COMMON_QTE_GROUP_PATH = "/Game/Aki/Data/Qte/DT_CommonQteGroup.DT_CommonQteGroup";
 
-	// Token: 0x0400958B RID: 38283
+	// Token: 0x040096E2 RID: 38626
 	[Nullable(1)]
 	private const string UI_EDITOR_PATH = "UIEditor";
 
-	// Token: 0x0400958C RID: 38284
+	// Token: 0x040096E3 RID: 38627
 	[Nullable(1)]
 	private const string UI_RESOURCES_PATH = "UIResources";
 
-	// Token: 0x0400958D RID: 38285
+	// Token: 0x040096E4 RID: 38628
 	private const byte RING_TAP_SINGLE_BUTTON_VIEW_TYPE = 4;
 
-	// Token: 0x0400958E RID: 38286
+	// Token: 0x040096E5 RID: 38629
 	private const byte RING_MATCH_TAP_SINGLE_BUTTON_VIEW_TYPE = 5;
 
-	// Token: 0x0400958F RID: 38287
+	// Token: 0x040096E6 RID: 38630
 	private int HandleId = -1;
 
-	// Token: 0x04009590 RID: 38288
+	// Token: 0x040096E7 RID: 38631
 	private int HandleIdCounter;
 
-	// Token: 0x04009591 RID: 38289
+	// Token: 0x040096E8 RID: 38632
 	private UDataTable CommonQteDt;
 
-	// Token: 0x04009592 RID: 38290
+	// Token: 0x040096E9 RID: 38633
 	private UDataTable CommonQteGroupDt;
 
-	// Token: 0x04009593 RID: 38291
+	// Token: 0x040096EA RID: 38634
 	[Nullable(new byte[]
 	{
 		2,
@@ -849,7 +857,7 @@ public class CommonQteModel : ModelBase
 	})]
 	private Dictionary<int, CommonQteContextBase> Contexts;
 
-	// Token: 0x04009594 RID: 38292
+	// Token: 0x040096EB RID: 38635
 	[Nullable(new byte[]
 	{
 		2,
@@ -857,7 +865,7 @@ public class CommonQteModel : ModelBase
 	})]
 	private Dictionary<int, IQteResource> QteResources;
 
-	// Token: 0x04009595 RID: 38293
+	// Token: 0x040096EC RID: 38636
 	[Nullable(new byte[]
 	{
 		2,
@@ -865,9 +873,9 @@ public class CommonQteModel : ModelBase
 	})]
 	private Dictionary<int, SCommonQte> QteConfigCache;
 
-	// Token: 0x04009596 RID: 38294
+	// Token: 0x040096ED RID: 38637
 	public bool IsRefreshMode;
 
-	// Token: 0x04009597 RID: 38295
+	// Token: 0x040096EE RID: 38638
 	private static CommonQteModel _Instance;
 }

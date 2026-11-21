@@ -5,10 +5,10 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F86 RID: 20358
+	// Token: 0x02003F4F RID: 16207
 	public class QuickHackWorldTimeDilationManager : IQuickHackTimeScaleManager
 	{
-		// Token: 0x06034204 RID: 213508 RVA: 0x00C3B6B8 File Offset: 0x00C398B8
+		// Token: 0x06029072 RID: 168050 RVA: 0x00B84E64 File Offset: 0x00B83064
 		public void BeginTimeScale(QuickHackDevice config, int ownerEntityId)
 		{
 			int timeScaleDuration = config.TimeScaleDuration;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034205 RID: 213509 RVA: 0x00C3B747 File Offset: 0x00C39947
+		// Token: 0x06029073 RID: 168051 RVA: 0x00B84EF3 File Offset: 0x00B830F3
 		public void EndTimeScale()
 		{
 			TimerHandle timerHandle = this.TimerHandle;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.EndInternal();
 		}
 
-		// Token: 0x06034206 RID: 213510 RVA: 0x00C3B768 File Offset: 0x00C39968
+		// Token: 0x06029074 RID: 168052 RVA: 0x00B84F14 File Offset: 0x00B83114
 		private void EndInternal()
 		{
 			if (this.IsChangeTimeScale)
@@ -56,10 +56,10 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BB70 RID: 113520
+		// Token: 0x04016545 RID: 91461
 		private bool IsChangeTimeScale;
 
-		// Token: 0x0401BB71 RID: 113521
+		// Token: 0x04016546 RID: 91462
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

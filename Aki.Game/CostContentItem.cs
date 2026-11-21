@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002877 RID: 10359
+// Token: 0x02001DF2 RID: 7666
 [NullableContext(2)]
 [Nullable(0)]
 public class CostContentItem : UiPanelBase
 {
-	// Token: 0x06015510 RID: 87312 RVA: 0x0056247C File Offset: 0x0056067C
+	// Token: 0x06012F0E RID: 77582 RVA: 0x0058D1D8 File Offset: 0x0058B3D8
 	[NullableContext(1)]
 	public CostContentItem(RoleBreakPreviewViewModel vm)
 	{
 		this.BoundViewModel = vm;
 	}
 
-	// Token: 0x06015511 RID: 87313 RVA: 0x0056248C File Offset: 0x0056068C
+	// Token: 0x06012F0F RID: 77583 RVA: 0x0058D1E8 File Offset: 0x0058B3E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,52 +27,52 @@ public class CostContentItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015512 RID: 87314 RVA: 0x005624E6 File Offset: 0x005606E6
+	// Token: 0x06012F10 RID: 77584 RVA: 0x0058D242 File Offset: 0x0058B442
 	protected override void OnStart()
 	{
 		this.BoundViewModel.BindCostContentItem(this);
 		this.BoundViewModel.HandleCostContentItemOnStart();
 	}
 
-	// Token: 0x06015513 RID: 87315 RVA: 0x005624FF File Offset: 0x005606FF
+	// Token: 0x06012F11 RID: 77585 RVA: 0x0058D25B File Offset: 0x0058B45B
 	protected override void OnBeforeDestroy()
 	{
 		this.BoundViewModel.UnbindCostContentItem();
 		this.BoundViewModel = null;
 	}
 
-	// Token: 0x06015514 RID: 87316 RVA: 0x00562514 File Offset: 0x00560714
+	// Token: 0x06012F12 RID: 77586 RVA: 0x0058D270 File Offset: 0x0058B470
 	public void RefreshTitle(string value)
 	{
 		string newText = (!string.IsNullOrEmpty(value)) ? value : "";
 		base.GetText(0).SetText(newText, true);
 	}
 
-	// Token: 0x06015515 RID: 87317 RVA: 0x00562540 File Offset: 0x00560740
+	// Token: 0x06012F13 RID: 77587 RVA: 0x0058D29C File Offset: 0x0058B49C
 	public void RefreshCostNumber(string value)
 	{
 		string newText = (!string.IsNullOrEmpty(value)) ? value : "";
 		base.GetText(1).SetText(newText, true);
 	}
 
-	// Token: 0x06015516 RID: 87318 RVA: 0x0056256C File Offset: 0x0056076C
+	// Token: 0x06012F14 RID: 77588 RVA: 0x0058D2C8 File Offset: 0x0058B4C8
 	public void RefreshMoneyIcon(EItemId value)
 	{
 		base.SetItemIcon(base.GetTexture(2), (int)value, null, null);
 	}
 
-	// Token: 0x04009F51 RID: 40785
+	// Token: 0x0400A33A RID: 41786
 	private RoleBreakPreviewViewModel BoundViewModel;
 
-	// Token: 0x02008E8D RID: 36493
+	// Token: 0x020080D3 RID: 32979
 	[NullableContext(0)]
 	private enum ECostContentItemComponent
 	{
-		// Token: 0x0402E3BF RID: 189375
+		// Token: 0x04029AB9 RID: 170681
 		Title,
-		// Token: 0x0402E3C0 RID: 189376
+		// Token: 0x04029ABA RID: 170682
 		CostNumber,
-		// Token: 0x0402E3C1 RID: 189377
+		// Token: 0x04029ABB RID: 170683
 		MoneyIcon
 	}
 }

@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032BE RID: 12990
+// Token: 0x0200282F RID: 10287
 [NullableContext(2)]
 public interface IBuffRecord
 {
-	// Token: 0x17002716 RID: 10006
-	// (get) Token: 0x0601C300 RID: 115456
-	// (set) Token: 0x0601C301 RID: 115457
+	// Token: 0x17002A02 RID: 10754
+	// (get) Token: 0x06019F43 RID: 106307
+	// (set) Token: 0x06019F44 RID: 106308
 	long BuffId { get; set; }
 
-	// Token: 0x17002717 RID: 10007
-	// (get) Token: 0x0601C302 RID: 115458
-	// (set) Token: 0x0601C303 RID: 115459
+	// Token: 0x17002A03 RID: 10755
+	// (get) Token: 0x06019F45 RID: 106309
+	// (set) Token: 0x06019F46 RID: 106310
 	float TimeStamp { get; set; }
 
-	// Token: 0x17002718 RID: 10008
-	// (get) Token: 0x0601C304 RID: 115460
-	// (set) Token: 0x0601C305 RID: 115461
+	// Token: 0x17002A04 RID: 10756
+	// (get) Token: 0x06019F47 RID: 106311
+	// (set) Token: 0x06019F48 RID: 106312
 	int AreaId { get; set; }
 
-	// Token: 0x17002719 RID: 10009
-	// (get) Token: 0x0601C306 RID: 115462
-	// (set) Token: 0x0601C307 RID: 115463
+	// Token: 0x17002A05 RID: 10757
+	// (get) Token: 0x06019F49 RID: 106313
+	// (set) Token: 0x06019F4A RID: 106314
 	Vector Location { get; set; }
 
-	// Token: 0x1700271A RID: 10010
-	// (get) Token: 0x0601C308 RID: 115464
-	// (set) Token: 0x0601C309 RID: 115465
+	// Token: 0x17002A06 RID: 10758
+	// (get) Token: 0x06019F4B RID: 106315
+	// (set) Token: 0x06019F4C RID: 106316
 	float Damage { get; set; }
 }

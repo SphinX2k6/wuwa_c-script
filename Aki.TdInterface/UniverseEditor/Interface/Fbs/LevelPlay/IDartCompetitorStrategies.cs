@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004470 RID: 17520
+	// Token: 0x020048D8 RID: 18648
 	public struct IDartCompetitorStrategies : IFlatbufferObject
 	{
-		// Token: 0x17007BA5 RID: 31653
-		// (get) Token: 0x0601A1D0 RID: 106960 RVA: 0x003BB13C File Offset: 0x003B933C
+		// Token: 0x170081E4 RID: 33252
+		// (get) Token: 0x0601B9A1 RID: 113057 RVA: 0x003E7348 File Offset: 0x003E5548
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A1D1 RID: 106961 RVA: 0x003BB149 File Offset: 0x003B9349
+		// Token: 0x0601B9A2 RID: 113058 RVA: 0x003E7355 File Offset: 0x003E5555
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A1D2 RID: 106962 RVA: 0x003BB150 File Offset: 0x003B9350
+		// Token: 0x0601B9A3 RID: 113059 RVA: 0x003E735C File Offset: 0x003E555C
 		public static IDartCompetitorStrategies GetRootAsIDartCompetitorStrategies(ByteBuffer _bb)
 		{
 			return IDartCompetitorStrategies.GetRootAsIDartCompetitorStrategies(_bb, default(IDartCompetitorStrategies));
 		}
 
-		// Token: 0x0601A1D3 RID: 106963 RVA: 0x003BB16C File Offset: 0x003B936C
+		// Token: 0x0601B9A4 RID: 113060 RVA: 0x003E7378 File Offset: 0x003E5578
 		public static IDartCompetitorStrategies GetRootAsIDartCompetitorStrategies(ByteBuffer _bb, IDartCompetitorStrategies obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A1D4 RID: 106964 RVA: 0x003BB189 File Offset: 0x003B9389
+		// Token: 0x0601B9A5 RID: 113061 RVA: 0x003E7395 File Offset: 0x003E5595
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A1D5 RID: 106965 RVA: 0x003BB198 File Offset: 0x003B9398
+		// Token: 0x0601B9A6 RID: 113062 RVA: 0x003E73A4 File Offset: 0x003E55A4
 		public IDartCompetitorStrategies __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007BA6 RID: 31654
-		// (get) Token: 0x0601A1D6 RID: 106966 RVA: 0x003BB1A8 File Offset: 0x003B93A8
+		// Token: 0x170081E5 RID: 33253
+		// (get) Token: 0x0601B9A7 RID: 113063 RVA: 0x003E73B4 File Offset: 0x003E55B4
 		public int Mode301Strategy
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007BA7 RID: 31655
-		// (get) Token: 0x0601A1D7 RID: 106967 RVA: 0x003BB1E4 File Offset: 0x003B93E4
+		// Token: 0x170081E6 RID: 33254
+		// (get) Token: 0x0601B9A8 RID: 113064 RVA: 0x003E73F0 File Offset: 0x003E55F0
 		public int Mode501Strategy
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007BA8 RID: 31656
-		// (get) Token: 0x0601A1D8 RID: 106968 RVA: 0x003BB220 File Offset: 0x003B9420
+		// Token: 0x170081E7 RID: 33255
+		// (get) Token: 0x0601B9A9 RID: 113065 RVA: 0x003E742C File Offset: 0x003E562C
 		public int Mode701Strategy
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A1D9 RID: 106969 RVA: 0x003BB25C File Offset: 0x003B945C
+		// Token: 0x0601B9AA RID: 113066 RVA: 0x003E7468 File Offset: 0x003E5668
 		public static Offset<IDartCompetitorStrategies> CreateIDartCompetitorStrategies(FlatBufferBuilder builder, int Mode301Strategy = 0, int Mode501Strategy = 0, int Mode701Strategy = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartCompetitorStrategies.EndIDartCompetitorStrategies(builder);
 		}
 
-		// Token: 0x0601A1DA RID: 106970 RVA: 0x003BB280 File Offset: 0x003B9480
+		// Token: 0x0601B9AB RID: 113067 RVA: 0x003E748C File Offset: 0x003E568C
 		public static void StartIDartCompetitorStrategies(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601A1DB RID: 106971 RVA: 0x003BB289 File Offset: 0x003B9489
+		// Token: 0x0601B9AC RID: 113068 RVA: 0x003E7495 File Offset: 0x003E5695
 		public static void AddMode301Strategy(FlatBufferBuilder builder, int mode301Strategy)
 		{
 			builder.AddInt(0, mode301Strategy, 0);
 		}
 
-		// Token: 0x0601A1DC RID: 106972 RVA: 0x003BB294 File Offset: 0x003B9494
+		// Token: 0x0601B9AD RID: 113069 RVA: 0x003E74A0 File Offset: 0x003E56A0
 		public static void AddMode501Strategy(FlatBufferBuilder builder, int mode501Strategy)
 		{
 			builder.AddInt(1, mode501Strategy, 0);
 		}
 
-		// Token: 0x0601A1DD RID: 106973 RVA: 0x003BB29F File Offset: 0x003B949F
+		// Token: 0x0601B9AE RID: 113070 RVA: 0x003E74AB File Offset: 0x003E56AB
 		public static void AddMode701Strategy(FlatBufferBuilder builder, int mode701Strategy)
 		{
 			builder.AddInt(2, mode701Strategy, 0);
 		}
 
-		// Token: 0x0601A1DE RID: 106974 RVA: 0x003BB2AA File Offset: 0x003B94AA
+		// Token: 0x0601B9AF RID: 113071 RVA: 0x003E74B6 File Offset: 0x003E56B6
 		public static Offset<IDartCompetitorStrategies> EndIDartCompetitorStrategies(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartCompetitorStrategies>(builder.EndTable());
 		}
 
-		// Token: 0x0601A1DF RID: 106975 RVA: 0x003BB2B8 File Offset: 0x003B94B8
+		// Token: 0x0601B9B0 RID: 113072 RVA: 0x003E74C4 File Offset: 0x003E56C4
 		public IDartCompetitorStrategiesT UnPack()
 		{
 			IDartCompetitorStrategiesT dartCompetitorStrategiesT = new IDartCompetitorStrategiesT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dartCompetitorStrategiesT;
 		}
 
-		// Token: 0x0601A1E0 RID: 106976 RVA: 0x003BB2D3 File Offset: 0x003B94D3
+		// Token: 0x0601B9B1 RID: 113073 RVA: 0x003E74DF File Offset: 0x003E56DF
 		public void UnPackTo(IDartCompetitorStrategiesT _o)
 		{
 			_o.Mode301Strategy = this.Mode301Strategy;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.Mode701Strategy = this.Mode701Strategy;
 		}
 
-		// Token: 0x0601A1E1 RID: 106977 RVA: 0x003BB2FC File Offset: 0x003B94FC
+		// Token: 0x0601B9B2 RID: 113074 RVA: 0x003E7508 File Offset: 0x003E5708
 		public static Offset<IDartCompetitorStrategies> Pack(FlatBufferBuilder builder, IDartCompetitorStrategiesT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartCompetitorStrategies.CreateIDartCompetitorStrategies(builder, _o.Mode301Strategy, _o.Mode501Strategy, _o.Mode701Strategy);
 		}
 
-		// Token: 0x0400C464 RID: 50276
+		// Token: 0x0400CE92 RID: 52882
 		private Table __p;
 	}
 }

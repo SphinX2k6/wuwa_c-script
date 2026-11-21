@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DBB RID: 28091
+	// Token: 0x02005F3A RID: 24378
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiTaskEntityTurnTo : LevelAiTask
 	{
-		// Token: 0x060448AF RID: 280751 RVA: 0x010E7184 File Offset: 0x010E5384
+		// Token: 0x0603AA13 RID: 240147 RVA: 0x010913AC File Offset: 0x0108F5AC
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			EntityTurnTo entityTurnTo = this.Params as EntityTurnTo;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.InProgress;
 		}
 
-		// Token: 0x060448B0 RID: 280752 RVA: 0x010E7278 File Offset: 0x010E5478
+		// Token: 0x0603AA14 RID: 240148 RVA: 0x010914A0 File Offset: 0x0108F6A0
 		protected override void TickTask(float deltaTime)
 		{
 			if (this.Character.InputRotatorProxy.Equals(this.Character.ActorRotationProxy, 10f))
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x060448B1 RID: 280753 RVA: 0x010E72D3 File Offset: 0x010E54D3
+		// Token: 0x0603AA15 RID: 240149 RVA: 0x010914FB File Offset: 0x0108F6FB
 		protected override ELevelAiNodeResult AbortTask()
 		{
 			CharacterActorComponent character = this.Character;
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.Aborted;
 		}
 
-		// Token: 0x060448B2 RID: 280754 RVA: 0x010E72E9 File Offset: 0x010E54E9
+		// Token: 0x0603AA16 RID: 240150 RVA: 0x01091511 File Offset: 0x0108F711
 		protected override void OnTaskFinished(ELevelAiNodeResult result)
 		{
 			this.Character = null;
 			this.MovementMode = EMovementMode.MOVE_None;
 		}
 
-		// Token: 0x060448B3 RID: 280755 RVA: 0x010E72FC File Offset: 0x010E54FC
+		// Token: 0x0603AA17 RID: 240151 RVA: 0x01091524 File Offset: 0x0108F724
 		private bool GetTurnToPosition(Vector outPosition, EntityTurnTo @params)
 		{
 			switch (@params.Target.Type)
@@ -114,20 +114,20 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return true;
 		}
 
-		// Token: 0x04023A4B RID: 145995
+		// Token: 0x0401ECED RID: 126189
 		private const float TURN_SPEED = 200f;
 
-		// Token: 0x04023A4C RID: 145996
+		// Token: 0x0401ECEE RID: 126190
 		private const float TOLERANCE = 10f;
 
-		// Token: 0x04023A4D RID: 145997
+		// Token: 0x0401ECEF RID: 126191
 		[Nullable(2)]
 		private CharacterActorComponent Character;
 
-		// Token: 0x04023A4E RID: 145998
+		// Token: 0x0401ECF0 RID: 126192
 		private EMovementMode MovementMode;
 
-		// Token: 0x04023A4F RID: 145999
+		// Token: 0x0401ECF1 RID: 126193
 		private readonly Vector TargetPos = Vector.Create();
 	}
 }

@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001962 RID: 6498
+// Token: 0x02000E1F RID: 3615
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonResultView : UiViewBase
 {
-	// Token: 0x0600BE15 RID: 48661 RVA: 0x002AFD72 File Offset: 0x002ADF72
+	// Token: 0x06009218 RID: 37400 RVA: 0x002BABB6 File Offset: 0x002B8DB6
 	public CommonResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600BE16 RID: 48662 RVA: 0x002AFD88 File Offset: 0x002ADF88
+	// Token: 0x06009219 RID: 37401 RVA: 0x002BABCC File Offset: 0x002B8DCC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class CommonResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600BE17 RID: 48663 RVA: 0x002AFE50 File Offset: 0x002AE050
+	// Token: 0x0600921A RID: 37402 RVA: 0x002BAC94 File Offset: 0x002B8E94
 	protected override void OnStart()
 	{
 		base.GetText(2).SetUIActive(false);
@@ -46,7 +46,7 @@ public class CommonResultView : UiViewBase
 		this.InitTimer();
 	}
 
-	// Token: 0x0600BE18 RID: 48664 RVA: 0x002AFEC3 File Offset: 0x002AE0C3
+	// Token: 0x0600921B RID: 37403 RVA: 0x002BAD07 File Offset: 0x002B8F07
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimer();
@@ -55,12 +55,12 @@ public class CommonResultView : UiViewBase
 		this.RewardLayout = null;
 	}
 
-	// Token: 0x0600BE19 RID: 48665 RVA: 0x002AFEE3 File Offset: 0x002AE0E3
+	// Token: 0x0600921C RID: 37404 RVA: 0x002BAD27 File Offset: 0x002B8F27
 	protected virtual void SetupButtonFormat()
 	{
 	}
 
-	// Token: 0x0600BE1A RID: 48666 RVA: 0x002AFEE8 File Offset: 0x002AE0E8
+	// Token: 0x0600921D RID: 37405 RVA: 0x002BAD2C File Offset: 0x002B8F2C
 	private CommonResultButton CreateButtonUsingTemplateButton(CommonResultButtonData data)
 	{
 		UUIItem item = base.GetItem(3);
@@ -70,7 +70,7 @@ public class CommonResultView : UiViewBase
 		return commonResultButton;
 	}
 
-	// Token: 0x0600BE1B RID: 48667 RVA: 0x002AFF20 File Offset: 0x002AE120
+	// Token: 0x0600921E RID: 37406 RVA: 0x002BAD64 File Offset: 0x002B8F64
 	private void ResetButtonList()
 	{
 		foreach (CommonResultButton commonResultButton in this.ButtonMap.Values)
@@ -81,7 +81,7 @@ public class CommonResultView : UiViewBase
 		this.ButtonItemMap.Clear();
 	}
 
-	// Token: 0x0600BE1C RID: 48668 RVA: 0x002AFF8C File Offset: 0x002AE18C
+	// Token: 0x0600921F RID: 37407 RVA: 0x002BADD0 File Offset: 0x002B8FD0
 	public void RefreshButtonList(List<CommonResultButtonData> dataList)
 	{
 		foreach (CommonResultButton commonResultButton in this.ButtonArray)
@@ -113,7 +113,7 @@ public class CommonResultView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BE1D RID: 48669 RVA: 0x002B0090 File Offset: 0x002AE290
+	// Token: 0x06009220 RID: 37408 RVA: 0x002BAED4 File Offset: 0x002B90D4
 	private ILayoutItem<CommonItemSimpleGrid> InitScrollViewItem(object data, UUIItem uiItem, int index)
 	{
 		CommonItemSimpleGrid commonItemSimpleGrid = new CommonItemSimpleGrid(uiItem.GetOwner());
@@ -125,26 +125,26 @@ public class CommonResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600BE1E RID: 48670 RVA: 0x002B00E2 File Offset: 0x002AE2E2
+	// Token: 0x06009221 RID: 37409 RVA: 0x002BAF26 File Offset: 0x002B9126
 	public void SetResultText(string textId)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600BE1F RID: 48671 RVA: 0x002B00FB File Offset: 0x002AE2FB
+	// Token: 0x06009222 RID: 37410 RVA: 0x002BAF3F File Offset: 0x002B913F
 	public void SetTipsText(string textId)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(2), textId, Array.Empty<object>());
 		base.GetText(2).SetUIActive(true);
 	}
 
-	// Token: 0x0600BE20 RID: 48672 RVA: 0x002B0121 File Offset: 0x002AE321
+	// Token: 0x06009223 RID: 37411 RVA: 0x002BAF65 File Offset: 0x002B9165
 	private void InitTimer()
 	{
 		this.CounterTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Timer), 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600BE21 RID: 48673 RVA: 0x002B014C File Offset: 0x002AE34C
+	// Token: 0x06009224 RID: 37412 RVA: 0x002BAF90 File Offset: 0x002B9190
 	private void Timer(float _)
 	{
 		foreach (CommonResultButton commonResultButton in this.ButtonArray)
@@ -155,12 +155,12 @@ public class CommonResultView : UiViewBase
 		this.OnTimer();
 	}
 
-	// Token: 0x0600BE22 RID: 48674 RVA: 0x002B01B8 File Offset: 0x002AE3B8
+	// Token: 0x06009225 RID: 37413 RVA: 0x002BAFFC File Offset: 0x002B91FC
 	protected virtual void OnTimer()
 	{
 	}
 
-	// Token: 0x0600BE23 RID: 48675 RVA: 0x002B01BA File Offset: 0x002AE3BA
+	// Token: 0x06009226 RID: 37414 RVA: 0x002BAFFE File Offset: 0x002B91FE
 	private void ClearTimer()
 	{
 		if (this.CounterTimer != null && TimerSystem.GameplayTimeInstance.Has(this.CounterTimer))
@@ -170,7 +170,7 @@ public class CommonResultView : UiViewBase
 		this.CounterTimer = null;
 	}
 
-	// Token: 0x040055B3 RID: 21939
+	// Token: 0x04005660 RID: 22112
 	[Nullable(new byte[]
 	{
 		2,
@@ -179,7 +179,7 @@ public class CommonResultView : UiViewBase
 	})]
 	protected Dictionary<string, CommonResultButton> ButtonMap;
 
-	// Token: 0x040055B4 RID: 21940
+	// Token: 0x04005661 RID: 22113
 	[Nullable(new byte[]
 	{
 		2,
@@ -188,10 +188,10 @@ public class CommonResultView : UiViewBase
 	})]
 	protected Dictionary<string, UUIItem> ButtonItemMap;
 
-	// Token: 0x040055B5 RID: 21941
+	// Token: 0x04005662 RID: 22114
 	private readonly List<CommonResultButton> ButtonArray = new List<CommonResultButton>();
 
-	// Token: 0x040055B6 RID: 21942
+	// Token: 0x04005663 RID: 22115
 	[Nullable(new byte[]
 	{
 		2,
@@ -199,32 +199,32 @@ public class CommonResultView : UiViewBase
 	})]
 	protected GenericLayoutNew<CommonItemSimpleGrid> RewardLayout;
 
-	// Token: 0x040055B7 RID: 21943
+	// Token: 0x04005664 RID: 22116
 	[Nullable(2)]
 	private TimerHandle CounterTimer;
 
-	// Token: 0x040055B8 RID: 21944
+	// Token: 0x04005665 RID: 22117
 	private int HasRunTime;
 
-	// Token: 0x02007EB8 RID: 32440
+	// Token: 0x02007047 RID: 28743
 	[NullableContext(0)]
 	public enum ECommonResultView
 	{
-		// Token: 0x040296D7 RID: 169687
+		// Token: 0x04024A14 RID: 150036
 		PanelContent,
-		// Token: 0x040296D8 RID: 169688
+		// Token: 0x04024A15 RID: 150037
 		ResultText,
-		// Token: 0x040296D9 RID: 169689
+		// Token: 0x04024A16 RID: 150038
 		TipsText,
-		// Token: 0x040296DA RID: 169690
+		// Token: 0x04024A17 RID: 150039
 		ButtonTemplate,
-		// Token: 0x040296DB RID: 169691
+		// Token: 0x04024A18 RID: 150040
 		ButtonParent,
-		// Token: 0x040296DC RID: 169692
+		// Token: 0x04024A19 RID: 150041
 		TeamPlayerItem,
-		// Token: 0x040296DD RID: 169693
+		// Token: 0x04024A1A RID: 150042
 		TeamPlayer1Sprite,
-		// Token: 0x040296DE RID: 169694
+		// Token: 0x04024A1B RID: 150043
 		TeamPlayer2Sprite
 	}
 }

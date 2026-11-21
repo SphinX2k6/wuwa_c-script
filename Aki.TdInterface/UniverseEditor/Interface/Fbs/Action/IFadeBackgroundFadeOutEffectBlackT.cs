@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200676F RID: 26479
+	// Token: 0x02006DEF RID: 28143
 	public class IFadeBackgroundFadeOutEffectBlackT
 	{
-		// Token: 0x1700C48D RID: 50317
-		// (get) Token: 0x0602E10F RID: 188687 RVA: 0x0064B4B6 File Offset: 0x006496B6
-		// (set) Token: 0x0602E110 RID: 188688 RVA: 0x0064B4BE File Offset: 0x006496BE
+		// Token: 0x1700CE43 RID: 52803
+		// (get) Token: 0x06030955 RID: 198997 RVA: 0x00698BFA File Offset: 0x00696DFA
+		// (set) Token: 0x06030956 RID: 198998 RVA: 0x00698C02 File Offset: 0x00696E02
 		public EFadeBackgroundFadeOutEffectType Type { get; set; }
 
-		// Token: 0x1700C48E RID: 50318
-		// (get) Token: 0x0602E111 RID: 188689 RVA: 0x0064B4C7 File Offset: 0x006496C7
-		// (set) Token: 0x0602E112 RID: 188690 RVA: 0x0064B4CF File Offset: 0x006496CF
+		// Token: 0x1700CE44 RID: 52804
+		// (get) Token: 0x06030957 RID: 198999 RVA: 0x00698C0B File Offset: 0x00696E0B
+		// (set) Token: 0x06030958 RID: 199000 RVA: 0x00698C13 File Offset: 0x00696E13
 		public EFadeInScreenShowType FadeColor { get; set; }
 
-		// Token: 0x1700C48F RID: 50319
-		// (get) Token: 0x0602E113 RID: 188691 RVA: 0x0064B4D8 File Offset: 0x006496D8
-		// (set) Token: 0x0602E114 RID: 188692 RVA: 0x0064B4E0 File Offset: 0x006496E0
+		// Token: 0x1700CE45 RID: 52805
+		// (get) Token: 0x06030959 RID: 199001 RVA: 0x00698C1C File Offset: 0x00696E1C
+		// (set) Token: 0x0603095A RID: 199002 RVA: 0x00698C24 File Offset: 0x00696E24
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700C490 RID: 50320
-		// (get) Token: 0x0602E115 RID: 188693 RVA: 0x0064B4E9 File Offset: 0x006496E9
-		// (set) Token: 0x0602E116 RID: 188694 RVA: 0x0064B4F1 File Offset: 0x006496F1
+		// Token: 0x1700CE46 RID: 52806
+		// (get) Token: 0x0603095B RID: 199003 RVA: 0x00698C2D File Offset: 0x00696E2D
+		// (set) Token: 0x0603095C RID: 199004 RVA: 0x00698C35 File Offset: 0x00696E35
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x1700C491 RID: 50321
-		// (get) Token: 0x0602E117 RID: 188695 RVA: 0x0064B4FA File Offset: 0x006496FA
-		// (set) Token: 0x0602E118 RID: 188696 RVA: 0x0064B502 File Offset: 0x00649702
+		// Token: 0x1700CE47 RID: 52807
+		// (get) Token: 0x0603095D RID: 199005 RVA: 0x00698C3E File Offset: 0x00696E3E
+		// (set) Token: 0x0603095E RID: 199006 RVA: 0x00698C46 File Offset: 0x00696E46
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E119 RID: 188697 RVA: 0x0064B50B File Offset: 0x0064970B
+		// Token: 0x0603095F RID: 199007 RVA: 0x00698C4F File Offset: 0x00696E4F
 		public IFadeBackgroundFadeOutEffectBlackT()
 		{
 			this.Type = EFadeBackgroundFadeOutEffectType.Black;

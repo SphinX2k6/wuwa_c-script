@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000FAF RID: 4015
+// Token: 0x02000464 RID: 1124
 public class FurnitureUtil
 {
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002411 RID: 9233
+	// Token: 0x020026B0 RID: 9904
 	public static class ESetTimeScaleTypeExtensions
 	{
-		// Token: 0x0600C8CB RID: 51403 RVA: 0x001D609C File Offset: 0x001D429C
+		// Token: 0x0600D572 RID: 54642 RVA: 0x001EFC98 File Offset: 0x001EDE98
 		public static string ToEnumString(this ESetTimeScaleType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8CC RID: 51404 RVA: 0x001D60D4 File Offset: 0x001D42D4
+		// Token: 0x0600D573 RID: 54643 RVA: 0x001EFCD0 File Offset: 0x001EDED0
 		public static ESetTimeScaleType FromString(string name)
 		{
 			ESetTimeScaleType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8CD RID: 51405 RVA: 0x001D60FD File Offset: 0x001D42FD
+		// Token: 0x0600D574 RID: 54644 RVA: 0x001EFCF9 File Offset: 0x001EDEF9
 		public static bool TryFromString(string name, out ESetTimeScaleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C8CE RID: 51406 RVA: 0x001D6136 File Offset: 0x001D4336
+		// Token: 0x0600D575 RID: 54645 RVA: 0x001EFD32 File Offset: 0x001EDF32
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8CF RID: 51407 RVA: 0x001D614E File Offset: 0x001D434E
+		// Token: 0x0600D576 RID: 54646 RVA: 0x001EFD4A File Offset: 0x001EDF4A
 		public static ESetTimeScaleType[] GetValues()
 		{
 			return new ESetTimeScaleType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8D0 RID: 51408 RVA: 0x001D615A File Offset: 0x001D435A
+		// Token: 0x0600D577 RID: 54647 RVA: 0x001EFD56 File Offset: 0x001EDF56
 		public static string[] GetNames()
 		{
 			return new string[]

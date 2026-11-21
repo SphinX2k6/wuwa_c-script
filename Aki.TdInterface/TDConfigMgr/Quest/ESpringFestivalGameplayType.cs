@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E99 RID: 3737
+	// Token: 0x02000FAD RID: 4013
 	public enum ESpringFestivalGameplayType
 	{
-		// Token: 0x040031A3 RID: 12707
+		// Token: 0x040034AB RID: 13483
 		MixDrinks,
-		// Token: 0x040031A4 RID: 12708
+		// Token: 0x040034AC RID: 13484
 		GuessJoker
 	}
 }

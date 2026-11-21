@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A3E RID: 23102
+	// Token: 0x0200604B RID: 24651
 	public class ITeleControlBaseCfgT
 	{
-		// Token: 0x1700ADD0 RID: 44496
-		// (get) Token: 0x06027498 RID: 160920 RVA: 0x005681DF File Offset: 0x005663DF
-		// (set) Token: 0x06027499 RID: 160921 RVA: 0x005681E7 File Offset: 0x005663E7
+		// Token: 0x1700B708 RID: 46856
+		// (get) Token: 0x06029A10 RID: 170512 RVA: 0x005AF1EB File Offset: 0x005AD3EB
+		// (set) Token: 0x06029A11 RID: 170513 RVA: 0x005AF1F3 File Offset: 0x005AD3F3
 		public string CommonConfig { get; set; }
 
-		// Token: 0x1700ADD1 RID: 44497
-		// (get) Token: 0x0602749A RID: 160922 RVA: 0x005681F0 File Offset: 0x005663F0
-		// (set) Token: 0x0602749B RID: 160923 RVA: 0x005681F8 File Offset: 0x005663F8
+		// Token: 0x1700B709 RID: 46857
+		// (get) Token: 0x06029A12 RID: 170514 RVA: 0x005AF1FC File Offset: 0x005AD3FC
+		// (set) Token: 0x06029A13 RID: 170515 RVA: 0x005AF204 File Offset: 0x005AD404
 		public bool CanRotate { get; set; }
 
-		// Token: 0x1700ADD2 RID: 44498
-		// (get) Token: 0x0602749C RID: 160924 RVA: 0x00568201 File Offset: 0x00566401
-		// (set) Token: 0x0602749D RID: 160925 RVA: 0x00568209 File Offset: 0x00566409
+		// Token: 0x1700B70A RID: 46858
+		// (get) Token: 0x06029A14 RID: 170516 RVA: 0x005AF20D File Offset: 0x005AD40D
+		// (set) Token: 0x06029A15 RID: 170517 RVA: 0x005AF215 File Offset: 0x005AD415
 		public bool InitialGravity { get; set; }
 
-		// Token: 0x1700ADD3 RID: 44499
-		// (get) Token: 0x0602749E RID: 160926 RVA: 0x00568212 File Offset: 0x00566412
-		// (set) Token: 0x0602749F RID: 160927 RVA: 0x0056821A File Offset: 0x0056641A
+		// Token: 0x1700B70B RID: 46859
+		// (get) Token: 0x06029A16 RID: 170518 RVA: 0x005AF21E File Offset: 0x005AD41E
+		// (set) Token: 0x06029A17 RID: 170519 RVA: 0x005AF226 File Offset: 0x005AD426
 		public byte NullMask { get; set; }
 
-		// Token: 0x060274A0 RID: 160928 RVA: 0x00568223 File Offset: 0x00566423
+		// Token: 0x06029A18 RID: 170520 RVA: 0x005AF22F File Offset: 0x005AD42F
 		public ITeleControlBaseCfgT()
 		{
 			this.CommonConfig = null;

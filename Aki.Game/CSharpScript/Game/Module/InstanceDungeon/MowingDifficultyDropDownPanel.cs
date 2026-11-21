@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005887 RID: 22663
+	// Token: 0x0200485F RID: 18527
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingDifficultyDropDownPanel : UiPanelBase
 	{
-		// Token: 0x06039AC7 RID: 236231 RVA: 0x00DB536C File Offset: 0x00DB356C
+		// Token: 0x0602E9EA RID: 190954 RVA: 0x00D04284 File Offset: 0x00D02484
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06039AC8 RID: 236232 RVA: 0x00DB5424 File Offset: 0x00DB3624
+		// Token: 0x0602E9EB RID: 190955 RVA: 0x00D0433C File Offset: 0x00D0253C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MowingDifficultyDropDownPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039AC9 RID: 236233 RVA: 0x00DB5468 File Offset: 0x00DB3668
+		// Token: 0x0602E9EC RID: 190956 RVA: 0x00D04380 File Offset: 0x00D02580
 		private UniTask CreateDropDownCom()
 		{
 			MowingDifficultyDropDownPanel.<CreateDropDownCom>d__6 <CreateDropDownCom>d__;
@@ -57,25 +57,25 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <CreateDropDownCom>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039ACA RID: 236234 RVA: 0x00DB54AB File Offset: 0x00DB36AB
+		// Token: 0x0602E9ED RID: 190957 RVA: 0x00D043C3 File Offset: 0x00D025C3
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x06039ACB RID: 236235 RVA: 0x00DB54BA File Offset: 0x00DB36BA
+		// Token: 0x0602E9EE RID: 190958 RVA: 0x00D043D2 File Offset: 0x00D025D2
 		private DropDownItem OnCreateDropDownItem(UUIItem item, TakeWeedsDifficulty data)
 		{
 			return new DropDownItem(item);
 		}
 
-		// Token: 0x06039ACC RID: 236236 RVA: 0x00DB54C2 File Offset: 0x00DB36C2
+		// Token: 0x0602E9EF RID: 190959 RVA: 0x00D043DA File Offset: 0x00D025DA
 		private DropDownTitle OnCreateDropDownTitle(UUIItem item)
 		{
 			return new DropDownTitle(item);
 		}
 
-		// Token: 0x06039ACD RID: 236237 RVA: 0x00DB54CC File Offset: 0x00DB36CC
+		// Token: 0x0602E9F0 RID: 190960 RVA: 0x00D043E4 File Offset: 0x00D025E4
 		private unsafe IReadOnlyList<TakeWeedsDifficulty> GetDifficultyDataList()
 		{
 			KillMonstersScores? config = ConfigKillMonstersScoresByInstanceID.GetConfig(this.InstanceId.Value, true);
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return list;
 		}
 
-		// Token: 0x06039ACE RID: 236238 RVA: 0x00DB5560 File Offset: 0x00DB3760
+		// Token: 0x0602E9F1 RID: 190961 RVA: 0x00D04478 File Offset: 0x00D02678
 		private TakeWeedsDifficulty GetDropDownItemData(TakeWeedsDifficulty data)
 		{
 			return data;
 		}
 
-		// Token: 0x06039ACF RID: 236239 RVA: 0x00DB5564 File Offset: 0x00DB3764
+		// Token: 0x0602E9F2 RID: 190962 RVA: 0x00D0447C File Offset: 0x00D0267C
 		public void RefreshByInstanceId(int id)
 		{
 			this.InstanceId = new int?(id);
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			difficultyDropDown.InitScroll(this.GetDifficultyDataList(), new Func<TakeWeedsDifficulty, TakeWeedsDifficulty>(this.GetDropDownItemData), mowingActivityData.GetLevelDiffIndex(this.InstanceId.Value), true);
 		}
 
-		// Token: 0x06039AD0 RID: 236240 RVA: 0x00DB55F8 File Offset: 0x00DB37F8
+		// Token: 0x0602E9F3 RID: 190963 RVA: 0x00D04510 File Offset: 0x00D02710
 		private void OnSelectDifficulty(int index, TakeWeedsDifficulty data)
 		{
 			ActivityMowingData mowingActivityData = ActivityMowingController.Instance.GetMowingActivityData();
@@ -141,30 +141,30 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			ActivityMowingController.Instance.RequestSetDifficultyAll(mowingActivityData.Id, takeWeedsDifficulty.Id);
 		}
 
-		// Token: 0x0401E22B RID: 123435
+		// Token: 0x04018CC8 RID: 101576
 		[Nullable(2)]
 		private CommonDropDown<TakeWeedsDifficulty, TakeWeedsDifficulty> DifficultyDropDown;
 
-		// Token: 0x0401E22C RID: 123436
+		// Token: 0x04018CC9 RID: 101577
 		private int? InstanceId;
 
-		// Token: 0x0401E22D RID: 123437
+		// Token: 0x04018CCA RID: 101578
 		private KillMonstersScores? LevelData;
 
-		// Token: 0x0200BAE2 RID: 47842
+		// Token: 0x0200A4FB RID: 42235
 		[NullableContext(0)]
 		private static class EDropDownPanelComponents
 		{
-			// Token: 0x04038787 RID: 231303
+			// Token: 0x04033188 RID: 209288
 			public const int TxtTitle = 0;
 
-			// Token: 0x04038788 RID: 231304
+			// Token: 0x04033189 RID: 209289
 			public const int PanelTitle = 1;
 
-			// Token: 0x04038789 RID: 231305
+			// Token: 0x0403318A RID: 209290
 			public const int DropdownItem = 2;
 
-			// Token: 0x0403878A RID: 231306
+			// Token: 0x0403318B RID: 209291
 			public const int TxtTips = 3;
 		}
 	}

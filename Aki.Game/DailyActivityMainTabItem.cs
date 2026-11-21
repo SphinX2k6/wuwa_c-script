@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020019F4 RID: 6644
+// Token: 0x02000EB3 RID: 3763
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class DailyActivityMainTabItem : GridProxyAbstract<DailyActivityDefine.IDailyActivityMainTabData>
 {
-	// Token: 0x0600C273 RID: 49779 RVA: 0x002BE240 File Offset: 0x002BC440
+	// Token: 0x06009680 RID: 38528 RVA: 0x002C9218 File Offset: 0x002C7418
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -42,7 +42,7 @@ public class DailyActivityMainTabItem : GridProxyAbstract<DailyActivityDefine.ID
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C274 RID: 49780 RVA: 0x002BE34C File Offset: 0x002BC54C
+	// Token: 0x06009681 RID: 38529 RVA: 0x002C9324 File Offset: 0x002C7524
 	public override void Refresh(DailyActivityDefine.IDailyActivityMainTabData data, bool isSelected, int gridIndex)
 	{
 		this.TabType = data.TabType;
@@ -56,7 +56,7 @@ public class DailyActivityMainTabItem : GridProxyAbstract<DailyActivityDefine.ID
 		this.RebindRedDot(data.TabType);
 	}
 
-	// Token: 0x0600C275 RID: 49781 RVA: 0x002BE3C0 File Offset: 0x002BC5C0
+	// Token: 0x06009682 RID: 38530 RVA: 0x002C9398 File Offset: 0x002C7598
 	private void RebindRedDot(DailyActivityDefine.EDailyActivityMainTab tab)
 	{
 		ERedDotName eredDotName = (tab == DailyActivityDefine.EDailyActivityMainTab.Daily) ? ERedDotName.AdventureDailyActivityTabDaily : ERedDotName.AdventureDailyActivityTabWeekly;
@@ -71,7 +71,7 @@ public class DailyActivityMainTabItem : GridProxyAbstract<DailyActivityDefine.ID
 		this.BoundRedDotName = new ERedDotName?(eredDotName);
 	}
 
-	// Token: 0x0600C276 RID: 49782 RVA: 0x002BE41C File Offset: 0x002BC61C
+	// Token: 0x06009683 RID: 38531 RVA: 0x002C93F4 File Offset: 0x002C75F4
 	private void UnbindRedDot()
 	{
 		if (this.BoundRedDotName == null)
@@ -82,38 +82,38 @@ public class DailyActivityMainTabItem : GridProxyAbstract<DailyActivityDefine.ID
 		this.BoundRedDotName = null;
 	}
 
-	// Token: 0x0600C277 RID: 49783 RVA: 0x002BE44D File Offset: 0x002BC64D
+	// Token: 0x06009684 RID: 38532 RVA: 0x002C9425 File Offset: 0x002C7625
 	protected override void OnBeforeDestroy()
 	{
 		this.UnbindRedDot();
 	}
 
-	// Token: 0x0600C278 RID: 49784 RVA: 0x002BE455 File Offset: 0x002BC655
+	// Token: 0x06009685 RID: 38533 RVA: 0x002C942D File Offset: 0x002C762D
 	public override object GetKey(DailyActivityDefine.IDailyActivityMainTabData data, int displayIndex)
 	{
 		return data.TabType;
 	}
 
-	// Token: 0x0600C279 RID: 49785 RVA: 0x002BE462 File Offset: 0x002BC662
+	// Token: 0x06009686 RID: 38534 RVA: 0x002C943A File Offset: 0x002C763A
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x0600C27A RID: 49786 RVA: 0x002BE46B File Offset: 0x002BC66B
+	// Token: 0x06009687 RID: 38535 RVA: 0x002C9443 File Offset: 0x002C7643
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x0600C27B RID: 49787 RVA: 0x002BE474 File Offset: 0x002BC674
+	// Token: 0x06009688 RID: 38536 RVA: 0x002C944C File Offset: 0x002C764C
 	private void SetToggleState(bool isChecked)
 	{
 		EToggleState state = isChecked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600C27C RID: 49788 RVA: 0x002BE49A File Offset: 0x002BC69A
+	// Token: 0x06009689 RID: 38537 RVA: 0x002C9472 File Offset: 0x002C7672
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -128,29 +128,29 @@ public class DailyActivityMainTabItem : GridProxyAbstract<DailyActivityDefine.ID
 		onToggleCallBack(this.TabType);
 	}
 
-	// Token: 0x04005981 RID: 22913
+	// Token: 0x04005A50 RID: 23120
 	private DailyActivityDefine.EDailyActivityMainTab TabType = DailyActivityDefine.EDailyActivityMainTab.Daily;
 
-	// Token: 0x04005982 RID: 22914
+	// Token: 0x04005A51 RID: 23121
 	private ERedDotName? BoundRedDotName;
 
-	// Token: 0x04005983 RID: 22915
+	// Token: 0x04005A52 RID: 23122
 	[Nullable(2)]
 	public Action<DailyActivityDefine.EDailyActivityMainTab> OnToggleCallBack;
 
-	// Token: 0x02007F2A RID: 32554
+	// Token: 0x020070B9 RID: 28857
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029883 RID: 170115
+		// Token: 0x04024BC0 RID: 150464
 		Toggle,
-		// Token: 0x04029884 RID: 170116
+		// Token: 0x04024BC1 RID: 150465
 		IconSprite,
-		// Token: 0x04029885 RID: 170117
+		// Token: 0x04024BC2 RID: 150466
 		NameText,
-		// Token: 0x04029886 RID: 170118
+		// Token: 0x04024BC3 RID: 150467
 		FinishItem,
-		// Token: 0x04029887 RID: 170119
+		// Token: 0x04024BC4 RID: 150468
 		RedDot
 	}
 }

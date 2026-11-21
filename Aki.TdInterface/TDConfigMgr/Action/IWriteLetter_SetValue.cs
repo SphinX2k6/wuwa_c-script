@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C2 RID: 8386
+	// Token: 0x02002317 RID: 8983
 	public class IWriteLetter_SetValue
 	{
-		// Token: 0x04006E82 RID: 28290
+		// Token: 0x040074A0 RID: 29856
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04006E83 RID: 28291
+		// Token: 0x040074A1 RID: 29857
 		public int Id;
 	}
 }

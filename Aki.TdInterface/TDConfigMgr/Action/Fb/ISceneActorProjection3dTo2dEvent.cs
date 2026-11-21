@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ADD RID: 10973
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DD1 RID: 11729
 	public class ISceneActorProjection3dTo2dEvent : ISceneActorEvent
 	{
-		// Token: 0x0600F094 RID: 61588 RVA: 0x0022ED72 File Offset: 0x0022CF72
+		// Token: 0x0600FF4A RID: 65354 RVA: 0x0024CA7E File Offset: 0x0024AC7E
 		public static ISceneActorProjection3dTo2dEvent Create(ISceneActorProjection3dTo2dEvent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C9C RID: 19612
-		// (get) Token: 0x0600F095 RID: 61589 RVA: 0x0022ED91 File Offset: 0x0022CF91
+		// Token: 0x17005056 RID: 20566
+		// (get) Token: 0x0600FF4B RID: 65355 RVA: 0x0024CA9D File Offset: 0x0024AC9D
 		public override ESceneActorEventType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C9D RID: 19613
-		// (get) Token: 0x0600F096 RID: 61590 RVA: 0x0022ED9E File Offset: 0x0022CF9E
+		// Token: 0x17005057 RID: 20567
+		// (get) Token: 0x0600FF4C RID: 65356 RVA: 0x0024CAAA File Offset: 0x0024ACAA
 		public virtual IActorRef BpActor
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C9E RID: 19614
-		// (get) Token: 0x0600F097 RID: 61591 RVA: 0x0022EDD2 File Offset: 0x0022CFD2
+		// Token: 0x17005058 RID: 20568
+		// (get) Token: 0x0600FF4D RID: 65357 RVA: 0x0024CADE File Offset: 0x0024ACDE
 		public virtual IActorRef PPVolume
 		{
 			get
@@ -65,21 +63,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008457 RID: 33879
+		// Token: 0x04008B5B RID: 35675
 		private ISceneActorProjection3dTo2dEvent Instance;
 
-		// Token: 0x04008458 RID: 33880
+		// Token: 0x04008B5C RID: 35676
 		[Nullable(2)]
 		private IActorRef _BpActorCache;
 
-		// Token: 0x04008459 RID: 33881
+		// Token: 0x04008B5D RID: 35677
 		private bool _BpActorInited;
 
-		// Token: 0x0400845A RID: 33882
+		// Token: 0x04008B5E RID: 35678
 		[Nullable(2)]
 		private IActorRef _PPVolumeCache;
 
-		// Token: 0x0400845B RID: 33883
+		// Token: 0x04008B5F RID: 35679
 		private bool _PPVolumeInited;
 	}
 }

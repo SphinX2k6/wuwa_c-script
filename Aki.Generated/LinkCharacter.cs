@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DCE RID: 3534
+	// Token: 0x02000EB3 RID: 3763
 	public struct LinkCharacter : IFlatbufferObject
 	{
-		// Token: 0x17001D04 RID: 7428
-		// (get) Token: 0x06008E5E RID: 36446 RVA: 0x00278495 File Offset: 0x00276695
+		// Token: 0x17001D68 RID: 7528
+		// (get) Token: 0x0600947A RID: 38010 RVA: 0x00296985 File Offset: 0x00294B85
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E5F RID: 36447 RVA: 0x002784A2 File Offset: 0x002766A2
+		// Token: 0x0600947B RID: 38011 RVA: 0x00296992 File Offset: 0x00294B92
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008E60 RID: 36448 RVA: 0x002784AC File Offset: 0x002766AC
+		// Token: 0x0600947C RID: 38012 RVA: 0x0029699C File Offset: 0x00294B9C
 		public static LinkCharacter GetRootAsLinkCharacter(ByteBuffer _bb)
 		{
 			return LinkCharacter.GetRootAsLinkCharacter(_bb, default(LinkCharacter));
 		}
 
-		// Token: 0x06008E61 RID: 36449 RVA: 0x002784C8 File Offset: 0x002766C8
+		// Token: 0x0600947D RID: 38013 RVA: 0x002969B8 File Offset: 0x00294BB8
 		public static LinkCharacter GetRootAsLinkCharacter(ByteBuffer _bb, LinkCharacter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008E62 RID: 36450 RVA: 0x002784E5 File Offset: 0x002766E5
+		// Token: 0x0600947E RID: 38014 RVA: 0x002969D5 File Offset: 0x00294BD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008E63 RID: 36451 RVA: 0x002784F4 File Offset: 0x002766F4
+		// Token: 0x0600947F RID: 38015 RVA: 0x002969E4 File Offset: 0x00294BE4
 		public LinkCharacter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001D05 RID: 7429
-		// (get) Token: 0x06008E64 RID: 36452 RVA: 0x00278504 File Offset: 0x00276704
+		// Token: 0x17001D69 RID: 7529
+		// (get) Token: 0x06009480 RID: 38016 RVA: 0x002969F4 File Offset: 0x00294BF4
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D06 RID: 7430
-		// (get) Token: 0x06008E65 RID: 36453 RVA: 0x00278540 File Offset: 0x00276740
+		// Token: 0x17001D6A RID: 7530
+		// (get) Token: 0x06009481 RID: 38017 RVA: 0x00296A30 File Offset: 0x00294C30
 		public int RoleId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D07 RID: 7431
-		// (get) Token: 0x06008E66 RID: 36454 RVA: 0x0027857C File Offset: 0x0027677C
+		// Token: 0x17001D6B RID: 7531
+		// (get) Token: 0x06009482 RID: 38018 RVA: 0x00296A6C File Offset: 0x00294C6C
 		public int NeedLoadMesh
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D08 RID: 7432
-		// (get) Token: 0x06008E67 RID: 36455 RVA: 0x002785B8 File Offset: 0x002767B8
+		// Token: 0x17001D6C RID: 7532
+		// (get) Token: 0x06009483 RID: 38019 RVA: 0x00296AA8 File Offset: 0x00294CA8
 		public string CharacterDataAsset
 		{
 			get
@@ -110,19 +110,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E68 RID: 36456 RVA: 0x002785F0 File Offset: 0x002767F0
+		// Token: 0x06009484 RID: 38020 RVA: 0x00296AE0 File Offset: 0x00294CE0
 		public Span<byte> GetCharacterDataAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06008E69 RID: 36457 RVA: 0x00278600 File Offset: 0x00276800
+		// Token: 0x06009485 RID: 38021 RVA: 0x00296AF0 File Offset: 0x00294CF0
 		public byte[] GetCharacterDataAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06008E6A RID: 36458 RVA: 0x00278618 File Offset: 0x00276818
+		// Token: 0x06009486 RID: 38022 RVA: 0x00296B08 File Offset: 0x00294D08
 		public string WeaponMeshList(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -133,8 +133,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001D09 RID: 7433
-		// (get) Token: 0x06008E6B RID: 36459 RVA: 0x00278654 File Offset: 0x00276854
+		// Token: 0x17001D6D RID: 7533
+		// (get) Token: 0x06009487 RID: 38023 RVA: 0x00296B44 File Offset: 0x00294D44
 		public int WeaponMeshListLength
 		{
 			get
@@ -148,7 +148,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E6C RID: 36460 RVA: 0x00278680 File Offset: 0x00276880
+		// Token: 0x06009488 RID: 38024 RVA: 0x00296B70 File Offset: 0x00294D70
 		public string WeaponAnimList(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -159,8 +159,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001D0A RID: 7434
-		// (get) Token: 0x06008E6D RID: 36461 RVA: 0x002786BC File Offset: 0x002768BC
+		// Token: 0x17001D6E RID: 7534
+		// (get) Token: 0x06009489 RID: 38025 RVA: 0x00296BAC File Offset: 0x00294DAC
 		public int WeaponAnimListLength
 		{
 			get
@@ -174,7 +174,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E6E RID: 36462 RVA: 0x002786E8 File Offset: 0x002768E8
+		// Token: 0x0600948A RID: 38026 RVA: 0x00296BD8 File Offset: 0x00294DD8
 		public string CompNameList(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -185,8 +185,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001D0B RID: 7435
-		// (get) Token: 0x06008E6F RID: 36463 RVA: 0x00278724 File Offset: 0x00276924
+		// Token: 0x17001D6F RID: 7535
+		// (get) Token: 0x0600948B RID: 38027 RVA: 0x00296C14 File Offset: 0x00294E14
 		public int CompNameListLength
 		{
 			get
@@ -200,8 +200,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D0C RID: 7436
-		// (get) Token: 0x06008E70 RID: 36464 RVA: 0x00278750 File Offset: 0x00276950
+		// Token: 0x17001D70 RID: 7536
+		// (get) Token: 0x0600948C RID: 38028 RVA: 0x00296C40 File Offset: 0x00294E40
 		public string RoleLinkAudio
 		{
 			get
@@ -215,70 +215,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E71 RID: 36465 RVA: 0x00278788 File Offset: 0x00276988
+		// Token: 0x0600948D RID: 38029 RVA: 0x00296C78 File Offset: 0x00294E78
 		public Span<byte> GetRoleLinkAudioBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06008E72 RID: 36466 RVA: 0x00278798 File Offset: 0x00276998
+		// Token: 0x0600948E RID: 38030 RVA: 0x00296C88 File Offset: 0x00294E88
 		public byte[] GetRoleLinkAudioArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06008E73 RID: 36467 RVA: 0x002787B0 File Offset: 0x002769B0
+		// Token: 0x0600948F RID: 38031 RVA: 0x00296CA0 File Offset: 0x00294EA0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用CompNameListIter()或GetCompNameListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] CompNameList()
+		public string[] CompNameList()
 		{
 			return this.CompNameListIter().ToArray<string>();
 		}
 
-		// Token: 0x06008E74 RID: 36468 RVA: 0x002787BD File Offset: 0x002769BD
+		// Token: 0x06009490 RID: 38032 RVA: 0x00296CAD File Offset: 0x00294EAD
 		[NullableContext(1)]
-		public readonly IEnumerable<string> CompNameListIter()
+		public IEnumerable<string> CompNameListIter()
 		{
 			LinkCharacter.<CompNameListIter>d__32 <CompNameListIter>d__ = new LinkCharacter.<CompNameListIter>d__32(-2);
 			<CompNameListIter>d__.<>3__<>4__this = this;
 			return <CompNameListIter>d__;
 		}
 
-		// Token: 0x06008E75 RID: 36469 RVA: 0x002787D2 File Offset: 0x002769D2
+		// Token: 0x06009491 RID: 38033 RVA: 0x00296CC2 File Offset: 0x00294EC2
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeaponAnimListIter()或GetWeaponAnimListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] WeaponAnimList()
+		public string[] WeaponAnimList()
 		{
 			return this.WeaponAnimListIter().ToArray<string>();
 		}
 
-		// Token: 0x06008E76 RID: 36470 RVA: 0x002787DF File Offset: 0x002769DF
+		// Token: 0x06009492 RID: 38034 RVA: 0x00296CCF File Offset: 0x00294ECF
 		[NullableContext(1)]
-		public readonly IEnumerable<string> WeaponAnimListIter()
+		public IEnumerable<string> WeaponAnimListIter()
 		{
 			LinkCharacter.<WeaponAnimListIter>d__34 <WeaponAnimListIter>d__ = new LinkCharacter.<WeaponAnimListIter>d__34(-2);
 			<WeaponAnimListIter>d__.<>3__<>4__this = this;
 			return <WeaponAnimListIter>d__;
 		}
 
-		// Token: 0x06008E77 RID: 36471 RVA: 0x002787F4 File Offset: 0x002769F4
+		// Token: 0x06009493 RID: 38035 RVA: 0x00296CE4 File Offset: 0x00294EE4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeaponMeshListIter()或GetWeaponMeshListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] WeaponMeshList()
+		public string[] WeaponMeshList()
 		{
 			return this.WeaponMeshListIter().ToArray<string>();
 		}
 
-		// Token: 0x06008E78 RID: 36472 RVA: 0x00278801 File Offset: 0x00276A01
+		// Token: 0x06009494 RID: 38036 RVA: 0x00296CF1 File Offset: 0x00294EF1
 		[NullableContext(1)]
-		public readonly IEnumerable<string> WeaponMeshListIter()
+		public IEnumerable<string> WeaponMeshListIter()
 		{
 			LinkCharacter.<WeaponMeshListIter>d__36 <WeaponMeshListIter>d__ = new LinkCharacter.<WeaponMeshListIter>d__36(-2);
 			<WeaponMeshListIter>d__.<>3__<>4__this = this;
 			return <WeaponMeshListIter>d__;
 		}
 
-		// Token: 0x04004E64 RID: 20068
+		// Token: 0x04005449 RID: 21577
 		private Table __p;
 	}
 }

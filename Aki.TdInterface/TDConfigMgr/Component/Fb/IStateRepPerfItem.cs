@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A94 RID: 2708
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B5E RID: 2910
 	public class IStateRepPerfItem
 	{
-		// Token: 0x06003E47 RID: 15943 RVA: 0x0009F6EC File Offset: 0x0009D8EC
+		// Token: 0x06004270 RID: 17008 RVA: 0x000A8CA4 File Offset: 0x000A6EA4
 		public static IStateRepPerfItem Create(IStateRepPerfItem? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EDC RID: 3804
-		// (get) Token: 0x06003E48 RID: 15944 RVA: 0x0009F70B File Offset: 0x0009D90B
+		// Token: 0x17000FAF RID: 4015
+		// (get) Token: 0x06004271 RID: 17009 RVA: 0x000A8CC3 File Offset: 0x000A6EC3
 		public virtual string StateTag
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EDD RID: 3805
-		// (get) Token: 0x06003E49 RID: 15945 RVA: 0x0009F718 File Offset: 0x0009D918
+		// Token: 0x17000FB0 RID: 4016
+		// (get) Token: 0x06004272 RID: 17010 RVA: 0x000A8CD0 File Offset: 0x000A6ED0
 		public virtual IStateRepPerfBase ReplacePerformance
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022AF RID: 8879
+		// Token: 0x040024CB RID: 9419
 		private IStateRepPerfItem Instance;
 
-		// Token: 0x040022B0 RID: 8880
+		// Token: 0x040024CC RID: 9420
 		private IStateRepPerfBase _ReplacePerformanceCache;
 
-		// Token: 0x040022B1 RID: 8881
+		// Token: 0x040024CD RID: 9421
 		private bool _ReplacePerformanceInited;
 	}
 }

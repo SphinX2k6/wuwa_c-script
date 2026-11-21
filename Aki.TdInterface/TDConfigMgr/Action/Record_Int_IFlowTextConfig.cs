@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002133 RID: 8499
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002394 RID: 9108
 	public class Record_Int_IFlowTextConfig
 	{
-		// Token: 0x0600BB34 RID: 47924 RVA: 0x001B06B6 File Offset: 0x001AE8B6
+		// Token: 0x0600C6C2 RID: 50882 RVA: 0x001C786A File Offset: 0x001C5A6A
 		public static Record_Int_IFlowTextConfig Create([Nullable(2)] Record_Int_IFlowTextConfig instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003927 RID: 14631
-		// (get) Token: 0x0600BB35 RID: 47925 RVA: 0x001B06C9 File Offset: 0x001AE8C9
+		// Token: 0x17003C14 RID: 15380
+		// (get) Token: 0x0600C6C3 RID: 50883 RVA: 0x001C787D File Offset: 0x001C5A7D
 		public virtual int Key
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003928 RID: 14632
-		// (get) Token: 0x0600BB36 RID: 47926 RVA: 0x001B06D6 File Offset: 0x001AE8D6
+		// Token: 0x17003C15 RID: 15381
+		// (get) Token: 0x0600C6C4 RID: 50884 RVA: 0x001C788A File Offset: 0x001C5A8A
 		public virtual IFlowTextConfig Value
 		{
 			get
@@ -51,13 +49,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FFC RID: 28668
+		// Token: 0x04007631 RID: 30257
 		private Record_Int_IFlowTextConfig FbInstance;
 
-		// Token: 0x04006FFD RID: 28669
+		// Token: 0x04007632 RID: 30258
 		private IFlowTextConfig _ValueCache;
 
-		// Token: 0x04006FFE RID: 28670
+		// Token: 0x04007633 RID: 30259
 		private bool _ValueInited;
 	}
 }

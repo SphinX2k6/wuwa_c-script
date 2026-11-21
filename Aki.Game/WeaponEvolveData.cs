@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B6B RID: 11115
+// Token: 0x020020E7 RID: 8423
 public class WeaponEvolveData : IWeaponEvolveData
 {
-	// Token: 0x17001EB7 RID: 7863
-	// (get) Token: 0x06017074 RID: 94324 RVA: 0x005D8A45 File Offset: 0x005D6C45
-	// (set) Token: 0x06017075 RID: 94325 RVA: 0x005D8A4D File Offset: 0x005D6C4D
+	// Token: 0x17001F0F RID: 7951
+	// (get) Token: 0x06014AA5 RID: 84645 RVA: 0x006055AD File Offset: 0x006037AD
+	// (set) Token: 0x06014AA6 RID: 84646 RVA: 0x006055B5 File Offset: 0x006037B5
 	public int EvolveId { get; set; }
 
-	// Token: 0x17001EB8 RID: 7864
-	// (get) Token: 0x06017076 RID: 94326 RVA: 0x005D8A56 File Offset: 0x005D6C56
-	// (set) Token: 0x06017077 RID: 94327 RVA: 0x005D8A5E File Offset: 0x005D6C5E
+	// Token: 0x17001F10 RID: 7952
+	// (get) Token: 0x06014AA7 RID: 84647 RVA: 0x006055BE File Offset: 0x006037BE
+	// (set) Token: 0x06014AA8 RID: 84648 RVA: 0x006055C6 File Offset: 0x006037C6
 	public bool IsUnlock { get; set; }
 
-	// Token: 0x17001EB9 RID: 7865
-	// (get) Token: 0x06017078 RID: 94328 RVA: 0x005D8A67 File Offset: 0x005D6C67
-	// (set) Token: 0x06017079 RID: 94329 RVA: 0x005D8A6F File Offset: 0x005D6C6F
+	// Token: 0x17001F11 RID: 7953
+	// (get) Token: 0x06014AA9 RID: 84649 RVA: 0x006055CF File Offset: 0x006037CF
+	// (set) Token: 0x06014AAA RID: 84650 RVA: 0x006055D7 File Offset: 0x006037D7
 	public bool ShowLine { get; set; }
 }

@@ -4,10 +4,10 @@ using CSharpScript.Game.Common;
 using CSharpScript.Launcher.BaseConfig;
 using UnrealEngine;
 
-// Token: 0x02002749 RID: 10057
+// Token: 0x02001C34 RID: 7220
 public static class ReconnectProcessReporter
 {
-	// Token: 0x06014A10 RID: 84496 RVA: 0x005380A4 File Offset: 0x005362A4
+	// Token: 0x06011EF2 RID: 73458 RVA: 0x00546E78 File Offset: 0x00545078
 	public static void ReportReconnectProcess(EReconnectProcessStep reconvStep, ErrorCode code = ErrorCode.Success)
 	{
 		SdkLoginConfig sdkLoginConfig = LoginModel.Instance.GetSdkLoginConfig();

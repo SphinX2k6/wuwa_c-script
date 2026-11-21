@@ -8,16 +8,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003487 RID: 13447
+// Token: 0x020029FB RID: 10747
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Scene/Interaction/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Scene/Interaction/SceneInteractionDebugTool.SceneInteractionDebugTool_C")]
 public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700281C RID: 10268
-	// (get) Token: 0x0601D25F RID: 119391 RVA: 0x0081F818 File Offset: 0x0081DA18
-	// (set) Token: 0x0601D260 RID: 119392 RVA: 0x0081F851 File Offset: 0x0081DA51
+	// Token: 0x17002BBB RID: 11195
+	// (get) Token: 0x0601AF67 RID: 110439 RVA: 0x00846B48 File Offset: 0x00844D48
+	// (set) Token: 0x0601AF68 RID: 110440 RVA: 0x00846B81 File Offset: 0x00844D81
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SWaterEffectObject Config
@@ -40,9 +40,9 @@ public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700281D RID: 10269
-	// (get) Token: 0x0601D261 RID: 119393 RVA: 0x0081F879 File Offset: 0x0081DA79
-	// (set) Token: 0x0601D262 RID: 119394 RVA: 0x0081F88D File Offset: 0x0081DA8D
+	// Token: 0x17002BBC RID: 11196
+	// (get) Token: 0x0601AF69 RID: 110441 RVA: 0x00846BA9 File Offset: 0x00844DA9
+	// (set) Token: 0x0601AF6A RID: 110442 RVA: 0x00846BBD File Offset: 0x00844DBD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor TargetActor
 	{
@@ -56,32 +56,26 @@ public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700281E RID: 10270
-	// (get) Token: 0x0601D263 RID: 119395 RVA: 0x0081F8A2 File Offset: 0x0081DAA2
-	// (set) Token: 0x0601D264 RID: 119396 RVA: 0x0081F8AA File Offset: 0x0081DAAA
+	// Token: 0x17002BBD RID: 11197
+	// (get) Token: 0x0601AF6B RID: 110443 RVA: 0x00846BD2 File Offset: 0x00844DD2
+	// (set) Token: 0x0601AF6C RID: 110444 RVA: 0x00846BDA File Offset: 0x00844DDA
 	private SceneObjectWaterEffect Interaction { get; set; }
 
-	// Token: 0x0601D265 RID: 119397 RVA: 0x0081F8B4 File Offset: 0x0081DAB4
+	// Token: 0x0601AF6D RID: 110445 RVA: 0x00846BE4 File Offset: 0x00844DE4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void AttachInteraction()
+	public virtual void AttachInteraction()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AttachInteraction"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionDebugTool) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AttachInteraction"), SceneInteractionDebugTool.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AttachInteraction_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D266 RID: 119398 RVA: 0x0081F924 File Offset: 0x0081DB24
+	// Token: 0x0601AF6E RID: 110446 RVA: 0x00846C40 File Offset: 0x00844E40
 	protected void AttachInteraction_Implementation()
 	{
 		if (this.TargetActor == null)
@@ -97,27 +91,21 @@ public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 		SceneInteractionManager.Get().RegisterWaterEffectObject(this.Interaction);
 	}
 
-	// Token: 0x0601D267 RID: 119399 RVA: 0x0081F9B0 File Offset: 0x0081DBB0
+	// Token: 0x0601AF6F RID: 110447 RVA: 0x00846CCC File Offset: 0x00844ECC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void RemoveInteraction()
+	public virtual void RemoveInteraction()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveInteraction"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionDebugTool) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveInteraction"), SceneInteractionDebugTool.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RemoveInteraction_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D268 RID: 119400 RVA: 0x0081FA20 File Offset: 0x0081DC20
+	// Token: 0x0601AF70 RID: 110448 RVA: 0x00846D25 File Offset: 0x00844F25
 	protected void RemoveInteraction_Implementation()
 	{
 		if (this.Interaction == null)
@@ -128,7 +116,7 @@ public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 		this.Interaction = null;
 	}
 
-	// Token: 0x0601D269 RID: 119401 RVA: 0x0081FA42 File Offset: 0x0081DC42
+	// Token: 0x0601AF71 RID: 110449 RVA: 0x00846D47 File Offset: 0x00844F47
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (SceneInteractionDebugTool._ClassPtr == IntPtr.Zero)
@@ -138,36 +126,24 @@ public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 		return SceneInteractionDebugTool._ClassPtr;
 	}
 
-	// Token: 0x0601D26A RID: 119402 RVA: 0x0081FA68 File Offset: 0x0081DC68
+	// Token: 0x0601AF72 RID: 110450 RVA: 0x00846D6C File Offset: 0x00844F6C
 	public SceneInteractionDebugTool() : this(BuiltinUtils.AllocNativeUObject(SceneInteractionDebugTool.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D26B RID: 119403 RVA: 0x0081FA90 File Offset: 0x0081DC90
+	// Token: 0x0601AF73 RID: 110451 RVA: 0x00846D94 File Offset: 0x00844F94
 	[NullableContext(1)]
 	public SceneInteractionDebugTool(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(SceneInteractionDebugTool.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D26C RID: 119404 RVA: 0x0081FAC3 File Offset: 0x0081DCC3
+	// Token: 0x0601AF74 RID: 110452 RVA: 0x00846DC7 File Offset: 0x00844FC7
 	protected SceneInteractionDebugTool(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x1700281F RID: 10271
-	// (get) Token: 0x0601D26D RID: 119405 RVA: 0x0081FACC File Offset: 0x0081DCCC
-	[Nullable(1)]
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		[NullableContext(1)]
-		get
-		{
-			return *(base.NativePtr + (IntPtr)SceneInteractionDebugTool.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x17002820 RID: 10272
-	// (get) Token: 0x0601D26E RID: 119406 RVA: 0x0081FADC File Offset: 0x0081DCDC
+	// Token: 0x17002BBE RID: 11198
+	// (get) Token: 0x0601AF75 RID: 110453 RVA: 0x00846DD0 File Offset: 0x00844FD0
 	public unsafe USceneComponent DefaultSceneRoot
 	{
 		get
@@ -176,40 +152,37 @@ public class SceneInteractionDebugTool : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0601D26F RID: 119407 RVA: 0x0081FAF0 File Offset: 0x0081DCF0
+	// Token: 0x0601AF76 RID: 110454 RVA: 0x00846DE4 File Offset: 0x00844FE4
 	protected virtual void __CPPCALL_AttachInteraction_Implementation()
 	{
 		this.AttachInteraction_Implementation();
 	}
 
-	// Token: 0x0601D270 RID: 119408 RVA: 0x0081FAF8 File Offset: 0x0081DCF8
+	// Token: 0x0601AF77 RID: 110455 RVA: 0x00846DEC File Offset: 0x00844FEC
 	protected virtual void __CPPCALL_RemoveInteraction_Implementation()
 	{
 		this.RemoveInteraction_Implementation();
 	}
 
-	// Token: 0x0400E5AE RID: 58798
+	// Token: 0x0400EA66 RID: 60006
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Scene/Interaction/SceneInteractionDebugTool.SceneInteractionDebugTool_C";
 
-	// Token: 0x0400E5AF RID: 58799
+	// Token: 0x0400EA67 RID: 60007
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E5B0 RID: 58800
+	// Token: 0x0400EA68 RID: 60008
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E5B1 RID: 58801
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400E5B2 RID: 58802
+	// Token: 0x0400EA69 RID: 60009
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x0400E5B3 RID: 58803
+	// Token: 0x0400EA6A RID: 60010
 	private static int __PropertyOffset_Config;
 
-	// Token: 0x0400E5B4 RID: 58804
+	// Token: 0x0400EA6B RID: 60011
 	private SWaterEffectObject _Config;
 
-	// Token: 0x0400E5B5 RID: 58805
+	// Token: 0x0400EA6C RID: 60012
 	private static int __PropertyOffset_TargetActor;
 }

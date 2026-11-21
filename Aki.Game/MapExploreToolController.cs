@@ -17,29 +17,29 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020021DB RID: 8667
+// Token: 0x020016BF RID: 5823
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MapExploreToolController : UiControllerBase
 {
-	// Token: 0x06010DEF RID: 69103 RVA: 0x0041AD23 File Offset: 0x00418F23
+	// Token: 0x0600E280 RID: 57984 RVA: 0x00427603 File Offset: 0x00425803
 	public override bool Init()
 	{
 		return true;
 	}
 
-	// Token: 0x06010DF0 RID: 69104 RVA: 0x0041AD26 File Offset: 0x00418F26
+	// Token: 0x0600E281 RID: 57985 RVA: 0x00427606 File Offset: 0x00425806
 	protected override void OnAddEvents()
 	{
 	}
 
-	// Token: 0x06010DF1 RID: 69105 RVA: 0x0041AD28 File Offset: 0x00418F28
+	// Token: 0x0600E282 RID: 57986 RVA: 0x00427608 File Offset: 0x00425808
 	protected override void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x06010DF2 RID: 69106 RVA: 0x0041AD2C File Offset: 0x00418F2C
+	// Token: 0x0600E283 RID: 57987 RVA: 0x0042760C File Offset: 0x0042580C
 	public void CheckUseMapExploreTool(int charId, int skillId)
 	{
 		ERouletteExploreId? phantomSkillIdBySkillId = MapExploreToolModel.Instance.GetPhantomSkillIdBySkillId(skillId);
@@ -84,7 +84,7 @@ public class MapExploreToolController : UiControllerBase
 		this.HandleUseMapExploreToolAsync(mapExploreToolUsingInfo);
 	}
 
-	// Token: 0x06010DF3 RID: 69107 RVA: 0x0041ADFC File Offset: 0x00418FFC
+	// Token: 0x0600E284 RID: 57988 RVA: 0x004276DC File Offset: 0x004258DC
 	private UniTask HandleUseMapExploreToolAsync(MapExploreToolUsingInfo usingInfo)
 	{
 		MapExploreToolController.<HandleUseMapExploreToolAsync>d__4 <HandleUseMapExploreToolAsync>d__;
@@ -96,7 +96,7 @@ public class MapExploreToolController : UiControllerBase
 		return <HandleUseMapExploreToolAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010DF4 RID: 69108 RVA: 0x0041AE48 File Offset: 0x00419048
+	// Token: 0x0600E285 RID: 57989 RVA: 0x00427728 File Offset: 0x00425928
 	private unsafe void NoCheckUseMapExploreTool(MapExploreToolUsingInfo usingInfo)
 	{
 		Log instance = Log.Instance;
@@ -125,7 +125,7 @@ public class MapExploreToolController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010DF5 RID: 69109 RVA: 0x0041AEB0 File Offset: 0x004190B0
+	// Token: 0x0600E286 RID: 57990 RVA: 0x00427790 File Offset: 0x00425990
 	private void OnFinishedUsingMapExploreTool(MapExploreToolUsingInfo usingInfo, bool succeed)
 	{
 		MapExploreToolModel.Instance.SetCharExploreSkillBusy(false);
@@ -154,7 +154,7 @@ public class MapExploreToolController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010DF6 RID: 69110 RVA: 0x0041AF18 File Offset: 0x00419118
+	// Token: 0x0600E287 RID: 57991 RVA: 0x004277F8 File Offset: 0x004259F8
 	private bool LocalPreCheck(MapExploreToolUsingInfo usingInfo)
 	{
 		if (MapExploreToolModel.Instance.GetCharExploreSkillBusy())
@@ -273,7 +273,7 @@ public class MapExploreToolController : UiControllerBase
 		return usingInfo.PhantomSkillId != 1010 || this.LocalPreCheckTempTeleporterPlacement(usingInfo);
 	}
 
-	// Token: 0x06010DF7 RID: 69111 RVA: 0x0041B1A8 File Offset: 0x004193A8
+	// Token: 0x0600E288 RID: 57992 RVA: 0x00427A88 File Offset: 0x00425C88
 	private bool LocalPreCheckTempTeleporterPlacement(MapExploreToolUsingInfo usingInfo)
 	{
 		if (usingInfo.PhantomSkillId != 1010)
@@ -332,7 +332,7 @@ public class MapExploreToolController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010DF8 RID: 69112 RVA: 0x0041B2EC File Offset: 0x004194EC
+	// Token: 0x0600E289 RID: 57993 RVA: 0x00427BCC File Offset: 0x00425DCC
 	private bool CheckUpperSpaceEnoughForRole(IVector footPos)
 	{
 		UTraceCapsuleElement capsuleTrace = TraceElementModel.Instance.GetCapsuleTrace();
@@ -353,7 +353,7 @@ public class MapExploreToolController : UiControllerBase
 		return num == 0;
 	}
 
-	// Token: 0x06010DF9 RID: 69113 RVA: 0x0041B388 File Offset: 0x00419588
+	// Token: 0x0600E28A RID: 57994 RVA: 0x00427C68 File Offset: 0x00425E68
 	private bool CheckOnEntity(IVector footPos)
 	{
 		UTraceLineElement utraceLineElement = new UTraceLineElement();
@@ -390,7 +390,7 @@ public class MapExploreToolController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010DFA RID: 69114 RVA: 0x0041B494 File Offset: 0x00419694
+	// Token: 0x0600E28B RID: 57995 RVA: 0x00427D74 File Offset: 0x00425F74
 	private unsafe void HandleServerResp(MapExploreToolUsingInfo usingInfo, IExploreToolResponse response)
 	{
 		if (response != null)
@@ -436,7 +436,7 @@ public class MapExploreToolController : UiControllerBase
 		this.OnFinishedUsingMapExploreTool(usingInfo, false);
 	}
 
-	// Token: 0x06010DFB RID: 69115 RVA: 0x0041B5B0 File Offset: 0x004197B0
+	// Token: 0x0600E28C RID: 57996 RVA: 0x00427E90 File Offset: 0x00426090
 	private unsafe bool HandleServerPreCheckSoundBoxDetect(MapExploreToolUsingInfo usingInfo, [Nullable(2)] IExploreToolResponse response)
 	{
 		if (usingInfo.PhantomSkillId != 1011)
@@ -459,7 +459,7 @@ public class MapExploreToolController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010DFC RID: 69116 RVA: 0x0041B640 File Offset: 0x00419840
+	// Token: 0x0600E28D RID: 57997 RVA: 0x00427F20 File Offset: 0x00426120
 	private unsafe void OnUseExploreToolSuccess(MapExploreToolUsingInfo usingInfo, bool useAgain = false)
 	{
 		Log instance = Log.Instance;
@@ -474,7 +474,7 @@ public class MapExploreToolController : UiControllerBase
 		this.OnFinishedUsingMapExploreTool(usingInfo, true);
 	}
 
-	// Token: 0x06010DFD RID: 69117 RVA: 0x0041B6C0 File Offset: 0x004198C0
+	// Token: 0x0600E28E RID: 57998 RVA: 0x00427FA0 File Offset: 0x004261A0
 	[NullableContext(0)]
 	private UniTask<bool> HandleLocalPreRequestUseCheckAsync([Nullable(1)] MapExploreToolUsingInfo usingInfo)
 	{
@@ -487,7 +487,7 @@ public class MapExploreToolController : UiControllerBase
 		return <HandleLocalPreRequestUseCheckAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010DFE RID: 69118 RVA: 0x0041B70C File Offset: 0x0041990C
+	// Token: 0x0600E28F RID: 57999 RVA: 0x00427FEC File Offset: 0x004261EC
 	private bool HandleRequestConfirmBox(MapExploreToolUsingInfo usingInfo)
 	{
 		TExploreToolResponseCallBack <>9__3;
@@ -587,7 +587,7 @@ public class MapExploreToolController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010DFF RID: 69119 RVA: 0x0041B96C File Offset: 0x00419B6C
+	// Token: 0x0600E290 RID: 58000 RVA: 0x0042824C File Offset: 0x0042644C
 	private bool HandleServerRespConfirmBox(MapExploreToolUsingInfo usingInfo, IExploreToolResponse response)
 	{
 		EConfirmBoxConfigId? confirmBoxId = MapExploreToolModel.Instance.GetConfirmBoxId(usingInfo, (ExploreToolResponse)response);
@@ -614,7 +614,7 @@ public class MapExploreToolController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010E00 RID: 69120 RVA: 0x0041BA00 File Offset: 0x00419C00
+	// Token: 0x0600E291 RID: 58001 RVA: 0x004282E0 File Offset: 0x004264E0
 	private bool CheckAndPromptPhantomSkillCostTip(MapExploreToolUsingInfo usingInfo)
 	{
 		int? num = null;
@@ -647,7 +647,7 @@ public class MapExploreToolController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010E01 RID: 69121 RVA: 0x0041BAF8 File Offset: 0x00419CF8
+	// Token: 0x0600E292 RID: 58002 RVA: 0x004283D8 File Offset: 0x004265D8
 	private bool PromptTipByResp(MapExploreToolUsingInfo usingInfo, IExploreToolResponse response)
 	{
 		EMapExploreToolCheckTipId? respTipsId = MapExploreToolModel.Instance.GetRespTipsId(usingInfo, (ExploreToolResponse)response);
@@ -659,7 +659,7 @@ public class MapExploreToolController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010E02 RID: 69122 RVA: 0x0041BB34 File Offset: 0x00419D34
+	// Token: 0x0600E293 RID: 58003 RVA: 0x00428414 File Offset: 0x00426614
 	private void PromptCheckTip(MapExploreToolUsingInfo usingInfo, EMapExploreToolCheckTipId promptId)
 	{
 		List<object> list = new List<object>();
@@ -700,7 +700,7 @@ public class MapExploreToolController : UiControllerBase
 		GenericPromptController.Instance.ShowPromptByCode(promptId.ToEnumString(), list.ToArray());
 	}
 
-	// Token: 0x06010E03 RID: 69123 RVA: 0x0041BC7C File Offset: 0x00419E7C
+	// Token: 0x0600E294 RID: 58004 RVA: 0x0042855C File Offset: 0x0042675C
 	private void PromptUseTip(MapExploreToolUsingInfo usingInfo, EMapExploreToolUseTipId promptId)
 	{
 		List<object> list = new List<object>();
@@ -724,7 +724,7 @@ public class MapExploreToolController : UiControllerBase
 		GenericPromptController.Instance.ShowPromptByCode(promptId.ToEnumString(), list.ToArray());
 	}
 
-	// Token: 0x06010E04 RID: 69124 RVA: 0x0041BD18 File Offset: 0x00419F18
+	// Token: 0x0600E295 RID: 58005 RVA: 0x004285F8 File Offset: 0x004267F8
 	private void RequestUsingDetectionSkill(MapExploreToolUsingInfo usingInfo, TExploreToolResponseCallBack callback)
 	{
 		switch (usingInfo.PhantomSkillId)
@@ -743,7 +743,7 @@ public class MapExploreToolController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010E05 RID: 69125 RVA: 0x0041BD6C File Offset: 0x00419F6C
+	// Token: 0x0600E296 RID: 58006 RVA: 0x0042864C File Offset: 0x0042684C
 	private void UseSoundBoxSkillRequest(TExploreToolResponseCallBack callback)
 	{
 		UseSoundBoxSkillRequest message = new UseSoundBoxSkillRequest();
@@ -752,7 +752,7 @@ public class MapExploreToolController : UiControllerBase
 			UseSoundBoxSkillResponse useSoundBoxSkillResponse = (UseSoundBoxSkillResponse)msg;
 			if (useSoundBoxSkillResponse.Code != Aki.Protocol.ErrorCode.Success && useSoundBoxSkillResponse.Code != Aki.Protocol.ErrorCode.ErrSkillIsEffect)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(useSoundBoxSkillResponse.Code, 29780, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(useSoundBoxSkillResponse.Code, 22512, null, true, true);
 				return;
 			}
 			ExploreToolResponse response = new ExploreToolResponse
@@ -764,7 +764,7 @@ public class MapExploreToolController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010E06 RID: 69126 RVA: 0x0041BDAC File Offset: 0x00419FAC
+	// Token: 0x0600E297 RID: 58007 RVA: 0x0042868C File Offset: 0x0042688C
 	private void AddTreasureBoxSlotRequest(TExploreToolResponseCallBack callback)
 	{
 		AddTreasureBoxSlotRequest message = new AddTreasureBoxSlotRequest();
@@ -773,7 +773,7 @@ public class MapExploreToolController : UiControllerBase
 			AddTreasureBoxSlotResponse addTreasureBoxSlotResponse = (AddTreasureBoxSlotResponse)msg;
 			if (addTreasureBoxSlotResponse.Code != Aki.Protocol.ErrorCode.Success && addTreasureBoxSlotResponse.Code != Aki.Protocol.ErrorCode.ErrTreasureBoxAllActive)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(addTreasureBoxSlotResponse.Code, 29769, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(addTreasureBoxSlotResponse.Code, 16859, null, true, true);
 				return;
 			}
 			MapModel.Instance.UpdateBoxSlotInfo(addTreasureBoxSlotResponse.TreasureBoxSlotInfo);
@@ -786,7 +786,7 @@ public class MapExploreToolController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010E07 RID: 69127 RVA: 0x0041BDEC File Offset: 0x00419FEC
+	// Token: 0x0600E298 RID: 58008 RVA: 0x004286CC File Offset: 0x004268CC
 	public void RemoveTreasureBoxSlotRequest(int markId)
 	{
 		MapExploreToolController.<>c__DisplayClass24_0 CS$<>8__locals1 = new MapExploreToolController.<>c__DisplayClass24_0();
@@ -811,7 +811,7 @@ public class MapExploreToolController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010E08 RID: 69128 RVA: 0x0041BE58 File Offset: 0x0041A058
+	// Token: 0x0600E299 RID: 58009 RVA: 0x00428738 File Offset: 0x00426938
 	private void AddTemporaryTeleportRequest(MapExploreToolUsingInfo usingInfo, TExploreToolResponseCallBack callback)
 	{
 		if (OnlineModel.Instance.GetIsTeamModel() && !OnlineModel.Instance.GetIsMyTeam())
@@ -827,7 +827,7 @@ public class MapExploreToolController : UiControllerBase
 			AddTemporaryTeleportResponse addTemporaryTeleportResponse = (AddTemporaryTeleportResponse)msg;
 			if (addTemporaryTeleportResponse.Code != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(addTemporaryTeleportResponse.Code, 17932, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(addTemporaryTeleportResponse.Code, 20601, null, true, true);
 				return;
 			}
 			ExploreToolResponse response = new ExploreToolResponse
@@ -839,7 +839,7 @@ public class MapExploreToolController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010E09 RID: 69129 RVA: 0x0041BEEC File Offset: 0x0041A0EC
+	// Token: 0x0600E29A RID: 58010 RVA: 0x004287CC File Offset: 0x004269CC
 	public void RemoveTemporaryTeleportRequest(long temporaryTeleportId, int markId)
 	{
 		RemoveTemporaryTeleportRequest removeTemporaryTeleportRequest = new RemoveTemporaryTeleportRequest();
@@ -849,14 +849,14 @@ public class MapExploreToolController : UiControllerBase
 			RemoveTemporaryTeleportResponse removeTemporaryTeleportResponse = (RemoveTemporaryTeleportResponse)msg;
 			if (removeTemporaryTeleportResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(removeTemporaryTeleportResponse.ErrCode, 24806, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(removeTemporaryTeleportResponse.ErrCode, 28735, null, true, true);
 				return;
 			}
 			MapModel.Instance.RemoveTemporaryTeleportInfo(markId);
 		}, 0);
 	}
 
-	// Token: 0x06010E0A RID: 69130 RVA: 0x0041BF30 File Offset: 0x0041A130
+	// Token: 0x0600E29B RID: 58011 RVA: 0x00428810 File Offset: 0x00426A10
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -871,8 +871,8 @@ public class MapExploreToolController : UiControllerBase
 		return <CheckUseSoundBoxSkillRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x1700155C RID: 5468
-	// (get) Token: 0x06010E0B RID: 69131 RVA: 0x0041BF6B File Offset: 0x0041A16B
+	// Token: 0x17001593 RID: 5523
+	// (get) Token: 0x0600E29C RID: 58012 RVA: 0x0042884B File Offset: 0x00426A4B
 	public static MapExploreToolController Instance
 	{
 		get
@@ -881,7 +881,7 @@ public class MapExploreToolController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010E0C RID: 69132 RVA: 0x0041BF72 File Offset: 0x0041A172
+	// Token: 0x0600E29D RID: 58013 RVA: 0x00428852 File Offset: 0x00426A52
 	public static MapExploreToolController GetOrCreateInstance()
 	{
 		if (MapExploreToolController._Instance == null)
@@ -891,7 +891,7 @@ public class MapExploreToolController : UiControllerBase
 		return MapExploreToolController._Instance;
 	}
 
-	// Token: 0x06010E0D RID: 69133 RVA: 0x0041BF86 File Offset: 0x0041A186
+	// Token: 0x0600E29E RID: 58014 RVA: 0x00428866 File Offset: 0x00426A66
 	public static bool CreateInstance()
 	{
 		if (MapExploreToolController._Instance != null)
@@ -902,24 +902,24 @@ public class MapExploreToolController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010E0E RID: 69134 RVA: 0x0041BF9C File Offset: 0x0041A19C
+	// Token: 0x0600E29F RID: 58015 RVA: 0x0042887C File Offset: 0x00426A7C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010E0F RID: 69135 RVA: 0x0041BF9E File Offset: 0x0041A19E
+	// Token: 0x0600E2A0 RID: 58016 RVA: 0x0042887E File Offset: 0x00426A7E
 	public static void ResetStaticDefaultValue()
 	{
 		MapExploreToolController._Instance = null;
 	}
 
-	// Token: 0x06010E10 RID: 69136 RVA: 0x0041BFA6 File Offset: 0x0041A1A6
+	// Token: 0x0600E2A1 RID: 58017 RVA: 0x00428886 File Offset: 0x00426A86
 	static MapExploreToolController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MapExploreToolController.CreateStaticDefaultValue), new Action(MapExploreToolController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400802C RID: 32812
+	// Token: 0x04008173 RID: 33139
 	[Nullable(2)]
 	private static MapExploreToolController _Instance;
 }

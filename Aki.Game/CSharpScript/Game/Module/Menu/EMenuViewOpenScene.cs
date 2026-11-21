@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053E5 RID: 21477
+	// Token: 0x020043C8 RID: 17352
 	public enum EMenuViewOpenScene
 	{
-		// Token: 0x0401CF77 RID: 118647
+		// Token: 0x04017A10 RID: 96784
 		Default,
-		// Token: 0x0401CF78 RID: 118648
+		// Token: 0x04017A11 RID: 96785
 		Login
 	}
 }

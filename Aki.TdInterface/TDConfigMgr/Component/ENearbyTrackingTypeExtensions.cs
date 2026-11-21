@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009AC RID: 2476
+	// Token: 0x02000A61 RID: 2657
 	public static class ENearbyTrackingTypeExtensions
 	{
-		// Token: 0x06003737 RID: 14135 RVA: 0x0008FA28 File Offset: 0x0008DC28
+		// Token: 0x06003AC7 RID: 15047 RVA: 0x00097AEC File Offset: 0x00095CEC
 		public static string ToEnumString(this ENearbyTrackingType value)
 		{
 			string result;
@@ -20,6 +20,9 @@ namespace Aki.TDConfigMgr.Component
 			case ENearbyTrackingType.Compass:
 				result = "Compass";
 				break;
+			case ENearbyTrackingType.DarkTide:
+				result = "DarkTide";
+				break;
 			case ENearbyTrackingType.Stealth:
 				result = "Stealth";
 				break;
@@ -30,7 +33,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003738 RID: 14136 RVA: 0x0008FA7C File Offset: 0x0008DC7C
+		// Token: 0x06003AC8 RID: 15048 RVA: 0x00097B4C File Offset: 0x00095D4C
 		public static ENearbyTrackingType FromString(string name)
 		{
 			ENearbyTrackingType result;
@@ -41,7 +44,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003739 RID: 14137 RVA: 0x0008FAA8 File Offset: 0x0008DCA8
+		// Token: 0x06003AC9 RID: 15049 RVA: 0x00097B78 File Offset: 0x00095D78
 		public static bool TryFromString(string name, out ENearbyTrackingType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -64,6 +67,11 @@ namespace Aki.TDConfigMgr.Component
 				value = ENearbyTrackingType.Compass;
 				return true;
 			}
+			if (name == "DarkTide")
+			{
+				value = ENearbyTrackingType.DarkTide;
+				return true;
+			}
 			if (!(name == "Stealth"))
 			{
 				value = ENearbyTrackingType.Icon;
@@ -73,7 +81,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600373A RID: 14138 RVA: 0x0008FB10 File Offset: 0x0008DD10
+		// Token: 0x06003ACA RID: 15050 RVA: 0x00097BF2 File Offset: 0x00095DF2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -81,11 +89,12 @@ namespace Aki.TDConfigMgr.Component
 				"Icon",
 				"AudioPoint",
 				"Compass",
+				"DarkTide",
 				"Stealth"
 			};
 		}
 
-		// Token: 0x0600373B RID: 14139 RVA: 0x0008FB38 File Offset: 0x0008DD38
+		// Token: 0x06003ACB RID: 15051 RVA: 0x00097C22 File Offset: 0x00095E22
 		public static ENearbyTrackingType[] GetValues()
 		{
 			return new ENearbyTrackingType[]
@@ -93,11 +102,12 @@ namespace Aki.TDConfigMgr.Component
 				ENearbyTrackingType.Icon,
 				ENearbyTrackingType.AudioPoint,
 				ENearbyTrackingType.Compass,
+				ENearbyTrackingType.DarkTide,
 				ENearbyTrackingType.Stealth
 			};
 		}
 
-		// Token: 0x0600373C RID: 14140 RVA: 0x0008FB4B File Offset: 0x0008DD4B
+		// Token: 0x06003ACC RID: 15052 RVA: 0x00097C35 File Offset: 0x00095E35
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -105,6 +115,7 @@ namespace Aki.TDConfigMgr.Component
 				"Icon",
 				"AudioPoint",
 				"Compass",
+				"DarkTide",
 				"Stealth"
 			};
 		}

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001F44 RID: 8004
+// Token: 0x02001406 RID: 5126
 public class AimUnit : HudUnitBase
 {
-	// Token: 0x0600F765 RID: 63333 RVA: 0x003BD454 File Offset: 0x003BB654
+	// Token: 0x0600CB84 RID: 52100 RVA: 0x003C8F40 File Offset: 0x003C7140
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -43,7 +43,7 @@ public class AimUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F766 RID: 63334 RVA: 0x003BD630 File Offset: 0x003BB830
+	// Token: 0x0600CB85 RID: 52101 RVA: 0x003C911C File Offset: 0x003C731C
 	protected override void OnStart()
 	{
 		this.ColorSpriteList = new UUISprite[]
@@ -63,7 +63,7 @@ public class AimUnit : HudUnitBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F767 RID: 63335 RVA: 0x003BD6CE File Offset: 0x003BB8CE
+	// Token: 0x0600CB86 RID: 52102 RVA: 0x003C91BA File Offset: 0x003C73BA
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -75,7 +75,7 @@ public class AimUnit : HudUnitBase
 		this.ClearCloserTimer();
 	}
 
-	// Token: 0x0600F768 RID: 63336 RVA: 0x003BD6F0 File Offset: 0x003BB8F0
+	// Token: 0x0600CB87 RID: 52103 RVA: 0x003C91DC File Offset: 0x003C73DC
 	public void SetTargetVisible(bool visible, bool immediately)
 	{
 		this.TargetVisible = visible;
@@ -93,13 +93,13 @@ public class AimUnit : HudUnitBase
 		base.SetVisible(visible, 0);
 	}
 
-	// Token: 0x0600F769 RID: 63337 RVA: 0x003BD751 File Offset: 0x003BB951
+	// Token: 0x0600CB88 RID: 52104 RVA: 0x003C923D File Offset: 0x003C743D
 	public bool GetTargetVisible()
 	{
 		return this.TargetVisible;
 	}
 
-	// Token: 0x0600F76A RID: 63338 RVA: 0x003BD75C File Offset: 0x003BB95C
+	// Token: 0x0600CB89 RID: 52105 RVA: 0x003C9248 File Offset: 0x003C7448
 	public void SetAimStatus(EAimStatus status)
 	{
 		if (this.AimStatus == status)
@@ -124,7 +124,7 @@ public class AimUnit : HudUnitBase
 		this.AimStatus = status;
 	}
 
-	// Token: 0x0600F76B RID: 63339 RVA: 0x003BD7B0 File Offset: 0x003BB9B0
+	// Token: 0x0600CB8A RID: 52106 RVA: 0x003C929C File Offset: 0x003C749C
 	private void SetNormalAim()
 	{
 		this.SetRedColor(false);
@@ -140,7 +140,7 @@ public class AimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F76C RID: 63340 RVA: 0x003BD7EA File Offset: 0x003BB9EA
+	// Token: 0x0600CB8B RID: 52107 RVA: 0x003C92D6 File Offset: 0x003C74D6
 	private void SetTargetAim()
 	{
 		this.SetRedColor(true);
@@ -156,7 +156,7 @@ public class AimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F76D RID: 63341 RVA: 0x003BD824 File Offset: 0x003BBA24
+	// Token: 0x0600CB8C RID: 52108 RVA: 0x003C9310 File Offset: 0x003C7510
 	private void SetWeaknessAim()
 	{
 		this.SetRedColor(true);
@@ -172,14 +172,14 @@ public class AimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F76E RID: 63342 RVA: 0x003BD872 File Offset: 0x003BBA72
+	// Token: 0x0600CB8D RID: 52109 RVA: 0x003C935E File Offset: 0x003C755E
 	private void SetCloseAim()
 	{
 		this.PlayAnim("close", false);
 		this.StartCloseTimer();
 	}
 
-	// Token: 0x0600F76F RID: 63343 RVA: 0x003BD888 File Offset: 0x003BBA88
+	// Token: 0x0600CB8E RID: 52110 RVA: 0x003C9374 File Offset: 0x003C7574
 	[NullableContext(1)]
 	private void PlayAnim(string sequenceName, bool playReverse = false)
 	{
@@ -188,7 +188,7 @@ public class AimUnit : HudUnitBase
 		this.LevelSequencePlayer.PlaySequencePurely(sequenceName, false, playReverse, null, null, false);
 	}
 
-	// Token: 0x0600F770 RID: 63344 RVA: 0x003BD8C1 File Offset: 0x003BBAC1
+	// Token: 0x0600CB8F RID: 52111 RVA: 0x003C93AD File Offset: 0x003C75AD
 	public override void SetActive(bool visibility)
 	{
 		if (visibility && !this.TargetVisible)
@@ -198,7 +198,7 @@ public class AimUnit : HudUnitBase
 		base.SetActive(visibility);
 	}
 
-	// Token: 0x0600F771 RID: 63345 RVA: 0x003BD8D6 File Offset: 0x003BBAD6
+	// Token: 0x0600CB90 RID: 52112 RVA: 0x003C93C2 File Offset: 0x003C75C2
 	private void StartCloseTimer()
 	{
 		this.CloseTimerId = TimerSystem.Instance.Delay(delegate(float id)
@@ -208,7 +208,7 @@ public class AimUnit : HudUnitBase
 		}, 200f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600F772 RID: 63346 RVA: 0x003BD901 File Offset: 0x003BBB01
+	// Token: 0x0600CB91 RID: 52113 RVA: 0x003C93ED File Offset: 0x003C75ED
 	private void ClearCloserTimer()
 	{
 		if (this.CloseTimerId != null)
@@ -218,7 +218,7 @@ public class AimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F773 RID: 63347 RVA: 0x003BD924 File Offset: 0x003BBB24
+	// Token: 0x0600CB92 RID: 52114 RVA: 0x003C9410 File Offset: 0x003C7610
 	private void SetRedColor(bool isRedColor)
 	{
 		if (this.IsRedColor == isRedColor)
@@ -234,7 +234,7 @@ public class AimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F774 RID: 63348 RVA: 0x003BD978 File Offset: 0x003BBB78
+	// Token: 0x0600CB93 RID: 52115 RVA: 0x003C9464 File Offset: 0x003C7664
 	private void SetArrowVisible(bool visible)
 	{
 		base.GetSprite(6).SetAlpha(!visible);
@@ -243,7 +243,7 @@ public class AimUnit : HudUnitBase
 		base.GetSprite(9).SetAlpha(visible > false);
 	}
 
-	// Token: 0x0600F775 RID: 63349 RVA: 0x003BD9CA File Offset: 0x003BBBCA
+	// Token: 0x0600CB94 RID: 52116 RVA: 0x003C94B6 File Offset: 0x003C76B6
 	public void SetArrowLineVisible(bool visible)
 	{
 		UUIItem item = base.GetItem(12);
@@ -254,25 +254,25 @@ public class AimUnit : HudUnitBase
 		item.SetUIActive(visible);
 	}
 
-	// Token: 0x040072B7 RID: 29367
+	// Token: 0x04007398 RID: 29592
 	private const int CloseAnimTime = 200;
 
-	// Token: 0x040072B8 RID: 29368
+	// Token: 0x04007399 RID: 29593
 	private const int MaxByte = 255;
 
-	// Token: 0x040072B9 RID: 29369
+	// Token: 0x0400739A RID: 29594
 	private static readonly FColor ColorWhite = new FColor(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue);
 
-	// Token: 0x040072BA RID: 29370
+	// Token: 0x0400739B RID: 29595
 	private static readonly FColor ColorRed = new FColor(byte.MaxValue, 0, 0, byte.MaxValue);
 
-	// Token: 0x040072BB RID: 29371
+	// Token: 0x0400739C RID: 29596
 	private EAimStatus AimStatus;
 
-	// Token: 0x040072BC RID: 29372
+	// Token: 0x0400739D RID: 29597
 	private bool TargetVisible;
 
-	// Token: 0x040072BD RID: 29373
+	// Token: 0x0400739E RID: 29598
 	[Nullable(new byte[]
 	{
 		2,
@@ -280,45 +280,45 @@ public class AimUnit : HudUnitBase
 	})]
 	private UUISprite[] ColorSpriteList;
 
-	// Token: 0x040072BE RID: 29374
+	// Token: 0x0400739F RID: 29599
 	private bool IsRedColor;
 
-	// Token: 0x040072BF RID: 29375
+	// Token: 0x040073A0 RID: 29600
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040072C0 RID: 29376
+	// Token: 0x040073A1 RID: 29601
 	[Nullable(2)]
 	private TimerHandle CloseTimerId;
 
-	// Token: 0x02008534 RID: 34100
+	// Token: 0x020076B9 RID: 30393
 	private enum EChildType
 	{
-		// Token: 0x0402B5D1 RID: 177617
+		// Token: 0x040268F5 RID: 157941
 		AnimNode,
-		// Token: 0x0402B5D2 RID: 177618
+		// Token: 0x040268F6 RID: 157942
 		RingUpL,
-		// Token: 0x0402B5D3 RID: 177619
+		// Token: 0x040268F7 RID: 157943
 		RingDownL,
-		// Token: 0x0402B5D4 RID: 177620
+		// Token: 0x040268F8 RID: 157944
 		RingUpR,
-		// Token: 0x0402B5D5 RID: 177621
+		// Token: 0x040268F9 RID: 157945
 		RingDownR,
-		// Token: 0x0402B5D6 RID: 177622
+		// Token: 0x040268FA RID: 157946
 		Dot,
-		// Token: 0x0402B5D7 RID: 177623
+		// Token: 0x040268FB RID: 157947
 		LineUp,
-		// Token: 0x0402B5D8 RID: 177624
+		// Token: 0x040268FC RID: 157948
 		LineDown,
-		// Token: 0x0402B5D9 RID: 177625
+		// Token: 0x040268FD RID: 157949
 		ArrowUp,
-		// Token: 0x0402B5DA RID: 177626
+		// Token: 0x040268FE RID: 157950
 		ArrowDown,
-		// Token: 0x0402B5DB RID: 177627
+		// Token: 0x040268FF RID: 157951
 		LineL,
-		// Token: 0x0402B5DC RID: 177628
+		// Token: 0x04026900 RID: 157952
 		LineR,
-		// Token: 0x0402B5DD RID: 177629
+		// Token: 0x04026901 RID: 157953
 		LineNode
 	}
 }

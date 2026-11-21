@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000753 RID: 1875
+	// Token: 0x020007F4 RID: 2036
 	public class ITeleControlBaseCfg_SetValue
 	{
-		// Token: 0x04001B39 RID: 6969
-		[Nullable(1)]
+		// Token: 0x04001D3E RID: 7486
 		public string CommonConfig;
 
-		// Token: 0x04001B3A RID: 6970
+		// Token: 0x04001D3F RID: 7487
 		public bool? CanRotate;
 
-		// Token: 0x04001B3B RID: 6971
+		// Token: 0x04001D40 RID: 7488
 		public bool? InitialGravity;
 	}
 }

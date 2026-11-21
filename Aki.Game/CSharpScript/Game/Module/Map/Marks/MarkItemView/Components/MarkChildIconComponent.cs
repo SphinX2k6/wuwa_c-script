@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x02005543 RID: 21827
+	// Token: 0x02004515 RID: 17685
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MarkChildIconComponent : MarkPanelBase
 	{
-		// Token: 0x06037B40 RID: 228160 RVA: 0x00D37FAC File Offset: 0x00D361AC
+		// Token: 0x0602CA0F RID: 182799 RVA: 0x00C85A80 File Offset: 0x00C83C80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,14 +23,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037B41 RID: 228161 RVA: 0x00D37FF4 File Offset: 0x00D361F4
+		// Token: 0x0602CA10 RID: 182800 RVA: 0x00C85AC8 File Offset: 0x00C83CC8
 		protected override void OnStart()
 		{
 			base.GetSprite(0).SetUIActive(false);
 			this.UpdateIcon();
 		}
 
-		// Token: 0x06037B42 RID: 228162 RVA: 0x00D3800C File Offset: 0x00D3620C
+		// Token: 0x0602CA11 RID: 182801 RVA: 0x00C85AE0 File Offset: 0x00C83CE0
 		private void UpdateIcon()
 		{
 			if (string.IsNullOrEmpty(this.Path))
@@ -44,9 +44,9 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			});
 		}
 
-		// Token: 0x170085BA RID: 34234
-		// (get) Token: 0x06037B43 RID: 228163 RVA: 0x00D3805D File Offset: 0x00D3625D
-		// (set) Token: 0x06037B44 RID: 228164 RVA: 0x00D38065 File Offset: 0x00D36265
+		// Token: 0x1700595A RID: 22874
+		// (get) Token: 0x0602CA12 RID: 182802 RVA: 0x00C85B31 File Offset: 0x00C83D31
+		// (set) Token: 0x0602CA13 RID: 182803 RVA: 0x00C85B39 File Offset: 0x00C83D39
 		public string Icon
 		{
 			get
@@ -63,14 +63,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x0401D440 RID: 119872
+		// Token: 0x04017EC6 RID: 97990
 		private string Path;
 
-		// Token: 0x0200B76F RID: 46959
+		// Token: 0x0200A19A RID: 41370
 		[NullableContext(0)]
 		public static class EChildComponents
 		{
-			// Token: 0x0403789D RID: 227485
+			// Token: 0x040322C8 RID: 205512
 			public const int Icon = 0;
 		}
 	}

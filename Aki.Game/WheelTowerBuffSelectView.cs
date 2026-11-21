@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001611 RID: 5649
+// Token: 0x02000AC9 RID: 2761
 public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 {
-	// Token: 0x06009F02 RID: 40706 RVA: 0x0022CA66 File Offset: 0x0022AC66
+	// Token: 0x060072E0 RID: 29408 RVA: 0x00236896 File Offset: 0x00234A96
 	[NullableContext(1)]
 	public WheelTowerBuffSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F03 RID: 40707 RVA: 0x0022CA78 File Offset: 0x0022AC78
+	// Token: 0x060072E1 RID: 29409 RVA: 0x002368A8 File Offset: 0x00234AA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -49,7 +49,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009F04 RID: 40708 RVA: 0x0022CBC4 File Offset: 0x0022ADC4
+	// Token: 0x060072E2 RID: 29410 RVA: 0x002369F4 File Offset: 0x00234BF4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerBuffSelectView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F05 RID: 40709 RVA: 0x0022CC08 File Offset: 0x0022AE08
+	// Token: 0x060072E3 RID: 29411 RVA: 0x00236A38 File Offset: 0x00234C38
 	protected override void OnStart()
 	{
 		List<int> levelBuffList = WheelTowerModel.Instance.GetLevelBuffList();
@@ -85,7 +85,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		button.SetSelfInteractive(this.SelectedBuffId != -1);
 	}
 
-	// Token: 0x06009F06 RID: 40710 RVA: 0x0022CC79 File Offset: 0x0022AE79
+	// Token: 0x060072E4 RID: 29412 RVA: 0x00236AA9 File Offset: 0x00234CA9
 	[NullableContext(1)]
 	private WheelTowerBuffSelectView.BuffCard CreateCard()
 	{
@@ -94,7 +94,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		return buffCard;
 	}
 
-	// Token: 0x06009F07 RID: 40711 RVA: 0x0022CC92 File Offset: 0x0022AE92
+	// Token: 0x060072E5 RID: 29413 RVA: 0x00236AC2 File Offset: 0x00234CC2
 	private void OnClickCard(int buffId, int index)
 	{
 		this.SelectedBuffId = buffId;
@@ -111,7 +111,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		button.SetSelfInteractive(true);
 	}
 
-	// Token: 0x06009F08 RID: 40712 RVA: 0x0022CCC0 File Offset: 0x0022AEC0
+	// Token: 0x060072E6 RID: 29414 RVA: 0x00236AF0 File Offset: 0x00234CF0
 	private void OnClickConfirm()
 	{
 		if (this.SelectedBuffId != -1)
@@ -121,7 +121,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009F09 RID: 40713 RVA: 0x0022CCE4 File Offset: 0x0022AEE4
+	// Token: 0x060072E7 RID: 29415 RVA: 0x00236B14 File Offset: 0x00234D14
 	[NullableContext(1)]
 	public string GetExtraResourceId([Nullable(2)] object param = null)
 	{
@@ -132,11 +132,11 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 		return "UiView_WheelTowerBuffSelect32";
 	}
 
-	// Token: 0x04004760 RID: 18272
+	// Token: 0x04004806 RID: 18438
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004761 RID: 18273
+	// Token: 0x04004807 RID: 18439
 	[Nullable(new byte[]
 	{
 		2,
@@ -144,13 +144,13 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 	})]
 	private LoopScrollView<WheelTowerBuffSelectView.BuffCard, int> CardScroll;
 
-	// Token: 0x04004762 RID: 18274
+	// Token: 0x04004808 RID: 18440
 	private int SelectedBuffId = -1;
 
-	// Token: 0x02007BD8 RID: 31704
+	// Token: 0x02006D60 RID: 28000
 	private class BuffCard : GridProxyAbstract<int>
 	{
-		// Token: 0x060497A9 RID: 300969 RVA: 0x01303750 File Offset: 0x01301950
+		// Token: 0x0603FBC7 RID: 261063 RVA: 0x012A69FC File Offset: 0x012A4BFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -177,7 +177,7 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060497AA RID: 300970 RVA: 0x0130385C File Offset: 0x01301A5C
+		// Token: 0x0603FBC8 RID: 261064 RVA: 0x012A6B08 File Offset: 0x012A4D08
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.BuffId = data;
@@ -201,26 +201,26 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 			this.SetToggleSelect(false, true);
 		}
 
-		// Token: 0x060497AB RID: 300971 RVA: 0x0130391A File Offset: 0x01301B1A
+		// Token: 0x0603FBC9 RID: 261065 RVA: 0x012A6BC6 File Offset: 0x012A4DC6
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleSelect(false, false);
 		}
 
-		// Token: 0x060497AC RID: 300972 RVA: 0x01303924 File Offset: 0x01301B24
+		// Token: 0x0603FBCA RID: 261066 RVA: 0x012A6BD0 File Offset: 0x012A4DD0
 		[NullableContext(1)]
 		public void SetToggleCallback(Action<int, int> callback)
 		{
 			this.ToggleCallback = callback;
 		}
 
-		// Token: 0x060497AD RID: 300973 RVA: 0x0130392D File Offset: 0x01301B2D
+		// Token: 0x0603FBCB RID: 261067 RVA: 0x012A6BD9 File Offset: 0x012A4DD9
 		public void SetToggleSelect(bool selected, bool skipAnim = false)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, skipAnim);
 		}
 
-		// Token: 0x060497AE RID: 300974 RVA: 0x01303945 File Offset: 0x01301B45
+		// Token: 0x0603FBCC RID: 261068 RVA: 0x012A6BF1 File Offset: 0x012A4DF1
 		private void OnToggleClick(EToggleState state)
 		{
 			Action<int, int> toggleCallback = this.ToggleCallback;
@@ -231,10 +231,10 @@ public class WheelTowerBuffSelectView : UiViewBase, IUiViewResource
 			toggleCallback(this.BuffId, base.GridIndex);
 		}
 
-		// Token: 0x04028B09 RID: 166665
+		// Token: 0x04023E3E RID: 147006
 		private int BuffId = -1;
 
-		// Token: 0x04028B0A RID: 166666
+		// Token: 0x04023E3F RID: 147007
 		[Nullable(2)]
 		private Action<int, int> ToggleCallback;
 	}

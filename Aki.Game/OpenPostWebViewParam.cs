@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DEF RID: 3567
+// Token: 0x020002A2 RID: 674
 [NullableContext(1)]
 [Nullable(0)]
 public class OpenPostWebViewParam
 {
-	// Token: 0x04002712 RID: 10002
+	// Token: 0x040027A3 RID: 10147
 	public string playerId = "";
 
-	// Token: 0x04002713 RID: 10003
+	// Token: 0x040027A4 RID: 10148
 	public string playerLevel = "";
 
-	// Token: 0x04002714 RID: 10004
+	// Token: 0x040027A5 RID: 10149
 	public string language = "";
 
-	// Token: 0x04002715 RID: 10005
+	// Token: 0x040027A6 RID: 10150
 	public string extend = "";
 
-	// Token: 0x04002716 RID: 10006
+	// Token: 0x040027A7 RID: 10151
 	public string gameOrientation = "";
 
-	// Token: 0x04002717 RID: 10007
+	// Token: 0x040027A8 RID: 10152
 	public string type = "";
 }

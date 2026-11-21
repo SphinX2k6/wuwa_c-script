@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002197 RID: 8599
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002400 RID: 9216
 	public class SetAreaState : ActionParams
 	{
-		// Token: 0x0600BCE2 RID: 48354 RVA: 0x001B33A0 File Offset: 0x001B15A0
+		// Token: 0x0600C892 RID: 51346 RVA: 0x001CA898 File Offset: 0x001C8A98
 		private SetAreaState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCE3 RID: 48355 RVA: 0x001B33D8 File Offset: 0x001B15D8
+		// Token: 0x0600C893 RID: 51347 RVA: 0x001CA8D0 File Offset: 0x001C8AD0
 		public static SetAreaState Create([Nullable(2)] SetAreaState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCE4 RID: 48356 RVA: 0x001B33EB File Offset: 0x001B15EB
+		// Token: 0x0600C894 RID: 51348 RVA: 0x001CA8E3 File Offset: 0x001C8AE3
 		public static SetAreaState CreateFromSetValue([Nullable(2)] SetAreaState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCE5 RID: 48357 RVA: 0x001B33FE File Offset: 0x001B15FE
+		// Token: 0x0600C895 RID: 51349 RVA: 0x001CA8F6 File Offset: 0x001C8AF6
 		public SetAreaState_SetValue ToSetValue()
 		{
 			return new SetAreaState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700396F RID: 14703
-		// (get) Token: 0x0600BCE6 RID: 48358 RVA: 0x001B341D File Offset: 0x001B161D
-		// (set) Token: 0x0600BCE7 RID: 48359 RVA: 0x001B3448 File Offset: 0x001B1648
+		// Token: 0x17003C61 RID: 15457
+		// (get) Token: 0x0600C896 RID: 51350 RVA: 0x001CA915 File Offset: 0x001C8B15
+		// (set) Token: 0x0600C897 RID: 51351 RVA: 0x001CA940 File Offset: 0x001C8B40
 		public virtual int AreaId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003970 RID: 14704
-		// (get) Token: 0x0600BCE8 RID: 48360 RVA: 0x001B3456 File Offset: 0x001B1656
-		// (set) Token: 0x0600BCE9 RID: 48361 RVA: 0x001B3481 File Offset: 0x001B1681
+		// Token: 0x17003C62 RID: 15458
+		// (get) Token: 0x0600C898 RID: 51352 RVA: 0x001CA94E File Offset: 0x001C8B4E
+		// (set) Token: 0x0600C899 RID: 51353 RVA: 0x001CA979 File Offset: 0x001C8B79
 		public virtual int State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070C0 RID: 28864
+		// Token: 0x04007702 RID: 30466
 		[Nullable(2)]
 		protected new SetAreaState FbInstance;
 
-		// Token: 0x040070C1 RID: 28865
+		// Token: 0x04007703 RID: 30467
 		[Nullable(2)]
 		protected SetAreaState_SetValue PocoInterface;
 	}

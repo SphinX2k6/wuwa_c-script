@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001592 RID: 5522
+	// Token: 0x020016F1 RID: 5873
 	[EnumExtensions]
 	public enum EAvgVisualEffect
 	{
-		// Token: 0x0400497A RID: 18810
+		// Token: 0x04004D2C RID: 19756
 		Default,
-		// Token: 0x0400497B RID: 18811
+		// Token: 0x04004D2D RID: 19757
 		Highlight,
-		// Token: 0x0400497C RID: 18812
+		// Token: 0x04004D2E RID: 19758
 		Darken
 	}
 }

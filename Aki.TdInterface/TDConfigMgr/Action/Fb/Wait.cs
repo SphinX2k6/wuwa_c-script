@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025F3 RID: 9715
+	// Token: 0x020028B3 RID: 10419
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class Wait : ActionParams
 	{
-		// Token: 0x0600DA4A RID: 55882 RVA: 0x002087C2 File Offset: 0x002069C2
-		[NullableContext(1)]
+		// Token: 0x0600E817 RID: 59415 RVA: 0x00224F16 File Offset: 0x00223116
+		[NullableContext(0)]
 		public static Wait Create(IWait? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004026 RID: 16422
-		// (get) Token: 0x0600DA4B RID: 55883 RVA: 0x002087E4 File Offset: 0x002069E4
+		// Token: 0x1700435F RID: 17247
+		// (get) Token: 0x0600E818 RID: 59416 RVA: 0x00224F38 File Offset: 0x00223138
 		public virtual float? Min
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004027 RID: 16423
-		// (get) Token: 0x0600DA4C RID: 55884 RVA: 0x0020881A File Offset: 0x00206A1A
+		// Token: 0x17004360 RID: 17248
+		// (get) Token: 0x0600E819 RID: 59417 RVA: 0x00224F6E File Offset: 0x0022316E
 		public virtual float Time
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004028 RID: 16424
-		// (get) Token: 0x0600DA4D RID: 55885 RVA: 0x00208828 File Offset: 0x00206A28
+		// Token: 0x17004361 RID: 17249
+		// (get) Token: 0x0600E81A RID: 59418 RVA: 0x00224F7C File Offset: 0x0022317C
 		public virtual bool? BanInput
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004029 RID: 16425
-		// (get) Token: 0x0600DA4E RID: 55886 RVA: 0x0020885E File Offset: 0x00206A5E
+		// Token: 0x17004362 RID: 17250
+		// (get) Token: 0x0600E81B RID: 59419 RVA: 0x00224FB2 File Offset: 0x002231B2
 		public virtual IVarInterval WaitInterval
 		{
 			get
@@ -78,13 +78,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007935 RID: 31029
+		// Token: 0x04007FCF RID: 32719
 		private IWait Instance;
 
-		// Token: 0x04007936 RID: 31030
+		// Token: 0x04007FD0 RID: 32720
 		private IVarInterval _WaitIntervalCache;
 
-		// Token: 0x04007937 RID: 31031
+		// Token: 0x04007FD1 RID: 32721
 		private bool _WaitIntervalInited;
 	}
 }

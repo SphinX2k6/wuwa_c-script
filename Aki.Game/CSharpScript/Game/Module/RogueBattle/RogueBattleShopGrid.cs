@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EA1 RID: 20129
+	// Token: 0x02003E6A RID: 15978
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,8 +16,8 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleShopGrid : LoopScrollMediumItemGrid<RogueResGainData>
 	{
-		// Token: 0x17007EDD RID: 32477
-		// (get) Token: 0x06033BA7 RID: 211879 RVA: 0x00C1E525 File Offset: 0x00C1C725
+		// Token: 0x1700528D RID: 21133
+		// (get) Token: 0x06028A12 RID: 166418 RVA: 0x00B67A41 File Offset: 0x00B65C41
 		public new RogueResGainData Data
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BA8 RID: 211880 RVA: 0x00C1E534 File Offset: 0x00C1C734
+		// Token: 0x06028A13 RID: 166419 RVA: 0x00B67A50 File Offset: 0x00B65C50
 		[NullableContext(1)]
 		protected override void OnRefresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.SetComponentVisible(component3, true);
 		}
 
-		// Token: 0x06033BA9 RID: 211881 RVA: 0x00C1E648 File Offset: 0x00C1C848
+		// Token: 0x06028A14 RID: 166420 RVA: 0x00B67B64 File Offset: 0x00B65D64
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BAA RID: 211882 RVA: 0x00C1E658 File Offset: 0x00C1C858
+		// Token: 0x06028A15 RID: 166421 RVA: 0x00B67B74 File Offset: 0x00B65D74
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
@@ -84,14 +84,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BAB RID: 211883 RVA: 0x00C1E6A4 File Offset: 0x00C1C8A4
+		// Token: 0x06028A16 RID: 166422 RVA: 0x00B67BC0 File Offset: 0x00B65DC0
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 			RogueBattleModel.Instance.SelectGainData = null;
 		}
 
-		// Token: 0x0401B7A9 RID: 112553
+		// Token: 0x0401617C RID: 90492
 		[Nullable(new byte[]
 		{
 			2,

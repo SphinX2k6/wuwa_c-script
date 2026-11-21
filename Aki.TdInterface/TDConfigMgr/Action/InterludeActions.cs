@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C84 RID: 7300
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001E89 RID: 7817
 	public class InterludeActions : ActionParams
 	{
-		// Token: 0x06009C93 RID: 40083 RVA: 0x00167074 File Offset: 0x00165274
-		[NullableContext(1)]
+		// Token: 0x0600A62D RID: 42541 RVA: 0x0017AA68 File Offset: 0x00178C68
 		private InterludeActions_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C94 RID: 40084 RVA: 0x001670AC File Offset: 0x001652AC
-		[NullableContext(1)]
+		// Token: 0x0600A62E RID: 42542 RVA: 0x0017AAA0 File Offset: 0x00178CA0
 		public static InterludeActions Create([Nullable(2)] InterludeActions instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C95 RID: 40085 RVA: 0x001670BF File Offset: 0x001652BF
-		[NullableContext(1)]
+		// Token: 0x0600A62F RID: 42543 RVA: 0x0017AAB3 File Offset: 0x00178CB3
 		public static InterludeActions CreateFromSetValue([Nullable(2)] InterludeActions_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C96 RID: 40086 RVA: 0x001670D2 File Offset: 0x001652D2
-		[NullableContext(1)]
+		// Token: 0x0600A630 RID: 42544 RVA: 0x0017AAC6 File Offset: 0x00178CC6
 		public InterludeActions_SetValue ToSetValue()
 		{
 			return new InterludeActions_SetValue
@@ -67,20 +61,20 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030DA RID: 12506
-		// (get) Token: 0x06009C97 RID: 40087 RVA: 0x0016710C File Offset: 0x0016530C
-		// (set) Token: 0x06009C98 RID: 40088 RVA: 0x0016719F File Offset: 0x0016539F
+		// Token: 0x17003357 RID: 13143
+		// (get) Token: 0x0600A631 RID: 42545 RVA: 0x0017AB00 File Offset: 0x00178D00
+		// (set) Token: 0x0600A632 RID: 42546 RVA: 0x0017AB93 File Offset: 0x00178D93
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> InterludeActionList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -111,7 +105,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -120,11 +114,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030DB RID: 12507
-		// (get) Token: 0x06009C99 RID: 40089 RVA: 0x001671B4 File Offset: 0x001653B4
-		// (set) Token: 0x06009C9A RID: 40090 RVA: 0x001671DB File Offset: 0x001653DB
+		// Token: 0x17003358 RID: 13144
+		// (get) Token: 0x0600A633 RID: 42547 RVA: 0x0017ABA8 File Offset: 0x00178DA8
+		// (set) Token: 0x0600A634 RID: 42548 RVA: 0x0017ABCF File Offset: 0x00178DCF
+		[Nullable(2)]
 		public virtual List<int> DestroyEntityIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -138,15 +134,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.DestroyEntityIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().DestroyEntityIds = value;
 			}
 		}
 
-		// Token: 0x170030DC RID: 12508
-		// (get) Token: 0x06009C9B RID: 40091 RVA: 0x001671E9 File Offset: 0x001653E9
-		// (set) Token: 0x06009C9C RID: 40092 RVA: 0x00167214 File Offset: 0x00165414
+		// Token: 0x17003359 RID: 13145
+		// (get) Token: 0x0600A635 RID: 42549 RVA: 0x0017ABDD File Offset: 0x00178DDD
+		// (set) Token: 0x0600A636 RID: 42550 RVA: 0x0017AC08 File Offset: 0x00178E08
 		public virtual bool IsFadeIn
 		{
 			get
@@ -163,9 +160,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030DD RID: 12509
-		// (get) Token: 0x06009C9D RID: 40093 RVA: 0x00167222 File Offset: 0x00165422
-		// (set) Token: 0x06009C9E RID: 40094 RVA: 0x0016724D File Offset: 0x0016544D
+		// Token: 0x1700335A RID: 13146
+		// (get) Token: 0x0600A637 RID: 42551 RVA: 0x0017AC16 File Offset: 0x00178E16
+		// (set) Token: 0x0600A638 RID: 42552 RVA: 0x0017AC41 File Offset: 0x00178E41
 		public virtual bool IsFadeOut
 		{
 			get
@@ -182,21 +179,23 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EEB RID: 24299
+		// Token: 0x0400643E RID: 25662
+		[Nullable(2)]
 		protected new InterludeActions FbInstance;
 
-		// Token: 0x04005EEC RID: 24300
+		// Token: 0x0400643F RID: 25663
+		[Nullable(2)]
 		protected InterludeActions_SetValue PocoInterface;
 
-		// Token: 0x04005EED RID: 24301
+		// Token: 0x04006440 RID: 25664
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _InterludeActionListCache;
 
-		// Token: 0x04005EEE RID: 24302
+		// Token: 0x04006441 RID: 25665
 		private bool _InterludeActionListInited;
 	}
 }

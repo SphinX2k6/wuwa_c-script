@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Cipher
 {
-	// Token: 0x02006F37 RID: 28471
+	// Token: 0x020060B8 RID: 24760
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class CipherModel : ModelBase
 	{
-		// Token: 0x06045439 RID: 283705 RVA: 0x01122FA8 File Offset: 0x011211A8
+		// Token: 0x0603B5E7 RID: 243175 RVA: 0x010CCF54 File Offset: 0x010CB154
 		public void InitCipherConfig(string inRow)
 		{
 			this.CipherId = inRow;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x0604543A RID: 283706 RVA: 0x011230A0 File Offset: 0x011212A0
+		// Token: 0x0603B5E8 RID: 243176 RVA: 0x010CD04C File Offset: 0x010CB24C
 		public CipherGameplay? GetCipherConfig(string inRow)
 		{
 			return ConfigCipherGameplayById.GetConfig(inRow, true);
 		}
 
-		// Token: 0x0604543B RID: 283707 RVA: 0x011230AC File Offset: 0x011212AC
+		// Token: 0x0603B5E9 RID: 243177 RVA: 0x010CD058 File Offset: 0x010CB258
 		public bool IsPasswordCorrect()
 		{
 			for (int i = 0; i < 4; i++)
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			return true;
 		}
 
-		// Token: 0x0604543C RID: 283708 RVA: 0x01123110 File Offset: 0x01121310
+		// Token: 0x0603B5EA RID: 243178 RVA: 0x010CD0BC File Offset: 0x010CB2BC
 		public bool GetCheckResultByIndex(int inValue)
 		{
 			bool flag;
 			return this.CheckMap.TryGetValue(inValue, out flag) && flag;
 		}
 
-		// Token: 0x0604543D RID: 283709 RVA: 0x01123130 File Offset: 0x01121330
+		// Token: 0x0603B5EB RID: 243179 RVA: 0x010CD0DC File Offset: 0x010CB2DC
 		public void SetCurPassword(int index, int value)
 		{
 			if (index >= this.CurPasswords.Count)
@@ -86,14 +86,14 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			this.CurPasswords[index] = value;
 		}
 
-		// Token: 0x0604543E RID: 283710 RVA: 0x0112314E File Offset: 0x0112134E
+		// Token: 0x0603B5EC RID: 243180 RVA: 0x010CD0FA File Offset: 0x010CB2FA
 		public string GetCipherConfigId()
 		{
 			return this.CipherId;
 		}
 
-		// Token: 0x17009B21 RID: 39713
-		// (get) Token: 0x0604543F RID: 283711 RVA: 0x01123156 File Offset: 0x01121356
+		// Token: 0x17007060 RID: 28768
+		// (get) Token: 0x0603B5ED RID: 243181 RVA: 0x010CD102 File Offset: 0x010CB302
 		public static CipherModel Instance
 		{
 			get
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x06045440 RID: 283712 RVA: 0x0112315D File Offset: 0x0112135D
+		// Token: 0x0603B5EE RID: 243182 RVA: 0x010CD109 File Offset: 0x010CB309
 		public static CipherModel GetOrCreateInstance()
 		{
 			if (CipherModel._Instance == null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			return CipherModel._Instance;
 		}
 
-		// Token: 0x06045441 RID: 283713 RVA: 0x01123171 File Offset: 0x01121371
+		// Token: 0x0603B5EF RID: 243183 RVA: 0x010CD11D File Offset: 0x010CB31D
 		public static bool CreateInstance()
 		{
 			if (CipherModel._Instance != null)
@@ -123,45 +123,45 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			return true;
 		}
 
-		// Token: 0x06045442 RID: 283714 RVA: 0x01123187 File Offset: 0x01121387
+		// Token: 0x0603B5F0 RID: 243184 RVA: 0x010CD133 File Offset: 0x010CB333
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045443 RID: 283715 RVA: 0x01123189 File Offset: 0x01121389
+		// Token: 0x0603B5F1 RID: 243185 RVA: 0x010CD135 File Offset: 0x010CB335
 		public static void ResetStaticDefaultValue()
 		{
 			CipherModel._Instance = null;
 		}
 
-		// Token: 0x06045444 RID: 283716 RVA: 0x01123191 File Offset: 0x01121391
+		// Token: 0x0603B5F2 RID: 243186 RVA: 0x010CD13D File Offset: 0x010CB33D
 		static CipherModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CipherModel.CreateStaticDefaultValue), new Action(CipherModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040241D3 RID: 147923
+		// Token: 0x0401F488 RID: 128136
 		private const int LEN = 4;
 
-		// Token: 0x040241D4 RID: 147924
+		// Token: 0x0401F489 RID: 128137
 		private const int INVLID = -1;
 
-		// Token: 0x040241D5 RID: 147925
+		// Token: 0x0401F48A RID: 128138
 		private string CipherId = "";
 
-		// Token: 0x040241D6 RID: 147926
+		// Token: 0x0401F48B RID: 128139
 		[Nullable(2)]
 		private List<int> Passwords;
 
-		// Token: 0x040241D7 RID: 147927
+		// Token: 0x0401F48C RID: 128140
 		[Nullable(2)]
 		private List<int> CurPasswords;
 
-		// Token: 0x040241D8 RID: 147928
+		// Token: 0x0401F48D RID: 128141
 		[Nullable(2)]
 		private Dictionary<int, bool> CheckMap;
 
-		// Token: 0x040241D9 RID: 147929
+		// Token: 0x0401F48E RID: 128142
 		[Nullable(2)]
 		private static CipherModel _Instance;
 	}

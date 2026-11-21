@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EB9 RID: 7865
+// Token: 0x0200137B RID: 4987
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryEquipTabView : UiTabViewBase
 {
-	// Token: 0x170012E2 RID: 4834
-	// (get) Token: 0x0600F201 RID: 61953 RVA: 0x003A4399 File Offset: 0x003A2599
+	// Token: 0x1700130C RID: 4876
+	// (get) Token: 0x0600C620 RID: 50720 RVA: 0x003AFE99 File Offset: 0x003AE099
 	public HonamiStoryInteractController DragController { get; } = new HonamiStoryInteractController();
 
-	// Token: 0x0600F202 RID: 61954 RVA: 0x003A43A4 File Offset: 0x003A25A4
+	// Token: 0x0600C621 RID: 50721 RVA: 0x003AFEA4 File Offset: 0x003AE0A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -34,7 +34,7 @@ public class HonamiStoryEquipTabView : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F203 RID: 61955 RVA: 0x003A4450 File Offset: 0x003A2650
+	// Token: 0x0600C622 RID: 50722 RVA: 0x003AFF50 File Offset: 0x003AE150
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryEquipTabView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,13 +45,13 @@ public class HonamiStoryEquipTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F204 RID: 61956 RVA: 0x003A4493 File Offset: 0x003A2693
+	// Token: 0x0600C623 RID: 50723 RVA: 0x003AFF93 File Offset: 0x003AE193
 	protected override void OnBeforeShow()
 	{
 		this.DragController.OnBeforeShow();
 	}
 
-	// Token: 0x0600F205 RID: 61957 RVA: 0x003A44A0 File Offset: 0x003A26A0
+	// Token: 0x0600C624 RID: 50724 RVA: 0x003AFFA0 File Offset: 0x003AE1A0
 	private UniTask InitPlayerBackpackPanel()
 	{
 		HonamiStoryEquipTabView.<InitPlayerBackpackPanel>d__9 <InitPlayerBackpackPanel>d__;
@@ -62,7 +62,7 @@ public class HonamiStoryEquipTabView : UiTabViewBase
 		return <InitPlayerBackpackPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F206 RID: 61958 RVA: 0x003A44E4 File Offset: 0x003A26E4
+	// Token: 0x0600C625 RID: 50725 RVA: 0x003AFFE4 File Offset: 0x003AE1E4
 	private UniTask InitBackpackPanel()
 	{
 		HonamiStoryEquipTabView.<InitBackpackPanel>d__10 <InitBackpackPanel>d__;
@@ -73,7 +73,7 @@ public class HonamiStoryEquipTabView : UiTabViewBase
 		return <InitBackpackPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F207 RID: 61959 RVA: 0x003A4528 File Offset: 0x003A2728
+	// Token: 0x0600C626 RID: 50726 RVA: 0x003B0028 File Offset: 0x003AE228
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -110,23 +110,23 @@ public class HonamiStoryEquipTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x04006FD4 RID: 28628
+	// Token: 0x040070B5 RID: 28853
 	private HonamiStoryEquipBackpackPanel EquipPanel;
 
-	// Token: 0x04006FD5 RID: 28629
+	// Token: 0x040070B6 RID: 28854
 	public HonamiStoryBackpackPanel BackpackPanel;
 
-	// Token: 0x0200849D RID: 33949
+	// Token: 0x02007622 RID: 30242
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B2AD RID: 176813
+		// Token: 0x040265D1 RID: 157137
 		EquipPanel,
-		// Token: 0x0402B2AE RID: 176814
+		// Token: 0x040265D2 RID: 157138
 		BackpackPanel,
-		// Token: 0x0402B2AF RID: 176815
+		// Token: 0x040265D3 RID: 157139
 		InteractPanel,
-		// Token: 0x0402B2B0 RID: 176816
+		// Token: 0x040265D4 RID: 157140
 		AttachPanel
 	}
 }

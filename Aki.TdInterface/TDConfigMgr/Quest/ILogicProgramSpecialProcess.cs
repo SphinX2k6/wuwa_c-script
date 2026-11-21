@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001001 RID: 4097
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200112D RID: 4397
 	public class ILogicProgramSpecialProcess
 	{
-		// Token: 0x06005B7C RID: 23420 RVA: 0x000DE180 File Offset: 0x000DC380
+		// Token: 0x0600615C RID: 24924 RVA: 0x000EADC0 File Offset: 0x000E8FC0
 		private ILogicProgramSpecialProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005B7D RID: 23421 RVA: 0x000DE1B8 File Offset: 0x000DC3B8
+		// Token: 0x0600615D RID: 24925 RVA: 0x000EADF8 File Offset: 0x000E8FF8
 		public static ILogicProgramSpecialProcess Create([Nullable(2)] ILogicProgramSpecialProcess instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B7E RID: 23422 RVA: 0x000DE1CB File Offset: 0x000DC3CB
+		// Token: 0x0600615E RID: 24926 RVA: 0x000EAE0B File Offset: 0x000E900B
 		public static ILogicProgramSpecialProcess CreateFromSetValue([Nullable(2)] ILogicProgramSpecialProcess_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B7F RID: 23423 RVA: 0x000DE1DE File Offset: 0x000DC3DE
+		// Token: 0x0600615F RID: 24927 RVA: 0x000EAE1E File Offset: 0x000E901E
 		public ILogicProgramSpecialProcess_SetValue ToSetValue()
 		{
 			return new ILogicProgramSpecialProcess_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E3E RID: 7742
-		// (get) Token: 0x06005B80 RID: 23424 RVA: 0x000DE1F4 File Offset: 0x000DC3F4
-		// (set) Token: 0x06005B81 RID: 23425 RVA: 0x000DE287 File Offset: 0x000DC487
+		// Token: 0x17001FE7 RID: 8167
+		// (get) Token: 0x06006160 RID: 24928 RVA: 0x000EAE34 File Offset: 0x000E9034
+		// (set) Token: 0x06006161 RID: 24929 RVA: 0x000EAEC7 File Offset: 0x000E90C7
 		public virtual List<IDisableUro> SpecialProcessList
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003721 RID: 14113
+		// Token: 0x04003A59 RID: 14937
 		[Nullable(2)]
 		protected ILogicProgramSpecialProcess FbInstance;
 
-		// Token: 0x04003722 RID: 14114
+		// Token: 0x04003A5A RID: 14938
 		[Nullable(2)]
 		protected ILogicProgramSpecialProcess_SetValue PocoInterface;
 
-		// Token: 0x04003723 RID: 14115
+		// Token: 0x04003A5B RID: 14939
 		private List<IDisableUro> _SpecialProcessListCache;
 
-		// Token: 0x04003724 RID: 14116
+		// Token: 0x04003A5C RID: 14940
 		private bool _SpecialProcessListInited;
 	}
 }

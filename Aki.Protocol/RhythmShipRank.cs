@@ -3,25 +3,25 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001627 RID: 5671
+	// Token: 0x0200169A RID: 5786
 	public enum RhythmShipRank
 	{
-		// Token: 0x0400C02B RID: 49195
+		// Token: 0x0400C525 RID: 50469
 		[OriginalName("Undefined")]
 		Undefined,
-		// Token: 0x0400C02C RID: 49196
+		// Token: 0x0400C526 RID: 50470
 		[OriginalName("SSS")]
 		Sss,
-		// Token: 0x0400C02D RID: 49197
+		// Token: 0x0400C527 RID: 50471
 		[OriginalName("SS")]
 		Ss,
-		// Token: 0x0400C02E RID: 49198
+		// Token: 0x0400C528 RID: 50472
 		[OriginalName("S")]
 		S,
-		// Token: 0x0400C02F RID: 49199
+		// Token: 0x0400C529 RID: 50473
 		[OriginalName("A")]
 		A,
-		// Token: 0x0400C030 RID: 49200
+		// Token: 0x0400C52A RID: 50474
 		[OriginalName("B")]
 		B
 	}

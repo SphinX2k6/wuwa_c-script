@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020029C3 RID: 10691
+// Token: 0x02001F3E RID: 7998
 public class ShipTowerResetViewParams
 {
-	// Token: 0x0400A50E RID: 42254
+	// Token: 0x0400A8F8 RID: 43256
 	[Nullable(2)]
 	public ShipTowerStageData StageData;
 }

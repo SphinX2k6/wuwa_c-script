@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200590F RID: 22799
+	// Token: 0x020048E8 RID: 18664
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrLimitTaskMainView : UiViewBase
 	{
-		// Token: 0x06039E50 RID: 237136 RVA: 0x00DC068F File Offset: 0x00DBE88F
+		// Token: 0x0602ED73 RID: 191859 RVA: 0x00D0F987 File Offset: 0x00D0DB87
 		public InfrLimitTaskMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06039E51 RID: 237137 RVA: 0x00DC06A4 File Offset: 0x00DBE8A4
+		// Token: 0x0602ED74 RID: 191860 RVA: 0x00D0F99C File Offset: 0x00D0DB9C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -46,19 +46,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039E52 RID: 237138 RVA: 0x00DC07B2 File Offset: 0x00DBE9B2
+		// Token: 0x0602ED75 RID: 191861 RVA: 0x00D0FAAA File Offset: 0x00D0DCAA
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.InfrastructureActivityTaskDataUpdate, new Action(this.OnInfrastructureActivityTaskDataUpdate));
 		}
 
-		// Token: 0x06039E53 RID: 237139 RVA: 0x00DC07D0 File Offset: 0x00DBE9D0
+		// Token: 0x0602ED76 RID: 191862 RVA: 0x00D0FAC8 File Offset: 0x00D0DCC8
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.InfrastructureActivityTaskDataUpdate, new Action(this.OnInfrastructureActivityTaskDataUpdate));
 		}
 
-		// Token: 0x06039E54 RID: 237140 RVA: 0x00DC07F0 File Offset: 0x00DBE9F0
+		// Token: 0x0602ED77 RID: 191863 RVA: 0x00D0FAE8 File Offset: 0x00D0DCE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrLimitTaskMainView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E55 RID: 237141 RVA: 0x00DC0833 File Offset: 0x00DBEA33
+		// Token: 0x0602ED78 RID: 191864 RVA: 0x00D0FB2B File Offset: 0x00D0DD2B
 		private InfrLimitTaskItem CreateTaskItem()
 		{
 			InfrLimitTaskItem infrLimitTaskItem = new InfrLimitTaskItem();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return infrLimitTaskItem;
 		}
 
-		// Token: 0x06039E56 RID: 237142 RVA: 0x00DC084C File Offset: 0x00DBEA4C
+		// Token: 0x0602ED79 RID: 191865 RVA: 0x00D0FB44 File Offset: 0x00D0DD44
 		private UniTask CreateTaskScroll()
 		{
 			InfrLimitTaskMainView.<CreateTaskScroll>d__8 <CreateTaskScroll>d__;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateTaskScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E57 RID: 237143 RVA: 0x00DC088F File Offset: 0x00DBEA8F
+		// Token: 0x0602ED7A RID: 191866 RVA: 0x00D0FB87 File Offset: 0x00D0DD87
 		protected override void OnStart()
 		{
 			this.CaptionItem.SetHelpCallBack(new Action(this.OnClickHelpBtn));
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshTime();
 		}
 
-		// Token: 0x06039E58 RID: 237144 RVA: 0x00DC08C8 File Offset: 0x00DBEAC8
+		// Token: 0x0602ED7B RID: 191867 RVA: 0x00D0FBC0 File Offset: 0x00D0DDC0
 		private void RefreshTime()
 		{
 			InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E59 RID: 237145 RVA: 0x00DC0920 File Offset: 0x00DBEB20
+		// Token: 0x0602ED7C RID: 191868 RVA: 0x00D0FC18 File Offset: 0x00D0DE18
 		private void OnInfrastructureActivityTaskDataUpdate()
 		{
 			InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.TaskScroll.RefreshByData(activityData.GetActivityTaskDataList(), false, null, false);
 		}
 
-		// Token: 0x06039E5A RID: 237146 RVA: 0x00DC0950 File Offset: 0x00DBEB50
+		// Token: 0x0602ED7D RID: 191869 RVA: 0x00D0FC48 File Offset: 0x00D0DE48
 		private void OnClickGetTaskReward()
 		{
 			InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();
@@ -139,48 +139,48 @@ namespace CSharpScript.Game.Module.Infrastructure
 			InfrastructureController.Instance.RequestInfrLimitTaskRewardRequest(activityData.Id, activityTaskDataListByStatus.ConvertAll<int>((InfrastructureLimitTaskData task) => task.ConfigId).ToArray()).Forget<bool>();
 		}
 
-		// Token: 0x06039E5B RID: 237147 RVA: 0x00DC09BC File Offset: 0x00DBEBBC
+		// Token: 0x0602ED7E RID: 191870 RVA: 0x00D0FCB4 File Offset: 0x00D0DEB4
 		private void OnClickHelpBtn()
 		{
 			int helpIdActivity = InfrastructureConfig.Instance.GetHelpIdActivity();
 			HelpController.Instance.OpenHelpById(helpIdActivity);
 		}
 
-		// Token: 0x06039E5C RID: 237148 RVA: 0x00DC09DF File Offset: 0x00DBEBDF
+		// Token: 0x0602ED7F RID: 191871 RVA: 0x00D0FCD7 File Offset: 0x00D0DED7
 		private void OnClickCloseBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401E318 RID: 123672
+		// Token: 0x04018DB5 RID: 101813
 		private readonly PopupCaptionItem CaptionItem = new PopupCaptionItem(null);
 
-		// Token: 0x0401E319 RID: 123673
+		// Token: 0x04018DB6 RID: 101814
 		private LoopScrollView<InfrLimitTaskItem, InfrastructureLimitTaskData> TaskScroll;
 
-		// Token: 0x0200BB7E RID: 47998
+		// Token: 0x0200A58E RID: 42382
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04038983 RID: 231811
+			// Token: 0x0403336B RID: 209771
 			public const int CaptionItem = 0;
 
-			// Token: 0x04038984 RID: 231812
+			// Token: 0x0403336C RID: 209772
 			public const int TextTitle = 1;
 
-			// Token: 0x04038985 RID: 231813
+			// Token: 0x0403336D RID: 209773
 			public const int TextDesc = 2;
 
-			// Token: 0x04038986 RID: 231814
+			// Token: 0x0403336E RID: 209774
 			public const int LoopScrollViewReward = 3;
 
-			// Token: 0x04038987 RID: 231815
+			// Token: 0x0403336F RID: 209775
 			public const int PanelReward = 4;
 
-			// Token: 0x04038988 RID: 231816
+			// Token: 0x04033370 RID: 209776
 			public const int TextTime = 5;
 
-			// Token: 0x04038989 RID: 231817
+			// Token: 0x04033371 RID: 209777
 			public const int PanelTime = 6;
 		}
 	}

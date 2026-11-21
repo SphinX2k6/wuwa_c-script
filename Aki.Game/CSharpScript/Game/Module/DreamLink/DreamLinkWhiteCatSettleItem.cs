@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AB2 RID: 23218
+	// Token: 0x02004A8E RID: 19086
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.DreamLink
 	})]
 	public class DreamLinkWhiteCatSettleItem : GridProxyAbstract<IDreamLinkReachedData>
 	{
-		// Token: 0x0603ACFB RID: 240891 RVA: 0x00E033B4 File Offset: 0x00E015B4
+		// Token: 0x0602FC47 RID: 195655 RVA: 0x00D5397C File Offset: 0x00D51B7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ACFC RID: 240892 RVA: 0x00E0343E File Offset: 0x00E0163E
+		// Token: 0x0602FC48 RID: 195656 RVA: 0x00D53A06 File Offset: 0x00D51C06
 		[NullableContext(1)]
 		public override void Refresh(IDreamLinkReachedData data, bool isSelected, int gridIndex)
 		{
@@ -39,16 +39,16 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetText(2).SetText(data.Score, true);
 		}
 
-		// Token: 0x0200BD04 RID: 48388
+		// Token: 0x0200A70C RID: 42764
 		private class EDreamLinkSettleItemDefine
 		{
-			// Token: 0x04039005 RID: 233477
+			// Token: 0x040339CF RID: 211407
 			public const int SpriteBg = 0;
 
-			// Token: 0x04039006 RID: 233478
+			// Token: 0x040339D0 RID: 211408
 			public const int TxtTitle = 1;
 
-			// Token: 0x04039007 RID: 233479
+			// Token: 0x040339D1 RID: 211409
 			public const int TxtScore = 2;
 		}
 	}

@@ -6,31 +6,31 @@ using CSharpScript.Game.LevelGamePlay;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02003107 RID: 12551
+// Token: 0x0200265F RID: 9823
 [NullableContext(1)]
 [Nullable(0)]
 public class PatrolMovePointsLogic
 {
-	// Token: 0x0601AF56 RID: 110422 RVA: 0x0074F156 File Offset: 0x0074D356
+	// Token: 0x06018988 RID: 100744 RVA: 0x00774F9A File Offset: 0x0077319A
 	public void Init(CharacterActorComponent actorComp)
 	{
 		this.ActorComp = actorComp;
 	}
 
-	// Token: 0x0601AF57 RID: 110423 RVA: 0x0074F15F File Offset: 0x0074D35F
+	// Token: 0x06018989 RID: 100745 RVA: 0x00774FA3 File Offset: 0x007731A3
 	public void Reset()
 	{
 		this.TargetIndex = 0;
 		this.PreviousIndex = -1;
 	}
 
-	// Token: 0x0601AF58 RID: 110424 RVA: 0x0074F16F File Offset: 0x0074D36F
+	// Token: 0x0601898A RID: 100746 RVA: 0x00774FB3 File Offset: 0x007731B3
 	public bool CheckMoveLastPoint()
 	{
 		return !this.IsLoop && this.TargetIndex == this.MovePoint.Count - 1;
 	}
 
-	// Token: 0x0601AF59 RID: 110425 RVA: 0x0074F190 File Offset: 0x0074D390
+	// Token: 0x0601898B RID: 100747 RVA: 0x00774FD4 File Offset: 0x007731D4
 	[NullableContext(2)]
 	public global::Vector GetPreviousLocation()
 	{
@@ -41,7 +41,7 @@ public class PatrolMovePointsLogic
 		return this.MovePoint[this.PreviousIndex].Position;
 	}
 
-	// Token: 0x0601AF5A RID: 110426 RVA: 0x0074F1B4 File Offset: 0x0074D3B4
+	// Token: 0x0601898C RID: 100748 RVA: 0x00774FF8 File Offset: 0x007731F8
 	public unsafe void UpdateMovePoints(MoveCharacterConfig config)
 	{
 		IList<MoveCharacterPoint> list;
@@ -116,13 +116,13 @@ public class PatrolMovePointsLogic
 		}
 	}
 
-	// Token: 0x0601AF5B RID: 110427 RVA: 0x0074F3E0 File Offset: 0x0074D5E0
+	// Token: 0x0601898D RID: 100749 RVA: 0x00775224 File Offset: 0x00773424
 	public bool ChangeToNextPoint()
 	{
 		return this.UpdateMoveIndex(this.GetNextPoint());
 	}
 
-	// Token: 0x0601AF5C RID: 110428 RVA: 0x0074F3F0 File Offset: 0x0074D5F0
+	// Token: 0x0601898E RID: 100750 RVA: 0x00775234 File Offset: 0x00773434
 	public int GetNextPoint()
 	{
 		int result;
@@ -189,33 +189,34 @@ public class PatrolMovePointsLogic
 		return result;
 	}
 
-	// Token: 0x0601AF5D RID: 110429 RVA: 0x0074F5D4 File Offset: 0x0074D7D4
-	public void OnArriveMovePoint()
+	// Token: 0x0601898F RID: 100751 RVA: 0x00775418 File Offset: 0x00773618
+	[NullableContext(2)]
+	public void OnArriveMovePoint(MoveCharacterPoint point = null)
 	{
-		MoveCharacterPoint targetPoint = this.TargetPoint;
-		if (targetPoint != null && targetPoint.Index == -1)
+		MoveCharacterPoint moveCharacterPoint = point ?? this.TargetPoint;
+		if (moveCharacterPoint != null && moveCharacterPoint.Index == -1)
 		{
 			return;
 		}
-		if (((targetPoint != null) ? targetPoint.Actions : null) != null && targetPoint.Actions.Count > 0)
+		if (((moveCharacterPoint != null) ? moveCharacterPoint.Actions : null) != null && moveCharacterPoint.Actions.Count > 0)
 		{
-			LevelGeneralController.Instance.ExecuteActionsNew(targetPoint.Actions, EntityContext.Create(this.ActorComp.Entity.Id, null), null);
+			LevelGeneralController.Instance.ExecuteActionsNew(moveCharacterPoint.Actions, EntityContext.Create(this.ActorComp.Entity.Id, null), null);
 		}
-		if (targetPoint != null)
+		if (moveCharacterPoint != null)
 		{
-			Action callback = targetPoint.Callback;
+			Action callback = moveCharacterPoint.Callback;
 			if (callback != null)
 			{
 				callback();
 			}
 		}
-		if (targetPoint != null && targetPoint.IsHide.GetValueOrDefault())
+		if (moveCharacterPoint != null && moveCharacterPoint.IsHide.GetValueOrDefault())
 		{
-			this.SetMoveHide(targetPoint);
+			this.SetMoveHide(moveCharacterPoint);
 		}
 	}
 
-	// Token: 0x0601AF5E RID: 110430 RVA: 0x0074F66C File Offset: 0x0074D86C
+	// Token: 0x06018990 RID: 100752 RVA: 0x007754B4 File Offset: 0x007736B4
 	private void SetMoveHide(MoveCharacterPoint curPoint)
 	{
 		USkeletalMeshComponent skeletalMesh = this.ActorComp.SkeletalMesh;
@@ -245,7 +246,7 @@ public class PatrolMovePointsLogic
 		}
 	}
 
-	// Token: 0x0601AF5F RID: 110431 RVA: 0x0074F70C File Offset: 0x0074D90C
+	// Token: 0x06018991 RID: 100753 RVA: 0x00775554 File Offset: 0x00773754
 	public int UpdatePreIndex()
 	{
 		if (this.PreviousIndex < 0)
@@ -262,13 +263,13 @@ public class PatrolMovePointsLogic
 		return this.PreviousIndex;
 	}
 
-	// Token: 0x0601AF60 RID: 110432 RVA: 0x0074F764 File Offset: 0x0074D964
+	// Token: 0x06018992 RID: 100754 RVA: 0x007755AC File Offset: 0x007737AC
 	private bool IsPointEqual(MoveCharacterPoint point, MoveCharacterPoint otherPoint)
 	{
 		return point == otherPoint || (point != null && otherPoint != null && point.Index == otherPoint.Index && point.Position.Equals(otherPoint.Position, 9.999999747378752E-05));
 	}
 
-	// Token: 0x0601AF61 RID: 110433 RVA: 0x0074F7A4 File Offset: 0x0074D9A4
+	// Token: 0x06018993 RID: 100755 RVA: 0x007755EC File Offset: 0x007737EC
 	private bool IsPathEqual(IList<MoveCharacterPoint> path, IList<MoveCharacterPoint> otherPath)
 	{
 		if (path == otherPath)
@@ -294,14 +295,14 @@ public class PatrolMovePointsLogic
 		return true;
 	}
 
-	// Token: 0x0601AF62 RID: 110434 RVA: 0x0074F7FB File Offset: 0x0074D9FB
+	// Token: 0x06018994 RID: 100756 RVA: 0x00775643 File Offset: 0x00773843
 	private bool UpdateMoveIndex(int newIndex)
 	{
 		this.PreviousIndex = this.TargetIndex;
 		return this.UpdateMoveTarget(newIndex);
 	}
 
-	// Token: 0x0601AF63 RID: 110435 RVA: 0x0074F810 File Offset: 0x0074DA10
+	// Token: 0x06018995 RID: 100757 RVA: 0x00775658 File Offset: 0x00773858
 	private bool UpdateMoveTarget(int newIndex)
 	{
 		this.TargetIndex = newIndex;
@@ -314,7 +315,7 @@ public class PatrolMovePointsLogic
 		return false;
 	}
 
-	// Token: 0x0601AF64 RID: 110436 RVA: 0x0074F850 File Offset: 0x0074DA50
+	// Token: 0x06018996 RID: 100758 RVA: 0x00775698 File Offset: 0x00773898
 	private void UpdateNearestPoint()
 	{
 		int nearestPatrolPointIndex = this.GetNearestPatrolPointIndex();
@@ -322,7 +323,7 @@ public class PatrolMovePointsLogic
 		this.UpdateMoveTarget(nearestPatrolPointIndex);
 	}
 
-	// Token: 0x0601AF65 RID: 110437 RVA: 0x0074F880 File Offset: 0x0074DA80
+	// Token: 0x06018997 RID: 100759 RVA: 0x007756C8 File Offset: 0x007738C8
 	private int GetNearestPatrolPointIndex()
 	{
 		int num = 0;
@@ -373,7 +374,7 @@ public class PatrolMovePointsLogic
 		return num;
 	}
 
-	// Token: 0x0601AF66 RID: 110438 RVA: 0x0074FAB4 File Offset: 0x0074DCB4
+	// Token: 0x06018998 RID: 100760 RVA: 0x007758FC File Offset: 0x00773AFC
 	public bool FindNearestPointOnPath(global::Vector outVector)
 	{
 		if (this.TargetIndex == -1)
@@ -397,38 +398,38 @@ public class PatrolMovePointsLogic
 		return true;
 	}
 
-	// Token: 0x0400D131 RID: 53553
+	// Token: 0x0400D53F RID: 54591
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D132 RID: 53554
+	// Token: 0x0400D540 RID: 54592
 	private bool IsLoop;
 
-	// Token: 0x0400D133 RID: 53555
+	// Token: 0x0400D541 RID: 54593
 	private bool IsCircle;
 
-	// Token: 0x0400D134 RID: 53556
+	// Token: 0x0400D542 RID: 54594
 	private bool InversePath;
 
-	// Token: 0x0400D135 RID: 53557
+	// Token: 0x0400D543 RID: 54595
 	private int PreviousIndex = -1;
 
-	// Token: 0x0400D136 RID: 53558
+	// Token: 0x0400D544 RID: 54596
 	public int TargetIndex;
 
-	// Token: 0x0400D137 RID: 53559
+	// Token: 0x0400D545 RID: 54597
 	[Nullable(2)]
 	public MoveCharacterPoint TargetPoint;
 
-	// Token: 0x0400D138 RID: 53560
+	// Token: 0x0400D546 RID: 54598
 	public IList<MoveCharacterPoint> MovePoint = Array.Empty<MoveCharacterPoint>();
 
-	// Token: 0x0400D139 RID: 53561
+	// Token: 0x0400D547 RID: 54599
 	private readonly global::Vector CacheVector = global::Vector.Create();
 
-	// Token: 0x0400D13A RID: 53562
+	// Token: 0x0400D548 RID: 54600
 	private readonly global::Vector CacheVector2 = global::Vector.Create();
 
-	// Token: 0x0400D13B RID: 53563
+	// Token: 0x0400D549 RID: 54601
 	private const float MAX_DISTANCE = 200f;
 }

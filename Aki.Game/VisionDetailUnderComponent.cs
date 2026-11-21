@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024A0 RID: 9376
+// Token: 0x02001987 RID: 6535
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionDetailUnderComponent : UiPanelBase
 {
-	// Token: 0x06012D30 RID: 77104 RVA: 0x004A58CC File Offset: 0x004A3ACC
+	// Token: 0x060101F1 RID: 66033 RVA: 0x004B33D4 File Offset: 0x004B15D4
 	public VisionDetailUnderComponent(UUIItem actor)
 	{
 		base.CreateThenShowByActor(actor.GetOwner(), null);
 	}
 
-	// Token: 0x06012D31 RID: 77105 RVA: 0x004A58E4 File Offset: 0x004A3AE4
+	// Token: 0x060101F2 RID: 66034 RVA: 0x004B33EC File Offset: 0x004B15EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class VisionDetailUnderComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012D32 RID: 77106 RVA: 0x004A5940 File Offset: 0x004A3B40
+	// Token: 0x060101F3 RID: 66035 RVA: 0x004B3448 File Offset: 0x004B1648
 	protected override void OnStart()
 	{
 		this.RightButtonItem = new ButtonItem(base.GetItem(0));
@@ -36,19 +36,19 @@ public class VisionDetailUnderComponent : UiPanelBase
 		this.EquipRoleAttribute = new EquipRoleAttribute(base.GetItem(2));
 	}
 
-	// Token: 0x06012D33 RID: 77107 RVA: 0x004A59B1 File Offset: 0x004A3BB1
+	// Token: 0x060101F4 RID: 66036 RVA: 0x004B34B9 File Offset: 0x004B16B9
 	public void RefreshRightButtonText(string textId)
 	{
 		this.RightButtonItem.SetLocalText(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06012D34 RID: 77108 RVA: 0x004A59C4 File Offset: 0x004A3BC4
+	// Token: 0x060101F5 RID: 66037 RVA: 0x004B34CC File Offset: 0x004B16CC
 	public void RefreshLeftButtonText(string textId)
 	{
 		this.LeftButtonItem.SetLocalText(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06012D35 RID: 77109 RVA: 0x004A59D7 File Offset: 0x004A3BD7
+	// Token: 0x060101F6 RID: 66038 RVA: 0x004B34DF File Offset: 0x004B16DF
 	private void OnRightButton(int _)
 	{
 		Action onClickRightButton = this.OnClickRightButton;
@@ -59,7 +59,7 @@ public class VisionDetailUnderComponent : UiPanelBase
 		onClickRightButton();
 	}
 
-	// Token: 0x06012D36 RID: 77110 RVA: 0x004A59E9 File Offset: 0x004A3BE9
+	// Token: 0x060101F7 RID: 66039 RVA: 0x004B34F1 File Offset: 0x004B16F1
 	private void OnLeftButton(int _)
 	{
 		Action onClickLeftButton = this.OnClickLeftButton;
@@ -70,61 +70,61 @@ public class VisionDetailUnderComponent : UiPanelBase
 		onClickLeftButton();
 	}
 
-	// Token: 0x06012D37 RID: 77111 RVA: 0x004A59FB File Offset: 0x004A3BFB
+	// Token: 0x060101F8 RID: 66040 RVA: 0x004B3503 File Offset: 0x004B1703
 	public void SetRightButtonClick(Action call)
 	{
 		this.OnClickRightButton = call;
 	}
 
-	// Token: 0x06012D38 RID: 77112 RVA: 0x004A5A04 File Offset: 0x004A3C04
+	// Token: 0x060101F9 RID: 66041 RVA: 0x004B350C File Offset: 0x004B170C
 	public void SetLeftButtonClick(Action call)
 	{
 		this.OnClickLeftButton = call;
 	}
 
-	// Token: 0x06012D39 RID: 77113 RVA: 0x004A5A0D File Offset: 0x004A3C0D
+	// Token: 0x060101FA RID: 66042 RVA: 0x004B3515 File Offset: 0x004B1715
 	public void RefreshViewByCompareState(bool ifCompare)
 	{
 		this.LeftButtonItem.SetActive(!ifCompare);
 		this.RightButtonItem.SetActive(!ifCompare);
 	}
 
-	// Token: 0x06012D3A RID: 77114 RVA: 0x004A5A2D File Offset: 0x004A3C2D
+	// Token: 0x060101FB RID: 66043 RVA: 0x004B3535 File Offset: 0x004B1735
 	public void Update(PhantomBattleData data)
 	{
 		this.EquipRoleAttribute.SetActive(PhantomBattleController.Instance.CheckIsEquip(data.GetUniqueId()));
 		this.EquipRoleAttribute.Update(data);
 	}
 
-	// Token: 0x04008DCA RID: 36298
+	// Token: 0x04008F14 RID: 36628
 	[Nullable(2)]
 	private EquipRoleAttribute EquipRoleAttribute;
 
-	// Token: 0x04008DCB RID: 36299
+	// Token: 0x04008F15 RID: 36629
 	[Nullable(2)]
 	private ButtonItem RightButtonItem;
 
-	// Token: 0x04008DCC RID: 36300
+	// Token: 0x04008F16 RID: 36630
 	[Nullable(2)]
 	private ButtonItem LeftButtonItem;
 
-	// Token: 0x04008DCD RID: 36301
+	// Token: 0x04008F17 RID: 36631
 	[Nullable(2)]
 	private Action OnClickRightButton;
 
-	// Token: 0x04008DCE RID: 36302
+	// Token: 0x04008F18 RID: 36632
 	[Nullable(2)]
 	private Action OnClickLeftButton;
 
-	// Token: 0x02008A22 RID: 35362
+	// Token: 0x02007BAC RID: 31660
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CDAF RID: 183727
+		// Token: 0x040280CF RID: 164047
 		RightButton,
-		// Token: 0x0402CDB0 RID: 183728
+		// Token: 0x040280D0 RID: 164048
 		LeftButton,
-		// Token: 0x0402CDB1 RID: 183729
+		// Token: 0x040280D1 RID: 164049
 		AttributePanel
 	}
 }

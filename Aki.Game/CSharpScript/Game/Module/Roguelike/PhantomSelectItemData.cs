@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D97 RID: 19863
+	// Token: 0x02003D60 RID: 15712
 	public class PhantomSelectItemData : IPhantomSelectItemData
 	{
-		// Token: 0x17007E99 RID: 32409
-		// (get) Token: 0x06033510 RID: 210192 RVA: 0x00BFA0F6 File Offset: 0x00BF82F6
-		// (set) Token: 0x06033511 RID: 210193 RVA: 0x00BFA0FE File Offset: 0x00BF82FE
+		// Token: 0x17005249 RID: 21065
+		// (get) Token: 0x0602837D RID: 164733 RVA: 0x00B436F2 File Offset: 0x00B418F2
+		// (set) Token: 0x0602837E RID: 164734 RVA: 0x00B436FA File Offset: 0x00B418FA
 		public int PhantomId { get; set; }
 
-		// Token: 0x17007E9A RID: 32410
-		// (get) Token: 0x06033512 RID: 210194 RVA: 0x00BFA107 File Offset: 0x00BF8307
-		// (set) Token: 0x06033513 RID: 210195 RVA: 0x00BFA10F File Offset: 0x00BF830F
+		// Token: 0x1700524A RID: 21066
+		// (get) Token: 0x0602837F RID: 164735 RVA: 0x00B43703 File Offset: 0x00B41903
+		// (set) Token: 0x06028380 RID: 164736 RVA: 0x00B4370B File Offset: 0x00B4190B
 		public int Index { get; set; }
 
-		// Token: 0x17007E9B RID: 32411
-		// (get) Token: 0x06033514 RID: 210196 RVA: 0x00BFA118 File Offset: 0x00BF8318
-		// (set) Token: 0x06033515 RID: 210197 RVA: 0x00BFA120 File Offset: 0x00BF8320
+		// Token: 0x1700524B RID: 21067
+		// (get) Token: 0x06028381 RID: 164737 RVA: 0x00B43714 File Offset: 0x00B41914
+		// (set) Token: 0x06028382 RID: 164738 RVA: 0x00B4371C File Offset: 0x00B4191C
 		public bool IsLock { get; set; }
 	}
 }

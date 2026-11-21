@@ -6,140 +6,131 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Fight.Struct
 {
-	// Token: 0x02003F69 RID: 16233
+	// Token: 0x0200320A RID: 12810
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Data/Fight/Struct/SLockOnConfig.SLockOnConfig")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SLockOnConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060295F6 RID: 169462 RVA: 0x009C2A84 File Offset: 0x009C0C84
+		// Token: 0x0601FE7D RID: 130685 RVA: 0x00938B4D File Offset: 0x00936D4D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SLockOnConfig._ScriptStructPtr != 0) ? SLockOnConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Fight/Struct/SLockOnConfig.SLockOnConfig", ref SLockOnConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170062DD RID: 25309
-		// (get) Token: 0x060295F7 RID: 169463 RVA: 0x009C2AA8 File Offset: 0x009C0CA8
-		// (set) Token: 0x060295F8 RID: 169464 RVA: 0x009C2AB8 File Offset: 0x009C0CB8
+		// Token: 0x17003C19 RID: 15385
+		// (get) Token: 0x0601FE7E RID: 130686 RVA: 0x00938B71 File Offset: 0x00936D71
+		// (set) Token: 0x0601FE7F RID: 130687 RVA: 0x00938B81 File Offset: 0x00936D81
 		public unsafe bool IsOpened
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_IsOpened) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_IsOpened) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170062DE RID: 25310
-		// (get) Token: 0x060295F9 RID: 169465 RVA: 0x009C2AC9 File Offset: 0x009C0CC9
-		// (set) Token: 0x060295FA RID: 169466 RVA: 0x009C2AD9 File Offset: 0x009C0CD9
+		// Token: 0x17003C1A RID: 15386
+		// (get) Token: 0x0601FE80 RID: 130688 RVA: 0x00938B92 File Offset: 0x00936D92
+		// (set) Token: 0x0601FE81 RID: 130689 RVA: 0x00938BA2 File Offset: 0x00936DA2
 		public unsafe float Distance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_Distance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_Distance) = value;
 			}
 		}
 
-		// Token: 0x170062DF RID: 25311
-		// (get) Token: 0x060295FB RID: 169467 RVA: 0x009C2AEA File Offset: 0x009C0CEA
-		// (set) Token: 0x060295FC RID: 169468 RVA: 0x009C2AFA File Offset: 0x009C0CFA
+		// Token: 0x17003C1B RID: 15387
+		// (get) Token: 0x0601FE82 RID: 130690 RVA: 0x00938BB3 File Offset: 0x00936DB3
+		// (set) Token: 0x0601FE83 RID: 130691 RVA: 0x00938BC3 File Offset: 0x00936DC3
 		public unsafe float UpDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_UpDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_UpDistance) = value;
 			}
 		}
 
-		// Token: 0x170062E0 RID: 25312
-		// (get) Token: 0x060295FD RID: 169469 RVA: 0x009C2B0B File Offset: 0x009C0D0B
-		// (set) Token: 0x060295FE RID: 169470 RVA: 0x009C2B1B File Offset: 0x009C0D1B
+		// Token: 0x17003C1C RID: 15388
+		// (get) Token: 0x0601FE84 RID: 130692 RVA: 0x00938BD4 File Offset: 0x00936DD4
+		// (set) Token: 0x0601FE85 RID: 130693 RVA: 0x00938BE4 File Offset: 0x00936DE4
 		public unsafe float DownDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_DownDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SLockOnConfig.__PropertyOffset_DownDistance) = value;
 			}
 		}
 
-		// Token: 0x060295FF RID: 169471 RVA: 0x009C2B2C File Offset: 0x009C0D2C
+		// Token: 0x0601FE86 RID: 130694 RVA: 0x00938BF5 File Offset: 0x00936DF5
 		public SLockOnConfig()
 		{
 		}
 
-		// Token: 0x06029600 RID: 169472 RVA: 0x009C2B34 File Offset: 0x009C0D34
-		public SLockOnConfig(bool IsOpened, float Distance, float UpDistance, float DownDistance)
-		{
-			this.IsOpened = IsOpened;
-			this.Distance = Distance;
-			this.UpDistance = UpDistance;
-			this.DownDistance = DownDistance;
-		}
-
-		// Token: 0x06029601 RID: 169473 RVA: 0x009C2B59 File Offset: 0x009C0D59
+		// Token: 0x0601FE87 RID: 130695 RVA: 0x00938BFD File Offset: 0x00936DFD
 		protected override IntPtr GetUStructPtr()
 		{
 			return SLockOnConfig.StaticStruct();
 		}
 
-		// Token: 0x06029602 RID: 169474 RVA: 0x009C2B65 File Offset: 0x009C0D65
+		// Token: 0x0601FE88 RID: 130696 RVA: 0x00938C09 File Offset: 0x00936E09
 		[NullableContext(2)]
 		public SLockOnConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029603 RID: 169475 RVA: 0x009C2B6F File Offset: 0x009C0D6F
+		// Token: 0x0601FE89 RID: 130697 RVA: 0x00938C13 File Offset: 0x00936E13
 		public SLockOnConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029604 RID: 169476 RVA: 0x009C2B7A File Offset: 0x009C0D7A
+		// Token: 0x0601FE8A RID: 130698 RVA: 0x00938C1E File Offset: 0x00936E1E
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SLockOnConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06029605 RID: 169477 RVA: 0x009C2B84 File Offset: 0x009C0D84
+		// Token: 0x0601FE8B RID: 130699 RVA: 0x00938C28 File Offset: 0x00936E28
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SLockOnConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015333 RID: 86835
+		// Token: 0x04011227 RID: 70183
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/Fight/Struct/SLockOnConfig.SLockOnConfig";
 
-		// Token: 0x04015334 RID: 86836
+		// Token: 0x04011228 RID: 70184
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015335 RID: 86837
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011229 RID: 70185
+		internal static int __PropertyOffset_IsOpened;
 
-		// Token: 0x04015336 RID: 86838
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401122A RID: 70186
+		internal static int __PropertyOffset_Distance;
 
-		// Token: 0x04015337 RID: 86839
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401122B RID: 70187
+		internal static int __PropertyOffset_UpDistance;
 
-		// Token: 0x04015338 RID: 86840
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401122C RID: 70188
+		internal static int __PropertyOffset_DownDistance;
 	}
 }

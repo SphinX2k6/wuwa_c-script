@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200195C RID: 6492
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AE7 RID: 6887
 	public class ICutCameraConfig
 	{
-		// Token: 0x06008B11 RID: 35601 RVA: 0x00147254 File Offset: 0x00145454
+		// Token: 0x06009247 RID: 37447 RVA: 0x00156C90 File Offset: 0x00154E90
 		private ICutCameraConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B12 RID: 35602 RVA: 0x0014728C File Offset: 0x0014548C
+		// Token: 0x06009248 RID: 37448 RVA: 0x00156CC8 File Offset: 0x00154EC8
 		public static ICutCameraConfig Create([Nullable(2)] ICutCameraConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B13 RID: 35603 RVA: 0x0014729F File Offset: 0x0014549F
+		// Token: 0x06009249 RID: 37449 RVA: 0x00156CDB File Offset: 0x00154EDB
 		public static ICutCameraConfig CreateFromSetValue([Nullable(2)] ICutCameraConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B14 RID: 35604 RVA: 0x001472B2 File Offset: 0x001454B2
+		// Token: 0x0600924A RID: 37450 RVA: 0x00156CEE File Offset: 0x00154EEE
 		public ICutCameraConfig_SetValue ToSetValue()
 		{
 			return new ICutCameraConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CD3 RID: 11475
-		// (get) Token: 0x06008B15 RID: 35605 RVA: 0x001472E0 File Offset: 0x001454E0
-		// (set) Token: 0x06008B16 RID: 35606 RVA: 0x00147341 File Offset: 0x00145541
+		// Token: 0x17002ED5 RID: 11989
+		// (get) Token: 0x0600924B RID: 37451 RVA: 0x00156D1C File Offset: 0x00154F1C
+		// (set) Token: 0x0600924C RID: 37452 RVA: 0x00156D7D File Offset: 0x00154F7D
 		public virtual ICameraParams CameraParams
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CD4 RID: 11476
-		// (get) Token: 0x06008B17 RID: 35607 RVA: 0x00147358 File Offset: 0x00145558
-		// (set) Token: 0x06008B18 RID: 35608 RVA: 0x001473B9 File Offset: 0x001455B9
+		// Token: 0x17002ED6 RID: 11990
+		// (get) Token: 0x0600924D RID: 37453 RVA: 0x00156D94 File Offset: 0x00154F94
+		// (set) Token: 0x0600924E RID: 37454 RVA: 0x00156DF5 File Offset: 0x00154FF5
 		[Nullable(2)]
 		public virtual PlayFlow CutFlow
 		{
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CD5 RID: 11477
-		// (get) Token: 0x06008B19 RID: 35609 RVA: 0x001473D0 File Offset: 0x001455D0
-		// (set) Token: 0x06008B1A RID: 35610 RVA: 0x00147431 File Offset: 0x00145631
+		// Token: 0x17002ED7 RID: 11991
+		// (get) Token: 0x0600924F RID: 37455 RVA: 0x00156E0C File Offset: 0x0015500C
+		// (set) Token: 0x06009250 RID: 37456 RVA: 0x00156E6D File Offset: 0x0015506D
 		[Nullable(2)]
 		public virtual ICutCameraTimeParams CutTimeParams
 		{
@@ -157,30 +155,30 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056CE RID: 22222
+		// Token: 0x04005B22 RID: 23330
 		[Nullable(2)]
 		protected ICutCameraConfig FbInstance;
 
-		// Token: 0x040056CF RID: 22223
+		// Token: 0x04005B23 RID: 23331
 		[Nullable(2)]
 		protected ICutCameraConfig_SetValue PocoInterface;
 
-		// Token: 0x040056D0 RID: 22224
+		// Token: 0x04005B24 RID: 23332
 		private ICameraParams _CameraParamsCache;
 
-		// Token: 0x040056D1 RID: 22225
+		// Token: 0x04005B25 RID: 23333
 		private bool _CameraParamsInited;
 
-		// Token: 0x040056D2 RID: 22226
+		// Token: 0x04005B26 RID: 23334
 		private PlayFlow _CutFlowCache;
 
-		// Token: 0x040056D3 RID: 22227
+		// Token: 0x04005B27 RID: 23335
 		private bool _CutFlowInited;
 
-		// Token: 0x040056D4 RID: 22228
+		// Token: 0x04005B28 RID: 23336
 		private ICutCameraTimeParams _CutTimeParamsCache;
 
-		// Token: 0x040056D5 RID: 22229
+		// Token: 0x04005B29 RID: 23337
 		private bool _CutTimeParamsInited;
 	}
 }

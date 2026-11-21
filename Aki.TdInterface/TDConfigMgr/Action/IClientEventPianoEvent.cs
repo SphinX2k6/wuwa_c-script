@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018AA RID: 6314
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A35 RID: 6709
 	public class IClientEventPianoEvent
 	{
-		// Token: 0x0600878B RID: 34699 RVA: 0x00141418 File Offset: 0x0013F618
+		// Token: 0x06008EB3 RID: 36531 RVA: 0x00150C4C File Offset: 0x0014EE4C
 		private IClientEventPianoEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600878C RID: 34700 RVA: 0x00141450 File Offset: 0x0013F650
+		// Token: 0x06008EB4 RID: 36532 RVA: 0x00150C84 File Offset: 0x0014EE84
 		public static IClientEventPianoEvent Create([Nullable(2)] IClientEventPianoEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600878D RID: 34701 RVA: 0x00141463 File Offset: 0x0013F663
+		// Token: 0x06008EB5 RID: 36533 RVA: 0x00150C97 File Offset: 0x0014EE97
 		public static IClientEventPianoEvent CreateFromSetValue([Nullable(2)] IClientEventPianoEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600878E RID: 34702 RVA: 0x00141476 File Offset: 0x0013F676
+		// Token: 0x06008EB6 RID: 36534 RVA: 0x00150CAA File Offset: 0x0014EEAA
 		public IClientEventPianoEvent_SetValue ToSetValue()
 		{
 			return new IClientEventPianoEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C1B RID: 11291
-		// (get) Token: 0x0600878F RID: 34703 RVA: 0x00141489 File Offset: 0x0013F689
-		// (set) Token: 0x06008790 RID: 34704 RVA: 0x001414B4 File Offset: 0x0013F6B4
+		// Token: 0x17002E16 RID: 11798
+		// (get) Token: 0x06008EB7 RID: 36535 RVA: 0x00150CBD File Offset: 0x0014EEBD
+		// (set) Token: 0x06008EB8 RID: 36536 RVA: 0x00150CE8 File Offset: 0x0014EEE8
 		public virtual EClientEventPianoEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400554A RID: 21834
+		// Token: 0x04005997 RID: 22935
 		[Nullable(2)]
 		protected IClientEventPianoEvent FbInstance;
 
-		// Token: 0x0400554B RID: 21835
+		// Token: 0x04005998 RID: 22936
 		[Nullable(2)]
 		protected IClientEventPianoEvent_SetValue PocoInterface;
 	}

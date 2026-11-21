@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042E5 RID: 17125
+	// Token: 0x02004744 RID: 18244
 	public class TManyChildrenBtNodeUnion
 	{
-		// Token: 0x17007950 RID: 31056
-		// (get) Token: 0x06019667 RID: 104039 RVA: 0x003A49BA File Offset: 0x003A2BBA
-		// (set) Token: 0x06019668 RID: 104040 RVA: 0x003A49C2 File Offset: 0x003A2BC2
+		// Token: 0x17007F83 RID: 32643
+		// (get) Token: 0x0601ADE9 RID: 110057 RVA: 0x003D02EA File Offset: 0x003CE4EA
+		// (set) Token: 0x0601ADEA RID: 110058 RVA: 0x003D02F2 File Offset: 0x003CE4F2
 		public TManyChildrenBtNode Type { get; set; }
 
-		// Token: 0x17007951 RID: 31057
-		// (get) Token: 0x06019669 RID: 104041 RVA: 0x003A49CB File Offset: 0x003A2BCB
-		// (set) Token: 0x0601966A RID: 104042 RVA: 0x003A49D3 File Offset: 0x003A2BD3
+		// Token: 0x17007F84 RID: 32644
+		// (get) Token: 0x0601ADEB RID: 110059 RVA: 0x003D02FB File Offset: 0x003CE4FB
+		// (set) Token: 0x0601ADEC RID: 110060 RVA: 0x003D0303 File Offset: 0x003CE503
 		public object Value { get; set; }
 
-		// Token: 0x0601966B RID: 104043 RVA: 0x003A49DC File Offset: 0x003A2BDC
+		// Token: 0x0601ADED RID: 110061 RVA: 0x003D030C File Offset: 0x003CE50C
 		public TManyChildrenBtNodeUnion()
 		{
 			this.Type = TManyChildrenBtNode.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601966C RID: 104044 RVA: 0x003A49F2 File Offset: 0x003A2BF2
+		// Token: 0x0601ADEE RID: 110062 RVA: 0x003D0322 File Offset: 0x003CE522
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601966D RID: 104045 RVA: 0x003A4A04 File Offset: 0x003A2C04
+		// Token: 0x0601ADEF RID: 110063 RVA: 0x003D0334 File Offset: 0x003CE534
 		public IParallelSelectBtNodeT AsIParallelSelectBtNode()
 		{
 			return this.As<IParallelSelectBtNodeT>();
 		}
 
-		// Token: 0x0601966E RID: 104046 RVA: 0x003A4A0C File Offset: 0x003A2C0C
+		// Token: 0x0601ADF0 RID: 110064 RVA: 0x003D033C File Offset: 0x003CE53C
 		public static TManyChildrenBtNodeUnion FromIParallelSelectBtNode(IParallelSelectBtNodeT _iparallelselectbtnode)
 		{
 			return new TManyChildrenBtNodeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601966F RID: 104047 RVA: 0x003A4A21 File Offset: 0x003A2C21
+		// Token: 0x0601ADF1 RID: 110065 RVA: 0x003D0351 File Offset: 0x003CE551
 		public ISelectBtNodeT AsISelectBtNode()
 		{
 			return this.As<ISelectBtNodeT>();
 		}
 
-		// Token: 0x06019670 RID: 104048 RVA: 0x003A4A29 File Offset: 0x003A2C29
+		// Token: 0x0601ADF2 RID: 110066 RVA: 0x003D0359 File Offset: 0x003CE559
 		public static TManyChildrenBtNodeUnion FromISelectBtNode(ISelectBtNodeT _iselectbtnode)
 		{
 			return new TManyChildrenBtNodeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019671 RID: 104049 RVA: 0x003A4A3E File Offset: 0x003A2C3E
+		// Token: 0x0601ADF3 RID: 110067 RVA: 0x003D036E File Offset: 0x003CE56E
 		public ISequenceBtNodeT AsISequenceBtNode()
 		{
 			return this.As<ISequenceBtNodeT>();
 		}
 
-		// Token: 0x06019672 RID: 104050 RVA: 0x003A4A46 File Offset: 0x003A2C46
+		// Token: 0x0601ADF4 RID: 110068 RVA: 0x003D0376 File Offset: 0x003CE576
 		public static TManyChildrenBtNodeUnion FromISequenceBtNode(ISequenceBtNodeT _isequencebtnode)
 		{
 			return new TManyChildrenBtNodeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019673 RID: 104051 RVA: 0x003A4A5B File Offset: 0x003A2C5B
+		// Token: 0x0601ADF5 RID: 110069 RVA: 0x003D038B File Offset: 0x003CE58B
 		public IConditionSelectorBtNodeT AsIConditionSelectorBtNode()
 		{
 			return this.As<IConditionSelectorBtNodeT>();
 		}
 
-		// Token: 0x06019674 RID: 104052 RVA: 0x003A4A63 File Offset: 0x003A2C63
+		// Token: 0x0601ADF6 RID: 110070 RVA: 0x003D0393 File Offset: 0x003CE593
 		public static TManyChildrenBtNodeUnion FromIConditionSelectorBtNode(IConditionSelectorBtNodeT _iconditionselectorbtnode)
 		{
 			return new TManyChildrenBtNodeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019675 RID: 104053 RVA: 0x003A4A78 File Offset: 0x003A2C78
+		// Token: 0x0601ADF7 RID: 110071 RVA: 0x003D03A8 File Offset: 0x003CE5A8
 		public static int Pack(FlatBufferBuilder builder, TManyChildrenBtNodeUnion _o)
 		{
 			switch (_o.Type)

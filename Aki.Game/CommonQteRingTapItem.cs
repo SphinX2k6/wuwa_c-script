@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002619 RID: 9753
+// Token: 0x02001B04 RID: 6916
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContext>
 {
-	// Token: 0x06013ED3 RID: 81619 RVA: 0x00502420 File Offset: 0x00500620
+	// Token: 0x060113B5 RID: 70581 RVA: 0x005112E4 File Offset: 0x0050F4E4
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -32,7 +32,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		}
 	}
 
-	// Token: 0x06013ED4 RID: 81620 RVA: 0x00502494 File Offset: 0x00500694
+	// Token: 0x060113B6 RID: 70582 RVA: 0x00511358 File Offset: 0x0050F558
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteRingTapItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013ED5 RID: 81621 RVA: 0x005024D8 File Offset: 0x005006D8
+	// Token: 0x060113B7 RID: 70583 RVA: 0x0051139C File Offset: 0x0050F59C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -61,7 +61,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x06013ED6 RID: 81622 RVA: 0x0050254A File Offset: 0x0050074A
+	// Token: 0x060113B8 RID: 70584 RVA: 0x0051140E File Offset: 0x0050F60E
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -78,7 +78,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		levelSequencePlayer.Clear();
 	}
 
-	// Token: 0x06013ED7 RID: 81623 RVA: 0x00502578 File Offset: 0x00500778
+	// Token: 0x060113B9 RID: 70585 RVA: 0x0051143C File Offset: 0x0050F63C
 	protected override void OnRefreshActionUi(string action)
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -97,13 +97,13 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		keyItem2.Show(null);
 	}
 
-	// Token: 0x06013ED8 RID: 81624 RVA: 0x005025A9 File Offset: 0x005007A9
+	// Token: 0x060113BA RID: 70586 RVA: 0x0051146D File Offset: 0x0050F66D
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteSingleClickContext;
 	}
 
-	// Token: 0x06013ED9 RID: 81625 RVA: 0x005025B4 File Offset: 0x005007B4
+	// Token: 0x060113BB RID: 70587 RVA: 0x00511478 File Offset: 0x0050F678
 	protected override void OnPlayQteStart()
 	{
 		base.SetUiActive(true);
@@ -123,7 +123,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		}
 	}
 
-	// Token: 0x06013EDA RID: 81626 RVA: 0x0050260C File Offset: 0x0050080C
+	// Token: 0x060113BC RID: 70588 RVA: 0x005114D0 File Offset: 0x0050F6D0
 	private void OnSequenceEndEvent(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -151,7 +151,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		}
 	}
 
-	// Token: 0x06013EDB RID: 81627 RVA: 0x00502685 File Offset: 0x00500885
+	// Token: 0x060113BD RID: 70589 RVA: 0x00511549 File Offset: 0x0050F749
 	protected override void OnInputPress()
 	{
 		CommonQteSingleClickContext commonQteContext = this.CommonQteContext;
@@ -161,7 +161,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		}
 	}
 
-	// Token: 0x06013EDC RID: 81628 RVA: 0x005026A8 File Offset: 0x005008A8
+	// Token: 0x060113BE RID: 70590 RVA: 0x0051156C File Offset: 0x0050F76C
 	protected override void OnHandleQteEnd()
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -197,7 +197,7 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		}
 	}
 
-	// Token: 0x06013EDD RID: 81629 RVA: 0x00502730 File Offset: 0x00500930
+	// Token: 0x060113BF RID: 70591 RVA: 0x005115F4 File Offset: 0x0050F7F4
 	protected override void RefreshUiOffset()
 	{
 		if (this.CommonQteContext != null)
@@ -224,27 +224,27 @@ public class CommonQteRingTapItem : CommonQteItemBase<CommonQteSingleClickContex
 		}
 	}
 
-	// Token: 0x04009630 RID: 38448
+	// Token: 0x04009787 RID: 38791
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04009631 RID: 38449
+	// Token: 0x04009788 RID: 38792
 	[Nullable(2)]
 	private UUIButtonComponent PrefabItem;
 
-	// Token: 0x04009632 RID: 38450
+	// Token: 0x04009789 RID: 38793
 	[Nullable(2)]
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x02008C61 RID: 35937
+	// Token: 0x02007DEA RID: 32234
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D914 RID: 186644
+		// Token: 0x04028C2B RID: 166955
 		PrefabItem,
-		// Token: 0x0402D915 RID: 186645
+		// Token: 0x04028C2C RID: 166956
 		SuccessItem,
-		// Token: 0x0402D916 RID: 186646
+		// Token: 0x04028C2D RID: 166957
 		KeyItem
 	}
 }

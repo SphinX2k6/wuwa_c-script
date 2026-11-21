@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049A3 RID: 18851
+	// Token: 0x02004E5A RID: 20058
 	public struct ICheckCollectAnimalParts : IFlatbufferObject
 	{
-		// Token: 0x1700883B RID: 34875
-		// (get) Token: 0x0601D68A RID: 120458 RVA: 0x00424F9B File Offset: 0x0042319B
+		// Token: 0x17008EF6 RID: 36598
+		// (get) Token: 0x0601F0AF RID: 127151 RVA: 0x0045544F File Offset: 0x0045364F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D68B RID: 120459 RVA: 0x00424FA8 File Offset: 0x004231A8
+		// Token: 0x0601F0B0 RID: 127152 RVA: 0x0045545C File Offset: 0x0045365C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D68C RID: 120460 RVA: 0x00424FB0 File Offset: 0x004231B0
+		// Token: 0x0601F0B1 RID: 127153 RVA: 0x00455464 File Offset: 0x00453664
 		public static ICheckCollectAnimalParts GetRootAsICheckCollectAnimalParts(ByteBuffer _bb)
 		{
 			return ICheckCollectAnimalParts.GetRootAsICheckCollectAnimalParts(_bb, default(ICheckCollectAnimalParts));
 		}
 
-		// Token: 0x0601D68D RID: 120461 RVA: 0x00424FCC File Offset: 0x004231CC
+		// Token: 0x0601F0B2 RID: 127154 RVA: 0x00455480 File Offset: 0x00453680
 		public static ICheckCollectAnimalParts GetRootAsICheckCollectAnimalParts(ByteBuffer _bb, ICheckCollectAnimalParts obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D68E RID: 120462 RVA: 0x00424FE9 File Offset: 0x004231E9
+		// Token: 0x0601F0B3 RID: 127155 RVA: 0x0045549D File Offset: 0x0045369D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D68F RID: 120463 RVA: 0x00424FF8 File Offset: 0x004231F8
+		// Token: 0x0601F0B4 RID: 127156 RVA: 0x004554AC File Offset: 0x004536AC
 		public ICheckCollectAnimalParts __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700883C RID: 34876
-		// (get) Token: 0x0601D690 RID: 120464 RVA: 0x00425008 File Offset: 0x00423208
+		// Token: 0x17008EF7 RID: 36599
+		// (get) Token: 0x0601F0B5 RID: 127157 RVA: 0x004554BC File Offset: 0x004536BC
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700883D RID: 34877
-		// (get) Token: 0x0601D691 RID: 120465 RVA: 0x00425044 File Offset: 0x00423244
+		// Token: 0x17008EF8 RID: 36600
+		// (get) Token: 0x0601F0B6 RID: 127158 RVA: 0x004554F8 File Offset: 0x004536F8
 		public int TargetAnimal
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700883E RID: 34878
-		// (get) Token: 0x0601D692 RID: 120466 RVA: 0x00425080 File Offset: 0x00423280
+		// Token: 0x17008EF9 RID: 36601
+		// (get) Token: 0x0601F0B7 RID: 127159 RVA: 0x00455534 File Offset: 0x00453734
 		public ECheckEntityPerformanceAttributeType CheckType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D693 RID: 120467 RVA: 0x004250BC File Offset: 0x004232BC
+		// Token: 0x0601F0B8 RID: 127160 RVA: 0x00455570 File Offset: 0x00453770
 		public ECollectAnimalPartSlot Slots(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return (ECollectAnimalPartSlot)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700883F RID: 34879
-		// (get) Token: 0x0601D694 RID: 120468 RVA: 0x004250FC File Offset: 0x004232FC
+		// Token: 0x17008EFA RID: 36602
+		// (get) Token: 0x0601F0B9 RID: 127161 RVA: 0x004555B0 File Offset: 0x004537B0
 		public int SlotsLength
 		{
 			get
@@ -119,13 +119,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D695 RID: 120469 RVA: 0x00425128 File Offset: 0x00423328
+		// Token: 0x0601F0BA RID: 127162 RVA: 0x004555DC File Offset: 0x004537DC
 		public Span<ECollectAnimalPartSlot> GetSlotsBytes()
 		{
 			return this.__p.__vector_as_span<ECollectAnimalPartSlot>(10, 1);
 		}
 
-		// Token: 0x0601D696 RID: 120470 RVA: 0x00425138 File Offset: 0x00423338
+		// Token: 0x0601F0BB RID: 127163 RVA: 0x004555EC File Offset: 0x004537EC
 		public ECollectAnimalPartSlot[] GetSlotsArray()
 		{
 			int num = this.__p.__offset(10);
@@ -143,8 +143,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return array;
 		}
 
-		// Token: 0x17008840 RID: 34880
-		// (get) Token: 0x0601D697 RID: 120471 RVA: 0x004251A4 File Offset: 0x004233A4
+		// Token: 0x17008EFB RID: 36603
+		// (get) Token: 0x0601F0BC RID: 127164 RVA: 0x00455658 File Offset: 0x00453858
 		public byte NullMask
 		{
 			get
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D698 RID: 120472 RVA: 0x004251E1 File Offset: 0x004233E1
+		// Token: 0x0601F0BD RID: 127165 RVA: 0x00455695 File Offset: 0x00453895
 		public static Offset<ICheckCollectAnimalParts> CreateICheckCollectAnimalParts(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int TargetAnimal = 0, ECheckEntityPerformanceAttributeType CheckType = ECheckEntityPerformanceAttributeType.MatchAll, VectorOffset SlotsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -170,37 +170,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCollectAnimalParts.EndICheckCollectAnimalParts(builder);
 		}
 
-		// Token: 0x0601D699 RID: 120473 RVA: 0x00425215 File Offset: 0x00423415
+		// Token: 0x0601F0BE RID: 127166 RVA: 0x004556C9 File Offset: 0x004538C9
 		public static void StartICheckCollectAnimalParts(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601D69A RID: 120474 RVA: 0x0042521E File Offset: 0x0042341E
+		// Token: 0x0601F0BF RID: 127167 RVA: 0x004556D2 File Offset: 0x004538D2
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D69B RID: 120475 RVA: 0x00425229 File Offset: 0x00423429
+		// Token: 0x0601F0C0 RID: 127168 RVA: 0x004556DD File Offset: 0x004538DD
 		public static void AddTargetAnimal(FlatBufferBuilder builder, int targetAnimal)
 		{
 			builder.AddInt(1, targetAnimal, 0);
 		}
 
-		// Token: 0x0601D69C RID: 120476 RVA: 0x00425234 File Offset: 0x00423434
+		// Token: 0x0601F0C1 RID: 127169 RVA: 0x004556E8 File Offset: 0x004538E8
 		public static void AddCheckType(FlatBufferBuilder builder, ECheckEntityPerformanceAttributeType checkType)
 		{
 			builder.AddByte(2, (byte)checkType, 0);
 		}
 
-		// Token: 0x0601D69D RID: 120477 RVA: 0x0042523F File Offset: 0x0042343F
+		// Token: 0x0601F0C2 RID: 127170 RVA: 0x004556F3 File Offset: 0x004538F3
 		public static void AddSlots(FlatBufferBuilder builder, VectorOffset slotsOffset)
 		{
 			builder.AddOffset(3, slotsOffset.Value, 0);
 		}
 
-		// Token: 0x0601D69E RID: 120478 RVA: 0x00425250 File Offset: 0x00423450
+		// Token: 0x0601F0C3 RID: 127171 RVA: 0x00455704 File Offset: 0x00453904
 		public static VectorOffset CreateSlotsVector(FlatBufferBuilder builder, ECollectAnimalPartSlot[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -211,7 +211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D69F RID: 120479 RVA: 0x00425287 File Offset: 0x00423487
+		// Token: 0x0601F0C4 RID: 127172 RVA: 0x0045573B File Offset: 0x0045393B
 		public static VectorOffset CreateSlotsVectorBlock(FlatBufferBuilder builder, ECollectAnimalPartSlot[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D6A0 RID: 120480 RVA: 0x004252A1 File Offset: 0x004234A1
+		// Token: 0x0601F0C5 RID: 127173 RVA: 0x00455755 File Offset: 0x00453955
 		public static VectorOffset CreateSlotsVectorBlock(FlatBufferBuilder builder, ArraySegment<ECollectAnimalPartSlot> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D6A1 RID: 120481 RVA: 0x004252BF File Offset: 0x004234BF
+		// Token: 0x0601F0C6 RID: 127174 RVA: 0x00455773 File Offset: 0x00453973
 		public static VectorOffset CreateSlotsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -235,25 +235,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601D6A2 RID: 120482 RVA: 0x004252D8 File Offset: 0x004234D8
+		// Token: 0x0601F0C7 RID: 127175 RVA: 0x0045578C File Offset: 0x0045398C
 		public static void StartSlotsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601D6A3 RID: 120483 RVA: 0x004252E3 File Offset: 0x004234E3
+		// Token: 0x0601F0C8 RID: 127176 RVA: 0x00455797 File Offset: 0x00453997
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601D6A4 RID: 120484 RVA: 0x004252EE File Offset: 0x004234EE
+		// Token: 0x0601F0C9 RID: 127177 RVA: 0x004557A2 File Offset: 0x004539A2
 		public static Offset<ICheckCollectAnimalParts> EndICheckCollectAnimalParts(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckCollectAnimalParts>(builder.EndTable());
 		}
 
-		// Token: 0x0601D6A5 RID: 120485 RVA: 0x004252FC File Offset: 0x004234FC
+		// Token: 0x0601F0CA RID: 127178 RVA: 0x004557B0 File Offset: 0x004539B0
 		public ICheckCollectAnimalPartsT UnPack()
 		{
 			ICheckCollectAnimalPartsT checkCollectAnimalPartsT = new ICheckCollectAnimalPartsT();
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkCollectAnimalPartsT;
 		}
 
-		// Token: 0x0601D6A6 RID: 120486 RVA: 0x00425318 File Offset: 0x00423518
+		// Token: 0x0601F0CB RID: 127179 RVA: 0x004557CC File Offset: 0x004539CC
 		public void UnPackTo(ICheckCollectAnimalPartsT _o)
 		{
 			_o.Type = this.Type;
@@ -275,7 +275,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601D6A7 RID: 120487 RVA: 0x00425384 File Offset: 0x00423584
+		// Token: 0x0601F0CC RID: 127180 RVA: 0x00455838 File Offset: 0x00453A38
 		public static Offset<ICheckCollectAnimalParts> Pack(FlatBufferBuilder builder, ICheckCollectAnimalPartsT _o)
 		{
 			if (_o == null)
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCollectAnimalParts.CreateICheckCollectAnimalParts(builder, _o.Type, _o.TargetAnimal, _o.CheckType, slotsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400D1BC RID: 53692
+		// Token: 0x0400DC84 RID: 56452
 		private Table __p;
 	}
 }

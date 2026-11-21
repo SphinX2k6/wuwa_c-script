@@ -10,25 +10,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006159 RID: 24921
+	// Token: 0x020050D7 RID: 20695
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeGameShopInfoItem : UiPanelBase
 	{
-		// Token: 0x0603EFD7 RID: 258007 RVA: 0x00F375DE File Offset: 0x00F357DE
+		// Token: 0x06033C97 RID: 212119 RVA: 0x00E7E4B2 File Offset: 0x00E7C6B2
 		[NullableContext(1)]
 		public void BindOnConfirm(Action cb)
 		{
 			this.OnConfirm = cb;
 		}
 
-		// Token: 0x0603EFD8 RID: 258008 RVA: 0x00F375E7 File Offset: 0x00F357E7
+		// Token: 0x06033C98 RID: 212120 RVA: 0x00E7E4BB File Offset: 0x00E7C6BB
 		public void SetCurrencyContext(int insideCurrencyItemId)
 		{
 			this.InsideCurrencyItemId = insideCurrencyItemId;
 		}
 
-		// Token: 0x0603EFD9 RID: 258009 RVA: 0x00F375F0 File Offset: 0x00F357F0
+		// Token: 0x06033C99 RID: 212121 RVA: 0x00E7E4C4 File Offset: 0x00E7C6C4
 		public void Refresh(IRoverlikeGameShopGridData data)
 		{
 			if (data == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item.SetUIActive(!data.IsBought);
 		}
 
-		// Token: 0x0603EFDA RID: 258010 RVA: 0x00F37742 File Offset: 0x00F35942
+		// Token: 0x06033C9A RID: 212122 RVA: 0x00E7E616 File Offset: 0x00E7C816
 		private void OnClickConfirm()
 		{
 			Action onConfirm = this.OnConfirm;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onConfirm();
 		}
 
-		// Token: 0x0603EFDB RID: 258011 RVA: 0x00F37754 File Offset: 0x00F35954
+		// Token: 0x06033C9B RID: 212123 RVA: 0x00E7E628 File Offset: 0x00E7C828
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EFDC RID: 258012 RVA: 0x00F378A8 File Offset: 0x00F35AA8
+		// Token: 0x06033C9C RID: 212124 RVA: 0x00E7E77C File Offset: 0x00E7C97C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeGameShopInfoItem.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EFDD RID: 258013 RVA: 0x00F378EB File Offset: 0x00F35AEB
+		// Token: 0x06033C9D RID: 212125 RVA: 0x00E7E7BF File Offset: 0x00E7C9BF
 		protected override void OnStart()
 		{
 			ButtonItem confirmBtn = this.ConfirmBtn;
@@ -130,53 +130,53 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603EFDE RID: 258014 RVA: 0x00F37909 File Offset: 0x00F35B09
+		// Token: 0x06033C9E RID: 212126 RVA: 0x00E7E7DD File Offset: 0x00E7C9DD
 		protected override void OnBeforeDestroy()
 		{
 			this.OnConfirm = null;
 		}
 
-		// Token: 0x04020DE3 RID: 134627
+		// Token: 0x0401B710 RID: 112400
 		private ButtonItem ConfirmBtn;
 
-		// Token: 0x04020DE4 RID: 134628
+		// Token: 0x0401B711 RID: 112401
 		private RoverlikeGameShopCostItem StoreCost;
 
-		// Token: 0x04020DE5 RID: 134629
+		// Token: 0x0401B712 RID: 112402
 		private Action OnConfirm;
 
-		// Token: 0x04020DE6 RID: 134630
+		// Token: 0x0401B713 RID: 112403
 		private int InsideCurrencyItemId;
 
-		// Token: 0x0200C3B7 RID: 50103
+		// Token: 0x0200AD9E RID: 44446
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B0EB RID: 241899
+			// Token: 0x04035A4C RID: 219724
 			public const int TxtName = 0;
 
-			// Token: 0x0403B0EC RID: 241900
+			// Token: 0x04035A4D RID: 219725
 			public const int TxtType = 1;
 
-			// Token: 0x0403B0ED RID: 241901
+			// Token: 0x04035A4E RID: 219726
 			public const int TxtDesc = 2;
 
-			// Token: 0x0403B0EE RID: 241902
+			// Token: 0x04035A4F RID: 219727
 			public const int BtnConfirm = 3;
 
-			// Token: 0x0403B0EF RID: 241903
+			// Token: 0x04035A50 RID: 219728
 			public const int ItemStoreCost = 4;
 
-			// Token: 0x0403B0F0 RID: 241904
+			// Token: 0x04035A51 RID: 219729
 			public const int TextureCostIcon = 5;
 
-			// Token: 0x0403B0F1 RID: 241905
+			// Token: 0x04035A52 RID: 219730
 			public const int TxtCost = 6;
 
-			// Token: 0x0403B0F2 RID: 241906
+			// Token: 0x04035A53 RID: 219731
 			public const int TxtPlace = 7;
 
-			// Token: 0x0403B0F3 RID: 241907
+			// Token: 0x04035A54 RID: 219732
 			public const int TxtItemRound = 8;
 		}
 	}

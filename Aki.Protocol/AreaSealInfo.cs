@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200010C RID: 268
+	// Token: 0x0200010E RID: 270
 	public sealed class AreaSealInfo : IMessage<AreaSealInfo>, IMessage, IEquatable<AreaSealInfo>, IDeepCloneable<AreaSealInfo>, IBufferMessage
 	{
-		// Token: 0x06002536 RID: 9526 RVA: 0x0006364C File Offset: 0x0006184C
+		// Token: 0x06002595 RID: 9621 RVA: 0x00064670 File Offset: 0x00062870
 		[NullableContext(1)]
 		public static AreaSealInfo Create()
 		{
 			return new AreaSealInfo();
 		}
 
-		// Token: 0x1700051C RID: 1308
-		// (get) Token: 0x06002537 RID: 9527 RVA: 0x00063653 File Offset: 0x00061853
+		// Token: 0x1700052A RID: 1322
+		// (get) Token: 0x06002596 RID: 9622 RVA: 0x00064677 File Offset: 0x00062877
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<AreaSealInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700051D RID: 1309
-		// (get) Token: 0x06002538 RID: 9528 RVA: 0x0006365A File Offset: 0x0006185A
+		// Token: 0x1700052B RID: 1323
+		// (get) Token: 0x06002597 RID: 9623 RVA: 0x0006467E File Offset: 0x0006287E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700051E RID: 1310
-		// (get) Token: 0x06002539 RID: 9529 RVA: 0x0006365D File Offset: 0x0006185D
+		// Token: 0x1700052C RID: 1324
+		// (get) Token: 0x06002598 RID: 9624 RVA: 0x00064681 File Offset: 0x00062881
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600253A RID: 9530 RVA: 0x00063664 File Offset: 0x00061864
+		// Token: 0x06002599 RID: 9625 RVA: 0x00064688 File Offset: 0x00062888
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AreaSealInfo()
 		{
 		}
 
-		// Token: 0x0600253B RID: 9531 RVA: 0x0006366C File Offset: 0x0006186C
+		// Token: 0x0600259A RID: 9626 RVA: 0x00064690 File Offset: 0x00062890
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AreaSealInfo(AreaSealInfo other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600253C RID: 9532 RVA: 0x000636C0 File Offset: 0x000618C0
+		// Token: 0x0600259B RID: 9627 RVA: 0x000646E4 File Offset: 0x000628E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AreaSealInfo Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new AreaSealInfo(this);
 		}
 
-		// Token: 0x1700051F RID: 1311
-		// (get) Token: 0x0600253D RID: 9533 RVA: 0x000636C8 File Offset: 0x000618C8
-		// (set) Token: 0x0600253E RID: 9534 RVA: 0x000636D0 File Offset: 0x000618D0
+		// Token: 0x1700052D RID: 1325
+		// (get) Token: 0x0600259C RID: 9628 RVA: 0x000646EC File Offset: 0x000628EC
+		// (set) Token: 0x0600259D RID: 9629 RVA: 0x000646F4 File Offset: 0x000628F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000520 RID: 1312
-		// (get) Token: 0x0600253F RID: 9535 RVA: 0x000636D9 File Offset: 0x000618D9
-		// (set) Token: 0x06002540 RID: 9536 RVA: 0x000636E1 File Offset: 0x000618E1
+		// Token: 0x1700052E RID: 1326
+		// (get) Token: 0x0600259E RID: 9630 RVA: 0x000646FD File Offset: 0x000628FD
+		// (set) Token: 0x0600259F RID: 9631 RVA: 0x00064705 File Offset: 0x00062905
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleAreaType AreaType
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000521 RID: 1313
-		// (get) Token: 0x06002541 RID: 9537 RVA: 0x000636EA File Offset: 0x000618EA
-		// (set) Token: 0x06002542 RID: 9538 RVA: 0x000636F2 File Offset: 0x000618F2
+		// Token: 0x1700052F RID: 1327
+		// (get) Token: 0x060025A0 RID: 9632 RVA: 0x0006470E File Offset: 0x0006290E
+		// (set) Token: 0x060025A1 RID: 9633 RVA: 0x00064716 File Offset: 0x00062916
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsSeal
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000522 RID: 1314
-		// (get) Token: 0x06002543 RID: 9539 RVA: 0x000636FB File Offset: 0x000618FB
-		// (set) Token: 0x06002544 RID: 9540 RVA: 0x00063703 File Offset: 0x00061903
+		// Token: 0x17000530 RID: 1328
+		// (get) Token: 0x060025A2 RID: 9634 RVA: 0x0006471F File Offset: 0x0006291F
+		// (set) Token: 0x060025A3 RID: 9635 RVA: 0x00064727 File Offset: 0x00062927
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnLockRound
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002545 RID: 9541 RVA: 0x0006370C File Offset: 0x0006190C
+		// Token: 0x060025A4 RID: 9636 RVA: 0x00064730 File Offset: 0x00062930
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -156,7 +156,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AreaSealInfo);
 		}
 
-		// Token: 0x06002546 RID: 9542 RVA: 0x0006371C File Offset: 0x0006191C
+		// Token: 0x060025A5 RID: 9637 RVA: 0x00064740 File Offset: 0x00062940
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AreaSealInfo other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.UId == other.UId && this.AreaType == other.AreaType && this.IsSeal == other.IsSeal && this.UnLockRound == other.UnLockRound && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002547 RID: 9543 RVA: 0x00063788 File Offset: 0x00061988
+		// Token: 0x060025A6 RID: 9638 RVA: 0x000647AC File Offset: 0x000629AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002548 RID: 9544 RVA: 0x00063818 File Offset: 0x00061A18
+		// Token: 0x060025A7 RID: 9639 RVA: 0x0006483C File Offset: 0x00062A3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002549 RID: 9545 RVA: 0x00063825 File Offset: 0x00061A25
+		// Token: 0x060025A8 RID: 9640 RVA: 0x00064849 File Offset: 0x00062A49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -209,7 +209,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600254A RID: 9546 RVA: 0x00063830 File Offset: 0x00061A30
+		// Token: 0x060025A9 RID: 9641 RVA: 0x00064854 File Offset: 0x00062A54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600254B RID: 9547 RVA: 0x000638C0 File Offset: 0x00061AC0
+		// Token: 0x060025AA RID: 9642 RVA: 0x000648E4 File Offset: 0x00062AE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600254C RID: 9548 RVA: 0x0006393C File Offset: 0x00061B3C
+		// Token: 0x060025AB RID: 9643 RVA: 0x00064960 File Offset: 0x00062B60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AreaSealInfo other)
@@ -297,7 +297,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600254D RID: 9549 RVA: 0x000639B4 File Offset: 0x00061BB4
+		// Token: 0x060025AC RID: 9644 RVA: 0x000649D8 File Offset: 0x00062BD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -305,7 +305,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600254E RID: 9550 RVA: 0x000639C0 File Offset: 0x00061BC0
+		// Token: 0x060025AD RID: 9645 RVA: 0x000649E4 File Offset: 0x00062BE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -347,34 +347,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040025B5 RID: 9653
+		// Token: 0x04002620 RID: 9760
 		private static readonly MessageParser<AreaSealInfo> _parser = new MessageParser<AreaSealInfo>(() => new AreaSealInfo());
 
-		// Token: 0x040025B6 RID: 9654
+		// Token: 0x04002621 RID: 9761
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040025B7 RID: 9655
+		// Token: 0x04002622 RID: 9762
 		public const int UIdFieldNumber = 1;
 
-		// Token: 0x040025B8 RID: 9656
+		// Token: 0x04002623 RID: 9763
 		private int uId_;
 
-		// Token: 0x040025B9 RID: 9657
+		// Token: 0x04002624 RID: 9764
 		public const int AreaTypeFieldNumber = 2;
 
-		// Token: 0x040025BA RID: 9658
+		// Token: 0x04002625 RID: 9765
 		private BattleAreaType areaType_;
 
-		// Token: 0x040025BB RID: 9659
+		// Token: 0x04002626 RID: 9766
 		public const int IsSealFieldNumber = 3;
 
-		// Token: 0x040025BC RID: 9660
+		// Token: 0x04002627 RID: 9767
 		private bool isSeal_;
 
-		// Token: 0x040025BD RID: 9661
+		// Token: 0x04002628 RID: 9768
 		public const int UnLockRoundFieldNumber = 4;
 
-		// Token: 0x040025BE RID: 9662
+		// Token: 0x04002629 RID: 9769
 		private int unLockRound_;
 	}
 }

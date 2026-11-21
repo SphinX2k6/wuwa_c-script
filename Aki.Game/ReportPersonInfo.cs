@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002759 RID: 10073
+// Token: 0x02001C44 RID: 7236
 [NullableContext(1)]
 [Nullable(0)]
 public class ReportPersonInfo
 {
-	// Token: 0x06014A92 RID: 84626 RVA: 0x00539F95 File Offset: 0x00538195
+	// Token: 0x06011F75 RID: 73589 RVA: 0x00548E29 File Offset: 0x00547029
 	public ReportPersonInfo(int playerId, string name, string signature, EReportSourceType sourceType)
 	{
 		this.PlayerId = playerId;
@@ -15,39 +15,39 @@ public class ReportPersonInfo
 		this.SourceType = sourceType;
 	}
 
-	// Token: 0x06014A93 RID: 84627 RVA: 0x00539FBA File Offset: 0x005381BA
+	// Token: 0x06011F76 RID: 73590 RVA: 0x00548E4E File Offset: 0x0054704E
 	public int GetPlayerId()
 	{
 		return this.PlayerId;
 	}
 
-	// Token: 0x06014A94 RID: 84628 RVA: 0x00539FC2 File Offset: 0x005381C2
+	// Token: 0x06011F77 RID: 73591 RVA: 0x00548E56 File Offset: 0x00547056
 	public string GetName()
 	{
 		return this.Name;
 	}
 
-	// Token: 0x06014A95 RID: 84629 RVA: 0x00539FCA File Offset: 0x005381CA
+	// Token: 0x06011F78 RID: 73592 RVA: 0x00548E5E File Offset: 0x0054705E
 	public string GetSignature()
 	{
 		return this.Signature;
 	}
 
-	// Token: 0x06014A96 RID: 84630 RVA: 0x00539FD2 File Offset: 0x005381D2
+	// Token: 0x06011F79 RID: 73593 RVA: 0x00548E66 File Offset: 0x00547066
 	public EReportSourceType GetSourceType()
 	{
 		return this.SourceType;
 	}
 
-	// Token: 0x04009B4D RID: 39757
+	// Token: 0x04009CA6 RID: 40102
 	private readonly int PlayerId;
 
-	// Token: 0x04009B4E RID: 39758
+	// Token: 0x04009CA7 RID: 40103
 	private readonly string Name;
 
-	// Token: 0x04009B4F RID: 39759
+	// Token: 0x04009CA8 RID: 40104
 	private readonly string Signature;
 
-	// Token: 0x04009B50 RID: 39760
+	// Token: 0x04009CA9 RID: 40105
 	private readonly EReportSourceType SourceType;
 }

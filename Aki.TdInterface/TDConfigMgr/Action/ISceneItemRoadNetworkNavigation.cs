@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE6 RID: 7654
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FFF RID: 8191
 	public class ISceneItemRoadNetworkNavigation : IRoadNetworkNavigationTarget
 	{
-		// Token: 0x0600A3D7 RID: 41943 RVA: 0x00173DB0 File Offset: 0x00171FB0
+		// Token: 0x0600ADED RID: 44525 RVA: 0x00188608 File Offset: 0x00186808
 		private ISceneItemRoadNetworkNavigation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3D8 RID: 41944 RVA: 0x00173DE8 File Offset: 0x00171FE8
+		// Token: 0x0600ADEE RID: 44526 RVA: 0x00188640 File Offset: 0x00186840
 		public static ISceneItemRoadNetworkNavigation Create([Nullable(2)] ISceneItemRoadNetworkNavigation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3D9 RID: 41945 RVA: 0x00173DFB File Offset: 0x00171FFB
+		// Token: 0x0600ADEF RID: 44527 RVA: 0x00188653 File Offset: 0x00186853
 		public static ISceneItemRoadNetworkNavigation CreateFromSetValue([Nullable(2)] ISceneItemRoadNetworkNavigation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3DA RID: 41946 RVA: 0x00173E0E File Offset: 0x0017200E
+		// Token: 0x0600ADF0 RID: 44528 RVA: 0x00188666 File Offset: 0x00186866
 		public new ISceneItemRoadNetworkNavigation_SetValue ToSetValue()
 		{
 			return new ISceneItemRoadNetworkNavigation_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003269 RID: 12905
-		// (get) Token: 0x0600A3DB RID: 41947 RVA: 0x00173E2D File Offset: 0x0017202D
-		// (set) Token: 0x0600A3DC RID: 41948 RVA: 0x00173E58 File Offset: 0x00172058
+		// Token: 0x17003506 RID: 13574
+		// (get) Token: 0x0600ADF1 RID: 44529 RVA: 0x00188685 File Offset: 0x00186885
+		// (set) Token: 0x0600ADF2 RID: 44530 RVA: 0x001886B0 File Offset: 0x001868B0
 		public override ERoadNetworkNavigationTarget Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700326A RID: 12906
-		// (get) Token: 0x0600A3DD RID: 41949 RVA: 0x00173E66 File Offset: 0x00172066
-		// (set) Token: 0x0600A3DE RID: 41950 RVA: 0x00173E91 File Offset: 0x00172091
+		// Token: 0x17003507 RID: 13575
+		// (get) Token: 0x0600ADF3 RID: 44531 RVA: 0x001886BE File Offset: 0x001868BE
+		// (set) Token: 0x0600ADF4 RID: 44532 RVA: 0x001886E9 File Offset: 0x001868E9
 		public virtual int TargetId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006230 RID: 25136
+		// Token: 0x040067BD RID: 26557
 		[Nullable(2)]
 		protected new ISceneItemRoadNetworkNavigation FbInstance;
 
-		// Token: 0x04006231 RID: 25137
+		// Token: 0x040067BE RID: 26558
 		[Nullable(2)]
 		protected new ISceneItemRoadNetworkNavigation_SetValue PocoInterface;
 	}

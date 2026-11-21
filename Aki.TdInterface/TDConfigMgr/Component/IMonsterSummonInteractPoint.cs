@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200051A RID: 1306
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000581 RID: 1409
 	public class IMonsterSummonInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x06001A74 RID: 6772 RVA: 0x0004D07C File Offset: 0x0004B27C
+		// Token: 0x06001C70 RID: 7280 RVA: 0x00051E38 File Offset: 0x00050038
 		private IMonsterSummonInteractPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A75 RID: 6773 RVA: 0x0004D0B4 File Offset: 0x0004B2B4
+		// Token: 0x06001C71 RID: 7281 RVA: 0x00051E70 File Offset: 0x00050070
 		public static IMonsterSummonInteractPoint Create([Nullable(2)] IMonsterSummonInteractPoint instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A76 RID: 6774 RVA: 0x0004D0C7 File Offset: 0x0004B2C7
+		// Token: 0x06001C72 RID: 7282 RVA: 0x00051E83 File Offset: 0x00050083
 		public static IMonsterSummonInteractPoint CreateFromSetValue([Nullable(2)] IMonsterSummonInteractPoint_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A77 RID: 6775 RVA: 0x0004D0DA File Offset: 0x0004B2DA
+		// Token: 0x06001C73 RID: 7283 RVA: 0x00051E96 File Offset: 0x00050096
 		public new IMonsterSummonInteractPoint_SetValue ToSetValue()
 		{
 			return new IMonsterSummonInteractPoint_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006F2 RID: 1778
-		// (get) Token: 0x06001A78 RID: 6776 RVA: 0x0004D105 File Offset: 0x0004B305
-		// (set) Token: 0x06001A79 RID: 6777 RVA: 0x0004D130 File Offset: 0x0004B330
+		// Token: 0x17000775 RID: 1909
+		// (get) Token: 0x06001C74 RID: 7284 RVA: 0x00051EC1 File Offset: 0x000500C1
+		// (set) Token: 0x06001C75 RID: 7285 RVA: 0x00051EEC File Offset: 0x000500EC
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006F3 RID: 1779
-		// (get) Token: 0x06001A7A RID: 6778 RVA: 0x0004D13E File Offset: 0x0004B33E
-		// (set) Token: 0x06001A7B RID: 6779 RVA: 0x0004D16D File Offset: 0x0004B36D
+		// Token: 0x17000776 RID: 1910
+		// (get) Token: 0x06001C76 RID: 7286 RVA: 0x00051EFA File Offset: 0x000500FA
+		// (set) Token: 0x06001C77 RID: 7287 RVA: 0x00051F29 File Offset: 0x00050129
 		public virtual float Range
 		{
 			get
@@ -110,20 +108,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006F4 RID: 1780
-		// (get) Token: 0x06001A7C RID: 6780 RVA: 0x0004D17C File Offset: 0x0004B37C
-		// (set) Token: 0x06001A7D RID: 6781 RVA: 0x0004D20F File Offset: 0x0004B40F
+		// Token: 0x17000777 RID: 1911
+		// (get) Token: 0x06001C78 RID: 7288 RVA: 0x00051F38 File Offset: 0x00050138
+		// (set) Token: 0x06001C79 RID: 7289 RVA: 0x00051FCB File Offset: 0x000501CB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -154,7 +152,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -163,23 +161,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001326 RID: 4902
+		// Token: 0x04001490 RID: 5264
 		[Nullable(2)]
 		protected new IMonsterSummonInteractPoint FbInstance;
 
-		// Token: 0x04001327 RID: 4903
+		// Token: 0x04001491 RID: 5265
 		[Nullable(2)]
 		protected new IMonsterSummonInteractPoint_SetValue PocoInterface;
 
-		// Token: 0x04001328 RID: 4904
+		// Token: 0x04001492 RID: 5266
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04001329 RID: 4905
+		// Token: 0x04001493 RID: 5267
 		private bool _ActionsInited;
 	}
 }

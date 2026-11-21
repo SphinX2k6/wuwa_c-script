@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 {
-	// Token: 0x02005243 RID: 21059
+	// Token: 0x02004213 RID: 16915
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 	})]
 	public class PhantomArenaBattleLoadingItem : GridProxyAbstract<IPhantomArenaBattleLoadingInfo>
 	{
-		// Token: 0x06035CB0 RID: 220336 RVA: 0x00CBA46B File Offset: 0x00CB866B
+		// Token: 0x0602ABAB RID: 175019 RVA: 0x00C07AAB File Offset: 0x00C05CAB
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			};
 		}
 
-		// Token: 0x06035CB1 RID: 220337 RVA: 0x00CBA4A4 File Offset: 0x00CB86A4
+		// Token: 0x0602ABAC RID: 175020 RVA: 0x00C07AE4 File Offset: 0x00C05CE4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaBattleLoadingItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035CB2 RID: 220338 RVA: 0x00CBA4E8 File Offset: 0x00CB86E8
+		// Token: 0x0602ABAD RID: 175021 RVA: 0x00C07B28 File Offset: 0x00C05D28
 		public override void Refresh(IPhantomArenaBattleLoadingInfo data, bool isSelected, int gridIndex)
 		{
 			if (data.CardData != null)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			this.RefreshCardFaceByResource(resourceId2);
 		}
 
-		// Token: 0x06035CB3 RID: 220339 RVA: 0x00CBA590 File Offset: 0x00CB8790
+		// Token: 0x0602ABAE RID: 175022 RVA: 0x00C07BD0 File Offset: 0x00C05DD0
 		public void RefreshCardFaceByResource(string resourceId)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(resourceId);
@@ -83,23 +83,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View
 			}
 		}
 
-		// Token: 0x0401C85B RID: 116827
+		// Token: 0x04017290 RID: 94864
 		private const int CARD_FRONT = 3;
 
-		// Token: 0x0401C85C RID: 116828
+		// Token: 0x04017291 RID: 94865
 		private const int CARD_TOTAL = 6;
 
-		// Token: 0x0401C85D RID: 116829
+		// Token: 0x04017292 RID: 94866
 		protected PhantomArenaCard CardItem;
 
-		// Token: 0x0200B3C4 RID: 46020
+		// Token: 0x02009DFC RID: 40444
 		[NullableContext(0)]
 		private class ELoadingItem
 		{
-			// Token: 0x040367BE RID: 223166
+			// Token: 0x04031211 RID: 201233
 			public const int CardItem = 0;
 
-			// Token: 0x040367BF RID: 223167
+			// Token: 0x04031212 RID: 201234
 			public const int SpriteState = 1;
 		}
 	}

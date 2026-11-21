@@ -3,49 +3,49 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004548 RID: 17736
+	// Token: 0x02003470 RID: 13424
 	public static class ColorUtils
 	{
-		// Token: 0x0401878C RID: 100236
+		// Token: 0x04012DC6 RID: 77254
 		private const byte MAX_BYTE = 255;
 
-		// Token: 0x0401878D RID: 100237
+		// Token: 0x04012DC7 RID: 77255
 		public static readonly FLinearColor LinearYellow = new FLinearColor(1f, 1f, 0f, 0f);
 
-		// Token: 0x0401878E RID: 100238
+		// Token: 0x04012DC8 RID: 77256
 		public static readonly FLinearColor LinearGreen = new FLinearColor(0f, 1f, 0f, 0f);
 
-		// Token: 0x0401878F RID: 100239
+		// Token: 0x04012DC9 RID: 77257
 		public static readonly FLinearColor LinearRed = new FLinearColor(1f, 0f, 0f, 0f);
 
-		// Token: 0x04018790 RID: 100240
+		// Token: 0x04012DCA RID: 77258
 		public static readonly FLinearColor LinearBlue = new FLinearColor(0f, 0f, 1f, 0f);
 
-		// Token: 0x04018791 RID: 100241
+		// Token: 0x04012DCB RID: 77259
 		public static readonly FLinearColor LinearWhite = new FLinearColor(1f, 1f, 1f, 0f);
 
-		// Token: 0x04018792 RID: 100242
+		// Token: 0x04012DCC RID: 77260
 		public static readonly FLinearColor LinearWhiteOpaque = new FLinearColor(1f, 1f, 1f, 1f);
 
-		// Token: 0x04018793 RID: 100243
+		// Token: 0x04012DCD RID: 77261
 		public static readonly FLinearColor LinearCyan = new FLinearColor(0f, 1f, 1f, 0f);
 
-		// Token: 0x04018794 RID: 100244
+		// Token: 0x04012DCE RID: 77262
 		public static readonly FLinearColor LinearBlack = new FLinearColor(0f, 0f, 0f, 1f);
 
-		// Token: 0x04018795 RID: 100245
+		// Token: 0x04012DCF RID: 77263
 		public static readonly FLinearColor LinearClear = new FLinearColor(0f, 0f, 0f, 0f);
 
-		// Token: 0x04018796 RID: 100246
+		// Token: 0x04012DD0 RID: 77264
 		public static readonly FColor ColorWhile = new FColor(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue);
 
-		// Token: 0x04018797 RID: 100247
+		// Token: 0x04012DD1 RID: 77265
 		public static readonly FColor ColorBlack = new FColor(0, 0, 0, byte.MaxValue);
 
-		// Token: 0x04018798 RID: 100248
+		// Token: 0x04012DD2 RID: 77266
 		public static readonly FColor ColorYellow = new FColor(byte.MaxValue, byte.MaxValue, 0, 0);
 
-		// Token: 0x04018799 RID: 100249
+		// Token: 0x04012DD3 RID: 77267
 		public static readonly FColor ColorRed = new FColor(byte.MaxValue, 0, 0, 0);
 	}
 }

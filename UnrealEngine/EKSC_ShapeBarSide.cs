@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CDF RID: 7391
+	// Token: 0x02000555 RID: 1365
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.EKSC_ShapeBarSide")]
 	public enum EKSC_ShapeBarSide : byte
 	{
-		// Token: 0x0400F6D2 RID: 63186
+		// Token: 0x0400366D RID: 13933
 		Left,
-		// Token: 0x0400F6D3 RID: 63187
+		// Token: 0x0400366E RID: 13934
 		Right,
-		// Token: 0x0400F6D4 RID: 63188
+		// Token: 0x0400366F RID: 13935
 		EKSC_MAX
 	}
 }

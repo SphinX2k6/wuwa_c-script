@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005018 RID: 20504
+	// Token: 0x02003FE2 RID: 16354
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequenceModel : ModelBase
 	{
-		// Token: 0x17008006 RID: 32774
-		// (get) Token: 0x06034791 RID: 214929 RVA: 0x00C5BF71 File Offset: 0x00C5A171
+		// Token: 0x170053BB RID: 21435
+		// (get) Token: 0x06029634 RID: 169524 RVA: 0x00BA74B1 File Offset: 0x00BA56B1
 		public bool IsViewTargetControl
 		{
 			get
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17008007 RID: 32775
-		// (get) Token: 0x06034792 RID: 214930 RVA: 0x00C5BF84 File Offset: 0x00C5A184
+		// Token: 0x170053BC RID: 21436
+		// (get) Token: 0x06029635 RID: 169525 RVA: 0x00BA74C4 File Offset: 0x00BA56C4
 		public bool IsSubtitleUiUse
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17008008 RID: 32776
-		// (get) Token: 0x06034793 RID: 214931 RVA: 0x00C5BF97 File Offset: 0x00C5A197
+		// Token: 0x170053BD RID: 21437
+		// (get) Token: 0x06029636 RID: 169526 RVA: 0x00BA74D7 File Offset: 0x00BA56D7
 		public bool IsWaitRenderData
 		{
 			get
@@ -46,8 +46,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x17008009 RID: 32777
-		// (get) Token: 0x06034794 RID: 214932 RVA: 0x00C5BFAA File Offset: 0x00C5A1AA
+		// Token: 0x170053BE RID: 21438
+		// (get) Token: 0x06029637 RID: 169527 RVA: 0x00BA74EA File Offset: 0x00BA56EA
 		public bool IsControlEntity
 		{
 			get
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x1700800A RID: 32778
-		// (get) Token: 0x06034795 RID: 214933 RVA: 0x00C5BFBD File Offset: 0x00C5A1BD
+		// Token: 0x170053BF RID: 21439
+		// (get) Token: 0x06029638 RID: 169528 RVA: 0x00BA74FD File Offset: 0x00BA56FD
 		public float PlayRate
 		{
 			get
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x1700800B RID: 32779
-		// (get) Token: 0x06034796 RID: 214934 RVA: 0x00C5BFD4 File Offset: 0x00C5A1D4
+		// Token: 0x170053C0 RID: 21440
+		// (get) Token: 0x06029639 RID: 169529 RVA: 0x00BA7514 File Offset: 0x00BA5714
 		public bool DoNotHandlePlayerForControlEntityMode
 		{
 			get
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034797 RID: 214935 RVA: 0x00C5BFE8 File Offset: 0x00C5A1E8
+		// Token: 0x0602963A RID: 169530 RVA: 0x00BA7528 File Offset: 0x00BA5728
 		public void Reset()
 		{
 			this.IsPaused = null;
@@ -136,6 +136,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.StartTransformBlendElapsed = 0f;
 			this.StartTransformBlendDuration = 0f;
 			this.StartTransformBlendCallback = null;
+			this.WaitSwitchTargetVisible = false;
+			this.SwitchTargetWaitFrame = 0;
 			this.PauseFrame = null;
 			if (this.ForceStreamHandle != null)
 			{
@@ -144,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x06034798 RID: 214936 RVA: 0x00C5C204 File Offset: 0x00C5A404
+		// Token: 0x0602963B RID: 169531 RVA: 0x00BA7750 File Offset: 0x00BA5950
 		[NullableContext(2)]
 		public ULevelSequence GetCurrentSequence()
 		{
@@ -170,7 +172,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return sequenceData.剧情资源.Get(this.SubSeqIndex);
 		}
 
-		// Token: 0x06034799 RID: 214937 RVA: 0x00C5C268 File Offset: 0x00C5A468
+		// Token: 0x0602963C RID: 169532 RVA: 0x00BA77B4 File Offset: 0x00BA59B4
 		[NullableContext(2)]
 		public SSequencesKeyFrames GetCurrentKeyFramesInfo()
 		{
@@ -192,14 +194,14 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return this.SequenceData.GeneratedData.KeyFrames.Get(this.SubSeqIndex);
 		}
 
-		// Token: 0x0603479A RID: 214938 RVA: 0x00C5C2D2 File Offset: 0x00C5A4D2
+		// Token: 0x0602963D RID: 169533 RVA: 0x00BA781E File Offset: 0x00BA5A1E
 		public bool IsFinish()
 		{
 			return this.SubSeqIndex == -1;
 		}
 
-		// Token: 0x1700800C RID: 32780
-		// (get) Token: 0x0603479B RID: 214939 RVA: 0x00C5C2E0 File Offset: 0x00C5A4E0
+		// Token: 0x170053C1 RID: 21441
+		// (get) Token: 0x0602963E RID: 169534 RVA: 0x00BA782C File Offset: 0x00BA5A2C
 		public bool HasBindingEntity
 		{
 			get
@@ -222,19 +224,19 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x0603479C RID: 214940 RVA: 0x00C5C354 File Offset: 0x00C5A554
+		// Token: 0x0602963F RID: 169535 RVA: 0x00BA78A0 File Offset: 0x00BA5AA0
 		public bool WillFinish()
 		{
 			return this.NextIndex == -1;
 		}
 
-		// Token: 0x0603479D RID: 214941 RVA: 0x00C5C35F File Offset: 0x00C5A55F
+		// Token: 0x06029640 RID: 169536 RVA: 0x00BA78AB File Offset: 0x00BA5AAB
 		public void QueueLatentAction(Action action)
 		{
 			this.LatentActions.Add(action);
 		}
 
-		// Token: 0x0603479E RID: 214942 RVA: 0x00C5C370 File Offset: 0x00C5A570
+		// Token: 0x06029641 RID: 169537 RVA: 0x00BA78BC File Offset: 0x00BA5ABC
 		public void RunLatentActions()
 		{
 			foreach (Action action in this.LatentActions)
@@ -244,13 +246,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.LatentActions.Clear();
 		}
 
-		// Token: 0x0603479F RID: 214943 RVA: 0x00C5C3CC File Offset: 0x00C5A5CC
+		// Token: 0x06029642 RID: 169538 RVA: 0x00BA7918 File Offset: 0x00BA5B18
 		public bool GetLastFadeEnd()
 		{
 			return this.LastIndex >= 0 && this.IsFadeEnd.Count > this.LastIndex && this.IsFadeEnd[this.LastIndex];
 		}
 
-		// Token: 0x060347A0 RID: 214944 RVA: 0x00C5C3FD File Offset: 0x00C5A5FD
+		// Token: 0x06029643 RID: 169539 RVA: 0x00BA7949 File Offset: 0x00BA5B49
 		[NullableContext(2)]
 		public Transform GetLastTransform()
 		{
@@ -261,7 +263,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return this.CurFinalPos[this.LastIndex];
 		}
 
-		// Token: 0x060347A1 RID: 214945 RVA: 0x00C5C42E File Offset: 0x00C5A62E
+		// Token: 0x06029644 RID: 169540 RVA: 0x00BA797A File Offset: 0x00BA5B7A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -272,7 +274,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return this.FrameEvents.GetValueOrDefault(key);
 		}
 
-		// Token: 0x060347A2 RID: 214946 RVA: 0x00C5C43C File Offset: 0x00C5A63C
+		// Token: 0x06029645 RID: 169541 RVA: 0x00BA7988 File Offset: 0x00BA5B88
 		public new EPlotSequenceType? GetType()
 		{
 			if (this.Type == null && !this.UseRuntimeData)
@@ -282,14 +284,14 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return this.Type;
 		}
 
-		// Token: 0x060347A3 RID: 214947 RVA: 0x00C5C474 File Offset: 0x00C5A674
+		// Token: 0x06029646 RID: 169542 RVA: 0x00BA79C0 File Offset: 0x00BA5BC0
 		public bool HasSubtitle()
 		{
 			return this.CurSubtitleStartFrames.Count != 0 && this.CurSubtitleEndFrames.Count != 0;
 		}
 
-		// Token: 0x1700800D RID: 32781
-		// (get) Token: 0x060347A4 RID: 214948 RVA: 0x00C5C493 File Offset: 0x00C5A693
+		// Token: 0x170053C2 RID: 21442
+		// (get) Token: 0x06029647 RID: 169543 RVA: 0x00BA79DF File Offset: 0x00BA5BDF
 		public bool IsEnding
 		{
 			get
@@ -298,8 +300,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x1700800E RID: 32782
-		// (get) Token: 0x060347A5 RID: 214949 RVA: 0x00C5C49E File Offset: 0x00C5A69E
+		// Token: 0x170053C3 RID: 21443
+		// (get) Token: 0x06029648 RID: 169544 RVA: 0x00BA79EA File Offset: 0x00BA5BEA
 		public bool IsPlaying
 		{
 			get
@@ -308,8 +310,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x1700800F RID: 32783
-		// (get) Token: 0x060347A6 RID: 214950 RVA: 0x00C5C4AC File Offset: 0x00C5A6AC
+		// Token: 0x170053C4 RID: 21444
+		// (get) Token: 0x06029649 RID: 169545 RVA: 0x00BA79F8 File Offset: 0x00BA5BF8
 		public bool ShouldDelayToNextFrame
 		{
 			get
@@ -319,7 +321,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x060347A7 RID: 214951 RVA: 0x00C5C4E8 File Offset: 0x00C5A6E8
+		// Token: 0x0602964A RID: 169546 RVA: 0x00BA7A34 File Offset: 0x00BA5C34
 		[NullableContext(2)]
 		public void AddFinalPos(Transform trans)
 		{
@@ -338,7 +340,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			this.CurFinalPos.Add(trans);
 		}
 
-		// Token: 0x060347A8 RID: 214952 RVA: 0x00C5C53C File Offset: 0x00C5A73C
+		// Token: 0x0602964B RID: 169547 RVA: 0x00BA7A88 File Offset: 0x00BA5C88
 		public string GetPlayerBpClass()
 		{
 			PlayerInfoModel instance = PlayerInfoModel.Instance;
@@ -367,7 +369,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return "/Game/Aki/Character/Role/FemaleM/Nvzhu/Seq/BP_Nvzhu_Seq_V2.BP_Nvzhu_Seq_V2_C";
 		}
 
-		// Token: 0x060347A9 RID: 214953 RVA: 0x00C5C5DC File Offset: 0x00C5A7DC
+		// Token: 0x0602964C RID: 169548 RVA: 0x00BA7B28 File Offset: 0x00BA5D28
 		public float GetCurrentPlayPosition()
 		{
 			if (this.State != ESequenceState.Playing)
@@ -398,7 +400,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return num.Value;
 		}
 
-		// Token: 0x060347AA RID: 214954 RVA: 0x00C5C744 File Offset: 0x00C5A944
+		// Token: 0x0602964D RID: 169549 RVA: 0x00BA7C90 File Offset: 0x00BA5E90
 		public List<int> GetCurKeyFrames()
 		{
 			BP_SequenceData_C sequenceData = this.SequenceData;
@@ -423,8 +425,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return new List<int>(ObjectUtils.ueArrayToArray<int>(this.SequenceData.GeneratedData.KeyFrames.Get(this.SubSeqIndex).KeyFrames));
 		}
 
-		// Token: 0x17008010 RID: 32784
-		// (get) Token: 0x060347AB RID: 214955 RVA: 0x00C5C7C4 File Offset: 0x00C5A9C4
+		// Token: 0x170053C5 RID: 21445
+		// (get) Token: 0x0602964E RID: 169550 RVA: 0x00BA7D10 File Offset: 0x00BA5F10
 		public static SequenceModel Instance
 		{
 			get
@@ -433,7 +435,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			}
 		}
 
-		// Token: 0x060347AC RID: 214956 RVA: 0x00C5C7CB File Offset: 0x00C5A9CB
+		// Token: 0x0602964F RID: 169551 RVA: 0x00BA7D17 File Offset: 0x00BA5F17
 		public static SequenceModel GetOrCreateInstance()
 		{
 			if (SequenceModel._Instance == null)
@@ -443,7 +445,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return SequenceModel._Instance;
 		}
 
-		// Token: 0x060347AD RID: 214957 RVA: 0x00C5C7DF File Offset: 0x00C5A9DF
+		// Token: 0x06029650 RID: 169552 RVA: 0x00BA7D2B File Offset: 0x00BA5F2B
 		public static bool CreateInstance()
 		{
 			if (SequenceModel._Instance != null)
@@ -454,42 +456,42 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return true;
 		}
 
-		// Token: 0x060347AE RID: 214958 RVA: 0x00C5C7F5 File Offset: 0x00C5A9F5
+		// Token: 0x06029651 RID: 169553 RVA: 0x00BA7D41 File Offset: 0x00BA5F41
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060347AF RID: 214959 RVA: 0x00C5C7F7 File Offset: 0x00C5A9F7
+		// Token: 0x06029652 RID: 169554 RVA: 0x00BA7D43 File Offset: 0x00BA5F43
 		public static void ResetStaticDefaultValue()
 		{
 			SequenceModel._Instance = null;
 		}
 
-		// Token: 0x060347B0 RID: 214960 RVA: 0x00C5C7FF File Offset: 0x00C5A9FF
+		// Token: 0x06029653 RID: 169555 RVA: 0x00BA7D4B File Offset: 0x00BA5F4B
 		static SequenceModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SequenceModel.CreateStaticDefaultValue), new Action(SequenceModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BF43 RID: 114499
+		// Token: 0x0401692C RID: 92460
 		public ESequenceState State;
 
-		// Token: 0x0401BF44 RID: 114500
+		// Token: 0x0401692D RID: 92461
 		public bool? IsPaused = new bool?(false);
 
-		// Token: 0x0401BF45 RID: 114501
+		// Token: 0x0401692E RID: 92462
 		[Nullable(2)]
 		public PlaySequenceData Config;
 
-		// Token: 0x0401BF46 RID: 114502
+		// Token: 0x0401692F RID: 92463
 		[Nullable(2)]
 		public BP_SequenceData_C SequenceData;
 
-		// Token: 0x0401BF47 RID: 114503
+		// Token: 0x04016930 RID: 92464
 		[Nullable(2)]
 		public USkeletalMesh MainSeqCharacterMesh;
 
-		// Token: 0x0401BF48 RID: 114504
+		// Token: 0x04016931 RID: 92465
 		[Nullable(new byte[]
 		{
 			2,
@@ -497,50 +499,50 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 		})]
 		public TArray<UObject> TalkNpcList;
 
-		// Token: 0x0401BF49 RID: 114505
+		// Token: 0x04016932 RID: 92466
 		public Dictionary<FName, AActor> BindingActorMap = new Dictionary<FName, AActor>();
 
-		// Token: 0x0401BF4A RID: 114506
+		// Token: 0x04016933 RID: 92467
 		public Dictionary<FName, EntityHandle> BindingEntityMap = new Dictionary<FName, EntityHandle>();
 
-		// Token: 0x0401BF4B RID: 114507
+		// Token: 0x04016934 RID: 92468
 		public Dictionary<int, SequenceEntityInfo> ControlEntityMap = new Dictionary<int, SequenceEntityInfo>();
 
-		// Token: 0x0401BF4C RID: 114508
+		// Token: 0x04016935 RID: 92469
 		public Dictionary<string, List<ActionInfo>> FrameEvents = new Dictionary<string, List<ActionInfo>>();
 
-		// Token: 0x0401BF4D RID: 114509
+		// Token: 0x04016936 RID: 92470
 		public Queue<string> ActionQueue = new Queue<string>(4);
 
-		// Token: 0x0401BF4E RID: 114510
+		// Token: 0x04016937 RID: 92471
 		public Dictionary<int, HashSet<string>> FrameEventsMap = new Dictionary<int, HashSet<string>>();
 
-		// Token: 0x0401BF4F RID: 114511
+		// Token: 0x04016938 RID: 92472
 		[Nullable(2)]
 		public SequencePlayOptions PlayOptions;
 
-		// Token: 0x0401BF50 RID: 114512
+		// Token: 0x04016939 RID: 92473
 		[Nullable(2)]
 		public UKuroActorStreamingHandle ForceStreamHandle;
 
-		// Token: 0x0401BF51 RID: 114513
+		// Token: 0x0401693A RID: 92474
 		public float? PreviousMotionBlur = new float?(0f);
 
-		// Token: 0x0401BF52 RID: 114514
+		// Token: 0x0401693B RID: 92475
 		public int? SubSeqLen = new int?(0);
 
-		// Token: 0x0401BF53 RID: 114515
+		// Token: 0x0401693C RID: 92476
 		public int SubSeqIndex = -2;
 
-		// Token: 0x0401BF54 RID: 114516
+		// Token: 0x0401693D RID: 92477
 		[Nullable(2)]
 		public AActor SeqMainCharacter;
 
-		// Token: 0x0401BF55 RID: 114517
+		// Token: 0x0401693E RID: 92478
 		[Nullable(2)]
 		public AActor BlendInCharacter;
 
-		// Token: 0x0401BF56 RID: 114518
+		// Token: 0x0401693F RID: 92479
 		[Nullable(new byte[]
 		{
 			2,
@@ -548,11 +550,11 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 		})]
 		public List<AActor> BlendInCharacters = new List<AActor>();
 
-		// Token: 0x0401BF57 RID: 114519
+		// Token: 0x04016940 RID: 92480
 		[Nullable(2)]
 		public AActor BlendOutCharacter;
 
-		// Token: 0x0401BF58 RID: 114520
+		// Token: 0x04016941 RID: 92481
 		[Nullable(new byte[]
 		{
 			2,
@@ -560,34 +562,34 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 		})]
 		public List<AActor> BlendOutCharacters = new List<AActor>();
 
-		// Token: 0x0401BF59 RID: 114521
+		// Token: 0x04016942 RID: 92482
 		public bool? NeedsQueueLatentAction = new bool?(false);
 
-		// Token: 0x0401BF5A RID: 114522
+		// Token: 0x04016943 RID: 92483
 		public List<Action> LatentActions = new List<Action>();
 
-		// Token: 0x0401BF5B RID: 114523
+		// Token: 0x04016944 RID: 92484
 		public int LastIndex = -2;
 
-		// Token: 0x0401BF5C RID: 114524
+		// Token: 0x04016945 RID: 92485
 		public int NextIndex = -2;
 
-		// Token: 0x0401BF5D RID: 114525
+		// Token: 0x04016946 RID: 92486
 		[Nullable(2)]
 		public EntityHandle HidePlayerEntityHandle;
 
-		// Token: 0x0401BF5E RID: 114526
+		// Token: 0x04016947 RID: 92487
 		[Nullable(2)]
 		public Action<bool> FinishCallback;
 
-		// Token: 0x0401BF5F RID: 114527
+		// Token: 0x04016948 RID: 92488
 		public EPlotSequenceType? Type;
 
-		// Token: 0x0401BF60 RID: 114528
+		// Token: 0x04016949 RID: 92489
 		[Nullable(2)]
 		public Transform RelativeTransform;
 
-		// Token: 0x0401BF61 RID: 114529
+		// Token: 0x0401694A RID: 92490
 		[Nullable(new byte[]
 		{
 			1,
@@ -595,137 +597,143 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 		})]
 		public List<Transform> CurFinalPos = new List<Transform>();
 
-		// Token: 0x0401BF62 RID: 114530
+		// Token: 0x0401694B RID: 92491
 		public List<bool> IsFadeEnd = new List<bool>();
 
-		// Token: 0x0401BF63 RID: 114531
+		// Token: 0x0401694C RID: 92492
 		public ELanguageAudio CurLanguageAudio;
 
-		// Token: 0x0401BF64 RID: 114532
+		// Token: 0x0401694D RID: 92493
 		public float? DurationOffset = new float?(0f);
 
-		// Token: 0x0401BF65 RID: 114533
+		// Token: 0x0401694E RID: 92494
 		[Nullable(2)]
 		public ALevelSequenceActor CurLevelSeqActor;
 
-		// Token: 0x0401BF66 RID: 114534
+		// Token: 0x0401694F RID: 92495
 		public List<int> CurSubtitleStartFrames = new List<int>();
 
-		// Token: 0x0401BF67 RID: 114535
+		// Token: 0x04016950 RID: 92496
 		public List<int> CurSubtitleEndFrames = new List<int>();
 
-		// Token: 0x0401BF68 RID: 114536
+		// Token: 0x04016951 RID: 92497
 		public List<int> CurShotStartFrames = new List<int>();
 
-		// Token: 0x0401BF69 RID: 114537
+		// Token: 0x04016952 RID: 92498
 		public List<int> CurShotEndFrames = new List<int>();
 
-		// Token: 0x0401BF6A RID: 114538
+		// Token: 0x04016953 RID: 92499
 		public int? CurStartFrame = new int?(0);
 
-		// Token: 0x0401BF6B RID: 114539
+		// Token: 0x04016954 RID: 92500
 		public int? CurEndFrame = new int?(0);
 
-		// Token: 0x0401BF6C RID: 114540
+		// Token: 0x04016955 RID: 92501
 		public float? CurFrameRate = new float?(0f);
 
-		// Token: 0x0401BF6D RID: 114541
+		// Token: 0x04016956 RID: 92502
 		public int? SelectedOption = new int?(0);
 
-		// Token: 0x0401BF6E RID: 114542
+		// Token: 0x04016957 RID: 92503
 		public PlotSubtitleConfig CurSubtitle = new PlotSubtitleConfig();
 
-		// Token: 0x0401BF6F RID: 114543
+		// Token: 0x04016958 RID: 92504
 		public bool NeedJumpWhenResume;
 
-		// Token: 0x0401BF70 RID: 114544
+		// Token: 0x04016959 RID: 92505
 		public List<int> QteKeyFrames = new List<int>();
 
-		// Token: 0x0401BF71 RID: 114545
+		// Token: 0x0401695A RID: 92506
 		public int? PauseFrame;
 
-		// Token: 0x0401BF72 RID: 114546
+		// Token: 0x0401695B RID: 92507
 		public bool IsSubtitleConfigInit;
 
-		// Token: 0x0401BF73 RID: 114547
+		// Token: 0x0401695C RID: 92508
 		public float DefaultGuardTime;
 
-		// Token: 0x0401BF74 RID: 114548
+		// Token: 0x0401695D RID: 92509
 		public float DefaultAudioDelay;
 
-		// Token: 0x0401BF75 RID: 114549
+		// Token: 0x0401695E RID: 92510
 		public float DefaultAudioTransitionDuration;
 
-		// Token: 0x0401BF76 RID: 114550
+		// Token: 0x0401695F RID: 92511
 		public float? EndLeastTime;
 
-		// Token: 0x0401BF77 RID: 114551
+		// Token: 0x04016960 RID: 92512
 		public bool UseRuntimeData = true;
 
-		// Token: 0x0401BF78 RID: 114552
+		// Token: 0x04016961 RID: 92513
 		public bool IsSeamless;
 
-		// Token: 0x0401BF79 RID: 114553
+		// Token: 0x04016962 RID: 92514
 		public HashSet<int> MuteQteList = new HashSet<int>();
 
-		// Token: 0x0401BF7A RID: 114554
+		// Token: 0x04016963 RID: 92515
 		public bool IsMuteAllQte;
 
-		// Token: 0x0401BF7B RID: 114555
+		// Token: 0x04016964 RID: 92516
 		public FVectorDouble HidePos = new FVectorDouble(0.0, 0.0, -999999.0);
 
-		// Token: 0x0401BF7C RID: 114556
+		// Token: 0x04016965 RID: 92517
 		public float DisableMotionBlurFrame;
 
-		// Token: 0x0401BF7D RID: 114557
+		// Token: 0x04016966 RID: 92518
 		public float BeginSwitchFrame;
 
-		// Token: 0x0401BF7E RID: 114558
+		// Token: 0x04016967 RID: 92519
+		public bool WaitSwitchTargetVisible;
+
+		// Token: 0x04016968 RID: 92520
+		public int SwitchTargetWaitFrame;
+
+		// Token: 0x04016969 RID: 92521
 		public bool TwiceAnimFlag;
 
-		// Token: 0x0401BF7F RID: 114559
+		// Token: 0x0401696A RID: 92522
 		[Nullable(2)]
 		public ALevelSequenceActor AdditionSeqDirector;
 
-		// Token: 0x0401BF80 RID: 114560
+		// Token: 0x0401696B RID: 92523
 		public List<FName> NpcGroupPerform = new List<FName>();
 
-		// Token: 0x0401BF81 RID: 114561
+		// Token: 0x0401696C RID: 92524
 		public Dictionary<FName, NpcRelation> NpcRelationMap = new Dictionary<FName, NpcRelation>();
 
-		// Token: 0x0401BF82 RID: 114562
+		// Token: 0x0401696D RID: 92525
 		public HashSet<Entity> NeedHideNpcSet = new HashSet<Entity>();
 
-		// Token: 0x0401BF83 RID: 114563
+		// Token: 0x0401696E RID: 92526
 		[Nullable(2)]
 		public EntityHandle PlotBindingVehicle;
 
-		// Token: 0x0401BF84 RID: 114564
+		// Token: 0x0401696F RID: 92527
 		public bool NeedWaitSwitchSubLevelComplete;
 
-		// Token: 0x0401BF85 RID: 114565
+		// Token: 0x04016970 RID: 92528
 		public bool EnablingUiBlend;
 
-		// Token: 0x0401BF86 RID: 114566
+		// Token: 0x04016971 RID: 92529
 		public bool IsConstrainAspectActive;
 
-		// Token: 0x0401BF87 RID: 114567
+		// Token: 0x04016972 RID: 92530
 		public bool IsStartTransformBlending;
 
-		// Token: 0x0401BF88 RID: 114568
+		// Token: 0x04016973 RID: 92531
 		public float StartTransformBlendElapsed;
 
-		// Token: 0x0401BF89 RID: 114569
+		// Token: 0x04016974 RID: 92532
 		public float StartTransformBlendDuration;
 
-		// Token: 0x0401BF8A RID: 114570
+		// Token: 0x04016975 RID: 92533
 		[Nullable(2)]
 		public Action StartTransformBlendCallback;
 
-		// Token: 0x0401BF8B RID: 114571
+		// Token: 0x04016976 RID: 92534
 		public bool SkipUiWaiting;
 
-		// Token: 0x0401BF8C RID: 114572
+		// Token: 0x04016977 RID: 92535
 		[Nullable(2)]
 		private static SequenceModel _Instance;
 	}

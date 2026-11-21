@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001F21 RID: 7969
+// Token: 0x020013E3 RID: 5091
 public enum ECameraAimVisibleReason
 {
-	// Token: 0x04007182 RID: 29058
+	// Token: 0x04007263 RID: 29283
 	Default,
-	// Token: 0x04007183 RID: 29059
+	// Token: 0x04007264 RID: 29284
 	InManipulate,
-	// Token: 0x04007184 RID: 29060
+	// Token: 0x04007265 RID: 29285
 	Tag
 }

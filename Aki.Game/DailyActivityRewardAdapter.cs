@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019F2 RID: 6642
+// Token: 0x02000EB1 RID: 3761
 [NullableContext(1)]
 [Nullable(0)]
 public class DailyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPanelDataAdapter
 {
-	// Token: 0x17001042 RID: 4162
-	// (get) Token: 0x0600C265 RID: 49765 RVA: 0x002BE18F File Offset: 0x002BC38F
+	// Token: 0x17001067 RID: 4199
+	// (get) Token: 0x06009672 RID: 38514 RVA: 0x002C9167 File Offset: 0x002C7367
 	public double CurrentValue
 	{
 		get
@@ -17,8 +17,8 @@ public class DailyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPan
 		}
 	}
 
-	// Token: 0x17001043 RID: 4163
-	// (get) Token: 0x0600C266 RID: 49766 RVA: 0x002BE19C File Offset: 0x002BC39C
+	// Token: 0x17001068 RID: 4200
+	// (get) Token: 0x06009673 RID: 38515 RVA: 0x002C9174 File Offset: 0x002C7374
 	public double MaxValue
 	{
 		get
@@ -27,8 +27,8 @@ public class DailyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPan
 		}
 	}
 
-	// Token: 0x17001044 RID: 4164
-	// (get) Token: 0x0600C267 RID: 49767 RVA: 0x002BE1A9 File Offset: 0x002BC3A9
+	// Token: 0x17001069 RID: 4201
+	// (get) Token: 0x06009674 RID: 38516 RVA: 0x002C9181 File Offset: 0x002C7381
 	public IReadOnlyDictionary<int, DailyActivityDefine.IActivityGoalData> GoalMap
 	{
 		get
@@ -37,19 +37,19 @@ public class DailyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPan
 		}
 	}
 
-	// Token: 0x0600C268 RID: 49768 RVA: 0x002BE1B5 File Offset: 0x002BC3B5
+	// Token: 0x06009675 RID: 38517 RVA: 0x002C918D File Offset: 0x002C738D
 	public List<int> GetCanRewardIdList()
 	{
 		return DailyActivityModel.Instance.GetCanRewardIdList();
 	}
 
-	// Token: 0x0600C269 RID: 49769 RVA: 0x002BE1C1 File Offset: 0x002BC3C1
+	// Token: 0x06009676 RID: 38518 RVA: 0x002C9199 File Offset: 0x002C7399
 	public void RequestReward(List<int> idList, Action onClose)
 	{
 		DailyActivityController.Instance.RequestDailyActivityReward(idList, onClose);
 	}
 
-	// Token: 0x0600C26A RID: 49770 RVA: 0x002BE1CF File Offset: 0x002BC3CF
+	// Token: 0x06009677 RID: 38519 RVA: 0x002C91A7 File Offset: 0x002C73A7
 	public List<TItem> GetRewardById(int id)
 	{
 		return DailyActivityModel.Instance.GetActivityRewardById(id);

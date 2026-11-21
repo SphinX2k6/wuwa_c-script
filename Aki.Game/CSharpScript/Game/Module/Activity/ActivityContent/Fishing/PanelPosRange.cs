@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065F6 RID: 26102
+	// Token: 0x02005574 RID: 21876
 	public class PanelPosRange : IPanelPosRange
 	{
-		// Token: 0x170095C2 RID: 38338
-		// (get) Token: 0x060416D6 RID: 267990 RVA: 0x00FD99E7 File Offset: 0x00FD7BE7
-		// (set) Token: 0x060416D7 RID: 267991 RVA: 0x00FD99EF File Offset: 0x00FD7BEF
+		// Token: 0x17006924 RID: 26916
+		// (get) Token: 0x0603639B RID: 222107 RVA: 0x00F20A67 File Offset: 0x00F1EC67
+		// (set) Token: 0x0603639C RID: 222108 RVA: 0x00F20A6F File Offset: 0x00F1EC6F
 		public int RowStartIndex { get; set; }
 
-		// Token: 0x170095C3 RID: 38339
-		// (get) Token: 0x060416D8 RID: 267992 RVA: 0x00FD99F8 File Offset: 0x00FD7BF8
-		// (set) Token: 0x060416D9 RID: 267993 RVA: 0x00FD9A00 File Offset: 0x00FD7C00
+		// Token: 0x17006925 RID: 26917
+		// (get) Token: 0x0603639D RID: 222109 RVA: 0x00F20A78 File Offset: 0x00F1EC78
+		// (set) Token: 0x0603639E RID: 222110 RVA: 0x00F20A80 File Offset: 0x00F1EC80
 		public int RowEndIndex { get; set; }
 
-		// Token: 0x170095C4 RID: 38340
-		// (get) Token: 0x060416DA RID: 267994 RVA: 0x00FD9A09 File Offset: 0x00FD7C09
-		// (set) Token: 0x060416DB RID: 267995 RVA: 0x00FD9A11 File Offset: 0x00FD7C11
+		// Token: 0x17006926 RID: 26918
+		// (get) Token: 0x0603639F RID: 222111 RVA: 0x00F20A89 File Offset: 0x00F1EC89
+		// (set) Token: 0x060363A0 RID: 222112 RVA: 0x00F20A91 File Offset: 0x00F1EC91
 		public int ColStartIndex { get; set; }
 
-		// Token: 0x170095C5 RID: 38341
-		// (get) Token: 0x060416DC RID: 267996 RVA: 0x00FD9A1A File Offset: 0x00FD7C1A
-		// (set) Token: 0x060416DD RID: 267997 RVA: 0x00FD9A22 File Offset: 0x00FD7C22
+		// Token: 0x17006927 RID: 26919
+		// (get) Token: 0x060363A1 RID: 222113 RVA: 0x00F20A9A File Offset: 0x00F1EC9A
+		// (set) Token: 0x060363A2 RID: 222114 RVA: 0x00F20AA2 File Offset: 0x00F1ECA2
 		public int ColEndIndex { get; set; }
 	}
 }

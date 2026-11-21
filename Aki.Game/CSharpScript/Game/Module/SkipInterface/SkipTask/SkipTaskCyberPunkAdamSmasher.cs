@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BA8 RID: 19368
+	// Token: 0x02003B52 RID: 15186
 	public class SkipTaskCyberPunkAdamSmasher : SkipTask
 	{
-		// Token: 0x060322CF RID: 205519 RVA: 0x00BA8814 File Offset: 0x00BA6A14
+		// Token: 0x06027060 RID: 159840 RVA: 0x00AECA88 File Offset: 0x00AEAC88
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			base.Finish();
 		}
 
-		// Token: 0x0401AB83 RID: 109443
+		// Token: 0x040154D8 RID: 87256
 		private const int BOSS_ENTRANCE_ID = 5;
 	}
 }

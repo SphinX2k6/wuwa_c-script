@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000728 RID: 1832
+	// Token: 0x020007C9 RID: 1993
 	public class IStreamingRtEffectRef_SetValue
 	{
-		// Token: 0x04001AB7 RID: 6839
-		[Nullable(1)]
+		// Token: 0x04001CBC RID: 7356
 		public string ActorRefKey;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001FD RID: 509
+	// Token: 0x0200020F RID: 527
 	public class ConfigDebugEntranceTypeConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000BF1 RID: 3057 RVA: 0x0009D29C File Offset: 0x0009B49C
+		// Token: 0x06000C5D RID: 3165 RVA: 0x000A31D4 File Offset: 0x000A13D4
 		static ConfigDebugEntranceTypeConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDebugEntranceTypeConfigAll.CreateStaticDefaultValue), new Action(ConfigDebugEntranceTypeConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000BF2 RID: 3058 RVA: 0x0009D2BC File Offset: 0x0009B4BC
+		// Token: 0x06000C5E RID: 3166 RVA: 0x000A31F4 File Offset: 0x000A13F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDebugEntranceTypeConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000BF3 RID: 3059 RVA: 0x0009D33B File Offset: 0x0009B53B
+		// Token: 0x06000C5F RID: 3167 RVA: 0x000A3273 File Offset: 0x000A1473
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDebugEntranceTypeConfigAll.LogPair = null;
 			ConfigDebugEntranceTypeConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06000BF4 RID: 3060 RVA: 0x0009D349 File Offset: 0x0009B549
+		// Token: 0x06000C60 RID: 3168 RVA: 0x000A3281 File Offset: 0x000A1481
 		public static void Init()
 		{
 			ConfigDebugEntranceTypeConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigDebugEntranceTypeConfigAll.HandleId, "db_debugview.db", "select BinData from `DebugEntranceTypeConfig`");
 		}
 
-		// Token: 0x06000BF5 RID: 3061 RVA: 0x0009D364 File Offset: 0x0009B564
+		// Token: 0x06000C61 RID: 3169 RVA: 0x000A329C File Offset: 0x000A149C
 		[NullableContext(2)]
 		public static IReadOnlyList<DebugEntranceTypeConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000DCF RID: 3535
+		// Token: 0x04000E4D RID: 3661
 		private const string DB = "db_debugview.db";
 
-		// Token: 0x04000DD0 RID: 3536
+		// Token: 0x04000E4E RID: 3662
 		private const string FILE = "t.调试界面.xlsx";
 
-		// Token: 0x04000DD1 RID: 3537
+		// Token: 0x04000E4F RID: 3663
 		private const string TABLE = "DebugEntranceTypeConfig";
 
-		// Token: 0x04000DD2 RID: 3538
+		// Token: 0x04000E50 RID: 3664
 		private const string COMMAND = "select BinData from `DebugEntranceTypeConfig`";
 
-		// Token: 0x04000DD3 RID: 3539
+		// Token: 0x04000E51 RID: 3665
 		private const string KEY_PREFIX = "DebugEntranceTypeConfigAll";
 
-		// Token: 0x04000DD4 RID: 3540
+		// Token: 0x04000E52 RID: 3666
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DD5 RID: 3541
+		// Token: 0x04000E53 RID: 3667
 		private static int HandleId;
 	}
 }

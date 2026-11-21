@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067CE RID: 26574
+	// Token: 0x0200571E RID: 22302
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookItemSortData
 	{
-		// Token: 0x040228C2 RID: 141506
+		// Token: 0x0401D11F RID: 119071
 		public int ItemId;
 
-		// Token: 0x040228C3 RID: 141507
+		// Token: 0x0401D120 RID: 119072
 		public int ItemType;
 
-		// Token: 0x040228C4 RID: 141508
+		// Token: 0x0401D121 RID: 119073
 		public int ItemSubType;
 
-		// Token: 0x040228C5 RID: 141509
+		// Token: 0x0401D122 RID: 119074
 		public string ItemName = "";
 
-		// Token: 0x040228C6 RID: 141510
+		// Token: 0x0401D123 RID: 119075
 		public string ItemIcon = "";
 
-		// Token: 0x040228C7 RID: 141511
+		// Token: 0x0401D124 RID: 119076
 		public int Quality;
 
-		// Token: 0x040228C8 RID: 141512
+		// Token: 0x0401D125 RID: 119077
 		public bool IsUnlocked;
 	}
 }

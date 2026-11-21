@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066EA RID: 26346
+	// Token: 0x02006D6A RID: 28010
 	public struct IEntitySplineMoveTarget : IFlatbufferObject
 	{
-		// Token: 0x1700C3C7 RID: 50119
-		// (get) Token: 0x0602DCF3 RID: 187635 RVA: 0x00643C3B File Offset: 0x00641E3B
+		// Token: 0x1700CD7D RID: 52605
+		// (get) Token: 0x06030530 RID: 197936 RVA: 0x006911AF File Offset: 0x0068F3AF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DCF4 RID: 187636 RVA: 0x00643C48 File Offset: 0x00641E48
+		// Token: 0x06030531 RID: 197937 RVA: 0x006911BC File Offset: 0x0068F3BC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DCF5 RID: 187637 RVA: 0x00643C50 File Offset: 0x00641E50
+		// Token: 0x06030532 RID: 197938 RVA: 0x006911C4 File Offset: 0x0068F3C4
 		public static IEntitySplineMoveTarget GetRootAsIEntitySplineMoveTarget(ByteBuffer _bb)
 		{
 			return IEntitySplineMoveTarget.GetRootAsIEntitySplineMoveTarget(_bb, default(IEntitySplineMoveTarget));
 		}
 
-		// Token: 0x0602DCF6 RID: 187638 RVA: 0x00643C6C File Offset: 0x00641E6C
+		// Token: 0x06030533 RID: 197939 RVA: 0x006911E0 File Offset: 0x0068F3E0
 		public static IEntitySplineMoveTarget GetRootAsIEntitySplineMoveTarget(ByteBuffer _bb, IEntitySplineMoveTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DCF7 RID: 187639 RVA: 0x00643C89 File Offset: 0x00641E89
+		// Token: 0x06030534 RID: 197940 RVA: 0x006911FD File Offset: 0x0068F3FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DCF8 RID: 187640 RVA: 0x00643C98 File Offset: 0x00641E98
+		// Token: 0x06030535 RID: 197941 RVA: 0x0069120C File Offset: 0x0068F40C
 		public IEntitySplineMoveTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C3C8 RID: 50120
-		// (get) Token: 0x0602DCF9 RID: 187641 RVA: 0x00643CA8 File Offset: 0x00641EA8
+		// Token: 0x1700CD7E RID: 52606
+		// (get) Token: 0x06030536 RID: 197942 RVA: 0x0069121C File Offset: 0x0068F41C
 		public ESplineMoveTargetType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C3C9 RID: 50121
-		// (get) Token: 0x0602DCFA RID: 187642 RVA: 0x00643CE4 File Offset: 0x00641EE4
+		// Token: 0x1700CD7F RID: 52607
+		// (get) Token: 0x06030537 RID: 197943 RVA: 0x00691258 File Offset: 0x0068F458
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C3CA RID: 50122
-		// (get) Token: 0x0602DCFB RID: 187643 RVA: 0x00643D20 File Offset: 0x00641F20
+		// Token: 0x1700CD80 RID: 52608
+		// (get) Token: 0x06030538 RID: 197944 RVA: 0x00691294 File Offset: 0x0068F494
 		public TMoveDriveMode MoveDriveModeType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DCFC RID: 187644 RVA: 0x00643D5C File Offset: 0x00641F5C
+		// Token: 0x06030539 RID: 197945 RVA: 0x006912D0 File Offset: 0x0068F4D0
 		public TTable? MoveDriveMode<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,19 +103,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DCFD RID: 187645 RVA: 0x00643DA4 File Offset: 0x00641FA4
+		// Token: 0x0603053A RID: 197946 RVA: 0x00691318 File Offset: 0x0068F518
 		public IInputDrivenMoveDriveMode MoveDriveModeAsIInputDrivenMoveDriveMode()
 		{
 			return this.MoveDriveMode<IInputDrivenMoveDriveMode>().Value;
 		}
 
-		// Token: 0x0602DCFE RID: 187646 RVA: 0x00643DC0 File Offset: 0x00641FC0
+		// Token: 0x0603053B RID: 197947 RVA: 0x00691334 File Offset: 0x0068F534
 		public IPositionDrivenMoveDriveMode MoveDriveModeAsIPositionDrivenMoveDriveMode()
 		{
 			return this.MoveDriveMode<IPositionDrivenMoveDriveMode>().Value;
 		}
 
-		// Token: 0x0602DCFF RID: 187647 RVA: 0x00643DDB File Offset: 0x00641FDB
+		// Token: 0x0603053C RID: 197948 RVA: 0x0069134F File Offset: 0x0068F54F
 		public static Offset<IEntitySplineMoveTarget> CreateIEntitySplineMoveTarget(FlatBufferBuilder builder, ESplineMoveTargetType Type = ESplineMoveTargetType.Entity, int EntityId = 0, TMoveDriveMode MoveDriveMode_type = TMoveDriveMode.NONE, int MoveDriveModeOffset = 0)
 		{
 			builder.StartTable(4);
@@ -126,43 +126,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEntitySplineMoveTarget.EndIEntitySplineMoveTarget(builder);
 		}
 
-		// Token: 0x0602DD00 RID: 187648 RVA: 0x00643E07 File Offset: 0x00642007
+		// Token: 0x0603053D RID: 197949 RVA: 0x0069137B File Offset: 0x0068F57B
 		public static void StartIEntitySplineMoveTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602DD01 RID: 187649 RVA: 0x00643E10 File Offset: 0x00642010
+		// Token: 0x0603053E RID: 197950 RVA: 0x00691384 File Offset: 0x0068F584
 		public static void AddType(FlatBufferBuilder builder, ESplineMoveTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602DD02 RID: 187650 RVA: 0x00643E1B File Offset: 0x0064201B
+		// Token: 0x0603053F RID: 197951 RVA: 0x0069138F File Offset: 0x0068F58F
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0602DD03 RID: 187651 RVA: 0x00643E26 File Offset: 0x00642026
+		// Token: 0x06030540 RID: 197952 RVA: 0x0069139A File Offset: 0x0068F59A
 		public static void AddMoveDriveModeType(FlatBufferBuilder builder, TMoveDriveMode moveDriveModeType)
 		{
 			builder.AddByte(2, (byte)moveDriveModeType, 0);
 		}
 
-		// Token: 0x0602DD04 RID: 187652 RVA: 0x00643E31 File Offset: 0x00642031
+		// Token: 0x06030541 RID: 197953 RVA: 0x006913A5 File Offset: 0x0068F5A5
 		public static void AddMoveDriveMode(FlatBufferBuilder builder, int moveDriveModeOffset)
 		{
 			builder.AddOffset(3, moveDriveModeOffset, 0);
 		}
 
-		// Token: 0x0602DD05 RID: 187653 RVA: 0x00643E3C File Offset: 0x0064203C
+		// Token: 0x06030542 RID: 197954 RVA: 0x006913B0 File Offset: 0x0068F5B0
 		public static Offset<IEntitySplineMoveTarget> EndIEntitySplineMoveTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntitySplineMoveTarget>(builder.EndTable());
 		}
 
-		// Token: 0x0602DD06 RID: 187654 RVA: 0x00643E4C File Offset: 0x0064204C
+		// Token: 0x06030543 RID: 197955 RVA: 0x006913C0 File Offset: 0x0068F5C0
 		public IEntitySplineMoveTargetT UnPack()
 		{
 			IEntitySplineMoveTargetT entitySplineMoveTargetT = new IEntitySplineMoveTargetT();
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return entitySplineMoveTargetT;
 		}
 
-		// Token: 0x0602DD07 RID: 187655 RVA: 0x00643E68 File Offset: 0x00642068
+		// Token: 0x06030544 RID: 197956 RVA: 0x006913DC File Offset: 0x0068F5DC
 		public void UnPackTo(IEntitySplineMoveTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.MoveDriveMode.Value = ((this.MoveDriveMode<IPositionDrivenMoveDriveMode>() != null) ? this.MoveDriveMode<IPositionDrivenMoveDriveMode>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602DD08 RID: 187656 RVA: 0x00643F24 File Offset: 0x00642124
+		// Token: 0x06030545 RID: 197957 RVA: 0x00691498 File Offset: 0x0068F698
 		public static Offset<IEntitySplineMoveTarget> Pack(FlatBufferBuilder builder, IEntitySplineMoveTargetT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEntitySplineMoveTarget.CreateIEntitySplineMoveTarget(builder, _o.Type, _o.EntityId, moveDriveMode_type, moveDriveModeOffset);
 		}
 
-		// Token: 0x04010DBD RID: 69053
+		// Token: 0x04011BEC RID: 72684
 		private Table __p;
 	}
 }

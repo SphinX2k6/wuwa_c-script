@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039EF RID: 14831
+	// Token: 0x02003046 RID: 12358
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 小队技能目标改变时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F106 RID: 127238 RVA: 0x008A95F2 File Offset: 0x008A77F2
+		// Token: 0x0601D567 RID: 120167 RVA: 0x008F1C52 File Offset: 0x008EFE52
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 小队技能目标改变时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F107 RID: 127239 RVA: 0x008A95FE File Offset: 0x008A77FE
+		// Token: 0x0601D568 RID: 120168 RVA: 0x008F1C5E File Offset: 0x008EFE5E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__小队技能目标改变时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__小队技能目标改变时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F108 RID: 127240 RVA: 0x008A9621 File Offset: 0x008A7821
+		// Token: 0x0601D569 RID: 120169 RVA: 0x008F1C81 File Offset: 0x008EFE81
 		public 小队技能目标改变时()
 		{
 		}
 
-		// Token: 0x0601F109 RID: 127241 RVA: 0x008A9629 File Offset: 0x008A7829
+		// Token: 0x0601D56A RID: 120170 RVA: 0x008F1C89 File Offset: 0x008EFE89
 		[NullableContext(2)]
 		public 小队技能目标改变时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F10A RID: 127242 RVA: 0x008A9633 File Offset: 0x008A7833
+		// Token: 0x0601D56B RID: 120171 RVA: 0x008F1C93 File Offset: 0x008EFE93
 		public 小队技能目标改变时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F10B RID: 127243 RVA: 0x008A963E File Offset: 0x008A783E
+		// Token: 0x0601D56C RID: 120172 RVA: 0x008F1C9E File Offset: 0x008EFE9E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TsBaseCharacter>) ?? ((Action<TsBaseCharacter>)Delegate.CreateDelegate(typeof(Action<TsBaseCharacter>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F10C RID: 127244 RVA: 0x008A9670 File Offset: 0x008A7870
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D56D RID: 120173 RVA: 0x008F1CD0 File Offset: 0x008EFED0
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 小队技能目标改变时.RegisterId);
 		}
 
-		// Token: 0x0601F10D RID: 127245 RVA: 0x008A96AA File Offset: 0x008A78AA
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D56E RID: 120174 RVA: 0x008F1D0A File Offset: 0x008EFF0A
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F10E RID: 127246 RVA: 0x008A96B4 File Offset: 0x008A78B4
+		// Token: 0x0601D56F RID: 120175 RVA: 0x008F1D14 File Offset: 0x008EFF14
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(TsBaseCharacter 目标)
 		{
 			小队技能目标改变时.__小队技能目标改变时_DelegateParams* ptr = stackalloc 小队技能目标改变时.__小队技能目标改变时_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(小队技能目标改变时.__小队技能目标改变时_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F10F RID: 127247 RVA: 0x008A9700 File Offset: 0x008A7900
+		// Token: 0x0601D570 RID: 120176 RVA: 0x008F1D60 File Offset: 0x008EFF60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TsBaseCharacter> action = target as Action<TsBaseCharacter>;
@@ -109,28 +105,28 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400EE20 RID: 60960
+		// Token: 0x0400F748 RID: 63304
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:小队技能目标改变时__DelegateSignature";
 
-		// Token: 0x0400EE21 RID: 60961
+		// Token: 0x0400F749 RID: 63305
 		private static int RegisterId;
 
-		// Token: 0x020099ED RID: 39405
+		// Token: 0x02008CA1 RID: 36001
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __小队技能目标改变时_DelegateParams
+		private ref struct __小队技能目标改变时_DelegateParams
 		{
-			// Token: 0x04030EC5 RID: 200389
+			// Token: 0x0402C7A5 RID: 182181
 			[FieldOffset(0)]
 			public IntPtr 目标;
 		}
 
-		// Token: 0x020099EE RID: 39406
+		// Token: 0x02008CA2 RID: 36002
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EC6 RID: 200390
+			// Token: 0x0402C7A6 RID: 182182
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060BC RID: 24764
+	// Token: 0x0200671E RID: 26398
 	public struct IActorFxEmoteStopSubType : IFlatbufferObject
 	{
-		// Token: 0x1700B683 RID: 46723
-		// (get) Token: 0x0602A488 RID: 173192 RVA: 0x005D413D File Offset: 0x005D233D
+		// Token: 0x1700BFEE RID: 49134
+		// (get) Token: 0x0602CB69 RID: 183145 RVA: 0x0061E0E5 File Offset: 0x0061C2E5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A489 RID: 173193 RVA: 0x005D414A File Offset: 0x005D234A
+		// Token: 0x0602CB6A RID: 183146 RVA: 0x0061E0F2 File Offset: 0x0061C2F2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A48A RID: 173194 RVA: 0x005D4154 File Offset: 0x005D2354
+		// Token: 0x0602CB6B RID: 183147 RVA: 0x0061E0FC File Offset: 0x0061C2FC
 		public static IActorFxEmoteStopSubType GetRootAsIActorFxEmoteStopSubType(ByteBuffer _bb)
 		{
 			return IActorFxEmoteStopSubType.GetRootAsIActorFxEmoteStopSubType(_bb, default(IActorFxEmoteStopSubType));
 		}
 
-		// Token: 0x0602A48B RID: 173195 RVA: 0x005D4170 File Offset: 0x005D2370
+		// Token: 0x0602CB6C RID: 183148 RVA: 0x0061E118 File Offset: 0x0061C318
 		public static IActorFxEmoteStopSubType GetRootAsIActorFxEmoteStopSubType(ByteBuffer _bb, IActorFxEmoteStopSubType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A48C RID: 173196 RVA: 0x005D418D File Offset: 0x005D238D
+		// Token: 0x0602CB6D RID: 183149 RVA: 0x0061E135 File Offset: 0x0061C335
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A48D RID: 173197 RVA: 0x005D419C File Offset: 0x005D239C
+		// Token: 0x0602CB6E RID: 183150 RVA: 0x0061E144 File Offset: 0x0061C344
 		public IActorFxEmoteStopSubType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B684 RID: 46724
-		// (get) Token: 0x0602A48E RID: 173198 RVA: 0x005D41AC File Offset: 0x005D23AC
+		// Token: 0x1700BFEF RID: 49135
+		// (get) Token: 0x0602CB6F RID: 183151 RVA: 0x0061E154 File Offset: 0x0061C354
 		public EActorFxEmoteStopSubType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A48F RID: 173199 RVA: 0x005D41E8 File Offset: 0x005D23E8
+		// Token: 0x0602CB70 RID: 183152 RVA: 0x0061E190 File Offset: 0x0061C390
 		public static Offset<IActorFxEmoteStopSubType> CreateIActorFxEmoteStopSubType(FlatBufferBuilder builder, EActorFxEmoteStopSubType Type = EActorFxEmoteStopSubType.StopAll)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorFxEmoteStopSubType.EndIActorFxEmoteStopSubType(builder);
 		}
 
-		// Token: 0x0602A490 RID: 173200 RVA: 0x005D41FE File Offset: 0x005D23FE
+		// Token: 0x0602CB71 RID: 183153 RVA: 0x0061E1A6 File Offset: 0x0061C3A6
 		public static void StartIActorFxEmoteStopSubType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602A491 RID: 173201 RVA: 0x005D4207 File Offset: 0x005D2407
+		// Token: 0x0602CB72 RID: 183154 RVA: 0x0061E1AF File Offset: 0x0061C3AF
 		public static void AddType(FlatBufferBuilder builder, EActorFxEmoteStopSubType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602A492 RID: 173202 RVA: 0x005D4212 File Offset: 0x005D2412
+		// Token: 0x0602CB73 RID: 183155 RVA: 0x0061E1BA File Offset: 0x0061C3BA
 		public static Offset<IActorFxEmoteStopSubType> EndIActorFxEmoteStopSubType(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorFxEmoteStopSubType>(builder.EndTable());
 		}
 
-		// Token: 0x0602A493 RID: 173203 RVA: 0x005D4220 File Offset: 0x005D2420
+		// Token: 0x0602CB74 RID: 183156 RVA: 0x0061E1C8 File Offset: 0x0061C3C8
 		public IActorFxEmoteStopSubTypeT UnPack()
 		{
 			IActorFxEmoteStopSubTypeT actorFxEmoteStopSubTypeT = new IActorFxEmoteStopSubTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actorFxEmoteStopSubTypeT;
 		}
 
-		// Token: 0x0602A494 RID: 173204 RVA: 0x005D423B File Offset: 0x005D243B
+		// Token: 0x0602CB75 RID: 183157 RVA: 0x0061E1E3 File Offset: 0x0061C3E3
 		public void UnPackTo(IActorFxEmoteStopSubTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602A495 RID: 173205 RVA: 0x005D424C File Offset: 0x005D244C
+		// Token: 0x0602CB76 RID: 183158 RVA: 0x0061E1F4 File Offset: 0x0061C3F4
 		public static Offset<IActorFxEmoteStopSubType> Pack(FlatBufferBuilder builder, IActorFxEmoteStopSubTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorFxEmoteStopSubType.CreateIActorFxEmoteStopSubType(builder, _o.Type);
 		}
 
-		// Token: 0x04010460 RID: 66656
+		// Token: 0x04011264 RID: 70244
 		private Table __p;
 	}
 }

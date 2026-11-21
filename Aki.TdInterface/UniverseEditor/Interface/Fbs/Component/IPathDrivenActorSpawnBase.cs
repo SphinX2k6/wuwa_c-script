@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056F5 RID: 22261
+	// Token: 0x02005CE4 RID: 23780
 	public struct IPathDrivenActorSpawnBase : IFlatbufferObject
 	{
-		// Token: 0x1700A5B2 RID: 42418
-		// (get) Token: 0x06025336 RID: 152374 RVA: 0x00522486 File Offset: 0x00520686
+		// Token: 0x1700AEB5 RID: 44725
+		// (get) Token: 0x0602779D RID: 161693 RVA: 0x00566ED2 File Offset: 0x005650D2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025337 RID: 152375 RVA: 0x00522493 File Offset: 0x00520693
+		// Token: 0x0602779E RID: 161694 RVA: 0x00566EDF File Offset: 0x005650DF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025338 RID: 152376 RVA: 0x0052249C File Offset: 0x0052069C
+		// Token: 0x0602779F RID: 161695 RVA: 0x00566EE8 File Offset: 0x005650E8
 		public static IPathDrivenActorSpawnBase GetRootAsIPathDrivenActorSpawnBase(ByteBuffer _bb)
 		{
 			return IPathDrivenActorSpawnBase.GetRootAsIPathDrivenActorSpawnBase(_bb, default(IPathDrivenActorSpawnBase));
 		}
 
-		// Token: 0x06025339 RID: 152377 RVA: 0x005224B8 File Offset: 0x005206B8
+		// Token: 0x060277A0 RID: 161696 RVA: 0x00566F04 File Offset: 0x00565104
 		public static IPathDrivenActorSpawnBase GetRootAsIPathDrivenActorSpawnBase(ByteBuffer _bb, IPathDrivenActorSpawnBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602533A RID: 152378 RVA: 0x005224D5 File Offset: 0x005206D5
+		// Token: 0x060277A1 RID: 161697 RVA: 0x00566F21 File Offset: 0x00565121
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602533B RID: 152379 RVA: 0x005224E4 File Offset: 0x005206E4
+		// Token: 0x060277A2 RID: 161698 RVA: 0x00566F30 File Offset: 0x00565130
 		public IPathDrivenActorSpawnBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A5B3 RID: 42419
-		// (get) Token: 0x0602533C RID: 152380 RVA: 0x005224F4 File Offset: 0x005206F4
+		// Token: 0x1700AEB6 RID: 44726
+		// (get) Token: 0x060277A3 RID: 161699 RVA: 0x00566F40 File Offset: 0x00565140
 		public EPathDrivenActorSpawnType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602533D RID: 152381 RVA: 0x00522530 File Offset: 0x00520730
+		// Token: 0x060277A4 RID: 161700 RVA: 0x00566F7C File Offset: 0x0056517C
 		public static Offset<IPathDrivenActorSpawnBase> CreateIPathDrivenActorSpawnBase(FlatBufferBuilder builder, EPathDrivenActorSpawnType Type = EPathDrivenActorSpawnType.IntervalSplineSpawn)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPathDrivenActorSpawnBase.EndIPathDrivenActorSpawnBase(builder);
 		}
 
-		// Token: 0x0602533E RID: 152382 RVA: 0x00522546 File Offset: 0x00520746
+		// Token: 0x060277A5 RID: 161701 RVA: 0x00566F92 File Offset: 0x00565192
 		public static void StartIPathDrivenActorSpawnBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602533F RID: 152383 RVA: 0x0052254F File Offset: 0x0052074F
+		// Token: 0x060277A6 RID: 161702 RVA: 0x00566F9B File Offset: 0x0056519B
 		public static void AddType(FlatBufferBuilder builder, EPathDrivenActorSpawnType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025340 RID: 152384 RVA: 0x0052255A File Offset: 0x0052075A
+		// Token: 0x060277A7 RID: 161703 RVA: 0x00566FA6 File Offset: 0x005651A6
 		public static Offset<IPathDrivenActorSpawnBase> EndIPathDrivenActorSpawnBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IPathDrivenActorSpawnBase>(builder.EndTable());
 		}
 
-		// Token: 0x06025341 RID: 152385 RVA: 0x00522568 File Offset: 0x00520768
+		// Token: 0x060277A8 RID: 161704 RVA: 0x00566FB4 File Offset: 0x005651B4
 		public IPathDrivenActorSpawnBaseT UnPack()
 		{
 			IPathDrivenActorSpawnBaseT pathDrivenActorSpawnBaseT = new IPathDrivenActorSpawnBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pathDrivenActorSpawnBaseT;
 		}
 
-		// Token: 0x06025342 RID: 152386 RVA: 0x00522583 File Offset: 0x00520783
+		// Token: 0x060277A9 RID: 161705 RVA: 0x00566FCF File Offset: 0x005651CF
 		public void UnPackTo(IPathDrivenActorSpawnBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06025343 RID: 152387 RVA: 0x00522594 File Offset: 0x00520794
+		// Token: 0x060277AA RID: 161706 RVA: 0x00566FE0 File Offset: 0x005651E0
 		public static Offset<IPathDrivenActorSpawnBase> Pack(FlatBufferBuilder builder, IPathDrivenActorSpawnBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPathDrivenActorSpawnBase.CreateIPathDrivenActorSpawnBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400EB48 RID: 60232
+		// Token: 0x0400F815 RID: 63509
 		private Table __p;
 	}
 }

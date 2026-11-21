@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001275 RID: 4725
+	// Token: 0x020013B5 RID: 5045
 	public class ERangeLimitingPriorityJsonConverter : JsonConverter<ERangeLimitingPriority>
 	{
-		// Token: 0x06006AB7 RID: 27319 RVA: 0x000FFF50 File Offset: 0x000FE150
+		// Token: 0x0600710A RID: 28938 RVA: 0x0010DB7C File Offset: 0x0010BD7C
 		public override ERangeLimitingPriority Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ERangeLimitingPriorityExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006AB8 RID: 27320 RVA: 0x000FFF74 File Offset: 0x000FE174
+		// Token: 0x0600710B RID: 28939 RVA: 0x0010DBA0 File Offset: 0x0010BDA0
 		public override void Write(Utf8JsonWriter writer, ERangeLimitingPriority value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F7F RID: 3967
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010A9 RID: 4265
 	public class IFinishRhythmSpaceshipCondition : IQuestCondition
 	{
-		// Token: 0x0600583E RID: 22590 RVA: 0x000D763C File Offset: 0x000D583C
+		// Token: 0x06005E10 RID: 24080 RVA: 0x000E4064 File Offset: 0x000E2264
 		private IFinishRhythmSpaceshipCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600583F RID: 22591 RVA: 0x000D7674 File Offset: 0x000D5874
+		// Token: 0x06005E11 RID: 24081 RVA: 0x000E409C File Offset: 0x000E229C
 		public static IFinishRhythmSpaceshipCondition Create([Nullable(2)] IFinishRhythmSpaceshipCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005840 RID: 22592 RVA: 0x000D7687 File Offset: 0x000D5887
+		// Token: 0x06005E12 RID: 24082 RVA: 0x000E40AF File Offset: 0x000E22AF
 		public static IFinishRhythmSpaceshipCondition CreateFromSetValue([Nullable(2)] IFinishRhythmSpaceshipCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005841 RID: 22593 RVA: 0x000D769A File Offset: 0x000D589A
+		// Token: 0x06005E13 RID: 24083 RVA: 0x000E40C2 File Offset: 0x000E22C2
 		public new IFinishRhythmSpaceshipCondition_SetValue ToSetValue()
 		{
 			return new IFinishRhythmSpaceshipCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D62 RID: 7522
-		// (get) Token: 0x06005842 RID: 22594 RVA: 0x000D76C5 File Offset: 0x000D58C5
-		// (set) Token: 0x06005843 RID: 22595 RVA: 0x000D76F0 File Offset: 0x000D58F0
+		// Token: 0x17001F07 RID: 7943
+		// (get) Token: 0x06005E14 RID: 24084 RVA: 0x000E40ED File Offset: 0x000E22ED
+		// (set) Token: 0x06005E15 RID: 24085 RVA: 0x000E4118 File Offset: 0x000E2318
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D63 RID: 7523
-		// (get) Token: 0x06005844 RID: 22596 RVA: 0x000D7700 File Offset: 0x000D5900
-		// (set) Token: 0x06005845 RID: 22597 RVA: 0x000D7761 File Offset: 0x000D5961
+		// Token: 0x17001F08 RID: 7944
+		// (get) Token: 0x06005E16 RID: 24086 RVA: 0x000E4128 File Offset: 0x000E2328
+		// (set) Token: 0x06005E17 RID: 24087 RVA: 0x000E4189 File Offset: 0x000E2389
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D64 RID: 7524
-		// (get) Token: 0x06005846 RID: 22598 RVA: 0x000D7778 File Offset: 0x000D5978
-		// (set) Token: 0x06005847 RID: 22599 RVA: 0x000D77D9 File Offset: 0x000D59D9
+		// Token: 0x17001F09 RID: 7945
+		// (get) Token: 0x06005E18 RID: 24088 RVA: 0x000E41A0 File Offset: 0x000E23A0
+		// (set) Token: 0x06005E19 RID: 24089 RVA: 0x000E4201 File Offset: 0x000E2401
 		public virtual IRhythmSpaceshipConditionStepInteract Step
 		{
 			get
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400354F RID: 13647
+		// Token: 0x0400387F RID: 14463
 		[Nullable(2)]
 		protected new IFinishRhythmSpaceshipCondition FbInstance;
 
-		// Token: 0x04003550 RID: 13648
+		// Token: 0x04003880 RID: 14464
 		[Nullable(2)]
 		protected new IFinishRhythmSpaceshipCondition_SetValue PocoInterface;
 
-		// Token: 0x04003551 RID: 13649
+		// Token: 0x04003881 RID: 14465
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003552 RID: 13650
+		// Token: 0x04003882 RID: 14466
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003553 RID: 13651
+		// Token: 0x04003883 RID: 14467
 		private IRhythmSpaceshipConditionStepInteract _StepCache;
 
-		// Token: 0x04003554 RID: 13652
+		// Token: 0x04003884 RID: 14468
 		private bool _StepInited;
 	}
 }

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A48 RID: 6728
+// Token: 0x02000F07 RID: 3847
 [NullableContext(1)]
 [Nullable(0)]
 internal class PluginPanel : UiPanelBase
 {
-	// Token: 0x0600C606 RID: 50694 RVA: 0x002CFCAC File Offset: 0x002CDEAC
+	// Token: 0x06009A16 RID: 39446 RVA: 0x002DADA8 File Offset: 0x002D8FA8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ internal class PluginPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C607 RID: 50695 RVA: 0x002CFD8C File Offset: 0x002CDF8C
+	// Token: 0x06009A17 RID: 39447 RVA: 0x002DAE88 File Offset: 0x002D9088
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PluginPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ internal class PluginPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C608 RID: 50696 RVA: 0x002CFDD0 File Offset: 0x002CDFD0
+	// Token: 0x06009A18 RID: 39448 RVA: 0x002DAECC File Offset: 0x002D90CC
 	public void Refresh()
 	{
 		int dangoId = this.ViewModel.GetDangoId();
@@ -52,7 +52,7 @@ internal class PluginPanel : UiPanelBase
 		this.RefreshPlugin(dangoAbyssRoleData);
 	}
 
-	// Token: 0x0600C609 RID: 50697 RVA: 0x002CFE00 File Offset: 0x002CE000
+	// Token: 0x06009A19 RID: 39449 RVA: 0x002DAEFC File Offset: 0x002D90FC
 	private void RefreshPlugin(AbyssDangoRoleData data)
 	{
 		foreach (KeyValuePair<int, DangoAbyssPluginItem> keyValuePair in this.PluginMap)
@@ -64,10 +64,10 @@ internal class PluginPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005B44 RID: 23364
+	// Token: 0x04005C13 RID: 23571
 	private readonly Dictionary<int, DangoAbyssPluginItem> PluginMap = new Dictionary<int, DangoAbyssPluginItem>();
 
-	// Token: 0x04005B45 RID: 23365
+	// Token: 0x04005C14 RID: 23572
 	[Nullable(2)]
 	public PluginEquipViewModel ViewModel;
 }

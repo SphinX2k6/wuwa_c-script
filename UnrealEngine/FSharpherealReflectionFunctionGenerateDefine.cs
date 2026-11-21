@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200276D RID: 10093
+	// Token: 0x02000813 RID: 2067
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Sharphereal.SharpherealReflectionFunctionGenerateDefine")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 80)]
 	public class FSharpherealReflectionFunctionGenerateDefine : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06025BC6 RID: 154566 RVA: 0x00393447 File Offset: 0x00391647
+		// Token: 0x0600B576 RID: 46454 RVA: 0x00120CA9 File Offset: 0x0011EEA9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealReflectionFunctionGenerateDefine._ScriptStructPtr != 0) ? FSharpherealReflectionFunctionGenerateDefine._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Sharphereal.SharpherealReflectionFunctionGenerateDefine", ref FSharpherealReflectionFunctionGenerateDefine._ScriptStructPtr);
 		}
 
-		// Token: 0x17009146 RID: 37190
-		// (get) Token: 0x06025BC7 RID: 154567 RVA: 0x0039346B File Offset: 0x0039166B
-		// (set) Token: 0x06025BC8 RID: 154568 RVA: 0x0039347F File Offset: 0x0039167F
+		// Token: 0x170021F8 RID: 8696
+		// (get) Token: 0x0600B577 RID: 46455 RVA: 0x00120CCD File Offset: 0x0011EECD
+		// (set) Token: 0x0600B578 RID: 46456 RVA: 0x00120CE1 File Offset: 0x0011EEE1
 		public unsafe string Name
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009147 RID: 37191
-		// (get) Token: 0x06025BC9 RID: 154569 RVA: 0x00393494 File Offset: 0x00391694
-		// (set) Token: 0x06025BCA RID: 154570 RVA: 0x003934A4 File Offset: 0x003916A4
+		// Token: 0x170021F9 RID: 8697
+		// (get) Token: 0x0600B579 RID: 46457 RVA: 0x00120CF6 File Offset: 0x0011EEF6
+		// (set) Token: 0x0600B57A RID: 46458 RVA: 0x00120D06 File Offset: 0x0011EF06
 		public unsafe uint FuncFlags
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009148 RID: 37192
-		// (get) Token: 0x06025BCB RID: 154571 RVA: 0x003934B8 File Offset: 0x003916B8
-		// (set) Token: 0x06025BCC RID: 154572 RVA: 0x003934FB File Offset: 0x003916FB
+		// Token: 0x170021FA RID: 8698
+		// (get) Token: 0x0600B57B RID: 46459 RVA: 0x00120D18 File Offset: 0x0011EF18
+		// (set) Token: 0x0600B57C RID: 46460 RVA: 0x00120D5B File Offset: 0x0011EF5B
 		public FSharpherealReflectionFunctionParamGenerateDefine ReturnType
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009149 RID: 37193
-		// (get) Token: 0x06025BCD RID: 154573 RVA: 0x0039351C File Offset: 0x0039171C
-		// (set) Token: 0x06025BCE RID: 154574 RVA: 0x0039355F File Offset: 0x0039175F
+		// Token: 0x170021FB RID: 8699
+		// (get) Token: 0x0600B57D RID: 46461 RVA: 0x00120D7C File Offset: 0x0011EF7C
+		// (set) Token: 0x0600B57E RID: 46462 RVA: 0x00120DBF File Offset: 0x0011EFBF
 		public TArray<FSharpherealReflectionFunctionParamGenerateDefine> ParamType
 		{
 			get
@@ -91,72 +91,63 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025BCF RID: 154575 RVA: 0x0039356D File Offset: 0x0039176D
+		// Token: 0x0600B57F RID: 46463 RVA: 0x00120DCD File Offset: 0x0011EFCD
 		public FSharpherealReflectionFunctionGenerateDefine()
 		{
 		}
 
-		// Token: 0x06025BD0 RID: 154576 RVA: 0x00393575 File Offset: 0x00391775
-		public FSharpherealReflectionFunctionGenerateDefine(string Name, uint FuncFlags, FSharpherealReflectionFunctionParamGenerateDefine ReturnType, TArray<FSharpherealReflectionFunctionParamGenerateDefine> ParamType)
-		{
-			this.Name = Name;
-			this.FuncFlags = FuncFlags;
-			this.ReturnType = ReturnType;
-			this.ParamType = ParamType;
-		}
-
-		// Token: 0x06025BD1 RID: 154577 RVA: 0x0039359A File Offset: 0x0039179A
+		// Token: 0x0600B580 RID: 46464 RVA: 0x00120DD5 File Offset: 0x0011EFD5
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealReflectionFunctionGenerateDefine.StaticStruct();
 		}
 
-		// Token: 0x06025BD2 RID: 154578 RVA: 0x003935A6 File Offset: 0x003917A6
+		// Token: 0x0600B581 RID: 46465 RVA: 0x00120DE1 File Offset: 0x0011EFE1
 		[NullableContext(2)]
 		public FSharpherealReflectionFunctionGenerateDefine(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025BD3 RID: 154579 RVA: 0x003935B0 File Offset: 0x003917B0
+		// Token: 0x0600B582 RID: 46466 RVA: 0x00120DEB File Offset: 0x0011EFEB
 		public FSharpherealReflectionFunctionGenerateDefine(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025BD4 RID: 154580 RVA: 0x003935BB File Offset: 0x003917BB
+		// Token: 0x0600B583 RID: 46467 RVA: 0x00120DF6 File Offset: 0x0011EFF6
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealReflectionFunctionGenerateDefine(Pointer, false, true);
 		}
 
-		// Token: 0x06025BD5 RID: 154581 RVA: 0x003935C5 File Offset: 0x003917C5
+		// Token: 0x0600B584 RID: 46468 RVA: 0x00120E00 File Offset: 0x0011F000
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealReflectionFunctionGenerateDefine(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040148A9 RID: 84137
+		// Token: 0x040051E6 RID: 20966
 		public const string __ObjectPath = "/Script/Sharphereal.SharpherealReflectionFunctionGenerateDefine";
 
-		// Token: 0x040148AA RID: 84138
+		// Token: 0x040051E7 RID: 20967
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040148AB RID: 84139
+		// Token: 0x040051E8 RID: 20968
 		internal static int __PropertyOffset_Name;
 
-		// Token: 0x040148AC RID: 84140
+		// Token: 0x040051E9 RID: 20969
 		internal static int __PropertyOffset_FuncFlags;
 
-		// Token: 0x040148AD RID: 84141
+		// Token: 0x040051EA RID: 20970
 		internal static int __PropertyOffset_ReturnType;
 
-		// Token: 0x040148AE RID: 84142
+		// Token: 0x040051EB RID: 20971
 		[Nullable(2)]
 		private FSharpherealReflectionFunctionParamGenerateDefine _ReturnType;
 
-		// Token: 0x040148AF RID: 84143
+		// Token: 0x040051EC RID: 20972
 		internal static int __PropertyOffset_ParamType;
 
-		// Token: 0x040148B0 RID: 84144
+		// Token: 0x040051ED RID: 20973
 		[Nullable(new byte[]
 		{
 			2,

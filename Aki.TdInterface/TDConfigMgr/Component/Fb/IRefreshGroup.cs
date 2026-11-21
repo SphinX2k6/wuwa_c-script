@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A5F RID: 2655
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B28 RID: 2856
 	public class IRefreshGroup : IComponentBase
 	{
-		// Token: 0x06003D22 RID: 15650 RVA: 0x0009D211 File Offset: 0x0009B411
+		// Token: 0x06004142 RID: 16706 RVA: 0x000A6689 File Offset: 0x000A4889
 		public static IRefreshGroup Create(IRefreshGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E21 RID: 3617
-		// (get) Token: 0x06003D23 RID: 15651 RVA: 0x0009D230 File Offset: 0x0009B430
+		// Token: 0x17000EED RID: 3821
+		// (get) Token: 0x06004143 RID: 16707 RVA: 0x000A66A8 File Offset: 0x000A48A8
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E22 RID: 3618
-		// (get) Token: 0x06003D24 RID: 15652 RVA: 0x0009D268 File Offset: 0x0009B468
+		// Token: 0x17000EEE RID: 3822
+		// (get) Token: 0x06004144 RID: 16708 RVA: 0x000A66E0 File Offset: 0x000A48E0
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E23 RID: 3619
-		// (get) Token: 0x06003D25 RID: 15653 RVA: 0x0009D27E File Offset: 0x0009B47E
+		// Token: 0x17000EEF RID: 3823
+		// (get) Token: 0x06004145 RID: 16709 RVA: 0x000A66F6 File Offset: 0x000A48F6
 		public virtual int RefreshInterval
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E24 RID: 3620
-		// (get) Token: 0x06003D26 RID: 15654 RVA: 0x0009D28B File Offset: 0x0009B48B
+		// Token: 0x17000EF0 RID: 3824
+		// (get) Token: 0x06004146 RID: 16710 RVA: 0x000A6703 File Offset: 0x000A4903
 		public virtual bool DelayRefresh
 		{
 			get
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E25 RID: 3621
-		// (get) Token: 0x06003D27 RID: 15655 RVA: 0x0009D298 File Offset: 0x0009B498
+		// Token: 0x17000EF1 RID: 3825
+		// (get) Token: 0x06004147 RID: 16711 RVA: 0x000A6710 File Offset: 0x000A4910
 		public virtual List<int> EntityIdList
 		{
 			get
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E26 RID: 3622
-		// (get) Token: 0x06003D28 RID: 15656 RVA: 0x0009D2FC File Offset: 0x0009B4FC
+		// Token: 0x17000EF2 RID: 3826
+		// (get) Token: 0x06004148 RID: 16712 RVA: 0x000A6774 File Offset: 0x000A4974
 		public virtual ICylinder IsUesCylinder
 		{
 			get
@@ -104,20 +102,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400220E RID: 8718
+		// Token: 0x04002425 RID: 9253
 		private IRefreshGroup Instance;
 
-		// Token: 0x0400220F RID: 8719
+		// Token: 0x04002426 RID: 9254
 		private List<int> _EntityIdListCache;
 
-		// Token: 0x04002210 RID: 8720
+		// Token: 0x04002427 RID: 9255
 		private bool _EntityIdListInited;
 
-		// Token: 0x04002211 RID: 8721
+		// Token: 0x04002428 RID: 9256
 		[Nullable(2)]
 		private ICylinder _IsUesCylinderCache;
 
-		// Token: 0x04002212 RID: 8722
+		// Token: 0x04002429 RID: 9257
 		private bool _IsUesCylinderInited;
 	}
 }

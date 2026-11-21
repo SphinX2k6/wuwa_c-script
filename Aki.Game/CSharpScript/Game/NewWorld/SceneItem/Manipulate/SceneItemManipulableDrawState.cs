@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E6 RID: 29158
+	// Token: 0x0200629B RID: 25243
 	public class SceneItemManipulableDrawState : SceneItemManipulableBaseState
 	{
-		// Token: 0x060475E0 RID: 292320 RVA: 0x01226060 File Offset: 0x01224260
+		// Token: 0x0603CEE2 RID: 249570 RVA: 0x0117FE98 File Offset: 0x0117E098
 		[NullableContext(1)]
 		public SceneItemManipulableDrawState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SubCameraTag = new FGameplayTag?(subCameraTag);
 		}
 
-		// Token: 0x060475E1 RID: 292321 RVA: 0x012260AC File Offset: 0x012242AC
+		// Token: 0x0603CEE3 RID: 249571 RVA: 0x0117FEE4 File Offset: 0x0117E0E4
 		[NullableContext(1)]
 		public void SetEnterCallback(Action callback)
 		{
 			this.EnterCallback = callback;
 		}
 
-		// Token: 0x060475E2 RID: 292322 RVA: 0x012260B8 File Offset: 0x012242B8
+		// Token: 0x0603CEE4 RID: 249572 RVA: 0x0117FEF0 File Offset: 0x0117E0F0
 		protected override void OnEnter()
 		{
 			this.SceneItem.NeedRemoveControllerId = true;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475E3 RID: 292323 RVA: 0x01226224 File Offset: 0x01224424
+		// Token: 0x0603CEE5 RID: 249573 RVA: 0x0118005C File Offset: 0x0117E25C
 		private void EnterInternal()
 		{
 			SceneItemOutletComponent activatedOutlet = this.SceneItem.ActivatedOutlet;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475E4 RID: 292324 RVA: 0x01226308 File Offset: 0x01224508
+		// Token: 0x0603CEE6 RID: 249574 RVA: 0x01180140 File Offset: 0x0117E340
 		protected override void OnTick(float delta)
 		{
 			if (this.SceneItem.PlayingMatchSequence)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.SetActorLocationAndRotation(targetLocationAndRotation.Item1, targetLocationAndRotation.Item2, "[ManipulableDrawState.Tick]", true, null);
 		}
 
-		// Token: 0x060475E5 RID: 292325 RVA: 0x01226364 File Offset: 0x01224564
+		// Token: 0x0603CEE7 RID: 249575 RVA: 0x0118019C File Offset: 0x0117E39C
 		protected override void OnExit()
 		{
 			base.StopCameraShake();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			EventSystem.Instance.Emit<FGameplayTag>(EEventName.RemoveSubCameraTag, this.SubCameraTag.Value);
 		}
 
-		// Token: 0x060475E6 RID: 292326 RVA: 0x01226394 File Offset: 0x01224594
+		// Token: 0x0603CEE8 RID: 249576 RVA: 0x011801CC File Offset: 0x0117E3CC
 		[return: TupleElementNames(new string[]
 		{
 			"Loc",
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return new ValueTuple<FVectorDouble, FRotator>(fvectorDouble, item3);
 		}
 
-		// Token: 0x060475E7 RID: 292327 RVA: 0x0122666C File Offset: 0x0122486C
+		// Token: 0x0603CEE9 RID: 249577 RVA: 0x011804A4 File Offset: 0x0117E6A4
 		[return: TupleElementNames(new string[]
 		{
 			"Loc",
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return new ValueTuple<FVectorDouble, FRotator>(item, this.ApplyJigsawRotation(rot));
 		}
 
-		// Token: 0x060475E8 RID: 292328 RVA: 0x01226704 File Offset: 0x01224904
+		// Token: 0x0603CEEA RID: 249578 RVA: 0x0118053C File Offset: 0x0117E73C
 		[return: TupleElementNames(new string[]
 		{
 			"Loc",
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return null;
 		}
 
-		// Token: 0x060475E9 RID: 292329 RVA: 0x012267D0 File Offset: 0x012249D0
+		// Token: 0x0603CEEB RID: 249579 RVA: 0x01180608 File Offset: 0x0117E808
 		private FRotator ApplyJigsawRotation(FRotator rot)
 		{
 			SceneItemJigsawItemComponent component = this.SceneItem.Entity.GetComponent<SceneItemJigsawItemComponent>();
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return rot;
 		}
 
-		// Token: 0x060475EA RID: 292330 RVA: 0x01226820 File Offset: 0x01224A20
+		// Token: 0x0603CEEC RID: 249580 RVA: 0x01180658 File Offset: 0x0117E858
 		[NullableContext(1)]
 		private List<Vector> GetMoveTrackWithPortal(FVectorDouble startLoc, FVectorDouble endLoc)
 		{
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return list;
 		}
 
-		// Token: 0x0402586A RID: 153706
+		// Token: 0x040204D9 RID: 132313
 		[Nullable(new byte[]
 		{
 			0,
@@ -316,23 +316,23 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		private readonly TSubclassOf<UCameraShakeBase>? CameraShake;
 
-		// Token: 0x0402586B RID: 153707
+		// Token: 0x040204DA RID: 132314
 		[Nullable(2)]
 		private readonly UKuroForceFeedbackEffect GamepadShake;
 
-		// Token: 0x0402586C RID: 153708
+		// Token: 0x040204DB RID: 132315
 		private FVectorDouble? StartLoc;
 
-		// Token: 0x0402586D RID: 153709
+		// Token: 0x040204DC RID: 132316
 		private FRotator? StartRot;
 
-		// Token: 0x0402586E RID: 153710
+		// Token: 0x040204DD RID: 132317
 		private readonly FGameplayTag? SubCameraTag;
 
-		// Token: 0x0402586F RID: 153711
+		// Token: 0x040204DE RID: 132318
 		private bool PassedThroughPortal;
 
-		// Token: 0x04025870 RID: 153712
+		// Token: 0x040204DF RID: 132319
 		private readonly FName MechascoutManipulateAttachSocket = FNameUtil.GetDynamicFName("WeaponProp05").Value;
 	}
 }

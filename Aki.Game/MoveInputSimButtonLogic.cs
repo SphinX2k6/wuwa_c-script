@@ -6,12 +6,12 @@ using AkiClient.Game.Aki.Character.Input.Enum;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Input;
 
-// Token: 0x0200306D RID: 12397
+// Token: 0x020025C4 RID: 9668
 [NullableContext(1)]
 [Nullable(0)]
 public class MoveInputSimButtonLogic
 {
-	// Token: 0x0601A6B4 RID: 108212 RVA: 0x0070B620 File Offset: 0x00709820
+	// Token: 0x0601806F RID: 98415 RVA: 0x00731E18 File Offset: 0x00730018
 	public void Init(List<InputEvent> hdInputEvents)
 	{
 		if (this.Inited)
@@ -31,7 +31,7 @@ public class MoveInputSimButtonLogic
 		this.CheckYawForKeyboard = (ConfigCommonParamById.GetFloatConfig("MoveInputSimButtonEvent_CheckYawForKeyboard") ?? this.CheckYawForKeyboard);
 	}
 
-	// Token: 0x0601A6B5 RID: 108213 RVA: 0x0070B708 File Offset: 0x00709908
+	// Token: 0x06018070 RID: 98416 RVA: 0x00731F00 File Offset: 0x00730100
 	public void Reset()
 	{
 		this.FirstFrame = true;
@@ -40,7 +40,7 @@ public class MoveInputSimButtonLogic
 		this.IsBothZero = false;
 	}
 
-	// Token: 0x0601A6B6 RID: 108214 RVA: 0x0070B730 File Offset: 0x00709930
+	// Token: 0x06018071 RID: 98417 RVA: 0x00731F28 File Offset: 0x00730128
 	private void EmitByAxisValue(float axisValue, float yaw, float time)
 	{
 		if (!this.Inited)
@@ -84,7 +84,7 @@ public class MoveInputSimButtonLogic
 		}
 	}
 
-	// Token: 0x0601A6B7 RID: 108215 RVA: 0x0070B890 File Offset: 0x00709A90
+	// Token: 0x06018072 RID: 98418 RVA: 0x00732088 File Offset: 0x00730288
 	public void EmitByAxisMap(Dictionary<EInputAxis, float> axisValues)
 	{
 		float num;
@@ -108,42 +108,42 @@ public class MoveInputSimButtonLogic
 		this.EmitByAxisValue(axisValue, (float)num3, (float)Time.Instance.WorldTimeSeconds);
 	}
 
-	// Token: 0x0400CA6F RID: 51823
+	// Token: 0x0400CE49 RID: 52809
 	private float CheckAxis = 0.8f;
 
-	// Token: 0x0400CA70 RID: 51824
+	// Token: 0x0400CE4A RID: 52810
 	private float CheckHold = 0.1f;
 
-	// Token: 0x0400CA71 RID: 51825
+	// Token: 0x0400CE4B RID: 52811
 	private float CheckYaw = 22.5f;
 
-	// Token: 0x0400CA72 RID: 51826
+	// Token: 0x0400CE4C RID: 52812
 	private float CheckYawForKeyboard = 50f;
 
-	// Token: 0x0400CA73 RID: 51827
+	// Token: 0x0400CE4D RID: 52813
 	private float YawLimit;
 
-	// Token: 0x0400CA74 RID: 51828
+	// Token: 0x0400CE4E RID: 52814
 	private float PressYaw;
 
-	// Token: 0x0400CA75 RID: 51829
+	// Token: 0x0400CE4F RID: 52815
 	private float LastYaw;
 
-	// Token: 0x0400CA76 RID: 51830
+	// Token: 0x0400CE50 RID: 52816
 	private List<InputEvent> RefInputEvents;
 
-	// Token: 0x0400CA77 RID: 51831
+	// Token: 0x0400CE51 RID: 52817
 	private double PressTime = -1.0;
 
-	// Token: 0x0400CA78 RID: 51832
+	// Token: 0x0400CE52 RID: 52818
 	private bool Inside = true;
 
-	// Token: 0x0400CA79 RID: 51833
+	// Token: 0x0400CE53 RID: 52819
 	private bool Inited;
 
-	// Token: 0x0400CA7A RID: 51834
+	// Token: 0x0400CE54 RID: 52820
 	private bool FirstFrame = true;
 
-	// Token: 0x0400CA7B RID: 51835
+	// Token: 0x0400CE55 RID: 52821
 	private bool IsBothZero;
 }

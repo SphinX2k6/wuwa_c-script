@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001334 RID: 4916
+	// Token: 0x02001484 RID: 5252
 	public class IWordArtDefaultResourceType : IWordArtResourceType
 	{
-		// Token: 0x060070B1 RID: 28849 RVA: 0x0010FE66 File Offset: 0x0010E066
-		[NullableContext(1)]
+		// Token: 0x06007751 RID: 30545 RVA: 0x0011E3D2 File Offset: 0x0011C5D2
 		public static IWordArtDefaultResourceType Create(IWordArtDefaultResourceType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700241C RID: 9244
-		// (get) Token: 0x060070B2 RID: 28850 RVA: 0x0010FE85 File Offset: 0x0010E085
+		// Token: 0x170025EB RID: 9707
+		// (get) Token: 0x06007752 RID: 30546 RVA: 0x0011E3F1 File Offset: 0x0011C5F1
 		public override EWordArtResourceType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700241D RID: 9245
-		// (get) Token: 0x060070B3 RID: 28851 RVA: 0x0010FE94 File Offset: 0x0010E094
+		// Token: 0x170025EC RID: 9708
+		// (get) Token: 0x06007753 RID: 30547 RVA: 0x0011E400 File Offset: 0x0011C600
 		public virtual float? Scale
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004100 RID: 16640
+		// Token: 0x0400447C RID: 17532
 		private IWordArtDefaultResourceType Instance;
 	}
 }

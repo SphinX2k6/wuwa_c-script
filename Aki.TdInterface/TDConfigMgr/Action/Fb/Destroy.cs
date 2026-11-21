@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002678 RID: 9848
+	// Token: 0x02002937 RID: 10551
 	public class Destroy : ActionParams
 	{
-		// Token: 0x0600DCB0 RID: 56496 RVA: 0x0020D2AE File Offset: 0x0020B4AE
-		[NullableContext(1)]
+		// Token: 0x0600EA7C RID: 60028 RVA: 0x002299BE File Offset: 0x00227BBE
 		public static Destroy Create(IDestroy? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004182 RID: 16770
-		// (get) Token: 0x0600DCB1 RID: 56497 RVA: 0x0020D2D0 File Offset: 0x0020B4D0
+		// Token: 0x170044BC RID: 17596
+		// (get) Token: 0x0600EA7D RID: 60029 RVA: 0x002299E0 File Offset: 0x00227BE0
 		public virtual bool? DelayDestroy
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AA8 RID: 31400
+		// Token: 0x0400813F RID: 33087
 		private IDestroy Instance;
 	}
 }

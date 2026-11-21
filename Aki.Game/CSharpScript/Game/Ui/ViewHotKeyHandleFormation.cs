@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200469C RID: 18076
+	// Token: 0x020035CD RID: 13773
 	public class ViewHotKeyHandleFormation : ViewHotKeyHandle
 	{
-		// Token: 0x0602E9D7 RID: 190935 RVA: 0x00ACAF73 File Offset: 0x00AC9173
+		// Token: 0x06023123 RID: 143651 RVA: 0x009F9847 File Offset: 0x009F7A47
 		[NullableContext(1)]
 		public ViewHotKeyHandleFormation(IOpenAndCloseViewHotKey parameters) : base(parameters)
 		{
 		}
 
-		// Token: 0x17007634 RID: 30260
-		// (get) Token: 0x0602E9D8 RID: 190936 RVA: 0x00ACAF7C File Offset: 0x00AC917C
+		// Token: 0x170048F0 RID: 18672
+		// (get) Token: 0x06023124 RID: 143652 RVA: 0x009F9850 File Offset: 0x009F7A50
 		public override EUiViewName? ViewName
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9D9 RID: 190937 RVA: 0x00ACAF9B File Offset: 0x00AC919B
+		// Token: 0x06023125 RID: 143653 RVA: 0x009F986F File Offset: 0x009F7A6F
 		protected override void OnOpenViewImplement()
 		{
 			FormationController.Instance.OpenFormationView((this.ViewParam.Length != 0) ? this.ViewParam : null, null);

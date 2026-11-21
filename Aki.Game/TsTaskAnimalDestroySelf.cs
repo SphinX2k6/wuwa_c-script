@@ -11,30 +11,27 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/Animal/TsTaskAnimalDestroySelf.TsTaskAnimalDestroySelf_C")]
 public class TsTaskAnimalDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600035B RID: 859 RVA: 0x0000FA40 File Offset: 0x0000DC40
+	// Token: 0x0600035B RID: 859 RVA: 0x00010188 File Offset: 0x0000E388
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAnimalDestroySelf) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskAnimalDestroySelf.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600035C RID: 860 RVA: 0x0000FADC File Offset: 0x0000DCDC
+	// Token: 0x0600035C RID: 860 RVA: 0x00010238 File Offset: 0x0000E438
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -67,7 +64,7 @@ public class TsTaskAnimalDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x0600035D RID: 861 RVA: 0x0000FB8A File Offset: 0x0000DD8A
+	// Token: 0x0600035D RID: 861 RVA: 0x000102E6 File Offset: 0x0000E4E6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskAnimalDestroySelf._ClassPtr == IntPtr.Zero)
@@ -77,23 +74,23 @@ public class TsTaskAnimalDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObjec
 		return TsTaskAnimalDestroySelf._ClassPtr;
 	}
 
-	// Token: 0x0600035E RID: 862 RVA: 0x0000FBB0 File Offset: 0x0000DDB0
+	// Token: 0x0600035E RID: 862 RVA: 0x0001030C File Offset: 0x0000E50C
 	public TsTaskAnimalDestroySelf() : this(BuiltinUtils.AllocNativeUObject(TsTaskAnimalDestroySelf.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600035F RID: 863 RVA: 0x0000FBD8 File Offset: 0x0000DDD8
+	// Token: 0x0600035F RID: 863 RVA: 0x00010334 File Offset: 0x0000E534
 	[NullableContext(1)]
 	public TsTaskAnimalDestroySelf(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskAnimalDestroySelf.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000360 RID: 864 RVA: 0x0000FC0B File Offset: 0x0000DE0B
+	// Token: 0x06000360 RID: 864 RVA: 0x00010367 File Offset: 0x0000E567
 	protected TsTaskAnimalDestroySelf(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000361 RID: 865 RVA: 0x0000FC14 File Offset: 0x0000DE14
+	// Token: 0x06000361 RID: 865 RVA: 0x00010370 File Offset: 0x0000E570
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

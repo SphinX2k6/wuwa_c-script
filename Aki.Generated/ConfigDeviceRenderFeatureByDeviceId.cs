@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000206 RID: 518
+	// Token: 0x02000218 RID: 536
 	public class ConfigDeviceRenderFeatureByDeviceId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C27 RID: 3111 RVA: 0x0009E56D File Offset: 0x0009C76D
+		// Token: 0x06000C93 RID: 3219 RVA: 0x000A44A5 File Offset: 0x000A26A5
 		static ConfigDeviceRenderFeatureByDeviceId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDeviceRenderFeatureByDeviceId.CreateStaticDefaultValue), new Action(ConfigDeviceRenderFeatureByDeviceId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C28 RID: 3112 RVA: 0x0009E58C File Offset: 0x0009C78C
+		// Token: 0x06000C94 RID: 3220 RVA: 0x000A44C4 File Offset: 0x000A26C4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDeviceRenderFeatureByDeviceId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C29 RID: 3113 RVA: 0x0009E60B File Offset: 0x0009C80B
+		// Token: 0x06000C95 RID: 3221 RVA: 0x000A4543 File Offset: 0x000A2743
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDeviceRenderFeatureByDeviceId.LogPair = null;
 			ConfigDeviceRenderFeatureByDeviceId.HandleId = 0;
 		}
 
-		// Token: 0x06000C2A RID: 3114 RVA: 0x0009E619 File Offset: 0x0009C819
+		// Token: 0x06000C96 RID: 3222 RVA: 0x000A4551 File Offset: 0x000A2751
 		public static void Init()
 		{
 			ConfigDeviceRenderFeatureByDeviceId.HandleId = ConfigCommon.InitDataStatement(ConfigDeviceRenderFeatureByDeviceId.HandleId, "db_device_render_feature.db", "select BinData from `DeviceRenderFeature` where DeviceId = ?");
 		}
 
-		// Token: 0x06000C2B RID: 3115 RVA: 0x0009E634 File Offset: 0x0009C834
+		// Token: 0x06000C97 RID: 3223 RVA: 0x000A456C File Offset: 0x000A276C
 		[NullableContext(2)]
 		public static IReadOnlyList<DeviceRenderFeature> GetConfigList(int p0DeviceId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000E0E RID: 3598
+		// Token: 0x04000E8C RID: 3724
 		private const string DB = "db_device_render_feature.db";
 
-		// Token: 0x04000E0F RID: 3599
+		// Token: 0x04000E8D RID: 3725
 		private const string FILE = "s.设置机型适配.xlsx";
 
-		// Token: 0x04000E10 RID: 3600
+		// Token: 0x04000E8E RID: 3726
 		private const string TABLE = "DeviceRenderFeature";
 
-		// Token: 0x04000E11 RID: 3601
+		// Token: 0x04000E8F RID: 3727
 		private const string COMMAND = "select BinData from `DeviceRenderFeature` where DeviceId = ?";
 
-		// Token: 0x04000E12 RID: 3602
+		// Token: 0x04000E90 RID: 3728
 		private const string KEY_PREFIX = "DeviceRenderFeatureByDeviceId";
 
-		// Token: 0x04000E13 RID: 3603
+		// Token: 0x04000E91 RID: 3729
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E14 RID: 3604
+		// Token: 0x04000E92 RID: 3730
 		private static int HandleId;
 	}
 }

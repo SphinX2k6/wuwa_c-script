@@ -6,17 +6,17 @@ using CSharpScript.Game;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x020031A0 RID: 12704
+// Token: 0x0200270E RID: 9998
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillZheZhi : SpecialSkillBase
 {
-	// Token: 0x0601B5EB RID: 112107 RVA: 0x0077B128 File Offset: 0x00779328
+	// Token: 0x0601910B RID: 102667 RVA: 0x007A33B4 File Offset: 0x007A15B4
 	public SpecialSkillZheZhi(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B5EC RID: 112108 RVA: 0x0077B160 File Offset: 0x00779360
+	// Token: 0x0601910C RID: 102668 RVA: 0x007A33EC File Offset: 0x007A15EC
 	public unsafe override void OnStart()
 	{
 		this.ZheZhiEntity = this.SpecialSkillComponent.Entity;
@@ -64,13 +64,13 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.IsInit = true;
 	}
 
-	// Token: 0x0601B5ED RID: 112109 RVA: 0x0077B341 File Offset: 0x00779541
+	// Token: 0x0601910D RID: 102669 RVA: 0x007A35CD File Offset: 0x007A17CD
 	public override void OnDisable()
 	{
 		this.ClearSelectTargetState();
 	}
 
-	// Token: 0x0601B5EE RID: 112110 RVA: 0x0077B349 File Offset: 0x00779549
+	// Token: 0x0601910E RID: 102670 RVA: 0x007A35D5 File Offset: 0x007A17D5
 	public override void OnEnd()
 	{
 		this.ClearSelectTargetState();
@@ -79,7 +79,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.IsInit = false;
 	}
 
-	// Token: 0x0601B5EF RID: 112111 RVA: 0x0077B36E File Offset: 0x0077956E
+	// Token: 0x0601910F RID: 102671 RVA: 0x007A35FA File Offset: 0x007A17FA
 	public override void OnTick(float delta)
 	{
 		if (!this.IsInit)
@@ -89,7 +89,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.UpdateTargetHe();
 	}
 
-	// Token: 0x0601B5F0 RID: 112112 RVA: 0x0077B380 File Offset: 0x00779580
+	// Token: 0x06019110 RID: 102672 RVA: 0x007A360C File Offset: 0x007A180C
 	private void UpdateTargetHe()
 	{
 		double num = double.MaxValue;
@@ -151,7 +151,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.UpdateSelectEffect(num9);
 	}
 
-	// Token: 0x0601B5F1 RID: 112113 RVA: 0x0077B594 File Offset: 0x00779794
+	// Token: 0x06019111 RID: 102673 RVA: 0x007A3820 File Offset: 0x007A1A20
 	private void UpdateScreenSize()
 	{
 		if (Global.CharacterController != null)
@@ -160,7 +160,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5F2 RID: 112114 RVA: 0x0077B5B4 File Offset: 0x007797B4
+	// Token: 0x06019112 RID: 102674 RVA: 0x007A3840 File Offset: 0x007A1A40
 	private void UpdateSelectEffect(int newIndex)
 	{
 		EntityHandle entityHandle;
@@ -188,7 +188,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.CurSelectHePos = newIndex;
 	}
 
-	// Token: 0x0601B5F3 RID: 112115 RVA: 0x0077B668 File Offset: 0x00779868
+	// Token: 0x06019113 RID: 102675 RVA: 0x007A38F4 File Offset: 0x007A1AF4
 	private void ClearSelectTargetState()
 	{
 		if (this.CurSelectHePos == 0)
@@ -205,7 +205,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.CurSelectHePos = 0;
 	}
 
-	// Token: 0x0601B5F4 RID: 112116 RVA: 0x0077B6D8 File Offset: 0x007798D8
+	// Token: 0x06019114 RID: 102676 RVA: 0x007A3964 File Offset: 0x007A1B64
 	private void SetMarkCue(EntityHandle targetEntityHandle)
 	{
 		CharacterGameplayCueComponent component = targetEntityHandle.Entity.GetComponent<CharacterGameplayCueComponent>();
@@ -213,7 +213,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.MarkCue = (component.GetCueByHandle((long)this.MarkCueHandle) as GameplayCueEffect);
 	}
 
-	// Token: 0x0601B5F5 RID: 112117 RVA: 0x0077B724 File Offset: 0x00779924
+	// Token: 0x06019115 RID: 102677 RVA: 0x007A39B0 File Offset: 0x007A1BB0
 	private void SetLineCue(EntityHandle targetEntityHandle)
 	{
 		CharacterGameplayCueComponent component = this.ZheZhiEntity.GetComponent<CharacterGameplayCueComponent>();
@@ -223,7 +223,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		}));
 	}
 
-	// Token: 0x0601B5F6 RID: 112118 RVA: 0x0077B768 File Offset: 0x00779968
+	// Token: 0x06019116 RID: 102678 RVA: 0x007A39F4 File Offset: 0x007A1BF4
 	private void UpdateSelectMark()
 	{
 		if (this.MarkCue == null || !EffectSystem.Instance.IsValid(this.MarkCue.EffectViewHandle))
@@ -246,7 +246,7 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5F7 RID: 112119 RVA: 0x0077B7FC File Offset: 0x007799FC
+	// Token: 0x06019117 RID: 102679 RVA: 0x007A3A88 File Offset: 0x007A1C88
 	private void ClearAllCues()
 	{
 		EntityHandle entityHandle;
@@ -269,70 +269,70 @@ public class SpecialSkillZheZhi : SpecialSkillBase
 		this.LineCueHandle = 0;
 	}
 
-	// Token: 0x0400D657 RID: 54871
+	// Token: 0x0400DADA RID: 56026
 	private const int HE_MAX_COUNT = 3;
 
-	// Token: 0x0400D658 RID: 54872
+	// Token: 0x0400DADB RID: 56027
 	private const float HE_ACTIVE_DIS = 3000f;
 
-	// Token: 0x0400D659 RID: 54873
+	// Token: 0x0400DADC RID: 56028
 	private const string BLACKBOARD_KEY = "FlyTargetHe";
 
-	// Token: 0x0400D65A RID: 54874
+	// Token: 0x0400DADD RID: 56029
 	private static readonly int activeTag = GameplayTagDefine.EGameplayTagId["角色.R2T1ZhezhiMd10011.状态.飞鹤可触发"];
 
-	// Token: 0x0400D65B RID: 54875
+	// Token: 0x0400DADE RID: 56030
 	private const long MARK_CUE_ID = 1105001040L;
 
-	// Token: 0x0400D65C RID: 54876
+	// Token: 0x0400DADF RID: 56031
 	private const long LINE_CUE_ID = 1105001041L;
 
-	// Token: 0x0400D65D RID: 54877
+	// Token: 0x0400DAE0 RID: 56032
 	[Nullable(2)]
 	private Entity ZheZhiEntity;
 
-	// Token: 0x0400D65E RID: 54878
+	// Token: 0x0400DAE1 RID: 56033
 	[Nullable(2)]
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400D65F RID: 54879
+	// Token: 0x0400DAE2 RID: 56034
 	private readonly Dictionary<int, EntityHandle> HeEntityMap = new Dictionary<int, EntityHandle>();
 
-	// Token: 0x0400D660 RID: 54880
+	// Token: 0x0400DAE3 RID: 56035
 	private readonly HashSet<EntityHandle> HeInRangeSet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400D661 RID: 54881
+	// Token: 0x0400DAE4 RID: 56036
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400D662 RID: 54882
+	// Token: 0x0400DAE5 RID: 56037
 	[Nullable(2)]
 	private GameplayCueEffect MarkCue;
 
-	// Token: 0x0400D663 RID: 54883
+	// Token: 0x0400DAE6 RID: 56038
 	private int MarkCueHandle;
 
-	// Token: 0x0400D664 RID: 54884
+	// Token: 0x0400DAE7 RID: 56039
 	private bool LastMarkCueVisiblity;
 
-	// Token: 0x0400D665 RID: 54885
+	// Token: 0x0400DAE8 RID: 56040
 	private int LineCueHandle;
 
-	// Token: 0x0400D666 RID: 54886
+	// Token: 0x0400DAE9 RID: 56041
 	private int CurSelectHePos;
 
-	// Token: 0x0400D667 RID: 54887
+	// Token: 0x0400DAEA RID: 56042
 	private bool IsInit;
 
-	// Token: 0x0400D668 RID: 54888
+	// Token: 0x0400DAEB RID: 56043
 	private FVector2D ResultPositionRef = new FVector2D();
 
-	// Token: 0x0400D669 RID: 54889
+	// Token: 0x0400DAEC RID: 56044
 	private readonly Vector2D ViewPortCenter = Vector2D.Create();
 
-	// Token: 0x0400D66A RID: 54890
+	// Token: 0x0400DAED RID: 56045
 	private int SizeX;
 
-	// Token: 0x0400D66B RID: 54891
+	// Token: 0x0400DAEE RID: 56046
 	private int SizeY;
 }

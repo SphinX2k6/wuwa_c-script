@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A88 RID: 2696
+	// Token: 0x02000B5D RID: 2909
 	public class ConfigWeaponSceneInteractById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F44 RID: 16196 RVA: 0x001C0049 File Offset: 0x001BE249
+		// Token: 0x06004442 RID: 17474 RVA: 0x001DF3DD File Offset: 0x001DD5DD
 		static ConfigWeaponSceneInteractById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponSceneInteractById.CreateStaticDefaultValue), new Action(ConfigWeaponSceneInteractById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F45 RID: 16197 RVA: 0x001C0068 File Offset: 0x001BE268
+		// Token: 0x06004443 RID: 17475 RVA: 0x001DF3FC File Offset: 0x001DD5FC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponSceneInteractById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F46 RID: 16198 RVA: 0x001C00E7 File Offset: 0x001BE2E7
+		// Token: 0x06004444 RID: 17476 RVA: 0x001DF47B File Offset: 0x001DD67B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponSceneInteractById.LogPair = null;
 			ConfigWeaponSceneInteractById.HandleId = 0;
 		}
 
-		// Token: 0x06003F47 RID: 16199 RVA: 0x001C00F5 File Offset: 0x001BE2F5
+		// Token: 0x06004445 RID: 17477 RVA: 0x001DF489 File Offset: 0x001DD689
 		public static void Init()
 		{
 			ConfigWeaponSceneInteractById.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponSceneInteractById.HandleId, "db_weapon.db", "select BinData from `WeaponSceneInteract` where Id = ?");
 		}
 
-		// Token: 0x06003F48 RID: 16200 RVA: 0x001C0110 File Offset: 0x001BE310
+		// Token: 0x06004446 RID: 17478 RVA: 0x001DF4A4 File Offset: 0x001DD6A4
 		public static WeaponSceneInteract? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeaponSceneInteractById.HandleId, ConfigWeaponSceneInteractById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WeaponSceneInteract?(rootAsWeaponSceneInteract);
 		}
 
-		// Token: 0x0400499E RID: 18846
+		// Token: 0x04004F71 RID: 20337
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x0400499F RID: 18847
+		// Token: 0x04004F72 RID: 20338
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x040049A0 RID: 18848
+		// Token: 0x04004F73 RID: 20339
 		private const string TABLE = "WeaponSceneInteract";
 
-		// Token: 0x040049A1 RID: 18849
+		// Token: 0x04004F74 RID: 20340
 		private const string COMMAND = "select BinData from `WeaponSceneInteract` where Id = ?";
 
-		// Token: 0x040049A2 RID: 18850
+		// Token: 0x04004F75 RID: 20341
 		private const string KEY_PREFIX = "WeaponSceneInteractById";
 
-		// Token: 0x040049A3 RID: 18851
+		// Token: 0x04004F76 RID: 20342
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040049A4 RID: 18852
+		// Token: 0x04004F77 RID: 20343
 		private static int HandleId;
 	}
 }

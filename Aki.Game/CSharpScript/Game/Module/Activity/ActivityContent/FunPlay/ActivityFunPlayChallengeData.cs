@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 {
-	// Token: 0x02006569 RID: 25961
+	// Token: 0x020054E7 RID: 21735
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityFunPlayChallengeData : ActivityExData
 	{
-		// Token: 0x060410F1 RID: 266481 RVA: 0x00FC484F File Offset: 0x00FC2A4F
+		// Token: 0x06035DB6 RID: 220598 RVA: 0x00F0B833 File Offset: 0x00F09A33
 		public ActivityFunPlayChallengeData(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060410F2 RID: 266482 RVA: 0x00FC486C File Offset: 0x00FC2A6C
+		// Token: 0x06035DB7 RID: 220599 RVA: 0x00F0B850 File Offset: 0x00F09A50
 		public void Phrase(FunPlayChallengeInfo data)
 		{
 			this.ChallengeId = data.ChallengeId;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			base.RefreshActivityRedPoint();
 		}
 
-		// Token: 0x060410F3 RID: 266483 RVA: 0x00FC4988 File Offset: 0x00FC2B88
+		// Token: 0x06035DB8 RID: 220600 RVA: 0x00F0B96C File Offset: 0x00F09B6C
 		public void SetIndex(int index)
 		{
 			this.Index = index;
 		}
 
-		// Token: 0x060410F4 RID: 266484 RVA: 0x00FC4994 File Offset: 0x00FC2B94
+		// Token: 0x06035DB9 RID: 220601 RVA: 0x00F0B978 File Offset: 0x00F09B78
 		public string GetTitle()
 		{
 			if (this.Config == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return this.Config.Value.Title;
 		}
 
-		// Token: 0x060410F5 RID: 266485 RVA: 0x00FC49FC File Offset: 0x00FC2BFC
+		// Token: 0x06035DBA RID: 220602 RVA: 0x00F0B9E0 File Offset: 0x00F09BE0
 		public string GetDesc()
 		{
 			if (this.Config == null)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return this.Config.Value.Desc;
 		}
 
-		// Token: 0x060410F6 RID: 266486 RVA: 0x00FC4A64 File Offset: 0x00FC2C64
+		// Token: 0x06035DBB RID: 220603 RVA: 0x00F0BA48 File Offset: 0x00F09C48
 		public string GetTabTitle()
 		{
 			if (this.Config == null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return this.Config.Value.TabTitle;
 		}
 
-		// Token: 0x060410F7 RID: 266487 RVA: 0x00FC4ACC File Offset: 0x00FC2CCC
+		// Token: 0x06035DBC RID: 220604 RVA: 0x00F0BAB0 File Offset: 0x00F09CB0
 		public string GetBackgroundTexturePath()
 		{
 			if (this.Config == null)
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return this.Config.Value.BackGroundTexture;
 		}
 
-		// Token: 0x060410F8 RID: 266488 RVA: 0x00FC4B33 File Offset: 0x00FC2D33
+		// Token: 0x06035DBD RID: 220605 RVA: 0x00F0BB17 File Offset: 0x00F09D17
 		public bool GetIsUnlock()
 		{
 			return TimeUtil.Instance.GetServerTime() >= (double)this.UnlockTime;
 		}
 
-		// Token: 0x060410F9 RID: 266489 RVA: 0x00FC4B4C File Offset: 0x00FC2D4C
+		// Token: 0x06035DBE RID: 220606 RVA: 0x00F0BB30 File Offset: 0x00F09D30
 		public string GetLeftTimeText()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
@@ -128,25 +128,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return TimeUtil.Instance.GetRemainTimeDataFormat(remainTime).CountDownText ?? string.Empty;
 		}
 
-		// Token: 0x060410FA RID: 266490 RVA: 0x00FC4B95 File Offset: 0x00FC2D95
+		// Token: 0x06035DBF RID: 220607 RVA: 0x00F0BB79 File Offset: 0x00F09D79
 		public bool CheckRewardStatus(FunPlayChallengeRewardStatus status)
 		{
 			return this.RewardStatus == status;
 		}
 
-		// Token: 0x060410FB RID: 266491 RVA: 0x00FC4BA0 File Offset: 0x00FC2DA0
+		// Token: 0x06035DC0 RID: 220608 RVA: 0x00F0BB84 File Offset: 0x00F09D84
 		public List<FunPlaySharpComment> GetSharpComments()
 		{
 			return this.SharpCommentList;
 		}
 
-		// Token: 0x060410FC RID: 266492 RVA: 0x00FC4BA8 File Offset: 0x00FC2DA8
+		// Token: 0x06035DC1 RID: 220609 RVA: 0x00F0BB8C File Offset: 0x00F09D8C
 		public int GetChallengeId()
 		{
 			return this.ChallengeId;
 		}
 
-		// Token: 0x060410FD RID: 266493 RVA: 0x00FC4BB0 File Offset: 0x00FC2DB0
+		// Token: 0x06035DC2 RID: 220610 RVA: 0x00F0BB94 File Offset: 0x00F09D94
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -159,13 +159,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return new ValueTuple<int, int>(localDateTime.Month, localDateTime.Day);
 		}
 
-		// Token: 0x060410FE RID: 266494 RVA: 0x00FC4BE4 File Offset: 0x00FC2DE4
+		// Token: 0x06035DC3 RID: 220611 RVA: 0x00F0BBC8 File Offset: 0x00F09DC8
 		public long GetUnlockTime()
 		{
 			return this.UnlockTime;
 		}
 
-		// Token: 0x060410FF RID: 266495 RVA: 0x00FC4BEC File Offset: 0x00FC2DEC
+		// Token: 0x06035DC4 RID: 220612 RVA: 0x00F0BBD0 File Offset: 0x00F09DD0
 		[NullableContext(2)]
 		public List<TItem> GetPreviewReward()
 		{
@@ -186,19 +186,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			return CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(this.Config.Value.RewardId);
 		}
 
-		// Token: 0x06041100 RID: 266496 RVA: 0x00FC4C70 File Offset: 0x00FC2E70
+		// Token: 0x06035DC5 RID: 220613 RVA: 0x00F0BC54 File Offset: 0x00F09E54
 		public bool GetRedPoint()
 		{
 			return this.GetUnlockRedDot() || this.CheckRewardStatus(FunPlayChallengeRewardStatus.FunPlayCanReward);
 		}
 
-		// Token: 0x06041101 RID: 266497 RVA: 0x00FC4C88 File Offset: 0x00FC2E88
+		// Token: 0x06035DC6 RID: 220614 RVA: 0x00F0BC6C File Offset: 0x00F09E6C
 		private bool GetUnlockRedDot()
 		{
 			return this.GetIsUnlock() && this.GetLockCache() == 1;
 		}
 
-		// Token: 0x06041102 RID: 266498 RVA: 0x00FC4CA0 File Offset: 0x00FC2EA0
+		// Token: 0x06035DC7 RID: 220615 RVA: 0x00F0BC84 File Offset: 0x00F09E84
 		private void SaveUnlockState()
 		{
 			bool isUnlock = this.GetIsUnlock();
@@ -218,13 +218,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}
 		}
 
-		// Token: 0x06041103 RID: 266499 RVA: 0x00FC4CFD File Offset: 0x00FC2EFD
+		// Token: 0x06035DC8 RID: 220616 RVA: 0x00F0BCE1 File Offset: 0x00F09EE1
 		private int GetLockCache()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(this.ActivityId, -1, this.ChallengeId, 10, 0);
 		}
 
-		// Token: 0x06041104 RID: 266500 RVA: 0x00FC4D19 File Offset: 0x00FC2F19
+		// Token: 0x06035DC9 RID: 220617 RVA: 0x00F0BCFD File Offset: 0x00F09EFD
 		public void RefreshUnlockRedDot()
 		{
 			if (this.GetIsUnlock())
@@ -235,31 +235,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}
 		}
 
-		// Token: 0x04021E85 RID: 138885
+		// Token: 0x0401C7B6 RID: 116662
 		private int ChallengeId;
 
-		// Token: 0x04021E86 RID: 138886
+		// Token: 0x0401C7B7 RID: 116663
 		private long UnlockTime;
 
-		// Token: 0x04021E87 RID: 138887
+		// Token: 0x0401C7B8 RID: 116664
 		private FunPlayChallengeRewardStatus RewardStatus;
 
-		// Token: 0x04021E88 RID: 138888
+		// Token: 0x0401C7B9 RID: 116665
 		private FunPlayActivityChallenge? Config;
 
-		// Token: 0x04021E89 RID: 138889
+		// Token: 0x0401C7BA RID: 116666
 		private readonly List<FunPlaySharpComment> SharpCommentList = new List<FunPlaySharpComment>();
 
-		// Token: 0x04021E8A RID: 138890
+		// Token: 0x0401C7BB RID: 116667
 		private long FinishTime;
 
-		// Token: 0x04021E8B RID: 138891
+		// Token: 0x0401C7BC RID: 116668
 		public int Index = -1;
 
-		// Token: 0x04021E8C RID: 138892
+		// Token: 0x0401C7BD RID: 116669
 		private const int CLICKQUESTKEY = 200;
 
-		// Token: 0x04021E8D RID: 138893
+		// Token: 0x0401C7BE RID: 116670
 		private const int LOCKKEY = 10;
 	}
 }

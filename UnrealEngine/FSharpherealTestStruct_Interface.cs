@@ -6,7 +6,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002742 RID: 10050
+	// Token: 0x020007F6 RID: 2038
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,15 +14,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(192, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 192)]
 	public class FSharpherealTestStruct_Interface : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060253DC RID: 152540 RVA: 0x003739A8 File Offset: 0x00371BA8
+		// Token: 0x0600AEBD RID: 44733 RVA: 0x001035C9 File Offset: 0x001017C9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_Interface._ScriptStructPtr != 0) ? FSharpherealTestStruct_Interface._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_Interface", ref FSharpherealTestStruct_Interface._ScriptStructPtr);
 		}
 
-		// Token: 0x17008FCF RID: 36815
-		// (get) Token: 0x060253DD RID: 152541 RVA: 0x003739CC File Offset: 0x00371BCC
-		// (set) Token: 0x060253DE RID: 152542 RVA: 0x003739E0 File Offset: 0x00371BE0
+		// Token: 0x170020B7 RID: 8375
+		// (get) Token: 0x0600AEBE RID: 44734 RVA: 0x001035ED File Offset: 0x001017ED
+		// (set) Token: 0x0600AEBF RID: 44735 RVA: 0x00103601 File Offset: 0x00101801
 		public unsafe FScriptInterface ScriptInterface
 		{
 			get
@@ -35,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD0 RID: 36816
-		// (get) Token: 0x060253DF RID: 152543 RVA: 0x003739F5 File Offset: 0x00371BF5
-		// (set) Token: 0x060253E0 RID: 152544 RVA: 0x00373A0F File Offset: 0x00371C0F
+		// Token: 0x170020B8 RID: 8376
+		// (get) Token: 0x0600AEC0 RID: 44736 RVA: 0x00103616 File Offset: 0x00101816
+		// (set) Token: 0x0600AEC1 RID: 44737 RVA: 0x00103630 File Offset: 0x00101830
 		[Nullable(2)]
 		public unsafe ISharpherealTestInterface Interface
 		{
@@ -53,9 +53,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD1 RID: 36817
-		// (get) Token: 0x060253E1 RID: 152545 RVA: 0x00373A35 File Offset: 0x00371C35
-		// (set) Token: 0x060253E2 RID: 152546 RVA: 0x00373A4F File Offset: 0x00371C4F
+		// Token: 0x170020B9 RID: 8377
+		// (get) Token: 0x0600AEC2 RID: 44738 RVA: 0x00103656 File Offset: 0x00101856
+		// (set) Token: 0x0600AEC3 RID: 44739 RVA: 0x00103670 File Offset: 0x00101870
 		[Nullable(2)]
 		public unsafe ISharpherealTestInterface2 Interface2
 		{
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD2 RID: 36818
-		// (get) Token: 0x060253E3 RID: 152547 RVA: 0x00373A78 File Offset: 0x00371C78
-		// (set) Token: 0x060253E4 RID: 152548 RVA: 0x00373ABB File Offset: 0x00371CBB
+		// Token: 0x170020BA RID: 8378
+		// (get) Token: 0x0600AEC4 RID: 44740 RVA: 0x00103698 File Offset: 0x00101898
+		// (set) Token: 0x0600AEC5 RID: 44741 RVA: 0x001036DB File Offset: 0x001018DB
 		public TArray<FScriptInterface> ScriptInterfaceArray
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD3 RID: 36819
-		// (get) Token: 0x060253E5 RID: 152549 RVA: 0x00373ACC File Offset: 0x00371CCC
-		// (set) Token: 0x060253E6 RID: 152550 RVA: 0x00373B0F File Offset: 0x00371D0F
+		// Token: 0x170020BB RID: 8379
+		// (get) Token: 0x0600AEC6 RID: 44742 RVA: 0x001036EC File Offset: 0x001018EC
+		// (set) Token: 0x0600AEC7 RID: 44743 RVA: 0x0010372F File Offset: 0x0010192F
 		public TArray<ISharpherealTestInterface> InterfaceArray
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD4 RID: 36820
-		// (get) Token: 0x060253E7 RID: 152551 RVA: 0x00373B20 File Offset: 0x00371D20
-		// (set) Token: 0x060253E8 RID: 152552 RVA: 0x00373B63 File Offset: 0x00371D63
+		// Token: 0x170020BC RID: 8380
+		// (get) Token: 0x0600AEC8 RID: 44744 RVA: 0x00103740 File Offset: 0x00101940
+		// (set) Token: 0x0600AEC9 RID: 44745 RVA: 0x00103783 File Offset: 0x00101983
 		public TArray<ISharpherealTestInterface2> Interface2Array
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD5 RID: 36821
-		// (get) Token: 0x060253E9 RID: 152553 RVA: 0x00373B74 File Offset: 0x00371D74
-		// (set) Token: 0x060253EA RID: 152554 RVA: 0x00373BB8 File Offset: 0x00371DB8
+		// Token: 0x170020BD RID: 8381
+		// (get) Token: 0x0600AECA RID: 44746 RVA: 0x00103794 File Offset: 0x00101994
+		// (set) Token: 0x0600AECB RID: 44747 RVA: 0x001037D8 File Offset: 0x001019D8
 		public TFixedArray<FScriptInterface> ScriptInterfaceFixedArray
 		{
 			get
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD6 RID: 36822
-		// (get) Token: 0x060253EB RID: 152555 RVA: 0x00373BC8 File Offset: 0x00371DC8
-		// (set) Token: 0x060253EC RID: 152556 RVA: 0x00373C0C File Offset: 0x00371E0C
+		// Token: 0x170020BE RID: 8382
+		// (get) Token: 0x0600AECC RID: 44748 RVA: 0x001037E8 File Offset: 0x001019E8
+		// (set) Token: 0x0600AECD RID: 44749 RVA: 0x0010382C File Offset: 0x00101A2C
 		public TFixedArray<ISharpherealTestInterface> InterfaceFixedArray
 		{
 			get
@@ -176,9 +176,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FD7 RID: 36823
-		// (get) Token: 0x060253ED RID: 152557 RVA: 0x00373C1C File Offset: 0x00371E1C
-		// (set) Token: 0x060253EE RID: 152558 RVA: 0x00373C60 File Offset: 0x00371E60
+		// Token: 0x170020BF RID: 8383
+		// (get) Token: 0x0600AECE RID: 44750 RVA: 0x0010383C File Offset: 0x00101A3C
+		// (set) Token: 0x0600AECF RID: 44751 RVA: 0x00103880 File Offset: 0x00101A80
 		public TFixedArray<ISharpherealTestInterface2> Interface2FixedArray
 		{
 			get
@@ -197,80 +197,66 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060253EF RID: 152559 RVA: 0x00373C6E File Offset: 0x00371E6E
+		// Token: 0x0600AED0 RID: 44752 RVA: 0x0010388E File Offset: 0x00101A8E
 		public FSharpherealTestStruct_Interface()
 		{
 		}
 
-		// Token: 0x060253F0 RID: 152560 RVA: 0x00373C78 File Offset: 0x00371E78
-		public FSharpherealTestStruct_Interface(FScriptInterface ScriptInterface, ISharpherealTestInterface Interface, ISharpherealTestInterface2 Interface2, TArray<FScriptInterface> ScriptInterfaceArray, TArray<ISharpherealTestInterface> InterfaceArray, TArray<ISharpherealTestInterface2> Interface2Array, TFixedArray<FScriptInterface> ScriptInterfaceFixedArray, TFixedArray<ISharpherealTestInterface> InterfaceFixedArray, TFixedArray<ISharpherealTestInterface2> Interface2FixedArray)
-		{
-			this.ScriptInterface = ScriptInterface;
-			this.Interface = Interface;
-			this.Interface2 = Interface2;
-			this.ScriptInterfaceArray = ScriptInterfaceArray;
-			this.InterfaceArray = InterfaceArray;
-			this.Interface2Array = Interface2Array;
-			this.ScriptInterfaceFixedArray = ScriptInterfaceFixedArray;
-			this.InterfaceFixedArray = InterfaceFixedArray;
-			this.Interface2FixedArray = Interface2FixedArray;
-		}
-
-		// Token: 0x060253F1 RID: 152561 RVA: 0x00373CD0 File Offset: 0x00371ED0
+		// Token: 0x0600AED1 RID: 44753 RVA: 0x00103896 File Offset: 0x00101A96
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_Interface.StaticStruct();
 		}
 
-		// Token: 0x060253F2 RID: 152562 RVA: 0x00373CDC File Offset: 0x00371EDC
+		// Token: 0x0600AED2 RID: 44754 RVA: 0x001038A2 File Offset: 0x00101AA2
 		[NullableContext(2)]
 		public FSharpherealTestStruct_Interface(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060253F3 RID: 152563 RVA: 0x00373CE6 File Offset: 0x00371EE6
+		// Token: 0x0600AED3 RID: 44755 RVA: 0x001038AC File Offset: 0x00101AAC
 		public FSharpherealTestStruct_Interface(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060253F4 RID: 152564 RVA: 0x00373CF1 File Offset: 0x00371EF1
+		// Token: 0x0600AED4 RID: 44756 RVA: 0x001038B7 File Offset: 0x00101AB7
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_Interface(Pointer, false, true);
 		}
 
-		// Token: 0x060253F5 RID: 152565 RVA: 0x00373CFB File Offset: 0x00371EFB
+		// Token: 0x0600AED5 RID: 44757 RVA: 0x001038C1 File Offset: 0x00101AC1
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_Interface(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014165 RID: 82277
+		// Token: 0x04004BC4 RID: 19396
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_Interface";
 
-		// Token: 0x04014166 RID: 82278
+		// Token: 0x04004BC5 RID: 19397
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014167 RID: 82279
+		// Token: 0x04004BC6 RID: 19398
 		internal static int __PropertyOffset_ScriptInterface;
 
-		// Token: 0x04014168 RID: 82280
+		// Token: 0x04004BC7 RID: 19399
 		internal static int __PropertyOffset_Interface;
 
-		// Token: 0x04014169 RID: 82281
+		// Token: 0x04004BC8 RID: 19400
 		internal static int __PropertyOffset_Interface2;
 
-		// Token: 0x0401416A RID: 82282
+		// Token: 0x04004BC9 RID: 19401
 		internal static int __PropertyOffset_ScriptInterfaceArray;
 
-		// Token: 0x0401416B RID: 82283
+		// Token: 0x04004BCA RID: 19402
 		[Nullable(2)]
 		private TArray<FScriptInterface> _ScriptInterfaceArray;
 
-		// Token: 0x0401416C RID: 82284
+		// Token: 0x04004BCB RID: 19403
 		internal static int __PropertyOffset_InterfaceArray;
 
-		// Token: 0x0401416D RID: 82285
+		// Token: 0x04004BCC RID: 19404
 		[Nullable(new byte[]
 		{
 			2,
@@ -278,10 +264,10 @@ namespace UnrealEngine
 		})]
 		private TArray<ISharpherealTestInterface> _InterfaceArray;
 
-		// Token: 0x0401416E RID: 82286
+		// Token: 0x04004BCD RID: 19405
 		internal static int __PropertyOffset_Interface2Array;
 
-		// Token: 0x0401416F RID: 82287
+		// Token: 0x04004BCE RID: 19406
 		[Nullable(new byte[]
 		{
 			2,
@@ -289,17 +275,17 @@ namespace UnrealEngine
 		})]
 		private TArray<ISharpherealTestInterface2> _Interface2Array;
 
-		// Token: 0x04014170 RID: 82288
+		// Token: 0x04004BCF RID: 19407
 		internal static int __PropertyOffset_ScriptInterfaceFixedArray;
 
-		// Token: 0x04014171 RID: 82289
+		// Token: 0x04004BD0 RID: 19408
 		[Nullable(2)]
 		private TFixedArray<FScriptInterface> _ScriptInterfaceFixedArray;
 
-		// Token: 0x04014172 RID: 82290
+		// Token: 0x04004BD1 RID: 19409
 		internal static int __PropertyOffset_InterfaceFixedArray;
 
-		// Token: 0x04014173 RID: 82291
+		// Token: 0x04004BD2 RID: 19410
 		[Nullable(new byte[]
 		{
 			2,
@@ -307,10 +293,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<ISharpherealTestInterface> _InterfaceFixedArray;
 
-		// Token: 0x04014174 RID: 82292
+		// Token: 0x04004BD3 RID: 19411
 		internal static int __PropertyOffset_Interface2FixedArray;
 
-		// Token: 0x04014175 RID: 82293
+		// Token: 0x04004BD4 RID: 19412
 		[Nullable(new byte[]
 		{
 			2,

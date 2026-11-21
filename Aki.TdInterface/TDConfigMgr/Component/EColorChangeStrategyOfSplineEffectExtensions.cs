@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200090C RID: 2316
+	// Token: 0x020009B9 RID: 2489
 	public static class EColorChangeStrategyOfSplineEffectExtensions
 	{
-		// Token: 0x06003467 RID: 13415 RVA: 0x00085C14 File Offset: 0x00083E14
+		// Token: 0x060037D3 RID: 14291 RVA: 0x0008D720 File Offset: 0x0008B920
 		public static string ToEnumString(this EColorChangeStrategyOfSplineEffect value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003468 RID: 13416 RVA: 0x00085C3C File Offset: 0x00083E3C
+		// Token: 0x060037D4 RID: 14292 RVA: 0x0008D748 File Offset: 0x0008B948
 		public static EColorChangeStrategyOfSplineEffect FromString(string name)
 		{
 			EColorChangeStrategyOfSplineEffect result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003469 RID: 13417 RVA: 0x00085C65 File Offset: 0x00083E65
+		// Token: 0x060037D5 RID: 14293 RVA: 0x0008D771 File Offset: 0x0008B971
 		public static bool TryFromString(string name, out EColorChangeStrategyOfSplineEffect value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600346A RID: 13418 RVA: 0x00085C8A File Offset: 0x00083E8A
+		// Token: 0x060037D6 RID: 14294 RVA: 0x0008D796 File Offset: 0x0008B996
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600346B RID: 13419 RVA: 0x00085C9A File Offset: 0x00083E9A
+		// Token: 0x060037D7 RID: 14295 RVA: 0x0008D7A6 File Offset: 0x0008B9A6
 		public static EColorChangeStrategyOfSplineEffect[] GetValues()
 		{
 			return new EColorChangeStrategyOfSplineEffect[1];
 		}
 
-		// Token: 0x0600346C RID: 13420 RVA: 0x00085CA2 File Offset: 0x00083EA2
+		// Token: 0x060037D8 RID: 14296 RVA: 0x0008D7AE File Offset: 0x0008B9AE
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -4,13 +4,13 @@ using CSharpScript.Launcher.BaseConfig;
 
 namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 {
-	// Token: 0x020000F2 RID: 242
+	// Token: 0x020000F6 RID: 246
 	[NullableContext(1)]
 	public interface IHotFixNetworkDetectSelectData : IHotFixLayoutData
 	{
-		// Token: 0x170000DA RID: 218
-		// (get) Token: 0x060007F7 RID: 2039
-		// (set) Token: 0x060007F8 RID: 2040
+		// Token: 0x170000E0 RID: 224
+		// (get) Token: 0x0600082B RID: 2091
+		// (set) Token: 0x0600082C RID: 2092
 		ILoginServersData LoginServersData { get; set; }
 	}
 }

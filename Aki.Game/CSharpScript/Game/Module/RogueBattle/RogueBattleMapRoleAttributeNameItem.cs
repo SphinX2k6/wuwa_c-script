@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E77 RID: 20087
+	// Token: 0x02003E40 RID: 15936
 	public class RogueBattleMapRoleAttributeNameItem : UiPanelBase
 	{
-		// Token: 0x06033B24 RID: 211748 RVA: 0x00C1B4C8 File Offset: 0x00C196C8
+		// Token: 0x0602898F RID: 166287 RVA: 0x00B649EC File Offset: 0x00B62BEC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,26 +28,26 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B25 RID: 211749 RVA: 0x00C1B564 File Offset: 0x00C19764
+		// Token: 0x06028990 RID: 166288 RVA: 0x00B64A88 File Offset: 0x00B62C88
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<RougeBattleAttributeStarItem, bool>(base.GetHorizontalLayout(4), new Func<RougeBattleAttributeStarItem>(this.CreateElement), null, false, true);
 		}
 
-		// Token: 0x06033B26 RID: 211750 RVA: 0x00C1B587 File Offset: 0x00C19787
+		// Token: 0x06028991 RID: 166289 RVA: 0x00B64AAB File Offset: 0x00B62CAB
 		[NullableContext(1)]
 		private RougeBattleAttributeStarItem CreateElement()
 		{
 			return new RougeBattleAttributeStarItem();
 		}
 
-		// Token: 0x06033B27 RID: 211751 RVA: 0x00C1B58E File Offset: 0x00C1978E
+		// Token: 0x06028992 RID: 166290 RVA: 0x00B64AB2 File Offset: 0x00B62CB2
 		protected override void OnBeforeDestroy()
 		{
 			this.StarLayout = null;
 		}
 
-		// Token: 0x06033B28 RID: 211752 RVA: 0x00C1B598 File Offset: 0x00C19798
+		// Token: 0x06028993 RID: 166291 RVA: 0x00B64ABC File Offset: 0x00B62CBC
 		public void Refresh(int roleId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B6F8 RID: 112376
+		// Token: 0x040160CB RID: 90315
 		[Nullable(new byte[]
 		{
 			2,

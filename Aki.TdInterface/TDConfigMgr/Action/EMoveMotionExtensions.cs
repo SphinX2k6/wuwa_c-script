@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200239B RID: 9115
+	// Token: 0x02002626 RID: 9766
 	public static class EMoveMotionExtensions
 	{
-		// Token: 0x0600C6B8 RID: 50872 RVA: 0x001D19CC File Offset: 0x001CFBCC
+		// Token: 0x0600D305 RID: 54021 RVA: 0x001EAB6C File Offset: 0x001E8D6C
 		public static string ToEnumString(this EMoveMotion value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6B9 RID: 50873 RVA: 0x001D1A04 File Offset: 0x001CFC04
+		// Token: 0x0600D306 RID: 54022 RVA: 0x001EABA4 File Offset: 0x001E8DA4
 		public static EMoveMotion FromString(string name)
 		{
 			EMoveMotion result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6BA RID: 50874 RVA: 0x001D1A2D File Offset: 0x001CFC2D
+		// Token: 0x0600D307 RID: 54023 RVA: 0x001EABCD File Offset: 0x001E8DCD
 		public static bool TryFromString(string name, out EMoveMotion value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C6BB RID: 50875 RVA: 0x001D1A66 File Offset: 0x001CFC66
+		// Token: 0x0600D308 RID: 54024 RVA: 0x001EAC06 File Offset: 0x001E8E06
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6BC RID: 50876 RVA: 0x001D1A7E File Offset: 0x001CFC7E
+		// Token: 0x0600D309 RID: 54025 RVA: 0x001EAC1E File Offset: 0x001E8E1E
 		public static EMoveMotion[] GetValues()
 		{
 			return new EMoveMotion[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6BD RID: 50877 RVA: 0x001D1A8A File Offset: 0x001CFC8A
+		// Token: 0x0600D30A RID: 54026 RVA: 0x001EAC2A File Offset: 0x001E8E2A
 		public static string[] GetNames()
 		{
 			return new string[]

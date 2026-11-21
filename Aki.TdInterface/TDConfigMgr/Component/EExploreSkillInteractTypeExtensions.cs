@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200093E RID: 2366
+	// Token: 0x020009EB RID: 2539
 	public static class EExploreSkillInteractTypeExtensions
 	{
-		// Token: 0x06003548 RID: 13640 RVA: 0x0008B0BC File Offset: 0x000892BC
+		// Token: 0x060038B4 RID: 14516 RVA: 0x00092C3C File Offset: 0x00090E3C
 		public static string ToEnumString(this EExploreSkillInteractType value)
 		{
 			string result;
@@ -53,6 +53,9 @@ namespace Aki.TDConfigMgr.Component
 			case EExploreSkillInteractType.Eavesdrop:
 				result = "Eavesdrop";
 				break;
+			case EExploreSkillInteractType.GraffitiPuzzle:
+				result = "GraffitiPuzzle";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -60,7 +63,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003549 RID: 13641 RVA: 0x0008B188 File Offset: 0x00089388
+		// Token: 0x060038B5 RID: 14517 RVA: 0x00092D14 File Offset: 0x00090F14
 		public static EExploreSkillInteractType FromString(string name)
 		{
 			EExploreSkillInteractType result;
@@ -71,7 +74,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600354A RID: 13642 RVA: 0x0008B1B4 File Offset: 0x000893B4
+		// Token: 0x060038B6 RID: 14518 RVA: 0x00092D40 File Offset: 0x00090F40
 		public static bool TryFromString(string name, out EExploreSkillInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -128,12 +131,26 @@ namespace Aki.TDConfigMgr.Component
 					}
 					break;
 				case 14:
-					if (name == "MechascoutDrag")
+				{
+					char c = name[0];
+					if (c != 'G')
 					{
-						value = EExploreSkillInteractType.MechascoutDrag;
+						if (c == 'M')
+						{
+							if (name == "MechascoutDrag")
+							{
+								value = EExploreSkillInteractType.MechascoutDrag;
+								return true;
+							}
+						}
+					}
+					else if (name == "GraffitiPuzzle")
+					{
+						value = EExploreSkillInteractType.GraffitiPuzzle;
 						return true;
 					}
 					break;
+				}
 				case 16:
 					if (name == "QuantumDiffusion")
 					{
@@ -220,7 +237,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600354B RID: 13643 RVA: 0x0008B3DC File Offset: 0x000895DC
+		// Token: 0x060038B7 RID: 14519 RVA: 0x00092FA8 File Offset: 0x000911A8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -238,11 +255,12 @@ namespace Aki.TDConfigMgr.Component
 				"FollowShooterInteractPoint",
 				"FoxJumpInteractPoint",
 				"MonsterSummonInteractPoint",
-				"Eavesdrop"
+				"Eavesdrop",
+				"GraffitiPuzzle"
 			};
 		}
 
-		// Token: 0x0600354C RID: 13644 RVA: 0x0008B465 File Offset: 0x00089665
+		// Token: 0x060038B8 RID: 14520 RVA: 0x0009303A File Offset: 0x0009123A
 		public static EExploreSkillInteractType[] GetValues()
 		{
 			return new EExploreSkillInteractType[]
@@ -260,11 +278,12 @@ namespace Aki.TDConfigMgr.Component
 				EExploreSkillInteractType.FollowShooterInteractPoint,
 				EExploreSkillInteractType.FoxJumpInteractPoint,
 				EExploreSkillInteractType.MonsterSummonInteractPoint,
-				EExploreSkillInteractType.Eavesdrop
+				EExploreSkillInteractType.Eavesdrop,
+				EExploreSkillInteractType.GraffitiPuzzle
 			};
 		}
 
-		// Token: 0x0600354D RID: 13645 RVA: 0x0008B47C File Offset: 0x0008967C
+		// Token: 0x060038B9 RID: 14521 RVA: 0x00093050 File Offset: 0x00091250
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -282,7 +301,8 @@ namespace Aki.TDConfigMgr.Component
 				"FollowShooterInteractPoint",
 				"FoxJumpInteractPoint",
 				"MonsterSummonInteractPoint",
-				"Eavesdrop"
+				"Eavesdrop",
+				"GraffitiPuzzle"
 			};
 		}
 	}

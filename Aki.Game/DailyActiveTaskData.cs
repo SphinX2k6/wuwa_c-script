@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019F0 RID: 6640
+// Token: 0x02000EAF RID: 3759
 public class DailyActiveTaskData
 {
-	// Token: 0x04005974 RID: 22900
+	// Token: 0x04005A43 RID: 23107
 	[Nullable(1)]
 	public List<TItem> RewardItemList = new List<TItem>();
 
-	// Token: 0x04005975 RID: 22901
+	// Token: 0x04005A44 RID: 23108
 	public int? TaskId = new int?(0);
 
-	// Token: 0x04005976 RID: 22902
+	// Token: 0x04005A45 RID: 23109
 	public EDailyActiveState TaskState = EDailyActiveState.Unfinished;
 
-	// Token: 0x04005977 RID: 22903
+	// Token: 0x04005A46 RID: 23110
 	public int? CurrentProgress = new int?(0);
 
-	// Token: 0x04005978 RID: 22904
+	// Token: 0x04005A47 RID: 23111
 	public int? TargetProgress = new int?(0);
 
-	// Token: 0x04005979 RID: 22905
+	// Token: 0x04005A48 RID: 23112
 	public int Sort;
 
-	// Token: 0x0400597A RID: 22906
+	// Token: 0x04005A49 RID: 23113
 	public bool IsFunctionUnlock;
 }

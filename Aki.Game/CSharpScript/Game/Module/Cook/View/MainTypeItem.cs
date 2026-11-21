@@ -10,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B24 RID: 23332
+	// Token: 0x02004B05 RID: 19205
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MainTypeItem : UiPanelBase, IGridProxy<ECookListType>
 	{
-		// Token: 0x17008C89 RID: 35977
-		// (get) Token: 0x0603B12A RID: 241962 RVA: 0x00E160AF File Offset: 0x00E142AF
-		// (set) Token: 0x0603B12B RID: 241963 RVA: 0x00E160B7 File Offset: 0x00E142B7
+		// Token: 0x17006063 RID: 24675
+		// (get) Token: 0x0603009C RID: 196764 RVA: 0x00D66DC7 File Offset: 0x00D64FC7
+		// (set) Token: 0x0603009D RID: 196765 RVA: 0x00D66DCF File Offset: 0x00D64FCF
 		[Nullable(new byte[]
 		{
 			2,
@@ -33,17 +33,17 @@ namespace CSharpScript.Game.Module.Cook.View
 			1
 		})] set; }
 
-		// Token: 0x17008C8A RID: 35978
-		// (get) Token: 0x0603B12C RID: 241964 RVA: 0x00E160C0 File Offset: 0x00E142C0
-		// (set) Token: 0x0603B12D RID: 241965 RVA: 0x00E160C8 File Offset: 0x00E142C8
+		// Token: 0x17006064 RID: 24676
+		// (get) Token: 0x0603009E RID: 196766 RVA: 0x00D66DD8 File Offset: 0x00D64FD8
+		// (set) Token: 0x0603009F RID: 196767 RVA: 0x00D66DE0 File Offset: 0x00D64FE0
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008C8B RID: 35979
-		// (get) Token: 0x0603B12E RID: 241966 RVA: 0x00E160D1 File Offset: 0x00E142D1
-		// (set) Token: 0x0603B12F RID: 241967 RVA: 0x00E160D9 File Offset: 0x00E142D9
+		// Token: 0x17006065 RID: 24677
+		// (get) Token: 0x060300A0 RID: 196768 RVA: 0x00D66DE9 File Offset: 0x00D64FE9
+		// (set) Token: 0x060300A1 RID: 196769 RVA: 0x00D66DF1 File Offset: 0x00D64FF1
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x0603B130 RID: 241968 RVA: 0x00E160E4 File Offset: 0x00E142E4
+		// Token: 0x060300A2 RID: 196770 RVA: 0x00D66DFC File Offset: 0x00D64FFC
 		public void Refresh(ECookListType data, bool isSelected, int gridIndex)
 		{
 			this.MainType = new ECookListType?(data);
@@ -61,12 +61,12 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.SetSpriteByPath(resourcePath, base.GetSprite(0), false, null, null);
 		}
 
-		// Token: 0x0603B131 RID: 241969 RVA: 0x00E1615B File Offset: 0x00E1435B
+		// Token: 0x060300A3 RID: 196771 RVA: 0x00D66E73 File Offset: 0x00D65073
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603B132 RID: 241970 RVA: 0x00E1615D File Offset: 0x00E1435D
+		// Token: 0x060300A4 RID: 196772 RVA: 0x00D66E75 File Offset: 0x00D65075
 		public void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
@@ -78,19 +78,19 @@ namespace CSharpScript.Game.Module.Cook.View
 			onClickedCallback((int)this.MainType.Value);
 		}
 
-		// Token: 0x0603B133 RID: 241971 RVA: 0x00E1618B File Offset: 0x00E1438B
+		// Token: 0x060300A5 RID: 196773 RVA: 0x00D66EA3 File Offset: 0x00D650A3
 		public void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603B134 RID: 241972 RVA: 0x00E1619E File Offset: 0x00E1439E
+		// Token: 0x060300A6 RID: 196774 RVA: 0x00D66EB6 File Offset: 0x00D650B6
 		public void CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x0603B135 RID: 241973 RVA: 0x00E161A8 File Offset: 0x00E143A8
+		// Token: 0x060300A7 RID: 196775 RVA: 0x00D66EC0 File Offset: 0x00D650C0
 		public UniTask CreateThenShowByActorAsync(AActor actor)
 		{
 			MainTypeItem.<CreateThenShowByActorAsync>d__19 <CreateThenShowByActorAsync>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			return <CreateThenShowByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B136 RID: 241974 RVA: 0x00E161F4 File Offset: 0x00E143F4
+		// Token: 0x060300A8 RID: 196776 RVA: 0x00D66F0C File Offset: 0x00D6510C
 		public UniTask CreateByActorAsync(AActor actor)
 		{
 			MainTypeItem.<CreateByActorAsync>d__20 <CreateByActorAsync>d__;
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Cook.View
 			return <CreateByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B137 RID: 241975 RVA: 0x00E1623F File Offset: 0x00E1443F
+		// Token: 0x060300A9 RID: 196777 RVA: 0x00D66F57 File Offset: 0x00D65157
 		public object GetKey(ECookListType data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0603B138 RID: 241976 RVA: 0x00E16248 File Offset: 0x00E14448
+		// Token: 0x060300AA RID: 196778 RVA: 0x00D66F60 File Offset: 0x00D65160
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -141,19 +141,19 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B139 RID: 241977 RVA: 0x00E162EE File Offset: 0x00E144EE
+		// Token: 0x060300AB RID: 196779 RVA: 0x00D67006 File Offset: 0x00D65206
 		public ECookListType GetMainType()
 		{
 			return this.MainType.Value;
 		}
 
-		// Token: 0x0603B13A RID: 241978 RVA: 0x00E162FB File Offset: 0x00E144FB
+		// Token: 0x060300AC RID: 196780 RVA: 0x00D67013 File Offset: 0x00D65213
 		public void SetMainTypeCallback(Action<int> mainTypeCallback)
 		{
 			this.OnClickedCallback = mainTypeCallback;
 		}
 
-		// Token: 0x0603B13B RID: 241979 RVA: 0x00E16304 File Offset: 0x00E14504
+		// Token: 0x060300AD RID: 196781 RVA: 0x00D6701C File Offset: 0x00D6521C
 		private void OnItemButtonClicked(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -162,10 +162,10 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0401ECDF RID: 126175
+		// Token: 0x0401979B RID: 104347
 		private ECookListType? MainType;
 
-		// Token: 0x0401ECE0 RID: 126176
+		// Token: 0x0401979C RID: 104348
 		[Nullable(2)]
 		private Action<int> OnClickedCallback;
 	}

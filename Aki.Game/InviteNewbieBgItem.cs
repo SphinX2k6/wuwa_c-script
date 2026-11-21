@@ -1,7 +1,7 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200128F RID: 4751
+// Token: 0x02000743 RID: 1859
 public class InviteNewbieBgItem : UiPanelBase
 {
 }

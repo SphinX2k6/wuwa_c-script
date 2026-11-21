@@ -18,12 +18,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 {
-	// Token: 0x02004CFE RID: 19710
+	// Token: 0x02003CB0 RID: 15536
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleLangCustomItem : UiPanelBase
 	{
-		// Token: 0x06032F4A RID: 208714 RVA: 0x00BE1088 File Offset: 0x00BDF288
+		// Token: 0x06027D25 RID: 163109 RVA: 0x00B26990 File Offset: 0x00B24B90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032F4B RID: 208715 RVA: 0x00BE11F8 File Offset: 0x00BDF3F8
+		// Token: 0x06027D26 RID: 163110 RVA: 0x00B26B00 File Offset: 0x00B24D00
 		protected override void OnStart()
 		{
 			ResourceManagerController.Instance.ChangeHttpTickFrequency();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			EventSystem.Instance.Add<int>(EEventName.RoleLangCustomRefresh, new Action<int>(this.OnRefreshByNet));
 		}
 
-		// Token: 0x06032F4C RID: 208716 RVA: 0x00BE12D0 File Offset: 0x00BDF4D0
+		// Token: 0x06027D27 RID: 163111 RVA: 0x00B26BD8 File Offset: 0x00B24DD8
 		protected override void OnBeforeDestroy()
 		{
 			ResourceManagerController.Instance.RestoreHttpTickFrequency();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			EventSystem.Instance.Remove(EEventName.RoleLangCustomRefresh, new Action<int>(this.OnRefreshByNet));
 		}
 
-		// Token: 0x06032F4D RID: 208717 RVA: 0x00BE1364 File Offset: 0x00BDF564
+		// Token: 0x06027D28 RID: 163112 RVA: 0x00B26C6C File Offset: 0x00B24E6C
 		public void Refresh(int roleId)
 		{
 			this.RoleId = roleId;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			item.SetUIActive(!valueOrDefault);
 		}
 
-		// Token: 0x06032F4E RID: 208718 RVA: 0x00BE1434 File Offset: 0x00BDF634
+		// Token: 0x06027D29 RID: 163113 RVA: 0x00B26D3C File Offset: 0x00B24F3C
 		public void OnTabViewHide()
 		{
 			if (base.GetExtendToggle(0).GetToggleState() != EToggleState.ETT_Checked)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x06032F4F RID: 208719 RVA: 0x00BE1458 File Offset: 0x00BDF658
+		// Token: 0x06027D2A RID: 163114 RVA: 0x00B26D60 File Offset: 0x00B24F60
 		protected List<IRoleLangCustomInfo> GetRoleLangCustomInfo()
 		{
 			List<IRoleLangCustomInfo> list = new List<IRoleLangCustomInfo>();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return list;
 		}
 
-		// Token: 0x06032F50 RID: 208720 RVA: 0x00BE1510 File Offset: 0x00BDF710
+		// Token: 0x06027D2B RID: 163115 RVA: 0x00B26E18 File Offset: 0x00B25018
 		protected bool IsInBattle()
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return baseTagComponent != null && baseTagComponent.Valid && baseTagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]);
 		}
 
-		// Token: 0x06032F51 RID: 208721 RVA: 0x00BE1588 File Offset: 0x00BDF788
+		// Token: 0x06027D2C RID: 163116 RVA: 0x00B26E90 File Offset: 0x00B25090
 		private UniTask ShowMaskButton()
 		{
 			RoleLangCustomItem.<ShowMaskButton>d__14 <ShowMaskButton>d__;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return <ShowMaskButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032F52 RID: 208722 RVA: 0x00BE15CB File Offset: 0x00BDF7CB
+		// Token: 0x06027D2D RID: 163117 RVA: 0x00B26ED3 File Offset: 0x00B250D3
 		private void HideMaskButton()
 		{
 			if (this.MaskButton == null)
@@ -186,13 +186,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.MaskButton.SetActive(false);
 		}
 
-		// Token: 0x06032F53 RID: 208723 RVA: 0x00BE15ED File Offset: 0x00BDF7ED
+		// Token: 0x06027D2E RID: 163118 RVA: 0x00B26EF5 File Offset: 0x00B250F5
 		private void OnClickedBtnInfo()
 		{
 			HelpController.Instance.OpenHelpById(584);
 		}
 
-		// Token: 0x06032F54 RID: 208724 RVA: 0x00BE15FE File Offset: 0x00BDF7FE
+		// Token: 0x06027D2F RID: 163119 RVA: 0x00B26F06 File Offset: 0x00B25106
 		private void OnClickedBtnSetting()
 		{
 			this.OnClickedMask();
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			UiManager.Instance.OpenView(EUiViewName.RoleLangCustomView, this.RoleId, null);
 		}
 
-		// Token: 0x06032F55 RID: 208725 RVA: 0x00BE1631 File Offset: 0x00BDF831
+		// Token: 0x06027D30 RID: 163120 RVA: 0x00B26F39 File Offset: 0x00B25139
 		private RoleLangCustomTabItem CreateItem()
 		{
 			return new RoleLangCustomTabItem
@@ -210,13 +210,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			};
 		}
 
-		// Token: 0x06032F56 RID: 208726 RVA: 0x00BE165C File Offset: 0x00BDF85C
+		// Token: 0x06027D31 RID: 163121 RVA: 0x00B26F64 File Offset: 0x00B25164
 		private bool CheckScrollActiveCallback()
 		{
 			return base.GetScrollViewWithScrollbar(4).RootUIComp.Get().IsUIActiveSelf();
 		}
 
-		// Token: 0x06032F57 RID: 208727 RVA: 0x00BE1684 File Offset: 0x00BDF884
+		// Token: 0x06027D32 RID: 163122 RVA: 0x00B26F8C File Offset: 0x00B2518C
 		private bool ToggleCanChangeState()
 		{
 			ServerStorageBoolean serverStorageBoolean = (ServerStorageBoolean)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RoleLangCustomFuncClicked);
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return RoleLangCustomModel.Instance.CheckServerVoiceDataSame(false);
 		}
 
-		// Token: 0x06032F58 RID: 208728 RVA: 0x00BE16F9 File Offset: 0x00BDF8F9
+		// Token: 0x06027D33 RID: 163123 RVA: 0x00B27001 File Offset: 0x00B25201
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			this.ScrollView.SetActive(state == EToggleState.ETT_Checked);
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.HideMaskButton();
 		}
 
-		// Token: 0x06032F59 RID: 208729 RVA: 0x00BE171C File Offset: 0x00BDF91C
+		// Token: 0x06027D34 RID: 163124 RVA: 0x00B27024 File Offset: 0x00B25224
 		private void OnClickedToggleItem(IRoleLangCustomInfo data)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
@@ -272,19 +272,19 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			ScrollingTipsController.Instance.ShowTipsByTextId("Notice_VoiceDIY_Setting_Success", Array.Empty<object>());
 		}
 
-		// Token: 0x06032F5A RID: 208730 RVA: 0x00BE17CE File Offset: 0x00BDF9CE
+		// Token: 0x06027D35 RID: 163125 RVA: 0x00B270D6 File Offset: 0x00B252D6
 		private void OnClickedMask()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x06032F5B RID: 208731 RVA: 0x00BE17E1 File Offset: 0x00BDF9E1
+		// Token: 0x06027D36 RID: 163126 RVA: 0x00B270E9 File Offset: 0x00B252E9
 		private void OnRefreshByNet(int roleId)
 		{
 			this.Refresh(this.RoleId);
 		}
 
-		// Token: 0x06032F5C RID: 208732 RVA: 0x00BE17F0 File Offset: 0x00BDF9F0
+		// Token: 0x06027D37 RID: 163127 RVA: 0x00B270F8 File Offset: 0x00B252F8
 		private void OnTick(float delta)
 		{
 			foreach (RoleLangCustomTabItem roleLangCustomTabItem in this.ScrollView.GetScrollItemList())
@@ -293,43 +293,43 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			}
 		}
 
-		// Token: 0x0401B1A6 RID: 111014
+		// Token: 0x04015B2B RID: 88875
 		private const int HELP_ID = 584;
 
-		// Token: 0x0401B1A7 RID: 111015
+		// Token: 0x04015B2C RID: 88876
 		protected GenericScrollViewNew<RoleLangCustomTabItem, IRoleLangCustomInfo> ScrollView;
 
-		// Token: 0x0401B1A8 RID: 111016
+		// Token: 0x04015B2D RID: 88877
 		protected int RoleId;
 
-		// Token: 0x0401B1A9 RID: 111017
+		// Token: 0x04015B2E RID: 88878
 		private DynamicMaskButton MaskButton;
 
-		// Token: 0x0401B1AA RID: 111018
+		// Token: 0x04015B2F RID: 88879
 		[Nullable(2)]
 		private TimerHandle TickTimer;
 
-		// Token: 0x0401B1AB RID: 111019
+		// Token: 0x04015B30 RID: 88880
 		[Nullable(2)]
 		public Action OnSetPlayerVoice;
 
-		// Token: 0x0200AE8F RID: 44687
+		// Token: 0x020098AD RID: 39085
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x0403501D RID: 217117
+			// Token: 0x0402F9C5 RID: 195013
 			TogSort,
-			// Token: 0x0403501E RID: 217118
+			// Token: 0x0402F9C6 RID: 195014
 			TxtSort,
-			// Token: 0x0403501F RID: 217119
+			// Token: 0x0402F9C7 RID: 195015
 			BtnInfo,
-			// Token: 0x04035020 RID: 217120
+			// Token: 0x0402F9C8 RID: 195016
 			BtnSetting,
-			// Token: 0x04035021 RID: 217121
+			// Token: 0x0402F9C9 RID: 195017
 			ScrollView,
-			// Token: 0x04035022 RID: 217122
+			// Token: 0x0402F9CA RID: 195018
 			ToggleItem,
-			// Token: 0x04035023 RID: 217123
+			// Token: 0x0402F9CB RID: 195019
 			RedDot
 		}
 	}

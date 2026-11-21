@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002033 RID: 8243
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200227C RID: 8828
 	public class IVehicleCruisingParams
 	{
-		// Token: 0x0600B52A RID: 46378 RVA: 0x001A4D40 File Offset: 0x001A2F40
+		// Token: 0x0600C050 RID: 49232 RVA: 0x001BB4AC File Offset: 0x001B96AC
 		private IVehicleCruisingParams_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B52B RID: 46379 RVA: 0x001A4D78 File Offset: 0x001A2F78
+		// Token: 0x0600C051 RID: 49233 RVA: 0x001BB4E4 File Offset: 0x001B96E4
 		public static IVehicleCruisingParams Create([Nullable(2)] IVehicleCruisingParams instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B52C RID: 46380 RVA: 0x001A4D8B File Offset: 0x001A2F8B
+		// Token: 0x0600C052 RID: 49234 RVA: 0x001BB4F7 File Offset: 0x001B96F7
 		public static IVehicleCruisingParams CreateFromSetValue([Nullable(2)] IVehicleCruisingParams_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B52D RID: 46381 RVA: 0x001A4D9E File Offset: 0x001A2F9E
+		// Token: 0x0600C053 RID: 49235 RVA: 0x001BB50A File Offset: 0x001B970A
 		public IVehicleCruisingParams_SetValue ToSetValue()
 		{
 			return new IVehicleCruisingParams_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037A1 RID: 14241
-		// (get) Token: 0x0600B52E RID: 46382 RVA: 0x001A4DC9 File Offset: 0x001A2FC9
-		// (set) Token: 0x0600B52F RID: 46383 RVA: 0x001A4DF8 File Offset: 0x001A2FF8
+		// Token: 0x17003A7E RID: 14974
+		// (get) Token: 0x0600C054 RID: 49236 RVA: 0x001BB535 File Offset: 0x001B9735
+		// (set) Token: 0x0600C055 RID: 49237 RVA: 0x001BB564 File Offset: 0x001B9764
 		public virtual float ForwardSpeed
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037A2 RID: 14242
-		// (get) Token: 0x0600B530 RID: 46384 RVA: 0x001A4E06 File Offset: 0x001A3006
-		// (set) Token: 0x0600B531 RID: 46385 RVA: 0x001A4E35 File Offset: 0x001A3035
+		// Token: 0x17003A7F RID: 14975
+		// (get) Token: 0x0600C056 RID: 49238 RVA: 0x001BB572 File Offset: 0x001B9772
+		// (set) Token: 0x0600C057 RID: 49239 RVA: 0x001BB5A1 File Offset: 0x001B97A1
 		public virtual float ForwardAcceleration
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037A3 RID: 14243
-		// (get) Token: 0x0600B532 RID: 46386 RVA: 0x001A4E44 File Offset: 0x001A3044
-		// (set) Token: 0x0600B533 RID: 46387 RVA: 0x001A4E7E File Offset: 0x001A307E
+		// Token: 0x17003A80 RID: 14976
+		// (get) Token: 0x0600C058 RID: 49240 RVA: 0x001BB5B0 File Offset: 0x001B97B0
+		// (set) Token: 0x0600C059 RID: 49241 RVA: 0x001BB5EA File Offset: 0x001B97EA
 		public virtual bool? DisableSprint
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D0E RID: 27918
+		// Token: 0x04007317 RID: 29463
 		[Nullable(2)]
 		protected IVehicleCruisingParams FbInstance;
 
-		// Token: 0x04006D0F RID: 27919
+		// Token: 0x04007318 RID: 29464
 		[Nullable(2)]
 		protected IVehicleCruisingParams_SetValue PocoInterface;
 	}

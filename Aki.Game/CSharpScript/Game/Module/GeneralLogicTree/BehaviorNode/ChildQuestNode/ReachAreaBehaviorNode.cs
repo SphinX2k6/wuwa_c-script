@@ -18,17 +18,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059DC RID: 23004
+	// Token: 0x020049B5 RID: 18869
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ReachAreaBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4DE RID: 238814 RVA: 0x00DDDA25 File Offset: 0x00DDBC25
+		// Token: 0x0602F406 RID: 193542 RVA: 0x00D2D245 File Offset: 0x00D2B445
 		public ReachAreaBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4DF RID: 238815 RVA: 0x00DDDA44 File Offset: 0x00DDBC44
+		// Token: 0x0602F407 RID: 193543 RVA: 0x00D2D264 File Offset: 0x00D2B464
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4E0 RID: 238816 RVA: 0x00DDDFC8 File Offset: 0x00DDC1C8
+		// Token: 0x0602F408 RID: 193544 RVA: 0x00D2D7E8 File Offset: 0x00D2B9E8
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			base.OnStart(reason);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			SundryModel.Instance.GetModuleDebugLevel("GeneralLogicTree");
 		}
 
-		// Token: 0x0603A4E1 RID: 238817 RVA: 0x00DDE017 File Offset: 0x00DDC217
+		// Token: 0x0602F409 RID: 193545 RVA: 0x00D2D837 File Offset: 0x00D2BA37
 		protected override void OnEnd(bool bFinished)
 		{
 			if (this.TimerId != null)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4E2 RID: 238818 RVA: 0x00DDE03C File Offset: 0x00DDC23C
+		// Token: 0x0602F40A RID: 193546 RVA: 0x00D2D85C File Offset: 0x00D2BA5C
 		protected void OnTick(float _)
 		{
 			this.TimerId = null;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.TimerId = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.OnTick), (float)num, null, null, true, 1f);
 		}
 
-		// Token: 0x0603A4E3 RID: 238819 RVA: 0x00DDE080 File Offset: 0x00DDC280
+		// Token: 0x0602F40B RID: 193547 RVA: 0x00D2D8A0 File Offset: 0x00D2BAA0
 		protected int DoTaskAndGetNewInterval()
 		{
 			this.FrameCount++;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return 20;
 		}
 
-		// Token: 0x0603A4E4 RID: 238820 RVA: 0x00DDE1B0 File Offset: 0x00DDC3B0
+		// Token: 0x0602F40C RID: 193548 RVA: 0x00D2D9D0 File Offset: 0x00D2BBD0
 		private double CheckReached()
 		{
 			List<IMatchRoleType> matchRoleOption = this.MatchRoleOption;
@@ -253,20 +253,20 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return Math.Min(num, (entitySpeed > 0.0) ? (num / entitySpeed * 200.0) : 1E+50);
 		}
 
-		// Token: 0x0603A4E5 RID: 238821 RVA: 0x00DDE43C File Offset: 0x00DDC63C
+		// Token: 0x0602F40D RID: 193549 RVA: 0x00D2DC5C File Offset: 0x00D2BE5C
 		protected override bool CheckCanSubmitAboutFocusMode()
 		{
 			return this.BtType != BtType.Quest || !QuestNewModel.Instance.CheckNeedBanQuestPushByFocusMode(this.Blackboard.TreeConfigId) || LevelLoadingModel.Instance.CheckLoadingPerformExist(new ELoadingPerform?(ELoadingPerform.CameraFade)) || !InputController.Instance.IsAllMoveEnable();
 		}
 
-		// Token: 0x0603A4E6 RID: 238822 RVA: 0x00DDE490 File Offset: 0x00DDC690
+		// Token: 0x0602F40E RID: 193550 RVA: 0x00D2DCB0 File Offset: 0x00D2BEB0
 		[NullableContext(1)]
 		public global::Vector GetTargetPosition()
 		{
 			return this.TargetPosition;
 		}
 
-		// Token: 0x0603A4E7 RID: 238823 RVA: 0x00DDE498 File Offset: 0x00DDC698
+		// Token: 0x0602F40F RID: 193551 RVA: 0x00D2DCB8 File Offset: 0x00D2BEB8
 		[NullableContext(1)]
 		public IReadOnlyList<int> GetRangePbDataIds()
 		{
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return rangePbDataIds ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0603A4E8 RID: 238824 RVA: 0x00DDE4B8 File Offset: 0x00DDC6B8
+		// Token: 0x0602F410 RID: 193552 RVA: 0x00D2DCD8 File Offset: 0x00D2BED8
 		public void DrawRange(FLinearColor color, float duration, int segments)
 		{
 			switch (this.TriggerShapeType)
@@ -315,35 +315,35 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E656 RID: 124502
+		// Token: 0x040190F5 RID: 102645
 		private const int MIN_INTERVAL = 20;
 
-		// Token: 0x0401E657 RID: 124503
+		// Token: 0x040190F6 RID: 102646
 		private const int MAX_INTERVAL = 500;
 
-		// Token: 0x0401E658 RID: 124504
+		// Token: 0x040190F7 RID: 102647
 		private const int MIN_FACTOR = 200;
 
-		// Token: 0x0401E659 RID: 124505
+		// Token: 0x040190F8 RID: 102648
 		private const int MAX_FACTOR = 1000;
 
-		// Token: 0x0401E65A RID: 124506
+		// Token: 0x040190F9 RID: 102649
 		private global::Vector TargetPosition;
 
-		// Token: 0x0401E65B RID: 124507
+		// Token: 0x040190FA RID: 102650
 		private float Range;
 
-		// Token: 0x0401E65C RID: 124508
+		// Token: 0x040190FB RID: 102651
 		private int PbDataId;
 
-		// Token: 0x0401E65D RID: 124509
+		// Token: 0x040190FC RID: 102652
 		[Nullable(1)]
 		private readonly global::Vector PlayerPosition = global::Vector.Create();
 
-		// Token: 0x0401E65E RID: 124510
+		// Token: 0x040190FD RID: 102653
 		private ETriggerShape TriggerShapeType;
 
-		// Token: 0x0401E65F RID: 124511
+		// Token: 0x040190FE RID: 102654
 		[Nullable(new byte[]
 		{
 			2,
@@ -351,44 +351,44 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 		})]
 		private List<IMatchRoleType> MatchRoleOption;
 
-		// Token: 0x0401E660 RID: 124512
+		// Token: 0x040190FF RID: 102655
 		public string EffectPathKey;
 
-		// Token: 0x0401E661 RID: 124513
+		// Token: 0x04019100 RID: 102656
 		public IConditionGroup ConditionGrop;
 
-		// Token: 0x0401E662 RID: 124514
+		// Token: 0x04019101 RID: 102657
 		private int FrameCount;
 
-		// Token: 0x0401E663 RID: 124515
+		// Token: 0x04019102 RID: 102658
 		private global::Vector BoxExtends;
 
-		// Token: 0x0401E664 RID: 124516
+		// Token: 0x04019103 RID: 102659
 		private global::Transform BoxTransform;
 
-		// Token: 0x0401E665 RID: 124517
+		// Token: 0x04019104 RID: 102660
 		[Nullable(1)]
 		private readonly global::Vector TempVect = global::Vector.Create();
 
-		// Token: 0x0401E666 RID: 124518
+		// Token: 0x04019105 RID: 102661
 		private global::Vector TempVect2;
 
-		// Token: 0x0401E667 RID: 124519
+		// Token: 0x04019106 RID: 102662
 		private global::Vector CylinderCenter;
 
-		// Token: 0x0401E668 RID: 124520
+		// Token: 0x04019107 RID: 102663
 		private float CylinderRadius;
 
-		// Token: 0x0401E669 RID: 124521
+		// Token: 0x04019108 RID: 102664
 		private float CylinderHeight;
 
-		// Token: 0x0401E66A RID: 124522
+		// Token: 0x04019109 RID: 102665
 		private bool IsUseRangeEntities;
 
-		// Token: 0x0401E66B RID: 124523
+		// Token: 0x0401910A RID: 102666
 		private List<int> RangePbDataIds;
 
-		// Token: 0x0401E66C RID: 124524
+		// Token: 0x0401910B RID: 102667
 		private TimerHandle TimerId;
 	}
 }

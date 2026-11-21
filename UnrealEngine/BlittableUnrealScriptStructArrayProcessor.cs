@@ -7,10 +7,10 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000054 RID: 84
+	// Token: 0x02000039 RID: 57
 	public sealed class BlittableUnrealScriptStructArrayProcessor<[IsUnmanaged] T> : PodBaseWithEqualityOperatorsArrayProcessor<T>, IScriptStructProcessor where T : struct, ValueType, IUnrealScriptStruct, IEqualityOperators<T, T, bool>
 	{
-		// Token: 0x060008DA RID: 2266 RVA: 0x000109A8 File Offset: 0x0000EBA8
+		// Token: 0x0600085F RID: 2143 RVA: 0x0000D214 File Offset: 0x0000B414
 		public BlittableUnrealScriptStructArrayProcessor()
 		{
 			this.IsStructProxyProcessor = true;
@@ -20,21 +20,21 @@ namespace UnrealEngine
 			UnrealReflectionUtils.GetUScriptStructProps(IUnrealScriptStruct.StaticStruct(), out this.Size, out this.MinAlignment, out num);
 		}
 
-		// Token: 0x060008DB RID: 2267 RVA: 0x00010A06 File Offset: 0x0000EC06
+		// Token: 0x06000860 RID: 2144 RVA: 0x0000D272 File Offset: 0x0000B472
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void ConstructValues(IntPtr Data, int Index, int Count)
 		{
 			UnrealReflectionUtils.InitializeStruct(IUnrealScriptStruct.StaticStruct(), (void*)(Data + (byte*)((IntPtr)(Index * this.Size))), Count);
 		}
 
-		// Token: 0x060008DC RID: 2268 RVA: 0x00010A24 File Offset: 0x0000EC24
+		// Token: 0x06000861 RID: 2145 RVA: 0x0000D290 File Offset: 0x0000B490
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void DestructValues(IntPtr Data, int Index, int Count)
 		{
 			UnrealReflectionUtils.DestroyStruct(IUnrealScriptStruct.StaticStruct(), (void*)(Data + (byte*)((IntPtr)(Index * this.Size))), Count);
 		}
 
-		// Token: 0x060008DD RID: 2269 RVA: 0x00010A42 File Offset: 0x0000EC42
+		// Token: 0x06000862 RID: 2146 RVA: 0x0000D2AE File Offset: 0x0000B4AE
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public UScriptStructStackOnlyPtr GetNativeScriptStructPtr()
 		{

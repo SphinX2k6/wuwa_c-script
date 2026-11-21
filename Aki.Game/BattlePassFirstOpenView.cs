@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02002324 RID: 8996
+// Token: 0x02001809 RID: 6153
 public class BattlePassFirstOpenView : UiViewBase
 {
-	// Token: 0x06011CA1 RID: 72865 RVA: 0x00460F02 File Offset: 0x0045F102
+	// Token: 0x0600F151 RID: 61777 RVA: 0x0046DFA6 File Offset: 0x0046C1A6
 	[NullableContext(1)]
 	public BattlePassFirstOpenView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011CA2 RID: 72866 RVA: 0x00460F0B File Offset: 0x0045F10B
+	// Token: 0x0600F152 RID: 61778 RVA: 0x0046DFAF File Offset: 0x0046C1AF
 	protected override void OnBeforeShow()
 	{
 		BattlePassController.Instance.SetBattlePassEnter();

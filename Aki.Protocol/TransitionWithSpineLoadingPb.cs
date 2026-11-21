@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001401 RID: 5121
+	// Token: 0x02001474 RID: 5236
 	public sealed class TransitionWithSpineLoadingPb : IMessage<TransitionWithSpineLoadingPb>, IMessage, IEquatable<TransitionWithSpineLoadingPb>, IDeepCloneable<TransitionWithSpineLoadingPb>, IBufferMessage
 	{
-		// Token: 0x0601B24F RID: 111183 RVA: 0x003EEE46 File Offset: 0x003ED046
+		// Token: 0x0601BCDA RID: 113882 RVA: 0x0040A11A File Offset: 0x0040831A
 		[NullableContext(1)]
 		public static TransitionWithSpineLoadingPb Create()
 		{
 			return new TransitionWithSpineLoadingPb();
 		}
 
-		// Token: 0x17005B86 RID: 23430
-		// (get) Token: 0x0601B250 RID: 111184 RVA: 0x003EEE4D File Offset: 0x003ED04D
+		// Token: 0x17005E1B RID: 24091
+		// (get) Token: 0x0601BCDB RID: 113883 RVA: 0x0040A121 File Offset: 0x00408321
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B87 RID: 23431
-		// (get) Token: 0x0601B251 RID: 111185 RVA: 0x003EEE50 File Offset: 0x003ED050
+		// Token: 0x17005E1C RID: 24092
+		// (get) Token: 0x0601BCDC RID: 113884 RVA: 0x0040A124 File Offset: 0x00408324
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B252 RID: 111186 RVA: 0x003EEE57 File Offset: 0x003ED057
+		// Token: 0x0601BCDD RID: 113885 RVA: 0x0040A12B File Offset: 0x0040832B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpineLoadingPb()
 		{
 		}
 
-		// Token: 0x0601B253 RID: 111187 RVA: 0x003EEE60 File Offset: 0x003ED060
+		// Token: 0x0601BCDE RID: 113886 RVA: 0x0040A134 File Offset: 0x00408334
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpineLoadingPb(TransitionWithSpineLoadingPb other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B254 RID: 111188 RVA: 0x003EEF18 File Offset: 0x003ED118
+		// Token: 0x0601BCDF RID: 113887 RVA: 0x0040A1EC File Offset: 0x004083EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionWithSpineLoadingPb Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new TransitionWithSpineLoadingPb(this);
 		}
 
-		// Token: 0x17005B88 RID: 23432
-		// (get) Token: 0x0601B255 RID: 111189 RVA: 0x003EEF20 File Offset: 0x003ED120
-		// (set) Token: 0x0601B256 RID: 111190 RVA: 0x003EEF28 File Offset: 0x003ED128
+		// Token: 0x17005E1D RID: 24093
+		// (get) Token: 0x0601BCE0 RID: 113888 RVA: 0x0040A1F4 File Offset: 0x004083F4
+		// (set) Token: 0x0601BCE1 RID: 113889 RVA: 0x0040A1FC File Offset: 0x004083FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ICustomScreenTypeBasePb ICustomScreenTypeBasePb
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B89 RID: 23433
-		// (get) Token: 0x0601B257 RID: 111191 RVA: 0x003EEF31 File Offset: 0x003ED131
-		// (set) Token: 0x0601B258 RID: 111192 RVA: 0x003EEF39 File Offset: 0x003ED139
+		// Token: 0x17005E1E RID: 24094
+		// (get) Token: 0x0601BCE2 RID: 113890 RVA: 0x0040A205 File Offset: 0x00408405
+		// (set) Token: 0x0601BCE3 RID: 113891 RVA: 0x0040A20D File Offset: 0x0040840D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeInEffectPb FadeBackgroundFadeInEffectPb
@@ -106,9 +106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B8A RID: 23434
-		// (get) Token: 0x0601B259 RID: 111193 RVA: 0x003EEF42 File Offset: 0x003ED142
-		// (set) Token: 0x0601B25A RID: 111194 RVA: 0x003EEF4A File Offset: 0x003ED14A
+		// Token: 0x17005E1F RID: 24095
+		// (get) Token: 0x0601BCE4 RID: 113892 RVA: 0x0040A216 File Offset: 0x00408416
+		// (set) Token: 0x0601BCE5 RID: 113893 RVA: 0x0040A21E File Offset: 0x0040841E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeOutEffectPb FadeBackgroundFadeOutEffectPb
@@ -123,9 +123,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B8B RID: 23435
-		// (get) Token: 0x0601B25B RID: 111195 RVA: 0x003EEF53 File Offset: 0x003ED153
-		// (set) Token: 0x0601B25C RID: 111196 RVA: 0x003EEF6B File Offset: 0x003ED16B
+		// Token: 0x17005E20 RID: 24096
+		// (get) Token: 0x0601BCE6 RID: 113894 RVA: 0x0040A227 File Offset: 0x00408427
+		// (set) Token: 0x0601BCE7 RID: 113895 RVA: 0x0040A23F File Offset: 0x0040843F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float KeepTime
@@ -145,8 +145,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B8C RID: 23436
-		// (get) Token: 0x0601B25D RID: 111197 RVA: 0x003EEF82 File Offset: 0x003ED182
+		// Token: 0x17005E21 RID: 24097
+		// (get) Token: 0x0601BCE8 RID: 113896 RVA: 0x0040A256 File Offset: 0x00408456
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasKeepTime
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B25E RID: 111198 RVA: 0x003EEF8F File Offset: 0x003ED18F
+		// Token: 0x0601BCE9 RID: 113897 RVA: 0x0040A263 File Offset: 0x00408463
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearKeepTime()
@@ -165,9 +165,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x17005B8D RID: 23437
-		// (get) Token: 0x0601B25F RID: 111199 RVA: 0x003EEFA0 File Offset: 0x003ED1A0
-		// (set) Token: 0x0601B260 RID: 111200 RVA: 0x003EEFA8 File Offset: 0x003ED1A8
+		// Token: 0x17005E22 RID: 24098
+		// (get) Token: 0x0601BCEA RID: 113898 RVA: 0x0040A274 File Offset: 0x00408474
+		// (set) Token: 0x0601BCEB RID: 113899 RVA: 0x0040A27C File Offset: 0x0040847C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ICustomShowUiPb ICustomShowUiPb
@@ -182,9 +182,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B8E RID: 23438
-		// (get) Token: 0x0601B261 RID: 111201 RVA: 0x003EEFB1 File Offset: 0x003ED1B1
-		// (set) Token: 0x0601B262 RID: 111202 RVA: 0x003EEFC2 File Offset: 0x003ED1C2
+		// Token: 0x17005E23 RID: 24099
+		// (get) Token: 0x0601BCEC RID: 113900 RVA: 0x0040A285 File Offset: 0x00408485
+		// (set) Token: 0x0601BCED RID: 113901 RVA: 0x0040A296 File Offset: 0x00408496
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string StartAkEvent
@@ -199,8 +199,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B8F RID: 23439
-		// (get) Token: 0x0601B263 RID: 111203 RVA: 0x003EEFD5 File Offset: 0x003ED1D5
+		// Token: 0x17005E24 RID: 24100
+		// (get) Token: 0x0601BCEE RID: 113902 RVA: 0x0040A2A9 File Offset: 0x004084A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasStartAkEvent
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B264 RID: 111204 RVA: 0x003EEFE0 File Offset: 0x003ED1E0
+		// Token: 0x0601BCEF RID: 113903 RVA: 0x0040A2B4 File Offset: 0x004084B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearStartAkEvent()
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			this.startAkEvent_ = null;
 		}
 
-		// Token: 0x0601B265 RID: 111205 RVA: 0x003EEFE9 File Offset: 0x003ED1E9
+		// Token: 0x0601BCF0 RID: 113904 RVA: 0x0040A2BD File Offset: 0x004084BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TransitionWithSpineLoadingPb);
 		}
 
-		// Token: 0x0601B266 RID: 111206 RVA: 0x003EEFF8 File Offset: 0x003ED1F8
+		// Token: 0x0601BCF1 RID: 113905 RVA: 0x0040A2CC File Offset: 0x004084CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TransitionWithSpineLoadingPb other)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.ICustomScreenTypeBasePb, other.ICustomScreenTypeBasePb) && object.Equals(this.FadeBackgroundFadeInEffectPb, other.FadeBackgroundFadeInEffectPb) && object.Equals(this.FadeBackgroundFadeOutEffectPb, other.FadeBackgroundFadeOutEffectPb) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.KeepTime, other.KeepTime) && object.Equals(this.ICustomShowUiPb, other.ICustomShowUiPb) && !(this.StartAkEvent != other.StartAkEvent) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B267 RID: 111207 RVA: 0x003EF0A4 File Offset: 0x003ED2A4
+		// Token: 0x0601BCF2 RID: 113906 RVA: 0x0040A378 File Offset: 0x00408578
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -272,7 +272,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B268 RID: 111208 RVA: 0x003EF153 File Offset: 0x003ED353
+		// Token: 0x0601BCF3 RID: 113907 RVA: 0x0040A427 File Offset: 0x00408627
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -280,7 +280,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B269 RID: 111209 RVA: 0x003EF160 File Offset: 0x003ED360
+		// Token: 0x0601BCF4 RID: 113908 RVA: 0x0040A434 File Offset: 0x00408634
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -288,7 +288,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B26A RID: 111210 RVA: 0x003EF16C File Offset: 0x003ED36C
+		// Token: 0x0601BCF5 RID: 113909 RVA: 0x0040A440 File Offset: 0x00408640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B26B RID: 111211 RVA: 0x003EF238 File Offset: 0x003ED438
+		// Token: 0x0601BCF6 RID: 113910 RVA: 0x0040A50C File Offset: 0x0040870C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -366,7 +366,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B26C RID: 111212 RVA: 0x003EF2E4 File Offset: 0x003ED4E4
+		// Token: 0x0601BCF7 RID: 113911 RVA: 0x0040A5B8 File Offset: 0x004087B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TransitionWithSpineLoadingPb other)
@@ -418,7 +418,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B26D RID: 111213 RVA: 0x003EF3E4 File Offset: 0x003ED5E4
+		// Token: 0x0601BCF8 RID: 113912 RVA: 0x0040A6B8 File Offset: 0x004088B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -426,7 +426,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B26E RID: 111214 RVA: 0x003EF3F0 File Offset: 0x003ED5F0
+		// Token: 0x0601BCF9 RID: 113913 RVA: 0x0040A6C4 File Offset: 0x004088C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -494,52 +494,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009D05 RID: 40197
+		// Token: 0x0400A14C RID: 41292
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009D06 RID: 40198
+		// Token: 0x0400A14D RID: 41293
 		private int _hasBits0;
 
-		// Token: 0x04009D07 RID: 40199
+		// Token: 0x0400A14E RID: 41294
 		public const int ICustomScreenTypeBasePbFieldNumber = 1;
 
-		// Token: 0x04009D08 RID: 40200
+		// Token: 0x0400A14F RID: 41295
 		private ICustomScreenTypeBasePb iCustomScreenTypeBasePb_;
 
-		// Token: 0x04009D09 RID: 40201
+		// Token: 0x0400A150 RID: 41296
 		public const int FadeBackgroundFadeInEffectPbFieldNumber = 2;
 
-		// Token: 0x04009D0A RID: 40202
+		// Token: 0x0400A151 RID: 41297
 		private FadeBackgroundFadeInEffectPb fadeBackgroundFadeInEffectPb_;
 
-		// Token: 0x04009D0B RID: 40203
+		// Token: 0x0400A152 RID: 41298
 		public const int FadeBackgroundFadeOutEffectPbFieldNumber = 3;
 
-		// Token: 0x04009D0C RID: 40204
+		// Token: 0x0400A153 RID: 41299
 		private FadeBackgroundFadeOutEffectPb fadeBackgroundFadeOutEffectPb_;
 
-		// Token: 0x04009D0D RID: 40205
+		// Token: 0x0400A154 RID: 41300
 		public const int KeepTimeFieldNumber = 4;
 
-		// Token: 0x04009D0E RID: 40206
+		// Token: 0x0400A155 RID: 41301
 		private static readonly float KeepTimeDefaultValue = 0f;
 
-		// Token: 0x04009D0F RID: 40207
+		// Token: 0x0400A156 RID: 41302
 		private float keepTime_;
 
-		// Token: 0x04009D10 RID: 40208
+		// Token: 0x0400A157 RID: 41303
 		public const int ICustomShowUiPbFieldNumber = 5;
 
-		// Token: 0x04009D11 RID: 40209
+		// Token: 0x0400A158 RID: 41304
 		private ICustomShowUiPb iCustomShowUiPb_;
 
-		// Token: 0x04009D12 RID: 40210
+		// Token: 0x0400A159 RID: 41305
 		public const int StartAkEventFieldNumber = 6;
 
-		// Token: 0x04009D13 RID: 40211
+		// Token: 0x0400A15A RID: 41306
 		private static readonly string StartAkEventDefaultValue = "";
 
-		// Token: 0x04009D14 RID: 40212
+		// Token: 0x0400A15B RID: 41307
 		private string startAkEvent_;
 	}
 }

@@ -4,36 +4,36 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 using FilterDefine;
 
-// Token: 0x0200183B RID: 6203
+// Token: 0x02000CF4 RID: 3316
 [NullableContext(1)]
 [Nullable(0)]
 public class FishingItemFilter : CommonFilter
 {
-	// Token: 0x0600B5E1 RID: 46561 RVA: 0x002920E4 File Offset: 0x002902E4
+	// Token: 0x060089CC RID: 35276 RVA: 0x0029C804 File Offset: 0x0029AA04
 	protected object GetFishingItemTech(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((IFishingHandBookItemData)data).Tech;
 	}
 
-	// Token: 0x0600B5E2 RID: 46562 RVA: 0x002920F1 File Offset: 0x002902F1
+	// Token: 0x060089CD RID: 35277 RVA: 0x0029C811 File Offset: 0x0029AA11
 	protected object GetFishingItemTime(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((IFishingHandBookItemData)data).Time;
 	}
 
-	// Token: 0x0600B5E3 RID: 46563 RVA: 0x00292103 File Offset: 0x00290303
+	// Token: 0x060089CE RID: 35278 RVA: 0x0029C823 File Offset: 0x0029AA23
 	protected object GetFishingItemArea(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((IFishingHandBookItemData)data).Area;
 	}
 
-	// Token: 0x0600B5E4 RID: 46564 RVA: 0x00292110 File Offset: 0x00290310
+	// Token: 0x060089CF RID: 35279 RVA: 0x0029C830 File Offset: 0x0029AA30
 	protected object GetFishingItemType(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((IFishingHandBookItemData)data).Type;
 	}
 
-	// Token: 0x0600B5E5 RID: 46565 RVA: 0x00292124 File Offset: 0x00290324
+	// Token: 0x060089D0 RID: 35280 RVA: 0x0029C844 File Offset: 0x0029AA44
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.FishingTech, new TFilterConfig(this.GetFishingItemTech));

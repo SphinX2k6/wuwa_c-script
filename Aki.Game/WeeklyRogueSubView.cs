@@ -7,13 +7,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D5A RID: 11610
+// Token: 0x020022B4 RID: 8884
 [NullableContext(2)]
 [Nullable(0)]
 public class WeeklyRogueSubView : ActivitySubViewBase
 {
-	// Token: 0x170020E5 RID: 8421
-	// (get) Token: 0x0601866D RID: 99949 RVA: 0x006369D7 File Offset: 0x00634BD7
+	// Token: 0x17002140 RID: 8512
+	// (get) Token: 0x06015F0F RID: 89871 RVA: 0x0065C9E7 File Offset: 0x0065ABE7
 	protected new WeeklyRogueData ActivityBaseData
 	{
 		get
@@ -22,7 +22,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0601866E RID: 99950 RVA: 0x006369E4 File Offset: 0x00634BE4
+	// Token: 0x06015F10 RID: 89872 RVA: 0x0065C9F4 File Offset: 0x0065ABF4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x0601866F RID: 99951 RVA: 0x00636AAC File Offset: 0x00634CAC
+	// Token: 0x06015F11 RID: 89873 RVA: 0x0065CABC File Offset: 0x0065ACBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueSubView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018670 RID: 99952 RVA: 0x00636AF0 File Offset: 0x00634CF0
+	// Token: 0x06015F12 RID: 89874 RVA: 0x0065CB00 File Offset: 0x0065AD00
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -91,7 +91,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06018671 RID: 99953 RVA: 0x00636CCD File Offset: 0x00634ECD
+	// Token: 0x06015F13 RID: 89875 RVA: 0x0065CCDD File Offset: 0x0065AEDD
 	protected override void OnRefreshView()
 	{
 		this.RefreshTimerText();
@@ -100,13 +100,13 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		this.RefreshScore();
 	}
 
-	// Token: 0x06018672 RID: 99954 RVA: 0x00636CE7 File Offset: 0x00634EE7
+	// Token: 0x06015F14 RID: 89876 RVA: 0x0065CCF7 File Offset: 0x0065AEF7
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06018673 RID: 99955 RVA: 0x00636CF0 File Offset: 0x00634EF0
+	// Token: 0x06015F15 RID: 89877 RVA: 0x0065CD00 File Offset: 0x0065AF00
 	private void RefreshRedDot()
 	{
 		bool flag = this.ActivityBaseData.HasNewCycle();
@@ -118,7 +118,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		this.FunctionalComponent.SetFunctionRedDotVisible(flag);
 	}
 
-	// Token: 0x06018674 RID: 99956 RVA: 0x00636D3C File Offset: 0x00634F3C
+	// Token: 0x06015F16 RID: 89878 RVA: 0x0065CD4C File Offset: 0x0065AF4C
 	private void RefreshTimerText()
 	{
 		WeeklyRogueData activityBaseData = this.ActivityBaseData;
@@ -134,7 +134,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		this.TitleComponent.SetTimeTextByText(timeTextByText);
 	}
 
-	// Token: 0x06018675 RID: 99957 RVA: 0x00636D8C File Offset: 0x00634F8C
+	// Token: 0x06015F17 RID: 89879 RVA: 0x0065CD9C File Offset: 0x0065AF9C
 	private void RefreshCondition()
 	{
 		if (!this.ActivityBaseData.IsUnLock())
@@ -156,7 +156,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		this.FunctionalComponent.SetPanelConditionVisible(false);
 	}
 
-	// Token: 0x06018676 RID: 99958 RVA: 0x00636E10 File Offset: 0x00635010
+	// Token: 0x06015F18 RID: 89880 RVA: 0x0065CE20 File Offset: 0x0065B020
 	private void RefreshScore()
 	{
 		WeeklyRogueData activityBaseData = this.ActivityBaseData;
@@ -168,7 +168,7 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		}));
 	}
 
-	// Token: 0x06018677 RID: 99959 RVA: 0x00636E83 File Offset: 0x00635083
+	// Token: 0x06015F19 RID: 89881 RVA: 0x0065CE93 File Offset: 0x0065B093
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -189,13 +189,13 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0400B501 RID: 46337
+	// Token: 0x0400B876 RID: 47222
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x0400B502 RID: 46338
+	// Token: 0x0400B877 RID: 47223
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x0400B503 RID: 46339
+	// Token: 0x0400B878 RID: 47224
 	[Nullable(new byte[]
 	{
 		2,
@@ -203,28 +203,28 @@ public class WeeklyRogueSubView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x0400B504 RID: 46340
+	// Token: 0x0400B879 RID: 47225
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x02009300 RID: 37632
+	// Token: 0x02008527 RID: 34087
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402F82C RID: 194604
+		// Token: 0x0402AEB4 RID: 175796
 		TitleItem,
-		// Token: 0x0402F82D RID: 194605
+		// Token: 0x0402AEB5 RID: 175797
 		DescriptionItem,
-		// Token: 0x0402F82E RID: 194606
+		// Token: 0x0402AEB6 RID: 175798
 		RewardListItem,
-		// Token: 0x0402F82F RID: 194607
+		// Token: 0x0402AEB7 RID: 175799
 		FunctionArea,
-		// Token: 0x0402F830 RID: 194608
+		// Token: 0x0402AEB8 RID: 175800
 		BtnScore,
-		// Token: 0x0402F831 RID: 194609
+		// Token: 0x0402AEB9 RID: 175801
 		ScoreRedDotItem,
-		// Token: 0x0402F832 RID: 194610
+		// Token: 0x0402AEBA RID: 175802
 		TxtScore,
-		// Token: 0x0402F833 RID: 194611
+		// Token: 0x0402AEBB RID: 175803
 		TextureBg
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E6F RID: 20079
+	// Token: 0x02003E38 RID: 15928
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RougeBattleAttributeFetterItem : GridProxyAbstract<IRogueBattleMapAttrFettersInfo>
 	{
-		// Token: 0x06033B0E RID: 211726 RVA: 0x00C1AEB0 File Offset: 0x00C190B0
+		// Token: 0x06028979 RID: 166265 RVA: 0x00B643D4 File Offset: 0x00B625D4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B0F RID: 211727 RVA: 0x00C1AF30 File Offset: 0x00C19130
+		// Token: 0x0602897A RID: 166266 RVA: 0x00B64454 File Offset: 0x00B62654
 		public override void Refresh(IRogueBattleMapAttrFettersInfo data, bool isSelected, int gridIndex)
 		{
 			this.BondId = data.ConfigId;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.SetTextureByPath(RogueBattleConfig.Instance.GetRogueResBond(data.ConfigId).Value.Icon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06033B10 RID: 211728 RVA: 0x00C1AFBC File Offset: 0x00C191BC
+		// Token: 0x0602897B RID: 166267 RVA: 0x00B644E0 File Offset: 0x00B626E0
 		private void OnClickToggle(EToggleState state)
 		{
 			RogueBattleModel.Instance.CurrentMapSummaryBond = this.BondId;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401B6DE RID: 112350
+		// Token: 0x040160B1 RID: 90289
 		private int BondId;
 	}
 }

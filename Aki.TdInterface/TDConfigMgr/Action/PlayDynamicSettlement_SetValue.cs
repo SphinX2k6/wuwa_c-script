@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002108 RID: 8456
+	// Token: 0x02002369 RID: 9065
 	public class PlayDynamicSettlement_SetValue
 	{
-		// Token: 0x04006F62 RID: 28514
-		[Nullable(1)]
+		// Token: 0x04007596 RID: 30102
 		public IDynamicSettlementConfig DynamicSettlementConfig;
 	}
 }

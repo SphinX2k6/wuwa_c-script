@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043E4 RID: 17380
+	// Token: 0x02004849 RID: 18505
 	public enum EGenderType : byte
 	{
-		// Token: 0x0400C29F RID: 49823
+		// Token: 0x0400CCC3 RID: 52419
 		Male,
-		// Token: 0x0400C2A0 RID: 49824
+		// Token: 0x0400CCC4 RID: 52420
 		Female
 	}
 }

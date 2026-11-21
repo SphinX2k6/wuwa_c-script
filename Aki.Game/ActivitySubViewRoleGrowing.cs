@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012A8 RID: 4776
+// Token: 0x0200075C RID: 1884
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 {
-	// Token: 0x0600830B RID: 33547 RVA: 0x001BDFA0 File Offset: 0x001BC1A0
+	// Token: 0x060056A2 RID: 22178 RVA: 0x001C6D30 File Offset: 0x001C4F30
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -25,13 +25,13 @@ public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600830C RID: 33548 RVA: 0x001BDFE8 File Offset: 0x001BC1E8
+	// Token: 0x060056A3 RID: 22179 RVA: 0x001C6D78 File Offset: 0x001C4F78
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityLongShanData)this.ActivityBaseData;
 	}
 
-	// Token: 0x0600830D RID: 33549 RVA: 0x001BDFFC File Offset: 0x001BC1FC
+	// Token: 0x060056A4 RID: 22180 RVA: 0x001C6D8C File Offset: 0x001C4F8C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewRoleGrowing.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -42,24 +42,24 @@ public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600830E RID: 33550 RVA: 0x001BE03F File Offset: 0x001BC23F
+	// Token: 0x060056A5 RID: 22181 RVA: 0x001C6DCF File Offset: 0x001C4FCF
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.LongShanUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x0600830F RID: 33551 RVA: 0x001BE05D File Offset: 0x001BC25D
+	// Token: 0x060056A6 RID: 22182 RVA: 0x001C6DED File Offset: 0x001C4FED
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LongShanUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x06008310 RID: 33552 RVA: 0x001BE07B File Offset: 0x001BC27B
+	// Token: 0x060056A7 RID: 22183 RVA: 0x001C6E0B File Offset: 0x001C500B
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06008311 RID: 33553 RVA: 0x001BE07D File Offset: 0x001BC27D
+	// Token: 0x060056A8 RID: 22184 RVA: 0x001C6E0D File Offset: 0x001C500D
 	protected override void OnBeforeShow()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -70,7 +70,7 @@ public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06008312 RID: 33554 RVA: 0x001BE0A0 File Offset: 0x001BC2A0
+	// Token: 0x060056A9 RID: 22185 RVA: 0x001C6E30 File Offset: 0x001C5030
 	private void OnClickDetail(ActivityBaseData data)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -79,7 +79,7 @@ public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008313 RID: 33555 RVA: 0x001BE0BE File Offset: 0x001BC2BE
+	// Token: 0x060056AA RID: 22186 RVA: 0x001C6E4E File Offset: 0x001C504E
 	protected override void OnRefreshView()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityData.Id);
@@ -91,13 +91,13 @@ public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 		this.OnDataUpdate();
 	}
 
-	// Token: 0x06008314 RID: 33556 RVA: 0x001BE0F2 File Offset: 0x001BC2F2
+	// Token: 0x060056AB RID: 22187 RVA: 0x001C6E82 File Offset: 0x001C5082
 	private void OnDataUpdate()
 	{
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06008315 RID: 33557 RVA: 0x001BE0FC File Offset: 0x001BC2FC
+	// Token: 0x060056AC RID: 22188 RVA: 0x001C6E8C File Offset: 0x001C508C
 	private void RefreshRedDot()
 	{
 		bool functionRedDotVisible = this.ActivityData.CheckAnyStageRed();
@@ -109,17 +109,17 @@ public class ActivitySubViewRoleGrowing : ActivitySubViewBase
 		commonInfoPanel.SetFunctionRedDotVisible(functionRedDotVisible);
 	}
 
-	// Token: 0x04003B13 RID: 15123
+	// Token: 0x04003BAB RID: 15275
 	protected ActivityLongShanData ActivityData;
 
-	// Token: 0x04003B14 RID: 15124
+	// Token: 0x04003BAC RID: 15276
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x020078C3 RID: 30915
+	// Token: 0x02006A4D RID: 27213
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027C94 RID: 162964
+		// Token: 0x04022FC2 RID: 143298
 		public const int CommonActionInfo = 0;
 	}
 }

@@ -4,76 +4,76 @@ using Aki.Config;
 using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020027B2 RID: 10162
+// Token: 0x02001D2D RID: 7469
 public class RoleLevelData : RoleModuleDataBase
 {
-	// Token: 0x06014E58 RID: 85592 RVA: 0x0054E809 File Offset: 0x0054CA09
+	// Token: 0x06012857 RID: 75863 RVA: 0x00579531 File Offset: 0x00577731
 	public RoleLevelData(int roleId) : base(roleId)
 	{
 	}
 
-	// Token: 0x06014E59 RID: 85593 RVA: 0x0054E812 File Offset: 0x0054CA12
+	// Token: 0x06012858 RID: 75864 RVA: 0x0057953A File Offset: 0x0057773A
 	public void SetLevel(int level)
 	{
 		this.Level = level;
 	}
 
-	// Token: 0x06014E5A RID: 85594 RVA: 0x0054E81B File Offset: 0x0054CA1B
+	// Token: 0x06012859 RID: 75865 RVA: 0x00579543 File Offset: 0x00577743
 	public int GetLevel()
 	{
 		return this.Level;
 	}
 
-	// Token: 0x06014E5B RID: 85595 RVA: 0x0054E823 File Offset: 0x0054CA23
+	// Token: 0x0601285A RID: 75866 RVA: 0x0057954B File Offset: 0x0057774B
 	public void SetExp(int exp)
 	{
 		this.Exp = exp;
 	}
 
-	// Token: 0x06014E5C RID: 85596 RVA: 0x0054E82C File Offset: 0x0054CA2C
+	// Token: 0x0601285B RID: 75867 RVA: 0x00579554 File Offset: 0x00577754
 	public int GetExp()
 	{
 		return this.Exp;
 	}
 
-	// Token: 0x06014E5D RID: 85597 RVA: 0x0054E834 File Offset: 0x0054CA34
+	// Token: 0x0601285C RID: 75868 RVA: 0x0057955C File Offset: 0x0057775C
 	public void SetBreachLevel(int level)
 	{
 		this.BreachLevel = level;
 	}
 
-	// Token: 0x06014E5E RID: 85598 RVA: 0x0054E83D File Offset: 0x0054CA3D
+	// Token: 0x0601285D RID: 75869 RVA: 0x00579565 File Offset: 0x00577765
 	public int GetBreachLevel()
 	{
 		return this.BreachLevel;
 	}
 
-	// Token: 0x06014E5F RID: 85599 RVA: 0x0054E848 File Offset: 0x0054CA48
+	// Token: 0x0601285E RID: 75870 RVA: 0x00579570 File Offset: 0x00577770
 	public int GetRoleMaxLevel()
 	{
 		return base.GetRoleConfig().MaxLevel;
 	}
 
-	// Token: 0x06014E60 RID: 85600 RVA: 0x0054E863 File Offset: 0x0054CA63
+	// Token: 0x0601285F RID: 75871 RVA: 0x0057958B File Offset: 0x0057778B
 	public bool GetRoleIsMaxLevel()
 	{
 		return this.Level >= this.GetRoleMaxLevel();
 	}
 
-	// Token: 0x06014E61 RID: 85601 RVA: 0x0054E876 File Offset: 0x0054CA76
+	// Token: 0x06012860 RID: 75872 RVA: 0x0057959E File Offset: 0x0057779E
 	public int GetCurrentMaxExp()
 	{
 		return this.GetLevelUpExp(this.Level + 1);
 	}
 
-	// Token: 0x06014E62 RID: 85602 RVA: 0x0054E888 File Offset: 0x0054CA88
+	// Token: 0x06012861 RID: 75873 RVA: 0x005795B0 File Offset: 0x005777B0
 	public int GetLevelUpNeedExp()
 	{
 		int levelUpExp = this.GetLevelUpExp(this.Level + 1);
 		return Math.Max(0, levelUpExp - this.Exp);
 	}
 
-	// Token: 0x06014E63 RID: 85603 RVA: 0x0054E8B4 File Offset: 0x0054CAB4
+	// Token: 0x06012862 RID: 75874 RVA: 0x005795DC File Offset: 0x005777DC
 	private int GetLevelUpExp(int level)
 	{
 		RoleLevelConsume? roleLevelConsume = RoleConfig.Instance.GetRoleLevelConsume(base.GetRoleConfig().LevelConsumeId, level);
@@ -84,7 +84,7 @@ public class RoleLevelData : RoleModuleDataBase
 		return 1;
 	}
 
-	// Token: 0x06014E64 RID: 85604 RVA: 0x0054E8F8 File Offset: 0x0054CAF8
+	// Token: 0x06012863 RID: 75875 RVA: 0x00579620 File Offset: 0x00577820
 	public int GetMaxBreachLevel()
 	{
 		IReadOnlyList<RoleBreach> roleBreachList = RoleConfig.Instance.GetRoleBreachList(base.GetRoleConfig().BreachId);
@@ -101,7 +101,7 @@ public class RoleLevelData : RoleModuleDataBase
 		return num;
 	}
 
-	// Token: 0x06014E65 RID: 85605 RVA: 0x0054E954 File Offset: 0x0054CB54
+	// Token: 0x06012864 RID: 75876 RVA: 0x0057967C File Offset: 0x0057787C
 	public int GetCurrentMaxLevel()
 	{
 		RoleBreach? breachConfig = this.GetBreachConfig(this.BreachLevel);
@@ -112,19 +112,19 @@ public class RoleLevelData : RoleModuleDataBase
 		return breachConfig.Value.MaxLevel;
 	}
 
-	// Token: 0x06014E66 RID: 85606 RVA: 0x0054E988 File Offset: 0x0054CB88
+	// Token: 0x06012865 RID: 75877 RVA: 0x005796B0 File Offset: 0x005778B0
 	public RoleBreach? GetBreachConfig(int level)
 	{
 		return RoleConfig.Instance.GetRoleBreachConfig(base.GetRoleConfig().BreachId, level);
 	}
 
-	// Token: 0x06014E67 RID: 85607 RVA: 0x0054E9AE File Offset: 0x0054CBAE
+	// Token: 0x06012866 RID: 75878 RVA: 0x005796D6 File Offset: 0x005778D6
 	public bool GetRoleNeedBreakUp()
 	{
 		return this.Level >= this.GetCurrentMaxLevel() && this.Level < this.GetRoleMaxLevel();
 	}
 
-	// Token: 0x06014E68 RID: 85608 RVA: 0x0054E9D0 File Offset: 0x0054CBD0
+	// Token: 0x06012867 RID: 75879 RVA: 0x005796F8 File Offset: 0x005778F8
 	public double GetExpPercentage()
 	{
 		if (this.GetRoleIsMaxLevel())
@@ -139,7 +139,7 @@ public class RoleLevelData : RoleModuleDataBase
 		return 0.0;
 	}
 
-	// Token: 0x06014E69 RID: 85609 RVA: 0x0054EA3C File Offset: 0x0054CC3C
+	// Token: 0x06012868 RID: 75880 RVA: 0x00579764 File Offset: 0x00577964
 	public bool IsEnoughBreachConsume()
 	{
 		RoleBreach? roleBreachConfig = RoleConfig.Instance.GetRoleBreachConfig(base.GetRoleConfig().BreachId, this.BreachLevel + 1);
@@ -161,12 +161,12 @@ public class RoleLevelData : RoleModuleDataBase
 		return true;
 	}
 
-	// Token: 0x04009D02 RID: 40194
+	// Token: 0x0400A0E5 RID: 41189
 	protected int Level;
 
-	// Token: 0x04009D03 RID: 40195
+	// Token: 0x0400A0E6 RID: 41190
 	protected int BreachLevel;
 
-	// Token: 0x04009D04 RID: 40196
+	// Token: 0x0400A0E7 RID: 41191
 	protected int Exp;
 }

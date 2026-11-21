@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020021D4 RID: 8660
+// Token: 0x020016B8 RID: 5816
 [NullableContext(1)]
 [Nullable(0)]
 public class MailFavoriteDropDownItem : MailDropDownItem
 {
-	// Token: 0x06010DCB RID: 69067 RVA: 0x0041A204 File Offset: 0x00418404
+	// Token: 0x0600E25C RID: 57948 RVA: 0x00426AE4 File Offset: 0x00424CE4
 	public MailFavoriteDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06010DCC RID: 69068 RVA: 0x0041A210 File Offset: 0x00418410
+	// Token: 0x0600E25D RID: 57949 RVA: 0x00426AF0 File Offset: 0x00424CF0
 	public override MailData[] GetFilteredMailList()
 	{
 		List<MailData> favoriteMails = MailModel.Instance.GetFavoriteMails(null);
@@ -27,7 +27,7 @@ public class MailFavoriteDropDownItem : MailDropDownItem
 		return favoriteMails.ToArray();
 	}
 
-	// Token: 0x06010DCD RID: 69069 RVA: 0x0041A274 File Offset: 0x00418474
+	// Token: 0x0600E25E RID: 57950 RVA: 0x00426B54 File Offset: 0x00424D54
 	public override string GetTitleText()
 	{
 		int favoriteMailCount = MailModel.Instance.GetFavoriteMailCount();
@@ -56,7 +56,7 @@ public class MailFavoriteDropDownItem : MailDropDownItem
 		});
 	}
 
-	// Token: 0x06010DCE RID: 69070 RVA: 0x0041A329 File Offset: 0x00418529
+	// Token: 0x0600E25F RID: 57951 RVA: 0x00426C09 File Offset: 0x00424E09
 	protected override void OnShowDropDownItemBase(MailFilter data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Name, Array.Empty<object>());

@@ -4,27 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008A0 RID: 2208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000943 RID: 2371
 	public class SpawnMonsterComponent_SetValue
 	{
-		// Token: 0x04002074 RID: 8308
+		// Token: 0x04002286 RID: 8838
 		public bool? Disabled;
 
-		// Token: 0x04002075 RID: 8309
+		// Token: 0x04002287 RID: 8839
 		public bool? EdIsLocked;
 
-		// Token: 0x04002076 RID: 8310
+		// Token: 0x04002288 RID: 8840
 		public ISpawnMonsterStartCondition ActiveType;
 
-		// Token: 0x04002077 RID: 8311
+		// Token: 0x04002289 RID: 8841
 		public List<ISpawnMonsterConfig> SpawnMonsterConfigs;
 
-		// Token: 0x04002078 RID: 8312
+		// Token: 0x0400228A RID: 8842
 		public bool? IssharedHatred;
 
-		// Token: 0x04002079 RID: 8313
+		// Token: 0x0400228B RID: 8843
 		[Nullable(2)]
 		public ISpawnMonsterConstraintAnnularSector SpawnMonsterConstraintType;
 	}

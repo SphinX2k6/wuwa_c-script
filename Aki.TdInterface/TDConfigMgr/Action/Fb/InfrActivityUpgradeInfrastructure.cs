@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A97 RID: 10903
+	// Token: 0x02002D8B RID: 11659
 	public class InfrActivityUpgradeInfrastructure : ActionParams
 	{
-		// Token: 0x0600EF7D RID: 61309 RVA: 0x0022D0AC File Offset: 0x0022B2AC
-		[NullableContext(1)]
+		// Token: 0x0600FE33 RID: 65075 RVA: 0x0024ADB8 File Offset: 0x00248FB8
 		public static InfrActivityUpgradeInfrastructure Create(IInfrActivityUpgradeInfrastructure? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C11 RID: 19473
-		// (get) Token: 0x0600EF7E RID: 61310 RVA: 0x0022D0CB File Offset: 0x0022B2CB
+		// Token: 0x17004FCB RID: 20427
+		// (get) Token: 0x0600FE34 RID: 65076 RVA: 0x0024ADD7 File Offset: 0x00248FD7
 		public virtual int Level
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083C1 RID: 33729
+		// Token: 0x04008AC5 RID: 35525
 		private IInfrActivityUpgradeInfrastructure Instance;
 	}
 }

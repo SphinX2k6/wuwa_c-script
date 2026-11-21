@@ -9,12 +9,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070CD RID: 28877
+	// Token: 0x02006331 RID: 25393
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterOutlookComponent : BaseOutlookComponent
 	{
-		// Token: 0x0604676B RID: 288619 RVA: 0x011B1734 File Offset: 0x011AF934
+		// Token: 0x0603D862 RID: 252002 RVA: 0x011D0980 File Offset: 0x011CEB80
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -26,14 +26,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604676C RID: 288620 RVA: 0x011B1787 File Offset: 0x011AF987
+		// Token: 0x0603D863 RID: 252003 RVA: 0x011D09D3 File Offset: 0x011CEBD3
 		protected override void OnActivate()
 		{
 			base.OnActivate();
 			this.RefreshOrnaments();
 		}
 
-		// Token: 0x0604676D RID: 288621 RVA: 0x011B1798 File Offset: 0x011AF998
+		// Token: 0x0603D864 RID: 252004 RVA: 0x011D09E4 File Offset: 0x011CEBE4
 		public void RefreshOrnaments()
 		{
 			if (this.ActorComp == null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			base.EquipDecoration(decorationIds);
 		}
 
-		// Token: 0x0604676E RID: 288622 RVA: 0x011B17E0 File Offset: 0x011AF9E0
+		// Token: 0x0603D865 RID: 252005 RVA: 0x011D0A2C File Offset: 0x011CEC2C
 		public void OnEntityDressOrnamentChangeNotify(EntityDressOrnamentChangeNotify notify)
 		{
 			if (this.ActorComp == null)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			base.EquipDecoration(decorationIds);
 		}
 
-		// Token: 0x0604676F RID: 288623 RVA: 0x011B187C File Offset: 0x011AFA7C
+		// Token: 0x0603D866 RID: 252006 RVA: 0x011D0AC8 File Offset: 0x011CECC8
 		protected override void AddRenderMesh(DecorationItem item)
 		{
 			CharacterActorComponent component = base.Entity.GetComponent<CharacterActorComponent>();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046770 RID: 288624 RVA: 0x011B18C4 File Offset: 0x011AFAC4
+		// Token: 0x0603D867 RID: 252007 RVA: 0x011D0B10 File Offset: 0x011CED10
 		protected override int? GetDecorationModelId(int decorationId)
 		{
 			Ornament? config = ConfigOrnamentById.GetConfig(decorationId, true);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return null;
 		}
 
-		// Token: 0x06046771 RID: 288625 RVA: 0x011B1969 File Offset: 0x011AFB69
+		// Token: 0x0603D868 RID: 252008 RVA: 0x011D0BB5 File Offset: 0x011CEDB5
 		public override int GetSkinId()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return actorComp.CreatureData.GetSkinId();
 		}
 
-		// Token: 0x06046772 RID: 288626 RVA: 0x011B1984 File Offset: 0x011AFB84
+		// Token: 0x0603D869 RID: 252009 RVA: 0x011D0BD0 File Offset: 0x011CEDD0
 		private bool IsFemaleMainRole()
 		{
 			if (this.ActorComp == null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return RoleModel.Instance.IsMainRole(baseRoleId) && PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Female;
 		}
 
-		// Token: 0x06046773 RID: 288627 RVA: 0x011B19D4 File Offset: 0x011AFBD4
+		// Token: 0x0603D86A RID: 252010 RVA: 0x011D0C20 File Offset: 0x011CEE20
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -132,36 +132,80 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterOutlookComponent characterOutlookComponent = (CharacterOutlookComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterOutlookComponent.ActorComp == null)
 			{
-				if (characterOutlookComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CharRenderComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (characterOutlookComponent.CharRenderComp == null)
-				{
-					this.CharRenderComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharRenderingComponent>(this.CharRenderComp), "CharRenderComp"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (characterOutlookComponent.CharRenderComp == null)
+			{
+				this.CharRenderComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharRenderComp), "CharRenderComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024EE9 RID: 151273
+		// Token: 0x170074C2 RID: 29890
+		// (get) Token: 0x0603D86B RID: 252011 RVA: 0x011D0C96 File Offset: 0x011CEE96
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074C3 RID: 29891
+		// (get) Token: 0x0603D86C RID: 252012 RVA: 0x011D0C99 File Offset: 0x011CEE99
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074C4 RID: 29892
+		// (get) Token: 0x0603D86D RID: 252013 RVA: 0x011D0C9C File Offset: 0x011CEE9C
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074C5 RID: 29893
+		// (get) Token: 0x0603D86E RID: 252014 RVA: 0x011D0C9F File Offset: 0x011CEE9F
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074C6 RID: 29894
+		// (get) Token: 0x0603D86F RID: 252015 RVA: 0x011D0CA2 File Offset: 0x011CEEA2
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020A28 RID: 133672
 		[Nullable(2)]
 		protected CharacterActorComponent ActorComp;
 
-		// Token: 0x04024EEA RID: 151274
+		// Token: 0x04020A29 RID: 133673
 		[Nullable(2)]
 		protected CharRenderingComponent CharRenderComp;
 	}

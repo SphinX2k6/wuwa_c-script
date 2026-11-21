@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B70 RID: 2928
+	// Token: 0x02000C3E RID: 3134
 	public class LevelPlayComponent : IComponentBase
 	{
-		// Token: 0x06004378 RID: 17272 RVA: 0x000AC07A File Offset: 0x000AA27A
-		[NullableContext(1)]
+		// Token: 0x060047D1 RID: 18385 RVA: 0x000B613E File Offset: 0x000B433E
 		public static LevelPlayComponent Create(ILevelPlayComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001255 RID: 4693
-		// (get) Token: 0x06004379 RID: 17273 RVA: 0x000AC09C File Offset: 0x000AA29C
+		// Token: 0x17001350 RID: 4944
+		// (get) Token: 0x060047D2 RID: 18386 RVA: 0x000B6160 File Offset: 0x000B4360
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001256 RID: 4694
-		// (get) Token: 0x0600437A RID: 17274 RVA: 0x000AC0D4 File Offset: 0x000AA2D4
+		// Token: 0x17001351 RID: 4945
+		// (get) Token: 0x060047D3 RID: 18387 RVA: 0x000B6198 File Offset: 0x000B4398
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001257 RID: 4695
-		// (get) Token: 0x0600437B RID: 17275 RVA: 0x000AC0EA File Offset: 0x000AA2EA
+		// Token: 0x17001352 RID: 4946
+		// (get) Token: 0x060047D4 RID: 18388 RVA: 0x000B61AE File Offset: 0x000B43AE
 		public virtual int LevelPlayId
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002617 RID: 9751
+		// Token: 0x0400285F RID: 10335
 		private ILevelPlayComponent Instance;
 	}
 }

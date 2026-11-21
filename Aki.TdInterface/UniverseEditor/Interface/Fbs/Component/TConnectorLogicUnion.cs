@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BFB RID: 23547
+	// Token: 0x0200621A RID: 25114
 	public class TConnectorLogicUnion
 	{
-		// Token: 0x1700B1D5 RID: 45525
-		// (get) Token: 0x06028655 RID: 165461 RVA: 0x0058F9D7 File Offset: 0x0058DBD7
-		// (set) Token: 0x06028656 RID: 165462 RVA: 0x0058F9DF File Offset: 0x0058DBDF
+		// Token: 0x1700BB23 RID: 47907
+		// (get) Token: 0x0602AC45 RID: 175173 RVA: 0x005D791F File Offset: 0x005D5B1F
+		// (set) Token: 0x0602AC46 RID: 175174 RVA: 0x005D7927 File Offset: 0x005D5B27
 		public TConnectorLogic Type { get; set; }
 
-		// Token: 0x1700B1D6 RID: 45526
-		// (get) Token: 0x06028657 RID: 165463 RVA: 0x0058F9E8 File Offset: 0x0058DBE8
-		// (set) Token: 0x06028658 RID: 165464 RVA: 0x0058F9F0 File Offset: 0x0058DBF0
+		// Token: 0x1700BB24 RID: 47908
+		// (get) Token: 0x0602AC47 RID: 175175 RVA: 0x005D7930 File Offset: 0x005D5B30
+		// (set) Token: 0x0602AC48 RID: 175176 RVA: 0x005D7938 File Offset: 0x005D5B38
 		public object Value { get; set; }
 
-		// Token: 0x06028659 RID: 165465 RVA: 0x0058F9F9 File Offset: 0x0058DBF9
+		// Token: 0x0602AC49 RID: 175177 RVA: 0x005D7941 File Offset: 0x005D5B41
 		public TConnectorLogicUnion()
 		{
 			this.Type = TConnectorLogic.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602865A RID: 165466 RVA: 0x0058FA0F File Offset: 0x0058DC0F
+		// Token: 0x0602AC4A RID: 175178 RVA: 0x005D7957 File Offset: 0x005D5B57
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602865B RID: 165467 RVA: 0x0058FA21 File Offset: 0x0058DC21
+		// Token: 0x0602AC4B RID: 175179 RVA: 0x005D7969 File Offset: 0x005D5B69
 		public IConnectorPointToPointPathAdvanceT AsIConnectorPointToPointPathAdvance()
 		{
 			return this.As<IConnectorPointToPointPathAdvanceT>();
 		}
 
-		// Token: 0x0602865C RID: 165468 RVA: 0x0058FA29 File Offset: 0x0058DC29
+		// Token: 0x0602AC4C RID: 175180 RVA: 0x005D7971 File Offset: 0x005D5B71
 		public static TConnectorLogicUnion FromIConnectorPointToPointPathAdvance(IConnectorPointToPointPathAdvanceT _iconnectorpointtopointpathadvance)
 		{
 			return new TConnectorLogicUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602865D RID: 165469 RVA: 0x0058FA3E File Offset: 0x0058DC3E
+		// Token: 0x0602AC4D RID: 175181 RVA: 0x005D7986 File Offset: 0x005D5B86
 		public IConnectorRangeT AsIConnectorRange()
 		{
 			return this.As<IConnectorRangeT>();
 		}
 
-		// Token: 0x0602865E RID: 165470 RVA: 0x0058FA46 File Offset: 0x0058DC46
+		// Token: 0x0602AC4E RID: 175182 RVA: 0x005D798E File Offset: 0x005D5B8E
 		public static TConnectorLogicUnion FromIConnectorRange(IConnectorRangeT _iconnectorrange)
 		{
 			return new TConnectorLogicUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602865F RID: 165471 RVA: 0x0058FA5C File Offset: 0x0058DC5C
+		// Token: 0x0602AC4F RID: 175183 RVA: 0x005D79A4 File Offset: 0x005D5BA4
 		public static int Pack(FlatBufferBuilder builder, TConnectorLogicUnion _o)
 		{
 			TConnectorLogic type = _o.Type;

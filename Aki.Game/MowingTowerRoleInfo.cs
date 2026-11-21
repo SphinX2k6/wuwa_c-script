@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x0200138A RID: 5002
+// Token: 0x0200083E RID: 2110
 public class MowingTowerRoleInfo
 {
-	// Token: 0x04003E2C RID: 15916
+	// Token: 0x04003EC4 RID: 16068
 	public int RoleId;
 
-	// Token: 0x04003E2D RID: 15917
+	// Token: 0x04003EC5 RID: 16069
 	public int Slot;
 }

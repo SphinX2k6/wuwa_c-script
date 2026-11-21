@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F1A RID: 16154
+	// Token: 0x02004358 RID: 17240
 	public enum ILogicProgramSpecialProcessOperation_Union : byte
 	{
-		// Token: 0x0400B91F RID: 47391
+		// Token: 0x0400C2FC RID: 49916
 		NONE,
-		// Token: 0x0400B920 RID: 47392
+		// Token: 0x0400C2FD RID: 49917
 		ILogicProgramSpecialProcessOperation,
-		// Token: 0x0400B921 RID: 47393
+		// Token: 0x0400C2FE RID: 49918
 		IDisableUro
 	}
 }

@@ -11,20 +11,20 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020034A0 RID: 13472
+// Token: 0x02002A14 RID: 10772
 [UClass("/Game/Aki/TypeScript/Game/Ui/LguiEventSystem/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Ui/LguiEventSystem/TsLguiEventSystemActor.TsLguiEventSystemActor_C")]
 public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D51C RID: 120092 RVA: 0x0082C9E2 File Offset: 0x0082ABE2
+	// Token: 0x0601B219 RID: 111129 RVA: 0x00853AAE File Offset: 0x00851CAE
 	static TsLguiEventSystemActor()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsLguiEventSystemActor.CreateStaticDefaultValue), new Action(TsLguiEventSystemActor.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170028B2 RID: 10418
-	// (get) Token: 0x0601D51D RID: 120093 RVA: 0x0082CA01 File Offset: 0x0082AC01
-	// (set) Token: 0x0601D51E RID: 120094 RVA: 0x0082CA15 File Offset: 0x0082AC15
+	// Token: 0x17002C4A RID: 11338
+	// (get) Token: 0x0601B21A RID: 111130 RVA: 0x00853ACD File Offset: 0x00851CCD
+	// (set) Token: 0x0601B21B RID: 111131 RVA: 0x00853AE1 File Offset: 0x00851CE1
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe ULGUI_StandaloneInputModule StandaloneInputModule
@@ -41,9 +41,9 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x170028B3 RID: 10419
-	// (get) Token: 0x0601D51F RID: 120095 RVA: 0x0082CA2A File Offset: 0x0082AC2A
-	// (set) Token: 0x0601D520 RID: 120096 RVA: 0x0082CA3E File Offset: 0x0082AC3E
+	// Token: 0x17002C4B RID: 11339
+	// (get) Token: 0x0601B21C RID: 111132 RVA: 0x00853AF6 File Offset: 0x00851CF6
+	// (set) Token: 0x0601B21D RID: 111133 RVA: 0x00853B0A File Offset: 0x00851D0A
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe ULGUI_TouchInputModule TouchInputModule
@@ -60,15 +60,15 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x170028B4 RID: 10420
-	// (get) Token: 0x0601D521 RID: 120097 RVA: 0x0082CA53 File Offset: 0x0082AC53
-	// (set) Token: 0x0601D522 RID: 120098 RVA: 0x0082CA5B File Offset: 0x0082AC5B
+	// Token: 0x17002C4C RID: 11340
+	// (get) Token: 0x0601B21E RID: 111134 RVA: 0x00853B1F File Offset: 0x00851D1F
+	// (set) Token: 0x0601B21F RID: 111135 RVA: 0x00853B27 File Offset: 0x00851D27
 	[Nullable(2)]
 	private ULGUI_PointerInputModule CurrentInputModule { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x170028B5 RID: 10421
-	// (get) Token: 0x0601D523 RID: 120099 RVA: 0x0082CA64 File Offset: 0x0082AC64
-	// (set) Token: 0x0601D524 RID: 120100 RVA: 0x0082CA74 File Offset: 0x0082AC74
+	// Token: 0x17002C4D RID: 11341
+	// (get) Token: 0x0601B220 RID: 111136 RVA: 0x00853B30 File Offset: 0x00851D30
+	// (set) Token: 0x0601B221 RID: 111137 RVA: 0x00853B40 File Offset: 0x00851D40
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool NavigationEnable
 	{
@@ -82,7 +82,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D525 RID: 120101 RVA: 0x0082CA88 File Offset: 0x0082AC88
+	// Token: 0x0601B222 RID: 111138 RVA: 0x00853B54 File Offset: 0x00851D54
 	public void InitializeLguiEventSystemActor()
 	{
 		this.RefreshCurrentInputModule();
@@ -110,7 +110,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		this.BroadCastInputType();
 	}
 
-	// Token: 0x0601D526 RID: 120102 RVA: 0x0082CAF8 File Offset: 0x0082ACF8
+	// Token: 0x0601B223 RID: 111139 RVA: 0x00853BC4 File Offset: 0x00851DC4
 	public void ResetLguiEventSystemActor()
 	{
 		if (this.HandleWrapper != null)
@@ -133,7 +133,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		this.UnRegisterPointEnterExitEvent();
 	}
 
-	// Token: 0x0601D527 RID: 120103 RVA: 0x0082CB5D File Offset: 0x0082AD5D
+	// Token: 0x0601B224 RID: 111140 RVA: 0x00853C29 File Offset: 0x00851E29
 	private void AddEvents()
 	{
 		this.ShowTypeChange = delegate(EOperationType last, EOperationType now)
@@ -143,13 +143,13 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		CSharpScript.Game.Common.Event.EventSystem.Instance.Add<EOperationType, EOperationType>(EEventName.ShowTypeChange, this.ShowTypeChange);
 	}
 
-	// Token: 0x0601D528 RID: 120104 RVA: 0x0082CB87 File Offset: 0x0082AD87
+	// Token: 0x0601B225 RID: 111141 RVA: 0x00853C53 File Offset: 0x00851E53
 	private void RemoveEvents()
 	{
 		CSharpScript.Game.Common.Event.EventSystem.Instance.Remove<EOperationType, EOperationType>(EEventName.ShowTypeChange, this.ShowTypeChange);
 	}
 
-	// Token: 0x0601D529 RID: 120105 RVA: 0x0082CBA0 File Offset: 0x0082ADA0
+	// Token: 0x0601B226 RID: 111142 RVA: 0x00853C6C File Offset: 0x00851E6C
 	private void RegisterControllerChange()
 	{
 		this.ControllerConnectChange = delegate(bool bIsConnected, int platformUserId, int controllerId)
@@ -164,7 +164,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		eventSystem.OnConnectionChanged.Add(this.ControllerConnectChange);
 	}
 
-	// Token: 0x0601D52A RID: 120106 RVA: 0x0082CBED File Offset: 0x0082ADED
+	// Token: 0x0601B227 RID: 111143 RVA: 0x00853CB9 File Offset: 0x00851EB9
 	private void UnRegisterControllerChange()
 	{
 		ULGUIEventSystem eventSystem = base.EventSystem;
@@ -175,29 +175,26 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		eventSystem.OnConnectionChanged.Remove(this.ControllerConnectChange);
 	}
 
-	// Token: 0x0601D52B RID: 120107 RVA: 0x0082CC0C File Offset: 0x0082AE0C
+	// Token: 0x0601B228 RID: 111144 RVA: 0x00853CD8 File Offset: 0x00851ED8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InputTrigger(bool triggerPress, EMouseButtonType mouseButtonType)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InputTrigger"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__InputTrigger_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InputTrigger"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__InputTrigger_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTrigger_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->triggerPress = triggerPress;
-			*(&ptr2->mouseButtonType) = (byte)mouseButtonType;
+			this.InputTrigger_Implementation(triggerPress, mouseButtonType);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__InputTrigger_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__InputTrigger_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTrigger_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->triggerPress = triggerPress;
+		*(&ptr->mouseButtonType) = (byte)mouseButtonType;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D52C RID: 120108 RVA: 0x0082CC8C File Offset: 0x0082AE8C
+	// Token: 0x0601B229 RID: 111145 RVA: 0x00853D70 File Offset: 0x00851F70
 	protected void InputTrigger_Implementation(bool triggerPress, EMouseButtonType mouseButtonType)
 	{
 		if (Info.Instance.IsInTouch())
@@ -221,30 +218,27 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.InputTrigger(triggerPress, mouseButtonType);
 	}
 
-	// Token: 0x0601D52D RID: 120109 RVA: 0x0082CCCC File Offset: 0x0082AECC
+	// Token: 0x0601B22A RID: 111146 RVA: 0x00853DB0 File Offset: 0x00851FB0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InputNavigation(ELGUINavigationDirection direction, bool pressOrRelease, bool forceNavigation = false)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InputNavigation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__InputNavigation_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InputNavigation"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__InputNavigation_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__InputNavigation_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->direction) = (byte)direction;
-			ptr2->pressOrRelease = pressOrRelease;
-			ptr2->forceNavigation = forceNavigation;
+			this.InputNavigation_Implementation(direction, pressOrRelease, forceNavigation);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__InputNavigation_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__InputNavigation_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__InputNavigation_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->direction) = (byte)direction;
+		ptr->pressOrRelease = pressOrRelease;
+		ptr->forceNavigation = forceNavigation;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D52E RID: 120110 RVA: 0x0082CD52 File Offset: 0x0082AF52
+	// Token: 0x0601B22B RID: 111147 RVA: 0x00853E4E File Offset: 0x0085204E
 	protected void InputNavigation_Implementation(ELGUINavigationDirection direction, bool pressOrRelease, bool forceNavigation = false)
 	{
 		if (!this.NavigationEnable && !forceNavigation)
@@ -259,28 +253,25 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		this.CurrentInputModule.InputNavigation(direction, pressOrRelease);
 	}
 
-	// Token: 0x0601D52F RID: 120111 RVA: 0x0082CD7C File Offset: 0x0082AF7C
+	// Token: 0x0601B22C RID: 111148 RVA: 0x00853E78 File Offset: 0x00852078
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InputTriggerForNavigation(bool triggerPress)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InputTriggerForNavigation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InputTriggerForNavigation"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->triggerPress = triggerPress;
+			this.InputTriggerForNavigation_Implementation(triggerPress);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->triggerPress = triggerPress;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D530 RID: 120112 RVA: 0x0082CDF2 File Offset: 0x0082AFF2
+	// Token: 0x0601B22D RID: 111149 RVA: 0x00853F04 File Offset: 0x00852104
 	protected void InputTriggerForNavigation_Implementation(bool triggerPress)
 	{
 		if (this.CurrentInputModule == null)
@@ -291,7 +282,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		this.CurrentInputModule.InputTriggerForNavigation(triggerPress);
 	}
 
-	// Token: 0x0601D531 RID: 120113 RVA: 0x0082CE0F File Offset: 0x0082B00F
+	// Token: 0x0601B22E RID: 111150 RVA: 0x00853F21 File Offset: 0x00852121
 	public void SwitchToNavigationInputType()
 	{
 		if (this.CurrentInputModule == null)
@@ -306,28 +297,25 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		this.CurrentInputModule.SwitchToNavigationInputType();
 	}
 
-	// Token: 0x0601D532 RID: 120114 RVA: 0x0082CE34 File Offset: 0x0082B034
+	// Token: 0x0601B22F RID: 111151 RVA: 0x00853F48 File Offset: 0x00852148
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InputScroll(float axisValue)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InputScroll"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__InputScroll_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InputScroll"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__InputScroll_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__InputScroll_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->axisValue = axisValue;
+			this.InputScroll_Implementation(axisValue);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__InputScroll_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__InputScroll_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__InputScroll_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->axisValue = axisValue;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D533 RID: 120115 RVA: 0x0082CEAC File Offset: 0x0082B0AC
+	// Token: 0x0601B230 RID: 111152 RVA: 0x00853FD4 File Offset: 0x008521D4
 	protected void InputScroll_Implementation(float axisValue)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -350,7 +338,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D534 RID: 120116 RVA: 0x0082CF0C File Offset: 0x0082B10C
+	// Token: 0x0601B231 RID: 111153 RVA: 0x00854034 File Offset: 0x00852234
 	public void InputScrollByGamepad(float axisValue)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -369,30 +357,27 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D535 RID: 120117 RVA: 0x0082CF60 File Offset: 0x0082B160
+	// Token: 0x0601B232 RID: 111154 RVA: 0x00854088 File Offset: 0x00852288
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InputTouchTrigger(bool touchPress, int touchId, FVector touchPointPosition)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InputTouchTrigger"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InputTouchTrigger"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->touchPress = touchPress;
-			ptr2->touchId = touchId;
-			ptr2->touchPointPosition = touchPointPosition;
+			this.InputTouchTrigger_Implementation(touchPress, touchId, touchPointPosition);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->touchPress = touchPress;
+		ptr->touchId = touchId;
+		ptr->touchPointPosition = touchPointPosition;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D536 RID: 120118 RVA: 0x0082CFE4 File Offset: 0x0082B1E4
+	// Token: 0x0601B233 RID: 111155 RVA: 0x00854124 File Offset: 0x00852324
 	protected void InputTouchTrigger_Implementation(bool touchPress, int touchId, FVector touchPointPosition)
 	{
 		int inTouchID = touchId;
@@ -408,29 +393,26 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		touchInputModule.InputTouchTrigger(touchPress, inTouchID, touchPointPosition);
 	}
 
-	// Token: 0x0601D537 RID: 120119 RVA: 0x0082D028 File Offset: 0x0082B228
+	// Token: 0x0601B234 RID: 111156 RVA: 0x00854168 File Offset: 0x00852368
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void InputTouchMove(int touchId, FVector touchPointPosition)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InputTouchMove"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__InputTouchMove_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InputTouchMove"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__InputTouchMove_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTouchMove_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->touchId = touchId;
-			ptr2->touchPointPosition = touchPointPosition;
+			this.InputTouchMove_Implementation(touchId, touchPointPosition);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__InputTouchMove_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__InputTouchMove_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__InputTouchMove_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->touchId = touchId;
+		ptr->touchPointPosition = touchPointPosition;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D538 RID: 120120 RVA: 0x0082D0A8 File Offset: 0x0082B2A8
+	// Token: 0x0601B235 RID: 111157 RVA: 0x008541FC File Offset: 0x008523FC
 	protected void InputTouchMove_Implementation(int touchId, FVector touchPointPosition)
 	{
 		if (Info.Instance.IsMobileInputModel() && Info.Instance.IsInGamepad())
@@ -461,7 +443,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D539 RID: 120121 RVA: 0x0082D10F File Offset: 0x0082B30F
+	// Token: 0x0601B236 RID: 111158 RVA: 0x00854263 File Offset: 0x00852463
 	public void RefreshCurrentInputModule()
 	{
 		if (Info.Instance.IsInTouch())
@@ -480,30 +462,26 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		currentInputModule.Activate(false);
 	}
 
-	// Token: 0x0601D53A RID: 120122 RVA: 0x0082D148 File Offset: 0x0082B348
+	// Token: 0x0601B237 RID: 111159 RVA: 0x0085429C File Offset: 0x0085249C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual UUIItem GetNowHitComponent()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNowHitComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNowHitComponent"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNowHitComponent_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		UUIItem orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIItem>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UUIItem orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIItem>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x0601D53B RID: 120123 RVA: 0x0082D1C2 File Offset: 0x0082B3C2
+	// Token: 0x0601B238 RID: 111160 RVA: 0x0085432B File Offset: 0x0085252B
 	[NullableContext(2)]
 	protected UUIItem GetNowHitComponent_Implementation()
 	{
@@ -515,32 +493,28 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		return currentInputModule.GetNowHitComponent();
 	}
 
-	// Token: 0x0601D53C RID: 120124 RVA: 0x0082D1D8 File Offset: 0x0082B3D8
+	// Token: 0x0601B239 RID: 111161 RVA: 0x00854340 File Offset: 0x00852540
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual ULGUIPointerEventData GetPointerEventData(float pointerId, bool createIfNotExist = false)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetPointerEventData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__GetPointerEventData_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetPointerEventData"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__GetPointerEventData_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__GetPointerEventData_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->pointerId = pointerId;
-			ptr2->createIfNotExist = createIfNotExist;
+			return this.GetPointerEventData_Implementation(pointerId, createIfNotExist);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		ULGUIPointerEventData orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIPointerEventData>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__GetPointerEventData_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__GetPointerEventData_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__GetPointerEventData_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->pointerId = pointerId;
+		ptr->createIfNotExist = createIfNotExist;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		ULGUIPointerEventData orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIPointerEventData>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x0601D53D RID: 120125 RVA: 0x0082D260 File Offset: 0x0082B460
+	// Token: 0x0601B23A RID: 111162 RVA: 0x008543DF File Offset: 0x008525DF
 	[NullableContext(2)]
 	protected ULGUIPointerEventData GetPointerEventData_Implementation(float pointerId, bool createIfNotExist = false)
 	{
@@ -552,38 +526,34 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		return currentInputModule.GetPointerEventData((int)pointerId, createIfNotExist);
 	}
 
-	// Token: 0x0601D53E RID: 120126 RVA: 0x0082D278 File Offset: 0x0082B478
+	// Token: 0x0601B23B RID: 111163 RVA: 0x008543F8 File Offset: 0x008525F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool IsPointerEventDataLineTrace(ULGUIPointerEventData pointerEventData)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("IsPointerEventDataLineTrace"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("IsPointerEventDataLineTrace"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->pointerEventData) = ((pointerEventData != null) ? pointerEventData.NativePtr : ((IntPtr)0));
+			return this.IsPointerEventDataLineTrace_Implementation(pointerEventData);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->pointerEventData) = ((pointerEventData != null) ? pointerEventData.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D53F RID: 120127 RVA: 0x0082D302 File Offset: 0x0082B502
+	// Token: 0x0601B23C RID: 111164 RVA: 0x00854498 File Offset: 0x00852698
 	[NullableContext(1)]
 	protected bool IsPointerEventDataLineTrace_Implementation(ULGUIPointerEventData pointerEventData)
 	{
 		return this.CurrentInputModule != null && !this.CurrentInputModule.IsPointerEventDataLineTrace(pointerEventData);
 	}
 
-	// Token: 0x0601D540 RID: 120128 RVA: 0x0082D320 File Offset: 0x0082B520
+	// Token: 0x0601B23D RID: 111165 RVA: 0x008544B4 File Offset: 0x008526B4
 	[NullableContext(1)]
 	public bool SimulateClickButton(int pointerId, UUIItem uiItem, FVector2D? pivot)
 	{
@@ -592,7 +562,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		return standaloneInputModule != null && standaloneInputModule.SimulationLineTrace(pointerId, uiItem, pivot);
 	}
 
-	// Token: 0x0601D541 RID: 120129 RVA: 0x0082D36C File Offset: 0x0082B56C
+	// Token: 0x0601B23E RID: 111166 RVA: 0x00854500 File Offset: 0x00852700
 	[NullableContext(1)]
 	public bool SimulationPointerDownUp(int pointerId, UUIItem uiItem, bool isPress, FVector2D pivot)
 	{
@@ -605,7 +575,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		return standaloneInputModule.SimulationPointerDownUp(pointerId, uiItem, isPress, fvector2D);
 	}
 
-	// Token: 0x0601D542 RID: 120130 RVA: 0x0082D397 File Offset: 0x0082B597
+	// Token: 0x0601B23F RID: 111167 RVA: 0x0085452B File Offset: 0x0085272B
 	public void SimulationPointerTrigger(int pointerId, bool isPress)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -616,7 +586,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.SimulationPointerTrigger(pointerId, isPress);
 	}
 
-	// Token: 0x0601D543 RID: 120131 RVA: 0x0082D3AB File Offset: 0x0082B5AB
+	// Token: 0x0601B240 RID: 111168 RVA: 0x0085453F File Offset: 0x0085273F
 	public void ResetNowIsTriggerPressed(int pointerId)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -627,7 +597,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.ResetNowIsTriggerPressed(pointerId);
 	}
 
-	// Token: 0x0601D544 RID: 120132 RVA: 0x0082D3BE File Offset: 0x0082B5BE
+	// Token: 0x0601B241 RID: 111169 RVA: 0x00854552 File Offset: 0x00852752
 	[NullableContext(2)]
 	public void UpdateNavigationListener(USceneComponent component)
 	{
@@ -639,7 +609,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.UpdateNavigation(component);
 	}
 
-	// Token: 0x0601D545 RID: 120133 RVA: 0x0082D3D1 File Offset: 0x0082B5D1
+	// Token: 0x0601B242 RID: 111170 RVA: 0x00854565 File Offset: 0x00852765
 	public void SetIsUseMouse(bool value)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -650,7 +620,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.SetIsForceChange(value);
 	}
 
-	// Token: 0x0601D546 RID: 120134 RVA: 0x0082D3E4 File Offset: 0x0082B5E4
+	// Token: 0x0601B243 RID: 111171 RVA: 0x00854578 File Offset: 0x00852778
 	public void SetIsForceChange(bool value)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -661,7 +631,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.SetIsForceChange(value);
 	}
 
-	// Token: 0x0601D547 RID: 120135 RVA: 0x0082D3F8 File Offset: 0x0082B5F8
+	// Token: 0x0601B244 RID: 111172 RVA: 0x0085458C File Offset: 0x0085278C
 	public void SetPrevMousePosition(float x, float y)
 	{
 		ULGUIPointerEventData pointerEventData = this.GetPointerEventData(0f, true);
@@ -671,7 +641,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D548 RID: 120136 RVA: 0x0082D422 File Offset: 0x0082B622
+	// Token: 0x0601B245 RID: 111173 RVA: 0x008545B6 File Offset: 0x008527B6
 	public void SetCurrentInputKeyType(EInputKeyType inputKeyType)
 	{
 		if (Info.Instance.IsInTouch())
@@ -693,28 +663,25 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		this.SetClickThresholdWithInputKeyType(inputKeyType);
 	}
 
-	// Token: 0x0601D549 RID: 120137 RVA: 0x0082D460 File Offset: 0x0082B660
+	// Token: 0x0601B246 RID: 111174 RVA: 0x008545F4 File Offset: 0x008527F4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void SetClickThresholdWithInputKeyType(EInputKeyType inputKeyType)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetClickThresholdWithInputKeyType"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsLguiEventSystemActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetClickThresholdWithInputKeyType"), TsLguiEventSystemActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams*)ptr + 15L / (long)sizeof(TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->inputKeyType) = (byte)inputKeyType;
+			this.SetClickThresholdWithInputKeyType_Implementation(inputKeyType);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams* ptr = stackalloc TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->inputKeyType) = (byte)inputKeyType;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D54A RID: 120138 RVA: 0x0082D4D8 File Offset: 0x0082B6D8
+	// Token: 0x0601B247 RID: 111175 RVA: 0x00854684 File Offset: 0x00852884
 	protected void SetClickThresholdWithInputKeyType_Implementation(EInputKeyType inputKeyType)
 	{
 		if (this.StandaloneInputModule != null)
@@ -736,7 +703,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D54B RID: 120139 RVA: 0x0082D537 File Offset: 0x0082B737
+	// Token: 0x0601B248 RID: 111176 RVA: 0x008546E3 File Offset: 0x008528E3
 	public void OverrideMousePosition(FVector2D vector2D)
 	{
 		ULGUI_StandaloneInputModule standaloneInputModule = this.StandaloneInputModule;
@@ -747,7 +714,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		standaloneInputModule.InputOverrideMousePosition(vector2D);
 	}
 
-	// Token: 0x0601D54C RID: 120140 RVA: 0x0082D54B File Offset: 0x0082B74B
+	// Token: 0x0601B249 RID: 111177 RVA: 0x008546F7 File Offset: 0x008528F7
 	public void SetIsOverrideMousePosition(bool value)
 	{
 		if (this.StandaloneInputModule != null)
@@ -756,19 +723,19 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D54D RID: 120141 RVA: 0x0082D561 File Offset: 0x0082B761
+	// Token: 0x0601B24A RID: 111178 RVA: 0x0085470D File Offset: 0x0085290D
 	public bool IsInPointerInputType()
 	{
 		return TsLguiEventSystemActor.InputType == ELGUIPointerInputType.Pointer;
 	}
 
-	// Token: 0x0601D54E RID: 120142 RVA: 0x0082D56B File Offset: 0x0082B76B
+	// Token: 0x0601B24B RID: 111179 RVA: 0x00854717 File Offset: 0x00852917
 	public bool IsInNavigationInputType()
 	{
 		return TsLguiEventSystemActor.InputType == ELGUIPointerInputType.Navigation;
 	}
 
-	// Token: 0x0601D54F RID: 120143 RVA: 0x0082D578 File Offset: 0x0082B778
+	// Token: 0x0601B24C RID: 111180 RVA: 0x00854724 File Offset: 0x00852924
 	private void RegisterPointEnterExitEvent()
 	{
 		if (Info.Instance.IsPcOrGamepadPlatform())
@@ -783,7 +750,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D550 RID: 120144 RVA: 0x0082D5B9 File Offset: 0x0082B7B9
+	// Token: 0x0601B24D RID: 111181 RVA: 0x00854765 File Offset: 0x00852965
 	private void UnRegisterPointEnterExitEvent()
 	{
 		if (Info.Instance.IsPcOrGamepadPlatform())
@@ -797,14 +764,14 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601D551 RID: 120145 RVA: 0x0082D5ED File Offset: 0x0082B7ED
+	// Token: 0x0601B24E RID: 111182 RVA: 0x00854799 File Offset: 0x00852999
 	private void BroadCastInputType()
 	{
 		TsLguiEventSystemActor.InputType = base.EventSystem.defaultInputType;
 		CSharpScript.Game.Common.Event.EventSystem.Instance.Emit<ELGUIPointerInputType>(EEventName.PointerInputTypeChange, base.EventSystem.defaultInputType);
 	}
 
-	// Token: 0x0601D552 RID: 120146 RVA: 0x0082D61A File Offset: 0x0082B81A
+	// Token: 0x0601B24F RID: 111183 RVA: 0x008547C6 File Offset: 0x008529C6
 	private static void ChangeController(ELGUIPointerInputType type)
 	{
 		TsLguiEventSystemActor.InputType = type;
@@ -815,18 +782,18 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		CSharpScript.Game.Common.Event.EventSystem.Instance.Emit<ELGUIPointerInputType>(EEventName.PointerInputTypeChange, type);
 	}
 
-	// Token: 0x0601D553 RID: 120147 RVA: 0x0082D646 File Offset: 0x0082B846
+	// Token: 0x0601B250 RID: 111184 RVA: 0x008547F2 File Offset: 0x008529F2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D554 RID: 120148 RVA: 0x0082D648 File Offset: 0x0082B848
+	// Token: 0x0601B251 RID: 111185 RVA: 0x008547F4 File Offset: 0x008529F4
 	public static void ResetStaticDefaultValue()
 	{
 		TsLguiEventSystemActor.InputType = ELGUIPointerInputType.None;
 	}
 
-	// Token: 0x0601D555 RID: 120149 RVA: 0x0082D650 File Offset: 0x0082B850
+	// Token: 0x0601B252 RID: 111186 RVA: 0x008547FC File Offset: 0x008529FC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsLguiEventSystemActor._ClassPtr == IntPtr.Zero)
@@ -836,61 +803,61 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		return TsLguiEventSystemActor._ClassPtr;
 	}
 
-	// Token: 0x0601D556 RID: 120150 RVA: 0x0082D674 File Offset: 0x0082B874
+	// Token: 0x0601B253 RID: 111187 RVA: 0x00854820 File Offset: 0x00852A20
 	public TsLguiEventSystemActor() : this(BuiltinUtils.AllocNativeUObject(TsLguiEventSystemActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D557 RID: 120151 RVA: 0x0082D69C File Offset: 0x0082B89C
+	// Token: 0x0601B254 RID: 111188 RVA: 0x00854848 File Offset: 0x00852A48
 	[NullableContext(1)]
 	public TsLguiEventSystemActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsLguiEventSystemActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D558 RID: 120152 RVA: 0x0082D6CF File Offset: 0x0082B8CF
+	// Token: 0x0601B255 RID: 111189 RVA: 0x0085487B File Offset: 0x00852A7B
 	protected TsLguiEventSystemActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D559 RID: 120153 RVA: 0x0082D6FC File Offset: 0x0082B8FC
+	// Token: 0x0601B256 RID: 111190 RVA: 0x008548A8 File Offset: 0x00852AA8
 	protected unsafe virtual void __CPPCALL_InputTrigger_Implementation(TsLguiEventSystemActor.__InputTrigger_FunctionParams* __Params)
 	{
 		EMouseButtonType mouseButtonType = (EMouseButtonType)__Params->mouseButtonType;
 		this.InputTrigger_Implementation(__Params->triggerPress, mouseButtonType);
 	}
 
-	// Token: 0x0601D55A RID: 120154 RVA: 0x0082D720 File Offset: 0x0082B920
+	// Token: 0x0601B257 RID: 111191 RVA: 0x008548CC File Offset: 0x00852ACC
 	protected unsafe virtual void __CPPCALL_InputNavigation_Implementation(TsLguiEventSystemActor.__InputNavigation_FunctionParams* __Params)
 	{
 		ELGUINavigationDirection direction = (ELGUINavigationDirection)__Params->direction;
 		this.InputNavigation_Implementation(direction, __Params->pressOrRelease, __Params->forceNavigation);
 	}
 
-	// Token: 0x0601D55B RID: 120155 RVA: 0x0082D747 File Offset: 0x0082B947
+	// Token: 0x0601B258 RID: 111192 RVA: 0x008548F3 File Offset: 0x00852AF3
 	protected unsafe virtual void __CPPCALL_InputTriggerForNavigation_Implementation(TsLguiEventSystemActor.__InputTriggerForNavigation_FunctionParams* __Params)
 	{
 		this.InputTriggerForNavigation_Implementation(__Params->triggerPress);
 	}
 
-	// Token: 0x0601D55C RID: 120156 RVA: 0x0082D755 File Offset: 0x0082B955
+	// Token: 0x0601B259 RID: 111193 RVA: 0x00854901 File Offset: 0x00852B01
 	protected unsafe virtual void __CPPCALL_InputScroll_Implementation(TsLguiEventSystemActor.__InputScroll_FunctionParams* __Params)
 	{
 		this.InputScroll_Implementation(__Params->axisValue);
 	}
 
-	// Token: 0x0601D55D RID: 120157 RVA: 0x0082D763 File Offset: 0x0082B963
+	// Token: 0x0601B25A RID: 111194 RVA: 0x0085490F File Offset: 0x00852B0F
 	protected unsafe virtual void __CPPCALL_InputTouchTrigger_Implementation(TsLguiEventSystemActor.__InputTouchTrigger_FunctionParams* __Params)
 	{
 		this.InputTouchTrigger_Implementation(__Params->touchPress, __Params->touchId, __Params->touchPointPosition);
 	}
 
-	// Token: 0x0601D55E RID: 120158 RVA: 0x0082D77D File Offset: 0x0082B97D
+	// Token: 0x0601B25B RID: 111195 RVA: 0x00854929 File Offset: 0x00852B29
 	protected unsafe virtual void __CPPCALL_InputTouchMove_Implementation(TsLguiEventSystemActor.__InputTouchMove_FunctionParams* __Params)
 	{
 		this.InputTouchMove_Implementation(__Params->touchId, __Params->touchPointPosition);
 	}
 
-	// Token: 0x0601D55F RID: 120159 RVA: 0x0082D791 File Offset: 0x0082B991
+	// Token: 0x0601B25C RID: 111196 RVA: 0x0085493D File Offset: 0x00852B3D
 	protected unsafe virtual void __CPPCALL_GetNowHitComponent_Implementation(TsLguiEventSystemActor.__GetNowHitComponent_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -898,7 +865,7 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		ptr = ((nowHitComponent_Implementation != null) ? nowHitComponent_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D560 RID: 120160 RVA: 0x0082D7AE File Offset: 0x0082B9AE
+	// Token: 0x0601B25D RID: 111197 RVA: 0x0085495A File Offset: 0x00852B5A
 	protected unsafe virtual void __CPPCALL_GetPointerEventData_Implementation(TsLguiEventSystemActor.__GetPointerEventData_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -906,204 +873,204 @@ public class TsLguiEventSystemActor : ALGUIEventSystemActor, IStaticVariableRese
 		ptr = ((pointerEventData_Implementation != null) ? pointerEventData_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D561 RID: 120161 RVA: 0x0082D7D8 File Offset: 0x0082B9D8
+	// Token: 0x0601B25E RID: 111198 RVA: 0x00854984 File Offset: 0x00852B84
 	protected unsafe virtual void __CPPCALL_IsPointerEventDataLineTrace_Implementation(TsLguiEventSystemActor.__IsPointerEventDataLineTrace_FunctionParams* __Params)
 	{
 		ULGUIPointerEventData orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIPointerEventData>(__Params->pointerEventData);
 		__Params->__Result = this.IsPointerEventDataLineTrace_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D562 RID: 120162 RVA: 0x0082D800 File Offset: 0x0082BA00
+	// Token: 0x0601B25F RID: 111199 RVA: 0x008549AC File Offset: 0x00852BAC
 	protected unsafe virtual void __CPPCALL_SetClickThresholdWithInputKeyType_Implementation(TsLguiEventSystemActor.__SetClickThresholdWithInputKeyType_FunctionParams* __Params)
 	{
 		EInputKeyType inputKeyType = (EInputKeyType)__Params->inputKeyType;
 		this.SetClickThresholdWithInputKeyType_Implementation(inputKeyType);
 	}
 
-	// Token: 0x0400E70A RID: 59146
+	// Token: 0x0400EBBE RID: 60350
 	[Nullable(2)]
 	private FLGUIDelegateHandleWrapper HandleWrapper;
 
-	// Token: 0x0400E70B RID: 59147
+	// Token: 0x0400EBBF RID: 60351
 	private static ELGUIPointerInputType InputType;
 
-	// Token: 0x0400E70C RID: 59148
+	// Token: 0x0400EBC0 RID: 60352
 	[Nullable(1)]
 	private Action<EOperationType, EOperationType> ShowTypeChange;
 
-	// Token: 0x0400E70D RID: 59149
+	// Token: 0x0400EBC1 RID: 60353
 	[Nullable(1)]
 	private Action<bool, int, int> ControllerConnectChange;
 
-	// Token: 0x0400E70E RID: 59150
+	// Token: 0x0400EBC2 RID: 60354
 	private readonly float TouchClickThreshold = 10f;
 
-	// Token: 0x0400E70F RID: 59151
+	// Token: 0x0400EBC3 RID: 60355
 	private readonly float MouseClickThreshold = 5f;
 
-	// Token: 0x0400E710 RID: 59152
+	// Token: 0x0400EBC4 RID: 60356
 	private readonly float GamepadClickThreshold = 5f;
 
-	// Token: 0x0400E711 RID: 59153
+	// Token: 0x0400EBC5 RID: 60357
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Ui/LguiEventSystem/TsLguiEventSystemActor.TsLguiEventSystemActor_C";
 
-	// Token: 0x0400E712 RID: 59154
+	// Token: 0x0400EBC6 RID: 60358
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E713 RID: 59155
+	// Token: 0x0400EBC7 RID: 60359
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E714 RID: 59156
+	// Token: 0x0400EBC8 RID: 60360
 	private static int __PropertyOffset_StandaloneInputModule;
 
-	// Token: 0x0400E715 RID: 59157
+	// Token: 0x0400EBC9 RID: 60361
 	private static int __PropertyOffset_TouchInputModule;
 
-	// Token: 0x0400E716 RID: 59158
+	// Token: 0x0400EBCA RID: 60362
 	private static int __PropertyOffset_NavigationEnable;
 
-	// Token: 0x02009826 RID: 38950
+	// Token: 0x02008A4A RID: 35402
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 2)]
 	protected ref struct __InputTrigger_FunctionParams
 	{
-		// Token: 0x04030854 RID: 198740
+		// Token: 0x0402BEE4 RID: 179940
 		[FieldOffset(0)]
 		public bool triggerPress;
 
-		// Token: 0x04030855 RID: 198741
+		// Token: 0x0402BEE5 RID: 179941
 		[FieldOffset(1)]
 		public byte mouseButtonType;
 	}
 
-	// Token: 0x02009827 RID: 38951
+	// Token: 0x02008A4B RID: 35403
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 3)]
 	protected ref struct __InputNavigation_FunctionParams
 	{
-		// Token: 0x04030856 RID: 198742
+		// Token: 0x0402BEE6 RID: 179942
 		[FieldOffset(0)]
 		public byte direction;
 
-		// Token: 0x04030857 RID: 198743
+		// Token: 0x0402BEE7 RID: 179943
 		[FieldOffset(1)]
 		public bool pressOrRelease;
 
-		// Token: 0x04030858 RID: 198744
+		// Token: 0x0402BEE8 RID: 179944
 		[FieldOffset(2)]
 		public bool forceNavigation;
 	}
 
-	// Token: 0x02009828 RID: 38952
+	// Token: 0x02008A4C RID: 35404
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __InputTriggerForNavigation_FunctionParams
 	{
-		// Token: 0x04030859 RID: 198745
+		// Token: 0x0402BEE9 RID: 179945
 		[FieldOffset(0)]
 		public bool triggerPress;
 	}
 
-	// Token: 0x02009829 RID: 38953
+	// Token: 0x02008A4D RID: 35405
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __InputScroll_FunctionParams
 	{
-		// Token: 0x0403085A RID: 198746
+		// Token: 0x0402BEEA RID: 179946
 		[FieldOffset(0)]
 		public float axisValue;
 	}
 
-	// Token: 0x0200982A RID: 38954
+	// Token: 0x02008A4E RID: 35406
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 20)]
 	protected ref struct __InputTouchTrigger_FunctionParams
 	{
-		// Token: 0x0403085B RID: 198747
+		// Token: 0x0402BEEB RID: 179947
 		[FieldOffset(0)]
 		public bool touchPress;
 
-		// Token: 0x0403085C RID: 198748
+		// Token: 0x0402BEEC RID: 179948
 		[FieldOffset(4)]
 		public int touchId;
 
-		// Token: 0x0403085D RID: 198749
+		// Token: 0x0402BEED RID: 179949
 		[FieldOffset(8)]
 		public FVector touchPointPosition;
 	}
 
-	// Token: 0x0200982B RID: 38955
+	// Token: 0x02008A4F RID: 35407
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __InputTouchMove_FunctionParams
 	{
-		// Token: 0x0403085E RID: 198750
+		// Token: 0x0402BEEE RID: 179950
 		[FieldOffset(0)]
 		public int touchId;
 
-		// Token: 0x0403085F RID: 198751
+		// Token: 0x0402BEEF RID: 179951
 		[FieldOffset(4)]
 		public FVector touchPointPosition;
 	}
 
-	// Token: 0x0200982C RID: 38956
+	// Token: 0x02008A50 RID: 35408
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetNowHitComponent_FunctionParams
 	{
-		// Token: 0x04030860 RID: 198752
+		// Token: 0x0402BEF0 RID: 179952
 		[FieldOffset(0)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x0200982D RID: 38957
+	// Token: 0x02008A51 RID: 35409
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetPointerEventData_FunctionParams
 	{
-		// Token: 0x04030861 RID: 198753
+		// Token: 0x0402BEF1 RID: 179953
 		[FieldOffset(0)]
 		public float pointerId;
 
-		// Token: 0x04030862 RID: 198754
+		// Token: 0x0402BEF2 RID: 179954
 		[FieldOffset(4)]
 		public bool createIfNotExist;
 
-		// Token: 0x04030863 RID: 198755
+		// Token: 0x0402BEF3 RID: 179955
 		[FieldOffset(8)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x0200982E RID: 38958
+	// Token: 0x02008A52 RID: 35410
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsPointerEventDataLineTrace_FunctionParams
 	{
-		// Token: 0x04030864 RID: 198756
+		// Token: 0x0402BEF4 RID: 179956
 		[FieldOffset(0)]
 		public IntPtr pointerEventData;
 
-		// Token: 0x04030865 RID: 198757
+		// Token: 0x0402BEF5 RID: 179957
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200982F RID: 38959
+	// Token: 0x02008A53 RID: 35411
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetClickThresholdWithInputKeyType_FunctionParams
 	{
-		// Token: 0x04030866 RID: 198758
+		// Token: 0x0402BEF6 RID: 179958
 		[FieldOffset(0)]
 		public byte inputKeyType;
 	}
 
-	// Token: 0x02009830 RID: 38960
+	// Token: 0x02008A54 RID: 35412
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030867 RID: 198759
+		// Token: 0x0402BEF7 RID: 179959
 		public static Action<ELGUIPointerInputType> <0>__ChangeController;
 	}
 }

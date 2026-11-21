@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 {
-	// Token: 0x020051C1 RID: 20929
+	// Token: 0x02004191 RID: 16785
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 	})]
 	public class NpcItem : GridProxyAbstract<GymChallengeData>
 	{
-		// Token: 0x0603596F RID: 219503 RVA: 0x00CB28F0 File Offset: 0x00CB0AF0
+		// Token: 0x0602A86A RID: 174186 RVA: 0x00BFFF2C File Offset: 0x00BFE12C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 			};
 		}
 
-		// Token: 0x06035970 RID: 219504 RVA: 0x00CB2A08 File Offset: 0x00CB0C08
+		// Token: 0x0602A86B RID: 174187 RVA: 0x00C00044 File Offset: 0x00BFE244
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 		}
 
-		// Token: 0x06035971 RID: 219505 RVA: 0x00CB2A28 File Offset: 0x00CB0C28
+		// Token: 0x0602A86C RID: 174188 RVA: 0x00C00064 File Offset: 0x00BFE264
 		[NullableContext(1)]
 		public override void Refresh(GymChallengeData data, bool isSelected, int gridIndex)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 			base.TrySetTextureByPath(phantomBattleChallengeConfig.NpcIcon, base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x06035972 RID: 219506 RVA: 0x00CB2B1C File Offset: 0x00CB0D1C
+		// Token: 0x0602A86D RID: 174189 RVA: 0x00C00158 File Offset: 0x00BFE358
 		public void SetSelected(bool isSelected)
 		{
 			PhantomArenaModel instance = PhantomArenaModel.Instance;
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 			base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x06035973 RID: 219507 RVA: 0x00CB2B6A File Offset: 0x00CB0D6A
+		// Token: 0x0602A86E RID: 174190 RVA: 0x00C001A6 File Offset: 0x00BFE3A6
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true);
 		}
 
-		// Token: 0x06035974 RID: 219508 RVA: 0x00CB2B73 File Offset: 0x00CB0D73
+		// Token: 0x0602A86F RID: 174191 RVA: 0x00C001AF File Offset: 0x00BFE3AF
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false);
 		}
 
-		// Token: 0x06035975 RID: 219509 RVA: 0x00CB2B7C File Offset: 0x00CB0D7C
+		// Token: 0x0602A870 RID: 174192 RVA: 0x00C001B8 File Offset: 0x00BFE3B8
 		private void OnUndeterminedClicked()
 		{
 			if (this.CallbackOnClick != null && this.ChallengeData != null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 			}
 		}
 
-		// Token: 0x06035976 RID: 219510 RVA: 0x00CB2BC0 File Offset: 0x00CB0DC0
+		// Token: 0x0602A871 RID: 174193 RVA: 0x00C001FC File Offset: 0x00BFE3FC
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			if (this.CallbackOnClick != null && this.ChallengeData != null)
@@ -106,11 +106,11 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 			}
 		}
 
-		// Token: 0x0401C71E RID: 116510
+		// Token: 0x04017153 RID: 94547
 		[Nullable(2)]
 		public GymChallengeData ChallengeData;
 
-		// Token: 0x0401C71F RID: 116511
+		// Token: 0x04017154 RID: 94548
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,37 +118,37 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.NpcItem
 		})]
 		public Action<GymChallengeData, int, EToggleState> CallbackOnClick;
 
-		// Token: 0x0200B353 RID: 45907
+		// Token: 0x02009D8B RID: 40331
 		private static class EComponents
 		{
-			// Token: 0x040365B3 RID: 222643
+			// Token: 0x04031006 RID: 200710
 			public const int ToggleNpc = 0;
 
-			// Token: 0x040365B4 RID: 222644
+			// Token: 0x04031007 RID: 200711
 			public const int TextureBgBlue = 1;
 
-			// Token: 0x040365B5 RID: 222645
+			// Token: 0x04031008 RID: 200712
 			public const int TextureBgRed = 2;
 
-			// Token: 0x040365B6 RID: 222646
+			// Token: 0x04031009 RID: 200713
 			public const int TextureMain = 3;
 
-			// Token: 0x040365B7 RID: 222647
+			// Token: 0x0403100A RID: 200714
 			public const int TextName = 4;
 
-			// Token: 0x040365B8 RID: 222648
+			// Token: 0x0403100B RID: 200715
 			public const int TextureTitle = 5;
 
-			// Token: 0x040365B9 RID: 222649
+			// Token: 0x0403100C RID: 200716
 			public const int TextureMask = 6;
 
-			// Token: 0x040365BA RID: 222650
+			// Token: 0x0403100D RID: 200717
 			public const int PanelLock = 7;
 
-			// Token: 0x040365BB RID: 222651
+			// Token: 0x0403100E RID: 200718
 			public const int PanelLine = 8;
 
-			// Token: 0x040365BC RID: 222652
+			// Token: 0x0403100F RID: 200719
 			public const int PanelFinish = 9;
 		}
 	}

@@ -1,28 +1,26 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C7F RID: 7295
+	// Token: 0x02001E84 RID: 7812
 	public class INpcSwing_SetValue
 	{
-		// Token: 0x04005EDC RID: 24284
+		// Token: 0x0400642F RID: 25647
 		public ENpcLeisureInteract Type;
 
-		// Token: 0x04005EDD RID: 24285
+		// Token: 0x04006430 RID: 25648
 		public bool? KeepState;
 
-		// Token: 0x04005EDE RID: 24286
+		// Token: 0x04006431 RID: 25649
 		public int TargetNpcId;
 
-		// Token: 0x04005EDF RID: 24287
-		[Nullable(1)]
+		// Token: 0x04006432 RID: 25650
 		public string SwingDa;
 
-		// Token: 0x04005EE0 RID: 24288
+		// Token: 0x04006433 RID: 25651
 		public int EntityId;
 
-		// Token: 0x04005EE1 RID: 24289
+		// Token: 0x04006434 RID: 25652
 		public bool? SkipSitDown;
 	}
 }

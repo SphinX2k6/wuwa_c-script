@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010A7 RID: 4263
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011D5 RID: 4565
 	public class IQuestScheduleMeetCondition : IQuestScheduleType
 	{
-		// Token: 0x06006030 RID: 24624 RVA: 0x000E8B54 File Offset: 0x000E6D54
+		// Token: 0x06006629 RID: 26153 RVA: 0x000F5C74 File Offset: 0x000F3E74
 		private IQuestScheduleMeetCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006031 RID: 24625 RVA: 0x000E8B8C File Offset: 0x000E6D8C
+		// Token: 0x0600662A RID: 26154 RVA: 0x000F5CAC File Offset: 0x000F3EAC
 		public static IQuestScheduleMeetCondition Create([Nullable(2)] IQuestScheduleMeetCondition instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006032 RID: 24626 RVA: 0x000E8B9F File Offset: 0x000E6D9F
+		// Token: 0x0600662B RID: 26155 RVA: 0x000F5CBF File Offset: 0x000F3EBF
 		public static IQuestScheduleMeetCondition CreateFromSetValue([Nullable(2)] IQuestScheduleMeetCondition_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006033 RID: 24627 RVA: 0x000E8BB2 File Offset: 0x000E6DB2
+		// Token: 0x0600662C RID: 26156 RVA: 0x000F5CD2 File Offset: 0x000F3ED2
 		public new IQuestScheduleMeetCondition_SetValue ToSetValue()
 		{
 			return new IQuestScheduleMeetCondition_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FA1 RID: 8097
-		// (get) Token: 0x06006034 RID: 24628 RVA: 0x000E8BE9 File Offset: 0x000E6DE9
-		// (set) Token: 0x06006035 RID: 24629 RVA: 0x000E8C14 File Offset: 0x000E6E14
+		// Token: 0x17002153 RID: 8531
+		// (get) Token: 0x0600662D RID: 26157 RVA: 0x000F5D09 File Offset: 0x000F3F09
+		// (set) Token: 0x0600662E RID: 26158 RVA: 0x000F5D34 File Offset: 0x000F3F34
 		public override EQuestScheduleType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FA2 RID: 8098
-		// (get) Token: 0x06006036 RID: 24630 RVA: 0x000E8C24 File Offset: 0x000E6E24
-		// (set) Token: 0x06006037 RID: 24631 RVA: 0x000E8C85 File Offset: 0x000E6E85
+		// Token: 0x17002154 RID: 8532
+		// (get) Token: 0x0600662F RID: 26159 RVA: 0x000F5D44 File Offset: 0x000F3F44
+		// (set) Token: 0x06006630 RID: 26160 RVA: 0x000F5DA5 File Offset: 0x000F3FA5
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -118,20 +116,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FA3 RID: 8099
-		// (get) Token: 0x06006038 RID: 24632 RVA: 0x000E8C9A File Offset: 0x000E6E9A
-		// (set) Token: 0x06006039 RID: 24633 RVA: 0x000E8CC1 File Offset: 0x000E6EC1
+		// Token: 0x17002155 RID: 8533
+		// (get) Token: 0x06006631 RID: 26161 RVA: 0x000F5DBA File Offset: 0x000F3FBA
+		// (set) Token: 0x06006632 RID: 26162 RVA: 0x000F5DE1 File Offset: 0x000F3FE1
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<VarRef> Vars
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -149,7 +147,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FA4 RID: 8100
-		// (get) Token: 0x0600603A RID: 24634 RVA: 0x000E8CCF File Offset: 0x000E6ECF
-		// (set) Token: 0x0600603B RID: 24635 RVA: 0x000E8CFA File Offset: 0x000E6EFA
+		// Token: 0x17002156 RID: 8534
+		// (get) Token: 0x06006633 RID: 26163 RVA: 0x000F5DEF File Offset: 0x000F3FEF
+		// (set) Token: 0x06006634 RID: 26164 RVA: 0x000F5E1A File Offset: 0x000F401A
 		public virtual ETimeLeftIconType IconType
 		{
 			get
@@ -180,18 +178,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039FE RID: 14846
+		// Token: 0x04003D4B RID: 15691
 		[Nullable(2)]
 		protected new IQuestScheduleMeetCondition FbInstance;
 
-		// Token: 0x040039FF RID: 14847
+		// Token: 0x04003D4C RID: 15692
 		[Nullable(2)]
 		protected new IQuestScheduleMeetCondition_SetValue PocoInterface;
 
-		// Token: 0x04003A00 RID: 14848
+		// Token: 0x04003D4D RID: 15693
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04003A01 RID: 14849
+		// Token: 0x04003D4E RID: 15694
 		private bool _ConditionInited;
 	}
 }

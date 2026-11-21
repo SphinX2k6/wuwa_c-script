@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.VehicleStream.StateMachine.States;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 {
-	// Token: 0x020048B8 RID: 18616
+	// Token: 0x0200382F RID: 14383
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VehicleStateMachine
 	{
-		// Token: 0x06030A72 RID: 199282 RVA: 0x00B4BA38 File Offset: 0x00B49C38
+		// Token: 0x0602559E RID: 152990 RVA: 0x00A86840 File Offset: 0x00A84A40
 		public bool Start(EVehicleStateType state)
 		{
 			if (this.CurrentNode != null)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			return true;
 		}
 
-		// Token: 0x06030A73 RID: 199283 RVA: 0x00B4BAA4 File Offset: 0x00B49CA4
+		// Token: 0x0602559F RID: 152991 RVA: 0x00A868AC File Offset: 0x00A84AAC
 		public void Destroy()
 		{
 			foreach (VehicleStateBase vehicleStateBase in this.StateMap.Values)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x06030A74 RID: 199284 RVA: 0x00B4BAFC File Offset: 0x00B49CFC
+		// Token: 0x060255A0 RID: 152992 RVA: 0x00A86904 File Offset: 0x00A84B04
 		public void Update(float delta)
 		{
 			if (this.CurrentNode == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			this.CurrentNode.Update(delta);
 		}
 
-		// Token: 0x06030A75 RID: 199285 RVA: 0x00B4BB13 File Offset: 0x00B49D13
+		// Token: 0x060255A1 RID: 152993 RVA: 0x00A8691B File Offset: 0x00A84B1B
 		public void OnEnterPlayerRange()
 		{
 			if (this.CurrentNode == null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			this.CurrentNode.OnEnterPlayerRange();
 		}
 
-		// Token: 0x06030A76 RID: 199286 RVA: 0x00B4BB29 File Offset: 0x00B49D29
+		// Token: 0x060255A2 RID: 152994 RVA: 0x00A86931 File Offset: 0x00A84B31
 		public void OnLeavePlayerRange()
 		{
 			if (this.CurrentNode == null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			this.CurrentNode.OnLeavePlayerRange();
 		}
 
-		// Token: 0x06030A77 RID: 199287 RVA: 0x00B4BB40 File Offset: 0x00B49D40
+		// Token: 0x060255A3 RID: 152995 RVA: 0x00A86948 File Offset: 0x00A84B48
 		public bool Switch(EVehicleStateType state, string reason = null)
 		{
 			if (this.CurrentNode == null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			return true;
 		}
 
-		// Token: 0x06030A78 RID: 199288 RVA: 0x00B4BBC0 File Offset: 0x00B49DC0
+		// Token: 0x060255A4 RID: 152996 RVA: 0x00A869C8 File Offset: 0x00A84BC8
 		[NullableContext(1)]
 		public void AddState(EVehicleStateType stateType, VehicleStateBase state)
 		{
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			this.StateMap[stateType] = state;
 		}
 
-		// Token: 0x06030A79 RID: 199289 RVA: 0x00B4BC18 File Offset: 0x00B49E18
+		// Token: 0x060255A5 RID: 152997 RVA: 0x00A86A20 File Offset: 0x00A84C20
 		public VehicleStateBase GetState(EVehicleStateType state)
 		{
 			VehicleStateBase result;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			return result;
 		}
 
-		// Token: 0x06030A7A RID: 199290 RVA: 0x00B4BC65 File Offset: 0x00B49E65
+		// Token: 0x060255A6 RID: 152998 RVA: 0x00A86A6D File Offset: 0x00A84C6D
 		public EVehicleStateType GetCurrentState()
 		{
 			VehicleStateBase currentNode = this.CurrentNode;
@@ -140,11 +140,11 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			return currentNode.State;
 		}
 
-		// Token: 0x0401A27A RID: 107130
+		// Token: 0x04014AED RID: 84717
 		[Nullable(1)]
 		private readonly Dictionary<EVehicleStateType, VehicleStateBase> StateMap = new Dictionary<EVehicleStateType, VehicleStateBase>();
 
-		// Token: 0x0401A27B RID: 107131
+		// Token: 0x04014AEE RID: 84718
 		private VehicleStateBase CurrentNode;
 	}
 }

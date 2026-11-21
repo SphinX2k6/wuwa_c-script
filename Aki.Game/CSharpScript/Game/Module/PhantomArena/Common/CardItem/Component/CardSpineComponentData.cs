@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051F3 RID: 20979
+	// Token: 0x020041C3 RID: 16835
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardSpineComponentData : ICardSpineComponentData
 	{
-		// Token: 0x170081D8 RID: 33240
-		// (get) Token: 0x06035A89 RID: 219785 RVA: 0x00CB56A2 File Offset: 0x00CB38A2
-		// (set) Token: 0x06035A8A RID: 219786 RVA: 0x00CB56AA File Offset: 0x00CB38AA
+		// Token: 0x17005598 RID: 21912
+		// (get) Token: 0x0602A984 RID: 174468 RVA: 0x00C02CDE File Offset: 0x00C00EDE
+		// (set) Token: 0x0602A985 RID: 174469 RVA: 0x00C02CE6 File Offset: 0x00C00EE6
 		public CardSpineData CardSpineData { get; set; }
 
-		// Token: 0x170081D9 RID: 33241
-		// (get) Token: 0x06035A8B RID: 219787 RVA: 0x00CB56B3 File Offset: 0x00CB38B3
-		// (set) Token: 0x06035A8C RID: 219788 RVA: 0x00CB56BB File Offset: 0x00CB38BB
+		// Token: 0x17005599 RID: 21913
+		// (get) Token: 0x0602A986 RID: 174470 RVA: 0x00C02CEF File Offset: 0x00C00EEF
+		// (set) Token: 0x0602A987 RID: 174471 RVA: 0x00C02CF7 File Offset: 0x00C00EF7
 		public bool ShowSpine { get; set; }
 	}
 }

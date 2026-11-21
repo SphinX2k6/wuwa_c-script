@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A18 RID: 10776
+	// Token: 0x02002D05 RID: 11525
 	public class IPlayerSlideRailEnd : ISlideRailEndType
 	{
-		// Token: 0x0600ED95 RID: 60821 RVA: 0x0022A0C2 File Offset: 0x002282C2
-		[NullableContext(1)]
+		// Token: 0x0600FC2C RID: 64556 RVA: 0x00247A46 File Offset: 0x00245C46
 		public static IPlayerSlideRailEnd Create(IPlayerSlideRailEnd? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B27 RID: 19239
-		// (get) Token: 0x0600ED96 RID: 60822 RVA: 0x0022A0E1 File Offset: 0x002282E1
+		// Token: 0x17004ED0 RID: 20176
+		// (get) Token: 0x0600FC2D RID: 64557 RVA: 0x00247A65 File Offset: 0x00245C65
 		public override ESlideRailEndType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082C6 RID: 33478
+		// Token: 0x040089B7 RID: 35255
 		private IPlayerSlideRailEnd Instance;
 	}
 }

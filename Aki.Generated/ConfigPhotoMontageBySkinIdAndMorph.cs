@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006EE RID: 1774
+	// Token: 0x02000706 RID: 1798
 	public class ConfigPhotoMontageBySkinIdAndMorph : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060029A4 RID: 10660 RVA: 0x00144C83 File Offset: 0x00142E83
+		// Token: 0x06002A34 RID: 10804 RVA: 0x0014B6FF File Offset: 0x001498FF
 		static ConfigPhotoMontageBySkinIdAndMorph()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoMontageBySkinIdAndMorph.CreateStaticDefaultValue), new Action(ConfigPhotoMontageBySkinIdAndMorph.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060029A5 RID: 10661 RVA: 0x00144CA4 File Offset: 0x00142EA4
+		// Token: 0x06002A35 RID: 10805 RVA: 0x0014B720 File Offset: 0x00149920
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoMontageBySkinIdAndMorph.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060029A6 RID: 10662 RVA: 0x00144D23 File Offset: 0x00142F23
+		// Token: 0x06002A36 RID: 10806 RVA: 0x0014B79F File Offset: 0x0014999F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoMontageBySkinIdAndMorph.LogPair = null;
 			ConfigPhotoMontageBySkinIdAndMorph.HandleId = 0;
 		}
 
-		// Token: 0x060029A7 RID: 10663 RVA: 0x00144D31 File Offset: 0x00142F31
+		// Token: 0x06002A37 RID: 10807 RVA: 0x0014B7AD File Offset: 0x001499AD
 		public static void Init()
 		{
 			ConfigPhotoMontageBySkinIdAndMorph.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoMontageBySkinIdAndMorph.HandleId, "db_photograph.db", "select BinData from `PhotoMontage` where SkinId=? And Morph=?");
 		}
 
-		// Token: 0x060029A8 RID: 10664 RVA: 0x00144D4C File Offset: 0x00142F4C
+		// Token: 0x06002A38 RID: 10808 RVA: 0x0014B7C8 File Offset: 0x001499C8
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotoMontage> GetConfigList(int p0SkinId, int p1Morph, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003068 RID: 12392
+		// Token: 0x04003110 RID: 12560
 		private const string DB = "db_photograph.db";
 
-		// Token: 0x04003069 RID: 12393
+		// Token: 0x04003111 RID: 12561
 		private const string FILE = "p.拍照.xlsx";
 
-		// Token: 0x0400306A RID: 12394
+		// Token: 0x04003112 RID: 12562
 		private const string TABLE = "PhotoMontage";
 
-		// Token: 0x0400306B RID: 12395
+		// Token: 0x04003113 RID: 12563
 		private const string COMMAND = "select BinData from `PhotoMontage` where SkinId=? And Morph=?";
 
-		// Token: 0x0400306C RID: 12396
+		// Token: 0x04003114 RID: 12564
 		private const string KEY_PREFIX = "PhotoMontageBySkinIdAndMorph";
 
-		// Token: 0x0400306D RID: 12397
+		// Token: 0x04003115 RID: 12565
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400306E RID: 12398
+		// Token: 0x04003116 RID: 12566
 		private static int HandleId;
 	}
 }

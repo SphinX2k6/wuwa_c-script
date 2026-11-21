@@ -3,15 +3,15 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056BD RID: 22205
+	// Token: 0x02005C61 RID: 23649
 	public class IPassengerTeleportConfigT
 	{
-		// Token: 0x1700A543 RID: 42307
-		// (get) Token: 0x0602517A RID: 151930 RVA: 0x0051F2C5 File Offset: 0x0051D4C5
-		// (set) Token: 0x0602517B RID: 151931 RVA: 0x0051F2CD File Offset: 0x0051D4CD
+		// Token: 0x1700ADD7 RID: 44503
+		// (get) Token: 0x060273CF RID: 160719 RVA: 0x0056020D File Offset: 0x0055E40D
+		// (set) Token: 0x060273D0 RID: 160720 RVA: 0x00560215 File Offset: 0x0055E415
 		public IPosAT PosA { get; set; }
 
-		// Token: 0x0602517C RID: 151932 RVA: 0x0051F2D6 File Offset: 0x0051D4D6
+		// Token: 0x060273D1 RID: 160721 RVA: 0x0056021E File Offset: 0x0055E41E
 		public IPassengerTeleportConfigT()
 		{
 			this.PosA = null;

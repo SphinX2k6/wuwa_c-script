@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F02 RID: 3842
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001018 RID: 4120
 	public class ICheckTrapDefenseBdBuffQualityUp : ICheckTrapDefenseEventBase
 	{
-		// Token: 0x060054C0 RID: 21696 RVA: 0x000CFE3C File Offset: 0x000CE03C
+		// Token: 0x06005A3C RID: 23100 RVA: 0x000DBFE4 File Offset: 0x000DA1E4
 		private ICheckTrapDefenseBdBuffQualityUp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060054C1 RID: 21697 RVA: 0x000CFE74 File Offset: 0x000CE074
+		// Token: 0x06005A3D RID: 23101 RVA: 0x000DC01C File Offset: 0x000DA21C
 		public static ICheckTrapDefenseBdBuffQualityUp Create([Nullable(2)] ICheckTrapDefenseBdBuffQualityUp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054C2 RID: 21698 RVA: 0x000CFE87 File Offset: 0x000CE087
+		// Token: 0x06005A3E RID: 23102 RVA: 0x000DC02F File Offset: 0x000DA22F
 		public static ICheckTrapDefenseBdBuffQualityUp CreateFromSetValue([Nullable(2)] ICheckTrapDefenseBdBuffQualityUp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054C3 RID: 21699 RVA: 0x000CFE9A File Offset: 0x000CE09A
+		// Token: 0x06005A3F RID: 23103 RVA: 0x000DC042 File Offset: 0x000DA242
 		public new ICheckTrapDefenseBdBuffQualityUp_SetValue ToSetValue()
 		{
 			return new ICheckTrapDefenseBdBuffQualityUp_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C5E RID: 7262
-		// (get) Token: 0x060054C4 RID: 21700 RVA: 0x000CFEAD File Offset: 0x000CE0AD
-		// (set) Token: 0x060054C5 RID: 21701 RVA: 0x000CFED8 File Offset: 0x000CE0D8
+		// Token: 0x17001DF6 RID: 7670
+		// (get) Token: 0x06005A40 RID: 23104 RVA: 0x000DC055 File Offset: 0x000DA255
+		// (set) Token: 0x06005A41 RID: 23105 RVA: 0x000DC080 File Offset: 0x000DA280
 		public override ECheckTrapDefenseEvent Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400334F RID: 13135
+		// Token: 0x0400365C RID: 13916
 		[Nullable(2)]
 		protected new ICheckTrapDefenseBdBuffQualityUp FbInstance;
 
-		// Token: 0x04003350 RID: 13136
+		// Token: 0x0400365D RID: 13917
 		[Nullable(2)]
 		protected new ICheckTrapDefenseBdBuffQualityUp_SetValue PocoInterface;
 	}

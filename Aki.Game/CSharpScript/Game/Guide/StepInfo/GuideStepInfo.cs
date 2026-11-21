@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Guide.StepInfo
 {
-	// Token: 0x0200460C RID: 17932
+	// Token: 0x02003535 RID: 13621
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GuideStepInfo
 	{
-		// Token: 0x170075BF RID: 30143
-		// (get) Token: 0x0602E397 RID: 189335 RVA: 0x00AB0124 File Offset: 0x00AAE324
+		// Token: 0x17004877 RID: 18551
+		// (get) Token: 0x06022A8C RID: 141964 RVA: 0x009DC818 File Offset: 0x009DAA18
 		public GuideStep Config
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E398 RID: 189336 RVA: 0x00AB016C File Offset: 0x00AAE36C
+		// Token: 0x06022A8D RID: 141965 RVA: 0x009DC860 File Offset: 0x009DAA60
 		[NullableContext(1)]
 		public GuideStepInfo(int stepId, GuideGroupInfo owner)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.StateMachine.Start(EGuideStepState.Init);
 		}
 
-		// Token: 0x0602E399 RID: 189337 RVA: 0x00AB0233 File Offset: 0x00AAE433
+		// Token: 0x06022A8E RID: 141966 RVA: 0x009DC927 File Offset: 0x009DAB27
 		public void TryEnterExecuting()
 		{
 			if (this.CanEnterExecuting())
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.SwitchState(EGuideStepState.Pending);
 		}
 
-		// Token: 0x0602E39A RID: 189338 RVA: 0x00AB024C File Offset: 0x00AAE44C
+		// Token: 0x06022A8F RID: 141967 RVA: 0x009DC940 File Offset: 0x009DAB40
 		public void AssignGuideView(GuideBaseView view)
 		{
 			if (view == null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.GuideView = view;
 		}
 
-		// Token: 0x0602E39B RID: 189339 RVA: 0x00AB029C File Offset: 0x00AAE49C
+		// Token: 0x06022A90 RID: 141968 RVA: 0x009DC990 File Offset: 0x009DAB90
 		public void SwitchState(EGuideStepState toState)
 		{
 			if (this.StateMachine.CurrentState.GetValueOrDefault() == EGuideStepState.End && toState != EGuideStepState.Init)
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.StateMachine.Switch(toState);
 		}
 
-		// Token: 0x0602E39C RID: 189340 RVA: 0x00AB02D0 File Offset: 0x00AAE4D0
+		// Token: 0x06022A91 RID: 141969 RVA: 0x009DC9C4 File Offset: 0x009DABC4
 		private bool CheckEnterExecutingConditions()
 		{
 			return UiLayer.Instance.IsUiActive() && !GuideModel.Instance.ShouldBlockGuideBecauseUiNotRender && !UiManager.Instance.IsViewShow(EUiViewName.PhantomExploreView);
 		}
 
-		// Token: 0x0602E39D RID: 189341 RVA: 0x00AB0304 File Offset: 0x00AAE504
+		// Token: 0x06022A92 RID: 141970 RVA: 0x009DC9F8 File Offset: 0x009DABF8
 		private bool IsNeedNormalMask()
 		{
 			if (this.Config.ContentType == 4)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			return false;
 		}
 
-		// Token: 0x0602E39E RID: 189342 RVA: 0x00AB0350 File Offset: 0x00AAE550
+		// Token: 0x06022A93 RID: 141971 RVA: 0x009DCA44 File Offset: 0x009DAC44
 		private unsafe bool CheckTargetViewOpen()
 		{
 			GuideFocusNew value = GuideConfig.Instance.GetGuideFocus(this.Id).Value;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			return true;
 		}
 
-		// Token: 0x0602E39F RID: 189343 RVA: 0x00AB0500 File Offset: 0x00AAE700
+		// Token: 0x06022A94 RID: 141972 RVA: 0x009DCBF4 File Offset: 0x009DADF4
 		private bool CheckCanTriggerTimeDilationGuide()
 		{
 			if (UiTimeDilation.Instance.IsUiTimeDilated)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			return euiViewName == EUiViewName.BattleView;
 		}
 
-		// Token: 0x0602E3A0 RID: 189344 RVA: 0x00AB0582 File Offset: 0x00AAE782
+		// Token: 0x06022A95 RID: 141973 RVA: 0x009DCC76 File Offset: 0x009DAE76
 		private void StartLockInput()
 		{
 			if (this.LockInputTimer == null)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E3A1 RID: 189345 RVA: 0x00AB05BF File Offset: 0x00AAE7BF
+		// Token: 0x06022A96 RID: 141974 RVA: 0x009DCCB3 File Offset: 0x009DAEB3
 		public void StopLockInput()
 		{
 			if (this.LockInputTimer != null)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E3A2 RID: 189346 RVA: 0x00AB05EC File Offset: 0x00AAE7EC
+		// Token: 0x06022A97 RID: 141975 RVA: 0x009DCCE0 File Offset: 0x009DAEE0
 		public bool CanEnterExecuting()
 		{
 			if (!this.CheckEnterExecutingConditions())
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			return true;
 		}
 
-		// Token: 0x0602E3A3 RID: 189347 RVA: 0x00AB08D8 File Offset: 0x00AAEAD8
+		// Token: 0x06022A98 RID: 141976 RVA: 0x009DCFCC File Offset: 0x009DB1CC
 		public void ClearGuideFocusBehavior()
 		{
 			UiBehaviorGuideFocus guideFocusBehavior = this.GuideFocusBehavior;
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			this.GuideFocusBehaviorProxy = null;
 		}
 
-		// Token: 0x0602E3A4 RID: 189348 RVA: 0x00AB08FC File Offset: 0x00AAEAFC
+		// Token: 0x06022A99 RID: 141977 RVA: 0x009DCFF0 File Offset: 0x009DB1F0
 		public bool SetLimitInputDistribute()
 		{
 			bool result = false;
@@ -399,16 +399,16 @@ namespace CSharpScript.Game.Guide.StepInfo
 			return result;
 		}
 
-		// Token: 0x04018D06 RID: 101638
+		// Token: 0x04013345 RID: 78661
 		public readonly int Id;
 
-		// Token: 0x04018D07 RID: 101639
+		// Token: 0x04013346 RID: 78662
 		public readonly GuideGroupInfo OwnerGroup;
 
-		// Token: 0x04018D08 RID: 101640
+		// Token: 0x04013347 RID: 78663
 		public readonly int OwnerGroupPriority;
 
-		// Token: 0x04018D09 RID: 101641
+		// Token: 0x04013348 RID: 78664
 		[Nullable(new byte[]
 		{
 			2,
@@ -416,25 +416,25 @@ namespace CSharpScript.Game.Guide.StepInfo
 		})]
 		public readonly StateMachine<GuideStepInfo, EGuideStepState> StateMachine;
 
-		// Token: 0x04018D0A RID: 101642
+		// Token: 0x04013349 RID: 78665
 		public readonly GuideStepViewData ViewData;
 
-		// Token: 0x04018D0B RID: 101643
+		// Token: 0x0401334A RID: 78666
 		public GuideBaseView GuideView;
 
-		// Token: 0x04018D0C RID: 101644
+		// Token: 0x0401334B RID: 78667
 		public UiBehaviorBaseProxy GuideFocusBehaviorProxy;
 
-		// Token: 0x04018D0D RID: 101645
+		// Token: 0x0401334C RID: 78668
 		private UiBehaviorGuideFocus GuideFocusBehavior;
 
-		// Token: 0x04018D0E RID: 101646
+		// Token: 0x0401334D RID: 78669
 		private GuideStep? ConfigInner;
 
-		// Token: 0x04018D0F RID: 101647
+		// Token: 0x0401334E RID: 78670
 		private TimerHandle LockInputTimer;
 
-		// Token: 0x04018D10 RID: 101648
+		// Token: 0x0401334F RID: 78671
 		public bool IsExitingFromExecuting;
 	}
 }

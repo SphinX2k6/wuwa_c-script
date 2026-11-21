@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027E5 RID: 10213
+	// Token: 0x02002AB8 RID: 10936
 	public class IHookLockInteract : ILeisureInteractType
 	{
-		// Token: 0x0600E2F2 RID: 58098 RVA: 0x00217D25 File Offset: 0x00215F25
-		[NullableContext(1)]
+		// Token: 0x0600F117 RID: 61719 RVA: 0x00234B88 File Offset: 0x00232D88
 		public static IHookLockInteract Create(IHookLockInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044EA RID: 17642
-		// (get) Token: 0x0600E2F3 RID: 58099 RVA: 0x00217D44 File Offset: 0x00215F44
+		// Token: 0x17004855 RID: 18517
+		// (get) Token: 0x0600F118 RID: 61720 RVA: 0x00234BA7 File Offset: 0x00232DA7
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044EB RID: 17643
-		// (get) Token: 0x0600E2F4 RID: 58100 RVA: 0x00217D51 File Offset: 0x00215F51
+		// Token: 0x17004856 RID: 18518
+		// (get) Token: 0x0600F119 RID: 61721 RVA: 0x00234BB4 File Offset: 0x00232DB4
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DC7 RID: 32199
+		// Token: 0x04008484 RID: 33924
 		private IHookLockInteract Instance;
 	}
 }

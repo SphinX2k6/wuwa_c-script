@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x02004404 RID: 17412
+	// Token: 0x0200486C RID: 18540
 	public class IMatchRoleType_UnionUnion
 	{
-		// Token: 0x17007ADA RID: 31450
-		// (get) Token: 0x06019EBE RID: 106174 RVA: 0x003B53D9 File Offset: 0x003B35D9
-		// (set) Token: 0x06019EBF RID: 106175 RVA: 0x003B53E1 File Offset: 0x003B35E1
+		// Token: 0x17008119 RID: 33049
+		// (get) Token: 0x0601B68B RID: 112267 RVA: 0x003E1555 File Offset: 0x003DF755
+		// (set) Token: 0x0601B68C RID: 112268 RVA: 0x003E155D File Offset: 0x003DF75D
 		public IMatchRoleType_Union Type { get; set; }
 
-		// Token: 0x17007ADB RID: 31451
-		// (get) Token: 0x06019EC0 RID: 106176 RVA: 0x003B53EA File Offset: 0x003B35EA
-		// (set) Token: 0x06019EC1 RID: 106177 RVA: 0x003B53F2 File Offset: 0x003B35F2
+		// Token: 0x1700811A RID: 33050
+		// (get) Token: 0x0601B68D RID: 112269 RVA: 0x003E1566 File Offset: 0x003DF766
+		// (set) Token: 0x0601B68E RID: 112270 RVA: 0x003E156E File Offset: 0x003DF76E
 		public object Value { get; set; }
 
-		// Token: 0x06019EC2 RID: 106178 RVA: 0x003B53FB File Offset: 0x003B35FB
+		// Token: 0x0601B68F RID: 112271 RVA: 0x003E1577 File Offset: 0x003DF777
 		public IMatchRoleType_UnionUnion()
 		{
 			this.Type = IMatchRoleType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019EC3 RID: 106179 RVA: 0x003B5411 File Offset: 0x003B3611
+		// Token: 0x0601B690 RID: 112272 RVA: 0x003E158D File Offset: 0x003DF78D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019EC4 RID: 106180 RVA: 0x003B5423 File Offset: 0x003B3623
+		// Token: 0x0601B691 RID: 112273 RVA: 0x003E159F File Offset: 0x003DF79F
 		public IMatchRoleTypeT AsIMatchRoleType()
 		{
 			return this.As<IMatchRoleTypeT>();
 		}
 
-		// Token: 0x06019EC5 RID: 106181 RVA: 0x003B542B File Offset: 0x003B362B
+		// Token: 0x0601B692 RID: 112274 RVA: 0x003E15A7 File Offset: 0x003DF7A7
 		public static IMatchRoleType_UnionUnion FromIMatchRoleType(IMatchRoleTypeT _imatchroletype)
 		{
 			return new IMatchRoleType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			};
 		}
 
-		// Token: 0x06019EC6 RID: 106182 RVA: 0x003B5440 File Offset: 0x003B3640
+		// Token: 0x0601B693 RID: 112275 RVA: 0x003E15BC File Offset: 0x003DF7BC
 		public IMatchPlayerRoleT AsIMatchPlayerRole()
 		{
 			return this.As<IMatchPlayerRoleT>();
 		}
 
-		// Token: 0x06019EC7 RID: 106183 RVA: 0x003B5448 File Offset: 0x003B3648
+		// Token: 0x0601B694 RID: 112276 RVA: 0x003E15C4 File Offset: 0x003DF7C4
 		public static IMatchRoleType_UnionUnion FromIMatchPlayerRole(IMatchPlayerRoleT _imatchplayerrole)
 		{
 			return new IMatchRoleType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			};
 		}
 
-		// Token: 0x06019EC8 RID: 106184 RVA: 0x003B545D File Offset: 0x003B365D
+		// Token: 0x0601B695 RID: 112277 RVA: 0x003E15D9 File Offset: 0x003DF7D9
 		public IMatchPhantomRoleT AsIMatchPhantomRole()
 		{
 			return this.As<IMatchPhantomRoleT>();
 		}
 
-		// Token: 0x06019EC9 RID: 106185 RVA: 0x003B5465 File Offset: 0x003B3665
+		// Token: 0x0601B696 RID: 112278 RVA: 0x003E15E1 File Offset: 0x003DF7E1
 		public static IMatchRoleType_UnionUnion FromIMatchPhantomRole(IMatchPhantomRoleT _imatchphantomrole)
 		{
 			return new IMatchRoleType_UnionUnion
@@ -77,7 +77,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 			};
 		}
 
-		// Token: 0x06019ECA RID: 106186 RVA: 0x003B547C File Offset: 0x003B367C
+		// Token: 0x0601B697 RID: 112279 RVA: 0x003E15F6 File Offset: 0x003DF7F6
+		public IMatchAssistCharacterRoleT AsIMatchAssistCharacterRole()
+		{
+			return this.As<IMatchAssistCharacterRoleT>();
+		}
+
+		// Token: 0x0601B698 RID: 112280 RVA: 0x003E15FE File Offset: 0x003DF7FE
+		public static IMatchRoleType_UnionUnion FromIMatchAssistCharacterRole(IMatchAssistCharacterRoleT _imatchassistcharacterrole)
+		{
+			return new IMatchRoleType_UnionUnion
+			{
+				Type = IMatchRoleType_Union.IMatchAssistCharacterRole,
+				Value = _imatchassistcharacterrole
+			};
+		}
+
+		// Token: 0x0601B699 RID: 112281 RVA: 0x003E1614 File Offset: 0x003DF814
 		public static int Pack(FlatBufferBuilder builder, IMatchRoleType_UnionUnion _o)
 		{
 			switch (_o.Type)
@@ -88,6 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 				return IMatchPlayerRole.Pack(builder, _o.AsIMatchPlayerRole()).Value;
 			case IMatchRoleType_Union.IMatchPhantomRole:
 				return IMatchPhantomRole.Pack(builder, _o.AsIMatchPhantomRole()).Value;
+			case IMatchRoleType_Union.IMatchAssistCharacterRole:
+				return IMatchAssistCharacterRole.Pack(builder, _o.AsIMatchAssistCharacterRole()).Value;
 			default:
 				return 0;
 			}

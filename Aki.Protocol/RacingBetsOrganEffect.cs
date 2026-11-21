@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E6C RID: 3692
+	// Token: 0x02000E5C RID: 3676
 	public sealed class RacingBetsOrganEffect : IMessage<RacingBetsOrganEffect>, IMessage, IEquatable<RacingBetsOrganEffect>, IDeepCloneable<RacingBetsOrganEffect>, IBufferMessage
 	{
-		// Token: 0x06013D61 RID: 81249 RVA: 0x002E3A6B File Offset: 0x002E1C6B
+		// Token: 0x06013C7C RID: 81020 RVA: 0x002E23AB File Offset: 0x002E05AB
 		[NullableContext(1)]
 		public static RacingBetsOrganEffect Create()
 		{
 			return new RacingBetsOrganEffect();
 		}
 
-		// Token: 0x170041F8 RID: 16888
-		// (get) Token: 0x06013D62 RID: 81250 RVA: 0x002E3A72 File Offset: 0x002E1C72
+		// Token: 0x170041CE RID: 16846
+		// (get) Token: 0x06013C7D RID: 81021 RVA: 0x002E23B2 File Offset: 0x002E05B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170041F9 RID: 16889
-		// (get) Token: 0x06013D63 RID: 81251 RVA: 0x002E3A75 File Offset: 0x002E1C75
+		// Token: 0x170041CF RID: 16847
+		// (get) Token: 0x06013C7E RID: 81022 RVA: 0x002E23B5 File Offset: 0x002E05B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013D64 RID: 81252 RVA: 0x002E3A7C File Offset: 0x002E1C7C
+		// Token: 0x06013C7F RID: 81023 RVA: 0x002E23BC File Offset: 0x002E05BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsOrganEffect()
 		{
 		}
 
-		// Token: 0x06013D65 RID: 81253 RVA: 0x002E3A84 File Offset: 0x002E1C84
+		// Token: 0x06013C80 RID: 81024 RVA: 0x002E23C4 File Offset: 0x002E05C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsOrganEffect(RacingBetsOrganEffect other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06013D66 RID: 81254 RVA: 0x002E3AD8 File Offset: 0x002E1CD8
+		// Token: 0x06013C81 RID: 81025 RVA: 0x002E2418 File Offset: 0x002E0618
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RacingBetsOrganEffect Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new RacingBetsOrganEffect(this);
 		}
 
-		// Token: 0x170041FA RID: 16890
-		// (get) Token: 0x06013D67 RID: 81255 RVA: 0x002E3AE0 File Offset: 0x002E1CE0
-		// (set) Token: 0x06013D68 RID: 81256 RVA: 0x002E3AE8 File Offset: 0x002E1CE8
+		// Token: 0x170041D0 RID: 16848
+		// (get) Token: 0x06013C82 RID: 81026 RVA: 0x002E2420 File Offset: 0x002E0620
+		// (set) Token: 0x06013C83 RID: 81027 RVA: 0x002E2428 File Offset: 0x002E0628
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int OrganId
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170041FB RID: 16891
-		// (get) Token: 0x06013D69 RID: 81257 RVA: 0x002E3AF1 File Offset: 0x002E1CF1
-		// (set) Token: 0x06013D6A RID: 81258 RVA: 0x002E3AF9 File Offset: 0x002E1CF9
+		// Token: 0x170041D1 RID: 16849
+		// (get) Token: 0x06013C84 RID: 81028 RVA: 0x002E2431 File Offset: 0x002E0631
+		// (set) Token: 0x06013C85 RID: 81029 RVA: 0x002E2439 File Offset: 0x002E0639
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SkillId
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170041FC RID: 16892
-		// (get) Token: 0x06013D6B RID: 81259 RVA: 0x002E3B02 File Offset: 0x002E1D02
-		// (set) Token: 0x06013D6C RID: 81260 RVA: 0x002E3B0A File Offset: 0x002E1D0A
+		// Token: 0x170041D2 RID: 16850
+		// (get) Token: 0x06013C86 RID: 81030 RVA: 0x002E2442 File Offset: 0x002E0642
+		// (set) Token: 0x06013C87 RID: 81031 RVA: 0x002E244A File Offset: 0x002E064A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DangoId
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170041FD RID: 16893
-		// (get) Token: 0x06013D6D RID: 81261 RVA: 0x002E3B13 File Offset: 0x002E1D13
-		// (set) Token: 0x06013D6E RID: 81262 RVA: 0x002E3B1B File Offset: 0x002E1D1B
+		// Token: 0x170041D3 RID: 16851
+		// (get) Token: 0x06013C88 RID: 81032 RVA: 0x002E2453 File Offset: 0x002E0653
+		// (set) Token: 0x06013C89 RID: 81033 RVA: 0x002E245B File Offset: 0x002E065B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int OrganPoint
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013D6F RID: 81263 RVA: 0x002E3B24 File Offset: 0x002E1D24
+		// Token: 0x06013C8A RID: 81034 RVA: 0x002E2464 File Offset: 0x002E0664
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RacingBetsOrganEffect);
 		}
 
-		// Token: 0x06013D70 RID: 81264 RVA: 0x002E3B34 File Offset: 0x002E1D34
+		// Token: 0x06013C8B RID: 81035 RVA: 0x002E2474 File Offset: 0x002E0674
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RacingBetsOrganEffect other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.OrganId == other.OrganId && this.SkillId == other.SkillId && this.DangoId == other.DangoId && this.OrganPoint == other.OrganPoint && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013D71 RID: 81265 RVA: 0x002E3BA0 File Offset: 0x002E1DA0
+		// Token: 0x06013C8C RID: 81036 RVA: 0x002E24E0 File Offset: 0x002E06E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013D72 RID: 81266 RVA: 0x002E3C2A File Offset: 0x002E1E2A
+		// Token: 0x06013C8D RID: 81037 RVA: 0x002E256A File Offset: 0x002E076A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013D73 RID: 81267 RVA: 0x002E3C37 File Offset: 0x002E1E37
+		// Token: 0x06013C8E RID: 81038 RVA: 0x002E2577 File Offset: 0x002E0777
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013D74 RID: 81268 RVA: 0x002E3C40 File Offset: 0x002E1E40
+		// Token: 0x06013C8F RID: 81039 RVA: 0x002E2580 File Offset: 0x002E0780
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013D75 RID: 81269 RVA: 0x002E3CD0 File Offset: 0x002E1ED0
+		// Token: 0x06013C90 RID: 81040 RVA: 0x002E2610 File Offset: 0x002E0810
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -257,7 +257,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013D76 RID: 81270 RVA: 0x002E3D58 File Offset: 0x002E1F58
+		// Token: 0x06013C91 RID: 81041 RVA: 0x002E2698 File Offset: 0x002E0898
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RacingBetsOrganEffect other)
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013D77 RID: 81271 RVA: 0x002E3DD0 File Offset: 0x002E1FD0
+		// Token: 0x06013C92 RID: 81042 RVA: 0x002E2710 File Offset: 0x002E0910
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06013D78 RID: 81272 RVA: 0x002E3DDC File Offset: 0x002E1FDC
+		// Token: 0x06013C93 RID: 81043 RVA: 0x002E271C File Offset: 0x002E091C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -335,31 +335,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400795F RID: 31071
+		// Token: 0x04007989 RID: 31113
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007960 RID: 31072
+		// Token: 0x0400798A RID: 31114
 		public const int OrganIdFieldNumber = 1;
 
-		// Token: 0x04007961 RID: 31073
+		// Token: 0x0400798B RID: 31115
 		private int organId_;
 
-		// Token: 0x04007962 RID: 31074
+		// Token: 0x0400798C RID: 31116
 		public const int SkillIdFieldNumber = 2;
 
-		// Token: 0x04007963 RID: 31075
+		// Token: 0x0400798D RID: 31117
 		private int skillId_;
 
-		// Token: 0x04007964 RID: 31076
+		// Token: 0x0400798E RID: 31118
 		public const int DangoIdFieldNumber = 3;
 
-		// Token: 0x04007965 RID: 31077
+		// Token: 0x0400798F RID: 31119
 		private int dangoId_;
 
-		// Token: 0x04007966 RID: 31078
+		// Token: 0x04007990 RID: 31120
 		public const int OrganPointFieldNumber = 4;
 
-		// Token: 0x04007967 RID: 31079
+		// Token: 0x04007991 RID: 31121
 		private int organPoint_;
 	}
 }

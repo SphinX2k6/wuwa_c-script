@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003293 RID: 12947
+// Token: 0x02002804 RID: 10244
 public class PlayerLifeCycleComponent : EntityComponent
 {
-	// Token: 0x0601C08C RID: 114828 RVA: 0x007CB4F4 File Offset: 0x007C96F4
+	// Token: 0x06019CB2 RID: 105650 RVA: 0x007F27B4 File Offset: 0x007F09B4
 	[NullableContext(2)]
 	protected unsafe override bool OnInitData(IEntityArgs args = null)
 	{
@@ -41,28 +41,28 @@ public class PlayerLifeCycleComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C08D RID: 114829 RVA: 0x007CB697 File Offset: 0x007C9897
+	// Token: 0x06019CB3 RID: 105651 RVA: 0x007F2957 File Offset: 0x007F0B57
 	protected override bool OnStart()
 	{
 		EventSystem.Instance.Emit<int, Entity>(EEventName.PlayerEntityStarted, this.PlayerId, base.Entity);
 		return true;
 	}
 
-	// Token: 0x0601C08E RID: 114830 RVA: 0x007CB6B6 File Offset: 0x007C98B6
+	// Token: 0x06019CB4 RID: 105652 RVA: 0x007F2976 File Offset: 0x007F0B76
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Emit<int, Entity>(EEventName.PlayerEntityEnded, this.PlayerId, base.Entity);
 		return true;
 	}
 
-	// Token: 0x0601C08F RID: 114831 RVA: 0x007CB6D5 File Offset: 0x007C98D5
+	// Token: 0x06019CB5 RID: 105653 RVA: 0x007F2995 File Offset: 0x007F0B95
 	protected override bool OnClear()
 	{
 		FormationDataController.Instance.UnRegisterPlayerEntity(this.PlayerId);
 		return true;
 	}
 
-	// Token: 0x0601C090 RID: 114832 RVA: 0x007CB6E8 File Offset: 0x007C98E8
+	// Token: 0x06019CB6 RID: 105654 RVA: 0x007F29A8 File Offset: 0x007F0BA8
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -71,13 +71,40 @@ public class PlayerLifeCycleComponent : EntityComponent
 			return false;
 		}
 		PlayerLifeCycleComponent playerLifeCycleComponent = (PlayerLifeCycleComponent)componentTemplate;
-		if (base.CanResetComponentProperty("PlayerId"))
-		{
-			this.PlayerId = playerLifeCycleComponent.PlayerId;
-		}
+		this.PlayerId = playerLifeCycleComponent.PlayerId;
 		return true;
 	}
 
-	// Token: 0x0400DD94 RID: 56724
+	// Token: 0x1700298E RID: 10638
+	// (get) Token: 0x06019CB7 RID: 105655 RVA: 0x007F29D4 File Offset: 0x007F0BD4
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700298F RID: 10639
+	// (get) Token: 0x06019CB8 RID: 105656 RVA: 0x007F29D7 File Offset: 0x007F0BD7
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002990 RID: 10640
+	// (get) Token: 0x06019CB9 RID: 105657 RVA: 0x007F29DA File Offset: 0x007F0BDA
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E23B RID: 57915
 	protected int PlayerId;
 }

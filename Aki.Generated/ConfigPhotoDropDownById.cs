@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006CA RID: 1738
+	// Token: 0x020006E2 RID: 1762
 	public class ConfigPhotoDropDownById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060028CC RID: 10444 RVA: 0x001401C8 File Offset: 0x0013E3C8
+		// Token: 0x0600295C RID: 10588 RVA: 0x00146C44 File Offset: 0x00144E44
 		static ConfigPhotoDropDownById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoDropDownById.CreateStaticDefaultValue), new Action(ConfigPhotoDropDownById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060028CD RID: 10445 RVA: 0x001401E8 File Offset: 0x0013E3E8
+		// Token: 0x0600295D RID: 10589 RVA: 0x00146C64 File Offset: 0x00144E64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoDropDownById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060028CE RID: 10446 RVA: 0x00140267 File Offset: 0x0013E467
+		// Token: 0x0600295E RID: 10590 RVA: 0x00146CE3 File Offset: 0x00144EE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoDropDownById.LogPair = null;
 			ConfigPhotoDropDownById.HandleId = 0;
 		}
 
-		// Token: 0x060028CF RID: 10447 RVA: 0x00140275 File Offset: 0x0013E475
+		// Token: 0x0600295F RID: 10591 RVA: 0x00146CF1 File Offset: 0x00144EF1
 		public static void Init()
 		{
 			ConfigPhotoDropDownById.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoDropDownById.HandleId, "db_photograph.db", "select BinData from `PhotoDropDown` where Id=?");
 		}
 
-		// Token: 0x060028D0 RID: 10448 RVA: 0x00140290 File Offset: 0x0013E490
+		// Token: 0x06002960 RID: 10592 RVA: 0x00146D0C File Offset: 0x00144F0C
 		public static PhotoDropDown? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoDropDownById.HandleId, ConfigPhotoDropDownById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoDropDown?(rootAsPhotoDropDown);
 		}
 
-		// Token: 0x04002F6C RID: 12140
+		// Token: 0x04003014 RID: 12308
 		private const string DB = "db_photograph.db";
 
-		// Token: 0x04002F6D RID: 12141
+		// Token: 0x04003015 RID: 12309
 		private const string FILE = "p.拍照.xlsx";
 
-		// Token: 0x04002F6E RID: 12142
+		// Token: 0x04003016 RID: 12310
 		private const string TABLE = "PhotoDropDown";
 
-		// Token: 0x04002F6F RID: 12143
+		// Token: 0x04003017 RID: 12311
 		private const string COMMAND = "select BinData from `PhotoDropDown` where Id=?";
 
-		// Token: 0x04002F70 RID: 12144
+		// Token: 0x04003018 RID: 12312
 		private const string KEY_PREFIX = "PhotoDropDownById";
 
-		// Token: 0x04002F71 RID: 12145
+		// Token: 0x04003019 RID: 12313
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F72 RID: 12146
+		// Token: 0x0400301A RID: 12314
 		private static int HandleId;
 	}
 }

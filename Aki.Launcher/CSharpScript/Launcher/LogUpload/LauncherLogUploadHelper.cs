@@ -5,10 +5,10 @@ using CSharpScript.Launcher.Util;
 
 namespace CSharpScript.Launcher.LogUpload
 {
-	// Token: 0x020001BF RID: 447
+	// Token: 0x020001C3 RID: 451
 	public class LauncherLogUploadHelper
 	{
-		// Token: 0x06000C0C RID: 3084 RVA: 0x0004B47C File Offset: 0x0004967C
+		// Token: 0x06000C43 RID: 3139 RVA: 0x0004DC90 File Offset: 0x0004BE90
 		[NullableContext(1)]
 		public static ILogUploadParams CreateParams()
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Launcher.LogUpload
 			return logUploadParams;
 		}
 
-		// Token: 0x06000C0D RID: 3085 RVA: 0x0004B57E File Offset: 0x0004977E
+		// Token: 0x06000C44 RID: 3140 RVA: 0x0004DD92 File Offset: 0x0004BF92
 		public static void InitLogUpload()
 		{
 			LauncherLogUpload.Instance.SetParams(LauncherLogUploadHelper.CreateParams());

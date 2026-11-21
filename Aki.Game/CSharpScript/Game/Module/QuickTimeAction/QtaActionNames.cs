@@ -5,10 +5,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F3E RID: 20286
+	// Token: 0x02003F07 RID: 16135
 	public class QtaActionNames
 	{
-		// Token: 0x0603402D RID: 213037 RVA: 0x00C31ED4 File Offset: 0x00C300D4
+		// Token: 0x06028E9B RID: 167579 RVA: 0x00B7B674 File Offset: 0x00B79874
 		private static void InitQtaActionNames()
 		{
 			if (QtaActionNames.QtaActionsCache.Count == 0)
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x0603402E RID: 213038 RVA: 0x00C31F64 File Offset: 0x00C30164
+		// Token: 0x06028E9C RID: 167580 RVA: 0x00B7B704 File Offset: 0x00B79904
 		public static bool Has(int index)
 		{
 			QtaActionNames.InitQtaActionNames();
 			return index > 0 && index < QtaActionNames.QtaActionsCache.Count && !string.IsNullOrEmpty(QtaActionNames.QtaActionsCache[index]);
 		}
 
-		// Token: 0x0603402F RID: 213039 RVA: 0x00C31F94 File Offset: 0x00C30194
+		// Token: 0x06028E9D RID: 167581 RVA: 0x00B7B734 File Offset: 0x00B79934
 		[NullableContext(1)]
 		public static string Get(int index)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			return QtaActionNames.QtaActionsCache[index] ?? string.Empty;
 		}
 
-		// Token: 0x0401BA08 RID: 113160
+		// Token: 0x040163DD RID: 91101
 		[Nullable(new byte[]
 		{
 			1,

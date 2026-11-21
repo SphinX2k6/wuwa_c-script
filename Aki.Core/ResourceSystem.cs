@@ -6,18 +6,18 @@ using UnrealEngine;
 using UnrealEngine.Extension;
 using UnrealEngine.Interface;
 
-// Token: 0x020000CB RID: 203
+// Token: 0x020000CD RID: 205
 [NullableContext(1)]
 [Nullable(0)]
 public class ResourceSystem : Singleton
 {
-	// Token: 0x06000637 RID: 1591 RVA: 0x00020E80 File Offset: 0x0001F080
+	// Token: 0x06000678 RID: 1656 RVA: 0x00021356 File Offset: 0x0001F556
 	public bool IsMemoryTagOpen()
 	{
 		return this.IsOpenMemoryTag;
 	}
 
-	// Token: 0x06000638 RID: 1592 RVA: 0x00020E88 File Offset: 0x0001F088
+	// Token: 0x06000679 RID: 1657 RVA: 0x00021360 File Offset: 0x0001F560
 	public void Initialize()
 	{
 		this.IsOpenMemoryTag = !KuroApplication.IsBuildShipping();
@@ -31,13 +31,13 @@ public class ResourceSystem : Singleton
 		this.InternalIsAsyncLoadingThreadEnabled = KuroApplication.IsAsyncLoadingThreadEnabled();
 	}
 
-	// Token: 0x06000639 RID: 1593 RVA: 0x00020EFE File Offset: 0x0001F0FE
+	// Token: 0x0600067A RID: 1658 RVA: 0x000213D6 File Offset: 0x0001F5D6
 	public void SetCallbackTimeLimit(int millisecond)
 	{
 		this.TaskTimeLimit.Limit = (long)(millisecond * 1000);
 	}
 
-	// Token: 0x0600063A RID: 1594 RVA: 0x00020F14 File Offset: 0x0001F114
+	// Token: 0x0600067B RID: 1659 RVA: 0x000213EC File Offset: 0x0001F5EC
 	public unsafe void UpdateDelayCallback(bool reset = true)
 	{
 		if (this.Updating)
@@ -71,7 +71,7 @@ public class ResourceSystem : Singleton
 		this.Updating = false;
 	}
 
-	// Token: 0x0600063B RID: 1595 RVA: 0x00021004 File Offset: 0x0001F204
+	// Token: 0x0600067C RID: 1660 RVA: 0x000214DC File Offset: 0x0001F6DC
 	private unsafe void PreloadTypes(HashSet<string> set, [Nullable(2)] Action callback = null, string memoyTag = "js_undefined")
 	{
 		if (set.Count == 0)
@@ -114,7 +114,7 @@ public class ResourceSystem : Singleton
 		}
 	}
 
-	// Token: 0x0600063C RID: 1596 RVA: 0x000210C8 File Offset: 0x0001F2C8
+	// Token: 0x0600067D RID: 1661 RVA: 0x000215A0 File Offset: 0x0001F7A0
 	[NullableContext(2)]
 	public void PreloadSimpleTypes(Action callback = null)
 	{
@@ -129,7 +129,7 @@ public class ResourceSystem : Singleton
 		this.PreloadTypes(hashSet, callback, "PreloadSimpleTypes");
 	}
 
-	// Token: 0x0600063D RID: 1597 RVA: 0x00021168 File Offset: 0x0001F368
+	// Token: 0x0600067E RID: 1662 RVA: 0x00021640 File Offset: 0x0001F840
 	[NullableContext(2)]
 	public void PreloadOtherTypes(Action callback = null)
 	{
@@ -144,7 +144,7 @@ public class ResourceSystem : Singleton
 		this.PreloadTypes(hashSet, callback, "PreloadOtherTypes");
 	}
 
-	// Token: 0x0600063E RID: 1598 RVA: 0x000211F4 File Offset: 0x0001F3F4
+	// Token: 0x0600067F RID: 1663 RVA: 0x000216CC File Offset: 0x0001F8CC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -166,7 +166,7 @@ public class ResourceSystem : Singleton
 		return new ValueTuple<ClassDefine.EType, string, ETypeLoadKind>?(value);
 	}
 
-	// Token: 0x0600063F RID: 1599 RVA: 0x00021248 File Offset: 0x0001F448
+	// Token: 0x06000680 RID: 1664 RVA: 0x00021720 File Offset: 0x0001F920
 	[return: Nullable(2)]
 	private unsafe string GetTypePath(string name, [Nullable(new byte[]
 	{
@@ -190,7 +190,7 @@ public class ResourceSystem : Singleton
 		return item;
 	}
 
-	// Token: 0x06000640 RID: 1600 RVA: 0x000212C4 File Offset: 0x0001F4C4
+	// Token: 0x06000681 RID: 1665 RVA: 0x0002179C File Offset: 0x0001F99C
 	private unsafe void LoadType(string name)
 	{
 		if (this.TypeCache.ContainsKey(name))
@@ -259,7 +259,7 @@ public class ResourceSystem : Singleton
 		this.TypeCache[name] = uobject;
 	}
 
-	// Token: 0x06000641 RID: 1601 RVA: 0x000214BC File Offset: 0x0001F6BC
+	// Token: 0x06000682 RID: 1666 RVA: 0x00021994 File Offset: 0x0001FB94
 	[return: Nullable(2)]
 	public UObject GetLoadedType(string name)
 	{
@@ -276,7 +276,7 @@ public class ResourceSystem : Singleton
 		return result;
 	}
 
-	// Token: 0x06000642 RID: 1602 RVA: 0x00021500 File Offset: 0x0001F700
+	// Token: 0x06000683 RID: 1667 RVA: 0x000219D8 File Offset: 0x0001FBD8
 	public unsafe void LoadTypeAsync(string name, Action callback, string memoryTag = "js_undefined")
 	{
 		if (this.TypeCache.ContainsKey(name))
@@ -343,7 +343,7 @@ public class ResourceSystem : Singleton
 		}
 	}
 
-	// Token: 0x06000643 RID: 1603 RVA: 0x00021664 File Offset: 0x0001F864
+	// Token: 0x06000684 RID: 1668 RVA: 0x00021B3C File Offset: 0x0001FD3C
 	private void OnLoadComplete(int id)
 	{
 		ResourceSystem.LoadCallbackTask item;
@@ -356,7 +356,7 @@ public class ResourceSystem : Singleton
 		this.UpdateDelayCallback(false);
 	}
 
-	// Token: 0x06000644 RID: 1604 RVA: 0x000216A4 File Offset: 0x0001F8A4
+	// Token: 0x06000685 RID: 1669 RVA: 0x00021B7C File Offset: 0x0001FD7C
 	private bool CheckPath(string path)
 	{
 		if (string.IsNullOrEmpty(path))
@@ -377,7 +377,7 @@ public class ResourceSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000645 RID: 1605 RVA: 0x0002170C File Offset: 0x0001F90C
+	// Token: 0x06000686 RID: 1670 RVA: 0x00021BE4 File Offset: 0x0001FDE4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -403,7 +403,7 @@ public class ResourceSystem : Singleton
 		return new TWeakObjectPtr<UClass>?(ptr.ToWeakClass());
 	}
 
-	// Token: 0x06000646 RID: 1606 RVA: 0x0002177C File Offset: 0x0001F97C
+	// Token: 0x06000687 RID: 1671 RVA: 0x00021C54 File Offset: 0x0001FE54
 	[return: Nullable(2)]
 	private T GetAsset<[Nullable(0)] T>(string path, int id) where T : UObject, IUnrealUObject
 	{
@@ -416,7 +416,7 @@ public class ResourceSystem : Singleton
 		return asset as T;
 	}
 
-	// Token: 0x06000647 RID: 1607 RVA: 0x000217C4 File Offset: 0x0001F9C4
+	// Token: 0x06000688 RID: 1672 RVA: 0x00021C9C File Offset: 0x0001FE9C
 	private unsafe bool CheckAsset<[Nullable(0)] T>([Nullable(2)] UObject asset, string path) where T : UObject, IUnrealUObject
 	{
 		if (asset == null || !asset.IsValid())
@@ -455,7 +455,7 @@ public class ResourceSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000648 RID: 1608 RVA: 0x000218C8 File Offset: 0x0001FAC8
+	// Token: 0x06000689 RID: 1673 RVA: 0x00021DA0 File Offset: 0x0001FFA0
 	[return: Nullable(2)]
 	public T Load<[Nullable(0)] T>(string path, string memoryTag = "js_undefined") where T : UObject
 	{
@@ -493,7 +493,7 @@ public class ResourceSystem : Singleton
 		return this.GetAsset<T>(path, num2);
 	}
 
-	// Token: 0x06000649 RID: 1609 RVA: 0x00021984 File Offset: 0x0001FB84
+	// Token: 0x0600068A RID: 1674 RVA: 0x00021E5C File Offset: 0x0002005C
 	[return: Nullable(2)]
 	public T GetLoadedAsset<[Nullable(0)] T>(string path) where T : UObject
 	{
@@ -515,7 +515,7 @@ public class ResourceSystem : Singleton
 		return loadedAsset as T;
 	}
 
-	// Token: 0x0600064A RID: 1610 RVA: 0x00021A04 File Offset: 0x0001FC04
+	// Token: 0x0600068B RID: 1675 RVA: 0x00021EDC File Offset: 0x000200DC
 	public bool CheckAssetLoaded<[Nullable(0)] T>(string path) where T : UObject
 	{
 		TWeakObjectPtr<UClass>? @class = this.GetClass<T>(path);
@@ -531,7 +531,7 @@ public class ResourceSystem : Singleton
 		return loadedAsset != null && loadedAsset.IsValid() && loadedAsset.IsA(@class.Value.GetClass<UClass>());
 	}
 
-	// Token: 0x0600064B RID: 1611 RVA: 0x00021A6E File Offset: 0x0001FC6E
+	// Token: 0x0600068C RID: 1676 RVA: 0x00021F46 File Offset: 0x00020146
 	public int LoadAsync<[Nullable(0)] T>(string path, [Nullable(new byte[]
 	{
 		2,
@@ -542,7 +542,7 @@ public class ResourceSystem : Singleton
 		return this.LoadAsync<T>(path, callback, (int)priority, memoryTag);
 	}
 
-	// Token: 0x0600064C RID: 1612 RVA: 0x00021A7C File Offset: 0x0001FC7C
+	// Token: 0x0600068D RID: 1677 RVA: 0x00021F54 File Offset: 0x00020154
 	public unsafe int LoadAsync<[Nullable(0)] T>(string path, [Nullable(new byte[]
 	{
 		2,
@@ -648,7 +648,7 @@ public class ResourceSystem : Singleton
 		return CS$<>8__locals1.id;
 	}
 
-	// Token: 0x0600064D RID: 1613 RVA: 0x00021D3C File Offset: 0x0001FF3C
+	// Token: 0x0600068E RID: 1678 RVA: 0x00022214 File Offset: 0x00020414
 	[NullableContext(2)]
 	private unsafe void TryCallback<T>([Nullable(new byte[]
 	{
@@ -678,7 +678,7 @@ public class ResourceSystem : Singleton
 		this.TaskTimeLimit.AddCost(microseconds2 - microseconds);
 	}
 
-	// Token: 0x0600064E RID: 1614 RVA: 0x00021DEC File Offset: 0x0001FFEC
+	// Token: 0x0600068F RID: 1679 RVA: 0x000222C4 File Offset: 0x000204C4
 	public void CancelAsyncLoad(int id)
 	{
 		this.KuroResourceManager.Release(id);
@@ -695,20 +695,20 @@ public class ResourceSystem : Singleton
 		this.CancelIdSet.Add(id);
 	}
 
-	// Token: 0x0600064F RID: 1615 RVA: 0x00021E56 File Offset: 0x00020056
+	// Token: 0x06000690 RID: 1680 RVA: 0x0002232E File Offset: 0x0002052E
 	public bool IsAsyncLoadingThreadEnabled()
 	{
 		return this.InternalIsAsyncLoadingThreadEnabled;
 	}
 
-	// Token: 0x06000650 RID: 1616 RVA: 0x00021E5E File Offset: 0x0002005E
+	// Token: 0x06000691 RID: 1681 RVA: 0x00022336 File Offset: 0x00020536
 	public void DebugDumpLoadingAssets()
 	{
 		this.KuroResourceManager.DebugDumpLoadingAssets();
 	}
 
-	// Token: 0x170000D3 RID: 211
-	// (get) Token: 0x06000651 RID: 1617 RVA: 0x00021E6B File Offset: 0x0002006B
+	// Token: 0x170000E5 RID: 229
+	// (get) Token: 0x06000692 RID: 1682 RVA: 0x00022343 File Offset: 0x00020543
 	public static ResourceSystem Instance
 	{
 		get
@@ -722,12 +722,12 @@ public class ResourceSystem : Singleton
 		}
 	}
 
-	// Token: 0x06000652 RID: 1618 RVA: 0x00021E8E File Offset: 0x0002008E
+	// Token: 0x06000693 RID: 1683 RVA: 0x00022366 File Offset: 0x00020566
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000653 RID: 1619 RVA: 0x00021E90 File Offset: 0x00020090
+	// Token: 0x06000694 RID: 1684 RVA: 0x00022368 File Offset: 0x00020568
 	public static void ResetStaticDefaultValue()
 	{
 		ResourceSystem instance = ResourceSystem._instance;
@@ -738,43 +738,43 @@ public class ResourceSystem : Singleton
 		ResourceSystem._instance = null;
 	}
 
-	// Token: 0x06000654 RID: 1620 RVA: 0x00021EA9 File Offset: 0x000200A9
+	// Token: 0x06000695 RID: 1685 RVA: 0x00022381 File Offset: 0x00020581
 	static ResourceSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ResourceSystem.CreateStaticDefaultValue), new Action(ResourceSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000504 RID: 1284
+	// Token: 0x04000512 RID: 1298
 	public const int CHECK_STREAMING_INTERVAL = 100;
 
-	// Token: 0x04000505 RID: 1285
+	// Token: 0x04000513 RID: 1299
 	public const int CHECK_RENDERASSETS_INTERVAL = 100;
 
-	// Token: 0x04000506 RID: 1286
+	// Token: 0x04000514 RID: 1300
 	public const float STREAMING_SOURCE_RADIUS = 7000f;
 
-	// Token: 0x04000507 RID: 1287
+	// Token: 0x04000515 RID: 1301
 	public const float RENDER_ASSETS_RADIUS = 7000f;
 
-	// Token: 0x04000508 RID: 1288
+	// Token: 0x04000516 RID: 1302
 	public const int RENDER_ASSETS_TIMEOUT = 40000;
 
-	// Token: 0x04000509 RID: 1289
+	// Token: 0x04000517 RID: 1303
 	public const int WAIT_RENDER_ASSET_DURATION = 42;
 
-	// Token: 0x0400050A RID: 1290
+	// Token: 0x04000518 RID: 1304
 	public const int SYNC_LOAD_PRIORITY = 1073741823;
 
-	// Token: 0x0400050B RID: 1291
+	// Token: 0x04000519 RID: 1305
 	public const int ASYNC_LOAD_TIMEOUT_MS = 60000;
 
-	// Token: 0x0400050C RID: 1292
+	// Token: 0x0400051A RID: 1306
 	private UKuroResourceManager KuroResourceManager;
 
-	// Token: 0x0400050D RID: 1293
+	// Token: 0x0400051B RID: 1307
 	private readonly Dictionary<int, ResourceSystem.LoadCallbackTask> LoadingTaskMap = new Dictionary<int, ResourceSystem.LoadCallbackTask>();
 
-	// Token: 0x0400050E RID: 1294
+	// Token: 0x0400051C RID: 1308
 	private readonly PriorityQueue<ResourceSystem.LoadCallbackTask> DelayTaskQueue = new PriorityQueue<ResourceSystem.LoadCallbackTask>(delegate(ResourceSystem.LoadCallbackTask a, ResourceSystem.LoadCallbackTask b)
 	{
 		if (a.Priority != b.Priority)
@@ -784,104 +784,104 @@ public class ResourceSystem : Singleton
 		return a.Id - b.Id;
 	});
 
-	// Token: 0x0400050F RID: 1295
+	// Token: 0x0400051D RID: 1309
 	private readonly HashSet<int> CancelIdSet = new HashSet<int>();
 
-	// Token: 0x04000510 RID: 1296
+	// Token: 0x0400051E RID: 1310
 	private readonly TimeLimit TaskTimeLimit = new TimeLimit(null);
 
-	// Token: 0x04000511 RID: 1297
+	// Token: 0x0400051F RID: 1311
 	private bool Updating;
 
-	// Token: 0x04000512 RID: 1298
+	// Token: 0x04000520 RID: 1312
 	private readonly Dictionary<string, UObject> TypeCache = new Dictionary<string, UObject>();
 
-	// Token: 0x04000513 RID: 1299
+	// Token: 0x04000521 RID: 1313
 	private readonly Stat StatLoad = Stat.Create("RS.Load", "", "");
 
-	// Token: 0x04000514 RID: 1300
+	// Token: 0x04000522 RID: 1314
 	private readonly Stat StatLoadAsync = Stat.Create("RS.LoadASync", "", "");
 
-	// Token: 0x04000515 RID: 1301
+	// Token: 0x04000523 RID: 1315
 	private readonly Stat StatLoadAsyncCallback = Stat.Create("RS.LoadAsyncCallback", "", "");
 
-	// Token: 0x04000516 RID: 1302
+	// Token: 0x04000524 RID: 1316
 	private readonly Stat StatUpdateDelayCallback = Stat.Create("RS.UpdateDelayCallback", "", "");
 
-	// Token: 0x04000517 RID: 1303
+	// Token: 0x04000525 RID: 1317
 	private int HandleId;
 
-	// Token: 0x04000518 RID: 1304
+	// Token: 0x04000526 RID: 1318
 	private bool InternalIsAsyncLoadingThreadEnabled;
 
-	// Token: 0x04000519 RID: 1305
+	// Token: 0x04000527 RID: 1319
 	public const int InvalidId = -1;
 
-	// Token: 0x0400051A RID: 1306
+	// Token: 0x04000528 RID: 1320
 	private bool IsOpenMemoryTag = true;
 
-	// Token: 0x0400051B RID: 1307
+	// Token: 0x04000529 RID: 1321
 	[Nullable(2)]
 	private static ResourceSystem _instance;
 
-	// Token: 0x020001C5 RID: 453
+	// Token: 0x020001CA RID: 458
 	[NullableContext(0)]
 	public enum EResourceLoadPriority
 	{
-		// Token: 0x04000859 RID: 2137
+		// Token: 0x0400087B RID: 2171
 		Default = 100,
-		// Token: 0x0400085A RID: 2138
+		// Token: 0x0400087C RID: 2172
 		Preload,
-		// Token: 0x0400085B RID: 2139
+		// Token: 0x0400087D RID: 2173
 		Ui,
-		// Token: 0x0400085C RID: 2140
+		// Token: 0x0400087E RID: 2174
 		BattleUi,
-		// Token: 0x0400085D RID: 2141
+		// Token: 0x0400087F RID: 2175
 		Catapult,
-		// Token: 0x0400085E RID: 2142
+		// Token: 0x04000880 RID: 2176
 		BeginSkill,
-		// Token: 0x0400085F RID: 2143
+		// Token: 0x04000881 RID: 2177
 		Max
 	}
 
-	// Token: 0x020001C6 RID: 454
+	// Token: 0x020001CB RID: 459
 	[NullableContext(0)]
 	public enum EAsyncLoadResult
 	{
-		// Token: 0x04000861 RID: 2145
+		// Token: 0x04000883 RID: 2179
 		Error = -1,
-		// Token: 0x04000862 RID: 2146
+		// Token: 0x04000884 RID: 2180
 		Loading,
-		// Token: 0x04000863 RID: 2147
+		// Token: 0x04000885 RID: 2181
 		Completed
 	}
 
-	// Token: 0x020001C7 RID: 455
+	// Token: 0x020001CC RID: 460
 	[Nullable(0)]
 	public class LoadCallbackTask
 	{
-		// Token: 0x1700014E RID: 334
-		// (get) Token: 0x06000D4C RID: 3404 RVA: 0x0003E52A File Offset: 0x0003C72A
-		// (set) Token: 0x06000D4D RID: 3405 RVA: 0x0003E532 File Offset: 0x0003C732
+		// Token: 0x17000163 RID: 355
+		// (get) Token: 0x06000DB5 RID: 3509 RVA: 0x0003F3C1 File Offset: 0x0003D5C1
+		// (set) Token: 0x06000DB6 RID: 3510 RVA: 0x0003F3C9 File Offset: 0x0003D5C9
 		public int Id { get; private set; }
 
-		// Token: 0x1700014F RID: 335
-		// (get) Token: 0x06000D4E RID: 3406 RVA: 0x0003E53B File Offset: 0x0003C73B
-		// (set) Token: 0x06000D4F RID: 3407 RVA: 0x0003E543 File Offset: 0x0003C743
+		// Token: 0x17000164 RID: 356
+		// (get) Token: 0x06000DB7 RID: 3511 RVA: 0x0003F3D2 File Offset: 0x0003D5D2
+		// (set) Token: 0x06000DB8 RID: 3512 RVA: 0x0003F3DA File Offset: 0x0003D5DA
 		public int Priority { get; private set; }
 
-		// Token: 0x17000150 RID: 336
-		// (get) Token: 0x06000D50 RID: 3408 RVA: 0x0003E54C File Offset: 0x0003C74C
-		// (set) Token: 0x06000D51 RID: 3409 RVA: 0x0003E554 File Offset: 0x0003C754
+		// Token: 0x17000165 RID: 357
+		// (get) Token: 0x06000DB9 RID: 3513 RVA: 0x0003F3E3 File Offset: 0x0003D5E3
+		// (set) Token: 0x06000DBA RID: 3514 RVA: 0x0003F3EB File Offset: 0x0003D5EB
 		[Nullable(2)]
 		public TimerHandle TimeoutTimer { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-		// Token: 0x17000151 RID: 337
-		// (get) Token: 0x06000D52 RID: 3410 RVA: 0x0003E55D File Offset: 0x0003C75D
-		// (set) Token: 0x06000D53 RID: 3411 RVA: 0x0003E565 File Offset: 0x0003C765
+		// Token: 0x17000166 RID: 358
+		// (get) Token: 0x06000DBB RID: 3515 RVA: 0x0003F3F4 File Offset: 0x0003D5F4
+		// (set) Token: 0x06000DBC RID: 3516 RVA: 0x0003F3FC File Offset: 0x0003D5FC
 		public Action Callback { get; private set; }
 
-		// Token: 0x06000D54 RID: 3412 RVA: 0x0003E56E File Offset: 0x0003C76E
+		// Token: 0x06000DBD RID: 3517 RVA: 0x0003F405 File Offset: 0x0003D605
 		public LoadCallbackTask(int id, int priority, [Nullable(2)] TimerHandle timeoutTimer, Action callback)
 		{
 			this.Id = id;

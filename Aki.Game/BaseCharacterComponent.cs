@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Aki.Protocol;
+using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
@@ -10,13 +11,13 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02003026 RID: 12326
+// Token: 0x0200257C RID: 9596
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseCharacterComponent : BaseActorComponent
 {
-	// Token: 0x170023F4 RID: 9204
-	// (get) Token: 0x0601A1D5 RID: 106965 RVA: 0x006D9ECE File Offset: 0x006D80CE
+	// Token: 0x170024CB RID: 9419
+	// (get) Token: 0x06017B26 RID: 97062 RVA: 0x00701CBC File Offset: 0x006FFEBC
 	public TsBaseCharacter Actor
 	{
 		get
@@ -25,8 +26,8 @@ public class BaseCharacterComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x170023F5 RID: 9205
-	// (get) Token: 0x0601A1D6 RID: 106966 RVA: 0x006D9EDB File Offset: 0x006D80DB
+	// Token: 0x170024CC RID: 9420
+	// (get) Token: 0x06017B27 RID: 97063 RVA: 0x00701CC9 File Offset: 0x006FFEC9
 	[Nullable(2)]
 	public override USkeletalMeshComponent SkeletalMesh
 	{
@@ -37,7 +38,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601A1D7 RID: 106967 RVA: 0x006D9EE8 File Offset: 0x006D80E8
+	// Token: 0x06017B28 RID: 97064 RVA: 0x00701CD8 File Offset: 0x006FFED8
 	protected void SetCamp(TsBaseCharacter actor)
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -61,7 +62,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601A1D8 RID: 106968 RVA: 0x006D9FA0 File Offset: 0x006D81A0
+	// Token: 0x06017B29 RID: 97065 RVA: 0x00701D90 File Offset: 0x006FFF90
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -108,7 +109,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		return valueTuple;
 	}
 
-	// Token: 0x0601A1D9 RID: 106969 RVA: 0x006DA14C File Offset: 0x006D834C
+	// Token: 0x06017B2A RID: 97066 RVA: 0x00701F3C File Offset: 0x0070013C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -270,7 +271,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		return new ValueTuple<bool, global::Vector>(true, commonHitLocation);
 	}
 
-	// Token: 0x0601A1DA RID: 106970 RVA: 0x006DA99C File Offset: 0x006D8B9C
+	// Token: 0x06017B2B RID: 97067 RVA: 0x0070278C File Offset: 0x0070098C
 	[NullableContext(2)]
 	protected unsafe AActor InitActorNew(int modelId)
 	{
@@ -312,6 +313,7 @@ public class BaseCharacterComponent : BaseActorComponent
 					{
 						FTransform relativeTransform = tsBaseCharacter.Mesh.GetRelativeTransform();
 						CombineMeshTool.LoadDaConfig(aactor, relativeTransform, tsBaseCharacter.Mesh, loadedAsset2);
+						this.ApplyDefaultPerformanceFace(tsBaseCharacter);
 						if (tsBaseCharacter.RenderType == ECharacterRenderingType.Npc)
 						{
 							tsBaseCharacter.CharRenderingComponent.UpdateNpcDitherComponent();
@@ -350,7 +352,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		return aactor;
 	}
 
-	// Token: 0x0601A1DB RID: 106971 RVA: 0x006DAC08 File Offset: 0x006D8E08
+	// Token: 0x06017B2C RID: 97068 RVA: 0x00702A00 File Offset: 0x00700C00
 	protected override void InitSizeInternal()
 	{
 		this.RadiusInternal = this.Actor.CapsuleComponent.CapsuleRadius;
@@ -359,7 +361,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		this.DefaultHalfHeightInternal = this.HalfHeightInternal;
 	}
 
-	// Token: 0x0601A1DC RID: 106972 RVA: 0x006DAC5C File Offset: 0x006D8E5C
+	// Token: 0x06017B2D RID: 97069 RVA: 0x00702A54 File Offset: 0x00700C54
 	public void UpdateModelResPath()
 	{
 		if (this.CreatureDataInternal.GetEntityType() != EEntityType.Npc)
@@ -385,7 +387,7 @@ public class BaseCharacterComponent : BaseActorComponent
 		});
 	}
 
-	// Token: 0x0601A1DD RID: 106973 RVA: 0x006DAD0C File Offset: 0x006D8F0C
+	// Token: 0x06017B2E RID: 97070 RVA: 0x00702B04 File Offset: 0x00700D04
 	[NullableContext(2)]
 	public void SwitchFace(bool isSeqFace, USkeletalMesh seqFace = null)
 	{
@@ -432,7 +434,37 @@ public class BaseCharacterComponent : BaseActorComponent
 		}
 	}
 
-	// Token: 0x0601A1DE RID: 106974 RVA: 0x006DAE0C File Offset: 0x006D900C
+	// Token: 0x06017B2F RID: 97071 RVA: 0x00702C04 File Offset: 0x00700E04
+	private unsafe void ApplyDefaultPerformanceFace(TsBaseCharacter baseCharacter)
+	{
+		this.IsDefaultPerformanceFaceActive = false;
+		CreatureDataComponent creatureDataInternal = this.CreatureDataInternal;
+		ModelComponent modelComponent = (creatureDataInternal != null) ? creatureDataInternal.GetModelComponent() : null;
+		if (modelComponent == null || !modelComponent.IsUseSeqFace.GetValueOrDefault() || string.IsNullOrEmpty(modelComponent.PerformanceFaceSkeletalMeshPath))
+		{
+			return;
+		}
+		USkeletalMesh loadedAsset = ResourceSystem.Instance.GetLoadedAsset<USkeletalMesh>(modelComponent.PerformanceFaceSkeletalMeshPath);
+		if (loadedAsset == null || !loadedAsset.IsValid())
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Character;
+			ELogAuthor author = ELogAuthor.FZX;
+			string message = "无法获取实体默认演出脸资源";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0);
+			string item = "PbDataId";
+			CreatureDataComponent creatureDataInternal2 = this.CreatureDataInternal;
+			ptr = new ValueTuple<string, object>(item, (creatureDataInternal2 != null) ? new int?(creatureDataInternal2.GetPbDataId()) : null);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Path", modelComponent.PerformanceFaceSkeletalMeshPath);
+			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+			return;
+		}
+		CombineMeshTool.SetFace(baseCharacter, loadedAsset);
+		this.IsDefaultPerformanceFaceActive = true;
+	}
+
+	// Token: 0x06017B30 RID: 97072 RVA: 0x00702D00 File Offset: 0x00700F00
 	public override global::Vector GetWatchedPoint()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -445,13 +477,14 @@ public class BaseCharacterComponent : BaseActorComponent
 		return this.TopLocation;
 	}
 
-	// Token: 0x0601A1DF RID: 106975 RVA: 0x006DAE6A File Offset: 0x006D906A
+	// Token: 0x06017B31 RID: 97073 RVA: 0x00702D5E File Offset: 0x00700F5E
 	protected override bool OnClear()
 	{
+		this.IsDefaultPerformanceFaceActive = false;
 		return base.OnClear();
 	}
 
-	// Token: 0x0601A1E0 RID: 106976 RVA: 0x006DAE74 File Offset: 0x006D9074
+	// Token: 0x06017B32 RID: 97074 RVA: 0x00702D70 File Offset: 0x00700F70
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -459,58 +492,101 @@ public class BaseCharacterComponent : BaseActorComponent
 			return false;
 		}
 		BaseCharacterComponent baseCharacterComponent = (BaseCharacterComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SubEntityType"))
+		this.SubEntityType = baseCharacterComponent.SubEntityType;
+		this.EntityType = baseCharacterComponent.EntityType;
+		this.ModelResPath = baseCharacterComponent.ModelResPath;
+		if (baseCharacterComponent.ClassDefaultObject == null)
 		{
-			this.SubEntityType = baseCharacterComponent.SubEntityType;
+			this.ClassDefaultObject = null;
 		}
-		if (base.CanResetComponentProperty("EntityType"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClassDefaultObject), "ClassDefaultObject"))
 		{
-			this.EntityType = baseCharacterComponent.EntityType;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ModelResPath"))
+		this.WasFixBornMeshLocation = baseCharacterComponent.WasFixBornMeshLocation;
+		if (baseCharacterComponent.TopLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TopLocation), "TopLocation"))
 		{
-			this.ModelResPath = baseCharacterComponent.ModelResPath;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ClassDefaultObject"))
-		{
-			if (baseCharacterComponent.ClassDefaultObject == null)
-			{
-				this.ClassDefaultObject = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ABaseCharacter>(this.ClassDefaultObject), "ClassDefaultObject"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WasFixBornMeshLocation"))
-		{
-			this.WasFixBornMeshLocation = baseCharacterComponent.WasFixBornMeshLocation;
-		}
-		return !base.CanResetComponentProperty("TopLocation") || baseCharacterComponent.TopLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TopLocation), "TopLocation");
+		this.IsDefaultPerformanceFaceActive = baseCharacterComponent.IsDefaultPerformanceFaceActive;
+		return true;
 	}
 
-	// Token: 0x0400C61E RID: 50718
+	// Token: 0x170024CD RID: 9421
+	// (get) Token: 0x06017B33 RID: 97075 RVA: 0x00702E19 File Offset: 0x00701019
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024CE RID: 9422
+	// (get) Token: 0x06017B34 RID: 97076 RVA: 0x00702E1C File Offset: 0x0070101C
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024CF RID: 9423
+	// (get) Token: 0x06017B35 RID: 97077 RVA: 0x00702E1F File Offset: 0x0070101F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024D0 RID: 9424
+	// (get) Token: 0x06017B36 RID: 97078 RVA: 0x00702E22 File Offset: 0x00701022
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170024D1 RID: 9425
+	// (get) Token: 0x06017B37 RID: 97079 RVA: 0x00702E25 File Offset: 0x00701025
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C9EC RID: 51692
 	private const string PROFILE_KEY = "CharacterActorComponent_FixBornLocation";
 
-	// Token: 0x0400C61F RID: 50719
+	// Token: 0x0400C9ED RID: 51693
 	private const int FIX_LOCATION_TOLERANCE = 2;
 
-	// Token: 0x0400C620 RID: 50720
+	// Token: 0x0400C9EE RID: 51694
 	protected int SubEntityType;
 
-	// Token: 0x0400C621 RID: 50721
+	// Token: 0x0400C9EF RID: 51695
 	protected EEntityType EntityType = EEntityType.Npc;
 
-	// Token: 0x0400C622 RID: 50722
+	// Token: 0x0400C9F0 RID: 51696
 	public string ModelResPath = "";
 
-	// Token: 0x0400C623 RID: 50723
+	// Token: 0x0400C9F1 RID: 51697
 	[Nullable(2)]
 	protected ABaseCharacter ClassDefaultObject;
 
-	// Token: 0x0400C624 RID: 50724
+	// Token: 0x0400C9F2 RID: 51698
 	private bool WasFixBornMeshLocation;
 
-	// Token: 0x0400C625 RID: 50725
+	// Token: 0x0400C9F3 RID: 51699
 	private readonly global::Vector TopLocation = global::Vector.Create();
+
+	// Token: 0x0400C9F4 RID: 51700
+	public bool IsDefaultPerformanceFaceActive;
 }

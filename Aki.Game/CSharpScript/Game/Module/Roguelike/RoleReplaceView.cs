@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E3C RID: 20028
+	// Token: 0x02003E05 RID: 15877
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleReplaceView : RogueSelectBaseView
 	{
-		// Token: 0x06033A1E RID: 211486 RVA: 0x00C1594B File Offset: 0x00C13B4B
+		// Token: 0x06028889 RID: 166025 RVA: 0x00B5EE73 File Offset: 0x00B5D073
 		public RoleReplaceView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033A1F RID: 211487 RVA: 0x00C1597C File Offset: 0x00C13B7C
+		// Token: 0x0602888A RID: 166026 RVA: 0x00B5EEA4 File Offset: 0x00B5D0A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033A20 RID: 211488 RVA: 0x00C15A6C File Offset: 0x00C13C6C
+		// Token: 0x0602888B RID: 166027 RVA: 0x00B5EF94 File Offset: 0x00B5D194
 		private void ConfirmBtn(int _)
 		{
 			if (this.RoguelikeChooseData.RogueGainEntryList.Count <= 0)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.RogueChooseDataResultRequest(EPerkType.Role);
 		}
 
-		// Token: 0x06033A21 RID: 211489 RVA: 0x00C15AD4 File Offset: 0x00C13CD4
+		// Token: 0x0602888C RID: 166028 RVA: 0x00B5EFFC File Offset: 0x00B5D1FC
 		protected override UniTask OnCreateAsync()
 		{
 			RoleReplaceView.<OnCreateAsync>d__9 <OnCreateAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033A22 RID: 211490 RVA: 0x00C15B18 File Offset: 0x00C13D18
+		// Token: 0x0602888D RID: 166029 RVA: 0x00B5F040 File Offset: 0x00B5D240
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleReplaceView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033A23 RID: 211491 RVA: 0x00C15B5C File Offset: 0x00C13D5C
+		// Token: 0x0602888E RID: 166030 RVA: 0x00B5F084 File Offset: 0x00B5D284
 		protected override void OnStart()
 		{
 			this.UiPoolActorPrivate.UiItem.SetUIParent(base.GetHorizontalLayout(1).GetRootComponent(), false);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RoleSelectItemLayout = new GenericLayout<RoleSelectItem, RogueGainEntry>(base.GetHorizontalLayout(1), this.CreateRoleSelectItem, null, false, true);
 		}
 
-		// Token: 0x06033A24 RID: 211492 RVA: 0x00C15C0E File Offset: 0x00C13E0E
+		// Token: 0x0602888F RID: 166031 RVA: 0x00B5F136 File Offset: 0x00B5D336
 		protected override void OnBeforeDestroy()
 		{
 			this.TopPanel.Destroy(null);
@@ -99,19 +99,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.RecycleUiPoolActor();
 		}
 
-		// Token: 0x06033A25 RID: 211493 RVA: 0x00C15C2E File Offset: 0x00C13E2E
+		// Token: 0x06028890 RID: 166032 RVA: 0x00B5F156 File Offset: 0x00B5D356
 		protected override void OnDescModelChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06033A26 RID: 211494 RVA: 0x00C15C36 File Offset: 0x00C13E36
+		// Token: 0x06028891 RID: 166033 RVA: 0x00B5F15E File Offset: 0x00B5D35E
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06033A27 RID: 211495 RVA: 0x00C15C40 File Offset: 0x00C13E40
+		// Token: 0x06028892 RID: 166034 RVA: 0x00B5F168 File Offset: 0x00B5D368
 		protected override void RoguelikeChooseDataResult(RogueGainEntry newRogueGainEntry, RogueGainEntry oldRogueGainEntry, bool isSuccess, int bindId, RoguelikeChooseDataResultResponse response)
 		{
 			if (isSuccess)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A28 RID: 211496 RVA: 0x00C15CAB File Offset: 0x00C13EAB
+		// Token: 0x06028893 RID: 166035 RVA: 0x00B5F1D3 File Offset: 0x00B5D3D3
 		private void Refresh()
 		{
 			this.RefreshPhantomSelectItemList();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshOldNewText();
 		}
 
-		// Token: 0x06033A29 RID: 211497 RVA: 0x00C15CCC File Offset: 0x00C13ECC
+		// Token: 0x06028894 RID: 166036 RVA: 0x00B5F1F4 File Offset: 0x00B5D3F4
 		protected void RefreshTopPanel()
 		{
 			this.TopPanel.RefreshTitle("RoguelikeView_3_Text");
@@ -150,26 +150,26 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x06033A2A RID: 211498 RVA: 0x00C15D85 File Offset: 0x00C13F85
+		// Token: 0x06028895 RID: 166037 RVA: 0x00B5F2AD File Offset: 0x00B5D4AD
 		protected void RefreshElementPanel()
 		{
 			this.ElementPanel.Refresh(null);
 		}
 
-		// Token: 0x06033A2B RID: 211499 RVA: 0x00C15D94 File Offset: 0x00C13F94
+		// Token: 0x06028896 RID: 166038 RVA: 0x00B5F2BC File Offset: 0x00B5D4BC
 		protected void RefreshPhantomSelectItemList()
 		{
 			List<RogueGainEntry> rogueGainEntryList = this.GetRogueGainEntryList();
 			this.RoleSelectItemLayout.RefreshByData(rogueGainEntryList, null, false);
 		}
 
-		// Token: 0x06033A2C RID: 211500 RVA: 0x00C15DB6 File Offset: 0x00C13FB6
+		// Token: 0x06028897 RID: 166039 RVA: 0x00B5F2DE File Offset: 0x00B5D4DE
 		protected void RefreshBtnText()
 		{
 			this.ButtonItem.SetShowText("RoguelikeView_14_Text");
 		}
 
-		// Token: 0x06033A2D RID: 211501 RVA: 0x00C15DC8 File Offset: 0x00C13FC8
+		// Token: 0x06028898 RID: 166040 RVA: 0x00B5F2F0 File Offset: 0x00B5D4F0
 		private List<RogueGainEntry> GetRogueGainEntryList()
 		{
 			List<RogueGainEntry> list = new List<RogueGainEntry>();
@@ -185,30 +185,30 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033A2E RID: 211502 RVA: 0x00C15E20 File Offset: 0x00C14020
+		// Token: 0x06028899 RID: 166041 RVA: 0x00B5F348 File Offset: 0x00B5D548
 		private void RefreshOldNewText()
 		{
 			base.GetText(4).ShowTextNew("RoguelikeView_23_Text");
 			base.GetText(5).ShowTextNew("RoguelikeView_24_Text");
 		}
 
-		// Token: 0x0401B61D RID: 112157
+		// Token: 0x04015FF0 RID: 90096
 		[Nullable(2)]
 		protected RoguelikeChooseData RoguelikeChooseData;
 
-		// Token: 0x0401B61E RID: 112158
+		// Token: 0x04015FF1 RID: 90097
 		[Nullable(2)]
 		protected TopPanel TopPanel;
 
-		// Token: 0x0401B61F RID: 112159
+		// Token: 0x04015FF2 RID: 90098
 		[Nullable(2)]
 		protected ElementPanel ElementPanel;
 
-		// Token: 0x0401B620 RID: 112160
+		// Token: 0x04015FF3 RID: 90099
 		[Nullable(2)]
 		protected ButtonItem ButtonItem;
 
-		// Token: 0x0401B621 RID: 112161
+		// Token: 0x04015FF4 RID: 90100
 		[Nullable(new byte[]
 		{
 			2,
@@ -217,29 +217,29 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		protected GenericLayout<RoleSelectItem, RogueGainEntry> RoleSelectItemLayout;
 
-		// Token: 0x0401B622 RID: 112162
+		// Token: 0x04015FF5 RID: 90101
 		protected readonly Func<RoleSelectItem> CreateRoleSelectItem = () => new RoleSelectItem();
 
-		// Token: 0x0200AFF2 RID: 45042
+		// Token: 0x02009A24 RID: 39460
 		[NullableContext(0)]
 		private static class ERoleReplaceViewCom
 		{
-			// Token: 0x040356AD RID: 218797
+			// Token: 0x040300DD RID: 196829
 			public const int TopPanelItem = 0;
 
-			// Token: 0x040356AE RID: 218798
+			// Token: 0x040300DE RID: 196830
 			public const int ItemListLayout = 1;
 
-			// Token: 0x040356AF RID: 218799
+			// Token: 0x040300DF RID: 196831
 			public const int ConfirmBtn = 2;
 
-			// Token: 0x040356B0 RID: 218800
+			// Token: 0x040300E0 RID: 196832
 			public const int ElementPanelItem = 3;
 
-			// Token: 0x040356B1 RID: 218801
+			// Token: 0x040300E1 RID: 196833
 			public const int OldText = 4;
 
-			// Token: 0x040356B2 RID: 218802
+			// Token: 0x040300E2 RID: 196834
 			public const int NewText = 5;
 		}
 	}

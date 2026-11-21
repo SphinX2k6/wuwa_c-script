@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010A4 RID: 4260
+	// Token: 0x0200119F RID: 4511
 	public struct SheriffQuestionCsv : IFlatbufferObject
 	{
-		// Token: 0x17003598 RID: 13720
-		// (get) Token: 0x0600D153 RID: 53587 RVA: 0x0030DD10 File Offset: 0x0030BF10
+		// Token: 0x170036A6 RID: 13990
+		// (get) Token: 0x0600D929 RID: 55593 RVA: 0x0032D258 File Offset: 0x0032B458
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D154 RID: 53588 RVA: 0x0030DD1D File Offset: 0x0030BF1D
+		// Token: 0x0600D92A RID: 55594 RVA: 0x0032D265 File Offset: 0x0032B465
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D155 RID: 53589 RVA: 0x0030DD24 File Offset: 0x0030BF24
+		// Token: 0x0600D92B RID: 55595 RVA: 0x0032D26C File Offset: 0x0032B46C
 		public static SheriffQuestionCsv GetRootAsSheriffQuestionCsv(ByteBuffer _bb)
 		{
 			return SheriffQuestionCsv.GetRootAsSheriffQuestionCsv(_bb, default(SheriffQuestionCsv));
 		}
 
-		// Token: 0x0600D156 RID: 53590 RVA: 0x0030DD40 File Offset: 0x0030BF40
+		// Token: 0x0600D92C RID: 55596 RVA: 0x0032D288 File Offset: 0x0032B488
 		public static SheriffQuestionCsv GetRootAsSheriffQuestionCsv(ByteBuffer _bb, SheriffQuestionCsv obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D157 RID: 53591 RVA: 0x0030DD5D File Offset: 0x0030BF5D
+		// Token: 0x0600D92D RID: 55597 RVA: 0x0032D2A5 File Offset: 0x0032B4A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D158 RID: 53592 RVA: 0x0030DD6C File Offset: 0x0030BF6C
+		// Token: 0x0600D92E RID: 55598 RVA: 0x0032D2B4 File Offset: 0x0032B4B4
 		public SheriffQuestionCsv __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003599 RID: 13721
-		// (get) Token: 0x0600D159 RID: 53593 RVA: 0x0030DD7C File Offset: 0x0030BF7C
+		// Token: 0x170036A7 RID: 13991
+		// (get) Token: 0x0600D92F RID: 55599 RVA: 0x0032D2C4 File Offset: 0x0032B4C4
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700359A RID: 13722
-		// (get) Token: 0x0600D15A RID: 53594 RVA: 0x0030DDB8 File Offset: 0x0030BFB8
+		// Token: 0x170036A8 RID: 13992
+		// (get) Token: 0x0600D930 RID: 55600 RVA: 0x0032D300 File Offset: 0x0032B500
 		public string QuestionDesc
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D15B RID: 53595 RVA: 0x0030DDEF File Offset: 0x0030BFEF
+		// Token: 0x0600D931 RID: 55601 RVA: 0x0032D337 File Offset: 0x0032B537
 		public Span<byte> GetQuestionDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D15C RID: 53596 RVA: 0x0030DDFE File Offset: 0x0030BFFE
+		// Token: 0x0600D932 RID: 55602 RVA: 0x0032D346 File Offset: 0x0032B546
 		public byte[] GetQuestionDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D15D RID: 53597 RVA: 0x0030DE18 File Offset: 0x0030C018
+		// Token: 0x0600D933 RID: 55603 RVA: 0x0032D360 File Offset: 0x0032B560
 		public string EnterFlowStateId(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700359B RID: 13723
-		// (get) Token: 0x0600D15E RID: 53598 RVA: 0x0030DE54 File Offset: 0x0030C054
+		// Token: 0x170036A9 RID: 13993
+		// (get) Token: 0x0600D934 RID: 55604 RVA: 0x0032D39C File Offset: 0x0032B59C
 		public int EnterFlowStateIdLength
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700359C RID: 13724
-		// (get) Token: 0x0600D15F RID: 53599 RVA: 0x0030DE80 File Offset: 0x0030C080
+		// Token: 0x170036AA RID: 13994
+		// (get) Token: 0x0600D935 RID: 55605 RVA: 0x0032D3C8 File Offset: 0x0032B5C8
 		public int NeedClueCount
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D160 RID: 53600 RVA: 0x0030DEC0 File Offset: 0x0030C0C0
+		// Token: 0x0600D936 RID: 55606 RVA: 0x0032D408 File Offset: 0x0032B608
 		public string FailResultDesc(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -144,8 +144,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700359D RID: 13725
-		// (get) Token: 0x0600D161 RID: 53601 RVA: 0x0030DEFC File Offset: 0x0030C0FC
+		// Token: 0x170036AB RID: 13995
+		// (get) Token: 0x0600D937 RID: 55607 RVA: 0x0032D444 File Offset: 0x0032B644
 		public int FailResultDescLength
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700359E RID: 13726
-		// (get) Token: 0x0600D162 RID: 53602 RVA: 0x0030DF28 File Offset: 0x0030C128
+		// Token: 0x170036AC RID: 13996
+		// (get) Token: 0x0600D938 RID: 55608 RVA: 0x0032D470 File Offset: 0x0032B670
 		public int SoftPityCount
 		{
 			get
@@ -174,7 +174,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D163 RID: 53603 RVA: 0x0030DF68 File Offset: 0x0030C168
+		// Token: 0x0600D939 RID: 55609 RVA: 0x0032D4B0 File Offset: 0x0032B6B0
 		public int SoftPityClueIds(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -185,8 +185,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700359F RID: 13727
-		// (get) Token: 0x0600D164 RID: 53604 RVA: 0x0030DFA8 File Offset: 0x0030C1A8
+		// Token: 0x170036AD RID: 13997
+		// (get) Token: 0x0600D93A RID: 55610 RVA: 0x0032D4F0 File Offset: 0x0032B6F0
 		public int SoftPityClueIdsLength
 		{
 			get
@@ -200,71 +200,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D165 RID: 53605 RVA: 0x0030DFD4 File Offset: 0x0030C1D4
+		// Token: 0x0600D93B RID: 55611 RVA: 0x0032D51C File Offset: 0x0032B71C
 		public Span<int> GetSoftPityClueIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x0600D166 RID: 53606 RVA: 0x0030DFE4 File Offset: 0x0030C1E4
+		// Token: 0x0600D93C RID: 55612 RVA: 0x0032D52C File Offset: 0x0032B72C
 		public int[] GetSoftPityClueIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D167 RID: 53607 RVA: 0x0030DFFC File Offset: 0x0030C1FC
+		// Token: 0x0600D93D RID: 55613 RVA: 0x0032D544 File Offset: 0x0032B744
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EnterFlowStateIdIter()或GetEnterFlowStateIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] EnterFlowStateId()
+		public string[] EnterFlowStateId()
 		{
 			return this.EnterFlowStateIdIter().ToArray<string>();
 		}
 
-		// Token: 0x0600D168 RID: 53608 RVA: 0x0030E009 File Offset: 0x0030C209
+		// Token: 0x0600D93E RID: 55614 RVA: 0x0032D551 File Offset: 0x0032B751
 		[NullableContext(1)]
-		public readonly IEnumerable<string> EnterFlowStateIdIter()
+		public IEnumerable<string> EnterFlowStateIdIter()
 		{
 			SheriffQuestionCsv.<EnterFlowStateIdIter>d__30 <EnterFlowStateIdIter>d__ = new SheriffQuestionCsv.<EnterFlowStateIdIter>d__30(-2);
 			<EnterFlowStateIdIter>d__.<>3__<>4__this = this;
 			return <EnterFlowStateIdIter>d__;
 		}
 
-		// Token: 0x0600D169 RID: 53609 RVA: 0x0030E01E File Offset: 0x0030C21E
+		// Token: 0x0600D93F RID: 55615 RVA: 0x0032D566 File Offset: 0x0032B766
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FailResultDescIter()或GetFailResultDescBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] FailResultDesc()
+		public string[] FailResultDesc()
 		{
 			return this.FailResultDescIter().ToArray<string>();
 		}
 
-		// Token: 0x0600D16A RID: 53610 RVA: 0x0030E02B File Offset: 0x0030C22B
+		// Token: 0x0600D940 RID: 55616 RVA: 0x0032D573 File Offset: 0x0032B773
 		[NullableContext(1)]
-		public readonly IEnumerable<string> FailResultDescIter()
+		public IEnumerable<string> FailResultDescIter()
 		{
 			SheriffQuestionCsv.<FailResultDescIter>d__32 <FailResultDescIter>d__ = new SheriffQuestionCsv.<FailResultDescIter>d__32(-2);
 			<FailResultDescIter>d__.<>3__<>4__this = this;
 			return <FailResultDescIter>d__;
 		}
 
-		// Token: 0x0600D16B RID: 53611 RVA: 0x0030E040 File Offset: 0x0030C240
+		// Token: 0x0600D941 RID: 55617 RVA: 0x0032D588 File Offset: 0x0032B788
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SoftPityClueIdsIter()或GetSoftPityClueIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SoftPityClueIds()
+		public int[] SoftPityClueIds()
 		{
-			SheriffQuestionCsv sheriffQuestionCsv = this;
-			return sheriffQuestionCsv.GetSoftPityClueIdsArray() ?? Array.Empty<int>();
+			return this.GetSoftPityClueIdsArray();
 		}
 
-		// Token: 0x0600D16C RID: 53612 RVA: 0x0030E064 File Offset: 0x0030C264
+		// Token: 0x0600D942 RID: 55618 RVA: 0x0032D590 File Offset: 0x0032B790
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SoftPityClueIdsIter()
+		public IEnumerable<int> SoftPityClueIdsIter()
 		{
 			SheriffQuestionCsv.<SoftPityClueIdsIter>d__34 <SoftPityClueIdsIter>d__ = new SheriffQuestionCsv.<SoftPityClueIdsIter>d__34(-2);
 			<SoftPityClueIdsIter>d__.<>3__<>4__this = this;
 			return <SoftPityClueIdsIter>d__;
 		}
 
-		// Token: 0x040051B3 RID: 20915
+		// Token: 0x040057B2 RID: 22450
 		private Table __p;
 	}
 }

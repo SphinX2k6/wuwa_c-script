@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200258D RID: 9613
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200283B RID: 10299
 	public class IVisualNovelPerformanceRoleIntroduction : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D7B7 RID: 55223 RVA: 0x00201E62 File Offset: 0x00200062
+		// Token: 0x0600E531 RID: 58673 RVA: 0x0021DB96 File Offset: 0x0021BD96
 		public static IVisualNovelPerformanceRoleIntroduction Create(IVisualNovelPerformanceRoleIntroduction? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E5F RID: 15967
-		// (get) Token: 0x0600D7B8 RID: 55224 RVA: 0x00201E81 File Offset: 0x00200081
+		// Token: 0x17004169 RID: 16745
+		// (get) Token: 0x0600E532 RID: 58674 RVA: 0x0021DBB5 File Offset: 0x0021BDB5
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E60 RID: 15968
-		// (get) Token: 0x0600D7B9 RID: 55225 RVA: 0x00201E90 File Offset: 0x00200090
+		// Token: 0x1700416A RID: 16746
+		// (get) Token: 0x0600E533 RID: 58675 RVA: 0x0021DBC4 File Offset: 0x0021BDC4
 		public override float? StartTime
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E61 RID: 15969
-		// (get) Token: 0x0600D7BA RID: 55226 RVA: 0x00201EC6 File Offset: 0x002000C6
+		// Token: 0x1700416B RID: 16747
+		// (get) Token: 0x0600E534 RID: 58676 RVA: 0x0021DBFA File Offset: 0x0021BDFA
 		public virtual IVisualNovelRoleIntroductionSolarSchool RoleIntroductionConfig
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007759 RID: 30553
+		// Token: 0x04007DBF RID: 32191
 		private IVisualNovelPerformanceRoleIntroduction Instance;
 
-		// Token: 0x0400775A RID: 30554
+		// Token: 0x04007DC0 RID: 32192
 		[Nullable(2)]
 		private IVisualNovelRoleIntroductionSolarSchool _RoleIntroductionConfigCache;
 
-		// Token: 0x0400775B RID: 30555
+		// Token: 0x04007DC1 RID: 32193
 		private bool _RoleIntroductionConfigInited;
 	}
 }

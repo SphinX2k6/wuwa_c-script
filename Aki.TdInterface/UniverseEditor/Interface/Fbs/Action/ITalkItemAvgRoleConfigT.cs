@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072D2 RID: 29394
+	// Token: 0x02007AA7 RID: 31399
 	public class ITalkItemAvgRoleConfigT
 	{
-		// Token: 0x1700DB8E RID: 56206
-		// (get) Token: 0x060347FD RID: 215037 RVA: 0x007153DC File Offset: 0x007135DC
-		// (set) Token: 0x060347FE RID: 215038 RVA: 0x007153E4 File Offset: 0x007135E4
+		// Token: 0x1700E787 RID: 59271
+		// (get) Token: 0x06037B01 RID: 228097 RVA: 0x00776778 File Offset: 0x00774978
+		// (set) Token: 0x06037B02 RID: 228098 RVA: 0x00776780 File Offset: 0x00774980
 		public EAvgVisualEffect VisualEffect { get; set; }
 
-		// Token: 0x1700DB8F RID: 56207
-		// (get) Token: 0x060347FF RID: 215039 RVA: 0x007153ED File Offset: 0x007135ED
-		// (set) Token: 0x06034800 RID: 215040 RVA: 0x007153F5 File Offset: 0x007135F5
+		// Token: 0x1700E788 RID: 59272
+		// (get) Token: 0x06037B03 RID: 228099 RVA: 0x00776789 File Offset: 0x00774989
+		// (set) Token: 0x06037B04 RID: 228100 RVA: 0x00776791 File Offset: 0x00774991
 		public EAvgRoleAnimationType AnimationType { get; set; }
 
-		// Token: 0x1700DB90 RID: 56208
-		// (get) Token: 0x06034801 RID: 215041 RVA: 0x007153FE File Offset: 0x007135FE
-		// (set) Token: 0x06034802 RID: 215042 RVA: 0x00715406 File Offset: 0x00713606
+		// Token: 0x1700E789 RID: 59273
+		// (get) Token: 0x06037B05 RID: 228101 RVA: 0x0077679A File Offset: 0x0077499A
+		// (set) Token: 0x06037B06 RID: 228102 RVA: 0x007767A2 File Offset: 0x007749A2
 		public bool IsAnimationLoop { get; set; }
 
-		// Token: 0x1700DB91 RID: 56209
-		// (get) Token: 0x06034803 RID: 215043 RVA: 0x0071540F File Offset: 0x0071360F
-		// (set) Token: 0x06034804 RID: 215044 RVA: 0x00715417 File Offset: 0x00713617
+		// Token: 0x1700E78A RID: 59274
+		// (get) Token: 0x06037B07 RID: 228103 RVA: 0x007767AB File Offset: 0x007749AB
+		// (set) Token: 0x06037B08 RID: 228104 RVA: 0x007767B3 File Offset: 0x007749B3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06034805 RID: 215045 RVA: 0x00715420 File Offset: 0x00713620
+		// Token: 0x06037B09 RID: 228105 RVA: 0x007767BC File Offset: 0x007749BC
 		public ITalkItemAvgRoleConfigT()
 		{
 			this.VisualEffect = EAvgVisualEffect.Default;

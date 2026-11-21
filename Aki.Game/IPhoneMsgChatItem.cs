@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02002504 RID: 9476
+// Token: 0x020019EB RID: 6635
 [NullableContext(2)]
 public interface IPhoneMsgChatItem
 {
-	// Token: 0x06013133 RID: 78131
+	// Token: 0x060105F2 RID: 67058
 	UniTask PlayVoicePlayingAnimationAsync();
 
-	// Token: 0x06013134 RID: 78132
+	// Token: 0x060105F3 RID: 67059
 	UniTask ShowVoiceTextPanel(Action afterShow = null);
 
-	// Token: 0x06013135 RID: 78133
+	// Token: 0x060105F4 RID: 67060
 	void SkipVoicePlayingAnimation();
 
-	// Token: 0x06013136 RID: 78134
+	// Token: 0x060105F5 RID: 67061
 	void StopVoicePlayingAnimation();
 }

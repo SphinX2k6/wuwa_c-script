@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 // Token: 0x02000007 RID: 7
 public static class LogDefine
 {
-	// Token: 0x040000AB RID: 171
+	// Token: 0x040000AE RID: 174
 	[TupleElementNames(new string[]
 	{
 		"Name",
@@ -118,7 +118,6 @@ public static class LogDefine
 		new ValueTuple<string, bool>("TZJ", true),
 		new ValueTuple<string, bool>("HWR", true),
 		new ValueTuple<string, bool>("LJS", true),
-		new ValueTuple<string, bool>("HMQ", true),
 		new ValueTuple<string, bool>("SZH", true),
 		new ValueTuple<string, bool>("SWC", true),
 		new ValueTuple<string, bool>("WRY", true),
@@ -135,8 +134,12 @@ public static class LogDefine
 		new ValueTuple<string, bool>("SQW", true),
 		new ValueTuple<string, bool>("HHJ", true),
 		new ValueTuple<string, bool>("HYJ", true),
-		new ValueTuple<string, bool>("沈周立", true),
+		new ValueTuple<string, bool>("SZL", true),
 		new ValueTuple<string, bool>("YY", true),
-		new ValueTuple<string, bool>("LJK", true)
+		new ValueTuple<string, bool>("ZHZ", true),
+		new ValueTuple<string, bool>("HMQ", true),
+		new ValueTuple<string, bool>("LJK", true),
+		new ValueTuple<string, bool>("TZD", true),
+		new ValueTuple<string, bool>("LYT", true)
 	};
 }

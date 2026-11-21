@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000739 RID: 1849
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007DA RID: 2010
 	public class ISunSpiritBlockExtraRange : IExtraRangeType
 	{
-		// Token: 0x060027E7 RID: 10215 RVA: 0x00069F28 File Offset: 0x00068128
+		// Token: 0x06002B0B RID: 11019 RVA: 0x000710D0 File Offset: 0x0006F2D0
 		private ISunSpiritBlockExtraRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027E8 RID: 10216 RVA: 0x00069F60 File Offset: 0x00068160
+		// Token: 0x06002B0C RID: 11020 RVA: 0x00071108 File Offset: 0x0006F308
 		public static ISunSpiritBlockExtraRange Create([Nullable(2)] ISunSpiritBlockExtraRange instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027E9 RID: 10217 RVA: 0x00069F73 File Offset: 0x00068173
+		// Token: 0x06002B0D RID: 11021 RVA: 0x0007111B File Offset: 0x0006F31B
 		public static ISunSpiritBlockExtraRange CreateFromSetValue([Nullable(2)] ISunSpiritBlockExtraRange_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027EA RID: 10218 RVA: 0x00069F86 File Offset: 0x00068186
+		// Token: 0x06002B0E RID: 11022 RVA: 0x0007112E File Offset: 0x0006F32E
 		public new ISunSpiritBlockExtraRange_SetValue ToSetValue()
 		{
 			return new ISunSpiritBlockExtraRange_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A7E RID: 2686
-		// (get) Token: 0x060027EB RID: 10219 RVA: 0x00069FA5 File Offset: 0x000681A5
-		// (set) Token: 0x060027EC RID: 10220 RVA: 0x00069FD0 File Offset: 0x000681D0
+		// Token: 0x17000B3E RID: 2878
+		// (get) Token: 0x06002B0F RID: 11023 RVA: 0x0007114D File Offset: 0x0006F34D
+		// (set) Token: 0x06002B10 RID: 11024 RVA: 0x00071178 File Offset: 0x0006F378
 		public override EExtraRangeType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A7F RID: 2687
-		// (get) Token: 0x060027ED RID: 10221 RVA: 0x00069FE0 File Offset: 0x000681E0
-		// (set) Token: 0x060027EE RID: 10222 RVA: 0x0006A041 File Offset: 0x00068241
+		// Token: 0x17000B3F RID: 2879
+		// (get) Token: 0x06002B11 RID: 11025 RVA: 0x00071188 File Offset: 0x0006F388
+		// (set) Token: 0x06002B12 RID: 11026 RVA: 0x000711E9 File Offset: 0x0006F3E9
 		public virtual ICylinderTriggerShape CylinderRange
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AE2 RID: 6882
+		// Token: 0x04001CE7 RID: 7399
 		[Nullable(2)]
 		protected new ISunSpiritBlockExtraRange FbInstance;
 
-		// Token: 0x04001AE3 RID: 6883
+		// Token: 0x04001CE8 RID: 7400
 		[Nullable(2)]
 		protected new ISunSpiritBlockExtraRange_SetValue PocoInterface;
 
-		// Token: 0x04001AE4 RID: 6884
+		// Token: 0x04001CE9 RID: 7401
 		private ICylinderTriggerShape _CylinderRangeCache;
 
-		// Token: 0x04001AE5 RID: 6885
+		// Token: 0x04001CEA RID: 7402
 		private bool _CylinderRangeInited;
 	}
 }

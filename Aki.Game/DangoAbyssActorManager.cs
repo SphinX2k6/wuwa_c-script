@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A0B RID: 6667
+// Token: 0x02000ECA RID: 3786
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssActorManager : IStaticVariableResetter
 {
-	// Token: 0x0600C369 RID: 50025 RVA: 0x002C3B77 File Offset: 0x002C1D77
+	// Token: 0x06009779 RID: 38777 RVA: 0x002CEBE7 File Offset: 0x002CCDE7
 	static DangoAbyssActorManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DangoAbyssActorManager.CreateStaticDefaultValue), new Action(DangoAbyssActorManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600C36A RID: 50026 RVA: 0x002C3B96 File Offset: 0x002C1D96
+	// Token: 0x0600977A RID: 38778 RVA: 0x002CEC06 File Offset: 0x002CCE06
 	public static void CreateStaticDefaultValue()
 	{
 		DangoAbyssActorManager.CreateUseWay = EUiModelUseWay.AbyssDango;
 		DangoAbyssActorManager.DangoSkeletalObserverHandleMap = new Dictionary<int, SkeletalObserverHandle>();
 	}
 
-	// Token: 0x0600C36B RID: 50027 RVA: 0x002C3BA9 File Offset: 0x002C1DA9
+	// Token: 0x0600977B RID: 38779 RVA: 0x002CEC19 File Offset: 0x002CCE19
 	public static void ResetStaticDefaultValue()
 	{
 		DangoAbyssActorManager.CreateUseWay = EUiModelUseWay.RoleInLogin;
 		DangoAbyssActorManager.DangoSkeletalObserverHandleMap = null;
 	}
 
-	// Token: 0x0600C36C RID: 50028 RVA: 0x002C3BB8 File Offset: 0x002C1DB8
+	// Token: 0x0600977C RID: 38780 RVA: 0x002CEC28 File Offset: 0x002CCE28
 	public static void InitIndexDangoSkeletalObserverHandle(int index)
 	{
 		SkeletalObserverHandle value;
@@ -45,7 +45,7 @@ public class DangoAbyssActorManager : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600C36D RID: 50029 RVA: 0x002C3C1C File Offset: 0x002C1E1C
+	// Token: 0x0600977D RID: 38781 RVA: 0x002CEC8C File Offset: 0x002CCE8C
 	public unsafe static void RefreshDangoSkeletalObserverHandle(int index, DangoAbyssDefine.IDangoAbyssActorData data, [Nullable(2)] Action callBack)
 	{
 		DangoAbyssActorManager.<>c__DisplayClass6_0 CS$<>8__locals1 = new DangoAbyssActorManager.<>c__DisplayClass6_0();
@@ -118,7 +118,7 @@ public class DangoAbyssActorManager : IStaticVariableResetter
 		}, 100, "Ui.DangoUi");
 	}
 
-	// Token: 0x0600C36E RID: 50030 RVA: 0x002C3E28 File Offset: 0x002C2028
+	// Token: 0x0600977E RID: 38782 RVA: 0x002CEE98 File Offset: 0x002CD098
 	public static void RefreshSkeletalObserverAnimation(int index, string animationName, bool loop)
 	{
 		SkeletalObserverHandle skeletalObserverHandle;
@@ -144,7 +144,7 @@ public class DangoAbyssActorManager : IStaticVariableResetter
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600C36F RID: 50031 RVA: 0x002C3EC0 File Offset: 0x002C20C0
+	// Token: 0x0600977F RID: 38783 RVA: 0x002CEF30 File Offset: 0x002CD130
 	public static void ClearAllDangoSkeletalObserverHandle()
 	{
 		foreach (SkeletalObserverHandle skeletalObserverHandle in DangoAbyssActorManager.DangoSkeletalObserverHandleMap.Values)
@@ -154,7 +154,7 @@ public class DangoAbyssActorManager : IStaticVariableResetter
 		DangoAbyssActorManager.DangoSkeletalObserverHandleMap.Clear();
 	}
 
-	// Token: 0x0600C370 RID: 50032 RVA: 0x002C3F20 File Offset: 0x002C2120
+	// Token: 0x06009780 RID: 38784 RVA: 0x002CEF90 File Offset: 0x002CD190
 	public static void DestroyDangoSkeletalObserverHandle(int index)
 	{
 		SkeletalObserverHandle skeletalObserverHandle;
@@ -171,9 +171,9 @@ public class DangoAbyssActorManager : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x04005A44 RID: 23108
+	// Token: 0x04005B13 RID: 23315
 	private static EUiModelUseWay CreateUseWay;
 
-	// Token: 0x04005A45 RID: 23109
+	// Token: 0x04005B14 RID: 23316
 	private static Dictionary<int, SkeletalObserverHandle> DangoSkeletalObserverHandleMap;
 }

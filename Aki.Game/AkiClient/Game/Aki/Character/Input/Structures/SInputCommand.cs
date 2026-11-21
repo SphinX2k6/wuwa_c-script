@@ -7,121 +7,113 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.Input.Structures
 {
-	// Token: 0x0200425B RID: 16987
+	// Token: 0x020032CF RID: 13007
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/Input/Structures/sInputCommand.SInputCommand")]
 	[UnrealStructLayout(20, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 20)]
 	public class SInputCommand : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C05D RID: 180317 RVA: 0x00A1210A File Offset: 0x00A1030A
+		// Token: 0x06020F46 RID: 134982 RVA: 0x0095371E File Offset: 0x0095191E
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SInputCommand._ScriptStructPtr != 0) ? SInputCommand._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/Input/Structures/sInputCommand.SInputCommand", ref SInputCommand._ScriptStructPtr);
 		}
 
-		// Token: 0x17006D59 RID: 27993
-		// (get) Token: 0x0602C05E RID: 180318 RVA: 0x00A1212E File Offset: 0x00A1032E
-		// (set) Token: 0x0602C05F RID: 180319 RVA: 0x00A12142 File Offset: 0x00A10342
+		// Token: 0x170041E7 RID: 16871
+		// (get) Token: 0x06020F47 RID: 134983 RVA: 0x00953742 File Offset: 0x00951942
+		// (set) Token: 0x06020F48 RID: 134984 RVA: 0x00953756 File Offset: 0x00951956
 		public unsafe TEnumAsByte<ECommandType> CommandType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_CommandType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_CommandType) = value;
 			}
 		}
 
-		// Token: 0x17006D5A RID: 27994
-		// (get) Token: 0x0602C060 RID: 180320 RVA: 0x00A12157 File Offset: 0x00A10357
-		// (set) Token: 0x0602C061 RID: 180321 RVA: 0x00A12167 File Offset: 0x00A10367
+		// Token: 0x170041E8 RID: 16872
+		// (get) Token: 0x06020F49 RID: 134985 RVA: 0x0095376B File Offset: 0x0095196B
+		// (set) Token: 0x06020F4A RID: 134986 RVA: 0x0095377B File Offset: 0x0095197B
 		public unsafe int IntValue
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_IntValue);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_IntValue) = value;
 			}
 		}
 
-		// Token: 0x17006D5B RID: 27995
-		// (get) Token: 0x0602C062 RID: 180322 RVA: 0x00A12178 File Offset: 0x00A10378
-		// (set) Token: 0x0602C063 RID: 180323 RVA: 0x00A1218C File Offset: 0x00A1038C
+		// Token: 0x170041E9 RID: 16873
+		// (get) Token: 0x06020F4B RID: 134987 RVA: 0x0095378C File Offset: 0x0095198C
+		// (set) Token: 0x06020F4C RID: 134988 RVA: 0x009537A0 File Offset: 0x009519A0
 		public unsafe FGameplayTag TagValue
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_TagValue);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SInputCommand.__PropertyOffset_TagValue) = value;
 			}
 		}
 
-		// Token: 0x0602C064 RID: 180324 RVA: 0x00A121A1 File Offset: 0x00A103A1
+		// Token: 0x06020F4D RID: 134989 RVA: 0x009537B5 File Offset: 0x009519B5
 		public SInputCommand()
 		{
 		}
 
-		// Token: 0x0602C065 RID: 180325 RVA: 0x00A121A9 File Offset: 0x00A103A9
-		public SInputCommand(TEnumAsByte<ECommandType> CommandType, int IntValue, FGameplayTag TagValue)
-		{
-			this.CommandType = CommandType;
-			this.IntValue = IntValue;
-			this.TagValue = TagValue;
-		}
-
-		// Token: 0x0602C066 RID: 180326 RVA: 0x00A121C6 File Offset: 0x00A103C6
+		// Token: 0x06020F4E RID: 134990 RVA: 0x009537BD File Offset: 0x009519BD
 		protected override IntPtr GetUStructPtr()
 		{
 			return SInputCommand.StaticStruct();
 		}
 
-		// Token: 0x0602C067 RID: 180327 RVA: 0x00A121D2 File Offset: 0x00A103D2
+		// Token: 0x06020F4F RID: 134991 RVA: 0x009537C9 File Offset: 0x009519C9
 		[NullableContext(2)]
 		public SInputCommand(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C068 RID: 180328 RVA: 0x00A121DC File Offset: 0x00A103DC
+		// Token: 0x06020F50 RID: 134992 RVA: 0x009537D3 File Offset: 0x009519D3
 		public SInputCommand(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C069 RID: 180329 RVA: 0x00A121E7 File Offset: 0x00A103E7
+		// Token: 0x06020F51 RID: 134993 RVA: 0x009537DE File Offset: 0x009519DE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SInputCommand(Pointer, false, true);
 		}
 
-		// Token: 0x0602C06A RID: 180330 RVA: 0x00A121F1 File Offset: 0x00A103F1
+		// Token: 0x06020F52 RID: 134994 RVA: 0x009537E8 File Offset: 0x009519E8
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SInputCommand(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04016FF5 RID: 94197
+		// Token: 0x04011DA3 RID: 73123
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/Input/Structures/sInputCommand.SInputCommand";
 
-		// Token: 0x04016FF6 RID: 94198
+		// Token: 0x04011DA4 RID: 73124
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04016FF7 RID: 94199
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011DA5 RID: 73125
+		internal static int __PropertyOffset_CommandType;
 
-		// Token: 0x04016FF8 RID: 94200
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011DA6 RID: 73126
+		internal static int __PropertyOffset_IntValue;
 
-		// Token: 0x04016FF9 RID: 94201
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011DA7 RID: 73127
+		internal static int __PropertyOffset_TagValue;
 	}
 }

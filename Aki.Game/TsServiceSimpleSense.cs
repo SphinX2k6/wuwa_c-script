@@ -13,8 +13,8 @@ using UnrealEngine.Utils;
 public class TsServiceSimpleSense : UBTService_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x1700007E RID: 126
-	// (get) Token: 0x06000352 RID: 850 RVA: 0x0000F72B File Offset: 0x0000D92B
-	// (set) Token: 0x06000353 RID: 851 RVA: 0x0000F73F File Offset: 0x0000D93F
+	// (get) Token: 0x06000352 RID: 850 RVA: 0x0000FE5B File Offset: 0x0000E05B
+	// (set) Token: 0x06000353 RID: 851 RVA: 0x0000FE6F File Offset: 0x0000E06F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FFloatRange SenseRadius
 	{
@@ -28,31 +28,28 @@ public class TsServiceSimpleSense : UBTService_BlueprintBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06000354 RID: 852 RVA: 0x0000F754 File Offset: 0x0000D954
+	// Token: 0x06000354 RID: 852 RVA: 0x0000FE84 File Offset: 0x0000E084
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsServiceSimpleSense) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsServiceSimpleSense.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000355 RID: 853 RVA: 0x0000F7F4 File Offset: 0x0000D9F4
+	// Token: 0x06000355 RID: 853 RVA: 0x0000FF3C File Offset: 0x0000E13C
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -135,7 +132,7 @@ public class TsServiceSimpleSense : UBTService_BlueprintBase, IUnrealUObject, IU
 		BlackboardController.Instance.SetIntValueByEntity(entity.Id, "NearerPlayerIntId", num);
 	}
 
-	// Token: 0x06000356 RID: 854 RVA: 0x0000F982 File Offset: 0x0000DB82
+	// Token: 0x06000356 RID: 854 RVA: 0x000100CA File Offset: 0x0000E2CA
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsServiceSimpleSense._ClassPtr == IntPtr.Zero)
@@ -145,23 +142,23 @@ public class TsServiceSimpleSense : UBTService_BlueprintBase, IUnrealUObject, IU
 		return TsServiceSimpleSense._ClassPtr;
 	}
 
-	// Token: 0x06000357 RID: 855 RVA: 0x0000F9A8 File Offset: 0x0000DBA8
+	// Token: 0x06000357 RID: 855 RVA: 0x000100F0 File Offset: 0x0000E2F0
 	public TsServiceSimpleSense() : this(BuiltinUtils.AllocNativeUObject(TsServiceSimpleSense.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000358 RID: 856 RVA: 0x0000F9D0 File Offset: 0x0000DBD0
+	// Token: 0x06000358 RID: 856 RVA: 0x00010118 File Offset: 0x0000E318
 	[NullableContext(1)]
 	public TsServiceSimpleSense(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsServiceSimpleSense.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000359 RID: 857 RVA: 0x0000FA03 File Offset: 0x0000DC03
+	// Token: 0x06000359 RID: 857 RVA: 0x0001014B File Offset: 0x0000E34B
 	protected TsServiceSimpleSense(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600035A RID: 858 RVA: 0x0000FA0C File Offset: 0x0000DC0C
+	// Token: 0x0600035A RID: 858 RVA: 0x00010154 File Offset: 0x0000E354
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200186C RID: 6252
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019F7 RID: 6647
 	public class IChangeEntityStateBatchDirectly : ChangeEntityState
 	{
-		// Token: 0x0600864F RID: 34383 RVA: 0x0013F198 File Offset: 0x0013D398
+		// Token: 0x06008D77 RID: 36215 RVA: 0x0014E9CC File Offset: 0x0014CBCC
 		private IChangeEntityStateBatchDirectly_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008650 RID: 34384 RVA: 0x0013F1D0 File Offset: 0x0013D3D0
+		// Token: 0x06008D78 RID: 36216 RVA: 0x0014EA04 File Offset: 0x0014CC04
 		public static IChangeEntityStateBatchDirectly Create([Nullable(2)] IChangeEntityStateBatchDirectly instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008651 RID: 34385 RVA: 0x0013F1E3 File Offset: 0x0013D3E3
+		// Token: 0x06008D79 RID: 36217 RVA: 0x0014EA17 File Offset: 0x0014CC17
 		public static IChangeEntityStateBatchDirectly CreateFromSetValue([Nullable(2)] IChangeEntityStateBatchDirectly_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008652 RID: 34386 RVA: 0x0013F1F8 File Offset: 0x0013D3F8
+		// Token: 0x06008D7A RID: 36218 RVA: 0x0014EA2C File Offset: 0x0014CC2C
 		public new IChangeEntityStateBatchDirectly_SetValue ToSetValue()
 		{
 			return new IChangeEntityStateBatchDirectly_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BDA RID: 11226
-		// (get) Token: 0x06008653 RID: 34387 RVA: 0x0013F246 File Offset: 0x0013D446
-		// (set) Token: 0x06008654 RID: 34388 RVA: 0x0013F271 File Offset: 0x0013D471
+		// Token: 0x17002DD5 RID: 11733
+		// (get) Token: 0x06008D7B RID: 36219 RVA: 0x0014EA7A File Offset: 0x0014CC7A
+		// (set) Token: 0x06008D7C RID: 36220 RVA: 0x0014EAA5 File Offset: 0x0014CCA5
 		public override EChangeEntityState Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BDB RID: 11227
-		// (get) Token: 0x06008655 RID: 34389 RVA: 0x0013F27F File Offset: 0x0013D47F
-		// (set) Token: 0x06008656 RID: 34390 RVA: 0x0013F2AA File Offset: 0x0013D4AA
+		// Token: 0x17002DD6 RID: 11734
+		// (get) Token: 0x06008D7D RID: 36221 RVA: 0x0014EAB3 File Offset: 0x0014CCB3
+		// (set) Token: 0x06008D7E RID: 36222 RVA: 0x0014EADE File Offset: 0x0014CCDE
 		public override int EntityId
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BDC RID: 11228
-		// (get) Token: 0x06008657 RID: 34391 RVA: 0x0013F2B8 File Offset: 0x0013D4B8
-		// (set) Token: 0x06008658 RID: 34392 RVA: 0x0013F2DF File Offset: 0x0013D4DF
+		// Token: 0x17002DD7 RID: 11735
+		// (get) Token: 0x06008D7F RID: 36223 RVA: 0x0014EAEC File Offset: 0x0014CCEC
+		// (set) Token: 0x06008D80 RID: 36224 RVA: 0x0014EB13 File Offset: 0x0014CD13
 		public virtual List<int> EntityIds
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BDD RID: 11229
-		// (get) Token: 0x06008659 RID: 34393 RVA: 0x0013F2ED File Offset: 0x0013D4ED
-		// (set) Token: 0x0600865A RID: 34394 RVA: 0x0013F318 File Offset: 0x0013D518
+		// Token: 0x17002DD8 RID: 11736
+		// (get) Token: 0x06008D81 RID: 36225 RVA: 0x0014EB21 File Offset: 0x0014CD21
+		// (set) Token: 0x06008D82 RID: 36226 RVA: 0x0014EB4C File Offset: 0x0014CD4C
 		public virtual string State
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BDE RID: 11230
-		// (get) Token: 0x0600865B RID: 34395 RVA: 0x0013F328 File Offset: 0x0013D528
-		// (set) Token: 0x0600865C RID: 34396 RVA: 0x0013F362 File Offset: 0x0013D562
+		// Token: 0x17002DD9 RID: 11737
+		// (get) Token: 0x06008D83 RID: 36227 RVA: 0x0014EB5C File Offset: 0x0014CD5C
+		// (set) Token: 0x06008D84 RID: 36228 RVA: 0x0014EB96 File Offset: 0x0014CD96
 		public virtual bool? DelayChange
 		{
 			get
@@ -181,11 +179,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054BB RID: 21691
+		// Token: 0x04005908 RID: 22792
 		[Nullable(2)]
 		protected new IChangeEntityStateBatchDirectly FbInstance;
 
-		// Token: 0x040054BC RID: 21692
+		// Token: 0x04005909 RID: 22793
 		[Nullable(2)]
 		protected new IChangeEntityStateBatchDirectly_SetValue PocoInterface;
 	}

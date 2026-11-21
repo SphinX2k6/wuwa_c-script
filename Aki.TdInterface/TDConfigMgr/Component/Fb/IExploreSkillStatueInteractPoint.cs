@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CAF RID: 3247
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D91 RID: 3473
 	public class IExploreSkillStatueInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x06004A53 RID: 19027 RVA: 0x000BA171 File Offset: 0x000B8371
+		// Token: 0x06004F01 RID: 20225 RVA: 0x000C4B81 File Offset: 0x000C2D81
 		public static IExploreSkillStatueInteractPoint Create(IExploreSkillStatueInteractPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016B2 RID: 5810
-		// (get) Token: 0x06004A54 RID: 19028 RVA: 0x000BA190 File Offset: 0x000B8390
+		// Token: 0x170017DA RID: 6106
+		// (get) Token: 0x06004F02 RID: 20226 RVA: 0x000C4BA0 File Offset: 0x000C2DA0
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016B3 RID: 5811
-		// (get) Token: 0x06004A55 RID: 19029 RVA: 0x000BA19D File Offset: 0x000B839D
+		// Token: 0x170017DB RID: 6107
+		// (get) Token: 0x06004F03 RID: 20227 RVA: 0x000C4BAD File Offset: 0x000C2DAD
 		public virtual float PullTime
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016B4 RID: 5812
-		// (get) Token: 0x06004A56 RID: 19030 RVA: 0x000BA1AC File Offset: 0x000B83AC
+		// Token: 0x170017DC RID: 6108
+		// (get) Token: 0x06004F04 RID: 20228 RVA: 0x000C4BBC File Offset: 0x000C2DBC
 		public virtual List<string> HangingPointList
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A6A RID: 10858
+		// Token: 0x04002CE4 RID: 11492
 		private IExploreSkillStatueInteractPoint Instance;
 
-		// Token: 0x04002A6B RID: 10859
+		// Token: 0x04002CE5 RID: 11493
 		private List<string> _HangingPointListCache;
 
-		// Token: 0x04002A6C RID: 10860
+		// Token: 0x04002CE6 RID: 11494
 		private bool _HangingPointListInited;
 	}
 }

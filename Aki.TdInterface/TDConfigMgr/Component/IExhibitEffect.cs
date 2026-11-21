@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000343 RID: 835
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200038A RID: 906
 	public class IExhibitEffect
 	{
-		// Token: 0x06001082 RID: 4226 RVA: 0x00039180 File Offset: 0x00037380
+		// Token: 0x060011B4 RID: 4532 RVA: 0x0003C14C File Offset: 0x0003A34C
 		private IExhibitEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001083 RID: 4227 RVA: 0x000391B8 File Offset: 0x000373B8
+		// Token: 0x060011B5 RID: 4533 RVA: 0x0003C184 File Offset: 0x0003A384
 		public static IExhibitEffect Create([Nullable(2)] IExhibitEffect instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001084 RID: 4228 RVA: 0x000391CB File Offset: 0x000373CB
+		// Token: 0x060011B6 RID: 4534 RVA: 0x0003C197 File Offset: 0x0003A397
 		public static IExhibitEffect CreateFromSetValue([Nullable(2)] IExhibitEffect_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001085 RID: 4229 RVA: 0x000391DE File Offset: 0x000373DE
+		// Token: 0x060011B7 RID: 4535 RVA: 0x0003C1AA File Offset: 0x0003A3AA
 		public IExhibitEffect_SetValue ToSetValue()
 		{
 			return new IExhibitEffect_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004B9 RID: 1209
-		// (get) Token: 0x06001086 RID: 4230 RVA: 0x00039209 File Offset: 0x00037409
-		// (set) Token: 0x06001087 RID: 4231 RVA: 0x00039234 File Offset: 0x00037434
+		// Token: 0x17000507 RID: 1287
+		// (get) Token: 0x060011B8 RID: 4536 RVA: 0x0003C1D5 File Offset: 0x0003A3D5
+		// (set) Token: 0x060011B9 RID: 4537 RVA: 0x0003C200 File Offset: 0x0003A400
 		public virtual string Path
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004BA RID: 1210
-		// (get) Token: 0x06001088 RID: 4232 RVA: 0x00039242 File Offset: 0x00037442
-		// (set) Token: 0x06001089 RID: 4233 RVA: 0x00039271 File Offset: 0x00037471
+		// Token: 0x17000508 RID: 1288
+		// (get) Token: 0x060011BA RID: 4538 RVA: 0x0003C20E File Offset: 0x0003A40E
+		// (set) Token: 0x060011BB RID: 4539 RVA: 0x0003C23D File Offset: 0x0003A43D
 		public virtual float Scale
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004BB RID: 1211
-		// (get) Token: 0x0600108A RID: 4234 RVA: 0x00039280 File Offset: 0x00037480
-		// (set) Token: 0x0600108B RID: 4235 RVA: 0x000392E1 File Offset: 0x000374E1
+		// Token: 0x17000509 RID: 1289
+		// (get) Token: 0x060011BC RID: 4540 RVA: 0x0003C24C File Offset: 0x0003A44C
+		// (set) Token: 0x060011BD RID: 4541 RVA: 0x0003C2AD File Offset: 0x0003A4AD
 		public virtual VectorInfo Offset
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DDC RID: 3548
+		// Token: 0x04000EC7 RID: 3783
 		[Nullable(2)]
 		protected IExhibitEffect FbInstance;
 
-		// Token: 0x04000DDD RID: 3549
+		// Token: 0x04000EC8 RID: 3784
 		[Nullable(2)]
 		protected IExhibitEffect_SetValue PocoInterface;
 
-		// Token: 0x04000DDE RID: 3550
+		// Token: 0x04000EC9 RID: 3785
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04000DDF RID: 3551
+		// Token: 0x04000ECA RID: 3786
 		private bool _OffsetInited;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200558B RID: 21899
+	// Token: 0x02005B29 RID: 23337
 	public class IMonsterNpcInteractionGazePerformT
 	{
-		// Token: 0x1700A1D1 RID: 41425
-		// (get) Token: 0x06024419 RID: 148505 RVA: 0x00501BB2 File Offset: 0x004FFDB2
-		// (set) Token: 0x0602441A RID: 148506 RVA: 0x00501BBA File Offset: 0x004FFDBA
+		// Token: 0x1700AA59 RID: 43609
+		// (get) Token: 0x06026626 RID: 157222 RVA: 0x0054212A File Offset: 0x0054032A
+		// (set) Token: 0x06026627 RID: 157223 RVA: 0x00542132 File Offset: 0x00540332
 		public EMonsterNpcInteractionType Type { get; set; }
 
-		// Token: 0x0602441B RID: 148507 RVA: 0x00501BC3 File Offset: 0x004FFDC3
+		// Token: 0x06026628 RID: 157224 RVA: 0x0054213B File Offset: 0x0054033B
 		public IMonsterNpcInteractionGazePerformT()
 		{
 			this.Type = EMonsterNpcInteractionType.WallRun;

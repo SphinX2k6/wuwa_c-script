@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C3A RID: 19514
+	// Token: 0x02003BEB RID: 15339
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SheriffMapPanelParam : ISheriffMapPanelParam
 	{
-		// Token: 0x17007CA4 RID: 31908
-		// (get) Token: 0x060327B6 RID: 206774 RVA: 0x00BC3176 File Offset: 0x00BC1376
-		// (set) Token: 0x060327B7 RID: 206775 RVA: 0x00BC317E File Offset: 0x00BC137E
+		// Token: 0x1700504E RID: 20558
+		// (get) Token: 0x06027569 RID: 161129 RVA: 0x00B07D8E File Offset: 0x00B05F8E
+		// (set) Token: 0x0602756A RID: 161130 RVA: 0x00B07D96 File Offset: 0x00B05F96
 		public ESheriffMainTabType? TabType { get; set; }
 
-		// Token: 0x17007CA5 RID: 31909
-		// (get) Token: 0x060327B8 RID: 206776 RVA: 0x00BC3187 File Offset: 0x00BC1387
-		// (set) Token: 0x060327B9 RID: 206777 RVA: 0x00BC318F File Offset: 0x00BC138F
+		// Token: 0x1700504F RID: 20559
+		// (get) Token: 0x0602756B RID: 161131 RVA: 0x00B07D9F File Offset: 0x00B05F9F
+		// (set) Token: 0x0602756C RID: 161132 RVA: 0x00B07DA7 File Offset: 0x00B05FA7
 		public int? TargetMarkId { get; set; }
 
-		// Token: 0x17007CA6 RID: 31910
-		// (get) Token: 0x060327BA RID: 206778 RVA: 0x00BC3198 File Offset: 0x00BC1398
-		// (set) Token: 0x060327BB RID: 206779 RVA: 0x00BC31A0 File Offset: 0x00BC13A0
+		// Token: 0x17005050 RID: 20560
+		// (get) Token: 0x0602756D RID: 161133 RVA: 0x00B07DB0 File Offset: 0x00B05FB0
+		// (set) Token: 0x0602756E RID: 161134 RVA: 0x00B07DB8 File Offset: 0x00B05FB8
 		public bool? IsError { get; set; }
 
-		// Token: 0x17007CA7 RID: 31911
-		// (get) Token: 0x060327BC RID: 206780 RVA: 0x00BC31A9 File Offset: 0x00BC13A9
-		// (set) Token: 0x060327BD RID: 206781 RVA: 0x00BC31B1 File Offset: 0x00BC13B1
+		// Token: 0x17005051 RID: 20561
+		// (get) Token: 0x0602756F RID: 161135 RVA: 0x00B07DC1 File Offset: 0x00B05FC1
+		// (set) Token: 0x06027570 RID: 161136 RVA: 0x00B07DC9 File Offset: 0x00B05FC9
 		public Action OnPanelOpened { get; set; }
 	}
 }

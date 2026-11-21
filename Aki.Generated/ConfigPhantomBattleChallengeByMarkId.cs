@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000673 RID: 1651
+	// Token: 0x0200068B RID: 1675
 	public class ConfigPhantomBattleChallengeByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060026C2 RID: 9922 RVA: 0x00134DBF File Offset: 0x00132FBF
+		// Token: 0x06002752 RID: 10066 RVA: 0x0013B83B File Offset: 0x00139A3B
 		static ConfigPhantomBattleChallengeByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomBattleChallengeByMarkId.CreateStaticDefaultValue), new Action(ConfigPhantomBattleChallengeByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060026C3 RID: 9923 RVA: 0x00134DE0 File Offset: 0x00132FE0
+		// Token: 0x06002753 RID: 10067 RVA: 0x0013B85C File Offset: 0x00139A5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomBattleChallengeByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060026C4 RID: 9924 RVA: 0x00134E5F File Offset: 0x0013305F
+		// Token: 0x06002754 RID: 10068 RVA: 0x0013B8DB File Offset: 0x00139ADB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomBattleChallengeByMarkId.LogPair = null;
 			ConfigPhantomBattleChallengeByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x060026C5 RID: 9925 RVA: 0x00134E6D File Offset: 0x0013306D
+		// Token: 0x06002755 RID: 10069 RVA: 0x0013B8E9 File Offset: 0x00139AE9
 		public static void Init()
 		{
 			ConfigPhantomBattleChallengeByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomBattleChallengeByMarkId.HandleId, "db_phantombattle.db", "select BinData from `PhantomBattleChallenge` where MarkId=?");
 		}
 
-		// Token: 0x060026C6 RID: 9926 RVA: 0x00134E88 File Offset: 0x00133088
+		// Token: 0x06002756 RID: 10070 RVA: 0x0013B904 File Offset: 0x00139B04
 		public static PhantomBattleChallenge? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomBattleChallengeByMarkId.HandleId, ConfigPhantomBattleChallengeByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomBattleChallenge?(rootAsPhantomBattleChallenge);
 		}
 
-		// Token: 0x04002D0B RID: 11531
+		// Token: 0x04002DB3 RID: 11699
 		private const string DB = "db_phantombattle.db";
 
-		// Token: 0x04002D0C RID: 11532
+		// Token: 0x04002DB4 RID: 11700
 		private const string FILE = "s.声骸大作战外围.xlsx";
 
-		// Token: 0x04002D0D RID: 11533
+		// Token: 0x04002DB5 RID: 11701
 		private const string TABLE = "PhantomBattleChallenge";
 
-		// Token: 0x04002D0E RID: 11534
+		// Token: 0x04002DB6 RID: 11702
 		private const string COMMAND = "select BinData from `PhantomBattleChallenge` where MarkId=?";
 
-		// Token: 0x04002D0F RID: 11535
+		// Token: 0x04002DB7 RID: 11703
 		private const string KEY_PREFIX = "PhantomBattleChallengeByMarkId";
 
-		// Token: 0x04002D10 RID: 11536
+		// Token: 0x04002DB8 RID: 11704
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002D11 RID: 11537
+		// Token: 0x04002DB9 RID: 11705
 		private static int HandleId;
 	}
 }

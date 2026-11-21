@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A3A RID: 14906
+	// Token: 0x02003E15 RID: 15893
 	public class IBvbCardFilterCompareActiveSkillTagT
 	{
-		// Token: 0x17006625 RID: 26149
-		// (get) Token: 0x060142C4 RID: 82628 RVA: 0x002F301C File Offset: 0x002F121C
-		// (set) Token: 0x060142C5 RID: 82629 RVA: 0x002F3024 File Offset: 0x002F1224
+		// Token: 0x17006B55 RID: 27477
+		// (get) Token: 0x060155E0 RID: 87520 RVA: 0x00316208 File Offset: 0x00314408
+		// (set) Token: 0x060155E1 RID: 87521 RVA: 0x00316210 File Offset: 0x00314410
 		public EBvbCardFilterType Type { get; set; }
 
-		// Token: 0x17006626 RID: 26150
-		// (get) Token: 0x060142C6 RID: 82630 RVA: 0x002F302D File Offset: 0x002F122D
-		// (set) Token: 0x060142C7 RID: 82631 RVA: 0x002F3035 File Offset: 0x002F1235
+		// Token: 0x17006B56 RID: 27478
+		// (get) Token: 0x060155E2 RID: 87522 RVA: 0x00316219 File Offset: 0x00314419
+		// (set) Token: 0x060155E3 RID: 87523 RVA: 0x00316221 File Offset: 0x00314421
 		public int ActiveSkillTag { get; set; }
 
-		// Token: 0x060142C8 RID: 82632 RVA: 0x002F303E File Offset: 0x002F123E
+		// Token: 0x060155E4 RID: 87524 RVA: 0x0031622A File Offset: 0x0031442A
 		public IBvbCardFilterCompareActiveSkillTagT()
 		{
 			this.Type = EBvbCardFilterType.CompareCost;

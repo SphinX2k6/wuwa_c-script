@@ -4,16 +4,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006091 RID: 24721
+	// Token: 0x0200500F RID: 20495
 	public class SpringManorActivityOpenView : UiViewBase
 	{
-		// Token: 0x0603E7DF RID: 255967 RVA: 0x00F1AE97 File Offset: 0x00F19097
+		// Token: 0x060334A3 RID: 210083 RVA: 0x00E61C5B File Offset: 0x00E5FE5B
 		[NullableContext(1)]
 		public SpringManorActivityOpenView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E7E0 RID: 255968 RVA: 0x00F1AEA0 File Offset: 0x00F190A0
+		// Token: 0x060334A4 RID: 210084 RVA: 0x00E61C64 File Offset: 0x00E5FE64
 		protected override void OnAfterShow()
 		{
 			base.CloseMe(null);

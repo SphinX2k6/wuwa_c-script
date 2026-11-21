@@ -4,31 +4,31 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 using CSharpScript.Game.World.Model;
 
-// Token: 0x02002F2C RID: 12076
+// Token: 0x0200247F RID: 9343
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageFilter : BuffEffect
 {
-	// Token: 0x06019BAA RID: 105386 RVA: 0x006B3390 File Offset: 0x006B1590
+	// Token: 0x060174B5 RID: 95413 RVA: 0x006D96A8 File Offset: 0x006D78A8
 	public DamageFilter(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BAB RID: 105387 RVA: 0x006B33A0 File Offset: 0x006B15A0
+	// Token: 0x060174B6 RID: 95414 RVA: 0x006D96B8 File Offset: 0x006D78B8
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
 		this.Condition = bool.Parse((((extraEffectParameters_ != null && extraEffectParameters_.Length != 0) ? extraEffectParameters_[0] : "0") == "1") ? "true" : "false");
 	}
 
-	// Token: 0x06019BAC RID: 105388 RVA: 0x006B33E8 File Offset: 0x006B15E8
+	// Token: 0x060174B7 RID: 95415 RVA: 0x006D9700 File Offset: 0x006D7900
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return !this.Condition;
 	}
 
-	// Token: 0x06019BAD RID: 105389 RVA: 0x006B33F8 File Offset: 0x006B15F8
+	// Token: 0x060174B8 RID: 95416 RVA: 0x006D9710 File Offset: 0x006D7910
 	public static bool ApplyEffects(Entity attackerEntity, Entity targetEntity, string bulletId, IReadOnlyList<int> bulletTags, int skillId, long damageId, [Nullable(new byte[]
 	{
 		2,
@@ -77,10 +77,10 @@ public class DamageFilter : BuffEffect
 		return false;
 	}
 
-	// Token: 0x0400C1EC RID: 49644
+	// Token: 0x0400C58E RID: 50574
 	private bool Condition;
 
-	// Token: 0x0400C1ED RID: 49645
+	// Token: 0x0400C58F RID: 50575
 	[StaticVariableRuleIgnore]
 	private static readonly EExtraEffectId[] DamageFilterIds = new EExtraEffectId[]
 	{

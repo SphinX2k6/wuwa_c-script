@@ -8,13 +8,13 @@ using CSharpScript.Game.Utils;
 
 namespace CSharpScript.Game.Input
 {
-	// Token: 0x02006FD0 RID: 28624
+	// Token: 0x02006151 RID: 24913
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class InputModel : ModelBase
 	{
-		// Token: 0x060459D7 RID: 285143 RVA: 0x0114A018 File Offset: 0x01148218
+		// Token: 0x0603BB88 RID: 244616 RVA: 0x010F3E0C File Offset: 0x010F200C
 		protected override bool OnInit()
 		{
 			this.InputDataMap[EInputDataType.NormalWorld] = new NormalWorldInputData();
@@ -26,19 +26,19 @@ namespace CSharpScript.Game.Input
 			return true;
 		}
 
-		// Token: 0x060459D8 RID: 285144 RVA: 0x0114A08C File Offset: 0x0114828C
+		// Token: 0x0603BB89 RID: 244617 RVA: 0x010F3E80 File Offset: 0x010F2080
 		public void SetCurrentInputDataType(EInputDataType dataType)
 		{
 			this.CurrentInputDataType = dataType;
 		}
 
-		// Token: 0x060459D9 RID: 285145 RVA: 0x0114A095 File Offset: 0x01148295
+		// Token: 0x0603BB8A RID: 244618 RVA: 0x010F3E89 File Offset: 0x010F2089
 		public EInputDataType GetCurrentInputDataType()
 		{
 			return this.CurrentInputDataType;
 		}
 
-		// Token: 0x060459DA RID: 285146 RVA: 0x0114A0A0 File Offset: 0x011482A0
+		// Token: 0x0603BB8B RID: 244619 RVA: 0x010F3E94 File Offset: 0x010F2094
 		[NullableContext(2)]
 		public BattleInputData GetCurrentInputData()
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Input
 			return null;
 		}
 
-		// Token: 0x060459DB RID: 285147 RVA: 0x0114A0C8 File Offset: 0x011482C8
+		// Token: 0x0603BB8C RID: 244620 RVA: 0x010F3EBC File Offset: 0x010F20BC
 		public BattleInputData GetInputData(EInputDataType dataType)
 		{
 			BattleInputData result;
@@ -64,25 +64,25 @@ namespace CSharpScript.Game.Input
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x060459DC RID: 285148 RVA: 0x0114A111 File Offset: 0x01148311
+		// Token: 0x0603BB8D RID: 244621 RVA: 0x010F3F05 File Offset: 0x010F2105
 		public List<IInputHandler> GetHandlers()
 		{
 			return this.InputHandlers;
 		}
 
-		// Token: 0x060459DD RID: 285149 RVA: 0x0114A119 File Offset: 0x01148319
+		// Token: 0x0603BB8E RID: 244622 RVA: 0x010F3F0D File Offset: 0x010F210D
 		public Dictionary<EInputAction, float> GetPressTimes()
 		{
 			return this.PressTimes;
 		}
 
-		// Token: 0x060459DE RID: 285150 RVA: 0x0114A121 File Offset: 0x01148321
+		// Token: 0x0603BB8F RID: 244623 RVA: 0x010F3F15 File Offset: 0x010F2115
 		public Dictionary<EInputAction, float> GetHoldTimes()
 		{
 			return this.HoldTimes;
 		}
 
-		// Token: 0x060459DF RID: 285151 RVA: 0x0114A12C File Offset: 0x0114832C
+		// Token: 0x0603BB90 RID: 244624 RVA: 0x010F3F20 File Offset: 0x010F2120
 		public float? GetHoldTime(EInputAction action)
 		{
 			if (!this.HoldTimes.ContainsKey(action))
@@ -92,21 +92,21 @@ namespace CSharpScript.Game.Input
 			return new float?(this.HoldTimes[action]);
 		}
 
-		// Token: 0x060459E0 RID: 285152 RVA: 0x0114A164 File Offset: 0x01148364
+		// Token: 0x0603BB91 RID: 244625 RVA: 0x010F3F58 File Offset: 0x010F2158
 		public void SetHoldTime(EInputAction action, float? value = null)
 		{
 			float valueOrDefault = value.GetValueOrDefault();
 			this.HoldTimes[action] = valueOrDefault;
 		}
 
-		// Token: 0x060459E1 RID: 285153 RVA: 0x0114A186 File Offset: 0x01148386
+		// Token: 0x0603BB92 RID: 244626 RVA: 0x010F3F7A File Offset: 0x010F217A
 		public Dictionary<EInputAxis, float> GetAxisValues()
 		{
 			return this.AxisValues;
 		}
 
-		// Token: 0x17009B91 RID: 39825
-		// (get) Token: 0x060459E2 RID: 285154 RVA: 0x0114A18E File Offset: 0x0114838E
+		// Token: 0x170070D1 RID: 28881
+		// (get) Token: 0x0603BB93 RID: 244627 RVA: 0x010F3F82 File Offset: 0x010F2182
 		public bool LastClearAxisValue
 		{
 			get
@@ -115,26 +115,26 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x060459E3 RID: 285155 RVA: 0x0114A196 File Offset: 0x01148396
+		// Token: 0x0603BB94 RID: 244628 RVA: 0x010F3F8A File Offset: 0x010F218A
 		public void ResetLastTemporaryClearAxisValues()
 		{
 			this.LastTemporaryClearAxisValue = false;
 		}
 
-		// Token: 0x060459E4 RID: 285156 RVA: 0x0114A19F File Offset: 0x0114839F
+		// Token: 0x0603BB95 RID: 244629 RVA: 0x010F3F93 File Offset: 0x010F2193
 		public void TemporaryClearAxisValues()
 		{
 			this.LastTemporaryClearAxisValue = true;
 			this.AxisValues.Clear();
 		}
 
-		// Token: 0x060459E5 RID: 285157 RVA: 0x0114A1B3 File Offset: 0x011483B3
+		// Token: 0x0603BB96 RID: 244630 RVA: 0x010F3FA7 File Offset: 0x010F21A7
 		public void NextFrameRefreshAxisValues()
 		{
 			this.LastTemporaryClearAxisValue = true;
 		}
 
-		// Token: 0x060459E6 RID: 285158 RVA: 0x0114A1BC File Offset: 0x011483BC
+		// Token: 0x0603BB97 RID: 244631 RVA: 0x010F3FB0 File Offset: 0x010F21B0
 		public int? QueryCommandPriority(ECommandType commandType)
 		{
 			int value;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Input
 			return null;
 		}
 
-		// Token: 0x060459E7 RID: 285159 RVA: 0x0114A1EC File Offset: 0x011483EC
+		// Token: 0x0603BB98 RID: 244632 RVA: 0x010F3FE0 File Offset: 0x010F21E0
 		public void AddInputHandler(IInputHandler handler)
 		{
 			if (this.InputHandlers.Contains(handler))
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Input
 			this.InputHandlers.Sort((IInputHandler a, IInputHandler b) => b.GetPriority() - a.GetPriority());
 		}
 
-		// Token: 0x060459E8 RID: 285160 RVA: 0x0114A240 File Offset: 0x01148440
+		// Token: 0x0603BB99 RID: 244633 RVA: 0x010F4034 File Offset: 0x010F2234
 		public bool IsAxisBlock(EInputAxis axis)
 		{
 			for (int i = 0; i < this.InputHandlers.Count; i++)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Input
 			return false;
 		}
 
-		// Token: 0x060459E9 RID: 285161 RVA: 0x0114A280 File Offset: 0x01148480
+		// Token: 0x0603BB9A RID: 244634 RVA: 0x010F4074 File Offset: 0x010F2274
 		public void RemoveInputHandler(IInputHandler handler)
 		{
 			int num = this.InputHandlers.IndexOf(handler);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Input
 			this.InputHandlers.RemoveAt(num);
 		}
 
-		// Token: 0x060459EA RID: 285162 RVA: 0x0114A2AC File Offset: 0x011484AC
+		// Token: 0x0603BB9B RID: 244635 RVA: 0x010F40A0 File Offset: 0x010F22A0
 		protected override bool OnClear()
 		{
 			this.InputHandlers.Clear();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Input
 			return true;
 		}
 
-		// Token: 0x060459EB RID: 285163 RVA: 0x0114A33C File Offset: 0x0114853C
+		// Token: 0x0603BB9C RID: 244636 RVA: 0x010F4130 File Offset: 0x010F2330
 		public void AddInputLayer(int unitId, InputLayer layer)
 		{
 			InputLayerUnit inputLayerUnit;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Input
 			inputLayerUnit.Add(layer);
 		}
 
-		// Token: 0x060459EC RID: 285164 RVA: 0x0114A374 File Offset: 0x01148574
+		// Token: 0x0603BB9D RID: 244637 RVA: 0x010F4168 File Offset: 0x010F2368
 		public void RemoveInputLayer(InputLayer layer)
 		{
 			InputLayerUnit inputLayerUnit;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x060459ED RID: 285165 RVA: 0x0114A3BC File Offset: 0x011485BC
+		// Token: 0x0603BB9E RID: 244638 RVA: 0x010F41B0 File Offset: 0x010F23B0
 		[NullableContext(2)]
 		public InputLayer GetInputLayer(int unitId, EInputLayer layerType)
 		{
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Input
 			return result;
 		}
 
-		// Token: 0x060459EE RID: 285166 RVA: 0x0114A3F0 File Offset: 0x011485F0
+		// Token: 0x0603BB9F RID: 244639 RVA: 0x010F41E4 File Offset: 0x010F23E4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Input
 			return inputLayerUnit.GetLayerList();
 		}
 
-		// Token: 0x060459EF RID: 285167 RVA: 0x0114A418 File Offset: 0x01148618
+		// Token: 0x0603BBA0 RID: 244640 RVA: 0x010F420C File Offset: 0x010F240C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Input
 			return result;
 		}
 
-		// Token: 0x060459F0 RID: 285168 RVA: 0x0114A460 File Offset: 0x01148660
+		// Token: 0x0603BBA1 RID: 244641 RVA: 0x010F4254 File Offset: 0x010F2454
 		public void InitInputCommandTransformMap()
 		{
 			if (this.IsInitTransformMap)
@@ -326,8 +326,8 @@ namespace CSharpScript.Game.Input
 			this.InputCommandTransformMap = dictionary;
 		}
 
-		// Token: 0x17009B92 RID: 39826
-		// (get) Token: 0x060459F1 RID: 285169 RVA: 0x0114A5C4 File Offset: 0x011487C4
+		// Token: 0x170070D2 RID: 28882
+		// (get) Token: 0x0603BBA2 RID: 244642 RVA: 0x010F43B8 File Offset: 0x010F25B8
 		public static InputModel Instance
 		{
 			get
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Input
 			}
 		}
 
-		// Token: 0x060459F2 RID: 285170 RVA: 0x0114A5CB File Offset: 0x011487CB
+		// Token: 0x0603BBA3 RID: 244643 RVA: 0x010F43BF File Offset: 0x010F25BF
 		public static InputModel GetOrCreateInstance()
 		{
 			if (InputModel._Instance == null)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Input
 			return InputModel._Instance;
 		}
 
-		// Token: 0x060459F3 RID: 285171 RVA: 0x0114A5DF File Offset: 0x011487DF
+		// Token: 0x0603BBA4 RID: 244644 RVA: 0x010F43D3 File Offset: 0x010F25D3
 		public static bool CreateInstance()
 		{
 			if (InputModel._Instance != null)
@@ -357,24 +357,24 @@ namespace CSharpScript.Game.Input
 			return true;
 		}
 
-		// Token: 0x060459F4 RID: 285172 RVA: 0x0114A5F5 File Offset: 0x011487F5
+		// Token: 0x0603BBA5 RID: 244645 RVA: 0x010F43E9 File Offset: 0x010F25E9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060459F5 RID: 285173 RVA: 0x0114A5F7 File Offset: 0x011487F7
+		// Token: 0x0603BBA6 RID: 244646 RVA: 0x010F43EB File Offset: 0x010F25EB
 		public static void ResetStaticDefaultValue()
 		{
 			InputModel._Instance = null;
 		}
 
-		// Token: 0x060459F6 RID: 285174 RVA: 0x0114A5FF File Offset: 0x011487FF
+		// Token: 0x0603BBA7 RID: 244647 RVA: 0x010F43F3 File Offset: 0x010F25F3
 		static InputModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputModel.CreateStaticDefaultValue), new Action(InputModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060459F7 RID: 285175 RVA: 0x0114A620 File Offset: 0x01148820
+		// Token: 0x0603BBA8 RID: 244648 RVA: 0x010F4414 File Offset: 0x010F2614
 		public InputModel()
 		{
 			Dictionary<ECommandType, int> dictionary = new Dictionary<ECommandType, int>();
@@ -399,34 +399,34 @@ namespace CSharpScript.Game.Input
 			base..ctor();
 		}
 
-		// Token: 0x0402456B RID: 148843
+		// Token: 0x0401F820 RID: 129056
 		public const string INPUT_COMMAND_TRANSFORM_DT_PATH = "/Game/Aki/Data/Fight/DT_InputCommandTransform.DT_InputCommandTransform";
 
-		// Token: 0x0402456C RID: 148844
+		// Token: 0x0401F821 RID: 129057
 		private readonly Dictionary<ECommandType, int> CommandPriorities;
 
-		// Token: 0x0402456D RID: 148845
+		// Token: 0x0401F822 RID: 129058
 		private readonly List<IInputHandler> InputHandlers;
 
-		// Token: 0x0402456E RID: 148846
+		// Token: 0x0401F823 RID: 129059
 		private readonly Dictionary<EInputAction, float> PressTimes;
 
-		// Token: 0x0402456F RID: 148847
+		// Token: 0x0401F824 RID: 129060
 		private readonly Dictionary<EInputAction, float> HoldTimes;
 
-		// Token: 0x04024570 RID: 148848
+		// Token: 0x0401F825 RID: 129061
 		private readonly Dictionary<EInputAxis, float> AxisValues;
 
-		// Token: 0x04024571 RID: 148849
+		// Token: 0x0401F826 RID: 129062
 		private readonly Dictionary<int, InputLayerUnit> InputLayers;
 
-		// Token: 0x04024572 RID: 148850
+		// Token: 0x0401F827 RID: 129063
 		public Switcher OnlyMoveForward;
 
-		// Token: 0x04024573 RID: 148851
+		// Token: 0x0401F828 RID: 129064
 		public bool IsOpenInputAxisLog;
 
-		// Token: 0x04024574 RID: 148852
+		// Token: 0x0401F829 RID: 129065
 		[Nullable(new byte[]
 		{
 			2,
@@ -436,19 +436,19 @@ namespace CSharpScript.Game.Input
 		})]
 		private Dictionary<EInputAction, Dictionary<EInputState, SInputCommandTransform[]>> InputCommandTransformMap;
 
-		// Token: 0x04024575 RID: 148853
+		// Token: 0x0401F82A RID: 129066
 		private bool IsInitTransformMap;
 
-		// Token: 0x04024576 RID: 148854
+		// Token: 0x0401F82B RID: 129067
 		private readonly Dictionary<EInputDataType, BattleInputData> InputDataMap;
 
-		// Token: 0x04024577 RID: 148855
+		// Token: 0x0401F82C RID: 129068
 		private EInputDataType CurrentInputDataType;
 
-		// Token: 0x04024578 RID: 148856
+		// Token: 0x0401F82D RID: 129069
 		private bool LastTemporaryClearAxisValue;
 
-		// Token: 0x04024579 RID: 148857
+		// Token: 0x0401F82E RID: 129070
 		[Nullable(2)]
 		private static InputModel _Instance;
 	}

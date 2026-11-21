@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009E3 RID: 2531
+	// Token: 0x02000AB8 RID: 2744
 	public class ConfigTimePointRewardActivityByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B66 RID: 15206 RVA: 0x001A9ABC File Offset: 0x001A7CBC
+		// Token: 0x06004064 RID: 16484 RVA: 0x001C8E50 File Offset: 0x001C7050
 		static ConfigTimePointRewardActivityByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTimePointRewardActivityByActivityId.CreateStaticDefaultValue), new Action(ConfigTimePointRewardActivityByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B67 RID: 15207 RVA: 0x001A9ADC File Offset: 0x001A7CDC
+		// Token: 0x06004065 RID: 16485 RVA: 0x001C8E70 File Offset: 0x001C7070
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTimePointRewardActivityByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B68 RID: 15208 RVA: 0x001A9B5B File Offset: 0x001A7D5B
+		// Token: 0x06004066 RID: 16486 RVA: 0x001C8EEF File Offset: 0x001C70EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTimePointRewardActivityByActivityId.LogPair = null;
 			ConfigTimePointRewardActivityByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003B69 RID: 15209 RVA: 0x001A9B69 File Offset: 0x001A7D69
+		// Token: 0x06004067 RID: 16487 RVA: 0x001C8EFD File Offset: 0x001C70FD
 		public static void Init()
 		{
 			ConfigTimePointRewardActivityByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigTimePointRewardActivityByActivityId.HandleId, "db_timepointrewardactivity.db", "select BinData from `TimePointRewardActivity` where ActivityId = ?");
 		}
 
-		// Token: 0x06003B6A RID: 15210 RVA: 0x001A9B84 File Offset: 0x001A7D84
+		// Token: 0x06004068 RID: 16488 RVA: 0x001C8F18 File Offset: 0x001C7118
 		[NullableContext(2)]
 		public static IReadOnlyList<TimePointRewardActivity> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400451B RID: 17691
+		// Token: 0x04004AEE RID: 19182
 		private const string DB = "db_timepointrewardactivity.db";
 
-		// Token: 0x0400451C RID: 17692
+		// Token: 0x04004AEF RID: 19183
 		private const string FILE = "d.定点奖励领取活动.xlsx";
 
-		// Token: 0x0400451D RID: 17693
+		// Token: 0x04004AF0 RID: 19184
 		private const string TABLE = "TimePointRewardActivity";
 
-		// Token: 0x0400451E RID: 17694
+		// Token: 0x04004AF1 RID: 19185
 		private const string COMMAND = "select BinData from `TimePointRewardActivity` where ActivityId = ?";
 
-		// Token: 0x0400451F RID: 17695
+		// Token: 0x04004AF2 RID: 19186
 		private const string KEY_PREFIX = "TimePointRewardActivityByActivityId";
 
-		// Token: 0x04004520 RID: 17696
+		// Token: 0x04004AF3 RID: 19187
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004521 RID: 17697
+		// Token: 0x04004AF4 RID: 19188
 		private static int HandleId;
 	}
 }

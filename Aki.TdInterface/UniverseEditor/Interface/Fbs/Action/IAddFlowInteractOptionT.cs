@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006129 RID: 24873
+	// Token: 0x0200678E RID: 26510
 	public class IAddFlowInteractOptionT
 	{
-		// Token: 0x1700B752 RID: 46930
-		// (get) Token: 0x0602A84D RID: 174157 RVA: 0x005DAF21 File Offset: 0x005D9121
-		// (set) Token: 0x0602A84E RID: 174158 RVA: 0x005DAF29 File Offset: 0x005D9129
+		// Token: 0x1700C0C2 RID: 49346
+		// (get) Token: 0x0602CF46 RID: 184134 RVA: 0x006250FD File Offset: 0x006232FD
+		// (set) Token: 0x0602CF47 RID: 184135 RVA: 0x00625105 File Offset: 0x00623305
 		public IInteractOptionT Option { get; set; }
 
-		// Token: 0x1700B753 RID: 46931
-		// (get) Token: 0x0602A84F RID: 174159 RVA: 0x005DAF32 File Offset: 0x005D9132
-		// (set) Token: 0x0602A850 RID: 174160 RVA: 0x005DAF3A File Offset: 0x005D913A
+		// Token: 0x1700C0C3 RID: 49347
+		// (get) Token: 0x0602CF48 RID: 184136 RVA: 0x0062510E File Offset: 0x0062330E
+		// (set) Token: 0x0602CF49 RID: 184137 RVA: 0x00625116 File Offset: 0x00623316
 		public int EntityId { get; set; }
 
-		// Token: 0x1700B754 RID: 46932
-		// (get) Token: 0x0602A851 RID: 174161 RVA: 0x005DAF43 File Offset: 0x005D9143
-		// (set) Token: 0x0602A852 RID: 174162 RVA: 0x005DAF4B File Offset: 0x005D914B
+		// Token: 0x1700C0C4 RID: 49348
+		// (get) Token: 0x0602CF4A RID: 184138 RVA: 0x0062511F File Offset: 0x0062331F
+		// (set) Token: 0x0602CF4B RID: 184139 RVA: 0x00625127 File Offset: 0x00623327
 		public bool DelayRemoveByQuestEnd { get; set; }
 
-		// Token: 0x1700B755 RID: 46933
-		// (get) Token: 0x0602A853 RID: 174163 RVA: 0x005DAF54 File Offset: 0x005D9154
-		// (set) Token: 0x0602A854 RID: 174164 RVA: 0x005DAF5C File Offset: 0x005D915C
+		// Token: 0x1700C0C5 RID: 49349
+		// (get) Token: 0x0602CF4C RID: 184140 RVA: 0x00625130 File Offset: 0x00623330
+		// (set) Token: 0x0602CF4D RID: 184141 RVA: 0x00625138 File Offset: 0x00623338
 		public string InteractToken { get; set; }
 
-		// Token: 0x1700B756 RID: 46934
-		// (get) Token: 0x0602A855 RID: 174165 RVA: 0x005DAF65 File Offset: 0x005D9165
-		// (set) Token: 0x0602A856 RID: 174166 RVA: 0x005DAF6D File Offset: 0x005D916D
+		// Token: 0x1700C0C6 RID: 49350
+		// (get) Token: 0x0602CF4E RID: 184142 RVA: 0x00625141 File Offset: 0x00623341
+		// (set) Token: 0x0602CF4F RID: 184143 RVA: 0x00625149 File Offset: 0x00623349
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A857 RID: 174167 RVA: 0x005DAF76 File Offset: 0x005D9176
+		// Token: 0x0602CF50 RID: 184144 RVA: 0x00625152 File Offset: 0x00623352
 		public IAddFlowInteractOptionT()
 		{
 			this.Option = null;

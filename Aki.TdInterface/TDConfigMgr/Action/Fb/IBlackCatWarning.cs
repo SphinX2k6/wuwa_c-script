@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002750 RID: 10064
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A1C RID: 10780
 	public class IBlackCatWarning : ICommonTipType
 	{
-		// Token: 0x0600E039 RID: 57401 RVA: 0x00212D33 File Offset: 0x00210F33
+		// Token: 0x0600EE39 RID: 60985 RVA: 0x0022F86B File Offset: 0x0022DA6B
 		public static IBlackCatWarning Create(IBlackCatWarning? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700435B RID: 17243
-		// (get) Token: 0x0600E03A RID: 57402 RVA: 0x00212D52 File Offset: 0x00210F52
+		// Token: 0x170046AF RID: 18095
+		// (get) Token: 0x0600EE3A RID: 60986 RVA: 0x0022F88A File Offset: 0x0022DA8A
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700435C RID: 17244
-		// (get) Token: 0x0600E03B RID: 57403 RVA: 0x00212D5F File Offset: 0x00210F5F
+		// Token: 0x170046B0 RID: 18096
+		// (get) Token: 0x0600EE3B RID: 60987 RVA: 0x0022F897 File Offset: 0x0022DA97
 		public virtual string WarningText
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C4E RID: 31822
+		// Token: 0x040082FC RID: 33532
 		private IBlackCatWarning Instance;
 	}
 }

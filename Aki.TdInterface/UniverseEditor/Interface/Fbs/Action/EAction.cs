@@ -2,816 +2,846 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F03 RID: 24323
+	// Token: 0x02006546 RID: 25926
 	public enum EAction : ushort
 	{
-		// Token: 0x0400FA09 RID: 64009
+		// Token: 0x0401076D RID: 67437
 		Undefined,
-		// Token: 0x0400FA0A RID: 64010
+		// Token: 0x0401076E RID: 67438
 		Activate,
-		// Token: 0x0400FA0B RID: 64011
+		// Token: 0x0401076F RID: 67439
 		AccpetCurrentQuest,
-		// Token: 0x0400FA0C RID: 64012
+		// Token: 0x04010770 RID: 67440
 		AddFlowInteractOption,
-		// Token: 0x0400FA0D RID: 64013
+		// Token: 0x04010771 RID: 67441
 		SetTime,
-		// Token: 0x0400FA0E RID: 64014
+		// Token: 0x04010772 RID: 67442
 		AwakeEntity,
-		// Token: 0x0400FA0F RID: 64015
+		// Token: 0x04010773 RID: 67443
 		CalculateVar,
-		// Token: 0x0400FA10 RID: 64016
+		// Token: 0x04010774 RID: 67444
 		RandomVar,
-		// Token: 0x0400FA11 RID: 64017
+		// Token: 0x04010775 RID: 67445
 		CallByCondition,
-		// Token: 0x0400FA12 RID: 64018
+		// Token: 0x04010776 RID: 67446
 		CallFunction,
-		// Token: 0x0400FA13 RID: 64019
+		// Token: 0x04010777 RID: 67447
 		CameraLookAt,
-		// Token: 0x0400FA14 RID: 64020
+		// Token: 0x04010778 RID: 67448
 		StopCameraLookAt,
-		// Token: 0x0400FA15 RID: 64021
+		// Token: 0x04010779 RID: 67449
 		EnableHostility,
-		// Token: 0x0400FA16 RID: 64022
+		// Token: 0x0401077A RID: 67450
 		ChangeActorState,
-		// Token: 0x0400FA17 RID: 64023
+		// Token: 0x0401077B RID: 67451
 		ChangeBehaviorState,
-		// Token: 0x0400FA18 RID: 64024
+		// Token: 0x0401077C RID: 67452
 		ChangeEntityState,
-		// Token: 0x0400FA19 RID: 64025
+		// Token: 0x0401077D RID: 67453
 		ChangeNpcPerformState,
-		// Token: 0x0400FA1A RID: 64026
+		// Token: 0x0401077E RID: 67454
 		ChangeInteractOptionText,
-		// Token: 0x0400FA1B RID: 64027
+		// Token: 0x0401077F RID: 67455
 		ChangeOtherState,
-		// Token: 0x0400FA1C RID: 64028
+		// Token: 0x04010780 RID: 67456
 		ChangeRandomState,
-		// Token: 0x0400FA1D RID: 64029
+		// Token: 0x04010781 RID: 67457
 		ChangeState,
-		// Token: 0x0400FA1E RID: 64030
+		// Token: 0x04010782 RID: 67458
 		Collect,
-		// Token: 0x0400FA1F RID: 64031
+		// Token: 0x04010783 RID: 67459
 		CompleteChildQuest,
-		// Token: 0x0400FA20 RID: 64032
+		// Token: 0x04010784 RID: 67460
 		Destroy,
-		// Token: 0x0400FA21 RID: 64033
+		// Token: 0x04010785 RID: 67461
 		DestroyAllChild,
-		// Token: 0x0400FA22 RID: 64034
+		// Token: 0x04010786 RID: 67462
 		DestroyEntity,
-		// Token: 0x0400FA23 RID: 64035
+		// Token: 0x04010787 RID: 67463
 		DestroySelf,
-		// Token: 0x0400FA24 RID: 64036
+		// Token: 0x04010788 RID: 67464
 		DoCalculate,
-		// Token: 0x0400FA25 RID: 64037
+		// Token: 0x04010789 RID: 67465
 		EnableFunction,
-		// Token: 0x0400FA26 RID: 64038
+		// Token: 0x0401078A RID: 67466
 		EnableClientFunction,
-		// Token: 0x0400FA27 RID: 64039
+		// Token: 0x0401078B RID: 67467
 		FaceToPos,
-		// Token: 0x0400FA28 RID: 64040
+		// Token: 0x0401078C RID: 67468
 		FinishDoInteract,
-		// Token: 0x0400FA29 RID: 64041
+		// Token: 0x0401078D RID: 67469
 		FinishState,
-		// Token: 0x0400FA2A RID: 64042
+		// Token: 0x0401078E RID: 67470
 		FinishTalk,
-		// Token: 0x0400FA2B RID: 64043
+		// Token: 0x0401078F RID: 67471
 		GetItem,
-		// Token: 0x0400FA2C RID: 64044
+		// Token: 0x04010790 RID: 67472
 		DestroyQuestItem,
-		// Token: 0x0400FA2D RID: 64045
+		// Token: 0x04010791 RID: 67473
 		GuideTrigger,
-		// Token: 0x0400FA2E RID: 64046
+		// Token: 0x04010792 RID: 67474
 		CompleteGuide,
-		// Token: 0x0400FA2F RID: 64047
+		// Token: 0x04010793 RID: 67475
 		Invoke,
-		// Token: 0x0400FA30 RID: 64048
+		// Token: 0x04010794 RID: 67476
 		JumpTalk,
-		// Token: 0x0400FA31 RID: 64049
+		// Token: 0x04010795 RID: 67477
 		Log,
-		// Token: 0x0400FA32 RID: 64050
+		// Token: 0x04010796 RID: 67478
 		MoveToPos,
-		// Token: 0x0400FA33 RID: 64051
+		// Token: 0x04010797 RID: 67479
 		MoveWithSpline,
-		// Token: 0x0400FA34 RID: 64052
+		// Token: 0x04010798 RID: 67480
 		NewMoveWithSpline,
-		// Token: 0x0400FA35 RID: 64053
+		// Token: 0x04010799 RID: 67481
 		StopNewMoveWithSpline,
-		// Token: 0x0400FA36 RID: 64054
+		// Token: 0x0401079A RID: 67482
 		CharacterMoveToPoint,
-		// Token: 0x0400FA37 RID: 64055
+		// Token: 0x0401079B RID: 67483
 		PlayerMoveToPoint,
-		// Token: 0x0400FA38 RID: 64056
+		// Token: 0x0401079C RID: 67484
 		NpcMoveToPoint,
-		// Token: 0x0400FA39 RID: 64057
+		// Token: 0x0401079D RID: 67485
 		OpenSystemBoard,
-		// Token: 0x0400FA3A RID: 64058
+		// Token: 0x0401079E RID: 67486
 		OpenSystemFunction,
-		// Token: 0x0400FA3B RID: 64059
+		// Token: 0x0401079F RID: 67487
 		PlayCustomSequence,
-		// Token: 0x0400FA3C RID: 64060
+		// Token: 0x040107A0 RID: 67488
 		PlayerLookAt,
-		// Token: 0x0400FA3D RID: 64061
+		// Token: 0x040107A1 RID: 67489
 		EntityLookAt,
-		// Token: 0x0400FA3E RID: 64062
+		// Token: 0x040107A2 RID: 67490
 		EntityTurnTo,
-		// Token: 0x0400FA3F RID: 64063
+		// Token: 0x040107A3 RID: 67491
 		CharacterLookAt,
-		// Token: 0x0400FA40 RID: 64064
+		// Token: 0x040107A4 RID: 67492
 		PlayFlow,
-		// Token: 0x0400FA41 RID: 64065
+		// Token: 0x040107A5 RID: 67493
 		PlayMovie,
-		// Token: 0x0400FA42 RID: 64066
+		// Token: 0x040107A6 RID: 67494
 		PlayEffect,
-		// Token: 0x0400FA43 RID: 64067
+		// Token: 0x040107A7 RID: 67495
 		PlayEffect2,
-		// Token: 0x0400FA44 RID: 64068
+		// Token: 0x040107A8 RID: 67496
 		RemoveEffect,
-		// Token: 0x0400FA45 RID: 64069
+		// Token: 0x040107A9 RID: 67497
 		PlayMontage,
-		// Token: 0x0400FA46 RID: 64070
+		// Token: 0x040107AA RID: 67498
 		PlayRegisteredMontage,
-		// Token: 0x0400FA47 RID: 64071
+		// Token: 0x040107AB RID: 67499
 		PlaySequenceData,
-		// Token: 0x0400FA48 RID: 64072
+		// Token: 0x040107AC RID: 67500
 		PlayerInput,
-		// Token: 0x0400FA49 RID: 64073
+		// Token: 0x040107AD RID: 67501
 		Prompt,
-		// Token: 0x0400FA4A RID: 64074
+		// Token: 0x040107AE RID: 67502
 		AddPlayBubble,
-		// Token: 0x0400FA4B RID: 64075
+		// Token: 0x040107AF RID: 67503
 		PlayBubble,
-		// Token: 0x0400FA4C RID: 64076
+		// Token: 0x040107B0 RID: 67504
 		ClearPlayBubble,
-		// Token: 0x0400FA4D RID: 64077
+		// Token: 0x040107B1 RID: 67505
 		EnableAI,
-		// Token: 0x0400FA4E RID: 64078
+		// Token: 0x040107B2 RID: 67506
 		RemoveFlowInteractOption,
-		// Token: 0x0400FA4F RID: 64079
+		// Token: 0x040107B3 RID: 67507
 		SendNpcMail,
-		// Token: 0x0400FA50 RID: 64080
+		// Token: 0x040107B4 RID: 67508
 		SetBehaviorIsPaused,
-		// Token: 0x0400FA51 RID: 64081
+		// Token: 0x040107B5 RID: 67509
 		SetCameraMode,
-		// Token: 0x0400FA52 RID: 64082
+		// Token: 0x040107B6 RID: 67510
 		SetEntityVisible,
-		// Token: 0x0400FA53 RID: 64083
+		// Token: 0x040107B7 RID: 67511
 		SetEntityClientVisible,
-		// Token: 0x0400FA54 RID: 64084
+		// Token: 0x040107B8 RID: 67512
 		SetEntityClientVisibleSave,
-		// Token: 0x0400FA55 RID: 64085
+		// Token: 0x040107B9 RID: 67513
 		SetHeadIconVisible,
-		// Token: 0x0400FA56 RID: 64086
+		// Token: 0x040107BA RID: 67514
 		SetMoveSpeed,
-		// Token: 0x0400FA57 RID: 64087
+		// Token: 0x040107BB RID: 67515
 		SetNumberVar,
-		// Token: 0x0400FA58 RID: 64088
+		// Token: 0x040107BC RID: 67516
 		SetPlotMode,
-		// Token: 0x0400FA59 RID: 64089
+		// Token: 0x040107BD RID: 67517
 		SetPos,
-		// Token: 0x0400FA5A RID: 64090
+		// Token: 0x040107BE RID: 67518
 		SetVar,
-		// Token: 0x0400FA5B RID: 64091
+		// Token: 0x040107BF RID: 67519
 		SetActorVar,
-		// Token: 0x0400FA5C RID: 64092
+		// Token: 0x040107C0 RID: 67520
 		ShowCenterText,
-		// Token: 0x0400FA5D RID: 64093
+		// Token: 0x040107C1 RID: 67521
 		ShowMessage,
-		// Token: 0x0400FA5E RID: 64094
+		// Token: 0x040107C2 RID: 67522
 		ShowTalk,
-		// Token: 0x0400FA5F RID: 64095
+		// Token: 0x040107C3 RID: 67523
+		ModifySceneUiSubtitle,
+		// Token: 0x040107C4 RID: 67524
 		SimpleMove,
-		// Token: 0x0400FA60 RID: 64096
+		// Token: 0x040107C5 RID: 67525
 		SpawnChild,
-		// Token: 0x0400FA61 RID: 64097
+		// Token: 0x040107C6 RID: 67526
 		SpawnEntity,
-		// Token: 0x0400FA62 RID: 64098
+		// Token: 0x040107C7 RID: 67527
 		SyncVarToActorState,
-		// Token: 0x0400FA63 RID: 64099
+		// Token: 0x040107C8 RID: 67528
 		Wait,
-		// Token: 0x0400FA64 RID: 64100
+		// Token: 0x040107C9 RID: 67529
+		ModifyEntityDecoration,
+		// Token: 0x040107CA RID: 67530
 		AddBuffToEntity,
-		// Token: 0x0400FA65 RID: 64101
+		// Token: 0x040107CB RID: 67531
 		AddBuffToPlayer,
-		// Token: 0x0400FA66 RID: 64102
+		// Token: 0x040107CC RID: 67532
 		AddBuffToFollowShooter,
-		// Token: 0x0400FA67 RID: 64103
+		// Token: 0x040107CD RID: 67533
 		LockEntity,
-		// Token: 0x0400FA68 RID: 64104
+		// Token: 0x040107CE RID: 67534
 		UnlockEntity,
-		// Token: 0x0400FA69 RID: 64105
+		// Token: 0x040107CF RID: 67535
 		SetForceLock,
-		// Token: 0x0400FA6A RID: 64106
+		// Token: 0x040107D0 RID: 67536
 		SetAreaState,
-		// Token: 0x0400FA6B RID: 64107
+		// Token: 0x040107D1 RID: 67537
 		SetWuYinQuState,
-		// Token: 0x0400FA6C RID: 64108
+		// Token: 0x040107D2 RID: 67538
 		RemoveBuffFromEntity,
-		// Token: 0x0400FA6D RID: 64109
+		// Token: 0x040107D3 RID: 67539
 		RemoveBuffFromPlayer,
-		// Token: 0x0400FA6E RID: 64110
+		// Token: 0x040107D4 RID: 67540
 		SetPlayerMoveControl,
-		// Token: 0x0400FA6F RID: 64111
+		// Token: 0x040107D5 RID: 67541
 		UnlockTeleportTrigger,
-		// Token: 0x0400FA70 RID: 64112
+		// Token: 0x040107D6 RID: 67542
 		ChangeTeamPosition,
-		// Token: 0x0400FA71 RID: 64113
+		// Token: 0x040107D7 RID: 67543
 		ClientChangeTeamPosition,
-		// Token: 0x0400FA72 RID: 64114
+		// Token: 0x040107D8 RID: 67544
 		ClaimLevelPlayReward,
-		// Token: 0x0400FA73 RID: 64115
+		// Token: 0x040107D9 RID: 67545
 		ClaimDynamicEntityReward,
-		// Token: 0x0400FA74 RID: 64116
+		// Token: 0x040107DA RID: 67546
 		SetReviveRegion,
-		// Token: 0x0400FA75 RID: 64117
+		// Token: 0x040107DB RID: 67547
 		PromptQuestChapterUI,
-		// Token: 0x0400FA76 RID: 64118
+		// Token: 0x040107DC RID: 67548
 		FireBullet,
-		// Token: 0x0400FA77 RID: 64119
+		// Token: 0x040107DD RID: 67549
 		FireBulletEffect,
-		// Token: 0x0400FA78 RID: 64120
+		// Token: 0x040107DE RID: 67550
+		SetAssistCharacterPos,
+		// Token: 0x040107DF RID: 67551
 		SetPlayerPos,
-		// Token: 0x0400FA79 RID: 64121
+		// Token: 0x040107E0 RID: 67552
 		ClientSetPlayerPos,
-		// Token: 0x0400FA7A RID: 64122
+		// Token: 0x040107E1 RID: 67553
 		ClientPreEnableSubLevels,
-		// Token: 0x0400FA7B RID: 64123
+		// Token: 0x040107E2 RID: 67554
 		ChangeSelfEntityState,
-		// Token: 0x0400FA7C RID: 64124
+		// Token: 0x040107E3 RID: 67555
 		InterludeActions,
-		// Token: 0x0400FA7D RID: 64125
+		// Token: 0x040107E4 RID: 67556
 		AddBuffToTriggeredEntity,
-		// Token: 0x0400FA7E RID: 64126
+		// Token: 0x040107E5 RID: 67557
 		RemoveBuffToTriggeredEntity,
-		// Token: 0x0400FA7F RID: 64127
+		// Token: 0x040107E6 RID: 67558
 		DetectTrigger,
-		// Token: 0x0400FA80 RID: 64128
+		// Token: 0x040107E7 RID: 67559
 		ItemFoundationMatch,
-		// Token: 0x0400FA81 RID: 64129
+		// Token: 0x040107E8 RID: 67560
 		SetBattleState,
-		// Token: 0x0400FA82 RID: 64130
+		// Token: 0x040107E9 RID: 67561
 		WaitBattleCondition,
-		// Token: 0x0400FA83 RID: 64131
+		// Token: 0x040107EA RID: 67562
+		SendBattleTag,
+		// Token: 0x040107EB RID: 67563
 		UnlockSystemItem,
-		// Token: 0x0400FA84 RID: 64132
+		// Token: 0x040107EC RID: 67564
 		ClientUnlockAchievementSystemItem,
-		// Token: 0x0400FA85 RID: 64133
+		// Token: 0x040107ED RID: 67565
 		RunActions,
-		// Token: 0x0400FA86 RID: 64134
+		// Token: 0x040107EE RID: 67566
 		CommonTip,
-		// Token: 0x0400FA87 RID: 64135
+		// Token: 0x040107EF RID: 67567
 		EndCommonTip,
-		// Token: 0x0400FA88 RID: 64136
+		// Token: 0x040107F0 RID: 67568
 		CommonTip2,
-		// Token: 0x0400FA89 RID: 64137
+		// Token: 0x040107F1 RID: 67569
 		EnableNearbyTracking,
-		// Token: 0x0400FA8A RID: 64138
+		// Token: 0x040107F2 RID: 67570
 		EnableLevelPlay,
-		// Token: 0x0400FA8B RID: 64139
+		// Token: 0x040107F3 RID: 67571
 		UnLimitPlayerOperation,
-		// Token: 0x0400FA8C RID: 64140
+		// Token: 0x040107F4 RID: 67572
 		LimitPlayerOperation,
-		// Token: 0x0400FA8D RID: 64141
+		// Token: 0x040107F5 RID: 67573
 		SetPlayerOperationRestriction,
-		// Token: 0x0400FA8E RID: 64142
+		// Token: 0x040107F6 RID: 67574
 		ClientSetPlayerOperationRestriction,
-		// Token: 0x0400FA8F RID: 64143
+		// Token: 0x040107F7 RID: 67575
 		LeisureInteract,
-		// Token: 0x0400FA90 RID: 64144
+		// Token: 0x040107F8 RID: 67576
 		NpcLeisureInteract,
-		// Token: 0x0400FA91 RID: 64145
+		// Token: 0x040107F9 RID: 67577
 		ChangePhantom,
-		// Token: 0x0400FA92 RID: 64146
+		// Token: 0x040107FA RID: 67578
 		RestorePhantom,
-		// Token: 0x0400FA93 RID: 64147
+		// Token: 0x040107FB RID: 67579
 		TakePlotPhoto,
-		// Token: 0x0400FA94 RID: 64148
+		// Token: 0x040107FC RID: 67580
 		OpenQte,
-		// Token: 0x0400FA95 RID: 64149
+		// Token: 0x040107FD RID: 67581
 		Preload,
-		// Token: 0x0400FA96 RID: 64150
+		// Token: 0x040107FE RID: 67582
 		RemovePreloadResource,
-		// Token: 0x0400FA97 RID: 64151
+		// Token: 0x040107FF RID: 67583
 		ExecAlertSystemAction,
-		// Token: 0x0400FA98 RID: 64152
+		// Token: 0x04010800 RID: 67584
 		RecordDungeonEvent,
-		// Token: 0x0400FA99 RID: 64153
+		// Token: 0x04010801 RID: 67585
 		ResetLevelPlay,
-		// Token: 0x0400FA9A RID: 64154
+		// Token: 0x04010802 RID: 67586
 		SetAreaTimeState,
-		// Token: 0x0400FA9B RID: 64155
+		// Token: 0x04010803 RID: 67587
 		GetRewardByInteract,
-		// Token: 0x0400FA9C RID: 64156
+		// Token: 0x04010804 RID: 67588
 		WaitUntilLevelSequenceReachMark,
-		// Token: 0x0400FA9D RID: 64157
+		// Token: 0x04010805 RID: 67589
 		EnableKey4Func,
-		// Token: 0x0400FA9E RID: 64158
+		// Token: 0x04010806 RID: 67590
 		OpenQuickHackSystem,
-		// Token: 0x0400FA9F RID: 64159
+		// Token: 0x04010807 RID: 67591
 		GuestOperateUiAnimation,
-		// Token: 0x0400FAA0 RID: 64160
+		// Token: 0x04010808 RID: 67592
 		VehicleEnter,
-		// Token: 0x0400FAA1 RID: 64161
+		// Token: 0x04010809 RID: 67593
 		VehicleEnterNpc,
-		// Token: 0x0400FAA2 RID: 64162
+		// Token: 0x0401080A RID: 67594
 		VehicleExitPlayer,
-		// Token: 0x0400FAA3 RID: 64163
+		// Token: 0x0401080B RID: 67595
 		VehicleExitNpc,
-		// Token: 0x0400FAA4 RID: 64164
+		// Token: 0x0401080C RID: 67596
 		VehicleTeleport,
-		// Token: 0x0400FAA5 RID: 64165
+		// Token: 0x0401080D RID: 67597
 		ClientVehicleTeleport,
-		// Token: 0x0400FAA6 RID: 64166
+		// Token: 0x0401080E RID: 67598
 		VehiclePlayPassengerVoice,
-		// Token: 0x0400FAA7 RID: 64167
+		// Token: 0x0401080F RID: 67599
 		VehicleWaterfallClimbing,
-		// Token: 0x0400FAA8 RID: 64168
+		// Token: 0x04010810 RID: 67600
 		TeleportToAndEnterVehicle,
-		// Token: 0x0400FAA9 RID: 64169
+		// Token: 0x04010811 RID: 67601
 		VehicleMoveWithPathLine,
-		// Token: 0x0400FAAA RID: 64170
+		// Token: 0x04010812 RID: 67602
 		VehicleSprint,
-		// Token: 0x0400FAAB RID: 64171
+		// Token: 0x04010813 RID: 67603
 		VehicleSetSpeedImmediately,
-		// Token: 0x0400FAAC RID: 64172
+		// Token: 0x04010814 RID: 67604
 		TeleportDungeon,
-		// Token: 0x0400FAAD RID: 64173
+		// Token: 0x04010815 RID: 67605
 		SettlementDungeon,
-		// Token: 0x0400FAAE RID: 64174
+		// Token: 0x04010816 RID: 67606
 		ClaimDungeonReward,
-		// Token: 0x0400FAAF RID: 64175
+		// Token: 0x04010817 RID: 67607
 		ExitDungeon,
-		// Token: 0x0400FAB0 RID: 64176
+		// Token: 0x04010818 RID: 67608
 		UnlockDungeonEntry,
-		// Token: 0x0400FAB1 RID: 64177
+		// Token: 0x04010819 RID: 67609
 		FinishDungeon,
-		// Token: 0x0400FAB2 RID: 64178
+		// Token: 0x0401081A RID: 67610
 		StopUiScreenEffect,
-		// Token: 0x0400FAB3 RID: 64179
+		// Token: 0x0401081B RID: 67611
 		StartFlowTemplate,
-		// Token: 0x0400FAB4 RID: 64180
+		// Token: 0x0401081C RID: 67612
 		BeginFlowTemplate,
-		// Token: 0x0400FAB5 RID: 64181
+		// Token: 0x0401081D RID: 67613
 		ChangeFlowTemplate,
-		// Token: 0x0400FAB6 RID: 64182
+		// Token: 0x0401081E RID: 67614
 		SetFlowTemplate,
-		// Token: 0x0400FAB7 RID: 64183
+		// Token: 0x0401081F RID: 67615
 		EndFlowTemplate,
-		// Token: 0x0400FAB8 RID: 64184
+		// Token: 0x04010820 RID: 67616
 		CloseFlowTemplate,
-		// Token: 0x0400FAB9 RID: 64185
+		// Token: 0x04010821 RID: 67617
 		SendAiEvent,
-		// Token: 0x0400FABA RID: 64186
+		// Token: 0x04010822 RID: 67618
 		FadeInScreen,
-		// Token: 0x0400FABB RID: 64187
+		// Token: 0x04010823 RID: 67619
 		FadeOutScreen,
-		// Token: 0x0400FABC RID: 64188
+		// Token: 0x04010824 RID: 67620
 		ChangeFightTeam,
-		// Token: 0x0400FABD RID: 64189
+		// Token: 0x04010825 RID: 67621
 		ManualOccupations,
-		// Token: 0x0400FABE RID: 64190
+		// Token: 0x04010826 RID: 67622
 		AddTrialCharacter,
-		// Token: 0x0400FABF RID: 64191
+		// Token: 0x04010827 RID: 67623
 		UpdateTrialCharacter,
-		// Token: 0x0400FAC0 RID: 64192
+		// Token: 0x04010828 RID: 67624
 		RestoreTrialCharacter,
-		// Token: 0x0400FAC1 RID: 64193
+		// Token: 0x04010829 RID: 67625
 		RemoveTrialCharacter,
-		// Token: 0x0400FAC2 RID: 64194
+		// Token: 0x0401082A RID: 67626
 		AddGuestCharacter,
-		// Token: 0x0400FAC3 RID: 64195
+		// Token: 0x0401082B RID: 67627
 		RemoveGuestCharacter,
-		// Token: 0x0400FAC4 RID: 64196
+		// Token: 0x0401082C RID: 67628
 		AddTrialFollowShooter,
-		// Token: 0x0400FAC5 RID: 64197
+		// Token: 0x0401082D RID: 67629
 		RemoveTrialFollowShooter,
-		// Token: 0x0400FAC6 RID: 64198
+		// Token: 0x0401082E RID: 67630
 		EnableFollowShooterAbility,
-		// Token: 0x0400FAC7 RID: 64199
+		// Token: 0x0401082F RID: 67631
+		FollowShooterLeisureInteract,
+		// Token: 0x04010830 RID: 67632
 		ClientFollowShooterLeisureInteract,
-		// Token: 0x0400FAC8 RID: 64200
+		// Token: 0x04010831 RID: 67633
 		DestroyQuest,
-		// Token: 0x0400FAC9 RID: 64201
+		// Token: 0x04010832 RID: 67634
 		SetCameraAnim,
-		// Token: 0x0400FACA RID: 64202
+		// Token: 0x04010833 RID: 67635
 		RotatorEntity,
-		// Token: 0x0400FACB RID: 64203
+		// Token: 0x04010834 RID: 67636
 		TraceSpline,
-		// Token: 0x0400FACC RID: 64204
+		// Token: 0x04010835 RID: 67637
 		ToggleScanSplineEffect,
-		// Token: 0x0400FACD RID: 64205
+		// Token: 0x04010836 RID: 67638
 		ChangeTimer,
-		// Token: 0x0400FACE RID: 64206
+		// Token: 0x04010837 RID: 67639
 		ToggleTimerPauseState,
-		// Token: 0x0400FACF RID: 64207
+		// Token: 0x04010838 RID: 67640
 		EnableSystem,
-		// Token: 0x0400FAD0 RID: 64208
+		// Token: 0x04010839 RID: 67641
 		PostAkEvent,
-		// Token: 0x0400FAD1 RID: 64209
+		// Token: 0x0401083A RID: 67642
 		MoveSceneItem,
-		// Token: 0x0400FAD2 RID: 64210
+		// Token: 0x0401083B RID: 67643
 		StopSceneItemMove,
-		// Token: 0x0400FAD3 RID: 64211
+		// Token: 0x0401083C RID: 67644
 		ChangeLiftTarget,
-		// Token: 0x0400FAD4 RID: 64212
+		// Token: 0x0401083D RID: 67645
 		HideByRangeInFlow,
-		// Token: 0x0400FAD5 RID: 64213
+		// Token: 0x0401083E RID: 67646
 		ShowAllHidedGroupInFlow,
-		// Token: 0x0400FAD6 RID: 64214
+		// Token: 0x0401083F RID: 67647
 		OpenSimpleGameplay,
-		// Token: 0x0400FAD7 RID: 64215
-		CloseSimpleGameplay,
-		// Token: 0x0400FAD8 RID: 64216
+		// Token: 0x04010840 RID: 67648
+		ToggleRideFlyingCarUiGameplay,
+		// Token: 0x04010841 RID: 67649
 		ChangeActorTalker,
-		// Token: 0x0400FAD9 RID: 64217
+		// Token: 0x04010842 RID: 67650
 		SwitchSubLevels,
-		// Token: 0x0400FADA RID: 64218
+		// Token: 0x04010843 RID: 67651
 		SwitchDataLayers,
-		// Token: 0x0400FADB RID: 64219
+		// Token: 0x04010844 RID: 67652
 		ActivateResetPoint,
-		// Token: 0x0400FADC RID: 64220
+		// Token: 0x04010845 RID: 67653
 		TeleportToLatestResetPoint,
-		// Token: 0x0400FADD RID: 64221
+		// Token: 0x04010846 RID: 67654
 		SetWeather,
-		// Token: 0x0400FADE RID: 64222
+		// Token: 0x04010847 RID: 67655
 		SetTimeLockState,
-		// Token: 0x0400FADF RID: 64223
+		// Token: 0x04010848 RID: 67656
 		SetWeatherLockState,
-		// Token: 0x0400FAE0 RID: 64224
+		// Token: 0x04010849 RID: 67657
 		AdjustPlayerCamera,
-		// Token: 0x0400FAE1 RID: 64225
+		// Token: 0x0401084A RID: 67658
 		AdjustPlayerCameraGravity,
-		// Token: 0x0400FAE2 RID: 64226
+		// Token: 0x0401084B RID: 67659
 		RestorePlayerCameraAdjustment,
-		// Token: 0x0400FAE3 RID: 64227
+		// Token: 0x0401084C RID: 67660
 		EnterMovieCamera,
-		// Token: 0x0400FAE4 RID: 64228
+		// Token: 0x0401084D RID: 67661
 		ExitMovieCamera,
-		// Token: 0x0400FAE5 RID: 64229
+		// Token: 0x0401084E RID: 67662
 		ResetPlayerCameraFocus,
-		// Token: 0x0400FAE6 RID: 64230
+		// Token: 0x0401084F RID: 67663
 		UsePhantomSkill,
-		// Token: 0x0400FAE7 RID: 64231
+		// Token: 0x04010850 RID: 67664
 		ChangePhantomFormation,
-		// Token: 0x0400FAE8 RID: 64232
+		// Token: 0x04010851 RID: 67665
 		RestorePhantomFormation,
-		// Token: 0x0400FAE9 RID: 64233
+		// Token: 0x04010852 RID: 67666
 		EnterOrbitalCamera,
-		// Token: 0x0400FAEA RID: 64234
+		// Token: 0x04010853 RID: 67667
 		ExitOrbitalCamera,
-		// Token: 0x0400FAEB RID: 64235
+		// Token: 0x04010854 RID: 67668
 		EnableSplineMoveModel,
-		// Token: 0x0400FAEC RID: 64236
+		// Token: 0x04010855 RID: 67669
 		SetSportsState,
-		// Token: 0x0400FAED RID: 64237
+		// Token: 0x04010856 RID: 67670
 		PlayLevelSequence,
-		// Token: 0x0400FAEE RID: 64238
+		// Token: 0x04010857 RID: 67671
 		EnableTakePhotoClip,
-		// Token: 0x0400FAEF RID: 64239
+		// Token: 0x04010858 RID: 67672
 		SetExploreState,
-		// Token: 0x0400FAF0 RID: 64240
+		// Token: 0x04010859 RID: 67673
 		EnableAoiNotify,
-		// Token: 0x0400FAF1 RID: 64241
+		// Token: 0x0401085A RID: 67674
 		ChangeEntityPrefabPerformance,
-		// Token: 0x0400FAF2 RID: 64242
+		// Token: 0x0401085B RID: 67675
 		ModifySceneItemAttributeTag,
-		// Token: 0x0400FAF3 RID: 64243
+		// Token: 0x0401085C RID: 67676
 		ClientModifyTargetTag,
-		// Token: 0x0400FAF4 RID: 64244
+		// Token: 0x0401085D RID: 67677
 		ToggleMapMarkState,
-		// Token: 0x0400FAF5 RID: 64245
+		// Token: 0x0401085E RID: 67678
 		FocusOnMapMark,
-		// Token: 0x0400FAF6 RID: 64246
+		// Token: 0x0401085F RID: 67679
 		ToggleHighlightExploreUi,
-		// Token: 0x0400FAF7 RID: 64247
+		// Token: 0x04010860 RID: 67680
 		EnableTemporaryTeleport,
-		// Token: 0x0400FAF8 RID: 64248
+		// Token: 0x04010861 RID: 67681
 		SetTeleControl,
-		// Token: 0x0400FAF9 RID: 64249
+		// Token: 0x04010862 RID: 67682
 		ActiveAntiGravitySafePoint,
-		// Token: 0x0400FAFA RID: 64250
+		// Token: 0x04010863 RID: 67683
 		TriggerSpecificScanEffect,
-		// Token: 0x0400FAFB RID: 64251
+		// Token: 0x04010864 RID: 67684
 		SendClientEvent,
-		// Token: 0x0400FAFC RID: 64252
+		// Token: 0x04010865 RID: 67685
 		ClearFishingCabinInSaleItems,
-		// Token: 0x0400FAFD RID: 64253
+		// Token: 0x04010866 RID: 67686
 		AcceptFishingEntrust,
-		// Token: 0x0400FAFE RID: 64254
+		// Token: 0x04010867 RID: 67687
 		DestroyFishingBoat,
-		// Token: 0x0400FAFF RID: 64255
+		// Token: 0x04010868 RID: 67688
 		SlideRailStart,
-		// Token: 0x0400FB00 RID: 64256
+		// Token: 0x04010869 RID: 67689
 		SlideRailEnd,
-		// Token: 0x0400FB01 RID: 64257
+		// Token: 0x0401086A RID: 67690
 		SlidePerformStart,
-		// Token: 0x0400FB02 RID: 64258
+		// Token: 0x0401086B RID: 67691
 		BvbSendSystemEvent,
-		// Token: 0x0400FB03 RID: 64259
+		// Token: 0x0401086C RID: 67692
 		BvbSendAiEvent,
-		// Token: 0x0400FB04 RID: 64260
+		// Token: 0x0401086D RID: 67693
 		BvbPlayDialog,
-		// Token: 0x0400FB05 RID: 64261
+		// Token: 0x0401086E RID: 67694
 		BvbPlayerOperationConstraint,
-		// Token: 0x0400FB06 RID: 64262
+		// Token: 0x0401086F RID: 67695
 		BvbSkipChallenge,
-		// Token: 0x0400FB07 RID: 64263
+		// Token: 0x04010870 RID: 67696
 		SetSpineAnimation,
-		// Token: 0x0400FB08 RID: 64264
+		// Token: 0x04010871 RID: 67697
 		ChangeEntityCamp,
-		// Token: 0x0400FB09 RID: 64265
+		// Token: 0x04010872 RID: 67698
 		TrapDefenseChangeMiniMap,
-		// Token: 0x0400FB0A RID: 64266
+		// Token: 0x04010873 RID: 67699
 		TrapDefensePlayerOperationConstraint,
-		// Token: 0x0400FB0B RID: 64267
+		// Token: 0x04010874 RID: 67700
 		RogueGotoNextFloor,
-		// Token: 0x0400FB0C RID: 64268
+		// Token: 0x04010875 RID: 67701
 		RogueSelectRoom,
-		// Token: 0x0400FB0D RID: 64269
+		// Token: 0x04010876 RID: 67702
 		RogueActivatePortal,
-		// Token: 0x0400FB0E RID: 64270
+		// Token: 0x04010877 RID: 67703
 		RogueReceiveReward,
-		// Token: 0x0400FB0F RID: 64271
+		// Token: 0x04010878 RID: 67704
 		ExecRiskHarvestEffect,
-		// Token: 0x0400FB10 RID: 64272
+		// Token: 0x04010879 RID: 67705
 		MowingTowerGotoNextFloor,
-		// Token: 0x0400FB11 RID: 64273
+		// Token: 0x0401087A RID: 67706
 		SlashAndTowerGotoNextFloor,
-		// Token: 0x0400FB12 RID: 64274
+		// Token: 0x0401087B RID: 67707
 		RoleTowerGotoNextFloor,
-		// Token: 0x0400FB13 RID: 64275
+		// Token: 0x0401087C RID: 67708
 		DangoAbyssActivatePortal,
-		// Token: 0x0400FB14 RID: 64276
+		// Token: 0x0401087D RID: 67709
 		DangoAbyssGotoNextFloor,
-		// Token: 0x0400FB15 RID: 64277
+		// Token: 0x0401087E RID: 67710
 		DangoAbyssCreateRewardTreasureBox,
-		// Token: 0x0400FB16 RID: 64278
+		// Token: 0x0401087F RID: 67711
 		DangoAbyssReceiveReward,
-		// Token: 0x0400FB17 RID: 64279
+		// Token: 0x04010880 RID: 67712
 		RoverRogueRoomFinish,
-		// Token: 0x0400FB18 RID: 64280
+		// Token: 0x04010881 RID: 67713
 		RoverRogueActivate,
-		// Token: 0x0400FB19 RID: 64281
+		// Token: 0x04010882 RID: 67714
 		RoverRogueCreateRoomReward,
-		// Token: 0x0400FB1A RID: 64282
+		// Token: 0x04010883 RID: 67715
 		EnableActor,
-		// Token: 0x0400FB1B RID: 64283
+		// Token: 0x04010884 RID: 67716
 		ModifyActorMaterial,
-		// Token: 0x0400FB1C RID: 64284
+		// Token: 0x04010885 RID: 67717
 		SpecialOpModifyActorMaterialParamBySplineProgress,
-		// Token: 0x0400FB1D RID: 64285
+		// Token: 0x04010886 RID: 67718
 		ModifyActorMedia,
-		// Token: 0x0400FB1E RID: 64286
+		// Token: 0x04010887 RID: 67719
 		ToggleAirWall,
-		// Token: 0x0400FB1F RID: 64287
+		// Token: 0x04010888 RID: 67720
 		SetDataLayerTransitions,
-		// Token: 0x0400FB20 RID: 64288
+		// Token: 0x04010889 RID: 67721
 		TriggerCameraShake,
-		// Token: 0x0400FB21 RID: 64289
+		// Token: 0x0401088A RID: 67722
 		TriggerGamepadShake,
-		// Token: 0x0400FB22 RID: 64290
+		// Token: 0x0401088B RID: 67723
 		CreatePrefab,
-		// Token: 0x0400FB23 RID: 64291
+		// Token: 0x0401088C RID: 67724
 		DestroyPrefab,
-		// Token: 0x0400FB24 RID: 64292
+		// Token: 0x0401088D RID: 67725
 		ExecBattleAction,
-		// Token: 0x0400FB25 RID: 64293
+		// Token: 0x0401088E RID: 67726
 		ExecClientBattleAction,
-		// Token: 0x0400FB26 RID: 64294
+		// Token: 0x0401088F RID: 67727
 		RecoverDurability,
-		// Token: 0x0400FB27 RID: 64295
+		// Token: 0x04010890 RID: 67728
 		SetRegionConfig,
-		// Token: 0x0400FB28 RID: 64296
+		// Token: 0x04010891 RID: 67729
 		SetJigsawItem,
-		// Token: 0x0400FB29 RID: 64297
+		// Token: 0x04010892 RID: 67730
 		SetJigsawFoundation,
-		// Token: 0x0400FB2A RID: 64298
+		// Token: 0x04010893 RID: 67731
 		ResetEntity,
-		// Token: 0x0400FB2B RID: 64299
+		// Token: 0x04010894 RID: 67732
 		PlayDynamicSettlement,
-		// Token: 0x0400FB2C RID: 64300
+		// Token: 0x04010895 RID: 67733
 		SetInteractionLockState,
-		// Token: 0x0400FB2D RID: 64301
+		// Token: 0x04010896 RID: 67734
 		FinishCondition,
-		// Token: 0x0400FB2E RID: 64302
+		// Token: 0x04010897 RID: 67735
 		ClearEntityVisibleTag,
-		// Token: 0x0400FB2F RID: 64303
+		// Token: 0x04010898 RID: 67736
 		SetEntityPos,
-		// Token: 0x0400FB30 RID: 64304
+		// Token: 0x04010899 RID: 67737
 		ResetEntityPos,
-		// Token: 0x0400FB31 RID: 64305
+		// Token: 0x0401089A RID: 67738
 		ServerSetPlayerPos,
-		// Token: 0x0400FB32 RID: 64306
+		// Token: 0x0401089B RID: 67739
 		FixTeleControllerPos,
-		// Token: 0x0400FB33 RID: 64307
+		// Token: 0x0401089C RID: 67740
 		CustomJson,
-		// Token: 0x0400FB34 RID: 64308
+		// Token: 0x0401089D RID: 67741
 		FixFoundationRelation,
-		// Token: 0x0400FB35 RID: 64309
+		// Token: 0x0401089E RID: 67742
 		FixShowTargetRange,
-		// Token: 0x0400FB36 RID: 64310
+		// Token: 0x0401089F RID: 67743
 		TraceCurrentQuest,
-		// Token: 0x0400FB37 RID: 64311
+		// Token: 0x040108A0 RID: 67744
 		ForceOccupations,
-		// Token: 0x0400FB38 RID: 64312
+		// Token: 0x040108A1 RID: 67745
 		ServerForceEnableLevelPlay,
-		// Token: 0x0400FB39 RID: 64313
+		// Token: 0x040108A2 RID: 67746
 		TeleportDungeonPos,
-		// Token: 0x0400FB3A RID: 64314
+		// Token: 0x040108A3 RID: 67747
 		SetTimeScale,
-		// Token: 0x0400FB3B RID: 64315
+		// Token: 0x040108A4 RID: 67748
 		FixGetItem,
-		// Token: 0x0400FB3C RID: 64316
+		// Token: 0x040108A5 RID: 67749
 		SetAudioState,
-		// Token: 0x0400FB3D RID: 64317
+		// Token: 0x040108A6 RID: 67750
 		PerformerAiSplineMove,
-		// Token: 0x0400FB3E RID: 64318
+		// Token: 0x040108A7 RID: 67751
 		PerformerAiMoveTo,
-		// Token: 0x0400FB3F RID: 64319
+		// Token: 0x040108A8 RID: 67752
 		EnterPatrolState,
-		// Token: 0x0400FB40 RID: 64320
+		// Token: 0x040108A9 RID: 67753
 		PerformAiHideSelf,
-		// Token: 0x0400FB41 RID: 64321
+		// Token: 0x040108AA RID: 67754
 		ExecResurrection,
-		// Token: 0x0400FB42 RID: 64322
+		// Token: 0x040108AB RID: 67755
 		HideSpecificEntities,
-		// Token: 0x0400FB43 RID: 64323
+		// Token: 0x040108AC RID: 67756
 		ShowSpecificEntities,
-		// Token: 0x0400FB44 RID: 64324
+		// Token: 0x040108AD RID: 67757
 		HideTargetRange,
-		// Token: 0x0400FB45 RID: 64325
+		// Token: 0x040108AE RID: 67758
 		ShowTargetRange,
-		// Token: 0x0400FB46 RID: 64326
+		// Token: 0x040108AF RID: 67759
 		HideGroup,
-		// Token: 0x0400FB47 RID: 64327
+		// Token: 0x040108B0 RID: 67760
 		ShowHidedGroup,
-		// Token: 0x0400FB48 RID: 64328
+		// Token: 0x040108B1 RID: 67761
 		ReignsSetPropertyVisible,
-		// Token: 0x0400FB49 RID: 64329
+		// Token: 0x040108B2 RID: 67762
 		ReignsChangeBackground,
-		// Token: 0x0400FB4A RID: 64330
+		// Token: 0x040108B3 RID: 67763
 		ReignsChangePlayerName,
-		// Token: 0x0400FB4B RID: 64331
+		// Token: 0x040108B4 RID: 67764
 		ReignsCallCard,
-		// Token: 0x0400FB4C RID: 64332
+		// Token: 0x040108B5 RID: 67765
 		ReignsTriggerGuide,
-		// Token: 0x0400FB4D RID: 64333
+		// Token: 0x040108B6 RID: 67766
 		ReignsAddBuff,
-		// Token: 0x0400FB4E RID: 64334
+		// Token: 0x040108B7 RID: 67767
 		ReignsCheckSettle,
-		// Token: 0x0400FB4F RID: 64335
+		// Token: 0x040108B8 RID: 67768
 		HonamiStoryInteractPickUp,
-		// Token: 0x0400FB50 RID: 64336
+		// Token: 0x040108B9 RID: 67769
 		HonamiStoryReceiveCorruptedChestReward,
-		// Token: 0x0400FB51 RID: 64337
+		// Token: 0x040108BA RID: 67770
 		HonamiStoryActivateSafeEvacuation,
-		// Token: 0x0400FB52 RID: 64338
+		// Token: 0x040108BB RID: 67771
 		HonamiStoryGetItem,
-		// Token: 0x0400FB53 RID: 64339
+		// Token: 0x040108BC RID: 67772
 		HonamiStorySetFormation,
-		// Token: 0x0400FB54 RID: 64340
+		// Token: 0x040108BD RID: 67773
 		InfrActivityUpgradeInfrastructure,
-		// Token: 0x0400FB55 RID: 64341
+		// Token: 0x040108BE RID: 67774
 		SetNpcGroupPerform,
-		// Token: 0x0400FB56 RID: 64342
+		// Token: 0x040108BF RID: 67775
 		RemoveNpcGroupPerform,
-		// Token: 0x0400FB57 RID: 64343
+		// Token: 0x040108C0 RID: 67776
 		EnableEntityLookAt,
-		// Token: 0x0400FB58 RID: 64344
+		// Token: 0x040108C1 RID: 67777
 		DisableEntityLookAt,
-		// Token: 0x0400FB59 RID: 64345
+		// Token: 0x040108C2 RID: 67778
 		OverrideAiBehaviorTree,
-		// Token: 0x0400FB5A RID: 64346
+		// Token: 0x040108C3 RID: 67779
 		RestoreAiBehaviorTree,
-		// Token: 0x0400FB5B RID: 64347
+		// Token: 0x040108C4 RID: 67780
 		FlowDefineNpcGroupPerform,
-		// Token: 0x0400FB5C RID: 64348
+		// Token: 0x040108C5 RID: 67781
 		SeqEventAddTagToSelf,
-		// Token: 0x0400FB5D RID: 64349
+		// Token: 0x040108C6 RID: 67782
 		SeqEventFireBullet,
-		// Token: 0x0400FB5E RID: 64350
+		// Token: 0x040108C7 RID: 67783
 		SetMotorSpeed,
-		// Token: 0x0400FB5F RID: 64351
+		// Token: 0x040108C8 RID: 67784
 		StartMotorCruise,
-		// Token: 0x0400FB60 RID: 64352
+		// Token: 0x040108C9 RID: 67785
 		StopMotorCruise,
-		// Token: 0x0400FB61 RID: 64353
+		// Token: 0x040108CA RID: 67786
 		DriveMotorInSpecConfig,
-		// Token: 0x0400FB62 RID: 64354
+		// Token: 0x040108CB RID: 67787
 		MotorSoarInWindField,
-		// Token: 0x0400FB63 RID: 64355
+		// Token: 0x040108CC RID: 67788
 		CollectSunSpirit,
-		// Token: 0x0400FB64 RID: 64356
+		// Token: 0x040108CD RID: 67789
 		PerformSunSpiritGearRoundTrip,
-		// Token: 0x0400FB65 RID: 64357
+		// Token: 0x040108CE RID: 67790
 		TriggerDeadeyeMode,
-		// Token: 0x0400FB66 RID: 64358
+		// Token: 0x040108CF RID: 67791
 		OpenSystemBoardWithReturn,
-		// Token: 0x0400FB67 RID: 64359
+		// Token: 0x040108D0 RID: 67792
 		ResumeSystemRewardPopup,
-		// Token: 0x0400FB68 RID: 64360
+		// Token: 0x040108D1 RID: 67793
 		SummonEntity,
-		// Token: 0x0400FB69 RID: 64361
+		// Token: 0x040108D2 RID: 67794
 		DestroySummonedEntities,
-		// Token: 0x0400FB6A RID: 64362
+		// Token: 0x040108D3 RID: 67795
 		SetupMoraleSystem,
-		// Token: 0x0400FB6B RID: 64363
+		// Token: 0x040108D4 RID: 67796
 		GiantToggleModel,
-		// Token: 0x0400FB6C RID: 64364
+		// Token: 0x040108D5 RID: 67797
 		GiantTriggerResponse,
-		// Token: 0x0400FB6D RID: 64365
+		// Token: 0x040108D6 RID: 67798
 		ActivateGiantTotalProgressNode,
-		// Token: 0x0400FB6E RID: 64366
+		// Token: 0x040108D7 RID: 67799
 		RunActorCustomEvent,
-		// Token: 0x0400FB6F RID: 64367
+		// Token: 0x040108D8 RID: 67800
 		RequestSystemFunction,
-		// Token: 0x0400FB70 RID: 64368
+		// Token: 0x040108D9 RID: 67801
 		PlayWalkingOverlayMontage,
-		// Token: 0x0400FB71 RID: 64369
+		// Token: 0x040108DA RID: 67802
 		ChangeNpcAbpState,
-		// Token: 0x0400FB72 RID: 64370
+		// Token: 0x040108DB RID: 67803
 		CloseWalkingOverlayMontage,
-		// Token: 0x0400FB73 RID: 64371
+		// Token: 0x040108DC RID: 67804
 		SetSkillButtonEffect,
-		// Token: 0x0400FB74 RID: 64372
+		// Token: 0x040108DD RID: 67805
 		ScanEnrichmentArea,
-		// Token: 0x0400FB75 RID: 64373
+		// Token: 0x040108DE RID: 67806
 		TriggerSystemRandomPlot,
-		// Token: 0x0400FB76 RID: 64374
+		// Token: 0x040108DF RID: 67807
 		SetAudioEnable,
-		// Token: 0x0400FB77 RID: 64375
+		// Token: 0x040108E0 RID: 67808
 		PhoneSystemInteract,
-		// Token: 0x0400FB78 RID: 64376
+		// Token: 0x040108E1 RID: 67809
 		RollBlockGetReward,
-		// Token: 0x0400FB79 RID: 64377
+		// Token: 0x040108E2 RID: 67810
 		EnterMovieMode,
-		// Token: 0x0400FB7A RID: 64378
+		// Token: 0x040108E3 RID: 67811
 		ExitMovieMode,
-		// Token: 0x0400FB7B RID: 64379
+		// Token: 0x040108E4 RID: 67812
 		StartRoadNetworkNavigation,
-		// Token: 0x0400FB7C RID: 64380
+		// Token: 0x040108E5 RID: 67813
 		SetWayOccupancyState,
-		// Token: 0x0400FB7D RID: 64381
+		// Token: 0x040108E6 RID: 67814
 		SendSceneActorsEvent,
-		// Token: 0x0400FB7E RID: 64382
+		// Token: 0x040108E7 RID: 67815
 		ExecBpActorFunc,
-		// Token: 0x0400FB7F RID: 64383
+		// Token: 0x040108E8 RID: 67816
 		ResetPlayerPosWithPresentation,
-		// Token: 0x0400FB80 RID: 64384
+		// Token: 0x040108E9 RID: 67817
 		PlayerLookTowards,
-		// Token: 0x0400FB81 RID: 64385
+		// Token: 0x040108EA RID: 67818
 		DrinksRollRoleRequirement,
-		// Token: 0x0400FB82 RID: 64386
+		// Token: 0x040108EB RID: 67819
 		SetBlendAnim,
-		// Token: 0x0400FB83 RID: 64387
+		// Token: 0x040108EC RID: 67820
 		ReportTrackingEvent,
-		// Token: 0x0400FB84 RID: 64388
+		// Token: 0x040108ED RID: 67821
 		TetrisThrowBlock,
-		// Token: 0x0400FB85 RID: 64389
+		// Token: 0x040108EE RID: 67822
 		TetrisGameComplete,
-		// Token: 0x0400FB86 RID: 64390
+		// Token: 0x040108EF RID: 67823
 		TetrisTriggerDelayFall,
-		// Token: 0x0400FB87 RID: 64391
+		// Token: 0x040108F0 RID: 67824
 		BossPilingRandomBuff,
-		// Token: 0x0400FB88 RID: 64392
+		// Token: 0x040108F1 RID: 67825
 		BossPilingEnterNextInst,
-		// Token: 0x0400FB89 RID: 64393
+		// Token: 0x040108F2 RID: 67826
 		DollGrabItemDelivery,
-		// Token: 0x0400FB8A RID: 64394
+		// Token: 0x040108F3 RID: 67827
 		AvgPlayRoleAction,
-		// Token: 0x0400FB8B RID: 64395
+		// Token: 0x040108F4 RID: 67828
 		AvgMoveRole,
-		// Token: 0x0400FB8C RID: 64396
+		// Token: 0x040108F5 RID: 67829
 		AvgFocusRole,
-		// Token: 0x0400FB8D RID: 64397
+		// Token: 0x040108F6 RID: 67830
 		AvgShakeUi,
-		// Token: 0x0400FB8E RID: 64398
+		// Token: 0x040108F7 RID: 67831
 		DestroyDynamicEntities,
-		// Token: 0x0400FB8F RID: 64399
+		// Token: 0x040108F8 RID: 67832
 		SheriffUnlockClue,
-		// Token: 0x0400FB90 RID: 64400
+		// Token: 0x040108F9 RID: 67833
 		SheriffUnlockProgress,
-		// Token: 0x0400FB91 RID: 64401
+		// Token: 0x040108FA RID: 67834
 		SheriffChangeCriminalState,
-		// Token: 0x0400FB92 RID: 64402
+		// Token: 0x040108FB RID: 67835
 		SheriffChangeCriminalIdentity,
-		// Token: 0x0400FB93 RID: 64403
+		// Token: 0x040108FC RID: 67836
 		SheriffUnlockEnding,
-		// Token: 0x0400FB94 RID: 64404
+		// Token: 0x040108FD RID: 67837
 		SetSubScreenMode,
-		// Token: 0x0400FB95 RID: 64405
+		// Token: 0x040108FE RID: 67838
 		ClientSetSeasonState,
-		// Token: 0x0400FB96 RID: 64406
+		// Token: 0x040108FF RID: 67839
+		SeasonWeatherSetRotationLock,
+		// Token: 0x04010900 RID: 67840
+		SeasonWeatherChangeTo,
+		// Token: 0x04010901 RID: 67841
+		SeasonWeatherUnlockSpecial,
+		// Token: 0x04010902 RID: 67842
 		ToggleDragActorPlay,
-		// Token: 0x0400FB97 RID: 64407
+		// Token: 0x04010903 RID: 67843
 		SetTargetElementalAbility,
-		// Token: 0x0400FB98 RID: 64408
+		// Token: 0x04010904 RID: 67844
 		ToggleEntityElementalAbility,
-		// Token: 0x0400FB99 RID: 64409
+		// Token: 0x04010905 RID: 67845
 		CaptureElementalBox,
-		// Token: 0x0400FB9A RID: 64410
+		// Token: 0x04010906 RID: 67846
 		ChangeElementalBoxState,
-		// Token: 0x0400FB9B RID: 64411
+		// Token: 0x04010907 RID: 67847
 		SetElementalBoxToTarget,
-		// Token: 0x0400FB9C RID: 64412
-		OverrideAbpAnimScheme
+		// Token: 0x04010908 RID: 67848
+		DarkTideSetMapMarkState,
+		// Token: 0x04010909 RID: 67849
+		OverrideAbpAnimScheme,
+		// Token: 0x0401090A RID: 67850
+		HandBookModifySystemProgress,
+		// Token: 0x0401090B RID: 67851
+		ClientExecEntityPrefabAction,
+		// Token: 0x0401090C RID: 67852
+		LiveSetUi,
+		// Token: 0x0401090D RID: 67853
+		LiveSetDanmaku,
+		// Token: 0x0401090E RID: 67854
+		LiveSetParam,
+		// Token: 0x0401090F RID: 67855
+		LiveSetSc
 	}
 }

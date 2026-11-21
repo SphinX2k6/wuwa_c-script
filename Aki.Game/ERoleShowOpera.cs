@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020023E9 RID: 9193
+// Token: 0x020018CE RID: 6350
 public enum ERoleShowOpera
 {
-	// Token: 0x04008B00 RID: 35584
+	// Token: 0x04008C47 RID: 35911
 	Add,
-	// Token: 0x04008B01 RID: 35585
+	// Token: 0x04008C48 RID: 35912
 	Replace,
-	// Token: 0x04008B02 RID: 35586
+	// Token: 0x04008C49 RID: 35913
 	Remove
 }

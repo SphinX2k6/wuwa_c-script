@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 {
-	// Token: 0x02006A95 RID: 27285
+	// Token: 0x02005BF2 RID: 23538
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ExploreSkillInteractPointContextBase : EntitySceneInteractPointContext
 	{
-		// Token: 0x06043CA3 RID: 277667 RVA: 0x01097DA9 File Offset: 0x01095FA9
+		// Token: 0x06039CF1 RID: 236785 RVA: 0x0103C5FD File Offset: 0x0103A7FD
 		public ExploreSkillInteractPointContextBase(IExploreSkillInteract config, EntityHandle entityHandle) : base(entityHandle)
 		{
 			this.Config = config;
 		}
 
-		// Token: 0x06043CA4 RID: 277668 RVA: 0x01097DB9 File Offset: 0x01095FB9
+		// Token: 0x06039CF2 RID: 236786 RVA: 0x0103C60D File Offset: 0x0103A80D
 		public override ESceneInteractType GetInteractType()
 		{
 			if (this.Config.Option.Type == EExploreSkillInteractType.FoxJumpInteractPoint)
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return ESceneInteractType.None;
 		}
 
-		// Token: 0x06043CA5 RID: 277669 RVA: 0x01097DD2 File Offset: 0x01095FD2
+		// Token: 0x06039CF3 RID: 236787 RVA: 0x0103C626 File Offset: 0x0103A826
 		[NullableContext(2)]
 		public IConditionGroup GetCondition()
 		{
 			return this.Config.Condition;
 		}
 
-		// Token: 0x06043CA6 RID: 277670 RVA: 0x01097DDF File Offset: 0x01095FDF
+		// Token: 0x06039CF4 RID: 236788 RVA: 0x0103C633 File Offset: 0x0103A833
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -51,14 +51,14 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return this.Config.MatchRoleOption;
 		}
 
-		// Token: 0x06043CA7 RID: 277671 RVA: 0x01097DEC File Offset: 0x01095FEC
+		// Token: 0x06039CF5 RID: 236789 RVA: 0x0103C640 File Offset: 0x0103A840
 		[NullableContext(2)]
 		public IExploreSkillSearchTargetCfg GetSearchTargetCfg()
 		{
 			return this.Config.SearchTargetCfg;
 		}
 
-		// Token: 0x06043CA8 RID: 277672 RVA: 0x01097DFC File Offset: 0x01095FFC
+		// Token: 0x06039CF6 RID: 236790 RVA: 0x0103C650 File Offset: 0x0103A850
 		[NullableContext(2)]
 		public bool CheckEntityCondition(AActor ownerActor)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return condition == null || LevelGeneralController.Instance.CheckConditionNew(condition, ownerActor, EntityContext.Create(this.GetEntityHandle().Id, null), null);
 		}
 
-		// Token: 0x06043CA9 RID: 277673 RVA: 0x01097E58 File Offset: 0x01096058
+		// Token: 0x06039CF7 RID: 236791 RVA: 0x0103C6AC File Offset: 0x0103A8AC
 		public bool CheckRoleMatch()
 		{
 			List<IMatchRoleType> matchRoleOption = this.GetMatchRoleOption();
@@ -85,25 +85,25 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return SceneTeamController.Instance.IsMatchRoleOption(matchRoleOption);
 		}
 
-		// Token: 0x06043CAA RID: 277674 RVA: 0x01097E91 File Offset: 0x01096091
+		// Token: 0x06039CF8 RID: 236792 RVA: 0x0103C6E5 File Offset: 0x0103A8E5
 		public double GetLockWeight([Nullable(2)] global::Vector pointLocation, global::Vector charLoc)
 		{
 			return SceneInteractLockWeightUtils.GetLockWeight(this.GetSearchTargetCfg(), pointLocation, charLoc);
 		}
 
-		// Token: 0x06043CAB RID: 277675 RVA: 0x01097EA0 File Offset: 0x010960A0
+		// Token: 0x06039CF9 RID: 236793 RVA: 0x0103C6F4 File Offset: 0x0103A8F4
 		public string BuildLockWeightDebugText([Nullable(2)] global::Vector pointLocation, global::Vector charLoc)
 		{
 			return SceneInteractLockWeightUtils.BuildLockWeightDebugText(this.GetSearchTargetCfg(), pointLocation, charLoc);
 		}
 
-		// Token: 0x06043CAC RID: 277676 RVA: 0x01097EAF File Offset: 0x010960AF
+		// Token: 0x06039CFA RID: 236794 RVA: 0x0103C703 File Offset: 0x0103A903
 		public bool UseTwoPhaseBlockCheck()
 		{
 			return this.GetInteractType() == ESceneInteractType.FoxJumping;
 		}
 
-		// Token: 0x06043CAD RID: 277677 RVA: 0x01097EBC File Offset: 0x010960BC
+		// Token: 0x06039CFB RID: 236795 RVA: 0x0103C710 File Offset: 0x0103A910
 		public int? GetInteractTagId()
 		{
 			switch (this.Config.Option.Type)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplore
 			return null;
 		}
 
-		// Token: 0x040236B4 RID: 145076
+		// Token: 0x0401E8A6 RID: 125094
 		protected readonly IExploreSkillInteract Config;
 	}
 }

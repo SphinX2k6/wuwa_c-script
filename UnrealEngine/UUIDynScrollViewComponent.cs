@@ -6,44 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002146 RID: 8518
+	// Token: 0x020006F7 RID: 1783
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIDynScrollViewComponent")]
 	[UnrealStructLayout(1384, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1384)]
-	public class UUIDynScrollViewComponent : UUIScrollViewWithScrollbarComponent, IUnrealUObject, IUnrealObject, ILGUIPrefabCheckerInterface, IUnrealNativeInterface, IUnrealInterface, ILGUIGridAnimationInterface
+	public class UUIDynScrollViewComponent : UUIScrollViewWithScrollbarComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020153 RID: 131411 RVA: 0x002FB65B File Offset: 0x002F985B
+		// Token: 0x0600977A RID: 38778 RVA: 0x000E485E File Offset: 0x000E2A5E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIDynScrollViewComponent._ClassPtr;
 		}
 
-		// Token: 0x06020154 RID: 131412 RVA: 0x002FB667 File Offset: 0x002F9867
-		int ILGUIPrefabCheckerInterface.InterfaceOffset()
-		{
-			return UUIDynScrollViewComponent.__InterfaceOffset_ILGUIPrefabCheckerInterface;
-		}
-
-		// Token: 0x06020155 RID: 131413 RVA: 0x002FB66E File Offset: 0x002F986E
-		int ILGUIGridAnimationInterface.InterfaceOffset()
-		{
-			return UUIDynScrollViewComponent.__InterfaceOffset_ILGUIGridAnimationInterface;
-		}
-
-		// Token: 0x06020156 RID: 131414 RVA: 0x002FB678 File Offset: 0x002F9878
+		// Token: 0x0600977B RID: 38779 RVA: 0x000E486C File Offset: 0x000E2A6C
 		public UUIDynScrollViewComponent() : this(BuiltinUtils.AllocNativeUObject(UUIDynScrollViewComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020157 RID: 131415 RVA: 0x002FB6A0 File Offset: 0x002F98A0
+		// Token: 0x0600977C RID: 38780 RVA: 0x000E4894 File Offset: 0x000E2A94
 		public UUIDynScrollViewComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIDynScrollViewComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E00 RID: 32256
-		// (get) Token: 0x06020158 RID: 131416 RVA: 0x002FB6D3 File Offset: 0x002F98D3
-		// (set) Token: 0x06020159 RID: 131417 RVA: 0x002FB6E7 File Offset: 0x002F98E7
+		// Token: 0x17001C22 RID: 7202
+		// (get) Token: 0x0600977D RID: 38781 RVA: 0x000E48C7 File Offset: 0x000E2AC7
+		// (set) Token: 0x0600977E RID: 38782 RVA: 0x000E48DB File Offset: 0x000E2ADB
 		[Nullable(new byte[]
 		{
 			0,
@@ -71,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E01 RID: 32257
-		// (get) Token: 0x0602015A RID: 131418 RVA: 0x002FB6FC File Offset: 0x002F98FC
-		// (set) Token: 0x0602015B RID: 131419 RVA: 0x002FB70C File Offset: 0x002F990C
+		// Token: 0x17001C23 RID: 7203
+		// (get) Token: 0x0600977F RID: 38783 RVA: 0x000E48F0 File Offset: 0x000E2AF0
+		// (set) Token: 0x06009780 RID: 38784 RVA: 0x000E4900 File Offset: 0x000E2B00
 		public unsafe int TotalItemNum
 		{
 			get
@@ -86,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E02 RID: 32258
-		// (get) Token: 0x0602015C RID: 131420 RVA: 0x002FB71D File Offset: 0x002F991D
-		// (set) Token: 0x0602015D RID: 131421 RVA: 0x002FB72D File Offset: 0x002F992D
+		// Token: 0x17001C24 RID: 7204
+		// (get) Token: 0x06009781 RID: 38785 RVA: 0x000E4911 File Offset: 0x000E2B11
+		// (set) Token: 0x06009782 RID: 38786 RVA: 0x000E4921 File Offset: 0x000E2B21
 		public unsafe bool ItemDefaultUIActive
 		{
 			get
@@ -101,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E03 RID: 32259
-		// (get) Token: 0x0602015E RID: 131422 RVA: 0x002FB73E File Offset: 0x002F993E
-		// (set) Token: 0x0602015F RID: 131423 RVA: 0x002FB74E File Offset: 0x002F994E
+		// Token: 0x17001C25 RID: 7205
+		// (get) Token: 0x06009783 RID: 38787 RVA: 0x000E4932 File Offset: 0x000E2B32
+		// (set) Token: 0x06009784 RID: 38788 RVA: 0x000E4942 File Offset: 0x000E2B42
 		public unsafe float SpacingHorizontal
 		{
 			get
@@ -116,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E04 RID: 32260
-		// (get) Token: 0x06020160 RID: 131424 RVA: 0x002FB75F File Offset: 0x002F995F
-		// (set) Token: 0x06020161 RID: 131425 RVA: 0x002FB76F File Offset: 0x002F996F
+		// Token: 0x17001C26 RID: 7206
+		// (get) Token: 0x06009785 RID: 38789 RVA: 0x000E4953 File Offset: 0x000E2B53
+		// (set) Token: 0x06009786 RID: 38790 RVA: 0x000E4963 File Offset: 0x000E2B63
 		public unsafe float SpacingVertical
 		{
 			get
@@ -131,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E05 RID: 32261
-		// (get) Token: 0x06020162 RID: 131426 RVA: 0x002FB780 File Offset: 0x002F9980
-		// (set) Token: 0x06020163 RID: 131427 RVA: 0x002FB790 File Offset: 0x002F9990
+		// Token: 0x17001C27 RID: 7207
+		// (get) Token: 0x06009787 RID: 38791 RVA: 0x000E4974 File Offset: 0x000E2B74
+		// (set) Token: 0x06009788 RID: 38792 RVA: 0x000E4984 File Offset: 0x000E2B84
 		public unsafe float PaddingHorizontal
 		{
 			get
@@ -146,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E06 RID: 32262
-		// (get) Token: 0x06020164 RID: 131428 RVA: 0x002FB7A1 File Offset: 0x002F99A1
-		// (set) Token: 0x06020165 RID: 131429 RVA: 0x002FB7B1 File Offset: 0x002F99B1
+		// Token: 0x17001C28 RID: 7208
+		// (get) Token: 0x06009789 RID: 38793 RVA: 0x000E4995 File Offset: 0x000E2B95
+		// (set) Token: 0x0600978A RID: 38794 RVA: 0x000E49A5 File Offset: 0x000E2BA5
 		public unsafe float PaddingVertical
 		{
 			get
@@ -161,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E07 RID: 32263
-		// (get) Token: 0x06020166 RID: 131430 RVA: 0x002FB7C2 File Offset: 0x002F99C2
-		// (set) Token: 0x06020167 RID: 131431 RVA: 0x002FB7D2 File Offset: 0x002F99D2
+		// Token: 0x17001C29 RID: 7209
+		// (get) Token: 0x0600978B RID: 38795 RVA: 0x000E49B6 File Offset: 0x000E2BB6
+		// (set) Token: 0x0600978C RID: 38796 RVA: 0x000E49C6 File Offset: 0x000E2BC6
 		public unsafe float GridAnimationStartTime
 		{
 			get
@@ -176,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E08 RID: 32264
-		// (get) Token: 0x06020168 RID: 131432 RVA: 0x002FB7E3 File Offset: 0x002F99E3
-		// (set) Token: 0x06020169 RID: 131433 RVA: 0x002FB7F3 File Offset: 0x002F99F3
+		// Token: 0x17001C2A RID: 7210
+		// (get) Token: 0x0600978D RID: 38797 RVA: 0x000E49D7 File Offset: 0x000E2BD7
+		// (set) Token: 0x0600978E RID: 38798 RVA: 0x000E49E7 File Offset: 0x000E2BE7
 		public unsafe float GridAnimationInterval
 		{
 			get
@@ -191,9 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E09 RID: 32265
-		// (get) Token: 0x0602016A RID: 131434 RVA: 0x002FB804 File Offset: 0x002F9A04
-		// (set) Token: 0x0602016B RID: 131435 RVA: 0x002FB814 File Offset: 0x002F9A14
+		// Token: 0x17001C2B RID: 7211
+		// (get) Token: 0x0600978F RID: 38799 RVA: 0x000E49F8 File Offset: 0x000E2BF8
+		// (set) Token: 0x06009790 RID: 38800 RVA: 0x000E4A08 File Offset: 0x000E2C08
 		public unsafe bool IsInAnimation
 		{
 			get
@@ -206,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E0A RID: 32266
-		// (get) Token: 0x0602016C RID: 131436 RVA: 0x002FB825 File Offset: 0x002F9A25
-		// (set) Token: 0x0602016D RID: 131437 RVA: 0x002FB835 File Offset: 0x002F9A35
+		// Token: 0x17001C2C RID: 7212
+		// (get) Token: 0x06009791 RID: 38801 RVA: 0x000E4A19 File Offset: 0x000E2C19
+		// (set) Token: 0x06009792 RID: 38802 RVA: 0x000E4A29 File Offset: 0x000E2C29
 		public unsafe bool SizeMatchContent
 		{
 			get
@@ -221,9 +209,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E0B RID: 32267
-		// (get) Token: 0x0602016E RID: 131438 RVA: 0x002FB848 File Offset: 0x002F9A48
-		// (set) Token: 0x0602016F RID: 131439 RVA: 0x002FB881 File Offset: 0x002F9A81
+		// Token: 0x17001C2D RID: 7213
+		// (get) Token: 0x06009793 RID: 38803 RVA: 0x000E4A3C File Offset: 0x000E2C3C
+		// (set) Token: 0x06009794 RID: 38804 RVA: 0x000E4A75 File Offset: 0x000E2C75
 		public FLGUIDynScrollViewItemCreateDelegate OnItemCreate
 		{
 			get
@@ -242,9 +230,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E0C RID: 32268
-		// (get) Token: 0x06020170 RID: 131440 RVA: 0x002FB8A4 File Offset: 0x002F9AA4
-		// (set) Token: 0x06020171 RID: 131441 RVA: 0x002FB8DD File Offset: 0x002F9ADD
+		// Token: 0x17001C2E RID: 7214
+		// (get) Token: 0x06009795 RID: 38805 RVA: 0x000E4A98 File Offset: 0x000E2C98
+		// (set) Token: 0x06009796 RID: 38806 RVA: 0x000E4AD1 File Offset: 0x000E2CD1
 		public FLGUIDynScrollViewItemUpdateDelegate OnItemUpdate
 		{
 			get
@@ -263,9 +251,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E0D RID: 32269
-		// (get) Token: 0x06020172 RID: 131442 RVA: 0x002FB900 File Offset: 0x002F9B00
-		// (set) Token: 0x06020173 RID: 131443 RVA: 0x002FB939 File Offset: 0x002F9B39
+		// Token: 0x17001C2F RID: 7215
+		// (get) Token: 0x06009797 RID: 38807 RVA: 0x000E4AF4 File Offset: 0x000E2CF4
+		// (set) Token: 0x06009798 RID: 38808 RVA: 0x000E4B2D File Offset: 0x000E2D2D
 		public FLGUIDynScrollViewItemSizeDelegate ItemSizeDelegate
 		{
 			get
@@ -284,9 +272,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E0E RID: 32270
-		// (get) Token: 0x06020174 RID: 131444 RVA: 0x002FB95C File Offset: 0x002F9B5C
-		// (set) Token: 0x06020175 RID: 131445 RVA: 0x002FB995 File Offset: 0x002F9B95
+		// Token: 0x17001C30 RID: 7216
+		// (get) Token: 0x06009799 RID: 38809 RVA: 0x000E4B50 File Offset: 0x000E2D50
+		// (set) Token: 0x0600979A RID: 38810 RVA: 0x000E4B89 File Offset: 0x000E2D89
 		public FLGUIDynScrollViewItemClearDelegate OnItemClear
 		{
 			get
@@ -305,9 +293,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E0F RID: 32271
-		// (get) Token: 0x06020176 RID: 131446 RVA: 0x002FB9B8 File Offset: 0x002F9BB8
-		// (set) Token: 0x06020177 RID: 131447 RVA: 0x002FB9F1 File Offset: 0x002F9BF1
+		// Token: 0x17001C31 RID: 7217
+		// (get) Token: 0x0600979B RID: 38811 RVA: 0x000E4BAC File Offset: 0x000E2DAC
+		// (set) Token: 0x0600979C RID: 38812 RVA: 0x000E4BE5 File Offset: 0x000E2DE5
 		public FLGUILoopScrollViewDelegate OnDestroyCallBack
 		{
 			get
@@ -326,9 +314,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E10 RID: 32272
-		// (get) Token: 0x06020178 RID: 131448 RVA: 0x002FBA12 File Offset: 0x002F9C12
-		// (set) Token: 0x06020179 RID: 131449 RVA: 0x002FBA22 File Offset: 0x002F9C22
+		// Token: 0x17001C32 RID: 7218
+		// (get) Token: 0x0600979D RID: 38813 RVA: 0x000E4C06 File Offset: 0x000E2E06
+		// (set) Token: 0x0600979E RID: 38814 RVA: 0x000E4C16 File Offset: 0x000E2E16
 		public unsafe int StartItemIndex
 		{
 			get
@@ -341,9 +329,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E11 RID: 32273
-		// (get) Token: 0x0602017A RID: 131450 RVA: 0x002FBA33 File Offset: 0x002F9C33
-		// (set) Token: 0x0602017B RID: 131451 RVA: 0x002FBA43 File Offset: 0x002F9C43
+		// Token: 0x17001C33 RID: 7219
+		// (get) Token: 0x0600979F RID: 38815 RVA: 0x000E4C27 File Offset: 0x000E2E27
+		// (set) Token: 0x060097A0 RID: 38816 RVA: 0x000E4C37 File Offset: 0x000E2E37
 		public unsafe int EndItemIndex
 		{
 			get
@@ -356,9 +344,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E12 RID: 32274
-		// (get) Token: 0x0602017C RID: 131452 RVA: 0x002FBA54 File Offset: 0x002F9C54
-		// (set) Token: 0x0602017D RID: 131453 RVA: 0x002FBA8D File Offset: 0x002F9C8D
+		// Token: 0x17001C34 RID: 7220
+		// (get) Token: 0x060097A1 RID: 38817 RVA: 0x000E4C48 File Offset: 0x000E2E48
+		// (set) Token: 0x060097A2 RID: 38818 RVA: 0x000E4C81 File Offset: 0x000E2E81
 		[Nullable(new byte[]
 		{
 			1,
@@ -395,9 +383,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E13 RID: 32275
-		// (get) Token: 0x0602017E RID: 131454 RVA: 0x002FBA9C File Offset: 0x002F9C9C
-		// (set) Token: 0x0602017F RID: 131455 RVA: 0x002FBAD5 File Offset: 0x002F9CD5
+		// Token: 0x17001C35 RID: 7221
+		// (get) Token: 0x060097A3 RID: 38819 RVA: 0x000E4C90 File Offset: 0x000E2E90
+		// (set) Token: 0x060097A4 RID: 38820 RVA: 0x000E4CC9 File Offset: 0x000E2EC9
 		[Nullable(new byte[]
 		{
 			1,
@@ -434,9 +422,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E14 RID: 32276
-		// (get) Token: 0x06020180 RID: 131456 RVA: 0x002FBAE4 File Offset: 0x002F9CE4
-		// (set) Token: 0x06020181 RID: 131457 RVA: 0x002FBB1D File Offset: 0x002F9D1D
+		// Token: 0x17001C36 RID: 7222
+		// (get) Token: 0x060097A5 RID: 38821 RVA: 0x000E4CD8 File Offset: 0x000E2ED8
+		// (set) Token: 0x060097A6 RID: 38822 RVA: 0x000E4D11 File Offset: 0x000E2F11
 		public TMap<AUIBaseActor, AUIBaseActor> ToUsingItemMap
 		{
 			get
@@ -455,9 +443,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E15 RID: 32277
-		// (get) Token: 0x06020182 RID: 131458 RVA: 0x002FBB2C File Offset: 0x002F9D2C
-		// (set) Token: 0x06020183 RID: 131459 RVA: 0x002FBB65 File Offset: 0x002F9D65
+		// Token: 0x17001C37 RID: 7223
+		// (get) Token: 0x060097A7 RID: 38823 RVA: 0x000E4D20 File Offset: 0x000E2F20
+		// (set) Token: 0x060097A8 RID: 38824 RVA: 0x000E4D59 File Offset: 0x000E2F59
 		public TMap<int, EScrollItemState> ItemStateMap
 		{
 			get
@@ -476,9 +464,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E16 RID: 32278
-		// (get) Token: 0x06020184 RID: 131460 RVA: 0x002FBB73 File Offset: 0x002F9D73
-		// (set) Token: 0x06020185 RID: 131461 RVA: 0x002FBB83 File Offset: 0x002F9D83
+		// Token: 0x17001C38 RID: 7224
+		// (get) Token: 0x060097A9 RID: 38825 RVA: 0x000E4D67 File Offset: 0x000E2F67
+		// (set) Token: 0x060097AA RID: 38826 RVA: 0x000E4D77 File Offset: 0x000E2F77
 		public unsafe bool IsNavigateScrollFixedValue
 		{
 			get
@@ -491,212 +479,212 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020186 RID: 131462 RVA: 0x002FBB94 File Offset: 0x002F9D94
+		// Token: 0x060097AB RID: 38827 RVA: 0x000E4D88 File Offset: 0x000E2F88
 		public void SetScrollItemState(int ItemIndex, EScrollItemState State)
 		{
 			UUIDynScrollViewComponent.__SetScrollItemState_Internal(base.NativePtr, ItemIndex, State);
 		}
 
-		// Token: 0x06020187 RID: 131463 RVA: 0x002FBBA3 File Offset: 0x002F9DA3
+		// Token: 0x060097AC RID: 38828 RVA: 0x000E4D97 File Offset: 0x000E2F97
 		public void SetInAnimation(bool state)
 		{
 			UUIDynScrollViewComponent.__SetInAnimation_Internal(base.NativePtr, state);
 		}
 
-		// Token: 0x06020188 RID: 131464 RVA: 0x002FBBB1 File Offset: 0x002F9DB1
+		// Token: 0x060097AD RID: 38829 RVA: 0x000E4DA5 File Offset: 0x000E2FA5
 		public void SetGridAnimationStartTime(float value)
 		{
 			UUIDynScrollViewComponent.__SetGridAnimationStartTime_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020189 RID: 131465 RVA: 0x002FBBBF File Offset: 0x002F9DBF
+		// Token: 0x060097AE RID: 38830 RVA: 0x000E4DB3 File Offset: 0x000E2FB3
 		public void SetGridAnimationInterval(float value)
 		{
 			UUIDynScrollViewComponent.__SetGridAnimationInterval_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0602018A RID: 131466 RVA: 0x002FBBCD File Offset: 0x002F9DCD
+		// Token: 0x060097AF RID: 38831 RVA: 0x000E4DC1 File Offset: 0x000E2FC1
 		[NullableContext(2)]
 		public void ScrollToUIItemLater(UUIItem UIItem, bool bScrollToTop = true)
 		{
 			UUIDynScrollViewComponent.__ScrollToUIItemLater_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bScrollToTop);
 		}
 
-		// Token: 0x0602018B RID: 131467 RVA: 0x002FBBEB File Offset: 0x002F9DEB
+		// Token: 0x060097B0 RID: 38832 RVA: 0x000E4DDF File Offset: 0x000E2FDF
 		[NullableContext(2)]
 		public void ScrollToUIItem(UUIItem UIItem, bool bScrollToTop = true)
 		{
 			UUIDynScrollViewComponent.__ScrollToUIItem_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bScrollToTop);
 		}
 
-		// Token: 0x0602018C RID: 131468 RVA: 0x002FBC09 File Offset: 0x002F9E09
+		// Token: 0x060097B1 RID: 38833 RVA: 0x000E4DFD File Offset: 0x000E2FFD
 		public void ScrollToStartItemIndexLater(bool bScrollToTop = true, float Offset = 0f)
 		{
 			UUIDynScrollViewComponent.__ScrollToStartItemIndexLater_Internal(base.NativePtr, bScrollToTop, Offset);
 		}
 
-		// Token: 0x0602018D RID: 131469 RVA: 0x002FBC18 File Offset: 0x002F9E18
+		// Token: 0x060097B2 RID: 38834 RVA: 0x000E4E0C File Offset: 0x000E300C
 		public void ScrollToStartItemIndex(bool bScrollToTop = true, float Offset = 0f)
 		{
 			UUIDynScrollViewComponent.__ScrollToStartItemIndex_Internal(base.NativePtr, bScrollToTop, Offset);
 		}
 
-		// Token: 0x0602018E RID: 131470 RVA: 0x002FBC27 File Offset: 0x002F9E27
+		// Token: 0x060097B3 RID: 38835 RVA: 0x000E4E1B File Offset: 0x000E301B
 		public void ScrollToOffsetLater(float Offset)
 		{
 			UUIDynScrollViewComponent.__ScrollToOffsetLater_Internal(base.NativePtr, Offset);
 		}
 
-		// Token: 0x0602018F RID: 131471 RVA: 0x002FBC35 File Offset: 0x002F9E35
+		// Token: 0x060097B4 RID: 38836 RVA: 0x000E4E29 File Offset: 0x000E3029
 		public void ScrollToOffset(float Offset)
 		{
 			UUIDynScrollViewComponent.__ScrollToOffset_Internal(base.NativePtr, Offset);
 		}
 
-		// Token: 0x06020190 RID: 131472 RVA: 0x002FBC43 File Offset: 0x002F9E43
+		// Token: 0x060097B5 RID: 38837 RVA: 0x000E4E37 File Offset: 0x000E3037
 		public void ScrollToNextLineLater(bool bReversed = false)
 		{
 			UUIDynScrollViewComponent.__ScrollToNextLineLater_Internal(base.NativePtr, bReversed);
 		}
 
-		// Token: 0x06020191 RID: 131473 RVA: 0x002FBC51 File Offset: 0x002F9E51
+		// Token: 0x060097B6 RID: 38838 RVA: 0x000E4E45 File Offset: 0x000E3045
 		public void ScrollToNextLine(bool bReversed = false)
 		{
 			UUIDynScrollViewComponent.__ScrollToNextLine_Internal(base.NativePtr, bReversed);
 		}
 
-		// Token: 0x06020192 RID: 131474 RVA: 0x002FBC5F File Offset: 0x002F9E5F
+		// Token: 0x060097B7 RID: 38839 RVA: 0x000E4E53 File Offset: 0x000E3053
 		public void ScrollToLastItemLater()
 		{
 			UUIDynScrollViewComponent.__ScrollToLastItemLater_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020193 RID: 131475 RVA: 0x002FBC6C File Offset: 0x002F9E6C
+		// Token: 0x060097B8 RID: 38840 RVA: 0x000E4E60 File Offset: 0x000E3060
 		public void ScrollToLastItem()
 		{
 			UUIDynScrollViewComponent.__ScrollToLastItem_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020194 RID: 131476 RVA: 0x002FBC79 File Offset: 0x002F9E79
+		// Token: 0x060097B9 RID: 38841 RVA: 0x000E4E6D File Offset: 0x000E306D
 		public void ScrollToItemIndexLater(int ItemIndex, bool bScrollToTop = true, float Offset = 0f, bool bTweenAnim = false)
 		{
 			UUIDynScrollViewComponent.__ScrollToItemIndexLater_Internal(base.NativePtr, ItemIndex, bScrollToTop, Offset, bTweenAnim);
 		}
 
-		// Token: 0x06020195 RID: 131477 RVA: 0x002FBC8B File Offset: 0x002F9E8B
+		// Token: 0x060097BA RID: 38842 RVA: 0x000E4E7F File Offset: 0x000E307F
 		public void ScrollToItemIndexForNavigation(int ItemIndex, bool bScrollToTop = true, float Offset = 0f)
 		{
 			UUIDynScrollViewComponent.__ScrollToItemIndexForNavigation_Internal(base.NativePtr, ItemIndex, bScrollToTop, Offset);
 		}
 
-		// Token: 0x06020196 RID: 131478 RVA: 0x002FBC9B File Offset: 0x002F9E9B
+		// Token: 0x060097BB RID: 38843 RVA: 0x000E4E8F File Offset: 0x000E308F
 		public void ScrollToItemIndex(int ItemIndex, bool bScrollToTop = true, float Offset = 0f, bool bTweenAnim = false)
 		{
 			UUIDynScrollViewComponent.__ScrollToItemIndex_Internal(base.NativePtr, ItemIndex, bScrollToTop, Offset, bTweenAnim);
 		}
 
-		// Token: 0x06020197 RID: 131479 RVA: 0x002FBCAD File Offset: 0x002F9EAD
+		// Token: 0x060097BC RID: 38844 RVA: 0x000E4EA1 File Offset: 0x000E30A1
 		public void ScrollToEndItemIndexLater(bool bScrollToTop = false, float Offset = 0f)
 		{
 			UUIDynScrollViewComponent.__ScrollToEndItemIndexLater_Internal(base.NativePtr, bScrollToTop, Offset);
 		}
 
-		// Token: 0x06020198 RID: 131480 RVA: 0x002FBCBC File Offset: 0x002F9EBC
+		// Token: 0x060097BD RID: 38845 RVA: 0x000E4EB0 File Offset: 0x000E30B0
 		public void ScrollToEndItemIndex(bool bScrollToTop = false, float Offset = 0f)
 		{
 			UUIDynScrollViewComponent.__ScrollToEndItemIndex_Internal(base.NativePtr, bScrollToTop, Offset);
 		}
 
-		// Token: 0x06020199 RID: 131481 RVA: 0x002FBCCB File Offset: 0x002F9ECB
+		// Token: 0x060097BE RID: 38846 RVA: 0x000E4EBF File Offset: 0x000E30BF
 		public void ScrollItemIndexLater(bool bReversed)
 		{
 			UUIDynScrollViewComponent.__ScrollItemIndexLater_Internal(base.NativePtr, bReversed);
 		}
 
-		// Token: 0x0602019A RID: 131482 RVA: 0x002FBCD9 File Offset: 0x002F9ED9
+		// Token: 0x060097BF RID: 38847 RVA: 0x000E4ECD File Offset: 0x000E30CD
 		public void ScrollItemIndex(bool bReversed)
 		{
 			UUIDynScrollViewComponent.__ScrollItemIndex_Internal(base.NativePtr, bReversed);
 		}
 
-		// Token: 0x0602019B RID: 131483 RVA: 0x002FBCE7 File Offset: 0x002F9EE7
+		// Token: 0x060097C0 RID: 38848 RVA: 0x000E4EDB File Offset: 0x000E30DB
 		[NullableContext(2)]
 		public void RefreshByData(AUIBaseActor Item, int ItemNum, bool KeepContentPosition = false)
 		{
 			UUIDynScrollViewComponent.__RefreshByData_Internal(base.NativePtr, (Item != null) ? Item.NativePtr : IntPtr.Zero, ItemNum, KeepContentPosition);
 		}
 
-		// Token: 0x0602019C RID: 131484 RVA: 0x002FBD06 File Offset: 0x002F9F06
+		// Token: 0x060097C1 RID: 38849 RVA: 0x000E4EFA File Offset: 0x000E30FA
 		public void Refresh()
 		{
 			UUIDynScrollViewComponent.__Refresh_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602019D RID: 131485 RVA: 0x002FBD13 File Offset: 0x002F9F13
+		// Token: 0x060097C2 RID: 38850 RVA: 0x000E4F07 File Offset: 0x000E3107
 		[NullableContext(2)]
 		public void NavigateScrollToUIItem(UUIItem UIItem, bool bReversed, UINavigationWrapMode Mode)
 		{
 			UUIDynScrollViewComponent.__NavigateScrollToUIItem_Internal(base.NativePtr, (UIItem != null) ? UIItem.NativePtr : IntPtr.Zero, bReversed, Mode);
 		}
 
-		// Token: 0x0602019E RID: 131486 RVA: 0x002FBD32 File Offset: 0x002F9F32
+		// Token: 0x060097C3 RID: 38851 RVA: 0x000E4F26 File Offset: 0x000E3126
 		public bool IsItemInViewportEdgeByIndex(int ItemIndex)
 		{
 			return UUIDynScrollViewComponent.__IsItemInViewportEdgeByIndex_Internal(base.NativePtr, ItemIndex);
 		}
 
-		// Token: 0x0602019F RID: 131487 RVA: 0x002FBD40 File Offset: 0x002F9F40
+		// Token: 0x060097C4 RID: 38852 RVA: 0x000E4F34 File Offset: 0x000E3134
 		public bool IsItemInViewportByIndex(int ItemIndex)
 		{
 			return UUIDynScrollViewComponent.__IsItemInViewportByIndex_Internal(base.NativePtr, ItemIndex);
 		}
 
-		// Token: 0x060201A0 RID: 131488 RVA: 0x002FBD4E File Offset: 0x002F9F4E
+		// Token: 0x060097C5 RID: 38853 RVA: 0x000E4F42 File Offset: 0x000E3142
 		public bool IsAllItemDisplayed()
 		{
 			return UUIDynScrollViewComponent.__IsAllItemDisplayed_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201A1 RID: 131489 RVA: 0x002FBD5B File Offset: 0x002F9F5B
+		// Token: 0x060097C6 RID: 38854 RVA: 0x000E4F4F File Offset: 0x000E314F
 		public bool IsAllDisplayItemUpdateCompleted()
 		{
 			return UUIDynScrollViewComponent.__IsAllDisplayItemUpdateCompleted_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201A2 RID: 131490 RVA: 0x002FBD68 File Offset: 0x002F9F68
+		// Token: 0x060097C7 RID: 38855 RVA: 0x000E4F5C File Offset: 0x000E315C
 		public int GetStartItemIndex()
 		{
 			return UUIDynScrollViewComponent.__GetStartItemIndex_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201A3 RID: 131491 RVA: 0x002FBD75 File Offset: 0x002F9F75
+		// Token: 0x060097C8 RID: 38856 RVA: 0x000E4F69 File Offset: 0x000E3169
 		public EScrollItemState GetScrollItemState(int ItemIndex)
 		{
 			return UUIDynScrollViewComponent.__GetScrollItemState_Internal(base.NativePtr, ItemIndex);
 		}
 
-		// Token: 0x060201A4 RID: 131492 RVA: 0x002FBD83 File Offset: 0x002F9F83
+		// Token: 0x060097C9 RID: 38857 RVA: 0x000E4F77 File Offset: 0x000E3177
 		[NullableContext(2)]
 		public AUIBaseActor GetRealUsingItem(int ItemIndex)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AUIBaseActor>(UUIDynScrollViewComponent.__GetRealUsingItem_Internal(base.NativePtr, ItemIndex));
 		}
 
-		// Token: 0x060201A5 RID: 131493 RVA: 0x002FBD96 File Offset: 0x002F9F96
+		// Token: 0x060097CA RID: 38858 RVA: 0x000E4F8A File Offset: 0x000E318A
 		[NullableContext(2)]
 		public FVector GetItemPositionToViewport(UUIItem TargetItem)
 		{
 			return UUIDynScrollViewComponent.__GetItemPositionToViewport_Internal(base.NativePtr, (TargetItem != null) ? TargetItem.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060201A6 RID: 131494 RVA: 0x002FBDB3 File Offset: 0x002F9FB3
+		// Token: 0x060097CB RID: 38859 RVA: 0x000E4FA7 File Offset: 0x000E31A7
 		[NullableContext(2)]
 		public FVector GetItemPositionToContent(UUIItem TargetItem)
 		{
 			return UUIDynScrollViewComponent.__GetItemPositionToContent_Internal(base.NativePtr, (TargetItem != null) ? TargetItem.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060201A7 RID: 131495 RVA: 0x002FBDD0 File Offset: 0x002F9FD0
+		// Token: 0x060097CC RID: 38860 RVA: 0x000E4FC4 File Offset: 0x000E31C4
 		public unsafe bool GetItemIndex(int DisplayIndex, ref int ItemIndex)
 		{
 			fixed (int* ptr = &ItemIndex)
@@ -706,7 +694,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060201A8 RID: 131496 RVA: 0x002FBDF0 File Offset: 0x002F9FF0
+		// Token: 0x060097CD RID: 38861 RVA: 0x000E4FE4 File Offset: 0x000E31E4
 		public unsafe bool GetItemDisplayIndex(int ItemIndex, ref int DisplayIndex)
 		{
 			fixed (int* ptr = &DisplayIndex)
@@ -716,312 +704,306 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060201A9 RID: 131497 RVA: 0x002FBE0F File Offset: 0x002FA00F
+		// Token: 0x060097CE RID: 38862 RVA: 0x000E5003 File Offset: 0x000E3203
 		[NullableContext(2)]
 		public AUIBaseActor GetItem(int ItemIndex)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AUIBaseActor>(UUIDynScrollViewComponent.__GetItem_Internal(base.NativePtr, ItemIndex));
 		}
 
-		// Token: 0x060201AA RID: 131498 RVA: 0x002FBE22 File Offset: 0x002FA022
+		// Token: 0x060097CF RID: 38863 RVA: 0x000E5016 File Offset: 0x000E3216
 		public bool GetInAnimation()
 		{
 			return UUIDynScrollViewComponent.__GetInAnimation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201AB RID: 131499 RVA: 0x002FBE2F File Offset: 0x002FA02F
+		// Token: 0x060097D0 RID: 38864 RVA: 0x000E5023 File Offset: 0x000E3223
 		public float GetGridAnimationStartTime()
 		{
 			return UUIDynScrollViewComponent.__GetGridAnimationStartTime_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201AC RID: 131500 RVA: 0x002FBE3C File Offset: 0x002FA03C
+		// Token: 0x060097D1 RID: 38865 RVA: 0x000E5030 File Offset: 0x000E3230
 		public float GetGridAnimationInterval()
 		{
 			return UUIDynScrollViewComponent.__GetGridAnimationInterval_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201AD RID: 131501 RVA: 0x002FBE49 File Offset: 0x002FA049
+		// Token: 0x060097D2 RID: 38866 RVA: 0x000E503D File Offset: 0x000E323D
 		[NullableContext(2)]
 		public int GetGridActorIndex(AUIBaseActor InActor)
 		{
 			return UUIDynScrollViewComponent.__GetGridActorIndex_Internal(base.NativePtr, (InActor != null) ? InActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060201AE RID: 131502 RVA: 0x002FBE66 File Offset: 0x002FA066
+		// Token: 0x060097D3 RID: 38867 RVA: 0x000E505A File Offset: 0x000E325A
 		public int GetEndItemIndex()
 		{
 			return UUIDynScrollViewComponent.__GetEndItemIndex_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060201AF RID: 131503
+		// Token: 0x060097D4 RID: 38868
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScrollItemState_Internal(IntPtr @this, int ItemIndex, EScrollItemState State);
 
-		// Token: 0x060201B0 RID: 131504
+		// Token: 0x060097D5 RID: 38869
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetInAnimation_Internal(IntPtr @this, bool state);
 
-		// Token: 0x060201B1 RID: 131505
+		// Token: 0x060097D6 RID: 38870
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGridAnimationStartTime_Internal(IntPtr @this, float value);
 
-		// Token: 0x060201B2 RID: 131506
+		// Token: 0x060097D7 RID: 38871
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGridAnimationInterval_Internal(IntPtr @this, float value);
 
-		// Token: 0x060201B3 RID: 131507
+		// Token: 0x060097D8 RID: 38872
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToUIItemLater_Internal(IntPtr @this, IntPtr UIItem, bool bScrollToTop);
 
-		// Token: 0x060201B4 RID: 131508
+		// Token: 0x060097D9 RID: 38873
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToUIItem_Internal(IntPtr @this, IntPtr UIItem, bool bScrollToTop);
 
-		// Token: 0x060201B5 RID: 131509
+		// Token: 0x060097DA RID: 38874
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToStartItemIndexLater_Internal(IntPtr @this, bool bScrollToTop, float Offset);
 
-		// Token: 0x060201B6 RID: 131510
+		// Token: 0x060097DB RID: 38875
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToStartItemIndex_Internal(IntPtr @this, bool bScrollToTop, float Offset);
 
-		// Token: 0x060201B7 RID: 131511
+		// Token: 0x060097DC RID: 38876
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToOffsetLater_Internal(IntPtr @this, float Offset);
 
-		// Token: 0x060201B8 RID: 131512
+		// Token: 0x060097DD RID: 38877
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToOffset_Internal(IntPtr @this, float Offset);
 
-		// Token: 0x060201B9 RID: 131513
+		// Token: 0x060097DE RID: 38878
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToNextLineLater_Internal(IntPtr @this, bool bReversed);
 
-		// Token: 0x060201BA RID: 131514
+		// Token: 0x060097DF RID: 38879
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToNextLine_Internal(IntPtr @this, bool bReversed);
 
-		// Token: 0x060201BB RID: 131515
+		// Token: 0x060097E0 RID: 38880
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToLastItemLater_Internal(IntPtr @this);
 
-		// Token: 0x060201BC RID: 131516
+		// Token: 0x060097E1 RID: 38881
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToLastItem_Internal(IntPtr @this);
 
-		// Token: 0x060201BD RID: 131517
+		// Token: 0x060097E2 RID: 38882
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToItemIndexLater_Internal(IntPtr @this, int ItemIndex, bool bScrollToTop, float Offset, bool bTweenAnim);
 
-		// Token: 0x060201BE RID: 131518
+		// Token: 0x060097E3 RID: 38883
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToItemIndexForNavigation_Internal(IntPtr @this, int ItemIndex, bool bScrollToTop, float Offset);
 
-		// Token: 0x060201BF RID: 131519
+		// Token: 0x060097E4 RID: 38884
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToItemIndex_Internal(IntPtr @this, int ItemIndex, bool bScrollToTop, float Offset, bool bTweenAnim);
 
-		// Token: 0x060201C0 RID: 131520
+		// Token: 0x060097E5 RID: 38885
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToEndItemIndexLater_Internal(IntPtr @this, bool bScrollToTop, float Offset);
 
-		// Token: 0x060201C1 RID: 131521
+		// Token: 0x060097E6 RID: 38886
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollToEndItemIndex_Internal(IntPtr @this, bool bScrollToTop, float Offset);
 
-		// Token: 0x060201C2 RID: 131522
+		// Token: 0x060097E7 RID: 38887
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollItemIndexLater_Internal(IntPtr @this, bool bReversed);
 
-		// Token: 0x060201C3 RID: 131523
+		// Token: 0x060097E8 RID: 38888
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrollItemIndex_Internal(IntPtr @this, bool bReversed);
 
-		// Token: 0x060201C4 RID: 131524
+		// Token: 0x060097E9 RID: 38889
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RefreshByData_Internal(IntPtr @this, IntPtr Item, int ItemNum, bool KeepContentPosition);
 
-		// Token: 0x060201C5 RID: 131525
+		// Token: 0x060097EA RID: 38890
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Refresh_Internal(IntPtr @this);
 
-		// Token: 0x060201C6 RID: 131526
+		// Token: 0x060097EB RID: 38891
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __NavigateScrollToUIItem_Internal(IntPtr @this, IntPtr UIItem, bool bReversed, UINavigationWrapMode Mode);
 
-		// Token: 0x060201C7 RID: 131527
+		// Token: 0x060097EC RID: 38892
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsItemInViewportEdgeByIndex_Internal(IntPtr @this, int ItemIndex);
 
-		// Token: 0x060201C8 RID: 131528
+		// Token: 0x060097ED RID: 38893
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsItemInViewportByIndex_Internal(IntPtr @this, int ItemIndex);
 
-		// Token: 0x060201C9 RID: 131529
+		// Token: 0x060097EE RID: 38894
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsAllItemDisplayed_Internal(IntPtr @this);
 
-		// Token: 0x060201CA RID: 131530
+		// Token: 0x060097EF RID: 38895
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsAllDisplayItemUpdateCompleted_Internal(IntPtr @this);
 
-		// Token: 0x060201CB RID: 131531
+		// Token: 0x060097F0 RID: 38896
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetStartItemIndex_Internal(IntPtr @this);
 
-		// Token: 0x060201CC RID: 131532
+		// Token: 0x060097F1 RID: 38897
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern EScrollItemState __GetScrollItemState_Internal(IntPtr @this, int ItemIndex);
 
-		// Token: 0x060201CD RID: 131533
+		// Token: 0x060097F2 RID: 38898
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRealUsingItem_Internal(IntPtr @this, int ItemIndex);
 
-		// Token: 0x060201CE RID: 131534
+		// Token: 0x060097F3 RID: 38899
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetItemPositionToViewport_Internal(IntPtr @this, IntPtr TargetItem);
 
-		// Token: 0x060201CF RID: 131535
+		// Token: 0x060097F4 RID: 38900
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetItemPositionToContent_Internal(IntPtr @this, IntPtr TargetItem);
 
-		// Token: 0x060201D0 RID: 131536
+		// Token: 0x060097F5 RID: 38901
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetItemIndex_Internal(IntPtr @this, int DisplayIndex, ref int ItemIndex);
 
-		// Token: 0x060201D1 RID: 131537
+		// Token: 0x060097F6 RID: 38902
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetItemDisplayIndex_Internal(IntPtr @this, int ItemIndex, ref int DisplayIndex);
 
-		// Token: 0x060201D2 RID: 131538
+		// Token: 0x060097F7 RID: 38903
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetItem_Internal(IntPtr @this, int ItemIndex);
 
-		// Token: 0x060201D3 RID: 131539
+		// Token: 0x060097F8 RID: 38904
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetInAnimation_Internal(IntPtr @this);
 
-		// Token: 0x060201D4 RID: 131540
+		// Token: 0x060097F9 RID: 38905
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetGridAnimationStartTime_Internal(IntPtr @this);
 
-		// Token: 0x060201D5 RID: 131541
+		// Token: 0x060097FA RID: 38906
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetGridAnimationInterval_Internal(IntPtr @this);
 
-		// Token: 0x060201D6 RID: 131542
+		// Token: 0x060097FB RID: 38907
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetGridActorIndex_Internal(IntPtr @this, IntPtr InActor);
 
-		// Token: 0x060201D7 RID: 131543
+		// Token: 0x060097FC RID: 38908
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetEndItemIndex_Internal(IntPtr @this);
 
-		// Token: 0x060201D8 RID: 131544 RVA: 0x002FBE73 File Offset: 0x002FA073
+		// Token: 0x060097FD RID: 38909 RVA: 0x000E5067 File Offset: 0x000E3267
 		static UUIDynScrollViewComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIDynScrollViewComponent");
 		}
 
-		// Token: 0x060201D9 RID: 131545 RVA: 0x002FBE81 File Offset: 0x002FA081
+		// Token: 0x060097FE RID: 38910 RVA: 0x000E5075 File Offset: 0x000E3275
 		protected UUIDynScrollViewComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011452 RID: 70738
-		internal static int __InterfaceOffset_ILGUIPrefabCheckerInterface;
-
-		// Token: 0x04011453 RID: 70739
-		internal static int __InterfaceOffset_ILGUIGridAnimationInterface;
-
-		// Token: 0x04011454 RID: 70740
+		// Token: 0x040041EA RID: 16874
 		public new const string __ObjectPath = "/Script/LGUI.UIDynScrollViewComponent";
 
-		// Token: 0x04011455 RID: 70741
+		// Token: 0x040041EB RID: 16875
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011456 RID: 70742
+		// Token: 0x040041EC RID: 16876
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011457 RID: 70743
+		// Token: 0x040041ED RID: 16877
 		internal static int __PropertyOffset_TemplateItem;
 
-		// Token: 0x04011458 RID: 70744
+		// Token: 0x040041EE RID: 16878
 		internal static int __PropertyOffset_TotalItemNum;
 
-		// Token: 0x04011459 RID: 70745
+		// Token: 0x040041EF RID: 16879
 		internal static int __PropertyOffset_ItemDefaultUIActive;
 
-		// Token: 0x0401145A RID: 70746
+		// Token: 0x040041F0 RID: 16880
 		internal static int __PropertyOffset_SpacingHorizontal;
 
-		// Token: 0x0401145B RID: 70747
+		// Token: 0x040041F1 RID: 16881
 		internal static int __PropertyOffset_SpacingVertical;
 
-		// Token: 0x0401145C RID: 70748
+		// Token: 0x040041F2 RID: 16882
 		internal static int __PropertyOffset_PaddingHorizontal;
 
-		// Token: 0x0401145D RID: 70749
+		// Token: 0x040041F3 RID: 16883
 		internal static int __PropertyOffset_PaddingVertical;
 
-		// Token: 0x0401145E RID: 70750
+		// Token: 0x040041F4 RID: 16884
 		internal static int __PropertyOffset_GridAnimationStartTime;
 
-		// Token: 0x0401145F RID: 70751
+		// Token: 0x040041F5 RID: 16885
 		internal static int __PropertyOffset_GridAnimationInterval;
 
-		// Token: 0x04011460 RID: 70752
+		// Token: 0x040041F6 RID: 16886
 		internal static int __PropertyOffset_IsInAnimation;
 
-		// Token: 0x04011461 RID: 70753
+		// Token: 0x040041F7 RID: 16887
 		internal static int __PropertyOffset_SizeMatchContent;
 
-		// Token: 0x04011462 RID: 70754
+		// Token: 0x040041F8 RID: 16888
 		internal static int __PropertyOffset_OnItemCreate;
 
-		// Token: 0x04011463 RID: 70755
+		// Token: 0x040041F9 RID: 16889
 		[Nullable(2)]
 		private FLGUIDynScrollViewItemCreateDelegate _OnItemCreate;
 
-		// Token: 0x04011464 RID: 70756
+		// Token: 0x040041FA RID: 16890
 		internal static int __PropertyOffset_OnItemUpdate;
 
-		// Token: 0x04011465 RID: 70757
+		// Token: 0x040041FB RID: 16891
 		[Nullable(2)]
 		private FLGUIDynScrollViewItemUpdateDelegate _OnItemUpdate;
 
-		// Token: 0x04011466 RID: 70758
+		// Token: 0x040041FC RID: 16892
 		internal static int __PropertyOffset_ItemSizeDelegate;
 
-		// Token: 0x04011467 RID: 70759
+		// Token: 0x040041FD RID: 16893
 		[Nullable(2)]
 		private FLGUIDynScrollViewItemSizeDelegate _ItemSizeDelegate;
 
-		// Token: 0x04011468 RID: 70760
+		// Token: 0x040041FE RID: 16894
 		internal static int __PropertyOffset_OnItemClear;
 
-		// Token: 0x04011469 RID: 70761
+		// Token: 0x040041FF RID: 16895
 		[Nullable(2)]
 		private FLGUIDynScrollViewItemClearDelegate _OnItemClear;
 
-		// Token: 0x0401146A RID: 70762
+		// Token: 0x04004200 RID: 16896
 		internal static int __PropertyOffset_OnDestroyCallBack;
 
-		// Token: 0x0401146B RID: 70763
+		// Token: 0x04004201 RID: 16897
 		[Nullable(2)]
 		private FLGUILoopScrollViewDelegate _OnDestroyCallBack;
 
-		// Token: 0x0401146C RID: 70764
+		// Token: 0x04004202 RID: 16898
 		internal static int __PropertyOffset_StartItemIndex;
 
-		// Token: 0x0401146D RID: 70765
+		// Token: 0x04004203 RID: 16899
 		internal static int __PropertyOffset_EndItemIndex;
 
-		// Token: 0x0401146E RID: 70766
+		// Token: 0x04004204 RID: 16900
 		internal static int __PropertyOffset_DisplayItemArray;
 
-		// Token: 0x0401146F RID: 70767
+		// Token: 0x04004205 RID: 16901
 		[Nullable(new byte[]
 		{
 			2,
@@ -1030,10 +1012,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<AUIBaseActor>> _DisplayItemArray;
 
-		// Token: 0x04011470 RID: 70768
+		// Token: 0x04004206 RID: 16902
 		internal static int __PropertyOffset_IdleItemArray;
 
-		// Token: 0x04011471 RID: 70769
+		// Token: 0x04004207 RID: 16903
 		[Nullable(new byte[]
 		{
 			2,
@@ -1042,10 +1024,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<AUIBaseActor>> _IdleItemArray;
 
-		// Token: 0x04011472 RID: 70770
+		// Token: 0x04004208 RID: 16904
 		internal static int __PropertyOffset_ToUsingItemMap;
 
-		// Token: 0x04011473 RID: 70771
+		// Token: 0x04004209 RID: 16905
 		[Nullable(new byte[]
 		{
 			2,
@@ -1054,14 +1036,14 @@ namespace UnrealEngine
 		})]
 		private TMap<AUIBaseActor, AUIBaseActor> _ToUsingItemMap;
 
-		// Token: 0x04011474 RID: 70772
+		// Token: 0x0400420A RID: 16906
 		internal static int __PropertyOffset_ItemStateMap;
 
-		// Token: 0x04011475 RID: 70773
+		// Token: 0x0400420B RID: 16907
 		[Nullable(2)]
 		private TMap<int, EScrollItemState> _ItemStateMap;
 
-		// Token: 0x04011476 RID: 70774
+		// Token: 0x0400420C RID: 16908
 		internal static int __PropertyOffset_IsNavigateScrollFixedValue;
 	}
 }

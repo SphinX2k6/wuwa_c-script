@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.CaveHole
 {
-	// Token: 0x02004841 RID: 18497
+	// Token: 0x02003772 RID: 14194
 	public class CaveHoleSecondaryPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603067A RID: 198266 RVA: 0x00B3C5E0 File Offset: 0x00B3A7E0
+		// Token: 0x06024E4A RID: 151114 RVA: 0x00A6C7C8 File Offset: 0x00A6A9C8
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x0603067B RID: 198267 RVA: 0x00B3C5E8 File Offset: 0x00B3A7E8
+		// Token: 0x06024E4B RID: 151115 RVA: 0x00A6C7D0 File Offset: 0x00A6A9D0
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CaveHole
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603067C RID: 198268 RVA: 0x00B3C664 File Offset: 0x00B3A864
+		// Token: 0x06024E4C RID: 151116 RVA: 0x00A6C84C File Offset: 0x00A6AA4C
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
@@ -71,16 +71,16 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CaveHole
 			}
 		}
 
-		// Token: 0x0603067D RID: 198269 RVA: 0x00B3C6EB File Offset: 0x00B3A8EB
+		// Token: 0x06024E4D RID: 151117 RVA: 0x00A6C8D3 File Offset: 0x00A6AAD3
 		protected override void OnConfirmBtnClick(int index)
 		{
 			this.HandleTrack();
 		}
 
-		// Token: 0x0200AB20 RID: 43808
+		// Token: 0x020094CE RID: 38094
 		public static class EComponents
 		{
-			// Token: 0x04034017 RID: 213015
+			// Token: 0x0402E792 RID: 190354
 			public const int CaveHole = 1;
 		}
 	}

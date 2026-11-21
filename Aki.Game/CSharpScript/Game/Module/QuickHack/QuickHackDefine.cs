@@ -5,84 +5,84 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F74 RID: 20340
+	// Token: 0x02003F3D RID: 16189
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackDefine
 	{
-		// Token: 0x0401BAD9 RID: 113369
+		// Token: 0x040164AE RID: 91310
 		public const string QUICK_HACK_SKILL_ENABLE_BG = "QuickHackSkillEnableBg";
 
-		// Token: 0x0401BADA RID: 113370
+		// Token: 0x040164AF RID: 91311
 		public const string QUICK_HACK_SKILL_ENABLE_HOLD_BG = "QuickHackSkillEnableHoldBg";
 
-		// Token: 0x0401BADB RID: 113371
+		// Token: 0x040164B0 RID: 91312
 		public const string QUICK_HACK_SKILL_DISABLE_BG = "QuickHackSkillDisableBg";
 
-		// Token: 0x0401BADC RID: 113372
+		// Token: 0x040164B1 RID: 91313
 		public const string QUICK_HACK_SKILL_DISABLE_HOLD_BG = "QuickHackSkillDisableHoldBg";
 
-		// Token: 0x0401BADD RID: 113373
+		// Token: 0x040164B2 RID: 91314
 		public const string QUICK_HACK_SKILL_ENABLE_ICON_BG = "QuickHackSkillEnableIconBg";
 
-		// Token: 0x0401BADE RID: 113374
+		// Token: 0x040164B3 RID: 91315
 		public const string QUICK_HACK_SKILL_DISABLE_ICON_BG = "QuickHackSkillDisableIconBg";
 
-		// Token: 0x0401BADF RID: 113375
+		// Token: 0x040164B4 RID: 91316
 		public const string QUICK_HACK_SKILL_ENABLE_RAM_ICON = "QuickHackSkillEnableRamIcon";
 
-		// Token: 0x0401BAE0 RID: 113376
+		// Token: 0x040164B5 RID: 91317
 		public const string QUICK_HACK_SKILL_DISABLE_RAM_ICON = "QuickHackSkillDisableRamIcon";
 
-		// Token: 0x0401BAE1 RID: 113377
+		// Token: 0x040164B6 RID: 91318
 		public const string QUICK_HACK_SKILL_ENABLE_TAG_BG = "QuickHackSkillEnableTagBg";
 
-		// Token: 0x0401BAE2 RID: 113378
+		// Token: 0x040164B7 RID: 91319
 		public const string QUICK_HACK_SKILL_DISABLE_TAG_BG = "QuickHackSkillDisableTagBg";
 
-		// Token: 0x0401BAE3 RID: 113379
+		// Token: 0x040164B8 RID: 91320
 		public const string QUICK_HACK_MARKS_ITEM = "QuickHackMarksItem";
 
-		// Token: 0x0401BAE4 RID: 113380
+		// Token: 0x040164B9 RID: 91321
 		public const string QUICK_HACK_RAM_TITLE_TEXT = "QuickHack_Desc_1";
 
-		// Token: 0x0401BAE5 RID: 113381
+		// Token: 0x040164BA RID: 91322
 		public const string QUICK_HACK_DURATION_LIMIT_TEXT = "QuickHack_Desc_2";
 
-		// Token: 0x0401BAE6 RID: 113382
+		// Token: 0x040164BB RID: 91323
 		public const string QUICK_HACK_CONDITION_FAIL_TEXT = "QuickHack_Prohibit_1";
 
-		// Token: 0x0401BAE7 RID: 113383
+		// Token: 0x040164BC RID: 91324
 		public const string QUICK_HACK_TARGET_NOT_MATCH_TEXT = "QuickHack_Prohibit_2";
 
-		// Token: 0x0401BAE8 RID: 113384
+		// Token: 0x040164BD RID: 91325
 		public const string QUICK_HACK_RAM_NOT_ENOUGH_TEXT = "QuickHack_Prohibit_3";
 
-		// Token: 0x0401BAE9 RID: 113385
+		// Token: 0x040164BE RID: 91326
 		public const string QUICK_HACK_USAGE_COUNT_NOT_ENOUGH_TEXT = "QuickHack_Prohibit_4";
 
-		// Token: 0x0401BAEA RID: 113386
+		// Token: 0x040164BF RID: 91327
 		public const string QUICK_HACK_MONSTER_NOT_MATCH_TEXT = "QuickHack_Prohibit_5";
 
-		// Token: 0x0401BAEB RID: 113387
+		// Token: 0x040164C0 RID: 91328
 		public const string QUICK_HACK_TARGET_HAS_BEEN_HACK_TEXT = "QuickHack_Prohibit_6";
 
-		// Token: 0x0401BAEC RID: 113388
+		// Token: 0x040164C1 RID: 91329
 		public const string QUICK_HACK_SKILL_ENABLE_STATE_TEXT = "Skill_10001511_HackSkill101";
 
-		// Token: 0x0401BAED RID: 113389
+		// Token: 0x040164C2 RID: 91330
 		public const string QUICK_HACK_SKILL_DISABLE_STATE_TEXT = "Skill_10001511_HackSkill102";
 
-		// Token: 0x0401BAEE RID: 113390
+		// Token: 0x040164C3 RID: 91331
 		public const string QUICK_HACK_SKILL_DURATION_TEXT = "QuickHack_SkillMessage_1";
 
-		// Token: 0x0401BAEF RID: 113391
+		// Token: 0x040164C4 RID: 91332
 		public const string QUICK_HACK_SKILL_UPLOAD_TEXT = "QuickHack_SkillMessage_2";
 
-		// Token: 0x0401BAF0 RID: 113392
+		// Token: 0x040164C5 RID: 91333
 		public const string QUICK_HACK_NO_TARGET_TEXT = "QuickHack_Desc_12";
 
-		// Token: 0x0401BAF1 RID: 113393
+		// Token: 0x040164C6 RID: 91334
 		[StaticVariableRuleIgnore]
 		public static readonly List<int> quickHackSkillItemOffsets = new List<int>
 		{
@@ -95,34 +95,34 @@ namespace CSharpScript.Game.Module.QuickHack
 			50
 		};
 
-		// Token: 0x0401BAF2 RID: 113394
+		// Token: 0x040164C7 RID: 91335
 		public const string QUICK_HACK_AUTO_USE_SKILL_LONG_PRESS = "QuickHackAutoUseSkillLongPressTime";
 
-		// Token: 0x0401BAF3 RID: 113395
+		// Token: 0x040164C8 RID: 91336
 		public const string QUICK_HACK_TRY_EXIT_LONG_PRESS = "QuickHackTryExitLongPressTime";
 
-		// Token: 0x0401BAF4 RID: 113396
+		// Token: 0x040164C9 RID: 91337
 		public const string QUICK_HACK_FORCE_EXIT_LONG_PRESS = "QuickHackForceExitLongPressTime";
 
-		// Token: 0x0401BAF5 RID: 113397
+		// Token: 0x040164CA RID: 91338
 		public const int QUICK_HACK_PER_RAM_WIDTH = 28;
 
-		// Token: 0x0401BAF6 RID: 113398
+		// Token: 0x040164CB RID: 91339
 		public const string QUICK_HACK_RAM_SELECTED_CURVE = "/Game/Aki/UI/UIResources/UiLevel/Curve/CyberSynergy/Curve_BarPawY.Curve_BarPawY";
 
-		// Token: 0x0401BAF7 RID: 113399
+		// Token: 0x040164CC RID: 91340
 		public const int QUICK_HACK_RAM_SELECTED_MAX_FRAME = 34;
 
-		// Token: 0x0401BAF8 RID: 113400
+		// Token: 0x040164CD RID: 91341
 		public const int QUICK_HACK_RAM_SELECTED_FRAME_PER_SECOND = 60;
 
-		// Token: 0x0401BAF9 RID: 113401
+		// Token: 0x040164CE RID: 91342
 		public const int QUICK_HACK_RAM_SELECTED_Y_MIN = 0;
 
-		// Token: 0x0401BAFA RID: 113402
+		// Token: 0x040164CF RID: 91343
 		public const int QUICK_HACK_RAM_SELECTED_Y_MAX = 6;
 
-		// Token: 0x0401BAFB RID: 113403
+		// Token: 0x040164D0 RID: 91344
 		[StaticVariableRuleIgnore]
 		public static readonly List<EBattleUiChild> battleViewExcludeChildren = new List<EBattleUiChild>
 		{
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			EBattleUiChild.DamageView
 		};
 
-		// Token: 0x0401BAFC RID: 113404
+		// Token: 0x040164D1 RID: 91345
 		[StaticVariableRuleIgnore]
 		public static readonly List<EBattleUiChild> commonBattleViewExcludeChildren = new List<EBattleUiChild>
 		{
@@ -140,58 +140,58 @@ namespace CSharpScript.Game.Module.QuickHack
 			EBattleUiChild.DamageView
 		};
 
-		// Token: 0x0401BAFD RID: 113405
+		// Token: 0x040164D2 RID: 91346
 		public const string QUICK_HACK_SKILL_ENABLE_CLICK_COLOR = "#55DAFFFF";
 
-		// Token: 0x0401BAFE RID: 113406
+		// Token: 0x040164D3 RID: 91347
 		public const string QUICK_HACK_SKILL_DISABLE_CLICK_COLOR = "#FF5753FF";
 
-		// Token: 0x0401BAFF RID: 113407
+		// Token: 0x040164D4 RID: 91348
 		public const string QUICK_HACK_POST_PROCESS_EFFECT_PATH = "/Game/Aki/Effect/DataAsset/FilterDA/DA_PostProcess_Filter_Green.DA_PostProcess_Filter_Green";
 
-		// Token: 0x0401BB00 RID: 113408
+		// Token: 0x040164D5 RID: 91349
 		public const float QUICK_HACK_SCREEN_TARGET_EXTEND = 0.1f;
 
-		// Token: 0x0401BB01 RID: 113409
+		// Token: 0x040164D6 RID: 91350
 		public const string QUICK_HACK_AUDIO_COMMON_MARKS_LOOP = "play_ui_focus_mode_scanning_loop";
 
-		// Token: 0x0401BB02 RID: 113410
+		// Token: 0x040164D7 RID: 91351
 		public const string QUICK_HACK_AUDIO_COMMON_MARKS_FINISH = "play_ui_focus_mode_scanning_qh_done";
 
-		// Token: 0x0401BB03 RID: 113411
+		// Token: 0x040164D8 RID: 91352
 		public const string QUICK_HACK_AUDIO_COMMON_SELECT_SKILL = "play_ui_focus_mode_scanning_choice";
 
-		// Token: 0x0401BB04 RID: 113412
+		// Token: 0x040164D9 RID: 91353
 		public const string QUICK_HACK_AUDIO_BATTLE_MARKS_LOOP = "play_role_lucy_bat_burst01_qh_loop";
 
-		// Token: 0x0401BB05 RID: 113413
+		// Token: 0x040164DA RID: 91354
 		public const string QUICK_HACK_AUDIO_BATTLE_MARKS_FINISH = "play_role_lucy_bat_burst01_qh_done";
 
-		// Token: 0x0401BB06 RID: 113414
+		// Token: 0x040164DB RID: 91355
 		public const string QUICK_HACK_AUDIO_BATTLE_SELECT_SKILL = "play_role_lucy_bat_burst01_qh_select";
 
-		// Token: 0x0401BB07 RID: 113415
+		// Token: 0x040164DC RID: 91356
 		public const string QUICK_HACK_AUDIO_BATTLE_USE_SKILL = "play_role_lucy_bat_burst01_qh_scanning";
 
-		// Token: 0x0401BB08 RID: 113416
+		// Token: 0x040164DD RID: 91357
 		public const string QUICK_HACK_MARK_RED_COLOR = "#FF4F4BFF";
 
-		// Token: 0x0401BB09 RID: 113417
+		// Token: 0x040164DE RID: 91358
 		public const string QUICK_HACK_MARK_BLUE_COLOR = "#6CF4F8FF";
 
-		// Token: 0x0401BB0A RID: 113418
+		// Token: 0x040164DF RID: 91359
 		public const int QUICK_HACK_MONSTER_MARK_UPLOAD_TIME = 200;
 
-		// Token: 0x0401BB0B RID: 113419
+		// Token: 0x040164E0 RID: 91360
 		public const string QUICK_HACK_MARK_BACKGROUND_BLUE = "QuickHackMarkBackgroundBlue";
 
-		// Token: 0x0401BB0C RID: 113420
+		// Token: 0x040164E1 RID: 91361
 		public const string QUICK_HACK_MARK_PROGRESS_BLUE = "QuickHackMarkProgressBlue";
 
-		// Token: 0x0401BB0D RID: 113421
+		// Token: 0x040164E2 RID: 91362
 		public const string QUICK_HACK_MARK_BACKGROUND_RED = "QuickHackMarkBackgroundRed";
 
-		// Token: 0x0401BB0E RID: 113422
+		// Token: 0x040164E3 RID: 91363
 		public const string QUICK_HACK_MARK_PROGRESS_RED = "QuickHackMarkProgressRed";
 	}
 }

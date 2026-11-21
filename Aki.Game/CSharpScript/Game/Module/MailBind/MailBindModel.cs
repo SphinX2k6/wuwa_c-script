@@ -8,13 +8,13 @@ using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.MailBind
 {
-	// Token: 0x020056A4 RID: 22180
+	// Token: 0x0200467A RID: 18042
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class MailBindModel : ModelBase
 	{
-		// Token: 0x06038701 RID: 231169 RVA: 0x00D6643F File Offset: 0x00D6463F
+		// Token: 0x0602D5FE RID: 185854 RVA: 0x00CB458F File Offset: 0x00CB278F
 		public void UpdateByProtoMailBindInfo(MailBindInfo mainBindInfo)
 		{
 			this.IsBind = mainBindInfo.IsBind;
@@ -22,25 +22,25 @@ namespace CSharpScript.Game.Module.MailBind
 			this.CloseTime = (float)mainBindInfo.CloseTime / 1000f;
 		}
 
-		// Token: 0x06038702 RID: 231170 RVA: 0x00D6646C File Offset: 0x00D6466C
+		// Token: 0x0602D5FF RID: 185855 RVA: 0x00CB45BC File Offset: 0x00CB27BC
 		public bool GetIsBind()
 		{
 			return this.IsBind;
 		}
 
-		// Token: 0x06038703 RID: 231171 RVA: 0x00D66474 File Offset: 0x00D64674
+		// Token: 0x0602D600 RID: 185856 RVA: 0x00CB45C4 File Offset: 0x00CB27C4
 		public bool GetIsReward()
 		{
 			return this.IsReward;
 		}
 
-		// Token: 0x06038704 RID: 231172 RVA: 0x00D6647C File Offset: 0x00D6467C
+		// Token: 0x0602D601 RID: 185857 RVA: 0x00CB45CC File Offset: 0x00CB27CC
 		public double GetCloseTime()
 		{
 			return (double)this.CloseTime;
 		}
 
-		// Token: 0x06038705 RID: 231173 RVA: 0x00D66485 File Offset: 0x00D64685
+		// Token: 0x0602D602 RID: 185858 RVA: 0x00CB45D5 File Offset: 0x00CB27D5
 		public EMailBindState GetState()
 		{
 			if (this.IsReward)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.MailBind
 			return EMailBindState.NotBind;
 		}
 
-		// Token: 0x06038706 RID: 231174 RVA: 0x00D6649C File Offset: 0x00D6469C
+		// Token: 0x0602D603 RID: 185859 RVA: 0x00CB45EC File Offset: 0x00CB27EC
 		[NullableContext(2)]
 		public string GetRemainTimeText(double endTime)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.MailBind
 			});
 		}
 
-		// Token: 0x06038707 RID: 231175 RVA: 0x00D66545 File Offset: 0x00D64745
+		// Token: 0x0602D604 RID: 185860 RVA: 0x00CB4695 File Offset: 0x00CB2895
 		[NullableContext(0)]
 		public ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType> GetTimeTypeData(Number remainTime)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.MailBind
 			return new ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType>(CommonDefine.ETimeType.Second, CommonDefine.ETimeType.Second);
 		}
 
-		// Token: 0x06038708 RID: 231176 RVA: 0x00D66584 File Offset: 0x00D64784
+		// Token: 0x0602D605 RID: 185861 RVA: 0x00CB46D4 File Offset: 0x00CB28D4
 		public bool CheckMailBindRedDot()
 		{
 			if (this.GetIsReward())
@@ -108,27 +108,27 @@ namespace CSharpScript.Game.Module.MailBind
 			return nextShowRedDotTime == null || TimeUtil.Instance.GetServerTimeStamp() >= (double)nextShowRedDotTime.Value;
 		}
 
-		// Token: 0x06038709 RID: 231177 RVA: 0x00D665CE File Offset: 0x00D647CE
+		// Token: 0x0602D606 RID: 185862 RVA: 0x00CB471E File Offset: 0x00CB291E
 		public bool CheckGlobalMailBindOpen()
 		{
 			return KuroSdkController.Instance.GetIfGlobalSdk() && !FeatureRestrictionTemplate.TemplateForPioneerClient.Check() && (!this.GetIsReward() || TimeUtil.Instance.GetServerTime() <= this.GetCloseTime());
 		}
 
-		// Token: 0x0603870A RID: 231178 RVA: 0x00D66609 File Offset: 0x00D64809
+		// Token: 0x0602D607 RID: 185863 RVA: 0x00CB4759 File Offset: 0x00CB2959
 		public void SetNextShowRedDotTime(long nextTime)
 		{
 			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.MailBindNextShowRedDotTime) as ServerStorageLong).Set(new long?(nextTime));
 		}
 
-		// Token: 0x0603870B RID: 231179 RVA: 0x00D66627 File Offset: 0x00D64827
+		// Token: 0x0602D608 RID: 185864 RVA: 0x00CB4777 File Offset: 0x00CB2977
 		public long? GetNextShowRedDotTime()
 		{
-			ServerStorageUtil.OverrideLocalNumberToServerLong(ELocalStoragePlayerKey.MailBindNextShowRedDotTime, EClientStorageSystemIdType.MailBindNextShowRedDotTime);
+			ServerStorageUtil.OverrideLocalNumberToServerLong(ELocalStoragePlayerKey.MailBindNextShowRedDotTime, EClientStorageSystemIdType.MailBindNextShowRedDotTime, true);
 			return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.MailBindNextShowRedDotTime) as ServerStorageLong).Get();
 		}
 
-		// Token: 0x1700878D RID: 34701
-		// (get) Token: 0x0603870C RID: 231180 RVA: 0x00D66649 File Offset: 0x00D64849
+		// Token: 0x17005B54 RID: 23380
+		// (get) Token: 0x0602D609 RID: 185865 RVA: 0x00CB479A File Offset: 0x00CB299A
 		public static MailBindModel Instance
 		{
 			get
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.MailBind
 			}
 		}
 
-		// Token: 0x0603870D RID: 231181 RVA: 0x00D66650 File Offset: 0x00D64850
+		// Token: 0x0602D60A RID: 185866 RVA: 0x00CB47A1 File Offset: 0x00CB29A1
 		public static MailBindModel GetOrCreateInstance()
 		{
 			if (MailBindModel._Instance == null)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.MailBind
 			return MailBindModel._Instance;
 		}
 
-		// Token: 0x0603870E RID: 231182 RVA: 0x00D66664 File Offset: 0x00D64864
+		// Token: 0x0602D60B RID: 185867 RVA: 0x00CB47B5 File Offset: 0x00CB29B5
 		public static bool CreateInstance()
 		{
 			if (MailBindModel._Instance != null)
@@ -158,33 +158,33 @@ namespace CSharpScript.Game.Module.MailBind
 			return true;
 		}
 
-		// Token: 0x0603870F RID: 231183 RVA: 0x00D6667A File Offset: 0x00D6487A
+		// Token: 0x0602D60C RID: 185868 RVA: 0x00CB47CB File Offset: 0x00CB29CB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06038710 RID: 231184 RVA: 0x00D6667C File Offset: 0x00D6487C
+		// Token: 0x0602D60D RID: 185869 RVA: 0x00CB47CD File Offset: 0x00CB29CD
 		public static void ResetStaticDefaultValue()
 		{
 			MailBindModel._Instance = null;
 		}
 
-		// Token: 0x06038711 RID: 231185 RVA: 0x00D66684 File Offset: 0x00D64884
+		// Token: 0x0602D60E RID: 185870 RVA: 0x00CB47D5 File Offset: 0x00CB29D5
 		static MailBindModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MailBindModel.CreateStaticDefaultValue), new Action(MailBindModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DA35 RID: 121397
+		// Token: 0x040184C0 RID: 99520
 		private bool IsBind;
 
-		// Token: 0x0401DA36 RID: 121398
+		// Token: 0x040184C1 RID: 99521
 		private bool IsReward;
 
-		// Token: 0x0401DA37 RID: 121399
+		// Token: 0x040184C2 RID: 99522
 		private float CloseTime;
 
-		// Token: 0x0401DA38 RID: 121400
+		// Token: 0x040184C3 RID: 99523
 		[Nullable(2)]
 		private static MailBindModel _Instance;
 	}

@@ -6,6 +6,7 @@ using CSharpScript.Core.Common;
 using CSharpScript.Core.Extension;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.DiffPatch.Update;
 using CSharpScript.Launcher.Platform;
 using CSharpScript.Launcher.Ui.HotFix;
@@ -13,13 +14,13 @@ using CSharpScript.Launcher.Update.ResourceDiffUpdate;
 using CSharpScript.Launcher.Util;
 using UnrealEngine;
 
-// Token: 0x02000DDB RID: 3547
+// Token: 0x0200028D RID: 653
 [NullableContext(1)]
 [Nullable(0)]
 public class GameSettingsManager : Singleton
 {
-	// Token: 0x170005EC RID: 1516
-	// (get) Token: 0x060054BC RID: 21692 RVA: 0x000F0AA4 File Offset: 0x000EECA4
+	// Token: 0x17000612 RID: 1554
+	// (get) Token: 0x06002844 RID: 10308 RVA: 0x000F7868 File Offset: 0x000F5A68
 	public unsafe Dictionary<EFunction, MenuConfig> ValidApplyConfigMap
 	{
 		get
@@ -71,7 +72,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054BD RID: 21693 RVA: 0x000F0CAC File Offset: 0x000EEEAC
+	// Token: 0x06002845 RID: 10309 RVA: 0x000F7A70 File Offset: 0x000F5C70
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -103,13 +104,25 @@ public class GameSettingsManager : Singleton
 		return new ValueTuple<bool, string>(true, "NONE");
 	}
 
-	// Token: 0x060054BE RID: 21694 RVA: 0x000F0D49 File Offset: 0x000EEF49
+	// Token: 0x06002846 RID: 10310 RVA: 0x000F7B0D File Offset: 0x000F5D0D
+	public bool CanUnlockImageQualityForTesting()
+	{
+		return false;
+	}
+
+	// Token: 0x06002847 RID: 10311 RVA: 0x000F7B10 File Offset: 0x000F5D10
+	public bool IsImageQualityUnlockedForTesting()
+	{
+		return false;
+	}
+
+	// Token: 0x06002848 RID: 10312 RVA: 0x000F7B13 File Offset: 0x000F5D13
 	public bool IsShowMobileVeryHighOption()
 	{
 		return GameSettingsDeviceRender.Instance.DeviceType == EGameDeviceType.ANDROID_VERY_HIGH || GameSettingsDeviceRender.Instance.DeviceType == EGameDeviceType.IOS_VERY_HIGH;
 	}
 
-	// Token: 0x060054BF RID: 21695 RVA: 0x000F0D69 File Offset: 0x000EEF69
+	// Token: 0x06002849 RID: 10313 RVA: 0x000F7B33 File Offset: 0x000F5D33
 	public bool IsShowPcVeryHighOption()
 	{
 		if (GameSettingsDeviceRender.Instance.IsNvidiaLaptopGPU())
@@ -126,7 +139,7 @@ public class GameSettingsManager : Singleton
 		return false;
 	}
 
-	// Token: 0x060054C0 RID: 21696 RVA: 0x000F0D98 File Offset: 0x000EEF98
+	// Token: 0x0600284A RID: 10314 RVA: 0x000F7B62 File Offset: 0x000F5D62
 	public bool IsShowVeryHighOption()
 	{
 		if (Info.Instance.IsPcPlatform())
@@ -136,7 +149,7 @@ public class GameSettingsManager : Singleton
 		return Info.Instance.IsMobilePlatform() && this.IsShowMobileVeryHighOption();
 	}
 
-	// Token: 0x060054C1 RID: 21697 RVA: 0x000F0DC4 File Offset: 0x000EEFC4
+	// Token: 0x0600284B RID: 10315 RVA: 0x000F7B8C File Offset: 0x000F5D8C
 	public bool IsShowPcHighestOption()
 	{
 		if (!GameSettingsDeviceRender.Instance.IsFrameRate120DeviceForAllDevice())
@@ -157,28 +170,34 @@ public class GameSettingsManager : Singleton
 		return GameSettingsDeviceRender.Instance.IsNvidia5060AndAbove();
 	}
 
-	// Token: 0x060054C2 RID: 21698 RVA: 0x000F0E1A File Offset: 0x000EF01A
+	// Token: 0x0600284C RID: 10316 RVA: 0x000F7BE2 File Offset: 0x000F5DE2
 	public bool IsPcHighestDevice()
 	{
 		return GameSettingsDeviceRender.Instance.DeviceType == EGameDeviceType.PC_HIGHEST && GameSettingsDeviceRender.Instance.IsFrameRate120DeviceForAllDevice();
 	}
 
-	// Token: 0x060054C3 RID: 21699 RVA: 0x000F0E38 File Offset: 0x000EF038
+	// Token: 0x0600284D RID: 10317 RVA: 0x000F7BFE File Offset: 0x000F5DFE
+	private ETier GetResourceQualityTierForSettings()
+	{
+		return HotFixManager.LocalResourceQualityTier;
+	}
+
+	// Token: 0x0600284E RID: 10318 RVA: 0x000F7C08 File Offset: 0x000F5E08
 	public EGameQualitySettingLevel? GetMaxQualityLevelByResourceTier()
 	{
-		if (!HotFixManager.IsTierEnabled())
+		if (this.IsImageQualityUnlockedForTesting() || !HotFixManager.IsTierEnabled())
 		{
 			return null;
 		}
-		ETier localResourceQualityTier = HotFixManager.LocalResourceQualityTier;
+		ETier resourceQualityTierForSettings = this.GetResourceQualityTierForSettings();
 		if (Info.Instance.IsPcPlatform())
 		{
-			switch (localResourceQualityTier)
+			switch (resourceQualityTierForSettings)
 			{
 			case ETier.SD:
 				return new EGameQualitySettingLevel?(EGameQualitySettingLevel.Middle);
 			case ETier.HD:
-				return new EGameQualitySettingLevel?(EGameQualitySettingLevel.High);
+				return new EGameQualitySettingLevel?(EGameQualitySettingLevel.VeryHigh);
 			case ETier.UHD:
 				return new EGameQualitySettingLevel?(EGameQualitySettingLevel.Highest);
 			default:
@@ -191,11 +210,11 @@ public class GameSettingsManager : Singleton
 			{
 				return null;
 			}
-			if (localResourceQualityTier == ETier.SD)
+			if (resourceQualityTierForSettings == ETier.SD)
 			{
 				return new EGameQualitySettingLevel?(EGameQualitySettingLevel.Middle);
 			}
-			if (localResourceQualityTier != ETier.HD)
+			if (resourceQualityTierForSettings != ETier.HD)
 			{
 				return null;
 			}
@@ -203,7 +222,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054C4 RID: 21700 RVA: 0x000F0ED4 File Offset: 0x000EF0D4
+	// Token: 0x0600284F RID: 10319 RVA: 0x000F7CB0 File Offset: 0x000F5EB0
 	public unsafe EGameQualitySettingLevel ClampQualityByResourceTier(EGameQualitySettingLevel quality)
 	{
 		EGameQualitySettingLevel? maxQualityLevelByResourceTier = this.GetMaxQualityLevelByResourceTier();
@@ -222,17 +241,17 @@ public class GameSettingsManager : Singleton
 		return maxQualityLevelByResourceTier.Value;
 	}
 
-	// Token: 0x060054C5 RID: 21701 RVA: 0x000F0F6C File Offset: 0x000EF16C
+	// Token: 0x06002850 RID: 10320 RVA: 0x000F7D48 File Offset: 0x000F5F48
 	public int? GetMaxImageDetailByResourceTier()
 	{
-		if (!HotFixManager.IsTierEnabled())
+		if (this.IsImageQualityUnlockedForTesting() || !HotFixManager.IsTierEnabled())
 		{
 			return null;
 		}
-		ETier localResourceQualityTier = HotFixManager.LocalResourceQualityTier;
+		ETier resourceQualityTierForSettings = this.GetResourceQualityTierForSettings();
 		if (Info.Instance.IsPcPlatform())
 		{
-			switch (localResourceQualityTier)
+			switch (resourceQualityTierForSettings)
 			{
 			case ETier.SD:
 				return new int?(1);
@@ -250,11 +269,11 @@ public class GameSettingsManager : Singleton
 			{
 				return null;
 			}
-			if (localResourceQualityTier == ETier.SD)
+			if (resourceQualityTierForSettings == ETier.SD)
 			{
 				return new int?(1);
 			}
-			if (localResourceQualityTier != ETier.HD)
+			if (resourceQualityTierForSettings != ETier.HD)
 			{
 				return null;
 			}
@@ -262,7 +281,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054C6 RID: 21702 RVA: 0x000F1010 File Offset: 0x000EF210
+	// Token: 0x06002851 RID: 10321 RVA: 0x000F7DF4 File Offset: 0x000F5FF4
 	private unsafe void ClampImageDetailByResourceTier(EGameSettingsInitSourceType sourceType)
 	{
 		int? maxImageDetailByResourceTier = this.GetMaxImageDetailByResourceTier();
@@ -296,7 +315,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault.RefreshCacheValue(maxImageDetailByResourceTier.Value, sourceType);
 	}
 
-	// Token: 0x060054C7 RID: 21703 RVA: 0x000F10E4 File Offset: 0x000EF2E4
+	// Token: 0x06002852 RID: 10322 RVA: 0x000F7EC8 File Offset: 0x000F60C8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -452,7 +471,7 @@ public class GameSettingsManager : Singleton
 		return new ValueTuple<bool, string>(true, "DEFAULT");
 	}
 
-	// Token: 0x060054C8 RID: 21704 RVA: 0x000F16AC File Offset: 0x000EF8AC
+	// Token: 0x06002853 RID: 10323 RVA: 0x000F8490 File Offset: 0x000F6690
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -585,7 +604,13 @@ public class GameSettingsManager : Singleton
 		return new ValueTuple<bool, string>(true, "DEFAULT");
 	}
 
-	// Token: 0x060054C9 RID: 21705 RVA: 0x000F1A50 File Offset: 0x000EFC50
+	// Token: 0x06002854 RID: 10324 RVA: 0x000F8834 File Offset: 0x000F6A34
+	private bool CheckConsoleHide(MenuConfig config)
+	{
+		return config.FunctionId != 10 || ((config.Ps5Hide != 1 || !Info.Instance.IsPs5Platform() || config.SpecifyHideConsolesLength > 0) && (config.XboxHide != 1 || !Info.Instance.IsXSXPlatform() || config.SpecifyHideConsolesLength > 0));
+	}
+
+	// Token: 0x06002855 RID: 10325 RVA: 0x000F8894 File Offset: 0x000F6A94
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -597,7 +622,7 @@ public class GameSettingsManager : Singleton
 		switch (platform)
 		{
 		case EMenuConfigPlatform.NORMAL:
-			return new ValueTuple<bool, string>(true, "EMenuConfigPlatform.NORMAL");
+			return new ValueTuple<bool, string>(this.CheckConsoleHide(menuCfg), "EMenuConfigPlatform.NORMAL");
 		case EMenuConfigPlatform.PC_OR_PS:
 			return new ValueTuple<bool, string>(Info.Instance.IsPcOrGamepadPlatform() && !Platform.Instance.IsCloudGame(), "EMenuConfigPlatform.PC_OR_PS");
 		case EMenuConfigPlatform.MOBILE:
@@ -623,13 +648,13 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054CA RID: 21706 RVA: 0x000F1BA4 File Offset: 0x000EFDA4
+	// Token: 0x06002856 RID: 10326 RVA: 0x000F89F0 File Offset: 0x000F6BF0
 	public bool IsButtonSetting(MenuConfig menuCfg)
 	{
 		return menuCfg.Platform != 99 && (menuCfg.MainType == 3 && menuCfg.Platform != 2 && menuCfg.FunctionId != 129) && menuCfg.FunctionId != 134;
 	}
 
-	// Token: 0x060054CB RID: 21707 RVA: 0x000F1BF4 File Offset: 0x000EFDF4
+	// Token: 0x06002857 RID: 10327 RVA: 0x000F8A40 File Offset: 0x000F6C40
 	private void AssignCacheValueByDeviceRenderFeature(DeviceRenderFeature targetCfg, EGameSettingsInitSourceType sourceType)
 	{
 		GameSettingsInitValueSource valueOrDefault = this.ValidInitValueSourceCache.GetValueOrDefault(EFunction.IMAGEQUALITY);
@@ -679,9 +704,22 @@ public class GameSettingsManager : Singleton
 				}
 			}
 		}
+		foreach (KeyValuePair<EFunction, float> keyValuePair2 in GameSettingsDeviceRender.Instance.GetOtherChangedFloatValue(targetCfg))
+		{
+			EFunction efunction;
+			float num4;
+			keyValuePair2.Deconstruct(out efunction, out num4);
+			EFunction key = efunction;
+			float value = num4;
+			GameSettingsInitValueSource valueOrDefault5 = this.ValidInitValueSourceCache.GetValueOrDefault(key);
+			if (valueOrDefault5 != null)
+			{
+				valueOrDefault5.CacheValue(value, sourceType);
+			}
+		}
 	}
 
-	// Token: 0x060054CC RID: 21708 RVA: 0x000F1D34 File Offset: 0x000EFF34
+	// Token: 0x06002858 RID: 10328 RVA: 0x000F8BF8 File Offset: 0x000F6DF8
 	private unsafe void AssignCacheValueByTransferViewSensitivity(EFunction functionId)
 	{
 		int? global = LocalStorage.GetGlobal<int?>((ELocalStorageGlobalKey)GameSettingsDefine.function2GameSettings.GetValueOrDefault(functionId).GetCallbackOrGlobalKey, null);
@@ -711,7 +749,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054CD RID: 21709 RVA: 0x000F1E4C File Offset: 0x000F004C
+	// Token: 0x06002859 RID: 10329 RVA: 0x000F8D10 File Offset: 0x000F6F10
 	private void AssignCacheValueByPlayerMenuInfo(Dictionary<int, double> data, EFunction functionId, EGameSettingsInitSourceType reason)
 	{
 		double num;
@@ -741,7 +779,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054CE RID: 21710 RVA: 0x000F1EAC File Offset: 0x000F00AC
+	// Token: 0x0600285A RID: 10330 RVA: 0x000F8D70 File Offset: 0x000F6F70
 	private void CacheInitDataFromOverride()
 	{
 		this.CacheOverrideForViewSensitivity();
@@ -754,12 +792,13 @@ public class GameSettingsManager : Singleton
 		this.CacheOverrideForHdr();
 		this.CacheOverrideForMotorRoundJoyStick();
 		this.CacheOverrideForMobileShadowQuality();
+		this.CacheOverrideForVulkanRefresh();
 		this.CacheOverrideForResourceTierQualityCap();
 		this.CacheOverrideForImageDetailByResourceTier();
 		GameSettingsManager.CacheOverrideForRecommendImageQualityRelated();
 	}
 
-	// Token: 0x060054CF RID: 21711 RVA: 0x000F1F08 File Offset: 0x000F0108
+	// Token: 0x0600285B RID: 10331 RVA: 0x000F8DD0 File Offset: 0x000F6FD0
 	private unsafe void CacheOverrideForResourceTierQualityCap()
 	{
 		EGameQualitySettingLevel? maxQualityLevelByResourceTier = this.GetMaxQualityLevelByResourceTier();
@@ -796,7 +835,7 @@ public class GameSettingsManager : Singleton
 		GameSettingsManager.Instance.AssignCacheValueByDeviceRenderFeature(deviceRenderFeature2.Value, EGameSettingsInitSourceType.InitOverride);
 	}
 
-	// Token: 0x060054D0 RID: 21712 RVA: 0x000F2064 File Offset: 0x000F0264
+	// Token: 0x0600285C RID: 10332 RVA: 0x000F8F2C File Offset: 0x000F712C
 	private unsafe void CacheOverrideForImageDetailByResourceTier()
 	{
 		int? maxImageDetailByResourceTier = this.GetMaxImageDetailByResourceTier();
@@ -827,7 +866,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault.CacheValue(maxImageDetailByResourceTier.Value, EGameSettingsInitSourceType.InitOverride);
 	}
 
-	// Token: 0x060054D1 RID: 21713 RVA: 0x000F2184 File Offset: 0x000F0384
+	// Token: 0x0600285D RID: 10333 RVA: 0x000F904C File Offset: 0x000F724C
 	private void CacheOverrideForViewSensitivity()
 	{
 		if (!LocalStorage.GetGlobal<bool>(ELocalStorageGlobalKey.IsConvertAllViewSensitivity, false))
@@ -852,7 +891,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054D2 RID: 21714 RVA: 0x000F2237 File Offset: 0x000F0437
+	// Token: 0x0600285E RID: 10334 RVA: 0x000F90FF File Offset: 0x000F72FF
 	private void CacheOverrideForDisplayMode()
 	{
 		if (UKismetSystemLibrary.GetCommandLine().Contains("-windowed"))
@@ -866,7 +905,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054D3 RID: 21715 RVA: 0x000F2268 File Offset: 0x000F0468
+	// Token: 0x0600285F RID: 10335 RVA: 0x000F9130 File Offset: 0x000F7330
 	private unsafe void CacheOverrideForCloudGame()
 	{
 		if (!Platform.Instance.IsCloudGame())
@@ -904,7 +943,7 @@ public class GameSettingsManager : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x060054D4 RID: 21716 RVA: 0x000F239C File Offset: 0x000F059C
+	// Token: 0x06002860 RID: 10336 RVA: 0x000F9264 File Offset: 0x000F7464
 	public unsafe void ApplyCloudGameResolution()
 	{
 		if (!CloudGameManagerLauncher.Instance.IsPreLaunch)
@@ -927,7 +966,7 @@ public class GameSettingsManager : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x060054D5 RID: 21717 RVA: 0x000F2460 File Offset: 0x000F0660
+	// Token: 0x06002861 RID: 10337 RVA: 0x000F9328 File Offset: 0x000F7528
 	private void CacheOverrideForDlssQuality()
 	{
 		MenuConfig? valueOrNull = this.ValidApplyConfigMap.GetValueOrNull(EFunction.NVIDIADLSSQUALITY);
@@ -944,7 +983,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054D6 RID: 21718 RVA: 0x000F24D4 File Offset: 0x000F06D4
+	// Token: 0x06002862 RID: 10338 RVA: 0x000F939C File Offset: 0x000F759C
 	private void CacheOverrideForDlssFrameGenerate()
 	{
 		MenuConfig? valueOrNull = this.ValidApplyConfigMap.GetValueOrNull(EFunction.NVIDIADLSSFG);
@@ -967,7 +1006,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054D7 RID: 21719 RVA: 0x000F2568 File Offset: 0x000F0768
+	// Token: 0x06002863 RID: 10339 RVA: 0x000F9430 File Offset: 0x000F7630
 	private void CacheOverrideForRecommendImageQuality()
 	{
 		if (RecommendQualityModel.Instance.IsNeedApply)
@@ -988,8 +1027,8 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054D8 RID: 21720 RVA: 0x000F25E8 File Offset: 0x000F07E8
-	public static void CacheOverrideForRecommendImageQualityRelated()
+	// Token: 0x06002864 RID: 10340 RVA: 0x000F94B0 File Offset: 0x000F76B0
+	public unsafe static void CacheOverrideForRecommendImageQualityRelated()
 	{
 		bool? global = LocalStorage.GetGlobal<bool?>(ELocalStorageGlobalKey.IsUsingQualityPreset, null);
 		bool? flag = global;
@@ -999,34 +1038,75 @@ public class GameSettingsManager : Singleton
 			Log.Instance.Info(ELogModule.GameSettings, ELogAuthor.TZJ, "[画质预设刷新] 本地保存了不使用画质预设", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return;
 		}
-		int? global2 = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.ImageQuality, null);
-		if (global2 == null)
+		int? cachedQuality = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.ImageQuality, null);
+		if (cachedQuality == null)
 		{
 			return;
 		}
+		bool isConsoleQualityMigration = false;
+		if ((Info.Instance.IsPs5Platform() || Info.Instance.IsXSXPlatform()) && !GameSettingsManager.Instance.IsLocalStorageValueValid(EFunction.IMAGEQUALITY, (double)cachedQuality.Value))
+		{
+			DeviceRenderFeature? deviceRenderFeature;
+			int? cachedQuality2 = (GameSettingsDeviceRender.Instance.GetDefaultDeviceRenderFeature() != null) ? new int?(deviceRenderFeature.GetValueOrDefault().QualityType) : null;
+			if (cachedQuality2 == null || !GameSettingsManager.Instance.IsLocalStorageValueValid(EFunction.IMAGEQUALITY, (double)cachedQuality2.Value))
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.GameSettings;
+				ELogAuthor author = ELogAuthor.TZJ;
+				string message = "[画质预设刷新] 主机老存档画质非法且机型默认画质不可用";
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("cachedQuality", cachedQuality.Value);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("defaultQuality", cachedQuality2.GetValueOrDefault(-1));
+				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+				return;
+			}
+			Log instance2 = Log.Instance;
+			ELogModule module2 = ELogModule.GameSettings;
+			ELogAuthor author2 = ELogAuthor.TZJ;
+			string message2 = "[画质预设刷新] 主机老存档画质非法，按机型默认画质处理";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("cachedQuality", cachedQuality.Value);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("defaultQuality", cachedQuality2.Value);
+			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
+			cachedQuality = cachedQuality2;
+			isConsoleQualityMigration = true;
+		}
 		if (global == null)
 		{
-			bool flag3 = GameSettingsManager.Instance.CheckIsMatchQualityRecommend((EGameQualitySettingLevel)global2.Value, delegate(EFunction functionId)
+			bool flag3 = GameSettingsManager.Instance.CheckIsMatchQualityRecommend((EGameQualitySettingLevel)cachedQuality.Value, delegate(EFunction functionId)
 			{
+				if (isConsoleQualityMigration && GameSettingsManager.IsHiddenOnCurrentConsole(functionId))
+				{
+					return null;
+				}
 				object getCallbackOrGlobalKey = GameSettingsDefine.function2GameSettings.GetValueOrDefault(functionId).GetCallbackOrGlobalKey;
 				if (getCallbackOrGlobalKey is ELocalStorageGlobalKey)
 				{
 					return LocalStorage.GetGlobal<int?>((ELocalStorageGlobalKey)getCallbackOrGlobalKey, null);
 				}
-				Log instance3 = Log.Instance;
-				ELogModule module3 = ELogModule.GameSettings;
-				ELogAuthor author3 = ELogAuthor.TZJ;
-				string message3 = "[画质预设刷新] 画质预设判断逻辑不适用当前配置";
+				Log instance5 = Log.Instance;
+				ELogModule module5 = ELogModule.GameSettings;
+				ELogAuthor author5 = ELogAuthor.TZJ;
+				string message5 = "[画质预设刷新] 画质预设判断逻辑不适用当前配置";
 				ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("functionId", (int)functionId);
-				instance3.Error(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
+				instance5.Error(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
 				return null;
 			});
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.GameSettings;
-			ELogAuthor author = ELogAuthor.TZJ;
-			string message = "[画质预设刷新] 本地未保存是否使用画质预设，比较本地画质与推荐画质是否匹配";
+			flag3 = (flag3 && GameSettingsManager.Instance.CheckIsMatchFloatRenderRecommend((EGameQualitySettingLevel)cachedQuality.Value, delegate(EFunction functionId)
+			{
+				float? global2 = LocalStorage.GetGlobal<float?>((ELocalStorageGlobalKey)GameSettingsDefine.function2GameSettings.GetValueOrDefault(functionId).GetCallbackOrGlobalKey, null);
+				if (global2 == null && functionId == EFunction.LOADINGRANGESCALELEVEL)
+				{
+					return GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(cachedQuality.Value);
+				}
+				return global2;
+			}));
+			Log instance3 = Log.Instance;
+			ELogModule module3 = ELogModule.GameSettings;
+			ELogAuthor author3 = ELogAuthor.TZJ;
+			string message3 = "[画质预设刷新] 本地未保存是否使用画质预设，比较本地画质与推荐画质是否匹配";
 			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("isMatchRecommendQuality", flag3);
-			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			GameSettingsManager.SetIsUsingQualityPreset(flag3);
 			global = new bool?(flag3);
 		}
@@ -1037,23 +1117,54 @@ public class GameSettingsManager : Singleton
 			return;
 		}
 		Log.Instance.Info(ELogModule.GameSettings, ELogAuthor.TZJ, "[画质预设刷新] 应用推荐画质", default(ReadOnlySpan<ValueTuple<string, object>>));
-		EGameQualitySettingLevel egameQualitySettingLevel = GameSettingsManager.Instance.ClampQualityByResourceTier((EGameQualitySettingLevel)global2.Value);
-		DeviceRenderFeature? deviceRenderFeature = GameSettingsDeviceRender.Instance.GetDeviceRenderFeature(egameQualitySettingLevel);
-		if (deviceRenderFeature == null)
+		EGameQualitySettingLevel egameQualitySettingLevel = GameSettingsManager.Instance.ClampQualityByResourceTier((EGameQualitySettingLevel)cachedQuality.Value);
+		DeviceRenderFeature? deviceRenderFeature2 = GameSettingsDeviceRender.Instance.GetDeviceRenderFeature(egameQualitySettingLevel);
+		if (deviceRenderFeature2 == null)
 		{
-			Log instance2 = Log.Instance;
-			ELogModule module2 = ELogModule.GameSettings;
-			ELogAuthor author2 = ELogAuthor.TZJ;
-			string message2 = "[画质预设刷新] 推荐画质对应的渲染Feature不存在";
+			Log instance4 = Log.Instance;
+			ELogModule module4 = ELogModule.GameSettings;
+			ELogAuthor author4 = ELogAuthor.TZJ;
+			string message4 = "[画质预设刷新] 推荐画质对应的渲染Feature不存在";
 			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("cachedQuality", (int)egameQualitySettingLevel);
-			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+			instance4.Error(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 			return;
 		}
-		GameSettingsManager.Instance.AssignCacheValueByDeviceRenderFeature(deviceRenderFeature.Value, EGameSettingsInitSourceType.InitOverride);
+		GameSettingsManager.Instance.AssignCacheValueByDeviceRenderFeature(deviceRenderFeature2.Value, EGameSettingsInitSourceType.InitOverride);
 		GameSettingsManager.Instance.ClampImageDetailByResourceTier(EGameSettingsInitSourceType.InitOverride);
 	}
 
-	// Token: 0x060054D9 RID: 21721 RVA: 0x000F2790 File Offset: 0x000F0990
+	// Token: 0x06002865 RID: 10341 RVA: 0x000F9810 File Offset: 0x000F7A10
+	private static bool IsHiddenOnCurrentConsole(EFunction functionId)
+	{
+		MenuConfig? valueOrNull = GameSettingsManager.Instance.ValidApplyConfigMap.GetValueOrNull(functionId);
+		if (valueOrNull == null)
+		{
+			return false;
+		}
+		MenuConfig value = valueOrNull.Value;
+		if ((!Info.Instance.IsPs5Platform() || value.Ps5Hide != 1) && (!Info.Instance.IsXSXPlatform() || value.XboxHide != 1))
+		{
+			return false;
+		}
+		if (value.SpecifyHideConsolesLength <= 0)
+		{
+			return true;
+		}
+		string consoleModelName = UKuroStaticLibrary.GetConsoleModelName();
+		using (IEnumerator<string> enumerator = value.SpecifyHideConsolesIter().GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == consoleModelName)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	// Token: 0x06002866 RID: 10342 RVA: 0x000F98D4 File Offset: 0x000F7AD4
 	public static void SetIsUsingQualityPreset(bool isUsingQualityPreset)
 	{
 		Log instance = Log.Instance;
@@ -1065,13 +1176,13 @@ public class GameSettingsManager : Singleton
 		LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.IsUsingQualityPreset, isUsingQualityPreset);
 	}
 
-	// Token: 0x060054DA RID: 21722 RVA: 0x000F27D8 File Offset: 0x000F09D8
+	// Token: 0x06002867 RID: 10343 RVA: 0x000F991C File Offset: 0x000F7B1C
 	private bool IsVulkanCanaryTestDevice()
 	{
 		return false;
 	}
 
-	// Token: 0x060054DB RID: 21723 RVA: 0x000F27E8 File Offset: 0x000F09E8
+	// Token: 0x06002868 RID: 10344 RVA: 0x000F992C File Offset: 0x000F7B2C
 	private void CacheOverrideForVulkan()
 	{
 		GameSettingsInitValueSource valueOrDefault = this.ValidInitValueSourceCache.GetValueOrDefault(EFunction.Vulkan);
@@ -1087,7 +1198,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault.CacheValue(currentValue.Value, EGameSettingsInitSourceType.InitOverride);
 	}
 
-	// Token: 0x060054DC RID: 21724 RVA: 0x000F2838 File Offset: 0x000F0A38
+	// Token: 0x06002869 RID: 10345 RVA: 0x000F997C File Offset: 0x000F7B7C
 	private void CacheOverrideForResetBrightness()
 	{
 		MenuConfig? valueOrNull = this.ValidApplyConfigMap.GetValueOrNull(EFunction.BRIGHTNESS);
@@ -1104,7 +1215,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054DD RID: 21725 RVA: 0x000F28A4 File Offset: 0x000F0AA4
+	// Token: 0x0600286A RID: 10346 RVA: 0x000F99E8 File Offset: 0x000F7BE8
 	private void CacheOverrideForNpcDensity()
 	{
 		if (UKuroStaticLibrary.IsLowMemoryDevice())
@@ -1114,11 +1225,11 @@ public class GameSettingsManager : Singleton
 			{
 				return;
 			}
-			valueOrDefault.CacheValue(0, EGameSettingsInitSourceType.InitOverride);
+			valueOrDefault.CacheValue(0, EGameSettingsInitSourceType.LowMemoryOverride);
 		}
 	}
 
-	// Token: 0x060054DE RID: 21726 RVA: 0x000F28D8 File Offset: 0x000F0AD8
+	// Token: 0x0600286B RID: 10347 RVA: 0x000F9A1C File Offset: 0x000F7C1C
 	private void CacheOverrideForHdr()
 	{
 		if (!UKuroGISystem.CheckWindowsSupportHDR())
@@ -1132,7 +1243,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054DF RID: 21727 RVA: 0x000F2910 File Offset: 0x000F0B10
+	// Token: 0x0600286C RID: 10348 RVA: 0x000F9A54 File Offset: 0x000F7C54
 	private void CacheOverrideForMotorRoundJoyStick()
 	{
 		GameSettingsInitValueSource valueOrDefault = this.ValidInitValueSourceCache.GetValueOrDefault(EFunction.MotorIsDynamicJoystick);
@@ -1154,7 +1265,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault.CacheValue(global.Value, EGameSettingsInitSourceType.InitOverride);
 	}
 
-	// Token: 0x060054E0 RID: 21728 RVA: 0x000F2998 File Offset: 0x000F0B98
+	// Token: 0x0600286D RID: 10349 RVA: 0x000F9ADC File Offset: 0x000F7CDC
 	private void CacheOverrideForMobileShadowQuality()
 	{
 		if (!Info.Instance.IsMobilePlatform())
@@ -1201,7 +1312,87 @@ public class GameSettingsManager : Singleton
 		LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.HasResetMobileShadowQuality, true);
 	}
 
-	// Token: 0x060054E1 RID: 21729 RVA: 0x000F2A88 File Offset: 0x000F0C88
+	// Token: 0x0600286E RID: 10350 RVA: 0x000F9BCC File Offset: 0x000F7DCC
+	private unsafe void CacheOverrideForVulkanRefresh()
+	{
+		if (!Platform.Instance.IsAndroidPlatform() || !this.ValidInitValueSourceCache.ContainsKey(EFunction.Vulkan))
+		{
+			return;
+		}
+		int num = UKismetSystemLibrary.GetConsoleVariableIntValue("r.Kuro.VulkanSettingRefreshRevision");
+		int num2 = (UKismetSystemLibrary.GetConsoleVariableIntValue("r.Android.DefaultVulkanSetting") > 0) ? 1 : 0;
+		string item = "ini";
+		EntryJson cdnReturnConfigInfo = BaseConfigController.Instance.GetCdnReturnConfigInfo();
+		Dictionary<string, VulkanSettingConfig> dictionary = (cdnReturnConfigInfo != null) ? cdnReturnConfigInfo.VulkanSettings : null;
+		string deviceProfileProfileName = UKuroRenderingRuntimeBPPluginBPLibrary.GetDeviceProfileProfileName();
+		VulkanSettingConfig vulkanSettingConfig;
+		if (dictionary != null && dictionary.TryGetValue(deviceProfileProfileName, out vulkanSettingConfig))
+		{
+			bool flag = vulkanSettingConfig != null;
+			if (flag)
+			{
+				int? num3 = vulkanSettingConfig.DefaultValue;
+				bool flag2;
+				if (num3 != null)
+				{
+					int valueOrDefault = num3.GetValueOrDefault();
+					if (valueOrDefault <= 1)
+					{
+						flag2 = true;
+						goto IL_A4;
+					}
+				}
+				flag2 = false;
+				IL_A4:
+				flag = flag2;
+			}
+			if (flag)
+			{
+				int? num3 = vulkanSettingConfig.Revision;
+				if (num3 != null && num3.GetValueOrDefault() > 0)
+				{
+					if (vulkanSettingConfig.Revision.Value > num)
+					{
+						num = vulkanSettingConfig.Revision.Value;
+						num2 = vulkanSettingConfig.DefaultValue.Value;
+						item = "server";
+						goto IL_1A4;
+					}
+					goto IL_1A4;
+				}
+			}
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.WZ;
+			string message = "Vulkan服务器配置无效，使用INI配置";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("profileName", deviceProfileProfileName);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("defaultValue", (vulkanSettingConfig != null) ? vulkanSettingConfig.DefaultValue : null);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("revision", (vulkanSettingConfig != null) ? vulkanSettingConfig.Revision : null);
+			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+		}
+		IL_1A4:
+		int valueOrDefault2 = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.VulkanRefreshRevision, null).GetValueOrDefault();
+		if (valueOrDefault2 >= num)
+		{
+			return;
+		}
+		Log instance2 = Log.Instance;
+		ELogModule module2 = ELogModule.GameSettings;
+		ELogAuthor author2 = ELogAuthor.WZ;
+		string message2 = "Vulkan设置按版本号刷新为默认值";
+		<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray5<ValueTuple<string, object>>);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("source", item);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("profileName", deviceProfileProfileName);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("revision", valueOrDefault2);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("targetRevision", num);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 4) = new ValueTuple<string, object>("defaultValue", num2);
+		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 5));
+		this.ForceSaveValue(EFunction.Vulkan, num2);
+		LocalStorage.SetGlobal<int>(ELocalStorageGlobalKey.VulkanRefreshRevision, num);
+	}
+
+	// Token: 0x0600286F RID: 10351 RVA: 0x000F9E6C File Offset: 0x000F806C
 	private void CacheInitDataFromRenderFeatureOverride()
 	{
 		if (GameSettingsDeviceRender.Instance.GetDefaultDeviceRenderFeature() == null)
@@ -1216,7 +1407,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault.CacheValue(0, EGameSettingsInitSourceType.RenderFeatureDefaultConfigOverride);
 	}
 
-	// Token: 0x060054E2 RID: 21730 RVA: 0x000F2ACC File Offset: 0x000F0CCC
+	// Token: 0x06002870 RID: 10352 RVA: 0x000F9EB0 File Offset: 0x000F80B0
 	private bool IsLocalStorageValueValid(EFunction functionId, double value)
 	{
 		MenuConfig? valueOrNull = this.ValidApplyConfigMap.GetValueOrNull(functionId);
@@ -1239,7 +1430,7 @@ public class GameSettingsManager : Singleton
 		return false;
 	}
 
-	// Token: 0x060054E3 RID: 21731 RVA: 0x000F2B30 File Offset: 0x000F0D30
+	// Token: 0x06002871 RID: 10353 RVA: 0x000F9F14 File Offset: 0x000F8114
 	private void CacheInitDataFromLocalStorage()
 	{
 		foreach (KeyValuePair<EFunction, GameSettingsInitValueSource> keyValuePair in this.ValidInitValueSourceCache)
@@ -1272,7 +1463,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054E4 RID: 21732 RVA: 0x000F2C48 File Offset: 0x000F0E48
+	// Token: 0x06002872 RID: 10354 RVA: 0x000FA02C File Offset: 0x000F822C
 	public void RefreshLoginOverrideCache()
 	{
 		foreach (KeyValuePair<EFunction, GameSettingsInitValueSource> keyValuePair in this.ValidInitValueSourceCache)
@@ -1303,7 +1494,7 @@ public class GameSettingsManager : Singleton
 		Log.Instance.Info(ELogModule.GameSettings, ELogAuthor.TZJ, "已刷新LoginOverride", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x060054E5 RID: 21733 RVA: 0x000F2D80 File Offset: 0x000F0F80
+	// Token: 0x06002873 RID: 10355 RVA: 0x000FA164 File Offset: 0x000F8364
 	public void OverrideLoginCacheValue(EFunction id, int value)
 	{
 		GameSettingsInitValueSource gameSettingsInitValueSource;
@@ -1314,7 +1505,7 @@ public class GameSettingsManager : Singleton
 		gameSettingsInitValueSource.RefreshCacheValue(value, EGameSettingsInitSourceType.LoginOverride);
 	}
 
-	// Token: 0x060054E6 RID: 21734 RVA: 0x000F2DAC File Offset: 0x000F0FAC
+	// Token: 0x06002874 RID: 10356 RVA: 0x000FA190 File Offset: 0x000F8390
 	public void OverrideLoginCacheValue(EFunction id, float value)
 	{
 		GameSettingsInitValueSource gameSettingsInitValueSource;
@@ -1325,7 +1516,7 @@ public class GameSettingsManager : Singleton
 		gameSettingsInitValueSource.RefreshCacheValue(value, EGameSettingsInitSourceType.LoginOverride);
 	}
 
-	// Token: 0x060054E7 RID: 21735 RVA: 0x000F2DD8 File Offset: 0x000F0FD8
+	// Token: 0x06002875 RID: 10357 RVA: 0x000FA1BC File Offset: 0x000F83BC
 	public static bool HasImageQualityOrSubSettingLoginOverride()
 	{
 		GameSettingsInitValueSource valueOrDefault = GameSettingsManager.Instance.ValidInitValueSourceCache.GetValueOrDefault(EFunction.IMAGEQUALITY);
@@ -1355,10 +1546,22 @@ public class GameSettingsManager : Singleton
 				return true;
 			}
 		}
+		foreach (KeyValuePair<EFunction, float> keyValuePair2 in GameSettingsDeviceRender.Instance.GetOtherChangedFloatValue(deviceRenderFeature.Value))
+		{
+			EFunction efunction;
+			float num2;
+			keyValuePair2.Deconstruct(out efunction, out num2);
+			EFunction key2 = efunction;
+			GameSettingsInitValueSource valueOrDefault3 = GameSettingsManager.Instance.ValidInitValueSourceCache.GetValueOrDefault(key2);
+			if (valueOrDefault3 != null && valueOrDefault3.HasCachedSource(EGameSettingsInitSourceType.LoginOverride))
+			{
+				return true;
+			}
+		}
 		return false;
 	}
 
-	// Token: 0x060054E8 RID: 21736 RVA: 0x000F2EBC File Offset: 0x000F10BC
+	// Token: 0x06002876 RID: 10358 RVA: 0x000FA320 File Offset: 0x000F8520
 	private void CacheInitDataFrom1Dot3()
 	{
 		int? global = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.TextLanguage, null);
@@ -1382,7 +1585,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054E9 RID: 21737 RVA: 0x000F2F48 File Offset: 0x000F1148
+	// Token: 0x06002877 RID: 10359 RVA: 0x000FA3AC File Offset: 0x000F85AC
 	private void CacheInitDataFrom1Dot2()
 	{
 		Dictionary<int, double> dictionary = LauncherGameSettingLib.Instance.LoadPlayMenuInfo();
@@ -1413,7 +1616,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054EA RID: 21738 RVA: 0x000F2FF8 File Offset: 0x000F11F8
+	// Token: 0x06002878 RID: 10360 RVA: 0x000FA45C File Offset: 0x000F865C
 	private void CacheInitDataFrom1Dot1()
 	{
 		Dictionary<EFunction, double?> dictionary = new Dictionary<EFunction, double?>();
@@ -1830,7 +2033,7 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054EB RID: 21739 RVA: 0x000F36EC File Offset: 0x000F18EC
+	// Token: 0x06002879 RID: 10361 RVA: 0x000FAB50 File Offset: 0x000F8D50
 	private void CacheInitDataFrom1Dot0()
 	{
 		Dictionary<int, double> dictionary = LauncherGameSettingLib.Instance.LoadPlayMenuInfo();
@@ -1852,7 +2055,7 @@ public class GameSettingsManager : Singleton
 		this.AssignCacheValueByPlayerMenuInfo(dictionary, EFunction.GENDERSETTING, EGameSettingsInitSourceType.From1Dot0);
 	}
 
-	// Token: 0x060054EC RID: 21740 RVA: 0x000F377C File Offset: 0x000F197C
+	// Token: 0x0600287A RID: 10362 RVA: 0x000FABE0 File Offset: 0x000F8DE0
 	private void CacheInitDataFromRenderFeatureDefault()
 	{
 		DeviceRenderFeature? defaultDeviceRenderFeature = GameSettingsDeviceRender.Instance.GetDefaultDeviceRenderFeature();
@@ -1869,7 +2072,7 @@ public class GameSettingsManager : Singleton
 		this.AssignCacheValueByDeviceRenderFeature(defaultDeviceRenderFeature.Value, EGameSettingsInitSourceType.RenderFeatureDefaultConfig);
 	}
 
-	// Token: 0x060054ED RID: 21741 RVA: 0x000F37E8 File Offset: 0x000F19E8
+	// Token: 0x0600287B RID: 10363 RVA: 0x000FAC4C File Offset: 0x000F8E4C
 	private void CacheInitDataFromCustomOverrideDefault()
 	{
 		GameSettingsInitValueSource valueOrDefault = this.ValidInitValueSourceCache.GetValueOrDefault(EFunction.KeyboardLockEnemyMode);
@@ -1896,7 +2099,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault3.CacheValue(GameSettingsDeviceRender.Instance.ShouldOverrideVegetationDitherDefaultValue() ? 0 : num, EGameSettingsInitSourceType.CustomOverrideDefault);
 	}
 
-	// Token: 0x060054EE RID: 21742 RVA: 0x000F3898 File Offset: 0x000F1A98
+	// Token: 0x0600287C RID: 10364 RVA: 0x000FACFC File Offset: 0x000F8EFC
 	private void CacheInitDataFromUserSettingIni()
 	{
 		UGameUserSettings gameUserSettings = UGameUserSettings.GetGameUserSettings();
@@ -1962,7 +2165,7 @@ public class GameSettingsManager : Singleton
 		valueOrDefault7.CacheValue((((consoleVariableIntValue >= 0) ? consoleVariableIntValue : UKismetSystemLibrary.GetConsoleVariableIntValue("r.Android.DefaultVulkanSetting")) > 0) ? 1 : 0, EGameSettingsInitSourceType.UserSettingIni);
 	}
 
-	// Token: 0x060054EF RID: 21743 RVA: 0x000F3A40 File Offset: 0x000F1C40
+	// Token: 0x0600287D RID: 10365 RVA: 0x000FAEA4 File Offset: 0x000F90A4
 	private void CacheInitDataFromConfigDefault()
 	{
 		foreach (KeyValuePair<EFunction, MenuConfig> keyValuePair in this.ValidApplyConfigMap)
@@ -1999,7 +2202,28 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054F0 RID: 21744 RVA: 0x000F3B50 File Offset: 0x000F1D50
+	// Token: 0x0600287E RID: 10366 RVA: 0x000FAFB4 File Offset: 0x000F91B4
+	private void CacheOverrideForLoadingRangeScale()
+	{
+		GameSettingsInitValueSource gameSettingsInitValueSource;
+		if (!this.ValidInitValueSourceCache.TryGetValue(EFunction.LOADINGRANGESCALELEVEL, out gameSettingsInitValueSource))
+		{
+			return;
+		}
+		OneOf<int, float, double>? initValue = this.GetInitValue(EFunction.IMAGEQUALITY, false);
+		if (initValue == null)
+		{
+			return;
+		}
+		float? renderDistanceRecommendation = GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(GameSettingsManager.OneOfToInt(initValue.Value));
+		if (renderDistanceRecommendation == null)
+		{
+			return;
+		}
+		gameSettingsInitValueSource.RefreshCacheValue(renderDistanceRecommendation.Value, EGameSettingsInitSourceType.RenderFeatureDefaultConfigOverride);
+	}
+
+	// Token: 0x0600287F RID: 10367 RVA: 0x000FB020 File Offset: 0x000F9220
 	private int GetLanguageIdByCode(string code)
 	{
 		global::LanguageDefine languageDefineByCode = LanguageSystem.Instance.GetLanguageDefineByCode(code);
@@ -2016,19 +2240,19 @@ public class GameSettingsManager : Singleton
 		return languageDefineByCode.LanguageType;
 	}
 
-	// Token: 0x060054F1 RID: 21745 RVA: 0x000F3BA5 File Offset: 0x000F1DA5
+	// Token: 0x06002880 RID: 10368 RVA: 0x000FB075 File Offset: 0x000F9275
 	private ESpeechType GetSpeechTypeByLanguageType(int languageType)
 	{
 		return LanguageSystem.Instance.GetSpeechTypeByLanguageType((ELanguageType)languageType);
 	}
 
-	// Token: 0x060054F2 RID: 21746 RVA: 0x000F3BB2 File Offset: 0x000F1DB2
+	// Token: 0x06002881 RID: 10369 RVA: 0x000FB082 File Offset: 0x000F9282
 	public bool IsValid(EFunction id, bool allowRebuild = true)
 	{
 		return (allowRebuild || this.ValidApplyConfigMapInternal != null) && this.ValidApplyConfigMap.ContainsKey(id);
 	}
 
-	// Token: 0x060054F3 RID: 21747 RVA: 0x000F3BD0 File Offset: 0x000F1DD0
+	// Token: 0x06002882 RID: 10370 RVA: 0x000FB0A0 File Offset: 0x000F92A0
 	public void Initialize()
 	{
 		this.ValidInitValueSourceCache.Clear();
@@ -2055,6 +2279,7 @@ public class GameSettingsManager : Singleton
 		this.CacheInitDataFromCustomOverrideDefault();
 		this.CacheInitDataFromUserSettingIni();
 		this.CacheInitDataFromConfigDefault();
+		this.CacheOverrideForLoadingRangeScale();
 		if (this.IsValid(EFunction.DISPLAYMODE, true) && this.IsValid(EFunction.RESOLUTION, true))
 		{
 			OneOf<int, float, double>? initValue = this.GetInitValue(EFunction.DISPLAYMODE, false);
@@ -2098,11 +2323,12 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x060054F4 RID: 21748 RVA: 0x000F3E84 File Offset: 0x000F2084
+	// Token: 0x06002883 RID: 10371 RVA: 0x000FB35C File Offset: 0x000F955C
 	public void HandleInitDataOnOpenLoading()
 	{
 		this.CacheOverrideForRecommendImageQuality();
 		this.CacheOverrideForVulkan();
+		this.CacheOverrideForLoadingRangeScale();
 		foreach (KeyValuePair<EFunction, GameSettingsInitValueSource> keyValuePair in this.ValidInitValueSourceCache)
 		{
 			EFunction efunction;
@@ -2127,23 +2353,35 @@ public class GameSettingsManager : Singleton
 			EFunction efunction;
 			GameSettingsInitValueSource gameSettingsInitValueSource;
 			keyValuePair.Deconstruct(out efunction, out gameSettingsInitValueSource);
-			EFunction id2 = efunction;
-			OneOf<int, float, double>? initValue2 = this.GetInitValue(id2, true);
-			if (initValue2 != null)
+			EFunction efunction2 = efunction;
+			if (efunction2 != EFunction.LOADINGRANGESCALELEVEL)
 			{
-				if (this.IsFloatSetting(id2))
+				OneOf<int, float, double>? initValue2 = this.GetInitValue(efunction2, true);
+				if (initValue2 != null)
 				{
-					this.HandleValueChangeFloat(id2, GameSettingsManager.OneOfToFloat(initValue2.Value), EGameSettingsApplyReason.WhenLoading);
-				}
-				else
-				{
-					this.HandleValueChange(id2, GameSettingsManager.OneOfToInt(initValue2.Value), EGameSettingsApplyReason.WhenLoading);
+					if (this.IsFloatSetting(efunction2))
+					{
+						this.HandleValueChangeFloat(efunction2, GameSettingsManager.OneOfToFloat(initValue2.Value), EGameSettingsApplyReason.WhenLoading);
+					}
+					else
+					{
+						this.HandleValueChange(efunction2, GameSettingsManager.OneOfToInt(initValue2.Value), EGameSettingsApplyReason.WhenLoading);
+					}
 				}
 			}
 		}
+		if (this.ValidInitValueSourceCache.ContainsKey(EFunction.LOADINGRANGESCALELEVEL))
+		{
+			OneOf<int, float, double>? initValue3 = this.GetInitValue(EFunction.LOADINGRANGESCALELEVEL, true);
+			if (initValue3 != null)
+			{
+				this.HandleValueChangeFloat(EFunction.LOADINGRANGESCALELEVEL, GameSettingsManager.OneOfToFloat(initValue3.Value), EGameSettingsApplyReason.WhenLoading);
+			}
+		}
+		this.InitializeQualityPresetStateIfMissing();
 	}
 
-	// Token: 0x060054F5 RID: 21749 RVA: 0x000F3FC4 File Offset: 0x000F21C4
+	// Token: 0x06002884 RID: 10372 RVA: 0x000FB4F0 File Offset: 0x000F96F0
 	[NullableContext(0)]
 	private static int OneOfToInt(OneOf<int, float, double> value)
 	{
@@ -2162,7 +2400,7 @@ public class GameSettingsManager : Singleton
 		return 0;
 	}
 
-	// Token: 0x060054F6 RID: 21750 RVA: 0x000F3FFC File Offset: 0x000F21FC
+	// Token: 0x06002885 RID: 10373 RVA: 0x000FB528 File Offset: 0x000F9728
 	[NullableContext(0)]
 	private static float OneOfToFloat(OneOf<int, float, double> value)
 	{
@@ -2181,20 +2419,20 @@ public class GameSettingsManager : Singleton
 		return 0f;
 	}
 
-	// Token: 0x060054F7 RID: 21751 RVA: 0x000F4038 File Offset: 0x000F2238
+	// Token: 0x06002886 RID: 10374 RVA: 0x000FB564 File Offset: 0x000F9764
 	public bool IsFloatSetting(EFunction id)
 	{
 		IGameSettings valueOrDefault = GameSettingsDefine.function2GameSettings.GetValueOrDefault(id);
 		return valueOrDefault != null && valueOrDefault.ValueType == EGameSettingsValueType.Float;
 	}
 
-	// Token: 0x060054F8 RID: 21752 RVA: 0x000F4053 File Offset: 0x000F2253
+	// Token: 0x06002887 RID: 10375 RVA: 0x000FB57F File Offset: 0x000F977F
 	public void Clear()
 	{
 		this.ValidApplyConfigMapInternal = null;
 	}
 
-	// Token: 0x060054F9 RID: 21753 RVA: 0x000F405C File Offset: 0x000F225C
+	// Token: 0x06002888 RID: 10376 RVA: 0x000FB588 File Offset: 0x000F9788
 	public int? GetCurrentValue(EFunction id, bool isLog = true, bool allowRebuild = true)
 	{
 		if (!this.IsValid(id, allowRebuild))
@@ -2227,21 +2465,36 @@ public class GameSettingsManager : Singleton
 		int? global = LocalStorage.GetGlobal<int?>((ELocalStorageGlobalKey)getCallbackOrGlobalKey, null);
 		if (global == null)
 		{
-			if (isLog)
-			{
-				Log instance3 = Log.Instance;
-				ELogModule module3 = ELogModule.GameSettings;
-				ELogAuthor author3 = ELogAuthor.WZ;
-				string message3 = "【GetCurrent】当前选项未被保存在LocalStorage中";
-				ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("functionId", (int)id);
-				instance3.Error(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
-			}
 			return null;
 		}
 		return new int?(global.Value);
 	}
 
-	// Token: 0x060054FA RID: 21754 RVA: 0x000F417C File Offset: 0x000F237C
+	// Token: 0x06002889 RID: 10377 RVA: 0x000FB678 File Offset: 0x000F9878
+	private void InitializeQualityPresetStateIfMissing()
+	{
+		if (LocalStorage.GetGlobal<bool?>(ELocalStorageGlobalKey.IsUsingQualityPreset, null) != null)
+		{
+			return;
+		}
+		int? currentValue = this.GetCurrentValue(EFunction.IMAGEQUALITY, false, true);
+		if (currentValue == null)
+		{
+			return;
+		}
+		EGameQualitySettingLevel value = (EGameQualitySettingLevel)currentValue.Value;
+		if (GameSettingsDeviceRender.Instance.GetDeviceRenderFeature(value) == null)
+		{
+			return;
+		}
+		if (this.ValidApplyConfigMap.ContainsKey(EFunction.LOADINGRANGESCALELEVEL) && GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(currentValue.Value) == null)
+		{
+			return;
+		}
+		GameSettingsManager.SetIsUsingQualityPreset(this.CheckIsMatchQualityRecommend(value, (EFunction functionId) => this.GetCurrentValue(functionId, false, true)) && this.CheckIsMatchFloatRenderRecommend(value, (EFunction functionId) => this.GetCurrentValueFloat(functionId, false, true)));
+	}
+
+	// Token: 0x0600288A RID: 10378 RVA: 0x000FB738 File Offset: 0x000F9938
 	public unsafe int GetCurrentValueSafely(EFunction id, int defaultValue = 0, bool allowRebuild = true)
 	{
 		int? num = this.GetCurrentValue(id, false, allowRebuild);
@@ -2291,7 +2544,7 @@ public class GameSettingsManager : Singleton
 		return defaultValue;
 	}
 
-	// Token: 0x060054FB RID: 21755 RVA: 0x000F4368 File Offset: 0x000F2568
+	// Token: 0x0600288B RID: 10379 RVA: 0x000FB924 File Offset: 0x000F9B24
 	[NullableContext(0)]
 	public OneOf<int, float, double>? GetInitValue(EFunction id, bool isLog = true)
 	{
@@ -2312,7 +2565,7 @@ public class GameSettingsManager : Singleton
 		return gameSettingsInitValueSource.ValidInitValue;
 	}
 
-	// Token: 0x060054FC RID: 21756 RVA: 0x000F43C8 File Offset: 0x000F25C8
+	// Token: 0x0600288C RID: 10380 RVA: 0x000FB984 File Offset: 0x000F9B84
 	private bool ApplyValue(EFunction id, int value, EGameSettingsApplyReason reason)
 	{
 		if (!this.IsValid(id, true))
@@ -2339,7 +2592,7 @@ public class GameSettingsManager : Singleton
 		return applyCallback(value, reason);
 	}
 
-	// Token: 0x060054FD RID: 21757 RVA: 0x000F4460 File Offset: 0x000F2660
+	// Token: 0x0600288D RID: 10381 RVA: 0x000FBA1C File Offset: 0x000F9C1C
 	private bool ForceApplyValue(EFunction id, int value, EGameSettingsApplyReason reason)
 	{
 		Func<int, EGameSettingsApplyReason, bool> applyCallback = GameSettingsDefine.function2GameSettings.GetValueOrDefault(id).ApplyCallback;
@@ -2356,7 +2609,7 @@ public class GameSettingsManager : Singleton
 		return applyCallback(value, reason);
 	}
 
-	// Token: 0x060054FE RID: 21758 RVA: 0x000F44BC File Offset: 0x000F26BC
+	// Token: 0x0600288E RID: 10382 RVA: 0x000FBA78 File Offset: 0x000F9C78
 	private unsafe bool SaveValue(EFunction id, int value)
 	{
 		if (!this.IsValid(id, true))
@@ -2392,7 +2645,7 @@ public class GameSettingsManager : Singleton
 		return true;
 	}
 
-	// Token: 0x060054FF RID: 21759 RVA: 0x000F45BC File Offset: 0x000F27BC
+	// Token: 0x0600288F RID: 10383 RVA: 0x000FBB78 File Offset: 0x000F9D78
 	public unsafe bool ForceSaveValue(EFunction id, int value)
 	{
 		object getCallbackOrGlobalKey = GameSettingsDefine.function2GameSettings.GetValueOrDefault(id).GetCallbackOrGlobalKey;
@@ -2418,7 +2671,7 @@ public class GameSettingsManager : Singleton
 		return true;
 	}
 
-	// Token: 0x06005500 RID: 21760 RVA: 0x000F4684 File Offset: 0x000F2884
+	// Token: 0x06002890 RID: 10384 RVA: 0x000FBC40 File Offset: 0x000F9E40
 	private unsafe void EnsureLanguagePairSaved(EFunction id)
 	{
 		EFunction efunction = EFunction.TEXTLANGUAGE;
@@ -2462,7 +2715,7 @@ public class GameSettingsManager : Singleton
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06005501 RID: 21761 RVA: 0x000F479C File Offset: 0x000F299C
+	// Token: 0x06002891 RID: 10385 RVA: 0x000FBD58 File Offset: 0x000F9F58
 	public unsafe void HandleValueChange(EFunction id, int value, EGameSettingsApplyReason reason)
 	{
 		if (this.IsFloatSetting(id))
@@ -2480,7 +2733,7 @@ public class GameSettingsManager : Singleton
 		this.HandleValueChangeCore(id, value, reason);
 	}
 
-	// Token: 0x06005502 RID: 21762 RVA: 0x000F481C File Offset: 0x000F2A1C
+	// Token: 0x06002892 RID: 10386 RVA: 0x000FBDD8 File Offset: 0x000F9FD8
 	public void HandleNumericValueChange(EFunction id, float value, EGameSettingsApplyReason reason)
 	{
 		if (this.IsFloatSetting(id))
@@ -2491,7 +2744,7 @@ public class GameSettingsManager : Singleton
 		this.HandleValueChange(id, (int)value, reason);
 	}
 
-	// Token: 0x06005503 RID: 21763 RVA: 0x000F483C File Offset: 0x000F2A3C
+	// Token: 0x06002893 RID: 10387 RVA: 0x000FBDF8 File Offset: 0x000F9FF8
 	private unsafe void HandleValueChangeCore(EFunction id, int value, EGameSettingsApplyReason reason)
 	{
 		bool flag = reason == EGameSettingsApplyReason.WhenUi && !this.IsGameSettingsAppliedOnOpenLoading;
@@ -2539,7 +2792,7 @@ public class GameSettingsManager : Singleton
 		instance3.Warn(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06005504 RID: 21764 RVA: 0x000F49C4 File Offset: 0x000F2BC4
+	// Token: 0x06002894 RID: 10388 RVA: 0x000FBF80 File Offset: 0x000FA180
 	public float? GetCurrentValueFloat(EFunction id, bool isLog = true, bool allowRebuild = true)
 	{
 		if (!this.IsValid(id, allowRebuild))
@@ -2591,7 +2844,7 @@ public class GameSettingsManager : Singleton
 		return new float?(global.Value);
 	}
 
-	// Token: 0x06005505 RID: 21765 RVA: 0x000F4AFC File Offset: 0x000F2CFC
+	// Token: 0x06002895 RID: 10389 RVA: 0x000FC0B8 File Offset: 0x000FA2B8
 	public float GetCurrentValueSafelyFloat(EFunction id, float defaultValue = 0f, bool allowRebuild = true)
 	{
 		float? currentValueFloat = this.GetCurrentValueFloat(id, false, allowRebuild);
@@ -2617,7 +2870,7 @@ public class GameSettingsManager : Singleton
 		return defaultValue;
 	}
 
-	// Token: 0x06005506 RID: 21766 RVA: 0x000F4BC8 File Offset: 0x000F2DC8
+	// Token: 0x06002896 RID: 10390 RVA: 0x000FC184 File Offset: 0x000FA384
 	private bool ApplyValueFloat(EFunction id, float value, EGameSettingsApplyReason reason)
 	{
 		if (!this.IsValid(id, true))
@@ -2644,7 +2897,7 @@ public class GameSettingsManager : Singleton
 		return applyCallbackFloat(value, reason);
 	}
 
-	// Token: 0x06005507 RID: 21767 RVA: 0x000F4C60 File Offset: 0x000F2E60
+	// Token: 0x06002897 RID: 10391 RVA: 0x000FC21C File Offset: 0x000FA41C
 	private unsafe bool SaveValueFloat(EFunction id, float value)
 	{
 		if (!this.IsValid(id, true))
@@ -2668,6 +2921,10 @@ public class GameSettingsManager : Singleton
 			instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 			return false;
 		}
+		if (id == EFunction.LOADINGRANGESCALELEVEL)
+		{
+			value = GameSettingsDeviceRender.NormalizeRenderDistanceValue(value);
+		}
 		LocalStorage.SetGlobal<float>((ELocalStorageGlobalKey)getCallbackOrGlobalKey, value);
 		Log instance3 = Log.Instance;
 		ELogModule module3 = ELogModule.GameSettings;
@@ -2680,7 +2937,7 @@ public class GameSettingsManager : Singleton
 		return true;
 	}
 
-	// Token: 0x06005508 RID: 21768 RVA: 0x000F4D60 File Offset: 0x000F2F60
+	// Token: 0x06002898 RID: 10392 RVA: 0x000FC32C File Offset: 0x000FA52C
 	public unsafe void HandleValueChangeFloat(EFunction id, float value, EGameSettingsApplyReason reason)
 	{
 		if (!this.IsFloatSetting(id))
@@ -2695,10 +2952,14 @@ public class GameSettingsManager : Singleton
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 			return;
 		}
+		if (id == EFunction.LOADINGRANGESCALELEVEL && this.IsValid(id, true))
+		{
+			value = GameSettingsDeviceRender.NormalizeRenderDistanceValue(value);
+		}
 		this.HandleValueChangeFloatCore(id, value, reason);
 	}
 
-	// Token: 0x06005509 RID: 21769 RVA: 0x000F4DE0 File Offset: 0x000F2FE0
+	// Token: 0x06002899 RID: 10393 RVA: 0x000FC3C8 File Offset: 0x000FA5C8
 	private unsafe void HandleValueChangeFloatCore(EFunction id, float value, EGameSettingsApplyReason reason)
 	{
 		if (reason == EGameSettingsApplyReason.WhenUi && !this.IsGameSettingsAppliedOnOpenLoading)
@@ -2741,7 +3002,7 @@ public class GameSettingsManager : Singleton
 		instance3.Warn(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600550A RID: 21770 RVA: 0x000F4F5C File Offset: 0x000F315C
+	// Token: 0x0600289A RID: 10394 RVA: 0x000FC544 File Offset: 0x000FA744
 	public bool ReApply(EFunction id, EGameSettingsApplyReason reason = EGameSettingsApplyReason.AnyTime, bool isLog = true)
 	{
 		if (this.IsFloatSetting(id))
@@ -2753,7 +3014,7 @@ public class GameSettingsManager : Singleton
 		return this.ApplyValue(id, currentValueSafely, reason);
 	}
 
-	// Token: 0x0600550B RID: 21771 RVA: 0x000F4F9D File Offset: 0x000F319D
+	// Token: 0x0600289B RID: 10395 RVA: 0x000FC585 File Offset: 0x000FA785
 	[NullableContext(2)]
 	public string DumpValue(EFunction id)
 	{
@@ -2765,7 +3026,7 @@ public class GameSettingsManager : Singleton
 		return dumpCallback();
 	}
 
-	// Token: 0x0600550C RID: 21772 RVA: 0x000F4FBC File Offset: 0x000F31BC
+	// Token: 0x0600289C RID: 10396 RVA: 0x000FC5A4 File Offset: 0x000FA7A4
 	public string GetAudioCodeById(int type)
 	{
 		global::LanguageDefine languageDefineByType = LanguageSystem.Instance.GetLanguageDefineByType(type);
@@ -2782,7 +3043,7 @@ public class GameSettingsManager : Singleton
 		return languageDefineByType.AudioCode;
 	}
 
-	// Token: 0x0600550D RID: 21773 RVA: 0x000F5010 File Offset: 0x000F3210
+	// Token: 0x0600289D RID: 10397 RVA: 0x000FC5F8 File Offset: 0x000FA7F8
 	public string GetLanguageCodeById(int type)
 	{
 		global::LanguageDefine languageDefineByType = LanguageSystem.Instance.GetLanguageDefineByType(type);
@@ -2799,7 +3060,7 @@ public class GameSettingsManager : Singleton
 		return languageDefineByType.LanguageCode;
 	}
 
-	// Token: 0x0600550E RID: 21774 RVA: 0x000F5064 File Offset: 0x000F3264
+	// Token: 0x0600289E RID: 10398 RVA: 0x000FC64C File Offset: 0x000FA84C
 	public unsafe bool CheckIsMatchQualityRecommend(EGameQualitySettingLevel quality, Func<EFunction, int?> valueGetter)
 	{
 		DeviceRenderFeature? deviceRenderFeature = GameSettingsDeviceRender.Instance.GetDeviceRenderFeature(quality);
@@ -2889,8 +3150,46 @@ public class GameSettingsManager : Singleton
 		return true;
 	}
 
-	// Token: 0x170005ED RID: 1517
-	// (get) Token: 0x0600550F RID: 21775 RVA: 0x000F53A0 File Offset: 0x000F35A0
+	// Token: 0x0600289F RID: 10399 RVA: 0x000FC988 File Offset: 0x000FAB88
+	public bool CheckIsMatchFloatRenderRecommend(EGameQualitySettingLevel quality, Func<EFunction, float?> valueGetter)
+	{
+		DeviceRenderFeature? deviceRenderFeature = GameSettingsDeviceRender.Instance.GetDeviceRenderFeature(quality);
+		if (deviceRenderFeature == null)
+		{
+			return false;
+		}
+		foreach (KeyValuePair<EFunction, float> keyValuePair in GameSettingsDeviceRender.Instance.GetOtherChangedFloatValue(deviceRenderFeature.Value))
+		{
+			EFunction efunction;
+			float num;
+			keyValuePair.Deconstruct(out efunction, out num);
+			EFunction efunction2 = efunction;
+			float num2 = num;
+			if (this.ValidApplyConfigMap.ContainsKey(efunction2))
+			{
+				float? num3 = valueGetter(efunction2);
+				if (num3 == null)
+				{
+					return false;
+				}
+				if (efunction2 == EFunction.LOADINGRANGESCALELEVEL)
+				{
+					if (GameSettingsDeviceRender.GetRenderDistanceStepIndex(num3.Value) != GameSettingsDeviceRender.GetRenderDistanceStepIndex(num2))
+					{
+						return false;
+					}
+				}
+				else if (Math.Abs(num3.Value - num2) > 0.0001f)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	// Token: 0x17000613 RID: 1555
+	// (get) Token: 0x060028A0 RID: 10400 RVA: 0x000FCA70 File Offset: 0x000FAC70
 	public static GameSettingsManager Instance
 	{
 		get
@@ -2904,12 +3203,12 @@ public class GameSettingsManager : Singleton
 		}
 	}
 
-	// Token: 0x06005510 RID: 21776 RVA: 0x000F53C3 File Offset: 0x000F35C3
+	// Token: 0x060028A1 RID: 10401 RVA: 0x000FCA93 File Offset: 0x000FAC93
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005511 RID: 21777 RVA: 0x000F53C5 File Offset: 0x000F35C5
+	// Token: 0x060028A2 RID: 10402 RVA: 0x000FCA95 File Offset: 0x000FAC95
 	public static void ResetStaticDefaultValue()
 	{
 		GameSettingsManager instance = GameSettingsManager._instance;
@@ -2920,23 +3219,23 @@ public class GameSettingsManager : Singleton
 		GameSettingsManager._instance = null;
 	}
 
-	// Token: 0x06005512 RID: 21778 RVA: 0x000F53DE File Offset: 0x000F35DE
+	// Token: 0x060028A3 RID: 10403 RVA: 0x000FCAAE File Offset: 0x000FACAE
 	static GameSettingsManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsManager.CreateStaticDefaultValue), new Action(GameSettingsManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040026AD RID: 9901
+	// Token: 0x04002738 RID: 10040
 	private readonly Dictionary<EFunction, GameSettingsInitValueSource> ValidInitValueSourceCache = new Dictionary<EFunction, GameSettingsInitValueSource>();
 
-	// Token: 0x040026AE RID: 9902
+	// Token: 0x04002739 RID: 10041
 	public bool IsGameSettingsAppliedOnOpenLoading;
 
-	// Token: 0x040026AF RID: 9903
+	// Token: 0x0400273A RID: 10042
 	[Nullable(2)]
 	private Dictionary<EFunction, MenuConfig> ValidApplyConfigMapInternal;
 
-	// Token: 0x040026B0 RID: 9904
+	// Token: 0x0400273B RID: 10043
 	[Nullable(2)]
 	private static GameSettingsManager _instance;
 }

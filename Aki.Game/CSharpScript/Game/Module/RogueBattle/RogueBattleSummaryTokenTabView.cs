@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004F07 RID: 20231
+	// Token: 0x02003ED0 RID: 16080
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleSummaryTokenTabView : UiTabViewBase
 	{
-		// Token: 0x06033DFD RID: 212477 RVA: 0x00C274DC File Offset: 0x00C256DC
+		// Token: 0x06028C68 RID: 167016 RVA: 0x00B70A7C File Offset: 0x00B6EC7C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DFE RID: 212478 RVA: 0x00C27536 File Offset: 0x00C25736
+		// Token: 0x06028C69 RID: 167017 RVA: 0x00B70AD6 File Offset: 0x00B6ECD6
 		private RogueBattleTokenGrid CreateItem()
 		{
 			return new RogueBattleTokenGrid
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DFF RID: 212479 RVA: 0x00C2754F File Offset: 0x00C2574F
+		// Token: 0x06028C6A RID: 167018 RVA: 0x00B70AEF File Offset: 0x00B6ECEF
 		private void OnSelectCallback(int index, RogueResGainData data)
 		{
 			RogueBattleTokenItem tokenComponent = this.TokenComponent;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			tokenScrollView.SelectGridProxy(index, false);
 		}
 
-		// Token: 0x06033E00 RID: 212480 RVA: 0x00C2758C File Offset: 0x00C2578C
+		// Token: 0x06028C6B RID: 167019 RVA: 0x00B70B2C File Offset: 0x00B6ED2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleSummaryTokenTabView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B931 RID: 112945
+		// Token: 0x04016304 RID: 90884
 		[Nullable(new byte[]
 		{
 			2,
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private LoopScrollView<RogueBattleTokenGrid, RogueResGainData> TokenScrollView;
 
-		// Token: 0x0401B932 RID: 112946
+		// Token: 0x04016305 RID: 90885
 		[Nullable(2)]
 		private RogueBattleTokenItem TokenComponent;
 	}

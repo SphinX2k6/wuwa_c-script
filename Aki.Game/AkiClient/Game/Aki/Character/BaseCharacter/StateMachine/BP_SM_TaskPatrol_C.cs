@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004394 RID: 17300
+	// Token: 0x020033B4 RID: 13236
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_TaskPatrol.BP_SM_TaskPatrol_C")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 54)]
 	public class BP_SM_TaskPatrol_C : UASMTask, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CCFA RID: 183546 RVA: 0x00A29382 File Offset: 0x00A27582
+		// Token: 0x06021910 RID: 137488 RVA: 0x009640DA File Offset: 0x009622DA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_TaskPatrol_C._ClassPtr == IntPtr.Zero)
@@ -22,84 +22,84 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_TaskPatrol_C._ClassPtr;
 		}
 
-		// Token: 0x0602CCFB RID: 183547 RVA: 0x00A293A8 File Offset: 0x00A275A8
+		// Token: 0x06021911 RID: 137489 RVA: 0x00964100 File Offset: 0x00962300
 		public BP_SM_TaskPatrol_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_TaskPatrol_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CCFC RID: 183548 RVA: 0x00A293D0 File Offset: 0x00A275D0
+		// Token: 0x06021912 RID: 137490 RVA: 0x00964128 File Offset: 0x00962328
 		[NullableContext(1)]
 		public BP_SM_TaskPatrol_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_TaskPatrol_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070EC RID: 28908
-		// (get) Token: 0x0602CCFD RID: 183549 RVA: 0x00A29403 File Offset: 0x00A27603
-		// (set) Token: 0x0602CCFE RID: 183550 RVA: 0x00A29413 File Offset: 0x00A27613
+		// Token: 0x170044ED RID: 17645
+		// (get) Token: 0x06021913 RID: 137491 RVA: 0x0096415B File Offset: 0x0096235B
+		// (set) Token: 0x06021914 RID: 137492 RVA: 0x0096416B File Offset: 0x0096236B
 		public unsafe int 移动方式
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_移动方式);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_移动方式) = value;
 			}
 		}
 
-		// Token: 0x170070ED RID: 28909
-		// (get) Token: 0x0602CCFF RID: 183551 RVA: 0x00A29424 File Offset: 0x00A27624
-		// (set) Token: 0x0602CD00 RID: 183552 RVA: 0x00A29434 File Offset: 0x00A27634
+		// Token: 0x170044EE RID: 17646
+		// (get) Token: 0x06021915 RID: 137493 RVA: 0x0096417C File Offset: 0x0096237C
+		// (set) Token: 0x06021916 RID: 137494 RVA: 0x0096418C File Offset: 0x0096238C
 		public unsafe bool 调试模式
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_调试模式) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_调试模式) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170070EE RID: 28910
-		// (get) Token: 0x0602CD01 RID: 183553 RVA: 0x00A29445 File Offset: 0x00A27645
-		// (set) Token: 0x0602CD02 RID: 183554 RVA: 0x00A29455 File Offset: 0x00A27655
+		// Token: 0x170044EF RID: 17647
+		// (get) Token: 0x06021917 RID: 137495 RVA: 0x0096419D File Offset: 0x0096239D
+		// (set) Token: 0x06021918 RID: 137496 RVA: 0x009641AD File Offset: 0x009623AD
 		public unsafe bool 允许打断
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_允许打断) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_TaskPatrol_C.__PropertyOffset_允许打断) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CD03 RID: 183555 RVA: 0x00A29466 File Offset: 0x00A27666
+		// Token: 0x06021919 RID: 137497 RVA: 0x009641BE File Offset: 0x009623BE
 		protected BP_SM_TaskPatrol_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017A3E RID: 96830
+		// Token: 0x040125B9 RID: 75193
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_TaskPatrol.BP_SM_TaskPatrol_C";
 
-		// Token: 0x04017A3F RID: 96831
+		// Token: 0x040125BA RID: 75194
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017A40 RID: 96832
+		// Token: 0x040125BB RID: 75195
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017A41 RID: 96833
-		internal static int __PropertyOffset_0;
+		// Token: 0x040125BC RID: 75196
+		internal static int __PropertyOffset_移动方式;
 
-		// Token: 0x04017A42 RID: 96834
-		internal static int __PropertyOffset_1;
+		// Token: 0x040125BD RID: 75197
+		internal static int __PropertyOffset_调试模式;
 
-		// Token: 0x04017A43 RID: 96835
-		internal static int __PropertyOffset_2;
+		// Token: 0x040125BE RID: 75198
+		internal static int __PropertyOffset_允许打断;
 	}
 }

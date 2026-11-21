@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DEB RID: 3563
+	// Token: 0x02000ED0 RID: 3792
 	public struct MapBorder : IFlatbufferObject
 	{
-		// Token: 0x17001DDF RID: 7647
-		// (get) Token: 0x060090CD RID: 37069 RVA: 0x0027DB8A File Offset: 0x0027BD8A
+		// Token: 0x17001E43 RID: 7747
+		// (get) Token: 0x060096E9 RID: 38633 RVA: 0x0029BE0A File Offset: 0x0029A00A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090CE RID: 37070 RVA: 0x0027DB97 File Offset: 0x0027BD97
+		// Token: 0x060096EA RID: 38634 RVA: 0x0029BE17 File Offset: 0x0029A017
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060090CF RID: 37071 RVA: 0x0027DBA0 File Offset: 0x0027BDA0
+		// Token: 0x060096EB RID: 38635 RVA: 0x0029BE20 File Offset: 0x0029A020
 		public static MapBorder GetRootAsMapBorder(ByteBuffer _bb)
 		{
 			return MapBorder.GetRootAsMapBorder(_bb, default(MapBorder));
 		}
 
-		// Token: 0x060090D0 RID: 37072 RVA: 0x0027DBBC File Offset: 0x0027BDBC
+		// Token: 0x060096EC RID: 38636 RVA: 0x0029BE3C File Offset: 0x0029A03C
 		public static MapBorder GetRootAsMapBorder(ByteBuffer _bb, MapBorder obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060090D1 RID: 37073 RVA: 0x0027DBD9 File Offset: 0x0027BDD9
+		// Token: 0x060096ED RID: 38637 RVA: 0x0029BE59 File Offset: 0x0029A059
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060090D2 RID: 37074 RVA: 0x0027DBE8 File Offset: 0x0027BDE8
+		// Token: 0x060096EE RID: 38638 RVA: 0x0029BE68 File Offset: 0x0029A068
 		public MapBorder __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001DE0 RID: 7648
-		// (get) Token: 0x060090D3 RID: 37075 RVA: 0x0027DBF8 File Offset: 0x0027BDF8
+		// Token: 0x17001E44 RID: 7748
+		// (get) Token: 0x060096EF RID: 38639 RVA: 0x0029BE78 File Offset: 0x0029A078
 		public int BorderId
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DE1 RID: 7649
-		// (get) Token: 0x060090D4 RID: 37076 RVA: 0x0027DC34 File Offset: 0x0027BE34
+		// Token: 0x17001E45 RID: 7749
+		// (get) Token: 0x060096F0 RID: 38640 RVA: 0x0029BEB4 File Offset: 0x0029A0B4
 		public int MapId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DE2 RID: 7650
-		// (get) Token: 0x060090D5 RID: 37077 RVA: 0x0027DC70 File Offset: 0x0027BE70
+		// Token: 0x17001E46 RID: 7750
+		// (get) Token: 0x060096F1 RID: 38641 RVA: 0x0029BEF0 File Offset: 0x0029A0F0
 		public int InstanceDungeonId
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DE3 RID: 7651
-		// (get) Token: 0x060090D6 RID: 37078 RVA: 0x0027DCAC File Offset: 0x0027BEAC
+		// Token: 0x17001E47 RID: 7751
+		// (get) Token: 0x060096F2 RID: 38642 RVA: 0x0029BF2C File Offset: 0x0029A12C
 		public int GravityFlip
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DE4 RID: 7652
-		// (get) Token: 0x060090D7 RID: 37079 RVA: 0x0027DCEC File Offset: 0x0027BEEC
+		// Token: 0x17001E48 RID: 7752
+		// (get) Token: 0x060096F3 RID: 38643 RVA: 0x0029BF6C File Offset: 0x0029A16C
 		public int InstanceDungeonIdMapType
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DE5 RID: 7653
-		// (get) Token: 0x060090D8 RID: 37080 RVA: 0x0027DD2C File Offset: 0x0027BF2C
+		// Token: 0x17001E49 RID: 7753
+		// (get) Token: 0x060096F4 RID: 38644 RVA: 0x0029BFAC File Offset: 0x0029A1AC
 		public int ConditionId
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090D9 RID: 37081 RVA: 0x0027DD6C File Offset: 0x0027BF6C
+		// Token: 0x060096F5 RID: 38645 RVA: 0x0029BFEC File Offset: 0x0029A1EC
 		public string PrefabPaths(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -151,8 +151,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001DE6 RID: 7654
-		// (get) Token: 0x060090DA RID: 37082 RVA: 0x0027DDA8 File Offset: 0x0027BFA8
+		// Token: 0x17001E4A RID: 7754
+		// (get) Token: 0x060096F6 RID: 38646 RVA: 0x0029C028 File Offset: 0x0029A228
 		public int PrefabPathsLength
 		{
 			get
@@ -166,24 +166,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090DB RID: 37083 RVA: 0x0027DDD4 File Offset: 0x0027BFD4
+		// Token: 0x060096F7 RID: 38647 RVA: 0x0029C054 File Offset: 0x0029A254
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PrefabPathsIter()或GetPrefabPathsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] PrefabPaths()
+		public string[] PrefabPaths()
 		{
 			return this.PrefabPathsIter().ToArray<string>();
 		}
 
-		// Token: 0x060090DC RID: 37084 RVA: 0x0027DDE1 File Offset: 0x0027BFE1
+		// Token: 0x060096F8 RID: 38648 RVA: 0x0029C061 File Offset: 0x0029A261
 		[NullableContext(1)]
-		public readonly IEnumerable<string> PrefabPathsIter()
+		public IEnumerable<string> PrefabPathsIter()
 		{
 			MapBorder.<PrefabPathsIter>d__24 <PrefabPathsIter>d__ = new MapBorder.<PrefabPathsIter>d__24(-2);
 			<PrefabPathsIter>d__.<>3__<>4__this = this;
 			return <PrefabPathsIter>d__;
 		}
 
-		// Token: 0x04004E87 RID: 20103
+		// Token: 0x0400546C RID: 21612
 		private Table __p;
 	}
 }

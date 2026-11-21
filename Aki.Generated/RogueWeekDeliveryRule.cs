@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001028 RID: 4136
+	// Token: 0x02001110 RID: 4368
 	public struct RogueWeekDeliveryRule : IFlatbufferObject
 	{
-		// Token: 0x17003153 RID: 12627
-		// (get) Token: 0x0600C590 RID: 50576 RVA: 0x002F35A4 File Offset: 0x002F17A4
+		// Token: 0x170031CE RID: 12750
+		// (get) Token: 0x0600CBDA RID: 52186 RVA: 0x0030F550 File Offset: 0x0030D750
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C591 RID: 50577 RVA: 0x002F35B1 File Offset: 0x002F17B1
+		// Token: 0x0600CBDB RID: 52187 RVA: 0x0030F55D File Offset: 0x0030D75D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C592 RID: 50578 RVA: 0x002F35B8 File Offset: 0x002F17B8
+		// Token: 0x0600CBDC RID: 52188 RVA: 0x0030F564 File Offset: 0x0030D764
 		public static RogueWeekDeliveryRule GetRootAsRogueWeekDeliveryRule(ByteBuffer _bb)
 		{
 			return RogueWeekDeliveryRule.GetRootAsRogueWeekDeliveryRule(_bb, default(RogueWeekDeliveryRule));
 		}
 
-		// Token: 0x0600C593 RID: 50579 RVA: 0x002F35D4 File Offset: 0x002F17D4
+		// Token: 0x0600CBDD RID: 52189 RVA: 0x0030F580 File Offset: 0x0030D780
 		public static RogueWeekDeliveryRule GetRootAsRogueWeekDeliveryRule(ByteBuffer _bb, RogueWeekDeliveryRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C594 RID: 50580 RVA: 0x002F35F1 File Offset: 0x002F17F1
+		// Token: 0x0600CBDE RID: 52190 RVA: 0x0030F59D File Offset: 0x0030D79D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C595 RID: 50581 RVA: 0x002F3600 File Offset: 0x002F1800
+		// Token: 0x0600CBDF RID: 52191 RVA: 0x0030F5AC File Offset: 0x0030D7AC
 		public RogueWeekDeliveryRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003154 RID: 12628
-		// (get) Token: 0x0600C596 RID: 50582 RVA: 0x002F3610 File Offset: 0x002F1810
+		// Token: 0x170031CF RID: 12751
+		// (get) Token: 0x0600CBE0 RID: 52192 RVA: 0x0030F5BC File Offset: 0x0030D7BC
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003155 RID: 12629
-		// (get) Token: 0x0600C597 RID: 50583 RVA: 0x002F364C File Offset: 0x002F184C
+		// Token: 0x170031D0 RID: 12752
+		// (get) Token: 0x0600CBE1 RID: 52193 RVA: 0x0030F5F8 File Offset: 0x0030D7F8
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C598 RID: 50584 RVA: 0x002F3688 File Offset: 0x002F1888
+		// Token: 0x0600CBE2 RID: 52194 RVA: 0x0030F634 File Offset: 0x0030D834
 		public int Insts(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003156 RID: 12630
-		// (get) Token: 0x0600C599 RID: 50585 RVA: 0x002F36C8 File Offset: 0x002F18C8
+		// Token: 0x170031D1 RID: 12753
+		// (get) Token: 0x0600CBE3 RID: 52195 RVA: 0x0030F674 File Offset: 0x0030D874
 		public int InstsLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C59A RID: 50586 RVA: 0x002F36F3 File Offset: 0x002F18F3
+		// Token: 0x0600CBE4 RID: 52196 RVA: 0x0030F69F File Offset: 0x0030D89F
 		public Span<int> GetInstsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600C59B RID: 50587 RVA: 0x002F3702 File Offset: 0x002F1902
+		// Token: 0x0600CBE5 RID: 52197 RVA: 0x0030F6AE File Offset: 0x0030D8AE
 		public int[] GetInstsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C59C RID: 50588 RVA: 0x002F371C File Offset: 0x002F191C
+		// Token: 0x0600CBE6 RID: 52198 RVA: 0x0030F6C5 File Offset: 0x0030D8C5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InstsIter()或GetInstsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Insts()
+		public int[] Insts()
 		{
-			RogueWeekDeliveryRule rogueWeekDeliveryRule = this;
-			return rogueWeekDeliveryRule.GetInstsArray() ?? Array.Empty<int>();
+			return this.GetInstsArray();
 		}
 
-		// Token: 0x0600C59D RID: 50589 RVA: 0x002F3740 File Offset: 0x002F1940
+		// Token: 0x0600CBE7 RID: 52199 RVA: 0x0030F6CD File Offset: 0x0030D8CD
 		[NullableContext(1)]
-		public readonly IEnumerable<int> InstsIter()
+		public IEnumerable<int> InstsIter()
 		{
 			RogueWeekDeliveryRule.<InstsIter>d__18 <InstsIter>d__ = new RogueWeekDeliveryRule.<InstsIter>d__18(-2);
 			<InstsIter>d__.<>3__<>4__this = this;
 			return <InstsIter>d__;
 		}
 
-		// Token: 0x0400511B RID: 20763
+		// Token: 0x04005703 RID: 22275
 		private Table __p;
 	}
 }

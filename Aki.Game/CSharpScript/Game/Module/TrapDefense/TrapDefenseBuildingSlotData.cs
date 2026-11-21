@@ -3,41 +3,41 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A28 RID: 18984
+	// Token: 0x020039D0 RID: 14800
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingSlotData
 	{
-		// Token: 0x0603149F RID: 201887 RVA: 0x00B6E846 File Offset: 0x00B6CA46
+		// Token: 0x0602622F RID: 156207 RVA: 0x00AB27EA File Offset: 0x00AB09EA
 		public static TrapDefenseBuildingSlotData Create(int index)
 		{
 			return new TrapDefenseBuildingSlotData(index);
 		}
 
-		// Token: 0x060314A0 RID: 201888 RVA: 0x00B6E84E File Offset: 0x00B6CA4E
+		// Token: 0x06026230 RID: 156208 RVA: 0x00AB27F2 File Offset: 0x00AB09F2
 		private TrapDefenseBuildingSlotData(int index)
 		{
 			this.Index = index;
 		}
 
-		// Token: 0x17007A2E RID: 31278
-		// (get) Token: 0x060314A1 RID: 201889 RVA: 0x00B6E85D File Offset: 0x00B6CA5D
+		// Token: 0x17004DDB RID: 19931
+		// (get) Token: 0x06026231 RID: 156209 RVA: 0x00AB2801 File Offset: 0x00AB0A01
 		public int Index { get; }
 
-		// Token: 0x060314A2 RID: 201890 RVA: 0x00B6E865 File Offset: 0x00B6CA65
+		// Token: 0x06026232 RID: 156210 RVA: 0x00AB2809 File Offset: 0x00AB0A09
 		public int GetIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x060314A3 RID: 201891 RVA: 0x00B6E86D File Offset: 0x00B6CA6D
+		// Token: 0x06026233 RID: 156211 RVA: 0x00AB2811 File Offset: 0x00AB0A11
 		[NullableContext(2)]
 		public TrapDefenseBuildingDevelopItemData GetSlotData()
 		{
 			return this.SlotData;
 		}
 
-		// Token: 0x060314A4 RID: 201892 RVA: 0x00B6E875 File Offset: 0x00B6CA75
+		// Token: 0x06026234 RID: 156212 RVA: 0x00AB2819 File Offset: 0x00AB0A19
 		[NullableContext(2)]
 		public void InitSlotData(TrapDefenseBuildingDevelopItemData data = null)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SlotData = data;
 		}
 
-		// Token: 0x060314A5 RID: 201893 RVA: 0x00B6E88C File Offset: 0x00B6CA8C
+		// Token: 0x06026235 RID: 156213 RVA: 0x00AB2830 File Offset: 0x00AB0A30
 		public bool SetSlotData(TrapDefenseBuildingDevelopItemData data = null, bool fromSlot = false)
 		{
 			if (!this.CanSetSlot() && data == null && !fromSlot)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x060314A6 RID: 201894 RVA: 0x00B6E924 File Offset: 0x00B6CB24
+		// Token: 0x06026236 RID: 156214 RVA: 0x00AB28C8 File Offset: 0x00AB0AC8
 		private bool CheckCanSetData(TrapDefenseBuildingDevelopItemData data)
 		{
 			TrapDefenseBuildingSlotData trapDefenseBuildingSlotData = TrapDefenseModel.Instance.ViewModelBuildingDevelop.IsSlotData(data);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x060314A7 RID: 201895 RVA: 0x00B6E9D5 File Offset: 0x00B6CBD5
+		// Token: 0x06026237 RID: 156215 RVA: 0x00AB2979 File Offset: 0x00AB0B79
 		public TrapDefenseBuildingDevelopItemData GetUploadData()
 		{
 			if (!this.Dirty)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.TmpData;
 		}
 
-		// Token: 0x060314A8 RID: 201896 RVA: 0x00B6E9EC File Offset: 0x00B6CBEC
+		// Token: 0x06026238 RID: 156216 RVA: 0x00AB2990 File Offset: 0x00AB0B90
 		public void ApplySlotData(bool isSuccess)
 		{
 			if (this.Dirty && isSuccess)
@@ -119,21 +119,21 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.Dirty = false;
 		}
 
-		// Token: 0x060314A9 RID: 201897 RVA: 0x00B6EA13 File Offset: 0x00B6CC13
+		// Token: 0x06026239 RID: 156217 RVA: 0x00AB29B7 File Offset: 0x00AB0BB7
 		private bool CanSetSlot()
 		{
 			return this.SlotData == null || !this.SlotData.GetLockInBattle();
 		}
 
-		// Token: 0x0401A58F RID: 107919
+		// Token: 0x04014EE6 RID: 85734
 		[Nullable(2)]
 		private TrapDefenseBuildingDevelopItemData SlotData;
 
-		// Token: 0x0401A590 RID: 107920
+		// Token: 0x04014EE7 RID: 85735
 		[Nullable(2)]
 		private TrapDefenseBuildingDevelopItemData TmpData;
 
-		// Token: 0x0401A591 RID: 107921
+		// Token: 0x04014EE8 RID: 85736
 		private bool Dirty;
 	}
 }

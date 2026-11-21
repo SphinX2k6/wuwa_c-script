@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064C2 RID: 25794
+	// Token: 0x02006B2D RID: 27437
 	public struct IConeRangeCheck : IFlatbufferObject
 	{
-		// Token: 0x1700BFEF RID: 49135
-		// (get) Token: 0x0602CBCE RID: 183246 RVA: 0x0062650C File Offset: 0x0062470C
+		// Token: 0x1700C97C RID: 51580
+		// (get) Token: 0x0602F352 RID: 193362 RVA: 0x00672634 File Offset: 0x00670834
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CBCF RID: 183247 RVA: 0x00626519 File Offset: 0x00624719
+		// Token: 0x0602F353 RID: 193363 RVA: 0x00672641 File Offset: 0x00670841
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CBD0 RID: 183248 RVA: 0x00626520 File Offset: 0x00624720
+		// Token: 0x0602F354 RID: 193364 RVA: 0x00672648 File Offset: 0x00670848
 		public static IConeRangeCheck GetRootAsIConeRangeCheck(ByteBuffer _bb)
 		{
 			return IConeRangeCheck.GetRootAsIConeRangeCheck(_bb, default(IConeRangeCheck));
 		}
 
-		// Token: 0x0602CBD1 RID: 183249 RVA: 0x0062653C File Offset: 0x0062473C
+		// Token: 0x0602F355 RID: 193365 RVA: 0x00672664 File Offset: 0x00670864
 		public static IConeRangeCheck GetRootAsIConeRangeCheck(ByteBuffer _bb, IConeRangeCheck obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CBD2 RID: 183250 RVA: 0x00626559 File Offset: 0x00624759
+		// Token: 0x0602F356 RID: 193366 RVA: 0x00672681 File Offset: 0x00670881
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CBD3 RID: 183251 RVA: 0x00626568 File Offset: 0x00624768
+		// Token: 0x0602F357 RID: 193367 RVA: 0x00672690 File Offset: 0x00670890
 		public IConeRangeCheck __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BFF0 RID: 49136
-		// (get) Token: 0x0602CBD4 RID: 183252 RVA: 0x00626578 File Offset: 0x00624778
+		// Token: 0x1700C97D RID: 51581
+		// (get) Token: 0x0602F358 RID: 193368 RVA: 0x006726A0 File Offset: 0x006708A0
 		public ERangeCheckType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BFF1 RID: 49137
-		// (get) Token: 0x0602CBD5 RID: 183253 RVA: 0x006265B4 File Offset: 0x006247B4
+		// Token: 0x1700C97E RID: 51582
+		// (get) Token: 0x0602F359 RID: 193369 RVA: 0x006726DC File Offset: 0x006708DC
 		public IVectorInfo? CenterOffset
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BFF2 RID: 49138
-		// (get) Token: 0x0602CBD6 RID: 183254 RVA: 0x00626614 File Offset: 0x00624814
+		// Token: 0x1700C97F RID: 51583
+		// (get) Token: 0x0602F35A RID: 193370 RVA: 0x0067273C File Offset: 0x0067093C
 		public float Radius
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BFF3 RID: 49139
-		// (get) Token: 0x0602CBD7 RID: 183255 RVA: 0x00626654 File Offset: 0x00624854
+		// Token: 0x1700C980 RID: 51584
+		// (get) Token: 0x0602F35B RID: 193371 RVA: 0x0067277C File Offset: 0x0067097C
 		public float Height
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CBD8 RID: 183256 RVA: 0x00626695 File Offset: 0x00624895
+		// Token: 0x0602F35C RID: 193372 RVA: 0x006727BD File Offset: 0x006709BD
 		public static Offset<IConeRangeCheck> CreateIConeRangeCheck(FlatBufferBuilder builder, ERangeCheckType Type = ERangeCheckType.Cone, Offset<IVectorInfo> CenterOffsetOffset = default(Offset<IVectorInfo>), float Radius = 0f, float Height = 0f)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IConeRangeCheck.EndIConeRangeCheck(builder);
 		}
 
-		// Token: 0x0602CBD9 RID: 183257 RVA: 0x006266C1 File Offset: 0x006248C1
+		// Token: 0x0602F35D RID: 193373 RVA: 0x006727E9 File Offset: 0x006709E9
 		public static void StartIConeRangeCheck(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602CBDA RID: 183258 RVA: 0x006266CA File Offset: 0x006248CA
+		// Token: 0x0602F35E RID: 193374 RVA: 0x006727F2 File Offset: 0x006709F2
 		public static void AddType(FlatBufferBuilder builder, ERangeCheckType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CBDB RID: 183259 RVA: 0x006266D5 File Offset: 0x006248D5
+		// Token: 0x0602F35F RID: 193375 RVA: 0x006727FD File Offset: 0x006709FD
 		public static void AddCenterOffset(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffsetOffset)
 		{
 			builder.AddOffset(1, centerOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602CBDC RID: 183260 RVA: 0x006266E5 File Offset: 0x006248E5
+		// Token: 0x0602F360 RID: 193376 RVA: 0x0067280D File Offset: 0x00670A0D
 		public static void AddRadius(FlatBufferBuilder builder, float radius)
 		{
 			builder.AddFloat(2, radius, 0.0);
 		}
 
-		// Token: 0x0602CBDD RID: 183261 RVA: 0x006266F8 File Offset: 0x006248F8
+		// Token: 0x0602F361 RID: 193377 RVA: 0x00672820 File Offset: 0x00670A20
 		public static void AddHeight(FlatBufferBuilder builder, float height)
 		{
 			builder.AddFloat(3, height, 0.0);
 		}
 
-		// Token: 0x0602CBDE RID: 183262 RVA: 0x0062670B File Offset: 0x0062490B
+		// Token: 0x0602F362 RID: 193378 RVA: 0x00672833 File Offset: 0x00670A33
 		public static Offset<IConeRangeCheck> EndIConeRangeCheck(FlatBufferBuilder builder)
 		{
 			return new Offset<IConeRangeCheck>(builder.EndTable());
 		}
 
-		// Token: 0x0602CBDF RID: 183263 RVA: 0x00626718 File Offset: 0x00624918
+		// Token: 0x0602F363 RID: 193379 RVA: 0x00672840 File Offset: 0x00670A40
 		public IConeRangeCheckT UnPack()
 		{
 			IConeRangeCheckT coneRangeCheckT = new IConeRangeCheckT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return coneRangeCheckT;
 		}
 
-		// Token: 0x0602CBE0 RID: 183264 RVA: 0x00626734 File Offset: 0x00624934
+		// Token: 0x0602F364 RID: 193380 RVA: 0x0067285C File Offset: 0x00670A5C
 		public void UnPackTo(IConeRangeCheckT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.Height = this.Height;
 		}
 
-		// Token: 0x0602CBE1 RID: 183265 RVA: 0x00626794 File Offset: 0x00624994
+		// Token: 0x0602F365 RID: 193381 RVA: 0x006728BC File Offset: 0x00670ABC
 		public static Offset<IConeRangeCheck> Pack(FlatBufferBuilder builder, IConeRangeCheckT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IConeRangeCheck.CreateIConeRangeCheck(builder, _o.Type, centerOffsetOffset, _o.Radius, _o.Height);
 		}
 
-		// Token: 0x04010AF5 RID: 68341
+		// Token: 0x0401190B RID: 71947
 		private Table __p;
 	}
 }

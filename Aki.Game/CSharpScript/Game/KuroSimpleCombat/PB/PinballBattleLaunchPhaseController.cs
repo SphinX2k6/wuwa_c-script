@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat.PB
 {
-	// Token: 0x02006FBF RID: 28607
+	// Token: 0x02006140 RID: 24896
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballBattleLaunchPhaseController
 	{
-		// Token: 0x06045843 RID: 284739 RVA: 0x0113FB80 File Offset: 0x0113DD80
+		// Token: 0x0603B9F3 RID: 244211 RVA: 0x010E9950 File Offset: 0x010E7B50
 		public bool IsActive()
 		{
 			return this.TargetActor != null && !this.TargetActor.bHidden;
 		}
 
-		// Token: 0x06045844 RID: 284740 RVA: 0x0113FB9A File Offset: 0x0113DD9A
+		// Token: 0x0603B9F4 RID: 244212 RVA: 0x010E996A File Offset: 0x010E7B6A
 		[NullableContext(1)]
 		public void SetupSplineMotion(AActor actor, int splineId, UCurveFloat speedCurve, UCurveFloat degCurve)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.SetActorsActiveState(false);
 		}
 
-		// Token: 0x06045845 RID: 284741 RVA: 0x0113FBCB File Offset: 0x0113DDCB
+		// Token: 0x0603B9F5 RID: 244213 RVA: 0x010E999B File Offset: 0x010E7B9B
 		public void StartSplineMotion()
 		{
 			if (this.SplineComponent == null || this.TargetActor == null)
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.UpdateTargetActor();
 		}
 
-		// Token: 0x06045846 RID: 284742 RVA: 0x0113FC06 File Offset: 0x0113DE06
+		// Token: 0x0603B9F6 RID: 244214 RVA: 0x010E99D6 File Offset: 0x010E7BD6
 		public void StopSplineMotion()
 		{
 			this.SetActorsActiveState(false);
 		}
 
-		// Token: 0x06045847 RID: 284743 RVA: 0x0113FC10 File Offset: 0x0113DE10
+		// Token: 0x0603B9F7 RID: 244215 RVA: 0x010E99E0 File Offset: 0x010E7BE0
 		public void Destroy()
 		{
 			this.StopSplineMotion();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045848 RID: 284744 RVA: 0x0113FC5C File Offset: 0x0113DE5C
+		// Token: 0x0603B9F8 RID: 244216 RVA: 0x010E9A2C File Offset: 0x010E7C2C
 		public void Tick(float deltaTime)
 		{
 			if (!this.IsActive())
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.UpdateSplineMotion(deltaTime);
 		}
 
-		// Token: 0x06045849 RID: 284745 RVA: 0x0113FC70 File Offset: 0x0113DE70
+		// Token: 0x0603B9F9 RID: 244217 RVA: 0x010E9A40 File Offset: 0x010E7C40
 		private void SetActorsActiveState(bool active)
 		{
 			AActor targetActor = this.TargetActor;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x0604584A RID: 284746 RVA: 0x0113FCC4 File Offset: 0x0113DEC4
+		// Token: 0x0603B9FA RID: 244218 RVA: 0x010E9A94 File Offset: 0x010E7C94
 		private void UpdateSplineMotion(float deltaTime)
 		{
 			if (this.SplineComponent == null || this.TargetActor == null)
@@ -121,14 +121,14 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.UpdateTargetActor();
 		}
 
-		// Token: 0x0604584B RID: 284747 RVA: 0x0113FD73 File Offset: 0x0113DF73
+		// Token: 0x0603B9FB RID: 244219 RVA: 0x010E9B43 File Offset: 0x010E7D43
 		private void UpdateTargetActor()
 		{
 			this.UpdateActorPosition();
 			this.UpdateActorRotation();
 		}
 
-		// Token: 0x0604584C RID: 284748 RVA: 0x0113FD84 File Offset: 0x0113DF84
+		// Token: 0x0603B9FC RID: 244220 RVA: 0x010E9B54 File Offset: 0x010E7D54
 		private void UpdateActorPosition()
 		{
 			if (this.SplineComponent == null || this.TargetActor == null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.TargetActor.D_K2_SetActorLocation(newLocation, false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x0604584D RID: 284749 RVA: 0x0113FDD8 File Offset: 0x0113DFD8
+		// Token: 0x0603B9FD RID: 244221 RVA: 0x010E9BA8 File Offset: 0x010E7DA8
 		private void UpdateActorRotation()
 		{
 			if (this.TargetActor == null || this.DegCurve == null)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.TargetActor.K2_SetActorRotation(this.CachedRotator.ToUeRotator(), false);
 		}
 
-		// Token: 0x0604584E RID: 284750 RVA: 0x0113FE2C File Offset: 0x0113E02C
+		// Token: 0x0603B9FE RID: 244222 RVA: 0x010E9BFC File Offset: 0x010E7DFC
 		private void LoadSplineById(int splineId, FTransformDouble bornTransform)
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(splineId), null);
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.InitializeSplinePoints(commonSpline.Points);
 		}
 
-		// Token: 0x0604584F RID: 284751 RVA: 0x0113FFB4 File Offset: 0x0113E1B4
+		// Token: 0x0603B9FF RID: 244223 RVA: 0x010E9D84 File Offset: 0x010E7F84
 		[NullableContext(1)]
 		private void InitializeSplinePoints(List<ICommonSplinePoint> points)
 		{
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.SplineComponent.UpdateSpline();
 		}
 
-		// Token: 0x06045850 RID: 284752 RVA: 0x01140080 File Offset: 0x0113E280
+		// Token: 0x0603BA00 RID: 244224 RVA: 0x010E9E50 File Offset: 0x010E8050
 		public FVector? GetCurrentActorPosition()
 		{
 			AActor targetActor = this.TargetActor;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return new FVector?(this.TargetActor.K2_GetActorLocation());
 		}
 
-		// Token: 0x06045851 RID: 284753 RVA: 0x011400BE File Offset: 0x0113E2BE
+		// Token: 0x0603BA01 RID: 244225 RVA: 0x010E9E8E File Offset: 0x010E808E
 		public float GetCurrentAngle()
 		{
 			if (this.DegCurve == null)
@@ -236,28 +236,28 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return this.DegCurve.GetFloatValue(this.CurrentSplineProgress);
 		}
 
-		// Token: 0x04024468 RID: 148584
+		// Token: 0x0401F71D RID: 128797
 		private USplineComponent SplineComponent;
 
-		// Token: 0x04024469 RID: 148585
+		// Token: 0x0401F71E RID: 128798
 		private AActor SplineActor;
 
-		// Token: 0x0402446A RID: 148586
+		// Token: 0x0401F71F RID: 128799
 		private AActor TargetActor;
 
-		// Token: 0x0402446B RID: 148587
+		// Token: 0x0401F720 RID: 128800
 		private UCurveFloat SpeedCurve;
 
-		// Token: 0x0402446C RID: 148588
+		// Token: 0x0401F721 RID: 128801
 		private UCurveFloat DegCurve;
 
-		// Token: 0x0402446D RID: 148589
+		// Token: 0x0401F722 RID: 128802
 		private float CurrentSplineProgress;
 
-		// Token: 0x0402446E RID: 148590
+		// Token: 0x0401F723 RID: 128803
 		private bool IsMovingForward = true;
 
-		// Token: 0x0402446F RID: 148591
+		// Token: 0x0401F724 RID: 128804
 		[Nullable(1)]
 		private readonly Rotator CachedRotator = Rotator.Create(0f, 0f, 0f);
 	}

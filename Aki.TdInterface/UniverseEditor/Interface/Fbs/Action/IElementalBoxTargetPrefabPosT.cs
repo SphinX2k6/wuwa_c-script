@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006637 RID: 26167
+	// Token: 0x02006CA8 RID: 27816
 	public class IElementalBoxTargetPrefabPosT
 	{
-		// Token: 0x1700C264 RID: 49764
-		// (get) Token: 0x0602D711 RID: 186129 RVA: 0x0063983F File Offset: 0x00637A3F
-		// (set) Token: 0x0602D712 RID: 186130 RVA: 0x00639847 File Offset: 0x00637A47
+		// Token: 0x1700CC02 RID: 52226
+		// (get) Token: 0x0602FEE2 RID: 196322 RVA: 0x006863A7 File Offset: 0x006845A7
+		// (set) Token: 0x0602FEE3 RID: 196323 RVA: 0x006863AF File Offset: 0x006845AF
 		public EElementalBoxTargetPosType Type { get; set; }
 
-		// Token: 0x1700C265 RID: 49765
-		// (get) Token: 0x0602D713 RID: 186131 RVA: 0x00639850 File Offset: 0x00637A50
-		// (set) Token: 0x0602D714 RID: 186132 RVA: 0x00639858 File Offset: 0x00637A58
+		// Token: 0x1700CC03 RID: 52227
+		// (get) Token: 0x0602FEE4 RID: 196324 RVA: 0x006863B8 File Offset: 0x006845B8
+		// (set) Token: 0x0602FEE5 RID: 196325 RVA: 0x006863C0 File Offset: 0x006845C0
 		public string TargetKey { get; set; }
 
-		// Token: 0x0602D715 RID: 186133 RVA: 0x00639861 File Offset: 0x00637A61
+		// Token: 0x0602FEE6 RID: 196326 RVA: 0x006863C9 File Offset: 0x006845C9
 		public IElementalBoxTargetPrefabPosT()
 		{
 			this.Type = EElementalBoxTargetPosType.PrefabElementalBoxTargetPos;

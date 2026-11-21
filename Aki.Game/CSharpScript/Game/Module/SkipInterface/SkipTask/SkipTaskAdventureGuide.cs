@@ -6,10 +6,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BA5 RID: 19365
+	// Token: 0x02003B4F RID: 15183
 	public class SkipTaskAdventureGuide : SkipTask
 	{
-		// Token: 0x060322C7 RID: 205511 RVA: 0x00BA84FC File Offset: 0x00BA66FC
+		// Token: 0x06027058 RID: 159832 RVA: 0x00AEC744 File Offset: 0x00AEA944
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -26,6 +26,12 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 				return;
 			}
 			int num = int.Parse(s);
+			int? jumpToGridId = null;
+			int num2;
+			if (data.Length > 2 && int.TryParse(data[2] as string, out num2) && num2 > 0)
+			{
+				jumpToGridId = new int?(num2);
+			}
 			if (euiTabViewName == EUiTabViewName.NewSoundAreaView && !AdventureGuideModel.Instance.CheckTargetDungeonTypeCanShow((EDungeonType)num))
 			{
 				GenericPromptController.Instance.ShowPromptByCode("NotOpen", Array.Empty<object>());
@@ -34,7 +40,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(euiTabViewName), new int?(num), delegate(bool success, int viewId)
 			{
 				base.Finish();
-			});
+			}, jumpToGridId);
 			if (UiManager.Instance.IsViewShow(EUiViewName.AdventureGuideView))
 			{
 				base.Finish();

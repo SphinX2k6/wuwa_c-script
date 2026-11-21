@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001D88 RID: 7560
+// Token: 0x0200124A RID: 4682
 [NullableContext(1)]
 [Nullable(0)]
 public class ChallengeCountDownViewParams
 {
-	// Token: 0x0600E55B RID: 58715 RVA: 0x003604F6 File Offset: 0x0035E6F6
+	// Token: 0x0600B979 RID: 47481 RVA: 0x0036C14A File Offset: 0x0036A34A
 	public ChallengeCountDownViewParams(double timerEndTime, string uiTitleKey)
 	{
 	}
 
-	// Token: 0x04006A1B RID: 27163
+	// Token: 0x04006AFC RID: 27388
 	public double TimerEndTime = timerEndTime;
 
-	// Token: 0x04006A1C RID: 27164
+	// Token: 0x04006AFD RID: 27389
 	public string UiTitleKey = uiTitleKey;
 }

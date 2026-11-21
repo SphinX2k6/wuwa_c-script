@@ -15,13 +15,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045BB RID: 17851
+	// Token: 0x020034E3 RID: 13539
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharRenderShell : IGameBudgetManagedObject
 	{
-		// Token: 0x17007599 RID: 30105
-		// (get) Token: 0x0602E07C RID: 188540 RVA: 0x00A9B1D6 File Offset: 0x00A993D6
+		// Token: 0x17004850 RID: 18512
+		// (get) Token: 0x06022766 RID: 141158 RVA: 0x009C73FA File Offset: 0x009C55FA
 		public bool IsAlwaysTick
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E07D RID: 188541 RVA: 0x00A9B1E0 File Offset: 0x00A993E0
+		// Token: 0x06022767 RID: 141159 RVA: 0x009C7404 File Offset: 0x009C5604
 		public void Init(CharRenderingComponent renderingComponent)
 		{
 			this.RenderingComponent = renderingComponent;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E07E RID: 188542 RVA: 0x00A9B488 File Offset: 0x00A99688
+		// Token: 0x06022768 RID: 141160 RVA: 0x009C76AC File Offset: 0x009C58AC
 		private void ReregisterGameBudget(TsGameBudgetGroupConfigCache config)
 		{
 			if (this.RenderingComponent == null)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Render
 			this.GameBudgetManagedTokenInternal = new uint?(GameBudgetInterfaceController.Instance.RegisterTick(config.GroupName, config.SignificanceGroup, this, this.RenderingComponent.GetCachedOwner(), true, true, true, true));
 		}
 
-		// Token: 0x0602E07F RID: 188543 RVA: 0x00A9B4FA File Offset: 0x00A996FA
+		// Token: 0x06022769 RID: 141161 RVA: 0x009C771E File Offset: 0x009C591E
 		private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!CharRenderShell.CharRenderShellGameBudgetOptimize)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Render
 			this.ReregisterGameBudget(GameBudgetAllocatorConfigCreator.Instance.TsMoveSceneItemEntityConfig);
 		}
 
-		// Token: 0x0602E080 RID: 188544 RVA: 0x00A9B528 File Offset: 0x00A99728
+		// Token: 0x0602276A RID: 141162 RVA: 0x009C774C File Offset: 0x009C594C
 		private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!CharRenderShell.CharRenderShellGameBudgetOptimize)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Render
 			this.ReregisterGameBudget(GameBudgetAllocatorConfigCreator.Instance.TsCharacterRenderConfig);
 		}
 
-		// Token: 0x0602E081 RID: 188545 RVA: 0x00A9B560 File Offset: 0x00A99760
+		// Token: 0x0602276B RID: 141163 RVA: 0x009C7784 File Offset: 0x009C5984
 		private void OnEndVisionSkill(int visionId)
 		{
 			if (this.VisionId == 0)
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Render
 			renderingComponent2.CleanOriginEffect();
 		}
 
-		// Token: 0x0602E082 RID: 188546 RVA: 0x00A9B608 File Offset: 0x00A99808
+		// Token: 0x0602276C RID: 141164 RVA: 0x009C782C File Offset: 0x009C5A2C
 		public void Clear()
 		{
 			if (!this.IsAlwaysTickInternal)
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E083 RID: 188547 RVA: 0x00A9B784 File Offset: 0x00A99984
+		// Token: 0x0602276D RID: 141165 RVA: 0x009C79A8 File Offset: 0x009C5BA8
 		private void RegisterTick()
 		{
 			if (!CharRenderShell.CharRenderShellGameBudgetOptimize)
@@ -359,8 +359,8 @@ namespace CSharpScript.Game.Render
 			UKuroGameBudgetAllocatorCSharpInterface.SetUseWasRecentlyPassVisibilityTest(tsGameBudgetGroupConfigCache.GroupName, this.GameBudgetManagedTokenInternal.Value, true);
 		}
 
-		// Token: 0x1700759A RID: 30106
-		// (get) Token: 0x0602E084 RID: 188548 RVA: 0x00A9BA23 File Offset: 0x00A99C23
+		// Token: 0x17004851 RID: 18513
+		// (get) Token: 0x0602276E RID: 141166 RVA: 0x009C7C47 File Offset: 0x009C5E47
 		private bool IsRole
 		{
 			get
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E085 RID: 188549 RVA: 0x00A9BA2E File Offset: 0x00A99C2E
+		// Token: 0x0602276F RID: 141167 RVA: 0x009C7C52 File Offset: 0x009C5E52
 		private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			if (this.RoleEntity != null && newEntityHandle.Id == this.RoleEntity.Id)
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E086 RID: 188550 RVA: 0x00A9BA51 File Offset: 0x00A99C51
+		// Token: 0x06022770 RID: 141168 RVA: 0x009C7C75 File Offset: 0x009C5E75
 		private void OnExecuteQte(int goBattleEntityId, int goDownEntityId, int RoleQteType)
 		{
 			if (this.GameBudgetManagedTokenInternal != null && !this.IsPendingUnregister)
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E087 RID: 188551 RVA: 0x00A9BA85 File Offset: 0x00A99C85
+		// Token: 0x06022771 RID: 141169 RVA: 0x009C7CA9 File Offset: 0x009C5EA9
 		private void OnRoleGoDownFinish()
 		{
 			CharRenderingComponent renderingComponent = this.RenderingComponent;
@@ -408,8 +408,8 @@ namespace CSharpScript.Game.Render
 			this.UnregisterTick();
 		}
 
-		// Token: 0x1700759B RID: 30107
-		// (get) Token: 0x0602E088 RID: 188552 RVA: 0x00A9BAC1 File Offset: 0x00A99CC1
+		// Token: 0x17004852 RID: 18514
+		// (get) Token: 0x06022772 RID: 141170 RVA: 0x009C7CE5 File Offset: 0x009C5EE5
 		private bool IsOtherRole
 		{
 			get
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E089 RID: 188553 RVA: 0x00A9BACC File Offset: 0x00A99CCC
+		// Token: 0x06022773 RID: 141171 RVA: 0x009C7CF0 File Offset: 0x009C5EF0
 		private void OnOtherChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			if (this.IsOtherRole && newEntityHandle.Id == this.OtherRoleEntityId)
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E08A RID: 188554 RVA: 0x00A9BAEA File Offset: 0x00A99CEA
+		// Token: 0x06022774 RID: 141172 RVA: 0x009C7D0E File Offset: 0x009C5F0E
 		private void OnOtherRoleGoDownFinish()
 		{
 			CharRenderingComponent renderingComponent = this.RenderingComponent;
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Render
 			this.UnregisterTick();
 		}
 
-		// Token: 0x0602E08B RID: 188555 RVA: 0x00A9BB28 File Offset: 0x00A99D28
+		// Token: 0x06022775 RID: 141173 RVA: 0x009C7D4C File Offset: 0x009C5F4C
 		private void OnAddMaterialController(PD_CharacterControllerData_C data, [Nullable(2)] UObject userData, int handle)
 		{
 			if (Time.Instance.IsAfterPrePhysicTick)
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E08C RID: 188556 RVA: 0x00A9BB81 File Offset: 0x00A99D81
+		// Token: 0x06022776 RID: 141174 RVA: 0x009C7DA5 File Offset: 0x009C5FA5
 		private void TickPostUpdateWork(float deltaTime)
 		{
 			this.PostTickProcessId = 0;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Render
 			renderingComponent.UpdateMaterialEffectsOnly();
 		}
 
-		// Token: 0x0602E08D RID: 188557 RVA: 0x00A9BB9A File Offset: 0x00A99D9A
+		// Token: 0x06022777 RID: 141175 RVA: 0x009C7DBE File Offset: 0x009C5FBE
 		private void ForceTick(float delta)
 		{
 			if (this.GameBudgetManagedTokenInternal == null)
@@ -486,7 +486,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E08E RID: 188558 RVA: 0x00A9BBCC File Offset: 0x00A99DCC
+		// Token: 0x06022778 RID: 141176 RVA: 0x009C7DF0 File Offset: 0x009C5FF0
 		private void OnMarkActorInFighting(bool inFight)
 		{
 			if (this.GameBudgetManagedTokenInternal != null)
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E08F RID: 188559 RVA: 0x00A9BBFC File Offset: 0x00A99DFC
+		// Token: 0x06022779 RID: 141177 RVA: 0x009C7E20 File Offset: 0x009C6020
 		private void UnregisterTick()
 		{
 			if (this.HasRegisterMaterialControllerEvent)
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.Render
 			this.IsPendingUnregister = false;
 		}
 
-		// Token: 0x0602E090 RID: 188560 RVA: 0x00A9BCC0 File Offset: 0x00A99EC0
+		// Token: 0x0602277A RID: 141178 RVA: 0x009C7EE4 File Offset: 0x009C60E4
 		public void ScheduledTick(float deltaSeconds, int deltaFrames, float distance)
 		{
 			try
@@ -550,8 +550,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x1700759C RID: 30108
-		// (get) Token: 0x0602E091 RID: 188561 RVA: 0x00A9BD34 File Offset: 0x00A99F34
+		// Token: 0x17004853 RID: 18515
+		// (get) Token: 0x0602277B RID: 141179 RVA: 0x009C7F58 File Offset: 0x009C6158
 		public bool HasScheduledAfterTick
 		{
 			get
@@ -560,8 +560,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x1700759D RID: 30109
-		// (get) Token: 0x0602E092 RID: 188562 RVA: 0x00A9BD37 File Offset: 0x00A99F37
+		// Token: 0x17004854 RID: 18516
+		// (get) Token: 0x0602277C RID: 141180 RVA: 0x009C7F5B File Offset: 0x009C615B
 		public bool HasOnEnabledChange
 		{
 			get
@@ -570,8 +570,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x1700759E RID: 30110
-		// (get) Token: 0x0602E093 RID: 188563 RVA: 0x00A9BD3A File Offset: 0x00A99F3A
+		// Token: 0x17004855 RID: 18517
+		// (get) Token: 0x0602277D RID: 141181 RVA: 0x009C7F5E File Offset: 0x009C615E
 		public bool HasOnWasRecentlyRenderedOnScreenChange
 		{
 			get
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E094 RID: 188564 RVA: 0x00A9BD3D File Offset: 0x00A99F3D
+		// Token: 0x0602277E RID: 141182 RVA: 0x009C7F61 File Offset: 0x009C6161
 		public void OnWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 		{
 			this.IsRendering = wasRecentlyRenderedOnScreen;
@@ -590,13 +590,13 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E095 RID: 188565 RVA: 0x00A9BD5E File Offset: 0x00A99F5E
+		// Token: 0x0602277F RID: 141183 RVA: 0x009C7F82 File Offset: 0x009C6182
 		public GCHandle GetGCHandle()
 		{
 			return this.GameBudgetGCHandle;
 		}
 
-		// Token: 0x0602E096 RID: 188566 RVA: 0x00A9BD68 File Offset: 0x00A99F68
+		// Token: 0x06022780 RID: 141184 RVA: 0x009C7F8C File Offset: 0x009C618C
 		public void Tick(double deltaSecond, bool force = false)
 		{
 			if (CharRenderShell.CharRenderShellGameBudgetOptimize && !Info.Instance.IsInEditorTick() && !force && !this.IsPendingUnregister)
@@ -633,62 +633,62 @@ namespace CSharpScript.Game.Render
 			this.RenderingComponent.Tick((float)num);
 		}
 
-		// Token: 0x040189AB RID: 100779
+		// Token: 0x04012FE6 RID: 77798
 		[Nullable(2)]
 		public CharRenderingComponent RenderingComponent;
 
-		// Token: 0x040189AC RID: 100780
+		// Token: 0x04012FE7 RID: 77799
 		public static readonly bool CharRenderShellGameBudgetOptimize = true;
 
-		// Token: 0x040189AD RID: 100781
+		// Token: 0x04012FE8 RID: 77800
 		private bool IsAlwaysTickInternal;
 
-		// Token: 0x040189AE RID: 100782
+		// Token: 0x04012FE9 RID: 77801
 		private int VisionId;
 
-		// Token: 0x040189AF RID: 100783
+		// Token: 0x04012FEA RID: 77802
 		[Nullable(2)]
 		private global::NpcPerformComponent NpcPerformComponent;
 
-		// Token: 0x040189B0 RID: 100784
+		// Token: 0x04012FEB RID: 77803
 		private bool IsEliteMonster;
 
-		// Token: 0x040189B1 RID: 100785
+		// Token: 0x04012FEC RID: 77804
 		private uint? GameBudgetManagedTokenInternal;
 
-		// Token: 0x040189B2 RID: 100786
+		// Token: 0x04012FED RID: 77805
 		[Nullable(2)]
 		private UObject EventActor;
 
-		// Token: 0x040189B3 RID: 100787
+		// Token: 0x04012FEE RID: 77806
 		private bool HasRegisterMaterialControllerEvent;
 
-		// Token: 0x040189B4 RID: 100788
+		// Token: 0x04012FEF RID: 77807
 		private bool IsPendingUnregister;
 
-		// Token: 0x040189B5 RID: 100789
+		// Token: 0x04012FF0 RID: 77808
 		[Nullable(2)]
 		private Entity RoleEntity;
 
-		// Token: 0x040189B6 RID: 100790
+		// Token: 0x04012FF1 RID: 77809
 		protected int OtherRoleEntityId;
 
-		// Token: 0x040189B7 RID: 100791
+		// Token: 0x04012FF2 RID: 77810
 		private int PostTickProcessId;
 
-		// Token: 0x040189B8 RID: 100792
+		// Token: 0x04012FF3 RID: 77811
 		private int LastScheduledTickFrame;
 
-		// Token: 0x040189B9 RID: 100793
+		// Token: 0x04012FF4 RID: 77812
 		private bool IsRendering;
 
-		// Token: 0x040189BA RID: 100794
+		// Token: 0x04012FF5 RID: 77813
 		private bool IgnoreIsRenderingCondition;
 
-		// Token: 0x040189BB RID: 100795
+		// Token: 0x04012FF6 RID: 77814
 		private double LastRenderingTime;
 
-		// Token: 0x040189BC RID: 100796
+		// Token: 0x04012FF7 RID: 77815
 		private GCHandle GameBudgetGCHandle;
 	}
 }

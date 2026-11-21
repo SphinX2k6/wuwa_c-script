@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200039D RID: 925
+	// Token: 0x020003B3 RID: 947
 	public class ConfigGivebackScoreRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060015B5 RID: 5557 RVA: 0x000D451B File Offset: 0x000D271B
+		// Token: 0x06001639 RID: 5689 RVA: 0x000DAC6F File Offset: 0x000D8E6F
 		static ConfigGivebackScoreRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGivebackScoreRewardById.CreateStaticDefaultValue), new Action(ConfigGivebackScoreRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060015B6 RID: 5558 RVA: 0x000D453C File Offset: 0x000D273C
+		// Token: 0x0600163A RID: 5690 RVA: 0x000DAC90 File Offset: 0x000D8E90
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGivebackScoreRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060015B7 RID: 5559 RVA: 0x000D45BB File Offset: 0x000D27BB
+		// Token: 0x0600163B RID: 5691 RVA: 0x000DAD0F File Offset: 0x000D8F0F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGivebackScoreRewardById.LogPair = null;
 			ConfigGivebackScoreRewardById.HandleId = 0;
 		}
 
-		// Token: 0x060015B8 RID: 5560 RVA: 0x000D45C9 File Offset: 0x000D27C9
+		// Token: 0x0600163C RID: 5692 RVA: 0x000DAD1D File Offset: 0x000D8F1D
 		public static void Init()
 		{
 			ConfigGivebackScoreRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigGivebackScoreRewardById.HandleId, "db_feedbackreward.db", "select BinData from `GivebackScoreReward` where Id=?");
 		}
 
-		// Token: 0x060015B9 RID: 5561 RVA: 0x000D45E4 File Offset: 0x000D27E4
+		// Token: 0x0600163D RID: 5693 RVA: 0x000DAD38 File Offset: 0x000D8F38
 		public static GivebackScoreReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGivebackScoreRewardById.HandleId, ConfigGivebackScoreRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GivebackScoreReward?(rootAsGivebackScoreReward);
 		}
 
-		// Token: 0x0400192F RID: 6447
+		// Token: 0x040019C9 RID: 6601
 		private const string DB = "db_feedbackreward.db";
 
-		// Token: 0x04001930 RID: 6448
+		// Token: 0x040019CA RID: 6602
 		private const string FILE = "l.老玩家回馈.xlsx";
 
-		// Token: 0x04001931 RID: 6449
+		// Token: 0x040019CB RID: 6603
 		private const string TABLE = "GivebackScoreReward";
 
-		// Token: 0x04001932 RID: 6450
+		// Token: 0x040019CC RID: 6604
 		private const string COMMAND = "select BinData from `GivebackScoreReward` where Id=?";
 
-		// Token: 0x04001933 RID: 6451
+		// Token: 0x040019CD RID: 6605
 		private const string KEY_PREFIX = "GivebackScoreRewardById";
 
-		// Token: 0x04001934 RID: 6452
+		// Token: 0x040019CE RID: 6606
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001935 RID: 6453
+		// Token: 0x040019CF RID: 6607
 		private static int HandleId;
 	}
 }

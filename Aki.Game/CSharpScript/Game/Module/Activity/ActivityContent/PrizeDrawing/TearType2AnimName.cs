@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 {
-	// Token: 0x020062A1 RID: 25249
+	// Token: 0x0200521F RID: 21023
 	internal static class TearType2AnimName
 	{
-		// Token: 0x0603F857 RID: 260183 RVA: 0x00F5C1AC File Offset: 0x00F5A3AC
+		// Token: 0x06034518 RID: 214296 RVA: 0x00EA3108 File Offset: 0x00EA1308
 		[NullableContext(1)]
 		public static string GetAnimName(ETearType tearType)
 		{

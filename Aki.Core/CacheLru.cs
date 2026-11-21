@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class CacheLru<TK, TV> where TV : class
 {
-	// Token: 0x060001E6 RID: 486 RVA: 0x0000B91C File Offset: 0x00009B1C
+	// Token: 0x060001E7 RID: 487 RVA: 0x0000B600 File Offset: 0x00009800
 	public CacheLru(int capacity, [Nullable(new byte[]
 	{
 		1,
@@ -18,9 +18,9 @@ public class CacheLru<TK, TV> where TV : class
 		this.Creator = creator;
 	}
 
-	// Token: 0x1700003C RID: 60
-	// (get) Token: 0x060001E7 RID: 487 RVA: 0x0000B938 File Offset: 0x00009B38
-	// (set) Token: 0x060001E8 RID: 488 RVA: 0x0000B945 File Offset: 0x00009B45
+	// Token: 0x1700003B RID: 59
+	// (get) Token: 0x060001E8 RID: 488 RVA: 0x0000B61C File Offset: 0x0000981C
+	// (set) Token: 0x060001E9 RID: 489 RVA: 0x0000B629 File Offset: 0x00009829
 	public bool Enable
 	{
 		get
@@ -33,8 +33,8 @@ public class CacheLru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700003D RID: 61
-	// (get) Token: 0x060001E9 RID: 489 RVA: 0x0000B953 File Offset: 0x00009B53
+	// Token: 0x1700003C RID: 60
+	// (get) Token: 0x060001EA RID: 490 RVA: 0x0000B637 File Offset: 0x00009837
 	public int Size
 	{
 		get
@@ -43,9 +43,9 @@ public class CacheLru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700003E RID: 62
-	// (get) Token: 0x060001EA RID: 490 RVA: 0x0000B960 File Offset: 0x00009B60
-	// (set) Token: 0x060001EB RID: 491 RVA: 0x0000B96D File Offset: 0x00009B6D
+	// Token: 0x1700003D RID: 61
+	// (get) Token: 0x060001EB RID: 491 RVA: 0x0000B644 File Offset: 0x00009844
+	// (set) Token: 0x060001EC RID: 492 RVA: 0x0000B651 File Offset: 0x00009851
 	public int Capacity
 	{
 		get
@@ -58,8 +58,8 @@ public class CacheLru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x1700003F RID: 63
-	// (get) Token: 0x060001EC RID: 492 RVA: 0x0000B97B File Offset: 0x00009B7B
+	// Token: 0x1700003E RID: 62
+	// (get) Token: 0x060001ED RID: 493 RVA: 0x0000B65F File Offset: 0x0000985F
 	public float HitRate
 	{
 		get
@@ -68,8 +68,8 @@ public class CacheLru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x17000040 RID: 64
-	// (get) Token: 0x060001ED RID: 493 RVA: 0x0000B988 File Offset: 0x00009B88
+	// Token: 0x1700003F RID: 63
+	// (get) Token: 0x060001EE RID: 494 RVA: 0x0000B66C File Offset: 0x0000986C
 	public float UsedAvg
 	{
 		get
@@ -78,8 +78,8 @@ public class CacheLru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x17000041 RID: 65
-	// (get) Token: 0x060001EE RID: 494 RVA: 0x0000B995 File Offset: 0x00009B95
+	// Token: 0x17000040 RID: 64
+	// (get) Token: 0x060001EF RID: 495 RVA: 0x0000B679 File Offset: 0x00009879
 	public float ThresholdUsedRate
 	{
 		get
@@ -88,7 +88,7 @@ public class CacheLru<TK, TV> where TV : class
 		}
 	}
 
-	// Token: 0x060001EF RID: 495 RVA: 0x0000B9A4 File Offset: 0x00009BA4
+	// Token: 0x060001F0 RID: 496 RVA: 0x0000B688 File Offset: 0x00009888
 	[return: Nullable(2)]
 	public TV Get(TK key)
 	{
@@ -106,16 +106,16 @@ public class CacheLru<TK, TV> where TV : class
 		return tv;
 	}
 
-	// Token: 0x060001F0 RID: 496 RVA: 0x0000B9F7 File Offset: 0x00009BF7
+	// Token: 0x060001F1 RID: 497 RVA: 0x0000B6DB File Offset: 0x000098DB
 	public void Clear()
 	{
 		this.Lru.Clear();
 	}
 
-	// Token: 0x040001AB RID: 427
+	// Token: 0x040001AD RID: 429
 	private readonly TrimLru<TK, TV> Lru;
 
-	// Token: 0x040001AC RID: 428
+	// Token: 0x040001AE RID: 430
 	[Nullable(new byte[]
 	{
 		1,

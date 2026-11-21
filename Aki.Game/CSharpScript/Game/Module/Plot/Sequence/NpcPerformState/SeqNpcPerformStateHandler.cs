@@ -4,27 +4,27 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 {
-	// Token: 0x0200502C RID: 20524
+	// Token: 0x02003FF6 RID: 16374
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class SeqNpcPerformStateHandler
 	{
-		// Token: 0x17008027 RID: 32807
-		// (get) Token: 0x06034861 RID: 215137
+		// Token: 0x170053DC RID: 21468
+		// (get) Token: 0x06029704 RID: 169732
 		public abstract ENpcGroupPerformType PerformType { get; }
 
-		// Token: 0x17008028 RID: 32808
-		// (get) Token: 0x06034862 RID: 215138
+		// Token: 0x170053DD RID: 21469
+		// (get) Token: 0x06029705 RID: 169733
 		public abstract ENpcRelationType RelationType { get; }
 
-		// Token: 0x06034863 RID: 215139
+		// Token: 0x06029706 RID: 169734
 		[return: Nullable(2)]
 		public abstract NpcRelation Capture(string key);
 
-		// Token: 0x06034864 RID: 215140
+		// Token: 0x06029707 RID: 169735
 		public abstract void Restore(NpcRelation relation, string reason);
 
-		// Token: 0x06034865 RID: 215141 RVA: 0x00C60564 File Offset: 0x00C5E764
+		// Token: 0x06029708 RID: 169736 RVA: 0x00BABADC File Offset: 0x00BA9CDC
 		public virtual void OnBattleCharacterHidden(NpcRelation relation, string reason)
 		{
 		}

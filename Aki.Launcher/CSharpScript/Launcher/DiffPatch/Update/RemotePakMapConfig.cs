@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x0200020D RID: 525
+	// Token: 0x02000212 RID: 530
 	public class RemotePakMapConfig
 	{
-		// Token: 0x04000881 RID: 2177
+		// Token: 0x040008C2 RID: 2242
 		[Nullable(1)]
 		public Dictionary<string, VideoItem> PakMap = new Dictionary<string, VideoItem>();
 	}

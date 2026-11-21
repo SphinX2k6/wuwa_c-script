@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200659B RID: 26011
+	// Token: 0x02006C03 RID: 27651
 	public class IDestroyQuestItemT
 	{
-		// Token: 0x1700C12C RID: 49452
-		// (get) Token: 0x0602D1F5 RID: 184821 RVA: 0x0063060E File Offset: 0x0062E80E
-		// (set) Token: 0x0602D1F6 RID: 184822 RVA: 0x00630616 File Offset: 0x0062E816
+		// Token: 0x1700CABB RID: 51899
+		// (get) Token: 0x0602F979 RID: 194937 RVA: 0x0067C7D2 File Offset: 0x0067A9D2
+		// (set) Token: 0x0602F97A RID: 194938 RVA: 0x0067C7DA File Offset: 0x0067A9DA
 		public int ItemId { get; set; }
 
-		// Token: 0x1700C12D RID: 49453
-		// (get) Token: 0x0602D1F7 RID: 184823 RVA: 0x0063061F File Offset: 0x0062E81F
-		// (set) Token: 0x0602D1F8 RID: 184824 RVA: 0x00630627 File Offset: 0x0062E827
+		// Token: 0x1700CABC RID: 51900
+		// (get) Token: 0x0602F97B RID: 194939 RVA: 0x0067C7E3 File Offset: 0x0067A9E3
+		// (set) Token: 0x0602F97C RID: 194940 RVA: 0x0067C7EB File Offset: 0x0067A9EB
 		public int Count { get; set; }
 
-		// Token: 0x1700C12E RID: 49454
-		// (get) Token: 0x0602D1F9 RID: 184825 RVA: 0x00630630 File Offset: 0x0062E830
-		// (set) Token: 0x0602D1FA RID: 184826 RVA: 0x00630638 File Offset: 0x0062E838
+		// Token: 0x1700CABD RID: 51901
+		// (get) Token: 0x0602F97D RID: 194941 RVA: 0x0067C7F4 File Offset: 0x0067A9F4
+		// (set) Token: 0x0602F97E RID: 194942 RVA: 0x0067C7FC File Offset: 0x0067A9FC
 		public bool IsAll { get; set; }
 
-		// Token: 0x0602D1FB RID: 184827 RVA: 0x00630641 File Offset: 0x0062E841
+		// Token: 0x0602F97F RID: 194943 RVA: 0x0067C805 File Offset: 0x0067AA05
 		public IDestroyQuestItemT()
 		{
 			this.ItemId = 0;

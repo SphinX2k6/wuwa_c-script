@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006750 RID: 26448
+	// Token: 0x02006DD0 RID: 28112
 	public struct IFaceExpressionMorphConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C458 RID: 50264
-		// (get) Token: 0x0602E019 RID: 188441 RVA: 0x00649A78 File Offset: 0x00647C78
+		// Token: 0x1700CE0E RID: 52750
+		// (get) Token: 0x0603085F RID: 198751 RVA: 0x006971BC File Offset: 0x006953BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E01A RID: 188442 RVA: 0x00649A85 File Offset: 0x00647C85
+		// Token: 0x06030860 RID: 198752 RVA: 0x006971C9 File Offset: 0x006953C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E01B RID: 188443 RVA: 0x00649A8C File Offset: 0x00647C8C
+		// Token: 0x06030861 RID: 198753 RVA: 0x006971D0 File Offset: 0x006953D0
 		public static IFaceExpressionMorphConfig GetRootAsIFaceExpressionMorphConfig(ByteBuffer _bb)
 		{
 			return IFaceExpressionMorphConfig.GetRootAsIFaceExpressionMorphConfig(_bb, default(IFaceExpressionMorphConfig));
 		}
 
-		// Token: 0x0602E01C RID: 188444 RVA: 0x00649AA8 File Offset: 0x00647CA8
+		// Token: 0x06030862 RID: 198754 RVA: 0x006971EC File Offset: 0x006953EC
 		public static IFaceExpressionMorphConfig GetRootAsIFaceExpressionMorphConfig(ByteBuffer _bb, IFaceExpressionMorphConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E01D RID: 188445 RVA: 0x00649AC5 File Offset: 0x00647CC5
+		// Token: 0x06030863 RID: 198755 RVA: 0x00697209 File Offset: 0x00695409
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E01E RID: 188446 RVA: 0x00649AD4 File Offset: 0x00647CD4
+		// Token: 0x06030864 RID: 198756 RVA: 0x00697218 File Offset: 0x00695418
 		public IFaceExpressionMorphConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C459 RID: 50265
-		// (get) Token: 0x0602E01F RID: 188447 RVA: 0x00649AE4 File Offset: 0x00647CE4
+		// Token: 0x1700CE0F RID: 52751
+		// (get) Token: 0x06030865 RID: 198757 RVA: 0x00697228 File Offset: 0x00695428
 		public EFaceExpressionConfigType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C45A RID: 50266
-		// (get) Token: 0x0602E020 RID: 188448 RVA: 0x00649B20 File Offset: 0x00647D20
+		// Token: 0x1700CE10 RID: 52752
+		// (get) Token: 0x06030866 RID: 198758 RVA: 0x00697264 File Offset: 0x00695464
 		public string MorphData
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E021 RID: 188449 RVA: 0x00649B57 File Offset: 0x00647D57
+		// Token: 0x06030867 RID: 198759 RVA: 0x0069729B File Offset: 0x0069549B
 		public Span<byte> GetMorphDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E022 RID: 188450 RVA: 0x00649B66 File Offset: 0x00647D66
+		// Token: 0x06030868 RID: 198760 RVA: 0x006972AA File Offset: 0x006954AA
 		public byte[] GetMorphDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602E023 RID: 188451 RVA: 0x00649B74 File Offset: 0x00647D74
+		// Token: 0x06030869 RID: 198761 RVA: 0x006972B8 File Offset: 0x006954B8
 		public static Offset<IFaceExpressionMorphConfig> CreateIFaceExpressionMorphConfig(FlatBufferBuilder builder, EFaceExpressionConfigType Type = EFaceExpressionConfigType.Morph, StringOffset MorphDataOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionMorphConfig.EndIFaceExpressionMorphConfig(builder);
 		}
 
-		// Token: 0x0602E024 RID: 188452 RVA: 0x00649B91 File Offset: 0x00647D91
+		// Token: 0x0603086A RID: 198762 RVA: 0x006972D5 File Offset: 0x006954D5
 		public static void StartIFaceExpressionMorphConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E025 RID: 188453 RVA: 0x00649B9A File Offset: 0x00647D9A
+		// Token: 0x0603086B RID: 198763 RVA: 0x006972DE File Offset: 0x006954DE
 		public static void AddType(FlatBufferBuilder builder, EFaceExpressionConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E026 RID: 188454 RVA: 0x00649BA5 File Offset: 0x00647DA5
+		// Token: 0x0603086C RID: 198764 RVA: 0x006972E9 File Offset: 0x006954E9
 		public static void AddMorphData(FlatBufferBuilder builder, StringOffset morphDataOffset)
 		{
 			builder.AddOffset(1, morphDataOffset.Value, 0);
 		}
 
-		// Token: 0x0602E027 RID: 188455 RVA: 0x00649BB5 File Offset: 0x00647DB5
+		// Token: 0x0603086D RID: 198765 RVA: 0x006972F9 File Offset: 0x006954F9
 		public static Offset<IFaceExpressionMorphConfig> EndIFaceExpressionMorphConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFaceExpressionMorphConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602E028 RID: 188456 RVA: 0x00649BC4 File Offset: 0x00647DC4
+		// Token: 0x0603086E RID: 198766 RVA: 0x00697308 File Offset: 0x00695508
 		public IFaceExpressionMorphConfigT UnPack()
 		{
 			IFaceExpressionMorphConfigT faceExpressionMorphConfigT = new IFaceExpressionMorphConfigT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return faceExpressionMorphConfigT;
 		}
 
-		// Token: 0x0602E029 RID: 188457 RVA: 0x00649BDF File Offset: 0x00647DDF
+		// Token: 0x0603086F RID: 198767 RVA: 0x00697323 File Offset: 0x00695523
 		public void UnPackTo(IFaceExpressionMorphConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.MorphData = this.MorphData;
 		}
 
-		// Token: 0x0602E02A RID: 188458 RVA: 0x00649BFC File Offset: 0x00647DFC
+		// Token: 0x06030870 RID: 198768 RVA: 0x00697340 File Offset: 0x00695540
 		public static Offset<IFaceExpressionMorphConfig> Pack(FlatBufferBuilder builder, IFaceExpressionMorphConfigT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionMorphConfig.CreateIFaceExpressionMorphConfig(builder, _o.Type, morphDataOffset);
 		}
 
-		// Token: 0x04010E42 RID: 69186
+		// Token: 0x04011C74 RID: 72820
 		private Table __p;
 	}
 }

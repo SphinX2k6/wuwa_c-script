@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x0200574D RID: 22349
+	// Token: 0x02004724 RID: 18212
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoWeaponOverviewTabView : UiTabViewBase
 	{
-		// Token: 0x06038CED RID: 232685 RVA: 0x00D7DB78 File Offset: 0x00D7BD78
+		// Token: 0x0602DBFD RID: 187389 RVA: 0x00CCC434 File Offset: 0x00CCA634
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -40,7 +39,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CEE RID: 232686 RVA: 0x00D7DC68 File Offset: 0x00D7BE68
+		// Token: 0x0602DBFE RID: 187390 RVA: 0x00CCC524 File Offset: 0x00CCA724
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoWeaponOverviewTabView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CEF RID: 232687 RVA: 0x00D7DCAC File Offset: 0x00D7BEAC
+		// Token: 0x0602DBFF RID: 187391 RVA: 0x00CCC568 File Offset: 0x00CCA768
 		private UniTask CreateWeaponTipAsync()
 		{
 			KurotatoWeaponOverviewTabView.<CreateWeaponTipAsync>d__10 <CreateWeaponTipAsync>d__;
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateWeaponTipAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CF0 RID: 232688 RVA: 0x00D7DCF0 File Offset: 0x00D7BEF0
+		// Token: 0x0602DC00 RID: 187392 RVA: 0x00CCC5AC File Offset: 0x00CCA7AC
 		private void CreateItemMultiTemplateScrollViewAsync()
 		{
 			this.ItemMultiTemplateScrollView = new MultiTemplateScrollView(base.GetMultiTemplateScrollViewComponent(0));
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ItemMultiTemplateScrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x06038CF1 RID: 232689 RVA: 0x00D7DD44 File Offset: 0x00D7BF44
+		// Token: 0x0602DC01 RID: 187393 RVA: 0x00CCC600 File Offset: 0x00CCA800
 		protected override void OnShowUiTabViewFromToggle()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.RefreshSelectItem();
 		}
 
-		// Token: 0x06038CF2 RID: 232690 RVA: 0x00D7DDD0 File Offset: 0x00D7BFD0
+		// Token: 0x0602DC02 RID: 187394 RVA: 0x00CCC68C File Offset: 0x00CCA88C
 		[NullableContext(2)]
 		private void InitScrollViewData(KurotatoInstInfo saveInstInfo)
 		{
@@ -114,42 +113,60 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			if (saveInstInfo != null)
 			{
 				KurotatoItemPanelPbData itemPanelPbData = saveInstInfo.ItemPanelPbData;
-				list = new List<IKurotatoItemData>((from d in ((itemPanelPbData != null) ? itemPanelPbData.ItemPbDatas : null) ?? new RepeatedField<KurotatoItemPbData>()
-				select new KurotatoItemData
+				RepeatedField<KurotatoItemPbData> repeatedField = ((itemPanelPbData != null) ? itemPanelPbData.ItemPbDatas : null) ?? new RepeatedField<KurotatoItemPbData>();
+				list = new List<IKurotatoItemData>();
+				using (IEnumerator<KurotatoItemPbData> enumerator = repeatedField.GetEnumerator())
 				{
-					ItemId = d.ItemId,
-					Count = d.Count
-				}).Where(delegate(KurotatoItemData a)
-				{
-					KurotatoItem? kurotatoItem;
-					return kurotatoConfig.GetItemConfigByItemId(a.ItemId) != null && kurotatoItem.GetValueOrDefault().Type == 2;
-				}).ToList<KurotatoItemData>());
+					while (enumerator.MoveNext())
+					{
+						KurotatoItemPbData kurotatoItemPbData = enumerator.Current;
+						KurotatoItem? itemConfigByItemId = kurotatoConfig.GetItemConfigByItemId(kurotatoItemPbData.ItemId);
+						if (itemConfigByItemId != null && itemConfigByItemId.GetValueOrDefault().Type == 2)
+						{
+							list.Add(new KurotatoItemData
+							{
+								ItemId = kurotatoItemPbData.ItemId,
+								Count = kurotatoItemPbData.Count
+							});
+						}
+					}
+					goto IL_150;
+				}
 			}
-			else
+			list = new List<IKurotatoItemData>();
+			foreach (IKurotatoItemData kurotatoItemData in instance.GetHoldItemData())
 			{
-				list = instance.GetHoldItemData().Where(delegate(IKurotatoItemData a)
+				KurotatoItem? itemConfigByItemId = kurotatoConfig.GetItemConfigByItemId(kurotatoItemData.ItemId);
+				if (itemConfigByItemId != null && itemConfigByItemId.GetValueOrDefault().Type == 2)
 				{
-					KurotatoItem? kurotatoItem;
-					return kurotatoConfig.GetItemConfigByItemId(a.ItemId) != null && kurotatoItem.GetValueOrDefault().Type == 2;
-				}).ToList<IKurotatoItemData>();
+					list.Add(kurotatoItemData);
+				}
 			}
+			IL_150:
 			List<IKurotatoWeaponData> list2;
 			if (saveInstInfo != null)
 			{
 				KurotatoWeaponPanelPbData weaponPanelPbData = saveInstInfo.WeaponPanelPbData;
-				list2 = new List<IKurotatoWeaponData>((from d in ((weaponPanelPbData != null) ? weaponPanelPbData.WeaponPbDatas : null) ?? new RepeatedField<KurotatoWeaponPbData>()
-				select new KurotatoWeaponData
+				RepeatedField<KurotatoWeaponPbData> repeatedField2 = ((weaponPanelPbData != null) ? weaponPanelPbData.WeaponPbDatas : null) ?? new RepeatedField<KurotatoWeaponPbData>();
+				list2 = new List<IKurotatoWeaponData>();
+				using (IEnumerator<KurotatoWeaponPbData> enumerator3 = repeatedField2.GetEnumerator())
 				{
-					WeaponId = d.WeaponId,
-					IncId = d.IncId,
-					SellPrice = d.SellPrice,
-					PreWaveDealtDamage = d.PreWaveDealtDamage
-				}).ToList<KurotatoWeaponData>());
+					while (enumerator3.MoveNext())
+					{
+						KurotatoWeaponPbData kurotatoWeaponPbData = enumerator3.Current;
+						list2.Add(new KurotatoWeaponData
+						{
+							WeaponId = kurotatoWeaponPbData.WeaponId,
+							IncId = kurotatoWeaponPbData.IncId,
+							SellPrice = kurotatoWeaponPbData.SellPrice,
+							PreWaveDealtDamage = kurotatoWeaponPbData.PreWaveDealtDamage
+						});
+					}
+					goto IL_1EE;
+				}
 			}
-			else
-			{
-				list2 = instance.GetHoldWeaponData().Cast<IKurotatoWeaponData>().ToList<IKurotatoWeaponData>();
-			}
+			list2 = new List<IKurotatoWeaponData>(instance.GetHoldWeaponData());
+			IL_1EE:
 			list.Sort(delegate(IKurotatoItemData a, IKurotatoItemData b)
 			{
 				if (!itemQuality.ContainsKey(a.ItemId))
@@ -213,28 +230,32 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 				this.ScrollDataList.Add(overviewGridItemData2);
 			}
 			GridTitleItemData gridTitleItemData2 = new GridTitleItemData();
-			int num2 = list.Sum((IKurotatoItemData item) => item.Count);
+			int num2 = 0;
+			foreach (IKurotatoItemData kurotatoItemData2 in list)
+			{
+				num2 += kurotatoItemData2.Count;
+			}
 			gridTitleItemData2.Data = new GridTitleItemDataInner
 			{
 				Title = "Kurotato_prefabTilte_item",
 				Num = num2.ToString()
 			};
 			this.ScrollDataList.Add(gridTitleItemData2);
-			foreach (IKurotatoItemData kurotatoItemData in list)
+			foreach (IKurotatoItemData kurotatoItemData3 in list)
 			{
 				if (!flag)
 				{
 					flag = true;
-					this.SelectedId = kurotatoItemData.ItemId;
+					this.SelectedId = kurotatoItemData3.ItemId;
 					this.SelectedType = EKurotatoCardType.Item;
 				}
 				OverviewGridItemData overviewGridItemData3 = new OverviewGridItemData();
 				overviewGridItemData3.Data = new KurotatoMediumItemGridData
 				{
 					Type = EKurotatoCardType.Item,
-					Id = kurotatoItemData.ItemId,
+					Id = kurotatoItemData3.ItemId,
 					IncId = 0,
-					Count = kurotatoItemData.Count
+					Count = kurotatoItemData3.Count
 				};
 				overviewGridItemData3.OnClickCb = new Action<WeaponGridItem, bool>(this.OnClickGridItem);
 				overviewGridItemData3.IsSelectedCb = new Func<IKurotatoMediumItemGridData, bool>(this.IsGridDataSelected);
@@ -246,14 +267,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CF3 RID: 232691 RVA: 0x00D7E234 File Offset: 0x00D7C434
+		// Token: 0x0602DC03 RID: 187395 RVA: 0x00CCCC14 File Offset: 0x00CCAE14
 		protected override void OnStart()
 		{
 			this.RefreshItemTip();
 			this.RefreshSelectItem();
 		}
 
-		// Token: 0x06038CF4 RID: 232692 RVA: 0x00D7E244 File Offset: 0x00D7C444
+		// Token: 0x0602DC04 RID: 187396 RVA: 0x00CCCC24 File Offset: 0x00CCAE24
 		private void RefreshSelectItem()
 		{
 			this.SelectedItem = null;
@@ -280,7 +301,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.GetItem(3).SetUIActive(!flag);
 		}
 
-		// Token: 0x06038CF5 RID: 232693 RVA: 0x00D7E2E8 File Offset: 0x00D7C4E8
+		// Token: 0x0602DC05 RID: 187397 RVA: 0x00CCCCC8 File Offset: 0x00CCAEC8
 		private void RefreshItemTip()
 		{
 			if (this.SelectedId <= 0)
@@ -310,7 +331,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ItemTip.Refresh(this.SelectedType, this.SelectedId, true, false, this.SelectedPreWaveDealtDamage);
 		}
 
-		// Token: 0x06038CF6 RID: 232694 RVA: 0x00D7E3E4 File Offset: 0x00D7C5E4
+		// Token: 0x0602DC06 RID: 187398 RVA: 0x00CCCDC4 File Offset: 0x00CCAFC4
 		private bool IsGridDataSelected(IKurotatoMediumItemGridData data)
 		{
 			if (this.SelectedType != data.Type)
@@ -324,7 +345,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return this.SelectedId == data.Id;
 		}
 
-		// Token: 0x06038CF7 RID: 232695 RVA: 0x00D7E41C File Offset: 0x00D7C61C
+		// Token: 0x0602DC07 RID: 187399 RVA: 0x00CCCDFC File Offset: 0x00CCAFFC
 		private void OnClickGridItem(WeaponGridItem item, bool selected)
 		{
 			if (!selected)
@@ -362,44 +383,44 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.RefreshItemTip();
 		}
 
-		// Token: 0x0401DCB2 RID: 122034
+		// Token: 0x04018748 RID: 100168
 		private EKurotatoCardType SelectedType;
 
-		// Token: 0x0401DCB3 RID: 122035
+		// Token: 0x04018749 RID: 100169
 		private int SelectedId;
 
-		// Token: 0x0401DCB4 RID: 122036
+		// Token: 0x0401874A RID: 100170
 		private int? SelectedPreWaveDealtDamage;
 
-		// Token: 0x0401DCB5 RID: 122037
+		// Token: 0x0401874B RID: 100171
 		[Nullable(2)]
 		private WeaponGridItem SelectedItem;
 
-		// Token: 0x0401DCB6 RID: 122038
+		// Token: 0x0401874C RID: 100172
 		private readonly KurotatoItemInfoTipPanel ItemTip = new KurotatoItemInfoTipPanel();
 
-		// Token: 0x0401DCB7 RID: 122039
+		// Token: 0x0401874D RID: 100173
 		[Nullable(2)]
 		private MultiTemplateScrollView ItemMultiTemplateScrollView;
 
-		// Token: 0x0401DCB8 RID: 122040
+		// Token: 0x0401874E RID: 100174
 		private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0200B943 RID: 47427
+		// Token: 0x0200A362 RID: 41826
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04038085 RID: 229509
+			// Token: 0x04032A8F RID: 207503
 			MultiTemplateScrollViewInfo,
-			// Token: 0x04038086 RID: 229510
+			// Token: 0x04032A90 RID: 207504
 			PanelTitle,
-			// Token: 0x04038087 RID: 229511
+			// Token: 0x04032A91 RID: 207505
 			PanelItem,
-			// Token: 0x04038088 RID: 229512
+			// Token: 0x04032A92 RID: 207506
 			PanelEmpty,
-			// Token: 0x04038089 RID: 229513
+			// Token: 0x04032A93 RID: 207507
 			ItemBase,
-			// Token: 0x0403808A RID: 229514
+			// Token: 0x04032A94 RID: 207508
 			TipItem
 		}
 	}

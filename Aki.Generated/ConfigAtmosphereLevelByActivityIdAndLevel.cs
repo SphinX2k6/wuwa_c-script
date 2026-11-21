@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000B7 RID: 183
+	// Token: 0x020000BF RID: 191
 	public class ConfigAtmosphereLevelByActivityIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600044B RID: 1099 RVA: 0x00071FFB File Offset: 0x000701FB
+		// Token: 0x0600047B RID: 1147 RVA: 0x000768AF File Offset: 0x00074AAF
 		static ConfigAtmosphereLevelByActivityIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAtmosphereLevelByActivityIdAndLevel.CreateStaticDefaultValue), new Action(ConfigAtmosphereLevelByActivityIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600044C RID: 1100 RVA: 0x0007201C File Offset: 0x0007021C
+		// Token: 0x0600047C RID: 1148 RVA: 0x000768D0 File Offset: 0x00074AD0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAtmosphereLevelByActivityIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600044D RID: 1101 RVA: 0x0007209B File Offset: 0x0007029B
+		// Token: 0x0600047D RID: 1149 RVA: 0x0007694F File Offset: 0x00074B4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAtmosphereLevelByActivityIdAndLevel.LogPair = null;
 			ConfigAtmosphereLevelByActivityIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x0600044E RID: 1102 RVA: 0x000720A9 File Offset: 0x000702A9
+		// Token: 0x0600047E RID: 1150 RVA: 0x0007695D File Offset: 0x00074B5D
 		public static void Init()
 		{
 			ConfigAtmosphereLevelByActivityIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigAtmosphereLevelByActivityIdAndLevel.HandleId, "db_spring26.db", "select BinData from `AtmosphereLevel` where ActivityId=? AND Level=?");
 		}
 
-		// Token: 0x0600044F RID: 1103 RVA: 0x000720C4 File Offset: 0x000702C4
+		// Token: 0x0600047F RID: 1151 RVA: 0x00076978 File Offset: 0x00074B78
 		public static AtmosphereLevel? GetConfig(int p0ActivityId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAtmosphereLevelByActivityIdAndLevel.HandleId, ConfigAtmosphereLevelByActivityIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new AtmosphereLevel?(rootAsAtmosphereLevel);
 		}
 
-		// Token: 0x040004E5 RID: 1253
+		// Token: 0x0400051D RID: 1309
 		private const string DB = "db_spring26.db";
 
-		// Token: 0x040004E6 RID: 1254
+		// Token: 0x0400051E RID: 1310
 		private const string FILE = "c.3.1春节活动外围.xlsx";
 
-		// Token: 0x040004E7 RID: 1255
+		// Token: 0x0400051F RID: 1311
 		private const string TABLE = "AtmosphereLevel";
 
-		// Token: 0x040004E8 RID: 1256
+		// Token: 0x04000520 RID: 1312
 		private const string COMMAND = "select BinData from `AtmosphereLevel` where ActivityId=? AND Level=?";
 
-		// Token: 0x040004E9 RID: 1257
+		// Token: 0x04000521 RID: 1313
 		private const string KEY_PREFIX = "AtmosphereLevelByActivityIdAndLevel";
 
-		// Token: 0x040004EA RID: 1258
+		// Token: 0x04000522 RID: 1314
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040004EB RID: 1259
+		// Token: 0x04000523 RID: 1315
 		private static int HandleId;
 	}
 }

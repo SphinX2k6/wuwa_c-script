@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044D7 RID: 17623
+	// Token: 0x0200493F RID: 18751
 	public class IHitRemainScoreZoneResultT
 	{
-		// Token: 0x17007C61 RID: 31841
-		// (get) Token: 0x0601A57A RID: 107898 RVA: 0x003C28E0 File Offset: 0x003C0AE0
-		// (set) Token: 0x0601A57B RID: 107899 RVA: 0x003C28E8 File Offset: 0x003C0AE8
+		// Token: 0x170082A0 RID: 33440
+		// (get) Token: 0x0601BD4B RID: 113995 RVA: 0x003EEAEC File Offset: 0x003ECCEC
+		// (set) Token: 0x0601BD4C RID: 113996 RVA: 0x003EEAF4 File Offset: 0x003ECCF4
 		public EDartSkillResultType Type { get; set; }
 
-		// Token: 0x17007C62 RID: 31842
-		// (get) Token: 0x0601A57C RID: 107900 RVA: 0x003C28F1 File Offset: 0x003C0AF1
-		// (set) Token: 0x0601A57D RID: 107901 RVA: 0x003C28F9 File Offset: 0x003C0AF9
+		// Token: 0x170082A1 RID: 33441
+		// (get) Token: 0x0601BD4D RID: 113997 RVA: 0x003EEAFD File Offset: 0x003ECCFD
+		// (set) Token: 0x0601BD4E RID: 113998 RVA: 0x003EEB05 File Offset: 0x003ECD05
 		public int Probability { get; set; }
 
-		// Token: 0x0601A57E RID: 107902 RVA: 0x003C2902 File Offset: 0x003C0B02
+		// Token: 0x0601BD4F RID: 113999 RVA: 0x003EEB0E File Offset: 0x003ECD0E
 		public IHitRemainScoreZoneResultT()
 		{
 			this.Type = EDartSkillResultType.NoBust;

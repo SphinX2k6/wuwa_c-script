@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006E8 RID: 1768
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000789 RID: 1929
 	public class ISpawnMonsterConstraintAnnularSector : ISpwanMonsterMode
 	{
-		// Token: 0x06002618 RID: 9752 RVA: 0x00066360 File Offset: 0x00064560
+		// Token: 0x06002938 RID: 10552 RVA: 0x0006D3D0 File Offset: 0x0006B5D0
 		private ISpawnMonsterConstraintAnnularSector_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002619 RID: 9753 RVA: 0x00066398 File Offset: 0x00064598
+		// Token: 0x06002939 RID: 10553 RVA: 0x0006D408 File Offset: 0x0006B608
 		public static ISpawnMonsterConstraintAnnularSector Create([Nullable(2)] ISpawnMonsterConstraintAnnularSector instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600261A RID: 9754 RVA: 0x000663AB File Offset: 0x000645AB
+		// Token: 0x0600293A RID: 10554 RVA: 0x0006D41B File Offset: 0x0006B61B
 		public static ISpawnMonsterConstraintAnnularSector CreateFromSetValue([Nullable(2)] ISpawnMonsterConstraintAnnularSector_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600261B RID: 9755 RVA: 0x000663BE File Offset: 0x000645BE
+		// Token: 0x0600293B RID: 10555 RVA: 0x0006D42E File Offset: 0x0006B62E
 		public new ISpawnMonsterConstraintAnnularSector_SetValue ToSetValue()
 		{
 			return new ISpawnMonsterConstraintAnnularSector_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A0F RID: 2575
-		// (get) Token: 0x0600261C RID: 9756 RVA: 0x000663F5 File Offset: 0x000645F5
-		// (set) Token: 0x0600261D RID: 9757 RVA: 0x00066420 File Offset: 0x00064620
+		// Token: 0x17000ACD RID: 2765
+		// (get) Token: 0x0600293C RID: 10556 RVA: 0x0006D465 File Offset: 0x0006B665
+		// (set) Token: 0x0600293D RID: 10557 RVA: 0x0006D490 File Offset: 0x0006B690
 		public override ESpawnMonsterConstraint Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A10 RID: 2576
-		// (get) Token: 0x0600261E RID: 9758 RVA: 0x0006642E File Offset: 0x0006462E
-		// (set) Token: 0x0600261F RID: 9759 RVA: 0x0006645D File Offset: 0x0006465D
+		// Token: 0x17000ACE RID: 2766
+		// (get) Token: 0x0600293E RID: 10558 RVA: 0x0006D49E File Offset: 0x0006B69E
+		// (set) Token: 0x0600293F RID: 10559 RVA: 0x0006D4CD File Offset: 0x0006B6CD
 		public virtual float InnerRadius
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A11 RID: 2577
-		// (get) Token: 0x06002620 RID: 9760 RVA: 0x0006646B File Offset: 0x0006466B
-		// (set) Token: 0x06002621 RID: 9761 RVA: 0x0006649A File Offset: 0x0006469A
+		// Token: 0x17000ACF RID: 2767
+		// (get) Token: 0x06002940 RID: 10560 RVA: 0x0006D4DB File Offset: 0x0006B6DB
+		// (set) Token: 0x06002941 RID: 10561 RVA: 0x0006D50A File Offset: 0x0006B70A
 		public virtual float OuterRadius
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A12 RID: 2578
-		// (get) Token: 0x06002622 RID: 9762 RVA: 0x000664A8 File Offset: 0x000646A8
-		// (set) Token: 0x06002623 RID: 9763 RVA: 0x000664D7 File Offset: 0x000646D7
+		// Token: 0x17000AD0 RID: 2768
+		// (get) Token: 0x06002942 RID: 10562 RVA: 0x0006D518 File Offset: 0x0006B718
+		// (set) Token: 0x06002943 RID: 10563 RVA: 0x0006D547 File Offset: 0x0006B747
 		public virtual float Angle
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019EB RID: 6635
+		// Token: 0x04001BEA RID: 7146
 		[Nullable(2)]
 		protected new ISpawnMonsterConstraintAnnularSector FbInstance;
 
-		// Token: 0x040019EC RID: 6636
+		// Token: 0x04001BEB RID: 7147
 		[Nullable(2)]
 		protected new ISpawnMonsterConstraintAnnularSector_SetValue PocoInterface;
 	}

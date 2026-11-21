@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001A9 RID: 425
+	// Token: 0x020001AD RID: 429
 	public enum EIcmpResponseStatus
 	{
-		// Token: 0x04000757 RID: 1879
+		// Token: 0x04000794 RID: 1940
 		Success,
-		// Token: 0x04000758 RID: 1880
+		// Token: 0x04000795 RID: 1941
 		Timeout,
-		// Token: 0x04000759 RID: 1881
+		// Token: 0x04000796 RID: 1942
 		Unreachable,
-		// Token: 0x0400075A RID: 1882
+		// Token: 0x04000797 RID: 1943
 		Unresolvable,
-		// Token: 0x0400075B RID: 1883
+		// Token: 0x04000798 RID: 1944
 		InternalError,
-		// Token: 0x0400075C RID: 1884
+		// Token: 0x04000799 RID: 1945
 		NotImplemented
 	}
 }

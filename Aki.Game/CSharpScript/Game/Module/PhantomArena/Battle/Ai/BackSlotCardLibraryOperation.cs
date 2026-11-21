@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052D5 RID: 21205
+	// Token: 0x020042A5 RID: 17061
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BackSlotCardLibraryOperation : NpcAiOperation
 	{
-		// Token: 0x170082FA RID: 33530
-		// (get) Token: 0x0603645A RID: 222298 RVA: 0x00CD6F95 File Offset: 0x00CD5195
-		// (set) Token: 0x0603645B RID: 222299 RVA: 0x00CD6F9D File Offset: 0x00CD519D
+		// Token: 0x170056BA RID: 22202
+		// (get) Token: 0x0602B355 RID: 176981 RVA: 0x00C246BD File Offset: 0x00C228BD
+		// (set) Token: 0x0602B356 RID: 176982 RVA: 0x00C246C5 File Offset: 0x00C228C5
 		public NpcPhantomBattleBackSlotCardLibrary Info { get; private set; }
 
-		// Token: 0x0603645C RID: 222300 RVA: 0x00CD6FA6 File Offset: 0x00CD51A6
+		// Token: 0x0602B357 RID: 176983 RVA: 0x00C246CE File Offset: 0x00C228CE
 		public BackSlotCardLibraryOperation(NpcPhantomBattleBackSlotCardLibrary info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x0603645D RID: 222301 RVA: 0x00CD6FB8 File Offset: 0x00CD51B8
+		// Token: 0x0602B358 RID: 176984 RVA: 0x00C246E0 File Offset: 0x00C228E0
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			BackSlotCardLibraryOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

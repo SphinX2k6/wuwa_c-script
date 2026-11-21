@@ -2,30 +2,30 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F2E RID: 12078
+// Token: 0x02002481 RID: 9345
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageModifier : ModifierCalculator, IStaticVariableResetter
 {
-	// Token: 0x06019BB3 RID: 105395 RVA: 0x006B36D8 File Offset: 0x006B18D8
+	// Token: 0x060174BE RID: 95422 RVA: 0x006D99F0 File Offset: 0x006D7BF0
 	static DamageModifier()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DamageModifier.CreateStaticDefaultValue), new Action(DamageModifier.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06019BB4 RID: 105396 RVA: 0x006B36F7 File Offset: 0x006B18F7
+	// Token: 0x060174BF RID: 95423 RVA: 0x006D9A0F File Offset: 0x006D7C0F
 	public DamageModifier(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BB5 RID: 105397 RVA: 0x006B3706 File Offset: 0x006B1906
+	// Token: 0x060174C0 RID: 95424 RVA: 0x006D9A1E File Offset: 0x006D7C1E
 	protected override bool CheckAuthority()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019BB6 RID: 105398 RVA: 0x006B371C File Offset: 0x006B191C
+	// Token: 0x060174C1 RID: 95425 RVA: 0x006D9A34 File Offset: 0x006D7C34
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -54,7 +54,7 @@ public class DamageModifier : ModifierCalculator, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019BB7 RID: 105399 RVA: 0x006B3830 File Offset: 0x006B1A30
+	// Token: 0x060174C2 RID: 95426 RVA: 0x006D9B48 File Offset: 0x006D7D48
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -89,7 +89,7 @@ public class DamageModifier : ModifierCalculator, IStaticVariableResetter
 		return -1f;
 	}
 
-	// Token: 0x06019BB8 RID: 105400 RVA: 0x006B38E0 File Offset: 0x006B1AE0
+	// Token: 0x060174C3 RID: 95427 RVA: 0x006D9BF8 File Offset: 0x006D7DF8
 	[return: Nullable(2)]
 	private static DamageModifier GetLatestModifier([Nullable(2)] BaseBuffComponent victim, BaseBuffComponent attacker, RequirementPayload requirements)
 	{
@@ -108,7 +108,7 @@ public class DamageModifier : ModifierCalculator, IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06019BB9 RID: 105401 RVA: 0x006B394C File Offset: 0x006B1B4C
+	// Token: 0x060174C4 RID: 95428 RVA: 0x006D9C64 File Offset: 0x006D7E64
 	[NullableContext(2)]
 	private static DamageModifier CompareLatestModifier(DamageModifier modifier1, DamageModifier modifier2)
 	{
@@ -127,7 +127,7 @@ public class DamageModifier : ModifierCalculator, IStaticVariableResetter
 		return modifier1;
 	}
 
-	// Token: 0x06019BBA RID: 105402 RVA: 0x006B3984 File Offset: 0x006B1B84
+	// Token: 0x060174C5 RID: 95429 RVA: 0x006D9C9C File Offset: 0x006D7E9C
 	public static float ApplyEffects(RequirementPayload requirements, SnapshotPayload snapshots, float toughResult)
 	{
 		CharacterBuffComponent ownerBuffComponent = snapshots.Attacker.OwnerBuffComponent;
@@ -151,33 +151,33 @@ public class DamageModifier : ModifierCalculator, IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06019BBB RID: 105403 RVA: 0x006B3A1B File Offset: 0x006B1C1B
+	// Token: 0x060174C6 RID: 95430 RVA: 0x006D9D33 File Offset: 0x006D7F33
 	public static void CreateStaticDefaultValue()
 	{
 		DamageModifier.TempModifiedResult = 0f;
 	}
 
-	// Token: 0x06019BBC RID: 105404 RVA: 0x006B3A27 File Offset: 0x006B1C27
+	// Token: 0x060174C7 RID: 95431 RVA: 0x006D9D3F File Offset: 0x006D7F3F
 	public static void ResetStaticDefaultValue()
 	{
 		DamageModifier.TempModifiedResult = 0f;
 	}
 
-	// Token: 0x0400C1EF RID: 49647
+	// Token: 0x0400C591 RID: 50577
 	public float Value;
 
-	// Token: 0x0400C1F0 RID: 49648
+	// Token: 0x0400C592 RID: 50578
 	public static float TempModifiedResult;
 
-	// Token: 0x0400C1F1 RID: 49649
+	// Token: 0x0400C593 RID: 50579
 	public bool ModifyTough;
 
-	// Token: 0x0400C1F2 RID: 49650
+	// Token: 0x0400C594 RID: 50580
 	public bool UpperBound;
 
-	// Token: 0x0400C1F3 RID: 49651
+	// Token: 0x0400C595 RID: 50581
 	private int ExecuteCount;
 
-	// Token: 0x0400C1F4 RID: 49652
+	// Token: 0x0400C596 RID: 50582
 	private int ExecuteCountLimit;
 }

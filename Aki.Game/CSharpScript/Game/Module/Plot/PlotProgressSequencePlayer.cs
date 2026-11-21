@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005002 RID: 20482
+	// Token: 0x02003FCC RID: 16332
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotProgressSequencePlayer
 	{
-		// Token: 0x17007FE9 RID: 32745
-		// (get) Token: 0x06034673 RID: 214643 RVA: 0x00C521FA File Offset: 0x00C503FA
+		// Token: 0x1700539E RID: 21406
+		// (get) Token: 0x06029500 RID: 169216 RVA: 0x00B9BF7E File Offset: 0x00B9A17E
 		public bool IsPlaying
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034674 RID: 214644 RVA: 0x00C52208 File Offset: 0x00C50408
+		// Token: 0x06029501 RID: 169217 RVA: 0x00B9BF8C File Offset: 0x00B9A18C
 		public void Play(string levelSequencePath, Vector startLocation, Vector endLocation, [Nullable(2)] IFloatingSubtitleLanguageDiff preprocessOperation = null)
 		{
 			if (this.IsPlaying)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Plot
 			ResourceSystem.Instance.LoadAsync<ULevelSequence>(levelSequencePath, new Action<ULevelSequence, string>(this.OnLoadComplete), 100, "js_undefined");
 		}
 
-		// Token: 0x06034675 RID: 214645 RVA: 0x00C522E0 File Offset: 0x00C504E0
+		// Token: 0x06029502 RID: 169218 RVA: 0x00B9C064 File Offset: 0x00B9A264
 		public void Stop()
 		{
 			if (!this.IsPlaying)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034676 RID: 214646 RVA: 0x00C5237C File Offset: 0x00C5057C
+		// Token: 0x06029503 RID: 169219 RVA: 0x00B9C100 File Offset: 0x00B9A300
 		public void OnTick(float delta)
 		{
 			if (this.SequencePlayer == null)
@@ -84,12 +84,15 @@ namespace CSharpScript.Game.Module.Plot
 			}
 			float num = this.GetProcess() * this.FrameLength;
 			float num2 = (float)Math.Floor((double)num);
-			this.CurrentFrame.FrameNumber = new FFrameNumber((int)num2);
+			this.CurrentFrame.FrameNumber = new FFrameNumber
+			{
+				Value = (int)num2
+			};
 			this.CurrentFrame.SubFrame = num - num2;
 			this.SequencePlayer.PlayToFrame(this.CurrentFrame);
 		}
 
-		// Token: 0x06034677 RID: 214647 RVA: 0x00C523DC File Offset: 0x00C505DC
+		// Token: 0x06029504 RID: 169220 RVA: 0x00B9C164 File Offset: 0x00B9A364
 		private void OnLoadComplete([Nullable(2)] ULevelSequence levelSequence, string path)
 		{
 			if (path != this.ResourcePath)
@@ -123,7 +126,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.FrameLength = (float)this.SequencePlayer.GetEndTime().Time.FrameNumber.Value;
 		}
 
-		// Token: 0x06034678 RID: 214648 RVA: 0x00C524F8 File Offset: 0x00C506F8
+		// Token: 0x06029505 RID: 169221 RVA: 0x00B9C280 File Offset: 0x00B9A480
 		private float GetProcess()
 		{
 			if (Global.BaseCharacter == null || (double)this.Distance < 1E-08)
@@ -135,38 +138,38 @@ namespace CSharpScript.Game.Module.Plot
 			return (float)MathUtils.Instance.Clamp(currentValue, 0.0, 1.0);
 		}
 
-		// Token: 0x0401BE7C RID: 114300
+		// Token: 0x04016859 RID: 92249
 		[Nullable(2)]
 		private string ResourcePath;
 
-		// Token: 0x0401BE7D RID: 114301
+		// Token: 0x0401685A RID: 92250
 		[Nullable(2)]
 		private ALevelSequenceActor SequenceActor;
 
-		// Token: 0x0401BE7E RID: 114302
+		// Token: 0x0401685B RID: 92251
 		[Nullable(2)]
 		private ULevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BE7F RID: 114303
+		// Token: 0x0401685C RID: 92252
 		[Nullable(2)]
 		private IFloatingSubtitleLanguageDiff PreprocessOperation;
 
-		// Token: 0x0401BE80 RID: 114304
+		// Token: 0x0401685D RID: 92253
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x0401BE81 RID: 114305
+		// Token: 0x0401685E RID: 92254
 		private readonly Vector Direct = Vector.Create();
 
-		// Token: 0x0401BE82 RID: 114306
+		// Token: 0x0401685F RID: 92255
 		private float Distance;
 
-		// Token: 0x0401BE83 RID: 114307
+		// Token: 0x04016860 RID: 92256
 		private float FrameLength;
 
-		// Token: 0x0401BE84 RID: 114308
+		// Token: 0x04016861 RID: 92257
 		private readonly FFrameTime CurrentFrame = new FFrameTime();
 
-		// Token: 0x0401BE85 RID: 114309
+		// Token: 0x04016862 RID: 92258
 		private readonly Vector TmpVector = Vector.Create();
 	}
 }

@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016CC RID: 5836
+	// Token: 0x02001846 RID: 6214
 	[EnumExtensions]
 	public enum ETargetEntityType
 	{
-		// Token: 0x04004EDC RID: 20188
+		// Token: 0x04005302 RID: 21250
 		Target,
-		// Token: 0x04004EDD RID: 20189
+		// Token: 0x04005303 RID: 21251
 		Self,
-		// Token: 0x04004EDE RID: 20190
+		// Token: 0x04005304 RID: 21252
 		Triggered,
-		// Token: 0x04004EDF RID: 20191
+		// Token: 0x04005305 RID: 21253
 		Player,
-		// Token: 0x04004EE0 RID: 20192
+		// Token: 0x04005306 RID: 21254
 		Vehicle
 	}
 }

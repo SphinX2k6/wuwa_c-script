@@ -6,7 +6,7 @@ using CSharpScript.Game;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02002DD5 RID: 11733
+// Token: 0x0200232F RID: 9007
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class BulletLogicReboundController : BulletLogicController<LogicDataRebound, BulletInfo>
 {
-	// Token: 0x06018A30 RID: 100912 RVA: 0x0064DB28 File Offset: 0x0064BD28
+	// Token: 0x060162D8 RID: 90840 RVA: 0x0067390C File Offset: 0x00671B0C
 	[NullableContext(1)]
 	public BulletLogicReboundController(LogicDataRebound logicConfig, Entity bullet) : base(logicConfig, bullet)
 	{
@@ -24,13 +24,13 @@ public class BulletLogicReboundController : BulletLogicController<LogicDataRebou
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 	}
 
-	// Token: 0x06018A31 RID: 100913 RVA: 0x0064DB4F File Offset: 0x0064BD4F
+	// Token: 0x060162D9 RID: 90841 RVA: 0x00673933 File Offset: 0x00671B33
 	public override void OnInit()
 	{
 		this.Bullet.GetBulletInfo().BulletDataMain.Execution.ReboundBitMask |= this.LogicController.ReboundBitMask;
 	}
 
-	// Token: 0x06018A32 RID: 100914 RVA: 0x0064DB80 File Offset: 0x0064BD80
+	// Token: 0x060162DA RID: 90842 RVA: 0x00673964 File Offset: 0x00671B64
 	public override void BulletLogicAction(BulletInfo otherBulletInfo = null)
 	{
 		int reboundChannel = otherBulletInfo.BulletDataMain.Logic.ReboundChannel;
@@ -70,7 +70,7 @@ public class BulletLogicReboundController : BulletLogicController<LogicDataRebou
 				ResourceSystem.Instance.LoadAsync<UClass>(this.LogicController.ScreenShake.ToAssetPathName(), delegate([Nullable(2)] UClass shakeType, string path)
 				{
 					FVectorDouble value = Global.CharacterCameraManager.D_GetCameraLocation();
-					CameraController.Instance.PlayWorldCameraShake(shakeType, new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
+					CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(shakeType), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
 				}, 100, "js_undefined");
 			}
 		}
@@ -109,12 +109,12 @@ public class BulletLogicReboundController : BulletLogicController<LogicDataRebou
 		}
 	}
 
-	// Token: 0x0400B777 RID: 46967
+	// Token: 0x0400BAF2 RID: 47858
 	private const float OUTER_RADIUS = 100f;
 
-	// Token: 0x0400B778 RID: 46968
+	// Token: 0x0400BAF3 RID: 47859
 	private readonly BulletActorComponent ActorComponent;
 
-	// Token: 0x0400B779 RID: 46969
+	// Token: 0x0400BAF4 RID: 47860
 	private readonly BulletInfo BulletInfo;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001803 RID: 6147
+	// Token: 0x0200198C RID: 6540
 	public class IBattleStateMonsterLanding_SetValue
 	{
-		// Token: 0x040053A1 RID: 21409
+		// Token: 0x040057E9 RID: 22505
 		public ESetBattleTagType Type;
 	}
 }

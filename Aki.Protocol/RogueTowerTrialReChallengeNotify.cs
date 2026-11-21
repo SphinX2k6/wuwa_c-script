@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200101B RID: 4123
+	// Token: 0x0200100B RID: 4107
 	[NetMessage(EMessageId.RogueTowerTrialReChallengeNotify)]
 	public sealed class RogueTowerTrialReChallengeNotify : IMessage<RogueTowerTrialReChallengeNotify>, IMessage, IEquatable<RogueTowerTrialReChallengeNotify>, IDeepCloneable<RogueTowerTrialReChallengeNotify>, IBufferMessage
 	{
-		// Token: 0x060160B4 RID: 90292 RVA: 0x0033444D File Offset: 0x0033264D
+		// Token: 0x06015FCF RID: 90063 RVA: 0x00332D8C File Offset: 0x00330F8C
 		[NullableContext(1)]
 		public static RogueTowerTrialReChallengeNotify Create()
 		{
 			return new RogueTowerTrialReChallengeNotify();
 		}
 
-		// Token: 0x170049B1 RID: 18865
-		// (get) Token: 0x060160B5 RID: 90293 RVA: 0x00334454 File Offset: 0x00332654
+		// Token: 0x17004987 RID: 18823
+		// (get) Token: 0x06015FD0 RID: 90064 RVA: 0x00332D93 File Offset: 0x00330F93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170049B2 RID: 18866
-		// (get) Token: 0x060160B6 RID: 90294 RVA: 0x00334457 File Offset: 0x00332657
+		// Token: 0x17004988 RID: 18824
+		// (get) Token: 0x06015FD1 RID: 90065 RVA: 0x00332D96 File Offset: 0x00330F96
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060160B7 RID: 90295 RVA: 0x0033445E File Offset: 0x0033265E
+		// Token: 0x06015FD2 RID: 90066 RVA: 0x00332D9D File Offset: 0x00330F9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueTowerTrialReChallengeNotify()
 		{
 		}
 
-		// Token: 0x060160B8 RID: 90296 RVA: 0x00334466 File Offset: 0x00332666
+		// Token: 0x06015FD3 RID: 90067 RVA: 0x00332DA5 File Offset: 0x00330FA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueTowerTrialReChallengeNotify(RogueTowerTrialReChallengeNotify other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060160B9 RID: 90297 RVA: 0x0033447F File Offset: 0x0033267F
+		// Token: 0x06015FD4 RID: 90068 RVA: 0x00332DBE File Offset: 0x00330FBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueTowerTrialReChallengeNotify Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new RogueTowerTrialReChallengeNotify(this);
 		}
 
-		// Token: 0x060160BA RID: 90298 RVA: 0x00334487 File Offset: 0x00332687
+		// Token: 0x06015FD5 RID: 90069 RVA: 0x00332DC6 File Offset: 0x00330FC6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueTowerTrialReChallengeNotify);
 		}
 
-		// Token: 0x060160BB RID: 90299 RVA: 0x00334495 File Offset: 0x00332695
+		// Token: 0x06015FD6 RID: 90070 RVA: 0x00332DD4 File Offset: 0x00330FD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueTowerTrialReChallengeNotify other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x060160BC RID: 90300 RVA: 0x003344B4 File Offset: 0x003326B4
+		// Token: 0x06015FD7 RID: 90071 RVA: 0x00332DF4 File Offset: 0x00330FF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060160BD RID: 90301 RVA: 0x003344DA File Offset: 0x003326DA
+		// Token: 0x06015FD8 RID: 90072 RVA: 0x00332E1A File Offset: 0x0033101A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060160BE RID: 90302 RVA: 0x003344E7 File Offset: 0x003326E7
+		// Token: 0x06015FD9 RID: 90073 RVA: 0x00332E27 File Offset: 0x00331027
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060160BF RID: 90303 RVA: 0x003344F0 File Offset: 0x003326F0
+		// Token: 0x06015FDA RID: 90074 RVA: 0x00332E30 File Offset: 0x00331030
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060160C0 RID: 90304 RVA: 0x00334508 File Offset: 0x00332708
+		// Token: 0x06015FDB RID: 90075 RVA: 0x00332E48 File Offset: 0x00331048
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060160C1 RID: 90305 RVA: 0x0033452E File Offset: 0x0033272E
+		// Token: 0x06015FDC RID: 90076 RVA: 0x00332E6E File Offset: 0x0033106E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueTowerTrialReChallengeNotify other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060160C2 RID: 90306 RVA: 0x0033454B File Offset: 0x0033274B
+		// Token: 0x06015FDD RID: 90077 RVA: 0x00332E8B File Offset: 0x0033108B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060160C3 RID: 90307 RVA: 0x00334554 File Offset: 0x00332754
+		// Token: 0x06015FDE RID: 90078 RVA: 0x00332E94 File Offset: 0x00331094
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400842C RID: 33836
+		// Token: 0x04008456 RID: 33878
 		private UnknownFieldSet _unknownFields;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006029 RID: 24617
+	// Token: 0x02006688 RID: 26248
 	public enum ETalkOptionStyle : byte
 	{
-		// Token: 0x04010126 RID: 65830
+		// Token: 0x04010F12 RID: 69394
 		Default,
-		// Token: 0x04010127 RID: 65831
+		// Token: 0x04010F13 RID: 69395
 		Monologue
 	}
 }

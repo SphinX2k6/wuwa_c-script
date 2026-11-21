@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 {
-	// Token: 0x0200502D RID: 20525
+	// Token: 0x02003FF7 RID: 16375
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeqNpcPerformStateManager : Singleton
 	{
-		// Token: 0x06034867 RID: 215143 RVA: 0x00C6056E File Offset: 0x00C5E76E
+		// Token: 0x0602970A RID: 169738 RVA: 0x00BABAE6 File Offset: 0x00BA9CE6
 		private void EnsureInit()
 		{
 			if (this.Initialized)
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			this.Register(new CancelAssistedWalkSeqStateHandler());
 		}
 
-		// Token: 0x06034868 RID: 215144 RVA: 0x00C605A1 File Offset: 0x00C5E7A1
+		// Token: 0x0602970B RID: 169739 RVA: 0x00BABB19 File Offset: 0x00BA9D19
 		private void Register(SeqNpcPerformStateHandler handler)
 		{
 			this.CaptureHandlerMap[handler.PerformType] = handler;
 			this.RestoreHandlerMap[handler.RelationType] = handler;
 		}
 
-		// Token: 0x06034869 RID: 215145 RVA: 0x00C605C8 File Offset: 0x00C5E7C8
+		// Token: 0x0602970C RID: 169740 RVA: 0x00BABB40 File Offset: 0x00BA9D40
 		[return: Nullable(2)]
 		public NpcRelation Capture(ENpcGroupPerformType type, string key)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			return seqNpcPerformStateHandler.Capture(key);
 		}
 
-		// Token: 0x0603486A RID: 215146 RVA: 0x00C605F4 File Offset: 0x00C5E7F4
+		// Token: 0x0602970D RID: 169741 RVA: 0x00BABB6C File Offset: 0x00BA9D6C
 		public void OnBattleCharacterHidden(string reason)
 		{
 			this.EnsureInit();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x0603486B RID: 215147 RVA: 0x00C6067C File Offset: 0x00C5E87C
+		// Token: 0x0602970E RID: 169742 RVA: 0x00BABBF4 File Offset: 0x00BA9DF4
 		public void Restore(NpcRelation relation, string reason)
 		{
 			this.EnsureInit();
@@ -82,8 +82,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			seqNpcPerformStateHandler.Restore(relation, reason);
 		}
 
-		// Token: 0x17008029 RID: 32809
-		// (get) Token: 0x0603486C RID: 215148 RVA: 0x00C606DE File Offset: 0x00C5E8DE
+		// Token: 0x170053DE RID: 21470
+		// (get) Token: 0x0602970F RID: 169743 RVA: 0x00BABC56 File Offset: 0x00BA9E56
 		public static SeqNpcPerformStateManager Instance
 		{
 			get
@@ -97,12 +97,12 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x0603486D RID: 215149 RVA: 0x00C60701 File Offset: 0x00C5E901
+		// Token: 0x06029710 RID: 169744 RVA: 0x00BABC79 File Offset: 0x00BA9E79
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603486E RID: 215150 RVA: 0x00C60703 File Offset: 0x00C5E903
+		// Token: 0x06029711 RID: 169745 RVA: 0x00BABC7B File Offset: 0x00BA9E7B
 		public static void ResetStaticDefaultValue()
 		{
 			SeqNpcPerformStateManager instance = SeqNpcPerformStateManager._instance;
@@ -113,22 +113,22 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			SeqNpcPerformStateManager._instance = null;
 		}
 
-		// Token: 0x0603486F RID: 215151 RVA: 0x00C6071C File Offset: 0x00C5E91C
+		// Token: 0x06029712 RID: 169746 RVA: 0x00BABC94 File Offset: 0x00BA9E94
 		static SeqNpcPerformStateManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SeqNpcPerformStateManager.CreateStaticDefaultValue), new Action(SeqNpcPerformStateManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BFDC RID: 114652
+		// Token: 0x040169C7 RID: 92615
 		private readonly Dictionary<ENpcGroupPerformType, SeqNpcPerformStateHandler> CaptureHandlerMap = new Dictionary<ENpcGroupPerformType, SeqNpcPerformStateHandler>();
 
-		// Token: 0x0401BFDD RID: 114653
+		// Token: 0x040169C8 RID: 92616
 		private readonly Dictionary<ENpcRelationType, SeqNpcPerformStateHandler> RestoreHandlerMap = new Dictionary<ENpcRelationType, SeqNpcPerformStateHandler>();
 
-		// Token: 0x0401BFDE RID: 114654
+		// Token: 0x040169C9 RID: 92617
 		private bool Initialized;
 
-		// Token: 0x0401BFDF RID: 114655
+		// Token: 0x040169CA RID: 92618
 		[Nullable(2)]
 		private static SeqNpcPerformStateManager _instance;
 	}

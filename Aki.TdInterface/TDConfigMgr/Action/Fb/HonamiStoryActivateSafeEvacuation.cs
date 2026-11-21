@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A91 RID: 10897
+	// Token: 0x02002D85 RID: 11653
 	public class HonamiStoryActivateSafeEvacuation : ActionParams
 	{
-		// Token: 0x0600EF64 RID: 61284 RVA: 0x0022CD73 File Offset: 0x0022AF73
-		[NullableContext(1)]
+		// Token: 0x0600FE1A RID: 65050 RVA: 0x0024AA7F File Offset: 0x00248C7F
 		public static HonamiStoryActivateSafeEvacuation Create(IHonamiStoryActivateSafeEvacuation? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x040083B3 RID: 33715
+		// Token: 0x04008AB7 RID: 35511
 		private IHonamiStoryActivateSafeEvacuation Instance;
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046D0 RID: 18128
-	// (Invoke) Token: 0x0602EC35 RID: 191541
+	// Token: 0x02003600 RID: 13824
+	// (Invoke) Token: 0x06023371 RID: 144241
 	public delegate void TOpenViewCallBack(bool success, int viewId);
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001895 RID: 6293
+// Token: 0x02000D4E RID: 3406
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballWeaponSort : CommonSort<EPinballWeaponSortWayType>
 {
-	// Token: 0x0600B856 RID: 47190 RVA: 0x0029CF80 File Offset: 0x0029B180
+	// Token: 0x06008C3F RID: 35903 RVA: 0x002A7698 File Offset: 0x002A5898
 	private int SortQuality(object a, object b, bool isAscending, params object[] parameters)
 	{
 		PinballWeaponData pinballWeaponData = (PinballWeaponData)a;
@@ -20,7 +20,7 @@ public class PinballWeaponSort : CommonSort<EPinballWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B857 RID: 47191 RVA: 0x0029CFF4 File Offset: 0x0029B1F4
+	// Token: 0x06008C40 RID: 35904 RVA: 0x002A770C File Offset: 0x002A590C
 	private int SortEquipLast(object a, object b, bool isAscending, params object[] parameters)
 	{
 		PinballWeaponData pinballWeaponData = (PinballWeaponData)a;
@@ -36,7 +36,7 @@ public class PinballWeaponSort : CommonSort<EPinballWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B858 RID: 47192 RVA: 0x0029D038 File Offset: 0x0029B238
+	// Token: 0x06008C41 RID: 35905 RVA: 0x002A7750 File Offset: 0x002A5950
 	private int SortLockLast(object a, object b, bool isAscending, params object[] parameters)
 	{
 		PinballWeaponData pinballWeaponData = (PinballWeaponData)a;
@@ -52,7 +52,7 @@ public class PinballWeaponSort : CommonSort<EPinballWeaponSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B859 RID: 47193 RVA: 0x0029D078 File Offset: 0x0029B278
+	// Token: 0x06008C42 RID: 35906 RVA: 0x002A7790 File Offset: 0x002A5990
 	protected override void OnInitSortMap()
 	{
 		this.SortMap[EPinballWeaponSortWayType.Quality] = new TSortResult(this.SortQuality);

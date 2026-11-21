@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A22 RID: 27170
+	// Token: 0x02005B7F RID: 23423
 	[NullableContext(2)]
 	public interface ISceneItemSplineMoveConfig
 	{
-		// Token: 0x170098BA RID: 39098
-		// (get) Token: 0x0604393B RID: 276795
-		// (set) Token: 0x0604393C RID: 276796
+		// Token: 0x17006D9F RID: 28063
+		// (get) Token: 0x06039989 RID: 235913
+		// (set) Token: 0x0603998A RID: 235914
 		ISceneItemSplineMoveSegmentConfig GlobalConfig { get; set; }
 
-		// Token: 0x170098BB RID: 39099
-		// (get) Token: 0x0604393D RID: 276797
-		// (set) Token: 0x0604393E RID: 276798
+		// Token: 0x17006DA0 RID: 28064
+		// (get) Token: 0x0603998B RID: 235915
+		// (set) Token: 0x0603998C RID: 235916
 		[Nullable(new byte[]
 		{
 			2,
@@ -31,24 +31,24 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			1
 		})] set; }
 
-		// Token: 0x170098BC RID: 39100
-		// (get) Token: 0x0604393F RID: 276799
-		// (set) Token: 0x06043940 RID: 276800
+		// Token: 0x17006DA1 RID: 28065
+		// (get) Token: 0x0603998D RID: 235917
+		// (set) Token: 0x0603998E RID: 235918
 		ISceneItemSplineMoveRange SplineMoveRange { get; set; }
 
-		// Token: 0x170098BD RID: 39101
-		// (get) Token: 0x06043941 RID: 276801
-		// (set) Token: 0x06043942 RID: 276802
+		// Token: 0x17006DA2 RID: 28066
+		// (get) Token: 0x0603998F RID: 235919
+		// (set) Token: 0x06039990 RID: 235920
 		int MoveCount { get; set; }
 
-		// Token: 0x170098BE RID: 39102
-		// (get) Token: 0x06043943 RID: 276803
-		// (set) Token: 0x06043944 RID: 276804
+		// Token: 0x17006DA3 RID: 28067
+		// (get) Token: 0x06039991 RID: 235921
+		// (set) Token: 0x06039992 RID: 235922
 		bool IsClosedLoop { get; set; }
 
-		// Token: 0x170098BF RID: 39103
-		// (get) Token: 0x06043945 RID: 276805
-		// (set) Token: 0x06043946 RID: 276806
+		// Token: 0x17006DA4 RID: 28068
+		// (get) Token: 0x06039993 RID: 235923
+		// (set) Token: 0x06039994 RID: 235924
 		bool IsLookDir { get; set; }
 	}
 }

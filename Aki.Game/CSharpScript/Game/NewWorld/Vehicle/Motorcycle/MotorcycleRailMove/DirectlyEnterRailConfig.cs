@@ -4,12 +4,12 @@ using AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x0200703C RID: 28732
+	// Token: 0x020061BD RID: 25021
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DirectlyEnterRailConfig
 	{
-		// Token: 0x06045F4C RID: 286540 RVA: 0x0116E8C8 File Offset: 0x0116CAC8
+		// Token: 0x0603C132 RID: 246066 RVA: 0x01118638 File Offset: 0x01116838
 		public void UpdateFromUeData(SMotorRailMoveConfig_DirectlyEnterRail data)
 		{
 			this.CommonConfig.UpdateFromUeData(data.CommonConfig);
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.LinearMoveConfig.UpdateFromUeData(data.LinearMove);
 		}
 
-		// Token: 0x06045F4D RID: 286541 RVA: 0x0116E914 File Offset: 0x0116CB14
+		// Token: 0x0603C133 RID: 246067 RVA: 0x01118684 File Offset: 0x01116884
 		public void DeepCopy(DirectlyEnterRailConfig other)
 		{
 			this.CommonConfig.DeepCopy(other.CommonConfig);
@@ -27,16 +27,16 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.LinearMoveConfig.DeepCopy(other.LinearMoveConfig);
 		}
 
-		// Token: 0x0402499D RID: 149917
+		// Token: 0x0401FC53 RID: 130131
 		public readonly CommonConfig CommonConfig = new CommonConfig();
 
-		// Token: 0x0402499E RID: 149918
+		// Token: 0x0401FC54 RID: 130132
 		public float MaxAbsorbDist = 100f;
 
-		// Token: 0x0402499F RID: 149919
+		// Token: 0x0401FC55 RID: 130133
 		public readonly EnterRailCondition EnterRailCondition = new EnterRailCondition();
 
-		// Token: 0x040249A0 RID: 149920
+		// Token: 0x0401FC56 RID: 130134
 		public readonly LinearMoveConfig LinearMoveConfig = new LinearMoveConfig();
 	}
 }

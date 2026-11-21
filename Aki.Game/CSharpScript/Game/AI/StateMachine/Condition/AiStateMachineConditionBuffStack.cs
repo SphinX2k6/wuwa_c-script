@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007337 RID: 29495
+	// Token: 0x020064BA RID: 25786
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionBuffStack : AiStateMachineCondition
 	{
-		// Token: 0x06048614 RID: 296468 RVA: 0x0129E70F File Offset: 0x0129C90F
+		// Token: 0x0603EA61 RID: 256609 RVA: 0x01241197 File Offset: 0x0123F397
 		public AiStateMachineConditionBuffStack(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048615 RID: 296469 RVA: 0x0129E71A File Offset: 0x0129C91A
+		// Token: 0x0603EA62 RID: 256610 RVA: 0x012411A2 File Offset: 0x0123F3A2
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.BuffId = condition.CondBuffStack.BuffId;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048616 RID: 296470 RVA: 0x0129E750 File Offset: 0x0129C950
+		// Token: 0x0603EA63 RID: 256611 RVA: 0x012411D8 File Offset: 0x0123F3D8
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x04026459 RID: 156761
+		// Token: 0x04021746 RID: 137030
 		public long BuffId;
 
-		// Token: 0x0402645A RID: 156762
+		// Token: 0x04021747 RID: 137031
 		public int MinStack;
 
-		// Token: 0x0402645B RID: 156763
+		// Token: 0x04021748 RID: 137032
 		public int MaxStack;
 	}
 }

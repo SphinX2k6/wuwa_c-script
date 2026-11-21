@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019C7 RID: 6599
+	// Token: 0x02001B54 RID: 6996
 	public class IDungeonEventType_SetValue
 	{
-		// Token: 0x040057D5 RID: 22485
+		// Token: 0x04005C2A RID: 23594
 		public EDungeonEventType Type;
 	}
 }

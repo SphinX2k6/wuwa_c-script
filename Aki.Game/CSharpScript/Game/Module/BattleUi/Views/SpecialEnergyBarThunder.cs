@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E05 RID: 24069
+	// Token: 0x02004DEA RID: 19946
 	public class SpecialEnergyBarThunder : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D336 RID: 250678 RVA: 0x00EBE37C File Offset: 0x00EBC57C
+		// Token: 0x060322C5 RID: 205509 RVA: 0x00E0F8DC File Offset: 0x00E0DADC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -37,20 +37,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D337 RID: 250679 RVA: 0x00EBE4AB File Offset: 0x00EBC6AB
+		// Token: 0x060322C6 RID: 205510 RVA: 0x00E0FA0B File Offset: 0x00E0DC0B
 		protected override void OnInitData()
 		{
 			this.OverloadConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(130901);
 		}
 
-		// Token: 0x0603D338 RID: 250680 RVA: 0x00EBE4C7 File Offset: 0x00EBC6C7
+		// Token: 0x060322C7 RID: 205511 RVA: 0x00E0FA27 File Offset: 0x00E0DC27
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagAddOrRemoveChanged(SpecialEnergyBarThunder.OverloadTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnOverloadTagChanged));
 		}
 
-		// Token: 0x0603D339 RID: 250681 RVA: 0x00EBE4E8 File Offset: 0x00EBC6E8
+		// Token: 0x060322C8 RID: 205512 RVA: 0x00E0FA48 File Offset: 0x00E0DC48
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarThunder.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D33A RID: 250682 RVA: 0x00EBE52C File Offset: 0x00EBC72C
+		// Token: 0x060322C9 RID: 205513 RVA: 0x00E0FA8C File Offset: 0x00E0DC8C
 		private UniTask InitBarItem()
 		{
 			SpecialEnergyBarThunder.<InitBarItem>d__13 <InitBarItem>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D33B RID: 250683 RVA: 0x00EBE570 File Offset: 0x00EBC770
+		// Token: 0x060322CA RID: 205514 RVA: 0x00E0FAD0 File Offset: 0x00E0DCD0
 		private UniTask InitOverloadBarItem()
 		{
 			SpecialEnergyBarThunder.<InitOverloadBarItem>d__14 <InitOverloadBarItem>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitOverloadBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D33C RID: 250684 RVA: 0x00EBE5B3 File Offset: 0x00EBC7B3
+		// Token: 0x060322CB RID: 205515 RVA: 0x00E0FB13 File Offset: 0x00E0DD13
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(5);
@@ -93,32 +93,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshFullState(true);
 		}
 
-		// Token: 0x0603D33D RID: 250685 RVA: 0x00EBE5D8 File Offset: 0x00EBC7D8
+		// Token: 0x060322CC RID: 205516 RVA: 0x00E0FB38 File Offset: 0x00E0DD38
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshFullState(false);
 		}
 
-		// Token: 0x0603D33E RID: 250686 RVA: 0x00EBE5E1 File Offset: 0x00EBC7E1
+		// Token: 0x060322CD RID: 205517 RVA: 0x00E0FB41 File Offset: 0x00E0DD41
 		protected override void OnKeyEnableChanged()
 		{
 			this.RefreshFullState(false);
 		}
 
-		// Token: 0x0603D33F RID: 250687 RVA: 0x00EBE5EA File Offset: 0x00EBC7EA
+		// Token: 0x060322CE RID: 205518 RVA: 0x00E0FB4A File Offset: 0x00E0DD4A
 		private void OnOverloadTagChanged(int tagId, bool tagExist)
 		{
 			this.SetState(tagExist ? SpecialEnergyBarThunder.EState.Overload : SpecialEnergyBarThunder.EState.Normal, false);
 		}
 
-		// Token: 0x0603D340 RID: 250688 RVA: 0x00EBE5FC File Offset: 0x00EBC7FC
+		// Token: 0x060322CF RID: 205519 RVA: 0x00E0FB5C File Offset: 0x00E0DD5C
 		private void RefreshState(bool isStart = false)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
 			this.SetState((tagComponent != null && tagComponent.HasTag(SpecialEnergyBarThunder.OverloadTagId)) ? SpecialEnergyBarThunder.EState.Overload : SpecialEnergyBarThunder.EState.Normal, isStart);
 		}
 
-		// Token: 0x0603D341 RID: 250689 RVA: 0x00EBE630 File Offset: 0x00EBC830
+		// Token: 0x060322D0 RID: 205520 RVA: 0x00E0FB90 File Offset: 0x00E0DD90
 		private void SetState(SpecialEnergyBarThunder.EState state, bool isStart = false)
 		{
 			if (this.CurState == state && !isStart)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshFullState(true);
 		}
 
-		// Token: 0x0603D342 RID: 250690 RVA: 0x00EBE6EC File Offset: 0x00EBC8EC
+		// Token: 0x060322D1 RID: 205521 RVA: 0x00E0FC4C File Offset: 0x00E0DE4C
 		private void RefreshFullState(bool isStart = false)
 		{
 			if (this.CurState == SpecialEnergyBarThunder.EState.Overload)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.StopTweenAnim(5);
 		}
 
-		// Token: 0x0603D343 RID: 250691 RVA: 0x00EBE758 File Offset: 0x00EBC958
+		// Token: 0x060322D2 RID: 205522 RVA: 0x00E0FCB8 File Offset: 0x00E0DEB8
 		private void SetNormalBgUseChangeColor(bool useChangeColor)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D344 RID: 250692 RVA: 0x00EBE785 File Offset: 0x00EBC985
+		// Token: 0x060322D3 RID: 205523 RVA: 0x00E0FCE5 File Offset: 0x00E0DEE5
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -225,58 +225,58 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			overloadBarItem.Tick(delta);
 		}
 
-		// Token: 0x0401FE95 RID: 130709
+		// Token: 0x0401A95C RID: 108892
 		private const int OVERLOAD_CONFIG_ID = 130901;
 
-		// Token: 0x0401FE96 RID: 130710
+		// Token: 0x0401A95D RID: 108893
 		[StaticVariableRuleIgnore]
 		private static readonly int OverloadTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1ThunderNanzhuMd10011.逻辑.E技能派生"];
 
-		// Token: 0x0401FE97 RID: 130711
+		// Token: 0x0401A95E RID: 108894
 		[Nullable(2)]
 		private SpecialEnergyBarInfo OverloadConfig;
 
-		// Token: 0x0401FE98 RID: 130712
+		// Token: 0x0401A95F RID: 108895
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarItem;
 
-		// Token: 0x0401FE99 RID: 130713
+		// Token: 0x0401A960 RID: 108896
 		[Nullable(2)]
 		private SpecialEnergyBarThunderOverload OverloadBarItem;
 
-		// Token: 0x0401FE9A RID: 130714
+		// Token: 0x0401A961 RID: 108897
 		private bool IsFull;
 
-		// Token: 0x0401FE9B RID: 130715
+		// Token: 0x0401A962 RID: 108898
 		private SpecialEnergyBarThunder.EState CurState;
 
-		// Token: 0x0200C162 RID: 49506
+		// Token: 0x0200AB71 RID: 43889
 		private enum EChildType
 		{
-			// Token: 0x0403A6BB RID: 239291
+			// Token: 0x040350AD RID: 217261
 			StateItemA,
-			// Token: 0x0403A6BC RID: 239292
+			// Token: 0x040350AE RID: 217262
 			BgTexture,
-			// Token: 0x0403A6BD RID: 239293
+			// Token: 0x040350AF RID: 217263
 			SlotBarItem,
-			// Token: 0x0403A6BE RID: 239294
+			// Token: 0x040350B0 RID: 217264
 			StateItemB,
-			// Token: 0x0403A6BF RID: 239295
+			// Token: 0x040350B1 RID: 217265
 			OverloadSlotBarItem,
-			// Token: 0x0403A6C0 RID: 239296
+			// Token: 0x040350B2 RID: 217266
 			AniAmax,
-			// Token: 0x0403A6C1 RID: 239297
+			// Token: 0x040350B3 RID: 217267
 			AniAtoB,
-			// Token: 0x0403A6C2 RID: 239298
+			// Token: 0x040350B4 RID: 217268
 			AniBtoA
 		}
 
-		// Token: 0x0200C163 RID: 49507
+		// Token: 0x0200AB72 RID: 43890
 		private enum EState
 		{
-			// Token: 0x0403A6C4 RID: 239300
+			// Token: 0x040350B6 RID: 217270
 			Normal,
-			// Token: 0x0403A6C5 RID: 239301
+			// Token: 0x040350B7 RID: 217271
 			Overload
 		}
 	}

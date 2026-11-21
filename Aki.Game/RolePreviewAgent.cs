@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020028ED RID: 10477
+// Token: 0x02001E68 RID: 7784
 public class RolePreviewAgent : RoleViewAgent
 {
-	// Token: 0x06015A19 RID: 88601 RVA: 0x005759FA File Offset: 0x00573BFA
+	// Token: 0x0601341D RID: 78877 RVA: 0x005A08C6 File Offset: 0x0059EAC6
 	public override ERoleSystemMode GetRoleSystemMode()
 	{
 		return ERoleSystemMode.Preview;

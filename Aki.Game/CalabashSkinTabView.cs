@@ -5,22 +5,21 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Skin.Skip;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A42 RID: 10818
+// Token: 0x02001FBD RID: 8125
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashSkinTabView : UiTabViewBase
 {
-	// Token: 0x0601687D RID: 92285 RVA: 0x005B6440 File Offset: 0x005B4640
+	// Token: 0x0601429E RID: 82590 RVA: 0x005E25A8 File Offset: 0x005E07A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -59,7 +58,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601687E RID: 92286 RVA: 0x005B6614 File Offset: 0x005B4814
+	// Token: 0x0601429F RID: 82591 RVA: 0x005E277C File Offset: 0x005E097C
 	protected override void OnStart()
 	{
 		this.RootViewModel = (this.ExtraParams as SkinRootViewModel);
@@ -81,7 +80,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0601687F RID: 92287 RVA: 0x005B670B File Offset: 0x005B490B
+	// Token: 0x060142A0 RID: 82592 RVA: 0x005E2873 File Offset: 0x005E0A73
 	protected override void OnBeforeShow()
 	{
 		this.RootViewModel.SetModelState(EModelStateInSkinView.ShowCalabash, false);
@@ -89,7 +88,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		this.TryPushCamera();
 	}
 
-	// Token: 0x06016880 RID: 92288 RVA: 0x005B6728 File Offset: 0x005B4928
+	// Token: 0x060142A1 RID: 82593 RVA: 0x005E2890 File Offset: 0x005E0A90
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		CalabashSkinTabView.<OnBeforeShowAsyncImplement>d__12 <OnBeforeShowAsyncImplement>d__;
@@ -100,25 +99,25 @@ public class CalabashSkinTabView : UiTabViewBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016881 RID: 92289 RVA: 0x005B676B File Offset: 0x005B496B
+	// Token: 0x060142A2 RID: 82594 RVA: 0x005E28D3 File Offset: 0x005E0AD3
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x06016882 RID: 92290 RVA: 0x005B6789 File Offset: 0x005B4989
+	// Token: 0x060142A3 RID: 82595 RVA: 0x005E28F1 File Offset: 0x005E0AF1
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x06016883 RID: 92291 RVA: 0x005B67A7 File Offset: 0x005B49A7
+	// Token: 0x060142A4 RID: 82596 RVA: 0x005E290F File Offset: 0x005E0B0F
 	protected override void OnBeforeHide()
 	{
 		this.HideHuluObserver();
 	}
 
-	// Token: 0x06016884 RID: 92292 RVA: 0x005B67AF File Offset: 0x005B49AF
+	// Token: 0x060142A5 RID: 82597 RVA: 0x005E2917 File Offset: 0x005E0B17
 	protected override void OnBeforeDestroy()
 	{
 		this.ViewModel.UnBind(new Action<ECalabashSkinViewData>(this.OnViewModelUpdate));
@@ -126,13 +125,13 @@ public class CalabashSkinTabView : UiTabViewBase
 		this.RemoveTimeHandler();
 	}
 
-	// Token: 0x06016885 RID: 92293 RVA: 0x005B67D4 File Offset: 0x005B49D4
+	// Token: 0x060142A6 RID: 82598 RVA: 0x005E293C File Offset: 0x005E0B3C
 	private void InitGrid()
 	{
 		this.GridLayout = new GenericLayout<CalabashSkinGridItem, CalabashSkinData>(base.GetLayoutBase(1), new Func<CalabashSkinGridItem>(this.InitGridItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06016886 RID: 92294 RVA: 0x005B6807 File Offset: 0x005B4A07
+	// Token: 0x060142A7 RID: 82599 RVA: 0x005E296F File Offset: 0x005E0B6F
 	private CalabashSkinGridItem InitGridItem()
 	{
 		CalabashSkinGridItem calabashSkinGridItem = new CalabashSkinGridItem();
@@ -141,13 +140,13 @@ public class CalabashSkinTabView : UiTabViewBase
 		return calabashSkinGridItem;
 	}
 
-	// Token: 0x06016887 RID: 92295 RVA: 0x005B6837 File Offset: 0x005B4A37
+	// Token: 0x060142A8 RID: 82600 RVA: 0x005E299F File Offset: 0x005E0B9F
 	private SkinObtainItem InitObtainItem()
 	{
 		return new SkinObtainItem();
 	}
 
-	// Token: 0x06016888 RID: 92296 RVA: 0x005B6840 File Offset: 0x005B4A40
+	// Token: 0x060142A9 RID: 82601 RVA: 0x005E29A8 File Offset: 0x005E0BA8
 	private void InitHuluObserver()
 	{
 		this.HuluObserver = UiSceneManager.Instance.InitHuluObserver();
@@ -165,7 +164,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		uiModelDataComponent.SetLoadingIconFollowState(false);
 	}
 
-	// Token: 0x06016889 RID: 92297 RVA: 0x005B688E File Offset: 0x005B4A8E
+	// Token: 0x060142AA RID: 82602 RVA: 0x005E29F6 File Offset: 0x005E0BF6
 	private void HideHuluObserver()
 	{
 		if (this.HuluObserver != null)
@@ -174,7 +173,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601688A RID: 92298 RVA: 0x005B68AD File Offset: 0x005B4AAD
+	// Token: 0x060142AB RID: 82603 RVA: 0x005E2A15 File Offset: 0x005E0C15
 	private void ShowHuluObserver(int skinId)
 	{
 		CalabashSkinController instance = CalabashSkinController.Instance;
@@ -183,7 +182,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		instance.SelectedCalabashSkinChange(skinId, roleId, (huluObserver != null) ? huluObserver.Model : null, "TerminalCase");
 	}
 
-	// Token: 0x0601688B RID: 92299 RVA: 0x005B68DC File Offset: 0x005B4ADC
+	// Token: 0x060142AC RID: 82604 RVA: 0x005E2A44 File Offset: 0x005E0C44
 	public void SwitchHuluRotate(bool needStop)
 	{
 		SkeletalObserverHandle huluObserver = this.HuluObserver;
@@ -212,7 +211,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601688C RID: 92300 RVA: 0x005B691E File Offset: 0x005B4B1E
+	// Token: 0x060142AD RID: 82605 RVA: 0x005E2A86 File Offset: 0x005E0C86
 	public void ReleaseHuluObserver()
 	{
 		if (this.HuluObserver != null)
@@ -224,7 +223,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601688D RID: 92301 RVA: 0x005B695C File Offset: 0x005B4B5C
+	// Token: 0x060142AE RID: 82606 RVA: 0x005E2AC4 File Offset: 0x005E0CC4
 	public void HideView()
 	{
 		this.Draggable.RootUIComp.Get().SetUIActive(true);
@@ -237,7 +236,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		this.RootViewModel.SetMoveGamepadKeyTipActive(true, false);
 	}
 
-	// Token: 0x0601688E RID: 92302 RVA: 0x005B69B0 File Offset: 0x005B4BB0
+	// Token: 0x060142AF RID: 82607 RVA: 0x005E2B18 File Offset: 0x005E0D18
 	public void ShowView()
 	{
 		this.RootViewModel.SetMoveGamepadKeyTipActive(false, false);
@@ -250,21 +249,21 @@ public class CalabashSkinTabView : UiTabViewBase
 		this.Draggable.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0601688F RID: 92303 RVA: 0x005B6A03 File Offset: 0x005B4C03
+	// Token: 0x060142B0 RID: 82608 RVA: 0x005E2B6B File Offset: 0x005E0D6B
 	public void SelectedGrid(int index)
 	{
 		this.GridLayout.DeselectCurrentGridProxy();
 		this.GridLayout.SelectGridProxy(index, true);
 	}
 
-	// Token: 0x06016890 RID: 92304 RVA: 0x005B6A1D File Offset: 0x005B4C1D
+	// Token: 0x060142B1 RID: 82609 RVA: 0x005E2B85 File Offset: 0x005E0D85
 	public void RefreshText(string name, string bgDescription)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), name, Array.Empty<object>());
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), bgDescription, Array.Empty<object>());
 	}
 
-	// Token: 0x06016891 RID: 92305 RVA: 0x005B6A4D File Offset: 0x005B4C4D
+	// Token: 0x060142B2 RID: 82610 RVA: 0x005E2BB5 File Offset: 0x005E0DB5
 	public void RefreshConfirmBox(bool isSame)
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -275,7 +274,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		button.SetSelfInteractive(!isSame);
 	}
 
-	// Token: 0x06016892 RID: 92306 RVA: 0x005B6A64 File Offset: 0x005B4C64
+	// Token: 0x060142B3 RID: 82611 RVA: 0x005E2BCC File Offset: 0x005E0DCC
 	public void RefreshGridSelect(int lastIndex, int nowIndex)
 	{
 		CalabashSkinGridItem layoutItemByIndex = this.GridLayout.GetLayoutItemByIndex(lastIndex);
@@ -291,7 +290,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		layoutItemByIndex2.RefreshVisible();
 	}
 
-	// Token: 0x06016893 RID: 92307 RVA: 0x005B6A94 File Offset: 0x005B4C94
+	// Token: 0x060142B4 RID: 82612 RVA: 0x005E2BFC File Offset: 0x005E0DFC
 	public void RefreshBottom(CalabashSkinData data, bool isSame)
 	{
 		bool isLock = data.GetIsLock();
@@ -323,13 +322,13 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016894 RID: 92308 RVA: 0x005B6B45 File Offset: 0x005B4D45
+	// Token: 0x060142B5 RID: 82613 RVA: 0x005E2CAD File Offset: 0x005E0EAD
 	public void ShowEquipTips()
 	{
 		ScrollingTipsController.Instance.ShowTipsByTextId("TerminalSkin_Change_Success", Array.Empty<object>());
 	}
 
-	// Token: 0x06016895 RID: 92309 RVA: 0x005B6B5B File Offset: 0x005B4D5B
+	// Token: 0x060142B6 RID: 82614 RVA: 0x005E2CC3 File Offset: 0x005E0EC3
 	public void SwitchHuluObserver(int skinId)
 	{
 		CalabashSkinController instance = CalabashSkinController.Instance;
@@ -338,7 +337,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		instance.SelectedCalabashSkinChange(skinId, roleId, (huluObserver != null) ? huluObserver.Model : null, "TerminalCase");
 	}
 
-	// Token: 0x06016896 RID: 92310 RVA: 0x005B6B8C File Offset: 0x005B4D8C
+	// Token: 0x060142B7 RID: 82615 RVA: 0x005E2CF4 File Offset: 0x005E0EF4
 	public void RefreshMainRoleHulu()
 	{
 		UiModelBase model = this.TsUiSceneRoleActor.Model;
@@ -349,7 +348,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016897 RID: 92311 RVA: 0x005B6BBC File Offset: 0x005B4DBC
+	// Token: 0x060142B8 RID: 82616 RVA: 0x005E2D24 File Offset: 0x005E0F24
 	private void OnViewModelUpdate(ECalabashSkinViewData data)
 	{
 		if (data == ECalabashSkinViewData.EquipSkinId)
@@ -370,13 +369,13 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016898 RID: 92312 RVA: 0x005B6C34 File Offset: 0x005B4E34
+	// Token: 0x060142B9 RID: 82617 RVA: 0x005E2D9C File Offset: 0x005E0F9C
 	private UUIDraggableComponent GetDragItem()
 	{
 		return base.GetDraggable(9);
 	}
 
-	// Token: 0x06016899 RID: 92313 RVA: 0x005B6C40 File Offset: 0x005B4E40
+	// Token: 0x060142BA RID: 82618 RVA: 0x005E2DA8 File Offset: 0x005E0FA8
 	private void UpdateSelectedGrid()
 	{
 		int selectedSkinId = this.ViewModel.GetSelectedSkinId();
@@ -387,17 +386,17 @@ public class CalabashSkinTabView : UiTabViewBase
 		this.SelectedGrid(dataIndexBySkinId);
 	}
 
-	// Token: 0x0601689A RID: 92314 RVA: 0x005B6CA4 File Offset: 0x005B4EA4
+	// Token: 0x060142BB RID: 82619 RVA: 0x005E2E0C File Offset: 0x005E100C
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
-		if (handleData.ViewName == EUiTabViewName.CalabashSkinTabView && this.ViewModel.NeedLoadModel)
+		if (handleData.GetViewName() == EUiTabViewName.CalabashSkinTabView && this.ViewModel.NeedLoadModel)
 		{
 			this.ViewModel.NeedLoadModel = false;
 			this.ShowHuluObserver(this.ViewModel.GetSelectedSkinId());
 		}
 	}
 
-	// Token: 0x0601689B RID: 92315 RVA: 0x005B6CF4 File Offset: 0x005B4EF4
+	// Token: 0x060142BC RID: 82620 RVA: 0x005E2E5C File Offset: 0x005E105C
 	private void OnCalabashHideUiClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -405,23 +404,23 @@ public class CalabashSkinTabView : UiTabViewBase
 			this.ShowView();
 			this.RootViewModel.SetRootUiVisible(true, false);
 			this.SwitchHuluRotate(false);
-			this.EndCameraInput();
+			this.UnbindCameraInput();
 			this.ResetCamera();
 			return;
 		}
 		this.HideView();
 		this.RootViewModel.SetRootUiVisible(false, false);
 		this.SwitchHuluRotate(this.ViewModel.NeedStopRotate);
-		this.StartCameraInput();
+		this.BindCameraInput();
 	}
 
-	// Token: 0x0601689C RID: 92316 RVA: 0x005B6D56 File Offset: 0x005B4F56
+	// Token: 0x060142BD RID: 82621 RVA: 0x005E2EBE File Offset: 0x005E10BE
 	private void OnCalabashConfirmBtnClick()
 	{
 		this.OnCalabashConfirmClick().Forget();
 	}
 
-	// Token: 0x0601689D RID: 92317 RVA: 0x005B6D64 File Offset: 0x005B4F64
+	// Token: 0x060142BE RID: 82622 RVA: 0x005E2ECC File Offset: 0x005E10CC
 	private UniTask OnCalabashConfirmClick()
 	{
 		CalabashSkinTabView.<OnCalabashConfirmClick>d__41 <OnCalabashConfirmClick>d__;
@@ -432,14 +431,14 @@ public class CalabashSkinTabView : UiTabViewBase
 		return <OnCalabashConfirmClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601689E RID: 92318 RVA: 0x005B6DA8 File Offset: 0x005B4FA8
+	// Token: 0x060142BF RID: 82623 RVA: 0x005E2F10 File Offset: 0x005E1110
 	private void OnCalabashGridItemClick(MediumItemGridExtendCallback parameters)
 	{
 		int skinId = (parameters.Data as CalabashSkinData).SkinId;
 		this.ViewModel.SetSelectedSkinId(skinId, false);
 	}
 
-	// Token: 0x0601689F RID: 92319 RVA: 0x005B6DD3 File Offset: 0x005B4FD3
+	// Token: 0x060142C0 RID: 82624 RVA: 0x005E2F3B File Offset: 0x005E113B
 	private void CreateTimeHandler()
 	{
 		if (this.TimeHandler != null)
@@ -452,7 +451,7 @@ public class CalabashSkinTabView : UiTabViewBase
 		}, (float)this.ViewModel.FailRequestCd, null, null, true, 1f);
 	}
 
-	// Token: 0x060168A0 RID: 92320 RVA: 0x005B6E0E File Offset: 0x005B500E
+	// Token: 0x060142C1 RID: 82625 RVA: 0x005E2F76 File Offset: 0x005E1176
 	private void RemoveTimeHandler()
 	{
 		if (this.TimeHandler != null)
@@ -462,84 +461,85 @@ public class CalabashSkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060168A1 RID: 92321 RVA: 0x005B6E30 File Offset: 0x005B5030
-	private void StartCameraInput()
+	// Token: 0x060142C2 RID: 82626 RVA: 0x005E2F98 File Offset: 0x005E1198
+	private void BindCameraInput()
 	{
-		IUiCameraInputComponentData calabashSkinTabCameraInputData = this.ViewModel.GetCalabashSkinTabCameraInputData();
-		this.RootViewModel.StartCameraInput(calabashSkinTabCameraInputData, new bool?(true), true);
+		UiCameraInputBindingData calabashSkinTabCameraInputData = this.ViewModel.GetCalabashSkinTabCameraInputData();
+		this.RootViewModel.ConfigureCameraInput(calabashSkinTabCameraInputData);
+		this.RootViewModel.BindCameraInput();
 	}
 
-	// Token: 0x060168A2 RID: 92322 RVA: 0x005B6E5C File Offset: 0x005B505C
-	private void EndCameraInput()
+	// Token: 0x060142C3 RID: 82627 RVA: 0x005E2FC8 File Offset: 0x005E11C8
+	private void UnbindCameraInput()
 	{
-		this.RootViewModel.EndCameraInput();
+		this.RootViewModel.UnbindCameraInput();
 	}
 
-	// Token: 0x060168A3 RID: 92323 RVA: 0x005B6E6C File Offset: 0x005B506C
+	// Token: 0x060142C4 RID: 82628 RVA: 0x005E2FD8 File Offset: 0x005E11D8
 	public void ResetCamera()
 	{
-		UiCameraHandleData newHandleData = UiCameraHandleData.NewByView(EUiTabViewName.CalabashSkinTabView, null, null);
-		UiCameraAnimationManager.Instance.PushCameraHandle(newHandleData, true, true, "1001", false, null);
+		UiCameraHandleData handleData = UiCameraUtil.CreateHandleDataByView(EUiTabViewName.CalabashSkinTabView);
+		UiCameraModel.Instance.PushCameraHandle(handleData, true, true, "1001", false, null);
 	}
 
-	// Token: 0x060168A4 RID: 92324 RVA: 0x005B6EB0 File Offset: 0x005B50B0
+	// Token: 0x060142C5 RID: 82629 RVA: 0x005E3008 File Offset: 0x005E1208
 	public void TryPushCamera()
 	{
 		this.ViewModel.NeedLoadModel = true;
-		UiCameraHandleData newHandleData = UiCameraHandleData.NewByView(EUiTabViewName.CalabashSkinTabView, null, null);
-		UiCameraAnimationManager.Instance.PushCameraHandle(newHandleData, true, true, "10010", false, null);
+		UiCameraHandleData handleData = UiCameraUtil.CreateHandleDataByView(EUiTabViewName.CalabashSkinTabView);
+		UiCameraModel.Instance.PushCameraHandle(handleData, true, true, "10010", false, null);
 	}
 
-	// Token: 0x0400A74C RID: 42828
+	// Token: 0x0400AB50 RID: 43856
 	private SkinRootViewModel RootViewModel;
 
-	// Token: 0x0400A74D RID: 42829
+	// Token: 0x0400AB51 RID: 43857
 	private CalabashSkinViewProxy ViewModel;
 
-	// Token: 0x0400A74E RID: 42830
+	// Token: 0x0400AB52 RID: 43858
 	protected GenericLayout<CalabashSkinGridItem, CalabashSkinData> GridLayout;
 
-	// Token: 0x0400A74F RID: 42831
+	// Token: 0x0400AB53 RID: 43859
 	protected GenericLayout<SkinObtainItem, ISkinSkipData> ObtainLayout;
 
-	// Token: 0x0400A750 RID: 42832
+	// Token: 0x0400AB54 RID: 43860
 	[Nullable(2)]
 	protected SkeletalObserverHandle HuluObserver;
 
-	// Token: 0x0400A751 RID: 42833
+	// Token: 0x0400AB55 RID: 43861
 	[Nullable(2)]
 	protected TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400A752 RID: 42834
+	// Token: 0x0400AB56 RID: 43862
 	protected UUIDraggableComponent Draggable;
 
-	// Token: 0x0400A753 RID: 42835
+	// Token: 0x0400AB57 RID: 43863
 	[Nullable(2)]
 	protected TimerHandle TimeHandler;
 
-	// Token: 0x02009089 RID: 37001
+	// Token: 0x020082D0 RID: 33488
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402ED6F RID: 191855
+		// Token: 0x0402A469 RID: 173161
 		TopAndRightItem,
-		// Token: 0x0402ED70 RID: 191856
+		// Token: 0x0402A46A RID: 173162
 		GridLayout,
-		// Token: 0x0402ED71 RID: 191857
+		// Token: 0x0402A46B RID: 173163
 		GridItem,
-		// Token: 0x0402ED72 RID: 191858
+		// Token: 0x0402A46C RID: 173164
 		HideUiToggle,
-		// Token: 0x0402ED73 RID: 191859
+		// Token: 0x0402A46D RID: 173165
 		ConfirmBtn,
-		// Token: 0x0402ED74 RID: 191860
+		// Token: 0x0402A46E RID: 173166
 		ObtainLayout,
-		// Token: 0x0402ED75 RID: 191861
+		// Token: 0x0402A46F RID: 173167
 		ObtainItem,
-		// Token: 0x0402ED76 RID: 191862
+		// Token: 0x0402A470 RID: 173168
 		CalabashName,
-		// Token: 0x0402ED77 RID: 191863
+		// Token: 0x0402A471 RID: 173169
 		CalabashDesc,
-		// Token: 0x0402ED78 RID: 191864
+		// Token: 0x0402A472 RID: 173170
 		Draggable
 	}
 }

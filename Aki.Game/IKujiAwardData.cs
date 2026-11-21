@@ -1,21 +1,21 @@
 ﻿using System;
 
-// Token: 0x02001433 RID: 5171
+// Token: 0x020008E7 RID: 2279
 public interface IKujiAwardData
 {
-	// Token: 0x17000CCB RID: 3275
-	// (get) Token: 0x06009203 RID: 37379
+	// Token: 0x17000CEB RID: 3307
+	// (get) Token: 0x06006598 RID: 26008
 	int ItemId { get; }
 
-	// Token: 0x17000CCC RID: 3276
-	// (get) Token: 0x06009204 RID: 37380
+	// Token: 0x17000CEC RID: 3308
+	// (get) Token: 0x06006599 RID: 26009
 	int Count { get; }
 
-	// Token: 0x17000CCD RID: 3277
-	// (get) Token: 0x06009205 RID: 37381
+	// Token: 0x17000CED RID: 3309
+	// (get) Token: 0x0600659A RID: 26010
 	int Times { get; }
 
-	// Token: 0x17000CCE RID: 3278
-	// (get) Token: 0x06009206 RID: 37382
+	// Token: 0x17000CEE RID: 3310
+	// (get) Token: 0x0600659B RID: 26011
 	int Rare { get; }
 }

@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x020060A1 RID: 24737
+	// Token: 0x0200501F RID: 20511
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +19,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 	})]
 	public class ProgressItem : GridProxyAbstract<Spring25InfoProgressData>
 	{
-		// Token: 0x17009098 RID: 37016
-		// (get) Token: 0x0603E87E RID: 256126 RVA: 0x00F1D1C8 File Offset: 0x00F1B3C8
-		// (set) Token: 0x0603E87F RID: 256127 RVA: 0x00F1D1D0 File Offset: 0x00F1B3D0
+		// Token: 0x170063FA RID: 25594
+		// (get) Token: 0x06033542 RID: 210242 RVA: 0x00E63F8C File Offset: 0x00E6218C
+		// (set) Token: 0x06033543 RID: 210243 RVA: 0x00E63F94 File Offset: 0x00E62194
 		private UiSequencePlayer Player { get; set; }
 
-		// Token: 0x0603E880 RID: 256128 RVA: 0x00F1D1DC File Offset: 0x00F1B3DC
+		// Token: 0x06033544 RID: 210244 RVA: 0x00E63FA0 File Offset: 0x00E621A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E881 RID: 256129 RVA: 0x00F1D248 File Offset: 0x00F1B448
+		// Token: 0x06033545 RID: 210245 RVA: 0x00E6400C File Offset: 0x00E6220C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ProgressItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E882 RID: 256130 RVA: 0x00F1D28B File Offset: 0x00F1B48B
+		// Token: 0x06033546 RID: 210246 RVA: 0x00E6404F File Offset: 0x00E6224F
 		public override void Refresh(Spring25InfoProgressData data, bool isSelected, int gridIndex)
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			texture2.SetUIActive(data.IsLight);
 		}
 
-		// Token: 0x0603E883 RID: 256131 RVA: 0x00F1D2C0 File Offset: 0x00F1B4C0
+		// Token: 0x06033547 RID: 210247 RVA: 0x00E64084 File Offset: 0x00E62284
 		public UniTask PlayBlinkAsync()
 		{
 			ProgressItem.<PlayBlinkAsync>d__8 <PlayBlinkAsync>d__;
@@ -76,14 +76,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <PlayBlinkAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200C2FC RID: 49916
+		// Token: 0x0200ACE7 RID: 44263
 		[NullableContext(0)]
 		private class EProgressComponent
 		{
-			// Token: 0x0403AE0E RID: 241166
+			// Token: 0x04035776 RID: 218998
 			public const int OffTexture = 0;
 
-			// Token: 0x0403AE0F RID: 241167
+			// Token: 0x04035777 RID: 218999
 			public const int OnTexture = 1;
 		}
 	}

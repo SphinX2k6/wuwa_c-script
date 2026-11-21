@@ -9,12 +9,12 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.NewWorld.SceneItem.RefCompController;
 using UnrealEngine;
 
-// Token: 0x02003151 RID: 12625
+// Token: 0x020026BE RID: 9918
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillBehaviorAction
 {
-	// Token: 0x0601B2B8 RID: 111288 RVA: 0x0076535C File Offset: 0x0076355C
+	// Token: 0x06018DBD RID: 101821 RVA: 0x0078CD20 File Offset: 0x0078AF20
 	public static void BeginGroup(TArray<SSkillBehaviorAction> skillBehaviorActionGroup, IBeginSkillBehaviorActionParam param)
 	{
 		if (!param.Entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy)
@@ -27,7 +27,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2B9 RID: 111289 RVA: 0x0076539C File Offset: 0x0076359C
+	// Token: 0x06018DBE RID: 101822 RVA: 0x0078CD60 File Offset: 0x0078AF60
 	public unsafe static void Begin(SSkillBehaviorAction skillBehaviorAction, IBeginSkillBehaviorActionParam param)
 	{
 		CombatLog.ELogType logType = CombatLog.ELogType.Debug;
@@ -104,13 +104,13 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2BA RID: 111290 RVA: 0x007655B0 File Offset: 0x007637B0
+	// Token: 0x06018DBF RID: 101823 RVA: 0x0078CF74 File Offset: 0x0078B174
 	private static void BatchCreate(Entity owner, TSoftObjectPtr<UPrimaryDataAsset> conf, int skillId)
 	{
 		SkillBehaviorBatchBulletTask.Create(owner, conf, skillId).StartAsync();
 	}
 
-	// Token: 0x0601B2BB RID: 111291 RVA: 0x007655C0 File Offset: 0x007637C0
+	// Token: 0x06018DC0 RID: 101824 RVA: 0x0078CF84 File Offset: 0x0078B184
 	public unsafe static void End(Skill skill)
 	{
 		List<EndSkillBehaviorParam> list;
@@ -189,7 +189,7 @@ public class SkillBehaviorAction
 		SkillBehaviorMisc.ParamMap.Remove(skill);
 	}
 
-	// Token: 0x0601B2BC RID: 111292 RVA: 0x007658B4 File Offset: 0x00763AB4
+	// Token: 0x06018DC1 RID: 101825 RVA: 0x0078D278 File Offset: 0x0078B478
 	public unsafe static FVectorDouble CalculateLocation(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		CharacterActorComponent component = param.Entity.GetComponent<CharacterActorComponent>();
@@ -731,7 +731,7 @@ public class SkillBehaviorAction
 		return vector.ToUeVector(false);
 	}
 
-	// Token: 0x0601B2BD RID: 111293 RVA: 0x007666F0 File Offset: 0x007648F0
+	// Token: 0x06018DC2 RID: 101826 RVA: 0x0078E0B4 File Offset: 0x0078C2B4
 	private static void SetLocation(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		FVectorDouble value = SkillBehaviorAction.CalculateLocation(action, param);
@@ -749,7 +749,7 @@ public class SkillBehaviorAction
 		component.SetActorLocation(value, "SkillBehaviorAction.SetLocation.Final", false);
 	}
 
-	// Token: 0x0601B2BE RID: 111294 RVA: 0x00766768 File Offset: 0x00764968
+	// Token: 0x06018DC3 RID: 101827 RVA: 0x0078E12C File Offset: 0x0078C32C
 	public static FRotator CalculateRotation(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		global::Vector vector = null;
@@ -889,7 +889,7 @@ public class SkillBehaviorAction
 		return SkillBehaviorAction.TmpRotator.ToUeRotator();
 	}
 
-	// Token: 0x0601B2BF RID: 111295 RVA: 0x00766A0C File Offset: 0x00764C0C
+	// Token: 0x06018DC4 RID: 101828 RVA: 0x0078E3D0 File Offset: 0x0078C5D0
 	private static void SetRotation(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		BaseActorComponent component = param.Entity.GetComponent<CharacterActorComponent>();
@@ -903,7 +903,7 @@ public class SkillBehaviorAction
 		component.SetActorRotation(frotator, "SkillBehaviorAction.SetDirection", false);
 	}
 
-	// Token: 0x0601B2C0 RID: 111296 RVA: 0x00766A64 File Offset: 0x00764C64
+	// Token: 0x06018DC5 RID: 101829 RVA: 0x0078E428 File Offset: 0x0078C628
 	private static void PlayEffect(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		CharacterGameplayCueComponent component = param.Entity.GetComponent<CharacterGameplayCueComponent>();
@@ -926,7 +926,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2C1 RID: 111297 RVA: 0x00766B18 File Offset: 0x00764D18
+	// Token: 0x06018DC6 RID: 101830 RVA: 0x0078E4DC File Offset: 0x0078C6DC
 	private static void CreateBullet(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		for (int i = 0; i < action.Bullets.Num(); i++)
@@ -967,7 +967,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2C2 RID: 111298 RVA: 0x00766CD0 File Offset: 0x00764ED0
+	// Token: 0x06018DC7 RID: 101831 RVA: 0x0078E694 File Offset: 0x0078C894
 	private static void CameraModify(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		if (!CameraUtility.CheckApplyCameraModifyCondition(CreatureModel.Instance.GetEntityById(param.Entity.Id), action.CameraModifierSettings, action.CameraEffectiveClientType, action.CameraModifierConditions))
@@ -977,13 +977,13 @@ public class SkillBehaviorAction
 		CameraController.Instance.MainModel.FightCamera.LogicComponent.ApplyCameraModify(new FGameplayTag?(action.Tag), action.Duration, action.BlendInTime, action.BlendOutTime, action.CameraModifierSettings, null, action.BreakBlendOutTime, action.BlendInCurve, action.BlendOutCurve, default(OneOf<TsBaseCharacter, TsBaseVehicle>), action.CameraAttachSocket.ToString(), default(OneOf<TsBaseCharacter, TsBaseVehicle>));
 	}
 
-	// Token: 0x0601B2C3 RID: 111299 RVA: 0x00766D88 File Offset: 0x00764F88
+	// Token: 0x06018DC8 RID: 101832 RVA: 0x0078E74C File Offset: 0x0078C94C
 	private static void CameraSequence(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		CameraController.Instance.MainModel.SequenceCamera.PlayerComponent.PlayCameraSequence(action.CameraSequenceSettings, action.ResetLockOnCamera, action.AdditiveRotation, param.Entity.GetComponent<CharacterActorComponent>().Actor, action.CameraAttachSocket, action.CameraDetectSocket, action.ExtraSphereLocation, action.ExtraDetectSphereRadius, action.IsShowExtraSphere, false, true, true, false, false, null, new int?(param.Entity.Id), new long?((long)param.Skill.SkillId));
 	}
 
-	// Token: 0x0601B2C4 RID: 111300 RVA: 0x00766E18 File Offset: 0x00765018
+	// Token: 0x06018DC9 RID: 101833 RVA: 0x0078E7DC File Offset: 0x0078C9DC
 	private static void SetMovementMode(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		param.Entity.GetComponent<CharacterActorComponent>().Actor.KuroSetMovementMode(new SetMovementModeInfo
@@ -999,7 +999,7 @@ public class SkillBehaviorAction
 		});
 	}
 
-	// Token: 0x0601B2C5 RID: 111301 RVA: 0x00766EA4 File Offset: 0x007650A4
+	// Token: 0x06018DCA RID: 101834 RVA: 0x0078E868 File Offset: 0x0078CA68
 	private static void SetCollision(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		UCapsuleComponent capsuleComponent = param.Entity.GetComponent<CharacterActorComponent>().Actor.CapsuleComponent;
@@ -1020,7 +1020,7 @@ public class SkillBehaviorAction
 		capsuleComponent.SetCollisionResponseToChannel(action.CollisionChannel, action.CollisionResponse);
 	}
 
-	// Token: 0x0601B2C6 RID: 111302 RVA: 0x00766F58 File Offset: 0x00765158
+	// Token: 0x06018DCB RID: 101835 RVA: 0x0078E91C File Offset: 0x0078CB1C
 	private static void UseSummonSkill(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(param.Entity, ESummonType.ConcomitantCustom, action.FollowIndex);
@@ -1048,7 +1048,7 @@ public class SkillBehaviorAction
 		baseSkillComponent.BeginSkill(summonSkillId, skillParam);
 	}
 
-	// Token: 0x0601B2C7 RID: 111303 RVA: 0x00767014 File Offset: 0x00765214
+	// Token: 0x06018DCC RID: 101836 RVA: 0x0078E9D8 File Offset: 0x0078CBD8
 	private static void Buff(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		CharacterBuffComponent characterBuffComponent = null;
@@ -1094,7 +1094,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2C8 RID: 111304 RVA: 0x00767110 File Offset: 0x00765310
+	// Token: 0x06018DCD RID: 101837 RVA: 0x0078EAD4 File Offset: 0x0078CCD4
 	private static void Tag(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		BaseTagComponent component = EntitySystem.Instance.GetComponent<BaseTagComponent>(param.Entity.Id);
@@ -1109,7 +1109,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2C9 RID: 111305 RVA: 0x00767190 File Offset: 0x00765390
+	// Token: 0x06018DCE RID: 101838 RVA: 0x0078EB54 File Offset: 0x0078CD54
 	private static void ExitWeakTime(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		BaseDamageComponent component = EntitySystem.Instance.GetComponent<BaseDamageComponent>(param.Entity.Id);
@@ -1119,7 +1119,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2CA RID: 111306 RVA: 0x007671C4 File Offset: 0x007653C4
+	// Token: 0x06018DCF RID: 101839 RVA: 0x0078EB88 File Offset: 0x0078CD88
 	private static void PlaySkillMontage(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		BaseSkillComponent component = EntitySystem.Instance.GetComponent<BaseSkillComponent>(param.Entity.Id);
@@ -1129,7 +1129,7 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0601B2CB RID: 111307 RVA: 0x00767214 File Offset: 0x00765414
+	// Token: 0x06018DD0 RID: 101840 RVA: 0x0078EBD8 File Offset: 0x0078CDD8
 	private static void UpdateCustomValue(SSkillBehaviorAction action, IBeginSkillBehaviorActionParam param)
 	{
 		CharacterCustomValueComponent component = EntitySystem.Instance.GetComponent<CharacterCustomValueComponent>(param.Entity.Id);
@@ -1145,47 +1145,47 @@ public class SkillBehaviorAction
 		}
 	}
 
-	// Token: 0x0400D379 RID: 54137
+	// Token: 0x0400D7DC RID: 55260
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnCalculateLocation = Stat.Create("[SkillBehaviorAction]CalculateLocation", "", "");
 
-	// Token: 0x0400D37A RID: 54138
+	// Token: 0x0400D7DD RID: 55261
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnCalculateRotation = Stat.Create("[SkillBehaviorAction]CalculateRotation", "", "");
 
-	// Token: 0x0400D37B RID: 54139
+	// Token: 0x0400D7DE RID: 55262
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnSetLocation = Stat.Create("[SkillBehaviorAction]SetLocation", "", "");
 
-	// Token: 0x0400D37C RID: 54140
+	// Token: 0x0400D7DF RID: 55263
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnSetRotation = Stat.Create("[SkillBehaviorAction]SetRotation", "", "");
 
-	// Token: 0x0400D37D RID: 54141
+	// Token: 0x0400D7E0 RID: 55264
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnPlayEffect = Stat.Create("[SkillBehaviorAction]PlayEffect", "", "");
 
-	// Token: 0x0400D37E RID: 54142
+	// Token: 0x0400D7E1 RID: 55265
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnCreateBullet = Stat.Create("[SkillBehaviorAction]CreateBullet", "", "");
 
-	// Token: 0x0400D37F RID: 54143
+	// Token: 0x0400D7E2 RID: 55266
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnCamera = Stat.Create("[SkillBehaviorAction]Camera", "", "");
 
-	// Token: 0x0400D380 RID: 54144
+	// Token: 0x0400D7E3 RID: 55267
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnBatchCreate = Stat.Create("[SkillBehaviorAction]BatchCreate", "", "");
 
-	// Token: 0x0400D381 RID: 54145
+	// Token: 0x0400D7E4 RID: 55268
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400D382 RID: 54146
+	// Token: 0x0400D7E5 RID: 55269
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D383 RID: 54147
+	// Token: 0x0400D7E6 RID: 55270
 	[StaticVariableRuleIgnore]
 	private static readonly global::Rotator TmpRotator = global::Rotator.Create();
 }

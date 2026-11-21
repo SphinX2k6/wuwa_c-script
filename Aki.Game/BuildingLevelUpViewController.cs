@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020012F4 RID: 4852
+// Token: 0x020007A8 RID: 1960
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingLevelUpViewController
 {
-	// Token: 0x06008637 RID: 34359 RVA: 0x001C9F81 File Offset: 0x001C8181
+	// Token: 0x060059D2 RID: 22994 RVA: 0x001D2DED File Offset: 0x001D0FED
 	public void RegisterView(BuildingLevelUpView view)
 	{
 		this.View = view;
 		this.Model = (BuildingLevelUpViewModel)view.OpenParam;
 	}
 
-	// Token: 0x06008638 RID: 34360 RVA: 0x001C9F9C File Offset: 0x001C819C
+	// Token: 0x060059D3 RID: 22995 RVA: 0x001D2E08 File Offset: 0x001D1008
 	public void Start()
 	{
 		if (!this.Model.IsLevelUp)
@@ -29,7 +29,7 @@ public class BuildingLevelUpViewController
 		this.View.UiViewSequence.StartSequenceName = "LevelUp";
 	}
 
-	// Token: 0x06008639 RID: 34361 RVA: 0x001CA030 File Offset: 0x001C8230
+	// Token: 0x060059D4 RID: 22996 RVA: 0x001D2E9C File Offset: 0x001D109C
 	public void UnlockPress()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.View.UiViewSequence;
@@ -45,7 +45,7 @@ public class BuildingLevelUpViewController
 		this.IsUnlockPress = true;
 	}
 
-	// Token: 0x0600863A RID: 34362 RVA: 0x001CA098 File Offset: 0x001C8298
+	// Token: 0x060059D5 RID: 22997 RVA: 0x001D2F04 File Offset: 0x001D1104
 	public void UnlockRelease()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.View.UiViewSequence;
@@ -56,7 +56,7 @@ public class BuildingLevelUpViewController
 		this.IsUnlockPress = false;
 	}
 
-	// Token: 0x0600863B RID: 34363 RVA: 0x001CA0D0 File Offset: 0x001C82D0
+	// Token: 0x060059D6 RID: 22998 RVA: 0x001D2F3C File Offset: 0x001D113C
 	public void CloseSelf()
 	{
 		if (!this.Model.IsLevelUp)
@@ -86,7 +86,7 @@ public class BuildingLevelUpViewController
 		MoonChasingBuildingModel.Instance.SetPopularityUpData(null);
 	}
 
-	// Token: 0x0600863C RID: 34364 RVA: 0x001CA150 File Offset: 0x001C8350
+	// Token: 0x060059D7 RID: 22999 RVA: 0x001D2FBC File Offset: 0x001D11BC
 	public void Tick(float delta)
 	{
 		if (this.Model.IsLevelUp)
@@ -120,21 +120,21 @@ public class BuildingLevelUpViewController
 		}
 	}
 
-	// Token: 0x04003C1C RID: 15388
+	// Token: 0x04003CB4 RID: 15540
 	private const int ADD_STEP = 800;
 
-	// Token: 0x04003C1D RID: 15389
+	// Token: 0x04003CB5 RID: 15541
 	private const int REDUCE_STEP = 800;
 
-	// Token: 0x04003C1E RID: 15390
+	// Token: 0x04003CB6 RID: 15542
 	private BuildingLevelUpView View;
 
-	// Token: 0x04003C1F RID: 15391
+	// Token: 0x04003CB7 RID: 15543
 	private BuildingLevelUpViewModel Model;
 
-	// Token: 0x04003C20 RID: 15392
+	// Token: 0x04003CB8 RID: 15544
 	private bool IsUnlockPress;
 
-	// Token: 0x04003C21 RID: 15393
+	// Token: 0x04003CB9 RID: 15545
 	private float FillAmount;
 }

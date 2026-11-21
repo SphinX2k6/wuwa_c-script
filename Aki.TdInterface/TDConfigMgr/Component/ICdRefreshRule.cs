@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000229 RID: 553
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000250 RID: 592
 	public class ICdRefreshRule : IRefreshRule
 	{
-		// Token: 0x060009A2 RID: 2466 RVA: 0x000299C8 File Offset: 0x00027BC8
+		// Token: 0x06000A16 RID: 2582 RVA: 0x0002B188 File Offset: 0x00029388
 		private ICdRefreshRule_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060009A3 RID: 2467 RVA: 0x00029A00 File Offset: 0x00027C00
+		// Token: 0x06000A17 RID: 2583 RVA: 0x0002B1C0 File Offset: 0x000293C0
 		public static ICdRefreshRule Create([Nullable(2)] ICdRefreshRule instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009A4 RID: 2468 RVA: 0x00029A13 File Offset: 0x00027C13
+		// Token: 0x06000A18 RID: 2584 RVA: 0x0002B1D3 File Offset: 0x000293D3
 		public static ICdRefreshRule CreateFromSetValue([Nullable(2)] ICdRefreshRule_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060009A5 RID: 2469 RVA: 0x00029A26 File Offset: 0x00027C26
+		// Token: 0x06000A19 RID: 2585 RVA: 0x0002B1E6 File Offset: 0x000293E6
 		public new ICdRefreshRule_SetValue ToSetValue()
 		{
 			return new ICdRefreshRule_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002F1 RID: 753
-		// (get) Token: 0x060009A6 RID: 2470 RVA: 0x00029A45 File Offset: 0x00027C45
-		// (set) Token: 0x060009A7 RID: 2471 RVA: 0x00029A70 File Offset: 0x00027C70
+		// Token: 0x17000310 RID: 784
+		// (get) Token: 0x06000A1A RID: 2586 RVA: 0x0002B205 File Offset: 0x00029405
+		// (set) Token: 0x06000A1B RID: 2587 RVA: 0x0002B230 File Offset: 0x00029430
 		public override ERefreshRule Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002F2 RID: 754
-		// (get) Token: 0x060009A8 RID: 2472 RVA: 0x00029A7E File Offset: 0x00027C7E
-		// (set) Token: 0x060009A9 RID: 2473 RVA: 0x00029AA9 File Offset: 0x00027CA9
+		// Token: 0x17000311 RID: 785
+		// (get) Token: 0x06000A1C RID: 2588 RVA: 0x0002B23E File Offset: 0x0002943E
+		// (set) Token: 0x06000A1D RID: 2589 RVA: 0x0002B269 File Offset: 0x00029469
 		public virtual int Cd
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009ED RID: 2541
+		// Token: 0x04000A77 RID: 2679
 		[Nullable(2)]
 		protected new ICdRefreshRule FbInstance;
 
-		// Token: 0x040009EE RID: 2542
+		// Token: 0x04000A78 RID: 2680
 		[Nullable(2)]
 		protected new ICdRefreshRule_SetValue PocoInterface;
 	}

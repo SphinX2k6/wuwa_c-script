@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BFE RID: 7166
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DED RID: 7661
 	public class IMontageAsset : IMontageConfig
 	{
-		// Token: 0x06009975 RID: 39285 RVA: 0x001611CC File Offset: 0x0015F3CC
+		// Token: 0x0600A2A5 RID: 41637 RVA: 0x00174118 File Offset: 0x00172318
 		private IMontageAsset_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009976 RID: 39286 RVA: 0x00161204 File Offset: 0x0015F404
+		// Token: 0x0600A2A6 RID: 41638 RVA: 0x00174150 File Offset: 0x00172350
 		public static IMontageAsset Create([Nullable(2)] IMontageAsset instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009977 RID: 39287 RVA: 0x00161217 File Offset: 0x0015F417
+		// Token: 0x0600A2A7 RID: 41639 RVA: 0x00174163 File Offset: 0x00172363
 		public static IMontageAsset CreateFromSetValue([Nullable(2)] IMontageAsset_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009978 RID: 39288 RVA: 0x0016122A File Offset: 0x0015F42A
+		// Token: 0x0600A2A8 RID: 41640 RVA: 0x00174176 File Offset: 0x00172376
 		public new IMontageAsset_SetValue ToSetValue()
 		{
 			return new IMontageAsset_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003014 RID: 12308
-		// (get) Token: 0x06009979 RID: 39289 RVA: 0x00161249 File Offset: 0x0015F449
-		// (set) Token: 0x0600997A RID: 39290 RVA: 0x00161274 File Offset: 0x0015F474
+		// Token: 0x1700327D RID: 12925
+		// (get) Token: 0x0600A2A9 RID: 41641 RVA: 0x00174195 File Offset: 0x00172395
+		// (set) Token: 0x0600A2AA RID: 41642 RVA: 0x001741C0 File Offset: 0x001723C0
 		public override EMontageConfigType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003015 RID: 12309
-		// (get) Token: 0x0600997B RID: 39291 RVA: 0x00161282 File Offset: 0x0015F482
-		// (set) Token: 0x0600997C RID: 39292 RVA: 0x001612AD File Offset: 0x0015F4AD
+		// Token: 0x1700327E RID: 12926
+		// (get) Token: 0x0600A2AB RID: 41643 RVA: 0x001741CE File Offset: 0x001723CE
+		// (set) Token: 0x0600A2AC RID: 41644 RVA: 0x001741F9 File Offset: 0x001723F9
 		public virtual string Asset
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D6B RID: 23915
+		// Token: 0x04006292 RID: 25234
 		[Nullable(2)]
 		protected new IMontageAsset FbInstance;
 
-		// Token: 0x04005D6C RID: 23916
+		// Token: 0x04006293 RID: 25235
 		[Nullable(2)]
 		protected new IMontageAsset_SetValue PocoInterface;
 	}

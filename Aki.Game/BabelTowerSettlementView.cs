@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001189 RID: 4489
+// Token: 0x0200063D RID: 1597
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerSettlementView : UiViewBase
 {
-	// Token: 0x060076B1 RID: 30385 RVA: 0x0018B337 File Offset: 0x00189537
+	// Token: 0x06004A48 RID: 19016 RVA: 0x00193EE7 File Offset: 0x001920E7
 	public BabelTowerSettlementView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060076B2 RID: 30386 RVA: 0x0018B340 File Offset: 0x00189540
+	// Token: 0x06004A49 RID: 19017 RVA: 0x00193EF0 File Offset: 0x001920F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 24;
@@ -93,14 +93,14 @@ public class BabelTowerSettlementView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060076B3 RID: 30387 RVA: 0x0018B739 File Offset: 0x00189939
+	// Token: 0x06004A4A RID: 19018 RVA: 0x001942E9 File Offset: 0x001924E9
 	protected override void OnBeforeCreate()
 	{
 		this.GachaSequence = new UiBehaviorGachaSequence();
 		base.AddUiBehavior(this.GachaSequence);
 	}
 
-	// Token: 0x060076B4 RID: 30388 RVA: 0x0018B754 File Offset: 0x00189954
+	// Token: 0x06004A4B RID: 19019 RVA: 0x00194304 File Offset: 0x00192504
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerSettlementView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -111,7 +111,7 @@ public class BabelTowerSettlementView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060076B5 RID: 30389 RVA: 0x0018B798 File Offset: 0x00189998
+	// Token: 0x06004A4C RID: 19020 RVA: 0x00194348 File Offset: 0x00192548
 	protected override void OnHandleLoadScene()
 	{
 		this.SceneSequenceCamera = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("SceneCamera1").Value, ECollectActorType.Default);
@@ -124,31 +124,31 @@ public class BabelTowerSettlementView : UiViewBase
 		this.GachaSequence.BindUpdateInteractBp(this.UpdateInteractBp);
 	}
 
-	// Token: 0x060076B6 RID: 30390 RVA: 0x0018B81C File Offset: 0x00189A1C
+	// Token: 0x06004A4D RID: 19021 RVA: 0x001943CC File Offset: 0x001925CC
 	protected override void OnBeforeShow()
 	{
 		this.TryPlayRoleSequence();
 	}
 
-	// Token: 0x060076B7 RID: 30391 RVA: 0x0018B824 File Offset: 0x00189A24
+	// Token: 0x06004A4E RID: 19022 RVA: 0x001943D4 File Offset: 0x001925D4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnFirstShare, new Action(this.OnRewardShare));
 	}
 
-	// Token: 0x060076B8 RID: 30392 RVA: 0x0018B842 File Offset: 0x00189A42
+	// Token: 0x06004A4F RID: 19023 RVA: 0x001943F2 File Offset: 0x001925F2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFirstShare, new Action(this.OnRewardShare));
 	}
 
-	// Token: 0x060076B9 RID: 30393 RVA: 0x0018B860 File Offset: 0x00189A60
+	// Token: 0x06004A50 RID: 19024 RVA: 0x00194410 File Offset: 0x00192610
 	private static bool IsRankImproved(int oldRank, int newRank)
 	{
 		return newRank > 0 && (oldRank <= 0 || newRank < oldRank);
 	}
 
-	// Token: 0x060076BA RID: 30394 RVA: 0x0018B872 File Offset: 0x00189A72
+	// Token: 0x06004A51 RID: 19025 RVA: 0x00194422 File Offset: 0x00192622
 	private BabelTowerSettlementDeTermLayoutItem CreateDeTermLayoutItem()
 	{
 		return new BabelTowerSettlementDeTermLayoutItem
@@ -157,19 +157,19 @@ public class BabelTowerSettlementView : UiViewBase
 		};
 	}
 
-	// Token: 0x060076BB RID: 30395 RVA: 0x0018B891 File Offset: 0x00189A91
+	// Token: 0x06004A52 RID: 19026 RVA: 0x00194441 File Offset: 0x00192641
 	private BabelTowerSettlementRoleItem CreateRoleItem()
 	{
 		return new BabelTowerSettlementRoleItem();
 	}
 
-	// Token: 0x060076BC RID: 30396 RVA: 0x0018B898 File Offset: 0x00189A98
+	// Token: 0x06004A53 RID: 19027 RVA: 0x00194448 File Offset: 0x00192648
 	private void OnShareButtonClick()
 	{
 		this.OpenShareView();
 	}
 
-	// Token: 0x060076BD RID: 30397 RVA: 0x0018B8A0 File Offset: 0x00189AA0
+	// Token: 0x06004A54 RID: 19028 RVA: 0x00194450 File Offset: 0x00192650
 	private void OpenShareView()
 	{
 		UiAsyncTask task = new UiAsyncTask("OpenShareView", delegate()
@@ -184,7 +184,7 @@ public class BabelTowerSettlementView : UiViewBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060076BE RID: 30398 RVA: 0x0018B8D0 File Offset: 0x00189AD0
+	// Token: 0x06004A55 RID: 19029 RVA: 0x00194480 File Offset: 0x00192680
 	private UniTask WaitFrame()
 	{
 		BabelTowerSettlementView.<WaitFrame>d__25 <WaitFrame>d__;
@@ -194,7 +194,7 @@ public class BabelTowerSettlementView : UiViewBase
 		return <WaitFrame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060076BF RID: 30399 RVA: 0x0018B90C File Offset: 0x00189B0C
+	// Token: 0x06004A56 RID: 19030 RVA: 0x001944BC File Offset: 0x001926BC
 	private UniTask OpenShareViewAsync()
 	{
 		BabelTowerSettlementView.<OpenShareViewAsync>d__26 <OpenShareViewAsync>d__;
@@ -205,7 +205,7 @@ public class BabelTowerSettlementView : UiViewBase
 		return <OpenShareViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060076C0 RID: 30400 RVA: 0x0018B950 File Offset: 0x00189B50
+	// Token: 0x06004A57 RID: 19031 RVA: 0x00194500 File Offset: 0x00192700
 	private void OnConfirmButtonClick()
 	{
 		BabelTowerHardLevelChoseViewData param = new BabelTowerHardLevelChoseViewData
@@ -217,7 +217,7 @@ public class BabelTowerSettlementView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060076C1 RID: 30401 RVA: 0x0018B98C File Offset: 0x00189B8C
+	// Token: 0x06004A58 RID: 19032 RVA: 0x0019453C File Offset: 0x0019273C
 	private void OnBuff1ButtonClick()
 	{
 		BabelTowerItemInfoViewInfo babelTowerItemInfoViewInfo = new BabelTowerItemInfoViewInfo();
@@ -240,7 +240,7 @@ public class BabelTowerSettlementView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x060076C2 RID: 30402 RVA: 0x0018B9FC File Offset: 0x00189BFC
+	// Token: 0x06004A59 RID: 19033 RVA: 0x001945AC File Offset: 0x001927AC
 	private void OnBuff2ButtonClick()
 	{
 		BabelTowerItemInfoViewInfo babelTowerItemInfoViewInfo = new BabelTowerItemInfoViewInfo();
@@ -263,13 +263,13 @@ public class BabelTowerSettlementView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x060076C3 RID: 30403 RVA: 0x0018BA6B File Offset: 0x00189C6B
+	// Token: 0x06004A5A RID: 19034 RVA: 0x0019461B File Offset: 0x0019281B
 	private void OnRewardShare()
 	{
 		this.RefreshShareRewardTip();
 	}
 
-	// Token: 0x060076C4 RID: 30404 RVA: 0x0018BA74 File Offset: 0x00189C74
+	// Token: 0x06004A5B RID: 19035 RVA: 0x00194624 File Offset: 0x00192824
 	public UniTask RefreshAsync()
 	{
 		BabelTowerSettlementView.<RefreshAsync>d__31 <RefreshAsync>d__;
@@ -280,7 +280,7 @@ public class BabelTowerSettlementView : UiViewBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060076C5 RID: 30405 RVA: 0x0018BAB8 File Offset: 0x00189CB8
+	// Token: 0x06004A5C RID: 19036 RVA: 0x00194668 File Offset: 0x00192868
 	private void RefreshShareRewardTip()
 	{
 		if (this.ShareId <= 0)
@@ -316,7 +316,7 @@ public class BabelTowerSettlementView : UiViewBase
 		}
 	}
 
-	// Token: 0x060076C6 RID: 30406 RVA: 0x0018BBB0 File Offset: 0x00189DB0
+	// Token: 0x06004A5D RID: 19037 RVA: 0x00194760 File Offset: 0x00192960
 	public void SetShareState(bool showShareBtn)
 	{
 		UUIButtonComponent button = base.GetButton(17);
@@ -336,7 +336,7 @@ public class BabelTowerSettlementView : UiViewBase
 		item.SetUIActive(showShareBtn);
 	}
 
-	// Token: 0x060076C7 RID: 30407 RVA: 0x0018BBF7 File Offset: 0x00189DF7
+	// Token: 0x06004A5E RID: 19038 RVA: 0x001947A7 File Offset: 0x001929A7
 	protected void TryPlayRoleSequence()
 	{
 		if (this.IsPlayingRoleSequence)
@@ -347,11 +347,11 @@ public class BabelTowerSettlementView : UiViewBase
 		this.GachaSequence.PlayRoleSequence(this.SequenceRoleId, 0);
 	}
 
-	// Token: 0x04003672 RID: 13938
+	// Token: 0x0400370B RID: 14091
 	[Nullable(2)]
 	private IBabelTowerSettlementViewData Data;
 
-	// Token: 0x04003673 RID: 13939
+	// Token: 0x0400370C RID: 14092
 	[Nullable(new byte[]
 	{
 		2,
@@ -360,7 +360,7 @@ public class BabelTowerSettlementView : UiViewBase
 	})]
 	private GenericLayout<BabelTowerSettlementDeTermLayoutItem, int[]> DeTermLayout;
 
-	// Token: 0x04003674 RID: 13940
+	// Token: 0x0400370D RID: 14093
 	[Nullable(new byte[]
 	{
 		2,
@@ -368,106 +368,106 @@ public class BabelTowerSettlementView : UiViewBase
 	})]
 	private GenericLayout<BabelTowerSettlementRoleItem, int> RoleLayout;
 
-	// Token: 0x04003675 RID: 13941
+	// Token: 0x0400370E RID: 14094
 	private UiBehaviorGachaSequence GachaSequence;
 
-	// Token: 0x04003676 RID: 13942
+	// Token: 0x0400370F RID: 14095
 	[Nullable(2)]
 	private AActor SceneSequenceCamera;
 
-	// Token: 0x04003677 RID: 13943
+	// Token: 0x04003710 RID: 14096
 	[Nullable(2)]
 	private BP_UpdateInteract_C UpdateInteractBp;
 
-	// Token: 0x04003678 RID: 13944
+	// Token: 0x04003711 RID: 14097
 	private bool IsPlayingRoleSequence;
 
-	// Token: 0x04003679 RID: 13945
+	// Token: 0x04003712 RID: 14098
 	private FMargin? OddLinePadding;
 
-	// Token: 0x0400367A RID: 13946
+	// Token: 0x04003713 RID: 14099
 	private FMargin? EvenLinePadding;
 
-	// Token: 0x0400367B RID: 13947
+	// Token: 0x04003714 RID: 14100
 	private int SequenceRoleId;
 
-	// Token: 0x0400367C RID: 13948
+	// Token: 0x04003715 RID: 14101
 	private int ShareId;
 
-	// Token: 0x02007765 RID: 30565
+	// Token: 0x020068F2 RID: 26866
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402761C RID: 161308
+		// Token: 0x04022955 RID: 141653
 		public const int StarNumText = 0;
 
-		// Token: 0x0402761D RID: 161309
+		// Token: 0x04022956 RID: 141654
 		public const int DifficultySprite = 1;
 
-		// Token: 0x0402761E RID: 161310
+		// Token: 0x04022957 RID: 141655
 		public const int DifficultyText = 2;
 
-		// Token: 0x0402761F RID: 161311
+		// Token: 0x04022958 RID: 141656
 		public const int DungeonNameText = 3;
 
-		// Token: 0x04027620 RID: 161312
+		// Token: 0x04022959 RID: 141657
 		public const int DungeonSubTitleText = 4;
 
-		// Token: 0x04027621 RID: 161313
+		// Token: 0x0402295A RID: 141658
 		public const int PassTimeText = 5;
 
-		// Token: 0x04027622 RID: 161314
+		// Token: 0x0402295B RID: 141659
 		public const int NoneBuffItem = 6;
 
-		// Token: 0x04027623 RID: 161315
+		// Token: 0x0402295C RID: 141660
 		public const int FirstBuffIconTexture = 7;
 
-		// Token: 0x04027624 RID: 161316
+		// Token: 0x0402295D RID: 141661
 		public const int SecondBuffIconTexture = 8;
 
-		// Token: 0x04027625 RID: 161317
+		// Token: 0x0402295E RID: 141662
 		public const int DeTermVerticalLayout = 9;
 
-		// Token: 0x04027626 RID: 161318
+		// Token: 0x0402295F RID: 141663
 		public const int OddLineHorizontalLayout = 10;
 
-		// Token: 0x04027627 RID: 161319
+		// Token: 0x04022960 RID: 141664
 		public const int EvenLineHorizontalLayout = 11;
 
-		// Token: 0x04027628 RID: 161320
+		// Token: 0x04022961 RID: 141665
 		public const int DeTermItem = 12;
 
-		// Token: 0x04027629 RID: 161321
+		// Token: 0x04022962 RID: 141666
 		public const int ShareItem = 13;
 
-		// Token: 0x0402762A RID: 161322
+		// Token: 0x04022963 RID: 141667
 		public const int ShareButton = 14;
 
-		// Token: 0x0402762B RID: 161323
+		// Token: 0x04022964 RID: 141668
 		public const int ShareText = 15;
 
-		// Token: 0x0402762C RID: 161324
+		// Token: 0x04022965 RID: 141669
 		public const int RoleTeamVerticalLayout = 16;
 
-		// Token: 0x0402762D RID: 161325
+		// Token: 0x04022966 RID: 141670
 		public const int ConfirmButton = 17;
 
-		// Token: 0x0402762E RID: 161326
+		// Token: 0x04022967 RID: 141671
 		public const int ShareRewardTipItem = 18;
 
-		// Token: 0x0402762F RID: 161327
+		// Token: 0x04022968 RID: 141672
 		public const int Buff1Btn = 19;
 
-		// Token: 0x04027630 RID: 161328
+		// Token: 0x04022969 RID: 141673
 		public const int Buff2Btn = 20;
 
-		// Token: 0x04027631 RID: 161329
+		// Token: 0x0402296A RID: 141674
 		public const int RankTipsItem = 21;
 
-		// Token: 0x04027632 RID: 161330
+		// Token: 0x0402296B RID: 141675
 		public const int RankItem = 22;
 
-		// Token: 0x04027633 RID: 161331
+		// Token: 0x0402296C RID: 141676
 		public const int BuffNumText = 23;
 	}
 }

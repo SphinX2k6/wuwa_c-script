@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F55 RID: 8021
+// Token: 0x02001417 RID: 5143
 [NullableContext(2)]
 [Nullable(0)]
 public class SlowTimeUnit : HudUnitBase
 {
-	// Token: 0x0600F850 RID: 63568 RVA: 0x003C18F4 File Offset: 0x003BFAF4
+	// Token: 0x0600CC6F RID: 52335 RVA: 0x003CD3E0 File Offset: 0x003CB5E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -35,7 +35,7 @@ public class SlowTimeUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F851 RID: 63569 RVA: 0x003C1A04 File Offset: 0x003BFC04
+	// Token: 0x0600CC70 RID: 52336 RVA: 0x003CD4F0 File Offset: 0x003CB6F0
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -47,7 +47,7 @@ public class SlowTimeUnit : HudUnitBase
 		base.InitTweenAnim(6);
 	}
 
-	// Token: 0x0600F852 RID: 63570 RVA: 0x003C1A64 File Offset: 0x003BFC64
+	// Token: 0x0600CC71 RID: 52337 RVA: 0x003CD550 File Offset: 0x003CB750
 	protected override void OnBeforeDestroy()
 	{
 		base.StopTweenAnim(6);
@@ -64,13 +64,13 @@ public class SlowTimeUnit : HudUnitBase
 		this.DestroyTimer();
 	}
 
-	// Token: 0x0600F853 RID: 63571 RVA: 0x003C1AB0 File Offset: 0x003BFCB0
+	// Token: 0x0600CC72 RID: 52338 RVA: 0x003CD59C File Offset: 0x003CB79C
 	protected override void OnBeforeShow()
 	{
 		this.LevelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F854 RID: 63572 RVA: 0x003C1ADC File Offset: 0x003BFCDC
+	// Token: 0x0600CC73 RID: 52339 RVA: 0x003CD5C8 File Offset: 0x003CB7C8
 	protected override UniTask OnBeforeHideAsync()
 	{
 		SlowTimeUnit.<OnBeforeHideAsync>d__14 <OnBeforeHideAsync>d__;
@@ -81,7 +81,7 @@ public class SlowTimeUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F855 RID: 63573 RVA: 0x003C1B1F File Offset: 0x003BFD1F
+	// Token: 0x0600CC74 RID: 52340 RVA: 0x003CD60B File Offset: 0x003CB80B
 	private void DestroyPromise()
 	{
 		if (this.Promise != null)
@@ -91,7 +91,7 @@ public class SlowTimeUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F856 RID: 63574 RVA: 0x003C1B3B File Offset: 0x003BFD3B
+	// Token: 0x0600CC75 RID: 52341 RVA: 0x003CD627 File Offset: 0x003CB827
 	private void DestroyTimer()
 	{
 		if (this.Timer != null)
@@ -101,7 +101,7 @@ public class SlowTimeUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F857 RID: 63575 RVA: 0x003C1B5D File Offset: 0x003BFD5D
+	// Token: 0x0600CC76 RID: 52342 RVA: 0x003CD649 File Offset: 0x003CB849
 	public void SetTranslucence(bool value)
 	{
 		this.TargetTranslucence = value;
@@ -122,7 +122,7 @@ public class SlowTimeUnit : HudUnitBase
 		barSprite.SetUIActive(value);
 	}
 
-	// Token: 0x0600F858 RID: 63576 RVA: 0x003C1B90 File Offset: 0x003BFD90
+	// Token: 0x0600CC77 RID: 52343 RVA: 0x003CD67C File Offset: 0x003CB87C
 	private void RefreshAlpha()
 	{
 		UUIItem containerItem = this.ContainerItem;
@@ -133,7 +133,7 @@ public class SlowTimeUnit : HudUnitBase
 		containerItem.SetAlpha(this.TargetTranslucence ? 0.5f : 1f);
 	}
 
-	// Token: 0x0600F859 RID: 63577 RVA: 0x003C1BB8 File Offset: 0x003BFDB8
+	// Token: 0x0600CC78 RID: 52344 RVA: 0x003CD6A4 File Offset: 0x003CB8A4
 	public void UpdateProgress(float curValue, float maxValue)
 	{
 		if (this.BarSprite == null)
@@ -151,7 +151,7 @@ public class SlowTimeUnit : HudUnitBase
 		this.PlayWarnAnim((double)num < 0.3 && !this.TargetTranslucence);
 	}
 
-	// Token: 0x0600F85A RID: 63578 RVA: 0x003C1C77 File Offset: 0x003BFE77
+	// Token: 0x0600CC79 RID: 52345 RVA: 0x003CD763 File Offset: 0x003CB963
 	private void PlayWarnAnim(bool bPlay)
 	{
 		if (this.IsPlayWarnAnim == bPlay)
@@ -168,50 +168,50 @@ public class SlowTimeUnit : HudUnitBase
 		this.RefreshAlpha();
 	}
 
-	// Token: 0x04007353 RID: 29523
+	// Token: 0x04007434 RID: 29748
 	private const int CLOSE_ANIM_TIME = 300;
 
-	// Token: 0x04007354 RID: 29524
+	// Token: 0x04007435 RID: 29749
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04007355 RID: 29525
+	// Token: 0x04007436 RID: 29750
 	private UUISprite BarSprite;
 
-	// Token: 0x04007356 RID: 29526
+	// Token: 0x04007437 RID: 29751
 	private UUIItem EffectItem;
 
-	// Token: 0x04007357 RID: 29527
+	// Token: 0x04007438 RID: 29752
 	private UUIItem ContainerItem;
 
-	// Token: 0x04007358 RID: 29528
+	// Token: 0x04007439 RID: 29753
 	private bool TargetTranslucence;
 
-	// Token: 0x04007359 RID: 29529
+	// Token: 0x0400743A RID: 29754
 	private CustomPromise Promise;
 
-	// Token: 0x0400735A RID: 29530
+	// Token: 0x0400743B RID: 29755
 	private TimerHandle Timer;
 
-	// Token: 0x0400735B RID: 29531
+	// Token: 0x0400743C RID: 29756
 	private bool IsPlayWarnAnim;
 
-	// Token: 0x02008554 RID: 34132
+	// Token: 0x020076D9 RID: 30425
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B680 RID: 177792
+		// Token: 0x040269A4 RID: 158116
 		EffectContainerItem,
-		// Token: 0x0402B681 RID: 177793
+		// Token: 0x040269A5 RID: 158117
 		ContainerItem,
-		// Token: 0x0402B682 RID: 177794
+		// Token: 0x040269A6 RID: 158118
 		BarSprite,
-		// Token: 0x0402B683 RID: 177795
+		// Token: 0x040269A7 RID: 158119
 		LeftEffect,
-		// Token: 0x0402B684 RID: 177796
+		// Token: 0x040269A8 RID: 158120
 		RightEffect,
-		// Token: 0x0402B685 RID: 177797
+		// Token: 0x040269A9 RID: 158121
 		EffectItem,
-		// Token: 0x0402B686 RID: 177798
+		// Token: 0x040269AA RID: 158122
 		AniWarning
 	}
 }

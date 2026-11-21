@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057E2 RID: 22498
+	// Token: 0x02005DE9 RID: 24041
 	public class IRandomBatchRefreshT
 	{
-		// Token: 0x1700A80D RID: 43021
-		// (get) Token: 0x06025CDA RID: 154842 RVA: 0x00536CD7 File Offset: 0x00534ED7
-		// (set) Token: 0x06025CDB RID: 154843 RVA: 0x00536CDF File Offset: 0x00534EDF
+		// Token: 0x1700B131 RID: 45361
+		// (get) Token: 0x060281FA RID: 164346 RVA: 0x0057CE63 File Offset: 0x0057B063
+		// (set) Token: 0x060281FB RID: 164347 RVA: 0x0057CE6B File Offset: 0x0057B06B
 		public EEntityBatchRefreshMode Type { get; set; }
 
-		// Token: 0x1700A80E RID: 43022
-		// (get) Token: 0x06025CDC RID: 154844 RVA: 0x00536CE8 File Offset: 0x00534EE8
-		// (set) Token: 0x06025CDD RID: 154845 RVA: 0x00536CF0 File Offset: 0x00534EF0
+		// Token: 0x1700B132 RID: 45362
+		// (get) Token: 0x060281FC RID: 164348 RVA: 0x0057CE74 File Offset: 0x0057B074
+		// (set) Token: 0x060281FD RID: 164349 RVA: 0x0057CE7C File Offset: 0x0057B07C
 		public List<IEntityListBatchT> EntityBatches { get; set; }
 
-		// Token: 0x06025CDE RID: 154846 RVA: 0x00536CF9 File Offset: 0x00534EF9
+		// Token: 0x060281FE RID: 164350 RVA: 0x0057CE85 File Offset: 0x0057B085
 		public IRandomBatchRefreshT()
 		{
 			this.Type = EEntityBatchRefreshMode.SequenceBatch;

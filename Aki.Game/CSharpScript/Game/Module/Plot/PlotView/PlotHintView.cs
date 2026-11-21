@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005053 RID: 20563
+	// Token: 0x02004023 RID: 16419
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotHintView : UiViewBase
 	{
-		// Token: 0x060349E2 RID: 215522 RVA: 0x00C6E3A8 File Offset: 0x00C6C5A8
+		// Token: 0x060298D5 RID: 170197 RVA: 0x00BBB649 File Offset: 0x00BB9849
 		public PlotHintView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060349E3 RID: 215523 RVA: 0x00C6E3C8 File Offset: 0x00C6C5C8
+		// Token: 0x060298D6 RID: 170198 RVA: 0x00BBB668 File Offset: 0x00BB9868
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060349E4 RID: 215524 RVA: 0x00C6E434 File Offset: 0x00C6C634
+		// Token: 0x060298D7 RID: 170199 RVA: 0x00BBB6D4 File Offset: 0x00BB98D4
 		protected override void OnStart()
 		{
 			TransitionPopupViewParams transitionPopupViewParams = this.OpenParam as TransitionPopupViewParams;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.InitTweenAnim(1);
 		}
 
-		// Token: 0x060349E5 RID: 215525 RVA: 0x00C6E524 File Offset: 0x00C6C724
+		// Token: 0x060298D8 RID: 170200 RVA: 0x00BBB7C4 File Offset: 0x00BB99C4
 		[return: Nullable(2)]
 		private string GetStyleTitle(ITransitionPopupStyle style)
 		{
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return result;
 		}
 
-		// Token: 0x060349E6 RID: 215526 RVA: 0x00C6E55C File Offset: 0x00C6C75C
+		// Token: 0x060298D9 RID: 170201 RVA: 0x00BBB7FC File Offset: 0x00BB99FC
 		private void InitTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.TweenAnimMap.Add(componentType, list);
 		}
 
-		// Token: 0x060349E7 RID: 215527 RVA: 0x00C6E5D0 File Offset: 0x00C6C7D0
+		// Token: 0x060298DA RID: 170202 RVA: 0x00BBB870 File Offset: 0x00BB9A70
 		protected override void OnAfterShow()
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349E8 RID: 215528 RVA: 0x00C6E673 File Offset: 0x00C6C873
+		// Token: 0x060298DB RID: 170203 RVA: 0x00BBB913 File Offset: 0x00BB9B13
 		private Action CreateAnimCompleteCallback(int index)
 		{
 			return delegate()
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			};
 		}
 
-		// Token: 0x060349E9 RID: 215529 RVA: 0x00C6E693 File Offset: 0x00C6C893
+		// Token: 0x060298DC RID: 170204 RVA: 0x00BBB933 File Offset: 0x00BB9B33
 		private void OnAnimComplete(int index)
 		{
 			this.CompletedAnimCount++;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349EA RID: 215530 RVA: 0x00C6E6B8 File Offset: 0x00C6C8B8
+		// Token: 0x060298DD RID: 170205 RVA: 0x00BBB958 File Offset: 0x00BB9B58
 		protected override void OnBeforeDestroy()
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.AnimCompleteCallbacks.Clear();
 		}
 
-		// Token: 0x0401C0AC RID: 114860
+		// Token: 0x04016AD7 RID: 92887
 		[Nullable(new byte[]
 		{
 			2,
@@ -201,25 +201,25 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		private Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap;
 
-		// Token: 0x0401C0AD RID: 114861
+		// Token: 0x04016AD8 RID: 92888
 		private readonly List<FLGUIDelegateHandleWrapper> AnimCompleteHandles = new List<FLGUIDelegateHandleWrapper>();
 
-		// Token: 0x0401C0AE RID: 114862
+		// Token: 0x04016AD9 RID: 92889
 		private readonly List<Action> AnimCompleteCallbacks = new List<Action>();
 
-		// Token: 0x0401C0AF RID: 114863
+		// Token: 0x04016ADA RID: 92890
 		private int TotalAnimCount;
 
-		// Token: 0x0401C0B0 RID: 114864
+		// Token: 0x04016ADB RID: 92891
 		private int CompletedAnimCount;
 
-		// Token: 0x0200B1AC RID: 45484
+		// Token: 0x02009BE6 RID: 39910
 		[NullableContext(0)]
 		private enum EChildComp
 		{
-			// Token: 0x04035E2A RID: 220714
+			// Token: 0x0403087F RID: 198783
 			ContentText,
-			// Token: 0x04035E2B RID: 220715
+			// Token: 0x04030880 RID: 198784
 			AniStart
 		}
 	}

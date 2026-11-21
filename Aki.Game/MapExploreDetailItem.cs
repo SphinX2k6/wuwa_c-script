@@ -9,7 +9,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.VillageInfr;
 using UnrealEngine;
 
-// Token: 0x02001AC7 RID: 6855
+// Token: 0x02000F86 RID: 3974
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 {
-	// Token: 0x0600CB46 RID: 52038 RVA: 0x002E578C File Offset: 0x002E398C
+	// Token: 0x06009F57 RID: 40791 RVA: 0x002F08EC File Offset: 0x002EEAEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -49,7 +49,7 @@ public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CB47 RID: 52039 RVA: 0x002E58D8 File Offset: 0x002E3AD8
+	// Token: 0x06009F58 RID: 40792 RVA: 0x002F0A38 File Offset: 0x002EEC38
 	public override void Refresh(ExploreAreaItemData data, bool isSelected, int gridIndex)
 	{
 		bool flag = data.IsUnlocked();
@@ -115,7 +115,7 @@ public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 		this.RefreshVillageInfrTag();
 	}
 
-	// Token: 0x0600CB48 RID: 52040 RVA: 0x002E5A5C File Offset: 0x002E3C5C
+	// Token: 0x06009F59 RID: 40793 RVA: 0x002F0BBC File Offset: 0x002EEDBC
 	private void RefreshVillageInfrTag()
 	{
 		ExploreProgress? exploreProgressConfigById = ExploreProgressConfig.Instance.GetExploreProgressConfigById(this.AreaItemData.ConfigId);
@@ -142,7 +142,7 @@ public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 		base.GetText(6).ShowTextNew("VillageInfr_Tag");
 	}
 
-	// Token: 0x0600CB49 RID: 52041 RVA: 0x002E5B12 File Offset: 0x002E3D12
+	// Token: 0x06009F5A RID: 40794 RVA: 0x002F0C72 File Offset: 0x002EEE72
 	private void OnToggleRoot(EToggleState toggleState)
 	{
 		if (toggleState == EToggleState.ETT_Checked)
@@ -156,7 +156,7 @@ public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 		}
 	}
 
-	// Token: 0x0600CB4A RID: 52042 RVA: 0x002E5B35 File Offset: 0x002E3D35
+	// Token: 0x06009F5B RID: 40795 RVA: 0x002F0C95 File Offset: 0x002EEE95
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -167,7 +167,7 @@ public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 		EventSystem.Instance.Emit<ExploreAreaItemData>(EEventName.MapExploreDetailItemClick, this.AreaItemData);
 	}
 
-	// Token: 0x0600CB4B RID: 52043 RVA: 0x002E5B64 File Offset: 0x002E3D64
+	// Token: 0x06009F5C RID: 40796 RVA: 0x002F0CC4 File Offset: 0x002EEEC4
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -178,32 +178,32 @@ public class MapExploreDetailItem : GridProxyAbstract<ExploreAreaItemData>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600CB4C RID: 52044 RVA: 0x002E5B7C File Offset: 0x002E3D7C
+	// Token: 0x06009F5D RID: 40797 RVA: 0x002F0CDC File Offset: 0x002EEEDC
 	public UUIItem GetBtnRootItem()
 	{
 		return base.GetExtendToggle(0).RootUIComp;
 	}
 
-	// Token: 0x04005D90 RID: 23952
+	// Token: 0x04005E5F RID: 24159
 	private ExploreAreaItemData AreaItemData;
 
-	// Token: 0x02008020 RID: 32800
+	// Token: 0x020071AE RID: 29102
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D42 RID: 171330
+		// Token: 0x04025076 RID: 151670
 		RootToggle,
-		// Token: 0x04029D43 RID: 171331
+		// Token: 0x04025077 RID: 151671
 		LockIcon,
-		// Token: 0x04029D44 RID: 171332
+		// Token: 0x04025078 RID: 151672
 		Icon,
-		// Token: 0x04029D45 RID: 171333
+		// Token: 0x04025079 RID: 151673
 		Percent,
-		// Token: 0x04029D46 RID: 171334
+		// Token: 0x0402507A RID: 151674
 		Name,
-		// Token: 0x04029D47 RID: 171335
+		// Token: 0x0402507B RID: 151675
 		PanelVillageInfrTag,
-		// Token: 0x04029D48 RID: 171336
+		// Token: 0x0402507C RID: 151676
 		TextInfrTag
 	}
 }

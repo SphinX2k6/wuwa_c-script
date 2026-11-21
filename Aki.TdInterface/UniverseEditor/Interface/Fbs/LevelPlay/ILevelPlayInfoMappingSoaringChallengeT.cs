@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044FE RID: 17662
+	// Token: 0x02004966 RID: 18790
 	public class ILevelPlayInfoMappingSoaringChallengeT
 	{
-		// Token: 0x17007D32 RID: 32050
-		// (get) Token: 0x0601A861 RID: 108641 RVA: 0x003C9CCB File Offset: 0x003C7ECB
-		// (set) Token: 0x0601A862 RID: 108642 RVA: 0x003C9CD3 File Offset: 0x003C7ED3
+		// Token: 0x17008373 RID: 33651
+		// (get) Token: 0x0601C036 RID: 114742 RVA: 0x003F5F67 File Offset: 0x003F4167
+		// (set) Token: 0x0601C037 RID: 114743 RVA: 0x003F5F6F File Offset: 0x003F416F
 		public ELevelPlayInfoMappingType Type { get; set; }
 
-		// Token: 0x17007D33 RID: 32051
-		// (get) Token: 0x0601A863 RID: 108643 RVA: 0x003C9CDC File Offset: 0x003C7EDC
-		// (set) Token: 0x0601A864 RID: 108644 RVA: 0x003C9CE4 File Offset: 0x003C7EE4
+		// Token: 0x17008374 RID: 33652
+		// (get) Token: 0x0601C038 RID: 114744 RVA: 0x003F5F78 File Offset: 0x003F4178
+		// (set) Token: 0x0601C039 RID: 114745 RVA: 0x003F5F80 File Offset: 0x003F4180
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x17007D34 RID: 32052
-		// (get) Token: 0x0601A865 RID: 108645 RVA: 0x003C9CED File Offset: 0x003C7EED
-		// (set) Token: 0x0601A866 RID: 108646 RVA: 0x003C9CF5 File Offset: 0x003C7EF5
+		// Token: 0x17008375 RID: 33653
+		// (get) Token: 0x0601C03A RID: 114746 RVA: 0x003F5F89 File Offset: 0x003F4189
+		// (set) Token: 0x0601C03B RID: 114747 RVA: 0x003F5F91 File Offset: 0x003F4191
 		public List<string> Vars { get; set; }
 
-		// Token: 0x17007D35 RID: 32053
-		// (get) Token: 0x0601A867 RID: 108647 RVA: 0x003C9CFE File Offset: 0x003C7EFE
-		// (set) Token: 0x0601A868 RID: 108648 RVA: 0x003C9D06 File Offset: 0x003C7F06
+		// Token: 0x17008376 RID: 33654
+		// (get) Token: 0x0601C03C RID: 114748 RVA: 0x003F5F9A File Offset: 0x003F419A
+		// (set) Token: 0x0601C03D RID: 114749 RVA: 0x003F5FA2 File Offset: 0x003F41A2
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A869 RID: 108649 RVA: 0x003C9D0F File Offset: 0x003C7F0F
+		// Token: 0x0601C03E RID: 114750 RVA: 0x003F5FAB File Offset: 0x003F41AB
 		public ILevelPlayInfoMappingSoaringChallengeT()
 		{
 			this.Type = ELevelPlayInfoMappingType.PunishReport;

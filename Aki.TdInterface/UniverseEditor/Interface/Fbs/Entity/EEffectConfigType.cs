@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x02004770 RID: 18288
+	// Token: 0x02004BD8 RID: 19416
 	public enum EEffectConfigType : byte
 	{
-		// Token: 0x0400CA77 RID: 51831
+		// Token: 0x0400D4A6 RID: 54438
 		Death,
-		// Token: 0x0400CA78 RID: 51832
+		// Token: 0x0400D4A7 RID: 54439
 		DeathGroup
 	}
 }

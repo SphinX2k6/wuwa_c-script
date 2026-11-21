@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F58 RID: 24408
+	// Token: 0x0200659C RID: 26012
 	public enum EDynamicSettlementType : byte
 	{
-		// Token: 0x0400FD08 RID: 64776
+		// Token: 0x04010A86 RID: 68230
 		Battle,
-		// Token: 0x0400FD09 RID: 64777
+		// Token: 0x04010A87 RID: 68231
 		SoaringChallenge
 	}
 }

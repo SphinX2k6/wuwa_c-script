@@ -10,16 +10,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D49 RID: 11593
+// Token: 0x020022A3 RID: 8867
 public class WeeklyRogueActivityView : UiViewBase
 {
-	// Token: 0x060185C8 RID: 99784 RVA: 0x00633EA6 File Offset: 0x006320A6
+	// Token: 0x06015E6A RID: 89706 RVA: 0x00659EB6 File Offset: 0x006580B6
 	[NullableContext(1)]
 	public WeeklyRogueActivityView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060185C9 RID: 99785 RVA: 0x00633EB0 File Offset: 0x006320B0
+	// Token: 0x06015E6B RID: 89707 RVA: 0x00659EC0 File Offset: 0x006580C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class WeeklyRogueActivityView : UiViewBase
 		};
 	}
 
-	// Token: 0x060185CA RID: 99786 RVA: 0x00633F64 File Offset: 0x00632164
+	// Token: 0x06015E6C RID: 89708 RVA: 0x00659F74 File Offset: 0x00658174
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueActivityView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class WeeklyRogueActivityView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060185CB RID: 99787 RVA: 0x00633FA8 File Offset: 0x006321A8
+	// Token: 0x06015E6D RID: 89709 RVA: 0x00659FB8 File Offset: 0x006581B8
 	protected override void OnStart()
 	{
 		WeeklyRogueModel instance = WeeklyRogueModel.Instance;
@@ -66,19 +66,19 @@ public class WeeklyRogueActivityView : UiViewBase
 		this.ActivityBaseData.SaveFirstCheckRedDotState();
 	}
 
-	// Token: 0x060185CC RID: 99788 RVA: 0x0063401B File Offset: 0x0063221B
+	// Token: 0x06015E6E RID: 89710 RVA: 0x0065A02B File Offset: 0x0065822B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh));
 	}
 
-	// Token: 0x060185CD RID: 99789 RVA: 0x00634039 File Offset: 0x00632239
+	// Token: 0x06015E6F RID: 89711 RVA: 0x0065A049 File Offset: 0x00658249
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh));
 	}
 
-	// Token: 0x060185CE RID: 99790 RVA: 0x00634058 File Offset: 0x00632258
+	// Token: 0x06015E70 RID: 89712 RVA: 0x0065A068 File Offset: 0x00658268
 	private void OnCycleRefresh()
 	{
 		Action value = delegate()
@@ -91,7 +91,7 @@ public class WeeklyRogueActivityView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060185CF RID: 99791 RVA: 0x006340A3 File Offset: 0x006322A3
+	// Token: 0x06015E71 RID: 89713 RVA: 0x0065A0B3 File Offset: 0x006582B3
 	protected override void OnBeforeShow()
 	{
 		if (this.CycleId != this.ActivityBaseData.CycleId)
@@ -101,7 +101,7 @@ public class WeeklyRogueActivityView : UiViewBase
 		this.RefreshButton();
 	}
 
-	// Token: 0x060185D0 RID: 99792 RVA: 0x006340C4 File Offset: 0x006322C4
+	// Token: 0x06015E72 RID: 89714 RVA: 0x0065A0D4 File Offset: 0x006582D4
 	private void RefreshButton()
 	{
 		if (WeeklyRogueModel.Instance.HasLastInfo())
@@ -112,7 +112,7 @@ public class WeeklyRogueActivityView : UiViewBase
 		this.ConfirmButton.SetLocalTextNew("WeRougeHomePageButtonTextStart", Array.Empty<object>());
 	}
 
-	// Token: 0x060185D1 RID: 99793 RVA: 0x00634100 File Offset: 0x00632300
+	// Token: 0x06015E73 RID: 89715 RVA: 0x0065A110 File Offset: 0x00658310
 	private void OnBtnConfirmClick(int _)
 	{
 		if (WeeklyRogueModel.Instance.HasLastInfo())
@@ -163,44 +163,44 @@ public class WeeklyRogueActivityView : UiViewBase
 		});
 	}
 
-	// Token: 0x060185D2 RID: 99794 RVA: 0x006341F0 File Offset: 0x006323F0
+	// Token: 0x06015E74 RID: 89716 RVA: 0x0065A200 File Offset: 0x00658400
 	private void OnBtnHelpBtn()
 	{
 		RogueWeeklyCycle? cycleConfig = this.ActivityBaseData.GetCycleConfig();
 		HelpController.Instance.OpenHelpById(cycleConfig.Value.HelpId);
 	}
 
-	// Token: 0x0400B4CF RID: 46287
+	// Token: 0x0400B844 RID: 47172
 	[Nullable(1)]
 	protected WeeklyRogueData ActivityBaseData;
 
-	// Token: 0x0400B4D0 RID: 46288
+	// Token: 0x0400B845 RID: 47173
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400B4D1 RID: 46289
+	// Token: 0x0400B846 RID: 47174
 	[Nullable(2)]
 	private ButtonItem ConfirmButton;
 
-	// Token: 0x0400B4D2 RID: 46290
+	// Token: 0x0400B847 RID: 47175
 	private int CycleId;
 
-	// Token: 0x020092DA RID: 37594
+	// Token: 0x02008501 RID: 34049
 	private enum EWeeklyRogueActivityViewDefine
 	{
-		// Token: 0x0402F778 RID: 194424
+		// Token: 0x0402AE00 RID: 175616
 		CaptionItem,
-		// Token: 0x0402F779 RID: 194425
+		// Token: 0x0402AE01 RID: 175617
 		TxtTitle,
-		// Token: 0x0402F77A RID: 194426
+		// Token: 0x0402AE02 RID: 175618
 		TxtSubTitle,
-		// Token: 0x0402F77B RID: 194427
+		// Token: 0x0402AE03 RID: 175619
 		TxtBuffDescription,
-		// Token: 0x0402F77C RID: 194428
+		// Token: 0x0402AE04 RID: 175620
 		BtnConfirm,
-		// Token: 0x0402F77D RID: 194429
+		// Token: 0x0402AE05 RID: 175621
 		TextureBg,
-		// Token: 0x0402F77E RID: 194430
+		// Token: 0x0402AE06 RID: 175622
 		TxtDesc
 	}
 }

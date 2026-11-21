@@ -3,19 +3,19 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006DD RID: 1757
+	// Token: 0x0200077E RID: 1918
 	public class ISlopeSlidePerform_SetValue
 	{
-		// Token: 0x040019C9 RID: 6601
+		// Token: 0x04001BC8 RID: 7112
 		public ESlidePerformType Type;
 
-		// Token: 0x040019CA RID: 6602
+		// Token: 0x04001BC9 RID: 7113
 		public int? TriggerLandingDistance;
 
-		// Token: 0x040019CB RID: 6603
+		// Token: 0x04001BCA RID: 7114
 		public int? FallbackLandingPointId;
 
-		// Token: 0x040019CC RID: 6604
+		// Token: 0x04001BCB RID: 7115
 		public bool? IsAllowJump;
 	}
 }

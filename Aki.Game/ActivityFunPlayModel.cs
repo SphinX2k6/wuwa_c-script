@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Activity.ActivityContent.FunPlay;
 
-// Token: 0x02001287 RID: 4743
+// Token: 0x0200073B RID: 1851
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ActivityFunPlayModel : ModelBase
 {
-	// Token: 0x06008192 RID: 33170 RVA: 0x001B809C File Offset: 0x001B629C
+	// Token: 0x06005529 RID: 21801 RVA: 0x001C0D6C File Offset: 0x001BEF6C
 	public void CreateChallengeData(FunPlayChallengeInfo[] data, int activityId)
 	{
 		if (data == null)
@@ -36,7 +36,7 @@ public class ActivityFunPlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008193 RID: 33171 RVA: 0x001B810C File Offset: 0x001B630C
+	// Token: 0x0600552A RID: 21802 RVA: 0x001C0DDC File Offset: 0x001BEFDC
 	[return: Nullable(2)]
 	public ActivityFunPlayChallengeData UpdateChallengeData(FunPlayChallengeInfo data)
 	{
@@ -59,7 +59,7 @@ public class ActivityFunPlayModel : ModelBase
 		return challengeData;
 	}
 
-	// Token: 0x06008194 RID: 33172 RVA: 0x001B816C File Offset: 0x001B636C
+	// Token: 0x0600552B RID: 21803 RVA: 0x001C0E3C File Offset: 0x001BF03C
 	private List<ActivityFunPlayChallengeData> SortChallenges()
 	{
 		List<ActivityFunPlayChallengeData> list = new List<ActivityFunPlayChallengeData>(this.AllChallengeDataList);
@@ -113,13 +113,13 @@ public class ActivityFunPlayModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008195 RID: 33173 RVA: 0x001B819E File Offset: 0x001B639E
+	// Token: 0x0600552C RID: 21804 RVA: 0x001C0E6E File Offset: 0x001BF06E
 	public List<ActivityFunPlayChallengeData> GetAllChallengeData()
 	{
 		return this.AllChallengeDataList;
 	}
 
-	// Token: 0x06008196 RID: 33174 RVA: 0x001B81A8 File Offset: 0x001B63A8
+	// Token: 0x0600552D RID: 21805 RVA: 0x001C0E78 File Offset: 0x001BF078
 	[NullableContext(2)]
 	public ActivityFunPlayChallengeData GetChallengeData(int challengeId)
 	{
@@ -128,20 +128,20 @@ public class ActivityFunPlayModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06008197 RID: 33175 RVA: 0x001B81C5 File Offset: 0x001B63C5
+	// Token: 0x0600552E RID: 21806 RVA: 0x001C0E95 File Offset: 0x001BF095
 	public void SetCurrentChallengeData(int challengeId)
 	{
 		this.CurrentChallengeData = this.GetChallengeData(challengeId);
 	}
 
-	// Token: 0x06008198 RID: 33176 RVA: 0x001B81D4 File Offset: 0x001B63D4
+	// Token: 0x0600552F RID: 21807 RVA: 0x001C0EA4 File Offset: 0x001BF0A4
 	[NullableContext(2)]
 	public ActivityFunPlayChallengeData GetCurrentChallengeData()
 	{
 		return this.CurrentChallengeData;
 	}
 
-	// Token: 0x06008199 RID: 33177 RVA: 0x001B81DC File Offset: 0x001B63DC
+	// Token: 0x06005530 RID: 21808 RVA: 0x001C0EAC File Offset: 0x001BF0AC
 	public int GetDefaultSelectIndex()
 	{
 		List<ActivityFunPlayChallengeData> list = this.SortChallenges();
@@ -152,7 +152,7 @@ public class ActivityFunPlayModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600819A RID: 33178 RVA: 0x001B8208 File Offset: 0x001B6408
+	// Token: 0x06005531 RID: 21809 RVA: 0x001C0ED8 File Offset: 0x001BF0D8
 	public bool GetHasInternalRedDot()
 	{
 		using (Dictionary<int, ActivityFunPlayChallengeData>.ValueCollection.Enumerator enumerator = this.AllChallengeDataMap.Values.GetEnumerator())
@@ -168,7 +168,7 @@ public class ActivityFunPlayModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600819B RID: 33179 RVA: 0x001B8268 File Offset: 0x001B6468
+	// Token: 0x06005532 RID: 21810 RVA: 0x001C0F38 File Offset: 0x001BF138
 	public bool IsAllRewardClaimed()
 	{
 		if (this.AllChallengeDataList.Count == 0)
@@ -188,7 +188,7 @@ public class ActivityFunPlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600819C RID: 33180 RVA: 0x001B82D4 File Offset: 0x001B64D4
+	// Token: 0x06005533 RID: 21811 RVA: 0x001C0FA4 File Offset: 0x001BF1A4
 	protected override bool OnClear()
 	{
 		this.AllChallengeDataMap.Clear();
@@ -196,8 +196,8 @@ public class ActivityFunPlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x17000B1A RID: 2842
-	// (get) Token: 0x0600819D RID: 33181 RVA: 0x001B82ED File Offset: 0x001B64ED
+	// Token: 0x17000B3A RID: 2874
+	// (get) Token: 0x06005534 RID: 21812 RVA: 0x001C0FBD File Offset: 0x001BF1BD
 	public static ActivityFunPlayModel Instance
 	{
 		get
@@ -206,7 +206,7 @@ public class ActivityFunPlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600819E RID: 33182 RVA: 0x001B82F4 File Offset: 0x001B64F4
+	// Token: 0x06005535 RID: 21813 RVA: 0x001C0FC4 File Offset: 0x001BF1C4
 	public static ActivityFunPlayModel GetOrCreateInstance()
 	{
 		if (ActivityFunPlayModel._Instance == null)
@@ -216,7 +216,7 @@ public class ActivityFunPlayModel : ModelBase
 		return ActivityFunPlayModel._Instance;
 	}
 
-	// Token: 0x0600819F RID: 33183 RVA: 0x001B8308 File Offset: 0x001B6508
+	// Token: 0x06005536 RID: 21814 RVA: 0x001C0FD8 File Offset: 0x001BF1D8
 	public static bool CreateInstance()
 	{
 		if (ActivityFunPlayModel._Instance != null)
@@ -227,34 +227,34 @@ public class ActivityFunPlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060081A0 RID: 33184 RVA: 0x001B831E File Offset: 0x001B651E
+	// Token: 0x06005537 RID: 21815 RVA: 0x001C0FEE File Offset: 0x001BF1EE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060081A1 RID: 33185 RVA: 0x001B8320 File Offset: 0x001B6520
+	// Token: 0x06005538 RID: 21816 RVA: 0x001C0FF0 File Offset: 0x001BF1F0
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityFunPlayModel._Instance = null;
 	}
 
-	// Token: 0x060081A2 RID: 33186 RVA: 0x001B8328 File Offset: 0x001B6528
+	// Token: 0x06005539 RID: 21817 RVA: 0x001C0FF8 File Offset: 0x001BF1F8
 	static ActivityFunPlayModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityFunPlayModel.CreateStaticDefaultValue), new Action(ActivityFunPlayModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003AB3 RID: 15027
+	// Token: 0x04003B4B RID: 15179
 	[Nullable(2)]
 	private ActivityFunPlayChallengeData CurrentChallengeData;
 
-	// Token: 0x04003AB4 RID: 15028
+	// Token: 0x04003B4C RID: 15180
 	private readonly Dictionary<int, ActivityFunPlayChallengeData> AllChallengeDataMap = new Dictionary<int, ActivityFunPlayChallengeData>();
 
-	// Token: 0x04003AB5 RID: 15029
+	// Token: 0x04003B4D RID: 15181
 	private readonly List<ActivityFunPlayChallengeData> AllChallengeDataList = new List<ActivityFunPlayChallengeData>();
 
-	// Token: 0x04003AB6 RID: 15030
+	// Token: 0x04003B4E RID: 15182
 	[Nullable(2)]
 	private static ActivityFunPlayModel _Instance;
 }

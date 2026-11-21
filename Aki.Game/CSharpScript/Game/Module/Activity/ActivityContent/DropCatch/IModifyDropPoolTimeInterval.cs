@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006694 RID: 26260
+	// Token: 0x020055E4 RID: 21988
 	public class IModifyDropPoolTimeInterval
 	{
-		// Token: 0x040223B3 RID: 140211
+		// Token: 0x0401CC0C RID: 117772
 		public int? PoolId;
 
-		// Token: 0x040223B4 RID: 140212
+		// Token: 0x0401CC0D RID: 117773
 		public EDropCatchModifierType Type;
 
-		// Token: 0x040223B5 RID: 140213
+		// Token: 0x0401CC0E RID: 117774
 		public float Value;
 
-		// Token: 0x040223B6 RID: 140214
+		// Token: 0x0401CC0F RID: 117775
 		public float Duration;
 	}
 }

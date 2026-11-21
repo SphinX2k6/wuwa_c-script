@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200015C RID: 348
+	// Token: 0x0200016C RID: 364
 	public class ConfigChipHandBookAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000829 RID: 2089 RVA: 0x00087A39 File Offset: 0x00085C39
+		// Token: 0x06000889 RID: 2185 RVA: 0x0008D595 File Offset: 0x0008B795
 		static ConfigChipHandBookAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChipHandBookAll.CreateStaticDefaultValue), new Action(ConfigChipHandBookAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600082A RID: 2090 RVA: 0x00087A58 File Offset: 0x00085C58
+		// Token: 0x0600088A RID: 2186 RVA: 0x0008D5B4 File Offset: 0x0008B7B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChipHandBookAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600082B RID: 2091 RVA: 0x00087AD7 File Offset: 0x00085CD7
+		// Token: 0x0600088B RID: 2187 RVA: 0x0008D633 File Offset: 0x0008B833
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChipHandBookAll.LogPair = null;
 			ConfigChipHandBookAll.HandleId = 0;
 		}
 
-		// Token: 0x0600082C RID: 2092 RVA: 0x00087AE5 File Offset: 0x00085CE5
+		// Token: 0x0600088C RID: 2188 RVA: 0x0008D641 File Offset: 0x0008B841
 		public static void Init()
 		{
 			ConfigChipHandBookAll.HandleId = ConfigCommon.InitDataStatement(ConfigChipHandBookAll.HandleId, "db_handbook.db", "select BinData from `ChipHandBook`");
 		}
 
-		// Token: 0x0600082D RID: 2093 RVA: 0x00087B00 File Offset: 0x00085D00
+		// Token: 0x0600088D RID: 2189 RVA: 0x0008D65C File Offset: 0x0008B85C
 		[NullableContext(2)]
 		public static IReadOnlyList<ChipHandBook> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000968 RID: 2408
+		// Token: 0x040009D8 RID: 2520
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04000969 RID: 2409
+		// Token: 0x040009D9 RID: 2521
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x0400096A RID: 2410
+		// Token: 0x040009DA RID: 2522
 		private const string TABLE = "ChipHandBook";
 
-		// Token: 0x0400096B RID: 2411
+		// Token: 0x040009DB RID: 2523
 		private const string COMMAND = "select BinData from `ChipHandBook`";
 
-		// Token: 0x0400096C RID: 2412
+		// Token: 0x040009DC RID: 2524
 		private const string KEY_PREFIX = "ChipHandBookAll";
 
-		// Token: 0x0400096D RID: 2413
+		// Token: 0x040009DD RID: 2525
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400096E RID: 2414
+		// Token: 0x040009DE RID: 2526
 		private static int HandleId;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200297C RID: 10620
+	// Token: 0x02002C62 RID: 11362
 	public class IFaceExpressionTextureMultiSlotConfig : IFaceExpressionConfig
 	{
-		// Token: 0x0600EB4B RID: 60235 RVA: 0x00226BF9 File Offset: 0x00224DF9
-		[NullableContext(1)]
+		// Token: 0x0600F9C6 RID: 63942 RVA: 0x00244351 File Offset: 0x00242551
 		public static IFaceExpressionTextureMultiSlotConfig Create(IFaceExpressionTextureMultiSlotConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A15 RID: 18965
-		// (get) Token: 0x0600EB4C RID: 60236 RVA: 0x00226C18 File Offset: 0x00224E18
+		// Token: 0x17004DB0 RID: 19888
+		// (get) Token: 0x0600F9C7 RID: 63943 RVA: 0x00244370 File Offset: 0x00242570
 		public override EFaceExpressionConfigType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A16 RID: 18966
-		// (get) Token: 0x0600EB4D RID: 60237 RVA: 0x00226C25 File Offset: 0x00224E25
+		// Token: 0x17004DB1 RID: 19889
+		// (get) Token: 0x0600F9C8 RID: 63944 RVA: 0x0024437D File Offset: 0x0024257D
 		public virtual int SlotIndex
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A17 RID: 18967
-		// (get) Token: 0x0600EB4E RID: 60238 RVA: 0x00226C32 File Offset: 0x00224E32
+		// Token: 0x17004DB2 RID: 19890
+		// (get) Token: 0x0600F9C9 RID: 63945 RVA: 0x0024438A File Offset: 0x0024258A
 		public virtual int FaceIndex
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008194 RID: 33172
+		// Token: 0x04008878 RID: 34936
 		private IFaceExpressionTextureMultiSlotConfig Instance;
 	}
 }

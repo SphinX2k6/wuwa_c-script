@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200175C RID: 5980
+	// Token: 0x02000345 RID: 837
 	[UnrealObjectPath("/Script/KuroComponent.KuroRegionCylinderComponent")]
 	[UnrealStructLayout(592, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 592)]
 	public class UKuroRegionCylinderComponent : UKuroRegionShapeComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060157FD RID: 88061 RVA: 0x001F9837 File Offset: 0x001F7A37
+		// Token: 0x06005615 RID: 22037 RVA: 0x00078B0F File Offset: 0x00076D0F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroRegionCylinderComponent._ClassPtr;
 		}
 
-		// Token: 0x060157FE RID: 88062 RVA: 0x001F9844 File Offset: 0x001F7A44
+		// Token: 0x06005616 RID: 22038 RVA: 0x00078B1C File Offset: 0x00076D1C
 		public UKuroRegionCylinderComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroRegionCylinderComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060157FF RID: 88063 RVA: 0x001F986C File Offset: 0x001F7A6C
+		// Token: 0x06005617 RID: 22039 RVA: 0x00078B44 File Offset: 0x00076D44
 		[NullableContext(1)]
 		public UKuroRegionCylinderComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroRegionCylinderComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170054EB RID: 21739
-		// (get) Token: 0x06015800 RID: 88064 RVA: 0x001F989F File Offset: 0x001F7A9F
-		// (set) Token: 0x06015801 RID: 88065 RVA: 0x001F98AF File Offset: 0x001F7AAF
+		// Token: 0x170010ED RID: 4333
+		// (get) Token: 0x06005618 RID: 22040 RVA: 0x00078B77 File Offset: 0x00076D77
+		// (set) Token: 0x06005619 RID: 22041 RVA: 0x00078B87 File Offset: 0x00076D87
 		public unsafe float Radius
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054EC RID: 21740
-		// (get) Token: 0x06015802 RID: 88066 RVA: 0x001F98C0 File Offset: 0x001F7AC0
-		// (set) Token: 0x06015803 RID: 88067 RVA: 0x001F98D0 File Offset: 0x001F7AD0
+		// Token: 0x170010EE RID: 4334
+		// (get) Token: 0x0600561A RID: 22042 RVA: 0x00078B98 File Offset: 0x00076D98
+		// (set) Token: 0x0600561B RID: 22043 RVA: 0x00078BA8 File Offset: 0x00076DA8
 		public unsafe float HalfHeight
 		{
 			get
@@ -58,31 +58,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06015804 RID: 88068 RVA: 0x001F98E1 File Offset: 0x001F7AE1
+		// Token: 0x0600561C RID: 22044 RVA: 0x00078BB9 File Offset: 0x00076DB9
 		static UKuroRegionCylinderComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroComponent.KuroRegionCylinderComponent");
 		}
 
-		// Token: 0x06015805 RID: 88069 RVA: 0x001F98EF File Offset: 0x001F7AEF
+		// Token: 0x0600561D RID: 22045 RVA: 0x00078BC7 File Offset: 0x00076DC7
 		protected UKuroRegionCylinderComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400BBB2 RID: 48050
+		// Token: 0x0400234E RID: 9038
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroComponent.KuroRegionCylinderComponent";
 
-		// Token: 0x0400BBB3 RID: 48051
+		// Token: 0x0400234F RID: 9039
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400BBB4 RID: 48052
+		// Token: 0x04002350 RID: 9040
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400BBB5 RID: 48053
+		// Token: 0x04002351 RID: 9041
 		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0400BBB6 RID: 48054
+		// Token: 0x04002352 RID: 9042
 		internal static int __PropertyOffset_HalfHeight;
 	}
 }

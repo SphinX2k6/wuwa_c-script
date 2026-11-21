@@ -6,10 +6,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 {
-	// Token: 0x02006DF7 RID: 28151
+	// Token: 0x02005F76 RID: 24438
 	public class ItemInspectEffectTriggerDialogues : ItemInspectEffectBase
 	{
-		// Token: 0x06044ACB RID: 281291 RVA: 0x010F38F4 File Offset: 0x010F1AF4
+		// Token: 0x0603AC2F RID: 240687 RVA: 0x0109DBBC File Offset: 0x0109BDBC
 		[NullableContext(1)]
 		protected override void Execute(IInteractEffect @params)
 		{

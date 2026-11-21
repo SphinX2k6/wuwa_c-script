@@ -7,27 +7,27 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 {
-	// Token: 0x02004A0D RID: 18957
+	// Token: 0x02003989 RID: 14729
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class HomeBtnModel : ModelBase
 	{
-		// Token: 0x06031310 RID: 201488 RVA: 0x00B68AAD File Offset: 0x00B66CAD
+		// Token: 0x06025E60 RID: 155232 RVA: 0x00AA42B5 File Offset: 0x00AA24B5
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.AddWithTarget<bool>(this, EEventName.BtnStateUpdate, new Action<bool>(this.OnHomeBtnStateUpdate));
 			return true;
 		}
 
-		// Token: 0x06031311 RID: 201489 RVA: 0x00B68ACD File Offset: 0x00B66CCD
+		// Token: 0x06025E61 RID: 155233 RVA: 0x00AA42D5 File Offset: 0x00AA24D5
 		private void OnHomeBtnStateUpdate(bool enable)
 		{
 			this.EnableHomeBtnFunctionInternal = enable;
 		}
 
-		// Token: 0x170079EE RID: 31214
-		// (get) Token: 0x06031312 RID: 201490 RVA: 0x00B68AD8 File Offset: 0x00B66CD8
+		// Token: 0x17004D56 RID: 19798
+		// (get) Token: 0x06025E62 RID: 155234 RVA: 0x00AA42E0 File Offset: 0x00AA24E0
 		public bool EnableHomeBtnLogic
 		{
 			get
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			}
 		}
 
-		// Token: 0x06031313 RID: 201491 RVA: 0x00B68CB4 File Offset: 0x00B66EB4
+		// Token: 0x06025E63 RID: 155235 RVA: 0x00AA44BC File Offset: 0x00AA26BC
 		public bool GetShowHomeBtn(EUiViewName viewName)
 		{
 			if (!this.EnableHomeBtnFunctionInternal)
@@ -98,9 +98,9 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			return uiShowConfig.Value.HomeBtnShowType == 1;
 		}
 
-		// Token: 0x170079EF RID: 31215
-		// (get) Token: 0x06031314 RID: 201492 RVA: 0x00B68D35 File Offset: 0x00B66F35
-		// (set) Token: 0x06031315 RID: 201493 RVA: 0x00B68D3D File Offset: 0x00B66F3D
+		// Token: 0x17004D57 RID: 19799
+		// (get) Token: 0x06025E64 RID: 155236 RVA: 0x00AA453D File Offset: 0x00AA273D
+		// (set) Token: 0x06025E65 RID: 155237 RVA: 0x00AA4545 File Offset: 0x00AA2745
 		public bool EnableHomeBtnFunction
 		{
 			get
@@ -113,25 +113,25 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			}
 		}
 
-		// Token: 0x06031316 RID: 201494 RVA: 0x00B68D46 File Offset: 0x00B66F46
+		// Token: 0x06025E66 RID: 155238 RVA: 0x00AA454E File Offset: 0x00AA274E
 		public void GmSetHomeBtnShow(EUiViewName viewName, bool value)
 		{
 			this.GmViewNameToHomeBtnShow[viewName] = value;
 		}
 
-		// Token: 0x06031317 RID: 201495 RVA: 0x00B68D55 File Offset: 0x00B66F55
+		// Token: 0x06025E67 RID: 155239 RVA: 0x00AA455D File Offset: 0x00AA275D
 		public void AddViewNameToNoFindComponent(string viewName)
 		{
 			this.ViewNameNoFindComponent.Add(viewName);
 		}
 
-		// Token: 0x06031318 RID: 201496 RVA: 0x00B68D64 File Offset: 0x00B66F64
+		// Token: 0x06025E68 RID: 155240 RVA: 0x00AA456C File Offset: 0x00AA276C
 		public bool GetNeedFindComponent(string viewName)
 		{
 			return !this.ViewNameNoFindComponent.Contains(viewName);
 		}
 
-		// Token: 0x06031319 RID: 201497 RVA: 0x00B68D75 File Offset: 0x00B66F75
+		// Token: 0x06025E69 RID: 155241 RVA: 0x00AA457D File Offset: 0x00AA277D
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.RemoveWithTarget<bool>(this, EEventName.BtnStateUpdate, new Action<bool>(this.OnHomeBtnStateUpdate));
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			return true;
 		}
 
-		// Token: 0x170079F0 RID: 31216
-		// (get) Token: 0x0603131A RID: 201498 RVA: 0x00B68DAB File Offset: 0x00B66FAB
+		// Token: 0x17004D58 RID: 19800
+		// (get) Token: 0x06025E6A RID: 155242 RVA: 0x00AA45B3 File Offset: 0x00AA27B3
 		public static HomeBtnModel Instance
 		{
 			get
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			}
 		}
 
-		// Token: 0x0603131B RID: 201499 RVA: 0x00B68DB2 File Offset: 0x00B66FB2
+		// Token: 0x06025E6B RID: 155243 RVA: 0x00AA45BA File Offset: 0x00AA27BA
 		public static HomeBtnModel GetOrCreateInstance()
 		{
 			if (HomeBtnModel._Instance == null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			return HomeBtnModel._Instance;
 		}
 
-		// Token: 0x0603131C RID: 201500 RVA: 0x00B68DC6 File Offset: 0x00B66FC6
+		// Token: 0x06025E6C RID: 155244 RVA: 0x00AA45CE File Offset: 0x00AA27CE
 		public static bool CreateInstance()
 		{
 			if (HomeBtnModel._Instance != null)
@@ -171,33 +171,33 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			return true;
 		}
 
-		// Token: 0x0603131D RID: 201501 RVA: 0x00B68DDC File Offset: 0x00B66FDC
+		// Token: 0x06025E6D RID: 155245 RVA: 0x00AA45E4 File Offset: 0x00AA27E4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603131E RID: 201502 RVA: 0x00B68DDE File Offset: 0x00B66FDE
+		// Token: 0x06025E6E RID: 155246 RVA: 0x00AA45E6 File Offset: 0x00AA27E6
 		public static void ResetStaticDefaultValue()
 		{
 			HomeBtnModel._Instance = null;
 		}
 
-		// Token: 0x0603131F RID: 201503 RVA: 0x00B68DE6 File Offset: 0x00B66FE6
+		// Token: 0x06025E6F RID: 155247 RVA: 0x00AA45EE File Offset: 0x00AA27EE
 		static HomeBtnModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HomeBtnModel.CreateStaticDefaultValue), new Action(HomeBtnModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A4F9 RID: 107769
+		// Token: 0x04014D7F RID: 85375
 		private bool EnableHomeBtnFunctionInternal = true;
 
-		// Token: 0x0401A4FA RID: 107770
+		// Token: 0x04014D80 RID: 85376
 		private readonly Dictionary<EUiViewName, bool> GmViewNameToHomeBtnShow = new Dictionary<EUiViewName, bool>();
 
-		// Token: 0x0401A4FB RID: 107771
+		// Token: 0x04014D81 RID: 85377
 		private readonly HashSet<string> ViewNameNoFindComponent = new HashSet<string>();
 
-		// Token: 0x0401A4FC RID: 107772
+		// Token: 0x04014D82 RID: 85378
 		[Nullable(2)]
 		private static HomeBtnModel _Instance;
 	}

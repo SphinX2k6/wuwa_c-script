@@ -4,33 +4,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x02000155 RID: 341
+	// Token: 0x0200015A RID: 346
 	[NullableContext(1)]
 	public interface IEulerStrokeJudge
 	{
-		// Token: 0x17000119 RID: 281
-		// (get) Token: 0x06000BC6 RID: 3014
-		// (set) Token: 0x06000BC7 RID: 3015
+		// Token: 0x1700012C RID: 300
+		// (get) Token: 0x06000C25 RID: 3109
+		// (set) Token: 0x06000C26 RID: 3110
 		EEulerStrokeKind Kind { get; set; }
 
-		// Token: 0x1700011A RID: 282
-		// (get) Token: 0x06000BC8 RID: 3016
-		// (set) Token: 0x06000BC9 RID: 3017
+		// Token: 0x1700012D RID: 301
+		// (get) Token: 0x06000C27 RID: 3111
+		// (set) Token: 0x06000C28 RID: 3112
 		bool CanDrawInOneStroke { get; set; }
 
-		// Token: 0x1700011B RID: 283
-		// (get) Token: 0x06000BCA RID: 3018
-		// (set) Token: 0x06000BCB RID: 3019
+		// Token: 0x1700012E RID: 302
+		// (get) Token: 0x06000C29 RID: 3113
+		// (set) Token: 0x06000C2A RID: 3114
 		bool Connected { get; set; }
 
-		// Token: 0x1700011C RID: 284
-		// (get) Token: 0x06000BCC RID: 3020
-		// (set) Token: 0x06000BCD RID: 3021
+		// Token: 0x1700012F RID: 303
+		// (get) Token: 0x06000C2B RID: 3115
+		// (set) Token: 0x06000C2C RID: 3116
 		List<int> OddNodeIds { get; set; }
 
-		// Token: 0x1700011D RID: 285
-		// (get) Token: 0x06000BCE RID: 3022
-		// (set) Token: 0x06000BCF RID: 3023
+		// Token: 0x17000130 RID: 304
+		// (get) Token: 0x06000C2D RID: 3117
+		// (set) Token: 0x06000C2E RID: 3118
 		int? SuggestedStartId { get; set; }
 	}
 }

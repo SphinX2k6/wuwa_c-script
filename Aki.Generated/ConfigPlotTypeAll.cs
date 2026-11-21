@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200074E RID: 1870
+	// Token: 0x02000766 RID: 1894
 	public class ConfigPlotTypeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BE5 RID: 11237 RVA: 0x00151958 File Offset: 0x0014FB58
+		// Token: 0x06002C75 RID: 11381 RVA: 0x001583D4 File Offset: 0x001565D4
 		static ConfigPlotTypeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlotTypeAll.CreateStaticDefaultValue), new Action(ConfigPlotTypeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BE6 RID: 11238 RVA: 0x00151978 File Offset: 0x0014FB78
+		// Token: 0x06002C76 RID: 11382 RVA: 0x001583F4 File Offset: 0x001565F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlotTypeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BE7 RID: 11239 RVA: 0x001519F7 File Offset: 0x0014FBF7
+		// Token: 0x06002C77 RID: 11383 RVA: 0x00158473 File Offset: 0x00156673
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlotTypeAll.LogPair = null;
 			ConfigPlotTypeAll.HandleId = 0;
 		}
 
-		// Token: 0x06002BE8 RID: 11240 RVA: 0x00151A05 File Offset: 0x0014FC05
+		// Token: 0x06002C78 RID: 11384 RVA: 0x00158481 File Offset: 0x00156681
 		public static void Init()
 		{
 			ConfigPlotTypeAll.HandleId = ConfigCommon.InitDataStatement(ConfigPlotTypeAll.HandleId, "db_handbook.db", "select BinData from `PlotType`");
 		}
 
-		// Token: 0x06002BE9 RID: 11241 RVA: 0x00151A20 File Offset: 0x0014FC20
+		// Token: 0x06002C79 RID: 11385 RVA: 0x0015849C File Offset: 0x0015669C
 		[NullableContext(2)]
 		public static IReadOnlyList<PlotType> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003308 RID: 13064
+		// Token: 0x040033B0 RID: 13232
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04003309 RID: 13065
+		// Token: 0x040033B1 RID: 13233
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x0400330A RID: 13066
+		// Token: 0x040033B2 RID: 13234
 		private const string TABLE = "PlotType";
 
-		// Token: 0x0400330B RID: 13067
+		// Token: 0x040033B3 RID: 13235
 		private const string COMMAND = "select BinData from `PlotType`";
 
-		// Token: 0x0400330C RID: 13068
+		// Token: 0x040033B4 RID: 13236
 		private const string KEY_PREFIX = "PlotTypeAll";
 
-		// Token: 0x0400330D RID: 13069
+		// Token: 0x040033B5 RID: 13237
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400330E RID: 13070
+		// Token: 0x040033B6 RID: 13238
 		private static int HandleId;
 	}
 }

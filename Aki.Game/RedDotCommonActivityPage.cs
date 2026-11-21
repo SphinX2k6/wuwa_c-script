@@ -1,34 +1,34 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001681 RID: 5761
+// Token: 0x02000B39 RID: 2873
 public class RedDotCommonActivityPage : RedDotBase
 {
-	// Token: 0x0600A301 RID: 41729 RVA: 0x00240497 File Offset: 0x0023E697
+	// Token: 0x060076DF RID: 30431 RVA: 0x0024A423 File Offset: 0x00248623
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.ActivityEntrance);
 	}
 
-	// Token: 0x0600A302 RID: 41730 RVA: 0x002404A0 File Offset: 0x0023E6A0
+	// Token: 0x060076E0 RID: 30432 RVA: 0x0024A42C File Offset: 0x0024862C
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0600A303 RID: 41731 RVA: 0x002404A3 File Offset: 0x0023E6A3
+	// Token: 0x060076E1 RID: 30433 RVA: 0x0024A42F File Offset: 0x0024862F
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0600A304 RID: 41732 RVA: 0x002404C1 File Offset: 0x0023E6C1
+	// Token: 0x060076E2 RID: 30434 RVA: 0x0024A44D File Offset: 0x0024864D
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0600A305 RID: 41733 RVA: 0x002404DF File Offset: 0x0023E6DF
+	// Token: 0x060076E3 RID: 30435 RVA: 0x0024A46B File Offset: 0x0024866B
 	protected override bool OnCheck(int uid)
 	{
 		return ActivityModel.Instance.GetActivityRedDotState(uid);

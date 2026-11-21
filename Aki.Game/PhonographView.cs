@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002551 RID: 9553
+// Token: 0x02001A3C RID: 6716
 [NullableContext(1)]
 [Nullable(0)]
 public class PhonographView : UiTickViewBase
 {
-	// Token: 0x060133EA RID: 78826 RVA: 0x004C9303 File Offset: 0x004C7503
+	// Token: 0x060108CA RID: 67786 RVA: 0x004D7E83 File Offset: 0x004D6083
 	public PhonographView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060133EB RID: 78827 RVA: 0x004C9318 File Offset: 0x004C7518
+	// Token: 0x060108CB RID: 67787 RVA: 0x004D7E98 File Offset: 0x004D6098
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ public class PhonographView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060133EC RID: 78828 RVA: 0x004C9490 File Offset: 0x004C7690
+	// Token: 0x060108CC RID: 67788 RVA: 0x004D8010 File Offset: 0x004D6210
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhonographView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -56,19 +56,19 @@ public class PhonographView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060133ED RID: 78829 RVA: 0x004C94D3 File Offset: 0x004C76D3
+	// Token: 0x060108CD RID: 67789 RVA: 0x004D8053 File Offset: 0x004D6253
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnPhonographMusicForceRefresh, new Action<int>(this.OnMusicForceRefresh));
 	}
 
-	// Token: 0x060133EE RID: 78830 RVA: 0x004C94F1 File Offset: 0x004C76F1
+	// Token: 0x060108CE RID: 67790 RVA: 0x004D8071 File Offset: 0x004D6271
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnPhonographMusicForceRefresh, new Action<int>(this.OnMusicForceRefresh));
 	}
 
-	// Token: 0x060133EF RID: 78831 RVA: 0x004C9510 File Offset: 0x004C7710
+	// Token: 0x060108CF RID: 67791 RVA: 0x004D8090 File Offset: 0x004D6290
 	protected override void OnTick(float delta)
 	{
 		if (this.MusicGenericLayout.IsLock)
@@ -81,7 +81,7 @@ public class PhonographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060133F0 RID: 78832 RVA: 0x004C9574 File Offset: 0x004C7774
+	// Token: 0x060108D0 RID: 67792 RVA: 0x004D80F4 File Offset: 0x004D62F4
 	protected override void OnBeforeDestroy()
 	{
 		PhonographModel.Instance.NewMusicIds = new List<int>();
@@ -110,7 +110,7 @@ public class PhonographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060133F1 RID: 78833 RVA: 0x004C9658 File Offset: 0x004C7858
+	// Token: 0x060108D1 RID: 67793 RVA: 0x004D81D8 File Offset: 0x004D63D8
 	protected UniTask RefreshAlbumList(int selectMusicId)
 	{
 		PhonographView.<RefreshAlbumList>d__16 <RefreshAlbumList>d__;
@@ -122,7 +122,7 @@ public class PhonographView : UiTickViewBase
 		return <RefreshAlbumList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060133F2 RID: 78834 RVA: 0x004C96A4 File Offset: 0x004C78A4
+	// Token: 0x060108D2 RID: 67794 RVA: 0x004D8224 File Offset: 0x004D6424
 	protected void RefreshAlbumInfo(int albumId)
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -168,13 +168,13 @@ public class PhonographView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060133F3 RID: 78835 RVA: 0x004C9794 File Offset: 0x004C7994
+	// Token: 0x060108D3 RID: 67795 RVA: 0x004D8314 File Offset: 0x004D6514
 	protected void OnClickLimitTimeRule()
 	{
 		HelpController.Instance.OpenHelpById(653);
 	}
 
-	// Token: 0x060133F4 RID: 78836 RVA: 0x004C97A8 File Offset: 0x004C79A8
+	// Token: 0x060108D4 RID: 67796 RVA: 0x004D8328 File Offset: 0x004D6528
 	protected void RefreshMusicInfo(int musicId)
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -196,7 +196,7 @@ public class PhonographView : UiTickViewBase
 		this.RefreshSwitchBtn(musicId);
 	}
 
-	// Token: 0x060133F5 RID: 78837 RVA: 0x004C9850 File Offset: 0x004C7A50
+	// Token: 0x060108D5 RID: 67797 RVA: 0x004D83D0 File Offset: 0x004D65D0
 	protected void RefreshSwitchBtn(int musicId)
 	{
 		UUIItem rootComponent = base.GetButton(7).GetRootComponent();
@@ -208,7 +208,7 @@ public class PhonographView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(10), flag ? "PhonographSwitchBtnNormal" : "PhonographSwitchBtnSelect", Array.Empty<object>());
 	}
 
-	// Token: 0x060133F6 RID: 78838 RVA: 0x004C98B9 File Offset: 0x004C7AB9
+	// Token: 0x060108D6 RID: 67798 RVA: 0x004D8439 File Offset: 0x004D6639
 	protected PhonographAlbumItem OnCreateAlbumItem()
 	{
 		return new PhonographAlbumItem
@@ -217,7 +217,7 @@ public class PhonographView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060133F7 RID: 78839 RVA: 0x004C98D2 File Offset: 0x004C7AD2
+	// Token: 0x060108D7 RID: 67799 RVA: 0x004D8452 File Offset: 0x004D6652
 	protected PhonographMusicPlayItem OnCreateMusicItem()
 	{
 		return new PhonographMusicPlayItem
@@ -226,7 +226,7 @@ public class PhonographView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060133F8 RID: 78840 RVA: 0x004C98EC File Offset: 0x004C7AEC
+	// Token: 0x060108D8 RID: 67800 RVA: 0x004D846C File Offset: 0x004D666C
 	protected void OnClickAlbumItem(int albumId, int gridIndex)
 	{
 		PhonographView.<>c__DisplayClass23_0 CS$<>8__locals1 = new PhonographView.<>c__DisplayClass23_0();
@@ -314,7 +314,7 @@ public class PhonographView : UiTickViewBase
 		this.RefreshAlbumInfo(albumId);
 	}
 
-	// Token: 0x060133F9 RID: 78841 RVA: 0x004C9AD0 File Offset: 0x004C7CD0
+	// Token: 0x060108D9 RID: 67801 RVA: 0x004D8650 File Offset: 0x004D6850
 	protected void OnClickMusicItem(int musicId, int gridIndex)
 	{
 		PhonographModel.Instance.CurrentSelectMusicId = musicId;
@@ -345,7 +345,7 @@ public class PhonographView : UiTickViewBase
 		LogReportController.Instance.LogReport(phonographPlayLogEvent);
 	}
 
-	// Token: 0x060133FA RID: 78842 RVA: 0x004C9BB4 File Offset: 0x004C7DB4
+	// Token: 0x060108DA RID: 67802 RVA: 0x004D8734 File Offset: 0x004D6934
 	protected void OnClickSetBgMusic()
 	{
 		int currentSelectMusicId = PhonographModel.Instance.CurrentSelectMusicId;
@@ -382,7 +382,7 @@ public class PhonographView : UiTickViewBase
 		ScrollingTipsController.Instance.ShowTipsById("PhonographSwitchMusicCancel", Array.Empty<object>());
 	}
 
-	// Token: 0x060133FB RID: 78843 RVA: 0x004C9CA4 File Offset: 0x004C7EA4
+	// Token: 0x060108DB RID: 67803 RVA: 0x004D8824 File Offset: 0x004D6A24
 	protected void OnMusicForceRefresh(int albumId)
 	{
 		PhonographView.<>c__DisplayClass26_0 CS$<>8__locals1 = new PhonographView.<>c__DisplayClass26_0();
@@ -400,10 +400,10 @@ public class PhonographView : UiTickViewBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0400914A RID: 37194
+	// Token: 0x040092A3 RID: 37539
 	private const int PHONO_MUSIC_HELP_ID = 653;
 
-	// Token: 0x0400914B RID: 37195
+	// Token: 0x040092A4 RID: 37540
 	[Nullable(new byte[]
 	{
 		2,
@@ -411,7 +411,7 @@ public class PhonographView : UiTickViewBase
 	})]
 	protected GenericLayout<PhonographAlbumItem, int> AlbumGenericLayout;
 
-	// Token: 0x0400914C RID: 37196
+	// Token: 0x040092A5 RID: 37541
 	[Nullable(new byte[]
 	{
 		2,
@@ -420,64 +420,64 @@ public class PhonographView : UiTickViewBase
 	})]
 	protected GenericLayout<PhonographMusicPlayItem, IPhonographMusicItemData> MusicGenericLayout;
 
-	// Token: 0x0400914D RID: 37197
+	// Token: 0x040092A6 RID: 37542
 	protected Dictionary<int, List<int>> MusicMap = new Dictionary<int, List<int>>();
 
-	// Token: 0x0400914E RID: 37198
+	// Token: 0x040092A7 RID: 37543
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionComponent;
 
-	// Token: 0x0400914F RID: 37199
+	// Token: 0x040092A8 RID: 37544
 	[Nullable(2)]
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04009150 RID: 37200
+	// Token: 0x040092A9 RID: 37545
 	private int EventHandleId;
 
-	// Token: 0x04009151 RID: 37201
+	// Token: 0x040092AA RID: 37546
 	private int CurrentAlbumId;
 
-	// Token: 0x02008B10 RID: 35600
+	// Token: 0x02007C96 RID: 31894
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402D269 RID: 184937
+		// Token: 0x04028578 RID: 165240
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402D26A RID: 184938
+		// Token: 0x04028579 RID: 165241
 		public const int AlbumVerticalLayout = 1;
 
-		// Token: 0x0402D26B RID: 184939
+		// Token: 0x0402857A RID: 165242
 		public const int AlbumItem = 2;
 
-		// Token: 0x0402D26C RID: 184940
+		// Token: 0x0402857B RID: 165243
 		public const int TxtAlbumName = 3;
 
-		// Token: 0x0402D26D RID: 184941
+		// Token: 0x0402857C RID: 165244
 		public const int MusicVerticalLayout = 4;
 
-		// Token: 0x0402D26E RID: 184942
+		// Token: 0x0402857D RID: 165245
 		public const int MusicItem = 5;
 
-		// Token: 0x0402D26F RID: 184943
+		// Token: 0x0402857E RID: 165246
 		public const int TxtAlbumTitle = 6;
 
-		// Token: 0x0402D270 RID: 184944
+		// Token: 0x0402857F RID: 165247
 		public const int BtnSetBgMusic = 7;
 
-		// Token: 0x0402D271 RID: 184945
+		// Token: 0x04028580 RID: 165248
 		public const int TxtDescription = 8;
 
-		// Token: 0x0402D272 RID: 184946
+		// Token: 0x04028581 RID: 165249
 		public const int TxtMusicNum = 9;
 
-		// Token: 0x0402D273 RID: 184947
+		// Token: 0x04028582 RID: 165250
 		public const int TxtSwitchBtn = 10;
 
-		// Token: 0x0402D274 RID: 184948
+		// Token: 0x04028583 RID: 165251
 		public const int ScrollView = 11;
 
-		// Token: 0x0402D275 RID: 184949
+		// Token: 0x04028584 RID: 165252
 		public const int BtnTimeLimit = 12;
 	}
 }

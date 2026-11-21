@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004327 RID: 17191
+	// Token: 0x02004789 RID: 18313
 	public class TTrackRuleTypeUnion
 	{
-		// Token: 0x1700797C RID: 31100
-		// (get) Token: 0x060197DF RID: 104415 RVA: 0x003A6E64 File Offset: 0x003A5064
-		// (set) Token: 0x060197E0 RID: 104416 RVA: 0x003A6E6C File Offset: 0x003A506C
+		// Token: 0x17007FB1 RID: 32689
+		// (get) Token: 0x0601AF6D RID: 110445 RVA: 0x003D288C File Offset: 0x003D0A8C
+		// (set) Token: 0x0601AF6E RID: 110446 RVA: 0x003D2894 File Offset: 0x003D0A94
 		public TTrackRuleType Type { get; set; }
 
-		// Token: 0x1700797D RID: 31101
-		// (get) Token: 0x060197E1 RID: 104417 RVA: 0x003A6E75 File Offset: 0x003A5075
-		// (set) Token: 0x060197E2 RID: 104418 RVA: 0x003A6E7D File Offset: 0x003A507D
+		// Token: 0x17007FB2 RID: 32690
+		// (get) Token: 0x0601AF6F RID: 110447 RVA: 0x003D289D File Offset: 0x003D0A9D
+		// (set) Token: 0x0601AF70 RID: 110448 RVA: 0x003D28A5 File Offset: 0x003D0AA5
 		public object Value { get; set; }
 
-		// Token: 0x060197E3 RID: 104419 RVA: 0x003A6E86 File Offset: 0x003A5086
+		// Token: 0x0601AF71 RID: 110449 RVA: 0x003D28AE File Offset: 0x003D0AAE
 		public TTrackRuleTypeUnion()
 		{
 			this.Type = TTrackRuleType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060197E4 RID: 104420 RVA: 0x003A6E9C File Offset: 0x003A509C
+		// Token: 0x0601AF72 RID: 110450 RVA: 0x003D28C4 File Offset: 0x003D0AC4
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060197E5 RID: 104421 RVA: 0x003A6EAE File Offset: 0x003A50AE
+		// Token: 0x0601AF73 RID: 110451 RVA: 0x003D28D6 File Offset: 0x003D0AD6
 		public ITrackRuleFindFirstNotMatchStateT AsITrackRuleFindFirstNotMatchState()
 		{
 			return this.As<ITrackRuleFindFirstNotMatchStateT>();
 		}
 
-		// Token: 0x060197E6 RID: 104422 RVA: 0x003A6EB6 File Offset: 0x003A50B6
+		// Token: 0x0601AF74 RID: 110452 RVA: 0x003D28DE File Offset: 0x003D0ADE
 		public static TTrackRuleTypeUnion FromITrackRuleFindFirstNotMatchState(ITrackRuleFindFirstNotMatchStateT _itrackrulefindfirstnotmatchstate)
 		{
 			return new TTrackRuleTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197E7 RID: 104423 RVA: 0x003A6ECB File Offset: 0x003A50CB
+		// Token: 0x0601AF75 RID: 110453 RVA: 0x003D28F3 File Offset: 0x003D0AF3
 		public ITrackRuleFindLastMatchStateT AsITrackRuleFindLastMatchState()
 		{
 			return this.As<ITrackRuleFindLastMatchStateT>();
 		}
 
-		// Token: 0x060197E8 RID: 104424 RVA: 0x003A6ED3 File Offset: 0x003A50D3
+		// Token: 0x0601AF76 RID: 110454 RVA: 0x003D28FB File Offset: 0x003D0AFB
 		public static TTrackRuleTypeUnion FromITrackRuleFindLastMatchState(ITrackRuleFindLastMatchStateT _itrackrulefindlastmatchstate)
 		{
 			return new TTrackRuleTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197E9 RID: 104425 RVA: 0x003A6EE8 File Offset: 0x003A50E8
+		// Token: 0x0601AF77 RID: 110455 RVA: 0x003D2910 File Offset: 0x003D0B10
 		public static int Pack(FlatBufferBuilder builder, TTrackRuleTypeUnion _o)
 		{
 			TTrackRuleType type = _o.Type;

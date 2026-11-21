@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004474 RID: 17524
+	// Token: 0x020048DC RID: 18652
 	public class IDartHitJudgeT
 	{
-		// Token: 0x17007BB0 RID: 31664
-		// (get) Token: 0x0601A1FC RID: 107004 RVA: 0x003BB702 File Offset: 0x003B9902
-		// (set) Token: 0x0601A1FD RID: 107005 RVA: 0x003BB70A File Offset: 0x003B990A
+		// Token: 0x170081EF RID: 33263
+		// (get) Token: 0x0601B9CD RID: 113101 RVA: 0x003E790E File Offset: 0x003E5B0E
+		// (set) Token: 0x0601B9CE RID: 113102 RVA: 0x003E7916 File Offset: 0x003E5B16
 		public IDartPreciseJudgeT Precise { get; set; }
 
-		// Token: 0x17007BB1 RID: 31665
-		// (get) Token: 0x0601A1FE RID: 107006 RVA: 0x003BB713 File Offset: 0x003B9913
-		// (set) Token: 0x0601A1FF RID: 107007 RVA: 0x003BB71B File Offset: 0x003B991B
+		// Token: 0x170081F0 RID: 33264
+		// (get) Token: 0x0601B9CF RID: 113103 RVA: 0x003E791F File Offset: 0x003E5B1F
+		// (set) Token: 0x0601B9D0 RID: 113104 RVA: 0x003E7927 File Offset: 0x003E5B27
 		public IDartScatterJudgeT Scatter { get; set; }
 
-		// Token: 0x17007BB2 RID: 31666
-		// (get) Token: 0x0601A200 RID: 107008 RVA: 0x003BB724 File Offset: 0x003B9924
-		// (set) Token: 0x0601A201 RID: 107009 RVA: 0x003BB72C File Offset: 0x003B992C
+		// Token: 0x170081F1 RID: 33265
+		// (get) Token: 0x0601B9D1 RID: 113105 RVA: 0x003E7930 File Offset: 0x003E5B30
+		// (set) Token: 0x0601B9D2 RID: 113106 RVA: 0x003E7938 File Offset: 0x003E5B38
 		public IDartMissJudgeT Miss { get; set; }
 
-		// Token: 0x0601A202 RID: 107010 RVA: 0x003BB735 File Offset: 0x003B9935
+		// Token: 0x0601B9D3 RID: 113107 RVA: 0x003E7941 File Offset: 0x003E5B41
 		public IDartHitJudgeT()
 		{
 			this.Precise = null;

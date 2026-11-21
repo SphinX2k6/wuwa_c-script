@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D2B RID: 7467
+	// Token: 0x02001F3C RID: 7996
 	public class IPlotFilmModeConfig_SetValue
 	{
-		// Token: 0x0400609C RID: 24732
+		// Token: 0x04006618 RID: 26136
 		public bool? IsAdaptFilmAspectRatio;
 	}
 }

@@ -4,14 +4,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046C6 RID: 18118
+	// Token: 0x020035F7 RID: 13815
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiPoolActor
 	{
-		// Token: 0x1700766D RID: 30317
-		// (get) Token: 0x0602EB92 RID: 191378 RVA: 0x00AD00B9 File Offset: 0x00ACE2B9
-		// (set) Token: 0x0602EB93 RID: 191379 RVA: 0x00AD00C1 File Offset: 0x00ACE2C1
+		// Token: 0x17004929 RID: 18729
+		// (get) Token: 0x060232DE RID: 144094 RVA: 0x009FEA4D File Offset: 0x009FCC4D
+		// (set) Token: 0x060232DF RID: 144095 RVA: 0x009FEA55 File Offset: 0x009FCC55
 		[Nullable(2)]
 		public AActor Actor
 		{
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x1700766E RID: 30318
-		// (get) Token: 0x0602EB94 RID: 191380 RVA: 0x00AD00CA File Offset: 0x00ACE2CA
+		// Token: 0x1700492A RID: 18730
+		// (get) Token: 0x060232E0 RID: 144096 RVA: 0x009FEA5E File Offset: 0x009FCC5E
 		public bool IsValid
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x1700766F RID: 30319
-		// (get) Token: 0x0602EB95 RID: 191381 RVA: 0x00AD00DD File Offset: 0x00ACE2DD
+		// Token: 0x1700492B RID: 18731
+		// (get) Token: 0x060232E1 RID: 144097 RVA: 0x009FEA71 File Offset: 0x009FCC71
 		public UUIItem UiItem
 		{
 			get
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007670 RID: 30320
-		// (get) Token: 0x0602EB96 RID: 191382 RVA: 0x00AD00F6 File Offset: 0x00ACE2F6
+		// Token: 0x1700492C RID: 18732
+		// (get) Token: 0x060232E2 RID: 144098 RVA: 0x009FEA8A File Offset: 0x009FCC8A
 		public string Path
 		{
 			get
@@ -59,9 +59,9 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007671 RID: 30321
-		// (get) Token: 0x0602EB97 RID: 191383 RVA: 0x00AD00FE File Offset: 0x00ACE2FE
-		// (set) Token: 0x0602EB98 RID: 191384 RVA: 0x00AD0106 File Offset: 0x00ACE306
+		// Token: 0x1700492D RID: 18733
+		// (get) Token: 0x060232E3 RID: 144099 RVA: 0x009FEA92 File Offset: 0x009FCC92
+		// (set) Token: 0x060232E4 RID: 144100 RVA: 0x009FEA9A File Offset: 0x009FCC9A
 		public double EndTime
 		{
 			get
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB99 RID: 191385 RVA: 0x00AD010F File Offset: 0x00ACE30F
+		// Token: 0x060232E5 RID: 144101 RVA: 0x009FEAA3 File Offset: 0x009FCCA3
 		public void Clear()
 		{
 			if (!this.IsValid)
@@ -85,20 +85,20 @@ namespace CSharpScript.Game.Ui
 			this.ActorInternal = null;
 		}
 
-		// Token: 0x0602EB9A RID: 191386 RVA: 0x00AD0138 File Offset: 0x00ACE338
+		// Token: 0x060232E6 RID: 144102 RVA: 0x009FEACC File Offset: 0x009FCCCC
 		public UiPoolActor(string path)
 		{
 			this.PathInternal = path;
 		}
 
-		// Token: 0x040196F7 RID: 104183
+		// Token: 0x04013D9E RID: 81310
 		[Nullable(2)]
 		private AActor ActorInternal;
 
-		// Token: 0x040196F8 RID: 104184
+		// Token: 0x04013D9F RID: 81311
 		private readonly string PathInternal = "";
 
-		// Token: 0x040196F9 RID: 104185
+		// Token: 0x04013DA0 RID: 81312
 		private double EndTimeInternal;
 	}
 }

@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 {
-	// Token: 0x02004830 RID: 18480
+	// Token: 0x02003761 RID: 14177
 	public class MediumItemListItem : GridProxyAbstract<TItem>
 	{
-		// Token: 0x060305F0 RID: 198128 RVA: 0x00B3AD64 File Offset: 0x00B38F64
+		// Token: 0x06024DC0 RID: 150976 RVA: 0x00A6AE30 File Offset: 0x00A69030
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MediumItemListItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060305F1 RID: 198129 RVA: 0x00B3ADA8 File Offset: 0x00B38FA8
+		// Token: 0x06024DC1 RID: 150977 RVA: 0x00A6AE74 File Offset: 0x00A69074
 		public override void Refresh(TItem data, bool isSelected, int gridIndex)
 		{
 			int itemId = data.ItemData.ItemId;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			gridItem.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x060305F2 RID: 198130 RVA: 0x00B3AE40 File Offset: 0x00B39040
+		// Token: 0x06024DC2 RID: 150978 RVA: 0x00A6AF0C File Offset: 0x00A6910C
 		[NullableContext(1)]
 		public string GetBottomText(int needCount)
 		{
@@ -66,14 +66,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0401A034 RID: 106548
+		// Token: 0x040146E8 RID: 83688
 		[Nullable(2)]
 		private MediumItemGrid GridItem;
 
-		// Token: 0x0401A035 RID: 106549
+		// Token: 0x040146E9 RID: 83689
 		private int? ItemId;
 
-		// Token: 0x0401A036 RID: 106550
+		// Token: 0x040146EA RID: 83690
 		[Nullable(new byte[]
 		{
 			2,
@@ -81,10 +81,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 		})]
 		public Func<int, string> GetBottomTextCallback;
 
-		// Token: 0x0200AB0A RID: 43786
+		// Token: 0x020094B9 RID: 38073
 		public class EComponents
 		{
-			// Token: 0x04033FC4 RID: 212932
+			// Token: 0x0402E744 RID: 190276
 			public const int Root = 0;
 		}
 	}

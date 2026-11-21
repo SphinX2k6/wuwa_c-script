@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200184E RID: 6222
+// Token: 0x02000D07 RID: 3335
 [NullableContext(2)]
 [Nullable(0)]
 public class FilterItemData
 {
-	// Token: 0x0600B641 RID: 46657 RVA: 0x00293526 File Offset: 0x00291726
+	// Token: 0x06008A2A RID: 35370 RVA: 0x0029DC36 File Offset: 0x0029BE36
 	public FilterItemData(int filterId = 0, string content = null, string iconPath = null)
 	{
 		this.FilterId = filterId;
@@ -14,13 +14,13 @@ public class FilterItemData
 		this.IconPath = iconPath;
 	}
 
-	// Token: 0x0600B642 RID: 46658 RVA: 0x0029354A File Offset: 0x0029174A
+	// Token: 0x06008A2B RID: 35371 RVA: 0x0029DC5A File Offset: 0x0029BE5A
 	public void SetIsShowIcon(bool value)
 	{
 		this.IsShowIcon = value;
 	}
 
-	// Token: 0x0600B643 RID: 46659 RVA: 0x00293553 File Offset: 0x00291753
+	// Token: 0x06008A2C RID: 35372 RVA: 0x0029DC63 File Offset: 0x0029BE63
 	public string GetIconPath()
 	{
 		if (this.IsShowIcon)
@@ -30,21 +30,21 @@ public class FilterItemData
 		return null;
 	}
 
-	// Token: 0x04005261 RID: 21089
+	// Token: 0x0400530C RID: 21260
 	private bool IsShowIcon = true;
 
-	// Token: 0x04005262 RID: 21090
+	// Token: 0x0400530D RID: 21261
 	public bool NeedChangeColor;
 
-	// Token: 0x04005263 RID: 21091
+	// Token: 0x0400530E RID: 21262
 	public int FilterId;
 
-	// Token: 0x04005264 RID: 21092
+	// Token: 0x0400530F RID: 21263
 	public string Content;
 
-	// Token: 0x04005265 RID: 21093
+	// Token: 0x04005310 RID: 21264
 	private readonly string IconPath;
 
-	// Token: 0x04005266 RID: 21094
+	// Token: 0x04005311 RID: 21265
 	public string ChangeColor;
 }

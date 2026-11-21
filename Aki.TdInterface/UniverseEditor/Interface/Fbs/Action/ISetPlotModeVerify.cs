@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200705A RID: 28762
+	// Token: 0x02007826 RID: 30758
 	public static class ISetPlotModeVerify
 	{
-		// Token: 0x06032EE3 RID: 208611 RVA: 0x006DEFA0 File Offset: 0x006DD1A0
+		// Token: 0x06036184 RID: 221572 RVA: 0x0073F554 File Offset: 0x0073D754
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyString(tablePos, 4, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 8, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 10, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 18, 1UL, 1UL, false))
@@ -100,35 +100,35 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007E4C RID: 32332
+		// Token: 0x020086E2 RID: 34530
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013A19 RID: 80409
+			// Token: 0x04014AED RID: 84717
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013A1A RID: 80410
+			// Token: 0x04014AEE RID: 84718
 			public static VerifyUnionAction <1>__Verify;
 
-			// Token: 0x04013A1B RID: 80411
+			// Token: 0x04014AEF RID: 84719
 			public static VerifyUnionAction <2>__Verify;
 
-			// Token: 0x04013A1C RID: 80412
+			// Token: 0x04014AF0 RID: 84720
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x04013A1D RID: 80413
+			// Token: 0x04014AF1 RID: 84721
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x04013A1E RID: 80414
+			// Token: 0x04014AF2 RID: 84722
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x04013A1F RID: 80415
+			// Token: 0x04014AF3 RID: 84723
 			public static VerifyTableAction <6>__Verify;
 
-			// Token: 0x04013A20 RID: 80416
+			// Token: 0x04014AF4 RID: 84724
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x04013A21 RID: 80417
+			// Token: 0x04014AF5 RID: 84725
 			public static VerifyTableAction <8>__Verify;
 		}
 	}

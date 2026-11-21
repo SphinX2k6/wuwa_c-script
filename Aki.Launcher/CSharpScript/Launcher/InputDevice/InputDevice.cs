@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.InputDevice
 {
-	// Token: 0x020001D0 RID: 464
+	// Token: 0x020001D4 RID: 468
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputDevice : Singleton
 	{
-		// Token: 0x06000C41 RID: 3137 RVA: 0x0004B6A8 File Offset: 0x000498A8
+		// Token: 0x06000C78 RID: 3192 RVA: 0x0004DEBC File Offset: 0x0004C0BC
 		public void Initialize()
 		{
 			switch (Platform.Instance.Type)
@@ -48,7 +48,7 @@ namespace CSharpScript.Launcher.InputDevice
 			}
 		}
 
-		// Token: 0x06000C42 RID: 3138 RVA: 0x0004B770 File Offset: 0x00049970
+		// Token: 0x06000C79 RID: 3193 RVA: 0x0004DF84 File Offset: 0x0004C184
 		private unsafe void SetInputControllerType(EInputControllerType inputControllerType)
 		{
 			if (this.TypeInternal == inputControllerType)
@@ -69,7 +69,7 @@ namespace CSharpScript.Launcher.InputDevice
 			}
 		}
 
-		// Token: 0x06000C43 RID: 3139 RVA: 0x0004B838 File Offset: 0x00049A38
+		// Token: 0x06000C7A RID: 3194 RVA: 0x0004E04C File Offset: 0x0004C24C
 		private EInputControllerType? GetCurrentDeviceInputController()
 		{
 			TArray<FRegisteredDeviceInfo> registeredDevices = URawInputFunctionLibrary.GetRegisteredDevices();
@@ -108,7 +108,7 @@ namespace CSharpScript.Launcher.InputDevice
 			return new EInputControllerType?(EInputControllerType.XboxOne);
 		}
 
-		// Token: 0x06000C44 RID: 3140 RVA: 0x0004B974 File Offset: 0x00049B74
+		// Token: 0x06000C7B RID: 3195 RVA: 0x0004E188 File Offset: 0x0004C388
 		private bool RefreshPlatformByDevice()
 		{
 			if (Platform.Instance.IsPs5Platform())
@@ -220,13 +220,13 @@ namespace CSharpScript.Launcher.InputDevice
 			}
 		}
 
-		// Token: 0x06000C45 RID: 3141 RVA: 0x0004BBC0 File Offset: 0x00049DC0
+		// Token: 0x06000C7C RID: 3196 RVA: 0x0004E3D4 File Offset: 0x0004C5D4
 		private void SwitchInputControllerType(EInputControllerType inputControllerType)
 		{
 			this.SetInputControllerType(inputControllerType);
 		}
 
-		// Token: 0x06000C46 RID: 3142 RVA: 0x0004BBC9 File Offset: 0x00049DC9
+		// Token: 0x06000C7D RID: 3197 RVA: 0x0004E3DD File Offset: 0x0004C5DD
 		public void SwitchInputControllerTypeByKey(FKey key)
 		{
 			if (UKismetInputLibrary.Key_IsGamepadKey(key))
@@ -248,68 +248,68 @@ namespace CSharpScript.Launcher.InputDevice
 			}
 		}
 
-		// Token: 0x06000C47 RID: 3143 RVA: 0x0004BC05 File Offset: 0x00049E05
+		// Token: 0x06000C7E RID: 3198 RVA: 0x0004E419 File Offset: 0x0004C619
 		public void SwitchInputControllerTypeByMouseMove()
 		{
 			this.SwitchInputControllerType(EInputControllerType.Keyboard);
 		}
 
-		// Token: 0x06000C48 RID: 3144 RVA: 0x0004BC0E File Offset: 0x00049E0E
+		// Token: 0x06000C7F RID: 3199 RVA: 0x0004E422 File Offset: 0x0004C622
 		public void RegisterInputChangeDelegate(Action<EInputControllerType, EInputControllerType> inputChangeDelegate)
 		{
 			this.InputChangeDelegateSet.Add(inputChangeDelegate);
 		}
 
-		// Token: 0x06000C49 RID: 3145 RVA: 0x0004BC1D File Offset: 0x00049E1D
+		// Token: 0x06000C80 RID: 3200 RVA: 0x0004E431 File Offset: 0x0004C631
 		public void UnRegisterInputChangeDelegate(Action<EInputControllerType, EInputControllerType> inputChangeDelegate)
 		{
 			this.InputChangeDelegateSet.Remove(inputChangeDelegate);
 		}
 
-		// Token: 0x06000C4A RID: 3146 RVA: 0x0004BC2C File Offset: 0x00049E2C
+		// Token: 0x06000C81 RID: 3201 RVA: 0x0004E440 File Offset: 0x0004C640
 		public bool IsInKeyBoard()
 		{
 			return this.TypeInternal == EInputControllerType.Keyboard;
 		}
 
-		// Token: 0x06000C4B RID: 3147 RVA: 0x0004BC37 File Offset: 0x00049E37
+		// Token: 0x06000C82 RID: 3202 RVA: 0x0004E44B File Offset: 0x0004C64B
 		public bool IsInTouch()
 		{
 			return this.TypeInternal == EInputControllerType.Touch;
 		}
 
-		// Token: 0x06000C4C RID: 3148 RVA: 0x0004BC42 File Offset: 0x00049E42
+		// Token: 0x06000C83 RID: 3203 RVA: 0x0004E456 File Offset: 0x0004C656
 		public bool IsInGamepad()
 		{
 			return this.IsPsGamepad() || this.IsXboxGamepad() || this.IsBackBoneGamepad() || this.IsNsProGamepad();
 		}
 
-		// Token: 0x06000C4D RID: 3149 RVA: 0x0004BC64 File Offset: 0x00049E64
+		// Token: 0x06000C84 RID: 3204 RVA: 0x0004E478 File Offset: 0x0004C678
 		public bool IsPsGamepad()
 		{
 			return this.TypeInternal == EInputControllerType.PS4 || this.TypeInternal == EInputControllerType.PS5;
 		}
 
-		// Token: 0x06000C4E RID: 3150 RVA: 0x0004BC7A File Offset: 0x00049E7A
+		// Token: 0x06000C85 RID: 3205 RVA: 0x0004E48E File Offset: 0x0004C68E
 		public bool IsXboxGamepad()
 		{
 			return this.TypeInternal == EInputControllerType.XboxOne;
 		}
 
-		// Token: 0x06000C4F RID: 3151 RVA: 0x0004BC85 File Offset: 0x00049E85
+		// Token: 0x06000C86 RID: 3206 RVA: 0x0004E499 File Offset: 0x0004C699
 		public bool IsBackBoneGamepad()
 		{
 			return this.TypeInternal == EInputControllerType.BackBone;
 		}
 
-		// Token: 0x06000C50 RID: 3152 RVA: 0x0004BC90 File Offset: 0x00049E90
+		// Token: 0x06000C87 RID: 3207 RVA: 0x0004E4A4 File Offset: 0x0004C6A4
 		public bool IsNsProGamepad()
 		{
 			return this.TypeInternal == EInputControllerType.NsPro;
 		}
 
-		// Token: 0x1700013D RID: 317
-		// (get) Token: 0x06000C51 RID: 3153 RVA: 0x0004BC9B File Offset: 0x00049E9B
+		// Token: 0x17000143 RID: 323
+		// (get) Token: 0x06000C88 RID: 3208 RVA: 0x0004E4AF File Offset: 0x0004C6AF
 		public static InputDevice Instance
 		{
 			get
@@ -323,12 +323,12 @@ namespace CSharpScript.Launcher.InputDevice
 			}
 		}
 
-		// Token: 0x06000C52 RID: 3154 RVA: 0x0004BCBE File Offset: 0x00049EBE
+		// Token: 0x06000C89 RID: 3209 RVA: 0x0004E4D2 File Offset: 0x0004C6D2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000C53 RID: 3155 RVA: 0x0004BCC0 File Offset: 0x00049EC0
+		// Token: 0x06000C8A RID: 3210 RVA: 0x0004E4D4 File Offset: 0x0004C6D4
 		public static void ResetStaticDefaultValue()
 		{
 			InputDevice instance = InputDevice._instance;
@@ -339,7 +339,7 @@ namespace CSharpScript.Launcher.InputDevice
 			InputDevice._instance = null;
 		}
 
-		// Token: 0x06000C54 RID: 3156 RVA: 0x0004BCDC File Offset: 0x00049EDC
+		// Token: 0x06000C8B RID: 3211 RVA: 0x0004E4F0 File Offset: 0x0004C6F0
 		static InputDevice()
 		{
 			Dictionary<string, EInputControllerType> dictionary = new Dictionary<string, EInputControllerType>();
@@ -364,68 +364,68 @@ namespace CSharpScript.Launcher.InputDevice
 			StaticVariableRegister.RegisterAndExecute(new Action(InputDevice.CreateStaticDefaultValue), new Action(InputDevice.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040007B9 RID: 1977
+		// Token: 0x040007F6 RID: 2038
 		public const string DualSenseWirelessController = "1356_3302";
 
-		// Token: 0x040007BA RID: 1978
+		// Token: 0x040007F7 RID: 2039
 		public const string DualSenseEdgeWirelessController = "1356_3570";
 
-		// Token: 0x040007BB RID: 1979
+		// Token: 0x040007F8 RID: 2040
 		public const string DualShock4_Cuhzct1x = "1356_1476";
 
-		// Token: 0x040007BC RID: 1980
+		// Token: 0x040007F9 RID: 2041
 		public const string DualShock4_Cuhzct2x = "1356_2508";
 
-		// Token: 0x040007BD RID: 1981
+		// Token: 0x040007FA RID: 2042
 		public const string XboxController = "1118_2834";
 
-		// Token: 0x040007BE RID: 1982
+		// Token: 0x040007FB RID: 2043
 		public const string XboxEliteSeries2Controller = "1118_2816";
 
-		// Token: 0x040007BF RID: 1983
+		// Token: 0x040007FC RID: 2044
 		public const string XboxOneController2015 = "1118_733";
 
-		// Token: 0x040007C0 RID: 1984
+		// Token: 0x040007FD RID: 2045
 		public const string XboxOneWirelessController = "1118_736";
 
-		// Token: 0x040007C1 RID: 1985
+		// Token: 0x040007FE RID: 2046
 		public const string XboxOneEliteController = "1118_739";
 
-		// Token: 0x040007C2 RID: 1986
+		// Token: 0x040007FF RID: 2047
 		public const string XboxOneController = "1118_746";
 
-		// Token: 0x040007C3 RID: 1987
+		// Token: 0x04000800 RID: 2048
 		public const string XboxOneSController = "1118_765";
 
-		// Token: 0x040007C4 RID: 1988
+		// Token: 0x04000801 RID: 2049
 		public const string XboxWirelessAdapterForWindows = "1118_766";
 
-		// Token: 0x040007C5 RID: 1989
+		// Token: 0x04000802 RID: 2050
 		public const string BackboneOne = "13706_770";
 
-		// Token: 0x040007C6 RID: 1990
+		// Token: 0x04000803 RID: 2051
 		public const string NsPro = "1406_8201";
 
-		// Token: 0x040007C7 RID: 1991
+		// Token: 0x04000804 RID: 2052
 		public const string RazerDefault = "5426_*";
 
-		// Token: 0x040007C8 RID: 1992
+		// Token: 0x04000805 RID: 2053
 		public const string RazerWolverineV2Pro = "5426_4112";
 
-		// Token: 0x040007C9 RID: 1993
+		// Token: 0x04000806 RID: 2054
 		public const string RazerRaijuTournament = "5426_4103";
 
-		// Token: 0x040007CA RID: 1994
+		// Token: 0x04000807 RID: 2055
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, EInputControllerType> deviceIdMap;
 
-		// Token: 0x040007CB RID: 1995
+		// Token: 0x04000808 RID: 2056
 		private EInputControllerType TypeInternal;
 
-		// Token: 0x040007CC RID: 1996
+		// Token: 0x04000809 RID: 2057
 		private readonly HashSet<Action<EInputControllerType, EInputControllerType>> InputChangeDelegateSet = new HashSet<Action<EInputControllerType, EInputControllerType>>();
 
-		// Token: 0x040007CD RID: 1997
+		// Token: 0x0400080A RID: 2058
 		[Nullable(2)]
 		private static InputDevice _instance;
 	}

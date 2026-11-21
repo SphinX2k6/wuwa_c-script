@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062C3 RID: 25283
+	// Token: 0x02005241 RID: 21057
 	public class EActivityPreWarmHexColorJsonConverter : JsonConverter<EActivityPreWarmHexColor>
 	{
-		// Token: 0x0603F95D RID: 260445 RVA: 0x00F6190C File Offset: 0x00F5FB0C
+		// Token: 0x0603461E RID: 214558 RVA: 0x00EA8868 File Offset: 0x00EA6A68
 		public override EActivityPreWarmHexColor Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return EActivityPreWarmHexColorExtensions.FromString(@string);
 		}
 
-		// Token: 0x0603F95E RID: 260446 RVA: 0x00F61930 File Offset: 0x00F5FB30
+		// Token: 0x0603461F RID: 214559 RVA: 0x00EA888C File Offset: 0x00EA6A8C
 		public override void Write(Utf8JsonWriter writer, EActivityPreWarmHexColor value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

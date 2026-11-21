@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B03 RID: 11011
+	// Token: 0x02002DF7 RID: 11767
 	public class ToggleEntityElementalAbility : ActionParams
 	{
-		// Token: 0x0600F126 RID: 61734 RVA: 0x0022FB28 File Offset: 0x0022DD28
-		[NullableContext(1)]
+		// Token: 0x0600FFDC RID: 65500 RVA: 0x0024D834 File Offset: 0x0024BA34
 		public static ToggleEntityElementalAbility Create(IToggleEntityElementalAbility? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CE2 RID: 19682
-		// (get) Token: 0x0600F127 RID: 61735 RVA: 0x0022FB47 File Offset: 0x0022DD47
+		// Token: 0x1700509C RID: 20636
+		// (get) Token: 0x0600FFDD RID: 65501 RVA: 0x0024D853 File Offset: 0x0024BA53
 		public virtual int EntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CE3 RID: 19683
-		// (get) Token: 0x0600F128 RID: 61736 RVA: 0x0022FB54 File Offset: 0x0022DD54
+		// Token: 0x1700509D RID: 20637
+		// (get) Token: 0x0600FFDE RID: 65502 RVA: 0x0024D860 File Offset: 0x0024BA60
 		public virtual bool Enable
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084A3 RID: 33955
+		// Token: 0x04008BA7 RID: 35751
 		private IToggleEntityElementalAbility Instance;
 	}
 }

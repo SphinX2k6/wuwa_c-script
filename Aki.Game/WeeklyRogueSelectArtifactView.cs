@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D56 RID: 11606
+// Token: 0x020022B0 RID: 8880
 public class WeeklyRogueSelectArtifactView : UiViewBase
 {
-	// Token: 0x06018639 RID: 99897 RVA: 0x00635E3E File Offset: 0x0063403E
+	// Token: 0x06015EDB RID: 89819 RVA: 0x0065BE4E File Offset: 0x0065A04E
 	[NullableContext(1)]
 	public WeeklyRogueSelectArtifactView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0601863A RID: 99898 RVA: 0x00635E48 File Offset: 0x00634048
+	// Token: 0x06015EDC RID: 89820 RVA: 0x0065BE58 File Offset: 0x0065A058
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601863B RID: 99899 RVA: 0x00635EDC File Offset: 0x006340DC
+	// Token: 0x06015EDD RID: 89821 RVA: 0x0065BEEC File Offset: 0x0065A0EC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueSelectArtifactView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,25 +45,25 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601863C RID: 99900 RVA: 0x00635F1F File Offset: 0x0063411F
+	// Token: 0x06015EDE RID: 89822 RVA: 0x0065BF2F File Offset: 0x0065A12F
 	protected override void OnBeforeShow()
 	{
 		this.TokenLayout.PlayGridAnim();
 	}
 
-	// Token: 0x0601863D RID: 99901 RVA: 0x00635F2C File Offset: 0x0063412C
+	// Token: 0x06015EDF RID: 89823 RVA: 0x0065BF3C File Offset: 0x0065A13C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh));
 	}
 
-	// Token: 0x0601863E RID: 99902 RVA: 0x00635F4A File Offset: 0x0063414A
+	// Token: 0x06015EE0 RID: 89824 RVA: 0x0065BF5A File Offset: 0x0065A15A
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WeeklyRogueCycleRefresh, new Action(this.OnCycleRefresh));
 	}
 
-	// Token: 0x0601863F RID: 99903 RVA: 0x00635F68 File Offset: 0x00634168
+	// Token: 0x06015EE1 RID: 89825 RVA: 0x0065BF78 File Offset: 0x0065A178
 	private void OnCycleRefresh()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.WeeklyRogueCycleRefresh);
@@ -72,7 +72,7 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06018640 RID: 99904 RVA: 0x00635FBC File Offset: 0x006341BC
+	// Token: 0x06015EE2 RID: 89826 RVA: 0x0065BFCC File Offset: 0x0065A1CC
 	[NullableContext(1)]
 	private WeeklyRogueArtifactItem CreateTokenItem()
 	{
@@ -82,7 +82,7 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018641 RID: 99905 RVA: 0x00635FD8 File Offset: 0x006341D8
+	// Token: 0x06015EE3 RID: 89827 RVA: 0x0065BFE8 File Offset: 0x0065A1E8
 	private void OnSelectChange(int? selectIndex)
 	{
 		if (selectIndex == null)
@@ -103,7 +103,7 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 		base.GetButton(3).SetSelfInteractive(true);
 	}
 
-	// Token: 0x06018642 RID: 99906 RVA: 0x00636034 File Offset: 0x00634234
+	// Token: 0x06015EE4 RID: 89828 RVA: 0x0065C044 File Offset: 0x0065A244
 	private void OnBtnConfirm()
 	{
 		UiLayer.Instance.SetShowMaskLayer("WeeklyRogueSelectArtifactView.SelectArtifactRequest", true);
@@ -118,20 +118,20 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 		});
 	}
 
-	// Token: 0x06018643 RID: 99907 RVA: 0x00636080 File Offset: 0x00634280
+	// Token: 0x06015EE5 RID: 89829 RVA: 0x0065C090 File Offset: 0x0065A290
 	private void OnBtnBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06018644 RID: 99908 RVA: 0x00636089 File Offset: 0x00634289
+	// Token: 0x06015EE6 RID: 89830 RVA: 0x0065C099 File Offset: 0x0065A299
 	[CompilerGenerated]
 	internal static void <OnCycleRefresh>g__ConfirmCallback|9_0()
 	{
 		UiManager.Instance.ResetToBattleView(null);
 	}
 
-	// Token: 0x0400B4F4 RID: 46324
+	// Token: 0x0400B869 RID: 47209
 	[Nullable(new byte[]
 	{
 		2,
@@ -140,20 +140,20 @@ public class WeeklyRogueSelectArtifactView : UiViewBase
 	})]
 	private GenericLayout<WeeklyRogueArtifactItem, RogueWeeklyEntry> TokenLayout;
 
-	// Token: 0x0400B4F5 RID: 46325
+	// Token: 0x0400B86A RID: 47210
 	[Nullable(2)]
 	private WeeklyRogueCaptionItem CaptionItem;
 
-	// Token: 0x020092EF RID: 37615
+	// Token: 0x02008516 RID: 34070
 	private enum EWeeklyRogueSelectTokenDefine
 	{
-		// Token: 0x0402F7DF RID: 194527
+		// Token: 0x0402AE67 RID: 175719
 		CaptionItem,
-		// Token: 0x0402F7E0 RID: 194528
+		// Token: 0x0402AE68 RID: 175720
 		ArtifactLayout,
-		// Token: 0x0402F7E1 RID: 194529
+		// Token: 0x0402AE69 RID: 175721
 		ArtifactItem,
-		// Token: 0x0402F7E2 RID: 194530
+		// Token: 0x0402AE6A RID: 175722
 		BtnConfirm
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F46 RID: 20294
+	// Token: 0x02005475 RID: 21621
 	public struct IButterflySpline : IFlatbufferObject
 	{
-		// Token: 0x17009246 RID: 37446
-		// (get) Token: 0x06020223 RID: 131619 RVA: 0x0047881B File Offset: 0x00476A1B
+		// Token: 0x170099BF RID: 39359
+		// (get) Token: 0x06021F75 RID: 139125 RVA: 0x004AE809 File Offset: 0x004ACA09
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020224 RID: 131620 RVA: 0x00478828 File Offset: 0x00476A28
+		// Token: 0x06021F76 RID: 139126 RVA: 0x004AE816 File Offset: 0x004ACA16
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020225 RID: 131621 RVA: 0x00478830 File Offset: 0x00476A30
+		// Token: 0x06021F77 RID: 139127 RVA: 0x004AE820 File Offset: 0x004ACA20
 		public static IButterflySpline GetRootAsIButterflySpline(ByteBuffer _bb)
 		{
 			return IButterflySpline.GetRootAsIButterflySpline(_bb, default(IButterflySpline));
 		}
 
-		// Token: 0x06020226 RID: 131622 RVA: 0x0047884C File Offset: 0x00476A4C
+		// Token: 0x06021F78 RID: 139128 RVA: 0x004AE83C File Offset: 0x004ACA3C
 		public static IButterflySpline GetRootAsIButterflySpline(ByteBuffer _bb, IButterflySpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020227 RID: 131623 RVA: 0x00478869 File Offset: 0x00476A69
+		// Token: 0x06021F79 RID: 139129 RVA: 0x004AE859 File Offset: 0x004ACA59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020228 RID: 131624 RVA: 0x00478878 File Offset: 0x00476A78
+		// Token: 0x06021F7A RID: 139130 RVA: 0x004AE868 File Offset: 0x004ACA68
 		public IButterflySpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009247 RID: 37447
-		// (get) Token: 0x06020229 RID: 131625 RVA: 0x00478888 File Offset: 0x00476A88
+		// Token: 0x170099C0 RID: 39360
+		// (get) Token: 0x06021F7B RID: 139131 RVA: 0x004AE878 File Offset: 0x004ACA78
 		public ESplineType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602022A RID: 131626 RVA: 0x004788C4 File Offset: 0x00476AC4
+		// Token: 0x06021F7C RID: 139132 RVA: 0x004AE8B4 File Offset: 0x004ACAB4
 		public IButterflySplinePoint? Points(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IButterflySplinePoint?(default(IButterflySplinePoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009248 RID: 37448
-		// (get) Token: 0x0602022B RID: 131627 RVA: 0x00478924 File Offset: 0x00476B24
+		// Token: 0x170099C1 RID: 39361
+		// (get) Token: 0x06021F7D RID: 139133 RVA: 0x004AE914 File Offset: 0x004ACB14
 		public int PointsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602022C RID: 131628 RVA: 0x0047894F File Offset: 0x00476B4F
+		// Token: 0x06021F7E RID: 139134 RVA: 0x004AE93F File Offset: 0x004ACB3F
 		public static Offset<IButterflySpline> CreateIButterflySpline(FlatBufferBuilder builder, ESplineType Type = ESplineType.Common, VectorOffset PointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IButterflySpline.EndIButterflySpline(builder);
 		}
 
-		// Token: 0x0602022D RID: 131629 RVA: 0x0047896C File Offset: 0x00476B6C
+		// Token: 0x06021F7F RID: 139135 RVA: 0x004AE95C File Offset: 0x004ACB5C
 		public static void StartIButterflySpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602022E RID: 131630 RVA: 0x00478975 File Offset: 0x00476B75
+		// Token: 0x06021F80 RID: 139136 RVA: 0x004AE965 File Offset: 0x004ACB65
 		public static void AddType(FlatBufferBuilder builder, ESplineType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602022F RID: 131631 RVA: 0x00478980 File Offset: 0x00476B80
+		// Token: 0x06021F81 RID: 139137 RVA: 0x004AE970 File Offset: 0x004ACB70
 		public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset)
 		{
 			builder.AddOffset(1, pointsOffset.Value, 0);
 		}
 
-		// Token: 0x06020230 RID: 131632 RVA: 0x00478990 File Offset: 0x00476B90
+		// Token: 0x06021F82 RID: 139138 RVA: 0x004AE980 File Offset: 0x004ACB80
 		public static VectorOffset CreatePointsVector(FlatBufferBuilder builder, Offset<IButterflySplinePoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020231 RID: 131633 RVA: 0x004789D0 File Offset: 0x00476BD0
+		// Token: 0x06021F83 RID: 139139 RVA: 0x004AE9C0 File Offset: 0x004ACBC0
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, Offset<IButterflySplinePoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020232 RID: 131634 RVA: 0x004789EA File Offset: 0x00476BEA
+		// Token: 0x06021F84 RID: 139140 RVA: 0x004AE9DA File Offset: 0x004ACBDA
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IButterflySplinePoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020233 RID: 131635 RVA: 0x00478A08 File Offset: 0x00476C08
+		// Token: 0x06021F85 RID: 139141 RVA: 0x004AE9F8 File Offset: 0x004ACBF8
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020234 RID: 131636 RVA: 0x00478A21 File Offset: 0x00476C21
+		// Token: 0x06021F86 RID: 139142 RVA: 0x004AEA11 File Offset: 0x004ACC11
 		public static void StartPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06020235 RID: 131637 RVA: 0x00478A2C File Offset: 0x00476C2C
+		// Token: 0x06021F87 RID: 139143 RVA: 0x004AEA1C File Offset: 0x004ACC1C
 		public static Offset<IButterflySpline> EndIButterflySpline(FlatBufferBuilder builder)
 		{
 			return new Offset<IButterflySpline>(builder.EndTable());
 		}
 
-		// Token: 0x06020236 RID: 131638 RVA: 0x00478A3C File Offset: 0x00476C3C
+		// Token: 0x06021F88 RID: 139144 RVA: 0x004AEA2C File Offset: 0x004ACC2C
 		public IButterflySplineT UnPack()
 		{
 			IButterflySplineT butterflySplineT = new IButterflySplineT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return butterflySplineT;
 		}
 
-		// Token: 0x06020237 RID: 131639 RVA: 0x00478A58 File Offset: 0x00476C58
+		// Token: 0x06021F89 RID: 139145 RVA: 0x004AEA48 File Offset: 0x004ACC48
 		public void UnPackTo(IButterflySplineT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020238 RID: 131640 RVA: 0x00478AC4 File Offset: 0x00476CC4
+		// Token: 0x06021F8A RID: 139146 RVA: 0x004AEAB4 File Offset: 0x004ACCB4
 		public static Offset<IButterflySpline> Pack(FlatBufferBuilder builder, IButterflySplineT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IButterflySpline.CreateIButterflySpline(builder, _o.Type, pointsOffset);
 		}
 
-		// Token: 0x0400DDB6 RID: 56758
+		// Token: 0x0400E960 RID: 59744
 		private Table __p;
 	}
 }

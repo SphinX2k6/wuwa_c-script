@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x02005404 RID: 21508
+	// Token: 0x020043E7 RID: 17383
 	public class MenuTool
 	{
-		// Token: 0x06036F5C RID: 225116 RVA: 0x00D05015 File Offset: 0x00D03215
+		// Token: 0x0602BEA4 RID: 179876 RVA: 0x00C54459 File Offset: 0x00C52659
 		[NullableContext(1)]
 		public static IReadOnlyList<LanguageDefine> GetLanguageDefineData()
 		{

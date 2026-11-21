@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FCD RID: 4045
+	// Token: 0x020010B5 RID: 4277
 	public struct RiskHarvestDifficulty : IFlatbufferObject
 	{
-		// Token: 0x17002E8F RID: 11919
-		// (get) Token: 0x0600BD60 RID: 48480 RVA: 0x002E1238 File Offset: 0x002DF438
+		// Token: 0x17002F0A RID: 12042
+		// (get) Token: 0x0600C3AA RID: 50090 RVA: 0x002FD824 File Offset: 0x002FBA24
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BD61 RID: 48481 RVA: 0x002E1245 File Offset: 0x002DF445
+		// Token: 0x0600C3AB RID: 50091 RVA: 0x002FD831 File Offset: 0x002FBA31
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BD62 RID: 48482 RVA: 0x002E124C File Offset: 0x002DF44C
+		// Token: 0x0600C3AC RID: 50092 RVA: 0x002FD838 File Offset: 0x002FBA38
 		public static RiskHarvestDifficulty GetRootAsRiskHarvestDifficulty(ByteBuffer _bb)
 		{
 			return RiskHarvestDifficulty.GetRootAsRiskHarvestDifficulty(_bb, default(RiskHarvestDifficulty));
 		}
 
-		// Token: 0x0600BD63 RID: 48483 RVA: 0x002E1268 File Offset: 0x002DF468
+		// Token: 0x0600C3AD RID: 50093 RVA: 0x002FD854 File Offset: 0x002FBA54
 		public static RiskHarvestDifficulty GetRootAsRiskHarvestDifficulty(ByteBuffer _bb, RiskHarvestDifficulty obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BD64 RID: 48484 RVA: 0x002E1285 File Offset: 0x002DF485
+		// Token: 0x0600C3AE RID: 50094 RVA: 0x002FD871 File Offset: 0x002FBA71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BD65 RID: 48485 RVA: 0x002E1294 File Offset: 0x002DF494
+		// Token: 0x0600C3AF RID: 50095 RVA: 0x002FD880 File Offset: 0x002FBA80
 		public RiskHarvestDifficulty __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002E90 RID: 11920
-		// (get) Token: 0x0600BD66 RID: 48486 RVA: 0x002E12A4 File Offset: 0x002DF4A4
+		// Token: 0x17002F0B RID: 12043
+		// (get) Token: 0x0600C3B0 RID: 50096 RVA: 0x002FD890 File Offset: 0x002FBA90
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BD67 RID: 48487 RVA: 0x002E12E0 File Offset: 0x002DF4E0
+		// Token: 0x0600C3B1 RID: 50097 RVA: 0x002FD8CC File Offset: 0x002FBACC
 		public int LevelGroup(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002E91 RID: 11921
-		// (get) Token: 0x0600BD68 RID: 48488 RVA: 0x002E1320 File Offset: 0x002DF520
+		// Token: 0x17002F0C RID: 12044
+		// (get) Token: 0x0600C3B2 RID: 50098 RVA: 0x002FD90C File Offset: 0x002FBB0C
 		public int LevelGroupLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BD69 RID: 48489 RVA: 0x002E134B File Offset: 0x002DF54B
+		// Token: 0x0600C3B3 RID: 50099 RVA: 0x002FD937 File Offset: 0x002FBB37
 		public Span<int> GetLevelGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600BD6A RID: 48490 RVA: 0x002E135A File Offset: 0x002DF55A
+		// Token: 0x0600C3B4 RID: 50100 RVA: 0x002FD946 File Offset: 0x002FBB46
 		public int[] GetLevelGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002E92 RID: 11922
-		// (get) Token: 0x0600BD6B RID: 48491 RVA: 0x002E1374 File Offset: 0x002DF574
+		// Token: 0x17002F0D RID: 12045
+		// (get) Token: 0x0600C3B5 RID: 50101 RVA: 0x002FD960 File Offset: 0x002FBB60
 		public int TimeRatio
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E93 RID: 11923
-		// (get) Token: 0x0600BD6C RID: 48492 RVA: 0x002E13B0 File Offset: 0x002DF5B0
+		// Token: 0x17002F0E RID: 12046
+		// (get) Token: 0x0600C3B6 RID: 50102 RVA: 0x002FD99C File Offset: 0x002FBB9C
 		public int MonsterRatio
 		{
 			get
@@ -132,25 +132,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BD6D RID: 48493 RVA: 0x002E13F0 File Offset: 0x002DF5F0
+		// Token: 0x0600C3B7 RID: 50103 RVA: 0x002FD9D9 File Offset: 0x002FBBD9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LevelGroupIter()或GetLevelGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LevelGroup()
+		public int[] LevelGroup()
 		{
-			RiskHarvestDifficulty riskHarvestDifficulty = this;
-			return riskHarvestDifficulty.GetLevelGroupArray() ?? Array.Empty<int>();
+			return this.GetLevelGroupArray();
 		}
 
-		// Token: 0x0600BD6E RID: 48494 RVA: 0x002E1414 File Offset: 0x002DF614
+		// Token: 0x0600C3B8 RID: 50104 RVA: 0x002FD9E1 File Offset: 0x002FBBE1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LevelGroupIter()
+		public IEnumerable<int> LevelGroupIter()
 		{
 			RiskHarvestDifficulty.<LevelGroupIter>d__20 <LevelGroupIter>d__ = new RiskHarvestDifficulty.<LevelGroupIter>d__20(-2);
 			<LevelGroupIter>d__.<>3__<>4__this = this;
 			return <LevelGroupIter>d__;
 		}
 
-		// Token: 0x040050A8 RID: 20648
+		// Token: 0x04005690 RID: 22160
 		private Table __p;
 	}
 }

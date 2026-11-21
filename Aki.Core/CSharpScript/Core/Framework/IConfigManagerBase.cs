@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Core.Framework
 {
-	// Token: 0x02000133 RID: 307
+	// Token: 0x02000138 RID: 312
 	public interface IConfigManagerBase
 	{
 	}

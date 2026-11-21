@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005632 RID: 22066
+	// Token: 0x02004608 RID: 17928
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupComponentInfoList : UiPanelBase
 	{
-		// Token: 0x060381E5 RID: 229861 RVA: 0x00D4B118 File Offset: 0x00D49318
+		// Token: 0x0602D0E3 RID: 184547 RVA: 0x00C98E60 File Offset: 0x00C97060
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,19 +24,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381E6 RID: 229862 RVA: 0x00D4B172 File Offset: 0x00D49372
+		// Token: 0x0602D0E4 RID: 184548 RVA: 0x00C98EBA File Offset: 0x00C970BA
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<InfoItem, IItemInfoData>(base.GetVerticalLayout(1), new Func<InfoItem>(this.OnCreateInfoItem), null, false, true);
 		}
 
-		// Token: 0x060381E7 RID: 229863 RVA: 0x00D4B195 File Offset: 0x00D49395
+		// Token: 0x0602D0E5 RID: 184549 RVA: 0x00C98EDD File Offset: 0x00C970DD
 		public void SetTextByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x060381E8 RID: 229864 RVA: 0x00D4B1AC File Offset: 0x00D493AC
+		// Token: 0x0602D0E6 RID: 184550 RVA: 0x00C98EF4 File Offset: 0x00C970F4
 		public void Refresh(MapGridData gridData)
 		{
 			if (gridData.OccupiedEffectIdList.Count == 0)
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.ItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060381E9 RID: 229865 RVA: 0x00D4B324 File Offset: 0x00D49524
+		// Token: 0x0602D0E7 RID: 184551 RVA: 0x00C9906C File Offset: 0x00C9726C
 		private InfoItem OnCreateInfoItem()
 		{
 			return new InfoItem();
 		}
 
-		// Token: 0x0401D85D RID: 120925
+		// Token: 0x040182E8 RID: 99048
 		[Nullable(new byte[]
 		{
 			2,

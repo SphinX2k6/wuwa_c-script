@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x0200546C RID: 21612
+	// Token: 0x0200444F RID: 17487
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RepeatKeyTipsView : UiViewBase
 	{
-		// Token: 0x060372AE RID: 225966 RVA: 0x00D153F3 File Offset: 0x00D135F3
+		// Token: 0x0602C1F7 RID: 180727 RVA: 0x00C6480B File Offset: 0x00C62A0B
 		[NullableContext(1)]
 		public RepeatKeyTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060372AF RID: 225967 RVA: 0x00D153FC File Offset: 0x00D135FC
+		// Token: 0x0602C1F8 RID: 180728 RVA: 0x00C64814 File Offset: 0x00C62A14
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,20 +38,20 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x060372B0 RID: 225968 RVA: 0x00D154FF File Offset: 0x00D136FF
+		// Token: 0x0602C1F9 RID: 180729 RVA: 0x00C64917 File Offset: 0x00C62B17
 		private void OnConfirmButtonClicked()
 		{
 			this.IsConfirm = true;
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060372B1 RID: 225969 RVA: 0x00D1550F File Offset: 0x00D1370F
+		// Token: 0x0602C1FA RID: 180730 RVA: 0x00C64927 File Offset: 0x00C62B27
 		private void OnCancelButtonClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060372B2 RID: 225970 RVA: 0x00D15518 File Offset: 0x00D13718
+		// Token: 0x0602C1FB RID: 180731 RVA: 0x00C64930 File Offset: 0x00C62B30
 		protected override void OnStart()
 		{
 			IRepeatKeyInfo repeatKeyInfo = this.OpenParam as IRepeatKeyInfo;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), settingName2, Array.Empty<object>());
 		}
 
-		// Token: 0x060372B3 RID: 225971 RVA: 0x00D15668 File Offset: 0x00D13868
+		// Token: 0x0602C1FC RID: 180732 RVA: 0x00C64A80 File Offset: 0x00C62C80
 		protected override void OnBeforeDestroy()
 		{
 			if (this.OnCloseCallback != null)
@@ -108,47 +108,47 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.OnCloseCallback = null;
 		}
 
-		// Token: 0x0401D19F RID: 119199
+		// Token: 0x04017C38 RID: 97336
 		private KeySettingRowData CurrentKeySettingRowData;
 
-		// Token: 0x0401D1A0 RID: 119200
+		// Token: 0x04017C39 RID: 97337
 		private KeySettingRowData RepeatKeySettingRowData;
 
-		// Token: 0x0401D1A1 RID: 119201
+		// Token: 0x04017C3A RID: 97338
 		private EInputControllerType InputControllerType;
 
-		// Token: 0x0401D1A2 RID: 119202
+		// Token: 0x04017C3B RID: 97339
 		private Action<bool> OnCloseCallback;
 
-		// Token: 0x0401D1A3 RID: 119203
+		// Token: 0x04017C3C RID: 97340
 		private bool IsConfirm;
 
-		// Token: 0x0200B6E9 RID: 46825
+		// Token: 0x0200A121 RID: 41249
 		[NullableContext(0)]
 		public class EChildType
 		{
-			// Token: 0x040376A5 RID: 226981
+			// Token: 0x040320FA RID: 205050
 			public const int CurrentInputText = 0;
 
-			// Token: 0x040376A6 RID: 226982
+			// Token: 0x040320FB RID: 205051
 			public const int CurrentFromKeyNameText = 1;
 
-			// Token: 0x040376A7 RID: 226983
+			// Token: 0x040320FC RID: 205052
 			public const int CurrentToKeyNameText = 2;
 
-			// Token: 0x040376A8 RID: 226984
+			// Token: 0x040320FD RID: 205053
 			public const int RepeatInputText = 3;
 
-			// Token: 0x040376A9 RID: 226985
+			// Token: 0x040320FE RID: 205054
 			public const int RepeatFromKeyNameText = 4;
 
-			// Token: 0x040376AA RID: 226986
+			// Token: 0x040320FF RID: 205055
 			public const int RepeatToKeyNameText = 5;
 
-			// Token: 0x040376AB RID: 226987
+			// Token: 0x04032100 RID: 205056
 			public const int ConfirmButton = 6;
 
-			// Token: 0x040376AC RID: 226988
+			// Token: 0x04032101 RID: 205057
 			public const int CancelButton = 7;
 		}
 	}

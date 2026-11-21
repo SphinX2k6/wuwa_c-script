@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x0200511B RID: 20763
-	// (Invoke) Token: 0x0603514B RID: 217419
+	// Token: 0x020040EB RID: 16619
+	// (Invoke) Token: 0x0602A044 RID: 172100
 	public delegate int TDeckCardSlotSortFunc(DeckCardSlotInfo a, DeckCardSlotInfo b);
 }

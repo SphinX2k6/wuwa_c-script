@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200533E RID: 21310
+	// Token: 0x020058C4 RID: 22724
 	public struct IGroupAiMonsterEcology : IFlatbufferObject
 	{
-		// Token: 0x17009C85 RID: 40069
-		// (get) Token: 0x06022D82 RID: 142722 RVA: 0x004D3CCE File Offset: 0x004D1ECE
+		// Token: 0x1700A4BD RID: 42173
+		// (get) Token: 0x06024E36 RID: 151094 RVA: 0x00510BA2 File Offset: 0x0050EDA2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022D83 RID: 142723 RVA: 0x004D3CDB File Offset: 0x004D1EDB
+		// Token: 0x06024E37 RID: 151095 RVA: 0x00510BAF File Offset: 0x0050EDAF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022D84 RID: 142724 RVA: 0x004D3CE4 File Offset: 0x004D1EE4
+		// Token: 0x06024E38 RID: 151096 RVA: 0x00510BB8 File Offset: 0x0050EDB8
 		public static IGroupAiMonsterEcology GetRootAsIGroupAiMonsterEcology(ByteBuffer _bb)
 		{
 			return IGroupAiMonsterEcology.GetRootAsIGroupAiMonsterEcology(_bb, default(IGroupAiMonsterEcology));
 		}
 
-		// Token: 0x06022D85 RID: 142725 RVA: 0x004D3D00 File Offset: 0x004D1F00
+		// Token: 0x06024E39 RID: 151097 RVA: 0x00510BD4 File Offset: 0x0050EDD4
 		public static IGroupAiMonsterEcology GetRootAsIGroupAiMonsterEcology(ByteBuffer _bb, IGroupAiMonsterEcology obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022D86 RID: 142726 RVA: 0x004D3D1D File Offset: 0x004D1F1D
+		// Token: 0x06024E3A RID: 151098 RVA: 0x00510BF1 File Offset: 0x0050EDF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022D87 RID: 142727 RVA: 0x004D3D2C File Offset: 0x004D1F2C
+		// Token: 0x06024E3B RID: 151099 RVA: 0x00510C00 File Offset: 0x0050EE00
 		public IGroupAiMonsterEcology __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C86 RID: 40070
-		// (get) Token: 0x06022D88 RID: 142728 RVA: 0x004D3D3C File Offset: 0x004D1F3C
+		// Token: 0x1700A4BE RID: 42174
+		// (get) Token: 0x06024E3C RID: 151100 RVA: 0x00510C10 File Offset: 0x0050EE10
 		public EGroupAiMode Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C87 RID: 40071
-		// (get) Token: 0x06022D89 RID: 142729 RVA: 0x004D3D78 File Offset: 0x004D1F78
+		// Token: 0x1700A4BF RID: 42175
+		// (get) Token: 0x06024E3D RID: 151101 RVA: 0x00510C4C File Offset: 0x0050EE4C
 		public int Leader
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022D8A RID: 142730 RVA: 0x004D3DB4 File Offset: 0x004D1FB4
+		// Token: 0x06024E3E RID: 151102 RVA: 0x00510C88 File Offset: 0x0050EE88
 		public IGroupAiMonsterMember? Members(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IGroupAiMonsterMember?(default(IGroupAiMonsterMember).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009C88 RID: 40072
-		// (get) Token: 0x06022D8B RID: 142731 RVA: 0x004D3E14 File Offset: 0x004D2014
+		// Token: 0x1700A4C0 RID: 42176
+		// (get) Token: 0x06024E3F RID: 151103 RVA: 0x00510CE8 File Offset: 0x0050EEE8
 		public int MembersLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022D8C RID: 142732 RVA: 0x004D3E3F File Offset: 0x004D203F
+		// Token: 0x06024E40 RID: 151104 RVA: 0x00510D13 File Offset: 0x0050EF13
 		public static Offset<IGroupAiMonsterEcology> CreateIGroupAiMonsterEcology(FlatBufferBuilder builder, EGroupAiMode Type = EGroupAiMode.Default, int Leader = 0, VectorOffset MembersOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiMonsterEcology.EndIGroupAiMonsterEcology(builder);
 		}
 
-		// Token: 0x06022D8D RID: 142733 RVA: 0x004D3E63 File Offset: 0x004D2063
+		// Token: 0x06024E41 RID: 151105 RVA: 0x00510D37 File Offset: 0x0050EF37
 		public static void StartIGroupAiMonsterEcology(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022D8E RID: 142734 RVA: 0x004D3E6C File Offset: 0x004D206C
+		// Token: 0x06024E42 RID: 151106 RVA: 0x00510D40 File Offset: 0x0050EF40
 		public static void AddType(FlatBufferBuilder builder, EGroupAiMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022D8F RID: 142735 RVA: 0x004D3E77 File Offset: 0x004D2077
+		// Token: 0x06024E43 RID: 151107 RVA: 0x00510D4B File Offset: 0x0050EF4B
 		public static void AddLeader(FlatBufferBuilder builder, int leader)
 		{
 			builder.AddInt(1, leader, 0);
 		}
 
-		// Token: 0x06022D90 RID: 142736 RVA: 0x004D3E82 File Offset: 0x004D2082
+		// Token: 0x06024E44 RID: 151108 RVA: 0x00510D56 File Offset: 0x0050EF56
 		public static void AddMembers(FlatBufferBuilder builder, VectorOffset membersOffset)
 		{
 			builder.AddOffset(2, membersOffset.Value, 0);
 		}
 
-		// Token: 0x06022D91 RID: 142737 RVA: 0x004D3E94 File Offset: 0x004D2094
+		// Token: 0x06024E45 RID: 151109 RVA: 0x00510D68 File Offset: 0x0050EF68
 		public static VectorOffset CreateMembersVector(FlatBufferBuilder builder, Offset<IGroupAiMonsterMember>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022D92 RID: 142738 RVA: 0x004D3ED4 File Offset: 0x004D20D4
+		// Token: 0x06024E46 RID: 151110 RVA: 0x00510DA8 File Offset: 0x0050EFA8
 		public static VectorOffset CreateMembersVectorBlock(FlatBufferBuilder builder, Offset<IGroupAiMonsterMember>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022D93 RID: 142739 RVA: 0x004D3EEE File Offset: 0x004D20EE
+		// Token: 0x06024E47 RID: 151111 RVA: 0x00510DC2 File Offset: 0x0050EFC2
 		public static VectorOffset CreateMembersVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IGroupAiMonsterMember>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022D94 RID: 142740 RVA: 0x004D3F0C File Offset: 0x004D210C
+		// Token: 0x06024E48 RID: 151112 RVA: 0x00510DE0 File Offset: 0x0050EFE0
 		public static VectorOffset CreateMembersVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022D95 RID: 142741 RVA: 0x004D3F25 File Offset: 0x004D2125
+		// Token: 0x06024E49 RID: 151113 RVA: 0x00510DF9 File Offset: 0x0050EFF9
 		public static void StartMembersVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022D96 RID: 142742 RVA: 0x004D3F30 File Offset: 0x004D2130
+		// Token: 0x06024E4A RID: 151114 RVA: 0x00510E04 File Offset: 0x0050F004
 		public static Offset<IGroupAiMonsterEcology> EndIGroupAiMonsterEcology(FlatBufferBuilder builder)
 		{
 			return new Offset<IGroupAiMonsterEcology>(builder.EndTable());
 		}
 
-		// Token: 0x06022D97 RID: 142743 RVA: 0x004D3F40 File Offset: 0x004D2140
+		// Token: 0x06024E4B RID: 151115 RVA: 0x00510E14 File Offset: 0x0050F014
 		public IGroupAiMonsterEcologyT UnPack()
 		{
 			IGroupAiMonsterEcologyT groupAiMonsterEcologyT = new IGroupAiMonsterEcologyT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return groupAiMonsterEcologyT;
 		}
 
-		// Token: 0x06022D98 RID: 142744 RVA: 0x004D3F5C File Offset: 0x004D215C
+		// Token: 0x06024E4C RID: 151116 RVA: 0x00510E30 File Offset: 0x0050F030
 		public void UnPackTo(IGroupAiMonsterEcologyT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022D99 RID: 142745 RVA: 0x004D3FD4 File Offset: 0x004D21D4
+		// Token: 0x06024E4D RID: 151117 RVA: 0x00510EA8 File Offset: 0x0050F0A8
 		public static Offset<IGroupAiMonsterEcology> Pack(FlatBufferBuilder builder, IGroupAiMonsterEcologyT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiMonsterEcology.CreateIGroupAiMonsterEcology(builder, _o.Type, _o.Leader, membersOffset);
 		}
 
-		// Token: 0x0400E508 RID: 58632
+		// Token: 0x0400F138 RID: 61752
 		private Table __p;
 	}
 }

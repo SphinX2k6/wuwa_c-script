@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200569F RID: 22175
+	// Token: 0x02004675 RID: 18037
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StarLevelComponent
 	{
-		// Token: 0x060386D8 RID: 231128 RVA: 0x00D65B3B File Offset: 0x00D63D3B
+		// Token: 0x0602D5D5 RID: 185813 RVA: 0x00CB3C8B File Offset: 0x00CB1E8B
 		public StarLevelComponent(UUILayoutBase layout)
 		{
 			this.StarLayout = new GenericLayoutNew<StarItem>(layout, new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<StarItem>(this.OnCreateStarProxy), null);
 		}
 
-		// Token: 0x060386D9 RID: 231129 RVA: 0x00D65B5C File Offset: 0x00D63D5C
+		// Token: 0x0602D5D6 RID: 185814 RVA: 0x00CB3CAC File Offset: 0x00CB1EAC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return null;
 		}
 
-		// Token: 0x060386DA RID: 231130 RVA: 0x00D65BB0 File Offset: 0x00D63DB0
+		// Token: 0x0602D5D7 RID: 185815 RVA: 0x00CB3D00 File Offset: 0x00CB1F00
 		public void ShowLevel(int current, int max)
 		{
 			List<bool> list = new List<bool>(new bool[max]);
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.StarLayout.RebuildLayoutByDataNew<bool>(list, null);
 		}
 
-		// Token: 0x060386DB RID: 231131 RVA: 0x00D65BF2 File Offset: 0x00D63DF2
+		// Token: 0x0602D5D8 RID: 185816 RVA: 0x00CB3D42 File Offset: 0x00CB1F42
 		public void Clear()
 		{
 			this.StarLayout.ClearChildren();
 		}
 
-		// Token: 0x0401DA2E RID: 121390
+		// Token: 0x040184B9 RID: 99513
 		private readonly GenericLayoutNew<StarItem> StarLayout;
 	}
 }

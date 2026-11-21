@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A4A RID: 6730
+// Token: 0x02000F09 RID: 3849
 public class DangoAbyssPluginRecoveryResultView : UiViewBase
 {
-	// Token: 0x0600C619 RID: 50713 RVA: 0x002D050B File Offset: 0x002CE70B
+	// Token: 0x06009A29 RID: 39465 RVA: 0x002DB607 File Offset: 0x002D9807
 	[NullableContext(1)]
 	public DangoAbyssPluginRecoveryResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C61A RID: 50714 RVA: 0x002D0514 File Offset: 0x002CE714
+	// Token: 0x06009A2A RID: 39466 RVA: 0x002DB610 File Offset: 0x002D9810
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class DangoAbyssPluginRecoveryResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600C61B RID: 50715 RVA: 0x002D05C0 File Offset: 0x002CE7C0
+	// Token: 0x06009A2B RID: 39467 RVA: 0x002DB6BC File Offset: 0x002D98BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssPluginRecoveryResultView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -44,20 +44,20 @@ public class DangoAbyssPluginRecoveryResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C61C RID: 50716 RVA: 0x002D0603 File Offset: 0x002CE803
+	// Token: 0x06009A2C RID: 39468 RVA: 0x002DB6FF File Offset: 0x002D98FF
 	[NullableContext(1)]
 	private RecoveryRewardItem InitGridItem()
 	{
 		return new RecoveryRewardItem();
 	}
 
-	// Token: 0x0600C61D RID: 50717 RVA: 0x002D060A File Offset: 0x002CE80A
+	// Token: 0x06009A2D RID: 39469 RVA: 0x002DB706 File Offset: 0x002D9906
 	private void OnClickMask()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005B4B RID: 23371
+	// Token: 0x04005C1A RID: 23578
 	[Nullable(new byte[]
 	{
 		2,
@@ -66,18 +66,18 @@ public class DangoAbyssPluginRecoveryResultView : UiViewBase
 	})]
 	private GenericLayout<RecoveryRewardItem, DangoAbyssDefine.IRecoveryRewardData> MainRewardLayout;
 
-	// Token: 0x02007F91 RID: 32657
+	// Token: 0x02007120 RID: 28960
 	private enum EComponent
 	{
-		// Token: 0x04029A66 RID: 170598
+		// Token: 0x04024DA3 RID: 150947
 		ItemPlugin,
-		// Token: 0x04029A67 RID: 170599
+		// Token: 0x04024DA4 RID: 150948
 		BtnMask,
-		// Token: 0x04029A68 RID: 170600
+		// Token: 0x04024DA5 RID: 150949
 		MainRewardLayout,
-		// Token: 0x04029A69 RID: 170601
+		// Token: 0x04024DA6 RID: 150950
 		ItemTips,
-		// Token: 0x04029A6A RID: 170602
+		// Token: 0x04024DA7 RID: 150951
 		ExtraRewardLayout
 	}
 }

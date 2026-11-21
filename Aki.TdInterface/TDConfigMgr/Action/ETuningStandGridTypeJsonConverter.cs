@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200248C RID: 9356
+	// Token: 0x0200272F RID: 10031
 	public class ETuningStandGridTypeJsonConverter : JsonConverter<ETuningStandGridType>
 	{
-		// Token: 0x0600CAF6 RID: 51958 RVA: 0x001DE284 File Offset: 0x001DC484
+		// Token: 0x0600D7AF RID: 55215 RVA: 0x001F844C File Offset: 0x001F664C
 		public override ETuningStandGridType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETuningStandGridTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CAF7 RID: 51959 RVA: 0x001DE2A8 File Offset: 0x001DC4A8
+		// Token: 0x0600D7B0 RID: 55216 RVA: 0x001F8470 File Offset: 0x001F6670
 		public override void Write(Utf8JsonWriter writer, ETuningStandGridType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

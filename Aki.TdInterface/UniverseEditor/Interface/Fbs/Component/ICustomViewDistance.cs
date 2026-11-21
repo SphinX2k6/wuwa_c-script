@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005060 RID: 20576
+	// Token: 0x020055C2 RID: 21954
 	public struct ICustomViewDistance : IFlatbufferObject
 	{
-		// Token: 0x17009548 RID: 38216
-		// (get) Token: 0x06020F9B RID: 135067 RVA: 0x004952F1 File Offset: 0x004934F1
+		// Token: 0x17009D2E RID: 40238
+		// (get) Token: 0x06022ED5 RID: 143061 RVA: 0x004CEFA5 File Offset: 0x004CD1A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020F9C RID: 135068 RVA: 0x004952FE File Offset: 0x004934FE
+		// Token: 0x06022ED6 RID: 143062 RVA: 0x004CEFB2 File Offset: 0x004CD1B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020F9D RID: 135069 RVA: 0x00495308 File Offset: 0x00493508
+		// Token: 0x06022ED7 RID: 143063 RVA: 0x004CEFBC File Offset: 0x004CD1BC
 		public static ICustomViewDistance GetRootAsICustomViewDistance(ByteBuffer _bb)
 		{
 			return ICustomViewDistance.GetRootAsICustomViewDistance(_bb, default(ICustomViewDistance));
 		}
 
-		// Token: 0x06020F9E RID: 135070 RVA: 0x00495324 File Offset: 0x00493524
+		// Token: 0x06022ED8 RID: 143064 RVA: 0x004CEFD8 File Offset: 0x004CD1D8
 		public static ICustomViewDistance GetRootAsICustomViewDistance(ByteBuffer _bb, ICustomViewDistance obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020F9F RID: 135071 RVA: 0x00495341 File Offset: 0x00493541
+		// Token: 0x06022ED9 RID: 143065 RVA: 0x004CEFF5 File Offset: 0x004CD1F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020FA0 RID: 135072 RVA: 0x00495350 File Offset: 0x00493550
+		// Token: 0x06022EDA RID: 143066 RVA: 0x004CF004 File Offset: 0x004CD204
 		public ICustomViewDistance __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009549 RID: 38217
-		// (get) Token: 0x06020FA1 RID: 135073 RVA: 0x00495360 File Offset: 0x00493560
+		// Token: 0x17009D2F RID: 40239
+		// (get) Token: 0x06022EDB RID: 143067 RVA: 0x004CF014 File Offset: 0x004CD214
 		public EViewDistanceType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700954A RID: 38218
-		// (get) Token: 0x06020FA2 RID: 135074 RVA: 0x0049539C File Offset: 0x0049359C
+		// Token: 0x17009D30 RID: 40240
+		// (get) Token: 0x06022EDC RID: 143068 RVA: 0x004CF050 File Offset: 0x004CD250
 		public int Distance
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020FA3 RID: 135075 RVA: 0x004953D8 File Offset: 0x004935D8
+		// Token: 0x06022EDD RID: 143069 RVA: 0x004CF08C File Offset: 0x004CD28C
 		public static Offset<ICustomViewDistance> CreateICustomViewDistance(FlatBufferBuilder builder, EViewDistanceType Type = EViewDistanceType.Low, int Distance = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICustomViewDistance.EndICustomViewDistance(builder);
 		}
 
-		// Token: 0x06020FA4 RID: 135076 RVA: 0x004953F5 File Offset: 0x004935F5
+		// Token: 0x06022EDE RID: 143070 RVA: 0x004CF0A9 File Offset: 0x004CD2A9
 		public static void StartICustomViewDistance(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06020FA5 RID: 135077 RVA: 0x004953FE File Offset: 0x004935FE
+		// Token: 0x06022EDF RID: 143071 RVA: 0x004CF0B2 File Offset: 0x004CD2B2
 		public static void AddType(FlatBufferBuilder builder, EViewDistanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06020FA6 RID: 135078 RVA: 0x00495409 File Offset: 0x00493609
+		// Token: 0x06022EE0 RID: 143072 RVA: 0x004CF0BD File Offset: 0x004CD2BD
 		public static void AddDistance(FlatBufferBuilder builder, int distance)
 		{
 			builder.AddInt(1, distance, 0);
 		}
 
-		// Token: 0x06020FA7 RID: 135079 RVA: 0x00495414 File Offset: 0x00493614
+		// Token: 0x06022EE1 RID: 143073 RVA: 0x004CF0C8 File Offset: 0x004CD2C8
 		public static Offset<ICustomViewDistance> EndICustomViewDistance(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomViewDistance>(builder.EndTable());
 		}
 
-		// Token: 0x06020FA8 RID: 135080 RVA: 0x00495424 File Offset: 0x00493624
+		// Token: 0x06022EE2 RID: 143074 RVA: 0x004CF0D8 File Offset: 0x004CD2D8
 		public ICustomViewDistanceT UnPack()
 		{
 			ICustomViewDistanceT customViewDistanceT = new ICustomViewDistanceT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return customViewDistanceT;
 		}
 
-		// Token: 0x06020FA9 RID: 135081 RVA: 0x0049543F File Offset: 0x0049363F
+		// Token: 0x06022EE3 RID: 143075 RVA: 0x004CF0F3 File Offset: 0x004CD2F3
 		public void UnPackTo(ICustomViewDistanceT _o)
 		{
 			_o.Type = this.Type;
 			_o.Distance = this.Distance;
 		}
 
-		// Token: 0x06020FAA RID: 135082 RVA: 0x0049545C File Offset: 0x0049365C
+		// Token: 0x06022EE4 RID: 143076 RVA: 0x004CF110 File Offset: 0x004CD310
 		public static Offset<ICustomViewDistance> Pack(FlatBufferBuilder builder, ICustomViewDistanceT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICustomViewDistance.CreateICustomViewDistance(builder, _o.Type, _o.Distance);
 		}
 
-		// Token: 0x0400E05C RID: 57436
+		// Token: 0x0400EC55 RID: 60501
 		private Table __p;
 	}
 }

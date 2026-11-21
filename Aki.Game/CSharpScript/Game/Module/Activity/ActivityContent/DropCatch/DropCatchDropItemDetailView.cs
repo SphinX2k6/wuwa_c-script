@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay;
@@ -11,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066BB RID: 26299
+	// Token: 0x0200560B RID: 22027
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchDropItemDetailView : UiViewBase
 	{
-		// Token: 0x06041C75 RID: 269429 RVA: 0x00FF392D File Offset: 0x00FF1B2D
+		// Token: 0x060367C1 RID: 223169 RVA: 0x00F34D35 File Offset: 0x00F32F35
 		public DropCatchDropItemDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041C76 RID: 269430 RVA: 0x00FF3938 File Offset: 0x00FF1B38
+		// Token: 0x060367C2 RID: 223170 RVA: 0x00F34D40 File Offset: 0x00F32F40
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041C77 RID: 269431 RVA: 0x00FF39BE File Offset: 0x00FF1BBE
+		// Token: 0x060367C3 RID: 223171 RVA: 0x00F34DC6 File Offset: 0x00F32FC6
 		protected override void OnBeforeCreate()
 		{
 			this.Proxy = (this.OpenParam as DropCatchGameplayProxy);
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			proxy.PauseGameplay("DropItemDetail");
 		}
 
-		// Token: 0x06041C78 RID: 269432 RVA: 0x00FF39E8 File Offset: 0x00FF1BE8
+		// Token: 0x060367C4 RID: 223172 RVA: 0x00F34DF0 File Offset: 0x00F32FF0
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(0);
@@ -66,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.ItemLayout = new GenericLayout<CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item.DropCatchDropItem, int>(base.GetVerticalLayout(1), new Func<CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item.DropCatchDropItem>(this.InitItem), null, false, true);
 		}
 
-		// Token: 0x06041C79 RID: 269433 RVA: 0x00FF3A44 File Offset: 0x00FF1C44
+		// Token: 0x060367C5 RID: 223173 RVA: 0x00F34E4C File Offset: 0x00F3304C
 		protected override void OnBeforeShow()
 		{
 			this.Proxy = (this.OpenParam as DropCatchGameplayProxy);
@@ -82,13 +81,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			spine.SetAnimation(0, EDropCatchRobotAnimState.IdleRight.ToEnumString(), true);
 		}
 
-		// Token: 0x06041C7A RID: 269434 RVA: 0x00FF3AA0 File Offset: 0x00FF1CA0
+		// Token: 0x060367C6 RID: 223174 RVA: 0x00F34EA8 File Offset: 0x00F330A8
 		private CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item.DropCatchDropItem InitItem()
 		{
 			return new CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item.DropCatchDropItem();
 		}
 
-		// Token: 0x06041C7B RID: 269435 RVA: 0x00FF3AA8 File Offset: 0x00FF1CA8
+		// Token: 0x060367C7 RID: 223175 RVA: 0x00F34EB0 File Offset: 0x00F330B0
 		private void RefreshPreviewContent()
 		{
 			DropCatchGameplay? dropCatchGameplayById = DropCatchConfig.Instance.GetDropCatchGameplayById(this.CurOpenLevelId);
@@ -101,10 +100,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			{
 				return;
 			}
-			itemLayout.RefreshByData(dropCatchGameplayById.Value.DropItemList().ToList<int>(), null, false);
+			itemLayout.RefreshByData(dropCatchGameplayById.Value.DropItemList(), null, false);
 		}
 
-		// Token: 0x06041C7C RID: 269436 RVA: 0x00FF3AF8 File Offset: 0x00FF1CF8
+		// Token: 0x060367C8 RID: 223176 RVA: 0x00F34EFC File Offset: 0x00F330FC
 		private void SwitchContent()
 		{
 			DropCatchGameplay? dropCatchGameplayById = DropCatchConfig.Instance.GetDropCatchGameplayById(this.CurOpenLevelId);
@@ -120,15 +119,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			text.ShowTextNew(dropCatchGameplayById.Value.Desc);
 		}
 
-		// Token: 0x04022428 RID: 140328
+		// Token: 0x0401CC81 RID: 117889
 		[Nullable(2)]
 		private DropCatchGameplayProxy Proxy;
 
-		// Token: 0x04022429 RID: 140329
+		// Token: 0x0401CC82 RID: 117890
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402242A RID: 140330
+		// Token: 0x0401CC83 RID: 117891
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 		})]
 		private GenericLayout<CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item.DropCatchDropItem, int> ItemLayout;
 
-		// Token: 0x0402242B RID: 140331
+		// Token: 0x0401CC84 RID: 117892
 		private int CurOpenLevelId;
 	}
 }

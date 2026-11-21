@@ -4,12 +4,12 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.Module.Audio;
 using UnrealEngine;
 
-// Token: 0x02002DE4 RID: 11748
+// Token: 0x0200233F RID: 9023
 [NullableContext(2)]
 [Nullable(0)]
 public class HitStaticFunction
 {
-	// Token: 0x06018A94 RID: 101012 RVA: 0x00653309 File Offset: 0x00651509
+	// Token: 0x06016341 RID: 90945 RVA: 0x006793E9 File Offset: 0x006775E9
 	public static void PlayHitAudio(ELoadEffectResult result, int handle, string audioEvent, ERoleAudioPriorityType fromPrimaryRole)
 	{
 		if (result != ELoadEffectResult.Success)
@@ -19,7 +19,7 @@ public class HitStaticFunction
 		HitStaticFunction.PlayHitAudioByActor(EffectSystem.Instance.GetSureEffectActor(handle), audioEvent, fromPrimaryRole);
 	}
 
-	// Token: 0x06018A95 RID: 101013 RVA: 0x00653324 File Offset: 0x00651524
+	// Token: 0x06016342 RID: 90946 RVA: 0x00679404 File Offset: 0x00677604
 	public static void PlayHitAudioByActor(AActor actor, string audioEvent, ERoleAudioPriorityType fromPrimaryRole)
 	{
 		if (audioEvent == null || StringUtils.IsBlank(audioEvent))
@@ -34,7 +34,7 @@ public class HitStaticFunction
 		bool openHitActorLog = BulletConstant.Instance.OpenHitActorLog;
 	}
 
-	// Token: 0x06018A96 RID: 101014 RVA: 0x006533A0 File Offset: 0x006515A0
+	// Token: 0x06016343 RID: 90947 RVA: 0x00679480 File Offset: 0x00677680
 	public static EffectContext CreateEffectContext(Entity attacker, bool disablePostProcess)
 	{
 		if (attacker == null)

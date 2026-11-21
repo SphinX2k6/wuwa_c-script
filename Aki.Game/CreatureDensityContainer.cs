@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020034F9 RID: 13561
+// Token: 0x02002A6E RID: 10862
 [NullableContext(1)]
 [Nullable(0)]
 public class CreatureDensityContainer
 {
-	// Token: 0x0601DBBA RID: 121786 RVA: 0x00854DBD File Offset: 0x00852FBD
+	// Token: 0x0601B8D1 RID: 112849 RVA: 0x0087D211 File Offset: 0x0087B411
 	public Dictionary<long, CreatureDensityItem> GetLevel(int level)
 	{
 		while (this.DensityArray.Count <= level)
@@ -18,14 +18,14 @@ public class CreatureDensityContainer
 		return this.DensityArray[level];
 	}
 
-	// Token: 0x0601DBBB RID: 121787 RVA: 0x00854DEB File Offset: 0x00852FEB
+	// Token: 0x0601B8D2 RID: 112850 RVA: 0x0087D23F File Offset: 0x0087B43F
 	[NullableContext(2)]
 	public CreatureDensityItem GetItem(long creatureDataId)
 	{
 		return this.CreatureDensityMap.GetValueOrDefault(creatureDataId);
 	}
 
-	// Token: 0x0601DBBC RID: 121788 RVA: 0x00854DFC File Offset: 0x00852FFC
+	// Token: 0x0601B8D3 RID: 112851 RVA: 0x0087D250 File Offset: 0x0087B450
 	public CreatureDensityItem GetItemByPbDataId(int pbDataId)
 	{
 		CreatureDensityItem result;
@@ -36,7 +36,7 @@ public class CreatureDensityContainer
 		return result;
 	}
 
-	// Token: 0x0601DBBD RID: 121789 RVA: 0x00854E1C File Offset: 0x0085301C
+	// Token: 0x0601B8D4 RID: 112852 RVA: 0x0087D270 File Offset: 0x0087B470
 	public CreatureDensityItem AddItem(long creatureDataId, int densityLevel, EntityPb entityData)
 	{
 		CreatureDensityItem creatureDensityItem = new CreatureDensityItem(creatureDataId, densityLevel, entityData);
@@ -50,7 +50,7 @@ public class CreatureDensityContainer
 		return creatureDensityItem;
 	}
 
-	// Token: 0x0601DBBE RID: 121790 RVA: 0x00854E90 File Offset: 0x00853090
+	// Token: 0x0601B8D5 RID: 112853 RVA: 0x0087D2E4 File Offset: 0x0087B4E4
 	[NullableContext(2)]
 	public CreatureDensityItem RemoveItem(long creatureDataId)
 	{
@@ -65,7 +65,7 @@ public class CreatureDensityContainer
 		return creatureDensityItem;
 	}
 
-	// Token: 0x0601DBBF RID: 121791 RVA: 0x00854EEC File Offset: 0x008530EC
+	// Token: 0x0601B8D6 RID: 112854 RVA: 0x0087D340 File Offset: 0x0087B540
 	public void Clear()
 	{
 		this.CreatureDensityMap.Clear();
@@ -76,12 +76,12 @@ public class CreatureDensityContainer
 		}
 	}
 
-	// Token: 0x0400E953 RID: 59731
+	// Token: 0x0400EE0E RID: 60942
 	protected readonly List<Dictionary<long, CreatureDensityItem>> DensityArray = new List<Dictionary<long, CreatureDensityItem>>();
 
-	// Token: 0x0400E954 RID: 59732
+	// Token: 0x0400EE0F RID: 60943
 	protected readonly Dictionary<long, CreatureDensityItem> CreatureDensityMap = new Dictionary<long, CreatureDensityItem>();
 
-	// Token: 0x0400E955 RID: 59733
+	// Token: 0x0400EE10 RID: 60944
 	protected readonly Dictionary<int, CreatureDensityItem> PbDataDensityMap = new Dictionary<int, CreatureDensityItem>();
 }

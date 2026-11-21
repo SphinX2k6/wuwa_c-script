@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000616 RID: 1558
+	// Token: 0x0200062E RID: 1582
 	public class ConfigNounHandBookByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002494 RID: 9364 RVA: 0x00128684 File Offset: 0x00126884
+		// Token: 0x06002524 RID: 9508 RVA: 0x0012F100 File Offset: 0x0012D300
 		static ConfigNounHandBookByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNounHandBookByType.CreateStaticDefaultValue), new Action(ConfigNounHandBookByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002495 RID: 9365 RVA: 0x001286A4 File Offset: 0x001268A4
+		// Token: 0x06002525 RID: 9509 RVA: 0x0012F120 File Offset: 0x0012D320
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNounHandBookByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002496 RID: 9366 RVA: 0x00128723 File Offset: 0x00126923
+		// Token: 0x06002526 RID: 9510 RVA: 0x0012F19F File Offset: 0x0012D39F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNounHandBookByType.LogPair = null;
 			ConfigNounHandBookByType.HandleId = 0;
 		}
 
-		// Token: 0x06002497 RID: 9367 RVA: 0x00128731 File Offset: 0x00126931
+		// Token: 0x06002527 RID: 9511 RVA: 0x0012F1AD File Offset: 0x0012D3AD
 		public static void Init()
 		{
 			ConfigNounHandBookByType.HandleId = ConfigCommon.InitDataStatement(ConfigNounHandBookByType.HandleId, "db_handbook.db", "select BinData from `NounHandBook` where Type=?");
 		}
 
-		// Token: 0x06002498 RID: 9368 RVA: 0x0012874C File Offset: 0x0012694C
+		// Token: 0x06002528 RID: 9512 RVA: 0x0012F1C8 File Offset: 0x0012D3C8
 		[NullableContext(2)]
 		public static IReadOnlyList<NounHandBook> GetConfigList(int p0Type, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002A80 RID: 10880
+		// Token: 0x04002B28 RID: 11048
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04002A81 RID: 10881
+		// Token: 0x04002B29 RID: 11049
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x04002A82 RID: 10882
+		// Token: 0x04002B2A RID: 11050
 		private const string TABLE = "NounHandBook";
 
-		// Token: 0x04002A83 RID: 10883
+		// Token: 0x04002B2B RID: 11051
 		private const string COMMAND = "select BinData from `NounHandBook` where Type=?";
 
-		// Token: 0x04002A84 RID: 10884
+		// Token: 0x04002B2C RID: 11052
 		private const string KEY_PREFIX = "NounHandBookByType";
 
-		// Token: 0x04002A85 RID: 10885
+		// Token: 0x04002B2D RID: 11053
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002A86 RID: 10886
+		// Token: 0x04002B2E RID: 11054
 		private static int HandleId;
 	}
 }

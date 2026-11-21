@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002401 RID: 9217
+// Token: 0x020018E6 RID: 6374
 [NullableContext(1)]
 [Nullable(0)]
 public class SwitchData : ISwitchData
 {
-	// Token: 0x170017DC RID: 6108
-	// (get) Token: 0x06012704 RID: 75524 RVA: 0x0048C954 File Offset: 0x0048AB54
-	// (set) Token: 0x06012705 RID: 75525 RVA: 0x0048C95C File Offset: 0x0048AB5C
+	// Token: 0x17001816 RID: 6166
+	// (get) Token: 0x0600FBB6 RID: 64438 RVA: 0x00499E64 File Offset: 0x00498064
+	// (set) Token: 0x0600FBB7 RID: 64439 RVA: 0x00499E6C File Offset: 0x0049806C
 	public string TextId { get; set; }
 
-	// Token: 0x170017DD RID: 6109
-	// (get) Token: 0x06012706 RID: 75526 RVA: 0x0048C965 File Offset: 0x0048AB65
-	// (set) Token: 0x06012707 RID: 75527 RVA: 0x0048C96D File Offset: 0x0048AB6D
+	// Token: 0x17001817 RID: 6167
+	// (get) Token: 0x0600FBB8 RID: 64440 RVA: 0x00499E75 File Offset: 0x00498075
+	// (set) Token: 0x0600FBB9 RID: 64441 RVA: 0x00499E7D File Offset: 0x0049807D
 	public bool IsEnable { get; set; }
 }

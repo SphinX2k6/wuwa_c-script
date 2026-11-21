@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LifePoint
 {
-	// Token: 0x02006ACD RID: 27341
+	// Token: 0x02005C45 RID: 23621
 	public enum EChildComp
 	{
-		// Token: 0x0402380F RID: 145423
+		// Token: 0x0401EAAF RID: 125615
 		BackgroundTexture,
-		// Token: 0x04023810 RID: 145424
+		// Token: 0x0401EAB0 RID: 125616
 		FrameTexture,
-		// Token: 0x04023811 RID: 145425
+		// Token: 0x0401EAB1 RID: 125617
 		BoardLayout,
-		// Token: 0x04023812 RID: 145426
+		// Token: 0x0401EAB2 RID: 125618
 		GridBaseItem,
-		// Token: 0x04023813 RID: 145427
+		// Token: 0x0401EAB3 RID: 125619
 		BlueToggle,
-		// Token: 0x04023814 RID: 145428
+		// Token: 0x0401EAB4 RID: 125620
 		RedToggle,
-		// Token: 0x04023815 RID: 145429
+		// Token: 0x0401EAB5 RID: 125621
 		YellowToggle,
-		// Token: 0x04023816 RID: 145430
+		// Token: 0x0401EAB6 RID: 125622
 		GreenToggle,
-		// Token: 0x04023817 RID: 145431
+		// Token: 0x0401EAB7 RID: 125623
 		StepText,
-		// Token: 0x04023818 RID: 145432
+		// Token: 0x0401EAB8 RID: 125624
 		ResetButton,
-		// Token: 0x04023819 RID: 145433
+		// Token: 0x0401EAB9 RID: 125625
 		ExitButton,
-		// Token: 0x0402381A RID: 145434
+		// Token: 0x0401EABA RID: 125626
 		DescriptionText,
-		// Token: 0x0402381B RID: 145435
+		// Token: 0x0401EABB RID: 125627
 		SmokeNiagara,
-		// Token: 0x0402381C RID: 145436
+		// Token: 0x0401EABC RID: 125628
 		HelpButton
 	}
 }

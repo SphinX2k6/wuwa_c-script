@@ -13,10 +13,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FeedbackReward
 {
-	// Token: 0x02005A88 RID: 23176
+	// Token: 0x02004A64 RID: 19044
 	internal class RewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603AB3E RID: 240446 RVA: 0x00DFB958 File Offset: 0x00DF9B58
+		// Token: 0x0602FA87 RID: 195207 RVA: 0x00D4BEEC File Offset: 0x00D4A0EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AB3F RID: 240447 RVA: 0x00DFBA04 File Offset: 0x00DF9C04
+		// Token: 0x0602FA88 RID: 195208 RVA: 0x00D4BF98 File Offset: 0x00D4A198
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AB40 RID: 240448 RVA: 0x00DFBA48 File Offset: 0x00DF9C48
+		// Token: 0x0602FA89 RID: 195209 RVA: 0x00D4BFDC File Offset: 0x00D4A1DC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			GivebackScoreReward? givebackScoreRewardById = FeedbackRewardConfig.Instance.GetGivebackScoreRewardById(data);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			base.GetItem(1).SetUIActive(feedbackRewardState >= EFeedbackRewardState.Finish);
 		}
 
-		// Token: 0x0603AB41 RID: 240449 RVA: 0x00DFBBC0 File Offset: 0x00DF9DC0
+		// Token: 0x0602FA8A RID: 195210 RVA: 0x00D4C154 File Offset: 0x00D4A354
 		[NullableContext(1)]
 		private void OnExtendToggleClicked(MediumItemGridExtendCallback _)
 		{
@@ -103,10 +103,10 @@ namespace CSharpScript.Game.Module.FeedbackReward
 				ItemController.Instance.OpenTitleTipsByItemId(givebackScoreRewardById.Value.SkipParam);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(givebackScoreRewardById.Value.SkipParam, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(givebackScoreRewardById.Value.SkipParam, true, null, false);
 		}
 
-		// Token: 0x0603AB42 RID: 240450 RVA: 0x00DFBC52 File Offset: 0x00DF9E52
+		// Token: 0x0602FA8B RID: 195211 RVA: 0x00D4C1E7 File Offset: 0x00D4A3E7
 		public void SetPreviewVisible(bool value)
 		{
 			SmallItemGrid showItem = this.ShowItem;
@@ -117,23 +117,23 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			showItem.SetPreviewVisible(value);
 		}
 
-		// Token: 0x0401EA43 RID: 125507
+		// Token: 0x040194EA RID: 103658
 		public int RewardId;
 
-		// Token: 0x0401EA44 RID: 125508
+		// Token: 0x040194EB RID: 103659
 		[Nullable(2)]
 		private SmallItemGrid ShowItem;
 
-		// Token: 0x0200BCBE RID: 48318
+		// Token: 0x0200A6C7 RID: 42695
 		private enum ERewardItem
 		{
-			// Token: 0x04038F09 RID: 233225
+			// Token: 0x040338D4 RID: 211156
 			BarItem,
-			// Token: 0x04038F0A RID: 233226
+			// Token: 0x040338D5 RID: 211157
 			FinishItem,
-			// Token: 0x04038F0B RID: 233227
+			// Token: 0x040338D6 RID: 211158
 			GirdItem,
-			// Token: 0x04038F0C RID: 233228
+			// Token: 0x040338D7 RID: 211159
 			PointText
 		}
 	}

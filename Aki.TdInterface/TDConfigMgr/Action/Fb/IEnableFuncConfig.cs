@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ACD RID: 10957
+	// Token: 0x02002DC1 RID: 11713
 	public class IEnableFuncConfig
 	{
-		// Token: 0x0600F058 RID: 61528 RVA: 0x0022E6B5 File Offset: 0x0022C8B5
-		[NullableContext(1)]
+		// Token: 0x0600FF0E RID: 65294 RVA: 0x0024C3C1 File Offset: 0x0024A5C1
 		public static IEnableFuncConfig Create(IEnableFuncConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C80 RID: 19584
-		// (get) Token: 0x0600F059 RID: 61529 RVA: 0x0022E6D4 File Offset: 0x0022C8D4
+		// Token: 0x1700503A RID: 20538
+		// (get) Token: 0x0600FF0F RID: 65295 RVA: 0x0024C3E0 File Offset: 0x0024A5E0
 		public virtual float? DelayDuration
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C81 RID: 19585
-		// (get) Token: 0x0600F05A RID: 61530 RVA: 0x0022E70C File Offset: 0x0022C90C
+		// Token: 0x1700503B RID: 20539
+		// (get) Token: 0x0600FF10 RID: 65296 RVA: 0x0024C418 File Offset: 0x0024A618
 		public virtual bool? IsEnableEsc
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C82 RID: 19586
-		// (get) Token: 0x0600F05B RID: 61531 RVA: 0x0022E744 File Offset: 0x0022C944
+		// Token: 0x1700503C RID: 20540
+		// (get) Token: 0x0600FF11 RID: 65297 RVA: 0x0024C450 File Offset: 0x0024A650
 		public virtual bool? IsEnablePhoto
 		{
 			get
@@ -63,7 +61,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008435 RID: 33845
+		// Token: 0x04008B39 RID: 35641
 		private IEnableFuncConfig Instance;
 	}
 }

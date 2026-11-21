@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001ADE RID: 6878
+// Token: 0x02000F9D RID: 3997
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDayStartAction : FloroRanchAsyncActionBase
 {
-	// Token: 0x0600CC08 RID: 52232 RVA: 0x002E906B File Offset: 0x002E726B
+	// Token: 0x0600A019 RID: 40985 RVA: 0x002F41FF File Offset: 0x002F23FF
 	public FloroRanchDayStartAction(FloroRanchDayStart dayStartData)
 	{
 		this.DayStartData = dayStartData;
 	}
 
-	// Token: 0x0600CC09 RID: 52233 RVA: 0x002E907C File Offset: 0x002E727C
+	// Token: 0x0600A01A RID: 40986 RVA: 0x002F4210 File Offset: 0x002F2410
 	public override UniTask OnExecute()
 	{
 		FloroRanchDayStartAction.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchDayStartAction : FloroRanchAsyncActionBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DCA RID: 24010
+	// Token: 0x04005E99 RID: 24217
 	private readonly FloroRanchDayStart DayStartData;
 }

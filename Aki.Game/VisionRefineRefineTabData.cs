@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001770 RID: 6000
+// Token: 0x02000C29 RID: 3113
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRefineRefineTabData
 {
-	// Token: 0x04004F0D RID: 20237
+	// Token: 0x04004FB7 RID: 20407
 	public bool IsChosen;
 
-	// Token: 0x04004F0E RID: 20238
+	// Token: 0x04004FB8 RID: 20408
 	public EVisionRefineRefineType RefineType;
 
-	// Token: 0x04004F0F RID: 20239
+	// Token: 0x04004FB9 RID: 20409
 	public string TabTextId;
 
-	// Token: 0x04004F10 RID: 20240
+	// Token: 0x04004FBA RID: 20410
 	public Action OnClick;
 
-	// Token: 0x04004F11 RID: 20241
+	// Token: 0x04004FBB RID: 20411
 	public Func<EVisionRefineRefineType, bool> CanChangeExecute;
 }

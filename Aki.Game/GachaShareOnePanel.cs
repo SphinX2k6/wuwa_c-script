@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CA0 RID: 7328
+// Token: 0x0200115F RID: 4447
 public class GachaShareOnePanel : UiPanelBase
 {
-	// Token: 0x0600DD4D RID: 56653 RVA: 0x0033C278 File Offset: 0x0033A478
+	// Token: 0x0600B163 RID: 45411 RVA: 0x003476C4 File Offset: 0x003458C4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,14 +26,14 @@ public class GachaShareOnePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DD4E RID: 56654 RVA: 0x0033C340 File Offset: 0x0033A540
+	// Token: 0x0600B164 RID: 45412 RVA: 0x0034778C File Offset: 0x0034598C
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetHorizontalLayout(1));
 		this.Refresh(this.OpenParam as GachaResult);
 	}
 
-	// Token: 0x0600DD4F RID: 56655 RVA: 0x0033C368 File Offset: 0x0033A568
+	// Token: 0x0600B165 RID: 45413 RVA: 0x003477B4 File Offset: 0x003459B4
 	[NullableContext(1)]
 	public void Refresh(GachaResult gachaResult)
 	{
@@ -95,28 +95,28 @@ public class GachaShareOnePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006595 RID: 26005
+	// Token: 0x04006666 RID: 26214
 	[Nullable(2)]
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x02008285 RID: 33413
+	// Token: 0x0200740C RID: 29708
 	private enum EComponent
 	{
-		// Token: 0x0402A95C RID: 174428
+		// Token: 0x04025C7A RID: 154746
 		TextureBg,
-		// Token: 0x0402A95D RID: 174429
+		// Token: 0x04025C7B RID: 154747
 		StarLayout,
-		// Token: 0x0402A95E RID: 174430
+		// Token: 0x04025C7C RID: 154748
 		StarItem,
-		// Token: 0x0402A95F RID: 174431
+		// Token: 0x04025C7D RID: 154749
 		TxtName,
-		// Token: 0x0402A960 RID: 174432
+		// Token: 0x04025C7E RID: 154750
 		WeaponElementBg,
-		// Token: 0x0402A961 RID: 174433
+		// Token: 0x04025C7F RID: 154751
 		TextureElement,
-		// Token: 0x0402A962 RID: 174434
+		// Token: 0x04025C80 RID: 154752
 		TxtDesc,
-		// Token: 0x0402A963 RID: 174435
+		// Token: 0x04025C81 RID: 154753
 		SpriteWeapon
 	}
 }

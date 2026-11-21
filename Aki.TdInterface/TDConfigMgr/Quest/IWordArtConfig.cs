@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001212 RID: 4626
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200134E RID: 4942
 	public class IWordArtConfig
 	{
-		// Token: 0x060068F2 RID: 26866 RVA: 0x000FA44C File Offset: 0x000F864C
+		// Token: 0x06006F33 RID: 28467 RVA: 0x00107D58 File Offset: 0x00105F58
 		private IWordArtConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068F3 RID: 26867 RVA: 0x000FA484 File Offset: 0x000F8684
+		// Token: 0x06006F34 RID: 28468 RVA: 0x00107D90 File Offset: 0x00105F90
 		public static IWordArtConfig Create([Nullable(2)] IWordArtConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068F4 RID: 26868 RVA: 0x000FA497 File Offset: 0x000F8697
+		// Token: 0x06006F35 RID: 28469 RVA: 0x00107DA3 File Offset: 0x00105FA3
 		public static IWordArtConfig CreateFromSetValue([Nullable(2)] IWordArtConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068F5 RID: 26869 RVA: 0x000FA4AA File Offset: 0x000F86AA
+		// Token: 0x06006F36 RID: 28470 RVA: 0x00107DB6 File Offset: 0x00105FB6
 		public IWordArtConfig_SetValue ToSetValue()
 		{
 			return new IWordArtConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021E3 RID: 8675
-		// (get) Token: 0x060068F6 RID: 26870 RVA: 0x000FA4CC File Offset: 0x000F86CC
-		// (set) Token: 0x060068F7 RID: 26871 RVA: 0x000FA52D File Offset: 0x000F872D
+		// Token: 0x170023A4 RID: 9124
+		// (get) Token: 0x06006F37 RID: 28471 RVA: 0x00107DD8 File Offset: 0x00105FD8
+		// (set) Token: 0x06006F38 RID: 28472 RVA: 0x00107E39 File Offset: 0x00106039
 		public virtual INumberWordArtEffectiveTargetType EffectiveTarget
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021E4 RID: 8676
-		// (get) Token: 0x060068F8 RID: 26872 RVA: 0x000FA544 File Offset: 0x000F8744
-		// (set) Token: 0x060068F9 RID: 26873 RVA: 0x000FA5A5 File Offset: 0x000F87A5
+		// Token: 0x170023A5 RID: 9125
+		// (get) Token: 0x06006F39 RID: 28473 RVA: 0x00107E50 File Offset: 0x00106050
+		// (set) Token: 0x06006F3A RID: 28474 RVA: 0x00107EB1 File Offset: 0x001060B1
 		public virtual IWordArtDefaultResourceType Resource
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EC4 RID: 16068
+		// Token: 0x04004232 RID: 16946
 		[Nullable(2)]
 		protected IWordArtConfig FbInstance;
 
-		// Token: 0x04003EC5 RID: 16069
+		// Token: 0x04004233 RID: 16947
 		[Nullable(2)]
 		protected IWordArtConfig_SetValue PocoInterface;
 
-		// Token: 0x04003EC6 RID: 16070
+		// Token: 0x04004234 RID: 16948
 		private INumberWordArtEffectiveTargetType _EffectiveTargetCache;
 
-		// Token: 0x04003EC7 RID: 16071
+		// Token: 0x04004235 RID: 16949
 		private bool _EffectiveTargetInited;
 
-		// Token: 0x04003EC8 RID: 16072
+		// Token: 0x04004236 RID: 16950
 		private IWordArtDefaultResourceType _ResourceCache;
 
-		// Token: 0x04003EC9 RID: 16073
+		// Token: 0x04004237 RID: 16951
 		private bool _ResourceInited;
 	}
 }

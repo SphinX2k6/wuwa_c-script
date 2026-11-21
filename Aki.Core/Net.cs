@@ -13,13 +13,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020000B2 RID: 178
+// Token: 0x020000B4 RID: 180
 [NullableContext(1)]
 [Nullable(0)]
 public class Net : Singleton
 {
-	// Token: 0x170000BA RID: 186
-	// (get) Token: 0x06000550 RID: 1360 RVA: 0x0001C4D3 File Offset: 0x0001A6D3
+	// Token: 0x170000CC RID: 204
+	// (get) Token: 0x06000591 RID: 1425 RVA: 0x0001CBBB File Offset: 0x0001ADBB
 	public float RttMs
 	{
 		get
@@ -28,8 +28,8 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x170000BB RID: 187
-	// (get) Token: 0x06000551 RID: 1361 RVA: 0x0001C4DF File Offset: 0x0001A6DF
+	// Token: 0x170000CD RID: 205
+	// (get) Token: 0x06000592 RID: 1426 RVA: 0x0001CBC7 File Offset: 0x0001ADC7
 	public float LastReceiveTimeMs
 	{
 		get
@@ -38,37 +38,37 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000552 RID: 1362 RVA: 0x0001C4E8 File Offset: 0x0001A6E8
+	// Token: 0x06000593 RID: 1427 RVA: 0x0001CBD0 File Offset: 0x0001ADD0
 	public void StartReconnecting()
 	{
 		this.IsReconnecting = true;
 	}
 
-	// Token: 0x06000553 RID: 1363 RVA: 0x0001C4F1 File Offset: 0x0001A6F1
+	// Token: 0x06000594 RID: 1428 RVA: 0x0001CBD9 File Offset: 0x0001ADD9
 	private void EndReconnecting()
 	{
 		this.IsReconnecting = false;
 	}
 
-	// Token: 0x06000554 RID: 1364 RVA: 0x0001C4FA File Offset: 0x0001A6FA
+	// Token: 0x06000595 RID: 1429 RVA: 0x0001CBE2 File Offset: 0x0001ADE2
 	public bool IsServerConnected()
 	{
 		return this.IsReconnecting || this.LoginState == Net.EServerLoginState.FinishedLogin;
 	}
 
-	// Token: 0x06000555 RID: 1365 RVA: 0x0001C50F File Offset: 0x0001A70F
+	// Token: 0x06000596 RID: 1430 RVA: 0x0001CBF7 File Offset: 0x0001ADF7
 	public bool IsFinishLogin()
 	{
 		return this.LoginState == Net.EServerLoginState.FinishedLogin;
 	}
 
-	// Token: 0x06000556 RID: 1366 RVA: 0x0001C51A File Offset: 0x0001A71A
+	// Token: 0x06000597 RID: 1431 RVA: 0x0001CC02 File Offset: 0x0001AE02
 	public void ChangeState1()
 	{
 		this.LoginState = Net.EServerLoginState.AskingProtoKey;
 	}
 
-	// Token: 0x06000557 RID: 1367 RVA: 0x0001C523 File Offset: 0x0001A723
+	// Token: 0x06000598 RID: 1432 RVA: 0x0001CC0B File Offset: 0x0001AE0B
 	private void ChangeStateKeyReady()
 	{
 		if (this.LoginState != Net.EServerLoginState.AskingProtoKey)
@@ -78,13 +78,13 @@ public class Net : Singleton
 		this.LoginState = Net.EServerLoginState.ProtoKeyReady;
 	}
 
-	// Token: 0x06000558 RID: 1368 RVA: 0x0001C53C File Offset: 0x0001A73C
+	// Token: 0x06000599 RID: 1433 RVA: 0x0001CC24 File Offset: 0x0001AE24
 	private bool IsProtoKeyReady()
 	{
 		return this.LoginState >= Net.EServerLoginState.ProtoKeyReady && this.LoginState <= Net.EServerLoginState.FinishedLogin;
 	}
 
-	// Token: 0x06000559 RID: 1369 RVA: 0x0001C555 File Offset: 0x0001A755
+	// Token: 0x0600059A RID: 1434 RVA: 0x0001CC3D File Offset: 0x0001AE3D
 	public void ChangeStateEnterGame()
 	{
 		if (this.LoginState != Net.EServerLoginState.ProtoKeyReady && this.LoginState != Net.EServerLoginState.DoingLogin)
@@ -94,7 +94,7 @@ public class Net : Singleton
 		this.LoginState = Net.EServerLoginState.DoingLogin;
 	}
 
-	// Token: 0x0600055A RID: 1370 RVA: 0x0001C577 File Offset: 0x0001A777
+	// Token: 0x0600059B RID: 1435 RVA: 0x0001CC5F File Offset: 0x0001AE5F
 	private void ChangeStateFinishLogin()
 	{
 		if (this.LoginState != Net.EServerLoginState.DoingLogin)
@@ -105,27 +105,27 @@ public class Net : Singleton
 		this.EndReconnecting();
 	}
 
-	// Token: 0x0600055B RID: 1371 RVA: 0x0001C596 File Offset: 0x0001A796
+	// Token: 0x0600059C RID: 1436 RVA: 0x0001CC7E File Offset: 0x0001AE7E
 	public bool IsNotifyCallbackPaused()
 	{
 		return this.IsNotifyCallbackPausedInternal;
 	}
 
-	// Token: 0x0600055C RID: 1372 RVA: 0x0001C5A0 File Offset: 0x0001A7A0
+	// Token: 0x0600059D RID: 1437 RVA: 0x0001CC88 File Offset: 0x0001AE88
 	public void PauseAllNotifyCallback()
 	{
 		this.IsNotifyCallbackPausedInternal = true;
 		Log.Instance.Info(ELogModule.Net, ELogAuthor.MZJ, "暂停消息处理", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600055D RID: 1373 RVA: 0x0001C5D0 File Offset: 0x0001A7D0
+	// Token: 0x0600059E RID: 1438 RVA: 0x0001CCB8 File Offset: 0x0001AEB8
 	public void ResumeAllNotifyCallback()
 	{
 		this.IsNotifyCallbackPausedInternal = false;
 		Log.Instance.Info(ELogModule.Net, ELogAuthor.MZJ, "恢复消息处理", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600055E RID: 1374 RVA: 0x0001C600 File Offset: 0x0001A800
+	// Token: 0x0600059F RID: 1439 RVA: 0x0001CCE8 File Offset: 0x0001AEE8
 	private unsafe void PrintChangeStateError(Net.EServerLoginState destState)
 	{
 		Log instance = Log.Instance;
@@ -138,31 +138,31 @@ public class Net : Singleton
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600055F RID: 1375 RVA: 0x0001C66F File Offset: 0x0001A86F
+	// Token: 0x060005A0 RID: 1440 RVA: 0x0001CD57 File Offset: 0x0001AF57
 	public void SetNetworkErrorHandle(Net.TNetworkErrorHandle handle)
 	{
 		this.NetErrorHandle = handle;
 	}
 
-	// Token: 0x06000560 RID: 1376 RVA: 0x0001C678 File Offset: 0x0001A878
+	// Token: 0x060005A1 RID: 1441 RVA: 0x0001CD60 File Offset: 0x0001AF60
 	public void SetExceptionHandle(Net.TExceptionHandle handle)
 	{
 		this.ExceptionHandle = handle;
 	}
 
-	// Token: 0x06000561 RID: 1377 RVA: 0x0001C681 File Offset: 0x0001A881
+	// Token: 0x060005A2 RID: 1442 RVA: 0x0001CD69 File Offset: 0x0001AF69
 	public void SetAddRequestMaskHandle(Action<int> handle)
 	{
 		this.AddRequestMaskHandle = handle;
 	}
 
-	// Token: 0x06000562 RID: 1378 RVA: 0x0001C68A File Offset: 0x0001A88A
+	// Token: 0x060005A3 RID: 1443 RVA: 0x0001CD72 File Offset: 0x0001AF72
 	public void SetRemoveRequestMaskHandle(Action<int> handle)
 	{
 		this.RemoveRequestMaskHandle = handle;
 	}
 
-	// Token: 0x06000563 RID: 1379 RVA: 0x0001C694 File Offset: 0x0001A894
+	// Token: 0x060005A4 RID: 1444 RVA: 0x0001CD7C File Offset: 0x0001AF7C
 	public bool Initialize()
 	{
 		this.SetKcpConnectStatus(Net.EKcpConnectStatus.NoConnect);
@@ -186,14 +186,6 @@ public class Net : Singleton
 		this.RpcId = 0;
 		this.UpStreamSeqNo = 0;
 		this.DownStreamSeqNo = 0;
-		if (!Info.Instance.IsBuildShipping)
-		{
-			this.IsNetLogEnabled = true;
-			this.IsNetStatEnable = true;
-			this.IsHeartLogEnabled = true;
-			this.IsSyncLogEnabled = true;
-			this.KcpClient.OpenSendVerify = true;
-		}
 		this.FillMessageNameAndStatMap(NetDefine.PushMessageIds, "Net.Push", true);
 		this.FillMessageNameAndStatMap(NetDefine.RequestMessageIds, "Net.Request", false);
 		this.FillMessageNameAndStatMap(NetDefine.ResponseMessageIds, "Net.Response", true);
@@ -214,7 +206,7 @@ public class Net : Singleton
 		return true;
 	}
 
-	// Token: 0x06000564 RID: 1380 RVA: 0x0001C8EA File Offset: 0x0001AAEA
+	// Token: 0x060005A5 RID: 1445 RVA: 0x0001CF9E File Offset: 0x0001B19E
 	public void Tick(float deltaTime)
 	{
 		if (this.KcpClient != null)
@@ -223,19 +215,19 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000565 RID: 1381 RVA: 0x0001C900 File Offset: 0x0001AB00
+	// Token: 0x060005A6 RID: 1446 RVA: 0x0001CFB4 File Offset: 0x0001B1B4
 	public void InitCanTimerOutMessage(HashSet<ERequestMessageId> messageIdsSet)
 	{
 		this.CanTimeOutMessages = messageIdsSet;
 	}
 
-	// Token: 0x06000566 RID: 1382 RVA: 0x0001C909 File Offset: 0x0001AB09
+	// Token: 0x060005A7 RID: 1447 RVA: 0x0001CFBD File Offset: 0x0001B1BD
 	private bool IsCacheQueueEmpty()
 	{
 		return this.CallbackList.Count == 0 || (this.IsNotifyCallbackPausedInternal && this.NonePausedCallbackCount == 0);
 	}
 
-	// Token: 0x06000567 RID: 1383 RVA: 0x0001C92D File Offset: 0x0001AB2D
+	// Token: 0x060005A8 RID: 1448 RVA: 0x0001CFE1 File Offset: 0x0001B1E1
 	private bool CallCurrentCallback()
 	{
 		if (this.CurrentProcessedCallback != null)
@@ -249,7 +241,7 @@ public class Net : Singleton
 		return false;
 	}
 
-	// Token: 0x06000568 RID: 1384 RVA: 0x0001C950 File Offset: 0x0001AB50
+	// Token: 0x060005A9 RID: 1449 RVA: 0x0001D004 File Offset: 0x0001B204
 	private void ConsumeCacheQueue()
 	{
 		if (this.CallCurrentCallback())
@@ -278,7 +270,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000569 RID: 1385 RVA: 0x0001C9E0 File Offset: 0x0001ABE0
+	// Token: 0x060005AA RID: 1450 RVA: 0x0001D094 File Offset: 0x0001B294
 	public void Connect(string ip, int port, Net.TConnectResultCallback callback, int timeoutMsPerTry, int retryCount)
 	{
 		if (!this.CanKcpConnect())
@@ -296,7 +288,7 @@ public class Net : Singleton
 		this.DoConnect();
 	}
 
-	// Token: 0x0600056A RID: 1386 RVA: 0x0001CA4C File Offset: 0x0001AC4C
+	// Token: 0x060005AB RID: 1451 RVA: 0x0001D100 File Offset: 0x0001B300
 	[NullableContext(0)]
 	public UniTask<Net.EConnectResult> ConnectAsync([Nullable(1)] string ip, int port, int timeoutMsPerTry, int retryCount)
 	{
@@ -312,7 +304,7 @@ public class Net : Singleton
 		return <ConnectAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600056B RID: 1387 RVA: 0x0001CAB0 File Offset: 0x0001ACB0
+	// Token: 0x060005AC RID: 1452 RVA: 0x0001D164 File Offset: 0x0001B364
 	public void Disconnect(Net.EDisconnectReason disconnectReason)
 	{
 		Log instance = Log.Instance;
@@ -343,7 +335,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600056C RID: 1388 RVA: 0x0001CB30 File Offset: 0x0001AD30
+	// Token: 0x060005AD RID: 1453 RVA: 0x0001D1E4 File Offset: 0x0001B3E4
 	public unsafe void SetDynamicProtoKey(Net.EServerEncryptType sType, byte[] key)
 	{
 		Net.EClientEncryptType eclientEncryptType = Net.Instance.s2cEncryptType[sType];
@@ -363,13 +355,13 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600056D RID: 1389 RVA: 0x0001CBAD File Offset: 0x0001ADAD
+	// Token: 0x060005AE RID: 1454 RVA: 0x0001D261 File Offset: 0x0001B461
 	public int GetDownStreamSeqNo()
 	{
 		return this.DownStreamSeqNo;
 	}
 
-	// Token: 0x0600056E RID: 1390 RVA: 0x0001CBB8 File Offset: 0x0001ADB8
+	// Token: 0x060005AF RID: 1455 RVA: 0x0001D26C File Offset: 0x0001B46C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -406,13 +398,13 @@ public class Net : Singleton
 		return new ValueTuple<int, int, string, string>(0, 0, "", "");
 	}
 
-	// Token: 0x0600056F RID: 1391 RVA: 0x0001CC91 File Offset: 0x0001AE91
+	// Token: 0x060005B0 RID: 1456 RVA: 0x0001D345 File Offset: 0x0001B545
 	public int GetUnVerifiedMessageCount()
 	{
 		return this.MessageCacheList.Count;
 	}
 
-	// Token: 0x06000570 RID: 1392 RVA: 0x0001CCA0 File Offset: 0x0001AEA0
+	// Token: 0x060005B1 RID: 1457 RVA: 0x0001D354 File Offset: 0x0001B554
 	public unsafe void ReconnectSuccessAndReSend(int lastReceivedClientSeq)
 	{
 		Log instance = Log.Instance;
@@ -485,7 +477,7 @@ public class Net : Singleton
 		this.ChangeStateFinishLogin();
 	}
 
-	// Token: 0x06000571 RID: 1393 RVA: 0x0001CF08 File Offset: 0x0001B108
+	// Token: 0x060005B2 RID: 1458 RVA: 0x0001D5BC File Offset: 0x0001B7BC
 	public bool Register(ENotifyMessageId id, [Nullable(new byte[]
 	{
 		1,
@@ -507,7 +499,7 @@ public class Net : Singleton
 		return true;
 	}
 
-	// Token: 0x06000572 RID: 1394 RVA: 0x0001CF64 File Offset: 0x0001B164
+	// Token: 0x060005B3 RID: 1459 RVA: 0x0001D618 File Offset: 0x0001B818
 	public bool UnRegister(ENotifyMessageId id)
 	{
 		if (!this.NotifyHandles.Remove(id))
@@ -523,7 +515,7 @@ public class Net : Singleton
 		return true;
 	}
 
-	// Token: 0x06000573 RID: 1395 RVA: 0x0001CFB0 File Offset: 0x0001B1B0
+	// Token: 0x060005B4 RID: 1460 RVA: 0x0001D664 File Offset: 0x0001B864
 	public void Send(EPushMessageId pushMessageId, IMessage message)
 	{
 		if (!this.IsPassLoginCheck((EMessageId)pushMessageId))
@@ -533,7 +525,7 @@ public class Net : Singleton
 		this.EncodeAddToCacheAndSend(Net.EMessageType.Push, (EMessageId)pushMessageId, message, null, null);
 	}
 
-	// Token: 0x06000574 RID: 1396 RVA: 0x0001CFDC File Offset: 0x0001B1DC
+	// Token: 0x060005B5 RID: 1461 RVA: 0x0001D690 File Offset: 0x0001B890
 	public void Call(ERequestMessageId requestMessageId, IMessage message, [Nullable(2)] Action<IMessage, Net.CallbackStatus> handle, int timeoutMs = 0)
 	{
 		if (this.IsRequestLocked(requestMessageId))
@@ -570,7 +562,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000575 RID: 1397 RVA: 0x0001D06C File Offset: 0x0001B26C
+	// Token: 0x060005B6 RID: 1462 RVA: 0x0001D720 File Offset: 0x0001B920
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -589,7 +581,7 @@ public class Net : Singleton
 		return <CallAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06000576 RID: 1398 RVA: 0x0001D0C8 File Offset: 0x0001B2C8
+	// Token: 0x060005B7 RID: 1463 RVA: 0x0001D77C File Offset: 0x0001B97C
 	private unsafe LinkedNode<Net.SendMessageCache> EncodeAddToCacheAndSend(Net.EMessageType msgType, EMessageId msgId, IMessage message, int? rpcId, [Nullable(2)] Net.IMessageCallBack handle)
 	{
 		int num = this.IncUpStreamSeqNo();
@@ -618,7 +610,7 @@ public class Net : Singleton
 		return result;
 	}
 
-	// Token: 0x06000577 RID: 1399 RVA: 0x0001D1BC File Offset: 0x0001B3BC
+	// Token: 0x060005B8 RID: 1464 RVA: 0x0001D870 File Offset: 0x0001BA70
 	private unsafe void AddMessageTimeout(int timeoutMs, Net.SendMessageCache messageCache)
 	{
 		ERequestMessageId requestMessageId = (ERequestMessageId)messageCache.MessageId;
@@ -688,7 +680,7 @@ public class Net : Singleton
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000578 RID: 1400 RVA: 0x0001D26C File Offset: 0x0001B46C
+	// Token: 0x060005B9 RID: 1465 RVA: 0x0001D920 File Offset: 0x0001BB20
 	private void FillMessageNameAndStatMap(EMessageId[] messageIds, string namePrefix, bool createStat)
 	{
 		if (this.IsNetLogEnabled || this.IsNetStatEnable)
@@ -714,7 +706,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000579 RID: 1401 RVA: 0x0001D320 File Offset: 0x0001B520
+	// Token: 0x060005BA RID: 1466 RVA: 0x0001D9D4 File Offset: 0x0001BBD4
 	private bool IsRequestLocked(ERequestMessageId requestMessageId)
 	{
 		if (this.RequestLock.Contains(requestMessageId))
@@ -730,7 +722,7 @@ public class Net : Singleton
 		return false;
 	}
 
-	// Token: 0x0600057A RID: 1402 RVA: 0x0001D36A File Offset: 0x0001B56A
+	// Token: 0x060005BB RID: 1467 RVA: 0x0001DA1E File Offset: 0x0001BC1E
 	private void SetKcpConnectStatus(Net.EKcpConnectStatus connectStatus)
 	{
 		if (this.KcpConnectStatus != connectStatus)
@@ -743,13 +735,13 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600057B RID: 1403 RVA: 0x0001D392 File Offset: 0x0001B592
+	// Token: 0x060005BC RID: 1468 RVA: 0x0001DA46 File Offset: 0x0001BC46
 	private bool CanKcpConnect()
 	{
 		return this.KcpConnectStatus == Net.EKcpConnectStatus.NoConnect;
 	}
 
-	// Token: 0x0600057C RID: 1404 RVA: 0x0001D3A0 File Offset: 0x0001B5A0
+	// Token: 0x060005BD RID: 1469 RVA: 0x0001DA54 File Offset: 0x0001BC54
 	private void DoConnect()
 	{
 		this.ConnectTimeoutTimer = TimerSystem.Instance.Delay(delegate(float id)
@@ -763,19 +755,19 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600057D RID: 1405 RVA: 0x0001D409 File Offset: 0x0001B609
+	// Token: 0x060005BE RID: 1470 RVA: 0x0001DABD File Offset: 0x0001BCBD
 	private bool IsReconnectControlMessage(ERequestMessageId messageId)
 	{
 		return messageId == ERequestMessageId.ProtoKeyRequest || messageId == ERequestMessageId.ReconnectRequest;
 	}
 
-	// Token: 0x0600057E RID: 1406 RVA: 0x0001D417 File Offset: 0x0001B617
+	// Token: 0x060005BF RID: 1471 RVA: 0x0001DACB File Offset: 0x0001BCCB
 	private bool CacheDueToReconnecting(int messageId)
 	{
 		return this.IsReconnecting && !this.IsReconnectControlMessage((ERequestMessageId)messageId);
 	}
 
-	// Token: 0x0600057F RID: 1407 RVA: 0x0001D430 File Offset: 0x0001B630
+	// Token: 0x060005C0 RID: 1472 RVA: 0x0001DAE4 File Offset: 0x0001BCE4
 	private unsafe bool IsPassLoginCheck(EMessageId messageId)
 	{
 		if (this.LoginState == Net.EServerLoginState.Logout)
@@ -824,7 +816,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000580 RID: 1408 RVA: 0x0001D54C File Offset: 0x0001B74C
+	// Token: 0x060005C1 RID: 1473 RVA: 0x0001DC00 File Offset: 0x0001BE00
 	private int GetRpcId()
 	{
 		if (this.RpcId < 32767)
@@ -837,7 +829,7 @@ public class Net : Singleton
 		return (int)this.RpcId;
 	}
 
-	// Token: 0x06000581 RID: 1409 RVA: 0x0001D588 File Offset: 0x0001B788
+	// Token: 0x060005C2 RID: 1474 RVA: 0x0001DC3C File Offset: 0x0001BE3C
 	private int IncUpStreamSeqNo()
 	{
 		if (this.UpStreamSeqNo < 2147483647)
@@ -850,7 +842,7 @@ public class Net : Singleton
 		return this.UpStreamSeqNo;
 	}
 
-	// Token: 0x06000582 RID: 1410 RVA: 0x0001D5C4 File Offset: 0x0001B7C4
+	// Token: 0x060005C3 RID: 1475 RVA: 0x0001DC78 File Offset: 0x0001BE78
 	private unsafe bool SetDownStreamSeqNo(int downStreamSeqNo)
 	{
 		if (downStreamSeqNo == 0)
@@ -879,7 +871,7 @@ public class Net : Singleton
 		return true;
 	}
 
-	// Token: 0x06000583 RID: 1411 RVA: 0x0001D656 File Offset: 0x0001B856
+	// Token: 0x060005C4 RID: 1476 RVA: 0x0001DD0A File Offset: 0x0001BF0A
 	private LinkedNode<Net.SendMessageCache> AddToMessageCache(Net.SendMessageCache messageCache)
 	{
 		bool isNetLogEnabled = this.IsNetLogEnabled;
@@ -887,7 +879,7 @@ public class Net : Singleton
 		return this.MessageCacheList.AddTail(messageCache);
 	}
 
-	// Token: 0x06000584 RID: 1412 RVA: 0x0001D672 File Offset: 0x0001B872
+	// Token: 0x060005C5 RID: 1477 RVA: 0x0001DD26 File Offset: 0x0001BF26
 	private void SaveCallbackAndLockRequest(ERequestMessageId requestMessageId, LinkedNode<Net.SendMessageCache> node)
 	{
 		this.RequestMessageMap[node.Element.RpcId] = node;
@@ -897,7 +889,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000585 RID: 1413 RVA: 0x0001D6A8 File Offset: 0x0001B8A8
+	// Token: 0x060005C6 RID: 1478 RVA: 0x0001DD5C File Offset: 0x0001BF5C
 	private void DeleteServerReceivedRequest(LinkedNode<Net.SendMessageCache> nodeRequestMsg)
 	{
 		Net.SendMessageCache element = nodeRequestMsg.Element;
@@ -919,13 +911,13 @@ public class Net : Singleton
 		bool isNetLogEnabled = this.IsNetLogEnabled;
 	}
 
-	// Token: 0x06000586 RID: 1414 RVA: 0x0001D71B File Offset: 0x0001B91B
+	// Token: 0x060005C7 RID: 1479 RVA: 0x0001DDCF File Offset: 0x0001BFCF
 	private bool IsMsgUseBuiltinEncrypt(EMessageId msgId)
 	{
 		return msgId == EMessageId.ProtoKeyRequest;
 	}
 
-	// Token: 0x06000587 RID: 1415 RVA: 0x0001D728 File Offset: 0x0001B928
+	// Token: 0x060005C8 RID: 1480 RVA: 0x0001DDDC File Offset: 0x0001BFDC
 	private void OnKcpConnectSuccess()
 	{
 		Log.Instance.Info(ELogModule.Net, ELogAuthor.LRX, "[CSharp] OnKcpConnectSuccess", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -937,7 +929,7 @@ public class Net : Singleton
 		Net.Instance.SetConnectResult(Net.EConnectResult.Success);
 	}
 
-	// Token: 0x06000588 RID: 1416 RVA: 0x0001D774 File Offset: 0x0001B974
+	// Token: 0x060005C9 RID: 1481 RVA: 0x0001DE28 File Offset: 0x0001C028
 	private void SetConnectResult(Net.EConnectResult result)
 	{
 		Log instance = Log.Instance;
@@ -967,7 +959,7 @@ public class Net : Singleton
 		this.SetKcpConnectStatus((result == Net.EConnectResult.Success) ? Net.EKcpConnectStatus.Connected : Net.EKcpConnectStatus.NoConnect);
 	}
 
-	// Token: 0x06000589 RID: 1417 RVA: 0x0001D834 File Offset: 0x0001BA34
+	// Token: 0x060005CA RID: 1482 RVA: 0x0001DEE8 File Offset: 0x0001C0E8
 	private unsafe void OnError(int code1, int code2, int code3, int code4, int code5)
 	{
 		switch (code1)
@@ -1019,7 +1011,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600058A RID: 1418 RVA: 0x0001D994 File Offset: 0x0001BB94
+	// Token: 0x060005CB RID: 1483 RVA: 0x0001E048 File Offset: 0x0001C248
 	private void HandleKcpRecvError(int code)
 	{
 		Log instance = Log.Instance;
@@ -1035,19 +1027,19 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600058B RID: 1419 RVA: 0x0001D9E9 File Offset: 0x0001BBE9
+	// Token: 0x060005CC RID: 1484 RVA: 0x0001E09D File Offset: 0x0001C29D
 	private void OnReceiveResponse(int seqNo, short rpcId, ushort messageId, FArrayBuffer messageBuffer)
 	{
 		this.ProcessReceiveMessage(Net.EMessageType.Response, seqNo, (int)messageId, messageBuffer, new int?((int)rpcId), false);
 	}
 
-	// Token: 0x0600058C RID: 1420 RVA: 0x0001D9FE File Offset: 0x0001BBFE
+	// Token: 0x060005CD RID: 1485 RVA: 0x0001E0B2 File Offset: 0x0001C2B2
 	private void OnReceiveException(int seqNo, short rpcId, uint errorCode, FArrayBuffer stringBuffer)
 	{
 		this.ProcessReceiveMessage(Net.EMessageType.Exception, seqNo, (int)errorCode, stringBuffer, new int?((int)rpcId), false);
 	}
 
-	// Token: 0x0600058D RID: 1421 RVA: 0x0001DA14 File Offset: 0x0001BC14
+	// Token: 0x060005CE RID: 1486 RVA: 0x0001E0C8 File Offset: 0x0001C2C8
 	private unsafe void OnReceiveTcpException(uint errorCode)
 	{
 		Log instance = Log.Instance;
@@ -1061,13 +1053,13 @@ public class Net : Singleton
 		this.SetConnectResult(Net.EConnectResult.TCPConnectFailed);
 	}
 
-	// Token: 0x0600058E RID: 1422 RVA: 0x0001DA90 File Offset: 0x0001BC90
+	// Token: 0x060005CF RID: 1487 RVA: 0x0001E144 File Offset: 0x0001C344
 	private void OnReceivePush(int seqNo, ushort messageId, FArrayBuffer messageBuffer)
 	{
 		this.ProcessReceiveMessage(Net.EMessageType.Push, seqNo, (int)messageId, messageBuffer, null, false);
 	}
 
-	// Token: 0x0600058F RID: 1423 RVA: 0x0001DAB4 File Offset: 0x0001BCB4
+	// Token: 0x060005D0 RID: 1488 RVA: 0x0001E168 File Offset: 0x0001C368
 	private unsafe bool ProcessReceiveMessage(Net.EMessageType messageType, int serverSeqNo, int messageIdOrErrorCode, FArrayBuffer messageBuffer, int? rpcId = null, bool recvFromTs = false)
 	{
 		Span<byte> span = messageBuffer.ToSpan();
@@ -1197,7 +1189,7 @@ public class Net : Singleton
 		return true;
 	}
 
-	// Token: 0x06000590 RID: 1424 RVA: 0x0001DEC4 File Offset: 0x0001C0C4
+	// Token: 0x060005D1 RID: 1489 RVA: 0x0001E578 File Offset: 0x0001C778
 	[NullableContext(0)]
 	private unsafe bool DoSend(Net.EMessageType msgType, int seqNo, int? rpcId, EMessageId msgId, Span<byte> encodedMsg, [Nullable(2)] IMessage originalMessage = null)
 	{
@@ -1218,7 +1210,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000591 RID: 1425 RVA: 0x0001DF50 File Offset: 0x0001C150
+	// Token: 0x060005D2 RID: 1490 RVA: 0x0001E604 File Offset: 0x0001C804
 	private void CleanMessageCaches()
 	{
 		this.RequestLock.Clear();
@@ -1226,26 +1218,26 @@ public class Net : Singleton
 		Net.SendMessageCache.DisposeAllAndClear(this.MessageCacheList);
 	}
 
-	// Token: 0x06000592 RID: 1426 RVA: 0x0001DF74 File Offset: 0x0001C174
+	// Token: 0x060005D3 RID: 1491 RVA: 0x0001E628 File Offset: 0x0001C828
+	[NullableContext(2)]
 	private void LogNet(int id, int seqNo, int? rpcId, object message)
 	{
-		if (!this.IsHeartLogEnabled && (id == 1650 || id == 1651 || id == 15194))
+		if (!this.IsHeartLogEnabled && (id == 1650 || id == 1651 || id == 25350))
 		{
 			return;
 		}
-		if (id == 24756 || id == 17992 || id == 24978 || id == 25437 || id == 24276 || id == 17230 || id == 28306 || id == 17250 || id == 20474)
+		if (id == 18855 || id == 17980 || id == 18826 || id == 21168 || id == 23069 || id == 23936 || id == 28799 || id == 28031 || id == 18938)
 		{
 			return;
 		}
-		if (!this.IsSyncLogEnabled && (id == 16475 || id == 16407 || id == 17782 || id == 21027 || id == 27094 || id == 16509 || id == 19470 || id == 25706 || id == 18163))
+		if (!this.IsSyncLogEnabled && (id == 29999 || id == 23977 || id == 19018 || id == 24670 || id == 18681 || id == 20922 || id == 26497 || id == 29973 || id == 24289))
 		{
 			return;
 		}
-		int num = message.GetType().GetProperties().Length;
 		bool isNetLogEnabled = this.IsNetLogEnabled;
 	}
 
-	// Token: 0x06000593 RID: 1427 RVA: 0x0001E054 File Offset: 0x0001C254
+	// Token: 0x060005D4 RID: 1492 RVA: 0x0001E6F8 File Offset: 0x0001C8F8
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public unsafe IMessage ParseToMessage(EMessageId messageId, Span<byte> encodedMsg)
@@ -1282,7 +1274,7 @@ public class Net : Singleton
 		return result;
 	}
 
-	// Token: 0x06000594 RID: 1428 RVA: 0x0001E120 File Offset: 0x0001C320
+	// Token: 0x060005D5 RID: 1493 RVA: 0x0001E7C4 File Offset: 0x0001C9C4
 	private unsafe bool HandleConnectTimeout(bool ignoreTcp)
 	{
 		if (!ignoreTcp)
@@ -1322,7 +1314,7 @@ public class Net : Singleton
 		return true;
 	}
 
-	// Token: 0x06000595 RID: 1429 RVA: 0x0001E2A4 File Offset: 0x0001C4A4
+	// Token: 0x060005D6 RID: 1494 RVA: 0x0001E948 File Offset: 0x0001CB48
 	private unsafe void StartTcpConnect()
 	{
 		if (this.KcpClient == null)
@@ -1369,7 +1361,7 @@ public class Net : Singleton
 		instance2.TcpRetry = tcpRetry + 1;
 	}
 
-	// Token: 0x06000596 RID: 1430 RVA: 0x0001E49C File Offset: 0x0001C69C
+	// Token: 0x060005D7 RID: 1495 RVA: 0x0001EB40 File Offset: 0x0001CD40
 	private unsafe void OnTcpConnected()
 	{
 		Log instance = Log.Instance;
@@ -1407,7 +1399,7 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x06000597 RID: 1431 RVA: 0x0001E600 File Offset: 0x0001C800
+	// Token: 0x060005D8 RID: 1496 RVA: 0x0001ECA4 File Offset: 0x0001CEA4
 	private void OnTcpConnectFailed()
 	{
 		Log instance = Log.Instance;
@@ -1419,7 +1411,7 @@ public class Net : Singleton
 		Net.Instance.SetConnectResult(Net.EConnectResult.TCPConnectFailed);
 	}
 
-	// Token: 0x06000598 RID: 1432 RVA: 0x0001E650 File Offset: 0x0001C850
+	// Token: 0x060005D9 RID: 1497 RVA: 0x0001ECF4 File Offset: 0x0001CEF4
 	[NullableContext(0)]
 	private unsafe void ProcessKcpConvResponseMessage(EMessageId messageId, Span<byte> bufferSpan)
 	{
@@ -1443,8 +1435,8 @@ public class Net : Singleton
 		this.KcpClient.HandleKcpConnect((uint)kcpConvResponse.CrcCheck, conv);
 	}
 
-	// Token: 0x170000BC RID: 188
-	// (get) Token: 0x06000599 RID: 1433 RVA: 0x0001E734 File Offset: 0x0001C934
+	// Token: 0x170000CE RID: 206
+	// (get) Token: 0x060005DA RID: 1498 RVA: 0x0001EDD8 File Offset: 0x0001CFD8
 	public static Net Instance
 	{
 		get
@@ -1458,12 +1450,12 @@ public class Net : Singleton
 		}
 	}
 
-	// Token: 0x0600059A RID: 1434 RVA: 0x0001E757 File Offset: 0x0001C957
+	// Token: 0x060005DB RID: 1499 RVA: 0x0001EDFB File Offset: 0x0001CFFB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600059B RID: 1435 RVA: 0x0001E759 File Offset: 0x0001C959
+	// Token: 0x060005DC RID: 1500 RVA: 0x0001EDFD File Offset: 0x0001CFFD
 	public static void ResetStaticDefaultValue()
 	{
 		Net instance = Net._instance;
@@ -1474,13 +1466,13 @@ public class Net : Singleton
 		Net._instance = null;
 	}
 
-	// Token: 0x0600059C RID: 1436 RVA: 0x0001E772 File Offset: 0x0001C972
+	// Token: 0x060005DD RID: 1501 RVA: 0x0001EE16 File Offset: 0x0001D016
 	static Net()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Net.CreateStaticDefaultValue), new Action(Net.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600059D RID: 1437 RVA: 0x0001E79C File Offset: 0x0001C99C
+	// Token: 0x060005DE RID: 1502 RVA: 0x0001EE40 File Offset: 0x0001D040
 	public Net()
 	{
 		Dictionary<Net.EServerEncryptType, Net.EClientEncryptType> dictionary = new Dictionary<Net.EServerEncryptType, Net.EClientEncryptType>();
@@ -1507,185 +1499,185 @@ public class Net : Singleton
 		base..ctor();
 	}
 
-	// Token: 0x04000462 RID: 1122
+	// Token: 0x04000470 RID: 1136
 	public const bool ENABLE_NET_STAT = true;
 
-	// Token: 0x04000463 RID: 1123
+	// Token: 0x04000471 RID: 1137
 	public const bool ENABLE_NET_LOG = true;
 
-	// Token: 0x04000464 RID: 1124
+	// Token: 0x04000472 RID: 1138
 	public const bool ENABLE_HEARTBEAT_LOG = true;
 
-	// Token: 0x04000465 RID: 1125
+	// Token: 0x04000473 RID: 1139
 	public const bool ENABLE_SYNC_LOG = true;
 
-	// Token: 0x04000466 RID: 1126
+	// Token: 0x04000474 RID: 1140
 	public const bool ENABLE_MESSAGE_LOG = false;
 
-	// Token: 0x04000467 RID: 1127
+	// Token: 0x04000475 RID: 1141
 	private readonly Dictionary<Net.EServerEncryptType, Net.EClientEncryptType> s2cEncryptType;
 
-	// Token: 0x04000468 RID: 1128
+	// Token: 0x04000476 RID: 1142
 	private long LastReceiveTimeMsInternal;
 
-	// Token: 0x04000469 RID: 1129
+	// Token: 0x04000477 RID: 1143
 	public bool UseBudget;
 
-	// Token: 0x0400046A RID: 1130
+	// Token: 0x04000478 RID: 1144
 	[Nullable(2)]
 	private UKuroKcpClient KcpClient;
 
-	// Token: 0x0400046B RID: 1131
+	// Token: 0x04000479 RID: 1145
 	[StaticVariableRuleIgnore]
 	private static readonly Random SharedRandom = new Random();
 
-	// Token: 0x0400046C RID: 1132
+	// Token: 0x0400047A RID: 1146
 	[Nullable(2)]
 	private Net.TConnectResultCallback ConnectCallback;
 
-	// Token: 0x0400046D RID: 1133
+	// Token: 0x0400047B RID: 1147
 	private string ConnectServerIp;
 
-	// Token: 0x0400046E RID: 1134
+	// Token: 0x0400047C RID: 1148
 	private int ConnectServerPort;
 
-	// Token: 0x0400046F RID: 1135
+	// Token: 0x0400047D RID: 1149
 	private int ConnectTimeoutMsPerTry;
 
-	// Token: 0x04000470 RID: 1136
+	// Token: 0x0400047E RID: 1150
 	[Nullable(2)]
 	private TimerHandle ConnectTimeoutTimer;
 
-	// Token: 0x04000471 RID: 1137
+	// Token: 0x0400047F RID: 1151
 	private int ConnectRetryCount;
 
-	// Token: 0x04000472 RID: 1138
+	// Token: 0x04000480 RID: 1152
 	private int ConnectMaxRetryCount;
 
-	// Token: 0x04000473 RID: 1139
+	// Token: 0x04000481 RID: 1153
 	private readonly Dictionary<ENotifyMessageId, Net.IMessageCallBack> NotifyHandles;
 
-	// Token: 0x04000474 RID: 1140
+	// Token: 0x04000482 RID: 1154
 	private readonly HashSet<ERequestMessageId> RequestLock;
 
-	// Token: 0x04000475 RID: 1141
+	// Token: 0x04000483 RID: 1155
 	private readonly global::LinkedList<Net.SendMessageCache> MessageCacheList;
 
-	// Token: 0x04000476 RID: 1142
+	// Token: 0x04000484 RID: 1156
 	private readonly Dictionary<int, LinkedNode<Net.SendMessageCache>> RequestMessageMap;
 
-	// Token: 0x04000477 RID: 1143
+	// Token: 0x04000485 RID: 1157
 	private readonly Dictionary<EMessageId, string> MessageIdNameMap;
 
-	// Token: 0x04000478 RID: 1144
+	// Token: 0x04000486 RID: 1158
 	private readonly Dictionary<EMessageId, Stat> MessageIdStatMap;
 
-	// Token: 0x04000479 RID: 1145
+	// Token: 0x04000487 RID: 1159
 	private readonly Stat StatCall;
 
-	// Token: 0x0400047A RID: 1146
+	// Token: 0x04000488 RID: 1160
 	private readonly Stat StatSend;
 
-	// Token: 0x0400047B RID: 1147
+	// Token: 0x04000489 RID: 1161
 	private HashSet<ERequestMessageId> CanTimeOutMessages;
 
-	// Token: 0x0400047C RID: 1148
+	// Token: 0x0400048A RID: 1162
 	private short RpcId;
 
-	// Token: 0x0400047D RID: 1149
+	// Token: 0x0400048B RID: 1163
 	private int UpStreamSeqNo;
 
-	// Token: 0x0400047E RID: 1150
+	// Token: 0x0400048C RID: 1164
 	private int DownStreamSeqNo;
 
-	// Token: 0x0400047F RID: 1151
+	// Token: 0x0400048D RID: 1165
 	private Net.EKcpConnectStatus KcpConnectStatus;
 
-	// Token: 0x04000480 RID: 1152
+	// Token: 0x0400048E RID: 1166
 	private Net.EServerLoginState LoginState;
 
-	// Token: 0x04000481 RID: 1153
+	// Token: 0x0400048F RID: 1167
 	private bool IsReconnecting;
 
-	// Token: 0x04000482 RID: 1154
+	// Token: 0x04000490 RID: 1168
 	private bool IsNetLogEnabled;
 
-	// Token: 0x04000483 RID: 1155
+	// Token: 0x04000491 RID: 1169
 	private bool IsNetStatEnable;
 
-	// Token: 0x04000484 RID: 1156
+	// Token: 0x04000492 RID: 1170
 	private bool IsHeartLogEnabled;
 
-	// Token: 0x04000485 RID: 1157
+	// Token: 0x04000493 RID: 1171
 	private bool IsSyncLogEnabled;
 
-	// Token: 0x04000486 RID: 1158
+	// Token: 0x04000494 RID: 1172
 	private Net.TExceptionHandle ExceptionHandle;
 
-	// Token: 0x04000487 RID: 1159
+	// Token: 0x04000495 RID: 1173
 	private Action<int> AddRequestMaskHandle;
 
-	// Token: 0x04000488 RID: 1160
+	// Token: 0x04000496 RID: 1174
 	private Action<int> RemoveRequestMaskHandle;
 
-	// Token: 0x04000489 RID: 1161
+	// Token: 0x04000497 RID: 1175
 	private Net.TNetworkErrorHandle NetErrorHandle;
 
-	// Token: 0x0400048A RID: 1162
+	// Token: 0x04000498 RID: 1176
 	[Nullable(2)]
 	private Net.CallbackQueueItem CurrentProcessedCallback;
 
-	// Token: 0x0400048B RID: 1163
+	// Token: 0x04000499 RID: 1177
 	private readonly global::LinkedList<Net.CallbackQueueItem> CallbackList;
 
-	// Token: 0x0400048C RID: 1164
+	// Token: 0x0400049A RID: 1178
 	private int NonePausedCallbackCount;
 
-	// Token: 0x0400048D RID: 1165
+	// Token: 0x0400049B RID: 1179
 	private bool IsNotifyCallbackPausedInternal;
 
-	// Token: 0x0400048E RID: 1166
+	// Token: 0x0400049C RID: 1180
 	private readonly Stat StatAddRequestMask;
 
-	// Token: 0x0400048F RID: 1167
+	// Token: 0x0400049D RID: 1181
 	private readonly Stat StatRemoveRequestMask;
 
-	// Token: 0x04000490 RID: 1168
+	// Token: 0x0400049E RID: 1182
 	private readonly Stat StatEncode;
 
-	// Token: 0x04000491 RID: 1169
+	// Token: 0x0400049F RID: 1183
 	[Nullable(2)]
 	private static Net _instance;
 
-	// Token: 0x020001A7 RID: 423
+	// Token: 0x020001AD RID: 429
 	[NullableContext(0)]
 	public enum EMsgTypeIndex
 	{
-		// Token: 0x040007E8 RID: 2024
+		// Token: 0x0400080D RID: 2061
 		Request,
-		// Token: 0x040007E9 RID: 2025
+		// Token: 0x0400080E RID: 2062
 		Response
 	}
 
-	// Token: 0x020001A8 RID: 424
+	// Token: 0x020001AE RID: 430
 	[NullableContext(2)]
 	public interface IMessageCallBack
 	{
-		// Token: 0x06000D0F RID: 3343
+		// Token: 0x06000D7A RID: 3450
 		void Invoke(IMessage message, Net.CallbackStatus callbackStatus);
 	}
 
-	// Token: 0x020001A9 RID: 425
+	// Token: 0x020001AF RID: 431
 	[NullableContext(2)]
 	[Nullable(0)]
 	public sealed class MessageCallback : Net.IMessageCallBack
 	{
-		// Token: 0x06000D10 RID: 3344 RVA: 0x0003D9DA File Offset: 0x0003BBDA
+		// Token: 0x06000D7B RID: 3451 RVA: 0x0003E8AE File Offset: 0x0003CAAE
 		public MessageCallback(Action<IMessage, Net.CallbackStatus> callback)
 		{
 		}
 
-		// Token: 0x06000D11 RID: 3345 RVA: 0x0003D9EC File Offset: 0x0003BBEC
+		// Token: 0x06000D7C RID: 3452 RVA: 0x0003E8C0 File Offset: 0x0003CAC0
 		public void Invoke(IMessage message, Net.CallbackStatus callbackStatus)
 		{
 			try
@@ -1726,100 +1718,100 @@ public class Net : Singleton
 			}
 		}
 
-		// Token: 0x040007EA RID: 2026
+		// Token: 0x0400080F RID: 2063
 		private readonly Action<IMessage, Net.CallbackStatus> Callback = callback;
-	}
-
-	// Token: 0x020001AA RID: 426
-	[NullableContext(0)]
-	private enum EMessageType
-	{
-		// Token: 0x040007EC RID: 2028
-		Request = 1,
-		// Token: 0x040007ED RID: 2029
-		Response,
-		// Token: 0x040007EE RID: 2030
-		Exception,
-		// Token: 0x040007EF RID: 2031
-		Push
-	}
-
-	// Token: 0x020001AB RID: 427
-	[NullableContext(0)]
-	public enum EServerEncryptType
-	{
-		// Token: 0x040007F1 RID: 2033
-		NoEncrypt,
-		// Token: 0x040007F2 RID: 2034
-		Aes = 2
-	}
-
-	// Token: 0x020001AC RID: 428
-	[NullableContext(0)]
-	private enum EClientEncryptType
-	{
-		// Token: 0x040007F4 RID: 2036
-		Aes,
-		// Token: 0x040007F5 RID: 2037
-		NoEncrypt,
-		// Token: 0x040007F6 RID: 2038
-		Rsa
-	}
-
-	// Token: 0x020001AD RID: 429
-	[NullableContext(0)]
-	private enum EKcpConnectStatus
-	{
-		// Token: 0x040007F8 RID: 2040
-		NoConnect,
-		// Token: 0x040007F9 RID: 2041
-		Connecting,
-		// Token: 0x040007FA RID: 2042
-		Connected
-	}
-
-	// Token: 0x020001AE RID: 430
-	[NullableContext(0)]
-	public enum EConnectResult
-	{
-		// Token: 0x040007FC RID: 2044
-		Success,
-		// Token: 0x040007FD RID: 2045
-		Timeout,
-		// Token: 0x040007FE RID: 2046
-		Disconnect,
-		// Token: 0x040007FF RID: 2047
-		Other,
-		// Token: 0x04000800 RID: 2048
-		TCPConnectFailed,
-		// Token: 0x04000801 RID: 2049
-		TCPConnectTimeOut
-	}
-
-	// Token: 0x020001AF RID: 431
-	[NullableContext(0)]
-	public enum EDisconnectReason
-	{
-		// Token: 0x04000803 RID: 2051
-		Logout,
-		// Token: 0x04000804 RID: 2052
-		Reconnect,
-		// Token: 0x04000805 RID: 2053
-		LoginFail
 	}
 
 	// Token: 0x020001B0 RID: 432
 	[NullableContext(0)]
+	private enum EMessageType
+	{
+		// Token: 0x04000811 RID: 2065
+		Request = 1,
+		// Token: 0x04000812 RID: 2066
+		Response,
+		// Token: 0x04000813 RID: 2067
+		Exception,
+		// Token: 0x04000814 RID: 2068
+		Push
+	}
+
+	// Token: 0x020001B1 RID: 433
+	[NullableContext(0)]
+	public enum EServerEncryptType
+	{
+		// Token: 0x04000816 RID: 2070
+		NoEncrypt,
+		// Token: 0x04000817 RID: 2071
+		Aes = 2
+	}
+
+	// Token: 0x020001B2 RID: 434
+	[NullableContext(0)]
+	private enum EClientEncryptType
+	{
+		// Token: 0x04000819 RID: 2073
+		Aes,
+		// Token: 0x0400081A RID: 2074
+		NoEncrypt,
+		// Token: 0x0400081B RID: 2075
+		Rsa
+	}
+
+	// Token: 0x020001B3 RID: 435
+	[NullableContext(0)]
+	private enum EKcpConnectStatus
+	{
+		// Token: 0x0400081D RID: 2077
+		NoConnect,
+		// Token: 0x0400081E RID: 2078
+		Connecting,
+		// Token: 0x0400081F RID: 2079
+		Connected
+	}
+
+	// Token: 0x020001B4 RID: 436
+	[NullableContext(0)]
+	public enum EConnectResult
+	{
+		// Token: 0x04000821 RID: 2081
+		Success,
+		// Token: 0x04000822 RID: 2082
+		Timeout,
+		// Token: 0x04000823 RID: 2083
+		Disconnect,
+		// Token: 0x04000824 RID: 2084
+		Other,
+		// Token: 0x04000825 RID: 2085
+		TCPConnectFailed,
+		// Token: 0x04000826 RID: 2086
+		TCPConnectTimeOut
+	}
+
+	// Token: 0x020001B5 RID: 437
+	[NullableContext(0)]
+	public enum EDisconnectReason
+	{
+		// Token: 0x04000828 RID: 2088
+		Logout,
+		// Token: 0x04000829 RID: 2089
+		Reconnect,
+		// Token: 0x0400082A RID: 2090
+		LoginFail
+	}
+
+	// Token: 0x020001B6 RID: 438
+	[NullableContext(0)]
 	public class CallbackStatus
 	{
-		// Token: 0x06000D12 RID: 3346 RVA: 0x0003DAC4 File Offset: 0x0003BCC4
+		// Token: 0x06000D7D RID: 3453 RVA: 0x0003E998 File Offset: 0x0003CB98
 		public CallbackStatus(EMessageId messageId)
 		{
 			this.CallbackMessageId = messageId;
 		}
 
-		// Token: 0x17000149 RID: 329
-		// (get) Token: 0x06000D13 RID: 3347 RVA: 0x0003DADA File Offset: 0x0003BCDA
+		// Token: 0x1700015E RID: 350
+		// (get) Token: 0x06000D7E RID: 3454 RVA: 0x0003E9AE File Offset: 0x0003CBAE
 		public EMessageId MessageId
 		{
 			get
@@ -1828,8 +1820,8 @@ public class Net : Singleton
 			}
 		}
 
-		// Token: 0x1700014A RID: 330
-		// (get) Token: 0x06000D14 RID: 3348 RVA: 0x0003DAE2 File Offset: 0x0003BCE2
+		// Token: 0x1700015F RID: 351
+		// (get) Token: 0x06000D7F RID: 3455 RVA: 0x0003E9B6 File Offset: 0x0003CBB6
 		public bool IsJobFinished
 		{
 			get
@@ -1838,8 +1830,8 @@ public class Net : Singleton
 			}
 		}
 
-		// Token: 0x1700014B RID: 331
-		// (get) Token: 0x06000D15 RID: 3349 RVA: 0x0003DAEA File Offset: 0x0003BCEA
+		// Token: 0x17000160 RID: 352
+		// (get) Token: 0x06000D80 RID: 3456 RVA: 0x0003E9BE File Offset: 0x0003CBBE
 		public int CallbackCount
 		{
 			get
@@ -1848,37 +1840,37 @@ public class Net : Singleton
 			}
 		}
 
-		// Token: 0x06000D16 RID: 3350 RVA: 0x0003DAF2 File Offset: 0x0003BCF2
+		// Token: 0x06000D81 RID: 3457 RVA: 0x0003E9C6 File Offset: 0x0003CBC6
 		public void IncrementCount()
 		{
 			this.Count++;
 		}
 
-		// Token: 0x04000806 RID: 2054
+		// Token: 0x0400082B RID: 2091
 		[Nullable(2)]
 		public object UserData;
 
-		// Token: 0x04000807 RID: 2055
+		// Token: 0x0400082C RID: 2092
 		public bool IsFinished = true;
 
-		// Token: 0x04000808 RID: 2056
+		// Token: 0x0400082D RID: 2093
 		private int Count;
 
-		// Token: 0x04000809 RID: 2057
+		// Token: 0x0400082E RID: 2094
 		private readonly EMessageId CallbackMessageId;
 	}
 
-	// Token: 0x020001B1 RID: 433
-	// (Invoke) Token: 0x06000D18 RID: 3352
+	// Token: 0x020001B7 RID: 439
+	// (Invoke) Token: 0x06000D83 RID: 3459
 	[NullableContext(0)]
 	public delegate void WrappedCallback(Net.CallbackStatus status);
 
-	// Token: 0x020001B2 RID: 434
+	// Token: 0x020001B8 RID: 440
 	[NullableContext(2)]
 	[Nullable(0)]
 	private class CallbackQueueItem
 	{
-		// Token: 0x06000D1B RID: 3355 RVA: 0x0003DB04 File Offset: 0x0003BD04
+		// Token: 0x06000D86 RID: 3462 RVA: 0x0003E9D8 File Offset: 0x0003CBD8
 		[NullableContext(1)]
 		public CallbackQueueItem(Net.WrappedCallback callback, EMessageId messageId, bool isPaused)
 		{
@@ -1892,7 +1884,7 @@ public class Net : Singleton
 			this.Message = null;
 		}
 
-		// Token: 0x06000D1C RID: 3356 RVA: 0x0003DB60 File Offset: 0x0003BD60
+		// Token: 0x06000D87 RID: 3463 RVA: 0x0003EA34 File Offset: 0x0003CC34
 		public CallbackQueueItem(EMessageId messageId, bool isPaused, long receivedTimeMs, ERequestMessageId? requestId, int? rpcId, Net.IMessageCallBack handle, IMessage message)
 		{
 			this.Status = new Net.CallbackStatus(messageId);
@@ -1905,7 +1897,7 @@ public class Net : Singleton
 			this.Message = message;
 		}
 
-		// Token: 0x06000D1D RID: 3357 RVA: 0x0003DBB4 File Offset: 0x0003BDB4
+		// Token: 0x06000D88 RID: 3464 RVA: 0x0003EA88 File Offset: 0x0003CC88
 		public unsafe bool DoCallback()
 		{
 			Stat stat = null;
@@ -1965,94 +1957,94 @@ public class Net : Singleton
 			return this.Status.IsJobFinished;
 		}
 
-		// Token: 0x06000D1E RID: 3358 RVA: 0x0003DDBC File Offset: 0x0003BFBC
+		// Token: 0x06000D89 RID: 3465 RVA: 0x0003EC90 File Offset: 0x0003CE90
 		public bool IsPaused()
 		{
 			return this.IsPausedInternal;
 		}
 
-		// Token: 0x0400080A RID: 2058
+		// Token: 0x0400082F RID: 2095
 		[Nullable(1)]
 		private readonly Net.CallbackStatus Status;
 
-		// Token: 0x0400080B RID: 2059
+		// Token: 0x04000830 RID: 2096
 		private readonly bool IsPausedInternal;
 
-		// Token: 0x0400080C RID: 2060
+		// Token: 0x04000831 RID: 2097
 		private readonly EMessageId MessageId;
 
-		// Token: 0x0400080D RID: 2061
+		// Token: 0x04000832 RID: 2098
 		private readonly long ReceivedTimeMs;
 
-		// Token: 0x0400080E RID: 2062
+		// Token: 0x04000833 RID: 2099
 		private readonly ERequestMessageId? RequestId;
 
-		// Token: 0x0400080F RID: 2063
+		// Token: 0x04000834 RID: 2100
 		private readonly int? RpcId;
 
-		// Token: 0x04000810 RID: 2064
+		// Token: 0x04000835 RID: 2101
 		private readonly Net.IMessageCallBack Handle;
 
-		// Token: 0x04000811 RID: 2065
+		// Token: 0x04000836 RID: 2102
 		private readonly IMessage Message;
 	}
 
-	// Token: 0x020001B3 RID: 435
+	// Token: 0x020001B9 RID: 441
 	[NullableContext(0)]
 	public enum EServerLoginState
 	{
-		// Token: 0x04000813 RID: 2067
+		// Token: 0x04000838 RID: 2104
 		NoLogin,
-		// Token: 0x04000814 RID: 2068
+		// Token: 0x04000839 RID: 2105
 		AskingProtoKey,
-		// Token: 0x04000815 RID: 2069
+		// Token: 0x0400083A RID: 2106
 		ProtoKeyReady,
-		// Token: 0x04000816 RID: 2070
+		// Token: 0x0400083B RID: 2107
 		DoingLogin,
-		// Token: 0x04000817 RID: 2071
+		// Token: 0x0400083C RID: 2108
 		FinishedLogin,
-		// Token: 0x04000818 RID: 2072
+		// Token: 0x0400083D RID: 2109
 		Logout
 	}
 
-	// Token: 0x020001B4 RID: 436
+	// Token: 0x020001BA RID: 442
 	[NullableContext(0)]
 	private enum EKcpErrorCodeLevel1
 	{
-		// Token: 0x0400081A RID: 2074
+		// Token: 0x0400083F RID: 2111
 		NoError,
-		// Token: 0x0400081B RID: 2075
+		// Token: 0x04000840 RID: 2112
 		SocketReceiveError,
-		// Token: 0x0400081C RID: 2076
+		// Token: 0x04000841 RID: 2113
 		PayloadError,
-		// Token: 0x0400081D RID: 2077
+		// Token: 0x04000842 RID: 2114
 		DecryptError,
-		// Token: 0x0400081E RID: 2078
+		// Token: 0x04000843 RID: 2115
 		KcpRecvError
 	}
 
-	// Token: 0x020001B5 RID: 437
+	// Token: 0x020001BB RID: 443
 	[NullableContext(0)]
 	private enum EKcpConnectError
 	{
-		// Token: 0x04000820 RID: 2080
+		// Token: 0x04000845 RID: 2117
 		CrcCheckError = -4
 	}
 
-	// Token: 0x020001B6 RID: 438
+	// Token: 0x020001BC RID: 444
 	[NullableContext(0)]
 	private enum ESocketErrors
 	{
-		// Token: 0x04000822 RID: 2082
+		// Token: 0x04000847 RID: 2119
 		SE_NO_ERROR
 	}
 
-	// Token: 0x020001B7 RID: 439
+	// Token: 0x020001BD RID: 445
 	[NullableContext(0)]
 	public class SendMessageCache : IDisposable
 	{
-		// Token: 0x1700014C RID: 332
-		// (get) Token: 0x06000D1F RID: 3359 RVA: 0x0003DDC4 File Offset: 0x0003BFC4
+		// Token: 0x17000161 RID: 353
+		// (get) Token: 0x06000D8A RID: 3466 RVA: 0x0003EC98 File Offset: 0x0003CE98
 		public Span<byte> EncodeMessage
 		{
 			get
@@ -2065,7 +2057,7 @@ public class Net : Singleton
 			}
 		}
 
-		// Token: 0x06000D20 RID: 3360 RVA: 0x0003DDE8 File Offset: 0x0003BFE8
+		// Token: 0x06000D8B RID: 3467 RVA: 0x0003ECBC File Offset: 0x0003CEBC
 		public SendMessageCache(int? rpcId, int? seqNo, EMessageId? id, Span<byte> encodeMessage, [Nullable(2)] Net.IMessageCallBack handle)
 		{
 			this.RpcId = rpcId.GetValueOrDefault();
@@ -2082,13 +2074,13 @@ public class Net : Singleton
 			this.TimeoutHandle = null;
 		}
 
-		// Token: 0x06000D21 RID: 3361 RVA: 0x0003DE83 File Offset: 0x0003C083
+		// Token: 0x06000D8C RID: 3468 RVA: 0x0003ED57 File Offset: 0x0003CF57
 		public void ClearHandle()
 		{
 			this.Handle = null;
 		}
 
-		// Token: 0x06000D22 RID: 3362 RVA: 0x0003DE8C File Offset: 0x0003C08C
+		// Token: 0x06000D8D RID: 3469 RVA: 0x0003ED60 File Offset: 0x0003CF60
 		public void Dispose()
 		{
 			if (this.EncodeMessageBuffer != null)
@@ -2099,7 +2091,7 @@ public class Net : Singleton
 			}
 		}
 
-		// Token: 0x06000D23 RID: 3363 RVA: 0x0003DEB8 File Offset: 0x0003C0B8
+		// Token: 0x06000D8E RID: 3470 RVA: 0x0003ED8C File Offset: 0x0003CF8C
 		[NullableContext(1)]
 		public static void DisposeAndRemoveBefore(global::LinkedList<Net.SendMessageCache> list, LinkedNode<Net.SendMessageCache> node, bool includeThis)
 		{
@@ -2134,7 +2126,7 @@ public class Net : Singleton
 			list.RemoveNodesBeforeThis(node, includeThis);
 		}
 
-		// Token: 0x06000D24 RID: 3364 RVA: 0x0003DF40 File Offset: 0x0003C140
+		// Token: 0x06000D8F RID: 3471 RVA: 0x0003EE14 File Offset: 0x0003D014
 		[NullableContext(1)]
 		public static void DisposeAllAndClear(global::LinkedList<Net.SendMessageCache> list)
 		{
@@ -2153,54 +2145,54 @@ public class Net : Singleton
 			list.RemoveAllNodeWithoutHead();
 		}
 
-		// Token: 0x1700014D RID: 333
-		// (get) Token: 0x06000D25 RID: 3365 RVA: 0x0003DF8B File Offset: 0x0003C18B
+		// Token: 0x17000162 RID: 354
+		// (get) Token: 0x06000D90 RID: 3472 RVA: 0x0003EE5F File Offset: 0x0003D05F
 		[Nullable(1)]
 		public static Net.SendMessageCache NullMessageCache { [NullableContext(1)] get; } = new Net.SendMessageCache(null, null, null, null, null);
 
-		// Token: 0x04000823 RID: 2083
+		// Token: 0x04000848 RID: 2120
 		public int RpcId;
 
-		// Token: 0x04000824 RID: 2084
+		// Token: 0x04000849 RID: 2121
 		public int SeqNo;
 
-		// Token: 0x04000825 RID: 2085
+		// Token: 0x0400084A RID: 2122
 		public EMessageId MessageId;
 
-		// Token: 0x04000826 RID: 2086
+		// Token: 0x0400084B RID: 2123
 		[Nullable(2)]
 		private byte[] EncodeMessageBuffer;
 
-		// Token: 0x04000827 RID: 2087
+		// Token: 0x0400084C RID: 2124
 		private int MessageSize;
 
-		// Token: 0x04000828 RID: 2088
+		// Token: 0x0400084D RID: 2125
 		public long SendTimeMs;
 
-		// Token: 0x04000829 RID: 2089
+		// Token: 0x0400084E RID: 2126
 		[Nullable(2)]
 		public TimerHandle TimeoutHandle;
 
-		// Token: 0x0400082A RID: 2090
+		// Token: 0x0400084F RID: 2127
 		[Nullable(2)]
 		public Net.IMessageCallBack Handle;
 
-		// Token: 0x0400082B RID: 2091
+		// Token: 0x04000850 RID: 2128
 		public bool InList;
 	}
 
-	// Token: 0x020001B8 RID: 440
-	// (Invoke) Token: 0x06000D28 RID: 3368
+	// Token: 0x020001BE RID: 446
+	// (Invoke) Token: 0x06000D93 RID: 3475
 	[NullableContext(0)]
 	public delegate void TExceptionHandle(int rpcId, int errorCode, int messageId, [Nullable(2)] object message, string errorMessage);
 
-	// Token: 0x020001B9 RID: 441
-	// (Invoke) Token: 0x06000D2C RID: 3372
+	// Token: 0x020001BF RID: 447
+	// (Invoke) Token: 0x06000D97 RID: 3479
 	[NullableContext(0)]
 	public delegate void TConnectResultCallback(Net.EConnectResult result);
 
-	// Token: 0x020001BA RID: 442
-	// (Invoke) Token: 0x06000D30 RID: 3376
+	// Token: 0x020001C0 RID: 448
+	// (Invoke) Token: 0x06000D9B RID: 3483
 	[NullableContext(0)]
 	public delegate void TNetworkErrorHandle(int errorCode);
 }

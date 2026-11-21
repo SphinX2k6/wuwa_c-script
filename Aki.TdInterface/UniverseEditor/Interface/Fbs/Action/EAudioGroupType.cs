@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F18 RID: 24344
+	// Token: 0x0200655C RID: 25948
 	public enum EAudioGroupType : byte
 	{
-		// Token: 0x0400FC04 RID: 64516
+		// Token: 0x0401097A RID: 67962
 		None,
-		// Token: 0x0400FC05 RID: 64517
+		// Token: 0x0401097B RID: 67963
 		Group1,
-		// Token: 0x0400FC06 RID: 64518
+		// Token: 0x0401097C RID: 67964
 		Group2,
-		// Token: 0x0400FC07 RID: 64519
+		// Token: 0x0401097D RID: 67965
 		Group3 = 4,
-		// Token: 0x0400FC08 RID: 64520
+		// Token: 0x0401097E RID: 67966
 		Group4 = 8
 	}
 }

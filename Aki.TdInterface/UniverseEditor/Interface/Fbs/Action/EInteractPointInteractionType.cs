@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F8E RID: 24462
+	// Token: 0x020065D5 RID: 26069
 	public enum EInteractPointInteractionType : byte
 	{
-		// Token: 0x0400FE19 RID: 65049
+		// Token: 0x04010BA3 RID: 68515
 		Drag
 	}
 }

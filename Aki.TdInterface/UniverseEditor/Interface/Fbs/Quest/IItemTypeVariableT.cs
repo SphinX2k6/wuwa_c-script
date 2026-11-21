@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EBE RID: 16062
+	// Token: 0x020042FC RID: 17148
 	public class IItemTypeVariableT
 	{
-		// Token: 0x17006F7F RID: 28543
-		// (get) Token: 0x06016B2D RID: 92973 RVA: 0x00346FCD File Offset: 0x003451CD
-		// (set) Token: 0x06016B2E RID: 92974 RVA: 0x00346FD5 File Offset: 0x003451D5
+		// Token: 0x1700756C RID: 30060
+		// (get) Token: 0x0601817A RID: 98682 RVA: 0x0036FF55 File Offset: 0x0036E155
+		// (set) Token: 0x0601817B RID: 98683 RVA: 0x0036FF5D File Offset: 0x0036E15D
 		public EHandInItemType Type { get; set; }
 
-		// Token: 0x17006F80 RID: 28544
-		// (get) Token: 0x06016B2F RID: 92975 RVA: 0x00346FDE File Offset: 0x003451DE
-		// (set) Token: 0x06016B30 RID: 92976 RVA: 0x00346FE6 File Offset: 0x003451E6
+		// Token: 0x1700756D RID: 30061
+		// (get) Token: 0x0601817C RID: 98684 RVA: 0x0036FF66 File Offset: 0x0036E166
+		// (set) Token: 0x0601817D RID: 98685 RVA: 0x0036FF6E File Offset: 0x0036E16E
 		public TVarRefUnion Var { get; set; }
 
-		// Token: 0x17006F81 RID: 28545
-		// (get) Token: 0x06016B31 RID: 92977 RVA: 0x00346FEF File Offset: 0x003451EF
-		// (set) Token: 0x06016B32 RID: 92978 RVA: 0x00346FF7 File Offset: 0x003451F7
+		// Token: 0x1700756E RID: 30062
+		// (get) Token: 0x0601817E RID: 98686 RVA: 0x0036FF77 File Offset: 0x0036E177
+		// (set) Token: 0x0601817F RID: 98687 RVA: 0x0036FF7F File Offset: 0x0036E17F
 		public int ItemType { get; set; }
 
-		// Token: 0x06016B33 RID: 92979 RVA: 0x00347000 File Offset: 0x00345200
+		// Token: 0x06018180 RID: 98688 RVA: 0x0036FF88 File Offset: 0x0036E188
 		public IItemTypeVariableT()
 		{
 			this.Type = EHandInItemType.ItemIds;

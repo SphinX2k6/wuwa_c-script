@@ -2,38 +2,38 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x020030D1 RID: 12497
+// Token: 0x02002629 RID: 9769
 [NullableContext(2)]
 [Nullable(0)]
 public class SkillTargetImpl : ISkillTarget
 {
-	// Token: 0x170024C3 RID: 9411
-	// (get) Token: 0x0601AC28 RID: 109608 RVA: 0x0073640C File Offset: 0x0073460C
-	// (set) Token: 0x0601AC29 RID: 109609 RVA: 0x00736414 File Offset: 0x00734614
+	// Token: 0x17002646 RID: 9798
+	// (get) Token: 0x0601863D RID: 99901 RVA: 0x0075C128 File Offset: 0x0075A328
+	// (set) Token: 0x0601863E RID: 99902 RVA: 0x0075C130 File Offset: 0x0075A330
 	public int? LockOnConfigId { get; set; }
 
-	// Token: 0x170024C4 RID: 9412
-	// (get) Token: 0x0601AC2A RID: 109610 RVA: 0x0073641D File Offset: 0x0073461D
-	// (set) Token: 0x0601AC2B RID: 109611 RVA: 0x00736425 File Offset: 0x00734625
+	// Token: 0x17002647 RID: 9799
+	// (get) Token: 0x0601863F RID: 99903 RVA: 0x0075C139 File Offset: 0x0075A339
+	// (set) Token: 0x06018640 RID: 99904 RVA: 0x0075C141 File Offset: 0x0075A341
 	public ESkillTargetPriority? SkillTargetPriority { get; set; }
 
-	// Token: 0x170024C5 RID: 9413
-	// (get) Token: 0x0601AC2C RID: 109612 RVA: 0x0073642E File Offset: 0x0073462E
-	// (set) Token: 0x0601AC2D RID: 109613 RVA: 0x00736436 File Offset: 0x00734636
+	// Token: 0x17002648 RID: 9800
+	// (get) Token: 0x06018641 RID: 99905 RVA: 0x0075C14A File Offset: 0x0075A34A
+	// (set) Token: 0x06018642 RID: 99906 RVA: 0x0075C152 File Offset: 0x0075A352
 	public bool? ShowTarget { get; set; }
 
-	// Token: 0x170024C6 RID: 9414
-	// (get) Token: 0x0601AC2E RID: 109614 RVA: 0x0073643F File Offset: 0x0073463F
-	// (set) Token: 0x0601AC2F RID: 109615 RVA: 0x00736447 File Offset: 0x00734647
+	// Token: 0x17002649 RID: 9801
+	// (get) Token: 0x06018643 RID: 99907 RVA: 0x0075C15B File Offset: 0x0075A35B
+	// (set) Token: 0x06018644 RID: 99908 RVA: 0x0075C163 File Offset: 0x0075A363
 	public bool? GlobalTarget { get; set; }
 
-	// Token: 0x170024C7 RID: 9415
-	// (get) Token: 0x0601AC30 RID: 109616 RVA: 0x00736450 File Offset: 0x00734650
-	// (set) Token: 0x0601AC31 RID: 109617 RVA: 0x00736458 File Offset: 0x00734658
+	// Token: 0x1700264A RID: 9802
+	// (get) Token: 0x06018645 RID: 99909 RVA: 0x0075C16C File Offset: 0x0075A36C
+	// (set) Token: 0x06018646 RID: 99910 RVA: 0x0075C174 File Offset: 0x0075A374
 	public string BlackboardKey { get; set; }
 
-	// Token: 0x170024C8 RID: 9416
-	// (get) Token: 0x0601AC32 RID: 109618 RVA: 0x00736461 File Offset: 0x00734661
-	// (set) Token: 0x0601AC33 RID: 109619 RVA: 0x00736469 File Offset: 0x00734669
+	// Token: 0x1700264B RID: 9803
+	// (get) Token: 0x06018647 RID: 99911 RVA: 0x0075C17D File Offset: 0x0075A37D
+	// (set) Token: 0x06018648 RID: 99912 RVA: 0x0075C185 File Offset: 0x0075A385
 	public double? SkillTargetRemainTime { get; set; }
 }

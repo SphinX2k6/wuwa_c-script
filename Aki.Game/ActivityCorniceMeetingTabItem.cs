@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020011FC RID: 4604
+// Token: 0x020006B0 RID: 1712
 public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 {
-	// Token: 0x17000A86 RID: 2694
-	// (get) Token: 0x06007B1D RID: 31517 RVA: 0x0019F178 File Offset: 0x0019D378
-	// (set) Token: 0x06007B1E RID: 31518 RVA: 0x0019F180 File Offset: 0x0019D380
+	// Token: 0x17000AA6 RID: 2726
+	// (get) Token: 0x06004EB3 RID: 20147 RVA: 0x001A7E30 File Offset: 0x001A6030
+	// (set) Token: 0x06004EB4 RID: 20148 RVA: 0x001A7E38 File Offset: 0x001A6038
 	[Nullable(new byte[]
 	{
 		2,
@@ -28,22 +28,22 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		1
 	})] set; }
 
-	// Token: 0x17000A87 RID: 2695
-	// (get) Token: 0x06007B1F RID: 31519 RVA: 0x0019F189 File Offset: 0x0019D389
-	// (set) Token: 0x06007B20 RID: 31520 RVA: 0x0019F191 File Offset: 0x0019D391
+	// Token: 0x17000AA7 RID: 2727
+	// (get) Token: 0x06004EB5 RID: 20149 RVA: 0x001A7E41 File Offset: 0x001A6041
+	// (set) Token: 0x06004EB6 RID: 20150 RVA: 0x001A7E49 File Offset: 0x001A6049
 	public int GridIndex { get; set; }
 
-	// Token: 0x17000A88 RID: 2696
-	// (get) Token: 0x06007B21 RID: 31521 RVA: 0x0019F19A File Offset: 0x0019D39A
-	// (set) Token: 0x06007B22 RID: 31522 RVA: 0x0019F1A2 File Offset: 0x0019D3A2
+	// Token: 0x17000AA8 RID: 2728
+	// (get) Token: 0x06004EB7 RID: 20151 RVA: 0x001A7E52 File Offset: 0x001A6052
+	// (set) Token: 0x06004EB8 RID: 20152 RVA: 0x001A7E5A File Offset: 0x001A605A
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x17000A89 RID: 2697
-	// (get) Token: 0x06007B23 RID: 31523 RVA: 0x0019F1AB File Offset: 0x0019D3AB
-	// (set) Token: 0x06007B24 RID: 31524 RVA: 0x0019F1B3 File Offset: 0x0019D3B3
+	// Token: 0x17000AA9 RID: 2729
+	// (get) Token: 0x06004EB9 RID: 20153 RVA: 0x001A7E63 File Offset: 0x001A6063
+	// (set) Token: 0x06004EBA RID: 20154 RVA: 0x001A7E6B File Offset: 0x001A606B
 	public int LevelPlayId { get; set; }
 
-	// Token: 0x06007B25 RID: 31525 RVA: 0x0019F1BC File Offset: 0x0019D3BC
+	// Token: 0x06004EBB RID: 20155 RVA: 0x001A7E74 File Offset: 0x001A6074
 	public void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.LevelPlayId = data;
@@ -60,7 +60,7 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		this.TryBindRedDot();
 	}
 
-	// Token: 0x06007B26 RID: 31526 RVA: 0x0019F1FC File Offset: 0x0019D3FC
+	// Token: 0x06004EBC RID: 20156 RVA: 0x001A7EB4 File Offset: 0x001A60B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -101,13 +101,13 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007B27 RID: 31527 RVA: 0x0019F3F0 File Offset: 0x0019D5F0
+	// Token: 0x06004EBD RID: 20157 RVA: 0x001A80A8 File Offset: 0x001A62A8
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06007B28 RID: 31528 RVA: 0x0019F404 File Offset: 0x0019D604
+	// Token: 0x06004EBE RID: 20158 RVA: 0x001A80BC File Offset: 0x001A62BC
 	private void OnClickItem(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -118,7 +118,7 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.LevelPlayId);
 	}
 
-	// Token: 0x06007B29 RID: 31529 RVA: 0x0019F45C File Offset: 0x0019D65C
+	// Token: 0x06004EBF RID: 20159 RVA: 0x001A8114 File Offset: 0x001A6314
 	public void TryBindRedDot()
 	{
 		if (this.IsRedDotBind)
@@ -136,7 +136,7 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		}, this.LevelPlayId);
 	}
 
-	// Token: 0x06007B2A RID: 31530 RVA: 0x0019F4CC File Offset: 0x0019D6CC
+	// Token: 0x06004EC0 RID: 20160 RVA: 0x001A8184 File Offset: 0x001A6384
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.ActivityCorniceMeeting, base.GetItem(10), this.LevelPlayId);
@@ -144,7 +144,7 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		base.GetSprite(7).SetSprite(null, true);
 	}
 
-	// Token: 0x06007B2B RID: 31531 RVA: 0x0019F520 File Offset: 0x0019D720
+	// Token: 0x06004EC1 RID: 20161 RVA: 0x001A81D8 File Offset: 0x001A63D8
 	private void RefreshView()
 	{
 		ActivityCorniceMeetingLevelEntryData levelEntryData = ActivityCorniceMeetingController.Instance.GetCurrentActivityData().GetLevelEntryData(this.LevelPlayId);
@@ -154,14 +154,14 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		this.RefreshLockItem();
 	}
 
-	// Token: 0x06007B2C RID: 31532 RVA: 0x0019F574 File Offset: 0x0019D774
+	// Token: 0x06004EC2 RID: 20162 RVA: 0x001A822C File Offset: 0x001A642C
 	private void RefreshTitle()
 	{
 		ActivityCorniceMeetingLevelEntryData levelEntryData = ActivityCorniceMeetingController.Instance.GetCurrentActivityData().GetLevelEntryData(this.LevelPlayId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), levelEntryData.GetTitle(), Array.Empty<object>());
 	}
 
-	// Token: 0x06007B2D RID: 31533 RVA: 0x0019F5B4 File Offset: 0x0019D7B4
+	// Token: 0x06004EC3 RID: 20163 RVA: 0x001A826C File Offset: 0x001A646C
 	private void RefreshFinishedItem()
 	{
 		ActivityCorniceMeetingLevelEntryData levelEntryData = ActivityCorniceMeetingController.Instance.GetCurrentActivityData().GetLevelEntryData(this.LevelPlayId);
@@ -176,7 +176,7 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		}), base.GetSprite(7), false, null, null);
 	}
 
-	// Token: 0x06007B2E RID: 31534 RVA: 0x0019F64C File Offset: 0x0019D84C
+	// Token: 0x06004EC4 RID: 20164 RVA: 0x001A8304 File Offset: 0x001A6504
 	private void RefreshLockItem()
 	{
 		ActivityCorniceMeetingData currentActivityData = ActivityCorniceMeetingController.Instance.GetCurrentActivityData();
@@ -185,12 +185,12 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		base.GetItem(4).SetUIActive(!currentActivityData.GetIsShow(this.LevelPlayId));
 	}
 
-	// Token: 0x06007B2F RID: 31535 RVA: 0x0019F6B6 File Offset: 0x0019D8B6
+	// Token: 0x06004EC5 RID: 20165 RVA: 0x001A836E File Offset: 0x001A656E
 	public void Clear()
 	{
 	}
 
-	// Token: 0x06007B30 RID: 31536 RVA: 0x0019F6B8 File Offset: 0x0019D8B8
+	// Token: 0x06004EC6 RID: 20166 RVA: 0x001A8370 File Offset: 0x001A6570
 	public void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
@@ -212,63 +212,63 @@ public class ActivityCorniceMeetingTabItem : UiPanelBase, IGridProxy<int>
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.LevelPlayId);
 	}
 
-	// Token: 0x06007B31 RID: 31537 RVA: 0x0019F759 File Offset: 0x0019D959
+	// Token: 0x06004EC7 RID: 20167 RVA: 0x001A8411 File Offset: 0x001A6611
 	public void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06007B32 RID: 31538 RVA: 0x0019F76C File Offset: 0x0019D96C
+	// Token: 0x06004EC8 RID: 20168 RVA: 0x001A8424 File Offset: 0x001A6624
 	[NullableContext(1)]
 	public object GetKey(int data, int gridIndex)
 	{
 		return this.LevelPlayId;
 	}
 
-	// Token: 0x0400385D RID: 14429
+	// Token: 0x040038F6 RID: 14582
 	[Nullable(1)]
 	private const string ROME_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/SP_ComRomeText_0{0}.SP_ComRomeText_0{1}";
 
-	// Token: 0x04003862 RID: 14434
+	// Token: 0x040038FB RID: 14587
 	private bool IsRedDotBind;
 
-	// Token: 0x020077E4 RID: 30692
+	// Token: 0x0200696F RID: 26991
 	private class EComponents
 	{
-		// Token: 0x0402785B RID: 161883
+		// Token: 0x04022B8D RID: 142221
 		public const int Toggle = 0;
 
-		// Token: 0x0402785C RID: 161884
+		// Token: 0x04022B8E RID: 142222
 		public const int Title = 1;
 
-		// Token: 0x0402785D RID: 161885
+		// Token: 0x04022B8F RID: 142223
 		public const int SprRome = 2;
 
-		// Token: 0x0402785E RID: 161886
+		// Token: 0x04022B90 RID: 142224
 		public const int SprDone = 3;
 
-		// Token: 0x0402785F RID: 161887
+		// Token: 0x04022B91 RID: 142225
 		public const int LockItemSelected = 4;
 
-		// Token: 0x04027860 RID: 161888
+		// Token: 0x04022B92 RID: 142226
 		public const int LockMask = 5;
 
-		// Token: 0x04027861 RID: 161889
+		// Token: 0x04022B93 RID: 142227
 		public const int RedPointSelected = 6;
 
-		// Token: 0x04027862 RID: 161890
+		// Token: 0x04022B94 RID: 142228
 		public const int SprRomeIcon = 7;
 
-		// Token: 0x04027863 RID: 161891
+		// Token: 0x04022B95 RID: 142229
 		public const int SprDoneSelected = 8;
 
-		// Token: 0x04027864 RID: 161892
+		// Token: 0x04022B96 RID: 142230
 		public const int LockItem = 9;
 
-		// Token: 0x04027865 RID: 161893
+		// Token: 0x04022B97 RID: 142231
 		public const int RedPoint = 10;
 
-		// Token: 0x04027866 RID: 161894
+		// Token: 0x04022B98 RID: 142232
 		public const int TexBg = 11;
 	}
 }

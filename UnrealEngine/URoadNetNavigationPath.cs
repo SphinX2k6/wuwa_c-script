@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020026D1 RID: 9937
+	// Token: 0x020007C2 RID: 1986
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/RoadNetNavigationRuntime.RoadNetNavigationPath")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 72)]
 	public class URoadNetNavigationPath : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06024E38 RID: 151096 RVA: 0x00369084 File Offset: 0x00367284
+		// Token: 0x0600ABDA RID: 43994 RVA: 0x000FD76E File Offset: 0x000FB96E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return URoadNetNavigationPath._ClassPtr;
 		}
 
-		// Token: 0x06024E39 RID: 151097 RVA: 0x00369090 File Offset: 0x00367290
+		// Token: 0x0600ABDB RID: 43995 RVA: 0x000FD77C File Offset: 0x000FB97C
 		public URoadNetNavigationPath() : this(BuiltinUtils.AllocNativeUObject(URoadNetNavigationPath.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06024E3A RID: 151098 RVA: 0x003690B8 File Offset: 0x003672B8
+		// Token: 0x0600ABDC RID: 43996 RVA: 0x000FD7A4 File Offset: 0x000FB9A4
 		public URoadNetNavigationPath(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(URoadNetNavigationPath.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008E75 RID: 36469
-		// (get) Token: 0x06024E3B RID: 151099 RVA: 0x003690EC File Offset: 0x003672EC
-		// (set) Token: 0x06024E3C RID: 151100 RVA: 0x00369125 File Offset: 0x00367325
+		// Token: 0x17001FFE RID: 8190
+		// (get) Token: 0x0600ABDD RID: 43997 RVA: 0x000FD7D8 File Offset: 0x000FB9D8
+		// (set) Token: 0x0600ABDE RID: 43998 RVA: 0x000FD811 File Offset: 0x000FBA11
 		public TArray<FVector> PathPoints
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008E76 RID: 36470
-		// (get) Token: 0x06024E3D RID: 151101 RVA: 0x00369133 File Offset: 0x00367333
-		// (set) Token: 0x06024E3E RID: 151102 RVA: 0x00369143 File Offset: 0x00367343
+		// Token: 0x17001FFF RID: 8191
+		// (get) Token: 0x0600ABDF RID: 43999 RVA: 0x000FD81F File Offset: 0x000FBA1F
+		// (set) Token: 0x0600ABE0 RID: 44000 RVA: 0x000FD82F File Offset: 0x000FBA2F
 		public unsafe float Length
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008E77 RID: 36471
-		// (get) Token: 0x06024E3F RID: 151103 RVA: 0x00369154 File Offset: 0x00367354
-		// (set) Token: 0x06024E40 RID: 151104 RVA: 0x00369164 File Offset: 0x00367364
+		// Token: 0x17002000 RID: 8192
+		// (get) Token: 0x0600ABE1 RID: 44001 RVA: 0x000FD840 File Offset: 0x000FBA40
+		// (set) Token: 0x0600ABE2 RID: 44002 RVA: 0x000FD850 File Offset: 0x000FBA50
 		public unsafe bool IsPartial
 		{
 			get
@@ -80,37 +80,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06024E41 RID: 151105 RVA: 0x00369175 File Offset: 0x00367375
+		// Token: 0x0600ABE3 RID: 44003 RVA: 0x000FD861 File Offset: 0x000FBA61
 		static URoadNetNavigationPath()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/RoadNetNavigationRuntime.RoadNetNavigationPath");
 		}
 
-		// Token: 0x06024E42 RID: 151106 RVA: 0x00369183 File Offset: 0x00367383
+		// Token: 0x0600ABE4 RID: 44004 RVA: 0x000FD86F File Offset: 0x000FBA6F
 		protected URoadNetNavigationPath(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013DF2 RID: 81394
+		// Token: 0x040049E5 RID: 18917
 		public new const string __ObjectPath = "/Script/RoadNetNavigationRuntime.RoadNetNavigationPath";
 
-		// Token: 0x04013DF3 RID: 81395
+		// Token: 0x040049E6 RID: 18918
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013DF4 RID: 81396
+		// Token: 0x040049E7 RID: 18919
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013DF5 RID: 81397
+		// Token: 0x040049E8 RID: 18920
 		internal static int __PropertyOffset_PathPoints;
 
-		// Token: 0x04013DF6 RID: 81398
+		// Token: 0x040049E9 RID: 18921
 		[Nullable(2)]
 		private TArray<FVector> _PathPoints;
 
-		// Token: 0x04013DF7 RID: 81399
+		// Token: 0x040049EA RID: 18922
 		internal static int __PropertyOffset_Length;
 
-		// Token: 0x04013DF8 RID: 81400
+		// Token: 0x040049EB RID: 18923
 		internal static int __PropertyOffset_IsPartial;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DB2 RID: 23986
+	// Token: 0x020063EF RID: 25583
 	public struct IFollowShooterJellyFishAbility : IFlatbufferObject
 	{
-		// Token: 0x1700B39C RID: 45980
-		// (get) Token: 0x060290D4 RID: 168148 RVA: 0x005A2F76 File Offset: 0x005A1176
+		// Token: 0x1700BD02 RID: 48386
+		// (get) Token: 0x0602B75E RID: 178014 RVA: 0x005EBCA6 File Offset: 0x005E9EA6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060290D5 RID: 168149 RVA: 0x005A2F83 File Offset: 0x005A1183
+		// Token: 0x0602B75F RID: 178015 RVA: 0x005EBCB3 File Offset: 0x005E9EB3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060290D6 RID: 168150 RVA: 0x005A2F8C File Offset: 0x005A118C
+		// Token: 0x0602B760 RID: 178016 RVA: 0x005EBCBC File Offset: 0x005E9EBC
 		public static IFollowShooterJellyFishAbility GetRootAsIFollowShooterJellyFishAbility(ByteBuffer _bb)
 		{
 			return IFollowShooterJellyFishAbility.GetRootAsIFollowShooterJellyFishAbility(_bb, default(IFollowShooterJellyFishAbility));
 		}
 
-		// Token: 0x060290D7 RID: 168151 RVA: 0x005A2FA8 File Offset: 0x005A11A8
+		// Token: 0x0602B761 RID: 178017 RVA: 0x005EBCD8 File Offset: 0x005E9ED8
 		public static IFollowShooterJellyFishAbility GetRootAsIFollowShooterJellyFishAbility(ByteBuffer _bb, IFollowShooterJellyFishAbility obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060290D8 RID: 168152 RVA: 0x005A2FC5 File Offset: 0x005A11C5
+		// Token: 0x0602B762 RID: 178018 RVA: 0x005EBCF5 File Offset: 0x005E9EF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060290D9 RID: 168153 RVA: 0x005A2FD4 File Offset: 0x005A11D4
+		// Token: 0x0602B763 RID: 178019 RVA: 0x005EBD04 File Offset: 0x005E9F04
 		public IFollowShooterJellyFishAbility __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B39D RID: 45981
-		// (get) Token: 0x060290DA RID: 168154 RVA: 0x005A2FE4 File Offset: 0x005A11E4
+		// Token: 0x1700BD03 RID: 48387
+		// (get) Token: 0x0602B764 RID: 178020 RVA: 0x005EBD14 File Offset: 0x005E9F14
 		public EFollowShooterType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060290DB RID: 168155 RVA: 0x005A3020 File Offset: 0x005A1220
+		// Token: 0x0602B765 RID: 178021 RVA: 0x005EBD50 File Offset: 0x005E9F50
 		public EJellyFishAbilityType Abilities(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return (EJellyFishAbilityType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700B39E RID: 45982
-		// (get) Token: 0x060290DC RID: 168156 RVA: 0x005A3060 File Offset: 0x005A1260
+		// Token: 0x1700BD04 RID: 48388
+		// (get) Token: 0x0602B766 RID: 178022 RVA: 0x005EBD90 File Offset: 0x005E9F90
 		public int AbilitiesLength
 		{
 			get
@@ -89,13 +89,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060290DD RID: 168157 RVA: 0x005A308B File Offset: 0x005A128B
+		// Token: 0x0602B767 RID: 178023 RVA: 0x005EBDBB File Offset: 0x005E9FBB
 		public Span<EJellyFishAbilityType> GetAbilitiesBytes()
 		{
 			return this.__p.__vector_as_span<EJellyFishAbilityType>(6, 1);
 		}
 
-		// Token: 0x060290DE RID: 168158 RVA: 0x005A309C File Offset: 0x005A129C
+		// Token: 0x0602B768 RID: 178024 RVA: 0x005EBDCC File Offset: 0x005E9FCC
 		public EJellyFishAbilityType[] GetAbilitiesArray()
 		{
 			int num = this.__p.__offset(6);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return array;
 		}
 
-		// Token: 0x060290DF RID: 168159 RVA: 0x005A3105 File Offset: 0x005A1305
+		// Token: 0x0602B769 RID: 178025 RVA: 0x005EBE35 File Offset: 0x005EA035
 		public static Offset<IFollowShooterJellyFishAbility> CreateIFollowShooterJellyFishAbility(FlatBufferBuilder builder, EFollowShooterType Type = EFollowShooterType.JellyFish, VectorOffset AbilitiesOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -122,25 +122,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IFollowShooterJellyFishAbility.EndIFollowShooterJellyFishAbility(builder);
 		}
 
-		// Token: 0x060290E0 RID: 168160 RVA: 0x005A3122 File Offset: 0x005A1322
+		// Token: 0x0602B76A RID: 178026 RVA: 0x005EBE52 File Offset: 0x005EA052
 		public static void StartIFollowShooterJellyFishAbility(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060290E1 RID: 168161 RVA: 0x005A312B File Offset: 0x005A132B
+		// Token: 0x0602B76B RID: 178027 RVA: 0x005EBE5B File Offset: 0x005EA05B
 		public static void AddType(FlatBufferBuilder builder, EFollowShooterType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060290E2 RID: 168162 RVA: 0x005A3136 File Offset: 0x005A1336
+		// Token: 0x0602B76C RID: 178028 RVA: 0x005EBE66 File Offset: 0x005EA066
 		public static void AddAbilities(FlatBufferBuilder builder, VectorOffset abilitiesOffset)
 		{
 			builder.AddOffset(1, abilitiesOffset.Value, 0);
 		}
 
-		// Token: 0x060290E3 RID: 168163 RVA: 0x005A3148 File Offset: 0x005A1348
+		// Token: 0x0602B76D RID: 178029 RVA: 0x005EBE78 File Offset: 0x005EA078
 		public static VectorOffset CreateAbilitiesVector(FlatBufferBuilder builder, EJellyFishAbilityType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060290E4 RID: 168164 RVA: 0x005A317F File Offset: 0x005A137F
+		// Token: 0x0602B76E RID: 178030 RVA: 0x005EBEAF File Offset: 0x005EA0AF
 		public static VectorOffset CreateAbilitiesVectorBlock(FlatBufferBuilder builder, EJellyFishAbilityType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060290E5 RID: 168165 RVA: 0x005A3199 File Offset: 0x005A1399
+		// Token: 0x0602B76F RID: 178031 RVA: 0x005EBEC9 File Offset: 0x005EA0C9
 		public static VectorOffset CreateAbilitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<EJellyFishAbilityType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060290E6 RID: 168166 RVA: 0x005A31B7 File Offset: 0x005A13B7
+		// Token: 0x0602B770 RID: 178032 RVA: 0x005EBEE7 File Offset: 0x005EA0E7
 		public static VectorOffset CreateAbilitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -175,19 +175,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060290E7 RID: 168167 RVA: 0x005A31D0 File Offset: 0x005A13D0
+		// Token: 0x0602B771 RID: 178033 RVA: 0x005EBF00 File Offset: 0x005EA100
 		public static void StartAbilitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x060290E8 RID: 168168 RVA: 0x005A31DB File Offset: 0x005A13DB
+		// Token: 0x0602B772 RID: 178034 RVA: 0x005EBF0B File Offset: 0x005EA10B
 		public static Offset<IFollowShooterJellyFishAbility> EndIFollowShooterJellyFishAbility(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowShooterJellyFishAbility>(builder.EndTable());
 		}
 
-		// Token: 0x060290E9 RID: 168169 RVA: 0x005A31E8 File Offset: 0x005A13E8
+		// Token: 0x0602B773 RID: 178035 RVA: 0x005EBF18 File Offset: 0x005EA118
 		public IFollowShooterJellyFishAbilityT UnPack()
 		{
 			IFollowShooterJellyFishAbilityT followShooterJellyFishAbilityT = new IFollowShooterJellyFishAbilityT();
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return followShooterJellyFishAbilityT;
 		}
 
-		// Token: 0x060290EA RID: 168170 RVA: 0x005A3204 File Offset: 0x005A1404
+		// Token: 0x0602B774 RID: 178036 RVA: 0x005EBF34 File Offset: 0x005EA134
 		public void UnPackTo(IFollowShooterJellyFishAbilityT _o)
 		{
 			_o.Type = this.Type;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060290EB RID: 168171 RVA: 0x005A324C File Offset: 0x005A144C
+		// Token: 0x0602B775 RID: 178037 RVA: 0x005EBF7C File Offset: 0x005EA17C
 		public static Offset<IFollowShooterJellyFishAbility> Pack(FlatBufferBuilder builder, IFollowShooterJellyFishAbilityT _o)
 		{
 			if (_o == null)
@@ -222,7 +222,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IFollowShooterJellyFishAbility.CreateIFollowShooterJellyFishAbility(builder, _o.Type, abilitiesOffset);
 		}
 
-		// Token: 0x0400F78F RID: 63375
+		// Token: 0x040104EA RID: 66794
 		private Table __p;
 	}
 }

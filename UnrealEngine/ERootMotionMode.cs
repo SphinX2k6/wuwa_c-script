@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B4E RID: 2894
+	// Token: 0x020001F8 RID: 504
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ERootMotionMode")]
 	public enum ERootMotionMode
 	{
-		// Token: 0x04004FAD RID: 20397
+		// Token: 0x04000C8A RID: 3210
 		NoRootMotionExtraction,
-		// Token: 0x04004FAE RID: 20398
+		// Token: 0x04000C8B RID: 3211
 		IgnoreRootMotion,
-		// Token: 0x04004FAF RID: 20399
+		// Token: 0x04000C8C RID: 3212
 		RootMotionFromEverything,
-		// Token: 0x04004FB0 RID: 20400
+		// Token: 0x04000C8D RID: 3213
 		RootMotionFromMontagesOnly,
-		// Token: 0x04004FB1 RID: 20401
+		// Token: 0x04000C8E RID: 3214
 		ERootMotionMode_MAX
 	}
 }

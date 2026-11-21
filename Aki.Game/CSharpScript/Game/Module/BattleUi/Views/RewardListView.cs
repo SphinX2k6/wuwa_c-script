@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -12,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DAC RID: 23980
+	// Token: 0x02004D90 RID: 19856
 	public class RewardListView : BattleVisibleChildView
 	{
-		// Token: 0x0603CE5F RID: 249439 RVA: 0x00EA11AC File Offset: 0x00E9F3AC
+		// Token: 0x06031DD6 RID: 204246 RVA: 0x00DF2058 File Offset: 0x00DF0258
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -27,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CE60 RID: 249440 RVA: 0x00EA11FE File Offset: 0x00E9F3FE
+		// Token: 0x06031DD7 RID: 204247 RVA: 0x00DF20AA File Offset: 0x00DF02AA
 		[NullableContext(2)]
 		protected override UniTask InitializeAsync(object param = null)
 		{
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603CE61 RID: 249441 RVA: 0x00EA120B File Offset: 0x00E9F40B
+		// Token: 0x06031DD8 RID: 204248 RVA: 0x00DF20B7 File Offset: 0x00DF02B7
 		public override void Reset()
 		{
 			this.RemoveEvents();
@@ -49,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CE62 RID: 249442 RVA: 0x00EA1238 File Offset: 0x00E9F438
+		// Token: 0x06031DD9 RID: 204249 RVA: 0x00DF20E4 File Offset: 0x00DF02E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -74,20 +73,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CE63 RID: 249443 RVA: 0x00EA1320 File Offset: 0x00E9F520
+		// Token: 0x06031DDA RID: 204250 RVA: 0x00DF21CC File Offset: 0x00DF03CC
 		public override void ShowBattleVisibleChildView(bool checkVisible = false)
 		{
 			this.CollapseToDefault();
 			base.ShowBattleVisibleChildView(checkVisible);
 		}
 
-		// Token: 0x0603CE64 RID: 249444 RVA: 0x00EA132F File Offset: 0x00E9F52F
+		// Token: 0x06031DDB RID: 204251 RVA: 0x00DF21DB File Offset: 0x00DF03DB
 		public void SetSilentAreaHide(bool hide)
 		{
 			base.SetVisible(2, !hide);
 		}
 
-		// Token: 0x0603CE65 RID: 249445 RVA: 0x00EA133C File Offset: 0x00E9F53C
+		// Token: 0x06031DDC RID: 204252 RVA: 0x00DF21E8 File Offset: 0x00DF03E8
 		public void CollapseToDefault()
 		{
 			this.PoppedStatType = null;
@@ -97,13 +96,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateVisible(false);
 		}
 
-		// Token: 0x0603CE66 RID: 249446 RVA: 0x00EA1377 File Offset: 0x00E9F577
+		// Token: 0x06031DDD RID: 204253 RVA: 0x00DF2223 File Offset: 0x00DF0423
 		protected override void OnHideBattleChildView()
 		{
 			this.CollapseToDefault();
 		}
 
-		// Token: 0x0603CE67 RID: 249447 RVA: 0x00EA1380 File Offset: 0x00E9F580
+		// Token: 0x06031DDE RID: 204254 RVA: 0x00DF222C File Offset: 0x00DF042C
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<TreasureChestStatType?>(EEventName.OnTreasureChestCountChanged, new Action<TreasureChestStatType?>(this.OnTreasureChestCountChanged));
@@ -117,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			auibaseActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnPlaySequenceEvent));
 		}
 
-		// Token: 0x0603CE68 RID: 249448 RVA: 0x00EA13F8 File Offset: 0x00E9F5F8
+		// Token: 0x06031DDF RID: 204255 RVA: 0x00DF22A4 File Offset: 0x00DF04A4
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<TreasureChestStatType?>(EEventName.OnTreasureChestCountChanged, new Action<TreasureChestStatType?>(this.OnTreasureChestCountChanged));
@@ -131,13 +130,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			auibaseActor.OnSequencePlayEvent.Unbind();
 		}
 
-		// Token: 0x0603CE69 RID: 249449 RVA: 0x00EA1464 File Offset: 0x00E9F664
+		// Token: 0x06031DE0 RID: 204256 RVA: 0x00DF2310 File Offset: 0x00DF0510
 		private void OnChangeArea(int? preAreaId, int areaId)
 		{
 			this.CollapseToDefault();
 		}
 
-		// Token: 0x0603CE6A RID: 249450 RVA: 0x00EA146C File Offset: 0x00E9F66C
+		// Token: 0x06031DE1 RID: 204257 RVA: 0x00DF2318 File Offset: 0x00DF0518
 		private void CreateItemLayout()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(2);
@@ -150,34 +149,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ItemLayout = new GenericLayout<TreasureChestCountItem, TreasureChestRowData>(verticalLayout, () => new TreasureChestCountItem(), auibaseActor, false, true);
 		}
 
-		// Token: 0x0603CE6B RID: 249451 RVA: 0x00EA14D0 File Offset: 0x00E9F6D0
+		// Token: 0x06031DE2 RID: 204258 RVA: 0x00DF237C File Offset: 0x00DF057C
 		private void RefreshRows(TreasureChestStatType? gainedStatType = null)
 		{
-			List<TreasureChestCountData> countList = MapModel.Instance.GetCurTreasureChestCountList();
-			List<TreasureChestRowData> data = countList.Select(delegate(TreasureChestCountData info, int index)
+			List<TreasureChestCountData> curTreasureChestCountList = MapModel.Instance.GetCurTreasureChestCountList();
+			List<TreasureChestRowData> list = new List<TreasureChestRowData>(curTreasureChestCountList.Count);
+			for (int i = 0; i < curTreasureChestCountList.Count; i++)
 			{
-				bool isLast = index == countList.Count - 1;
-				TreasureChestStatType statType = info.StatType;
-				TreasureChestStatType? gainedStatType2 = gainedStatType;
-				return new TreasureChestRowData(info, isLast, statType == gainedStatType2.GetValueOrDefault() & gainedStatType2 != null);
-			}).ToList<TreasureChestRowData>();
+				TreasureChestCountData treasureChestCountData = curTreasureChestCountList[i];
+				List<TreasureChestRowData> list2 = list;
+				TreasureChestCountData count = treasureChestCountData;
+				bool isLast = i == curTreasureChestCountList.Count - 1;
+				TreasureChestStatType statType = treasureChestCountData.StatType;
+				TreasureChestStatType? treasureChestStatType = gainedStatType;
+				list2.Add(new TreasureChestRowData(count, isLast, statType == treasureChestStatType.GetValueOrDefault() & treasureChestStatType != null));
+			}
 			GenericLayout<TreasureChestCountItem, TreasureChestRowData> itemLayout = this.ItemLayout;
 			if (itemLayout == null)
 			{
 				return;
 			}
-			itemLayout.RefreshByData(data, null, false);
+			itemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603CE6C RID: 249452 RVA: 0x00EA152C File Offset: 0x00E9F72C
+		// Token: 0x06031DE3 RID: 204259 RVA: 0x00DF2400 File Offset: 0x00DF0600
 		private void UpdateVisible(bool keepVisible = false)
 		{
 			List<TreasureChestCountData> curTreasureChestCountList = MapModel.Instance.GetCurTreasureChestCountList();
-			bool flag = curTreasureChestCountList.Any((TreasureChestCountData info) => info.CurrentCount < info.TotalCount);
+			bool flag = curTreasureChestCountList.Exists((TreasureChestCountData info) => info.CurrentCount < info.TotalCount);
 			base.SetVisible(1, curTreasureChestCountList.Count > 0 && (keepVisible || flag));
 		}
 
-		// Token: 0x0603CE6D RID: 249453 RVA: 0x00EA1580 File Offset: 0x00E9F780
+		// Token: 0x06031DE4 RID: 204260 RVA: 0x00DF2454 File Offset: 0x00DF0654
 		private void OnTreasureChestCountChanged(TreasureChestStatType? gainedStatType)
 		{
 			bool flag = gainedStatType != null && this.IsEnable && this.BaseVisible;
@@ -191,7 +194,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayShow();
 		}
 
-		// Token: 0x0603CE6E RID: 249454 RVA: 0x00EA15D0 File Offset: 0x00E9F7D0
+		// Token: 0x06031DE5 RID: 204261 RVA: 0x00DF24A4 File Offset: 0x00DF06A4
 		private void PlayShow()
 		{
 			this.StopSequences();
@@ -204,7 +207,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sequencePlayer.PlayLevelSequenceByName("Show", false, null, false);
 		}
 
-		// Token: 0x0603CE6F RID: 249455 RVA: 0x00EA160C File Offset: 0x00E9F80C
+		// Token: 0x06031DE6 RID: 204262 RVA: 0x00DF24E0 File Offset: 0x00DF06E0
 		private void PlayHide()
 		{
 			this.StopSequences();
@@ -216,14 +219,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sequencePlayer.PlayLevelSequenceByName("Hide", false, null, false);
 		}
 
-		// Token: 0x0603CE70 RID: 249456 RVA: 0x00EA163F File Offset: 0x00E9F83F
+		// Token: 0x06031DE7 RID: 204263 RVA: 0x00DF2513 File Offset: 0x00DF0713
 		private void StopSequences()
 		{
 			this.StopSequence("Show");
 			this.StopSequence("Hide");
 		}
 
-		// Token: 0x0603CE71 RID: 249457 RVA: 0x00EA1657 File Offset: 0x00E9F857
+		// Token: 0x06031DE8 RID: 204264 RVA: 0x00DF252B File Offset: 0x00DF072B
 		[NullableContext(1)]
 		private void StopSequence(string sequenceName)
 		{
@@ -235,7 +238,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer.StopSequenceByKey(sequenceName, false, false);
 		}
 
-		// Token: 0x0603CE72 RID: 249458 RVA: 0x00EA1680 File Offset: 0x00E9F880
+		// Token: 0x06031DE9 RID: 204265 RVA: 0x00DF2554 File Offset: 0x00DF0754
 		[NullableContext(1)]
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
@@ -246,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshRows(this.PoppedStatType);
 		}
 
-		// Token: 0x0603CE73 RID: 249459 RVA: 0x00EA16A9 File Offset: 0x00E9F8A9
+		// Token: 0x06031DEA RID: 204266 RVA: 0x00DF257D File Offset: 0x00DF077D
 		[NullableContext(1)]
 		private void OnSequenceClosed(string sequenceName)
 		{
@@ -265,7 +268,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CollapseToDefault();
 		}
 
-		// Token: 0x0603CE74 RID: 249460 RVA: 0x00EA16E0 File Offset: 0x00E9F8E0
+		// Token: 0x06031DEB RID: 204267 RVA: 0x00DF25B4 File Offset: 0x00DF07B4
 		private void OnToggleRewardList(EToggleState toggleState)
 		{
 			if (toggleState != EToggleState.ETT_Checked)
@@ -277,7 +280,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayShow();
 		}
 
-		// Token: 0x0603CE75 RID: 249461 RVA: 0x00EA16FF File Offset: 0x00E9F8FF
+		// Token: 0x06031DEC RID: 204268 RVA: 0x00DF25D3 File Offset: 0x00DF07D3
 		private void ExpandTips()
 		{
 			UUIItem item = base.GetItem(1);
@@ -288,7 +291,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetToggleState(EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0603CE76 RID: 249462 RVA: 0x00EA171B File Offset: 0x00E9F91B
+		// Token: 0x06031DED RID: 204269 RVA: 0x00DF25EF File Offset: 0x00DF07EF
 		private void CollapseTips()
 		{
 			UUIItem item = base.GetItem(1);
@@ -299,7 +302,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetToggleState(EToggleState.ETT_UnChecked);
 		}
 
-		// Token: 0x0603CE77 RID: 249463 RVA: 0x00EA1738 File Offset: 0x00E9F938
+		// Token: 0x06031DEE RID: 204270 RVA: 0x00DF260C File Offset: 0x00DF080C
 		private void SetToggleState(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -310,7 +313,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x0401FB81 RID: 129921
+		// Token: 0x0401A63E RID: 108094
 		[Nullable(new byte[]
 		{
 			2,
@@ -319,32 +322,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private GenericLayout<TreasureChestCountItem, TreasureChestRowData> ItemLayout;
 
-		// Token: 0x0401FB82 RID: 129922
+		// Token: 0x0401A63F RID: 108095
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401FB83 RID: 129923
+		// Token: 0x0401A640 RID: 108096
 		private TreasureChestStatType? PoppedStatType;
 
-		// Token: 0x0200C08A RID: 49290
+		// Token: 0x0200AA94 RID: 43668
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A1A4 RID: 237988
+			// Token: 0x04034B78 RID: 215928
 			NoCount = 1,
-			// Token: 0x0403A1A5 RID: 237989
+			// Token: 0x04034B79 RID: 215929
 			SilentArea
 		}
 
-		// Token: 0x0200C08B RID: 49291
+		// Token: 0x0200AA95 RID: 43669
 		private enum EChildComponent
 		{
-			// Token: 0x0403A1A7 RID: 237991
+			// Token: 0x04034B7B RID: 215931
 			TogRewardList,
-			// Token: 0x0403A1A8 RID: 237992
+			// Token: 0x04034B7C RID: 215932
 			PnlTips,
-			// Token: 0x0403A1A9 RID: 237993
+			// Token: 0x04034B7D RID: 215933
 			PnlLayout,
-			// Token: 0x0403A1AA RID: 237994
+			// Token: 0x04034B7E RID: 215934
 			PnlItem
 		}
 	}

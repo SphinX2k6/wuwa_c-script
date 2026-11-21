@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B69 RID: 2921
+	// Token: 0x02000C37 RID: 3127
 	public class ISkillDamage
 	{
-		// Token: 0x0600433B RID: 17211 RVA: 0x000AB622 File Offset: 0x000A9822
-		[NullableContext(1)]
+		// Token: 0x06004794 RID: 18324 RVA: 0x000B56E6 File Offset: 0x000B38E6
 		public static ISkillDamage Create(ISkillDamage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001226 RID: 4646
-		// (get) Token: 0x0600433C RID: 17212 RVA: 0x000AB641 File Offset: 0x000A9841
+		// Token: 0x17001321 RID: 4897
+		// (get) Token: 0x06004795 RID: 18325 RVA: 0x000B5705 File Offset: 0x000B3905
 		public virtual int DefaultValue
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001227 RID: 4647
-		// (get) Token: 0x0600433D RID: 17213 RVA: 0x000AB650 File Offset: 0x000A9850
+		// Token: 0x17001322 RID: 4898
+		// (get) Token: 0x06004796 RID: 18326 RVA: 0x000B5714 File Offset: 0x000B3914
 		public virtual int? NormalAttack
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001228 RID: 4648
-		// (get) Token: 0x0600433E RID: 17214 RVA: 0x000AB688 File Offset: 0x000A9888
+		// Token: 0x17001323 RID: 4899
+		// (get) Token: 0x06004797 RID: 18327 RVA: 0x000B574C File Offset: 0x000B394C
 		public virtual int? AccumulatorAttack
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001229 RID: 4649
-		// (get) Token: 0x0600433F RID: 17215 RVA: 0x000AB6C0 File Offset: 0x000A98C0
+		// Token: 0x17001324 RID: 4900
+		// (get) Token: 0x06004798 RID: 18328 RVA: 0x000B5784 File Offset: 0x000B3984
 		public virtual int? SuperSkill
 		{
 			get
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700122A RID: 4650
-		// (get) Token: 0x06004340 RID: 17216 RVA: 0x000AB6F8 File Offset: 0x000A98F8
+		// Token: 0x17001325 RID: 4901
+		// (get) Token: 0x06004799 RID: 18329 RVA: 0x000B57BC File Offset: 0x000B39BC
 		public virtual int? QteAttack
 		{
 			get
@@ -87,8 +85,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700122B RID: 4651
-		// (get) Token: 0x06004341 RID: 17217 RVA: 0x000AB730 File Offset: 0x000A9930
+		// Token: 0x17001326 RID: 4902
+		// (get) Token: 0x0600479A RID: 18330 RVA: 0x000B57F4 File Offset: 0x000B39F4
 		public virtual int? NormalSkill
 		{
 			get
@@ -101,8 +99,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700122C RID: 4652
-		// (get) Token: 0x06004342 RID: 17218 RVA: 0x000AB768 File Offset: 0x000A9968
+		// Token: 0x17001327 RID: 4903
+		// (get) Token: 0x0600479B RID: 18331 RVA: 0x000B582C File Offset: 0x000B3A2C
 		public virtual int? FightVersion
 		{
 			get
@@ -115,8 +113,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700122D RID: 4653
-		// (get) Token: 0x06004343 RID: 17219 RVA: 0x000AB7A0 File Offset: 0x000A99A0
+		// Token: 0x17001328 RID: 4904
+		// (get) Token: 0x0600479C RID: 18332 RVA: 0x000B5864 File Offset: 0x000B3A64
 		public virtual int? ExploreVersion
 		{
 			get
@@ -129,8 +127,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700122E RID: 4654
-		// (get) Token: 0x06004344 RID: 17220 RVA: 0x000AB7D8 File Offset: 0x000A99D8
+		// Token: 0x17001329 RID: 4905
+		// (get) Token: 0x0600479D RID: 18333 RVA: 0x000B589C File Offset: 0x000B3A9C
 		public virtual int? GearOrEnvironment
 		{
 			get
@@ -143,8 +141,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700122F RID: 4655
-		// (get) Token: 0x06004345 RID: 17221 RVA: 0x000AB814 File Offset: 0x000A9A14
+		// Token: 0x1700132A RID: 4906
+		// (get) Token: 0x0600479E RID: 18334 RVA: 0x000B58D8 File Offset: 0x000B3AD8
 		public virtual int? DamageOverTime
 		{
 			get
@@ -157,7 +155,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025F6 RID: 9718
+		// Token: 0x0400283E RID: 10302
 		private ISkillDamage Instance;
 	}
 }

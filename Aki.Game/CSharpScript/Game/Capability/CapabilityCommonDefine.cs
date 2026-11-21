@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Capability
 {
-	// Token: 0x0200729A RID: 29338
+	// Token: 0x02006419 RID: 25625
 	public static class CapabilityCommonDefine
 	{
-		// Token: 0x06047F89 RID: 294793 RVA: 0x0126FE20 File Offset: 0x0126E020
+		// Token: 0x0603E34F RID: 254799 RVA: 0x01210E6C File Offset: 0x0120F06C
 		// Note: this type is marked as 'beforefieldinit'.
 		static CapabilityCommonDefine()
 		{
@@ -25,49 +25,49 @@ namespace CSharpScript.Game.Capability
 			CapabilityCommonDefine.ueTickingGroupName = dictionary;
 		}
 
-		// Token: 0x04025EDF RID: 155359
+		// Token: 0x040211B2 RID: 135602
 		[Nullable(1)]
 		public static readonly IReadOnlyDictionary<ETickingGroup, string> ueTickingGroupName;
 
-		// Token: 0x04025EE0 RID: 155360
+		// Token: 0x040211B3 RID: 135603
 		[Nullable(1)]
 		public const string CAPABILITY_DEBUG_KEY = "Capability";
 
-		// Token: 0x0200CFBA RID: 53178
+		// Token: 0x0200BB94 RID: 48020
 		public enum ECapabilityState
 		{
-			// Token: 0x0403E788 RID: 255880
+			// Token: 0x04039BC2 RID: 236482
 			Inactive,
-			// Token: 0x0403E789 RID: 255881
+			// Token: 0x04039BC3 RID: 236483
 			Deactivated,
-			// Token: 0x0403E78A RID: 255882
+			// Token: 0x04039BC4 RID: 236484
 			Active,
-			// Token: 0x0403E78B RID: 255883
+			// Token: 0x04039BC5 RID: 236485
 			Blocked
 		}
 
-		// Token: 0x0200CFBB RID: 53179
+		// Token: 0x0200BB95 RID: 48021
 		public enum ECapabilityDebugEvent
 		{
-			// Token: 0x0403E78D RID: 255885
+			// Token: 0x04039BC7 RID: 236487
 			Setup,
-			// Token: 0x0403E78E RID: 255886
+			// Token: 0x04039BC8 RID: 236488
 			PreTick,
-			// Token: 0x0403E78F RID: 255887
+			// Token: 0x04039BC9 RID: 236489
 			ShouldActivate,
-			// Token: 0x0403E790 RID: 255888
+			// Token: 0x04039BCA RID: 236490
 			ShouldDeactivate,
-			// Token: 0x0403E791 RID: 255889
+			// Token: 0x04039BCB RID: 236491
 			OnActivated,
-			// Token: 0x0403E792 RID: 255890
+			// Token: 0x04039BCC RID: 236492
 			OnDeactivated,
-			// Token: 0x0403E793 RID: 255891
+			// Token: 0x04039BCD RID: 236493
 			TickActive,
-			// Token: 0x0403E794 RID: 255892
+			// Token: 0x04039BCE RID: 236494
 			Blocked,
-			// Token: 0x0403E795 RID: 255893
+			// Token: 0x04039BCF RID: 236495
 			Unblocked,
-			// Token: 0x0403E796 RID: 255894
+			// Token: 0x04039BD0 RID: 236496
 			Interrupted
 		}
 	}

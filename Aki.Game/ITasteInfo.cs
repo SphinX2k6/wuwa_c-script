@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F5E RID: 3934
+// Token: 0x02000413 RID: 1043
 [NullableContext(1)]
 public interface ITasteInfo
 {
-	// Token: 0x170007B5 RID: 1973
-	// (get) Token: 0x060064A8 RID: 25768
-	// (set) Token: 0x060064A9 RID: 25769
+	// Token: 0x170007D7 RID: 2007
+	// (get) Token: 0x06003840 RID: 14400
+	// (set) Token: 0x06003841 RID: 14401
 	EDrinksFlavorType Type { get; set; }
 
-	// Token: 0x170007B6 RID: 1974
-	// (get) Token: 0x060064AA RID: 25770
-	// (set) Token: 0x060064AB RID: 25771
+	// Token: 0x170007D8 RID: 2008
+	// (get) Token: 0x06003842 RID: 14402
+	// (set) Token: 0x06003843 RID: 14403
 	string Key { get; set; }
 
-	// Token: 0x170007B7 RID: 1975
-	// (get) Token: 0x060064AC RID: 25772
-	// (set) Token: 0x060064AD RID: 25773
+	// Token: 0x170007D9 RID: 2009
+	// (get) Token: 0x06003844 RID: 14404
+	// (set) Token: 0x06003845 RID: 14405
 	string[] Value { get; set; }
 }

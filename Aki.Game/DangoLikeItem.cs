@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BC8 RID: 7112
+// Token: 0x02001087 RID: 4231
 public class DangoLikeItem : UiPanelBase
 {
-	// Token: 0x0600D41D RID: 54301 RVA: 0x0030D0EC File Offset: 0x0030B2EC
+	// Token: 0x0600A82F RID: 43055 RVA: 0x00318260 File Offset: 0x00316460
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,12 +32,12 @@ public class DangoLikeItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D41E RID: 54302 RVA: 0x0030D1B3 File Offset: 0x0030B3B3
+	// Token: 0x0600A830 RID: 43056 RVA: 0x00318327 File Offset: 0x00316527
 	private void OnClick()
 	{
 	}
 
-	// Token: 0x0600D41F RID: 54303 RVA: 0x0030D1B8 File Offset: 0x0030B3B8
+	// Token: 0x0600A831 RID: 43057 RVA: 0x0031832C File Offset: 0x0031652C
 	public void Refresh(int playerId)
 	{
 		MatchTeamInfo matchTeamInfo = InstanceDungeonModel.Instance.GetMatchTeamInfo();
@@ -56,14 +56,14 @@ public class DangoLikeItem : UiPanelBase
 		base.GetText(1).SetText(num.ToString(), true);
 	}
 
-	// Token: 0x02008185 RID: 33157
+	// Token: 0x02007313 RID: 29459
 	private enum ELikeComponent
 	{
-		// Token: 0x0402A42F RID: 173103
+		// Token: 0x04025763 RID: 153443
 		LikeButton,
-		// Token: 0x0402A430 RID: 173104
+		// Token: 0x04025764 RID: 153444
 		LikeNumText,
-		// Token: 0x0402A431 RID: 173105
+		// Token: 0x04025765 RID: 153445
 		LikeIcon
 	}
 }

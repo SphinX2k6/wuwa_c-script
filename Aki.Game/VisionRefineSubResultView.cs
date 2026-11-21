@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001774 RID: 6004
+// Token: 0x02000C2D RID: 3117
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRefineSubResultView : UiViewBase
 {
-	// Token: 0x0600AE24 RID: 44580 RVA: 0x00273D69 File Offset: 0x00271F69
+	// Token: 0x0600820B RID: 33291 RVA: 0x0027E22D File Offset: 0x0027C42D
 	public VisionRefineSubResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600AE25 RID: 44581 RVA: 0x00273D74 File Offset: 0x00271F74
+	// Token: 0x0600820C RID: 33292 RVA: 0x0027E238 File Offset: 0x0027C438
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class VisionRefineSubResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600AE26 RID: 44582 RVA: 0x00273E54 File Offset: 0x00272054
+	// Token: 0x0600820D RID: 33293 RVA: 0x0027E318 File Offset: 0x0027C518
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRefineSubResultView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -45,13 +45,13 @@ public class VisionRefineSubResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE27 RID: 44583 RVA: 0x00273E97 File Offset: 0x00272097
+	// Token: 0x0600820E RID: 33294 RVA: 0x0027E35B File Offset: 0x0027C55B
 	private VisionRefineAttributeItem InitAttrItem()
 	{
 		return new VisionRefineAttributeItem();
 	}
 
-	// Token: 0x0600AE28 RID: 44584 RVA: 0x00273EA0 File Offset: 0x002720A0
+	// Token: 0x0600820F RID: 33295 RVA: 0x0027E364 File Offset: 0x0027C564
 	private void RefreshAvailableAttrTips(VisionRefineBatchResultViewData data)
 	{
 		if (!data.HasRecommendData)
@@ -90,7 +90,7 @@ public class VisionRefineSubResultView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600AE29 RID: 44585 RVA: 0x00273F60 File Offset: 0x00272160
+	// Token: 0x06008210 RID: 33296 RVA: 0x0027E424 File Offset: 0x0027C624
 	private int CalcRecommentCount(VisionRefineAttributeItemData[] attrList)
 	{
 		int num = 0;
@@ -104,7 +104,7 @@ public class VisionRefineSubResultView : UiViewBase
 		return num;
 	}
 
-	// Token: 0x0600AE2A RID: 44586 RVA: 0x00273F90 File Offset: 0x00272190
+	// Token: 0x06008211 RID: 33297 RVA: 0x0027E454 File Offset: 0x0027C654
 	private void OnClickCancel()
 	{
 		VisionRefineBatchResultViewData visionRefineBatchResultViewData = this.OpenParam as VisionRefineBatchResultViewData;
@@ -141,7 +141,7 @@ public class VisionRefineSubResultView : UiViewBase
 		this.OnClickCancelInternal().Forget();
 	}
 
-	// Token: 0x0600AE2B RID: 44587 RVA: 0x00274080 File Offset: 0x00272280
+	// Token: 0x06008212 RID: 33298 RVA: 0x0027E544 File Offset: 0x0027C744
 	private UniTask OnClickCancelInternal()
 	{
 		VisionRefineSubResultView.<OnClickCancelInternal>d__13 <OnClickCancelInternal>d__;
@@ -152,7 +152,7 @@ public class VisionRefineSubResultView : UiViewBase
 		return <OnClickCancelInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE2C RID: 44588 RVA: 0x002740C4 File Offset: 0x002722C4
+	// Token: 0x06008213 RID: 33299 RVA: 0x0027E588 File Offset: 0x0027C788
 	private void OnClickConfirm()
 	{
 		if (PhantomBattleModel.Instance.PhantomRefineAcceptIgnore)
@@ -175,7 +175,7 @@ public class VisionRefineSubResultView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600AE2D RID: 44589 RVA: 0x00274154 File Offset: 0x00272354
+	// Token: 0x06008214 RID: 33300 RVA: 0x0027E618 File Offset: 0x0027C818
 	private UniTask OnClickConfirmInternal()
 	{
 		VisionRefineSubResultView.<OnClickConfirmInternal>d__15 <OnClickConfirmInternal>d__;
@@ -186,11 +186,11 @@ public class VisionRefineSubResultView : UiViewBase
 		return <OnClickConfirmInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04004F1F RID: 20255
+	// Token: 0x04004FC9 RID: 20425
 	[Nullable(2)]
 	private VisionRefineSlotItem SlotItem;
 
-	// Token: 0x04004F20 RID: 20256
+	// Token: 0x04004FCA RID: 20426
 	[Nullable(new byte[]
 	{
 		2,
@@ -199,7 +199,7 @@ public class VisionRefineSubResultView : UiViewBase
 	})]
 	private GenericLayout<VisionRefineAttributeItem, VisionRefineAttributeItemData> LeftVert;
 
-	// Token: 0x04004F21 RID: 20257
+	// Token: 0x04004FCB RID: 20427
 	[Nullable(new byte[]
 	{
 		2,
@@ -208,35 +208,35 @@ public class VisionRefineSubResultView : UiViewBase
 	})]
 	private GenericLayout<VisionRefineAttributeItem, VisionRefineAttributeItemData> RightVert;
 
-	// Token: 0x04004F22 RID: 20258
+	// Token: 0x04004FCC RID: 20428
 	[Nullable(2)]
 	private VisionRefineBatchResultButton LeftBtn;
 
-	// Token: 0x04004F23 RID: 20259
+	// Token: 0x04004FCD RID: 20429
 	[Nullable(2)]
 	private VisionRefineBatchResultButton RightBtn;
 
-	// Token: 0x02007D6A RID: 32106
+	// Token: 0x02006EF0 RID: 28400
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029123 RID: 168227
+		// Token: 0x0402444E RID: 148558
 		SlotItem,
-		// Token: 0x04029124 RID: 168228
+		// Token: 0x0402444F RID: 148559
 		LeftVertical,
-		// Token: 0x04029125 RID: 168229
+		// Token: 0x04024450 RID: 148560
 		RightVertical,
-		// Token: 0x04029126 RID: 168230
+		// Token: 0x04024451 RID: 148561
 		VerticalItem,
-		// Token: 0x04029127 RID: 168231
+		// Token: 0x04024452 RID: 148562
 		LeftButtonItem,
-		// Token: 0x04029128 RID: 168232
+		// Token: 0x04024453 RID: 148563
 		RightButtonItem,
-		// Token: 0x04029129 RID: 168233
+		// Token: 0x04024454 RID: 148564
 		MidDownTipText,
-		// Token: 0x0402912A RID: 168234
+		// Token: 0x04024455 RID: 148565
 		LeftVerticalTips,
-		// Token: 0x0402912B RID: 168235
+		// Token: 0x04024456 RID: 148566
 		RightVerticalTips
 	}
 }

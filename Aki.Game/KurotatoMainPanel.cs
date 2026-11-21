@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -12,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CBC RID: 7356
+// Token: 0x0200117E RID: 4478
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoMainPanel : UiPanelBase
 {
-	// Token: 0x17001205 RID: 4613
-	// (get) Token: 0x0600DE54 RID: 56916 RVA: 0x0033FEF4 File Offset: 0x0033E0F4
+	// Token: 0x1700122F RID: 4655
+	// (get) Token: 0x0600B271 RID: 45681 RVA: 0x0034B930 File Offset: 0x00349B30
 	private float CurHp
 	{
 		get
@@ -36,8 +35,8 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x17001206 RID: 4614
-	// (get) Token: 0x0600DE55 RID: 56917 RVA: 0x0033FF2C File Offset: 0x0033E12C
+	// Token: 0x17001230 RID: 4656
+	// (get) Token: 0x0600B272 RID: 45682 RVA: 0x0034B968 File Offset: 0x00349B68
 	private float MaxHp
 	{
 		get
@@ -56,7 +55,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE56 RID: 56918 RVA: 0x0033FF6C File Offset: 0x0033E16C
+	// Token: 0x0600B273 RID: 45683 RVA: 0x0034B9A8 File Offset: 0x00349BA8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -98,7 +97,7 @@ public class KurotatoMainPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE57 RID: 56919 RVA: 0x00340254 File Offset: 0x0033E454
+	// Token: 0x0600B274 RID: 45684 RVA: 0x0034BC90 File Offset: 0x00349E90
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KurotatoMainPanel.<OnBeforeStartAsync>d__35 <OnBeforeStartAsync>d__;
@@ -109,7 +108,7 @@ public class KurotatoMainPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE58 RID: 56920 RVA: 0x00340298 File Offset: 0x0033E498
+	// Token: 0x0600B275 RID: 45685 RVA: 0x0034BCD4 File Offset: 0x00349ED4
 	protected override void OnStart()
 	{
 		this.SpriteExpBar = base.GetSprite(13);
@@ -137,7 +136,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 	}
 
-	// Token: 0x0600DE59 RID: 56921 RVA: 0x00340404 File Offset: 0x0033E604
+	// Token: 0x0600B276 RID: 45686 RVA: 0x0034BE40 File Offset: 0x0034A040
 	protected override void OnBeforeShow()
 	{
 		this.OnAddEventListener();
@@ -156,7 +155,7 @@ public class KurotatoMainPanel : UiPanelBase
 		activeSkillPanel.ShowBattleChildViewPanel();
 	}
 
-	// Token: 0x0600DE5A RID: 56922 RVA: 0x0034047C File Offset: 0x0033E67C
+	// Token: 0x0600B277 RID: 45687 RVA: 0x0034BEB8 File Offset: 0x0034A0B8
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
@@ -176,7 +175,7 @@ public class KurotatoMainPanel : UiPanelBase
 		activeSkillPanel.HideBattleChildViewPanel();
 	}
 
-	// Token: 0x0600DE5B RID: 56923 RVA: 0x003404D7 File Offset: 0x0033E6D7
+	// Token: 0x0600B278 RID: 45688 RVA: 0x0034BF13 File Offset: 0x0034A113
 	protected override void OnBeforeDestroy()
 	{
 		KurotatoSkillPanel activeSkillPanel = this.GetActiveSkillPanel();
@@ -187,7 +186,7 @@ public class KurotatoMainPanel : UiPanelBase
 		activeSkillPanel.Reset();
 	}
 
-	// Token: 0x0600DE5C RID: 56924 RVA: 0x003404EC File Offset: 0x0033E6EC
+	// Token: 0x0600B279 RID: 45689 RVA: 0x0034BF28 File Offset: 0x0034A128
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string, string>(EEventName.TextLanguageChange, new Action<string, string>(this.OnRefreshText));
@@ -196,7 +195,7 @@ public class KurotatoMainPanel : UiPanelBase
 		EventSystem.Instance.Add(EEventName.KurotatoOnSystemInfoUpdate, new Action(this.OnSystemInfoUpdate));
 	}
 
-	// Token: 0x0600DE5D RID: 56925 RVA: 0x0034056C File Offset: 0x0033E76C
+	// Token: 0x0600B27A RID: 45690 RVA: 0x0034BFA8 File Offset: 0x0034A1A8
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.TextLanguageChange, new Action<string, string>(this.OnRefreshText));
@@ -205,7 +204,7 @@ public class KurotatoMainPanel : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.KurotatoOnSystemInfoUpdate, new Action(this.OnSystemInfoUpdate));
 	}
 
-	// Token: 0x0600DE5E RID: 56926 RVA: 0x003405EC File Offset: 0x0033E7EC
+	// Token: 0x0600B27B RID: 45691 RVA: 0x0034C028 File Offset: 0x0034A228
 	public void OnTick(float delta)
 	{
 		this.LerpBarPercent(delta);
@@ -217,7 +216,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE5F RID: 56927 RVA: 0x00340620 File Offset: 0x0033E820
+	// Token: 0x0600B27C RID: 45692 RVA: 0x0034C05C File Offset: 0x0034A25C
 	private void TickKillHold(float delta)
 	{
 		if (this.KillHoldTimeRemainMs < 0f)
@@ -232,7 +231,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE60 RID: 56928 RVA: 0x0034067C File Offset: 0x0033E87C
+	// Token: 0x0600B27D RID: 45693 RVA: 0x0034C0B8 File Offset: 0x0034A2B8
 	private UniTask CreateMobileSkillPanel()
 	{
 		KurotatoMainPanel.<CreateMobileSkillPanel>d__44 <CreateMobileSkillPanel>d__;
@@ -243,7 +242,7 @@ public class KurotatoMainPanel : UiPanelBase
 		return <CreateMobileSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE61 RID: 56929 RVA: 0x003406C0 File Offset: 0x0033E8C0
+	// Token: 0x0600B27E RID: 45694 RVA: 0x0034C0FC File Offset: 0x0034A2FC
 	private UniTask CreateDesktopSkillPanel()
 	{
 		KurotatoMainPanel.<CreateDesktopSkillPanel>d__45 <CreateDesktopSkillPanel>d__;
@@ -254,7 +253,7 @@ public class KurotatoMainPanel : UiPanelBase
 		return <CreateDesktopSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE62 RID: 56930 RVA: 0x00340704 File Offset: 0x0033E904
+	// Token: 0x0600B27F RID: 45695 RVA: 0x0034C140 File Offset: 0x0034A340
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -272,20 +271,20 @@ public class KurotatoMainPanel : UiPanelBase
 		return <CreateSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE63 RID: 56931 RVA: 0x00340757 File Offset: 0x0033E957
+	// Token: 0x0600B280 RID: 45696 RVA: 0x0034C193 File Offset: 0x0034A393
 	[NullableContext(2)]
 	private KurotatoSkillPanel GetActiveSkillPanel()
 	{
 		return this.MobileSkillPanel ?? this.DesktopSkillPanel;
 	}
 
-	// Token: 0x0600DE64 RID: 56932 RVA: 0x00340769 File Offset: 0x0033E969
+	// Token: 0x0600B281 RID: 45697 RVA: 0x0034C1A5 File Offset: 0x0034A3A5
 	private void OnBtnQuitClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.KurotatoPauseView, null, null);
 	}
 
-	// Token: 0x0600DE65 RID: 56933 RVA: 0x0034077C File Offset: 0x0033E97C
+	// Token: 0x0600B282 RID: 45698 RVA: 0x0034C1B8 File Offset: 0x0034A3B8
 	private void OnBtnMonsterClicked()
 	{
 		KurotatoModel instance = KurotatoModel.Instance;
@@ -302,37 +301,37 @@ public class KurotatoMainPanel : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.KurotatoEnemyDetailBookMainView, param, null);
 	}
 
-	// Token: 0x0600DE66 RID: 56934 RVA: 0x003407DB File Offset: 0x0033E9DB
+	// Token: 0x0600B283 RID: 45699 RVA: 0x0034C217 File Offset: 0x0034A417
 	private void OnBtnInfoClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.KurotatoTabMainView, null, null);
 	}
 
-	// Token: 0x0600DE67 RID: 56935 RVA: 0x003407EE File Offset: 0x0033E9EE
+	// Token: 0x0600B284 RID: 45700 RVA: 0x0034C22A File Offset: 0x0034A42A
 	private void OnRefreshText(string oldLang, string newLang)
 	{
 		this.RefreshHpAndShield(false);
 	}
 
-	// Token: 0x0600DE68 RID: 56936 RVA: 0x003407F7 File Offset: 0x0033E9F7
+	// Token: 0x0600B285 RID: 45701 RVA: 0x0034C233 File Offset: 0x0034A433
 	private void OnKscPlayerHpChanged()
 	{
 		this.RefreshHpAndShield(true);
 	}
 
-	// Token: 0x0600DE69 RID: 56937 RVA: 0x00340800 File Offset: 0x0033EA00
+	// Token: 0x0600B286 RID: 45702 RVA: 0x0034C23C File Offset: 0x0034A43C
 	private void OnPlayerEntityCreated()
 	{
 		this.InitPlayerData();
 	}
 
-	// Token: 0x0600DE6A RID: 56938 RVA: 0x00340808 File Offset: 0x0033EA08
+	// Token: 0x0600B287 RID: 45703 RVA: 0x0034C244 File Offset: 0x0034A444
 	private void OnSystemInfoUpdate()
 	{
 		this.RefreshAll();
 	}
 
-	// Token: 0x0600DE6B RID: 56939 RVA: 0x00340810 File Offset: 0x0033EA10
+	// Token: 0x0600B288 RID: 45704 RVA: 0x0034C24C File Offset: 0x0034A44C
 	public void RefreshAll()
 	{
 		this.InitPlayerData();
@@ -344,7 +343,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.RefreshSpareGold(KurotatoModel.Instance.BattleData.GetSpareGold(), 0);
 	}
 
-	// Token: 0x0600DE6C RID: 56940 RVA: 0x00340888 File Offset: 0x0033EA88
+	// Token: 0x0600B289 RID: 45705 RVA: 0x0034C2C4 File Offset: 0x0034A4C4
 	public void RefreshRoleHead()
 	{
 		int roleId = KurotatoModel.Instance.GetRoleId();
@@ -352,7 +351,7 @@ public class KurotatoMainPanel : UiPanelBase
 		base.SetTextureByPath(SkinConfig.Instance.GetRoleSkinConfig(roleDataByKurotatoRoleId.GetRoleSkinId()).Value.RoleHeadIconCircle, base.GetTexture(12), null, null);
 	}
 
-	// Token: 0x0600DE6D RID: 56941 RVA: 0x003408E8 File Offset: 0x0033EAE8
+	// Token: 0x0600B28A RID: 45706 RVA: 0x0034C324 File Offset: 0x0034A524
 	public void RefreshExp()
 	{
 		KurotatoModel instance = KurotatoModel.Instance;
@@ -385,7 +384,7 @@ public class KurotatoMainPanel : UiPanelBase
 		base.GetText(14).SetText(roleLevel.ToString(), true);
 	}
 
-	// Token: 0x0600DE6E RID: 56942 RVA: 0x003409C4 File Offset: 0x0033EBC4
+	// Token: 0x0600B28B RID: 45707 RVA: 0x0034C400 File Offset: 0x0034A600
 	private void SetExpBarFill(float percent)
 	{
 		float fillAmount = MathUtils.Instance.Lerp(0.1f, 0.68f, percent);
@@ -393,13 +392,13 @@ public class KurotatoMainPanel : UiPanelBase
 		base.GetTexture(26).SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x0600DE6F RID: 56943 RVA: 0x00340A04 File Offset: 0x0033EC04
+	// Token: 0x0600B28C RID: 45708 RVA: 0x0034C440 File Offset: 0x0034A640
 	public void PlayLvUpAnim()
 	{
 		this.SeqPlayer.PlayOrReplaySequenceByName("LvUp", false, null);
 	}
 
-	// Token: 0x0600DE70 RID: 56944 RVA: 0x00340A2C File Offset: 0x0033EC2C
+	// Token: 0x0600B28D RID: 45709 RVA: 0x0034C468 File Offset: 0x0034A668
 	public void RefreshCurrencyNum(int currencyNum, int increment = 0)
 	{
 		base.GetText(2).SetText(currencyNum.ToString(), true);
@@ -410,7 +409,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE71 RID: 56945 RVA: 0x00340A88 File Offset: 0x0033EC88
+	// Token: 0x0600B28E RID: 45710 RVA: 0x0034C4C4 File Offset: 0x0034A6C4
 	public void RefreshSpareGold(int spareGold, int increment = 0)
 	{
 		base.GetText(4).SetText(spareGold.ToString(), true);
@@ -431,7 +430,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE72 RID: 56946 RVA: 0x00340B38 File Offset: 0x0033ED38
+	// Token: 0x0600B28F RID: 45711 RVA: 0x0034C574 File Offset: 0x0034A774
 	public void RefreshComboNum(int comboNum)
 	{
 		if (!this.ConsecutiveKillStartShowNumArray.Contains(comboNum))
@@ -449,7 +448,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.SeqPlayer.PlayOrReplaySequenceByName("KillStart", false, null);
 	}
 
-	// Token: 0x0600DE73 RID: 56947 RVA: 0x00340BFE File Offset: 0x0033EDFE
+	// Token: 0x0600B290 RID: 45712 RVA: 0x0034C63A File Offset: 0x0034A83A
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (sequenceName == "KillStart" || sequenceName == "KillMore")
@@ -458,7 +457,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE74 RID: 56948 RVA: 0x00340C26 File Offset: 0x0033EE26
+	// Token: 0x0600B291 RID: 45713 RVA: 0x0034C662 File Offset: 0x0034A862
 	public void RefreshChestCount(int count, bool bPlayAcquireAnim = false)
 	{
 		this.ChestCountPanel.SetUiActive(count > 0);
@@ -469,7 +468,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE75 RID: 56949 RVA: 0x00340C51 File Offset: 0x0033EE51
+	// Token: 0x0600B292 RID: 45714 RVA: 0x0034C68D File Offset: 0x0034A88D
 	public void RefreshLevelUpCount(int count, bool bPlayAcquireAnim = false)
 	{
 		this.LevelUpCountPanel.SetUiActive(count > 0);
@@ -480,7 +479,7 @@ public class KurotatoMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE76 RID: 56950 RVA: 0x00340C7C File Offset: 0x0033EE7C
+	// Token: 0x0600B293 RID: 45715 RVA: 0x0034C6B8 File Offset: 0x0034A8B8
 	public void InitPlayerData()
 	{
 		KscSubModelBase curSubModel = KuroSimpleCombatController.Instance.CurSubModel;
@@ -510,7 +509,7 @@ public class KurotatoMainPanel : UiPanelBase
 		base.GetItem(25).SetUIActive(true);
 	}
 
-	// Token: 0x0600DE77 RID: 56951 RVA: 0x00340CE4 File Offset: 0x0033EEE4
+	// Token: 0x0600B294 RID: 45716 RVA: 0x0034C720 File Offset: 0x0034A920
 	private void InitActivityConfig()
 	{
 		KurotatoActivityConfig? activityConfig = KurotatoModel.Instance.GetActivityConfig();
@@ -518,22 +517,26 @@ public class KurotatoMainPanel : UiPanelBase
 		{
 			return;
 		}
-		this.ConsecutiveKillStartShowNumArray = (from showNum in activityConfig.Value.GetConsecutiveKillStartShowNumArrayArray()
-		where showNum > 0
-		select showNum into num
-		orderby num
-		select num).ToList<int>();
+		this.ConsecutiveKillStartShowNumArray.Clear();
+		foreach (int num in activityConfig.Value.GetConsecutiveKillStartShowNumArrayArray())
+		{
+			if (num > 0)
+			{
+				this.ConsecutiveKillStartShowNumArray.Add(num);
+			}
+		}
+		this.ConsecutiveKillStartShowNumArray.Sort();
 		this.ConsecutiveKillHoldDuration = (float)activityConfig.Value.ConsecutiveKillHoldDuration;
 	}
 
-	// Token: 0x0600DE78 RID: 56952 RVA: 0x00340D7E File Offset: 0x0033EF7E
+	// Token: 0x0600B295 RID: 45717 RVA: 0x0034C7A3 File Offset: 0x0034A9A3
 	private void InitHpBar()
 	{
 		this.SpriteLowHpBar.SetUIActive(false);
 		this.SpriteHpBar.SetUIActive(true);
 	}
 
-	// Token: 0x0600DE79 RID: 56953 RVA: 0x00340D98 File Offset: 0x0033EF98
+	// Token: 0x0600B296 RID: 45718 RVA: 0x0034C7C0 File Offset: 0x0034A9C0
 	private void RefreshHpAndShield(bool bPlayBarAnimation = false)
 	{
 		if (this.AttrMap == null)
@@ -562,7 +565,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.CurrentBarPercent = num;
 	}
 
-	// Token: 0x0600DE7A RID: 56954 RVA: 0x00340E68 File Offset: 0x0033F068
+	// Token: 0x0600B297 RID: 45719 RVA: 0x0034C890 File Offset: 0x0034AA90
 	private void SetHpBarPercent(float percent)
 	{
 		if (percent <= 0.2f)
@@ -577,7 +580,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.SpriteHpBar.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600DE7B RID: 56955 RVA: 0x00340EC8 File Offset: 0x0033F0C8
+	// Token: 0x0600B298 RID: 45720 RVA: 0x0034C8F0 File Offset: 0x0034AAF0
 	private void PlayBarAnimation()
 	{
 		if (this.AttrMap == null)
@@ -595,7 +598,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.HpBufferAnimTime = 0f;
 	}
 
-	// Token: 0x0600DE7C RID: 56956 RVA: 0x00340F11 File Offset: 0x0033F111
+	// Token: 0x0600B299 RID: 45721 RVA: 0x0034C939 File Offset: 0x0034AB39
 	private void StopBarLerpAnimation()
 	{
 		this.TargetBarPercent = 0f;
@@ -604,7 +607,7 @@ public class KurotatoMainPanel : UiPanelBase
 		this.HpBufferSprite.SetUIActive(false);
 	}
 
-	// Token: 0x0600DE7D RID: 56957 RVA: 0x00340F40 File Offset: 0x0033F140
+	// Token: 0x0600B29A RID: 45722 RVA: 0x0034C968 File Offset: 0x0034AB68
 	private void LerpBarPercent(float delta)
 	{
 		if (this.HpBufferAnimTime == -1f)
@@ -627,182 +630,182 @@ public class KurotatoMainPanel : UiPanelBase
 		this.HpBufferAnimTime += delta;
 	}
 
-	// Token: 0x04006614 RID: 26132
+	// Token: 0x040066F3 RID: 26355
 	private const float LOW_HP_PERCENT = 0.2f;
 
-	// Token: 0x04006615 RID: 26133
+	// Token: 0x040066F4 RID: 26356
 	private const float EXP_BAR_FILL_MIN = 0.1f;
 
-	// Token: 0x04006616 RID: 26134
+	// Token: 0x040066F5 RID: 26357
 	private const float EXP_BAR_FILL_MAX = 0.68f;
 
-	// Token: 0x04006617 RID: 26135
+	// Token: 0x040066F6 RID: 26358
 	private UUISprite SpriteExpBar;
 
-	// Token: 0x04006618 RID: 26136
+	// Token: 0x040066F7 RID: 26359
 	private UUISprite SpriteLowHpBar;
 
-	// Token: 0x04006619 RID: 26137
+	// Token: 0x040066F8 RID: 26360
 	private UUISprite SpriteHpBar;
 
-	// Token: 0x0400661A RID: 26138
+	// Token: 0x040066F9 RID: 26361
 	private UUISprite HpBufferSprite;
 
-	// Token: 0x0400661B RID: 26139
+	// Token: 0x040066FA RID: 26362
 	private UUIText TextHpNum;
 
-	// Token: 0x0400661C RID: 26140
+	// Token: 0x040066FB RID: 26363
 	private UUIText TextHpNum2;
 
-	// Token: 0x0400661D RID: 26141
+	// Token: 0x040066FC RID: 26364
 	private ULGUICanvas HpTextMask;
 
-	// Token: 0x0400661E RID: 26142
+	// Token: 0x040066FD RID: 26365
 	private UUIText ComboNumText;
 
-	// Token: 0x0400661F RID: 26143
+	// Token: 0x040066FE RID: 26366
 	private UUIItem PanelKillNum;
 
-	// Token: 0x04006620 RID: 26144
+	// Token: 0x040066FF RID: 26367
 	private float HpTextWidth;
 
-	// Token: 0x04006621 RID: 26145
+	// Token: 0x04006700 RID: 26368
 	private FMargin UeMargin;
 
-	// Token: 0x04006622 RID: 26146
+	// Token: 0x04006701 RID: 26369
 	private List<int> ConsecutiveKillStartShowNumArray = new List<int>();
 
-	// Token: 0x04006623 RID: 26147
+	// Token: 0x04006702 RID: 26370
 	private float ConsecutiveKillHoldDuration;
 
-	// Token: 0x04006624 RID: 26148
+	// Token: 0x04006703 RID: 26371
 	private float KillHoldTimeRemainMs = -1f;
 
-	// Token: 0x04006625 RID: 26149
+	// Token: 0x04006704 RID: 26372
 	private readonly KurotatoCountItemPanel ChestCountPanel = new KurotatoCountItemPanel();
 
-	// Token: 0x04006626 RID: 26150
+	// Token: 0x04006705 RID: 26373
 	private readonly KurotatoCountItemPanel LevelUpCountPanel = new KurotatoCountItemPanel();
 
-	// Token: 0x04006627 RID: 26151
+	// Token: 0x04006706 RID: 26374
 	[Nullable(2)]
 	private KurotatoSkillPanel MobileSkillPanel;
 
-	// Token: 0x04006628 RID: 26152
+	// Token: 0x04006707 RID: 26375
 	[Nullable(2)]
 	private KurotatoSkillPanel DesktopSkillPanel;
 
-	// Token: 0x04006629 RID: 26153
+	// Token: 0x04006708 RID: 26376
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x0400662A RID: 26154
+	// Token: 0x04006709 RID: 26377
 	[Nullable(2)]
 	private TMap<EKSC_AttrType, int> AttrMap;
 
-	// Token: 0x0400662B RID: 26155
+	// Token: 0x0400670A RID: 26378
 	private float CurrentBarPercent = -1f;
 
-	// Token: 0x0400662C RID: 26156
+	// Token: 0x0400670B RID: 26379
 	private float TargetBarPercent;
 
-	// Token: 0x0400662D RID: 26157
+	// Token: 0x0400670C RID: 26380
 	private float SourceBarPercent;
 
-	// Token: 0x0400662E RID: 26158
+	// Token: 0x0400670D RID: 26381
 	private float HpBufferAnimTime = -1f;
 
-	// Token: 0x0400662F RID: 26159
+	// Token: 0x0400670E RID: 26382
 	private float HpBufferAnimDuration;
 
-	// Token: 0x04006630 RID: 26160
+	// Token: 0x0400670F RID: 26383
 	private float LastValidMaxHp = -1f;
 
-	// Token: 0x020082A5 RID: 33445
+	// Token: 0x0200742F RID: 29743
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402A9E0 RID: 174560
+		// Token: 0x04025D0B RID: 154891
 		public const int PanelLowHpEffect = 0;
 
-		// Token: 0x0402A9E1 RID: 174561
+		// Token: 0x04025D0C RID: 154892
 		public const int BtnQuit = 1;
 
-		// Token: 0x0402A9E2 RID: 174562
+		// Token: 0x04025D0D RID: 154893
 		public const int TextCurrencyNum = 2;
 
-		// Token: 0x0402A9E3 RID: 174563
+		// Token: 0x04025D0E RID: 154894
 		public const int PanelCurrencyExtra = 3;
 
-		// Token: 0x0402A9E4 RID: 174564
+		// Token: 0x04025D0F RID: 154895
 		public const int TextSpareGoldNum = 4;
 
-		// Token: 0x0402A9E5 RID: 174565
+		// Token: 0x04025D10 RID: 154896
 		public const int PanelSpareGoldAdd = 5;
 
-		// Token: 0x0402A9E6 RID: 174566
+		// Token: 0x04025D11 RID: 154897
 		public const int TextSpareGoldAdd = 6;
 
-		// Token: 0x0402A9E7 RID: 174567
+		// Token: 0x04025D12 RID: 154898
 		public const int TextComboNum = 7;
 
-		// Token: 0x0402A9E8 RID: 174568
+		// Token: 0x04025D13 RID: 154899
 		public const int BtnMonster = 8;
 
-		// Token: 0x0402A9E9 RID: 174569
+		// Token: 0x04025D14 RID: 154900
 		public const int BtnInfo = 9;
 
-		// Token: 0x0402A9EA RID: 174570
+		// Token: 0x04025D15 RID: 154901
 		public const int PanelSaveTip = 10;
 
-		// Token: 0x0402A9EB RID: 174571
+		// Token: 0x04025D16 RID: 154902
 		public const int TextSaveTip = 11;
 
-		// Token: 0x0402A9EC RID: 174572
+		// Token: 0x04025D17 RID: 154903
 		public const int TextureRoleHead = 12;
 
-		// Token: 0x0402A9ED RID: 174573
+		// Token: 0x04025D18 RID: 154904
 		public const int SpriteExpBar = 13;
 
-		// Token: 0x0402A9EE RID: 174574
+		// Token: 0x04025D19 RID: 154905
 		public const int TextLevel = 14;
 
-		// Token: 0x0402A9EF RID: 174575
+		// Token: 0x04025D1A RID: 154906
 		public const int SpriteHpBuffer = 15;
 
-		// Token: 0x0402A9F0 RID: 174576
+		// Token: 0x04025D1B RID: 154907
 		public const int SpriteHpBar = 16;
 
-		// Token: 0x0402A9F1 RID: 174577
+		// Token: 0x04025D1C RID: 154908
 		public const int TextHpNum = 17;
 
-		// Token: 0x0402A9F2 RID: 174578
+		// Token: 0x04025D1D RID: 154909
 		public const int PanelHpMask = 18;
 
-		// Token: 0x0402A9F3 RID: 174579
+		// Token: 0x04025D1E RID: 154910
 		public const int TextHpNum2 = 19;
 
-		// Token: 0x0402A9F4 RID: 174580
+		// Token: 0x04025D1F RID: 154911
 		public const int ItemLevelUpCount = 20;
 
-		// Token: 0x0402A9F5 RID: 174581
+		// Token: 0x04025D20 RID: 154912
 		public const int ItemChestCount = 21;
 
-		// Token: 0x0402A9F6 RID: 174582
+		// Token: 0x04025D21 RID: 154913
 		public const int SpriteLowHpBar = 22;
 
-		// Token: 0x0402A9F7 RID: 174583
+		// Token: 0x04025D22 RID: 154914
 		public const int PanelKillNum = 23;
 
-		// Token: 0x0402A9F8 RID: 174584
+		// Token: 0x04025D23 RID: 154915
 		public const int PanelGoldAdd = 24;
 
-		// Token: 0x0402A9F9 RID: 174585
+		// Token: 0x04025D24 RID: 154916
 		public const int PanelRoleInfo = 25;
 
-		// Token: 0x0402A9FA RID: 174586
+		// Token: 0x04025D25 RID: 154917
 		public const int TextureFxGlow = 26;
 
-		// Token: 0x0402A9FB RID: 174587
+		// Token: 0x04025D26 RID: 154918
 		public const int Content = 27;
 	}
 }

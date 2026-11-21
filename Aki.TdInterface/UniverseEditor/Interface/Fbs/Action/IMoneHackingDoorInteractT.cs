@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ADA RID: 27354
+	// Token: 0x02007211 RID: 29201
 	public class IMoneHackingDoorInteractT
 	{
-		// Token: 0x1700CAF2 RID: 51954
-		// (get) Token: 0x0602FF2C RID: 196396 RVA: 0x00685472 File Offset: 0x00683672
-		// (set) Token: 0x0602FF2D RID: 196397 RVA: 0x0068547A File Offset: 0x0068367A
+		// Token: 0x1700D5BD RID: 54717
+		// (get) Token: 0x06032CF8 RID: 208120 RVA: 0x006DCA0E File Offset: 0x006DAC0E
+		// (set) Token: 0x06032CF9 RID: 208121 RVA: 0x006DCA16 File Offset: 0x006DAC16
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x0602FF2E RID: 196398 RVA: 0x00685483 File Offset: 0x00683683
+		// Token: 0x06032CFA RID: 208122 RVA: 0x006DCA1F File Offset: 0x006DAC1F
 		public IMoneHackingDoorInteractT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046DF RID: 18143
+	// Token: 0x0200360F RID: 13839
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiSpineLoadModule
 	{
-		// Token: 0x0602ECAD RID: 191661 RVA: 0x00AD5720 File Offset: 0x00AD3920
+		// Token: 0x060233E8 RID: 144360 RVA: 0x00A031F8 File Offset: 0x00A013F8
 		public UniTask LoadSpineAssetAsync(string atlasPath, string skeletonPath, USpineSkeletonAnimationComponent spine)
 		{
 			UiSpineLoadModule.<LoadSpineAssetAsync>d__2 <LoadSpineAssetAsync>d__;
@@ -25,17 +25,17 @@ namespace CSharpScript.Game.Ui
 			return <LoadSpineAssetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602ECAE RID: 191662 RVA: 0x00AD577B File Offset: 0x00AD397B
+		// Token: 0x060233E9 RID: 144361 RVA: 0x00A03253 File Offset: 0x00A01453
 		public void Clear()
 		{
 			this.AtlasModule.Clear();
 			this.SkeletonModule.Clear();
 		}
 
-		// Token: 0x0401974E RID: 104270
+		// Token: 0x04013DEC RID: 81388
 		private readonly UiSpineAtlasLoadModule AtlasModule = new UiSpineAtlasLoadModule();
 
-		// Token: 0x0401974F RID: 104271
+		// Token: 0x04013DED RID: 81389
 		private readonly UiSpineSkeletonLoadModule SkeletonModule = new UiSpineSkeletonLoadModule();
 	}
 }

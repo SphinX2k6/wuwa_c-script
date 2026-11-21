@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Aki.Config;
@@ -19,20 +18,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065D6 RID: 26070
+	// Token: 0x02005554 RID: 21844
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class FishingController : UiControllerBase
 	{
-		// Token: 0x0604163C RID: 267836 RVA: 0x00FD7F28 File Offset: 0x00FD6128
+		// Token: 0x06036301 RID: 221953 RVA: 0x00F1EF68 File Offset: 0x00F1D168
 		public void OpenDockyardView()
 		{
 			DockyardViewModel param = new DockyardViewModel();
 			UiManager.Instance.OpenView(EUiViewName.DockyardView, param, null);
 		}
 
-		// Token: 0x0604163D RID: 267837 RVA: 0x00FD7F4C File Offset: 0x00FD614C
+		// Token: 0x06036302 RID: 221954 RVA: 0x00F1EF8C File Offset: 0x00F1D18C
 		public void OpenDockyardWareHouseView(bool inGameplayFlow = false)
 		{
 			DockyardWareHouseViewModel dockyardWareHouseViewModel = new DockyardWareHouseViewModel();
@@ -40,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.OpenView(EUiViewName.DockyardWareHouseView, dockyardWareHouseViewModel, null);
 		}
 
-		// Token: 0x0604163E RID: 267838 RVA: 0x00FD7F78 File Offset: 0x00FD6178
+		// Token: 0x06036303 RID: 221955 RVA: 0x00F1EFB8 File Offset: 0x00F1D1B8
 		public UniTask OpenDockyardCageView(int configId)
 		{
 			FishingController.<OpenDockyardCageView>d__4 <OpenDockyardCageView>d__;
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OpenDockyardCageView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604163F RID: 267839 RVA: 0x00FD7FBC File Offset: 0x00FD61BC
+		// Token: 0x06036304 RID: 221956 RVA: 0x00F1EFFC File Offset: 0x00F1D1FC
 		public void OpenDockyardInteractView(int configId, int actionIncId)
 		{
 			DockyardInteractViewModel dockyardInteractViewModel = new DockyardInteractViewModel();
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.OpenView(EUiViewName.DockyardInteractView, dockyardInteractViewModel, null);
 		}
 
-		// Token: 0x06041640 RID: 267840 RVA: 0x00FD7FEE File Offset: 0x00FD61EE
+		// Token: 0x06036305 RID: 221957 RVA: 0x00F1F02E File Offset: 0x00F1D22E
 		public void OpenDockyardShopView(EDockyardShopTabType? tabType = null)
 		{
 			if (!FunctionModel.Instance.IsOpen(10077))
@@ -71,25 +70,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.OpenView(EUiViewName.DockyardShopMainView, tabType, null);
 		}
 
-		// Token: 0x06041641 RID: 267841 RVA: 0x00FD802C File Offset: 0x00FD622C
+		// Token: 0x06036306 RID: 221958 RVA: 0x00F1F06C File Offset: 0x00F1D26C
 		public void OpenFishingTechRootView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingTechRootView, null, null);
 		}
 
-		// Token: 0x06041642 RID: 267842 RVA: 0x00FD803F File Offset: 0x00FD623F
+		// Token: 0x06036307 RID: 221959 RVA: 0x00F1F07F File Offset: 0x00F1D27F
 		public void OpenFishingHandBookView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingHandBookView, null, null);
 		}
 
-		// Token: 0x06041643 RID: 267843 RVA: 0x00FD8052 File Offset: 0x00FD6252
+		// Token: 0x06036308 RID: 221960 RVA: 0x00F1F092 File Offset: 0x00F1D292
 		public void OpenFishingQuestView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingQuestView, null, null);
 		}
 
-		// Token: 0x06041644 RID: 267844 RVA: 0x00FD8068 File Offset: 0x00FD6268
+		// Token: 0x06036309 RID: 221961 RVA: 0x00F1F0A8 File Offset: 0x00F1D2A8
 		protected override void OnAddOpenViewCheckFunction()
 		{
 			UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.FishingQuestView, new Func<EUiViewName, object, bool>(this.CanOpenQuestView), "FishingController.CanOpenFishingQuestView");
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.DockyardShopMainView, new Func<EUiViewName, object, bool>(this.CanOpenDockyardShopView), "FishingController.CanOpenDockyardShopView");
 		}
 
-		// Token: 0x06041645 RID: 267845 RVA: 0x00FD80F8 File Offset: 0x00FD62F8
+		// Token: 0x0603630A RID: 221962 RVA: 0x00F1F138 File Offset: 0x00F1D338
 		protected override void OnRemoveOpenViewCheckFunction()
 		{
 			UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.FishingQuestView, new Func<EUiViewName, object, bool>(this.CanOpenQuestView));
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.DockyardShopMainView, new Func<EUiViewName, object, bool>(this.CanOpenDockyardShopView));
 		}
 
-		// Token: 0x06041646 RID: 267846 RVA: 0x00FD8171 File Offset: 0x00FD6371
+		// Token: 0x0603630B RID: 221963 RVA: 0x00F1F1B1 File Offset: 0x00F1D3B1
 		private bool CanOpenQuestView(EUiViewName viewName, object param)
 		{
 			bool flag = FunctionModel.Instance.IsOpen(EFunctionType.FishingEntrust);
@@ -118,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return flag;
 		}
 
-		// Token: 0x06041647 RID: 267847 RVA: 0x00FD8199 File Offset: 0x00FD6399
+		// Token: 0x0603630C RID: 221964 RVA: 0x00F1F1D9 File Offset: 0x00F1D3D9
 		private bool CanOpenHandBookView(EUiViewName viewName, object param)
 		{
 			bool flag = FunctionModel.Instance.IsOpen(EFunctionType.FishingHandBook);
@@ -129,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return flag;
 		}
 
-		// Token: 0x06041648 RID: 267848 RVA: 0x00FD81C1 File Offset: 0x00FD63C1
+		// Token: 0x0603630D RID: 221965 RVA: 0x00F1F201 File Offset: 0x00F1D401
 		private bool CanOpenTechRootView(EUiViewName viewName, object param)
 		{
 			bool flag = FunctionModel.Instance.IsOpen(EFunctionType.FishingTech);
@@ -140,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return flag;
 		}
 
-		// Token: 0x06041649 RID: 267849 RVA: 0x00FD81E9 File Offset: 0x00FD63E9
+		// Token: 0x0603630E RID: 221966 RVA: 0x00F1F229 File Offset: 0x00F1D429
 		private bool CanOpenDockyardShopView(EUiViewName viewName, object param)
 		{
 			bool flag = FunctionModel.Instance.IsOpen(EFunctionType.FishingItemDelete);
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return flag;
 		}
 
-		// Token: 0x0604164A RID: 267850 RVA: 0x00FD8214 File Offset: 0x00FD6414
+		// Token: 0x0603630F RID: 221967 RVA: 0x00F1F254 File Offset: 0x00F1D454
 		public void FishingInputHandler(string actionName)
 		{
 			if (actionName == "切换角色1")
@@ -176,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.OpenFishingHandBookView();
 		}
 
-		// Token: 0x0604164B RID: 267851 RVA: 0x00FD8274 File Offset: 0x00FD6474
+		// Token: 0x06036310 RID: 221968 RVA: 0x00F1F2B4 File Offset: 0x00F1D4B4
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.RequestFishingInfo));
@@ -185,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseViewFinish));
 		}
 
-		// Token: 0x0604164C RID: 267852 RVA: 0x00FD82F0 File Offset: 0x00FD64F0
+		// Token: 0x06036311 RID: 221969 RVA: 0x00F1F330 File Offset: 0x00F1D530
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.RequestFishingInfo));
@@ -194,7 +193,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseViewFinish));
 		}
 
-		// Token: 0x0604164D RID: 267853 RVA: 0x00FD836C File Offset: 0x00FD656C
+		// Token: 0x06036312 RID: 221970 RVA: 0x00F1F3AC File Offset: 0x00F1D5AC
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.FishingInfoUpdateNotify, delegate(IMessage response, Net.CallbackStatus _)
@@ -216,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			Net.Instance.Register(ENotifyMessageId.FishingNetCabinUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
 			{
 				FishingNetCabinUpdateNotify fishingNetCabinUpdateNotify = (FishingNetCabinUpdateNotify)msg;
-				DockyardModel.Instance.SetTrawlDataListFromServer(fishingNetCabinUpdateNotify.NetCabinItems.ToList<FishingItemInfo>());
+				DockyardModel.Instance.SetTrawlDataListFromServer(fishingNetCabinUpdateNotify.NetCabinItems);
 			});
 			Net.Instance.Register(ENotifyMessageId.FishingTechInfoUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
 			{
@@ -286,7 +285,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			Net.Instance.Register(ENotifyMessageId.FishingNoticeUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
 			{
 				FishingNoticeUpdateNotify fishingNoticeUpdateNotify = (FishingNoticeUpdateNotify)msg;
-				FishingModel.Instance.RoleTalkIds = fishingNoticeUpdateNotify.NoticeIds.ToList<int>();
+				FishingModel.Instance.RoleTalkIds = new List<int>(fishingNoticeUpdateNotify.NoticeIds);
 			});
 			Net.Instance.Register(ENotifyMessageId.HandInInfoUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
 			{
@@ -302,7 +301,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 					FishingQuestModel.Instance.TraceEntrust();
 				}
 				FishingQuestModel.Instance.EntrustRefreshCostRatio = fishingEntrustUpdateNotify.EntrustRefreshRatio;
-				FishingQuestModel.Instance.UpdateEntrusts(fishingEntrustUpdateNotify.Entrusts.ToDictionary((KeyValuePair<int, FishingEntrustStatus> x) => x.Key, (KeyValuePair<int, FishingEntrustStatus> x) => x.Value));
+				FishingQuestModel.Instance.UpdateEntrusts(new Dictionary<int, FishingEntrustStatus>(fishingEntrustUpdateNotify.Entrusts));
 			});
 			Net.Instance.Register(ENotifyMessageId.FishingBoatDieNotify, new Action<IMessage, Net.CallbackStatus>(this.FishingBoatDieNotify));
 			Net.Instance.Register(ENotifyMessageId.FishingPortUnlockNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -325,7 +324,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x0604164E RID: 267854 RVA: 0x00FD86D0 File Offset: 0x00FD68D0
+		// Token: 0x06036313 RID: 221971 RVA: 0x00F1F710 File Offset: 0x00F1D910
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FishingInfoUpdateNotify);
@@ -347,7 +346,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			Net.Instance.UnRegister(ENotifyMessageId.FishingSkinUnlockNotify);
 		}
 
-		// Token: 0x0604164F RID: 267855 RVA: 0x00FD87F0 File Offset: 0x00FD69F0
+		// Token: 0x06036314 RID: 221972 RVA: 0x00F1F830 File Offset: 0x00F1DA30
 		[NullableContext(2)]
 		private void FishingGhostStateNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -366,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.CloseView(EUiViewName.FishingWarningTips, null);
 		}
 
-		// Token: 0x06041650 RID: 267856 RVA: 0x00FD8864 File Offset: 0x00FD6A64
+		// Token: 0x06036315 RID: 221973 RVA: 0x00F1F8A4 File Offset: 0x00F1DAA4
 		[NullableContext(2)]
 		private void FishingBoatDieNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -437,7 +436,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 1300f, null, null, true, 1f);
 		}
 
-		// Token: 0x06041651 RID: 267857 RVA: 0x00FD88E8 File Offset: 0x00FD6AE8
+		// Token: 0x06036316 RID: 221974 RVA: 0x00F1F928 File Offset: 0x00F1DB28
 		private void RequestFishingInfo(EFunctionType id, bool isOpen)
 		{
 			if (id != EFunctionType.Fishing)
@@ -459,23 +458,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				DockyardModel.Instance.SetFishingShipData(fishingInfoResponse.FishingInfo.ShipInfo);
 				FishingQuestModel.Instance.CurrentTraceEntrust = fishingInfoResponse.FishingInfo.TraceEntrusts;
 				FishingQuestModel.Instance.TraceEntrust();
-				FishingModel.Instance.RoleTalkIds = fishingInfoResponse.FishingInfo.NoticeIds.ToList<int>();
-				FishingModel.Instance.UnlockPort = fishingInfoResponse.FishingInfo.UnlockPortId.ToList<int>();
+				FishingModel.Instance.RoleTalkIds = new List<int>(fishingInfoResponse.FishingInfo.NoticeIds);
+				FishingModel.Instance.UnlockPort = new List<int>(fishingInfoResponse.FishingInfo.UnlockPortId);
 				FishingModel.Instance.CurrentShipSkin = fishingInfoResponse.FishingInfo.ShipInfo.SkinId;
-				FishingModel.Instance.UnlockShipSkin = fishingInfoResponse.FishingInfo.UnlockSkins.ToList<int>();
-				FishingQuestModel.Instance.UpdateEntrusts(fishingInfoResponse.FishingInfo.Entrusts.ToDictionary((KeyValuePair<int, FishingEntrustStatus> x) => x.Key, (KeyValuePair<int, FishingEntrustStatus> x) => x.Value));
+				FishingModel.Instance.UnlockShipSkin = new List<int>(fishingInfoResponse.FishingInfo.UnlockSkins);
+				FishingQuestModel.Instance.UpdateEntrusts(new Dictionary<int, FishingEntrustStatus>(fishingInfoResponse.FishingInfo.Entrusts));
 				FishingModel.Instance.GetShipData().RefreshData(fishingInfoResponse.FishingInfo.ShipInfo);
-				FishingModel.Instance.SetFishingTechData(fishingInfoResponse.FishingInfo.FishingTech.ToList<FishingTechInfo>());
-				FishingModel.Instance.SetCageDataMapFromServer(fishingInfoResponse.FishingInfo.SceneCages.ToDictionary<int, SceneFishCageInfo>());
-				FishingModel.Instance.SetInteractData(fishingInfoResponse.FishingInfo.HandInInfo.ToList<HandInInfo>());
-				FishingModel.Instance.SetAllFishingPointData(fishingInfoResponse.FishingInfo.SceneFishPoints.ToDictionary((KeyValuePair<int, SceneFishPointInfo> x) => x.Key, (KeyValuePair<int, SceneFishPointInfo> x) => x.Value));
+				FishingModel.Instance.SetFishingTechData(fishingInfoResponse.FishingInfo.FishingTech);
+				FishingModel.Instance.SetCageDataMapFromServer(new Dictionary<int, SceneFishCageInfo>(fishingInfoResponse.FishingInfo.SceneCages));
+				FishingModel.Instance.SetInteractData(fishingInfoResponse.FishingInfo.HandInInfo);
+				FishingModel.Instance.SetAllFishingPointData(new Dictionary<int, SceneFishPointInfo>(fishingInfoResponse.FishingInfo.SceneFishPoints));
 				FishingModel.Instance.SetHandBookData(fishingInfoResponse.FishingInfo.IllustratedInfo);
 				FishingQuestModel.Instance.EntrustRefreshCostRatio = fishingInfoResponse.FishingInfo.EntrustRefreshRatio;
 				EventSystem.Instance.Emit(EEventName.OnRefreshTempFishingPointNum);
 			}, 0);
 		}
 
-		// Token: 0x06041652 RID: 267858 RVA: 0x00FD8938 File Offset: 0x00FD6B38
+		// Token: 0x06036317 RID: 221975 RVA: 0x00F1F978 File Offset: 0x00F1DB78
 		private void ShowFishingLevelUp(IProto_NormalItem normalItem, int count, int lastCount)
 		{
 			if (normalItem.Id == FishingModel.Instance.FishingReputationItemId)
@@ -486,7 +485,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041653 RID: 267859 RVA: 0x00FD897C File Offset: 0x00FD6B7C
+		// Token: 0x06036318 RID: 221976 RVA: 0x00F1F9BC File Offset: 0x00F1DBBC
 		private void OnCloseViewFinish(EUiViewName viewName, int i)
 		{
 			if (viewName != EUiViewName.DockyardWareHouseView && viewName != EUiViewName.CommonRewardView)
@@ -500,7 +499,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041654 RID: 267860 RVA: 0x00FD89C0 File Offset: 0x00FD6BC0
+		// Token: 0x06036319 RID: 221977 RVA: 0x00F1FA00 File Offset: 0x00F1DC00
 		private void TryOpenFishingLevelUpView()
 		{
 			if (!this.CanOpenFishingLevelUpView())
@@ -512,13 +511,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			UiManager.Instance.OpenView(EUiViewName.FishingLevelUpView, fishingLevelUpInfo, null);
 		}
 
-		// Token: 0x06041655 RID: 267861 RVA: 0x00FD89FC File Offset: 0x00FD6BFC
+		// Token: 0x0603631A RID: 221978 RVA: 0x00F1FA3C File Offset: 0x00F1DC3C
 		private bool CanOpenFishingLevelUpView()
 		{
 			return UiManager.Instance.IsViewOpen(EUiViewName.BattleView) || (UiManager.Instance.IsViewOpen(EUiViewName.FishingQuestView) && FishingModel.Instance.IsInDock);
 		}
 
-		// Token: 0x06041656 RID: 267862 RVA: 0x00FD8A30 File Offset: 0x00FD6C30
+		// Token: 0x0603631B RID: 221979 RVA: 0x00F1FA70 File Offset: 0x00F1DC70
 		public void RequestMultiFishingIllustratedRewardRequest(int[] rewardIds)
 		{
 			MulFishingIllustratedRewardRequest mulFishingIllustratedRewardRequest = MulFishingIllustratedRewardRequest.Create();
@@ -532,12 +531,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (mulFishingIllustratedRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(mulFishingIllustratedRewardResponse.ErrorCode, 29037, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(mulFishingIllustratedRewardResponse.ErrorCode, 28177, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06041657 RID: 267863 RVA: 0x00FD8A80 File Offset: 0x00FD6C80
+		// Token: 0x0603631C RID: 221980 RVA: 0x00F1FAC0 File Offset: 0x00F1DCC0
 		private unsafe void PrintRequestRightFishingDataListLog(List<FishingItemInfo> dataList, CabinType type)
 		{
 			if (DockyardModel.Instance.IsPrintLog)
@@ -572,7 +571,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041658 RID: 267864 RVA: 0x00FD8BF0 File Offset: 0x00FD6DF0
+		// Token: 0x0603631D RID: 221981 RVA: 0x00F1FC30 File Offset: 0x00F1DE30
 		public void RequestFishingCabinPut(IRequestCabinPut requestData)
 		{
 			FishingCabinPutRequest fishingCabinPutRequest = FishingCabinPutRequest.Create();
@@ -592,7 +591,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				bool flag = fishingCabinPutResponse.ErrorCode == Aki.Protocol.ErrorCode.Success;
 				if (!flag)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingCabinPutResponse.ErrorCode, 27625, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingCabinPutResponse.ErrorCode, 27309, null, true, true);
 				}
 				Action<bool> callback = requestData.Callback;
 				if (callback == null)
@@ -603,7 +602,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041659 RID: 267865 RVA: 0x00FD8CB8 File Offset: 0x00FD6EB8
+		// Token: 0x0603631E RID: 221982 RVA: 0x00F1FCF8 File Offset: 0x00F1DEF8
 		public void RequestFishingQuickSell(Action<bool> callback)
 		{
 			FishingQuickSellRequest message = FishingQuickSellRequest.Create();
@@ -617,13 +616,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				bool flag = fishingQuickSellResponse.ErrorCode == Aki.Protocol.ErrorCode.Success;
 				if (!flag)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingQuickSellResponse.ErrorCode, 26816, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingQuickSellResponse.ErrorCode, 24478, null, true, true);
 				}
 				callback(flag);
 			}, 0);
 		}
 
-		// Token: 0x0604165A RID: 267866 RVA: 0x00FD8CF8 File Offset: 0x00FD6EF8
+		// Token: 0x0603631F RID: 221983 RVA: 0x00F1FD38 File Offset: 0x00F1DF38
 		public void TryRequestFishingSell(List<int> incIdList, List<int> itemIdList, bool banSkip, Action<bool> callback)
 		{
 			if (FishingQuestModel.Instance.OnFishingItemSell(itemIdList, banSkip, delegate
@@ -636,7 +635,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RequestFishingSell(incIdList, callback);
 		}
 
-		// Token: 0x0604165B RID: 267867 RVA: 0x00FD8D50 File Offset: 0x00FD6F50
+		// Token: 0x06036320 RID: 221984 RVA: 0x00F1FD90 File Offset: 0x00F1DF90
 		public void RequestFishingSell(List<int> incIdList, Action<bool> callback)
 		{
 			FishingSellRequest fishingSellRequest = FishingSellRequest.Create();
@@ -651,13 +650,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				bool flag = fishingSellResponse.ErrorCode == Aki.Protocol.ErrorCode.Success;
 				if (!flag)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingSellResponse.ErrorCode, 29274, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingSellResponse.ErrorCode, 23025, null, true, true);
 				}
 				callback(flag);
 			}, 0);
 		}
 
-		// Token: 0x0604165C RID: 267868 RVA: 0x00FD8D9C File Offset: 0x00FD6F9C
+		// Token: 0x06036321 RID: 221985 RVA: 0x00F1FDDC File Offset: 0x00F1DFDC
 		public void RequestFishingSailingRequest(bool fix, int portId, int time)
 		{
 			FishingSailingRequest fishingSailingRequest = FishingSailingRequest.Create();
@@ -672,7 +671,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingSailingResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingSailingResponse.ErrorCode, 16408, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingSailingResponse.ErrorCode, 20883, null, true, true);
 					return;
 				}
 				UiManager.Instance.CloseView(EUiViewName.SailingView, null);
@@ -690,7 +689,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x0604165D RID: 267869 RVA: 0x00FD8DF4 File Offset: 0x00FD6FF4
+		// Token: 0x06036322 RID: 221986 RVA: 0x00F1FE34 File Offset: 0x00F1E034
 		public void RequestFishingShipFixRequest()
 		{
 			FishingShipFixRequest message = FishingShipFixRequest.Create();
@@ -703,12 +702,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingShipFixResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingShipFixResponse.ErrorCode, 20583, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingShipFixResponse.ErrorCode, 21934, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0604165E RID: 267870 RVA: 0x00FD8E38 File Offset: 0x00FD7038
+		// Token: 0x06036323 RID: 221987 RVA: 0x00F1FE78 File Offset: 0x00F1E078
 		public void RequestFishingEntrustHandInRequest(int entrustId, IReadOnlyList<FishingHandInItem> itemList)
 		{
 			FishingEntrustHandInRequest fishingEntrustHandInRequest = FishingEntrustHandInRequest.Create();
@@ -723,7 +722,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingEntrustHandInResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustHandInResponse.ErrorCode, 25865, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustHandInResponse.ErrorCode, 28305, null, true, true);
 					return;
 				}
 				EventSystem.Instance.Emit<bool, int?>(EEventName.FishingRefreshQuestView, false, null);
@@ -731,7 +730,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x0604165F RID: 267871 RVA: 0x00FD8E90 File Offset: 0x00FD7090
+		// Token: 0x06036324 RID: 221988 RVA: 0x00F1FED0 File Offset: 0x00F1E0D0
 		public void RequestFishingEntrustTrace(int entrustId)
 		{
 			FishingEntrustTraceRequest fishingEntrustTraceRequest = FishingEntrustTraceRequest.Create();
@@ -745,7 +744,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingEntrustTraceResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustTraceResponse.ErrorCode, 16672, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustTraceResponse.ErrorCode, 29628, null, true, true);
 					FishingQuestModel.Instance.TraceFormClick = false;
 					return;
 				}
@@ -753,7 +752,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041660 RID: 267872 RVA: 0x00FD8EDC File Offset: 0x00FD70DC
+		// Token: 0x06036325 RID: 221989 RVA: 0x00F1FF1C File Offset: 0x00F1E11C
 		public void RequestFishingEntrustRefresh(int entrustId)
 		{
 			FishingEntrustRefreshRequest fishingEntrustRefreshRequest = FishingEntrustRefreshRequest.Create();
@@ -767,7 +766,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingEntrustRefreshResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustRefreshResponse.ErrorCode, 28664, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustRefreshResponse.ErrorCode, 16187, null, true, true);
 					return;
 				}
 				int entrustId2 = fishingEntrustRefreshResponse.EntrustId;
@@ -775,7 +774,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041661 RID: 267873 RVA: 0x00FD8F28 File Offset: 0x00FD7128
+		// Token: 0x06036326 RID: 221990 RVA: 0x00F1FF68 File Offset: 0x00F1E168
 		public void RequestFishingEntrustAccept(int entrustId, bool isAccept, Action func = null)
 		{
 			FishingEntrustAcceptRequest fishingEntrustAcceptRequest = FishingEntrustAcceptRequest.Create();
@@ -790,7 +789,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingEntrustAcceptResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustAcceptResponse.ErrorCode, 28877, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingEntrustAcceptResponse.ErrorCode, 18952, null, true, true);
 					return;
 				}
 				EventSystem.Instance.Emit<bool, int?>(EEventName.FishingRefreshQuestView, true, null);
@@ -803,7 +802,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041662 RID: 267874 RVA: 0x00FD8F74 File Offset: 0x00FD7174
+		// Token: 0x06036327 RID: 221991 RVA: 0x00F1FFB4 File Offset: 0x00F1E1B4
 		public void RequestFishingTechLevelUp(int nodeId)
 		{
 			FishingTechLevelUpRequest fishingTechLevelUpRequest = FishingTechLevelUpRequest.Create();
@@ -817,7 +816,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingTechLevelUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingTechLevelUpResponse.ErrorCode, 25533, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingTechLevelUpResponse.ErrorCode, 24459, null, true, true);
 					return;
 				}
 				FishingTech fishingTechById = FishingConfig.Instance.GetFishingTechById(nodeId);
@@ -844,7 +843,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041663 RID: 267875 RVA: 0x00FD8FC4 File Offset: 0x00FD71C4
+		// Token: 0x06036328 RID: 221992 RVA: 0x00F20004 File Offset: 0x00F1E204
 		public UniTask RequestFishingPointInfo(int sceneId, int id)
 		{
 			FishingController.<RequestFishingPointInfo>d__41 <RequestFishingPointInfo>d__;
@@ -856,7 +855,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <RequestFishingPointInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041664 RID: 267876 RVA: 0x00FD9010 File Offset: 0x00FD7210
+		// Token: 0x06036329 RID: 221993 RVA: 0x00F20050 File Offset: 0x00F1E250
 		public void RequestFishingShipSkinChange(int skinId)
 		{
 			FishingShipSkinChangeRequest fishingShipSkinChangeRequest = FishingShipSkinChangeRequest.Create();
@@ -871,7 +870,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				}
 				if (fishingShipSkinChangeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingShipSkinChangeResponse.ErrorCode, 15401, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingShipSkinChangeResponse.ErrorCode, 21884, null, true, true);
 					return;
 				}
 				FishingModel.Instance.CurrentShipSkin = skinId;
@@ -879,13 +878,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041665 RID: 267877 RVA: 0x00FD9069 File Offset: 0x00FD7269
+		// Token: 0x0603632A RID: 221994 RVA: 0x00F200A9 File Offset: 0x00F1E2A9
 		private void RecordNeedShowExitConfirmBox(bool isSelectOn)
 		{
 			DockyardModel.Instance.IsNeedShowExitConfirmBox = !isSelectOn;
 		}
 
-		// Token: 0x06041666 RID: 267878 RVA: 0x00FD907C File Offset: 0x00FD727C
+		// Token: 0x0603632B RID: 221995 RVA: 0x00F200BC File Offset: 0x00F1E2BC
 		public void ShowExitFishingViewConfirm(Action closeFunc)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DockyardExitFishing);
@@ -896,7 +895,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06041667 RID: 267879 RVA: 0x00FD90D8 File Offset: 0x00FD72D8
+		// Token: 0x0603632C RID: 221996 RVA: 0x00F20118 File Offset: 0x00F1E318
 		[NullableContext(2)]
 		public void ShowConfirmBoxAndRequestFishingExit(Action<bool> callback = null)
 		{
@@ -933,7 +932,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			action();
 		}
 
-		// Token: 0x06041668 RID: 267880 RVA: 0x00FD912C File Offset: 0x00FD732C
+		// Token: 0x0603632D RID: 221997 RVA: 0x00F2016C File Offset: 0x00F1E36C
 		[NullableContext(2)]
 		public void RequestFishingExit(Action<bool> callback = null)
 		{
@@ -963,13 +962,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041669 RID: 267881 RVA: 0x00FD9169 File Offset: 0x00FD7369
+		// Token: 0x0603632E RID: 221998 RVA: 0x00F201A9 File Offset: 0x00F1E3A9
 		public bool IsInFishingShip()
 		{
 			return FishingModel.Instance.GetShipData().IsShipDriving();
 		}
 
-		// Token: 0x0604166A RID: 267882 RVA: 0x00FD917C File Offset: 0x00FD737C
+		// Token: 0x0603632F RID: 221999 RVA: 0x00F201BC File Offset: 0x00F1E3BC
 		public void ConfirmToTeleportToPort(Action closeFunc)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ConfirmToTeleportToPort);
@@ -977,7 +976,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0604166B RID: 267883 RVA: 0x00FD91B0 File Offset: 0x00FD73B0
+		// Token: 0x06036330 RID: 222000 RVA: 0x00F201F0 File Offset: 0x00F1E3F0
 		public void TeleportToPortPosition(int portId)
 		{
 			FishingPort fishingPortConfig = FishingConfig.Instance.GetFishingPortConfig(portId);
@@ -1011,7 +1010,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			TeleportController.Instance.TeleportPlayer(param);
 		}
 
-		// Token: 0x0604166C RID: 267884 RVA: 0x00FD9298 File Offset: 0x00FD7498
+		// Token: 0x06036331 RID: 222001 RVA: 0x00F202D8 File Offset: 0x00F1E4D8
 		public void RequestFishingHandIn(IRequestHandleIn requestData)
 		{
 			FishingHandInRequest fishingHandInRequest = FishingHandInRequest.Create();
@@ -1030,7 +1029,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				bool flag = fishingHandInResponse.ErrorCode == Aki.Protocol.ErrorCode.Success;
 				if (!flag)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingHandInResponse.ErrorCode, 15662, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingHandInResponse.ErrorCode, 18677, null, true, true);
 				}
 				Action<bool, bool> callback = requestData.Callback;
 				if (callback == null)
@@ -1041,7 +1040,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x0604166D RID: 267885 RVA: 0x00FD933C File Offset: 0x00FD753C
+		// Token: 0x06036332 RID: 222002 RVA: 0x00F2037C File Offset: 0x00F1E57C
 		public EFishingSkillCheckResult CheckFishingSkillCanBegin(EFishingSkillType type)
 		{
 			if (type != EFishingSkillType.炸鱼)
@@ -1070,7 +1069,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604166E RID: 267886 RVA: 0x00FD937C File Offset: 0x00FD757C
+		// Token: 0x06036333 RID: 222003 RVA: 0x00F203BC File Offset: 0x00F1E5BC
 		public void ShowFishingSkillTips(EFishingSkillType type, EFishingSkillCheckResult result)
 		{
 			switch (result)
@@ -1098,7 +1097,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604166F RID: 267887 RVA: 0x00FD93F9 File Offset: 0x00FD75F9
+		// Token: 0x06036334 RID: 222004 RVA: 0x00F20439 File Offset: 0x00F1E639
 		public void BeginFishingSkill(EFishingSkillType type)
 		{
 			switch (type)
@@ -1117,7 +1116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041670 RID: 267888 RVA: 0x00FD9430 File Offset: 0x00FD7630
+		// Token: 0x06036335 RID: 222005 RVA: 0x00F20470 File Offset: 0x00F1E670
 		private void RequestFishingSkillTeleport()
 		{
 			FishingSkillTeleportRequest message = FishingSkillTeleportRequest.Create();
@@ -1126,7 +1125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041671 RID: 267889 RVA: 0x00FD9474 File Offset: 0x00FD7674
+		// Token: 0x06036336 RID: 222006 RVA: 0x00F204B4 File Offset: 0x00F1E6B4
 		private void RequestFishingSkillBomb()
 		{
 			int fishingSkillCostId = this.GetFishingSkillCostId();
@@ -1154,7 +1153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041672 RID: 267890 RVA: 0x00FD94CC File Offset: 0x00FD76CC
+		// Token: 0x06036337 RID: 222007 RVA: 0x00F2050C File Offset: 0x00F1E70C
 		private void RequestFishingSkillBait()
 		{
 			int fishingSkillCostId = this.GetFishingSkillCostId();
@@ -1174,14 +1173,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x06041673 RID: 267891 RVA: 0x00FD9524 File Offset: 0x00FD7724
+		// Token: 0x06036338 RID: 222008 RVA: 0x00F20564 File Offset: 0x00F1E764
 		private bool CheckFishingSkillCostEnough()
 		{
 			int fishingSkillCostId = this.GetFishingSkillCostId();
 			return fishingSkillCostId > 0 && InventoryModel.Instance.GetItemCountByConfigId(fishingSkillCostId, 0) > 0;
 		}
 
-		// Token: 0x06041674 RID: 267892 RVA: 0x00FD9550 File Offset: 0x00FD7750
+		// Token: 0x06036339 RID: 222009 RVA: 0x00F20590 File Offset: 0x00F1E790
 		public int GetFishingSkillCostId()
 		{
 			int currentExploreSkillId = RouletteModel.Instance.CurrentExploreSkillId;
@@ -1196,10 +1195,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			{
 				return 0;
 			}
-			return dictionary.Keys.First<int>();
+			int result = 0;
+			using (Dictionary<int, int>.KeyCollection.Enumerator enumerator = dictionary.Keys.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					result = enumerator.Current;
+				}
+			}
+			return result;
 		}
 
-		// Token: 0x06041675 RID: 267893 RVA: 0x00FD95C1 File Offset: 0x00FD77C1
+		// Token: 0x0603633A RID: 222010 RVA: 0x00F20640 File Offset: 0x00F1E840
 		public void FishingTeleportToBoat()
 		{
 			if (!TeleportModel.Instance.AllowTeleportByUi)
@@ -1214,7 +1221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RequestFishingTeleportToBoat();
 		}
 
-		// Token: 0x06041676 RID: 267894 RVA: 0x00FD9600 File Offset: 0x00FD7800
+		// Token: 0x0603633B RID: 222011 RVA: 0x00F20680 File Offset: 0x00F1E880
 		private void RequestFishingTeleportToBoat()
 		{
 			GameModeModel.Instance.IsTeleport = true;
@@ -1224,13 +1231,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				FishingTeleportToBoatResponse fishingTeleportToBoatResponse = (FishingTeleportToBoatResponse)msg;
 				if (fishingTeleportToBoatResponse != null && fishingTeleportToBoatResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingTeleportToBoatResponse.ErrorCode, 16996, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(fishingTeleportToBoatResponse.ErrorCode, 21519, null, true, true);
 				}
 				GameModeModel.Instance.IsTeleport = false;
 			}, 0);
 		}
 
-		// Token: 0x06041677 RID: 267895 RVA: 0x00FD9650 File Offset: 0x00FD7850
+		// Token: 0x0603633C RID: 222012 RVA: 0x00F206D0 File Offset: 0x00F1E8D0
 		public void PlayRoleTechAudio(EFishingTechNodeType type)
 		{
 			this.StopRoleTechAudio();
@@ -1253,7 +1260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			AudioSystem.Instance.PostEvent(text);
 		}
 
-		// Token: 0x06041678 RID: 267896 RVA: 0x00FD96DC File Offset: 0x00FD78DC
+		// Token: 0x0603633D RID: 222013 RVA: 0x00F2075C File Offset: 0x00F1E95C
 		public void StopRoleTechAudio()
 		{
 			if (!StringUtils.IsEmpty(this.RoleTechAudioHandle))
@@ -1263,7 +1270,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041679 RID: 267897 RVA: 0x00FD971C File Offset: 0x00FD791C
+		// Token: 0x0603633E RID: 222014 RVA: 0x00F2079C File Offset: 0x00F1E99C
 		public void HideEffectInWorld()
 		{
 			foreach (int pbDataId in FishingDefine.fishingEffectList)
@@ -1280,7 +1287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604167A RID: 267898 RVA: 0x00FD978C File Offset: 0x00FD798C
+		// Token: 0x0603633F RID: 222015 RVA: 0x00F2080C File Offset: 0x00F1EA0C
 		public void ShowEffectInWorld()
 		{
 			foreach (int pbDataId in FishingDefine.fishingEffectList)
@@ -1297,8 +1304,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x17009599 RID: 38297
-		// (get) Token: 0x0604167B RID: 267899 RVA: 0x00FD97FC File Offset: 0x00FD79FC
+		// Token: 0x170068FB RID: 26875
+		// (get) Token: 0x06036340 RID: 222016 RVA: 0x00F2087C File Offset: 0x00F1EA7C
 		public static FishingController Instance
 		{
 			get
@@ -1307,7 +1314,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604167C RID: 267900 RVA: 0x00FD9803 File Offset: 0x00FD7A03
+		// Token: 0x06036341 RID: 222017 RVA: 0x00F20883 File Offset: 0x00F1EA83
 		public static FishingController GetOrCreateInstance()
 		{
 			if (FishingController._Instance == null)
@@ -1317,7 +1324,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return FishingController._Instance;
 		}
 
-		// Token: 0x0604167D RID: 267901 RVA: 0x00FD9817 File Offset: 0x00FD7A17
+		// Token: 0x06036342 RID: 222018 RVA: 0x00F20897 File Offset: 0x00F1EA97
 		public static bool CreateInstance()
 		{
 			if (FishingController._Instance != null)
@@ -1328,30 +1335,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x0604167E RID: 267902 RVA: 0x00FD982D File Offset: 0x00FD7A2D
+		// Token: 0x06036343 RID: 222019 RVA: 0x00F208AD File Offset: 0x00F1EAAD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604167F RID: 267903 RVA: 0x00FD982F File Offset: 0x00FD7A2F
+		// Token: 0x06036344 RID: 222020 RVA: 0x00F208AF File Offset: 0x00F1EAAF
 		public static void ResetStaticDefaultValue()
 		{
 			FishingController._Instance = null;
 		}
 
-		// Token: 0x06041680 RID: 267904 RVA: 0x00FD9837 File Offset: 0x00FD7A37
+		// Token: 0x06036345 RID: 222021 RVA: 0x00F208B7 File Offset: 0x00F1EAB7
 		static FishingController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FishingController.CreateStaticDefaultValue), new Action(FishingController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022034 RID: 139316
+		// Token: 0x0401C965 RID: 117093
 		private const int FISHING_SHIP_DEAD_TIME = 1300;
 
-		// Token: 0x04022035 RID: 139317
+		// Token: 0x0401C966 RID: 117094
 		private string RoleTechAudioHandle = "";
 
-		// Token: 0x04022036 RID: 139318
+		// Token: 0x0401C967 RID: 117095
 		[Nullable(2)]
 		private static FishingController _Instance;
 	}

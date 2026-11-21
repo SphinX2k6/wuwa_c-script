@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF9 RID: 6905
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CA6 RID: 7334
 	public class IHealthBarDisplayClientFunction : EnableClientFunction
 	{
-		// Token: 0x060093E2 RID: 37858 RVA: 0x00156D88 File Offset: 0x00154F88
+		// Token: 0x06009BC0 RID: 39872 RVA: 0x001678D0 File Offset: 0x00165AD0
 		private IHealthBarDisplayClientFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093E3 RID: 37859 RVA: 0x00156DC0 File Offset: 0x00154FC0
+		// Token: 0x06009BC1 RID: 39873 RVA: 0x00167908 File Offset: 0x00165B08
 		public static IHealthBarDisplayClientFunction Create([Nullable(2)] IHealthBarDisplayClientFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093E4 RID: 37860 RVA: 0x00156DD3 File Offset: 0x00154FD3
+		// Token: 0x06009BC2 RID: 39874 RVA: 0x0016791B File Offset: 0x00165B1B
 		public static IHealthBarDisplayClientFunction CreateFromSetValue([Nullable(2)] IHealthBarDisplayClientFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093E5 RID: 37861 RVA: 0x00156DE6 File Offset: 0x00154FE6
+		// Token: 0x06009BC3 RID: 39875 RVA: 0x0016792E File Offset: 0x00165B2E
 		public new IHealthBarDisplayClientFunction_SetValue ToSetValue()
 		{
 			return new IHealthBarDisplayClientFunction_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002ED1 RID: 11985
-		// (get) Token: 0x060093E6 RID: 37862 RVA: 0x00156E11 File Offset: 0x00155011
-		// (set) Token: 0x060093E7 RID: 37863 RVA: 0x00156E3C File Offset: 0x0015503C
+		// Token: 0x170030F4 RID: 12532
+		// (get) Token: 0x06009BC4 RID: 39876 RVA: 0x00167959 File Offset: 0x00165B59
+		// (set) Token: 0x06009BC5 RID: 39877 RVA: 0x00167984 File Offset: 0x00165B84
 		public override EEnableClientFunctionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002ED2 RID: 11986
-		// (get) Token: 0x060093E8 RID: 37864 RVA: 0x00156E4A File Offset: 0x0015504A
-		// (set) Token: 0x060093E9 RID: 37865 RVA: 0x00156E75 File Offset: 0x00155075
+		// Token: 0x170030F5 RID: 12533
+		// (get) Token: 0x06009BC6 RID: 39878 RVA: 0x00167992 File Offset: 0x00165B92
+		// (set) Token: 0x06009BC7 RID: 39879 RVA: 0x001679BD File Offset: 0x00165BBD
 		public virtual int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002ED3 RID: 11987
-		// (get) Token: 0x060093EA RID: 37866 RVA: 0x00156E83 File Offset: 0x00155083
-		// (set) Token: 0x060093EB RID: 37867 RVA: 0x00156EAE File Offset: 0x001550AE
+		// Token: 0x170030F6 RID: 12534
+		// (get) Token: 0x06009BC8 RID: 39880 RVA: 0x001679CB File Offset: 0x00165BCB
+		// (set) Token: 0x06009BC9 RID: 39881 RVA: 0x001679F6 File Offset: 0x00165BF6
 		public virtual bool IsVisible
 		{
 			get
@@ -126,11 +124,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AC8 RID: 23240
+		// Token: 0x04005F5F RID: 24415
 		[Nullable(2)]
 		protected new IHealthBarDisplayClientFunction FbInstance;
 
-		// Token: 0x04005AC9 RID: 23241
+		// Token: 0x04005F60 RID: 24416
 		[Nullable(2)]
 		protected new IHealthBarDisplayClientFunction_SetValue PocoInterface;
 	}

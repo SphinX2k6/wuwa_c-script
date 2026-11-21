@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld
 {
-	// Token: 0x02007020 RID: 28704
+	// Token: 0x020061A1 RID: 24993
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemGenericOutletComponent : EntityComponent
 	{
-		// Token: 0x06045DC3 RID: 286147 RVA: 0x0115E8EC File Offset: 0x0115CAEC
+		// Token: 0x0603BF79 RID: 245625 RVA: 0x01108CE8 File Offset: 0x01106EE8
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld
 			return true;
 		}
 
-		// Token: 0x06045DC4 RID: 286148 RVA: 0x0115E920 File Offset: 0x0115CB20
+		// Token: 0x0603BF7A RID: 245626 RVA: 0x01108D1C File Offset: 0x01106F1C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.NewWorld
 			return true;
 		}
 
-		// Token: 0x06045DC5 RID: 286149 RVA: 0x0115E9B0 File Offset: 0x0115CBB0
+		// Token: 0x0603BF7B RID: 245627 RVA: 0x01108DAC File Offset: 0x01106FAC
 		protected override bool OnClear()
 		{
 			this.Config = null;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.NewWorld
 			return true;
 		}
 
-		// Token: 0x06045DC6 RID: 286150 RVA: 0x0115EA18 File Offset: 0x0115CC18
+		// Token: 0x0603BF7C RID: 245628 RVA: 0x01108E14 File Offset: 0x01107014
 		public void InitMatch(int relationId)
 		{
 			this.RelationId = new int?(relationId);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.NewWorld
 			component.SetActorLocation(matchLocation.ToUeVector(false), "[SceneItemGenericOutletComponent.InitMatch]", false);
 		}
 
-		// Token: 0x06045DC7 RID: 286151 RVA: 0x0115EB0C File Offset: 0x0115CD0C
+		// Token: 0x0603BF7D RID: 245629 RVA: 0x01108F08 File Offset: 0x01107108
 		private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			int pbDataId = handle.PbDataId;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld
 			}
 		}
 
-		// Token: 0x06045DC8 RID: 286152 RVA: 0x0115EB64 File Offset: 0x0115CD64
+		// Token: 0x0603BF7E RID: 245630 RVA: 0x01108F60 File Offset: 0x01107160
 		public bool TryMatch(Entity entity)
 		{
 			if (this.Config == null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld
 			return (tagComp == null || !tagComp.HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.状态.静默"])) && this.Config.Config.Type == EPullingFoundation.CategoryMatching && this.TryCategoryMatching(entity);
 		}
 
-		// Token: 0x06045DC9 RID: 286153 RVA: 0x0115EBD4 File Offset: 0x0115CDD4
+		// Token: 0x0603BF7F RID: 245631 RVA: 0x01108FD0 File Offset: 0x011071D0
 		private bool TryCategoryMatching(Entity entity)
 		{
 			CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.NewWorld
 			return false;
 		}
 
-		// Token: 0x06045DCA RID: 286154 RVA: 0x0115EC9C File Offset: 0x0115CE9C
+		// Token: 0x0603BF80 RID: 245632 RVA: 0x01109098 File Offset: 0x01107298
 		[return: Nullable(2)]
 		public global::Vector GetMatchLocation(Entity entity)
 		{
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld
 			return vector;
 		}
 
-		// Token: 0x06045DCB RID: 286155 RVA: 0x0115ED4C File Offset: 0x0115CF4C
+		// Token: 0x0603BF81 RID: 245633 RVA: 0x01109148 File Offset: 0x01107348
 		[return: Nullable(2)]
 		public global::Rotator GetMatchRotation(Entity entity)
 		{
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.NewWorld
 			return rotator;
 		}
 
-		// Token: 0x06045DCC RID: 286156 RVA: 0x0115EE30 File Offset: 0x0115D030
+		// Token: 0x0603BF82 RID: 245634 RVA: 0x0110922C File Offset: 0x0110742C
 		public unsafe void RequestMatchOutlet(Entity itemEntity, global::Vector targetLoc, global::Rotator targetRot)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.NewWorld
 			}, 0);
 		}
 
-		// Token: 0x06045DCD RID: 286157 RVA: 0x0115EFC4 File Offset: 0x0115D1C4
+		// Token: 0x0603BF83 RID: 245635 RVA: 0x011093C0 File Offset: 0x011075C0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -250,96 +250,98 @@ namespace CSharpScript.Game.NewWorld
 				return false;
 			}
 			SceneItemGenericOutletComponent sceneItemGenericOutletComponent = (SceneItemGenericOutletComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemGenericOutletComponent.Config == null)
 			{
-				if (sceneItemGenericOutletComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PullingFoundation>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemGenericOutletComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PropertyComp"))
-			{
-				if (sceneItemGenericOutletComponent.PropertyComp == null)
-				{
-					this.PropertyComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropertyComp), "PropertyComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemGenericOutletComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MatchResult") && sceneItemGenericOutletComponent.MatchResult != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<Entity, int>>(this.MatchResult), "MatchResult"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EntityInSocket"))
+			if (sceneItemGenericOutletComponent.ActorComp == null)
 			{
-				if (sceneItemGenericOutletComponent.EntityInSocket == null)
-				{
-					this.EntityInSocket = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.EntityInSocket), "EntityInSocket"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("RelationId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.RelationId = sceneItemGenericOutletComponent.RelationId;
+				return false;
 			}
+			if (sceneItemGenericOutletComponent.PropertyComp == null)
+			{
+				this.PropertyComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropertyComp), "PropertyComp"))
+			{
+				return false;
+			}
+			if (sceneItemGenericOutletComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			if (sceneItemGenericOutletComponent.MatchResult != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MatchResult), "MatchResult"))
+			{
+				return false;
+			}
+			if (sceneItemGenericOutletComponent.EntityInSocket == null)
+			{
+				this.EntityInSocket = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityInSocket), "EntityInSocket"))
+			{
+				return false;
+			}
+			this.RelationId = sceneItemGenericOutletComponent.RelationId;
 			return true;
 		}
 
-		// Token: 0x04024840 RID: 149568
+		// Token: 0x170070FE RID: 28926
+		// (get) Token: 0x0603BF84 RID: 245636 RVA: 0x011094E5 File Offset: 0x011076E5
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170070FF RID: 28927
+		// (get) Token: 0x0603BF85 RID: 245637 RVA: 0x011094E8 File Offset: 0x011076E8
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FAF6 RID: 129782
 		[Nullable(2)]
 		private PullingFoundation Config;
 
-		// Token: 0x04024841 RID: 149569
+		// Token: 0x0401FAF7 RID: 129783
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04024842 RID: 149570
+		// Token: 0x0401FAF8 RID: 129784
 		[Nullable(2)]
 		private SceneItemPropertyComponent PropertyComp;
 
-		// Token: 0x04024843 RID: 149571
+		// Token: 0x0401FAF9 RID: 129785
 		[Nullable(2)]
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04024844 RID: 149572
+		// Token: 0x0401FAFA RID: 129786
 		private readonly Dictionary<Entity, int> MatchResult = new Dictionary<Entity, int>();
 
-		// Token: 0x04024845 RID: 149573
+		// Token: 0x0401FAFB RID: 129787
 		[Nullable(2)]
 		public Entity EntityInSocket;
 
-		// Token: 0x04024846 RID: 149574
+		// Token: 0x0401FAFC RID: 129788
 		private int? RelationId;
 	}
 }

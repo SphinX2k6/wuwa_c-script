@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 {
-	// Token: 0x02006F11 RID: 28433
+	// Token: 0x02006092 RID: 24722
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DigitalScreenaView : UiTickViewBase
 	{
-		// Token: 0x0604533F RID: 283455 RVA: 0x0111F074 File Offset: 0x0111D274
+		// Token: 0x0603B4ED RID: 242925 RVA: 0x010C9014 File Offset: 0x010C7214
 		public DigitalScreenaView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045340 RID: 283456 RVA: 0x0111F0E4 File Offset: 0x0111D2E4
+		// Token: 0x0603B4EE RID: 242926 RVA: 0x010C9084 File Offset: 0x010C7284
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045341 RID: 283457 RVA: 0x0111F1B0 File Offset: 0x0111D3B0
+		// Token: 0x0603B4EF RID: 242927 RVA: 0x010C9150 File Offset: 0x010C7350
 		protected override void OnStart()
 		{
 			PlotModel.Instance.InDigitalScreen = true;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}, (float)((int)TimeUtil.Instance.SetTimeMillisecond((double)DigitalScreenModel.Instance.ExistTime)), null, null, true, 1f);
 		}
 
-		// Token: 0x06045342 RID: 283458 RVA: 0x0111F2E0 File Offset: 0x0111D4E0
+		// Token: 0x0603B4F0 RID: 242928 RVA: 0x010C9280 File Offset: 0x010C7480
 		protected override void OnBeforeHide()
 		{
 			PlotModel.Instance.InDigitalScreen = false;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			this.RemoveTimerCheck();
 		}
 
-		// Token: 0x06045343 RID: 283459 RVA: 0x0111F334 File Offset: 0x0111D534
+		// Token: 0x0603B4F1 RID: 242929 RVA: 0x010C92D4 File Offset: 0x010C74D4
 		private void RemoveTimerCheck()
 		{
 			if (this.TimerHandleCloseUi != null && TimerSystem.Instance.Has(this.TimerHandleCloseUi))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x06045344 RID: 283460 RVA: 0x0111F398 File Offset: 0x0111D598
+		// Token: 0x0603B4F2 RID: 242930 RVA: 0x010C9338 File Offset: 0x010C7538
 		protected override void OnTick(float deltaTime)
 		{
 			if (!this.IsTweening)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x06045345 RID: 283461 RVA: 0x0111F480 File Offset: 0x0111D680
+		// Token: 0x0603B4F3 RID: 242931 RVA: 0x010C9420 File Offset: 0x010C7620
 		private void OnUpdateInternal(float progress)
 		{
 			ULGUIPlayTween_Int ulguiplayTween_Int = this.TextPlayTweenComp.GetPlayTween() as ULGUIPlayTween_Int;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x06045346 RID: 283462 RVA: 0x0111F5D0 File Offset: 0x0111D7D0
+		// Token: 0x0603B4F4 RID: 242932 RVA: 0x010C9570 File Offset: 0x010C7770
 		private void InitInfo()
 		{
 			this.CurLine = -1;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			text4.SetCustomMaterialScalarParameter(DigitalScreenaView.factor, DigitalScreenModel.Instance.TextFactor);
 		}
 
-		// Token: 0x06045347 RID: 283463 RVA: 0x0111F70C File Offset: 0x0111D90C
+		// Token: 0x0603B4F5 RID: 242933 RVA: 0x010C96AC File Offset: 0x010C78AC
 		private void SetTweenAndPlay(int from, int to, float time, int startDelay)
 		{
 			ULGUIPlayTweenComponent textPlayTweenComp = this.TextPlayTweenComp;
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x06045348 RID: 283464 RVA: 0x0111F7DC File Offset: 0x0111D9DC
+		// Token: 0x0603B4F6 RID: 242934 RVA: 0x010C977C File Offset: 0x010C797C
 		private void SetMultiLineTextAnimTimer()
 		{
 			this.TimerHandleNextLine = TimerSystem.Instance.Delay(delegate(float _)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}, (float)((int)TimeUtil.Instance.SetTimeMillisecond((double)DigitalScreenModel.Instance.DuringTimes[this.CurLine])), null, null, true, 1f);
 		}
 
-		// Token: 0x06045349 RID: 283465 RVA: 0x0111F82C File Offset: 0x0111DA2C
+		// Token: 0x0603B4F7 RID: 242935 RVA: 0x010C97CC File Offset: 0x010C79CC
 		private void SetMultiLineWaitingSkipTimer()
 		{
 			if (this.CurLine >= this.LineCount)
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}, (float)((int)TimeUtil.Instance.SetTimeMillisecond((double)DigitalScreenModel.Instance.DelayTimes[this.CurLine])), null, null, true, 1f);
 		}
 
-		// Token: 0x0604534A RID: 283466 RVA: 0x0111F900 File Offset: 0x0111DB00
+		// Token: 0x0603B4F8 RID: 242936 RVA: 0x010C98A0 File Offset: 0x010C7AA0
 		private void ResumeNextLine()
 		{
 			UUIText text = base.GetText(1);
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			this.SetMultiLineTextAnimTimer();
 		}
 
-		// Token: 0x0604534B RID: 283467 RVA: 0x0111FA0C File Offset: 0x0111DC0C
+		// Token: 0x0603B4F9 RID: 242937 RVA: 0x010C99AC File Offset: 0x010C7BAC
 		protected override UniTask OnBeforeHideAsync()
 		{
 			DigitalScreenaView.<OnBeforeHideAsync>d__37 <OnBeforeHideAsync>d__;
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604534C RID: 283468 RVA: 0x0111FA4F File Offset: 0x0111DC4F
+		// Token: 0x0603B4FA RID: 242938 RVA: 0x010C99EF File Offset: 0x010C7BEF
 		protected override void OnBeforeDestroy()
 		{
 			if (this.OnUpdateDelegate != null)
@@ -347,100 +347,100 @@ namespace CSharpScript.Game.LevelGamePlay.DigitalScreen
 			}
 		}
 
-		// Token: 0x04024124 RID: 147748
+		// Token: 0x0401F3D9 RID: 127961
 		private static readonly FName factor = new FName("factor");
 
-		// Token: 0x04024125 RID: 147749
+		// Token: 0x0401F3DA RID: 127962
 		private const string FONTSUFFIX = "</size>";
 
-		// Token: 0x04024126 RID: 147750
+		// Token: 0x0401F3DB RID: 127963
 		private const string LOOP_DIGITAL_SCREEN = "play_ui_digital_screen";
 
-		// Token: 0x04024127 RID: 147751
+		// Token: 0x0401F3DC RID: 127964
 		[Nullable(2)]
 		private ULGUIPlayTweenComponent TextPlayTweenComp;
 
-		// Token: 0x04024128 RID: 147752
+		// Token: 0x0401F3DD RID: 127965
 		private int CurLine;
 
-		// Token: 0x04024129 RID: 147753
+		// Token: 0x0401F3DE RID: 127966
 		private int LineCount = 1;
 
-		// Token: 0x0402412A RID: 147754
+		// Token: 0x0401F3DF RID: 127967
 		private int From = 1;
 
-		// Token: 0x0402412B RID: 147755
+		// Token: 0x0401F3E0 RID: 127968
 		private string LeftText = "";
 
-		// Token: 0x0402412C RID: 147756
+		// Token: 0x0401F3E1 RID: 127969
 		private string MiddleText = "";
 
-		// Token: 0x0402412D RID: 147757
+		// Token: 0x0401F3E2 RID: 127970
 		private int ContentPos;
 
-		// Token: 0x0402412E RID: 147758
+		// Token: 0x0401F3E3 RID: 127971
 		private string LeftTextWithLine = "";
 
-		// Token: 0x0402412F RID: 147759
+		// Token: 0x0401F3E4 RID: 127972
 		private string LeftTextWithoutLine = "";
 
-		// Token: 0x04024130 RID: 147760
+		// Token: 0x0401F3E5 RID: 127973
 		private string MiddleTextWithLine = "";
 
-		// Token: 0x04024131 RID: 147761
+		// Token: 0x0401F3E6 RID: 127974
 		private string MiddleTextWithoutLine = "";
 
-		// Token: 0x04024132 RID: 147762
+		// Token: 0x0401F3E7 RID: 127975
 		private bool IsTweening;
 
-		// Token: 0x04024133 RID: 147763
+		// Token: 0x0401F3E8 RID: 127976
 		private bool IsTextWithLine;
 
-		// Token: 0x04024134 RID: 147764
+		// Token: 0x0401F3E9 RID: 127977
 		private int Progress;
 
-		// Token: 0x04024135 RID: 147765
+		// Token: 0x0401F3EA RID: 127978
 		private int TextStart;
 
-		// Token: 0x04024136 RID: 147766
+		// Token: 0x0401F3EB RID: 127979
 		private string FontPrefix = "";
 
-		// Token: 0x04024137 RID: 147767
+		// Token: 0x0401F3EC RID: 127980
 		private float TickDeltaTime;
 
-		// Token: 0x04024138 RID: 147768
+		// Token: 0x0401F3ED RID: 127981
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04024139 RID: 147769
+		// Token: 0x0401F3EE RID: 127982
 		[Nullable(2)]
 		private TimerHandle TimerHandleCloseUi;
 
-		// Token: 0x0402413A RID: 147770
+		// Token: 0x0401F3EF RID: 127983
 		[Nullable(2)]
 		private TimerHandle TimerHandleNextLine;
 
-		// Token: 0x0402413B RID: 147771
+		// Token: 0x0401F3F0 RID: 127984
 		[Nullable(2)]
 		private Action<float> OnUpdateDelegate;
 
-		// Token: 0x0200CD6D RID: 52589
+		// Token: 0x0200B95F RID: 47455
 		[NullableContext(0)]
 		private class EDigitalScreenView
 		{
-			// Token: 0x0403DE8D RID: 253581
+			// Token: 0x040392BC RID: 234172
 			public const int ButtonMask = 0;
 
-			// Token: 0x0403DE8E RID: 253582
+			// Token: 0x040392BD RID: 234173
 			public const int TextName = 1;
 
-			// Token: 0x0403DE8F RID: 253583
+			// Token: 0x040392BE RID: 234174
 			public const int TextList = 2;
 
-			// Token: 0x0403DE90 RID: 253584
+			// Token: 0x040392BF RID: 234175
 			public const int TextureBg = 3;
 
-			// Token: 0x0403DE91 RID: 253585
+			// Token: 0x040392C0 RID: 234176
 			public const int LogoIcon = 4;
 		}
 	}

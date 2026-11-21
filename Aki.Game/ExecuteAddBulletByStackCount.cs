@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002F93 RID: 12179
+// Token: 0x020024E7 RID: 9447
 [NullableContext(1)]
 [Nullable(0)]
 public class ExecuteAddBulletByStackCount : PeriodExecution
 {
-	// Token: 0x06019DAF RID: 105903 RVA: 0x006C02C7 File Offset: 0x006BE4C7
+	// Token: 0x060176C1 RID: 95937 RVA: 0x006E6B97 File Offset: 0x006E4D97
 	public ExecuteAddBulletByStackCount(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DB0 RID: 105904 RVA: 0x006C02D0 File Offset: 0x006BE4D0
+	// Token: 0x060176C2 RID: 95938 RVA: 0x006E6BA0 File Offset: 0x006E4DA0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		this.TargetType = EExecutionTargetType.Self;
@@ -28,12 +27,11 @@ public class ExecuteAddBulletByStackCount : PeriodExecution
 		this.Ids = new string[Math.Max(0, extraEffectParameters_.Length - 1)][];
 		for (int i = 1; i < extraEffectParameters_.Length; i++)
 		{
-			this.Ids[i - 1] = (from v in extraEffectParameters_[i].Split('#', StringSplitOptions.None)
-			select v.Trim()).ToArray<string>();
+			this.Ids[i - 1] = Array.ConvertAll<string, string>(extraEffectParameters_[i].Split('#', StringSplitOptions.None), (string v) => v.Trim());
 		}
 	}
 
-	// Token: 0x06019DB1 RID: 105905 RVA: 0x006C0378 File Offset: 0x006BE578
+	// Token: 0x060176C3 RID: 95939 RVA: 0x006E6C40 File Offset: 0x006E4E40
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -91,7 +89,7 @@ public class ExecuteAddBulletByStackCount : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DB2 RID: 105906 RVA: 0x006C04F0 File Offset: 0x006BE6F0
+	// Token: 0x060176C4 RID: 95940 RVA: 0x006E6DB8 File Offset: 0x006E4FB8
 	[NullableContext(2)]
 	protected IBuffComponent GetBulletTarget()
 	{
@@ -117,7 +115,7 @@ public class ExecuteAddBulletByStackCount : PeriodExecution
 		return result;
 	}
 
-	// Token: 0x06019DB3 RID: 105907 RVA: 0x006C0544 File Offset: 0x006BE744
+	// Token: 0x060176C5 RID: 95941 RVA: 0x006E6E0C File Offset: 0x006E500C
 	[NullableContext(2)]
 	protected IBuffComponent GetBuffHolderSkillTarget()
 	{
@@ -153,7 +151,7 @@ public class ExecuteAddBulletByStackCount : PeriodExecution
 		return entity2.CheckGetComponent<BaseBuffComponent>();
 	}
 
-	// Token: 0x0400C353 RID: 50003
+	// Token: 0x0400C6FC RID: 50940
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,6 +160,6 @@ public class ExecuteAddBulletByStackCount : PeriodExecution
 	})]
 	public string[][] Ids;
 
-	// Token: 0x0400C354 RID: 50004
+	// Token: 0x0400C6FD RID: 50941
 	public EPassiveEffectTargetType BulletPosType;
 }

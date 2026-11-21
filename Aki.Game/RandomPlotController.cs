@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay.LevelConditions;
 
-// Token: 0x0200273B RID: 10043
+// Token: 0x02001C26 RID: 7206
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class RandomPlotController : ControllerBase
 {
-	// Token: 0x060149B2 RID: 84402 RVA: 0x00537120 File Offset: 0x00535320
+	// Token: 0x06011E94 RID: 73364 RVA: 0x00545E2C File Offset: 0x0054402C
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
@@ -28,7 +28,7 @@ public class RandomPlotController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060149B3 RID: 84403 RVA: 0x005371B4 File Offset: 0x005353B4
+	// Token: 0x06011E95 RID: 73365 RVA: 0x00545EC0 File Offset: 0x005440C0
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
@@ -38,14 +38,14 @@ public class RandomPlotController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060149B4 RID: 84404 RVA: 0x00537202 File Offset: 0x00535402
+	// Token: 0x06011E96 RID: 73366 RVA: 0x00545F0E File Offset: 0x0054410E
 	protected override bool OnLeaveLevel()
 	{
 		RandomPlotModel.Instance.RandomPlotMap.Clear();
 		return true;
 	}
 
-	// Token: 0x060149B5 RID: 84405 RVA: 0x00537214 File Offset: 0x00535414
+	// Token: 0x06011E97 RID: 73367 RVA: 0x00545F20 File Offset: 0x00544120
 	private void OnInstanceChange(int oldInstanceId, int newInstanceId)
 	{
 		if (oldInstanceId == newInstanceId)
@@ -91,7 +91,7 @@ public class RandomPlotController : ControllerBase
 		}
 	}
 
-	// Token: 0x060149B6 RID: 84406 RVA: 0x00537350 File Offset: 0x00535550
+	// Token: 0x06011E98 RID: 73368 RVA: 0x0054605C File Offset: 0x0054425C
 	private void OnConditionPass([Nullable(new byte[]
 	{
 		2,
@@ -121,7 +121,7 @@ public class RandomPlotController : ControllerBase
 		LevelConditionRegistry.Instance.RegisterConditionGroup(conditionGroupId, callback);
 	}
 
-	// Token: 0x060149B7 RID: 84407 RVA: 0x005373D0 File Offset: 0x005355D0
+	// Token: 0x06011E99 RID: 73369 RVA: 0x005460DC File Offset: 0x005442DC
 	public void PlayRandomPlot(int randomPlotId)
 	{
 		RandomPlotItem randomPlotItem;
@@ -138,7 +138,7 @@ public class RandomPlotController : ControllerBase
 		randomPlotItem.PlayRandomPlot();
 	}
 
-	// Token: 0x060149B8 RID: 84408 RVA: 0x00537428 File Offset: 0x00535628
+	// Token: 0x06011E9A RID: 73370 RVA: 0x00546134 File Offset: 0x00544334
 	private void ClearAllCondition()
 	{
 		Dictionary<int, IRandomPlotCondition> instanceConditionMap = RandomPlotModel.Instance.InstanceConditionMap;
@@ -153,8 +153,8 @@ public class RandomPlotController : ControllerBase
 		RandomPlotModel.Instance.InstanceConditionMap = null;
 	}
 
-	// Token: 0x17001AF8 RID: 6904
-	// (get) Token: 0x060149B9 RID: 84409 RVA: 0x005374AC File Offset: 0x005356AC
+	// Token: 0x17001B30 RID: 6960
+	// (get) Token: 0x06011E9B RID: 73371 RVA: 0x005461B8 File Offset: 0x005443B8
 	public static RandomPlotController Instance
 	{
 		get
@@ -163,7 +163,7 @@ public class RandomPlotController : ControllerBase
 		}
 	}
 
-	// Token: 0x060149BA RID: 84410 RVA: 0x005374B3 File Offset: 0x005356B3
+	// Token: 0x06011E9C RID: 73372 RVA: 0x005461BF File Offset: 0x005443BF
 	public static RandomPlotController GetOrCreateInstance()
 	{
 		if (RandomPlotController._Instance == null)
@@ -173,7 +173,7 @@ public class RandomPlotController : ControllerBase
 		return RandomPlotController._Instance;
 	}
 
-	// Token: 0x060149BB RID: 84411 RVA: 0x005374C7 File Offset: 0x005356C7
+	// Token: 0x06011E9D RID: 73373 RVA: 0x005461D3 File Offset: 0x005443D3
 	public static bool CreateInstance()
 	{
 		if (RandomPlotController._Instance != null)
@@ -184,24 +184,24 @@ public class RandomPlotController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060149BC RID: 84412 RVA: 0x005374DD File Offset: 0x005356DD
+	// Token: 0x06011E9E RID: 73374 RVA: 0x005461E9 File Offset: 0x005443E9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060149BD RID: 84413 RVA: 0x005374DF File Offset: 0x005356DF
+	// Token: 0x06011E9F RID: 73375 RVA: 0x005461EB File Offset: 0x005443EB
 	public static void ResetStaticDefaultValue()
 	{
 		RandomPlotController._Instance = null;
 	}
 
-	// Token: 0x060149BE RID: 84414 RVA: 0x005374E7 File Offset: 0x005356E7
+	// Token: 0x06011EA0 RID: 73376 RVA: 0x005461F3 File Offset: 0x005443F3
 	static RandomPlotController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RandomPlotController.CreateStaticDefaultValue), new Action(RandomPlotController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009AD5 RID: 39637
+	// Token: 0x04009C2D RID: 39981
 	[Nullable(2)]
 	private static RandomPlotController _Instance;
 }

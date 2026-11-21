@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C7D RID: 7293
+// Token: 0x0200113C RID: 4412
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaButton : UiPanelBase
 {
-	// Token: 0x0600DBF0 RID: 56304 RVA: 0x00332F06 File Offset: 0x00331106
+	// Token: 0x0600B006 RID: 45062 RVA: 0x0033E366 File Offset: 0x0033C566
 	public GachaButton(int times)
 	{
 		this.Times = times;
 	}
 
-	// Token: 0x0600DBF1 RID: 56305 RVA: 0x00332F18 File Offset: 0x00331118
+	// Token: 0x0600B007 RID: 45063 RVA: 0x0033E378 File Offset: 0x0033C578
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -57,7 +57,7 @@ public class GachaButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DBF2 RID: 56306 RVA: 0x003330C8 File Offset: 0x003312C8
+	// Token: 0x0600B008 RID: 45064 RVA: 0x0033E528 File Offset: 0x0033C728
 	private void GachaBtn()
 	{
 		ProtoGachaInfo gachaInfo = this.GachaPoolData.GachaInfo;
@@ -128,7 +128,7 @@ public class GachaButton : UiPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew4);
 	}
 
-	// Token: 0x0600DBF3 RID: 56307 RVA: 0x003332FC File Offset: 0x003314FC
+	// Token: 0x0600B009 RID: 45065 RVA: 0x0033E75C File Offset: 0x0033C95C
 	private void ExChangeSecondCurrency(CommonExchangeData exchangeData, int exChangeTime, int needSecondCount)
 	{
 		int commonItemCount = InventoryModel.Instance.GetCommonItemCount(exchangeData.GetSrcItemId(), 0);
@@ -164,7 +164,7 @@ public class GachaButton : UiPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600DBF4 RID: 56308 RVA: 0x00333414 File Offset: 0x00331614
+	// Token: 0x0600B00A RID: 45066 RVA: 0x0033E874 File Offset: 0x0033CA74
 	private void ExChangeFirstCurrency(CommonExchangeData exchangeData, int exChangeTime, int needSecondCount)
 	{
 		if (InventoryModel.Instance.GetCommonItemCount(exchangeData.GetSrcItemId(), 0) >= needSecondCount)
@@ -175,7 +175,7 @@ public class GachaButton : UiPanelBase
 		ConfirmBoxController.Instance.ShowFirstCurrencyConfirm();
 	}
 
-	// Token: 0x0600DBF5 RID: 56309 RVA: 0x00333448 File Offset: 0x00331648
+	// Token: 0x0600B00B RID: 45067 RVA: 0x0033E8A8 File Offset: 0x0033CAA8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaButton.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -186,7 +186,7 @@ public class GachaButton : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DBF6 RID: 56310 RVA: 0x0033348C File Offset: 0x0033168C
+	// Token: 0x0600B00C RID: 45068 RVA: 0x0033E8EC File Offset: 0x0033CAEC
 	public void Refresh(GachaPoolData data, EffectiveGachaButtonInfo buttonInfo)
 	{
 		this.GachaPoolData = data;
@@ -229,7 +229,7 @@ public class GachaButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DBF7 RID: 56311 RVA: 0x0033363C File Offset: 0x0033183C
+	// Token: 0x0600B00D RID: 45069 RVA: 0x0033EA9C File Offset: 0x0033CC9C
 	private void RefreshTag(EffectiveGachaButtonInfo buttonInfo)
 	{
 		UUIItem item = base.GetItem(9);
@@ -263,53 +263,53 @@ public class GachaButton : UiPanelBase
 		});
 	}
 
-	// Token: 0x040064EA RID: 25834
+	// Token: 0x040065BC RID: 26044
 	private const long CLICKCD = 1000L;
 
-	// Token: 0x040064EB RID: 25835
+	// Token: 0x040065BD RID: 26045
 	[Nullable(2)]
 	private GachaPoolData GachaPoolData;
 
-	// Token: 0x040064EC RID: 25836
+	// Token: 0x040065BE RID: 26046
 	public readonly int Times;
 
-	// Token: 0x040064ED RID: 25837
+	// Token: 0x040065BF RID: 26047
 	private int ConsumeCount;
 
-	// Token: 0x040064EE RID: 25838
+	// Token: 0x040065C0 RID: 26048
 	private double LastOpenTime;
 
-	// Token: 0x040064EF RID: 25839
+	// Token: 0x040065C1 RID: 26049
 	[Nullable(2)]
 	private GachaDiscountTagItem TagItemA;
 
-	// Token: 0x040064F0 RID: 25840
+	// Token: 0x040065C2 RID: 26050
 	[Nullable(2)]
 	private GachaDiscountTagItem TagItemB;
 
-	// Token: 0x0200823D RID: 33341
+	// Token: 0x020073C6 RID: 29638
 	[NullableContext(0)]
 	private enum EGachaButton
 	{
-		// Token: 0x0402A7DE RID: 174046
+		// Token: 0x04025B04 RID: 154372
 		GachaBtn,
-		// Token: 0x0402A7DF RID: 174047
+		// Token: 0x04025B05 RID: 154373
 		ConsumeTexture,
-		// Token: 0x0402A7E0 RID: 174048
+		// Token: 0x04025B06 RID: 154374
 		ConsumeText,
-		// Token: 0x0402A7E1 RID: 174049
+		// Token: 0x04025B07 RID: 154375
 		GachaText,
-		// Token: 0x0402A7E2 RID: 174050
+		// Token: 0x04025B08 RID: 154376
 		DiscountItem,
-		// Token: 0x0402A7E3 RID: 174051
+		// Token: 0x04025B09 RID: 154377
 		DiscountText,
-		// Token: 0x0402A7E4 RID: 174052
+		// Token: 0x04025B0A RID: 154378
 		DiscountSprite,
-		// Token: 0x0402A7E5 RID: 174053
+		// Token: 0x04025B0B RID: 154379
 		PanelNum02,
-		// Token: 0x0402A7E6 RID: 174054
+		// Token: 0x04025B0C RID: 154380
 		TextNum02,
-		// Token: 0x0402A7E7 RID: 174055
+		// Token: 0x04025B0D RID: 154381
 		PanelTag
 	}
 }

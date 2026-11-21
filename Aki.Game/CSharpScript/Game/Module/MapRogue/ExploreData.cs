@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055A8 RID: 21928
+	// Token: 0x0200457E RID: 17790
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExploreData : IExploreData
 	{
-		// Token: 0x1700868A RID: 34442
-		// (get) Token: 0x06037E15 RID: 228885 RVA: 0x00D3DC49 File Offset: 0x00D3BE49
-		// (set) Token: 0x06037E16 RID: 228886 RVA: 0x00D3DC51 File Offset: 0x00D3BE51
+		// Token: 0x17005A51 RID: 23121
+		// (get) Token: 0x0602CD13 RID: 183571 RVA: 0x00C8B991 File Offset: 0x00C89B91
+		// (set) Token: 0x0602CD14 RID: 183572 RVA: 0x00C8B999 File Offset: 0x00C89B99
 		public string TitleId { get; set; }
 
-		// Token: 0x1700868B RID: 34443
-		// (get) Token: 0x06037E17 RID: 228887 RVA: 0x00D3DC5A File Offset: 0x00D3BE5A
-		// (set) Token: 0x06037E18 RID: 228888 RVA: 0x00D3DC62 File Offset: 0x00D3BE62
+		// Token: 0x17005A52 RID: 23122
+		// (get) Token: 0x0602CD15 RID: 183573 RVA: 0x00C8B9A2 File Offset: 0x00C89BA2
+		// (set) Token: 0x0602CD16 RID: 183574 RVA: 0x00C8B9AA File Offset: 0x00C89BAA
 		public string ValueTxt { get; set; }
 	}
 }

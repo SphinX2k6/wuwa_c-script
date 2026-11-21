@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000198 RID: 408
+	// Token: 0x0200019C RID: 412
 	[NetMessage(EMessageId.BirthDayCardRoleRequest)]
 	public sealed class BirthDayCardRoleRequest : IMessage<BirthDayCardRoleRequest>, IMessage, IEquatable<BirthDayCardRoleRequest>, IDeepCloneable<BirthDayCardRoleRequest>, IBufferMessage
 	{
-		// Token: 0x06003061 RID: 12385 RVA: 0x0007B849 File Offset: 0x00079A49
+		// Token: 0x060030EE RID: 12526 RVA: 0x0007CFB5 File Offset: 0x0007B1B5
 		[NullableContext(1)]
 		public static BirthDayCardRoleRequest Create()
 		{
 			return new BirthDayCardRoleRequest();
 		}
 
-		// Token: 0x17000776 RID: 1910
-		// (get) Token: 0x06003062 RID: 12386 RVA: 0x0007B850 File Offset: 0x00079A50
+		// Token: 0x1700078F RID: 1935
+		// (get) Token: 0x060030EF RID: 12527 RVA: 0x0007CFBC File Offset: 0x0007B1BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000777 RID: 1911
-		// (get) Token: 0x06003063 RID: 12387 RVA: 0x0007B853 File Offset: 0x00079A53
+		// Token: 0x17000790 RID: 1936
+		// (get) Token: 0x060030F0 RID: 12528 RVA: 0x0007CFBF File Offset: 0x0007B1BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003064 RID: 12388 RVA: 0x0007B85A File Offset: 0x00079A5A
+		// Token: 0x060030F1 RID: 12529 RVA: 0x0007CFC6 File Offset: 0x0007B1C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BirthDayCardRoleRequest()
 		{
 		}
 
-		// Token: 0x06003065 RID: 12389 RVA: 0x0007B862 File Offset: 0x00079A62
+		// Token: 0x060030F2 RID: 12530 RVA: 0x0007CFCE File Offset: 0x0007B1CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BirthDayCardRoleRequest(BirthDayCardRoleRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003066 RID: 12390 RVA: 0x0007B893 File Offset: 0x00079A93
+		// Token: 0x060030F3 RID: 12531 RVA: 0x0007CFFF File Offset: 0x0007B1FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BirthDayCardRoleRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new BirthDayCardRoleRequest(this);
 		}
 
-		// Token: 0x17000778 RID: 1912
-		// (get) Token: 0x06003067 RID: 12391 RVA: 0x0007B89B File Offset: 0x00079A9B
-		// (set) Token: 0x06003068 RID: 12392 RVA: 0x0007B8A3 File Offset: 0x00079AA3
+		// Token: 0x17000791 RID: 1937
+		// (get) Token: 0x060030F4 RID: 12532 RVA: 0x0007D007 File Offset: 0x0007B207
+		// (set) Token: 0x060030F5 RID: 12533 RVA: 0x0007D00F File Offset: 0x0007B20F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleID
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000779 RID: 1913
-		// (get) Token: 0x06003069 RID: 12393 RVA: 0x0007B8AC File Offset: 0x00079AAC
-		// (set) Token: 0x0600306A RID: 12394 RVA: 0x0007B8B4 File Offset: 0x00079AB4
+		// Token: 0x17000792 RID: 1938
+		// (get) Token: 0x060030F6 RID: 12534 RVA: 0x0007D018 File Offset: 0x0007B218
+		// (set) Token: 0x060030F7 RID: 12535 RVA: 0x0007D020 File Offset: 0x0007B220
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int YearId
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600306B RID: 12395 RVA: 0x0007B8BD File Offset: 0x00079ABD
+		// Token: 0x060030F8 RID: 12536 RVA: 0x0007D029 File Offset: 0x0007B229
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BirthDayCardRoleRequest);
 		}
 
-		// Token: 0x0600306C RID: 12396 RVA: 0x0007B8CB File Offset: 0x00079ACB
+		// Token: 0x060030F9 RID: 12537 RVA: 0x0007D037 File Offset: 0x0007B237
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BirthDayCardRoleRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleID == other.RoleID && this.YearId == other.YearId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600306D RID: 12397 RVA: 0x0007B90C File Offset: 0x00079B0C
+		// Token: 0x060030FA RID: 12538 RVA: 0x0007D078 File Offset: 0x0007B278
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600306E RID: 12398 RVA: 0x0007B964 File Offset: 0x00079B64
+		// Token: 0x060030FB RID: 12539 RVA: 0x0007D0D0 File Offset: 0x0007B2D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600306F RID: 12399 RVA: 0x0007B971 File Offset: 0x00079B71
+		// Token: 0x060030FC RID: 12540 RVA: 0x0007D0DD File Offset: 0x0007B2DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003070 RID: 12400 RVA: 0x0007B97C File Offset: 0x00079B7C
+		// Token: 0x060030FD RID: 12541 RVA: 0x0007D0E8 File Offset: 0x0007B2E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.RoleID != 0)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.RoleID);
 			}
 			if (this.YearId != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(104);
 				output.WriteInt32(this.YearId);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003071 RID: 12401 RVA: 0x0007B9D8 File Offset: 0x00079BD8
+		// Token: 0x060030FE RID: 12542 RVA: 0x0007D144 File Offset: 0x0007B344
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003072 RID: 12402 RVA: 0x0007BA30 File Offset: 0x00079C30
+		// Token: 0x060030FF RID: 12543 RVA: 0x0007D19C File Offset: 0x0007B39C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BirthDayCardRoleRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06003073 RID: 12403 RVA: 0x0007BA80 File Offset: 0x00079C80
+		// Token: 0x06003100 RID: 12544 RVA: 0x0007D1EC File Offset: 0x0007B3EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003074 RID: 12404 RVA: 0x0007BA8C File Offset: 0x00079C8C
+		// Token: 0x06003101 RID: 12545 RVA: 0x0007D1F8 File Offset: 0x0007B3F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 104U)
+				if (num != 40U)
 				{
-					if (num != 112U)
+					if (num != 104U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040028F0 RID: 10480
+		// Token: 0x0400296B RID: 10603
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040028F1 RID: 10481
-		public const int RoleIDFieldNumber = 13;
+		// Token: 0x0400296C RID: 10604
+		public const int RoleIDFieldNumber = 5;
 
-		// Token: 0x040028F2 RID: 10482
+		// Token: 0x0400296D RID: 10605
 		private int roleID_;
 
-		// Token: 0x040028F3 RID: 10483
-		public const int YearIdFieldNumber = 14;
+		// Token: 0x0400296E RID: 10606
+		public const int YearIdFieldNumber = 13;
 
-		// Token: 0x040028F4 RID: 10484
+		// Token: 0x0400296F RID: 10607
 		private int yearId_;
 	}
 }

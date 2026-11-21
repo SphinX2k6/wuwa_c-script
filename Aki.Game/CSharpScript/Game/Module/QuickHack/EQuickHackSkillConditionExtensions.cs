@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F8C RID: 20364
+	// Token: 0x02003F55 RID: 16213
 	public static class EQuickHackSkillConditionExtensions
 	{
-		// Token: 0x0603425E RID: 213598 RVA: 0x00C3D1EC File Offset: 0x00C3B3EC
+		// Token: 0x060290CC RID: 168140 RVA: 0x00B86998 File Offset: 0x00B84B98
 		public static string ToEnumString(this EQuickHackSkillCondition value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return result;
 		}
 
-		// Token: 0x0603425F RID: 213599 RVA: 0x00C3D258 File Offset: 0x00C3B458
+		// Token: 0x060290CD RID: 168141 RVA: 0x00B86A04 File Offset: 0x00B84C04
 		public static EQuickHackSkillCondition FromString(string name)
 		{
 			EQuickHackSkillCondition result;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return result;
 		}
 
-		// Token: 0x06034260 RID: 213600 RVA: 0x00C3D284 File Offset: 0x00C3B484
+		// Token: 0x060290CE RID: 168142 RVA: 0x00B86A30 File Offset: 0x00B84C30
 		public static bool TryFromString(string name, out EQuickHackSkillCondition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x06034261 RID: 213601 RVA: 0x00C3D310 File Offset: 0x00C3B510
+		// Token: 0x060290CF RID: 168143 RVA: 0x00B86ABC File Offset: 0x00B84CBC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			};
 		}
 
-		// Token: 0x06034262 RID: 213602 RVA: 0x00C3D348 File Offset: 0x00C3B548
+		// Token: 0x060290D0 RID: 168144 RVA: 0x00B86AF4 File Offset: 0x00B84CF4
 		public static EQuickHackSkillCondition[] GetValues()
 		{
 			return new EQuickHackSkillCondition[]
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			};
 		}
 
-		// Token: 0x06034263 RID: 213603 RVA: 0x00C3D35B File Offset: 0x00C3B55B
+		// Token: 0x060290D1 RID: 168145 RVA: 0x00B86B07 File Offset: 0x00B84D07
 		public static string[] GetNames()
 		{
 			return new string[]

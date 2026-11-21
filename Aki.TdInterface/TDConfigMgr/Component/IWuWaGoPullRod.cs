@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000813 RID: 2067
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008B6 RID: 2230
 	public class IWuWaGoPullRod : IWuWaGoEntityBase
 	{
-		// Token: 0x06002CE3 RID: 11491 RVA: 0x00074680 File Offset: 0x00072880
+		// Token: 0x06003013 RID: 12307 RVA: 0x0007B9E4 File Offset: 0x00079BE4
 		private IWuWaGoPullRod_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002CE4 RID: 11492 RVA: 0x000746B8 File Offset: 0x000728B8
+		// Token: 0x06003014 RID: 12308 RVA: 0x0007BA1C File Offset: 0x00079C1C
 		public static IWuWaGoPullRod Create([Nullable(2)] IWuWaGoPullRod instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CE5 RID: 11493 RVA: 0x000746CB File Offset: 0x000728CB
+		// Token: 0x06003015 RID: 12309 RVA: 0x0007BA2F File Offset: 0x00079C2F
 		public static IWuWaGoPullRod CreateFromSetValue([Nullable(2)] IWuWaGoPullRod_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CE6 RID: 11494 RVA: 0x000746DE File Offset: 0x000728DE
+		// Token: 0x06003016 RID: 12310 RVA: 0x0007BA42 File Offset: 0x00079C42
 		public new IWuWaGoPullRod_SetValue ToSetValue()
 		{
 			return new IWuWaGoPullRod_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BB8 RID: 3000
-		// (get) Token: 0x06002CE7 RID: 11495 RVA: 0x000746FD File Offset: 0x000728FD
-		// (set) Token: 0x06002CE8 RID: 11496 RVA: 0x00074728 File Offset: 0x00072928
+		// Token: 0x17000C7B RID: 3195
+		// (get) Token: 0x06003017 RID: 12311 RVA: 0x0007BA61 File Offset: 0x00079C61
+		// (set) Token: 0x06003018 RID: 12312 RVA: 0x0007BA8C File Offset: 0x00079C8C
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BB9 RID: 3001
-		// (get) Token: 0x06002CE9 RID: 11497 RVA: 0x00074738 File Offset: 0x00072938
-		// (set) Token: 0x06002CEA RID: 11498 RVA: 0x000747CB File Offset: 0x000729CB
+		// Token: 0x17000C7C RID: 3196
+		// (get) Token: 0x06003019 RID: 12313 RVA: 0x0007BA9C File Offset: 0x00079C9C
+		// (set) Token: 0x0600301A RID: 12314 RVA: 0x0007BB2F File Offset: 0x00079D2F
 		public virtual List<IWuWaGoInteractStateAction> InteractConfig
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001DB6 RID: 7606
+		// Token: 0x04001FC2 RID: 8130
 		[Nullable(2)]
 		protected new IWuWaGoPullRod FbInstance;
 
-		// Token: 0x04001DB7 RID: 7607
+		// Token: 0x04001FC3 RID: 8131
 		[Nullable(2)]
 		protected new IWuWaGoPullRod_SetValue PocoInterface;
 
-		// Token: 0x04001DB8 RID: 7608
+		// Token: 0x04001FC4 RID: 8132
 		private List<IWuWaGoInteractStateAction> _InteractConfigCache;
 
-		// Token: 0x04001DB9 RID: 7609
+		// Token: 0x04001FC5 RID: 8133
 		private bool _InteractConfigInited;
 	}
 }

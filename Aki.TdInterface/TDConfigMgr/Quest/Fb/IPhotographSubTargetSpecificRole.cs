@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001402 RID: 5122
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001559 RID: 5465
 	public class IPhotographSubTargetSpecificRole : IPhotographSubTarget
 	{
-		// Token: 0x0600747B RID: 29819 RVA: 0x0011697B File Offset: 0x00114B7B
+		// Token: 0x06007B3C RID: 31548 RVA: 0x0012535F File Offset: 0x0012355F
 		public static IPhotographSubTargetSpecificRole Create(IPhotographSubTargetSpecificRole? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700264A RID: 9802
-		// (get) Token: 0x0600747C RID: 29820 RVA: 0x0011699A File Offset: 0x00114B9A
+		// Token: 0x1700282C RID: 10284
+		// (get) Token: 0x06007B3D RID: 31549 RVA: 0x0012537E File Offset: 0x0012357E
 		public override EPhotographSubTargetType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700264B RID: 9803
-		// (get) Token: 0x0600747D RID: 29821 RVA: 0x001169A8 File Offset: 0x00114BA8
+		// Token: 0x1700282D RID: 10285
+		// (get) Token: 0x06007B3E RID: 31550 RVA: 0x0012538C File Offset: 0x0012358C
 		public virtual int? RoleId
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700264C RID: 9804
-		// (get) Token: 0x0600747E RID: 29822 RVA: 0x001169DE File Offset: 0x00114BDE
+		// Token: 0x1700282E RID: 10286
+		// (get) Token: 0x06007B3F RID: 31551 RVA: 0x001253C2 File Offset: 0x001235C2
 		public virtual EOnCameraCheckType OnCameraCheckType
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700264D RID: 9805
-		// (get) Token: 0x0600747F RID: 29823 RVA: 0x001169EB File Offset: 0x00114BEB
+		// Token: 0x1700282F RID: 10287
+		// (get) Token: 0x06007B40 RID: 31552 RVA: 0x001253CF File Offset: 0x001235CF
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -73,14 +71,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004366 RID: 17254
+		// Token: 0x040046F7 RID: 18167
 		private IPhotographSubTargetSpecificRole Instance;
 
-		// Token: 0x04004367 RID: 17255
+		// Token: 0x040046F8 RID: 18168
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04004368 RID: 17256
+		// Token: 0x040046F9 RID: 18169
 		private bool _ConditionInited;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200266C RID: 9836
+	// Token: 0x0200292B RID: 10539
 	public class OpenSystemFunction : ActionParams
 	{
-		// Token: 0x0600DC7C RID: 56444 RVA: 0x0020CD4D File Offset: 0x0020AF4D
-		[NullableContext(1)]
+		// Token: 0x0600EA48 RID: 59976 RVA: 0x0022945D File Offset: 0x0022765D
 		public static OpenSystemFunction Create(IOpenSystemFunction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004166 RID: 16742
-		// (get) Token: 0x0600DC7D RID: 56445 RVA: 0x0020CD6C File Offset: 0x0020AF6C
+		// Token: 0x170044A0 RID: 17568
+		// (get) Token: 0x0600EA49 RID: 59977 RVA: 0x0022947C File Offset: 0x0022767C
 		public virtual int FunctionId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A94 RID: 31380
+		// Token: 0x0400812B RID: 33067
 		private IOpenSystemFunction Instance;
 	}
 }

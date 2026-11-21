@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E3F RID: 20031
+	// Token: 0x02003E08 RID: 15880
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleSelectResultView : RogueSelectResultBaseView
 	{
-		// Token: 0x06033A43 RID: 211523 RVA: 0x00C16548 File Offset: 0x00C14748
+		// Token: 0x060288AE RID: 166062 RVA: 0x00B5FA70 File Offset: 0x00B5DC70
 		public RoleSelectResultView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033A44 RID: 211524 RVA: 0x00C16578 File Offset: 0x00C14778
+		// Token: 0x060288AF RID: 166063 RVA: 0x00B5FAA0 File Offset: 0x00B5DCA0
 		protected override UniTask OnCreateAsync()
 		{
 			RoleSelectResultView.<OnCreateAsync>d__4 <OnCreateAsync>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033A45 RID: 211525 RVA: 0x00C165BC File Offset: 0x00C147BC
+		// Token: 0x060288B0 RID: 166064 RVA: 0x00B5FAE4 File Offset: 0x00B5DCE4
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RoleSelectItemLayout = new GenericLayout<RoleSelectItem, RogueGainEntry>(base.GetHorizontalLayout(3), this.CreateRoleSelectItem, null, false, true);
 		}
 
-		// Token: 0x06033A46 RID: 211526 RVA: 0x00C16618 File Offset: 0x00C14818
+		// Token: 0x060288B1 RID: 166065 RVA: 0x00B5FB40 File Offset: 0x00B5DD40
 		protected override void OnBeforeDestroy()
 		{
 			if (this.UiPoolActorPrivate != null)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A47 RID: 211527 RVA: 0x00C16637 File Offset: 0x00C14837
+		// Token: 0x060288B2 RID: 166066 RVA: 0x00B5FB5F File Offset: 0x00B5DD5F
 		protected override void OnCloseBtnClick()
 		{
 			base.CloseMe(delegate(bool _)
@@ -66,32 +66,32 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x06033A48 RID: 211528 RVA: 0x00C1664B File Offset: 0x00C1484B
+		// Token: 0x060288B3 RID: 166067 RVA: 0x00B5FB73 File Offset: 0x00B5DD73
 		protected override void OnDescModelChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06033A49 RID: 211529 RVA: 0x00C16653 File Offset: 0x00C14853
+		// Token: 0x060288B4 RID: 166068 RVA: 0x00B5FB7B File Offset: 0x00B5DD7B
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06033A4A RID: 211530 RVA: 0x00C1665B File Offset: 0x00C1485B
+		// Token: 0x060288B5 RID: 166069 RVA: 0x00B5FB83 File Offset: 0x00B5DD83
 		protected override void Refresh()
 		{
 			this.RefreshPhantomSelectItemList();
 			this.RefreshTitleText();
 		}
 
-		// Token: 0x06033A4B RID: 211531 RVA: 0x00C1666C File Offset: 0x00C1486C
+		// Token: 0x060288B6 RID: 166070 RVA: 0x00B5FB94 File Offset: 0x00B5DD94
 		private void RefreshPhantomSelectItemList()
 		{
 			this.RoleSelectItemLayout.RefreshByDataAsync(new <>z__ReadOnlySingleElementList<RogueGainEntry>(this.RogueSelectResult.NewRogueGainEntry), false, null).ContinueWith(new Action(this.RefreshNewRoleBuff));
 		}
 
-		// Token: 0x06033A4C RID: 211532 RVA: 0x00C166B0 File Offset: 0x00C148B0
+		// Token: 0x060288B7 RID: 166071 RVA: 0x00B5FBD8 File Offset: 0x00B5DDD8
 		private void RefreshNewRoleBuff()
 		{
 			RogueGainEntry newRogueGainEntry = this.RogueSelectResult.NewRogueGainEntry;
@@ -133,17 +133,17 @@ namespace CSharpScript.Game.Module.Roguelike
 			layoutItemByIndex.SetSecondColorForAttrItem(hashSet);
 		}
 
-		// Token: 0x06033A4D RID: 211533 RVA: 0x00C167F4 File Offset: 0x00C149F4
+		// Token: 0x060288B8 RID: 166072 RVA: 0x00B5FD1C File Offset: 0x00B5DF1C
 		protected void RefreshTitleText()
 		{
 			base.GetText(4).ShowTextNew("RoguelikeView_18_Text");
 		}
 
-		// Token: 0x0401B629 RID: 112169
+		// Token: 0x04015FFC RID: 90108
 		[Nullable(2)]
 		private RogueSelectResult RogueSelectResult;
 
-		// Token: 0x0401B62A RID: 112170
+		// Token: 0x04015FFD RID: 90109
 		[Nullable(new byte[]
 		{
 			2,
@@ -152,11 +152,11 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoleSelectItem, RogueGainEntry> RoleSelectItemLayout;
 
-		// Token: 0x0401B62B RID: 112171
+		// Token: 0x04015FFE RID: 90110
 		[Nullable(2)]
 		protected UiPoolActor UiPoolActorPrivate;
 
-		// Token: 0x0401B62C RID: 112172
+		// Token: 0x04015FFF RID: 90111
 		private readonly Func<RoleSelectItem> CreateRoleSelectItem = () => new RoleSelectItem();
 	}
 }

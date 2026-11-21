@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001034 RID: 4148
+// Token: 0x020004E8 RID: 1256
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerAiPlayCardTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A83 RID: 27267 RVA: 0x001565EC File Offset: 0x001547EC
+	// Token: 0x06003E18 RID: 15896 RVA: 0x0015EF14 File Offset: 0x0015D114
 	public GuessJokerAiPlayCardTask(JokerGuessPlayCardAction data)
 	{
 		if (data.PlayCard != null)
@@ -20,7 +20,7 @@ public class GuessJokerAiPlayCardTask : GuessJokerTaskBase
 		}
 	}
 
-	// Token: 0x06006A84 RID: 27268 RVA: 0x0015665C File Offset: 0x0015485C
+	// Token: 0x06003E19 RID: 15897 RVA: 0x0015EF84 File Offset: 0x0015D184
 	protected override void OnExecute()
 	{
 		int roundNumber = GuessJokerGamePlayModel.Instance.RoundNumber;
@@ -87,7 +87,7 @@ public class GuessJokerAiPlayCardTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.PushActions(list.ToArray());
 	}
 
-	// Token: 0x06006A85 RID: 27269 RVA: 0x0015684C File Offset: 0x00154A4C
+	// Token: 0x06003E1A RID: 15898 RVA: 0x0015F174 File Offset: 0x0015D374
 	private void FinishWithShuffleCheck()
 	{
 		if (GuessJokerGamePlayModel.Instance.HasAiNewCardInHand())
@@ -108,6 +108,6 @@ public class GuessJokerAiPlayCardTask : GuessJokerTaskBase
 		base.FinishTask();
 	}
 
-	// Token: 0x04003115 RID: 12565
+	// Token: 0x040031AE RID: 12718
 	public List<int> CardIdList = new List<int>();
 }

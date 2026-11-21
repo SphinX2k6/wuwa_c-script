@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A9C RID: 23196
+	// Token: 0x020060A3 RID: 24739
 	public struct ITimeScheduleEntityTemplateNpcSource : IFlatbufferObject
 	{
-		// Token: 0x1700AEBB RID: 44731
-		// (get) Token: 0x06027852 RID: 161874 RVA: 0x0056FE9E File Offset: 0x0056E09E
+		// Token: 0x1700B7EE RID: 47086
+		// (get) Token: 0x06029DAC RID: 171436 RVA: 0x005B6C38 File Offset: 0x005B4E38
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027853 RID: 161875 RVA: 0x0056FEAB File Offset: 0x0056E0AB
+		// Token: 0x06029DAD RID: 171437 RVA: 0x005B6C45 File Offset: 0x005B4E45
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027854 RID: 161876 RVA: 0x0056FEB4 File Offset: 0x0056E0B4
+		// Token: 0x06029DAE RID: 171438 RVA: 0x005B6C4C File Offset: 0x005B4E4C
 		public static ITimeScheduleEntityTemplateNpcSource GetRootAsITimeScheduleEntityTemplateNpcSource(ByteBuffer _bb)
 		{
 			return ITimeScheduleEntityTemplateNpcSource.GetRootAsITimeScheduleEntityTemplateNpcSource(_bb, default(ITimeScheduleEntityTemplateNpcSource));
 		}
 
-		// Token: 0x06027855 RID: 161877 RVA: 0x0056FED0 File Offset: 0x0056E0D0
+		// Token: 0x06029DAF RID: 171439 RVA: 0x005B6C68 File Offset: 0x005B4E68
 		public static ITimeScheduleEntityTemplateNpcSource GetRootAsITimeScheduleEntityTemplateNpcSource(ByteBuffer _bb, ITimeScheduleEntityTemplateNpcSource obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027856 RID: 161878 RVA: 0x0056FEED File Offset: 0x0056E0ED
+		// Token: 0x06029DB0 RID: 171440 RVA: 0x005B6C85 File Offset: 0x005B4E85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027857 RID: 161879 RVA: 0x0056FEFC File Offset: 0x0056E0FC
+		// Token: 0x06029DB1 RID: 171441 RVA: 0x005B6C94 File Offset: 0x005B4E94
 		public ITimeScheduleEntityTemplateNpcSource __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AEBC RID: 44732
-		// (get) Token: 0x06027858 RID: 161880 RVA: 0x0056FF0C File Offset: 0x0056E10C
+		// Token: 0x1700B7EF RID: 47087
+		// (get) Token: 0x06029DB2 RID: 171442 RVA: 0x005B6CA4 File Offset: 0x005B4EA4
 		public ETimeScheduleNpcSourceType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027859 RID: 161881 RVA: 0x0056FF48 File Offset: 0x0056E148
+		// Token: 0x06029DB3 RID: 171443 RVA: 0x005B6CE0 File Offset: 0x005B4EE0
 		public string TemplateIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700AEBD RID: 44733
-		// (get) Token: 0x0602785A RID: 161882 RVA: 0x0056FF84 File Offset: 0x0056E184
+		// Token: 0x1700B7F0 RID: 47088
+		// (get) Token: 0x06029DB4 RID: 171444 RVA: 0x005B6D1C File Offset: 0x005B4F1C
 		public int TemplateIdsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602785B RID: 161883 RVA: 0x0056FFAF File Offset: 0x0056E1AF
+		// Token: 0x06029DB5 RID: 171445 RVA: 0x005B6D47 File Offset: 0x005B4F47
 		public static Offset<ITimeScheduleEntityTemplateNpcSource> CreateITimeScheduleEntityTemplateNpcSource(FlatBufferBuilder builder, ETimeScheduleNpcSourceType Type = ETimeScheduleNpcSourceType.EntityTemplate, VectorOffset TemplateIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleEntityTemplateNpcSource.EndITimeScheduleEntityTemplateNpcSource(builder);
 		}
 
-		// Token: 0x0602785C RID: 161884 RVA: 0x0056FFCC File Offset: 0x0056E1CC
+		// Token: 0x06029DB6 RID: 171446 RVA: 0x005B6D64 File Offset: 0x005B4F64
 		public static void StartITimeScheduleEntityTemplateNpcSource(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602785D RID: 161885 RVA: 0x0056FFD5 File Offset: 0x0056E1D5
+		// Token: 0x06029DB7 RID: 171447 RVA: 0x005B6D6D File Offset: 0x005B4F6D
 		public static void AddType(FlatBufferBuilder builder, ETimeScheduleNpcSourceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602785E RID: 161886 RVA: 0x0056FFE0 File Offset: 0x0056E1E0
+		// Token: 0x06029DB8 RID: 171448 RVA: 0x005B6D78 File Offset: 0x005B4F78
 		public static void AddTemplateIds(FlatBufferBuilder builder, VectorOffset templateIdsOffset)
 		{
 			builder.AddOffset(1, templateIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602785F RID: 161887 RVA: 0x0056FFF0 File Offset: 0x0056E1F0
+		// Token: 0x06029DB9 RID: 171449 RVA: 0x005B6D88 File Offset: 0x005B4F88
 		public static VectorOffset CreateTemplateIdsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027860 RID: 161888 RVA: 0x00570030 File Offset: 0x0056E230
+		// Token: 0x06029DBA RID: 171450 RVA: 0x005B6DC8 File Offset: 0x005B4FC8
 		public static VectorOffset CreateTemplateIdsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027861 RID: 161889 RVA: 0x0057004A File Offset: 0x0056E24A
+		// Token: 0x06029DBB RID: 171451 RVA: 0x005B6DE2 File Offset: 0x005B4FE2
 		public static VectorOffset CreateTemplateIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027862 RID: 161890 RVA: 0x00570068 File Offset: 0x0056E268
+		// Token: 0x06029DBC RID: 171452 RVA: 0x005B6E00 File Offset: 0x005B5000
 		public static VectorOffset CreateTemplateIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027863 RID: 161891 RVA: 0x00570081 File Offset: 0x0056E281
+		// Token: 0x06029DBD RID: 171453 RVA: 0x005B6E19 File Offset: 0x005B5019
 		public static void StartTemplateIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06027864 RID: 161892 RVA: 0x0057008C File Offset: 0x0056E28C
+		// Token: 0x06029DBE RID: 171454 RVA: 0x005B6E24 File Offset: 0x005B5024
 		public static Offset<ITimeScheduleEntityTemplateNpcSource> EndITimeScheduleEntityTemplateNpcSource(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeScheduleEntityTemplateNpcSource>(builder.EndTable());
 		}
 
-		// Token: 0x06027865 RID: 161893 RVA: 0x0057009C File Offset: 0x0056E29C
+		// Token: 0x06029DBF RID: 171455 RVA: 0x005B6E34 File Offset: 0x005B5034
 		public ITimeScheduleEntityTemplateNpcSourceT UnPack()
 		{
 			ITimeScheduleEntityTemplateNpcSourceT timeScheduleEntityTemplateNpcSourceT = new ITimeScheduleEntityTemplateNpcSourceT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timeScheduleEntityTemplateNpcSourceT;
 		}
 
-		// Token: 0x06027866 RID: 161894 RVA: 0x005700B8 File Offset: 0x0056E2B8
+		// Token: 0x06029DC0 RID: 171456 RVA: 0x005B6E50 File Offset: 0x005B5050
 		public void UnPackTo(ITimeScheduleEntityTemplateNpcSourceT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027867 RID: 161895 RVA: 0x00570100 File Offset: 0x0056E300
+		// Token: 0x06029DC1 RID: 171457 RVA: 0x005B6E98 File Offset: 0x005B5098
 		public static Offset<ITimeScheduleEntityTemplateNpcSource> Pack(FlatBufferBuilder builder, ITimeScheduleEntityTemplateNpcSourceT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeScheduleEntityTemplateNpcSource.CreateITimeScheduleEntityTemplateNpcSource(builder, _o.Type, templateIdsOffset);
 		}
 
-		// Token: 0x0400F15D RID: 61789
+		// Token: 0x0400FE4C RID: 65100
 		private Table __p;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006B4 RID: 1716
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000755 RID: 1877
 	public class ISceneTextSubtitleWithVoice : ISceneTextTypeBase
 	{
-		// Token: 0x060024D2 RID: 9426 RVA: 0x00063840 File Offset: 0x00061A40
+		// Token: 0x060027EE RID: 10222 RVA: 0x0006A808 File Offset: 0x00068A08
 		private ISceneTextSubtitleWithVoice_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060024D3 RID: 9427 RVA: 0x00063878 File Offset: 0x00061A78
+		// Token: 0x060027EF RID: 10223 RVA: 0x0006A840 File Offset: 0x00068A40
 		public static ISceneTextSubtitleWithVoice Create([Nullable(2)] ISceneTextSubtitleWithVoice instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024D4 RID: 9428 RVA: 0x0006388B File Offset: 0x00061A8B
+		// Token: 0x060027F0 RID: 10224 RVA: 0x0006A853 File Offset: 0x00068A53
 		public static ISceneTextSubtitleWithVoice CreateFromSetValue([Nullable(2)] ISceneTextSubtitleWithVoice_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024D5 RID: 9429 RVA: 0x000638A0 File Offset: 0x00061AA0
+		// Token: 0x060027F1 RID: 10225 RVA: 0x0006A868 File Offset: 0x00068A68
 		public new ISceneTextSubtitleWithVoice_SetValue ToSetValue()
 		{
 			return new ISceneTextSubtitleWithVoice_SetValue
@@ -62,13 +60,15 @@ namespace Aki.TDConfigMgr.Component
 				BoxWidth = this.BoxWidth,
 				BoxHeight = this.BoxHeight,
 				Duration = this.Duration,
-				AutoHide = this.AutoHide
+				AutoHide = this.AutoHide,
+				FadeInEffect = this.FadeInEffect,
+				FadeOutEffect = this.FadeOutEffect
 			};
 		}
 
-		// Token: 0x170009BA RID: 2490
-		// (get) Token: 0x060024D6 RID: 9430 RVA: 0x00063906 File Offset: 0x00061B06
-		// (set) Token: 0x060024D7 RID: 9431 RVA: 0x00063931 File Offset: 0x00061B31
+		// Token: 0x17000A76 RID: 2678
+		// (get) Token: 0x060027F2 RID: 10226 RVA: 0x0006A8E6 File Offset: 0x00068AE6
+		// (set) Token: 0x060027F3 RID: 10227 RVA: 0x0006A911 File Offset: 0x00068B11
 		public override ESceneTextType Type
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009BB RID: 2491
-		// (get) Token: 0x060024D8 RID: 9432 RVA: 0x00063940 File Offset: 0x00061B40
-		// (set) Token: 0x060024D9 RID: 9433 RVA: 0x000639A1 File Offset: 0x00061BA1
+		// Token: 0x17000A77 RID: 2679
+		// (get) Token: 0x060027F4 RID: 10228 RVA: 0x0006A920 File Offset: 0x00068B20
+		// (set) Token: 0x060027F5 RID: 10229 RVA: 0x0006A981 File Offset: 0x00068B81
 		public virtual PlayFlow Content
 		{
 			get
@@ -119,9 +119,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009BC RID: 2492
-		// (get) Token: 0x060024DA RID: 9434 RVA: 0x000639B6 File Offset: 0x00061BB6
-		// (set) Token: 0x060024DB RID: 9435 RVA: 0x000639E1 File Offset: 0x00061BE1
+		// Token: 0x17000A78 RID: 2680
+		// (get) Token: 0x060027F6 RID: 10230 RVA: 0x0006A996 File Offset: 0x00068B96
+		// (set) Token: 0x060027F7 RID: 10231 RVA: 0x0006A9C1 File Offset: 0x00068BC1
 		public virtual int FontSize
 		{
 			get
@@ -142,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009BD RID: 2493
-		// (get) Token: 0x060024DC RID: 9436 RVA: 0x000639EF File Offset: 0x00061BEF
-		// (set) Token: 0x060024DD RID: 9437 RVA: 0x00063A1E File Offset: 0x00061C1E
+		// Token: 0x17000A79 RID: 2681
+		// (get) Token: 0x060027F8 RID: 10232 RVA: 0x0006A9CF File Offset: 0x00068BCF
+		// (set) Token: 0x060027F9 RID: 10233 RVA: 0x0006A9FE File Offset: 0x00068BFE
 		public virtual float BoxWidth
 		{
 			get
@@ -165,9 +165,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009BE RID: 2494
-		// (get) Token: 0x060024DE RID: 9438 RVA: 0x00063A2C File Offset: 0x00061C2C
-		// (set) Token: 0x060024DF RID: 9439 RVA: 0x00063A5B File Offset: 0x00061C5B
+		// Token: 0x17000A7A RID: 2682
+		// (get) Token: 0x060027FA RID: 10234 RVA: 0x0006AA0C File Offset: 0x00068C0C
+		// (set) Token: 0x060027FB RID: 10235 RVA: 0x0006AA3B File Offset: 0x00068C3B
 		public virtual float BoxHeight
 		{
 			get
@@ -188,9 +188,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009BF RID: 2495
-		// (get) Token: 0x060024E0 RID: 9440 RVA: 0x00063A6C File Offset: 0x00061C6C
-		// (set) Token: 0x060024E1 RID: 9441 RVA: 0x00063AA6 File Offset: 0x00061CA6
+		// Token: 0x17000A7B RID: 2683
+		// (get) Token: 0x060027FC RID: 10236 RVA: 0x0006AA4C File Offset: 0x00068C4C
+		// (set) Token: 0x060027FD RID: 10237 RVA: 0x0006AA86 File Offset: 0x00068C86
 		public virtual float? Duration
 		{
 			get
@@ -212,9 +212,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009C0 RID: 2496
-		// (get) Token: 0x060024E2 RID: 9442 RVA: 0x00063AB4 File Offset: 0x00061CB4
-		// (set) Token: 0x060024E3 RID: 9443 RVA: 0x00063AEE File Offset: 0x00061CEE
+		// Token: 0x17000A7C RID: 2684
+		// (get) Token: 0x060027FE RID: 10238 RVA: 0x0006AA94 File Offset: 0x00068C94
+		// (set) Token: 0x060027FF RID: 10239 RVA: 0x0006AACE File Offset: 0x00068CCE
 		public virtual bool? AutoHide
 		{
 			get
@@ -236,18 +236,66 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400193A RID: 6458
+		// Token: 0x17000A7D RID: 2685
+		// (get) Token: 0x06002800 RID: 10240 RVA: 0x0006AADC File Offset: 0x00068CDC
+		// (set) Token: 0x06002801 RID: 10241 RVA: 0x0006AB16 File Offset: 0x00068D16
+		public virtual ESceneTextFadeInEffect? FadeInEffect
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.FadeInEffect;
+				}
+				ISceneTextSubtitleWithVoice_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.FadeInEffect;
+			}
+			set
+			{
+				this.GetOrCreatePoco().FadeInEffect = value;
+			}
+		}
+
+		// Token: 0x17000A7E RID: 2686
+		// (get) Token: 0x06002802 RID: 10242 RVA: 0x0006AB24 File Offset: 0x00068D24
+		// (set) Token: 0x06002803 RID: 10243 RVA: 0x0006AB5E File Offset: 0x00068D5E
+		public virtual ESceneTextFadeOutEffect? FadeOutEffect
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.FadeOutEffect;
+				}
+				ISceneTextSubtitleWithVoice_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.FadeOutEffect;
+			}
+			set
+			{
+				this.GetOrCreatePoco().FadeOutEffect = value;
+			}
+		}
+
+		// Token: 0x04001B37 RID: 6967
 		[Nullable(2)]
 		protected new ISceneTextSubtitleWithVoice FbInstance;
 
-		// Token: 0x0400193B RID: 6459
+		// Token: 0x04001B38 RID: 6968
 		[Nullable(2)]
 		protected new ISceneTextSubtitleWithVoice_SetValue PocoInterface;
 
-		// Token: 0x0400193C RID: 6460
+		// Token: 0x04001B39 RID: 6969
 		private PlayFlow _ContentCache;
 
-		// Token: 0x0400193D RID: 6461
+		// Token: 0x04001B3A RID: 6970
 		private bool _ContentInited;
 	}
 }

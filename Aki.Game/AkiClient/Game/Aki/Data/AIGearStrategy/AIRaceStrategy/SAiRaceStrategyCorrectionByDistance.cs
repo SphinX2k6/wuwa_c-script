@@ -6,37 +6,37 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.AIGearStrategy.AIRaceStrategy
 {
-	// Token: 0x02003FC5 RID: 16325
+	// Token: 0x0200324A RID: 12874
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/AIGearStrategy/AIRaceStrategy/SAiRaceStrategyCorrectionByDistance.SAiRaceStrategyCorrectionByDistance")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class SAiRaceStrategyCorrectionByDistance : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029CC1 RID: 171201 RVA: 0x009CCB5C File Offset: 0x009CAD5C
+		// Token: 0x060202AF RID: 131759 RVA: 0x0093EDC0 File Offset: 0x0093CFC0
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SAiRaceStrategyCorrectionByDistance._ScriptStructPtr != 0) ? SAiRaceStrategyCorrectionByDistance._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/AIGearStrategy/AIRaceStrategy/SAiRaceStrategyCorrectionByDistance.SAiRaceStrategyCorrectionByDistance", ref SAiRaceStrategyCorrectionByDistance._ScriptStructPtr);
 		}
 
-		// Token: 0x17006553 RID: 25939
-		// (get) Token: 0x06029CC2 RID: 171202 RVA: 0x009CCB80 File Offset: 0x009CAD80
-		// (set) Token: 0x06029CC3 RID: 171203 RVA: 0x009CCB90 File Offset: 0x009CAD90
+		// Token: 0x17003DAA RID: 15786
+		// (get) Token: 0x060202B0 RID: 131760 RVA: 0x0093EDE4 File Offset: 0x0093CFE4
+		// (set) Token: 0x060202B1 RID: 131761 RVA: 0x0093EDF4 File Offset: 0x0093CFF4
 		public unsafe bool Enable
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SAiRaceStrategyCorrectionByDistance.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)SAiRaceStrategyCorrectionByDistance.__PropertyOffset_Enable) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SAiRaceStrategyCorrectionByDistance.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SAiRaceStrategyCorrectionByDistance.__PropertyOffset_Enable) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006554 RID: 25940
-		// (get) Token: 0x06029CC4 RID: 171204 RVA: 0x009CCBA4 File Offset: 0x009CADA4
-		// (set) Token: 0x06029CC5 RID: 171205 RVA: 0x009CCBE7 File Offset: 0x009CADE7
+		// Token: 0x17003DAB RID: 15787
+		// (get) Token: 0x060202B2 RID: 131762 RVA: 0x0093EE08 File Offset: 0x0093D008
+		// (set) Token: 0x060202B3 RID: 131763 RVA: 0x0093EE4B File Offset: 0x0093D04B
 		public TArray<SAiRaceStrategyOneParamFunction> CalcTargetSpeedByDistanceBetweenConfig
 		{
 			get
@@ -45,7 +45,7 @@ namespace AkiClient.Game.Aki.Data.AIGearStrategy.AIRaceStrategy
 				TArray<SAiRaceStrategyOneParamFunction> result;
 				if ((result = this._CalcTargetSpeedByDistanceBetweenConfig) == null)
 				{
-					result = (this._CalcTargetSpeedByDistanceBetweenConfig = new TArray<SAiRaceStrategyOneParamFunction>(base.NativePtr + (IntPtr)SAiRaceStrategyCorrectionByDistance.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._CalcTargetSpeedByDistanceBetweenConfig = new TArray<SAiRaceStrategyOneParamFunction>(base.NativePtr + (IntPtr)SAiRaceStrategyCorrectionByDistance.__PropertyOffset_CalcTargetSpeedByDistanceBetweenConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -55,60 +55,53 @@ namespace AkiClient.Game.Aki.Data.AIGearStrategy.AIRaceStrategy
 			}
 		}
 
-		// Token: 0x06029CC6 RID: 171206 RVA: 0x009CCBF5 File Offset: 0x009CADF5
+		// Token: 0x060202B4 RID: 131764 RVA: 0x0093EE59 File Offset: 0x0093D059
 		public SAiRaceStrategyCorrectionByDistance()
 		{
 		}
 
-		// Token: 0x06029CC7 RID: 171207 RVA: 0x009CCBFD File Offset: 0x009CADFD
-		public SAiRaceStrategyCorrectionByDistance(bool Enable, TArray<SAiRaceStrategyOneParamFunction> CalcTargetSpeedByDistanceBetweenConfig)
-		{
-			this.Enable = Enable;
-			this.CalcTargetSpeedByDistanceBetweenConfig = CalcTargetSpeedByDistanceBetweenConfig;
-		}
-
-		// Token: 0x06029CC8 RID: 171208 RVA: 0x009CCC13 File Offset: 0x009CAE13
+		// Token: 0x060202B5 RID: 131765 RVA: 0x0093EE61 File Offset: 0x0093D061
 		protected override IntPtr GetUStructPtr()
 		{
 			return SAiRaceStrategyCorrectionByDistance.StaticStruct();
 		}
 
-		// Token: 0x06029CC9 RID: 171209 RVA: 0x009CCC1F File Offset: 0x009CAE1F
+		// Token: 0x060202B6 RID: 131766 RVA: 0x0093EE6D File Offset: 0x0093D06D
 		[NullableContext(2)]
 		public SAiRaceStrategyCorrectionByDistance(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029CCA RID: 171210 RVA: 0x009CCC29 File Offset: 0x009CAE29
+		// Token: 0x060202B7 RID: 131767 RVA: 0x0093EE77 File Offset: 0x0093D077
 		public SAiRaceStrategyCorrectionByDistance(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029CCB RID: 171211 RVA: 0x009CCC34 File Offset: 0x009CAE34
+		// Token: 0x060202B8 RID: 131768 RVA: 0x0093EE82 File Offset: 0x0093D082
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SAiRaceStrategyCorrectionByDistance(Pointer, false, true);
 		}
 
-		// Token: 0x06029CCC RID: 171212 RVA: 0x009CCC3E File Offset: 0x009CAE3E
+		// Token: 0x060202B9 RID: 131769 RVA: 0x0093EE8C File Offset: 0x0093D08C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SAiRaceStrategyCorrectionByDistance(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015777 RID: 87927
+		// Token: 0x04011508 RID: 70920
 		public const string __ObjectPath = "/Game/Aki/Data/AIGearStrategy/AIRaceStrategy/SAiRaceStrategyCorrectionByDistance.SAiRaceStrategyCorrectionByDistance";
 
-		// Token: 0x04015778 RID: 87928
+		// Token: 0x04011509 RID: 70921
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015779 RID: 87929
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401150A RID: 70922
+		internal static int __PropertyOffset_Enable;
 
-		// Token: 0x0401577A RID: 87930
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401150B RID: 70923
+		internal static int __PropertyOffset_CalcTargetSpeedByDistanceBetweenConfig;
 
-		// Token: 0x0401577B RID: 87931
+		// Token: 0x0401150C RID: 70924
 		[Nullable(new byte[]
 		{
 			2,

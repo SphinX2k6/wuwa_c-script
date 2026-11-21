@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007348 RID: 29512
+	// Token: 0x020064CB RID: 25803
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionTimer : AiStateMachineCondition
 	{
-		// Token: 0x06048685 RID: 296581 RVA: 0x012A05EF File Offset: 0x0129E7EF
+		// Token: 0x0603EAD2 RID: 256722 RVA: 0x01243077 File Offset: 0x01241277
 		public AiStateMachineConditionTimer(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048686 RID: 296582 RVA: 0x012A05FA File Offset: 0x0129E7FA
+		// Token: 0x0603EAD3 RID: 256723 RVA: 0x01243082 File Offset: 0x01241282
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.MinTime = (double)condition.CondTimer.MinTime;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048687 RID: 296583 RVA: 0x012A0624 File Offset: 0x0129E824
+		// Token: 0x0603EAD4 RID: 256724 RVA: 0x012430AC File Offset: 0x012412AC
 		protected override void OnEnter()
 		{
 			if (!this.CheckForClient)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			this.TimerHandle = TimerSystem.Instance.Delay(new TTimerAction(this.OnTimerTimeout), (float)randomRange, null, null, true, 1f);
 		}
 
-		// Token: 0x06048688 RID: 296584 RVA: 0x012A0684 File Offset: 0x0129E884
+		// Token: 0x0603EAD5 RID: 256725 RVA: 0x0124310C File Offset: 0x0124130C
 		private void OnTimerTimeout(float delta)
 		{
 			this.ResultSelf = true;
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			this.TimerHandle = null;
 		}
 
-		// Token: 0x06048689 RID: 296585 RVA: 0x012A06D9 File Offset: 0x0129E8D9
+		// Token: 0x0603EAD6 RID: 256726 RVA: 0x01243161 File Offset: 0x01241361
 		protected override void OnClear()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x0604868A RID: 296586 RVA: 0x012A06E1 File Offset: 0x0129E8E1
+		// Token: 0x0603EAD7 RID: 256727 RVA: 0x01243169 File Offset: 0x01241369
 		private void ClearTimer()
 		{
 			if (this.TimerHandle != null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604868B RID: 296587 RVA: 0x012A070C File Offset: 0x0129E90C
+		// Token: 0x0603EAD8 RID: 256728 RVA: 0x01243194 File Offset: 0x01241394
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x04026470 RID: 156784
+		// Token: 0x0402175D RID: 137053
 		private double MinTime;
 
-		// Token: 0x04026471 RID: 156785
+		// Token: 0x0402175E RID: 137054
 		private double MaxTime;
 
-		// Token: 0x04026472 RID: 156786
+		// Token: 0x0402175F RID: 137055
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

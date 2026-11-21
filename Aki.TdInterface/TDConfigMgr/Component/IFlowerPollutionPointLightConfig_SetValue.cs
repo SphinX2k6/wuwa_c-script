@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200039F RID: 927
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003E8 RID: 1000
 	public class IFlowerPollutionPointLightConfig_SetValue
 	{
-		// Token: 0x04000EDE RID: 3806
+		// Token: 0x04000FD6 RID: 4054
 		public List<int> PointLightEntityIds;
 
-		// Token: 0x04000EDF RID: 3807
+		// Token: 0x04000FD7 RID: 4055
 		public List<IPointLightOperations> PointLightConfig;
 	}
 }

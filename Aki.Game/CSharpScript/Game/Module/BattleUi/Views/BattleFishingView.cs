@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CD4 RID: 23764
+	// Token: 0x02004CB6 RID: 19638
 	public class BattleFishingView : BattleVisibleChildView
 	{
-		// Token: 0x0603C21C RID: 246300 RVA: 0x00E64A08 File Offset: 0x00E62C08
+		// Token: 0x06031172 RID: 201074 RVA: 0x00DB4FE4 File Offset: 0x00DB31E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C21D RID: 246301 RVA: 0x00E64AB3 File Offset: 0x00E62CB3
+		// Token: 0x06031173 RID: 201075 RVA: 0x00DB508F File Offset: 0x00DB328F
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.InitChildType(EBattleUiChild.TopButton);
 		}
 
-		// Token: 0x0603C21E RID: 246302 RVA: 0x00E64AC4 File Offset: 0x00E62CC4
+		// Token: 0x06031174 RID: 201076 RVA: 0x00DB50A0 File Offset: 0x00DB32A0
 		[NullableContext(2)]
 		protected override UniTask InitializeAsync(object param = null)
 		{
@@ -49,14 +49,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C21F RID: 246303 RVA: 0x00E64B07 File Offset: 0x00E62D07
+		// Token: 0x06031175 RID: 201077 RVA: 0x00DB50E3 File Offset: 0x00DB32E3
 		public override void Reset()
 		{
 			this.ButtonList.Clear();
 			base.Reset();
 		}
 
-		// Token: 0x0603C220 RID: 246304 RVA: 0x00E64B1C File Offset: 0x00E62D1C
+		// Token: 0x06031176 RID: 201078 RVA: 0x00DB50F8 File Offset: 0x00DB32F8
 		[NullableContext(1)]
 		private UniTask NewFishingButton(BattleFishingView.EChildType childType, string actionName)
 		{
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewFishingButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C221 RID: 246305 RVA: 0x00E64B6F File Offset: 0x00E62D6F
+		// Token: 0x06031177 RID: 201079 RVA: 0x00DB514B File Offset: 0x00DB334B
 		public void SetDriveFishingShipVisible(bool visible)
 		{
 			base.SetVisible(7, visible);
 		}
 
-		// Token: 0x0603C222 RID: 246306 RVA: 0x00E64B7C File Offset: 0x00E62D7C
+		// Token: 0x06031178 RID: 201080 RVA: 0x00DB5158 File Offset: 0x00DB3358
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -107,27 +107,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0401F595 RID: 128405
+		// Token: 0x0401A04E RID: 106574
 		[Nullable(1)]
 		private readonly List<FishingButton> ButtonList = new List<FishingButton>();
 
-		// Token: 0x0200BF24 RID: 48932
+		// Token: 0x0200A92A RID: 43306
 		private enum EChildType
 		{
-			// Token: 0x04039A7C RID: 236156
+			// Token: 0x0403443E RID: 214078
 			DockyardButton,
-			// Token: 0x04039A7D RID: 236157
+			// Token: 0x0403443F RID: 214079
 			QuestButton,
-			// Token: 0x04039A7E RID: 236158
+			// Token: 0x04034440 RID: 214080
 			TechButton,
-			// Token: 0x04039A7F RID: 236159
+			// Token: 0x04034441 RID: 214081
 			HandBookButton
 		}
 
-		// Token: 0x0200BF25 RID: 48933
+		// Token: 0x0200A92B RID: 43307
 		private enum EVisibleReason
 		{
-			// Token: 0x04039A81 RID: 236161
+			// Token: 0x04034443 RID: 214083
 			DriveFishingShip = 7
 		}
 	}

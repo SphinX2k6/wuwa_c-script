@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020AE RID: 8366
+	// Token: 0x02002303 RID: 8963
 	public class IVisualNovelTransitionPerformanceSolarSchool_SetValue
 	{
-		// Token: 0x04006E5C RID: 28252
+		// Token: 0x0400747A RID: 29818
 		public EVisualNovelSubType Type;
 
-		// Token: 0x04006E5D RID: 28253
-		[Nullable(1)]
+		// Token: 0x0400747B RID: 29819
 		public IVisualNovelTransitionConfigBase TransitionConfig;
 	}
 }

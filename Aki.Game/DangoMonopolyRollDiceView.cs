@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001244 RID: 4676
+// Token: 0x020006F8 RID: 1784
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 {
-	// Token: 0x17000ABE RID: 2750
-	// (get) Token: 0x06007EE6 RID: 32486 RVA: 0x001AE537 File Offset: 0x001AC737
+	// Token: 0x17000ADE RID: 2782
+	// (get) Token: 0x0600527D RID: 21117 RVA: 0x001B71EF File Offset: 0x001B53EF
 	[Nullable(2)]
 	public new DangoMonopolyRollDiceViewParam OpenParam
 	{
@@ -25,12 +25,12 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007EE7 RID: 32487 RVA: 0x001AE544 File Offset: 0x001AC744
+	// Token: 0x0600527E RID: 21118 RVA: 0x001B71FC File Offset: 0x001B53FC
 	public DangoMonopolyRollDiceView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007EE8 RID: 32488 RVA: 0x001AE558 File Offset: 0x001AC758
+	// Token: 0x0600527F RID: 21119 RVA: 0x001B7210 File Offset: 0x001B5410
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,12 +50,12 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007EE9 RID: 32489 RVA: 0x001AE645 File Offset: 0x001AC845
+	// Token: 0x06005280 RID: 21120 RVA: 0x001B72FD File Offset: 0x001B54FD
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06007EEA RID: 32490 RVA: 0x001AE648 File Offset: 0x001AC848
+	// Token: 0x06005281 RID: 21121 RVA: 0x001B7300 File Offset: 0x001B5500
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyRollDiceView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -66,29 +66,29 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EEB RID: 32491 RVA: 0x001AE68B File Offset: 0x001AC88B
+	// Token: 0x06005282 RID: 21122 RVA: 0x001B7343 File Offset: 0x001B5543
 	protected override void OnStart()
 	{
 		this.ActivityData.UpdateBoardGridUiInfoShow(false).Forget();
 	}
 
-	// Token: 0x06007EEC RID: 32492 RVA: 0x001AE69E File Offset: 0x001AC89E
+	// Token: 0x06005283 RID: 21123 RVA: 0x001B7356 File Offset: 0x001B5556
 	protected override void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x06007EED RID: 32493 RVA: 0x001AE6A0 File Offset: 0x001AC8A0
+	// Token: 0x06005284 RID: 21124 RVA: 0x001B7358 File Offset: 0x001B5558
 	protected override void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x06007EEE RID: 32494 RVA: 0x001AE6A2 File Offset: 0x001AC8A2
+	// Token: 0x06005285 RID: 21125 RVA: 0x001B735A File Offset: 0x001B555A
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData().Forget();
 	}
 
-	// Token: 0x06007EEF RID: 32495 RVA: 0x001AE6B0 File Offset: 0x001AC8B0
+	// Token: 0x06005286 RID: 21126 RVA: 0x001B7368 File Offset: 0x001B5568
 	protected override void OnBeforeDestroy()
 	{
 		this.ActivityData.UpdateBoardGridUiInfoShow(true).Forget();
@@ -102,14 +102,14 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		diceBuffPanel.Destroy(null);
 	}
 
-	// Token: 0x06007EF0 RID: 32496 RVA: 0x001AE700 File Offset: 0x001AC900
+	// Token: 0x06005287 RID: 21127 RVA: 0x001B73B8 File Offset: 0x001B55B8
 	private void OnClickBtnSpeed()
 	{
 		this.ActivityData.SetActivitySpeed(null);
 		this.UpdateSpeed();
 	}
 
-	// Token: 0x06007EF1 RID: 32497 RVA: 0x001AE727 File Offset: 0x001AC927
+	// Token: 0x06005288 RID: 21128 RVA: 0x001B73DF File Offset: 0x001B55DF
 	private void OnClickBtnEmpty()
 	{
 		if (this.IsRollDiceFinish)
@@ -118,7 +118,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007EF2 RID: 32498 RVA: 0x001AE738 File Offset: 0x001AC938
+	// Token: 0x06005289 RID: 21129 RVA: 0x001B73F0 File Offset: 0x001B55F0
 	public void UpdateSpeed()
 	{
 		string speedStr = this.ActivityData.GetSpeedStr();
@@ -130,7 +130,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		text.SetText(speedStr, true);
 	}
 
-	// Token: 0x06007EF3 RID: 32499 RVA: 0x001AE764 File Offset: 0x001AC964
+	// Token: 0x0600528A RID: 21130 RVA: 0x001B741C File Offset: 0x001B561C
 	public UniTask UpdateData()
 	{
 		DangoMonopolyRollDiceView.<UpdateData>d__18 <UpdateData>d__;
@@ -141,7 +141,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <UpdateData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EF4 RID: 32500 RVA: 0x001AE7A8 File Offset: 0x001AC9A8
+	// Token: 0x0600528B RID: 21131 RVA: 0x001B7460 File Offset: 0x001B5660
 	public UniTask PlayRollDice(int diceNum)
 	{
 		DangoMonopolyRollDiceView.<PlayRollDice>d__19 <PlayRollDice>d__;
@@ -153,7 +153,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <PlayRollDice>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EF5 RID: 32501 RVA: 0x001AE7F4 File Offset: 0x001AC9F4
+	// Token: 0x0600528C RID: 21132 RVA: 0x001B74AC File Offset: 0x001B56AC
 	public string GetDebugText(string suffix)
 	{
 		DangoMonopolyRollDiceViewParam openParam = this.OpenParam;
@@ -174,14 +174,14 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06007EF6 RID: 32502 RVA: 0x001AE8BC File Offset: 0x001ACABC
+	// Token: 0x0600528D RID: 21133 RVA: 0x001B7574 File Offset: 0x001B5774
 	public void DiceAnimStart()
 	{
 		Log.Instance.Info(ELogModule.DangoMonopoly, ELogAuthor.CX, "RollDice=>掷骰子动画开始", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.SetDiceVisible(true);
 	}
 
-	// Token: 0x06007EF7 RID: 32503 RVA: 0x001AE8F0 File Offset: 0x001ACAF0
+	// Token: 0x0600528E RID: 21134 RVA: 0x001B75A8 File Offset: 0x001B57A8
 	public void DiceAnimEnd()
 	{
 		Log.Instance.Info(ELogModule.DangoMonopoly, ELogAuthor.CX, "RollDice=>掷骰子动画结束", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -194,7 +194,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007EF8 RID: 32504 RVA: 0x001AE948 File Offset: 0x001ACB48
+	// Token: 0x0600528F RID: 21135 RVA: 0x001B7600 File Offset: 0x001B5800
 	public UniTask CheckTriggerBuff()
 	{
 		DangoMonopolyRollDiceView.<CheckTriggerBuff>d__23 <CheckTriggerBuff>d__;
@@ -205,7 +205,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <CheckTriggerBuff>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EF9 RID: 32505 RVA: 0x001AE98C File Offset: 0x001ACB8C
+	// Token: 0x06005290 RID: 21136 RVA: 0x001B7644 File Offset: 0x001B5844
 	public UniTask PlayBuffEffect(int buffId)
 	{
 		DangoMonopolyRollDiceView.<PlayBuffEffect>d__24 <PlayBuffEffect>d__;
@@ -217,7 +217,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <PlayBuffEffect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EFA RID: 32506 RVA: 0x001AE9D8 File Offset: 0x001ACBD8
+	// Token: 0x06005291 RID: 21137 RVA: 0x001B7690 File Offset: 0x001B5890
 	public UniTask AgainPlayRollDice()
 	{
 		DangoMonopolyRollDiceView.<AgainPlayRollDice>d__25 <AgainPlayRollDice>d__;
@@ -228,7 +228,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <AgainPlayRollDice>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EFB RID: 32507 RVA: 0x001AEA1C File Offset: 0x001ACC1C
+	// Token: 0x06005292 RID: 21138 RVA: 0x001B76D4 File Offset: 0x001B58D4
 	public UniTask MoreStep()
 	{
 		DangoMonopolyRollDiceView.<MoreStep>d__26 <MoreStep>d__;
@@ -239,7 +239,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <MoreStep>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EFC RID: 32508 RVA: 0x001AEA60 File Offset: 0x001ACC60
+	// Token: 0x06005293 RID: 21139 RVA: 0x001B7718 File Offset: 0x001B5918
 	public UniTask PointDouble()
 	{
 		DangoMonopolyRollDiceView.<PointDouble>d__27 <PointDouble>d__;
@@ -250,7 +250,7 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <PointDouble>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EFD RID: 32509 RVA: 0x001AEAA4 File Offset: 0x001ACCA4
+	// Token: 0x06005294 RID: 21140 RVA: 0x001B775C File Offset: 0x001B595C
 	public UniTask PointReplace(int? point = null)
 	{
 		DangoMonopolyRollDiceView.<PointReplace>d__28 <PointReplace>d__;
@@ -262,13 +262,13 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <PointReplace>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007EFE RID: 32510 RVA: 0x001AEAEF File Offset: 0x001ACCEF
+	// Token: 0x06005295 RID: 21141 RVA: 0x001B77A7 File Offset: 0x001B59A7
 	public void SetDiceVisible(bool visible)
 	{
 		base.GetItem(3).SetUIActive(visible);
 	}
 
-	// Token: 0x06007EFF RID: 32511 RVA: 0x001AEB00 File Offset: 0x001ACD00
+	// Token: 0x06005296 RID: 21142 RVA: 0x001B77B8 File Offset: 0x001B59B8
 	public UniTask WaitAutoTime()
 	{
 		DangoMonopolyRollDiceView.<WaitAutoTime>d__30 <WaitAutoTime>d__;
@@ -279,32 +279,32 @@ public class DangoMonopolyRollDiceView : DangoMonopolyViewBase
 		return <WaitAutoTime>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040039CE RID: 14798
+	// Token: 0x04003A66 RID: 14950
 	public bool IsRollDiceFinish;
 
-	// Token: 0x040039CF RID: 14799
+	// Token: 0x04003A67 RID: 14951
 	public DangoMonopolyDiceBuffPanel DiceBuffPanel;
 
-	// Token: 0x040039D0 RID: 14800
+	// Token: 0x04003A68 RID: 14952
 	public readonly float AutoWaitTime = 1000f;
 
-	// Token: 0x02007852 RID: 30802
+	// Token: 0x020069DD RID: 27101
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027A6A RID: 162410
+		// Token: 0x04022D9B RID: 142747
 		BtnSpeed,
-		// Token: 0x04027A6B RID: 162411
+		// Token: 0x04022D9C RID: 142748
 		TxtSpeedTitle,
-		// Token: 0x04027A6C RID: 162412
+		// Token: 0x04022D9D RID: 142749
 		BtnEmpty,
-		// Token: 0x04027A6D RID: 162413
+		// Token: 0x04022D9E RID: 142750
 		DiceRoot,
-		// Token: 0x04027A6E RID: 162414
+		// Token: 0x04022D9F RID: 142751
 		TextureDice,
-		// Token: 0x04027A6F RID: 162415
+		// Token: 0x04022DA0 RID: 142752
 		TxtDebug,
-		// Token: 0x04027A70 RID: 162416
+		// Token: 0x04022DA1 RID: 142753
 		ItemBuffPos
 	}
 }

@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200133A RID: 4922
+// Token: 0x020007EE RID: 2030
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class MoonChasingHandbookConfig : ConfigBase
 {
-	// Token: 0x0600890D RID: 35085 RVA: 0x001D4CF8 File Offset: 0x001D2EF8
+	// Token: 0x06005CA8 RID: 23720 RVA: 0x001DDB64 File Offset: 0x001DBD64
 	public TrackMoonHandbookReward? GetHandbookRewardById(int rewardId)
 	{
 		return ConfigTrackMoonHandbookRewardById.GetConfig(rewardId, true);
 	}
 
-	// Token: 0x0600890E RID: 35086 RVA: 0x001D4D01 File Offset: 0x001D2F01
+	// Token: 0x06005CA9 RID: 23721 RVA: 0x001DDB6D File Offset: 0x001DBD6D
 	public IReadOnlyList<TrackMoonHandbookReward> GetHandbookRewardList()
 	{
 		return ConfigTrackMoonHandbookRewardAll.GetConfigList(true) ?? new List<TrackMoonHandbookReward>();
 	}
 
-	// Token: 0x17000BA6 RID: 2982
-	// (get) Token: 0x0600890F RID: 35087 RVA: 0x001D4D12 File Offset: 0x001D2F12
+	// Token: 0x17000BC6 RID: 3014
+	// (get) Token: 0x06005CAA RID: 23722 RVA: 0x001DDB7E File Offset: 0x001DBD7E
 	public static MoonChasingHandbookConfig Instance
 	{
 		get
@@ -31,7 +31,7 @@ public class MoonChasingHandbookConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06008910 RID: 35088 RVA: 0x001D4D19 File Offset: 0x001D2F19
+	// Token: 0x06005CAB RID: 23723 RVA: 0x001DDB85 File Offset: 0x001DBD85
 	public static MoonChasingHandbookConfig GetOrCreateInstance()
 	{
 		if (MoonChasingHandbookConfig._Instance == null)
@@ -41,7 +41,7 @@ public class MoonChasingHandbookConfig : ConfigBase
 		return MoonChasingHandbookConfig._Instance;
 	}
 
-	// Token: 0x06008911 RID: 35089 RVA: 0x001D4D2D File Offset: 0x001D2F2D
+	// Token: 0x06005CAC RID: 23724 RVA: 0x001DDB99 File Offset: 0x001DBD99
 	public static bool CreateInstance()
 	{
 		if (MoonChasingHandbookConfig._Instance != null)
@@ -52,24 +52,24 @@ public class MoonChasingHandbookConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06008912 RID: 35090 RVA: 0x001D4D43 File Offset: 0x001D2F43
+	// Token: 0x06005CAD RID: 23725 RVA: 0x001DDBAF File Offset: 0x001DBDAF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008913 RID: 35091 RVA: 0x001D4D45 File Offset: 0x001D2F45
+	// Token: 0x06005CAE RID: 23726 RVA: 0x001DDBB1 File Offset: 0x001DBDB1
 	public static void ResetStaticDefaultValue()
 	{
 		MoonChasingHandbookConfig._Instance = null;
 	}
 
-	// Token: 0x06008914 RID: 35092 RVA: 0x001D4D4D File Offset: 0x001D2F4D
+	// Token: 0x06005CAF RID: 23727 RVA: 0x001DDBB9 File Offset: 0x001DBDB9
 	static MoonChasingHandbookConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoonChasingHandbookConfig.CreateStaticDefaultValue), new Action(MoonChasingHandbookConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003D1D RID: 15645
+	// Token: 0x04003DB5 RID: 15797
 	[Nullable(2)]
 	private static MoonChasingHandbookConfig _Instance;
 }

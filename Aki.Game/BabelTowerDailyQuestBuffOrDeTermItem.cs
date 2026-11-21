@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001124 RID: 4388
+// Token: 0x020005D8 RID: 1496
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class BabelTowerDailyQuestBuffOrDeTermItem : GridProxyAbstract<IBabelTowerDailyQuestItem>
 {
-	// Token: 0x06007311 RID: 29457 RVA: 0x0017A4E4 File Offset: 0x001786E4
+	// Token: 0x060046A7 RID: 18087 RVA: 0x00182F74 File Offset: 0x00181174
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -36,7 +36,7 @@ public class BabelTowerDailyQuestBuffOrDeTermItem : GridProxyAbstract<IBabelTowe
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007312 RID: 29458 RVA: 0x0017A58C File Offset: 0x0017878C
+	// Token: 0x060046A8 RID: 18088 RVA: 0x0018301C File Offset: 0x0018121C
 	[NullableContext(1)]
 	public override void Refresh(IBabelTowerDailyQuestItem data, bool isSelected, int gridIndex)
 	{
@@ -50,7 +50,7 @@ public class BabelTowerDailyQuestBuffOrDeTermItem : GridProxyAbstract<IBabelTowe
 		base.SetTextureByPath(ConfigBabelTowerBuffById.GetConfig(this.ConfigId, true).Value.Texture, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x06007313 RID: 29459 RVA: 0x0017A624 File Offset: 0x00178824
+	// Token: 0x060046A9 RID: 18089 RVA: 0x001830B4 File Offset: 0x001812B4
 	private void OnClickBtn()
 	{
 		bool showWays;
@@ -71,19 +71,19 @@ public class BabelTowerDailyQuestBuffOrDeTermItem : GridProxyAbstract<IBabelTowe
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x0400351C RID: 13596
+	// Token: 0x040035B5 RID: 13749
 	private int ConfigId;
 
-	// Token: 0x0400351D RID: 13597
+	// Token: 0x040035B6 RID: 13750
 	private bool IsDeTerm;
 
-	// Token: 0x020076FB RID: 30459
+	// Token: 0x0200688B RID: 26763
 	private class EComponentDefine
 	{
-		// Token: 0x04027417 RID: 160791
+		// Token: 0x04022759 RID: 141145
 		public const int Texture = 0;
 
-		// Token: 0x04027418 RID: 160792
+		// Token: 0x0402275A RID: 141146
 		public const int Btn = 3;
 	}
 }

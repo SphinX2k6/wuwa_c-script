@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002661 RID: 9825
+// Token: 0x02001B4C RID: 6988
 [NullableContext(2)]
 [Nullable(0)]
 public class QuestTypeItem : UiPanelBase
 {
-	// Token: 0x060141B5 RID: 82357 RVA: 0x005124A8 File Offset: 0x005106A8
+	// Token: 0x06011697 RID: 71319 RVA: 0x00521160 File Offset: 0x0051F360
 	[NullableContext(1)]
 	public void Init(UUIItem uiItem, int inQuestType, TQuestItemSelectHandle selectedHandle)
 	{
@@ -21,7 +21,7 @@ public class QuestTypeItem : UiPanelBase
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x060141B6 RID: 82358 RVA: 0x005124CC File Offset: 0x005106CC
+	// Token: 0x06011698 RID: 71320 RVA: 0x00521184 File Offset: 0x0051F384
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -54,7 +54,7 @@ public class QuestTypeItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060141B7 RID: 82359 RVA: 0x00512638 File Offset: 0x00510838
+	// Token: 0x06011699 RID: 71321 RVA: 0x005212F0 File Offset: 0x0051F4F0
 	protected override void OnStart()
 	{
 		base.GetItem(4).SetUIActive(true);
@@ -75,7 +75,7 @@ public class QuestTypeItem : UiPanelBase
 		this.UpdateList();
 	}
 
-	// Token: 0x060141B8 RID: 82360 RVA: 0x00512730 File Offset: 0x00510930
+	// Token: 0x0601169A RID: 71322 RVA: 0x005213E8 File Offset: 0x0051F5E8
 	public void OnTick(float delta)
 	{
 		if (this.ChapterList != null)
@@ -94,7 +94,7 @@ public class QuestTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141B9 RID: 82361 RVA: 0x005127D4 File Offset: 0x005109D4
+	// Token: 0x0601169B RID: 71323 RVA: 0x0052148C File Offset: 0x0051F68C
 	public void UpdateList()
 	{
 		this.GetQuestItems();
@@ -145,7 +145,7 @@ public class QuestTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141BA RID: 82362 RVA: 0x005129F4 File Offset: 0x00510BF4
+	// Token: 0x0601169C RID: 71324 RVA: 0x005216AC File Offset: 0x0051F8AC
 	public void UpdateItem(int questId)
 	{
 		QuestItem questItem = this.QuestList.Find((QuestItem value) => value.QuestId == questId);
@@ -168,7 +168,7 @@ public class QuestTypeItem : UiPanelBase
 		questItem.UpdateItem(questItem.QuestId, questItem.QuestType);
 	}
 
-	// Token: 0x060141BB RID: 82363 RVA: 0x00512A90 File Offset: 0x00510C90
+	// Token: 0x0601169D RID: 71325 RVA: 0x00521748 File Offset: 0x0051F948
 	public void UpdateAllItem()
 	{
 		foreach (QuestChapterItem questChapterItem in this.ChapterList)
@@ -180,7 +180,7 @@ public class QuestTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141BC RID: 82364 RVA: 0x00512B30 File Offset: 0x00510D30
+	// Token: 0x0601169E RID: 71326 RVA: 0x005217E8 File Offset: 0x0051F9E8
 	public void OnSelect(int? inQuestId)
 	{
 		int num;
@@ -214,7 +214,7 @@ public class QuestTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141BD RID: 82365 RVA: 0x00512C60 File Offset: 0x00510E60
+	// Token: 0x0601169F RID: 71327 RVA: 0x00521918 File Offset: 0x0051FB18
 	public QuestItem GetDefaultItem()
 	{
 		if (this.QuestList.Count == 0 && this.ChapterList.Count == 0)
@@ -228,7 +228,7 @@ public class QuestTypeItem : UiPanelBase
 		return this.QuestList[0];
 	}
 
-	// Token: 0x060141BE RID: 82366 RVA: 0x00512CBA File Offset: 0x00510EBA
+	// Token: 0x060116A0 RID: 71328 RVA: 0x00521972 File Offset: 0x0051FB72
 	public bool IsQuestEmpty()
 	{
 		List<QuestItemData> questItemList = this.QuestItemList;
@@ -240,7 +240,7 @@ public class QuestTypeItem : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x060141BF RID: 82367 RVA: 0x00512CEC File Offset: 0x00510EEC
+	// Token: 0x060116A1 RID: 71329 RVA: 0x005219A4 File Offset: 0x0051FBA4
 	public void UpdateListTrackState()
 	{
 		foreach (QuestItem questItem in this.QuestList)
@@ -266,7 +266,7 @@ public class QuestTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141C0 RID: 82368 RVA: 0x00512DF8 File Offset: 0x00510FF8
+	// Token: 0x060116A2 RID: 71330 RVA: 0x00521AB0 File Offset: 0x0051FCB0
 	public QuestItem GetQuestItem(int questId)
 	{
 		Predicate<QuestItem> <>9__1;
@@ -287,7 +287,7 @@ public class QuestTypeItem : UiPanelBase
 		return this.QuestList.Find((QuestItem value) => value.QuestId == questId);
 	}
 
-	// Token: 0x060141C1 RID: 82369 RVA: 0x00512E9C File Offset: 0x0051109C
+	// Token: 0x060116A3 RID: 71331 RVA: 0x00521B54 File Offset: 0x0051FD54
 	private void GetQuestItems()
 	{
 		this.QuestItemList = new List<QuestItemData>();
@@ -317,7 +317,7 @@ public class QuestTypeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141C2 RID: 82370 RVA: 0x00512FDC File Offset: 0x005111DC
+	// Token: 0x060116A4 RID: 71332 RVA: 0x00521C94 File Offset: 0x0051FE94
 	private void PushChapterItemList(int chapterId, int questType, int questId)
 	{
 		foreach (IQuestChapterData questChapterData in this.QuestChapterItemList)
@@ -339,20 +339,20 @@ public class QuestTypeItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x060141C3 RID: 82371 RVA: 0x00513070 File Offset: 0x00511270
+	// Token: 0x060116A5 RID: 71333 RVA: 0x00521D28 File Offset: 0x0051FF28
 	private void HandleTypeButton()
 	{
 		UUIItem item = base.GetItem(1);
 		item.SetUIActive(!item.bIsUIActive);
 	}
 
-	// Token: 0x0400978D RID: 38797
+	// Token: 0x040098E5 RID: 39141
 	private TQuestItemSelectHandle ToggleSelectHandle;
 
-	// Token: 0x0400978E RID: 38798
+	// Token: 0x040098E6 RID: 39142
 	public int QuestType;
 
-	// Token: 0x0400978F RID: 38799
+	// Token: 0x040098E7 RID: 39143
 	[Nullable(new byte[]
 	{
 		2,
@@ -360,7 +360,7 @@ public class QuestTypeItem : UiPanelBase
 	})]
 	private List<QuestItem> QuestList;
 
-	// Token: 0x04009790 RID: 38800
+	// Token: 0x040098E8 RID: 39144
 	[Nullable(new byte[]
 	{
 		2,
@@ -368,7 +368,7 @@ public class QuestTypeItem : UiPanelBase
 	})]
 	private List<QuestChapterItem> ChapterList;
 
-	// Token: 0x04009791 RID: 38801
+	// Token: 0x040098E9 RID: 39145
 	[Nullable(new byte[]
 	{
 		2,
@@ -376,7 +376,7 @@ public class QuestTypeItem : UiPanelBase
 	})]
 	private List<QuestItemData> QuestItemList;
 
-	// Token: 0x04009792 RID: 38802
+	// Token: 0x040098EA RID: 39146
 	[Nullable(new byte[]
 	{
 		2,
@@ -384,32 +384,32 @@ public class QuestTypeItem : UiPanelBase
 	})]
 	private List<IQuestChapterData> QuestChapterItemList;
 
-	// Token: 0x02008C9D RID: 35997
+	// Token: 0x02007E26 RID: 32294
 	[NullableContext(0)]
 	private class EQuestListItemComponent
 	{
-		// Token: 0x0402DA3B RID: 186939
+		// Token: 0x04028D52 RID: 167250
 		public const int TypeButton = 0;
 
-		// Token: 0x0402DA3C RID: 186940
+		// Token: 0x04028D53 RID: 167251
 		public const int PanelQuestList = 1;
 
-		// Token: 0x0402DA3D RID: 186941
+		// Token: 0x04028D54 RID: 167252
 		public const int ListItemName = 2;
 
-		// Token: 0x0402DA3E RID: 186942
+		// Token: 0x04028D55 RID: 167253
 		public const int TypeIcon = 3;
 
-		// Token: 0x0402DA3F RID: 186943
+		// Token: 0x04028D56 RID: 167254
 		public const int TitleNode = 4;
 
-		// Token: 0x0402DA40 RID: 186944
+		// Token: 0x04028D57 RID: 167255
 		public const int QuestItem = 5;
 
-		// Token: 0x0402DA41 RID: 186945
+		// Token: 0x04028D58 RID: 167256
 		public const int ChapterItem = 6;
 
-		// Token: 0x0402DA42 RID: 186946
+		// Token: 0x04028D59 RID: 167257
 		public const int TitleBg = 7;
 	}
 }

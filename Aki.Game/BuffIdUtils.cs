@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
-// Token: 0x02002EB0 RID: 11952
+// Token: 0x02002403 RID: 9219
 public static class BuffIdUtils
 {
-	// Token: 0x0601986E RID: 104558 RVA: 0x0069958C File Offset: 0x0069778C
+	// Token: 0x06017154 RID: 94548 RVA: 0x006BF890 File Offset: 0x006BDA90
 	public static bool CheckBuffInSpecialList(long checkBuffId)
 	{
-		if (SpecialIgnoreBuff.Values.Contains(checkBuffId))
+		if (Array.IndexOf<long>(SpecialIgnoreBuff.Values, checkBuffId) >= 0)
 		{
 			return true;
 		}
-		if (SpecialIgnoreGaBuff.Values.Contains(checkBuffId))
+		if (Array.IndexOf<long>(SpecialIgnoreGaBuff.Values, checkBuffId) >= 0)
 		{
 			return true;
 		}
@@ -21,25 +19,20 @@ public static class BuffIdUtils
 		{
 			return true;
 		}
-		if (new long[]
+		if (Array.IndexOf<long>(new long[]
 		{
 			1900000014L,
 			1900000015L,
 			1900000017L
-		}.Contains(checkBuffId))
+		}, checkBuffId) >= 0)
 		{
 			return true;
 		}
-		using (IEnumerator<long> enumerator = (from f in typeof(BuffId).GetFields()
-		where f.IsLiteral && !f.IsInitOnly
-		select Convert.ToInt64(f.GetValue(null))).GetEnumerator())
+		foreach (FieldInfo fieldInfo in typeof(BuffId).GetFields())
 		{
-			while (enumerator.MoveNext())
+			if (fieldInfo.IsLiteral && !fieldInfo.IsInitOnly && Convert.ToInt64(fieldInfo.GetValue(null)) == checkBuffId)
 			{
-				if (enumerator.Current == checkBuffId)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;

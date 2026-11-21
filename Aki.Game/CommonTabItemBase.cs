@@ -5,19 +5,19 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020019BA RID: 6586
+// Token: 0x02000E78 RID: 3704
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class CommonTabItemBase : UiPanelBase, IGridProxy<CommonTabItemData>
 {
-	// Token: 0x0600C057 RID: 49239 RVA: 0x002B5D91 File Offset: 0x002B3F91
+	// Token: 0x06009461 RID: 37985 RVA: 0x002C0D21 File Offset: 0x002BEF21
 	public CommonTabItemBase()
 	{
 	}
 
-	// Token: 0x17001019 RID: 4121
-	// (get) Token: 0x0600C058 RID: 49240 RVA: 0x002B5D99 File Offset: 0x002B3F99
-	// (set) Token: 0x0600C059 RID: 49241 RVA: 0x002B5DA1 File Offset: 0x002B3FA1
+	// Token: 0x1700103E RID: 4158
+	// (get) Token: 0x06009462 RID: 37986 RVA: 0x002C0D29 File Offset: 0x002BEF29
+	// (set) Token: 0x06009463 RID: 37987 RVA: 0x002C0D31 File Offset: 0x002BEF31
 	[Nullable(new byte[]
 	{
 		2,
@@ -39,85 +39,85 @@ public abstract class CommonTabItemBase : UiPanelBase, IGridProxy<CommonTabItemD
 		1
 	})] set; }
 
-	// Token: 0x1700101A RID: 4122
-	// (get) Token: 0x0600C05A RID: 49242 RVA: 0x002B5DAA File Offset: 0x002B3FAA
-	// (set) Token: 0x0600C05B RID: 49243 RVA: 0x002B5DB2 File Offset: 0x002B3FB2
+	// Token: 0x1700103F RID: 4159
+	// (get) Token: 0x06009464 RID: 37988 RVA: 0x002C0D3A File Offset: 0x002BEF3A
+	// (set) Token: 0x06009465 RID: 37989 RVA: 0x002C0D42 File Offset: 0x002BEF42
 	public int GridIndex { get; set; }
 
-	// Token: 0x1700101B RID: 4123
-	// (get) Token: 0x0600C05C RID: 49244 RVA: 0x002B5DBB File Offset: 0x002B3FBB
-	// (set) Token: 0x0600C05D RID: 49245 RVA: 0x002B5DC3 File Offset: 0x002B3FC3
+	// Token: 0x17001040 RID: 4160
+	// (get) Token: 0x06009466 RID: 37990 RVA: 0x002C0D4B File Offset: 0x002BEF4B
+	// (set) Token: 0x06009467 RID: 37991 RVA: 0x002C0D53 File Offset: 0x002BEF53
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600C05E RID: 49246 RVA: 0x002B5DCC File Offset: 0x002B3FCC
+	// Token: 0x06009468 RID: 37992 RVA: 0x002C0D5C File Offset: 0x002BEF5C
 	public virtual void Refresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
 		this.OnRefresh(data, isSelected, gridIndex);
 	}
 
-	// Token: 0x0600C05F RID: 49247 RVA: 0x002B5DDE File Offset: 0x002B3FDE
+	// Token: 0x06009469 RID: 37993 RVA: 0x002C0D6E File Offset: 0x002BEF6E
 	protected virtual void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 	}
 
-	// Token: 0x0600C060 RID: 49248 RVA: 0x002B5DE0 File Offset: 0x002B3FE0
+	// Token: 0x0600946A RID: 37994 RVA: 0x002C0D70 File Offset: 0x002BEF70
 	public virtual void Clear()
 	{
 		this.OnClear();
 	}
 
-	// Token: 0x0600C061 RID: 49249 RVA: 0x002B5DE8 File Offset: 0x002B3FE8
+	// Token: 0x0600946B RID: 37995 RVA: 0x002C0D78 File Offset: 0x002BEF78
 	protected virtual void OnClear()
 	{
 	}
 
-	// Token: 0x0600C062 RID: 49250 RVA: 0x002B5DEA File Offset: 0x002B3FEA
+	// Token: 0x0600946C RID: 37996 RVA: 0x002C0D7A File Offset: 0x002BEF7A
 	public virtual void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600C063 RID: 49251 RVA: 0x002B5DEC File Offset: 0x002B3FEC
+	// Token: 0x0600946D RID: 37997 RVA: 0x002C0D7C File Offset: 0x002BEF7C
 	public virtual void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600C064 RID: 49252 RVA: 0x002B5DEE File Offset: 0x002B3FEE
+	// Token: 0x0600946E RID: 37998 RVA: 0x002C0D7E File Offset: 0x002BEF7E
 	public void CreateThenShowByActor(AActor actor)
 	{
 		base.CreateThenShowByActor(actor, null);
 	}
 
-	// Token: 0x0600C065 RID: 49253 RVA: 0x002B5DF8 File Offset: 0x002B3FF8
+	// Token: 0x0600946F RID: 37999 RVA: 0x002C0D88 File Offset: 0x002BEF88
 	public UniTask CreateThenShowByActorAsync(AActor actor)
 	{
 		return base.CreateThenShowByActorAsync(actor, null, false);
 	}
 
-	// Token: 0x0600C066 RID: 49254 RVA: 0x002B5E03 File Offset: 0x002B4003
+	// Token: 0x06009470 RID: 38000 RVA: 0x002C0D93 File Offset: 0x002BEF93
 	public UniTask CreateByActorAsync(AActor actor)
 	{
 		return base.CreateByActorAsync(actor, null, false);
 	}
 
-	// Token: 0x0600C067 RID: 49255 RVA: 0x002B5E0E File Offset: 0x002B400E
+	// Token: 0x06009471 RID: 38001 RVA: 0x002C0D9E File Offset: 0x002BEF9E
 	public virtual object GetKey(CommonTabItemData data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x0600C068 RID: 49256 RVA: 0x002B5E1B File Offset: 0x002B401B
+	// Token: 0x06009472 RID: 38002 RVA: 0x002C0DAB File Offset: 0x002BEFAB
 	public virtual void InitTabItem()
 	{
 	}
 
-	// Token: 0x0600C069 RID: 49257 RVA: 0x002B5E1D File Offset: 0x002B401D
+	// Token: 0x06009473 RID: 38003 RVA: 0x002C0DAD File Offset: 0x002BEFAD
 	protected override void OnStart()
 	{
 		this.GetTabToggle().CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x0600C06A RID: 49258 RVA: 0x002B5E3B File Offset: 0x002B403B
+	// Token: 0x06009474 RID: 38004 RVA: 0x002C0DCB File Offset: 0x002BEFCB
 	private bool CanExecuteChange()
 	{
 		if (this.CanExecuteChangeFunction != null)
@@ -129,58 +129,58 @@ public abstract class CommonTabItemBase : UiPanelBase, IGridProxy<CommonTabItemD
 		return true;
 	}
 
-	// Token: 0x0600C06B RID: 49259 RVA: 0x002B5E65 File Offset: 0x002B4065
+	// Token: 0x06009475 RID: 38005 RVA: 0x002C0DF5 File Offset: 0x002BEFF5
 	public void SetSelectedCallBack(Action<int> callback)
 	{
 		this.SelectedCallBack = callback;
 	}
 
-	// Token: 0x0600C06C RID: 49260 RVA: 0x002B5E6E File Offset: 0x002B406E
+	// Token: 0x06009476 RID: 38006 RVA: 0x002C0DFE File Offset: 0x002BEFFE
 	public void SetCanExecuteChange(Func<int, bool, bool> callback)
 	{
 		this.CanExecuteChangeFunction = callback;
 	}
 
-	// Token: 0x0600C06D RID: 49261 RVA: 0x002B5E77 File Offset: 0x002B4077
+	// Token: 0x06009477 RID: 38007 RVA: 0x002C0E07 File Offset: 0x002BF007
 	public void UpdateTabIcon(string iconPath)
 	{
 		this.OnUpdateTabIcon(iconPath);
 	}
 
-	// Token: 0x0600C06E RID: 49262 RVA: 0x002B5E80 File Offset: 0x002B4080
+	// Token: 0x06009478 RID: 38008 RVA: 0x002C0E10 File Offset: 0x002BF010
 	public void SetForceSwitch(EToggleState state, bool bFire = false)
 	{
 		this.AllowForceSwitch = true;
 		this.SetToggleState(state, bFire);
 	}
 
-	// Token: 0x0600C06F RID: 49263 RVA: 0x002B5E91 File Offset: 0x002B4091
+	// Token: 0x06009479 RID: 38009 RVA: 0x002C0E21 File Offset: 0x002BF021
 	public void SetToggleState(EToggleState state, bool bFire = false)
 	{
 		this.OnSetToggleState(state, bFire);
 	}
 
-	// Token: 0x0600C070 RID: 49264
+	// Token: 0x0600947A RID: 38010
 	protected abstract void OnUpdateTabIcon(string iconPath);
 
-	// Token: 0x0600C071 RID: 49265
+	// Token: 0x0600947B RID: 38011
 	protected abstract void OnSetToggleState(EToggleState state, bool bFire);
 
-	// Token: 0x0600C072 RID: 49266
+	// Token: 0x0600947C RID: 38012
 	protected abstract UUIExtendToggle GetTabToggle();
 
-	// Token: 0x04005668 RID: 22120
+	// Token: 0x0400571A RID: 22298
 	[Nullable(2)]
 	protected CommonTabItemData CurrentData;
 
-	// Token: 0x0400566C RID: 22124
+	// Token: 0x0400571E RID: 22302
 	private bool AllowForceSwitch;
 
-	// Token: 0x0400566D RID: 22125
+	// Token: 0x0400571F RID: 22303
 	[Nullable(2)]
 	protected Action<int> SelectedCallBack;
 
-	// Token: 0x0400566E RID: 22126
+	// Token: 0x04005720 RID: 22304
 	[Nullable(2)]
 	private Func<int, bool, bool> CanExecuteChangeFunction;
 }

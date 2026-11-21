@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200621A RID: 25114
+	// Token: 0x02005198 RID: 20888
 	internal class RhythmShipChoseStarItem : UiPanelBase
 	{
-		// Token: 0x0603F5B2 RID: 259506 RVA: 0x00F50513 File Offset: 0x00F4E713
+		// Token: 0x06034273 RID: 213619 RVA: 0x00E9746B File Offset: 0x00E9566B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5B3 RID: 259507 RVA: 0x00F5054C File Offset: 0x00F4E74C
+		// Token: 0x06034274 RID: 213620 RVA: 0x00E974A4 File Offset: 0x00E956A4
 		public void SetLightItemActive(bool value)
 		{
 			base.GetItem(1).SetUIActive(value);

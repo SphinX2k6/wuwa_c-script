@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002520 RID: 9504
+// Token: 0x02001A07 RID: 6663
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 {
-	// Token: 0x060131D9 RID: 78297 RVA: 0x004BEE28 File Offset: 0x004BD028
+	// Token: 0x06010699 RID: 67225 RVA: 0x004CCB34 File Offset: 0x004CAD34
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,25 +37,25 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		};
 	}
 
-	// Token: 0x060131DA RID: 78298 RVA: 0x004BEEFD File Offset: 0x004BD0FD
+	// Token: 0x0601069A RID: 67226 RVA: 0x004CCC09 File Offset: 0x004CAE09
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.PhoneMsgDialogBgThemeCharmUpdate, new Action(this.OnRedDotUpdate));
 	}
 
-	// Token: 0x060131DB RID: 78299 RVA: 0x004BEF1B File Offset: 0x004BD11B
+	// Token: 0x0601069B RID: 67227 RVA: 0x004CCC27 File Offset: 0x004CAE27
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.PhoneMsgDialogBgThemeCharmUpdate, new Action(this.OnRedDotUpdate));
 	}
 
-	// Token: 0x060131DC RID: 78300 RVA: 0x004BEF39 File Offset: 0x004BD139
+	// Token: 0x0601069C RID: 67228 RVA: 0x004CCC45 File Offset: 0x004CAE45
 	private void OnRedDotUpdate()
 	{
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x060131DD RID: 78301 RVA: 0x004BEF41 File Offset: 0x004BD141
+	// Token: 0x0601069D RID: 67229 RVA: 0x004CCC4D File Offset: 0x004CAE4D
 	public void RefreshRedDot()
 	{
 		UUIItem item = base.GetItem(6);
@@ -63,13 +63,13 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		item.SetUIActive(phoneMsgDialogData != null && phoneMsgDialogData.IsHasRedDot());
 	}
 
-	// Token: 0x060131DE RID: 78302 RVA: 0x004BEF61 File Offset: 0x004BD161
+	// Token: 0x0601069E RID: 67230 RVA: 0x004CCC6D File Offset: 0x004CAE6D
 	public void HideRedDot()
 	{
 		base.GetItem(6).SetUIActive(false);
 	}
 
-	// Token: 0x060131DF RID: 78303 RVA: 0x004BEF70 File Offset: 0x004BD170
+	// Token: 0x0601069F RID: 67231 RVA: 0x004CCC7C File Offset: 0x004CAE7C
 	[NullableContext(1)]
 	public override void Refresh(PhoneMsgDialogItemData data)
 	{
@@ -91,7 +91,7 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		this.SetToggleState(data.IsSelected, true);
 	}
 
-	// Token: 0x060131E0 RID: 78304 RVA: 0x004BF044 File Offset: 0x004BD244
+	// Token: 0x060106A0 RID: 67232 RVA: 0x004CCD50 File Offset: 0x004CAF50
 	private void TryLoadDynamicDialogNode(string path)
 	{
 		PhoneMsgDialogItem.<>c__DisplayClass11_0 CS$<>8__locals1 = new PhoneMsgDialogItem.<>c__DisplayClass11_0();
@@ -109,7 +109,7 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		base.RunAsyncTask(task).Forget();
 	}
 
-	// Token: 0x060131E1 RID: 78305 RVA: 0x004BF08C File Offset: 0x004BD28C
+	// Token: 0x060106A1 RID: 67233 RVA: 0x004CCD98 File Offset: 0x004CAF98
 	private UniTask TryLoadDynamicDialogNodeAsync(string path)
 	{
 		PhoneMsgDialogItem.<TryLoadDynamicDialogNodeAsync>d__12 <TryLoadDynamicDialogNodeAsync>d__;
@@ -121,7 +121,7 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		return <TryLoadDynamicDialogNodeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060131E2 RID: 78306 RVA: 0x004BF0D7 File Offset: 0x004BD2D7
+	// Token: 0x060106A2 RID: 67234 RVA: 0x004CCDE3 File Offset: 0x004CAFE3
 	private void DestroyDynamicDialogActor()
 	{
 		if (this.DynamicDialogActor != null && this.DynamicDialogActor.IsValid())
@@ -131,7 +131,7 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		}
 	}
 
-	// Token: 0x060131E3 RID: 78307 RVA: 0x004BF104 File Offset: 0x004BD304
+	// Token: 0x060106A3 RID: 67235 RVA: 0x004CCE10 File Offset: 0x004CB010
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.OnToggleCallBack != null && this.PhoneMsgDialogData != null)
@@ -146,7 +146,7 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		}
 	}
 
-	// Token: 0x060131E4 RID: 78308 RVA: 0x004BF170 File Offset: 0x004BD370
+	// Token: 0x060106A4 RID: 67236 RVA: 0x004CCE7C File Offset: 0x004CB07C
 	public void SetToggleState(bool state, bool isFirstRefresh = false)
 	{
 		if (this.PhoneMsgDialogData == null)
@@ -158,16 +158,16 @@ public class PhoneMsgDialogItem : SyncGridProxyAbstract<PhoneMsgDialogItemData>
 		base.GetExtendToggle(0).SetToggleState(state2, false, isFirstRefresh, isFirstRefresh);
 	}
 
-	// Token: 0x04009051 RID: 36945
+	// Token: 0x040091A6 RID: 37286
 	private PhoneMsgDialogItemData PhoneMsgDialogData;
 
-	// Token: 0x04009052 RID: 36946
+	// Token: 0x040091A7 RID: 37287
 	private AActor DynamicDialogActor;
 
-	// Token: 0x04009053 RID: 36947
+	// Token: 0x040091A8 RID: 37288
 	private LevelSequencePlayer DialogSequencePlayer;
 
-	// Token: 0x04009054 RID: 36948
+	// Token: 0x040091A9 RID: 37289
 	[Nullable(new byte[]
 	{
 		2,

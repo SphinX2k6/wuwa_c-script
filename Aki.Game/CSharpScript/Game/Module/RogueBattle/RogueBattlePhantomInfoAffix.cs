@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,7 +13,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E84 RID: 20100
+	// Token: 0x02003E4D RID: 15949
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -23,7 +22,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattlePhantomInfoAffix : GridProxyAbstract<PhantomAffixInfo>
 	{
-		// Token: 0x06033B54 RID: 211796 RVA: 0x00C1C694 File Offset: 0x00C1A894
+		// Token: 0x060289BF RID: 166335 RVA: 0x00B65BB4 File Offset: 0x00B63DB4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +35,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B55 RID: 211797 RVA: 0x00C1C71C File Offset: 0x00C1A91C
+		// Token: 0x060289C0 RID: 166336 RVA: 0x00B65C3C File Offset: 0x00B63E3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattlePhantomInfoAffix.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,27 +46,27 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033B56 RID: 211798 RVA: 0x00C1C75F File Offset: 0x00C1A95F
+		// Token: 0x060289C1 RID: 166337 RVA: 0x00B65C7F File Offset: 0x00B63E7F
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
 			EventSystem.Instance.Add(EEventName.RogueBattleSelectOptionPreview, new Action(this.RefreshSelectGainData));
 		}
 
-		// Token: 0x06033B57 RID: 211799 RVA: 0x00C1C783 File Offset: 0x00C1A983
+		// Token: 0x060289C2 RID: 166338 RVA: 0x00B65CA3 File Offset: 0x00B63EA3
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
 			EventSystem.Instance.Remove(EEventName.RogueBattleSelectOptionPreview, new Action(this.RefreshSelectGainData));
 		}
 
-		// Token: 0x06033B58 RID: 211800 RVA: 0x00C1C7A7 File Offset: 0x00C1A9A7
+		// Token: 0x060289C3 RID: 166339 RVA: 0x00B65CC7 File Offset: 0x00B63EC7
 		private RogueBattleTokenElementWithCount CreateElementItem()
 		{
 			return new RogueBattleTokenElementWithCount();
 		}
 
-		// Token: 0x06033B59 RID: 211801 RVA: 0x00C1C7B0 File Offset: 0x00C1A9B0
+		// Token: 0x060289C4 RID: 166340 RVA: 0x00B65CD0 File Offset: 0x00B63ED0
 		public override void Refresh(PhantomAffixInfo data, bool isSelected, int gridIndex)
 		{
 			RogueBattlePhantomInfoAffix.<>c__DisplayClass9_0 CS$<>8__locals1 = new RogueBattlePhantomInfoAffix.<>c__DisplayClass9_0();
@@ -86,7 +85,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			{
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(3), rogueResAffix.Value.AffixDesc, rogueResAffix.Value.AffixDescParam());
 			}
-			CS$<>8__locals1.elementInfo = RogueBattleUtils.ConvertElementUnitsToElementInfo(data.ElementUnits.ToArray<ElementUnit>());
+			CS$<>8__locals1.elementInfo = RogueBattleUtils.ConvertElementUnitsToElementInfo(data.ElementUnits);
 			UiAsyncTask task = new UiAsyncTask("RogueBattlePhantomInfoAffix.Refresh", delegate()
 			{
 				RogueBattlePhantomInfoAffix.<>c__DisplayClass9_0.<<Refresh>b__0>d <<Refresh>b__0>d;
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06033B5A RID: 211802 RVA: 0x00C1C884 File Offset: 0x00C1AA84
+		// Token: 0x060289C5 RID: 166341 RVA: 0x00B65DA0 File Offset: 0x00B63FA0
 		public void RefreshSelectGainData()
 		{
 			bool flag = true;
@@ -172,11 +171,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B72B RID: 112427
+		// Token: 0x040160FE RID: 90366
 		[Nullable(2)]
 		public PhantomAffixInfo Data;
 
-		// Token: 0x0401B72C RID: 112428
+		// Token: 0x040160FF RID: 90367
 		[Nullable(new byte[]
 		{
 			2,
@@ -185,11 +184,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public GenericLayout<RogueBattleTokenElementWithCount, IRogueBattleElementInfo> ElementLayout;
 
-		// Token: 0x0401B72D RID: 112429
+		// Token: 0x04016100 RID: 90368
 		[Nullable(2)]
 		public LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B72E RID: 112430
+		// Token: 0x04016101 RID: 90369
 		public bool UnlockState;
 	}
 }

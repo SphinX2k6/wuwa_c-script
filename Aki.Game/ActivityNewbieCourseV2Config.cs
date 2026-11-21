@@ -1,34 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001396 RID: 5014
+// Token: 0x0200084A RID: 2122
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityNewbieCourseV2Config : ConfigBase
 {
-	// Token: 0x06008C89 RID: 35977 RVA: 0x001E2300 File Offset: 0x001E0500
+	// Token: 0x06006024 RID: 24612 RVA: 0x001EB154 File Offset: 0x001E9354
 	public IReadOnlyList<NewbieCourseV2> GetConfigList(int activityId = 0)
 	{
-		IReadOnlyList<NewbieCourseV2> configList = ConfigNewbieCourseV2All.GetConfigList(true);
-		List<NewbieCourseV2> list = ((configList != null) ? configList.ToList<NewbieCourseV2>() : null) ?? new List<NewbieCourseV2>();
+		IReadOnlyList<NewbieCourseV2> readOnlyList = ConfigNewbieCourseV2All.GetConfigList(true) ?? Array.Empty<NewbieCourseV2>();
 		if (activityId > 0)
 		{
-			List<NewbieCourseV2> list2 = (from config in list
-			where config.ActivityId == activityId
-			select config).ToList<NewbieCourseV2>();
-			list = ((list2.Count > 0) ? list2 : list);
+			List<NewbieCourseV2> list = new List<NewbieCourseV2>();
+			foreach (NewbieCourseV2 item in readOnlyList)
+			{
+				if (item.ActivityId == activityId)
+				{
+					list.Add(item);
+				}
+			}
+			IReadOnlyList<NewbieCourseV2> readOnlyList2;
+			if (list.Count <= 0)
+			{
+				readOnlyList2 = readOnlyList;
+			}
+			else
+			{
+				IReadOnlyList<NewbieCourseV2> readOnlyList3 = list;
+				readOnlyList2 = readOnlyList3;
+			}
+			readOnlyList = readOnlyList2;
 		}
-		return (from config in list
-		orderby config.TargetLevel, config.Id
-		select config).ToList<NewbieCourseV2>();
+		return NoLinq.OrderByThenByToList<NewbieCourseV2, int, int>(readOnlyList, (NewbieCourseV2 config) => config.TargetLevel, (NewbieCourseV2 config) => config.Id);
 	}
 
-	// Token: 0x06008C8A RID: 35978 RVA: 0x001E23B4 File Offset: 0x001E05B4
+	// Token: 0x06006025 RID: 24613 RVA: 0x001EB218 File Offset: 0x001E9418
 	public ItemData[] GetRewardList(int dropId)
 	{
 		DropPackage? dropPackage;
@@ -50,30 +61,19 @@ public class ActivityNewbieCourseV2Config : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008C8B RID: 35979 RVA: 0x001E2464 File Offset: 0x001E0664
+	// Token: 0x06006026 RID: 24614 RVA: 0x001EB2C8 File Offset: 0x001E94C8
 	public int[] GetWeaponPreviewIdsForActivity(int activityId)
 	{
 		List<int> list = new List<int>();
-		foreach (NewbieCourseV2 config in this.GetConfigList(activityId))
+		foreach (NewbieCourseV2 newbieCourseV in this.GetConfigList(activityId))
 		{
-			foreach (int item in ActivityNewbieCourseV2Config.ReadWeaponPreviewList(config))
-			{
-				list.Add(item);
-			}
+			list.AddRange(newbieCourseV.GetWeaponPreviewListBytes());
 		}
 		return list.ToArray();
 	}
 
-	// Token: 0x06008C8C RID: 35980 RVA: 0x001E24F4 File Offset: 0x001E06F4
-	private static IEnumerable<int> ReadWeaponPreviewList(NewbieCourseV2 config)
-	{
-		ActivityNewbieCourseV2Config.<ReadWeaponPreviewList>d__3 <ReadWeaponPreviewList>d__ = new ActivityNewbieCourseV2Config.<ReadWeaponPreviewList>d__3(-2);
-		<ReadWeaponPreviewList>d__.<>3__config = config;
-		return <ReadWeaponPreviewList>d__;
-	}
-
-	// Token: 0x17000BE1 RID: 3041
-	// (get) Token: 0x06008C8D RID: 35981 RVA: 0x001E2504 File Offset: 0x001E0704
+	// Token: 0x17000C01 RID: 3073
+	// (get) Token: 0x06006027 RID: 24615 RVA: 0x001EB330 File Offset: 0x001E9530
 	public static ActivityNewbieCourseV2Config Instance
 	{
 		get
@@ -82,7 +82,7 @@ public class ActivityNewbieCourseV2Config : ConfigBase
 		}
 	}
 
-	// Token: 0x06008C8E RID: 35982 RVA: 0x001E250B File Offset: 0x001E070B
+	// Token: 0x06006028 RID: 24616 RVA: 0x001EB337 File Offset: 0x001E9537
 	public static ActivityNewbieCourseV2Config GetOrCreateInstance()
 	{
 		if (ActivityNewbieCourseV2Config._Instance == null)
@@ -92,7 +92,7 @@ public class ActivityNewbieCourseV2Config : ConfigBase
 		return ActivityNewbieCourseV2Config._Instance;
 	}
 
-	// Token: 0x06008C8F RID: 35983 RVA: 0x001E251F File Offset: 0x001E071F
+	// Token: 0x06006029 RID: 24617 RVA: 0x001EB34B File Offset: 0x001E954B
 	public static bool CreateInstance()
 	{
 		if (ActivityNewbieCourseV2Config._Instance != null)
@@ -103,24 +103,24 @@ public class ActivityNewbieCourseV2Config : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06008C90 RID: 35984 RVA: 0x001E2535 File Offset: 0x001E0735
+	// Token: 0x0600602A RID: 24618 RVA: 0x001EB361 File Offset: 0x001E9561
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008C91 RID: 35985 RVA: 0x001E2537 File Offset: 0x001E0737
+	// Token: 0x0600602B RID: 24619 RVA: 0x001EB363 File Offset: 0x001E9563
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityNewbieCourseV2Config._Instance = null;
 	}
 
-	// Token: 0x06008C92 RID: 35986 RVA: 0x001E253F File Offset: 0x001E073F
+	// Token: 0x0600602C RID: 24620 RVA: 0x001EB36B File Offset: 0x001E956B
 	static ActivityNewbieCourseV2Config()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityNewbieCourseV2Config.CreateStaticDefaultValue), new Action(ActivityNewbieCourseV2Config.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003E62 RID: 15970
+	// Token: 0x04003EFA RID: 16122
 	[Nullable(2)]
 	private static ActivityNewbieCourseV2Config _Instance;
 }

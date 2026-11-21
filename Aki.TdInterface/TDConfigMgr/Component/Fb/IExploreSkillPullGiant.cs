@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CAE RID: 3246
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D90 RID: 3472
 	public class IExploreSkillPullGiant : IExploreSkillInteractType
 	{
-		// Token: 0x06004A4E RID: 19022 RVA: 0x000BA0C7 File Offset: 0x000B82C7
+		// Token: 0x06004EFC RID: 20220 RVA: 0x000C4AD7 File Offset: 0x000C2CD7
 		public static IExploreSkillPullGiant Create(IExploreSkillPullGiant? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016AF RID: 5807
-		// (get) Token: 0x06004A4F RID: 19023 RVA: 0x000BA0E6 File Offset: 0x000B82E6
+		// Token: 0x170017D7 RID: 6103
+		// (get) Token: 0x06004EFD RID: 20221 RVA: 0x000C4AF6 File Offset: 0x000C2CF6
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016B0 RID: 5808
-		// (get) Token: 0x06004A50 RID: 19024 RVA: 0x000BA0F3 File Offset: 0x000B82F3
+		// Token: 0x170017D8 RID: 6104
+		// (get) Token: 0x06004EFE RID: 20222 RVA: 0x000C4B03 File Offset: 0x000C2D03
 		public virtual float PullTime
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016B1 RID: 5809
-		// (get) Token: 0x06004A51 RID: 19025 RVA: 0x000BA100 File Offset: 0x000B8300
+		// Token: 0x170017D9 RID: 6105
+		// (get) Token: 0x06004EFF RID: 20223 RVA: 0x000C4B10 File Offset: 0x000C2D10
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -65,13 +62,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A67 RID: 10855
+		// Token: 0x04002CE1 RID: 11489
 		private IExploreSkillPullGiant Instance;
 
-		// Token: 0x04002A68 RID: 10856
+		// Token: 0x04002CE2 RID: 11490
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002A69 RID: 10857
+		// Token: 0x04002CE3 RID: 11491
 		private bool _ActionsInited;
 	}
 }

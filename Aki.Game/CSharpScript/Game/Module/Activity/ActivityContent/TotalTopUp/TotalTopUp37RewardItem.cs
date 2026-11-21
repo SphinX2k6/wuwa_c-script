@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FB3 RID: 24499
+	// Token: 0x02004F9A RID: 20378
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUp37RewardItem : UiPanelBase
 	{
-		// Token: 0x0603E1AD RID: 254381 RVA: 0x00EFF41C File Offset: 0x00EFD61C
+		// Token: 0x06033147 RID: 209223 RVA: 0x00E510D8 File Offset: 0x00E4F2D8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E1AE RID: 254382 RVA: 0x00EFF534 File Offset: 0x00EFD734
+		// Token: 0x06033148 RID: 209224 RVA: 0x00E511F0 File Offset: 0x00E4F3F0
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(7);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603E1AF RID: 254383 RVA: 0x00EFF548 File Offset: 0x00EFD748
+		// Token: 0x06033149 RID: 209225 RVA: 0x00E51204 File Offset: 0x00E4F404
 		public void Refresh(TotalTopUpPageRewardViewModel viewModel)
 		{
 			this.ViewModel = viewModel;
@@ -104,8 +104,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.SetSelected(false);
 		}
 
-		// Token: 0x17008FFB RID: 36859
-		// (get) Token: 0x0603E1B0 RID: 254384 RVA: 0x00EFF67E File Offset: 0x00EFD87E
+		// Token: 0x170063CD RID: 25549
+		// (get) Token: 0x0603314A RID: 209226 RVA: 0x00E5133A File Offset: 0x00E4F53A
 		public int RewardConfigId
 		{
 			get
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1B1 RID: 254385 RVA: 0x00EFF691 File Offset: 0x00EFD891
+		// Token: 0x0603314B RID: 209227 RVA: 0x00E5134D File Offset: 0x00E4F54D
 		public void SetPreviewMark(bool isPreviewing)
 		{
 			this.SetSelected(isPreviewing);
 		}
 
-		// Token: 0x0603E1B2 RID: 254386 RVA: 0x00EFF69A File Offset: 0x00EFD89A
+		// Token: 0x0603314C RID: 209228 RVA: 0x00E51356 File Offset: 0x00E4F556
 		private void SetSelected(bool isSelected)
 		{
 			UUIItem item = base.GetItem(5);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item2.SetUIActive(!isSelected);
 		}
 
-		// Token: 0x0603E1B3 RID: 254387 RVA: 0x00EFF6C4 File Offset: 0x00EFD8C4
+		// Token: 0x0603314D RID: 209229 RVA: 0x00E51380 File Offset: 0x00E4F580
 		private void OnClickItem()
 		{
 			if (this.ViewModel == null)
@@ -156,48 +156,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ViewModel.PreviewReward();
 		}
 
-		// Token: 0x0402071F RID: 132895
+		// Token: 0x0401B1F1 RID: 111089
 		private const string CLAIMED_BG_COLOR = "C3C3C3";
 
-		// Token: 0x04020720 RID: 132896
+		// Token: 0x0401B1F2 RID: 111090
 		private const string NORMAL_BG_COLOR = "FFFFFF";
 
-		// Token: 0x04020721 RID: 132897
+		// Token: 0x0401B1F3 RID: 111091
 		[Nullable(2)]
 		private TotalTopUpPageRewardViewModel ViewModel;
 
-		// Token: 0x0200C287 RID: 49799
+		// Token: 0x0200AC92 RID: 44178
 		[NullableContext(0)]
 		private class ENode
 		{
-			// Token: 0x0403AC31 RID: 240689
+			// Token: 0x0403560D RID: 218637
 			public const int BtnItem = 0;
 
-			// Token: 0x0403AC32 RID: 240690
+			// Token: 0x0403560E RID: 218638
 			public const int PnlBg = 1;
 
-			// Token: 0x0403AC33 RID: 240691
+			// Token: 0x0403560F RID: 218639
 			public const int PnlCost = 2;
 
-			// Token: 0x0403AC34 RID: 240692
+			// Token: 0x04035610 RID: 218640
 			public const int TextScore = 3;
 
-			// Token: 0x0403AC35 RID: 240693
+			// Token: 0x04035611 RID: 218641
 			public const int PnlDone = 4;
 
-			// Token: 0x0403AC36 RID: 240694
+			// Token: 0x04035612 RID: 218642
 			public const int PnlSelected = 5;
 
-			// Token: 0x0403AC37 RID: 240695
+			// Token: 0x04035613 RID: 218643
 			public const int TextSelectedScore = 6;
 
-			// Token: 0x0403AC38 RID: 240696
+			// Token: 0x04035614 RID: 218644
 			public const int ItemRedDot = 7;
 
-			// Token: 0x0403AC39 RID: 240697
+			// Token: 0x04035615 RID: 218645
 			public const int EffectItem = 8;
 
-			// Token: 0x0403AC3A RID: 240698
+			// Token: 0x04035616 RID: 218646
 			public const int TxtNum = 9;
 		}
 	}

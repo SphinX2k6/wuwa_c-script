@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000790 RID: 1936
+	// Token: 0x020007AA RID: 1962
 	public class ConfigQuestTreeNodeByChapterId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D72 RID: 11634 RVA: 0x0015A064 File Offset: 0x00158264
+		// Token: 0x06002E0E RID: 11790 RVA: 0x00160F70 File Offset: 0x0015F170
 		static ConfigQuestTreeNodeByChapterId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestTreeNodeByChapterId.CreateStaticDefaultValue), new Action(ConfigQuestTreeNodeByChapterId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D73 RID: 11635 RVA: 0x0015A084 File Offset: 0x00158284
+		// Token: 0x06002E0F RID: 11791 RVA: 0x00160F90 File Offset: 0x0015F190
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestTreeNodeByChapterId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D74 RID: 11636 RVA: 0x0015A103 File Offset: 0x00158303
+		// Token: 0x06002E10 RID: 11792 RVA: 0x0016100F File Offset: 0x0015F20F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestTreeNodeByChapterId.LogPair = null;
 			ConfigQuestTreeNodeByChapterId.HandleId = 0;
 		}
 
-		// Token: 0x06002D75 RID: 11637 RVA: 0x0015A111 File Offset: 0x00158311
+		// Token: 0x06002E11 RID: 11793 RVA: 0x0016101D File Offset: 0x0015F21D
 		public static void Init()
 		{
 			ConfigQuestTreeNodeByChapterId.HandleId = ConfigCommon.InitDataStatement(ConfigQuestTreeNodeByChapterId.HandleId, "db_questtree.db", "select BinData from `QuestTreeNode` where ChapterId=?");
 		}
 
-		// Token: 0x06002D76 RID: 11638 RVA: 0x0015A12C File Offset: 0x0015832C
+		// Token: 0x06002E12 RID: 11794 RVA: 0x00161038 File Offset: 0x0015F238
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestTreeNode> GetConfigList(int p0ChapterId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040034D6 RID: 13526
+		// Token: 0x0400358C RID: 13708
 		private const string DB = "db_questtree.db";
 
-		// Token: 0x040034D7 RID: 13527
+		// Token: 0x0400358D RID: 13709
 		private const string FILE = "r.任务树.xlsx";
 
-		// Token: 0x040034D8 RID: 13528
+		// Token: 0x0400358E RID: 13710
 		private const string TABLE = "QuestTreeNode";
 
-		// Token: 0x040034D9 RID: 13529
+		// Token: 0x0400358F RID: 13711
 		private const string COMMAND = "select BinData from `QuestTreeNode` where ChapterId=?";
 
-		// Token: 0x040034DA RID: 13530
+		// Token: 0x04003590 RID: 13712
 		private const string KEY_PREFIX = "QuestTreeNodeByChapterId";
 
-		// Token: 0x040034DB RID: 13531
+		// Token: 0x04003591 RID: 13713
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040034DC RID: 13532
+		// Token: 0x04003592 RID: 13714
 		private static int HandleId;
 	}
 }

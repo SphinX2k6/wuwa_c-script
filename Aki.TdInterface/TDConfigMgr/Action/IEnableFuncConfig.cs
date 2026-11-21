@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019E4 RID: 6628
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B71 RID: 7025
 	public class IEnableFuncConfig
 	{
-		// Token: 0x06008DEF RID: 36335 RVA: 0x0014C3B4 File Offset: 0x0014A5B4
+		// Token: 0x06009531 RID: 38193 RVA: 0x0015BEC0 File Offset: 0x0015A0C0
 		private IEnableFuncConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008DF0 RID: 36336 RVA: 0x0014C3EC File Offset: 0x0014A5EC
+		// Token: 0x06009532 RID: 38194 RVA: 0x0015BEF8 File Offset: 0x0015A0F8
 		public static IEnableFuncConfig Create([Nullable(2)] IEnableFuncConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DF1 RID: 36337 RVA: 0x0014C3FF File Offset: 0x0014A5FF
+		// Token: 0x06009533 RID: 38195 RVA: 0x0015BF0B File Offset: 0x0015A10B
 		public static IEnableFuncConfig CreateFromSetValue([Nullable(2)] IEnableFuncConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008DF2 RID: 36338 RVA: 0x0014C412 File Offset: 0x0014A612
+		// Token: 0x06009534 RID: 38196 RVA: 0x0015BF1E File Offset: 0x0015A11E
 		public IEnableFuncConfig_SetValue ToSetValue()
 		{
 			return new IEnableFuncConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D76 RID: 11638
-		// (get) Token: 0x06008DF3 RID: 36339 RVA: 0x0014C440 File Offset: 0x0014A640
-		// (set) Token: 0x06008DF4 RID: 36340 RVA: 0x0014C47A File Offset: 0x0014A67A
+		// Token: 0x17002F7B RID: 12155
+		// (get) Token: 0x06009535 RID: 38197 RVA: 0x0015BF4C File Offset: 0x0015A14C
+		// (set) Token: 0x06009536 RID: 38198 RVA: 0x0015BF86 File Offset: 0x0015A186
 		public virtual float? DelayDuration
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D77 RID: 11639
-		// (get) Token: 0x06008DF5 RID: 36341 RVA: 0x0014C488 File Offset: 0x0014A688
-		// (set) Token: 0x06008DF6 RID: 36342 RVA: 0x0014C4C2 File Offset: 0x0014A6C2
+		// Token: 0x17002F7C RID: 12156
+		// (get) Token: 0x06009537 RID: 38199 RVA: 0x0015BF94 File Offset: 0x0015A194
+		// (set) Token: 0x06009538 RID: 38200 RVA: 0x0015BFCE File Offset: 0x0015A1CE
 		public virtual bool? IsEnableEsc
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D78 RID: 11640
-		// (get) Token: 0x06008DF7 RID: 36343 RVA: 0x0014C4D0 File Offset: 0x0014A6D0
-		// (set) Token: 0x06008DF8 RID: 36344 RVA: 0x0014C50A File Offset: 0x0014A70A
+		// Token: 0x17002F7D RID: 12157
+		// (get) Token: 0x06009539 RID: 38201 RVA: 0x0015BFDC File Offset: 0x0015A1DC
+		// (set) Token: 0x0600953A RID: 38202 RVA: 0x0015C016 File Offset: 0x0015A216
 		public virtual bool? IsEnablePhoto
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005815 RID: 22549
+		// Token: 0x04005C6A RID: 23658
 		[Nullable(2)]
 		protected IEnableFuncConfig FbInstance;
 
-		// Token: 0x04005816 RID: 22550
+		// Token: 0x04005C6B RID: 23659
 		[Nullable(2)]
 		protected IEnableFuncConfig_SetValue PocoInterface;
 	}

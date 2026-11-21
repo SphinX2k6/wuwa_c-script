@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A23 RID: 2595
+	// Token: 0x020001D3 RID: 467
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ECanBeCharacterBase")]
 	public enum ECanBeCharacterBase
 	{
-		// Token: 0x04004566 RID: 17766
+		// Token: 0x04000B61 RID: 2913
 		ECB_No,
-		// Token: 0x04004567 RID: 17767
+		// Token: 0x04000B62 RID: 2914
 		ECB_Yes,
-		// Token: 0x04004568 RID: 17768
+		// Token: 0x04000B63 RID: 2915
 		ECB_Owner,
-		// Token: 0x04004569 RID: 17769
+		// Token: 0x04000B64 RID: 2916
 		ECB_MAX
 	}
 }

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001863 RID: 6243
+// Token: 0x02000D1C RID: 3356
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MainPropertyItem : GridProxyAbstract<FilterItemData>
 {
-	// Token: 0x0600B70D RID: 46861 RVA: 0x00295D50 File Offset: 0x00293F50
+	// Token: 0x06008AF6 RID: 35574 RVA: 0x002A0474 File Offset: 0x0029E674
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class MainPropertyItem : GridProxyAbstract<FilterItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B70E RID: 46862 RVA: 0x00295E17 File Offset: 0x00294017
+	// Token: 0x06008AF7 RID: 35575 RVA: 0x002A053B File Offset: 0x0029E73B
 	private void OnClickDelete()
 	{
 		if (this.Data != null && this.OnDeleteCallback != null)
@@ -46,7 +46,7 @@ public class MainPropertyItem : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x0600B70F RID: 46863 RVA: 0x00295E40 File Offset: 0x00294040
+	// Token: 0x06008AF8 RID: 35576 RVA: 0x002A0564 File Offset: 0x0029E764
 	public override void Refresh(FilterItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -83,34 +83,34 @@ public class MainPropertyItem : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x0600B710 RID: 46864 RVA: 0x00295EEB File Offset: 0x002940EB
+	// Token: 0x06008AF9 RID: 35577 RVA: 0x002A060F File Offset: 0x0029E80F
 	public void SetDeleteCallback(Action<int> callback)
 	{
 		this.OnDeleteCallback = callback;
 	}
 
-	// Token: 0x040052A5 RID: 21157
+	// Token: 0x04005350 RID: 21328
 	[Nullable(2)]
 	public FilterItemData Data;
 
-	// Token: 0x040052A6 RID: 21158
+	// Token: 0x04005351 RID: 21329
 	[Nullable(2)]
 	public Action<int> OnDeleteCallback;
 
-	// Token: 0x02007E22 RID: 32290
+	// Token: 0x02006FA9 RID: 28585
 	[NullableContext(0)]
 	private class EMainPropertyItemDefine
 	{
-		// Token: 0x04029486 RID: 169094
+		// Token: 0x040247B3 RID: 149427
 		public const int Item = 0;
 
-		// Token: 0x04029487 RID: 169095
+		// Token: 0x040247B4 RID: 149428
 		public const int TxtCost = 1;
 
-		// Token: 0x04029488 RID: 169096
+		// Token: 0x040247B5 RID: 149429
 		public const int TxtPropertyName = 2;
 
-		// Token: 0x04029489 RID: 169097
+		// Token: 0x040247B6 RID: 149430
 		public const int BtnDelete = 3;
 	}
 }

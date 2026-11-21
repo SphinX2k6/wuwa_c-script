@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E22 RID: 7714
+// Token: 0x020012E4 RID: 4836
 public class HandBookQuestPlotNode : UiPanelBase
 {
-	// Token: 0x0600EA6D RID: 60013 RVA: 0x003778C8 File Offset: 0x00375AC8
+	// Token: 0x0600BE8C RID: 48780 RVA: 0x003835D0 File Offset: 0x003817D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class HandBookQuestPlotNode : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EA6E RID: 60014 RVA: 0x003778EC File Offset: 0x00375AEC
+	// Token: 0x0600BE8D RID: 48781 RVA: 0x003835F4 File Offset: 0x003817F4
 	[NullableContext(1)]
 	public void RefreshByNodeText(string nodeTitle)
 	{

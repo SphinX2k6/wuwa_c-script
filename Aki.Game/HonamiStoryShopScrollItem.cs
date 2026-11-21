@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F02 RID: 7938
+// Token: 0x020013C4 RID: 5060
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where TGrid : ActivityGrid
 {
-	// Token: 0x0600F468 RID: 62568 RVA: 0x003AF602 File Offset: 0x003AD802
+	// Token: 0x0600C887 RID: 51335 RVA: 0x003BB0F6 File Offset: 0x003B92F6
 	public HonamiStoryShopScrollItem(UUILoopScrollViewComponent scroller, UUIItem item, int sourceViewId, Func<TGrid> gridConstructor)
 	{
 		this.Scroller = scroller;
@@ -23,28 +23,28 @@ public class HonamiStoryShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where 
 		this.GridConstructor = gridConstructor;
 	}
 
-	// Token: 0x0600F469 RID: 62569 RVA: 0x003AF627 File Offset: 0x003AD827
+	// Token: 0x0600C888 RID: 51336 RVA: 0x003BB11B File Offset: 0x003B931B
 	public void AddEventListener()
 	{
 		EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		EventSystem.Instance.Add(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x0600F46A RID: 62570 RVA: 0x003AF661 File Offset: 0x003AD861
+	// Token: 0x0600C889 RID: 51337 RVA: 0x003BB155 File Offset: 0x003B9355
 	public void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		EventSystem.Instance.Remove(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x0600F46B RID: 62571 RVA: 0x003AF69C File Offset: 0x003AD89C
+	// Token: 0x0600C88A RID: 51338 RVA: 0x003BB190 File Offset: 0x003B9390
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		List<IPayShopUnionData> canBuyDataList = this.GetCanBuyDataList(shopId);
 		this.LoopScrollView.RefreshByDataAsync(canBuyDataList, false, true).Forget();
 	}
 
-	// Token: 0x0600F46C RID: 62572 RVA: 0x003AF6C4 File Offset: 0x003AD8C4
+	// Token: 0x0600C88B RID: 51339 RVA: 0x003BB1B8 File Offset: 0x003B93B8
 	private void OnShopVersionCodeChange()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PayShopRefresh);
@@ -57,20 +57,20 @@ public class HonamiStoryShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where 
 		Log.Instance.Info(ELogModule.Activity, ELogAuthor.YZY, "PayShop:DockyardBuyTabView 商品VersionCode不同步,打开弹窗", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600F46D RID: 62573 RVA: 0x003AF721 File Offset: 0x003AD921
+	// Token: 0x0600C88C RID: 51340 RVA: 0x003BB215 File Offset: 0x003B9415
 	protected override void OnStart()
 	{
 		this.LoopScrollView = new LoopScrollView<TGrid, IPayShopUnionData>(this.Scroller, this.Item.GetOwner() as AUIBaseActor, new Func<TGrid>(this.InitItem), false);
 		this.AddEventListener();
 	}
 
-	// Token: 0x0600F46E RID: 62574 RVA: 0x003AF757 File Offset: 0x003AD957
+	// Token: 0x0600C88D RID: 51341 RVA: 0x003BB24B File Offset: 0x003B944B
 	private TGrid InitItem()
 	{
 		return this.GridConstructor();
 	}
 
-	// Token: 0x0600F46F RID: 62575 RVA: 0x003AF764 File Offset: 0x003AD964
+	// Token: 0x0600C88E RID: 51342 RVA: 0x003BB258 File Offset: 0x003B9458
 	private List<IPayShopUnionData> GetCanBuyDataList(PayShopDefine.EPayShopTabType shopId)
 	{
 		List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData(shopId, 1, true);
@@ -85,7 +85,7 @@ public class HonamiStoryShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where 
 		return list;
 	}
 
-	// Token: 0x0600F470 RID: 62576 RVA: 0x003AF7D0 File Offset: 0x003AD9D0
+	// Token: 0x0600C88F RID: 51343 RVA: 0x003BB2C4 File Offset: 0x003B94C4
 	public UniTask Refresh(int shopId)
 	{
 		HonamiStoryShopScrollItem<TGrid>.<Refresh>d__13 <Refresh>d__;
@@ -97,13 +97,13 @@ public class HonamiStoryShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where 
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F471 RID: 62577 RVA: 0x003AF81B File Offset: 0x003ADA1B
+	// Token: 0x0600C890 RID: 51344 RVA: 0x003BB30F File Offset: 0x003B950F
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x04007119 RID: 28953
+	// Token: 0x040071FA RID: 29178
 	[Nullable(new byte[]
 	{
 		2,
@@ -112,15 +112,15 @@ public class HonamiStoryShopScrollItem<[Nullable(0)] TGrid> : UiPanelBase where 
 	})]
 	protected LoopScrollView<TGrid, IPayShopUnionData> LoopScrollView;
 
-	// Token: 0x0400711A RID: 28954
+	// Token: 0x040071FB RID: 29179
 	private readonly UUILoopScrollViewComponent Scroller;
 
-	// Token: 0x0400711B RID: 28955
+	// Token: 0x040071FC RID: 29180
 	private readonly UUIItem Item;
 
-	// Token: 0x0400711C RID: 28956
+	// Token: 0x040071FD RID: 29181
 	private readonly int SourceViewId;
 
-	// Token: 0x0400711D RID: 28957
+	// Token: 0x040071FE RID: 29182
 	private readonly Func<TGrid> GridConstructor;
 }

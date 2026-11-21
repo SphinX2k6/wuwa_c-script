@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000036 RID: 54
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class BuffProducerComponent : IComponentBase
 	{
-		// Token: 0x060001EC RID: 492 RVA: 0x000184E0 File Offset: 0x000166E0
+		// Token: 0x060001F0 RID: 496 RVA: 0x00018E54 File Offset: 0x00017054
 		private BuffProducerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060001ED RID: 493 RVA: 0x00018518 File Offset: 0x00016718
+		// Token: 0x060001F1 RID: 497 RVA: 0x00018E8C File Offset: 0x0001708C
 		public static BuffProducerComponent Create([Nullable(2)] BuffProducerComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001EE RID: 494 RVA: 0x0001852B File Offset: 0x0001672B
+		// Token: 0x060001F2 RID: 498 RVA: 0x00018E9F File Offset: 0x0001709F
 		public static BuffProducerComponent CreateFromSetValue([Nullable(2)] BuffProducerComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001EF RID: 495 RVA: 0x0001853E File Offset: 0x0001673E
+		// Token: 0x060001F3 RID: 499 RVA: 0x00018EB2 File Offset: 0x000170B2
 		public new BuffProducerComponent_SetValue ToSetValue()
 		{
 			return new BuffProducerComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000B7 RID: 183
-		// (get) Token: 0x060001F0 RID: 496 RVA: 0x00018578 File Offset: 0x00016778
-		// (set) Token: 0x060001F1 RID: 497 RVA: 0x000185B2 File Offset: 0x000167B2
+		// Token: 0x170000B9 RID: 185
+		// (get) Token: 0x060001F4 RID: 500 RVA: 0x00018EEC File Offset: 0x000170EC
+		// (set) Token: 0x060001F5 RID: 501 RVA: 0x00018F26 File Offset: 0x00017126
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000B8 RID: 184
-		// (get) Token: 0x060001F2 RID: 498 RVA: 0x000185C0 File Offset: 0x000167C0
-		// (set) Token: 0x060001F3 RID: 499 RVA: 0x000185EA File Offset: 0x000167EA
+		// Token: 0x170000BA RID: 186
+		// (get) Token: 0x060001F6 RID: 502 RVA: 0x00018F34 File Offset: 0x00017134
+		// (set) Token: 0x060001F7 RID: 503 RVA: 0x00018F5E File Offset: 0x0001715E
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000B9 RID: 185
-		// (get) Token: 0x060001F4 RID: 500 RVA: 0x000185F8 File Offset: 0x000167F8
-		// (set) Token: 0x060001F5 RID: 501 RVA: 0x0001861F File Offset: 0x0001681F
+		// Token: 0x170000BB RID: 187
+		// (get) Token: 0x060001F8 RID: 504 RVA: 0x00018F6C File Offset: 0x0001716C
+		// (set) Token: 0x060001F9 RID: 505 RVA: 0x00018F93 File Offset: 0x00017193
 		public virtual IAddBuffMode AddBuffMode
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000BA RID: 186
-		// (get) Token: 0x060001F6 RID: 502 RVA: 0x0001862D File Offset: 0x0001682D
-		// (set) Token: 0x060001F7 RID: 503 RVA: 0x00018659 File Offset: 0x00016859
+		// Token: 0x170000BC RID: 188
+		// (get) Token: 0x060001FA RID: 506 RVA: 0x00018FA1 File Offset: 0x000171A1
+		// (set) Token: 0x060001FB RID: 507 RVA: 0x00018FCD File Offset: 0x000171CD
 		public virtual long BuffId
 		{
 			get
@@ -152,11 +150,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400013C RID: 316
+		// Token: 0x04000141 RID: 321
 		[Nullable(2)]
 		protected new BuffProducerComponent FbInstance;
 
-		// Token: 0x0400013D RID: 317
+		// Token: 0x04000142 RID: 322
 		[Nullable(2)]
 		protected new BuffProducerComponent_SetValue PocoInterface;
 	}

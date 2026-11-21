@@ -1,41 +1,41 @@
 ﻿using System;
 
-// Token: 0x02002E49 RID: 11849
+// Token: 0x020023A5 RID: 9125
 public class CharacterComponentPriorityDefine
 {
-	// Token: 0x0400BBC6 RID: 48070
+	// Token: 0x0400BF59 RID: 48985
 	public const int UE_MOVE_TICK_PRIORITY = 1000;
 
-	// Token: 0x0400BBC7 RID: 48071
+	// Token: 0x0400BF5A RID: 48986
 	public const int UE_ACTOR_TICK_PRIOTITY = 900;
 
-	// Token: 0x0400BBC8 RID: 48072
+	// Token: 0x0400BF5B RID: 48987
 	public const int ACTOR_TICK_PRIORITY = 100;
 
-	// Token: 0x0400BBC9 RID: 48073
+	// Token: 0x0400BF5C RID: 48988
 	public const int INPUT_TICK_PRIORITY = 99;
 
-	// Token: 0x0400BBCA RID: 48074
+	// Token: 0x0400BF5D RID: 48989
 	public const int SPLINE_MOVE_TICK_PRIORITY = 98;
 
-	// Token: 0x0400BBCB RID: 48075
+	// Token: 0x0400BF5E RID: 48990
 	public const int SLIDE_TICK_PRIORITY = 91;
 
-	// Token: 0x0400BBCC RID: 48076
+	// Token: 0x0400BF5F RID: 48991
 	public const int CLIMB_TICK_PRIORITY = 90;
 
-	// Token: 0x0400BBCD RID: 48077
+	// Token: 0x0400BF60 RID: 48992
 	public const int MOVE_TICK_PRIORITY = 80;
 
-	// Token: 0x0400BBCE RID: 48078
+	// Token: 0x0400BF61 RID: 48993
 	public const int GAIT_TICK_PRIORITY = 70;
 
-	// Token: 0x0400BBCF RID: 48079
+	// Token: 0x0400BF62 RID: 48994
 	public const int MOVEMENT_SYNC_TICK_PRIORITY = 60;
 
-	// Token: 0x0400BBD0 RID: 48080
+	// Token: 0x0400BF63 RID: 48995
 	public const int UE_SKELETAL_TICK_PRIORITY = 50;
 
-	// Token: 0x0400BBD1 RID: 48081
+	// Token: 0x0400BF64 RID: 48996
 	public const int UE_OTHER_COMPONENT_TICK_PRIORITY = 1;
 }

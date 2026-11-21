@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200244A RID: 9290
+// Token: 0x0200192F RID: 6447
 public interface IVisionFetterCount
 {
-	// Token: 0x17001827 RID: 6183
-	// (get) Token: 0x06012A1D RID: 76317
-	// (set) Token: 0x06012A1E RID: 76318
+	// Token: 0x17001861 RID: 6241
+	// (get) Token: 0x0600FED4 RID: 65236
+	// (set) Token: 0x0600FED5 RID: 65237
 	int GroupId { get; set; }
 
-	// Token: 0x17001828 RID: 6184
-	// (get) Token: 0x06012A1F RID: 76319
-	// (set) Token: 0x06012A20 RID: 76320
+	// Token: 0x17001862 RID: 6242
+	// (get) Token: 0x0600FED6 RID: 65238
+	// (set) Token: 0x0600FED7 RID: 65239
 	int Count { get; set; }
 
-	// Token: 0x17001829 RID: 6185
-	// (get) Token: 0x06012A21 RID: 76321
-	// (set) Token: 0x06012A22 RID: 76322
+	// Token: 0x17001863 RID: 6243
+	// (get) Token: 0x0600FED8 RID: 65240
+	// (set) Token: 0x0600FED9 RID: 65241
 	int FetterId { get; set; }
 }

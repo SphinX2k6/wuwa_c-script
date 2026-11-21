@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Fight.Enum
 {
-	// Token: 0x02003F7E RID: 16254
+	// Token: 0x0200321B RID: 12827
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Fight/Enum/BPELevelPrefabDestructibleOverlapSource.BPELevelPrefabDestructibleOverlapSource")]
 	public enum BPELevelPrefabDestructibleOverlapSource : byte
 	{
-		// Token: 0x04015454 RID: 87124
+		// Token: 0x040112F7 RID: 70391
 		角色,
-		// Token: 0x04015455 RID: 87125
+		// Token: 0x040112F8 RID: 70392
 		载具,
-		// Token: 0x04015456 RID: 87126
+		// Token: 0x040112F9 RID: 70393
 		BPELevelPrefabDestructibleOverlapSource_MAX
 	}
 }

@@ -11,30 +11,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007183 RID: 29059
+	// Token: 0x02006237 RID: 25143
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemLevitateMagnetComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x06047071 RID: 290929 RVA: 0x011FDE67 File Offset: 0x011FC067
+		// Token: 0x0603C90E RID: 248078 RVA: 0x01158517 File Offset: 0x01156717
 		static SceneItemLevitateMagnetComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemLevitateMagnetComponent.CreateStaticDefaultValue), new Action(SceneItemLevitateMagnetComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047072 RID: 290930 RVA: 0x011FDE9F File Offset: 0x011FC09F
+		// Token: 0x0603C90F RID: 248079 RVA: 0x0115854F File Offset: 0x0115674F
 		public static void CreateStaticDefaultValue()
 		{
 			SceneItemLevitateMagnetComponent.TraceDebug = false;
 		}
 
-		// Token: 0x06047073 RID: 290931 RVA: 0x011FDEA7 File Offset: 0x011FC0A7
+		// Token: 0x0603C910 RID: 248080 RVA: 0x01158557 File Offset: 0x01156757
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemLevitateMagnetComponent.TraceDebug = false;
 		}
 
-		// Token: 0x06047074 RID: 290932 RVA: 0x011FDEB0 File Offset: 0x011FC0B0
+		// Token: 0x0603C911 RID: 248081 RVA: 0x01158560 File Offset: 0x01156760
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			LevitateMagnetComponent config = args.GetP1<CreateEntityData>().GetParam<SceneItemLevitateMagnetComponent>() as LevitateMagnetComponent;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047075 RID: 290933 RVA: 0x011FDEF4 File Offset: 0x011FC0F4
+		// Token: 0x0603C912 RID: 248082 RVA: 0x011585A4 File Offset: 0x011567A4
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047076 RID: 290934 RVA: 0x011FE048 File Offset: 0x011FC248
+		// Token: 0x0603C913 RID: 248083 RVA: 0x011586F8 File Offset: 0x011568F8
 		protected override bool OnEnd()
 		{
 			this.TagComp.RemoveTagAddOrRemoveListener(GameplayTagDefine.EGameplayTagId["关卡.Common.状态.静默"], new BaseTagComponent.TTagSwitchedCallback(this.OnSilent));
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047077 RID: 290935 RVA: 0x011FE144 File Offset: 0x011FC344
+		// Token: 0x0603C914 RID: 248084 RVA: 0x011587F4 File Offset: 0x011569F4
 		protected override void OnTick(float delta)
 		{
 			if (this.MoveComp.IsMoving)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TagComp.AddTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.Common.表现.悬浮磁石.磁石.静止"]));
 		}
 
-		// Token: 0x06047078 RID: 290936 RVA: 0x011FE1BC File Offset: 0x011FC3BC
+		// Token: 0x0603C915 RID: 248085 RVA: 0x0115886C File Offset: 0x01156A6C
 		[NullableContext(1)]
 		private void OnHitAlways(HitInformation hitData)
 		{
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGamePlayController.Instance.MultiplayerLimitTypeCheck(this.OnlineType, true);
 		}
 
-		// Token: 0x06047079 RID: 290937 RVA: 0x011FE234 File Offset: 0x011FC434
+		// Token: 0x0603C916 RID: 248086 RVA: 0x011588E4 File Offset: 0x01156AE4
 		[NullableContext(1)]
 		private void OnHit(HitInformation hitData)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604707A RID: 290938 RVA: 0x011FE3EC File Offset: 0x011FC5EC
+		// Token: 0x0603C917 RID: 248087 RVA: 0x01158A9C File Offset: 0x01156C9C
 		private void OnSilent(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604707B RID: 290939 RVA: 0x011FE43C File Offset: 0x011FC63C
+		// Token: 0x0603C918 RID: 248088 RVA: 0x01158AEC File Offset: 0x01156CEC
 		[NullableContext(1)]
 		private unsafe void AddMovingTagByDirection(Vector direction)
 		{
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604707C RID: 290940 RVA: 0x011FE61C File Offset: 0x011FC81C
+		// Token: 0x0603C919 RID: 248089 RVA: 0x01158CCC File Offset: 0x01156ECC
 		private void RemoveMovingTags()
 		{
 			this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.Common.表现.悬浮磁石.磁石.移动.前"]));
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.Common.表现.悬浮磁石.磁石.移动.右"]));
 		}
 
-		// Token: 0x0604707D RID: 290941 RVA: 0x011FE6AC File Offset: 0x011FC8AC
+		// Token: 0x0603C91A RID: 248090 RVA: 0x01158D5C File Offset: 0x01156F5C
 		private void InitBoxTrace()
 		{
 			this.BoxTrace = new UTraceBoxElement();
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ActorComp.SetActorRotation(actorRotation, "unknown", true);
 		}
 
-		// Token: 0x0604707E RID: 290942 RVA: 0x011FE8BC File Offset: 0x011FCABC
+		// Token: 0x0603C91B RID: 248091 RVA: 0x01158F6C File Offset: 0x0115716C
 		[NullableContext(1)]
 		public void UpdateBoxTrace(SceneItemJigsawBaseComponent baseComp, JigsawIndex socketIndex)
 		{
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			lastLoc.DeepCopy(fvectorDouble2);
 		}
 
-		// Token: 0x0604707F RID: 290943 RVA: 0x011FE9D8 File Offset: 0x011FCBD8
+		// Token: 0x0603C91C RID: 248092 RVA: 0x01159088 File Offset: 0x01157288
 		[NullableContext(1)]
 		public bool StartBoxTrace(Vector end)
 		{
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return TraceElementCommon.Instance.BoxTrace(this.BoxTrace, "[SceneItemLevitateMagnetComponent.StartBoxTrace]");
 		}
 
-		// Token: 0x06047080 RID: 290944 RVA: 0x011FEA9C File Offset: 0x011FCC9C
+		// Token: 0x0603C91D RID: 248093 RVA: 0x0115914C File Offset: 0x0115734C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -347,171 +347,162 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemLevitateMagnetComponent sceneItemLevitateMagnetComponent = (SceneItemLevitateMagnetComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemLevitateMagnetComponent.Config == null)
 			{
-				if (sceneItemLevitateMagnetComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevitateMagnetComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemLevitateMagnetComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (sceneItemLevitateMagnetComponent.ActorComp == null)
 			{
-				if (sceneItemLevitateMagnetComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("HitComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemLevitateMagnetComponent.HitComp == null)
-				{
-					this.HitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.HitComp), "HitComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ItemComp"))
+			if (sceneItemLevitateMagnetComponent.MoveComp == null)
 			{
-				if (sceneItemLevitateMagnetComponent.ItemComp == null)
-				{
-					this.ItemComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemJigsawItemComponent>(this.ItemComp), "ItemComp"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				if (sceneItemLevitateMagnetComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetIndex"))
+			if (sceneItemLevitateMagnetComponent.HitComp == null)
 			{
-				if (sceneItemLevitateMagnetComponent.TargetIndex == null)
-				{
-					this.TargetIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.TargetIndex), "TargetIndex"))
-				{
-					return false;
-				}
+				this.HitComp = null;
 			}
-			if (base.CanResetComponentProperty("DisableKey"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComp), "HitComp"))
 			{
-				this.DisableKey = sceneItemLevitateMagnetComponent.DisableKey;
+				return false;
 			}
-			if (base.CanResetComponentProperty("BoxTrace"))
+			if (sceneItemLevitateMagnetComponent.ItemComp == null)
 			{
-				if (sceneItemLevitateMagnetComponent.BoxTrace == null)
-				{
-					this.BoxTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceBoxElement>(this.BoxTrace), "BoxTrace"))
-				{
-					return false;
-				}
+				this.ItemComp = null;
 			}
-			if (base.CanResetComponentProperty("OnlineType"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ItemComp), "ItemComp"))
 			{
-				this.OnlineType = sceneItemLevitateMagnetComponent.OnlineType;
+				return false;
 			}
-			if (base.CanResetComponentProperty("Extent"))
+			if (sceneItemLevitateMagnetComponent.TagComp == null)
 			{
-				this.Extent = sceneItemLevitateMagnetComponent.Extent;
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("OffsetHeight"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.OffsetHeight = sceneItemLevitateMagnetComponent.OffsetHeight;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MainActor"))
+			if (sceneItemLevitateMagnetComponent.TargetIndex == null)
 			{
-				if (sceneItemLevitateMagnetComponent.MainActor == null)
-				{
-					this.MainActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.MainActor), "MainActor"))
-				{
-					return false;
-				}
+				this.TargetIndex = null;
 			}
-			return !base.CanResetComponentProperty("LastLoc") || sceneItemLevitateMagnetComponent.LastLoc == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastLoc), "LastLoc");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetIndex), "TargetIndex"))
+			{
+				return false;
+			}
+			this.DisableKey = sceneItemLevitateMagnetComponent.DisableKey;
+			if (sceneItemLevitateMagnetComponent.BoxTrace == null)
+			{
+				this.BoxTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoxTrace), "BoxTrace"))
+			{
+				return false;
+			}
+			this.OnlineType = sceneItemLevitateMagnetComponent.OnlineType;
+			this.Extent = sceneItemLevitateMagnetComponent.Extent;
+			this.OffsetHeight = sceneItemLevitateMagnetComponent.OffsetHeight;
+			if (sceneItemLevitateMagnetComponent.MainActor == null)
+			{
+				this.MainActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainActor), "MainActor"))
+			{
+				return false;
+			}
+			return sceneItemLevitateMagnetComponent.LastLoc == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLoc), "LastLoc");
 		}
 
-		// Token: 0x04025540 RID: 152896
+		// Token: 0x1700727F RID: 29311
+		// (get) Token: 0x0603C91E RID: 248094 RVA: 0x01159341 File Offset: 0x01157541
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007280 RID: 29312
+		// (get) Token: 0x0603C91F RID: 248095 RVA: 0x01159344 File Offset: 0x01157544
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007281 RID: 29313
+		// (get) Token: 0x0603C920 RID: 248096 RVA: 0x01159347 File Offset: 0x01157547
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040201A7 RID: 131495
 		[StaticVariableRuleIgnore]
 		private static readonly double COS_45 = Math.Cos(0.7853981633974483);
 
-		// Token: 0x04025541 RID: 152897
+		// Token: 0x040201A8 RID: 131496
 		public LevitateMagnetComponent Config;
 
-		// Token: 0x04025542 RID: 152898
+		// Token: 0x040201A9 RID: 131497
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025543 RID: 152899
+		// Token: 0x040201AA RID: 131498
 		private SceneItemMoveComponent MoveComp;
 
-		// Token: 0x04025544 RID: 152900
+		// Token: 0x040201AB RID: 131499
 		private SceneItemHitComponent HitComp;
 
-		// Token: 0x04025545 RID: 152901
+		// Token: 0x040201AC RID: 131500
 		private SceneItemJigsawItemComponent ItemComp;
 
-		// Token: 0x04025546 RID: 152902
+		// Token: 0x040201AD RID: 131501
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025547 RID: 152903
+		// Token: 0x040201AE RID: 131502
 		private JigsawIndex TargetIndex;
 
-		// Token: 0x04025548 RID: 152904
+		// Token: 0x040201AF RID: 131503
 		private int DisableKey = -1;
 
-		// Token: 0x04025549 RID: 152905
+		// Token: 0x040201B0 RID: 131504
 		private UTraceBoxElement BoxTrace;
 
-		// Token: 0x0402554A RID: 152906
+		// Token: 0x040201B1 RID: 131505
 		private EOnlineInteractType OnlineType;
 
-		// Token: 0x0402554B RID: 152907
+		// Token: 0x040201B2 RID: 131506
 		private FVector Extent = new FVector();
 
-		// Token: 0x0402554C RID: 152908
+		// Token: 0x040201B3 RID: 131507
 		public static bool TraceDebug = false;
 
-		// Token: 0x0402554D RID: 152909
+		// Token: 0x040201B4 RID: 131508
 		private float OffsetHeight;
 
-		// Token: 0x0402554E RID: 152910
+		// Token: 0x040201B5 RID: 131509
 		private AActor MainActor;
 
-		// Token: 0x0402554F RID: 152911
+		// Token: 0x040201B6 RID: 131510
 		[Nullable(1)]
 		private readonly Vector LastLoc = Vector.Create();
 	}

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200086F RID: 2159
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000912 RID: 2322
 	public class RenderSpecifiedRangeComponent : IComponentBase
 	{
-		// Token: 0x06002FDD RID: 12253 RVA: 0x0007B5E0 File Offset: 0x000797E0
+		// Token: 0x06003319 RID: 13081 RVA: 0x00082AC8 File Offset: 0x00080CC8
 		private RenderSpecifiedRangeComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002FDE RID: 12254 RVA: 0x0007B618 File Offset: 0x00079818
+		// Token: 0x0600331A RID: 13082 RVA: 0x00082B00 File Offset: 0x00080D00
 		public static RenderSpecifiedRangeComponent Create([Nullable(2)] RenderSpecifiedRangeComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FDF RID: 12255 RVA: 0x0007B62B File Offset: 0x0007982B
+		// Token: 0x0600331B RID: 13083 RVA: 0x00082B13 File Offset: 0x00080D13
 		public static RenderSpecifiedRangeComponent CreateFromSetValue([Nullable(2)] RenderSpecifiedRangeComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FE0 RID: 12256 RVA: 0x0007B63E File Offset: 0x0007983E
+		// Token: 0x0600331C RID: 13084 RVA: 0x00082B26 File Offset: 0x00080D26
 		public new RenderSpecifiedRangeComponent_SetValue ToSetValue()
 		{
 			return new RenderSpecifiedRangeComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CAB RID: 3243
-		// (get) Token: 0x06002FE1 RID: 12257 RVA: 0x0007B678 File Offset: 0x00079878
-		// (set) Token: 0x06002FE2 RID: 12258 RVA: 0x0007B6B2 File Offset: 0x000798B2
+		// Token: 0x17000D74 RID: 3444
+		// (get) Token: 0x0600331D RID: 13085 RVA: 0x00082B60 File Offset: 0x00080D60
+		// (set) Token: 0x0600331E RID: 13086 RVA: 0x00082B9A File Offset: 0x00080D9A
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CAC RID: 3244
-		// (get) Token: 0x06002FE3 RID: 12259 RVA: 0x0007B6C0 File Offset: 0x000798C0
-		// (set) Token: 0x06002FE4 RID: 12260 RVA: 0x0007B6EA File Offset: 0x000798EA
+		// Token: 0x17000D75 RID: 3445
+		// (get) Token: 0x0600331F RID: 13087 RVA: 0x00082BA8 File Offset: 0x00080DA8
+		// (set) Token: 0x06003320 RID: 13088 RVA: 0x00082BD2 File Offset: 0x00080DD2
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CAD RID: 3245
-		// (get) Token: 0x06002FE5 RID: 12261 RVA: 0x0007B6F8 File Offset: 0x000798F8
-		// (set) Token: 0x06002FE6 RID: 12262 RVA: 0x0007B759 File Offset: 0x00079959
+		// Token: 0x17000D76 RID: 3446
+		// (get) Token: 0x06003321 RID: 13089 RVA: 0x00082BE0 File Offset: 0x00080DE0
+		// (set) Token: 0x06003322 RID: 13090 RVA: 0x00082C41 File Offset: 0x00080E41
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CAE RID: 3246
-		// (get) Token: 0x06002FE7 RID: 12263 RVA: 0x0007B76E File Offset: 0x0007996E
-		// (set) Token: 0x06002FE8 RID: 12264 RVA: 0x0007B795 File Offset: 0x00079995
+		// Token: 0x17000D77 RID: 3447
+		// (get) Token: 0x06003323 RID: 13091 RVA: 0x00082C56 File Offset: 0x00080E56
+		// (set) Token: 0x06003324 RID: 13092 RVA: 0x00082C7D File Offset: 0x00080E7D
 		public virtual IRenderSpecifiedRangeType RenderConfig
 		{
 			get
@@ -160,18 +158,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F89 RID: 8073
+		// Token: 0x0400219B RID: 8603
 		[Nullable(2)]
 		protected new RenderSpecifiedRangeComponent FbInstance;
 
-		// Token: 0x04001F8A RID: 8074
+		// Token: 0x0400219C RID: 8604
 		[Nullable(2)]
 		protected new RenderSpecifiedRangeComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F8B RID: 8075
+		// Token: 0x0400219D RID: 8605
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04001F8C RID: 8076
+		// Token: 0x0400219E RID: 8606
 		private bool _ConditionInited;
 	}
 }

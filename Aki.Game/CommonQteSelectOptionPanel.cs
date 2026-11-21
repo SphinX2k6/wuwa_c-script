@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200261B RID: 9755
+// Token: 0x02001B06 RID: 6918
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptionContext>
 {
-	// Token: 0x06013EF5 RID: 81653 RVA: 0x00502E60 File Offset: 0x00501060
+	// Token: 0x060113D7 RID: 70615 RVA: 0x00511D24 File Offset: 0x0050FF24
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -56,13 +56,13 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		};
 	}
 
-	// Token: 0x06013EF6 RID: 81654 RVA: 0x005030B1 File Offset: 0x005012B1
+	// Token: 0x060113D8 RID: 70616 RVA: 0x00511F75 File Offset: 0x00510175
 	public override void SetPreloadQte(int qteId)
 	{
 		this.PreloadQteId = qteId;
 	}
 
-	// Token: 0x06013EF7 RID: 81655 RVA: 0x005030BC File Offset: 0x005012BC
+	// Token: 0x060113D9 RID: 70617 RVA: 0x00511F80 File Offset: 0x00510180
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteSelectOptionPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -73,7 +73,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013EF8 RID: 81656 RVA: 0x00503100 File Offset: 0x00501300
+	// Token: 0x060113DA RID: 70618 RVA: 0x00511FC4 File Offset: 0x005101C4
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -108,7 +108,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 	}
 
-	// Token: 0x06013EF9 RID: 81657 RVA: 0x005031C4 File Offset: 0x005013C4
+	// Token: 0x060113DB RID: 70619 RVA: 0x00512088 File Offset: 0x00510288
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -125,13 +125,13 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		this.GamepadOptionItemList.Clear();
 	}
 
-	// Token: 0x06013EFA RID: 81658 RVA: 0x00503290 File Offset: 0x00501490
+	// Token: 0x060113DC RID: 70620 RVA: 0x00512154 File Offset: 0x00510354
 	private void OnInputControllerChange(EInputControllerType _1, EInputControllerType _2)
 	{
 		this.RefreshOnInputControllerChange();
 	}
 
-	// Token: 0x06013EFB RID: 81659 RVA: 0x00503298 File Offset: 0x00501498
+	// Token: 0x060113DD RID: 70621 RVA: 0x0051215C File Offset: 0x0051035C
 	protected void RefreshOnInputControllerChange()
 	{
 		if (this.GamepadOptionItemList.Count == 0)
@@ -192,7 +192,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013EFC RID: 81660 RVA: 0x00503378 File Offset: 0x00501578
+	// Token: 0x060113DE RID: 70622 RVA: 0x0051223C File Offset: 0x0051043C
 	private void InitOptionItemOffset()
 	{
 		switch (this.OptionItemList.Count)
@@ -212,13 +212,13 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013EFD RID: 81661 RVA: 0x00503400 File Offset: 0x00501600
+	// Token: 0x060113DF RID: 70623 RVA: 0x005122C4 File Offset: 0x005104C4
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteSelectOptionContext;
 	}
 
-	// Token: 0x06013EFE RID: 81662 RVA: 0x0050340C File Offset: 0x0050160C
+	// Token: 0x060113E0 RID: 70624 RVA: 0x005122D0 File Offset: 0x005104D0
 	public override void SetQteContext(CommonQteContextBase context)
 	{
 		CommonQteSelectOptionContext commonQteSelectOptionContext = context as CommonQteSelectOptionContext;
@@ -288,7 +288,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		this.PlayQteStart();
 	}
 
-	// Token: 0x06013EFF RID: 81663 RVA: 0x00503578 File Offset: 0x00501778
+	// Token: 0x060113E1 RID: 70625 RVA: 0x0051243C File Offset: 0x0051063C
 	protected override void OnPlayQteStart()
 	{
 		this.IsQteStart = true;
@@ -304,7 +304,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013F00 RID: 81664 RVA: 0x0050361C File Offset: 0x0050181C
+	// Token: 0x060113E2 RID: 70626 RVA: 0x005124E0 File Offset: 0x005106E0
 	protected override void OnHandleQteEnd()
 	{
 		foreach (CommonQteSelectOptionItem commonQteSelectOptionItem in new List<CommonQteSelectOptionItem>(this.OptionItemList))
@@ -317,7 +317,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013F01 RID: 81665 RVA: 0x005036B8 File Offset: 0x005018B8
+	// Token: 0x060113E3 RID: 70627 RVA: 0x0051257C File Offset: 0x0051077C
 	public void OnOptionItemPlayEnded(CommonQteSelectOptionItem optionItem)
 	{
 		int num = this.OptionItemList.IndexOf(optionItem);
@@ -339,7 +339,7 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013F02 RID: 81666 RVA: 0x00503730 File Offset: 0x00501930
+	// Token: 0x060113E4 RID: 70628 RVA: 0x005125F4 File Offset: 0x005107F4
 	protected override void OnTickQteItem(float delta)
 	{
 		if (!this.CommonQteContext.IsPermanent)
@@ -360,92 +360,92 @@ public class CommonQteSelectOptionPanel : CommonQteItemBase<CommonQteSelectOptio
 		}
 	}
 
-	// Token: 0x06013F03 RID: 81667 RVA: 0x00503786 File Offset: 0x00501986
+	// Token: 0x060113E5 RID: 70629 RVA: 0x0051264A File Offset: 0x0051084A
 	protected override bool IsUseBaseAction()
 	{
 		return false;
 	}
 
-	// Token: 0x0400963C RID: 38460
+	// Token: 0x04009793 RID: 38803
 	private const int MAX_OPTION_NUM = 4;
 
-	// Token: 0x0400963D RID: 38461
+	// Token: 0x04009794 RID: 38804
 	private const int OPTION_ITEM_OFFSET = 112;
 
-	// Token: 0x0400963E RID: 38462
+	// Token: 0x04009795 RID: 38805
 	private int PreloadQteId;
 
-	// Token: 0x0400963F RID: 38463
+	// Token: 0x04009796 RID: 38806
 	private readonly List<CommonQteSelectOptionItem> OptionItemList = new List<CommonQteSelectOptionItem>();
 
-	// Token: 0x04009640 RID: 38464
+	// Token: 0x04009797 RID: 38807
 	private readonly List<CommonQteSelectOptionItem> GamepadOptionItemList = new List<CommonQteSelectOptionItem>();
 
-	// Token: 0x04009641 RID: 38465
+	// Token: 0x04009798 RID: 38808
 	[Nullable(2)]
 	private UUISliderComponent ProgressBar;
 
-	// Token: 0x04009642 RID: 38466
+	// Token: 0x04009799 RID: 38809
 	[Nullable(2)]
 	private UUISliderComponent GamepadProgressBar;
 
-	// Token: 0x02008C65 RID: 35941
+	// Token: 0x02007DEE RID: 32238
 	[NullableContext(0)]
 	private enum EDesktopChildType
 	{
-		// Token: 0x0402D926 RID: 186662
+		// Token: 0x04028C3D RID: 166973
 		DesktopOptionItem1,
-		// Token: 0x0402D927 RID: 186663
+		// Token: 0x04028C3E RID: 166974
 		DesktopOptionItem2,
-		// Token: 0x0402D928 RID: 186664
+		// Token: 0x04028C3F RID: 166975
 		DesktopOptionItem3,
-		// Token: 0x0402D929 RID: 186665
+		// Token: 0x04028C40 RID: 166976
 		DesktopOptionItem4,
-		// Token: 0x0402D92A RID: 186666
+		// Token: 0x04028C41 RID: 166977
 		DesktopOptionPanel,
-		// Token: 0x0402D92B RID: 186667
+		// Token: 0x04028C42 RID: 166978
 		GamepadOptionPanel,
-		// Token: 0x0402D92C RID: 186668
+		// Token: 0x04028C43 RID: 166979
 		GamepadOptionItem1,
-		// Token: 0x0402D92D RID: 186669
+		// Token: 0x04028C44 RID: 166980
 		GamepadOptionItem2,
-		// Token: 0x0402D92E RID: 186670
+		// Token: 0x04028C45 RID: 166981
 		GamepadOptionItem3,
-		// Token: 0x0402D92F RID: 186671
+		// Token: 0x04028C46 RID: 166982
 		GamepadOptionItem4,
-		// Token: 0x0402D930 RID: 186672
+		// Token: 0x04028C47 RID: 166983
 		DesktopProgressPanel,
-		// Token: 0x0402D931 RID: 186673
+		// Token: 0x04028C48 RID: 166984
 		DesktopProgressBar,
-		// Token: 0x0402D932 RID: 186674
+		// Token: 0x04028C49 RID: 166985
 		GamepadProgressPanel,
-		// Token: 0x0402D933 RID: 186675
+		// Token: 0x04028C4A RID: 166986
 		GamepadProgressBar,
-		// Token: 0x0402D934 RID: 186676
+		// Token: 0x04028C4B RID: 166987
 		DesktopOffsetPanel,
-		// Token: 0x0402D935 RID: 186677
+		// Token: 0x04028C4C RID: 166988
 		GamepadOffsetPanel,
-		// Token: 0x0402D936 RID: 186678
+		// Token: 0x04028C4D RID: 166989
 		AttachRootItem
 	}
 
-	// Token: 0x02008C66 RID: 35942
+	// Token: 0x02007DEF RID: 32239
 	[NullableContext(0)]
 	private enum EMobileChildType
 	{
-		// Token: 0x0402D938 RID: 186680
+		// Token: 0x04028C4F RID: 166991
 		OptionItem1,
-		// Token: 0x0402D939 RID: 186681
+		// Token: 0x04028C50 RID: 166992
 		OptionItem2,
-		// Token: 0x0402D93A RID: 186682
+		// Token: 0x04028C51 RID: 166993
 		OptionItem3,
-		// Token: 0x0402D93B RID: 186683
+		// Token: 0x04028C52 RID: 166994
 		OptionItem4,
-		// Token: 0x0402D93C RID: 186684
+		// Token: 0x04028C53 RID: 166995
 		ProgressPanel,
-		// Token: 0x0402D93D RID: 186685
+		// Token: 0x04028C54 RID: 166996
 		ProgressBar,
-		// Token: 0x0402D93E RID: 186686
+		// Token: 0x04028C55 RID: 166997
 		OffsetPanel
 	}
 }

@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001280 RID: 4736
+// Token: 0x02000734 RID: 1844
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 {
-	// Token: 0x06008154 RID: 33108 RVA: 0x001B6EAC File Offset: 0x001B50AC
+	// Token: 0x060054EB RID: 21739 RVA: 0x001BFB7C File Offset: 0x001BDD7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06008155 RID: 33109 RVA: 0x001B6F6F File Offset: 0x001B516F
+	// Token: 0x060054EC RID: 21740 RVA: 0x001BFC3F File Offset: 0x001BDE3F
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -46,7 +46,7 @@ public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CheckCanClick));
 	}
 
-	// Token: 0x06008156 RID: 33110 RVA: 0x001B6F94 File Offset: 0x001B5194
+	// Token: 0x060054ED RID: 21741 RVA: 0x001BFC64 File Offset: 0x001BDE64
 	public override void Refresh(FightPhotoLevelData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -62,7 +62,7 @@ public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 		item.SetUIActive(this.Data.HasRedDot);
 	}
 
-	// Token: 0x06008157 RID: 33111 RVA: 0x001B7026 File Offset: 0x001B5226
+	// Token: 0x060054EE RID: 21742 RVA: 0x001BFCF6 File Offset: 0x001BDEF6
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		Action<FightPhotoLevelData> onToggleCallBack = this.OnToggleCallBack;
@@ -73,19 +73,19 @@ public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 		onToggleCallBack(this.Data);
 	}
 
-	// Token: 0x06008158 RID: 33112 RVA: 0x001B703E File Offset: 0x001B523E
+	// Token: 0x060054EF RID: 21743 RVA: 0x001BFD0E File Offset: 0x001BDF0E
 	private bool CheckCanClick()
 	{
 		return this.CheckToggleCanClick == null || this.CheckToggleCanClick();
 	}
 
-	// Token: 0x06008159 RID: 33113 RVA: 0x001B7055 File Offset: 0x001B5255
+	// Token: 0x060054F0 RID: 21744 RVA: 0x001BFD25 File Offset: 0x001BDF25
 	public override object GetKey(FightPhotoLevelData data, int displayIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x0600815A RID: 33114 RVA: 0x001B7058 File Offset: 0x001B5258
+	// Token: 0x060054F1 RID: 21745 RVA: 0x001BFD28 File Offset: 0x001BDF28
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -103,17 +103,17 @@ public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 		}
 	}
 
-	// Token: 0x0600815B RID: 33115 RVA: 0x001B70D2 File Offset: 0x001B52D2
+	// Token: 0x060054F2 RID: 21746 RVA: 0x001BFDA2 File Offset: 0x001BDFA2
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04003A9D RID: 15005
+	// Token: 0x04003B35 RID: 15157
 	[Nullable(2)]
 	private FightPhotoLevelData Data;
 
-	// Token: 0x04003A9E RID: 15006
+	// Token: 0x04003B36 RID: 15158
 	[Nullable(new byte[]
 	{
 		2,
@@ -121,23 +121,23 @@ public class FightPhotoLevelItem : GridProxyAbstract<FightPhotoLevelData>
 	})]
 	public Action<FightPhotoLevelData> OnToggleCallBack;
 
-	// Token: 0x04003A9F RID: 15007
+	// Token: 0x04003B37 RID: 15159
 	[Nullable(2)]
 	public Func<bool> CheckToggleCanClick;
 
-	// Token: 0x02007896 RID: 30870
+	// Token: 0x02006A21 RID: 27169
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027BBB RID: 162747
+		// Token: 0x04022EEC RID: 143084
 		ToggleRoot,
-		// Token: 0x04027BBC RID: 162748
+		// Token: 0x04022EED RID: 143085
 		ItemLock,
-		// Token: 0x04027BBD RID: 162749
+		// Token: 0x04022EEE RID: 143086
 		ItemFinished,
-		// Token: 0x04027BBE RID: 162750
+		// Token: 0x04022EEF RID: 143087
 		TextName,
-		// Token: 0x04027BBF RID: 162751
+		// Token: 0x04022EF0 RID: 143088
 		ItemRedDot
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B09 RID: 19209
+	// Token: 0x02004FF0 RID: 20464
 	public class ICheckRhythmSpaceshipReachLevelRankT
 	{
-		// Token: 0x17008B58 RID: 35672
-		// (get) Token: 0x0601E35A RID: 123738 RVA: 0x0043C762 File Offset: 0x0043A962
-		// (set) Token: 0x0601E35B RID: 123739 RVA: 0x0043C76A File Offset: 0x0043A96A
+		// Token: 0x17009268 RID: 37480
+		// (get) Token: 0x0601FEE5 RID: 130789 RVA: 0x0046EF0E File Offset: 0x0046D10E
+		// (set) Token: 0x0601FEE6 RID: 130790 RVA: 0x0046EF16 File Offset: 0x0046D116
 		public ECheckSystemStateType Type { get; set; }
 
-		// Token: 0x17008B59 RID: 35673
-		// (get) Token: 0x0601E35C RID: 123740 RVA: 0x0043C773 File Offset: 0x0043A973
-		// (set) Token: 0x0601E35D RID: 123741 RVA: 0x0043C77B File Offset: 0x0043A97B
+		// Token: 0x17009269 RID: 37481
+		// (get) Token: 0x0601FEE7 RID: 130791 RVA: 0x0046EF1F File Offset: 0x0046D11F
+		// (set) Token: 0x0601FEE8 RID: 130792 RVA: 0x0046EF27 File Offset: 0x0046D127
 		public int RhythmSpaceshipLevelId { get; set; }
 
-		// Token: 0x17008B5A RID: 35674
-		// (get) Token: 0x0601E35E RID: 123742 RVA: 0x0043C784 File Offset: 0x0043A984
-		// (set) Token: 0x0601E35F RID: 123743 RVA: 0x0043C78C File Offset: 0x0043A98C
+		// Token: 0x1700926A RID: 37482
+		// (get) Token: 0x0601FEE9 RID: 130793 RVA: 0x0046EF30 File Offset: 0x0046D130
+		// (set) Token: 0x0601FEEA RID: 130794 RVA: 0x0046EF38 File Offset: 0x0046D138
 		public ERhythmSpaceshipLevelRank Rank { get; set; }
 
-		// Token: 0x0601E360 RID: 123744 RVA: 0x0043C795 File Offset: 0x0043A995
+		// Token: 0x0601FEEB RID: 130795 RVA: 0x0046EF41 File Offset: 0x0046D141
 		public ICheckRhythmSpaceshipReachLevelRankT()
 		{
 			this.Type = ECheckSystemStateType.TrackMoonBuilding;

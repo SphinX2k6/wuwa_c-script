@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020026F4 RID: 9972
+// Token: 0x02001BDF RID: 7135
 public enum ERacingBetsLegMatchResultType
 {
-	// Token: 0x040099D9 RID: 39385
+	// Token: 0x04009B31 RID: 39729
 	Hidden,
-	// Token: 0x040099DA RID: 39386
+	// Token: 0x04009B32 RID: 39730
 	Promotion,
-	// Token: 0x040099DB RID: 39387
+	// Token: 0x04009B33 RID: 39731
 	SplitForward,
-	// Token: 0x040099DC RID: 39388
+	// Token: 0x04009B34 RID: 39732
 	Final
 }

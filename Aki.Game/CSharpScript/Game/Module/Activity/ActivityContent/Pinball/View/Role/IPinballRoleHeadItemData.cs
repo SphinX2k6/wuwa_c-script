@@ -3,32 +3,32 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x0200630F RID: 25359
+	// Token: 0x0200528D RID: 21133
 	public interface IPinballRoleHeadItemData
 	{
-		// Token: 0x170092D4 RID: 37588
-		// (get) Token: 0x0603FCCF RID: 261327
-		// (set) Token: 0x0603FCD0 RID: 261328
+		// Token: 0x17006636 RID: 26166
+		// (get) Token: 0x06034990 RID: 215440
+		// (set) Token: 0x06034991 RID: 215441
 		PinballRoleConfig RoleConfig { get; set; }
 
-		// Token: 0x170092D5 RID: 37589
-		// (get) Token: 0x0603FCD1 RID: 261329
-		// (set) Token: 0x0603FCD2 RID: 261330
+		// Token: 0x17006637 RID: 26167
+		// (get) Token: 0x06034992 RID: 215442
+		// (set) Token: 0x06034993 RID: 215443
 		bool IsSelected { get; set; }
 
-		// Token: 0x170092D6 RID: 37590
-		// (get) Token: 0x0603FCD3 RID: 261331
-		// (set) Token: 0x0603FCD4 RID: 261332
+		// Token: 0x17006638 RID: 26168
+		// (get) Token: 0x06034994 RID: 215444
+		// (set) Token: 0x06034995 RID: 215445
 		bool IsLocked { get; set; }
 
-		// Token: 0x170092D7 RID: 37591
-		// (get) Token: 0x0603FCD5 RID: 261333
-		// (set) Token: 0x0603FCD6 RID: 261334
+		// Token: 0x17006639 RID: 26169
+		// (get) Token: 0x06034996 RID: 215446
+		// (set) Token: 0x06034997 RID: 215447
 		bool IsTrail { get; set; }
 
-		// Token: 0x170092D8 RID: 37592
-		// (get) Token: 0x0603FCD7 RID: 261335
-		// (set) Token: 0x0603FCD8 RID: 261336
+		// Token: 0x1700663A RID: 26170
+		// (get) Token: 0x06034998 RID: 215448
+		// (set) Token: 0x06034999 RID: 215449
 		bool NeedRedDot { get; set; }
 	}
 }

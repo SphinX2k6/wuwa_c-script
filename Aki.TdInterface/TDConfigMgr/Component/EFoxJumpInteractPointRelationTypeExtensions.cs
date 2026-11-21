@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200094E RID: 2382
+	// Token: 0x020009FF RID: 2559
 	public static class EFoxJumpInteractPointRelationTypeExtensions
 	{
-		// Token: 0x06003590 RID: 13712 RVA: 0x0008BC28 File Offset: 0x00089E28
+		// Token: 0x0600390E RID: 14606 RVA: 0x000939F4 File Offset: 0x00091BF4
 		public static string ToEnumString(this EFoxJumpInteractPointRelationType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003591 RID: 13713 RVA: 0x0008BC60 File Offset: 0x00089E60
+		// Token: 0x0600390F RID: 14607 RVA: 0x00093A2C File Offset: 0x00091C2C
 		public static EFoxJumpInteractPointRelationType FromString(string name)
 		{
 			EFoxJumpInteractPointRelationType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003592 RID: 13714 RVA: 0x0008BC89 File Offset: 0x00089E89
+		// Token: 0x06003910 RID: 14608 RVA: 0x00093A55 File Offset: 0x00091C55
 		public static bool TryFromString(string name, out EFoxJumpInteractPointRelationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003593 RID: 13715 RVA: 0x0008BCC2 File Offset: 0x00089EC2
+		// Token: 0x06003911 RID: 14609 RVA: 0x00093A8E File Offset: 0x00091C8E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003594 RID: 13716 RVA: 0x0008BCDA File Offset: 0x00089EDA
+		// Token: 0x06003912 RID: 14610 RVA: 0x00093AA6 File Offset: 0x00091CA6
 		public static EFoxJumpInteractPointRelationType[] GetValues()
 		{
 			return new EFoxJumpInteractPointRelationType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003595 RID: 13717 RVA: 0x0008BCE6 File Offset: 0x00089EE6
+		// Token: 0x06003913 RID: 14611 RVA: 0x00093AB2 File Offset: 0x00091CB2
 		public static string[] GetNames()
 		{
 			return new string[]

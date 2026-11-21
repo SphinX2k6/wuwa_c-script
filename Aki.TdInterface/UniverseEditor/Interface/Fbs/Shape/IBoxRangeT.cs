@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BF0 RID: 15344
+	// Token: 0x02003FFC RID: 16380
 	public class IBoxRangeT
 	{
-		// Token: 0x1700694E RID: 26958
-		// (get) Token: 0x060151B3 RID: 86451 RVA: 0x0030EED4 File Offset: 0x0030D0D4
-		// (set) Token: 0x060151B4 RID: 86452 RVA: 0x0030EEDC File Offset: 0x0030D0DC
+		// Token: 0x17006EF6 RID: 28406
+		// (get) Token: 0x060166A9 RID: 91817 RVA: 0x00335A5C File Offset: 0x00333C5C
+		// (set) Token: 0x060166AA RID: 91818 RVA: 0x00335A64 File Offset: 0x00333C64
 		public ERangeType Type { get; set; }
 
-		// Token: 0x1700694F RID: 26959
-		// (get) Token: 0x060151B5 RID: 86453 RVA: 0x0030EEE5 File Offset: 0x0030D0E5
-		// (set) Token: 0x060151B6 RID: 86454 RVA: 0x0030EEED File Offset: 0x0030D0ED
+		// Token: 0x17006EF7 RID: 28407
+		// (get) Token: 0x060166AB RID: 91819 RVA: 0x00335A6D File Offset: 0x00333C6D
+		// (set) Token: 0x060166AC RID: 91820 RVA: 0x00335A75 File Offset: 0x00333C75
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x17006950 RID: 26960
-		// (get) Token: 0x060151B7 RID: 86455 RVA: 0x0030EEF6 File Offset: 0x0030D0F6
-		// (set) Token: 0x060151B8 RID: 86456 RVA: 0x0030EEFE File Offset: 0x0030D0FE
+		// Token: 0x17006EF8 RID: 28408
+		// (get) Token: 0x060166AD RID: 91821 RVA: 0x00335A7E File Offset: 0x00333C7E
+		// (set) Token: 0x060166AE RID: 91822 RVA: 0x00335A86 File Offset: 0x00333C86
 		public IVectorInfoT Size { get; set; }
 
-		// Token: 0x17006951 RID: 26961
-		// (get) Token: 0x060151B9 RID: 86457 RVA: 0x0030EF07 File Offset: 0x0030D107
-		// (set) Token: 0x060151BA RID: 86458 RVA: 0x0030EF0F File Offset: 0x0030D10F
+		// Token: 0x17006EF9 RID: 28409
+		// (get) Token: 0x060166AF RID: 91823 RVA: 0x00335A8F File Offset: 0x00333C8F
+		// (set) Token: 0x060166B0 RID: 91824 RVA: 0x00335A97 File Offset: 0x00333C97
 		public IVectorInfoT Rotator { get; set; }
 
-		// Token: 0x060151BB RID: 86459 RVA: 0x0030EF18 File Offset: 0x0030D118
+		// Token: 0x060166B1 RID: 91825 RVA: 0x00335AA0 File Offset: 0x00333CA0
 		public IBoxRangeT()
 		{
 			this.Type = ERangeType.CircleRange;

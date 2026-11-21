@@ -3,115 +3,120 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071BE RID: 29118
+	// Token: 0x02007993 RID: 31123
 	public class IStateInfoT
 	{
-		// Token: 0x1700D850 RID: 55376
-		// (get) Token: 0x06033A68 RID: 211560 RVA: 0x006F4D62 File Offset: 0x006F2F62
-		// (set) Token: 0x06033A69 RID: 211561 RVA: 0x006F4D6A File Offset: 0x006F2F6A
+		// Token: 0x1700E448 RID: 58440
+		// (get) Token: 0x06036D68 RID: 224616 RVA: 0x00756094 File Offset: 0x00754294
+		// (set) Token: 0x06036D69 RID: 224617 RVA: 0x0075609C File Offset: 0x0075429C
 		public string ObjType { get; set; }
 
-		// Token: 0x1700D851 RID: 55377
-		// (get) Token: 0x06033A6A RID: 211562 RVA: 0x006F4D73 File Offset: 0x006F2F73
-		// (set) Token: 0x06033A6B RID: 211563 RVA: 0x006F4D7B File Offset: 0x006F2F7B
+		// Token: 0x1700E449 RID: 58441
+		// (get) Token: 0x06036D6A RID: 224618 RVA: 0x007560A5 File Offset: 0x007542A5
+		// (set) Token: 0x06036D6B RID: 224619 RVA: 0x007560AD File Offset: 0x007542AD
 		public List<string> Children { get; set; }
 
-		// Token: 0x1700D852 RID: 55378
-		// (get) Token: 0x06033A6C RID: 211564 RVA: 0x006F4D84 File Offset: 0x006F2F84
-		// (set) Token: 0x06033A6D RID: 211565 RVA: 0x006F4D8C File Offset: 0x006F2F8C
+		// Token: 0x1700E44A RID: 58442
+		// (get) Token: 0x06036D6C RID: 224620 RVA: 0x007560B6 File Offset: 0x007542B6
+		// (set) Token: 0x06036D6D RID: 224621 RVA: 0x007560BE File Offset: 0x007542BE
 		public List<string> Reference { get; set; }
 
-		// Token: 0x1700D853 RID: 55379
-		// (get) Token: 0x06033A6E RID: 211566 RVA: 0x006F4D95 File Offset: 0x006F2F95
-		// (set) Token: 0x06033A6F RID: 211567 RVA: 0x006F4D9D File Offset: 0x006F2F9D
+		// Token: 0x1700E44B RID: 58443
+		// (get) Token: 0x06036D6E RID: 224622 RVA: 0x007560C7 File Offset: 0x007542C7
+		// (set) Token: 0x06036D6F RID: 224623 RVA: 0x007560CF File Offset: 0x007542CF
 		public List<string> WeakReference { get; set; }
 
-		// Token: 0x1700D854 RID: 55380
-		// (get) Token: 0x06033A70 RID: 211568 RVA: 0x006F4DA6 File Offset: 0x006F2FA6
-		// (set) Token: 0x06033A71 RID: 211569 RVA: 0x006F4DAE File Offset: 0x006F2FAE
+		// Token: 0x1700E44C RID: 58444
+		// (get) Token: 0x06036D70 RID: 224624 RVA: 0x007560D8 File Offset: 0x007542D8
+		// (set) Token: 0x06036D71 RID: 224625 RVA: 0x007560E0 File Offset: 0x007542E0
 		public int Id { get; set; }
 
-		// Token: 0x1700D855 RID: 55381
-		// (get) Token: 0x06033A72 RID: 211570 RVA: 0x006F4DB7 File Offset: 0x006F2FB7
-		// (set) Token: 0x06033A73 RID: 211571 RVA: 0x006F4DBF File Offset: 0x006F2FBF
+		// Token: 0x1700E44D RID: 58445
+		// (get) Token: 0x06036D72 RID: 224626 RVA: 0x007560E9 File Offset: 0x007542E9
+		// (set) Token: 0x06036D73 RID: 224627 RVA: 0x007560F1 File Offset: 0x007542F1
 		public string Name { get; set; }
 
-		// Token: 0x1700D856 RID: 55382
-		// (get) Token: 0x06033A74 RID: 211572 RVA: 0x006F4DC8 File Offset: 0x006F2FC8
-		// (set) Token: 0x06033A75 RID: 211573 RVA: 0x006F4DD0 File Offset: 0x006F2FD0
+		// Token: 0x1700E44E RID: 58446
+		// (get) Token: 0x06036D74 RID: 224628 RVA: 0x007560FA File Offset: 0x007542FA
+		// (set) Token: 0x06036D75 RID: 224629 RVA: 0x00756102 File Offset: 0x00754302
 		public bool _Folded { get; set; }
 
-		// Token: 0x1700D857 RID: 55383
-		// (get) Token: 0x06033A76 RID: 211574 RVA: 0x006F4DD9 File Offset: 0x006F2FD9
-		// (set) Token: 0x06033A77 RID: 211575 RVA: 0x006F4DE1 File Offset: 0x006F2FE1
+		// Token: 0x1700E44F RID: 58447
+		// (get) Token: 0x06036D76 RID: 224630 RVA: 0x0075610B File Offset: 0x0075430B
+		// (set) Token: 0x06036D77 RID: 224631 RVA: 0x00756113 File Offset: 0x00754313
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700D858 RID: 55384
-		// (get) Token: 0x06033A78 RID: 211576 RVA: 0x006F4DEA File Offset: 0x006F2FEA
-		// (set) Token: 0x06033A79 RID: 211577 RVA: 0x006F4DF2 File Offset: 0x006F2FF2
+		// Token: 0x1700E450 RID: 58448
+		// (get) Token: 0x06036D78 RID: 224632 RVA: 0x0075611C File Offset: 0x0075431C
+		// (set) Token: 0x06036D79 RID: 224633 RVA: 0x00756124 File Offset: 0x00754324
 		public bool KeepBgm { get; set; }
 
-		// Token: 0x1700D859 RID: 55385
-		// (get) Token: 0x06033A7A RID: 211578 RVA: 0x006F4DFB File Offset: 0x006F2FFB
-		// (set) Token: 0x06033A7B RID: 211579 RVA: 0x006F4E03 File Offset: 0x006F3003
+		// Token: 0x1700E451 RID: 58449
+		// (get) Token: 0x06036D7A RID: 224634 RVA: 0x0075612D File Offset: 0x0075432D
+		// (set) Token: 0x06036D7B RID: 224635 RVA: 0x00756135 File Offset: 0x00754335
 		public bool OnlyPlayOnce { get; set; }
 
-		// Token: 0x1700D85A RID: 55386
-		// (get) Token: 0x06033A7C RID: 211580 RVA: 0x006F4E0C File Offset: 0x006F300C
-		// (set) Token: 0x06033A7D RID: 211581 RVA: 0x006F4E14 File Offset: 0x006F3014
+		// Token: 0x1700E452 RID: 58450
+		// (get) Token: 0x06036D7C RID: 224636 RVA: 0x0075613E File Offset: 0x0075433E
+		// (set) Token: 0x06036D7D RID: 224637 RVA: 0x00756146 File Offset: 0x00754346
 		public bool KeepInVehicle { get; set; }
 
-		// Token: 0x1700D85B RID: 55387
-		// (get) Token: 0x06033A7E RID: 211582 RVA: 0x006F4E1D File Offset: 0x006F301D
-		// (set) Token: 0x06033A7F RID: 211583 RVA: 0x006F4E25 File Offset: 0x006F3025
+		// Token: 0x1700E453 RID: 58451
+		// (get) Token: 0x06036D7E RID: 224638 RVA: 0x0075614F File Offset: 0x0075434F
+		// (set) Token: 0x06036D7F RID: 224639 RVA: 0x00756157 File Offset: 0x00754357
 		public bool AllowMultiReference { get; set; }
 
-		// Token: 0x1700D85C RID: 55388
-		// (get) Token: 0x06033A80 RID: 211584 RVA: 0x006F4E2E File Offset: 0x006F302E
-		// (set) Token: 0x06033A81 RID: 211585 RVA: 0x006F4E36 File Offset: 0x006F3036
+		// Token: 0x1700E454 RID: 58452
+		// (get) Token: 0x06036D80 RID: 224640 RVA: 0x00756160 File Offset: 0x00754360
+		// (set) Token: 0x06036D81 RID: 224641 RVA: 0x00756168 File Offset: 0x00754368
 		public bool IgnoreInPlotHandBook { get; set; }
 
-		// Token: 0x1700D85D RID: 55389
-		// (get) Token: 0x06033A82 RID: 211586 RVA: 0x006F4E3F File Offset: 0x006F303F
-		// (set) Token: 0x06033A83 RID: 211587 RVA: 0x006F4E47 File Offset: 0x006F3047
+		// Token: 0x1700E455 RID: 58453
+		// (get) Token: 0x06036D82 RID: 224642 RVA: 0x00756171 File Offset: 0x00754371
+		// (set) Token: 0x06036D83 RID: 224643 RVA: 0x00756179 File Offset: 0x00754379
 		public bool DontInterruptMatch { get; set; }
 
-		// Token: 0x1700D85E RID: 55390
-		// (get) Token: 0x06033A84 RID: 211588 RVA: 0x006F4E50 File Offset: 0x006F3050
-		// (set) Token: 0x06033A85 RID: 211589 RVA: 0x006F4E58 File Offset: 0x006F3058
+		// Token: 0x1700E456 RID: 58454
+		// (get) Token: 0x06036D84 RID: 224644 RVA: 0x00756182 File Offset: 0x00754382
+		// (set) Token: 0x06036D85 RID: 224645 RVA: 0x0075618A File Offset: 0x0075438A
 		public bool IsPreloadFlow { get; set; }
 
-		// Token: 0x1700D85F RID: 55391
-		// (get) Token: 0x06033A86 RID: 211590 RVA: 0x006F4E61 File Offset: 0x006F3061
-		// (set) Token: 0x06033A87 RID: 211591 RVA: 0x006F4E69 File Offset: 0x006F3069
+		// Token: 0x1700E457 RID: 58455
+		// (get) Token: 0x06036D86 RID: 224646 RVA: 0x00756193 File Offset: 0x00754393
+		// (set) Token: 0x06036D87 RID: 224647 RVA: 0x0075619B File Offset: 0x0075439B
 		public bool IsClientFlow { get; set; }
 
-		// Token: 0x1700D860 RID: 55392
-		// (get) Token: 0x06033A88 RID: 211592 RVA: 0x006F4E72 File Offset: 0x006F3072
-		// (set) Token: 0x06033A89 RID: 211593 RVA: 0x006F4E7A File Offset: 0x006F307A
+		// Token: 0x1700E458 RID: 58456
+		// (get) Token: 0x06036D88 RID: 224648 RVA: 0x007561A4 File Offset: 0x007543A4
+		// (set) Token: 0x06036D89 RID: 224649 RVA: 0x007561AC File Offset: 0x007543AC
 		public bool _ShowImport { get; set; }
 
-		// Token: 0x1700D861 RID: 55393
-		// (get) Token: 0x06033A8A RID: 211594 RVA: 0x006F4E83 File Offset: 0x006F3083
-		// (set) Token: 0x06033A8B RID: 211595 RVA: 0x006F4E8B File Offset: 0x006F308B
+		// Token: 0x1700E459 RID: 58457
+		// (get) Token: 0x06036D8A RID: 224650 RVA: 0x007561B5 File Offset: 0x007543B5
+		// (set) Token: 0x06036D8B RID: 224651 RVA: 0x007561BD File Offset: 0x007543BD
 		public IPosAT PlotPos { get; set; }
 
-		// Token: 0x1700D862 RID: 55394
-		// (get) Token: 0x06033A8C RID: 211596 RVA: 0x006F4E94 File Offset: 0x006F3094
-		// (set) Token: 0x06033A8D RID: 211597 RVA: 0x006F4E9C File Offset: 0x006F309C
+		// Token: 0x1700E45A RID: 58458
+		// (get) Token: 0x06036D8C RID: 224652 RVA: 0x007561C6 File Offset: 0x007543C6
+		// (set) Token: 0x06036D8D RID: 224653 RVA: 0x007561CE File Offset: 0x007543CE
 		public IStateProgramSpecialProcessChangeTeamOptimizationT ProgramSpecialProcess { get; set; }
 
-		// Token: 0x1700D863 RID: 55395
-		// (get) Token: 0x06033A8E RID: 211598 RVA: 0x006F4EA5 File Offset: 0x006F30A5
-		// (set) Token: 0x06033A8F RID: 211599 RVA: 0x006F4EAD File Offset: 0x006F30AD
+		// Token: 0x1700E45B RID: 58459
+		// (get) Token: 0x06036D8E RID: 224654 RVA: 0x007561D7 File Offset: 0x007543D7
+		// (set) Token: 0x06036D8F RID: 224655 RVA: 0x007561DF File Offset: 0x007543DF
+		public bool UseConditionalText { get; set; }
+
+		// Token: 0x1700E45C RID: 58460
+		// (get) Token: 0x06036D90 RID: 224656 RVA: 0x007561E8 File Offset: 0x007543E8
+		// (set) Token: 0x06036D91 RID: 224657 RVA: 0x007561F0 File Offset: 0x007543F0
 		public List<int> _SelectedIndexes { get; set; }
 
-		// Token: 0x1700D864 RID: 55396
-		// (get) Token: 0x06033A90 RID: 211600 RVA: 0x006F4EB6 File Offset: 0x006F30B6
-		// (set) Token: 0x06033A91 RID: 211601 RVA: 0x006F4EBE File Offset: 0x006F30BE
+		// Token: 0x1700E45D RID: 58461
+		// (get) Token: 0x06036D92 RID: 224658 RVA: 0x007561F9 File Offset: 0x007543F9
+		// (set) Token: 0x06036D93 RID: 224659 RVA: 0x00756201 File Offset: 0x00754401
 		public ushort NullMask { get; set; }
 
-		// Token: 0x06033A92 RID: 211602 RVA: 0x006F4EC8 File Offset: 0x006F30C8
+		// Token: 0x06036D94 RID: 224660 RVA: 0x0075620C File Offset: 0x0075440C
 		public IStateInfoT()
 		{
 			this.ObjType = null;
@@ -133,6 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			this._ShowImport = false;
 			this.PlotPos = null;
 			this.ProgramSpecialProcess = null;
+			this.UseConditionalText = false;
 			this._SelectedIndexes = null;
 			this.NullMask = 0;
 		}

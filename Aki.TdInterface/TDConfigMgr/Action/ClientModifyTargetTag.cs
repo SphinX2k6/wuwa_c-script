@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014FF RID: 5375
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200165A RID: 5722
 	public class ClientModifyTargetTag : ActionParams
 	{
-		// Token: 0x06007A30 RID: 31280 RVA: 0x00123E6C File Offset: 0x0012206C
+		// Token: 0x06008103 RID: 33027 RVA: 0x00132B4C File Offset: 0x00130D4C
 		private ClientModifyTargetTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A31 RID: 31281 RVA: 0x00123EA4 File Offset: 0x001220A4
+		// Token: 0x06008104 RID: 33028 RVA: 0x00132B84 File Offset: 0x00130D84
 		public static ClientModifyTargetTag Create([Nullable(2)] ClientModifyTargetTag instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A32 RID: 31282 RVA: 0x00123EB7 File Offset: 0x001220B7
+		// Token: 0x06008105 RID: 33029 RVA: 0x00132B97 File Offset: 0x00130D97
 		public static ClientModifyTargetTag CreateFromSetValue([Nullable(2)] ClientModifyTargetTag_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A33 RID: 31283 RVA: 0x00123ECA File Offset: 0x001220CA
+		// Token: 0x06008106 RID: 33030 RVA: 0x00132BAA File Offset: 0x00130DAA
 		public ClientModifyTargetTag_SetValue ToSetValue()
 		{
 			return new ClientModifyTargetTag_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028D1 RID: 10449
-		// (get) Token: 0x06007A34 RID: 31284 RVA: 0x00123EF5 File Offset: 0x001220F5
-		// (set) Token: 0x06007A35 RID: 31285 RVA: 0x00123F20 File Offset: 0x00122120
+		// Token: 0x17002ABB RID: 10939
+		// (get) Token: 0x06008107 RID: 33031 RVA: 0x00132BD5 File Offset: 0x00130DD5
+		// (set) Token: 0x06008108 RID: 33032 RVA: 0x00132C00 File Offset: 0x00130E00
 		public virtual bool IsAddTag
 		{
 			get
@@ -81,9 +79,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028D2 RID: 10450
-		// (get) Token: 0x06007A36 RID: 31286 RVA: 0x00123F2E File Offset: 0x0012212E
-		// (set) Token: 0x06007A37 RID: 31287 RVA: 0x00123F55 File Offset: 0x00122155
+		// Token: 0x17002ABC RID: 10940
+		// (get) Token: 0x06008109 RID: 33033 RVA: 0x00132C0E File Offset: 0x00130E0E
+		// (set) Token: 0x0600810A RID: 33034 RVA: 0x00132C35 File Offset: 0x00130E35
 		public virtual IClientModifyTarget Target
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028D3 RID: 10451
-		// (get) Token: 0x06007A38 RID: 31288 RVA: 0x00123F63 File Offset: 0x00122163
-		// (set) Token: 0x06007A39 RID: 31289 RVA: 0x00123F8A File Offset: 0x0012218A
+		// Token: 0x17002ABD RID: 10941
+		// (get) Token: 0x0600810B RID: 33035 RVA: 0x00132C43 File Offset: 0x00130E43
+		// (set) Token: 0x0600810C RID: 33036 RVA: 0x00132C6A File Offset: 0x00130E6A
 		public virtual List<string> PerformanceTag
 		{
 			get
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046CD RID: 18125
+		// Token: 0x04004A6C RID: 19052
 		[Nullable(2)]
 		protected new ClientModifyTargetTag FbInstance;
 
-		// Token: 0x040046CE RID: 18126
+		// Token: 0x04004A6D RID: 19053
 		[Nullable(2)]
 		protected ClientModifyTargetTag_SetValue PocoInterface;
 	}

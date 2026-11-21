@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001B1 RID: 433
+	// Token: 0x020001C3 RID: 451
 	public class ConfigCustomizedThumbnailById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A29 RID: 2601 RVA: 0x00093034 File Offset: 0x00091234
+		// Token: 0x06000A95 RID: 2709 RVA: 0x00098F6C File Offset: 0x0009716C
 		static ConfigCustomizedThumbnailById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCustomizedThumbnailById.CreateStaticDefaultValue), new Action(ConfigCustomizedThumbnailById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A2A RID: 2602 RVA: 0x00093054 File Offset: 0x00091254
+		// Token: 0x06000A96 RID: 2710 RVA: 0x00098F8C File Offset: 0x0009718C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCustomizedThumbnailById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A2B RID: 2603 RVA: 0x000930D3 File Offset: 0x000912D3
+		// Token: 0x06000A97 RID: 2711 RVA: 0x0009900B File Offset: 0x0009720B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCustomizedThumbnailById.LogPair = null;
 			ConfigCustomizedThumbnailById.HandleId = 0;
 		}
 
-		// Token: 0x06000A2C RID: 2604 RVA: 0x000930E1 File Offset: 0x000912E1
+		// Token: 0x06000A98 RID: 2712 RVA: 0x00099019 File Offset: 0x00097219
 		public static void Init()
 		{
 			ConfigCustomizedThumbnailById.HandleId = ConfigCommon.InitDataStatement(ConfigCustomizedThumbnailById.HandleId, "db_map.db", "select BinData from `CustomizedThumbnail` where Id=?");
 		}
 
-		// Token: 0x06000A2D RID: 2605 RVA: 0x000930FC File Offset: 0x000912FC
+		// Token: 0x06000A99 RID: 2713 RVA: 0x00099034 File Offset: 0x00097234
 		public static CustomizedThumbnail? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCustomizedThumbnailById.HandleId, ConfigCustomizedThumbnailById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CustomizedThumbnail?(rootAsCustomizedThumbnail);
 		}
 
-		// Token: 0x04000BBB RID: 3003
+		// Token: 0x04000C39 RID: 3129
 		private const string DB = "db_map.db";
 
-		// Token: 0x04000BBC RID: 3004
+		// Token: 0x04000C3A RID: 3130
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x04000BBD RID: 3005
+		// Token: 0x04000C3B RID: 3131
 		private const string TABLE = "CustomizedThumbnail";
 
-		// Token: 0x04000BBE RID: 3006
+		// Token: 0x04000C3C RID: 3132
 		private const string COMMAND = "select BinData from `CustomizedThumbnail` where Id=?";
 
-		// Token: 0x04000BBF RID: 3007
+		// Token: 0x04000C3D RID: 3133
 		private const string KEY_PREFIX = "CustomizedThumbnailById";
 
-		// Token: 0x04000BC0 RID: 3008
+		// Token: 0x04000C3E RID: 3134
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BC1 RID: 3009
+		// Token: 0x04000C3F RID: 3135
 		private static int HandleId;
 	}
 }

@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B67 RID: 11111
+// Token: 0x020020E3 RID: 8419
 public class SurvivorsRogueRoleInfoItem : UiPanelBase
 {
-	// Token: 0x06017066 RID: 94310 RVA: 0x005D87A0 File Offset: 0x005D69A0
+	// Token: 0x06014A97 RID: 84631 RVA: 0x00605308 File Offset: 0x00603508
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,12 +18,12 @@ public class SurvivorsRogueRoleInfoItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06017067 RID: 94311 RVA: 0x005D87FA File Offset: 0x005D69FA
+	// Token: 0x06014A98 RID: 84632 RVA: 0x00605362 File Offset: 0x00603562
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06017068 RID: 94312 RVA: 0x005D87FC File Offset: 0x005D69FC
+	// Token: 0x06014A99 RID: 84633 RVA: 0x00605364 File Offset: 0x00603564
 	public void Refresh(int roleId, int lv)
 	{
 		SurvivorsRole? survivorsRole = SurvivorsRogueConfig.Instance.GetSurvivorsRole(roleId);

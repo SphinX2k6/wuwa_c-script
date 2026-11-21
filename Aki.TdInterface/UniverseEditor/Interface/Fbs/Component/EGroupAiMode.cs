@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DAE RID: 19886
+	// Token: 0x020052B2 RID: 21170
 	public enum EGroupAiMode : byte
 	{
-		// Token: 0x0400D9B3 RID: 55731
+		// Token: 0x0400E502 RID: 58626
 		Default,
-		// Token: 0x0400D9B4 RID: 55732
+		// Token: 0x0400E503 RID: 58627
 		Patrol,
-		// Token: 0x0400D9B5 RID: 55733
+		// Token: 0x0400E504 RID: 58628
 		MonsterEcology
 	}
 }

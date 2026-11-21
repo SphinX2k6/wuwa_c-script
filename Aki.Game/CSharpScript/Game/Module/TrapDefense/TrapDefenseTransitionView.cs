@@ -4,13 +4,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AF0 RID: 19184
+	// Token: 0x02003A98 RID: 15000
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TrapDefenseTransitionView : UiViewBase
 	{
-		// Token: 0x17007AE9 RID: 31465
-		// (get) Token: 0x06031B19 RID: 203545 RVA: 0x00B8A028 File Offset: 0x00B88228
+		// Token: 0x17004E96 RID: 20118
+		// (get) Token: 0x060268A9 RID: 157865 RVA: 0x00ACDFDC File Offset: 0x00ACC1DC
 		public new TrapDefenseTransitionViewParams OpenParam
 		{
 			get
@@ -19,24 +19,24 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031B1A RID: 203546 RVA: 0x00B8A035 File Offset: 0x00B88235
+		// Token: 0x060268AA RID: 157866 RVA: 0x00ACDFE9 File Offset: 0x00ACC1E9
 		[NullableContext(1)]
 		public TrapDefenseTransitionView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031B1B RID: 203547 RVA: 0x00B8A03E File Offset: 0x00B8823E
+		// Token: 0x060268AB RID: 157867 RVA: 0x00ACDFF2 File Offset: 0x00ACC1F2
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06031B1C RID: 203548 RVA: 0x00B8A040 File Offset: 0x00B88240
+		// Token: 0x060268AC RID: 157868 RVA: 0x00ACDFF4 File Offset: 0x00ACC1F4
 		protected override void OnFinishShow()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031B1D RID: 203549 RVA: 0x00B8A049 File Offset: 0x00B88249
+		// Token: 0x060268AD RID: 157869 RVA: 0x00ACDFFD File Offset: 0x00ACC1FD
 		protected override void OnBeforePlayCloseSequence()
 		{
 			TrapDefenseTransitionViewParams openParam = this.OpenParam;

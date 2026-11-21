@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200025C RID: 604
+// Token: 0x02000260 RID: 608
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Define/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Define/CounterAttackCameraData.CounterAttackCameraData_C")]
 public class CounterAttackCameraData : UKuroBpDataAsset, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700059C RID: 1436
-	// (get) Token: 0x0600252D RID: 9517 RVA: 0x000E0BF8 File Offset: 0x000DEDF8
-	// (set) Token: 0x0600252E RID: 9518 RVA: 0x000E0C31 File Offset: 0x000DEE31
+	// Token: 0x170005C3 RID: 1475
+	// (get) Token: 0x060025E4 RID: 9700 RVA: 0x000E6F94 File Offset: 0x000E5194
+	// (set) Token: 0x060025E5 RID: 9701 RVA: 0x000E6FCD File Offset: 0x000E51CD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SCounterAttackCamera CameraData
 	{
@@ -36,9 +36,9 @@ public class CounterAttackCameraData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x1700059D RID: 1437
-	// (get) Token: 0x0600252F RID: 9519 RVA: 0x000E0C5C File Offset: 0x000DEE5C
-	// (set) Token: 0x06002530 RID: 9520 RVA: 0x000E0C95 File Offset: 0x000DEE95
+	// Token: 0x170005C4 RID: 1476
+	// (get) Token: 0x060025E6 RID: 9702 RVA: 0x000E6FF8 File Offset: 0x000E51F8
+	// (set) Token: 0x060025E7 RID: 9703 RVA: 0x000E7031 File Offset: 0x000E5231
 	[UProperty(EPropertyFlags.CPF_None)]
 	public STimeScale AttackerTimeScale
 	{
@@ -58,9 +58,9 @@ public class CounterAttackCameraData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x1700059E RID: 1438
-	// (get) Token: 0x06002531 RID: 9521 RVA: 0x000E0CC0 File Offset: 0x000DEEC0
-	// (set) Token: 0x06002532 RID: 9522 RVA: 0x000E0CF9 File Offset: 0x000DEEF9
+	// Token: 0x170005C5 RID: 1477
+	// (get) Token: 0x060025E8 RID: 9704 RVA: 0x000E705C File Offset: 0x000E525C
+	// (set) Token: 0x060025E9 RID: 9705 RVA: 0x000E7095 File Offset: 0x000E5295
 	[UProperty(EPropertyFlags.CPF_None)]
 	public STimeScale VictimTimeScale
 	{
@@ -80,9 +80,9 @@ public class CounterAttackCameraData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x1700059F RID: 1439
-	// (get) Token: 0x06002533 RID: 9523 RVA: 0x000E0D21 File Offset: 0x000DEF21
-	// (set) Token: 0x06002534 RID: 9524 RVA: 0x000E0D35 File Offset: 0x000DEF35
+	// Token: 0x170005C6 RID: 1478
+	// (get) Token: 0x060025EA RID: 9706 RVA: 0x000E70BD File Offset: 0x000E52BD
+	// (set) Token: 0x060025EB RID: 9707 RVA: 0x000E70D1 File Offset: 0x000E52D1
 	[Nullable(new byte[]
 	{
 		0,
@@ -111,7 +111,7 @@ public class CounterAttackCameraData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		}
 	}
 
-	// Token: 0x06002535 RID: 9525 RVA: 0x000E0D4A File Offset: 0x000DEF4A
+	// Token: 0x060025EC RID: 9708 RVA: 0x000E70E6 File Offset: 0x000E52E6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (CounterAttackCameraData._ClassPtr == IntPtr.Zero)
@@ -121,51 +121,51 @@ public class CounterAttackCameraData : UKuroBpDataAsset, IUnrealUObject, IUnreal
 		return CounterAttackCameraData._ClassPtr;
 	}
 
-	// Token: 0x06002536 RID: 9526 RVA: 0x000E0D70 File Offset: 0x000DEF70
+	// Token: 0x060025ED RID: 9709 RVA: 0x000E710C File Offset: 0x000E530C
 	public CounterAttackCameraData() : this(BuiltinUtils.AllocNativeUObject(CounterAttackCameraData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06002537 RID: 9527 RVA: 0x000E0D98 File Offset: 0x000DEF98
+	// Token: 0x060025EE RID: 9710 RVA: 0x000E7134 File Offset: 0x000E5334
 	public CounterAttackCameraData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(CounterAttackCameraData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06002538 RID: 9528 RVA: 0x000E0DCB File Offset: 0x000DEFCB
+	// Token: 0x060025EF RID: 9711 RVA: 0x000E7167 File Offset: 0x000E5367
 	protected CounterAttackCameraData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x04002419 RID: 9241
+	// Token: 0x04002497 RID: 9367
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Define/CounterAttackCameraData.CounterAttackCameraData_C";
 
-	// Token: 0x0400241A RID: 9242
+	// Token: 0x04002498 RID: 9368
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400241B RID: 9243
+	// Token: 0x04002499 RID: 9369
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400241C RID: 9244
+	// Token: 0x0400249A RID: 9370
 	private static int __PropertyOffset_CameraData;
 
-	// Token: 0x0400241D RID: 9245
+	// Token: 0x0400249B RID: 9371
 	[Nullable(2)]
 	private SCounterAttackCamera _CameraData;
 
-	// Token: 0x0400241E RID: 9246
+	// Token: 0x0400249C RID: 9372
 	private static int __PropertyOffset_AttackerTimeScale;
 
-	// Token: 0x0400241F RID: 9247
+	// Token: 0x0400249D RID: 9373
 	[Nullable(2)]
 	private STimeScale _AttackerTimeScale;
 
-	// Token: 0x04002420 RID: 9248
+	// Token: 0x0400249E RID: 9374
 	private static int __PropertyOffset_VictimTimeScale;
 
-	// Token: 0x04002421 RID: 9249
+	// Token: 0x0400249F RID: 9375
 	[Nullable(2)]
 	private STimeScale _VictimTimeScale;
 
-	// Token: 0x04002422 RID: 9250
+	// Token: 0x040024A0 RID: 9376
 	private static int __PropertyOffset_CameraShake;
 }

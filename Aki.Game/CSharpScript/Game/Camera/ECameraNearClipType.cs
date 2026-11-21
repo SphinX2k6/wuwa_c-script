@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072BA RID: 29370
+	// Token: 0x0200643C RID: 25660
 	public enum ECameraNearClipType
 	{
-		// Token: 0x04026054 RID: 155732
+		// Token: 0x04021334 RID: 135988
 		Relative,
-		// Token: 0x04026055 RID: 155733
+		// Token: 0x04021335 RID: 135989
 		Absolute
 	}
 }

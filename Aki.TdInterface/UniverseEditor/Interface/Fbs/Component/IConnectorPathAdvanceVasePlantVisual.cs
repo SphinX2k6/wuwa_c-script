@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005012 RID: 20498
+	// Token: 0x02005571 RID: 21873
 	public struct IConnectorPathAdvanceVasePlantVisual : IFlatbufferObject
 	{
-		// Token: 0x17009495 RID: 38037
-		// (get) Token: 0x06020CB7 RID: 134327 RVA: 0x0048F41C File Offset: 0x0048D61C
+		// Token: 0x17009C76 RID: 40054
+		// (get) Token: 0x06022BD7 RID: 142295 RVA: 0x004C8E6C File Offset: 0x004C706C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020CB8 RID: 134328 RVA: 0x0048F429 File Offset: 0x0048D629
+		// Token: 0x06022BD8 RID: 142296 RVA: 0x004C8E79 File Offset: 0x004C7079
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020CB9 RID: 134329 RVA: 0x0048F430 File Offset: 0x0048D630
+		// Token: 0x06022BD9 RID: 142297 RVA: 0x004C8E80 File Offset: 0x004C7080
 		public static IConnectorPathAdvanceVasePlantVisual GetRootAsIConnectorPathAdvanceVasePlantVisual(ByteBuffer _bb)
 		{
 			return IConnectorPathAdvanceVasePlantVisual.GetRootAsIConnectorPathAdvanceVasePlantVisual(_bb, default(IConnectorPathAdvanceVasePlantVisual));
 		}
 
-		// Token: 0x06020CBA RID: 134330 RVA: 0x0048F44C File Offset: 0x0048D64C
+		// Token: 0x06022BDA RID: 142298 RVA: 0x004C8E9C File Offset: 0x004C709C
 		public static IConnectorPathAdvanceVasePlantVisual GetRootAsIConnectorPathAdvanceVasePlantVisual(ByteBuffer _bb, IConnectorPathAdvanceVasePlantVisual obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020CBB RID: 134331 RVA: 0x0048F469 File Offset: 0x0048D669
+		// Token: 0x06022BDB RID: 142299 RVA: 0x004C8EB9 File Offset: 0x004C70B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020CBC RID: 134332 RVA: 0x0048F478 File Offset: 0x0048D678
+		// Token: 0x06022BDC RID: 142300 RVA: 0x004C8EC8 File Offset: 0x004C70C8
 		public IConnectorPathAdvanceVasePlantVisual __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009496 RID: 38038
-		// (get) Token: 0x06020CBD RID: 134333 RVA: 0x0048F488 File Offset: 0x0048D688
+		// Token: 0x17009C77 RID: 40055
+		// (get) Token: 0x06022BDD RID: 142301 RVA: 0x004C8ED8 File Offset: 0x004C70D8
 		public EConnectorPathAdvanceVisualType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009497 RID: 38039
-		// (get) Token: 0x06020CBE RID: 134334 RVA: 0x0048F4C4 File Offset: 0x0048D6C4
+		// Token: 0x17009C78 RID: 40056
+		// (get) Token: 0x06022BDE RID: 142302 RVA: 0x004C8F14 File Offset: 0x004C7114
 		public float ScatterWidth
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009498 RID: 38040
-		// (get) Token: 0x06020CBF RID: 134335 RVA: 0x0048F504 File Offset: 0x0048D704
+		// Token: 0x17009C79 RID: 40057
+		// (get) Token: 0x06022BDF RID: 142303 RVA: 0x004C8F54 File Offset: 0x004C7154
 		public float ScatterDensity
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009499 RID: 38041
-		// (get) Token: 0x06020CC0 RID: 134336 RVA: 0x0048F544 File Offset: 0x0048D744
+		// Token: 0x17009C7A RID: 40058
+		// (get) Token: 0x06022BE0 RID: 142304 RVA: 0x004C8F94 File Offset: 0x004C7194
 		public float Scale
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700949A RID: 38042
-		// (get) Token: 0x06020CC1 RID: 134337 RVA: 0x0048F588 File Offset: 0x0048D788
+		// Token: 0x17009C7B RID: 40059
+		// (get) Token: 0x06022BE1 RID: 142305 RVA: 0x004C8FD8 File Offset: 0x004C71D8
 		public bool SnapToSurface
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020CC2 RID: 134338 RVA: 0x0048F5C8 File Offset: 0x0048D7C8
+		// Token: 0x06022BE2 RID: 142306 RVA: 0x004C9018 File Offset: 0x004C7218
 		public string PathRtList(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -130,8 +130,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700949B RID: 38043
-		// (get) Token: 0x06020CC3 RID: 134339 RVA: 0x0048F604 File Offset: 0x0048D804
+		// Token: 0x17009C7C RID: 40060
+		// (get) Token: 0x06022BE3 RID: 142307 RVA: 0x004C9054 File Offset: 0x004C7254
 		public int PathRtListLength
 		{
 			get
@@ -145,8 +145,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700949C RID: 38044
-		// (get) Token: 0x06020CC4 RID: 134340 RVA: 0x0048F630 File Offset: 0x0048D830
+		// Token: 0x17009C7D RID: 40061
+		// (get) Token: 0x06022BE4 RID: 142308 RVA: 0x004C9080 File Offset: 0x004C7280
 		public byte NullMask
 		{
 			get
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020CC5 RID: 134341 RVA: 0x0048F670 File Offset: 0x0048D870
+		// Token: 0x06022BE5 RID: 142309 RVA: 0x004C90C0 File Offset: 0x004C72C0
 		public static Offset<IConnectorPathAdvanceVasePlantVisual> CreateIConnectorPathAdvanceVasePlantVisual(FlatBufferBuilder builder, EConnectorPathAdvanceVisualType Type = EConnectorPathAdvanceVisualType.VasePlant, float ScatterWidth = 0f, float ScatterDensity = 0f, float Scale = 0f, bool SnapToSurface = false, VectorOffset PathRtListOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -174,49 +174,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConnectorPathAdvanceVasePlantVisual.EndIConnectorPathAdvanceVasePlantVisual(builder);
 		}
 
-		// Token: 0x06020CC6 RID: 134342 RVA: 0x0048F6BF File Offset: 0x0048D8BF
+		// Token: 0x06022BE6 RID: 142310 RVA: 0x004C910F File Offset: 0x004C730F
 		public static void StartIConnectorPathAdvanceVasePlantVisual(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06020CC7 RID: 134343 RVA: 0x0048F6C8 File Offset: 0x0048D8C8
+		// Token: 0x06022BE7 RID: 142311 RVA: 0x004C9118 File Offset: 0x004C7318
 		public static void AddType(FlatBufferBuilder builder, EConnectorPathAdvanceVisualType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06020CC8 RID: 134344 RVA: 0x0048F6D3 File Offset: 0x0048D8D3
+		// Token: 0x06022BE8 RID: 142312 RVA: 0x004C9123 File Offset: 0x004C7323
 		public static void AddScatterWidth(FlatBufferBuilder builder, float scatterWidth)
 		{
 			builder.AddFloat(1, scatterWidth, 0.0);
 		}
 
-		// Token: 0x06020CC9 RID: 134345 RVA: 0x0048F6E6 File Offset: 0x0048D8E6
+		// Token: 0x06022BE9 RID: 142313 RVA: 0x004C9136 File Offset: 0x004C7336
 		public static void AddScatterDensity(FlatBufferBuilder builder, float scatterDensity)
 		{
 			builder.AddFloat(2, scatterDensity, 0.0);
 		}
 
-		// Token: 0x06020CCA RID: 134346 RVA: 0x0048F6F9 File Offset: 0x0048D8F9
+		// Token: 0x06022BEA RID: 142314 RVA: 0x004C9149 File Offset: 0x004C7349
 		public static void AddScale(FlatBufferBuilder builder, float scale)
 		{
 			builder.AddFloat(3, scale, 0.0);
 		}
 
-		// Token: 0x06020CCB RID: 134347 RVA: 0x0048F70C File Offset: 0x0048D90C
+		// Token: 0x06022BEB RID: 142315 RVA: 0x004C915C File Offset: 0x004C735C
 		public static void AddSnapToSurface(FlatBufferBuilder builder, bool snapToSurface)
 		{
 			builder.AddBool(4, snapToSurface, false);
 		}
 
-		// Token: 0x06020CCC RID: 134348 RVA: 0x0048F717 File Offset: 0x0048D917
+		// Token: 0x06022BEC RID: 142316 RVA: 0x004C9167 File Offset: 0x004C7367
 		public static void AddPathRtList(FlatBufferBuilder builder, VectorOffset pathRtListOffset)
 		{
 			builder.AddOffset(5, pathRtListOffset.Value, 0);
 		}
 
-		// Token: 0x06020CCD RID: 134349 RVA: 0x0048F728 File Offset: 0x0048D928
+		// Token: 0x06022BED RID: 142317 RVA: 0x004C9178 File Offset: 0x004C7378
 		public static VectorOffset CreatePathRtListVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020CCE RID: 134350 RVA: 0x0048F768 File Offset: 0x0048D968
+		// Token: 0x06022BEE RID: 142318 RVA: 0x004C91B8 File Offset: 0x004C73B8
 		public static VectorOffset CreatePathRtListVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -235,7 +235,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020CCF RID: 134351 RVA: 0x0048F782 File Offset: 0x0048D982
+		// Token: 0x06022BEF RID: 142319 RVA: 0x004C91D2 File Offset: 0x004C73D2
 		public static VectorOffset CreatePathRtListVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020CD0 RID: 134352 RVA: 0x0048F7A0 File Offset: 0x0048D9A0
+		// Token: 0x06022BF0 RID: 142320 RVA: 0x004C91F0 File Offset: 0x004C73F0
 		public static VectorOffset CreatePathRtListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -251,25 +251,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020CD1 RID: 134353 RVA: 0x0048F7B9 File Offset: 0x0048D9B9
+		// Token: 0x06022BF1 RID: 142321 RVA: 0x004C9209 File Offset: 0x004C7409
 		public static void StartPathRtListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06020CD2 RID: 134354 RVA: 0x0048F7C4 File Offset: 0x0048D9C4
+		// Token: 0x06022BF2 RID: 142322 RVA: 0x004C9214 File Offset: 0x004C7414
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06020CD3 RID: 134355 RVA: 0x0048F7CF File Offset: 0x0048D9CF
+		// Token: 0x06022BF3 RID: 142323 RVA: 0x004C921F File Offset: 0x004C741F
 		public static Offset<IConnectorPathAdvanceVasePlantVisual> EndIConnectorPathAdvanceVasePlantVisual(FlatBufferBuilder builder)
 		{
 			return new Offset<IConnectorPathAdvanceVasePlantVisual>(builder.EndTable());
 		}
 
-		// Token: 0x06020CD4 RID: 134356 RVA: 0x0048F7DC File Offset: 0x0048D9DC
+		// Token: 0x06022BF4 RID: 142324 RVA: 0x004C922C File Offset: 0x004C742C
 		public IConnectorPathAdvanceVasePlantVisualT UnPack()
 		{
 			IConnectorPathAdvanceVasePlantVisualT connectorPathAdvanceVasePlantVisualT = new IConnectorPathAdvanceVasePlantVisualT();
@@ -277,7 +277,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return connectorPathAdvanceVasePlantVisualT;
 		}
 
-		// Token: 0x06020CD5 RID: 134357 RVA: 0x0048F7F8 File Offset: 0x0048D9F8
+		// Token: 0x06022BF5 RID: 142325 RVA: 0x004C9248 File Offset: 0x004C7448
 		public void UnPackTo(IConnectorPathAdvanceVasePlantVisualT _o)
 		{
 			_o.Type = this.Type;
@@ -293,7 +293,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06020CD6 RID: 134358 RVA: 0x0048F87C File Offset: 0x0048DA7C
+		// Token: 0x06022BF6 RID: 142326 RVA: 0x004C92CC File Offset: 0x004C74CC
 		public static Offset<IConnectorPathAdvanceVasePlantVisual> Pack(FlatBufferBuilder builder, IConnectorPathAdvanceVasePlantVisualT _o)
 		{
 			if (_o == null)
@@ -313,7 +313,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IConnectorPathAdvanceVasePlantVisual.CreateIConnectorPathAdvanceVasePlantVisual(builder, _o.Type, _o.ScatterWidth, _o.ScatterDensity, _o.Scale, _o.SnapToSurface, pathRtListOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DFDE RID: 57310
+		// Token: 0x0400EBD4 RID: 60372
 		private Table __p;
 	}
 }

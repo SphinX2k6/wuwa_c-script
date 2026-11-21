@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002907 RID: 10503
+// Token: 0x02001E82 RID: 7810
 public enum ERouletteActionType
 {
-	// Token: 0x0400A169 RID: 41321
+	// Token: 0x0400A554 RID: 42324
 	Action1 = 1,
-	// Token: 0x0400A16A RID: 41322
+	// Token: 0x0400A555 RID: 42325
 	Action2
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005334 RID: 21300
+	// Token: 0x020058BA RID: 22714
 	public class IGroupAiEcologyGameplayAbpT
 	{
-		// Token: 0x17009C7C RID: 40060
-		// (get) Token: 0x06022D4B RID: 142667 RVA: 0x004D3832 File Offset: 0x004D1A32
-		// (set) Token: 0x06022D4C RID: 142668 RVA: 0x004D383A File Offset: 0x004D1A3A
+		// Token: 0x1700A4B4 RID: 42164
+		// (get) Token: 0x06024DFF RID: 151039 RVA: 0x00510706 File Offset: 0x0050E906
+		// (set) Token: 0x06024E00 RID: 151040 RVA: 0x0051070E File Offset: 0x0050E90E
 		public EGroupAiEcologyGameplayType GameplayType { get; set; }
 
-		// Token: 0x06022D4D RID: 142669 RVA: 0x004D3843 File Offset: 0x004D1A43
+		// Token: 0x06024E01 RID: 151041 RVA: 0x00510717 File Offset: 0x0050E917
 		public IGroupAiEcologyGameplayAbpT()
 		{
 			this.GameplayType = EGroupAiEcologyGameplayType.FloatParade;

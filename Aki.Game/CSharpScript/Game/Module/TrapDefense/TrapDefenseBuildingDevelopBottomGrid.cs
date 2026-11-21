@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A94 RID: 19092
+	// Token: 0x02003A3C RID: 14908
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBuildingDevelopBottomGrid : GridProxyAbstract<TrapDefenseBuildingSlotData>
 	{
-		// Token: 0x060317D4 RID: 202708 RVA: 0x00B7888C File Offset: 0x00B76A8C
+		// Token: 0x06026564 RID: 157028 RVA: 0x00ABC840 File Offset: 0x00ABAA40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060317D5 RID: 202709 RVA: 0x00B788D4 File Offset: 0x00B76AD4
+		// Token: 0x06026565 RID: 157029 RVA: 0x00ABC888 File Offset: 0x00ABAA88
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBuildingDevelopBottomGrid.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,26 +41,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060317D6 RID: 202710 RVA: 0x00B78917 File Offset: 0x00B76B17
+		// Token: 0x06026566 RID: 157030 RVA: 0x00ABC8CB File Offset: 0x00ABAACB
 		protected override void OnBeforeDestroy()
 		{
 			this.DataItem = null;
 		}
 
-		// Token: 0x060317D7 RID: 202711 RVA: 0x00B78920 File Offset: 0x00B76B20
+		// Token: 0x06026567 RID: 157031 RVA: 0x00ABC8D4 File Offset: 0x00ABAAD4
 		public override void Refresh(TrapDefenseBuildingSlotData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.UpdateData();
 		}
 
-		// Token: 0x060317D8 RID: 202712 RVA: 0x00B7892F File Offset: 0x00B76B2F
+		// Token: 0x06026568 RID: 157032 RVA: 0x00ABC8E3 File Offset: 0x00ABAAE3
 		public void UpdateData()
 		{
 			this.DataItem.Refresh(this.Data);
 		}
 
-		// Token: 0x060317D9 RID: 202713 RVA: 0x00B78942 File Offset: 0x00B76B42
+		// Token: 0x06026569 RID: 157033 RVA: 0x00ABC8F6 File Offset: 0x00ABAAF6
 		public override void OnSelected(bool fireEvent)
 		{
 			TrapDefenseBuildingDevelopBottomInfoItem dataItem = this.DataItem;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060317DA RID: 202714 RVA: 0x00B7896F File Offset: 0x00B76B6F
+		// Token: 0x0602656A RID: 157034 RVA: 0x00ABC923 File Offset: 0x00ABAB23
 		public override void OnDeselected(bool fireEvent)
 		{
 			TrapDefenseBuildingDevelopBottomInfoItem dataItem = this.DataItem;
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			dataItem.SetSelected(false);
 		}
 
-		// Token: 0x060317DB RID: 202715 RVA: 0x00B78982 File Offset: 0x00B76B82
+		// Token: 0x0602656B RID: 157035 RVA: 0x00ABC936 File Offset: 0x00ABAB36
 		public TrapDefenseBuildingDevelopBottomInfoItem GetDataItem()
 		{
 			return this.DataItem;
 		}
 
-		// Token: 0x0401A752 RID: 108370
+		// Token: 0x040150A4 RID: 86180
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		public Action<TrapDefenseBuildingSlotData> OnClickCb;
 
-		// Token: 0x0401A753 RID: 108371
+		// Token: 0x040150A5 RID: 86181
 		[Nullable(new byte[]
 		{
 			2,
@@ -112,19 +112,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		public Func<TrapDefenseBuildingSlotData, bool> CanExecuteChangeCb;
 
-		// Token: 0x0401A754 RID: 108372
+		// Token: 0x040150A6 RID: 86182
 		[Nullable(2)]
 		protected TrapDefenseBuildingSlotData Data;
 
-		// Token: 0x0401A755 RID: 108373
+		// Token: 0x040150A7 RID: 86183
 		[Nullable(2)]
 		protected TrapDefenseBuildingDevelopBottomInfoItem DataItem;
 
-		// Token: 0x0200ABE8 RID: 44008
+		// Token: 0x02009608 RID: 38408
 		[NullableContext(0)]
 		private class EGrid
 		{
-			// Token: 0x040343D7 RID: 213975
+			// Token: 0x0402ED88 RID: 191880
 			public const int Item = 0;
 		}
 	}

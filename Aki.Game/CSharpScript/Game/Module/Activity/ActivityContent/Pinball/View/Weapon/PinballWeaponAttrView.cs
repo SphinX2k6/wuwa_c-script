@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062DB RID: 25307
+	// Token: 0x02005259 RID: 21081
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballWeaponAttrView : UiPanelBase
 	{
-		// Token: 0x0603FAD9 RID: 260825 RVA: 0x00F683A0 File Offset: 0x00F665A0
+		// Token: 0x0603479A RID: 214938 RVA: 0x00EAF2FC File Offset: 0x00EAD4FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FADA RID: 260826 RVA: 0x00F6846C File Offset: 0x00F6666C
+		// Token: 0x0603479B RID: 214939 RVA: 0x00EAF3C8 File Offset: 0x00EAD5C8
 		protected override void OnStart()
 		{
 			this.PropLayout = new GenericLayout<PinballWeaponPropItemView, int>(base.GetVerticalLayout(1), new Func<PinballWeaponPropItemView>(this.CreatePropItem), null, false, true);
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603FADB RID: 260827 RVA: 0x00F684A1 File Offset: 0x00F666A1
+		// Token: 0x0603479C RID: 214940 RVA: 0x00EAF3FD File Offset: 0x00EAD5FD
 		private PinballWeaponPropItemView CreatePropItem()
 		{
 			return new PinballWeaponPropItemView();
 		}
 
-		// Token: 0x0603FADC RID: 260828 RVA: 0x00F684A8 File Offset: 0x00F666A8
+		// Token: 0x0603479D RID: 214941 RVA: 0x00EAF404 File Offset: 0x00EAD604
 		public void Refresh(PinballWeaponData data)
 		{
 			GenericLayout<PinballWeaponPropItemView, int> propLayout = this.PropLayout;
@@ -86,22 +86,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(4), pinballWeaponSubEntryConfigById.Value.ProperDesc, pinballWeaponSubEntryConfigById.Value.ProperVal());
 		}
 
-		// Token: 0x04021446 RID: 136262
+		// Token: 0x0401BD75 RID: 114037
 		protected GenericLayout<PinballWeaponPropItemView, int> PropLayout;
 
-		// Token: 0x0200C4CB RID: 50379
+		// Token: 0x0200AEB2 RID: 44722
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B621 RID: 243233
+			// Token: 0x04035F83 RID: 221059
 			ScrollView,
-			// Token: 0x0403B622 RID: 243234
+			// Token: 0x04035F84 RID: 221060
 			PropLayout,
-			// Token: 0x0403B623 RID: 243235
+			// Token: 0x04035F85 RID: 221061
 			PropLayoutItem,
-			// Token: 0x0403B624 RID: 243236
+			// Token: 0x04035F86 RID: 221062
 			TextMainEntry,
-			// Token: 0x0403B625 RID: 243237
+			// Token: 0x04035F87 RID: 221063
 			TextSubEntry
 		}
 	}

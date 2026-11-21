@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200492B RID: 18731
+	// Token: 0x020038A2 RID: 14498
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationRoguelikeGridToggle : NavigationToggle
 	{
-		// Token: 0x06030EC0 RID: 200384 RVA: 0x00B5B91D File Offset: 0x00B59B1D
+		// Token: 0x060259ED RID: 154093 RVA: 0x00A9678D File Offset: 0x00A9498D
 		public NavigationRoguelikeGridToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030EC1 RID: 200385 RVA: 0x00B5B928 File Offset: 0x00B59B28
+		// Token: 0x060259EE RID: 154094 RVA: 0x00A96798 File Offset: 0x00A94998
 		protected override bool OnHandlePointerSelect(ULGUIPointerEventData eventData)
 		{
 			UUIExtendToggle uuiextendToggle = this.Selectable as UUIExtendToggle;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return base.IsAllowNavigationByGroup();
 		}
 
-		// Token: 0x06030EC2 RID: 200386 RVA: 0x00B5B97F File Offset: 0x00B59B7F
+		// Token: 0x060259EF RID: 154095 RVA: 0x00A967EF File Offset: 0x00A949EF
 		protected override bool OnIsIgnoreScrollOrLayoutCheck()
 		{
 			return true;

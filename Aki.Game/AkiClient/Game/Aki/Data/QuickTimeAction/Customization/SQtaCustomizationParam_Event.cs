@@ -6,121 +6,113 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction.Customization
 {
-	// Token: 0x02003EBD RID: 16061
+	// Token: 0x02003189 RID: 12681
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/Customization/SQtaCustomizationParam_Event.SQtaCustomizationParam_Event")]
 	[UnrealStructLayout(20, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 20)]
 	public class SQtaCustomizationParam_Event : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060289D8 RID: 166360 RVA: 0x009B08F1 File Offset: 0x009AEAF1
+		// Token: 0x0601F470 RID: 128112 RVA: 0x0092A39C File Offset: 0x0092859C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SQtaCustomizationParam_Event._ScriptStructPtr != 0) ? SQtaCustomizationParam_Event._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/QuickTimeAction/Customization/SQtaCustomizationParam_Event.SQtaCustomizationParam_Event", ref SQtaCustomizationParam_Event._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EB9 RID: 24249
-		// (get) Token: 0x060289D9 RID: 166361 RVA: 0x009B0915 File Offset: 0x009AEB15
-		// (set) Token: 0x060289DA RID: 166362 RVA: 0x009B0929 File Offset: 0x009AEB29
+		// Token: 0x17003869 RID: 14441
+		// (get) Token: 0x0601F471 RID: 128113 RVA: 0x0092A3C0 File Offset: 0x009285C0
+		// (set) Token: 0x0601F472 RID: 128114 RVA: 0x0092A3D4 File Offset: 0x009285D4
 		public unsafe FGameplayTag EventTag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_EventTag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_EventTag) = value;
 			}
 		}
 
-		// Token: 0x17005EBA RID: 24250
-		// (get) Token: 0x060289DB RID: 166363 RVA: 0x009B093E File Offset: 0x009AEB3E
-		// (set) Token: 0x060289DC RID: 166364 RVA: 0x009B094E File Offset: 0x009AEB4E
+		// Token: 0x1700386A RID: 14442
+		// (get) Token: 0x0601F473 RID: 128115 RVA: 0x0092A3E9 File Offset: 0x009285E9
+		// (set) Token: 0x0601F474 RID: 128116 RVA: 0x0092A3F9 File Offset: 0x009285F9
 		public unsafe float Param1
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_Param1);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_Param1) = value;
 			}
 		}
 
-		// Token: 0x17005EBB RID: 24251
-		// (get) Token: 0x060289DD RID: 166365 RVA: 0x009B095F File Offset: 0x009AEB5F
-		// (set) Token: 0x060289DE RID: 166366 RVA: 0x009B096F File Offset: 0x009AEB6F
+		// Token: 0x1700386B RID: 14443
+		// (get) Token: 0x0601F475 RID: 128117 RVA: 0x0092A40A File Offset: 0x0092860A
+		// (set) Token: 0x0601F476 RID: 128118 RVA: 0x0092A41A File Offset: 0x0092861A
 		public unsafe float Param2
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_Param2);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Event.__PropertyOffset_Param2) = value;
 			}
 		}
 
-		// Token: 0x060289DF RID: 166367 RVA: 0x009B0980 File Offset: 0x009AEB80
+		// Token: 0x0601F477 RID: 128119 RVA: 0x0092A42B File Offset: 0x0092862B
 		public SQtaCustomizationParam_Event()
 		{
 		}
 
-		// Token: 0x060289E0 RID: 166368 RVA: 0x009B0988 File Offset: 0x009AEB88
-		public SQtaCustomizationParam_Event(FGameplayTag EventTag, float Param1, float Param2)
-		{
-			this.EventTag = EventTag;
-			this.Param1 = Param1;
-			this.Param2 = Param2;
-		}
-
-		// Token: 0x060289E1 RID: 166369 RVA: 0x009B09A5 File Offset: 0x009AEBA5
+		// Token: 0x0601F478 RID: 128120 RVA: 0x0092A433 File Offset: 0x00928633
 		protected override IntPtr GetUStructPtr()
 		{
 			return SQtaCustomizationParam_Event.StaticStruct();
 		}
 
-		// Token: 0x060289E2 RID: 166370 RVA: 0x009B09B1 File Offset: 0x009AEBB1
+		// Token: 0x0601F479 RID: 128121 RVA: 0x0092A43F File Offset: 0x0092863F
 		[NullableContext(2)]
 		public SQtaCustomizationParam_Event(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060289E3 RID: 166371 RVA: 0x009B09BB File Offset: 0x009AEBBB
+		// Token: 0x0601F47A RID: 128122 RVA: 0x0092A449 File Offset: 0x00928649
 		public SQtaCustomizationParam_Event(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060289E4 RID: 166372 RVA: 0x009B09C6 File Offset: 0x009AEBC6
+		// Token: 0x0601F47B RID: 128123 RVA: 0x0092A454 File Offset: 0x00928654
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SQtaCustomizationParam_Event(Pointer, false, true);
 		}
 
-		// Token: 0x060289E5 RID: 166373 RVA: 0x009B09D0 File Offset: 0x009AEBD0
+		// Token: 0x0601F47C RID: 128124 RVA: 0x0092A45E File Offset: 0x0092865E
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SQtaCustomizationParam_Event(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014BB2 RID: 84914
+		// Token: 0x04010BD7 RID: 68567
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/QuickTimeAction/Customization/SQtaCustomizationParam_Event.SQtaCustomizationParam_Event";
 
-		// Token: 0x04014BB3 RID: 84915
+		// Token: 0x04010BD8 RID: 68568
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014BB4 RID: 84916
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010BD9 RID: 68569
+		internal static int __PropertyOffset_EventTag;
 
-		// Token: 0x04014BB5 RID: 84917
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010BDA RID: 68570
+		internal static int __PropertyOffset_Param1;
 
-		// Token: 0x04014BB6 RID: 84918
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010BDB RID: 68571
+		internal static int __PropertyOffset_Param2;
 	}
 }

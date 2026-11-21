@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D3A RID: 23866
+	// Token: 0x02004D1C RID: 19740
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HeadIconEnergyBarPercentMachine
 	{
-		// Token: 0x0603C87D RID: 247933 RVA: 0x00E85B79 File Offset: 0x00E83D79
+		// Token: 0x060317D6 RID: 202710 RVA: 0x00DD6319 File Offset: 0x00DD4519
 		public void SetWaitTimeWhenGrow(float timeInMs)
 		{
 			this.WaitTimeWhenGrow = timeInMs;
 		}
 
-		// Token: 0x0603C87E RID: 247934 RVA: 0x00E85B82 File Offset: 0x00E83D82
+		// Token: 0x060317D7 RID: 202711 RVA: 0x00DD6322 File Offset: 0x00DD4522
 		public void Init(float percent, float waitTimeWhenGrow, float growTime = 100f, Action<float, float> targetPercentChanged = null)
 		{
 			this.CurPercent = percent;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TargetPercentChanged = targetPercentChanged;
 		}
 
-		// Token: 0x0603C87F RID: 247935 RVA: 0x00E85BA8 File Offset: 0x00E83DA8
+		// Token: 0x060317D8 RID: 202712 RVA: 0x00DD6348 File Offset: 0x00DD4548
 		public void SetTargetPercent(float percent)
 		{
 			if (percent == this.TargetPercent)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C880 RID: 247936 RVA: 0x00E85C60 File Offset: 0x00E83E60
+		// Token: 0x060317D9 RID: 202713 RVA: 0x00DD6400 File Offset: 0x00DD4600
 		public bool Update(float delta)
 		{
 			if (this.Speed == 0f)
@@ -85,37 +85,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C881 RID: 247937 RVA: 0x00E85CD4 File Offset: 0x00E83ED4
+		// Token: 0x060317DA RID: 202714 RVA: 0x00DD6474 File Offset: 0x00DD4674
 		public float GetCurPercent()
 		{
 			return this.CurPercent;
 		}
 
-		// Token: 0x0603C882 RID: 247938 RVA: 0x00E85CDC File Offset: 0x00E83EDC
+		// Token: 0x060317DB RID: 202715 RVA: 0x00DD647C File Offset: 0x00DD467C
 		public float GetTargetPercent()
 		{
 			return this.TargetPercent;
 		}
 
-		// Token: 0x0401F890 RID: 129168
+		// Token: 0x0401A349 RID: 107337
 		private float TargetPercent;
 
-		// Token: 0x0401F891 RID: 129169
+		// Token: 0x0401A34A RID: 107338
 		private float CurPercent;
 
-		// Token: 0x0401F892 RID: 129170
+		// Token: 0x0401A34B RID: 107339
 		private float Speed;
 
-		// Token: 0x0401F893 RID: 129171
+		// Token: 0x0401A34C RID: 107340
 		private float WaitTimeWhenGrow;
 
-		// Token: 0x0401F894 RID: 129172
+		// Token: 0x0401A34D RID: 107341
 		private float GrowTime;
 
-		// Token: 0x0401F895 RID: 129173
+		// Token: 0x0401A34E RID: 107342
 		private float CountDown;
 
-		// Token: 0x0401F896 RID: 129174
+		// Token: 0x0401A34F RID: 107343
 		private Action<float, float> TargetPercentChanged;
 	}
 }

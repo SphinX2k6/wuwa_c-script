@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012C8 RID: 4808
+// Token: 0x0200077C RID: 1916
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExploreItemData>
 {
-	// Token: 0x0600842B RID: 33835 RVA: 0x001C1E8C File Offset: 0x001C008C
+	// Token: 0x060057C6 RID: 22470 RVA: 0x001CACE8 File Offset: 0x001C8EE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -45,7 +45,7 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600842C RID: 33836 RVA: 0x001C1F98 File Offset: 0x001C0198
+	// Token: 0x060057C7 RID: 22471 RVA: 0x001CADF4 File Offset: 0x001C8FF4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubMapExploreItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600842D RID: 33837 RVA: 0x001C1FDC File Offset: 0x001C01DC
+	// Token: 0x060057C8 RID: 22472 RVA: 0x001CAE38 File Offset: 0x001C9038
 	public override void Refresh(IActivitySubMapExploreItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -83,7 +83,7 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 		itemToggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x0600842E RID: 33838 RVA: 0x001C2100 File Offset: 0x001C0300
+	// Token: 0x060057C9 RID: 22473 RVA: 0x001CAF5C File Offset: 0x001C915C
 	private void OnClickReward(MediumItemGridExtendCallback _)
 	{
 		if (this.ItemData.IsCanGet)
@@ -92,10 +92,10 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 			return;
 		}
 		int rewardItemId = this.ItemData.RewardItemId;
-		ItemController.Instance.OpenItemTipsByItemId(rewardItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(rewardItemId, true, null, false);
 	}
 
-	// Token: 0x0600842F RID: 33839 RVA: 0x001C213C File Offset: 0x001C033C
+	// Token: 0x060057CA RID: 22474 RVA: 0x001CAF98 File Offset: 0x001C9198
 	private void OnGetReward(EToggleState _)
 	{
 		if (this.ItemData.IsComplete)
@@ -123,13 +123,13 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 		}
 	}
 
-	// Token: 0x06008430 RID: 33840 RVA: 0x001C21AD File Offset: 0x001C03AD
+	// Token: 0x060057CB RID: 22475 RVA: 0x001CB009 File Offset: 0x001C9209
 	private UUIExtendToggle GetItemToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06008431 RID: 33841 RVA: 0x001C21B6 File Offset: 0x001C03B6
+	// Token: 0x060057CC RID: 22476 RVA: 0x001CB012 File Offset: 0x001C9212
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -140,7 +140,7 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 		itemToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06008432 RID: 33842 RVA: 0x001C21CC File Offset: 0x001C03CC
+	// Token: 0x060057CD RID: 22477 RVA: 0x001CB028 File Offset: 0x001C9228
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -151,10 +151,10 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 		itemToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04003B6C RID: 15212
+	// Token: 0x04003C04 RID: 15364
 	private IActivitySubMapExploreItemData ItemData;
 
-	// Token: 0x04003B6D RID: 15213
+	// Token: 0x04003C05 RID: 15365
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,11 +162,11 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 	})]
 	public Action<IActivitySubMapExploreItemData> ClickCallBack;
 
-	// Token: 0x04003B6E RID: 15214
+	// Token: 0x04003C06 RID: 15366
 	[Nullable(2)]
 	private SmallItemGrid RewardItem;
 
-	// Token: 0x04003B6F RID: 15215
+	// Token: 0x04003C07 RID: 15367
 	[Nullable(new byte[]
 	{
 		2,
@@ -174,23 +174,23 @@ public class ActivitySubMapExploreItem : GridProxyAbstract<IActivitySubMapExplor
 	})]
 	public Action<IActivitySubMapExploreItemData> GetRewardCallBack;
 
-	// Token: 0x020078DF RID: 30943
+	// Token: 0x02006A69 RID: 27241
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04027D20 RID: 163104
+		// Token: 0x0402304E RID: 143438
 		public const int ToggleGetBtn = 0;
 
-		// Token: 0x04027D21 RID: 163105
+		// Token: 0x0402304F RID: 143439
 		public const int ItemCommonReward = 1;
 
-		// Token: 0x04027D22 RID: 163106
+		// Token: 0x04023050 RID: 143440
 		public const int TextureCanGet = 2;
 
-		// Token: 0x04027D23 RID: 163107
+		// Token: 0x04023051 RID: 143441
 		public const int TxtRewardDesc = 3;
 
-		// Token: 0x04027D24 RID: 163108
+		// Token: 0x04023052 RID: 143442
 		public const int ItemRedDot = 4;
 	}
 }

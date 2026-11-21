@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x02006381 RID: 25473
+	// Token: 0x020052FF RID: 21247
 	public enum ENewbieMainQuestType
 	{
-		// Token: 0x04021624 RID: 136740
+		// Token: 0x0401BF53 RID: 114515
 		Role = 1,
-		// Token: 0x04021625 RID: 136741
+		// Token: 0x0401BF54 RID: 114516
 		Prologue,
-		// Token: 0x04021626 RID: 136742
+		// Token: 0x0401BF55 RID: 114517
 		Interlude,
-		// Token: 0x04021627 RID: 136743
+		// Token: 0x0401BF56 RID: 114518
 		MidAct
 	}
 }

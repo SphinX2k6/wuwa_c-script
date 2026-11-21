@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C3E RID: 23614
+	// Token: 0x02004C1E RID: 19486
 	public class FlagChallengePrompt : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603BA7C RID: 244348 RVA: 0x00E3C5EC File Offset: 0x00E3A7EC
+		// Token: 0x060309C7 RID: 199111 RVA: 0x00D8C95C File Offset: 0x00D8AB5C
 		[NullableContext(1)]
 		public FlagChallengePrompt(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603BA7D RID: 244349 RVA: 0x00E3C5F8 File Offset: 0x00E3A7F8
+		// Token: 0x060309C8 RID: 199112 RVA: 0x00D8C968 File Offset: 0x00D8AB68
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA7E RID: 244350 RVA: 0x00E3C708 File Offset: 0x00E3A908
+		// Token: 0x060309C9 RID: 199113 RVA: 0x00D8CA78 File Offset: 0x00D8AC78
 		protected unsafe override void OnStart()
 		{
 			base.OnStart();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ShowArea(flagChallengePromptData.AreaId);
 		}
 
-		// Token: 0x0603BA7F RID: 244351 RVA: 0x00E3C7B8 File Offset: 0x00E3A9B8
+		// Token: 0x060309CA RID: 199114 RVA: 0x00D8CB28 File Offset: 0x00D8AD28
 		private void ShowArea(EMoraleAreaType areaId)
 		{
 			FlagChallengePrompt.EComponent? ecomponent = null;
@@ -118,22 +118,22 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0200BE32 RID: 48690
+		// Token: 0x0200A83A RID: 43066
 		private enum EComponent
 		{
-			// Token: 0x040395AC RID: 234924
+			// Token: 0x04033F6F RID: 212847
 			MainText,
-			// Token: 0x040395AD RID: 234925
+			// Token: 0x04033F70 RID: 212848
 			SubText,
-			// Token: 0x040395AE RID: 234926
+			// Token: 0x04033F71 RID: 212849
 			Area1,
-			// Token: 0x040395AF RID: 234927
+			// Token: 0x04033F72 RID: 212850
 			Area2,
-			// Token: 0x040395B0 RID: 234928
+			// Token: 0x04033F73 RID: 212851
 			Area3,
-			// Token: 0x040395B1 RID: 234929
+			// Token: 0x04033F74 RID: 212852
 			Area4,
-			// Token: 0x040395B2 RID: 234930
+			// Token: 0x04033F75 RID: 212853
 			Area5
 		}
 	}

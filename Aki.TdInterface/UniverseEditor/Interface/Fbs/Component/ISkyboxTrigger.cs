@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005923 RID: 22819
+	// Token: 0x02005F30 RID: 24368
 	public struct ISkyboxTrigger : IFlatbufferObject
 	{
-		// Token: 0x1700AB27 RID: 43815
-		// (get) Token: 0x0602695C RID: 158044 RVA: 0x005507ED File Offset: 0x0054E9ED
+		// Token: 0x1700B45B RID: 46171
+		// (get) Token: 0x06028EC6 RID: 167622 RVA: 0x00597459 File Offset: 0x00595659
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602695D RID: 158045 RVA: 0x005507FA File Offset: 0x0054E9FA
+		// Token: 0x06028EC7 RID: 167623 RVA: 0x00597466 File Offset: 0x00595666
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602695E RID: 158046 RVA: 0x00550804 File Offset: 0x0054EA04
+		// Token: 0x06028EC8 RID: 167624 RVA: 0x00597470 File Offset: 0x00595670
 		public static ISkyboxTrigger GetRootAsISkyboxTrigger(ByteBuffer _bb)
 		{
 			return ISkyboxTrigger.GetRootAsISkyboxTrigger(_bb, default(ISkyboxTrigger));
 		}
 
-		// Token: 0x0602695F RID: 158047 RVA: 0x00550820 File Offset: 0x0054EA20
+		// Token: 0x06028EC9 RID: 167625 RVA: 0x0059748C File Offset: 0x0059568C
 		public static ISkyboxTrigger GetRootAsISkyboxTrigger(ByteBuffer _bb, ISkyboxTrigger obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026960 RID: 158048 RVA: 0x0055083D File Offset: 0x0054EA3D
+		// Token: 0x06028ECA RID: 167626 RVA: 0x005974A9 File Offset: 0x005956A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026961 RID: 158049 RVA: 0x0055084C File Offset: 0x0054EA4C
+		// Token: 0x06028ECB RID: 167627 RVA: 0x005974B8 File Offset: 0x005956B8
 		public ISkyboxTrigger __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AB28 RID: 43816
-		// (get) Token: 0x06026962 RID: 158050 RVA: 0x0055085C File Offset: 0x0054EA5C
+		// Token: 0x1700B45C RID: 46172
+		// (get) Token: 0x06028ECC RID: 167628 RVA: 0x005974C8 File Offset: 0x005956C8
 		public ETriggerMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026963 RID: 158051 RVA: 0x00550898 File Offset: 0x0054EA98
+		// Token: 0x06028ECD RID: 167629 RVA: 0x00597504 File Offset: 0x00595704
 		public static Offset<ISkyboxTrigger> CreateISkyboxTrigger(FlatBufferBuilder builder, ETriggerMode Type = ETriggerMode.Distance)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISkyboxTrigger.EndISkyboxTrigger(builder);
 		}
 
-		// Token: 0x06026964 RID: 158052 RVA: 0x005508AE File Offset: 0x0054EAAE
+		// Token: 0x06028ECE RID: 167630 RVA: 0x0059751A File Offset: 0x0059571A
 		public static void StartISkyboxTrigger(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026965 RID: 158053 RVA: 0x005508B7 File Offset: 0x0054EAB7
+		// Token: 0x06028ECF RID: 167631 RVA: 0x00597523 File Offset: 0x00595723
 		public static void AddType(FlatBufferBuilder builder, ETriggerMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026966 RID: 158054 RVA: 0x005508C2 File Offset: 0x0054EAC2
+		// Token: 0x06028ED0 RID: 167632 RVA: 0x0059752E File Offset: 0x0059572E
 		public static Offset<ISkyboxTrigger> EndISkyboxTrigger(FlatBufferBuilder builder)
 		{
 			return new Offset<ISkyboxTrigger>(builder.EndTable());
 		}
 
-		// Token: 0x06026967 RID: 158055 RVA: 0x005508D0 File Offset: 0x0054EAD0
+		// Token: 0x06028ED1 RID: 167633 RVA: 0x0059753C File Offset: 0x0059573C
 		public ISkyboxTriggerT UnPack()
 		{
 			ISkyboxTriggerT skyboxTriggerT = new ISkyboxTriggerT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return skyboxTriggerT;
 		}
 
-		// Token: 0x06026968 RID: 158056 RVA: 0x005508EB File Offset: 0x0054EAEB
+		// Token: 0x06028ED2 RID: 167634 RVA: 0x00597557 File Offset: 0x00595757
 		public void UnPackTo(ISkyboxTriggerT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026969 RID: 158057 RVA: 0x005508FC File Offset: 0x0054EAFC
+		// Token: 0x06028ED3 RID: 167635 RVA: 0x00597568 File Offset: 0x00595768
 		public static Offset<ISkyboxTrigger> Pack(FlatBufferBuilder builder, ISkyboxTriggerT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISkyboxTrigger.CreateISkyboxTrigger(builder, _o.Type);
 		}
 
-		// Token: 0x0400EED6 RID: 61142
+		// Token: 0x0400FBCB RID: 64459
 		private Table __p;
 	}
 }

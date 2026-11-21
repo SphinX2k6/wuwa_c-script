@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005ACB RID: 23243
+	// Token: 0x02004AAC RID: 19116
 	public class ReviveSmallItemGrid : SmallItemGrid
 	{
-		// Token: 0x0603ADD6 RID: 241110 RVA: 0x00E083EC File Offset: 0x00E065EC
+		// Token: 0x0602FD48 RID: 195912 RVA: 0x00D590CC File Offset: 0x00D572CC
 		public void Refresh(int itemId, int itemCount)
 		{
 			this.ItemId = new int?(itemId);
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.Timer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnCoolDownRefresh), 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603ADD7 RID: 241111 RVA: 0x00E084D4 File Offset: 0x00E066D4
+		// Token: 0x0602FD49 RID: 195913 RVA: 0x00D591B4 File Offset: 0x00D573B4
 		public void RefreshCoolDown()
 		{
 			double buffItemRemainCdTime = BuffItemModel.Instance.GetBuffItemRemainCdTime(this.ItemId.Value);
 			base.SetCoolDown(new float?((float)buffItemRemainCdTime), new float?((float)this.TotalCdTime));
 		}
 
-		// Token: 0x0603ADD8 RID: 241112 RVA: 0x00E08510 File Offset: 0x00E06710
+		// Token: 0x0602FD4A RID: 195914 RVA: 0x00D591F0 File Offset: 0x00D573F0
 		private void OnCoolDownRefresh(float _)
 		{
 			if (this.RemainCdTime <= 0)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.RemainCdTime = this.RemainCdTime;
 		}
 
-		// Token: 0x0603ADD9 RID: 241113 RVA: 0x00E0854E File Offset: 0x00E0674E
+		// Token: 0x0602FD4B RID: 195915 RVA: 0x00D5922E File Offset: 0x00D5742E
 		protected void OnDestroyed()
 		{
 			this.ItemId = null;
@@ -74,17 +74,17 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.TotalCdTime = 1;
 		}
 
-		// Token: 0x0401EB81 RID: 125825
+		// Token: 0x0401963D RID: 103997
 		public int? ItemId;
 
-		// Token: 0x0401EB82 RID: 125826
+		// Token: 0x0401963E RID: 103998
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0401EB83 RID: 125827
+		// Token: 0x0401963F RID: 103999
 		private int RemainCdTime = -1;
 
-		// Token: 0x0401EB84 RID: 125828
+		// Token: 0x04019640 RID: 104000
 		private int TotalCdTime = 1;
 	}
 }

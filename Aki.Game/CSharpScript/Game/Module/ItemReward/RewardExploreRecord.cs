@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005803 RID: 22531
+	// Token: 0x020047DA RID: 18394
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreRecord : UiPanelBase
 	{
-		// Token: 0x06039477 RID: 234615 RVA: 0x00D958BC File Offset: 0x00D93ABC
+		// Token: 0x0602E38B RID: 189323 RVA: 0x00CE4724 File Offset: 0x00CE2924
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06039478 RID: 234616 RVA: 0x00D95951 File Offset: 0x00D93B51
+		// Token: 0x0602E38C RID: 189324 RVA: 0x00CE47B9 File Offset: 0x00CE29B9
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.DisposeSeqPlayer();
 		}
 
-		// Token: 0x06039479 RID: 234617 RVA: 0x00D95968 File Offset: 0x00D93B68
+		// Token: 0x0602E38D RID: 189325 RVA: 0x00CE47D0 File Offset: 0x00CE29D0
 		public void Refresh(IRewardExploreRecord record)
 		{
 			string titleTextId = record.TitleTextId;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.SetRecordText(record.Record);
 		}
 
-		// Token: 0x0603947A RID: 234618 RVA: 0x00D959D4 File Offset: 0x00D93BD4
+		// Token: 0x0602E38E RID: 189326 RVA: 0x00CE483C File Offset: 0x00CE2A3C
 		private void SetTitleText(string titleTextId)
 		{
 			UUIText text = base.GetText(0);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(text, titleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603947B RID: 234619 RVA: 0x00D95A03 File Offset: 0x00D93C03
+		// Token: 0x0602E38F RID: 189327 RVA: 0x00CE486B File Offset: 0x00CE2A6B
 		private void SetTitleTextVisible(bool bVisible)
 		{
 			UUIText text = base.GetText(0);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			text.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603947C RID: 234620 RVA: 0x00D95A17 File Offset: 0x00D93C17
+		// Token: 0x0602E390 RID: 189328 RVA: 0x00CE487F File Offset: 0x00CE2A7F
 		private void SetRecordText(string record)
 		{
 			UUIText text = base.GetText(1);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			text.SetText(record, true);
 		}
 
-		// Token: 0x0603947D RID: 234621 RVA: 0x00D95A2C File Offset: 0x00D93C2C
+		// Token: 0x0602E391 RID: 189329 RVA: 0x00CE4894 File Offset: 0x00CE2A94
 		private void SetNewRecordItemVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0603947E RID: 234622 RVA: 0x00D95A84 File Offset: 0x00D93C84
+		// Token: 0x0602E392 RID: 189330 RVA: 0x00CE48EC File Offset: 0x00CE2AEC
 		private void SetRollingScore(int recordTo)
 		{
 			this.ScoreTweener = ULTweenBPLibrary.IntTo(this.RootActor, DelegateUtils.ToManualReleaseDelegate<FLTweenIntSetterDynamic>(new Action<int>(this.ShowRecordInTween)), 0, recordTo, 2f, 0f, LTweenEase.OutQuad);
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.ItemReward
 			scoreTweener.OnCompleteCallBack.Bind(new Action(this.DisposeTweener));
 		}
 
-		// Token: 0x0603947F RID: 234623 RVA: 0x00D95AE1 File Offset: 0x00D93CE1
+		// Token: 0x0602E393 RID: 189331 RVA: 0x00CE4949 File Offset: 0x00CE2B49
 		private void ShowRecordInTween(int value)
 		{
 			this.SetRecordText(value.ToString());
 		}
 
-		// Token: 0x06039480 RID: 234624 RVA: 0x00D95AF0 File Offset: 0x00D93CF0
+		// Token: 0x0602E394 RID: 189332 RVA: 0x00CE4958 File Offset: 0x00CE2B58
 		private void DisposeTweener()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<int>(this.ShowRecordInTween));
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ScoreTweener = null;
 		}
 
-		// Token: 0x06039481 RID: 234625 RVA: 0x00D95B1C File Offset: 0x00D93D1C
+		// Token: 0x0602E395 RID: 189333 RVA: 0x00CE4984 File Offset: 0x00CE2B84
 		private void DisposeSeqPlayer()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -148,28 +148,28 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.SeqPlayer = null;
 		}
 
-		// Token: 0x0401DF4D RID: 122701
+		// Token: 0x040189E4 RID: 100836
 		private const float ROLLING_DURATION = 2f;
 
-		// Token: 0x0401DF4E RID: 122702
+		// Token: 0x040189E5 RID: 100837
 		[Nullable(2)]
 		private ULTweener ScoreTweener;
 
-		// Token: 0x0401DF4F RID: 122703
+		// Token: 0x040189E6 RID: 100838
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200B9FE RID: 47614
+		// Token: 0x0200A414 RID: 42004
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038399 RID: 230297
+			// Token: 0x04032D86 RID: 208262
 			public const int TitleText = 0;
 
-			// Token: 0x0403839A RID: 230298
+			// Token: 0x04032D87 RID: 208263
 			public const int RecordText = 1;
 
-			// Token: 0x0403839B RID: 230299
+			// Token: 0x04032D88 RID: 208264
 			public const int NewRecordItem = 2;
 		}
 	}

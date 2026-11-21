@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A7F RID: 6783
+// Token: 0x02000F3E RID: 3902
 [NullableContext(2)]
 [Nullable(0)]
 public class DeadEyeModeView : UiTickViewBase
 {
-	// Token: 0x0600C7CF RID: 51151 RVA: 0x002D8328 File Offset: 0x002D6528
+	// Token: 0x06009BDF RID: 39903 RVA: 0x002E3444 File Offset: 0x002E1644
 	[NullableContext(1)]
 	public DeadEyeModeView(UiViewInfo UiViewInfo) : base(UiViewInfo)
 	{
 	}
 
-	// Token: 0x0600C7D0 RID: 51152 RVA: 0x002D833C File Offset: 0x002D653C
+	// Token: 0x06009BE0 RID: 39904 RVA: 0x002E3458 File Offset: 0x002E1658
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -48,7 +48,7 @@ public class DeadEyeModeView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C7D1 RID: 51153 RVA: 0x002D8468 File Offset: 0x002D6668
+	// Token: 0x06009BE1 RID: 39905 RVA: 0x002E3584 File Offset: 0x002E1784
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DeadEyeModeView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class DeadEyeModeView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7D2 RID: 51154 RVA: 0x002D84AB File Offset: 0x002D66AB
+	// Token: 0x06009BE2 RID: 39906 RVA: 0x002E35C7 File Offset: 0x002E17C7
 	protected override void OnAfterShow()
 	{
 		this.ShowTargetItemList();
@@ -76,14 +76,14 @@ public class DeadEyeModeView : UiTickViewBase
 		aimItem.ShowAsync().Forget<bool>();
 	}
 
-	// Token: 0x0600C7D3 RID: 51155 RVA: 0x002D84DA File Offset: 0x002D66DA
+	// Token: 0x06009BE3 RID: 39907 RVA: 0x002E35F6 File Offset: 0x002E17F6
 	protected override void OnAfterDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.DeadEyeModeTargetPointLocked, new Action(this.OnTargetPointLocked));
 		DeadEyeModeModel.Instance.EnterNextStage();
 	}
 
-	// Token: 0x0600C7D4 RID: 51156 RVA: 0x002D8504 File Offset: 0x002D6704
+	// Token: 0x06009BE4 RID: 39908 RVA: 0x002E3620 File Offset: 0x002E1820
 	protected override void OnTick(float delta)
 	{
 		foreach (DeadEyeTargetItem deadEyeTargetItem in this.TargetItem)
@@ -101,7 +101,7 @@ public class DeadEyeModeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600C7D5 RID: 51157 RVA: 0x002D8580 File Offset: 0x002D6780
+	// Token: 0x06009BE5 RID: 39909 RVA: 0x002E369C File Offset: 0x002E189C
 	private void OnTargetPointLocked()
 	{
 		this.CurrentLockedCount = 0;
@@ -137,7 +137,7 @@ public class DeadEyeModeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600C7D6 RID: 51158 RVA: 0x002D8658 File Offset: 0x002D6858
+	// Token: 0x06009BE6 RID: 39910 RVA: 0x002E3774 File Offset: 0x002E1974
 	private UniTask InitAimItem()
 	{
 		DeadEyeModeView.<InitAimItem>d__15 <InitAimItem>d__;
@@ -148,7 +148,7 @@ public class DeadEyeModeView : UiTickViewBase
 		return <InitAimItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7D7 RID: 51159 RVA: 0x002D869C File Offset: 0x002D689C
+	// Token: 0x06009BE7 RID: 39911 RVA: 0x002E37B8 File Offset: 0x002E19B8
 	private UniTask InitProgressItem()
 	{
 		DeadEyeModeView.<InitProgressItem>d__16 <InitProgressItem>d__;
@@ -159,7 +159,7 @@ public class DeadEyeModeView : UiTickViewBase
 		return <InitProgressItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7D8 RID: 51160 RVA: 0x002D86E0 File Offset: 0x002D68E0
+	// Token: 0x06009BE8 RID: 39912 RVA: 0x002E37FC File Offset: 0x002E19FC
 	[NullableContext(1)]
 	private UniTask InitTargetItems(IEnumerable<EntityHandle> targetEntityHandles, IEnumerable<Vector> targetLocations)
 	{
@@ -173,7 +173,7 @@ public class DeadEyeModeView : UiTickViewBase
 		return <InitTargetItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7D9 RID: 51161 RVA: 0x002D8734 File Offset: 0x002D6934
+	// Token: 0x06009BE9 RID: 39913 RVA: 0x002E3850 File Offset: 0x002E1A50
 	private void ShowTargetItemList()
 	{
 		this.TargetItem.Sort(delegate(DeadEyeTargetItem a, DeadEyeTargetItem b)
@@ -198,7 +198,7 @@ public class DeadEyeModeView : UiTickViewBase
 		this.ShowTargetItemImp();
 	}
 
-	// Token: 0x0600C7DA RID: 51162 RVA: 0x002D8786 File Offset: 0x002D6986
+	// Token: 0x06009BEA RID: 39914 RVA: 0x002E38A2 File Offset: 0x002E1AA2
 	private void ShowTargetItemImp()
 	{
 		if (this.PlayStartSequenceTargetItemIndex >= this.TargetItem.Count)
@@ -208,7 +208,7 @@ public class DeadEyeModeView : UiTickViewBase
 		this.PlayTargetItemStartSequence().ContinueWith(new Action(this.ShowTargetItemImp));
 	}
 
-	// Token: 0x0600C7DB RID: 51163 RVA: 0x002D87B4 File Offset: 0x002D69B4
+	// Token: 0x06009BEB RID: 39915 RVA: 0x002E38D0 File Offset: 0x002E1AD0
 	private UniTask PlayTargetItemStartSequence()
 	{
 		DeadEyeModeView.<PlayTargetItemStartSequence>d__20 <PlayTargetItemStartSequence>d__;
@@ -219,7 +219,7 @@ public class DeadEyeModeView : UiTickViewBase
 		return <PlayTargetItemStartSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7DC RID: 51164 RVA: 0x002D87F8 File Offset: 0x002D69F8
+	// Token: 0x06009BEC RID: 39916 RVA: 0x002E3914 File Offset: 0x002E1B14
 	private void OnLaunchButtonClick()
 	{
 		if (DeadEyeModeModel.Instance.CurrentEnergy != 0f && this.CurrentLockedCount == 0)
@@ -236,7 +236,7 @@ public class DeadEyeModeView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600C7DD RID: 51165 RVA: 0x002D8848 File Offset: 0x002D6A48
+	// Token: 0x06009BED RID: 39917 RVA: 0x002E3964 File Offset: 0x002E1B64
 	private UniTask LaunchImp()
 	{
 		DeadEyeModeView.<LaunchImp>d__22 <LaunchImp>d__;
@@ -247,48 +247,48 @@ public class DeadEyeModeView : UiTickViewBase
 		return <LaunchImp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005C45 RID: 23621
+	// Token: 0x04005D14 RID: 23828
 	private DeadEyeAimItem AimItem;
 
-	// Token: 0x04005C46 RID: 23622
+	// Token: 0x04005D15 RID: 23829
 	private DeadEyeProgressItem DeadEyeProgressItem;
 
-	// Token: 0x04005C47 RID: 23623
+	// Token: 0x04005D16 RID: 23830
 	[Nullable(1)]
 	private readonly List<DeadEyeTargetItem> TargetItem = new List<DeadEyeTargetItem>();
 
-	// Token: 0x04005C48 RID: 23624
+	// Token: 0x04005D17 RID: 23831
 	private int PlayStartSequenceTargetItemIndex;
 
-	// Token: 0x04005C49 RID: 23625
+	// Token: 0x04005D18 RID: 23832
 	private int CurrentLockedCount;
 
-	// Token: 0x04005C4A RID: 23626
+	// Token: 0x04005D19 RID: 23833
 	private LevelSequencePlayer ButtonSequencePlayer;
 
-	// Token: 0x04005C4B RID: 23627
+	// Token: 0x04005D1A RID: 23834
 	private LevelSequencePlayer TipsSequencePlayer;
 
-	// Token: 0x02007FD4 RID: 32724
+	// Token: 0x02007163 RID: 29027
 	[NullableContext(0)]
 	private class EViewComponent
 	{
-		// Token: 0x04029BB2 RID: 170930
+		// Token: 0x04024EEF RID: 151279
 		public const int AimItem = 0;
 
-		// Token: 0x04029BB3 RID: 170931
+		// Token: 0x04024EF0 RID: 151280
 		public const int AimTargetItemRoot = 1;
 
-		// Token: 0x04029BB4 RID: 170932
+		// Token: 0x04024EF1 RID: 151281
 		public const int ProgressItem = 2;
 
-		// Token: 0x04029BB5 RID: 170933
+		// Token: 0x04024EF2 RID: 151282
 		public const int ProgressItem2 = 3;
 
-		// Token: 0x04029BB6 RID: 170934
+		// Token: 0x04024EF3 RID: 151283
 		public const int AllLockedTips = 4;
 
-		// Token: 0x04029BB7 RID: 170935
+		// Token: 0x04024EF4 RID: 151284
 		public const int LaunchBtn = 5;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AudioEventPoolItem
 {
-	// Token: 0x0600008C RID: 140 RVA: 0x00005A78 File Offset: 0x00003C78
+	// Token: 0x0600008C RID: 140 RVA: 0x00005774 File Offset: 0x00003974
 	[NullableContext(1)]
 	public AudioEventPoolItem(UAkAudioEvent @event, long? time = null)
 	{
@@ -16,7 +16,7 @@ public class AudioEventPoolItem
 		this.LastActiveTime = ((num != null) ? ((double)num.GetValueOrDefault()) : Time.Instance.Now);
 	}
 
-	// Token: 0x0600008D RID: 141 RVA: 0x00005AB7 File Offset: 0x00003CB7
+	// Token: 0x0600008D RID: 141 RVA: 0x000057B3 File Offset: 0x000039B3
 	public void UpdateEvent(UAkAudioEvent @event)
 	{
 		if (@event != null)
@@ -26,7 +26,7 @@ public class AudioEventPoolItem
 		this.LastActiveTime = Time.Instance.Now;
 	}
 
-	// Token: 0x0600008E RID: 142 RVA: 0x00005AD3 File Offset: 0x00003CD3
+	// Token: 0x0600008E RID: 142 RVA: 0x000057CF File Offset: 0x000039CF
 	public void Destroy()
 	{
 		if (this.AudioEvent != null)

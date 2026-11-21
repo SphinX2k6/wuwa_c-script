@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E34 RID: 28212
+	// Token: 0x020075B2 RID: 30130
 	public struct IReignsTriggerGuide : IFlatbufferObject
 	{
-		// Token: 0x1700D23B RID: 53819
-		// (get) Token: 0x06031D8A RID: 204170 RVA: 0x006BF205 File Offset: 0x006BD405
+		// Token: 0x1700DD8A RID: 56714
+		// (get) Token: 0x06034DA0 RID: 216480 RVA: 0x0071AB8D File Offset: 0x00718D8D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D8B RID: 204171 RVA: 0x006BF212 File Offset: 0x006BD412
+		// Token: 0x06034DA1 RID: 216481 RVA: 0x0071AB9A File Offset: 0x00718D9A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031D8C RID: 204172 RVA: 0x006BF21C File Offset: 0x006BD41C
+		// Token: 0x06034DA2 RID: 216482 RVA: 0x0071ABA4 File Offset: 0x00718DA4
 		public static IReignsTriggerGuide GetRootAsIReignsTriggerGuide(ByteBuffer _bb)
 		{
 			return IReignsTriggerGuide.GetRootAsIReignsTriggerGuide(_bb, default(IReignsTriggerGuide));
 		}
 
-		// Token: 0x06031D8D RID: 204173 RVA: 0x006BF238 File Offset: 0x006BD438
+		// Token: 0x06034DA3 RID: 216483 RVA: 0x0071ABC0 File Offset: 0x00718DC0
 		public static IReignsTriggerGuide GetRootAsIReignsTriggerGuide(ByteBuffer _bb, IReignsTriggerGuide obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031D8E RID: 204174 RVA: 0x006BF255 File Offset: 0x006BD455
+		// Token: 0x06034DA4 RID: 216484 RVA: 0x0071ABDD File Offset: 0x00718DDD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031D8F RID: 204175 RVA: 0x006BF264 File Offset: 0x006BD464
+		// Token: 0x06034DA5 RID: 216485 RVA: 0x0071ABEC File Offset: 0x00718DEC
 		public IReignsTriggerGuide __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D23C RID: 53820
-		// (get) Token: 0x06031D90 RID: 204176 RVA: 0x006BF274 File Offset: 0x006BD474
+		// Token: 0x1700DD8B RID: 56715
+		// (get) Token: 0x06034DA6 RID: 216486 RVA: 0x0071ABFC File Offset: 0x00718DFC
 		public int GuideId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D91 RID: 204177 RVA: 0x006BF2B0 File Offset: 0x006BD4B0
+		// Token: 0x06034DA7 RID: 216487 RVA: 0x0071AC38 File Offset: 0x00718E38
 		public static Offset<IReignsTriggerGuide> CreateIReignsTriggerGuide(FlatBufferBuilder builder, int GuideId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReignsTriggerGuide.EndIReignsTriggerGuide(builder);
 		}
 
-		// Token: 0x06031D92 RID: 204178 RVA: 0x006BF2C6 File Offset: 0x006BD4C6
+		// Token: 0x06034DA8 RID: 216488 RVA: 0x0071AC4E File Offset: 0x00718E4E
 		public static void StartIReignsTriggerGuide(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031D93 RID: 204179 RVA: 0x006BF2CF File Offset: 0x006BD4CF
+		// Token: 0x06034DA9 RID: 216489 RVA: 0x0071AC57 File Offset: 0x00718E57
 		public static void AddGuideId(FlatBufferBuilder builder, int guideId)
 		{
 			builder.AddInt(0, guideId, 0);
 		}
 
-		// Token: 0x06031D94 RID: 204180 RVA: 0x006BF2DA File Offset: 0x006BD4DA
+		// Token: 0x06034DAA RID: 216490 RVA: 0x0071AC62 File Offset: 0x00718E62
 		public static Offset<IReignsTriggerGuide> EndIReignsTriggerGuide(FlatBufferBuilder builder)
 		{
 			return new Offset<IReignsTriggerGuide>(builder.EndTable());
 		}
 
-		// Token: 0x06031D95 RID: 204181 RVA: 0x006BF2E8 File Offset: 0x006BD4E8
+		// Token: 0x06034DAB RID: 216491 RVA: 0x0071AC70 File Offset: 0x00718E70
 		public IReignsTriggerGuideT UnPack()
 		{
 			IReignsTriggerGuideT reignsTriggerGuideT = new IReignsTriggerGuideT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return reignsTriggerGuideT;
 		}
 
-		// Token: 0x06031D96 RID: 204182 RVA: 0x006BF303 File Offset: 0x006BD503
+		// Token: 0x06034DAC RID: 216492 RVA: 0x0071AC8B File Offset: 0x00718E8B
 		public void UnPackTo(IReignsTriggerGuideT _o)
 		{
 			_o.GuideId = this.GuideId;
 		}
 
-		// Token: 0x06031D97 RID: 204183 RVA: 0x006BF314 File Offset: 0x006BD514
+		// Token: 0x06034DAD RID: 216493 RVA: 0x0071AC9C File Offset: 0x00718E9C
 		public static Offset<IReignsTriggerGuide> Pack(FlatBufferBuilder builder, IReignsTriggerGuideT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReignsTriggerGuide.CreateIReignsTriggerGuide(builder, _o.GuideId);
 		}
 
-		// Token: 0x04011819 RID: 71705
+		// Token: 0x04012799 RID: 75673
 		private Table __p;
 	}
 }

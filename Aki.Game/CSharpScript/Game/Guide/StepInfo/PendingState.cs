@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.StepInfo
 {
-	// Token: 0x02004608 RID: 17928
+	// Token: 0x02003531 RID: 13617
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 	})]
 	internal class PendingState : StateBase<GuideStepInfo, EGuideStepState>
 	{
-		// Token: 0x0602E38C RID: 189324 RVA: 0x00AAFFA6 File Offset: 0x00AAE1A6
+		// Token: 0x06022A81 RID: 141953 RVA: 0x009DC69A File Offset: 0x009DA89A
 		public PendingState(GuideStepInfo owner, EGuideStepState state, [Nullable(new byte[]
 		{
 			2,
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 		{
 		}
 
-		// Token: 0x0602E38D RID: 189325 RVA: 0x00AAFFB1 File Offset: 0x00AAE1B1
+		// Token: 0x06022A82 RID: 141954 RVA: 0x009DC6A5 File Offset: 0x009DA8A5
 		private void ClearTimer()
 		{
 			if (this.CheckTimer != null)
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}
 		}
 
-		// Token: 0x0602E38E RID: 189326 RVA: 0x00AAFFD3 File Offset: 0x00AAE1D3
+		// Token: 0x06022A83 RID: 141955 RVA: 0x009DC6C7 File Offset: 0x009DA8C7
 		protected override void OnEnter(EGuideStepState? lastState)
 		{
 			this.ClearTimer();
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Guide.StepInfo
 			}, 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0602E38F RID: 189327 RVA: 0x00AB0004 File Offset: 0x00AAE204
+		// Token: 0x06022A84 RID: 141956 RVA: 0x009DC6F8 File Offset: 0x009DA8F8
 		protected override void OnExit(EGuideStepState nextState)
 		{
 			this.Owner.StopLockInput();
 			this.ClearTimer();
 		}
 
-		// Token: 0x04018D05 RID: 101637
+		// Token: 0x04013344 RID: 78660
 		[Nullable(2)]
 		private TimerHandle CheckTimer;
 	}

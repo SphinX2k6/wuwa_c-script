@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006471 RID: 25713
+	// Token: 0x020053EF RID: 21487
 	public class MoveArea : IMoveArea
 	{
-		// Token: 0x17009495 RID: 38037
-		// (get) Token: 0x060409C6 RID: 264646 RVA: 0x00FA3ECA File Offset: 0x00FA20CA
-		// (set) Token: 0x060409C7 RID: 264647 RVA: 0x00FA3ED2 File Offset: 0x00FA20D2
+		// Token: 0x170067F7 RID: 26615
+		// (get) Token: 0x06035687 RID: 218759 RVA: 0x00EEAE46 File Offset: 0x00EE9046
+		// (set) Token: 0x06035688 RID: 218760 RVA: 0x00EEAE4E File Offset: 0x00EE904E
 		public double MinX { get; set; }
 
-		// Token: 0x17009496 RID: 38038
-		// (get) Token: 0x060409C8 RID: 264648 RVA: 0x00FA3EDB File Offset: 0x00FA20DB
-		// (set) Token: 0x060409C9 RID: 264649 RVA: 0x00FA3EE3 File Offset: 0x00FA20E3
+		// Token: 0x170067F8 RID: 26616
+		// (get) Token: 0x06035689 RID: 218761 RVA: 0x00EEAE57 File Offset: 0x00EE9057
+		// (set) Token: 0x0603568A RID: 218762 RVA: 0x00EEAE5F File Offset: 0x00EE905F
 		public double MaxX { get; set; }
 
-		// Token: 0x17009497 RID: 38039
-		// (get) Token: 0x060409CA RID: 264650 RVA: 0x00FA3EEC File Offset: 0x00FA20EC
-		// (set) Token: 0x060409CB RID: 264651 RVA: 0x00FA3EF4 File Offset: 0x00FA20F4
+		// Token: 0x170067F9 RID: 26617
+		// (get) Token: 0x0603568B RID: 218763 RVA: 0x00EEAE68 File Offset: 0x00EE9068
+		// (set) Token: 0x0603568C RID: 218764 RVA: 0x00EEAE70 File Offset: 0x00EE9070
 		public double MinY { get; set; }
 
-		// Token: 0x17009498 RID: 38040
-		// (get) Token: 0x060409CC RID: 264652 RVA: 0x00FA3EFD File Offset: 0x00FA20FD
-		// (set) Token: 0x060409CD RID: 264653 RVA: 0x00FA3F05 File Offset: 0x00FA2105
+		// Token: 0x170067FA RID: 26618
+		// (get) Token: 0x0603568D RID: 218765 RVA: 0x00EEAE79 File Offset: 0x00EE9079
+		// (set) Token: 0x0603568E RID: 218766 RVA: 0x00EEAE81 File Offset: 0x00EE9081
 		public double MaxY { get; set; }
 	}
 }

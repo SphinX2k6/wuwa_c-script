@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE9 RID: 7657
+	// Token: 0x02002002 RID: 8194
 	public class ISceneNewItemSplineStopTarget_SetValue
 	{
-		// Token: 0x04006236 RID: 25142
+		// Token: 0x040067C3 RID: 26563
 		public ENewSplineMoveTargetType Type;
 
-		// Token: 0x04006237 RID: 25143
+		// Token: 0x040067C4 RID: 26564
 		public int EntityId;
 	}
 }

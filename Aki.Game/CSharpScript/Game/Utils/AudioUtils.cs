@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004547 RID: 17735
+	// Token: 0x0200346F RID: 13423
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AudioUtils : Singleton
 	{
-		// Token: 0x0602DD65 RID: 187749 RVA: 0x00A89848 File Offset: 0x00A87A48
+		// Token: 0x06022447 RID: 140359 RVA: 0x009B4F7C File Offset: 0x009B317C
 		public void HandleAudioBoxUpdate(AudioBox box, EAudioUpdateType type)
 		{
 			AudioBox audioBox = AudioModel.Instance.UpdateAudioBoxQueue(box, type);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Utils
 			component.PostAudioBoxEvent();
 		}
 
-		// Token: 0x0602DD66 RID: 187750 RVA: 0x00A89894 File Offset: 0x00A87A94
+		// Token: 0x06022448 RID: 140360 RVA: 0x009B4FC8 File Offset: 0x009B31C8
 		public FoliageAudioInfo QueryFoliageAudioPhysicalMaterial(FVectorDouble location, [Nullable(2)] Entity entity = null)
 		{
 			FoliageAudioInfo foliageAudioInfo = new FoliageAudioInfo();
@@ -88,8 +88,8 @@ namespace CSharpScript.Game.Utils
 			return foliageAudioInfo;
 		}
 
-		// Token: 0x1700754F RID: 30031
-		// (get) Token: 0x0602DD67 RID: 187751 RVA: 0x00A89A0E File Offset: 0x00A87C0E
+		// Token: 0x17004806 RID: 18438
+		// (get) Token: 0x06022449 RID: 140361 RVA: 0x009B5142 File Offset: 0x009B3342
 		public static AudioUtils Instance
 		{
 			get
@@ -103,12 +103,12 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DD68 RID: 187752 RVA: 0x00A89A31 File Offset: 0x00A87C31
+		// Token: 0x0602244A RID: 140362 RVA: 0x009B5165 File Offset: 0x009B3365
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DD69 RID: 187753 RVA: 0x00A89A33 File Offset: 0x00A87C33
+		// Token: 0x0602244B RID: 140363 RVA: 0x009B5167 File Offset: 0x009B3367
 		public static void ResetStaticDefaultValue()
 		{
 			AudioUtils instance = AudioUtils._instance;
@@ -119,16 +119,16 @@ namespace CSharpScript.Game.Utils
 			AudioUtils._instance = null;
 		}
 
-		// Token: 0x0602DD6A RID: 187754 RVA: 0x00A89A4C File Offset: 0x00A87C4C
+		// Token: 0x0602244C RID: 140364 RVA: 0x009B5180 File Offset: 0x009B3380
 		static AudioUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AudioUtils.CreateStaticDefaultValue), new Action(AudioUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401878A RID: 100234
+		// Token: 0x04012DC4 RID: 77252
 		private const string AUDIO_TAG_PREFIX = "Audio_";
 
-		// Token: 0x0401878B RID: 100235
+		// Token: 0x04012DC5 RID: 77253
 		[Nullable(2)]
 		private static AudioUtils _instance;
 	}

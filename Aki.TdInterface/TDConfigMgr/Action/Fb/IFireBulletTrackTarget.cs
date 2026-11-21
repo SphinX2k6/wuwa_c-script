@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B0 RID: 9904
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002973 RID: 10611
 	public class IFireBulletTrackTarget : IFireBulletType
 	{
-		// Token: 0x0600DD97 RID: 56727 RVA: 0x0020E8F6 File Offset: 0x0020CAF6
+		// Token: 0x0600EB6E RID: 60270 RVA: 0x0022B096 File Offset: 0x00229296
 		public static IFireBulletTrackTarget Create(IFireBulletTrackTarget? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041F9 RID: 16889
-		// (get) Token: 0x0600DD98 RID: 56728 RVA: 0x0020E915 File Offset: 0x0020CB15
+		// Token: 0x17004536 RID: 17718
+		// (get) Token: 0x0600EB6F RID: 60271 RVA: 0x0022B0B5 File Offset: 0x002292B5
 		public override EFireBulletType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041FA RID: 16890
-		// (get) Token: 0x0600DD99 RID: 56729 RVA: 0x0020E922 File Offset: 0x0020CB22
+		// Token: 0x17004537 RID: 17719
+		// (get) Token: 0x0600EB70 RID: 60272 RVA: 0x0022B0C2 File Offset: 0x002292C2
 		public virtual long BulletId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041FB RID: 16891
-		// (get) Token: 0x0600DD9A RID: 56730 RVA: 0x0020E92F File Offset: 0x0020CB2F
+		// Token: 0x17004538 RID: 17720
+		// (get) Token: 0x0600EB71 RID: 60273 RVA: 0x0022B0CF File Offset: 0x002292CF
 		public virtual ITargetEntityType Launcher
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041FC RID: 16892
-		// (get) Token: 0x0600DD9B RID: 56731 RVA: 0x0020E95E File Offset: 0x0020CB5E
+		// Token: 0x17004539 RID: 17721
+		// (get) Token: 0x0600EB72 RID: 60274 RVA: 0x0022B0FE File Offset: 0x002292FE
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -74,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041FD RID: 16893
-		// (get) Token: 0x0600DD9C RID: 56732 RVA: 0x0020E990 File Offset: 0x0020CB90
+		// Token: 0x1700453A RID: 17722
+		// (get) Token: 0x0600EB73 RID: 60275 RVA: 0x0022B130 File Offset: 0x00229330
 		public virtual bool? WaitDestroy
 		{
 			get
@@ -88,19 +85,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B08 RID: 31496
+		// Token: 0x040081A5 RID: 33189
 		private IFireBulletTrackTarget Instance;
 
-		// Token: 0x04007B09 RID: 31497
+		// Token: 0x040081A6 RID: 33190
 		private ITargetEntityType _LauncherCache;
 
-		// Token: 0x04007B0A RID: 31498
+		// Token: 0x040081A7 RID: 33191
 		private bool _LauncherInited;
 
-		// Token: 0x04007B0B RID: 31499
+		// Token: 0x040081A8 RID: 33192
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04007B0C RID: 31500
+		// Token: 0x040081A9 RID: 33193
 		private bool _TargetInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DC7 RID: 15815
+	// Token: 0x020041DE RID: 16862
 	public struct IDangoAbyssInformationView : IFlatbufferObject
 	{
-		// Token: 0x17006D2B RID: 27947
-		// (get) Token: 0x0601611B RID: 90395 RVA: 0x00330E7D File Offset: 0x0032F07D
+		// Token: 0x170072E5 RID: 29413
+		// (get) Token: 0x06017654 RID: 95828 RVA: 0x00358205 File Offset: 0x00356405
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601611C RID: 90396 RVA: 0x00330E8A File Offset: 0x0032F08A
+		// Token: 0x06017655 RID: 95829 RVA: 0x00358212 File Offset: 0x00356412
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601611D RID: 90397 RVA: 0x00330E94 File Offset: 0x0032F094
+		// Token: 0x06017656 RID: 95830 RVA: 0x0035821C File Offset: 0x0035641C
 		public static IDangoAbyssInformationView GetRootAsIDangoAbyssInformationView(ByteBuffer _bb)
 		{
 			return IDangoAbyssInformationView.GetRootAsIDangoAbyssInformationView(_bb, default(IDangoAbyssInformationView));
 		}
 
-		// Token: 0x0601611E RID: 90398 RVA: 0x00330EB0 File Offset: 0x0032F0B0
+		// Token: 0x06017657 RID: 95831 RVA: 0x00358238 File Offset: 0x00356438
 		public static IDangoAbyssInformationView GetRootAsIDangoAbyssInformationView(ByteBuffer _bb, IDangoAbyssInformationView obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601611F RID: 90399 RVA: 0x00330ECD File Offset: 0x0032F0CD
+		// Token: 0x06017658 RID: 95832 RVA: 0x00358255 File Offset: 0x00356455
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016120 RID: 90400 RVA: 0x00330EDC File Offset: 0x0032F0DC
+		// Token: 0x06017659 RID: 95833 RVA: 0x00358264 File Offset: 0x00356464
 		public IDangoAbyssInformationView __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D2C RID: 27948
-		// (get) Token: 0x06016121 RID: 90401 RVA: 0x00330EEC File Offset: 0x0032F0EC
+		// Token: 0x170072E6 RID: 29414
+		// (get) Token: 0x0601765A RID: 95834 RVA: 0x00358274 File Offset: 0x00356474
 		public EInformationViewType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016122 RID: 90402 RVA: 0x00330F28 File Offset: 0x0032F128
+		// Token: 0x0601765B RID: 95835 RVA: 0x003582B0 File Offset: 0x003564B0
 		public static Offset<IDangoAbyssInformationView> CreateIDangoAbyssInformationView(FlatBufferBuilder builder, EInformationViewType Type = EInformationViewType.LevelPlay)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDangoAbyssInformationView.EndIDangoAbyssInformationView(builder);
 		}
 
-		// Token: 0x06016123 RID: 90403 RVA: 0x00330F3E File Offset: 0x0032F13E
+		// Token: 0x0601765C RID: 95836 RVA: 0x003582C6 File Offset: 0x003564C6
 		public static void StartIDangoAbyssInformationView(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06016124 RID: 90404 RVA: 0x00330F47 File Offset: 0x0032F147
+		// Token: 0x0601765D RID: 95837 RVA: 0x003582CF File Offset: 0x003564CF
 		public static void AddType(FlatBufferBuilder builder, EInformationViewType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016125 RID: 90405 RVA: 0x00330F52 File Offset: 0x0032F152
+		// Token: 0x0601765E RID: 95838 RVA: 0x003582DA File Offset: 0x003564DA
 		public static Offset<IDangoAbyssInformationView> EndIDangoAbyssInformationView(FlatBufferBuilder builder)
 		{
 			return new Offset<IDangoAbyssInformationView>(builder.EndTable());
 		}
 
-		// Token: 0x06016126 RID: 90406 RVA: 0x00330F60 File Offset: 0x0032F160
+		// Token: 0x0601765F RID: 95839 RVA: 0x003582E8 File Offset: 0x003564E8
 		public IDangoAbyssInformationViewT UnPack()
 		{
 			IDangoAbyssInformationViewT dangoAbyssInformationViewT = new IDangoAbyssInformationViewT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return dangoAbyssInformationViewT;
 		}
 
-		// Token: 0x06016127 RID: 90407 RVA: 0x00330F7B File Offset: 0x0032F17B
+		// Token: 0x06017660 RID: 95840 RVA: 0x00358303 File Offset: 0x00356503
 		public void UnPackTo(IDangoAbyssInformationViewT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06016128 RID: 90408 RVA: 0x00330F8C File Offset: 0x0032F18C
+		// Token: 0x06017661 RID: 95841 RVA: 0x00358314 File Offset: 0x00356514
 		public static Offset<IDangoAbyssInformationView> Pack(FlatBufferBuilder builder, IDangoAbyssInformationViewT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDangoAbyssInformationView.CreateIDangoAbyssInformationView(builder, _o.Type);
 		}
 
-		// Token: 0x0400B708 RID: 46856
+		// Token: 0x0400C0B5 RID: 49333
 		private Table __p;
 	}
 }

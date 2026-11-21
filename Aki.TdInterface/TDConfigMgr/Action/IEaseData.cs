@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019CC RID: 6604
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B59 RID: 7001
 	[JsonConverter(typeof(IEaseDataConverter))]
 	public class IEaseData
 	{
-		// Token: 0x06008D71 RID: 36209 RVA: 0x0014B61C File Offset: 0x0014981C
+		// Token: 0x060094B3 RID: 38067 RVA: 0x0015B128 File Offset: 0x00159328
 		private IEaseData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008D72 RID: 36210 RVA: 0x0014B654 File Offset: 0x00149854
+		// Token: 0x060094B4 RID: 38068 RVA: 0x0015B160 File Offset: 0x00159360
 		public static IEaseData Create([Nullable(2)] IEaseData instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D73 RID: 36211 RVA: 0x0014B667 File Offset: 0x00149867
+		// Token: 0x060094B5 RID: 38069 RVA: 0x0015B173 File Offset: 0x00159373
 		public static IEaseData CreateFromSetValue([Nullable(2)] IEaseData_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D74 RID: 36212 RVA: 0x0014B67A File Offset: 0x0014987A
+		// Token: 0x060094B6 RID: 38070 RVA: 0x0015B186 File Offset: 0x00159386
 		public IEaseData_SetValue ToSetValue()
 		{
 			return new IEaseData_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D5B RID: 11611
-		// (get) Token: 0x06008D75 RID: 36213 RVA: 0x0014B699 File Offset: 0x00149899
-		// (set) Token: 0x06008D76 RID: 36214 RVA: 0x0014B6C4 File Offset: 0x001498C4
+		// Token: 0x17002F60 RID: 12128
+		// (get) Token: 0x060094B7 RID: 38071 RVA: 0x0015B1A5 File Offset: 0x001593A5
+		// (set) Token: 0x060094B8 RID: 38072 RVA: 0x0015B1D0 File Offset: 0x001593D0
 		public virtual EEaseType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D5C RID: 11612
-		// (get) Token: 0x06008D77 RID: 36215 RVA: 0x0014B6D2 File Offset: 0x001498D2
-		// (set) Token: 0x06008D78 RID: 36216 RVA: 0x0014B701 File Offset: 0x00149901
+		// Token: 0x17002F61 RID: 12129
+		// (get) Token: 0x060094B9 RID: 38073 RVA: 0x0015B1DE File Offset: 0x001593DE
+		// (set) Token: 0x060094BA RID: 38074 RVA: 0x0015B20D File Offset: 0x0015940D
 		public virtual float Duration
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057DC RID: 22492
+		// Token: 0x04005C31 RID: 23601
 		[Nullable(2)]
 		protected IEaseData FbInstance;
 
-		// Token: 0x040057DD RID: 22493
+		// Token: 0x04005C32 RID: 23602
 		[Nullable(2)]
 		protected IEaseData_SetValue PocoInterface;
 	}

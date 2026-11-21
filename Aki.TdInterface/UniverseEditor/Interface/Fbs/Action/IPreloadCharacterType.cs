@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D8C RID: 28044
+	// Token: 0x02007507 RID: 29959
 	public struct IPreloadCharacterType : IFlatbufferObject
 	{
-		// Token: 0x1700D137 RID: 53559
-		// (get) Token: 0x0603189F RID: 202911 RVA: 0x006B7079 File Offset: 0x006B5279
+		// Token: 0x1700DC7F RID: 56447
+		// (get) Token: 0x0603489B RID: 215195 RVA: 0x00712761 File Offset: 0x00710961
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060318A0 RID: 202912 RVA: 0x006B7086 File Offset: 0x006B5286
+		// Token: 0x0603489C RID: 215196 RVA: 0x0071276E File Offset: 0x0071096E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060318A1 RID: 202913 RVA: 0x006B7090 File Offset: 0x006B5290
+		// Token: 0x0603489D RID: 215197 RVA: 0x00712778 File Offset: 0x00710978
 		public static IPreloadCharacterType GetRootAsIPreloadCharacterType(ByteBuffer _bb)
 		{
 			return IPreloadCharacterType.GetRootAsIPreloadCharacterType(_bb, default(IPreloadCharacterType));
 		}
 
-		// Token: 0x060318A2 RID: 202914 RVA: 0x006B70AC File Offset: 0x006B52AC
+		// Token: 0x0603489E RID: 215198 RVA: 0x00712794 File Offset: 0x00710994
 		public static IPreloadCharacterType GetRootAsIPreloadCharacterType(ByteBuffer _bb, IPreloadCharacterType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060318A3 RID: 202915 RVA: 0x006B70C9 File Offset: 0x006B52C9
+		// Token: 0x0603489F RID: 215199 RVA: 0x007127B1 File Offset: 0x007109B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060318A4 RID: 202916 RVA: 0x006B70D8 File Offset: 0x006B52D8
+		// Token: 0x060348A0 RID: 215200 RVA: 0x007127C0 File Offset: 0x007109C0
 		public IPreloadCharacterType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D138 RID: 53560
-		// (get) Token: 0x060318A5 RID: 202917 RVA: 0x006B70E8 File Offset: 0x006B52E8
+		// Token: 0x1700DC80 RID: 56448
+		// (get) Token: 0x060348A1 RID: 215201 RVA: 0x007127D0 File Offset: 0x007109D0
 		public EPreloadObjectType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060318A6 RID: 202918 RVA: 0x006B7124 File Offset: 0x006B5324
+		// Token: 0x060348A2 RID: 215202 RVA: 0x0071280C File Offset: 0x00710A0C
 		public static Offset<IPreloadCharacterType> CreateIPreloadCharacterType(FlatBufferBuilder builder, EPreloadObjectType Type = EPreloadObjectType.PreloadTrialCharacterForSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPreloadCharacterType.EndIPreloadCharacterType(builder);
 		}
 
-		// Token: 0x060318A7 RID: 202919 RVA: 0x006B713A File Offset: 0x006B533A
+		// Token: 0x060348A3 RID: 215203 RVA: 0x00712822 File Offset: 0x00710A22
 		public static void StartIPreloadCharacterType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060318A8 RID: 202920 RVA: 0x006B7143 File Offset: 0x006B5343
+		// Token: 0x060348A4 RID: 215204 RVA: 0x0071282B File Offset: 0x00710A2B
 		public static void AddType(FlatBufferBuilder builder, EPreloadObjectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060318A9 RID: 202921 RVA: 0x006B714E File Offset: 0x006B534E
+		// Token: 0x060348A5 RID: 215205 RVA: 0x00712836 File Offset: 0x00710A36
 		public static Offset<IPreloadCharacterType> EndIPreloadCharacterType(FlatBufferBuilder builder)
 		{
 			return new Offset<IPreloadCharacterType>(builder.EndTable());
 		}
 
-		// Token: 0x060318AA RID: 202922 RVA: 0x006B715C File Offset: 0x006B535C
+		// Token: 0x060348A6 RID: 215206 RVA: 0x00712844 File Offset: 0x00710A44
 		public IPreloadCharacterTypeT UnPack()
 		{
 			IPreloadCharacterTypeT preloadCharacterTypeT = new IPreloadCharacterTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return preloadCharacterTypeT;
 		}
 
-		// Token: 0x060318AB RID: 202923 RVA: 0x006B7177 File Offset: 0x006B5377
+		// Token: 0x060348A7 RID: 215207 RVA: 0x0071285F File Offset: 0x00710A5F
 		public void UnPackTo(IPreloadCharacterTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060318AC RID: 202924 RVA: 0x006B7188 File Offset: 0x006B5388
+		// Token: 0x060348A8 RID: 215208 RVA: 0x00712870 File Offset: 0x00710A70
 		public static Offset<IPreloadCharacterType> Pack(FlatBufferBuilder builder, IPreloadCharacterTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPreloadCharacterType.CreateIPreloadCharacterType(builder, _o.Type);
 		}
 
-		// Token: 0x04011759 RID: 71513
+		// Token: 0x040126D5 RID: 75477
 		private Table __p;
 	}
 }

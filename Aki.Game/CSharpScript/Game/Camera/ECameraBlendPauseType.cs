@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072A5 RID: 29349
+	// Token: 0x02006424 RID: 25636
 	public enum ECameraBlendPauseType
 	{
-		// Token: 0x04025F4B RID: 155467
+		// Token: 0x0402121E RID: 135710
 		None,
-		// Token: 0x04025F4C RID: 155468
+		// Token: 0x0402121F RID: 135711
 		ForOneFrame,
-		// Token: 0x04025F4D RID: 155469
+		// Token: 0x04021220 RID: 135712
 		Forever
 	}
 }

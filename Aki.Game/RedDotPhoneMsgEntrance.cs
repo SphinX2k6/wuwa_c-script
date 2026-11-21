@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033FE RID: 13310
+// Token: 0x02002970 RID: 10608
 public class RedDotPhoneMsgEntrance : RedDotBase
 {
-	// Token: 0x0601CCDF RID: 117983 RVA: 0x0080ABE8 File Offset: 0x00808DE8
+	// Token: 0x0601A9D7 RID: 109015 RVA: 0x008311AC File Offset: 0x0082F3AC
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnPhoneMsgSetAsRead, new Action<int>(base.EventCheckWithUid));
@@ -14,7 +14,7 @@ public class RedDotPhoneMsgEntrance : RedDotBase
 		EventSystem.Instance.Add(EEventName.OnPhoneMsgPanelOpen, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CCE0 RID: 117984 RVA: 0x0080AC84 File Offset: 0x00808E84
+	// Token: 0x0601A9D8 RID: 109016 RVA: 0x00831248 File Offset: 0x0082F448
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnPhoneMsgSetAsRead, new Action<int>(base.EventCheckWithUid));
@@ -24,13 +24,13 @@ public class RedDotPhoneMsgEntrance : RedDotBase
 		EventSystem.Instance.Remove(EEventName.OnPhoneMsgPanelOpen, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CCE1 RID: 117985 RVA: 0x0080AD1D File Offset: 0x00808F1D
+	// Token: 0x0601A9D9 RID: 109017 RVA: 0x008312E1 File Offset: 0x0082F4E1
 	protected override bool IsAllEventParamAsUId()
 	{
 		return false;
 	}
 
-	// Token: 0x0601CCE2 RID: 117986 RVA: 0x0080AD20 File Offset: 0x00808F20
+	// Token: 0x0601A9DA RID: 109018 RVA: 0x008312E4 File Offset: 0x0082F4E4
 	protected override bool OnCheck(int uId = 0)
 	{
 		bool flag = PhoneMsgModel.Instance.IsHasPhoneMsgUnReview();

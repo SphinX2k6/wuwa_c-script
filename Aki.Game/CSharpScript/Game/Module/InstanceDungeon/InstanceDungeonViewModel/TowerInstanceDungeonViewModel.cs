@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 {
-	// Token: 0x02005893 RID: 22675
+	// Token: 0x0200486B RID: 18539
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TowerInstanceDungeonViewModel : InstanceDungeonViewModelBase
 	{
-		// Token: 0x17008A8C RID: 35468
-		// (get) Token: 0x06039B35 RID: 236341 RVA: 0x00DB659C File Offset: 0x00DB479C
-		// (set) Token: 0x06039B36 RID: 236342 RVA: 0x00DB65A4 File Offset: 0x00DB47A4
+		// Token: 0x17005E58 RID: 24152
+		// (get) Token: 0x0602EA58 RID: 191064 RVA: 0x00D054B4 File Offset: 0x00D036B4
+		// (set) Token: 0x0602EA59 RID: 191065 RVA: 0x00D054BC File Offset: 0x00D036BC
 		public override RankTimeItemModelBase RankItemModel { get; set; } = new TowerDefenseRankTimeModel();
 
-		// Token: 0x06039B37 RID: 236343 RVA: 0x00DB65B0 File Offset: 0x00DB47B0
+		// Token: 0x0602EA5A RID: 191066 RVA: 0x00D054C8 File Offset: 0x00D036C8
 		[NullableContext(1)]
 		protected unsafe override Dictionary<int, List<int>> GetInstanceByTitleMap()
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return dictionary;
 		}
 
-		// Token: 0x06039B38 RID: 236344 RVA: 0x00DB66A8 File Offset: 0x00DB48A8
+		// Token: 0x0602EA5B RID: 191067 RVA: 0x00D055C0 File Offset: 0x00D037C0
 		[NullableContext(1)]
 		protected override void OnSortInstanceArray(List<int> instanceArray)
 		{
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			});
 		}
 
-		// Token: 0x06039B39 RID: 236345 RVA: 0x00DB66D0 File Offset: 0x00DB48D0
+		// Token: 0x0602EA5C RID: 191068 RVA: 0x00D055E8 File Offset: 0x00D037E8
 		[NullableContext(1)]
 		protected override string OnGetInstanceItemTextureBg(int instanceId)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return "T_TogListNor";
 		}
 
-		// Token: 0x06039B3A RID: 236346 RVA: 0x00DB6710 File Offset: 0x00DB4910
+		// Token: 0x0602EA5D RID: 191069 RVA: 0x00D05628 File Offset: 0x00D03828
 		protected override TableTextArgNew OnGetUnlockConditionTextId(int instanceId)
 		{
 			int[] unlockCondition = InstanceDungeonConfig.Instance.GetUnlockCondition(instanceId);
@@ -102,20 +102,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return null;
 		}
 
-		// Token: 0x06039B3B RID: 236347 RVA: 0x00DB6788 File Offset: 0x00DB4988
+		// Token: 0x0602EA5E RID: 191070 RVA: 0x00D056A0 File Offset: 0x00D038A0
 		protected override bool OnIsFinishInstance(int instanceId)
 		{
 			return TowerDefenseController.Instance.CheckInstancePassedByInstanceId(instanceId);
 		}
 
-		// Token: 0x06039B3C RID: 236348 RVA: 0x00DB6795 File Offset: 0x00DB4995
+		// Token: 0x0602EA5F RID: 191071 RVA: 0x00D056AD File Offset: 0x00D038AD
 		[NullableContext(1)]
 		protected override string OnGetInstanceDetectItemIcon(int instanceId)
 		{
 			return "";
 		}
 
-		// Token: 0x06039B3D RID: 236349 RVA: 0x00DB679C File Offset: 0x00DB499C
+		// Token: 0x0602EA60 RID: 191072 RVA: 0x00D056B4 File Offset: 0x00D038B4
 		protected override InstanceDungeonEntranceViewSelectData OnGetDefaultSelectData()
 		{
 			if (TowerDefenseController.Instance.CheckInUiFlow())
@@ -134,19 +134,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return null;
 		}
 
-		// Token: 0x06039B3E RID: 236350 RVA: 0x00DB67F8 File Offset: 0x00DB49F8
+		// Token: 0x0602EA61 RID: 191073 RVA: 0x00D05710 File Offset: 0x00D03910
 		protected override bool OnCheckNeedOnTimer(int instanceId)
 		{
 			return TowerDefenseController.Instance.CheckInUiFlow() && !TowerDefenseController.Instance.CheckIsInstanceUnlock(instanceId);
 		}
 
-		// Token: 0x06039B3F RID: 236351 RVA: 0x00DB6816 File Offset: 0x00DB4A16
+		// Token: 0x0602EA62 RID: 191074 RVA: 0x00D0572E File Offset: 0x00D0392E
 		protected override void OnTimerRefreshFunction(float delta)
 		{
 			this.View.RefreshTowerDefenseInstance();
 		}
 
-		// Token: 0x06039B40 RID: 236352 RVA: 0x00DB6824 File Offset: 0x00DB4A24
+		// Token: 0x0602EA63 RID: 191075 RVA: 0x00D0573C File Offset: 0x00D0393C
 		protected override UniTask OnRequestServerData()
 		{
 			TowerInstanceDungeonViewModel.<OnRequestServerData>d__13 <OnRequestServerData>d__;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return <OnRequestServerData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039B41 RID: 236353 RVA: 0x00DB6867 File Offset: 0x00DB4A67
+		// Token: 0x0602EA64 RID: 191076 RVA: 0x00D0577F File Offset: 0x00D0397F
 		protected override bool OnCheckInstanceHasRedDot(int instanceId)
 		{
 			return TowerDefenseModel.Instance.CheckTowerDefenseInstanceHasRedDot(instanceId);

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD2 RID: 24018
+	// Token: 0x02004DB6 RID: 19894
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBarChun : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D098 RID: 250008 RVA: 0x00EADEF8 File Offset: 0x00EAC0F8
+		// Token: 0x0603200F RID: 204815 RVA: 0x00DFEDEC File Offset: 0x00DFCFEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 24;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D099 RID: 250009 RVA: 0x00EAE248 File Offset: 0x00EAC448
+		// Token: 0x06032010 RID: 204816 RVA: 0x00DFF13C File Offset: 0x00DFD33C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarChun.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D09A RID: 250010 RVA: 0x00EAE28C File Offset: 0x00EAC48C
+		// Token: 0x06032011 RID: 204817 RVA: 0x00DFF180 File Offset: 0x00DFD380
 		[NullableContext(1)]
 		protected UniTask InitPointItem(UUIItem pointItem)
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitPointItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D09B RID: 250011 RVA: 0x00EAE2D7 File Offset: 0x00EAC4D7
+		// Token: 0x06032012 RID: 204818 RVA: 0x00DFF1CB File Offset: 0x00DFD3CB
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsEnergyStage = this.GetKeyEnable();
 		}
 
-		// Token: 0x0603D09C RID: 250012 RVA: 0x00EAE317 File Offset: 0x00EAC517
+		// Token: 0x06032013 RID: 204819 RVA: 0x00DFF20B File Offset: 0x00DFD40B
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagAddOrRemoveChanged(SpecialEnergyBarChun.TagStrength, new BaseTagComponent.TTagSwitchedCallback(this.OnTagStrengthChange));
 		}
 
-		// Token: 0x0603D09D RID: 250013 RVA: 0x00EAE34D File Offset: 0x00EAC54D
+		// Token: 0x06032014 RID: 204820 RVA: 0x00DFF241 File Offset: 0x00DFD441
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true);
 		}
 
-		// Token: 0x0603D09E RID: 250014 RVA: 0x00EAE378 File Offset: 0x00EAC578
+		// Token: 0x06032015 RID: 204821 RVA: 0x00DFF26C File Offset: 0x00DFD46C
 		private void InitAllTweenAnim()
 		{
 			this.TweenPlayer = new BattleUiTweenAnimPlayer();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenPlayer.InitTweenAnim(23, base.GetItem(23), false);
 		}
 
-		// Token: 0x0603D09F RID: 250015 RVA: 0x00EAE42C File Offset: 0x00EAC62C
+		// Token: 0x06032016 RID: 204822 RVA: 0x00DFF320 File Offset: 0x00DFD520
 		private void UpdatePointItemEffect()
 		{
 			if (!this.IsStrengthStage)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0A0 RID: 250016 RVA: 0x00EAE498 File Offset: 0x00EAC698
+		// Token: 0x06032017 RID: 204823 RVA: 0x00DFF38C File Offset: 0x00DFD58C
 		private void UpdateEvilState(bool playAnim = false)
 		{
 			if (!this.IsEvilStage)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0A1 RID: 250017 RVA: 0x00EAE654 File Offset: 0x00EAC854
+		// Token: 0x06032018 RID: 204824 RVA: 0x00DFF548 File Offset: 0x00DFD748
 		private void UpdateStrengthState(bool playAnim = false)
 		{
 			if (!this.IsStrengthStage)
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0A2 RID: 250018 RVA: 0x00EAE72C File Offset: 0x00EAC92C
+		// Token: 0x06032019 RID: 204825 RVA: 0x00DFF620 File Offset: 0x00DFD820
 		private void UpdateEnergyState()
 		{
 			if (this.IsEnergyStage)
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0A3 RID: 250019 RVA: 0x00EAE7A8 File Offset: 0x00EAC9A8
+		// Token: 0x0603201A RID: 204826 RVA: 0x00DFF69C File Offset: 0x00DFD89C
 		protected void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(flag, isStart);
 		}
 
-		// Token: 0x0603D0A4 RID: 250020 RVA: 0x00EAE800 File Offset: 0x00EACA00
+		// Token: 0x0603201B RID: 204827 RVA: 0x00DFF6F4 File Offset: 0x00DFD8F4
 		protected void RefreshBuff()
 		{
 			SpecialEnergyBarInfo config = this.Config;
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D0A5 RID: 250021 RVA: 0x00EAE86D File Offset: 0x00EACA6D
+		// Token: 0x0603201C RID: 204828 RVA: 0x00DFF761 File Offset: 0x00DFD961
 		private void OnTagEvilChange(int tagId, bool tagExist)
 		{
 			if (tagExist == this.IsEvilStage)
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateEvilState(true);
 		}
 
-		// Token: 0x0603D0A6 RID: 250022 RVA: 0x00EAE887 File Offset: 0x00EACA87
+		// Token: 0x0603201D RID: 204829 RVA: 0x00DFF77B File Offset: 0x00DFD97B
 		private void OnTagStrengthChange(int tagId, bool tagExist)
 		{
 			if (tagExist == this.IsStrengthStage)
@@ -373,13 +373,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateStrengthState(true);
 		}
 
-		// Token: 0x0603D0A7 RID: 250023 RVA: 0x00EAE8A7 File Offset: 0x00EACAA7
+		// Token: 0x0603201E RID: 204830 RVA: 0x00DFF79B File Offset: 0x00DFD99B
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D0A8 RID: 250024 RVA: 0x00EAE8B0 File Offset: 0x00EACAB0
+		// Token: 0x0603201F RID: 204831 RVA: 0x00DFF7A4 File Offset: 0x00DFD9A4
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D0A9 RID: 250025 RVA: 0x00EAE9A8 File Offset: 0x00EACBA8
+		// Token: 0x06032020 RID: 204832 RVA: 0x00DFF89C File Offset: 0x00DFDA9C
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -475,95 +475,95 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenPlayer2.Clear(false);
 		}
 
-		// Token: 0x0401FCCB RID: 130251
+		// Token: 0x0401A788 RID: 108424
 		private const int POINT_NUM = 41;
 
-		// Token: 0x0401FCCC RID: 130252
+		// Token: 0x0401A789 RID: 108425
 		private const float POINT_WIDTH = 9f;
 
-		// Token: 0x0401FCCD RID: 130253
+		// Token: 0x0401A78A RID: 108426
 		[StaticVariableRuleIgnore]
 		private static readonly int TagEvil = GameplayTagDefine.EGameplayTagId["角色.R2T1ChunMd10011.标记机制.魔人化启动"];
 
-		// Token: 0x0401FCCE RID: 130254
+		// Token: 0x0401A78B RID: 108427
 		[StaticVariableRuleIgnore]
 		private static readonly int TagStrength = GameplayTagDefine.EGameplayTagId["角色.R2T1ChunMd10011.标记机制.强化状态"];
 
-		// Token: 0x0401FCCF RID: 130255
+		// Token: 0x0401A78C RID: 108428
 		private bool IsEvilStage;
 
-		// Token: 0x0401FCD0 RID: 130256
+		// Token: 0x0401A78D RID: 108429
 		private bool IsStrengthStage;
 
-		// Token: 0x0401FCD1 RID: 130257
+		// Token: 0x0401A78E RID: 108430
 		private bool IsEnergyStage;
 
-		// Token: 0x0401FCD2 RID: 130258
+		// Token: 0x0401A78F RID: 108431
 		private SpecialEnergyBarPointItem PointItem;
 
-		// Token: 0x0401FCD3 RID: 130259
+		// Token: 0x0401A790 RID: 108432
 		private BattleUiTweenAnimPlayer TweenPlayer;
 
-		// Token: 0x0401FCD4 RID: 130260
+		// Token: 0x0401A791 RID: 108433
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FCD5 RID: 130261
+		// Token: 0x0401A792 RID: 108434
 		private int BuffHandle;
 
-		// Token: 0x0401FCD6 RID: 130262
+		// Token: 0x0401A793 RID: 108435
 		private bool IsPlayWarnAnim;
 
-		// Token: 0x0200C0E5 RID: 49381
+		// Token: 0x0200AAEE RID: 43758
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A355 RID: 238421
+			// Token: 0x04034D27 RID: 216359
 			PointItem,
-			// Token: 0x0403A356 RID: 238422
+			// Token: 0x04034D28 RID: 216360
 			KeyContainerItem,
-			// Token: 0x0403A357 RID: 238423
+			// Token: 0x04034D29 RID: 216361
 			ItemA,
-			// Token: 0x0403A358 RID: 238424
+			// Token: 0x04034D2A RID: 216362
 			ItemA1,
-			// Token: 0x0403A359 RID: 238425
+			// Token: 0x04034D2B RID: 216363
 			ItemA2,
-			// Token: 0x0403A35A RID: 238426
+			// Token: 0x04034D2C RID: 216364
 			ItemA3,
-			// Token: 0x0403A35B RID: 238427
+			// Token: 0x04034D2D RID: 216365
 			ItemA4,
-			// Token: 0x0403A35C RID: 238428
+			// Token: 0x04034D2E RID: 216366
 			ItemA5,
-			// Token: 0x0403A35D RID: 238429
+			// Token: 0x04034D2F RID: 216367
 			ItemB,
-			// Token: 0x0403A35E RID: 238430
+			// Token: 0x04034D30 RID: 216368
 			ItemB1,
-			// Token: 0x0403A35F RID: 238431
+			// Token: 0x04034D31 RID: 216369
 			ItemB2,
-			// Token: 0x0403A360 RID: 238432
+			// Token: 0x04034D32 RID: 216370
 			ItemB3,
-			// Token: 0x0403A361 RID: 238433
+			// Token: 0x04034D33 RID: 216371
 			ItemB4,
-			// Token: 0x0403A362 RID: 238434
+			// Token: 0x04034D34 RID: 216372
 			ItemB5,
-			// Token: 0x0403A363 RID: 238435
+			// Token: 0x04034D35 RID: 216373
 			ItemStar,
-			// Token: 0x0403A364 RID: 238436
+			// Token: 0x04034D36 RID: 216374
 			ItemStar1,
-			// Token: 0x0403A365 RID: 238437
+			// Token: 0x04034D37 RID: 216375
 			ItemStar2,
-			// Token: 0x0403A366 RID: 238438
+			// Token: 0x04034D38 RID: 216376
 			AniStageA,
-			// Token: 0x0403A367 RID: 238439
+			// Token: 0x04034D39 RID: 216377
 			AniStageB,
-			// Token: 0x0403A368 RID: 238440
+			// Token: 0x04034D3A RID: 216378
 			AniStrengthIn,
-			// Token: 0x0403A369 RID: 238441
+			// Token: 0x04034D3B RID: 216379
 			AniStrengthOut,
-			// Token: 0x0403A36A RID: 238442
+			// Token: 0x04034D3C RID: 216380
 			AniStrengthWarn,
-			// Token: 0x0403A36B RID: 238443
+			// Token: 0x04034D3D RID: 216381
 			AniEnergyIn,
-			// Token: 0x0403A36C RID: 238444
+			// Token: 0x04034D3E RID: 216382
 			AniEnergyOut
 		}
 	}

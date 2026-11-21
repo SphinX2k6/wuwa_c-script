@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BE3 RID: 27619
+	// Token: 0x02007347 RID: 29511
 	public class INpcSitDownT
 	{
-		// Token: 0x1700CD3D RID: 52541
-		// (get) Token: 0x06030860 RID: 198752 RVA: 0x0069671F File Offset: 0x0069491F
-		// (set) Token: 0x06030861 RID: 198753 RVA: 0x00696727 File Offset: 0x00694927
+		// Token: 0x1700D849 RID: 55369
+		// (get) Token: 0x0603377C RID: 210812 RVA: 0x006F001F File Offset: 0x006EE21F
+		// (set) Token: 0x0603377D RID: 210813 RVA: 0x006F0027 File Offset: 0x006EE227
 		public ENpcLeisureInteract Type { get; set; }
 
-		// Token: 0x1700CD3E RID: 52542
-		// (get) Token: 0x06030862 RID: 198754 RVA: 0x00696730 File Offset: 0x00694930
-		// (set) Token: 0x06030863 RID: 198755 RVA: 0x00696738 File Offset: 0x00694938
+		// Token: 0x1700D84A RID: 55370
+		// (get) Token: 0x0603377E RID: 210814 RVA: 0x006F0030 File Offset: 0x006EE230
+		// (set) Token: 0x0603377F RID: 210815 RVA: 0x006F0038 File Offset: 0x006EE238
 		public bool KeepState { get; set; }
 
-		// Token: 0x1700CD3F RID: 52543
-		// (get) Token: 0x06030864 RID: 198756 RVA: 0x00696741 File Offset: 0x00694941
-		// (set) Token: 0x06030865 RID: 198757 RVA: 0x00696749 File Offset: 0x00694949
+		// Token: 0x1700D84B RID: 55371
+		// (get) Token: 0x06033780 RID: 210816 RVA: 0x006F0041 File Offset: 0x006EE241
+		// (set) Token: 0x06033781 RID: 210817 RVA: 0x006F0049 File Offset: 0x006EE249
 		public IMontageIdT MontageId { get; set; }
 
-		// Token: 0x1700CD40 RID: 52544
-		// (get) Token: 0x06030866 RID: 198758 RVA: 0x00696752 File Offset: 0x00694952
-		// (set) Token: 0x06030867 RID: 198759 RVA: 0x0069675A File Offset: 0x0069495A
+		// Token: 0x1700D84C RID: 55372
+		// (get) Token: 0x06033782 RID: 210818 RVA: 0x006F0052 File Offset: 0x006EE252
+		// (set) Token: 0x06033783 RID: 210819 RVA: 0x006F005A File Offset: 0x006EE25A
 		public int PosEntityId { get; set; }
 
-		// Token: 0x1700CD41 RID: 52545
-		// (get) Token: 0x06030868 RID: 198760 RVA: 0x00696763 File Offset: 0x00694963
-		// (set) Token: 0x06030869 RID: 198761 RVA: 0x0069676B File Offset: 0x0069496B
+		// Token: 0x1700D84D RID: 55373
+		// (get) Token: 0x06033784 RID: 210820 RVA: 0x006F0063 File Offset: 0x006EE263
+		// (set) Token: 0x06033785 RID: 210821 RVA: 0x006F006B File Offset: 0x006EE26B
 		public float Duration { get; set; }
 
-		// Token: 0x1700CD42 RID: 52546
-		// (get) Token: 0x0603086A RID: 198762 RVA: 0x00696774 File Offset: 0x00694974
-		// (set) Token: 0x0603086B RID: 198763 RVA: 0x0069677C File Offset: 0x0069497C
+		// Token: 0x1700D84E RID: 55374
+		// (get) Token: 0x06033786 RID: 210822 RVA: 0x006F0074 File Offset: 0x006EE274
+		// (set) Token: 0x06033787 RID: 210823 RVA: 0x006F007C File Offset: 0x006EE27C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603086C RID: 198764 RVA: 0x00696785 File Offset: 0x00694985
+		// Token: 0x06033788 RID: 210824 RVA: 0x006F0085 File Offset: 0x006EE285
 		public INpcSitDownT()
 		{
 			this.Type = ENpcLeisureInteract.SitDown;

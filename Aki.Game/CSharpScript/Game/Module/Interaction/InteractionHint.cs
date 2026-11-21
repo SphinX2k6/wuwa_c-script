@@ -21,14 +21,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005855 RID: 22613
+	// Token: 0x0200482D RID: 18477
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractionHint : UiPanelBase, IGridProxy<Entity>
 	{
-		// Token: 0x17008A4D RID: 35405
-		// (get) Token: 0x060397B4 RID: 235444 RVA: 0x00DA59BC File Offset: 0x00DA3BBC
-		// (set) Token: 0x060397B5 RID: 235445 RVA: 0x00DA59C4 File Offset: 0x00DA3BC4
+		// Token: 0x17005E19 RID: 24089
+		// (get) Token: 0x0602E6D1 RID: 190161 RVA: 0x00CF46E4 File Offset: 0x00CF28E4
+		// (set) Token: 0x0602E6D2 RID: 190162 RVA: 0x00CF46EC File Offset: 0x00CF28EC
 		[Nullable(new byte[]
 		{
 			2,
@@ -50,18 +50,18 @@ namespace CSharpScript.Game.Module.Interaction
 			1
 		})] set; }
 
-		// Token: 0x17008A4E RID: 35406
-		// (get) Token: 0x060397B6 RID: 235446 RVA: 0x00DA59CD File Offset: 0x00DA3BCD
-		// (set) Token: 0x060397B7 RID: 235447 RVA: 0x00DA59D5 File Offset: 0x00DA3BD5
+		// Token: 0x17005E1A RID: 24090
+		// (get) Token: 0x0602E6D3 RID: 190163 RVA: 0x00CF46F5 File Offset: 0x00CF28F5
+		// (set) Token: 0x0602E6D4 RID: 190164 RVA: 0x00CF46FD File Offset: 0x00CF28FD
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008A4F RID: 35407
-		// (get) Token: 0x060397B8 RID: 235448 RVA: 0x00DA59DE File Offset: 0x00DA3BDE
-		// (set) Token: 0x060397B9 RID: 235449 RVA: 0x00DA59E6 File Offset: 0x00DA3BE6
+		// Token: 0x17005E1B RID: 24091
+		// (get) Token: 0x0602E6D5 RID: 190165 RVA: 0x00CF4706 File Offset: 0x00CF2906
+		// (set) Token: 0x0602E6D6 RID: 190166 RVA: 0x00CF470E File Offset: 0x00CF290E
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x17008A50 RID: 35408
-		// (get) Token: 0x060397BA RID: 235450 RVA: 0x00DA59EF File Offset: 0x00DA3BEF
+		// Token: 0x17005E1C RID: 24092
+		// (get) Token: 0x0602E6D7 RID: 190167 RVA: 0x00CF4717 File Offset: 0x00CF2917
 		public ToggleActionItem ActionItemProp
 		{
 			get
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397BB RID: 235451 RVA: 0x00DA59F8 File Offset: 0x00DA3BF8
+		// Token: 0x0602E6D8 RID: 190168 RVA: 0x00CF4720 File Offset: 0x00CF2920
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060397BC RID: 235452 RVA: 0x00DA5AA4 File Offset: 0x00DA3CA4
+		// Token: 0x0602E6D9 RID: 190169 RVA: 0x00CF47CC File Offset: 0x00CF29CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InteractionHint.<OnBeforeStartAsync>d__40 <OnBeforeStartAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060397BD RID: 235453 RVA: 0x00DA5AE8 File Offset: 0x00DA3CE8
+		// Token: 0x0602E6DA RID: 190170 RVA: 0x00CF4810 File Offset: 0x00CF2A10
 		private UniTask InitActionItem()
 		{
 			InteractionHint.<InitActionItem>d__41 <InitActionItem>d__;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <InitActionItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060397BE RID: 235454 RVA: 0x00DA5B2C File Offset: 0x00DA3D2C
+		// Token: 0x0602E6DB RID: 190171 RVA: 0x00CF4854 File Offset: 0x00CF2A54
 		protected override void OnStart()
 		{
 			this.BindToggleEvents();
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Module.Interaction
 			EventSystem.Instance.Add<ITrackData>(EEventName.UnTrackMark, new Action<ITrackData>(this.OnUnTrackMark));
 		}
 
-		// Token: 0x060397BF RID: 235455 RVA: 0x00DA5BD9 File Offset: 0x00DA3DD9
+		// Token: 0x0602E6DC RID: 190172 RVA: 0x00CF4901 File Offset: 0x00CF2B01
 		protected override void OnBeforeShow()
 		{
 			this.PlayAppearSequence();
 		}
 
-		// Token: 0x060397C0 RID: 235456 RVA: 0x00DA5BE4 File Offset: 0x00DA3DE4
+		// Token: 0x0602E6DD RID: 190173 RVA: 0x00CF490C File Offset: 0x00CF2B0C
 		protected override UniTask OnBeforeHideAsync()
 		{
 			InteractionHint.<OnBeforeHideAsync>d__44 <OnBeforeHideAsync>d__;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060397C1 RID: 235457 RVA: 0x00DA5C28 File Offset: 0x00DA3E28
+		// Token: 0x0602E6DE RID: 190174 RVA: 0x00CF4950 File Offset: 0x00CF2B50
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.InteractKeyItem = null;
 		}
 
-		// Token: 0x060397C2 RID: 235458 RVA: 0x00DA5DA0 File Offset: 0x00DA3FA0
+		// Token: 0x0602E6DF RID: 190175 RVA: 0x00CF4AC8 File Offset: 0x00CF2CC8
 		public void Refresh(Entity data, bool isSelected, int gridIndex)
 		{
 			this.ActorIndexInternal = this.GridIndex;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Interaction
 			interactKeyItem.ResetLongPress();
 		}
 
-		// Token: 0x060397C3 RID: 235459 RVA: 0x00DA5F70 File Offset: 0x00DA4170
+		// Token: 0x0602E6E0 RID: 190176 RVA: 0x00CF4C98 File Offset: 0x00CF2E98
 		[NullableContext(1)]
 		public void RefreshByExternalInfo(ExternalInteractInfoInternal externalInfo, int gridIndex)
 		{
@@ -253,14 +253,14 @@ namespace CSharpScript.Game.Module.Interaction
 			interactKeyItem.ResetLongPress();
 		}
 
-		// Token: 0x060397C4 RID: 235460 RVA: 0x00DA603F File Offset: 0x00DA423F
+		// Token: 0x0602E6E1 RID: 190177 RVA: 0x00CF4D67 File Offset: 0x00CF2F67
 		[NullableContext(1)]
 		private string GetExternalInteractIconPath(EInteractIcon iconType)
 		{
 			return this.GetInteractIconPathByGlobalConfig(iconType.ToEnumString());
 		}
 
-		// Token: 0x060397C5 RID: 235461 RVA: 0x00DA604D File Offset: 0x00DA424D
+		// Token: 0x0602E6E2 RID: 190178 RVA: 0x00CF4D75 File Offset: 0x00CF2F75
 		public void Clear()
 		{
 			this.ActorIndexInternal = -1;
@@ -269,26 +269,26 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ExternalInteractInfo = null;
 		}
 
-		// Token: 0x060397C6 RID: 235462 RVA: 0x00DA606B File Offset: 0x00DA426B
+		// Token: 0x0602E6E3 RID: 190179 RVA: 0x00CF4D93 File Offset: 0x00CF2F93
 		public void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true);
 		}
 
-		// Token: 0x060397C7 RID: 235463 RVA: 0x00DA6074 File Offset: 0x00DA4274
+		// Token: 0x0602E6E4 RID: 190180 RVA: 0x00CF4D9C File Offset: 0x00CF2F9C
 		public void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false);
 		}
 
-		// Token: 0x060397C8 RID: 235464 RVA: 0x00DA607D File Offset: 0x00DA427D
+		// Token: 0x0602E6E5 RID: 190181 RVA: 0x00CF4DA5 File Offset: 0x00CF2FA5
 		[NullableContext(1)]
 		public object GetKey(Entity data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x060397C9 RID: 235465 RVA: 0x00DA608C File Offset: 0x00DA428C
+		// Token: 0x0602E6E6 RID: 190182 RVA: 0x00CF4DB4 File Offset: 0x00CF2FB4
 		protected void RefreshChangeInteractionAction()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.MouseWheelKeyItem.RefreshByActionOrAxis(actionOrAxisKeyItem2, false);
 		}
 
-		// Token: 0x060397CA RID: 235466 RVA: 0x00DA6108 File Offset: 0x00DA4308
+		// Token: 0x0602E6E7 RID: 190183 RVA: 0x00CF4E30 File Offset: 0x00CF3030
 		protected void RefreshInteractKeyItem()
 		{
 			InteractionModel instance = InteractionModel.Instance;
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Module.Interaction
 			interactKeyItem.RefreshByActionOrAxis(actionOrAxisKeyItem, false);
 		}
 
-		// Token: 0x060397CB RID: 235467 RVA: 0x00DA61F0 File Offset: 0x00DA43F0
+		// Token: 0x0602E6E8 RID: 190184 RVA: 0x00CF4F18 File Offset: 0x00CF3118
 		public void ForceSetLongPressDisable(bool bDisable)
 		{
 			this.LongPressDisable = new bool?(bDisable);
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.Interaction
 			interactKeyItem.SetLongPressDisable(bDisable);
 		}
 
-		// Token: 0x060397CC RID: 235468 RVA: 0x00DA620F File Offset: 0x00DA440F
+		// Token: 0x0602E6E9 RID: 190185 RVA: 0x00CF4F37 File Offset: 0x00CF3137
 		public void SetLongPressTime(int time)
 		{
 			InputMultiKeyItem interactKeyItem = this.InteractKeyItem;
@@ -359,13 +359,13 @@ namespace CSharpScript.Game.Module.Interaction
 			interactKeyItem.SetLongPressTime((float)time);
 		}
 
-		// Token: 0x060397CD RID: 235469 RVA: 0x00DA6223 File Offset: 0x00DA4423
+		// Token: 0x0602E6EA RID: 190186 RVA: 0x00CF4F4B File Offset: 0x00CF314B
 		private void InputControllerChange(EInputControllerType eInputControllerType, EInputControllerType inputControllerType)
 		{
 			this.RefreshChangeInteractionAction();
 		}
 
-		// Token: 0x060397CE RID: 235470 RVA: 0x00DA622C File Offset: 0x00DA442C
+		// Token: 0x0602E6EB RID: 190187 RVA: 0x00CF4F54 File Offset: 0x00CF3154
 		[NullableContext(1)]
 		private void OnTrackMark(ITrackData data)
 		{
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.RefreshName();
 		}
 
-		// Token: 0x060397CF RID: 235471 RVA: 0x00DA6260 File Offset: 0x00DA4460
+		// Token: 0x0602E6EC RID: 190188 RVA: 0x00CF4F88 File Offset: 0x00CF3188
 		[NullableContext(1)]
 		private void OnUnTrackMark(ITrackData data)
 		{
@@ -397,20 +397,20 @@ namespace CSharpScript.Game.Module.Interaction
 			this.RefreshName();
 		}
 
-		// Token: 0x060397D0 RID: 235472 RVA: 0x00DA6292 File Offset: 0x00DA4492
+		// Token: 0x0602E6ED RID: 190189 RVA: 0x00CF4FBA File Offset: 0x00CF31BA
 		private bool IsDropItem()
 		{
 			PawnInfoManageComponent pawnInfo = this.PawnInfo;
 			return pawnInfo != null && pawnInfo.IsDropItem();
 		}
 
-		// Token: 0x060397D1 RID: 235473 RVA: 0x00DA62A5 File Offset: 0x00DA44A5
+		// Token: 0x0602E6EE RID: 190190 RVA: 0x00CF4FCD File Offset: 0x00CF31CD
 		private void OnInteractionSpotStateChange(bool _)
 		{
 			this.RefreshName();
 		}
 
-		// Token: 0x060397D2 RID: 235474 RVA: 0x00DA62B0 File Offset: 0x00DA44B0
+		// Token: 0x0602E6EF RID: 190191 RVA: 0x00CF4FD8 File Offset: 0x00CF31D8
 		private void RefreshName()
 		{
 			if (this.NameHint == null)
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ActionItem.SetToggleText(interactText);
 		}
 
-		// Token: 0x060397D3 RID: 235475 RVA: 0x00DA6380 File Offset: 0x00DA4580
+		// Token: 0x0602E6F0 RID: 190192 RVA: 0x00CF50A8 File Offset: 0x00CF32A8
 		[NullableContext(1)]
 		private string GetInteractText()
 		{
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return "";
 		}
 
-		// Token: 0x060397D4 RID: 235476 RVA: 0x00DA6448 File Offset: 0x00DA4648
+		// Token: 0x0602E6F1 RID: 190193 RVA: 0x00CF5170 File Offset: 0x00CF3370
 		[NullableContext(1)]
 		private unsafe string GetIconPath()
 		{
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return text ?? "";
 		}
 
-		// Token: 0x060397D5 RID: 235477 RVA: 0x00DA678C File Offset: 0x00DA498C
+		// Token: 0x0602E6F2 RID: 190194 RVA: 0x00CF54B4 File Offset: 0x00CF36B4
 		private bool IfNeedShowQualitySprite()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -601,7 +601,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return this.IsDropItem();
 		}
 
-		// Token: 0x060397D6 RID: 235478 RVA: 0x00DA67E0 File Offset: 0x00DA49E0
+		// Token: 0x0602E6F3 RID: 190195 RVA: 0x00CF5508 File Offset: 0x00CF3708
 		private void RefreshQualityEffect()
 		{
 			if (!this.IfNeedShowQualitySprite())
@@ -613,7 +613,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.QualitySprite.SetUIActive(true);
 		}
 
-		// Token: 0x060397D7 RID: 235479 RVA: 0x00DA681C File Offset: 0x00DA4A1C
+		// Token: 0x0602E6F4 RID: 190196 RVA: 0x00CF5544 File Offset: 0x00CF3744
 		[NullableContext(1)]
 		private string GetInteractDefaultIconPathByGlobalConfig(string name)
 		{
@@ -621,7 +621,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return ((config != null) ? config.GetValueOrDefault().Value : null) ?? string.Empty;
 		}
 
-		// Token: 0x060397D8 RID: 235480 RVA: 0x00DA6860 File Offset: 0x00DA4A60
+		// Token: 0x0602E6F5 RID: 190197 RVA: 0x00CF5588 File Offset: 0x00CF3788
 		[NullableContext(1)]
 		private string GetInteractIconPathByGlobalConfig(string name)
 		{
@@ -629,7 +629,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return ((config != null) ? config.GetValueOrDefault().Value : null) ?? string.Empty;
 		}
 
-		// Token: 0x060397D9 RID: 235481 RVA: 0x00DA68A4 File Offset: 0x00DA4AA4
+		// Token: 0x0602E6F6 RID: 190198 RVA: 0x00CF55CC File Offset: 0x00CF37CC
 		private void BindToggleEvents()
 		{
 			UUIExtendToggle toggleItem = this.ActionItem.GetToggleItem();
@@ -641,7 +641,7 @@ namespace CSharpScript.Game.Module.Interaction
 			toggleItem.OnPointUpCallBack.Bind(new Action<EToggleState>(this.OnPointerUp));
 		}
 
-		// Token: 0x060397DA RID: 235482 RVA: 0x00DA6948 File Offset: 0x00DA4B48
+		// Token: 0x0602E6F7 RID: 190199 RVA: 0x00CF5670 File Offset: 0x00CF3870
 		private void UnbindToggleEvents()
 		{
 			if (this.ActionItem == null)
@@ -659,7 +659,7 @@ namespace CSharpScript.Game.Module.Interaction
 			toggleItem.OnUnHover.Clear();
 		}
 
-		// Token: 0x060397DB RID: 235483 RVA: 0x00DA699C File Offset: 0x00DA4B9C
+		// Token: 0x0602E6F8 RID: 190200 RVA: 0x00CF56C4 File Offset: 0x00CF38C4
 		[NullableContext(1)]
 		private string GetQualityColor([Nullable(2)] CSharpScript.Game.Module.Inventory.ItemConfig itemConfig)
 		{
@@ -687,7 +687,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return text ?? "c7c7c7";
 		}
 
-		// Token: 0x060397DC RID: 235484 RVA: 0x00DA6A34 File Offset: 0x00DA4C34
+		// Token: 0x0602E6F9 RID: 190201 RVA: 0x00CF575C File Offset: 0x00CF395C
 		public void SetSelected(bool bSelected)
 		{
 			this.IsSelected = bSelected;
@@ -708,7 +708,7 @@ namespace CSharpScript.Game.Module.Interaction
 			toggleItem.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060397DD RID: 235485 RVA: 0x00DA6AA3 File Offset: 0x00DA4CA3
+		// Token: 0x0602E6FA RID: 190202 RVA: 0x00CF57CB File Offset: 0x00CF39CB
 		private void RefreshMouseWheelKeyItemVisible()
 		{
 			InputMultiKeyItem mouseWheelKeyItem = this.MouseWheelKeyItem;
@@ -719,7 +719,7 @@ namespace CSharpScript.Game.Module.Interaction
 			mouseWheelKeyItem.SetActive(InteractionModel.Instance.LockInteractionEntity == null && this.IsSelected && InteractionModel.Instance.GetInteractItemCount() > 1);
 		}
 
-		// Token: 0x060397DE RID: 235486 RVA: 0x00DA6AE0 File Offset: 0x00DA4CE0
+		// Token: 0x0602E6FB RID: 190203 RVA: 0x00CF5808 File Offset: 0x00CF3A08
 		private void RefreshInteractKeyItemVisible()
 		{
 			InputMultiKeyItem interactKeyItem = this.InteractKeyItem;
@@ -735,48 +735,48 @@ namespace CSharpScript.Game.Module.Interaction
 			interactKeyItem2.SetActive(this.IsSelected);
 		}
 
-		// Token: 0x060397DF RID: 235487 RVA: 0x00DA6B36 File Offset: 0x00DA4D36
+		// Token: 0x0602E6FC RID: 190204 RVA: 0x00CF585E File Offset: 0x00CF3A5E
 		[NullableContext(1)]
 		public void BindOnHover(Action<InteractionHint> onHover)
 		{
 			this.OnHoverCallback = onHover;
 		}
 
-		// Token: 0x060397E0 RID: 235488 RVA: 0x00DA6B3F File Offset: 0x00DA4D3F
+		// Token: 0x0602E6FD RID: 190205 RVA: 0x00CF5867 File Offset: 0x00CF3A67
 		[NullableContext(1)]
 		public void BindOnUnHover(Action<InteractionHint> onUnHover)
 		{
 			this.OnUnHoverCallback = onUnHover;
 		}
 
-		// Token: 0x060397E1 RID: 235489 RVA: 0x00DA6B48 File Offset: 0x00DA4D48
+		// Token: 0x0602E6FE RID: 190206 RVA: 0x00CF5870 File Offset: 0x00CF3A70
 		[NullableContext(1)]
 		public void BindOnToggleStateChanged(Action<EToggleState, int> onToggleStateChanged)
 		{
 			this.OnToggleStateChanged = onToggleStateChanged;
 		}
 
-		// Token: 0x060397E2 RID: 235490 RVA: 0x00DA6B51 File Offset: 0x00DA4D51
+		// Token: 0x0602E6FF RID: 190207 RVA: 0x00CF5879 File Offset: 0x00CF3A79
 		[NullableContext(1)]
 		public void BindOnPointDownCallback(Action<EToggleState, int> onPointDownCallback)
 		{
 			this.OnPointDownCallback = onPointDownCallback;
 		}
 
-		// Token: 0x060397E3 RID: 235491 RVA: 0x00DA6B5A File Offset: 0x00DA4D5A
+		// Token: 0x0602E700 RID: 190208 RVA: 0x00CF5882 File Offset: 0x00CF3A82
 		[NullableContext(1)]
 		public void BindOnPointUpCallback(Action<EToggleState, int> onPointUpCallback)
 		{
 			this.OnPointUpCallback = onPointUpCallback;
 		}
 
-		// Token: 0x060397E4 RID: 235492 RVA: 0x00DA6B63 File Offset: 0x00DA4D63
+		// Token: 0x0602E701 RID: 190209 RVA: 0x00CF588B File Offset: 0x00CF3A8B
 		private bool OnCheckHintToggle()
 		{
 			return !InteractionModel.Instance.InInteractCd();
 		}
 
-		// Token: 0x060397E5 RID: 235493 RVA: 0x00DA6B72 File Offset: 0x00DA4D72
+		// Token: 0x0602E702 RID: 190210 RVA: 0x00CF589A File Offset: 0x00CF3A9A
 		private void OnHintToggleStateChange(EToggleState state)
 		{
 			if (this.OnToggleStateChanged != null)
@@ -785,7 +785,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397E6 RID: 235494 RVA: 0x00DA6B8E File Offset: 0x00DA4D8E
+		// Token: 0x0602E703 RID: 190211 RVA: 0x00CF58B6 File Offset: 0x00CF3AB6
 		private void OnHover()
 		{
 			if (this.OnHoverCallback != null)
@@ -794,7 +794,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397E7 RID: 235495 RVA: 0x00DA6BA4 File Offset: 0x00DA4DA4
+		// Token: 0x0602E704 RID: 190212 RVA: 0x00CF58CC File Offset: 0x00CF3ACC
 		private void OnUnHover()
 		{
 			if (this.OnUnHoverCallback != null)
@@ -803,7 +803,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397E8 RID: 235496 RVA: 0x00DA6BBA File Offset: 0x00DA4DBA
+		// Token: 0x0602E705 RID: 190213 RVA: 0x00CF58E2 File Offset: 0x00CF3AE2
 		private void OnPointerDown(EToggleState state)
 		{
 			Action<EToggleState, int> onPointDownCallback = this.OnPointDownCallback;
@@ -814,7 +814,7 @@ namespace CSharpScript.Game.Module.Interaction
 			onPointDownCallback(state, this.ActorIndex);
 		}
 
-		// Token: 0x060397E9 RID: 235497 RVA: 0x00DA6BD3 File Offset: 0x00DA4DD3
+		// Token: 0x0602E706 RID: 190214 RVA: 0x00CF58FB File Offset: 0x00CF3AFB
 		private void OnPointerUp(EToggleState state)
 		{
 			Action<EToggleState, int> onPointUpCallback = this.OnPointUpCallback;
@@ -825,8 +825,8 @@ namespace CSharpScript.Game.Module.Interaction
 			onPointUpCallback(state, this.ActorIndex);
 		}
 
-		// Token: 0x17008A51 RID: 35409
-		// (get) Token: 0x060397EA RID: 235498 RVA: 0x00DA6BEC File Offset: 0x00DA4DEC
+		// Token: 0x17005E1D RID: 24093
+		// (get) Token: 0x0602E707 RID: 190215 RVA: 0x00CF5914 File Offset: 0x00CF3B14
 		public int ActorIndex
 		{
 			get
@@ -835,13 +835,13 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397EB RID: 235499 RVA: 0x00DA6BF4 File Offset: 0x00DA4DF4
+		// Token: 0x0602E708 RID: 190216 RVA: 0x00CF591C File Offset: 0x00CF3B1C
 		public double GetPriority()
 		{
 			return this.PriorityInternal;
 		}
 
-		// Token: 0x060397EC RID: 235500 RVA: 0x00DA6BFC File Offset: 0x00DA4DFC
+		// Token: 0x0602E709 RID: 190217 RVA: 0x00CF5924 File Offset: 0x00CF3B24
 		public void UpdatePriority()
 		{
 			PawnInteractNewComponent pawnInteractNewComponent = this.InteractTarget as PawnInteractNewComponent;
@@ -851,13 +851,13 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397ED RID: 235501 RVA: 0x00DA6C2F File Offset: 0x00DA4E2F
+		// Token: 0x0602E70A RID: 190218 RVA: 0x00CF5957 File Offset: 0x00CF3B57
 		public UUIItem GetButtonForGuide()
 		{
 			return base.GetItem(0);
 		}
 
-		// Token: 0x060397EE RID: 235502 RVA: 0x00DA6C38 File Offset: 0x00DA4E38
+		// Token: 0x0602E70B RID: 190219 RVA: 0x00CF5960 File Offset: 0x00CF3B60
 		public UniTask PlayReleaseSequence()
 		{
 			InteractionHint.<PlayReleaseSequence>d__91 <PlayReleaseSequence>d__;
@@ -868,13 +868,13 @@ namespace CSharpScript.Game.Module.Interaction
 			return <PlayReleaseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060397EF RID: 235503 RVA: 0x00DA6C7B File Offset: 0x00DA4E7B
+		// Token: 0x0602E70C RID: 190220 RVA: 0x00CF59A3 File Offset: 0x00CF3BA3
 		public void PlayAppearSequence()
 		{
 			this.ActionItem.PlayAppearSequence();
 		}
 
-		// Token: 0x060397F0 RID: 235504 RVA: 0x00DA6C88 File Offset: 0x00DA4E88
+		// Token: 0x0602E70D RID: 190221 RVA: 0x00CF59B0 File Offset: 0x00CF3BB0
 		public UniTask PlayDisappearSequence()
 		{
 			InteractionHint.<PlayDisappearSequence>d__93 <PlayDisappearSequence>d__;
@@ -885,25 +885,25 @@ namespace CSharpScript.Game.Module.Interaction
 			return <PlayDisappearSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401E0E8 RID: 123112
+		// Token: 0x04018B85 RID: 101253
 		private ToggleActionItem ActionItem;
 
-		// Token: 0x0401E0E9 RID: 123113
+		// Token: 0x04018B86 RID: 101254
 		private int ActorIndexInternal;
 
-		// Token: 0x0401E0EA RID: 123114
+		// Token: 0x04018B87 RID: 101255
 		private PawnInteractBaseComponent InteractTarget;
 
-		// Token: 0x0401E0EB RID: 123115
+		// Token: 0x04018B88 RID: 101256
 		private PawnInfoManageComponent PawnInfo;
 
-		// Token: 0x0401E0EC RID: 123116
+		// Token: 0x04018B89 RID: 101257
 		private UUIText NameHint;
 
-		// Token: 0x0401E0ED RID: 123117
+		// Token: 0x04018B8A RID: 101258
 		private UUISprite QualitySprite;
 
-		// Token: 0x0401E0EE RID: 123118
+		// Token: 0x04018B8B RID: 101259
 		[Nullable(new byte[]
 		{
 			2,
@@ -911,7 +911,7 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private Action<InteractionHint> OnHoverCallback;
 
-		// Token: 0x0401E0EF RID: 123119
+		// Token: 0x04018B8C RID: 101260
 		[Nullable(new byte[]
 		{
 			2,
@@ -919,65 +919,65 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private Action<InteractionHint> OnUnHoverCallback;
 
-		// Token: 0x0401E0F0 RID: 123120
+		// Token: 0x04018B8D RID: 101261
 		private InputMultiKeyItem MouseWheelKeyItem;
 
-		// Token: 0x0401E0F1 RID: 123121
+		// Token: 0x04018B8E RID: 101262
 		private InputMultiKeyItem InteractKeyItem;
 
-		// Token: 0x0401E0F2 RID: 123122
+		// Token: 0x04018B8F RID: 101263
 		private int ItemId;
 
-		// Token: 0x0401E0F3 RID: 123123
+		// Token: 0x04018B90 RID: 101264
 		private CSharpScript.Game.Module.Inventory.ItemConfig ItemConfig;
 
-		// Token: 0x0401E0F4 RID: 123124
+		// Token: 0x04018B91 RID: 101265
 		private FColor? QualityColor;
 
-		// Token: 0x0401E0F5 RID: 123125
+		// Token: 0x04018B92 RID: 101266
 		private Action<EToggleState, int> OnToggleStateChanged;
 
-		// Token: 0x0401E0F6 RID: 123126
+		// Token: 0x04018B93 RID: 101267
 		private Action<EToggleState, int> OnPointDownCallback;
 
-		// Token: 0x0401E0F7 RID: 123127
+		// Token: 0x04018B94 RID: 101268
 		private Action<EToggleState, int> OnPointUpCallback;
 
-		// Token: 0x0401E0F8 RID: 123128
+		// Token: 0x04018B95 RID: 101269
 		private bool IsSelected;
 
-		// Token: 0x0401E0F9 RID: 123129
+		// Token: 0x04018B96 RID: 101270
 		private bool? LongPressDisable;
 
-		// Token: 0x0401E0FA RID: 123130
+		// Token: 0x04018B97 RID: 101271
 		private bool IsGray;
 
-		// Token: 0x0401E0FB RID: 123131
+		// Token: 0x04018B98 RID: 101272
 		private int PbDataId;
 
-		// Token: 0x0401E0FC RID: 123132
+		// Token: 0x04018B99 RID: 101273
 		private InteractionSpotComponent InteractionSpotComp;
 
-		// Token: 0x0401E0FD RID: 123133
+		// Token: 0x04018B9A RID: 101274
 		private ExternalInteractInfoInternal ExternalInteractInfo;
 
-		// Token: 0x0401E0FE RID: 123134
+		// Token: 0x04018B9B RID: 101275
 		private Entity AddNameChangeEventEntity;
 
-		// Token: 0x0401E0FF RID: 123135
+		// Token: 0x04018B9C RID: 101276
 		private double PriorityInternal;
 
-		// Token: 0x0200BA79 RID: 47737
+		// Token: 0x0200A490 RID: 42128
 		[NullableContext(0)]
 		public enum EChildType
 		{
-			// Token: 0x040385E1 RID: 230881
+			// Token: 0x04032FD8 RID: 208856
 			ToggleActionItem,
-			// Token: 0x040385E2 RID: 230882
+			// Token: 0x04032FD9 RID: 208857
 			QualitySprite,
-			// Token: 0x040385E3 RID: 230883
+			// Token: 0x04032FDA RID: 208858
 			MouseWheelKeyItem,
-			// Token: 0x040385E4 RID: 230884
+			// Token: 0x04032FDB RID: 208859
 			InteractKeyItem
 		}
 	}

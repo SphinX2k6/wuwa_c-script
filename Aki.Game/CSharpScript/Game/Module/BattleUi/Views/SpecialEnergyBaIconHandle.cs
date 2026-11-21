@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E1A RID: 24090
+	// Token: 0x02004DFF RID: 19967
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBaIconHandle
 	{
-		// Token: 0x0603D427 RID: 250919 RVA: 0x00EC3516 File Offset: 0x00EC1716
+		// Token: 0x060323B6 RID: 205750 RVA: 0x00E14A76 File Offset: 0x00E12C76
 		[NullableContext(1)]
 		public void Init(UUITexture[] iconTextureList, [Nullable(2)] UUIItem animItem = null)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimItem = animItem;
 		}
 
-		// Token: 0x0603D428 RID: 250920 RVA: 0x00EC3528 File Offset: 0x00EC1728
+		// Token: 0x060323B7 RID: 205751 RVA: 0x00E14A88 File Offset: 0x00E12C88
 		public void SetIcon(string iconPath)
 		{
 			UUITexture[] iconTextureList = this.IconTextureList;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 103, "js_undefined");
 		}
 
-		// Token: 0x0603D429 RID: 250921 RVA: 0x00EC3580 File Offset: 0x00EC1780
+		// Token: 0x060323B8 RID: 205752 RVA: 0x00E14AE0 File Offset: 0x00E12CE0
 		public void PlayEndAnim(bool isPlay)
 		{
 			if (this.IsPlayingEndAnim == isPlay)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D42A RID: 250922 RVA: 0x00EC364C File Offset: 0x00EC184C
+		// Token: 0x060323B9 RID: 205753 RVA: 0x00E14BAC File Offset: 0x00E12DAC
 		private void InitTweenAnim()
 		{
 			if (this.AnimationList != null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D42B RID: 250923 RVA: 0x00EC36BA File Offset: 0x00EC18BA
+		// Token: 0x060323BA RID: 205754 RVA: 0x00E14C1A File Offset: 0x00E12E1A
 		public void OnBeforeDestroy()
 		{
 			this.PlayEndAnim(false);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FF1F RID: 130847
+		// Token: 0x0401A9E6 RID: 109030
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,16 +115,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private UUITexture[] IconTextureList;
 
-		// Token: 0x0401FF20 RID: 130848
+		// Token: 0x0401A9E7 RID: 109031
 		private UUIItem AnimItem;
 
-		// Token: 0x0401FF21 RID: 130849
+		// Token: 0x0401A9E8 RID: 109032
 		private int LoadIconId = -1;
 
-		// Token: 0x0401FF22 RID: 130850
+		// Token: 0x0401A9E9 RID: 109033
 		private bool IsPlayingEndAnim;
 
-		// Token: 0x0401FF23 RID: 130851
+		// Token: 0x0401A9EA RID: 109034
 		[Nullable(new byte[]
 		{
 			2,

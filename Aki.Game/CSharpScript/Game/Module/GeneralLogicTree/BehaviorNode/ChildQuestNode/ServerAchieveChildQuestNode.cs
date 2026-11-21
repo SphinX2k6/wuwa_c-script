@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E0 RID: 23008
+	// Token: 0x020049B9 RID: 18873
 	public class ServerAchieveChildQuestNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4FD RID: 238845 RVA: 0x00DDE908 File Offset: 0x00DDCB08
+		// Token: 0x0602F425 RID: 193573 RVA: 0x00D2E128 File Offset: 0x00D2C328
 		public ServerAchieveChildQuestNode(int nodeId) : base(nodeId)
 		{
 		}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -17,35 +16,35 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005926 RID: 22822
+	// Token: 0x020048FF RID: 18687
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiStoryController : ActivityControllerBase
 	{
-		// Token: 0x06039F83 RID: 237443 RVA: 0x00DC82A9 File Offset: 0x00DC64A9
+		// Token: 0x0602EEA6 RID: 192166 RVA: 0x00D175A1 File Offset: 0x00D157A1
 		public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.HonamiStoryUnlockTipView, null, null);
 		}
 
-		// Token: 0x06039F84 RID: 237444 RVA: 0x00DC82BC File Offset: 0x00DC64BC
+		// Token: 0x0602EEA7 RID: 192167 RVA: 0x00D175B4 File Offset: 0x00D157B4
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06039F85 RID: 237445 RVA: 0x00DC82BE File Offset: 0x00DC64BE
+		// Token: 0x0602EEA8 RID: 192168 RVA: 0x00D175B6 File Offset: 0x00D157B6
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityHonamiStoryGuide";
 		}
 
-		// Token: 0x06039F86 RID: 237446 RVA: 0x00DC82C5 File Offset: 0x00DC64C5
+		// Token: 0x0602EEA9 RID: 192169 RVA: 0x00D175BD File Offset: 0x00D157BD
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new HonamiStoryActivityView();
 		}
 
-		// Token: 0x06039F87 RID: 237447 RVA: 0x00DC82CC File Offset: 0x00DC64CC
+		// Token: 0x0602EEAA RID: 192170 RVA: 0x00D175C4 File Offset: 0x00D157C4
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			HonamiStoryActivityData honamiStoryActivityData = new HonamiStoryActivityData();
@@ -53,13 +52,13 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return honamiStoryActivityData;
 		}
 
-		// Token: 0x06039F88 RID: 237448 RVA: 0x00DC82EB File Offset: 0x00DC64EB
+		// Token: 0x0602EEAB RID: 192171 RVA: 0x00D175E3 File Offset: 0x00D157E3
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06039F89 RID: 237449 RVA: 0x00DC82F4 File Offset: 0x00DC64F4
+		// Token: 0x0602EEAC RID: 192172 RVA: 0x00D175EC File Offset: 0x00D157EC
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.LeaveInstanceDungeon, new Action(this.OnLeaveDungeon));
@@ -69,7 +68,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.ActivityInfoRequest));
 		}
 
-		// Token: 0x06039F8A RID: 237450 RVA: 0x00DC8390 File Offset: 0x00DC6590
+		// Token: 0x0602EEAD RID: 192173 RVA: 0x00D17688 File Offset: 0x00D15888
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.LeaveInstanceDungeon, new Action(this.OnLeaveDungeon));
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			EventSystem.Instance.Remove<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.ActivityInfoRequest));
 		}
 
-		// Token: 0x06039F8B RID: 237451 RVA: 0x00DC842C File Offset: 0x00DC662C
+		// Token: 0x0602EEAE RID: 192174 RVA: 0x00D17724 File Offset: 0x00D15924
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.HonamiStoryBagInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnHonamiStoryBagInfoUpdateNotify));
@@ -106,7 +105,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			Net.Instance.Register(ENotifyMessageId.HonamiStoryTopInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnHonamiStoryTopInfoNotify));
 		}
 
-		// Token: 0x06039F8C RID: 237452 RVA: 0x00DC86A4 File Offset: 0x00DC68A4
+		// Token: 0x0602EEAF RID: 192175 RVA: 0x00D1799C File Offset: 0x00D15B9C
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.HonamiStoryBagInfoUpdateNotify);
@@ -132,7 +131,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			Net.Instance.UnRegister(ENotifyMessageId.HonamiStoryLifeSupportNotify);
 		}
 
-		// Token: 0x06039F8D RID: 237453 RVA: 0x00DC8804 File Offset: 0x00DC6A04
+		// Token: 0x0602EEB0 RID: 192176 RVA: 0x00D17AFC File Offset: 0x00D15CFC
 		private void ActivityInfoRequest(EFunctionType id, bool isOpen)
 		{
 			if (id != EFunctionType.HonamiStoryMainQuestFuncId)
@@ -166,7 +165,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039F8E RID: 237454 RVA: 0x00DC88B0 File Offset: 0x00DC6AB0
+		// Token: 0x0602EEB1 RID: 192177 RVA: 0x00D17BA8 File Offset: 0x00D15DA8
 		public void TryHonamiStoryInstLeave(bool showSafeLeaveUpdate = false)
 		{
 			HonamiStoryLeaveTipParams honamiStoryLeaveTipParams = new HonamiStoryLeaveTipParams();
@@ -183,7 +182,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			UiManager.Instance.OpenView(EUiViewName.HonamiStoryLeaveTip, param, null);
 		}
 
-		// Token: 0x06039F8F RID: 237455 RVA: 0x00DC8918 File Offset: 0x00DC6B18
+		// Token: 0x0602EEB2 RID: 192178 RVA: 0x00D17C10 File Offset: 0x00D15E10
 		[NullableContext(0)]
 		public UniTask<bool> OpenHonamiStoryBag()
 		{
@@ -194,14 +193,14 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <OpenHonamiStoryBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039F90 RID: 237456 RVA: 0x00DC8954 File Offset: 0x00DC6B54
+		// Token: 0x0602EEB3 RID: 192179 RVA: 0x00D17C4C File Offset: 0x00D15E4C
 		public void SetHonamiStoryLoadingInfoByResult(bool isSuccess)
 		{
 			EHonamiStoryLoadingTimingType honamiStoryLoadingInfoByTimingOnly = isSuccess ? EHonamiStoryLoadingTimingType.SuccessLeave : EHonamiStoryLoadingTimingType.FailLeave;
 			this.SetHonamiStoryLoadingInfoByTimingOnly(honamiStoryLoadingInfoByTimingOnly);
 		}
 
-		// Token: 0x06039F91 RID: 237457 RVA: 0x00DC8970 File Offset: 0x00DC6B70
+		// Token: 0x0602EEB4 RID: 192180 RVA: 0x00D17C68 File Offset: 0x00D15E68
 		public void SetHonamiStoryLoadingInfoByTimingOnly(EHonamiStoryLoadingTimingType timing)
 		{
 			HonamiStoryLoadingDataImpl gamePlayLoadingData = new HonamiStoryLoadingDataImpl
@@ -211,7 +210,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			HonamiStoryModel.Instance.SetGamePlayLoadingData(gamePlayLoadingData);
 		}
 
-		// Token: 0x06039F92 RID: 237458 RVA: 0x00DC899C File Offset: 0x00DC6B9C
+		// Token: 0x0602EEB5 RID: 192181 RVA: 0x00D17C94 File Offset: 0x00D15E94
 		public void SetHonamiStoryLoadingInfoByBtId(int btId)
 		{
 			HonamiStoryLoadingDataImpl gamePlayLoadingData = new HonamiStoryLoadingDataImpl
@@ -222,13 +221,13 @@ namespace CSharpScript.Game.Module.HonamiStory
 			HonamiStoryModel.Instance.SetGamePlayLoadingData(gamePlayLoadingData);
 		}
 
-		// Token: 0x06039F93 RID: 237459 RVA: 0x00DC89D4 File Offset: 0x00DC6BD4
+		// Token: 0x0602EEB6 RID: 192182 RVA: 0x00D17CCC File Offset: 0x00D15ECC
 		[NullableContext(2)]
 		public void OnHonamiStoryInstInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryInstInfoNotify honamiStoryInstInfoNotify = (HonamiStoryInstInfoNotify)msg;
 			HonamiStoryModel.Instance.SetIsLastPickUpViewDirty(false);
-			HonamiStoryModel.Instance.InitBackPackInfoList(honamiStoryInstInfoNotify.HonamiStoryBagInfos.ToList<HonamiStoryBagInfo>());
+			HonamiStoryModel.Instance.InitBackPackInfoList(honamiStoryInstInfoNotify.HonamiStoryBagInfos);
 			HonamiStoryModel.Instance.SetQuickAllDirty(true);
 			this.UpdateHonamiStorySafeLeave(honamiStoryInstInfoNotify.CanSafeLeave, false);
 			int dangerLevelId = honamiStoryInstInfoNotify.DangerLevelId;
@@ -298,7 +297,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			EventSystem.Instance.Emit(EEventName.OnHonamiStoryInstInfoUpdate);
 		}
 
-		// Token: 0x06039F94 RID: 237460 RVA: 0x00DC8CBC File Offset: 0x00DC6EBC
+		// Token: 0x0602EEB7 RID: 192183 RVA: 0x00D17FB0 File Offset: 0x00D161B0
 		[NullableContext(2)]
 		private void OnHonamiStorySafeLeaveNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -306,7 +305,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			this.UpdateHonamiStorySafeLeave(honamiStorySafeLeaveNotify.CanSafeLeave, true);
 		}
 
-		// Token: 0x06039F95 RID: 237461 RVA: 0x00DC8CDD File Offset: 0x00DC6EDD
+		// Token: 0x0602EEB8 RID: 192184 RVA: 0x00D17FD1 File Offset: 0x00D161D1
 		private void UpdateHonamiStorySafeLeave(bool canSafeLeave, bool showLeave)
 		{
 			if (HonamiStoryModel.Instance.CanSafeLeave == canSafeLeave)
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			this.ShowSafeLeaveUpdate();
 		}
 
-		// Token: 0x06039F96 RID: 237462 RVA: 0x00DC8D19 File Offset: 0x00DC6F19
+		// Token: 0x0602EEB9 RID: 192185 RVA: 0x00D1800D File Offset: 0x00D1620D
 		public void ShowSafeLeaveUpdate()
 		{
 			if (GameModeModel.Instance.WorldDoneAndLoadingClosed)
@@ -342,7 +341,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			HonamiStoryModel.Instance.CacheShowSafeLeaveUpdate = true;
 		}
 
-		// Token: 0x06039F97 RID: 237463 RVA: 0x00DC8D54 File Offset: 0x00DC6F54
+		// Token: 0x0602EEBA RID: 192186 RVA: 0x00D18048 File Offset: 0x00D16248
 		[NullableContext(2)]
 		private void OnHonamiStoryPollutionUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -369,7 +368,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			EventSystem.Instance.Emit<int>(EEventName.OnHonamiStoryPollutionUpdate, num2);
 		}
 
-		// Token: 0x06039F98 RID: 237464 RVA: 0x00DC8E30 File Offset: 0x00DC7030
+		// Token: 0x0602EEBB RID: 192187 RVA: 0x00D18124 File Offset: 0x00D16324
 		[NullableContext(2)]
 		private void OnHonamiStoryInstSettleNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -441,7 +440,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 3000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06039F99 RID: 237465 RVA: 0x00DC8FF0 File Offset: 0x00DC71F0
+		// Token: 0x0602EEBC RID: 192188 RVA: 0x00D182E4 File Offset: 0x00D164E4
 		[NullableContext(2)]
 		private void OnHonamiStoryInstTopTowerSettleNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -507,7 +506,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			{
 				ButtonTextId = "ConfirmBox_133_ButtonText_1",
 				DescriptionTextId = (needCost ? "Text_RemainText_Text" : null),
-				DescriptionArgs = (needCost ? list2.Cast<object>().ToList<object>() : null),
+				DescriptionArgs = (needCost ? new List<object>(list2) : null),
 				IsTimeDownCloseView = false,
 				IsClickedCloseView = false,
 				OnClickedCallback = delegate(int _)
@@ -528,7 +527,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 									return;
 								}
 								this.SetHonamiStoryLoadingInfoByTimingOnly(EHonamiStoryLoadingTimingType.Tower);
-								InstanceDungeonEntranceController.Instance.RestartInstanceDungeon();
+								InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false);
 							});
 						}
 						functionMap.Add(key, value);
@@ -536,7 +535,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 						return;
 					}
 					this.SetHonamiStoryLoadingInfoByTimingOnly(EHonamiStoryLoadingTimingType.Tower);
-					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon();
+					InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false);
 				}
 			});
 			List<RewardItemData> list3 = new List<RewardItemData>();
@@ -587,7 +586,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			});
 		}
 
-		// Token: 0x06039F9A RID: 237466 RVA: 0x00DC93F0 File Offset: 0x00DC75F0
+		// Token: 0x0602EEBD RID: 192189 RVA: 0x00D186DC File Offset: 0x00D168DC
 		private void OnLeaveDungeon()
 		{
 			if (HonamiStoryUtil.CheckInHonamiStoryDungeon())
@@ -607,7 +606,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x06039F9B RID: 237467 RVA: 0x00DC9450 File Offset: 0x00DC7650
+		// Token: 0x0602EEBE RID: 192190 RVA: 0x00D1873C File Offset: 0x00D1693C
 		private void OnEnterDungeon(int _1, int _2)
 		{
 			if (HonamiStoryUtil.CheckInHonamiStoryDungeon())
@@ -616,7 +615,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x06039F9C RID: 237468 RVA: 0x00DC9474 File Offset: 0x00DC7674
+		// Token: 0x0602EEBF RID: 192191 RVA: 0x00D18760 File Offset: 0x00D16960
 		private void OnWorldDoneAndCloseLoading()
 		{
 			if (HonamiStoryModel.Instance.CacheShowSafeLeaveUpdate)
@@ -630,18 +629,18 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x06039F9D RID: 237469 RVA: 0x00DC94C3 File Offset: 0x00DC76C3
+		// Token: 0x0602EEC0 RID: 192192 RVA: 0x00D187AF File Offset: 0x00D169AF
 		private void OnHonamiStoryLifeSupportChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			EventSystem.Instance.Emit<float, float>(EEventName.OnHonamiStoryLifeSupportChanged, oldValue, newValue);
 		}
 
-		// Token: 0x06039F9E RID: 237470 RVA: 0x00DC94D8 File Offset: 0x00DC76D8
+		// Token: 0x0602EEC1 RID: 192193 RVA: 0x00D187C4 File Offset: 0x00D169C4
 		[NullableContext(2)]
 		private void OnHonamiStoryMascotInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryMascotInfoUpdateNotify honamiStoryMascotInfoUpdateNotify = (HonamiStoryMascotInfoUpdateNotify)msg;
-			HonamiStoryModel.Instance.GetActivityData(true).UpdateHonamiStoryMascotDataList(honamiStoryMascotInfoUpdateNotify.HonamiStoryMascotInfos.ToList<HonamiStoryMascotInfo>());
+			HonamiStoryModel.Instance.GetActivityData(true).UpdateHonamiStoryMascotDataList(honamiStoryMascotInfoUpdateNotify.HonamiStoryMascotInfos);
 			HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.HonamiStoryMascotUnlockSet, null) ?? new HashSet<int>();
 			foreach (HonamiStoryMascotInfo honamiStoryMascotInfo in honamiStoryMascotInfoUpdateNotify.HonamiStoryMascotInfos)
 			{
@@ -653,7 +652,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.HonamiStoryMascotUnlockSet, hashSet);
 		}
 
-		// Token: 0x06039F9F RID: 237471 RVA: 0x00DC9578 File Offset: 0x00DC7778
+		// Token: 0x0602EEC2 RID: 192194 RVA: 0x00D18860 File Offset: 0x00D16A60
 		public void SendHonamiStoryMascotRewardRequest(int mascotId, Action callback)
 		{
 			HonamiStoryMascotRewardRequest honamiStoryMascotRewardRequest = HonamiStoryMascotRewardRequest.Create();
@@ -667,7 +666,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryMascotRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryMascotRewardResponse.ErrorCode, 25929, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryMascotRewardResponse.ErrorCode, 28960, null, true, true);
 					return;
 				}
 				HonamiStoryModel.Instance.GetActivityData(true).GetHonamiStoryMascotData(mascotId).UpdateState(EHonamiStoryCollectState.GotReward);
@@ -676,15 +675,15 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FA0 RID: 237472 RVA: 0x00DC95C8 File Offset: 0x00DC77C8
+		// Token: 0x0602EEC3 RID: 192195 RVA: 0x00D188B0 File Offset: 0x00D16AB0
 		[NullableContext(2)]
 		private void OnHonamiStoryAreaInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryAreaInfoUpdateNotify honamiStoryAreaInfoUpdateNotify = (HonamiStoryAreaInfoUpdateNotify)msg;
-			HonamiStoryModel.Instance.GetActivityData(true).UpdateHonamiStoryAreaDataList(honamiStoryAreaInfoUpdateNotify.HonamiStoryAreaInfo.ToList<HonamiStoryAreaInfo>());
+			HonamiStoryModel.Instance.GetActivityData(true).UpdateHonamiStoryAreaDataList(honamiStoryAreaInfoUpdateNotify.HonamiStoryAreaInfo);
 		}
 
-		// Token: 0x06039FA1 RID: 237473 RVA: 0x00DC95F8 File Offset: 0x00DC77F8
+		// Token: 0x0602EEC4 RID: 192196 RVA: 0x00D188DC File Offset: 0x00D16ADC
 		public void SendHonamiStoryAreaSecretRewardRequest(int areaSecretId, Action callback)
 		{
 			HonamiStoryAreaSecretRewardRequest honamiStoryAreaSecretRewardRequest = HonamiStoryAreaSecretRewardRequest.Create();
@@ -698,7 +697,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryAreaSecretRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryAreaSecretRewardResponse.ErrorCode, 26290, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryAreaSecretRewardResponse.ErrorCode, 21464, null, true, true);
 					return;
 				}
 				HonamiStoryModel.Instance.GetActivityData(true).GetHonamiStoryAreaData(areaSecretId).UpdateCollectMascotState(EHonamiStoryCollectState.GotReward);
@@ -707,7 +706,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FA2 RID: 237474 RVA: 0x00DC9648 File Offset: 0x00DC7848
+		// Token: 0x0602EEC5 RID: 192197 RVA: 0x00D1892C File Offset: 0x00D16B2C
 		[NullableContext(0)]
 		public UniTask<bool> LeaveHonamiDungeon()
 		{
@@ -718,27 +717,27 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <LeaveHonamiDungeon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FA3 RID: 237475 RVA: 0x00DC9683 File Offset: 0x00DC7883
+		// Token: 0x0602EEC6 RID: 192198 RVA: 0x00D18967 File Offset: 0x00D16B67
 		public bool CanOpenBackpack(EUiViewName viewName, object _)
 		{
 			return FunctionModel.Instance.IsOpen(10102);
 		}
 
-		// Token: 0x06039FA4 RID: 237476 RVA: 0x00DC9694 File Offset: 0x00DC7894
+		// Token: 0x0602EEC7 RID: 192199 RVA: 0x00D18978 File Offset: 0x00D16B78
 		[NullableContext(2)]
 		private void OnHonamiStorySetFormationNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStorySetFormationNotify honamiStorySetFormationNotify = (HonamiStorySetFormationNotify)msg;
 			HonamiStoryPlayerBackpackData playerBackpackData = HonamiStoryModel.Instance.GetPlayerBackpackData();
-			playerBackpackData.RefreshEquipInfo(honamiStorySetFormationNotify.HonamiStoryRackInfos.ToList<HonamiStoryRackInfo>());
+			playerBackpackData.RefreshEquipInfo(honamiStorySetFormationNotify.HonamiStoryRackInfos);
 			if (honamiStorySetFormationNotify.EquipRack != null)
 			{
-				playerBackpackData.RefreshGridItemInfo(honamiStorySetFormationNotify.EquipRack.HonamiStoryBagItemInfos.ToList<HonamiStoryBagItemInfo>());
+				playerBackpackData.RefreshGridItemInfo(honamiStorySetFormationNotify.EquipRack.HonamiStoryBagItemInfos);
 			}
 			HonamiStoryModel.Instance.SetQuickAllDirty(true);
 		}
 
-		// Token: 0x06039FA5 RID: 237477 RVA: 0x00DC96F0 File Offset: 0x00DC78F0
+		// Token: 0x0602EEC8 RID: 192200 RVA: 0x00D189C8 File Offset: 0x00D16BC8
 		[NullableContext(2)]
 		private void OnHonamiStoryBagInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -747,7 +746,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			HonamiStoryModel.Instance.SetQuickAllDirty(true);
 		}
 
-		// Token: 0x06039FA6 RID: 237478 RVA: 0x00DC971C File Offset: 0x00DC791C
+		// Token: 0x0602EEC9 RID: 192201 RVA: 0x00D189F4 File Offset: 0x00D16BF4
 		[NullableContext(0)]
 		public UniTask<bool> SendHonamiStoryBagOperateRequest([Nullable(1)] List<HonamiStoryBagUpdateContext> updateContext)
 		{
@@ -759,8 +758,8 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <SendHonamiStoryBagOperateRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FA7 RID: 237479 RVA: 0x00DC9760 File Offset: 0x00DC7960
-		public void RequestHonamiStoryEquipRole(List<int> roleList)
+		// Token: 0x0602EECA RID: 192202 RVA: 0x00D18A38 File Offset: 0x00D16C38
+		public void RequestHonamiStoryEquipRole(IEnumerable<int> roleList)
 		{
 			HonamiStoryEquipRoleRequest honamiStoryEquipRoleRequest = HonamiStoryEquipRoleRequest.Create();
 			honamiStoryEquipRoleRequest.ActivityId = HonamiStoryModel.Instance.ActivityId;
@@ -774,17 +773,17 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryEquipRoleResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryEquipRoleResponse.ErrorCode, 28938, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryEquipRoleResponse.ErrorCode, 27622, null, true, true);
 					return;
 				}
 				RepeatedField<int> roleId = honamiStoryEquipRoleResponse.RoleId;
-				HonamiStoryModel.Instance.UpdateRoleList(roleId.ToList<int>());
+				HonamiStoryModel.Instance.UpdateRoleList(new List<int>(roleId));
 				EventSystem.Instance.Emit(EEventName.OnHonamiStoryRoleEquipChanged);
 				HonamiStoryModel.Instance.SetQuickAllDirty(true);
 			}, 0);
 		}
 
-		// Token: 0x06039FA8 RID: 237480 RVA: 0x00DC97C0 File Offset: 0x00DC79C0
+		// Token: 0x0602EECB RID: 192203 RVA: 0x00D18A98 File Offset: 0x00D16C98
 		[NullableContext(0)]
 		public UniTask<bool> SendHonamiStoryPickUpItemRequest(int backpackId, [Nullable(1)] HonamiStoryItemDataBase itemData, int position)
 		{
@@ -798,7 +797,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <SendHonamiStoryPickUpItemRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FA9 RID: 237481 RVA: 0x00DC9814 File Offset: 0x00DC7A14
+		// Token: 0x0602EECC RID: 192204 RVA: 0x00D18AEC File Offset: 0x00D16CEC
 		[NullableContext(0)]
 		public UniTask<bool> HonamiStoryPickAndEquipRequest([Nullable(1)] HonamiStoryItemDataBase itemData, int pos)
 		{
@@ -811,7 +810,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <HonamiStoryPickAndEquipRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FAA RID: 237482 RVA: 0x00DC9860 File Offset: 0x00DC7A60
+		// Token: 0x0602EECD RID: 192205 RVA: 0x00D18B38 File Offset: 0x00D16D38
 		public void SendHonamiStoryDiscardItemRequest(HonamiStoryBagUpdateContext updateContext)
 		{
 			HonamiStoryDiscardItemRequest request = HonamiStoryDiscardItemRequest.Create();
@@ -825,7 +824,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryDiscardItemResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryDiscardItemResponse.ErrorCode, 24394, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryDiscardItemResponse.ErrorCode, 20810, null, true, true);
 					return;
 				}
 				bool flag = updateContext.BackPackConfigId == 4;
@@ -872,15 +871,15 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FAB RID: 237483 RVA: 0x00DC98B8 File Offset: 0x00DC7AB8
+		// Token: 0x0602EECE RID: 192206 RVA: 0x00D18B90 File Offset: 0x00D16D90
 		[NullableContext(2)]
 		private void OnHonamiStoryBagSizeUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MapField<int, int> bagSize = ((HonamiStoryBagSizeUpdateNotify)msg).BagSize;
-			HonamiStoryModel.Instance.UpdateBackpackSize(bagSize.ToDictionary<int, int>());
+			HonamiStoryModel.Instance.UpdateBackpackSize(new Dictionary<int, int>(bagSize));
 		}
 
-		// Token: 0x06039FAC RID: 237484 RVA: 0x00DC98E4 File Offset: 0x00DC7AE4
+		// Token: 0x0602EECF RID: 192207 RVA: 0x00D18BBC File Offset: 0x00D16DBC
 		[NullableContext(0)]
 		public UniTask<bool> RequestHonamiStoryUnlockSlot([Nullable(1)] HonamiStoryRoleEquipSlotData slotData, int rolePos)
 		{
@@ -893,7 +892,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestHonamiStoryUnlockSlot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FAD RID: 237485 RVA: 0x00DC9930 File Offset: 0x00DC7B30
+		// Token: 0x0602EED0 RID: 192208 RVA: 0x00D18C08 File Offset: 0x00D16E08
 		[return: Nullable(0)]
 		public UniTask<bool> RequestHonamiStoryQuickUnloadAll(List<HonamiStoryItemDataBase> itemList, HashSet<int> posList, EHonamiStoryBackpack backpack)
 		{
@@ -907,17 +906,17 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestHonamiStoryQuickUnloadAll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FAE RID: 237486 RVA: 0x00DC9984 File Offset: 0x00DC7B84
+		// Token: 0x0602EED1 RID: 192209 RVA: 0x00D18C5C File Offset: 0x00D16E5C
 		[NullableContext(2)]
 		private void OnHonamiStoryPermanentTaskInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryResidentTaskInfoUpdateNotify honamiStoryResidentTaskInfoUpdateNotify = (HonamiStoryResidentTaskInfoUpdateNotify)msg;
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
-			activityData.UpdatePermanentTaskDataList(honamiStoryResidentTaskInfoUpdateNotify.ConditionTasks.ToList<ConditionTask>());
+			activityData.UpdatePermanentTaskDataList(honamiStoryResidentTaskInfoUpdateNotify.ConditionTasks);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, activityData.Id);
 		}
 
-		// Token: 0x06039FAF RID: 237487 RVA: 0x00DC99CC File Offset: 0x00DC7BCC
+		// Token: 0x0602EED2 RID: 192210 RVA: 0x00D18CA0 File Offset: 0x00D16EA0
 		public void SendHonamiStoryPermanentTaskRewardRequest(List<int> taskIds, Action callback)
 		{
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -933,7 +932,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryResidentTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryResidentTaskRewardResponse.ErrorCode, 19821, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryResidentTaskRewardResponse.ErrorCode, 15037, null, true, true);
 					return;
 				}
 				foreach (int id in taskIds)
@@ -944,17 +943,17 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FB0 RID: 237488 RVA: 0x00DC9A44 File Offset: 0x00DC7C44
+		// Token: 0x0602EED3 RID: 192211 RVA: 0x00D18D18 File Offset: 0x00D16F18
 		[NullableContext(2)]
 		private void OnHonamiStoryLimitTaskInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryLimitTaskInfoUpdateNotify honamiStoryLimitTaskInfoUpdateNotify = (HonamiStoryLimitTaskInfoUpdateNotify)msg;
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
-			activityData.UpdateLimitTaskDataList(honamiStoryLimitTaskInfoUpdateNotify.ConditionTasks.ToList<ConditionTask>());
+			activityData.UpdateLimitTaskDataList(honamiStoryLimitTaskInfoUpdateNotify.ConditionTasks);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, activityData.Id);
 		}
 
-		// Token: 0x06039FB1 RID: 237489 RVA: 0x00DC9A8C File Offset: 0x00DC7C8C
+		// Token: 0x0602EED4 RID: 192212 RVA: 0x00D18D5C File Offset: 0x00D16F5C
 		public void SendHonamiStoryLimitTaskRewardRequest(List<int> taskIds, Action callback)
 		{
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -970,7 +969,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryLimitTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryLimitTaskRewardResponse.ErrorCode, 27065, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryLimitTaskRewardResponse.ErrorCode, 20813, null, true, true);
 					return;
 				}
 				foreach (int id in taskIds)
@@ -981,17 +980,17 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FB2 RID: 237490 RVA: 0x00DC9B04 File Offset: 0x00DC7D04
+		// Token: 0x0602EED5 RID: 192213 RVA: 0x00D18DD4 File Offset: 0x00D16FD4
 		[NullableContext(2)]
 		public void OnHonamiStoryScoreRewardInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryScoreRewardInfoUpdateNotify honamiStoryScoreRewardInfoUpdateNotify = (HonamiStoryScoreRewardInfoUpdateNotify)msg;
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
-			activityData.UpdateScoreRewardDataList(honamiStoryScoreRewardInfoUpdateNotify.HonamiStoryScoreRewardInfos.ToList<HonamiStoryScoreRewardInfo>());
+			activityData.UpdateScoreRewardDataList(honamiStoryScoreRewardInfoUpdateNotify.HonamiStoryScoreRewardInfos);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, activityData.Id);
 		}
 
-		// Token: 0x06039FB3 RID: 237491 RVA: 0x00DC9B4C File Offset: 0x00DC7D4C
+		// Token: 0x0602EED6 RID: 192214 RVA: 0x00D18E18 File Offset: 0x00D17018
 		public void SendHonamiStoryScoreRewardRequest(List<int> scoreRewardIds, Action callback)
 		{
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -1007,7 +1006,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryScoreRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryScoreRewardResponse.ErrorCode, 26582, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryScoreRewardResponse.ErrorCode, 27500, null, true, true);
 					return;
 				}
 				HonamiStoryActivityData activityData2 = HonamiStoryModel.Instance.GetActivityData(true);
@@ -1019,12 +1018,12 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FB4 RID: 237492 RVA: 0x00DC9BBC File Offset: 0x00DC7DBC
+		// Token: 0x0602EED7 RID: 192215 RVA: 0x00D18E88 File Offset: 0x00D17088
 		[NullableContext(2)]
 		private void OnHonamiStoryAddWeaponNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryAddWeaponNotify honamiStoryAddWeaponNotify = (HonamiStoryAddWeaponNotify)msg;
-			HonamiStoryModel.Instance.UpdateWeaponDataList(honamiStoryAddWeaponNotify.WeaponIds.ToList<int>());
+			HonamiStoryModel.Instance.UpdateWeaponDataList(honamiStoryAddWeaponNotify.WeaponIds);
 			List<RewardItemData> list = new List<RewardItemData>();
 			foreach (int num in honamiStoryAddWeaponNotify.WeaponIds)
 			{
@@ -1044,7 +1043,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x06039FB5 RID: 237493 RVA: 0x00DC9C98 File Offset: 0x00DC7E98
+		// Token: 0x0602EED8 RID: 192216 RVA: 0x00D18F60 File Offset: 0x00D17160
 		public void SendHonamiStoryWeaponDressRequest(int selectWeaponId, int selectPosition, Action callback)
 		{
 			HonamiStoryWeaponDressRequest honamiStoryWeaponDressRequest = HonamiStoryWeaponDressRequest.Create();
@@ -1060,7 +1059,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryWeaponDressResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryWeaponDressResponse.ErrorCode, 29480, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryWeaponDressResponse.ErrorCode, 26893, null, true, true);
 					return;
 				}
 				int weaponItemId = honamiStoryWeaponDressResponse.WeaponItemId;
@@ -1080,15 +1079,15 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FB6 RID: 237494 RVA: 0x00DC9CF4 File Offset: 0x00DC7EF4
+		// Token: 0x0602EED9 RID: 192217 RVA: 0x00D18FBC File Offset: 0x00D171BC
 		[NullableContext(2)]
 		private void OnHonamiStoryItemCollectionInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryItemCollectionInfoUpdateNotify honamiStoryItemCollectionInfoUpdateNotify = (HonamiStoryItemCollectionInfoUpdateNotify)msg;
-			HonamiStoryModel.Instance.GetActivityData(true).UpdateItemCollectionDataList(honamiStoryItemCollectionInfoUpdateNotify.HonamiStoryItemCollectionInfos.ToList<HonamiStoryItemCollectionInfo>());
+			HonamiStoryModel.Instance.GetActivityData(true).UpdateItemCollectionDataList(honamiStoryItemCollectionInfoUpdateNotify.HonamiStoryItemCollectionInfos);
 		}
 
-		// Token: 0x06039FB7 RID: 237495 RVA: 0x00DC9D24 File Offset: 0x00DC7F24
+		// Token: 0x0602EEDA RID: 192218 RVA: 0x00D18FE8 File Offset: 0x00D171E8
 		public void SendHonamiStoryItemEnterRequest(bool isTower, int dangerLv, bool isBuy)
 		{
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -1106,15 +1105,16 @@ namespace CSharpScript.Game.Module.HonamiStory
 				ActivityId = activityData.Id
 			};
 			InstanceDungeonModel.Instance.InstanceEnterContentText.HonamiStoryEnterCtx = honamiStoryEnterCtx;
-			int[] allRoleIdList = HonamiStoryModel.Instance.GetAllRoleIdList();
+			IEnumerable<int> allRoleIdList = HonamiStoryModel.Instance.GetAllRoleIdList();
 			int areaInstId = activityData.AreaInstId;
-			InstanceDungeonController.Instance.PrewarTeamFightRequest(areaInstId, allRoleIdList.ToList<int>(), 0, 0, null, null).ContinueWith(delegate(bool value)
+			List<int> roleIds = new List<int>(allRoleIdList);
+			InstanceDungeonController.Instance.PrewarTeamFightRequest(areaInstId, roleIds, 0, 0, null, null).ContinueWith(delegate(bool value)
 			{
 				HonamiStoryModel.Instance.SetQuickAllDirty(true);
 			});
 		}
 
-		// Token: 0x06039FB8 RID: 237496 RVA: 0x00DC9DF8 File Offset: 0x00DC7FF8
+		// Token: 0x0602EEDB RID: 192219 RVA: 0x00D190BC File Offset: 0x00D172BC
 		public void SendHonamiStoryItemCollectionRequest(List<int> itemCollectionIdList)
 		{
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
@@ -1130,7 +1130,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryItemCollectionResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryItemCollectionResponse.ErrorCode, 16494, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryItemCollectionResponse.ErrorCode, 17176, null, true, true);
 					return;
 				}
 				if (honamiStoryItemCollectionResponse.HonamiStoryItemCollectionId.Count <= 0)
@@ -1145,7 +1145,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}, 0);
 		}
 
-		// Token: 0x06039FB9 RID: 237497 RVA: 0x00DC9E5C File Offset: 0x00DC805C
+		// Token: 0x0602EEDC RID: 192220 RVA: 0x00D19120 File Offset: 0x00D17320
 		public void SendHonamiStoryActivateTalentRequest(int talentId, Action callback)
 		{
 			HonamiStoryActivateTalentRequest honamiStoryActivateTalentRequest = HonamiStoryActivateTalentRequest.Create();
@@ -1159,14 +1159,14 @@ namespace CSharpScript.Game.Module.HonamiStory
 				}
 				if (honamiStoryActivateTalentResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryActivateTalentResponse.ErrorCode, 28751, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(honamiStoryActivateTalentResponse.ErrorCode, 16479, null, true, true);
 					return;
 				}
 				callback();
 			}, 0);
 		}
 
-		// Token: 0x06039FBA RID: 237498 RVA: 0x00DC9EA0 File Offset: 0x00DC80A0
+		// Token: 0x0602EEDD RID: 192221 RVA: 0x00D19164 File Offset: 0x00D17364
 		[NullableContext(2)]
 		private void OnHonamiStoryTalentInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1175,7 +1175,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			EventSystem.Instance.Emit(EEventName.OnHonamiStoryTechNodeLevelUpdate);
 		}
 
-		// Token: 0x06039FBB RID: 237499 RVA: 0x00DC9ED4 File Offset: 0x00DC80D4
+		// Token: 0x0602EEDE RID: 192222 RVA: 0x00D19198 File Offset: 0x00D17398
 		[NullableContext(2)]
 		private void OnHonamiStoryTotalRevenueNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1183,7 +1183,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			HonamiStoryModel.Instance.SetTotalRevenueInternal(honamiStoryTotalRevenueNotify.TotalRevenue);
 		}
 
-		// Token: 0x06039FBC RID: 237500 RVA: 0x00DC9EF8 File Offset: 0x00DC80F8
+		// Token: 0x0602EEDF RID: 192223 RVA: 0x00D191BC File Offset: 0x00D173BC
 		[NullableContext(2)]
 		private void OnHonamiStoryAreaTaskInfoRefreshNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1191,13 +1191,13 @@ namespace CSharpScript.Game.Module.HonamiStory
 			HonamiStoryModel.Instance.GetActivityData(true).InitSubQuestTaskDataList(honamiStoryAreaTaskInfoRefreshNotify.ConditionTasks);
 		}
 
-		// Token: 0x06039FBD RID: 237501 RVA: 0x00DC9F24 File Offset: 0x00DC8124
+		// Token: 0x0602EEE0 RID: 192224 RVA: 0x00D191E8 File Offset: 0x00D173E8
 		[NullableContext(2)]
 		private void OnHonamiStoryAreaTaskInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryAreaTaskInfoUpdateNotify honamiStoryAreaTaskInfoUpdateNotify = (HonamiStoryAreaTaskInfoUpdateNotify)msg;
 			HonamiStoryActivityData activityData = HonamiStoryModel.Instance.GetActivityData(true);
-			activityData.UpdateSubQuestTaskDataList(honamiStoryAreaTaskInfoUpdateNotify.ConditionTasks.ToList<ConditionTask>());
+			activityData.UpdateSubQuestTaskDataList(honamiStoryAreaTaskInfoUpdateNotify.ConditionTasks);
 			foreach (ConditionTask conditionTask in honamiStoryAreaTaskInfoUpdateNotify.ConditionTasks)
 			{
 				HonamiStorySubQuestData subQuestTaskData = activityData.GetSubQuestTaskData(conditionTask.Id);
@@ -1209,15 +1209,15 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x06039FBE RID: 237502 RVA: 0x00DC9FC8 File Offset: 0x00DC81C8
+		// Token: 0x0602EEE1 RID: 192225 RVA: 0x00D19284 File Offset: 0x00D17484
 		[NullableContext(2)]
 		private void OnHonamiStoryRoleUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryRoleUpdateNotify honamiStoryRoleUpdateNotify = (HonamiStoryRoleUpdateNotify)msg;
-			HonamiStoryModel.Instance.GetPlayerBackpackData().RefreshRoleInfo(honamiStoryRoleUpdateNotify.RoleId.ToList<int>());
+			HonamiStoryModel.Instance.GetPlayerBackpackData().RefreshRoleInfo(honamiStoryRoleUpdateNotify.RoleId);
 		}
 
-		// Token: 0x06039FBF RID: 237503 RVA: 0x00DC9FF8 File Offset: 0x00DC81F8
+		// Token: 0x0602EEE2 RID: 192226 RVA: 0x00D192B0 File Offset: 0x00D174B0
 		[NullableContext(2)]
 		private void OnHonamiStoryLifeSupportNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1226,15 +1226,15 @@ namespace CSharpScript.Game.Module.HonamiStory
 			EventSystem.Instance.Emit(EEventName.OnHonamiStoryLifeSupportLevelUp);
 		}
 
-		// Token: 0x06039FC0 RID: 237504 RVA: 0x00DCA034 File Offset: 0x00DC8234
+		// Token: 0x0602EEE3 RID: 192227 RVA: 0x00D192EC File Offset: 0x00D174EC
 		[NullableContext(2)]
 		private void OnHonamiStoryTopInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HonamiStoryTopInfoNotify honamiStoryTopInfoNotify = (HonamiStoryTopInfoNotify)msg;
-			HonamiStoryModel.Instance.GetActivityData(true).RefreshTowerData(honamiStoryTopInfoNotify.HonamiStoryTopInfos.ToList<HonamiStoryTopInfo>());
+			HonamiStoryModel.Instance.GetActivityData(true).RefreshTowerData(honamiStoryTopInfoNotify.HonamiStoryTopInfos);
 		}
 
-		// Token: 0x06039FC1 RID: 237505 RVA: 0x00DCA064 File Offset: 0x00DC8264
+		// Token: 0x0602EEE4 RID: 192228 RVA: 0x00D19318 File Offset: 0x00D17518
 		[NullableContext(0)]
 		public UniTask<bool> RequestHonamiStoryLifeSupportUp()
 		{
@@ -1245,7 +1245,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestHonamiStoryLifeSupportUp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FC2 RID: 237506 RVA: 0x00DCA0A0 File Offset: 0x00DC82A0
+		// Token: 0x0602EEE5 RID: 192229 RVA: 0x00D19354 File Offset: 0x00D17554
 		[NullableContext(0)]
 		public UniTask<bool> RequestSwitchItem([Nullable(1)] HonamiStoryItemDataBase itemData, [Nullable(2)] HonamiStoryItemDataBase exchangeItemData, int position, int equipPosition, EHonamiStoryBackpack sourceBag, EHonamiStoryBackpack targetBag)
 		{
@@ -1262,7 +1262,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestSwitchItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FC3 RID: 237507 RVA: 0x00DCA110 File Offset: 0x00DC8310
+		// Token: 0x0602EEE6 RID: 192230 RVA: 0x00D193C4 File Offset: 0x00D175C4
 		[NullableContext(0)]
 		public UniTask<bool> RequestSwitchInSameBag([Nullable(1)] HonamiStoryItemDataBase itemData, int position, EHonamiStoryBackpack bag)
 		{
@@ -1276,7 +1276,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestSwitchInSameBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FC4 RID: 237508 RVA: 0x00DCA164 File Offset: 0x00DC8364
+		// Token: 0x0602EEE7 RID: 192231 RVA: 0x00D19418 File Offset: 0x00D17618
 		[return: Nullable(0)]
 		public UniTask<bool> RequestEquipFromPickUpBox(HonamiStoryItemDataBase itemData, HonamiStoryItemDataBase exchangeItemData, int equipPosition, int bagPosition)
 		{
@@ -1291,7 +1291,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestEquipFromPickUpBox>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FC5 RID: 237509 RVA: 0x00DCA1C0 File Offset: 0x00DC83C0
+		// Token: 0x0602EEE8 RID: 192232 RVA: 0x00D19474 File Offset: 0x00D17674
 		public void RequestDiscardItem(HonamiStoryItemDataBase itemData, EHonamiStoryBackpack sourceBag)
 		{
 			HonamiStoryBagUpdateContext honamiStoryBagUpdateContext = HonamiStoryBagUpdateContext.Create();
@@ -1301,7 +1301,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			this.SendHonamiStoryDiscardItemRequest(honamiStoryBagUpdateContext);
 		}
 
-		// Token: 0x06039FC6 RID: 237510 RVA: 0x00DCA1F4 File Offset: 0x00DC83F4
+		// Token: 0x0602EEE9 RID: 192233 RVA: 0x00D194A8 File Offset: 0x00D176A8
 		[NullableContext(0)]
 		public UniTask<bool> RequestHonamiStorySellItem([Nullable(1)] List<IHonamiStoryItemSellInfo> itemInfoList)
 		{
@@ -1313,7 +1313,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestHonamiStorySellItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FC7 RID: 237511 RVA: 0x00DCA238 File Offset: 0x00DC8438
+		// Token: 0x0602EEEA RID: 192234 RVA: 0x00D194EC File Offset: 0x00D176EC
 		[NullableContext(0)]
 		public UniTask<bool> RequestHonamiStoryLockItem(int itemUid, EHonamiStoryBackpack backType, bool isLock)
 		{
@@ -1327,7 +1327,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <RequestHonamiStoryLockItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039FC8 RID: 237512 RVA: 0x00DCA28C File Offset: 0x00DC848C
+		// Token: 0x0602EEEB RID: 192235 RVA: 0x00D19540 File Offset: 0x00D17740
 		private void OpenHonamiWeaponRewardView(List<RewardItemData> rewardItemDataList)
 		{
 			RewardData<ICommonRewardInfo> rewardData = ItemRewardModel.Instance.RefreshCommonRewardDataFromConfig(1009, EUiViewName.HonamiWeaponRewardView, rewardItemDataList, null, null, null, null, null, true, false);
@@ -1338,8 +1338,8 @@ namespace CSharpScript.Game.Module.HonamiStory
 			UiManager.Instance.OpenView(EUiViewName.HonamiWeaponRewardView, rewardData, null);
 		}
 
-		// Token: 0x17008AE2 RID: 35554
-		// (get) Token: 0x06039FC9 RID: 237513 RVA: 0x00DCA2CB File Offset: 0x00DC84CB
+		// Token: 0x17005EAE RID: 24238
+		// (get) Token: 0x0602EEEC RID: 192236 RVA: 0x00D1957F File Offset: 0x00D1777F
 		public static HonamiStoryController Instance
 		{
 			get
@@ -1348,7 +1348,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x06039FCA RID: 237514 RVA: 0x00DCA2D2 File Offset: 0x00DC84D2
+		// Token: 0x0602EEED RID: 192237 RVA: 0x00D19586 File Offset: 0x00D17786
 		public static HonamiStoryController GetOrCreateInstance()
 		{
 			if (HonamiStoryController._Instance == null)
@@ -1358,7 +1358,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return HonamiStoryController._Instance;
 		}
 
-		// Token: 0x06039FCB RID: 237515 RVA: 0x00DCA2E6 File Offset: 0x00DC84E6
+		// Token: 0x0602EEEE RID: 192238 RVA: 0x00D1959A File Offset: 0x00D1779A
 		public static bool CreateInstance()
 		{
 			if (HonamiStoryController._Instance != null)
@@ -1369,24 +1369,24 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return true;
 		}
 
-		// Token: 0x06039FCC RID: 237516 RVA: 0x00DCA2FC File Offset: 0x00DC84FC
+		// Token: 0x0602EEEF RID: 192239 RVA: 0x00D195B0 File Offset: 0x00D177B0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039FCD RID: 237517 RVA: 0x00DCA2FE File Offset: 0x00DC84FE
+		// Token: 0x0602EEF0 RID: 192240 RVA: 0x00D195B2 File Offset: 0x00D177B2
 		public static void ResetStaticDefaultValue()
 		{
 			HonamiStoryController._Instance = null;
 		}
 
-		// Token: 0x06039FCE RID: 237518 RVA: 0x00DCA306 File Offset: 0x00DC8506
+		// Token: 0x0602EEF1 RID: 192241 RVA: 0x00D195BA File Offset: 0x00D177BA
 		static HonamiStoryController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HonamiStoryController.CreateStaticDefaultValue), new Action(HonamiStoryController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E380 RID: 123776
+		// Token: 0x04018E1D RID: 101917
 		[Nullable(2)]
 		private static HonamiStoryController _Instance;
 	}

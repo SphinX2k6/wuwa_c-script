@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BEB RID: 27627
+	// Token: 0x02005D64 RID: 23908
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemGuessJokerSelectRoleView : OpenSystemBase
 	{
-		// Token: 0x060443D5 RID: 279509 RVA: 0x010D14BE File Offset: 0x010CF6BE
+		// Token: 0x0603A52D RID: 238893 RVA: 0x0107B412 File Offset: 0x01079612
 		public OpenSystemGuessJokerSelectRoleView(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x060443D6 RID: 279510 RVA: 0x010D14C8 File Offset: 0x010CF6C8
+		// Token: 0x0603A52E RID: 238894 RVA: 0x0107B41C File Offset: 0x0107961C
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060443D7 RID: 279511 RVA: 0x010D1504 File Offset: 0x010CF704
+		// Token: 0x0603A52F RID: 238895 RVA: 0x0107B458 File Offset: 0x01079658
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

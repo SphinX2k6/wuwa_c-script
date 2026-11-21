@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200094C RID: 2380
+	// Token: 0x020009FB RID: 2555
 	public static class EFollowDecorationTypeExtensions
 	{
-		// Token: 0x06003587 RID: 13703 RVA: 0x0008BB4C File Offset: 0x00089D4C
+		// Token: 0x060038FC RID: 14588 RVA: 0x00093804 File Offset: 0x00091A04
 		public static string ToEnumString(this EFollowDecorationType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003588 RID: 13704 RVA: 0x0008BB74 File Offset: 0x00089D74
+		// Token: 0x060038FD RID: 14589 RVA: 0x0009382C File Offset: 0x00091A2C
 		public static EFollowDecorationType FromString(string name)
 		{
 			EFollowDecorationType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003589 RID: 13705 RVA: 0x0008BB9D File Offset: 0x00089D9D
+		// Token: 0x060038FE RID: 14590 RVA: 0x00093855 File Offset: 0x00091A55
 		public static bool TryFromString(string name, out EFollowDecorationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600358A RID: 13706 RVA: 0x0008BBC2 File Offset: 0x00089DC2
+		// Token: 0x060038FF RID: 14591 RVA: 0x0009387A File Offset: 0x00091A7A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600358B RID: 13707 RVA: 0x0008BBD2 File Offset: 0x00089DD2
+		// Token: 0x06003900 RID: 14592 RVA: 0x0009388A File Offset: 0x00091A8A
 		public static EFollowDecorationType[] GetValues()
 		{
 			return new EFollowDecorationType[1];
 		}
 
-		// Token: 0x0600358C RID: 13708 RVA: 0x0008BBDA File Offset: 0x00089DDA
+		// Token: 0x06003901 RID: 14593 RVA: 0x00093892 File Offset: 0x00091A92
 		public static string[] GetNames()
 		{
 			return new string[]

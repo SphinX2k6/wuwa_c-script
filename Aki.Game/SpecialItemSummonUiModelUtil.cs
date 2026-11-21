@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A3C RID: 10812
+// Token: 0x02001FB7 RID: 8119
 [NullableContext(1)]
 [Nullable(0)]
 public static class SpecialItemSummonUiModelUtil
 {
-	// Token: 0x06016841 RID: 92225 RVA: 0x005B5919 File Offset: 0x005B3B19
+	// Token: 0x06014262 RID: 82530 RVA: 0x005E1A81 File Offset: 0x005DFC81
 	public static void CreateSummon()
 	{
 		UiSceneManager.Instance.InitSpecialItemSummonSkeletalHandle();
 	}
 
-	// Token: 0x06016842 RID: 92226 RVA: 0x005B5925 File Offset: 0x005B3B25
+	// Token: 0x06014263 RID: 82531 RVA: 0x005E1A8D File Offset: 0x005DFC8D
 	public static void DestroySummon()
 	{
 		UiSceneManager.Instance.DestroySpecialItemSummonSkeletalHandle();
 	}
 
-	// Token: 0x06016843 RID: 92227 RVA: 0x005B5931 File Offset: 0x005B3B31
+	// Token: 0x06014264 RID: 82532 RVA: 0x005E1A99 File Offset: 0x005DFC99
 	[NullableContext(2)]
 	public static UiModelBase GetSummonModel()
 	{
@@ -32,7 +32,7 @@ public static class SpecialItemSummonUiModelUtil
 		return specialItemSummonSkeletalHandle.Model;
 	}
 
-	// Token: 0x06016844 RID: 92228 RVA: 0x005B5948 File Offset: 0x005B3B48
+	// Token: 0x06014265 RID: 82533 RVA: 0x005E1AB0 File Offset: 0x005DFCB0
 	public static void ShowSummon(bool isShow)
 	{
 		UiModelBase summonModel = SpecialItemSummonUiModelUtil.GetSummonModel();
@@ -43,7 +43,7 @@ public static class SpecialItemSummonUiModelUtil
 		UiModelUtil.Instance.SetVisible(summonModel, isShow);
 	}
 
-	// Token: 0x06016845 RID: 92229 RVA: 0x005B596C File Offset: 0x005B3B6C
+	// Token: 0x06014266 RID: 82534 RVA: 0x005E1AD4 File Offset: 0x005DFCD4
 	public static void SetTransform(string caseTag)
 	{
 		UiModelBase summonModel = SpecialItemSummonUiModelUtil.GetSummonModel();
@@ -59,7 +59,7 @@ public static class SpecialItemSummonUiModelUtil
 		uiModelActorComponent.SetTransformByTag(caseTag);
 	}
 
-	// Token: 0x06016846 RID: 92230 RVA: 0x005B5994 File Offset: 0x005B3B94
+	// Token: 0x06014267 RID: 82535 RVA: 0x005E1AFC File Offset: 0x005DFCFC
 	public static void PlayDisplayMontage(string montagePath, string sectionName)
 	{
 		UiModelBase summonModel = SpecialItemSummonUiModelUtil.GetSummonModel();
@@ -89,7 +89,7 @@ public static class SpecialItemSummonUiModelUtil
 		uiModelAnimationComponent.JumpToSection(FNameUtil.GetDynamicFName(sectionName).Value, loadedMontage);
 	}
 
-	// Token: 0x06016847 RID: 92231 RVA: 0x005B5A40 File Offset: 0x005B3C40
+	// Token: 0x06014268 RID: 82536 RVA: 0x005E1BA8 File Offset: 0x005DFDA8
 	public static void JumpToDisplaySection(string montagePath, string sectionName)
 	{
 		UiModelBase summonModel = SpecialItemSummonUiModelUtil.GetSummonModel();
@@ -102,7 +102,7 @@ public static class SpecialItemSummonUiModelUtil
 		uiModelAnimationComponent.JumpToSection(FNameUtil.GetDynamicFName(sectionName).Value, loadedMontage);
 	}
 
-	// Token: 0x06016848 RID: 92232 RVA: 0x005B5A84 File Offset: 0x005B3C84
+	// Token: 0x06014269 RID: 82537 RVA: 0x005E1BEC File Offset: 0x005DFDEC
 	public static FName? GetCurrentDisplaySection()
 	{
 		UiModelBase summonModel = SpecialItemSummonUiModelUtil.GetSummonModel();
@@ -114,7 +114,7 @@ public static class SpecialItemSummonUiModelUtil
 		return uiModelAnimationComponent.GetCurrentSection();
 	}
 
-	// Token: 0x06016849 RID: 92233 RVA: 0x005B5AB5 File Offset: 0x005B3CB5
+	// Token: 0x0601426A RID: 82538 RVA: 0x005E1C1D File Offset: 0x005DFE1D
 	[return: Nullable(2)]
 	public static UAnimMontage GetLoadedMontage(string montagePath)
 	{
@@ -123,7 +123,7 @@ public static class SpecialItemSummonUiModelUtil
 		return ((uiModelLoadComponent != null) ? uiModelLoadComponent.GetLoadedResource(montagePath) : null) as UAnimMontage;
 	}
 
-	// Token: 0x0601684A RID: 92234 RVA: 0x005B5ADA File Offset: 0x005B3CDA
+	// Token: 0x0601426B RID: 82539 RVA: 0x005E1C42 File Offset: 0x005DFE42
 	public static void StopDisplayMontage()
 	{
 		UiModelBase summonModel = SpecialItemSummonUiModelUtil.GetSummonModel();
@@ -135,7 +135,7 @@ public static class SpecialItemSummonUiModelUtil
 		uiModelAnimationComponent.StopMontage(0f);
 	}
 
-	// Token: 0x0601684B RID: 92235 RVA: 0x005B5AFC File Offset: 0x005B3CFC
+	// Token: 0x0601426C RID: 82540 RVA: 0x005E1C64 File Offset: 0x005DFE64
 	public static void LoadSummon(int modelId, string displayMontagePath = "", [Nullable(2)] Action onLoadFinished = null)
 	{
 		SpecialItemSummonUiModelUtil.<>c__DisplayClass10_0 CS$<>8__locals1 = new SpecialItemSummonUiModelUtil.<>c__DisplayClass10_0();

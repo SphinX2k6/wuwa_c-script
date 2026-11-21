@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x020001B5 RID: 437
+	// Token: 0x020001C7 RID: 455
 	public class ConfigCustomSequenceLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A41 RID: 2625 RVA: 0x000938A0 File Offset: 0x00091AA0
+		// Token: 0x06000AAD RID: 2733 RVA: 0x000997D8 File Offset: 0x000979D8
 		static ConfigCustomSequenceLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCustomSequenceLang.CreateStaticDefaultValue), new Action(ConfigCustomSequenceLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A42 RID: 2626 RVA: 0x000938C0 File Offset: 0x00091AC0
+		// Token: 0x06000AAE RID: 2734 RVA: 0x000997F8 File Offset: 0x000979F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCustomSequenceLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigCustomSequenceLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x06000A43 RID: 2627 RVA: 0x00093933 File Offset: 0x00091B33
+		// Token: 0x06000AAF RID: 2735 RVA: 0x0009986B File Offset: 0x00097A6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCustomSequenceLang.LogPair = null;
@@ -35,13 +35,13 @@ namespace Aki.Config
 			ConfigCustomSequenceLang.HandleId = 0;
 		}
 
-		// Token: 0x06000A44 RID: 2628 RVA: 0x00093947 File Offset: 0x00091B47
+		// Token: 0x06000AB0 RID: 2736 RVA: 0x0009987F File Offset: 0x00097A7F
 		public static void Init()
 		{
 			ConfigCustomSequenceLang.HandleId = ConfigCommon.GetLangStatementId("CustomSequence", "lang_custom_sequence.db", "select content from `CustomSequence` where id = ?", "");
 		}
 
-		// Token: 0x06000A45 RID: 2629 RVA: 0x00093968 File Offset: 0x00091B68
+		// Token: 0x06000AB1 RID: 2737 RVA: 0x000998A0 File Offset: 0x00097AA0
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
@@ -107,19 +107,19 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x04000BD7 RID: 3031
+		// Token: 0x04000C55 RID: 3157
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x04000BD8 RID: 3032
+		// Token: 0x04000C56 RID: 3158
 		private const string DB = "lang_custom_sequence.db";
 
-		// Token: 0x04000BD9 RID: 3033
+		// Token: 0x04000C57 RID: 3159
 		private const string TABLE = "CustomSequence";
 
-		// Token: 0x04000BDA RID: 3034
+		// Token: 0x04000C58 RID: 3160
 		private const string COMMAND = "select content from `CustomSequence` where id = ?";
 
-		// Token: 0x04000BDB RID: 3035
+		// Token: 0x04000C59 RID: 3161
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BDC RID: 3036
+		// Token: 0x04000C5A RID: 3162
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<int, Dictionary<string, string>> LangCache;
 
-		// Token: 0x04000BDD RID: 3037
+		// Token: 0x04000C5B RID: 3163
 		private static int HandleId;
 	}
 }

@@ -5,12 +5,12 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F68 RID: 20328
+	// Token: 0x02003F31 RID: 16177
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackSceneItemHighlightManager : QuickHackHighlightManager
 	{
-		// Token: 0x06034134 RID: 213300 RVA: 0x00C36C7C File Offset: 0x00C34E7C
+		// Token: 0x06028FA2 RID: 167842 RVA: 0x00B8041C File Offset: 0x00B7E61C
 		public override void RefreshTargetsHighlight(IEnumerable<EntityHandle> lockTargets, IEnumerable<EntityHandle> onScreenTargets)
 		{
 			foreach (EntityHandle entityHandle in lockTargets)
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034135 RID: 213301 RVA: 0x00C36CFC File Offset: 0x00C34EFC
+		// Token: 0x06028FA3 RID: 167843 RVA: 0x00B8049C File Offset: 0x00B7E69C
 		public override void RemoveAllHighlight()
 		{
 			foreach (EntityHandle entityHandle in this.ShowGuideLineEntitySet)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.CheckedEntityIdSet.Clear();
 		}
 
-		// Token: 0x06034136 RID: 213302 RVA: 0x00C36D80 File Offset: 0x00C34F80
+		// Token: 0x06028FA4 RID: 167844 RVA: 0x00B80520 File Offset: 0x00B7E720
 		private void ShowGuideLine(EntityHandle entityHandle)
 		{
 			int id = entityHandle.Id;
@@ -75,10 +75,10 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BAA5 RID: 113317
+		// Token: 0x0401647A RID: 91258
 		private readonly HashSet<int> CheckedEntityIdSet = new HashSet<int>();
 
-		// Token: 0x0401BAA6 RID: 113318
+		// Token: 0x0401647B RID: 91259
 		private readonly HashSet<EntityHandle> ShowGuideLineEntitySet = new HashSet<EntityHandle>();
 	}
 }

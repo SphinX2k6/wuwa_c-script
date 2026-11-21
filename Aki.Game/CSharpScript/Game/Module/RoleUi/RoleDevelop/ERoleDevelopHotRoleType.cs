@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D0B RID: 19723
+	// Token: 0x02003CBE RID: 15550
 	public enum ERoleDevelopHotRoleType
 	{
-		// Token: 0x0401B1DA RID: 111066
+		// Token: 0x04015B65 RID: 88933
 		Normal,
-		// Token: 0x0401B1DB RID: 111067
+		// Token: 0x04015B66 RID: 88934
 		CrossVersionProspect,
-		// Token: 0x0401B1DC RID: 111068
+		// Token: 0x04015B67 RID: 88935
 		CurrentVersionProspect,
-		// Token: 0x0401B1DD RID: 111069
+		// Token: 0x04015B68 RID: 88936
 		Returning,
-		// Token: 0x0401B1DE RID: 111070
+		// Token: 0x04015B69 RID: 88937
 		Weapon
 	}
 }

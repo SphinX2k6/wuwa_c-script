@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072A4 RID: 29348
+	// Token: 0x02006423 RID: 25635
 	public enum ECollisionBlendState
 	{
-		// Token: 0x04025F46 RID: 155462
+		// Token: 0x04021219 RID: 135705
 		None,
-		// Token: 0x04025F47 RID: 155463
+		// Token: 0x0402121A RID: 135706
 		BlendIn,
-		// Token: 0x04025F48 RID: 155464
+		// Token: 0x0402121B RID: 135707
 		Loop,
-		// Token: 0x04025F49 RID: 155465
+		// Token: 0x0402121C RID: 135708
 		BlendOut
 	}
 }

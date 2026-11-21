@@ -3,15 +3,15 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200496A RID: 18794
+	// Token: 0x020038E2 RID: 14562
 	public class GamepadCheckDragComponent : GamepadInteractComponentBase
 	{
-		// Token: 0x0603104F RID: 200783 RVA: 0x00B6162E File Offset: 0x00B5F82E
+		// Token: 0x06025B7F RID: 154495 RVA: 0x00A9C50E File Offset: 0x00A9A70E
 		public GamepadCheckDragComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031050 RID: 200784 RVA: 0x00B61638 File Offset: 0x00B5F838
+		// Token: 0x06025B80 RID: 154496 RVA: 0x00A9C518 File Offset: 0x00A9A718
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (this.IsUseDrag)
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031051 RID: 200785 RVA: 0x00B616B4 File Offset: 0x00B5F8B4
+		// Token: 0x06025B81 RID: 154497 RVA: 0x00A9C594 File Offset: 0x00A9A794
 		protected override void OnRelease(HotKeyMap config)
 		{
 			if (this.IsUseDrag)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.SimulationPointerTrigger(false);
 		}
 
-		// Token: 0x06031052 RID: 200786 RVA: 0x00B616EF File Offset: 0x00B5F8EF
+		// Token: 0x06025B82 RID: 154498 RVA: 0x00A9C5CF File Offset: 0x00A9A7CF
 		protected override void OnRefreshByControllerChange()
 		{
 			if (this.IsUseDrag)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A491 RID: 107665
+		// Token: 0x04014D04 RID: 85252
 		private bool IsUseDrag;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.SmallItemGrid
 {
-	// Token: 0x02005B4B RID: 23371
+	// Token: 0x02004B28 RID: 19240
 	public class SmallItemGridRoleDevelopStateTagComponent : SmallItemGridComponent
 	{
-		// Token: 0x0603B2BD RID: 242365 RVA: 0x00E1BC60 File Offset: 0x00E19E60
+		// Token: 0x060301FE RID: 197118 RVA: 0x00D6BFF4 File Offset: 0x00D6A1F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,20 +22,20 @@ namespace CSharpScript.Game.Module.Common.SmallItemGrid
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B2BE RID: 242366 RVA: 0x00E1BCA8 File Offset: 0x00E19EA8
+		// Token: 0x060301FF RID: 197119 RVA: 0x00D6C03C File Offset: 0x00D6A23C
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemBRoleDevelopTag";
 		}
 
-		// Token: 0x0603B2BF RID: 242367 RVA: 0x00E1BCAF File Offset: 0x00E19EAF
+		// Token: 0x06030200 RID: 197120 RVA: 0x00D6C043 File Offset: 0x00D6A243
 		public override EItemGridComponentLayoutLevel GetLayoutLevel()
 		{
 			return EItemGridComponentLayoutLevel.Top;
 		}
 
-		// Token: 0x0603B2C0 RID: 242368 RVA: 0x00E1BCB4 File Offset: 0x00E19EB4
+		// Token: 0x06030201 RID: 197121 RVA: 0x00D6C048 File Offset: 0x00D6A248
 		[NullableContext(2)]
 		protected override void OnRefresh(object data)
 		{
@@ -64,10 +64,10 @@ namespace CSharpScript.Game.Module.Common.SmallItemGrid
 			this.SetActive(false);
 		}
 
-		// Token: 0x0200BD77 RID: 48503
+		// Token: 0x0200A780 RID: 42880
 		private class EChildType
 		{
-			// Token: 0x0403926C RID: 234092
+			// Token: 0x04033C38 RID: 212024
 			public const int TexIcon = 0;
 		}
 	}

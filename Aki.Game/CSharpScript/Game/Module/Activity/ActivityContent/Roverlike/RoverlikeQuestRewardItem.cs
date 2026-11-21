@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006172 RID: 24946
+	// Token: 0x020050F0 RID: 20720
 	public class RoverlikeQuestRewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F0F0 RID: 258288 RVA: 0x00F3CEB4 File Offset: 0x00F3B0B4
+		// Token: 0x06033DB0 RID: 212400 RVA: 0x00E83D88 File Offset: 0x00E81F88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F0F1 RID: 258289 RVA: 0x00F3D020 File Offset: 0x00F3B220
+		// Token: 0x06033DB1 RID: 212401 RVA: 0x00E83EF4 File Offset: 0x00E820F4
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(5), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603F0F2 RID: 258290 RVA: 0x00F3D077 File Offset: 0x00F3B277
+		// Token: 0x06033DB2 RID: 212402 RVA: 0x00E83F4B File Offset: 0x00E8214B
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603F0F3 RID: 258291 RVA: 0x00F3D090 File Offset: 0x00F3B290
+		// Token: 0x06033DB3 RID: 212403 RVA: 0x00E83F64 File Offset: 0x00E82164
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.TaskId = data;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			uuiitem.SetUIActive(false);
 		}
 
-		// Token: 0x0603F0F4 RID: 258292 RVA: 0x00F3D258 File Offset: 0x00F3B458
+		// Token: 0x06033DB4 RID: 212404 RVA: 0x00E8412C File Offset: 0x00E8232C
 		public override void Clear()
 		{
 			GenericScrollViewNew<CommonItemSmallItemGrid, TItem> rewardScroll = this.RewardScroll;
@@ -155,14 +155,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			rewardScroll.RefreshByData(new List<TItem>(), null, false);
 		}
 
-		// Token: 0x0603F0F5 RID: 258293 RVA: 0x00F3D271 File Offset: 0x00F3B471
+		// Token: 0x06033DB5 RID: 212405 RVA: 0x00E84145 File Offset: 0x00E82345
 		[NullableContext(1)]
 		public override object GetKey(int data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x0603F0F6 RID: 258294 RVA: 0x00F3D27C File Offset: 0x00F3B47C
+		// Token: 0x06033DB6 RID: 212406 RVA: 0x00E84150 File Offset: 0x00E82350
 		private void OnClickGetBtn()
 		{
 			RoverlikeActivityController instance = RoverlikeActivityController.Instance;
@@ -175,18 +175,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			RoverlikeController.Instance.RequestTaskRewardTake(list, null);
 		}
 
-		// Token: 0x0603F0F7 RID: 258295 RVA: 0x00F3D2CA File Offset: 0x00F3B4CA
+		// Token: 0x06033DB7 RID: 212407 RVA: 0x00E8419E File Offset: 0x00E8239E
 		private void OnClickJumpBtn()
 		{
 		}
 
-		// Token: 0x04020E31 RID: 134705
+		// Token: 0x0401B75E RID: 112478
 		private int TaskId;
 
-		// Token: 0x04020E32 RID: 134706
+		// Token: 0x0401B75F RID: 112479
 		private bool IsTaken;
 
-		// Token: 0x04020E33 RID: 134707
+		// Token: 0x0401B760 RID: 112480
 		[Nullable(new byte[]
 		{
 			2,
@@ -194,35 +194,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x04020E34 RID: 134708
+		// Token: 0x0401B761 RID: 112481
 		[Nullable(2)]
 		private ButtonItem GetBtnItem;
 
-		// Token: 0x0200C3DB RID: 50139
+		// Token: 0x0200ADC2 RID: 44482
 		private class EComponent
 		{
-			// Token: 0x0403B199 RID: 242073
+			// Token: 0x04035AFA RID: 219898
 			public const int JumpBtn = 0;
 
-			// Token: 0x0403B19A RID: 242074
+			// Token: 0x04035AFB RID: 219899
 			public const int DoingText = 1;
 
-			// Token: 0x0403B19B RID: 242075
+			// Token: 0x04035AFC RID: 219900
 			public const int SpriteDone = 2;
 
-			// Token: 0x0403B19C RID: 242076
+			// Token: 0x04035AFD RID: 219901
 			public const int ItemDone = 3;
 
-			// Token: 0x0403B19D RID: 242077
+			// Token: 0x04035AFE RID: 219902
 			public const int NameText = 4;
 
-			// Token: 0x0403B19E RID: 242078
+			// Token: 0x04035AFF RID: 219903
 			public const int RewardScroll = 5;
 
-			// Token: 0x0403B19F RID: 242079
+			// Token: 0x04035B00 RID: 219904
 			public const int GetBtn = 7;
 
-			// Token: 0x0403B1A0 RID: 242080
+			// Token: 0x04035B01 RID: 219905
 			public const int ProgressText = 8;
 		}
 	}

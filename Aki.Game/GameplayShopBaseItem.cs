@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002349 RID: 9033
+// Token: 0x0200182E RID: 6190
 public class GameplayShopBaseItem : UiPanelBase
 {
-	// Token: 0x06011F92 RID: 73618 RVA: 0x0046812C File Offset: 0x0046632C
+	// Token: 0x0600F442 RID: 62530 RVA: 0x004751F4 File Offset: 0x004733F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -53,7 +53,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011F93 RID: 73619 RVA: 0x00468364 File Offset: 0x00466564
+	// Token: 0x0600F443 RID: 62531 RVA: 0x0047542C File Offset: 0x0047362C
 	[NullableContext(1)]
 	public void RefreshByData(IGameplayShopItemBaseProxy data)
 	{
@@ -72,7 +72,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		this.RefreshRaycastTarget();
 	}
 
-	// Token: 0x06011F94 RID: 73620 RVA: 0x004683C0 File Offset: 0x004665C0
+	// Token: 0x0600F444 RID: 62532 RVA: 0x00475488 File Offset: 0x00473688
 	public void RefreshQualitySprite()
 	{
 		if (this.BaseItemProxy == null)
@@ -82,7 +82,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		this.SetSpriteByPath(this.BaseItemProxy.QualitySpritePath, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x06011F95 RID: 73621 RVA: 0x004683F9 File Offset: 0x004665F9
+	// Token: 0x0600F445 RID: 62533 RVA: 0x004754C1 File Offset: 0x004736C1
 	public void RefreshBottomBgSprite()
 	{
 		if (this.BaseItemProxy == null)
@@ -92,7 +92,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		base.GetSprite(1).SetUIActive(this.BaseItemProxy.BottomBgVisible);
 	}
 
-	// Token: 0x06011F96 RID: 73622 RVA: 0x0046841C File Offset: 0x0046661C
+	// Token: 0x0600F446 RID: 62534 RVA: 0x004754E4 File Offset: 0x004736E4
 	public void RefreshItemTexture()
 	{
 		if (this.BaseItemProxy == null)
@@ -112,7 +112,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011F97 RID: 73623 RVA: 0x004684A0 File Offset: 0x004666A0
+	// Token: 0x0600F447 RID: 62535 RVA: 0x00475568 File Offset: 0x00473768
 	public void RefreshTipsButton()
 	{
 		if (this.BaseItemProxy == null)
@@ -122,7 +122,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		base.GetButton(3).RootUIComp.Get().SetUIActive(this.BaseItemProxy.TipsButtonVisible);
 	}
 
-	// Token: 0x06011F98 RID: 73624 RVA: 0x004684DC File Offset: 0x004666DC
+	// Token: 0x0600F448 RID: 62536 RVA: 0x004755A4 File Offset: 0x004737A4
 	public void RefreshBuyLimitCountTextText()
 	{
 		if (this.BaseItemProxy == null)
@@ -137,7 +137,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011F99 RID: 73625 RVA: 0x00468529 File Offset: 0x00466729
+	// Token: 0x0600F449 RID: 62537 RVA: 0x004755F1 File Offset: 0x004737F1
 	public void RefreshNameText()
 	{
 		if (this.BaseItemProxy == null)
@@ -147,7 +147,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		GameplayShopUtil.SetText(base.GetText(5), this.BaseItemProxy.ItemNameTextData);
 	}
 
-	// Token: 0x06011F9A RID: 73626 RVA: 0x0046854C File Offset: 0x0046674C
+	// Token: 0x0600F44A RID: 62538 RVA: 0x00475614 File Offset: 0x00473814
 	public void RefreshPriceItem()
 	{
 		if (this.BaseItemProxy == null)
@@ -175,7 +175,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011F9B RID: 73627 RVA: 0x00468630 File Offset: 0x00466830
+	// Token: 0x0600F44B RID: 62539 RVA: 0x004756F8 File Offset: 0x004738F8
 	public void RefreshPriceTipsText()
 	{
 		if (this.BaseItemProxy == null)
@@ -190,7 +190,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011F9C RID: 73628 RVA: 0x0046867E File Offset: 0x0046687E
+	// Token: 0x0600F44C RID: 62540 RVA: 0x00475746 File Offset: 0x00473946
 	public void RefreshRedDot()
 	{
 		if (this.BaseItemProxy == null)
@@ -200,7 +200,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		base.GetItem(11).SetUIActive(this.BaseItemProxy.RedDotVisible);
 	}
 
-	// Token: 0x06011F9D RID: 73629 RVA: 0x004686A4 File Offset: 0x004668A4
+	// Token: 0x0600F44D RID: 62541 RVA: 0x0047576C File Offset: 0x0047396C
 	public void RefreshBigItemIconTexture()
 	{
 		if (this.BaseItemProxy == null)
@@ -215,7 +215,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011F9E RID: 73630 RVA: 0x004686FD File Offset: 0x004668FD
+	// Token: 0x0600F44E RID: 62542 RVA: 0x004757C5 File Offset: 0x004739C5
 	public void RefreshNormalItemBg()
 	{
 		if (this.BaseItemProxy == null)
@@ -225,7 +225,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		base.GetItem(13).SetUIActive(this.BaseItemProxy.ItemBgItemVisible);
 	}
 
-	// Token: 0x06011F9F RID: 73631 RVA: 0x00468720 File Offset: 0x00466920
+	// Token: 0x0600F44F RID: 62543 RVA: 0x004757E8 File Offset: 0x004739E8
 	public void RefreshRaycastTarget()
 	{
 		if (this.BaseItemProxy == null)
@@ -235,7 +235,7 @@ public class GameplayShopBaseItem : UiPanelBase
 		this.RootItem.SetRaycastTarget(this.BaseItemProxy.RaycastTarget);
 	}
 
-	// Token: 0x06011FA0 RID: 73632 RVA: 0x00468741 File Offset: 0x00466941
+	// Token: 0x0600F450 RID: 62544 RVA: 0x00475809 File Offset: 0x00473A09
 	private void OnTipsButtonClick()
 	{
 		if (this.BaseItemProxy == null)
@@ -245,40 +245,40 @@ public class GameplayShopBaseItem : UiPanelBase
 		this.BaseItemProxy.OnTipsButtonClick();
 	}
 
-	// Token: 0x040087DE RID: 34782
+	// Token: 0x04008921 RID: 35105
 	[Nullable(2)]
 	protected IGameplayShopItemBaseProxy BaseItemProxy;
 
-	// Token: 0x020088C6 RID: 35014
+	// Token: 0x02007A4F RID: 31311
 	private enum EComponent
 	{
-		// Token: 0x0402C739 RID: 182073
+		// Token: 0x04027A4D RID: 162381
 		QualitySprite,
-		// Token: 0x0402C73A RID: 182074
+		// Token: 0x04027A4E RID: 162382
 		BottomBgSprite,
-		// Token: 0x0402C73B RID: 182075
+		// Token: 0x04027A4F RID: 162383
 		ItemTexture,
-		// Token: 0x0402C73C RID: 182076
+		// Token: 0x04027A50 RID: 162384
 		TipsButton,
-		// Token: 0x0402C73D RID: 182077
+		// Token: 0x04027A51 RID: 162385
 		BuyLimitCountText,
-		// Token: 0x0402C73E RID: 182078
+		// Token: 0x04027A52 RID: 162386
 		NameText,
-		// Token: 0x0402C73F RID: 182079
+		// Token: 0x04027A53 RID: 162387
 		PriceItem,
-		// Token: 0x0402C740 RID: 182080
+		// Token: 0x04027A54 RID: 162388
 		CurrencyIcon,
-		// Token: 0x0402C741 RID: 182081
+		// Token: 0x04027A55 RID: 162389
 		NowPriceText,
-		// Token: 0x0402C742 RID: 182082
+		// Token: 0x04027A56 RID: 162390
 		OriginalPriceText,
-		// Token: 0x0402C743 RID: 182083
+		// Token: 0x04027A57 RID: 162391
 		PriceTipsText,
-		// Token: 0x0402C744 RID: 182084
+		// Token: 0x04027A58 RID: 162392
 		RedDot,
-		// Token: 0x0402C745 RID: 182085
+		// Token: 0x04027A59 RID: 162393
 		BigItemIconTexture,
-		// Token: 0x0402C746 RID: 182086
+		// Token: 0x04027A5A RID: 162394
 		NormalItemBg
 	}
 }

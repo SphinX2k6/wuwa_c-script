@@ -11,12 +11,12 @@ using CSharpScript.Game.LevelFlow.Section;
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F6F RID: 28527
+	// Token: 0x020060F0 RID: 24816
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowTiTanData : LevelFlowData
 	{
-		// Token: 0x06045652 RID: 284242 RVA: 0x0112E48C File Offset: 0x0112C68C
+		// Token: 0x0603B800 RID: 243712 RVA: 0x010D8290 File Offset: 0x010D6490
 		public override void Init()
 		{
 			base.Register(new TSectionCreator(this.CreateSection0));
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelFlow
 			base.Register(new TSectionCreator(this.CreateSection3));
 		}
 
-		// Token: 0x06045653 RID: 284243 RVA: 0x0112E4E4 File Offset: 0x0112C6E4
+		// Token: 0x0603B801 RID: 243713 RVA: 0x010D82E8 File Offset: 0x010D64E8
 		private unsafe LevelFlowSection CreateSection0()
 		{
 			int num = 1;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelFlow
 			return new LevelFlowSection(list, new List<LevelFlowNode>());
 		}
 
-		// Token: 0x06045654 RID: 284244 RVA: 0x0112E5D0 File Offset: 0x0112C7D0
+		// Token: 0x0603B802 RID: 243714 RVA: 0x010D83D4 File Offset: 0x010D65D4
 		private unsafe LevelFlowSection CreateSection1()
 		{
 			int currentEntityId = this.GetCurrentEntityId();
@@ -879,7 +879,7 @@ namespace CSharpScript.Game.LevelFlow
 			return new LevelFlowSection(list, list38);
 		}
 
-		// Token: 0x06045655 RID: 284245 RVA: 0x01130864 File Offset: 0x0112EA64
+		// Token: 0x0603B803 RID: 243715 RVA: 0x010DA668 File Offset: 0x010D8868
 		private unsafe LevelFlowSection CreateSection2()
 		{
 			int currentEntityId = this.GetCurrentEntityId();
@@ -1783,7 +1783,7 @@ namespace CSharpScript.Game.LevelFlow
 			return new LevelFlowSection(list, list38);
 		}
 
-		// Token: 0x06045656 RID: 284246 RVA: 0x01132F98 File Offset: 0x01131198
+		// Token: 0x0603B804 RID: 243716 RVA: 0x010DCD9C File Offset: 0x010DAF9C
 		private unsafe LevelFlowSection CreateSection3()
 		{
 			int currentEntityId = this.GetCurrentEntityId();
@@ -1904,7 +1904,7 @@ namespace CSharpScript.Game.LevelFlow
 			return new LevelFlowSection(list, new List<LevelFlowNode>());
 		}
 
-		// Token: 0x06045657 RID: 284247 RVA: 0x01133358 File Offset: 0x01131558
+		// Token: 0x0603B805 RID: 243717 RVA: 0x010DD15C File Offset: 0x010DB35C
 		private LevelFlowPlayLevelSequence PlayLevelSequenceAction(string sequencePath, string mark = "B", EPlayLevelSequenceType playMode = EPlayLevelSequenceType.Direct)
 		{
 			return new LevelFlowPlayLevelSequence().Init(new PlayLevelSequence
@@ -1917,7 +1917,7 @@ namespace CSharpScript.Game.LevelFlow
 			});
 		}
 
-		// Token: 0x06045658 RID: 284248 RVA: 0x011333A8 File Offset: 0x011315A8
+		// Token: 0x0603B806 RID: 243718 RVA: 0x010DD1AC File Offset: 0x010DB3AC
 		private LevelFlowPlayLevelSequence PlayEnterCameraLevelSequenceAction(string sequencePath, string mark = "B", EPlayLevelSequenceType playMode = EPlayLevelSequenceType.Direct)
 		{
 			return new LevelFlowPlayLevelSequence().Init(new PlayLevelSequence
@@ -1940,7 +1940,7 @@ namespace CSharpScript.Game.LevelFlow
 			});
 		}
 
-		// Token: 0x06045659 RID: 284249 RVA: 0x0113343A File Offset: 0x0113163A
+		// Token: 0x0603B807 RID: 243719 RVA: 0x010DD23E File Offset: 0x010DB43E
 		private LevelFlowPlayLevelSequence PreLoadLevelSequenceAction(string sequencePath)
 		{
 			return new LevelFlowPlayLevelSequence().Init(new PlayLevelSequence
@@ -1951,13 +1951,13 @@ namespace CSharpScript.Game.LevelFlow
 			});
 		}
 
-		// Token: 0x0604565A RID: 284250 RVA: 0x01133469 File Offset: 0x01131669
+		// Token: 0x0603B808 RID: 243720 RVA: 0x010DD26D File Offset: 0x010DB46D
 		private int GetCurrentEntityId()
 		{
 			return Global.BaseCharacter.CharacterActorComponent.Entity.Id;
 		}
 
-		// Token: 0x0604565B RID: 284251 RVA: 0x01133480 File Offset: 0x01131680
+		// Token: 0x0603B809 RID: 243721 RVA: 0x010DD284 File Offset: 0x010DB484
 		private int GetVehicleEntityId()
 		{
 			CharacterDriveVehicleComponent component = Global.BaseCharacter.CharacterActorComponent.Entity.GetComponent<CharacterDriveVehicleComponent>();
@@ -1968,7 +1968,7 @@ namespace CSharpScript.Game.LevelFlow
 			return component.VehicleEntity.Id;
 		}
 
-		// Token: 0x0604565C RID: 284252 RVA: 0x011334C8 File Offset: 0x011316C8
+		// Token: 0x0603B80A RID: 243722 RVA: 0x010DD2CC File Offset: 0x010DB4CC
 		private MoveWithSpline InitMoveWithSplineParam(int splineEntityId, bool followStrict, bool keepForward, bool forceToFirstPoint)
 		{
 			return new MoveWithSpline
@@ -1985,7 +1985,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x0604565D RID: 284253 RVA: 0x01133524 File Offset: 0x01131724
+		// Token: 0x0603B80B RID: 243723 RVA: 0x010DD328 File Offset: 0x010DB528
 		private unsafe SetPlayerOperationRestriction InitPlayerOperationRestrictionParam(bool disableSkill1 = false, bool disableAttack = false)
 		{
 			IDisableModulePlayerOperation disableModulePlayerOperation = new IDisableModulePlayerOperation();
@@ -2048,7 +2048,7 @@ namespace CSharpScript.Game.LevelFlow
 			return disableModulePlayerOperation;
 		}
 
-		// Token: 0x0604565E RID: 284254 RVA: 0x011336DE File Offset: 0x011318DE
+		// Token: 0x0603B80C RID: 243724 RVA: 0x010DD4E2 File Offset: 0x010DB6E2
 		private IEnableAllPlayerOperation InitPlayerEnableOperationParam(bool disableSkill1 = false)
 		{
 			return new IEnableAllPlayerOperation
@@ -2057,7 +2057,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x0604565F RID: 284255 RVA: 0x011336EC File Offset: 0x011318EC
+		// Token: 0x0603B80D RID: 243725 RVA: 0x010DD4F0 File Offset: 0x010DB6F0
 		private VehicleMoveWithPathLine InitVehiclePathLineMoveParam(int entityId, int radius, int forwardAngleLimit = 15, int predictionDistance = 2000)
 		{
 			return new VehicleMoveWithPathLine
@@ -2094,7 +2094,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x06045660 RID: 284256 RVA: 0x011337E6 File Offset: 0x011319E6
+		// Token: 0x0603B80E RID: 243726 RVA: 0x010DD5EA File Offset: 0x010DB7EA
 		private VehicleMoveWithPathLine InitVehicleExitPathLineMoveParam(int entityId)
 		{
 			return new VehicleMoveWithPathLine
@@ -2111,7 +2111,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x06045661 RID: 284257 RVA: 0x01133818 File Offset: 0x01131A18
+		// Token: 0x0603B80F RID: 243727 RVA: 0x010DD61C File Offset: 0x010DB81C
 		private ExecClientBattleAction InitVehicleHookSkillParam(int hookEntityId)
 		{
 			return new ExecClientBattleAction
@@ -2124,7 +2124,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x06045662 RID: 284258 RVA: 0x01133838 File Offset: 0x01131A38
+		// Token: 0x0603B810 RID: 243728 RVA: 0x010DD63C File Offset: 0x010DB83C
 		private PreloadAction InitPreloadFlowParam(int flowId, int stateId)
 		{
 			return new PreloadAction
@@ -2142,7 +2142,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x06045663 RID: 284259 RVA: 0x01133875 File Offset: 0x01131A75
+		// Token: 0x0603B811 RID: 243729 RVA: 0x010DD679 File Offset: 0x010DB879
 		private SwitchDataLayers InitSwitchDataLayersParam(List<int> loads, List<int> unloads)
 		{
 			return new SwitchDataLayers
@@ -2152,7 +2152,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x06045664 RID: 284260 RVA: 0x0113388A File Offset: 0x01131A8A
+		// Token: 0x0603B812 RID: 243730 RVA: 0x010DD68E File Offset: 0x010DB88E
 		private EnterMovieMode InitEnterMovieModeParam()
 		{
 			return new EnterMovieMode
@@ -2162,7 +2162,7 @@ namespace CSharpScript.Game.LevelFlow
 			};
 		}
 
-		// Token: 0x0402434F RID: 148303
+		// Token: 0x0401F604 RID: 128516
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam1 = new CameraLookAt
 		{
@@ -2178,7 +2178,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024350 RID: 148304
+		// Token: 0x0401F605 RID: 128517
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam2 = new CameraLookAt
 		{
@@ -2194,7 +2194,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024351 RID: 148305
+		// Token: 0x0401F606 RID: 128518
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam3 = new CameraLookAt
 		{
@@ -2210,7 +2210,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024352 RID: 148306
+		// Token: 0x0401F607 RID: 128519
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam4 = new CameraLookAt
 		{
@@ -2226,7 +2226,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024353 RID: 148307
+		// Token: 0x0401F608 RID: 128520
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam5 = new CameraLookAt
 		{
@@ -2242,7 +2242,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024354 RID: 148308
+		// Token: 0x0401F609 RID: 128521
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam6 = new CameraLookAt
 		{
@@ -2258,7 +2258,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024355 RID: 148309
+		// Token: 0x0401F60A RID: 128522
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam7 = new CameraLookAt
 		{
@@ -2276,7 +2276,7 @@ namespace CSharpScript.Game.LevelFlow
 			HideUi = new bool?(true)
 		};
 
-		// Token: 0x04024356 RID: 148310
+		// Token: 0x0401F60B RID: 128523
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam8 = new CameraLookAt
 		{
@@ -2292,7 +2292,7 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024357 RID: 148311
+		// Token: 0x0401F60C RID: 128524
 		[StaticVariableRuleIgnore]
 		private static readonly CameraLookAt cameraLookAtParam9 = new CameraLookAt
 		{
@@ -2308,76 +2308,76 @@ namespace CSharpScript.Game.LevelFlow
 			LockCamera = new bool?(true)
 		};
 
-		// Token: 0x04024358 RID: 148312
+		// Token: 0x0401F60D RID: 128525
 		private const string SEQUENCE_PATH_1 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_01.LS_Env_seq_01";
 
-		// Token: 0x04024359 RID: 148313
+		// Token: 0x0401F60E RID: 128526
 		private const string SEQUENCE_PATH_2 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_02.LS_Env_seq_02";
 
-		// Token: 0x0402435A RID: 148314
+		// Token: 0x0401F60F RID: 128527
 		private const string SEQUENCE_PATH_3 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_03.LS_Env_seq_03";
 
-		// Token: 0x0402435B RID: 148315
+		// Token: 0x0401F610 RID: 128528
 		private const string SEQUENCE_PATH_4 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_04.LS_Env_seq_04";
 
-		// Token: 0x0402435C RID: 148316
+		// Token: 0x0401F611 RID: 128529
 		private const string SEQUENCE_PATH_5 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_05.LS_Env_seq_05";
 
-		// Token: 0x0402435D RID: 148317
+		// Token: 0x0401F612 RID: 128530
 		private const string SEQUENCE_PATH_6 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_06.LS_Env_seq_06";
 
-		// Token: 0x0402435E RID: 148318
+		// Token: 0x0401F613 RID: 128531
 		private const string SEQUENCE_PATH_7 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_07.LS_Env_seq_07";
 
-		// Token: 0x0402435F RID: 148319
+		// Token: 0x0401F614 RID: 128532
 		private const string SEQUENCE_PATH_8 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_08.LS_Env_seq_08";
 
-		// Token: 0x04024360 RID: 148320
+		// Token: 0x0401F615 RID: 128533
 		private const string SEQUENCE_PATH_9 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_09.LS_Env_seq_09";
 
-		// Token: 0x04024361 RID: 148321
+		// Token: 0x0401F616 RID: 128534
 		private const string SEQUENCE_PATH_10 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_10.LS_Env_seq_10";
 
-		// Token: 0x04024362 RID: 148322
+		// Token: 0x0401F617 RID: 128535
 		private const string SEQUENCE_PATH_11 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_11.LS_Env_seq_11";
 
-		// Token: 0x04024363 RID: 148323
+		// Token: 0x0401F618 RID: 128536
 		private const string SEQUENCE_PATH_13 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_13.LS_Env_seq_13";
 
-		// Token: 0x04024364 RID: 148324
+		// Token: 0x0401F619 RID: 128537
 		private const string SEQUENCE_PATH_15 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_15.LS_Env_seq_15";
 
-		// Token: 0x04024365 RID: 148325
+		// Token: 0x0401F61A RID: 128538
 		private const string SEQUENCE_PATH_16 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_16.LS_Env_seq_16";
 
-		// Token: 0x04024366 RID: 148326
+		// Token: 0x0401F61B RID: 128539
 		private const string SEQUENCE_PATH_17 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_17.LS_Env_seq_17";
 
-		// Token: 0x04024367 RID: 148327
+		// Token: 0x0401F61C RID: 128540
 		private const string SEQUENCE_PATH_18 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_18.LS_Env_seq_18";
 
-		// Token: 0x04024368 RID: 148328
+		// Token: 0x0401F61D RID: 128541
 		private const string SEQUENCE_PATH_19 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_19.LS_Env_seq_19";
 
-		// Token: 0x04024369 RID: 148329
+		// Token: 0x0401F61E RID: 128542
 		private const string SEQUENCE_PATH_22 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_22.LS_Env_seq_22";
 
-		// Token: 0x0402436A RID: 148330
+		// Token: 0x0401F61F RID: 128543
 		private const string SEQUENCE_PATH_23 = "/Game/Aki/Sequence/Level/3_0/Luxinzhuiluo/LS_Env_seq_23.LS_Env_seq_23";
 
-		// Token: 0x0402436B RID: 148331
+		// Token: 0x0401F620 RID: 128544
 		private const string FLOW_LIST_NAME = "剧情_3_0_拉海洛主线_下半_1";
 
-		// Token: 0x0402436C RID: 148332
+		// Token: 0x0401F621 RID: 128545
 		private const string FOLLOWER_RELOAD_CONFIG_PATH = "/Game/Aki/Data/Fight/FollowShooter/DA_Floater_Drone_Luxin.DA_Floater_Drone_Luxin";
 
-		// Token: 0x0402436D RID: 148333
+		// Token: 0x0401F622 RID: 128546
 		private const string FOLLOWER_WICK_CONFIG_PATH = "/Game/Aki/Data/Fight/FollowShooter/DA_Floater_Drone_Wick.DA_Floater_Drone_Wick";
 
-		// Token: 0x0402436E RID: 148334
+		// Token: 0x0401F623 RID: 128547
 		private const string DEAD_EYE_START_AUDIO = "play_sfx_motorcycle_dead_eye_slow_motion_start";
 
-		// Token: 0x0402436F RID: 148335
+		// Token: 0x0401F624 RID: 128548
 		[StaticVariableRuleIgnore]
 		private static readonly FadeInScreen fadeInScreenParam = new FadeInScreen
 		{
@@ -2389,7 +2389,7 @@ namespace CSharpScript.Game.LevelFlow
 			ScreenType = new EFadeInScreenShowType?(EFadeInScreenShowType.Black)
 		};
 
-		// Token: 0x04024370 RID: 148336
+		// Token: 0x0401F625 RID: 128549
 		[StaticVariableRuleIgnore]
 		private static readonly FadeOutScreen fadeOutScreenParam = new FadeOutScreen
 		{
@@ -2400,7 +2400,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		};
 
-		// Token: 0x04024371 RID: 148337
+		// Token: 0x0401F626 RID: 128550
 		[StaticVariableRuleIgnore]
 		private static readonly DeadEyeModeParams deadEyeModeParams = new DeadEyeModeParams
 		{
@@ -2454,10 +2454,10 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		};
 
-		// Token: 0x04024372 RID: 148338
+		// Token: 0x0401F627 RID: 128551
 		private const int VEHICLE_PB_DATA_ID = 961700002;
 
-		// Token: 0x04024373 RID: 148339
+		// Token: 0x0401F628 RID: 128552
 		[StaticVariableRuleIgnore]
 		private static readonly List<long> vehicleSprintCueIdList = new List<long>
 		{

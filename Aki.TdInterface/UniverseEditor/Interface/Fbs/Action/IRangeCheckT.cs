@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E0B RID: 28171
+	// Token: 0x02007586 RID: 30086
 	public class IRangeCheckT
 	{
-		// Token: 0x1700D204 RID: 53764
-		// (get) Token: 0x06031C76 RID: 203894 RVA: 0x006BD6CE File Offset: 0x006BB8CE
-		// (set) Token: 0x06031C77 RID: 203895 RVA: 0x006BD6D6 File Offset: 0x006BB8D6
+		// Token: 0x1700DD4C RID: 56652
+		// (get) Token: 0x06034C72 RID: 216178 RVA: 0x00718DB6 File Offset: 0x00716FB6
+		// (set) Token: 0x06034C73 RID: 216179 RVA: 0x00718DBE File Offset: 0x00716FBE
 		public ERangeCheckType Type { get; set; }
 
-		// Token: 0x06031C78 RID: 203896 RVA: 0x006BD6DF File Offset: 0x006BB8DF
+		// Token: 0x06034C74 RID: 216180 RVA: 0x00718DC7 File Offset: 0x00716FC7
 		public IRangeCheckT()
 		{
 			this.Type = ERangeCheckType.Cone;

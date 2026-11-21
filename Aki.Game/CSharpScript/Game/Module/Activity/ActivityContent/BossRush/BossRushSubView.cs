@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x0200690F RID: 26895
+	// Token: 0x0200585F RID: 22623
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BossRushSubView : ActivitySubViewBase
 	{
-		// Token: 0x06043103 RID: 274691 RVA: 0x01057080 File Offset: 0x01055280
+		// Token: 0x06037C5B RID: 228443 RVA: 0x00F986AC File Offset: 0x00F968AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,32 +35,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			};
 		}
 
-		// Token: 0x06043104 RID: 274692 RVA: 0x01057155 File Offset: 0x01055355
+		// Token: 0x06037C5C RID: 228444 RVA: 0x00F98781 File Offset: 0x00F96981
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.BossRushDataUpdate, new Action(this.OnBossRushDataUpdate));
 		}
 
-		// Token: 0x06043105 RID: 274693 RVA: 0x01057173 File Offset: 0x01055373
+		// Token: 0x06037C5D RID: 228445 RVA: 0x00F9879F File Offset: 0x00F9699F
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.BossRushDataUpdate, new Action(this.OnBossRushDataUpdate));
 		}
 
-		// Token: 0x06043106 RID: 274694 RVA: 0x01057191 File Offset: 0x01055391
+		// Token: 0x06037C5E RID: 228446 RVA: 0x00F987BD File Offset: 0x00F969BD
 		private void OnClickRewardbtn()
 		{
 			BossRushModel.Instance.OnlyOpenRewardView = true;
 			BossRushController.Instance.OpenBossRushView(this.ActivityBaseData.Id);
 		}
 
-		// Token: 0x06043107 RID: 274695 RVA: 0x010571B4 File Offset: 0x010553B4
+		// Token: 0x06037C5F RID: 228447 RVA: 0x00F987E0 File Offset: 0x00F969E0
 		private void OnBossRushDataUpdate()
 		{
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06043108 RID: 274696 RVA: 0x010571BC File Offset: 0x010553BC
+		// Token: 0x06037C60 RID: 228448 RVA: 0x00F987E8 File Offset: 0x00F969E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossRushSubView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -71,25 +71,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043109 RID: 274697 RVA: 0x010571FF File Offset: 0x010553FF
+		// Token: 0x06037C61 RID: 228449 RVA: 0x00F9882B File Offset: 0x00F96A2B
 		protected override void OnStart()
 		{
 			this.BossRushData = (this.ActivityBaseData as BossRushData);
 		}
 
-		// Token: 0x0604310A RID: 274698 RVA: 0x01057212 File Offset: 0x01055412
+		// Token: 0x06037C62 RID: 228450 RVA: 0x00F9883E File Offset: 0x00F96A3E
 		protected override void OnBeforeShow()
 		{
 			this.BindRedDot();
 		}
 
-		// Token: 0x0604310B RID: 274699 RVA: 0x0105721A File Offset: 0x0105541A
+		// Token: 0x06037C63 RID: 228451 RVA: 0x00F98846 File Offset: 0x00F96A46
 		protected override void OnBeforeHide()
 		{
 			this.RemoveRedDot();
 		}
 
-		// Token: 0x0604310C RID: 274700 RVA: 0x01057224 File Offset: 0x01055424
+		// Token: 0x06037C64 RID: 228452 RVA: 0x00F98850 File Offset: 0x00F96A50
 		protected override void OnRefreshView()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshProgressText();
 		}
 
-		// Token: 0x0604310D RID: 274701 RVA: 0x01057278 File Offset: 0x01055478
+		// Token: 0x06037C65 RID: 228453 RVA: 0x00F988A4 File Offset: 0x00F96AA4
 		private void RefreshProgressText()
 		{
 			int finishTaskCount = this.BossRushData.GetFinishTaskCount();
@@ -120,19 +120,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0604310E RID: 274702 RVA: 0x010572D6 File Offset: 0x010554D6
+		// Token: 0x06037C66 RID: 228454 RVA: 0x00F98902 File Offset: 0x00F96B02
 		private void BindRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.BossRushReward, base.GetItem(6), null, this.BossRushData.Id);
 		}
 
-		// Token: 0x0604310F RID: 274703 RVA: 0x010572FA File Offset: 0x010554FA
+		// Token: 0x06037C67 RID: 228455 RVA: 0x00F98926 File Offset: 0x00F96B26
 		private void RemoveRedDot()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.BossRushReward, base.GetItem(6), 0);
 		}
 
-		// Token: 0x06043110 RID: 274704 RVA: 0x01057314 File Offset: 0x01055514
+		// Token: 0x06037C68 RID: 228456 RVA: 0x00F98940 File Offset: 0x00F96B40
 		private void TryShowNewUnlockTips()
 		{
 			if (this.BossRushData.GetNewUnlockState())
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043111 RID: 274705 RVA: 0x0105735C File Offset: 0x0105555C
+		// Token: 0x06037C69 RID: 228457 RVA: 0x00F98988 File Offset: 0x00F96B88
 		private void RefreshState()
 		{
 			bool flag = this.ActivityBaseData.IsUnLock();
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.FunctionalComponent.FunctionButton.SetUiActive(flag);
 		}
 
-		// Token: 0x06043112 RID: 274706 RVA: 0x010573BC File Offset: 0x010555BC
+		// Token: 0x06037C6A RID: 228458 RVA: 0x00F989E8 File Offset: 0x00F96BE8
 		private void RefreshTitle()
 		{
 			this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043113 RID: 274707 RVA: 0x01057420 File Offset: 0x01055620
+		// Token: 0x06037C6B RID: 228459 RVA: 0x00F98A4C File Offset: 0x00F96C4C
 		private void RefreshDesc()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.DescriptionComponent.SetContentByTextId(desc, Array.Empty<string>());
 		}
 
-		// Token: 0x06043114 RID: 274708 RVA: 0x01057498 File Offset: 0x01055698
+		// Token: 0x06037C6C RID: 228460 RVA: 0x00F98AC4 File Offset: 0x00F96CC4
 		private void RefreshReward()
 		{
 			List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -194,21 +194,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RewardListComponent.RefreshItemLayout(previewReward, null);
 		}
 
-		// Token: 0x06043115 RID: 274709 RVA: 0x010574D7 File Offset: 0x010556D7
+		// Token: 0x06037C6D RID: 228461 RVA: 0x00F98B03 File Offset: 0x00F96D03
 		protected override void OnTimer(float gap)
 		{
 			base.OnTimer(gap);
 			this.RefreshTitle();
 		}
 
-		// Token: 0x06043116 RID: 274710 RVA: 0x010574E8 File Offset: 0x010556E8
+		// Token: 0x06037C6E RID: 228462 RVA: 0x00F98B14 File Offset: 0x00F96D14
 		private void RefreshFunctionalComponent()
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("BossRushEnterText", null);
 			this.FunctionalComponent.FunctionButton.SetText(localTextNew);
 		}
 
-		// Token: 0x06043117 RID: 274711 RVA: 0x01057512 File Offset: 0x01055712
+		// Token: 0x06037C6F RID: 228463 RVA: 0x00F98B3E File Offset: 0x00F96D3E
 		private void FunctionExecute()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			});
 		}
 
-		// Token: 0x06043118 RID: 274712 RVA: 0x01057530 File Offset: 0x01055730
+		// Token: 0x06037C70 RID: 228464 RVA: 0x00F98B5C File Offset: 0x00F96D5C
 		private void RefreshRedDot()
 		{
 			bool flag = this.BossRushData.EntranceRedDot();
@@ -231,16 +231,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.FunctionalComponent.FunctionButton.SetRedDotVisible(preGuideQuestFinishState && flag);
 		}
 
-		// Token: 0x04022E8C RID: 142988
+		// Token: 0x0401D6E8 RID: 120552
 		private BossRushData BossRushData;
 
-		// Token: 0x04022E8D RID: 142989
+		// Token: 0x0401D6E9 RID: 120553
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04022E8E RID: 142990
+		// Token: 0x0401D6EA RID: 120554
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x04022E8F RID: 142991
+		// Token: 0x0401D6EB RID: 120555
 		[Nullable(new byte[]
 		{
 			2,
@@ -248,26 +248,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x04022E90 RID: 142992
+		// Token: 0x0401D6EC RID: 120556
 		private ActivityFunctionalArea FunctionalComponent;
 
-		// Token: 0x0200CABE RID: 51902
+		// Token: 0x0200B486 RID: 46214
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D466 RID: 250982
+			// Token: 0x04037D40 RID: 228672
 			TitleItem,
-			// Token: 0x0403D467 RID: 250983
+			// Token: 0x04037D41 RID: 228673
 			DescItem,
-			// Token: 0x0403D468 RID: 250984
+			// Token: 0x04037D42 RID: 228674
 			RewardItem,
-			// Token: 0x0403D469 RID: 250985
+			// Token: 0x04037D43 RID: 228675
 			FunctionalAreaItem,
-			// Token: 0x0403D46A RID: 250986
+			// Token: 0x04037D44 RID: 228676
 			RewardBtn,
-			// Token: 0x0403D46B RID: 250987
+			// Token: 0x04037D45 RID: 228677
 			RewardProgress,
-			// Token: 0x0403D46C RID: 250988
+			// Token: 0x04037D46 RID: 228678
 			RewardRedDot
 		}
 	}

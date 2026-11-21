@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C6C RID: 7276
+	// Token: 0x02000512 RID: 1298
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnNoteResult : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C362 RID: 115554 RVA: 0x00299772 File Offset: 0x00297972
+		// Token: 0x0600795E RID: 31070 RVA: 0x000B214A File Offset: 0x000B034A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnNoteResult.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C363 RID: 115555 RVA: 0x0029977E File Offset: 0x0029797E
+		// Token: 0x0600795F RID: 31071 RVA: 0x000B2156 File Offset: 0x000B0356
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnNoteResult._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnNoteResult._FunctionPtr;
 		}
 
-		// Token: 0x0601C364 RID: 115556 RVA: 0x002997A1 File Offset: 0x002979A1
+		// Token: 0x06007960 RID: 31072 RVA: 0x000B2179 File Offset: 0x000B0379
 		public FOnNoteResult()
 		{
 		}
 
-		// Token: 0x0601C365 RID: 115557 RVA: 0x002997A9 File Offset: 0x002979A9
+		// Token: 0x06007961 RID: 31073 RVA: 0x000B2181 File Offset: 0x000B0381
 		[NullableContext(2)]
 		public FOnNoteResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C366 RID: 115558 RVA: 0x002997B3 File Offset: 0x002979B3
+		// Token: 0x06007962 RID: 31074 RVA: 0x000B218B File Offset: 0x000B038B
 		public FOnNoteResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C367 RID: 115559 RVA: 0x002997BE File Offset: 0x002979BE
+		// Token: 0x06007963 RID: 31075 RVA: 0x000B2196 File Offset: 0x000B0396
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat>) ?? ((Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat>)Delegate.CreateDelegate(typeof(Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C368 RID: 115560 RVA: 0x002997F0 File Offset: 0x002979F0
+		// Token: 0x06007964 RID: 31076 RVA: 0x000B21C8 File Offset: 0x000B03C8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat> Callback)
 		{
 			if (FOnNoteResult.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnNoteResult.RegisterId);
 		}
 
-		// Token: 0x0601C369 RID: 115561 RVA: 0x0029982A File Offset: 0x00297A2A
+		// Token: 0x06007965 RID: 31077 RVA: 0x000B2202 File Offset: 0x000B0402
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C36A RID: 115562 RVA: 0x00299834 File Offset: 0x00297A34
+		// Token: 0x06007966 RID: 31078 RVA: 0x000B220C File Offset: 0x000B040C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int NoteIndex, EKuroRhythmGameNoteType NoteType, EKuroRhythmGameRating Result, FVectorDouble WorldPosition, FQuat Rotation)
 		{
 			FOnNoteResult.__FOnNoteResult_DelegateParams* ptr = stackalloc FOnNoteResult.__FOnNoteResult_DelegateParams[(UIntPtr)63] + 15L / (long)sizeof(FOnNoteResult.__FOnNoteResult_DelegateParams) & -16L;
@@ -90,10 +87,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C36B RID: 115563 RVA: 0x00299890 File Offset: 0x00297A90
+		// Token: 0x06007967 RID: 31079 RVA: 0x000B2268 File Offset: 0x000B0468
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat> action = target as Action<int, EKuroRhythmGameNoteType, EKuroRhythmGameRating, FVectorDouble, FQuat>;
@@ -104,47 +100,47 @@ namespace UnrealEngine
 			action(((FOnNoteResult.__FOnNoteResult_DelegateParams*)__Parameters)->NoteIndex, ((FOnNoteResult.__FOnNoteResult_DelegateParams*)__Parameters)->NoteType, ((FOnNoteResult.__FOnNoteResult_DelegateParams*)__Parameters)->Result, ((FOnNoteResult.__FOnNoteResult_DelegateParams*)__Parameters)->WorldPosition, ((FOnNoteResult.__FOnNoteResult_DelegateParams*)__Parameters)->Rotation);
 		}
 
-		// Token: 0x0400F2C8 RID: 62152
+		// Token: 0x04003393 RID: 13203
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2C9 RID: 62153
+		// Token: 0x04003394 RID: 13204
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnNoteResult__DelegateSignature";
 
-		// Token: 0x0400F2CA RID: 62154
+		// Token: 0x04003395 RID: 13205
 		private static int RegisterId;
 
-		// Token: 0x02003205 RID: 12805
+		// Token: 0x02000C7A RID: 3194
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __FOnNoteResult_DelegateParams
+		private ref struct __FOnNoteResult_DelegateParams
 		{
-			// Token: 0x04017063 RID: 94307
+			// Token: 0x04005ED7 RID: 24279
 			[FieldOffset(0)]
 			public int NoteIndex;
 
-			// Token: 0x04017064 RID: 94308
+			// Token: 0x04005ED8 RID: 24280
 			[FieldOffset(4)]
 			public EKuroRhythmGameNoteType NoteType;
 
-			// Token: 0x04017065 RID: 94309
+			// Token: 0x04005ED9 RID: 24281
 			[FieldOffset(5)]
 			public EKuroRhythmGameRating Result;
 
-			// Token: 0x04017066 RID: 94310
+			// Token: 0x04005EDA RID: 24282
 			[FieldOffset(8)]
 			public FVectorDouble WorldPosition;
 
-			// Token: 0x04017067 RID: 94311
+			// Token: 0x04005EDB RID: 24283
 			[FieldOffset(32)]
 			public FQuat Rotation;
 		}
 
-		// Token: 0x02003206 RID: 12806
+		// Token: 0x02000C7B RID: 3195
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017068 RID: 94312
+			// Token: 0x04005EDC RID: 24284
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

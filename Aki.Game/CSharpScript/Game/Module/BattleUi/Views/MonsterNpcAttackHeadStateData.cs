@@ -4,12 +4,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D4C RID: 23884
+	// Token: 0x02004D2E RID: 19758
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MonsterNpcAttackHeadStateData : HeadStateData
 	{
-		// Token: 0x0603CA3B RID: 248379 RVA: 0x00E8DAF5 File Offset: 0x00E8BCF5
+		// Token: 0x06031994 RID: 203156 RVA: 0x00DDE2A9 File Offset: 0x00DDC4A9
 		public override void UnBindAllCallback()
 		{
 			base.UnBindAllCallback();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnAttackBrokenStateChangedCallback = null;
 		}
 
-		// Token: 0x0603CA3C RID: 248380 RVA: 0x00E8DB30 File Offset: 0x00E8BD30
+		// Token: 0x06031995 RID: 203157 RVA: 0x00DDE2E4 File Offset: 0x00DDC4E4
 		protected override void AddEntityEvents()
 		{
 			base.AddEntityEvents();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA3D RID: 248381 RVA: 0x00E8DCC8 File Offset: 0x00E8BEC8
+		// Token: 0x06031996 RID: 203158 RVA: 0x00DDE47C File Offset: 0x00DDC67C
 		protected override void RemoveEntityEvents()
 		{
 			base.RemoveEntityEvents();
@@ -95,56 +95,56 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttackBrokenListenTask = null;
 		}
 
-		// Token: 0x0603CA3E RID: 248382 RVA: 0x00E8DDB3 File Offset: 0x00E8BFB3
+		// Token: 0x06031997 RID: 203159 RVA: 0x00DDE567 File Offset: 0x00DDC767
 		[NullableContext(1)]
 		public void BindOnSpecialEnergy4Changed(Action<EAttributeType, float, float> callback)
 		{
 			this.OnSpecialEnergy4ChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA3F RID: 248383 RVA: 0x00E8DDBC File Offset: 0x00E8BFBC
+		// Token: 0x06031998 RID: 203160 RVA: 0x00DDE570 File Offset: 0x00DDC770
 		[NullableContext(1)]
 		public void BindOnSlowChargeStateChanged(Action<int, bool> callback)
 		{
 			this.OnSlowChargeStateChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA40 RID: 248384 RVA: 0x00E8DDC5 File Offset: 0x00E8BFC5
+		// Token: 0x06031999 RID: 203161 RVA: 0x00DDE579 File Offset: 0x00DDC779
 		[NullableContext(1)]
 		public void BindOnFastChargeStateChanged(Action<int, bool> callback)
 		{
 			this.OnFastChargeStateChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA41 RID: 248385 RVA: 0x00E8DDCE File Offset: 0x00E8BFCE
+		// Token: 0x0603199A RID: 203162 RVA: 0x00DDE582 File Offset: 0x00DDC782
 		[NullableContext(1)]
 		public void BindOnAttackReadyStateChanged(Action<int, bool> callback)
 		{
 			this.OnAttackReadyStateChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA42 RID: 248386 RVA: 0x00E8DDD7 File Offset: 0x00E8BFD7
+		// Token: 0x0603199B RID: 203163 RVA: 0x00DDE58B File Offset: 0x00DDC78B
 		[NullableContext(1)]
 		public void BindOnAttackBeginStateChanged(Action<int, bool> callback)
 		{
 			this.OnAttackBeginStateChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA43 RID: 248387 RVA: 0x00E8DDE0 File Offset: 0x00E8BFE0
+		// Token: 0x0603199C RID: 203164 RVA: 0x00DDE594 File Offset: 0x00DDC794
 		[NullableContext(1)]
 		public void BindOnAttackEndStateChanged(Action<int, bool> callback)
 		{
 			this.OnAttackEndStateChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA44 RID: 248388 RVA: 0x00E8DDE9 File Offset: 0x00E8BFE9
+		// Token: 0x0603199D RID: 203165 RVA: 0x00DDE59D File Offset: 0x00DDC79D
 		[NullableContext(1)]
 		public void BindOnAttackBrokenStateChanged(Action<int, bool> callback)
 		{
 			this.OnAttackBrokenStateChangedCallback = callback;
 		}
 
-		// Token: 0x0603CA45 RID: 248389 RVA: 0x00E8DDF2 File Offset: 0x00E8BFF2
+		// Token: 0x0603199E RID: 203166 RVA: 0x00DDE5A6 File Offset: 0x00DDC7A6
 		private void OnSpecialEnergy4Changed(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			Action<EAttributeType, float, float> onSpecialEnergy4ChangedCallback = this.OnSpecialEnergy4ChangedCallback;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onSpecialEnergy4ChangedCallback(attributeId, newValue, oldValue);
 		}
 
-		// Token: 0x0603CA46 RID: 248390 RVA: 0x00E8DE07 File Offset: 0x00E8C007
+		// Token: 0x0603199F RID: 203167 RVA: 0x00DDE5BB File Offset: 0x00DDC7BB
 		private void OnSlowChargeStateChanged(int tagId, bool bTagExists)
 		{
 			Action<int, bool> onSlowChargeStateChangedCallback = this.OnSlowChargeStateChangedCallback;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onSlowChargeStateChangedCallback(tagId, bTagExists);
 		}
 
-		// Token: 0x0603CA47 RID: 248391 RVA: 0x00E8DE1B File Offset: 0x00E8C01B
+		// Token: 0x060319A0 RID: 203168 RVA: 0x00DDE5CF File Offset: 0x00DDC7CF
 		private void OnFastChargeStateChanged(int tagId, bool bTagExists)
 		{
 			Action<int, bool> onFastChargeStateChangedCallback = this.OnFastChargeStateChangedCallback;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onFastChargeStateChangedCallback(tagId, bTagExists);
 		}
 
-		// Token: 0x0603CA48 RID: 248392 RVA: 0x00E8DE2F File Offset: 0x00E8C02F
+		// Token: 0x060319A1 RID: 203169 RVA: 0x00DDE5E3 File Offset: 0x00DDC7E3
 		private void OnAttackReadyStateChanged(int tagId, bool bTagExists)
 		{
 			Action<int, bool> onAttackReadyStateChangedCallback = this.OnAttackReadyStateChangedCallback;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onAttackReadyStateChangedCallback(tagId, bTagExists);
 		}
 
-		// Token: 0x0603CA49 RID: 248393 RVA: 0x00E8DE43 File Offset: 0x00E8C043
+		// Token: 0x060319A2 RID: 203170 RVA: 0x00DDE5F7 File Offset: 0x00DDC7F7
 		private void OnAttackBeginStateChanged(int tagId, bool bTagExists)
 		{
 			Action<int, bool> onAttackBeginStateChangedCallback = this.OnAttackBeginStateChangedCallback;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onAttackBeginStateChangedCallback(tagId, bTagExists);
 		}
 
-		// Token: 0x0603CA4A RID: 248394 RVA: 0x00E8DE57 File Offset: 0x00E8C057
+		// Token: 0x060319A3 RID: 203171 RVA: 0x00DDE60B File Offset: 0x00DDC80B
 		private void OnAttackEndStateChanged(int tagId, bool bTagExists)
 		{
 			Action<int, bool> onAttackEndStateChangedCallback = this.OnAttackEndStateChangedCallback;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onAttackEndStateChangedCallback(tagId, bTagExists);
 		}
 
-		// Token: 0x0603CA4B RID: 248395 RVA: 0x00E8DE6B File Offset: 0x00E8C06B
+		// Token: 0x060319A4 RID: 203172 RVA: 0x00DDE61F File Offset: 0x00DDC81F
 		private void OnAttackBrokenStateChanged(int tagId, bool bTagExists)
 		{
 			Action<int, bool> onAttackBrokenStateChangedCallback = this.OnAttackBrokenStateChangedCallback;
@@ -221,43 +221,43 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onAttackBrokenStateChangedCallback(tagId, bTagExists);
 		}
 
-		// Token: 0x0401F954 RID: 129364
+		// Token: 0x0401A40D RID: 107533
 		private ITagTask SlowChargeListenTask;
 
-		// Token: 0x0401F955 RID: 129365
+		// Token: 0x0401A40E RID: 107534
 		private ITagTask FastChargeListenTask;
 
-		// Token: 0x0401F956 RID: 129366
+		// Token: 0x0401A40F RID: 107535
 		private ITagTask AttackReadyListenTask;
 
-		// Token: 0x0401F957 RID: 129367
+		// Token: 0x0401A410 RID: 107536
 		private ITagTask AttackBeginListenTask;
 
-		// Token: 0x0401F958 RID: 129368
+		// Token: 0x0401A411 RID: 107537
 		private ITagTask AttackEndListenTask;
 
-		// Token: 0x0401F959 RID: 129369
+		// Token: 0x0401A412 RID: 107538
 		private ITagTask AttackBrokenListenTask;
 
-		// Token: 0x0401F95A RID: 129370
+		// Token: 0x0401A413 RID: 107539
 		private Action<EAttributeType, float, float> OnSpecialEnergy4ChangedCallback;
 
-		// Token: 0x0401F95B RID: 129371
+		// Token: 0x0401A414 RID: 107540
 		private Action<int, bool> OnSlowChargeStateChangedCallback;
 
-		// Token: 0x0401F95C RID: 129372
+		// Token: 0x0401A415 RID: 107541
 		private Action<int, bool> OnFastChargeStateChangedCallback;
 
-		// Token: 0x0401F95D RID: 129373
+		// Token: 0x0401A416 RID: 107542
 		private Action<int, bool> OnAttackReadyStateChangedCallback;
 
-		// Token: 0x0401F95E RID: 129374
+		// Token: 0x0401A417 RID: 107543
 		private Action<int, bool> OnAttackBeginStateChangedCallback;
 
-		// Token: 0x0401F95F RID: 129375
+		// Token: 0x0401A418 RID: 107544
 		private Action<int, bool> OnAttackEndStateChangedCallback;
 
-		// Token: 0x0401F960 RID: 129376
+		// Token: 0x0401A419 RID: 107545
 		private Action<int, bool> OnAttackBrokenStateChangedCallback;
 	}
 }

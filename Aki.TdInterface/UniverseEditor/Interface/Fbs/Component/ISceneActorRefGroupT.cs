@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058A1 RID: 22689
+	// Token: 0x02005EAE RID: 24238
 	public class ISceneActorRefGroupT
 	{
-		// Token: 0x1700A9DD RID: 43485
-		// (get) Token: 0x06026460 RID: 156768 RVA: 0x00546AF0 File Offset: 0x00544CF0
-		// (set) Token: 0x06026461 RID: 156769 RVA: 0x00546AF8 File Offset: 0x00544CF8
+		// Token: 0x1700B30D RID: 45837
+		// (get) Token: 0x060289C2 RID: 166338 RVA: 0x0058D63C File Offset: 0x0058B83C
+		// (set) Token: 0x060289C3 RID: 166339 RVA: 0x0058D644 File Offset: 0x0058B844
 		public string EntityState { get; set; }
 
-		// Token: 0x1700A9DE RID: 43486
-		// (get) Token: 0x06026462 RID: 156770 RVA: 0x00546B01 File Offset: 0x00544D01
-		// (set) Token: 0x06026463 RID: 156771 RVA: 0x00546B09 File Offset: 0x00544D09
+		// Token: 0x1700B30E RID: 45838
+		// (get) Token: 0x060289C4 RID: 166340 RVA: 0x0058D64D File Offset: 0x0058B84D
+		// (set) Token: 0x060289C5 RID: 166341 RVA: 0x0058D655 File Offset: 0x0058B855
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x06026464 RID: 156772 RVA: 0x00546B12 File Offset: 0x00544D12
+		// Token: 0x060289C6 RID: 166342 RVA: 0x0058D65E File Offset: 0x0058B85E
 		public ISceneActorRefGroupT()
 		{
 			this.EntityState = null;

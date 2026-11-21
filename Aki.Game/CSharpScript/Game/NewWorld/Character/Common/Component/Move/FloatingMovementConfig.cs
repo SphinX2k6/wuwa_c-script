@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070DD RID: 28893
+	// Token: 0x0200638D RID: 25485
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FloatingMovementConfig
 	{
-		// Token: 0x0604682D RID: 288813 RVA: 0x011B8788 File Offset: 0x011B6988
+		// Token: 0x0603DC1A RID: 252954 RVA: 0x011E7E5C File Offset: 0x011E605C
 		public void Init(BP_FloatingMovementConfig_C asset)
 		{
 			this.MoveSpeed = (float)asset.MoveSpeed;
@@ -48,82 +48,82 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.WalkMoveModeConfig.SetConfig(asset.WalkMode);
 		}
 
-		// Token: 0x04024FA5 RID: 151461
+		// Token: 0x04020C3A RID: 134202
 		public float MoveSpeed = 600f;
 
-		// Token: 0x04024FA6 RID: 151462
+		// Token: 0x04020C3B RID: 134203
 		public float SprintSpeed = 1200f;
 
-		// Token: 0x04024FA7 RID: 151463
+		// Token: 0x04020C3C RID: 134204
 		public float TurnSpeedDeg = 360f;
 
-		// Token: 0x04024FA8 RID: 151464
+		// Token: 0x04020C3D RID: 134205
 		public float AnimLerpAlpha = 0.1f;
 
-		// Token: 0x04024FA9 RID: 151465
+		// Token: 0x04020C3E RID: 134206
 		public float SpeedAcceleration = 0.5f;
 
-		// Token: 0x04024FAA RID: 151466
+		// Token: 0x04020C3F RID: 134207
 		public float DirectionLerpAlpha = 0.1f;
 
-		// Token: 0x04024FAB RID: 151467
+		// Token: 0x04020C40 RID: 134208
 		public float EnergyRecoverSpeed = 10f;
 
-		// Token: 0x04024FAC RID: 151468
+		// Token: 0x04020C41 RID: 134209
 		public float EnergyRecoverCoolDownTime = 3f;
 
-		// Token: 0x04024FAD RID: 151469
+		// Token: 0x04020C42 RID: 134210
 		public float AirCriticalHeight = 500f;
 
-		// Token: 0x04024FAE RID: 151470
+		// Token: 0x04020C43 RID: 134211
 		public float CloseToGroundHeight = 550f;
 
-		// Token: 0x04024FAF RID: 151471
+		// Token: 0x04020C44 RID: 134212
 		public float AirEnergyConsumption = 10f;
 
-		// Token: 0x04024FB0 RID: 151472
+		// Token: 0x04020C45 RID: 134213
 		public float DodgeEnergyConsumption = 10f;
 
-		// Token: 0x04024FB1 RID: 151473
+		// Token: 0x04020C46 RID: 134214
 		public float DropEnergyConsumption = 5f;
 
-		// Token: 0x04024FB2 RID: 151474
+		// Token: 0x04020C47 RID: 134215
 		public float FastMoveEnergyConsumption = 15f;
 
-		// Token: 0x04024FB3 RID: 151475
+		// Token: 0x04020C48 RID: 134216
 		public float MoveEnergyConsumption = 15f;
 
-		// Token: 0x04024FB4 RID: 151476
+		// Token: 0x04020C49 RID: 134217
 		public float RiseEnergyConsumption = 20f;
 
-		// Token: 0x04024FB5 RID: 151477
+		// Token: 0x04020C4A RID: 134218
 		public float SprintEnergyConsumption = 20f;
 
-		// Token: 0x04024FB6 RID: 151478
+		// Token: 0x04020C4B RID: 134219
 		public float RiseSpeed = 300f;
 
-		// Token: 0x04024FB7 RID: 151479
+		// Token: 0x04020C4C RID: 134220
 		public float DropSpeed = 200f;
 
-		// Token: 0x04024FB8 RID: 151480
+		// Token: 0x04020C4D RID: 134221
 		public List<int> ForbidRotationTagList = new List<int>();
 
-		// Token: 0x04024FB9 RID: 151481
+		// Token: 0x04020C4E RID: 134222
 		public List<int> ForbidCloseToGroundTagList = new List<int>();
 
-		// Token: 0x04024FBA RID: 151482
+		// Token: 0x04020C4F RID: 134223
 		public MovementStateConfig DefaultMoveModeConfig = new MovementStateConfig();
 
-		// Token: 0x04024FBB RID: 151483
+		// Token: 0x04020C50 RID: 134224
 		public MovementStateConfig FloatingMoveModeConfig = new MovementStateConfig();
 
-		// Token: 0x04024FBC RID: 151484
+		// Token: 0x04020C51 RID: 134225
 		public MovementStateConfig RiseMoveModeConfig = new MovementStateConfig();
 
-		// Token: 0x04024FBD RID: 151485
+		// Token: 0x04020C52 RID: 134226
 		public MovementStateConfig DropMoveModeConfig = new MovementStateConfig();
 
-		// Token: 0x04024FBE RID: 151486
+		// Token: 0x04020C53 RID: 134227
 		public MovementStateConfig WalkMoveModeConfig = new MovementStateConfig();
 	}
 }

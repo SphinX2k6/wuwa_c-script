@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006634 RID: 26164
+	// Token: 0x02006CA5 RID: 27813
 	public class IElementalBoxTargetPosTypeBase_UnionUnion
 	{
-		// Token: 0x1700C25F RID: 49759
-		// (get) Token: 0x0602D6F1 RID: 186097 RVA: 0x00639529 File Offset: 0x00637729
-		// (set) Token: 0x0602D6F2 RID: 186098 RVA: 0x00639531 File Offset: 0x00637731
+		// Token: 0x1700CBFD RID: 52221
+		// (get) Token: 0x0602FEC2 RID: 196290 RVA: 0x00686091 File Offset: 0x00684291
+		// (set) Token: 0x0602FEC3 RID: 196291 RVA: 0x00686099 File Offset: 0x00684299
 		public IElementalBoxTargetPosTypeBase_Union Type { get; set; }
 
-		// Token: 0x1700C260 RID: 49760
-		// (get) Token: 0x0602D6F3 RID: 186099 RVA: 0x0063953A File Offset: 0x0063773A
-		// (set) Token: 0x0602D6F4 RID: 186100 RVA: 0x00639542 File Offset: 0x00637742
+		// Token: 0x1700CBFE RID: 52222
+		// (get) Token: 0x0602FEC4 RID: 196292 RVA: 0x006860A2 File Offset: 0x006842A2
+		// (set) Token: 0x0602FEC5 RID: 196293 RVA: 0x006860AA File Offset: 0x006842AA
 		public object Value { get; set; }
 
-		// Token: 0x0602D6F5 RID: 186101 RVA: 0x0063954B File Offset: 0x0063774B
+		// Token: 0x0602FEC6 RID: 196294 RVA: 0x006860B3 File Offset: 0x006842B3
 		public IElementalBoxTargetPosTypeBase_UnionUnion()
 		{
 			this.Type = IElementalBoxTargetPosTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602D6F6 RID: 186102 RVA: 0x00639561 File Offset: 0x00637761
+		// Token: 0x0602FEC7 RID: 196295 RVA: 0x006860C9 File Offset: 0x006842C9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602D6F7 RID: 186103 RVA: 0x00639573 File Offset: 0x00637773
+		// Token: 0x0602FEC8 RID: 196296 RVA: 0x006860DB File Offset: 0x006842DB
 		public IElementalBoxTargetPosTypeBaseT AsIElementalBoxTargetPosTypeBase()
 		{
 			return this.As<IElementalBoxTargetPosTypeBaseT>();
 		}
 
-		// Token: 0x0602D6F8 RID: 186104 RVA: 0x0063957B File Offset: 0x0063777B
+		// Token: 0x0602FEC9 RID: 196297 RVA: 0x006860E3 File Offset: 0x006842E3
 		public static IElementalBoxTargetPosTypeBase_UnionUnion FromIElementalBoxTargetPosTypeBase(IElementalBoxTargetPosTypeBaseT _ielementalboxtargetpostypebase)
 		{
 			return new IElementalBoxTargetPosTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D6F9 RID: 186105 RVA: 0x00639590 File Offset: 0x00637790
+		// Token: 0x0602FECA RID: 196298 RVA: 0x006860F8 File Offset: 0x006842F8
 		public IElementalBoxTargetPrefabPosT AsIElementalBoxTargetPrefabPos()
 		{
 			return this.As<IElementalBoxTargetPrefabPosT>();
 		}
 
-		// Token: 0x0602D6FA RID: 186106 RVA: 0x00639598 File Offset: 0x00637798
+		// Token: 0x0602FECB RID: 196299 RVA: 0x00686100 File Offset: 0x00684300
 		public static IElementalBoxTargetPosTypeBase_UnionUnion FromIElementalBoxTargetPrefabPos(IElementalBoxTargetPrefabPosT _ielementalboxtargetprefabpos)
 		{
 			return new IElementalBoxTargetPosTypeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D6FB RID: 186107 RVA: 0x006395AD File Offset: 0x006377AD
+		// Token: 0x0602FECC RID: 196300 RVA: 0x00686115 File Offset: 0x00684315
 		public IElementalBoxTargetRelativePosT AsIElementalBoxTargetRelativePos()
 		{
 			return this.As<IElementalBoxTargetRelativePosT>();
 		}
 
-		// Token: 0x0602D6FC RID: 186108 RVA: 0x006395B5 File Offset: 0x006377B5
+		// Token: 0x0602FECD RID: 196301 RVA: 0x0068611D File Offset: 0x0068431D
 		public static IElementalBoxTargetPosTypeBase_UnionUnion FromIElementalBoxTargetRelativePos(IElementalBoxTargetRelativePosT _ielementalboxtargetrelativepos)
 		{
 			return new IElementalBoxTargetPosTypeBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D6FD RID: 186109 RVA: 0x006395CC File Offset: 0x006377CC
+		// Token: 0x0602FECE RID: 196302 RVA: 0x00686134 File Offset: 0x00684334
 		public static int Pack(FlatBufferBuilder builder, IElementalBoxTargetPosTypeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

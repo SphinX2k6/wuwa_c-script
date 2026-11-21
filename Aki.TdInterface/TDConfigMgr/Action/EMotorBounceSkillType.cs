@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200161B RID: 5659
+	// Token: 0x02001787 RID: 6023
 	public enum EMotorBounceSkillType
 	{
-		// Token: 0x04004BF4 RID: 19444
+		// Token: 0x04004FE2 RID: 20450
 		Default = 10001033,
-		// Token: 0x04004BF5 RID: 19445
+		// Token: 0x04004FE3 RID: 20451
 		MushroomBounce,
-		// Token: 0x04004BF6 RID: 19446
+		// Token: 0x04004FE4 RID: 20452
 		NoTailFlameBounce = 10001036
 	}
 }

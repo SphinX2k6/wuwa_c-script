@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.SkillButtonUi;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA3 RID: 23971
+	// Token: 0x02004D85 RID: 19845
 	public class MotorcycleSkillItem : BattleSkillItem
 	{
-		// Token: 0x0603CDE3 RID: 249315 RVA: 0x00E9F050 File Offset: 0x00E9D250
+		// Token: 0x06031D40 RID: 204096 RVA: 0x00DEF908 File Offset: 0x00DEDB08
 		[NullableContext(2)]
 		public override void Refresh(ISkillButtonData skillButtonData)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Refresh(skillButtonData);
 		}
 
-		// Token: 0x0603CDE4 RID: 249316 RVA: 0x00E9F0B4 File Offset: 0x00E9D2B4
+		// Token: 0x06031D41 RID: 204097 RVA: 0x00DEF96C File Offset: 0x00DEDB6C
 		[NullableContext(1)]
 		public void RefreshSkillIconByResId(string resourceId)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetSkillIcon(resourcePath);
 		}
 
-		// Token: 0x0603CDE5 RID: 249317 RVA: 0x00E9F0D4 File Offset: 0x00E9D2D4
+		// Token: 0x06031D42 RID: 204098 RVA: 0x00DEF98C File Offset: 0x00DEDB8C
 		protected override void OnSkillButtonPressed()
 		{
 			if (this.InputValue == 0f)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputController.Instance.InputAxis(EInputAxis.MoveForward, this.InputValue, true);
 		}
 
-		// Token: 0x0603CDE6 RID: 249318 RVA: 0x00E9F123 File Offset: 0x00E9D323
+		// Token: 0x06031D43 RID: 204099 RVA: 0x00DEF9DB File Offset: 0x00DEDBDB
 		protected override void OnSkillButtonReleased()
 		{
 			if (this.InputValue == 0f)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputController.Instance.InputAxis(EInputAxis.MoveForward, 0f, true);
 		}
 
-		// Token: 0x0603CDE7 RID: 249319 RVA: 0x00E9F155 File Offset: 0x00E9D355
+		// Token: 0x06031D44 RID: 204100 RVA: 0x00DEFA0D File Offset: 0x00DEDC0D
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -79,14 +79,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputController.Instance.InputAxis(EInputAxis.MoveForward, this.InputValue, true);
 		}
 
-		// Token: 0x0603CDE8 RID: 249320 RVA: 0x00E9F17D File Offset: 0x00E9D37D
+		// Token: 0x06031D45 RID: 204101 RVA: 0x00DEFA35 File Offset: 0x00DEDC35
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
 			this.IsPress = false;
 		}
 
-		// Token: 0x0603CDE9 RID: 249321 RVA: 0x00E9F18C File Offset: 0x00E9D38C
+		// Token: 0x06031D46 RID: 204102 RVA: 0x00DEFA44 File Offset: 0x00DEDC44
 		public override void OnInputAction(bool bForcePlayClickEffect = false)
 		{
 			if (this.InputValue == 0f)
@@ -102,10 +102,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			clickEffect.Play();
 		}
 
-		// Token: 0x0401FB49 RID: 129865
+		// Token: 0x0401A601 RID: 108033
 		private bool IsPress;
 
-		// Token: 0x0401FB4A RID: 129866
+		// Token: 0x0401A602 RID: 108034
 		private float InputValue;
 	}
 }

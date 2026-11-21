@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.NetworkDetection
 {
-	// Token: 0x02005360 RID: 21344
+	// Token: 0x02004343 RID: 17219
 	[Nullable(new byte[]
 	{
 		0,
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 	})]
 	public class NetworkDetectionItem : GridProxyAbstract<INetworkDetectionItemData>
 	{
-		// Token: 0x06036871 RID: 223345 RVA: 0x00CE92D0 File Offset: 0x00CE74D0
+		// Token: 0x0602B7B7 RID: 178103 RVA: 0x00C38158 File Offset: 0x00C36358
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036872 RID: 223346 RVA: 0x00CE93BD File Offset: 0x00CE75BD
+		// Token: 0x0602B7B8 RID: 178104 RVA: 0x00C38245 File Offset: 0x00C36445
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06036873 RID: 223347 RVA: 0x00CE93D0 File Offset: 0x00CE75D0
+		// Token: 0x0602B7B9 RID: 178105 RVA: 0x00C38258 File Offset: 0x00C36458
 		[NullableContext(1)]
 		public override void Refresh(INetworkDetectionItemData data, bool isSelected, int gridIndex)
 		{
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.UpdateView();
 		}
 
-		// Token: 0x06036874 RID: 223348 RVA: 0x00CE93E0 File Offset: 0x00CE75E0
+		// Token: 0x0602B7BA RID: 178106 RVA: 0x00C38268 File Offset: 0x00C36468
 		private void UpdateView()
 		{
 			INetworkDetectionEntry entryData = this.NetworkDetectionItemData.EntryData;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			base.GetItem(4).SetUIActive(flag);
 		}
 
-		// Token: 0x06036875 RID: 223349 RVA: 0x00CE94C4 File Offset: 0x00CE76C4
+		// Token: 0x0602B7BB RID: 178107 RVA: 0x00C3834C File Offset: 0x00C3654C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.NetworkDetectionItemData.EntryData.Type == ENetworkDetectionType.UdpPort)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			}
 		}
 
-		// Token: 0x06036876 RID: 223350 RVA: 0x00CE9514 File Offset: 0x00CE7714
+		// Token: 0x0602B7BC RID: 178108 RVA: 0x00C3839C File Offset: 0x00C3659C
 		public UniTask<bool> Proceed()
 		{
 			NetworkDetectionItem.<Proceed>d__8 <Proceed>d__;
@@ -99,35 +99,35 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <Proceed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036877 RID: 223351 RVA: 0x00CE9557 File Offset: 0x00CE7757
+		// Token: 0x0602B7BD RID: 178109 RVA: 0x00C383DF File Offset: 0x00C365DF
 		[NullableContext(1)]
 		public override object GetKey(INetworkDetectionItemData data, int displayIndex)
 		{
 			return displayIndex;
 		}
 
-		// Token: 0x0401CD57 RID: 118103
+		// Token: 0x040177EB RID: 96235
 		[Nullable(2)]
 		private INetworkDetectionItemData NetworkDetectionItemData;
 
-		// Token: 0x0401CD58 RID: 118104
+		// Token: 0x040177EC RID: 96236
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B5C4 RID: 46532
+		// Token: 0x02009FFD RID: 40957
 		private enum EComponents
 		{
-			// Token: 0x040370F7 RID: 225527
+			// Token: 0x04031B4F RID: 203599
 			TxtName,
-			// Token: 0x040370F8 RID: 225528
+			// Token: 0x04031B50 RID: 203600
 			ErrorIcon,
-			// Token: 0x040370F9 RID: 225529
+			// Token: 0x04031B51 RID: 203601
 			CorrectIcon,
-			// Token: 0x040370FA RID: 225530
+			// Token: 0x04031B52 RID: 203602
 			ProceedIcon,
-			// Token: 0x040370FB RID: 225531
+			// Token: 0x04031B53 RID: 203603
 			PnlError,
-			// Token: 0x040370FC RID: 225532
+			// Token: 0x04031B54 RID: 203604
 			TxtError
 		}
 	}

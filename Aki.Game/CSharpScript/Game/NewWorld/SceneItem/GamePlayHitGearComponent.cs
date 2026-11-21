@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
@@ -23,12 +22,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200715F RID: 29023
-	[NullableContext(2)]
+	// Token: 0x02006213 RID: 25107
+	[NullableContext(1)]
 	[Nullable(0)]
 	public class GamePlayHitGearComponent : EntityComponent
 	{
-		// Token: 0x06046D82 RID: 290178 RVA: 0x011DBF48 File Offset: 0x011DA148
+		// Token: 0x0603C5C5 RID: 247237 RVA: 0x01137CA0 File Offset: 0x01135EA0
+		private static Dictionary<EHitBulletType, int> BuildHitBulletTypeToIntEnum()
+		{
+			EHitBulletType[] values = Enum.GetValues<EHitBulletType>();
+			Dictionary<EHitBulletType, int> dictionary = new Dictionary<EHitBulletType, int>(values.Length);
+			foreach (EHitBulletType ehitBulletType in values)
+			{
+				dictionary[ehitBulletType] = (int)ehitBulletType;
+			}
+			return dictionary;
+		}
+
+		// Token: 0x0603C5C6 RID: 247238 RVA: 0x01137CD8 File Offset: 0x01135ED8
+		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			TargetGearComponent targetGearComponent = args.GetP1<CreateEntityData>().GetParam<GamePlayHitGearComponent>() as TargetGearComponent;
@@ -108,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D83 RID: 290179 RVA: 0x011DC268 File Offset: 0x011DA468
+		// Token: 0x0603C5C7 RID: 247239 RVA: 0x01137FF8 File Offset: 0x011361F8
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -193,7 +205,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D84 RID: 290180 RVA: 0x011DC5D4 File Offset: 0x011DA7D4
+		// Token: 0x0603C5C8 RID: 247240 RVA: 0x01138364 File Offset: 0x01136564
 		private void OnInitialSimpleMoveStopCallback()
 		{
 			SceneItemMoveComponent moveComp = this.MoveComp;
@@ -220,7 +232,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnMoveConditionMatchUpdate();
 		}
 
-		// Token: 0x06046D85 RID: 290181 RVA: 0x011DC674 File Offset: 0x011DA874
+		// Token: 0x0603C5C9 RID: 247241 RVA: 0x01138404 File Offset: 0x01136604
 		private unsafe void TryRegisterMoveCondition()
 		{
 			if (this.CanMoveEntityCondition == null || this.CanMoveEntityCondition.Count <= 0)
@@ -302,7 +314,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnMoveConditionMatchUpdate();
 		}
 
-		// Token: 0x06046D86 RID: 290182 RVA: 0x011DC930 File Offset: 0x011DAB30
+		// Token: 0x0603C5CA RID: 247242 RVA: 0x011386C0 File Offset: 0x011368C0
 		private void UnRegisterMoveCondition()
 		{
 			if (this.CanMoveEntityCondition == null || this.CanMoveEntityCondition.Count <= 0)
@@ -336,21 +348,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D87 RID: 290183 RVA: 0x011DCA64 File Offset: 0x011DAC64
-		[NullableContext(1)]
+		// Token: 0x0603C5CB RID: 247243 RVA: 0x011387F4 File Offset: 0x011369F4
 		private void OnConditionEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			this.UnRegisterMoveCondition();
 			this.TryRegisterMoveCondition();
 		}
 
-		// Token: 0x06046D88 RID: 290184 RVA: 0x011DCA72 File Offset: 0x011DAC72
+		// Token: 0x0603C5CC RID: 247244 RVA: 0x01138802 File Offset: 0x01136A02
 		private void OnMoveConditionTagAddOrRemove(int tagId, bool tagExist)
 		{
 			this.OnMoveConditionMatchUpdate();
 		}
 
-		// Token: 0x06046D89 RID: 290185 RVA: 0x011DCA7C File Offset: 0x011DAC7C
+		// Token: 0x0603C5CD RID: 247245 RVA: 0x0113880C File Offset: 0x01136A0C
 		private void OnMoveConditionMatchUpdate()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -382,7 +393,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D8A RID: 290186 RVA: 0x011DCAF4 File Offset: 0x011DACF4
+		// Token: 0x0603C5CE RID: 247246 RVA: 0x01138884 File Offset: 0x01136A84
 		private unsafe void StartPatrol()
 		{
 			if (this.SplineMoveParam == null)
@@ -399,20 +410,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 			if (this.IsFirstBeginPatrol)
 			{
-				SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam splineMoveParam = this.SplineMoveParam;
 				List<IPatrolSplinePoint> points = this.SplineData.Points;
-				int? num;
-				if (points == null)
+				SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam splineMoveParam = this.SplineMoveParam;
+				float num;
+				if (points == null || points.Count <= 0)
 				{
-					num = null;
+					num = (float)0;
 				}
 				else
 				{
-					IPatrolSplinePoint patrolSplinePoint2 = points.ElementAtOrDefault(0);
-					num = ((patrolSplinePoint2 != null) ? patrolSplinePoint2.StayTime : null);
+					IPatrolSplinePoint patrolSplinePoint2 = points[0];
+					num = (float)((patrolSplinePoint2 != null) ? patrolSplinePoint2.StayTime : null).GetValueOrDefault();
 				}
-				int? num2 = num;
-				splineMoveParam.StartTimeOffset = (float)num2.GetValueOrDefault();
+				splineMoveParam.StartTimeOffset = num;
 				this.SplineMoveParam.StartDis = -1f;
 				this.SplineMoveParam.EndDis = -1f;
 				this.IsFirstBeginPatrol = false;
@@ -441,7 +451,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D8B RID: 290187 RVA: 0x011DCCF4 File Offset: 0x011DAEF4
+		// Token: 0x0603C5CF RID: 247247 RVA: 0x01138A8C File Offset: 0x01136C8C
 		private void StopPatrol()
 		{
 			SceneItemMoveComponent moveComp = this.MoveComp;
@@ -458,7 +468,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D8C RID: 290188 RVA: 0x011DCD4C File Offset: 0x011DAF4C
+		// Token: 0x0603C5D0 RID: 247248 RVA: 0x01138AE4 File Offset: 0x01136CE4
 		protected override bool OnEnd()
 		{
 			if (this.HasSpline.GetValueOrDefault())
@@ -482,8 +492,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D8D RID: 290189 RVA: 0x011DCE00 File Offset: 0x011DB000
-		[NullableContext(1)]
+		// Token: 0x0603C5D1 RID: 247249 RVA: 0x01138B98 File Offset: 0x01136D98
 		private void OnHit(global::HitInformation hitData)
 		{
 			if (!this.MultiplayerCheck(hitData))
@@ -574,8 +583,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D8E RID: 290190 RVA: 0x011DD120 File Offset: 0x011DB320
-		[NullableContext(1)]
+		// Token: 0x0603C5D2 RID: 247250 RVA: 0x01138EB8 File Offset: 0x011370B8
 		private bool CheckCdPassed(global::HitInformation hitData)
 		{
 			float num = this.HitCd.Value * 1000f;
@@ -605,8 +613,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return flag2;
 		}
 
-		// Token: 0x06046D8F RID: 290191 RVA: 0x011DD1D8 File Offset: 0x011DB3D8
-		[NullableContext(1)]
+		// Token: 0x0603C5D3 RID: 247251 RVA: 0x01138F70 File Offset: 0x01137170
 		private unsafe void HandlePartHitGearRequest(global::HitInformation hitData, List<int> bulletTypes)
 		{
 			if (this.AddNextFrameCallback)
@@ -677,8 +684,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046D90 RID: 290192 RVA: 0x011DD3BA File Offset: 0x011DB5BA
-		[NullableContext(1)]
+		// Token: 0x0603C5D4 RID: 247252 RVA: 0x01139152 File Offset: 0x01137352
 		private void HandleHitGearRequest(global::HitInformation hitData, List<int> bulletTypes, [Nullable(new byte[]
 		{
 			2,
@@ -718,7 +724,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x06046D91 RID: 290193 RVA: 0x011DD3E8 File Offset: 0x011DB5E8
+		// Token: 0x0603C5D5 RID: 247253 RVA: 0x01139180 File Offset: 0x01137380
 		public bool IsCanBeManipulateLock()
 		{
 			LevelTagComponent component = base.Entity.GetComponent<LevelTagComponent>();
@@ -727,8 +733,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return (attackTagId.GetValueOrDefault() == num & attackTagId != null) && component.HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.状态.激活"]);
 		}
 
-		// Token: 0x06046D92 RID: 290194 RVA: 0x011DD444 File Offset: 0x011DB644
-		[NullableContext(1)]
+		// Token: 0x0603C5D6 RID: 247254 RVA: 0x011391DC File Offset: 0x011373DC
 		public global::Vector GetHitPoint()
 		{
 			global::Vector vector = global::Vector.Create(this.TrackOffset);
@@ -744,8 +749,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector2;
 		}
 
-		// Token: 0x06046D93 RID: 290195 RVA: 0x011DD4DD File Offset: 0x011DB6DD
-		[NullableContext(1)]
+		// Token: 0x0603C5D7 RID: 247255 RVA: 0x01139275 File Offset: 0x01137475
 		private bool MultiplayerCheck(global::HitInformation hitData)
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -756,7 +760,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return attacker != null && attacker.Valid && hitData.Attacker.GetComponent<CharacterActorComponent>().IsAutonomousProxy;
 		}
 
-		// Token: 0x06046D94 RID: 290196 RVA: 0x011DD518 File Offset: 0x011DB718
+		// Token: 0x0603C5D8 RID: 247256 RVA: 0x011392B0 File Offset: 0x011374B0
 		private bool CheckMatchMoveCondition()
 		{
 			if (this.CanMoveEntityCondition == null || this.CanMoveEntityCondition.Count <= 0)
@@ -789,7 +793,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D95 RID: 290197 RVA: 0x011DD5F0 File Offset: 0x011DB7F0
+		// Token: 0x0603C5D9 RID: 247257 RVA: 0x01139388 File Offset: 0x01137588
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -804,7 +808,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return (this.Config.HitLogicType as IHitLogicChangeByPartHit).PartHitConfig[hitPartIndex].Actions;
 		}
 
-		// Token: 0x06046D96 RID: 290198 RVA: 0x011DD624 File Offset: 0x011DB824
+		// Token: 0x0603C5DA RID: 247258 RVA: 0x011393BC File Offset: 0x011375BC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -816,7 +820,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			{
 				return null;
 			}
-			IActionByHitTypeConfig actionByHitTypeConfig = (this.Config.HitLogicType as IHitLogicActionByHitType).Configs.ElementAtOrDefault(configIndex);
+			List<IActionByHitTypeConfig> configs = (this.Config.HitLogicType as IHitLogicActionByHitType).Configs;
+			if (configIndex < 0 || configIndex >= configs.Count)
+			{
+				return null;
+			}
+			IActionByHitTypeConfig actionByHitTypeConfig = configs[configIndex];
 			if (actionByHitTypeConfig == null)
 			{
 				return null;
@@ -824,8 +833,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return actionByHitTypeConfig.Actions;
 		}
 
-		// Token: 0x06046D97 RID: 290199 RVA: 0x011DD674 File Offset: 0x011DB874
-		[NullableContext(1)]
+		// Token: 0x0603C5DB RID: 247259 RVA: 0x01139420 File Offset: 0x01137620
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -833,283 +841,222 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			GamePlayHitGearComponent gamePlayHitGearComponent = (GamePlayHitGearComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (gamePlayHitGearComponent.ActorComp == null)
 			{
-				if (gamePlayHitGearComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("SceneItemHitComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (gamePlayHitGearComponent.SceneItemHitComp == null)
-				{
-					this.SceneItemHitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.SceneItemHitComp), "SceneItemHitComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MovementSyncComp"))
+			if (gamePlayHitGearComponent.SceneItemHitComp == null)
 			{
-				if (gamePlayHitGearComponent.MovementSyncComp == null)
-				{
-					this.MovementSyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMovementSyncComponent>(this.MovementSyncComp), "MovementSyncComp"))
-				{
-					return false;
-				}
+				this.SceneItemHitComp = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneItemHitComp), "SceneItemHitComp"))
 			{
-				if (gamePlayHitGearComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineEntityId"))
+			if (gamePlayHitGearComponent.MovementSyncComp == null)
 			{
-				this.SplineEntityId = gamePlayHitGearComponent.SplineEntityId;
+				this.MovementSyncComp = null;
 			}
-			if (base.CanResetComponentProperty("Spline"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementSyncComp), "MovementSyncComp"))
 			{
-				this.Spline = gamePlayHitGearComponent.Spline;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineData"))
+			if (gamePlayHitGearComponent.MoveComp == null)
 			{
-				if (gamePlayHitGearComponent.SplineData == null)
-				{
-					this.SplineData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IPatrolSpline>(this.SplineData), "SplineData"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("SplineComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				if (gamePlayHitGearComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsCycle"))
+			this.SplineEntityId = gamePlayHitGearComponent.SplineEntityId;
+			this.Spline = gamePlayHitGearComponent.Spline;
+			if (gamePlayHitGearComponent.SplineData == null)
 			{
-				this.IsCycle = gamePlayHitGearComponent.IsCycle;
+				this.SplineData = null;
 			}
-			if (base.CanResetComponentProperty("IsLookDir"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineData), "SplineData"))
 			{
-				this.IsLookDir = gamePlayHitGearComponent.IsLookDir;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HasSpline"))
+			if (gamePlayHitGearComponent.SplineComp == null)
 			{
-				this.HasSpline = gamePlayHitGearComponent.HasSpline;
+				this.SplineComp = null;
 			}
-			if (base.CanResetComponentProperty("HasAddHitEvent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
 			{
-				this.HasAddHitEvent = gamePlayHitGearComponent.HasAddHitEvent;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HitCd"))
+			this.IsCycle = gamePlayHitGearComponent.IsCycle;
+			this.IsLookDir = gamePlayHitGearComponent.IsLookDir;
+			this.HasSpline = gamePlayHitGearComponent.HasSpline;
+			this.HasAddHitEvent = gamePlayHitGearComponent.HasAddHitEvent;
+			this.HitCd = gamePlayHitGearComponent.HitCd;
+			this.HitTimeStamp = gamePlayHitGearComponent.HitTimeStamp;
+			if (gamePlayHitGearComponent.PartHitTimeStamp == null)
 			{
-				this.HitCd = gamePlayHitGearComponent.HitCd;
+				this.PartHitTimeStamp = null;
 			}
-			if (base.CanResetComponentProperty("HitTimeStamp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartHitTimeStamp), "PartHitTimeStamp"))
 			{
-				this.HitTimeStamp = gamePlayHitGearComponent.HitTimeStamp;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PartHitTimeStamp"))
+			this.AttackTagId = gamePlayHitGearComponent.AttackTagId;
+			if (gamePlayHitGearComponent.TrackOffset == null)
 			{
-				if (gamePlayHitGearComponent.PartHitTimeStamp == null)
-				{
-					this.PartHitTimeStamp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, long>>(this.PartHitTimeStamp), "PartHitTimeStamp"))
-				{
-					return false;
-				}
+				this.TrackOffset = null;
 			}
-			if (base.CanResetComponentProperty("AttackTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrackOffset), "TrackOffset"))
 			{
-				this.AttackTagId = gamePlayHitGearComponent.AttackTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TrackOffset"))
+			this.IsInitialSimpleMoveFinished = gamePlayHitGearComponent.IsInitialSimpleMoveFinished;
+			if (gamePlayHitGearComponent.CanMoveEntityCondition == null)
 			{
-				if (gamePlayHitGearComponent.TrackOffset == null)
-				{
-					this.TrackOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TrackOffset), "TrackOffset"))
-				{
-					return false;
-				}
+				this.CanMoveEntityCondition = null;
 			}
-			if (base.CanResetComponentProperty("IsInitialSimpleMoveFinished"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CanMoveEntityCondition), "CanMoveEntityCondition"))
 			{
-				this.IsInitialSimpleMoveFinished = gamePlayHitGearComponent.IsInitialSimpleMoveFinished;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CanMoveEntityCondition"))
+			if (gamePlayHitGearComponent.WaitConditionEntityTask == null)
 			{
-				if (gamePlayHitGearComponent.CanMoveEntityCondition == null)
-				{
-					this.CanMoveEntityCondition = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, GamePlayHitGearComponent.EntityCondition>>(this.CanMoveEntityCondition), "CanMoveEntityCondition"))
-				{
-					return false;
-				}
+				this.WaitConditionEntityTask = null;
 			}
-			if (base.CanResetComponentProperty("WaitConditionEntityTask"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitConditionEntityTask), "WaitConditionEntityTask"))
 			{
-				if (gamePlayHitGearComponent.WaitConditionEntityTask == null)
-				{
-					this.WaitConditionEntityTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaitEntityTask>(this.WaitConditionEntityTask), "WaitConditionEntityTask"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineMoveParam"))
+			if (gamePlayHitGearComponent.SplineMoveParam == null)
 			{
-				if (gamePlayHitGearComponent.SplineMoveParam == null)
-				{
-					this.SplineMoveParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam>(this.SplineMoveParam), "SplineMoveParam"))
-				{
-					return false;
-				}
+				this.SplineMoveParam = null;
 			}
-			if (base.CanResetComponentProperty("DistanceAlongSpline"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineMoveParam), "SplineMoveParam"))
 			{
-				this.DistanceAlongSpline = gamePlayHitGearComponent.DistanceAlongSpline;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsFirstBeginPatrol"))
+			this.DistanceAlongSpline = gamePlayHitGearComponent.DistanceAlongSpline;
+			this.IsFirstBeginPatrol = gamePlayHitGearComponent.IsFirstBeginPatrol;
+			if (gamePlayHitGearComponent.Config == null)
 			{
-				this.IsFirstBeginPatrol = gamePlayHitGearComponent.IsFirstBeginPatrol;
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (gamePlayHitGearComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TargetGearComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsPartHitType"))
+			this.IsPartHitType = gamePlayHitGearComponent.IsPartHitType;
+			this.AddNextFrameCallback = gamePlayHitGearComponent.AddNextFrameCallback;
+			if (gamePlayHitGearComponent.FrontFrameHitPartBuffer == null)
 			{
-				this.IsPartHitType = gamePlayHitGearComponent.IsPartHitType;
+				this.FrontFrameHitPartBuffer = null;
 			}
-			if (base.CanResetComponentProperty("AddNextFrameCallback"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FrontFrameHitPartBuffer), "FrontFrameHitPartBuffer"))
 			{
-				this.AddNextFrameCallback = gamePlayHitGearComponent.AddNextFrameCallback;
+				return false;
 			}
-			if (base.CanResetComponentProperty("FrontFrameHitPartBuffer"))
+			if (gamePlayHitGearComponent.BackFrameHitPartBuffer == null)
 			{
-				if (gamePlayHitGearComponent.FrontFrameHitPartBuffer == null)
-				{
-					this.FrontFrameHitPartBuffer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.FrontFrameHitPartBuffer), "FrontFrameHitPartBuffer"))
-				{
-					return false;
-				}
+				this.BackFrameHitPartBuffer = null;
 			}
-			if (base.CanResetComponentProperty("BackFrameHitPartBuffer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BackFrameHitPartBuffer), "BackFrameHitPartBuffer"))
 			{
-				if (gamePlayHitGearComponent.BackFrameHitPartBuffer == null)
-				{
-					this.BackFrameHitPartBuffer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.BackFrameHitPartBuffer), "BackFrameHitPartBuffer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentFrame"))
-			{
-				this.CurrentFrame = gamePlayHitGearComponent.CurrentFrame;
-			}
+			this.CurrentFrame = gamePlayHitGearComponent.CurrentFrame;
 			return true;
 		}
 
-		// Token: 0x040252DC RID: 152284
+		// Token: 0x170071F6 RID: 29174
+		// (get) Token: 0x0603C5DC RID: 247260 RVA: 0x0113974E File Offset: 0x0113794E
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071F7 RID: 29175
+		// (get) Token: 0x0603C5DD RID: 247261 RVA: 0x01139751 File Offset: 0x01137951
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF43 RID: 130883
 		private const float SPEED_TO_PATROL = 500f;
 
-		// Token: 0x040252DD RID: 152285
+		// Token: 0x0401FF44 RID: 130884
 		private const float THOUSAND = 1000f;
 
-		// Token: 0x040252DE RID: 152286
+		// Token: 0x0401FF45 RID: 130885
 		private const float MIN_HIT_CD = 0.05f;
 
-		// Token: 0x040252DF RID: 152287
+		// Token: 0x0401FF46 RID: 130886
 		private const int SCENE_ITEM_PART_HIT_BATCH_REQUEST_MAX_NUM = 10;
 
-		// Token: 0x040252E0 RID: 152288
-		[Nullable(1)]
+		// Token: 0x0401FF47 RID: 130887
 		[StaticVariableRuleIgnore]
-		private static readonly Dictionary<EHitBulletType, int> HitBulletTypeToIntEnum = Enum.GetValues<EHitBulletType>().ToDictionary((EHitBulletType v) => v, (EHitBulletType v) => (int)v);
+		private static readonly Dictionary<EHitBulletType, int> HitBulletTypeToIntEnum = GamePlayHitGearComponent.BuildHitBulletTypeToIntEnum();
 
-		// Token: 0x040252E1 RID: 152289
+		// Token: 0x0401FF48 RID: 130888
+		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040252E2 RID: 152290
+		// Token: 0x0401FF49 RID: 130889
+		[Nullable(2)]
 		private SceneItemHitComponent SceneItemHitComp;
 
-		// Token: 0x040252E3 RID: 152291
+		// Token: 0x0401FF4A RID: 130890
+		[Nullable(2)]
 		private BaseMovementSyncComponent MovementSyncComp;
 
-		// Token: 0x040252E4 RID: 152292
+		// Token: 0x0401FF4B RID: 130891
+		[Nullable(2)]
 		private SceneItemMoveComponent MoveComp;
 
-		// Token: 0x040252E5 RID: 152293
+		// Token: 0x0401FF4C RID: 130892
 		private int? SplineEntityId;
 
-		// Token: 0x040252E6 RID: 152294
+		// Token: 0x0401FF4D RID: 130893
+		[Nullable(2)]
 		private TsGameSplineActor Spline;
 
-		// Token: 0x040252E7 RID: 152295
+		// Token: 0x0401FF4E RID: 130894
+		[Nullable(2)]
 		private IPatrolSpline SplineData;
 
-		// Token: 0x040252E8 RID: 152296
+		// Token: 0x0401FF4F RID: 130895
+		[Nullable(2)]
 		private USplineComponent SplineComp;
 
-		// Token: 0x040252E9 RID: 152297
+		// Token: 0x0401FF50 RID: 130896
 		private bool? IsCycle;
 
-		// Token: 0x040252EA RID: 152298
+		// Token: 0x0401FF51 RID: 130897
 		private bool? IsLookDir;
 
-		// Token: 0x040252EB RID: 152299
+		// Token: 0x0401FF52 RID: 130898
 		private bool? HasSpline;
 
-		// Token: 0x040252EC RID: 152300
+		// Token: 0x0401FF53 RID: 130899
 		private bool? HasAddHitEvent;
 
-		// Token: 0x040252ED RID: 152301
+		// Token: 0x0401FF54 RID: 130900
 		private float? HitCd;
 
-		// Token: 0x040252EE RID: 152302
+		// Token: 0x0401FF55 RID: 130901
 		private long? HitTimeStamp;
 
-		// Token: 0x040252EF RID: 152303
+		// Token: 0x0401FF56 RID: 130902
 		[Nullable(new byte[]
 		{
 			2,
@@ -1117,17 +1064,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<string, long> PartHitTimeStamp;
 
-		// Token: 0x040252F0 RID: 152304
+		// Token: 0x0401FF57 RID: 130903
 		private int? AttackTagId;
 
-		// Token: 0x040252F1 RID: 152305
-		[Nullable(1)]
+		// Token: 0x0401FF58 RID: 130904
 		private global::Vector TrackOffset = global::Vector.Create();
 
-		// Token: 0x040252F2 RID: 152306
+		// Token: 0x0401FF59 RID: 130905
 		private bool IsInitialSimpleMoveFinished;
 
-		// Token: 0x040252F3 RID: 152307
+		// Token: 0x0401FF5A RID: 130906
 		[Nullable(new byte[]
 		{
 			2,
@@ -1135,28 +1081,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<int, GamePlayHitGearComponent.EntityCondition> CanMoveEntityCondition;
 
-		// Token: 0x040252F4 RID: 152308
+		// Token: 0x0401FF5B RID: 130907
+		[Nullable(2)]
 		private WaitEntityTask WaitConditionEntityTask;
 
-		// Token: 0x040252F5 RID: 152309
+		// Token: 0x0401FF5C RID: 130908
+		[Nullable(2)]
 		private SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam SplineMoveParam;
 
-		// Token: 0x040252F6 RID: 152310
+		// Token: 0x0401FF5D RID: 130909
 		private float DistanceAlongSpline;
 
-		// Token: 0x040252F7 RID: 152311
+		// Token: 0x0401FF5E RID: 130910
 		private bool IsFirstBeginPatrol = true;
 
-		// Token: 0x040252F8 RID: 152312
+		// Token: 0x0401FF5F RID: 130911
+		[Nullable(2)]
 		private TargetGearComponent Config;
 
-		// Token: 0x040252F9 RID: 152313
+		// Token: 0x0401FF60 RID: 130912
 		private bool IsPartHitType;
 
-		// Token: 0x040252FA RID: 152314
+		// Token: 0x0401FF61 RID: 130913
 		private bool AddNextFrameCallback;
 
-		// Token: 0x040252FB RID: 152315
+		// Token: 0x0401FF62 RID: 130914
 		[Nullable(new byte[]
 		{
 			2,
@@ -1164,7 +1113,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<string> FrontFrameHitPartBuffer;
 
-		// Token: 0x040252FC RID: 152316
+		// Token: 0x0401FF63 RID: 130915
 		[Nullable(new byte[]
 		{
 			2,
@@ -1172,22 +1121,22 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<string> BackFrameHitPartBuffer;
 
-		// Token: 0x040252FD RID: 152317
+		// Token: 0x0401FF64 RID: 130916
 		private int CurrentFrame;
 
-		// Token: 0x0200CEA2 RID: 52898
+		// Token: 0x0200BA39 RID: 47673
 		[NullableContext(0)]
 		private class EntityCondition
 		{
-			// Token: 0x06051F02 RID: 335618 RVA: 0x01644146 File Offset: 0x01642346
+			// Token: 0x060486B0 RID: 296624 RVA: 0x0161628A File Offset: 0x0161448A
 			public EntityCondition(int pbDataId)
 			{
 			}
 
-			// Token: 0x0403E2EC RID: 254700
+			// Token: 0x04039613 RID: 235027
 			public int PbDataId = pbDataId;
 
-			// Token: 0x0403E2ED RID: 254701
+			// Token: 0x04039614 RID: 235028
 			[Nullable(new byte[]
 			{
 				1,

@@ -3,37 +3,37 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E58 RID: 3672
+	// Token: 0x02000F69 RID: 3945
 	[EnumExtensions]
 	public enum EBtNode
 	{
-		// Token: 0x04002FC4 RID: 12228
+		// Token: 0x040032BB RID: 12987
 		Start,
-		// Token: 0x04002FC5 RID: 12229
+		// Token: 0x040032BC RID: 12988
 		QuestSucceed,
-		// Token: 0x04002FC6 RID: 12230
+		// Token: 0x040032BD RID: 12989
 		QuestFailed,
-		// Token: 0x04002FC7 RID: 12231
+		// Token: 0x040032BE RID: 12990
 		AlwaysTrue,
-		// Token: 0x04002FC8 RID: 12232
+		// Token: 0x040032BF RID: 12991
 		AlwaysFalse,
-		// Token: 0x04002FC9 RID: 12233
+		// Token: 0x040032C0 RID: 12992
 		Repeater,
-		// Token: 0x04002FCA RID: 12234
+		// Token: 0x040032C1 RID: 12993
 		Sequence,
-		// Token: 0x04002FCB RID: 12235
+		// Token: 0x040032C2 RID: 12994
 		Select,
-		// Token: 0x04002FCC RID: 12236
+		// Token: 0x040032C3 RID: 12995
 		ParallelSelect,
-		// Token: 0x04002FCD RID: 12237
+		// Token: 0x040032C4 RID: 12996
 		Condition,
-		// Token: 0x04002FCE RID: 12238
+		// Token: 0x040032C5 RID: 12997
 		ConditionSelector,
-		// Token: 0x04002FCF RID: 12239
+		// Token: 0x040032C6 RID: 12998
 		ChildQuest,
-		// Token: 0x04002FD0 RID: 12240
+		// Token: 0x040032C7 RID: 12999
 		Action,
-		// Token: 0x04002FD1 RID: 12241
+		// Token: 0x040032C8 RID: 13000
 		ActionWithResult
 	}
 }

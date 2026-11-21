@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BEE RID: 7150
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DDD RID: 7645
 	public class IModifyTargetSceneItemAttributeTag : ModifySceneItemAttributeTag
 	{
-		// Token: 0x0600991D RID: 39197 RVA: 0x0016083C File Offset: 0x0015EA3C
+		// Token: 0x0600A24B RID: 41547 RVA: 0x00173734 File Offset: 0x00171934
 		private IModifyTargetSceneItemAttributeTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600991E RID: 39198 RVA: 0x00160874 File Offset: 0x0015EA74
+		// Token: 0x0600A24C RID: 41548 RVA: 0x0017376C File Offset: 0x0017196C
 		public static IModifyTargetSceneItemAttributeTag Create([Nullable(2)] IModifyTargetSceneItemAttributeTag instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600991F RID: 39199 RVA: 0x00160887 File Offset: 0x0015EA87
+		// Token: 0x0600A24D RID: 41549 RVA: 0x0017377F File Offset: 0x0017197F
 		public static IModifyTargetSceneItemAttributeTag CreateFromSetValue([Nullable(2)] IModifyTargetSceneItemAttributeTag_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009920 RID: 39200 RVA: 0x0016089A File Offset: 0x0015EA9A
+		// Token: 0x0600A24E RID: 41550 RVA: 0x00173792 File Offset: 0x00171992
 		public new IModifyTargetSceneItemAttributeTag_SetValue ToSetValue()
 		{
 			return new IModifyTargetSceneItemAttributeTag_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003000 RID: 12288
-		// (get) Token: 0x06009921 RID: 39201 RVA: 0x001608D1 File Offset: 0x0015EAD1
-		// (set) Token: 0x06009922 RID: 39202 RVA: 0x001608FC File Offset: 0x0015EAFC
+		// Token: 0x17003268 RID: 12904
+		// (get) Token: 0x0600A24F RID: 41551 RVA: 0x001737C9 File Offset: 0x001719C9
+		// (set) Token: 0x0600A250 RID: 41552 RVA: 0x001737F4 File Offset: 0x001719F4
 		public override EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003001 RID: 12289
-		// (get) Token: 0x06009923 RID: 39203 RVA: 0x0016090A File Offset: 0x0015EB0A
-		// (set) Token: 0x06009924 RID: 39204 RVA: 0x00160935 File Offset: 0x0015EB35
+		// Token: 0x17003269 RID: 12905
+		// (get) Token: 0x0600A251 RID: 41553 RVA: 0x00173802 File Offset: 0x00171A02
+		// (set) Token: 0x0600A252 RID: 41554 RVA: 0x0017382D File Offset: 0x00171A2D
 		public override bool IsAddTag
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003002 RID: 12290
-		// (get) Token: 0x06009925 RID: 39205 RVA: 0x00160943 File Offset: 0x0015EB43
-		// (set) Token: 0x06009926 RID: 39206 RVA: 0x0016096A File Offset: 0x0015EB6A
+		// Token: 0x1700326A RID: 12906
+		// (get) Token: 0x0600A253 RID: 41555 RVA: 0x0017383B File Offset: 0x00171A3B
+		// (set) Token: 0x0600A254 RID: 41556 RVA: 0x00173862 File Offset: 0x00171A62
 		public override List<int> PerformanceTag
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003003 RID: 12291
-		// (get) Token: 0x06009927 RID: 39207 RVA: 0x00160978 File Offset: 0x0015EB78
-		// (set) Token: 0x06009928 RID: 39208 RVA: 0x0016099F File Offset: 0x0015EB9F
+		// Token: 0x1700326B RID: 12907
+		// (get) Token: 0x0600A255 RID: 41557 RVA: 0x00173870 File Offset: 0x00171A70
+		// (set) Token: 0x0600A256 RID: 41558 RVA: 0x00173897 File Offset: 0x00171A97
 		public virtual List<int> EntityIds
 		{
 			get
@@ -153,11 +151,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D45 RID: 23877
+		// Token: 0x0400626B RID: 25195
 		[Nullable(2)]
 		protected new IModifyTargetSceneItemAttributeTag FbInstance;
 
-		// Token: 0x04005D46 RID: 23878
+		// Token: 0x0400626C RID: 25196
 		[Nullable(2)]
 		protected new IModifyTargetSceneItemAttributeTag_SetValue PocoInterface;
 	}

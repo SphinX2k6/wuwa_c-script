@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001017 RID: 4119
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001143 RID: 4419
 	public class IMonsterMergedHpBarSettings
 	{
-		// Token: 0x06005BEE RID: 23534 RVA: 0x000DEEA4 File Offset: 0x000DD0A4
-		[NullableContext(1)]
+		// Token: 0x060061D0 RID: 25040 RVA: 0x000EBB9C File Offset: 0x000E9D9C
 		private IMonsterMergedHpBarSettings_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005BEF RID: 23535 RVA: 0x000DEEDC File Offset: 0x000DD0DC
-		[NullableContext(1)]
+		// Token: 0x060061D1 RID: 25041 RVA: 0x000EBBD4 File Offset: 0x000E9DD4
 		public static IMonsterMergedHpBarSettings Create([Nullable(2)] IMonsterMergedHpBarSettings instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BF0 RID: 23536 RVA: 0x000DEEEF File Offset: 0x000DD0EF
-		[NullableContext(1)]
+		// Token: 0x060061D2 RID: 25042 RVA: 0x000EBBE7 File Offset: 0x000E9DE7
 		public static IMonsterMergedHpBarSettings CreateFromSetValue([Nullable(2)] IMonsterMergedHpBarSettings_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BF1 RID: 23537 RVA: 0x000DEF02 File Offset: 0x000DD102
-		[NullableContext(1)]
+		// Token: 0x060061D3 RID: 25043 RVA: 0x000EBBFA File Offset: 0x000E9DFA
 		public IMonsterMergedHpBarSettings_SetValue ToSetValue()
 		{
 			return new IMonsterMergedHpBarSettings_SetValue
@@ -64,11 +58,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E56 RID: 7766
-		// (get) Token: 0x06005BF2 RID: 23538 RVA: 0x000DEF15 File Offset: 0x000DD115
-		// (set) Token: 0x06005BF3 RID: 23539 RVA: 0x000DEF3C File Offset: 0x000DD13C
+		// Token: 0x17002000 RID: 8192
+		// (get) Token: 0x060061D4 RID: 25044 RVA: 0x000EBC0D File Offset: 0x000E9E0D
+		// (set) Token: 0x060061D5 RID: 25045 RVA: 0x000EBC34 File Offset: 0x000E9E34
+		[Nullable(2)]
 		public virtual List<long> DisplayBuffIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -82,16 +78,19 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.DisplayBuffIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().DisplayBuffIds = value;
 			}
 		}
 
-		// Token: 0x04003759 RID: 14169
+		// Token: 0x04003A94 RID: 14996
+		[Nullable(2)]
 		protected IMonsterMergedHpBarSettings FbInstance;
 
-		// Token: 0x0400375A RID: 14170
+		// Token: 0x04003A95 RID: 14997
+		[Nullable(2)]
 		protected IMonsterMergedHpBarSettings_SetValue PocoInterface;
 	}
 }

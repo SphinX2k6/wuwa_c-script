@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002D04 RID: 11524
+// Token: 0x0200225E RID: 8798
 public static class WeaponDefine
 {
-	// Token: 0x0400B40F RID: 46095
+	// Token: 0x0400B784 RID: 46980
 	public const int WEAPON_CURVE_RATION = 10000;
 
-	// Token: 0x0400B410 RID: 46096
+	// Token: 0x0400B785 RID: 46981
 	public const int WEAPON_EQUIPTYPE = 0;
 }

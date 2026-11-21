@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x0200580C RID: 22540
+	// Token: 0x020047E3 RID: 18403
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardItemList : UiPanelBase
 	{
-		// Token: 0x060394AF RID: 234671 RVA: 0x00D96688 File Offset: 0x00D94888
+		// Token: 0x0602E3C3 RID: 189379 RVA: 0x00CE5518 File Offset: 0x00CE3718
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060394B0 RID: 234672 RVA: 0x00D9671D File Offset: 0x00D9491D
+		// Token: 0x0602E3C4 RID: 189380 RVA: 0x00CE55AD File Offset: 0x00CE37AD
 		protected override void OnStart()
 		{
 			this.SourceItem = base.GetItem(1);
@@ -40,20 +40,20 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.GenericScrollView = new GenericScrollViewNew<RewardSmallItemGrid, RewardItemData>(base.GetScrollViewWithScrollbar(2), new Func<RewardSmallItemGrid>(this.OnCreateRewardItem), null, false, null);
 		}
 
-		// Token: 0x060394B1 RID: 234673 RVA: 0x00D96759 File Offset: 0x00D94959
+		// Token: 0x0602E3C5 RID: 189381 RVA: 0x00CE55E9 File Offset: 0x00CE37E9
 		protected override void OnBeforeDestroy()
 		{
 			this.SelectedItemGrid = null;
 			this.GenericScrollView = null;
 		}
 
-		// Token: 0x060394B2 RID: 234674 RVA: 0x00D96769 File Offset: 0x00D94969
+		// Token: 0x0602E3C6 RID: 189382 RVA: 0x00CE55F9 File Offset: 0x00CE37F9
 		private RewardSmallItemGrid OnCreateRewardItem()
 		{
 			return this.NewRewardItem();
 		}
 
-		// Token: 0x060394B3 RID: 234675 RVA: 0x00D96774 File Offset: 0x00D94974
+		// Token: 0x0602E3C7 RID: 189383 RVA: 0x00CE5604 File Offset: 0x00CE3804
 		public void Refresh(List<RewardItemData> rewardItemDataList, bool tipsCanSkip = true)
 		{
 			rewardItemDataList.Sort(delegate(RewardItemData aRewardItem, RewardItemData bRewardItem)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.TipsCanSkip = new bool?(tipsCanSkip);
 		}
 
-		// Token: 0x060394B4 RID: 234676 RVA: 0x00D967C0 File Offset: 0x00D949C0
+		// Token: 0x0602E3C8 RID: 189384 RVA: 0x00CE5650 File Offset: 0x00CE3850
 		private RewardSmallItemGrid NewRewardItem()
 		{
 			RewardSmallItemGrid rewardSmallItemGrid = new RewardSmallItemGrid();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return rewardSmallItemGrid;
 		}
 
-		// Token: 0x060394B5 RID: 234677 RVA: 0x00D96800 File Offset: 0x00D94A00
+		// Token: 0x0602E3C9 RID: 189385 RVA: 0x00CE5690 File Offset: 0x00CE3890
 		private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 		{
 			ItemGridBase selectedItemGrid = this.SelectedItemGrid;
@@ -108,14 +108,14 @@ namespace CSharpScript.Game.Module.ItemReward
 				ItemController.Instance.OpenItemTipsByItemUid(uniqueId, configId, true, null);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(configId, this.TipsCanSkip.GetValueOrDefault(true), null);
+			ItemController.Instance.OpenItemTipsByItemId(configId, this.TipsCanSkip.GetValueOrDefault(true), null, false);
 		}
 
-		// Token: 0x0401DF5B RID: 122715
+		// Token: 0x040189F2 RID: 100850
 		[Nullable(2)]
 		private UUIItem SourceItem;
 
-		// Token: 0x0401DF5C RID: 122716
+		// Token: 0x040189F3 RID: 100851
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,24 +124,24 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericScrollViewNew<RewardSmallItemGrid, RewardItemData> GenericScrollView;
 
-		// Token: 0x0401DF5D RID: 122717
+		// Token: 0x040189F4 RID: 100852
 		[Nullable(2)]
 		private ItemGridBase SelectedItemGrid;
 
-		// Token: 0x0401DF5E RID: 122718
+		// Token: 0x040189F5 RID: 100853
 		private bool? TipsCanSkip;
 
-		// Token: 0x0200BA0D RID: 47629
+		// Token: 0x0200A423 RID: 42019
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040383C6 RID: 230342
+			// Token: 0x04032DB3 RID: 208307
 			public const int ItemContentItem = 0;
 
-			// Token: 0x040383C7 RID: 230343
+			// Token: 0x04032DB4 RID: 208308
 			public const int SourceItem = 1;
 
-			// Token: 0x040383C8 RID: 230344
+			// Token: 0x04032DB5 RID: 208309
 			public const int ScrollViewWithScrollbar = 2;
 		}
 	}

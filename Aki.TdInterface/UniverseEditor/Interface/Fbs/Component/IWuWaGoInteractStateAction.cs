@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BBE RID: 23486
+	// Token: 0x020061D4 RID: 25044
 	public struct IWuWaGoInteractStateAction : IFlatbufferObject
 	{
-		// Token: 0x1700B170 RID: 45424
-		// (get) Token: 0x0602837F RID: 164735 RVA: 0x00586A5C File Offset: 0x00584C5C
+		// Token: 0x1700BAB8 RID: 47800
+		// (get) Token: 0x0602A943 RID: 174403 RVA: 0x005CE4EC File Offset: 0x005CC6EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028380 RID: 164736 RVA: 0x00586A69 File Offset: 0x00584C69
+		// Token: 0x0602A944 RID: 174404 RVA: 0x005CE4F9 File Offset: 0x005CC6F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028381 RID: 164737 RVA: 0x00586A70 File Offset: 0x00584C70
+		// Token: 0x0602A945 RID: 174405 RVA: 0x005CE500 File Offset: 0x005CC700
 		public static IWuWaGoInteractStateAction GetRootAsIWuWaGoInteractStateAction(ByteBuffer _bb)
 		{
 			return IWuWaGoInteractStateAction.GetRootAsIWuWaGoInteractStateAction(_bb, default(IWuWaGoInteractStateAction));
 		}
 
-		// Token: 0x06028382 RID: 164738 RVA: 0x00586A8C File Offset: 0x00584C8C
+		// Token: 0x0602A946 RID: 174406 RVA: 0x005CE51C File Offset: 0x005CC71C
 		public static IWuWaGoInteractStateAction GetRootAsIWuWaGoInteractStateAction(ByteBuffer _bb, IWuWaGoInteractStateAction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028383 RID: 164739 RVA: 0x00586AA9 File Offset: 0x00584CA9
+		// Token: 0x0602A947 RID: 174407 RVA: 0x005CE539 File Offset: 0x005CC739
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028384 RID: 164740 RVA: 0x00586AB8 File Offset: 0x00584CB8
+		// Token: 0x0602A948 RID: 174408 RVA: 0x005CE548 File Offset: 0x005CC748
 		public IWuWaGoInteractStateAction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B171 RID: 45425
-		// (get) Token: 0x06028385 RID: 164741 RVA: 0x00586AC8 File Offset: 0x00584CC8
+		// Token: 0x1700BAB9 RID: 47801
+		// (get) Token: 0x0602A949 RID: 174409 RVA: 0x005CE558 File Offset: 0x005CC758
 		public string EntityState
 		{
 			get
@@ -64,19 +64,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028386 RID: 164742 RVA: 0x00586AFF File Offset: 0x00584CFF
+		// Token: 0x0602A94A RID: 174410 RVA: 0x005CE58F File Offset: 0x005CC78F
 		public Span<byte> GetEntityStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06028387 RID: 164743 RVA: 0x00586B0E File Offset: 0x00584D0E
+		// Token: 0x0602A94B RID: 174411 RVA: 0x005CE59E File Offset: 0x005CC79E
 		public byte[] GetEntityStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06028388 RID: 164744 RVA: 0x00586B1C File Offset: 0x00584D1C
+		// Token: 0x0602A94C RID: 174412 RVA: 0x005CE5AC File Offset: 0x005CC7AC
 		public IActionInfo? ActionList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -87,8 +87,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B172 RID: 45426
-		// (get) Token: 0x06028389 RID: 164745 RVA: 0x00586B7C File Offset: 0x00584D7C
+		// Token: 0x1700BABA RID: 47802
+		// (get) Token: 0x0602A94D RID: 174413 RVA: 0x005CE60C File Offset: 0x005CC80C
 		public int ActionListLength
 		{
 			get
@@ -102,7 +102,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602838A RID: 164746 RVA: 0x00586BA7 File Offset: 0x00584DA7
+		// Token: 0x0602A94E RID: 174414 RVA: 0x005CE637 File Offset: 0x005CC837
 		public static Offset<IWuWaGoInteractStateAction> CreateIWuWaGoInteractStateAction(FlatBufferBuilder builder, StringOffset EntityStateOffset = default(StringOffset), VectorOffset ActionListOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -111,25 +111,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoInteractStateAction.EndIWuWaGoInteractStateAction(builder);
 		}
 
-		// Token: 0x0602838B RID: 164747 RVA: 0x00586BC4 File Offset: 0x00584DC4
+		// Token: 0x0602A94F RID: 174415 RVA: 0x005CE654 File Offset: 0x005CC854
 		public static void StartIWuWaGoInteractStateAction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602838C RID: 164748 RVA: 0x00586BCD File Offset: 0x00584DCD
+		// Token: 0x0602A950 RID: 174416 RVA: 0x005CE65D File Offset: 0x005CC85D
 		public static void AddEntityState(FlatBufferBuilder builder, StringOffset entityStateOffset)
 		{
 			builder.AddOffset(0, entityStateOffset.Value, 0);
 		}
 
-		// Token: 0x0602838D RID: 164749 RVA: 0x00586BDD File Offset: 0x00584DDD
+		// Token: 0x0602A951 RID: 174417 RVA: 0x005CE66D File Offset: 0x005CC86D
 		public static void AddActionList(FlatBufferBuilder builder, VectorOffset actionListOffset)
 		{
 			builder.AddOffset(1, actionListOffset.Value, 0);
 		}
 
-		// Token: 0x0602838E RID: 164750 RVA: 0x00586BF0 File Offset: 0x00584DF0
+		// Token: 0x0602A952 RID: 174418 RVA: 0x005CE680 File Offset: 0x005CC880
 		public static VectorOffset CreateActionListVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602838F RID: 164751 RVA: 0x00586C30 File Offset: 0x00584E30
+		// Token: 0x0602A953 RID: 174419 RVA: 0x005CE6C0 File Offset: 0x005CC8C0
 		public static VectorOffset CreateActionListVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028390 RID: 164752 RVA: 0x00586C4A File Offset: 0x00584E4A
+		// Token: 0x0602A954 RID: 174420 RVA: 0x005CE6DA File Offset: 0x005CC8DA
 		public static VectorOffset CreateActionListVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028391 RID: 164753 RVA: 0x00586C68 File Offset: 0x00584E68
+		// Token: 0x0602A955 RID: 174421 RVA: 0x005CE6F8 File Offset: 0x005CC8F8
 		public static VectorOffset CreateActionListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -164,19 +164,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06028392 RID: 164754 RVA: 0x00586C81 File Offset: 0x00584E81
+		// Token: 0x0602A956 RID: 174422 RVA: 0x005CE711 File Offset: 0x005CC911
 		public static void StartActionListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06028393 RID: 164755 RVA: 0x00586C8C File Offset: 0x00584E8C
+		// Token: 0x0602A957 RID: 174423 RVA: 0x005CE71C File Offset: 0x005CC91C
 		public static Offset<IWuWaGoInteractStateAction> EndIWuWaGoInteractStateAction(FlatBufferBuilder builder)
 		{
 			return new Offset<IWuWaGoInteractStateAction>(builder.EndTable());
 		}
 
-		// Token: 0x06028394 RID: 164756 RVA: 0x00586C9C File Offset: 0x00584E9C
+		// Token: 0x0602A958 RID: 174424 RVA: 0x005CE72C File Offset: 0x005CC92C
 		public IWuWaGoInteractStateActionT UnPack()
 		{
 			IWuWaGoInteractStateActionT wuWaGoInteractStateActionT = new IWuWaGoInteractStateActionT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoInteractStateActionT;
 		}
 
-		// Token: 0x06028395 RID: 164757 RVA: 0x00586CB8 File Offset: 0x00584EB8
+		// Token: 0x0602A959 RID: 174425 RVA: 0x005CE748 File Offset: 0x005CC948
 		public void UnPackTo(IWuWaGoInteractStateActionT _o)
 		{
 			_o.EntityState = this.EntityState;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028396 RID: 164758 RVA: 0x00586D24 File Offset: 0x00584F24
+		// Token: 0x0602A95A RID: 174426 RVA: 0x005CE7B4 File Offset: 0x005CC9B4
 		public static Offset<IWuWaGoInteractStateAction> Pack(FlatBufferBuilder builder, IWuWaGoInteractStateActionT _o)
 		{
 			if (_o == null)
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoInteractStateAction.CreateIWuWaGoInteractStateAction(builder, entityStateOffset, actionListOffset);
 		}
 
-		// Token: 0x0400F336 RID: 62262
+		// Token: 0x0401003C RID: 65596
 		private Table __p;
 	}
 }

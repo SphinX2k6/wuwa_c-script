@@ -5,35 +5,35 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities
 {
-	// Token: 0x02007127 RID: 28967
+	// Token: 0x02006355 RID: 25429
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttributeIntervalCheck
 	{
-		// Token: 0x17009D31 RID: 40241
-		// (get) Token: 0x06046BC0 RID: 289728 RVA: 0x011D2180 File Offset: 0x011D0380
+		// Token: 0x17007500 RID: 29952
+		// (get) Token: 0x0603DA0E RID: 252430 RVA: 0x011DACE0 File Offset: 0x011D8EE0
 		public EAttributeType ListenAttributeId { get; }
 
-		// Token: 0x17009D32 RID: 40242
-		// (get) Token: 0x06046BC1 RID: 289729 RVA: 0x011D2188 File Offset: 0x011D0388
-		// (set) Token: 0x06046BC2 RID: 289730 RVA: 0x011D2190 File Offset: 0x011D0390
+		// Token: 0x17007501 RID: 29953
+		// (get) Token: 0x0603DA0F RID: 252431 RVA: 0x011DACE8 File Offset: 0x011D8EE8
+		// (set) Token: 0x0603DA10 RID: 252432 RVA: 0x011DACF0 File Offset: 0x011D8EF0
 		public EAttributeType? MaxAttributeId { get; private set; }
 
-		// Token: 0x17009D33 RID: 40243
-		// (get) Token: 0x06046BC3 RID: 289731 RVA: 0x011D2199 File Offset: 0x011D0399
-		// (set) Token: 0x06046BC4 RID: 289732 RVA: 0x011D21A1 File Offset: 0x011D03A1
+		// Token: 0x17007502 RID: 29954
+		// (get) Token: 0x0603DA11 RID: 252433 RVA: 0x011DACF9 File Offset: 0x011D8EF9
+		// (set) Token: 0x0603DA12 RID: 252434 RVA: 0x011DAD01 File Offset: 0x011D8F01
 		public float LowerBound { get; set; }
 
-		// Token: 0x17009D34 RID: 40244
-		// (get) Token: 0x06046BC5 RID: 289733 RVA: 0x011D21AA File Offset: 0x011D03AA
-		// (set) Token: 0x06046BC6 RID: 289734 RVA: 0x011D21B2 File Offset: 0x011D03B2
+		// Token: 0x17007503 RID: 29955
+		// (get) Token: 0x0603DA13 RID: 252435 RVA: 0x011DAD0A File Offset: 0x011D8F0A
+		// (set) Token: 0x0603DA14 RID: 252436 RVA: 0x011DAD12 File Offset: 0x011D8F12
 		public float UpperBound { get; set; }
 
-		// Token: 0x17009D35 RID: 40245
-		// (get) Token: 0x06046BC7 RID: 289735 RVA: 0x011D21BB File Offset: 0x011D03BB
+		// Token: 0x17007504 RID: 29956
+		// (get) Token: 0x0603DA15 RID: 252437 RVA: 0x011DAD1B File Offset: 0x011D8F1B
 		public bool IsPerTenThousand { get; }
 
-		// Token: 0x06046BC8 RID: 289736 RVA: 0x011D21C4 File Offset: 0x011D03C4
+		// Token: 0x0603DA16 RID: 252438 RVA: 0x011DAD24 File Offset: 0x011D8F24
 		public AttributeIntervalCheck(EAttributeType listenId, float lowerBound, float upperBound, bool isPerTenThousandth)
 		{
 			this.ListenAttributeId = listenId;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities
 			}
 		}
 
-		// Token: 0x06046BC9 RID: 289737 RVA: 0x011D221C File Offset: 0x011D041C
+		// Token: 0x0603DA17 RID: 252439 RVA: 0x011DAD7C File Offset: 0x011D8F7C
 		public bool CheckListenActiveness(float newValue, BaseAttributeComponent listenAttributeComponent)
 		{
 			if (!this.IsPerTenThousand)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities
 			return num <= this.UpperBound && num > this.LowerBound;
 		}
 
-		// Token: 0x06046BCA RID: 289738 RVA: 0x011D227C File Offset: 0x011D047C
+		// Token: 0x0603DA18 RID: 252440 RVA: 0x011DADDC File Offset: 0x011D8FDC
 		[NullableContext(2)]
 		public bool CheckActiveness(BaseAttributeComponent targetAttributeComponent)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities
 			return num <= this.UpperBound && num > this.LowerBound;
 		}
 
-		// Token: 0x06046BCB RID: 289739 RVA: 0x011D22EC File Offset: 0x011D04EC
+		// Token: 0x0603DA19 RID: 252441 RVA: 0x011DAE4C File Offset: 0x011D904C
 		public string GetDebugString()
 		{
 			string value = this.ListenAttributeId.ToString();

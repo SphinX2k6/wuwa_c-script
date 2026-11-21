@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 {
-	// Token: 0x02006A8E RID: 27278
+	// Token: 0x02005BEB RID: 23531
 	public class RangeGateBinding
 	{
-		// Token: 0x06043C78 RID: 277624 RVA: 0x010970F3 File Offset: 0x010952F3
+		// Token: 0x06039CC6 RID: 236742 RVA: 0x0103B947 File Offset: 0x01039B47
 		public RangeGateBinding(int EnableRangeId, int DisableRangeId)
 		{
 			this.EnableRangeId = EnableRangeId;
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			InteractBoxQueryManager.Instance.AddRef(DisableRangeId);
 		}
 
-		// Token: 0x06043C79 RID: 277625 RVA: 0x0109711F File Offset: 0x0109531F
+		// Token: 0x06039CC7 RID: 236743 RVA: 0x0103B973 File Offset: 0x01039B73
 		public void Dispose()
 		{
 			if (this.Disposed)
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			InteractBoxQueryManager.Instance.Release(this.DisableRangeId);
 		}
 
-		// Token: 0x0402369C RID: 145052
+		// Token: 0x0401E88E RID: 125070
 		private bool Disposed;
 
-		// Token: 0x0402369D RID: 145053
+		// Token: 0x0401E88F RID: 125071
 		public readonly int EnableRangeId;
 
-		// Token: 0x0402369E RID: 145054
+		// Token: 0x0401E890 RID: 125072
 		public readonly int DisableRangeId;
 	}
 }

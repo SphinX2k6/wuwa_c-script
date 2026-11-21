@@ -8,13 +8,13 @@ namespace Aki.Config
 	// Token: 0x0200000B RID: 11
 	public class ConfigAbpMontageDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000042 RID: 66 RVA: 0x0005B845 File Offset: 0x00059A45
+		// Token: 0x06000042 RID: 66 RVA: 0x0005F0E5 File Offset: 0x0005D2E5
 		static ConfigAbpMontageDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAbpMontageDataById.CreateStaticDefaultValue), new Action(ConfigAbpMontageDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000043 RID: 67 RVA: 0x0005B864 File Offset: 0x00059A64
+		// Token: 0x06000043 RID: 67 RVA: 0x0005F104 File Offset: 0x0005D304
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAbpMontageDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000044 RID: 68 RVA: 0x0005B8E3 File Offset: 0x00059AE3
+		// Token: 0x06000044 RID: 68 RVA: 0x0005F183 File Offset: 0x0005D383
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAbpMontageDataById.LogPair = null;
 			ConfigAbpMontageDataById.HandleId = 0;
 		}
 
-		// Token: 0x06000045 RID: 69 RVA: 0x0005B8F1 File Offset: 0x00059AF1
+		// Token: 0x06000045 RID: 69 RVA: 0x0005F191 File Offset: 0x0005D391
 		public static void Init()
 		{
 			ConfigAbpMontageDataById.HandleId = ConfigCommon.InitDataStatement(ConfigAbpMontageDataById.HandleId, "db_abpmontagedata.db", "select BinData from `AbpMontageData` where Id=?");
 		}
 
-		// Token: 0x06000046 RID: 70 RVA: 0x0005B90C File Offset: 0x00059B0C
+		// Token: 0x06000046 RID: 70 RVA: 0x0005F1AC File Offset: 0x0005D3AC
 		public static AbpMontageData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAbpMontageDataById.HandleId, ConfigAbpMontageDataById.LogPair))

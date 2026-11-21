@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002AE8 RID: 10984
+// Token: 0x02002064 RID: 8292
 [NullableContext(1)]
 public interface ISurvivorsShopViewInfo
 {
-	// Token: 0x17001E72 RID: 7794
-	// (get) Token: 0x06016DB3 RID: 93619
+	// Token: 0x17001ECA RID: 7882
+	// (get) Token: 0x060147E4 RID: 83940
 	List<GoodsDetail> DataList { get; }
 
-	// Token: 0x17001E73 RID: 7795
-	// (get) Token: 0x06016DB4 RID: 93620
+	// Token: 0x17001ECB RID: 7883
+	// (get) Token: 0x060147E5 RID: 83941
 	int RefreshItemId { get; }
 
-	// Token: 0x17001E74 RID: 7796
-	// (get) Token: 0x06016DB5 RID: 93621
+	// Token: 0x17001ECC RID: 7884
+	// (get) Token: 0x060147E6 RID: 83942
 	int RefreshCost { get; }
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FA1 RID: 4001
+	// Token: 0x02000F91 RID: 3985
 	public sealed class RoguelikeInstInfo : IMessage<RoguelikeInstInfo>, IMessage, IEquatable<RoguelikeInstInfo>, IDeepCloneable<RoguelikeInstInfo>, IBufferMessage
 	{
-		// Token: 0x06015655 RID: 87637 RVA: 0x0031AF21 File Offset: 0x00319121
+		// Token: 0x06015570 RID: 87408 RVA: 0x00319875 File Offset: 0x00317A75
 		[NullableContext(1)]
 		public static RoguelikeInstInfo Create()
 		{
 			return new RoguelikeInstInfo();
 		}
 
-		// Token: 0x17004750 RID: 18256
-		// (get) Token: 0x06015656 RID: 87638 RVA: 0x0031AF28 File Offset: 0x00319128
+		// Token: 0x17004726 RID: 18214
+		// (get) Token: 0x06015571 RID: 87409 RVA: 0x0031987C File Offset: 0x00317A7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004751 RID: 18257
-		// (get) Token: 0x06015657 RID: 87639 RVA: 0x0031AF2B File Offset: 0x0031912B
+		// Token: 0x17004727 RID: 18215
+		// (get) Token: 0x06015572 RID: 87410 RVA: 0x0031987F File Offset: 0x00317A7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015658 RID: 87640 RVA: 0x0031AF32 File Offset: 0x00319132
+		// Token: 0x06015573 RID: 87411 RVA: 0x00319886 File Offset: 0x00317A86
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeInstInfo()
 		{
 		}
 
-		// Token: 0x06015659 RID: 87641 RVA: 0x0031AF5C File Offset: 0x0031915C
+		// Token: 0x06015574 RID: 87412 RVA: 0x003198B0 File Offset: 0x00317AB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeInstInfo(RoguelikeInstInfo other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601565A RID: 87642 RVA: 0x0031AFEB File Offset: 0x003191EB
+		// Token: 0x06015575 RID: 87413 RVA: 0x0031993F File Offset: 0x00317B3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoguelikeInstInfo Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new RoguelikeInstInfo(this);
 		}
 
-		// Token: 0x17004752 RID: 18258
-		// (get) Token: 0x0601565B RID: 87643 RVA: 0x0031AFF3 File Offset: 0x003191F3
-		// (set) Token: 0x0601565C RID: 87644 RVA: 0x0031AFFB File Offset: 0x003191FB
+		// Token: 0x17004728 RID: 18216
+		// (get) Token: 0x06015576 RID: 87414 RVA: 0x00319947 File Offset: 0x00317B47
+		// (set) Token: 0x06015577 RID: 87415 RVA: 0x0031994F File Offset: 0x00317B4F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueGainEntry RoleEntry
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004753 RID: 18259
-		// (get) Token: 0x0601565D RID: 87645 RVA: 0x0031B004 File Offset: 0x00319204
-		// (set) Token: 0x0601565E RID: 87646 RVA: 0x0031B00C File Offset: 0x0031920C
+		// Token: 0x17004729 RID: 18217
+		// (get) Token: 0x06015578 RID: 87416 RVA: 0x00319958 File Offset: 0x00317B58
+		// (set) Token: 0x06015579 RID: 87417 RVA: 0x00319960 File Offset: 0x00317B60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueGainEntry PhantomEntry
@@ -104,8 +104,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004754 RID: 18260
-		// (get) Token: 0x0601565F RID: 87647 RVA: 0x0031B015 File Offset: 0x00319215
+		// Token: 0x1700472A RID: 18218
+		// (get) Token: 0x0601557A RID: 87418 RVA: 0x00319969 File Offset: 0x00317B69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RogueGainEntry> BuffEntryList
@@ -116,8 +116,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004755 RID: 18261
-		// (get) Token: 0x06015660 RID: 87648 RVA: 0x0031B01D File Offset: 0x0031921D
+		// Token: 0x1700472B RID: 18219
+		// (get) Token: 0x0601557B RID: 87419 RVA: 0x00319971 File Offset: 0x00317B71
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> ElementDict
@@ -128,8 +128,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004756 RID: 18262
-		// (get) Token: 0x06015661 RID: 87649 RVA: 0x0031B025 File Offset: 0x00319225
+		// Token: 0x1700472C RID: 18220
+		// (get) Token: 0x0601557C RID: 87420 RVA: 0x00319979 File Offset: 0x00317B79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RogueGainEntry> MiraclecreationList
@@ -140,7 +140,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015662 RID: 87650 RVA: 0x0031B02D File Offset: 0x0031922D
+		// Token: 0x0601557D RID: 87421 RVA: 0x00319981 File Offset: 0x00317B81
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoguelikeInstInfo);
 		}
 
-		// Token: 0x06015663 RID: 87651 RVA: 0x0031B03C File Offset: 0x0031923C
+		// Token: 0x0601557E RID: 87422 RVA: 0x00319990 File Offset: 0x00317B90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoguelikeInstInfo other)
@@ -156,7 +156,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.RoleEntry, other.RoleEntry) && object.Equals(this.PhantomEntry, other.PhantomEntry) && this.buffEntryList_.Equals(other.buffEntryList_) && this.ElementDict.Equals(other.ElementDict) && this.miraclecreationList_.Equals(other.miraclecreationList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015664 RID: 87652 RVA: 0x0031B0D0 File Offset: 0x003192D0
+		// Token: 0x0601557F RID: 87423 RVA: 0x00319A24 File Offset: 0x00317C24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015665 RID: 87653 RVA: 0x0031B14C File Offset: 0x0031934C
+		// Token: 0x06015580 RID: 87424 RVA: 0x00319AA0 File Offset: 0x00317CA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015666 RID: 87654 RVA: 0x0031B159 File Offset: 0x00319359
+		// Token: 0x06015581 RID: 87425 RVA: 0x00319AAD File Offset: 0x00317CAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015667 RID: 87655 RVA: 0x0031B164 File Offset: 0x00319364
+		// Token: 0x06015582 RID: 87426 RVA: 0x00319AB8 File Offset: 0x00317CB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015668 RID: 87656 RVA: 0x0031B1F0 File Offset: 0x003193F0
+		// Token: 0x06015583 RID: 87427 RVA: 0x00319B44 File Offset: 0x00317D44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015669 RID: 87657 RVA: 0x0031B280 File Offset: 0x00319480
+		// Token: 0x06015584 RID: 87428 RVA: 0x00319BD4 File Offset: 0x00317DD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoguelikeInstInfo other)
@@ -275,7 +275,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601566A RID: 87658 RVA: 0x0031B333 File Offset: 0x00319533
+		// Token: 0x06015585 RID: 87429 RVA: 0x00319C87 File Offset: 0x00317E87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -283,7 +283,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601566B RID: 87659 RVA: 0x0031B33C File Offset: 0x0031953C
+		// Token: 0x06015586 RID: 87430 RVA: 0x00319C90 File Offset: 0x00317E90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -338,46 +338,46 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040080B6 RID: 32950
+		// Token: 0x040080E0 RID: 32992
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040080B7 RID: 32951
+		// Token: 0x040080E1 RID: 32993
 		public const int RoleEntryFieldNumber = 1;
 
-		// Token: 0x040080B8 RID: 32952
+		// Token: 0x040080E2 RID: 32994
 		private RogueGainEntry roleEntry_;
 
-		// Token: 0x040080B9 RID: 32953
+		// Token: 0x040080E3 RID: 32995
 		public const int PhantomEntryFieldNumber = 2;
 
-		// Token: 0x040080BA RID: 32954
+		// Token: 0x040080E4 RID: 32996
 		private RogueGainEntry phantomEntry_;
 
-		// Token: 0x040080BB RID: 32955
+		// Token: 0x040080E5 RID: 32997
 		public const int BuffEntryListFieldNumber = 3;
 
-		// Token: 0x040080BC RID: 32956
+		// Token: 0x040080E6 RID: 32998
 		private static readonly FieldCodec<RogueGainEntry> _repeated_buffEntryList_codec = FieldCodec.ForMessage<RogueGainEntry>(26U, RogueGainEntry.Parser);
 
-		// Token: 0x040080BD RID: 32957
+		// Token: 0x040080E7 RID: 32999
 		private readonly RepeatedField<RogueGainEntry> buffEntryList_ = new RepeatedField<RogueGainEntry>();
 
-		// Token: 0x040080BE RID: 32958
+		// Token: 0x040080E8 RID: 33000
 		public const int ElementDictFieldNumber = 4;
 
-		// Token: 0x040080BF RID: 32959
+		// Token: 0x040080E9 RID: 33001
 		private static readonly MapField<int, int>.Codec _map_elementDict_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 34U);
 
-		// Token: 0x040080C0 RID: 32960
+		// Token: 0x040080EA RID: 33002
 		private readonly MapField<int, int> elementDict_ = new MapField<int, int>();
 
-		// Token: 0x040080C1 RID: 32961
+		// Token: 0x040080EB RID: 33003
 		public const int MiraclecreationListFieldNumber = 5;
 
-		// Token: 0x040080C2 RID: 32962
+		// Token: 0x040080EC RID: 33004
 		private static readonly FieldCodec<RogueGainEntry> _repeated_miraclecreationList_codec = FieldCodec.ForMessage<RogueGainEntry>(42U, RogueGainEntry.Parser);
 
-		// Token: 0x040080C3 RID: 32963
+		// Token: 0x040080ED RID: 33005
 		private readonly RepeatedField<RogueGainEntry> miraclecreationList_ = new RepeatedField<RogueGainEntry>();
 	}
 }

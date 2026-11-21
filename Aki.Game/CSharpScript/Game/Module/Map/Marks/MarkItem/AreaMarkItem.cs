@@ -8,29 +8,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054D7 RID: 21719
+	// Token: 0x020044AA RID: 17578
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AreaMarkItem : ConfigMarkItem
 	{
-		// Token: 0x06037735 RID: 227125 RVA: 0x00D2C021 File Offset: 0x00D2A221
+		// Token: 0x0602C5DA RID: 181722 RVA: 0x00C79B09 File Offset: 0x00C77D09
 		public AreaMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource? trackSource = null) : base(markId, markConfig, parent, mapType, markScale, trackSource)
 		{
 		}
 
-		// Token: 0x06037736 RID: 227126 RVA: 0x00D2C032 File Offset: 0x00D2A232
+		// Token: 0x0602C5DB RID: 181723 RVA: 0x00C79B1A File Offset: 0x00C77D1A
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.AreaMarkItemView;
 		}
 
-		// Token: 0x06037737 RID: 227127 RVA: 0x00D2C035 File Offset: 0x00D2A235
+		// Token: 0x0602C5DC RID: 181724 RVA: 0x00C79B1D File Offset: 0x00C77D1D
 		protected override MarkItemView CreateView()
 		{
 			return new AreaMarkItemView(this);
 		}
 
-		// Token: 0x06037738 RID: 227128 RVA: 0x00D2C03D File Offset: 0x00D2A23D
+		// Token: 0x0602C5DD RID: 181725 RVA: 0x00C79B25 File Offset: 0x00C77D25
 		public override bool GetInteractiveFlag()
 		{
 			return false;

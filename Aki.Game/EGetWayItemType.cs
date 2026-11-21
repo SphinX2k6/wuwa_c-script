@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020018D2 RID: 6354
+// Token: 0x02000D8B RID: 3467
 public enum EGetWayItemType
 {
-	// Token: 0x04005484 RID: 21636
+	// Token: 0x0400552F RID: 21807
 	Locked = 1,
-	// Token: 0x04005485 RID: 21637
+	// Token: 0x04005530 RID: 21808
 	CanJump
 }

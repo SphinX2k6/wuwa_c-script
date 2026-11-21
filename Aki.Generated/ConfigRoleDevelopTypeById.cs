@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000895 RID: 2197
+	// Token: 0x020008B1 RID: 2225
 	public class ConfigRoleDevelopTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003390 RID: 13200 RVA: 0x0017CDBB File Offset: 0x0017AFBB
+		// Token: 0x06003438 RID: 13368 RVA: 0x001840A3 File Offset: 0x001822A3
 		static ConfigRoleDevelopTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevelopTypeById.CreateStaticDefaultValue), new Action(ConfigRoleDevelopTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003391 RID: 13201 RVA: 0x0017CDDC File Offset: 0x0017AFDC
+		// Token: 0x06003439 RID: 13369 RVA: 0x001840C4 File Offset: 0x001822C4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevelopTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003392 RID: 13202 RVA: 0x0017CE5B File Offset: 0x0017B05B
+		// Token: 0x0600343A RID: 13370 RVA: 0x00184143 File Offset: 0x00182343
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevelopTypeById.LogPair = null;
 			ConfigRoleDevelopTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06003393 RID: 13203 RVA: 0x0017CE69 File Offset: 0x0017B069
+		// Token: 0x0600343B RID: 13371 RVA: 0x00184151 File Offset: 0x00182351
 		public static void Init()
 		{
 			ConfigRoleDevelopTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevelopTypeById.HandleId, "db_moonchasing.db", "select BinData from `RoleDevelopType` where Id=?");
 		}
 
-		// Token: 0x06003394 RID: 13204 RVA: 0x0017CE84 File Offset: 0x0017B084
+		// Token: 0x0600343C RID: 13372 RVA: 0x0018416C File Offset: 0x0018236C
 		public static RoleDevelopType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleDevelopTypeById.HandleId, ConfigRoleDevelopTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleDevelopType?(rootAsRoleDevelopType);
 		}
 
-		// Token: 0x04003BF9 RID: 15353
+		// Token: 0x04003CBD RID: 15549
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x04003BFA RID: 15354
+		// Token: 0x04003CBE RID: 15550
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x04003BFB RID: 15355
+		// Token: 0x04003CBF RID: 15551
 		private const string TABLE = "RoleDevelopType";
 
-		// Token: 0x04003BFC RID: 15356
+		// Token: 0x04003CC0 RID: 15552
 		private const string COMMAND = "select BinData from `RoleDevelopType` where Id=?";
 
-		// Token: 0x04003BFD RID: 15357
+		// Token: 0x04003CC1 RID: 15553
 		private const string KEY_PREFIX = "RoleDevelopTypeById";
 
-		// Token: 0x04003BFE RID: 15358
+		// Token: 0x04003CC2 RID: 15554
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003BFF RID: 15359
+		// Token: 0x04003CC3 RID: 15555
 		private static int HandleId;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007A8 RID: 1960
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000849 RID: 2121
 	public class ITriggerMatchConfig
 	{
-		// Token: 0x06002A84 RID: 10884 RVA: 0x0006F848 File Offset: 0x0006DA48
+		// Token: 0x06002DAC RID: 11692 RVA: 0x00076AF0 File Offset: 0x00074CF0
 		private ITriggerMatchConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A85 RID: 10885 RVA: 0x0006F880 File Offset: 0x0006DA80
+		// Token: 0x06002DAD RID: 11693 RVA: 0x00076B28 File Offset: 0x00074D28
 		public static ITriggerMatchConfig Create([Nullable(2)] ITriggerMatchConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A86 RID: 10886 RVA: 0x0006F893 File Offset: 0x0006DA93
+		// Token: 0x06002DAE RID: 11694 RVA: 0x00076B3B File Offset: 0x00074D3B
 		public static ITriggerMatchConfig CreateFromSetValue([Nullable(2)] ITriggerMatchConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A87 RID: 10887 RVA: 0x0006F8A6 File Offset: 0x0006DAA6
+		// Token: 0x06002DAF RID: 11695 RVA: 0x00076B4E File Offset: 0x00074D4E
 		public ITriggerMatchConfig_SetValue ToSetValue()
 		{
 			return new ITriggerMatchConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B28 RID: 2856
-		// (get) Token: 0x06002A88 RID: 10888 RVA: 0x0006F8C5 File Offset: 0x0006DAC5
-		// (set) Token: 0x06002A89 RID: 10889 RVA: 0x0006F8EC File Offset: 0x0006DAEC
+		// Token: 0x17000BEA RID: 3050
+		// (get) Token: 0x06002DB0 RID: 11696 RVA: 0x00076B6D File Offset: 0x00074D6D
+		// (set) Token: 0x06002DB1 RID: 11697 RVA: 0x00076B94 File Offset: 0x00074D94
 		public virtual IEntityMatchConfig EntityMatch
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B29 RID: 2857
-		// (get) Token: 0x06002A8A RID: 10890 RVA: 0x0006F8FC File Offset: 0x0006DAFC
-		// (set) Token: 0x06002A8B RID: 10891 RVA: 0x0006F936 File Offset: 0x0006DB36
+		// Token: 0x17000BEB RID: 3051
+		// (get) Token: 0x06002DB2 RID: 11698 RVA: 0x00076BA4 File Offset: 0x00074DA4
+		// (set) Token: 0x06002DB3 RID: 11699 RVA: 0x00076BDE File Offset: 0x00074DDE
 		public virtual int? EntityMatchCount
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C62 RID: 7266
+		// Token: 0x04001E6B RID: 7787
 		[Nullable(2)]
 		protected ITriggerMatchConfig FbInstance;
 
-		// Token: 0x04001C63 RID: 7267
+		// Token: 0x04001E6C RID: 7788
 		[Nullable(2)]
 		protected ITriggerMatchConfig_SetValue PocoInterface;
 	}

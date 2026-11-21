@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200054B RID: 1355
+	// Token: 0x02000561 RID: 1377
 	public class ConfigMonsterDetectionFilterAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001FCF RID: 8143 RVA: 0x0010D2CC File Offset: 0x0010B4CC
+		// Token: 0x06002053 RID: 8275 RVA: 0x00113A20 File Offset: 0x00111C20
 		static ConfigMonsterDetectionFilterAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterDetectionFilterAll.CreateStaticDefaultValue), new Action(ConfigMonsterDetectionFilterAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001FD0 RID: 8144 RVA: 0x0010D2EC File Offset: 0x0010B4EC
+		// Token: 0x06002054 RID: 8276 RVA: 0x00113A40 File Offset: 0x00111C40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterDetectionFilterAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001FD1 RID: 8145 RVA: 0x0010D36B File Offset: 0x0010B56B
+		// Token: 0x06002055 RID: 8277 RVA: 0x00113ABF File Offset: 0x00111CBF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterDetectionFilterAll.LogPair = null;
 			ConfigMonsterDetectionFilterAll.HandleId = 0;
 		}
 
-		// Token: 0x06001FD2 RID: 8146 RVA: 0x0010D379 File Offset: 0x0010B579
+		// Token: 0x06002056 RID: 8278 RVA: 0x00113ACD File Offset: 0x00111CCD
 		public static void Init()
 		{
 			ConfigMonsterDetectionFilterAll.HandleId = ConfigCommon.InitDataStatement(ConfigMonsterDetectionFilterAll.HandleId, "db_adventure_detect.db", "select BinData from `MonsterDetectionFilter`");
 		}
 
-		// Token: 0x06001FD3 RID: 8147 RVA: 0x0010D394 File Offset: 0x0010B594
+		// Token: 0x06002057 RID: 8279 RVA: 0x00113AE8 File Offset: 0x00111CE8
 		[NullableContext(2)]
 		public static IReadOnlyList<MonsterDetectionFilter> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040024F1 RID: 9457
+		// Token: 0x0400258B RID: 9611
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x040024F2 RID: 9458
+		// Token: 0x0400258C RID: 9612
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x040024F3 RID: 9459
+		// Token: 0x0400258D RID: 9613
 		private const string TABLE = "MonsterDetectionFilter";
 
-		// Token: 0x040024F4 RID: 9460
+		// Token: 0x0400258E RID: 9614
 		private const string COMMAND = "select BinData from `MonsterDetectionFilter`";
 
-		// Token: 0x040024F5 RID: 9461
+		// Token: 0x0400258F RID: 9615
 		private const string KEY_PREFIX = "MonsterDetectionFilterAll";
 
-		// Token: 0x040024F6 RID: 9462
+		// Token: 0x04002590 RID: 9616
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040024F7 RID: 9463
+		// Token: 0x04002591 RID: 9617
 		private static int HandleId;
 	}
 }

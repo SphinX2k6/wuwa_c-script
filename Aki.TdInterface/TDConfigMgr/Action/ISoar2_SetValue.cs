@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E94 RID: 7828
+	// Token: 0x020020C9 RID: 8393
 	public class ISoar2_SetValue
 	{
-		// Token: 0x040063E5 RID: 25573
+		// Token: 0x040069C9 RID: 27081
 		public ELeisureInteract Type;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A12 RID: 27154
+	// Token: 0x020070C2 RID: 28866
 	public class ILimitPlayerActionT
 	{
-		// Token: 0x1700C976 RID: 51574
-		// (get) Token: 0x0602F84B RID: 194635 RVA: 0x0067856A File Offset: 0x0067676A
-		// (set) Token: 0x0602F84C RID: 194636 RVA: 0x00678572 File Offset: 0x00676772
+		// Token: 0x1700D376 RID: 54134
+		// (get) Token: 0x0603220B RID: 205323 RVA: 0x006C88C2 File Offset: 0x006C6AC2
+		// (set) Token: 0x0603220C RID: 205324 RVA: 0x006C88CA File Offset: 0x006C6ACA
 		public ELimitPlayOperation Type { get; set; }
 
-		// Token: 0x0602F84D RID: 194637 RVA: 0x0067857B File Offset: 0x0067677B
+		// Token: 0x0603220D RID: 205325 RVA: 0x006C88D3 File Offset: 0x006C6AD3
 		public ILimitPlayerActionT()
 		{
 			this.Type = ELimitPlayOperation.AllowCamera;

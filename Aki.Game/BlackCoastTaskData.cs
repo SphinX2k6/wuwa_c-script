@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020011AD RID: 4525
+// Token: 0x02000661 RID: 1633
 [NullableContext(1)]
 [Nullable(0)]
 public class BlackCoastTaskData
 {
-	// Token: 0x17000A48 RID: 2632
-	// (get) Token: 0x060077F7 RID: 30711 RVA: 0x001918E7 File Offset: 0x0018FAE7
-	// (set) Token: 0x060077F8 RID: 30712 RVA: 0x001918EF File Offset: 0x0018FAEF
+	// Token: 0x17000A68 RID: 2664
+	// (get) Token: 0x06004B8E RID: 19342 RVA: 0x0019A4C3 File Offset: 0x001986C3
+	// (set) Token: 0x06004B8F RID: 19343 RVA: 0x0019A4CB File Offset: 0x001986CB
 	public int TaskId { get; private set; }
 
-	// Token: 0x060077F9 RID: 30713 RVA: 0x001918F8 File Offset: 0x0018FAF8
+	// Token: 0x06004B90 RID: 19344 RVA: 0x0019A4D4 File Offset: 0x001986D4
 	public BlackCoastTaskData(int taskId)
 	{
 		this.TaskId = taskId;
 	}
 
-	// Token: 0x17000A49 RID: 2633
-	// (get) Token: 0x060077FA RID: 30714 RVA: 0x00191924 File Offset: 0x0018FB24
+	// Token: 0x17000A69 RID: 2665
+	// (get) Token: 0x06004B91 RID: 19345 RVA: 0x0019A500 File Offset: 0x00198700
 	public bool IsFinished
 	{
 		get
@@ -28,8 +28,8 @@ public class BlackCoastTaskData
 		}
 	}
 
-	// Token: 0x17000A4A RID: 2634
-	// (get) Token: 0x060077FB RID: 30715 RVA: 0x00191932 File Offset: 0x0018FB32
+	// Token: 0x17000A6A RID: 2666
+	// (get) Token: 0x06004B92 RID: 19346 RVA: 0x0019A50E File Offset: 0x0019870E
 	public bool IsTaken
 	{
 		get
@@ -38,28 +38,28 @@ public class BlackCoastTaskData
 		}
 	}
 
-	// Token: 0x04003734 RID: 14132
+	// Token: 0x040037CD RID: 14285
 	public EActivityTaskState Status = EActivityTaskState.Active;
 
-	// Token: 0x04003735 RID: 14133
+	// Token: 0x040037CE RID: 14286
 	public int Current;
 
-	// Token: 0x04003736 RID: 14134
+	// Token: 0x040037CF RID: 14287
 	public int Target;
 
-	// Token: 0x04003737 RID: 14135
+	// Token: 0x040037D0 RID: 14288
 	public int JumpId;
 
-	// Token: 0x04003738 RID: 14136
+	// Token: 0x040037D1 RID: 14289
 	public int SortId;
 
-	// Token: 0x04003739 RID: 14137
+	// Token: 0x040037D2 RID: 14290
 	public string TitleTextId = "";
 
-	// Token: 0x0400373A RID: 14138
+	// Token: 0x040037D3 RID: 14291
 	public List<TItem> RewardList = new List<TItem>();
 
-	// Token: 0x0400373B RID: 14139
+	// Token: 0x040037D4 RID: 14292
 	[Nullable(2)]
 	public Action<int> ReceiveDelegate;
 }

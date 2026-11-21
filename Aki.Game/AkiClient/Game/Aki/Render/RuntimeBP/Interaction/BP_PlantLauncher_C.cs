@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 {
-	// Token: 0x02003D1B RID: 15643
+	// Token: 0x020030F2 RID: 12530
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Interaction/BP_PlantLauncher.BP_PlantLauncher_C")]
 	[UnrealStructLayout(1600, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1600)]
 	public class BP_PlantLauncher_C : AKuroGameBudgetBlueprintActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060258B5 RID: 153781 RVA: 0x0095C92C File Offset: 0x0095AB2C
+		// Token: 0x0601E6E9 RID: 124649 RVA: 0x00913BBB File Offset: 0x00911DBB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_PlantLauncher_C._ClassPtr == IntPtr.Zero)
@@ -25,140 +25,80 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			return BP_PlantLauncher_C._ClassPtr;
 		}
 
-		// Token: 0x060258B6 RID: 153782 RVA: 0x0095C950 File Offset: 0x0095AB50
+		// Token: 0x0601E6EA RID: 124650 RVA: 0x00913BE0 File Offset: 0x00911DE0
 		public BP_PlantLauncher_C() : this(BuiltinUtils.AllocNativeUObject(BP_PlantLauncher_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060258B7 RID: 153783 RVA: 0x0095C978 File Offset: 0x0095AB78
+		// Token: 0x0601E6EB RID: 124651 RVA: 0x00913C08 File Offset: 0x00911E08
 		[NullableContext(1)]
 		public BP_PlantLauncher_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_PlantLauncher_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004D30 RID: 19760
-		// (get) Token: 0x060258B8 RID: 153784 RVA: 0x0095C9AB File Offset: 0x0095ABAB
-		// (set) Token: 0x060258B9 RID: 153785 RVA: 0x0095C9BF File Offset: 0x0095ABBF
-		public unsafe UInstancedStaticMeshComponent ISM_Vegetation
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UInstancedStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_1);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_1, value);
-			}
-		}
-
-		// Token: 0x17004D31 RID: 19761
-		// (get) Token: 0x060258BA RID: 153786 RVA: 0x0095C9D4 File Offset: 0x0095ABD4
-		// (set) Token: 0x060258BB RID: 153787 RVA: 0x0095C9E8 File Offset: 0x0095ABE8
-		public unsafe UInstancedStaticMeshComponent ISM_Reed
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UInstancedStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_2);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_2, value);
-			}
-		}
-
-		// Token: 0x17004D32 RID: 19762
-		// (get) Token: 0x060258BC RID: 153788 RVA: 0x0095C9FD File Offset: 0x0095ABFD
-		// (set) Token: 0x060258BD RID: 153789 RVA: 0x0095CA11 File Offset: 0x0095AC11
-		public unsafe UInstancedStaticMeshComponent ISM_Flower
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UInstancedStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_3);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_3, value);
-			}
-		}
-
-		// Token: 0x17004D33 RID: 19763
-		// (get) Token: 0x060258BE RID: 153790 RVA: 0x0095CA26 File Offset: 0x0095AC26
-		// (set) Token: 0x060258BF RID: 153791 RVA: 0x0095CA3A File Offset: 0x0095AC3A
-		public unsafe UInstancedStaticMeshComponent ISM_Grass
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UInstancedStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_4);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_4, value);
-			}
-		}
-
-		// Token: 0x17004D34 RID: 19764
-		// (get) Token: 0x060258C0 RID: 153792 RVA: 0x0095CA4F File Offset: 0x0095AC4F
-		// (set) Token: 0x060258C1 RID: 153793 RVA: 0x0095CA63 File Offset: 0x0095AC63
+		// Token: 0x170033B8 RID: 13240
+		// (get) Token: 0x0601E6EC RID: 124652 RVA: 0x00913C3B File Offset: 0x00911E3B
+		// (set) Token: 0x0601E6ED RID: 124653 RVA: 0x00913C4F File Offset: 0x00911E4F
 		public unsafe UNiagaraComponent ActivatingEffect
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_ActivatingEffect);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_ActivatingEffect, value);
 			}
 		}
 
-		// Token: 0x17004D35 RID: 19765
-		// (get) Token: 0x060258C2 RID: 153794 RVA: 0x0095CA78 File Offset: 0x0095AC78
-		// (set) Token: 0x060258C3 RID: 153795 RVA: 0x0095CA8C File Offset: 0x0095AC8C
+		// Token: 0x170033B9 RID: 13241
+		// (get) Token: 0x0601E6EE RID: 124654 RVA: 0x00913C64 File Offset: 0x00911E64
+		// (set) Token: 0x0601E6EF RID: 124655 RVA: 0x00913C78 File Offset: 0x00911E78
 		public unsafe UNiagaraComponent projectileniagara
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_projectileniagara);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_projectileniagara, value);
 			}
 		}
 
-		// Token: 0x17004D36 RID: 19766
-		// (get) Token: 0x060258C4 RID: 153796 RVA: 0x0095CAA1 File Offset: 0x0095ACA1
-		// (set) Token: 0x060258C5 RID: 153797 RVA: 0x0095CAB5 File Offset: 0x0095ACB5
+		// Token: 0x170033BA RID: 13242
+		// (get) Token: 0x0601E6F0 RID: 124656 RVA: 0x00913C8D File Offset: 0x00911E8D
+		// (set) Token: 0x0601E6F1 RID: 124657 RVA: 0x00913CA1 File Offset: 0x00911EA1
 		public unsafe USceneComponent launchpoint
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_launchpoint);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_launchpoint, value);
 			}
 		}
 
-		// Token: 0x17004D37 RID: 19767
-		// (get) Token: 0x060258C6 RID: 153798 RVA: 0x0095CACA File Offset: 0x0095ACCA
-		// (set) Token: 0x060258C7 RID: 153799 RVA: 0x0095CADE File Offset: 0x0095ACDE
+		// Token: 0x170033BB RID: 13243
+		// (get) Token: 0x0601E6F2 RID: 124658 RVA: 0x00913CB6 File Offset: 0x00911EB6
+		// (set) Token: 0x0601E6F3 RID: 124659 RVA: 0x00913CCA File Offset: 0x00911ECA
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17004D38 RID: 19768
-		// (get) Token: 0x060258C8 RID: 153800 RVA: 0x0095CAF4 File Offset: 0x0095ACF4
-		// (set) Token: 0x060258C9 RID: 153801 RVA: 0x0095CB2D File Offset: 0x0095AD2D
+		// Token: 0x170033BC RID: 13244
+		// (get) Token: 0x0601E6F4 RID: 124660 RVA: 0x00913CE0 File Offset: 0x00911EE0
+		// (set) Token: 0x0601E6F5 RID: 124661 RVA: 0x00913D19 File Offset: 0x00911F19
 		[Nullable(1)]
 		public TArray<FVector> FinalTargetPositions
 		{
@@ -169,7 +109,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 				TArray<FVector> result;
 				if ((result = this._FinalTargetPositions) == null)
 				{
-					result = (this._FinalTargetPositions = new TArray<FVector>(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_9, this));
+					result = (this._FinalTargetPositions = new TArray<FVector>(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_FinalTargetPositions, this));
 				}
 				return result;
 			}
@@ -180,27 +120,27 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			}
 		}
 
-		// Token: 0x17004D39 RID: 19769
-		// (get) Token: 0x060258CA RID: 153802 RVA: 0x0095CB3B File Offset: 0x0095AD3B
-		// (set) Token: 0x060258CB RID: 153803 RVA: 0x0095CB4F File Offset: 0x0095AD4F
+		// Token: 0x170033BD RID: 13245
+		// (get) Token: 0x0601E6F6 RID: 124662 RVA: 0x00913D27 File Offset: 0x00911F27
+		// (set) Token: 0x0601E6F7 RID: 124663 RVA: 0x00913D3B File Offset: 0x00911F3B
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EPlantType> currentlaunchertype
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_currentlaunchertype);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_currentlaunchertype) = value;
 			}
 		}
 
-		// Token: 0x17004D3A RID: 19770
-		// (get) Token: 0x060258CC RID: 153804 RVA: 0x0095CB64 File Offset: 0x0095AD64
-		// (set) Token: 0x060258CD RID: 153805 RVA: 0x0095CB9D File Offset: 0x0095AD9D
+		// Token: 0x170033BE RID: 13246
+		// (get) Token: 0x0601E6F8 RID: 124664 RVA: 0x00913D50 File Offset: 0x00911F50
+		// (set) Token: 0x0601E6F9 RID: 124665 RVA: 0x00913D89 File Offset: 0x00911F89
 		[Nullable(1)]
 		public TArray<FVector> testinput
 		{
@@ -211,7 +151,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 				TArray<FVector> result;
 				if ((result = this._testinput) == null)
 				{
-					result = (this._testinput = new TArray<FVector>(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_11, this));
+					result = (this._testinput = new TArray<FVector>(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_testinput, this));
 				}
 				return result;
 			}
@@ -222,39 +162,39 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			}
 		}
 
-		// Token: 0x17004D3B RID: 19771
-		// (get) Token: 0x060258CE RID: 153806 RVA: 0x0095CBAB File Offset: 0x0095ADAB
-		// (set) Token: 0x060258CF RID: 153807 RVA: 0x0095CBBB File Offset: 0x0095ADBB
+		// Token: 0x170033BF RID: 13247
+		// (get) Token: 0x0601E6FA RID: 124666 RVA: 0x00913D97 File Offset: 0x00911F97
+		// (set) Token: 0x0601E6FB RID: 124667 RVA: 0x00913DA7 File Offset: 0x00911FA7
 		public unsafe long InLauncherType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_InLauncherType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_InLauncherType) = value;
 			}
 		}
 
-		// Token: 0x17004D3C RID: 19772
-		// (get) Token: 0x060258D0 RID: 153808 RVA: 0x0095CBCC File Offset: 0x0095ADCC
-		// (set) Token: 0x060258D1 RID: 153809 RVA: 0x0095CBDC File Offset: 0x0095ADDC
+		// Token: 0x170033C0 RID: 13248
+		// (get) Token: 0x0601E6FC RID: 124668 RVA: 0x00913DB8 File Offset: 0x00911FB8
+		// (set) Token: 0x0601E6FD RID: 124669 RVA: 0x00913DC8 File Offset: 0x00911FC8
 		public unsafe float FlyDuring
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_FlyDuring);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_FlyDuring) = value;
 			}
 		}
 
-		// Token: 0x17004D3D RID: 19773
-		// (get) Token: 0x060258D2 RID: 153810 RVA: 0x0095CBF0 File Offset: 0x0095ADF0
-		// (set) Token: 0x060258D3 RID: 153811 RVA: 0x0095CC29 File Offset: 0x0095AE29
+		// Token: 0x170033C1 RID: 13249
+		// (get) Token: 0x0601E6FE RID: 124670 RVA: 0x00913DDC File Offset: 0x00911FDC
+		// (set) Token: 0x0601E6FF RID: 124671 RVA: 0x00913E15 File Offset: 0x00912015
 		[Nullable(1)]
 		public RequestEntityPlant RequestEntityPlant
 		{
@@ -265,87 +205,64 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 				RequestEntityPlant result;
 				if ((result = this._RequestEntityPlant) == null)
 				{
-					result = (this._RequestEntityPlant = new RequestEntityPlant(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_14, this));
+					result = (this._RequestEntityPlant = new RequestEntityPlant(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_RequestEntityPlant, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_14, (value != null) ? value.NativePtr : ((IntPtr)0));
+				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_PlantLauncher_C.__PropertyOffset_RequestEntityPlant, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17004D3E RID: 19774
-		// (get) Token: 0x060258D4 RID: 153812 RVA: 0x0095CC4A File Offset: 0x0095AE4A
-		// (set) Token: 0x060258D5 RID: 153813 RVA: 0x0095CC5E File Offset: 0x0095AE5E
+		// Token: 0x170033C2 RID: 13250
+		// (get) Token: 0x0601E700 RID: 124672 RVA: 0x00913E36 File Offset: 0x00912036
+		// (set) Token: 0x0601E701 RID: 124673 RVA: 0x00913E4A File Offset: 0x0091204A
 		public unsafe UNiagaraSystem AppearNS_Big
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_15);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_AppearNS_Big);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_15, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_AppearNS_Big, value);
 			}
 		}
 
-		// Token: 0x17004D3F RID: 19775
-		// (get) Token: 0x060258D6 RID: 153814 RVA: 0x0095CC73 File Offset: 0x0095AE73
-		// (set) Token: 0x060258D7 RID: 153815 RVA: 0x0095CC87 File Offset: 0x0095AE87
+		// Token: 0x170033C3 RID: 13251
+		// (get) Token: 0x0601E702 RID: 124674 RVA: 0x00913E5F File Offset: 0x0091205F
+		// (set) Token: 0x0601E703 RID: 124675 RVA: 0x00913E73 File Offset: 0x00912073
 		public unsafe UNiagaraSystem AppearNS_Medium
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_16);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_AppearNS_Medium);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_16, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_AppearNS_Medium, value);
 			}
 		}
 
-		// Token: 0x17004D40 RID: 19776
-		// (get) Token: 0x060258D8 RID: 153816 RVA: 0x0095CC9C File Offset: 0x0095AE9C
-		// (set) Token: 0x060258D9 RID: 153817 RVA: 0x0095CCB0 File Offset: 0x0095AEB0
+		// Token: 0x170033C4 RID: 13252
+		// (get) Token: 0x0601E704 RID: 124676 RVA: 0x00913E88 File Offset: 0x00912088
+		// (set) Token: 0x0601E705 RID: 124677 RVA: 0x00913E9C File Offset: 0x0091209C
 		public unsafe UNiagaraSystem AppearNS_Small
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_17);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_AppearNS_Small);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_17, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_PlantLauncher_C.__PropertyOffset_AppearNS_Small, value);
 			}
 		}
 
-		// Token: 0x060258DA RID: 153818 RVA: 0x0095CCC8 File Offset: 0x0095AEC8
+		// Token: 0x0601E706 RID: 124678 RVA: 0x00913EB4 File Offset: 0x009120B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AddPlantsToISM(ref TArray<FVector> TargetPositions, UInstancedStaticMeshComponent TargetISM)
-		{
-			BP_PlantLauncher_C.__AddPlantsToISM_FunctionParams* ptr = stackalloc BP_PlantLauncher_C.__AddPlantsToISM_FunctionParams[(UIntPtr)143] + 15L / (long)sizeof(BP_PlantLauncher_C.__AddPlantsToISM_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BP_PlantLauncher_C.__AddPlantsToISM_NativeFunctionPtr, (void*)ptr, 1);
-			TArray<FVector> tarray = TargetPositions;
-			if (tarray != null)
-			{
-				tarray.MoveTo(&ptr->TargetPositions);
-			}
-			ptr->TargetISM = ((TargetISM != null) ? TargetISM.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_PlantLauncher_C.__AddPlantsToISM_NativeFunctionPtr, (void*)ptr);
-			TArray<FVector> tarray2 = TargetPositions;
-			if (tarray2 != null)
-			{
-				tarray2.MoveAssign(&ptr->TargetPositions);
-			}
-			UnrealReflectionUtils.DestroyStruct(BP_PlantLauncher_C.__AddPlantsToISM_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060258DB RID: 153819 RVA: 0x0095CD5C File Offset: 0x0095AF5C
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GenerateRandomTarget(int count, float Radius, ref TArray<FVector> finalOffsetArray)
 		{
 			BP_PlantLauncher_C.__GenerateRandomTarget_FunctionParams* ptr = stackalloc BP_PlantLauncher_C.__GenerateRandomTarget_FunctionParams[(UIntPtr)119] + 15L / (long)sizeof(BP_PlantLauncher_C.__GenerateRandomTarget_FunctionParams) & -16L;
@@ -366,25 +283,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_PlantLauncher_C.__GenerateRandomTarget_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DC RID: 153820 RVA: 0x0095CDE2 File Offset: 0x0095AFE2
+		// Token: 0x0601E707 RID: 124679 RVA: 0x00913F3A File Offset: 0x0091213A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_PlantLauncher_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060258DD RID: 153821 RVA: 0x0095CDF6 File Offset: 0x0095AFF6
+		// Token: 0x0601E708 RID: 124680 RVA: 0x00913F4E File Offset: 0x0091214E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_PlantLauncher_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_PlantLauncher_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060258DE RID: 153822 RVA: 0x0095CE0C File Offset: 0x0095B00C
+		// Token: 0x0601E709 RID: 124681 RVA: 0x00913F64 File Offset: 0x00912164
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void RequestLaunch(EPlantType LauncherType, float Radius, int Count, in TArray<FVector> InputTargetPositions, float FlyDuring)
 		{
 			BP_PlantLauncher_C.__RequestLaunch_FunctionParams* ptr = stackalloc BP_PlantLauncher_C.__RequestLaunch_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_PlantLauncher_C.__RequestLaunch_FunctionParams) & -16L;
@@ -407,9 +321,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_PlantLauncher_C.__RequestLaunch_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DF RID: 153823 RVA: 0x0095CEA8 File Offset: 0x0095B0A8
+		// Token: 0x0601E70A RID: 124682 RVA: 0x00914000 File Offset: 0x00912200
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void LaunchNiagaraWithTargets(EPlantType LaunchType)
 		{
 			BP_PlantLauncher_C.__LaunchNiagaraWithTargets_FunctionParams* ptr = stackalloc BP_PlantLauncher_C.__LaunchNiagaraWithTargets_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_PlantLauncher_C.__LaunchNiagaraWithTargets_FunctionParams) & -16L;
@@ -418,9 +331,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_PlantLauncher_C.__LaunchNiagaraWithTargets_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258E0 RID: 153824 RVA: 0x0095CEF4 File Offset: 0x0095B0F4
+		// Token: 0x0601E70B RID: 124683 RVA: 0x0091404C File Offset: 0x0091224C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SpawnPlantsByType(in TArray<FVector> TargetPositions, EPlantType LauncherType, bool bPlayAppearFX)
 		{
 			BP_PlantLauncher_C.__SpawnPlantsByType_FunctionParams* ptr = stackalloc BP_PlantLauncher_C.__SpawnPlantsByType_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_PlantLauncher_C.__SpawnPlantsByType_FunctionParams) & -16L;
@@ -441,9 +353,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_PlantLauncher_C.__SpawnPlantsByType_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258E1 RID: 153825 RVA: 0x0095CF80 File Offset: 0x0095B180
+		// Token: 0x0601E70C RID: 124684 RVA: 0x009140D8 File Offset: 0x009122D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void RestorePlants(EPlantType Launcher_Type, float Radius, int Count, in TArray<FVector> input_Target_Positions)
 		{
 			BP_PlantLauncher_C.__RestorePlants_FunctionParams* ptr = stackalloc BP_PlantLauncher_C.__RestorePlants_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_PlantLauncher_C.__RestorePlants_FunctionParams) & -16L;
@@ -465,215 +376,185 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.DestroyStruct(BP_PlantLauncher_C.__RestorePlants_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258E2 RID: 153826 RVA: 0x0095D014 File Offset: 0x0095B214
+		// Token: 0x0601E70D RID: 124685 RVA: 0x0091416C File Offset: 0x0091236C
 		protected BP_PlantLauncher_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012BD3 RID: 76755
+		// Token: 0x040101DF RID: 66015
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Interaction/BP_PlantLauncher.BP_PlantLauncher_C";
 
-		// Token: 0x04012BD4 RID: 76756
+		// Token: 0x040101E0 RID: 66016
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04012BD5 RID: 76757
+		// Token: 0x040101E1 RID: 66017
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012BD6 RID: 76758
+		// Token: 0x040101E2 RID: 66018
 		public static IntPtr __RequestEntityPlant__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x04012BD7 RID: 76759
-		internal static int __PropertyOffset_1;
+		// Token: 0x040101E3 RID: 66019
+		internal static int __PropertyOffset_ActivatingEffect;
 
-		// Token: 0x04012BD8 RID: 76760
-		internal static int __PropertyOffset_2;
+		// Token: 0x040101E4 RID: 66020
+		internal static int __PropertyOffset_projectileniagara;
 
-		// Token: 0x04012BD9 RID: 76761
-		internal static int __PropertyOffset_3;
+		// Token: 0x040101E5 RID: 66021
+		internal static int __PropertyOffset_launchpoint;
 
-		// Token: 0x04012BDA RID: 76762
-		internal static int __PropertyOffset_4;
+		// Token: 0x040101E6 RID: 66022
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04012BDB RID: 76763
-		internal static int __PropertyOffset_5;
+		// Token: 0x040101E7 RID: 66023
+		internal static int __PropertyOffset_FinalTargetPositions;
 
-		// Token: 0x04012BDC RID: 76764
-		internal static int __PropertyOffset_6;
-
-		// Token: 0x04012BDD RID: 76765
-		internal static int __PropertyOffset_7;
-
-		// Token: 0x04012BDE RID: 76766
-		internal static int __PropertyOffset_8;
-
-		// Token: 0x04012BDF RID: 76767
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x04012BE0 RID: 76768
+		// Token: 0x040101E8 RID: 66024
 		private TArray<FVector> _FinalTargetPositions;
 
-		// Token: 0x04012BE1 RID: 76769
-		internal static int __PropertyOffset_10;
+		// Token: 0x040101E9 RID: 66025
+		internal static int __PropertyOffset_currentlaunchertype;
 
-		// Token: 0x04012BE2 RID: 76770
-		internal static int __PropertyOffset_11;
+		// Token: 0x040101EA RID: 66026
+		internal static int __PropertyOffset_testinput;
 
-		// Token: 0x04012BE3 RID: 76771
+		// Token: 0x040101EB RID: 66027
 		private TArray<FVector> _testinput;
 
-		// Token: 0x04012BE4 RID: 76772
-		internal static int __PropertyOffset_12;
+		// Token: 0x040101EC RID: 66028
+		internal static int __PropertyOffset_InLauncherType;
 
-		// Token: 0x04012BE5 RID: 76773
-		internal static int __PropertyOffset_13;
+		// Token: 0x040101ED RID: 66029
+		internal static int __PropertyOffset_FlyDuring;
 
-		// Token: 0x04012BE6 RID: 76774
-		internal static int __PropertyOffset_14;
+		// Token: 0x040101EE RID: 66030
+		internal static int __PropertyOffset_RequestEntityPlant;
 
-		// Token: 0x04012BE7 RID: 76775
+		// Token: 0x040101EF RID: 66031
 		private RequestEntityPlant _RequestEntityPlant;
 
-		// Token: 0x04012BE8 RID: 76776
-		internal static int __PropertyOffset_15;
+		// Token: 0x040101F0 RID: 66032
+		internal static int __PropertyOffset_AppearNS_Big;
 
-		// Token: 0x04012BE9 RID: 76777
-		internal static int __PropertyOffset_16;
+		// Token: 0x040101F1 RID: 66033
+		internal static int __PropertyOffset_AppearNS_Medium;
 
-		// Token: 0x04012BEA RID: 76778
-		internal static int __PropertyOffset_17;
+		// Token: 0x040101F2 RID: 66034
+		internal static int __PropertyOffset_AppearNS_Small;
 
-		// Token: 0x04012BEB RID: 76779
-		private static IntPtr __AddPlantsToISM_NativeFunctionPtr;
-
-		// Token: 0x04012BEC RID: 76780
+		// Token: 0x040101F3 RID: 66035
 		private static IntPtr __GenerateRandomTarget_NativeFunctionPtr;
 
-		// Token: 0x04012BED RID: 76781
+		// Token: 0x040101F4 RID: 66036
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04012BEE RID: 76782
+		// Token: 0x040101F5 RID: 66037
 		private static IntPtr __RequestLaunch_NativeFunctionPtr;
 
-		// Token: 0x04012BEF RID: 76783
+		// Token: 0x040101F6 RID: 66038
 		private static IntPtr __LaunchNiagaraWithTargets_NativeFunctionPtr;
 
-		// Token: 0x04012BF0 RID: 76784
+		// Token: 0x040101F7 RID: 66039
 		private static IntPtr __SpawnPlantsByType_NativeFunctionPtr;
 
-		// Token: 0x04012BF1 RID: 76785
+		// Token: 0x040101F8 RID: 66040
 		private static IntPtr __RestorePlants_NativeFunctionPtr;
 
-		// Token: 0x0200A00D RID: 40973
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 128)]
-		protected ref struct __AddPlantsToISM_FunctionParams
-		{
-			// Token: 0x04031AA8 RID: 203432
-			[FieldOffset(0)]
-			public byte TargetPositions;
-
-			// Token: 0x04031AA9 RID: 203433
-			[FieldOffset(16)]
-			public IntPtr TargetISM;
-		}
-
-		// Token: 0x0200A00E RID: 40974
+		// Token: 0x02008E7A RID: 36474
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 104)]
 		protected ref struct __GenerateRandomTarget_FunctionParams
 		{
-			// Token: 0x04031AAA RID: 203434
+			// Token: 0x0402CAC7 RID: 182983
 			[FieldOffset(0)]
 			public int count;
 
-			// Token: 0x04031AAB RID: 203435
+			// Token: 0x0402CAC8 RID: 182984
 			[FieldOffset(4)]
 			public float Radius;
 
-			// Token: 0x04031AAC RID: 203436
+			// Token: 0x0402CAC9 RID: 182985
 			[FieldOffset(8)]
 			public byte finalOffsetArray;
 		}
 
-		// Token: 0x0200A00F RID: 40975
+		// Token: 0x02008E7B RID: 36475
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __RequestLaunch_FunctionParams
 		{
-			// Token: 0x04031AAD RID: 203437
+			// Token: 0x0402CACA RID: 182986
 			[FieldOffset(0)]
 			public TEnumAsByte<EPlantType> LauncherType;
 
-			// Token: 0x04031AAE RID: 203438
+			// Token: 0x0402CACB RID: 182987
 			[FieldOffset(4)]
 			public float Radius;
 
-			// Token: 0x04031AAF RID: 203439
+			// Token: 0x0402CACC RID: 182988
 			[FieldOffset(8)]
 			public int Count;
 
-			// Token: 0x04031AB0 RID: 203440
+			// Token: 0x0402CACD RID: 182989
 			[FieldOffset(16)]
 			public byte InputTargetPositions;
 
-			// Token: 0x04031AB1 RID: 203441
+			// Token: 0x0402CACE RID: 182990
 			[FieldOffset(32)]
 			public float FlyDuring;
 		}
 
-		// Token: 0x0200A010 RID: 40976
+		// Token: 0x02008E7C RID: 36476
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __LaunchNiagaraWithTargets_FunctionParams
 		{
-			// Token: 0x04031AB2 RID: 203442
+			// Token: 0x0402CACF RID: 182991
 			[FieldOffset(0)]
 			public TEnumAsByte<EPlantType> LaunchType;
 		}
 
-		// Token: 0x0200A011 RID: 40977
+		// Token: 0x02008E7D RID: 36477
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __SpawnPlantsByType_FunctionParams
 		{
-			// Token: 0x04031AB3 RID: 203443
+			// Token: 0x0402CAD0 RID: 182992
 			[FieldOffset(0)]
 			public byte TargetPositions;
 
-			// Token: 0x04031AB4 RID: 203444
+			// Token: 0x0402CAD1 RID: 182993
 			[FieldOffset(16)]
 			public TEnumAsByte<EPlantType> LauncherType;
 
-			// Token: 0x04031AB5 RID: 203445
+			// Token: 0x0402CAD2 RID: 182994
 			[FieldOffset(17)]
 			public bool bPlayAppearFX;
 		}
 
-		// Token: 0x0200A012 RID: 40978
+		// Token: 0x02008E7E RID: 36478
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __RestorePlants_FunctionParams
 		{
-			// Token: 0x04031AB6 RID: 203446
+			// Token: 0x0402CAD3 RID: 182995
 			[FieldOffset(0)]
 			public TEnumAsByte<EPlantType> Launcher_Type;
 
-			// Token: 0x04031AB7 RID: 203447
+			// Token: 0x0402CAD4 RID: 182996
 			[FieldOffset(4)]
 			public float Radius;
 
-			// Token: 0x04031AB8 RID: 203448
+			// Token: 0x0402CAD5 RID: 182997
 			[FieldOffset(8)]
 			public int Count;
 
-			// Token: 0x04031AB9 RID: 203449
+			// Token: 0x0402CAD6 RID: 182998
 			[FieldOffset(16)]
 			public byte input_Target_Positions;
 		}

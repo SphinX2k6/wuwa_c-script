@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002333 RID: 9011
+	// Token: 0x020025A4 RID: 9636
 	public static class EFadeBackgroundFadeOutEffectTypeExtensions
 	{
-		// Token: 0x0600C4E4 RID: 50404 RVA: 0x001CBEAC File Offset: 0x001CA0AC
+		// Token: 0x0600D0BC RID: 53436 RVA: 0x001E3F64 File Offset: 0x001E2164
 		public static string ToEnumString(this EFadeBackgroundFadeOutEffectType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4E5 RID: 50405 RVA: 0x001CBEE4 File Offset: 0x001CA0E4
+		// Token: 0x0600D0BD RID: 53437 RVA: 0x001E3F9C File Offset: 0x001E219C
 		public static EFadeBackgroundFadeOutEffectType FromString(string name)
 		{
 			EFadeBackgroundFadeOutEffectType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4E6 RID: 50406 RVA: 0x001CBF0D File Offset: 0x001CA10D
+		// Token: 0x0600D0BE RID: 53438 RVA: 0x001E3FC5 File Offset: 0x001E21C5
 		public static bool TryFromString(string name, out EFadeBackgroundFadeOutEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C4E7 RID: 50407 RVA: 0x001CBF46 File Offset: 0x001CA146
+		// Token: 0x0600D0BF RID: 53439 RVA: 0x001E3FFE File Offset: 0x001E21FE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4E8 RID: 50408 RVA: 0x001CBF5E File Offset: 0x001CA15E
+		// Token: 0x0600D0C0 RID: 53440 RVA: 0x001E4016 File Offset: 0x001E2216
 		public static EFadeBackgroundFadeOutEffectType[] GetValues()
 		{
 			return new EFadeBackgroundFadeOutEffectType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4E9 RID: 50409 RVA: 0x001CBF6A File Offset: 0x001CA16A
+		// Token: 0x0600D0C1 RID: 53441 RVA: 0x001E4022 File Offset: 0x001E2222
 		public static string[] GetNames()
 		{
 			return new string[]

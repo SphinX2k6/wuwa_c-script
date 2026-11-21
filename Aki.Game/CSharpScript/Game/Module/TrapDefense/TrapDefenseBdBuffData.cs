@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A20 RID: 18976
+	// Token: 0x020039C8 RID: 14792
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBdBuffData
 	{
-		// Token: 0x0603143D RID: 201789 RVA: 0x00B6CE62 File Offset: 0x00B6B062
+		// Token: 0x060261CD RID: 156109 RVA: 0x00AB0E5E File Offset: 0x00AAF05E
 		public static TrapDefenseBdBuffData Create(TrapDefenseBdGroup config)
 		{
 			TrapDefenseBdBuffData trapDefenseBdBuffData = new TrapDefenseBdBuffData(config.Id);
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseBdBuffData;
 		}
 
-		// Token: 0x0603143E RID: 201790 RVA: 0x00B6CE77 File Offset: 0x00B6B077
+		// Token: 0x060261CE RID: 156110 RVA: 0x00AB0E73 File Offset: 0x00AAF073
 		private TrapDefenseBdBuffData(int id)
 		{
 			this.Id = id;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.MaxLevel = 1;
 		}
 
-		// Token: 0x0603143F RID: 201791 RVA: 0x00B6CE94 File Offset: 0x00B6B094
+		// Token: 0x060261CF RID: 156111 RVA: 0x00AB0E90 File Offset: 0x00AAF090
 		private void Init(TrapDefenseBdGroup config)
 		{
 			this.Config = config;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateBdBuffConfig();
 		}
 
-		// Token: 0x06031440 RID: 201792 RVA: 0x00B6CEC0 File Offset: 0x00B6B0C0
+		// Token: 0x060261D0 RID: 156112 RVA: 0x00AB0EBC File Offset: 0x00AAF0BC
 		private void UpdateBdBuffConfig()
 		{
 			int level = this.Level;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BdBuffConfig = TrapDefenseConfig.Instance.GetBdBuffByLevelAndGroup(level, id).GetValueOrDefault(bdBuffConfig);
 		}
 
-		// Token: 0x06031441 RID: 201793 RVA: 0x00B6CF02 File Offset: 0x00B6B102
+		// Token: 0x060261D1 RID: 156113 RVA: 0x00AB0EFE File Offset: 0x00AAF0FE
 		public void SetLevel(int level)
 		{
 			if (this.Level == level)
@@ -62,19 +62,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateBdBuffConfig();
 		}
 
-		// Token: 0x06031442 RID: 201794 RVA: 0x00B6CF2A File Offset: 0x00B6B12A
+		// Token: 0x060261D2 RID: 156114 RVA: 0x00AB0F26 File Offset: 0x00AAF126
 		public void SetActive(bool active)
 		{
 			this.IsActive = active;
 		}
 
-		// Token: 0x06031443 RID: 201795 RVA: 0x00B6CF33 File Offset: 0x00B6B133
+		// Token: 0x060261D3 RID: 156115 RVA: 0x00AB0F2F File Offset: 0x00AAF12F
 		public void SetUnlock(bool unlock)
 		{
 			this.IsUnlock = unlock;
 		}
 
-		// Token: 0x06031444 RID: 201796 RVA: 0x00B6CF3C File Offset: 0x00B6B13C
+		// Token: 0x060261D4 RID: 156116 RVA: 0x00AB0F38 File Offset: 0x00AAF138
 		public int GetActiveBdProgressNum()
 		{
 			if (!this.IsActive)
@@ -84,38 +84,38 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BdBuffConfig.Level;
 		}
 
-		// Token: 0x06031445 RID: 201797 RVA: 0x00B6CF53 File Offset: 0x00B6B153
+		// Token: 0x060261D5 RID: 156117 RVA: 0x00AB0F4F File Offset: 0x00AAF14F
 		public bool IsStrengthenFinish()
 		{
 			return this.IsStrengthen(this.BdBuffConfig);
 		}
 
-		// Token: 0x06031446 RID: 201798 RVA: 0x00B6CF61 File Offset: 0x00B6B161
+		// Token: 0x060261D6 RID: 156118 RVA: 0x00AB0F5D File Offset: 0x00AAF15D
 		public bool IsCanStrengthen()
 		{
 			return this.MaxLevel > 1;
 		}
 
-		// Token: 0x06031447 RID: 201799 RVA: 0x00B6CF6C File Offset: 0x00B6B16C
+		// Token: 0x060261D7 RID: 156119 RVA: 0x00AB0F68 File Offset: 0x00AAF168
 		public bool IsStrengthen(TrapDefenseBdBuff config)
 		{
 			return config.Level > 1;
 		}
 
-		// Token: 0x06031448 RID: 201800 RVA: 0x00B6CF78 File Offset: 0x00B6B178
+		// Token: 0x060261D8 RID: 156120 RVA: 0x00AB0F74 File Offset: 0x00AAF174
 		public TrapDefenseBdData GetBelongBdData()
 		{
 			int belongBd = this.Config.BelongBd;
 			return TrapDefenseModel.Instance.RougeModeData.BdDataMap[belongBd];
 		}
 
-		// Token: 0x06031449 RID: 201801 RVA: 0x00B6CFA6 File Offset: 0x00B6B1A6
+		// Token: 0x060261D9 RID: 156121 RVA: 0x00AB0FA2 File Offset: 0x00AAF1A2
 		public void SetIsShowStrengthen(bool show)
 		{
 			this.IsShowStrengthen = show;
 		}
 
-		// Token: 0x0603144A RID: 201802 RVA: 0x00B6CFB0 File Offset: 0x00B6B1B0
+		// Token: 0x060261DA RID: 156122 RVA: 0x00AB0FAC File Offset: 0x00AAF1AC
 		public TrapDefenseBdBuff GetStrengthenConfig()
 		{
 			if (this.IsStrengthenFinish())
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BdBuffConfig;
 		}
 
-		// Token: 0x0603144B RID: 201803 RVA: 0x00B6D010 File Offset: 0x00B6B210
+		// Token: 0x060261DB RID: 156123 RVA: 0x00AB100C File Offset: 0x00AAF20C
 		public TrapDefenseBdBuff GetStrengthenBeforeConfig()
 		{
 			if (this.IsStrengthenFinish())
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BdBuffConfig;
 		}
 
-		// Token: 0x0603144C RID: 201804 RVA: 0x00B6D053 File Offset: 0x00B6B253
+		// Token: 0x060261DC RID: 156124 RVA: 0x00AB104F File Offset: 0x00AAF24F
 		public TrapDefenseBdBuff GetShowBdBuffConfig(bool? isInst = null)
 		{
 			if (isInst != null && isInst.Value)
@@ -162,13 +162,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.GetStrengthenBeforeConfig();
 		}
 
-		// Token: 0x0603144D RID: 201805 RVA: 0x00B6D083 File Offset: 0x00B6B283
+		// Token: 0x060261DD RID: 156125 RVA: 0x00AB107F File Offset: 0x00AAF27F
 		public bool IsCanSwitchStrengthen(bool? isInst = null)
 		{
 			return (isInst == null || !isInst.Value) && this.IsCanStrengthen() && this.IsUnlock;
 		}
 
-		// Token: 0x0603144E RID: 201806 RVA: 0x00B6D0A9 File Offset: 0x00B6B2A9
+		// Token: 0x060261DE RID: 156126 RVA: 0x00AB10A5 File Offset: 0x00AAF2A5
 		public void ActiveAddBuff()
 		{
 			if (this.IsActive)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603144F RID: 201807 RVA: 0x00B6D0C4 File Offset: 0x00B6B2C4
+		// Token: 0x060261DF RID: 156127 RVA: 0x00AB10C0 File Offset: 0x00AAF2C0
 		public string GetShowActorLabelStr()
 		{
 			int id = this.Id;
@@ -192,28 +192,28 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new StringBuilder().Append("BdBuff_").Append(id).Append("_Bid-").Append(id2).Append("_Quality-").Append(quality).Append("_Lv-").Append(level).Append("_Active-").Append(isActive).Append("_Unlock-").Append(isUnlock).Append("_MaxLv-").Append(maxLevel).ToString();
 		}
 
-		// Token: 0x0401A566 RID: 107878
+		// Token: 0x04014EBD RID: 85693
 		public int Id;
 
-		// Token: 0x0401A567 RID: 107879
+		// Token: 0x04014EBE RID: 85694
 		public int Level;
 
-		// Token: 0x0401A568 RID: 107880
+		// Token: 0x04014EBF RID: 85695
 		public TrapDefenseBdGroup Config;
 
-		// Token: 0x0401A569 RID: 107881
+		// Token: 0x04014EC0 RID: 85696
 		public TrapDefenseBdBuff BdBuffConfig;
 
-		// Token: 0x0401A56A RID: 107882
+		// Token: 0x04014EC1 RID: 85697
 		public bool IsShowStrengthen;
 
-		// Token: 0x0401A56B RID: 107883
+		// Token: 0x04014EC2 RID: 85698
 		public bool IsActive;
 
-		// Token: 0x0401A56C RID: 107884
+		// Token: 0x04014EC3 RID: 85699
 		public bool IsUnlock;
 
-		// Token: 0x0401A56D RID: 107885
+		// Token: 0x04014EC4 RID: 85700
 		public int MaxLevel;
 	}
 }

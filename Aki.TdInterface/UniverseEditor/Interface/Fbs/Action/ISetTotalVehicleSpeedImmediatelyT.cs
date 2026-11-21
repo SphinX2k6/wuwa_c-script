@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200709E RID: 28830
+	// Token: 0x0200786A RID: 30826
 	public class ISetTotalVehicleSpeedImmediatelyT
 	{
-		// Token: 0x1700D632 RID: 54834
-		// (get) Token: 0x060330CF RID: 209103 RVA: 0x006E2B9F File Offset: 0x006E0D9F
-		// (set) Token: 0x060330D0 RID: 209104 RVA: 0x006E2BA7 File Offset: 0x006E0DA7
+		// Token: 0x1700E215 RID: 57877
+		// (get) Token: 0x06036371 RID: 222065 RVA: 0x007431AB File Offset: 0x007413AB
+		// (set) Token: 0x06036372 RID: 222066 RVA: 0x007431B3 File Offset: 0x007413B3
 		public ESetVehicleSpeedImmediatelyType Type { get; set; }
 
-		// Token: 0x1700D633 RID: 54835
-		// (get) Token: 0x060330D1 RID: 209105 RVA: 0x006E2BB0 File Offset: 0x006E0DB0
-		// (set) Token: 0x060330D2 RID: 209106 RVA: 0x006E2BB8 File Offset: 0x006E0DB8
+		// Token: 0x1700E216 RID: 57878
+		// (get) Token: 0x06036373 RID: 222067 RVA: 0x007431BC File Offset: 0x007413BC
+		// (set) Token: 0x06036374 RID: 222068 RVA: 0x007431C4 File Offset: 0x007413C4
 		public TProcessedValueUnion Speed { get; set; }
 
-		// Token: 0x060330D3 RID: 209107 RVA: 0x006E2BC1 File Offset: 0x006E0DC1
+		// Token: 0x06036375 RID: 222069 RVA: 0x007431CD File Offset: 0x007413CD
 		public ISetTotalVehicleSpeedImmediatelyT()
 		{
 			this.Type = ESetVehicleSpeedImmediatelyType.TotalSpeed;

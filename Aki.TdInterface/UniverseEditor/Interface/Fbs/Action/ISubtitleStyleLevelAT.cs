@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200722A RID: 29226
+	// Token: 0x020079FF RID: 31231
 	public class ISubtitleStyleLevelAT
 	{
-		// Token: 0x1700D8EE RID: 55534
-		// (get) Token: 0x06033D7E RID: 212350 RVA: 0x006F9E16 File Offset: 0x006F8016
-		// (set) Token: 0x06033D7F RID: 212351 RVA: 0x006F9E1E File Offset: 0x006F801E
+		// Token: 0x1700E4E7 RID: 58599
+		// (get) Token: 0x06037080 RID: 225408 RVA: 0x0075B176 File Offset: 0x00759376
+		// (set) Token: 0x06037081 RID: 225409 RVA: 0x0075B17E File Offset: 0x0075937E
 		public ESubtitleStyle Type { get; set; }
 
-		// Token: 0x06033D80 RID: 212352 RVA: 0x006F9E27 File Offset: 0x006F8027
+		// Token: 0x06037082 RID: 225410 RVA: 0x0075B187 File Offset: 0x00759387
 		public ISubtitleStyleLevelAT()
 		{
 			this.Type = ESubtitleStyle.LevelA;

@@ -3,31 +3,31 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016D2 RID: 5842
+	// Token: 0x0200184D RID: 6221
 	[EnumExtensions]
 	public enum ETeleportTransitionType
 	{
-		// Token: 0x04004EF4 RID: 20212
+		// Token: 0x0400531E RID: 21278
 		PlayMp4,
-		// Token: 0x04004EF5 RID: 20213
+		// Token: 0x0400531F RID: 21279
 		PlayEffect,
-		// Token: 0x04004EF6 RID: 20214
+		// Token: 0x04005320 RID: 21280
 		CenterText,
-		// Token: 0x04004EF7 RID: 20215
+		// Token: 0x04005321 RID: 21281
 		Seamless,
-		// Token: 0x04004EF8 RID: 20216
+		// Token: 0x04005322 RID: 21282
 		FadeInScreen,
-		// Token: 0x04004EF9 RID: 20217
+		// Token: 0x04005323 RID: 21283
 		DigitalScreen,
-		// Token: 0x04004EFA RID: 20218
+		// Token: 0x04005324 RID: 21284
 		CharacterDisplay,
-		// Token: 0x04004EFB RID: 20219
+		// Token: 0x04005325 RID: 21285
 		CustomLoading,
-		// Token: 0x04004EFC RID: 20220
+		// Token: 0x04005326 RID: 21286
 		CustomScreen,
-		// Token: 0x04004EFD RID: 20221
+		// Token: 0x04005327 RID: 21287
 		SpecialCustomLoading,
-		// Token: 0x04004EFE RID: 20222
+		// Token: 0x04005328 RID: 21288
 		PlayFlow
 	}
 }

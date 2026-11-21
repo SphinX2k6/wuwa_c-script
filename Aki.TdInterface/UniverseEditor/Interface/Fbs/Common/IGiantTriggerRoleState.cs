@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DE8 RID: 24040
+	// Token: 0x02006425 RID: 25637
 	public struct IGiantTriggerRoleState : IFlatbufferObject
 	{
-		// Token: 0x1700B3F0 RID: 46064
-		// (get) Token: 0x06029268 RID: 168552 RVA: 0x005A5A82 File Offset: 0x005A3C82
+		// Token: 0x1700BD56 RID: 48470
+		// (get) Token: 0x0602B8F2 RID: 178418 RVA: 0x005EE7B2 File Offset: 0x005EC9B2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029269 RID: 168553 RVA: 0x005A5A8F File Offset: 0x005A3C8F
+		// Token: 0x0602B8F3 RID: 178419 RVA: 0x005EE7BF File Offset: 0x005EC9BF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602926A RID: 168554 RVA: 0x005A5A98 File Offset: 0x005A3C98
+		// Token: 0x0602B8F4 RID: 178420 RVA: 0x005EE7C8 File Offset: 0x005EC9C8
 		public static IGiantTriggerRoleState GetRootAsIGiantTriggerRoleState(ByteBuffer _bb)
 		{
 			return IGiantTriggerRoleState.GetRootAsIGiantTriggerRoleState(_bb, default(IGiantTriggerRoleState));
 		}
 
-		// Token: 0x0602926B RID: 168555 RVA: 0x005A5AB4 File Offset: 0x005A3CB4
+		// Token: 0x0602B8F5 RID: 178421 RVA: 0x005EE7E4 File Offset: 0x005EC9E4
 		public static IGiantTriggerRoleState GetRootAsIGiantTriggerRoleState(ByteBuffer _bb, IGiantTriggerRoleState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602926C RID: 168556 RVA: 0x005A5AD1 File Offset: 0x005A3CD1
+		// Token: 0x0602B8F6 RID: 178422 RVA: 0x005EE801 File Offset: 0x005ECA01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602926D RID: 168557 RVA: 0x005A5AE0 File Offset: 0x005A3CE0
+		// Token: 0x0602B8F7 RID: 178423 RVA: 0x005EE810 File Offset: 0x005ECA10
 		public IGiantTriggerRoleState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B3F1 RID: 46065
-		// (get) Token: 0x0602926E RID: 168558 RVA: 0x005A5AF0 File Offset: 0x005A3CF0
+		// Token: 0x1700BD57 RID: 48471
+		// (get) Token: 0x0602B8F8 RID: 178424 RVA: 0x005EE820 File Offset: 0x005ECA20
 		public EGiantTriggerType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B3F2 RID: 46066
-		// (get) Token: 0x0602926F RID: 168559 RVA: 0x005A5B2C File Offset: 0x005A3D2C
+		// Token: 0x1700BD58 RID: 48472
+		// (get) Token: 0x0602B8F9 RID: 178425 RVA: 0x005EE85C File Offset: 0x005ECA5C
 		public EGiantRoleState RoleState
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029270 RID: 168560 RVA: 0x005A5B68 File Offset: 0x005A3D68
+		// Token: 0x0602B8FA RID: 178426 RVA: 0x005EE898 File Offset: 0x005ECA98
 		public static Offset<IGiantTriggerRoleState> CreateIGiantTriggerRoleState(FlatBufferBuilder builder, EGiantTriggerType Type = EGiantTriggerType.RoleState, EGiantRoleState RoleState = EGiantRoleState.Death)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGiantTriggerRoleState.EndIGiantTriggerRoleState(builder);
 		}
 
-		// Token: 0x06029271 RID: 168561 RVA: 0x005A5B85 File Offset: 0x005A3D85
+		// Token: 0x0602B8FB RID: 178427 RVA: 0x005EE8B5 File Offset: 0x005ECAB5
 		public static void StartIGiantTriggerRoleState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06029272 RID: 168562 RVA: 0x005A5B8E File Offset: 0x005A3D8E
+		// Token: 0x0602B8FC RID: 178428 RVA: 0x005EE8BE File Offset: 0x005ECABE
 		public static void AddType(FlatBufferBuilder builder, EGiantTriggerType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029273 RID: 168563 RVA: 0x005A5B99 File Offset: 0x005A3D99
+		// Token: 0x0602B8FD RID: 178429 RVA: 0x005EE8C9 File Offset: 0x005ECAC9
 		public static void AddRoleState(FlatBufferBuilder builder, EGiantRoleState roleState)
 		{
 			builder.AddByte(1, (byte)roleState, 0);
 		}
 
-		// Token: 0x06029274 RID: 168564 RVA: 0x005A5BA4 File Offset: 0x005A3DA4
+		// Token: 0x0602B8FE RID: 178430 RVA: 0x005EE8D4 File Offset: 0x005ECAD4
 		public static Offset<IGiantTriggerRoleState> EndIGiantTriggerRoleState(FlatBufferBuilder builder)
 		{
 			return new Offset<IGiantTriggerRoleState>(builder.EndTable());
 		}
 
-		// Token: 0x06029275 RID: 168565 RVA: 0x005A5BB4 File Offset: 0x005A3DB4
+		// Token: 0x0602B8FF RID: 178431 RVA: 0x005EE8E4 File Offset: 0x005ECAE4
 		public IGiantTriggerRoleStateT UnPack()
 		{
 			IGiantTriggerRoleStateT giantTriggerRoleStateT = new IGiantTriggerRoleStateT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return giantTriggerRoleStateT;
 		}
 
-		// Token: 0x06029276 RID: 168566 RVA: 0x005A5BCF File Offset: 0x005A3DCF
+		// Token: 0x0602B900 RID: 178432 RVA: 0x005EE8FF File Offset: 0x005ECAFF
 		public void UnPackTo(IGiantTriggerRoleStateT _o)
 		{
 			_o.Type = this.Type;
 			_o.RoleState = this.RoleState;
 		}
 
-		// Token: 0x06029277 RID: 168567 RVA: 0x005A5BEC File Offset: 0x005A3DEC
+		// Token: 0x0602B901 RID: 178433 RVA: 0x005EE91C File Offset: 0x005ECB1C
 		public static Offset<IGiantTriggerRoleState> Pack(FlatBufferBuilder builder, IGiantTriggerRoleStateT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGiantTriggerRoleState.CreateIGiantTriggerRoleState(builder, _o.Type, _o.RoleState);
 		}
 
-		// Token: 0x0400F7D2 RID: 63442
+		// Token: 0x0401052D RID: 66861
 		private Table __p;
 	}
 }

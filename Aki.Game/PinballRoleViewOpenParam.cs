@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200142A RID: 5162
+// Token: 0x020008DE RID: 2270
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballRoleViewOpenParam : IPinballRoleViewOpenParam
 {
-	// Token: 0x17000CB0 RID: 3248
-	// (get) Token: 0x060091AD RID: 37293 RVA: 0x001F3026 File Offset: 0x001F1226
-	// (set) Token: 0x060091AE RID: 37294 RVA: 0x001F302E File Offset: 0x001F122E
+	// Token: 0x17000CD0 RID: 3280
+	// (get) Token: 0x06006542 RID: 25922 RVA: 0x001FBB62 File Offset: 0x001F9D62
+	// (set) Token: 0x06006543 RID: 25923 RVA: 0x001FBB6A File Offset: 0x001F9D6A
 	public int? RoleId { get; set; }
 
-	// Token: 0x17000CB1 RID: 3249
-	// (get) Token: 0x060091AF RID: 37295 RVA: 0x001F3037 File Offset: 0x001F1237
-	// (set) Token: 0x060091B0 RID: 37296 RVA: 0x001F303F File Offset: 0x001F123F
+	// Token: 0x17000CD1 RID: 3281
+	// (get) Token: 0x06006544 RID: 25924 RVA: 0x001FBB73 File Offset: 0x001F9D73
+	// (set) Token: 0x06006545 RID: 25925 RVA: 0x001FBB7B File Offset: 0x001F9D7B
 	public int[] FormationRoleIds { get; set; }
 }

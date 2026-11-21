@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CD9 RID: 27865
+	// Token: 0x0200744C RID: 29772
 	public class IPlayCommonEffectT
 	{
-		// Token: 0x1700CF80 RID: 53120
-		// (get) Token: 0x060311F2 RID: 201202 RVA: 0x006AA663 File Offset: 0x006A8863
-		// (set) Token: 0x060311F3 RID: 201203 RVA: 0x006AA66B File Offset: 0x006A886B
+		// Token: 0x1700DABA RID: 55994
+		// (get) Token: 0x060341B7 RID: 213431 RVA: 0x0070571F File Offset: 0x0070391F
+		// (set) Token: 0x060341B8 RID: 213432 RVA: 0x00705727 File Offset: 0x00703927
 		public EEffectType Type { get; set; }
 
-		// Token: 0x1700CF81 RID: 53121
-		// (get) Token: 0x060311F4 RID: 201204 RVA: 0x006AA674 File Offset: 0x006A8874
-		// (set) Token: 0x060311F5 RID: 201205 RVA: 0x006AA67C File Offset: 0x006A887C
+		// Token: 0x1700DABB RID: 55995
+		// (get) Token: 0x060341B9 RID: 213433 RVA: 0x00705730 File Offset: 0x00703930
+		// (set) Token: 0x060341BA RID: 213434 RVA: 0x00705738 File Offset: 0x00703938
 		public string Path { get; set; }
 
-		// Token: 0x1700CF82 RID: 53122
-		// (get) Token: 0x060311F6 RID: 201206 RVA: 0x006AA685 File Offset: 0x006A8885
-		// (set) Token: 0x060311F7 RID: 201207 RVA: 0x006AA68D File Offset: 0x006A888D
+		// Token: 0x1700DABC RID: 55996
+		// (get) Token: 0x060341BB RID: 213435 RVA: 0x00705741 File Offset: 0x00703941
+		// (set) Token: 0x060341BC RID: 213436 RVA: 0x00705749 File Offset: 0x00703949
 		public TEffectPos2Union Pos2 { get; set; }
 
-		// Token: 0x1700CF83 RID: 53123
-		// (get) Token: 0x060311F8 RID: 201208 RVA: 0x006AA696 File Offset: 0x006A8896
-		// (set) Token: 0x060311F9 RID: 201209 RVA: 0x006AA69E File Offset: 0x006A889E
+		// Token: 0x1700DABD RID: 55997
+		// (get) Token: 0x060341BD RID: 213437 RVA: 0x00705752 File Offset: 0x00703952
+		// (set) Token: 0x060341BE RID: 213438 RVA: 0x0070575A File Offset: 0x0070395A
 		public float DestroyTime { get; set; }
 
-		// Token: 0x1700CF84 RID: 53124
-		// (get) Token: 0x060311FA RID: 201210 RVA: 0x006AA6A7 File Offset: 0x006A88A7
-		// (set) Token: 0x060311FB RID: 201211 RVA: 0x006AA6AF File Offset: 0x006A88AF
+		// Token: 0x1700DABE RID: 55998
+		// (get) Token: 0x060341BF RID: 213439 RVA: 0x00705763 File Offset: 0x00703963
+		// (set) Token: 0x060341C0 RID: 213440 RVA: 0x0070576B File Offset: 0x0070396B
 		public bool PlayEffectEnd { get; set; }
 
-		// Token: 0x1700CF85 RID: 53125
-		// (get) Token: 0x060311FC RID: 201212 RVA: 0x006AA6B8 File Offset: 0x006A88B8
-		// (set) Token: 0x060311FD RID: 201213 RVA: 0x006AA6C0 File Offset: 0x006A88C0
+		// Token: 0x1700DABF RID: 55999
+		// (get) Token: 0x060341C1 RID: 213441 RVA: 0x00705774 File Offset: 0x00703974
+		// (set) Token: 0x060341C2 RID: 213442 RVA: 0x0070577C File Offset: 0x0070397C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060311FE RID: 201214 RVA: 0x006AA6C9 File Offset: 0x006A88C9
+		// Token: 0x060341C3 RID: 213443 RVA: 0x00705785 File Offset: 0x00703985
 		public IPlayCommonEffectT()
 		{
 			this.Type = EEffectType.Effect;

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011E0 RID: 4576
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200131C RID: 4892
 	public class IUseItemCondition : IQuestCondition
 	{
-		// Token: 0x060067EC RID: 26604 RVA: 0x000F87F0 File Offset: 0x000F69F0
+		// Token: 0x06006E2D RID: 28205 RVA: 0x001060FC File Offset: 0x001042FC
 		private IUseItemCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060067ED RID: 26605 RVA: 0x000F8828 File Offset: 0x000F6A28
+		// Token: 0x06006E2E RID: 28206 RVA: 0x00106134 File Offset: 0x00104334
 		public static IUseItemCondition Create([Nullable(2)] IUseItemCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067EE RID: 26606 RVA: 0x000F883B File Offset: 0x000F6A3B
+		// Token: 0x06006E2F RID: 28207 RVA: 0x00106147 File Offset: 0x00104347
 		public static IUseItemCondition CreateFromSetValue([Nullable(2)] IUseItemCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067EF RID: 26607 RVA: 0x000F884E File Offset: 0x000F6A4E
+		// Token: 0x06006E30 RID: 28208 RVA: 0x0010615A File Offset: 0x0010435A
 		public new IUseItemCondition_SetValue ToSetValue()
 		{
 			return new IUseItemCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021AB RID: 8619
-		// (get) Token: 0x060067F0 RID: 26608 RVA: 0x000F8885 File Offset: 0x000F6A85
-		// (set) Token: 0x060067F1 RID: 26609 RVA: 0x000F88B0 File Offset: 0x000F6AB0
+		// Token: 0x1700236C RID: 9068
+		// (get) Token: 0x06006E31 RID: 28209 RVA: 0x00106191 File Offset: 0x00104391
+		// (set) Token: 0x06006E32 RID: 28210 RVA: 0x001061BC File Offset: 0x001043BC
 		public override EChildQuest Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021AC RID: 8620
-		// (get) Token: 0x060067F2 RID: 26610 RVA: 0x000F88C0 File Offset: 0x000F6AC0
-		// (set) Token: 0x060067F3 RID: 26611 RVA: 0x000F8921 File Offset: 0x000F6B21
+		// Token: 0x1700236D RID: 9069
+		// (get) Token: 0x06006E33 RID: 28211 RVA: 0x001061CC File Offset: 0x001043CC
+		// (set) Token: 0x06006E34 RID: 28212 RVA: 0x0010622D File Offset: 0x0010442D
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021AD RID: 8621
-		// (get) Token: 0x060067F4 RID: 26612 RVA: 0x000F8936 File Offset: 0x000F6B36
-		// (set) Token: 0x060067F5 RID: 26613 RVA: 0x000F8961 File Offset: 0x000F6B61
+		// Token: 0x1700236E RID: 9070
+		// (get) Token: 0x06006E35 RID: 28213 RVA: 0x00106242 File Offset: 0x00104442
+		// (set) Token: 0x06006E36 RID: 28214 RVA: 0x0010626D File Offset: 0x0010446D
 		public virtual int ItemId
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021AE RID: 8622
-		// (get) Token: 0x060067F6 RID: 26614 RVA: 0x000F896F File Offset: 0x000F6B6F
-		// (set) Token: 0x060067F7 RID: 26615 RVA: 0x000F899A File Offset: 0x000F6B9A
+		// Token: 0x1700236F RID: 9071
+		// (get) Token: 0x06006E37 RID: 28215 RVA: 0x0010627B File Offset: 0x0010447B
+		// (set) Token: 0x06006E38 RID: 28216 RVA: 0x001062A6 File Offset: 0x001044A6
 		public virtual int Count
 		{
 			get
@@ -165,18 +163,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E4E RID: 15950
+		// Token: 0x040041BC RID: 16828
 		[Nullable(2)]
 		protected new IUseItemCondition FbInstance;
 
-		// Token: 0x04003E4F RID: 15951
+		// Token: 0x040041BD RID: 16829
 		[Nullable(2)]
 		protected new IUseItemCondition_SetValue PocoInterface;
 
-		// Token: 0x04003E50 RID: 15952
+		// Token: 0x040041BE RID: 16830
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003E51 RID: 15953
+		// Token: 0x040041BF RID: 16831
 		private bool _PreConditionsInited;
 	}
 }

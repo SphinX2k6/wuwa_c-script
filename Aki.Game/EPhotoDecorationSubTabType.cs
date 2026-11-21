@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002597 RID: 9623
+// Token: 0x02001A82 RID: 6786
 public enum EPhotoDecorationSubTabType
 {
-	// Token: 0x04009311 RID: 37649
+	// Token: 0x04009469 RID: 37993
 	Frame = 1,
-	// Token: 0x04009312 RID: 37650
+	// Token: 0x0400946A RID: 37994
 	Sticker
 }

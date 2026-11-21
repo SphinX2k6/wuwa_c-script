@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020011B2 RID: 4530
+// Token: 0x02000666 RID: 1638
 [NullableContext(1)]
 [Nullable(0)]
 public class BlackCoastRewardPanel : UiPanelBase
 {
-	// Token: 0x06007837 RID: 30775 RVA: 0x00192CF0 File Offset: 0x00190EF0
+	// Token: 0x06004BCE RID: 19406 RVA: 0x0019B8C8 File Offset: 0x00199AC8
 	public BlackCoastRewardPanel(ActivityBlackCoastData data)
 	{
 		this.ActivityBaseData = data;
 	}
 
-	// Token: 0x06007838 RID: 30776 RVA: 0x00192D0C File Offset: 0x00190F0C
+	// Token: 0x06004BCF RID: 19407 RVA: 0x0019B8E4 File Offset: 0x00199AE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -42,7 +41,7 @@ public class BlackCoastRewardPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007839 RID: 30777 RVA: 0x00192E1C File Offset: 0x0019101C
+	// Token: 0x06004BD0 RID: 19408 RVA: 0x0019B9F4 File Offset: 0x00199BF4
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<BlackCoastRewardItem, BlackCoastProgressRewardData>(base.GetHorizontalLayout(3), new Func<BlackCoastRewardItem>(this.OnCreateRewardItem), null, false, true);
@@ -53,13 +52,13 @@ public class BlackCoastRewardPanel : UiPanelBase
 		base.GetSprite(6).SetUIActive(false);
 	}
 
-	// Token: 0x0600783A RID: 30778 RVA: 0x00192E85 File Offset: 0x00191085
+	// Token: 0x06004BD1 RID: 19409 RVA: 0x0019BA5D File Offset: 0x00199C5D
 	protected override void OnBeforeDestroy()
 	{
 		this.ProgressBarItem = null;
 	}
 
-	// Token: 0x0600783B RID: 30779 RVA: 0x00192E90 File Offset: 0x00191090
+	// Token: 0x06004BD2 RID: 19410 RVA: 0x0019BA68 File Offset: 0x00199C68
 	public void Refresh()
 	{
 		this.CurrentValue = this.ActivityBaseData.GetProgressItemCount();
@@ -78,18 +77,18 @@ public class BlackCoastRewardPanel : UiPanelBase
 		{
 			return;
 		}
-		this.RewardLayout.RefreshByData(allProgressRewardData.ToList<BlackCoastProgressRewardData>(), null, false);
+		this.RewardLayout.RefreshByData(allProgressRewardData, null, false);
 		this.LineWidth = (this.MaxProgressWidth - this.RewardWidth * (float)(this.TotalRewardCount - 1)) / (float)this.TotalRewardCount;
 		this.SetProgressBarPercent((float)this.CurrentValue / (float)this.MaxValue);
 	}
 
-	// Token: 0x0600783C RID: 30780 RVA: 0x00192F63 File Offset: 0x00191163
+	// Token: 0x06004BD3 RID: 19411 RVA: 0x0019BB36 File Offset: 0x00199D36
 	public void RefreshLayout()
 	{
-		this.RewardLayout.RefreshByData(this.ActivityBaseData.GetAllProgressRewardData().ToList<BlackCoastProgressRewardData>(), null, false);
+		this.RewardLayout.RefreshByData(this.ActivityBaseData.GetAllProgressRewardData(), null, false);
 	}
 
-	// Token: 0x0600783D RID: 30781 RVA: 0x00192F84 File Offset: 0x00191184
+	// Token: 0x06004BD4 RID: 19412 RVA: 0x0019BB50 File Offset: 0x00199D50
 	private void SetProgressBarPercent(float percent)
 	{
 		float num = (float)Math.Min(this.CurrentFinishedRewardCount, this.TotalRewardCount - 1) * this.RewardWidth;
@@ -98,7 +97,7 @@ public class BlackCoastRewardPanel : UiPanelBase
 		this.ProgressBarItem.SetStretchRight(stretchRight);
 	}
 
-	// Token: 0x0600783E RID: 30782 RVA: 0x00192FE0 File Offset: 0x001911E0
+	// Token: 0x06004BD5 RID: 19413 RVA: 0x0019BBAC File Offset: 0x00199DAC
 	private BlackCoastRewardItem OnCreateRewardItem()
 	{
 		UUIItem item = base.GetItem(1);
@@ -120,13 +119,13 @@ public class BlackCoastRewardPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x04003752 RID: 14162
+	// Token: 0x040037EB RID: 14315
 	private const float REWARD_WIDTH = 120f;
 
-	// Token: 0x04003753 RID: 14163
+	// Token: 0x040037EC RID: 14316
 	protected ActivityBlackCoastData ActivityBaseData;
 
-	// Token: 0x04003754 RID: 14164
+	// Token: 0x040037ED RID: 14317
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,54 +134,54 @@ public class BlackCoastRewardPanel : UiPanelBase
 	})]
 	private GenericLayout<BlackCoastRewardItem, BlackCoastProgressRewardData> RewardLayout;
 
-	// Token: 0x04003755 RID: 14165
+	// Token: 0x040037EE RID: 14318
 	[Nullable(2)]
 	private UUIItem ProgressBarItem;
 
-	// Token: 0x04003756 RID: 14166
+	// Token: 0x040037EF RID: 14319
 	private int CurrentValue;
 
-	// Token: 0x04003757 RID: 14167
+	// Token: 0x040037F0 RID: 14320
 	private int MaxValue;
 
-	// Token: 0x04003758 RID: 14168
+	// Token: 0x040037F1 RID: 14321
 	private int CurrentFinishedRewardCount;
 
-	// Token: 0x04003759 RID: 14169
+	// Token: 0x040037F2 RID: 14322
 	private float MaxProgressWidth;
 
-	// Token: 0x0400375A RID: 14170
+	// Token: 0x040037F3 RID: 14323
 	private readonly float RewardWidth = 120f;
 
-	// Token: 0x0400375B RID: 14171
+	// Token: 0x040037F4 RID: 14324
 	private float LineWidth;
 
-	// Token: 0x0400375C RID: 14172
+	// Token: 0x040037F5 RID: 14325
 	private int TotalRewardCount;
 
-	// Token: 0x02007799 RID: 30617
+	// Token: 0x02006925 RID: 26917
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040276FE RID: 161534
+		// Token: 0x04022A34 RID: 141876
 		public const int ProgressPanel = 0;
 
-		// Token: 0x040276FF RID: 161535
+		// Token: 0x04022A35 RID: 141877
 		public const int BarPanel = 1;
 
-		// Token: 0x04027700 RID: 161536
+		// Token: 0x04022A36 RID: 141878
 		public const int BarSprite = 2;
 
-		// Token: 0x04027701 RID: 161537
+		// Token: 0x04022A37 RID: 141879
 		public const int RewardPanel = 3;
 
-		// Token: 0x04027702 RID: 161538
+		// Token: 0x04022A38 RID: 141880
 		public const int RewardItem = 4;
 
-		// Token: 0x04027703 RID: 161539
+		// Token: 0x04022A39 RID: 141881
 		public const int PanelBackground = 5;
 
-		// Token: 0x04027704 RID: 161540
+		// Token: 0x04022A3A RID: 141882
 		public const int BackgroundSprite = 6;
 	}
 }

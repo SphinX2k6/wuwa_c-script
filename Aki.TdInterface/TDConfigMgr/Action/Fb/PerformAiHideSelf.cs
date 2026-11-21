@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AD9 RID: 10969
+	// Token: 0x02002DCD RID: 11725
 	public class PerformAiHideSelf : ActionParams
 	{
-		// Token: 0x0600F089 RID: 61577 RVA: 0x0022ECAF File Offset: 0x0022CEAF
-		[NullableContext(1)]
+		// Token: 0x0600FF3F RID: 65343 RVA: 0x0024C9BB File Offset: 0x0024ABBB
 		public static PerformAiHideSelf Create(IPerformAiHideSelf? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04008453 RID: 33875
+		// Token: 0x04008B57 RID: 35671
 		private IPerformAiHideSelf Instance;
 	}
 }

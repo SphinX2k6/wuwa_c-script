@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FA4 RID: 12196
+// Token: 0x020024F8 RID: 9464
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffMapper : PeriodExecution
 {
-	// Token: 0x06019DE5 RID: 105957 RVA: 0x006C2827 File Offset: 0x006C0A27
+	// Token: 0x060176F7 RID: 95991 RVA: 0x006E90C3 File Offset: 0x006E72C3
 	public BuffMapper(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DE6 RID: 105958 RVA: 0x006C2830 File Offset: 0x006C0A30
+	// Token: 0x060176F8 RID: 95992 RVA: 0x006E90CC File Offset: 0x006E72CC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -65,7 +65,7 @@ public class BuffMapper : PeriodExecution
 		this.DefaultBuffId = ((extraEffectParameters_.Length > 3 && !string.IsNullOrEmpty(extraEffectParameters_[3])) ? new long?(long.Parse(extraEffectParameters_[3])) : null);
 	}
 
-	// Token: 0x06019DE7 RID: 105959 RVA: 0x006C29A8 File Offset: 0x006C0BA8
+	// Token: 0x060176F9 RID: 95993 RVA: 0x006E9244 File Offset: 0x006E7444
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -133,7 +133,7 @@ public class BuffMapper : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DE8 RID: 105960 RVA: 0x006C2BCC File Offset: 0x006C0DCC
+	// Token: 0x060176FA RID: 95994 RVA: 0x006E9468 File Offset: 0x006E7668
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(39, 5);
@@ -150,18 +150,18 @@ public class BuffMapper : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C388 RID: 50056
+	// Token: 0x0400C731 RID: 50993
 	[Nullable(2)]
 	private long[] CheckBuffIds;
 
-	// Token: 0x0400C389 RID: 50057
+	// Token: 0x0400C732 RID: 50994
 	[Nullable(2)]
 	private long[] RemoveBuffIds;
 
-	// Token: 0x0400C38A RID: 50058
+	// Token: 0x0400C733 RID: 50995
 	[Nullable(2)]
 	private long[] AddBuffIds;
 
-	// Token: 0x0400C38B RID: 50059
+	// Token: 0x0400C734 RID: 50996
 	private long? DefaultBuffId;
 }

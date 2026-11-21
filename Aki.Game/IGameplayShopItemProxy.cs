@@ -1,75 +1,75 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002343 RID: 9027
+// Token: 0x02001828 RID: 6184
 [NullableContext(1)]
 public interface IGameplayShopItemProxy : IGameplayShopItemBaseProxy
 {
-	// Token: 0x17001716 RID: 5910
-	// (get) Token: 0x06011E9B RID: 73371
-	// (set) Token: 0x06011E9C RID: 73372
+	// Token: 0x17001750 RID: 5968
+	// (get) Token: 0x0600F34B RID: 62283
+	// (set) Token: 0x0600F34C RID: 62284
 	GameplayShopTextData DiscountTextData { get; set; }
 
-	// Token: 0x17001717 RID: 5911
-	// (get) Token: 0x06011E9D RID: 73373
-	// (set) Token: 0x06011E9E RID: 73374
+	// Token: 0x17001751 RID: 5969
+	// (get) Token: 0x0600F34D RID: 62285
+	// (set) Token: 0x0600F34E RID: 62286
 	bool DiscountItemVisible { get; set; }
 
-	// Token: 0x17001718 RID: 5912
-	// (get) Token: 0x06011E9F RID: 73375
-	// (set) Token: 0x06011EA0 RID: 73376
+	// Token: 0x17001752 RID: 5970
+	// (get) Token: 0x0600F34F RID: 62287
+	// (set) Token: 0x0600F350 RID: 62288
 	GameplayShopTextData LabelTextData { get; set; }
 
-	// Token: 0x17001719 RID: 5913
-	// (get) Token: 0x06011EA1 RID: 73377
-	// (set) Token: 0x06011EA2 RID: 73378
+	// Token: 0x17001753 RID: 5971
+	// (get) Token: 0x0600F351 RID: 62289
+	// (set) Token: 0x0600F352 RID: 62290
 	bool LabelVisible { get; set; }
 
-	// Token: 0x1700171A RID: 5914
-	// (get) Token: 0x06011EA3 RID: 73379
-	// (set) Token: 0x06011EA4 RID: 73380
+	// Token: 0x17001754 RID: 5972
+	// (get) Token: 0x0600F353 RID: 62291
+	// (set) Token: 0x0600F354 RID: 62292
 	GameplayShopTextData LeftTimeTextData { get; set; }
 
-	// Token: 0x1700171B RID: 5915
-	// (get) Token: 0x06011EA5 RID: 73381
-	// (set) Token: 0x06011EA6 RID: 73382
+	// Token: 0x17001755 RID: 5973
+	// (get) Token: 0x0600F355 RID: 62293
+	// (set) Token: 0x0600F356 RID: 62294
 	bool LeftTimeItemVisible { get; set; }
 
-	// Token: 0x1700171C RID: 5916
-	// (get) Token: 0x06011EA7 RID: 73383
-	// (set) Token: 0x06011EA8 RID: 73384
+	// Token: 0x17001756 RID: 5974
+	// (get) Token: 0x0600F357 RID: 62295
+	// (set) Token: 0x0600F358 RID: 62296
 	GameplayShopTextData ReSellTextData { get; set; }
 
-	// Token: 0x1700171D RID: 5917
-	// (get) Token: 0x06011EA9 RID: 73385
-	// (set) Token: 0x06011EAA RID: 73386
+	// Token: 0x17001757 RID: 5975
+	// (get) Token: 0x0600F359 RID: 62297
+	// (set) Token: 0x0600F35A RID: 62298
 	bool ReSellItemVisible { get; set; }
 
-	// Token: 0x1700171E RID: 5918
-	// (get) Token: 0x06011EAB RID: 73387
-	// (set) Token: 0x06011EAC RID: 73388
+	// Token: 0x17001758 RID: 5976
+	// (get) Token: 0x0600F35B RID: 62299
+	// (set) Token: 0x0600F35C RID: 62300
 	GameplayShopTextData SoldOutTextData { get; set; }
 
-	// Token: 0x1700171F RID: 5919
-	// (get) Token: 0x06011EAD RID: 73389
-	// (set) Token: 0x06011EAE RID: 73390
+	// Token: 0x17001759 RID: 5977
+	// (get) Token: 0x0600F35D RID: 62301
+	// (set) Token: 0x0600F35E RID: 62302
 	bool SoldOutItemVisible { get; set; }
 
-	// Token: 0x17001720 RID: 5920
-	// (get) Token: 0x06011EAF RID: 73391
-	// (set) Token: 0x06011EB0 RID: 73392
+	// Token: 0x1700175A RID: 5978
+	// (get) Token: 0x0600F35F RID: 62303
+	// (set) Token: 0x0600F360 RID: 62304
 	GameplayShopTextData LockTextData { get; set; }
 
-	// Token: 0x17001721 RID: 5921
-	// (get) Token: 0x06011EB1 RID: 73393
-	// (set) Token: 0x06011EB2 RID: 73394
+	// Token: 0x1700175B RID: 5979
+	// (get) Token: 0x0600F361 RID: 62305
+	// (set) Token: 0x0600F362 RID: 62306
 	bool LockItemVisible { get; set; }
 
-	// Token: 0x17001722 RID: 5922
-	// (get) Token: 0x06011EB3 RID: 73395
-	// (set) Token: 0x06011EB4 RID: 73396
+	// Token: 0x1700175C RID: 5980
+	// (get) Token: 0x0600F363 RID: 62307
+	// (set) Token: 0x0600F364 RID: 62308
 	bool TagNewItemVisible { get; set; }
 
-	// Token: 0x06011EB5 RID: 73397
+	// Token: 0x0600F365 RID: 62309
 	void OnBuyButtonClick();
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004136 RID: 16694
+	// Token: 0x02004577 RID: 17783
 	public struct ISpecialGamePlayConfig : IFlatbufferObject
 	{
-		// Token: 0x17007641 RID: 30273
-		// (get) Token: 0x060187BE RID: 100286 RVA: 0x00387A55 File Offset: 0x00385C55
+		// Token: 0x17007C47 RID: 31815
+		// (get) Token: 0x06019E61 RID: 106081 RVA: 0x003B1A5D File Offset: 0x003AFC5D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060187BF RID: 100287 RVA: 0x00387A62 File Offset: 0x00385C62
+		// Token: 0x06019E62 RID: 106082 RVA: 0x003B1A6A File Offset: 0x003AFC6A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060187C0 RID: 100288 RVA: 0x00387A6C File Offset: 0x00385C6C
+		// Token: 0x06019E63 RID: 106083 RVA: 0x003B1A74 File Offset: 0x003AFC74
 		public static ISpecialGamePlayConfig GetRootAsISpecialGamePlayConfig(ByteBuffer _bb)
 		{
 			return ISpecialGamePlayConfig.GetRootAsISpecialGamePlayConfig(_bb, default(ISpecialGamePlayConfig));
 		}
 
-		// Token: 0x060187C1 RID: 100289 RVA: 0x00387A88 File Offset: 0x00385C88
+		// Token: 0x06019E64 RID: 106084 RVA: 0x003B1A90 File Offset: 0x003AFC90
 		public static ISpecialGamePlayConfig GetRootAsISpecialGamePlayConfig(ByteBuffer _bb, ISpecialGamePlayConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060187C2 RID: 100290 RVA: 0x00387AA5 File Offset: 0x00385CA5
+		// Token: 0x06019E65 RID: 106085 RVA: 0x003B1AAD File Offset: 0x003AFCAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060187C3 RID: 100291 RVA: 0x00387AB4 File Offset: 0x00385CB4
+		// Token: 0x06019E66 RID: 106086 RVA: 0x003B1ABC File Offset: 0x003AFCBC
 		public ISpecialGamePlayConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007642 RID: 30274
-		// (get) Token: 0x060187C4 RID: 100292 RVA: 0x00387AC4 File Offset: 0x00385CC4
+		// Token: 0x17007C48 RID: 31816
+		// (get) Token: 0x06019E67 RID: 106087 RVA: 0x003B1ACC File Offset: 0x003AFCCC
 		public ESpecialGamePlayConfigType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060187C5 RID: 100293 RVA: 0x00387B00 File Offset: 0x00385D00
+		// Token: 0x06019E68 RID: 106088 RVA: 0x003B1B08 File Offset: 0x003AFD08
 		public static Offset<ISpecialGamePlayConfig> CreateISpecialGamePlayConfig(FlatBufferBuilder builder, ESpecialGamePlayConfigType Type = ESpecialGamePlayConfigType.Stalking)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISpecialGamePlayConfig.EndISpecialGamePlayConfig(builder);
 		}
 
-		// Token: 0x060187C6 RID: 100294 RVA: 0x00387B16 File Offset: 0x00385D16
+		// Token: 0x06019E69 RID: 106089 RVA: 0x003B1B1E File Offset: 0x003AFD1E
 		public static void StartISpecialGamePlayConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060187C7 RID: 100295 RVA: 0x00387B1F File Offset: 0x00385D1F
+		// Token: 0x06019E6A RID: 106090 RVA: 0x003B1B27 File Offset: 0x003AFD27
 		public static void AddType(FlatBufferBuilder builder, ESpecialGamePlayConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060187C8 RID: 100296 RVA: 0x00387B2A File Offset: 0x00385D2A
+		// Token: 0x06019E6B RID: 106091 RVA: 0x003B1B32 File Offset: 0x003AFD32
 		public static Offset<ISpecialGamePlayConfig> EndISpecialGamePlayConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpecialGamePlayConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060187C9 RID: 100297 RVA: 0x00387B38 File Offset: 0x00385D38
+		// Token: 0x06019E6C RID: 106092 RVA: 0x003B1B40 File Offset: 0x003AFD40
 		public ISpecialGamePlayConfigT UnPack()
 		{
 			ISpecialGamePlayConfigT specialGamePlayConfigT = new ISpecialGamePlayConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return specialGamePlayConfigT;
 		}
 
-		// Token: 0x060187CA RID: 100298 RVA: 0x00387B53 File Offset: 0x00385D53
+		// Token: 0x06019E6D RID: 106093 RVA: 0x003B1B5B File Offset: 0x003AFD5B
 		public void UnPackTo(ISpecialGamePlayConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060187CB RID: 100299 RVA: 0x00387B64 File Offset: 0x00385D64
+		// Token: 0x06019E6E RID: 106094 RVA: 0x003B1B6C File Offset: 0x003AFD6C
 		public static Offset<ISpecialGamePlayConfig> Pack(FlatBufferBuilder builder, ISpecialGamePlayConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISpecialGamePlayConfig.CreateISpecialGamePlayConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400BD39 RID: 48441
+		// Token: 0x0400C722 RID: 50978
 		private Table __p;
 	}
 }

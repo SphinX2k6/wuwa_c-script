@@ -4,16 +4,16 @@ using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02001D66 RID: 7526
+// Token: 0x02001228 RID: 4648
 public class SequenceNode : LogicNodeBase
 {
-	// Token: 0x0600E4F9 RID: 58617 RVA: 0x0035EFC0 File Offset: 0x0035D1C0
+	// Token: 0x0600B917 RID: 47383 RVA: 0x0036AC14 File Offset: 0x00368E14
 	public SequenceNode(int nodeId) : base(nodeId)
 	{
 	}
 
-	// Token: 0x1700124E RID: 4686
-	// (get) Token: 0x0600E4FA RID: 58618 RVA: 0x0035EFC9 File Offset: 0x0035D1C9
+	// Token: 0x17001278 RID: 4728
+	// (get) Token: 0x0600B918 RID: 47384 RVA: 0x0036AC1D File Offset: 0x00368E1D
 	public override EBtNode NodeType
 	{
 		get
@@ -22,7 +22,7 @@ public class SequenceNode : LogicNodeBase
 		}
 	}
 
-	// Token: 0x0600E4FB RID: 58619 RVA: 0x0035EFCC File Offset: 0x0035D1CC
+	// Token: 0x0600B919 RID: 47385 RVA: 0x0036AC20 File Offset: 0x00368E20
 	protected override void OnNodeActive()
 	{
 		base.OnNodeActive();
@@ -59,7 +59,7 @@ public class SequenceNode : LogicNodeBase
 		}
 	}
 
-	// Token: 0x0600E4FC RID: 58620 RVA: 0x0035F0B4 File Offset: 0x0035D2B4
+	// Token: 0x0600B91A RID: 47386 RVA: 0x0036AD08 File Offset: 0x00368F08
 	protected override void OnNodeDeActive(bool success)
 	{
 		base.OnNodeDeActive(success);

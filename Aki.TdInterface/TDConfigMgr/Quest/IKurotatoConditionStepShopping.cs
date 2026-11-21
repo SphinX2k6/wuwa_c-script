@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FE3 RID: 4067
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200110F RID: 4367
 	public class IKurotatoConditionStepShopping : IKurotatoConditionStepBase
 	{
-		// Token: 0x06005A8C RID: 23180 RVA: 0x000DBEDC File Offset: 0x000DA0DC
+		// Token: 0x0600606C RID: 24684 RVA: 0x000E8B1C File Offset: 0x000E6D1C
 		private IKurotatoConditionStepShopping_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A8D RID: 23181 RVA: 0x000DBF14 File Offset: 0x000DA114
+		// Token: 0x0600606D RID: 24685 RVA: 0x000E8B54 File Offset: 0x000E6D54
 		public static IKurotatoConditionStepShopping Create([Nullable(2)] IKurotatoConditionStepShopping instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A8E RID: 23182 RVA: 0x000DBF27 File Offset: 0x000DA127
+		// Token: 0x0600606E RID: 24686 RVA: 0x000E8B67 File Offset: 0x000E6D67
 		public static IKurotatoConditionStepShopping CreateFromSetValue([Nullable(2)] IKurotatoConditionStepShopping_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A8F RID: 23183 RVA: 0x000DBF3A File Offset: 0x000DA13A
+		// Token: 0x0600606F RID: 24687 RVA: 0x000E8B7A File Offset: 0x000E6D7A
 		public new IKurotatoConditionStepShopping_SetValue ToSetValue()
 		{
 			return new IKurotatoConditionStepShopping_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DF3 RID: 7667
-		// (get) Token: 0x06005A90 RID: 23184 RVA: 0x000DBF4D File Offset: 0x000DA14D
-		// (set) Token: 0x06005A91 RID: 23185 RVA: 0x000DBF78 File Offset: 0x000DA178
+		// Token: 0x17001F9C RID: 8092
+		// (get) Token: 0x06006070 RID: 24688 RVA: 0x000E8B8D File Offset: 0x000E6D8D
+		// (set) Token: 0x06006071 RID: 24689 RVA: 0x000E8BB8 File Offset: 0x000E6DB8
 		public override EKurotatoConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003686 RID: 13958
+		// Token: 0x040039BE RID: 14782
 		[Nullable(2)]
 		protected new IKurotatoConditionStepShopping FbInstance;
 
-		// Token: 0x04003687 RID: 13959
+		// Token: 0x040039BF RID: 14783
 		[Nullable(2)]
 		protected new IKurotatoConditionStepShopping_SetValue PocoInterface;
 	}

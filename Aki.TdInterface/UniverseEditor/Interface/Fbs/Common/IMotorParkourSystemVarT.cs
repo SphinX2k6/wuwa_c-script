@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E0D RID: 24077
+	// Token: 0x0200644A RID: 25674
 	public class IMotorParkourSystemVarT
 	{
-		// Token: 0x1700B42B RID: 46123
-		// (get) Token: 0x0602938B RID: 168843 RVA: 0x005A7A3F File Offset: 0x005A5C3F
-		// (set) Token: 0x0602938C RID: 168844 RVA: 0x005A7A47 File Offset: 0x005A5C47
+		// Token: 0x1700BD91 RID: 48529
+		// (get) Token: 0x0602BA15 RID: 178709 RVA: 0x005F076F File Offset: 0x005EE96F
+		// (set) Token: 0x0602BA16 RID: 178710 RVA: 0x005F0777 File Offset: 0x005EE977
 		public EMotorParkourSystemVarType VarType { get; set; }
 
-		// Token: 0x1700B42C RID: 46124
-		// (get) Token: 0x0602938D RID: 168845 RVA: 0x005A7A50 File Offset: 0x005A5C50
-		// (set) Token: 0x0602938E RID: 168846 RVA: 0x005A7A58 File Offset: 0x005A5C58
+		// Token: 0x1700BD92 RID: 48530
+		// (get) Token: 0x0602BA17 RID: 178711 RVA: 0x005F0780 File Offset: 0x005EE980
+		// (set) Token: 0x0602BA18 RID: 178712 RVA: 0x005F0788 File Offset: 0x005EE988
 		public TVarRefUnion VarRef { get; set; }
 
-		// Token: 0x0602938F RID: 168847 RVA: 0x005A7A61 File Offset: 0x005A5C61
+		// Token: 0x0602BA19 RID: 178713 RVA: 0x005F0791 File Offset: 0x005EE991
 		public IMotorParkourSystemVarT()
 		{
 			this.VarType = EMotorParkourSystemVarType.CurLap;

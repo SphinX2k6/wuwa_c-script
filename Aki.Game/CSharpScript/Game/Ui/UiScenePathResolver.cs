@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200466C RID: 18028
+	// Token: 0x0200359D RID: 13725
 	public class UiScenePathResolver : IStaticVariableResetter
 	{
-		// Token: 0x0602E85C RID: 190556 RVA: 0x00AC5DF1 File Offset: 0x00AC3FF1
+		// Token: 0x06022FA6 RID: 143270 RVA: 0x009F3950 File Offset: 0x009F1B50
 		static UiScenePathResolver()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiScenePathResolver.CreateStaticDefaultValue), new Action(UiScenePathResolver.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17007608 RID: 30216
-		// (get) Token: 0x0602E85D RID: 190557 RVA: 0x00AC5E10 File Offset: 0x00AC4010
+		// Token: 0x170048C4 RID: 18628
+		// (get) Token: 0x06022FA7 RID: 143271 RVA: 0x009F396F File Offset: 0x009F1B6F
 		[Nullable(1)]
 		public static Dictionary<EUiViewName, EUiViewName> UiViewToRootViewForUiScene
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E85E RID: 190558 RVA: 0x00AC5E18 File Offset: 0x00AC4018
+		// Token: 0x06022FA8 RID: 143272 RVA: 0x009F3978 File Offset: 0x009F1B78
 		public static void CreateStaticDefaultValue()
 		{
 			UiScenePathResolver._uiViewToRootViewForUiScene = new Dictionary<EUiViewName, EUiViewName>
@@ -181,13 +181,13 @@ namespace CSharpScript.Game.Ui
 			};
 		}
 
-		// Token: 0x0602E85F RID: 190559 RVA: 0x00AC607F File Offset: 0x00AC427F
+		// Token: 0x06022FA9 RID: 143273 RVA: 0x009F3BDF File Offset: 0x009F1DDF
 		public static void ResetStaticDefaultValue()
 		{
 			UiScenePathResolver._uiViewToRootViewForUiScene = null;
 		}
 
-		// Token: 0x040194EE RID: 103662
+		// Token: 0x04013B95 RID: 80789
 		[Nullable(2)]
 		private static Dictionary<EUiViewName, EUiViewName> _uiViewToRootViewForUiScene;
 	}

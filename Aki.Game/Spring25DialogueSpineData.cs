@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001511 RID: 5393
+// Token: 0x020009C9 RID: 2505
 [NullableContext(2)]
 [Nullable(0)]
 public class Spring25DialogueSpineData
 {
-	// Token: 0x040043A9 RID: 17321
+	// Token: 0x0400444F RID: 17487
 	public string AtlasPath;
 
-	// Token: 0x040043AA RID: 17322
+	// Token: 0x04004450 RID: 17488
 	public string SkeletonDataPath;
 }

@@ -6,25 +6,25 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public readonly struct EAddHatredReason : IEquatable<EAddHatredReason>
 {
-	// Token: 0x06000D41 RID: 3393 RVA: 0x00048219 File Offset: 0x00046419
+	// Token: 0x06000D47 RID: 3399 RVA: 0x00048DB5 File Offset: 0x00046FB5
 	private EAddHatredReason(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x06000D42 RID: 3394 RVA: 0x00048222 File Offset: 0x00046422
+	// Token: 0x06000D48 RID: 3400 RVA: 0x00048DBE File Offset: 0x00046FBE
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x06000D43 RID: 3395 RVA: 0x0004822A File Offset: 0x0004642A
+	// Token: 0x06000D49 RID: 3401 RVA: 0x00048DC6 File Offset: 0x00046FC6
 	public bool Equals(EAddHatredReason other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x06000D44 RID: 3396 RVA: 0x00048240 File Offset: 0x00046440
+	// Token: 0x06000D4A RID: 3402 RVA: 0x00048DDC File Offset: 0x00046FDC
 	[NullableContext(2)]
 	public override bool Equals(object obj)
 	{
@@ -36,7 +36,7 @@ public readonly struct EAddHatredReason : IEquatable<EAddHatredReason>
 		return false;
 	}
 
-	// Token: 0x06000D45 RID: 3397 RVA: 0x00048265 File Offset: 0x00046465
+	// Token: 0x06000D4B RID: 3403 RVA: 0x00048E01 File Offset: 0x00047001
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -47,72 +47,72 @@ public readonly struct EAddHatredReason : IEquatable<EAddHatredReason>
 		return value.GetHashCode();
 	}
 
-	// Token: 0x06000D46 RID: 3398 RVA: 0x00048278 File Offset: 0x00046478
+	// Token: 0x06000D4C RID: 3404 RVA: 0x00048E14 File Offset: 0x00047014
 	public static bool operator ==(EAddHatredReason left, EAddHatredReason right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x06000D47 RID: 3399 RVA: 0x00048282 File Offset: 0x00046482
+	// Token: 0x06000D4D RID: 3405 RVA: 0x00048E1E File Offset: 0x0004701E
 	public static bool operator !=(EAddHatredReason left, EAddHatredReason right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x04000A90 RID: 2704
+	// Token: 0x04000A98 RID: 2712
 	private readonly string _Value;
 
-	// Token: 0x04000A91 RID: 2705
+	// Token: 0x04000A99 RID: 2713
 	public const string None_Value = "None";
 
-	// Token: 0x04000A92 RID: 2706
+	// Token: 0x04000A9A RID: 2714
 	public static readonly EAddHatredReason None = new EAddHatredReason("None");
 
-	// Token: 0x04000A93 RID: 2707
+	// Token: 0x04000A9B RID: 2715
 	public const string Damage_Value = "Damage";
 
-	// Token: 0x04000A94 RID: 2708
+	// Token: 0x04000A9C RID: 2716
 	public static readonly EAddHatredReason Damage = new EAddHatredReason("Damage");
 
-	// Token: 0x04000A95 RID: 2709
+	// Token: 0x04000A9D RID: 2717
 	public const string Taunt_Value = "Taunt";
 
-	// Token: 0x04000A96 RID: 2710
+	// Token: 0x04000A9E RID: 2718
 	public static readonly EAddHatredReason Taunt = new EAddHatredReason("Taunt");
 
-	// Token: 0x04000A97 RID: 2711
+	// Token: 0x04000A9F RID: 2719
 	public const string Area_Value = "Area";
 
-	// Token: 0x04000A98 RID: 2712
+	// Token: 0x04000AA0 RID: 2720
 	public static readonly EAddHatredReason Area = new EAddHatredReason("Area");
 
-	// Token: 0x04000A99 RID: 2713
+	// Token: 0x04000AA1 RID: 2721
 	public const string ChangeRole_Value = "ChangeRole";
 
-	// Token: 0x04000A9A RID: 2714
+	// Token: 0x04000AA2 RID: 2722
 	public static readonly EAddHatredReason ChangeRole = new EAddHatredReason("ChangeRole");
 
-	// Token: 0x04000A9B RID: 2715
+	// Token: 0x04000AA3 RID: 2723
 	public const string VisionMorphBegin_Value = "VisionMorphBegin";
 
-	// Token: 0x04000A9C RID: 2716
+	// Token: 0x04000AA4 RID: 2724
 	public static readonly EAddHatredReason VisionMorphBegin = new EAddHatredReason("VisionMorphBegin");
 
-	// Token: 0x04000A9D RID: 2717
+	// Token: 0x04000AA5 RID: 2725
 	public const string VisionMorphEnd_Value = "VisionMorphEnd";
 
-	// Token: 0x04000A9E RID: 2718
+	// Token: 0x04000AA6 RID: 2726
 	public static readonly EAddHatredReason VisionMorphEnd = new EAddHatredReason("VisionMorphEnd");
 
-	// Token: 0x04000A9F RID: 2719
+	// Token: 0x04000AA7 RID: 2727
 	public const string Blueprint_Value = "Blueprint";
 
-	// Token: 0x04000AA0 RID: 2720
+	// Token: 0x04000AA8 RID: 2728
 	public static readonly EAddHatredReason Blueprint = new EAddHatredReason("Blueprint");
 
-	// Token: 0x04000AA1 RID: 2721
+	// Token: 0x04000AA9 RID: 2729
 	public const string Shared_Value = "Shared";
 
-	// Token: 0x04000AA2 RID: 2722
+	// Token: 0x04000AAA RID: 2730
 	public static readonly EAddHatredReason Shared = new EAddHatredReason("Shared");
 }

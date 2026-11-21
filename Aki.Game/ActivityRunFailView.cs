@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014D7 RID: 5335
+// Token: 0x0200098F RID: 2447
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRunFailView : UiViewBase
 {
-	// Token: 0x060097B8 RID: 38840 RVA: 0x0020C7C8 File Offset: 0x0020A9C8
+	// Token: 0x06006B92 RID: 27538 RVA: 0x00216508 File Offset: 0x00214708
 	public ActivityRunFailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060097B9 RID: 38841 RVA: 0x0020C7D4 File Offset: 0x0020A9D4
+	// Token: 0x06006B93 RID: 27539 RVA: 0x00216514 File Offset: 0x00214714
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -55,7 +55,7 @@ public class ActivityRunFailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060097BA RID: 38842 RVA: 0x0020C9D4 File Offset: 0x0020ABD4
+	// Token: 0x06006B94 RID: 27540 RVA: 0x00216714 File Offset: 0x00214914
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRunFailView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -66,14 +66,14 @@ public class ActivityRunFailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060097BB RID: 38843 RVA: 0x0020CA17 File Offset: 0x0020AC17
+	// Token: 0x06006B95 RID: 27541 RVA: 0x00216757 File Offset: 0x00214957
 	protected override void OnStart()
 	{
 		this.CurrentShowData = (this.OpenParam as RunEndData);
 		this.InitAutoLeaveTimer();
 	}
 
-	// Token: 0x060097BC RID: 38844 RVA: 0x0020CA30 File Offset: 0x0020AC30
+	// Token: 0x06006B96 RID: 27542 RVA: 0x00216770 File Offset: 0x00214970
 	protected override void OnBeforeShow()
 	{
 		base.GetItem(12).SetUIActive(false);
@@ -89,7 +89,7 @@ public class ActivityRunFailView : UiViewBase
 		this.RefreshHead();
 	}
 
-	// Token: 0x060097BD RID: 38845 RVA: 0x0020CAA0 File Offset: 0x0020ACA0
+	// Token: 0x06006B97 RID: 27543 RVA: 0x002167E0 File Offset: 0x002149E0
 	private void RefreshHead()
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -98,7 +98,7 @@ public class ActivityRunFailView : UiViewBase
 		base.GetText(1).ShowTextNew("GenericPromptTypes_4_GeneralText");
 	}
 
-	// Token: 0x060097BE RID: 38846 RVA: 0x0020CAEC File Offset: 0x0020ACEC
+	// Token: 0x06006B98 RID: 27544 RVA: 0x0021682C File Offset: 0x00214A2C
 	private UniTask InitButtonAsync()
 	{
 		ActivityRunFailView.<InitButtonAsync>d__14 <InitButtonAsync>d__;
@@ -109,7 +109,7 @@ public class ActivityRunFailView : UiViewBase
 		return <InitButtonAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060097BF RID: 38847 RVA: 0x0020CB2F File Offset: 0x0020AD2F
+	// Token: 0x06006B99 RID: 27545 RVA: 0x0021686F File Offset: 0x00214A6F
 	private void ClearAutoLeaveTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.AutoLeaveTimerId))
@@ -119,7 +119,7 @@ public class ActivityRunFailView : UiViewBase
 		this.AutoLeaveTimerId = null;
 	}
 
-	// Token: 0x060097C0 RID: 38848 RVA: 0x0020CB5C File Offset: 0x0020AD5C
+	// Token: 0x06006B9A RID: 27546 RVA: 0x0021689C File Offset: 0x00214A9C
 	private void InitAutoLeaveTimer()
 	{
 		int leftSecondToAutoLeave = 31;
@@ -143,7 +143,7 @@ public class ActivityRunFailView : UiViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x060097C1 RID: 38849 RVA: 0x0020CBA7 File Offset: 0x0020ADA7
+	// Token: 0x06006B9B RID: 27547 RVA: 0x002168E7 File Offset: 0x00214AE7
 	protected override void OnBeforeDestroy()
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(15);
@@ -156,7 +156,7 @@ public class ActivityRunFailView : UiViewBase
 		this.ClearAutoLeaveTimer();
 	}
 
-	// Token: 0x060097C2 RID: 38850 RVA: 0x0020CBE0 File Offset: 0x0020ADE0
+	// Token: 0x06006B9C RID: 27548 RVA: 0x00216920 File Offset: 0x00214B20
 	private UniTask CreateButton(UUIItem uiItem, int buttonIndex, Action clickFunction)
 	{
 		ActivityRunFailView.<CreateButton>d__18 <CreateButton>d__;
@@ -169,36 +169,36 @@ public class ActivityRunFailView : UiViewBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060097C3 RID: 38851 RVA: 0x0020CC33 File Offset: 0x0020AE33
+	// Token: 0x06006B9D RID: 27549 RVA: 0x00216973 File Offset: 0x00214B73
 	private void OnClickContinueButton()
 	{
 		ActivityRunController.Instance.RequestTransToParkourChallenge(this.CurrentShowData.CurrentChallengeId);
 	}
 
-	// Token: 0x060097C4 RID: 38852 RVA: 0x0020CC4A File Offset: 0x0020AE4A
+	// Token: 0x06006B9E RID: 27550 RVA: 0x0021698A File Offset: 0x00214B8A
 	private void OnClickBtnLeave()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040042C5 RID: 17093
+	// Token: 0x0400436A RID: 17258
 	private const int LEAVETIME = 30;
 
-	// Token: 0x040042C6 RID: 17094
+	// Token: 0x0400436B RID: 17259
 	private const string FAIL_OUTLINE_COLOR = "63323AFF";
 
-	// Token: 0x040042C7 RID: 17095
+	// Token: 0x0400436C RID: 17260
 	private const string TARGET_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_10_UI.T_Logo_10_UI";
 
-	// Token: 0x040042C8 RID: 17096
+	// Token: 0x0400436D RID: 17261
 	[Nullable(2)]
 	private TimerHandle AutoLeaveTimerId;
 
-	// Token: 0x040042C9 RID: 17097
+	// Token: 0x0400436E RID: 17262
 	[Nullable(2)]
 	private RunEndData CurrentShowData;
 
-	// Token: 0x040042CA RID: 17098
+	// Token: 0x0400436F RID: 17263
 	[Nullable(new byte[]
 	{
 		2,
@@ -206,61 +206,61 @@ public class ActivityRunFailView : UiViewBase
 	})]
 	protected Dictionary<int, ActivityParkourButton> ButtonMap;
 
-	// Token: 0x02007B0E RID: 31502
+	// Token: 0x02006C9A RID: 27802
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402878C RID: 165772
+		// Token: 0x04023ACA RID: 146122
 		public const int TxtTitle = 1;
 
-		// Token: 0x0402878D RID: 165773
+		// Token: 0x04023ACB RID: 146123
 		public const int TexIcon = 2;
 
-		// Token: 0x0402878E RID: 165774
+		// Token: 0x04023ACC RID: 146124
 		public const int ButtonHorizontalItem = 4;
 
-		// Token: 0x0402878F RID: 165775
+		// Token: 0x04023ACD RID: 146125
 		public const int ButtonItem = 5;
 
-		// Token: 0x04028790 RID: 165776
+		// Token: 0x04023ACE RID: 146126
 		public const int ScoreText = 8;
 
-		// Token: 0x04028791 RID: 165777
+		// Token: 0x04023ACF RID: 146127
 		public const int NewRecordItem = 9;
 
-		// Token: 0x04028792 RID: 165778
+		// Token: 0x04023AD0 RID: 146128
 		public const int PassTimeText = 10;
 
-		// Token: 0x04028793 RID: 165779
+		// Token: 0x04023AD1 RID: 146129
 		public const int PassTimeDescText = 11;
 
-		// Token: 0x04028794 RID: 165780
+		// Token: 0x04023AD2 RID: 146130
 		public const int PnlRecord = 12;
 
-		// Token: 0x04028795 RID: 165781
+		// Token: 0x04023AD3 RID: 146131
 		public const int PnlPassTime = 13;
 
-		// Token: 0x04028796 RID: 165782
+		// Token: 0x04023AD4 RID: 146132
 		public const int Desc = 14;
 
-		// Token: 0x04028797 RID: 165783
+		// Token: 0x04023AD5 RID: 146133
 		public const int TitleNia = 15;
 
-		// Token: 0x04028798 RID: 165784
+		// Token: 0x04023AD6 RID: 146134
 		public const int TexTitleBgL = 16;
 
-		// Token: 0x04028799 RID: 165785
+		// Token: 0x04023AD7 RID: 146135
 		public const int TexTitleBgR = 17;
 	}
 
-	// Token: 0x02007B0F RID: 31503
+	// Token: 0x02006C9B RID: 27803
 	[NullableContext(0)]
 	private class EButtons
 	{
-		// Token: 0x0402879A RID: 165786
+		// Token: 0x04023AD8 RID: 146136
 		public const int LeftButton = 0;
 
-		// Token: 0x0402879B RID: 165787
+		// Token: 0x04023AD9 RID: 146137
 		public const int RightButton = 1;
 	}
 }

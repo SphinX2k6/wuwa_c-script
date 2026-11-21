@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001E62 RID: 7778
+// Token: 0x02001324 RID: 4900
 public enum EBindingState
 {
-	// Token: 0x04006DAB RID: 28075
+	// Token: 0x04006E8C RID: 28300
 	None,
-	// Token: 0x04006DAC RID: 28076
+	// Token: 0x04006E8D RID: 28301
 	Logic,
-	// Token: 0x04006DAD RID: 28077
+	// Token: 0x04006E8E RID: 28302
 	LeaderAnim
 }

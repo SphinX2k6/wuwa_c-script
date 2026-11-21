@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D4E RID: 7502
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F5F RID: 8031
 	public class IPreloadSubLevels : SwitchSubLevels
 	{
-		// Token: 0x0600A0F1 RID: 41201 RVA: 0x0016EE6C File Offset: 0x0016D06C
+		// Token: 0x0600AADD RID: 43741 RVA: 0x00183290 File Offset: 0x00181490
 		private IPreloadSubLevels_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A0F2 RID: 41202 RVA: 0x0016EEA4 File Offset: 0x0016D0A4
+		// Token: 0x0600AADE RID: 43742 RVA: 0x001832C8 File Offset: 0x001814C8
 		public static IPreloadSubLevels Create([Nullable(2)] IPreloadSubLevels instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0F3 RID: 41203 RVA: 0x0016EEB7 File Offset: 0x0016D0B7
+		// Token: 0x0600AADF RID: 43743 RVA: 0x001832DB File Offset: 0x001814DB
 		public static IPreloadSubLevels CreateFromSetValue([Nullable(2)] IPreloadSubLevels_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0F4 RID: 41204 RVA: 0x0016EECA File Offset: 0x0016D0CA
+		// Token: 0x0600AAE0 RID: 43744 RVA: 0x001832EE File Offset: 0x001814EE
 		public new IPreloadSubLevels_SetValue ToSetValue()
 		{
 			return new IPreloadSubLevels_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031DA RID: 12762
-		// (get) Token: 0x0600A0F5 RID: 41205 RVA: 0x0016EEE9 File Offset: 0x0016D0E9
-		// (set) Token: 0x0600A0F6 RID: 41206 RVA: 0x0016EF14 File Offset: 0x0016D114
+		// Token: 0x1700346E RID: 13422
+		// (get) Token: 0x0600AAE1 RID: 43745 RVA: 0x0018330D File Offset: 0x0018150D
+		// (set) Token: 0x0600AAE2 RID: 43746 RVA: 0x00183338 File Offset: 0x00181538
 		public override ESwitchSubLevelsType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031DB RID: 12763
-		// (get) Token: 0x0600A0F7 RID: 41207 RVA: 0x0016EF22 File Offset: 0x0016D122
-		// (set) Token: 0x0600A0F8 RID: 41208 RVA: 0x0016EF49 File Offset: 0x0016D149
+		// Token: 0x1700346F RID: 13423
+		// (get) Token: 0x0600AAE3 RID: 43747 RVA: 0x00183346 File Offset: 0x00181546
+		// (set) Token: 0x0600AAE4 RID: 43748 RVA: 0x0018336D File Offset: 0x0018156D
 		public virtual List<string> PreloadLevels
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060ED RID: 24813
+		// Token: 0x04006669 RID: 26217
 		[Nullable(2)]
 		protected new IPreloadSubLevels FbInstance;
 
-		// Token: 0x040060EE RID: 24814
+		// Token: 0x0400666A RID: 26218
 		[Nullable(2)]
 		protected new IPreloadSubLevels_SetValue PocoInterface;
 	}

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F4A RID: 3914
+// Token: 0x020003FF RID: 1023
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksSoftDrinkData
 {
-	// Token: 0x060063FD RID: 25597 RVA: 0x0013B6F9 File Offset: 0x001398F9
+	// Token: 0x06003795 RID: 14229 RVA: 0x00143FC5 File Offset: 0x001421C5
 	public DrinksSoftDrinkData(int id)
 	{
 		this._id = id;
 	}
 
-	// Token: 0x170007B0 RID: 1968
-	// (get) Token: 0x060063FE RID: 25598 RVA: 0x0013B71E File Offset: 0x0013991E
+	// Token: 0x170007D2 RID: 2002
+	// (get) Token: 0x06003796 RID: 14230 RVA: 0x00143FEA File Offset: 0x001421EA
 	public int Id
 	{
 		get
@@ -23,13 +23,13 @@ public class DrinksSoftDrinkData
 		}
 	}
 
-	// Token: 0x060063FF RID: 25599 RVA: 0x0013B726 File Offset: 0x00139926
+	// Token: 0x06003797 RID: 14231 RVA: 0x00143FF2 File Offset: 0x001421F2
 	public void UpdateConfig(int count, int configId)
 	{
 		this.CountMap[count] = configId;
 	}
 
-	// Token: 0x06006400 RID: 25600 RVA: 0x0013B738 File Offset: 0x00139938
+	// Token: 0x06003798 RID: 14232 RVA: 0x00144004 File Offset: 0x00142204
 	public Dictionary<int, int[]> GetFlavorRange()
 	{
 		if (this.FlavorRange.Count > 0)
@@ -78,13 +78,13 @@ public class DrinksSoftDrinkData
 		return this.FlavorRange;
 	}
 
-	// Token: 0x06006401 RID: 25601 RVA: 0x0013B8B4 File Offset: 0x00139AB4
+	// Token: 0x06003799 RID: 14233 RVA: 0x00144180 File Offset: 0x00142380
 	public int GetMenuBaseId()
 	{
 		return this.CountMap[1];
 	}
 
-	// Token: 0x06006402 RID: 25602 RVA: 0x0013B8C4 File Offset: 0x00139AC4
+	// Token: 0x0600379A RID: 14234 RVA: 0x00144190 File Offset: 0x00142390
 	public int[] GetAllBaseId()
 	{
 		int[] array = (this.CountMap.Count == 2) ? new int[2] : new int[3];
@@ -95,12 +95,12 @@ public class DrinksSoftDrinkData
 		return array;
 	}
 
-	// Token: 0x04002D52 RID: 11602
+	// Token: 0x04002DEB RID: 11755
 	protected Dictionary<int, int> CountMap = new Dictionary<int, int>();
 
-	// Token: 0x04002D53 RID: 11603
+	// Token: 0x04002DEC RID: 11756
 	protected Dictionary<int, int[]> FlavorRange = new Dictionary<int, int[]>();
 
-	// Token: 0x04002D54 RID: 11604
+	// Token: 0x04002DED RID: 11757
 	private readonly int _id;
 }

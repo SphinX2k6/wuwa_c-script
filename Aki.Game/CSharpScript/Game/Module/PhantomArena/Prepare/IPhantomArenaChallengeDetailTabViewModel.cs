@@ -4,106 +4,106 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x0200514E RID: 20814
+	// Token: 0x0200411E RID: 16670
 	[NullableContext(1)]
 	public interface IPhantomArenaChallengeDetailTabViewModel : IPhantomArenaTabViewModelBase
 	{
-		// Token: 0x170080E4 RID: 32996
-		// (get) Token: 0x0603533C RID: 217916
-		// (set) Token: 0x0603533D RID: 217917
+		// Token: 0x170054A4 RID: 21668
+		// (get) Token: 0x0602A238 RID: 172600
+		// (set) Token: 0x0602A239 RID: 172601
 		int NpcId { get; set; }
 
-		// Token: 0x170080E5 RID: 32997
-		// (get) Token: 0x0603533E RID: 217918
-		// (set) Token: 0x0603533F RID: 217919
+		// Token: 0x170054A5 RID: 21669
+		// (get) Token: 0x0602A23A RID: 172602
+		// (set) Token: 0x0602A23B RID: 172603
 		int NpcDeckConfigId { get; set; }
 
-		// Token: 0x170080E6 RID: 32998
-		// (get) Token: 0x06035340 RID: 217920
-		// (set) Token: 0x06035341 RID: 217921
+		// Token: 0x170054A6 RID: 21670
+		// (get) Token: 0x0602A23C RID: 172604
+		// (set) Token: 0x0602A23D RID: 172605
 		int SelectedCardRoleId { get; set; }
 
-		// Token: 0x170080E7 RID: 32999
-		// (get) Token: 0x06035342 RID: 217922
-		// (set) Token: 0x06035343 RID: 217923
+		// Token: 0x170054A7 RID: 21671
+		// (get) Token: 0x0602A23E RID: 172606
+		// (set) Token: 0x0602A23F RID: 172607
 		int TextureCardRoleId { get; set; }
 
-		// Token: 0x170080E8 RID: 33000
-		// (get) Token: 0x06035344 RID: 217924
-		// (set) Token: 0x06035345 RID: 217925
+		// Token: 0x170054A8 RID: 21672
+		// (get) Token: 0x0602A240 RID: 172608
+		// (set) Token: 0x0602A241 RID: 172609
 		bool RoleTextureActive { get; set; }
 
-		// Token: 0x170080E9 RID: 33001
-		// (get) Token: 0x06035346 RID: 217926
-		// (set) Token: 0x06035347 RID: 217927
+		// Token: 0x170054A9 RID: 21673
+		// (get) Token: 0x0602A242 RID: 172610
+		// (set) Token: 0x0602A243 RID: 172611
 		bool RoleSelectedConfirmFlag { get; set; }
 
-		// Token: 0x170080EA RID: 33002
-		// (get) Token: 0x06035348 RID: 217928
-		// (set) Token: 0x06035349 RID: 217929
+		// Token: 0x170054AA RID: 21674
+		// (get) Token: 0x0602A244 RID: 172612
+		// (set) Token: 0x0602A245 RID: 172613
 		bool DeckSelectedConfirmFlag { get; set; }
 
-		// Token: 0x170080EB RID: 33003
-		// (get) Token: 0x0603534A RID: 217930
-		// (set) Token: 0x0603534B RID: 217931
+		// Token: 0x170054AB RID: 21675
+		// (get) Token: 0x0602A246 RID: 172614
+		// (set) Token: 0x0602A247 RID: 172615
 		int UsedDeckIndex { get; set; }
 
-		// Token: 0x170080EC RID: 33004
-		// (get) Token: 0x0603534C RID: 217932
-		// (set) Token: 0x0603534D RID: 217933
+		// Token: 0x170054AC RID: 21676
+		// (get) Token: 0x0602A248 RID: 172616
+		// (set) Token: 0x0602A249 RID: 172617
 		int SelectedDeckIndex { get; set; }
 
-		// Token: 0x170080ED RID: 33005
-		// (get) Token: 0x0603534E RID: 217934
-		// (set) Token: 0x0603534F RID: 217935
+		// Token: 0x170054AD RID: 21677
+		// (get) Token: 0x0602A24A RID: 172618
+		// (set) Token: 0x0602A24B RID: 172619
 		[Nullable(2)]
 		DeckInfo RecommendDeck { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x06035350 RID: 217936
+		// Token: 0x0602A24C RID: 172620
 		[NullableContext(2)]
 		DeckInfo GetUsedDeck();
 
-		// Token: 0x06035351 RID: 217937
+		// Token: 0x0602A24D RID: 172621
 		int GetChallengeId();
 
-		// Token: 0x170080EE RID: 33006
-		// (get) Token: 0x06035352 RID: 217938
-		// (set) Token: 0x06035353 RID: 217939
+		// Token: 0x170054AE RID: 21678
+		// (get) Token: 0x0602A24E RID: 172622
+		// (set) Token: 0x0602A24F RID: 172623
 		Action<int, bool> ChangeRoleTexture { get; set; }
 
-		// Token: 0x170080EF RID: 33007
-		// (get) Token: 0x06035354 RID: 217940
-		// (set) Token: 0x06035355 RID: 217941
+		// Token: 0x170054AF RID: 21679
+		// (get) Token: 0x0602A250 RID: 172624
+		// (set) Token: 0x0602A251 RID: 172625
 		Action<bool> ShowRoleTexture { get; set; }
 
-		// Token: 0x170080F0 RID: 33008
-		// (get) Token: 0x06035356 RID: 217942
-		// (set) Token: 0x06035357 RID: 217943
+		// Token: 0x170054B0 RID: 21680
+		// (get) Token: 0x0602A252 RID: 172626
+		// (set) Token: 0x0602A253 RID: 172627
 		Action<bool> HideRoleTexture { get; set; }
 
-		// Token: 0x170080F1 RID: 33009
-		// (get) Token: 0x06035358 RID: 217944
-		// (set) Token: 0x06035359 RID: 217945
+		// Token: 0x170054B1 RID: 21681
+		// (get) Token: 0x0602A254 RID: 172628
+		// (set) Token: 0x0602A255 RID: 172629
 		Action RefreshRoleTexture { get; set; }
 
-		// Token: 0x170080F2 RID: 33010
-		// (get) Token: 0x0603535A RID: 217946
-		// (set) Token: 0x0603535B RID: 217947
+		// Token: 0x170054B2 RID: 21682
+		// (get) Token: 0x0602A256 RID: 172630
+		// (set) Token: 0x0602A257 RID: 172631
 		Action<string> SetViewTitle { get; set; }
 
-		// Token: 0x170080F3 RID: 33011
-		// (get) Token: 0x0603535C RID: 217948
-		// (set) Token: 0x0603535D RID: 217949
+		// Token: 0x170054B3 RID: 21683
+		// (get) Token: 0x0602A258 RID: 172632
+		// (set) Token: 0x0602A259 RID: 172633
 		Action<string> SetViewIcon { get; set; }
 
-		// Token: 0x170080F4 RID: 33012
-		// (get) Token: 0x0603535E RID: 217950
-		// (set) Token: 0x0603535F RID: 217951
+		// Token: 0x170054B4 RID: 21684
+		// (get) Token: 0x0602A25A RID: 172634
+		// (set) Token: 0x0602A25B RID: 172635
 		Action<int> SetViewHelpId { get; set; }
 
-		// Token: 0x170080F5 RID: 33013
-		// (get) Token: 0x06035360 RID: 217952
-		// (set) Token: 0x06035361 RID: 217953
+		// Token: 0x170054B5 RID: 21685
+		// (get) Token: 0x0602A25C RID: 172636
+		// (set) Token: 0x0602A25D RID: 172637
 		Action<bool> SetViewHelpBtnActive { get; set; }
 	}
 }

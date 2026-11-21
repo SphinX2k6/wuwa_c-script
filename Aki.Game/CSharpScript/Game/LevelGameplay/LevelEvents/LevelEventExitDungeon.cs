@@ -5,23 +5,23 @@ using CSharpScript.Game.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B26 RID: 27430
+	// Token: 0x02005C9E RID: 23710
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventExitDungeon : LevelEventBase
 	{
-		// Token: 0x060440F9 RID: 278777 RVA: 0x010BC0B7 File Offset: 0x010BA2B7
+		// Token: 0x0603A24B RID: 238155 RVA: 0x01065943 File Offset: 0x01063B43
 		public LevelEventExitDungeon(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440FA RID: 278778 RVA: 0x010BC0C0 File Offset: 0x010BA2C0
+		// Token: 0x0603A24C RID: 238156 RVA: 0x0106594C File Offset: 0x01063B4C
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440FB RID: 278779 RVA: 0x010BC0CC File Offset: 0x010BA2CC
+		// Token: 0x0603A24D RID: 238157 RVA: 0x01065958 File Offset: 0x01063B58
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			SundryModel instance = SundryModel.Instance;

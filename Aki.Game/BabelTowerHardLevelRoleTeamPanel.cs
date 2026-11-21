@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001163 RID: 4451
+// Token: 0x02000617 RID: 1559
 [NullableContext(2)]
 [Nullable(0)]
 public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 {
-	// Token: 0x06007578 RID: 30072 RVA: 0x0018410C File Offset: 0x0018230C
+	// Token: 0x0600490F RID: 18703 RVA: 0x0018CC68 File Offset: 0x0018AE68
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -45,7 +44,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007579 RID: 30073 RVA: 0x00184238 File Offset: 0x00182438
+	// Token: 0x06004910 RID: 18704 RVA: 0x0018CD94 File Offset: 0x0018AF94
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerHardLevelRoleTeamPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -56,7 +55,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600757A RID: 30074 RVA: 0x0018427C File Offset: 0x0018247C
+	// Token: 0x06004911 RID: 18705 RVA: 0x0018CDD8 File Offset: 0x0018AFD8
 	protected override void OnStart()
 	{
 		this.TabComponent = new GenericLayout<BabelTowerTeamTabItem, string>(base.GetHorizontalLayout(0), delegate()
@@ -75,7 +74,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600757B RID: 30075 RVA: 0x001842DD File Offset: 0x001824DD
+	// Token: 0x06004912 RID: 18706 RVA: 0x0018CE39 File Offset: 0x0018B039
 	private void OnMaskBtnClick()
 	{
 		base.SetUiActive(false);
@@ -87,14 +86,14 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		onPanelClose();
 	}
 
-	// Token: 0x0600757C RID: 30076 RVA: 0x001842F6 File Offset: 0x001824F6
+	// Token: 0x06004913 RID: 18707 RVA: 0x0018CE52 File Offset: 0x0018B052
 	private void OnTabClick(EBabelTowerTeamTabType index)
 	{
 		this.CurSelectTabIndex = index;
 		this.RefreshCurrentTab();
 	}
 
-	// Token: 0x0600757D RID: 30077 RVA: 0x00184308 File Offset: 0x00182508
+	// Token: 0x06004914 RID: 18708 RVA: 0x0018CE64 File Offset: 0x0018B064
 	private void RefreshCurrentTab()
 	{
 		if (this.LevelInfo == null)
@@ -145,11 +144,15 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		onSelectModeChange(curSelectTabIndex);
 	}
 
-	// Token: 0x0600757E RID: 30078 RVA: 0x001843AC File Offset: 0x001825AC
+	// Token: 0x06004915 RID: 18709 RVA: 0x0018CF08 File Offset: 0x0018B108
 	[NullableContext(1)]
 	private List<RoleDataBase> GetRoleListWithTrial()
 	{
-		List<RoleDataBase> list = new List<RoleDataBase>(RoleModel.Instance.GetRoleList().Cast<RoleDataBase>());
+		List<RoleDataBase> list = new List<RoleDataBase>();
+		foreach (RoleInstance item in RoleModel.Instance.GetRoleList())
+		{
+			list.Add(item);
+		}
 		if (this.LevelInfo == null)
 		{
 			return list;
@@ -176,20 +179,20 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x0600757F RID: 30079 RVA: 0x00184486 File Offset: 0x00182686
+	// Token: 0x06004916 RID: 18710 RVA: 0x0018D001 File Offset: 0x0018B201
 	[NullableContext(1)]
 	public void SetLevelInfo(IBabelTowerLevelInfo levelInfo)
 	{
 		this.LevelInfo = levelInfo;
 	}
 
-	// Token: 0x06007580 RID: 30080 RVA: 0x0018448F File Offset: 0x0018268F
+	// Token: 0x06004917 RID: 18711 RVA: 0x0018D00A File Offset: 0x0018B20A
 	public void Refresh()
 	{
 		this.RefreshCurrentTab();
 	}
 
-	// Token: 0x06007581 RID: 30081 RVA: 0x00184498 File Offset: 0x00182698
+	// Token: 0x06004918 RID: 18712 RVA: 0x0018D014 File Offset: 0x0018B214
 	private void SyncLevelInfoToSelectModel()
 	{
 		if (this.LevelInfo == null)
@@ -214,7 +217,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007582 RID: 30082 RVA: 0x00184538 File Offset: 0x00182738
+	// Token: 0x06004919 RID: 18713 RVA: 0x0018D0B4 File Offset: 0x0018B2B4
 	private void SyncSelectModelToLevelInfo()
 	{
 		if (this.LevelInfo == null)
@@ -224,7 +227,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		this.LevelInfo.RoleList = new List<int>(RoleSelectModel.Instance.SelectedRoleSet);
 	}
 
-	// Token: 0x06007583 RID: 30083 RVA: 0x00184560 File Offset: 0x00182760
+	// Token: 0x0600491A RID: 18714 RVA: 0x0018D0DC File Offset: 0x0018B2DC
 	[NullableContext(1)]
 	private void OnRoleSelect(RoleDataBase roleData, bool isSelected)
 	{
@@ -264,7 +267,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		onRefreshCallBack();
 	}
 
-	// Token: 0x06007584 RID: 30084 RVA: 0x001845D8 File Offset: 0x001827D8
+	// Token: 0x0600491B RID: 18715 RVA: 0x0018D154 File Offset: 0x0018B354
 	[NullableContext(1)]
 	private void OnTeamSelect(FormationData teamData)
 	{
@@ -303,7 +306,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		onRefreshCallBack();
 	}
 
-	// Token: 0x06007585 RID: 30085 RVA: 0x001846F0 File Offset: 0x001828F0
+	// Token: 0x0600491C RID: 18716 RVA: 0x0018D26C File Offset: 0x0018B46C
 	public void RefreshPanel()
 	{
 		int selectedGridIndex = this.TabComponent.GetSelectedGridIndex();
@@ -339,7 +342,7 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007586 RID: 30086 RVA: 0x0018473F File Offset: 0x0018293F
+	// Token: 0x0600491D RID: 18717 RVA: 0x0018D2BB File Offset: 0x0018B4BB
 	public void RefreshRoleSkillBranch(int roleId)
 	{
 		BabelTowerRoleSelectPanel roleSelectPanel = this.RoleSelectPanel;
@@ -350,16 +353,16 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 		roleSelectPanel.RefreshRole(roleId);
 	}
 
-	// Token: 0x040035EF RID: 13807
+	// Token: 0x04003688 RID: 13960
 	public Action OnRefreshCallBack;
 
-	// Token: 0x040035F0 RID: 13808
+	// Token: 0x04003689 RID: 13961
 	public Action<EBabelTowerTeamTabType> OnSelectModeChange;
 
-	// Token: 0x040035F1 RID: 13809
+	// Token: 0x0400368A RID: 13962
 	public Action OnPanelClose;
 
-	// Token: 0x040035F2 RID: 13810
+	// Token: 0x0400368B RID: 13963
 	[Nullable(new byte[]
 	{
 		2,
@@ -368,52 +371,52 @@ public class BabelTowerHardLevelRoleTeamPanel : UiPanelBase
 	})]
 	private GenericLayout<BabelTowerTeamTabItem, string> TabComponent;
 
-	// Token: 0x040035F3 RID: 13811
+	// Token: 0x0400368C RID: 13964
 	private BabelTowerRoleSelectPanel RoleSelectPanel;
 
-	// Token: 0x040035F4 RID: 13812
+	// Token: 0x0400368D RID: 13965
 	private BabelTowerTeamSelectPanel TeamSelectPanel;
 
-	// Token: 0x040035F5 RID: 13813
+	// Token: 0x0400368E RID: 13966
 	private EBabelTowerTeamTabType CurSelectTabIndex;
 
-	// Token: 0x040035F6 RID: 13814
+	// Token: 0x0400368F RID: 13967
 	private IBabelTowerLevelInfo LevelInfo;
 
-	// Token: 0x02007733 RID: 30515
+	// Token: 0x020068C1 RID: 26817
 	[NullableContext(0)]
 	private class EComp
 	{
-		// Token: 0x0402752C RID: 161068
+		// Token: 0x0402286A RID: 141418
 		public const int TabLayout = 0;
 
-		// Token: 0x0402752D RID: 161069
+		// Token: 0x0402286B RID: 141419
 		public const int TabItem = 1;
 
-		// Token: 0x0402752E RID: 161070
+		// Token: 0x0402286C RID: 141420
 		public const int RoleSelect = 2;
 
-		// Token: 0x0402752F RID: 161071
+		// Token: 0x0402286D RID: 141421
 		public const int TeamSelect = 3;
 
-		// Token: 0x04027530 RID: 161072
+		// Token: 0x0402286E RID: 141422
 		public const int MaskBtn = 5;
 
-		// Token: 0x04027531 RID: 161073
+		// Token: 0x0402286F RID: 141423
 		public const int BlurTex = 6;
 	}
 
-	// Token: 0x02007734 RID: 30516
+	// Token: 0x020068C2 RID: 26818
 	[NullableContext(0)]
 	private class ETabItem
 	{
-		// Token: 0x04027532 RID: 161074
+		// Token: 0x04022870 RID: 141424
 		public const int Toggle = 0;
 
-		// Token: 0x04027533 RID: 161075
+		// Token: 0x04022871 RID: 141425
 		public const int Name = 1;
 
-		// Token: 0x04027534 RID: 161076
+		// Token: 0x04022872 RID: 141426
 		public const int RedDot = 2;
 	}
 }

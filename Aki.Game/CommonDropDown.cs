@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200181A RID: 6170
+// Token: 0x02000CD3 RID: 3283
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 {
-	// Token: 0x0600B4F3 RID: 46323 RVA: 0x0028D8E0 File Offset: 0x0028BAE0
+	// Token: 0x060088DE RID: 35038 RVA: 0x00298000 File Offset: 0x00296200
 	public CommonDropDown(UUIItem sourceItem, Func<UUIItem, T, DropDownItemBase<TData>> createDropDownItem, Func<UUIItem, TitleItemBase<TData>> createTitleItem)
 	{
 		this.SourceItem = sourceItem;
@@ -23,7 +23,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.CreateTitleItem = createTitleItem;
 	}
 
-	// Token: 0x0600B4F4 RID: 46324 RVA: 0x0028D938 File Offset: 0x0028BB38
+	// Token: 0x060088DF RID: 35039 RVA: 0x00298058 File Offset: 0x00296258
 	public UniTask Init()
 	{
 		CommonDropDown<TData, T>.<Init>d__22 <Init>d__;
@@ -34,7 +34,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B4F5 RID: 46325 RVA: 0x0028D97C File Offset: 0x0028BB7C
+	// Token: 0x060088E0 RID: 35040 RVA: 0x0029809C File Offset: 0x0029629C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -61,7 +61,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B4F6 RID: 46326 RVA: 0x0028DA88 File Offset: 0x0028BC88
+	// Token: 0x060088E1 RID: 35041 RVA: 0x002981A8 File Offset: 0x002963A8
 	private void ButtonClick()
 	{
 		UUIItem item = base.GetItem(1);
@@ -82,7 +82,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnDropDownListVisibleChanged, true);
 	}
 
-	// Token: 0x0600B4F7 RID: 46327 RVA: 0x0028DAF4 File Offset: 0x0028BCF4
+	// Token: 0x060088E2 RID: 35042 RVA: 0x00298214 File Offset: 0x00296414
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayoutNew<DropDownItemBase<TData>>(base.GetLayoutBase(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<DropDownItemBase<TData>>(this.InitItem), base.GetItem(3));
@@ -91,7 +91,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.TitleItem = this.CreateTitleItem(base.GetItem(4));
 	}
 
-	// Token: 0x0600B4F8 RID: 46328 RVA: 0x0028DB64 File Offset: 0x0028BD64
+	// Token: 0x060088E3 RID: 35043 RVA: 0x00298284 File Offset: 0x00296484
 	private LayoutItem<DropDownItemBase<TData>> InitItem(object data, UUIItem uiItem, int index)
 	{
 		DropDownItemBase<TData> dropDownItemBase = this.CreateDropDownItem(uiItem, (T)((object)data));
@@ -106,7 +106,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B4F9 RID: 46329 RVA: 0x0028DBDC File Offset: 0x0028BDDC
+	// Token: 0x060088E4 RID: 35044 RVA: 0x002982FC File Offset: 0x002964FC
 	private void OnSelectChange(int selectedIndex)
 	{
 		int selectedIndex2 = this.SelectedIndex;
@@ -124,7 +124,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B4FA RID: 46330 RVA: 0x0028DC33 File Offset: 0x0028BE33
+	// Token: 0x060088E5 RID: 35045 RVA: 0x00298353 File Offset: 0x00296553
 	private bool CanExecuteFunction(int selectedIndex)
 	{
 		if (this.OnChangeCall != null)
@@ -134,13 +134,13 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		return this.SelectedIndex != selectedIndex;
 	}
 
-	// Token: 0x0600B4FB RID: 46331 RVA: 0x0028DC5C File Offset: 0x0028BE5C
+	// Token: 0x060088E6 RID: 35046 RVA: 0x0029837C File Offset: 0x0029657C
 	public void SetOnCanChangeCall(Func<int, int, bool> onChangeCall)
 	{
 		this.OnChangeCall = onChangeCall;
 	}
 
-	// Token: 0x0600B4FC RID: 46332 RVA: 0x0028DC65 File Offset: 0x0028BE65
+	// Token: 0x060088E7 RID: 35047 RVA: 0x00298385 File Offset: 0x00296585
 	protected override void OnBeforeDestroy()
 	{
 		this.Layout.UnBindLateUpdate();
@@ -152,7 +152,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.TitleItem.Destroy(null);
 	}
 
-	// Token: 0x0600B4FD RID: 46333 RVA: 0x0028DC90 File Offset: 0x0028BE90
+	// Token: 0x060088E8 RID: 35048 RVA: 0x002983B0 File Offset: 0x002965B0
 	public void InitScroll(IReadOnlyList<T> dataList, Func<T, TData> getDataFunction, int defaultIndex = 0, bool triggerSelectCall = true)
 	{
 		this.DataList = dataList;
@@ -166,14 +166,14 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.SetSelectedIndex(defaultIndex, triggerSelectCall);
 	}
 
-	// Token: 0x0600B4FE RID: 46334 RVA: 0x0028DD1C File Offset: 0x0028BF1C
+	// Token: 0x060088E9 RID: 35049 RVA: 0x0029843C File Offset: 0x0029663C
 	private void HideDropList()
 	{
 		base.GetItem(1).SetUIActive(false);
 		this.HideMaskButton();
 	}
 
-	// Token: 0x0600B4FF RID: 46335 RVA: 0x0028DD31 File Offset: 0x0028BF31
+	// Token: 0x060088EA RID: 35050 RVA: 0x00298451 File Offset: 0x00296651
 	private void ShowMaskButton()
 	{
 		this.OriginalWorldTrans = this.RootActor.RootComponent.D_K2_GetComponentToWorld();
@@ -181,7 +181,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.MaskButton.SetActive(true);
 	}
 
-	// Token: 0x0600B500 RID: 46336 RVA: 0x0028DD66 File Offset: 0x0028BF66
+	// Token: 0x060088EB RID: 35051 RVA: 0x00298486 File Offset: 0x00296686
 	private void HideMaskButton()
 	{
 		if (this.MaskButton == null)
@@ -192,7 +192,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.MaskButton.SetActive(false);
 	}
 
-	// Token: 0x0600B501 RID: 46337 RVA: 0x0028DD88 File Offset: 0x0028BF88
+	// Token: 0x060088EC RID: 35052 RVA: 0x002984A8 File Offset: 0x002966A8
 	private void CancelLastSelect(int lastSelect)
 	{
 		if (lastSelect != -1)
@@ -206,7 +206,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B502 RID: 46338 RVA: 0x0028DDAC File Offset: 0x0028BFAC
+	// Token: 0x060088ED RID: 35053 RVA: 0x002984CC File Offset: 0x002966CC
 	private void HandleSelect()
 	{
 		TData data = this.GetDataFunction(this.DataList[this.SelectedIndex]);
@@ -215,7 +215,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.HideDropList();
 	}
 
-	// Token: 0x0600B503 RID: 46339 RVA: 0x0028DDFB File Offset: 0x0028BFFB
+	// Token: 0x060088EE RID: 35054 RVA: 0x0029851B File Offset: 0x0029671B
 	private void SetListShowBottom()
 	{
 		UUIItem item = base.GetItem(1);
@@ -225,7 +225,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		item.SetAnchorOffsetY(0f);
 	}
 
-	// Token: 0x0600B504 RID: 46340 RVA: 0x0028DE35 File Offset: 0x0028C035
+	// Token: 0x060088EF RID: 35055 RVA: 0x00298555 File Offset: 0x00296755
 	private void SetListShowTop()
 	{
 		UUIItem item = base.GetItem(1);
@@ -235,7 +235,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		item.SetAnchorOffsetY(0f);
 	}
 
-	// Token: 0x0600B505 RID: 46341 RVA: 0x0028DE70 File Offset: 0x0028C070
+	// Token: 0x060088F0 RID: 35056 RVA: 0x00298590 File Offset: 0x00296790
 	private void CalculateListPosition(float deltaTime)
 	{
 		FTransformDouble originalWorldTrans = this.OriginalWorldTrans;
@@ -285,7 +285,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.CalculateDirty = false;
 	}
 
-	// Token: 0x0600B506 RID: 46342 RVA: 0x0028E020 File Offset: 0x0028C220
+	// Token: 0x060088F1 RID: 35057 RVA: 0x00298740 File Offset: 0x00296940
 	private void SetBottomAutoSize(float listBottom, float screenBottom)
 	{
 		UUIItem item = base.GetItem(1);
@@ -298,7 +298,7 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		item.SetHeight(height);
 	}
 
-	// Token: 0x0600B507 RID: 46343 RVA: 0x0028E06D File Offset: 0x0028C26D
+	// Token: 0x060088F2 RID: 35058 RVA: 0x0029878D File Offset: 0x0029698D
 	public void SetSelectedIndex(int index, bool triggerSelectCall = true)
 	{
 		this.DoNotSelectCall = !triggerSelectCall;
@@ -310,13 +310,13 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.DoNotSelectCall = false;
 	}
 
-	// Token: 0x0600B508 RID: 46344 RVA: 0x0028E09D File Offset: 0x0028C29D
+	// Token: 0x060088F3 RID: 35059 RVA: 0x002987BD File Offset: 0x002969BD
 	public int GetSelectedIndex()
 	{
 		return this.SelectedIndex;
 	}
 
-	// Token: 0x0600B509 RID: 46345 RVA: 0x0028E0A5 File Offset: 0x0028C2A5
+	// Token: 0x060088F4 RID: 35060 RVA: 0x002987C5 File Offset: 0x002969C5
 	public void SetShowType(ECommonDropDownShowType showType)
 	{
 		if (this.ShowType == showType)
@@ -327,31 +327,31 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.CalculateDirty = true;
 	}
 
-	// Token: 0x0600B50A RID: 46346 RVA: 0x0028E0BF File Offset: 0x0028C2BF
+	// Token: 0x060088F5 RID: 35061 RVA: 0x002987DF File Offset: 0x002969DF
 	public void SetOnSelectCall(Action<int, T> onSelectCall)
 	{
 		this.OnSelectCall = onSelectCall;
 	}
 
-	// Token: 0x0600B50B RID: 46347 RVA: 0x0028E0C8 File Offset: 0x0028C2C8
+	// Token: 0x060088F6 RID: 35062 RVA: 0x002987E8 File Offset: 0x002969E8
 	public void SetOnOpenCall(Action onOpenCall)
 	{
 		this.OnOpenCall = onOpenCall;
 	}
 
-	// Token: 0x0600B50C RID: 46348 RVA: 0x0028E0D1 File Offset: 0x0028C2D1
+	// Token: 0x060088F7 RID: 35063 RVA: 0x002987F1 File Offset: 0x002969F1
 	public DropDownItemBase<TData> GetDropDownItemObject(int index)
 	{
 		return this.Layout.GetLayoutItemByIndex(index);
 	}
 
-	// Token: 0x0600B50D RID: 46349 RVA: 0x0028E0DF File Offset: 0x0028C2DF
+	// Token: 0x060088F8 RID: 35064 RVA: 0x002987FF File Offset: 0x002969FF
 	public DropDownItemBase<TData>[] GetDropDownItemList()
 	{
 		return this.Layout.GetLayoutItemList().ToArray();
 	}
 
-	// Token: 0x0600B50E RID: 46350 RVA: 0x0028E0F4 File Offset: 0x0028C2F4
+	// Token: 0x060088F9 RID: 35065 RVA: 0x00298814 File Offset: 0x00296A14
 	public void RefreshAllDropDownItem()
 	{
 		TData data = this.GetDataFunction(this.DataList[this.SelectedIndex]);
@@ -360,82 +360,82 @@ public class CommonDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 		this.Layout.RebuildLayoutByDataNew<T>(this.DataList, null);
 	}
 
-	// Token: 0x040051A8 RID: 20904
+	// Token: 0x04005253 RID: 21075
 	private UUIItem SourceItem;
 
-	// Token: 0x040051A9 RID: 20905
+	// Token: 0x04005254 RID: 21076
 	private Func<UUIItem, T, DropDownItemBase<TData>> CreateDropDownItem;
 
-	// Token: 0x040051AA RID: 20906
+	// Token: 0x04005255 RID: 21077
 	private Func<UUIItem, TitleItemBase<TData>> CreateTitleItem;
 
-	// Token: 0x040051AB RID: 20907
+	// Token: 0x04005256 RID: 21078
 	private GenericLayoutNew<DropDownItemBase<TData>> Layout;
 
-	// Token: 0x040051AC RID: 20908
+	// Token: 0x04005257 RID: 21079
 	private const float BOTTOM_OFFSET = 75f;
 
-	// Token: 0x040051AD RID: 20909
+	// Token: 0x04005258 RID: 21080
 	private IReadOnlyList<T> DataList;
 
-	// Token: 0x040051AE RID: 20910
+	// Token: 0x04005259 RID: 21081
 	private int SelectedIndex = -1;
 
-	// Token: 0x040051AF RID: 20911
+	// Token: 0x0400525A RID: 21082
 	private bool DoNotSelectCall;
 
-	// Token: 0x040051B0 RID: 20912
+	// Token: 0x0400525B RID: 21083
 	[Nullable(2)]
 	private DynamicMaskButton MaskButton;
 
-	// Token: 0x040051B1 RID: 20913
+	// Token: 0x0400525C RID: 21084
 	private Action<int, T> OnSelectCall;
 
-	// Token: 0x040051B2 RID: 20914
+	// Token: 0x0400525D RID: 21085
 	[Nullable(2)]
 	private Func<int, int, bool> OnChangeCall;
 
-	// Token: 0x040051B3 RID: 20915
+	// Token: 0x0400525E RID: 21086
 	[Nullable(2)]
 	private Action OnOpenCall;
 
-	// Token: 0x040051B4 RID: 20916
+	// Token: 0x0400525F RID: 21087
 	private ECommonDropDownShowType ShowType = ECommonDropDownShowType.Auto;
 
-	// Token: 0x040051B5 RID: 20917
+	// Token: 0x04005260 RID: 21088
 	private bool CalculateDirty;
 
-	// Token: 0x040051B6 RID: 20918
+	// Token: 0x04005261 RID: 21089
 	private readonly Transform SelfToCanvasTrans = Transform.Create();
 
-	// Token: 0x040051B7 RID: 20919
+	// Token: 0x04005262 RID: 21090
 	private readonly Vector ButtonBottomToCanvasPos = Vector.Create();
 
-	// Token: 0x040051B8 RID: 20920
+	// Token: 0x04005263 RID: 21091
 	private readonly Vector ListBottomInCanvasSpace = Vector.Create();
 
-	// Token: 0x040051B9 RID: 20921
+	// Token: 0x04005264 RID: 21092
 	private Func<T, TData> GetDataFunction;
 
-	// Token: 0x040051BA RID: 20922
+	// Token: 0x04005265 RID: 21093
 	private TitleItemBase<TData> TitleItem;
 
-	// Token: 0x040051BB RID: 20923
+	// Token: 0x04005266 RID: 21094
 	private FTransformDouble OriginalWorldTrans;
 
-	// Token: 0x02007E08 RID: 32264
+	// Token: 0x02006F8E RID: 28558
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x040293F3 RID: 168947
+		// Token: 0x0402471E RID: 149278
 		Button,
-		// Token: 0x040293F4 RID: 168948
+		// Token: 0x0402471F RID: 149279
 		ListRoot,
-		// Token: 0x040293F5 RID: 168949
+		// Token: 0x04024720 RID: 149280
 		Layout,
-		// Token: 0x040293F6 RID: 168950
+		// Token: 0x04024721 RID: 149281
 		LayoutItem,
-		// Token: 0x040293F7 RID: 168951
+		// Token: 0x04024722 RID: 149282
 		Title
 	}
 }

@@ -5,21 +5,21 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005615 RID: 22037
+	// Token: 0x020045EB RID: 17899
 	public class MapRogueGridFog : UiPanelBase
 	{
-		// Token: 0x0603812E RID: 229678 RVA: 0x00D48279 File Offset: 0x00D46479
+		// Token: 0x0602D02C RID: 184364 RVA: 0x00C95FC1 File Offset: 0x00C941C1
 		protected override void OnRegisterComponent()
 		{
 		}
 
-		// Token: 0x0603812F RID: 229679 RVA: 0x00D4827B File Offset: 0x00D4647B
+		// Token: 0x0602D02D RID: 184365 RVA: 0x00C95FC3 File Offset: 0x00C941C3
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06038130 RID: 229680 RVA: 0x00D48290 File Offset: 0x00D46490
+		// Token: 0x0602D02E RID: 184366 RVA: 0x00C95FD8 File Offset: 0x00C941D8
 		public void SetVision(bool bHasVision, bool bAnim)
 		{
 			if (this.HasVision == bHasVision)
@@ -46,11 +46,11 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.SetActive(true);
 		}
 
-		// Token: 0x0401D7B4 RID: 120756
+		// Token: 0x0401823F RID: 98879
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D7B5 RID: 120757
+		// Token: 0x04018240 RID: 98880
 		private bool HasVision;
 	}
 }

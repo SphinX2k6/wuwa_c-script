@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C0F RID: 23567
+	// Token: 0x02004BEF RID: 19439
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingLevelDescView : UiViewBase
 	{
-		// Token: 0x0603B8D5 RID: 243925 RVA: 0x00E32CE4 File Offset: 0x00E30EE4
+		// Token: 0x06030820 RID: 198688 RVA: 0x00D83024 File Offset: 0x00D81224
 		public BossPilingLevelDescView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B8D6 RID: 243926 RVA: 0x00E32D00 File Offset: 0x00E30F00
+		// Token: 0x06030821 RID: 198689 RVA: 0x00D83040 File Offset: 0x00D81240
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B8D7 RID: 243927 RVA: 0x00E32E50 File Offset: 0x00E31050
+		// Token: 0x06030822 RID: 198690 RVA: 0x00D83190 File Offset: 0x00D81390
 		protected override void OnStart()
 		{
 			this.LevelSequence = new LevelSequencePlayer(base.GetRootItem());
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0603B8D8 RID: 243928 RVA: 0x00E32F28 File Offset: 0x00E31128
+		// Token: 0x06030823 RID: 198691 RVA: 0x00D83268 File Offset: 0x00D81468
 		protected void RefreshPanel()
 		{
 			this.LevelSequence.PlayOrReplaySequenceByName("Switch", false, null);
@@ -104,7 +103,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.RefreshLayout();
 		}
 
-		// Token: 0x0603B8D9 RID: 243929 RVA: 0x00E32FD4 File Offset: 0x00E311D4
+		// Token: 0x06030824 RID: 198692 RVA: 0x00D83314 File Offset: 0x00D81514
 		protected void RefreshLayout()
 		{
 			BossPilingLevelDescInfo bossPilingLevelDescInfo = this.IsFirst ? this.LevelInfo[0] : this.LevelInfo[1];
@@ -113,68 +112,68 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			foreach (int monsterId in config.Value.MonsterPreviewIter())
 			{
 				MonsterInfo? monsterInfoConfig = MonsterInfoConfig.Instance.GetMonsterInfoConfig(monsterId);
-				ShipTowerMonsterInfoItemData item = new ShipTowerMonsterInfoItemData
-				{
-					Title = (monsterInfoConfig.Value.Name ?? ""),
-					Level = config.Value.EntityLevel,
-					MonsterIcon = monsterInfoConfig.Value.Icon,
-					ElementList = (((monsterInfoConfig != null) ? monsterInfoConfig.GetValueOrDefault().ElementIdArray().ToList<int>() : null) ?? new List<int>())
-				};
+				ShipTowerMonsterInfoItemData shipTowerMonsterInfoItemData = new ShipTowerMonsterInfoItemData();
+				shipTowerMonsterInfoItemData.Title = (monsterInfoConfig.Value.Name ?? "");
+				shipTowerMonsterInfoItemData.Level = config.Value.EntityLevel;
+				shipTowerMonsterInfoItemData.MonsterIcon = monsterInfoConfig.Value.Icon;
+				int[] array = (monsterInfoConfig != null) ? monsterInfoConfig.GetValueOrDefault().ElementIdArray() : null;
+				shipTowerMonsterInfoItemData.ElementList = ((array != null) ? new List<int>(array) : new List<int>());
+				ShipTowerMonsterInfoItemData item = shipTowerMonsterInfoItemData;
 				list.Add(item);
 			}
 			this.Layout.RefreshByData(list, null, true);
 		}
 
-		// Token: 0x0603B8DA RID: 243930 RVA: 0x00E3310C File Offset: 0x00E3130C
+		// Token: 0x06030825 RID: 198693 RVA: 0x00D83454 File Offset: 0x00D81654
 		private void OnClickedFirst(EToggleState state)
 		{
 			this.IsFirst = true;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0603B8DB RID: 243931 RVA: 0x00E3311B File Offset: 0x00E3131B
+		// Token: 0x06030826 RID: 198694 RVA: 0x00D83463 File Offset: 0x00D81663
 		private void OnClickedSecond(EToggleState state)
 		{
 			this.IsFirst = false;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0603B8DC RID: 243932 RVA: 0x00E3312A File Offset: 0x00E3132A
+		// Token: 0x06030827 RID: 198695 RVA: 0x00D83472 File Offset: 0x00D81672
 		private ShipTowerMonsterInfoItem CreateItem()
 		{
 			return new ShipTowerMonsterInfoItem();
 		}
 
-		// Token: 0x0401F024 RID: 127012
+		// Token: 0x04019AD5 RID: 105173
 		protected List<BossPilingLevelDescInfo> LevelInfo = new List<BossPilingLevelDescInfo>();
 
-		// Token: 0x0401F025 RID: 127013
+		// Token: 0x04019AD6 RID: 105174
 		protected bool IsFirst = true;
 
-		// Token: 0x0401F026 RID: 127014
+		// Token: 0x04019AD7 RID: 105175
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401F027 RID: 127015
+		// Token: 0x04019AD8 RID: 105176
 		protected GenericLayout<ShipTowerMonsterInfoItem, ShipTowerMonsterInfoItemData> Layout;
 
-		// Token: 0x0401F028 RID: 127016
+		// Token: 0x04019AD9 RID: 105177
 		protected LevelSequencePlayer LevelSequence;
 
-		// Token: 0x0200BDEE RID: 48622
+		// Token: 0x0200A7F6 RID: 42998
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x0403943C RID: 234556
+			// Token: 0x04033DFF RID: 212479
 			CaptionItem,
-			// Token: 0x0403943D RID: 234557
+			// Token: 0x04033E00 RID: 212480
 			Toggle1,
-			// Token: 0x0403943E RID: 234558
+			// Token: 0x04033E01 RID: 212481
 			Toggle2,
-			// Token: 0x0403943F RID: 234559
+			// Token: 0x04033E02 RID: 212482
 			MonsterDesc,
-			// Token: 0x04039440 RID: 234560
+			// Token: 0x04033E03 RID: 212483
 			LevelDesc,
-			// Token: 0x04039441 RID: 234561
+			// Token: 0x04033E04 RID: 212484
 			Layout
 		}
 	}

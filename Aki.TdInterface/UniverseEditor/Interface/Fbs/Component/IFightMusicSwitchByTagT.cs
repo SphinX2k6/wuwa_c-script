@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200524D RID: 21069
+	// Token: 0x020057B5 RID: 22453
 	public class IFightMusicSwitchByTagT
 	{
-		// Token: 0x17009A5A RID: 39514
-		// (get) Token: 0x06022463 RID: 140387 RVA: 0x004C0D0E File Offset: 0x004BEF0E
-		// (set) Token: 0x06022464 RID: 140388 RVA: 0x004C0D16 File Offset: 0x004BEF16
+		// Token: 0x1700A256 RID: 41558
+		// (get) Token: 0x060243F9 RID: 148473 RVA: 0x004FB7D2 File Offset: 0x004F99D2
+		// (set) Token: 0x060243FA RID: 148474 RVA: 0x004FB7DA File Offset: 0x004F99DA
 		public string FightMusic { get; set; }
 
-		// Token: 0x17009A5B RID: 39515
-		// (get) Token: 0x06022465 RID: 140389 RVA: 0x004C0D1F File Offset: 0x004BEF1F
-		// (set) Token: 0x06022466 RID: 140390 RVA: 0x004C0D27 File Offset: 0x004BEF27
+		// Token: 0x1700A257 RID: 41559
+		// (get) Token: 0x060243FB RID: 148475 RVA: 0x004FB7E3 File Offset: 0x004F99E3
+		// (set) Token: 0x060243FC RID: 148476 RVA: 0x004FB7EB File Offset: 0x004F99EB
 		public string ActivateTag { get; set; }
 
-		// Token: 0x06022467 RID: 140391 RVA: 0x004C0D30 File Offset: 0x004BEF30
+		// Token: 0x060243FD RID: 148477 RVA: 0x004FB7F4 File Offset: 0x004F99F4
 		public IFightMusicSwitchByTagT()
 		{
 			this.FightMusic = null;

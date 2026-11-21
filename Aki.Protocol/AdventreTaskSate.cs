@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200154D RID: 5453
+	// Token: 0x020015C3 RID: 5571
 	public enum AdventreTaskSate
 	{
-		// Token: 0x0400A585 RID: 42373
+		// Token: 0x0400A9E3 RID: 43491
 		[OriginalName("UnFinish")]
 		UnFinish,
-		// Token: 0x0400A586 RID: 42374
+		// Token: 0x0400A9E4 RID: 43492
 		[OriginalName("Finish")]
 		Finish,
-		// Token: 0x0400A587 RID: 42375
+		// Token: 0x0400A9E5 RID: 43493
 		[OriginalName("Received")]
 		Received
 	}

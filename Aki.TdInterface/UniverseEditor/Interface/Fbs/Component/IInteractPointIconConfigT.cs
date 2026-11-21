@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005468 RID: 21608
+	// Token: 0x020059EE RID: 23022
 	public class IInteractPointIconConfigT
 	{
-		// Token: 0x17009F15 RID: 40725
-		// (get) Token: 0x060238C5 RID: 145605 RVA: 0x004EABBB File Offset: 0x004E8DBB
-		// (set) Token: 0x060238C6 RID: 145606 RVA: 0x004EABC3 File Offset: 0x004E8DC3
+		// Token: 0x1700A74F RID: 42831
+		// (get) Token: 0x0602597D RID: 153981 RVA: 0x00527C2F File Offset: 0x00525E2F
+		// (set) Token: 0x0602597E RID: 153982 RVA: 0x00527C37 File Offset: 0x00525E37
 		public float MaxShowDistance { get; set; }
 
-		// Token: 0x17009F16 RID: 40726
-		// (get) Token: 0x060238C7 RID: 145607 RVA: 0x004EABCC File Offset: 0x004E8DCC
-		// (set) Token: 0x060238C8 RID: 145608 RVA: 0x004EABD4 File Offset: 0x004E8DD4
+		// Token: 0x1700A750 RID: 42832
+		// (get) Token: 0x0602597F RID: 153983 RVA: 0x00527C40 File Offset: 0x00525E40
+		// (set) Token: 0x06025980 RID: 153984 RVA: 0x00527C48 File Offset: 0x00525E48
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x060238C9 RID: 145609 RVA: 0x004EABDD File Offset: 0x004E8DDD
+		// Token: 0x06025981 RID: 153985 RVA: 0x00527C51 File Offset: 0x00525E51
 		public IInteractPointIconConfigT()
 		{
 			this.MaxShowDistance = 0f;

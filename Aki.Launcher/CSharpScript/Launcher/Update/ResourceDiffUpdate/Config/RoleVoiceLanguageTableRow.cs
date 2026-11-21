@@ -4,21 +4,21 @@ using CSharpScript.Launcher.Define.SimpleTabel;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000C1 RID: 193
+	// Token: 0x020000C4 RID: 196
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleVoiceLanguageTableRow : TableBaseRow
 	{
-		// Token: 0x0600064E RID: 1614 RVA: 0x000371F7 File Offset: 0x000353F7
+		// Token: 0x06000669 RID: 1641 RVA: 0x00038CF7 File Offset: 0x00036EF7
 		public override object GetId()
 		{
 			return this.LanguageId;
 		}
 
-		// Token: 0x040003D9 RID: 985
+		// Token: 0x04000408 RID: 1032
 		public int LanguageId;
 
-		// Token: 0x040003DA RID: 986
+		// Token: 0x04000409 RID: 1033
 		public string Text = "";
 	}
 }

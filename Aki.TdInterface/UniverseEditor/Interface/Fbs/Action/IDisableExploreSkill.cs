@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065E2 RID: 26082
+	// Token: 0x02006C4A RID: 27722
 	public struct IDisableExploreSkill : IFlatbufferObject
 	{
-		// Token: 0x1700C1A2 RID: 49570
-		// (get) Token: 0x0602D3EE RID: 185326 RVA: 0x006336F8 File Offset: 0x006318F8
+		// Token: 0x1700CB31 RID: 52017
+		// (get) Token: 0x0602FB72 RID: 195442 RVA: 0x0067F8BC File Offset: 0x0067DABC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D3EF RID: 185327 RVA: 0x00633705 File Offset: 0x00631905
+		// Token: 0x0602FB73 RID: 195443 RVA: 0x0067F8C9 File Offset: 0x0067DAC9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D3F0 RID: 185328 RVA: 0x0063370C File Offset: 0x0063190C
+		// Token: 0x0602FB74 RID: 195444 RVA: 0x0067F8D0 File Offset: 0x0067DAD0
 		public static IDisableExploreSkill GetRootAsIDisableExploreSkill(ByteBuffer _bb)
 		{
 			return IDisableExploreSkill.GetRootAsIDisableExploreSkill(_bb, default(IDisableExploreSkill));
 		}
 
-		// Token: 0x0602D3F1 RID: 185329 RVA: 0x00633728 File Offset: 0x00631928
+		// Token: 0x0602FB75 RID: 195445 RVA: 0x0067F8EC File Offset: 0x0067DAEC
 		public static IDisableExploreSkill GetRootAsIDisableExploreSkill(ByteBuffer _bb, IDisableExploreSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D3F2 RID: 185330 RVA: 0x00633745 File Offset: 0x00631945
+		// Token: 0x0602FB76 RID: 195446 RVA: 0x0067F909 File Offset: 0x0067DB09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D3F3 RID: 185331 RVA: 0x00633754 File Offset: 0x00631954
+		// Token: 0x0602FB77 RID: 195447 RVA: 0x0067F918 File Offset: 0x0067DB18
 		public IDisableExploreSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C1A3 RID: 49571
-		// (get) Token: 0x0602D3F4 RID: 185332 RVA: 0x00633764 File Offset: 0x00631964
+		// Token: 0x1700CB32 RID: 52018
+		// (get) Token: 0x0602FB78 RID: 195448 RVA: 0x0067F928 File Offset: 0x0067DB28
 		public bool PlaceTemporaryTeleport
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1A4 RID: 49572
-		// (get) Token: 0x0602D3F5 RID: 185333 RVA: 0x006337A4 File Offset: 0x006319A4
+		// Token: 0x1700CB33 RID: 52019
+		// (get) Token: 0x0602FB79 RID: 195449 RVA: 0x0067F968 File Offset: 0x0067DB68
 		public bool IsComplementary
 		{
 			get
@@ -70,7 +70,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D3F6 RID: 185334 RVA: 0x006337E4 File Offset: 0x006319E4
+		// Token: 0x0602FB7A RID: 195450 RVA: 0x0067F9A8 File Offset: 0x0067DBA8
 		public EExploreSkillType ExploreSkillList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -81,8 +81,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return (EExploreSkillType)this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700C1A5 RID: 49573
-		// (get) Token: 0x0602D3F7 RID: 185335 RVA: 0x00633824 File Offset: 0x00631A24
+		// Token: 0x1700CB34 RID: 52020
+		// (get) Token: 0x0602FB7B RID: 195451 RVA: 0x0067F9E8 File Offset: 0x0067DBE8
 		public int ExploreSkillListLength
 		{
 			get
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D3F8 RID: 185336 RVA: 0x0063384F File Offset: 0x00631A4F
+		// Token: 0x0602FB7C RID: 195452 RVA: 0x0067FA13 File Offset: 0x0067DC13
 		public Span<EExploreSkillType> GetExploreSkillListBytes()
 		{
 			return this.__p.__vector_as_span<EExploreSkillType>(8, 4);
 		}
 
-		// Token: 0x0602D3F9 RID: 185337 RVA: 0x00633860 File Offset: 0x00631A60
+		// Token: 0x0602FB7D RID: 195453 RVA: 0x0067FA24 File Offset: 0x0067DC24
 		public EExploreSkillType[] GetExploreSkillListArray()
 		{
 			int num = this.__p.__offset(8);
@@ -120,8 +120,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return array;
 		}
 
-		// Token: 0x1700C1A6 RID: 49574
-		// (get) Token: 0x0602D3FA RID: 185338 RVA: 0x006338CC File Offset: 0x00631ACC
+		// Token: 0x1700CB35 RID: 52021
+		// (get) Token: 0x0602FB7E RID: 195454 RVA: 0x0067FA90 File Offset: 0x0067DC90
 		public byte NullMask
 		{
 			get
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D3FB RID: 185339 RVA: 0x00633909 File Offset: 0x00631B09
+		// Token: 0x0602FB7F RID: 195455 RVA: 0x0067FACD File Offset: 0x0067DCCD
 		public static Offset<IDisableExploreSkill> CreateIDisableExploreSkill(FlatBufferBuilder builder, bool PlaceTemporaryTeleport = false, bool IsComplementary = false, VectorOffset ExploreSkillListOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -146,31 +146,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableExploreSkill.EndIDisableExploreSkill(builder);
 		}
 
-		// Token: 0x0602D3FC RID: 185340 RVA: 0x00633935 File Offset: 0x00631B35
+		// Token: 0x0602FB80 RID: 195456 RVA: 0x0067FAF9 File Offset: 0x0067DCF9
 		public static void StartIDisableExploreSkill(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602D3FD RID: 185341 RVA: 0x0063393E File Offset: 0x00631B3E
+		// Token: 0x0602FB81 RID: 195457 RVA: 0x0067FB02 File Offset: 0x0067DD02
 		public static void AddPlaceTemporaryTeleport(FlatBufferBuilder builder, bool placeTemporaryTeleport)
 		{
 			builder.AddBool(0, placeTemporaryTeleport, false);
 		}
 
-		// Token: 0x0602D3FE RID: 185342 RVA: 0x00633949 File Offset: 0x00631B49
+		// Token: 0x0602FB82 RID: 195458 RVA: 0x0067FB0D File Offset: 0x0067DD0D
 		public static void AddIsComplementary(FlatBufferBuilder builder, bool isComplementary)
 		{
 			builder.AddBool(1, isComplementary, false);
 		}
 
-		// Token: 0x0602D3FF RID: 185343 RVA: 0x00633954 File Offset: 0x00631B54
+		// Token: 0x0602FB83 RID: 195459 RVA: 0x0067FB18 File Offset: 0x0067DD18
 		public static void AddExploreSkillList(FlatBufferBuilder builder, VectorOffset exploreSkillListOffset)
 		{
 			builder.AddOffset(2, exploreSkillListOffset.Value, 0);
 		}
 
-		// Token: 0x0602D400 RID: 185344 RVA: 0x00633964 File Offset: 0x00631B64
+		// Token: 0x0602FB84 RID: 195460 RVA: 0x0067FB28 File Offset: 0x0067DD28
 		public static VectorOffset CreateExploreSkillListVector(FlatBufferBuilder builder, EExploreSkillType[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602D401 RID: 185345 RVA: 0x0063399B File Offset: 0x00631B9B
+		// Token: 0x0602FB85 RID: 195461 RVA: 0x0067FB5F File Offset: 0x0067DD5F
 		public static VectorOffset CreateExploreSkillListVectorBlock(FlatBufferBuilder builder, EExploreSkillType[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602D402 RID: 185346 RVA: 0x006339B5 File Offset: 0x00631BB5
+		// Token: 0x0602FB86 RID: 195462 RVA: 0x0067FB79 File Offset: 0x0067DD79
 		public static VectorOffset CreateExploreSkillListVectorBlock(FlatBufferBuilder builder, ArraySegment<EExploreSkillType> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602D403 RID: 185347 RVA: 0x006339D3 File Offset: 0x00631BD3
+		// Token: 0x0602FB87 RID: 195463 RVA: 0x0067FB97 File Offset: 0x0067DD97
 		public static VectorOffset CreateExploreSkillListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -205,25 +205,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602D404 RID: 185348 RVA: 0x006339EC File Offset: 0x00631BEC
+		// Token: 0x0602FB88 RID: 195464 RVA: 0x0067FBB0 File Offset: 0x0067DDB0
 		public static void StartExploreSkillListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602D405 RID: 185349 RVA: 0x006339F7 File Offset: 0x00631BF7
+		// Token: 0x0602FB89 RID: 195465 RVA: 0x0067FBBB File Offset: 0x0067DDBB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602D406 RID: 185350 RVA: 0x00633A02 File Offset: 0x00631C02
+		// Token: 0x0602FB8A RID: 195466 RVA: 0x0067FBC6 File Offset: 0x0067DDC6
 		public static Offset<IDisableExploreSkill> EndIDisableExploreSkill(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableExploreSkill>(builder.EndTable());
 		}
 
-		// Token: 0x0602D407 RID: 185351 RVA: 0x00633A10 File Offset: 0x00631C10
+		// Token: 0x0602FB8B RID: 195467 RVA: 0x0067FBD4 File Offset: 0x0067DDD4
 		public IDisableExploreSkillT UnPack()
 		{
 			IDisableExploreSkillT disableExploreSkillT = new IDisableExploreSkillT();
@@ -231,7 +231,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return disableExploreSkillT;
 		}
 
-		// Token: 0x0602D408 RID: 185352 RVA: 0x00633A2C File Offset: 0x00631C2C
+		// Token: 0x0602FB8C RID: 195468 RVA: 0x0067FBF0 File Offset: 0x0067DDF0
 		public void UnPackTo(IDisableExploreSkillT _o)
 		{
 			_o.PlaceTemporaryTeleport = this.PlaceTemporaryTeleport;
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602D409 RID: 185353 RVA: 0x00633A8C File Offset: 0x00631C8C
+		// Token: 0x0602FB8D RID: 195469 RVA: 0x0067FC50 File Offset: 0x0067DE50
 		public static Offset<IDisableExploreSkill> Pack(FlatBufferBuilder builder, IDisableExploreSkillT _o)
 		{
 			if (_o == null)
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableExploreSkill.CreateIDisableExploreSkill(builder, _o.PlaceTemporaryTeleport, _o.IsComplementary, exploreSkillListOffset, _o.NullMask);
 		}
 
-		// Token: 0x04010C4F RID: 68687
+		// Token: 0x04011A61 RID: 72289
 		private Table __p;
 	}
 }

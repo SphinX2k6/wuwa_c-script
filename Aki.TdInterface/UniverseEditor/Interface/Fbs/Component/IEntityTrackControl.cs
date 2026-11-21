@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051BF RID: 20927
+	// Token: 0x02005724 RID: 22308
 	public struct IEntityTrackControl : IFlatbufferObject
 	{
-		// Token: 0x17009915 RID: 39189
-		// (get) Token: 0x06021E90 RID: 138896 RVA: 0x004B453E File Offset: 0x004B273E
+		// Token: 0x1700A104 RID: 41220
+		// (get) Token: 0x06023DE8 RID: 146920 RVA: 0x004EE5A6 File Offset: 0x004EC7A6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021E91 RID: 138897 RVA: 0x004B454B File Offset: 0x004B274B
+		// Token: 0x06023DE9 RID: 146921 RVA: 0x004EE5B3 File Offset: 0x004EC7B3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021E92 RID: 138898 RVA: 0x004B4554 File Offset: 0x004B2754
+		// Token: 0x06023DEA RID: 146922 RVA: 0x004EE5BC File Offset: 0x004EC7BC
 		public static IEntityTrackControl GetRootAsIEntityTrackControl(ByteBuffer _bb)
 		{
 			return IEntityTrackControl.GetRootAsIEntityTrackControl(_bb, default(IEntityTrackControl));
 		}
 
-		// Token: 0x06021E93 RID: 138899 RVA: 0x004B4570 File Offset: 0x004B2770
+		// Token: 0x06023DEB RID: 146923 RVA: 0x004EE5D8 File Offset: 0x004EC7D8
 		public static IEntityTrackControl GetRootAsIEntityTrackControl(ByteBuffer _bb, IEntityTrackControl obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021E94 RID: 138900 RVA: 0x004B458D File Offset: 0x004B278D
+		// Token: 0x06023DEC RID: 146924 RVA: 0x004EE5F5 File Offset: 0x004EC7F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021E95 RID: 138901 RVA: 0x004B459C File Offset: 0x004B279C
+		// Token: 0x06023DED RID: 146925 RVA: 0x004EE604 File Offset: 0x004EC804
 		public IEntityTrackControl __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009916 RID: 39190
-		// (get) Token: 0x06021E96 RID: 138902 RVA: 0x004B45AC File Offset: 0x004B27AC
+		// Token: 0x1700A105 RID: 41221
+		// (get) Token: 0x06023DEE RID: 146926 RVA: 0x004EE614 File Offset: 0x004EC814
 		public ETrackControlMode Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009917 RID: 39191
-		// (get) Token: 0x06021E97 RID: 138903 RVA: 0x004B45E8 File Offset: 0x004B27E8
+		// Token: 0x1700A106 RID: 41222
+		// (get) Token: 0x06023DEF RID: 146927 RVA: 0x004EE650 File Offset: 0x004EC850
 		public int EntityId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021E98 RID: 138904 RVA: 0x004B4624 File Offset: 0x004B2824
+		// Token: 0x06023DF0 RID: 146928 RVA: 0x004EE68C File Offset: 0x004EC88C
 		public IEntityTrackControlPoint? ControlPoints(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IEntityTrackControlPoint?(default(IEntityTrackControlPoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009918 RID: 39192
-		// (get) Token: 0x06021E99 RID: 138905 RVA: 0x004B4684 File Offset: 0x004B2884
+		// Token: 0x1700A107 RID: 41223
+		// (get) Token: 0x06023DF1 RID: 146929 RVA: 0x004EE6EC File Offset: 0x004EC8EC
 		public int ControlPointsLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021E9A RID: 138906 RVA: 0x004B46AF File Offset: 0x004B28AF
+		// Token: 0x06023DF2 RID: 146930 RVA: 0x004EE717 File Offset: 0x004EC917
 		public static Offset<IEntityTrackControl> CreateIEntityTrackControl(FlatBufferBuilder builder, ETrackControlMode Type = ETrackControlMode.Sequence, int EntityId = 0, VectorOffset ControlPointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityTrackControl.EndIEntityTrackControl(builder);
 		}
 
-		// Token: 0x06021E9B RID: 138907 RVA: 0x004B46D3 File Offset: 0x004B28D3
+		// Token: 0x06023DF3 RID: 146931 RVA: 0x004EE73B File Offset: 0x004EC93B
 		public static void StartIEntityTrackControl(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06021E9C RID: 138908 RVA: 0x004B46DC File Offset: 0x004B28DC
+		// Token: 0x06023DF4 RID: 146932 RVA: 0x004EE744 File Offset: 0x004EC944
 		public static void AddType(FlatBufferBuilder builder, ETrackControlMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021E9D RID: 138909 RVA: 0x004B46E7 File Offset: 0x004B28E7
+		// Token: 0x06023DF5 RID: 146933 RVA: 0x004EE74F File Offset: 0x004EC94F
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x06021E9E RID: 138910 RVA: 0x004B46F2 File Offset: 0x004B28F2
+		// Token: 0x06023DF6 RID: 146934 RVA: 0x004EE75A File Offset: 0x004EC95A
 		public static void AddControlPoints(FlatBufferBuilder builder, VectorOffset controlPointsOffset)
 		{
 			builder.AddOffset(2, controlPointsOffset.Value, 0);
 		}
 
-		// Token: 0x06021E9F RID: 138911 RVA: 0x004B4704 File Offset: 0x004B2904
+		// Token: 0x06023DF7 RID: 146935 RVA: 0x004EE76C File Offset: 0x004EC96C
 		public static VectorOffset CreateControlPointsVector(FlatBufferBuilder builder, Offset<IEntityTrackControlPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EA0 RID: 138912 RVA: 0x004B4744 File Offset: 0x004B2944
+		// Token: 0x06023DF8 RID: 146936 RVA: 0x004EE7AC File Offset: 0x004EC9AC
 		public static VectorOffset CreateControlPointsVectorBlock(FlatBufferBuilder builder, Offset<IEntityTrackControlPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EA1 RID: 138913 RVA: 0x004B475E File Offset: 0x004B295E
+		// Token: 0x06023DF9 RID: 146937 RVA: 0x004EE7C6 File Offset: 0x004EC9C6
 		public static VectorOffset CreateControlPointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IEntityTrackControlPoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EA2 RID: 138914 RVA: 0x004B477C File Offset: 0x004B297C
+		// Token: 0x06023DFA RID: 146938 RVA: 0x004EE7E4 File Offset: 0x004EC9E4
 		public static VectorOffset CreateControlPointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021EA3 RID: 138915 RVA: 0x004B4795 File Offset: 0x004B2995
+		// Token: 0x06023DFB RID: 146939 RVA: 0x004EE7FD File Offset: 0x004EC9FD
 		public static void StartControlPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06021EA4 RID: 138916 RVA: 0x004B47A0 File Offset: 0x004B29A0
+		// Token: 0x06023DFC RID: 146940 RVA: 0x004EE808 File Offset: 0x004ECA08
 		public static Offset<IEntityTrackControl> EndIEntityTrackControl(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityTrackControl>(builder.EndTable());
 		}
 
-		// Token: 0x06021EA5 RID: 138917 RVA: 0x004B47B0 File Offset: 0x004B29B0
+		// Token: 0x06023DFD RID: 146941 RVA: 0x004EE818 File Offset: 0x004ECA18
 		public IEntityTrackControlT UnPack()
 		{
 			IEntityTrackControlT entityTrackControlT = new IEntityTrackControlT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityTrackControlT;
 		}
 
-		// Token: 0x06021EA6 RID: 138918 RVA: 0x004B47CC File Offset: 0x004B29CC
+		// Token: 0x06023DFE RID: 146942 RVA: 0x004EE834 File Offset: 0x004ECA34
 		public void UnPackTo(IEntityTrackControlT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021EA7 RID: 138919 RVA: 0x004B4844 File Offset: 0x004B2A44
+		// Token: 0x06023DFF RID: 146943 RVA: 0x004EE8AC File Offset: 0x004ECAAC
 		public static Offset<IEntityTrackControl> Pack(FlatBufferBuilder builder, IEntityTrackControlT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityTrackControl.CreateIEntityTrackControl(builder, _o.Type, _o.EntityId, controlPointsOffset);
 		}
 
-		// Token: 0x0400E2B8 RID: 58040
+		// Token: 0x0400EEB6 RID: 61110
 		private Table __p;
 	}
 }

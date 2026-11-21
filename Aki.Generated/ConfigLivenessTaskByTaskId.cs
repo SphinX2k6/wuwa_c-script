@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004E3 RID: 1251
+	// Token: 0x020004F9 RID: 1273
 	public class ConfigLivenessTaskByTaskId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D5D RID: 7517 RVA: 0x000FF354 File Offset: 0x000FD554
+		// Token: 0x06001DE1 RID: 7649 RVA: 0x00105AA8 File Offset: 0x00103CA8
 		static ConfigLivenessTaskByTaskId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLivenessTaskByTaskId.CreateStaticDefaultValue), new Action(ConfigLivenessTaskByTaskId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D5E RID: 7518 RVA: 0x000FF374 File Offset: 0x000FD574
+		// Token: 0x06001DE2 RID: 7650 RVA: 0x00105AC8 File Offset: 0x00103CC8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLivenessTaskByTaskId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D5F RID: 7519 RVA: 0x000FF3F3 File Offset: 0x000FD5F3
+		// Token: 0x06001DE3 RID: 7651 RVA: 0x00105B47 File Offset: 0x00103D47
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLivenessTaskByTaskId.LogPair = null;
 			ConfigLivenessTaskByTaskId.HandleId = 0;
 		}
 
-		// Token: 0x06001D60 RID: 7520 RVA: 0x000FF401 File Offset: 0x000FD601
+		// Token: 0x06001DE4 RID: 7652 RVA: 0x00105B55 File Offset: 0x00103D55
 		public static void Init()
 		{
 			ConfigLivenessTaskByTaskId.HandleId = ConfigCommon.InitDataStatement(ConfigLivenessTaskByTaskId.HandleId, "db_daily_activity.db", "select BinData from `LivenessTask` where TaskId=?");
 		}
 
-		// Token: 0x06001D61 RID: 7521 RVA: 0x000FF41C File Offset: 0x000FD61C
+		// Token: 0x06001DE5 RID: 7653 RVA: 0x00105B70 File Offset: 0x00103D70
 		public static LivenessTask? GetConfig(int p0TaskId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLivenessTaskByTaskId.HandleId, ConfigLivenessTaskByTaskId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LivenessTask?(rootAsLivenessTask);
 		}
 
-		// Token: 0x04002219 RID: 8729
+		// Token: 0x040022B3 RID: 8883
 		private const string DB = "db_daily_activity.db";
 
-		// Token: 0x0400221A RID: 8730
+		// Token: 0x040022B4 RID: 8884
 		private const string FILE = "h.活跃度.xlsx";
 
-		// Token: 0x0400221B RID: 8731
+		// Token: 0x040022B5 RID: 8885
 		private const string TABLE = "LivenessTask";
 
-		// Token: 0x0400221C RID: 8732
+		// Token: 0x040022B6 RID: 8886
 		private const string COMMAND = "select BinData from `LivenessTask` where TaskId=?";
 
-		// Token: 0x0400221D RID: 8733
+		// Token: 0x040022B7 RID: 8887
 		private const string KEY_PREFIX = "LivenessTaskByTaskId";
 
-		// Token: 0x0400221E RID: 8734
+		// Token: 0x040022B8 RID: 8888
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400221F RID: 8735
+		// Token: 0x040022B9 RID: 8889
 		private static int HandleId;
 	}
 }

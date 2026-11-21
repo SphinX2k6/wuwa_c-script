@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200753F RID: 30015
+	// Token: 0x02007D35 RID: 32053
 	public class IVillageInfrBuildOptionT
 	{
-		// Token: 0x1700E3C1 RID: 58305
-		// (get) Token: 0x060369CC RID: 223692 RVA: 0x0076B632 File Offset: 0x00769832
-		// (set) Token: 0x060369CD RID: 223693 RVA: 0x0076B63A File Offset: 0x0076983A
+		// Token: 0x1700EFEB RID: 61419
+		// (get) Token: 0x06039DE2 RID: 237026 RVA: 0x007CE8DA File Offset: 0x007CCADA
+		// (set) Token: 0x06039DE3 RID: 237027 RVA: 0x007CE8E2 File Offset: 0x007CCAE2
 		public EVillageInfrBuildType Type { get; set; }
 
-		// Token: 0x060369CE RID: 223694 RVA: 0x0076B643 File Offset: 0x00769843
+		// Token: 0x06039DE4 RID: 237028 RVA: 0x007CE8EB File Offset: 0x007CCAEB
 		public IVillageInfrBuildOptionT()
 		{
 			this.Type = EVillageInfrBuildType.Village;

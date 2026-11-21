@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x02002A36 RID: 10806
+// Token: 0x02001FB1 RID: 8113
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,13 +12,13 @@ using CSharpScript.Game.Module.Item;
 })]
 public class SkinRewardItemGrid : LoopScrollSmallItemGrid<SkinRewardData>
 {
-	// Token: 0x060167F9 RID: 92153 RVA: 0x005B4147 File Offset: 0x005B2347
+	// Token: 0x06014202 RID: 82434 RVA: 0x005DF2BB File Offset: 0x005DD4BB
 	protected override void OnRefresh(SkinRewardData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data, isSelected, gridIndex);
 	}
 
-	// Token: 0x060167FA RID: 92154 RVA: 0x005B4154 File Offset: 0x005B2354
+	// Token: 0x06014203 RID: 82435 RVA: 0x005DF2C8 File Offset: 0x005DD4C8
 	public override void Refresh(SkinRewardData data, bool isSelected, int gridIndex)
 	{
 		TItem value = data.ItemData.Value;
@@ -50,16 +50,16 @@ public class SkinRewardItemGrid : LoopScrollSmallItemGrid<SkinRewardData>
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060167FB RID: 92155 RVA: 0x005B4207 File Offset: 0x005B2407
+	// Token: 0x06014204 RID: 82436 RVA: 0x005DF37B File Offset: 0x005DD57B
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x060167FC RID: 92156 RVA: 0x005B420A File Offset: 0x005B240A
+	// Token: 0x06014205 RID: 82437 RVA: 0x005DF37E File Offset: 0x005DD57E
 	protected override void OnExtendToggleClicked()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, false, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, false, null, false);
 		Action<int> onClickRecommendSkinButtonCallback = this.OnClickRecommendSkinButtonCallback;
 		if (onClickRecommendSkinButtonCallback == null)
 		{
@@ -68,10 +68,10 @@ public class SkinRewardItemGrid : LoopScrollSmallItemGrid<SkinRewardData>
 		onClickRecommendSkinButtonCallback(this.ConfigId);
 	}
 
-	// Token: 0x0400A705 RID: 42757
+	// Token: 0x0400AAF0 RID: 43760
 	private int ConfigId;
 
-	// Token: 0x0400A706 RID: 42758
+	// Token: 0x0400AAF1 RID: 43761
 	[Nullable(2)]
 	public Action<int> OnClickRecommendSkinButtonCallback;
 }

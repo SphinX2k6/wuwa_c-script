@@ -5,40 +5,40 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x02004755 RID: 18261
+	// Token: 0x02004BBD RID: 19389
 	public class IFixActionT
 	{
-		// Token: 0x170082FF RID: 33535
-		// (get) Token: 0x0601C1A9 RID: 115113 RVA: 0x003FB6A5 File Offset: 0x003F98A5
-		// (set) Token: 0x0601C1AA RID: 115114 RVA: 0x003FB6AD File Offset: 0x003F98AD
+		// Token: 0x17008940 RID: 35136
+		// (get) Token: 0x0601D97E RID: 121214 RVA: 0x00427941 File Offset: 0x00425B41
+		// (set) Token: 0x0601D97F RID: 121215 RVA: 0x00427949 File Offset: 0x00425B49
 		public string Timing { get; set; }
 
-		// Token: 0x17008300 RID: 33536
-		// (get) Token: 0x0601C1AB RID: 115115 RVA: 0x003FB6B6 File Offset: 0x003F98B6
-		// (set) Token: 0x0601C1AC RID: 115116 RVA: 0x003FB6BE File Offset: 0x003F98BE
+		// Token: 0x17008941 RID: 35137
+		// (get) Token: 0x0601D980 RID: 121216 RVA: 0x00427952 File Offset: 0x00425B52
+		// (set) Token: 0x0601D981 RID: 121217 RVA: 0x0042795A File Offset: 0x00425B5A
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17008301 RID: 33537
-		// (get) Token: 0x0601C1AD RID: 115117 RVA: 0x003FB6C7 File Offset: 0x003F98C7
-		// (set) Token: 0x0601C1AE RID: 115118 RVA: 0x003FB6CF File Offset: 0x003F98CF
+		// Token: 0x17008942 RID: 35138
+		// (get) Token: 0x0601D982 RID: 121218 RVA: 0x00427963 File Offset: 0x00425B63
+		// (set) Token: 0x0601D983 RID: 121219 RVA: 0x0042796B File Offset: 0x00425B6B
 		public List<IActionInfoT> ThenActions { get; set; }
 
-		// Token: 0x17008302 RID: 33538
-		// (get) Token: 0x0601C1AF RID: 115119 RVA: 0x003FB6D8 File Offset: 0x003F98D8
-		// (set) Token: 0x0601C1B0 RID: 115120 RVA: 0x003FB6E0 File Offset: 0x003F98E0
+		// Token: 0x17008943 RID: 35139
+		// (get) Token: 0x0601D984 RID: 121220 RVA: 0x00427974 File Offset: 0x00425B74
+		// (set) Token: 0x0601D985 RID: 121221 RVA: 0x0042797C File Offset: 0x00425B7C
 		public bool Period { get; set; }
 
-		// Token: 0x17008303 RID: 33539
-		// (get) Token: 0x0601C1B1 RID: 115121 RVA: 0x003FB6E9 File Offset: 0x003F98E9
-		// (set) Token: 0x0601C1B2 RID: 115122 RVA: 0x003FB6F1 File Offset: 0x003F98F1
+		// Token: 0x17008944 RID: 35140
+		// (get) Token: 0x0601D986 RID: 121222 RVA: 0x00427985 File Offset: 0x00425B85
+		// (set) Token: 0x0601D987 RID: 121223 RVA: 0x0042798D File Offset: 0x00425B8D
 		public float CheckPeriod { get; set; }
 
-		// Token: 0x17008304 RID: 33540
-		// (get) Token: 0x0601C1B3 RID: 115123 RVA: 0x003FB6FA File Offset: 0x003F98FA
-		// (set) Token: 0x0601C1B4 RID: 115124 RVA: 0x003FB702 File Offset: 0x003F9902
+		// Token: 0x17008945 RID: 35141
+		// (get) Token: 0x0601D988 RID: 121224 RVA: 0x00427996 File Offset: 0x00425B96
+		// (set) Token: 0x0601D989 RID: 121225 RVA: 0x0042799E File Offset: 0x00425B9E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601C1B5 RID: 115125 RVA: 0x003FB70B File Offset: 0x003F990B
+		// Token: 0x0601D98A RID: 121226 RVA: 0x004279A7 File Offset: 0x00425BA7
 		public IFixActionT()
 		{
 			this.Timing = null;

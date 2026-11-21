@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FAC RID: 24492
+	// Token: 0x02004F93 RID: 20371
 	public abstract class TotalTopUpPreviewSubViewBase : TotalTopUpPreviewSubView
 	{
-		// Token: 0x0603E19C RID: 254364 RVA: 0x00EFF018 File Offset: 0x00EFD218
+		// Token: 0x06033136 RID: 209206 RVA: 0x00E50CD4 File Offset: 0x00E4EED4
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x04020710 RID: 132880
+		// Token: 0x0401B1E2 RID: 111074
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 	}

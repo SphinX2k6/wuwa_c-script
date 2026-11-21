@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C45 RID: 23621
+	// Token: 0x02004C25 RID: 19493
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleLinkConfig : ConfigBase
 	{
-		// Token: 0x0603BACE RID: 244430 RVA: 0x00E3E5CC File Offset: 0x00E3C7CC
+		// Token: 0x06030A19 RID: 199193 RVA: 0x00D8E950 File Offset: 0x00D8CB50
 		public LinkData? GetLinkDataConfig(int id)
 		{
 			if (id == 0)
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Battle
 			return ConfigLinkDataById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BACF RID: 244431 RVA: 0x00E3E5F0 File Offset: 0x00E3C7F0
+		// Token: 0x06030A1A RID: 199194 RVA: 0x00D8E974 File Offset: 0x00D8CB74
 		public LinkCharacter? GetRoleConfig(int id)
 		{
 			if (id == 0)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Battle
 			return ConfigLinkCharacterById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BAD0 RID: 244432 RVA: 0x00E3E614 File Offset: 0x00E3C814
+		// Token: 0x06030A1B RID: 199195 RVA: 0x00D8E998 File Offset: 0x00D8CB98
 		public LinkParam? GetLinkParam(int id)
 		{
 			if (id == 0)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Battle
 			return ConfigLinkParamById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BAD1 RID: 244433 RVA: 0x00E3E638 File Offset: 0x00E3C838
+		// Token: 0x06030A1C RID: 199196 RVA: 0x00D8E9BC File Offset: 0x00D8CBBC
 		public LinkPreload? GetLinkPreloadConfig(int id)
 		{
 			if (id == 0)
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.Battle
 			return ConfigLinkPreloadById.GetConfig(id, true);
 		}
 
-		// Token: 0x17008DB6 RID: 36278
-		// (get) Token: 0x0603BAD2 RID: 244434 RVA: 0x00E3E659 File Offset: 0x00E3C859
+		// Token: 0x17006188 RID: 24968
+		// (get) Token: 0x06030A1D RID: 199197 RVA: 0x00D8E9DD File Offset: 0x00D8CBDD
 		public static BattleLinkConfig Instance
 		{
 			get
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAD3 RID: 244435 RVA: 0x00E3E660 File Offset: 0x00E3C860
+		// Token: 0x06030A1E RID: 199198 RVA: 0x00D8E9E4 File Offset: 0x00D8CBE4
 		public static BattleLinkConfig GetOrCreateInstance()
 		{
 			if (BattleLinkConfig._Instance == null)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Battle
 			return BattleLinkConfig._Instance;
 		}
 
-		// Token: 0x0603BAD4 RID: 244436 RVA: 0x00E3E674 File Offset: 0x00E3C874
+		// Token: 0x06030A1F RID: 199199 RVA: 0x00D8E9F8 File Offset: 0x00D8CBF8
 		public static bool CreateInstance()
 		{
 			if (BattleLinkConfig._Instance != null)
@@ -80,24 +80,24 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BAD5 RID: 244437 RVA: 0x00E3E68A File Offset: 0x00E3C88A
+		// Token: 0x06030A20 RID: 199200 RVA: 0x00D8EA0E File Offset: 0x00D8CC0E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BAD6 RID: 244438 RVA: 0x00E3E68C File Offset: 0x00E3C88C
+		// Token: 0x06030A21 RID: 199201 RVA: 0x00D8EA10 File Offset: 0x00D8CC10
 		public static void ResetStaticDefaultValue()
 		{
 			BattleLinkConfig._Instance = null;
 		}
 
-		// Token: 0x0603BAD7 RID: 244439 RVA: 0x00E3E694 File Offset: 0x00E3C894
+		// Token: 0x06030A22 RID: 199202 RVA: 0x00D8EA18 File Offset: 0x00D8CC18
 		static BattleLinkConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleLinkConfig.CreateStaticDefaultValue), new Action(BattleLinkConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F10F RID: 127247
+		// Token: 0x04019BC0 RID: 105408
 		[Nullable(2)]
 		private static BattleLinkConfig _Instance;
 	}

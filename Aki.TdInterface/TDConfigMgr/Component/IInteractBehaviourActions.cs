@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000474 RID: 1140
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004CD RID: 1229
 	public class IInteractBehaviourActions : ILevelAIBehaviourBase
 	{
-		// Token: 0x060016F9 RID: 5881 RVA: 0x00046254 File Offset: 0x00044454
+		// Token: 0x06001893 RID: 6291 RVA: 0x00049F9C File Offset: 0x0004819C
 		private IInteractBehaviourActions_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016FA RID: 5882 RVA: 0x0004628C File Offset: 0x0004448C
+		// Token: 0x06001894 RID: 6292 RVA: 0x00049FD4 File Offset: 0x000481D4
 		public static IInteractBehaviourActions Create([Nullable(2)] IInteractBehaviourActions instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016FB RID: 5883 RVA: 0x0004629F File Offset: 0x0004449F
+		// Token: 0x06001895 RID: 6293 RVA: 0x00049FE7 File Offset: 0x000481E7
 		public static IInteractBehaviourActions CreateFromSetValue([Nullable(2)] IInteractBehaviourActions_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016FC RID: 5884 RVA: 0x000462B2 File Offset: 0x000444B2
+		// Token: 0x06001896 RID: 6294 RVA: 0x00049FFA File Offset: 0x000481FA
 		public new IInteractBehaviourActions_SetValue ToSetValue()
 		{
 			return new IInteractBehaviourActions_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700062C RID: 1580
-		// (get) Token: 0x060016FD RID: 5885 RVA: 0x000462D1 File Offset: 0x000444D1
-		// (set) Token: 0x060016FE RID: 5886 RVA: 0x000462FC File Offset: 0x000444FC
+		// Token: 0x17000693 RID: 1683
+		// (get) Token: 0x06001897 RID: 6295 RVA: 0x0004A019 File Offset: 0x00048219
+		// (set) Token: 0x06001898 RID: 6296 RVA: 0x0004A044 File Offset: 0x00048244
 		public override ELevelAIBehaviourType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700062D RID: 1581
-		// (get) Token: 0x060016FF RID: 5887 RVA: 0x0004630C File Offset: 0x0004450C
-		// (set) Token: 0x06001700 RID: 5888 RVA: 0x0004639F File Offset: 0x0004459F
+		// Token: 0x17000694 RID: 1684
+		// (get) Token: 0x06001899 RID: 6297 RVA: 0x0004A054 File Offset: 0x00048254
+		// (set) Token: 0x0600189A RID: 6298 RVA: 0x0004A0E7 File Offset: 0x000482E7
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -124,18 +122,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001159 RID: 4441
+		// Token: 0x0400127B RID: 4731
 		[Nullable(2)]
 		protected new IInteractBehaviourActions FbInstance;
 
-		// Token: 0x0400115A RID: 4442
+		// Token: 0x0400127C RID: 4732
 		[Nullable(2)]
 		protected new IInteractBehaviourActions_SetValue PocoInterface;
 
-		// Token: 0x0400115B RID: 4443
+		// Token: 0x0400127D RID: 4733
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x0400115C RID: 4444
+		// Token: 0x0400127E RID: 4734
 		private bool _ActionsInited;
 	}
 }

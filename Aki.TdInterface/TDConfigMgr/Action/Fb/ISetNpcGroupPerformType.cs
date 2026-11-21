@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A5A RID: 10842
+	// Token: 0x02002D47 RID: 11591
 	public class ISetNpcGroupPerformType
 	{
-		// Token: 0x0600EE82 RID: 61058 RVA: 0x0022B6AA File Offset: 0x002298AA
-		[NullableContext(1)]
+		// Token: 0x0600FD1A RID: 64794 RVA: 0x0024905E File Offset: 0x0024725E
 		public static ISetNpcGroupPerformType Create(ISetNpcGroupPerformType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B90 RID: 19344
-		// (get) Token: 0x0600EE83 RID: 61059 RVA: 0x0022B6C9 File Offset: 0x002298C9
+		// Token: 0x17004F3A RID: 20282
+		// (get) Token: 0x0600FD1B RID: 64795 RVA: 0x0024907D File Offset: 0x0024727D
 		public virtual ENpcGroupPerformType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008338 RID: 33592
+		// Token: 0x04008A2B RID: 35371
 		private ISetNpcGroupPerformType Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000577 RID: 1399
+	// Token: 0x0200058D RID: 1421
 	public class ConfigMotorcycleChallengeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060020D7 RID: 8407 RVA: 0x001130DB File Offset: 0x001112DB
+		// Token: 0x0600215B RID: 8539 RVA: 0x0011982F File Offset: 0x00117A2F
 		static ConfigMotorcycleChallengeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorcycleChallengeById.CreateStaticDefaultValue), new Action(ConfigMotorcycleChallengeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060020D8 RID: 8408 RVA: 0x001130FC File Offset: 0x001112FC
+		// Token: 0x0600215C RID: 8540 RVA: 0x00119850 File Offset: 0x00117A50
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorcycleChallengeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060020D9 RID: 8409 RVA: 0x0011317B File Offset: 0x0011137B
+		// Token: 0x0600215D RID: 8541 RVA: 0x001198CF File Offset: 0x00117ACF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorcycleChallengeById.LogPair = null;
 			ConfigMotorcycleChallengeById.HandleId = 0;
 		}
 
-		// Token: 0x060020DA RID: 8410 RVA: 0x00113189 File Offset: 0x00111389
+		// Token: 0x0600215E RID: 8542 RVA: 0x001198DD File Offset: 0x00117ADD
 		public static void Init()
 		{
 			ConfigMotorcycleChallengeById.HandleId = ConfigCommon.InitDataStatement(ConfigMotorcycleChallengeById.HandleId, "db_roadbook.db", "select BinData from `MotorcycleChallenge` where Id=?");
 		}
 
-		// Token: 0x060020DB RID: 8411 RVA: 0x001131A4 File Offset: 0x001113A4
+		// Token: 0x0600215F RID: 8543 RVA: 0x001198F8 File Offset: 0x00117AF8
 		public static MotorcycleChallenge? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorcycleChallengeById.HandleId, ConfigMotorcycleChallengeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorcycleChallenge?(rootAsMotorcycleChallenge);
 		}
 
-		// Token: 0x04002625 RID: 9765
+		// Token: 0x040026BF RID: 9919
 		private const string DB = "db_roadbook.db";
 
-		// Token: 0x04002626 RID: 9766
+		// Token: 0x040026C0 RID: 9920
 		private const string FILE = "q.千岛路书3.0.xlsx";
 
-		// Token: 0x04002627 RID: 9767
+		// Token: 0x040026C1 RID: 9921
 		private const string TABLE = "MotorcycleChallenge";
 
-		// Token: 0x04002628 RID: 9768
+		// Token: 0x040026C2 RID: 9922
 		private const string COMMAND = "select BinData from `MotorcycleChallenge` where Id=?";
 
-		// Token: 0x04002629 RID: 9769
+		// Token: 0x040026C3 RID: 9923
 		private const string KEY_PREFIX = "MotorcycleChallengeById";
 
-		// Token: 0x0400262A RID: 9770
+		// Token: 0x040026C4 RID: 9924
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400262B RID: 9771
+		// Token: 0x040026C5 RID: 9925
 		private static int HandleId;
 	}
 }

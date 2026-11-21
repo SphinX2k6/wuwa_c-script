@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000261 RID: 609
+// Token: 0x02000265 RID: 613
 [NullableContext(2)]
 [Nullable(0)]
 public class EffectModelInfo : IAudioInfo
 {
-	// Token: 0x170005A6 RID: 1446
-	// (get) Token: 0x06002554 RID: 9556 RVA: 0x000E0FA2 File Offset: 0x000DF1A2
-	// (set) Token: 0x06002555 RID: 9557 RVA: 0x000E0FAA File Offset: 0x000DF1AA
+	// Token: 0x170005CD RID: 1485
+	// (get) Token: 0x0600260B RID: 9739 RVA: 0x000E733E File Offset: 0x000E553E
+	// (set) Token: 0x0600260C RID: 9740 RVA: 0x000E7346 File Offset: 0x000E5546
 	public bool Start { get; set; }
 
-	// Token: 0x06002556 RID: 9558 RVA: 0x000E0FB3 File Offset: 0x000DF1B3
+	// Token: 0x0600260D RID: 9741 RVA: 0x000E734F File Offset: 0x000E554F
 	[NullableContext(1)]
 	public EffectModelInfo(EffectModelAudio model)
 	{
@@ -20,7 +20,7 @@ public class EffectModelInfo : IAudioInfo
 		this.Start = false;
 	}
 
-	// Token: 0x06002557 RID: 9559 RVA: 0x000E0FC9 File Offset: 0x000DF1C9
+	// Token: 0x0600260E RID: 9742 RVA: 0x000E7365 File Offset: 0x000E5565
 	public string GetName()
 	{
 		EffectModelAudio model = this.Model;
@@ -31,7 +31,7 @@ public class EffectModelInfo : IAudioInfo
 		return model.GetName();
 	}
 
-	// Token: 0x06002558 RID: 9560 RVA: 0x000E0FDC File Offset: 0x000DF1DC
+	// Token: 0x0600260F RID: 9743 RVA: 0x000E7378 File Offset: 0x000E5578
 	public string GetAudioEvent()
 	{
 		EffectModelAudio model = this.Model;
@@ -47,14 +47,14 @@ public class EffectModelInfo : IAudioInfo
 		return audioEvent.GetName();
 	}
 
-	// Token: 0x06002559 RID: 9561 RVA: 0x000E0FFA File Offset: 0x000DF1FA
+	// Token: 0x06002610 RID: 9744 RVA: 0x000E7396 File Offset: 0x000E5596
 	public bool IsValid()
 	{
 		EffectModelAudio model = this.Model;
 		return model != null && model.IsValid();
 	}
 
-	// Token: 0x0600255A RID: 9562 RVA: 0x000E1010 File Offset: 0x000DF210
+	// Token: 0x06002611 RID: 9745 RVA: 0x000E73AC File Offset: 0x000E55AC
 	public bool IsAudioEventValid()
 	{
 		EffectModelAudio model = this.Model;
@@ -72,13 +72,13 @@ public class EffectModelInfo : IAudioInfo
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x0600255B RID: 9563 RVA: 0x000E1058 File Offset: 0x000DF258
+	// Token: 0x06002612 RID: 9746 RVA: 0x000E73F4 File Offset: 0x000E55F4
 	[NullableContext(1)]
 	public object GetCompare()
 	{
 		return this.Model;
 	}
 
-	// Token: 0x04002433 RID: 9267
+	// Token: 0x040024B1 RID: 9393
 	public EffectModelAudio Model;
 }

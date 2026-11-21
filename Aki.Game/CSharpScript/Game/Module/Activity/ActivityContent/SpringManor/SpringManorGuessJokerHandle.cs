@@ -4,10 +4,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006034 RID: 24628
+	// Token: 0x02004FB2 RID: 20402
 	public class SpringManorGuessJokerHandle : SpringManorGameHandleBase
 	{
-		// Token: 0x0603E521 RID: 255265 RVA: 0x00F0D10E File Offset: 0x00F0B30E
+		// Token: 0x060331E5 RID: 209381 RVA: 0x00E53ED2 File Offset: 0x00E520D2
 		public override int GetCurrentProgress()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return instance.ActivityData.GetGuessJokerCurrentProgress();
 		}
 
-		// Token: 0x0603E522 RID: 255266 RVA: 0x00F0D125 File Offset: 0x00F0B325
+		// Token: 0x060331E6 RID: 209382 RVA: 0x00E53EE9 File Offset: 0x00E520E9
 		public override int GetTotalProgress()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return instance.ActivityData.GetGuessJokerTotalProgress();
 		}
 
-		// Token: 0x0603E523 RID: 255267 RVA: 0x00F0D13C File Offset: 0x00F0B33C
+		// Token: 0x060331E7 RID: 209383 RVA: 0x00E53F00 File Offset: 0x00E52100
 		public override void EnterGame()
 		{
 			GuessJokerGamePlayModel.Instance.OpenSelectRoleView(0).ContinueWith(delegate()
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x0603E524 RID: 255268 RVA: 0x00F0D16E File Offset: 0x00F0B36E
+		// Token: 0x060331E8 RID: 209384 RVA: 0x00E53F32 File Offset: 0x00E52132
 		public override ERedDotName? GetRedDotName()
 		{
 			return new ERedDotName?(ERedDotName.GuessJokerUnlockLevel);

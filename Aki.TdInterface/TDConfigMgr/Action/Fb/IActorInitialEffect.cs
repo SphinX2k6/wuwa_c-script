@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200277F RID: 10111
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A51 RID: 10833
 	public class IActorInitialEffect
 	{
-		// Token: 0x0600E11A RID: 57626 RVA: 0x002142AC File Offset: 0x002124AC
+		// Token: 0x0600EF38 RID: 61240 RVA: 0x00231040 File Offset: 0x0022F240
 		public static IActorInitialEffect Create(IActorInitialEffect? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043DE RID: 17374
-		// (get) Token: 0x0600E11B RID: 57627 RVA: 0x002142CC File Offset: 0x002124CC
+		// Token: 0x17004744 RID: 18244
+		// (get) Token: 0x0600EF39 RID: 61241 RVA: 0x00231060 File Offset: 0x0022F260
 		public virtual List<int> EffectIds
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043DF RID: 17375
-		// (get) Token: 0x0600E11C RID: 57628 RVA: 0x00214330 File Offset: 0x00212530
+		// Token: 0x17004745 RID: 18245
+		// (get) Token: 0x0600EF3A RID: 61242 RVA: 0x002310C4 File Offset: 0x0022F2C4
 		[Nullable(2)]
 		public virtual List<int> EffectIdsMaleVariant
 		{
@@ -71,20 +69,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CB3 RID: 31923
+		// Token: 0x04008369 RID: 33641
 		private IActorInitialEffect Instance;
 
-		// Token: 0x04007CB4 RID: 31924
+		// Token: 0x0400836A RID: 33642
 		private List<int> _EffectIdsCache;
 
-		// Token: 0x04007CB5 RID: 31925
+		// Token: 0x0400836B RID: 33643
 		private bool _EffectIdsInited;
 
-		// Token: 0x04007CB6 RID: 31926
+		// Token: 0x0400836C RID: 33644
 		[Nullable(2)]
 		private List<int> _EffectIdsMaleVariantCache;
 
-		// Token: 0x04007CB7 RID: 31927
+		// Token: 0x0400836D RID: 33645
 		private bool _EffectIdsMaleVariantInited;
 	}
 }

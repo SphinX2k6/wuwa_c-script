@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200602A RID: 24618
+	// Token: 0x02006689 RID: 26249
 	public enum ETargetEntityType : byte
 	{
-		// Token: 0x04010129 RID: 65833
+		// Token: 0x04010F15 RID: 69397
 		Target,
-		// Token: 0x0401012A RID: 65834
+		// Token: 0x04010F16 RID: 69398
 		Self,
-		// Token: 0x0401012B RID: 65835
+		// Token: 0x04010F17 RID: 69399
 		Triggered,
-		// Token: 0x0401012C RID: 65836
+		// Token: 0x04010F18 RID: 69400
 		Player,
-		// Token: 0x0401012D RID: 65837
+		// Token: 0x04010F19 RID: 69401
 		Vehicle
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AE0 RID: 10976
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DD4 RID: 11732
 	public class ICarPaintChangeBpActorFunc : IBpActorFuncTypeBase
 	{
-		// Token: 0x0600F09F RID: 61599 RVA: 0x0022EE98 File Offset: 0x0022D098
+		// Token: 0x0600FF55 RID: 65365 RVA: 0x0024CBA4 File Offset: 0x0024ADA4
 		public static ICarPaintChangeBpActorFunc Create(ICarPaintChangeBpActorFunc? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CA1 RID: 19617
-		// (get) Token: 0x0600F0A0 RID: 61600 RVA: 0x0022EEB7 File Offset: 0x0022D0B7
+		// Token: 0x1700505B RID: 20571
+		// (get) Token: 0x0600FF56 RID: 65366 RVA: 0x0024CBC3 File Offset: 0x0024ADC3
 		public override EBpActorFuncType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CA2 RID: 19618
-		// (get) Token: 0x0600F0A1 RID: 61601 RVA: 0x0022EEC4 File Offset: 0x0022D0C4
+		// Token: 0x1700505C RID: 20572
+		// (get) Token: 0x0600FF57 RID: 65367 RVA: 0x0024CBD0 File Offset: 0x0024ADD0
 		public virtual IActorRef BpActor
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008460 RID: 33888
+		// Token: 0x04008B64 RID: 35684
 		private ICarPaintChangeBpActorFunc Instance;
 
-		// Token: 0x04008461 RID: 33889
+		// Token: 0x04008B65 RID: 35685
 		[Nullable(2)]
 		private IActorRef _BpActorCache;
 
-		// Token: 0x04008462 RID: 33890
+		// Token: 0x04008B66 RID: 35686
 		private bool _BpActorInited;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BAE RID: 19374
+	// Token: 0x02005098 RID: 20632
 	public class ICompareLevelPlayRewardStateConditionT
 	{
-		// Token: 0x17008CA7 RID: 36007
-		// (get) Token: 0x0601E8E8 RID: 125160 RVA: 0x0044650C File Offset: 0x0044470C
-		// (set) Token: 0x0601E8E9 RID: 125161 RVA: 0x00446514 File Offset: 0x00444714
+		// Token: 0x170093C0 RID: 37824
+		// (get) Token: 0x06020494 RID: 132244 RVA: 0x00479070 File Offset: 0x00477270
+		// (set) Token: 0x06020495 RID: 132245 RVA: 0x00479078 File Offset: 0x00477278
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008CA8 RID: 36008
-		// (get) Token: 0x0601E8EA RID: 125162 RVA: 0x0044651D File Offset: 0x0044471D
-		// (set) Token: 0x0601E8EB RID: 125163 RVA: 0x00446525 File Offset: 0x00444725
+		// Token: 0x170093C1 RID: 37825
+		// (get) Token: 0x06020496 RID: 132246 RVA: 0x00479081 File Offset: 0x00477281
+		// (set) Token: 0x06020497 RID: 132247 RVA: 0x00479089 File Offset: 0x00477289
 		public ECompare Compare { get; set; }
 
-		// Token: 0x0601E8EC RID: 125164 RVA: 0x0044652E File Offset: 0x0044472E
+		// Token: 0x06020498 RID: 132248 RVA: 0x00479092 File Offset: 0x00477292
 		public ICompareLevelPlayRewardStateConditionT()
 		{
 			this.Type = ECondition.CompareVar;

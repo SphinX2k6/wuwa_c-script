@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200081A RID: 2074
+	// Token: 0x020008BD RID: 2237
 	public class IWuWaGoSpikeTrap_SetValue
 	{
-		// Token: 0x04001DD0 RID: 7632
+		// Token: 0x04001FDC RID: 8156
 		public EWuWaGoEntityType Type;
 
-		// Token: 0x04001DD1 RID: 7633
-		[Nullable(1)]
+		// Token: 0x04001FDD RID: 8157
 		public IWuWaGoGridLinkData LinkData;
 	}
 }

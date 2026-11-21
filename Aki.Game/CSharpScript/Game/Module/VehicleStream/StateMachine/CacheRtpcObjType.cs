@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 {
-	// Token: 0x020048B7 RID: 18615
+	// Token: 0x0200382E RID: 14382
 	public class CacheRtpcObjType
 	{
-		// Token: 0x0401A279 RID: 107129
+		// Token: 0x04014AEC RID: 84716
 		[Nullable(2)]
 		public AActor Actor;
 	}

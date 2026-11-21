@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF5 RID: 6901
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CA2 RID: 7330
 	public class IHeadStyleWarning : IHeadStyle
 	{
-		// Token: 0x060093D2 RID: 37842 RVA: 0x00156C10 File Offset: 0x00154E10
+		// Token: 0x06009BB0 RID: 39856 RVA: 0x00167758 File Offset: 0x00165958
 		private IHeadStyleWarning_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093D3 RID: 37843 RVA: 0x00156C48 File Offset: 0x00154E48
+		// Token: 0x06009BB1 RID: 39857 RVA: 0x00167790 File Offset: 0x00165990
 		public static IHeadStyleWarning Create([Nullable(2)] IHeadStyleWarning instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093D4 RID: 37844 RVA: 0x00156C5B File Offset: 0x00154E5B
+		// Token: 0x06009BB2 RID: 39858 RVA: 0x001677A3 File Offset: 0x001659A3
 		public static IHeadStyleWarning CreateFromSetValue([Nullable(2)] IHeadStyleWarning_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093D5 RID: 37845 RVA: 0x00156C6E File Offset: 0x00154E6E
+		// Token: 0x06009BB3 RID: 39859 RVA: 0x001677B6 File Offset: 0x001659B6
 		public new IHeadStyleWarning_SetValue ToSetValue()
 		{
 			return new IHeadStyleWarning_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002ECF RID: 11983
-		// (get) Token: 0x060093D6 RID: 37846 RVA: 0x00156C81 File Offset: 0x00154E81
-		// (set) Token: 0x060093D7 RID: 37847 RVA: 0x00156CAC File Offset: 0x00154EAC
+		// Token: 0x170030F2 RID: 12530
+		// (get) Token: 0x06009BB4 RID: 39860 RVA: 0x001677C9 File Offset: 0x001659C9
+		// (set) Token: 0x06009BB5 RID: 39861 RVA: 0x001677F4 File Offset: 0x001659F4
 		public override EHeadStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AC2 RID: 23234
+		// Token: 0x04005F59 RID: 24409
 		[Nullable(2)]
 		protected new IHeadStyleWarning FbInstance;
 
-		// Token: 0x04005AC3 RID: 23235
+		// Token: 0x04005F5A RID: 24410
 		[Nullable(2)]
 		protected new IHeadStyleWarning_SetValue PocoInterface;
 	}

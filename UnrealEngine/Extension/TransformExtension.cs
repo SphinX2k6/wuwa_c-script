@@ -3,87 +3,87 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE5 RID: 10981
+	// Token: 0x02000894 RID: 2196
 	public static class TransformExtension
 	{
-		// Token: 0x06028404 RID: 164868 RVA: 0x003D3AA5 File Offset: 0x003D1CA5
+		// Token: 0x0600BDB9 RID: 48569 RVA: 0x0012EDB5 File Offset: 0x0012CFB5
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetRotation(this FTransform transform, FQuat Rotation)
 		{
 			transform.Rotation = Rotation;
 		}
 
-		// Token: 0x06028405 RID: 164869 RVA: 0x003D3AAE File Offset: 0x003D1CAE
+		// Token: 0x0600BDBA RID: 48570 RVA: 0x0012EDBE File Offset: 0x0012CFBE
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static FQuat GetRotation(this FTransform transform)
 		{
 			return transform.Rotation;
 		}
 
-		// Token: 0x06028406 RID: 164870 RVA: 0x003D3AB6 File Offset: 0x003D1CB6
+		// Token: 0x0600BDBB RID: 48571 RVA: 0x0012EDC6 File Offset: 0x0012CFC6
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetTranslation(this FTransform transform, FVector Translation)
 		{
 			transform.Translation = Translation;
 		}
 
-		// Token: 0x06028407 RID: 164871 RVA: 0x003D3ABF File Offset: 0x003D1CBF
+		// Token: 0x0600BDBC RID: 48572 RVA: 0x0012EDCF File Offset: 0x0012CFCF
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static FVector GetTranslation(this FTransform transform)
 		{
 			return transform.Translation;
 		}
 
-		// Token: 0x06028408 RID: 164872 RVA: 0x003D3AC7 File Offset: 0x003D1CC7
+		// Token: 0x0600BDBD RID: 48573 RVA: 0x0012EDD7 File Offset: 0x0012CFD7
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetScale3D(this FTransform transform, FVector Scale3D)
 		{
 			transform.Scale3D = Scale3D;
 		}
 
-		// Token: 0x06028409 RID: 164873 RVA: 0x003D3AD0 File Offset: 0x003D1CD0
+		// Token: 0x0600BDBE RID: 48574 RVA: 0x0012EDE0 File Offset: 0x0012CFE0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static FVector GetScale3D(this FTransform transform)
 		{
 			return transform.Scale3D;
 		}
 
-		// Token: 0x0602840A RID: 164874 RVA: 0x003D3AD8 File Offset: 0x003D1CD8
+		// Token: 0x0600BDBF RID: 48575 RVA: 0x0012EDE8 File Offset: 0x0012CFE8
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetRotation(this FTransformDouble transform, FQuat Rotation)
 		{
 			transform.Rotation = Rotation;
 		}
 
-		// Token: 0x0602840B RID: 164875 RVA: 0x003D3AE1 File Offset: 0x003D1CE1
+		// Token: 0x0600BDC0 RID: 48576 RVA: 0x0012EDF1 File Offset: 0x0012CFF1
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static FQuat GetRotation(this FTransformDouble transform)
 		{
 			return transform.Rotation;
 		}
 
-		// Token: 0x0602840C RID: 164876 RVA: 0x003D3AE9 File Offset: 0x003D1CE9
+		// Token: 0x0600BDC1 RID: 48577 RVA: 0x0012EDF9 File Offset: 0x0012CFF9
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetTranslation(this FTransformDouble transform, FVectorDouble Translation)
 		{
 			transform.Translation = Translation;
 		}
 
-		// Token: 0x0602840D RID: 164877 RVA: 0x003D3AF2 File Offset: 0x003D1CF2
+		// Token: 0x0600BDC2 RID: 48578 RVA: 0x0012EE02 File Offset: 0x0012D002
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static FVectorDouble GetTranslation(this FTransformDouble transform)
 		{
 			return transform.Translation;
 		}
 
-		// Token: 0x0602840E RID: 164878 RVA: 0x003D3AFA File Offset: 0x003D1CFA
+		// Token: 0x0600BDC3 RID: 48579 RVA: 0x0012EE0A File Offset: 0x0012D00A
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static void SetScale3D(this FTransformDouble transform, FVector Scale3D)
 		{
 			transform.Scale3D = Scale3D;
 		}
 
-		// Token: 0x0602840F RID: 164879 RVA: 0x003D3B03 File Offset: 0x003D1D03
+		// Token: 0x0600BDC4 RID: 48580 RVA: 0x0012EE13 File Offset: 0x0012D013
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static FVector GetScale3D(this FTransformDouble transform)
 		{

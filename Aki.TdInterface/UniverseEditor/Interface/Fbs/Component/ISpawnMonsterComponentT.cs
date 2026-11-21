@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200594E RID: 22862
+	// Token: 0x02005F5B RID: 24411
 	public class ISpawnMonsterComponentT
 	{
-		// Token: 0x1700AB94 RID: 43924
-		// (get) Token: 0x06026B06 RID: 158470 RVA: 0x00553F55 File Offset: 0x00552155
-		// (set) Token: 0x06026B07 RID: 158471 RVA: 0x00553F5D File Offset: 0x0055215D
+		// Token: 0x1700B4C8 RID: 46280
+		// (get) Token: 0x06029070 RID: 168048 RVA: 0x0059ABC1 File Offset: 0x00598DC1
+		// (set) Token: 0x06029071 RID: 168049 RVA: 0x0059ABC9 File Offset: 0x00598DC9
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AB95 RID: 43925
-		// (get) Token: 0x06026B08 RID: 158472 RVA: 0x00553F66 File Offset: 0x00552166
-		// (set) Token: 0x06026B09 RID: 158473 RVA: 0x00553F6E File Offset: 0x0055216E
+		// Token: 0x1700B4C9 RID: 46281
+		// (get) Token: 0x06029072 RID: 168050 RVA: 0x0059ABD2 File Offset: 0x00598DD2
+		// (set) Token: 0x06029073 RID: 168051 RVA: 0x0059ABDA File Offset: 0x00598DDA
 		public TSpawnMonsterStartConditionUnion ActiveType { get; set; }
 
-		// Token: 0x1700AB96 RID: 43926
-		// (get) Token: 0x06026B0A RID: 158474 RVA: 0x00553F77 File Offset: 0x00552177
-		// (set) Token: 0x06026B0B RID: 158475 RVA: 0x00553F7F File Offset: 0x0055217F
+		// Token: 0x1700B4CA RID: 46282
+		// (get) Token: 0x06029074 RID: 168052 RVA: 0x0059ABE3 File Offset: 0x00598DE3
+		// (set) Token: 0x06029075 RID: 168053 RVA: 0x0059ABEB File Offset: 0x00598DEB
 		public List<ISpawnMonsterConfigT> SpawnMonsterConfigs { get; set; }
 
-		// Token: 0x1700AB97 RID: 43927
-		// (get) Token: 0x06026B0C RID: 158476 RVA: 0x00553F88 File Offset: 0x00552188
-		// (set) Token: 0x06026B0D RID: 158477 RVA: 0x00553F90 File Offset: 0x00552190
+		// Token: 0x1700B4CB RID: 46283
+		// (get) Token: 0x06029076 RID: 168054 RVA: 0x0059ABF4 File Offset: 0x00598DF4
+		// (set) Token: 0x06029077 RID: 168055 RVA: 0x0059ABFC File Offset: 0x00598DFC
 		public bool IssharedHatred { get; set; }
 
-		// Token: 0x1700AB98 RID: 43928
-		// (get) Token: 0x06026B0E RID: 158478 RVA: 0x00553F99 File Offset: 0x00552199
-		// (set) Token: 0x06026B0F RID: 158479 RVA: 0x00553FA1 File Offset: 0x005521A1
+		// Token: 0x1700B4CC RID: 46284
+		// (get) Token: 0x06029078 RID: 168056 RVA: 0x0059AC05 File Offset: 0x00598E05
+		// (set) Token: 0x06029079 RID: 168057 RVA: 0x0059AC0D File Offset: 0x00598E0D
 		public ISpawnMonsterConstraintAnnularSectorT SpawnMonsterConstraintType { get; set; }
 
-		// Token: 0x1700AB99 RID: 43929
-		// (get) Token: 0x06026B10 RID: 158480 RVA: 0x00553FAA File Offset: 0x005521AA
-		// (set) Token: 0x06026B11 RID: 158481 RVA: 0x00553FB2 File Offset: 0x005521B2
+		// Token: 0x1700B4CD RID: 46285
+		// (get) Token: 0x0602907A RID: 168058 RVA: 0x0059AC16 File Offset: 0x00598E16
+		// (set) Token: 0x0602907B RID: 168059 RVA: 0x0059AC1E File Offset: 0x00598E1E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026B12 RID: 158482 RVA: 0x00553FBB File Offset: 0x005521BB
+		// Token: 0x0602907C RID: 168060 RVA: 0x0059AC27 File Offset: 0x00598E27
 		public ISpawnMonsterComponentT()
 		{
 			this.Disabled = false;

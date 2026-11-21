@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 {
-	// Token: 0x020069F0 RID: 27120
+	// Token: 0x02005B4D RID: 23373
 	public static class SunSpiritDefine
 	{
-		// Token: 0x06043788 RID: 276360 RVA: 0x0107E628 File Offset: 0x0107C828
+		// Token: 0x060397D1 RID: 235473 RVA: 0x01022CDC File Offset: 0x01020EDC
 		// Note: this type is marked as 'beforefieldinit'.
 		static SunSpiritDefine()
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			SunSpiritDefine.sunSpiritStateTypeToString = dictionary;
 		}
 
-		// Token: 0x0402337C RID: 144252
+		// Token: 0x0401E56E RID: 124270
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ESunSpiritStateType, string> sunSpiritStateTypeToString;

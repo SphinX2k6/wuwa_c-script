@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200092C RID: 2348
+	// Token: 0x02000977 RID: 2423
 	public class ConfigSignRewardByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600371B RID: 14107 RVA: 0x00190F14 File Offset: 0x0018F114
+		// Token: 0x060038DD RID: 14557 RVA: 0x0019E134 File Offset: 0x0019C334
 		static ConfigSignRewardByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSignRewardByActivityId.CreateStaticDefaultValue), new Action(ConfigSignRewardByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600371C RID: 14108 RVA: 0x00190F34 File Offset: 0x0018F134
+		// Token: 0x060038DE RID: 14558 RVA: 0x0019E154 File Offset: 0x0019C354
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSignRewardByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600371D RID: 14109 RVA: 0x00190FB3 File Offset: 0x0018F1B3
+		// Token: 0x060038DF RID: 14559 RVA: 0x0019E1D3 File Offset: 0x0019C3D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSignRewardByActivityId.LogPair = null;
 			ConfigSignRewardByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x0600371E RID: 14110 RVA: 0x00190FC1 File Offset: 0x0018F1C1
+		// Token: 0x060038E0 RID: 14560 RVA: 0x0019E1E1 File Offset: 0x0019C3E1
 		public static void Init()
 		{
 			ConfigSignRewardByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigSignRewardByActivityId.HandleId, "db_circumfluence.db", "select BinData from `SignReward` where ActivityId=?");
 		}
 
-		// Token: 0x0600371F RID: 14111 RVA: 0x00190FDC File Offset: 0x0018F1DC
+		// Token: 0x060038E1 RID: 14561 RVA: 0x0019E1FC File Offset: 0x0019C3FC
 		[NullableContext(2)]
 		public static IReadOnlyList<SignReward> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400401A RID: 16410
+		// Token: 0x04004227 RID: 16935
 		private const string DB = "db_circumfluence.db";
 
-		// Token: 0x0400401B RID: 16411
+		// Token: 0x04004228 RID: 16936
 		private const string FILE = "h.回流活动.xlsx";
 
-		// Token: 0x0400401C RID: 16412
+		// Token: 0x04004229 RID: 16937
 		private const string TABLE = "SignReward";
 
-		// Token: 0x0400401D RID: 16413
+		// Token: 0x0400422A RID: 16938
 		private const string COMMAND = "select BinData from `SignReward` where ActivityId=?";
 
-		// Token: 0x0400401E RID: 16414
+		// Token: 0x0400422B RID: 16939
 		private const string KEY_PREFIX = "SignRewardByActivityId";
 
-		// Token: 0x0400401F RID: 16415
+		// Token: 0x0400422C RID: 16940
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004020 RID: 16416
+		// Token: 0x0400422D RID: 16941
 		private static int HandleId;
 	}
 }

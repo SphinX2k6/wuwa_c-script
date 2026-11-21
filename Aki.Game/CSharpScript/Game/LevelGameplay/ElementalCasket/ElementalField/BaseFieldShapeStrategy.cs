@@ -5,28 +5,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EAE RID: 28334
+	// Token: 0x0200602E RID: 24622
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class BaseFieldShapeStrategy : ISceneItemElementalFieldShapeStrategy
 	{
-		// Token: 0x17009A8B RID: 39563
-		// (get) Token: 0x06045061 RID: 282721
+		// Token: 0x17006FC2 RID: 28610
+		// (get) Token: 0x0603B202 RID: 242178
 		public abstract ESceneItemElementalFieldShapeType ShapeType { get; }
 
-		// Token: 0x06045062 RID: 282722 RVA: 0x0110E299 File Offset: 0x0110C499
+		// Token: 0x0603B203 RID: 242179 RVA: 0x010B8375 File Offset: 0x010B6575
 		public BaseFieldShapeStrategy(ISceneItemElementalFieldShapeContext Context, VectorInfo centerConfig)
 		{
 			this.Context = Context;
 			this.CenterOffset.FromConfigVector(centerConfig);
 		}
 
-		// Token: 0x17009A8C RID: 39564
-		// (get) Token: 0x06045063 RID: 282723
+		// Token: 0x17006FC3 RID: 28611
+		// (get) Token: 0x0603B204 RID: 242180
 		public abstract Action<UKuroFastCollisionShapeComponent> ApplyStaticConfig { get; }
 
-		// Token: 0x17009A8D RID: 39565
-		// (get) Token: 0x06045064 RID: 282724 RVA: 0x0110E2D5 File Offset: 0x0110C4D5
+		// Token: 0x17006FC4 RID: 28612
+		// (get) Token: 0x0603B205 RID: 242181 RVA: 0x010B83B1 File Offset: 0x010B65B1
 		[Nullable(2)]
 		public virtual Action<UKuroFastCollisionShapeComponent> SyncRuntime
 		{
@@ -37,11 +37,11 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x17009A8E RID: 39566
-		// (get) Token: 0x06045065 RID: 282725
+		// Token: 0x17006FC5 RID: 28613
+		// (get) Token: 0x0603B206 RID: 242182
 		public abstract Func<ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>, ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>> FillSnapshot { get; }
 
-		// Token: 0x06045066 RID: 282726 RVA: 0x0110E2D8 File Offset: 0x0110C4D8
+		// Token: 0x0603B207 RID: 242183 RVA: 0x010B83B4 File Offset: 0x010B65B4
 		protected FVectorDouble GetWorldCenter(FVectorDouble center)
 		{
 			this.WorldCenter.FromUeVector(center);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return this.WorldCenter.ToUeVector(false);
 		}
 
-		// Token: 0x06045067 RID: 282727 RVA: 0x0110E308 File Offset: 0x0110C508
+		// Token: 0x0603B208 RID: 242184 RVA: 0x010B83E4 File Offset: 0x010B65E4
 		protected Vector GetRotatedCenterOffset()
 		{
 			BaseActorComponent baseActorComponent = this.Context.GetBaseActorComponent();
@@ -61,16 +61,16 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return this.RotatedCenterOffset;
 		}
 
-		// Token: 0x04023EEC RID: 147180
+		// Token: 0x0401F19F RID: 127391
 		protected readonly Vector CenterOffset = Vector.Create();
 
-		// Token: 0x04023EED RID: 147181
+		// Token: 0x0401F1A0 RID: 127392
 		private readonly Vector RotatedCenterOffset = Vector.Create();
 
-		// Token: 0x04023EEE RID: 147182
+		// Token: 0x0401F1A1 RID: 127393
 		protected readonly Vector WorldCenter = Vector.Create();
 
-		// Token: 0x04023EEF RID: 147183
+		// Token: 0x0401F1A2 RID: 127394
 		protected readonly ISceneItemElementalFieldShapeContext Context;
 	}
 }

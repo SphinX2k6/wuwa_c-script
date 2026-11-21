@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 {
-	// Token: 0x020054A4 RID: 21668
+	// Token: 0x02004487 RID: 17543
 	public class MapSceneGameplayUnlock : MapLifeEventListener
 	{
-		// Token: 0x060375D9 RID: 226777 RVA: 0x00D27148 File Offset: 0x00D25348
+		// Token: 0x0602C52D RID: 181549 RVA: 0x00C76D9C File Offset: 0x00C74F9C
 		[NullableContext(1)]
 		public MapSceneGameplayUnlock(BaseMap map) : base(map)
 		{
 		}
 
-		// Token: 0x060375DA RID: 226778 RVA: 0x00D27154 File Offset: 0x00D25354
+		// Token: 0x0602C52E RID: 181550 RVA: 0x00C76DA8 File Offset: 0x00C74FA8
 		public override void OnWorldMapBeforeShow()
 		{
 			this.Data = (MapModel.Instance.MapLifeEventListenerTriggerMap[EMapLifeEventListenerType.SceneGameplayUnlock].Data as IMapSceneGameplayUnlockData);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 			}
 		}
 
-		// Token: 0x060375DB RID: 226779 RVA: 0x00D27238 File Offset: 0x00D25438
+		// Token: 0x0602C52F RID: 181551 RVA: 0x00C76E90 File Offset: 0x00C75090
 		public override void OnWorldMapAfterShow()
 		{
 			this.TargetExpressionMap.HandleSceneGamePlayMarkItemOpen(EMarkType.FixedSceneGameplay, this.Data.RelativeType, this.Data.RelativeSubType);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 			MapModel.Instance.MapLifeEventListenerTriggerMap[EMapLifeEventListenerType.SceneGameplayUnlock].State = false;
 		}
 
-		// Token: 0x0401D2B2 RID: 119474
+		// Token: 0x04017D4E RID: 97614
 		[Nullable(2)]
 		private IMapSceneGameplayUnlockData Data;
 	}

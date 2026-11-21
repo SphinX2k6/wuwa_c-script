@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006224 RID: 25124
+	// Token: 0x020051A2 RID: 20898
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RhythmShipLevelDetailPanel : UiPanelBase
 	{
-		// Token: 0x0603F5CB RID: 259531 RVA: 0x00F50D24 File Offset: 0x00F4EF24
+		// Token: 0x0603428C RID: 213644 RVA: 0x00E97C7C File Offset: 0x00E95E7C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5CC RID: 259532 RVA: 0x00F50EE4 File Offset: 0x00F4F0E4
+		// Token: 0x0603428D RID: 213645 RVA: 0x00E97E3C File Offset: 0x00E9603C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipLevelDetailPanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F5CD RID: 259533 RVA: 0x00F50F28 File Offset: 0x00F4F128
+		// Token: 0x0603428E RID: 213646 RVA: 0x00E97E80 File Offset: 0x00E96080
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<StarItem, bool>(base.GetHorizontalLayout(4), new Func<StarItem>(this.InitStarItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
@@ -67,21 +67,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			EventSystem.Instance.Add(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F5CE RID: 259534 RVA: 0x00F50FAA File Offset: 0x00F4F1AA
+		// Token: 0x0603428F RID: 213647 RVA: 0x00E97F02 File Offset: 0x00E96102
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipSelectRoleRefresh, new Action(this.RefreshRolePanel));
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F5CF RID: 259535 RVA: 0x00F50FE4 File Offset: 0x00F4F1E4
+		// Token: 0x06034290 RID: 213648 RVA: 0x00E97F3C File Offset: 0x00E9613C
 		[NullableContext(1)]
 		private StarItem InitStarItem()
 		{
 			return new StarItem();
 		}
 
-		// Token: 0x0603F5D0 RID: 259536 RVA: 0x00F50FEC File Offset: 0x00F4F1EC
+		// Token: 0x06034291 RID: 213649 RVA: 0x00E97F44 File Offset: 0x00E96144
 		public void RefreshPanelByLevelId(int levelId, int? subLevelId = null)
 		{
 			this.LevelId = levelId;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.SelectDifficultyToggleOnRefresh(rhythmShipSubLevelByLevelId, subLevelId);
 		}
 
-		// Token: 0x0603F5D1 RID: 259537 RVA: 0x00F510F4 File Offset: 0x00F4F2F4
+		// Token: 0x06034292 RID: 213650 RVA: 0x00E9804C File Offset: 0x00E9624C
 		private int FindSubLevelId(IReadOnlyList<RhythmSubLevel> subLevelList, ERhythmShipLevelDifficulty difficulty)
 		{
 			if (subLevelList == null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return 0;
 		}
 
-		// Token: 0x0603F5D2 RID: 259538 RVA: 0x00F51154 File Offset: 0x00F4F354
+		// Token: 0x06034293 RID: 213651 RVA: 0x00E980AC File Offset: 0x00E962AC
 		private void SelectDifficultyToggleOnRefresh(IReadOnlyList<RhythmSubLevel> subLevelList, int? subLevelId)
 		{
 			int num = 0;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.ReadAllSubLevelRedDot();
 		}
 
-		// Token: 0x0603F5D3 RID: 259539 RVA: 0x00F512B4 File Offset: 0x00F4F4B4
+		// Token: 0x06034294 RID: 213652 RVA: 0x00E9820C File Offset: 0x00E9640C
 		private void ReadAllSubLevelRedDot()
 		{
 			List<int> list = new List<int>();
@@ -224,13 +224,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			RhythmShipController.Instance.RhythmSetRedDotRequest(null, list, null);
 		}
 
-		// Token: 0x0603F5D4 RID: 259540 RVA: 0x00F5133B File Offset: 0x00F4F53B
+		// Token: 0x06034295 RID: 213653 RVA: 0x00E98293 File Offset: 0x00E96493
 		private bool IsSubLevelNeedClearRedRot(DifficultyItem difficultyItem)
 		{
 			return difficultyItem != null && difficultyItem.IsUnLock && difficultyItem.HaveRedDotItem;
 		}
 
-		// Token: 0x0603F5D5 RID: 259541 RVA: 0x00F51354 File Offset: 0x00F4F554
+		// Token: 0x06034296 RID: 213654 RVA: 0x00E982AC File Offset: 0x00E964AC
 		private void RefreshPanelAboutDifficulty()
 		{
 			IEnumerable<RhythmSubLevel> enumerable = RhythmShipConfig.Instance.GetRhythmShipSubLevelByLevelId(this.LevelId) ?? new List<RhythmSubLevel>();
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.SetTextureByPath(resourcePath, base.GetTexture(8), null, null);
 		}
 
-		// Token: 0x0603F5D6 RID: 259542 RVA: 0x00F51544 File Offset: 0x00F4F744
+		// Token: 0x06034297 RID: 213655 RVA: 0x00E9849C File Offset: 0x00E9669C
 		private void RefreshRolePanel()
 		{
 			RhythmShipData activityData = RhythmShipModel.Instance.ActivityData;
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.SetTextureByPath(rhythmRoleById.Value.RoleHeadTexture, base.GetTexture(13), null, null);
 		}
 
-		// Token: 0x0603F5D7 RID: 259543 RVA: 0x00F515E0 File Offset: 0x00F4F7E0
+		// Token: 0x06034298 RID: 213656 RVA: 0x00E98538 File Offset: 0x00E96738
 		private void OnClickRankingBtn()
 		{
 			RhythmShipRatingViewData param = new RhythmShipRatingViewData
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipRatingView, param, null);
 		}
 
-		// Token: 0x0603F5D8 RID: 259544 RVA: 0x00F5161C File Offset: 0x00F4F81C
+		// Token: 0x06034299 RID: 213657 RVA: 0x00E98574 File Offset: 0x00E96774
 		private void OnClickStartBtn()
 		{
 			if (!RhythmShipModel.Instance.GetSubLevelIsUnlock(this.SubLevelId))
@@ -334,13 +334,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			RhythmShipController.Instance.StartRequest(this.SubLevelId, this.LevelId);
 		}
 
-		// Token: 0x0603F5D9 RID: 259545 RVA: 0x00F51700 File Offset: 0x00F4F900
+		// Token: 0x0603429A RID: 213658 RVA: 0x00E98658 File Offset: 0x00E96858
 		private void OnClickRoleBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipChoseRoleView, null, null);
 		}
 
-		// Token: 0x0603F5DA RID: 259546 RVA: 0x00F51714 File Offset: 0x00F4F914
+		// Token: 0x0603429B RID: 213659 RVA: 0x00E9866C File Offset: 0x00E9686C
 		[NullableContext(1)]
 		private void OnClickDifficultyItem(int subLevel, UUIExtendToggle toggle)
 		{
@@ -365,13 +365,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshPanelAboutDifficulty();
 		}
 
-		// Token: 0x0603F5DB RID: 259547 RVA: 0x00F51778 File Offset: 0x00F4F978
+		// Token: 0x0603429C RID: 213660 RVA: 0x00E986D0 File Offset: 0x00E968D0
 		private void RefreshRoleRedDotItem()
 		{
 			base.GetItem(15).SetUIActive(RhythmShipModel.Instance.GetAnyRoleRedDotActive());
 		}
 
-		// Token: 0x0603F5DC RID: 259548 RVA: 0x00F51791 File Offset: 0x00F4F991
+		// Token: 0x0603429D RID: 213661 RVA: 0x00E986E9 File Offset: 0x00E968E9
 		private void OnRhythmShipRedDotRefresh(List<int> planet, List<int> subLevel, List<int> role)
 		{
 			if (role == null)
@@ -381,28 +381,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshRoleRedDotItem();
 		}
 
-		// Token: 0x04021136 RID: 135478
+		// Token: 0x0401BA65 RID: 113253
 		private int LevelId;
 
-		// Token: 0x04021137 RID: 135479
+		// Token: 0x0401BA66 RID: 113254
 		private int SubLevelId;
 
-		// Token: 0x04021138 RID: 135480
+		// Token: 0x0401BA67 RID: 113255
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x04021139 RID: 135481
+		// Token: 0x0401BA68 RID: 113256
 		private SongLevelDetailPanel SongDetailPanelIns;
 
-		// Token: 0x0402113A RID: 135482
+		// Token: 0x0401BA69 RID: 113257
 		private DifficultyItem EasyItem;
 
-		// Token: 0x0402113B RID: 135483
+		// Token: 0x0401BA6A RID: 113258
 		private DifficultyItem MiddleItem;
 
-		// Token: 0x0402113C RID: 135484
+		// Token: 0x0401BA6B RID: 113259
 		private DifficultyItem DifficultyItemIns;
 
-		// Token: 0x0402113D RID: 135485
+		// Token: 0x0401BA6C RID: 113260
 		[Nullable(new byte[]
 		{
 			2,

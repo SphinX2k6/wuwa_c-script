@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FD2 RID: 28626
+	// Token: 0x0200779B RID: 30619
 	public class ISetCameraAnimT
 	{
-		// Token: 0x1700D485 RID: 54405
-		// (get) Token: 0x06032993 RID: 207251 RVA: 0x006D3C7F File Offset: 0x006D1E7F
-		// (set) Token: 0x06032994 RID: 207252 RVA: 0x006D3C87 File Offset: 0x006D1E87
+		// Token: 0x1700E059 RID: 57433
+		// (get) Token: 0x06035BF9 RID: 220153 RVA: 0x007338C3 File Offset: 0x00731AC3
+		// (set) Token: 0x06035BFA RID: 220154 RVA: 0x007338CB File Offset: 0x00731ACB
 		public string CameraAnimDataAsset { get; set; }
 
-		// Token: 0x1700D486 RID: 54406
-		// (get) Token: 0x06032995 RID: 207253 RVA: 0x006D3C90 File Offset: 0x006D1E90
-		// (set) Token: 0x06032996 RID: 207254 RVA: 0x006D3C98 File Offset: 0x006D1E98
+		// Token: 0x1700E05A RID: 57434
+		// (get) Token: 0x06035BFB RID: 220155 RVA: 0x007338D4 File Offset: 0x00731AD4
+		// (set) Token: 0x06035BFC RID: 220156 RVA: 0x007338DC File Offset: 0x00731ADC
 		public float Speed { get; set; }
 
-		// Token: 0x1700D487 RID: 54407
-		// (get) Token: 0x06032997 RID: 207255 RVA: 0x006D3CA1 File Offset: 0x006D1EA1
-		// (set) Token: 0x06032998 RID: 207256 RVA: 0x006D3CA9 File Offset: 0x006D1EA9
+		// Token: 0x1700E05B RID: 57435
+		// (get) Token: 0x06035BFD RID: 220157 RVA: 0x007338E5 File Offset: 0x00731AE5
+		// (set) Token: 0x06035BFE RID: 220158 RVA: 0x007338ED File Offset: 0x00731AED
 		public bool UseNoise { get; set; }
 
-		// Token: 0x1700D488 RID: 54408
-		// (get) Token: 0x06032999 RID: 207257 RVA: 0x006D3CB2 File Offset: 0x006D1EB2
-		// (set) Token: 0x0603299A RID: 207258 RVA: 0x006D3CBA File Offset: 0x006D1EBA
+		// Token: 0x1700E05C RID: 57436
+		// (get) Token: 0x06035BFF RID: 220159 RVA: 0x007338F6 File Offset: 0x00731AF6
+		// (set) Token: 0x06035C00 RID: 220160 RVA: 0x007338FE File Offset: 0x00731AFE
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603299B RID: 207259 RVA: 0x006D3CC3 File Offset: 0x006D1EC3
+		// Token: 0x06035C01 RID: 220161 RVA: 0x00733907 File Offset: 0x00731B07
 		public ISetCameraAnimT()
 		{
 			this.CameraAnimDataAsset = null;

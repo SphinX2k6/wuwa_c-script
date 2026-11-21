@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025AE RID: 9646
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200285D RID: 10333
 	public class IPlotConfig
 	{
-		// Token: 0x0600D8FE RID: 55550 RVA: 0x00206126 File Offset: 0x00204326
+		// Token: 0x0600E678 RID: 59000 RVA: 0x00221DFA File Offset: 0x0021FFFA
 		public static IPlotConfig Create(IPlotConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F64 RID: 16228
-		// (get) Token: 0x0600D8FF RID: 55551 RVA: 0x00206145 File Offset: 0x00204345
+		// Token: 0x1700426C RID: 17004
+		// (get) Token: 0x0600E679 RID: 59001 RVA: 0x00221E19 File Offset: 0x00220019
 		public virtual string EdPlotNode
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F65 RID: 16229
-		// (get) Token: 0x0600D900 RID: 55552 RVA: 0x00206148 File Offset: 0x00204348
+		// Token: 0x1700426D RID: 17005
+		// (get) Token: 0x0600E67A RID: 59002 RVA: 0x00221E1C File Offset: 0x0022001C
 		public virtual bool EdPlotHandleJump
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F66 RID: 16230
-		// (get) Token: 0x0600D901 RID: 55553 RVA: 0x0020614B File Offset: 0x0020434B
+		// Token: 0x1700426E RID: 17006
+		// (get) Token: 0x0600E67B RID: 59003 RVA: 0x00221E1F File Offset: 0x0022001F
 		public virtual string EdPlotFileId
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F67 RID: 16231
-		// (get) Token: 0x0600D902 RID: 55554 RVA: 0x00206150 File Offset: 0x00204350
+		// Token: 0x1700426F RID: 17007
+		// (get) Token: 0x0600E67C RID: 59004 RVA: 0x00221E24 File Offset: 0x00220024
 		public virtual EVisualNovelLayout? EdPlotLayout
 		{
 			get
@@ -62,7 +59,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400788C RID: 30860
+		// Token: 0x04007EF3 RID: 32499
 		private IPlotConfig Instance;
 	}
 }

@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200237E RID: 9086
+// Token: 0x02001863 RID: 6243
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 {
-	// Token: 0x0601226F RID: 74351 RVA: 0x004761E4 File Offset: 0x004743E4
+	// Token: 0x0600F71F RID: 63263 RVA: 0x00483364 File Offset: 0x00481564
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 26;
@@ -92,7 +92,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012270 RID: 74352 RVA: 0x004765D7 File Offset: 0x004747D7
+	// Token: 0x0600F720 RID: 63264 RVA: 0x00483757 File Offset: 0x00481957
 	protected override void OnStart()
 	{
 		base.GetButton(0).SetCanClickWhenDisable(true);
@@ -104,20 +104,20 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		base.GetTexture(14).SetUIActive(false);
 	}
 
-	// Token: 0x06012271 RID: 74353 RVA: 0x00476608 File Offset: 0x00474808
+	// Token: 0x0600F721 RID: 63265 RVA: 0x00483788 File Offset: 0x00481988
 	public void SetOnClickRechargeCallback(Action<PayItemData> callback)
 	{
 		this.OnClickRechargeCallback = callback;
 	}
 
-	// Token: 0x06012272 RID: 74354 RVA: 0x00476611 File Offset: 0x00474811
+	// Token: 0x0600F722 RID: 63266 RVA: 0x00483791 File Offset: 0x00481991
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.DiscountShopTimerRefresh, new Action(this.OnDiscountShopTimerRefresh));
 		EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06012273 RID: 74355 RVA: 0x0047664C File Offset: 0x0047484C
+	// Token: 0x0600F723 RID: 63267 RVA: 0x004837CC File Offset: 0x004819CC
 	[NullableContext(2)]
 	public override void Refresh(IPayShopUnionData data, bool isSelected, int gridIndex)
 	{
@@ -179,7 +179,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.RefreshRechargeItem();
 	}
 
-	// Token: 0x06012274 RID: 74356 RVA: 0x00476844 File Offset: 0x00474A44
+	// Token: 0x0600F724 RID: 63268 RVA: 0x004839C4 File Offset: 0x00481BC4
 	private void RefreshQualityTexture(int quality, EItemQualityType qualityType)
 	{
 		QualityInfo? qualityConfig = ItemConfig.Instance.GetQualityConfig(quality);
@@ -203,7 +203,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		base.GetTexture(18).SetColor(FColor.FromHex(hexStr));
 	}
 
-	// Token: 0x06012275 RID: 74357 RVA: 0x00476920 File Offset: 0x00474B20
+	// Token: 0x0600F725 RID: 63269 RVA: 0x00483AA0 File Offset: 0x00481CA0
 	public void RefreshCommonItem()
 	{
 		if (this.Data == null || this.Data is PayItemData)
@@ -217,7 +217,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.RefreshTotalScoreTagForGoods((PayShopGoods)this.Data);
 	}
 
-	// Token: 0x06012276 RID: 74358 RVA: 0x00476998 File Offset: 0x00474B98
+	// Token: 0x0600F726 RID: 63270 RVA: 0x00483B18 File Offset: 0x00481D18
 	public void RefreshRechargeItem()
 	{
 		if (this.Data == null || this.Data is PayShopGoods)
@@ -228,7 +228,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.RefreshTotalScoreTagForItem((PayItemData)this.Data);
 	}
 
-	// Token: 0x06012277 RID: 74359 RVA: 0x004769D4 File Offset: 0x00474BD4
+	// Token: 0x0600F727 RID: 63271 RVA: 0x00483B54 File Offset: 0x00481D54
 	private void RefreshDiscount(PayShopGoods data)
 	{
 		PayShopBigItem.<>c__DisplayClass26_0 CS$<>8__locals1 = new PayShopBigItem.<>c__DisplayClass26_0();
@@ -247,19 +247,19 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.SetTagVisible(PayShopDefine.EPayShopTagType.Discount, isVisible, new Action(CS$<>8__locals1.<RefreshDiscount>g__callback|0), true);
 	}
 
-	// Token: 0x06012278 RID: 74360 RVA: 0x00476A3B File Offset: 0x00474C3B
+	// Token: 0x0600F728 RID: 63272 RVA: 0x00483BBB File Offset: 0x00481DBB
 	private void RefreshTotalScoreTagForGoods(PayShopGoods data)
 	{
 		this.SetTagVisible(PayShopDefine.EPayShopTagType.TotalTopUp, data.GetIfShowTotalTopUpScore(), new Action(PayShopBigItem.<RefreshTotalScoreTagForGoods>g__callback|27_0), true);
 	}
 
-	// Token: 0x06012279 RID: 74361 RVA: 0x00476A58 File Offset: 0x00474C58
+	// Token: 0x0600F729 RID: 63273 RVA: 0x00483BD8 File Offset: 0x00481DD8
 	private void RefreshTotalScoreTagForItem(PayItemData data)
 	{
 		this.SetTagVisible(PayShopDefine.EPayShopTagType.TotalTopUp, data.GetIfShowTotalTopUpScore(), new Action(PayShopBigItem.<RefreshTotalScoreTagForItem>g__callback|28_0), true);
 	}
 
-	// Token: 0x0601227A RID: 74362 RVA: 0x00476A78 File Offset: 0x00474C78
+	// Token: 0x0600F72A RID: 63274 RVA: 0x00483BF8 File Offset: 0x00481DF8
 	private void RefreshCountDown(PayShopGoods data)
 	{
 		ValueTuple<EPayCountTimeType, CommonDefine.IPayShowCountDownRemainTime, double> countDownData = data.GetCountDownData();
@@ -274,7 +274,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.SetCountDownText(item);
 	}
 
-	// Token: 0x0601227B RID: 74363 RVA: 0x00476AD4 File Offset: 0x00474CD4
+	// Token: 0x0600F72B RID: 63275 RVA: 0x00483C54 File Offset: 0x00481E54
 	private void SetCountDownText(CommonDefine.IPayShowCountDownRemainTime countDownTime)
 	{
 		base.GetItem(9).SetUIActive(true);
@@ -293,7 +293,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		}
 	}
 
-	// Token: 0x0601227C RID: 74364 RVA: 0x00476B54 File Offset: 0x00474D54
+	// Token: 0x0600F72C RID: 63276 RVA: 0x00483CD4 File Offset: 0x00481ED4
 	private void RefreshShopItemState(PayShopGoods data)
 	{
 		PayShopBigItem.<>c__DisplayClass31_0 CS$<>8__locals1 = new PayShopBigItem.<>c__DisplayClass31_0();
@@ -305,7 +305,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.SetTagVisible(PayShopDefine.EPayShopTagType.Lock, isVisible2, new Action(CS$<>8__locals1.<RefreshShopItemState>g__callback2|1), false);
 	}
 
-	// Token: 0x0601227D RID: 74365 RVA: 0x00476BCC File Offset: 0x00474DCC
+	// Token: 0x0600F72D RID: 63277 RVA: 0x00483D4C File Offset: 0x00481F4C
 	private void RefreshCommonItemTag(PayShopGoods data)
 	{
 		PayShopBigItem.<>c__DisplayClass32_0 CS$<>8__locals1 = new PayShopBigItem.<>c__DisplayClass32_0();
@@ -323,7 +323,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.SetTagVisible((PayShopDefine.EPayShopTagType)this.CurrentTagType, isVisible, new Action(CS$<>8__locals1.<RefreshCommonItemTag>g__callback|1), true);
 	}
 
-	// Token: 0x0601227E RID: 74366 RVA: 0x00476C78 File Offset: 0x00474E78
+	// Token: 0x0600F72E RID: 63278 RVA: 0x00483DF8 File Offset: 0x00481FF8
 	private void RefreshRechargeItemTag(PayItemData data)
 	{
 		PayShopBigItem.<>c__DisplayClass33_0 CS$<>8__locals1 = new PayShopBigItem.<>c__DisplayClass33_0();
@@ -335,7 +335,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		this.SetTagVisible(PayShopDefine.EPayShopTagType.RechargeDouble, isVisible, new Action(CS$<>8__locals1.<RefreshRechargeItemTag>g__callback2|1), true);
 	}
 
-	// Token: 0x0601227F RID: 74367 RVA: 0x00476CE8 File Offset: 0x00474EE8
+	// Token: 0x0600F72F RID: 63279 RVA: 0x00483E68 File Offset: 0x00482068
 	private void RefreshGachaDescItem()
 	{
 		if (!PayShopModel.Instance.BusinessCompliance)
@@ -353,7 +353,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		}
 	}
 
-	// Token: 0x06012280 RID: 74368 RVA: 0x00476DBC File Offset: 0x00474FBC
+	// Token: 0x0600F730 RID: 63280 RVA: 0x00483F3C File Offset: 0x0048213C
 	private void SetTagVisible(PayShopDefine.EPayShopTagType tagType, bool isVisible, Action callback, bool inLeftTop = true)
 	{
 		PayShopTagItem payShopTagItem = null;
@@ -374,7 +374,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		callback();
 	}
 
-	// Token: 0x06012281 RID: 74369 RVA: 0x00476E28 File Offset: 0x00475028
+	// Token: 0x0600F731 RID: 63281 RVA: 0x00483FA8 File Offset: 0x004821A8
 	private UniTask BuildTag(PayShopDefine.EPayShopTagType tagType, Action callback, bool inLeftTop = true)
 	{
 		PayShopBigItem.<BuildTag>d__36 <BuildTag>d__;
@@ -388,7 +388,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		return <BuildTag>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012282 RID: 74370 RVA: 0x00476E83 File Offset: 0x00475083
+	// Token: 0x0600F732 RID: 63282 RVA: 0x00484003 File Offset: 0x00482203
 	private string GetTagResourceId(PayShopDefine.EPayShopTagType tagType)
 	{
 		if (tagType == PayShopDefine.EPayShopTagType.TotalTopUp)
@@ -399,7 +399,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		return PayShopDefine.payShopTagTypeToResourceId[tagType];
 	}
 
-	// Token: 0x06012283 RID: 74371 RVA: 0x00476EB0 File Offset: 0x004750B0
+	// Token: 0x0600F733 RID: 63283 RVA: 0x00484030 File Offset: 0x00482230
 	private void RefreshOriginalPriceText()
 	{
 		UUIText text = base.GetText(6);
@@ -413,7 +413,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		text.SetText("<s>" + priceData.OriginalPrice.ToString() + "</s>", true);
 	}
 
-	// Token: 0x06012284 RID: 74372 RVA: 0x00476F28 File Offset: 0x00475128
+	// Token: 0x0600F734 RID: 63284 RVA: 0x004840A8 File Offset: 0x004822A8
 	private void RefreshPrice()
 	{
 		string text = "FFEF6FFF";
@@ -453,7 +453,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		text2.SetColor(FColor.FromHex(text));
 	}
 
-	// Token: 0x06012285 RID: 74373 RVA: 0x0047704C File Offset: 0x0047524C
+	// Token: 0x0600F735 RID: 63285 RVA: 0x004841CC File Offset: 0x004823CC
 	private void RefreshLeftTimesText()
 	{
 		UUIText text = base.GetText(4);
@@ -468,7 +468,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06012286 RID: 74374 RVA: 0x004770A1 File Offset: 0x004752A1
+	// Token: 0x0600F736 RID: 63286 RVA: 0x00484221 File Offset: 0x00482421
 	public void RefreshRedDot()
 	{
 		if (this.DataSt.RedDotExistFunc != null)
@@ -479,7 +479,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		base.GetItem(8).SetUIActive(false);
 	}
 
-	// Token: 0x06012287 RID: 74375 RVA: 0x004770DC File Offset: 0x004752DC
+	// Token: 0x0600F737 RID: 63287 RVA: 0x0048425C File Offset: 0x0048245C
 	private void RefreshEffect(int quality, EItemQualityType qualityType)
 	{
 		List<int> list = new List<int>();
@@ -520,14 +520,14 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		}
 	}
 
-	// Token: 0x06012288 RID: 74376 RVA: 0x004771F8 File Offset: 0x004753F8
+	// Token: 0x0600F738 RID: 63288 RVA: 0x00484378 File Offset: 0x00482578
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.DiscountShopTimerRefresh, new Action(this.OnDiscountShopTimerRefresh));
 		EventSystem.Instance.Remove(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06012289 RID: 74377 RVA: 0x00477234 File Offset: 0x00475434
+	// Token: 0x0600F739 RID: 63289 RVA: 0x004843B4 File Offset: 0x004825B4
 	private void OnDiscountShopTimerRefresh()
 	{
 		if (this.Data == null || !base.IsUiActiveInHierarchy())
@@ -548,7 +548,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		}
 	}
 
-	// Token: 0x0601228A RID: 74378 RVA: 0x004772A8 File Offset: 0x004754A8
+	// Token: 0x0600F73A RID: 63290 RVA: 0x00484428 File Offset: 0x00482628
 	private bool IsCountDownChange(PayShopGoods data)
 	{
 		double item = data.GetCountDownData().Item3;
@@ -565,7 +565,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		return false;
 	}
 
-	// Token: 0x0601228B RID: 74379 RVA: 0x004772FC File Offset: 0x004754FC
+	// Token: 0x0600F73B RID: 63291 RVA: 0x0048447C File Offset: 0x0048267C
 	private bool IsDiscountChange(PayShopGoods data)
 	{
 		bool flag = data.HasDiscount();
@@ -588,7 +588,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		return false;
 	}
 
-	// Token: 0x0601228C RID: 74380 RVA: 0x00477358 File Offset: 0x00475558
+	// Token: 0x0600F73C RID: 63292 RVA: 0x004844D8 File Offset: 0x004826D8
 	protected void TryEmitRefreshTips()
 	{
 		PayShopController.Instance.ClosePayShopGoodDetailPopView();
@@ -603,7 +603,7 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		EventSystem.Instance.Emit<int, bool>(EEventName.RefreshPayShop, (int)((PayShopGoods)this.Data).PayShopId, true);
 	}
 
-	// Token: 0x0601228D RID: 74381 RVA: 0x004773AC File Offset: 0x004755AC
+	// Token: 0x0600F73D RID: 63293 RVA: 0x0048452C File Offset: 0x0048272C
 	private unsafe void OnPayItemSuccess(PayItemSuccess notify)
 	{
 		if (this.Data is PayShopGoods || notify.PayItemId != ((PayItemData)this.Data).PayItemId)
@@ -623,13 +623,13 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601228E RID: 74382 RVA: 0x00477482 File Offset: 0x00475682
+	// Token: 0x0600F73E RID: 63294 RVA: 0x00484602 File Offset: 0x00482802
 	private void OnClickExplainBtn()
 	{
 		HelpController.Instance.OpenHelpById(9);
 	}
 
-	// Token: 0x0601228F RID: 74383 RVA: 0x00477490 File Offset: 0x00475690
+	// Token: 0x0600F73F RID: 63295 RVA: 0x00484610 File Offset: 0x00482810
 	private void OnClickItem()
 	{
 		PayItemData payItemData = this.Data as PayItemData;
@@ -663,33 +663,33 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 		onClickRechargeCallback(payItemData);
 	}
 
-	// Token: 0x06012291 RID: 74385 RVA: 0x004775D1 File Offset: 0x004757D1
+	// Token: 0x0600F741 RID: 63297 RVA: 0x00484751 File Offset: 0x00482951
 	[CompilerGenerated]
 	internal static void <RefreshTotalScoreTagForGoods>g__callback|27_0()
 	{
 	}
 
-	// Token: 0x06012292 RID: 74386 RVA: 0x004775D3 File Offset: 0x004757D3
+	// Token: 0x0600F742 RID: 63298 RVA: 0x00484753 File Offset: 0x00482953
 	[CompilerGenerated]
 	internal static void <RefreshTotalScoreTagForItem>g__callback|28_0()
 	{
 	}
 
-	// Token: 0x0400892C RID: 35116
+	// Token: 0x04008A71 RID: 35441
 	private const string NORMALCOLOR = "FFEF6FFF";
 
-	// Token: 0x0400892D RID: 35117
+	// Token: 0x04008A72 RID: 35442
 	private const string REDCOLOR = "F55E66FF";
 
-	// Token: 0x0400892E RID: 35118
+	// Token: 0x04008A73 RID: 35443
 	[Nullable(2)]
 	private IPayShopUnionData Data;
 
-	// Token: 0x0400892F RID: 35119
+	// Token: 0x04008A74 RID: 35444
 	[Nullable(2)]
 	private PayShopItemBaseSt DataSt;
 
-	// Token: 0x04008930 RID: 35120
+	// Token: 0x04008A75 RID: 35445
 	[Nullable(new byte[]
 	{
 		1,
@@ -697,14 +697,14 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 	})]
 	private readonly Dictionary<PayShopDefine.EPayShopTagType, PayShopTagItem> TagItemMap = new Dictionary<PayShopDefine.EPayShopTagType, PayShopTagItem>();
 
-	// Token: 0x04008931 RID: 35121
+	// Token: 0x04008A76 RID: 35446
 	private UniTask? TagConstructPromise;
 
-	// Token: 0x04008932 RID: 35122
+	// Token: 0x04008A77 RID: 35447
 	[Nullable(2)]
 	private IPriceData CachePriceData;
 
-	// Token: 0x04008933 RID: 35123
+	// Token: 0x04008A78 RID: 35448
 	[Nullable(new byte[]
 	{
 		2,
@@ -712,125 +712,125 @@ public class PayShopBigItem : GridProxyAbstract<IPayShopUnionData>
 	})]
 	private Action<PayItemData> OnClickRechargeCallback;
 
-	// Token: 0x04008934 RID: 35124
+	// Token: 0x04008A79 RID: 35449
 	private bool CurrentDiscountItemState;
 
-	// Token: 0x04008935 RID: 35125
+	// Token: 0x04008A7A RID: 35450
 	private int CurrentDiscountValue;
 
-	// Token: 0x04008936 RID: 35126
+	// Token: 0x04008A7B RID: 35451
 	private bool CurrentCountDownState = true;
 
-	// Token: 0x04008937 RID: 35127
+	// Token: 0x04008A7C RID: 35452
 	private EPayCountTimeType CountDownType;
 
-	// Token: 0x04008938 RID: 35128
+	// Token: 0x04008A7D RID: 35453
 	private string CurrentPriceColor = "";
 
-	// Token: 0x04008939 RID: 35129
+	// Token: 0x04008A7E RID: 35454
 	private int CurrentTagType;
 
-	// Token: 0x0400893A RID: 35130
+	// Token: 0x04008A7F RID: 35455
 	private List<int> PurpleEffectArray = new List<int>
 	{
 		21,
 		22
 	};
 
-	// Token: 0x0400893B RID: 35131
+	// Token: 0x04008A80 RID: 35456
 	private List<int> GoldEffectArray = new List<int>
 	{
 		23,
 		24
 	};
 
-	// Token: 0x0400893C RID: 35132
+	// Token: 0x04008A81 RID: 35457
 	private List<int> SpecialGoldEffectArray = new List<int>
 	{
 		25,
 		26
 	};
 
-	// Token: 0x0200891B RID: 35099
+	// Token: 0x02007AA5 RID: 31397
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402C900 RID: 182528
+		// Token: 0x04027C18 RID: 162840
 		public const int BtnBuy = 0;
 
-		// Token: 0x0402C901 RID: 182529
+		// Token: 0x04027C19 RID: 162841
 		public const int TextureQuality = 1;
 
-		// Token: 0x0402C902 RID: 182530
+		// Token: 0x04027C1A RID: 162842
 		public const int TextureIcon = 2;
 
-		// Token: 0x0402C903 RID: 182531
+		// Token: 0x04027C1B RID: 162843
 		public const int TextName = 3;
 
-		// Token: 0x0402C904 RID: 182532
+		// Token: 0x04027C1C RID: 162844
 		public const int TextLeftTimes = 4;
 
-		// Token: 0x0402C905 RID: 182533
+		// Token: 0x04027C1D RID: 162845
 		public const int TextPrice = 5;
 
-		// Token: 0x0402C906 RID: 182534
+		// Token: 0x04027C1E RID: 162846
 		public const int TextOriginalPrice = 6;
 
-		// Token: 0x0402C907 RID: 182535
+		// Token: 0x04027C1F RID: 162847
 		public const int BtnHelp = 7;
 
-		// Token: 0x0402C908 RID: 182536
+		// Token: 0x04027C20 RID: 162848
 		public const int ItemRedDot = 8;
 
-		// Token: 0x0402C909 RID: 182537
+		// Token: 0x04027C21 RID: 162849
 		public const int ItemCountDown = 9;
 
-		// Token: 0x0402C90A RID: 182538
+		// Token: 0x04027C22 RID: 162850
 		public const int TextCountDown = 10;
 
-		// Token: 0x0402C90B RID: 182539
+		// Token: 0x04027C23 RID: 162851
 		public const int ItemStatePanel = 11;
 
-		// Token: 0x0402C90C RID: 182540
+		// Token: 0x04027C24 RID: 162852
 		public const int ItemTagPanel = 12;
 
-		// Token: 0x0402C90D RID: 182541
+		// Token: 0x04027C25 RID: 162853
 		public const int TexturePriceIcon = 13;
 
-		// Token: 0x0402C90E RID: 182542
+		// Token: 0x04027C26 RID: 162854
 		public const int TextureTimeBg = 14;
 
-		// Token: 0x0402C90F RID: 182543
+		// Token: 0x04027C27 RID: 162855
 		public const int GachaDescItem = 15;
 
-		// Token: 0x0402C910 RID: 182544
+		// Token: 0x04027C28 RID: 162856
 		public const int GachaRewardText = 16;
 
-		// Token: 0x0402C911 RID: 182545
+		// Token: 0x04027C29 RID: 162857
 		public const int GachaRewardPriceText = 17;
 
-		// Token: 0x0402C912 RID: 182546
+		// Token: 0x04027C2A RID: 162858
 		public const int TextureQualityLine = 18;
 
-		// Token: 0x0402C913 RID: 182547
+		// Token: 0x04027C2B RID: 162859
 		public const int TextureQualityLineLight = 19;
 
-		// Token: 0x0402C914 RID: 182548
+		// Token: 0x04027C2C RID: 162860
 		public const int PurpleNiagaraEffect = 21;
 
-		// Token: 0x0402C915 RID: 182549
+		// Token: 0x04027C2D RID: 162861
 		public const int PurpleStarEffect = 22;
 
-		// Token: 0x0402C916 RID: 182550
+		// Token: 0x04027C2E RID: 162862
 		public const int GoldNiagaraEffect = 23;
 
-		// Token: 0x0402C917 RID: 182551
+		// Token: 0x04027C2F RID: 162863
 		public const int GoldStarEffect = 24;
 
-		// Token: 0x0402C918 RID: 182552
+		// Token: 0x04027C30 RID: 162864
 		public const int SpecialGoldNiagaraEffect = 25;
 
-		// Token: 0x0402C919 RID: 182553
+		// Token: 0x04027C31 RID: 162865
 		public const int SpecialGoldStarEffect = 26;
 	}
 }

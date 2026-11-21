@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004892 RID: 18578
+	// Token: 0x02004CF7 RID: 19703
 	public struct IP4SyncData : IFlatbufferObject
 	{
-		// Token: 0x170086C1 RID: 34497
-		// (get) Token: 0x0601CFDC RID: 118748 RVA: 0x004189C4 File Offset: 0x00416BC4
+		// Token: 0x17008D09 RID: 36105
+		// (get) Token: 0x0601E7C9 RID: 124873 RVA: 0x00445160 File Offset: 0x00443360
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CFDD RID: 118749 RVA: 0x004189D1 File Offset: 0x00416BD1
+		// Token: 0x0601E7CA RID: 124874 RVA: 0x0044516D File Offset: 0x0044336D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CFDE RID: 118750 RVA: 0x004189D8 File Offset: 0x00416BD8
+		// Token: 0x0601E7CB RID: 124875 RVA: 0x00445174 File Offset: 0x00443374
 		public static IP4SyncData GetRootAsIP4SyncData(ByteBuffer _bb)
 		{
 			return IP4SyncData.GetRootAsIP4SyncData(_bb, default(IP4SyncData));
 		}
 
-		// Token: 0x0601CFDF RID: 118751 RVA: 0x004189F4 File Offset: 0x00416BF4
+		// Token: 0x0601E7CC RID: 124876 RVA: 0x00445190 File Offset: 0x00443390
 		public static IP4SyncData GetRootAsIP4SyncData(ByteBuffer _bb, IP4SyncData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CFE0 RID: 118752 RVA: 0x00418A11 File Offset: 0x00416C11
+		// Token: 0x0601E7CD RID: 124877 RVA: 0x004451AD File Offset: 0x004433AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CFE1 RID: 118753 RVA: 0x00418A20 File Offset: 0x00416C20
+		// Token: 0x0601E7CE RID: 124878 RVA: 0x004451BC File Offset: 0x004433BC
 		public IP4SyncData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170086C2 RID: 34498
-		// (get) Token: 0x0601CFE2 RID: 118754 RVA: 0x00418A30 File Offset: 0x00416C30
+		// Token: 0x17008D0A RID: 36106
+		// (get) Token: 0x0601E7CF RID: 124879 RVA: 0x004451CC File Offset: 0x004433CC
 		public EP4SyncMethodType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CFE3 RID: 118755 RVA: 0x00418A6C File Offset: 0x00416C6C
+		// Token: 0x0601E7D0 RID: 124880 RVA: 0x00445208 File Offset: 0x00443408
 		public static Offset<IP4SyncData> CreateIP4SyncData(FlatBufferBuilder builder, EP4SyncMethodType Type = EP4SyncMethodType.EditorSavior)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IP4SyncData.EndIP4SyncData(builder);
 		}
 
-		// Token: 0x0601CFE4 RID: 118756 RVA: 0x00418A82 File Offset: 0x00416C82
+		// Token: 0x0601E7D1 RID: 124881 RVA: 0x0044521E File Offset: 0x0044341E
 		public static void StartIP4SyncData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601CFE5 RID: 118757 RVA: 0x00418A8B File Offset: 0x00416C8B
+		// Token: 0x0601E7D2 RID: 124882 RVA: 0x00445227 File Offset: 0x00443427
 		public static void AddType(FlatBufferBuilder builder, EP4SyncMethodType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601CFE6 RID: 118758 RVA: 0x00418A96 File Offset: 0x00416C96
+		// Token: 0x0601E7D3 RID: 124883 RVA: 0x00445232 File Offset: 0x00443432
 		public static Offset<IP4SyncData> EndIP4SyncData(FlatBufferBuilder builder)
 		{
 			return new Offset<IP4SyncData>(builder.EndTable());
 		}
 
-		// Token: 0x0601CFE7 RID: 118759 RVA: 0x00418AA4 File Offset: 0x00416CA4
+		// Token: 0x0601E7D4 RID: 124884 RVA: 0x00445240 File Offset: 0x00443440
 		public IP4SyncDataT UnPack()
 		{
 			IP4SyncDataT ip4SyncDataT = new IP4SyncDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ip4SyncDataT;
 		}
 
-		// Token: 0x0601CFE8 RID: 118760 RVA: 0x00418ABF File Offset: 0x00416CBF
+		// Token: 0x0601E7D5 RID: 124885 RVA: 0x0044525B File Offset: 0x0044345B
 		public void UnPackTo(IP4SyncDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601CFE9 RID: 118761 RVA: 0x00418AD0 File Offset: 0x00416CD0
+		// Token: 0x0601E7D6 RID: 124886 RVA: 0x0044526C File Offset: 0x0044346C
 		public static Offset<IP4SyncData> Pack(FlatBufferBuilder builder, IP4SyncDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IP4SyncData.CreateIP4SyncData(builder, _o.Type);
 		}
 
-		// Token: 0x0400CE7C RID: 52860
+		// Token: 0x0400D8B5 RID: 55477
 		private Table __p;
 	}
 }

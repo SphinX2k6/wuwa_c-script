@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D07 RID: 7431
+	// Token: 0x02001F18 RID: 7960
 	public class IPlayerNewSplineMoveTarget_SetValue
 	{
-		// Token: 0x04006040 RID: 24640
+		// Token: 0x040065B9 RID: 26041
 		public ENewSplineMoveTargetType Type;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042D6 RID: 17110
+	// Token: 0x02004735 RID: 18229
 	public class TInformationViewUnion
 	{
-		// Token: 0x17007946 RID: 31046
-		// (get) Token: 0x06019609 RID: 103945 RVA: 0x003A4046 File Offset: 0x003A2246
-		// (set) Token: 0x0601960A RID: 103946 RVA: 0x003A404E File Offset: 0x003A224E
+		// Token: 0x17007F79 RID: 32633
+		// (get) Token: 0x0601AD8B RID: 109963 RVA: 0x003CF976 File Offset: 0x003CDB76
+		// (set) Token: 0x0601AD8C RID: 109964 RVA: 0x003CF97E File Offset: 0x003CDB7E
 		public TInformationView Type { get; set; }
 
-		// Token: 0x17007947 RID: 31047
-		// (get) Token: 0x0601960B RID: 103947 RVA: 0x003A4057 File Offset: 0x003A2257
-		// (set) Token: 0x0601960C RID: 103948 RVA: 0x003A405F File Offset: 0x003A225F
+		// Token: 0x17007F7A RID: 32634
+		// (get) Token: 0x0601AD8D RID: 109965 RVA: 0x003CF987 File Offset: 0x003CDB87
+		// (set) Token: 0x0601AD8E RID: 109966 RVA: 0x003CF98F File Offset: 0x003CDB8F
 		public object Value { get; set; }
 
-		// Token: 0x0601960D RID: 103949 RVA: 0x003A4068 File Offset: 0x003A2268
+		// Token: 0x0601AD8F RID: 109967 RVA: 0x003CF998 File Offset: 0x003CDB98
 		public TInformationViewUnion()
 		{
 			this.Type = TInformationView.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601960E RID: 103950 RVA: 0x003A407E File Offset: 0x003A227E
+		// Token: 0x0601AD90 RID: 109968 RVA: 0x003CF9AE File Offset: 0x003CDBAE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601960F RID: 103951 RVA: 0x003A4090 File Offset: 0x003A2290
+		// Token: 0x0601AD91 RID: 109969 RVA: 0x003CF9C0 File Offset: 0x003CDBC0
 		public IBossRushBuffInfoViewT AsIBossRushBuffInfoView()
 		{
 			return this.As<IBossRushBuffInfoViewT>();
 		}
 
-		// Token: 0x06019610 RID: 103952 RVA: 0x003A4098 File Offset: 0x003A2298
+		// Token: 0x0601AD92 RID: 109970 RVA: 0x003CF9C8 File Offset: 0x003CDBC8
 		public static TInformationViewUnion FromIBossRushBuffInfoView(IBossRushBuffInfoViewT _ibossrushbuffinfoview)
 		{
 			return new TInformationViewUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019611 RID: 103953 RVA: 0x003A40AD File Offset: 0x003A22AD
+		// Token: 0x0601AD93 RID: 109971 RVA: 0x003CF9DD File Offset: 0x003CDBDD
 		public IDangoAbyssInformationViewT AsIDangoAbyssInformationView()
 		{
 			return this.As<IDangoAbyssInformationViewT>();
 		}
 
-		// Token: 0x06019612 RID: 103954 RVA: 0x003A40B5 File Offset: 0x003A22B5
+		// Token: 0x0601AD94 RID: 109972 RVA: 0x003CF9E5 File Offset: 0x003CDBE5
 		public static TInformationViewUnion FromIDangoAbyssInformationView(IDangoAbyssInformationViewT _idangoabyssinformationview)
 		{
 			return new TInformationViewUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019613 RID: 103955 RVA: 0x003A40CA File Offset: 0x003A22CA
+		// Token: 0x0601AD95 RID: 109973 RVA: 0x003CF9FA File Offset: 0x003CDBFA
 		public ILevelPlayInformationViewT AsILevelPlayInformationView()
 		{
 			return this.As<ILevelPlayInformationViewT>();
 		}
 
-		// Token: 0x06019614 RID: 103956 RVA: 0x003A40D2 File Offset: 0x003A22D2
+		// Token: 0x0601AD96 RID: 109974 RVA: 0x003CFA02 File Offset: 0x003CDC02
 		public static TInformationViewUnion FromILevelPlayInformationView(ILevelPlayInformationViewT _ilevelplayinformationview)
 		{
 			return new TInformationViewUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019615 RID: 103957 RVA: 0x003A40E8 File Offset: 0x003A22E8
+		// Token: 0x0601AD97 RID: 109975 RVA: 0x003CFA18 File Offset: 0x003CDC18
 		public static int Pack(FlatBufferBuilder builder, TInformationViewUnion _o)
 		{
 			switch (_o.Type)

@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C96 RID: 11414
+// Token: 0x020021EF RID: 8687
 [NullableContext(2)]
 [Nullable(0)]
 public class UiModelRotateComponent : UiModelComponentBase
 {
-	// Token: 0x06017DB8 RID: 97720 RVA: 0x00611296 File Offset: 0x0060F496
+	// Token: 0x0601562C RID: 87596 RVA: 0x00636E36 File Offset: 0x00635036
 	protected override void OnInit()
 	{
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 		this.Rotator = Rotator.Create();
 	}
 
-	// Token: 0x06017DB9 RID: 97721 RVA: 0x006112B4 File Offset: 0x0060F4B4
+	// Token: 0x0601562D RID: 87597 RVA: 0x00636E54 File Offset: 0x00635054
 	public void SetRotateParam(float aroundTime, ERotateAxis axis = ERotateAxis.Yaw, bool isPlus = true)
 	{
 		this.DeltaSecondRotate = ((aroundTime != 0f) ? (360f / aroundTime) : 0f);
@@ -22,21 +22,21 @@ public class UiModelRotateComponent : UiModelComponentBase
 		this.IsRotatePlus = isPlus;
 	}
 
-	// Token: 0x06017DBA RID: 97722 RVA: 0x006112E5 File Offset: 0x0060F4E5
+	// Token: 0x0601562E RID: 87598 RVA: 0x00636E85 File Offset: 0x00635085
 	public void StartRotate()
 	{
 		this.IsRotating = true;
 		this.NeedTick = true;
 	}
 
-	// Token: 0x06017DBB RID: 97723 RVA: 0x006112F5 File Offset: 0x0060F4F5
+	// Token: 0x0601562F RID: 87599 RVA: 0x00636E95 File Offset: 0x00635095
 	public void StopRotate()
 	{
 		this.IsRotating = false;
 		this.NeedTick = false;
 	}
 
-	// Token: 0x06017DBC RID: 97724 RVA: 0x00611308 File Offset: 0x0060F508
+	// Token: 0x06015630 RID: 87600 RVA: 0x00636EA8 File Offset: 0x006350A8
 	protected override void OnTick(float deltaTime)
 	{
 		if (!this.IsRotating || this.DeltaSecondRotate <= 0f)
@@ -63,21 +63,21 @@ public class UiModelRotateComponent : UiModelComponentBase
 		this.ActorComponent.Actor.K2_AddActorLocalRotation(this.Rotator.ToUeRotator(), false, ref fhitResult, false);
 	}
 
-	// Token: 0x0400B1DE RID: 45534
+	// Token: 0x0400B549 RID: 46409
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B1DF RID: 45535
+	// Token: 0x0400B54A RID: 46410
 	private float DeltaSecondRotate;
 
-	// Token: 0x0400B1E0 RID: 45536
+	// Token: 0x0400B54B RID: 46411
 	private bool IsRotating;
 
-	// Token: 0x0400B1E1 RID: 45537
+	// Token: 0x0400B54C RID: 46412
 	private Rotator Rotator;
 
-	// Token: 0x0400B1E2 RID: 45538
+	// Token: 0x0400B54D RID: 46413
 	private ERotateAxis? RotateAxis;
 
-	// Token: 0x0400B1E3 RID: 45539
+	// Token: 0x0400B54E RID: 46414
 	private bool IsRotatePlus;
 }

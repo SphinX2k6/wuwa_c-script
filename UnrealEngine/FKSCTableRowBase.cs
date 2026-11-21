@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CF7 RID: 7415
+	// Token: 0x0200055E RID: 1374
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSCTableRowBase")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class FKSCTableRowBase : FTableRowBase, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601C88A RID: 116874 RVA: 0x002A2FD0 File Offset: 0x002A11D0
+		// Token: 0x06007D67 RID: 32103 RVA: 0x000BA055 File Offset: 0x000B8255
 		public new static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKSCTableRowBase._ScriptStructPtr != 0) ? FKSCTableRowBase._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroSimpleCombat.KSCTableRowBase", ref FKSCTableRowBase._ScriptStructPtr);
 		}
 
-		// Token: 0x170072FD RID: 29437
-		// (get) Token: 0x0601C88B RID: 116875 RVA: 0x002A2FF4 File Offset: 0x002A11F4
-		// (set) Token: 0x0601C88C RID: 116876 RVA: 0x002A3004 File Offset: 0x002A1204
+		// Token: 0x1700182C RID: 6188
+		// (get) Token: 0x06007D68 RID: 32104 RVA: 0x000BA079 File Offset: 0x000B8279
+		// (set) Token: 0x06007D69 RID: 32105 RVA: 0x000BA089 File Offset: 0x000B8289
 		public unsafe int Id
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072FE RID: 29438
-		// (get) Token: 0x0601C88D RID: 116877 RVA: 0x002A3015 File Offset: 0x002A1215
-		// (set) Token: 0x0601C88E RID: 116878 RVA: 0x002A3034 File Offset: 0x002A1234
+		// Token: 0x1700182D RID: 6189
+		// (get) Token: 0x06007D6A RID: 32106 RVA: 0x000BA09A File Offset: 0x000B829A
+		// (set) Token: 0x06007D6B RID: 32107 RVA: 0x000BA0B9 File Offset: 0x000B82B9
 		public TSoftObjectPtr<UDataAsset> RuntimeDA
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C88F RID: 116879 RVA: 0x002A3059 File Offset: 0x002A1259
+		// Token: 0x06007D6C RID: 32108 RVA: 0x000BA0DE File Offset: 0x000B82DE
 		public FKSCTableRowBase()
 		{
 		}
 
-		// Token: 0x0601C890 RID: 116880 RVA: 0x002A3061 File Offset: 0x002A1261
-		public FKSCTableRowBase(int Id, TSoftObjectPtr<UDataAsset> RuntimeDA)
-		{
-			this.Id = Id;
-			this.RuntimeDA = RuntimeDA;
-		}
-
-		// Token: 0x0601C891 RID: 116881 RVA: 0x002A3077 File Offset: 0x002A1277
+		// Token: 0x06007D6D RID: 32109 RVA: 0x000BA0E6 File Offset: 0x000B82E6
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKSCTableRowBase.StaticStruct();
 		}
 
-		// Token: 0x0601C892 RID: 116882 RVA: 0x002A3083 File Offset: 0x002A1283
+		// Token: 0x06007D6E RID: 32110 RVA: 0x000BA0F2 File Offset: 0x000B82F2
 		[NullableContext(2)]
 		public FKSCTableRowBase(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C893 RID: 116883 RVA: 0x002A308D File Offset: 0x002A128D
+		// Token: 0x06007D6F RID: 32111 RVA: 0x000BA0FC File Offset: 0x000B82FC
 		public FKSCTableRowBase(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C894 RID: 116884 RVA: 0x002A3098 File Offset: 0x002A1298
+		// Token: 0x06007D70 RID: 32112 RVA: 0x000BA107 File Offset: 0x000B8307
 		public new static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKSCTableRowBase(Pointer, false, true);
 		}
 
-		// Token: 0x0601C895 RID: 116885 RVA: 0x002A30A2 File Offset: 0x002A12A2
+		// Token: 0x06007D71 RID: 32113 RVA: 0x000BA111 File Offset: 0x000B8311
 		public new static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKSCTableRowBase(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F782 RID: 63362
+		// Token: 0x040036A8 RID: 13992
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSCTableRowBase";
 
-		// Token: 0x0400F783 RID: 63363
+		// Token: 0x040036A9 RID: 13993
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F784 RID: 63364
+		// Token: 0x040036AA RID: 13994
 		internal static int __PropertyOffset_Id;
 
-		// Token: 0x0400F785 RID: 63365
+		// Token: 0x040036AB RID: 13995
 		internal static int __PropertyOffset_RuntimeDA;
 	}
 }

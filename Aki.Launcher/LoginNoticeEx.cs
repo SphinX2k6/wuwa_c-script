@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class LoginNoticeEx
 {
-	// Token: 0x0400003F RID: 63
+	// Token: 0x04000040 RID: 64
 	public string title = string.Empty;
 
-	// Token: 0x04000040 RID: 64
+	// Token: 0x04000041 RID: 65
 	public string content = string.Empty;
 
-	// Token: 0x04000041 RID: 65
+	// Token: 0x04000042 RID: 66
 	[Nullable(new byte[]
 	{
 		2,
@@ -20,9 +20,9 @@ public class LoginNoticeEx
 	})]
 	public string[] whiteList;
 
-	// Token: 0x04000042 RID: 66
+	// Token: 0x04000043 RID: 67
 	public double startTimeMs;
 
-	// Token: 0x04000043 RID: 67
+	// Token: 0x04000044 RID: 68
 	public double endTimeMs;
 }

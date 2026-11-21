@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B2E RID: 2862
+	// Token: 0x02000C0E RID: 3086
 	public struct BattleScoreLevelConf : IFlatbufferObject
 	{
-		// Token: 0x170004FF RID: 1279
-		// (get) Token: 0x06004CD1 RID: 19665 RVA: 0x001E28C0 File Offset: 0x001E0AC0
+		// Token: 0x1700053F RID: 1343
+		// (get) Token: 0x06005293 RID: 21139 RVA: 0x00202CBC File Offset: 0x00200EBC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004CD2 RID: 19666 RVA: 0x001E28CD File Offset: 0x001E0ACD
+		// Token: 0x06005294 RID: 21140 RVA: 0x00202CC9 File Offset: 0x00200EC9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004CD3 RID: 19667 RVA: 0x001E28D4 File Offset: 0x001E0AD4
+		// Token: 0x06005295 RID: 21141 RVA: 0x00202CD0 File Offset: 0x00200ED0
 		public static BattleScoreLevelConf GetRootAsBattleScoreLevelConf(ByteBuffer _bb)
 		{
 			return BattleScoreLevelConf.GetRootAsBattleScoreLevelConf(_bb, default(BattleScoreLevelConf));
 		}
 
-		// Token: 0x06004CD4 RID: 19668 RVA: 0x001E28F0 File Offset: 0x001E0AF0
+		// Token: 0x06005296 RID: 21142 RVA: 0x00202CEC File Offset: 0x00200EEC
 		public static BattleScoreLevelConf GetRootAsBattleScoreLevelConf(ByteBuffer _bb, BattleScoreLevelConf obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004CD5 RID: 19669 RVA: 0x001E290D File Offset: 0x001E0B0D
+		// Token: 0x06005297 RID: 21143 RVA: 0x00202D09 File Offset: 0x00200F09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004CD6 RID: 19670 RVA: 0x001E291C File Offset: 0x001E0B1C
+		// Token: 0x06005298 RID: 21144 RVA: 0x00202D18 File Offset: 0x00200F18
 		public BattleScoreLevelConf __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000500 RID: 1280
-		// (get) Token: 0x06004CD7 RID: 19671 RVA: 0x001E292C File Offset: 0x001E0B2C
+		// Token: 0x17000540 RID: 1344
+		// (get) Token: 0x06005299 RID: 21145 RVA: 0x00202D28 File Offset: 0x00200F28
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000501 RID: 1281
-		// (get) Token: 0x06004CD8 RID: 19672 RVA: 0x001E2968 File Offset: 0x001E0B68
+		// Token: 0x17000541 RID: 1345
+		// (get) Token: 0x0600529A RID: 21146 RVA: 0x00202D64 File Offset: 0x00200F64
 		public int GroupId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000502 RID: 1282
-		// (get) Token: 0x06004CD9 RID: 19673 RVA: 0x001E29A4 File Offset: 0x001E0BA4
+		// Token: 0x17000542 RID: 1346
+		// (get) Token: 0x0600529B RID: 21147 RVA: 0x00202DA0 File Offset: 0x00200FA0
 		public int Level
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004CDA RID: 19674 RVA: 0x001E29E0 File Offset: 0x001E0BE0
+		// Token: 0x0600529C RID: 21148 RVA: 0x00202DDC File Offset: 0x00200FDC
 		public int LowerUpperLimits(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000503 RID: 1283
-		// (get) Token: 0x06004CDB RID: 19675 RVA: 0x001E2A20 File Offset: 0x001E0C20
+		// Token: 0x17000543 RID: 1347
+		// (get) Token: 0x0600529D RID: 21149 RVA: 0x00202E1C File Offset: 0x0020101C
 		public int LowerUpperLimitsLength
 		{
 			get
@@ -120,20 +120,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004CDC RID: 19676 RVA: 0x001E2A4C File Offset: 0x001E0C4C
+		// Token: 0x0600529E RID: 21150 RVA: 0x00202E48 File Offset: 0x00201048
 		public Span<int> GetLowerUpperLimitsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06004CDD RID: 19677 RVA: 0x001E2A5C File Offset: 0x001E0C5C
+		// Token: 0x0600529F RID: 21151 RVA: 0x00202E58 File Offset: 0x00201058
 		public int[] GetLowerUpperLimitsArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000504 RID: 1284
-		// (get) Token: 0x06004CDE RID: 19678 RVA: 0x001E2A74 File Offset: 0x001E0C74
+		// Token: 0x17000544 RID: 1348
+		// (get) Token: 0x060052A0 RID: 21152 RVA: 0x00202E70 File Offset: 0x00201070
 		public int BuffTime
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000505 RID: 1285
-		// (get) Token: 0x06004CDF RID: 19679 RVA: 0x001E2AB4 File Offset: 0x001E0CB4
+		// Token: 0x17000545 RID: 1349
+		// (get) Token: 0x060052A1 RID: 21153 RVA: 0x00202EB0 File Offset: 0x002010B0
 		public string Bgm
 		{
 			get
@@ -162,37 +162,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004CE0 RID: 19680 RVA: 0x001E2AEC File Offset: 0x001E0CEC
+		// Token: 0x060052A2 RID: 21154 RVA: 0x00202EE8 File Offset: 0x002010E8
 		public Span<byte> GetBgmBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06004CE1 RID: 19681 RVA: 0x001E2AFC File Offset: 0x001E0CFC
+		// Token: 0x060052A3 RID: 21155 RVA: 0x00202EF8 File Offset: 0x002010F8
 		public byte[] GetBgmArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004CE2 RID: 19682 RVA: 0x001E2B14 File Offset: 0x001E0D14
+		// Token: 0x060052A4 RID: 21156 RVA: 0x00202F10 File Offset: 0x00201110
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LowerUpperLimitsIter()或GetLowerUpperLimitsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LowerUpperLimits()
+		public int[] LowerUpperLimits()
 		{
-			BattleScoreLevelConf battleScoreLevelConf = this;
-			return battleScoreLevelConf.GetLowerUpperLimitsArray() ?? Array.Empty<int>();
+			return this.GetLowerUpperLimitsArray();
 		}
 
-		// Token: 0x06004CE3 RID: 19683 RVA: 0x001E2B38 File Offset: 0x001E0D38
+		// Token: 0x060052A5 RID: 21157 RVA: 0x00202F18 File Offset: 0x00201118
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LowerUpperLimitsIter()
+		public IEnumerable<int> LowerUpperLimitsIter()
 		{
 			BattleScoreLevelConf.<LowerUpperLimitsIter>d__26 <LowerUpperLimitsIter>d__ = new BattleScoreLevelConf.<LowerUpperLimitsIter>d__26(-2);
 			<LowerUpperLimitsIter>d__.<>3__<>4__this = this;
 			return <LowerUpperLimitsIter>d__;
 		}
 
-		// Token: 0x04004B26 RID: 19238
+		// Token: 0x04005106 RID: 20742
 		private Table __p;
 	}
 }

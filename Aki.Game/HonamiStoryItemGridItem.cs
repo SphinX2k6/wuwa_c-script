@@ -7,18 +7,18 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001EA8 RID: 7848
+// Token: 0x0200136A RID: 4970
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryItemGridItem : UiPanelBase
 {
-	// Token: 0x0600F115 RID: 61717 RVA: 0x0039E807 File Offset: 0x0039CA07
+	// Token: 0x0600C534 RID: 50484 RVA: 0x003AA3C3 File Offset: 0x003A85C3
 	public HonamiStoryItemGridItem(HonamiStoryItemDataBase itemData)
 	{
 		this.ItemData = itemData;
 	}
 
-	// Token: 0x0600F116 RID: 61718 RVA: 0x0039E824 File Offset: 0x0039CA24
+	// Token: 0x0600C535 RID: 50485 RVA: 0x003AA3E0 File Offset: 0x003A85E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,7 +47,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F117 RID: 61719 RVA: 0x0039E94E File Offset: 0x0039CB4E
+	// Token: 0x0600C536 RID: 50486 RVA: 0x003AA50A File Offset: 0x003A870A
 	protected override void OnStart()
 	{
 		if (!this.IsForDrag)
@@ -63,13 +63,13 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		extendToggle.SetEnable(false);
 	}
 
-	// Token: 0x0600F118 RID: 61720 RVA: 0x0039E978 File Offset: 0x0039CB78
+	// Token: 0x0600C537 RID: 50487 RVA: 0x003AA534 File Offset: 0x003A8734
 	protected override void OnBeforeDestroy()
 	{
 		this.LockItem = null;
 	}
 
-	// Token: 0x0600F119 RID: 61721 RVA: 0x0039E984 File Offset: 0x0039CB84
+	// Token: 0x0600C538 RID: 50488 RVA: 0x003AA540 File Offset: 0x003A8740
 	[NullableContext(1)]
 	public void Refresh(HonamiStoryItemDataBase data, bool needCheckOverflow)
 	{
@@ -109,14 +109,14 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		this.RefreshLogicData();
 	}
 
-	// Token: 0x0600F11A RID: 61722 RVA: 0x0039EADF File Offset: 0x0039CCDF
+	// Token: 0x0600C539 RID: 50489 RVA: 0x003AA69B File Offset: 0x003A889B
 	[NullableContext(1)]
 	public UUIItem GetPanelForHover()
 	{
 		return base.GetItem(5);
 	}
 
-	// Token: 0x0600F11B RID: 61723 RVA: 0x0039EAE8 File Offset: 0x0039CCE8
+	// Token: 0x0600C53A RID: 50490 RVA: 0x003AA6A4 File Offset: 0x003A88A4
 	protected void SetLockItemEnable(bool isLock, bool needMask)
 	{
 		if (this.IsForDrag)
@@ -156,7 +156,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F11C RID: 61724 RVA: 0x0039EBA8 File Offset: 0x0039CDA8
+	// Token: 0x0600C53B RID: 50491 RVA: 0x003AA764 File Offset: 0x003A8964
 	protected void SetSellItemEnable(bool isSell)
 	{
 		HonamiStoryItemSellAllItem sellItem = this.SellItem;
@@ -194,7 +194,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F11D RID: 61725 RVA: 0x0039EC3C File Offset: 0x0039CE3C
+	// Token: 0x0600C53C RID: 50492 RVA: 0x003AA7F8 File Offset: 0x003A89F8
 	protected void SetSellItemValueEnable(bool isSell)
 	{
 		HonamiStoryItemSellValueItem sellValueItem = this.SellValueItem;
@@ -229,20 +229,20 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F11E RID: 61726 RVA: 0x0039ECBD File Offset: 0x0039CEBD
+	// Token: 0x0600C53D RID: 50493 RVA: 0x003AA879 File Offset: 0x003A8A79
 	[NullableContext(1)]
 	public UUIItem GetTipsRoot()
 	{
 		return base.GetItem(4);
 	}
 
-	// Token: 0x0600F11F RID: 61727 RVA: 0x0039ECC6 File Offset: 0x0039CEC6
+	// Token: 0x0600C53E RID: 50494 RVA: 0x003AA882 File Offset: 0x003A8A82
 	public HonamiStoryItemDataBase GetData()
 	{
 		return this.ItemData;
 	}
 
-	// Token: 0x0600F120 RID: 61728 RVA: 0x0039ECCE File Offset: 0x0039CECE
+	// Token: 0x0600C53F RID: 50495 RVA: 0x003AA88A File Offset: 0x003A8A8A
 	public int GetIncId()
 	{
 		HonamiStoryItemDataBase itemData = this.ItemData;
@@ -253,19 +253,19 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		return itemData.GetIncId();
 	}
 
-	// Token: 0x0600F121 RID: 61729 RVA: 0x0039ECE1 File Offset: 0x0039CEE1
+	// Token: 0x0600C540 RID: 50496 RVA: 0x003AA89D File Offset: 0x003A8A9D
 	public void SetBackpackType(EHonamiStoryBackpackType type)
 	{
 		this.BackpackType = type;
 	}
 
-	// Token: 0x0600F122 RID: 61730 RVA: 0x0039ECEA File Offset: 0x0039CEEA
+	// Token: 0x0600C541 RID: 50497 RVA: 0x003AA8A6 File Offset: 0x003A8AA6
 	public EHonamiStoryBackpackType GetBackpackType()
 	{
 		return this.BackpackType;
 	}
 
-	// Token: 0x0600F123 RID: 61731 RVA: 0x0039ECF4 File Offset: 0x0039CEF4
+	// Token: 0x0600C542 RID: 50498 RVA: 0x003AA8B0 File Offset: 0x003A8AB0
 	public void SetIsForDrag(bool value)
 	{
 		this.IsForDrag = value;
@@ -288,13 +288,13 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F124 RID: 61732 RVA: 0x0039ED79 File Offset: 0x0039CF79
+	// Token: 0x0600C543 RID: 50499 RVA: 0x003AA935 File Offset: 0x003A8B35
 	public void SetCanOpenTips(bool value)
 	{
 		this.CanOpenTips = value;
 	}
 
-	// Token: 0x0600F125 RID: 61733 RVA: 0x0039ED84 File Offset: 0x0039CF84
+	// Token: 0x0600C544 RID: 50500 RVA: 0x003AA940 File Offset: 0x003A8B40
 	public void SetOverFlowEnable(bool enable)
 	{
 		if (!enable)
@@ -335,7 +335,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F126 RID: 61734 RVA: 0x0039EE00 File Offset: 0x0039D000
+	// Token: 0x0600C545 RID: 50501 RVA: 0x003AA9BC File Offset: 0x003A8BBC
 	protected virtual void RefreshLogicData()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -365,7 +365,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		sellItem.SetUiActive(false);
 	}
 
-	// Token: 0x0600F127 RID: 61735 RVA: 0x0039EE7C File Offset: 0x0039D07C
+	// Token: 0x0600C546 RID: 50502 RVA: 0x003AAA38 File Offset: 0x003A8C38
 	protected virtual void ExecuteDoubleClickLogic()
 	{
 		if (this.BackpackType == EHonamiStoryBackpackType.Inventory)
@@ -398,7 +398,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F128 RID: 61736 RVA: 0x0039EF28 File Offset: 0x0039D128
+	// Token: 0x0600C547 RID: 50503 RVA: 0x003AAAE4 File Offset: 0x003A8CE4
 	protected void NormalBagDoubleClick()
 	{
 		if (this.ItemData.GetItemType() == EHonamiStoryItemType.Plugin)
@@ -416,7 +416,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F129 RID: 61737 RVA: 0x0039EF8C File Offset: 0x0039D18C
+	// Token: 0x0600C548 RID: 50504 RVA: 0x003AAB48 File Offset: 0x003A8D48
 	protected virtual void DoLogicStateFunc(EHonamiStoryBackpackLogicState state)
 	{
 		if (state == EHonamiStoryBackpackLogicState.Sell)
@@ -452,7 +452,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F12A RID: 61738 RVA: 0x0039F030 File Offset: 0x0039D230
+	// Token: 0x0600C549 RID: 50505 RVA: 0x003AABEC File Offset: 0x003A8DEC
 	public void DoSellLogic()
 	{
 		if (this.ItemData.IsLock())
@@ -470,13 +470,13 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		draggableComponent.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600F12B RID: 61739 RVA: 0x0039F08B File Offset: 0x0039D28B
+	// Token: 0x0600C54A RID: 50506 RVA: 0x003AAC47 File Offset: 0x003A8E47
 	public void CancelToggleSelect()
 	{
 		this.DraggableComponent.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600F12C RID: 61740 RVA: 0x0039F0A0 File Offset: 0x0039D2A0
+	// Token: 0x0600C54B RID: 50507 RVA: 0x003AAC5C File Offset: 0x003A8E5C
 	public void PlayMoveItemSeq()
 	{
 		if (!this.IsForDrag || !HonamiStoryUtil.IsMobileView())
@@ -491,7 +491,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		levelSequencePlayer.PlayOrReplaySequenceByName("MoveUp", false, null);
 	}
 
-	// Token: 0x0600F12D RID: 61741 RVA: 0x0039F0DC File Offset: 0x0039D2DC
+	// Token: 0x0600C54C RID: 50508 RVA: 0x003AAC98 File Offset: 0x003A8E98
 	protected void OnTipsCallback()
 	{
 		Action onClickedGridTipsCb = this.OnClickedGridTipsCb;
@@ -502,7 +502,7 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		onClickedGridTipsCb();
 	}
 
-	// Token: 0x0600F12E RID: 61742 RVA: 0x0039F0F0 File Offset: 0x0039D2F0
+	// Token: 0x0600C54D RID: 50509 RVA: 0x003AACAC File Offset: 0x003A8EAC
 	protected void OnClickedToggle(EToggleState _)
 	{
 		if (!this.CanOpenTips)
@@ -524,13 +524,13 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		this.DoLogicStateFunc(logicState);
 	}
 
-	// Token: 0x0600F12F RID: 61743 RVA: 0x0039F156 File Offset: 0x0039D356
+	// Token: 0x0600C54E RID: 50510 RVA: 0x003AAD12 File Offset: 0x003A8F12
 	public void OnHideCallback()
 	{
 		this.CancelToggleSelect();
 	}
 
-	// Token: 0x0600F130 RID: 61744 RVA: 0x0039F15E File Offset: 0x0039D35E
+	// Token: 0x0600C54F RID: 50511 RVA: 0x003AAD1A File Offset: 0x003A8F1A
 	public void SetIsEnable(bool value)
 	{
 		UUIExtendToggle draggableComponent = this.DraggableComponent;
@@ -541,58 +541,58 @@ public class HonamiStoryItemGridItem : UiPanelBase
 		draggableComponent.SetSelfInteractive(value);
 	}
 
-	// Token: 0x04006F82 RID: 28546
+	// Token: 0x04007063 RID: 28771
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006F83 RID: 28547
+	// Token: 0x04007064 RID: 28772
 	public Action OnClickedGridTipsCb;
 
-	// Token: 0x04006F84 RID: 28548
+	// Token: 0x04007065 RID: 28773
 	[Nullable(1)]
 	public UUIExtendToggle DraggableComponent;
 
-	// Token: 0x04006F85 RID: 28549
+	// Token: 0x04007066 RID: 28774
 	protected EHonamiStoryBackpackType BackpackType = EHonamiStoryBackpackType.Backpack;
 
-	// Token: 0x04006F86 RID: 28550
+	// Token: 0x04007067 RID: 28775
 	protected HonamiStoryItemLockStateItem LockItem;
 
-	// Token: 0x04006F87 RID: 28551
+	// Token: 0x04007068 RID: 28776
 	protected HonamiStoryItemSellAllItem SellItem;
 
-	// Token: 0x04006F88 RID: 28552
+	// Token: 0x04007069 RID: 28777
 	protected HonamiStoryItemSellValueItem SellValueItem;
 
-	// Token: 0x04006F89 RID: 28553
+	// Token: 0x0400706A RID: 28778
 	protected UiPanelBase OverflowItem;
 
-	// Token: 0x04006F8A RID: 28554
+	// Token: 0x0400706B RID: 28779
 	protected HonamiStoryDragItemFrameItem DragGridFrame;
 
-	// Token: 0x04006F8B RID: 28555
+	// Token: 0x0400706C RID: 28780
 	private bool IsForDrag;
 
-	// Token: 0x04006F8C RID: 28556
+	// Token: 0x0400706D RID: 28781
 	private bool CanOpenTips = true;
 
-	// Token: 0x04006F8D RID: 28557
+	// Token: 0x0400706E RID: 28782
 	protected HonamiStoryItemDataBase ItemData;
 
-	// Token: 0x02008477 RID: 33911
+	// Token: 0x020075FC RID: 30204
 	[NullableContext(0)]
 	private enum EItem
 	{
-		// Token: 0x0402B1C2 RID: 176578
+		// Token: 0x040264E6 RID: 156902
 		Toggle,
-		// Token: 0x0402B1C3 RID: 176579
+		// Token: 0x040264E7 RID: 156903
 		TexIcon,
-		// Token: 0x0402B1C4 RID: 176580
+		// Token: 0x040264E8 RID: 156904
 		PanelState,
-		// Token: 0x0402B1C5 RID: 176581
+		// Token: 0x040264E9 RID: 156905
 		PanelGrid,
-		// Token: 0x0402B1C6 RID: 176582
+		// Token: 0x040264EA RID: 156906
 		PanelTips,
-		// Token: 0x0402B1C7 RID: 176583
+		// Token: 0x040264EB RID: 156907
 		PanelOffset
 	}
 }

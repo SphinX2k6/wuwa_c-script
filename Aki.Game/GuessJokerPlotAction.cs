@@ -5,10 +5,10 @@ using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.Plot.Flow;
 
-// Token: 0x02001023 RID: 4131
+// Token: 0x020004D7 RID: 1239
 public class GuessJokerPlotAction : GuessJokerActionBase
 {
-	// Token: 0x06006A19 RID: 27161 RVA: 0x0015474C File Offset: 0x0015294C
+	// Token: 0x06003DAE RID: 15790 RVA: 0x0015D074 File Offset: 0x0015B274
 	public unsafe GuessJokerPlotAction(EGuessJokerPlayerType playerType, EGuessJokerPlotTiming timing, int? extraParam = null)
 	{
 		this.TimingInternal = timing;
@@ -76,7 +76,7 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		this.AiPlotConfig = jokerAiPlotConfig;
 	}
 
-	// Token: 0x06006A1A RID: 27162 RVA: 0x00154970 File Offset: 0x00152B70
+	// Token: 0x06003DAF RID: 15791 RVA: 0x0015D298 File Offset: 0x0015B498
 	protected override void OnStart()
 	{
 		if (this.TalkData == null)
@@ -94,7 +94,7 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		this.StartActualPlayback();
 	}
 
-	// Token: 0x06006A1B RID: 27163 RVA: 0x001549CC File Offset: 0x00152BCC
+	// Token: 0x06003DB0 RID: 15792 RVA: 0x0015D2F4 File Offset: 0x0015B4F4
 	protected override void OnTick(float delta)
 	{
 		if (this.IsDelayed)
@@ -110,7 +110,7 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x06006A1C RID: 27164 RVA: 0x00154A2C File Offset: 0x00152C2C
+	// Token: 0x06003DB1 RID: 15793 RVA: 0x0015D354 File Offset: 0x0015B554
 	private void StartActualPlayback()
 	{
 		if (this.TalkData == null)
@@ -131,8 +131,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		this.Done = true;
 	}
 
-	// Token: 0x17000880 RID: 2176
-	// (get) Token: 0x06006A1D RID: 27165 RVA: 0x00154A96 File Offset: 0x00152C96
+	// Token: 0x170008A0 RID: 2208
+	// (get) Token: 0x06003DB2 RID: 15794 RVA: 0x0015D3BE File Offset: 0x0015B5BE
 	public EGuessJokerPlotTiming Timing
 	{
 		get
@@ -141,8 +141,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000881 RID: 2177
-	// (get) Token: 0x06006A1E RID: 27166 RVA: 0x00154A9E File Offset: 0x00152C9E
+	// Token: 0x170008A1 RID: 2209
+	// (get) Token: 0x06003DB3 RID: 15795 RVA: 0x0015D3C6 File Offset: 0x0015B5C6
 	public EGuessJokerPlayerType PlayerType
 	{
 		get
@@ -151,8 +151,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000882 RID: 2178
-	// (get) Token: 0x06006A1F RID: 27167 RVA: 0x00154AA8 File Offset: 0x00152CA8
+	// Token: 0x170008A2 RID: 2210
+	// (get) Token: 0x06003DB4 RID: 15796 RVA: 0x0015D3D0 File Offset: 0x0015B5D0
 	public int AiPlotId
 	{
 		get
@@ -165,8 +165,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000883 RID: 2179
-	// (get) Token: 0x06006A20 RID: 27168 RVA: 0x00154AD4 File Offset: 0x00152CD4
+	// Token: 0x170008A3 RID: 2211
+	// (get) Token: 0x06003DB5 RID: 15797 RVA: 0x0015D3FC File Offset: 0x0015B5FC
 	public int PlotId
 	{
 		get
@@ -179,8 +179,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000884 RID: 2180
-	// (get) Token: 0x06006A21 RID: 27169 RVA: 0x00154B00 File Offset: 0x00152D00
+	// Token: 0x170008A4 RID: 2212
+	// (get) Token: 0x06003DB6 RID: 15798 RVA: 0x0015D428 File Offset: 0x0015B628
 	public float DelayTime
 	{
 		get
@@ -189,8 +189,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000885 RID: 2181
-	// (get) Token: 0x06006A22 RID: 27170 RVA: 0x00154B30 File Offset: 0x00152D30
+	// Token: 0x170008A5 RID: 2213
+	// (get) Token: 0x06003DB7 RID: 15799 RVA: 0x0015D458 File Offset: 0x0015B658
 	public bool CanHardCut
 	{
 		get
@@ -199,8 +199,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000886 RID: 2182
-	// (get) Token: 0x06006A23 RID: 27171 RVA: 0x00154B5C File Offset: 0x00152D5C
+	// Token: 0x170008A6 RID: 2214
+	// (get) Token: 0x06003DB8 RID: 15800 RVA: 0x0015D484 File Offset: 0x0015B684
 	public float WaitDeleteTime
 	{
 		get
@@ -209,8 +209,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000887 RID: 2183
-	// (get) Token: 0x06006A24 RID: 27172 RVA: 0x00154B8C File Offset: 0x00152D8C
+	// Token: 0x170008A7 RID: 2215
+	// (get) Token: 0x06003DB9 RID: 15801 RVA: 0x0015D4B4 File Offset: 0x0015B6B4
 	public float Cd
 	{
 		get
@@ -219,8 +219,8 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x17000888 RID: 2184
-	// (get) Token: 0x06006A25 RID: 27173 RVA: 0x00154BB9 File Offset: 0x00152DB9
+	// Token: 0x170008A8 RID: 2216
+	// (get) Token: 0x06003DBA RID: 15802 RVA: 0x0015D4E1 File Offset: 0x0015B6E1
 	public bool IsInDelay
 	{
 		get
@@ -229,7 +229,7 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		}
 	}
 
-	// Token: 0x06006A26 RID: 27174 RVA: 0x00154BC4 File Offset: 0x00152DC4
+	// Token: 0x06003DBB RID: 15803 RVA: 0x0015D4EC File Offset: 0x0015B6EC
 	protected override void OnFinish()
 	{
 		GuessJokerDialogLogic activeDialogLogic = GuessJokerGamePlayModel.Instance.GetActiveDialogLogic();
@@ -244,25 +244,25 @@ public class GuessJokerPlotAction : GuessJokerActionBase
 		this.AiPlotConfig = null;
 	}
 
-	// Token: 0x040030E5 RID: 12517
+	// Token: 0x0400317E RID: 12670
 	[Nullable(2)]
 	private ITalkItemDialog TalkData;
 
-	// Token: 0x040030E6 RID: 12518
+	// Token: 0x0400317F RID: 12671
 	private GuessJokerPlotConfig? PlotConfig;
 
-	// Token: 0x040030E7 RID: 12519
+	// Token: 0x04003180 RID: 12672
 	private GuessJokerAIPlotConfig? AiPlotConfig;
 
-	// Token: 0x040030E8 RID: 12520
+	// Token: 0x04003181 RID: 12673
 	private readonly EGuessJokerPlotTiming TimingInternal;
 
-	// Token: 0x040030E9 RID: 12521
+	// Token: 0x04003182 RID: 12674
 	private readonly EGuessJokerPlayerType PlayerTypeInternal;
 
-	// Token: 0x040030EA RID: 12522
+	// Token: 0x04003183 RID: 12675
 	private bool IsDelayed;
 
-	// Token: 0x040030EB RID: 12523
+	// Token: 0x04003184 RID: 12676
 	private float DelayElapsed;
 }

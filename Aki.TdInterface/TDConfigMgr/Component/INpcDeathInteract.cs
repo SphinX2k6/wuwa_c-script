@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200055A RID: 1370
+	// Token: 0x020005C1 RID: 1473
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcDeathInteract
 	{
-		// Token: 0x06001C06 RID: 7174 RVA: 0x00050840 File Offset: 0x0004EA40
-		[NullableContext(1)]
+		// Token: 0x06001E02 RID: 7682 RVA: 0x000555FC File Offset: 0x000537FC
+		[NullableContext(0)]
 		private INpcDeathInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C07 RID: 7175 RVA: 0x00050878 File Offset: 0x0004EA78
-		[NullableContext(1)]
+		// Token: 0x06001E03 RID: 7683 RVA: 0x00055634 File Offset: 0x00053834
+		[NullableContext(0)]
 		public static INpcDeathInteract Create([Nullable(2)] INpcDeathInteract instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C08 RID: 7176 RVA: 0x0005088B File Offset: 0x0004EA8B
-		[NullableContext(1)]
+		// Token: 0x06001E04 RID: 7684 RVA: 0x00055647 File Offset: 0x00053847
+		[NullableContext(0)]
 		public static INpcDeathInteract CreateFromSetValue([Nullable(2)] INpcDeathInteract_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C09 RID: 7177 RVA: 0x0005089E File Offset: 0x0004EA9E
-		[NullableContext(1)]
+		// Token: 0x06001E05 RID: 7685 RVA: 0x0005565A File Offset: 0x0005385A
+		[NullableContext(0)]
 		public INpcDeathInteract_SetValue ToSetValue()
 		{
 			return new INpcDeathInteract_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700075B RID: 1883
-		// (get) Token: 0x06001C0A RID: 7178 RVA: 0x000508C0 File Offset: 0x0004EAC0
-		// (set) Token: 0x06001C0B RID: 7179 RVA: 0x00050921 File Offset: 0x0004EB21
+		// Token: 0x170007DE RID: 2014
+		// (get) Token: 0x06001E06 RID: 7686 RVA: 0x0005567C File Offset: 0x0005387C
+		// (set) Token: 0x06001E07 RID: 7687 RVA: 0x000556DD File Offset: 0x000538DD
 		public virtual IMontageId Montage
 		{
 			get
@@ -95,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700075C RID: 1884
-		// (get) Token: 0x06001C0C RID: 7180 RVA: 0x00050936 File Offset: 0x0004EB36
-		// (set) Token: 0x06001C0D RID: 7181 RVA: 0x0005095D File Offset: 0x0004EB5D
+		// Token: 0x170007DF RID: 2015
+		// (get) Token: 0x06001E08 RID: 7688 RVA: 0x000556F2 File Offset: 0x000538F2
+		// (set) Token: 0x06001E09 RID: 7689 RVA: 0x00055719 File Offset: 0x00053919
 		public virtual string MaterialDa
 		{
 			get
@@ -119,17 +119,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001413 RID: 5139
+		// Token: 0x0400157D RID: 5501
 		protected INpcDeathInteract FbInstance;
 
-		// Token: 0x04001414 RID: 5140
+		// Token: 0x0400157E RID: 5502
 		protected INpcDeathInteract_SetValue PocoInterface;
 
-		// Token: 0x04001415 RID: 5141
-		[Nullable(1)]
+		// Token: 0x0400157F RID: 5503
+		[Nullable(0)]
 		private IMontageId _MontageCache;
 
-		// Token: 0x04001416 RID: 5142
+		// Token: 0x04001580 RID: 5504
 		private bool _MontageInited;
 	}
 }

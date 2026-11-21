@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001573 RID: 5491
+	// Token: 0x020016D1 RID: 5841
 	public class DrinksRollRoleRequirement_SetValue
 	{
-		// Token: 0x04004752 RID: 18258
+		// Token: 0x04004AF2 RID: 19186
 		public int RoleId;
 
-		// Token: 0x04004753 RID: 18259
+		// Token: 0x04004AF3 RID: 19187
 		public int? RequirementId;
 	}
 }

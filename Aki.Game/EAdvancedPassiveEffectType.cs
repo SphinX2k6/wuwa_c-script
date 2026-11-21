@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F64 RID: 12132
+// Token: 0x020024B8 RID: 9400
 public enum EAdvancedPassiveEffectType
 {
-	// Token: 0x0400C295 RID: 49813
+	// Token: 0x0400C63E RID: 50750
 	AttributeEvent,
-	// Token: 0x0400C296 RID: 49814
+	// Token: 0x0400C63F RID: 50751
 	TagChange,
-	// Token: 0x0400C297 RID: 49815
+	// Token: 0x0400C640 RID: 50752
 	TagEvent
 }

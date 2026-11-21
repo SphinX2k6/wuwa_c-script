@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001ECC RID: 7884
+// Token: 0x0200138E RID: 5006
 public enum EPnlHeadBoxComponent
 {
-	// Token: 0x0400704F RID: 28751
+	// Token: 0x04007130 RID: 28976
 	SprEmpty,
-	// Token: 0x04007050 RID: 28752
+	// Token: 0x04007131 RID: 28977
 	TexHead
 }

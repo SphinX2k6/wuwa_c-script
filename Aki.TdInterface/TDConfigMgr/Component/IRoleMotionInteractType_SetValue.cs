@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200068F RID: 1679
+	// Token: 0x02000730 RID: 1840
 	public class IRoleMotionInteractType_SetValue
 	{
-		// Token: 0x040018BF RID: 6335
+		// Token: 0x04001ABC RID: 6844
 		public ERoleMotionInteractType Type;
 	}
 }

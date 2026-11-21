@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006611 RID: 26129
+	// Token: 0x0200558F RID: 21903
 	internal class ShipSkinItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060417B7 RID: 268215 RVA: 0x00FDC37C File Offset: 0x00FDA57C
+		// Token: 0x0603647C RID: 222332 RVA: 0x00F23408 File Offset: 0x00F21608
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060417B8 RID: 268216 RVA: 0x00FDC4A8 File Offset: 0x00FDA6A8
+		// Token: 0x0603647D RID: 222333 RVA: 0x00F23534 File Offset: 0x00F21734
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.SkinId = data;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x060417B9 RID: 268217 RVA: 0x00FDC59A File Offset: 0x00FDA79A
+		// Token: 0x0603647E RID: 222334 RVA: 0x00F23626 File Offset: 0x00F21826
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			Action<UUIExtendToggle, int> clickFunc = this.ClickFunc;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x060417BA RID: 268218 RVA: 0x00FDC5C7 File Offset: 0x00FDA7C7
+		// Token: 0x0603647F RID: 222335 RVA: 0x00F23653 File Offset: 0x00F21853
 		public void SelectToggle()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -85,10 +85,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x0402213B RID: 139579
+		// Token: 0x0401CA6C RID: 117356
 		public int SkinId;
 
-		// Token: 0x0402213C RID: 139580
+		// Token: 0x0401CA6D RID: 117357
 		[Nullable(new byte[]
 		{
 			2,
@@ -96,25 +96,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		public Action<UUIExtendToggle, int> ClickFunc;
 
-		// Token: 0x0200C820 RID: 51232
+		// Token: 0x0200B203 RID: 45571
 		private class EShipSkinItemComponent
 		{
-			// Token: 0x0403C70C RID: 247564
+			// Token: 0x04037054 RID: 225364
 			public const int Toggle = 0;
 
-			// Token: 0x0403C70D RID: 247565
+			// Token: 0x04037055 RID: 225365
 			public const int Texture = 1;
 
-			// Token: 0x0403C70E RID: 247566
+			// Token: 0x04037056 RID: 225366
 			public const int NameText = 2;
 
-			// Token: 0x0403C70F RID: 247567
+			// Token: 0x04037057 RID: 225367
 			public const int CurrentItem = 3;
 
-			// Token: 0x0403C710 RID: 247568
+			// Token: 0x04037058 RID: 225368
 			public const int LockItem = 4;
 
-			// Token: 0x0403C711 RID: 247569
+			// Token: 0x04037059 RID: 225369
 			public const int RedDotItem = 5;
 		}
 	}

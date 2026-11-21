@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006585 RID: 25989
+	// Token: 0x02005503 RID: 21763
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingRewardProgressPanel : UiPanelBase
 	{
-		// Token: 0x06041229 RID: 266793 RVA: 0x00FC8F9C File Offset: 0x00FC719C
+		// Token: 0x06035EEE RID: 220910 RVA: 0x00F0FF50 File Offset: 0x00F0E150
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604122A RID: 266794 RVA: 0x00FC9068 File Offset: 0x00FC7268
+		// Token: 0x06035EEF RID: 220911 RVA: 0x00F1001C File Offset: 0x00F0E21C
 		protected override void OnStart()
 		{
 			this.ProgressLayout = new GenericLayout<FishingRewardProgressItem, FishingRewardProgressData>(base.GetHorizontalLayout(1), new Func<FishingRewardProgressItem>(this.ProgressItemProxyCreate), null, false, true);
 			this.ProgressBarWidth = base.GetSprite(4).GetWidth();
 		}
 
-		// Token: 0x0604122B RID: 266795 RVA: 0x00FC909D File Offset: 0x00FC729D
+		// Token: 0x06035EF0 RID: 220912 RVA: 0x00F10051 File Offset: 0x00F0E251
 		private FishingRewardProgressItem ProgressItemProxyCreate()
 		{
 			return new FishingRewardProgressItem
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x0604122C RID: 266796 RVA: 0x00FC90B0 File Offset: 0x00FC72B0
+		// Token: 0x06035EF1 RID: 220913 RVA: 0x00F10064 File Offset: 0x00F0E264
 		public UniTask RefreshProgressItem(int currentProgress, int maxProgress, FishingRewardProgressData[] dataList)
 		{
 			FishingRewardProgressPanel.<RefreshProgressItem>d__8 <RefreshProgressItem>d__;
@@ -64,36 +64,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <RefreshProgressItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04021EE7 RID: 138983
+		// Token: 0x0401C818 RID: 116760
 		private const int REWARD_ITEM_WIDTH = 108;
 
-		// Token: 0x04021EE8 RID: 138984
+		// Token: 0x0401C819 RID: 116761
 		protected GenericLayout<FishingRewardProgressItem, FishingRewardProgressData> ProgressLayout;
 
-		// Token: 0x04021EE9 RID: 138985
+		// Token: 0x0401C81A RID: 116762
 		protected float ProgressBarWidth;
 
-		// Token: 0x04021EEA RID: 138986
+		// Token: 0x0401C81B RID: 116763
 		[Nullable(2)]
 		public Action OnClickToGet;
 
-		// Token: 0x0200C77B RID: 51067
+		// Token: 0x0200B160 RID: 45408
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403C44C RID: 246860
+			// Token: 0x04036D9D RID: 224669
 			public const int TxtProgress = 0;
 
-			// Token: 0x0403C44D RID: 246861
+			// Token: 0x04036D9E RID: 224670
 			public const int ProgressLayout = 1;
 
-			// Token: 0x0403C44E RID: 246862
+			// Token: 0x04036D9F RID: 224671
 			public const int ProgressItem = 2;
 
-			// Token: 0x0403C44F RID: 246863
+			// Token: 0x04036DA0 RID: 224672
 			public const int DotStart = 3;
 
-			// Token: 0x0403C450 RID: 246864
+			// Token: 0x04036DA1 RID: 224673
 			public const int BarProgress = 4;
 		}
 	}

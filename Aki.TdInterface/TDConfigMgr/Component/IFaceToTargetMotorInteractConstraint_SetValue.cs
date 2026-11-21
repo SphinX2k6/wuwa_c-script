@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000369 RID: 873
+	// Token: 0x020003B2 RID: 946
 	public class IFaceToTargetMotorInteractConstraint_SetValue
 	{
-		// Token: 0x04000E4A RID: 3658
+		// Token: 0x04000F41 RID: 3905
 		public EMotorInteractConstraintType Type;
 
-		// Token: 0x04000E4B RID: 3659
-		[Nullable(1)]
+		// Token: 0x04000F42 RID: 3906
 		public ITargetEntityType Target;
 
-		// Token: 0x04000E4C RID: 3660
+		// Token: 0x04000F43 RID: 3907
 		public float Angle;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052E8 RID: 21224
+	// Token: 0x0200586B RID: 22635
 	public struct IGameplayDataPersistenceTetrisBoardGame : IFlatbufferObject
 	{
-		// Token: 0x17009BC8 RID: 39880
-		// (get) Token: 0x06022A5F RID: 141919 RVA: 0x004CD6D7 File Offset: 0x004CB8D7
+		// Token: 0x1700A3F9 RID: 41977
+		// (get) Token: 0x06024AF9 RID: 150265 RVA: 0x0050A203 File Offset: 0x00508403
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A60 RID: 141920 RVA: 0x004CD6E4 File Offset: 0x004CB8E4
+		// Token: 0x06024AFA RID: 150266 RVA: 0x0050A210 File Offset: 0x00508410
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022A61 RID: 141921 RVA: 0x004CD6EC File Offset: 0x004CB8EC
+		// Token: 0x06024AFB RID: 150267 RVA: 0x0050A218 File Offset: 0x00508418
 		public static IGameplayDataPersistenceTetrisBoardGame GetRootAsIGameplayDataPersistenceTetrisBoardGame(ByteBuffer _bb)
 		{
 			return IGameplayDataPersistenceTetrisBoardGame.GetRootAsIGameplayDataPersistenceTetrisBoardGame(_bb, default(IGameplayDataPersistenceTetrisBoardGame));
 		}
 
-		// Token: 0x06022A62 RID: 141922 RVA: 0x004CD708 File Offset: 0x004CB908
+		// Token: 0x06024AFC RID: 150268 RVA: 0x0050A234 File Offset: 0x00508434
 		public static IGameplayDataPersistenceTetrisBoardGame GetRootAsIGameplayDataPersistenceTetrisBoardGame(ByteBuffer _bb, IGameplayDataPersistenceTetrisBoardGame obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022A63 RID: 141923 RVA: 0x004CD725 File Offset: 0x004CB925
+		// Token: 0x06024AFD RID: 150269 RVA: 0x0050A251 File Offset: 0x00508451
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022A64 RID: 141924 RVA: 0x004CD734 File Offset: 0x004CB934
+		// Token: 0x06024AFE RID: 150270 RVA: 0x0050A260 File Offset: 0x00508460
 		public IGameplayDataPersistenceTetrisBoardGame __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BC9 RID: 39881
-		// (get) Token: 0x06022A65 RID: 141925 RVA: 0x004CD744 File Offset: 0x004CB944
+		// Token: 0x1700A3FA RID: 41978
+		// (get) Token: 0x06024AFF RID: 150271 RVA: 0x0050A270 File Offset: 0x00508470
 		public EDataPersistenceGameplayType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BCA RID: 39882
-		// (get) Token: 0x06022A66 RID: 141926 RVA: 0x004CD780 File Offset: 0x004CB980
+		// Token: 0x1700A3FB RID: 41979
+		// (get) Token: 0x06024B00 RID: 150272 RVA: 0x0050A2AC File Offset: 0x005084AC
 		public TVarRef HighestScoreSyncVarType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A67 RID: 141927 RVA: 0x004CD7BC File Offset: 0x004CB9BC
+		// Token: 0x06024B01 RID: 150273 RVA: 0x0050A2E8 File Offset: 0x005084E8
 		public TTable? HighestScoreSyncVar<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06022A68 RID: 141928 RVA: 0x004CD800 File Offset: 0x004CBA00
+		// Token: 0x06024B02 RID: 150274 RVA: 0x0050A32C File Offset: 0x0050852C
 		public IConstVarRef HighestScoreSyncVarAsIConstVarRef()
 		{
 			return this.HighestScoreSyncVar<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06022A69 RID: 141929 RVA: 0x004CD81C File Offset: 0x004CBA1C
+		// Token: 0x06024B03 RID: 150275 RVA: 0x0050A348 File Offset: 0x00508548
 		public IGlobalVarRef HighestScoreSyncVarAsIGlobalVarRef()
 		{
 			return this.HighestScoreSyncVar<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06022A6A RID: 141930 RVA: 0x004CD838 File Offset: 0x004CBA38
+		// Token: 0x06024B04 RID: 150276 RVA: 0x0050A364 File Offset: 0x00508564
 		public IOtherVarRef HighestScoreSyncVarAsIOtherVarRef()
 		{
 			return this.HighestScoreSyncVar<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06022A6B RID: 141931 RVA: 0x004CD854 File Offset: 0x004CBA54
+		// Token: 0x06024B05 RID: 150277 RVA: 0x0050A380 File Offset: 0x00508580
 		public ISelfVarRef HighestScoreSyncVarAsISelfVarRef()
 		{
 			return this.HighestScoreSyncVar<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06022A6C RID: 141932 RVA: 0x004CD870 File Offset: 0x004CBA70
+		// Token: 0x06024B06 RID: 150278 RVA: 0x0050A39C File Offset: 0x0050859C
 		public ISystemVarRef HighestScoreSyncVarAsISystemVarRef()
 		{
 			return this.HighestScoreSyncVar<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06022A6D RID: 141933 RVA: 0x004CD88B File Offset: 0x004CBA8B
+		// Token: 0x06024B07 RID: 150279 RVA: 0x0050A3B7 File Offset: 0x005085B7
 		public static Offset<IGameplayDataPersistenceTetrisBoardGame> CreateIGameplayDataPersistenceTetrisBoardGame(FlatBufferBuilder builder, EDataPersistenceGameplayType Type = EDataPersistenceGameplayType.TetrisBoardGame, TVarRef HighestScoreSyncVar_type = TVarRef.NONE, int HighestScoreSyncVarOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGameplayDataPersistenceTetrisBoardGame.EndIGameplayDataPersistenceTetrisBoardGame(builder);
 		}
 
-		// Token: 0x06022A6E RID: 141934 RVA: 0x004CD8AF File Offset: 0x004CBAAF
+		// Token: 0x06024B08 RID: 150280 RVA: 0x0050A3DB File Offset: 0x005085DB
 		public static void StartIGameplayDataPersistenceTetrisBoardGame(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022A6F RID: 141935 RVA: 0x004CD8B8 File Offset: 0x004CBAB8
+		// Token: 0x06024B09 RID: 150281 RVA: 0x0050A3E4 File Offset: 0x005085E4
 		public static void AddType(FlatBufferBuilder builder, EDataPersistenceGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022A70 RID: 141936 RVA: 0x004CD8C3 File Offset: 0x004CBAC3
+		// Token: 0x06024B0A RID: 150282 RVA: 0x0050A3EF File Offset: 0x005085EF
 		public static void AddHighestScoreSyncVarType(FlatBufferBuilder builder, TVarRef highestScoreSyncVarType)
 		{
 			builder.AddByte(1, (byte)highestScoreSyncVarType, 0);
 		}
 
-		// Token: 0x06022A71 RID: 141937 RVA: 0x004CD8CE File Offset: 0x004CBACE
+		// Token: 0x06024B0B RID: 150283 RVA: 0x0050A3FA File Offset: 0x005085FA
 		public static void AddHighestScoreSyncVar(FlatBufferBuilder builder, int highestScoreSyncVarOffset)
 		{
 			builder.AddOffset(2, highestScoreSyncVarOffset, 0);
 		}
 
-		// Token: 0x06022A72 RID: 141938 RVA: 0x004CD8D9 File Offset: 0x004CBAD9
+		// Token: 0x06024B0C RID: 150284 RVA: 0x0050A405 File Offset: 0x00508605
 		public static Offset<IGameplayDataPersistenceTetrisBoardGame> EndIGameplayDataPersistenceTetrisBoardGame(FlatBufferBuilder builder)
 		{
 			return new Offset<IGameplayDataPersistenceTetrisBoardGame>(builder.EndTable());
 		}
 
-		// Token: 0x06022A73 RID: 141939 RVA: 0x004CD8E8 File Offset: 0x004CBAE8
+		// Token: 0x06024B0D RID: 150285 RVA: 0x0050A414 File Offset: 0x00508614
 		public IGameplayDataPersistenceTetrisBoardGameT UnPack()
 		{
 			IGameplayDataPersistenceTetrisBoardGameT gameplayDataPersistenceTetrisBoardGameT = new IGameplayDataPersistenceTetrisBoardGameT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return gameplayDataPersistenceTetrisBoardGameT;
 		}
 
-		// Token: 0x06022A74 RID: 141940 RVA: 0x004CD904 File Offset: 0x004CBB04
+		// Token: 0x06024B0E RID: 150286 RVA: 0x0050A430 File Offset: 0x00508630
 		public void UnPackTo(IGameplayDataPersistenceTetrisBoardGameT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022A75 RID: 141941 RVA: 0x004CDA70 File Offset: 0x004CBC70
+		// Token: 0x06024B0F RID: 150287 RVA: 0x0050A59C File Offset: 0x0050879C
 		public static Offset<IGameplayDataPersistenceTetrisBoardGame> Pack(FlatBufferBuilder builder, IGameplayDataPersistenceTetrisBoardGameT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGameplayDataPersistenceTetrisBoardGame.CreateIGameplayDataPersistenceTetrisBoardGame(builder, _o.Type, highestScoreSyncVar_type, highestScoreSyncVarOffset);
 		}
 
-		// Token: 0x0400E487 RID: 58503
+		// Token: 0x0400F0B3 RID: 61619
 		private Table __p;
 	}
 }

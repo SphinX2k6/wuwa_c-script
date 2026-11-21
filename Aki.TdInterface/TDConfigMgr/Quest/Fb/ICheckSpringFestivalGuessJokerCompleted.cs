@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001414 RID: 5140
+	// Token: 0x0200156B RID: 5483
 	public class ICheckSpringFestivalGuessJokerCompleted : ICheckSpringFestivalGameplayType
 	{
-		// Token: 0x060074D4 RID: 29908 RVA: 0x001173DA File Offset: 0x001155DA
-		[NullableContext(1)]
+		// Token: 0x06007B95 RID: 31637 RVA: 0x00125DBE File Offset: 0x00123FBE
 		public static ICheckSpringFestivalGuessJokerCompleted Create(ICheckSpringFestivalGuessJokerCompleted? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700267F RID: 9855
-		// (get) Token: 0x060074D5 RID: 29909 RVA: 0x001173F9 File Offset: 0x001155F9
+		// Token: 0x17002861 RID: 10337
+		// (get) Token: 0x06007B96 RID: 31638 RVA: 0x00125DDD File Offset: 0x00123FDD
 		public override ESpringFestivalGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002680 RID: 9856
-		// (get) Token: 0x060074D6 RID: 29910 RVA: 0x00117408 File Offset: 0x00115608
+		// Token: 0x17002862 RID: 10338
+		// (get) Token: 0x06007B97 RID: 31639 RVA: 0x00125DEC File Offset: 0x00123FEC
 		public virtual int? Id
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043A2 RID: 17314
+		// Token: 0x04004733 RID: 18227
 		private ICheckSpringFestivalGuessJokerCompleted Instance;
 	}
 }

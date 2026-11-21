@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048B0 RID: 18608
+	// Token: 0x02004D15 RID: 19733
 	public struct ITwoDimensionBgConfig : IFlatbufferObject
 	{
-		// Token: 0x170086E9 RID: 34537
-		// (get) Token: 0x0601D0C0 RID: 118976 RVA: 0x0041A164 File Offset: 0x00418364
+		// Token: 0x17008D31 RID: 36145
+		// (get) Token: 0x0601E8AD RID: 125101 RVA: 0x00446900 File Offset: 0x00444B00
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D0C1 RID: 118977 RVA: 0x0041A171 File Offset: 0x00418371
+		// Token: 0x0601E8AE RID: 125102 RVA: 0x0044690D File Offset: 0x00444B0D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D0C2 RID: 118978 RVA: 0x0041A178 File Offset: 0x00418378
+		// Token: 0x0601E8AF RID: 125103 RVA: 0x00446914 File Offset: 0x00444B14
 		public static ITwoDimensionBgConfig GetRootAsITwoDimensionBgConfig(ByteBuffer _bb)
 		{
 			return ITwoDimensionBgConfig.GetRootAsITwoDimensionBgConfig(_bb, default(ITwoDimensionBgConfig));
 		}
 
-		// Token: 0x0601D0C3 RID: 118979 RVA: 0x0041A194 File Offset: 0x00418394
+		// Token: 0x0601E8B0 RID: 125104 RVA: 0x00446930 File Offset: 0x00444B30
 		public static ITwoDimensionBgConfig GetRootAsITwoDimensionBgConfig(ByteBuffer _bb, ITwoDimensionBgConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D0C4 RID: 118980 RVA: 0x0041A1B1 File Offset: 0x004183B1
+		// Token: 0x0601E8B1 RID: 125105 RVA: 0x0044694D File Offset: 0x00444B4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D0C5 RID: 118981 RVA: 0x0041A1C0 File Offset: 0x004183C0
+		// Token: 0x0601E8B2 RID: 125106 RVA: 0x0044695C File Offset: 0x00444B5C
 		public ITwoDimensionBgConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170086EA RID: 34538
-		// (get) Token: 0x0601D0C6 RID: 118982 RVA: 0x0041A1D0 File Offset: 0x004183D0
+		// Token: 0x17008D32 RID: 36146
+		// (get) Token: 0x0601E8B3 RID: 125107 RVA: 0x0044696C File Offset: 0x00444B6C
 		public string BgUrl
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D0C7 RID: 118983 RVA: 0x0041A207 File Offset: 0x00418407
+		// Token: 0x0601E8B4 RID: 125108 RVA: 0x004469A3 File Offset: 0x00444BA3
 		public Span<byte> GetBgUrlBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601D0C8 RID: 118984 RVA: 0x0041A216 File Offset: 0x00418416
+		// Token: 0x0601E8B5 RID: 125109 RVA: 0x004469B2 File Offset: 0x00444BB2
 		public byte[] GetBgUrlArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x170086EB RID: 34539
-		// (get) Token: 0x0601D0C9 RID: 118985 RVA: 0x0041A224 File Offset: 0x00418424
+		// Token: 0x17008D33 RID: 36147
+		// (get) Token: 0x0601E8B6 RID: 125110 RVA: 0x004469C0 File Offset: 0x00444BC0
 		public int Width
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170086EC RID: 34540
-		// (get) Token: 0x0601D0CA RID: 118986 RVA: 0x0041A260 File Offset: 0x00418460
+		// Token: 0x17008D34 RID: 36148
+		// (get) Token: 0x0601E8B7 RID: 125111 RVA: 0x004469FC File Offset: 0x00444BFC
 		public int Height
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170086ED RID: 34541
-		// (get) Token: 0x0601D0CB RID: 118987 RVA: 0x0041A29C File Offset: 0x0041849C
+		// Token: 0x17008D35 RID: 36149
+		// (get) Token: 0x0601E8B8 RID: 125112 RVA: 0x00446A38 File Offset: 0x00444C38
 		public float Scale
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601D0CC RID: 118988 RVA: 0x0041A2DD File Offset: 0x004184DD
+		// Token: 0x0601E8B9 RID: 125113 RVA: 0x00446A79 File Offset: 0x00444C79
 		public static Offset<ITwoDimensionBgConfig> CreateITwoDimensionBgConfig(FlatBufferBuilder builder, StringOffset BgUrlOffset = default(StringOffset), int Width = 0, int Height = 0, float Scale = 0f)
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ITwoDimensionBgConfig.EndITwoDimensionBgConfig(builder);
 		}
 
-		// Token: 0x0601D0CD RID: 118989 RVA: 0x0041A309 File Offset: 0x00418509
+		// Token: 0x0601E8BA RID: 125114 RVA: 0x00446AA5 File Offset: 0x00444CA5
 		public static void StartITwoDimensionBgConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601D0CE RID: 118990 RVA: 0x0041A312 File Offset: 0x00418512
+		// Token: 0x0601E8BB RID: 125115 RVA: 0x00446AAE File Offset: 0x00444CAE
 		public static void AddBgUrl(FlatBufferBuilder builder, StringOffset bgUrlOffset)
 		{
 			builder.AddOffset(0, bgUrlOffset.Value, 0);
 		}
 
-		// Token: 0x0601D0CF RID: 118991 RVA: 0x0041A322 File Offset: 0x00418522
+		// Token: 0x0601E8BC RID: 125116 RVA: 0x00446ABE File Offset: 0x00444CBE
 		public static void AddWidth(FlatBufferBuilder builder, int width)
 		{
 			builder.AddInt(1, width, 0);
 		}
 
-		// Token: 0x0601D0D0 RID: 118992 RVA: 0x0041A32D File Offset: 0x0041852D
+		// Token: 0x0601E8BD RID: 125117 RVA: 0x00446AC9 File Offset: 0x00444CC9
 		public static void AddHeight(FlatBufferBuilder builder, int height)
 		{
 			builder.AddInt(2, height, 0);
 		}
 
-		// Token: 0x0601D0D1 RID: 118993 RVA: 0x0041A338 File Offset: 0x00418538
+		// Token: 0x0601E8BE RID: 125118 RVA: 0x00446AD4 File Offset: 0x00444CD4
 		public static void AddScale(FlatBufferBuilder builder, float scale)
 		{
 			builder.AddFloat(3, scale, 0.0);
 		}
 
-		// Token: 0x0601D0D2 RID: 118994 RVA: 0x0041A34B File Offset: 0x0041854B
+		// Token: 0x0601E8BF RID: 125119 RVA: 0x00446AE7 File Offset: 0x00444CE7
 		public static Offset<ITwoDimensionBgConfig> EndITwoDimensionBgConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITwoDimensionBgConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601D0D3 RID: 118995 RVA: 0x0041A358 File Offset: 0x00418558
+		// Token: 0x0601E8C0 RID: 125120 RVA: 0x00446AF4 File Offset: 0x00444CF4
 		public ITwoDimensionBgConfigT UnPack()
 		{
 			ITwoDimensionBgConfigT twoDimensionBgConfigT = new ITwoDimensionBgConfigT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return twoDimensionBgConfigT;
 		}
 
-		// Token: 0x0601D0D4 RID: 118996 RVA: 0x0041A373 File Offset: 0x00418573
+		// Token: 0x0601E8C1 RID: 125121 RVA: 0x00446B0F File Offset: 0x00444D0F
 		public void UnPackTo(ITwoDimensionBgConfigT _o)
 		{
 			_o.BgUrl = this.BgUrl;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.Scale = this.Scale;
 		}
 
-		// Token: 0x0601D0D5 RID: 118997 RVA: 0x0041A3A8 File Offset: 0x004185A8
+		// Token: 0x0601E8C2 RID: 125122 RVA: 0x00446B44 File Offset: 0x00444D44
 		public static Offset<ITwoDimensionBgConfig> Pack(FlatBufferBuilder builder, ITwoDimensionBgConfigT _o)
 		{
 			if (_o == null)
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ITwoDimensionBgConfig.CreateITwoDimensionBgConfig(builder, bgUrlOffset, _o.Width, _o.Height, _o.Scale);
 		}
 
-		// Token: 0x0400CEA0 RID: 52896
+		// Token: 0x0400D8D9 RID: 55513
 		private Table __p;
 	}
 }

@@ -7,16 +7,16 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F8F RID: 8079
+// Token: 0x02001451 RID: 5201
 public class ReputationDetailsView : UiViewBase
 {
-	// Token: 0x0600FAB2 RID: 64178 RVA: 0x003CBF70 File Offset: 0x003CA170
+	// Token: 0x0600CED1 RID: 52945 RVA: 0x003D7AA4 File Offset: 0x003D5CA4
 	[NullableContext(1)]
 	public ReputationDetailsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FAB3 RID: 64179 RVA: 0x003CBF7C File Offset: 0x003CA17C
+	// Token: 0x0600CED2 RID: 52946 RVA: 0x003D7AB0 File Offset: 0x003D5CB0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -61,13 +61,13 @@ public class ReputationDetailsView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FAB4 RID: 64180 RVA: 0x003CC1B7 File Offset: 0x003CA3B7
+	// Token: 0x0600CED3 RID: 52947 RVA: 0x003D7CEB File Offset: 0x003D5EEB
 	private void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FAB5 RID: 64181 RVA: 0x003CC1C0 File Offset: 0x003CA3C0
+	// Token: 0x0600CED4 RID: 52948 RVA: 0x003D7CF4 File Offset: 0x003D5EF4
 	private void TipsClick()
 	{
 		if (this.Config == null)
@@ -78,31 +78,31 @@ public class ReputationDetailsView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.ReputationTips, param, null);
 	}
 
-	// Token: 0x0600FAB6 RID: 64182 RVA: 0x003CC200 File Offset: 0x003CA400
+	// Token: 0x0600CED5 RID: 52949 RVA: 0x003D7D34 File Offset: 0x003D5F34
 	private void ReceiveClick()
 	{
 		InfluenceReputationController.Instance.RequestInfluenceReward(this.Data.InfluenceId);
 	}
 
-	// Token: 0x0600FAB7 RID: 64183 RVA: 0x003CC217 File Offset: 0x003CA417
+	// Token: 0x0600CED6 RID: 52950 RVA: 0x003D7D4B File Offset: 0x003D5F4B
 	private void RewardClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ReputationRewardsView, this.Data.InfluenceId, null);
 	}
 
-	// Token: 0x0600FAB8 RID: 64184 RVA: 0x003CC239 File Offset: 0x003CA439
+	// Token: 0x0600CED7 RID: 52951 RVA: 0x003D7D6D File Offset: 0x003D5F6D
 	protected override void OnBeforeCreate()
 	{
 		this.Data = (IReputationDetailsData)this.OpenParam;
 	}
 
-	// Token: 0x0600FAB9 RID: 64185 RVA: 0x003CC24C File Offset: 0x003CA44C
+	// Token: 0x0600CED8 RID: 52952 RVA: 0x003D7D80 File Offset: 0x003D5F80
 	protected override void OnStart()
 	{
 		this.RewardItem = new InfluenceRewardItem(base.GetItem(10));
 	}
 
-	// Token: 0x0600FABA RID: 64186 RVA: 0x003CC261 File Offset: 0x003CA461
+	// Token: 0x0600CED9 RID: 52953 RVA: 0x003D7D95 File Offset: 0x003D5F95
 	protected override void OnAfterShow()
 	{
 		this.Config = InfluenceConfig.Instance.GetInfluenceConfig(this.Data.InfluenceId);
@@ -110,32 +110,32 @@ public class ReputationDetailsView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600FABB RID: 64187 RVA: 0x003CC28A File Offset: 0x003CA48A
+	// Token: 0x0600CEDA RID: 52954 RVA: 0x003D7DBE File Offset: 0x003D5FBE
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ReceiveReputationReward, new Action(this.RefreshEvent));
 	}
 
-	// Token: 0x0600FABC RID: 64188 RVA: 0x003CC2A8 File Offset: 0x003CA4A8
+	// Token: 0x0600CEDB RID: 52955 RVA: 0x003D7DDC File Offset: 0x003D5FDC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ReceiveReputationReward, new Action(this.RefreshEvent));
 	}
 
-	// Token: 0x0600FABD RID: 64189 RVA: 0x003CC2C6 File Offset: 0x003CA4C6
+	// Token: 0x0600CEDC RID: 52956 RVA: 0x003D7DFA File Offset: 0x003D5FFA
 	private void RefreshEvent()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600FABE RID: 64190 RVA: 0x003CC2CE File Offset: 0x003CA4CE
+	// Token: 0x0600CEDD RID: 52957 RVA: 0x003D7E02 File Offset: 0x003D6002
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardItem.Destroy(null);
 		this.RewardItem = null;
 	}
 
-	// Token: 0x0600FABF RID: 64191 RVA: 0x003CC2E4 File Offset: 0x003CA4E4
+	// Token: 0x0600CEDE RID: 52958 RVA: 0x003D7E18 File Offset: 0x003D6018
 	protected void RefreshView()
 	{
 		ValueTuple<bool, IntPair>? canReceiveReward = InfluenceReputationModel.Instance.GetCanReceiveReward(this.Data.InfluenceId);
@@ -155,7 +155,7 @@ public class ReputationDetailsView : UiViewBase
 		base.GetInteractionGroup(3).SetInteractable(reputationProgress.Item1 >= value.Item2.Item1);
 	}
 
-	// Token: 0x0600FAC0 RID: 64192 RVA: 0x003CC3A4 File Offset: 0x003CA5A4
+	// Token: 0x0600CEDF RID: 52959 RVA: 0x003D7ED8 File Offset: 0x003D60D8
 	protected void RefreshProgress(int current, int max)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(9), "ReputationNormalValue", new <>z__ReadOnlyArray<object>(new object[]
@@ -166,7 +166,7 @@ public class ReputationDetailsView : UiViewBase
 		base.GetSprite(6).SetFillAmount((float)current / (float)max);
 	}
 
-	// Token: 0x0600FAC1 RID: 64193 RVA: 0x003CC3F8 File Offset: 0x003CA5F8
+	// Token: 0x0600CEE0 RID: 52960 RVA: 0x003D7F2C File Offset: 0x003D612C
 	protected void InitView()
 	{
 		if (this.Config == null)
@@ -178,7 +178,7 @@ public class ReputationDetailsView : UiViewBase
 		base.SetTextureByPath(this.Config.Value.Logo, base.GetTexture(5), null, null);
 	}
 
-	// Token: 0x0600FAC2 RID: 64194 RVA: 0x003CC48F File Offset: 0x003CA68F
+	// Token: 0x0600CEE1 RID: 52961 RVA: 0x003D7FC3 File Offset: 0x003D61C3
 	private void RefreshRewardItem(IntPair reward, bool isReceived)
 	{
 		this.RewardItem.UpdateItem(reward, isReceived);
@@ -188,41 +188,41 @@ public class ReputationDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x040074B8 RID: 29880
+	// Token: 0x04007599 RID: 30105
 	[Nullable(2)]
 	private IReputationDetailsData Data;
 
-	// Token: 0x040074B9 RID: 29881
+	// Token: 0x0400759A RID: 30106
 	[Nullable(2)]
 	private InfluenceRewardItem RewardItem;
 
-	// Token: 0x040074BA RID: 29882
+	// Token: 0x0400759B RID: 30107
 	private Influence? Config;
 
-	// Token: 0x02008579 RID: 34169
+	// Token: 0x020076FE RID: 30462
 	private enum EReputationDetailsView
 	{
-		// Token: 0x0402B758 RID: 178008
+		// Token: 0x04026A7B RID: 158331
 		CloseButton,
-		// Token: 0x0402B759 RID: 178009
+		// Token: 0x04026A7C RID: 158332
 		TipsButton,
-		// Token: 0x0402B75A RID: 178010
+		// Token: 0x04026A7D RID: 158333
 		ReceiveButton,
-		// Token: 0x0402B75B RID: 178011
+		// Token: 0x04026A7E RID: 158334
 		ReceiveInteractionGroup,
-		// Token: 0x0402B75C RID: 178012
+		// Token: 0x04026A7F RID: 158335
 		RewardButton,
-		// Token: 0x0402B75D RID: 178013
+		// Token: 0x04026A80 RID: 158336
 		InfluenceTexture,
-		// Token: 0x0402B75E RID: 178014
+		// Token: 0x04026A81 RID: 158337
 		ReputationProgress,
-		// Token: 0x0402B75F RID: 178015
+		// Token: 0x04026A82 RID: 158338
 		InfluenceText,
-		// Token: 0x0402B760 RID: 178016
+		// Token: 0x04026A83 RID: 158339
 		AreaText,
-		// Token: 0x0402B761 RID: 178017
+		// Token: 0x04026A84 RID: 158340
 		ProgressValue,
-		// Token: 0x0402B762 RID: 178018
+		// Token: 0x04026A85 RID: 158341
 		RewardItem
 	}
 }

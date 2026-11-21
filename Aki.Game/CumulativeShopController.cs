@@ -6,56 +6,56 @@ using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001200 RID: 4608
+// Token: 0x020006B4 RID: 1716
 [NullableContext(1)]
 [Nullable(0)]
 public class CumulativeShopController : ActivityControllerBase
 {
-	// Token: 0x06007B4C RID: 31564 RVA: 0x0019FC00 File Offset: 0x0019DE00
+	// Token: 0x06004EE2 RID: 20194 RVA: 0x001A88B8 File Offset: 0x001A6AB8
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06007B4D RID: 31565 RVA: 0x0019FC02 File Offset: 0x0019DE02
+	// Token: 0x06004EE3 RID: 20195 RVA: 0x001A88BA File Offset: 0x001A6ABA
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiView_CumulativeShop";
 	}
 
-	// Token: 0x06007B4E RID: 31566 RVA: 0x0019FC09 File Offset: 0x0019DE09
+	// Token: 0x06004EE4 RID: 20196 RVA: 0x001A88C1 File Offset: 0x001A6AC1
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new CumulativeShopSubView();
 	}
 
-	// Token: 0x06007B4F RID: 31567 RVA: 0x0019FC10 File Offset: 0x0019DE10
+	// Token: 0x06004EE5 RID: 20197 RVA: 0x001A88C8 File Offset: 0x001A6AC8
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityId = data.Id;
 		return new CumulativeShopData();
 	}
 
-	// Token: 0x06007B50 RID: 31568 RVA: 0x0019FC23 File Offset: 0x0019DE23
+	// Token: 0x06004EE6 RID: 20198 RVA: 0x001A88DB File Offset: 0x001A6ADB
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06007B51 RID: 31569 RVA: 0x0019FC26 File Offset: 0x0019DE26
+	// Token: 0x06004EE7 RID: 20199 RVA: 0x001A88DE File Offset: 0x001A6ADE
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ConsumptiveTaskInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.ConsumptiveTaskInfoNotify));
 		Net.Instance.Register(ENotifyMessageId.ConsumptiveTotalScoreNotify, new Action<IMessage, Net.CallbackStatus>(this.ConsumptiveTotalScoreNotify));
 	}
 
-	// Token: 0x06007B52 RID: 31570 RVA: 0x0019FC60 File Offset: 0x0019DE60
+	// Token: 0x06004EE8 RID: 20200 RVA: 0x001A8918 File Offset: 0x001A6B18
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ConsumptiveTaskInfoNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.ConsumptiveTotalScoreNotify);
 	}
 
-	// Token: 0x06007B53 RID: 31571 RVA: 0x0019FC84 File Offset: 0x0019DE84
+	// Token: 0x06004EE9 RID: 20201 RVA: 0x001A893C File Offset: 0x001A6B3C
 	public void ConsumptiveRewardRequest(int taskTab)
 	{
 		CumulativeShopData cumulativeShopData = this.GetCumulativeShopData();
@@ -92,7 +92,7 @@ public class CumulativeShopController : ActivityControllerBase
 			}
 			if (consumptiveRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(consumptiveRewardResponse.ErrorCode, 23419, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(consumptiveRewardResponse.ErrorCode, 25276, null, true, true);
 				return;
 			}
 			CumulativeShopData cumulativeShopData2 = this.GetCumulativeShopData();
@@ -117,13 +117,13 @@ public class CumulativeShopController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06007B54 RID: 31572 RVA: 0x0019FD9C File Offset: 0x0019DF9C
+	// Token: 0x06004EEA RID: 20202 RVA: 0x001A8A54 File Offset: 0x001A6C54
 	public CumulativeShopData GetCumulativeShopData()
 	{
 		return ActivityModel.Instance.GetActivityById(this.ActivityId) as CumulativeShopData;
 	}
 
-	// Token: 0x06007B55 RID: 31573 RVA: 0x0019FDB4 File Offset: 0x0019DFB4
+	// Token: 0x06004EEB RID: 20203 RVA: 0x001A8A6C File Offset: 0x001A6C6C
 	[NullableContext(2)]
 	public void ConsumptiveTaskInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -145,7 +145,7 @@ public class CumulativeShopController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 	}
 
-	// Token: 0x06007B56 RID: 31574 RVA: 0x0019FE84 File Offset: 0x0019E084
+	// Token: 0x06004EEC RID: 20204 RVA: 0x001A8B3C File Offset: 0x001A6D3C
 	[NullableContext(2)]
 	private void ConsumptiveTotalScoreNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -159,7 +159,7 @@ public class CumulativeShopController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, this.ActivityId);
 	}
 
-	// Token: 0x06007B57 RID: 31575 RVA: 0x0019FEC8 File Offset: 0x0019E0C8
+	// Token: 0x06004EED RID: 20205 RVA: 0x001A8B80 File Offset: 0x001A6D80
 	public void ConsumptiveActivityInfoRequest()
 	{
 		ConsumptiveActivityInfoRequest message = Aki.Protocol.ConsumptiveActivityInfoRequest.Create();
@@ -188,7 +188,7 @@ public class CumulativeShopController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06007B58 RID: 31576 RVA: 0x0019FEF8 File Offset: 0x0019E0F8
+	// Token: 0x06004EEE RID: 20206 RVA: 0x001A8BB0 File Offset: 0x001A6DB0
 	public void ConsumptiveActivityScoreRequest()
 	{
 		CumulativeShopData data = this.GetCumulativeShopData();
@@ -209,7 +209,7 @@ public class CumulativeShopController : ActivityControllerBase
 			}
 			if (consumptiveActivityScoreResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(consumptiveActivityScoreResponse.ErrorCode, 15172, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(consumptiveActivityScoreResponse.ErrorCode, 15654, null, true, true);
 				return;
 			}
 			data.TotalScore = consumptiveActivityScoreResponse.TotalScore;
@@ -217,8 +217,8 @@ public class CumulativeShopController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17000A8B RID: 2699
-	// (get) Token: 0x06007B59 RID: 31577 RVA: 0x0019FF6F File Offset: 0x0019E16F
+	// Token: 0x17000AAB RID: 2731
+	// (get) Token: 0x06004EEF RID: 20207 RVA: 0x001A8C27 File Offset: 0x001A6E27
 	public static CumulativeShopController Instance
 	{
 		get
@@ -227,7 +227,7 @@ public class CumulativeShopController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007B5A RID: 31578 RVA: 0x0019FF76 File Offset: 0x0019E176
+	// Token: 0x06004EF0 RID: 20208 RVA: 0x001A8C2E File Offset: 0x001A6E2E
 	public static CumulativeShopController GetOrCreateInstance()
 	{
 		if (CumulativeShopController._Instance == null)
@@ -237,7 +237,7 @@ public class CumulativeShopController : ActivityControllerBase
 		return CumulativeShopController._Instance;
 	}
 
-	// Token: 0x06007B5B RID: 31579 RVA: 0x0019FF8A File Offset: 0x0019E18A
+	// Token: 0x06004EF1 RID: 20209 RVA: 0x001A8C42 File Offset: 0x001A6E42
 	public static bool CreateInstance()
 	{
 		if (CumulativeShopController._Instance != null)
@@ -248,27 +248,27 @@ public class CumulativeShopController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06007B5C RID: 31580 RVA: 0x0019FFA0 File Offset: 0x0019E1A0
+	// Token: 0x06004EF2 RID: 20210 RVA: 0x001A8C58 File Offset: 0x001A6E58
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007B5D RID: 31581 RVA: 0x0019FFA2 File Offset: 0x0019E1A2
+	// Token: 0x06004EF3 RID: 20211 RVA: 0x001A8C5A File Offset: 0x001A6E5A
 	public static void ResetStaticDefaultValue()
 	{
 		CumulativeShopController._Instance = null;
 	}
 
-	// Token: 0x06007B5E RID: 31582 RVA: 0x0019FFAA File Offset: 0x0019E1AA
+	// Token: 0x06004EF4 RID: 20212 RVA: 0x001A8C62 File Offset: 0x001A6E62
 	static CumulativeShopController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CumulativeShopController.CreateStaticDefaultValue), new Action(CumulativeShopController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003865 RID: 14437
+	// Token: 0x040038FE RID: 14590
 	public int ActivityId;
 
-	// Token: 0x04003866 RID: 14438
+	// Token: 0x040038FF RID: 14591
 	[Nullable(2)]
 	private static CumulativeShopController _Instance;
 }

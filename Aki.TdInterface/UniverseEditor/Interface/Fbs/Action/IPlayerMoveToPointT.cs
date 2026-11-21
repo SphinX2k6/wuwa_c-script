@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D03 RID: 27907
+	// Token: 0x0200747E RID: 29822
 	public class IPlayerMoveToPointT
 	{
-		// Token: 0x1700CFD5 RID: 53205
-		// (get) Token: 0x06031368 RID: 201576 RVA: 0x006AD1D3 File Offset: 0x006AB3D3
-		// (set) Token: 0x06031369 RID: 201577 RVA: 0x006AD1DB File Offset: 0x006AB3DB
+		// Token: 0x1700DB19 RID: 56089
+		// (get) Token: 0x0603435C RID: 213852 RVA: 0x00708703 File Offset: 0x00706903
+		// (set) Token: 0x0603435D RID: 213853 RVA: 0x0070870B File Offset: 0x0070690B
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x1700CFD6 RID: 53206
-		// (get) Token: 0x0603136A RID: 201578 RVA: 0x006AD1E4 File Offset: 0x006AB3E4
-		// (set) Token: 0x0603136B RID: 201579 RVA: 0x006AD1EC File Offset: 0x006AB3EC
+		// Token: 0x1700DB1A RID: 56090
+		// (get) Token: 0x0603435E RID: 213854 RVA: 0x00708714 File Offset: 0x00706914
+		// (set) Token: 0x0603435F RID: 213855 RVA: 0x0070871C File Offset: 0x0070691C
 		public EMoveToPointType MoveType { get; set; }
 
-		// Token: 0x1700CFD7 RID: 53207
-		// (get) Token: 0x0603136C RID: 201580 RVA: 0x006AD1F5 File Offset: 0x006AB3F5
-		// (set) Token: 0x0603136D RID: 201581 RVA: 0x006AD1FD File Offset: 0x006AB3FD
+		// Token: 0x1700DB1B RID: 56091
+		// (get) Token: 0x06034360 RID: 213856 RVA: 0x00708725 File Offset: 0x00706925
+		// (set) Token: 0x06034361 RID: 213857 RVA: 0x0070872D File Offset: 0x0070692D
 		public bool IsExact { get; set; }
 
-		// Token: 0x1700CFD8 RID: 53208
-		// (get) Token: 0x0603136E RID: 201582 RVA: 0x006AD206 File Offset: 0x006AB406
-		// (set) Token: 0x0603136F RID: 201583 RVA: 0x006AD20E File Offset: 0x006AB40E
+		// Token: 0x1700DB1C RID: 56092
+		// (get) Token: 0x06034362 RID: 213858 RVA: 0x00708736 File Offset: 0x00706936
+		// (set) Token: 0x06034363 RID: 213859 RVA: 0x0070873E File Offset: 0x0070693E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031370 RID: 201584 RVA: 0x006AD217 File Offset: 0x006AB417
+		// Token: 0x06034364 RID: 213860 RVA: 0x00708747 File Offset: 0x00706947
 		public IPlayerMoveToPointT()
 		{
 			this.Pos = null;

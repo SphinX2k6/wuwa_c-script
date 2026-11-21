@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F9A RID: 28570
+	// Token: 0x0200611B RID: 24859
 	public class LevelFlowResetMotorSpeed : LevelFlowActionBase
 	{
-		// Token: 0x06045761 RID: 284513 RVA: 0x0113A867 File Offset: 0x01138A67
+		// Token: 0x0603B90F RID: 243983 RVA: 0x010E466B File Offset: 0x010E286B
 		[NullableContext(1)]
 		public LevelFlowResetMotorSpeed Init(float speed)
 		{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045762 RID: 284514 RVA: 0x0113A874 File Offset: 0x01138A74
+		// Token: 0x0603B910 RID: 243984 RVA: 0x010E4678 File Offset: 0x010E2878
 		protected override void OnExecute()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(false);
 		}
 
-		// Token: 0x040243E8 RID: 148456
+		// Token: 0x0401F69D RID: 128669
 		private float Speed;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005240 RID: 21056
+	// Token: 0x020057A8 RID: 22440
 	public struct IFightInteractComponent : IFlatbufferObject
 	{
-		// Token: 0x17009A40 RID: 39488
-		// (get) Token: 0x060223EF RID: 140271 RVA: 0x004BFFAC File Offset: 0x004BE1AC
+		// Token: 0x1700A23C RID: 41532
+		// (get) Token: 0x06024385 RID: 148357 RVA: 0x004FAA70 File Offset: 0x004F8C70
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060223F0 RID: 140272 RVA: 0x004BFFB9 File Offset: 0x004BE1B9
+		// Token: 0x06024386 RID: 148358 RVA: 0x004FAA7D File Offset: 0x004F8C7D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060223F1 RID: 140273 RVA: 0x004BFFC0 File Offset: 0x004BE1C0
+		// Token: 0x06024387 RID: 148359 RVA: 0x004FAA84 File Offset: 0x004F8C84
 		public static IFightInteractComponent GetRootAsIFightInteractComponent(ByteBuffer _bb)
 		{
 			return IFightInteractComponent.GetRootAsIFightInteractComponent(_bb, default(IFightInteractComponent));
 		}
 
-		// Token: 0x060223F2 RID: 140274 RVA: 0x004BFFDC File Offset: 0x004BE1DC
+		// Token: 0x06024388 RID: 148360 RVA: 0x004FAAA0 File Offset: 0x004F8CA0
 		public static IFightInteractComponent GetRootAsIFightInteractComponent(ByteBuffer _bb, IFightInteractComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060223F3 RID: 140275 RVA: 0x004BFFF9 File Offset: 0x004BE1F9
+		// Token: 0x06024389 RID: 148361 RVA: 0x004FAABD File Offset: 0x004F8CBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060223F4 RID: 140276 RVA: 0x004C0008 File Offset: 0x004BE208
+		// Token: 0x0602438A RID: 148362 RVA: 0x004FAACC File Offset: 0x004F8CCC
 		public IFightInteractComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A41 RID: 39489
-		// (get) Token: 0x060223F5 RID: 140277 RVA: 0x004C0018 File Offset: 0x004BE218
+		// Token: 0x1700A23D RID: 41533
+		// (get) Token: 0x0602438B RID: 148363 RVA: 0x004FAADC File Offset: 0x004F8CDC
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A42 RID: 39490
-		// (get) Token: 0x060223F6 RID: 140278 RVA: 0x004C0058 File Offset: 0x004BE258
+		// Token: 0x1700A23E RID: 41534
+		// (get) Token: 0x0602438C RID: 148364 RVA: 0x004FAB1C File Offset: 0x004F8D1C
 		public int LockRange
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A43 RID: 39491
-		// (get) Token: 0x060223F7 RID: 140279 RVA: 0x004C0094 File Offset: 0x004BE294
+		// Token: 0x1700A23F RID: 41535
+		// (get) Token: 0x0602438D RID: 148365 RVA: 0x004FAB58 File Offset: 0x004F8D58
 		public IVectorInfo? LockOffset
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A44 RID: 39492
-		// (get) Token: 0x060223F8 RID: 140280 RVA: 0x004C00F4 File Offset: 0x004BE2F4
+		// Token: 0x1700A240 RID: 41536
+		// (get) Token: 0x0602438E RID: 148366 RVA: 0x004FABB8 File Offset: 0x004F8DB8
 		public bool DisableLock
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A45 RID: 39493
-		// (get) Token: 0x060223F9 RID: 140281 RVA: 0x004C0134 File Offset: 0x004BE334
+		// Token: 0x1700A241 RID: 41537
+		// (get) Token: 0x0602438F RID: 148367 RVA: 0x004FABF8 File Offset: 0x004F8DF8
 		public IAutoLockControl? LockControl
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A46 RID: 39494
-		// (get) Token: 0x060223FA RID: 140282 RVA: 0x004C0194 File Offset: 0x004BE394
+		// Token: 0x1700A242 RID: 41538
+		// (get) Token: 0x06024390 RID: 148368 RVA: 0x004FAC58 File Offset: 0x004F8E58
 		public byte NullMask
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060223FB RID: 140283 RVA: 0x004C01D1 File Offset: 0x004BE3D1
+		// Token: 0x06024391 RID: 148369 RVA: 0x004FAC95 File Offset: 0x004F8E95
 		public static Offset<IFightInteractComponent> CreateIFightInteractComponent(FlatBufferBuilder builder, bool Disabled = false, int LockRange = 0, Offset<IVectorInfo> LockOffsetOffset = default(Offset<IVectorInfo>), bool DisableLock = false, Offset<IAutoLockControl> LockControlOffset = default(Offset<IAutoLockControl>), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -143,55 +143,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFightInteractComponent.EndIFightInteractComponent(builder);
 		}
 
-		// Token: 0x060223FC RID: 140284 RVA: 0x004C020D File Offset: 0x004BE40D
+		// Token: 0x06024392 RID: 148370 RVA: 0x004FACD1 File Offset: 0x004F8ED1
 		public static void StartIFightInteractComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060223FD RID: 140285 RVA: 0x004C0216 File Offset: 0x004BE416
+		// Token: 0x06024393 RID: 148371 RVA: 0x004FACDA File Offset: 0x004F8EDA
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060223FE RID: 140286 RVA: 0x004C0221 File Offset: 0x004BE421
+		// Token: 0x06024394 RID: 148372 RVA: 0x004FACE5 File Offset: 0x004F8EE5
 		public static void AddLockRange(FlatBufferBuilder builder, int lockRange)
 		{
 			builder.AddInt(1, lockRange, 0);
 		}
 
-		// Token: 0x060223FF RID: 140287 RVA: 0x004C022C File Offset: 0x004BE42C
+		// Token: 0x06024395 RID: 148373 RVA: 0x004FACF0 File Offset: 0x004F8EF0
 		public static void AddLockOffset(FlatBufferBuilder builder, Offset<IVectorInfo> lockOffsetOffset)
 		{
 			builder.AddOffset(2, lockOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06022400 RID: 140288 RVA: 0x004C023C File Offset: 0x004BE43C
+		// Token: 0x06024396 RID: 148374 RVA: 0x004FAD00 File Offset: 0x004F8F00
 		public static void AddDisableLock(FlatBufferBuilder builder, bool disableLock)
 		{
 			builder.AddBool(3, disableLock, false);
 		}
 
-		// Token: 0x06022401 RID: 140289 RVA: 0x004C0247 File Offset: 0x004BE447
+		// Token: 0x06024397 RID: 148375 RVA: 0x004FAD0B File Offset: 0x004F8F0B
 		public static void AddLockControl(FlatBufferBuilder builder, Offset<IAutoLockControl> lockControlOffset)
 		{
 			builder.AddOffset(4, lockControlOffset.Value, 0);
 		}
 
-		// Token: 0x06022402 RID: 140290 RVA: 0x004C0257 File Offset: 0x004BE457
+		// Token: 0x06024398 RID: 148376 RVA: 0x004FAD1B File Offset: 0x004F8F1B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06022403 RID: 140291 RVA: 0x004C0262 File Offset: 0x004BE462
+		// Token: 0x06024399 RID: 148377 RVA: 0x004FAD26 File Offset: 0x004F8F26
 		public static Offset<IFightInteractComponent> EndIFightInteractComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IFightInteractComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022404 RID: 140292 RVA: 0x004C0270 File Offset: 0x004BE470
+		// Token: 0x0602439A RID: 148378 RVA: 0x004FAD34 File Offset: 0x004F8F34
 		public IFightInteractComponentT UnPack()
 		{
 			IFightInteractComponentT fightInteractComponentT = new IFightInteractComponentT();
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fightInteractComponentT;
 		}
 
-		// Token: 0x06022405 RID: 140293 RVA: 0x004C028C File Offset: 0x004BE48C
+		// Token: 0x0602439B RID: 148379 RVA: 0x004FAD50 File Offset: 0x004F8F50
 		public void UnPackTo(IFightInteractComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022406 RID: 140294 RVA: 0x004C0328 File Offset: 0x004BE528
+		// Token: 0x0602439C RID: 148380 RVA: 0x004FADEC File Offset: 0x004F8FEC
 		public static Offset<IFightInteractComponent> Pack(FlatBufferBuilder builder, IFightInteractComponentT _o)
 		{
 			if (_o == null)
@@ -222,7 +222,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFightInteractComponent.CreateIFightInteractComponent(builder, _o.Disabled, _o.LockRange, lockOffsetOffset, _o.DisableLock, lockControlOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E388 RID: 58248
+		// Token: 0x0400EF8E RID: 61326
 		private Table __p;
 	}
 }

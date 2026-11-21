@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AFB RID: 11003
+	// Token: 0x02002DEF RID: 11759
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class OpenQuickHackSystem : ActionParams
 	{
-		// Token: 0x0600F107 RID: 61703 RVA: 0x0022F87A File Offset: 0x0022DA7A
-		[NullableContext(1)]
+		// Token: 0x0600FFBD RID: 65469 RVA: 0x0024D586 File Offset: 0x0024B786
+		[NullableContext(0)]
 		public static OpenQuickHackSystem Create(IOpenQuickHackSystem? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CD3 RID: 19667
-		// (get) Token: 0x0600F108 RID: 61704 RVA: 0x0022F899 File Offset: 0x0022DA99
+		// Token: 0x1700508D RID: 20621
+		// (get) Token: 0x0600FFBE RID: 65470 RVA: 0x0024D5A5 File Offset: 0x0024B7A5
 		public virtual int DeviceId
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CD4 RID: 19668
-		// (get) Token: 0x0600F109 RID: 61705 RVA: 0x0022F8A8 File Offset: 0x0022DAA8
+		// Token: 0x1700508E RID: 20622
+		// (get) Token: 0x0600FFBF RID: 65471 RVA: 0x0024D5B4 File Offset: 0x0024B7B4
 		public virtual List<int> Entities
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CD5 RID: 19669
-		// (get) Token: 0x0600F10A RID: 61706 RVA: 0x0022F91D File Offset: 0x0022DB1D
+		// Token: 0x1700508F RID: 20623
+		// (get) Token: 0x0600FFC0 RID: 65472 RVA: 0x0024D629 File Offset: 0x0024B829
 		public virtual IOpenQuickHackCameraConfig CameraConfig
 		{
 			get
@@ -75,19 +75,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008495 RID: 33941
+		// Token: 0x04008B99 RID: 35737
 		private IOpenQuickHackSystem Instance;
 
-		// Token: 0x04008496 RID: 33942
+		// Token: 0x04008B9A RID: 35738
 		private List<int> _EntitiesCache;
 
-		// Token: 0x04008497 RID: 33943
+		// Token: 0x04008B9B RID: 35739
 		private bool _EntitiesInited;
 
-		// Token: 0x04008498 RID: 33944
+		// Token: 0x04008B9C RID: 35740
 		private IOpenQuickHackCameraConfig _CameraConfigCache;
 
-		// Token: 0x04008499 RID: 33945
+		// Token: 0x04008B9D RID: 35741
 		private bool _CameraConfigInited;
 	}
 }

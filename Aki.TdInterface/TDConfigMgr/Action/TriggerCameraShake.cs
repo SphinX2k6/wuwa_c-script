@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002256 RID: 8790
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C3 RID: 9411
 	public class TriggerCameraShake : ActionParams
 	{
-		// Token: 0x0600C0D4 RID: 49364 RVA: 0x001BAB7C File Offset: 0x001B8D7C
+		// Token: 0x0600CC9A RID: 52378 RVA: 0x001D2300 File Offset: 0x001D0500
 		private TriggerCameraShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0D5 RID: 49365 RVA: 0x001BABB4 File Offset: 0x001B8DB4
+		// Token: 0x0600CC9B RID: 52379 RVA: 0x001D2338 File Offset: 0x001D0538
 		public static TriggerCameraShake Create([Nullable(2)] TriggerCameraShake instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0D6 RID: 49366 RVA: 0x001BABC7 File Offset: 0x001B8DC7
+		// Token: 0x0600CC9C RID: 52380 RVA: 0x001D234B File Offset: 0x001D054B
 		public static TriggerCameraShake CreateFromSetValue([Nullable(2)] TriggerCameraShake_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0D7 RID: 49367 RVA: 0x001BABDA File Offset: 0x001B8DDA
+		// Token: 0x0600CC9D RID: 52381 RVA: 0x001D235E File Offset: 0x001D055E
 		public TriggerCameraShake_SetValue ToSetValue()
 		{
 			return new TriggerCameraShake_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A56 RID: 14934
-		// (get) Token: 0x0600C0D8 RID: 49368 RVA: 0x001BABF9 File Offset: 0x001B8DF9
-		// (set) Token: 0x0600C0D9 RID: 49369 RVA: 0x001BAC20 File Offset: 0x001B8E20
+		// Token: 0x17003D4D RID: 15693
+		// (get) Token: 0x0600CC9E RID: 52382 RVA: 0x001D237D File Offset: 0x001D057D
+		// (set) Token: 0x0600CC9F RID: 52383 RVA: 0x001D23A4 File Offset: 0x001D05A4
 		public virtual ICameraShakeConfig CameraShakeConfig
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A57 RID: 14935
-		// (get) Token: 0x0600C0DA RID: 49370 RVA: 0x001BAC2E File Offset: 0x001B8E2E
-		// (set) Token: 0x0600C0DB RID: 49371 RVA: 0x001BAC59 File Offset: 0x001B8E59
+		// Token: 0x17003D4E RID: 15694
+		// (get) Token: 0x0600CCA0 RID: 52384 RVA: 0x001D23B2 File Offset: 0x001D05B2
+		// (set) Token: 0x0600CCA1 RID: 52385 RVA: 0x001D23DD File Offset: 0x001D05DD
 		public virtual string CameraShakeBp
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072EC RID: 29420
+		// Token: 0x04007939 RID: 31033
 		[Nullable(2)]
 		protected new TriggerCameraShake FbInstance;
 
-		// Token: 0x040072ED RID: 29421
+		// Token: 0x0400793A RID: 31034
 		[Nullable(2)]
 		protected TriggerCameraShake_SetValue PocoInterface;
 	}

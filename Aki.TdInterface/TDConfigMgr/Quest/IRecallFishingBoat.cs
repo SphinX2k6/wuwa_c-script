@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010EA RID: 4330
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001218 RID: 4632
 	public class IRecallFishingBoat : IRecallVehicle
 	{
-		// Token: 0x060061EC RID: 25068 RVA: 0x000EC288 File Offset: 0x000EA488
+		// Token: 0x060067E5 RID: 26597 RVA: 0x000F93A8 File Offset: 0x000F75A8
 		private IRecallFishingBoat_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060061ED RID: 25069 RVA: 0x000EC2C0 File Offset: 0x000EA4C0
+		// Token: 0x060067E6 RID: 26598 RVA: 0x000F93E0 File Offset: 0x000F75E0
 		public static IRecallFishingBoat Create([Nullable(2)] IRecallFishingBoat instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061EE RID: 25070 RVA: 0x000EC2D3 File Offset: 0x000EA4D3
+		// Token: 0x060067E7 RID: 26599 RVA: 0x000F93F3 File Offset: 0x000F75F3
 		public static IRecallFishingBoat CreateFromSetValue([Nullable(2)] IRecallFishingBoat_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060061EF RID: 25071 RVA: 0x000EC2E6 File Offset: 0x000EA4E6
+		// Token: 0x060067E8 RID: 26600 RVA: 0x000F9406 File Offset: 0x000F7606
 		public new IRecallFishingBoat_SetValue ToSetValue()
 		{
 			return new IRecallFishingBoat_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700201B RID: 8219
-		// (get) Token: 0x060061F0 RID: 25072 RVA: 0x000EC2F9 File Offset: 0x000EA4F9
-		// (set) Token: 0x060061F1 RID: 25073 RVA: 0x000EC324 File Offset: 0x000EA524
+		// Token: 0x170021CD RID: 8653
+		// (get) Token: 0x060067E9 RID: 26601 RVA: 0x000F9419 File Offset: 0x000F7619
+		// (set) Token: 0x060067EA RID: 26602 RVA: 0x000F9444 File Offset: 0x000F7644
 		public override EVehicleType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AE0 RID: 15072
+		// Token: 0x04003E2D RID: 15917
 		[Nullable(2)]
 		protected new IRecallFishingBoat FbInstance;
 
-		// Token: 0x04003AE1 RID: 15073
+		// Token: 0x04003E2E RID: 15918
 		[Nullable(2)]
 		protected new IRecallFishingBoat_SetValue PocoInterface;
 	}

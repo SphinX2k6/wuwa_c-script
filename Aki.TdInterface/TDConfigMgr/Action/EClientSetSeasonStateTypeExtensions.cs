@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022E7 RID: 8935
+	// Token: 0x02002558 RID: 9560
 	public static class EClientSetSeasonStateTypeExtensions
 	{
-		// Token: 0x0600C38E RID: 50062 RVA: 0x001C9188 File Offset: 0x001C7388
+		// Token: 0x0600CF66 RID: 53094 RVA: 0x001E10B0 File Offset: 0x001DF2B0
 		public static string ToEnumString(this EClientSetSeasonStateType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C38F RID: 50063 RVA: 0x001C91C0 File Offset: 0x001C73C0
+		// Token: 0x0600CF67 RID: 53095 RVA: 0x001E10E8 File Offset: 0x001DF2E8
 		public static EClientSetSeasonStateType FromString(string name)
 		{
 			EClientSetSeasonStateType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C390 RID: 50064 RVA: 0x001C91E9 File Offset: 0x001C73E9
+		// Token: 0x0600CF68 RID: 53096 RVA: 0x001E1111 File Offset: 0x001DF311
 		public static bool TryFromString(string name, out EClientSetSeasonStateType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C391 RID: 50065 RVA: 0x001C9222 File Offset: 0x001C7422
+		// Token: 0x0600CF69 RID: 53097 RVA: 0x001E114A File Offset: 0x001DF34A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C392 RID: 50066 RVA: 0x001C923A File Offset: 0x001C743A
+		// Token: 0x0600CF6A RID: 53098 RVA: 0x001E1162 File Offset: 0x001DF362
 		public static EClientSetSeasonStateType[] GetValues()
 		{
 			return new EClientSetSeasonStateType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C393 RID: 50067 RVA: 0x001C9246 File Offset: 0x001C7446
+		// Token: 0x0600CF6B RID: 53099 RVA: 0x001E116E File Offset: 0x001DF36E
 		public static string[] GetNames()
 		{
 			return new string[]

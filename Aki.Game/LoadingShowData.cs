@@ -7,12 +7,12 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Module.Map;
 
-// Token: 0x0200206E RID: 8302
+// Token: 0x02001541 RID: 5441
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadingShowData
 {
-	// Token: 0x0601057A RID: 66938 RVA: 0x003FCAF4 File Offset: 0x003FACF4
+	// Token: 0x0600D9E2 RID: 55778 RVA: 0x00408F3C File Offset: 0x0040713C
 	public void Initialize()
 	{
 		this.InitLoadingTipsTextData();
@@ -24,7 +24,7 @@ public class LoadingShowData
 		}
 	}
 
-	// Token: 0x0601057B RID: 66939 RVA: 0x003FCB74 File Offset: 0x003FAD74
+	// Token: 0x0600D9E3 RID: 55779 RVA: 0x00408FBC File Offset: 0x004071BC
 	private int GetRandomImageId(List<LoadingTipsText> configList)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -41,7 +41,7 @@ public class LoadingShowData
 		return list[index];
 	}
 
-	// Token: 0x0601057C RID: 66940 RVA: 0x003FCC38 File Offset: 0x003FAE38
+	// Token: 0x0600D9E4 RID: 55780 RVA: 0x00409080 File Offset: 0x00407280
 	private void InitLoadingTipsTextData()
 	{
 		this.SetAreaInfo();
@@ -78,7 +78,7 @@ public class LoadingShowData
 		}
 	}
 
-	// Token: 0x0601057D RID: 66941 RVA: 0x003FCD84 File Offset: 0x003FAF84
+	// Token: 0x0600D9E5 RID: 55781 RVA: 0x004091CC File Offset: 0x004073CC
 	[NullableContext(2)]
 	private List<int> GetSpecialLevelId()
 	{
@@ -104,7 +104,7 @@ public class LoadingShowData
 		return list;
 	}
 
-	// Token: 0x0601057E RID: 66942 RVA: 0x003FCE40 File Offset: 0x003FB040
+	// Token: 0x0600D9E6 RID: 55782 RVA: 0x00409288 File Offset: 0x00407488
 	private void SetAreaInfo()
 	{
 		this.PlayerLevel = PlayerInfoModel.Instance.GetPlayerLevel().GetValueOrDefault();
@@ -127,7 +127,7 @@ public class LoadingShowData
 		this.InheritableAreaIds = AreaModel.Instance.GetAllAreaIdInheritableById(this.AreaId);
 	}
 
-	// Token: 0x0601057F RID: 66943 RVA: 0x003FCF2C File Offset: 0x003FB12C
+	// Token: 0x0600D9E7 RID: 55783 RVA: 0x00409374 File Offset: 0x00407574
 	private unsafe bool IsAreaIdMatched(LoadingLevelArea config)
 	{
 		Span<int> areaIdBytes = config.GetAreaIdBytes();
@@ -142,7 +142,7 @@ public class LoadingShowData
 		return false;
 	}
 
-	// Token: 0x06010580 RID: 66944 RVA: 0x003FCF70 File Offset: 0x003FB170
+	// Token: 0x0600D9E8 RID: 55784 RVA: 0x004093B8 File Offset: 0x004075B8
 	private List<int> GetNormalLevelId()
 	{
 		IReadOnlyList<LoadingLevelArea> levelArea = LoadingConfig.Instance.GetLevelArea();
@@ -218,7 +218,7 @@ public class LoadingShowData
 		return list8;
 	}
 
-	// Token: 0x06010581 RID: 66945 RVA: 0x003FD238 File Offset: 0x003FB438
+	// Token: 0x0600D9E9 RID: 55785 RVA: 0x00409680 File Offset: 0x00407880
 	private int CalculateWeightIndex()
 	{
 		double num = (double)this.TotalWidget * new Random().NextDouble();
@@ -234,7 +234,7 @@ public class LoadingShowData
 		return 0;
 	}
 
-	// Token: 0x06010582 RID: 66946 RVA: 0x003FD298 File Offset: 0x003FB498
+	// Token: 0x0600D9EA RID: 55786 RVA: 0x004096E0 File Offset: 0x004078E0
 	public LoadingTipsText? GetNextTip()
 	{
 		if (this.LoadingTips.Count == 0)
@@ -255,51 +255,51 @@ public class LoadingShowData
 		return new LoadingTipsText?(this.LoadingTips[this.SelectedIndex]);
 	}
 
-	// Token: 0x06010583 RID: 66947 RVA: 0x003FD30B File Offset: 0x003FB50B
+	// Token: 0x0600D9EB RID: 55787 RVA: 0x00409753 File Offset: 0x00407953
 	public int GetImageId()
 	{
 		return this.ImageId;
 	}
 
-	// Token: 0x06010584 RID: 66948 RVA: 0x003FD313 File Offset: 0x003FB513
+	// Token: 0x0600D9EC RID: 55788 RVA: 0x0040975B File Offset: 0x0040795B
 	public int GetTipCount()
 	{
 		return this.LoadingTips.Count;
 	}
 
-	// Token: 0x06010585 RID: 66949 RVA: 0x003FD320 File Offset: 0x003FB520
+	// Token: 0x0600D9ED RID: 55789 RVA: 0x00409768 File Offset: 0x00407968
 	public int GetDuringTime()
 	{
 		return this.DuringTime;
 	}
 
-	// Token: 0x040078B9 RID: 30905
+	// Token: 0x040079A2 RID: 31138
 	private List<LoadingTipsText> LoadingTips = new List<LoadingTipsText>();
 
-	// Token: 0x040078BA RID: 30906
+	// Token: 0x040079A3 RID: 31139
 	private int ImageId;
 
-	// Token: 0x040078BB RID: 30907
+	// Token: 0x040079A4 RID: 31140
 	private int TotalWidget;
 
-	// Token: 0x040078BC RID: 30908
+	// Token: 0x040079A5 RID: 31141
 	private List<LoadingTipsText> TipPool = new List<LoadingTipsText>();
 
-	// Token: 0x040078BD RID: 30909
+	// Token: 0x040079A6 RID: 31142
 	private int SelectedIndex;
 
-	// Token: 0x040078BE RID: 30910
+	// Token: 0x040079A7 RID: 31143
 	private int PlayerLevel;
 
-	// Token: 0x040078BF RID: 30911
+	// Token: 0x040079A8 RID: 31144
 	private int MapId;
 
-	// Token: 0x040078C0 RID: 30912
+	// Token: 0x040079A9 RID: 31145
 	private int AreaId;
 
-	// Token: 0x040078C1 RID: 30913
+	// Token: 0x040079AA RID: 31146
 	private int DuringTime;
 
-	// Token: 0x040078C2 RID: 30914
+	// Token: 0x040079AB RID: 31147
 	private List<int> InheritableAreaIds = new List<int>();
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002316 RID: 8982
+// Token: 0x020017FB RID: 6139
 [NullableContext(1)]
 [Nullable(0)]
 public class ParallelPackageUrlConfig
 {
-	// Token: 0x040086AF RID: 34479
+	// Token: 0x040087F2 RID: 34802
 	public string packageId = "";
 
-	// Token: 0x040086B0 RID: 34480
+	// Token: 0x040087F3 RID: 34803
 	public string parentVersion = "";
 
-	// Token: 0x040086B1 RID: 34481
+	// Token: 0x040087F4 RID: 34804
 	public string childVersion = "";
 }

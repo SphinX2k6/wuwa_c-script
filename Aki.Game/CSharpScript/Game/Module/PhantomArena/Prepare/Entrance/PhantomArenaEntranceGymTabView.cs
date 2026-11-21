@@ -10,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200515E RID: 20830
+	// Token: 0x0200412E RID: 16686
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaEntranceGymTabView : PhantomArenaChildViewBase
 	{
-		// Token: 0x17008119 RID: 33049
-		// (get) Token: 0x06035401 RID: 218113 RVA: 0x00C9C0DF File Offset: 0x00C9A2DF
-		// (set) Token: 0x06035402 RID: 218114 RVA: 0x00C9C0EC File Offset: 0x00C9A2EC
+		// Token: 0x170054D9 RID: 21721
+		// (get) Token: 0x0602A2FD RID: 172797 RVA: 0x00BE95DF File Offset: 0x00BE77DF
+		// (set) Token: 0x0602A2FE RID: 172798 RVA: 0x00BE95EC File Offset: 0x00BE77EC
 		public new PhantomArenaEntranceViewModel ViewModel
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035403 RID: 218115 RVA: 0x00C9C0F8 File Offset: 0x00C9A2F8
+		// Token: 0x0602A2FF RID: 172799 RVA: 0x00BE95F8 File Offset: 0x00BE77F8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035404 RID: 218116 RVA: 0x00C9C314 File Offset: 0x00C9A514
+		// Token: 0x0602A300 RID: 172800 RVA: 0x00BE9814 File Offset: 0x00BE7A14
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaEntranceGymTabView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035405 RID: 218117 RVA: 0x00C9C358 File Offset: 0x00C9A558
+		// Token: 0x0602A301 RID: 172801 RVA: 0x00BE9858 File Offset: 0x00BE7A58
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetWidth(base.GetItem(13).GetWidth());
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.GymOffset = Vector2D.Create((double)anchorOffset.X, (double)anchorOffset.Y);
 		}
 
-		// Token: 0x06035406 RID: 218118 RVA: 0x00C9C428 File Offset: 0x00C9A628
+		// Token: 0x0602A302 RID: 172802 RVA: 0x00BE9928 File Offset: 0x00BE7B28
 		protected override void OnBeforeShow()
 		{
 			this.DragComponent.Enable();
@@ -101,34 +101,34 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshBtns();
 		}
 
-		// Token: 0x06035407 RID: 218119 RVA: 0x00C9C447 File Offset: 0x00C9A647
+		// Token: 0x0602A303 RID: 172803 RVA: 0x00BE9947 File Offset: 0x00BE7B47
 		protected override void OnAfterShow()
 		{
 			this.UpdateBgOffsetMin();
 		}
 
-		// Token: 0x06035408 RID: 218120 RVA: 0x00C9C44F File Offset: 0x00C9A64F
+		// Token: 0x0602A304 RID: 172804 RVA: 0x00BE994F File Offset: 0x00BE7B4F
 		protected override void OnBeforeHide()
 		{
 			this.UnBindRedDot();
 			this.DragComponent.Disable();
 		}
 
-		// Token: 0x06035409 RID: 218121 RVA: 0x00C9C462 File Offset: 0x00C9A662
+		// Token: 0x0602A305 RID: 172805 RVA: 0x00BE9962 File Offset: 0x00BE7B62
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnViewportSizeChange));
 			EventSystem.Instance.Add(EEventName.OnPhantomArenaChallengeUpdate, new Action(this.OnChallengeUpdate));
 		}
 
-		// Token: 0x0603540A RID: 218122 RVA: 0x00C9C499 File Offset: 0x00C9A699
+		// Token: 0x0602A306 RID: 172806 RVA: 0x00BE9999 File Offset: 0x00BE7B99
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnViewportSizeChange));
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaChallengeUpdate, new Action(this.OnChallengeUpdate));
 		}
 
-		// Token: 0x0603540B RID: 218123 RVA: 0x00C9C4D0 File Offset: 0x00C9A6D0
+		// Token: 0x0602A307 RID: 172807 RVA: 0x00BE99D0 File Offset: 0x00BE7BD0
 		private void OnViewportSizeChange()
 		{
 			this.UpdateBgOffsetMin();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetPosition(Vector2D.Create((double)anchorOffset.X, (double)anchorOffset.Y), false);
 		}
 
-		// Token: 0x0603540C RID: 218124 RVA: 0x00C9C50C File Offset: 0x00C9A70C
+		// Token: 0x0602A308 RID: 172808 RVA: 0x00BE9A0C File Offset: 0x00BE7C0C
 		protected override void OnBeforeDestroy()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<FVector2D>(this.OnTweenUpdate));
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0603540D RID: 218125 RVA: 0x00C9C55C File Offset: 0x00C9A75C
+		// Token: 0x0602A309 RID: 172809 RVA: 0x00BE9A5C File Offset: 0x00BE7C5C
 		private void RefreshBackground()
 		{
 			if (this.IsSwitching)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SequencePlayer.PlaySequence("AreaSwitch", false, new float?(1.6f));
 		}
 
-		// Token: 0x0603540E RID: 218126 RVA: 0x00C9C5B4 File Offset: 0x00C9A7B4
+		// Token: 0x0602A30A RID: 172810 RVA: 0x00BE9AB4 File Offset: 0x00BE7CB4
 		private void RefreshBtns()
 		{
 			bool flag = FunctionModel.Instance.IsOpen(EFunctionType.PhantomArenaCard);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetSprite(15).SetUIActive(flag || flag2 || flag3);
 		}
 
-		// Token: 0x0603540F RID: 218127 RVA: 0x00C9C620 File Offset: 0x00C9A820
+		// Token: 0x0602A30B RID: 172811 RVA: 0x00BE9B20 File Offset: 0x00BE7D20
 		private void PlayUnlock()
 		{
 			foreach (GymItemBase gymItemBase in this.GymItemMap.Values)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035410 RID: 218128 RVA: 0x00C9C678 File Offset: 0x00C9A878
+		// Token: 0x0602A30C RID: 172812 RVA: 0x00BE9B78 File Offset: 0x00BE7D78
 		private void OnClickLevel(int level)
 		{
 			PhantomBattleGym? phantomBattleGymConfigByLevel = PhantomArenaModel.Instance.GetPhantomBattleGymConfigByLevel(level, base.ActivityId);
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaMatchView, param, null);
 		}
 
-		// Token: 0x06035411 RID: 218129 RVA: 0x00C9C6EC File Offset: 0x00C9A8EC
+		// Token: 0x0602A30D RID: 172813 RVA: 0x00BE9BEC File Offset: 0x00BE7DEC
 		private void OnFocusLevel(int level)
 		{
 			this.KillPositionTweener(new bool?(true));
@@ -209,14 +209,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetPosition(gymFocusPosition, true);
 		}
 
-		// Token: 0x06035412 RID: 218130 RVA: 0x00C9C718 File Offset: 0x00C9A918
+		// Token: 0x0602A30E RID: 172814 RVA: 0x00BE9C18 File Offset: 0x00BE7E18
 		private Vector2D GetGymFocusPosition(int level)
 		{
 			double num = this.GymItemMap[level].GetAnchorOffsetX() - -700.0;
 			return Vector2D.Create(330.0 - num, 0.0);
 		}
 
-		// Token: 0x06035413 RID: 218131 RVA: 0x00C9C75A File Offset: 0x00C9A95A
+		// Token: 0x0602A30F RID: 172815 RVA: 0x00BE9C5A File Offset: 0x00BE7E5A
 		private void OnHoverLevel(int level)
 		{
 			if (PhantomArenaDefine.positionGymLevel[this.LastHoverLevel - 1] == PhantomArenaDefine.positionGymLevel[level - 1])
@@ -227,12 +227,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshBackground();
 		}
 
-		// Token: 0x06035414 RID: 218132 RVA: 0x00C9C788 File Offset: 0x00C9A988
+		// Token: 0x0602A310 RID: 172816 RVA: 0x00BE9C88 File Offset: 0x00BE7E88
 		private void OnUnHoverLevel(int level)
 		{
 		}
 
-		// Token: 0x06035415 RID: 218133 RVA: 0x00C9C78A File Offset: 0x00C9A98A
+		// Token: 0x0602A311 RID: 172817 RVA: 0x00BE9C8A File Offset: 0x00BE7E8A
 		private void OnSequenceEnd(string sequenceName)
 		{
 			if (sequenceName == "AreaSwitch")
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035416 RID: 218134 RVA: 0x00C9C7C8 File Offset: 0x00C9A9C8
+		// Token: 0x0602A312 RID: 172818 RVA: 0x00BE9CC8 File Offset: 0x00BE7EC8
 		private void OnClickCard()
 		{
 			PhantomArenaMainViewOpenParam param = new PhantomArenaMainViewOpenParam
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaMainView, param, null);
 		}
 
-		// Token: 0x06035417 RID: 218135 RVA: 0x00C9C808 File Offset: 0x00C9AA08
+		// Token: 0x0602A313 RID: 172819 RVA: 0x00BE9D08 File Offset: 0x00BE7F08
 		private void OnClickRole()
 		{
 			PhantomArenaMainViewOpenParam param = new PhantomArenaMainViewOpenParam
@@ -271,19 +271,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaMainView, param, null);
 		}
 
-		// Token: 0x06035418 RID: 218136 RVA: 0x00C9C846 File Offset: 0x00C9AA46
+		// Token: 0x0602A314 RID: 172820 RVA: 0x00BE9D46 File Offset: 0x00BE7F46
 		private void OnClickCollect()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaCollectView, base.ActivityId, null);
 		}
 
-		// Token: 0x06035419 RID: 218137 RVA: 0x00C9C863 File Offset: 0x00C9AA63
+		// Token: 0x0602A315 RID: 172821 RVA: 0x00BE9D63 File Offset: 0x00BE7F63
 		private void OnDown()
 		{
 			this.KillPositionTweener(new bool?(true));
 		}
 
-		// Token: 0x0603541A RID: 218138 RVA: 0x00C9C874 File Offset: 0x00C9AA74
+		// Token: 0x0602A316 RID: 172822 RVA: 0x00BE9D74 File Offset: 0x00BE7F74
 		private void OnDrag(Vector2D delta)
 		{
 			if (this.GymOffset == null)
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetPosition(inTarget, false);
 		}
 
-		// Token: 0x0603541B RID: 218139 RVA: 0x00C9C8A4 File Offset: 0x00C9AAA4
+		// Token: 0x0602A317 RID: 172823 RVA: 0x00BE9DA4 File Offset: 0x00BE7FA4
 		private void OnInertia(Vector2D speed)
 		{
 			Vector2D vector2D = Vector2D.Create();
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.SetPosition(inTarget, true);
 		}
 
-		// Token: 0x0603541C RID: 218140 RVA: 0x00C9C8E4 File Offset: 0x00C9AAE4
+		// Token: 0x0602A318 RID: 172824 RVA: 0x00BE9DE4 File Offset: 0x00BE7FE4
 		[NullableContext(2)]
 		public void SetPosition(Vector2D inTarget, bool bUseTween)
 		{
@@ -334,20 +334,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.PositionTweener = ULTweenBPLibrary.Vector2To(GlobalData.World, this.TweenerDelegate, startValue, fvector2D, 0.618f, 0f, LTweenEase.OutQuad);
 		}
 
-		// Token: 0x0603541D RID: 218141 RVA: 0x00C9C9DC File Offset: 0x00C9ABDC
+		// Token: 0x0602A319 RID: 172825 RVA: 0x00BE9EDC File Offset: 0x00BE80DC
 		private bool NearlyPosition(double srcPositionX, double dstPositionX)
 		{
 			return MathUtils.Instance.IsNearlyEqual(srcPositionX, dstPositionX, null);
 		}
 
-		// Token: 0x0603541E RID: 218142 RVA: 0x00C9C9FE File Offset: 0x00C9ABFE
+		// Token: 0x0602A31A RID: 172826 RVA: 0x00BE9EFE File Offset: 0x00BE80FE
 		private Vector2D ClampPosition(Vector2D position)
 		{
 			double x = position.X;
 			return Vector2D.Create(MathCommon.Clamp(position.X, this.BgOffsetMin, 330.0), 0.0);
 		}
 
-		// Token: 0x0603541F RID: 218143 RVA: 0x00C9CA2F File Offset: 0x00C9AC2F
+		// Token: 0x0602A31B RID: 172827 RVA: 0x00BE9F2F File Offset: 0x00BE812F
 		private void KillPositionTweener(bool? callComplete = null)
 		{
 			ULTweener positionTweener = this.PositionTweener;
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035420 RID: 218144 RVA: 0x00C9CA60 File Offset: 0x00C9AC60
+		// Token: 0x0602A31C RID: 172828 RVA: 0x00BE9F60 File Offset: 0x00BE8160
 		private void UpdateBgOffsetMin()
 		{
 			double num = (double)base.GetItem(13).Width;
@@ -366,14 +366,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.BgOffsetMin = num2 - num;
 		}
 
-		// Token: 0x06035421 RID: 218145 RVA: 0x00C9CA9C File Offset: 0x00C9AC9C
+		// Token: 0x0602A31D RID: 172829 RVA: 0x00BE9F9C File Offset: 0x00BE819C
 		private void OnTweenUpdate(FVector2D value)
 		{
 			Vector2D inTarget = Vector2D.Create(value);
 			this.SetPosition(inTarget, false);
 		}
 
-		// Token: 0x06035422 RID: 218146 RVA: 0x00C9CAC0 File Offset: 0x00C9ACC0
+		// Token: 0x0602A31E RID: 172830 RVA: 0x00BE9FC0 File Offset: 0x00BE81C0
 		private void BindRedDot()
 		{
 			this.UnBindRedDot();
@@ -386,14 +386,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035423 RID: 218147 RVA: 0x00C9CB68 File Offset: 0x00C9AD68
+		// Token: 0x0602A31F RID: 172831 RVA: 0x00BEA068 File Offset: 0x00BE8268
 		private void UnBindRedDot()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotPhantomArenaCollect, base.GetItem(18), 0);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotPhantomArenaRole, base.GetItem(17), 0);
 		}
 
-		// Token: 0x06035424 RID: 218148 RVA: 0x00C9CB9C File Offset: 0x00C9AD9C
+		// Token: 0x0602A320 RID: 172832 RVA: 0x00BEA09C File Offset: 0x00BE829C
 		private void OnChallengeUpdate()
 		{
 			foreach (GymItemBase gymItemBase in this.GymItemMap.Values)
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x06035425 RID: 218149 RVA: 0x00C9CBF4 File Offset: 0x00C9ADF4
+		// Token: 0x0602A321 RID: 172833 RVA: 0x00BEA0F4 File Offset: 0x00BE82F4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -446,101 +446,101 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x0401C556 RID: 116054
+		// Token: 0x04016F8B RID: 94091
 		private int LastHoverLevel = 1;
 
-		// Token: 0x0401C557 RID: 116055
+		// Token: 0x04016F8C RID: 94092
 		private bool IsSwitching;
 
-		// Token: 0x0401C558 RID: 116056
+		// Token: 0x04016F8D RID: 94093
 		private readonly Dictionary<int, GymItemBase> GymItemMap = new Dictionary<int, GymItemBase>();
 
-		// Token: 0x0401C559 RID: 116057
+		// Token: 0x04016F8E RID: 94094
 		[Nullable(2)]
 		private DragInteractComponent DragComponent;
 
-		// Token: 0x0401C55A RID: 116058
+		// Token: 0x04016F8F RID: 94095
 		[Nullable(2)]
 		private Vector2D GymOffset;
 
-		// Token: 0x0401C55B RID: 116059
+		// Token: 0x04016F90 RID: 94096
 		[Nullable(2)]
 		private EntranceBackgroundPanel Background;
 
-		// Token: 0x0401C55C RID: 116060
+		// Token: 0x04016F91 RID: 94097
 		[Nullable(2)]
 		private ULTweener PositionTweener;
 
-		// Token: 0x0401C55D RID: 116061
+		// Token: 0x04016F92 RID: 94098
 		[Nullable(2)]
 		private FLTweenVector2SetterDynamic TweenerDelegate;
 
-		// Token: 0x0401C55E RID: 116062
+		// Token: 0x04016F93 RID: 94099
 		private double BgOffsetMin;
 
-		// Token: 0x0401C55F RID: 116063
+		// Token: 0x04016F94 RID: 94100
 		[Nullable(2)]
 		private TimerHandle GuideTimerHandle;
 
-		// Token: 0x0200B2BE RID: 45758
+		// Token: 0x02009CF7 RID: 40183
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04036278 RID: 221816
+			// Token: 0x04030CCD RID: 199885
 			public const int DragLevel = 0;
 
-			// Token: 0x04036279 RID: 221817
+			// Token: 0x04030CCE RID: 199886
 			public const int ContentMain = 1;
 
-			// Token: 0x0403627A RID: 221818
+			// Token: 0x04030CCF RID: 199887
 			public const int BtnLevel1 = 2;
 
-			// Token: 0x0403627B RID: 221819
+			// Token: 0x04030CD0 RID: 199888
 			public const int BtnLevel2 = 3;
 
-			// Token: 0x0403627C RID: 221820
+			// Token: 0x04030CD1 RID: 199889
 			public const int BtnLevel3 = 4;
 
-			// Token: 0x0403627D RID: 221821
+			// Token: 0x04030CD2 RID: 199890
 			public const int BtnLevel4 = 5;
 
-			// Token: 0x0403627E RID: 221822
+			// Token: 0x04030CD3 RID: 199891
 			public const int BtnLevel5 = 6;
 
-			// Token: 0x0403627F RID: 221823
+			// Token: 0x04030CD4 RID: 199892
 			public const int BtnLevel6 = 7;
 
-			// Token: 0x04036280 RID: 221824
+			// Token: 0x04030CD5 RID: 199893
 			public const int BtnLevel7 = 8;
 
-			// Token: 0x04036281 RID: 221825
+			// Token: 0x04030CD6 RID: 199894
 			public const int BtnMenuCard = 9;
 
-			// Token: 0x04036282 RID: 221826
+			// Token: 0x04030CD7 RID: 199895
 			public const int BtnMenuRole = 10;
 
-			// Token: 0x04036283 RID: 221827
+			// Token: 0x04030CD8 RID: 199896
 			public const int BtnMenuCollect = 11;
 
-			// Token: 0x04036284 RID: 221828
+			// Token: 0x04030CD9 RID: 199897
 			public const int PanelBg = 12;
 
-			// Token: 0x04036285 RID: 221829
+			// Token: 0x04030CDA RID: 199898
 			public const int ContentBg = 13;
 
-			// Token: 0x04036286 RID: 221830
+			// Token: 0x04030CDB RID: 199899
 			public const int PanelBtnLevel = 14;
 
-			// Token: 0x04036287 RID: 221831
+			// Token: 0x04030CDC RID: 199900
 			public const int SpriteBtnBg = 15;
 
-			// Token: 0x04036288 RID: 221832
+			// Token: 0x04030CDD RID: 199901
 			public const int ItemRedDotCard = 16;
 
-			// Token: 0x04036289 RID: 221833
+			// Token: 0x04030CDE RID: 199902
 			public const int ItemRedDotRole = 17;
 
-			// Token: 0x0403628A RID: 221834
+			// Token: 0x04030CDF RID: 199903
 			public const int ItemRedDotCollect = 18;
 		}
 	}

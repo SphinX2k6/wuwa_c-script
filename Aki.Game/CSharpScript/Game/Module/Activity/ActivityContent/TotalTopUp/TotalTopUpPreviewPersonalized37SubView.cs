@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FA5 RID: 24485
+	// Token: 0x02004F8C RID: 20364
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPreviewPersonalized37SubView : TotalTopUpPreviewSubViewBase
 	{
-		// Token: 0x0603E183 RID: 254339 RVA: 0x00EFE9AC File Offset: 0x00EFCBAC
+		// Token: 0x0603311D RID: 209181 RVA: 0x00E50668 File Offset: 0x00E4E868
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E184 RID: 254340 RVA: 0x00EFEA70 File Offset: 0x00EFCC70
+		// Token: 0x0603311E RID: 209182 RVA: 0x00E5072C File Offset: 0x00E4E92C
 		public UniTask ShowPreviewAsync(ITotalTopUpPreviewViewParam param)
 		{
 			TotalTopUpPreviewPersonalized37SubView.<ShowPreviewAsync>d__4 <ShowPreviewAsync>d__;
@@ -44,31 +44,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <ShowPreviewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E185 RID: 254341 RVA: 0x00EFEABB File Offset: 0x00EFCCBB
+		// Token: 0x0603311F RID: 209183 RVA: 0x00E50777 File Offset: 0x00E4E977
 		public override void ShowPreview(ITotalTopUpPreviewViewParam param)
 		{
 			this.ShowPreviewAsync(param).Forget();
 		}
 
-		// Token: 0x0603E186 RID: 254342 RVA: 0x00EFEAC9 File Offset: 0x00EFCCC9
+		// Token: 0x06033120 RID: 209184 RVA: 0x00E50785 File Offset: 0x00E4E985
 		private void OnClickMagnifier1()
 		{
 			this.OpenItemTips(0);
 		}
 
-		// Token: 0x0603E187 RID: 254343 RVA: 0x00EFEAD2 File Offset: 0x00EFCCD2
+		// Token: 0x06033121 RID: 209185 RVA: 0x00E5078E File Offset: 0x00E4E98E
 		private void OnClickMagnifier2()
 		{
 			this.OpenItemTips(1);
 		}
 
-		// Token: 0x0603E188 RID: 254344 RVA: 0x00EFEADB File Offset: 0x00EFCCDB
+		// Token: 0x06033122 RID: 209186 RVA: 0x00E50797 File Offset: 0x00E4E997
 		private void OnClickMagnifier3()
 		{
 			this.OpenItemTips(2);
 		}
 
-		// Token: 0x0603E189 RID: 254345 RVA: 0x00EFEAE4 File Offset: 0x00EFCCE4
+		// Token: 0x06033123 RID: 209187 RVA: 0x00E507A0 File Offset: 0x00E4E9A0
 		private void OpenItemTips(int index)
 		{
 			if (index >= this.ItemIdList.Count)
@@ -99,10 +99,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 					return;
 				}
 			}
-			ItemController.Instance.OpenItemTipsByItemId(num, false, null);
+			ItemController.Instance.OpenItemTipsByItemId(num, false, null, false);
 		}
 
-		// Token: 0x040206FC RID: 132860
+		// Token: 0x0401B1CE RID: 111054
 		[StaticVariableRuleIgnore]
 		private static readonly int[] MAGNIFIER_NODES = new int[]
 		{
@@ -111,11 +111,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			3
 		};
 
-		// Token: 0x040206FD RID: 132861
+		// Token: 0x0401B1CF RID: 111055
 		[Nullable(2)]
 		private TotalTopUpRecharge37InfoItem RechargeInfo;
 
-		// Token: 0x040206FE RID: 132862
+		// Token: 0x0401B1D0 RID: 111056
 		private List<int> ItemIdList = new List<int>();
 	}
 }

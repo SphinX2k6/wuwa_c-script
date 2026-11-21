@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025AD RID: 9645
+	// Token: 0x0200285C RID: 10332
 	public class IUniversalTone
 	{
-		// Token: 0x0600D8FA RID: 55546 RVA: 0x002060B9 File Offset: 0x002042B9
-		[NullableContext(1)]
+		// Token: 0x0600E674 RID: 58996 RVA: 0x00221D8D File Offset: 0x0021FF8D
 		public static IUniversalTone Create(IUniversalTone? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F62 RID: 16226
-		// (get) Token: 0x0600D8FB RID: 55547 RVA: 0x002060D8 File Offset: 0x002042D8
+		// Token: 0x1700426A RID: 17002
+		// (get) Token: 0x0600E675 RID: 58997 RVA: 0x00221DAC File Offset: 0x0021FFAC
 		public virtual int UniversalToneId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F63 RID: 16227
-		// (get) Token: 0x0600D8FC RID: 55548 RVA: 0x002060E8 File Offset: 0x002042E8
+		// Token: 0x1700426B RID: 17003
+		// (get) Token: 0x0600E676 RID: 58998 RVA: 0x00221DBC File Offset: 0x0021FFBC
 		public virtual int? TimberId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400788B RID: 30859
+		// Token: 0x04007EF2 RID: 32498
 		private IUniversalTone Instance;
 	}
 }

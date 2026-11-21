@@ -3,38 +3,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x0200620C RID: 25100
+	// Token: 0x0200518A RID: 20874
 	[NullableContext(1)]
 	public interface IRhythmShipSubLevelRatingData
 	{
-		// Token: 0x17009236 RID: 37430
-		// (get) Token: 0x0603F50A RID: 259338
-		// (set) Token: 0x0603F50B RID: 259339
+		// Token: 0x17006598 RID: 26008
+		// (get) Token: 0x060341CB RID: 213451
+		// (set) Token: 0x060341CC RID: 213452
 		int PlayerId { get; set; }
 
-		// Token: 0x17009237 RID: 37431
-		// (get) Token: 0x0603F50C RID: 259340
-		// (set) Token: 0x0603F50D RID: 259341
+		// Token: 0x17006599 RID: 26009
+		// (get) Token: 0x060341CD RID: 213453
+		// (set) Token: 0x060341CE RID: 213454
 		string NameText { get; set; }
 
-		// Token: 0x17009238 RID: 37432
-		// (get) Token: 0x0603F50E RID: 259342
-		// (set) Token: 0x0603F50F RID: 259343
+		// Token: 0x1700659A RID: 26010
+		// (get) Token: 0x060341CF RID: 213455
+		// (set) Token: 0x060341D0 RID: 213456
 		int RoleId { get; set; }
 
-		// Token: 0x17009239 RID: 37433
-		// (get) Token: 0x0603F510 RID: 259344
-		// (set) Token: 0x0603F511 RID: 259345
+		// Token: 0x1700659B RID: 26011
+		// (get) Token: 0x060341D1 RID: 213457
+		// (set) Token: 0x060341D2 RID: 213458
 		int Score { get; set; }
 
-		// Token: 0x1700923A RID: 37434
-		// (get) Token: 0x0603F512 RID: 259346
-		// (set) Token: 0x0603F513 RID: 259347
+		// Token: 0x1700659C RID: 26012
+		// (get) Token: 0x060341D3 RID: 213459
+		// (set) Token: 0x060341D4 RID: 213460
 		int Accuracy { get; set; }
 
-		// Token: 0x1700923B RID: 37435
-		// (get) Token: 0x0603F514 RID: 259348
-		// (set) Token: 0x0603F515 RID: 259349
+		// Token: 0x1700659D RID: 26013
+		// (get) Token: 0x060341D5 RID: 213461
+		// (set) Token: 0x060341D6 RID: 213462
 		int? RankingNumber { get; set; }
 	}
 }

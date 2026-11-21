@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AE4 RID: 10980
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DD8 RID: 11736
 	public class IResetPresentationFailure : IPresentationType
 	{
-		// Token: 0x0600F0AD RID: 61613 RVA: 0x0022EFF2 File Offset: 0x0022D1F2
+		// Token: 0x0600FF63 RID: 65379 RVA: 0x0024CCFE File Offset: 0x0024AEFE
 		public static IResetPresentationFailure Create(IResetPresentationFailure? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CA7 RID: 19623
-		// (get) Token: 0x0600F0AE RID: 61614 RVA: 0x0022F011 File Offset: 0x0022D211
+		// Token: 0x17005061 RID: 20577
+		// (get) Token: 0x0600FF64 RID: 65380 RVA: 0x0024CD1D File Offset: 0x0024AF1D
 		public override EResetPresentationType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CA8 RID: 19624
-		// (get) Token: 0x0600F0AF RID: 61615 RVA: 0x0022F01E File Offset: 0x0022D21E
+		// Token: 0x17005062 RID: 20578
+		// (get) Token: 0x0600FF65 RID: 65381 RVA: 0x0024CD2A File Offset: 0x0024AF2A
 		public virtual float Duration
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CA9 RID: 19625
-		// (get) Token: 0x0600F0B0 RID: 61616 RVA: 0x0022F02C File Offset: 0x0022D22C
+		// Token: 0x17005063 RID: 20579
+		// (get) Token: 0x0600FF66 RID: 65382 RVA: 0x0024CD38 File Offset: 0x0024AF38
 		public virtual List<int> GamePlayCues
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400846A RID: 33898
+		// Token: 0x04008B6E RID: 35694
 		private IResetPresentationFailure Instance;
 
-		// Token: 0x0400846B RID: 33899
+		// Token: 0x04008B6F RID: 35695
 		private List<int> _GamePlayCuesCache;
 
-		// Token: 0x0400846C RID: 33900
+		// Token: 0x04008B70 RID: 35696
 		private bool _GamePlayCuesInited;
 	}
 }

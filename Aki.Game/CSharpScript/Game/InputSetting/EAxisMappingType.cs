@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FF8 RID: 28664
+	// Token: 0x02006179 RID: 24953
 	public enum EAxisMappingType
 	{
-		// Token: 0x04024610 RID: 149008
+		// Token: 0x0401F8C6 RID: 129222
 		None,
-		// Token: 0x04024611 RID: 149009
+		// Token: 0x0401F8C7 RID: 129223
 		Fight,
-		// Token: 0x04024612 RID: 149010
+		// Token: 0x0401F8C8 RID: 129224
 		World,
-		// Token: 0x04024613 RID: 149011
+		// Token: 0x0401F8C9 RID: 129225
 		Shortcut,
-		// Token: 0x04024614 RID: 149012
+		// Token: 0x0401F8CA RID: 129226
 		Navigation
 	}
 }

@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004697 RID: 18071
+	// Token: 0x02004AFF RID: 19199
 	public class ISetVarT
 	{
-		// Token: 0x1700804F RID: 32847
-		// (get) Token: 0x0601B719 RID: 112409 RVA: 0x003E5EA8 File Offset: 0x003E40A8
-		// (set) Token: 0x0601B71A RID: 112410 RVA: 0x003E5EB0 File Offset: 0x003E40B0
+		// Token: 0x17008690 RID: 34448
+		// (get) Token: 0x0601CEEE RID: 118510 RVA: 0x00412144 File Offset: 0x00410344
+		// (set) Token: 0x0601CEEF RID: 118511 RVA: 0x0041214C File Offset: 0x0041034C
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17008050 RID: 32848
-		// (get) Token: 0x0601B71B RID: 112411 RVA: 0x003E5EB9 File Offset: 0x003E40B9
-		// (set) Token: 0x0601B71C RID: 112412 RVA: 0x003E5EC1 File Offset: 0x003E40C1
+		// Token: 0x17008691 RID: 34449
+		// (get) Token: 0x0601CEF0 RID: 118512 RVA: 0x00412155 File Offset: 0x00410355
+		// (set) Token: 0x0601CEF1 RID: 118513 RVA: 0x0041215D File Offset: 0x0041035D
 		public EVarRefSource Source { get; set; }
 
-		// Token: 0x17008051 RID: 32849
-		// (get) Token: 0x0601B71D RID: 112413 RVA: 0x003E5ECA File Offset: 0x003E40CA
-		// (set) Token: 0x0601B71E RID: 112414 RVA: 0x003E5ED2 File Offset: 0x003E40D2
+		// Token: 0x17008692 RID: 34450
+		// (get) Token: 0x0601CEF2 RID: 118514 RVA: 0x00412166 File Offset: 0x00410366
+		// (set) Token: 0x0601CEF3 RID: 118515 RVA: 0x0041216E File Offset: 0x0041036E
 		public string VarName { get; set; }
 
-		// Token: 0x17008052 RID: 32850
-		// (get) Token: 0x0601B71F RID: 112415 RVA: 0x003E5EDB File Offset: 0x003E40DB
-		// (set) Token: 0x0601B720 RID: 112416 RVA: 0x003E5EE3 File Offset: 0x003E40E3
+		// Token: 0x17008693 RID: 34451
+		// (get) Token: 0x0601CEF4 RID: 118516 RVA: 0x00412177 File Offset: 0x00410377
+		// (set) Token: 0x0601CEF5 RID: 118517 RVA: 0x0041217F File Offset: 0x0041037F
 		public string VarValue { get; set; }
 
-		// Token: 0x17008053 RID: 32851
-		// (get) Token: 0x0601B721 RID: 112417 RVA: 0x003E5EEC File Offset: 0x003E40EC
-		// (set) Token: 0x0601B722 RID: 112418 RVA: 0x003E5EF4 File Offset: 0x003E40F4
+		// Token: 0x17008694 RID: 34452
+		// (get) Token: 0x0601CEF6 RID: 118518 RVA: 0x00412188 File Offset: 0x00410388
+		// (set) Token: 0x0601CEF7 RID: 118519 RVA: 0x00412190 File Offset: 0x00410390
 		public EVar VarTypeParam { get; set; }
 
-		// Token: 0x17008054 RID: 32852
-		// (get) Token: 0x0601B723 RID: 112419 RVA: 0x003E5EFD File Offset: 0x003E40FD
-		// (set) Token: 0x0601B724 RID: 112420 RVA: 0x003E5F05 File Offset: 0x003E4105
+		// Token: 0x17008695 RID: 34453
+		// (get) Token: 0x0601CEF8 RID: 118520 RVA: 0x00412199 File Offset: 0x00410399
+		// (set) Token: 0x0601CEF9 RID: 118521 RVA: 0x004121A1 File Offset: 0x004103A1
 		public ERefType TargetRefType { get; set; }
 
-		// Token: 0x17008055 RID: 32853
-		// (get) Token: 0x0601B725 RID: 112421 RVA: 0x003E5F0E File Offset: 0x003E410E
-		// (set) Token: 0x0601B726 RID: 112422 RVA: 0x003E5F16 File Offset: 0x003E4116
+		// Token: 0x17008696 RID: 34454
+		// (get) Token: 0x0601CEFA RID: 118522 RVA: 0x004121AA File Offset: 0x004103AA
+		// (set) Token: 0x0601CEFB RID: 118523 RVA: 0x004121B2 File Offset: 0x004103B2
 		public int TargetRefId { get; set; }
 
-		// Token: 0x0601B727 RID: 112423 RVA: 0x003E5F1F File Offset: 0x003E411F
+		// Token: 0x0601CEFC RID: 118524 RVA: 0x004121BB File Offset: 0x004103BB
 		public ISetVarT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

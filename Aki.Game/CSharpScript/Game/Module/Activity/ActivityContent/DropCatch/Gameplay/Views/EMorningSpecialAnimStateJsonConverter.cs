@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006714 RID: 26388
+	// Token: 0x02005664 RID: 22116
 	public class EMorningSpecialAnimStateJsonConverter : JsonConverter<EMorningSpecialAnimState>
 	{
-		// Token: 0x06041E76 RID: 269942 RVA: 0x00FFC774 File Offset: 0x00FFA974
+		// Token: 0x060369C2 RID: 223682 RVA: 0x00F3DB40 File Offset: 0x00F3BD40
 		public override EMorningSpecialAnimState Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return EMorningSpecialAnimStateExtensions.FromString(@string);
 		}
 
-		// Token: 0x06041E77 RID: 269943 RVA: 0x00FFC798 File Offset: 0x00FFA998
+		// Token: 0x060369C3 RID: 223683 RVA: 0x00F3DB64 File Offset: 0x00F3BD64
 		public override void Write(Utf8JsonWriter writer, EMorningSpecialAnimState value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

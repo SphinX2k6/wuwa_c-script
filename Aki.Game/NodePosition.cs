@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02003542 RID: 13634
+// Token: 0x02002AB7 RID: 10935
 public class NodePosition
 {
-	// Token: 0x1700297F RID: 10623
-	// (get) Token: 0x0601DF1F RID: 122655 RVA: 0x008640BD File Offset: 0x008622BD
-	// (set) Token: 0x0601DF20 RID: 122656 RVA: 0x008640C5 File Offset: 0x008622C5
+	// Token: 0x17002D18 RID: 11544
+	// (get) Token: 0x0601BC47 RID: 113735 RVA: 0x0088BCF5 File Offset: 0x00889EF5
+	// (set) Token: 0x0601BC48 RID: 113736 RVA: 0x0088BCFD File Offset: 0x00889EFD
 	public int X { get; set; }
 
-	// Token: 0x17002980 RID: 10624
-	// (get) Token: 0x0601DF21 RID: 122657 RVA: 0x008640CE File Offset: 0x008622CE
-	// (set) Token: 0x0601DF22 RID: 122658 RVA: 0x008640D6 File Offset: 0x008622D6
+	// Token: 0x17002D19 RID: 11545
+	// (get) Token: 0x0601BC49 RID: 113737 RVA: 0x0088BD06 File Offset: 0x00889F06
+	// (set) Token: 0x0601BC4A RID: 113738 RVA: 0x0088BD0E File Offset: 0x00889F0E
 	public int Y { get; set; }
 
-	// Token: 0x17002981 RID: 10625
-	// (get) Token: 0x0601DF23 RID: 122659 RVA: 0x008640DF File Offset: 0x008622DF
-	// (set) Token: 0x0601DF24 RID: 122660 RVA: 0x008640E7 File Offset: 0x008622E7
+	// Token: 0x17002D1A RID: 11546
+	// (get) Token: 0x0601BC4B RID: 113739 RVA: 0x0088BD17 File Offset: 0x00889F17
+	// (set) Token: 0x0601BC4C RID: 113740 RVA: 0x0088BD1F File Offset: 0x00889F1F
 	public int Width { get; set; }
 }

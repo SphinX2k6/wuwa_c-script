@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023DC RID: 9180
+	// Token: 0x02002673 RID: 9843
 	public class EPostAkEventJsonConverter : JsonConverter<EPostAkEvent>
 	{
-		// Token: 0x0600C7DE RID: 51166 RVA: 0x001D4218 File Offset: 0x001D2418
+		// Token: 0x0600D461 RID: 54369 RVA: 0x001ED9C4 File Offset: 0x001EBBC4
 		public override EPostAkEvent Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPostAkEventExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C7DF RID: 51167 RVA: 0x001D423C File Offset: 0x001D243C
+		// Token: 0x0600D462 RID: 54370 RVA: 0x001ED9E8 File Offset: 0x001EBBE8
 		public override void Write(Utf8JsonWriter writer, EPostAkEvent value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004494 RID: 17556
+	// Token: 0x020048FC RID: 18684
 	public struct IDartStrategyConfig : IFlatbufferObject
 	{
-		// Token: 0x17007BDA RID: 31706
-		// (get) Token: 0x0601A2FA RID: 107258 RVA: 0x003BD704 File Offset: 0x003BB904
+		// Token: 0x17008219 RID: 33305
+		// (get) Token: 0x0601BACB RID: 113355 RVA: 0x003E9910 File Offset: 0x003E7B10
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A2FB RID: 107259 RVA: 0x003BD711 File Offset: 0x003BB911
+		// Token: 0x0601BACC RID: 113356 RVA: 0x003E991D File Offset: 0x003E7B1D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A2FC RID: 107260 RVA: 0x003BD718 File Offset: 0x003BB918
+		// Token: 0x0601BACD RID: 113357 RVA: 0x003E9924 File Offset: 0x003E7B24
 		public static IDartStrategyConfig GetRootAsIDartStrategyConfig(ByteBuffer _bb)
 		{
 			return IDartStrategyConfig.GetRootAsIDartStrategyConfig(_bb, default(IDartStrategyConfig));
 		}
 
-		// Token: 0x0601A2FD RID: 107261 RVA: 0x003BD734 File Offset: 0x003BB934
+		// Token: 0x0601BACE RID: 113358 RVA: 0x003E9940 File Offset: 0x003E7B40
 		public static IDartStrategyConfig GetRootAsIDartStrategyConfig(ByteBuffer _bb, IDartStrategyConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A2FE RID: 107262 RVA: 0x003BD751 File Offset: 0x003BB951
+		// Token: 0x0601BACF RID: 113359 RVA: 0x003E995D File Offset: 0x003E7B5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A2FF RID: 107263 RVA: 0x003BD760 File Offset: 0x003BB960
+		// Token: 0x0601BAD0 RID: 113360 RVA: 0x003E996C File Offset: 0x003E7B6C
 		public IDartStrategyConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007BDB RID: 31707
-		// (get) Token: 0x0601A300 RID: 107264 RVA: 0x003BD770 File Offset: 0x003BB970
+		// Token: 0x1700821A RID: 33306
+		// (get) Token: 0x0601BAD1 RID: 113361 RVA: 0x003E997C File Offset: 0x003E7B7C
 		public IDartThrowStrategy? ThrowStrategy
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007BDC RID: 31708
-		// (get) Token: 0x0601A301 RID: 107265 RVA: 0x003BD7D0 File Offset: 0x003BB9D0
+		// Token: 0x1700821B RID: 33307
+		// (get) Token: 0x0601BAD2 RID: 113362 RVA: 0x003E99DC File Offset: 0x003E7BDC
 		public IDartHitJudge? HitJudge
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A302 RID: 107266 RVA: 0x003BD82D File Offset: 0x003BBA2D
+		// Token: 0x0601BAD3 RID: 113363 RVA: 0x003E9A39 File Offset: 0x003E7C39
 		public static Offset<IDartStrategyConfig> CreateIDartStrategyConfig(FlatBufferBuilder builder, Offset<IDartThrowStrategy> ThrowStrategyOffset = default(Offset<IDartThrowStrategy>), Offset<IDartHitJudge> HitJudgeOffset = default(Offset<IDartHitJudge>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartStrategyConfig.EndIDartStrategyConfig(builder);
 		}
 
-		// Token: 0x0601A303 RID: 107267 RVA: 0x003BD84A File Offset: 0x003BBA4A
+		// Token: 0x0601BAD4 RID: 113364 RVA: 0x003E9A56 File Offset: 0x003E7C56
 		public static void StartIDartStrategyConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601A304 RID: 107268 RVA: 0x003BD853 File Offset: 0x003BBA53
+		// Token: 0x0601BAD5 RID: 113365 RVA: 0x003E9A5F File Offset: 0x003E7C5F
 		public static void AddThrowStrategy(FlatBufferBuilder builder, Offset<IDartThrowStrategy> throwStrategyOffset)
 		{
 			builder.AddOffset(0, throwStrategyOffset.Value, 0);
 		}
 
-		// Token: 0x0601A305 RID: 107269 RVA: 0x003BD863 File Offset: 0x003BBA63
+		// Token: 0x0601BAD6 RID: 113366 RVA: 0x003E9A6F File Offset: 0x003E7C6F
 		public static void AddHitJudge(FlatBufferBuilder builder, Offset<IDartHitJudge> hitJudgeOffset)
 		{
 			builder.AddOffset(1, hitJudgeOffset.Value, 0);
 		}
 
-		// Token: 0x0601A306 RID: 107270 RVA: 0x003BD873 File Offset: 0x003BBA73
+		// Token: 0x0601BAD7 RID: 113367 RVA: 0x003E9A7F File Offset: 0x003E7C7F
 		public static Offset<IDartStrategyConfig> EndIDartStrategyConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartStrategyConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601A307 RID: 107271 RVA: 0x003BD880 File Offset: 0x003BBA80
+		// Token: 0x0601BAD8 RID: 113368 RVA: 0x003E9A8C File Offset: 0x003E7C8C
 		public IDartStrategyConfigT UnPack()
 		{
 			IDartStrategyConfigT dartStrategyConfigT = new IDartStrategyConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dartStrategyConfigT;
 		}
 
-		// Token: 0x0601A308 RID: 107272 RVA: 0x003BD89C File Offset: 0x003BBA9C
+		// Token: 0x0601BAD9 RID: 113369 RVA: 0x003E9AA8 File Offset: 0x003E7CA8
 		public void UnPackTo(IDartStrategyConfigT _o)
 		{
 			_o.ThrowStrategy = ((this.ThrowStrategy != null) ? this.ThrowStrategy.Value.UnPack() : null);
 			_o.HitJudge = ((this.HitJudge != null) ? this.HitJudge.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601A309 RID: 107273 RVA: 0x003BD908 File Offset: 0x003BBB08
+		// Token: 0x0601BADA RID: 113370 RVA: 0x003E9B14 File Offset: 0x003E7D14
 		public static Offset<IDartStrategyConfig> Pack(FlatBufferBuilder builder, IDartStrategyConfigT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartStrategyConfig.CreateIDartStrategyConfig(builder, throwStrategyOffset, hitJudgeOffset);
 		}
 
-		// Token: 0x0400C49A RID: 50330
+		// Token: 0x0400CEC8 RID: 52936
 		private Table __p;
 	}
 }

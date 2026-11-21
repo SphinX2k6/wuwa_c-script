@@ -11,23 +11,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 {
-	// Token: 0x020052C5 RID: 21189
+	// Token: 0x02004295 RID: 17045
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaToolLogic : PhantomArenaCardLogic
 	{
-		// Token: 0x06036330 RID: 222000 RVA: 0x00CD273F File Offset: 0x00CD093F
+		// Token: 0x0602B22B RID: 176683 RVA: 0x00C1FE67 File Offset: 0x00C1E067
 		public PhantomArenaToolLogic(PhantomArenaCard card, PhantomArenaBattleProxy viewProxy) : base(card, viewProxy)
 		{
 		}
 
-		// Token: 0x06036331 RID: 222001 RVA: 0x00CD2749 File Offset: 0x00CD0949
+		// Token: 0x0602B22C RID: 176684 RVA: 0x00C1FE71 File Offset: 0x00C1E071
 		public override Tuple<bool, EPhantomCardSettingFailReason> CheckFunctionalSettingCondition(PhantomArenaCard oldCard)
 		{
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(false, EPhantomCardSettingFailReason.ToolCantDragToFunctional);
 		}
 
-		// Token: 0x06036332 RID: 222002 RVA: 0x00CD2758 File Offset: 0x00CD0958
+		// Token: 0x0602B22D RID: 176685 RVA: 0x00C1FE80 File Offset: 0x00C1E080
 		public override Tuple<bool, EPhantomCardSettingFailReason> CheckMonsterSettingCondition(PhantomArenaCard oldCard)
 		{
 			if (this.Card.Data.Index == -1)
@@ -58,19 +58,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x06036333 RID: 222003 RVA: 0x00CD2830 File Offset: 0x00CD0A30
+		// Token: 0x0602B22E RID: 176686 RVA: 0x00C1FF58 File Offset: 0x00C1E158
 		protected override Tuple<bool, EPhantomCardSettingFailReason> OnCheckRecycleSettingConditionFromHead()
 		{
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x06036334 RID: 222004 RVA: 0x00CD283D File Offset: 0x00CD0A3D
+		// Token: 0x0602B22F RID: 176687 RVA: 0x00C1FF65 File Offset: 0x00C1E165
 		protected override Tuple<bool, EPhantomCardSettingFailReason> OnCheckRecycleSettingConditionFromFunctional()
 		{
 			return Tuple.Create<bool, EPhantomCardSettingFailReason>(true, EPhantomCardSettingFailReason.None);
 		}
 
-		// Token: 0x06036335 RID: 222005 RVA: 0x00CD284C File Offset: 0x00CD0A4C
+		// Token: 0x0602B230 RID: 176688 RVA: 0x00C1FF74 File Offset: 0x00C1E174
 		protected override void OnBeforeStart()
 		{
 			CardSkillComponent component = this.Card.GetComponent<CardSkillComponent>(ECardItemComponent.CardSkillComponent);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			}
 		}
 
-		// Token: 0x06036336 RID: 222006 RVA: 0x00CD287C File Offset: 0x00CD0A7C
+		// Token: 0x0602B231 RID: 176689 RVA: 0x00C1FFA4 File Offset: 0x00C1E1A4
 		public override List<TCardComponentsRegisterInfoByResourceId> GetComponentsDataList()
 		{
 			List<TCardComponentsRegisterInfoByResourceId> list = new List<TCardComponentsRegisterInfoByResourceId>();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			return list;
 		}
 
-		// Token: 0x06036337 RID: 222007 RVA: 0x00CD28F0 File Offset: 0x00CD0AF0
+		// Token: 0x0602B232 RID: 176690 RVA: 0x00C20018 File Offset: 0x00C1E218
 		protected override void OnRefresh()
 		{
 			bool inFight = this.Card.Data.Index != -1;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			component2.Refresh(data2);
 		}
 
-		// Token: 0x06036338 RID: 222008 RVA: 0x00CD29A8 File Offset: 0x00CD0BA8
+		// Token: 0x0602B233 RID: 176691 RVA: 0x00C200D0 File Offset: 0x00C1E2D0
 		protected override void OnSetSelectedState(bool value)
 		{
 			CardSkillComponentData data = new CardSkillComponentData
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card.Logic
 			component.Refresh(data);
 		}
 
-		// Token: 0x06036339 RID: 222009 RVA: 0x00CD2A24 File Offset: 0x00CD0C24
+		// Token: 0x0602B234 RID: 176692 RVA: 0x00C2014C File Offset: 0x00C1E34C
 		protected override UniTask OnRefreshEffect(int curEffectCount)
 		{
 			PhantomArenaToolLogic.<OnRefreshEffect>d__9 <OnRefreshEffect>d__;

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006379 RID: 25465
+	// Token: 0x020069EA RID: 27114
 	public enum IClaimDynamicEntityRewardType_Union : byte
 	{
-		// Token: 0x04010946 RID: 67910
+		// Token: 0x0401175B RID: 71515
 		NONE,
-		// Token: 0x04010947 RID: 67911
+		// Token: 0x0401175C RID: 71516
 		IClaimDynamicEntityRewardType,
-		// Token: 0x04010948 RID: 67912
+		// Token: 0x0401175D RID: 71517
 		IClaimDynamicTrafficReward
 	}
 }

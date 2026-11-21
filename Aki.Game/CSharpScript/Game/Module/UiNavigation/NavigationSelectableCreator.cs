@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200491B RID: 18715
+	// Token: 0x02003892 RID: 14482
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationSelectableCreator : IStaticVariableResetter
 	{
-		// Token: 0x06030E6D RID: 200301 RVA: 0x00B5ABF2 File Offset: 0x00B58DF2
+		// Token: 0x0602599A RID: 154010 RVA: 0x00A95A62 File Offset: 0x00A93C62
 		static NavigationSelectableCreator()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(NavigationSelectableCreator.CreateStaticDefaultValue), new Action(NavigationSelectableCreator.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170079C7 RID: 31175
-		// (get) Token: 0x06030E6E RID: 200302 RVA: 0x00B5AC11 File Offset: 0x00B58E11
+		// Token: 0x17004D2F RID: 19759
+		// (get) Token: 0x0602599B RID: 154011 RVA: 0x00A95A81 File Offset: 0x00A93C81
 		private static Dictionary<string, Type> NavigationBehaviorMap
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E6F RID: 200303 RVA: 0x00B5AC18 File Offset: 0x00B58E18
+		// Token: 0x0602599C RID: 154012 RVA: 0x00A95A88 File Offset: 0x00A93C88
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return new ValueTuple<Type, string>(NavigationSelectableCreator.NavigationBehaviorMap[enavigationSelectableDefine.ToString()], enavigationSelectableDefine.ToString());
 		}
 
-		// Token: 0x06030E70 RID: 200304 RVA: 0x00B5AC8C File Offset: 0x00B58E8C
+		// Token: 0x0602599D RID: 154013 RVA: 0x00A95AFC File Offset: 0x00A93CFC
 		[return: Nullable(2)]
 		private unsafe static ULGUIBehaviour GetActorBehavior(AActor actor)
 		{
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return ulguibehaviour;
 		}
 
-		// Token: 0x06030E71 RID: 200305 RVA: 0x00B5AD7B File Offset: 0x00B58F7B
+		// Token: 0x0602599E RID: 154014 RVA: 0x00A95BEB File Offset: 0x00A93DEB
 		public static void RegisterNavigationBehavior(string type, Type ctor)
 		{
 			NavigationSelectableCreator.NavigationBehaviorMap[type] = ctor;
 		}
 
-		// Token: 0x06030E72 RID: 200306 RVA: 0x00B5AD8C File Offset: 0x00B58F8C
+		// Token: 0x0602599F RID: 154015 RVA: 0x00A95BFC File Offset: 0x00A93DFC
 		[return: Nullable(2)]
 		public static NavigationSelectableBase CreateNavigationBehavior([Nullable(2)] AActor actor, string tag, List<string> paramList)
 		{
@@ -129,19 +129,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}) as NavigationSelectableBase;
 		}
 
-		// Token: 0x06030E73 RID: 200307 RVA: 0x00B5ADF5 File Offset: 0x00B58FF5
+		// Token: 0x060259A0 RID: 154016 RVA: 0x00A95C65 File Offset: 0x00A93E65
 		public static void CreateStaticDefaultValue()
 		{
 			NavigationSelectableCreator._navigationBehaviorMap = new Dictionary<string, Type>();
 		}
 
-		// Token: 0x06030E74 RID: 200308 RVA: 0x00B5AE01 File Offset: 0x00B59001
+		// Token: 0x060259A1 RID: 154017 RVA: 0x00A95C71 File Offset: 0x00A93E71
 		public static void ResetStaticDefaultValue()
 		{
 			NavigationSelectableCreator._navigationBehaviorMap = null;
 		}
 
-		// Token: 0x0401A3D9 RID: 107481
+		// Token: 0x04014C4C RID: 85068
 		[Nullable(new byte[]
 		{
 			2,

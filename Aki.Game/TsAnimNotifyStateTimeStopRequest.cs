@@ -6,38 +6,34 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200017E RID: 382
+// Token: 0x02000182 RID: 386
 [UClass("/Game/Aki/TypeScript/Game/AnimNotifyState/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateTimeStopRequest.TsAnimNotifyStateTimeStopRequest_C")]
 public class TsAnimNotifyStateTimeStopRequest : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600183B RID: 6203 RVA: 0x000812AC File Offset: 0x0007F4AC
+	// Token: 0x060018D8 RID: 6360 RVA: 0x00087218 File Offset: 0x00085418
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateTimeStopRequest) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateTimeStopRequest.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600183C RID: 6204 RVA: 0x00081354 File Offset: 0x0007F554
+	// Token: 0x060018D9 RID: 6361 RVA: 0x000872D8 File Offset: 0x000854D8
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -52,32 +48,28 @@ public class TsAnimNotifyStateTimeStopRequest : TsAnimNotifyStateBase, IUnrealUO
 		return true;
 	}
 
-	// Token: 0x0600183D RID: 6205 RVA: 0x00081394 File Offset: 0x0007F594
+	// Token: 0x060018DA RID: 6362 RVA: 0x00087318 File Offset: 0x00085518
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateTimeStopRequest) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateTimeStopRequest.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600183E RID: 6206 RVA: 0x00081434 File Offset: 0x0007F634
+	// Token: 0x060018DB RID: 6363 RVA: 0x000873D0 File Offset: 0x000855D0
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -90,37 +82,33 @@ public class TsAnimNotifyStateTimeStopRequest : TsAnimNotifyStateBase, IUnrealUO
 		return true;
 	}
 
-	// Token: 0x0600183F RID: 6207 RVA: 0x00081464 File Offset: 0x0007F664
+	// Token: 0x060018DC RID: 6364 RVA: 0x00087400 File Offset: 0x00085600
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateTimeStopRequest) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateTimeStopRequest.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001840 RID: 6208 RVA: 0x000814DF File Offset: 0x0007F6DF
+	// Token: 0x060018DD RID: 6365 RVA: 0x00087490 File Offset: 0x00085690
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "副本计时和所有战斗单位buff、技能冷却冻结";
 	}
 
-	// Token: 0x06001841 RID: 6209 RVA: 0x000814E6 File Offset: 0x0007F6E6
+	// Token: 0x060018DE RID: 6366 RVA: 0x00087497 File Offset: 0x00085697
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateTimeStopRequest._ClassPtr == IntPtr.Zero)
@@ -130,23 +118,23 @@ public class TsAnimNotifyStateTimeStopRequest : TsAnimNotifyStateBase, IUnrealUO
 		return TsAnimNotifyStateTimeStopRequest._ClassPtr;
 	}
 
-	// Token: 0x06001842 RID: 6210 RVA: 0x0008150C File Offset: 0x0007F70C
+	// Token: 0x060018DF RID: 6367 RVA: 0x000874BC File Offset: 0x000856BC
 	public TsAnimNotifyStateTimeStopRequest() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateTimeStopRequest.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001843 RID: 6211 RVA: 0x00081534 File Offset: 0x0007F734
+	// Token: 0x060018E0 RID: 6368 RVA: 0x000874E4 File Offset: 0x000856E4
 	[NullableContext(1)]
 	public TsAnimNotifyStateTimeStopRequest(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateTimeStopRequest.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001844 RID: 6212 RVA: 0x00081567 File Offset: 0x0007F767
+	// Token: 0x060018E1 RID: 6369 RVA: 0x00087517 File Offset: 0x00085717
 	protected TsAnimNotifyStateTimeStopRequest(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001845 RID: 6213 RVA: 0x00081570 File Offset: 0x0007F770
+	// Token: 0x060018E2 RID: 6370 RVA: 0x00087520 File Offset: 0x00085720
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -154,7 +142,7 @@ public class TsAnimNotifyStateTimeStopRequest : TsAnimNotifyStateBase, IUnrealUO
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x06001846 RID: 6214 RVA: 0x000815AC File Offset: 0x0007F7AC
+	// Token: 0x060018E3 RID: 6371 RVA: 0x0008755C File Offset: 0x0008575C
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -162,19 +150,19 @@ public class TsAnimNotifyStateTimeStopRequest : TsAnimNotifyStateBase, IUnrealUO
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001847 RID: 6215 RVA: 0x000815DF File Offset: 0x0007F7DF
+	// Token: 0x060018E4 RID: 6372 RVA: 0x0008758F File Offset: 0x0008578F
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001039 RID: 4153
+	// Token: 0x0400107C RID: 4220
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateTimeStopRequest.TsAnimNotifyStateTimeStopRequest_C";
 
-	// Token: 0x0400103A RID: 4154
+	// Token: 0x0400107D RID: 4221
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400103B RID: 4155
+	// Token: 0x0400107E RID: 4222
 	private static IntPtr _ClassDefaultObjectPtr;
 }

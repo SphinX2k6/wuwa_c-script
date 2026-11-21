@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001B02 RID: 6914
+// Token: 0x02000FC1 RID: 4033
 public class TagDynamicParams : ITagDynamicParams
 {
-	// Token: 0x17001115 RID: 4373
-	// (get) Token: 0x0600CD4E RID: 52558 RVA: 0x002ECE03 File Offset: 0x002EB003
-	// (set) Token: 0x0600CD4F RID: 52559 RVA: 0x002ECE0B File Offset: 0x002EB00B
+	// Token: 0x1700113A RID: 4410
+	// (get) Token: 0x0600A15F RID: 41311 RVA: 0x002F7EEF File Offset: 0x002F60EF
+	// (set) Token: 0x0600A160 RID: 41312 RVA: 0x002F7EF7 File Offset: 0x002F60F7
 	public int N { get; set; }
 
-	// Token: 0x17001116 RID: 4374
-	// (get) Token: 0x0600CD50 RID: 52560 RVA: 0x002ECE14 File Offset: 0x002EB014
-	// (set) Token: 0x0600CD51 RID: 52561 RVA: 0x002ECE1C File Offset: 0x002EB01C
+	// Token: 0x1700113B RID: 4411
+	// (get) Token: 0x0600A161 RID: 41313 RVA: 0x002F7F00 File Offset: 0x002F6100
+	// (set) Token: 0x0600A162 RID: 41314 RVA: 0x002F7F08 File Offset: 0x002F6108
 	public int M { get; set; }
 
-	// Token: 0x17001117 RID: 4375
-	// (get) Token: 0x0600CD52 RID: 52562 RVA: 0x002ECE25 File Offset: 0x002EB025
-	// (set) Token: 0x0600CD53 RID: 52563 RVA: 0x002ECE2D File Offset: 0x002EB02D
+	// Token: 0x1700113C RID: 4412
+	// (get) Token: 0x0600A163 RID: 41315 RVA: 0x002F7F11 File Offset: 0x002F6111
+	// (set) Token: 0x0600A164 RID: 41316 RVA: 0x002F7F19 File Offset: 0x002F6119
 	public int P { get; set; }
 }

@@ -3,33 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200075B RID: 1883
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007FC RID: 2044
 	public class ItemFoundation_SetValue
 	{
-		// Token: 0x04001B50 RID: 6992
+		// Token: 0x04001D55 RID: 7509
 		public bool? Disabled;
 
-		// Token: 0x04001B51 RID: 6993
+		// Token: 0x04001D56 RID: 7510
 		public bool? EdIsLocked;
 
-		// Token: 0x04001B52 RID: 6994
+		// Token: 0x04001D57 RID: 7511
 		public IAdsortTransform AdsorptionPoint;
 
-		// Token: 0x04001B53 RID: 6995
+		// Token: 0x04001D58 RID: 7512
 		public IEntityMatch AdsorptionMatch;
 
-		// Token: 0x04001B54 RID: 6996
+		// Token: 0x04001D59 RID: 7513
 		public IEntityMatch ActiveMatch;
 
-		// Token: 0x04001B55 RID: 6997
+		// Token: 0x04001D5A RID: 7514
 		public bool IsSilent;
 
-		// Token: 0x04001B56 RID: 6998
+		// Token: 0x04001D5B RID: 7515
 		public bool IsDestroy;
 
-		// Token: 0x04001B57 RID: 6999
+		// Token: 0x04001D5C RID: 7516
 		[Nullable(2)]
 		public IItemChangeAdsorbateState ChangeAdsorbateState;
 	}

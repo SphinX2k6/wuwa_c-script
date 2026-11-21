@@ -6,350 +6,309 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Level.Destructible
 {
-	// Token: 0x02003F12 RID: 16146
+	// Token: 0x020031CD RID: 12749
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Level/Destructible/DestructibleStruct.DestructibleStruct")]
 	[UnrealStructLayout(240, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 236)]
 	public class DestructibleStruct : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028FF8 RID: 167928 RVA: 0x009B93BF File Offset: 0x009B75BF
+		// Token: 0x0601F977 RID: 129399 RVA: 0x009310A7 File Offset: 0x0092F2A7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (DestructibleStruct._ScriptStructPtr != 0) ? DestructibleStruct._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Level/Destructible/DestructibleStruct.DestructibleStruct", ref DestructibleStruct._ScriptStructPtr);
 		}
 
-		// Token: 0x170060E1 RID: 24801
-		// (get) Token: 0x06028FF9 RID: 167929 RVA: 0x009B93E3 File Offset: 0x009B75E3
-		// (set) Token: 0x06028FFA RID: 167930 RVA: 0x009B93F7 File Offset: 0x009B75F7
+		// Token: 0x17003A47 RID: 14919
+		// (get) Token: 0x0601F978 RID: 129400 RVA: 0x009310CB File Offset: 0x0092F2CB
+		// (set) Token: 0x0601F979 RID: 129401 RVA: 0x009310DF File Offset: 0x0092F2DF
 		public unsafe string 备注
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)DestructibleStruct.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)DestructibleStruct.__PropertyOffset_备注)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)DestructibleStruct.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)DestructibleStruct.__PropertyOffset_备注)), value);
 			}
 		}
 
-		// Token: 0x170060E2 RID: 24802
-		// (get) Token: 0x06028FFB RID: 167931 RVA: 0x009B940C File Offset: 0x009B760C
-		// (set) Token: 0x06028FFC RID: 167932 RVA: 0x009B942B File Offset: 0x009B762B
+		// Token: 0x17003A48 RID: 14920
+		// (get) Token: 0x0601F97A RID: 129402 RVA: 0x009310F4 File Offset: 0x0092F2F4
+		// (set) Token: 0x0601F97B RID: 129403 RVA: 0x00931113 File Offset: 0x0092F313
 		public TSoftObjectPtr<UKuroDestructibleAsset> DestructibleAsset
 		{
 			get
 			{
-				return new TSoftObjectPtr<UKuroDestructibleAsset>(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_1, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UKuroDestructibleAsset>(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_DestructibleAsset, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_1, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_DestructibleAsset, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170060E3 RID: 24803
-		// (get) Token: 0x06028FFD RID: 167933 RVA: 0x009B9450 File Offset: 0x009B7650
-		// (set) Token: 0x06028FFE RID: 167934 RVA: 0x009B946F File Offset: 0x009B766F
+		// Token: 0x17003A49 RID: 14921
+		// (get) Token: 0x0601F97C RID: 129404 RVA: 0x00931138 File Offset: 0x0092F338
+		// (set) Token: 0x0601F97D RID: 129405 RVA: 0x00931157 File Offset: 0x0092F357
 		public TSoftObjectPtr<UKuroDestructibleDestructionAsset> DestructibleDestructionAsset
 		{
 			get
 			{
-				return new TSoftObjectPtr<UKuroDestructibleDestructionAsset>(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_2, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UKuroDestructibleDestructionAsset>(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_DestructibleDestructionAsset, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_2, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_DestructibleDestructionAsset, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170060E4 RID: 24804
-		// (get) Token: 0x06028FFF RID: 167935 RVA: 0x009B9494 File Offset: 0x009B7694
-		// (set) Token: 0x06029000 RID: 167936 RVA: 0x009B94A4 File Offset: 0x009B76A4
+		// Token: 0x17003A4A RID: 14922
+		// (get) Token: 0x0601F97E RID: 129406 RVA: 0x0093117C File Offset: 0x0092F37C
+		// (set) Token: 0x0601F97F RID: 129407 RVA: 0x0093118C File Offset: 0x0092F38C
 		public unsafe bool IsRelativePosition
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_IsRelativePosition) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_IsRelativePosition) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170060E5 RID: 24805
-		// (get) Token: 0x06029001 RID: 167937 RVA: 0x009B94B5 File Offset: 0x009B76B5
-		// (set) Token: 0x06029002 RID: 167938 RVA: 0x009B94C9 File Offset: 0x009B76C9
+		// Token: 0x17003A4B RID: 14923
+		// (get) Token: 0x0601F980 RID: 129408 RVA: 0x0093119D File Offset: 0x0092F39D
+		// (set) Token: 0x0601F981 RID: 129409 RVA: 0x009311B1 File Offset: 0x0092F3B1
 		public unsafe FVectorDouble Position
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_Position);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_Position) = value;
 			}
 		}
 
-		// Token: 0x170060E6 RID: 24806
-		// (get) Token: 0x06029003 RID: 167939 RVA: 0x009B94DE File Offset: 0x009B76DE
-		// (set) Token: 0x06029004 RID: 167940 RVA: 0x009B94F2 File Offset: 0x009B76F2
+		// Token: 0x17003A4C RID: 14924
+		// (get) Token: 0x0601F982 RID: 129410 RVA: 0x009311C6 File Offset: 0x0092F3C6
+		// (set) Token: 0x0601F983 RID: 129411 RVA: 0x009311DA File Offset: 0x0092F3DA
 		public unsafe FTransform ModelTransform
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_ModelTransform);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_ModelTransform) = value;
 			}
 		}
 
-		// Token: 0x170060E7 RID: 24807
-		// (get) Token: 0x06029005 RID: 167941 RVA: 0x009B9507 File Offset: 0x009B7707
-		// (set) Token: 0x06029006 RID: 167942 RVA: 0x009B9517 File Offset: 0x009B7717
+		// Token: 0x17003A4D RID: 14925
+		// (get) Token: 0x0601F984 RID: 129412 RVA: 0x009311EF File Offset: 0x0092F3EF
+		// (set) Token: 0x0601F985 RID: 129413 RVA: 0x009311FF File Offset: 0x0092F3FF
 		public unsafe float TraceSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_TraceSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_TraceSpeed) = value;
 			}
 		}
 
-		// Token: 0x170060E8 RID: 24808
-		// (get) Token: 0x06029007 RID: 167943 RVA: 0x009B9528 File Offset: 0x009B7728
-		// (set) Token: 0x06029008 RID: 167944 RVA: 0x009B9538 File Offset: 0x009B7738
+		// Token: 0x17003A4E RID: 14926
+		// (get) Token: 0x0601F986 RID: 129414 RVA: 0x00931210 File Offset: 0x0092F410
+		// (set) Token: 0x0601F987 RID: 129415 RVA: 0x00931220 File Offset: 0x0092F420
 		public unsafe ETrackMethod TrackMethod
 		{
 			get
 			{
-				return (ETrackMethod)(*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_7));
+				return (ETrackMethod)(*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_TrackMethod));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_7) = (byte)value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_TrackMethod) = (byte)value;
 			}
 		}
 
-		// Token: 0x170060E9 RID: 24809
-		// (get) Token: 0x06029009 RID: 167945 RVA: 0x009B9549 File Offset: 0x009B7749
-		// (set) Token: 0x0602900A RID: 167946 RVA: 0x009B9559 File Offset: 0x009B7759
+		// Token: 0x17003A4F RID: 14927
+		// (get) Token: 0x0601F988 RID: 129416 RVA: 0x00931231 File Offset: 0x0092F431
+		// (set) Token: 0x0601F989 RID: 129417 RVA: 0x00931241 File Offset: 0x0092F441
 		public unsafe float TrackPredictionFactor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_TrackPredictionFactor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_TrackPredictionFactor) = value;
 			}
 		}
 
-		// Token: 0x170060EA RID: 24810
-		// (get) Token: 0x0602900B RID: 167947 RVA: 0x009B956A File Offset: 0x009B776A
-		// (set) Token: 0x0602900C RID: 167948 RVA: 0x009B957A File Offset: 0x009B777A
+		// Token: 0x17003A50 RID: 14928
+		// (get) Token: 0x0601F98A RID: 129418 RVA: 0x00931252 File Offset: 0x0092F452
+		// (set) Token: 0x0601F98B RID: 129419 RVA: 0x00931262 File Offset: 0x0092F462
 		public unsafe float StopTrackTargetDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_StopTrackTargetDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_StopTrackTargetDistance) = value;
 			}
 		}
 
-		// Token: 0x170060EB RID: 24811
-		// (get) Token: 0x0602900D RID: 167949 RVA: 0x009B958B File Offset: 0x009B778B
-		// (set) Token: 0x0602900E RID: 167950 RVA: 0x009B959F File Offset: 0x009B779F
-		[Nullable(0)]
-		public unsafe TEnumAsByte<FauxPhysicsRotateType> TrackType
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_10);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_10) = value;
-			}
-		}
-
-		// Token: 0x170060EC RID: 24812
-		// (get) Token: 0x0602900F RID: 167951 RVA: 0x009B95B4 File Offset: 0x009B77B4
-		// (set) Token: 0x06029010 RID: 167952 RVA: 0x009B95C8 File Offset: 0x009B77C8
+		// Token: 0x17003A51 RID: 14929
+		// (get) Token: 0x0601F98C RID: 129420 RVA: 0x00931273 File Offset: 0x0092F473
+		// (set) Token: 0x0601F98D RID: 129421 RVA: 0x00931287 File Offset: 0x0092F487
 		public unsafe FVector LocalRotationAxis
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_LocalRotationAxis);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_LocalRotationAxis) = value;
 			}
 		}
 
-		// Token: 0x170060ED RID: 24813
-		// (get) Token: 0x06029011 RID: 167953 RVA: 0x009B95DD File Offset: 0x009B77DD
-		// (set) Token: 0x06029012 RID: 167954 RVA: 0x009B95ED File Offset: 0x009B77ED
+		// Token: 0x17003A52 RID: 14930
+		// (get) Token: 0x0601F98E RID: 129422 RVA: 0x0093129C File Offset: 0x0092F49C
+		// (set) Token: 0x0601F98F RID: 129423 RVA: 0x009312AC File Offset: 0x0092F4AC
 		public unsafe float AngularImpulseRadians
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_AngularImpulseRadians);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_AngularImpulseRadians) = value;
 			}
 		}
 
-		// Token: 0x170060EE RID: 24814
-		// (get) Token: 0x06029013 RID: 167955 RVA: 0x009B95FE File Offset: 0x009B77FE
-		// (set) Token: 0x06029014 RID: 167956 RVA: 0x009B960E File Offset: 0x009B780E
+		// Token: 0x17003A53 RID: 14931
+		// (get) Token: 0x0601F990 RID: 129424 RVA: 0x009312BD File Offset: 0x0092F4BD
+		// (set) Token: 0x0601F991 RID: 129425 RVA: 0x009312CD File Offset: 0x0092F4CD
 		public unsafe int HitBuff
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_HitBuff);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_HitBuff) = value;
 			}
 		}
 
-		// Token: 0x170060EF RID: 24815
-		// (get) Token: 0x06029015 RID: 167957 RVA: 0x009B961F File Offset: 0x009B781F
-		// (set) Token: 0x06029016 RID: 167958 RVA: 0x009B962F File Offset: 0x009B782F
+		// Token: 0x17003A54 RID: 14932
+		// (get) Token: 0x0601F992 RID: 129426 RVA: 0x009312DE File Offset: 0x0092F4DE
+		// (set) Token: 0x0601F993 RID: 129427 RVA: 0x009312EE File Offset: 0x0092F4EE
 		public unsafe int RevertMaximumHP
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_RevertMaximumHP);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)DestructibleStruct.__PropertyOffset_RevertMaximumHP) = value;
 			}
 		}
 
-		// Token: 0x06029017 RID: 167959 RVA: 0x009B9640 File Offset: 0x009B7840
+		// Token: 0x0601F994 RID: 129428 RVA: 0x009312FF File Offset: 0x0092F4FF
 		public DestructibleStruct()
 		{
 		}
 
-		// Token: 0x06029018 RID: 167960 RVA: 0x009B9648 File Offset: 0x009B7848
-		public DestructibleStruct(string 备注, TSoftObjectPtr<UKuroDestructibleAsset> DestructibleAsset, TSoftObjectPtr<UKuroDestructibleDestructionAsset> DestructibleDestructionAsset, bool IsRelativePosition, FVectorDouble Position, FTransform ModelTransform, float TraceSpeed, ETrackMethod TrackMethod, float TrackPredictionFactor, float StopTrackTargetDistance, [Nullable(0)] TEnumAsByte<FauxPhysicsRotateType> TrackType, FVector LocalRotationAxis, float AngularImpulseRadians, int HitBuff, int RevertMaximumHP)
-		{
-			this.备注 = 备注;
-			this.DestructibleAsset = DestructibleAsset;
-			this.DestructibleDestructionAsset = DestructibleDestructionAsset;
-			this.IsRelativePosition = IsRelativePosition;
-			this.Position = Position;
-			this.ModelTransform = ModelTransform;
-			this.TraceSpeed = TraceSpeed;
-			this.TrackMethod = TrackMethod;
-			this.TrackPredictionFactor = TrackPredictionFactor;
-			this.StopTrackTargetDistance = StopTrackTargetDistance;
-			this.TrackType = TrackType;
-			this.LocalRotationAxis = LocalRotationAxis;
-			this.AngularImpulseRadians = AngularImpulseRadians;
-			this.HitBuff = HitBuff;
-			this.RevertMaximumHP = RevertMaximumHP;
-		}
-
-		// Token: 0x06029019 RID: 167961 RVA: 0x009B96D0 File Offset: 0x009B78D0
+		// Token: 0x0601F995 RID: 129429 RVA: 0x00931307 File Offset: 0x0092F507
 		protected override IntPtr GetUStructPtr()
 		{
 			return DestructibleStruct.StaticStruct();
 		}
 
-		// Token: 0x0602901A RID: 167962 RVA: 0x009B96DC File Offset: 0x009B78DC
+		// Token: 0x0601F996 RID: 129430 RVA: 0x00931313 File Offset: 0x0092F513
 		[NullableContext(2)]
 		public DestructibleStruct(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602901B RID: 167963 RVA: 0x009B96E6 File Offset: 0x009B78E6
+		// Token: 0x0601F997 RID: 129431 RVA: 0x0093131D File Offset: 0x0092F51D
 		public DestructibleStruct(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602901C RID: 167964 RVA: 0x009B96F1 File Offset: 0x009B78F1
+		// Token: 0x0601F998 RID: 129432 RVA: 0x00931328 File Offset: 0x0092F528
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new DestructibleStruct(Pointer, false, true);
 		}
 
-		// Token: 0x0602901D RID: 167965 RVA: 0x009B96FB File Offset: 0x009B78FB
+		// Token: 0x0601F999 RID: 129433 RVA: 0x00931332 File Offset: 0x0092F532
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new DestructibleStruct(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014F8C RID: 85900
+		// Token: 0x04010F24 RID: 69412
 		public const string __ObjectPath = "/Game/Aki/Data/Level/Destructible/DestructibleStruct.DestructibleStruct";
 
-		// Token: 0x04014F8D RID: 85901
+		// Token: 0x04010F25 RID: 69413
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014F8E RID: 85902
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010F26 RID: 69414
+		internal static int __PropertyOffset_备注;
 
-		// Token: 0x04014F8F RID: 85903
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010F27 RID: 69415
+		internal static int __PropertyOffset_DestructibleAsset;
 
-		// Token: 0x04014F90 RID: 85904
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010F28 RID: 69416
+		internal static int __PropertyOffset_DestructibleDestructionAsset;
 
-		// Token: 0x04014F91 RID: 85905
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010F29 RID: 69417
+		internal static int __PropertyOffset_IsRelativePosition;
 
-		// Token: 0x04014F92 RID: 85906
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010F2A RID: 69418
+		internal static int __PropertyOffset_Position;
 
-		// Token: 0x04014F93 RID: 85907
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010F2B RID: 69419
+		internal static int __PropertyOffset_ModelTransform;
 
-		// Token: 0x04014F94 RID: 85908
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010F2C RID: 69420
+		internal static int __PropertyOffset_TraceSpeed;
 
-		// Token: 0x04014F95 RID: 85909
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010F2D RID: 69421
+		internal static int __PropertyOffset_TrackMethod;
 
-		// Token: 0x04014F96 RID: 85910
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010F2E RID: 69422
+		internal static int __PropertyOffset_TrackPredictionFactor;
 
-		// Token: 0x04014F97 RID: 85911
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010F2F RID: 69423
+		internal static int __PropertyOffset_StopTrackTargetDistance;
 
-		// Token: 0x04014F98 RID: 85912
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010F30 RID: 69424
+		internal static int __PropertyOffset_LocalRotationAxis;
 
-		// Token: 0x04014F99 RID: 85913
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010F31 RID: 69425
+		internal static int __PropertyOffset_AngularImpulseRadians;
 
-		// Token: 0x04014F9A RID: 85914
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010F32 RID: 69426
+		internal static int __PropertyOffset_HitBuff;
 
-		// Token: 0x04014F9B RID: 85915
-		internal static int __PropertyOffset_13;
-
-		// Token: 0x04014F9C RID: 85916
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010F33 RID: 69427
+		internal static int __PropertyOffset_RevertMaximumHP;
 	}
 }

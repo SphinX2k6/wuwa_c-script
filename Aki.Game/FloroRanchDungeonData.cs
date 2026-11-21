@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001AF4 RID: 6900
+// Token: 0x02000FB3 RID: 4019
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDungeonData
 {
-	// Token: 0x0600CCD3 RID: 52435 RVA: 0x002EC3F3 File Offset: 0x002EA5F3
+	// Token: 0x0600A0E4 RID: 41188 RVA: 0x002F74DF File Offset: 0x002F56DF
 	public FloroRanchDungeonData(FloroRanchIns config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x0600CCD4 RID: 52436 RVA: 0x002EC40D File Offset: 0x002EA60D
+	// Token: 0x0600A0E5 RID: 41189 RVA: 0x002F74F9 File Offset: 0x002F56F9
 	public void PushSubDungeonData(FloroRanchSubDungeonData subDungeonData)
 	{
 		this.SubDungeonDataList.Add(subDungeonData);
 	}
 
-	// Token: 0x0600CCD5 RID: 52437 RVA: 0x002EC41C File Offset: 0x002EA61C
+	// Token: 0x0600A0E6 RID: 41190 RVA: 0x002F7508 File Offset: 0x002F5708
 	public void UpdateUnLockState(bool isUnLock)
 	{
 		this.IsUnLockInternal = isUnLock;
@@ -30,8 +30,8 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010E3 RID: 4323
-	// (get) Token: 0x0600CCD6 RID: 52438 RVA: 0x002EC474 File Offset: 0x002EA674
+	// Token: 0x17001108 RID: 4360
+	// (get) Token: 0x0600A0E7 RID: 41191 RVA: 0x002F7560 File Offset: 0x002F5760
 	public bool IsUnLock
 	{
 		get
@@ -40,9 +40,9 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010E4 RID: 4324
-	// (get) Token: 0x0600CCD8 RID: 52440 RVA: 0x002EC485 File Offset: 0x002EA685
-	// (set) Token: 0x0600CCD7 RID: 52439 RVA: 0x002EC47C File Offset: 0x002EA67C
+	// Token: 0x17001109 RID: 4361
+	// (get) Token: 0x0600A0E9 RID: 41193 RVA: 0x002F7571 File Offset: 0x002F5771
+	// (set) Token: 0x0600A0E8 RID: 41192 RVA: 0x002F7568 File Offset: 0x002F5768
 	public int ConditionId
 	{
 		get
@@ -55,8 +55,8 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010E5 RID: 4325
-	// (get) Token: 0x0600CCD9 RID: 52441 RVA: 0x002EC490 File Offset: 0x002EA690
+	// Token: 0x1700110A RID: 4362
+	// (get) Token: 0x0600A0EA RID: 41194 RVA: 0x002F757C File Offset: 0x002F577C
 	public int Id
 	{
 		get
@@ -65,8 +65,8 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010E6 RID: 4326
-	// (get) Token: 0x0600CCDA RID: 52442 RVA: 0x002EC4AC File Offset: 0x002EA6AC
+	// Token: 0x1700110B RID: 4363
+	// (get) Token: 0x0600A0EB RID: 41195 RVA: 0x002F7598 File Offset: 0x002F5798
 	public int SortId
 	{
 		get
@@ -75,8 +75,8 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010E7 RID: 4327
-	// (get) Token: 0x0600CCDB RID: 52443 RVA: 0x002EC4C8 File Offset: 0x002EA6C8
+	// Token: 0x1700110C RID: 4364
+	// (get) Token: 0x0600A0EC RID: 41196 RVA: 0x002F75B4 File Offset: 0x002F57B4
 	public int DelayTime
 	{
 		get
@@ -85,19 +85,19 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x0600CCDC RID: 52444 RVA: 0x002EC4E4 File Offset: 0x002EA6E4
+	// Token: 0x0600A0ED RID: 41197 RVA: 0x002F75D0 File Offset: 0x002F57D0
 	public string GetDungeonName()
 	{
 		return this.Config.Name;
 	}
 
-	// Token: 0x0600CCDD RID: 52445 RVA: 0x002EC4FF File Offset: 0x002EA6FF
+	// Token: 0x0600A0EE RID: 41198 RVA: 0x002F75EB File Offset: 0x002F57EB
 	public List<FloroRanchSubDungeonData> GetSubDungeonData()
 	{
 		return this.SubDungeonDataList;
 	}
 
-	// Token: 0x0600CCDE RID: 52446 RVA: 0x002EC508 File Offset: 0x002EA708
+	// Token: 0x0600A0EF RID: 41199 RVA: 0x002F75F4 File Offset: 0x002F57F4
 	public FloroRanchSubDungeonData GetLatestSubDungeonData()
 	{
 		FloroRanchSubDungeonData result = this.SubDungeonDataList[0];
@@ -112,8 +112,8 @@ public class FloroRanchDungeonData
 		return result;
 	}
 
-	// Token: 0x170010E8 RID: 4328
-	// (get) Token: 0x0600CCDF RID: 52447 RVA: 0x002EC574 File Offset: 0x002EA774
+	// Token: 0x1700110D RID: 4365
+	// (get) Token: 0x0600A0F0 RID: 41200 RVA: 0x002F7660 File Offset: 0x002F5860
 	public bool IsDifficulty
 	{
 		get
@@ -122,8 +122,8 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010E9 RID: 4329
-	// (get) Token: 0x0600CCE0 RID: 52448 RVA: 0x002EC594 File Offset: 0x002EA794
+	// Token: 0x1700110E RID: 4366
+	// (get) Token: 0x0600A0F1 RID: 41201 RVA: 0x002F7680 File Offset: 0x002F5880
 	public string RomeNumIcon
 	{
 		get
@@ -132,8 +132,8 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x170010EA RID: 4330
-	// (get) Token: 0x0600CCE1 RID: 52449 RVA: 0x002EC5B0 File Offset: 0x002EA7B0
+	// Token: 0x1700110F RID: 4367
+	// (get) Token: 0x0600A0F2 RID: 41202 RVA: 0x002F769C File Offset: 0x002F589C
 	public bool HasRedDot
 	{
 		get
@@ -156,15 +156,15 @@ public class FloroRanchDungeonData
 		}
 	}
 
-	// Token: 0x04005E03 RID: 24067
+	// Token: 0x04005ED2 RID: 24274
 	private readonly FloroRanchIns Config;
 
-	// Token: 0x04005E04 RID: 24068
+	// Token: 0x04005ED3 RID: 24275
 	private readonly List<FloroRanchSubDungeonData> SubDungeonDataList = new List<FloroRanchSubDungeonData>();
 
-	// Token: 0x04005E05 RID: 24069
+	// Token: 0x04005ED4 RID: 24276
 	private bool IsUnLockInternal;
 
-	// Token: 0x04005E06 RID: 24070
+	// Token: 0x04005ED5 RID: 24277
 	private int ConditionIdInternal;
 }

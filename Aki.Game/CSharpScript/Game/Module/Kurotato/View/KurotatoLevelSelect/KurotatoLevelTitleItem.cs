@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x0200575F RID: 22367
+	// Token: 0x02004736 RID: 18230
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 	})]
 	public class KurotatoLevelTitleItem : SyncGridProxyAbstract<KurotatoLevelTitleItemData>
 	{
-		// Token: 0x06038D4C RID: 232780 RVA: 0x00D802EC File Offset: 0x00D7E4EC
+		// Token: 0x0602DC5C RID: 187484 RVA: 0x00CCED94 File Offset: 0x00CCCF94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D4D RID: 232781 RVA: 0x00D80358 File Offset: 0x00D7E558
+		// Token: 0x0602DC5D RID: 187485 RVA: 0x00CCEE00 File Offset: 0x00CCD000
 		[NullableContext(1)]
 		public override void Refresh(KurotatoLevelTitleItemData data)
 		{
@@ -36,12 +36,12 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			base.SetTextureByPath(data.BgPath, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200B95A RID: 47450
+		// Token: 0x0200A376 RID: 41846
 		private enum EComponents
 		{
-			// Token: 0x040380D3 RID: 229587
+			// Token: 0x04032AD5 RID: 207573
 			TextName,
-			// Token: 0x040380D4 RID: 229588
+			// Token: 0x04032AD6 RID: 207574
 			TextureBg
 		}
 	}

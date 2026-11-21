@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000241 RID: 577
+	// Token: 0x02000282 RID: 642
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICircumnutation : IThrowMotion
 	{
-		// Token: 0x06000A4C RID: 2636 RVA: 0x0002B1E8 File Offset: 0x000293E8
-		[NullableContext(1)]
+		// Token: 0x06000B5A RID: 2906 RVA: 0x0002DD98 File Offset: 0x0002BF98
+		[NullableContext(0)]
 		private ICircumnutation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A4D RID: 2637 RVA: 0x0002B220 File Offset: 0x00029420
-		[NullableContext(1)]
+		// Token: 0x06000B5B RID: 2907 RVA: 0x0002DDD0 File Offset: 0x0002BFD0
+		[NullableContext(0)]
 		public static ICircumnutation Create([Nullable(2)] ICircumnutation instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A4E RID: 2638 RVA: 0x0002B233 File Offset: 0x00029433
-		[NullableContext(1)]
+		// Token: 0x06000B5C RID: 2908 RVA: 0x0002DDE3 File Offset: 0x0002BFE3
+		[NullableContext(0)]
 		public static ICircumnutation CreateFromSetValue([Nullable(2)] ICircumnutation_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A4F RID: 2639 RVA: 0x0002B248 File Offset: 0x00029448
-		[NullableContext(1)]
+		// Token: 0x06000B5D RID: 2909 RVA: 0x0002DDF8 File Offset: 0x0002BFF8
+		[NullableContext(0)]
 		public new ICircumnutation_SetValue ToSetValue()
 		{
 			return new ICircumnutation_SetValue
@@ -70,9 +70,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000322 RID: 802
-		// (get) Token: 0x06000A50 RID: 2640 RVA: 0x0002B2BA File Offset: 0x000294BA
-		// (set) Token: 0x06000A51 RID: 2641 RVA: 0x0002B2E5 File Offset: 0x000294E5
+		// Token: 0x17000367 RID: 871
+		// (get) Token: 0x06000B5E RID: 2910 RVA: 0x0002DE6A File Offset: 0x0002C06A
+		// (set) Token: 0x06000B5F RID: 2911 RVA: 0x0002DE95 File Offset: 0x0002C095
 		public override EThrowMotion Type
 		{
 			get
@@ -93,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000323 RID: 803
-		// (get) Token: 0x06000A52 RID: 2642 RVA: 0x0002B2F3 File Offset: 0x000294F3
-		// (set) Token: 0x06000A53 RID: 2643 RVA: 0x0002B322 File Offset: 0x00029522
+		// Token: 0x17000368 RID: 872
+		// (get) Token: 0x06000B60 RID: 2912 RVA: 0x0002DEA3 File Offset: 0x0002C0A3
+		// (set) Token: 0x06000B61 RID: 2913 RVA: 0x0002DED2 File Offset: 0x0002C0D2
 		public virtual float Velocity
 		{
 			get
@@ -116,9 +116,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000324 RID: 804
-		// (get) Token: 0x06000A54 RID: 2644 RVA: 0x0002B330 File Offset: 0x00029530
-		// (set) Token: 0x06000A55 RID: 2645 RVA: 0x0002B357 File Offset: 0x00029557
+		// Token: 0x17000369 RID: 873
+		// (get) Token: 0x06000B62 RID: 2914 RVA: 0x0002DEE0 File Offset: 0x0002C0E0
+		// (set) Token: 0x06000B63 RID: 2915 RVA: 0x0002DF07 File Offset: 0x0002C107
 		public virtual string VelocityCurve
 		{
 			get
@@ -140,9 +140,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000325 RID: 805
-		// (get) Token: 0x06000A56 RID: 2646 RVA: 0x0002B365 File Offset: 0x00029565
-		// (set) Token: 0x06000A57 RID: 2647 RVA: 0x0002B390 File Offset: 0x00029590
+		// Token: 0x1700036A RID: 874
+		// (get) Token: 0x06000B64 RID: 2916 RVA: 0x0002DF15 File Offset: 0x0002C115
+		// (set) Token: 0x06000B65 RID: 2917 RVA: 0x0002DF40 File Offset: 0x0002C140
 		public virtual EDirection Direction
 		{
 			get
@@ -163,9 +163,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000326 RID: 806
-		// (get) Token: 0x06000A58 RID: 2648 RVA: 0x0002B39E File Offset: 0x0002959E
-		// (set) Token: 0x06000A59 RID: 2649 RVA: 0x0002B3CD File Offset: 0x000295CD
+		// Token: 0x1700036B RID: 875
+		// (get) Token: 0x06000B66 RID: 2918 RVA: 0x0002DF4E File Offset: 0x0002C14E
+		// (set) Token: 0x06000B67 RID: 2919 RVA: 0x0002DF7D File Offset: 0x0002C17D
 		public virtual float AngularVelocity
 		{
 			get
@@ -186,9 +186,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000327 RID: 807
-		// (get) Token: 0x06000A5A RID: 2650 RVA: 0x0002B3DB File Offset: 0x000295DB
-		// (set) Token: 0x06000A5B RID: 2651 RVA: 0x0002B40A File Offset: 0x0002960A
+		// Token: 0x1700036C RID: 876
+		// (get) Token: 0x06000B68 RID: 2920 RVA: 0x0002DF8B File Offset: 0x0002C18B
+		// (set) Token: 0x06000B69 RID: 2921 RVA: 0x0002DFBA File Offset: 0x0002C1BA
 		public virtual float RotationSpeed
 		{
 			get
@@ -209,9 +209,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000328 RID: 808
-		// (get) Token: 0x06000A5C RID: 2652 RVA: 0x0002B418 File Offset: 0x00029618
-		// (set) Token: 0x06000A5D RID: 2653 RVA: 0x0002B43F File Offset: 0x0002963F
+		// Token: 0x1700036D RID: 877
+		// (get) Token: 0x06000B6A RID: 2922 RVA: 0x0002DFC8 File Offset: 0x0002C1C8
+		// (set) Token: 0x06000B6B RID: 2923 RVA: 0x0002DFEF File Offset: 0x0002C1EF
 		public virtual string AngularVelocityCurve
 		{
 			get
@@ -233,9 +233,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000329 RID: 809
-		// (get) Token: 0x06000A5E RID: 2654 RVA: 0x0002B450 File Offset: 0x00029650
-		// (set) Token: 0x06000A5F RID: 2655 RVA: 0x0002B4B1 File Offset: 0x000296B1
+		// Token: 0x1700036E RID: 878
+		// (get) Token: 0x06000B6C RID: 2924 RVA: 0x0002E000 File Offset: 0x0002C200
+		// (set) Token: 0x06000B6D RID: 2925 RVA: 0x0002E061 File Offset: 0x0002C261
 		public virtual IRenderTrajectoryConfig RenderTrajectoryConfig
 		{
 			get
@@ -263,17 +263,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A52 RID: 2642
+		// Token: 0x04000B2E RID: 2862
 		protected new ICircumnutation FbInstance;
 
-		// Token: 0x04000A53 RID: 2643
+		// Token: 0x04000B2F RID: 2863
 		protected new ICircumnutation_SetValue PocoInterface;
 
-		// Token: 0x04000A54 RID: 2644
-		[Nullable(1)]
+		// Token: 0x04000B30 RID: 2864
+		[Nullable(0)]
 		private IRenderTrajectoryConfig _RenderTrajectoryConfigCache;
 
-		// Token: 0x04000A55 RID: 2645
+		// Token: 0x04000B31 RID: 2865
 		private bool _RenderTrajectoryConfigInited;
 	}
 }

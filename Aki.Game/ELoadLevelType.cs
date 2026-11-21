@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02003508 RID: 13576
+// Token: 0x02002A7D RID: 10877
 public enum ELoadLevelType
 {
-	// Token: 0x0400E994 RID: 59796
+	// Token: 0x0400EE4F RID: 61007
 	None,
-	// Token: 0x0400E995 RID: 59797
+	// Token: 0x0400EE50 RID: 61008
 	Loading,
-	// Token: 0x0400E996 RID: 59798
+	// Token: 0x0400EE51 RID: 61009
 	Done,
-	// Token: 0x0400E997 RID: 59799
+	// Token: 0x0400EE52 RID: 61010
 	Destroy
 }

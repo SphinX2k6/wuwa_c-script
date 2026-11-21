@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B1F RID: 23327
+	// Token: 0x02004B00 RID: 19200
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CookProficiencyView : UiPanelBase
 	{
-		// Token: 0x0603B0CB RID: 241867 RVA: 0x00E14110 File Offset: 0x00E12310
+		// Token: 0x0603003D RID: 196669 RVA: 0x00D64E28 File Offset: 0x00D63028
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -40,19 +40,19 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B0CC RID: 241868 RVA: 0x00E141F8 File Offset: 0x00E123F8
+		// Token: 0x0603003E RID: 196670 RVA: 0x00D64F10 File Offset: 0x00D63110
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetButton(2).GetRootComponent());
 		}
 
-		// Token: 0x0603B0CD RID: 241869 RVA: 0x00E14211 File Offset: 0x00E12411
+		// Token: 0x0603003F RID: 196671 RVA: 0x00D64F29 File Offset: 0x00D63129
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer.Clear();
 		}
 
-		// Token: 0x0603B0CE RID: 241870 RVA: 0x00E1421E File Offset: 0x00E1241E
+		// Token: 0x06030040 RID: 196672 RVA: 0x00D64F36 File Offset: 0x00D63136
 		private void OnChangeRoleClick()
 		{
 			Action changeClickCall = this.ChangeClickCall;
@@ -63,14 +63,14 @@ namespace CSharpScript.Game.Module.Cook.View
 			changeClickCall();
 		}
 
-		// Token: 0x0603B0CF RID: 241871 RVA: 0x00E14230 File Offset: 0x00E12430
+		// Token: 0x06030041 RID: 196673 RVA: 0x00D64F48 File Offset: 0x00D63148
 		[NullableContext(1)]
 		public void BindChangeRoleClick(Action func)
 		{
 			this.ChangeClickCall = func;
 		}
 
-		// Token: 0x0603B0D0 RID: 241872 RVA: 0x00E1423C File Offset: 0x00E1243C
+		// Token: 0x06030042 RID: 196674 RVA: 0x00D64F54 File Offset: 0x00D63154
 		public void SetExpNum(int cookCount, int single, int sum, int times)
 		{
 			int num = single * sum;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(0).SetText(newText2, true);
 		}
 
-		// Token: 0x0603B0D1 RID: 241873 RVA: 0x00E14344 File Offset: 0x00E12544
+		// Token: 0x06030043 RID: 196675 RVA: 0x00D6505C File Offset: 0x00D6325C
 		public void SetRoleTexture(int roleId, int itemId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B0D2 RID: 241874 RVA: 0x00E143E0 File Offset: 0x00E125E0
+		// Token: 0x06030044 RID: 196676 RVA: 0x00D650F8 File Offset: 0x00D632F8
 		public void SetTypeContent(string content = null)
 		{
 			UUIText text = base.GetText(3);
@@ -142,23 +142,23 @@ namespace CSharpScript.Game.Module.Cook.View
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x0401ECC4 RID: 126148
+		// Token: 0x04019780 RID: 104320
 		private Action ChangeClickCall;
 
-		// Token: 0x0401ECC5 RID: 126149
+		// Token: 0x04019781 RID: 104321
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200BD57 RID: 48471
+		// Token: 0x0200A760 RID: 42848
 		[NullableContext(0)]
 		private enum EProficiencyViewComponents
 		{
-			// Token: 0x040391B8 RID: 233912
+			// Token: 0x04033B84 RID: 211844
 			TxtAddNum,
-			// Token: 0x040391B9 RID: 233913
+			// Token: 0x04033B85 RID: 211845
 			TexRole,
-			// Token: 0x040391BA RID: 233914
+			// Token: 0x04033B86 RID: 211846
 			BtnChange,
-			// Token: 0x040391BB RID: 233915
+			// Token: 0x04033B87 RID: 211847
 			TxtType
 		}
 	}

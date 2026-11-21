@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EF7 RID: 28407
+	// Token: 0x0200767B RID: 30331
 	public struct IRoleSceneVoice : IFlatbufferObject
 	{
-		// Token: 0x1700D34C RID: 54092
-		// (get) Token: 0x0603231D RID: 205597 RVA: 0x006C8656 File Offset: 0x006C6856
+		// Token: 0x1700DEA3 RID: 56995
+		// (get) Token: 0x0603535D RID: 217949 RVA: 0x0072438A File Offset: 0x0072258A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603231E RID: 205598 RVA: 0x006C8663 File Offset: 0x006C6863
+		// Token: 0x0603535E RID: 217950 RVA: 0x00724397 File Offset: 0x00722597
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603231F RID: 205599 RVA: 0x006C866C File Offset: 0x006C686C
+		// Token: 0x0603535F RID: 217951 RVA: 0x007243A0 File Offset: 0x007225A0
 		public static IRoleSceneVoice GetRootAsIRoleSceneVoice(ByteBuffer _bb)
 		{
 			return IRoleSceneVoice.GetRootAsIRoleSceneVoice(_bb, default(IRoleSceneVoice));
 		}
 
-		// Token: 0x06032320 RID: 205600 RVA: 0x006C8688 File Offset: 0x006C6888
+		// Token: 0x06035360 RID: 217952 RVA: 0x007243BC File Offset: 0x007225BC
 		public static IRoleSceneVoice GetRootAsIRoleSceneVoice(ByteBuffer _bb, IRoleSceneVoice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032321 RID: 205601 RVA: 0x006C86A5 File Offset: 0x006C68A5
+		// Token: 0x06035361 RID: 217953 RVA: 0x007243D9 File Offset: 0x007225D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032322 RID: 205602 RVA: 0x006C86B4 File Offset: 0x006C68B4
+		// Token: 0x06035362 RID: 217954 RVA: 0x007243E8 File Offset: 0x007225E8
 		public IRoleSceneVoice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D34D RID: 54093
-		// (get) Token: 0x06032323 RID: 205603 RVA: 0x006C86C4 File Offset: 0x006C68C4
+		// Token: 0x1700DEA4 RID: 56996
+		// (get) Token: 0x06035363 RID: 217955 RVA: 0x007243F8 File Offset: 0x007225F8
 		public EAudioType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D34E RID: 54094
-		// (get) Token: 0x06032324 RID: 205604 RVA: 0x006C8700 File Offset: 0x006C6900
+		// Token: 0x1700DEA5 RID: 56997
+		// (get) Token: 0x06035364 RID: 217956 RVA: 0x00724434 File Offset: 0x00722634
 		public int VoiceGroupData
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032325 RID: 205605 RVA: 0x006C873C File Offset: 0x006C693C
+		// Token: 0x06035365 RID: 217957 RVA: 0x00724470 File Offset: 0x00722670
 		public static Offset<IRoleSceneVoice> CreateIRoleSceneVoice(FlatBufferBuilder builder, EAudioType Type = EAudioType.RoleSceneVoice, int VoiceGroupData = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRoleSceneVoice.EndIRoleSceneVoice(builder);
 		}
 
-		// Token: 0x06032326 RID: 205606 RVA: 0x006C8759 File Offset: 0x006C6959
+		// Token: 0x06035366 RID: 217958 RVA: 0x0072448D File Offset: 0x0072268D
 		public static void StartIRoleSceneVoice(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06032327 RID: 205607 RVA: 0x006C8762 File Offset: 0x006C6962
+		// Token: 0x06035367 RID: 217959 RVA: 0x00724496 File Offset: 0x00722696
 		public static void AddType(FlatBufferBuilder builder, EAudioType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032328 RID: 205608 RVA: 0x006C876D File Offset: 0x006C696D
+		// Token: 0x06035368 RID: 217960 RVA: 0x007244A1 File Offset: 0x007226A1
 		public static void AddVoiceGroupData(FlatBufferBuilder builder, int voiceGroupData)
 		{
 			builder.AddInt(1, voiceGroupData, 0);
 		}
 
-		// Token: 0x06032329 RID: 205609 RVA: 0x006C8778 File Offset: 0x006C6978
+		// Token: 0x06035369 RID: 217961 RVA: 0x007244AC File Offset: 0x007226AC
 		public static Offset<IRoleSceneVoice> EndIRoleSceneVoice(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleSceneVoice>(builder.EndTable());
 		}
 
-		// Token: 0x0603232A RID: 205610 RVA: 0x006C8788 File Offset: 0x006C6988
+		// Token: 0x0603536A RID: 217962 RVA: 0x007244BC File Offset: 0x007226BC
 		public IRoleSceneVoiceT UnPack()
 		{
 			IRoleSceneVoiceT roleSceneVoiceT = new IRoleSceneVoiceT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return roleSceneVoiceT;
 		}
 
-		// Token: 0x0603232B RID: 205611 RVA: 0x006C87A3 File Offset: 0x006C69A3
+		// Token: 0x0603536B RID: 217963 RVA: 0x007244D7 File Offset: 0x007226D7
 		public void UnPackTo(IRoleSceneVoiceT _o)
 		{
 			_o.Type = this.Type;
 			_o.VoiceGroupData = this.VoiceGroupData;
 		}
 
-		// Token: 0x0603232C RID: 205612 RVA: 0x006C87C0 File Offset: 0x006C69C0
+		// Token: 0x0603536C RID: 217964 RVA: 0x007244F4 File Offset: 0x007226F4
 		public static Offset<IRoleSceneVoice> Pack(FlatBufferBuilder builder, IRoleSceneVoiceT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRoleSceneVoice.CreateIRoleSceneVoice(builder, _o.Type, _o.VoiceGroupData);
 		}
 
-		// Token: 0x040118EC RID: 71916
+		// Token: 0x04012871 RID: 75889
 		private Table __p;
 	}
 }

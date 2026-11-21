@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using Aki.Config;
@@ -20,25 +19,25 @@ using CSharpScript.Game.Module.RoleUi;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x020030A0 RID: 12448
+// Token: 0x020025F7 RID: 9719
 [NullableContext(1)]
 [Nullable(0)]
 public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601AA00 RID: 109056 RVA: 0x00729BCE File Offset: 0x00727DCE
+	// Token: 0x06018406 RID: 99334 RVA: 0x0074F7AE File Offset: 0x0074D9AE
 	static CreatureDataComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CreatureDataComponent.CreateStaticDefaultValue), new Action(CreatureDataComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601AA01 RID: 109057 RVA: 0x00729BED File Offset: 0x00727DED
+	// Token: 0x06018407 RID: 99335 RVA: 0x0074F7CD File Offset: 0x0074D9CD
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.RemoveCreatureDataComponentCache, this.EntityId);
 		return true;
 	}
 
-	// Token: 0x0601AA02 RID: 109058 RVA: 0x00729C08 File Offset: 0x00727E08
+	// Token: 0x06018408 RID: 99336 RVA: 0x0074F7E8 File Offset: 0x0074D9E8
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -73,11 +72,13 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.IsConcealed = p.IsConcealed;
 		this.AddBindEntities();
 		UKuroJsModelFunctionLibrary.SetCreatureDataComponentEntityType(this.EntityId, (byte)this.EntityType);
+		BaseInfoComponent baseInfo = this.GetBaseInfo();
+		this.IsClientEntity = (baseInfo != null && baseInfo.IsClientEntityFlag != null && baseInfo.IsClientEntityFlag.Value == EClientEntityMark.ClientEntity);
 		return true;
 	}
 
-	// Token: 0x17002493 RID: 9363
-	// (get) Token: 0x0601AA03 RID: 109059 RVA: 0x00729D51 File Offset: 0x00727F51
+	// Token: 0x1700260D RID: 9741
+	// (get) Token: 0x06018409 RID: 99337 RVA: 0x0074F96B File Offset: 0x0074DB6B
 	public string ModelBlueprintPath
 	{
 		get
@@ -86,14 +87,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA04 RID: 109060 RVA: 0x00729D59 File Offset: 0x00727F59
+	// Token: 0x0601840A RID: 99338 RVA: 0x0074F973 File Offset: 0x0074DB73
 	public void SetServerCamp(AkiClient.Game.Aki.Character.BaseCharacter.ECamp camp)
 	{
 		this.ServerCamp = new AkiClient.Game.Aki.Character.BaseCharacter.ECamp?(camp);
 	}
 
-	// Token: 0x17002494 RID: 9364
-	// (get) Token: 0x0601AA05 RID: 109061 RVA: 0x00729D68 File Offset: 0x00727F68
+	// Token: 0x1700260E RID: 9742
+	// (get) Token: 0x0601840B RID: 99339 RVA: 0x0074F984 File Offset: 0x0074DB84
 	public bool CanGetReward
 	{
 		get
@@ -107,8 +108,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002495 RID: 9365
-	// (get) Token: 0x0601AA06 RID: 109062 RVA: 0x00729DAC File Offset: 0x00727FAC
+	// Token: 0x1700260F RID: 9743
+	// (get) Token: 0x0601840C RID: 99340 RVA: 0x0074F9C8 File Offset: 0x0074DBC8
 	public bool IsPosAbnormal
 	{
 		get
@@ -117,14 +118,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA07 RID: 109063 RVA: 0x00729DB4 File Offset: 0x00727FB4
+	// Token: 0x0601840D RID: 99341 RVA: 0x0074F9D0 File Offset: 0x0074DBD0
 	public void SetPosAbnormal(bool value)
 	{
 		this.IsPosAbnormalInternal = value;
 	}
 
-	// Token: 0x17002496 RID: 9366
-	// (get) Token: 0x0601AA08 RID: 109064 RVA: 0x00729DBD File Offset: 0x00727FBD
+	// Token: 0x17002610 RID: 9744
+	// (get) Token: 0x0601840E RID: 99342 RVA: 0x0074F9D9 File Offset: 0x0074DBD9
 	public string EntityPbModelConfigId
 	{
 		get
@@ -133,8 +134,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002497 RID: 9367
-	// (get) Token: 0x0601AA09 RID: 109065 RVA: 0x00729DC5 File Offset: 0x00727FC5
+	// Token: 0x17002611 RID: 9745
+	// (get) Token: 0x0601840F RID: 99343 RVA: 0x0074F9E1 File Offset: 0x0074DBE1
 	public long MotorContextId
 	{
 		get
@@ -143,8 +144,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002498 RID: 9368
-	// (get) Token: 0x0601AA0A RID: 109066 RVA: 0x00729DCD File Offset: 0x00727FCD
+	// Token: 0x17002612 RID: 9746
+	// (get) Token: 0x06018410 RID: 99344 RVA: 0x0074F9E9 File Offset: 0x0074DBE9
 	public int LiftFloor
 	{
 		get
@@ -153,8 +154,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002499 RID: 9369
-	// (get) Token: 0x0601AA0B RID: 109067 RVA: 0x00729DD8 File Offset: 0x00727FD8
+	// Token: 0x17002613 RID: 9747
+	// (get) Token: 0x06018411 RID: 99345 RVA: 0x0074F9F4 File Offset: 0x0074DBF4
 	public bool IsPlotPlayerOwned
 	{
 		get
@@ -169,14 +170,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA0C RID: 109068 RVA: 0x00729E18 File Offset: 0x00728018
+	// Token: 0x06018412 RID: 99346 RVA: 0x0074FA34 File Offset: 0x0074DC34
 	public void ClearPlotPlayerInfo()
 	{
 		this.PlotPlayerId = null;
 		this.IsPlotControl = false;
 	}
 
-	// Token: 0x0601AA0D RID: 109069 RVA: 0x00729E2D File Offset: 0x0072802D
+	// Token: 0x06018413 RID: 99347 RVA: 0x0074FA49 File Offset: 0x0074DC49
 	public long GetSummonRandomEntityId(int index)
 	{
 		if (index > this.SummonRandomInfo.Count)
@@ -186,14 +187,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.SummonRandomInfo[index];
 	}
 
-	// Token: 0x0601AA0E RID: 109070 RVA: 0x00729E4C File Offset: 0x0072804C
+	// Token: 0x06018414 RID: 99348 RVA: 0x0074FA68 File Offset: 0x0074DC68
 	public void SetSummonRandomInfo(List<long> info)
 	{
 		this.SummonRandomInfo = info;
 	}
 
-	// Token: 0x1700249A RID: 9370
-	// (get) Token: 0x0601AA0F RID: 109071 RVA: 0x00729E55 File Offset: 0x00728055
+	// Token: 0x17002614 RID: 9748
+	// (get) Token: 0x06018415 RID: 99349 RVA: 0x0074FA71 File Offset: 0x0074DC71
 	public bool IsConcomitantEntity
 	{
 		get
@@ -202,9 +203,9 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700249B RID: 9371
-	// (get) Token: 0x0601AA10 RID: 109072 RVA: 0x00729E6B File Offset: 0x0072806B
-	// (set) Token: 0x0601AA11 RID: 109073 RVA: 0x00729E73 File Offset: 0x00728073
+	// Token: 0x17002615 RID: 9749
+	// (get) Token: 0x06018416 RID: 99350 RVA: 0x0074FA87 File Offset: 0x0074DC87
+	// (set) Token: 0x06018417 RID: 99351 RVA: 0x0074FA8F File Offset: 0x0074DC8F
 	public long? VisionControlCreatureDataId
 	{
 		get
@@ -217,9 +218,9 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700249C RID: 9372
-	// (get) Token: 0x0601AA12 RID: 109074 RVA: 0x00729E7C File Offset: 0x0072807C
-	// (set) Token: 0x0601AA13 RID: 109075 RVA: 0x00729E84 File Offset: 0x00728084
+	// Token: 0x17002616 RID: 9750
+	// (get) Token: 0x06018418 RID: 99352 RVA: 0x0074FA98 File Offset: 0x0074DC98
+	// (set) Token: 0x06018419 RID: 99353 RVA: 0x0074FAA0 File Offset: 0x0074DCA0
 	public List<long> VisionServerEntityIds
 	{
 		get
@@ -232,8 +233,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700249D RID: 9373
-	// (get) Token: 0x0601AA14 RID: 109076 RVA: 0x00729E8D File Offset: 0x0072808D
+	// Token: 0x17002617 RID: 9751
+	// (get) Token: 0x0601841A RID: 99354 RVA: 0x0074FAA9 File Offset: 0x0074DCA9
 	public IList<long> CustomServerEntityIds
 	{
 		get
@@ -242,8 +243,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700249E RID: 9374
-	// (get) Token: 0x0601AA15 RID: 109077 RVA: 0x00729E95 File Offset: 0x00728095
+	// Token: 0x17002618 RID: 9752
+	// (get) Token: 0x0601841B RID: 99355 RVA: 0x0074FAB1 File Offset: 0x0074DCB1
 	public long BossRushCreatureDataId
 	{
 		get
@@ -252,9 +253,9 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700249F RID: 9375
-	// (get) Token: 0x0601AA16 RID: 109078 RVA: 0x00729E9D File Offset: 0x0072809D
-	// (set) Token: 0x0601AA17 RID: 109079 RVA: 0x00729EA5 File Offset: 0x007280A5
+	// Token: 0x17002619 RID: 9753
+	// (get) Token: 0x0601841C RID: 99356 RVA: 0x0074FAB9 File Offset: 0x0074DCB9
+	// (set) Token: 0x0601841D RID: 99357 RVA: 0x0074FAC1 File Offset: 0x0074DCC1
 	public List<long> SummonEntityIds
 	{
 		get
@@ -267,8 +268,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170024A0 RID: 9376
-	// (get) Token: 0x0601AA18 RID: 109080 RVA: 0x00729EAE File Offset: 0x007280AE
+	// Token: 0x1700261A RID: 9754
+	// (get) Token: 0x0601841E RID: 99358 RVA: 0x0074FACA File Offset: 0x0074DCCA
 	[Nullable(2)]
 	public global::Vector ServerStartLocation
 	{
@@ -279,7 +280,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA19 RID: 109081 RVA: 0x00729EB6 File Offset: 0x007280B6
+	// Token: 0x0601841F RID: 99359 RVA: 0x0074FAD2 File Offset: 0x0074DCD2
 	[return: Nullable(2)]
 	public VarDefinePb GetEntityVar(string name)
 	{
@@ -290,7 +291,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.EntityVariables[name];
 	}
 
-	// Token: 0x0601AA1A RID: 109082 RVA: 0x00729ED4 File Offset: 0x007280D4
+	// Token: 0x06018420 RID: 99360 RVA: 0x0074FAF0 File Offset: 0x0074DCF0
 	public void SetEntityConditionalName(string textId)
 	{
 		if (!StringUtils.IsEmpty(textId))
@@ -301,7 +302,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.EntityOverrideName = null;
 	}
 
-	// Token: 0x0601AA1B RID: 109083 RVA: 0x00729EED File Offset: 0x007280ED
+	// Token: 0x06018421 RID: 99361 RVA: 0x0074FB09 File Offset: 0x0074DD09
 	public void SetEntityEntityConditionSecondName(string textId)
 	{
 		if (!StringUtils.IsEmpty(textId))
@@ -312,7 +313,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.EntityOverrideSecondName = null;
 	}
 
-	// Token: 0x0601AA1C RID: 109084 RVA: 0x00729F06 File Offset: 0x00728106
+	// Token: 0x06018422 RID: 99362 RVA: 0x0074FB22 File Offset: 0x0074DD22
 	public void SetEntityEntityConditionFunctionPath(string textId)
 	{
 		if (!StringUtils.IsEmpty(textId))
@@ -323,7 +324,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.EntityOverrideFunctionIcon = null;
 	}
 
-	// Token: 0x0601AA1D RID: 109085 RVA: 0x00729F20 File Offset: 0x00728120
+	// Token: 0x06018423 RID: 99363 RVA: 0x0074FB3C File Offset: 0x0074DD3C
 	public void SetMovementByProtocol(MovementInformation data)
 	{
 		if (this.MovementInfo == null)
@@ -339,67 +340,67 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.MovementInfo.MovementMode = data.MovementMode;
 	}
 
-	// Token: 0x0601AA1E RID: 109086 RVA: 0x00729FB9 File Offset: 0x007281B9
+	// Token: 0x06018424 RID: 99364 RVA: 0x0074FBD5 File Offset: 0x0074DDD5
 	public void SetCreatureDataId(long value)
 	{
 		this.CreatureDataId = value;
 	}
 
-	// Token: 0x0601AA1F RID: 109087 RVA: 0x00729FC2 File Offset: 0x007281C2
+	// Token: 0x06018425 RID: 99365 RVA: 0x0074FBDE File Offset: 0x0074DDDE
 	public long GetCreatureDataId()
 	{
 		return this.CreatureDataId;
 	}
 
-	// Token: 0x0601AA20 RID: 109088 RVA: 0x00729FCA File Offset: 0x007281CA
+	// Token: 0x06018426 RID: 99366 RVA: 0x0074FBE6 File Offset: 0x0074DDE6
 	public int GetPlayerId()
 	{
 		return this.PlayerId;
 	}
 
-	// Token: 0x0601AA21 RID: 109089 RVA: 0x00729FD2 File Offset: 0x007281D2
+	// Token: 0x06018427 RID: 99367 RVA: 0x0074FBEE File Offset: 0x0074DDEE
 	public void SetPlayerId(int playerId)
 	{
 		this.PlayerId = playerId;
 	}
 
-	// Token: 0x0601AA22 RID: 109090 RVA: 0x00729FDB File Offset: 0x007281DB
+	// Token: 0x06018428 RID: 99368 RVA: 0x0074FBF7 File Offset: 0x0074DDF7
 	public long GetOwnerId()
 	{
 		return this.OwnerIncId;
 	}
 
-	// Token: 0x0601AA23 RID: 109091 RVA: 0x00729FE3 File Offset: 0x007281E3
+	// Token: 0x06018429 RID: 99369 RVA: 0x0074FBFF File Offset: 0x0074DDFF
 	public long GetOwnerIncId()
 	{
 		return this.OwnerIncId;
 	}
 
-	// Token: 0x0601AA24 RID: 109092 RVA: 0x00729FEB File Offset: 0x007281EB
+	// Token: 0x0601842A RID: 99370 RVA: 0x0074FC07 File Offset: 0x0074DE07
 	public void SetOwnerIncId(long ownerIncId)
 	{
 		this.OwnerIncId = ownerIncId;
 	}
 
-	// Token: 0x0601AA25 RID: 109093 RVA: 0x00729FF4 File Offset: 0x007281F4
+	// Token: 0x0601842B RID: 99371 RVA: 0x0074FC10 File Offset: 0x0074DE10
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x0601AA26 RID: 109094 RVA: 0x00729FFC File Offset: 0x007281FC
+	// Token: 0x0601842C RID: 99372 RVA: 0x0074FC18 File Offset: 0x0074DE18
 	public void SetRoleId(int roleId)
 	{
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x0601AA27 RID: 109095 RVA: 0x0072A005 File Offset: 0x00728205
+	// Token: 0x0601842D RID: 99373 RVA: 0x0074FC21 File Offset: 0x0074DE21
 	public bool GetTrackingIsEnable()
 	{
 		return this.IsEnableTracking;
 	}
 
-	// Token: 0x0601AA28 RID: 109096 RVA: 0x0072A010 File Offset: 0x00728210
+	// Token: 0x0601842E RID: 99374 RVA: 0x0074FC2C File Offset: 0x0074DE2C
 	public unsafe AkiClient.Game.Aki.Character.BaseCharacter.ECamp GetEntityCamp()
 	{
 		if (this.ServerCamp != null)
@@ -427,7 +428,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return AkiClient.Game.Aki.Character.BaseCharacter.ECamp.Player;
 	}
 
-	// Token: 0x0601AA29 RID: 109097 RVA: 0x0072A0F5 File Offset: 0x007282F5
+	// Token: 0x0601842F RID: 99375 RVA: 0x0074FD11 File Offset: 0x0074DF11
 	public RoleInfo? GetRoleConfig()
 	{
 		if (this.RoleInfo != null)
@@ -438,7 +439,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.RoleInfo;
 	}
 
-	// Token: 0x0601AA2A RID: 109098 RVA: 0x0072A127 File Offset: 0x00728327
+	// Token: 0x06018430 RID: 99376 RVA: 0x0074FD43 File Offset: 0x0074DF43
 	public AutoRole? GetAutoRoleConfig()
 	{
 		if (this.AutoRoleConfig != null)
@@ -449,115 +450,115 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.AutoRoleConfig;
 	}
 
-	// Token: 0x0601AA2B RID: 109099 RVA: 0x0072A159 File Offset: 0x00728359
+	// Token: 0x06018431 RID: 99377 RVA: 0x0074FD75 File Offset: 0x0074DF75
 	public int GetSkinModelId()
 	{
 		return this.SkinModelId;
 	}
 
-	// Token: 0x0601AA2C RID: 109100 RVA: 0x0072A161 File Offset: 0x00728361
+	// Token: 0x06018432 RID: 99378 RVA: 0x0074FD7D File Offset: 0x0074DF7D
 	public int GetSkinId()
 	{
 		return this.SkinId;
 	}
 
-	// Token: 0x0601AA2D RID: 109101 RVA: 0x0072A169 File Offset: 0x00728369
+	// Token: 0x06018433 RID: 99379 RVA: 0x0074FD85 File Offset: 0x0074DF85
 	public int GetParaglidingSkinId()
 	{
 		return this.ParaglidingSkinId;
 	}
 
-	// Token: 0x0601AA2E RID: 109102 RVA: 0x0072A171 File Offset: 0x00728371
+	// Token: 0x06018434 RID: 99380 RVA: 0x0074FD8D File Offset: 0x0074DF8D
 	public void SetParaglidingSkinId(int key)
 	{
 		this.ParaglidingSkinId = key;
 	}
 
-	// Token: 0x0601AA2F RID: 109103 RVA: 0x0072A17A File Offset: 0x0072837A
+	// Token: 0x06018435 RID: 99381 RVA: 0x0074FD96 File Offset: 0x0074DF96
 	public int GetSoarWingSkinId()
 	{
 		return this.SoarWingSkinId;
 	}
 
-	// Token: 0x0601AA30 RID: 109104 RVA: 0x0072A182 File Offset: 0x00728382
+	// Token: 0x06018436 RID: 99382 RVA: 0x0074FD9E File Offset: 0x0074DF9E
 	public void SetSoarWingSkinId(int key)
 	{
 		this.SoarWingSkinId = key;
 	}
 
-	// Token: 0x0601AA31 RID: 109105 RVA: 0x0072A18B File Offset: 0x0072838B
-	public Aki.Protocol.EEntityType GetEntityType()
+	// Token: 0x06018437 RID: 99383 RVA: 0x0074FDA7 File Offset: 0x0074DFA7
+	public EEntityType GetEntityType()
 	{
 		return this.EntityType;
 	}
 
-	// Token: 0x0601AA32 RID: 109106 RVA: 0x0072A193 File Offset: 0x00728393
+	// Token: 0x06018438 RID: 99384 RVA: 0x0074FDAF File Offset: 0x0074DFAF
 	public bool IsRole()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Player;
+		return this.EntityType == EEntityType.Player;
 	}
 
-	// Token: 0x0601AA33 RID: 109107 RVA: 0x0072A19E File Offset: 0x0072839E
+	// Token: 0x06018439 RID: 99385 RVA: 0x0074FDBA File Offset: 0x0074DFBA
 	public bool IsAutoRole()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Player && this.IsAutoRoleInternal;
+		return this.EntityType == EEntityType.Player && this.IsAutoRoleInternal;
 	}
 
-	// Token: 0x0601AA34 RID: 109108 RVA: 0x0072A1B0 File Offset: 0x007283B0
+	// Token: 0x0601843A RID: 99386 RVA: 0x0074FDCC File Offset: 0x0074DFCC
 	public bool IsPlayer()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.PlayerEntity;
+		return this.EntityType == EEntityType.PlayerEntity;
 	}
 
-	// Token: 0x0601AA35 RID: 109109 RVA: 0x0072A1BC File Offset: 0x007283BC
+	// Token: 0x0601843B RID: 99387 RVA: 0x0074FDD8 File Offset: 0x0074DFD8
 	public bool IsMonster()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Monster;
+		return this.EntityType == EEntityType.Monster;
 	}
 
-	// Token: 0x0601AA36 RID: 109110 RVA: 0x0072A1C7 File Offset: 0x007283C7
+	// Token: 0x0601843C RID: 99388 RVA: 0x0074FDE3 File Offset: 0x0074DFE3
 	public bool IsNpc()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Npc;
+		return this.EntityType == EEntityType.Npc;
 	}
 
-	// Token: 0x0601AA37 RID: 109111 RVA: 0x0072A1D2 File Offset: 0x007283D2
+	// Token: 0x0601843D RID: 99389 RVA: 0x0074FDEE File Offset: 0x0074DFEE
 	public bool IsVision()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Vision;
+		return this.EntityType == EEntityType.Vision;
 	}
 
-	// Token: 0x0601AA38 RID: 109112 RVA: 0x0072A1DD File Offset: 0x007283DD
+	// Token: 0x0601843E RID: 99390 RVA: 0x0074FDF9 File Offset: 0x0074DFF9
 	public bool IsSceneItem()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.SceneItem;
+		return this.EntityType == EEntityType.SceneItem;
 	}
 
-	// Token: 0x0601AA39 RID: 109113 RVA: 0x0072A1E8 File Offset: 0x007283E8
+	// Token: 0x0601843F RID: 99391 RVA: 0x0074FE04 File Offset: 0x0074E004
 	public bool IsAnimal()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Animal;
+		return this.EntityType == EEntityType.Animal;
 	}
 
-	// Token: 0x0601AA3A RID: 109114 RVA: 0x0072A1F3 File Offset: 0x007283F3
+	// Token: 0x06018440 RID: 99392 RVA: 0x0074FE0F File Offset: 0x0074E00F
 	public bool IsCustom()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Custom;
+		return this.EntityType == EEntityType.Custom;
 	}
 
-	// Token: 0x0601AA3B RID: 109115 RVA: 0x0072A1FE File Offset: 0x007283FE
+	// Token: 0x06018441 RID: 99393 RVA: 0x0074FE1A File Offset: 0x0074E01A
 	public bool IsCharacter()
 	{
 		return this.IsRole() || this.IsMonster() || this.IsNpc() || this.IsVision() || this.IsAnimal();
 	}
 
-	// Token: 0x0601AA3C RID: 109116 RVA: 0x0072A228 File Offset: 0x00728428
+	// Token: 0x06018442 RID: 99394 RVA: 0x0074FE44 File Offset: 0x0074E044
 	public bool IsVehicle()
 	{
-		return this.EntityType == Aki.Protocol.EEntityType.Vehicle;
+		return this.EntityType == EEntityType.Vehicle;
 	}
 
-	// Token: 0x0601AA3D RID: 109117 RVA: 0x0072A234 File Offset: 0x00728434
+	// Token: 0x06018443 RID: 99395 RVA: 0x0074FE50 File Offset: 0x0074E050
 	public bool IsScanTreasureBox()
 	{
 		IBlueprintItem pbModelConfig = this.GetPbModelConfig();
@@ -565,149 +566,149 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return eentity.GetValueOrDefault() == EEntity.TreasureBox || eentity.GetValueOrDefault() == EEntity.HookTreasureBox;
 	}
 
-	// Token: 0x0601AA3E RID: 109118 RVA: 0x0072A279 File Offset: 0x00728479
+	// Token: 0x06018444 RID: 99396 RVA: 0x0074FE95 File Offset: 0x0074E095
 	public int GetSubEntityType()
 	{
 		return this.SubEntityType;
 	}
 
-	// Token: 0x0601AA3F RID: 109119 RVA: 0x0072A281 File Offset: 0x00728481
-	public void SetEntityType(Aki.Protocol.EEntityType entityType)
+	// Token: 0x06018445 RID: 99397 RVA: 0x0074FE9D File Offset: 0x0074E09D
+	public void SetEntityType(EEntityType entityType)
 	{
 		this.EntityType = entityType;
 	}
 
-	// Token: 0x0601AA40 RID: 109120 RVA: 0x0072A28A File Offset: 0x0072848A
+	// Token: 0x06018446 RID: 99398 RVA: 0x0074FEA6 File Offset: 0x0074E0A6
 	public void SetSubEntityType(int subEntityType)
 	{
 		this.SubEntityType = subEntityType;
 	}
 
-	// Token: 0x0601AA41 RID: 109121 RVA: 0x0072A293 File Offset: 0x00728493
+	// Token: 0x06018447 RID: 99399 RVA: 0x0074FEAF File Offset: 0x0074E0AF
 	public EntityConfigType GetEntityConfigType()
 	{
 		return this.EntityConfigType;
 	}
 
-	// Token: 0x0601AA42 RID: 109122 RVA: 0x0072A29B File Offset: 0x0072849B
+	// Token: 0x06018448 RID: 99400 RVA: 0x0074FEB7 File Offset: 0x0074E0B7
 	public void SetEntityConfigType(EntityConfigType entityConfigType)
 	{
 		this.EntityConfigType = entityConfigType;
 	}
 
-	// Token: 0x0601AA43 RID: 109123 RVA: 0x0072A2A4 File Offset: 0x007284A4
+	// Token: 0x06018449 RID: 99401 RVA: 0x0074FEC0 File Offset: 0x0074E0C0
 	public int GetLife()
 	{
 		return 0;
 	}
 
-	// Token: 0x0601AA44 RID: 109124 RVA: 0x0072A2A7 File Offset: 0x007284A7
+	// Token: 0x0601844A RID: 99402 RVA: 0x0074FEC3 File Offset: 0x0074E0C3
 	public int GetMaxLife()
 	{
 		return 0;
 	}
 
-	// Token: 0x0601AA45 RID: 109125 RVA: 0x0072A2AA File Offset: 0x007284AA
+	// Token: 0x0601844B RID: 99403 RVA: 0x0074FEC6 File Offset: 0x0074E0C6
 	public int GetHardnessModeId()
 	{
 		return this.HardnessModeId;
 	}
 
-	// Token: 0x0601AA46 RID: 109126 RVA: 0x0072A2B2 File Offset: 0x007284B2
+	// Token: 0x0601844C RID: 99404 RVA: 0x0074FECE File Offset: 0x0074E0CE
 	public void SetAiWeaponId(int aiWeaponId)
 	{
 		this.AiWeaponId = aiWeaponId;
 	}
 
-	// Token: 0x0601AA47 RID: 109127 RVA: 0x0072A2BB File Offset: 0x007284BB
+	// Token: 0x0601844D RID: 99405 RVA: 0x0074FED7 File Offset: 0x0074E0D7
 	public int GetAiWeaponId()
 	{
 		return this.AiWeaponId;
 	}
 
-	// Token: 0x0601AA48 RID: 109128 RVA: 0x0072A2C3 File Offset: 0x007284C3
+	// Token: 0x0601844E RID: 99406 RVA: 0x0074FEDF File Offset: 0x0074E0DF
 	public void SetDurabilityValue(int durabilityValue)
 	{
 		this.DurabilityValue = durabilityValue;
 		EventSystem.Instance.EmitWithTarget<int>(base.Entity, EEventName.OnSceneItemDurabilityChange, durabilityValue);
 	}
 
-	// Token: 0x0601AA49 RID: 109129 RVA: 0x0072A2E3 File Offset: 0x007284E3
+	// Token: 0x0601844F RID: 99407 RVA: 0x0074FEFF File Offset: 0x0074E0FF
 	public int GetDurabilityValue()
 	{
 		return this.DurabilityValue;
 	}
 
-	// Token: 0x0601AA4A RID: 109130 RVA: 0x0072A2EB File Offset: 0x007284EB
+	// Token: 0x06018450 RID: 99408 RVA: 0x0074FF07 File Offset: 0x0074E107
 	public void SetHardnessModeId(int id)
 	{
 		this.HardnessModeId = id;
 	}
 
-	// Token: 0x0601AA4B RID: 109131 RVA: 0x0072A2F4 File Offset: 0x007284F4
+	// Token: 0x06018451 RID: 99409 RVA: 0x0074FF10 File Offset: 0x0074E110
 	private void SetAdviceInfo(AdviceComponentPb data)
 	{
 		this.AdviceEntityData = new AdviceEntityData();
 		this.AdviceEntityData.Phrase(data);
 	}
 
-	// Token: 0x0601AA4C RID: 109132 RVA: 0x0072A30D File Offset: 0x0072850D
+	// Token: 0x06018452 RID: 99410 RVA: 0x0074FF29 File Offset: 0x0074E129
 	[NullableContext(2)]
 	public AdviceEntityData GetAdviceInfo()
 	{
 		return this.AdviceEntityData;
 	}
 
-	// Token: 0x0601AA4D RID: 109133 RVA: 0x0072A315 File Offset: 0x00728515
+	// Token: 0x06018453 RID: 99411 RVA: 0x0074FF31 File Offset: 0x0074E131
 	public void SetSummonerId(long id)
 	{
 		this.SummonerId = id;
 	}
 
-	// Token: 0x0601AA4E RID: 109134 RVA: 0x0072A31E File Offset: 0x0072851E
+	// Token: 0x06018454 RID: 99412 RVA: 0x0074FF3A File Offset: 0x0074E13A
 	public long GetSummonerId()
 	{
 		return this.SummonerId;
 	}
 
-	// Token: 0x0601AA4F RID: 109135 RVA: 0x0072A326 File Offset: 0x00728526
+	// Token: 0x06018455 RID: 99413 RVA: 0x0074FF42 File Offset: 0x0074E142
 	public void SetSummonerPlayerId(int id)
 	{
 		this.SummonerPlayerId = id;
 	}
 
-	// Token: 0x0601AA50 RID: 109136 RVA: 0x0072A32F File Offset: 0x0072852F
+	// Token: 0x06018456 RID: 99414 RVA: 0x0074FF4B File Offset: 0x0074E14B
 	public int GetSummonerPlayerId()
 	{
 		return this.SummonerPlayerId;
 	}
 
-	// Token: 0x0601AA51 RID: 109137 RVA: 0x0072A337 File Offset: 0x00728537
+	// Token: 0x06018457 RID: 99415 RVA: 0x0074FF53 File Offset: 0x0074E153
 	public void SetSummonsVersion(int version)
 	{
 		this.SummonsVersion = version;
 	}
 
-	// Token: 0x0601AA52 RID: 109138 RVA: 0x0072A340 File Offset: 0x00728540
+	// Token: 0x06018458 RID: 99416 RVA: 0x0074FF5C File Offset: 0x0074E15C
 	public int GetSummonsVersion()
 	{
 		return this.SummonsVersion;
 	}
 
-	// Token: 0x0601AA53 RID: 109139 RVA: 0x0072A348 File Offset: 0x00728548
+	// Token: 0x06018459 RID: 99417 RVA: 0x0074FF64 File Offset: 0x0074E164
 	[NullableContext(2)]
 	public MovementInformation GetMovementInfo()
 	{
 		return this.MovementInfo;
 	}
 
-	// Token: 0x0601AA54 RID: 109140 RVA: 0x0072A350 File Offset: 0x00728550
+	// Token: 0x0601845A RID: 99418 RVA: 0x0074FF6C File Offset: 0x0074E16C
 	public void SetMovementInfo(MovementInformation movementInfo)
 	{
 		this.MovementInfo = movementInfo;
 	}
 
-	// Token: 0x0601AA55 RID: 109141 RVA: 0x0072A35C File Offset: 0x0072855C
+	// Token: 0x0601845B RID: 99419 RVA: 0x0074FF78 File Offset: 0x0074E178
 	public FVectorDouble GetPbLocation()
 	{
 		MovementInformation movementInfo = this.MovementInfo;
@@ -722,7 +723,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return global::Vector.ZeroVectorDouble;
 	}
 
-	// Token: 0x0601AA56 RID: 109142 RVA: 0x0072A3B0 File Offset: 0x007285B0
+	// Token: 0x0601845C RID: 99420 RVA: 0x0074FFCC File Offset: 0x0074E1CC
 	public unsafe FVectorDouble GetLocation()
 	{
 		if (this.IsSnap)
@@ -744,7 +745,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.GetPbLocation();
 	}
 
-	// Token: 0x0601AA57 RID: 109143 RVA: 0x0072A440 File Offset: 0x00728640
+	// Token: 0x0601845D RID: 99421 RVA: 0x0075005C File Offset: 0x0074E25C
 	private FVectorDouble? TraceIkGroundOnGravityDirection()
 	{
 		UTraceSphereElement traceTypeElement = TraceElementModel.Instance.GetTraceTypeElement<UTraceSphereElement>(KuroTraceTypeQuery.IkGround, GlobalData.World, true, true);
@@ -770,7 +771,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AA58 RID: 109144 RVA: 0x0072A57C File Offset: 0x0072877C
+	// Token: 0x0601845E RID: 99422 RVA: 0x00750198 File Offset: 0x0074E398
 	private FVectorDouble? TraceKuroWaterOnGravityDirection()
 	{
 		UTraceLineElement traceTypeElement = TraceElementModel.Instance.GetTraceTypeElement<UTraceLineElement>(KuroTraceTypeQuery.Water, GlobalData.World, true, true);
@@ -796,7 +797,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AA59 RID: 109145 RVA: 0x0072A6C8 File Offset: 0x007288C8
+	// Token: 0x0601845F RID: 99423 RVA: 0x007502E4 File Offset: 0x0074E4E4
 	public FVectorDouble? D_GetLocationIsSnap()
 	{
 		Func<FVectorDouble?>[] array = new Func<FVectorDouble?>[]
@@ -815,7 +816,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AA5A RID: 109146 RVA: 0x0072A728 File Offset: 0x00728928
+	// Token: 0x06018460 RID: 99424 RVA: 0x00750344 File Offset: 0x0074E544
 	public void SetLocation(Aki.Protocol.Vector location)
 	{
 		if (this.MovementInfo == null)
@@ -833,7 +834,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.ServerStartLocationInternal = global::Vector.Create((double)location2.X, (double)location2.Y, (double)location2.Z);
 	}
 
-	// Token: 0x0601AA5B RID: 109147 RVA: 0x0072A7D4 File Offset: 0x007289D4
+	// Token: 0x06018461 RID: 99425 RVA: 0x007503F0 File Offset: 0x0074E5F0
 	public FRotator GetRotation()
 	{
 		MovementInformation movementInfo = this.MovementInfo;
@@ -848,7 +849,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return new FRotator(0f, 0f, 0f);
 	}
 
-	// Token: 0x0601AA5C RID: 109148 RVA: 0x0072A834 File Offset: 0x00728A34
+	// Token: 0x06018462 RID: 99426 RVA: 0x00750450 File Offset: 0x0074E650
 	public void SetRotation(Aki.Protocol.Rotator rotator)
 	{
 		if (this.MovementInfo == null)
@@ -864,7 +865,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.MovementInfo.Rotation.Yaw = rotator.Yaw;
 	}
 
-	// Token: 0x0601AA5D RID: 109149 RVA: 0x0072A8B4 File Offset: 0x00728AB4
+	// Token: 0x06018463 RID: 99427 RVA: 0x007504D0 File Offset: 0x0074E6D0
 	public FTransformDouble D_GetTransform()
 	{
 		FVectorDouble location = this.GetLocation();
@@ -872,14 +873,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return UKismetMathLibrary.MakeTransformDouble(location, rotation, global::Vector.OneVector);
 	}
 
-	// Token: 0x0601AA5E RID: 109150 RVA: 0x0072A8D9 File Offset: 0x00728AD9
+	// Token: 0x06018464 RID: 99428 RVA: 0x007504F5 File Offset: 0x0074E6F5
 	[NullableContext(2)]
 	public BlackboardMap GetBlackboard()
 	{
 		return this.Blackboard;
 	}
 
-	// Token: 0x0601AA5F RID: 109151 RVA: 0x0072A8E4 File Offset: 0x00728AE4
+	// Token: 0x06018465 RID: 99429 RVA: 0x00750500 File Offset: 0x0074E700
 	public void SetBlackboardsByProtocol([Nullable(new byte[]
 	{
 		2,
@@ -896,7 +897,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA60 RID: 109152 RVA: 0x0072A930 File Offset: 0x00728B30
+	// Token: 0x06018466 RID: 99430 RVA: 0x0075054C File Offset: 0x0074E74C
 	[NullableContext(2)]
 	public void SetBlackboardByProtocol(BlackboardParam blackboard)
 	{
@@ -911,7 +912,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA61 RID: 109153 RVA: 0x0072A960 File Offset: 0x00728B60
+	// Token: 0x06018467 RID: 99431 RVA: 0x0075057C File Offset: 0x0074E77C
 	public void SetBlackboardsByConfig(IBlackBoard[] blackboards)
 	{
 		if (blackboards == null)
@@ -928,14 +929,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA62 RID: 109154 RVA: 0x0072A99F File Offset: 0x00728B9F
+	// Token: 0x06018468 RID: 99432 RVA: 0x007505BB File Offset: 0x0074E7BB
 	[return: Nullable(2)]
 	public BlackboardMap.BlackboardParam GetBlackboardByKey(string key)
 	{
 		return this.Blackboard.GetValue(key);
 	}
 
-	// Token: 0x0601AA63 RID: 109155 RVA: 0x0072A9AD File Offset: 0x00728BAD
+	// Token: 0x06018469 RID: 99433 RVA: 0x007505C9 File Offset: 0x0074E7C9
 	public void SetBlackboard(string key, [Nullable(2)] BlackboardMap.BlackboardParam blackboard)
 	{
 		if (blackboard == null)
@@ -945,13 +946,13 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.Blackboard.SetValue(key, blackboard);
 	}
 
-	// Token: 0x0601AA64 RID: 109156 RVA: 0x0072A9C0 File Offset: 0x00728BC0
+	// Token: 0x0601846A RID: 99434 RVA: 0x007505DC File Offset: 0x0074E7DC
 	public bool RemoveBlackboard(string key)
 	{
 		return this.Blackboard.RemoveValue(key);
 	}
 
-	// Token: 0x0601AA65 RID: 109157 RVA: 0x0072A9CE File Offset: 0x00728BCE
+	// Token: 0x0601846B RID: 99435 RVA: 0x007505EA File Offset: 0x0074E7EA
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -962,7 +963,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.PublicTags;
 	}
 
-	// Token: 0x0601AA66 RID: 109158 RVA: 0x0072A9D8 File Offset: 0x00728BD8
+	// Token: 0x0601846C RID: 99436 RVA: 0x007505F4 File Offset: 0x0074E7F4
 	public void SetPublicTags(List<string> tags)
 	{
 		this.PublicTags.Clear();
@@ -976,7 +977,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA67 RID: 109159 RVA: 0x0072AA4C File Offset: 0x00728C4C
+	// Token: 0x0601846D RID: 99437 RVA: 0x00750668 File Offset: 0x0074E868
 	public void AddPublicTags(string tag)
 	{
 		if (this.ContainsPublicTag(tag))
@@ -990,7 +991,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA68 RID: 109160 RVA: 0x0072AA80 File Offset: 0x00728C80
+	// Token: 0x0601846E RID: 99438 RVA: 0x0075069C File Offset: 0x0074E89C
 	public bool RemovePublicTag(string tag)
 	{
 		for (int i = 0; i < this.PublicTags.Count; i++)
@@ -1005,13 +1006,13 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601AA69 RID: 109161 RVA: 0x0072AAD3 File Offset: 0x00728CD3
+	// Token: 0x0601846F RID: 99439 RVA: 0x007506EF File Offset: 0x0074E8EF
 	public void ClearPublicTags()
 	{
 		this.PublicTags.Clear();
 	}
 
-	// Token: 0x0601AA6A RID: 109162 RVA: 0x0072AAE0 File Offset: 0x00728CE0
+	// Token: 0x06018470 RID: 99440 RVA: 0x007506FC File Offset: 0x0074E8FC
 	public bool ContainsPublicTag(string tag)
 	{
 		using (List<string>.Enumerator enumerator = this.PublicTags.GetEnumerator())
@@ -1027,84 +1028,74 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601AA6B RID: 109163 RVA: 0x0072AB3C File Offset: 0x00728D3C
+	// Token: 0x06018471 RID: 99441 RVA: 0x00750758 File Offset: 0x0074E958
 	public bool ContainsTag(string tag)
 	{
 		return this.Tags.Contains(tag);
 	}
 
-	// Token: 0x0601AA6C RID: 109164 RVA: 0x0072AB4A File Offset: 0x00728D4A
+	// Token: 0x06018472 RID: 99442 RVA: 0x00750766 File Offset: 0x0074E966
 	public bool GetVisible()
 	{
 		return (this.PlotPlayerId == null || !this.IsPlotControl) && this.Visible;
 	}
 
-	// Token: 0x0601AA6D RID: 109165 RVA: 0x0072AB69 File Offset: 0x00728D69
+	// Token: 0x06018473 RID: 99443 RVA: 0x00750785 File Offset: 0x0074E985
 	public void SetVisible(bool visible)
 	{
 		this.Visible = visible;
-		if (visible)
-		{
-			this.DisableByServer = false;
-		}
 	}
 
-	// Token: 0x0601AA6E RID: 109166 RVA: 0x0072AB7C File Offset: 0x00728D7C
-	public bool IsDisableByServer()
-	{
-		return this.DisableByServer;
-	}
-
-	// Token: 0x0601AA6F RID: 109167 RVA: 0x0072AB84 File Offset: 0x00728D84
+	// Token: 0x06018474 RID: 99444 RVA: 0x0075078E File Offset: 0x0074E98E
 	public BigInteger GetComponentKey()
 	{
 		return this.ComponentKey;
 	}
 
-	// Token: 0x0601AA70 RID: 109168 RVA: 0x0072AB8C File Offset: 0x00728D8C
+	// Token: 0x06018475 RID: 99445 RVA: 0x00750796 File Offset: 0x0074E996
 	public void SetComponentKey(BigInteger key)
 	{
 		this.ComponentKey = key;
 	}
 
-	// Token: 0x0601AA71 RID: 109169 RVA: 0x0072AB95 File Offset: 0x00728D95
+	// Token: 0x06018476 RID: 99446 RVA: 0x0075079F File Offset: 0x0074E99F
 	public bool GetIsStaticInit()
 	{
 		return this.IsStaticInit;
 	}
 
-	// Token: 0x0601AA72 RID: 109170 RVA: 0x0072AB9D File Offset: 0x00728D9D
+	// Token: 0x06018477 RID: 99447 RVA: 0x007507A7 File Offset: 0x0074E9A7
 	public void SetWeaponSkinId(int skinId)
 	{
 		this.WeaponSkinId = skinId;
 	}
 
-	// Token: 0x0601AA73 RID: 109171 RVA: 0x0072ABA6 File Offset: 0x00728DA6
+	// Token: 0x06018478 RID: 99448 RVA: 0x007507B0 File Offset: 0x0074E9B0
 	public int GetWeaponSkinId()
 	{
 		return this.WeaponSkinId;
 	}
 
-	// Token: 0x0601AA74 RID: 109172 RVA: 0x0072ABAE File Offset: 0x00728DAE
+	// Token: 0x06018479 RID: 99449 RVA: 0x007507B8 File Offset: 0x0074E9B8
 	public List<int> GetOrnamentIds()
 	{
 		return this.OrnamentIds;
 	}
 
-	// Token: 0x0601AA75 RID: 109173 RVA: 0x0072ABB6 File Offset: 0x00728DB6
+	// Token: 0x0601847A RID: 99450 RVA: 0x007507C0 File Offset: 0x0074E9C0
 	public void SetOrnamentIds(List<int> ornamentIds)
 	{
 		this.OrnamentIds = ornamentIds;
 	}
 
-	// Token: 0x0601AA76 RID: 109174 RVA: 0x0072ABBF File Offset: 0x00728DBF
+	// Token: 0x0601847B RID: 99451 RVA: 0x007507C9 File Offset: 0x0074E9C9
 	public void SetIsStaticInit(bool value)
 	{
 		this.IsStaticInit = value;
 	}
 
-	// Token: 0x0601AA77 RID: 109175 RVA: 0x0072ABC8 File Offset: 0x00728DC8
-	public void SetEntityCommonTags(List<int> tags)
+	// Token: 0x0601847C RID: 99452 RVA: 0x007507D4 File Offset: 0x0074E9D4
+	public void SetEntityCommonTags(IEnumerable<int> tags)
 	{
 		this.EntityCommonTags.Clear();
 		foreach (int item in tags)
@@ -1113,7 +1104,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA78 RID: 109176 RVA: 0x0072AC28 File Offset: 0x00728E28
+	// Token: 0x0601847D RID: 99453 RVA: 0x00750830 File Offset: 0x0074EA30
 	public void UpdateEntityCommonTags(IList<CommonTagData> tagsChanged)
 	{
 		if (tagsChanged.Count == 0)
@@ -1136,7 +1127,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA79 RID: 109177 RVA: 0x0072ACBC File Offset: 0x00728EBC
+	// Token: 0x0601847E RID: 99454 RVA: 0x007508C4 File Offset: 0x0074EAC4
 	public void SetModelConfig(int modelConfigId)
 	{
 		if (this.ModelConfigId == modelConfigId)
@@ -1158,10 +1149,10 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.ModelConfig = dataTableRowFromName;
 	}
 
-	// Token: 0x0601AA7A RID: 109178 RVA: 0x0072AD24 File Offset: 0x00728F24
+	// Token: 0x0601847F RID: 99455 RVA: 0x0075092C File Offset: 0x0074EB2C
 	public unsafe int GetModelId()
 	{
-		if (this.GetEntityType() == Aki.Protocol.EEntityType.Player)
+		if (this.GetEntityType() == EEntityType.Player)
 		{
 			if (this.IsAutoRoleInternal)
 			{
@@ -1215,7 +1206,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA7B RID: 109179 RVA: 0x0072AEAC File Offset: 0x007290AC
+	// Token: 0x06018480 RID: 99456 RVA: 0x00750AB4 File Offset: 0x0074ECB4
 	public SModelConfig GetModelConfig()
 	{
 		if (this.ModelConfig != null)
@@ -1238,7 +1229,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.ModelConfig;
 	}
 
-	// Token: 0x0601AA7C RID: 109180 RVA: 0x0072AF1C File Offset: 0x0072911C
+	// Token: 0x06018481 RID: 99457 RVA: 0x00750B24 File Offset: 0x0074ED24
 	private void ParseModelComponentConifg(IModelConfig config)
 	{
 		switch (config.Type)
@@ -1354,7 +1345,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA7D RID: 109181 RVA: 0x0072B39C File Offset: 0x0072959C
+	// Token: 0x06018482 RID: 99458 RVA: 0x00750FA4 File Offset: 0x0074F1A4
 	[NullableContext(2)]
 	public unsafe SEntityProperty GetEntityPropertyConfig()
 	{
@@ -1363,7 +1354,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			return this.CreatureProperty;
 		}
 		string text = "";
-		if (this.EntityType == Aki.Protocol.EEntityType.Player)
+		if (this.EntityType == EEntityType.Player)
 		{
 			text = this.GetRoleConfig().Value.EntityProperty.ToString();
 		}
@@ -1403,52 +1394,52 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.CreatureProperty;
 	}
 
-	// Token: 0x0601AA7E RID: 109182 RVA: 0x0072B4E7 File Offset: 0x007296E7
+	// Token: 0x06018483 RID: 99459 RVA: 0x007510EF File Offset: 0x0074F2EF
 	public bool GetRemoveState()
 	{
 		return this.RemoveState;
 	}
 
-	// Token: 0x0601AA7F RID: 109183 RVA: 0x0072B4EF File Offset: 0x007296EF
+	// Token: 0x06018484 RID: 99460 RVA: 0x007510F7 File Offset: 0x0074F2F7
 	public void SetRemoveState(bool value)
 	{
 		this.RemoveState = value;
 	}
 
-	// Token: 0x0601AA80 RID: 109184 RVA: 0x0072B4F8 File Offset: 0x007296F8
+	// Token: 0x06018485 RID: 99461 RVA: 0x00751100 File Offset: 0x0074F300
 	public void SetInitLocation(Aki.Protocol.Vector location)
 	{
 		this.InitLocation = location;
 	}
 
-	// Token: 0x0601AA81 RID: 109185 RVA: 0x0072B501 File Offset: 0x00729701
+	// Token: 0x06018486 RID: 99462 RVA: 0x00751109 File Offset: 0x0074F309
 	[NullableContext(2)]
 	public Aki.Protocol.Vector GetInitLocation()
 	{
 		return this.InitLocation;
 	}
 
-	// Token: 0x0601AA82 RID: 109186 RVA: 0x0072B509 File Offset: 0x00729709
+	// Token: 0x06018487 RID: 99463 RVA: 0x00751111 File Offset: 0x0074F311
 	[NullableContext(2)]
 	public Aki.Protocol.Vector GetInitGravityDirection()
 	{
 		return this.InitGravityDirection;
 	}
 
-	// Token: 0x0601AA83 RID: 109187 RVA: 0x0072B511 File Offset: 0x00729711
+	// Token: 0x06018488 RID: 99464 RVA: 0x00751119 File Offset: 0x0074F319
 	[NullableContext(2)]
 	public Aki.Protocol.Vector GetInitLinearVelocity()
 	{
 		return this.InitLinearVelocity;
 	}
 
-	// Token: 0x0601AA84 RID: 109188 RVA: 0x0072B519 File Offset: 0x00729719
+	// Token: 0x06018489 RID: 99465 RVA: 0x00751121 File Offset: 0x0074F321
 	public ECharacterState GetInitCharacterState()
 	{
 		return this.InitCharacterState;
 	}
 
-	// Token: 0x0601AA85 RID: 109189 RVA: 0x0072B524 File Offset: 0x00729724
+	// Token: 0x0601848A RID: 99466 RVA: 0x0075112C File Offset: 0x0074F32C
 	public void Reset()
 	{
 		this.ClearPublicTags();
@@ -1457,29 +1448,29 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.SetPlayerId(0);
 		this.SetVisible(false);
 		this.Blackboard.Clear();
-		this.EntityType = Aki.Protocol.EEntityType.Player;
+		this.EntityType = EEntityType.Player;
 		this.ModelConfig = null;
 	}
 
-	// Token: 0x0601AA86 RID: 109190 RVA: 0x0072B570 File Offset: 0x00729770
+	// Token: 0x0601848B RID: 99467 RVA: 0x00751178 File Offset: 0x0074F378
 	public int GetPbDataId()
 	{
 		return this.PbDataId;
 	}
 
-	// Token: 0x0601AA87 RID: 109191 RVA: 0x0072B578 File Offset: 0x00729778
+	// Token: 0x0601848C RID: 99468 RVA: 0x00751180 File Offset: 0x0074F380
 	public void SetPrefabId(int value)
 	{
 		this.PrefabId = value;
 	}
 
-	// Token: 0x0601AA88 RID: 109192 RVA: 0x0072B581 File Offset: 0x00729781
+	// Token: 0x0601848D RID: 99469 RVA: 0x00751189 File Offset: 0x0074F389
 	public int GetPrefabId()
 	{
 		return this.PrefabId;
 	}
 
-	// Token: 0x0601AA89 RID: 109193 RVA: 0x0072B58C File Offset: 0x0072978C
+	// Token: 0x0601848E RID: 99470 RVA: 0x00751194 File Offset: 0x0074F394
 	public EMonsterMatchType? GetMonsterMatchType()
 	{
 		if (this.PbEntityInitData == null)
@@ -1505,18 +1496,17 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return category.MonsterMatchType;
 	}
 
-	// Token: 0x0601AA8A RID: 109194 RVA: 0x0072B608 File Offset: 0x00729808
+	// Token: 0x0601848F RID: 99471 RVA: 0x00751210 File Offset: 0x0074F410
 	public unsafe bool SetPbDataByProtocol(EntityPb data)
 	{
 		this.PbDataId = data.ConfigId;
 		this.PrefabId = data.PrefabId;
 		this.IsPosAbnormalInternal = data.IsPosAbnormal;
 		this.SetOwnerIncId(data.OwnerIncId);
-		this.SetEntityType((Aki.Protocol.EEntityType)data.EntityType);
+		this.SetEntityType((EEntityType)data.EntityType);
 		this.SetSubEntityType(data.SubEntityType);
 		this.SetPlayerId(data.PlayerId);
 		this.Visible = data.IsVisible;
-		this.DisableByServer = data.ClientHiddenFlag;
 		this.LivingStatus = new LivingStatus?(data.LivingStatus);
 		this.InitGravityDirection = data.GravityDirection;
 		Aki.Protocol.Vector pos = data.Pos;
@@ -1592,7 +1582,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601AA8B RID: 109195 RVA: 0x0072B8FC File Offset: 0x00729AFC
+	// Token: 0x06018490 RID: 99472 RVA: 0x007514F8 File Offset: 0x0074F6F8
 	protected unsafe void InitSkinModelId(EntityPb entityInfo)
 	{
 		if (entityInfo.RoleSkinId > 0)
@@ -1602,7 +1592,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			this.SkinId = entityInfo.RoleSkinId;
 			return;
 		}
-		if (this.GetEntityType() == Aki.Protocol.EEntityType.Vehicle)
+		if (this.GetEntityType() == EEntityType.Vehicle)
 		{
 			BaseInfoComponent baseInfo = this.GetBaseInfo();
 			if (baseInfo != null && baseInfo.Category.VehicleType.GetValueOrDefault() == EVehicleType.Motorcycle)
@@ -1642,7 +1632,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA8C RID: 109196 RVA: 0x0072BA4C File Offset: 0x00729C4C
+	// Token: 0x06018491 RID: 99473 RVA: 0x00751648 File Offset: 0x0074F848
 	private void ParseComponents(IList<EntityComponentPb> components)
 	{
 		this.ComponentDataMap.Clear();
@@ -1656,7 +1646,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 				this.SetHardnessModeId(entityComponentPb.AttributeComponent.HardnessModeId);
 				break;
 			case EntityComponentPb.ComponentOneofCase.TagComponent:
-				this.SetEntityCommonTags(entityComponentPb.TagComponent.EntityCommonTags.ToList<int>());
+				this.SetEntityCommonTags(entityComponentPb.TagComponent.EntityCommonTags);
 				break;
 			case EntityComponentPb.ComponentOneofCase.SummonerComponent:
 				this.SetSummonerId(entityComponentPb.SummonerComponent.SummonerId);
@@ -1665,11 +1655,8 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 				this.SummonCfgId = entityComponentPb.SummonerComponent.SummonCfgId;
 				break;
 			case EntityComponentPb.ComponentOneofCase.BlackboardParamComponent:
-			{
-				RepeatedField<BlackboardParam> blackboardParams = entityComponentPb.BlackboardParamComponent.BlackboardParams;
-				this.SetBlackboardsByProtocol((blackboardParams != null) ? blackboardParams.ToList<BlackboardParam>() : null);
+				this.SetBlackboardsByProtocol(entityComponentPb.BlackboardParamComponent.BlackboardParams);
 				break;
-			}
 			case EntityComponentPb.ComponentOneofCase.NearbyTrackingComponentPb:
 				this.IsEnableTracking = entityComponentPb.NearbyTrackingComponentPb.IsEnable;
 				break;
@@ -1718,7 +1705,12 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 				{
 					this.PbInRangeEntityCreatureDataIds[i] = inRangeEntities[i];
 				}
-				this.PbInRangePlayerIds = entityComponentPb.RangeComponent.InRangePlayers.ToArray<int>();
+				RepeatedField<int> inRangePlayers = entityComponentPb.RangeComponent.InRangePlayers;
+				this.PbInRangePlayerIds = new int[inRangePlayers.Count];
+				for (int j = 0; j < inRangePlayers.Count; j++)
+				{
+					this.PbInRangePlayerIds[j] = inRangePlayers[j];
+				}
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.DynamicAttachComponentPb:
@@ -1764,8 +1756,12 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 				break;
 			case EntityComponentPb.ComponentOneofCase.SceneItemAttributeComponentPb:
 			{
-				SceneItemAttributeComponentPb sceneItemAttributeComponentPb = entityComponentPb.SceneItemAttributeComponentPb;
-				this.PbSceneItemAttributeIds = sceneItemAttributeComponentPb.AttributeIds.ToArray<int>();
+				RepeatedField<int> attributeIds = entityComponentPb.SceneItemAttributeComponentPb.AttributeIds;
+				this.PbSceneItemAttributeIds = new int[attributeIds.Count];
+				for (int k = 0; k < attributeIds.Count; k++)
+				{
+					this.PbSceneItemAttributeIds[k] = attributeIds[k];
+				}
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.PullingFoundationComponentPb:
@@ -1783,8 +1779,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			case EntityComponentPb.ComponentOneofCase.CombineEntityInfoPb:
 			{
 				CombineEntityInfoPb combineEntityInfoPb = entityComponentPb.CombineEntityInfoPb;
-				RepeatedField<CombinePartInfo> combinePartInfoList = combineEntityInfoPb.CombinePartInfoList;
-				this.PbCombinePartInfoList = ((combinePartInfoList != null) ? combinePartInfoList.ToList<CombinePartInfo>() : null);
+				this.PbCombinePartInfoList = ((combineEntityInfoPb.CombinePartInfoList != null) ? new List<CombinePartInfo>(combineEntityInfoPb.CombinePartInfoList) : null);
 				this.PbCombineTargetServerId = new long?(combineEntityInfoPb.TargetEntityId);
 				break;
 			}
@@ -1798,8 +1793,12 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			}
 			case EntityComponentPb.ComponentOneofCase.AnimalCollectComponentPb:
 			{
-				AnimalCollectComponentPb animalCollectComponentPb = entityComponentPb.AnimalCollectComponentPb;
-				this.PbAnimalInitialPartIds = animalCollectComponentPb.PartIds.ToArray<int>();
+				RepeatedField<int> partIds = entityComponentPb.AnimalCollectComponentPb.PartIds;
+				this.PbAnimalInitialPartIds = new int[partIds.Count];
+				for (int l = 0; l < partIds.Count; l++)
+				{
+					this.PbAnimalInitialPartIds[l] = partIds[l];
+				}
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.HookLockPointComponentPb:
@@ -1810,8 +1809,12 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			}
 			case EntityComponentPb.ComponentOneofCase.HackingComponentPb:
 			{
-				HackingComponentPb hackingComponentPb = entityComponentPb.HackingComponentPb;
-				this.PbHackingEntities = hackingComponentPb.EntityIds.ToArray<long>();
+				RepeatedField<long> entityIds = entityComponentPb.HackingComponentPb.EntityIds;
+				this.PbHackingEntities = new long[entityIds.Count];
+				for (int m = 0; m < entityIds.Count; m++)
+				{
+					this.PbHackingEntities[m] = entityIds[m];
+				}
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.HackTargetComponentPb:
@@ -1840,15 +1843,24 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			case EntityComponentPb.ComponentOneofCase.TemplateEntitySpawnerComponentPb:
 			{
 				TemplateEntitySpawnerComponentPb templateEntitySpawnerComponentPb = entityComponentPb.TemplateEntitySpawnerComponentPb;
-				this.SpawnedEntityInfos = templateEntitySpawnerComponentPb.CreateEntityInfos.ToList<SpawnerEntityInfo>();
+				this.SpawnedEntityInfos = new List<SpawnerEntityInfo>(templateEntitySpawnerComponentPb.CreateEntityInfos);
 				this.TemplateSpawnerType = templateEntitySpawnerComponentPb.SpawnerType;
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.TrapDefenseComponentPb:
 			{
 				TrapDefenseComponentPb trapDefenseComponentPb = entityComponentPb.TrapDefenseComponentPb;
+				this.TrapAuxiliaryConfigIds = null;
 				TrapDefenseAuxiliaryPbData auxiliaryPbData = trapDefenseComponentPb.AuxiliaryPbData;
-				this.TrapAuxiliaryConfigIds = ((auxiliaryPbData != null) ? auxiliaryPbData.ConfigIds.ToArray<int>() : null);
+				if (auxiliaryPbData != null)
+				{
+					RepeatedField<int> configIds = auxiliaryPbData.ConfigIds;
+					this.TrapAuxiliaryConfigIds = new int[configIds.Count];
+					for (int n = 0; n < configIds.Count; n++)
+					{
+						this.TrapAuxiliaryConfigIds[n] = configIds[n];
+					}
+				}
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.HoldHandComponentPb:
@@ -1922,7 +1934,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 				break;
 			}
 			case EntityComponentPb.ComponentOneofCase.FlowerPollutionComponentPb:
-				this.UnpollutedSplinePbDataIds = entityComponentPb.FlowerPollutionComponentPb.UnPollutionSpline.ToList<int>();
+				this.UnpollutedSplinePbDataIds = entityComponentPb.FlowerPollutionComponentPb.UnPollutionSpline;
 				break;
 			case EntityComponentPb.ComponentOneofCase.DollGrabMachineComponentPb:
 				this.DollGrabMachineInfo = entityComponentPb.DollGrabMachineComponentPb;
@@ -1934,14 +1946,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AA8D RID: 109197 RVA: 0x0072C450 File Offset: 0x0072A650
+	// Token: 0x06018492 RID: 99474 RVA: 0x0075212C File Offset: 0x0075032C
 	[NullableContext(2)]
 	public IEntityData GetPbEntityInitData()
 	{
 		return this.PbEntityInitData;
 	}
 
-	// Token: 0x0601AA8E RID: 109198 RVA: 0x0072C458 File Offset: 0x0072A658
+	// Token: 0x06018493 RID: 99475 RVA: 0x00752134 File Offset: 0x00750334
 	[NullableContext(2)]
 	public IBlueprintItem GetPbModelConfig()
 	{
@@ -1957,7 +1969,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.PbModelConfig;
 	}
 
-	// Token: 0x0601AA8F RID: 109199 RVA: 0x0072C494 File Offset: 0x0072A694
+	// Token: 0x06018494 RID: 99476 RVA: 0x00752170 File Offset: 0x00750370
 	[NullableContext(2)]
 	public void UpdateRewardState(EntityRewardItemPb info)
 	{
@@ -1969,61 +1981,61 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		this.LastRewardTime = info.NextResetTime;
 	}
 
-	// Token: 0x0601AA90 RID: 109200 RVA: 0x0072C4B2 File Offset: 0x0072A6B2
+	// Token: 0x06018495 RID: 99477 RVA: 0x0075218E File Offset: 0x0075038E
 	public bool GetLoading()
 	{
 		return this.Loading;
 	}
 
-	// Token: 0x0601AA91 RID: 109201 RVA: 0x0072C4BA File Offset: 0x0072A6BA
+	// Token: 0x06018496 RID: 99478 RVA: 0x00752196 File Offset: 0x00750396
 	public void SetLoading(bool value)
 	{
 		this.Loading = value;
 	}
 
-	// Token: 0x0601AA92 RID: 109202 RVA: 0x0072C4C3 File Offset: 0x0072A6C3
+	// Token: 0x06018497 RID: 99479 RVA: 0x0075219F File Offset: 0x0075039F
 	public bool GetPreloadFinished()
 	{
 		return this.PreloadFinished;
 	}
 
-	// Token: 0x0601AA93 RID: 109203 RVA: 0x0072C4CB File Offset: 0x0072A6CB
+	// Token: 0x06018498 RID: 99480 RVA: 0x007521A7 File Offset: 0x007503A7
 	public void SetPreloadFinished(bool value)
 	{
 		this.PreloadFinished = value;
 	}
 
-	// Token: 0x0601AA94 RID: 109204 RVA: 0x0072C4D4 File Offset: 0x0072A6D4
+	// Token: 0x06018499 RID: 99481 RVA: 0x007521B0 File Offset: 0x007503B0
 	public HashSet<int> GetEntityCommonTags()
 	{
 		return this.EntityCommonTags;
 	}
 
-	// Token: 0x0601AA95 RID: 109205 RVA: 0x0072C4DC File Offset: 0x0072A6DC
+	// Token: 0x0601849A RID: 99482 RVA: 0x007521B8 File Offset: 0x007503B8
 	public void SetLivingStatus(LivingStatus status)
 	{
 		this.LivingStatus = new LivingStatus?(status);
 	}
 
-	// Token: 0x0601AA96 RID: 109206 RVA: 0x0072C4EA File Offset: 0x0072A6EA
+	// Token: 0x0601849B RID: 99483 RVA: 0x007521C6 File Offset: 0x007503C6
 	public LivingStatus? GetLivingStatus()
 	{
 		return this.LivingStatus;
 	}
 
-	// Token: 0x0601AA97 RID: 109207 RVA: 0x0072C4F2 File Offset: 0x0072A6F2
+	// Token: 0x0601849C RID: 99484 RVA: 0x007521CE File Offset: 0x007503CE
 	public void SetEnterComponent(EntranceState state)
 	{
 		this.EnterComponentInitState = new EntranceState?(state);
 	}
 
-	// Token: 0x0601AA98 RID: 109208 RVA: 0x0072C500 File Offset: 0x0072A700
+	// Token: 0x0601849D RID: 99485 RVA: 0x007521DC File Offset: 0x007503DC
 	public EntranceState? GetEntityEnterComponentState()
 	{
 		return this.EnterComponentInitState;
 	}
 
-	// Token: 0x0601AA99 RID: 109209 RVA: 0x0072C508 File Offset: 0x0072A708
+	// Token: 0x0601849E RID: 99486 RVA: 0x007521E4 File Offset: 0x007503E4
 	[NullableContext(2)]
 	public BaseInfoComponent GetBaseInfo()
 	{
@@ -2039,7 +2051,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.BaseConfig;
 	}
 
-	// Token: 0x0601AA9A RID: 109210 RVA: 0x0072C541 File Offset: 0x0072A741
+	// Token: 0x0601849F RID: 99487 RVA: 0x0075221D File Offset: 0x0075041D
 	[NullableContext(2)]
 	public string GetEntityTidName()
 	{
@@ -2055,21 +2067,21 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return baseInfo.TidName;
 	}
 
-	// Token: 0x0601AA9B RID: 109211 RVA: 0x0072C563 File Offset: 0x0072A763
+	// Token: 0x060184A0 RID: 99488 RVA: 0x0075223F File Offset: 0x0075043F
 	[NullableContext(2)]
 	public string GetEntitySecondName()
 	{
 		return this.EntityOverrideSecondName;
 	}
 
-	// Token: 0x0601AA9C RID: 109212 RVA: 0x0072C56B File Offset: 0x0072A76B
+	// Token: 0x060184A1 RID: 99489 RVA: 0x00752247 File Offset: 0x00750447
 	[NullableContext(2)]
 	public string GetEntityFunctionIcon()
 	{
 		return this.EntityOverrideFunctionIcon;
 	}
 
-	// Token: 0x0601AA9D RID: 109213 RVA: 0x0072C573 File Offset: 0x0072A773
+	// Token: 0x060184A2 RID: 99490 RVA: 0x0075224F File Offset: 0x0075044F
 	[NullableContext(2)]
 	public MonsterComponent GetMonsterComponent()
 	{
@@ -2080,7 +2092,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return TdUtils.GetComponent<MonsterComponent>(this.PbEntityInitData.ComponentsData, EConfigComponent.MonsterComponent);
 	}
 
-	// Token: 0x0601AA9E RID: 109214 RVA: 0x0072C591 File Offset: 0x0072A791
+	// Token: 0x060184A3 RID: 99491 RVA: 0x0075226D File Offset: 0x0075046D
 	[NullableContext(2)]
 	public AttributeComponent GetAttributeComponent()
 	{
@@ -2091,7 +2103,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return TdUtils.GetComponent<AttributeComponent>(this.PbEntityInitData.ComponentsData, EConfigComponent.AttributeComponent);
 	}
 
-	// Token: 0x0601AA9F RID: 109215 RVA: 0x0072C5AF File Offset: 0x0072A7AF
+	// Token: 0x060184A4 RID: 99492 RVA: 0x0075228B File Offset: 0x0075048B
 	[NullableContext(2)]
 	public VisionComponent GetVisionComponent()
 	{
@@ -2102,7 +2114,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return TdUtils.GetComponent<VisionComponent>(this.PbEntityInitData.ComponentsData, EConfigComponent.VisionComponent);
 	}
 
-	// Token: 0x0601AAA0 RID: 109216 RVA: 0x0072C5D0 File Offset: 0x0072A7D0
+	// Token: 0x060184A5 RID: 99493 RVA: 0x007522AC File Offset: 0x007504AC
 	public EOnlineInteractType GetEntityOnlineInteractType()
 	{
 		if (this.GetPbEntityInitData() != null)
@@ -2117,7 +2129,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return EOnlineInteractType.EveryOne;
 	}
 
-	// Token: 0x0601AAA1 RID: 109217 RVA: 0x0072C618 File Offset: 0x0072A818
+	// Token: 0x060184A6 RID: 99494 RVA: 0x007522F4 File Offset: 0x007504F4
 	public ETimeScaleModifyStrategy GetEntityTimeScaleModifyStrategy()
 	{
 		if (this.GetPbEntityInitData() != null)
@@ -2132,7 +2144,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return ETimeScaleModifyStrategy.Default;
 	}
 
-	// Token: 0x0601AAA2 RID: 109218 RVA: 0x0072C65A File Offset: 0x0072A85A
+	// Token: 0x060184A7 RID: 99495 RVA: 0x00752336 File Offset: 0x00750536
 	[NullableContext(2)]
 	public FightInteractComponent GetFightInterConfig()
 	{
@@ -2148,7 +2160,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.FightInterConfig;
 	}
 
-	// Token: 0x0601AAA3 RID: 109219 RVA: 0x0072C693 File Offset: 0x0072A893
+	// Token: 0x060184A8 RID: 99496 RVA: 0x0075236F File Offset: 0x0075056F
 	[NullableContext(2)]
 	public ModelComponent GetModelComponent()
 	{
@@ -2159,7 +2171,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return TdUtils.GetComponent<ModelComponent>(this.PbEntityInitData.ComponentsData, EConfigComponent.ModelComponent);
 	}
 
-	// Token: 0x0601AAA4 RID: 109220 RVA: 0x0072C6B4 File Offset: 0x0072A8B4
+	// Token: 0x060184A9 RID: 99497 RVA: 0x00752390 File Offset: 0x00750590
 	public void RequestPosAbnormal()
 	{
 		this.IsPosAbnormalInternal = true;
@@ -2169,17 +2181,17 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		Net.Instance.Call(ERequestMessageId.EntityPosAbnormalRequest, entityPosAbnormalRequest, null, 0);
 	}
 
-	// Token: 0x0601AAA5 RID: 109221 RVA: 0x0072C700 File Offset: 0x0072A900
+	// Token: 0x060184AA RID: 99498 RVA: 0x007523DC File Offset: 0x007505DC
 	public bool IsRealMonster()
 	{
-		bool flag = this.EntityType == Aki.Protocol.EEntityType.Monster;
+		bool flag = this.EntityType == EEntityType.Monster;
 		bool flag2 = this.GetMonsterComponent() == null;
 		MonsterComponent monsterComponent = this.GetMonsterComponent();
 		bool flag3 = monsterComponent != null && monsterComponent.FightConfigId == 0;
 		return flag && !flag2 && !flag3;
 	}
 
-	// Token: 0x0601AAA6 RID: 109222 RVA: 0x0072C744 File Offset: 0x0072A944
+	// Token: 0x060184AB RID: 99499 RVA: 0x00752420 File Offset: 0x00750620
 	public bool IsCharacterMonster()
 	{
 		if (this.IsCharacterMonsterInternal != null)
@@ -2212,7 +2224,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.IsCharacterMonsterInternal.Value;
 	}
 
-	// Token: 0x0601AAA7 RID: 109223 RVA: 0x0072C818 File Offset: 0x0072AA18
+	// Token: 0x060184AC RID: 99500 RVA: 0x007524F4 File Offset: 0x007506F4
 	public bool IsSummonByCharacterMonster()
 	{
 		if (this.IsSummonByCharacterMonsterInternal != null)
@@ -2235,26 +2247,26 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return this.IsSummonByCharacterMonsterInternal.Value;
 	}
 
-	// Token: 0x0601AAA8 RID: 109224 RVA: 0x0072C8A4 File Offset: 0x0072AAA4
+	// Token: 0x060184AD RID: 99501 RVA: 0x00752580 File Offset: 0x00750780
 	public bool IsLowFrequencyUpdateStrategy()
 	{
 		BaseInfoComponent baseConfig = this.BaseConfig;
 		return baseConfig != null && baseConfig.EntityUpdateStrategy.GetValueOrDefault() == EEntityUpdateStrategy.Low;
 	}
 
-	// Token: 0x0601AAA9 RID: 109225 RVA: 0x0072C8D0 File Offset: 0x0072AAD0
+	// Token: 0x060184AE RID: 99502 RVA: 0x007525AC File Offset: 0x007507AC
 	public bool IsHighFrequencyUpdateStrategy()
 	{
 		BaseInfoComponent baseConfig = this.BaseConfig;
 		return baseConfig != null && baseConfig.EntityUpdateStrategy.GetValueOrDefault() == EEntityUpdateStrategy.High;
 	}
 
-	// Token: 0x0601AAAA RID: 109226 RVA: 0x0072C8FC File Offset: 0x0072AAFC
+	// Token: 0x060184AF RID: 99503 RVA: 0x007525D8 File Offset: 0x007507D8
 	public List<int> GetAwakedEntities()
 	{
 		if (this.AwakedEntities != null)
 		{
-			return this.AwakedEntities.ToList<int>();
+			return new List<int>(this.AwakedEntities);
 		}
 		this.AwakedEntities = new int[0];
 		if (this.PbEntityInitData != null && this.PbEntityInitData.Children != null && this.PbEntityInitData.Children.Count > 0)
@@ -2269,10 +2281,10 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			}
 			this.AwakedEntities = list.ToArray();
 		}
-		return this.AwakedEntities.ToList<int>();
+		return new List<int>(this.AwakedEntities);
 	}
 
-	// Token: 0x0601AAAB RID: 109227 RVA: 0x0072C9C8 File Offset: 0x0072ABC8
+	// Token: 0x060184B0 RID: 99504 RVA: 0x007526A4 File Offset: 0x007508A4
 	private int GetIdByEntityUid(string uid)
 	{
 		if (CreatureDataComponent.EntityIdByUid.ContainsKey(uid))
@@ -2284,13 +2296,13 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x0601AAAC RID: 109228 RVA: 0x0072CA0C File Offset: 0x0072AC0C
+	// Token: 0x060184B1 RID: 99505 RVA: 0x007526E8 File Offset: 0x007508E8
 	private bool IsEntity(string uid)
 	{
 		return uid.Split('_', StringSplitOptions.None)[0] == "e";
 	}
 
-	// Token: 0x0601AAAD RID: 109229 RVA: 0x0072CA24 File Offset: 0x0072AC24
+	// Token: 0x060184B2 RID: 99506 RVA: 0x00752700 File Offset: 0x00750900
 	private void RecoverVars(IDictionary<string, VarDefinePb> vars)
 	{
 		foreach (string text in vars.Keys)
@@ -2301,14 +2313,14 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AAAE RID: 109230 RVA: 0x0072CA98 File Offset: 0x0072AC98
+	// Token: 0x060184B3 RID: 99507 RVA: 0x00752774 File Offset: 0x00750974
 	public void UpdateVar(string name, VarDefinePb variable)
 	{
 		this.EntityVariables[name] = variable;
 		EventSystem.Instance.EmitWithTarget<string, VarDefinePb>(base.Entity, EEventName.EntityVarUpdate, name, variable);
 	}
 
-	// Token: 0x0601AAAF RID: 109231 RVA: 0x0072CAC0 File Offset: 0x0072ACC0
+	// Token: 0x060184B4 RID: 99508 RVA: 0x0075279C File Offset: 0x0075099C
 	private void AddBindEntities()
 	{
 		foreach (long creatureDataIdA in this.CustomServerEntityIds)
@@ -2336,7 +2348,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601AAB0 RID: 109232 RVA: 0x0072CC24 File Offset: 0x0072AE24
+	// Token: 0x060184B5 RID: 99509 RVA: 0x00752900 File Offset: 0x00750B00
 	public int GetTemplateId()
 	{
 		IEntityTemplate templateData = this.TemplateData;
@@ -2347,7 +2359,7 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return templateData.Id;
 	}
 
-	// Token: 0x0601AAB1 RID: 109233 RVA: 0x0072CC38 File Offset: 0x0072AE38
+	// Token: 0x060184B6 RID: 99510 RVA: 0x00752914 File Offset: 0x00750B14
 	[NullableContext(2)]
 	public IComponentBase GetTemplateData(EConfigComponent tdComponentType)
 	{
@@ -2360,19 +2372,19 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0601AAB2 RID: 109234 RVA: 0x0072CC64 File Offset: 0x0072AE64
+	// Token: 0x060184B7 RID: 99511 RVA: 0x00752940 File Offset: 0x00750B40
 	public static void CreateStaticDefaultValue()
 	{
 		CreatureDataComponent.EntityIdByUid = new Dictionary<string, int>();
 	}
 
-	// Token: 0x0601AAB3 RID: 109235 RVA: 0x0072CC70 File Offset: 0x0072AE70
+	// Token: 0x060184B8 RID: 99512 RVA: 0x0075294C File Offset: 0x00750B4C
 	public static void ResetStaticDefaultValue()
 	{
 		CreatureDataComponent.EntityIdByUid = null;
 	}
 
-	// Token: 0x0601AAB4 RID: 109236 RVA: 0x0072CC78 File Offset: 0x0072AE78
+	// Token: 0x060184B9 RID: 99513 RVA: 0x00752954 File Offset: 0x00750B54
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -2380,1102 +2392,713 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		CreatureDataComponent creatureDataComponent = (CreatureDataComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataId"))
+		this.CreatureDataId = creatureDataComponent.CreatureDataId;
+		this.PlayerId = creatureDataComponent.PlayerId;
+		this.OwnerIncId = creatureDataComponent.OwnerIncId;
+		this.RoleId = creatureDataComponent.RoleId;
+		this.EntityType = creatureDataComponent.EntityType;
+		this.SubEntityType = creatureDataComponent.SubEntityType;
+		this.EntityConfigType = creatureDataComponent.EntityConfigType;
+		this.EntityId = creatureDataComponent.EntityId;
+		this.RoleInfo = creatureDataComponent.RoleInfo;
+		this.IsAutoRoleInternal = creatureDataComponent.IsAutoRoleInternal;
+		this.AutoRoleConfig = creatureDataComponent.AutoRoleConfig;
+		this.IsCharacterMonsterInternal = creatureDataComponent.IsCharacterMonsterInternal;
+		this.IsSummonByCharacterMonsterInternal = creatureDataComponent.IsSummonByCharacterMonsterInternal;
+		this.SkinModelId = creatureDataComponent.SkinModelId;
+		this.SkinId = creatureDataComponent.SkinId;
+		this.ParaglidingSkinId = creatureDataComponent.ParaglidingSkinId;
+		this.SoarWingSkinId = creatureDataComponent.SoarWingSkinId;
+		this.HardnessModeId = creatureDataComponent.HardnessModeId;
+		this.SummonerId = creatureDataComponent.SummonerId;
+		this.SummonerPlayerId = creatureDataComponent.SummonerPlayerId;
+		this.SummonsVersion = creatureDataComponent.SummonsVersion;
+		if (creatureDataComponent.MovementInfo == null)
 		{
-			this.CreatureDataId = creatureDataComponent.CreatureDataId;
+			this.MovementInfo = null;
 		}
-		if (base.CanResetComponentProperty("PlayerId"))
-		{
-			this.PlayerId = creatureDataComponent.PlayerId;
-		}
-		if (base.CanResetComponentProperty("OwnerIncId"))
-		{
-			this.OwnerIncId = creatureDataComponent.OwnerIncId;
-		}
-		if (base.CanResetComponentProperty("RoleId"))
-		{
-			this.RoleId = creatureDataComponent.RoleId;
-		}
-		if (base.CanResetComponentProperty("EntityType"))
-		{
-			this.EntityType = creatureDataComponent.EntityType;
-		}
-		if (base.CanResetComponentProperty("SubEntityType"))
-		{
-			this.SubEntityType = creatureDataComponent.SubEntityType;
-		}
-		if (base.CanResetComponentProperty("EntityConfigType"))
-		{
-			this.EntityConfigType = creatureDataComponent.EntityConfigType;
-		}
-		if (base.CanResetComponentProperty("EntityId"))
-		{
-			this.EntityId = creatureDataComponent.EntityId;
-		}
-		if (base.CanResetComponentProperty("RoleInfo"))
-		{
-			this.RoleInfo = creatureDataComponent.RoleInfo;
-		}
-		if (base.CanResetComponentProperty("IsAutoRoleInternal"))
-		{
-			this.IsAutoRoleInternal = creatureDataComponent.IsAutoRoleInternal;
-		}
-		if (base.CanResetComponentProperty("AutoRoleConfig"))
-		{
-			this.AutoRoleConfig = creatureDataComponent.AutoRoleConfig;
-		}
-		if (base.CanResetComponentProperty("IsCharacterMonsterInternal"))
-		{
-			this.IsCharacterMonsterInternal = creatureDataComponent.IsCharacterMonsterInternal;
-		}
-		if (base.CanResetComponentProperty("IsSummonByCharacterMonsterInternal"))
-		{
-			this.IsSummonByCharacterMonsterInternal = creatureDataComponent.IsSummonByCharacterMonsterInternal;
-		}
-		if (base.CanResetComponentProperty("SkinModelId"))
-		{
-			this.SkinModelId = creatureDataComponent.SkinModelId;
-		}
-		if (base.CanResetComponentProperty("SkinId"))
-		{
-			this.SkinId = creatureDataComponent.SkinId;
-		}
-		if (base.CanResetComponentProperty("ParaglidingSkinId"))
-		{
-			this.ParaglidingSkinId = creatureDataComponent.ParaglidingSkinId;
-		}
-		if (base.CanResetComponentProperty("SoarWingSkinId"))
-		{
-			this.SoarWingSkinId = creatureDataComponent.SoarWingSkinId;
-		}
-		if (base.CanResetComponentProperty("HardnessModeId"))
-		{
-			this.HardnessModeId = creatureDataComponent.HardnessModeId;
-		}
-		if (base.CanResetComponentProperty("SummonerId"))
-		{
-			this.SummonerId = creatureDataComponent.SummonerId;
-		}
-		if (base.CanResetComponentProperty("SummonerPlayerId"))
-		{
-			this.SummonerPlayerId = creatureDataComponent.SummonerPlayerId;
-		}
-		if (base.CanResetComponentProperty("SummonsVersion"))
-		{
-			this.SummonsVersion = creatureDataComponent.SummonsVersion;
-		}
-		if (base.CanResetComponentProperty("MovementInfo"))
-		{
-			if (creatureDataComponent.MovementInfo == null)
-			{
-				this.MovementInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MovementInformation>(this.MovementInfo), "MovementInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Blackboard"))
-		{
-			if (creatureDataComponent.Blackboard == null)
-			{
-				this.Blackboard = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BlackboardMap>(this.Blackboard), "Blackboard"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PublicTags") && creatureDataComponent.PublicTags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.PublicTags), "PublicTags"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementInfo), "MovementInfo"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("Tags") && creatureDataComponent.Tags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.Tags), "Tags"))
+		if (creatureDataComponent.Blackboard == null)
+		{
+			this.Blackboard = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Blackboard), "Blackboard"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("Visible"))
-		{
-			this.Visible = creatureDataComponent.Visible;
-		}
-		if (base.CanResetComponentProperty("DisableByServer"))
-		{
-			this.DisableByServer = creatureDataComponent.DisableByServer;
-		}
-		if (base.CanResetComponentProperty("ActorVisible"))
-		{
-			this.ActorVisible = creatureDataComponent.ActorVisible;
-		}
-		if (base.CanResetComponentProperty("IsStaticInit"))
-		{
-			this.IsStaticInit = creatureDataComponent.IsStaticInit;
-		}
-		if (base.CanResetComponentProperty("LivingStatus"))
-		{
-			this.LivingStatus = creatureDataComponent.LivingStatus;
-		}
-		if (base.CanResetComponentProperty("AiWeaponId"))
-		{
-			this.AiWeaponId = creatureDataComponent.AiWeaponId;
-		}
-		if (base.CanResetComponentProperty("EntityCommonTags"))
-		{
-			if (creatureDataComponent.EntityCommonTags == null)
-			{
-				this.EntityCommonTags = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.EntityCommonTags), "EntityCommonTags"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("RelationId"))
-		{
-			this.RelationId = creatureDataComponent.RelationId;
-		}
-		if (base.CanResetComponentProperty("PbRelationMatchCfgIndex"))
-		{
-			this.PbRelationMatchCfgIndex = creatureDataComponent.PbRelationMatchCfgIndex;
-		}
-		if (base.CanResetComponentProperty("ControllerId"))
-		{
-			this.ControllerId = creatureDataComponent.ControllerId;
-		}
-		if (base.CanResetComponentProperty("PbDynAttachEntityConfigId"))
-		{
-			this.PbDynAttachEntityConfigId = creatureDataComponent.PbDynAttachEntityConfigId;
-		}
-		if (base.CanResetComponentProperty("PbDynAttachEntityActorKey"))
-		{
-			this.PbDynAttachEntityActorKey = creatureDataComponent.PbDynAttachEntityActorKey;
-		}
-		if (base.CanResetComponentProperty("PbDynAttachRefActorKey"))
-		{
-			this.PbDynAttachRefActorKey = creatureDataComponent.PbDynAttachRefActorKey;
-		}
-		if (base.CanResetComponentProperty("PbDynAttachRelPos"))
-		{
-			if (creatureDataComponent.PbDynAttachRelPos == null)
-			{
-				this.PbDynAttachRelPos = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PbDynAttachRelPos), "PbDynAttachRelPos"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbDynAttachRelRot"))
-		{
-			if (creatureDataComponent.PbDynAttachRelRot == null)
-			{
-				this.PbDynAttachRelRot = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.PbDynAttachRelRot), "PbDynAttachRelRot"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsShowingHandFx"))
-		{
-			this.IsShowingHandFx = creatureDataComponent.IsShowingHandFx;
-		}
-		if (base.CanResetComponentProperty("AutonomousId"))
-		{
-			this.AutonomousId = creatureDataComponent.AutonomousId;
-		}
-		if (base.CanResetComponentProperty("WeaponSkinId"))
-		{
-			this.WeaponSkinId = creatureDataComponent.WeaponSkinId;
-		}
-		if (base.CanResetComponentProperty("OrnamentIds"))
-		{
-			if (creatureDataComponent.OrnamentIds == null)
-			{
-				this.OrnamentIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.OrnamentIds), "OrnamentIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("OccupiedGridInfo"))
-		{
-			if (creatureDataComponent.OccupiedGridInfo == null)
-			{
-				this.OccupiedGridInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, OccupiedBoardGridInfo>>(this.OccupiedGridInfo), "OccupiedGridInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DynamicGridInfo"))
-		{
-			if (creatureDataComponent.DynamicGridInfo == null)
-			{
-				this.DynamicGridInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<BoardGridDynamicConfig>>(this.DynamicGridInfo), "DynamicGridInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BoardCanMove"))
-		{
-			this.BoardCanMove = creatureDataComponent.BoardCanMove;
-		}
-		if (base.CanResetComponentProperty("ModelConfigId"))
-		{
-			this.ModelConfigId = creatureDataComponent.ModelConfigId;
-		}
-		if (base.CanResetComponentProperty("ModelConfig"))
-		{
-			if (creatureDataComponent.ModelConfig == null)
-			{
-				this.ModelConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SModelConfig>(this.ModelConfig), "ModelConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ModelBpPath"))
-		{
-			this.ModelBpPath = creatureDataComponent.ModelBpPath;
-		}
-		if (base.CanResetComponentProperty("DurabilityValue"))
-		{
-			this.DurabilityValue = creatureDataComponent.DurabilityValue;
-		}
-		if (base.CanResetComponentProperty("InitLocation"))
-		{
-			if (creatureDataComponent.InitLocation == null)
-			{
-				this.InitLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Aki.Protocol.Vector>(this.InitLocation), "InitLocation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InitLinearVelocity"))
-		{
-			if (creatureDataComponent.InitLinearVelocity == null)
-			{
-				this.InitLinearVelocity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Aki.Protocol.Vector>(this.InitLinearVelocity), "InitLinearVelocity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InitCharacterState"))
-		{
-			this.InitCharacterState = creatureDataComponent.InitCharacterState;
-		}
-		if (base.CanResetComponentProperty("InitGravityDirection"))
-		{
-			if (creatureDataComponent.InitGravityDirection == null)
-			{
-				this.InitGravityDirection = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Aki.Protocol.Vector>(this.InitGravityDirection), "InitGravityDirection"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ServerCamp"))
-		{
-			this.ServerCamp = creatureDataComponent.ServerCamp;
-		}
-		if (base.CanResetComponentProperty("RemoveState"))
-		{
-			this.RemoveState = creatureDataComponent.RemoveState;
-		}
-		if (base.CanResetComponentProperty("AwakedEntities"))
-		{
-			if (creatureDataComponent.AwakedEntities == null)
-			{
-				this.AwakedEntities = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.AwakedEntities), "AwakedEntities"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbInRangeEntityCreatureDataIds"))
-		{
-			if (creatureDataComponent.PbInRangeEntityCreatureDataIds == null)
-			{
-				this.PbInRangeEntityCreatureDataIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<long[]>(this.PbInRangeEntityCreatureDataIds), "PbInRangeEntityCreatureDataIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbInRangePlayerIds"))
-		{
-			if (creatureDataComponent.PbInRangePlayerIds == null)
-			{
-				this.PbInRangePlayerIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.PbInRangePlayerIds), "PbInRangePlayerIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbSceneItemAttributeIds"))
-		{
-			if (creatureDataComponent.PbSceneItemAttributeIds == null)
-			{
-				this.PbSceneItemAttributeIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.PbSceneItemAttributeIds), "PbSceneItemAttributeIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbPullingFoundationEntityId"))
-		{
-			this.PbPullingFoundationEntityId = creatureDataComponent.PbPullingFoundationEntityId;
-		}
-		if (base.CanResetComponentProperty("PbSceneAiEnabled"))
-		{
-			this.PbSceneAiEnabled = creatureDataComponent.PbSceneAiEnabled;
-		}
-		if (base.CanResetComponentProperty("PbPatrolInfoPb"))
-		{
-			if (creatureDataComponent.PbPatrolInfoPb == null)
-			{
-				this.PbPatrolInfoPb = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPatrolInfoPb>(this.PbPatrolInfoPb), "PbPatrolInfoPb"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbAnimalInitialPartIds"))
-		{
-			if (creatureDataComponent.PbAnimalInitialPartIds == null)
-			{
-				this.PbAnimalInitialPartIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.PbAnimalInitialPartIds), "PbAnimalInitialPartIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbCombinePartInfoList"))
-		{
-			if (creatureDataComponent.PbCombinePartInfoList == null)
-			{
-				this.PbCombinePartInfoList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<CombinePartInfo>>(this.PbCombinePartInfoList), "PbCombinePartInfoList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbCombineTargetServerId"))
-		{
-			this.PbCombineTargetServerId = creatureDataComponent.PbCombineTargetServerId;
-		}
-		if (base.CanResetComponentProperty("PbHookLockPointDisabled"))
-		{
-			this.PbHookLockPointDisabled = creatureDataComponent.PbHookLockPointDisabled;
-		}
-		if (base.CanResetComponentProperty("PbHackingEntities"))
-		{
-			if (creatureDataComponent.PbHackingEntities == null)
-			{
-				this.PbHackingEntities = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<long[]>(this.PbHackingEntities), "PbHackingEntities"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbHackedByEntities"))
-		{
-			this.PbHackedByEntities = creatureDataComponent.PbHackedByEntities;
-		}
-		if (base.CanResetComponentProperty("PbGravityFlipDirection"))
-		{
-			this.PbGravityFlipDirection = creatureDataComponent.PbGravityFlipDirection;
-		}
-		if (base.CanResetComponentProperty("PbMoveSplineId"))
-		{
-			this.PbMoveSplineId = creatureDataComponent.PbMoveSplineId;
-		}
-		if (base.CanResetComponentProperty("PbMoveSplineConfig"))
-		{
-			if (creatureDataComponent.PbMoveSplineConfig == null)
-			{
-				this.PbMoveSplineConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MoveSplineConfig>(this.PbMoveSplineConfig), "PbMoveSplineConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbMoveSplineSceneItemRuntimeData"))
-		{
-			if (creatureDataComponent.PbMoveSplineSceneItemRuntimeData == null)
-			{
-				this.PbMoveSplineSceneItemRuntimeData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemSplineRuntimeData>(this.PbMoveSplineSceneItemRuntimeData), "PbMoveSplineSceneItemRuntimeData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PbMoveToPointConfig"))
-		{
-			if (creatureDataComponent.PbMoveToPointConfig == null)
-			{
-				this.PbMoveToPointConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveToPointConfig>(this.PbMoveToPointConfig), "PbMoveToPointConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CanGetRewardCount"))
-		{
-			this.CanGetRewardCount = creatureDataComponent.CanGetRewardCount;
-		}
-		if (base.CanResetComponentProperty("LastRewardTime"))
-		{
-			this.LastRewardTime = creatureDataComponent.LastRewardTime;
-		}
-		if (base.CanResetComponentProperty("SpawnedEntityInfos"))
-		{
-			if (creatureDataComponent.SpawnedEntityInfos == null)
-			{
-				this.SpawnedEntityInfos = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<SpawnerEntityInfo>>(this.SpawnedEntityInfos), "SpawnedEntityInfos"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TemplateSpawnerType"))
-		{
-			this.TemplateSpawnerType = creatureDataComponent.TemplateSpawnerType;
-		}
-		if (base.CanResetComponentProperty("HoldHandTargetEntityId"))
-		{
-			this.HoldHandTargetEntityId = creatureDataComponent.HoldHandTargetEntityId;
-		}
-		if (base.CanResetComponentProperty("HoldHandType"))
-		{
-			this.HoldHandType = creatureDataComponent.HoldHandType;
-		}
-		if (base.CanResetComponentProperty("HoldHandIsFollow"))
-		{
-			this.HoldHandIsFollow = creatureDataComponent.HoldHandIsFollow;
-		}
-		if (base.CanResetComponentProperty("HonamiStoryItemInfo"))
-		{
-			if (creatureDataComponent.HonamiStoryItemInfo == null)
-			{
-				this.HonamiStoryItemInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HonamiStoryItemInfo>(this.HonamiStoryItemInfo), "HonamiStoryItemInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HonamiStoryLevel"))
-		{
-			this.HonamiStoryLevel = creatureDataComponent.HonamiStoryLevel;
-		}
-		if (base.CanResetComponentProperty("RbBlockInfo"))
-		{
-			if (creatureDataComponent.RbBlockInfo == null)
-			{
-				this.RbBlockInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbBlockComponentPb>(this.RbBlockInfo), "RbBlockInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("RbFloorInfo"))
-		{
-			if (creatureDataComponent.RbFloorInfo == null)
-			{
-				this.RbFloorInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbFloorComponentPb>(this.RbFloorInfo), "RbFloorInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("RbItemInfo"))
-		{
-			if (creatureDataComponent.RbItemInfo == null)
-			{
-				this.RbItemInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbItemComponentPb>(this.RbItemInfo), "RbItemInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PlayerFollowersInfo"))
-		{
-			if (creatureDataComponent.PlayerFollowersInfo == null)
-			{
-				this.PlayerFollowersInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerFollowersComponentPb>(this.PlayerFollowersInfo), "PlayerFollowersInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FollowerInfo"))
-		{
-			if (creatureDataComponent.FollowerInfo == null)
-			{
-				this.FollowerInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FollowEntityComponentPb>(this.FollowerInfo), "FollowerInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MotorOutlookInfo"))
-		{
-			if (creatureDataComponent.MotorOutlookInfo == null)
-			{
-				this.MotorOutlookInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorOutlookEquippedPb>(this.MotorOutlookInfo), "MotorOutlookInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ExhibitionItemId"))
-		{
-			this.ExhibitionItemId = creatureDataComponent.ExhibitionItemId;
-		}
-		if (base.CanResetComponentProperty("FurnitureSlotId"))
-		{
-			this.FurnitureSlotId = creatureDataComponent.FurnitureSlotId;
-		}
-		if (base.CanResetComponentProperty("FurnitureId"))
-		{
-			this.FurnitureId = creatureDataComponent.FurnitureId;
-		}
-		if (base.CanResetComponentProperty("DollGrabMachineInfo"))
-		{
-			if (creatureDataComponent.DollGrabMachineInfo == null)
-			{
-				this.DollGrabMachineInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DollGrabMachineComponentPb>(this.DollGrabMachineInfo), "DollGrabMachineInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DollGrabShowcaseInfo"))
-		{
-			if (creatureDataComponent.DollGrabShowcaseInfo == null)
-			{
-				this.DollGrabShowcaseInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DollGrabShowcaseComponentPb>(this.DollGrabShowcaseInfo), "DollGrabShowcaseInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("HuluSkinId"))
-		{
-			this.HuluSkinId = creatureDataComponent.HuluSkinId;
-		}
-		if (base.CanResetComponentProperty("PbDataId"))
-		{
-			this.PbDataId = creatureDataComponent.PbDataId;
-		}
-		if (base.CanResetComponentProperty("PrefabId"))
-		{
-			this.PrefabId = creatureDataComponent.PrefabId;
-		}
-		if (base.CanResetComponentProperty("IsPosAbnormalInternal"))
-		{
-			this.IsPosAbnormalInternal = creatureDataComponent.IsPosAbnormalInternal;
-		}
-		if (base.CanResetComponentProperty("PbEntityInitData"))
-		{
-			if (creatureDataComponent.PbEntityInitData == null)
-			{
-				this.PbEntityInitData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IEntityData>(this.PbEntityInitData), "PbEntityInitData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TemplateData"))
-		{
-			if (creatureDataComponent.TemplateData == null)
-			{
-				this.TemplateData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IEntityTemplate>(this.TemplateData), "TemplateData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsEnableTracking"))
-		{
-			this.IsEnableTracking = creatureDataComponent.IsEnableTracking;
-		}
-		if (base.CanResetComponentProperty("PbModelConfigId"))
-		{
-			this.PbModelConfigId = creatureDataComponent.PbModelConfigId;
-		}
-		if (base.CanResetComponentProperty("PbModelConfig"))
-		{
-			if (creatureDataComponent.PbModelConfig == null)
-			{
-				this.PbModelConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IBlueprintItem>(this.PbModelConfig), "PbModelConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MotorContextIdInner"))
-		{
-			this.MotorContextIdInner = creatureDataComponent.MotorContextIdInner;
-		}
-		if (base.CanResetComponentProperty("PbLiftFloor"))
-		{
-			this.PbLiftFloor = creatureDataComponent.PbLiftFloor;
-		}
-		if (base.CanResetComponentProperty("PlotPlayerId"))
-		{
-			this.PlotPlayerId = creatureDataComponent.PlotPlayerId;
-		}
-		if (base.CanResetComponentProperty("IsPlotControl"))
-		{
-			this.IsPlotControl = creatureDataComponent.IsPlotControl;
-		}
-		if (base.CanResetComponentProperty("AdviceEntityData"))
-		{
-			if (creatureDataComponent.AdviceEntityData == null)
-			{
-				this.AdviceEntityData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AdviceEntityData>(this.AdviceEntityData), "AdviceEntityData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BaseConfig"))
-		{
-			if (creatureDataComponent.BaseConfig == null)
-			{
-				this.BaseConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseInfoComponent>(this.BaseConfig), "BaseConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FightInterConfig"))
-		{
-			if (creatureDataComponent.FightInterConfig == null)
-			{
-				this.FightInterConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FightInteractComponent>(this.FightInterConfig), "FightInterConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CreatureProperty"))
-		{
-			if (creatureDataComponent.CreatureProperty == null)
-			{
-				this.CreatureProperty = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SEntityProperty>(this.CreatureProperty), "CreatureProperty"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ComponentDataMap") && creatureDataComponent.ComponentDataMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, EntityComponentPb>>(this.ComponentDataMap), "ComponentDataMap"))
+		if (creatureDataComponent.PublicTags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PublicTags), "PublicTags"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SummonRandomInfo"))
-		{
-			if (creatureDataComponent.SummonRandomInfo == null)
-			{
-				this.SummonRandomInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IList<long>>(this.SummonRandomInfo), "SummonRandomInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PreloadFinished"))
-		{
-			this.PreloadFinished = creatureDataComponent.PreloadFinished;
-		}
-		if (base.CanResetComponentProperty("Loading"))
-		{
-			this.Loading = creatureDataComponent.Loading;
-		}
-		if (base.CanResetComponentProperty("EnterComponentInitState"))
-		{
-			this.EnterComponentInitState = creatureDataComponent.EnterComponentInitState;
-		}
-		if (base.CanResetComponentProperty("IsConcealed"))
-		{
-			this.IsConcealed = creatureDataComponent.IsConcealed;
-		}
-		if (base.CanResetComponentProperty("IsPreAwakeEntity"))
-		{
-			this.IsPreAwakeEntity = creatureDataComponent.IsPreAwakeEntity;
-		}
-		if (base.CanResetComponentProperty("SummonType"))
-		{
-			this.SummonType = creatureDataComponent.SummonType;
-		}
-		if (base.CanResetComponentProperty("SummonCfgId"))
-		{
-			this.SummonCfgId = creatureDataComponent.SummonCfgId;
-		}
-		if (base.CanResetComponentProperty("SummonerPlayerEntityId"))
-		{
-			this.SummonerPlayerEntityId = creatureDataComponent.SummonerPlayerEntityId;
-		}
-		if (base.CanResetComponentProperty("UnpollutedSplinePbDataIds"))
-		{
-			if (creatureDataComponent.UnpollutedSplinePbDataIds == null)
-			{
-				this.UnpollutedSplinePbDataIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IList<int>>(this.UnpollutedSplinePbDataIds), "UnpollutedSplinePbDataIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ServerStartLocationInternal"))
-		{
-			if (creatureDataComponent.ServerStartLocationInternal == null)
-			{
-				this.ServerStartLocationInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ServerStartLocationInternal), "ServerStartLocationInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsSnap"))
-		{
-			this.IsSnap = creatureDataComponent.IsSnap;
-		}
-		if (base.CanResetComponentProperty("VisionControlCreatureDataIdInternal"))
-		{
-			this.VisionControlCreatureDataIdInternal = creatureDataComponent.VisionControlCreatureDataIdInternal;
-		}
-		if (base.CanResetComponentProperty("VisionSkillServerEntityIdsInternal"))
-		{
-			if (creatureDataComponent.VisionSkillServerEntityIdsInternal == null)
-			{
-				this.VisionSkillServerEntityIdsInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<long>>(this.VisionSkillServerEntityIdsInternal), "VisionSkillServerEntityIdsInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CustomServerEntityIdsInternal") && creatureDataComponent.CustomServerEntityIdsInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<long>>(this.CustomServerEntityIdsInternal), "CustomServerEntityIdsInternal"))
+		if (creatureDataComponent.Tags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.Tags), "Tags"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BossRushCreatureDataIdInternal"))
+		this.Visible = creatureDataComponent.Visible;
+		this.ActorVisible = creatureDataComponent.ActorVisible;
+		this.IsStaticInit = creatureDataComponent.IsStaticInit;
+		this.LivingStatus = creatureDataComponent.LivingStatus;
+		this.AiWeaponId = creatureDataComponent.AiWeaponId;
+		if (creatureDataComponent.EntityCommonTags == null)
 		{
-			this.BossRushCreatureDataIdInternal = creatureDataComponent.BossRushCreatureDataIdInternal;
+			this.EntityCommonTags = null;
 		}
-		if (base.CanResetComponentProperty("SummonEntityIdsInternal"))
-		{
-			if (creatureDataComponent.SummonEntityIdsInternal == null)
-			{
-				this.SummonEntityIdsInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<long>>(this.SummonEntityIdsInternal), "SummonEntityIdsInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("EntityVariables") && creatureDataComponent.EntityVariables != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, VarDefinePb>>(this.EntityVariables), "EntityVariables"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.EntityCommonTags), "EntityCommonTags"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ComponentsKey"))
+		this.RelationId = creatureDataComponent.RelationId;
+		this.PbRelationMatchCfgIndex = creatureDataComponent.PbRelationMatchCfgIndex;
+		this.ControllerId = creatureDataComponent.ControllerId;
+		this.PbDynAttachEntityConfigId = creatureDataComponent.PbDynAttachEntityConfigId;
+		this.PbDynAttachEntityActorKey = creatureDataComponent.PbDynAttachEntityActorKey;
+		this.PbDynAttachRefActorKey = creatureDataComponent.PbDynAttachRefActorKey;
+		if (creatureDataComponent.PbDynAttachRelPos == null)
 		{
-			this.ComponentsKey = creatureDataComponent.ComponentsKey;
+			this.PbDynAttachRelPos = null;
 		}
-		if (base.CanResetComponentProperty("EntityOverrideName"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbDynAttachRelPos), "PbDynAttachRelPos"))
 		{
-			this.EntityOverrideName = creatureDataComponent.EntityOverrideName;
+			return false;
 		}
-		if (base.CanResetComponentProperty("EntityOverrideSecondName"))
+		if (creatureDataComponent.PbDynAttachRelRot == null)
 		{
-			this.EntityOverrideSecondName = creatureDataComponent.EntityOverrideSecondName;
+			this.PbDynAttachRelRot = null;
 		}
-		if (base.CanResetComponentProperty("EntityOverrideFunctionIcon"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbDynAttachRelRot), "PbDynAttachRelRot"))
 		{
-			this.EntityOverrideFunctionIcon = creatureDataComponent.EntityOverrideFunctionIcon;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TrapAuxiliaryConfigIds"))
+		this.IsShowingHandFx = creatureDataComponent.IsShowingHandFx;
+		this.AutonomousId = creatureDataComponent.AutonomousId;
+		this.WeaponSkinId = creatureDataComponent.WeaponSkinId;
+		if (creatureDataComponent.OrnamentIds == null)
 		{
-			if (creatureDataComponent.TrapAuxiliaryConfigIds == null)
-			{
-				this.TrapAuxiliaryConfigIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.TrapAuxiliaryConfigIds), "TrapAuxiliaryConfigIds"))
-			{
-				return false;
-			}
+			this.OrnamentIds = null;
 		}
-		if (base.CanResetComponentProperty("ComponentKey"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OrnamentIds), "OrnamentIds"))
 		{
-			this.ComponentKey = creatureDataComponent.ComponentKey;
+			return false;
 		}
+		if (creatureDataComponent.OccupiedGridInfo == null)
+		{
+			this.OccupiedGridInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OccupiedGridInfo), "OccupiedGridInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.DynamicGridInfo == null)
+		{
+			this.DynamicGridInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicGridInfo), "DynamicGridInfo"))
+		{
+			return false;
+		}
+		this.BoardCanMove = creatureDataComponent.BoardCanMove;
+		this.ModelConfigId = creatureDataComponent.ModelConfigId;
+		if (creatureDataComponent.ModelConfig == null)
+		{
+			this.ModelConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ModelConfig), "ModelConfig"))
+		{
+			return false;
+		}
+		this.ModelBpPath = creatureDataComponent.ModelBpPath;
+		this.DurabilityValue = creatureDataComponent.DurabilityValue;
+		if (creatureDataComponent.InitLocation == null)
+		{
+			this.InitLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InitLocation), "InitLocation"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.InitLinearVelocity == null)
+		{
+			this.InitLinearVelocity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InitLinearVelocity), "InitLinearVelocity"))
+		{
+			return false;
+		}
+		this.InitCharacterState = creatureDataComponent.InitCharacterState;
+		if (creatureDataComponent.InitGravityDirection == null)
+		{
+			this.InitGravityDirection = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InitGravityDirection), "InitGravityDirection"))
+		{
+			return false;
+		}
+		this.ServerCamp = creatureDataComponent.ServerCamp;
+		this.RemoveState = creatureDataComponent.RemoveState;
+		if (creatureDataComponent.AwakedEntities == null)
+		{
+			this.AwakedEntities = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AwakedEntities), "AwakedEntities"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbInRangeEntityCreatureDataIds == null)
+		{
+			this.PbInRangeEntityCreatureDataIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbInRangeEntityCreatureDataIds), "PbInRangeEntityCreatureDataIds"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbInRangePlayerIds == null)
+		{
+			this.PbInRangePlayerIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbInRangePlayerIds), "PbInRangePlayerIds"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbSceneItemAttributeIds == null)
+		{
+			this.PbSceneItemAttributeIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbSceneItemAttributeIds), "PbSceneItemAttributeIds"))
+		{
+			return false;
+		}
+		this.PbPullingFoundationEntityId = creatureDataComponent.PbPullingFoundationEntityId;
+		this.PbSceneAiEnabled = creatureDataComponent.PbSceneAiEnabled;
+		if (creatureDataComponent.PbPatrolInfoPb == null)
+		{
+			this.PbPatrolInfoPb = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbPatrolInfoPb), "PbPatrolInfoPb"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbAnimalInitialPartIds == null)
+		{
+			this.PbAnimalInitialPartIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbAnimalInitialPartIds), "PbAnimalInitialPartIds"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbCombinePartInfoList == null)
+		{
+			this.PbCombinePartInfoList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbCombinePartInfoList), "PbCombinePartInfoList"))
+		{
+			return false;
+		}
+		this.PbCombineTargetServerId = creatureDataComponent.PbCombineTargetServerId;
+		this.PbHookLockPointDisabled = creatureDataComponent.PbHookLockPointDisabled;
+		if (creatureDataComponent.PbHackingEntities == null)
+		{
+			this.PbHackingEntities = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbHackingEntities), "PbHackingEntities"))
+		{
+			return false;
+		}
+		this.PbHackedByEntities = creatureDataComponent.PbHackedByEntities;
+		this.PbGravityFlipDirection = creatureDataComponent.PbGravityFlipDirection;
+		this.PbMoveSplineId = creatureDataComponent.PbMoveSplineId;
+		if (creatureDataComponent.PbMoveSplineConfig == null)
+		{
+			this.PbMoveSplineConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbMoveSplineConfig), "PbMoveSplineConfig"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbMoveSplineSceneItemRuntimeData == null)
+		{
+			this.PbMoveSplineSceneItemRuntimeData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbMoveSplineSceneItemRuntimeData), "PbMoveSplineSceneItemRuntimeData"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PbMoveToPointConfig == null)
+		{
+			this.PbMoveToPointConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbMoveToPointConfig), "PbMoveToPointConfig"))
+		{
+			return false;
+		}
+		this.CanGetRewardCount = creatureDataComponent.CanGetRewardCount;
+		this.LastRewardTime = creatureDataComponent.LastRewardTime;
+		if (creatureDataComponent.SpawnedEntityInfos == null)
+		{
+			this.SpawnedEntityInfos = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpawnedEntityInfos), "SpawnedEntityInfos"))
+		{
+			return false;
+		}
+		this.TemplateSpawnerType = creatureDataComponent.TemplateSpawnerType;
+		this.HoldHandTargetEntityId = creatureDataComponent.HoldHandTargetEntityId;
+		this.HoldHandType = creatureDataComponent.HoldHandType;
+		this.HoldHandIsFollow = creatureDataComponent.HoldHandIsFollow;
+		if (creatureDataComponent.HonamiStoryItemInfo == null)
+		{
+			this.HonamiStoryItemInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HonamiStoryItemInfo), "HonamiStoryItemInfo"))
+		{
+			return false;
+		}
+		this.HonamiStoryLevel = creatureDataComponent.HonamiStoryLevel;
+		if (creatureDataComponent.RbBlockInfo == null)
+		{
+			this.RbBlockInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RbBlockInfo), "RbBlockInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.RbFloorInfo == null)
+		{
+			this.RbFloorInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RbFloorInfo), "RbFloorInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.RbItemInfo == null)
+		{
+			this.RbItemInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RbItemInfo), "RbItemInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.PlayerFollowersInfo == null)
+		{
+			this.PlayerFollowersInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerFollowersInfo), "PlayerFollowersInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.FollowerInfo == null)
+		{
+			this.FollowerInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowerInfo), "FollowerInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.MotorOutlookInfo == null)
+		{
+			this.MotorOutlookInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorOutlookInfo), "MotorOutlookInfo"))
+		{
+			return false;
+		}
+		this.ExhibitionItemId = creatureDataComponent.ExhibitionItemId;
+		this.FurnitureSlotId = creatureDataComponent.FurnitureSlotId;
+		this.FurnitureId = creatureDataComponent.FurnitureId;
+		if (creatureDataComponent.DollGrabMachineInfo == null)
+		{
+			this.DollGrabMachineInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DollGrabMachineInfo), "DollGrabMachineInfo"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.DollGrabShowcaseInfo == null)
+		{
+			this.DollGrabShowcaseInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DollGrabShowcaseInfo), "DollGrabShowcaseInfo"))
+		{
+			return false;
+		}
+		this.HuluSkinId = creatureDataComponent.HuluSkinId;
+		this.PbDataId = creatureDataComponent.PbDataId;
+		this.PrefabId = creatureDataComponent.PrefabId;
+		this.IsPosAbnormalInternal = creatureDataComponent.IsPosAbnormalInternal;
+		if (creatureDataComponent.PbEntityInitData == null)
+		{
+			this.PbEntityInitData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbEntityInitData), "PbEntityInitData"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.TemplateData == null)
+		{
+			this.TemplateData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TemplateData), "TemplateData"))
+		{
+			return false;
+		}
+		this.IsEnableTracking = creatureDataComponent.IsEnableTracking;
+		this.PbModelConfigId = creatureDataComponent.PbModelConfigId;
+		if (creatureDataComponent.PbModelConfig == null)
+		{
+			this.PbModelConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PbModelConfig), "PbModelConfig"))
+		{
+			return false;
+		}
+		this.MotorContextIdInner = creatureDataComponent.MotorContextIdInner;
+		this.PbLiftFloor = creatureDataComponent.PbLiftFloor;
+		this.PlotPlayerId = creatureDataComponent.PlotPlayerId;
+		this.IsPlotControl = creatureDataComponent.IsPlotControl;
+		if (creatureDataComponent.AdviceEntityData == null)
+		{
+			this.AdviceEntityData = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdviceEntityData), "AdviceEntityData"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.BaseConfig == null)
+		{
+			this.BaseConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseConfig), "BaseConfig"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.FightInterConfig == null)
+		{
+			this.FightInterConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FightInterConfig), "FightInterConfig"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.CreatureProperty == null)
+		{
+			this.CreatureProperty = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureProperty), "CreatureProperty"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.ComponentDataMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ComponentDataMap), "ComponentDataMap"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.SummonRandomInfo == null)
+		{
+			this.SummonRandomInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SummonRandomInfo), "SummonRandomInfo"))
+		{
+			return false;
+		}
+		this.PreloadFinished = creatureDataComponent.PreloadFinished;
+		this.Loading = creatureDataComponent.Loading;
+		this.EnterComponentInitState = creatureDataComponent.EnterComponentInitState;
+		this.IsConcealed = creatureDataComponent.IsConcealed;
+		this.IsPreAwakeEntity = creatureDataComponent.IsPreAwakeEntity;
+		this.SummonType = creatureDataComponent.SummonType;
+		this.SummonCfgId = creatureDataComponent.SummonCfgId;
+		this.SummonerPlayerEntityId = creatureDataComponent.SummonerPlayerEntityId;
+		if (creatureDataComponent.UnpollutedSplinePbDataIds == null)
+		{
+			this.UnpollutedSplinePbDataIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnpollutedSplinePbDataIds), "UnpollutedSplinePbDataIds"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.ServerStartLocationInternal == null)
+		{
+			this.ServerStartLocationInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ServerStartLocationInternal), "ServerStartLocationInternal"))
+		{
+			return false;
+		}
+		this.IsSnap = creatureDataComponent.IsSnap;
+		this.VisionControlCreatureDataIdInternal = creatureDataComponent.VisionControlCreatureDataIdInternal;
+		if (creatureDataComponent.VisionSkillServerEntityIdsInternal == null)
+		{
+			this.VisionSkillServerEntityIdsInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VisionSkillServerEntityIdsInternal), "VisionSkillServerEntityIdsInternal"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.CustomServerEntityIdsInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomServerEntityIdsInternal), "CustomServerEntityIdsInternal"))
+		{
+			return false;
+		}
+		this.BossRushCreatureDataIdInternal = creatureDataComponent.BossRushCreatureDataIdInternal;
+		if (creatureDataComponent.SummonEntityIdsInternal == null)
+		{
+			this.SummonEntityIdsInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SummonEntityIdsInternal), "SummonEntityIdsInternal"))
+		{
+			return false;
+		}
+		if (creatureDataComponent.EntityVariables != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityVariables), "EntityVariables"))
+		{
+			return false;
+		}
+		this.ComponentsKey = creatureDataComponent.ComponentsKey;
+		this.EntityOverrideName = creatureDataComponent.EntityOverrideName;
+		this.EntityOverrideSecondName = creatureDataComponent.EntityOverrideSecondName;
+		this.EntityOverrideFunctionIcon = creatureDataComponent.EntityOverrideFunctionIcon;
+		if (creatureDataComponent.TrapAuxiliaryConfigIds == null)
+		{
+			this.TrapAuxiliaryConfigIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrapAuxiliaryConfigIds), "TrapAuxiliaryConfigIds"))
+		{
+			return false;
+		}
+		this.IsClientEntity = creatureDataComponent.IsClientEntity;
+		this.ComponentKey = creatureDataComponent.ComponentKey;
 		return true;
 	}
 
-	// Token: 0x0400CD23 RID: 52515
+	// Token: 0x1700261B RID: 9755
+	// (get) Token: 0x060184BA RID: 99514 RVA: 0x007535EC File Offset: 0x007517EC
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D106 RID: 53510
 	private const string PROFILE_IK_GROUND_TRACE = "CreatureDataComponent_IkGround";
 
-	// Token: 0x0400CD24 RID: 52516
+	// Token: 0x0400D107 RID: 53511
 	private const string PROFILE_WATER_TRACE = "CreatureDataComponent_Water";
 
-	// Token: 0x0400CD25 RID: 52517
+	// Token: 0x0400D108 RID: 53512
 	private const int IK_GROUND_TRACE_HEIGHT = 400;
 
-	// Token: 0x0400CD26 RID: 52518
+	// Token: 0x0400D109 RID: 53513
 	private const int IK_GROUND_TRACE_RADIUS = 300;
 
-	// Token: 0x0400CD27 RID: 52519
+	// Token: 0x0400D10A RID: 53514
 	private const int WATER_TRACE_HEIGHT = 200;
 
-	// Token: 0x0400CD28 RID: 52520
+	// Token: 0x0400D10B RID: 53515
 	private long CreatureDataId;
 
-	// Token: 0x0400CD29 RID: 52521
+	// Token: 0x0400D10C RID: 53516
 	private int PlayerId;
 
-	// Token: 0x0400CD2A RID: 52522
+	// Token: 0x0400D10D RID: 53517
 	private long OwnerIncId;
 
-	// Token: 0x0400CD2B RID: 52523
+	// Token: 0x0400D10E RID: 53518
 	private int RoleId;
 
-	// Token: 0x0400CD2C RID: 52524
-	private Aki.Protocol.EEntityType EntityType = Aki.Protocol.EEntityType.Monster;
+	// Token: 0x0400D10F RID: 53519
+	private EEntityType EntityType = EEntityType.Monster;
 
-	// Token: 0x0400CD2D RID: 52525
+	// Token: 0x0400D110 RID: 53520
 	private int SubEntityType;
 
-	// Token: 0x0400CD2E RID: 52526
+	// Token: 0x0400D111 RID: 53521
 	private EntityConfigType EntityConfigType;
 
-	// Token: 0x0400CD2F RID: 52527
+	// Token: 0x0400D112 RID: 53522
 	private int EntityId;
 
-	// Token: 0x0400CD30 RID: 52528
+	// Token: 0x0400D113 RID: 53523
 	private RoleInfo? RoleInfo;
 
-	// Token: 0x0400CD31 RID: 52529
+	// Token: 0x0400D114 RID: 53524
 	private bool IsAutoRoleInternal;
 
-	// Token: 0x0400CD32 RID: 52530
+	// Token: 0x0400D115 RID: 53525
 	private AutoRole? AutoRoleConfig;
 
-	// Token: 0x0400CD33 RID: 52531
+	// Token: 0x0400D116 RID: 53526
 	private bool? IsCharacterMonsterInternal;
 
-	// Token: 0x0400CD34 RID: 52532
+	// Token: 0x0400D117 RID: 53527
 	private bool? IsSummonByCharacterMonsterInternal;
 
-	// Token: 0x0400CD35 RID: 52533
+	// Token: 0x0400D118 RID: 53528
 	private int SkinModelId;
 
-	// Token: 0x0400CD36 RID: 52534
+	// Token: 0x0400D119 RID: 53529
 	private int SkinId;
 
-	// Token: 0x0400CD37 RID: 52535
+	// Token: 0x0400D11A RID: 53530
 	private int ParaglidingSkinId;
 
-	// Token: 0x0400CD38 RID: 52536
+	// Token: 0x0400D11B RID: 53531
 	private int SoarWingSkinId;
 
-	// Token: 0x0400CD39 RID: 52537
+	// Token: 0x0400D11C RID: 53532
 	private int HardnessModeId;
 
-	// Token: 0x0400CD3A RID: 52538
+	// Token: 0x0400D11D RID: 53533
 	private long SummonerId;
 
-	// Token: 0x0400CD3B RID: 52539
+	// Token: 0x0400D11E RID: 53534
 	private int SummonerPlayerId;
 
-	// Token: 0x0400CD3C RID: 52540
+	// Token: 0x0400D11F RID: 53535
 	private int SummonsVersion;
 
-	// Token: 0x0400CD3D RID: 52541
+	// Token: 0x0400D120 RID: 53536
 	[Nullable(2)]
 	private MovementInformation MovementInfo;
 
-	// Token: 0x0400CD3E RID: 52542
+	// Token: 0x0400D121 RID: 53537
 	[Nullable(2)]
 	private BlackboardMap Blackboard;
 
-	// Token: 0x0400CD3F RID: 52543
+	// Token: 0x0400D122 RID: 53538
 	private readonly List<string> PublicTags = new List<string>();
 
-	// Token: 0x0400CD40 RID: 52544
+	// Token: 0x0400D123 RID: 53539
 	private readonly HashSet<string> Tags = new HashSet<string>();
 
-	// Token: 0x0400CD41 RID: 52545
+	// Token: 0x0400D124 RID: 53540
 	private bool Visible;
 
-	// Token: 0x0400CD42 RID: 52546
-	private bool DisableByServer;
-
-	// Token: 0x0400CD43 RID: 52547
+	// Token: 0x0400D125 RID: 53541
 	public bool ActorVisible;
 
-	// Token: 0x0400CD44 RID: 52548
+	// Token: 0x0400D126 RID: 53542
 	private bool IsStaticInit;
 
-	// Token: 0x0400CD45 RID: 52549
+	// Token: 0x0400D127 RID: 53543
 	public LivingStatus? LivingStatus;
 
-	// Token: 0x0400CD46 RID: 52550
+	// Token: 0x0400D128 RID: 53544
 	private int AiWeaponId;
 
-	// Token: 0x0400CD47 RID: 52551
+	// Token: 0x0400D129 RID: 53545
 	public HashSet<int> EntityCommonTags = new HashSet<int>();
 
-	// Token: 0x0400CD48 RID: 52552
+	// Token: 0x0400D12A RID: 53546
 	public int RelationId;
 
-	// Token: 0x0400CD49 RID: 52553
+	// Token: 0x0400D12B RID: 53547
 	public int PbRelationMatchCfgIndex = -1;
 
-	// Token: 0x0400CD4A RID: 52554
+	// Token: 0x0400D12C RID: 53548
 	public long ControllerId;
 
-	// Token: 0x0400CD4B RID: 52555
+	// Token: 0x0400D12D RID: 53549
 	public int PbDynAttachEntityConfigId;
 
-	// Token: 0x0400CD4C RID: 52556
+	// Token: 0x0400D12E RID: 53550
 	public string PbDynAttachEntityActorKey = "";
 
-	// Token: 0x0400CD4D RID: 52557
+	// Token: 0x0400D12F RID: 53551
 	public string PbDynAttachRefActorKey = "";
 
-	// Token: 0x0400CD4E RID: 52558
+	// Token: 0x0400D130 RID: 53552
 	public global::Vector PbDynAttachRelPos = global::Vector.Create();
 
-	// Token: 0x0400CD4F RID: 52559
+	// Token: 0x0400D131 RID: 53553
 	public global::Rotator PbDynAttachRelRot = global::Rotator.Create();
 
-	// Token: 0x0400CD50 RID: 52560
+	// Token: 0x0400D132 RID: 53554
 	public bool IsShowingHandFx;
 
-	// Token: 0x0400CD51 RID: 52561
+	// Token: 0x0400D133 RID: 53555
 	public int AutonomousId;
 
-	// Token: 0x0400CD52 RID: 52562
+	// Token: 0x0400D134 RID: 53556
 	private int WeaponSkinId;
 
-	// Token: 0x0400CD53 RID: 52563
+	// Token: 0x0400D135 RID: 53557
 	private List<int> OrnamentIds = new List<int>();
 
-	// Token: 0x0400CD54 RID: 52564
+	// Token: 0x0400D136 RID: 53558
 	public Dictionary<int, OccupiedBoardGridInfo> OccupiedGridInfo = new Dictionary<int, OccupiedBoardGridInfo>();
 
-	// Token: 0x0400CD55 RID: 52565
+	// Token: 0x0400D137 RID: 53559
 	public List<BoardGridDynamicConfig> DynamicGridInfo = new List<BoardGridDynamicConfig>();
 
-	// Token: 0x0400CD56 RID: 52566
+	// Token: 0x0400D138 RID: 53560
 	public bool BoardCanMove = true;
 
-	// Token: 0x0400CD57 RID: 52567
+	// Token: 0x0400D139 RID: 53561
 	private int ModelConfigId;
 
-	// Token: 0x0400CD58 RID: 52568
+	// Token: 0x0400D13A RID: 53562
 	[Nullable(2)]
 	private SModelConfig ModelConfig;
 
-	// Token: 0x0400CD59 RID: 52569
+	// Token: 0x0400D13B RID: 53563
 	private string ModelBpPath = "";
 
-	// Token: 0x0400CD5A RID: 52570
+	// Token: 0x0400D13C RID: 53564
 	private int DurabilityValue;
 
-	// Token: 0x0400CD5B RID: 52571
+	// Token: 0x0400D13D RID: 53565
 	[Nullable(2)]
 	private Aki.Protocol.Vector InitLocation;
 
-	// Token: 0x0400CD5C RID: 52572
+	// Token: 0x0400D13E RID: 53566
 	[Nullable(2)]
 	private Aki.Protocol.Vector InitLinearVelocity;
 
-	// Token: 0x0400CD5D RID: 52573
+	// Token: 0x0400D13F RID: 53567
 	private ECharacterState InitCharacterState;
 
-	// Token: 0x0400CD5E RID: 52574
+	// Token: 0x0400D140 RID: 53568
 	[Nullable(2)]
 	private Aki.Protocol.Vector InitGravityDirection;
 
-	// Token: 0x0400CD5F RID: 52575
+	// Token: 0x0400D141 RID: 53569
 	private AkiClient.Game.Aki.Character.BaseCharacter.ECamp? ServerCamp;
 
-	// Token: 0x0400CD60 RID: 52576
+	// Token: 0x0400D142 RID: 53570
 	private bool RemoveState;
 
-	// Token: 0x0400CD61 RID: 52577
+	// Token: 0x0400D143 RID: 53571
 	[Nullable(2)]
 	private int[] AwakedEntities;
 
-	// Token: 0x0400CD62 RID: 52578
+	// Token: 0x0400D144 RID: 53572
 	[Nullable(2)]
 	public long[] PbInRangeEntityCreatureDataIds;
 
-	// Token: 0x0400CD63 RID: 52579
+	// Token: 0x0400D145 RID: 53573
 	[Nullable(2)]
 	public int[] PbInRangePlayerIds;
 
-	// Token: 0x0400CD64 RID: 52580
+	// Token: 0x0400D146 RID: 53574
 	[Nullable(2)]
 	public int[] PbSceneItemAttributeIds;
 
-	// Token: 0x0400CD65 RID: 52581
+	// Token: 0x0400D147 RID: 53575
 	public int? PbPullingFoundationEntityId;
 
-	// Token: 0x0400CD66 RID: 52582
+	// Token: 0x0400D148 RID: 53576
 	public bool PbSceneAiEnabled;
 
-	// Token: 0x0400CD67 RID: 52583
+	// Token: 0x0400D149 RID: 53577
 	[Nullable(2)]
 	public SceneItemPatrolInfoPb PbPatrolInfoPb;
 
-	// Token: 0x0400CD68 RID: 52584
+	// Token: 0x0400D14A RID: 53578
 	[Nullable(2)]
 	public int[] PbAnimalInitialPartIds;
 
-	// Token: 0x0400CD69 RID: 52585
+	// Token: 0x0400D14B RID: 53579
 	[Nullable(new byte[]
 	{
 		2,
@@ -3483,243 +3106,246 @@ public class CreatureDataComponent : EntityComponent, IStaticVariableResetter
 	})]
 	public List<CombinePartInfo> PbCombinePartInfoList;
 
-	// Token: 0x0400CD6A RID: 52586
+	// Token: 0x0400D14C RID: 53580
 	public long? PbCombineTargetServerId;
 
-	// Token: 0x0400CD6B RID: 52587
+	// Token: 0x0400D14D RID: 53581
 	public bool PbHookLockPointDisabled;
 
-	// Token: 0x0400CD6C RID: 52588
+	// Token: 0x0400D14E RID: 53582
 	public long[] PbHackingEntities = new long[0];
 
-	// Token: 0x0400CD6D RID: 52589
+	// Token: 0x0400D14F RID: 53583
 	public long? PbHackedByEntities;
 
-	// Token: 0x0400CD6E RID: 52590
+	// Token: 0x0400D150 RID: 53584
 	public GravityFlipType? PbGravityFlipDirection;
 
-	// Token: 0x0400CD6F RID: 52591
+	// Token: 0x0400D151 RID: 53585
 	public int PbMoveSplineId;
 
-	// Token: 0x0400CD70 RID: 52592
+	// Token: 0x0400D152 RID: 53586
 	[Nullable(2)]
 	public MoveSplineConfig PbMoveSplineConfig;
 
-	// Token: 0x0400CD71 RID: 52593
+	// Token: 0x0400D153 RID: 53587
 	[Nullable(2)]
 	public SceneItemSplineRuntimeData PbMoveSplineSceneItemRuntimeData;
 
-	// Token: 0x0400CD72 RID: 52594
+	// Token: 0x0400D154 RID: 53588
 	[Nullable(2)]
 	public CharacterMoveToPointConfig PbMoveToPointConfig;
 
-	// Token: 0x0400CD73 RID: 52595
+	// Token: 0x0400D155 RID: 53589
 	private int CanGetRewardCount = 1;
 
-	// Token: 0x0400CD74 RID: 52596
+	// Token: 0x0400D156 RID: 53590
 	private long LastRewardTime;
 
-	// Token: 0x0400CD75 RID: 52597
+	// Token: 0x0400D157 RID: 53591
 	public List<SpawnerEntityInfo> SpawnedEntityInfos = new List<SpawnerEntityInfo>();
 
-	// Token: 0x0400CD76 RID: 52598
+	// Token: 0x0400D158 RID: 53592
 	public TemplateSpawnerType TemplateSpawnerType;
 
-	// Token: 0x0400CD77 RID: 52599
+	// Token: 0x0400D159 RID: 53593
 	public long HoldHandTargetEntityId;
 
-	// Token: 0x0400CD78 RID: 52600
+	// Token: 0x0400D15A RID: 53594
 	public int HoldHandType;
 
-	// Token: 0x0400CD79 RID: 52601
+	// Token: 0x0400D15B RID: 53595
 	public bool HoldHandIsFollow;
 
-	// Token: 0x0400CD7A RID: 52602
+	// Token: 0x0400D15C RID: 53596
 	[Nullable(2)]
 	public HonamiStoryItemInfo HonamiStoryItemInfo;
 
-	// Token: 0x0400CD7B RID: 52603
+	// Token: 0x0400D15D RID: 53597
 	public int HonamiStoryLevel;
 
-	// Token: 0x0400CD7C RID: 52604
+	// Token: 0x0400D15E RID: 53598
 	[Nullable(2)]
 	public RbBlockComponentPb RbBlockInfo;
 
-	// Token: 0x0400CD7D RID: 52605
+	// Token: 0x0400D15F RID: 53599
 	[Nullable(2)]
 	public RbFloorComponentPb RbFloorInfo;
 
-	// Token: 0x0400CD7E RID: 52606
+	// Token: 0x0400D160 RID: 53600
 	[Nullable(2)]
 	public RbItemComponentPb RbItemInfo;
 
-	// Token: 0x0400CD7F RID: 52607
+	// Token: 0x0400D161 RID: 53601
 	[Nullable(2)]
 	public PlayerFollowersComponentPb PlayerFollowersInfo;
 
-	// Token: 0x0400CD80 RID: 52608
+	// Token: 0x0400D162 RID: 53602
 	[Nullable(2)]
 	public FollowEntityComponentPb FollowerInfo;
 
-	// Token: 0x0400CD81 RID: 52609
+	// Token: 0x0400D163 RID: 53603
 	[Nullable(2)]
 	public MotorOutlookEquippedPb MotorOutlookInfo;
 
-	// Token: 0x0400CD82 RID: 52610
+	// Token: 0x0400D164 RID: 53604
 	public int ExhibitionItemId;
 
-	// Token: 0x0400CD83 RID: 52611
+	// Token: 0x0400D165 RID: 53605
 	public int FurnitureSlotId;
 
-	// Token: 0x0400CD84 RID: 52612
+	// Token: 0x0400D166 RID: 53606
 	public int FurnitureId;
 
-	// Token: 0x0400CD85 RID: 52613
+	// Token: 0x0400D167 RID: 53607
 	[Nullable(2)]
 	public DollGrabMachineComponentPb DollGrabMachineInfo;
 
-	// Token: 0x0400CD86 RID: 52614
+	// Token: 0x0400D168 RID: 53608
 	[Nullable(2)]
 	public DollGrabShowcaseComponentPb DollGrabShowcaseInfo;
 
-	// Token: 0x0400CD87 RID: 52615
+	// Token: 0x0400D169 RID: 53609
 	public int HuluSkinId;
 
-	// Token: 0x0400CD88 RID: 52616
+	// Token: 0x0400D16A RID: 53610
 	private int PbDataId;
 
-	// Token: 0x0400CD89 RID: 52617
+	// Token: 0x0400D16B RID: 53611
 	private int PrefabId;
 
-	// Token: 0x0400CD8A RID: 52618
+	// Token: 0x0400D16C RID: 53612
 	private bool IsPosAbnormalInternal;
 
-	// Token: 0x0400CD8B RID: 52619
+	// Token: 0x0400D16D RID: 53613
 	[Nullable(2)]
 	private IEntityData PbEntityInitData;
 
-	// Token: 0x0400CD8C RID: 52620
+	// Token: 0x0400D16E RID: 53614
 	[Nullable(2)]
 	private IEntityTemplate TemplateData;
 
-	// Token: 0x0400CD8D RID: 52621
+	// Token: 0x0400D16F RID: 53615
 	private bool IsEnableTracking;
 
-	// Token: 0x0400CD8E RID: 52622
+	// Token: 0x0400D170 RID: 53616
 	private string PbModelConfigId = "";
 
-	// Token: 0x0400CD8F RID: 52623
+	// Token: 0x0400D171 RID: 53617
 	[Nullable(2)]
 	private IBlueprintItem PbModelConfig;
 
-	// Token: 0x0400CD90 RID: 52624
+	// Token: 0x0400D172 RID: 53618
 	private long MotorContextIdInner;
 
-	// Token: 0x0400CD91 RID: 52625
+	// Token: 0x0400D173 RID: 53619
 	private int PbLiftFloor;
 
-	// Token: 0x0400CD92 RID: 52626
+	// Token: 0x0400D174 RID: 53620
 	private int? PlotPlayerId;
 
-	// Token: 0x0400CD93 RID: 52627
+	// Token: 0x0400D175 RID: 53621
 	private bool IsPlotControl;
 
-	// Token: 0x0400CD94 RID: 52628
+	// Token: 0x0400D176 RID: 53622
 	[Nullable(2)]
 	private AdviceEntityData AdviceEntityData;
 
-	// Token: 0x0400CD95 RID: 52629
+	// Token: 0x0400D177 RID: 53623
 	[Nullable(2)]
 	private BaseInfoComponent BaseConfig;
 
-	// Token: 0x0400CD96 RID: 52630
+	// Token: 0x0400D178 RID: 53624
 	[Nullable(2)]
 	private FightInteractComponent FightInterConfig;
 
-	// Token: 0x0400CD97 RID: 52631
+	// Token: 0x0400D179 RID: 53625
 	[Nullable(2)]
 	private SEntityProperty CreatureProperty;
 
-	// Token: 0x0400CD98 RID: 52632
+	// Token: 0x0400D17A RID: 53626
 	private static Dictionary<string, int> EntityIdByUid;
 
-	// Token: 0x0400CD99 RID: 52633
+	// Token: 0x0400D17B RID: 53627
 	public readonly Dictionary<string, EntityComponentPb> ComponentDataMap = new Dictionary<string, EntityComponentPb>();
 
-	// Token: 0x0400CD9A RID: 52634
+	// Token: 0x0400D17C RID: 53628
 	private IList<long> SummonRandomInfo = new List<long>();
 
-	// Token: 0x0400CD9B RID: 52635
+	// Token: 0x0400D17D RID: 53629
 	private bool PreloadFinished;
 
-	// Token: 0x0400CD9C RID: 52636
+	// Token: 0x0400D17E RID: 53630
 	private bool Loading;
 
-	// Token: 0x0400CD9D RID: 52637
+	// Token: 0x0400D17F RID: 53631
 	private EntranceState? EnterComponentInitState;
 
-	// Token: 0x0400CD9E RID: 52638
+	// Token: 0x0400D180 RID: 53632
 	public bool IsConcealed;
 
-	// Token: 0x0400CD9F RID: 52639
+	// Token: 0x0400D181 RID: 53633
 	public bool IsPreAwakeEntity;
 
-	// Token: 0x0400CDA0 RID: 52640
+	// Token: 0x0400D182 RID: 53634
 	public ESummonType SummonType;
 
-	// Token: 0x0400CDA1 RID: 52641
+	// Token: 0x0400D183 RID: 53635
 	public int SummonCfgId;
 
-	// Token: 0x0400CDA2 RID: 52642
+	// Token: 0x0400D184 RID: 53636
 	public long SummonerPlayerEntityId;
 
-	// Token: 0x0400CDA3 RID: 52643
+	// Token: 0x0400D185 RID: 53637
 	public IList<int> UnpollutedSplinePbDataIds = new List<int>();
 
-	// Token: 0x0400CDA4 RID: 52644
+	// Token: 0x0400D186 RID: 53638
 	[Nullable(2)]
 	private global::Vector ServerStartLocationInternal;
 
-	// Token: 0x0400CDA5 RID: 52645
+	// Token: 0x0400D187 RID: 53639
 	private bool IsSnap;
 
-	// Token: 0x0400CDA6 RID: 52646
+	// Token: 0x0400D188 RID: 53640
 	private long? VisionControlCreatureDataIdInternal = new long?(0L);
 
-	// Token: 0x0400CDA7 RID: 52647
+	// Token: 0x0400D189 RID: 53641
 	private List<long> VisionSkillServerEntityIdsInternal = new List<long>();
 
-	// Token: 0x0400CDA8 RID: 52648
+	// Token: 0x0400D18A RID: 53642
 	private readonly List<long> CustomServerEntityIdsInternal = new List<long>();
 
-	// Token: 0x0400CDA9 RID: 52649
+	// Token: 0x0400D18B RID: 53643
 	private long BossRushCreatureDataIdInternal;
 
-	// Token: 0x0400CDAA RID: 52650
+	// Token: 0x0400D18C RID: 53644
 	private List<long> SummonEntityIdsInternal = new List<long>();
 
-	// Token: 0x0400CDAB RID: 52651
+	// Token: 0x0400D18D RID: 53645
 	private readonly Dictionary<string, VarDefinePb> EntityVariables = new Dictionary<string, VarDefinePb>();
 
-	// Token: 0x0400CDAC RID: 52652
+	// Token: 0x0400D18E RID: 53646
 	public BigInteger ComponentsKey = 0;
 
-	// Token: 0x0400CDAD RID: 52653
+	// Token: 0x0400D18F RID: 53647
 	[Nullable(2)]
 	private string EntityOverrideName;
 
-	// Token: 0x0400CDAE RID: 52654
+	// Token: 0x0400D190 RID: 53648
 	[Nullable(2)]
 	private string EntityOverrideSecondName;
 
-	// Token: 0x0400CDAF RID: 52655
+	// Token: 0x0400D191 RID: 53649
 	[Nullable(2)]
 	private string EntityOverrideFunctionIcon;
 
-	// Token: 0x0400CDB0 RID: 52656
+	// Token: 0x0400D192 RID: 53650
 	[Nullable(2)]
 	public int[] TrapAuxiliaryConfigIds;
 
-	// Token: 0x0400CDB1 RID: 52657
+	// Token: 0x0400D193 RID: 53651
+	public bool IsClientEntity;
+
+	// Token: 0x0400D194 RID: 53652
 	private BigInteger ComponentKey = -1;
 }

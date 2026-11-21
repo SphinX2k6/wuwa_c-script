@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001165 RID: 4453
+// Token: 0x02000619 RID: 1561
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerHardLevelStarItem : UiPanelBase
 {
-	// Token: 0x06007593 RID: 30099 RVA: 0x001848EC File Offset: 0x00182AEC
+	// Token: 0x0600492A RID: 18730 RVA: 0x0018D468 File Offset: 0x0018B668
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -39,13 +39,13 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007594 RID: 30100 RVA: 0x00184A16 File Offset: 0x00182C16
+	// Token: 0x0600492B RID: 18731 RVA: 0x0018D592 File Offset: 0x0018B792
 	public void SetLookBtnClickCallback(Action callback)
 	{
 		this.LookBtnClickCallback = callback;
 	}
 
-	// Token: 0x06007595 RID: 30101 RVA: 0x00184A20 File Offset: 0x00182C20
+	// Token: 0x0600492C RID: 18732 RVA: 0x0018D59C File Offset: 0x0018B79C
 	public void RefreshStar(int starNumber)
 	{
 		UUIArtText artText = base.GetArtText(1);
@@ -55,7 +55,7 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007596 RID: 30102 RVA: 0x00184A5C File Offset: 0x00182C5C
+	// Token: 0x0600492D RID: 18733 RVA: 0x0018D5D8 File Offset: 0x0018B7D8
 	public void SetDifficultyBg(string colorHex)
 	{
 		UUISprite sprite = base.GetSprite(2);
@@ -66,7 +66,7 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007597 RID: 30103 RVA: 0x00184A84 File Offset: 0x00182C84
+	// Token: 0x0600492E RID: 18734 RVA: 0x0018D600 File Offset: 0x0018B800
 	public void SetDifficultyText(string difficultyTextKey)
 	{
 		UUIText text = base.GetText(3);
@@ -76,7 +76,7 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007598 RID: 30104 RVA: 0x00184AB0 File Offset: 0x00182CB0
+	// Token: 0x0600492F RID: 18735 RVA: 0x0018D62C File Offset: 0x0018B82C
 	public void SetDeBuffNum(int deBuffCount)
 	{
 		UUIText text = base.GetText(4);
@@ -86,7 +86,7 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007599 RID: 30105 RVA: 0x00184AE4 File Offset: 0x00182CE4
+	// Token: 0x06004930 RID: 18736 RVA: 0x0018D660 File Offset: 0x0018B860
 	public void SetNameText(string nameTextKey)
 	{
 		UUIText text = base.GetText(5);
@@ -96,7 +96,7 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600759A RID: 30106 RVA: 0x00184B0D File Offset: 0x00182D0D
+	// Token: 0x06004931 RID: 18737 RVA: 0x0018D689 File Offset: 0x0018B889
 	private void OnLookBtnClick()
 	{
 		Action lookBtnClickCallback = this.LookBtnClickCallback;
@@ -107,30 +107,30 @@ public class BabelTowerHardLevelStarItem : UiPanelBase
 		lookBtnClickCallback();
 	}
 
-	// Token: 0x040035F8 RID: 13816
+	// Token: 0x04003691 RID: 13969
 	[Nullable(2)]
 	private Action LookBtnClickCallback;
 
-	// Token: 0x02007737 RID: 30519
+	// Token: 0x020068C5 RID: 26821
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402753C RID: 161084
+		// Token: 0x0402287A RID: 141434
 		public const int LookBtn = 0;
 
-		// Token: 0x0402753D RID: 161085
+		// Token: 0x0402287B RID: 141435
 		public const int StartNumText = 1;
 
-		// Token: 0x0402753E RID: 161086
+		// Token: 0x0402287C RID: 141436
 		public const int DiffColorBg = 2;
 
-		// Token: 0x0402753F RID: 161087
+		// Token: 0x0402287D RID: 141437
 		public const int DiffColorText = 3;
 
-		// Token: 0x04027540 RID: 161088
+		// Token: 0x0402287E RID: 141438
 		public const int DeBuffNumText = 4;
 
-		// Token: 0x04027541 RID: 161089
+		// Token: 0x0402287F RID: 141439
 		public const int NameText = 5;
 	}
 }

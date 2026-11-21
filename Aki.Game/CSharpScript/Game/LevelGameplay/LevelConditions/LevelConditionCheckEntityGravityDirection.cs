@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C81 RID: 27777
+	// Token: 0x02005DFB RID: 24059
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckEntityGravityDirection : LevelConditionBase
 	{
-		// Token: 0x06044590 RID: 279952 RVA: 0x010D9EB0 File Offset: 0x010D80B0
+		// Token: 0x0603A6EA RID: 239338 RVA: 0x01083E54 File Offset: 0x01082054
 		private Vector GetWorldAxisConfigVector(EWorldAxisType worldAxisType)
 		{
 			switch (worldAxisType)
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x06044591 RID: 279953 RVA: 0x010D9FC8 File Offset: 0x010D81C8
+		// Token: 0x0603A6EB RID: 239339 RVA: 0x01083F6C File Offset: 0x0108216C
 		[return: Nullable(2)]
 		private Vector GetEntityGravityDirection(EntityHandle entityHandle)
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return null;
 		}
 
-		// Token: 0x06044592 RID: 279954 RVA: 0x010DA09C File Offset: 0x010D829C
+		// Token: 0x0603A6EC RID: 239340 RVA: 0x01084040 File Offset: 0x01082240
 		[NullableContext(2)]
 		private unsafe bool CheckEntityGravityDirectionEquals([Nullable(1)] ICheckEntityGravityDirection config, AActor inTrigger, GeneralContext context)
 		{
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return true;
 		}
 
-		// Token: 0x06044593 RID: 279955 RVA: 0x010DA3DC File Offset: 0x010D85DC
+		// Token: 0x0603A6ED RID: 239341 RVA: 0x01084380 File Offset: 0x01082580
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			GeneralContext context = (eventArgs.Length != 0) ? (eventArgs[0] as GeneralContext) : null;
@@ -193,15 +193,15 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return !flag;
 		}
 
-		// Token: 0x040239BD RID: 145853
+		// Token: 0x0401EC5F RID: 126047
 		[StaticVariableRuleIgnore]
 		private static readonly Vector WorldGravityDirection = Vector.DownVectorProxy;
 
-		// Token: 0x040239BE RID: 145854
+		// Token: 0x0401EC60 RID: 126048
 		[StaticVariableRuleIgnore]
 		private static readonly int GravityValueRoundDigit = 3;
 
-		// Token: 0x040239BF RID: 145855
+		// Token: 0x0401EC61 RID: 126049
 		[StaticVariableRuleIgnore]
 		private static readonly double GravityCompareErrorPrecision = 0.001;
 	}

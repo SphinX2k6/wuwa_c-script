@@ -1,45 +1,45 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019D0 RID: 6608
+// Token: 0x02000E8F RID: 3727
 [NullableContext(1)]
 [Nullable(0)]
 public class WorldNavigationConfig : IWorldNavigationConfig
 {
-	// Token: 0x17001024 RID: 4132
-	// (get) Token: 0x0600C0F7 RID: 49399 RVA: 0x002B8960 File Offset: 0x002B6B60
-	// (set) Token: 0x0600C0F8 RID: 49400 RVA: 0x002B8968 File Offset: 0x002B6B68
+	// Token: 0x17001049 RID: 4169
+	// (get) Token: 0x06009504 RID: 38148 RVA: 0x002C392C File Offset: 0x002C1B2C
+	// (set) Token: 0x06009505 RID: 38149 RVA: 0x002C3934 File Offset: 0x002C1B34
 	public Vector SourcePosition { get; set; }
 
-	// Token: 0x17001025 RID: 4133
-	// (get) Token: 0x0600C0F9 RID: 49401 RVA: 0x002B8971 File Offset: 0x002B6B71
-	// (set) Token: 0x0600C0FA RID: 49402 RVA: 0x002B8979 File Offset: 0x002B6B79
+	// Token: 0x1700104A RID: 4170
+	// (get) Token: 0x06009506 RID: 38150 RVA: 0x002C393D File Offset: 0x002C1B3D
+	// (set) Token: 0x06009507 RID: 38151 RVA: 0x002C3945 File Offset: 0x002C1B45
 	public Vector DestPosition { get; set; }
 
-	// Token: 0x17001026 RID: 4134
-	// (get) Token: 0x0600C0FB RID: 49403 RVA: 0x002B8982 File Offset: 0x002B6B82
-	// (set) Token: 0x0600C0FC RID: 49404 RVA: 0x002B898A File Offset: 0x002B6B8A
+	// Token: 0x1700104B RID: 4171
+	// (get) Token: 0x06009508 RID: 38152 RVA: 0x002C394E File Offset: 0x002C1B4E
+	// (set) Token: 0x06009509 RID: 38153 RVA: 0x002C3956 File Offset: 0x002C1B56
 	public int MapId { get; set; }
 
-	// Token: 0x17001027 RID: 4135
-	// (get) Token: 0x0600C0FD RID: 49405 RVA: 0x002B8993 File Offset: 0x002B6B93
-	// (set) Token: 0x0600C0FE RID: 49406 RVA: 0x002B899B File Offset: 0x002B6B9B
+	// Token: 0x1700104C RID: 4172
+	// (get) Token: 0x0600950A RID: 38154 RVA: 0x002C395F File Offset: 0x002C1B5F
+	// (set) Token: 0x0600950B RID: 38155 RVA: 0x002C3967 File Offset: 0x002C1B67
 	[Nullable(2)]
 	public BaseMoveComponent MoveComponent { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17001028 RID: 4136
-	// (get) Token: 0x0600C0FF RID: 49407 RVA: 0x002B89A4 File Offset: 0x002B6BA4
-	// (set) Token: 0x0600C100 RID: 49408 RVA: 0x002B89AC File Offset: 0x002B6BAC
+	// Token: 0x1700104D RID: 4173
+	// (get) Token: 0x0600950C RID: 38156 RVA: 0x002C3970 File Offset: 0x002C1B70
+	// (set) Token: 0x0600950D RID: 38157 RVA: 0x002C3978 File Offset: 0x002C1B78
 	public int? DistanceThreshold { get; set; }
 
-	// Token: 0x17001029 RID: 4137
-	// (get) Token: 0x0600C101 RID: 49409 RVA: 0x002B89B5 File Offset: 0x002B6BB5
-	// (set) Token: 0x0600C102 RID: 49410 RVA: 0x002B89BD File Offset: 0x002B6BBD
+	// Token: 0x1700104E RID: 4174
+	// (get) Token: 0x0600950E RID: 38158 RVA: 0x002C3981 File Offset: 0x002C1B81
+	// (set) Token: 0x0600950F RID: 38159 RVA: 0x002C3989 File Offset: 0x002C1B89
 	public int? TryFindPathTimes { get; set; }
 
-	// Token: 0x1700102A RID: 4138
-	// (get) Token: 0x0600C103 RID: 49411 RVA: 0x002B89C6 File Offset: 0x002B6BC6
-	// (set) Token: 0x0600C104 RID: 49412 RVA: 0x002B89CE File Offset: 0x002B6BCE
+	// Token: 0x1700104F RID: 4175
+	// (get) Token: 0x06009510 RID: 38160 RVA: 0x002C3992 File Offset: 0x002C1B92
+	// (set) Token: 0x06009511 RID: 38161 RVA: 0x002C399A File Offset: 0x002C1B9A
 	[Nullable(2)]
 	public TWorldNavigationCallback Callback { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

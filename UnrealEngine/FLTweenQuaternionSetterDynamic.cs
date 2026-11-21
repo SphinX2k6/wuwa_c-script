@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002256 RID: 8790
+	// Token: 0x02000749 RID: 1865
 	public sealed class FLTweenQuaternionSetterDynamic : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06021695 RID: 136853 RVA: 0x00313D6A File Offset: 0x00311F6A
+		// Token: 0x0600A2CC RID: 41676 RVA: 0x000F07D2 File Offset: 0x000EE9D2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLTweenQuaternionSetterDynamic.StaticFunctionPtr();
 		}
 
-		// Token: 0x06021696 RID: 136854 RVA: 0x00313D76 File Offset: 0x00311F76
+		// Token: 0x0600A2CD RID: 41677 RVA: 0x000F07DE File Offset: 0x000EE9DE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLTweenQuaternionSetterDynamic._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLTweenQuaternionSetterDynamic._FunctionPtr;
 		}
 
-		// Token: 0x06021697 RID: 136855 RVA: 0x00313D99 File Offset: 0x00311F99
+		// Token: 0x0600A2CE RID: 41678 RVA: 0x000F0801 File Offset: 0x000EEA01
 		public FLTweenQuaternionSetterDynamic()
 		{
 		}
 
-		// Token: 0x06021698 RID: 136856 RVA: 0x00313DA1 File Offset: 0x00311FA1
+		// Token: 0x0600A2CF RID: 41679 RVA: 0x000F0809 File Offset: 0x000EEA09
 		[NullableContext(2)]
 		public FLTweenQuaternionSetterDynamic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021699 RID: 136857 RVA: 0x00313DAB File Offset: 0x00311FAB
+		// Token: 0x0600A2D0 RID: 41680 RVA: 0x000F0813 File Offset: 0x000EEA13
 		public FLTweenQuaternionSetterDynamic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602169A RID: 136858 RVA: 0x00313DB6 File Offset: 0x00311FB6
+		// Token: 0x0600A2D1 RID: 41681 RVA: 0x000F081E File Offset: 0x000EEA1E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FQuat>) ?? ((Action<FQuat>)Delegate.CreateDelegate(typeof(Action<FQuat>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0602169B RID: 136859 RVA: 0x00313DE8 File Offset: 0x00311FE8
+		// Token: 0x0600A2D2 RID: 41682 RVA: 0x000F0850 File Offset: 0x000EEA50
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FQuat> Callback)
 		{
 			if (FLTweenQuaternionSetterDynamic.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLTweenQuaternionSetterDynamic.RegisterId);
 		}
 
-		// Token: 0x0602169C RID: 136860 RVA: 0x00313E24 File Offset: 0x00312024
+		// Token: 0x0600A2D3 RID: 41683 RVA: 0x000F088C File Offset: 0x000EEA8C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(in FQuat value)
 		{
 			FLTweenQuaternionSetterDynamic.__FLTweenQuaternionSetterDynamic_DelegateParams* ptr = stackalloc FLTweenQuaternionSetterDynamic.__FLTweenQuaternionSetterDynamic_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLTweenQuaternionSetterDynamic.__FLTweenQuaternionSetterDynamic_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0602169D RID: 136861 RVA: 0x00313E68 File Offset: 0x00312068
+		// Token: 0x0600A2D4 RID: 41684 RVA: 0x000F08D0 File Offset: 0x000EEAD0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FQuat> action = target as Action<FQuat>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLTweenQuaternionSetterDynamic.__FLTweenQuaternionSetterDynamic_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04011CEA RID: 72938
+		// Token: 0x040045A0 RID: 17824
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011CEB RID: 72939
+		// Token: 0x040045A1 RID: 17825
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LTween.LTweenQuaternionSetterDynamic__DelegateSignature";
 
-		// Token: 0x04011CEC RID: 72940
+		// Token: 0x040045A2 RID: 17826
 		private static int RegisterId;
 
-		// Token: 0x02003515 RID: 13589
+		// Token: 0x02000F32 RID: 3890
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLTweenQuaternionSetterDynamic_DelegateParams
+		private ref struct __FLTweenQuaternionSetterDynamic_DelegateParams
 		{
-			// Token: 0x04017547 RID: 95559
+			// Token: 0x04006306 RID: 25350
 			[FieldOffset(0)]
 			public FQuat value;
 		}
 
-		// Token: 0x02003516 RID: 13590
+		// Token: 0x02000F33 RID: 3891
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017548 RID: 95560
+			// Token: 0x04006307 RID: 25351
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

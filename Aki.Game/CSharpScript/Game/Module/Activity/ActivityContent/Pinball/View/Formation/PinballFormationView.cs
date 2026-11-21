@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x0200636F RID: 25455
+	// Token: 0x020052ED RID: 21229
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballFormationView : UiViewBase
 	{
-		// Token: 0x06040077 RID: 262263 RVA: 0x00F7D351 File Offset: 0x00F7B551
+		// Token: 0x06034D38 RID: 216376 RVA: 0x00EC42B1 File Offset: 0x00EC24B1
 		public PinballFormationView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040078 RID: 262264 RVA: 0x00F7D368 File Offset: 0x00F7B568
+		// Token: 0x06034D39 RID: 216377 RVA: 0x00EC42C8 File Offset: 0x00EC24C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040079 RID: 262265 RVA: 0x00F7D674 File Offset: 0x00F7B874
+		// Token: 0x06034D3A RID: 216378 RVA: 0x00EC45D4 File Offset: 0x00EC27D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballFormationView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604007A RID: 262266 RVA: 0x00F7D6B8 File Offset: 0x00F7B8B8
+		// Token: 0x06034D3B RID: 216379 RVA: 0x00EC4618 File Offset: 0x00EC2818
 		protected override void OnStart()
 		{
 			IPinballFormationViewData pinballFormationViewData = this.OpenParam as IPinballFormationViewData;
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			base.GetSprite(13).SetUIActive(false);
 		}
 
-		// Token: 0x0604007B RID: 262267 RVA: 0x00F7D704 File Offset: 0x00F7B904
+		// Token: 0x06034D3C RID: 216380 RVA: 0x00EC4664 File Offset: 0x00EC2864
 		protected override void OnBeforeShow()
 		{
 			this.RefreshFormationList(this.InFormationRoleList);
 		}
 
-		// Token: 0x0604007C RID: 262268 RVA: 0x00F7D714 File Offset: 0x00F7B914
+		// Token: 0x06034D3D RID: 216381 RVA: 0x00EC4674 File Offset: 0x00EC2874
 		private void InitRoleInFormation()
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(this.LevelId);
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			}
 		}
 
-		// Token: 0x0604007D RID: 262269 RVA: 0x00F7D7C4 File Offset: 0x00F7B9C4
+		// Token: 0x06034D3E RID: 216382 RVA: 0x00EC4724 File Offset: 0x00EC2924
 		private void InitLevelInfo()
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(this.LevelId);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			captionItem.SetTitleLocalText(pinballLevelConfigById.Value.Name);
 		}
 
-		// Token: 0x0604007E RID: 262270 RVA: 0x00F7D83C File Offset: 0x00F7BA3C
+		// Token: 0x06034D3F RID: 216383 RVA: 0x00EC479C File Offset: 0x00EC299C
 		private void OnClickStartBtn()
 		{
 			if ((this.OpenParam as IPinballFormationViewData).IsRestart.GetValueOrDefault())
@@ -152,19 +152,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			PinballBattleSubController.RequestEnterInst(this.LevelId, this.IsTrailLevel ? new List<int>() : this.InFormationRoleList);
 		}
 
-		// Token: 0x0604007F RID: 262271 RVA: 0x00F7D8A3 File Offset: 0x00F7BAA3
+		// Token: 0x06034D40 RID: 216384 RVA: 0x00EC4803 File Offset: 0x00EC2A03
 		private void OnClickLeaderSkillBtn()
 		{
 			base.GetItem(8).SetUIActive(true);
 		}
 
-		// Token: 0x06040080 RID: 262272 RVA: 0x00F7D8B2 File Offset: 0x00F7BAB2
+		// Token: 0x06034D41 RID: 216385 RVA: 0x00EC4812 File Offset: 0x00EC2A12
 		private void OnClickLeaderHeadTipsMaskBtn()
 		{
 			base.GetItem(8).SetUIActive(false);
 		}
 
-		// Token: 0x06040081 RID: 262273 RVA: 0x00F7D8C4 File Offset: 0x00F7BAC4
+		// Token: 0x06034D42 RID: 216386 RVA: 0x00EC4824 File Offset: 0x00EC2A24
 		private void OnClickMonsterBtn()
 		{
 			int levelId = this.LevelId;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			PinballController.Instance.OpenMonsterDetailView(levelId).Forget<bool>();
 		}
 
-		// Token: 0x06040082 RID: 262274 RVA: 0x00F7D91C File Offset: 0x00F7BB1C
+		// Token: 0x06034D43 RID: 216387 RVA: 0x00EC487C File Offset: 0x00EC2A7C
 		private void OnClickFormationItemCallBack(int roleId)
 		{
 			if (this.IsTrailLevel)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			UiManager.Instance.OpenView(EUiViewName.PinballFormationSelectRoleView, openFormationSelectRoleViewData, null);
 		}
 
-		// Token: 0x06040083 RID: 262275 RVA: 0x00F7D974 File Offset: 0x00F7BB74
+		// Token: 0x06034D44 RID: 216388 RVA: 0x00EC48D4 File Offset: 0x00EC2AD4
 		private IPinballFormationSelectRoleViewData GetOpenFormationSelectRoleViewData(int roleId)
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(this.LevelId);
@@ -215,13 +215,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			};
 		}
 
-		// Token: 0x06040084 RID: 262276 RVA: 0x00F7DA1A File Offset: 0x00F7BC1A
+		// Token: 0x06034D45 RID: 216389 RVA: 0x00EC497A File Offset: 0x00EC2B7A
 		private void OnPinballFormationSelectRoleViewConfirm(List<int> roleIdList)
 		{
 			this.RefreshFormationList(roleIdList);
 		}
 
-		// Token: 0x06040085 RID: 262277 RVA: 0x00F7DA24 File Offset: 0x00F7BC24
+		// Token: 0x06034D46 RID: 216390 RVA: 0x00EC4984 File Offset: 0x00EC2B84
 		private void RefreshFormationList(List<int> roleIdList)
 		{
 			this.InFormationRoleList = roleIdList;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			this.RefreshLeaderSkill();
 		}
 
-		// Token: 0x06040086 RID: 262278 RVA: 0x00F7DAC0 File Offset: 0x00F7BCC0
+		// Token: 0x06034D47 RID: 216391 RVA: 0x00EC4A20 File Offset: 0x00EC2C20
 		private void RefreshLowLevelTips()
 		{
 			int pinballSelectRoleLevelAverage = PinballModel.Instance.GetPinballSelectRoleLevelAverage(this.InFormationRoleList);
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), (num > 0 && num >= pinballLevelConfigById.Value.RecommendLevel) ? "Pinball_Character_Team_AvgLevelLow" : "Pinball_Character_Team_LeaderLevelLow", Array.Empty<object>());
 		}
 
-		// Token: 0x06040087 RID: 262279 RVA: 0x00F7DB88 File Offset: 0x00F7BD88
+		// Token: 0x06034D48 RID: 216392 RVA: 0x00EC4AE8 File Offset: 0x00EC2CE8
 		private void RefreshWarnClassTips()
 		{
 			bool flag = false;
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			base.GetItem(16).SetUIActive(!flag);
 		}
 
-		// Token: 0x06040088 RID: 262280 RVA: 0x00F7DC34 File Offset: 0x00F7BE34
+		// Token: 0x06034D49 RID: 216393 RVA: 0x00EC4B94 File Offset: 0x00EC2D94
 		private void RefreshLeaderSkill()
 		{
 			if (this.CurrentLeadRole == 0)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			base.SetTextureByPath(pinballRoleConfigById.Value.BigIcon, base.GetTexture(7), null, null);
 		}
 
-		// Token: 0x06040089 RID: 262281 RVA: 0x00F7DD40 File Offset: 0x00F7BF40
+		// Token: 0x06034D4A RID: 216394 RVA: 0x00EC4CA0 File Offset: 0x00EC2EA0
 		[NullableContext(0)]
 		public override UniTask<bool> CloseMeAsync()
 		{
@@ -319,62 +319,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			return <CloseMeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040215F4 RID: 136692
+		// Token: 0x0401BF23 RID: 114467
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040215F5 RID: 136693
+		// Token: 0x0401BF24 RID: 114468
 		private readonly List<PinballFormationItem> FormationItemList = new List<PinballFormationItem>();
 
-		// Token: 0x040215F6 RID: 136694
+		// Token: 0x0401BF25 RID: 114469
 		private int LevelId;
 
-		// Token: 0x040215F7 RID: 136695
+		// Token: 0x0401BF26 RID: 114470
 		private List<int> InFormationRoleList;
 
-		// Token: 0x040215F8 RID: 136696
+		// Token: 0x0401BF27 RID: 114471
 		private bool IsTrailLevel;
 
-		// Token: 0x040215F9 RID: 136697
+		// Token: 0x0401BF28 RID: 114472
 		private int CurrentLeadRole;
 
-		// Token: 0x0200C588 RID: 50568
+		// Token: 0x0200AF6F RID: 44911
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B9F3 RID: 244211
+			// Token: 0x04036355 RID: 222037
 			FormationItem1,
-			// Token: 0x0403B9F4 RID: 244212
+			// Token: 0x04036356 RID: 222038
 			FormationItem2,
-			// Token: 0x0403B9F5 RID: 244213
+			// Token: 0x04036357 RID: 222039
 			FormationItem3,
-			// Token: 0x0403B9F6 RID: 244214
+			// Token: 0x04036358 RID: 222040
 			StartBtn,
-			// Token: 0x0403B9F7 RID: 244215
+			// Token: 0x04036359 RID: 222041
 			LowLevelTipsItem,
-			// Token: 0x0403B9F8 RID: 244216
+			// Token: 0x0403635A RID: 222042
 			LowLevelTipsText,
-			// Token: 0x0403B9F9 RID: 244217
+			// Token: 0x0403635B RID: 222043
 			LeaderSkillBtn,
-			// Token: 0x0403B9FA RID: 244218
+			// Token: 0x0403635C RID: 222044
 			LeaderHeadTexture,
-			// Token: 0x0403B9FB RID: 244219
+			// Token: 0x0403635D RID: 222045
 			LeaderHeadTipsItem,
-			// Token: 0x0403B9FC RID: 244220
+			// Token: 0x0403635E RID: 222046
 			LeaderHeadTipsMaskBtn,
-			// Token: 0x0403B9FD RID: 244221
+			// Token: 0x0403635F RID: 222047
 			LeaderHeadTipsNameText,
-			// Token: 0x0403B9FE RID: 244222
+			// Token: 0x04036360 RID: 222048
 			LeaderHeadTipsDesText,
-			// Token: 0x0403B9FF RID: 244223
+			// Token: 0x04036361 RID: 222049
 			LevelNameText,
-			// Token: 0x0403BA00 RID: 244224
+			// Token: 0x04036362 RID: 222050
 			LevelIconSprite,
-			// Token: 0x0403BA01 RID: 244225
+			// Token: 0x04036363 RID: 222051
 			CaptionItem,
-			// Token: 0x0403BA02 RID: 244226
+			// Token: 0x04036364 RID: 222052
 			MonsterBtn,
-			// Token: 0x0403BA03 RID: 244227
+			// Token: 0x04036365 RID: 222053
 			WarnClassTipsItem
 		}
 	}

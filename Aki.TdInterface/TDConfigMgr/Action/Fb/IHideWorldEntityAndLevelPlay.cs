@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200278B RID: 10123
+	// Token: 0x02002A5D RID: 10845
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHideWorldEntityAndLevelPlay : IHideRangeType
 	{
-		// Token: 0x0600E161 RID: 57697 RVA: 0x00214D93 File Offset: 0x00212F93
-		[NullableContext(1)]
+		// Token: 0x0600EF7F RID: 61311 RVA: 0x00231B27 File Offset: 0x0022FD27
+		[NullableContext(0)]
 		public static IHideWorldEntityAndLevelPlay Create(IHideWorldEntityAndLevelPlay? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700440D RID: 17421
-		// (get) Token: 0x0600E162 RID: 57698 RVA: 0x00214DB2 File Offset: 0x00212FB2
+		// Token: 0x17004773 RID: 18291
+		// (get) Token: 0x0600EF80 RID: 61312 RVA: 0x00231B46 File Offset: 0x0022FD46
 		public override EHideType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700440E RID: 17422
-		// (get) Token: 0x0600E163 RID: 57699 RVA: 0x00214DC0 File Offset: 0x00212FC0
+		// Token: 0x17004774 RID: 18292
+		// (get) Token: 0x0600EF81 RID: 61313 RVA: 0x00231B54 File Offset: 0x0022FD54
 		public virtual List<int> ExcludeEntities
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CEF RID: 31983
+		// Token: 0x040083A5 RID: 33701
 		private IHideWorldEntityAndLevelPlay Instance;
 
-		// Token: 0x04007CF0 RID: 31984
+		// Token: 0x040083A6 RID: 33702
 		private List<int> _ExcludeEntitiesCache;
 
-		// Token: 0x04007CF1 RID: 31985
+		// Token: 0x040083A7 RID: 33703
 		private bool _ExcludeEntitiesInited;
 	}
 }

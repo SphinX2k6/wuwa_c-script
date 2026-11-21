@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005377 RID: 21367
+	// Token: 0x020058FD RID: 22781
 	public struct IHitBulletTypeFixedBulletId : IFlatbufferObject
 	{
-		// Token: 0x17009CFE RID: 40190
-		// (get) Token: 0x06022F7A RID: 143226 RVA: 0x004D7840 File Offset: 0x004D5A40
+		// Token: 0x1700A536 RID: 42294
+		// (get) Token: 0x0602502E RID: 151598 RVA: 0x00514714 File Offset: 0x00512914
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022F7B RID: 143227 RVA: 0x004D784D File Offset: 0x004D5A4D
+		// Token: 0x0602502F RID: 151599 RVA: 0x00514721 File Offset: 0x00512921
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022F7C RID: 143228 RVA: 0x004D7854 File Offset: 0x004D5A54
+		// Token: 0x06025030 RID: 151600 RVA: 0x00514728 File Offset: 0x00512928
 		public static IHitBulletTypeFixedBulletId GetRootAsIHitBulletTypeFixedBulletId(ByteBuffer _bb)
 		{
 			return IHitBulletTypeFixedBulletId.GetRootAsIHitBulletTypeFixedBulletId(_bb, default(IHitBulletTypeFixedBulletId));
 		}
 
-		// Token: 0x06022F7D RID: 143229 RVA: 0x004D7870 File Offset: 0x004D5A70
+		// Token: 0x06025031 RID: 151601 RVA: 0x00514744 File Offset: 0x00512944
 		public static IHitBulletTypeFixedBulletId GetRootAsIHitBulletTypeFixedBulletId(ByteBuffer _bb, IHitBulletTypeFixedBulletId obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022F7E RID: 143230 RVA: 0x004D788D File Offset: 0x004D5A8D
+		// Token: 0x06025032 RID: 151602 RVA: 0x00514761 File Offset: 0x00512961
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022F7F RID: 143231 RVA: 0x004D789C File Offset: 0x004D5A9C
+		// Token: 0x06025033 RID: 151603 RVA: 0x00514770 File Offset: 0x00512970
 		public IHitBulletTypeFixedBulletId __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009CFF RID: 40191
-		// (get) Token: 0x06022F80 RID: 143232 RVA: 0x004D78AC File Offset: 0x004D5AAC
+		// Token: 0x1700A537 RID: 42295
+		// (get) Token: 0x06025034 RID: 151604 RVA: 0x00514780 File Offset: 0x00512980
 		public EHitBulletType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022F81 RID: 143233 RVA: 0x004D78E8 File Offset: 0x004D5AE8
+		// Token: 0x06025035 RID: 151605 RVA: 0x005147BC File Offset: 0x005129BC
 		public long BulletId(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x17009D00 RID: 40192
-		// (get) Token: 0x06022F82 RID: 143234 RVA: 0x004D7928 File Offset: 0x004D5B28
+		// Token: 0x1700A538 RID: 42296
+		// (get) Token: 0x06025036 RID: 151606 RVA: 0x005147FC File Offset: 0x005129FC
 		public int BulletIdLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022F83 RID: 143235 RVA: 0x004D7953 File Offset: 0x004D5B53
+		// Token: 0x06025037 RID: 151607 RVA: 0x00514827 File Offset: 0x00512A27
 		public Span<long> GetBulletIdBytes()
 		{
 			return this.__p.__vector_as_span<long>(6, 8);
 		}
 
-		// Token: 0x06022F84 RID: 143236 RVA: 0x004D7962 File Offset: 0x004D5B62
+		// Token: 0x06025038 RID: 151608 RVA: 0x00514836 File Offset: 0x00512A36
 		public long[] GetBulletIdArray()
 		{
 			return this.__p.__vector_as_array<long>(6);
 		}
 
-		// Token: 0x17009D01 RID: 40193
-		// (get) Token: 0x06022F85 RID: 143237 RVA: 0x004D7970 File Offset: 0x004D5B70
+		// Token: 0x1700A539 RID: 42297
+		// (get) Token: 0x06025039 RID: 151609 RVA: 0x00514844 File Offset: 0x00512A44
 		public bool PlayerAttack
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D02 RID: 40194
-		// (get) Token: 0x06022F86 RID: 143238 RVA: 0x004D79B0 File Offset: 0x004D5BB0
+		// Token: 0x1700A53A RID: 42298
+		// (get) Token: 0x0602503A RID: 151610 RVA: 0x00514884 File Offset: 0x00512A84
 		public byte NullMask
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022F87 RID: 143239 RVA: 0x004D79ED File Offset: 0x004D5BED
+		// Token: 0x0602503B RID: 151611 RVA: 0x005148C1 File Offset: 0x00512AC1
 		public static Offset<IHitBulletTypeFixedBulletId> CreateIHitBulletTypeFixedBulletId(FlatBufferBuilder builder, EHitBulletType Type = EHitBulletType.OnlyDropAttack, VectorOffset BulletIdOffset = default(VectorOffset), bool PlayerAttack = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -138,25 +138,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitBulletTypeFixedBulletId.EndIHitBulletTypeFixedBulletId(builder);
 		}
 
-		// Token: 0x06022F88 RID: 143240 RVA: 0x004D7A19 File Offset: 0x004D5C19
+		// Token: 0x0602503C RID: 151612 RVA: 0x005148ED File Offset: 0x00512AED
 		public static void StartIHitBulletTypeFixedBulletId(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06022F89 RID: 143241 RVA: 0x004D7A22 File Offset: 0x004D5C22
+		// Token: 0x0602503D RID: 151613 RVA: 0x005148F6 File Offset: 0x00512AF6
 		public static void AddType(FlatBufferBuilder builder, EHitBulletType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022F8A RID: 143242 RVA: 0x004D7A2D File Offset: 0x004D5C2D
+		// Token: 0x0602503E RID: 151614 RVA: 0x00514901 File Offset: 0x00512B01
 		public static void AddBulletId(FlatBufferBuilder builder, VectorOffset bulletIdOffset)
 		{
 			builder.AddOffset(1, bulletIdOffset.Value, 0);
 		}
 
-		// Token: 0x06022F8B RID: 143243 RVA: 0x004D7A40 File Offset: 0x004D5C40
+		// Token: 0x0602503F RID: 151615 RVA: 0x00514914 File Offset: 0x00512B14
 		public static VectorOffset CreateBulletIdVector(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022F8C RID: 143244 RVA: 0x004D7A77 File Offset: 0x004D5C77
+		// Token: 0x06025040 RID: 151616 RVA: 0x0051494B File Offset: 0x00512B4B
 		public static VectorOffset CreateBulletIdVectorBlock(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -175,7 +175,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022F8D RID: 143245 RVA: 0x004D7A91 File Offset: 0x004D5C91
+		// Token: 0x06025041 RID: 151617 RVA: 0x00514965 File Offset: 0x00512B65
 		public static VectorOffset CreateBulletIdVectorBlock(FlatBufferBuilder builder, ArraySegment<long> data)
 		{
 			builder.StartVector(8, data.Count, 8);
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022F8E RID: 143246 RVA: 0x004D7AAF File Offset: 0x004D5CAF
+		// Token: 0x06025042 RID: 151618 RVA: 0x00514983 File Offset: 0x00512B83
 		public static VectorOffset CreateBulletIdVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -191,31 +191,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022F8F RID: 143247 RVA: 0x004D7AC8 File Offset: 0x004D5CC8
+		// Token: 0x06025043 RID: 151619 RVA: 0x0051499C File Offset: 0x00512B9C
 		public static void StartBulletIdVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(8, numElems, 8);
 		}
 
-		// Token: 0x06022F90 RID: 143248 RVA: 0x004D7AD3 File Offset: 0x004D5CD3
+		// Token: 0x06025044 RID: 151620 RVA: 0x005149A7 File Offset: 0x00512BA7
 		public static void AddPlayerAttack(FlatBufferBuilder builder, bool playerAttack)
 		{
 			builder.AddBool(2, playerAttack, false);
 		}
 
-		// Token: 0x06022F91 RID: 143249 RVA: 0x004D7ADE File Offset: 0x004D5CDE
+		// Token: 0x06025045 RID: 151621 RVA: 0x005149B2 File Offset: 0x00512BB2
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06022F92 RID: 143250 RVA: 0x004D7AE9 File Offset: 0x004D5CE9
+		// Token: 0x06025046 RID: 151622 RVA: 0x005149BD File Offset: 0x00512BBD
 		public static Offset<IHitBulletTypeFixedBulletId> EndIHitBulletTypeFixedBulletId(FlatBufferBuilder builder)
 		{
 			return new Offset<IHitBulletTypeFixedBulletId>(builder.EndTable());
 		}
 
-		// Token: 0x06022F93 RID: 143251 RVA: 0x004D7AF8 File Offset: 0x004D5CF8
+		// Token: 0x06025047 RID: 151623 RVA: 0x005149CC File Offset: 0x00512BCC
 		public IHitBulletTypeFixedBulletIdT UnPack()
 		{
 			IHitBulletTypeFixedBulletIdT hitBulletTypeFixedBulletIdT = new IHitBulletTypeFixedBulletIdT();
@@ -223,7 +223,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return hitBulletTypeFixedBulletIdT;
 		}
 
-		// Token: 0x06022F94 RID: 143252 RVA: 0x004D7B14 File Offset: 0x004D5D14
+		// Token: 0x06025048 RID: 151624 RVA: 0x005149E8 File Offset: 0x00512BE8
 		public void UnPackTo(IHitBulletTypeFixedBulletIdT _o)
 		{
 			_o.Type = this.Type;
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022F95 RID: 143253 RVA: 0x004D7B74 File Offset: 0x004D5D74
+		// Token: 0x06025049 RID: 151625 RVA: 0x00514A48 File Offset: 0x00512C48
 		public static Offset<IHitBulletTypeFixedBulletId> Pack(FlatBufferBuilder builder, IHitBulletTypeFixedBulletIdT _o)
 		{
 			if (_o == null)
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitBulletTypeFixedBulletId.CreateIHitBulletTypeFixedBulletId(builder, _o.Type, bulletIdOffset, _o.PlayerAttack, _o.NullMask);
 		}
 
-		// Token: 0x0400E553 RID: 58707
+		// Token: 0x0400F183 RID: 61827
 		private Table __p;
 	}
 }

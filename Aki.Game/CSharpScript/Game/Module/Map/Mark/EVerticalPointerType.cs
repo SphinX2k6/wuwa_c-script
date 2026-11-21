@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054B2 RID: 21682
+	// Token: 0x02004495 RID: 17557
 	public enum EVerticalPointerType
 	{
-		// Token: 0x0401D2DC RID: 119516
+		// Token: 0x04017D78 RID: 97656
 		None,
-		// Token: 0x0401D2DD RID: 119517
+		// Token: 0x04017D79 RID: 97657
 		Up,
-		// Token: 0x0401D2DE RID: 119518
+		// Token: 0x04017D7A RID: 97658
 		Down
 	}
 }

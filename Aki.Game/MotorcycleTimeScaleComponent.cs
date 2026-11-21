@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x020032FD RID: 13053
+// Token: 0x0200286F RID: 10351
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleTimeScaleComponent : PawnTimeScaleComponent
 {
-	// Token: 0x0601C6FA RID: 116474 RVA: 0x007FB1B2 File Offset: 0x007F93B2
+	// Token: 0x0601A3E4 RID: 107492 RVA: 0x0082131E File Offset: 0x0081F51E
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -20,13 +20,13 @@ public class MotorcycleTimeScaleComponent : PawnTimeScaleComponent
 		return true;
 	}
 
-	// Token: 0x0601C6FB RID: 116475 RVA: 0x007FB1E0 File Offset: 0x007F93E0
+	// Token: 0x0601A3E5 RID: 107493 RVA: 0x0082134C File Offset: 0x0081F54C
 	protected override bool OnEnd()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C6FC RID: 116476 RVA: 0x007FB1E4 File Offset: 0x007F93E4
+	// Token: 0x0601A3E6 RID: 107494 RVA: 0x00821350 File Offset: 0x0081F550
 	protected override bool IsTimescaleValid(TimeScale timescale, float currentTime)
 	{
 		if (GameModeModel.Instance != null && GameModeModel.Instance.IsMulti)
@@ -40,7 +40,7 @@ public class MotorcycleTimeScaleComponent : PawnTimeScaleComponent
 		return base.IsTimescaleValid(timescale, currentTime);
 	}
 
-	// Token: 0x0601C6FD RID: 116477 RVA: 0x007FB21C File Offset: 0x007F941C
+	// Token: 0x0601A3E7 RID: 107495 RVA: 0x00821388 File Offset: 0x0081F588
 	protected override void OnTick(float delta)
 	{
 		float num = 1f;
@@ -120,7 +120,7 @@ public class MotorcycleTimeScaleComponent : PawnTimeScaleComponent
 		}
 	}
 
-	// Token: 0x0601C6FE RID: 116478 RVA: 0x007FB424 File Offset: 0x007F9624
+	// Token: 0x0601A3E8 RID: 107496 RVA: 0x00821590 File Offset: 0x0081F790
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -128,42 +128,70 @@ public class MotorcycleTimeScaleComponent : PawnTimeScaleComponent
 			return false;
 		}
 		MotorcycleTimeScaleComponent motorcycleTimeScaleComponent = (MotorcycleTimeScaleComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LastAkTimeScale"))
+		this.LastAkTimeScale = motorcycleTimeScaleComponent.LastAkTimeScale;
+		this.LastAkCompTimeScale = motorcycleTimeScaleComponent.LastAkCompTimeScale;
+		if (motorcycleTimeScaleComponent.VehiclePerformComp == null)
 		{
-			this.LastAkTimeScale = motorcycleTimeScaleComponent.LastAkTimeScale;
+			this.VehiclePerformComp = null;
 		}
-		if (base.CanResetComponentProperty("LastAkCompTimeScale"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehiclePerformComp), "VehiclePerformComp"))
 		{
-			this.LastAkCompTimeScale = motorcycleTimeScaleComponent.LastAkCompTimeScale;
+			return false;
 		}
-		if (base.CanResetComponentProperty("VehiclePerformComp"))
-		{
-			if (motorcycleTimeScaleComponent.VehiclePerformComp == null)
-			{
-				this.VehiclePerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehiclePerformComponent>(this.VehiclePerformComp), "VehiclePerformComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsInSpecialMap"))
-		{
-			this.IsInSpecialMap = motorcycleTimeScaleComponent.IsInSpecialMap;
-		}
+		this.IsInSpecialMap = motorcycleTimeScaleComponent.IsInSpecialMap;
 		return true;
 	}
 
-	// Token: 0x0400E1C8 RID: 57800
+	// Token: 0x17002AF1 RID: 10993
+	// (get) Token: 0x0601A3E9 RID: 107497 RVA: 0x008215FF File Offset: 0x0081F7FF
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AF2 RID: 10994
+	// (get) Token: 0x0601A3EA RID: 107498 RVA: 0x00821602 File Offset: 0x0081F802
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AF3 RID: 10995
+	// (get) Token: 0x0601A3EB RID: 107499 RVA: 0x00821605 File Offset: 0x0081F805
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AF4 RID: 10996
+	// (get) Token: 0x0601A3EC RID: 107500 RVA: 0x00821608 File Offset: 0x0081F808
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E673 RID: 58995
 	private float LastAkTimeScale = 1f;
 
-	// Token: 0x0400E1C9 RID: 57801
+	// Token: 0x0400E674 RID: 58996
 	private float LastAkCompTimeScale = 1f;
 
-	// Token: 0x0400E1CA RID: 57802
+	// Token: 0x0400E675 RID: 58997
 	[Nullable(2)]
 	protected VehiclePerformComponent VehiclePerformComp;
 
-	// Token: 0x0400E1CB RID: 57803
+	// Token: 0x0400E676 RID: 58998
 	private bool IsInSpecialMap;
 }

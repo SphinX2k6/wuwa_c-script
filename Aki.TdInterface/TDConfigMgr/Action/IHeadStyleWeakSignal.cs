@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF7 RID: 6903
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CA4 RID: 7332
 	public class IHeadStyleWeakSignal : IHeadStyle
 	{
-		// Token: 0x060093DA RID: 37850 RVA: 0x00156CCC File Offset: 0x00154ECC
+		// Token: 0x06009BB8 RID: 39864 RVA: 0x00167814 File Offset: 0x00165A14
 		private IHeadStyleWeakSignal_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093DB RID: 37851 RVA: 0x00156D04 File Offset: 0x00154F04
+		// Token: 0x06009BB9 RID: 39865 RVA: 0x0016784C File Offset: 0x00165A4C
 		public static IHeadStyleWeakSignal Create([Nullable(2)] IHeadStyleWeakSignal instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093DC RID: 37852 RVA: 0x00156D17 File Offset: 0x00154F17
+		// Token: 0x06009BBA RID: 39866 RVA: 0x0016785F File Offset: 0x00165A5F
 		public static IHeadStyleWeakSignal CreateFromSetValue([Nullable(2)] IHeadStyleWeakSignal_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093DD RID: 37853 RVA: 0x00156D2A File Offset: 0x00154F2A
+		// Token: 0x06009BBB RID: 39867 RVA: 0x00167872 File Offset: 0x00165A72
 		public new IHeadStyleWeakSignal_SetValue ToSetValue()
 		{
 			return new IHeadStyleWeakSignal_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002ED0 RID: 11984
-		// (get) Token: 0x060093DE RID: 37854 RVA: 0x00156D3D File Offset: 0x00154F3D
-		// (set) Token: 0x060093DF RID: 37855 RVA: 0x00156D68 File Offset: 0x00154F68
+		// Token: 0x170030F3 RID: 12531
+		// (get) Token: 0x06009BBC RID: 39868 RVA: 0x00167885 File Offset: 0x00165A85
+		// (set) Token: 0x06009BBD RID: 39869 RVA: 0x001678B0 File Offset: 0x00165AB0
 		public override EHeadStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AC5 RID: 23237
+		// Token: 0x04005F5C RID: 24412
 		[Nullable(2)]
 		protected new IHeadStyleWeakSignal FbInstance;
 
-		// Token: 0x04005AC6 RID: 23238
+		// Token: 0x04005F5D RID: 24413
 		[Nullable(2)]
 		protected new IHeadStyleWeakSignal_SetValue PocoInterface;
 	}

@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B75 RID: 11125
+// Token: 0x020020F1 RID: 8433
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueExitView : UiViewBase
 {
-	// Token: 0x060170A7 RID: 94375 RVA: 0x005D9996 File Offset: 0x005D7B96
+	// Token: 0x06014AD8 RID: 84696 RVA: 0x00606506 File Offset: 0x00604706
 	public SurvivorsRogueExitView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060170A8 RID: 94376 RVA: 0x005D99A0 File Offset: 0x005D7BA0
+	// Token: 0x06014AD9 RID: 84697 RVA: 0x00606510 File Offset: 0x00604710
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,14 +33,14 @@ public class SurvivorsRogueExitView : UiViewBase
 		};
 	}
 
-	// Token: 0x060170A9 RID: 94377 RVA: 0x005D9A78 File Offset: 0x005D7C78
+	// Token: 0x06014ADA RID: 84698 RVA: 0x006065E8 File Offset: 0x006047E8
 	protected override void OnStart()
 	{
 		ISurvivorsExitViewParams params_ = this.OpenParam as ISurvivorsExitViewParams;
 		this.RefreshInfo(params_);
 	}
 
-	// Token: 0x060170AA RID: 94378 RVA: 0x005D9A98 File Offset: 0x005D7C98
+	// Token: 0x06014ADB RID: 84699 RVA: 0x00606608 File Offset: 0x00604808
 	private void RefreshInfo(ISurvivorsExitViewParams params_)
 	{
 		bool isExternal = params_.IsExternal;
@@ -64,7 +64,7 @@ public class SurvivorsRogueExitView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(text3, "SurvivorsExit_InternalBut2", Array.Empty<object>());
 	}
 
-	// Token: 0x060170AB RID: 94379 RVA: 0x005D9B84 File Offset: 0x005D7D84
+	// Token: 0x06014ADC RID: 84700 RVA: 0x006066F4 File Offset: 0x006048F4
 	private void OnClickBtnSettle()
 	{
 		ISurvivorsExitViewParams survivorsExitViewParams = this.OpenParam as ISurvivorsExitViewParams;
@@ -72,7 +72,7 @@ public class SurvivorsRogueExitView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060170AC RID: 94380 RVA: 0x005D9BB4 File Offset: 0x005D7DB4
+	// Token: 0x06014ADD RID: 84701 RVA: 0x00606724 File Offset: 0x00604924
 	private void OnClickBtnExit()
 	{
 		if (!(this.OpenParam as ISurvivorsExitViewParams).IsExternal)

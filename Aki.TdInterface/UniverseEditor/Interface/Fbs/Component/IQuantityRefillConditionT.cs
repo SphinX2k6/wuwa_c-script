@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057C7 RID: 22471
+	// Token: 0x02005DCE RID: 24014
 	public class IQuantityRefillConditionT
 	{
-		// Token: 0x1700A7B6 RID: 42934
-		// (get) Token: 0x06025B76 RID: 154486 RVA: 0x00533888 File Offset: 0x00531A88
-		// (set) Token: 0x06025B77 RID: 154487 RVA: 0x00533890 File Offset: 0x00531A90
+		// Token: 0x1700B0DA RID: 45274
+		// (get) Token: 0x06028096 RID: 163990 RVA: 0x00579A14 File Offset: 0x00577C14
+		// (set) Token: 0x06028097 RID: 163991 RVA: 0x00579A1C File Offset: 0x00577C1C
 		public ESpawnMonsterCompleteCondition Type { get; set; }
 
-		// Token: 0x1700A7B7 RID: 42935
-		// (get) Token: 0x06025B78 RID: 154488 RVA: 0x00533899 File Offset: 0x00531A99
-		// (set) Token: 0x06025B79 RID: 154489 RVA: 0x005338A1 File Offset: 0x00531AA1
+		// Token: 0x1700B0DB RID: 45275
+		// (get) Token: 0x06028098 RID: 163992 RVA: 0x00579A25 File Offset: 0x00577C25
+		// (set) Token: 0x06028099 RID: 163993 RVA: 0x00579A2D File Offset: 0x00577C2D
 		public int Quantity { get; set; }
 
-		// Token: 0x1700A7B8 RID: 42936
-		// (get) Token: 0x06025B7A RID: 154490 RVA: 0x005338AA File Offset: 0x00531AAA
-		// (set) Token: 0x06025B7B RID: 154491 RVA: 0x005338B2 File Offset: 0x00531AB2
+		// Token: 0x1700B0DC RID: 45276
+		// (get) Token: 0x0602809A RID: 163994 RVA: 0x00579A36 File Offset: 0x00577C36
+		// (set) Token: 0x0602809B RID: 163995 RVA: 0x00579A3E File Offset: 0x00577C3E
 		public float DelayRefill { get; set; }
 
-		// Token: 0x1700A7B9 RID: 42937
-		// (get) Token: 0x06025B7C RID: 154492 RVA: 0x005338BB File Offset: 0x00531ABB
-		// (set) Token: 0x06025B7D RID: 154493 RVA: 0x005338C3 File Offset: 0x00531AC3
+		// Token: 0x1700B0DD RID: 45277
+		// (get) Token: 0x0602809C RID: 163996 RVA: 0x00579A47 File Offset: 0x00577C47
+		// (set) Token: 0x0602809D RID: 163997 RVA: 0x00579A4F File Offset: 0x00577C4F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025B7E RID: 154494 RVA: 0x005338CC File Offset: 0x00531ACC
+		// Token: 0x0602809E RID: 163998 RVA: 0x00579A58 File Offset: 0x00577C58
 		public IQuantityRefillConditionT()
 		{
 			this.Type = ESpawnMonsterCompleteCondition.AllKill;

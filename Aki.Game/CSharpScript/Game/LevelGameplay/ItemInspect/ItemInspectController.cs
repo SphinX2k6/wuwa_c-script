@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 {
-	// Token: 0x02006DDF RID: 28127
+	// Token: 0x02005F5E RID: 24414
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ItemInspectController : ControllerBase
 	{
-		// Token: 0x0604499D RID: 280989 RVA: 0x010ED564 File Offset: 0x010EB764
+		// Token: 0x0603AB01 RID: 240385 RVA: 0x010977B0 File Offset: 0x010959B0
 		private void LogDragDebugInfo(string reason)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			characterCameraManager.D_GetCameraLocation();
 		}
 
-		// Token: 0x0604499E RID: 280990 RVA: 0x010ED63D File Offset: 0x010EB83D
+		// Token: 0x0603AB02 RID: 240386 RVA: 0x01097889 File Offset: 0x01095A89
 		public void BindItemInspectActor(AActor actor)
 		{
 			if (actor.IsValid())
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x0604499F RID: 280991 RVA: 0x010ED652 File Offset: 0x010EB852
+		// Token: 0x0603AB03 RID: 240387 RVA: 0x0109789E File Offset: 0x01095A9E
 		public void TriggerRangeDebug()
 		{
 			ItemInspectModel.Instance.OpenRangeDebug = !ItemInspectModel.Instance.OpenRangeDebug;
 		}
 
-		// Token: 0x060449A0 RID: 280992 RVA: 0x010ED66C File Offset: 0x010EB86C
+		// Token: 0x0603AB04 RID: 240388 RVA: 0x010978B8 File Offset: 0x01095AB8
 		[NullableContext(2)]
 		public void OpenItemInspect([Nullable(1)] IItemInspection config, Action<EUiViewName> onBeforeOpenView = null, Action<bool> onFinish = null)
 		{
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			});
 		}
 
-		// Token: 0x060449A1 RID: 280993 RVA: 0x010ED8DC File Offset: 0x010EBADC
+		// Token: 0x0603AB05 RID: 240389 RVA: 0x01097B28 File Offset: 0x01095D28
 		public void FinishItemInspect(bool result)
 		{
 			float darkStageAlpha = ItemInspectModel.Instance.GetDarkStageAlpha();
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			});
 		}
 
-		// Token: 0x060449A2 RID: 280994 RVA: 0x010ED92C File Offset: 0x010EBB2C
+		// Token: 0x0603AB06 RID: 240390 RVA: 0x01097B78 File Offset: 0x01095D78
 		public void InterruptItemInspect()
 		{
 			EUiViewName? viewName = ItemInspectModel.Instance.GetViewName();
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			SequenceController.Instance.ResumeSequence("ItemInspect", new bool?(true));
 		}
 
-		// Token: 0x060449A3 RID: 280995 RVA: 0x010ED9DC File Offset: 0x010EBBDC
+		// Token: 0x0603AB07 RID: 240391 RVA: 0x01097C28 File Offset: 0x01095E28
 		private void SetOriginItemHidden(bool hidden)
 		{
 			AActor originItemActor = ItemInspectModel.Instance.OriginItemActor;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x060449A4 RID: 280996 RVA: 0x010EDA44 File Offset: 0x010EBC44
+		// Token: 0x0603AB08 RID: 240392 RVA: 0x01097C90 File Offset: 0x01095E90
 		private void InitGlobalConfig(Action onFinish)
 		{
 			if (ItemInspectModel.Instance.IsInitGlobalConfig())
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}, "js_undefined");
 		}
 
-		// Token: 0x060449A5 RID: 280997 RVA: 0x010EDA98 File Offset: 0x010EBC98
+		// Token: 0x0603AB09 RID: 240393 RVA: 0x01097CE4 File Offset: 0x01095EE4
 		private UniTask LoadDarkStageAsync()
 		{
 			ItemInspectController.<LoadDarkStageAsync>d__30 <LoadDarkStageAsync>d__;
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return <LoadDarkStageAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060449A6 RID: 280998 RVA: 0x010EDAD4 File Offset: 0x010EBCD4
+		// Token: 0x0603AB0A RID: 240394 RVA: 0x01097D20 File Offset: 0x01095F20
 		[NullableContext(2)]
 		private void PlayDarkStageAlphaBlend(float from, float to, float blendTime, Action onFinish = null)
 		{
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			onFinish2();
 		}
 
-		// Token: 0x060449A7 RID: 280999 RVA: 0x010EDBC0 File Offset: 0x010EBDC0
+		// Token: 0x0603AB0B RID: 240395 RVA: 0x01097E0C File Offset: 0x0109600C
 		public void InteractPoint(int tagId, Action onFinish)
 		{
 			if (!this.IsStageInteractionEnabled())
@@ -405,21 +405,21 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			ItemInspectModel.Instance.GetEffectCenter().ExecuteEffects(list, point.IsChecked, point.ProtectTime, action);
 		}
 
-		// Token: 0x060449A8 RID: 281000 RVA: 0x010EDC74 File Offset: 0x010EBE74
+		// Token: 0x0603AB0C RID: 240396 RVA: 0x01097EC0 File Offset: 0x010960C0
 		public void EnterInitialStage(Action onFinish)
 		{
 			ItemInspectModel.Instance.RequestEnterInitialStage(onFinish);
 			this.TryEnterInitialStage();
 		}
 
-		// Token: 0x060449A9 RID: 281001 RVA: 0x010EDC88 File Offset: 0x010EBE88
+		// Token: 0x0603AB0D RID: 240397 RVA: 0x01097ED4 File Offset: 0x010960D4
 		public bool IsStageInteractionEnabled()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
 			return instance.IsInspectReady() && !instance.IsStageLifecycleLocked();
 		}
 
-		// Token: 0x060449AA RID: 281002 RVA: 0x010EDCB0 File Offset: 0x010EBEB0
+		// Token: 0x0603AB0E RID: 240398 RVA: 0x01097EFC File Offset: 0x010960FC
 		private void TryEnterInitialStage()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x060449AB RID: 281003 RVA: 0x010EDCE8 File Offset: 0x010EBEE8
+		// Token: 0x0603AB0F RID: 240399 RVA: 0x01097F34 File Offset: 0x01096134
 		private void EnterCurrentStage(Action onFinish)
 		{
 			ItemInspectModel model = ItemInspectModel.Instance;
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			model.GetEffectCenter().ExecuteEffects(currentStageEnterEffects, false, 0f, action);
 		}
 
-		// Token: 0x060449AC RID: 281004 RVA: 0x010EDDA0 File Offset: 0x010EBFA0
+		// Token: 0x0603AB10 RID: 240400 RVA: 0x01097FEC File Offset: 0x010961EC
 		private void FinishCurrentStage(Action onFinish)
 		{
 			ItemInspectPointManager pointManager = ItemInspectModel.Instance.GetPointManager();
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			action();
 		}
 
-		// Token: 0x060449AD RID: 281005 RVA: 0x010EDE1C File Offset: 0x010EC01C
+		// Token: 0x0603AB11 RID: 240401 RVA: 0x01098068 File Offset: 0x01096268
 		public void ReceiveRotateInput(Vector2D inputDirect, bool isGamePad = false)
 		{
 			if (!this.IsStageInteractionEnabled())
@@ -511,13 +511,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			ItemInspectModel.Instance.InputDirect.MultiplyEqual((double)(isGamePad ? ItemInspectModel.Instance.GetGamePadSensitivity() : ItemInspectModel.Instance.GetDragSensitivity()));
 		}
 
-		// Token: 0x060449AE RID: 281006 RVA: 0x010EDE6C File Offset: 0x010EC06C
+		// Token: 0x0603AB12 RID: 240402 RVA: 0x010980B8 File Offset: 0x010962B8
 		public void ResetRotateInput()
 		{
 			ItemInspectModel.Instance.InputDirect.Reset();
 		}
 
-		// Token: 0x060449AF RID: 281007 RVA: 0x010EDE80 File Offset: 0x010EC080
+		// Token: 0x0603AB13 RID: 240403 RVA: 0x010980CC File Offset: 0x010962CC
 		public bool IsCurrentStageDragInteraction()
 		{
 			if (!this.IsStageInteractionEnabled())
@@ -534,14 +534,14 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return currentStageInteractionType.GetValueOrDefault() == einteractPointInteractionType & currentStageInteractionType != null;
 		}
 
-		// Token: 0x060449B0 RID: 281008 RVA: 0x010EDEC4 File Offset: 0x010EC0C4
+		// Token: 0x0603AB14 RID: 240404 RVA: 0x01098110 File Offset: 0x01096310
 		public bool IsDragInteractionActive()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
 			return instance.IsDragging || instance.IsDragSnapping || instance.IsDragSucceed;
 		}
 
-		// Token: 0x060449B1 RID: 281009 RVA: 0x010EDEF0 File Offset: 0x010EC0F0
+		// Token: 0x0603AB15 RID: 240405 RVA: 0x0109813C File Offset: 0x0109633C
 		public FVectorDouble? GetCurrentDragTargetLocation()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -559,20 +559,20 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return new FVectorDouble?(instance.DragTargetActor.D_K2_GetActorLocation());
 		}
 
-		// Token: 0x060449B2 RID: 281010 RVA: 0x010EDF79 File Offset: 0x010EC179
+		// Token: 0x0603AB16 RID: 240406 RVA: 0x010981C5 File Offset: 0x010963C5
 		public void ReceiveDragGamepadInput(double x, double y)
 		{
 			ItemInspectModel.Instance.DragGamepadInput.Set(x, y);
 		}
 
-		// Token: 0x060449B3 RID: 281011 RVA: 0x010EDF8C File Offset: 0x010EC18C
+		// Token: 0x0603AB17 RID: 240407 RVA: 0x010981D8 File Offset: 0x010963D8
 		public bool BeginDragInteraction(float screenX, float screenY)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
 			return this.IsCurrentStageDragInteraction() && !instance.IsDragging && !instance.IsDragSnapping && !instance.IsDragSucceed && this.InitDragTargets() && this.IsPointerHitDragItem(screenX, screenY) && this.StartDragInteraction(screenX, screenY);
 		}
 
-		// Token: 0x060449B4 RID: 281012 RVA: 0x010EDFE0 File Offset: 0x010EC1E0
+		// Token: 0x0603AB18 RID: 240408 RVA: 0x0109822C File Offset: 0x0109642C
 		private bool StartDragInteraction(float screenX, float screenY)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -601,7 +601,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return true;
 		}
 
-		// Token: 0x060449B5 RID: 281013 RVA: 0x010EE0EC File Offset: 0x010EC2EC
+		// Token: 0x0603AB19 RID: 240409 RVA: 0x01098338 File Offset: 0x01096538
 		private bool IsPointerHitDragItem(float screenX, float screenY)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -629,7 +629,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return flag && hitResult != null && hitResult.bBlockingHit && hitResult.Actors.Num() > 0 && hitResult.Actors.Get(0).Get() == dragItemActor;
 		}
 
-		// Token: 0x060449B6 RID: 281014 RVA: 0x010EE200 File Offset: 0x010EC400
+		// Token: 0x0603AB1A RID: 240410 RVA: 0x0109844C File Offset: 0x0109664C
 		public void UpdateDragInteractionByPointer(float screenX, float screenY)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -640,7 +640,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			instance.DragTargetScreenPos.Set((double)screenX, (double)screenY);
 		}
 
-		// Token: 0x060449B7 RID: 281015 RVA: 0x010EE234 File Offset: 0x010EC434
+		// Token: 0x0603AB1B RID: 240411 RVA: 0x01098480 File Offset: 0x01096680
 		public void EndDragInteraction()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -665,14 +665,14 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x060449B8 RID: 281016 RVA: 0x010EE2B4 File Offset: 0x010EC4B4
+		// Token: 0x0603AB1C RID: 240412 RVA: 0x01098500 File Offset: 0x01096700
 		private void CancelDragInteraction()
 		{
 			global::Log.Instance.Error(ELogModule.LevelPlay, ELogAuthor.FZX, "物品检视，拖拽对象已失效，取消本次拖拽", default(ReadOnlySpan<ValueTuple<string, object>>));
 			ItemInspectModel.Instance.ResetDragRuntime();
 		}
 
-		// Token: 0x060449B9 RID: 281017 RVA: 0x010EE2E7 File Offset: 0x010EC4E7
+		// Token: 0x0603AB1D RID: 240413 RVA: 0x01098533 File Offset: 0x01096733
 		private void OnInspectStageChanged()
 		{
 			this.ResetRotateInput();
@@ -680,7 +680,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			ItemInspectModel.Instance.ResetDragRuntime();
 		}
 
-		// Token: 0x060449BA RID: 281018 RVA: 0x010EE300 File Offset: 0x010EC500
+		// Token: 0x0603AB1E RID: 240414 RVA: 0x0109854C File Offset: 0x0109674C
 		private bool InitDragTargets()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -774,7 +774,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return true;
 		}
 
-		// Token: 0x060449BB RID: 281019 RVA: 0x010EE5D4 File Offset: 0x010EC7D4
+		// Token: 0x0603AB1F RID: 240415 RVA: 0x01098820 File Offset: 0x01096A20
 		private void UpdateDragInteractionByGamepad(float delta)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -824,7 +824,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			dragTargetScreenPos.Y = MathUtils.Instance.Clamp(dragTargetScreenPos.Y - dragGamepadInput.Y * (double)num * (double)num2, 0.0, (double)refDragViewportSizeY);
 		}
 
-		// Token: 0x060449BC RID: 281020 RVA: 0x010EE728 File Offset: 0x010EC928
+		// Token: 0x0603AB20 RID: 240416 RVA: 0x01098974 File Offset: 0x01096B74
 		private void UpdateDragInteraction(float delta)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -838,7 +838,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			this.MoveDragItemToScreenPos(MathUtils.Instance.Lerp(dragScreenPos.X, dragTargetScreenPos.X, (double)num), MathUtils.Instance.Lerp(dragScreenPos.Y, dragTargetScreenPos.Y, (double)num));
 		}
 
-		// Token: 0x060449BD RID: 281021 RVA: 0x010EE7AC File Offset: 0x010EC9AC
+		// Token: 0x0603AB21 RID: 240417 RVA: 0x010989F8 File Offset: 0x01096BF8
 		private void MoveDragItemToScreenPos(double screenX, double screenY)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -887,7 +887,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			this.TryFinishDragInteraction();
 		}
 
-		// Token: 0x060449BE RID: 281022 RVA: 0x010EE92B File Offset: 0x010ECB2B
+		// Token: 0x0603AB22 RID: 240418 RVA: 0x01098B77 File Offset: 0x01096D77
 		private bool DeprojectScreenDir(APlayerController playerController, double screenX, double screenY, Vector outDir)
 		{
 			this.DragScreenPosUe.Set((float)screenX, (float)screenY);
@@ -899,7 +899,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return true;
 		}
 
-		// Token: 0x060449BF RID: 281023 RVA: 0x010EE968 File Offset: 0x010ECB68
+		// Token: 0x0603AB23 RID: 240419 RVA: 0x01098BB4 File Offset: 0x01096DB4
 		private bool TryFinishDragInteraction()
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -943,7 +943,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return true;
 		}
 
-		// Token: 0x060449C0 RID: 281024 RVA: 0x010EEA98 File Offset: 0x010ECC98
+		// Token: 0x0603AB24 RID: 240420 RVA: 0x01098CE4 File Offset: 0x01096EE4
 		private void UpdateDragSnap(float delta)
 		{
 			ItemInspectModel instance = ItemInspectModel.Instance;
@@ -980,7 +980,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			});
 		}
 
-		// Token: 0x060449C1 RID: 281025 RVA: 0x010EEBD4 File Offset: 0x010ECDD4
+		// Token: 0x0603AB25 RID: 240421 RVA: 0x01098E20 File Offset: 0x01097020
 		[NullableContext(2)]
 		public void ResetItemRotation(Action onFinish = null)
 		{
@@ -988,7 +988,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			ItemInspectModel.Instance.OnResetItemRotationFinish = onFinish;
 		}
 
-		// Token: 0x060449C2 RID: 281026 RVA: 0x010EEBEC File Offset: 0x010ECDEC
+		// Token: 0x0603AB26 RID: 240422 RVA: 0x01098E38 File Offset: 0x01097038
 		[NullableContext(2)]
 		public void PlayFinishEffect(Action onFinish = null)
 		{
@@ -1004,7 +1004,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			ItemInspectModel.Instance.GetEffectCenter().ExecuteEffects(finishEffect.EffectList, false, finishEffect.ProtectTime.GetValueOrDefault(), onFinish);
 		}
 
-		// Token: 0x060449C3 RID: 281027 RVA: 0x010EEC38 File Offset: 0x010ECE38
+		// Token: 0x0603AB27 RID: 240423 RVA: 0x01098E84 File Offset: 0x01097084
 		public void UpdateItemInspect(float delta)
 		{
 			if (!ItemInspectModel.Instance.IsInspectReady())
@@ -1054,7 +1054,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			this.UpdateDragInteraction(delta);
 		}
 
-		// Token: 0x060449C4 RID: 281028 RVA: 0x010EED02 File Offset: 0x010ECF02
+		// Token: 0x0603AB28 RID: 240424 RVA: 0x01098F4E File Offset: 0x0109714E
 		private void DrawRange()
 		{
 			ItemInspectRangeChecker rangeChecker = ItemInspectModel.Instance.GetRangeChecker();
@@ -1065,7 +1065,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			rangeChecker.DebugDraw();
 		}
 
-		// Token: 0x060449C5 RID: 281029 RVA: 0x010EED18 File Offset: 0x010ECF18
+		// Token: 0x0603AB29 RID: 240425 RVA: 0x01098F64 File Offset: 0x01097164
 		private bool UpdateRotateItem(int itemHandleId, float delta)
 		{
 			AActor sceneInteractionMainActor = SceneInteractionManager.Get().GetSceneInteractionMainActor(itemHandleId);
@@ -1118,7 +1118,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return true;
 		}
 
-		// Token: 0x060449C6 RID: 281030 RVA: 0x010EEED4 File Offset: 0x010ED0D4
+		// Token: 0x0603AB2A RID: 240426 RVA: 0x01099120 File Offset: 0x01097320
 		private void UpdateResetItemRotation(int itemHandleId, float delta)
 		{
 			AActor sceneInteractionMainActor = SceneInteractionManager.Get().GetSceneInteractionMainActor(itemHandleId);
@@ -1162,7 +1162,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x060449C7 RID: 281031 RVA: 0x010EF018 File Offset: 0x010ED218
+		// Token: 0x0603AB2B RID: 240427 RVA: 0x01099264 File Offset: 0x01097464
 		public void ExecuteFocusRotation(VectorInfo targetRotation, [Nullable(2)] string speedCurvePath, Action onFinish)
 		{
 			if (targetRotation == null)
@@ -1197,7 +1197,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			ItemInspectModel.Instance.FocusRotating = true;
 		}
 
-		// Token: 0x060449C8 RID: 281032 RVA: 0x010EF110 File Offset: 0x010ED310
+		// Token: 0x0603AB2C RID: 240428 RVA: 0x0109935C File Offset: 0x0109755C
 		private void UpdateFocusRotation(int itemHandleId, float delta)
 		{
 			AActor sceneInteractionMainActor = SceneInteractionManager.Get().GetSceneInteractionMainActor(itemHandleId);
@@ -1252,7 +1252,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			onFocusRotationFinish2();
 		}
 
-		// Token: 0x060449C9 RID: 281033 RVA: 0x010EF2C0 File Offset: 0x010ED4C0
+		// Token: 0x0603AB2D RID: 240429 RVA: 0x0109950C File Offset: 0x0109770C
 		private void CheckVisiblePoints(int itemHandleId)
 		{
 			if (ItemInspectModel.Instance.IsStageLifecycleLocked())
@@ -1336,7 +1336,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x060449CA RID: 281034 RVA: 0x010EF4DC File Offset: 0x010ED6DC
+		// Token: 0x0603AB2E RID: 240430 RVA: 0x01099728 File Offset: 0x01097928
 		private void ClearVisiblePoints()
 		{
 			List<IItemInspectVisiblePointData> visiblePoints = ItemInspectModel.Instance.VisiblePoints;
@@ -1354,8 +1354,8 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x170099D2 RID: 39378
-		// (get) Token: 0x060449CB RID: 281035 RVA: 0x010EF53A File Offset: 0x010ED73A
+		// Token: 0x17006ED5 RID: 28373
+		// (get) Token: 0x0603AB2F RID: 240431 RVA: 0x01099786 File Offset: 0x01097986
 		public static ItemInspectController Instance
 		{
 			get
@@ -1364,7 +1364,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			}
 		}
 
-		// Token: 0x060449CC RID: 281036 RVA: 0x010EF541 File Offset: 0x010ED741
+		// Token: 0x0603AB30 RID: 240432 RVA: 0x0109978D File Offset: 0x0109798D
 		public static ItemInspectController GetOrCreateInstance()
 		{
 			if (ItemInspectController._Instance == null)
@@ -1374,7 +1374,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return ItemInspectController._Instance;
 		}
 
-		// Token: 0x060449CD RID: 281037 RVA: 0x010EF555 File Offset: 0x010ED755
+		// Token: 0x0603AB31 RID: 240433 RVA: 0x010997A1 File Offset: 0x010979A1
 		public static bool CreateInstance()
 		{
 			if (ItemInspectController._Instance != null)
@@ -1385,90 +1385,90 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect
 			return true;
 		}
 
-		// Token: 0x060449CE RID: 281038 RVA: 0x010EF56B File Offset: 0x010ED76B
+		// Token: 0x0603AB32 RID: 240434 RVA: 0x010997B7 File Offset: 0x010979B7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060449CF RID: 281039 RVA: 0x010EF56D File Offset: 0x010ED76D
+		// Token: 0x0603AB33 RID: 240435 RVA: 0x010997B9 File Offset: 0x010979B9
 		public static void ResetStaticDefaultValue()
 		{
 			ItemInspectController._Instance = null;
 		}
 
-		// Token: 0x060449D0 RID: 281040 RVA: 0x010EF575 File Offset: 0x010ED775
+		// Token: 0x0603AB34 RID: 240436 RVA: 0x010997C1 File Offset: 0x010979C1
 		static ItemInspectController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemInspectController.CreateStaticDefaultValue), new Action(ItemInspectController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023AD7 RID: 146135
+		// Token: 0x0401ED79 RID: 126329
 		private const string PROFILE_KEY = "ItemInspectCheckVisible";
 
-		// Token: 0x04023AD8 RID: 146136
+		// Token: 0x0401ED7A RID: 126330
 		private const string DRAG_HIT_PROFILE_KEY = "ItemInspectDragHitTest";
 
-		// Token: 0x04023AD9 RID: 146137
+		// Token: 0x0401ED7B RID: 126331
 		private const float ITEM_ROTATION_TOLERANCE = 0.1f;
 
-		// Token: 0x04023ADA RID: 146138
+		// Token: 0x0401ED7C RID: 126332
 		private const float FOCUS_ROTATION_TOLERANCE = 0.1f;
 
-		// Token: 0x04023ADB RID: 146139
+		// Token: 0x0401ED7D RID: 126333
 		private const float DEFAULT_DRAG_CHECK_DISTANCE = 50f;
 
-		// Token: 0x04023ADC RID: 146140
+		// Token: 0x0401ED7E RID: 126334
 		private const float DRAG_GAMEPAD_SCREEN_SPEED_RATIO = 0.8f;
 
-		// Token: 0x04023ADD RID: 146141
+		// Token: 0x0401ED7F RID: 126335
 		private const float DRAG_POINTER_FOLLOW_SPEED = 30f;
 
-		// Token: 0x04023ADE RID: 146142
+		// Token: 0x0401ED80 RID: 126336
 		private const float DRAG_PLANE_DEPTH_MIN = 1f;
 
-		// Token: 0x04023ADF RID: 146143
+		// Token: 0x0401ED81 RID: 126337
 		private const float DRAG_POINTER_TRACE_DISTANCE = 50000f;
 
-		// Token: 0x04023AE0 RID: 146144
+		// Token: 0x0401ED82 RID: 126338
 		private const float DRAG_SNAP_DURATION_SECOND = 0.5f;
 
-		// Token: 0x04023AE1 RID: 146145
+		// Token: 0x0401ED83 RID: 126339
 		private FVector2D DragScreenPosUe = new FVector2D();
 
-		// Token: 0x04023AE2 RID: 146146
+		// Token: 0x0401ED84 RID: 126340
 		private FVector DragWorldPosition = new FVector();
 
-		// Token: 0x04023AE3 RID: 146147
+		// Token: 0x0401ED85 RID: 126341
 		private FVector DragWorldDirection = new FVector();
 
-		// Token: 0x04023AE4 RID: 146148
+		// Token: 0x0401ED86 RID: 126342
 		private readonly Vector DragPrevDir = Vector.Create();
 
-		// Token: 0x04023AE5 RID: 146149
+		// Token: 0x0401ED87 RID: 126343
 		private readonly Vector DragCurDir = Vector.Create();
 
-		// Token: 0x04023AE6 RID: 146150
+		// Token: 0x0401ED88 RID: 126344
 		private readonly Vector DragCameraForward = Vector.Create();
 
-		// Token: 0x04023AE7 RID: 146151
+		// Token: 0x0401ED89 RID: 126345
 		private readonly Vector DragTempVector = Vector.Create();
 
-		// Token: 0x04023AE8 RID: 146152
+		// Token: 0x0401ED8A RID: 126346
 		private readonly Vector DragTempVector2 = Vector.Create();
 
-		// Token: 0x04023AE9 RID: 146153
+		// Token: 0x0401ED8B RID: 126347
 		private FVector2D RefDragProjectPos = new FVector2D();
 
-		// Token: 0x04023AEA RID: 146154
+		// Token: 0x0401ED8C RID: 126348
 		private int RefDragViewportSizeX;
 
-		// Token: 0x04023AEB RID: 146155
+		// Token: 0x0401ED8D RID: 126349
 		private int RefDragViewportSizeY;
 
-		// Token: 0x04023AEC RID: 146156
+		// Token: 0x0401ED8E RID: 126350
 		private bool DragTargetInitFailed;
 
-		// Token: 0x04023AED RID: 146157
+		// Token: 0x0401ED8F RID: 126351
 		[Nullable(2)]
 		private static ItemInspectController _Instance;
 	}

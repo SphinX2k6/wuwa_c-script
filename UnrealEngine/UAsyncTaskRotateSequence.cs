@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001956 RID: 6486
+	// Token: 0x0200042D RID: 1069
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGAS.AsyncTaskRotateSequence")]
 	[UnrealStructLayout(496, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 496)]
 	public class UAsyncTaskRotateSequence : UGameplayTask, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018078 RID: 98424 RVA: 0x00234638 File Offset: 0x00232838
+		// Token: 0x0600669E RID: 26270 RVA: 0x00093E2A File Offset: 0x0009202A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAsyncTaskRotateSequence._ClassPtr;
 		}
 
-		// Token: 0x06018079 RID: 98425 RVA: 0x00234644 File Offset: 0x00232844
+		// Token: 0x0600669F RID: 26271 RVA: 0x00093E38 File Offset: 0x00092038
 		public UAsyncTaskRotateSequence() : this(BuiltinUtils.AllocNativeUObject(UAsyncTaskRotateSequence.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601807A RID: 98426 RVA: 0x0023466C File Offset: 0x0023286C
+		// Token: 0x060066A0 RID: 26272 RVA: 0x00093E60 File Offset: 0x00092060
 		public UAsyncTaskRotateSequence(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAsyncTaskRotateSequence.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006033 RID: 24627
-		// (get) Token: 0x0601807B RID: 98427 RVA: 0x002346A0 File Offset: 0x002328A0
-		// (set) Token: 0x0601807C RID: 98428 RVA: 0x002346D9 File Offset: 0x002328D9
+		// Token: 0x17001456 RID: 5206
+		// (get) Token: 0x060066A1 RID: 26273 RVA: 0x00093E94 File Offset: 0x00092094
+		// (set) Token: 0x060066A2 RID: 26274 RVA: 0x00093ECD File Offset: 0x000920CD
 		public FOnRotateStepSignature OnShootStepFired
 		{
 			get
@@ -51,9 +51,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006034 RID: 24628
-		// (get) Token: 0x0601807D RID: 98429 RVA: 0x002346FC File Offset: 0x002328FC
-		// (set) Token: 0x0601807E RID: 98430 RVA: 0x00234735 File Offset: 0x00232935
+		// Token: 0x17001457 RID: 5207
+		// (get) Token: 0x060066A3 RID: 26275 RVA: 0x00093EF0 File Offset: 0x000920F0
+		// (set) Token: 0x060066A4 RID: 26276 RVA: 0x00093F29 File Offset: 0x00092129
 		public FOnRotateSequenceFinishedSignature OnSequenceFinished
 		{
 			get
@@ -72,9 +72,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006035 RID: 24629
-		// (get) Token: 0x0601807F RID: 98431 RVA: 0x00234756 File Offset: 0x00232956
-		// (set) Token: 0x06018080 RID: 98432 RVA: 0x00234766 File Offset: 0x00232966
+		// Token: 0x17001458 RID: 5208
+		// (get) Token: 0x060066A5 RID: 26277 RVA: 0x00093F4A File Offset: 0x0009214A
+		// (set) Token: 0x060066A6 RID: 26278 RVA: 0x00093F5A File Offset: 0x0009215A
 		public unsafe float AimToleranceDeg
 		{
 			get
@@ -87,9 +87,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006036 RID: 24630
-		// (get) Token: 0x06018081 RID: 98433 RVA: 0x00234777 File Offset: 0x00232977
-		// (set) Token: 0x06018082 RID: 98434 RVA: 0x00234787 File Offset: 0x00232987
+		// Token: 0x17001459 RID: 5209
+		// (get) Token: 0x060066A7 RID: 26279 RVA: 0x00093F6B File Offset: 0x0009216B
+		// (set) Token: 0x060066A8 RID: 26280 RVA: 0x00093F7B File Offset: 0x0009217B
 		public unsafe float AimSpeedDegPerSec
 		{
 			get
@@ -102,9 +102,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006037 RID: 24631
-		// (get) Token: 0x06018083 RID: 98435 RVA: 0x00234798 File Offset: 0x00232998
-		// (set) Token: 0x06018084 RID: 98436 RVA: 0x002347A8 File Offset: 0x002329A8
+		// Token: 0x1700145A RID: 5210
+		// (get) Token: 0x060066A9 RID: 26281 RVA: 0x00093F8C File Offset: 0x0009218C
+		// (set) Token: 0x060066AA RID: 26282 RVA: 0x00093F9C File Offset: 0x0009219C
 		public unsafe float PostFireDelay
 		{
 			get
@@ -117,9 +117,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006038 RID: 24632
-		// (get) Token: 0x06018085 RID: 98437 RVA: 0x002347B9 File Offset: 0x002329B9
-		// (set) Token: 0x06018086 RID: 98438 RVA: 0x002347C9 File Offset: 0x002329C9
+		// Token: 0x1700145B RID: 5211
+		// (get) Token: 0x060066AB RID: 26283 RVA: 0x00093FAD File Offset: 0x000921AD
+		// (set) Token: 0x060066AC RID: 26284 RVA: 0x00093FBD File Offset: 0x000921BD
 		public unsafe float TimeDilation
 		{
 			get
@@ -132,9 +132,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006039 RID: 24633
-		// (get) Token: 0x06018087 RID: 98439 RVA: 0x002347DA File Offset: 0x002329DA
-		// (set) Token: 0x06018088 RID: 98440 RVA: 0x002347F3 File Offset: 0x002329F3
+		// Token: 0x1700145C RID: 5212
+		// (get) Token: 0x060066AD RID: 26285 RVA: 0x00093FCE File Offset: 0x000921CE
+		// (set) Token: 0x060066AE RID: 26286 RVA: 0x00093FE7 File Offset: 0x000921E7
 		public unsafe bool bEaseOut
 		{
 			get
@@ -147,9 +147,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700603A RID: 24634
-		// (get) Token: 0x06018089 RID: 98441 RVA: 0x00234823 File Offset: 0x00232A23
-		// (set) Token: 0x0601808A RID: 98442 RVA: 0x0023483C File Offset: 0x00232A3C
+		// Token: 0x1700145D RID: 5213
+		// (get) Token: 0x060066AF RID: 26287 RVA: 0x00094017 File Offset: 0x00092217
+		// (set) Token: 0x060066B0 RID: 26288 RVA: 0x00094030 File Offset: 0x00092230
 		public unsafe bool bEaseIn
 		{
 			get
@@ -162,9 +162,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700603B RID: 24635
-		// (get) Token: 0x0601808B RID: 98443 RVA: 0x0023486C File Offset: 0x00232A6C
-		// (set) Token: 0x0601808C RID: 98444 RVA: 0x00234885 File Offset: 0x00232A85
+		// Token: 0x1700145E RID: 5214
+		// (get) Token: 0x060066B1 RID: 26289 RVA: 0x00094060 File Offset: 0x00092260
+		// (set) Token: 0x060066B2 RID: 26290 RVA: 0x00094079 File Offset: 0x00092279
 		public unsafe bool bForceShortestRoute
 		{
 			get
@@ -177,9 +177,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700603C RID: 24636
-		// (get) Token: 0x0601808D RID: 98445 RVA: 0x002348B5 File Offset: 0x00232AB5
-		// (set) Token: 0x0601808E RID: 98446 RVA: 0x002348C9 File Offset: 0x00232AC9
+		// Token: 0x1700145F RID: 5215
+		// (get) Token: 0x060066B3 RID: 26291 RVA: 0x000940A9 File Offset: 0x000922A9
+		// (set) Token: 0x060066B4 RID: 26292 RVA: 0x000940BD File Offset: 0x000922BD
 		public unsafe FRotator RotateOffset
 		{
 			get
@@ -192,10 +192,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601808F RID: 98447 RVA: 0x002348E0 File Offset: 0x00232AE0
+		// Token: 0x060066B5 RID: 26293 RVA: 0x000940D4 File Offset: 0x000922D4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static UAsyncTaskRotateSequence StartRotateSequenceByTranslation(IGameplayTaskOwnerInterface TaskOwner, USceneComponent InAimPivot, in TArray<FVector> InTargets, float AimSpeedDegPerSec = 30f, float AimToleranceDeg = 0.01f, bool bEaseIn = true, bool bEaseOut = true, bool bForceShortestRoute = false, float PostFireDelay = 0.05f, FRotator RotateOffset = default(FRotator), float TimeDilation = 1f)
 		{
 			UAsyncTaskRotateSequence.__StartRotateSequenceByTranslation_FunctionParams* ptr = stackalloc UAsyncTaskRotateSequence.__StartRotateSequenceByTranslation_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UAsyncTaskRotateSequence.__StartRotateSequenceByTranslation_FunctionParams) & -16L;
@@ -215,7 +214,7 @@ namespace UnrealEngine
 			ptr->PostFireDelay = PostFireDelay;
 			ptr->RotateOffset = RotateOffset;
 			ptr->TimeDilation = TimeDilation;
-			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__StartRotateSequenceByTranslation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__StartRotateSequenceByTranslation_NativeFunctionPtr, (void*)ptr);
 			TArray<FVector> tarray2 = InTargets;
 			if (tarray2 != null)
 			{
@@ -226,10 +225,9 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x06018090 RID: 98448 RVA: 0x002349D0 File Offset: 0x00232BD0
+		// Token: 0x060066B6 RID: 26294 RVA: 0x000941C4 File Offset: 0x000923C4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static UAsyncTaskRotateSequence StartRotateSequenceByActor(IGameplayTaskOwnerInterface TaskOwner, USceneComponent InAimPivot, [Nullable(new byte[]
 		{
 			2,
@@ -253,7 +251,7 @@ namespace UnrealEngine
 			ptr->PostFireDelay = PostFireDelay;
 			ptr->RotateOffset = RotateOffset;
 			ptr->TimeDilation = TimeDilation;
-			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__StartRotateSequenceByActor_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__StartRotateSequenceByActor_NativeFunctionPtr, (void*)ptr);
 			TArray<AActor> tarray2 = InTargets;
 			if (tarray2 != null)
 			{
@@ -264,41 +262,16 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x06018091 RID: 98449 RVA: 0x00234AC0 File Offset: 0x00232CC0
-		[NullableContext(2)]
+		// Token: 0x060066B7 RID: 26295 RVA: 0x000942B3 File Offset: 0x000924B3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void RotateComponentTo(USceneComponent Component, FRotator TargetWorldRotation, bool bEaseOut, bool bEaseIn, float OverTime, bool bForceShortestRotationPath, float TimeDilation, ERotateComponentAction MoveAction, FLatentActionInfo LatentInfo)
-		{
-			UAsyncTaskRotateSequence.__RotateComponentTo_FunctionParams* ptr = stackalloc UAsyncTaskRotateSequence.__RotateComponentTo_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(UAsyncTaskRotateSequence.__RotateComponentTo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(UAsyncTaskRotateSequence.__RotateComponentTo_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->Component = ((Component != null) ? Component.NativePtr : IntPtr.Zero);
-			ptr->TargetWorldRotation = TargetWorldRotation;
-			ptr->bEaseOut = bEaseOut;
-			ptr->bEaseIn = bEaseIn;
-			ptr->OverTime = OverTime;
-			ptr->bForceShortestRotationPath = bForceShortestRotationPath;
-			ptr->TimeDilation = TimeDilation;
-			ptr->MoveAction = MoveAction;
-			if (LatentInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLatentActionInfo.StaticStruct(), &ptr->LatentInfo, LatentInfo.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__RotateComponentTo_NativeFunctionPtr, (void*)ptr, 0);
-		}
-
-		// Token: 0x06018092 RID: 98450 RVA: 0x00234B73 File Offset: 0x00232D73
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void OnAimLatentFinished()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAsyncTaskRotateSequence.__OnAimLatentFinished_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAsyncTaskRotateSequence.__OnAimLatentFinished_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06018093 RID: 98451 RVA: 0x00234B88 File Offset: 0x00232D88
+		// Token: 0x060066B8 RID: 26296 RVA: 0x000942C8 File Offset: 0x000924C8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static UAsyncTaskRotateSequence D_StartRotateSequenceByTranslation(IGameplayTaskOwnerInterface TaskOwner, USceneComponent InAimPivot, in TArray<FVectorDouble> InTargets, float AimSpeedDegPerSec = 30f, float AimToleranceDeg = 0.01f, bool bEaseIn = true, bool bEaseOut = true, bool bForceShortestRoute = false, float PostFireDelay = 0.05f, FRotator RotateOffset = default(FRotator), float TimeDilation = 1f)
 		{
 			UAsyncTaskRotateSequence.__D_StartRotateSequenceByTranslation_FunctionParams* ptr = stackalloc UAsyncTaskRotateSequence.__D_StartRotateSequenceByTranslation_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UAsyncTaskRotateSequence.__D_StartRotateSequenceByTranslation_FunctionParams) & -16L;
@@ -318,7 +291,7 @@ namespace UnrealEngine
 			ptr->PostFireDelay = PostFireDelay;
 			ptr->RotateOffset = RotateOffset;
 			ptr->TimeDilation = TimeDilation;
-			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__D_StartRotateSequenceByTranslation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UAsyncTaskRotateSequence._ClassDefaultObjectPtr, UAsyncTaskRotateSequence.__D_StartRotateSequenceByTranslation_NativeFunctionPtr, (void*)ptr);
 			TArray<FVectorDouble> tarray2 = InTargets;
 			if (tarray2 != null)
 			{
@@ -329,292 +302,246 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x06018094 RID: 98452 RVA: 0x00234C78 File Offset: 0x00232E78
+		// Token: 0x060066B9 RID: 26297 RVA: 0x000943B7 File Offset: 0x000925B7
 		static UAsyncTaskRotateSequence()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGAS.AsyncTaskRotateSequence");
 		}
 
-		// Token: 0x06018095 RID: 98453 RVA: 0x00234C86 File Offset: 0x00232E86
+		// Token: 0x060066BA RID: 26298 RVA: 0x000943C5 File Offset: 0x000925C5
 		protected UAsyncTaskRotateSequence(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D003 RID: 53251
+		// Token: 0x04002B32 RID: 11058
 		public new const string __ObjectPath = "/Script/KuroGAS.AsyncTaskRotateSequence";
 
-		// Token: 0x0400D004 RID: 53252
+		// Token: 0x04002B33 RID: 11059
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D005 RID: 53253
+		// Token: 0x04002B34 RID: 11060
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D006 RID: 53254
+		// Token: 0x04002B35 RID: 11061
 		internal static int __PropertyOffset_OnShootStepFired;
 
-		// Token: 0x0400D007 RID: 53255
+		// Token: 0x04002B36 RID: 11062
 		[Nullable(2)]
 		private FOnRotateStepSignature _OnShootStepFired;
 
-		// Token: 0x0400D008 RID: 53256
+		// Token: 0x04002B37 RID: 11063
 		internal static int __PropertyOffset_OnSequenceFinished;
 
-		// Token: 0x0400D009 RID: 53257
+		// Token: 0x04002B38 RID: 11064
 		[Nullable(2)]
 		private FOnRotateSequenceFinishedSignature _OnSequenceFinished;
 
-		// Token: 0x0400D00A RID: 53258
+		// Token: 0x04002B39 RID: 11065
 		internal static int __PropertyOffset_AimToleranceDeg;
 
-		// Token: 0x0400D00B RID: 53259
+		// Token: 0x04002B3A RID: 11066
 		internal static int __PropertyOffset_AimSpeedDegPerSec;
 
-		// Token: 0x0400D00C RID: 53260
+		// Token: 0x04002B3B RID: 11067
 		internal static int __PropertyOffset_PostFireDelay;
 
-		// Token: 0x0400D00D RID: 53261
+		// Token: 0x04002B3C RID: 11068
 		internal static int __PropertyOffset_TimeDilation;
 
-		// Token: 0x0400D00E RID: 53262
+		// Token: 0x04002B3D RID: 11069
 		internal static int __PropertyOffset_bEaseOut;
 
-		// Token: 0x0400D00F RID: 53263
+		// Token: 0x04002B3E RID: 11070
 		internal static byte __PropertyMask_bEaseOut;
 
-		// Token: 0x0400D010 RID: 53264
+		// Token: 0x04002B3F RID: 11071
 		internal static int __PropertyOffset_bEaseIn;
 
-		// Token: 0x0400D011 RID: 53265
+		// Token: 0x04002B40 RID: 11072
 		internal static byte __PropertyMask_bEaseIn;
 
-		// Token: 0x0400D012 RID: 53266
+		// Token: 0x04002B41 RID: 11073
 		internal static int __PropertyOffset_bForceShortestRoute;
 
-		// Token: 0x0400D013 RID: 53267
+		// Token: 0x04002B42 RID: 11074
 		internal static byte __PropertyMask_bForceShortestRoute;
 
-		// Token: 0x0400D014 RID: 53268
+		// Token: 0x04002B43 RID: 11075
 		internal static int __PropertyOffset_RotateOffset;
 
-		// Token: 0x0400D015 RID: 53269
+		// Token: 0x04002B44 RID: 11076
 		private static IntPtr __StartRotateSequenceByTranslation_NativeFunctionPtr;
 
-		// Token: 0x0400D016 RID: 53270
+		// Token: 0x04002B45 RID: 11077
 		private static IntPtr __StartRotateSequenceByActor_NativeFunctionPtr;
 
-		// Token: 0x0400D017 RID: 53271
-		private static IntPtr __RotateComponentTo_NativeFunctionPtr;
-
-		// Token: 0x0400D018 RID: 53272
+		// Token: 0x04002B46 RID: 11078
 		private static IntPtr __OnAimLatentFinished_NativeFunctionPtr;
 
-		// Token: 0x0400D019 RID: 53273
+		// Token: 0x04002B47 RID: 11079
 		private static IntPtr __D_StartRotateSequenceByTranslation_NativeFunctionPtr;
 
-		// Token: 0x02003028 RID: 12328
+		// Token: 0x02000B37 RID: 2871
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __StartRotateSequenceByTranslation_FunctionParams
 		{
-			// Token: 0x04016C72 RID: 93298
+			// Token: 0x04005C11 RID: 23569
 			[FieldOffset(0)]
 			public FScriptInterface TaskOwner;
 
-			// Token: 0x04016C73 RID: 93299
+			// Token: 0x04005C12 RID: 23570
 			[FieldOffset(16)]
 			public IntPtr InAimPivot;
 
-			// Token: 0x04016C74 RID: 93300
+			// Token: 0x04005C13 RID: 23571
 			[FieldOffset(24)]
 			public byte InTargets;
 
-			// Token: 0x04016C75 RID: 93301
+			// Token: 0x04005C14 RID: 23572
 			[FieldOffset(40)]
 			public float AimSpeedDegPerSec;
 
-			// Token: 0x04016C76 RID: 93302
+			// Token: 0x04005C15 RID: 23573
 			[FieldOffset(44)]
 			public float AimToleranceDeg;
 
-			// Token: 0x04016C77 RID: 93303
+			// Token: 0x04005C16 RID: 23574
 			[FieldOffset(48)]
 			public bool bEaseIn;
 
-			// Token: 0x04016C78 RID: 93304
+			// Token: 0x04005C17 RID: 23575
 			[FieldOffset(49)]
 			public bool bEaseOut;
 
-			// Token: 0x04016C79 RID: 93305
+			// Token: 0x04005C18 RID: 23576
 			[FieldOffset(50)]
 			public bool bForceShortestRoute;
 
-			// Token: 0x04016C7A RID: 93306
+			// Token: 0x04005C19 RID: 23577
 			[FieldOffset(52)]
 			public float PostFireDelay;
 
-			// Token: 0x04016C7B RID: 93307
+			// Token: 0x04005C1A RID: 23578
 			[FieldOffset(56)]
 			public FRotator RotateOffset;
 
-			// Token: 0x04016C7C RID: 93308
+			// Token: 0x04005C1B RID: 23579
 			[FieldOffset(68)]
 			public float TimeDilation;
 
-			// Token: 0x04016C7D RID: 93309
+			// Token: 0x04005C1C RID: 23580
 			[FieldOffset(72)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003029 RID: 12329
+		// Token: 0x02000B38 RID: 2872
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __StartRotateSequenceByActor_FunctionParams
 		{
-			// Token: 0x04016C7E RID: 93310
+			// Token: 0x04005C1D RID: 23581
 			[FieldOffset(0)]
 			public FScriptInterface TaskOwner;
 
-			// Token: 0x04016C7F RID: 93311
+			// Token: 0x04005C1E RID: 23582
 			[FieldOffset(16)]
 			public IntPtr InAimPivot;
 
-			// Token: 0x04016C80 RID: 93312
+			// Token: 0x04005C1F RID: 23583
 			[FieldOffset(24)]
 			public byte InTargets;
 
-			// Token: 0x04016C81 RID: 93313
+			// Token: 0x04005C20 RID: 23584
 			[FieldOffset(40)]
 			public float AimSpeedDegPerSec;
 
-			// Token: 0x04016C82 RID: 93314
+			// Token: 0x04005C21 RID: 23585
 			[FieldOffset(44)]
 			public float AimToleranceDeg;
 
-			// Token: 0x04016C83 RID: 93315
+			// Token: 0x04005C22 RID: 23586
 			[FieldOffset(48)]
 			public bool bEaseIn;
 
-			// Token: 0x04016C84 RID: 93316
+			// Token: 0x04005C23 RID: 23587
 			[FieldOffset(49)]
 			public bool bEaseOut;
 
-			// Token: 0x04016C85 RID: 93317
+			// Token: 0x04005C24 RID: 23588
 			[FieldOffset(50)]
 			public bool bForceShortestRoute;
 
-			// Token: 0x04016C86 RID: 93318
+			// Token: 0x04005C25 RID: 23589
 			[FieldOffset(52)]
 			public float PostFireDelay;
 
-			// Token: 0x04016C87 RID: 93319
+			// Token: 0x04005C26 RID: 23590
 			[FieldOffset(56)]
 			public FRotator RotateOffset;
 
-			// Token: 0x04016C88 RID: 93320
+			// Token: 0x04005C27 RID: 23591
 			[FieldOffset(68)]
 			public float TimeDilation;
 
-			// Token: 0x04016C89 RID: 93321
+			// Token: 0x04005C28 RID: 23592
 			[FieldOffset(72)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x0200302A RID: 12330
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 72)]
-		protected ref struct __RotateComponentTo_FunctionParams
-		{
-			// Token: 0x04016C8A RID: 93322
-			[FieldOffset(0)]
-			public IntPtr Component;
-
-			// Token: 0x04016C8B RID: 93323
-			[FieldOffset(8)]
-			public FRotator TargetWorldRotation;
-
-			// Token: 0x04016C8C RID: 93324
-			[FieldOffset(20)]
-			public bool bEaseOut;
-
-			// Token: 0x04016C8D RID: 93325
-			[FieldOffset(21)]
-			public bool bEaseIn;
-
-			// Token: 0x04016C8E RID: 93326
-			[FieldOffset(24)]
-			public float OverTime;
-
-			// Token: 0x04016C8F RID: 93327
-			[FieldOffset(28)]
-			public bool bForceShortestRotationPath;
-
-			// Token: 0x04016C90 RID: 93328
-			[FieldOffset(32)]
-			public float TimeDilation;
-
-			// Token: 0x04016C91 RID: 93329
-			[FieldOffset(36)]
-			public TEnumAsByte<ERotateComponentAction> MoveAction;
-
-			// Token: 0x04016C92 RID: 93330
-			[FieldOffset(40)]
-			public byte LatentInfo;
-		}
-
-		// Token: 0x0200302B RID: 12331
+		// Token: 0x02000B39 RID: 2873
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __D_StartRotateSequenceByTranslation_FunctionParams
 		{
-			// Token: 0x04016C93 RID: 93331
+			// Token: 0x04005C29 RID: 23593
 			[FieldOffset(0)]
 			public FScriptInterface TaskOwner;
 
-			// Token: 0x04016C94 RID: 93332
+			// Token: 0x04005C2A RID: 23594
 			[FieldOffset(16)]
 			public IntPtr InAimPivot;
 
-			// Token: 0x04016C95 RID: 93333
+			// Token: 0x04005C2B RID: 23595
 			[FieldOffset(24)]
 			public byte InTargets;
 
-			// Token: 0x04016C96 RID: 93334
+			// Token: 0x04005C2C RID: 23596
 			[FieldOffset(40)]
 			public float AimSpeedDegPerSec;
 
-			// Token: 0x04016C97 RID: 93335
+			// Token: 0x04005C2D RID: 23597
 			[FieldOffset(44)]
 			public float AimToleranceDeg;
 
-			// Token: 0x04016C98 RID: 93336
+			// Token: 0x04005C2E RID: 23598
 			[FieldOffset(48)]
 			public bool bEaseIn;
 
-			// Token: 0x04016C99 RID: 93337
+			// Token: 0x04005C2F RID: 23599
 			[FieldOffset(49)]
 			public bool bEaseOut;
 
-			// Token: 0x04016C9A RID: 93338
+			// Token: 0x04005C30 RID: 23600
 			[FieldOffset(50)]
 			public bool bForceShortestRoute;
 
-			// Token: 0x04016C9B RID: 93339
+			// Token: 0x04005C31 RID: 23601
 			[FieldOffset(52)]
 			public float PostFireDelay;
 
-			// Token: 0x04016C9C RID: 93340
+			// Token: 0x04005C32 RID: 23602
 			[FieldOffset(56)]
 			public FRotator RotateOffset;
 
-			// Token: 0x04016C9D RID: 93341
+			// Token: 0x04005C33 RID: 23603
 			[FieldOffset(68)]
 			public float TimeDilation;
 
-			// Token: 0x04016C9E RID: 93342
+			// Token: 0x04005C34 RID: 23604
 			[FieldOffset(72)]
 			public IntPtr __Result;
 		}

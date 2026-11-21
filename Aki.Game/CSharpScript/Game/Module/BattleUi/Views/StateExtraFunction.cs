@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Battle;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E33 RID: 24115
+	// Token: 0x02004E18 RID: 19992
 	public static class StateExtraFunction
 	{
-		// Token: 0x0603D535 RID: 251189 RVA: 0x00EC8A30 File Offset: 0x00EC6C30
+		// Token: 0x060324C5 RID: 206021 RVA: 0x00E19F9C File Offset: 0x00E1819C
 		[NullableContext(2)]
 		public static ExtraItemParams GetExtraItemParamsByCreatureData(CreatureDataComponent creatureDataComp)
 		{

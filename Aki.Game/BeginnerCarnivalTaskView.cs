@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011A6 RID: 4518
+// Token: 0x0200065A RID: 1626
 [NullableContext(1)]
 [Nullable(0)]
 public class BeginnerCarnivalTaskView : UiViewBase
 {
-	// Token: 0x06007795 RID: 30613 RVA: 0x001902E6 File Offset: 0x0018E4E6
+	// Token: 0x06004B2C RID: 19244 RVA: 0x00198ECA File Offset: 0x001970CA
 	public BeginnerCarnivalTaskView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007796 RID: 30614 RVA: 0x001902F0 File Offset: 0x0018E4F0
+	// Token: 0x06004B2D RID: 19245 RVA: 0x00198ED4 File Offset: 0x001970D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,21 +43,21 @@ public class BeginnerCarnivalTaskView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007797 RID: 30615 RVA: 0x00190420 File Offset: 0x0018E620
+	// Token: 0x06004B2E RID: 19246 RVA: 0x00199004 File Offset: 0x00197204
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshBeginnerCarnivalTask, new Action<int>(this.RefreshBeginnerCarnivalTask));
 		EventSystem.Instance.Add(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x06007798 RID: 30616 RVA: 0x0019045A File Offset: 0x0018E65A
+	// Token: 0x06004B2F RID: 19247 RVA: 0x0019903E File Offset: 0x0019723E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshBeginnerCarnivalTask, new Action<int>(this.RefreshBeginnerCarnivalTask));
 		EventSystem.Instance.Remove(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x06007799 RID: 30617 RVA: 0x00190494 File Offset: 0x0018E694
+	// Token: 0x06004B30 RID: 19248 RVA: 0x00199078 File Offset: 0x00197278
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BeginnerCarnivalTaskView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,25 +68,25 @@ public class BeginnerCarnivalTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600779A RID: 30618 RVA: 0x001904D7 File Offset: 0x0018E6D7
+	// Token: 0x06004B31 RID: 19249 RVA: 0x001990BB File Offset: 0x001972BB
 	private BeginnerCarnivalTaskItem CreateItem()
 	{
 		return new BeginnerCarnivalTaskItem();
 	}
 
-	// Token: 0x0600779B RID: 30619 RVA: 0x001904DE File Offset: 0x0018E6DE
+	// Token: 0x06004B32 RID: 19250 RVA: 0x001990C2 File Offset: 0x001972C2
 	protected override void OnStart()
 	{
 		this.TypeId = (int)this.OpenParam;
 	}
 
-	// Token: 0x0600779C RID: 30620 RVA: 0x001904F1 File Offset: 0x0018E6F1
+	// Token: 0x06004B33 RID: 19251 RVA: 0x001990D5 File Offset: 0x001972D5
 	protected override void OnBeforeShow()
 	{
 		this.RefreshViewByType(this.TypeId);
 	}
 
-	// Token: 0x0600779D RID: 30621 RVA: 0x00190500 File Offset: 0x0018E700
+	// Token: 0x06004B34 RID: 19252 RVA: 0x001990E4 File Offset: 0x001972E4
 	private void RefreshViewByType(int type)
 	{
 		BeginnerCarnivalData data = BeginnerCarnivalController.Instance.GetBeginnerCarnivalData();
@@ -123,7 +123,7 @@ public class BeginnerCarnivalTaskView : UiViewBase
 		base.GetItem(9).SetUIActive(this.TypeId == 4);
 	}
 
-	// Token: 0x0600779E RID: 30622 RVA: 0x00190648 File Offset: 0x0018E848
+	// Token: 0x06004B35 RID: 19253 RVA: 0x0019922C File Offset: 0x0019742C
 	private void OnClickLeftBtn()
 	{
 		if (TimeUtil.Instance.GetServerTimeStamp() < this.NextCanClickTime)
@@ -150,7 +150,7 @@ public class BeginnerCarnivalTaskView : UiViewBase
 		uiViewSequence2.PlaySequence("Switch", false, null);
 	}
 
-	// Token: 0x0600779F RID: 30623 RVA: 0x001906E4 File Offset: 0x0018E8E4
+	// Token: 0x06004B36 RID: 19254 RVA: 0x001992C8 File Offset: 0x001974C8
 	private void OnClickRightBtn()
 	{
 		if (TimeUtil.Instance.GetServerTimeStamp() < this.NextCanClickTime)
@@ -177,13 +177,13 @@ public class BeginnerCarnivalTaskView : UiViewBase
 		uiViewSequence2.PlaySequence("Switch", false, null);
 	}
 
-	// Token: 0x060077A0 RID: 30624 RVA: 0x0019077F File Offset: 0x0018E97F
+	// Token: 0x06004B37 RID: 19255 RVA: 0x00199363 File Offset: 0x00197563
 	private void RefreshBeginnerCarnivalTask(int index)
 	{
 		this.RefreshViewByType(index);
 	}
 
-	// Token: 0x060077A1 RID: 30625 RVA: 0x00190788 File Offset: 0x0018E988
+	// Token: 0x06004B38 RID: 19256 RVA: 0x0019936C File Offset: 0x0019756C
 	private void OnActivityClose(IReadOnlySet<int> closeActivities)
 	{
 		if (closeActivities.Contains(BeginnerCarnivalController.Instance.ActivityId))
@@ -199,23 +199,23 @@ public class BeginnerCarnivalTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003719 RID: 14105
+	// Token: 0x040037B2 RID: 14258
 	private const int MAX_TYPE = 4;
 
-	// Token: 0x0400371A RID: 14106
+	// Token: 0x040037B3 RID: 14259
 	private const int MIN_TYPE = 1;
 
-	// Token: 0x0400371B RID: 14107
+	// Token: 0x040037B4 RID: 14260
 	private int TypeId;
 
-	// Token: 0x0400371C RID: 14108
+	// Token: 0x040037B5 RID: 14261
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400371D RID: 14109
+	// Token: 0x040037B6 RID: 14262
 	private double NextCanClickTime;
 
-	// Token: 0x0400371E RID: 14110
+	// Token: 0x040037B7 RID: 14263
 	[Nullable(new byte[]
 	{
 		2,

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x02006380 RID: 25472
+	// Token: 0x020052FE RID: 21246
 	public static class NewbieMainDefine
 	{
-		// Token: 0x04021622 RID: 136738
+		// Token: 0x0401BF51 RID: 114513
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<ENewbieMainTabType, IReadOnlyList<string>> NewbieMainBgTextureResourceMap = new Dictionary<ENewbieMainTabType, IReadOnlyList<string>>

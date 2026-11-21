@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CE2 RID: 19682
+	// Token: 0x020051DE RID: 20958
 	public enum ITargetAttribute_Union : byte
 	{
-		// Token: 0x0400D6B3 RID: 54963
+		// Token: 0x0400E1E0 RID: 57824
 		NONE,
-		// Token: 0x0400D6B4 RID: 54964
+		// Token: 0x0400E1E1 RID: 57825
 		ITargetAttribute,
-		// Token: 0x0400D6B5 RID: 54965
+		// Token: 0x0400E1E2 RID: 57826
 		IPlayerAttribute
 	}
 }

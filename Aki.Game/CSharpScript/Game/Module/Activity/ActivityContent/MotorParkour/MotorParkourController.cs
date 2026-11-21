@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,13 +14,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063EB RID: 25579
+	// Token: 0x02005369 RID: 21353
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MotorParkourController : ActivityControllerBase
 	{
-		// Token: 0x06040575 RID: 263541 RVA: 0x00F8FDD0 File Offset: 0x00F8DFD0
+		// Token: 0x06035236 RID: 217654 RVA: 0x00ED6D68 File Offset: 0x00ED4F68
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MotorParkourLevelRewardUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.UpdateMotorParkourLevel));
@@ -29,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			Net.Instance.Register(ENotifyMessageId.MotorParkourStartNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMotorParkourStartNotify));
 		}
 
-		// Token: 0x06040576 RID: 263542 RVA: 0x00F8FE31 File Offset: 0x00F8E031
+		// Token: 0x06035237 RID: 217655 RVA: 0x00ED6DC9 File Offset: 0x00ED4FC9
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MotorParkourLevelRewardUpdateNotify);
@@ -37,55 +36,60 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			Net.Instance.UnRegister(ENotifyMessageId.MotorParkourStartNotify);
 		}
 
-		// Token: 0x06040577 RID: 263543 RVA: 0x00F8FE63 File Offset: 0x00F8E063
+		// Token: 0x06035238 RID: 217656 RVA: 0x00ED6DFB File Offset: 0x00ED4FFB
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x06040578 RID: 263544 RVA: 0x00F8FE81 File Offset: 0x00F8E081
+		// Token: 0x06035239 RID: 217657 RVA: 0x00ED6E19 File Offset: 0x00ED5019
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x06040579 RID: 263545 RVA: 0x00F8FE9F File Offset: 0x00F8E09F
+		// Token: 0x0603523A RID: 217658 RVA: 0x00ED6E38 File Offset: 0x00ED5038
 		private List<MotorParkourActivityData> GetActivityDataList()
 		{
-			return ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.MotorParkourActivity).Cast<MotorParkourActivityData>().ToList<MotorParkourActivityData>();
+			List<MotorParkourActivityData> list = new List<MotorParkourActivityData>();
+			foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.MotorParkourActivity))
+			{
+				list.Add((MotorParkourActivityData)activityBaseData);
+			}
+			return list;
 		}
 
-		// Token: 0x0604057A RID: 263546 RVA: 0x00F8FEB7 File Offset: 0x00F8E0B7
+		// Token: 0x0603523B RID: 217659 RVA: 0x00ED6EA0 File Offset: 0x00ED50A0
 		private MotorParkourActivityData GetActivityDataById(int activityId)
 		{
 			return ActivityModel.Instance.GetActivityById(activityId) as MotorParkourActivityData;
 		}
 
-		// Token: 0x0604057B RID: 263547 RVA: 0x00F8FEC9 File Offset: 0x00F8E0C9
+		// Token: 0x0603523C RID: 217660 RVA: 0x00ED6EB2 File Offset: 0x00ED50B2
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			throw new Exception("Method not implemented.");
 		}
 
-		// Token: 0x0604057C RID: 263548 RVA: 0x00F8FED5 File Offset: 0x00F8E0D5
+		// Token: 0x0603523D RID: 217661 RVA: 0x00ED6EBE File Offset: 0x00ED50BE
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_MotoParkourActivityMain";
 		}
 
-		// Token: 0x0604057D RID: 263549 RVA: 0x00F8FEDC File Offset: 0x00F8E0DC
+		// Token: 0x0603523E RID: 217662 RVA: 0x00ED6EC5 File Offset: 0x00ED50C5
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new MotorParkourActivitySubView();
 		}
 
-		// Token: 0x0604057E RID: 263550 RVA: 0x00F8FEE3 File Offset: 0x00F8E0E3
+		// Token: 0x0603523F RID: 217663 RVA: 0x00ED6ECC File Offset: 0x00ED50CC
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new MotorParkourActivityData();
 		}
 
-		// Token: 0x0604057F RID: 263551 RVA: 0x00F8FEEC File Offset: 0x00F8E0EC
+		// Token: 0x06035240 RID: 217664 RVA: 0x00ED6ED4 File Offset: 0x00ED50D4
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			foreach (EUiViewName viewName in new List<EUiViewName>
@@ -102,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return false;
 		}
 
-		// Token: 0x06040580 RID: 263552 RVA: 0x00F8FF64 File Offset: 0x00F8E164
+		// Token: 0x06035241 RID: 217665 RVA: 0x00ED6F4C File Offset: 0x00ED514C
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -115,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040581 RID: 263553 RVA: 0x00F8FFB0 File Offset: 0x00F8E1B0
+		// Token: 0x06035242 RID: 217666 RVA: 0x00ED6F98 File Offset: 0x00ED5198
 		[NullableContext(2)]
 		private void UpdateMotorParkourLevel(IMessage msg, Net.CallbackStatus _)
 		{
@@ -126,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x06040582 RID: 263554 RVA: 0x00F90010 File Offset: 0x00F8E210
+		// Token: 0x06035243 RID: 217667 RVA: 0x00ED6FF8 File Offset: 0x00ED51F8
 		[NullableContext(2)]
 		private void OnMotorParkourStartNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -140,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			UiManager.Instance.OpenView(EUiViewName.MotorParkourTimerView, this.StartFlowTime, null);
 		}
 
-		// Token: 0x06040583 RID: 263555 RVA: 0x00F9007C File Offset: 0x00F8E27C
+		// Token: 0x06035244 RID: 217668 RVA: 0x00ED7064 File Offset: 0x00ED5264
 		private void SetBehaviorTreeVar(IReadOnlyDictionary<string, string> variableKeyNames)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -151,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.BehaviorTreeUpdateDelegate.SetBehaviorTreeVarRelation(dictionary);
 		}
 
-		// Token: 0x06040584 RID: 263556 RVA: 0x00F900E4 File Offset: 0x00F8E2E4
+		// Token: 0x06035245 RID: 217669 RVA: 0x00ED70CC File Offset: 0x00ED52CC
 		private void OnUpdateMotorParkourLapNum([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 		{
 			long @int = newVarDefine.Int;
@@ -163,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			EventSystem.Instance.Emit<int, float>(EEventName.MotorParkourFinishLap, (int)@int, (float)num);
 		}
 
-		// Token: 0x06040585 RID: 263557 RVA: 0x00F90128 File Offset: 0x00F8E328
+		// Token: 0x06035246 RID: 217670 RVA: 0x00ED7110 File Offset: 0x00ED5310
 		[NullableContext(2)]
 		private unsafe void OnMotorParkourResultNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -212,7 +216,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			GenericPromptController.Instance.ShowPromptByItsType(EPromptSubViewType.EventYesPrompt, null, null, null, null, null, null);
 		}
 
-		// Token: 0x06040586 RID: 263558 RVA: 0x00F902E4 File Offset: 0x00F8E4E4
+		// Token: 0x06035247 RID: 217671 RVA: 0x00ED72CC File Offset: 0x00ED54CC
 		public void RequestTaskReward(int levelId)
 		{
 			int activityId = MotorParkourConfig.Instance.GetMotorParkourLevelById(levelId).Value.ActivityId;
@@ -229,12 +233,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 				}
 				if (motorParkourLevelRewardResponse.Error != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(motorParkourLevelRewardResponse.Error, 19468, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(motorParkourLevelRewardResponse.Error, 21142, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06040587 RID: 263559 RVA: 0x00F9036C File Offset: 0x00F8E56C
+		// Token: 0x06035248 RID: 217672 RVA: 0x00ED7354 File Offset: 0x00ED5554
 		public void EnterMotorParkourDungeonDirectly(int levelId)
 		{
 			MotorParkourCtx motorParkourCtx = new MotorParkourCtx
@@ -245,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			InstanceDungeonController.Instance.PrewarTeamFightRequest(0, new List<int>(), 0, 0, null, null);
 		}
 
-		// Token: 0x06040588 RID: 263560 RVA: 0x00F903AC File Offset: 0x00F8E5AC
+		// Token: 0x06035249 RID: 217673 RVA: 0x00ED7394 File Offset: 0x00ED5594
 		public bool CheckInMotorParkourDungeon()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -257,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return false;
 		}
 
-		// Token: 0x06040589 RID: 263561 RVA: 0x00F903FC File Offset: 0x00F8E5FC
+		// Token: 0x0603524A RID: 217674 RVA: 0x00ED73E4 File Offset: 0x00ED55E4
 		public void LeaveInstanceDungeon()
 		{
 			if (this.CheckInMotorParkourDungeon())
@@ -266,7 +270,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x0604058A RID: 263562 RVA: 0x00F90414 File Offset: 0x00F8E614
+		// Token: 0x0603524B RID: 217675 RVA: 0x00ED73FC File Offset: 0x00ED55FC
 		private void OnWorldDone()
 		{
 			if (this.IsNeedShowMotorParkourMainView)
@@ -292,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x0604058B RID: 263563 RVA: 0x00F904C8 File Offset: 0x00F8E6C8
+		// Token: 0x0603524C RID: 217676 RVA: 0x00ED74B0 File Offset: 0x00ED56B0
 		private void AddMainViewSplashTask()
 		{
 			List<MotorParkourActivityData> activityDataList = this.GetActivityDataList();
@@ -309,8 +313,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 		}
 
-		// Token: 0x1700942E RID: 37934
-		// (get) Token: 0x0604058C RID: 263564 RVA: 0x00F90537 File Offset: 0x00F8E737
+		// Token: 0x17006790 RID: 26512
+		// (get) Token: 0x0603524D RID: 217677 RVA: 0x00ED751F File Offset: 0x00ED571F
 		public static MotorParkourController Instance
 		{
 			get
@@ -319,7 +323,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x0604058D RID: 263565 RVA: 0x00F9053E File Offset: 0x00F8E73E
+		// Token: 0x0603524E RID: 217678 RVA: 0x00ED7526 File Offset: 0x00ED5726
 		public static MotorParkourController GetOrCreateInstance()
 		{
 			if (MotorParkourController._Instance == null)
@@ -329,7 +333,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return MotorParkourController._Instance;
 		}
 
-		// Token: 0x0604058E RID: 263566 RVA: 0x00F90552 File Offset: 0x00F8E752
+		// Token: 0x0603524F RID: 217679 RVA: 0x00ED753A File Offset: 0x00ED573A
 		public static bool CreateInstance()
 		{
 			if (MotorParkourController._Instance != null)
@@ -340,33 +344,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return true;
 		}
 
-		// Token: 0x0604058F RID: 263567 RVA: 0x00F90568 File Offset: 0x00F8E768
+		// Token: 0x06035250 RID: 217680 RVA: 0x00ED7550 File Offset: 0x00ED5750
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06040590 RID: 263568 RVA: 0x00F9056A File Offset: 0x00F8E76A
+		// Token: 0x06035251 RID: 217681 RVA: 0x00ED7552 File Offset: 0x00ED5752
 		public static void ResetStaticDefaultValue()
 		{
 			MotorParkourController._Instance = null;
 		}
 
-		// Token: 0x06040591 RID: 263569 RVA: 0x00F90572 File Offset: 0x00F8E772
+		// Token: 0x06035252 RID: 217682 RVA: 0x00ED755A File Offset: 0x00ED575A
 		static MotorParkourController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorParkourController.CreateStaticDefaultValue), new Action(MotorParkourController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402177B RID: 137083
+		// Token: 0x0401C0AA RID: 114858
 		private long StartFlowTime;
 
-		// Token: 0x0402177C RID: 137084
+		// Token: 0x0401C0AB RID: 114859
 		public bool IsNeedShowMotorParkourMainView;
 
-		// Token: 0x0402177D RID: 137085
+		// Token: 0x0401C0AC RID: 114860
 		private readonly BehaviorTreeUpdateDelegateProxy BehaviorTreeUpdateDelegate = new BehaviorTreeUpdateDelegateProxy();
 
-		// Token: 0x0402177E RID: 137086
+		// Token: 0x0401C0AD RID: 114861
 		[Nullable(2)]
 		private static MotorParkourController _Instance;
 	}

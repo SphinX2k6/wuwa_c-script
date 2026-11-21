@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E44 RID: 3652
+	// Token: 0x02000F40 RID: 3904
 	public class IGraph3dEffectBase
 	{
-		// Token: 0x06005281 RID: 21121 RVA: 0x000CB1D2 File Offset: 0x000C93D2
-		[NullableContext(1)]
+		// Token: 0x060057A8 RID: 22440 RVA: 0x000D6A9A File Offset: 0x000D4C9A
 		public static IGraph3dEffectBase Create(IGraph3dEffectBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BB6 RID: 7094
-		// (get) Token: 0x06005282 RID: 21122 RVA: 0x000CB1F1 File Offset: 0x000C93F1
+		// Token: 0x17001D23 RID: 7459
+		// (get) Token: 0x060057A9 RID: 22441 RVA: 0x000D6AB9 File Offset: 0x000D4CB9
 		public virtual EGraph3dEffectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F8F RID: 12175
+		// Token: 0x04003257 RID: 12887
 		private IGraph3dEffectBase Instance;
 	}
 }

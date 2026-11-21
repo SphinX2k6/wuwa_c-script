@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028FD RID: 10493
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BD6 RID: 11222
 	public class IChangeActorMPC : IModifyMaterialConfig
 	{
-		// Token: 0x0600E903 RID: 59651 RVA: 0x00222D55 File Offset: 0x00220F55
+		// Token: 0x0600F747 RID: 63303 RVA: 0x0023FF41 File Offset: 0x0023E141
 		public static IChangeActorMPC Create(IChangeActorMPC? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048CB RID: 18635
-		// (get) Token: 0x0600E904 RID: 59652 RVA: 0x00222D74 File Offset: 0x00220F74
+		// Token: 0x17004C49 RID: 19529
+		// (get) Token: 0x0600F748 RID: 63304 RVA: 0x0023FF60 File Offset: 0x0023E160
 		public override EModifyActorMaterialType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048CC RID: 18636
-		// (get) Token: 0x0600E905 RID: 59653 RVA: 0x00222D81 File Offset: 0x00220F81
+		// Token: 0x17004C4A RID: 19530
+		// (get) Token: 0x0600F749 RID: 63305 RVA: 0x0023FF6D File Offset: 0x0023E16D
 		public virtual string MpcData
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080A1 RID: 32929
+		// Token: 0x04008766 RID: 34662
 		private IChangeActorMPC Instance;
 	}
 }

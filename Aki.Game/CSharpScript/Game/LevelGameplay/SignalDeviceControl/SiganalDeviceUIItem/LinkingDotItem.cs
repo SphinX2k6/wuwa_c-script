@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIItem
 {
-	// Token: 0x02006A52 RID: 27218
+	// Token: 0x02005BAF RID: 23471
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LinkingDotItem : UiPanelBase
 	{
-		// Token: 0x06043B04 RID: 277252 RVA: 0x0108F968 File Offset: 0x0108DB68
+		// Token: 0x06039B52 RID: 236370 RVA: 0x0103418C File Offset: 0x0103238C
 		protected unsafe override void OnRegisterComponent()
 		{
 			List<ValueTuple<int, Type>> componentRegisterInfos;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.ComponentRegisterInfos = componentRegisterInfos;
 		}
 
-		// Token: 0x06043B05 RID: 277253 RVA: 0x0108FC98 File Offset: 0x0108DE98
+		// Token: 0x06039B53 RID: 236371 RVA: 0x010344BC File Offset: 0x010326BC
 		protected override void OnStart()
 		{
 			this.SprDot = base.GetSprite(0);
@@ -142,13 +142,13 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			EventSystem.Instance.Add<bool, int, bool, int, bool>(EEventName.OnSignalDeviceLinking, new Action<bool, int, bool, int, bool>(this.OnSignalDeviceLinking));
 		}
 
-		// Token: 0x06043B06 RID: 277254 RVA: 0x0108FE12 File Offset: 0x0108E012
+		// Token: 0x06039B54 RID: 236372 RVA: 0x01034636 File Offset: 0x01032836
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSignalDeviceLinking, new Action<bool, int, bool, int, bool>(this.OnSignalDeviceLinking));
 		}
 
-		// Token: 0x06043B07 RID: 277255 RVA: 0x0108FE30 File Offset: 0x0108E030
+		// Token: 0x06039B55 RID: 236373 RVA: 0x01034654 File Offset: 0x01032854
 		public void InitIcon(EPieceColorType color)
 		{
 			bool flag = SignalDeviceModel.Instance.ViewType == EViewType.ChasingMoon;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.ResetIcon();
 		}
 
-		// Token: 0x06043B08 RID: 277256 RVA: 0x01090084 File Offset: 0x0108E284
+		// Token: 0x06039B56 RID: 236374 RVA: 0x010348A8 File Offset: 0x01032AA8
 		public UniTask ResetIcon()
 		{
 			LinkingDotItem.<ResetIcon>d__26 <ResetIcon>d__;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			return <ResetIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043B09 RID: 277257 RVA: 0x010900C8 File Offset: 0x0108E2C8
+		// Token: 0x06039B57 RID: 236375 RVA: 0x010348EC File Offset: 0x01032AEC
 		public UniTask OnPressed(bool isDown)
 		{
 			LinkingDotItem.<OnPressed>d__27 <OnPressed>d__;
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			return <OnPressed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043B0A RID: 277258 RVA: 0x01090114 File Offset: 0x0108E314
+		// Token: 0x06039B58 RID: 236376 RVA: 0x01034938 File Offset: 0x01032B38
 		public UniTask OnLinked()
 		{
 			LinkingDotItem.<OnLinked>d__28 <OnLinked>d__;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			return <OnLinked>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043B0B RID: 277259 RVA: 0x01090158 File Offset: 0x0108E358
+		// Token: 0x06039B59 RID: 236377 RVA: 0x0103497C File Offset: 0x01032B7C
 		public void SetLight(bool isLight)
 		{
 			this.SprDot.SetUIActive(!isLight);
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		}
 
-		// Token: 0x06043B0C RID: 277260 RVA: 0x010901A5 File Offset: 0x0108E3A5
+		// Token: 0x06039B5A RID: 236378 RVA: 0x010349C9 File Offset: 0x01032BC9
 		public void SetFxBoost(bool isLight)
 		{
 			if (SignalDeviceModel.Instance.ViewType == EViewType.ChasingMoon)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.FxBoost.SetUIActive(isLight);
 		}
 
-		// Token: 0x06043B0D RID: 277261 RVA: 0x010901C4 File Offset: 0x0108E3C4
+		// Token: 0x06039B5B RID: 236379 RVA: 0x010349E8 File Offset: 0x01032BE8
 		public void RotateLine(bool isActive, ENeighborType neighborType = ENeighborType.None)
 		{
 			this.SprRay.SetUIActive(isActive);
@@ -286,48 +286,48 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			pnlRota.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06043B0E RID: 277262 RVA: 0x01090226 File Offset: 0x0108E426
+		// Token: 0x06039B5C RID: 236380 RVA: 0x01034A4A File Offset: 0x01032C4A
 		private void OnSignalDeviceLinking(bool isAdd, int from, bool isFromDot, int to, bool isToDot)
 		{
 		}
 
-		// Token: 0x04023574 RID: 144756
+		// Token: 0x0401E766 RID: 124774
 		private UUISprite SprDot;
 
-		// Token: 0x04023575 RID: 144757
+		// Token: 0x0401E767 RID: 124775
 		private UUISprite SprDotLight;
 
-		// Token: 0x04023576 RID: 144758
+		// Token: 0x0401E768 RID: 124776
 		private UUISprite SprCorner;
 
-		// Token: 0x04023577 RID: 144759
+		// Token: 0x0401E769 RID: 124777
 		private UUISprite SprCornerLight;
 
-		// Token: 0x04023578 RID: 144760
+		// Token: 0x0401E76A RID: 124778
 		private UUISprite SprRay;
 
-		// Token: 0x04023579 RID: 144761
+		// Token: 0x0401E76B RID: 124779
 		private UUISprite SprUpper;
 
-		// Token: 0x0402357A RID: 144762
+		// Token: 0x0401E76C RID: 124780
 		private UUIItem PnlRota;
 
-		// Token: 0x0402357B RID: 144763
+		// Token: 0x0401E76D RID: 124781
 		private UUIItem FxBoost;
 
-		// Token: 0x0402357C RID: 144764
+		// Token: 0x0401E76E RID: 124782
 		private UUISprite SprAnimLine;
 
-		// Token: 0x0402357D RID: 144765
+		// Token: 0x0401E76F RID: 124783
 		private UUISprite SprAnimLineWhite;
 
-		// Token: 0x0402357E RID: 144766
+		// Token: 0x0401E770 RID: 124784
 		private UUISprite SprAnimDot;
 
-		// Token: 0x0402357F RID: 144767
+		// Token: 0x0401E771 RID: 124785
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04023580 RID: 144768
+		// Token: 0x0401E772 RID: 124786
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EPieceColorType, string> ColorDotIconMap = new Dictionary<EPieceColorType, string>
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023581 RID: 144769
+		// Token: 0x0401E773 RID: 124787
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EPieceColorType, string> ColorCornerIconMap = new Dictionary<EPieceColorType, string>
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023582 RID: 144770
+		// Token: 0x0401E774 RID: 124788
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> ColorRayIconMap = new Dictionary<EPieceColorType, string>
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023583 RID: 144771
+		// Token: 0x0401E775 RID: 124789
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EPieceColorType, string> ColorAnimLineMap = new Dictionary<EPieceColorType, string>
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023584 RID: 144772
+		// Token: 0x0401E776 RID: 124790
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EPieceColorType, string> ColorAnimDotMap = new Dictionary<EPieceColorType, string>
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023585 RID: 144773
+		// Token: 0x0401E777 RID: 124791
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> ColorMap = new Dictionary<EPieceColorType, string>
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023586 RID: 144774
+		// Token: 0x0401E778 RID: 124792
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> CmColorMap = new Dictionary<EPieceColorType, string>
@@ -488,7 +488,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023587 RID: 144775
+		// Token: 0x0401E779 RID: 124793
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> CmAnimColorMap = new Dictionary<EPieceColorType, string>
@@ -511,7 +511,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x04023588 RID: 144776
+		// Token: 0x0401E77A RID: 124794
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		protected static readonly Dictionary<EPieceColorType, string> FxColorMap = new Dictionary<EPieceColorType, string>
@@ -534,37 +534,37 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		};
 
-		// Token: 0x0200CB79 RID: 52089
+		// Token: 0x0200B758 RID: 46936
 		[NullableContext(0)]
 		public enum EComponents
 		{
-			// Token: 0x0403D6D3 RID: 251603
+			// Token: 0x04038AB5 RID: 232117
 			SprDot,
-			// Token: 0x0403D6D4 RID: 251604
+			// Token: 0x04038AB6 RID: 232118
 			SprDotLight,
-			// Token: 0x0403D6D5 RID: 251605
+			// Token: 0x04038AB7 RID: 232119
 			SprCorner,
-			// Token: 0x0403D6D6 RID: 251606
+			// Token: 0x04038AB8 RID: 232120
 			SprCornerLight,
-			// Token: 0x0403D6D7 RID: 251607
+			// Token: 0x04038AB9 RID: 232121
 			PnlRota,
-			// Token: 0x0403D6D8 RID: 251608
+			// Token: 0x04038ABA RID: 232122
 			SprUpper,
-			// Token: 0x0403D6D9 RID: 251609
+			// Token: 0x04038ABB RID: 232123
 			SprRay,
-			// Token: 0x0403D6DA RID: 251610
+			// Token: 0x04038ABC RID: 232124
 			FxBoost,
-			// Token: 0x0403D6DB RID: 251611
+			// Token: 0x04038ABD RID: 232125
 			SprAnimLine,
-			// Token: 0x0403D6DC RID: 251612
+			// Token: 0x04038ABE RID: 232126
 			SprAnimLine1,
-			// Token: 0x0403D6DD RID: 251613
+			// Token: 0x04038ABF RID: 232127
 			SprAnimDot,
-			// Token: 0x0403D6DE RID: 251614
+			// Token: 0x04038AC0 RID: 232128
 			AniCube,
-			// Token: 0x0403D6DF RID: 251615
+			// Token: 0x04038AC1 RID: 232129
 			UINiagaraActor4,
-			// Token: 0x0403D6E0 RID: 251616
+			// Token: 0x04038AC2 RID: 232130
 			UiItem_LinkingCMDot
 		}
 	}

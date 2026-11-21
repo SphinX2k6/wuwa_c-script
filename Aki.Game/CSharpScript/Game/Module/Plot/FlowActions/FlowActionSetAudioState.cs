@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Audio;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050CD RID: 20685
+	// Token: 0x0200409D RID: 16541
 	public class FlowActionSetAudioState : FlowActionBase
 	{
-		// Token: 0x06034F21 RID: 216865 RVA: 0x00C8A6E0 File Offset: 0x00C888E0
+		// Token: 0x06029E1A RID: 171546 RVA: 0x00BD79C8 File Offset: 0x00BD5BC8
 		protected override void OnExecute()
 		{
 			SetAudioState setAudioState = this.ActionInfo.Params as SetAudioState;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			GameAudioController.Instance.UpdateAudioStatebyClient(setAudioState.AudioConfig);
 		}
 
-		// Token: 0x06034F22 RID: 216866 RVA: 0x00C8A712 File Offset: 0x00C88912
+		// Token: 0x06029E1B RID: 171547 RVA: 0x00BD79FA File Offset: 0x00BD5BFA
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

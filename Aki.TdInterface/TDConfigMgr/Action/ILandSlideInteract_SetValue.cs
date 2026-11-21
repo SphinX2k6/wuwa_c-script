@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B71 RID: 7025
+	// Token: 0x02001D1E RID: 7454
 	public class ILandSlideInteract_SetValue
 	{
-		// Token: 0x04005BFC RID: 23548
+		// Token: 0x04006095 RID: 24725
 		public ELeisureInteract Type;
 	}
 }

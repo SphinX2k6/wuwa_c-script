@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002556 RID: 9558
+	// Token: 0x020027FF RID: 10239
 	public class ITalkItemPhoneMessageAttachment : ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600D5CB RID: 54731 RVA: 0x001FC183 File Offset: 0x001FA383
-		[NullableContext(1)]
+		// Token: 0x0600E335 RID: 58165 RVA: 0x00217D7F File Offset: 0x00215F7F
 		public static ITalkItemPhoneMessageAttachment Create(ITalkItemPhoneMessageAttachment? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003CE1 RID: 15585
-		// (get) Token: 0x0600D5CC RID: 54732 RVA: 0x001FC1A2 File Offset: 0x001FA3A2
+		// Token: 0x17003FE5 RID: 16357
+		// (get) Token: 0x0600E336 RID: 58166 RVA: 0x00217D9E File Offset: 0x00215F9E
 		public override EPhoneMessageType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003CE2 RID: 15586
-		// (get) Token: 0x0600D5CD RID: 54733 RVA: 0x001FC1AF File Offset: 0x001FA3AF
+		// Token: 0x17003FE6 RID: 16358
+		// (get) Token: 0x0600E337 RID: 58167 RVA: 0x00217DAB File Offset: 0x00215FAB
 		public virtual int AttachmentId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040075C4 RID: 30148
+		// Token: 0x04007C21 RID: 31777
 		private ITalkItemPhoneMessageAttachment Instance;
 	}
 }

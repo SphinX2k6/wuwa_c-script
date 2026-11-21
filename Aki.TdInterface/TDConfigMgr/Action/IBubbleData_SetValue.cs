@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200181D RID: 6173
+	// Token: 0x020019A8 RID: 6568
 	public class IBubbleData_SetValue
 	{
-		// Token: 0x040053D6 RID: 21462
-		[Nullable(1)]
+		// Token: 0x04005822 RID: 22562
 		public IBubbleIndex FlowIndex;
 
-		// Token: 0x040053D7 RID: 21463
+		// Token: 0x04005823 RID: 22563
 		public int WaitTime;
 	}
 }

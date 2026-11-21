@@ -5,15 +5,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006954 RID: 26964
+	// Token: 0x02005AAF RID: 23215
 	public class LevelEventClientUnlockAchievement : LevelEventBase
 	{
-		// Token: 0x060432EB RID: 275179 RVA: 0x01061B71 File Offset: 0x0105FD71
+		// Token: 0x06039322 RID: 234274 RVA: 0x01005DD1 File Offset: 0x01003FD1
 		public LevelEventClientUnlockAchievement(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060432EC RID: 275180 RVA: 0x01061B7C File Offset: 0x0105FD7C
+		// Token: 0x06039323 RID: 234275 RVA: 0x01005DDC File Offset: 0x01003FDC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

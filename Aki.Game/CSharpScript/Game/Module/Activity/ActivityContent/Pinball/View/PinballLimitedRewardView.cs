@@ -15,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D0 RID: 25296
+	// Token: 0x0200524E RID: 21070
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballLimitedRewardView : UiTickViewBase
 	{
-		// Token: 0x0603FA7F RID: 260735 RVA: 0x00F6677F File Offset: 0x00F6497F
+		// Token: 0x06034740 RID: 214848 RVA: 0x00EAD6DB File Offset: 0x00EAB8DB
 		public PinballLimitedRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FA80 RID: 260736 RVA: 0x00F66788 File Offset: 0x00F64988
+		// Token: 0x06034741 RID: 214849 RVA: 0x00EAD6E4 File Offset: 0x00EAB8E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FA81 RID: 260737 RVA: 0x00F66A08 File Offset: 0x00F64C08
+		// Token: 0x06034742 RID: 214850 RVA: 0x00EAD964 File Offset: 0x00EABB64
 		protected override void OnStart()
 		{
 			this.ActivityData = (this.OpenParam as PinballActivityData);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshView(true);
 		}
 
-		// Token: 0x0603FA82 RID: 260738 RVA: 0x00F66A74 File Offset: 0x00F64C74
+		// Token: 0x06034743 RID: 214851 RVA: 0x00EAD9D0 File Offset: 0x00EABBD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballLimitedRewardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -95,19 +95,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FA83 RID: 260739 RVA: 0x00F66AAF File Offset: 0x00F64CAF
+		// Token: 0x06034744 RID: 214852 RVA: 0x00EADA0B File Offset: 0x00EABC0B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603FA84 RID: 260740 RVA: 0x00F66ACD File Offset: 0x00F64CCD
+		// Token: 0x06034745 RID: 214853 RVA: 0x00EADA29 File Offset: 0x00EABC29
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0603FA85 RID: 260741 RVA: 0x00F66AEC File Offset: 0x00F64CEC
+		// Token: 0x06034746 RID: 214854 RVA: 0x00EADA48 File Offset: 0x00EABC48
 		protected override void OnTick(float delta)
 		{
 			if (this.ActivityData == null)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			text.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0603FA86 RID: 260742 RVA: 0x00F66B54 File Offset: 0x00F64D54
+		// Token: 0x06034747 RID: 214855 RVA: 0x00EADAB0 File Offset: 0x00EABCB0
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (id != this.ActivityData.Id)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshView(false);
 		}
 
-		// Token: 0x0603FA87 RID: 260743 RVA: 0x00F66B6C File Offset: 0x00F64D6C
+		// Token: 0x06034748 RID: 214856 RVA: 0x00EADAC8 File Offset: 0x00EABCC8
 		private void RefreshView(bool isPlayAnim = false)
 		{
 			List<PinballTaskData> timeLimitTaskList = this.ActivityData.GetTimeLimitTaskList();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshBigRewardHeader();
 		}
 
-		// Token: 0x0603FA88 RID: 260744 RVA: 0x00F66C00 File Offset: 0x00F64E00
+		// Token: 0x06034749 RID: 214857 RVA: 0x00EADB5C File Offset: 0x00EABD5C
 		private void RefreshBigRewardHeader()
 		{
 			int bigRewardFirstItemConfigId = this.GetBigRewardFirstItemConfigId();
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA89 RID: 260745 RVA: 0x00F66CBC File Offset: 0x00F64EBC
+		// Token: 0x0603474A RID: 214858 RVA: 0x00EADC18 File Offset: 0x00EABE18
 		private int GetBigRewardFirstItemConfigId()
 		{
 			PinballTaskData pinballTaskData = null;
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return 0;
 		}
 
-		// Token: 0x0603FA8A RID: 260746 RVA: 0x00F66DC8 File Offset: 0x00F64FC8
+		// Token: 0x0603474B RID: 214859 RVA: 0x00EADD24 File Offset: 0x00EABF24
 		private void RefreshBigRewardTask()
 		{
 			List<PinballTaskData> timeLimitTaskList = this.ActivityData.GetTimeLimitTaskList();
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA8B RID: 260747 RVA: 0x00F66F54 File Offset: 0x00F65154
+		// Token: 0x0603474C RID: 214860 RVA: 0x00EADEB0 File Offset: 0x00EAC0B0
 		private void RefreshProgress()
 		{
 			PinballTaskData pinballTaskData = null;
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0603FA8C RID: 260748 RVA: 0x00F67048 File Offset: 0x00F65248
+		// Token: 0x0603474D RID: 214861 RVA: 0x00EADFA4 File Offset: 0x00EAC1A4
 		private PinballLimitedRewardTaskItem CreateTaskItem()
 		{
 			return new PinballLimitedRewardTaskItem
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			};
 		}
 
-		// Token: 0x0603FA8D RID: 260749 RVA: 0x00F67064 File Offset: 0x00F65264
+		// Token: 0x0603474E RID: 214862 RVA: 0x00EADFC0 File Offset: 0x00EAC1C0
 		private UniTask OnTaskRewardBtnClick(int taskId)
 		{
 			PinballLimitedRewardView.<OnTaskRewardBtnClick>d__17 <OnTaskRewardBtnClick>d__;
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnTaskRewardBtnClick>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FA8E RID: 260750 RVA: 0x00F670A8 File Offset: 0x00F652A8
+		// Token: 0x0603474F RID: 214863 RVA: 0x00EAE004 File Offset: 0x00EAC204
 		private void OnBigRewardBtnClick()
 		{
 			UiAsyncTask task = new UiAsyncTask("PinballLimitedRewardView.RequestBigReward", delegate()
@@ -424,13 +424,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FA8F RID: 260751 RVA: 0x00F670D9 File Offset: 0x00F652D9
+		// Token: 0x06034750 RID: 214864 RVA: 0x00EAE035 File Offset: 0x00EAC235
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603FA90 RID: 260752 RVA: 0x00F670E4 File Offset: 0x00F652E4
+		// Token: 0x06034751 RID: 214865 RVA: 0x00EAE040 File Offset: 0x00EAC240
 		private void OnPreviewBtnClick()
 		{
 			PinballActivityData activityData = this.ActivityData;
@@ -441,54 +441,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA91 RID: 260753 RVA: 0x00F67114 File Offset: 0x00F65314
+		// Token: 0x06034752 RID: 214866 RVA: 0x00EAE070 File Offset: 0x00EAC270
 		private void OnBigRewardItemTipsClick()
 		{
 			int bigRewardFirstItemConfigId = this.GetBigRewardFirstItemConfigId();
 			if (bigRewardFirstItemConfigId > 0)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(bigRewardFirstItemConfigId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(bigRewardFirstItemConfigId, true, null, false);
 			}
 		}
 
-		// Token: 0x04021431 RID: 136241
+		// Token: 0x0401BD60 RID: 114016
 		[Nullable(2)]
 		private PinballActivityData ActivityData;
 
-		// Token: 0x04021432 RID: 136242
+		// Token: 0x0401BD61 RID: 114017
 		private GenericScrollViewNew<PinballLimitedRewardTaskItem, PinballTaskData> TaskLayout;
 
-		// Token: 0x0200C4B3 RID: 50355
+		// Token: 0x0200AE9A RID: 44698
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403B5A9 RID: 243113
+			// Token: 0x04035F0B RID: 220939
 			ItemCaption,
-			// Token: 0x0403B5AA RID: 243114
+			// Token: 0x04035F0C RID: 220940
 			RewardItemScroll,
-			// Token: 0x0403B5AB RID: 243115
+			// Token: 0x04035F0D RID: 220941
 			RewardItem,
-			// Token: 0x0403B5AC RID: 243116
+			// Token: 0x04035F0E RID: 220942
 			BtnCommon,
-			// Token: 0x0403B5AD RID: 243117
+			// Token: 0x04035F0F RID: 220943
 			TxtTime,
-			// Token: 0x0403B5AE RID: 243118
+			// Token: 0x04035F10 RID: 220944
 			TextureIcon,
-			// Token: 0x0403B5AF RID: 243119
+			// Token: 0x04035F11 RID: 220945
 			TxName,
-			// Token: 0x0403B5B0 RID: 243120
+			// Token: 0x04035F12 RID: 220946
 			TxMission,
-			// Token: 0x0403B5B1 RID: 243121
+			// Token: 0x04035F13 RID: 220947
 			TxNum,
-			// Token: 0x0403B5B2 RID: 243122
+			// Token: 0x04035F14 RID: 220948
 			BtnConfirmBase,
-			// Token: 0x0403B5B3 RID: 243123
+			// Token: 0x04035F15 RID: 220949
 			SpBar,
-			// Token: 0x0403B5B4 RID: 243124
+			// Token: 0x04035F16 RID: 220950
 			PanelBigRewardUndone,
-			// Token: 0x0403B5B5 RID: 243125
+			// Token: 0x04035F17 RID: 220951
 			PanelBigRewardDone,
-			// Token: 0x0403B5B6 RID: 243126
+			// Token: 0x04035F18 RID: 220952
 			BtnMonsterHead
 		}
 	}

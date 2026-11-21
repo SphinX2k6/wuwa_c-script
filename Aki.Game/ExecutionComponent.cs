@@ -10,18 +10,18 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
 
-// Token: 0x020031C8 RID: 12744
+// Token: 0x02002737 RID: 10039
 [NullableContext(1)]
 [Nullable(0)]
 public class ExecutionComponent : EntityComponent
 {
-	// Token: 0x0601B785 RID: 112517 RVA: 0x0078536D File Offset: 0x0078356D
+	// Token: 0x060192BE RID: 103102 RVA: 0x007AD559 File Offset: 0x007AB759
 	protected override bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x0601B786 RID: 112518 RVA: 0x00785370 File Offset: 0x00783570
+	// Token: 0x060192BF RID: 103103 RVA: 0x007AD55C File Offset: 0x007AB75C
 	protected override void OnActivate()
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -37,7 +37,7 @@ public class ExecutionComponent : EntityComponent
 		}, null);
 	}
 
-	// Token: 0x0601B787 RID: 112519 RVA: 0x00785408 File Offset: 0x00783608
+	// Token: 0x060192C0 RID: 103104 RVA: 0x007AD5F4 File Offset: 0x007AB7F4
 	private ExecutionConf? GetCurrentExecutionConfig()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -119,7 +119,7 @@ public class ExecutionComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601B788 RID: 112520 RVA: 0x00785638 File Offset: 0x00783838
+	// Token: 0x060192C1 RID: 103105 RVA: 0x007AD824 File Offset: 0x007ABA24
 	private void CreateInteractOption()
 	{
 		ActionExecution actionParam = new ActionExecution();
@@ -144,7 +144,7 @@ public class ExecutionComponent : EntityComponent
 		this.InteractHandle = new int?(this.InteractController.AddClientInteractOption(actionParam, levelConditionGroup, new EDoInteract?(EDoInteract.Direct), new float?(this.MonsterBattleConfig.Value.ExecutionRadius), null, new ECustomOptionType?(ECustomOptionType.Execution), null, null));
 	}
 
-	// Token: 0x0601B789 RID: 112521 RVA: 0x00785714 File Offset: 0x00783914
+	// Token: 0x060192C2 RID: 103106 RVA: 0x007AD900 File Offset: 0x007ABB00
 	private void OnExecutionTagChange(int addOrRemoveTagId, bool gameplayTagExist)
 	{
 		PawnInteractNewComponent component = base.Entity.GetComponent<PawnInteractNewComponent>();
@@ -175,7 +175,7 @@ public class ExecutionComponent : EntityComponent
 		this.CreateInteractOption();
 	}
 
-	// Token: 0x0601B78A RID: 112522 RVA: 0x007857C0 File Offset: 0x007839C0
+	// Token: 0x060192C3 RID: 103107 RVA: 0x007AD9AC File Offset: 0x007ABBAC
 	private bool CanStartExecution()
 	{
 		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
@@ -221,7 +221,7 @@ public class ExecutionComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601B78B RID: 112523 RVA: 0x00785928 File Offset: 0x00783B28
+	// Token: 0x060192C4 RID: 103108 RVA: 0x007ADB14 File Offset: 0x007ABD14
 	protected override bool OnEnd()
 	{
 		ITagTask executionTagChangeTask = this.ExecutionTagChangeTask;
@@ -237,7 +237,7 @@ public class ExecutionComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B78C RID: 112524 RVA: 0x00785950 File Offset: 0x00783B50
+	// Token: 0x060192C5 RID: 103109 RVA: 0x007ADB3C File Offset: 0x007ABD3C
 	public void StartExecution()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -377,7 +377,7 @@ public class ExecutionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B78D RID: 112525 RVA: 0x00785D5C File Offset: 0x00783F5C
+	// Token: 0x060192C6 RID: 103110 RVA: 0x007ADF48 File Offset: 0x007AC148
 	private bool TempRoleIsExecutionRole(int currentRolePbDataId, int executionRoleId)
 	{
 		if (executionRoleId <= 9999)
@@ -388,7 +388,7 @@ public class ExecutionComponent : EntityComponent
 		return trialRoleConfig != null && trialRoleConfig.Value.ParentId == currentRolePbDataId;
 	}
 
-	// Token: 0x0601B78E RID: 112526 RVA: 0x00785D9C File Offset: 0x00783F9C
+	// Token: 0x060192C7 RID: 103111 RVA: 0x007ADF88 File Offset: 0x007AC188
 	private bool IsCharacterCanUseSkill(long creatureDataId)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem(creatureDataId, new GetTeamItemOptions
@@ -413,7 +413,7 @@ public class ExecutionComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B78F RID: 112527 RVA: 0x00785E20 File Offset: 0x00784020
+	// Token: 0x060192C8 RID: 103112 RVA: 0x007AE00C File Offset: 0x007AC20C
 	private bool UseExecutionSkill(Entity entity, ExecutionConf executionConfig)
 	{
 		CharacterSkillComponent component = entity.GetComponent<CharacterSkillComponent>();
@@ -423,7 +423,7 @@ public class ExecutionComponent : EntityComponent
 		})) : null).GetValueOrDefault();
 	}
 
-	// Token: 0x0601B790 RID: 112528 RVA: 0x00785E6C File Offset: 0x0078406C
+	// Token: 0x060192C9 RID: 103113 RVA: 0x007AE058 File Offset: 0x007AC258
 	private void AddChangeRoleBuff(Entity entity)
 	{
 		CharacterBuffComponent component = entity.GetComponent<CharacterBuffComponent>();
@@ -437,7 +437,7 @@ public class ExecutionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B791 RID: 112529 RVA: 0x00785EB4 File Offset: 0x007840B4
+	// Token: 0x060192CA RID: 103114 RVA: 0x007AE0A0 File Offset: 0x007AC2A0
 	private void RemoveChangeRoleBuff(Entity entity)
 	{
 		CharacterBuffComponent component = entity.GetComponent<CharacterBuffComponent>();
@@ -448,7 +448,7 @@ public class ExecutionComponent : EntityComponent
 		component.RemoveBuff(3118L, -1, "处决换人失败", null, null, null);
 	}
 
-	// Token: 0x0601B792 RID: 112530 RVA: 0x00785EF8 File Offset: 0x007840F8
+	// Token: 0x060192CB RID: 103115 RVA: 0x007AE0E4 File Offset: 0x007AC2E4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -456,68 +456,83 @@ public class ExecutionComponent : EntityComponent
 			return false;
 		}
 		ExecutionComponent executionComponent = (ExecutionComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ExecutionTagChangeTask"))
+		if (executionComponent.ExecutionTagChangeTask == null)
 		{
-			if (executionComponent.ExecutionTagChangeTask == null)
-			{
-				this.ExecutionTagChangeTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.ExecutionTagChangeTask), "ExecutionTagChangeTask"))
-			{
-				return false;
-			}
+			this.ExecutionTagChangeTask = null;
 		}
-		if (base.CanResetComponentProperty("SkipInteractExecutionTagTask"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExecutionTagChangeTask), "ExecutionTagChangeTask"))
 		{
-			if (executionComponent.SkipInteractExecutionTagTask == null)
-			{
-				this.SkipInteractExecutionTagTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.SkipInteractExecutionTagTask), "SkipInteractExecutionTagTask"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("InteractHandle"))
+		if (executionComponent.SkipInteractExecutionTagTask == null)
 		{
-			this.InteractHandle = executionComponent.InteractHandle;
+			this.SkipInteractExecutionTagTask = null;
 		}
-		if (base.CanResetComponentProperty("InteractController"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkipInteractExecutionTagTask), "SkipInteractExecutionTagTask"))
 		{
-			if (executionComponent.InteractController == null)
-			{
-				this.InteractController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractController>(this.InteractController), "InteractController"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MonsterBattleConfig"))
+		this.InteractHandle = executionComponent.InteractHandle;
+		if (executionComponent.InteractController == null)
 		{
-			this.MonsterBattleConfig = executionComponent.MonsterBattleConfig;
+			this.InteractController = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractController), "InteractController"))
+		{
+			return false;
+		}
+		this.MonsterBattleConfig = executionComponent.MonsterBattleConfig;
 		return true;
 	}
 
-	// Token: 0x0400D787 RID: 55175
+	// Token: 0x17002809 RID: 10249
+	// (get) Token: 0x060192CC RID: 103116 RVA: 0x007AE19D File Offset: 0x007AC39D
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700280A RID: 10250
+	// (get) Token: 0x060192CD RID: 103117 RVA: 0x007AE1A0 File Offset: 0x007AC3A0
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700280B RID: 10251
+	// (get) Token: 0x060192CE RID: 103118 RVA: 0x007AE1A3 File Offset: 0x007AC3A3
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC0E RID: 56334
 	private const int MAX_CHARACTERID = 9999;
 
-	// Token: 0x0400D788 RID: 55176
+	// Token: 0x0400DC0F RID: 56335
 	[Nullable(2)]
 	private ITagTask ExecutionTagChangeTask;
 
-	// Token: 0x0400D789 RID: 55177
+	// Token: 0x0400DC10 RID: 56336
 	[Nullable(2)]
 	private ITagTask SkipInteractExecutionTagTask;
 
-	// Token: 0x0400D78A RID: 55178
+	// Token: 0x0400DC11 RID: 56337
 	private int? InteractHandle;
 
-	// Token: 0x0400D78B RID: 55179
+	// Token: 0x0400DC12 RID: 56338
 	[Nullable(2)]
 	private PawnInteractController InteractController;
 
-	// Token: 0x0400D78C RID: 55180
+	// Token: 0x0400DC13 RID: 56339
 	private MonsterBattleConf? MonsterBattleConfig;
 }

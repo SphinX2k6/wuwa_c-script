@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C2 RID: 29378
+	// Token: 0x02006444 RID: 25668
 	public static class CameraNearClipConstructorFactory
 	{
-		// Token: 0x06048123 RID: 295203 RVA: 0x0127AE29 File Offset: 0x01279029
+		// Token: 0x0603E517 RID: 255255 RVA: 0x0121D1C1 File Offset: 0x0121B3C1
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{

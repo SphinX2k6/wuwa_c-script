@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015BE RID: 5566
+	// Token: 0x02001630 RID: 5680
 	public enum FishingEntrustStatus
 	{
-		// Token: 0x0400BCA3 RID: 48291
+		// Token: 0x0400C196 RID: 49558
 		[OriginalName("Created")]
 		Created,
-		// Token: 0x0400BCA4 RID: 48292
+		// Token: 0x0400C197 RID: 49559
 		[OriginalName("Acceptable")]
 		Acceptable,
-		// Token: 0x0400BCA5 RID: 48293
+		// Token: 0x0400C198 RID: 49560
 		[OriginalName("Accepted")]
 		Accepted
 	}

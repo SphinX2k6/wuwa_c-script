@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FF6 RID: 28662
+	// Token: 0x020077BF RID: 30655
 	public class ISetGlobalTimeScaleT
 	{
-		// Token: 0x1700D4ED RID: 54509
-		// (get) Token: 0x06032B38 RID: 207672 RVA: 0x006D764B File Offset: 0x006D584B
-		// (set) Token: 0x06032B39 RID: 207673 RVA: 0x006D7653 File Offset: 0x006D5853
+		// Token: 0x1700E0C1 RID: 57537
+		// (get) Token: 0x06035D9E RID: 220574 RVA: 0x0073728F File Offset: 0x0073548F
+		// (set) Token: 0x06035D9F RID: 220575 RVA: 0x00737297 File Offset: 0x00735497
 		public ETimeScaleType Type { get; set; }
 
-		// Token: 0x1700D4EE RID: 54510
-		// (get) Token: 0x06032B3A RID: 207674 RVA: 0x006D765C File Offset: 0x006D585C
-		// (set) Token: 0x06032B3B RID: 207675 RVA: 0x006D7664 File Offset: 0x006D5864
+		// Token: 0x1700E0C2 RID: 57538
+		// (get) Token: 0x06035DA0 RID: 220576 RVA: 0x007372A0 File Offset: 0x007354A0
+		// (set) Token: 0x06035DA1 RID: 220577 RVA: 0x007372A8 File Offset: 0x007354A8
 		public TSetGlobalTimeScaleUnion Config { get; set; }
 
-		// Token: 0x06032B3C RID: 207676 RVA: 0x006D766D File Offset: 0x006D586D
+		// Token: 0x06035DA2 RID: 220578 RVA: 0x007372B1 File Offset: 0x007354B1
 		public ISetGlobalTimeScaleT()
 		{
 			this.Type = ETimeScaleType.Global;

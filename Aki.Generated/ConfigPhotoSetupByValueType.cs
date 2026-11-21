@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006F6 RID: 1782
+	// Token: 0x0200070E RID: 1806
 	public class ConfigPhotoSetupByValueType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060029D4 RID: 10708 RVA: 0x00145DE8 File Offset: 0x00143FE8
+		// Token: 0x06002A64 RID: 10852 RVA: 0x0014C864 File Offset: 0x0014AA64
 		static ConfigPhotoSetupByValueType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoSetupByValueType.CreateStaticDefaultValue), new Action(ConfigPhotoSetupByValueType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060029D5 RID: 10709 RVA: 0x00145E08 File Offset: 0x00144008
+		// Token: 0x06002A65 RID: 10853 RVA: 0x0014C884 File Offset: 0x0014AA84
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoSetupByValueType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060029D6 RID: 10710 RVA: 0x00145E87 File Offset: 0x00144087
+		// Token: 0x06002A66 RID: 10854 RVA: 0x0014C903 File Offset: 0x0014AB03
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoSetupByValueType.LogPair = null;
 			ConfigPhotoSetupByValueType.HandleId = 0;
 		}
 
-		// Token: 0x060029D7 RID: 10711 RVA: 0x00145E95 File Offset: 0x00144095
+		// Token: 0x06002A67 RID: 10855 RVA: 0x0014C911 File Offset: 0x0014AB11
 		public static void Init()
 		{
 			ConfigPhotoSetupByValueType.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoSetupByValueType.HandleId, "db_photograph.db", "select BinData from `PhotoSetup` where ValueType=?");
 		}
 
-		// Token: 0x060029D8 RID: 10712 RVA: 0x00145EB0 File Offset: 0x001440B0
+		// Token: 0x06002A68 RID: 10856 RVA: 0x0014C92C File Offset: 0x0014AB2C
 		public static PhotoSetup? GetConfig(int p0ValueType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoSetupByValueType.HandleId, ConfigPhotoSetupByValueType.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoSetup?(rootAsPhotoSetup);
 		}
 
-		// Token: 0x040030A0 RID: 12448
+		// Token: 0x04003148 RID: 12616
 		private const string DB = "db_photograph.db";
 
-		// Token: 0x040030A1 RID: 12449
+		// Token: 0x04003149 RID: 12617
 		private const string FILE = "p.拍照.xlsx";
 
-		// Token: 0x040030A2 RID: 12450
+		// Token: 0x0400314A RID: 12618
 		private const string TABLE = "PhotoSetup";
 
-		// Token: 0x040030A3 RID: 12451
+		// Token: 0x0400314B RID: 12619
 		private const string COMMAND = "select BinData from `PhotoSetup` where ValueType=?";
 
-		// Token: 0x040030A4 RID: 12452
+		// Token: 0x0400314C RID: 12620
 		private const string KEY_PREFIX = "PhotoSetupByValueType";
 
-		// Token: 0x040030A5 RID: 12453
+		// Token: 0x0400314D RID: 12621
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040030A6 RID: 12454
+		// Token: 0x0400314E RID: 12622
 		private static int HandleId;
 	}
 }

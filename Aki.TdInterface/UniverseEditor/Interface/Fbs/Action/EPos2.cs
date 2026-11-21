@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FDA RID: 24538
+	// Token: 0x02006634 RID: 26164
 	public enum EPos2 : byte
 	{
-		// Token: 0x0400FF66 RID: 65382
+		// Token: 0x04010D37 RID: 68919
 		Player,
-		// Token: 0x0400FF67 RID: 65383
+		// Token: 0x04010D38 RID: 68920
 		Entity,
-		// Token: 0x0400FF68 RID: 65384
+		// Token: 0x04010D39 RID: 68921
 		Absolute
 	}
 }

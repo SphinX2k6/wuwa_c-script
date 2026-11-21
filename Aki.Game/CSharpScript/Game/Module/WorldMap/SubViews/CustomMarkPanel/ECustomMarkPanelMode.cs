@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 {
-	// Token: 0x0200482A RID: 18474
+	// Token: 0x0200375B RID: 14171
 	public enum ECustomMarkPanelMode
 	{
-		// Token: 0x0401A021 RID: 106529
+		// Token: 0x040146D5 RID: 83669
 		Create,
-		// Token: 0x0401A022 RID: 106530
+		// Token: 0x040146D6 RID: 83670
 		Modify
 	}
 }

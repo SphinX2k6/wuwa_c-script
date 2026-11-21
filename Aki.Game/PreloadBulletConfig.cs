@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DA5 RID: 11685
+// Token: 0x020022FF RID: 8959
 public class PreloadBulletConfig
 {
-	// Token: 0x0400B5F6 RID: 46582
+	// Token: 0x0400B96C RID: 47468
 	public EBulletPreloadSource Source;
 
-	// Token: 0x0400B5F7 RID: 46583
+	// Token: 0x0400B96D RID: 47469
 	public int ModelId;
 
-	// Token: 0x0400B5F8 RID: 46584
+	// Token: 0x0400B96E RID: 47470
 	public int EntityId;
 
-	// Token: 0x0400B5F9 RID: 46585
+	// Token: 0x0400B96F RID: 47471
 	[Nullable(2)]
 	public UDataTable DataTable;
 
-	// Token: 0x0400B5FA RID: 46586
+	// Token: 0x0400B970 RID: 47472
 	[Nullable(new byte[]
 	{
 		2,
@@ -26,6 +26,6 @@ public class PreloadBulletConfig
 	})]
 	public string[] RowNames;
 
-	// Token: 0x0400B5FB RID: 46587
+	// Token: 0x0400B971 RID: 47473
 	public int CurIndex;
 }

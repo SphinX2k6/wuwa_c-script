@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A5A RID: 27226
+	// Token: 0x0200717C RID: 29052
 	public class ILookAtBubbleEntityConfigT
 	{
-		// Token: 0x1700C9FA RID: 51706
-		// (get) Token: 0x0602FAD4 RID: 195284 RVA: 0x0067D231 File Offset: 0x0067B431
-		// (set) Token: 0x0602FAD5 RID: 195285 RVA: 0x0067D239 File Offset: 0x0067B439
+		// Token: 0x1700D4A5 RID: 54437
+		// (get) Token: 0x060327FA RID: 206842 RVA: 0x006D32F1 File Offset: 0x006D14F1
+		// (set) Token: 0x060327FB RID: 206843 RVA: 0x006D32F9 File Offset: 0x006D14F9
 		public int BubbleEntity { get; set; }
 
-		// Token: 0x1700C9FB RID: 51707
-		// (get) Token: 0x0602FAD6 RID: 195286 RVA: 0x0067D242 File Offset: 0x0067B442
-		// (set) Token: 0x0602FAD7 RID: 195287 RVA: 0x0067D24A File Offset: 0x0067B44A
+		// Token: 0x1700D4A6 RID: 54438
+		// (get) Token: 0x060327FC RID: 206844 RVA: 0x006D3302 File Offset: 0x006D1502
+		// (set) Token: 0x060327FD RID: 206845 RVA: 0x006D330A File Offset: 0x006D150A
 		public List<int> RangeEntities { get; set; }
 
-		// Token: 0x1700C9FC RID: 51708
-		// (get) Token: 0x0602FAD8 RID: 195288 RVA: 0x0067D253 File Offset: 0x0067B453
-		// (set) Token: 0x0602FAD9 RID: 195289 RVA: 0x0067D25B File Offset: 0x0067B45B
+		// Token: 0x1700D4A7 RID: 54439
+		// (get) Token: 0x060327FE RID: 206846 RVA: 0x006D3313 File Offset: 0x006D1513
+		// (set) Token: 0x060327FF RID: 206847 RVA: 0x006D331B File Offset: 0x006D151B
 		public IEntityLookAtPerformT EntityLookAtPerform { get; set; }
 
-		// Token: 0x0602FADA RID: 195290 RVA: 0x0067D264 File Offset: 0x0067B464
+		// Token: 0x06032800 RID: 206848 RVA: 0x006D3324 File Offset: 0x006D1524
 		public ILookAtBubbleEntityConfigT()
 		{
 			this.BubbleEntity = 0;

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x0200450D RID: 17677
+	// Token: 0x0200342F RID: 13359
 	public class Variable : IVariable
 	{
-		// Token: 0x170073E5 RID: 29669
-		// (get) Token: 0x0602D801 RID: 186369 RVA: 0x00A44ADB File Offset: 0x00A42CDB
-		// (set) Token: 0x0602D802 RID: 186370 RVA: 0x00A44AE3 File Offset: 0x00A42CE3
+		// Token: 0x1700469D RID: 18077
+		// (get) Token: 0x06021ED1 RID: 138961 RVA: 0x009708EB File Offset: 0x0096EAEB
+		// (set) Token: 0x06021ED2 RID: 138962 RVA: 0x009708F3 File Offset: 0x0096EAF3
 		public EVariableType Type { get; set; }
 
-		// Token: 0x170073E6 RID: 29670
-		// (get) Token: 0x0602D803 RID: 186371 RVA: 0x00A44AEC File Offset: 0x00A42CEC
-		// (set) Token: 0x0602D804 RID: 186372 RVA: 0x00A44AF4 File Offset: 0x00A42CF4
+		// Token: 0x1700469E RID: 18078
+		// (get) Token: 0x06021ED3 RID: 138963 RVA: 0x009708FC File Offset: 0x0096EAFC
+		// (set) Token: 0x06021ED4 RID: 138964 RVA: 0x00970904 File Offset: 0x0096EB04
 		public TFormulaValue Value { get; set; }
 	}
 }

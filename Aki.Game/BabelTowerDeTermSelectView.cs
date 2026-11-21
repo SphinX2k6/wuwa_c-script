@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001152 RID: 4434
+// Token: 0x02000606 RID: 1542
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerDeTermSelectView : UiViewBase
 {
-	// Token: 0x06007462 RID: 29794 RVA: 0x0017C7AA File Offset: 0x0017A9AA
+	// Token: 0x060047F9 RID: 18425 RVA: 0x001852F6 File Offset: 0x001834F6
 	public BabelTowerDeTermSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007463 RID: 29795 RVA: 0x0017C7C0 File Offset: 0x0017A9C0
+	// Token: 0x060047FA RID: 18426 RVA: 0x0018530C File Offset: 0x0018350C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 21;
@@ -86,7 +86,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007464 RID: 29796 RVA: 0x0017CB54 File Offset: 0x0017AD54
+	// Token: 0x060047FB RID: 18427 RVA: 0x001856A0 File Offset: 0x001838A0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerDeTermSelectView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -97,7 +97,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007465 RID: 29797 RVA: 0x0017CB98 File Offset: 0x0017AD98
+	// Token: 0x060047FC RID: 18428 RVA: 0x001856E4 File Offset: 0x001838E4
 	protected override void OnStart()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.BabelTowerQuestRedDot, base.GetItem(20), null, 0);
@@ -119,25 +119,25 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		BabelTowerModel.Instance.CurrentSelectLevel = this.LevelId;
 	}
 
-	// Token: 0x06007466 RID: 29798 RVA: 0x0017CC8B File Offset: 0x0017AE8B
+	// Token: 0x060047FD RID: 18429 RVA: 0x001857D7 File Offset: 0x001839D7
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BabelTowerRefreshLevelInfo, new Action(this.BabelTowerRefreshLevelInfo));
 	}
 
-	// Token: 0x06007467 RID: 29799 RVA: 0x0017CCA9 File Offset: 0x0017AEA9
+	// Token: 0x060047FE RID: 18430 RVA: 0x001857F5 File Offset: 0x001839F5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BabelTowerRefreshLevelInfo, new Action(this.BabelTowerRefreshLevelInfo));
 	}
 
-	// Token: 0x06007468 RID: 29800 RVA: 0x0017CCC7 File Offset: 0x0017AEC7
+	// Token: 0x060047FF RID: 18431 RVA: 0x00185813 File Offset: 0x00183A13
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06007469 RID: 29801 RVA: 0x0017CCCF File Offset: 0x0017AECF
+	// Token: 0x06004800 RID: 18432 RVA: 0x0018581B File Offset: 0x00183A1B
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.BabelTowerQuestRedDot, base.GetItem(20), 0);
@@ -149,7 +149,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600746A RID: 29802 RVA: 0x0017CD04 File Offset: 0x0017AF04
+	// Token: 0x06004801 RID: 18433 RVA: 0x00185850 File Offset: 0x00183A50
 	private void RefreshView()
 	{
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(this.LevelId);
@@ -167,7 +167,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(18), "BabelTowerNormalStar", Array.Empty<object>());
 	}
 
-	// Token: 0x0600746B RID: 29803 RVA: 0x0017CE04 File Offset: 0x0017B004
+	// Token: 0x06004802 RID: 18434 RVA: 0x00185950 File Offset: 0x00183B50
 	private void InitDeTermScrollView()
 	{
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(this.LevelId);
@@ -238,7 +238,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		this.RefreshDesScrollView(null);
 	}
 
-	// Token: 0x0600746C RID: 29804 RVA: 0x0017D038 File Offset: 0x0017B238
+	// Token: 0x06004803 RID: 18435 RVA: 0x00185B84 File Offset: 0x00183D84
 	private List<int> GetDeTermListByGroupId(int groupId)
 	{
 		BabelTowerData babelTowerData = BabelTowerController.Instance.GetBabelTowerData();
@@ -318,7 +318,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		goto IL_1AE;
 	}
 
-	// Token: 0x0600746D RID: 29805 RVA: 0x0017D220 File Offset: 0x0017B420
+	// Token: 0x06004804 RID: 18436 RVA: 0x00185D6C File Offset: 0x00183F6C
 	private void OnClickConfirmBtn()
 	{
 		List<int> selectDeTermList = new List<int>();
@@ -350,7 +350,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600746E RID: 29806 RVA: 0x0017D364 File Offset: 0x0017B564
+	// Token: 0x06004805 RID: 18437 RVA: 0x00185EB0 File Offset: 0x001840B0
 	private UniTask RequestDeTermChose(List<int> selectDeTermList, int currentStar)
 	{
 		BabelTowerDeTermSelectView.<RequestDeTermChose>d__20 <RequestDeTermChose>d__;
@@ -363,7 +363,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		return <RequestDeTermChose>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600746F RID: 29807 RVA: 0x0017D3B7 File Offset: 0x0017B5B7
+	// Token: 0x06004806 RID: 18438 RVA: 0x00185F03 File Offset: 0x00184103
 	private void OnClickQuestBtn()
 	{
 		if (!BabelTowerController.Instance.GetBabelTowerData().CheckIfInOpenTime())
@@ -374,14 +374,14 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerQuestView, null, null);
 	}
 
-	// Token: 0x06007470 RID: 29808 RVA: 0x0017D3F0 File Offset: 0x0017B5F0
+	// Token: 0x06004807 RID: 18439 RVA: 0x00185F3C File Offset: 0x0018413C
 	private void OnClickLevelDetailBtn()
 	{
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(this.LevelId);
 		UiManager.Instance.OpenView(EUiViewName.InstanceDungeonMonsterPreView, babelTowerLevelConfig.InstId, null);
 	}
 
-	// Token: 0x06007471 RID: 29809 RVA: 0x0017D42C File Offset: 0x0017B62C
+	// Token: 0x06004808 RID: 18440 RVA: 0x00185F78 File Offset: 0x00184178
 	private void OnClickClearBtn()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.BabelTowerClearDeTerm);
@@ -392,13 +392,13 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06007472 RID: 29810 RVA: 0x0017D468 File Offset: 0x0017B668
+	// Token: 0x06004809 RID: 18441 RVA: 0x00185FB4 File Offset: 0x001841B4
 	private BabelTowerDeTermSelectItem InitDeTermItem()
 	{
 		return new BabelTowerDeTermSelectItem();
 	}
 
-	// Token: 0x06007473 RID: 29811 RVA: 0x0017D46F File Offset: 0x0017B66F
+	// Token: 0x0600480A RID: 18442 RVA: 0x00185FBB File Offset: 0x001841BB
 	private BabelTowerDeTermSelectDesItem InitDesItem()
 	{
 		return new BabelTowerDeTermSelectDesItem
@@ -407,13 +407,13 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007474 RID: 29812 RVA: 0x0017D488 File Offset: 0x0017B688
+	// Token: 0x0600480B RID: 18443 RVA: 0x00185FD4 File Offset: 0x001841D4
 	private void OnChangeDeTerm(int deTerm)
 	{
 		this.RefreshDesScrollView(new int?(deTerm));
 	}
 
-	// Token: 0x06007475 RID: 29813 RVA: 0x0017D498 File Offset: 0x0017B698
+	// Token: 0x0600480C RID: 18444 RVA: 0x00185FE4 File Offset: 0x001841E4
 	private void RefreshDesScrollView(int? deTerm = null)
 	{
 		List<int> list = new List<int>();
@@ -486,7 +486,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(15), babelTowerDifficulty.Value.DifficultyTextKey, Array.Empty<object>());
 	}
 
-	// Token: 0x06007476 RID: 29814 RVA: 0x0017D708 File Offset: 0x0017B908
+	// Token: 0x0600480D RID: 18445 RVA: 0x00186254 File Offset: 0x00184454
 	private void OnClickDesBtn(int deTerm)
 	{
 		for (int i = 0; i < this.DeTermScrollViewDataList.Count; i++)
@@ -504,7 +504,7 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007477 RID: 29815 RVA: 0x0017D778 File Offset: 0x0017B978
+	// Token: 0x0600480E RID: 18446 RVA: 0x001862C4 File Offset: 0x001844C4
 	private void BabelTowerRefreshLevelInfo()
 	{
 		foreach (BabelTowerDeTermSelectItem babelTowerDeTermSelectItem in this.DeTermScrollView.GetScrollItemList())
@@ -514,14 +514,14 @@ public class BabelTowerDeTermSelectView : UiViewBase
 		this.InitDeTermScrollView();
 	}
 
-	// Token: 0x04003598 RID: 13720
+	// Token: 0x04003631 RID: 13873
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003599 RID: 13721
+	// Token: 0x04003632 RID: 13874
 	private int LevelId;
 
-	// Token: 0x0400359A RID: 13722
+	// Token: 0x04003633 RID: 13875
 	[Nullable(new byte[]
 	{
 		2,
@@ -530,10 +530,10 @@ public class BabelTowerDeTermSelectView : UiViewBase
 	})]
 	private GenericScrollViewNew<BabelTowerDeTermSelectItem, IBabelTowerDeTermSelectItemInfo> DeTermScrollView;
 
-	// Token: 0x0400359B RID: 13723
+	// Token: 0x04003634 RID: 13876
 	private List<IBabelTowerDeTermSelectItemInfo> DeTermScrollViewDataList = new List<IBabelTowerDeTermSelectItemInfo>();
 
-	// Token: 0x0400359C RID: 13724
+	// Token: 0x04003635 RID: 13877
 	[Nullable(new byte[]
 	{
 		2,
@@ -541,78 +541,78 @@ public class BabelTowerDeTermSelectView : UiViewBase
 	})]
 	private GenericScrollViewNew<BabelTowerDeTermSelectDesItem, int> DesScrollView;
 
-	// Token: 0x0400359D RID: 13725
+	// Token: 0x04003636 RID: 13878
 	private int LastDiff;
 
-	// Token: 0x0400359E RID: 13726
+	// Token: 0x04003637 RID: 13879
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02007705 RID: 30469
+	// Token: 0x02006894 RID: 26772
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027433 RID: 160819
+		// Token: 0x04022774 RID: 141172
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027434 RID: 160820
+		// Token: 0x04022775 RID: 141173
 		public const int LevelDetailBtn = 1;
 
-		// Token: 0x04027435 RID: 160821
+		// Token: 0x04022776 RID: 141174
 		public const int DeTermScrollView = 2;
 
-		// Token: 0x04027436 RID: 160822
+		// Token: 0x04022777 RID: 141175
 		public const int DeTermScrollItem = 3;
 
-		// Token: 0x04027437 RID: 160823
+		// Token: 0x04022778 RID: 141176
 		public const int ClearBtn = 4;
 
-		// Token: 0x04027438 RID: 160824
+		// Token: 0x04022779 RID: 141177
 		public const int DesScrollView = 5;
 
-		// Token: 0x04027439 RID: 160825
+		// Token: 0x0402277A RID: 141178
 		public const int DesScrollItem = 6;
 
-		// Token: 0x0402743A RID: 160826
+		// Token: 0x0402277B RID: 141179
 		public const int DesNoneItem = 7;
 
-		// Token: 0x0402743B RID: 160827
+		// Token: 0x0402277C RID: 141180
 		public const int NameText = 8;
 
-		// Token: 0x0402743C RID: 160828
+		// Token: 0x0402277D RID: 141181
 		public const int DesText = 9;
 
-		// Token: 0x0402743D RID: 160829
+		// Token: 0x0402277E RID: 141182
 		public const int TargetStarText = 10;
 
-		// Token: 0x0402743E RID: 160830
+		// Token: 0x0402277F RID: 141183
 		public const int LowStarItem = 11;
 
-		// Token: 0x0402743F RID: 160831
+		// Token: 0x04022780 RID: 141184
 		public const int LowStarText = 12;
 
-		// Token: 0x04027440 RID: 160832
+		// Token: 0x04022781 RID: 141185
 		public const int CurrentStarText = 13;
 
-		// Token: 0x04027441 RID: 160833
+		// Token: 0x04022782 RID: 141186
 		public const int HardItem = 14;
 
-		// Token: 0x04027442 RID: 160834
+		// Token: 0x04022783 RID: 141187
 		public const int HardText = 15;
 
-		// Token: 0x04027443 RID: 160835
+		// Token: 0x04022784 RID: 141188
 		public const int QuestBtn = 16;
 
-		// Token: 0x04027444 RID: 160836
+		// Token: 0x04022785 RID: 141189
 		public const int ConfirmBtn = 17;
 
-		// Token: 0x04027445 RID: 160837
+		// Token: 0x04022786 RID: 141190
 		public const int TargetDesText = 18;
 
-		// Token: 0x04027446 RID: 160838
+		// Token: 0x04022787 RID: 141191
 		public const int DifficultyEffectItem = 19;
 
-		// Token: 0x04027447 RID: 160839
+		// Token: 0x04022788 RID: 141192
 		public const int QuestBtnRedDotItem = 20;
 	}
 }

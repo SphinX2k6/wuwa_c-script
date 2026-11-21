@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200601C RID: 24604
+	// Token: 0x0200667B RID: 26235
 	public enum ESyncOpenSystemBoardFinishTiming : byte
 	{
-		// Token: 0x0401006D RID: 65645
+		// Token: 0x04010E52 RID: 69202
 		OpenFinished
 	}
 }

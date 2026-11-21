@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D6B RID: 11627
+// Token: 0x020022C5 RID: 8901
 public class WorldLevelInfoView : UiTickViewBase
 {
-	// Token: 0x17002108 RID: 8456
-	// (get) Token: 0x06018734 RID: 100148 RVA: 0x006394C7 File Offset: 0x006376C7
-	// (set) Token: 0x06018735 RID: 100149 RVA: 0x006394D0 File Offset: 0x006376D0
+	// Token: 0x17002163 RID: 8547
+	// (get) Token: 0x06015FD6 RID: 90070 RVA: 0x0065F4DF File Offset: 0x0065D6DF
+	// (set) Token: 0x06015FD7 RID: 90071 RVA: 0x0065F4E8 File Offset: 0x0065D6E8
 	public bool CanShowInteractCd
 	{
 		get
@@ -40,13 +40,13 @@ public class WorldLevelInfoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06018736 RID: 100150 RVA: 0x0063953B File Offset: 0x0063773B
+	// Token: 0x06015FD8 RID: 90072 RVA: 0x0065F553 File Offset: 0x0065D753
 	[NullableContext(1)]
 	public WorldLevelInfoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06018737 RID: 100151 RVA: 0x00639544 File Offset: 0x00637744
+	// Token: 0x06015FD9 RID: 90073 RVA: 0x0065F55C File Offset: 0x0065D75C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -81,7 +81,7 @@ public class WorldLevelInfoView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06018738 RID: 100152 RVA: 0x006396D4 File Offset: 0x006378D4
+	// Token: 0x06015FDA RID: 90074 RVA: 0x0065F6EC File Offset: 0x0065D8EC
 	protected override void OnStart()
 	{
 		this.WorldLevelChangeCd = WorldLevelConfig.Instance.GetCommonValue("world_level_change_cd");
@@ -93,26 +93,26 @@ public class WorldLevelInfoView : UiTickViewBase
 		this.InitInteractNode();
 	}
 
-	// Token: 0x06018739 RID: 100153 RVA: 0x00639737 File Offset: 0x00637937
+	// Token: 0x06015FDB RID: 90075 RVA: 0x0065F74F File Offset: 0x0065D94F
 	protected override void OnTick(float delta)
 	{
 		this.UpdateInteract();
 	}
 
-	// Token: 0x0601873A RID: 100154 RVA: 0x0063973F File Offset: 0x0063793F
+	// Token: 0x06015FDC RID: 90076 RVA: 0x0065F757 File Offset: 0x0065D957
 	private void SetTitleText()
 	{
 		base.GetText(0).SetText(WorldLevelModel.Instance.WorldLevelMultilingualText, true);
 	}
 
-	// Token: 0x0601873B RID: 100155 RVA: 0x00639758 File Offset: 0x00637958
+	// Token: 0x06015FDD RID: 90077 RVA: 0x0065F770 File Offset: 0x0065D970
 	private void SetDescribeText()
 	{
 		string textById = TextConfig.Instance.GetTextById("WorldLevelIntro");
 		base.GetText(2).SetText(textById, true);
 	}
 
-	// Token: 0x0601873C RID: 100156 RVA: 0x00639784 File Offset: 0x00637984
+	// Token: 0x06015FDE RID: 90078 RVA: 0x0065F79C File Offset: 0x0065D99C
 	private void InitInteractNode()
 	{
 		int interactTimeToLast = this.GetInteractTimeToLast();
@@ -127,7 +127,7 @@ public class WorldLevelInfoView : UiTickViewBase
 		this.UpdateInteract();
 	}
 
-	// Token: 0x0601873D RID: 100157 RVA: 0x006397EC File Offset: 0x006379EC
+	// Token: 0x06015FDF RID: 90079 RVA: 0x0065F804 File Offset: 0x0065DA04
 	private void UpdateInteract()
 	{
 		int interactTimeToLast = this.GetInteractTimeToLast();
@@ -154,13 +154,13 @@ public class WorldLevelInfoView : UiTickViewBase
 		base.GetText(7).SetText(newText, true);
 	}
 
-	// Token: 0x0601873E RID: 100158 RVA: 0x006398AC File Offset: 0x00637AAC
+	// Token: 0x06015FE0 RID: 90080 RVA: 0x0065F8C4 File Offset: 0x0065DAC4
 	private int GetInteractTimeToLast()
 	{
 		return (int)TimeUtil.Instance.GetServerTime() - WorldLevelModel.Instance.LastChangeWorldLevelTimeStamp;
 	}
 
-	// Token: 0x0601873F RID: 100159 RVA: 0x006398C4 File Offset: 0x00637AC4
+	// Token: 0x06015FE1 RID: 90081 RVA: 0x0065F8DC File Offset: 0x0065DADC
 	private void OnWorldLevelBtnClick()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -175,12 +175,12 @@ public class WorldLevelInfoView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0400B54B RID: 46411
+	// Token: 0x0400B8C0 RID: 47296
 	private bool ShowInteractCd;
 
-	// Token: 0x0400B54C RID: 46412
+	// Token: 0x0400B8C1 RID: 47297
 	private int? ConditionLevel;
 
-	// Token: 0x0400B54D RID: 46413
+	// Token: 0x0400B8C2 RID: 47298
 	private int? WorldLevelChangeCd;
 }

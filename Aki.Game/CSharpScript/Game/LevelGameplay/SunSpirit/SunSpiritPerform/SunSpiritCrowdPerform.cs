@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 {
-	// Token: 0x02006A03 RID: 27139
+	// Token: 0x02005B60 RID: 23392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritCrowdPerform : SunSpiritBasePerform, ISunSpiritScenePerform
 	{
-		// Token: 0x0604380E RID: 276494 RVA: 0x010820A8 File Offset: 0x010802A8
+		// Token: 0x0603985A RID: 235610 RVA: 0x010266CC File Offset: 0x010248CC
 		public SunSpiritCrowdPerform(SunSpiritData sunSpiritData, [Nullable(2)] Transform initTransform, bool ctrlByCrowdAi = true, bool forceSpawn = false) : base(sunSpiritData)
 		{
 			this.CtrlByCrowdAi = ctrlByCrowdAi;
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			}
 		}
 
-		// Token: 0x0604380F RID: 276495 RVA: 0x01082148 File Offset: 0x01080348
+		// Token: 0x0603985B RID: 235611 RVA: 0x0102676C File Offset: 0x0102496C
 		public int GetCrowdAiBoidId()
 		{
 			return this.CrowdAiBoidId;
 		}
 
-		// Token: 0x06043810 RID: 276496 RVA: 0x01082150 File Offset: 0x01080350
+		// Token: 0x0603985C RID: 235612 RVA: 0x01026774 File Offset: 0x01024974
 		protected override bool OnInit()
 		{
 			return this.GenerateCrowdAiBoid();
 		}
 
-		// Token: 0x06043811 RID: 276497 RVA: 0x01082158 File Offset: 0x01080358
+		// Token: 0x0603985D RID: 235613 RVA: 0x0102677C File Offset: 0x0102497C
 		protected override void OnDestroy()
 		{
 			this.DestroyCrowdAiBoid();
 		}
 
-		// Token: 0x06043812 RID: 276498 RVA: 0x01082160 File Offset: 0x01080360
+		// Token: 0x0603985E RID: 235614 RVA: 0x01026784 File Offset: 0x01024984
 		public bool GetTransform(Transform outTransform)
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043813 RID: 276499 RVA: 0x010821C0 File Offset: 0x010803C0
+		// Token: 0x0603985F RID: 235615 RVA: 0x010267E4 File Offset: 0x010249E4
 		[NullableContext(2)]
 		public bool GetTransformData(Vector outLocation = null, object outRotation = null, Vector outScale = null)
 		{
@@ -101,20 +101,20 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043814 RID: 276500 RVA: 0x0108223F File Offset: 0x0108043F
+		// Token: 0x06039860 RID: 235616 RVA: 0x01026863 File Offset: 0x01024A63
 		public bool SetTransform(Transform inTransform)
 		{
 			return false;
 		}
 
-		// Token: 0x06043815 RID: 276501 RVA: 0x01082242 File Offset: 0x01080442
+		// Token: 0x06039861 RID: 235617 RVA: 0x01026866 File Offset: 0x01024A66
 		[NullableContext(2)]
 		public bool SetTransformData(Vector inLocation = null, object inRotation = null, Vector inScale = null)
 		{
 			return false;
 		}
 
-		// Token: 0x06043816 RID: 276502 RVA: 0x01082248 File Offset: 0x01080448
+		// Token: 0x06039862 RID: 235618 RVA: 0x0102686C File Offset: 0x01024A6C
 		public void UpdateForceSpawn(bool bForceSpawn)
 		{
 			if (this.ForceSpawn == bForceSpawn)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			this.GenerateCrowdAiBoid();
 		}
 
-		// Token: 0x06043817 RID: 276503 RVA: 0x010822BC File Offset: 0x010804BC
+		// Token: 0x06039863 RID: 235619 RVA: 0x010268E0 File Offset: 0x01024AE0
 		public void UpdateCtrlByCrowdAi(bool bCtrlByCrowdAi)
 		{
 			this.CtrlByCrowdAi = bCtrlByCrowdAi;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			}
 		}
 
-		// Token: 0x06043818 RID: 276504 RVA: 0x010823A4 File Offset: 0x010805A4
+		// Token: 0x06039864 RID: 235620 RVA: 0x010269C8 File Offset: 0x01024BC8
 		public bool GetCtrlByCrowdAi(bool bForceQueryAndUpdateCache = false)
 		{
 			if (bForceQueryAndUpdateCache)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return this.CtrlByCrowdAi;
 		}
 
-		// Token: 0x06043819 RID: 276505 RVA: 0x010823F4 File Offset: 0x010805F4
+		// Token: 0x06039865 RID: 235621 RVA: 0x01026A18 File Offset: 0x01024C18
 		private bool GenerateCrowdAiBoid()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x0604381A RID: 276506 RVA: 0x010825E4 File Offset: 0x010807E4
+		// Token: 0x06039866 RID: 235622 RVA: 0x01026C08 File Offset: 0x01024E08
 		private bool GenerateCrowdAiBoidForBattleStateChanged()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x0604381B RID: 276507 RVA: 0x010827E9 File Offset: 0x010809E9
+		// Token: 0x06039867 RID: 235623 RVA: 0x01026E0D File Offset: 0x0102500D
 		private void DestroyCrowdAiBoid()
 		{
 			if (CrowdAiController.Instance.HasCrowdAiBoid(this.CrowdAiBoidId))
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			this.CrowdAiBoidId = 0;
 		}
 
-		// Token: 0x0604381C RID: 276508 RVA: 0x01082818 File Offset: 0x01080A18
+		// Token: 0x06039868 RID: 235624 RVA: 0x01026E3C File Offset: 0x0102503C
 		public void OnBattleStateChanged(bool isInBattle)
 		{
 			if (this.FightWithPlayer)
@@ -332,22 +332,22 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			}
 		}
 
-		// Token: 0x040233D0 RID: 144336
+		// Token: 0x0401E5C2 RID: 124354
 		private readonly Transform InitTransform = Transform.Create();
 
-		// Token: 0x040233D1 RID: 144337
+		// Token: 0x0401E5C3 RID: 124355
 		private readonly Transform TempTransform = Transform.Create();
 
-		// Token: 0x040233D2 RID: 144338
+		// Token: 0x0401E5C4 RID: 124356
 		protected bool FightWithPlayer;
 
-		// Token: 0x040233D3 RID: 144339
+		// Token: 0x0401E5C5 RID: 124357
 		private int CrowdAiBoidId;
 
-		// Token: 0x040233D4 RID: 144340
+		// Token: 0x0401E5C6 RID: 124358
 		private bool CtrlByCrowdAi;
 
-		// Token: 0x040233D5 RID: 144341
+		// Token: 0x0401E5C7 RID: 124359
 		private bool ForceSpawn;
 	}
 }

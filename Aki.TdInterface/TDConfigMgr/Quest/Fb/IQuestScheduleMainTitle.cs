@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200133A RID: 4922
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200148A RID: 5258
 	public class IQuestScheduleMainTitle
 	{
-		// Token: 0x060070CB RID: 28875 RVA: 0x0011010C File Offset: 0x0010E30C
+		// Token: 0x0600776B RID: 30571 RVA: 0x0011E678 File Offset: 0x0011C878
 		public static IQuestScheduleMainTitle Create(IQuestScheduleMainTitle? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700242A RID: 9258
-		// (get) Token: 0x060070CC RID: 28876 RVA: 0x0011012B File Offset: 0x0010E32B
+		// Token: 0x170025F9 RID: 9721
+		// (get) Token: 0x0600776C RID: 30572 RVA: 0x0011E697 File Offset: 0x0011C897
 		public virtual string TidTitle
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700242B RID: 9259
-		// (get) Token: 0x060070CD RID: 28877 RVA: 0x00110138 File Offset: 0x0010E338
+		// Token: 0x170025FA RID: 9722
+		// (get) Token: 0x0600776D RID: 30573 RVA: 0x0011E6A4 File Offset: 0x0011C8A4
 		public virtual IQuestScheduleType QuestScheduleType
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700242C RID: 9260
-		// (get) Token: 0x060070CE RID: 28878 RVA: 0x00110168 File Offset: 0x0010E368
+		// Token: 0x170025FB RID: 9723
+		// (get) Token: 0x0600776E RID: 30574 RVA: 0x0011E6D4 File Offset: 0x0011C8D4
 		public virtual int? CustomIcon
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700242D RID: 9261
-		// (get) Token: 0x060070CF RID: 28879 RVA: 0x0011019E File Offset: 0x0010E39E
+		// Token: 0x170025FC RID: 9724
+		// (get) Token: 0x0600776F RID: 30575 RVA: 0x0011E70A File Offset: 0x0011C90A
 		[Nullable(2)]
 		public virtual string EdTidTitle
 		{
@@ -74,13 +72,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004112 RID: 16658
+		// Token: 0x0400448E RID: 17550
 		private IQuestScheduleMainTitle Instance;
 
-		// Token: 0x04004113 RID: 16659
+		// Token: 0x0400448F RID: 17551
 		private IQuestScheduleType _QuestScheduleTypeCache;
 
-		// Token: 0x04004114 RID: 16660
+		// Token: 0x04004490 RID: 17552
 		private bool _QuestScheduleTypeInited;
 	}
 }

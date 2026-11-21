@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x020016F4 RID: 5876
+// Token: 0x02000BAC RID: 2988
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,18 +14,18 @@ using UnrealEngine;
 })]
 public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : AutoAttachBaseView<T, TAttachItem> where TAttachItem : AutoAttachItem<T>
 {
-	// Token: 0x0600A86E RID: 43118 RVA: 0x0025DCE5 File Offset: 0x0025BEE5
+	// Token: 0x06007C4E RID: 31822 RVA: 0x00268101 File Offset: 0x00266301
 	public NoCircleAttachView(AActor controllerActor, bool isNeedScrollCallback = false) : base(controllerActor, isNeedScrollCallback)
 	{
 	}
 
-	// Token: 0x0600A86F RID: 43119 RVA: 0x0025DCFA File Offset: 0x0025BEFA
+	// Token: 0x06007C4F RID: 31823 RVA: 0x00268116 File Offset: 0x00266316
 	public void SetIfNeedFakeItem(bool state)
 	{
 		this.NeedFakeShowItem = state;
 	}
 
-	// Token: 0x0600A870 RID: 43120 RVA: 0x0025DD03 File Offset: 0x0025BF03
+	// Token: 0x06007C50 RID: 31824 RVA: 0x0026811F File Offset: 0x0026631F
 	public void SetControllerItem(UUIItem controllerItem)
 	{
 		this.ControllerItem = controllerItem;
@@ -33,13 +33,13 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		this.ControllerHeight = controllerItem.GetHeight();
 	}
 
-	// Token: 0x0600A871 RID: 43121 RVA: 0x0025DD24 File Offset: 0x0025BF24
+	// Token: 0x06007C51 RID: 31825 RVA: 0x00268140 File Offset: 0x00266340
 	public override TAttachItem FindAutoAttachItem()
 	{
 		return this.FindNoCircleAttachItem();
 	}
 
-	// Token: 0x0600A872 RID: 43122 RVA: 0x0025DD2C File Offset: 0x0025BF2C
+	// Token: 0x06007C52 RID: 31826 RVA: 0x00268148 File Offset: 0x00266348
 	private TAttachItem FindNoCircleAttachItem()
 	{
 		TAttachItem tattachItem = default(TAttachItem);
@@ -62,7 +62,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return tattachItem;
 	}
 
-	// Token: 0x0600A873 RID: 43123 RVA: 0x0025DDE8 File Offset: 0x0025BFE8
+	// Token: 0x06007C53 RID: 31827 RVA: 0x00268204 File Offset: 0x00266404
 	public override float GetTrueBoundary()
 	{
 		if (this.ReCalculateBoundary == null)
@@ -78,7 +78,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return this.ReCalculateBoundary.Value;
 	}
 
-	// Token: 0x0600A874 RID: 43124 RVA: 0x0025DE58 File Offset: 0x0025C058
+	// Token: 0x06007C54 RID: 31828 RVA: 0x00268274 File Offset: 0x00266474
 	protected override float RecalculateMoveOffset(float offset)
 	{
 		float num = this.CalculateOffset(offset);
@@ -98,7 +98,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return num;
 	}
 
-	// Token: 0x0600A875 RID: 43125 RVA: 0x0025DEAC File Offset: 0x0025C0AC
+	// Token: 0x06007C55 RID: 31829 RVA: 0x002682C8 File Offset: 0x002664C8
 	private float GetNearestMiddleItemToBoundaryOffset(float offset)
 	{
 		TAttachItem tattachItem = base.FindNearestMiddleItem();
@@ -135,7 +135,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return result;
 	}
 
-	// Token: 0x0600A876 RID: 43126 RVA: 0x0025DFBC File Offset: 0x0025C1BC
+	// Token: 0x06007C56 RID: 31830 RVA: 0x002683D8 File Offset: 0x002665D8
 	private float CalculateOffset(float offset)
 	{
 		int showIndex = (offset > 0f) ? 0 : (this.DataLength - 1);
@@ -181,7 +181,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return offset;
 	}
 
-	// Token: 0x0600A877 RID: 43127 RVA: 0x0025E0AC File Offset: 0x0025C2AC
+	// Token: 0x06007C57 RID: 31831 RVA: 0x002684C8 File Offset: 0x002666C8
 	private float CalculateDecreaseOffset(float offset, float currentZeroItemPosition)
 	{
 		float num = 0f;
@@ -223,7 +223,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return num2;
 	}
 
-	// Token: 0x0600A878 RID: 43128 RVA: 0x0025E184 File Offset: 0x0025C384
+	// Token: 0x06007C58 RID: 31832 RVA: 0x002685A0 File Offset: 0x002667A0
 	private float GetMoveDistance()
 	{
 		if (this.MoveDistance == null)
@@ -242,7 +242,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return this.MoveDistance.Value;
 	}
 
-	// Token: 0x0600A879 RID: 43129 RVA: 0x0025E1E4 File Offset: 0x0025C3E4
+	// Token: 0x06007C59 RID: 31833 RVA: 0x00268600 File Offset: 0x00266800
 	private float CalculateDecreaseFactor(float offset, float currentZeroItemPosition)
 	{
 		if (this.GetTrueBoundary() <= 0f)
@@ -254,7 +254,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return base.GetCurveValue(this.BoundaryCurve, num);
 	}
 
-	// Token: 0x0600A87A RID: 43130 RVA: 0x0025E230 File Offset: 0x0025C430
+	// Token: 0x06007C5A RID: 31834 RVA: 0x0026864C File Offset: 0x0026684C
 	private bool CheckInHorizontalBounds(float offset)
 	{
 		TAttachItem tattachItem = default(TAttachItem);
@@ -294,7 +294,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return true;
 	}
 
-	// Token: 0x0600A87B RID: 43131 RVA: 0x0025E35C File Offset: 0x0025C55C
+	// Token: 0x06007C5B RID: 31835 RVA: 0x00268778 File Offset: 0x00266978
 	private bool CheckInVerticalBounds(float offset)
 	{
 		TAttachItem tattachItem = default(TAttachItem);
@@ -334,7 +334,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return true;
 	}
 
-	// Token: 0x0600A87C RID: 43132 RVA: 0x0025E480 File Offset: 0x0025C680
+	// Token: 0x06007C5C RID: 31836 RVA: 0x0026889C File Offset: 0x00266A9C
 	[NullableContext(2)]
 	protected override TAttachItem FindNextDirectionItem(int direction)
 	{
@@ -362,7 +362,7 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		return base.GetShowIndexItem(showIndex);
 	}
 
-	// Token: 0x0600A87D RID: 43133 RVA: 0x0025E4D8 File Offset: 0x0025C6D8
+	// Token: 0x06007C5D RID: 31837 RVA: 0x002688F4 File Offset: 0x00266AF4
 	protected override void ReloadItems(int showItemNum, T[] data, int attachTo = 0)
 	{
 		int num = (showItemNum > this.ShowItemNum || this.NeedFakeShowItem) ? (this.ShowItemNum + 1) : showItemNum;
@@ -396,30 +396,30 @@ public class NoCircleAttachView<[Nullable(2)] T, [Nullable(0)] TAttachItem> : Au
 		base.AttachToIndex(attachTo, true);
 	}
 
-	// Token: 0x0600A87E RID: 43134 RVA: 0x0025E658 File Offset: 0x0025C858
+	// Token: 0x06007C5E RID: 31838 RVA: 0x00268A74 File Offset: 0x00266C74
 	public override bool GetIfCircle()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A87F RID: 43135 RVA: 0x0025E65B File Offset: 0x0025C85B
+	// Token: 0x06007C5F RID: 31839 RVA: 0x00268A77 File Offset: 0x00266C77
 	public void SetShowItemNum(int showItemNum)
 	{
 		this.ShowItemNum = showItemNum;
 	}
 
-	// Token: 0x04004CD2 RID: 19666
+	// Token: 0x04004D79 RID: 19833
 	private const float FLOATDURABLENUM = 0.01f;
 
-	// Token: 0x04004CD3 RID: 19667
+	// Token: 0x04004D7A RID: 19834
 	private float? ReCalculateBoundary;
 
-	// Token: 0x04004CD4 RID: 19668
+	// Token: 0x04004D7B RID: 19835
 	private float? MoveDistance;
 
-	// Token: 0x04004CD5 RID: 19669
+	// Token: 0x04004D7C RID: 19836
 	private bool NeedFakeShowItem;
 
-	// Token: 0x04004CD6 RID: 19670
+	// Token: 0x04004D7D RID: 19837
 	private readonly List<TAttachItem> AllItemList = new List<TAttachItem>();
 }

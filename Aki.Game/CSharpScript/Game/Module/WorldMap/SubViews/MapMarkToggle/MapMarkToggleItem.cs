@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 {
-	// Token: 0x02004805 RID: 18437
+	// Token: 0x02003736 RID: 14134
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 	})]
 	public class MapMarkToggleItem : GridProxyAbstract<IMapMarkToggleItemData>
 	{
-		// Token: 0x0603046E RID: 197742 RVA: 0x00B32A04 File Offset: 0x00B30C04
+		// Token: 0x06024C3E RID: 150590 RVA: 0x00A6296C File Offset: 0x00A60B6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603046F RID: 197743 RVA: 0x00B32AAC File Offset: 0x00B30CAC
+		// Token: 0x06024C3F RID: 150591 RVA: 0x00A62A14 File Offset: 0x00A60C14
 		[NullableContext(1)]
 		public override void Refresh(IMapMarkToggleItemData data, bool isSelected, int gridIndex)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			text.ShowTextNew(data.NameId);
 		}
 
-		// Token: 0x06030470 RID: 197744 RVA: 0x00B32AFF File Offset: 0x00B30CFF
+		// Token: 0x06024C40 RID: 150592 RVA: 0x00A62A67 File Offset: 0x00A60C67
 		private void OnToggle(EToggleState state)
 		{
 			IMapMarkToggleItemData dataParam = this.DataParam;
@@ -71,17 +71,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			setToggleStateCallback(state);
 		}
 
-		// Token: 0x04019FB2 RID: 106418
+		// Token: 0x04014666 RID: 83558
 		[Nullable(2)]
 		private IMapMarkToggleItemData DataParam;
 
-		// Token: 0x0200AAD4 RID: 43732
+		// Token: 0x02009485 RID: 38021
 		public static class EChildType
 		{
-			// Token: 0x04033F3D RID: 212797
+			// Token: 0x0402E6C0 RID: 190144
 			public const int Toggle = 0;
 
-			// Token: 0x04033F3E RID: 212798
+			// Token: 0x0402E6C1 RID: 190145
 			public const int TxtName = 1;
 		}
 	}

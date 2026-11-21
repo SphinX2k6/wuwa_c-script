@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001C6C RID: 7276
+// Token: 0x0200112B RID: 4395
 internal enum EGachaAccumulateRewardItemStageComponent
 {
-	// Token: 0x0400647D RID: 25725
+	// Token: 0x0400654F RID: 25935
 	ToggleLuckyDrawPopupItemA,
-	// Token: 0x0400647E RID: 25726
+	// Token: 0x04006550 RID: 25936
 	PanelNormal,
-	// Token: 0x0400647F RID: 25727
+	// Token: 0x04006551 RID: 25937
 	PanelGet,
-	// Token: 0x04006480 RID: 25728
+	// Token: 0x04006552 RID: 25938
 	ItemBaseB,
-	// Token: 0x04006481 RID: 25729
+	// Token: 0x04006553 RID: 25939
 	PanelGot,
-	// Token: 0x04006482 RID: 25730
+	// Token: 0x04006554 RID: 25940
 	TextValue01
 }

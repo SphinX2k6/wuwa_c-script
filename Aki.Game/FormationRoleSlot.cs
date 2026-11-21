@@ -11,23 +11,23 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C0E RID: 7182
+// Token: 0x020010CD RID: 4301
 [NullableContext(2)]
 [Nullable(0)]
 public class FormationRoleSlot : FormationSlotBase
 {
-	// Token: 0x170011AF RID: 4527
-	// (get) Token: 0x0600D713 RID: 55059 RVA: 0x0031C6A3 File Offset: 0x0031A8A3
+	// Token: 0x170011D5 RID: 4565
+	// (get) Token: 0x0600AB27 RID: 43815 RVA: 0x003279F3 File Offset: 0x00325BF3
 	[Nullable(1)]
 	protected override string LogTag { [NullableContext(1)] get; } = "FormationRoleSlot";
 
-	// Token: 0x0600D714 RID: 55060 RVA: 0x0031C6AB File Offset: 0x0031A8AB
+	// Token: 0x0600AB28 RID: 43816 RVA: 0x003279FB File Offset: 0x00325BFB
 	[NullableContext(1)]
 	public FormationRoleSlot(int position, IFormationProvider provider) : base(position, provider)
 	{
 	}
 
-	// Token: 0x0600D715 RID: 55061 RVA: 0x0031C6C0 File Offset: 0x0031A8C0
+	// Token: 0x0600AB29 RID: 43817 RVA: 0x00327A10 File Offset: 0x00325C10
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 40;
@@ -124,7 +124,7 @@ public class FormationRoleSlot : FormationSlotBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D716 RID: 55062 RVA: 0x0031CC6C File Offset: 0x0031AE6C
+	// Token: 0x0600AB2A RID: 43818 RVA: 0x00327FBC File Offset: 0x003261BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FormationRoleSlot.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -135,7 +135,7 @@ public class FormationRoleSlot : FormationSlotBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D717 RID: 55063 RVA: 0x0031CCB0 File Offset: 0x0031AEB0
+	// Token: 0x0600AB2B RID: 43819 RVA: 0x00328000 File Offset: 0x00326200
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -148,7 +148,7 @@ public class FormationRoleSlot : FormationSlotBase
 		this.RoleItem = base.GetItem(5);
 	}
 
-	// Token: 0x0600D718 RID: 55064 RVA: 0x0031CD3E File Offset: 0x0031AF3E
+	// Token: 0x0600AB2C RID: 43820 RVA: 0x0032808E File Offset: 0x0032628E
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -160,7 +160,7 @@ public class FormationRoleSlot : FormationSlotBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600D719 RID: 55065 RVA: 0x0031CD5E File Offset: 0x0031AF5E
+	// Token: 0x0600AB2D RID: 43821 RVA: 0x003280AE File Offset: 0x003262AE
 	protected override void OnDragShowProgress(float fill)
 	{
 		this.StopCircleInIfPlaying();
@@ -173,7 +173,7 @@ public class FormationRoleSlot : FormationSlotBase
 		dragStateItem.SetBarFill(fill);
 	}
 
-	// Token: 0x0600D71A RID: 55066 RVA: 0x0031CD85 File Offset: 0x0031AF85
+	// Token: 0x0600AB2E RID: 43822 RVA: 0x003280D5 File Offset: 0x003262D5
 	protected override void OnDragShowEnd()
 	{
 		this.StopCircleInIfPlaying();
@@ -186,7 +186,7 @@ public class FormationRoleSlot : FormationSlotBase
 		dragStateItem.SetBarFill(0f);
 	}
 
-	// Token: 0x0600D71B RID: 55067 RVA: 0x0031CDB0 File Offset: 0x0031AFB0
+	// Token: 0x0600AB2F RID: 43823 RVA: 0x00328100 File Offset: 0x00326300
 	private void StopCircleInIfPlaying()
 	{
 		if (this.IsPlayingCircleIn)
@@ -205,7 +205,7 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D71C RID: 55068 RVA: 0x0031CE04 File Offset: 0x0031B004
+	// Token: 0x0600AB30 RID: 43824 RVA: 0x00328154 File Offset: 0x00326354
 	protected override void OnEnterMoveState()
 	{
 		this.RoleItem.SetUIActive(false);
@@ -215,7 +215,7 @@ public class FormationRoleSlot : FormationSlotBase
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600D71D RID: 55069 RVA: 0x0031CE56 File Offset: 0x0031B056
+	// Token: 0x0600AB31 RID: 43825 RVA: 0x003281A6 File Offset: 0x003263A6
 	protected override void OnExitMoveState()
 	{
 		this.RoleItem.SetUIActive(true);
@@ -224,7 +224,7 @@ public class FormationRoleSlot : FormationSlotBase
 		base.GetItem(3).SetUIActive(true);
 	}
 
-	// Token: 0x0600D71E RID: 55070 RVA: 0x0031CE90 File Offset: 0x0031B090
+	// Token: 0x0600AB32 RID: 43826 RVA: 0x003281E0 File Offset: 0x003263E0
 	public override void ShowOtherItemUpState()
 	{
 		if (this.IsSelfSlot)
@@ -244,7 +244,7 @@ public class FormationRoleSlot : FormationSlotBase
 		base.GetItem(38).SetUIActive(true);
 	}
 
-	// Token: 0x0600D71F RID: 55071 RVA: 0x0031CEFC File Offset: 0x0031B0FC
+	// Token: 0x0600AB33 RID: 43827 RVA: 0x0032824C File Offset: 0x0032644C
 	public override void RefreshLockItemState(bool isDrag)
 	{
 		if (!isDrag)
@@ -260,7 +260,7 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D720 RID: 55072 RVA: 0x0031CF5C File Offset: 0x0031B15C
+	// Token: 0x0600AB34 RID: 43828 RVA: 0x003282AC File Offset: 0x003264AC
 	[NullableContext(1)]
 	public override void Refresh(IRoleSlotDisplayData data)
 	{
@@ -325,7 +325,7 @@ public class FormationRoleSlot : FormationSlotBase
 		SlotExtensionRegistry.InvokeRefresh(this.Extensions, data);
 	}
 
-	// Token: 0x0600D721 RID: 55073 RVA: 0x0031D168 File Offset: 0x0031B368
+	// Token: 0x0600AB35 RID: 43829 RVA: 0x003284B8 File Offset: 0x003266B8
 	private void RefreshElement(int configId)
 	{
 		RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(configId);
@@ -350,7 +350,7 @@ public class FormationRoleSlot : FormationSlotBase
 		miniElementItem.RefreshMiniElement(elementId);
 	}
 
-	// Token: 0x0600D722 RID: 55074 RVA: 0x0031D1D4 File Offset: 0x0031B3D4
+	// Token: 0x0600AB36 RID: 43830 RVA: 0x00328524 File Offset: 0x00326724
 	private void RefreshSpine(int configId, int roleSkinId)
 	{
 		FormationRoleSlot.<>c__DisplayClass33_0 CS$<>8__locals1 = new FormationRoleSlot.<>c__DisplayClass33_0();
@@ -386,18 +386,18 @@ public class FormationRoleSlot : FormationSlotBase
 		});
 	}
 
-	// Token: 0x0600D723 RID: 55075 RVA: 0x0031D2EB File Offset: 0x0031B4EB
+	// Token: 0x0600AB37 RID: 43831 RVA: 0x0032863B File Offset: 0x0032683B
 	private void RefreshDeadState(bool isDead)
 	{
 		base.GetItem(24).SetUIActive(isDead);
 	}
 
-	// Token: 0x0600D724 RID: 55076 RVA: 0x0031D2FB File Offset: 0x0031B4FB
+	// Token: 0x0600AB38 RID: 43832 RVA: 0x0032864B File Offset: 0x0032684B
 	private void RefreshTrialIcon(bool isTrialRole)
 	{
 	}
 
-	// Token: 0x0600D725 RID: 55077 RVA: 0x0031D2FD File Offset: 0x0031B4FD
+	// Token: 0x0600AB39 RID: 43833 RVA: 0x0032864D File Offset: 0x0032684D
 	[NullableContext(1)]
 	private void RefreshTags(IRoleSlotDisplayData data)
 	{
@@ -405,7 +405,7 @@ public class FormationRoleSlot : FormationSlotBase
 		this.RefreshTowerCost(data.TowerCost);
 	}
 
-	// Token: 0x0600D726 RID: 55078 RVA: 0x0031D318 File Offset: 0x0031B518
+	// Token: 0x0600AB3A RID: 43834 RVA: 0x00328668 File Offset: 0x00326868
 	private void RefreshWeeklyRogueTag(IRoleSlotDisplayData.WeeklyRogueData weeklyRogue)
 	{
 		if (weeklyRogue == null)
@@ -417,7 +417,7 @@ public class FormationRoleSlot : FormationSlotBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(32), "WeeklyRogueTag", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D727 RID: 55079 RVA: 0x0031D368 File Offset: 0x0031B568
+	// Token: 0x0600AB3B RID: 43835 RVA: 0x003286B8 File Offset: 0x003268B8
 	private void RefreshTowerCost(IRoleSlotDisplayData.TowerCostData towerCost)
 	{
 		if (towerCost == null)
@@ -463,7 +463,7 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D728 RID: 55080 RVA: 0x0031D4F4 File Offset: 0x0031B6F4
+	// Token: 0x0600AB3C RID: 43836 RVA: 0x00328844 File Offset: 0x00326A44
 	private void RefreshOnlineState(int onlineIndex, int playerId, bool isSelf)
 	{
 		bool flag = onlineIndex > 0;
@@ -495,7 +495,7 @@ public class FormationRoleSlot : FormationSlotBase
 		this.PlayerInternal = new int?(playerId);
 	}
 
-	// Token: 0x0600D729 RID: 55081 RVA: 0x0031D5F4 File Offset: 0x0031B7F4
+	// Token: 0x0600AB3D RID: 43837 RVA: 0x00328944 File Offset: 0x00326B44
 	private void ApplySlotVisualState(ESlotVisualState state)
 	{
 		this.VisualState = state;
@@ -543,7 +543,7 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D72A RID: 55082 RVA: 0x0031D721 File Offset: 0x0031B921
+	// Token: 0x0600AB3E RID: 43838 RVA: 0x00328A71 File Offset: 0x00326C71
 	public override void Reset()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -555,7 +555,7 @@ public class FormationRoleSlot : FormationSlotBase
 		base.Reset();
 	}
 
-	// Token: 0x0600D72B RID: 55083 RVA: 0x0031D744 File Offset: 0x0031B944
+	// Token: 0x0600AB3F RID: 43839 RVA: 0x00328A94 File Offset: 0x00326C94
 	public override void ResetRole()
 	{
 		bool flag = this.VisualState == ESlotVisualState.Matching;
@@ -602,14 +602,14 @@ public class FormationRoleSlot : FormationSlotBase
 		SlotExtensionRegistry.InvokeRefresh(this.Extensions, FormationDefine.CreateEmptySlotDisplayData());
 	}
 
-	// Token: 0x0600D72C RID: 55084 RVA: 0x0031D879 File Offset: 0x0031BA79
+	// Token: 0x0600AB40 RID: 43840 RVA: 0x00328BC9 File Offset: 0x00326DC9
 	public void SetCanAddRole(bool canAddRole)
 	{
 		base.GetItem(3).SetUIActive(canAddRole);
 		base.GetItem(4).SetUIActive(!canAddRole);
 	}
 
-	// Token: 0x0600D72D RID: 55085 RVA: 0x0031D898 File Offset: 0x0031BA98
+	// Token: 0x0600AB41 RID: 43841 RVA: 0x00328BE8 File Offset: 0x00326DE8
 	public void RefreshPrepareState(EMatchPlayerUiState? playerUiState = null)
 	{
 		if (playerUiState != null && this.LastPrepare != null)
@@ -721,7 +721,7 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D72E RID: 55086 RVA: 0x0031DAEC File Offset: 0x0031BCEC
+	// Token: 0x0600AB42 RID: 43842 RVA: 0x00328E3C File Offset: 0x0032703C
 	public void SetMatchState(bool isMatching)
 	{
 		if (this.VisualState == ESlotVisualState.Matching == isMatching)
@@ -838,13 +838,13 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D72F RID: 55087 RVA: 0x0031DCDD File Offset: 0x0031BEDD
+	// Token: 0x0600AB43 RID: 43843 RVA: 0x0032902D File Offset: 0x0032722D
 	public void SetMatchTime(int time)
 	{
 		base.GetText(23).SetText(TimeUtil.Instance.GetTimeString((double)time), true);
 	}
 
-	// Token: 0x0600D730 RID: 55088 RVA: 0x0031DCFC File Offset: 0x0031BEFC
+	// Token: 0x0600AB44 RID: 43844 RVA: 0x0032904C File Offset: 0x0032724C
 	public void RefreshThirdPartyItem(string onlineId)
 	{
 		if (!this.IsThirdPartyVisibleInternal)
@@ -902,7 +902,7 @@ public class FormationRoleSlot : FormationSlotBase
 		}
 	}
 
-	// Token: 0x0600D731 RID: 55089 RVA: 0x0031DE08 File Offset: 0x0031C008
+	// Token: 0x0600AB45 RID: 43845 RVA: 0x00329158 File Offset: 0x00327358
 	private void RefreshDeadStateForSpecialTrialRole(int roleId, bool canUseSpecialTrialRole)
 	{
 		UUIItem item = base.GetItem(35);
@@ -921,39 +921,39 @@ public class FormationRoleSlot : FormationSlotBase
 		base.GetItem(24).SetUIActive(this.IsDead);
 	}
 
-	// Token: 0x0600D732 RID: 55090 RVA: 0x0031DE65 File Offset: 0x0031C065
+	// Token: 0x0600AB46 RID: 43846 RVA: 0x003291B5 File Offset: 0x003273B5
 	protected override UUISprite GetPingSprite()
 	{
 		return base.GetSprite(14);
 	}
 
-	// Token: 0x0600D733 RID: 55091 RVA: 0x0031DE6F File Offset: 0x0031C06F
+	// Token: 0x0600AB47 RID: 43847 RVA: 0x003291BF File Offset: 0x003273BF
 	protected override UUIText GetNameText()
 	{
 		return base.GetText(8);
 	}
 
-	// Token: 0x0600D734 RID: 55092 RVA: 0x0031DE78 File Offset: 0x0031C078
+	// Token: 0x0600AB48 RID: 43848 RVA: 0x003291C8 File Offset: 0x003273C8
 	protected override UUIArtText GetLevelArtText()
 	{
 		return base.GetArtText(9);
 	}
 
-	// Token: 0x0600D735 RID: 55093 RVA: 0x0031DE82 File Offset: 0x0031C082
+	// Token: 0x0600AB49 RID: 43849 RVA: 0x003291D2 File Offset: 0x003273D2
 	[NullableContext(1)]
 	public override AActor GetRoleItemOwner()
 	{
 		return base.GetItem(5).GetOwner();
 	}
 
-	// Token: 0x0600D736 RID: 55094 RVA: 0x0031DE90 File Offset: 0x0031C090
+	// Token: 0x0600AB4A RID: 43850 RVA: 0x003291E0 File Offset: 0x003273E0
 	[NullableContext(1)]
 	public override AActor GetPanelRoleItemOwner()
 	{
 		return base.GetItem(42).GetOwner();
 	}
 
-	// Token: 0x0600D737 RID: 55095 RVA: 0x0031DE9F File Offset: 0x0031C09F
+	// Token: 0x0600AB4B RID: 43851 RVA: 0x003291EF File Offset: 0x003273EF
 	public override AActor GetLikeItemOwner()
 	{
 		UUIItem item = base.GetItem(33);
@@ -964,7 +964,7 @@ public class FormationRoleSlot : FormationSlotBase
 		return item.GetOwner();
 	}
 
-	// Token: 0x0600D738 RID: 55096 RVA: 0x0031DEB4 File Offset: 0x0031C0B4
+	// Token: 0x0600AB4C RID: 43852 RVA: 0x00329204 File Offset: 0x00327404
 	public override AActor GetTrialRoleItemOwner()
 	{
 		UUIItem item = base.GetItem(34);
@@ -975,7 +975,7 @@ public class FormationRoleSlot : FormationSlotBase
 		return item.GetOwner();
 	}
 
-	// Token: 0x0600D739 RID: 55097 RVA: 0x0031DECC File Offset: 0x0031C0CC
+	// Token: 0x0600AB4D RID: 43853 RVA: 0x0032921C File Offset: 0x0032741C
 	public override UUIItem GetChooseButtonRoot()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -987,7 +987,7 @@ public class FormationRoleSlot : FormationSlotBase
 		return tweakObjectPtr.GetValueOrDefault();
 	}
 
-	// Token: 0x0600D73A RID: 55098 RVA: 0x0031DF11 File Offset: 0x0031C111
+	// Token: 0x0600AB4E RID: 43854 RVA: 0x00329261 File Offset: 0x00327461
 	public override AActor GetSkillBranchToggleItemOwner()
 	{
 		UUIItem item = base.GetItem(40);
@@ -998,134 +998,134 @@ public class FormationRoleSlot : FormationSlotBase
 		return item.GetOwner();
 	}
 
-	// Token: 0x0400624C RID: 25164
+	// Token: 0x0400631E RID: 25374
 	private ESlotVisualState VisualState;
 
-	// Token: 0x0400624D RID: 25165
+	// Token: 0x0400631F RID: 25375
 	private bool IsDead;
 
-	// Token: 0x0400624E RID: 25166
+	// Token: 0x04006320 RID: 25376
 	private IRoleSlotDisplayData.PrepareData LastPrepare;
 
-	// Token: 0x0400624F RID: 25167
+	// Token: 0x04006321 RID: 25377
 	private EMatchPlayerUiState? CurrentPrepareState;
 
-	// Token: 0x04006250 RID: 25168
+	// Token: 0x04006322 RID: 25378
 	private MiniElementItem MiniElementItem;
 
-	// Token: 0x04006251 RID: 25169
+	// Token: 0x04006323 RID: 25379
 	private TowerCostItem CurrentCost;
 
-	// Token: 0x04006252 RID: 25170
+	// Token: 0x04006324 RID: 25380
 	private TowerCostItem ChangeToCost;
 
-	// Token: 0x04006253 RID: 25171
+	// Token: 0x04006325 RID: 25381
 	private FormationRoleDragStateItem DragStateItem;
 
-	// Token: 0x04006254 RID: 25172
+	// Token: 0x04006326 RID: 25382
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006255 RID: 25173
+	// Token: 0x04006327 RID: 25383
 	private LevelSequencePlayer PlayerInLevelSequencePlayer;
 
-	// Token: 0x04006256 RID: 25174
+	// Token: 0x04006328 RID: 25384
 	private LevelSequencePlayer PlayerOutLevelSequencePlayer;
 
-	// Token: 0x04006257 RID: 25175
+	// Token: 0x04006329 RID: 25385
 	private LevelSequencePlayer CircleInLevelSequencePlayer;
 
-	// Token: 0x04006258 RID: 25176
+	// Token: 0x0400632A RID: 25386
 	private LevelSequencePlayer CircleOutLevelSequencePlayer;
 
-	// Token: 0x04006259 RID: 25177
+	// Token: 0x0400632B RID: 25387
 	private UUIItem RoleItem;
 
-	// Token: 0x0400625A RID: 25178
+	// Token: 0x0400632C RID: 25388
 	private bool IsPlayingCircleIn;
 
-	// Token: 0x020081C7 RID: 33223
+	// Token: 0x02007350 RID: 29520
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402A59D RID: 173469
+		// Token: 0x040258C4 RID: 153796
 		ChooseButton,
-		// Token: 0x0402A59E RID: 173470
+		// Token: 0x040258C5 RID: 153797
 		NoRoleItem,
-		// Token: 0x0402A59F RID: 173471
+		// Token: 0x040258C6 RID: 153798
 		MatchingItem,
-		// Token: 0x0402A5A0 RID: 173472
+		// Token: 0x040258C7 RID: 153799
 		AddRoleIcon,
-		// Token: 0x0402A5A1 RID: 173473
+		// Token: 0x040258C8 RID: 153800
 		ForbiddenItem,
-		// Token: 0x0402A5A2 RID: 173474
+		// Token: 0x040258C9 RID: 153801
 		RoleItem,
-		// Token: 0x0402A5A3 RID: 173475
+		// Token: 0x040258CA RID: 153802
 		RoleIconSpine,
-		// Token: 0x0402A5A4 RID: 173476
+		// Token: 0x040258CB RID: 153803
 		RoleIconItem,
-		// Token: 0x0402A5A5 RID: 173477
+		// Token: 0x040258CC RID: 153804
 		RoleNameText,
-		// Token: 0x0402A5A6 RID: 173478
+		// Token: 0x040258CD RID: 153805
 		RoleLevelText,
-		// Token: 0x0402A5A7 RID: 173479
+		// Token: 0x040258CE RID: 153806
 		ElementItem,
-		// Token: 0x0402A5A8 RID: 173480
+		// Token: 0x040258CF RID: 153807
 		TrailRoleIcon,
-		// Token: 0x0402A5A9 RID: 173481
+		// Token: 0x040258D0 RID: 153808
 		OnlineItem,
-		// Token: 0x0402A5AA RID: 173482
+		// Token: 0x040258D1 RID: 153809
 		OnlineIndexIcon,
-		// Token: 0x0402A5AB RID: 173483
+		// Token: 0x040258D2 RID: 153810
 		OnlineSignalIcon,
-		// Token: 0x0402A5AC RID: 173484
+		// Token: 0x040258D3 RID: 153811
 		PrepareItem,
-		// Token: 0x0402A5AD RID: 173485
+		// Token: 0x040258D4 RID: 153812
 		PrepareWaitItem,
-		// Token: 0x0402A5AE RID: 173486
+		// Token: 0x040258D5 RID: 153813
 		WarnItem,
-		// Token: 0x0402A5AF RID: 173487
+		// Token: 0x040258D6 RID: 153814
 		CostItem,
-		// Token: 0x0402A5B0 RID: 173488
+		// Token: 0x040258D7 RID: 153815
 		CostNotEnoughItem,
-		// Token: 0x0402A5B1 RID: 173489
+		// Token: 0x040258D8 RID: 153816
 		CostEnoughItem,
-		// Token: 0x0402A5B2 RID: 173490
+		// Token: 0x040258D9 RID: 153817
 		CurrentCostUIItem,
-		// Token: 0x0402A5B3 RID: 173491
+		// Token: 0x040258DA RID: 153818
 		ChangeToCostUIItem,
-		// Token: 0x0402A5B4 RID: 173492
+		// Token: 0x040258DB RID: 153819
 		MatchTimeText,
-		// Token: 0x0402A5B5 RID: 173493
+		// Token: 0x040258DC RID: 153820
 		DeadItem,
-		// Token: 0x0402A5B6 RID: 173494
+		// Token: 0x040258DD RID: 153821
 		ThirdPartyItem = 28,
-		// Token: 0x0402A5B7 RID: 173495
+		// Token: 0x040258DE RID: 153822
 		ThirdPartyIcon,
-		// Token: 0x0402A5B8 RID: 173496
+		// Token: 0x040258DF RID: 153823
 		ThirdPartyText,
-		// Token: 0x0402A5B9 RID: 173497
+		// Token: 0x040258E0 RID: 153824
 		RightTagItem,
-		// Token: 0x0402A5BA RID: 173498
+		// Token: 0x040258E1 RID: 153825
 		RightTagText,
-		// Token: 0x0402A5BB RID: 173499
+		// Token: 0x040258E2 RID: 153826
 		LikeItem,
-		// Token: 0x0402A5BC RID: 173500
+		// Token: 0x040258E3 RID: 153827
 		TrialRoleItem,
-		// Token: 0x0402A5BD RID: 173501
+		// Token: 0x040258E4 RID: 153828
 		TrialRoleWarnItem,
-		// Token: 0x0402A5BE RID: 173502
+		// Token: 0x040258E5 RID: 153829
 		Drag,
-		// Token: 0x0402A5BF RID: 173503
+		// Token: 0x040258E6 RID: 153830
 		DragStateItem,
-		// Token: 0x0402A5C0 RID: 173504
+		// Token: 0x040258E7 RID: 153831
 		LockItem,
-		// Token: 0x0402A5C1 RID: 173505
+		// Token: 0x040258E8 RID: 153832
 		OtherOnItem,
-		// Token: 0x0402A5C2 RID: 173506
+		// Token: 0x040258E9 RID: 153833
 		SkillBranchToggleItem,
-		// Token: 0x0402A5C3 RID: 173507
+		// Token: 0x040258EA RID: 153834
 		PanelPreviewItem,
-		// Token: 0x0402A5C4 RID: 173508
+		// Token: 0x040258EB RID: 153835
 		PanelRoleItem
 	}
 }

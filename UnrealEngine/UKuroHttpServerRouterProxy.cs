@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019F8 RID: 6648
+	// Token: 0x0200047E RID: 1150
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroNetwork.KuroHttpServerRouterProxy")]
 	[UnrealStructLayout(184, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 184)]
 	public class UKuroHttpServerRouterProxy : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018A2C RID: 100908 RVA: 0x002454CB File Offset: 0x002436CB
+		// Token: 0x06006CA9 RID: 27817 RVA: 0x0009ECC6 File Offset: 0x0009CEC6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroHttpServerRouterProxy._ClassPtr;
 		}
 
-		// Token: 0x06018A2D RID: 100909 RVA: 0x002454D8 File Offset: 0x002436D8
+		// Token: 0x06006CAA RID: 27818 RVA: 0x0009ECD4 File Offset: 0x0009CED4
 		public UKuroHttpServerRouterProxy() : this(BuiltinUtils.AllocNativeUObject(UKuroHttpServerRouterProxy.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018A2E RID: 100910 RVA: 0x00245500 File Offset: 0x00243700
+		// Token: 0x06006CAB RID: 27819 RVA: 0x0009ECFC File Offset: 0x0009CEFC
 		public UKuroHttpServerRouterProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroHttpServerRouterProxy.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170061FD RID: 25085
-		// (get) Token: 0x06018A2F RID: 100911 RVA: 0x00245534 File Offset: 0x00243734
-		// (set) Token: 0x06018A30 RID: 100912 RVA: 0x0024556D File Offset: 0x0024376D
+		// Token: 0x1700157A RID: 5498
+		// (get) Token: 0x06006CAC RID: 27820 RVA: 0x0009ED30 File Offset: 0x0009CF30
+		// (set) Token: 0x06006CAD RID: 27821 RVA: 0x0009ED69 File Offset: 0x0009CF69
 		public FKuroHttpRequestHandle HttpRequestDelegate
 		{
 			get
@@ -50,19 +50,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018A31 RID: 100913 RVA: 0x0024558E File Offset: 0x0024378E
+		// Token: 0x06006CAE RID: 27822 RVA: 0x0009ED8A File Offset: 0x0009CF8A
 		public void StartServer()
 		{
 			UKuroHttpServerRouterProxy.__StartServer_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018A32 RID: 100914 RVA: 0x0024559B File Offset: 0x0024379B
+		// Token: 0x06006CAF RID: 27823 RVA: 0x0009ED97 File Offset: 0x0009CF97
 		public void CreateRouter(int Port)
 		{
 			UKuroHttpServerRouterProxy.__CreateRouter_Internal(base.NativePtr, Port);
 		}
 
-		// Token: 0x06018A33 RID: 100915 RVA: 0x002455AC File Offset: 0x002437AC
+		// Token: 0x06006CB0 RID: 27824 RVA: 0x0009EDA8 File Offset: 0x0009CFA8
 		public unsafe void BindRoute(string ModuleName)
 		{
 			FString fstring = FString.AllocTemp(ModuleName);
@@ -70,42 +70,42 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06018A34 RID: 100916
+		// Token: 0x06006CB1 RID: 27825
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartServer_Internal(IntPtr @this);
 
-		// Token: 0x06018A35 RID: 100917
+		// Token: 0x06006CB2 RID: 27826
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CreateRouter_Internal(IntPtr @this, int Port);
 
-		// Token: 0x06018A36 RID: 100918
+		// Token: 0x06006CB3 RID: 27827
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindRoute_Internal(IntPtr @this, in FString ModuleName);
 
-		// Token: 0x06018A37 RID: 100919 RVA: 0x002455D6 File Offset: 0x002437D6
+		// Token: 0x06006CB4 RID: 27828 RVA: 0x0009EDD2 File Offset: 0x0009CFD2
 		static UKuroHttpServerRouterProxy()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroNetwork.KuroHttpServerRouterProxy");
 		}
 
-		// Token: 0x06018A38 RID: 100920 RVA: 0x002455E4 File Offset: 0x002437E4
+		// Token: 0x06006CB5 RID: 27829 RVA: 0x0009EDE0 File Offset: 0x0009CFE0
 		protected UKuroHttpServerRouterProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D510 RID: 54544
+		// Token: 0x04002E72 RID: 11890
 		public new const string __ObjectPath = "/Script/KuroNetwork.KuroHttpServerRouterProxy";
 
-		// Token: 0x0400D511 RID: 54545
+		// Token: 0x04002E73 RID: 11891
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D512 RID: 54546
+		// Token: 0x04002E74 RID: 11892
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D513 RID: 54547
+		// Token: 0x04002E75 RID: 11893
 		internal static int __PropertyOffset_HttpRequestDelegate;
 
-		// Token: 0x0400D514 RID: 54548
+		// Token: 0x04002E76 RID: 11894
 		[Nullable(2)]
 		private FKuroHttpRequestHandle _HttpRequestDelegate;
 	}

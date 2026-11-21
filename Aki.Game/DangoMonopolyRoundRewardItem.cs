@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200124B RID: 4683
+// Token: 0x020006FF RID: 1791
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoundRewardItemData>
 {
-	// Token: 0x06007F29 RID: 32553 RVA: 0x001AEECC File Offset: 0x001AD0CC
+	// Token: 0x060052C0 RID: 21184 RVA: 0x001B7B84 File Offset: 0x001B5D84
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyRoundRewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -27,7 +27,7 @@ public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoun
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007F2A RID: 32554 RVA: 0x001AEF10 File Offset: 0x001AD110
+	// Token: 0x060052C1 RID: 21185 RVA: 0x001B7BC8 File Offset: 0x001B5DC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoun
 		};
 	}
 
-	// Token: 0x06007F2B RID: 32555 RVA: 0x001AEF80 File Offset: 0x001AD180
+	// Token: 0x060052C2 RID: 21186 RVA: 0x001B7C38 File Offset: 0x001B5E38
 	public override void Refresh(IDangoMonopolyRoundRewardItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -72,7 +72,7 @@ public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoun
 		this.RewardItem.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x06007F2C RID: 32556 RVA: 0x001AF080 File Offset: 0x001AD280
+	// Token: 0x060052C3 RID: 21187 RVA: 0x001B7D38 File Offset: 0x001B5F38
 	public string GetCountStr()
 	{
 		if (this.ItemData.Count > 0)
@@ -85,7 +85,7 @@ public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoun
 		return "";
 	}
 
-	// Token: 0x06007F2D RID: 32557 RVA: 0x001AF0CF File Offset: 0x001AD2CF
+	// Token: 0x060052C4 RID: 21188 RVA: 0x001B7D87 File Offset: 0x001B5F87
 	private void OnClickReward(MediumItemGridExtendCallback _)
 	{
 		Action<IDangoMonopolyRoundRewardItemData> clickCallBack = this.ClickCallBack;
@@ -96,13 +96,13 @@ public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoun
 		clickCallBack(this.ItemData);
 	}
 
-	// Token: 0x040039E0 RID: 14816
+	// Token: 0x04003A78 RID: 14968
 	private IDangoMonopolyRoundRewardItemData ItemData;
 
-	// Token: 0x040039E1 RID: 14817
+	// Token: 0x04003A79 RID: 14969
 	public SmallItemGrid RewardItem;
 
-	// Token: 0x040039E2 RID: 14818
+	// Token: 0x04003A7A RID: 14970
 	[Nullable(new byte[]
 	{
 		2,
@@ -110,17 +110,17 @@ public class DangoMonopolyRoundRewardItem : GridProxyAbstract<IDangoMonopolyRoun
 	})]
 	public Action<IDangoMonopolyRoundRewardItemData> ClickCallBack;
 
-	// Token: 0x02007861 RID: 30817
+	// Token: 0x020069EC RID: 27116
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027AB1 RID: 162481
+		// Token: 0x04022DE2 RID: 142818
 		SpriteCurrent,
-		// Token: 0x04027AB2 RID: 162482
+		// Token: 0x04022DE3 RID: 142819
 		ItemReward,
-		// Token: 0x04027AB3 RID: 162483
+		// Token: 0x04022DE4 RID: 142820
 		TxtCount,
-		// Token: 0x04027AB4 RID: 162484
+		// Token: 0x04022DE5 RID: 142821
 		SpriteFinish
 	}
 }

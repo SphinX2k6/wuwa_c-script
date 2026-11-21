@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C40 RID: 3136
+	// Token: 0x02000D23 RID: 3363
 	public struct ErrorCode : IFlatbufferObject
 	{
-		// Token: 0x17000F6E RID: 3950
-		// (get) Token: 0x06006A4C RID: 27212 RVA: 0x002257F4 File Offset: 0x002239F4
+		// Token: 0x17000FC7 RID: 4039
+		// (get) Token: 0x0600704E RID: 28750 RVA: 0x00244B3C File Offset: 0x00242D3C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A4D RID: 27213 RVA: 0x00225801 File Offset: 0x00223A01
+		// Token: 0x0600704F RID: 28751 RVA: 0x00244B49 File Offset: 0x00242D49
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006A4E RID: 27214 RVA: 0x00225808 File Offset: 0x00223A08
+		// Token: 0x06007050 RID: 28752 RVA: 0x00244B50 File Offset: 0x00242D50
 		public static ErrorCode GetRootAsErrorCode(ByteBuffer _bb)
 		{
 			return ErrorCode.GetRootAsErrorCode(_bb, default(ErrorCode));
 		}
 
-		// Token: 0x06006A4F RID: 27215 RVA: 0x00225824 File Offset: 0x00223A24
+		// Token: 0x06007051 RID: 28753 RVA: 0x00244B6C File Offset: 0x00242D6C
 		public static ErrorCode GetRootAsErrorCode(ByteBuffer _bb, ErrorCode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006A50 RID: 27216 RVA: 0x00225841 File Offset: 0x00223A41
+		// Token: 0x06007052 RID: 28754 RVA: 0x00244B89 File Offset: 0x00242D89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006A51 RID: 27217 RVA: 0x00225850 File Offset: 0x00223A50
+		// Token: 0x06007053 RID: 28755 RVA: 0x00244B98 File Offset: 0x00242D98
 		public ErrorCode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F6F RID: 3951
-		// (get) Token: 0x06006A52 RID: 27218 RVA: 0x00225860 File Offset: 0x00223A60
+		// Token: 0x17000FC8 RID: 4040
+		// (get) Token: 0x06007054 RID: 28756 RVA: 0x00244BA8 File Offset: 0x00242DA8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F70 RID: 3952
-		// (get) Token: 0x06006A53 RID: 27219 RVA: 0x0022589C File Offset: 0x00223A9C
+		// Token: 0x17000FC9 RID: 4041
+		// (get) Token: 0x06007055 RID: 28757 RVA: 0x00244BE4 File Offset: 0x00242DE4
 		public string DebugText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A54 RID: 27220 RVA: 0x002258D3 File Offset: 0x00223AD3
+		// Token: 0x06007056 RID: 28758 RVA: 0x00244C1B File Offset: 0x00242E1B
 		public Span<byte> GetDebugTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06006A55 RID: 27221 RVA: 0x002258E2 File Offset: 0x00223AE2
+		// Token: 0x06007057 RID: 28759 RVA: 0x00244C2A File Offset: 0x00242E2A
 		public byte[] GetDebugTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000F71 RID: 3953
-		// (get) Token: 0x06006A56 RID: 27222 RVA: 0x002258FC File Offset: 0x00223AFC
+		// Token: 0x17000FCA RID: 4042
+		// (get) Token: 0x06007058 RID: 28760 RVA: 0x00244C44 File Offset: 0x00242E44
 		public string Text
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A57 RID: 27223 RVA: 0x00225933 File Offset: 0x00223B33
+		// Token: 0x06007059 RID: 28761 RVA: 0x00244C7B File Offset: 0x00242E7B
 		public Span<byte> GetTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006A58 RID: 27224 RVA: 0x00225942 File Offset: 0x00223B42
+		// Token: 0x0600705A RID: 28762 RVA: 0x00244C8A File Offset: 0x00242E8A
 		public byte[] GetTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000F72 RID: 3954
-		// (get) Token: 0x06006A59 RID: 27225 RVA: 0x0022595C File Offset: 0x00223B5C
+		// Token: 0x17000FCB RID: 4043
+		// (get) Token: 0x0600705B RID: 28763 RVA: 0x00244CA4 File Offset: 0x00242EA4
 		public bool IsTip
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C80 RID: 19584
+		// Token: 0x04005263 RID: 21091
 		private Table __p;
 	}
 }

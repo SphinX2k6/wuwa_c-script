@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk;
 using CSharpScript.Game.Module.BossPiling;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001FA5 RID: 8101
+// Token: 0x02001467 RID: 5223
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class InstanceDungeonConfig : ConfigBase
 {
-	// Token: 0x0600FBAC RID: 64428 RVA: 0x003D044B File Offset: 0x003CE64B
+	// Token: 0x0600CFCE RID: 53198 RVA: 0x003DC07F File Offset: 0x003DA27F
 	protected override bool OnInit()
 	{
 		this.LimitViewCheckMap[EUiViewName.RoleRootView] = new Func<bool>(this.CheckLimitRoleRootView);
@@ -21,7 +20,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600FBAD RID: 64429 RVA: 0x003D0488 File Offset: 0x003CE688
+	// Token: 0x0600CFCF RID: 53199 RVA: 0x003DC0BC File Offset: 0x003DA2BC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -52,7 +51,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return array;
 	}
 
-	// Token: 0x0600FBAE RID: 64430 RVA: 0x003D055C File Offset: 0x003CE75C
+	// Token: 0x0600CFD0 RID: 53200 RVA: 0x003DC190 File Offset: 0x003DA390
 	public InstanceDungeon? GetConfig(int id)
 	{
 		InstanceDungeon? config = ConfigInstanceDungeonById.GetConfig(id, true);
@@ -69,7 +68,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600FBAF RID: 64431 RVA: 0x003D05B4 File Offset: 0x003CE7B4
+	// Token: 0x0600CFD1 RID: 53201 RVA: 0x003DC1E8 File Offset: 0x003DA3E8
 	public InstanceEnterControl? GetCountConfig(int id)
 	{
 		InstanceEnterControl? config = ConfigInstanceEnterControlById.GetConfig(id, true);
@@ -86,7 +85,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600FBB0 RID: 64432 RVA: 0x003D060C File Offset: 0x003CE80C
+	// Token: 0x0600CFD2 RID: 53202 RVA: 0x003DC240 File Offset: 0x003DA440
 	public InstanceDungeonTitle? GetTitleConfig(int id)
 	{
 		InstanceDungeonTitle? config = ConfigInstanceDungeonTitleById.GetConfig(id, true);
@@ -103,7 +102,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600FBB1 RID: 64433 RVA: 0x003D0664 File Offset: 0x003CE864
+	// Token: 0x0600CFD3 RID: 53203 RVA: 0x003DC298 File Offset: 0x003DA498
 	public InstanceTrialRoleConfig? GetTrialRoleConfig(int id)
 	{
 		InstanceTrialRoleConfig? config = ConfigInstanceTrialRoleConfigById.GetConfig(id, true);
@@ -120,7 +119,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600FBB2 RID: 64434 RVA: 0x003D06BC File Offset: 0x003CE8BC
+	// Token: 0x0600CFD4 RID: 53204 RVA: 0x003DC2F0 File Offset: 0x003DA4F0
 	public InstanceGameplayMode? GetGameplayModeConfig(int id)
 	{
 		InstanceGameplayMode? config = ConfigInstanceGameplayModeById.GetConfig(id, true);
@@ -137,7 +136,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600FBB3 RID: 64435 RVA: 0x003D0714 File Offset: 0x003CE914
+	// Token: 0x0600CFD5 RID: 53205 RVA: 0x003DC348 File Offset: 0x003DA548
 	public int GetLimitChallengeTimes(int id)
 	{
 		InstanceEnterControl? countConfig = this.GetCountConfig(id);
@@ -148,19 +147,33 @@ public class InstanceDungeonConfig : ConfigBase
 		return countConfig.GetValueOrDefault().EnterCount;
 	}
 
-	// Token: 0x0600FBB4 RID: 64436 RVA: 0x003D0744 File Offset: 0x003CE944
+	// Token: 0x0600CFD6 RID: 53206 RVA: 0x003DC378 File Offset: 0x003DA578
 	public bool CheckViewShield(int id, EUiViewName viewName)
 	{
 		InstanceDungeon? config = this.GetConfig(id);
-		Func<bool> func;
-		return config != null && config.Value.LimitViewNameLength != 0 && config.Value.LimitViewNameIter().Any(delegate(string name)
+		if (config == null)
 		{
-			EUiViewName[] source;
-			return name == viewName.ToString() || (this.LimitViewNameMapping.TryGetValue(name, out source) && source.Contains(viewName));
-		}) && (!this.LimitViewCheckMap.TryGetValue(viewName, out func) || func());
+			return false;
+		}
+		if (config.Value.LimitViewNameLength == 0)
+		{
+			return false;
+		}
+		bool flag = false;
+		foreach (string text in config.Value.LimitViewNameIter())
+		{
+			EUiViewName[] array;
+			if (text == viewName.ToString() || (this.LimitViewNameMapping.TryGetValue(text, out array) && Array.IndexOf<EUiViewName>(array, viewName) >= 0))
+			{
+				flag = true;
+				break;
+			}
+		}
+		Func<bool> func;
+		return flag && (!this.LimitViewCheckMap.TryGetValue(viewName, out func) || func());
 	}
 
-	// Token: 0x0600FBB5 RID: 64437 RVA: 0x003D07CC File Offset: 0x003CE9CC
+	// Token: 0x0600CFD7 RID: 53207 RVA: 0x003DC448 File Offset: 0x003DA648
 	private bool CheckLimitRoleRootView()
 	{
 		if (TowerModel.Instance.CheckInTower())
@@ -190,19 +203,19 @@ public class InstanceDungeonConfig : ConfigBase
 		return !AdamSmasherController.Instance.IsInAdamSmasherDungeon() || !this.TeamRoleSelectIsOpen();
 	}
 
-	// Token: 0x0600FBB6 RID: 64438 RVA: 0x003D088F File Offset: 0x003CEA8F
+	// Token: 0x0600CFD8 RID: 53208 RVA: 0x003DC50B File Offset: 0x003DA70B
 	private bool CheckLimitWeaponRootView()
 	{
 		return this.CheckLimitRoleRootView();
 	}
 
-	// Token: 0x0600FBB7 RID: 64439 RVA: 0x003D0898 File Offset: 0x003CEA98
+	// Token: 0x0600CFD9 RID: 53209 RVA: 0x003DC514 File Offset: 0x003DA714
 	private bool TeamRoleSelectIsOpen()
 	{
 		return UiManager.Instance.IsViewOpen(EUiViewName.TeamRoleSelectView) || UiManager.Instance.IsViewOpen(EUiViewName.MultiTeamRoleSelectView) || UiManager.Instance.IsViewOpen(EUiViewName.QuickRoleSelectView) || UiManager.Instance.IsViewOpen(EUiViewName.AdamSmasherFormationView) || UiManager.Instance.IsViewOpen(EUiViewName.TowerChallengeFormationView);
 	}
 
-	// Token: 0x0600FBB8 RID: 64440 RVA: 0x003D0908 File Offset: 0x003CEB08
+	// Token: 0x0600CFDA RID: 53210 RVA: 0x003DC584 File Offset: 0x003DA784
 	[NullableContext(2)]
 	public int[] GetUnlockCondition(int id)
 	{
@@ -214,14 +227,14 @@ public class InstanceDungeonConfig : ConfigBase
 		return config.GetValueOrDefault().GetEnterConditionArray();
 	}
 
-	// Token: 0x0600FBB9 RID: 64441 RVA: 0x003D0938 File Offset: 0x003CEB38
+	// Token: 0x0600CFDB RID: 53211 RVA: 0x003DC5B4 File Offset: 0x003DA7B4
 	public string GetUnlockConditionGroupHintText(int id)
 	{
 		InstanceDungeon? config = this.GetConfig(id);
 		return ((config != null) ? config.GetValueOrDefault().EnterConditionText : null) ?? string.Empty;
 	}
 
-	// Token: 0x0600FBBA RID: 64442 RVA: 0x003D0974 File Offset: 0x003CEB74
+	// Token: 0x0600CFDC RID: 53212 RVA: 0x003DC5F0 File Offset: 0x003DA7F0
 	public int GetRecommendLevel(int id, int worldLevel)
 	{
 		TWorldLevelToRecommendLevel[] array = this.TryGetRecommendLevelLookupList(id);
@@ -245,7 +258,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return num;
 	}
 
-	// Token: 0x0600FBBB RID: 64443 RVA: 0x003D09E8 File Offset: 0x003CEBE8
+	// Token: 0x0600CFDD RID: 53213 RVA: 0x003DC664 File Offset: 0x003DA864
 	public int? GetInstanceRewardId(int id)
 	{
 		if (this.GetConfig(id) == null)
@@ -256,7 +269,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return new int?(instanceDungeon.GetValueOrDefault().RewardId);
 	}
 
-	// Token: 0x0600FBBC RID: 64444 RVA: 0x003D0A24 File Offset: 0x003CEC24
+	// Token: 0x0600CFDE RID: 53214 RVA: 0x003DC6A0 File Offset: 0x003DA8A0
 	public int? GetInstanceFirstRewardId(int id)
 	{
 		if (this.GetConfig(id) == null)
@@ -267,14 +280,14 @@ public class InstanceDungeonConfig : ConfigBase
 		return new int?(instanceDungeon.GetValueOrDefault().FirstRewardId);
 	}
 
-	// Token: 0x0600FBBD RID: 64445 RVA: 0x003D0A60 File Offset: 0x003CEC60
+	// Token: 0x0600CFDF RID: 53215 RVA: 0x003DC6DC File Offset: 0x003DA8DC
 	public bool IsMiniMapShow(int id)
 	{
 		InstanceDungeon? config = this.GetConfig(id);
 		return ((config != null) ? config.GetValueOrDefault().MiniMapId : 0) != 0;
 	}
 
-	// Token: 0x0600FBBE RID: 64446 RVA: 0x003D0A94 File Offset: 0x003CEC94
+	// Token: 0x0600CFE0 RID: 53216 RVA: 0x003DC710 File Offset: 0x003DA910
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetGuide(int id)
 	{
@@ -282,43 +295,43 @@ public class InstanceDungeonConfig : ConfigBase
 		return new ValueTuple<int, int>((config != null) ? config.GetValueOrDefault().GuideType : 0, (config != null) ? config.GetValueOrDefault().GuideValue : 0);
 	}
 
-	// Token: 0x0600FBBF RID: 64447 RVA: 0x003D0AE4 File Offset: 0x003CECE4
+	// Token: 0x0600CFE1 RID: 53217 RVA: 0x003DC760 File Offset: 0x003DA960
 	public TowerDefenceInstance? GetTowerDefenseInstanceByInstance(int id)
 	{
 		return ConfigTowerDefenceInstanceByInstanceId.GetConfig(id, true);
 	}
 
-	// Token: 0x0600FBC0 RID: 64448 RVA: 0x003D0AED File Offset: 0x003CECED
+	// Token: 0x0600CFE2 RID: 53218 RVA: 0x003DC769 File Offset: 0x003DA969
 	public TowerDefenseConfig? GetTowerDefenseConfigByActivityId(int id)
 	{
 		return ConfigTowerDefenseConfigById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600FBC1 RID: 64449 RVA: 0x003D0AF6 File Offset: 0x003CECF6
+	// Token: 0x0600CFE3 RID: 53219 RVA: 0x003DC772 File Offset: 0x003DA972
 	public TowerDefenseSettle? GetTowerDefenseSettleById(int id)
 	{
 		return ConfigTowerDefenseSettleById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600FBC2 RID: 64450 RVA: 0x003D0AFF File Offset: 0x003CECFF
+	// Token: 0x0600CFE4 RID: 53220 RVA: 0x003DC77B File Offset: 0x003DA97B
 	public TowerDefenceInstance? GetTowerDefenseConfigById(int id)
 	{
 		return ConfigTowerDefenceInstanceById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600FBC3 RID: 64451 RVA: 0x003D0B08 File Offset: 0x003CED08
+	// Token: 0x0600CFE5 RID: 53221 RVA: 0x003DC784 File Offset: 0x003DA984
 	public int GetTowerDefenseRankListSize()
 	{
 		return ConfigCommonParamById.GetIntConfig("TowerDefenceRankListSize").Value;
 	}
 
-	// Token: 0x0600FBC4 RID: 64452 RVA: 0x003D0B27 File Offset: 0x003CED27
+	// Token: 0x0600CFE6 RID: 53222 RVA: 0x003DC7A3 File Offset: 0x003DA9A3
 	public TowerDefencePhantom? GetTowerDefensePhantomById(int id)
 	{
 		return ConfigTowerDefencePhantomById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600FBC5 RID: 64453 RVA: 0x003D0B30 File Offset: 0x003CED30
+	// Token: 0x0600CFE7 RID: 53223 RVA: 0x003DC7AC File Offset: 0x003DA9AC
 	public int? GetInstanceMapConfigId(int id)
 	{
 		if (this.GetConfig(id) == null)
@@ -329,8 +342,8 @@ public class InstanceDungeonConfig : ConfigBase
 		return new int?(instanceDungeon.GetValueOrDefault().MapConfigId);
 	}
 
-	// Token: 0x1700134A RID: 4938
-	// (get) Token: 0x0600FBC6 RID: 64454 RVA: 0x003D0B6C File Offset: 0x003CED6C
+	// Token: 0x17001374 RID: 4980
+	// (get) Token: 0x0600CFE8 RID: 53224 RVA: 0x003DC7E8 File Offset: 0x003DA9E8
 	public static InstanceDungeonConfig Instance
 	{
 		get
@@ -339,7 +352,7 @@ public class InstanceDungeonConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600FBC7 RID: 64455 RVA: 0x003D0B73 File Offset: 0x003CED73
+	// Token: 0x0600CFE9 RID: 53225 RVA: 0x003DC7EF File Offset: 0x003DA9EF
 	public static InstanceDungeonConfig GetOrCreateInstance()
 	{
 		if (InstanceDungeonConfig._Instance == null)
@@ -349,7 +362,7 @@ public class InstanceDungeonConfig : ConfigBase
 		return InstanceDungeonConfig._Instance;
 	}
 
-	// Token: 0x0600FBC8 RID: 64456 RVA: 0x003D0B87 File Offset: 0x003CED87
+	// Token: 0x0600CFEA RID: 53226 RVA: 0x003DC803 File Offset: 0x003DAA03
 	public static bool CreateInstance()
 	{
 		if (InstanceDungeonConfig._Instance != null)
@@ -360,24 +373,24 @@ public class InstanceDungeonConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600FBC9 RID: 64457 RVA: 0x003D0B9D File Offset: 0x003CED9D
+	// Token: 0x0600CFEB RID: 53227 RVA: 0x003DC819 File Offset: 0x003DAA19
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FBCA RID: 64458 RVA: 0x003D0B9F File Offset: 0x003CED9F
+	// Token: 0x0600CFEC RID: 53228 RVA: 0x003DC81B File Offset: 0x003DAA1B
 	public static void ResetStaticDefaultValue()
 	{
 		InstanceDungeonConfig._Instance = null;
 	}
 
-	// Token: 0x0600FBCB RID: 64459 RVA: 0x003D0BA7 File Offset: 0x003CEDA7
+	// Token: 0x0600CFED RID: 53229 RVA: 0x003DC823 File Offset: 0x003DAA23
 	static InstanceDungeonConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonConfig.CreateStaticDefaultValue), new Action(InstanceDungeonConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600FBCC RID: 64460 RVA: 0x003D0BC8 File Offset: 0x003CEDC8
+	// Token: 0x0600CFEE RID: 53230 RVA: 0x003DC844 File Offset: 0x003DAA44
 	public InstanceDungeonConfig()
 	{
 		Dictionary<string, EUiViewName[]> dictionary = new Dictionary<string, EUiViewName[]>();
@@ -396,16 +409,16 @@ public class InstanceDungeonConfig : ConfigBase
 		base..ctor();
 	}
 
-	// Token: 0x04007517 RID: 29975
+	// Token: 0x040075FA RID: 30202
 	private readonly Dictionary<string, EUiViewName[]> LimitViewNameMapping;
 
-	// Token: 0x04007518 RID: 29976
+	// Token: 0x040075FB RID: 30203
 	private readonly Dictionary<int, TWorldLevelToRecommendLevel[]> RecommendLevelLookupMap;
 
-	// Token: 0x04007519 RID: 29977
+	// Token: 0x040075FC RID: 30204
 	private readonly Dictionary<EUiViewName, Func<bool>> LimitViewCheckMap;
 
-	// Token: 0x0400751A RID: 29978
+	// Token: 0x040075FD RID: 30205
 	[Nullable(2)]
 	private static InstanceDungeonConfig _Instance;
 }

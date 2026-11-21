@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006832 RID: 26674
+	// Token: 0x02006EB8 RID: 28344
 	public class IFlowTextConfigT
 	{
-		// Token: 0x1700C623 RID: 50723
-		// (get) Token: 0x0602E811 RID: 190481 RVA: 0x006589A0 File Offset: 0x00656BA0
-		// (set) Token: 0x0602E812 RID: 190482 RVA: 0x006589A8 File Offset: 0x00656BA8
+		// Token: 0x1700CFE7 RID: 53223
+		// (get) Token: 0x06031099 RID: 200857 RVA: 0x006A68E0 File Offset: 0x006A4AE0
+		// (set) Token: 0x0603109A RID: 200858 RVA: 0x006A68E8 File Offset: 0x006A4AE8
 		public string Text { get; set; }
 
-		// Token: 0x1700C624 RID: 50724
-		// (get) Token: 0x0602E813 RID: 190483 RVA: 0x006589B1 File Offset: 0x00656BB1
-		// (set) Token: 0x0602E814 RID: 190484 RVA: 0x006589B9 File Offset: 0x00656BB9
+		// Token: 0x1700CFE8 RID: 53224
+		// (get) Token: 0x0603109B RID: 200859 RVA: 0x006A68F1 File Offset: 0x006A4AF1
+		// (set) Token: 0x0603109C RID: 200860 RVA: 0x006A68F9 File Offset: 0x006A4AF9
 		public string PlotLineKey { get; set; }
 
-		// Token: 0x1700C625 RID: 50725
-		// (get) Token: 0x0602E815 RID: 190485 RVA: 0x006589C2 File Offset: 0x00656BC2
-		// (set) Token: 0x0602E816 RID: 190486 RVA: 0x006589CA File Offset: 0x00656BCA
+		// Token: 0x1700CFE9 RID: 53225
+		// (get) Token: 0x0603109D RID: 200861 RVA: 0x006A6902 File Offset: 0x006A4B02
+		// (set) Token: 0x0603109E RID: 200862 RVA: 0x006A690A File Offset: 0x006A4B0A
 		public string StringKey { get; set; }
 
-		// Token: 0x1700C626 RID: 50726
-		// (get) Token: 0x0602E817 RID: 190487 RVA: 0x006589D3 File Offset: 0x00656BD3
-		// (set) Token: 0x0602E818 RID: 190488 RVA: 0x006589DB File Offset: 0x00656BDB
+		// Token: 0x1700CFEA RID: 53226
+		// (get) Token: 0x0603109F RID: 200863 RVA: 0x006A6913 File Offset: 0x006A4B13
+		// (set) Token: 0x060310A0 RID: 200864 RVA: 0x006A691B File Offset: 0x006A4B1B
 		public int FlowListId { get; set; }
 
-		// Token: 0x1700C627 RID: 50727
-		// (get) Token: 0x0602E819 RID: 190489 RVA: 0x006589E4 File Offset: 0x00656BE4
-		// (set) Token: 0x0602E81A RID: 190490 RVA: 0x006589EC File Offset: 0x00656BEC
+		// Token: 0x1700CFEB RID: 53227
+		// (get) Token: 0x060310A1 RID: 200865 RVA: 0x006A6924 File Offset: 0x006A4B24
+		// (set) Token: 0x060310A2 RID: 200866 RVA: 0x006A692C File Offset: 0x006A4B2C
 		public bool IsNoPlotText { get; set; }
 
-		// Token: 0x1700C628 RID: 50728
-		// (get) Token: 0x0602E81B RID: 190491 RVA: 0x006589F5 File Offset: 0x00656BF5
-		// (set) Token: 0x0602E81C RID: 190492 RVA: 0x006589FD File Offset: 0x00656BFD
+		// Token: 0x1700CFEC RID: 53228
+		// (get) Token: 0x060310A3 RID: 200867 RVA: 0x006A6935 File Offset: 0x006A4B35
+		// (set) Token: 0x060310A4 RID: 200868 RVA: 0x006A693D File Offset: 0x006A4B3D
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E81D RID: 190493 RVA: 0x00658A06 File Offset: 0x00656C06
+		// Token: 0x060310A5 RID: 200869 RVA: 0x006A6946 File Offset: 0x006A4B46
 		public IFlowTextConfigT()
 		{
 			this.Text = null;

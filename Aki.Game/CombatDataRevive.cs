@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EDE RID: 11998
+// Token: 0x02002431 RID: 9265
 public class CombatDataRevive : CombatDataBase
 {
-	// Token: 0x060199FB RID: 104955 RVA: 0x006A7C2C File Offset: 0x006A5E2C
+	// Token: 0x060172FA RID: 94970 RVA: 0x006CDDD0 File Offset: 0x006CBFD0
 	public CombatDataRevive(int attackerId) : base(attackerId, 0)
 	{
 	}
 
-	// Token: 0x060199FC RID: 104956 RVA: 0x006A7C38 File Offset: 0x006A5E38
+	// Token: 0x060172FB RID: 94971 RVA: 0x006CDDDC File Offset: 0x006CBFDC
 	[NullableContext(1)]
 	public override string ParseToString()
 	{

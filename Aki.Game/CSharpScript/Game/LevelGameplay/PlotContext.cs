@@ -4,22 +4,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069A1 RID: 27041
+	// Token: 0x02005AFD RID: 23293
 	public class PlotContext : GeneralContext
 	{
-		// Token: 0x0604344F RID: 275535 RVA: 0x01065FB1 File Offset: 0x010641B1
+		// Token: 0x06039487 RID: 234631 RVA: 0x0100A219 File Offset: 0x01008419
 		public PlotContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.Plot);
 		}
 
-		// Token: 0x06043450 RID: 275536 RVA: 0x01065FC6 File Offset: 0x010641C6
+		// Token: 0x06039488 RID: 234632 RVA: 0x0100A22E File Offset: 0x0100842E
 		public override void Reset()
 		{
 			this.FlowIncId = 0L;
 		}
 
-		// Token: 0x06043451 RID: 275537 RVA: 0x01065FD0 File Offset: 0x010641D0
+		// Token: 0x06039489 RID: 234633 RVA: 0x0100A238 File Offset: 0x01008438
 		[NullableContext(1)]
 		public static PlotContext Create(long flowIncId, GameCtxType? subType = null)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return plotContext;
 		}
 
-		// Token: 0x040230AF RID: 143535
+		// Token: 0x0401E299 RID: 123545
 		public long FlowIncId;
 	}
 }

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002239 RID: 8761
+	// Token: 0x020024A4 RID: 9380
 	public class TeleportToLatestResetPoint_SetValue
 	{
-		// Token: 0x040072A5 RID: 29349
-		[Nullable(1)]
+		// Token: 0x040078EF RID: 30959
 		public ITeleportToLatestResetPointDirectly Option;
 	}
 }

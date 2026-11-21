@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007185 RID: 29061
+	// Token: 0x02006239 RID: 25145
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemMonsterGachaItemComponent : EntityComponent
 	{
-		// Token: 0x060470EE RID: 291054 RVA: 0x01203EFC File Offset: 0x012020FC
+		// Token: 0x0603C995 RID: 248213 RVA: 0x0115E0A0 File Offset: 0x0115C2A0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			MonsterGachaItemComponent config = args.GetP1<CreateEntityData>().GetParam<SceneItemMonsterGachaItemComponent>() as MonsterGachaItemComponent;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060470EF RID: 291055 RVA: 0x01203F22 File Offset: 0x01202122
+		// Token: 0x0603C996 RID: 248214 RVA: 0x0115E0C6 File Offset: 0x0115C2C6
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060470F0 RID: 291056 RVA: 0x01203F58 File Offset: 0x01202158
+		// Token: 0x0603C997 RID: 248215 RVA: 0x0115E0FC File Offset: 0x0115C2FC
 		private void OnSceneInteractionLoadCompleted()
 		{
 			ResourceSystem.Instance.LoadAsync<ItemMaterialControllerActorData>(this.Config.MaterialDataPath, delegate([Nullable(2)] ItemMaterialControllerActorData result, string _)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060470F1 RID: 291057 RVA: 0x01203F84 File Offset: 0x01202184
+		// Token: 0x0603C998 RID: 248216 RVA: 0x0115E128 File Offset: 0x0115C328
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -55,35 +55,39 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemMonsterGachaItemComponent sceneItemMonsterGachaItemComponent = (SceneItemMonsterGachaItemComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemMonsterGachaItemComponent.Config == null)
 			{
-				if (sceneItemMonsterGachaItemComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MonsterGachaItemComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemMonsterGachaItemComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemMonsterGachaItemComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040255B3 RID: 153011
+		// Token: 0x1700728F RID: 29327
+		// (get) Token: 0x0603C999 RID: 248217 RVA: 0x0115E19E File Offset: 0x0115C39E
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402021A RID: 131610
 		private MonsterGachaItemComponent Config;
 
-		// Token: 0x040255B4 RID: 153012
+		// Token: 0x0402021B RID: 131611
 		private SceneItemActorComponent ActorComp;
 	}
 }

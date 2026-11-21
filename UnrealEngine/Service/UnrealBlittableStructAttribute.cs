@@ -2,16 +2,16 @@
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002B01 RID: 11009
+	// Token: 0x020008B1 RID: 2225
 	[AttributeUsage(AttributeTargets.Struct, Inherited = false)]
 	public class UnrealBlittableStructAttribute : Attribute
 	{
-		// Token: 0x0602849F RID: 165023 RVA: 0x003D4B90 File Offset: 0x003D2D90
+		// Token: 0x0600BE59 RID: 48729 RVA: 0x0012FEEC File Offset: 0x0012E0EC
 		public UnrealBlittableStructAttribute(UnrealReflectionPropertyTypeCode unrealTypeCode = UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)
 		{
 		}
 
-		// Token: 0x040162C1 RID: 90817
+		// Token: 0x040056D9 RID: 22233
 		public UnrealReflectionPropertyTypeCode UnrealTypeCode = unrealTypeCode;
 	}
 }

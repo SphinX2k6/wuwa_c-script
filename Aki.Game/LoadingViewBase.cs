@@ -7,35 +7,35 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.Ui.HotFix;
 using UnrealEngine;
 
-// Token: 0x0200207F RID: 8319
+// Token: 0x02001552 RID: 5458
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class LoadingViewBase : UiTickViewBase
 {
-	// Token: 0x06010619 RID: 67097 RVA: 0x003FEA0C File Offset: 0x003FCC0C
+	// Token: 0x0600DA81 RID: 55937 RVA: 0x0040AE54 File Offset: 0x00409054
 	protected LoadingViewBase(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601061A RID: 67098 RVA: 0x003FEA15 File Offset: 0x003FCC15
+	// Token: 0x0600DA82 RID: 55938 RVA: 0x0040AE5D File Offset: 0x0040905D
 	protected override void OnBeforeCreate()
 	{
 		LoadingModel.Instance.SetIsLoadingView(true);
 	}
 
-	// Token: 0x0601061B RID: 67099 RVA: 0x003FEA22 File Offset: 0x003FCC22
+	// Token: 0x0600DA83 RID: 55939 RVA: 0x0040AE6A File Offset: 0x0040906A
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.LevelSequencePlayerBandStateChange, new Action<bool>(this.HandleLevelSequencePlayerBandStateChange));
 	}
 
-	// Token: 0x0601061C RID: 67100 RVA: 0x003FEA3D File Offset: 0x003FCC3D
+	// Token: 0x0600DA84 RID: 55940 RVA: 0x0040AE85 File Offset: 0x00409085
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LevelSequencePlayerBandStateChange, new Action<bool>(this.HandleLevelSequencePlayerBandStateChange));
 	}
 
-	// Token: 0x0601061D RID: 67101 RVA: 0x003FEA58 File Offset: 0x003FCC58
+	// Token: 0x0600DA85 RID: 55941 RVA: 0x0040AEA0 File Offset: 0x004090A0
 	[NullableContext(2)]
 	public string GetGenderImage(int id)
 	{
@@ -55,7 +55,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		return broadcastImageConfig.Value.ImageF;
 	}
 
-	// Token: 0x0601061E RID: 67102 RVA: 0x003FEAD4 File Offset: 0x003FCCD4
+	// Token: 0x0600DA86 RID: 55942 RVA: 0x0040AF1C File Offset: 0x0040911C
 	private void InitShowData()
 	{
 		this.ShowData = new LoadingShowData();
@@ -76,12 +76,12 @@ public abstract class LoadingViewBase : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601061F RID: 67103 RVA: 0x003FEB4C File Offset: 0x003FCD4C
+	// Token: 0x0600DA87 RID: 55943 RVA: 0x0040AF94 File Offset: 0x00409194
 	protected virtual void UpdateBgUi(string path)
 	{
 	}
 
-	// Token: 0x06010620 RID: 67104 RVA: 0x003FEB50 File Offset: 0x003FCD50
+	// Token: 0x0600DA88 RID: 55944 RVA: 0x0040AF98 File Offset: 0x00409198
 	protected override void OnStart()
 	{
 		HotFixSceneManager.StopHotPatchBgm();
@@ -98,7 +98,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010621 RID: 67105 RVA: 0x003FEBC0 File Offset: 0x003FCDC0
+	// Token: 0x0600DA89 RID: 55945 RVA: 0x0040B008 File Offset: 0x00409208
 	protected void ChangeShowTips()
 	{
 		this.TipTimeElapsed = 0.0;
@@ -112,12 +112,12 @@ public abstract class LoadingViewBase : UiTickViewBase
 		this.UpdateShowTipsUi(nextTip.Value.Title, nextTip.Value.TipsText);
 	}
 
-	// Token: 0x06010622 RID: 67106 RVA: 0x003FEC48 File Offset: 0x003FCE48
+	// Token: 0x0600DA8A RID: 55946 RVA: 0x0040B090 File Offset: 0x00409290
 	protected virtual void UpdateShowTipsUi(string title, string tips)
 	{
 	}
 
-	// Token: 0x06010623 RID: 67107 RVA: 0x003FEC4A File Offset: 0x003FCE4A
+	// Token: 0x0600DA8B RID: 55947 RVA: 0x0040B092 File Offset: 0x00409292
 	protected override void OnAfterShow()
 	{
 		if (this.BackToGameLoadingViewData != null)
@@ -127,7 +127,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		EventSystem.Instance.Emit(EEventName.LoadingViewOnAfterShow);
 	}
 
-	// Token: 0x06010624 RID: 67108 RVA: 0x003FEC70 File Offset: 0x003FCE70
+	// Token: 0x0600DA8C RID: 55948 RVA: 0x0040B0B8 File Offset: 0x004092B8
 	protected override void OnTick(float delta)
 	{
 		float num = delta / (float)TimeUtil.Instance.InverseMillisecond;
@@ -140,7 +140,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010625 RID: 67109 RVA: 0x003FECCC File Offset: 0x003FCECC
+	// Token: 0x0600DA8D RID: 55949 RVA: 0x0040B114 File Offset: 0x00409314
 	private void TickProgress(float delta)
 	{
 		if (this.Closing)
@@ -183,7 +183,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010626 RID: 67110 RVA: 0x003FEDEC File Offset: 0x003FCFEC
+	// Token: 0x0600DA8E RID: 55950 RVA: 0x0040B234 File Offset: 0x00409434
 	private void InitProgress()
 	{
 		float currentProgress = LoadingModel.Instance.CurrentProgress;
@@ -191,7 +191,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		this.UpdateProgress(progressRate, currentProgress);
 	}
 
-	// Token: 0x06010627 RID: 67111 RVA: 0x003FEE14 File Offset: 0x003FD014
+	// Token: 0x0600DA8F RID: 55951 RVA: 0x0040B25C File Offset: 0x0040945C
 	private void UpdateProgress(float progressRate, float progressValue)
 	{
 		BackToGameLoadingViewData backToGameLoadingViewData = this.BackToGameLoadingViewData;
@@ -203,24 +203,24 @@ public abstract class LoadingViewBase : UiTickViewBase
 		this.UpdateProgressValue(progressValue);
 	}
 
-	// Token: 0x06010628 RID: 67112 RVA: 0x003FEE36 File Offset: 0x003FD036
+	// Token: 0x0600DA90 RID: 55952 RVA: 0x0040B27E File Offset: 0x0040947E
 	private void HandleLevelSequencePlayerBandStateChange(bool state)
 	{
 		this.OnLevelSequencePlayerBandStateChange(state);
 	}
 
-	// Token: 0x06010629 RID: 67113 RVA: 0x003FEE3F File Offset: 0x003FD03F
+	// Token: 0x0600DA91 RID: 55953 RVA: 0x0040B287 File Offset: 0x00409487
 	protected virtual void OnLevelSequencePlayerBandStateChange(bool state)
 	{
 	}
 
-	// Token: 0x0601062A RID: 67114
+	// Token: 0x0600DA92 RID: 55954
 	protected abstract void UpdateProgressRate(float rate);
 
-	// Token: 0x0601062B RID: 67115
+	// Token: 0x0600DA93 RID: 55955
 	protected abstract void UpdateProgressValue(float value);
 
-	// Token: 0x0601062C RID: 67116 RVA: 0x003FEE44 File Offset: 0x003FD044
+	// Token: 0x0600DA94 RID: 55956 RVA: 0x0040B28C File Offset: 0x0040948C
 	protected override void OnBeforeDestroyImplement()
 	{
 		LoadingModel instance = LoadingModel.Instance;
@@ -238,7 +238,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601062D RID: 67117 RVA: 0x003FEEC9 File Offset: 0x003FD0C9
+	// Token: 0x0600DA95 RID: 55957 RVA: 0x0040B311 File Offset: 0x00409511
 	protected override void OnAfterDestroy()
 	{
 		BackToGameLoadingViewData backToGameLoadingViewData = this.BackToGameLoadingViewData;
@@ -249,7 +249,7 @@ public abstract class LoadingViewBase : UiTickViewBase
 		backToGameLoadingViewData.Close();
 	}
 
-	// Token: 0x0601062E RID: 67118 RVA: 0x003FEEDC File Offset: 0x003FD0DC
+	// Token: 0x0600DA96 RID: 55958 RVA: 0x0040B324 File Offset: 0x00409524
 	protected virtual void SetTextProgressValue(int textKey, float value, string suffix = "")
 	{
 		double value2 = Math.Round((double)value);
@@ -260,26 +260,26 @@ public abstract class LoadingViewBase : UiTickViewBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0601062F RID: 67119 RVA: 0x003FEF1E File Offset: 0x003FD11E
+	// Token: 0x0600DA97 RID: 55959 RVA: 0x0040B366 File Offset: 0x00409566
 	protected void SetTextureProgressRate(int textureKey, float rate)
 	{
 		base.GetTexture(textureKey).SetFillAmount(rate);
 	}
 
-	// Token: 0x040078FB RID: 30971
+	// Token: 0x040079E4 RID: 31204
 	private double TipTimeElapsed;
 
-	// Token: 0x040078FC RID: 30972
+	// Token: 0x040079E5 RID: 31205
 	private double LoadingTimeElapsed;
 
-	// Token: 0x040078FD RID: 30973
+	// Token: 0x040079E6 RID: 31206
 	[Nullable(2)]
 	protected LoadingShowData ShowData;
 
-	// Token: 0x040078FE RID: 30974
+	// Token: 0x040079E7 RID: 31207
 	private bool Closing;
 
-	// Token: 0x040078FF RID: 30975
+	// Token: 0x040079E8 RID: 31208
 	[Nullable(2)]
 	private BackToGameLoadingViewData BackToGameLoadingViewData;
 }

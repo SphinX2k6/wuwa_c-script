@@ -6,140 +6,131 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction.Customization
 {
-	// Token: 0x02003EBE RID: 16062
+	// Token: 0x0200318A RID: 12682
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/Customization/SQtaCustomizationParam_Progress.SQtaCustomizationParam_Progress")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SQtaCustomizationParam_Progress : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060289E6 RID: 166374 RVA: 0x009B09D9 File Offset: 0x009AEBD9
+		// Token: 0x0601F47D RID: 128125 RVA: 0x0092A467 File Offset: 0x00928667
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SQtaCustomizationParam_Progress._ScriptStructPtr != 0) ? SQtaCustomizationParam_Progress._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/QuickTimeAction/Customization/SQtaCustomizationParam_Progress.SQtaCustomizationParam_Progress", ref SQtaCustomizationParam_Progress._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EBC RID: 24252
-		// (get) Token: 0x060289E7 RID: 166375 RVA: 0x009B09FD File Offset: 0x009AEBFD
-		// (set) Token: 0x060289E8 RID: 166376 RVA: 0x009B0A0D File Offset: 0x009AEC0D
+		// Token: 0x1700386C RID: 14444
+		// (get) Token: 0x0601F47E RID: 128126 RVA: 0x0092A48B File Offset: 0x0092868B
+		// (set) Token: 0x0601F47F RID: 128127 RVA: 0x0092A49B File Offset: 0x0092869B
 		public unsafe float InitProgress
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_InitProgress);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_InitProgress) = value;
 			}
 		}
 
-		// Token: 0x17005EBD RID: 24253
-		// (get) Token: 0x060289E9 RID: 166377 RVA: 0x009B0A1E File Offset: 0x009AEC1E
-		// (set) Token: 0x060289EA RID: 166378 RVA: 0x009B0A2E File Offset: 0x009AEC2E
+		// Token: 0x1700386D RID: 14445
+		// (get) Token: 0x0601F480 RID: 128128 RVA: 0x0092A4AC File Offset: 0x009286AC
+		// (set) Token: 0x0601F481 RID: 128129 RVA: 0x0092A4BC File Offset: 0x009286BC
 		public unsafe float MaxProgress
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_MaxProgress);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_MaxProgress) = value;
 			}
 		}
 
-		// Token: 0x17005EBE RID: 24254
-		// (get) Token: 0x060289EB RID: 166379 RVA: 0x009B0A3F File Offset: 0x009AEC3F
-		// (set) Token: 0x060289EC RID: 166380 RVA: 0x009B0A4F File Offset: 0x009AEC4F
+		// Token: 0x1700386E RID: 14446
+		// (get) Token: 0x0601F482 RID: 128130 RVA: 0x0092A4CD File Offset: 0x009286CD
+		// (set) Token: 0x0601F483 RID: 128131 RVA: 0x0092A4DD File Offset: 0x009286DD
 		public unsafe float AutoSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_AutoSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_AutoSpeed) = value;
 			}
 		}
 
-		// Token: 0x17005EBF RID: 24255
-		// (get) Token: 0x060289ED RID: 166381 RVA: 0x009B0A60 File Offset: 0x009AEC60
-		// (set) Token: 0x060289EE RID: 166382 RVA: 0x009B0A70 File Offset: 0x009AEC70
+		// Token: 0x1700386F RID: 14447
+		// (get) Token: 0x0601F484 RID: 128132 RVA: 0x0092A4EE File Offset: 0x009286EE
+		// (set) Token: 0x0601F485 RID: 128133 RVA: 0x0092A4FE File Offset: 0x009286FE
 		public unsafe float AdditionSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_AdditionSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SQtaCustomizationParam_Progress.__PropertyOffset_AdditionSpeed) = value;
 			}
 		}
 
-		// Token: 0x060289EF RID: 166383 RVA: 0x009B0A81 File Offset: 0x009AEC81
+		// Token: 0x0601F486 RID: 128134 RVA: 0x0092A50F File Offset: 0x0092870F
 		public SQtaCustomizationParam_Progress()
 		{
 		}
 
-		// Token: 0x060289F0 RID: 166384 RVA: 0x009B0A89 File Offset: 0x009AEC89
-		public SQtaCustomizationParam_Progress(float InitProgress, float MaxProgress, float AutoSpeed, float AdditionSpeed)
-		{
-			this.InitProgress = InitProgress;
-			this.MaxProgress = MaxProgress;
-			this.AutoSpeed = AutoSpeed;
-			this.AdditionSpeed = AdditionSpeed;
-		}
-
-		// Token: 0x060289F1 RID: 166385 RVA: 0x009B0AAE File Offset: 0x009AECAE
+		// Token: 0x0601F487 RID: 128135 RVA: 0x0092A517 File Offset: 0x00928717
 		protected override IntPtr GetUStructPtr()
 		{
 			return SQtaCustomizationParam_Progress.StaticStruct();
 		}
 
-		// Token: 0x060289F2 RID: 166386 RVA: 0x009B0ABA File Offset: 0x009AECBA
+		// Token: 0x0601F488 RID: 128136 RVA: 0x0092A523 File Offset: 0x00928723
 		[NullableContext(2)]
 		public SQtaCustomizationParam_Progress(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060289F3 RID: 166387 RVA: 0x009B0AC4 File Offset: 0x009AECC4
+		// Token: 0x0601F489 RID: 128137 RVA: 0x0092A52D File Offset: 0x0092872D
 		public SQtaCustomizationParam_Progress(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060289F4 RID: 166388 RVA: 0x009B0ACF File Offset: 0x009AECCF
+		// Token: 0x0601F48A RID: 128138 RVA: 0x0092A538 File Offset: 0x00928738
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SQtaCustomizationParam_Progress(Pointer, false, true);
 		}
 
-		// Token: 0x060289F5 RID: 166389 RVA: 0x009B0AD9 File Offset: 0x009AECD9
+		// Token: 0x0601F48B RID: 128139 RVA: 0x0092A542 File Offset: 0x00928742
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SQtaCustomizationParam_Progress(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014BB7 RID: 84919
+		// Token: 0x04010BDC RID: 68572
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/QuickTimeAction/Customization/SQtaCustomizationParam_Progress.SQtaCustomizationParam_Progress";
 
-		// Token: 0x04014BB8 RID: 84920
+		// Token: 0x04010BDD RID: 68573
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014BB9 RID: 84921
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010BDE RID: 68574
+		internal static int __PropertyOffset_InitProgress;
 
-		// Token: 0x04014BBA RID: 84922
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010BDF RID: 68575
+		internal static int __PropertyOffset_MaxProgress;
 
-		// Token: 0x04014BBB RID: 84923
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010BE0 RID: 68576
+		internal static int __PropertyOffset_AutoSpeed;
 
-		// Token: 0x04014BBC RID: 84924
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010BE1 RID: 68577
+		internal static int __PropertyOffset_AdditionSpeed;
 	}
 }

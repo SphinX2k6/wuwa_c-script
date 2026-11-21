@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C9F RID: 15519
+	// Token: 0x020040B3 RID: 16563
 	public enum EFlipperSystemVar : byte
 	{
-		// Token: 0x0400B3D2 RID: 46034
+		// Token: 0x0400BD74 RID: 48500
 		LifeRemain
 	}
 }

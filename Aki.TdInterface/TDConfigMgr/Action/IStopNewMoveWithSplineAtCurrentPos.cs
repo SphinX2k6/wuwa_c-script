@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EC3 RID: 7875
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020FC RID: 8444
 	public class IStopNewMoveWithSplineAtCurrentPos : IStopNewMoveWithSplineType
 	{
-		// Token: 0x0600A894 RID: 43156 RVA: 0x0017C96C File Offset: 0x0017AB6C
+		// Token: 0x0600B366 RID: 45926 RVA: 0x00192964 File Offset: 0x00190B64
 		private IStopNewMoveWithSplineAtCurrentPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A895 RID: 43157 RVA: 0x0017C9A4 File Offset: 0x0017ABA4
+		// Token: 0x0600B367 RID: 45927 RVA: 0x0019299C File Offset: 0x00190B9C
 		public static IStopNewMoveWithSplineAtCurrentPos Create([Nullable(2)] IStopNewMoveWithSplineAtCurrentPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A896 RID: 43158 RVA: 0x0017C9B7 File Offset: 0x0017ABB7
+		// Token: 0x0600B368 RID: 45928 RVA: 0x001929AF File Offset: 0x00190BAF
 		public static IStopNewMoveWithSplineAtCurrentPos CreateFromSetValue([Nullable(2)] IStopNewMoveWithSplineAtCurrentPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A897 RID: 43159 RVA: 0x0017C9CA File Offset: 0x0017ABCA
+		// Token: 0x0600B369 RID: 45929 RVA: 0x001929C2 File Offset: 0x00190BC2
 		public new IStopNewMoveWithSplineAtCurrentPos_SetValue ToSetValue()
 		{
 			return new IStopNewMoveWithSplineAtCurrentPos_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700337D RID: 13181
-		// (get) Token: 0x0600A898 RID: 43160 RVA: 0x0017C9DD File Offset: 0x0017ABDD
-		// (set) Token: 0x0600A899 RID: 43161 RVA: 0x0017CA08 File Offset: 0x0017AC08
+		// Token: 0x17003648 RID: 13896
+		// (get) Token: 0x0600B36A RID: 45930 RVA: 0x001929D5 File Offset: 0x00190BD5
+		// (set) Token: 0x0600B36B RID: 45931 RVA: 0x00192A00 File Offset: 0x00190C00
 		public override EStopNewMoveWithSplineType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400646C RID: 25708
+		// Token: 0x04006A5B RID: 27227
 		[Nullable(2)]
 		protected new IStopNewMoveWithSplineAtCurrentPos FbInstance;
 
-		// Token: 0x0400646D RID: 25709
+		// Token: 0x04006A5C RID: 27228
 		[Nullable(2)]
 		protected new IStopNewMoveWithSplineAtCurrentPos_SetValue PocoInterface;
 	}

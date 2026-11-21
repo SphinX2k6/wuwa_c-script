@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200211F RID: 8479
+// Token: 0x020015F7 RID: 5623
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorDriftLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014C5 RID: 5317
-	// (get) Token: 0x06010999 RID: 67993 RVA: 0x0040B83C File Offset: 0x00409A3C
-	// (set) Token: 0x0601099A RID: 67994 RVA: 0x0040B844 File Offset: 0x00409A44
+	// Token: 0x170014F3 RID: 5363
+	// (get) Token: 0x0600DE0C RID: 56844 RVA: 0x00417F84 File Offset: 0x00416184
+	// (set) Token: 0x0600DE0D RID: 56845 RVA: 0x00417F8C File Offset: 0x0041618C
 	public override string event_id { get; set; } = "2002";
 
-	// Token: 0x04007CFA RID: 31994
+	// Token: 0x04007E08 RID: 32264
 	public float i_drift_distance;
 
-	// Token: 0x04007CFB RID: 31995
+	// Token: 0x04007E09 RID: 32265
 	public float i_drift_time;
 }

@@ -10,14 +10,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E36 RID: 11830
+// Token: 0x02002392 RID: 9106
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Component/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Component/TsCharacterDebugComponent.TsCharacterDebugComponent_C")]
 public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700228B RID: 8843
-	// (get) Token: 0x06018EED RID: 102125 RVA: 0x0066D9F0 File Offset: 0x0066BBF0
-	// (set) Token: 0x06018EEE RID: 102126 RVA: 0x0066DA00 File Offset: 0x0066BC00
+	// Token: 0x170022FE RID: 8958
+	// (get) Token: 0x060167BA RID: 92090 RVA: 0x006938E8 File Offset: 0x00691AE8
+	// (set) Token: 0x060167BB RID: 92091 RVA: 0x006938F8 File Offset: 0x00691AF8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxFixSpeed
 	{
@@ -31,9 +31,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x1700228C RID: 8844
-	// (get) Token: 0x06018EEF RID: 102127 RVA: 0x0066DA11 File Offset: 0x0066BC11
-	// (set) Token: 0x06018EF0 RID: 102128 RVA: 0x0066DA21 File Offset: 0x0066BC21
+	// Token: 0x170022FF RID: 8959
+	// (get) Token: 0x060167BC RID: 92092 RVA: 0x00693909 File Offset: 0x00691B09
+	// (set) Token: 0x060167BD RID: 92093 RVA: 0x00693919 File Offset: 0x00691B19
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool StaticInit
 	{
@@ -47,9 +47,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x1700228D RID: 8845
-	// (get) Token: 0x06018EF1 RID: 102129 RVA: 0x0066DA32 File Offset: 0x0066BC32
-	// (set) Token: 0x06018EF2 RID: 102130 RVA: 0x0066DA42 File Offset: 0x0066BC42
+	// Token: 0x17002300 RID: 8960
+	// (get) Token: 0x060167BE RID: 92094 RVA: 0x0069392A File Offset: 0x00691B2A
+	// (set) Token: 0x060167BF RID: 92095 RVA: 0x0069393A File Offset: 0x00691B3A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int StaticAttrId
 	{
@@ -63,9 +63,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x1700228E RID: 8846
-	// (get) Token: 0x06018EF3 RID: 102131 RVA: 0x0066DA53 File Offset: 0x0066BC53
-	// (set) Token: 0x06018EF4 RID: 102132 RVA: 0x0066DA67 File Offset: 0x0066BC67
+	// Token: 0x17002301 RID: 8961
+	// (get) Token: 0x060167C0 RID: 92096 RVA: 0x0069394B File Offset: 0x00691B4B
+	// (set) Token: 0x060167C1 RID: 92097 RVA: 0x0069395F File Offset: 0x00691B5F
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string StaticAiId
@@ -82,9 +82,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x1700228F RID: 8847
-	// (get) Token: 0x06018EF5 RID: 102133 RVA: 0x0066DA7C File Offset: 0x0066BC7C
-	// (set) Token: 0x06018EF6 RID: 102134 RVA: 0x0066DA8C File Offset: 0x0066BC8C
+	// Token: 0x17002302 RID: 8962
+	// (get) Token: 0x060167C2 RID: 92098 RVA: 0x00693974 File Offset: 0x00691B74
+	// (set) Token: 0x060167C3 RID: 92099 RVA: 0x00693984 File Offset: 0x00691B84
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe long DebugCreatureId
 	{
@@ -98,9 +98,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x17002290 RID: 8848
-	// (get) Token: 0x06018EF7 RID: 102135 RVA: 0x0066DA9D File Offset: 0x0066BC9D
-	// (set) Token: 0x06018EF8 RID: 102136 RVA: 0x0066DAAD File Offset: 0x0066BCAD
+	// Token: 0x17002303 RID: 8963
+	// (get) Token: 0x060167C4 RID: 92100 RVA: 0x00693995 File Offset: 0x00691B95
+	// (set) Token: 0x060167C5 RID: 92101 RVA: 0x006939A5 File Offset: 0x00691BA5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int DebugEntityId
 	{
@@ -114,9 +114,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x17002291 RID: 8849
-	// (get) Token: 0x06018EF9 RID: 102137 RVA: 0x0066DABE File Offset: 0x0066BCBE
-	// (set) Token: 0x06018EFA RID: 102138 RVA: 0x0066DACE File Offset: 0x0066BCCE
+	// Token: 0x17002304 RID: 8964
+	// (get) Token: 0x060167C6 RID: 92102 RVA: 0x006939B6 File Offset: 0x00691BB6
+	// (set) Token: 0x060167C7 RID: 92103 RVA: 0x006939C6 File Offset: 0x00691BC6
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe float TestRiseSpeed
 	{
@@ -130,9 +130,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x17002292 RID: 8850
-	// (get) Token: 0x06018EFB RID: 102139 RVA: 0x0066DADF File Offset: 0x0066BCDF
-	// (set) Token: 0x06018EFC RID: 102140 RVA: 0x0066DAEF File Offset: 0x0066BCEF
+	// Token: 0x17002305 RID: 8965
+	// (get) Token: 0x060167C8 RID: 92104 RVA: 0x006939D7 File Offset: 0x00691BD7
+	// (set) Token: 0x060167C9 RID: 92105 RVA: 0x006939E7 File Offset: 0x00691BE7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int DebugInteractCount
 	{
@@ -146,9 +146,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x17002293 RID: 8851
-	// (get) Token: 0x06018EFD RID: 102141 RVA: 0x0066DB00 File Offset: 0x0066BD00
-	// (set) Token: 0x06018EFE RID: 102142 RVA: 0x0066DB14 File Offset: 0x0066BD14
+	// Token: 0x17002306 RID: 8966
+	// (get) Token: 0x060167CA RID: 92106 RVA: 0x006939F8 File Offset: 0x00691BF8
+	// (set) Token: 0x060167CB RID: 92107 RVA: 0x00693A0C File Offset: 0x00691C0C
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UBehaviorTree BehaviorTree
@@ -165,9 +165,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x17002294 RID: 8852
-	// (get) Token: 0x06018EFF RID: 102143 RVA: 0x0066DB29 File Offset: 0x0066BD29
-	// (set) Token: 0x06018F00 RID: 102144 RVA: 0x0066DB3D File Offset: 0x0066BD3D
+	// Token: 0x17002307 RID: 8967
+	// (get) Token: 0x060167CC RID: 92108 RVA: 0x00693A21 File Offset: 0x00691C21
+	// (set) Token: 0x060167CD RID: 92109 RVA: 0x00693A35 File Offset: 0x00691C35
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor PatrolSpline
@@ -184,9 +184,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x17002295 RID: 8853
-	// (get) Token: 0x06018F01 RID: 102145 RVA: 0x0066DB52 File Offset: 0x0066BD52
-	// (set) Token: 0x06018F02 RID: 102146 RVA: 0x0066DB66 File Offset: 0x0066BD66
+	// Token: 0x17002308 RID: 8968
+	// (get) Token: 0x060167CE RID: 92110 RVA: 0x00693A4A File Offset: 0x00691C4A
+	// (set) Token: 0x060167CF RID: 92111 RVA: 0x00693A5E File Offset: 0x00691C5E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EDrawDebugTrace> EnterClimbTrace
 	{
@@ -200,60 +200,51 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F03 RID: 102147 RVA: 0x0066DB7B File Offset: 0x0066BD7B
+	// Token: 0x060167D0 RID: 92112 RVA: 0x00693A73 File Offset: 0x00691C73
 	public void Destroy()
 	{
 		this.BaseChar = null;
 	}
 
-	// Token: 0x06018F04 RID: 102148 RVA: 0x0066DB84 File Offset: 0x0066BD84
+	// Token: 0x060167D1 RID: 92113 RVA: 0x00693A7C File Offset: 0x00691C7C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMovementDebug(bool newDebug)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMovementDebug"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsCharacterDebugComponent.__SetMovementDebug_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMovementDebug"), TsCharacterDebugComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsCharacterDebugComponent.__SetMovementDebug_FunctionParams*)ptr + 15L / (long)sizeof(TsCharacterDebugComponent.__SetMovementDebug_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->newDebug = newDebug;
+			this.SetMovementDebug_Implementation(newDebug);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsCharacterDebugComponent.__SetMovementDebug_FunctionParams* ptr = stackalloc TsCharacterDebugComponent.__SetMovementDebug_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsCharacterDebugComponent.__SetMovementDebug_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->newDebug = newDebug;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06018F05 RID: 102149 RVA: 0x0066DBFA File Offset: 0x0066BDFA
+	// Token: 0x060167D2 RID: 92114 RVA: 0x00693B08 File Offset: 0x00691D08
 	protected void SetMovementDebug_Implementation(bool newDebug)
 	{
 		this.BaseChar.CharacterActorComponent.Entity.GetComponent<ActorDebugMovementComponent>().SetDebug(newDebug);
 	}
 
-	// Token: 0x06018F06 RID: 102150 RVA: 0x0066DC18 File Offset: 0x0066BE18
+	// Token: 0x060167D3 RID: 92115 RVA: 0x00693B28 File Offset: 0x00691D28
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeEnterClimbTrace()
+	public virtual void ChangeEnterClimbTrace()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeEnterClimbTrace"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeEnterClimbTrace"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeEnterClimbTrace_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F07 RID: 102151 RVA: 0x0066DC88 File Offset: 0x0066BE88
+	// Token: 0x060167D4 RID: 92116 RVA: 0x00693B84 File Offset: 0x00691D84
 	protected void ChangeEnterClimbTrace_Implementation()
 	{
 		EDrawDebugTrace edrawDebugTrace = this.EnterClimbTrace;
@@ -275,9 +266,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		this.BaseChar.CharacterActorComponent.Entity.GetComponent<CharacterClimbComponent>().UpdateClimbDebug();
 	}
 
-	// Token: 0x17002296 RID: 8854
-	// (get) Token: 0x06018F08 RID: 102152 RVA: 0x0066DCEC File Offset: 0x0066BEEC
-	// (set) Token: 0x06018F09 RID: 102153 RVA: 0x0066DD00 File Offset: 0x0066BF00
+	// Token: 0x17002309 RID: 8969
+	// (get) Token: 0x060167D5 RID: 92117 RVA: 0x00693BE8 File Offset: 0x00691DE8
+	// (set) Token: 0x060167D6 RID: 92118 RVA: 0x00693BFC File Offset: 0x00691DFC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EDrawDebugTrace> VaultClimbTrace
 	{
@@ -291,27 +282,21 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F0A RID: 102154 RVA: 0x0066DD18 File Offset: 0x0066BF18
+	// Token: 0x060167D7 RID: 92119 RVA: 0x00693C14 File Offset: 0x00691E14
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeVaultClimbTrace()
+	public virtual void ChangeVaultClimbTrace()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeVaultClimbTrace"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeVaultClimbTrace"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeVaultClimbTrace_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F0B RID: 102155 RVA: 0x0066DD88 File Offset: 0x0066BF88
+	// Token: 0x060167D8 RID: 92120 RVA: 0x00693C70 File Offset: 0x00691E70
 	protected void ChangeVaultClimbTrace_Implementation()
 	{
 		EDrawDebugTrace edrawDebugTrace = this.VaultClimbTrace;
@@ -333,9 +318,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		this.BaseChar.CharacterActorComponent.Entity.GetComponent<CharacterClimbComponent>().UpdateClimbDebug();
 	}
 
-	// Token: 0x17002297 RID: 8855
-	// (get) Token: 0x06018F0C RID: 102156 RVA: 0x0066DDEC File Offset: 0x0066BFEC
-	// (set) Token: 0x06018F0D RID: 102157 RVA: 0x0066DE00 File Offset: 0x0066C000
+	// Token: 0x1700230A RID: 8970
+	// (get) Token: 0x060167D9 RID: 92121 RVA: 0x00693CD4 File Offset: 0x00691ED4
+	// (set) Token: 0x060167DA RID: 92122 RVA: 0x00693CE8 File Offset: 0x00691EE8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EDrawDebugTrace> UpArriveClimbTrace
 	{
@@ -349,27 +334,21 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F0E RID: 102158 RVA: 0x0066DE18 File Offset: 0x0066C018
+	// Token: 0x060167DB RID: 92123 RVA: 0x00693D00 File Offset: 0x00691F00
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeUpArriveClimbTrace()
+	public virtual void ChangeUpArriveClimbTrace()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeUpArriveClimbTrace"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeUpArriveClimbTrace"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeUpArriveClimbTrace_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F0F RID: 102159 RVA: 0x0066DE88 File Offset: 0x0066C088
+	// Token: 0x060167DC RID: 92124 RVA: 0x00693D5C File Offset: 0x00691F5C
 	protected void ChangeUpArriveClimbTrace_Implementation()
 	{
 		EDrawDebugTrace edrawDebugTrace = this.UpArriveClimbTrace;
@@ -391,9 +370,9 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		this.BaseChar.CharacterActorComponent.Entity.GetComponent<CharacterClimbComponent>().UpdateClimbDebug();
 	}
 
-	// Token: 0x17002298 RID: 8856
-	// (get) Token: 0x06018F10 RID: 102160 RVA: 0x0066DEEC File Offset: 0x0066C0EC
-	// (set) Token: 0x06018F11 RID: 102161 RVA: 0x0066DF00 File Offset: 0x0066C100
+	// Token: 0x1700230B RID: 8971
+	// (get) Token: 0x060167DD RID: 92125 RVA: 0x00693DC0 File Offset: 0x00691FC0
+	// (set) Token: 0x060167DE RID: 92126 RVA: 0x00693DD4 File Offset: 0x00691FD4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EDrawDebugTrace> ClimbingTrace
 	{
@@ -407,27 +386,21 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F12 RID: 102162 RVA: 0x0066DF18 File Offset: 0x0066C118
+	// Token: 0x060167DF RID: 92127 RVA: 0x00693DEC File Offset: 0x00691FEC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeClimbingTrace()
+	public virtual void ChangeClimbingTrace()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeClimbingTrace"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeClimbingTrace"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeClimbingTrace_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F13 RID: 102163 RVA: 0x0066DF88 File Offset: 0x0066C188
+	// Token: 0x060167E0 RID: 92128 RVA: 0x00693E48 File Offset: 0x00692048
 	protected void ChangeClimbingTrace_Implementation()
 	{
 		if (this.ClimbingTrace == EDrawDebugTrace.None)
@@ -441,54 +414,42 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		this.BaseChar.CharacterActorComponent.Entity.GetComponent<CharacterClimbComponent>().UpdateClimbDebug();
 	}
 
-	// Token: 0x06018F14 RID: 102164 RVA: 0x0066DFD8 File Offset: 0x0066C1D8
+	// Token: 0x060167E1 RID: 92129 RVA: 0x00693E98 File Offset: 0x00692098
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeNoTop()
+	public virtual void ChangeNoTop()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeNoTop"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeNoTop"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeNoTop_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F15 RID: 102165 RVA: 0x0066E048 File Offset: 0x0066C248
+	// Token: 0x060167E2 RID: 92130 RVA: 0x00693EF1 File Offset: 0x006920F1
 	protected void ChangeNoTop_Implementation()
 	{
 		this.NoTop = !this.NoTop;
 		this.BaseChar.CharacterActorComponent.Entity.GetComponent<CharacterClimbComponent>().UpdateClimbDebug();
 	}
 
-	// Token: 0x06018F16 RID: 102166 RVA: 0x0066E074 File Offset: 0x0066C274
+	// Token: 0x060167E3 RID: 92131 RVA: 0x00693F1C File Offset: 0x0069211C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F17 RID: 102167 RVA: 0x0066E0E4 File Offset: 0x0066C2E4
+	// Token: 0x060167E4 RID: 92132 RVA: 0x00693F78 File Offset: 0x00692178
 	protected virtual void ReceiveBeginPlay_Implementation()
 	{
 		AActor owner = base.GetOwner();
@@ -502,55 +463,49 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		base.SetComponentTickEnabled(this.DebugRiseModeOn);
 	}
 
-	// Token: 0x06018F18 RID: 102168 RVA: 0x0066E138 File Offset: 0x0066C338
+	// Token: 0x060167E5 RID: 92133 RVA: 0x00693FCC File Offset: 0x006921CC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UActorComponent.__ReceiveTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTick"), TsCharacterDebugComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UActorComponent.__ReceiveTick_FunctionParams*)ptr + 15L / (long)sizeof(UActorComponent.__ReceiveTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UActorComponent.__ReceiveTick_FunctionParams* ptr = stackalloc UActorComponent.__ReceiveTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UActorComponent.__ReceiveTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06018F19 RID: 102169 RVA: 0x0066E1AE File Offset: 0x0066C3AE
+	// Token: 0x060167E6 RID: 92134 RVA: 0x00694058 File Offset: 0x00692258
 	protected virtual void ReceiveTick_Implementation(float deltaSeconds)
 	{
 		this.DebugRising(deltaSeconds);
 	}
 
-	// Token: 0x06018F1A RID: 102170 RVA: 0x0066E1B8 File Offset: 0x0066C3B8
+	// Token: 0x060167E7 RID: 92135 RVA: 0x00694064 File Offset: 0x00692264
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ActivateDebugSpeed(bool activate)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ActivateDebugSpeed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ActivateDebugSpeed"), TsCharacterDebugComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams*)ptr + 15L / (long)sizeof(TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->activate = activate;
+			this.ActivateDebugSpeed_Implementation(activate);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams* ptr = stackalloc TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->activate = activate;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06018F1B RID: 102171 RVA: 0x0066E230 File Offset: 0x0066C430
+	// Token: 0x060167E8 RID: 92136 RVA: 0x006940F0 File Offset: 0x006922F0
 	protected void ActivateDebugSpeed_Implementation(bool activate)
 	{
 		if (activate)
@@ -572,7 +527,7 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F1C RID: 102172 RVA: 0x0066E29C File Offset: 0x0066C49C
+	// Token: 0x060167E9 RID: 92137 RVA: 0x0069415C File Offset: 0x0069235C
 	protected void DebugRising(float deltaSeconds)
 	{
 		if (this.DebugRiseModeOn)
@@ -584,27 +539,21 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F1D RID: 102173 RVA: 0x0066E31C File Offset: 0x0066C51C
+	// Token: 0x060167EA RID: 92138 RVA: 0x006941DC File Offset: 0x006923DC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DebugDrawActivateArea()
+	public virtual void DebugDrawActivateArea()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DebugDrawActivateArea"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DebugDrawActivateArea"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DebugDrawActivateArea_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F1E RID: 102174 RVA: 0x0066E38C File Offset: 0x0066C58C
+	// Token: 0x060167EB RID: 92139 RVA: 0x00694238 File Offset: 0x00692438
 	protected void DebugDrawActivateArea_Implementation()
 	{
 		FVectorDouble actorLocation = this.BaseChar.CharacterActorComponent.ActorLocation;
@@ -614,28 +563,25 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		UKismetSystemLibrary.D_DrawDebugCylinder(this, actorLocation, end, 5000f, 12, null, 0f, 0f);
 	}
 
-	// Token: 0x06018F1F RID: 102175 RVA: 0x0066E3F0 File Offset: 0x0066C5F0
+	// Token: 0x060167EC RID: 92140 RVA: 0x0069429C File Offset: 0x0069249C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDebugRiseEnable(bool enable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDebugRiseEnable"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDebugRiseEnable"), TsCharacterDebugComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams*)ptr + 15L / (long)sizeof(TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->enable = enable;
+			this.SetDebugRiseEnable_Implementation(enable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams* ptr = stackalloc TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->enable = enable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06018F20 RID: 102176 RVA: 0x0066E466 File Offset: 0x0066C666
+	// Token: 0x060167ED RID: 92141 RVA: 0x00694328 File Offset: 0x00692528
 	protected void SetDebugRiseEnable_Implementation(bool enable)
 	{
 		if (this.DebugRiseModeOn == enable)
@@ -646,13 +592,13 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		base.SetComponentTickEnabled(enable);
 	}
 
-	// Token: 0x06018F21 RID: 102177 RVA: 0x0066E480 File Offset: 0x0066C680
+	// Token: 0x060167EE RID: 92142 RVA: 0x00694342 File Offset: 0x00692542
 	public void SaveDebugPatrolPoint(FVector point)
 	{
 		this.SaveDebugPatrolPoint(Vector.Create(point));
 	}
 
-	// Token: 0x06018F22 RID: 102178 RVA: 0x0066E493 File Offset: 0x0066C693
+	// Token: 0x060167EF RID: 92143 RVA: 0x00694355 File Offset: 0x00692555
 	[NullableContext(1)]
 	public void SaveDebugPatrolPoint(Vector point)
 	{
@@ -663,7 +609,7 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		this.DebugPatrolPoints.Add(point);
 	}
 
-	// Token: 0x06018F23 RID: 102179 RVA: 0x0066E4B4 File Offset: 0x0066C6B4
+	// Token: 0x060167F0 RID: 92144 RVA: 0x00694376 File Offset: 0x00692576
 	public void ClearDebugPatrolPoints()
 	{
 		List<Vector> debugPatrolPoints = this.DebugPatrolPoints;
@@ -674,27 +620,21 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		debugPatrolPoints.Clear();
 	}
 
-	// Token: 0x06018F24 RID: 102180 RVA: 0x0066E4C8 File Offset: 0x0066C6C8
+	// Token: 0x060167F1 RID: 92145 RVA: 0x00694388 File Offset: 0x00692588
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DrawDebugPatrolPoints()
+	public virtual void DrawDebugPatrolPoints()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DrawDebugPatrolPoints"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DrawDebugPatrolPoints"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DrawDebugPatrolPoints_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F25 RID: 102181 RVA: 0x0066E538 File Offset: 0x0066C738
+	// Token: 0x060167F2 RID: 92146 RVA: 0x006943E4 File Offset: 0x006925E4
 	protected void DrawDebugPatrolPoints_Implementation()
 	{
 		if (this.DebugPatrolPoints == null || this.DebugPatrolPoints.Count == 0)
@@ -716,7 +656,7 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F26 RID: 102182 RVA: 0x0066E61C File Offset: 0x0066C81C
+	// Token: 0x060167F3 RID: 92147 RVA: 0x006944C8 File Offset: 0x006926C8
 	[NullableContext(1)]
 	public void SaveErrorNavigationPath(Vector start, Vector end, FVector[] results)
 	{
@@ -737,27 +677,21 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		this.DebugNavigationErrorPaths.Add(navigationErrorData);
 	}
 
-	// Token: 0x06018F27 RID: 102183 RVA: 0x0066E6B8 File Offset: 0x0066C8B8
+	// Token: 0x060167F4 RID: 92148 RVA: 0x00694564 File Offset: 0x00692764
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DrawErrorNavigationPaths()
+	public virtual void DrawErrorNavigationPaths()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DrawErrorNavigationPaths"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterDebugComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DrawErrorNavigationPaths"), TsCharacterDebugComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DrawErrorNavigationPaths_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06018F28 RID: 102184 RVA: 0x0066E728 File Offset: 0x0066C928
+	// Token: 0x060167F5 RID: 92149 RVA: 0x006945C0 File Offset: 0x006927C0
 	protected void DrawErrorNavigationPaths_Implementation()
 	{
 		if (this.DebugNavigationErrorPaths == null)
@@ -780,7 +714,7 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018F29 RID: 102185 RVA: 0x0066E80D File Offset: 0x0066CA0D
+	// Token: 0x060167F6 RID: 92150 RVA: 0x006946A5 File Offset: 0x006928A5
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsCharacterDebugComponent._ClassPtr == IntPtr.Zero)
@@ -790,122 +724,122 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 		return TsCharacterDebugComponent._ClassPtr;
 	}
 
-	// Token: 0x06018F2A RID: 102186 RVA: 0x0066E834 File Offset: 0x0066CA34
+	// Token: 0x060167F7 RID: 92151 RVA: 0x006946CC File Offset: 0x006928CC
 	public TsCharacterDebugComponent() : this(BuiltinUtils.AllocNativeUObject(TsCharacterDebugComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018F2B RID: 102187 RVA: 0x0066E85C File Offset: 0x0066CA5C
+	// Token: 0x060167F8 RID: 92152 RVA: 0x006946F4 File Offset: 0x006928F4
 	[NullableContext(1)]
 	public TsCharacterDebugComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsCharacterDebugComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018F2C RID: 102188 RVA: 0x0066E88F File Offset: 0x0066CA8F
+	// Token: 0x060167F9 RID: 92153 RVA: 0x00694727 File Offset: 0x00692927
 	protected TsCharacterDebugComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06018F2D RID: 102189 RVA: 0x0066E898 File Offset: 0x0066CA98
+	// Token: 0x060167FA RID: 92154 RVA: 0x00694730 File Offset: 0x00692930
 	protected unsafe virtual void __CPPCALL_SetMovementDebug_Implementation(TsCharacterDebugComponent.__SetMovementDebug_FunctionParams* __Params)
 	{
 		this.SetMovementDebug_Implementation(__Params->newDebug);
 	}
 
-	// Token: 0x06018F2E RID: 102190 RVA: 0x0066E8A6 File Offset: 0x0066CAA6
+	// Token: 0x060167FB RID: 92155 RVA: 0x0069473E File Offset: 0x0069293E
 	protected virtual void __CPPCALL_ChangeEnterClimbTrace_Implementation()
 	{
 		this.ChangeEnterClimbTrace_Implementation();
 	}
 
-	// Token: 0x06018F2F RID: 102191 RVA: 0x0066E8AE File Offset: 0x0066CAAE
+	// Token: 0x060167FC RID: 92156 RVA: 0x00694746 File Offset: 0x00692946
 	protected virtual void __CPPCALL_ChangeVaultClimbTrace_Implementation()
 	{
 		this.ChangeVaultClimbTrace_Implementation();
 	}
 
-	// Token: 0x06018F30 RID: 102192 RVA: 0x0066E8B6 File Offset: 0x0066CAB6
+	// Token: 0x060167FD RID: 92157 RVA: 0x0069474E File Offset: 0x0069294E
 	protected virtual void __CPPCALL_ChangeUpArriveClimbTrace_Implementation()
 	{
 		this.ChangeUpArriveClimbTrace_Implementation();
 	}
 
-	// Token: 0x06018F31 RID: 102193 RVA: 0x0066E8BE File Offset: 0x0066CABE
+	// Token: 0x060167FE RID: 92158 RVA: 0x00694756 File Offset: 0x00692956
 	protected virtual void __CPPCALL_ChangeClimbingTrace_Implementation()
 	{
 		this.ChangeClimbingTrace_Implementation();
 	}
 
-	// Token: 0x06018F32 RID: 102194 RVA: 0x0066E8C6 File Offset: 0x0066CAC6
+	// Token: 0x060167FF RID: 92159 RVA: 0x0069475E File Offset: 0x0069295E
 	protected virtual void __CPPCALL_ChangeNoTop_Implementation()
 	{
 		this.ChangeNoTop_Implementation();
 	}
 
-	// Token: 0x06018F33 RID: 102195 RVA: 0x0066E8CE File Offset: 0x0066CACE
+	// Token: 0x06016800 RID: 92160 RVA: 0x00694766 File Offset: 0x00692966
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x06018F34 RID: 102196 RVA: 0x0066E8D6 File Offset: 0x0066CAD6
+	// Token: 0x06016801 RID: 92161 RVA: 0x0069476E File Offset: 0x0069296E
 	protected unsafe virtual void __CPPCALL_ReceiveTick_Implementation(UActorComponent.__ReceiveTick_FunctionParams* __Params)
 	{
 		this.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x06018F35 RID: 102197 RVA: 0x0066E8E4 File Offset: 0x0066CAE4
+	// Token: 0x06016802 RID: 92162 RVA: 0x0069477C File Offset: 0x0069297C
 	protected unsafe virtual void __CPPCALL_ActivateDebugSpeed_Implementation(TsCharacterDebugComponent.__ActivateDebugSpeed_FunctionParams* __Params)
 	{
 		this.ActivateDebugSpeed_Implementation(__Params->activate);
 	}
 
-	// Token: 0x06018F36 RID: 102198 RVA: 0x0066E8F2 File Offset: 0x0066CAF2
+	// Token: 0x06016803 RID: 92163 RVA: 0x0069478A File Offset: 0x0069298A
 	protected virtual void __CPPCALL_DebugDrawActivateArea_Implementation()
 	{
 		this.DebugDrawActivateArea_Implementation();
 	}
 
-	// Token: 0x06018F37 RID: 102199 RVA: 0x0066E8FA File Offset: 0x0066CAFA
+	// Token: 0x06016804 RID: 92164 RVA: 0x00694792 File Offset: 0x00692992
 	protected unsafe virtual void __CPPCALL_SetDebugRiseEnable_Implementation(TsCharacterDebugComponent.__SetDebugRiseEnable_FunctionParams* __Params)
 	{
 		this.SetDebugRiseEnable_Implementation(__Params->enable);
 	}
 
-	// Token: 0x06018F38 RID: 102200 RVA: 0x0066E908 File Offset: 0x0066CB08
+	// Token: 0x06016805 RID: 92165 RVA: 0x006947A0 File Offset: 0x006929A0
 	protected virtual void __CPPCALL_DrawDebugPatrolPoints_Implementation()
 	{
 		this.DrawDebugPatrolPoints_Implementation();
 	}
 
-	// Token: 0x06018F39 RID: 102201 RVA: 0x0066E910 File Offset: 0x0066CB10
+	// Token: 0x06016806 RID: 92166 RVA: 0x006947A8 File Offset: 0x006929A8
 	protected virtual void __CPPCALL_DrawErrorNavigationPaths_Implementation()
 	{
 		this.DrawErrorNavigationPaths_Implementation();
 	}
 
-	// Token: 0x0400BB0A RID: 47882
+	// Token: 0x0400BE98 RID: 48792
 	private const int JUMPED_TURN_SPEED_THREADHOLD = 100;
 
-	// Token: 0x0400BB0B RID: 47883
+	// Token: 0x0400BE99 RID: 48793
 	private const int ACTIVE_DISTANCE = 5000;
 
-	// Token: 0x0400BB0C RID: 47884
+	// Token: 0x0400BE9A RID: 48794
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static Vector tmpVector = Vector.Create();
 
-	// Token: 0x0400BB0D RID: 47885
+	// Token: 0x0400BE9B RID: 48795
 	[Nullable(2)]
 	public TsBaseCharacter BaseChar;
 
-	// Token: 0x0400BB0E RID: 47886
+	// Token: 0x0400BE9C RID: 48796
 	protected float OriginWalkableAngle;
 
-	// Token: 0x0400BB0F RID: 47887
+	// Token: 0x0400BE9D RID: 48797
 	private bool DebugRiseModeOn;
 
-	// Token: 0x0400BB10 RID: 47888
+	// Token: 0x0400BE9E RID: 48798
 	[Nullable(new byte[]
 	{
 		2,
@@ -913,7 +847,7 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 	})]
 	private List<Vector> DebugPatrolPoints;
 
-	// Token: 0x0400BB11 RID: 47889
+	// Token: 0x0400BE9F RID: 48799
 	[Nullable(new byte[]
 	{
 		2,
@@ -921,102 +855,102 @@ public class TsCharacterDebugComponent : UActorComponent, IUnrealUObject, IUnrea
 	})]
 	private List<TsCharacterDebugComponent.NavigationErrorData> DebugNavigationErrorPaths;
 
-	// Token: 0x0400BB12 RID: 47890
+	// Token: 0x0400BEA0 RID: 48800
 	public bool NoTop;
 
-	// Token: 0x0400BB13 RID: 47891
+	// Token: 0x0400BEA1 RID: 48801
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Component/TsCharacterDebugComponent.TsCharacterDebugComponent_C";
 
-	// Token: 0x0400BB14 RID: 47892
+	// Token: 0x0400BEA2 RID: 48802
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400BB15 RID: 47893
+	// Token: 0x0400BEA3 RID: 48803
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400BB16 RID: 47894
+	// Token: 0x0400BEA4 RID: 48804
 	private static int __PropertyOffset_MaxFixSpeed;
 
-	// Token: 0x0400BB17 RID: 47895
+	// Token: 0x0400BEA5 RID: 48805
 	private static int __PropertyOffset_StaticInit;
 
-	// Token: 0x0400BB18 RID: 47896
+	// Token: 0x0400BEA6 RID: 48806
 	private static int __PropertyOffset_StaticAttrId;
 
-	// Token: 0x0400BB19 RID: 47897
+	// Token: 0x0400BEA7 RID: 48807
 	private static int __PropertyOffset_StaticAiId;
 
-	// Token: 0x0400BB1A RID: 47898
+	// Token: 0x0400BEA8 RID: 48808
 	private static int __PropertyOffset_DebugCreatureId;
 
-	// Token: 0x0400BB1B RID: 47899
+	// Token: 0x0400BEA9 RID: 48809
 	private static int __PropertyOffset_DebugEntityId;
 
-	// Token: 0x0400BB1C RID: 47900
+	// Token: 0x0400BEAA RID: 48810
 	private static int __PropertyOffset_TestRiseSpeed;
 
-	// Token: 0x0400BB1D RID: 47901
+	// Token: 0x0400BEAB RID: 48811
 	private static int __PropertyOffset_DebugInteractCount;
 
-	// Token: 0x0400BB1E RID: 47902
+	// Token: 0x0400BEAC RID: 48812
 	private static int __PropertyOffset_BehaviorTree;
 
-	// Token: 0x0400BB1F RID: 47903
+	// Token: 0x0400BEAD RID: 48813
 	private static int __PropertyOffset_PatrolSpline;
 
-	// Token: 0x0400BB20 RID: 47904
+	// Token: 0x0400BEAE RID: 48814
 	private static int __PropertyOffset_EnterClimbTrace;
 
-	// Token: 0x0400BB21 RID: 47905
+	// Token: 0x0400BEAF RID: 48815
 	private static int __PropertyOffset_VaultClimbTrace;
 
-	// Token: 0x0400BB22 RID: 47906
+	// Token: 0x0400BEB0 RID: 48816
 	private static int __PropertyOffset_UpArriveClimbTrace;
 
-	// Token: 0x0400BB23 RID: 47907
+	// Token: 0x0400BEB1 RID: 48817
 	private static int __PropertyOffset_ClimbingTrace;
 
-	// Token: 0x02009355 RID: 37717
+	// Token: 0x0200857B RID: 34171
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NavigationErrorData
 	{
-		// Token: 0x0402F956 RID: 194902
+		// Token: 0x0402AFDC RID: 176092
 		public Vector Start;
 
-		// Token: 0x0402F957 RID: 194903
+		// Token: 0x0402AFDD RID: 176093
 		public Vector End;
 
-		// Token: 0x0402F958 RID: 194904
+		// Token: 0x0402AFDE RID: 176094
 		public List<FVectorDouble> Results;
 	}
 
-	// Token: 0x02009356 RID: 37718
+	// Token: 0x0200857C RID: 34172
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetMovementDebug_FunctionParams
 	{
-		// Token: 0x0402F959 RID: 194905
+		// Token: 0x0402AFDF RID: 176095
 		[FieldOffset(0)]
 		public bool newDebug;
 	}
 
-	// Token: 0x02009357 RID: 37719
+	// Token: 0x0200857D RID: 34173
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __ActivateDebugSpeed_FunctionParams
 	{
-		// Token: 0x0402F95A RID: 194906
+		// Token: 0x0402AFE0 RID: 176096
 		[FieldOffset(0)]
 		public bool activate;
 	}
 
-	// Token: 0x02009358 RID: 37720
+	// Token: 0x0200857E RID: 34174
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetDebugRiseEnable_FunctionParams
 	{
-		// Token: 0x0402F95B RID: 194907
+		// Token: 0x0402AFE1 RID: 176097
 		[FieldOffset(0)]
 		public bool enable;
 	}

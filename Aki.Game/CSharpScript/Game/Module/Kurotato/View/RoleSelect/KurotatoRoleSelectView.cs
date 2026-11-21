@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 {
-	// Token: 0x02005735 RID: 22325
+	// Token: 0x0200470C RID: 18188
 	public class KurotatoRoleSelectView : UiViewBase
 	{
-		// Token: 0x06038C1E RID: 232478 RVA: 0x00D7942B File Offset: 0x00D7762B
+		// Token: 0x0602DB2E RID: 187182 RVA: 0x00CC7ADB File Offset: 0x00CC5CDB
 		[NullableContext(1)]
 		public KurotatoRoleSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038C1F RID: 232479 RVA: 0x00D79434 File Offset: 0x00D77634
+		// Token: 0x0602DB2F RID: 187183 RVA: 0x00CC7AE4 File Offset: 0x00CC5CE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038C20 RID: 232480 RVA: 0x00D794A0 File Offset: 0x00D776A0
+		// Token: 0x0602DB30 RID: 187184 RVA: 0x00CC7B50 File Offset: 0x00CC5D50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoRoleSelectView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -43,32 +43,32 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C21 RID: 232481 RVA: 0x00D794E3 File Offset: 0x00D776E3
+		// Token: 0x0602DB31 RID: 187185 RVA: 0x00CC7B93 File Offset: 0x00CC5D93
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038C22 RID: 232482 RVA: 0x00D794EC File Offset: 0x00D776EC
+		// Token: 0x0602DB32 RID: 187186 RVA: 0x00CC7B9C File Offset: 0x00CC5D9C
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(574);
 		}
 
-		// Token: 0x0401DC6E RID: 121966
+		// Token: 0x04018704 RID: 100100
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DC6F RID: 121967
+		// Token: 0x04018705 RID: 100101
 		[Nullable(2)]
 		private KurotatoRoleSelectPanel RoleSelectPanel;
 
-		// Token: 0x0200B90C RID: 47372
+		// Token: 0x0200A32D RID: 41773
 		private enum EComponent
 		{
-			// Token: 0x04037F84 RID: 229252
+			// Token: 0x04032994 RID: 207252
 			ItemCaption,
-			// Token: 0x04037F85 RID: 229253
+			// Token: 0x04032995 RID: 207253
 			ItemContent
 		}
 	}

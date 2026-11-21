@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200508B RID: 20619
+	// Token: 0x0200405B RID: 16475
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotTextAudioComponent
 	{
-		// Token: 0x06034D17 RID: 216343 RVA: 0x00C7DF6F File Offset: 0x00C7C16F
+		// Token: 0x06029C0C RID: 171020 RVA: 0x00BCB347 File Offset: 0x00BC9547
 		public void Init(PlotTextAudioComponentContext context)
 		{
 			this.OnAudioStartDelegate = context.OnAudioStartDelegate;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.OnAudioLoadTimeoutDelegate = context.OnAudioLoadTimeoutDelegate;
 		}
 
-		// Token: 0x06034D18 RID: 216344 RVA: 0x00C7DF98 File Offset: 0x00C7C198
+		// Token: 0x06029C0D RID: 171021 RVA: 0x00BCB370 File Offset: 0x00BC9570
 		public bool PlayTalkAudio(PlotTextAudioComponentPlayTalkContext context)
 		{
 			if (this.IsPlaying || this.IsLoading)
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034D19 RID: 216345 RVA: 0x00C7E098 File Offset: 0x00C7C298
+		// Token: 0x06029C0E RID: 171022 RVA: 0x00BCB470 File Offset: 0x00BC9670
 		public bool TryPlayTalkAudioByTalkItem(ITalkItem talkItem)
 		{
 			PlotAudio? plotAudio = (talkItem.PlayVoice != null && talkItem.PlayVoice.Value) ? ConfigPlotAudioById.GetConfig(talkItem.TidTalk, true) : null;
@@ -64,14 +64,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return this.PlayTalkAudio(context);
 		}
 
-		// Token: 0x06034D1A RID: 216346 RVA: 0x00C7E104 File Offset: 0x00C7C304
+		// Token: 0x06029C0F RID: 171023 RVA: 0x00BCB4DC File Offset: 0x00BC96DC
 		public bool PlayTone(PlotTextAudioComponentPlayToneContext context)
 		{
 			if (this.IsPlaying || this.IsLoading)
 			{
 				return false;
 			}
-			this.IsLoading = true;
 			Interjection? config = ConfigInterjectionByTimberIdAndUniversalToneId.GetConfig(context.TimberId, context.UniversalToneId, true);
 			if (config == null)
 			{
@@ -82,6 +81,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.EventName = eventName;
 			this.PlayType = EPlotTextAudioComponentPlayType.Tone;
 			this.PlayToneContext = context;
+			this.IsLoading = true;
 			AActor target = null;
 			this.PlotPlayEventResult = AudioSystem.Instance.PostEvent(eventName, target, new PostEventArgs?(new PostEventArgs
 			{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034D1B RID: 216347 RVA: 0x00C7E1EC File Offset: 0x00C7C3EC
+		// Token: 0x06029C10 RID: 171024 RVA: 0x00BCB5C4 File Offset: 0x00BC97C4
 		public bool TryPlayToneByTalkItem(ITalkItem talkItem)
 		{
 			if (this.IsPlaying || this.IsLoading)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return false;
 		}
 
-		// Token: 0x06034D1C RID: 216348 RVA: 0x00C7E264 File Offset: 0x00C7C464
+		// Token: 0x06029C11 RID: 171025 RVA: 0x00BCB63C File Offset: 0x00BC983C
 		[NullableContext(2)]
 		public void PlayAkEvent(IPostAkEventType config)
 		{
@@ -176,90 +176,80 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034D1D RID: 216349 RVA: 0x00C7E366 File Offset: 0x00C7C566
+		// Token: 0x06029C12 RID: 171026 RVA: 0x00BCB73E File Offset: 0x00BC993E
 		public void PlayTalkItemStartEvent(ITalkItem talkItem)
 		{
 			this.PlayAkEvent(talkItem.TalkAkEvent);
 		}
 
-		// Token: 0x06034D1E RID: 216350 RVA: 0x00C7E374 File Offset: 0x00C7C574
+		// Token: 0x06029C13 RID: 171027 RVA: 0x00BCB74C File Offset: 0x00BC994C
 		public void PlayTalkItemEndEvent(ITalkItem talkItem)
 		{
 			this.PlayAkEvent(talkItem.TalkEndAkEvent);
 		}
 
-		// Token: 0x06034D1F RID: 216351 RVA: 0x00C7E384 File Offset: 0x00C7C584
+		// Token: 0x06029C14 RID: 171028 RVA: 0x00BCB75C File Offset: 0x00BC995C
 		public void PauseAudio()
 		{
 			if (this.IsPaused)
 			{
 				return;
 			}
+			if (!this.IsLoading && this.PlotPlayEventResult == 0)
+			{
+				return;
+			}
 			if (this.IsLoading)
 			{
 				TimerHandle audioLoadTimeoutTimer = this.AudioLoadTimeoutTimer;
-				if (audioLoadTimeoutTimer == null)
+				if (audioLoadTimeoutTimer != null)
 				{
-					return;
+					audioLoadTimeoutTimer.Pause();
 				}
-				audioLoadTimeoutTimer.Pause();
-				return;
 			}
-			else
+			if (this.PlotPlayEventResult != 0)
 			{
-				if (this.PlotPlayEventResult == 0)
-				{
-					return;
-				}
 				AudioSystem.Instance.ExecuteAction(this.PlotPlayEventResult, EAudioActionType.Pause, new ExecuteActionArgs?(new ExecuteActionArgs
 				{
 					TransitionDuration = new int?(1000)
 				}));
-				this.IsPaused = true;
-				return;
 			}
+			this.IsPaused = true;
 		}
 
-		// Token: 0x06034D20 RID: 216352 RVA: 0x00C7E3F4 File Offset: 0x00C7C5F4
+		// Token: 0x06029C15 RID: 171029 RVA: 0x00BCB7DC File Offset: 0x00BC99DC
 		public void ResumeAudio()
 		{
 			if (!this.IsPaused)
 			{
 				return;
 			}
+			if (this.CurLang != LanguageSystem.Instance.PackageAudio)
+			{
+				this.CurLang = LanguageSystem.Instance.PackageAudio;
+				this.StopAudio();
+				this.Replay();
+				return;
+			}
 			if (this.IsLoading)
 			{
 				TimerHandle audioLoadTimeoutTimer = this.AudioLoadTimeoutTimer;
-				if (audioLoadTimeoutTimer == null)
+				if (audioLoadTimeoutTimer != null)
 				{
-					return;
+					audioLoadTimeoutTimer.Resume();
 				}
-				audioLoadTimeoutTimer.Resume();
-				return;
 			}
-			else
+			if (this.PlotPlayEventResult != 0)
 			{
-				if (this.PlotPlayEventResult == 0)
-				{
-					return;
-				}
-				if (this.CurLang != LanguageSystem.Instance.PackageAudio)
-				{
-					this.CurLang = LanguageSystem.Instance.PackageAudio;
-					this.StopAudio();
-					this.Replay();
-					return;
-				}
 				AudioSystem.Instance.ExecuteAction(this.PlotPlayEventResult, EAudioActionType.Resume, new ExecuteActionArgs?(new ExecuteActionArgs
 				{
 					TransitionDuration = new int?(1000)
 				}));
-				this.IsPaused = false;
-				return;
 			}
+			this.IsPaused = false;
 		}
 
-		// Token: 0x06034D21 RID: 216353 RVA: 0x00C7E498 File Offset: 0x00C7C698
+		// Token: 0x06029C16 RID: 171030 RVA: 0x00BCB880 File Offset: 0x00BC9A80
 		public void StopAudio()
 		{
 			this.RemoveAudioLoadTimeoutTimer();
@@ -275,7 +265,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.IsPaused = false;
 		}
 
-		// Token: 0x06034D22 RID: 216354 RVA: 0x00C7E50C File Offset: 0x00C7C70C
+		// Token: 0x06029C17 RID: 171031 RVA: 0x00BCB8F4 File Offset: 0x00BC9AF4
 		public void Replay()
 		{
 			EPlotTextAudioComponentPlayType playType = this.PlayType;
@@ -303,7 +293,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034D23 RID: 216355 RVA: 0x00C7E558 File Offset: 0x00C7C758
+		// Token: 0x06029C18 RID: 171032 RVA: 0x00BCB940 File Offset: 0x00BC9B40
 		protected unsafe void OnAudioPlayCallback(int id, string eventName, EAkCallbackType callbackType, [Nullable(2)] UAkCallbackInfo callbackInfo)
 		{
 			if (id != this.UniqueId)
@@ -331,7 +321,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034D24 RID: 216356 RVA: 0x00C7E60C File Offset: 0x00C7C80C
+		// Token: 0x06029C19 RID: 171033 RVA: 0x00BCB9F4 File Offset: 0x00BC9BF4
 		protected void AddAudioLoadTimeoutTimer()
 		{
 			if (this.AudioLoadTimeoutTimer != null)
@@ -339,9 +329,9 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 				global::Log.Instance.Warn(ELogModule.Plot, ELogAuthor.LZK, "[PlotAudioComponent] 音频加载超时定时器已存在", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
 			}
-			if (this.IsLoading)
+			if (!this.IsLoading)
 			{
-				global::Log.Instance.Warn(ELogModule.Plot, ELogAuthor.LZK, "[PlotAudioComponent] 正在加载音频，无法添加音频加载超时定时器", default(ReadOnlySpan<ValueTuple<string, object>>));
+				global::Log.Instance.Warn(ELogModule.Plot, ELogAuthor.LZK, "[PlotAudioComponent] 未处于音频加载状态，无法添加音频加载超时定时器", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
 			}
 			if (this.IsPlaying)
@@ -352,7 +342,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.AudioLoadTimeoutTimer = TimerSystem.GameplayTimeInstance.Delay(new TTimerAction(this.OnAudioLoadTimeout), 3000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06034D25 RID: 216357 RVA: 0x00C7E6B1 File Offset: 0x00C7C8B1
+		// Token: 0x06029C1A RID: 171034 RVA: 0x00BCBA99 File Offset: 0x00BC9C99
 		protected void RemoveAudioLoadTimeoutTimer()
 		{
 			if (this.AudioLoadTimeoutTimer != null)
@@ -362,7 +352,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034D26 RID: 216358 RVA: 0x00C7E6D3 File Offset: 0x00C7C8D3
+		// Token: 0x06029C1B RID: 171035 RVA: 0x00BCBABB File Offset: 0x00BC9CBB
 		protected void OnAudioStart()
 		{
 			this.IsLoading = false;
@@ -376,7 +366,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			onAudioStartDelegate();
 		}
 
-		// Token: 0x06034D27 RID: 216359 RVA: 0x00C7E6F9 File Offset: 0x00C7C8F9
+		// Token: 0x06029C1C RID: 171036 RVA: 0x00BCBAE1 File Offset: 0x00BC9CE1
 		protected void OnAudioEnd()
 		{
 			this.IsPlaying = false;
@@ -390,7 +380,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			onAudioEndDelegate();
 		}
 
-		// Token: 0x06034D28 RID: 216360 RVA: 0x00C7E728 File Offset: 0x00C7C928
+		// Token: 0x06029C1D RID: 171037 RVA: 0x00BCBB10 File Offset: 0x00BC9D10
 		protected void OnAudioLoadTimeout(float _)
 		{
 			global::Log.Instance.Warn(ELogModule.Plot, ELogAuthor.LZK, "[PlotAudioComponent] 音频加载超时", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -403,90 +393,90 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			onAudioLoadTimeoutDelegate();
 		}
 
-		// Token: 0x06034D29 RID: 216361 RVA: 0x00C7E767 File Offset: 0x00C7C967
+		// Token: 0x06029C1E RID: 171038 RVA: 0x00BCBB4F File Offset: 0x00BC9D4F
 		public float GetAudioDuration()
 		{
 			return this.AudioDuration;
 		}
 
-		// Token: 0x06034D2A RID: 216362 RVA: 0x00C7E76F File Offset: 0x00C7C96F
+		// Token: 0x06029C1F RID: 171039 RVA: 0x00BCBB57 File Offset: 0x00BC9D57
 		public bool GetIsPlaying()
 		{
 			return this.IsPlaying;
 		}
 
-		// Token: 0x06034D2B RID: 216363 RVA: 0x00C7E777 File Offset: 0x00C7C977
+		// Token: 0x06029C20 RID: 171040 RVA: 0x00BCBB5F File Offset: 0x00BC9D5F
 		public bool GetIsLoading()
 		{
 			return this.IsLoading;
 		}
 
-		// Token: 0x06034D2C RID: 216364 RVA: 0x00C7E77F File Offset: 0x00C7C97F
+		// Token: 0x06029C21 RID: 171041 RVA: 0x00BCBB67 File Offset: 0x00BC9D67
 		public bool GetIsPaused()
 		{
 			return this.IsPaused;
 		}
 
-		// Token: 0x06034D2D RID: 216365 RVA: 0x00C7E787 File Offset: 0x00C7C987
+		// Token: 0x06029C22 RID: 171042 RVA: 0x00BCBB6F File Offset: 0x00BC9D6F
 		public EPlotTextAudioComponentPlayType GetPlayType()
 		{
 			return this.PlayType;
 		}
 
-		// Token: 0x06034D2E RID: 216366 RVA: 0x00C7E78F File Offset: 0x00C7C98F
+		// Token: 0x06029C23 RID: 171043 RVA: 0x00BCBB77 File Offset: 0x00BC9D77
 		public string GetEventName()
 		{
 			return this.EventName;
 		}
 
-		// Token: 0x0401C23D RID: 115261
+		// Token: 0x04016C68 RID: 93288
 		private int UniqueId;
 
-		// Token: 0x0401C23E RID: 115262
+		// Token: 0x04016C69 RID: 93289
 		private string EventName = "";
 
-		// Token: 0x0401C23F RID: 115263
+		// Token: 0x04016C6A RID: 93290
 		private float AudioDuration;
 
-		// Token: 0x0401C240 RID: 115264
+		// Token: 0x04016C6B RID: 93291
 		private EPlotTextAudioComponentPlayType PlayType;
 
-		// Token: 0x0401C241 RID: 115265
+		// Token: 0x04016C6C RID: 93292
 		[Nullable(2)]
 		private PlotTextAudioComponentPlayTalkContext PlayTalkContext;
 
-		// Token: 0x0401C242 RID: 115266
+		// Token: 0x04016C6D RID: 93293
 		[Nullable(2)]
 		private PlotTextAudioComponentPlayToneContext PlayToneContext;
 
-		// Token: 0x0401C243 RID: 115267
+		// Token: 0x04016C6E RID: 93294
 		private int PlotPlayEventResult;
 
-		// Token: 0x0401C244 RID: 115268
+		// Token: 0x04016C6F RID: 93295
 		private bool IsPlaying;
 
-		// Token: 0x0401C245 RID: 115269
+		// Token: 0x04016C70 RID: 93296
 		private bool IsLoading;
 
-		// Token: 0x0401C246 RID: 115270
+		// Token: 0x04016C71 RID: 93297
 		private bool IsPaused;
 
-		// Token: 0x0401C247 RID: 115271
+		// Token: 0x04016C72 RID: 93298
 		[Nullable(2)]
 		private TimerHandle AudioLoadTimeoutTimer;
 
-		// Token: 0x0401C248 RID: 115272
+		// Token: 0x04016C73 RID: 93299
 		private string CurLang = LanguageSystem.Instance.PackageAudio;
 
-		// Token: 0x0401C249 RID: 115273
+		// Token: 0x04016C74 RID: 93300
 		[Nullable(2)]
 		private Action OnAudioStartDelegate;
 
-		// Token: 0x0401C24A RID: 115274
+		// Token: 0x04016C75 RID: 93301
 		[Nullable(2)]
 		private Action OnAudioEndDelegate;
 
-		// Token: 0x0401C24B RID: 115275
+		// Token: 0x04016C76 RID: 93302
 		[Nullable(2)]
 		private Action OnAudioLoadTimeoutDelegate;
 	}

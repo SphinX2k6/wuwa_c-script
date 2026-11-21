@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011A2 RID: 4514
+	// Token: 0x020011DC RID: 4572
 	public sealed class ScratchCardRoundInfo : IMessage<ScratchCardRoundInfo>, IMessage, IEquatable<ScratchCardRoundInfo>, IDeepCloneable<ScratchCardRoundInfo>, IBufferMessage
 	{
-		// Token: 0x060180D2 RID: 98514 RVA: 0x0037E006 File Offset: 0x0037C206
+		// Token: 0x06018673 RID: 99955 RVA: 0x0038D34A File Offset: 0x0038B54A
 		[NullableContext(1)]
 		public static ScratchCardRoundInfo Create()
 		{
 			return new ScratchCardRoundInfo();
 		}
 
-		// Token: 0x170050D2 RID: 20690
-		// (get) Token: 0x060180D3 RID: 98515 RVA: 0x0037E00D File Offset: 0x0037C20D
+		// Token: 0x1700523E RID: 21054
+		// (get) Token: 0x06018674 RID: 99956 RVA: 0x0038D351 File Offset: 0x0038B551
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ScratchCardRoundInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D3 RID: 20691
-		// (get) Token: 0x060180D4 RID: 98516 RVA: 0x0037E014 File Offset: 0x0037C214
+		// Token: 0x1700523F RID: 21055
+		// (get) Token: 0x06018675 RID: 99957 RVA: 0x0038D358 File Offset: 0x0038B558
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D4 RID: 20692
-		// (get) Token: 0x060180D5 RID: 98517 RVA: 0x0037E017 File Offset: 0x0037C217
+		// Token: 0x17005240 RID: 21056
+		// (get) Token: 0x06018676 RID: 99958 RVA: 0x0038D35B File Offset: 0x0038B55B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060180D6 RID: 98518 RVA: 0x0037E01E File Offset: 0x0037C21E
+		// Token: 0x06018677 RID: 99959 RVA: 0x0038D362 File Offset: 0x0038B562
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardRoundInfo()
 		{
 		}
 
-		// Token: 0x060180D7 RID: 98519 RVA: 0x0037E03C File Offset: 0x0037C23C
+		// Token: 0x06018678 RID: 99960 RVA: 0x0038D380 File Offset: 0x0038B580
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardRoundInfo(ScratchCardRoundInfo other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060180D8 RID: 98520 RVA: 0x0037E09A File Offset: 0x0037C29A
+		// Token: 0x06018679 RID: 99961 RVA: 0x0038D3DE File Offset: 0x0038B5DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardRoundInfo Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new ScratchCardRoundInfo(this);
 		}
 
-		// Token: 0x170050D5 RID: 20693
-		// (get) Token: 0x060180D9 RID: 98521 RVA: 0x0037E0A2 File Offset: 0x0037C2A2
-		// (set) Token: 0x060180DA RID: 98522 RVA: 0x0037E0AA File Offset: 0x0037C2AA
+		// Token: 0x17005241 RID: 21057
+		// (get) Token: 0x0601867A RID: 99962 RVA: 0x0038D3E6 File Offset: 0x0038B5E6
+		// (set) Token: 0x0601867B RID: 99963 RVA: 0x0038D3EE File Offset: 0x0038B5EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundId
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D6 RID: 20694
-		// (get) Token: 0x060180DB RID: 98523 RVA: 0x0037E0B3 File Offset: 0x0037C2B3
-		// (set) Token: 0x060180DC RID: 98524 RVA: 0x0037E0BB File Offset: 0x0037C2BB
+		// Token: 0x17005242 RID: 21058
+		// (get) Token: 0x0601867C RID: 99964 RVA: 0x0038D3F7 File Offset: 0x0038B5F7
+		// (set) Token: 0x0601867D RID: 99965 RVA: 0x0038D3FF File Offset: 0x0038B5FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long UnlockTime
@@ -115,8 +115,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D7 RID: 20695
-		// (get) Token: 0x060180DD RID: 98525 RVA: 0x0037E0C4 File Offset: 0x0037C2C4
+		// Token: 0x17005243 RID: 21059
+		// (get) Token: 0x0601867E RID: 99966 RVA: 0x0038D408 File Offset: 0x0038B608
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, ScratchCardRewardData> RewardIds
@@ -127,8 +127,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D8 RID: 20696
-		// (get) Token: 0x060180DE RID: 98526 RVA: 0x0037E0CC File Offset: 0x0037C2CC
+		// Token: 0x17005244 RID: 21060
+		// (get) Token: 0x0601867F RID: 99967 RVA: 0x0038D410 File Offset: 0x0038B610
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> LeftRewardItem
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060180DF RID: 98527 RVA: 0x0037E0D4 File Offset: 0x0037C2D4
+		// Token: 0x06018680 RID: 99968 RVA: 0x0038D418 File Offset: 0x0038B618
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ScratchCardRoundInfo);
 		}
 
-		// Token: 0x060180E0 RID: 98528 RVA: 0x0037E0E4 File Offset: 0x0037C2E4
+		// Token: 0x06018681 RID: 99969 RVA: 0x0038D428 File Offset: 0x0038B628
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ScratchCardRoundInfo other)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoundId == other.RoundId && this.UnlockTime == other.UnlockTime && this.RewardIds.Equals(other.RewardIds) && this.LeftRewardItem.Equals(other.LeftRewardItem) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060180E1 RID: 98529 RVA: 0x0037E158 File Offset: 0x0037C358
+		// Token: 0x06018682 RID: 99970 RVA: 0x0038D49C File Offset: 0x0038B69C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060180E2 RID: 98530 RVA: 0x0037E1CC File Offset: 0x0037C3CC
+		// Token: 0x06018683 RID: 99971 RVA: 0x0038D510 File Offset: 0x0038B710
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060180E3 RID: 98531 RVA: 0x0037E1D9 File Offset: 0x0037C3D9
+		// Token: 0x06018684 RID: 99972 RVA: 0x0038D51D File Offset: 0x0038B71D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060180E4 RID: 98532 RVA: 0x0037E1E4 File Offset: 0x0037C3E4
+		// Token: 0x06018685 RID: 99973 RVA: 0x0038D528 File Offset: 0x0038B728
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -217,7 +217,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060180E5 RID: 98533 RVA: 0x0037E260 File Offset: 0x0037C460
+		// Token: 0x06018686 RID: 99974 RVA: 0x0038D5A4 File Offset: 0x0038B7A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060180E6 RID: 98534 RVA: 0x0037E2DC File Offset: 0x0037C4DC
+		// Token: 0x06018687 RID: 99975 RVA: 0x0038D620 File Offset: 0x0038B820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ScratchCardRoundInfo other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060180E7 RID: 98535 RVA: 0x0037E34E File Offset: 0x0037C54E
+		// Token: 0x06018688 RID: 99976 RVA: 0x0038D692 File Offset: 0x0038B892
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060180E8 RID: 98536 RVA: 0x0037E358 File Offset: 0x0037C558
+		// Token: 0x06018689 RID: 99977 RVA: 0x0038D69C File Offset: 0x0038B89C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -312,40 +312,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008E60 RID: 36448
+		// Token: 0x040090F3 RID: 37107
 		private static readonly MessageParser<ScratchCardRoundInfo> _parser = new MessageParser<ScratchCardRoundInfo>(() => new ScratchCardRoundInfo());
 
-		// Token: 0x04008E61 RID: 36449
+		// Token: 0x040090F4 RID: 37108
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008E62 RID: 36450
+		// Token: 0x040090F5 RID: 37109
 		public const int RoundIdFieldNumber = 1;
 
-		// Token: 0x04008E63 RID: 36451
+		// Token: 0x040090F6 RID: 37110
 		private int roundId_;
 
-		// Token: 0x04008E64 RID: 36452
+		// Token: 0x040090F7 RID: 37111
 		public const int UnlockTimeFieldNumber = 2;
 
-		// Token: 0x04008E65 RID: 36453
+		// Token: 0x040090F8 RID: 37112
 		private long unlockTime_;
 
-		// Token: 0x04008E66 RID: 36454
+		// Token: 0x040090F9 RID: 37113
 		public const int RewardIdsFieldNumber = 3;
 
-		// Token: 0x04008E67 RID: 36455
+		// Token: 0x040090FA RID: 37114
 		private static readonly MapField<int, ScratchCardRewardData>.Codec _map_rewardIds_codec = new MapField<int, ScratchCardRewardData>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForMessage<ScratchCardRewardData>(18U, ScratchCardRewardData.Parser), 26U);
 
-		// Token: 0x04008E68 RID: 36456
+		// Token: 0x040090FB RID: 37115
 		private readonly MapField<int, ScratchCardRewardData> rewardIds_ = new MapField<int, ScratchCardRewardData>();
 
-		// Token: 0x04008E69 RID: 36457
+		// Token: 0x040090FC RID: 37116
 		public const int LeftRewardItemFieldNumber = 4;
 
-		// Token: 0x04008E6A RID: 36458
+		// Token: 0x040090FD RID: 37117
 		private static readonly MapField<int, int>.Codec _map_leftRewardItem_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 34U);
 
-		// Token: 0x04008E6B RID: 36459
+		// Token: 0x040090FE RID: 37118
 		private readonly MapField<int, int> leftRewardItem_ = new MapField<int, int>();
 	}
 }

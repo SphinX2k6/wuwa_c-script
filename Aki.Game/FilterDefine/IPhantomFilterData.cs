@@ -2,10 +2,10 @@
 
 namespace FilterDefine
 {
-	// Token: 0x020044CD RID: 17613
+	// Token: 0x02002F5A RID: 12122
 	public interface IPhantomFilterData
 	{
-		// Token: 0x0602D631 RID: 185905
+		// Token: 0x0601CB6F RID: 117615
 		int GetUniqueId();
 	}
 }

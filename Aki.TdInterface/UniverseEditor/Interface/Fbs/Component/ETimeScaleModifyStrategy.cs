@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E2D RID: 20013
+	// Token: 0x0200533C RID: 21308
 	public enum ETimeScaleModifyStrategy : byte
 	{
-		// Token: 0x0400DB8B RID: 56203
+		// Token: 0x0400E6FD RID: 59133
 		Default,
-		// Token: 0x0400DB8C RID: 56204
+		// Token: 0x0400E6FE RID: 59134
 		AllowClientModify
 	}
 }

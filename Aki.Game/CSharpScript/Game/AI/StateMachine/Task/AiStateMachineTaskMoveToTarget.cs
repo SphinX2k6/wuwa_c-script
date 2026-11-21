@@ -8,17 +8,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x0200731E RID: 29470
+	// Token: 0x020064A1 RID: 25761
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineTaskMoveToTarget : AiStateMachineTask
 	{
-		// Token: 0x0604855F RID: 296287 RVA: 0x0129B1BF File Offset: 0x012993BF
+		// Token: 0x0603E9AC RID: 256428 RVA: 0x0123DC3F File Offset: 0x0123BE3F
 		public AiStateMachineTaskMoveToTarget(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Task state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x06048560 RID: 296288 RVA: 0x0129B1D4 File Offset: 0x012993D4
+		// Token: 0x0603E9AD RID: 256429 RVA: 0x0123DC54 File Offset: 0x0123BE54
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Task state)
 		{
 			this.TargetType = (ETargetType)state.TaskMoveToTarget.TargetType;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return true;
 		}
 
-		// Token: 0x06048561 RID: 296289 RVA: 0x0129B238 File Offset: 0x01299438
+		// Token: 0x0603E9AE RID: 256430 RVA: 0x0123DCB8 File Offset: 0x0123BEB8
 		public override void OnEnter(long? contextId = null)
 		{
 			this.Running = true;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.MoveToTarget();
 		}
 
-		// Token: 0x06048562 RID: 296290 RVA: 0x0129B28F File Offset: 0x0129948F
+		// Token: 0x0603E9AF RID: 256431 RVA: 0x0123DD0F File Offset: 0x0123BF0F
 		protected override void OnTick(float deltaSeconds, long? contextId = null)
 		{
 			if (!this.Running)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048563 RID: 296291 RVA: 0x0129B2D0 File Offset: 0x012994D0
+		// Token: 0x0603E9B0 RID: 256432 RVA: 0x0123DD50 File Offset: 0x0123BF50
 		private void RefreshLevelTarget()
 		{
 			this.TargetEntityId = this.Node.Owner.GetBlackboard(CombatStateMachineDefine.Fsm.EFsmSyncKey.MoveToTarget).GetValueOrDefault();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.TargetLocation.Z = (double)completeEntityData.Transform.Pos.Z.Value;
 		}
 
-		// Token: 0x06048564 RID: 296292 RVA: 0x0129B394 File Offset: 0x01299594
+		// Token: 0x0603E9B1 RID: 256433 RVA: 0x0123DE14 File Offset: 0x0123C014
 		private void RefreshHateTarget()
 		{
 			EntityHandle currentTarget = this.Node.AiController.AiHateList.GetCurrentTarget();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.TargetLocation.Z = component.ActorLocation.Z;
 		}
 
-		// Token: 0x06048565 RID: 296293 RVA: 0x0129B418 File Offset: 0x01299618
+		// Token: 0x0603E9B2 RID: 256434 RVA: 0x0123DE98 File Offset: 0x0123C098
 		private unsafe void MoveToTarget()
 		{
 			MoveToLocationController moveController = this.Node.MoveComponent.MoveController;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.LastMoveToTargetTime = (double)this.Node.ElapseTime;
 		}
 
-		// Token: 0x06048566 RID: 296294 RVA: 0x0129B527 File Offset: 0x01299727
+		// Token: 0x0603E9B3 RID: 256435 RVA: 0x0123DFA7 File Offset: 0x0123C1A7
 		private void Finish(bool success = false)
 		{
 			if (!this.Running)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.Running = false;
 		}
 
-		// Token: 0x06048567 RID: 296295 RVA: 0x0129B548 File Offset: 0x01299748
+		// Token: 0x0603E9B4 RID: 256436 RVA: 0x0123DFC8 File Offset: 0x0123C1C8
 		public override void OnExit(long? contextId = null)
 		{
 			AiController aiController = this.Node.AiComponent.AiController;
@@ -175,34 +175,34 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x040263E9 RID: 156649
+		// Token: 0x040216D6 RID: 136918
 		public ETargetType TargetType;
 
-		// Token: 0x040263EA RID: 156650
+		// Token: 0x040216D7 RID: 136919
 		public int MoveState;
 
-		// Token: 0x040263EB RID: 156651
+		// Token: 0x040216D8 RID: 136920
 		public double EndDistance;
 
-		// Token: 0x040263EC RID: 156652
+		// Token: 0x040216D9 RID: 136921
 		public float TurnSpeed;
 
-		// Token: 0x040263ED RID: 156653
+		// Token: 0x040216DA RID: 136922
 		public bool WalkOff;
 
-		// Token: 0x040263EE RID: 156654
+		// Token: 0x040216DB RID: 136923
 		private readonly Vector TargetLocation = Vector.Create();
 
-		// Token: 0x040263EF RID: 156655
+		// Token: 0x040216DC RID: 136924
 		private bool Running;
 
-		// Token: 0x040263F0 RID: 156656
+		// Token: 0x040216DD RID: 136925
 		private int TargetEntityId;
 
-		// Token: 0x040263F1 RID: 156657
+		// Token: 0x040216DE RID: 136926
 		private double LastMoveToTargetTime;
 
-		// Token: 0x040263F2 RID: 156658
+		// Token: 0x040216DF RID: 136927
 		private const int TRIGGER_PERIOD = 500;
 	}
 }

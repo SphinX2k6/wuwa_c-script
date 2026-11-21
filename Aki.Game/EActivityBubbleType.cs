@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001679 RID: 5753
+// Token: 0x02000B31 RID: 2865
 public enum EActivityBubbleType
 {
-	// Token: 0x040049F7 RID: 18935
+	// Token: 0x04004A9D RID: 19101
 	None,
-	// Token: 0x040049F8 RID: 18936
+	// Token: 0x04004A9E RID: 19102
 	Normal,
-	// Token: 0x040049F9 RID: 18937
+	// Token: 0x04004A9F RID: 19103
 	Remind,
-	// Token: 0x040049FA RID: 18938
+	// Token: 0x04004AA0 RID: 19104
 	Important
 }

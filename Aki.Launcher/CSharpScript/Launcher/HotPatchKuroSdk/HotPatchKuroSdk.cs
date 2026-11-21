@@ -9,24 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001D9 RID: 473
+	// Token: 0x020001DD RID: 477
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotPatchKuroSdk : Singleton
 	{
-		// Token: 0x06000C88 RID: 3208 RVA: 0x0004CB68 File Offset: 0x0004AD68
+		// Token: 0x06000CBF RID: 3263 RVA: 0x0004F37C File Offset: 0x0004D57C
 		public bool GetIfGlobalSdk()
 		{
 			return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN";
 		}
 
-		// Token: 0x06000C89 RID: 3209 RVA: 0x0004CB83 File Offset: 0x0004AD83
+		// Token: 0x06000CC0 RID: 3264 RVA: 0x0004F397 File Offset: 0x0004D597
 		public bool CanUseSdk()
 		{
 			return UKuroStaticLibrary.IsModuleLoaded("KuroSDK") && BaseConfigController.Instance.GetPublicValue("UseSDK") == "1";
 		}
 
-		// Token: 0x06000C8A RID: 3210 RVA: 0x0004CBB0 File Offset: 0x0004ADB0
+		// Token: 0x06000CC1 RID: 3265 RVA: 0x0004F3C4 File Offset: 0x0004D5C4
 		public void Init()
 		{
 			LauncherSdk.Init();
@@ -49,7 +49,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			tcs.TrySetResult();
 		}
 
-		// Token: 0x06000C8B RID: 3211 RVA: 0x0004CC20 File Offset: 0x0004AE20
+		// Token: 0x06000CC2 RID: 3266 RVA: 0x0004F434 File Offset: 0x0004D634
 		private void InitSdk(Action resolve)
 		{
 			if (!this.CanUseSdk())
@@ -102,7 +102,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			}
 		}
 
-		// Token: 0x06000C8C RID: 3212 RVA: 0x0004CCFE File Offset: 0x0004AEFE
+		// Token: 0x06000CC3 RID: 3267 RVA: 0x0004F512 File Offset: 0x0004D712
 		[NullableContext(2)]
 		public void ReportEvent(SdkReportData data)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			this.PushReportMsgTrySendReport(data);
 		}
 
-		// Token: 0x06000C8D RID: 3213 RVA: 0x0004CD18 File Offset: 0x0004AF18
+		// Token: 0x06000CC4 RID: 3268 RVA: 0x0004F52C File Offset: 0x0004D72C
 		private UniTask PushReportMsgTrySendReport(SdkReportData reportData)
 		{
 			HotPatchKuroSdk.<PushReportMsgTrySendReport>d__7 <PushReportMsgTrySendReport>d__;
@@ -129,7 +129,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return <PushReportMsgTrySendReport>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C8E RID: 3214 RVA: 0x0004CD63 File Offset: 0x0004AF63
+		// Token: 0x06000CC5 RID: 3269 RVA: 0x0004F577 File Offset: 0x0004D777
 		public string GetChannelId()
 		{
 			if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -143,7 +143,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return UKuroSDKManager.GetChannelId();
 		}
 
-		// Token: 0x06000C8F RID: 3215 RVA: 0x0004CD94 File Offset: 0x0004AF94
+		// Token: 0x06000CC6 RID: 3270 RVA: 0x0004F5A8 File Offset: 0x0004D7A8
 		public string GetPackageId()
 		{
 			if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -157,8 +157,8 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return UKuroSDKManager.GetPackageId();
 		}
 
-		// Token: 0x1700013F RID: 319
-		// (get) Token: 0x06000C90 RID: 3216 RVA: 0x0004CDC5 File Offset: 0x0004AFC5
+		// Token: 0x17000145 RID: 325
+		// (get) Token: 0x06000CC7 RID: 3271 RVA: 0x0004F5D9 File Offset: 0x0004D7D9
 		public static HotPatchKuroSdk Instance
 		{
 			get
@@ -172,12 +172,12 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			}
 		}
 
-		// Token: 0x06000C91 RID: 3217 RVA: 0x0004CDE8 File Offset: 0x0004AFE8
+		// Token: 0x06000CC8 RID: 3272 RVA: 0x0004F5FC File Offset: 0x0004D7FC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000C92 RID: 3218 RVA: 0x0004CDEA File Offset: 0x0004AFEA
+		// Token: 0x06000CC9 RID: 3273 RVA: 0x0004F5FE File Offset: 0x0004D7FE
 		public static void ResetStaticDefaultValue()
 		{
 			HotPatchKuroSdk instance = HotPatchKuroSdk._instance;
@@ -188,20 +188,20 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			HotPatchKuroSdk._instance = null;
 		}
 
-		// Token: 0x06000C93 RID: 3219 RVA: 0x0004CE03 File Offset: 0x0004B003
+		// Token: 0x06000CCA RID: 3274 RVA: 0x0004F617 File Offset: 0x0004D817
 		static HotPatchKuroSdk()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotPatchKuroSdk.CreateStaticDefaultValue), new Action(HotPatchKuroSdk.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040007E4 RID: 2020
+		// Token: 0x04000821 RID: 2081
 		private const string USESDK = "1";
 
-		// Token: 0x040007E5 RID: 2021
+		// Token: 0x04000822 RID: 2082
 		[Nullable(2)]
 		private UniTaskCompletionSource InitPromise;
 
-		// Token: 0x040007E6 RID: 2022
+		// Token: 0x04000823 RID: 2083
 		[Nullable(2)]
 		private static HotPatchKuroSdk _instance;
 	}

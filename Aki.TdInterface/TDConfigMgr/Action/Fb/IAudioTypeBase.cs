@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ABE RID: 10942
+	// Token: 0x02002DB2 RID: 11698
 	public class IAudioTypeBase
 	{
-		// Token: 0x0600F024 RID: 61476 RVA: 0x0022E19C File Offset: 0x0022C39C
-		[NullableContext(1)]
+		// Token: 0x0600FEDA RID: 65242 RVA: 0x0024BEA8 File Offset: 0x0024A0A8
 		public static IAudioTypeBase Create(IAudioTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C6A RID: 19562
-		// (get) Token: 0x0600F025 RID: 61477 RVA: 0x0022E1BB File Offset: 0x0022C3BB
+		// Token: 0x17005024 RID: 20516
+		// (get) Token: 0x0600FEDB RID: 65243 RVA: 0x0024BEC7 File Offset: 0x0024A0C7
 		public virtual EAudioType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008418 RID: 33816
+		// Token: 0x04008B1C RID: 35612
 		private IAudioTypeBase Instance;
 	}
 }

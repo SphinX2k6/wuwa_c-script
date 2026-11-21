@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CB5 RID: 11445
+// Token: 0x0200220E RID: 8718
 [NullableContext(1)]
 [Nullable(0)]
 public class ActiveMaterialEntry : IActiveMaterialEntry
 {
-	// Token: 0x1700203D RID: 8253
-	// (get) Token: 0x06017E91 RID: 97937 RVA: 0x00613E84 File Offset: 0x00612084
-	// (set) Token: 0x06017E92 RID: 97938 RVA: 0x00613E8C File Offset: 0x0061208C
+	// Token: 0x1700208E RID: 8334
+	// (get) Token: 0x06015705 RID: 87813 RVA: 0x00639A10 File Offset: 0x00637C10
+	// (set) Token: 0x06015706 RID: 87814 RVA: 0x00639A18 File Offset: 0x00637C18
 	public UObject Data { get; set; }
 
-	// Token: 0x1700203E RID: 8254
-	// (get) Token: 0x06017E93 RID: 97939 RVA: 0x00613E95 File Offset: 0x00612095
-	// (set) Token: 0x06017E94 RID: 97940 RVA: 0x00613E9D File Offset: 0x0061209D
+	// Token: 0x1700208F RID: 8335
+	// (get) Token: 0x06015707 RID: 87815 RVA: 0x00639A21 File Offset: 0x00637C21
+	// (set) Token: 0x06015708 RID: 87816 RVA: 0x00639A29 File Offset: 0x00637C29
 	public bool IsGroup { get; set; }
 
-	// Token: 0x1700203F RID: 8255
-	// (get) Token: 0x06017E95 RID: 97941 RVA: 0x00613EA6 File Offset: 0x006120A6
-	// (set) Token: 0x06017E96 RID: 97942 RVA: 0x00613EAE File Offset: 0x006120AE
+	// Token: 0x17002090 RID: 8336
+	// (get) Token: 0x06015709 RID: 87817 RVA: 0x00639A32 File Offset: 0x00637C32
+	// (set) Token: 0x0601570A RID: 87818 RVA: 0x00639A3A File Offset: 0x00637C3A
 	public bool WithAnimObject { get; set; }
 }

@@ -9,17 +9,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016DC RID: 5852
+// Token: 0x02000B94 RID: 2964
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceSortWordSelectView : UiViewBase
 {
-	// Token: 0x0600A79E RID: 42910 RVA: 0x00259E58 File Offset: 0x00258058
+	// Token: 0x06007B7E RID: 31614 RVA: 0x00264260 File Offset: 0x00262460
 	public AdviceSortWordSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600A79F RID: 42911 RVA: 0x00259E64 File Offset: 0x00258064
+	// Token: 0x06007B7F RID: 31615 RVA: 0x0026426C File Offset: 0x0026246C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A7A0 RID: 42912 RVA: 0x00259F68 File Offset: 0x00258168
+	// Token: 0x06007B80 RID: 31616 RVA: 0x00264370 File Offset: 0x00262570
 	protected override void OnStart()
 	{
 		this.AdviceWordTypeScroller = new GenericScrollView<AdviceWordTypeItem>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<AdviceWordTypeItem>(this.CreateSortItem), null);
@@ -64,7 +64,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		this.RefreshTitle();
 	}
 
-	// Token: 0x0600A7A1 RID: 42913 RVA: 0x0025A020 File Offset: 0x00258220
+	// Token: 0x06007B81 RID: 31617 RVA: 0x00264428 File Offset: 0x00262628
 	private ILayoutItem<AdviceWordTypeItem> CreateSortItem(object data, UUIItem uiItem, int index)
 	{
 		AdviceWordTypeItem adviceWordTypeItem = new AdviceWordTypeItem(uiItem);
@@ -76,7 +76,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A7A2 RID: 42914 RVA: 0x0025A058 File Offset: 0x00258258
+	// Token: 0x06007B82 RID: 31618 RVA: 0x00264460 File Offset: 0x00262660
 	private ILayoutItem<AdviceWordItem> CreateWordItem(object data, UUIItem uiItem, int index)
 	{
 		AdviceWordItem adviceWordItem = new AdviceWordItem(uiItem);
@@ -88,19 +88,19 @@ public class AdviceSortWordSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A7A3 RID: 42915 RVA: 0x0025A090 File Offset: 0x00258290
+	// Token: 0x06007B83 RID: 31619 RVA: 0x00264498 File Offset: 0x00262698
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnClickAdviceSort, new Action(this.RefreshAdviceSortWord));
 	}
 
-	// Token: 0x0600A7A4 RID: 42916 RVA: 0x0025A0AE File Offset: 0x002582AE
+	// Token: 0x06007B84 RID: 31620 RVA: 0x002644B6 File Offset: 0x002626B6
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnClickAdviceSort, new Action(this.RefreshAdviceSortWord));
 	}
 
-	// Token: 0x0600A7A5 RID: 42917 RVA: 0x0025A0CC File Offset: 0x002582CC
+	// Token: 0x06007B85 RID: 31621 RVA: 0x002644D4 File Offset: 0x002626D4
 	private void OnClickConfirmBtn()
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -109,19 +109,19 @@ public class AdviceSortWordSelectView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnSelectAdviceWord);
 	}
 
-	// Token: 0x0600A7A6 RID: 42918 RVA: 0x0025A10D File Offset: 0x0025830D
+	// Token: 0x06007B86 RID: 31622 RVA: 0x00264515 File Offset: 0x00262715
 	private void OnClickCancelBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600A7A7 RID: 42919 RVA: 0x0025A116 File Offset: 0x00258316
+	// Token: 0x06007B87 RID: 31623 RVA: 0x0026451E File Offset: 0x0026271E
 	private void RefreshTitle()
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(7), "AdviceSelectWord", Array.Empty<object>());
 	}
 
-	// Token: 0x0600A7A8 RID: 42920 RVA: 0x0025A134 File Offset: 0x00258334
+	// Token: 0x06007B88 RID: 31624 RVA: 0x0026453C File Offset: 0x0026273C
 	private void RefreshAdviceSort()
 	{
 		IReadOnlyList<AdviceWordType> adviceWordTypeConfigs = AdviceConfig.Instance.GetAdviceWordTypeConfigs();
@@ -141,7 +141,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		this.AdviceWordTypeScroller.BindLateUpdate(new Action<float>(this.AdviceWordTypeScrollerLateUpdate));
 	}
 
-	// Token: 0x0600A7A9 RID: 42921 RVA: 0x0025A1E4 File Offset: 0x002583E4
+	// Token: 0x06007B89 RID: 31625 RVA: 0x002645EC File Offset: 0x002627EC
 	private void AdviceWordTypeScrollerLateUpdate(float deltaTime)
 	{
 		if (this.AdviceWordTypeScrollerScrollToDirty && this.AdviceWordTypeFlag >= 1)
@@ -154,7 +154,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		this.AdviceWordTypeFlag++;
 	}
 
-	// Token: 0x0600A7AA RID: 42922 RVA: 0x0025A238 File Offset: 0x00258438
+	// Token: 0x06007B8A RID: 31626 RVA: 0x00264640 File Offset: 0x00262840
 	private float GetWordTypeProgress()
 	{
 		IReadOnlyList<AdviceWordType> adviceWordTypeConfigs = AdviceConfig.Instance.GetAdviceWordTypeConfigs();
@@ -178,7 +178,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		return 0f;
 	}
 
-	// Token: 0x0600A7AB RID: 42923 RVA: 0x0025A2A8 File Offset: 0x002584A8
+	// Token: 0x06007B8B RID: 31627 RVA: 0x002646B0 File Offset: 0x002628B0
 	private void RefreshAdviceSortWord()
 	{
 		int preSelectSortTypeId = AdviceModel.Instance.PreSelectSortTypeId;
@@ -198,7 +198,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		this.AdviceWordScroller.BindLateUpdate(new Action<float>(this.AdviceWordScrollerLateUpdate));
 	}
 
-	// Token: 0x0600A7AC RID: 42924 RVA: 0x0025A360 File Offset: 0x00258560
+	// Token: 0x06007B8C RID: 31628 RVA: 0x00264768 File Offset: 0x00262968
 	private void AdviceWordScrollerLateUpdate(float deltaTime)
 	{
 		if (this.AdviceWordScrollerScrollToDirty && this.AdviceWordFlag >= 1)
@@ -220,7 +220,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		this.AdviceWordFlag++;
 	}
 
-	// Token: 0x0600A7AD RID: 42925 RVA: 0x0025A3D8 File Offset: 0x002585D8
+	// Token: 0x06007B8D RID: 31629 RVA: 0x002647E0 File Offset: 0x002629E0
 	private float GetWordProgress()
 	{
 		int preSelectSortTypeId = AdviceModel.Instance.PreSelectSortTypeId;
@@ -245,7 +245,7 @@ public class AdviceSortWordSelectView : UiViewBase
 		return 0f;
 	}
 
-	// Token: 0x0600A7AE RID: 42926 RVA: 0x0025A453 File Offset: 0x00258653
+	// Token: 0x06007B8E RID: 31630 RVA: 0x0026485B File Offset: 0x00262A5B
 	protected override void OnBeforeDestroy()
 	{
 		GenericScrollView<AdviceWordTypeItem> adviceWordTypeScroller = this.AdviceWordTypeScroller;
@@ -262,10 +262,10 @@ public class AdviceSortWordSelectView : UiViewBase
 		this.AdviceWordScroller = null;
 	}
 
-	// Token: 0x04004B91 RID: 19345
+	// Token: 0x04004C38 RID: 19512
 	private const int WAITUPDATECOUNT = 1;
 
-	// Token: 0x04004B92 RID: 19346
+	// Token: 0x04004C39 RID: 19513
 	[Nullable(new byte[]
 	{
 		2,
@@ -273,7 +273,7 @@ public class AdviceSortWordSelectView : UiViewBase
 	})]
 	private GenericScrollView<AdviceWordTypeItem> AdviceWordTypeScroller;
 
-	// Token: 0x04004B93 RID: 19347
+	// Token: 0x04004C3A RID: 19514
 	[Nullable(new byte[]
 	{
 		2,
@@ -281,44 +281,44 @@ public class AdviceSortWordSelectView : UiViewBase
 	})]
 	private GenericScrollView<AdviceWordItem> AdviceWordScroller;
 
-	// Token: 0x04004B94 RID: 19348
+	// Token: 0x04004C3B RID: 19515
 	private bool AdviceWordScrollerScrollToDirty;
 
-	// Token: 0x04004B95 RID: 19349
+	// Token: 0x04004C3C RID: 19516
 	private int AdviceWordFlag;
 
-	// Token: 0x04004B96 RID: 19350
+	// Token: 0x04004C3D RID: 19517
 	private bool AdviceWordTypeScrollerScrollToDirty;
 
-	// Token: 0x04004B97 RID: 19351
+	// Token: 0x04004C3E RID: 19518
 	private int AdviceWordTypeFlag;
 
-	// Token: 0x02007CB0 RID: 31920
+	// Token: 0x02006E35 RID: 28213
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028E63 RID: 167523
+		// Token: 0x0402418C RID: 147852
 		public const int SortScroller = 0;
 
-		// Token: 0x04028E64 RID: 167524
+		// Token: 0x0402418D RID: 147853
 		public const int SortItem = 1;
 
-		// Token: 0x04028E65 RID: 167525
+		// Token: 0x0402418E RID: 147854
 		public const int WordScroller = 2;
 
-		// Token: 0x04028E66 RID: 167526
+		// Token: 0x0402418F RID: 147855
 		public const int WordItem = 3;
 
-		// Token: 0x04028E67 RID: 167527
+		// Token: 0x04024190 RID: 147856
 		public const int CancelBtn = 4;
 
-		// Token: 0x04028E68 RID: 167528
+		// Token: 0x04024191 RID: 147857
 		public const int ConfirmBtn = 5;
 
-		// Token: 0x04028E69 RID: 167529
+		// Token: 0x04024192 RID: 147858
 		public const int ScrollerBar = 6;
 
-		// Token: 0x04028E6A RID: 167530
+		// Token: 0x04024193 RID: 147859
 		public const int TitleText = 7;
 	}
 }

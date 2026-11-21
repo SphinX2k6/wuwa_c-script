@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200158F RID: 5519
+	// Token: 0x020016EE RID: 5870
 	[EnumExtensions]
 	public enum EAvgRolePosition
 	{
-		// Token: 0x0400496A RID: 18794
+		// Token: 0x04004D1C RID: 19740
 		Center,
-		// Token: 0x0400496B RID: 18795
+		// Token: 0x04004D1D RID: 19741
 		Left1,
-		// Token: 0x0400496C RID: 18796
+		// Token: 0x04004D1E RID: 19742
 		Left2,
-		// Token: 0x0400496D RID: 18797
+		// Token: 0x04004D1F RID: 19743
 		Right1,
-		// Token: 0x0400496E RID: 18798
+		// Token: 0x04004D20 RID: 19744
 		Right2
 	}
 }

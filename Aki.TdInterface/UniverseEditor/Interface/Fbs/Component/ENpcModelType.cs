@@ -2,12 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DDF RID: 19935
+	// Token: 0x020052E4 RID: 21220
 	public enum ENpcModelType : byte
 	{
-		// Token: 0x0400DA7B RID: 55931
+		// Token: 0x0400E5CF RID: 58831
 		Mesh,
-		// Token: 0x0400DA7C RID: 55932
-		Da
+		// Token: 0x0400E5D0 RID: 58832
+		Da,
+		// Token: 0x0400E5D1 RID: 58833
+		CombineDa
 	}
 }

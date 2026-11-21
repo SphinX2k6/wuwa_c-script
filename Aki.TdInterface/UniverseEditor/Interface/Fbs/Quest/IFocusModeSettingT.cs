@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E6D RID: 15981
+	// Token: 0x020042A8 RID: 17064
 	public class IFocusModeSettingT
 	{
-		// Token: 0x17006ECD RID: 28365
-		// (get) Token: 0x06016819 RID: 92185 RVA: 0x00340CA2 File Offset: 0x0033EEA2
-		// (set) Token: 0x0601681A RID: 92186 RVA: 0x00340CAA File Offset: 0x0033EEAA
+		// Token: 0x170074B1 RID: 29873
+		// (get) Token: 0x06017E40 RID: 97856 RVA: 0x003697D2 File Offset: 0x003679D2
+		// (set) Token: 0x06017E41 RID: 97857 RVA: 0x003697DA File Offset: 0x003679DA
 		public bool CanOpenFocusMode { get; set; }
 
-		// Token: 0x17006ECE RID: 28366
-		// (get) Token: 0x0601681B RID: 92187 RVA: 0x00340CB3 File Offset: 0x0033EEB3
-		// (set) Token: 0x0601681C RID: 92188 RVA: 0x00340CBB File Offset: 0x0033EEBB
+		// Token: 0x170074B2 RID: 29874
+		// (get) Token: 0x06017E42 RID: 97858 RVA: 0x003697E3 File Offset: 0x003679E3
+		// (set) Token: 0x06017E43 RID: 97859 RVA: 0x003697EB File Offset: 0x003679EB
 		public bool IsFocusModeInherit { get; set; }
 
-		// Token: 0x17006ECF RID: 28367
-		// (get) Token: 0x0601681D RID: 92189 RVA: 0x00340CC4 File Offset: 0x0033EEC4
-		// (set) Token: 0x0601681E RID: 92190 RVA: 0x00340CCC File Offset: 0x0033EECC
+		// Token: 0x170074B3 RID: 29875
+		// (get) Token: 0x06017E44 RID: 97860 RVA: 0x003697F4 File Offset: 0x003679F4
+		// (set) Token: 0x06017E45 RID: 97861 RVA: 0x003697FC File Offset: 0x003679FC
 		public bool CanAcceptInFocusMode { get; set; }
 
-		// Token: 0x17006ED0 RID: 28368
-		// (get) Token: 0x0601681F RID: 92191 RVA: 0x00340CD5 File Offset: 0x0033EED5
-		// (set) Token: 0x06016820 RID: 92192 RVA: 0x00340CDD File Offset: 0x0033EEDD
+		// Token: 0x170074B4 RID: 29876
+		// (get) Token: 0x06017E46 RID: 97862 RVA: 0x00369805 File Offset: 0x00367A05
+		// (set) Token: 0x06017E47 RID: 97863 RVA: 0x0036980D File Offset: 0x00367A0D
 		public bool IsFocusModeWhiteList { get; set; }
 
-		// Token: 0x17006ED1 RID: 28369
-		// (get) Token: 0x06016821 RID: 92193 RVA: 0x00340CE6 File Offset: 0x0033EEE6
-		// (set) Token: 0x06016822 RID: 92194 RVA: 0x00340CEE File Offset: 0x0033EEEE
+		// Token: 0x170074B5 RID: 29877
+		// (get) Token: 0x06017E48 RID: 97864 RVA: 0x00369816 File Offset: 0x00367A16
+		// (set) Token: 0x06017E49 RID: 97865 RVA: 0x0036981E File Offset: 0x00367A1E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016823 RID: 92195 RVA: 0x00340CF7 File Offset: 0x0033EEF7
+		// Token: 0x06017E4A RID: 97866 RVA: 0x00369827 File Offset: 0x00367A27
 		public IFocusModeSettingT()
 		{
 			this.CanOpenFocusMode = false;

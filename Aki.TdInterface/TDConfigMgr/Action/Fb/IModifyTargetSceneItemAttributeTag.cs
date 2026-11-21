@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200295E RID: 10590
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C43 RID: 11331
 	public class IModifyTargetSceneItemAttributeTag : ModifySceneItemAttributeTag
 	{
-		// Token: 0x0600EACA RID: 60106 RVA: 0x00226018 File Offset: 0x00224218
+		// Token: 0x0600F940 RID: 63808 RVA: 0x002436D0 File Offset: 0x002418D0
 		public static IModifyTargetSceneItemAttributeTag Create(IModifyTargetSceneItemAttributeTag? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049D0 RID: 18896
-		// (get) Token: 0x0600EACB RID: 60107 RVA: 0x00226037 File Offset: 0x00224237
+		// Token: 0x17004D68 RID: 19816
+		// (get) Token: 0x0600F941 RID: 63809 RVA: 0x002436EF File Offset: 0x002418EF
 		public override EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049D1 RID: 18897
-		// (get) Token: 0x0600EACC RID: 60108 RVA: 0x00226044 File Offset: 0x00224244
+		// Token: 0x17004D69 RID: 19817
+		// (get) Token: 0x0600F942 RID: 63810 RVA: 0x002436FC File Offset: 0x002418FC
 		public override bool IsAddTag
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049D2 RID: 18898
-		// (get) Token: 0x0600EACD RID: 60109 RVA: 0x00226054 File Offset: 0x00224254
+		// Token: 0x17004D6A RID: 19818
+		// (get) Token: 0x0600F943 RID: 63811 RVA: 0x0024370C File Offset: 0x0024190C
 		public override List<int> PerformanceTag
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049D3 RID: 18899
-		// (get) Token: 0x0600EACE RID: 60110 RVA: 0x002260B8 File Offset: 0x002242B8
+		// Token: 0x17004D6B RID: 19819
+		// (get) Token: 0x0600F944 RID: 63812 RVA: 0x00243770 File Offset: 0x00241970
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,19 +82,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008162 RID: 33122
+		// Token: 0x04008843 RID: 34883
 		private IModifyTargetSceneItemAttributeTag Instance;
 
-		// Token: 0x04008163 RID: 33123
+		// Token: 0x04008844 RID: 34884
 		private List<int> _PerformanceTagCache;
 
-		// Token: 0x04008164 RID: 33124
+		// Token: 0x04008845 RID: 34885
 		private bool _PerformanceTagInited;
 
-		// Token: 0x04008165 RID: 33125
+		// Token: 0x04008846 RID: 34886
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04008166 RID: 33126
+		// Token: 0x04008847 RID: 34887
 		private bool _EntityIdsInited;
 	}
 }

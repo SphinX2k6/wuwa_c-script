@@ -12,39 +12,39 @@ using UnrealEngine.Utils;
 [Nullable(0)]
 public class AudioSystem : Singleton, ITickable
 {
-	// Token: 0x060000BE RID: 190 RVA: 0x00006876 File Offset: 0x00004A76
+	// Token: 0x060000C0 RID: 192 RVA: 0x000065EE File Offset: 0x000047EE
 	public void Tick(float delta)
 	{
 		this.AudioEventPool.Tick(delta);
 	}
 
-	// Token: 0x060000BF RID: 191 RVA: 0x00006884 File Offset: 0x00004A84
+	// Token: 0x060000C1 RID: 193 RVA: 0x000065FC File Offset: 0x000047FC
 	public int PostEvent(string @event)
 	{
 		return this.PostEventInternal(@event, null, null);
 	}
 
-	// Token: 0x060000C0 RID: 192 RVA: 0x000068AA File Offset: 0x00004AAA
+	// Token: 0x060000C2 RID: 194 RVA: 0x00006622 File Offset: 0x00004822
 	public int PostEvent(string @event, [Nullable(2)] AActor target = null, PostEventArgs? args = null)
 	{
 		SharpherealAssert.Ensure(target == null || target.IsValid());
 		return this.PostEventInternal(@event, new OneOf<AActor, UAkComponent, FTransformDouble>?(target), args);
 	}
 
-	// Token: 0x060000C1 RID: 193 RVA: 0x000068D1 File Offset: 0x00004AD1
+	// Token: 0x060000C3 RID: 195 RVA: 0x00006649 File Offset: 0x00004849
 	public int PostEvent(string @event, [Nullable(2)] UAkComponent target = null, PostEventArgs? args = null)
 	{
 		return this.PostEventInternal(@event, new OneOf<AActor, UAkComponent, FTransformDouble>?(target), args);
 	}
 
-	// Token: 0x060000C2 RID: 194 RVA: 0x000068E8 File Offset: 0x00004AE8
+	// Token: 0x060000C4 RID: 196 RVA: 0x00006660 File Offset: 0x00004860
 	public int PostEvent(string @event, FTransformDouble? target = null, PostEventArgs? args = null)
 	{
 		FTransformDouble? ftransformDouble = target;
 		return this.PostEventInternal(@event, (ftransformDouble != null) ? new OneOf<AActor, UAkComponent, FTransformDouble>?(ftransformDouble.GetValueOrDefault()) : null, args);
 	}
 
-	// Token: 0x060000C3 RID: 195 RVA: 0x00006924 File Offset: 0x00004B24
+	// Token: 0x060000C5 RID: 197 RVA: 0x0000669C File Offset: 0x0000489C
 	private int PostEventInternal(string @event, [Nullable(new byte[]
 	{
 		0,
@@ -73,14 +73,14 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000C4 RID: 196 RVA: 0x000069A0 File Offset: 0x00004BA0
+	// Token: 0x060000C6 RID: 198 RVA: 0x00006718 File Offset: 0x00004918
 	[NullableContext(0)]
 	private UniTask<int> PostEventImpl([Nullable(1)] string @event, [Nullable(new byte[]
 	{
 		0,
 		1,
 		1
-	})] OneOf<AActor, UAkComponent, FTransformDouble>? target, PostEventArgs args)
+	})] OneOf<AActor, UAkComponent, FTransformDouble>? target, PostEventArgs args, int handle)
 	{
 		AudioSystem.<PostEventImpl>d__12 <PostEventImpl>d__;
 		<PostEventImpl>d__.<>t__builder = AsyncUniTaskMethodBuilder<int>.Create();
@@ -93,7 +93,7 @@ public class AudioSystem : Singleton, ITickable
 		return <PostEventImpl>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060000C5 RID: 197 RVA: 0x000069FB File Offset: 0x00004BFB
+	// Token: 0x060000C7 RID: 199 RVA: 0x00006773 File Offset: 0x00004973
 	private unsafe FOnAkPostEventCallback CreateCallbackDelegate(string @event, [Nullable(2)] Action<EAkCallbackType, UAkCallbackInfo> handler)
 	{
 		Action<EAkCallbackType, UAkCallbackInfo> callback = null;
@@ -132,7 +132,7 @@ public class AudioSystem : Singleton, ITickable
 		return DelegateUtils.ToManualReleaseDelegate<FOnAkPostEventCallback>(callback);
 	}
 
-	// Token: 0x060000C6 RID: 198 RVA: 0x00006A3C File Offset: 0x00004C3C
+	// Token: 0x060000C8 RID: 200 RVA: 0x000067B4 File Offset: 0x000049B4
 	public void ExecuteAction(string @event, EAudioActionType action, ExecuteActionArgs? args = null)
 	{
 		if (string.IsNullOrEmpty(@event))
@@ -154,7 +154,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000C7 RID: 199 RVA: 0x00006AD0 File Offset: 0x00004CD0
+	// Token: 0x060000C9 RID: 201 RVA: 0x00006848 File Offset: 0x00004A48
 	public void ExecuteAction(int handle, EAudioActionType action, ExecuteActionArgs? args = null)
 	{
 		if (action == EAudioActionType.Stop && this.ExecutionQueue.Cancel(handle))
@@ -178,7 +178,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000C8 RID: 200 RVA: 0x00006B34 File Offset: 0x00004D34
+	// Token: 0x060000CA RID: 202 RVA: 0x000068AC File Offset: 0x00004AAC
 	public void SeekOnEvent(string @event, int position, SeekOnEventArgs? args = null)
 	{
 		if (string.IsNullOrEmpty(@event))
@@ -216,7 +216,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000C9 RID: 201 RVA: 0x00006BD0 File Offset: 0x00004DD0
+	// Token: 0x060000CB RID: 203 RVA: 0x00006948 File Offset: 0x00004B48
 	public unsafe int? GetSourcePlayPosition(int handle, bool needLog = false)
 	{
 		int? num = null;
@@ -254,7 +254,7 @@ public class AudioSystem : Singleton, ITickable
 		return null;
 	}
 
-	// Token: 0x060000CA RID: 202 RVA: 0x00006CC0 File Offset: 0x00004EC0
+	// Token: 0x060000CC RID: 204 RVA: 0x00006A38 File Offset: 0x00004C38
 	public unsafe int? GetSourcePlayPositionWithExtrapolation(int handle, bool needLog = false)
 	{
 		int? num = null;
@@ -292,7 +292,7 @@ public class AudioSystem : Singleton, ITickable
 		return null;
 	}
 
-	// Token: 0x060000CB RID: 203 RVA: 0x00006DB0 File Offset: 0x00004FB0
+	// Token: 0x060000CD RID: 205 RVA: 0x00006B28 File Offset: 0x00004D28
 	public unsafe void SetSwitch(string group, string state, AActor actor)
 	{
 		IReadOnlySet<string> readOnlySet;
@@ -330,7 +330,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000CC RID: 204 RVA: 0x00006EA4 File Offset: 0x000050A4
+	// Token: 0x060000CE RID: 206 RVA: 0x00006C1C File Offset: 0x00004E1C
 	public unsafe void SetState(string group, string state, bool check = true)
 	{
 		if (check)
@@ -366,7 +366,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000CD RID: 205 RVA: 0x00006F98 File Offset: 0x00005198
+	// Token: 0x060000CF RID: 207 RVA: 0x00006D10 File Offset: 0x00004F10
 	public void SetRtpcValue(string rtpc, float value, SetRtpcValueArgs? args = null)
 	{
 		SetRtpcValueArgs actualArgs = args.GetValueOrDefault();
@@ -383,7 +383,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000CE RID: 206 RVA: 0x00007000 File Offset: 0x00005200
+	// Token: 0x060000D0 RID: 208 RVA: 0x00006D78 File Offset: 0x00004F78
 	public void StopAll(AActor actor)
 	{
 		this.ExecutionQueue.Enqueue(delegate(int handle)
@@ -398,7 +398,7 @@ public class AudioSystem : Singleton, ITickable
 		});
 	}
 
-	// Token: 0x060000CF RID: 207 RVA: 0x00007034 File Offset: 0x00005234
+	// Token: 0x060000D1 RID: 209 RVA: 0x00006DAC File Offset: 0x00004FAC
 	[NullableContext(2)]
 	public UAkComponent GetAkComponent([Nullable(new byte[]
 	{
@@ -420,7 +420,7 @@ public class AudioSystem : Singleton, ITickable
 		return this.GetAkComponentInternal(target, socketName2, onCreated);
 	}
 
-	// Token: 0x060000D0 RID: 208 RVA: 0x00007078 File Offset: 0x00005278
+	// Token: 0x060000D2 RID: 210 RVA: 0x00006DF0 File Offset: 0x00004FF0
 	[NullableContext(2)]
 	public UAkComponent GetAkComponent([Nullable(new byte[]
 	{
@@ -437,7 +437,7 @@ public class AudioSystem : Singleton, ITickable
 		return this.GetAkComponentInternal(target, socketName ?? FName.NAME_None, onCreated);
 	}
 
-	// Token: 0x060000D1 RID: 209 RVA: 0x000070A8 File Offset: 0x000052A8
+	// Token: 0x060000D3 RID: 211 RVA: 0x00006E20 File Offset: 0x00005020
 	[NullableContext(2)]
 	private UAkComponent GetAkComponentInternal([Nullable(new byte[]
 	{
@@ -473,19 +473,19 @@ public class AudioSystem : Singleton, ITickable
 		return uakComponent;
 	}
 
-	// Token: 0x060000D2 RID: 210 RVA: 0x00007118 File Offset: 0x00005318
+	// Token: 0x060000D4 RID: 212 RVA: 0x00006E90 File Offset: 0x00005090
 	public void PreloadAudioEvent(string @event)
 	{
 		this.AudioEventPool.PreloadAudioEvent(@event);
 	}
 
-	// Token: 0x060000D3 RID: 211 RVA: 0x00007126 File Offset: 0x00005326
+	// Token: 0x060000D5 RID: 213 RVA: 0x00006E9E File Offset: 0x0000509E
 	public void ReleaseAudioEvent(string @event)
 	{
 		this.AudioEventPool.ReleaseAudioEvent(@event);
 	}
 
-	// Token: 0x060000D4 RID: 212 RVA: 0x00007134 File Offset: 0x00005334
+	// Token: 0x060000D6 RID: 214 RVA: 0x00006EAC File Offset: 0x000050AC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -502,7 +502,7 @@ public class AudioSystem : Singleton, ITickable
 		return <GetAudioEvent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060000D5 RID: 213 RVA: 0x00007180 File Offset: 0x00005380
+	// Token: 0x060000D7 RID: 215 RVA: 0x00006EF8 File Offset: 0x000050F8
 	[return: Nullable(2)]
 	public unsafe string parseAudioEventPathInConfig(string path)
 	{
@@ -525,7 +525,7 @@ public class AudioSystem : Singleton, ITickable
 		return match.Groups["name"].Value;
 	}
 
-	// Token: 0x060000D6 RID: 214 RVA: 0x00007218 File Offset: 0x00005418
+	// Token: 0x060000D8 RID: 216 RVA: 0x00006F90 File Offset: 0x00005190
 	[return: Nullable(2)]
 	public string parseAudioEventPath(string source)
 	{
@@ -541,7 +541,7 @@ public class AudioSystem : Singleton, ITickable
 		return array[array.Length - 1].ToLower();
 	}
 
-	// Token: 0x060000D7 RID: 215 RVA: 0x0000724C File Offset: 0x0000544C
+	// Token: 0x060000D9 RID: 217 RVA: 0x00006FC4 File Offset: 0x000051C4
 	[return: Nullable(2)]
 	public string parseAudioEventPath(TSoftObjectPtr<UAkAudioEvent> source)
 	{
@@ -550,7 +550,7 @@ public class AudioSystem : Singleton, ITickable
 	}
 
 	// Token: 0x1700000E RID: 14
-	// (get) Token: 0x060000D8 RID: 216 RVA: 0x00007267 File Offset: 0x00005467
+	// (get) Token: 0x060000DA RID: 218 RVA: 0x00006FDF File Offset: 0x000051DF
 	public static AudioSystem Instance
 	{
 		get
@@ -564,12 +564,12 @@ public class AudioSystem : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x060000D9 RID: 217 RVA: 0x0000728A File Offset: 0x0000548A
+	// Token: 0x060000DB RID: 219 RVA: 0x00007002 File Offset: 0x00005202
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060000DA RID: 218 RVA: 0x0000728C File Offset: 0x0000548C
+	// Token: 0x060000DC RID: 220 RVA: 0x00007004 File Offset: 0x00005204
 	public static void ResetStaticDefaultValue()
 	{
 		AudioSystem instance = AudioSystem._instance;
@@ -580,31 +580,31 @@ public class AudioSystem : Singleton, ITickable
 		AudioSystem._instance = null;
 	}
 
-	// Token: 0x060000DB RID: 219 RVA: 0x000072A5 File Offset: 0x000054A5
+	// Token: 0x060000DD RID: 221 RVA: 0x0000701D File Offset: 0x0000521D
 	static AudioSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AudioSystem.CreateStaticDefaultValue), new Action(AudioSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040000B3 RID: 179
+	// Token: 0x040000B4 RID: 180
 	public const int INVALID_PLAYING_ID = 0;
 
-	// Token: 0x040000B4 RID: 180
+	// Token: 0x040000B5 RID: 181
 	public const int INVALID_AUDIO_EVENT_VALUE = 0;
 
-	// Token: 0x040000B5 RID: 181
+	// Token: 0x040000B6 RID: 182
 	private readonly AudioEventPool AudioEventPool = new AudioEventPool();
 
-	// Token: 0x040000B6 RID: 182
+	// Token: 0x040000B7 RID: 183
 	private readonly ExecutionQueue ExecutionQueue = new ExecutionQueue();
 
-	// Token: 0x040000B7 RID: 183
+	// Token: 0x040000B8 RID: 184
 	private readonly Dictionary<int, int> HandleToPlayingId = new Dictionary<int, int>();
 
-	// Token: 0x040000B8 RID: 184
+	// Token: 0x040000B9 RID: 185
 	private readonly Dictionary<int, int> PlayingIdToHandle = new Dictionary<int, int>();
 
-	// Token: 0x040000B9 RID: 185
+	// Token: 0x040000BA RID: 186
 	[Nullable(2)]
 	private static AudioSystem _instance;
 }

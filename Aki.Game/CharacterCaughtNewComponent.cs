@@ -9,12 +9,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02003052 RID: 12370
+// Token: 0x020025A8 RID: 9640
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterCaughtNewComponent : EntityComponent
 {
-	// Token: 0x0601A499 RID: 107673 RVA: 0x006F3F09 File Offset: 0x006F2109
+	// Token: 0x06017E2B RID: 97835 RVA: 0x0071B15D File Offset: 0x0071935D
 	protected override bool OnInit()
 	{
 		this.TagComponent = base.Entity.GetComponent<BaseTagComponent>();
@@ -22,7 +22,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A49A RID: 107674 RVA: 0x006F3F30 File Offset: 0x006F2130
+	// Token: 0x06017E2C RID: 97836 RVA: 0x0071B184 File Offset: 0x00719384
 	protected override bool OnStart()
 	{
 		this.UnifiedStateComponent = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -53,7 +53,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A49B RID: 107675 RVA: 0x006F4004 File Offset: 0x006F2204
+	// Token: 0x06017E2D RID: 97837 RVA: 0x0071B258 File Offset: 0x00719458
 	protected override bool OnEnd()
 	{
 		this.StopCaughtMontage();
@@ -86,13 +86,13 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A49C RID: 107676 RVA: 0x006F4170 File Offset: 0x006F2370
+	// Token: 0x06017E2E RID: 97838 RVA: 0x0071B3C4 File Offset: 0x007195C4
 	protected override void OnActivate()
 	{
 		this.DtCaughtInfo = WorldConfig.Instance.GetCaughtDataInfo();
 	}
 
-	// Token: 0x0601A49D RID: 107677 RVA: 0x006F4184 File Offset: 0x006F2384
+	// Token: 0x06017E2F RID: 97839 RVA: 0x0071B3D8 File Offset: 0x007195D8
 	protected override void OnChangeTimeDilation(float timeDilation)
 	{
 		PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -100,7 +100,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.CustomTimeDilationSeconds = (double)(timeDilation * num) * TimeUtil.Instance.Millisecond;
 	}
 
-	// Token: 0x0601A49E RID: 107678 RVA: 0x006F41C4 File Offset: 0x006F23C4
+	// Token: 0x06017E30 RID: 97840 RVA: 0x0071B418 File Offset: 0x00719618
 	protected override void OnTick(float delta)
 	{
 		double num = (double)delta * this.CustomTimeDilationSeconds;
@@ -195,7 +195,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.CorrectPosition();
 	}
 
-	// Token: 0x0601A49F RID: 107679 RVA: 0x006F4530 File Offset: 0x006F2730
+	// Token: 0x06017E31 RID: 97841 RVA: 0x0071B784 File Offset: 0x00719984
 	private void RecordCollisionInfo()
 	{
 		for (int i = 0; i < 33; i++)
@@ -205,7 +205,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4A0 RID: 107680 RVA: 0x006F4574 File Offset: 0x006F2774
+	// Token: 0x06017E32 RID: 97842 RVA: 0x0071B7C8 File Offset: 0x007199C8
 	private void SetCaughtLevel()
 	{
 		EEntityType entityType = base.Entity.GetComponent<CreatureDataComponent>().GetEntityType();
@@ -218,7 +218,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.CaughtLevel = new int?(10);
 	}
 
-	// Token: 0x0601A4A1 RID: 107681 RVA: 0x006F45CC File Offset: 0x006F27CC
+	// Token: 0x06017E33 RID: 97843 RVA: 0x0071B820 File Offset: 0x00719A20
 	private bool IsTargetContainsTags(TArray<FGameplayTag> tags, Entity targetEntity)
 	{
 		if (tags == null)
@@ -241,7 +241,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601A4A2 RID: 107682 RVA: 0x006F461C File Offset: 0x006F281C
+	// Token: 0x06017E34 RID: 97844 RVA: 0x0071B870 File Offset: 0x00719A70
 	private bool IsSameTarget(bool caughtAimTarget, int entityId)
 	{
 		if (!caughtAimTarget)
@@ -253,7 +253,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return num.GetValueOrDefault() == entityId & num != null;
 	}
 
-	// Token: 0x0601A4A3 RID: 107683 RVA: 0x006F4674 File Offset: 0x006F2874
+	// Token: 0x06017E35 RID: 97845 RVA: 0x0071B8C8 File Offset: 0x00719AC8
 	private unsafe void SetCollisionResponseToChannel(ECollisionChannel collisionChannel, ECollisionResponse collisionResponse)
 	{
 		this.ActorComp.Actor.CapsuleComponent.SetCollisionResponseToChannel(collisionChannel, collisionResponse);
@@ -267,7 +267,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		instance.Info(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601A4A4 RID: 107684 RVA: 0x006F46FC File Offset: 0x006F28FC
+	// Token: 0x06017E36 RID: 97846 RVA: 0x0071B950 File Offset: 0x00719B50
 	private void SetAllCollisionResponseToChannel([Nullable(new byte[]
 	{
 		2,
@@ -290,7 +290,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4A5 RID: 107685 RVA: 0x006F4764 File Offset: 0x006F2964
+	// Token: 0x06017E37 RID: 97847 RVA: 0x0071B9C0 File Offset: 0x00719BC0
 	private void ResetAllCollisionResponseToChannel()
 	{
 		if (this.CollisionResponseToChannel == null)
@@ -304,7 +304,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4A6 RID: 107686 RVA: 0x006F47E0 File Offset: 0x006F29E0
+	// Token: 0x06017E38 RID: 97848 RVA: 0x0071BA3C File Offset: 0x00719C3C
 	private void PlayCaughtMontage(long? preMessageId)
 	{
 		if (this.CaughtBindingInfo == null)
@@ -336,7 +336,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4A7 RID: 107687 RVA: 0x006F48AC File Offset: 0x006F2AAC
+	// Token: 0x06017E39 RID: 97849 RVA: 0x0071BB08 File Offset: 0x00719D08
 	private void StopCaughtMontage()
 	{
 		UAnimMontage caughtMontage = this.CaughtMontage;
@@ -368,12 +368,12 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4A8 RID: 107688 RVA: 0x006F4928 File Offset: 0x006F2B28
+	// Token: 0x06017E3A RID: 97850 RVA: 0x0071BB84 File Offset: 0x00719D84
 	private void SetLocationToSocketLocation(global::Vector localSocketLocation, global::Vector caughtSocketLocation)
 	{
 	}
 
-	// Token: 0x0601A4A9 RID: 107689 RVA: 0x006F492C File Offset: 0x006F2B2C
+	// Token: 0x06017E3B RID: 97851 RVA: 0x0071BB88 File Offset: 0x00719D88
 	private void SetRotator(CaughtBindingInfo info)
 	{
 		global::Vector vector = global::Vector.Create();
@@ -420,19 +420,19 @@ public class CharacterCaughtNewComponent : EntityComponent
 		actorComp.SetActorRotation(this.TmpRotator.ToUeRotator(), "抓取", false);
 	}
 
-	// Token: 0x0601A4AA RID: 107690 RVA: 0x006F4AAA File Offset: 0x006F2CAA
+	// Token: 0x06017E3C RID: 97852 RVA: 0x0071BD06 File Offset: 0x00719F06
 	private FTransformDouble? GetPointTransformBySpace(string socketName, ERelativeTransformSpace space)
 	{
 		return SkillUtils.GetTargetSocketTransform(base.Entity, socketName, space, "抓取", ESocketTransformDefault.None);
 	}
 
-	// Token: 0x0601A4AB RID: 107691 RVA: 0x006F4AC0 File Offset: 0x006F2CC0
+	// Token: 0x06017E3D RID: 97853 RVA: 0x0071BD1C File Offset: 0x00719F1C
 	private FVectorDouble? GetRefBoneWorldPosition(string boneName)
 	{
 		return new FVectorDouble?(this.ActorComp.SkeletalMesh.GetRefBoneWorldPosition(FNameUtil.GetDynamicFName(boneName) ?? FName.NAME_None));
 	}
 
-	// Token: 0x0601A4AC RID: 107692 RVA: 0x006F4B00 File Offset: 0x006F2D00
+	// Token: 0x06017E3E RID: 97854 RVA: 0x0071BD5C File Offset: 0x00719F5C
 	public unsafe void BeginCaughtTrigger(TArray<string> caughtIds, int skillId)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -474,7 +474,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4AD RID: 107693 RVA: 0x006F4C3C File Offset: 0x006F2E3C
+	// Token: 0x06017E3F RID: 97855 RVA: 0x0071BE98 File Offset: 0x0071A098
 	public void EndCaughtTrigger()
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -490,7 +490,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.CaughtTriggerInfos.Clear();
 	}
 
-	// Token: 0x0601A4AE RID: 107694 RVA: 0x006F4CDC File Offset: 0x006F2EDC
+	// Token: 0x06017E40 RID: 97856 RVA: 0x0071BF38 File Offset: 0x0071A138
 	public ECaughtResultType CheckCaught(CaughtTriggerInfo info, Entity entity)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -524,19 +524,19 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return ECaughtResultType.Success;
 	}
 
-	// Token: 0x0601A4AF RID: 107695 RVA: 0x006F4E62 File Offset: 0x006F3062
+	// Token: 0x06017E41 RID: 97857 RVA: 0x0071C0BE File Offset: 0x0071A2BE
 	public void SetCaughtTriggerAnsInfo(long? anMessageId)
 	{
 		this.CaughtTriggerAnsMessageId = anMessageId;
 	}
 
-	// Token: 0x0601A4B0 RID: 107696 RVA: 0x006F4E6B File Offset: 0x006F306B
+	// Token: 0x06017E42 RID: 97858 RVA: 0x0071C0C7 File Offset: 0x0071A2C7
 	public void SetCaughtBindingAnsInfo(long? anMessageId)
 	{
 		this.CaughtBindingAnsMessageId = anMessageId;
 	}
 
-	// Token: 0x0601A4B1 RID: 107697 RVA: 0x006F4E74 File Offset: 0x006F3074
+	// Token: 0x06017E43 RID: 97859 RVA: 0x0071C0D0 File Offset: 0x0071A2D0
 	public unsafe void TryCaught(CaughtTriggerInfo info, Entity target)
 	{
 		switch (this.CheckCaught(info, target))
@@ -604,7 +604,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4B2 RID: 107698 RVA: 0x006F5020 File Offset: 0x006F3220
+	// Token: 0x06017E44 RID: 97860 RVA: 0x0071C27C File Offset: 0x0071A47C
 	public unsafe void BeginCaught(TArray<string> caughtIds, int skillId)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -674,7 +674,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4B3 RID: 107699 RVA: 0x006F52B0 File Offset: 0x006F34B0
+	// Token: 0x06017E45 RID: 97861 RVA: 0x0071C50C File Offset: 0x0071A70C
 	public unsafe void CaughtTarget(CaughtBindingInfo info, Entity target)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -698,7 +698,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		target.GetComponent<CharacterCaughtNewComponent>().BeginBeCaught(info, base.Entity);
 	}
 
-	// Token: 0x0601A4B4 RID: 107700 RVA: 0x006F539C File Offset: 0x006F359C
+	// Token: 0x06017E46 RID: 97862 RVA: 0x0071C5F8 File Offset: 0x0071A7F8
 	public void EndCaught()
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Caught, base.Entity, "结束抓取绑定器", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -727,7 +727,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.TagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.投技.抓取"]));
 	}
 
-	// Token: 0x0601A4B5 RID: 107701 RVA: 0x006F5554 File Offset: 0x006F3754
+	// Token: 0x06017E47 RID: 97863 RVA: 0x0071C7B0 File Offset: 0x0071A9B0
 	public void BeginBeCaught(CaughtBindingInfo info, Entity catcher)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -762,7 +762,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		CombatNet.Instance.Send(EPushMessageId.CaughtPush, base.Entity, caughtPush, null, null, null);
 	}
 
-	// Token: 0x0601A4B6 RID: 107702 RVA: 0x006F5704 File Offset: 0x006F3904
+	// Token: 0x06017E48 RID: 97864 RVA: 0x0071C960 File Offset: 0x0071AB60
 	private unsafe void BeginBeCaughtRemote(string caughtInfoId, Entity catcher)
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Caught, base.Entity, "远端被抓取", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -786,7 +786,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		component.AddPendingRemoteCaught(caughtInfoId, base.Entity);
 	}
 
-	// Token: 0x0601A4B7 RID: 107703 RVA: 0x006F57EC File Offset: 0x006F39EC
+	// Token: 0x06017E49 RID: 97865 RVA: 0x0071CA48 File Offset: 0x0071AC48
 	private unsafe void BeginBeCaughtInternal(CaughtBindingInfo info, Entity catcher, bool isRemote = false)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -881,7 +881,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		bpEventManager.抓取目标成功时.Broadcast(catcher.Id, base.Entity.Id, info.CaughtId);
 	}
 
-	// Token: 0x0601A4B8 RID: 107704 RVA: 0x006F5BD8 File Offset: 0x006F3DD8
+	// Token: 0x06017E4A RID: 97866 RVA: 0x0071CE34 File Offset: 0x0071B034
 	public void EndBeCaught()
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Caught, base.Entity, "结束被抓取", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -904,14 +904,14 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4B9 RID: 107705 RVA: 0x006F5CA4 File Offset: 0x006F3EA4
+	// Token: 0x06017E4B RID: 97867 RVA: 0x0071CF00 File Offset: 0x0071B100
 	public void EndBeCaughtHandle()
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Caught, base.Entity, "远端结束被抓取", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.EndBeCaughtInternal();
 	}
 
-	// Token: 0x0601A4BA RID: 107706 RVA: 0x006F5CD8 File Offset: 0x006F3ED8
+	// Token: 0x06017E4C RID: 97868 RVA: 0x0071CF34 File Offset: 0x0071B134
 	public unsafe void EndBeCaughtInternal()
 	{
 		if (!this.BeCaught)
@@ -967,7 +967,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		instance.Info(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601A4BB RID: 107707 RVA: 0x006F5EA8 File Offset: 0x006F40A8
+	// Token: 0x06017E4D RID: 97869 RVA: 0x0071D104 File Offset: 0x0071B304
 	private unsafe void EndBeCaughtFixPos()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -1053,7 +1053,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4BC RID: 107708 RVA: 0x006F6304 File Offset: 0x006F4504
+	// Token: 0x06017E4E RID: 97870 RVA: 0x0071D560 File Offset: 0x0071B760
 	private void GetLockPosInEntity(Entity entity, global::Vector outVec)
 	{
 		CharacterAnimationComponent component = entity.GetComponent<CharacterAnimationComponent>();
@@ -1065,7 +1065,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		outVec.DeepCopy(entity.GetComponent<BaseActorComponent>().ActorLocationProxy);
 	}
 
-	// Token: 0x0601A4BD RID: 107709 RVA: 0x006F6334 File Offset: 0x006F4534
+	// Token: 0x06017E4F RID: 97871 RVA: 0x0071D590 File Offset: 0x0071B790
 	private bool IsBlock(Entity entity)
 	{
 		UKuroHitResult hitResult = this.CameraSphereTrace.HitResult;
@@ -1084,7 +1084,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return this.IsBeginBlock;
 	}
 
-	// Token: 0x0601A4BE RID: 107710 RVA: 0x006F63EF File Offset: 0x006F45EF
+	// Token: 0x06017E50 RID: 97872 RVA: 0x0071D64B File Offset: 0x0071B84B
 	public void CorrectPosition()
 	{
 		Entity entity = EntitySystem.Instance.Get(this.CatcherId);
@@ -1094,7 +1094,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4BF RID: 107711 RVA: 0x006F6420 File Offset: 0x006F4620
+	// Token: 0x06017E51 RID: 97873 RVA: 0x0071D67C File Offset: 0x0071B87C
 	private void InitTraceElements()
 	{
 		this.CameraSphereTrace = new UTraceSphereElement();
@@ -1110,7 +1110,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.CameraSphereTrace.AddObjectTypeQuery(KuroObjectTypeQuery.WorldStaticIgnoreBullet);
 	}
 
-	// Token: 0x0601A4C0 RID: 107712 RVA: 0x006F64B5 File Offset: 0x006F46B5
+	// Token: 0x06017E52 RID: 97874 RVA: 0x0071D711 File Offset: 0x0071B911
 	private void ClearTraceElements()
 	{
 		if (this.CameraSphereTrace != null)
@@ -1120,7 +1120,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4C1 RID: 107713 RVA: 0x006F64D4 File Offset: 0x006F46D4
+	// Token: 0x06017E53 RID: 97875 RVA: 0x0071D730 File Offset: 0x0071B930
 	protected global::Vector SetAddRadiusLocation(global::Vector dir, global::Vector location, float radius)
 	{
 		global::Vector vector = global::Vector.Create();
@@ -1133,7 +1133,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		return vector2;
 	}
 
-	// Token: 0x0601A4C2 RID: 107714 RVA: 0x006F6520 File Offset: 0x006F4720
+	// Token: 0x06017E54 RID: 97876 RVA: 0x0071D77C File Offset: 0x0071B97C
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.CaughtNotify, true, false)]
 	public unsafe static void CaughtNotify(Entity entity, [Nullable(1)] CaughtNotify data, CombatCommon combatCommon = null)
@@ -1163,7 +1163,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4C3 RID: 107715 RVA: 0x006F6610 File Offset: 0x006F4810
+	// Token: 0x06017E55 RID: 97877 RVA: 0x0071D86C File Offset: 0x0071BA6C
 	private void OnCatcherForceRemoveImpl(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if ((removeType == ERemoveEntityType.RemoveTypeForce || removeType == ERemoveEntityType.RemoveTypeNormal) && this.BeCaught)
@@ -1176,7 +1176,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4C4 RID: 107716 RVA: 0x006F6664 File Offset: 0x006F4864
+	// Token: 0x06017E56 RID: 97878 RVA: 0x0071D8C0 File Offset: 0x0071BAC0
 	private void DebugDrawBindBulletSocketCoords(CaughtBindingInfo bindInfo)
 	{
 		BulletEntity bulletEntity = bindInfo.BulletEntity;
@@ -1211,7 +1211,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4C5 RID: 107717 RVA: 0x006F6778 File Offset: 0x006F4978
+	// Token: 0x06017E57 RID: 97879 RVA: 0x0071D9D4 File Offset: 0x0071BBD4
 	private void DebugDrawLocationInfo([Nullable(2)] AActor baseActor, FVectorDouble? location, string info, int size, FLinearColor color)
 	{
 		if (location == null)
@@ -1222,7 +1222,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		UKismetSystemLibrary.D_DrawDebugString(GlobalData.World, location.Value, info, baseActor, new FLinearColor?(color), 16f);
 	}
 
-	// Token: 0x0601A4C6 RID: 107718 RVA: 0x006F67D8 File Offset: 0x006F49D8
+	// Token: 0x06017E58 RID: 97880 RVA: 0x0071DA34 File Offset: 0x0071BC34
 	private void AddPendingCaught(string caughtId, Entity target)
 	{
 		ValueTuple<Entity, long, float> valueTuple;
@@ -1253,7 +1253,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.PendingCaughtList[caughtId] = new ValueTuple<Entity, long, float>(target, (long)Time.Instance.NowSeconds, 0f);
 	}
 
-	// Token: 0x0601A4C7 RID: 107719 RVA: 0x006F68A8 File Offset: 0x006F4AA8
+	// Token: 0x06017E59 RID: 97881 RVA: 0x0071DB04 File Offset: 0x0071BD04
 	private void RemovePendingCaught(string caughtId, string reason)
 	{
 		ValueTuple<Entity, long, float> valueTuple;
@@ -1275,7 +1275,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		component.RemoveCaughtPlayerInputLimit(reason);
 	}
 
-	// Token: 0x0601A4C8 RID: 107720 RVA: 0x006F68F0 File Offset: 0x006F4AF0
+	// Token: 0x06017E5A RID: 97882 RVA: 0x0071DB4C File Offset: 0x0071BD4C
 	private void ClearPendingCaughtList(string reason)
 	{
 		foreach (string caughtId in new List<string>(this.PendingCaughtList.Keys))
@@ -1284,7 +1284,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4C9 RID: 107721 RVA: 0x006F6950 File Offset: 0x006F4B50
+	// Token: 0x06017E5B RID: 97883 RVA: 0x0071DBAC File Offset: 0x0071BDAC
 	private void AddPendingRemoteCaught(string caughtId, Entity target)
 	{
 		ValueTuple<Entity, long, float> valueTuple;
@@ -1315,7 +1315,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		this.PendingRemoteCaughtList[caughtId] = new ValueTuple<Entity, long, float>(target, (long)Time.Instance.NowSeconds, 0f);
 	}
 
-	// Token: 0x0601A4CA RID: 107722 RVA: 0x006F6A20 File Offset: 0x006F4C20
+	// Token: 0x06017E5C RID: 97884 RVA: 0x0071DC7C File Offset: 0x0071BE7C
 	private void RemovePendingRemoteCaught(string caughtId, string reason)
 	{
 		ValueTuple<Entity, long, float> valueTuple;
@@ -1337,7 +1337,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		component.RemoveCaughtPlayerInputLimit(reason);
 	}
 
-	// Token: 0x0601A4CB RID: 107723 RVA: 0x006F6A68 File Offset: 0x006F4C68
+	// Token: 0x06017E5D RID: 97885 RVA: 0x0071DCC4 File Offset: 0x0071BEC4
 	private void ClearPendingRemoteCaughtList(string reason)
 	{
 		foreach (string caughtId in new List<string>(this.PendingRemoteCaughtList.Keys))
@@ -1346,7 +1346,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4CC RID: 107724 RVA: 0x006F6AC8 File Offset: 0x006F4CC8
+	// Token: 0x06017E5E RID: 97886 RVA: 0x0071DD24 File Offset: 0x0071BF24
 	private unsafe void AddCaughtPlayerInputLimit(string reason)
 	{
 		this.CaughtPlayerInputLimitCount++;
@@ -1365,7 +1365,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		instance.Info(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601A4CD RID: 107725 RVA: 0x006F6B58 File Offset: 0x006F4D58
+	// Token: 0x06017E5F RID: 97887 RVA: 0x0071DDB4 File Offset: 0x0071BFB4
 	private unsafe void RemoveCaughtPlayerInputLimit(string reason)
 	{
 		if (this.CaughtPlayerInputLimitCount <= 0)
@@ -1395,7 +1395,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		instance2.Info(flag2, entity2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601A4CE RID: 107726 RVA: 0x006F6C24 File Offset: 0x006F4E24
+	// Token: 0x06017E60 RID: 97888 RVA: 0x0071DE80 File Offset: 0x0071C080
 	private void ClearCaughtPlayerInputLimit(string reason)
 	{
 		if (this.CaughtPlayerInputLimitCount <= 0)
@@ -1413,7 +1413,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		instance.Info(flag, entity, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601A4CF RID: 107727 RVA: 0x006F6C7C File Offset: 0x006F4E7C
+	// Token: 0x06017E61 RID: 97889 RVA: 0x0071DED8 File Offset: 0x0071C0D8
 	private void UpdatePlayerInputLimitTags(int deltaCount)
 	{
 		BaseTagComponent baseTagComponent = this.TagComponent ?? base.Entity.GetComponent<BaseTagComponent>();
@@ -1427,7 +1427,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A4D0 RID: 107728 RVA: 0x006F6CEC File Offset: 0x006F4EEC
+	// Token: 0x06017E62 RID: 97890 RVA: 0x0071DF48 File Offset: 0x0071C148
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1435,274 +1435,247 @@ public class CharacterCaughtNewComponent : EntityComponent
 			return false;
 		}
 		CharacterCaughtNewComponent characterCaughtNewComponent = (CharacterCaughtNewComponent)componentTemplate;
-		if (base.CanResetComponentProperty("BuffComponent"))
+		if (characterCaughtNewComponent.BuffComponent == null)
 		{
-			if (characterCaughtNewComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			this.BuffComponent = null;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
-		{
-			if (characterCaughtNewComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
-		{
-			if (characterCaughtNewComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterCaughtNewComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkillComp"))
-		{
-			if (characterCaughtNewComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (characterCaughtNewComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CreatureProperty"))
-		{
-			if (characterCaughtNewComponent.CreatureProperty == null)
-			{
-				this.CreatureProperty = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SEntityProperty>(this.CreatureProperty), "CreatureProperty"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DieTagListenTask"))
-		{
-			if (characterCaughtNewComponent.DieTagListenTask == null)
-			{
-				this.DieTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.DieTagListenTask), "DieTagListenTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CaughtBindingInfo"))
-		{
-			if (characterCaughtNewComponent.CaughtBindingInfo == null)
-			{
-				this.CaughtBindingInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CaughtBindingInfo>(this.CaughtBindingInfo), "CaughtBindingInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CaughtMontage"))
-		{
-			if (characterCaughtNewComponent.CaughtMontage == null)
-			{
-				this.CaughtMontage = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimMontage>(this.CaughtMontage), "CaughtMontage"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CaughtLevel"))
-		{
-			this.CaughtLevel = characterCaughtNewComponent.CaughtLevel;
-		}
-		if (base.CanResetComponentProperty("CatcherId"))
-		{
-			this.CatcherId = characterCaughtNewComponent.CatcherId;
-		}
-		if (base.CanResetComponentProperty("MovePosition") && characterCaughtNewComponent.MovePosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MovePosition), "MovePosition"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator") && characterCaughtNewComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+		if (characterCaughtNewComponent.TagComponent == null)
+		{
+			this.TagComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CaughtTriggerInfos") && characterCaughtNewComponent.CaughtTriggerInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, CaughtTriggerInfo>>(this.CaughtTriggerInfos), "CaughtTriggerInfos"))
+		if (characterCaughtNewComponent.UnifiedStateComponent == null)
+		{
+			this.UnifiedStateComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CaughtBindingInfos") && characterCaughtNewComponent.CaughtBindingInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, CaughtBindingInfo>>(this.CaughtBindingInfos), "CaughtBindingInfos"))
+		if (characterCaughtNewComponent.MoveComp == null)
+		{
+			this.MoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DtCaughtInfo"))
+		if (characterCaughtNewComponent.SkillComp == null)
 		{
-			if (characterCaughtNewComponent.DtCaughtInfo == null)
-			{
-				this.DtCaughtInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UDataTable>(this.DtCaughtInfo), "DtCaughtInfo"))
-			{
-				return false;
-			}
+			this.SkillComp = null;
 		}
-		if (base.CanResetComponentProperty("CustomTimeDilationSeconds"))
-		{
-			this.CustomTimeDilationSeconds = characterCaughtNewComponent.CustomTimeDilationSeconds;
-		}
-		if (base.CanResetComponentProperty("CollisionResponseToChannel") && characterCaughtNewComponent.CollisionResponseToChannel != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECollisionChannel, ECollisionResponse>>(this.CollisionResponseToChannel), "CollisionResponseToChannel"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DieTagListenTaskCallback"))
+		if (characterCaughtNewComponent.ActorComp == null)
 		{
-			if (characterCaughtNewComponent.DieTagListenTaskCallback == null)
-			{
-				this.DieTagListenTaskCallback = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent.TTagSwitchedCallback>(this.DieTagListenTaskCallback), "DieTagListenTaskCallback"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("InCaught"))
-		{
-			this.InCaught = characterCaughtNewComponent.InCaught;
-		}
-		if (base.CanResetComponentProperty("BeCaught"))
-		{
-			this.BeCaught = characterCaughtNewComponent.BeCaught;
-		}
-		if (base.CanResetComponentProperty("DisableCorrectPosition"))
-		{
-			this.DisableCorrectPosition = characterCaughtNewComponent.DisableCorrectPosition;
-		}
-		if (base.CanResetComponentProperty("RemoteBeCaught"))
-		{
-			this.RemoteBeCaught = characterCaughtNewComponent.RemoteBeCaught;
-		}
-		if (base.CanResetComponentProperty("PendingCaughtList"))
-		{
-			if (characterCaughtNewComponent.PendingCaughtList == null)
-			{
-				this.PendingCaughtList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, ValueTuple<Entity, long, float>>>(this.PendingCaughtList), "PendingCaughtList"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PendingRemoteCaughtList") && characterCaughtNewComponent.PendingRemoteCaughtList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, ValueTuple<Entity, long, float>>>(this.PendingRemoteCaughtList), "PendingRemoteCaughtList"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CaughtPlayerInputLimitCount"))
+		if (characterCaughtNewComponent.CreatureProperty == null)
 		{
-			this.CaughtPlayerInputLimitCount = characterCaughtNewComponent.CaughtPlayerInputLimitCount;
+			this.CreatureProperty = null;
 		}
-		if (base.CanResetComponentProperty("SkillId"))
-		{
-			this.SkillId = characterCaughtNewComponent.SkillId;
-		}
-		if (base.CanResetComponentProperty("CaughtTriggerAnsMessageId"))
-		{
-			this.CaughtTriggerAnsMessageId = characterCaughtNewComponent.CaughtTriggerAnsMessageId;
-		}
-		if (base.CanResetComponentProperty("CaughtBindingAnsMessageId"))
-		{
-			this.CaughtBindingAnsMessageId = characterCaughtNewComponent.CaughtBindingAnsMessageId;
-		}
-		if (base.CanResetComponentProperty("CameraSphereTrace"))
-		{
-			if (characterCaughtNewComponent.CameraSphereTrace == null)
-			{
-				this.CameraSphereTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.CameraSphereTrace), "CameraSphereTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BeginLocation") && characterCaughtNewComponent.BeginLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.BeginLocation), "BeginLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureProperty), "CreatureProperty"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("EndLocation") && characterCaughtNewComponent.EndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.EndLocation), "EndLocation"))
+		if (characterCaughtNewComponent.DieTagListenTask == null)
+		{
+			this.DieTagListenTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DieTagListenTask), "DieTagListenTask"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsHit"))
+		if (characterCaughtNewComponent.CaughtBindingInfo == null)
 		{
-			this.IsHit = characterCaughtNewComponent.IsHit;
+			this.CaughtBindingInfo = null;
 		}
-		if (base.CanResetComponentProperty("IsBeginBlock"))
-		{
-			this.IsBeginBlock = characterCaughtNewComponent.IsBeginBlock;
-		}
-		if (base.CanResetComponentProperty("HitDirection") && characterCaughtNewComponent.HitDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.HitDirection), "HitDirection"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CaughtBindingInfo), "CaughtBindingInfo"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentPosition"))
+		if (characterCaughtNewComponent.CaughtMontage == null)
 		{
-			if (characterCaughtNewComponent.CurrentPosition == null)
-			{
-				this.CurrentPosition = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CurrentPosition), "CurrentPosition"))
-			{
-				return false;
-			}
+			this.CaughtMontage = null;
 		}
-		if (base.CanResetComponentProperty("OnCatcherForceRemove"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CaughtMontage), "CaughtMontage"))
 		{
-			if (characterCaughtNewComponent.OnCatcherForceRemove == null)
-			{
-				this.OnCatcherForceRemove = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<ERemoveEntityType, EntityHandle>>(this.OnCatcherForceRemove), "OnCatcherForceRemove"))
-			{
-				return false;
-			}
+			return false;
+		}
+		this.CaughtLevel = characterCaughtNewComponent.CaughtLevel;
+		this.CatcherId = characterCaughtNewComponent.CatcherId;
+		if (characterCaughtNewComponent.MovePosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovePosition), "MovePosition"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.CaughtTriggerInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CaughtTriggerInfos), "CaughtTriggerInfos"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.CaughtBindingInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CaughtBindingInfos), "CaughtBindingInfos"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.DtCaughtInfo == null)
+		{
+			this.DtCaughtInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DtCaughtInfo), "DtCaughtInfo"))
+		{
+			return false;
+		}
+		this.CustomTimeDilationSeconds = characterCaughtNewComponent.CustomTimeDilationSeconds;
+		if (characterCaughtNewComponent.CollisionResponseToChannel != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CollisionResponseToChannel), "CollisionResponseToChannel"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.DieTagListenTaskCallback == null)
+		{
+			this.DieTagListenTaskCallback = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DieTagListenTaskCallback), "DieTagListenTaskCallback"))
+		{
+			return false;
+		}
+		this.InCaught = characterCaughtNewComponent.InCaught;
+		this.BeCaught = characterCaughtNewComponent.BeCaught;
+		this.DisableCorrectPosition = characterCaughtNewComponent.DisableCorrectPosition;
+		this.RemoteBeCaught = characterCaughtNewComponent.RemoteBeCaught;
+		if (characterCaughtNewComponent.PendingCaughtList == null)
+		{
+			this.PendingCaughtList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingCaughtList), "PendingCaughtList"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.PendingRemoteCaughtList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingRemoteCaughtList), "PendingRemoteCaughtList"))
+		{
+			return false;
+		}
+		this.CaughtPlayerInputLimitCount = characterCaughtNewComponent.CaughtPlayerInputLimitCount;
+		this.SkillId = characterCaughtNewComponent.SkillId;
+		this.CaughtTriggerAnsMessageId = characterCaughtNewComponent.CaughtTriggerAnsMessageId;
+		this.CaughtBindingAnsMessageId = characterCaughtNewComponent.CaughtBindingAnsMessageId;
+		if (characterCaughtNewComponent.CameraSphereTrace == null)
+		{
+			this.CameraSphereTrace = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraSphereTrace), "CameraSphereTrace"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.BeginLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BeginLocation), "BeginLocation"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.EndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndLocation), "EndLocation"))
+		{
+			return false;
+		}
+		this.IsHit = characterCaughtNewComponent.IsHit;
+		this.IsBeginBlock = characterCaughtNewComponent.IsBeginBlock;
+		if (characterCaughtNewComponent.HitDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitDirection), "HitDirection"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.CurrentPosition == null)
+		{
+			this.CurrentPosition = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentPosition), "CurrentPosition"))
+		{
+			return false;
+		}
+		if (characterCaughtNewComponent.OnCatcherForceRemove == null)
+		{
+			this.OnCatcherForceRemove = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnCatcherForceRemove), "OnCatcherForceRemove"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400C86D RID: 51309
+	// Token: 0x17002542 RID: 9538
+	// (get) Token: 0x06017E63 RID: 97891 RVA: 0x0071E3EC File Offset: 0x0071C5EC
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002543 RID: 9539
+	// (get) Token: 0x06017E64 RID: 97892 RVA: 0x0071E3EF File Offset: 0x0071C5EF
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002544 RID: 9540
+	// (get) Token: 0x06017E65 RID: 97893 RVA: 0x0071E3F2 File Offset: 0x0071C5F2
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002545 RID: 9541
+	// (get) Token: 0x06017E66 RID: 97894 RVA: 0x0071E3F5 File Offset: 0x0071C5F5
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002546 RID: 9542
+	// (get) Token: 0x06017E67 RID: 97895 RVA: 0x0071E3F8 File Offset: 0x0071C5F8
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002547 RID: 9543
+	// (get) Token: 0x06017E68 RID: 97896 RVA: 0x0071E3FB File Offset: 0x0071C5FB
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CC46 RID: 52294
 	[StaticVariableRuleIgnore]
 	private static readonly IReadOnlyList<int> PlayerInputLimitTagList = new <>z__ReadOnlyArray<int>(new int[]
 	{
@@ -1720,109 +1693,109 @@ public class CharacterCaughtNewComponent : EntityComponent
 		GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止瞄准开镜"]
 	});
 
-	// Token: 0x0400C86E RID: 51310
+	// Token: 0x0400CC47 RID: 52295
 	private const int DEFAULT_CAUGHT_LEVEL = 10;
 
-	// Token: 0x0400C86F RID: 51311
+	// Token: 0x0400CC48 RID: 52296
 	private const float ZOOM_PRECENTAGE = 0.1f;
 
-	// Token: 0x0400C870 RID: 51312
+	// Token: 0x0400CC49 RID: 52297
 	private const int ADD_LENGTH = 5;
 
-	// Token: 0x0400C871 RID: 51313
+	// Token: 0x0400CC4A RID: 52298
 	private const bool IS_DEBUG = false;
 
-	// Token: 0x0400C872 RID: 51314
+	// Token: 0x0400CC4B RID: 52299
 	private const string PROFILE_KEY2 = "FightCameraLogicComponent_CheckCollision_Camera";
 
-	// Token: 0x0400C873 RID: 51315
+	// Token: 0x0400CC4C RID: 52300
 	private const int DISABLE_CORRECT_MONSTER_ID = 125850038;
 
-	// Token: 0x0400C874 RID: 51316
+	// Token: 0x0400CC4D RID: 52301
 	[Nullable(2)]
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400C875 RID: 51317
+	// Token: 0x0400CC4E RID: 52302
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400C876 RID: 51318
+	// Token: 0x0400CC4F RID: 52303
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400C877 RID: 51319
+	// Token: 0x0400CC50 RID: 52304
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400C878 RID: 51320
+	// Token: 0x0400CC51 RID: 52305
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400C879 RID: 51321
+	// Token: 0x0400CC52 RID: 52306
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C87A RID: 51322
+	// Token: 0x0400CC53 RID: 52307
 	[Nullable(2)]
 	private SEntityProperty CreatureProperty;
 
-	// Token: 0x0400C87B RID: 51323
+	// Token: 0x0400CC54 RID: 52308
 	[Nullable(2)]
 	private ITagTask DieTagListenTask;
 
-	// Token: 0x0400C87C RID: 51324
+	// Token: 0x0400CC55 RID: 52309
 	[Nullable(2)]
 	private CaughtBindingInfo CaughtBindingInfo;
 
-	// Token: 0x0400C87D RID: 51325
+	// Token: 0x0400CC56 RID: 52310
 	[Nullable(2)]
 	private UAnimMontage CaughtMontage;
 
-	// Token: 0x0400C87E RID: 51326
+	// Token: 0x0400CC57 RID: 52311
 	private int? CaughtLevel;
 
-	// Token: 0x0400C87F RID: 51327
+	// Token: 0x0400CC58 RID: 52312
 	private int CatcherId;
 
-	// Token: 0x0400C880 RID: 51328
+	// Token: 0x0400CC59 RID: 52313
 	private readonly global::Vector MovePosition = global::Vector.Create();
 
-	// Token: 0x0400C881 RID: 51329
+	// Token: 0x0400CC5A RID: 52314
 	private readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400C882 RID: 51330
+	// Token: 0x0400CC5B RID: 52315
 	private readonly Dictionary<string, CaughtTriggerInfo> CaughtTriggerInfos = new Dictionary<string, CaughtTriggerInfo>();
 
-	// Token: 0x0400C883 RID: 51331
+	// Token: 0x0400CC5C RID: 52316
 	private readonly Dictionary<string, CaughtBindingInfo> CaughtBindingInfos = new Dictionary<string, CaughtBindingInfo>();
 
-	// Token: 0x0400C884 RID: 51332
+	// Token: 0x0400CC5D RID: 52317
 	[Nullable(2)]
 	private UDataTable DtCaughtInfo;
 
-	// Token: 0x0400C885 RID: 51333
+	// Token: 0x0400CC5E RID: 52318
 	private double CustomTimeDilationSeconds = TimeUtil.Instance.Millisecond;
 
-	// Token: 0x0400C886 RID: 51334
+	// Token: 0x0400CC5F RID: 52319
 	private readonly Dictionary<ECollisionChannel, ECollisionResponse> CollisionResponseToChannel = new Dictionary<ECollisionChannel, ECollisionResponse>();
 
-	// Token: 0x0400C887 RID: 51335
+	// Token: 0x0400CC60 RID: 52320
 	[Nullable(2)]
 	private BaseTagComponent.TTagSwitchedCallback DieTagListenTaskCallback;
 
-	// Token: 0x0400C888 RID: 51336
+	// Token: 0x0400CC61 RID: 52321
 	private bool InCaught;
 
-	// Token: 0x0400C889 RID: 51337
+	// Token: 0x0400CC62 RID: 52322
 	private bool BeCaught;
 
-	// Token: 0x0400C88A RID: 51338
+	// Token: 0x0400CC63 RID: 52323
 	private bool DisableCorrectPosition;
 
-	// Token: 0x0400C88B RID: 51339
+	// Token: 0x0400CC64 RID: 52324
 	private bool RemoteBeCaught;
 
-	// Token: 0x0400C88C RID: 51340
+	// Token: 0x0400CC65 RID: 52325
 	[Nullable(new byte[]
 	{
 		1,
@@ -1832,7 +1805,7 @@ public class CharacterCaughtNewComponent : EntityComponent
 	})]
 	public Dictionary<string, ValueTuple<Entity, long, float>> PendingCaughtList = new Dictionary<string, ValueTuple<Entity, long, float>>();
 
-	// Token: 0x0400C88D RID: 51341
+	// Token: 0x0400CC66 RID: 52326
 	[Nullable(new byte[]
 	{
 		1,
@@ -1842,41 +1815,41 @@ public class CharacterCaughtNewComponent : EntityComponent
 	})]
 	private readonly Dictionary<string, ValueTuple<Entity, long, float>> PendingRemoteCaughtList = new Dictionary<string, ValueTuple<Entity, long, float>>();
 
-	// Token: 0x0400C88E RID: 51342
+	// Token: 0x0400CC67 RID: 52327
 	private int CaughtPlayerInputLimitCount;
 
-	// Token: 0x0400C88F RID: 51343
+	// Token: 0x0400CC68 RID: 52328
 	private int SkillId;
 
-	// Token: 0x0400C890 RID: 51344
+	// Token: 0x0400CC69 RID: 52329
 	public long? CaughtTriggerAnsMessageId;
 
-	// Token: 0x0400C891 RID: 51345
+	// Token: 0x0400CC6A RID: 52330
 	public long? CaughtBindingAnsMessageId;
 
-	// Token: 0x0400C892 RID: 51346
+	// Token: 0x0400CC6B RID: 52331
 	[Nullable(2)]
 	private UTraceSphereElement CameraSphereTrace;
 
-	// Token: 0x0400C893 RID: 51347
+	// Token: 0x0400CC6C RID: 52332
 	private readonly global::Vector BeginLocation = global::Vector.Create();
 
-	// Token: 0x0400C894 RID: 51348
+	// Token: 0x0400CC6D RID: 52333
 	private readonly global::Vector EndLocation = global::Vector.Create();
 
-	// Token: 0x0400C895 RID: 51349
+	// Token: 0x0400CC6E RID: 52334
 	private bool IsHit;
 
-	// Token: 0x0400C896 RID: 51350
+	// Token: 0x0400CC6F RID: 52335
 	private bool IsBeginBlock;
 
-	// Token: 0x0400C897 RID: 51351
+	// Token: 0x0400CC70 RID: 52336
 	private readonly global::Vector HitDirection = global::Vector.Create();
 
-	// Token: 0x0400C898 RID: 51352
+	// Token: 0x0400CC71 RID: 52337
 	private global::Vector CurrentPosition = global::Vector.Create();
 
-	// Token: 0x0400C899 RID: 51353
+	// Token: 0x0400CC72 RID: 52338
 	[Nullable(new byte[]
 	{
 		2,

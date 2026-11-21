@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016FA RID: 5882
+	// Token: 0x02001876 RID: 6262
 	[EnumExtensions]
 	public enum EVisualNovelCgType
 	{
-		// Token: 0x04004F9F RID: 20383
-		LoadSpine,
-		// Token: 0x04004FA0 RID: 20384
+		// Token: 0x040053CC RID: 21452
+		LoadPrefab,
+		// Token: 0x040053CD RID: 21453
 		LoadImage,
-		// Token: 0x04004FA1 RID: 20385
+		// Token: 0x040053CE RID: 21454
 		Clean
 	}
 }

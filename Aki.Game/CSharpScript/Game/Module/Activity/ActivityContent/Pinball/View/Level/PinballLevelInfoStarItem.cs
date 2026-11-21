@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 {
-	// Token: 0x0200633F RID: 25407
+	// Token: 0x020052BD RID: 21181
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 	})]
 	public class PinballLevelInfoStarItem : GridProxyAbstract<IPinballLevelStarData>
 	{
-		// Token: 0x0603FEF6 RID: 261878 RVA: 0x00F787A4 File Offset: 0x00F769A4
+		// Token: 0x06034BB7 RID: 215991 RVA: 0x00EBF704 File Offset: 0x00EBD904
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FEF7 RID: 261879 RVA: 0x00F78810 File Offset: 0x00F76A10
+		// Token: 0x06034BB8 RID: 215992 RVA: 0x00EBF770 File Offset: 0x00EBD970
 		[NullableContext(1)]
 		public override void Refresh(IPinballLevelStarData data, bool isSelected, int gridIndex)
 		{
@@ -44,12 +44,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Level
 			sprite.SetUIActive(data.Passed);
 		}
 
-		// Token: 0x0200C556 RID: 50518
+		// Token: 0x0200AF3D RID: 44861
 		private enum EComponent
 		{
-			// Token: 0x0403B8FC RID: 243964
+			// Token: 0x0403625E RID: 221790
 			SprLight,
-			// Token: 0x0403B8FD RID: 243965
+			// Token: 0x0403625F RID: 221791
 			TxtConditionDesc
 		}
 	}

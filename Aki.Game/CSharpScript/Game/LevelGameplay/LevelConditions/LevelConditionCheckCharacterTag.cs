@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C5A RID: 27738
+	// Token: 0x02005DD4 RID: 24020
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckCharacterTag : LevelConditionBase
 	{
-		// Token: 0x0604452E RID: 279854 RVA: 0x010D791C File Offset: 0x010D5B1C
+		// Token: 0x0603A688 RID: 239240 RVA: 0x010818B4 File Offset: 0x0107FAB4
 		public override bool Check(Condition inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return component != null && component.HasTag(GameplayTagUtils.GetTagIdByName(limitParams));
 		}
 
-		// Token: 0x0604452F RID: 279855 RVA: 0x010D7974 File Offset: 0x010D5B74
+		// Token: 0x0603A689 RID: 239241 RVA: 0x0108190C File Offset: 0x0107FB0C
 		public override bool CheckNew(ICondition2 inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			LevelConditionCheckCharacterTagInfo levelConditionCheckCharacterTagInfo = inConditionInfo as LevelConditionCheckCharacterTagInfo;

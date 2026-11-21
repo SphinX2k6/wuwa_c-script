@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046D9 RID: 18137
+	// Token: 0x02003609 RID: 13833
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiPopFrameViewStorage : Singleton
 	{
-		// Token: 0x0602EC98 RID: 191640 RVA: 0x00AD53D5 File Offset: 0x00AD35D5
+		// Token: 0x060233D2 RID: 144338 RVA: 0x00A02E79 File Offset: 0x00A01079
 		public void RegisterUiBehaviourPop(int type, UiPopFrameViewInfo info)
 		{
 			this.UiBehaviourPopMap[type] = info;
 		}
 
-		// Token: 0x0602EC99 RID: 191641 RVA: 0x00AD53E4 File Offset: 0x00AD35E4
+		// Token: 0x060233D3 RID: 144339 RVA: 0x00A02E88 File Offset: 0x00A01088
 		[NullableContext(2)]
 		public UiPopFrameViewInfo GetUiBehaviourPopInfo(int type)
 		{
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Ui
 			return result;
 		}
 
-		// Token: 0x1700767F RID: 30335
-		// (get) Token: 0x0602EC9A RID: 191642 RVA: 0x00AD5404 File Offset: 0x00AD3604
+		// Token: 0x1700493B RID: 18747
+		// (get) Token: 0x060233D4 RID: 144340 RVA: 0x00A02EA8 File Offset: 0x00A010A8
 		public static UiPopFrameViewStorage Instance
 		{
 			get
@@ -42,12 +42,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC9B RID: 191643 RVA: 0x00AD5427 File Offset: 0x00AD3627
+		// Token: 0x060233D5 RID: 144341 RVA: 0x00A02ECB File Offset: 0x00A010CB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EC9C RID: 191644 RVA: 0x00AD5429 File Offset: 0x00AD3629
+		// Token: 0x060233D6 RID: 144342 RVA: 0x00A02ECD File Offset: 0x00A010CD
 		public static void ResetStaticDefaultValue()
 		{
 			UiPopFrameViewStorage instance = UiPopFrameViewStorage._instance;
@@ -58,16 +58,16 @@ namespace CSharpScript.Game.Ui
 			UiPopFrameViewStorage._instance = null;
 		}
 
-		// Token: 0x0602EC9D RID: 191645 RVA: 0x00AD5442 File Offset: 0x00AD3642
+		// Token: 0x060233D7 RID: 144343 RVA: 0x00A02EE6 File Offset: 0x00A010E6
 		static UiPopFrameViewStorage()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiPopFrameViewStorage.CreateStaticDefaultValue), new Action(UiPopFrameViewStorage.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019748 RID: 104264
+		// Token: 0x04013DE6 RID: 81382
 		private readonly Dictionary<int, UiPopFrameViewInfo> UiBehaviourPopMap = new Dictionary<int, UiPopFrameViewInfo>();
 
-		// Token: 0x04019749 RID: 104265
+		// Token: 0x04013DE7 RID: 81383
 		[Nullable(2)]
 		private static UiPopFrameViewStorage _instance;
 	}

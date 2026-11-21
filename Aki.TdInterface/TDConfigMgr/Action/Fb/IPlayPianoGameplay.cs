@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200286F RID: 10351
+	// Token: 0x02002B45 RID: 11077
 	public class IPlayPianoGameplay : IUiGame
 	{
-		// Token: 0x0600E55E RID: 58718 RVA: 0x0021B9E8 File Offset: 0x00219BE8
-		[NullableContext(1)]
+		// Token: 0x0600F38E RID: 62350 RVA: 0x00238904 File Offset: 0x00236B04
 		public static IPlayPianoGameplay Create(IPlayPianoGameplay? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004642 RID: 17986
-		// (get) Token: 0x0600E55F RID: 58719 RVA: 0x0021BA07 File Offset: 0x00219C07
+		// Token: 0x170049B2 RID: 18866
+		// (get) Token: 0x0600F38F RID: 62351 RVA: 0x00238923 File Offset: 0x00236B23
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004643 RID: 17987
-		// (get) Token: 0x0600E560 RID: 58720 RVA: 0x0021BA14 File Offset: 0x00219C14
+		// Token: 0x170049B3 RID: 18867
+		// (get) Token: 0x0600F390 RID: 62352 RVA: 0x00238930 File Offset: 0x00236B30
 		public virtual int SplineEntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004644 RID: 17988
-		// (get) Token: 0x0600E561 RID: 58721 RVA: 0x0021BA21 File Offset: 0x00219C21
+		// Token: 0x170049B4 RID: 18868
+		// (get) Token: 0x0600F391 RID: 62353 RVA: 0x0023893D File Offset: 0x00236B3D
 		public virtual int RangeEntityId
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ED5 RID: 32469
+		// Token: 0x04008595 RID: 34197
 		private IPlayPianoGameplay Instance;
 	}
 }

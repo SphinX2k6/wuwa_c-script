@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200242E RID: 9262
+	// Token: 0x020026CF RID: 9935
 	public class ESportStateTypeJsonConverter : JsonConverter<ESportStateType>
 	{
-		// Token: 0x0600C94F RID: 51535 RVA: 0x001D7A54 File Offset: 0x001D5C54
+		// Token: 0x0600D5FF RID: 54783 RVA: 0x001F191C File Offset: 0x001EFB1C
 		public override ESportStateType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESportStateTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C950 RID: 51536 RVA: 0x001D7A78 File Offset: 0x001D5C78
+		// Token: 0x0600D600 RID: 54784 RVA: 0x001F1940 File Offset: 0x001EFB40
 		public override void Write(Utf8JsonWriter writer, ESportStateType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

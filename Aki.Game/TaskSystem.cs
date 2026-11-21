@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02003544 RID: 13636
+// Token: 0x02002AB9 RID: 10937
 [NullableContext(1)]
 [Nullable(0)]
 public class TaskSystem : Singleton
 {
-	// Token: 0x17002982 RID: 10626
-	// (get) Token: 0x0601DF2F RID: 122671 RVA: 0x00864A88 File Offset: 0x00862C88
+	// Token: 0x17002D1B RID: 11547
+	// (get) Token: 0x0601BC57 RID: 113751 RVA: 0x0088C6C0 File Offset: 0x0088A8C0
 	[Nullable(0)]
 	public UniTask<bool>? Promise
 	{
@@ -26,14 +26,14 @@ public class TaskSystem : Singleton
 		}
 	}
 
-	// Token: 0x0601DF30 RID: 122672 RVA: 0x00864AB3 File Offset: 0x00862CB3
+	// Token: 0x0601BC58 RID: 113752 RVA: 0x0088C6EB File Offset: 0x0088A8EB
 	public bool Initialize()
 	{
 		this.InitState = true;
 		return true;
 	}
 
-	// Token: 0x0601DF31 RID: 122673 RVA: 0x00864AC0 File Offset: 0x00862CC0
+	// Token: 0x0601BC59 RID: 113753 RVA: 0x0088C6F8 File Offset: 0x0088A8F8
 	[NullableContext(0)]
 	public UniTask<bool> Run()
 	{
@@ -45,7 +45,7 @@ public class TaskSystem : Singleton
 		return <Run>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DF32 RID: 122674 RVA: 0x00864B04 File Offset: 0x00862D04
+	// Token: 0x0601BC5A RID: 113754 RVA: 0x0088C73C File Offset: 0x0088A93C
 	public unsafe void AddTask(TaskBase task)
 	{
 		if (!this.InitState)
@@ -75,7 +75,7 @@ public class TaskSystem : Singleton
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601DF33 RID: 122675 RVA: 0x00864BEC File Offset: 0x00862DEC
+	// Token: 0x0601BC5B RID: 113755 RVA: 0x0088C824 File Offset: 0x0088AA24
 	public void Clear()
 	{
 		Log.Instance.Info(ELogModule.World, ELogAuthor.ZYL, "TaskSystem:Clear", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -83,7 +83,7 @@ public class TaskSystem : Singleton
 		this.ClearInternal();
 	}
 
-	// Token: 0x0601DF34 RID: 122676 RVA: 0x00864C24 File Offset: 0x00862E24
+	// Token: 0x0601BC5C RID: 113756 RVA: 0x0088C85C File Offset: 0x0088AA5C
 	private void ClearInternal()
 	{
 		Log instance = Log.Instance;
@@ -101,8 +101,8 @@ public class TaskSystem : Singleton
 		this.Running = false;
 	}
 
-	// Token: 0x17002983 RID: 10627
-	// (get) Token: 0x0601DF35 RID: 122677 RVA: 0x00864CA0 File Offset: 0x00862EA0
+	// Token: 0x17002D1C RID: 11548
+	// (get) Token: 0x0601BC5D RID: 113757 RVA: 0x0088C8D8 File Offset: 0x0088AAD8
 	private int HighestQueuedInterruptPriority
 	{
 		get
@@ -119,7 +119,7 @@ public class TaskSystem : Singleton
 		}
 	}
 
-	// Token: 0x0601DF36 RID: 122678 RVA: 0x00864CD4 File Offset: 0x00862ED4
+	// Token: 0x0601BC5E RID: 113758 RVA: 0x0088C90C File Offset: 0x0088AB0C
 	private void IncreaseQueuedCount(ETaskPriority priority)
 	{
 		int num2;
@@ -127,7 +127,7 @@ public class TaskSystem : Singleton
 		this.QueuedTaskCountsByInterruptPriority[priority] = num + 1;
 	}
 
-	// Token: 0x0601DF37 RID: 122679 RVA: 0x00864D08 File Offset: 0x00862F08
+	// Token: 0x0601BC5F RID: 113759 RVA: 0x0088C940 File Offset: 0x0088AB40
 	private void DecreaseQueuedCount(ETaskPriority priority)
 	{
 		int num2;
@@ -135,7 +135,7 @@ public class TaskSystem : Singleton
 		this.QueuedTaskCountsByInterruptPriority[priority] = ((num > 0) ? num : 0);
 	}
 
-	// Token: 0x0601DF38 RID: 122680 RVA: 0x00864D40 File Offset: 0x00862F40
+	// Token: 0x0601BC60 RID: 113760 RVA: 0x0088C978 File Offset: 0x0088AB78
 	private unsafe void TryInterruptCurrent()
 	{
 		TaskBase currentTask = this.CurrentTask;
@@ -154,7 +154,7 @@ public class TaskSystem : Singleton
 		}
 	}
 
-	// Token: 0x0601DF39 RID: 122681 RVA: 0x00864E00 File Offset: 0x00863000
+	// Token: 0x0601BC61 RID: 113761 RVA: 0x0088CA38 File Offset: 0x0088AC38
 	private void SwapBuffers()
 	{
 		Queue<TaskBase> drainBuffer = this.DrainBuffer;
@@ -168,8 +168,8 @@ public class TaskSystem : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x17002984 RID: 10628
-	// (get) Token: 0x0601DF3A RID: 122682 RVA: 0x00864E5D File Offset: 0x0086305D
+	// Token: 0x17002D1D RID: 11549
+	// (get) Token: 0x0601BC62 RID: 113762 RVA: 0x0088CA95 File Offset: 0x0088AC95
 	private int QueuedSize
 	{
 		get
@@ -178,7 +178,7 @@ public class TaskSystem : Singleton
 		}
 	}
 
-	// Token: 0x0601DF3B RID: 122683 RVA: 0x00864E78 File Offset: 0x00863078
+	// Token: 0x0601BC63 RID: 113763 RVA: 0x0088CAB0 File Offset: 0x0088ACB0
 	private UniTask YieldFrame()
 	{
 		TaskSystem.<YieldFrame>d__25 <YieldFrame>d__;
@@ -188,7 +188,7 @@ public class TaskSystem : Singleton
 		return <YieldFrame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DF3C RID: 122684 RVA: 0x00864EB4 File Offset: 0x008630B4
+	// Token: 0x0601BC64 RID: 113764 RVA: 0x0088CAEC File Offset: 0x0088ACEC
 	[NullableContext(0)]
 	private UniTask<bool> RunInternal()
 	{
@@ -200,8 +200,8 @@ public class TaskSystem : Singleton
 		return <RunInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17002985 RID: 10629
-	// (get) Token: 0x0601DF3D RID: 122685 RVA: 0x00864EF7 File Offset: 0x008630F7
+	// Token: 0x17002D1E RID: 11550
+	// (get) Token: 0x0601BC65 RID: 113765 RVA: 0x0088CB2F File Offset: 0x0088AD2F
 	public static TaskSystem Instance
 	{
 		get
@@ -215,12 +215,12 @@ public class TaskSystem : Singleton
 		}
 	}
 
-	// Token: 0x0601DF3E RID: 122686 RVA: 0x00864F1A File Offset: 0x0086311A
+	// Token: 0x0601BC66 RID: 113766 RVA: 0x0088CB52 File Offset: 0x0088AD52
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DF3F RID: 122687 RVA: 0x00864F1C File Offset: 0x0086311C
+	// Token: 0x0601BC67 RID: 113767 RVA: 0x0088CB54 File Offset: 0x0088AD54
 	public static void ResetStaticDefaultValue()
 	{
 		TaskSystem instance = TaskSystem._instance;
@@ -231,45 +231,45 @@ public class TaskSystem : Singleton
 		TaskSystem._instance = null;
 	}
 
-	// Token: 0x0601DF40 RID: 122688 RVA: 0x00864F35 File Offset: 0x00863135
+	// Token: 0x0601BC68 RID: 113768 RVA: 0x0088CB6D File Offset: 0x0088AD6D
 	static TaskSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TaskSystem.CreateStaticDefaultValue), new Action(TaskSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400EB41 RID: 60225
+	// Token: 0x0400EFFE RID: 61438
 	private const int SELF_FEED_STREAK_THRESHOLD = 100;
 
-	// Token: 0x0400EB42 RID: 60226
+	// Token: 0x0400EFFF RID: 61439
 	private Queue<TaskBase> IncomingQueue = new Queue<TaskBase>(4);
 
-	// Token: 0x0400EB43 RID: 60227
+	// Token: 0x0400F000 RID: 61440
 	private Queue<TaskBase> DrainBuffer = new Queue<TaskBase>(4);
 
-	// Token: 0x0400EB44 RID: 60228
+	// Token: 0x0400F001 RID: 61441
 	[Nullable(2)]
 	private TaskBase CurrentTask;
 
-	// Token: 0x0400EB45 RID: 60229
+	// Token: 0x0400F002 RID: 61442
 	private readonly Dictionary<ETaskPriority, int> QueuedTaskCountsByInterruptPriority = new Dictionary<ETaskPriority, int>();
 
-	// Token: 0x0400EB46 RID: 60230
+	// Token: 0x0400F003 RID: 61443
 	private int SelfFeedStreak;
 
-	// Token: 0x0400EB47 RID: 60231
+	// Token: 0x0400F004 RID: 61444
 	public bool HasLoadingTask;
 
-	// Token: 0x0400EB48 RID: 60232
+	// Token: 0x0400F005 RID: 61445
 	public bool Running;
 
-	// Token: 0x0400EB49 RID: 60233
+	// Token: 0x0400F006 RID: 61446
 	[Nullable(2)]
 	private CustomPromise<bool> RunPromise;
 
-	// Token: 0x0400EB4A RID: 60234
+	// Token: 0x0400F007 RID: 61447
 	private bool InitState;
 
-	// Token: 0x0400EB4B RID: 60235
+	// Token: 0x0400F008 RID: 61448
 	[Nullable(2)]
 	private static TaskSystem _instance;
 }

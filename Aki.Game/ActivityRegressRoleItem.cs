@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001449 RID: 5193
+// Token: 0x020008FD RID: 2301
 public class ActivityRegressRoleItem : UiPanelBase
 {
-	// Token: 0x060092B1 RID: 37553 RVA: 0x001F7938 File Offset: 0x001F5B38
+	// Token: 0x06006646 RID: 26182 RVA: 0x00200474 File Offset: 0x001FE674
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -26,7 +26,7 @@ public class ActivityRegressRoleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060092B2 RID: 37554 RVA: 0x001F79E4 File Offset: 0x001F5BE4
+	// Token: 0x06006647 RID: 26183 RVA: 0x00200520 File Offset: 0x001FE720
 	public void RefreshItem(int roleId)
 	{
 		if (roleId == 0)
@@ -43,25 +43,25 @@ public class ActivityRegressRoleItem : UiPanelBase
 		base.SetRoleIcon(RoleConfig.Instance.GetRoleConfig(roleId).Value.FormationRoleCard, base.GetTexture(4), roleId, null, null);
 	}
 
-	// Token: 0x02007A81 RID: 31361
+	// Token: 0x02006C05 RID: 27653
 	private class EActivityRegressRoleItemComponents
 	{
-		// Token: 0x04028501 RID: 165121
+		// Token: 0x0402381B RID: 145435
 		public const int Button = 0;
 
-		// Token: 0x04028502 RID: 165122
+		// Token: 0x0402381C RID: 145436
 		public const int LockItem = 1;
 
-		// Token: 0x04028503 RID: 165123
+		// Token: 0x0402381D RID: 145437
 		public const int LocKTexture = 2;
 
-		// Token: 0x04028504 RID: 165124
+		// Token: 0x0402381E RID: 145438
 		public const int UnLockItem = 3;
 
-		// Token: 0x04028505 RID: 165125
+		// Token: 0x0402381F RID: 145439
 		public const int UnLockTexture = 4;
 
-		// Token: 0x04028506 RID: 165126
+		// Token: 0x04023820 RID: 145440
 		public const int TitleText = 5;
 	}
 }

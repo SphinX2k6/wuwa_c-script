@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200662D RID: 26157
+	// Token: 0x020055AB RID: 21931
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingTechRootView : UiViewBase
 	{
-		// Token: 0x06041921 RID: 268577 RVA: 0x00FE713B File Offset: 0x00FE533B
+		// Token: 0x060365E6 RID: 222694 RVA: 0x00F2E1F3 File Offset: 0x00F2C3F3
 		public FishingTechRootView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041922 RID: 268578 RVA: 0x00FE7164 File Offset: 0x00FE5364
+		// Token: 0x060365E7 RID: 222695 RVA: 0x00F2E21C File Offset: 0x00F2C41C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,21 +44,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041923 RID: 268579 RVA: 0x00FE7251 File Offset: 0x00FE5451
+		// Token: 0x060365E8 RID: 222696 RVA: 0x00F2E309 File Offset: 0x00F2C509
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 			EventSystem.Instance.Add(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x06041924 RID: 268580 RVA: 0x00FE728B File Offset: 0x00FE548B
+		// Token: 0x060365E9 RID: 222697 RVA: 0x00F2E343 File Offset: 0x00F2C543
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x06041925 RID: 268581 RVA: 0x00FE72C8 File Offset: 0x00FE54C8
+		// Token: 0x060365EA RID: 222698 RVA: 0x00F2E380 File Offset: 0x00F2C580
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingTechRootView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041926 RID: 268582 RVA: 0x00FE730B File Offset: 0x00FE550B
+		// Token: 0x060365EB RID: 222699 RVA: 0x00F2E3C3 File Offset: 0x00F2C5C3
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06041927 RID: 268583 RVA: 0x00FE7314 File Offset: 0x00FE5514
+		// Token: 0x060365EC RID: 222700 RVA: 0x00F2E3CC File Offset: 0x00F2C5CC
 		protected override void OnStart()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.FishingNormalTech, base.GetItem(4), null, 0);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TabViewComponent.ToggleCallBack(data, viewName, this.TabItemList[this.CurrentTabIndex], fishingTechOpenParam.NodeId, null);
 		}
 
-		// Token: 0x06041928 RID: 268584 RVA: 0x00FE740A File Offset: 0x00FE560A
+		// Token: 0x060365ED RID: 222701 RVA: 0x00F2E4C2 File Offset: 0x00F2C6C2
 		protected override void OnBeforeShow()
 		{
 			if (this.IsInit)
@@ -113,14 +113,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.IsInit = true;
 		}
 
-		// Token: 0x06041929 RID: 268585 RVA: 0x00FE7431 File Offset: 0x00FE5631
+		// Token: 0x060365EE RID: 222702 RVA: 0x00F2E4E9 File Offset: 0x00F2C6E9
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FishingNormalTech, base.GetItem(4), 0);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FishingRoleTech, base.GetItem(5), 0);
 		}
 
-		// Token: 0x0604192A RID: 268586 RVA: 0x00FE7464 File Offset: 0x00FE5664
+		// Token: 0x060365EF RID: 222703 RVA: 0x00F2E51C File Offset: 0x00F2C71C
 		private UniTask InitTabComponent()
 		{
 			FishingTechRootView.<InitTabComponent>d__16 <InitTabComponent>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTabComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604192B RID: 268587 RVA: 0x00FE74A8 File Offset: 0x00FE56A8
+		// Token: 0x060365F0 RID: 222704 RVA: 0x00F2E560 File Offset: 0x00F2C760
 		private UniTask InitTabItem(UUIItem uiItem)
 		{
 			FishingTechRootView.<InitTabItem>d__17 <InitTabItem>d__;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTabItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604192C RID: 268588 RVA: 0x00FE74F4 File Offset: 0x00FE56F4
+		// Token: 0x060365F1 RID: 222705 RVA: 0x00F2E5AC File Offset: 0x00F2C7AC
 		private void ToggleCallback(int tabIndex)
 		{
 			int currentTabIndex = this.CurrentTabIndex;
@@ -157,13 +157,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TabViewComponent.ToggleCallBack(data, viewName, this.TabItemList[this.CurrentTabIndex], null, null);
 		}
 
-		// Token: 0x0604192D RID: 268589 RVA: 0x00FE7568 File Offset: 0x00FE5768
+		// Token: 0x060365F2 RID: 222706 RVA: 0x00F2E620 File Offset: 0x00F2C820
 		private bool CanExecuteChange(int tabIndex, bool _)
 		{
 			return this.CurrentTabIndex != tabIndex;
 		}
 
-		// Token: 0x0604192E RID: 268590 RVA: 0x00FE7576 File Offset: 0x00FE5776
+		// Token: 0x060365F3 RID: 222707 RVA: 0x00F2E62E File Offset: 0x00F2C82E
 		private void OnCommonItemCountAnyChange(int normalItem, int count)
 		{
 			if (FishingDefine.fishingItemList.Contains(normalItem))
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604192F RID: 268591 RVA: 0x00FE758B File Offset: 0x00FE578B
+		// Token: 0x060365F4 RID: 222708 RVA: 0x00F2E643 File Offset: 0x00F2C843
 		private void OnCommonItemCountRefresh(IProto_NormalItem normalItem, int count, int lastCount)
 		{
 			if (FishingDefine.fishingItemList.Contains(normalItem.Id))
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041930 RID: 268592 RVA: 0x00FE75A8 File Offset: 0x00FE57A8
+		// Token: 0x060365F5 RID: 222709 RVA: 0x00F2E660 File Offset: 0x00F2C860
 		private void RefreshRedDot()
 		{
 			foreach (FishingTech fishingTech in FishingConfig.Instance.GetFishingTechList())
@@ -192,44 +192,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<EFishingTechNodeType>(EEventName.OnFishingRoleTechRefresh, EFishingTechNodeType.Phoebe);
 		}
 
-		// Token: 0x040221CE RID: 139726
+		// Token: 0x0401CAFF RID: 117503
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x040221CF RID: 139727
+		// Token: 0x0401CB00 RID: 117504
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x040221D0 RID: 139728
+		// Token: 0x0401CB01 RID: 117505
 		protected List<FishingTechTabItem> TabItemList = new List<FishingTechTabItem>();
 
-		// Token: 0x040221D1 RID: 139729
+		// Token: 0x0401CB02 RID: 117506
 		protected List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x040221D2 RID: 139730
+		// Token: 0x0401CB03 RID: 117507
 		protected int CurrentTabIndex = -1;
 
-		// Token: 0x040221D3 RID: 139731
+		// Token: 0x0401CB04 RID: 117508
 		private bool IsInit;
 
-		// Token: 0x0200C847 RID: 51271
+		// Token: 0x0200B229 RID: 45609
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C7FB RID: 247803
+			// Token: 0x04037140 RID: 225600
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C7FC RID: 247804
+			// Token: 0x04037141 RID: 225601
 			public const int TabComponent = 1;
 
-			// Token: 0x0403C7FD RID: 247805
+			// Token: 0x04037142 RID: 225602
 			public const int TabAItem = 2;
 
-			// Token: 0x0403C7FE RID: 247806
+			// Token: 0x04037143 RID: 225603
 			public const int TabBItem = 3;
 
-			// Token: 0x0403C7FF RID: 247807
+			// Token: 0x04037144 RID: 225604
 			public const int TabARedDotItem = 4;
 
-			// Token: 0x0403C800 RID: 247808
+			// Token: 0x04037145 RID: 225605
 			public const int TabBRedDotItem = 5;
 		}
 	}

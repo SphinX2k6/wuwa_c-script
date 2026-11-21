@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B63 RID: 15203
+	// Token: 0x02003F6B RID: 16235
 	public class TVarValidateConfigUnion
 	{
-		// Token: 0x1700682C RID: 26668
-		// (get) Token: 0x06014CB1 RID: 85169 RVA: 0x00305474 File Offset: 0x00303674
-		// (set) Token: 0x06014CB2 RID: 85170 RVA: 0x0030547C File Offset: 0x0030367C
+		// Token: 0x17006DCB RID: 28107
+		// (get) Token: 0x0601617B RID: 90491 RVA: 0x0032BA0C File Offset: 0x00329C0C
+		// (set) Token: 0x0601617C RID: 90492 RVA: 0x0032BA14 File Offset: 0x00329C14
 		public TVarValidateConfig Type { get; set; }
 
-		// Token: 0x1700682D RID: 26669
-		// (get) Token: 0x06014CB3 RID: 85171 RVA: 0x00305485 File Offset: 0x00303685
-		// (set) Token: 0x06014CB4 RID: 85172 RVA: 0x0030548D File Offset: 0x0030368D
+		// Token: 0x17006DCC RID: 28108
+		// (get) Token: 0x0601617D RID: 90493 RVA: 0x0032BA1D File Offset: 0x00329C1D
+		// (set) Token: 0x0601617E RID: 90494 RVA: 0x0032BA25 File Offset: 0x00329C25
 		public object Value { get; set; }
 
-		// Token: 0x06014CB5 RID: 85173 RVA: 0x00305496 File Offset: 0x00303696
+		// Token: 0x0601617F RID: 90495 RVA: 0x0032BA2E File Offset: 0x00329C2E
 		public TVarValidateConfigUnion()
 		{
 			this.Type = TVarValidateConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06014CB6 RID: 85174 RVA: 0x003054AC File Offset: 0x003036AC
+		// Token: 0x06016180 RID: 90496 RVA: 0x0032BA44 File Offset: 0x00329C44
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06014CB7 RID: 85175 RVA: 0x003054BE File Offset: 0x003036BE
+		// Token: 0x06016181 RID: 90497 RVA: 0x0032BA56 File Offset: 0x00329C56
 		public IVarBooleanValidateConfigT AsIVarBooleanValidateConfig()
 		{
 			return this.As<IVarBooleanValidateConfigT>();
 		}
 
-		// Token: 0x06014CB8 RID: 85176 RVA: 0x003054C6 File Offset: 0x003036C6
+		// Token: 0x06016182 RID: 90498 RVA: 0x0032BA5E File Offset: 0x00329C5E
 		public static TVarValidateConfigUnion FromIVarBooleanValidateConfig(IVarBooleanValidateConfigT _ivarbooleanvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CB9 RID: 85177 RVA: 0x003054DB File Offset: 0x003036DB
+		// Token: 0x06016183 RID: 90499 RVA: 0x0032BA73 File Offset: 0x00329C73
 		public IVarEntityValidateConfigT AsIVarEntityValidateConfig()
 		{
 			return this.As<IVarEntityValidateConfigT>();
 		}
 
-		// Token: 0x06014CBA RID: 85178 RVA: 0x003054E3 File Offset: 0x003036E3
+		// Token: 0x06016184 RID: 90500 RVA: 0x0032BA7B File Offset: 0x00329C7B
 		public static TVarValidateConfigUnion FromIVarEntityValidateConfig(IVarEntityValidateConfigT _ivarentityvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CBB RID: 85179 RVA: 0x003054F8 File Offset: 0x003036F8
+		// Token: 0x06016185 RID: 90501 RVA: 0x0032BA90 File Offset: 0x00329C90
 		public IVarFloatValidateConfigT AsIVarFloatValidateConfig()
 		{
 			return this.As<IVarFloatValidateConfigT>();
 		}
 
-		// Token: 0x06014CBC RID: 85180 RVA: 0x00305500 File Offset: 0x00303700
+		// Token: 0x06016186 RID: 90502 RVA: 0x0032BA98 File Offset: 0x00329C98
 		public static TVarValidateConfigUnion FromIVarFloatValidateConfig(IVarFloatValidateConfigT _ivarfloatvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CBD RID: 85181 RVA: 0x00305515 File Offset: 0x00303715
+		// Token: 0x06016187 RID: 90503 RVA: 0x0032BAAD File Offset: 0x00329CAD
 		public IVarIntValidateConfigT AsIVarIntValidateConfig()
 		{
 			return this.As<IVarIntValidateConfigT>();
 		}
 
-		// Token: 0x06014CBE RID: 85182 RVA: 0x0030551D File Offset: 0x0030371D
+		// Token: 0x06016188 RID: 90504 RVA: 0x0032BAB5 File Offset: 0x00329CB5
 		public static TVarValidateConfigUnion FromIVarIntValidateConfig(IVarIntValidateConfigT _ivarintvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CBF RID: 85183 RVA: 0x00305532 File Offset: 0x00303732
+		// Token: 0x06016189 RID: 90505 RVA: 0x0032BACA File Offset: 0x00329CCA
 		public IVarPrefabValidateConfigT AsIVarPrefabValidateConfig()
 		{
 			return this.As<IVarPrefabValidateConfigT>();
 		}
 
-		// Token: 0x06014CC0 RID: 85184 RVA: 0x0030553A File Offset: 0x0030373A
+		// Token: 0x0601618A RID: 90506 RVA: 0x0032BAD2 File Offset: 0x00329CD2
 		public static TVarValidateConfigUnion FromIVarPrefabValidateConfig(IVarPrefabValidateConfigT _ivarprefabvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CC1 RID: 85185 RVA: 0x0030554F File Offset: 0x0030374F
+		// Token: 0x0601618B RID: 90507 RVA: 0x0032BAE7 File Offset: 0x00329CE7
 		public IVarQuestStateValidateConfigT AsIVarQuestStateValidateConfig()
 		{
 			return this.As<IVarQuestStateValidateConfigT>();
 		}
 
-		// Token: 0x06014CC2 RID: 85186 RVA: 0x00305557 File Offset: 0x00303757
+		// Token: 0x0601618C RID: 90508 RVA: 0x0032BAEF File Offset: 0x00329CEF
 		public static TVarValidateConfigUnion FromIVarQuestStateValidateConfig(IVarQuestStateValidateConfigT _ivarqueststatevalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CC3 RID: 85187 RVA: 0x0030556C File Offset: 0x0030376C
+		// Token: 0x0601618D RID: 90509 RVA: 0x0032BB04 File Offset: 0x00329D04
 		public IVarQuestValidateConfigT AsIVarQuestValidateConfig()
 		{
 			return this.As<IVarQuestValidateConfigT>();
 		}
 
-		// Token: 0x06014CC4 RID: 85188 RVA: 0x00305574 File Offset: 0x00303774
+		// Token: 0x0601618E RID: 90510 RVA: 0x0032BB0C File Offset: 0x00329D0C
 		public static TVarValidateConfigUnion FromIVarQuestValidateConfig(IVarQuestValidateConfigT _ivarquestvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CC5 RID: 85189 RVA: 0x00305589 File Offset: 0x00303789
+		// Token: 0x0601618F RID: 90511 RVA: 0x0032BB21 File Offset: 0x00329D21
 		public IVarStringValidateConfigT AsIVarStringValidateConfig()
 		{
 			return this.As<IVarStringValidateConfigT>();
 		}
 
-		// Token: 0x06014CC6 RID: 85190 RVA: 0x00305591 File Offset: 0x00303791
+		// Token: 0x06016190 RID: 90512 RVA: 0x0032BB29 File Offset: 0x00329D29
 		public static TVarValidateConfigUnion FromIVarStringValidateConfig(IVarStringValidateConfigT _ivarstringvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CC7 RID: 85191 RVA: 0x003055A6 File Offset: 0x003037A6
+		// Token: 0x06016191 RID: 90513 RVA: 0x0032BB3E File Offset: 0x00329D3E
 		public IVarTransformValidateConfigT AsIVarTransformValidateConfig()
 		{
 			return this.As<IVarTransformValidateConfigT>();
 		}
 
-		// Token: 0x06014CC8 RID: 85192 RVA: 0x003055AE File Offset: 0x003037AE
+		// Token: 0x06016192 RID: 90514 RVA: 0x0032BB46 File Offset: 0x00329D46
 		public static TVarValidateConfigUnion FromIVarTransformValidateConfig(IVarTransformValidateConfigT _ivartransformvalidateconfig)
 		{
 			return new TVarValidateConfigUnion
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014CC9 RID: 85193 RVA: 0x003055C4 File Offset: 0x003037C4
+		// Token: 0x06016193 RID: 90515 RVA: 0x0032BB5C File Offset: 0x00329D5C
 		public static int Pack(FlatBufferBuilder builder, TVarValidateConfigUnion _o)
 		{
 			switch (_o.Type)

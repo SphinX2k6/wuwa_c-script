@@ -7,12 +7,12 @@ using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C87 RID: 23687
+	// Token: 0x02004C68 RID: 19560
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiExploreModeData
 	{
-		// Token: 0x0603BD5F RID: 245087 RVA: 0x00E4A944 File Offset: 0x00E48B44
+		// Token: 0x06030CAD RID: 199853 RVA: 0x00D9AEC0 File Offset: 0x00D990C0
 		public void Init()
 		{
 			this.WaitingTime = (float)ConfigCommonParamById.GetIntConfig("ExploreModeWaitTime").Value;
@@ -26,30 +26,30 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.SetAutoSwitch(isAutoSwitchSkillButtonMode);
 		}
 
-		// Token: 0x0603BD60 RID: 245088 RVA: 0x00E4A9AF File Offset: 0x00E48BAF
+		// Token: 0x06030CAE RID: 199854 RVA: 0x00D9AF2B File Offset: 0x00D9912B
 		public void OnLeaveLevel()
 		{
 		}
 
-		// Token: 0x0603BD61 RID: 245089 RVA: 0x00E4A9B1 File Offset: 0x00E48BB1
+		// Token: 0x06030CAF RID: 199855 RVA: 0x00D9AF2D File Offset: 0x00D9912D
 		public void Clear()
 		{
 			this.SetAutoSwitch(false);
 		}
 
-		// Token: 0x0603BD62 RID: 245090 RVA: 0x00E4A9BA File Offset: 0x00E48BBA
+		// Token: 0x06030CB0 RID: 199856 RVA: 0x00D9AF36 File Offset: 0x00D99136
 		public IReadOnlyList<string> GetActionNames()
 		{
 			return BattleUiExploreModeData.ActionNames;
 		}
 
-		// Token: 0x0603BD63 RID: 245091 RVA: 0x00E4A9C1 File Offset: 0x00E48BC1
+		// Token: 0x06030CB1 RID: 199857 RVA: 0x00D9AF3D File Offset: 0x00D9913D
 		public bool GetIsInExploreMode()
 		{
 			return this.IsInExploreMode;
 		}
 
-		// Token: 0x0603BD64 RID: 245092 RVA: 0x00E4A9CC File Offset: 0x00E48BCC
+		// Token: 0x06030CB2 RID: 199858 RVA: 0x00D9AF48 File Offset: 0x00D99148
 		public void SetAutoSwitch(bool isOpen)
 		{
 			this.IsAutoSwitch = false;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD65 RID: 245093 RVA: 0x00E4AA40 File Offset: 0x00E48C40
+		// Token: 0x06030CB3 RID: 199859 RVA: 0x00D9AFBC File Offset: 0x00D991BC
 		public void EnterBattleMode()
 		{
 			if (!this.IsInExploreMode)
@@ -83,13 +83,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<bool>(EEventName.BattleUiExploreModeChanged, false);
 		}
 
-		// Token: 0x0603BD66 RID: 245094 RVA: 0x00E4AA63 File Offset: 0x00E48C63
+		// Token: 0x06030CB4 RID: 199860 RVA: 0x00D9AFDF File Offset: 0x00D991DF
 		public void DelayExitBattleMode()
 		{
 			this.OpenExploreModeTime = (float)Time.Instance.WorldTime + this.WaitingTime;
 		}
 
-		// Token: 0x0603BD67 RID: 245095 RVA: 0x00E4AA7D File Offset: 0x00E48C7D
+		// Token: 0x06030CB5 RID: 199861 RVA: 0x00D9AFF9 File Offset: 0x00D991F9
 		public void UpdateGuidingState(bool isGuiding)
 		{
 			this.IsGuiding = isGuiding;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DelayExitBattleMode();
 		}
 
-		// Token: 0x0603BD68 RID: 245096 RVA: 0x00E4AA96 File Offset: 0x00E48C96
+		// Token: 0x06030CB6 RID: 199862 RVA: 0x00D9B012 File Offset: 0x00D99212
 		public void UpdateBossState(bool isBossFight)
 		{
 			this.IsBossFight = isBossFight;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DelayExitBattleMode();
 		}
 
-		// Token: 0x0603BD69 RID: 245097 RVA: 0x00E4AAB0 File Offset: 0x00E48CB0
+		// Token: 0x06030CB7 RID: 199863 RVA: 0x00D9B02C File Offset: 0x00D9922C
 		public void InputAction(string actionName, bool isPress)
 		{
 			int index;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DelayExitBattleMode();
 		}
 
-		// Token: 0x0603BD6A RID: 245098 RVA: 0x00E4AAF4 File Offset: 0x00E48CF4
+		// Token: 0x06030CB8 RID: 199864 RVA: 0x00D9B070 File Offset: 0x00D99270
 		public void BeHit(Entity entity)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.DelayExitBattleMode();
 		}
 
-		// Token: 0x0603BD6B RID: 245099 RVA: 0x00E4AB35 File Offset: 0x00E48D35
+		// Token: 0x06030CB9 RID: 199865 RVA: 0x00D9B0B1 File Offset: 0x00D992B1
 		public void UpdateDungeonState()
 		{
 			this.IsInForbiddenDungeon = this.CheckInForbiddenDungeon();
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD6C RID: 245100 RVA: 0x00E4AB5C File Offset: 0x00E48D5C
+		// Token: 0x06030CBA RID: 199866 RVA: 0x00D9B0D8 File Offset: 0x00D992D8
 		private void OnTimer(float _)
 		{
 			if (!this.IsAutoSwitch || this.IsInExploreMode || this.IsInForbiddenDungeon)
@@ -196,20 +196,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<bool>(EEventName.BattleUiExploreModeChanged, true);
 		}
 
-		// Token: 0x0603BD6D RID: 245101 RVA: 0x00E4AC54 File Offset: 0x00E48E54
+		// Token: 0x06030CBB RID: 199867 RVA: 0x00D9B1D0 File Offset: 0x00D993D0
 		private bool IsAiming(BattleUiRoleData curRoleData)
 		{
 			return curRoleData.EntityHandle.Entity.GetComponent<CharacterUnifiedStateComponent>().DirectionState == ECharDirectionState.AimDirection;
 		}
 
-		// Token: 0x0603BD6E RID: 245102 RVA: 0x00E4AC70 File Offset: 0x00E48E70
+		// Token: 0x06030CBC RID: 199868 RVA: 0x00D9B1EC File Offset: 0x00D993EC
 		private bool CheckInForbiddenDungeon()
 		{
 			int instanceId = InstanceDungeonEntranceModel.Instance.InstanceId;
 			return instanceId != 0 && InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.InstSubType == 7;
 		}
 
-		// Token: 0x0603BD6F RID: 245103 RVA: 0x00E4ACAB File Offset: 0x00E48EAB
+		// Token: 0x06030CBD RID: 199869 RVA: 0x00D9B227 File Offset: 0x00D99427
 		private void DestroyTimer()
 		{
 			if (this.Timer != null)
@@ -219,10 +219,10 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0401F311 RID: 127761
+		// Token: 0x04019DC7 RID: 105927
 		private const int TIMER_INTERVAL = 1000;
 
-		// Token: 0x0401F312 RID: 127762
+		// Token: 0x04019DC8 RID: 105928
 		[StaticVariableRuleIgnore]
 		private static readonly string[] ActionNames = new string[]
 		{
@@ -233,35 +233,35 @@ namespace CSharpScript.Game.Module.BattleUi
 			"大招"
 		};
 
-		// Token: 0x0401F313 RID: 127763
+		// Token: 0x04019DC9 RID: 105929
 		private bool IsAutoSwitch = true;
 
-		// Token: 0x0401F314 RID: 127764
+		// Token: 0x04019DCA RID: 105930
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0401F315 RID: 127765
+		// Token: 0x04019DCB RID: 105931
 		private bool IsInExploreMode;
 
-		// Token: 0x0401F316 RID: 127766
+		// Token: 0x04019DCC RID: 105932
 		private bool IsInForbiddenDungeon;
 
-		// Token: 0x0401F317 RID: 127767
+		// Token: 0x04019DCD RID: 105933
 		private readonly Dictionary<string, int> ActionNameMap = new Dictionary<string, int>();
 
-		// Token: 0x0401F318 RID: 127768
+		// Token: 0x04019DCE RID: 105934
 		private readonly List<bool> IsPressingList = new List<bool>();
 
-		// Token: 0x0401F319 RID: 127769
+		// Token: 0x04019DCF RID: 105935
 		private float OpenExploreModeTime;
 
-		// Token: 0x0401F31A RID: 127770
+		// Token: 0x04019DD0 RID: 105936
 		private float WaitingTime = 3000f;
 
-		// Token: 0x0401F31B RID: 127771
+		// Token: 0x04019DD1 RID: 105937
 		private bool IsGuiding;
 
-		// Token: 0x0401F31C RID: 127772
+		// Token: 0x04019DD2 RID: 105938
 		private bool IsBossFight;
 	}
 }

@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x0200566C RID: 22124
+	// Token: 0x02004642 RID: 17986
 	public class ComposeMediumItemGridInner : MediumItemGrid
 	{
-		// Token: 0x0603845D RID: 230493 RVA: 0x00D56238 File Offset: 0x00D54438
+		// Token: 0x0602D35B RID: 185179 RVA: 0x00CA41C4 File Offset: 0x00CA23C4
 		[NullableContext(1)]
 		public void RefreshByBaseItemData(IBaseItemData data, bool isSelected)
 		{

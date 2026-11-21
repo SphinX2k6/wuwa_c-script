@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065F5 RID: 26101
+	// Token: 0x02006C66 RID: 27750
 	public class IDisableSkillOperationT
 	{
-		// Token: 0x1700C1EF RID: 49647
-		// (get) Token: 0x0602D4F9 RID: 185593 RVA: 0x00635C9C File Offset: 0x00633E9C
-		// (set) Token: 0x0602D4FA RID: 185594 RVA: 0x00635CA4 File Offset: 0x00633EA4
+		// Token: 0x1700CB8D RID: 52109
+		// (get) Token: 0x0602FCCA RID: 195786 RVA: 0x00682804 File Offset: 0x00680A04
+		// (set) Token: 0x0602FCCB RID: 195787 RVA: 0x0068280C File Offset: 0x00680A0C
 		public ESkillOperationType Type { get; set; }
 
-		// Token: 0x1700C1F0 RID: 49648
-		// (get) Token: 0x0602D4FB RID: 185595 RVA: 0x00635CAD File Offset: 0x00633EAD
-		// (set) Token: 0x0602D4FC RID: 185596 RVA: 0x00635CB5 File Offset: 0x00633EB5
+		// Token: 0x1700CB8E RID: 52110
+		// (get) Token: 0x0602FCCC RID: 195788 RVA: 0x00682815 File Offset: 0x00680A15
+		// (set) Token: 0x0602FCCD RID: 195789 RVA: 0x0068281D File Offset: 0x00680A1D
 		public EDisplayModeInSkillOp DisplayMode { get; set; }
 
-		// Token: 0x1700C1F1 RID: 49649
-		// (get) Token: 0x0602D4FD RID: 185597 RVA: 0x00635CBE File Offset: 0x00633EBE
-		// (set) Token: 0x0602D4FE RID: 185598 RVA: 0x00635CC6 File Offset: 0x00633EC6
+		// Token: 0x1700CB8F RID: 52111
+		// (get) Token: 0x0602FCCE RID: 195790 RVA: 0x00682826 File Offset: 0x00680A26
+		// (set) Token: 0x0602FCCF RID: 195791 RVA: 0x0068282E File Offset: 0x00680A2E
 		public bool DisableSkillWheel { get; set; }
 
-		// Token: 0x1700C1F2 RID: 49650
-		// (get) Token: 0x0602D4FF RID: 185599 RVA: 0x00635CCF File Offset: 0x00633ECF
-		// (set) Token: 0x0602D500 RID: 185600 RVA: 0x00635CD7 File Offset: 0x00633ED7
+		// Token: 0x1700CB90 RID: 52112
+		// (get) Token: 0x0602FCD0 RID: 195792 RVA: 0x00682837 File Offset: 0x00680A37
+		// (set) Token: 0x0602FCD1 RID: 195793 RVA: 0x0068283F File Offset: 0x00680A3F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602D501 RID: 185601 RVA: 0x00635CE0 File Offset: 0x00633EE0
+		// Token: 0x0602FCD2 RID: 195794 RVA: 0x00682848 File Offset: 0x00680A48
 		public IDisableSkillOperationT()
 		{
 			this.Type = ESkillOperationType.Enable;

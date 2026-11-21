@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006840 RID: 26688
+	// Token: 0x02006EC6 RID: 28358
 	public struct IFocusOnCustomMapMark : IFlatbufferObject
 	{
-		// Token: 0x1700C643 RID: 50755
-		// (get) Token: 0x0602E885 RID: 190597 RVA: 0x006596B8 File Offset: 0x006578B8
+		// Token: 0x1700D007 RID: 53255
+		// (get) Token: 0x0603110D RID: 200973 RVA: 0x006A75F8 File Offset: 0x006A57F8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E886 RID: 190598 RVA: 0x006596C5 File Offset: 0x006578C5
+		// Token: 0x0603110E RID: 200974 RVA: 0x006A7605 File Offset: 0x006A5805
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E887 RID: 190599 RVA: 0x006596CC File Offset: 0x006578CC
+		// Token: 0x0603110F RID: 200975 RVA: 0x006A760C File Offset: 0x006A580C
 		public static IFocusOnCustomMapMark GetRootAsIFocusOnCustomMapMark(ByteBuffer _bb)
 		{
 			return IFocusOnCustomMapMark.GetRootAsIFocusOnCustomMapMark(_bb, default(IFocusOnCustomMapMark));
 		}
 
-		// Token: 0x0602E888 RID: 190600 RVA: 0x006596E8 File Offset: 0x006578E8
+		// Token: 0x06031110 RID: 200976 RVA: 0x006A7628 File Offset: 0x006A5828
 		public static IFocusOnCustomMapMark GetRootAsIFocusOnCustomMapMark(ByteBuffer _bb, IFocusOnCustomMapMark obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E889 RID: 190601 RVA: 0x00659705 File Offset: 0x00657905
+		// Token: 0x06031111 RID: 200977 RVA: 0x006A7645 File Offset: 0x006A5845
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E88A RID: 190602 RVA: 0x00659714 File Offset: 0x00657914
+		// Token: 0x06031112 RID: 200978 RVA: 0x006A7654 File Offset: 0x006A5854
 		public IFocusOnCustomMapMark __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C644 RID: 50756
-		// (get) Token: 0x0602E88B RID: 190603 RVA: 0x00659724 File Offset: 0x00657924
+		// Token: 0x1700D008 RID: 53256
+		// (get) Token: 0x06031113 RID: 200979 RVA: 0x006A7664 File Offset: 0x006A5864
 		public EMapMarkType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C645 RID: 50757
-		// (get) Token: 0x0602E88C RID: 190604 RVA: 0x00659760 File Offset: 0x00657960
+		// Token: 0x1700D009 RID: 53257
+		// (get) Token: 0x06031114 RID: 200980 RVA: 0x006A76A0 File Offset: 0x006A58A0
 		public int MarkId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E88D RID: 190605 RVA: 0x0065979C File Offset: 0x0065799C
+		// Token: 0x06031115 RID: 200981 RVA: 0x006A76DC File Offset: 0x006A58DC
 		public static Offset<IFocusOnCustomMapMark> CreateIFocusOnCustomMapMark(FlatBufferBuilder builder, EMapMarkType Type = EMapMarkType.Custom, int MarkId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFocusOnCustomMapMark.EndIFocusOnCustomMapMark(builder);
 		}
 
-		// Token: 0x0602E88E RID: 190606 RVA: 0x006597B9 File Offset: 0x006579B9
+		// Token: 0x06031116 RID: 200982 RVA: 0x006A76F9 File Offset: 0x006A58F9
 		public static void StartIFocusOnCustomMapMark(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E88F RID: 190607 RVA: 0x006597C2 File Offset: 0x006579C2
+		// Token: 0x06031117 RID: 200983 RVA: 0x006A7702 File Offset: 0x006A5902
 		public static void AddType(FlatBufferBuilder builder, EMapMarkType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E890 RID: 190608 RVA: 0x006597CD File Offset: 0x006579CD
+		// Token: 0x06031118 RID: 200984 RVA: 0x006A770D File Offset: 0x006A590D
 		public static void AddMarkId(FlatBufferBuilder builder, int markId)
 		{
 			builder.AddInt(1, markId, 0);
 		}
 
-		// Token: 0x0602E891 RID: 190609 RVA: 0x006597D8 File Offset: 0x006579D8
+		// Token: 0x06031119 RID: 200985 RVA: 0x006A7718 File Offset: 0x006A5918
 		public static Offset<IFocusOnCustomMapMark> EndIFocusOnCustomMapMark(FlatBufferBuilder builder)
 		{
 			return new Offset<IFocusOnCustomMapMark>(builder.EndTable());
 		}
 
-		// Token: 0x0602E892 RID: 190610 RVA: 0x006597E8 File Offset: 0x006579E8
+		// Token: 0x0603111A RID: 200986 RVA: 0x006A7728 File Offset: 0x006A5928
 		public IFocusOnCustomMapMarkT UnPack()
 		{
 			IFocusOnCustomMapMarkT focusOnCustomMapMarkT = new IFocusOnCustomMapMarkT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return focusOnCustomMapMarkT;
 		}
 
-		// Token: 0x0602E893 RID: 190611 RVA: 0x00659803 File Offset: 0x00657A03
+		// Token: 0x0603111B RID: 200987 RVA: 0x006A7743 File Offset: 0x006A5943
 		public void UnPackTo(IFocusOnCustomMapMarkT _o)
 		{
 			_o.Type = this.Type;
 			_o.MarkId = this.MarkId;
 		}
 
-		// Token: 0x0602E894 RID: 190612 RVA: 0x00659820 File Offset: 0x00657A20
+		// Token: 0x0603111C RID: 200988 RVA: 0x006A7760 File Offset: 0x006A5960
 		public static Offset<IFocusOnCustomMapMark> Pack(FlatBufferBuilder builder, IFocusOnCustomMapMarkT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFocusOnCustomMapMark.CreateIFocusOnCustomMapMark(builder, _o.Type, _o.MarkId);
 		}
 
-		// Token: 0x04010F89 RID: 69513
+		// Token: 0x04011DC3 RID: 73155
 		private Table __p;
 	}
 }

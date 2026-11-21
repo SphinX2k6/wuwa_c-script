@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF3 RID: 8179
+	// Token: 0x0200223A RID: 8762
 	public class ITrapDefensePlayerOperationSpawnMonster_SetValue
 	{
-		// Token: 0x04006C7B RID: 27771
+		// Token: 0x0400727D RID: 29309
 		public ETrapDefensePlayerOperationType Type;
 	}
 }

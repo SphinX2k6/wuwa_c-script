@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001A3F RID: 6719
+// Token: 0x02000EFE RID: 3838
 internal enum EDangoScrollItemComponent
 {
-	// Token: 0x04005B23 RID: 23331
+	// Token: 0x04005BF2 RID: 23538
 	Texture,
-	// Token: 0x04005B24 RID: 23332
+	// Token: 0x04005BF3 RID: 23539
 	GetItem
 }

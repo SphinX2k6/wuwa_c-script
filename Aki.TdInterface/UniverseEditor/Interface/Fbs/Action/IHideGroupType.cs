@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068E8 RID: 26856
+	// Token: 0x02006F98 RID: 28568
 	public struct IHideGroupType : IFlatbufferObject
 	{
-		// Token: 0x1700C748 RID: 51016
-		// (get) Token: 0x0602ED9D RID: 191901 RVA: 0x0066462C File Offset: 0x0066282C
+		// Token: 0x1700D142 RID: 53570
+		// (get) Token: 0x0603174F RID: 202575 RVA: 0x006B4774 File Offset: 0x006B2974
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602ED9E RID: 191902 RVA: 0x00664639 File Offset: 0x00662839
+		// Token: 0x06031750 RID: 202576 RVA: 0x006B4781 File Offset: 0x006B2981
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602ED9F RID: 191903 RVA: 0x00664640 File Offset: 0x00662840
+		// Token: 0x06031751 RID: 202577 RVA: 0x006B4788 File Offset: 0x006B2988
 		public static IHideGroupType GetRootAsIHideGroupType(ByteBuffer _bb)
 		{
 			return IHideGroupType.GetRootAsIHideGroupType(_bb, default(IHideGroupType));
 		}
 
-		// Token: 0x0602EDA0 RID: 191904 RVA: 0x0066465C File Offset: 0x0066285C
+		// Token: 0x06031752 RID: 202578 RVA: 0x006B47A4 File Offset: 0x006B29A4
 		public static IHideGroupType GetRootAsIHideGroupType(ByteBuffer _bb, IHideGroupType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EDA1 RID: 191905 RVA: 0x00664679 File Offset: 0x00662879
+		// Token: 0x06031753 RID: 202579 RVA: 0x006B47C1 File Offset: 0x006B29C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EDA2 RID: 191906 RVA: 0x00664688 File Offset: 0x00662888
+		// Token: 0x06031754 RID: 202580 RVA: 0x006B47D0 File Offset: 0x006B29D0
 		public IHideGroupType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C749 RID: 51017
-		// (get) Token: 0x0602EDA3 RID: 191907 RVA: 0x00664698 File Offset: 0x00662898
+		// Token: 0x1700D143 RID: 53571
+		// (get) Token: 0x06031755 RID: 202581 RVA: 0x006B47E0 File Offset: 0x006B29E0
 		public EHideType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EDA4 RID: 191908 RVA: 0x006646D4 File Offset: 0x006628D4
+		// Token: 0x06031756 RID: 202582 RVA: 0x006B481C File Offset: 0x006B2A1C
 		public static Offset<IHideGroupType> CreateIHideGroupType(FlatBufferBuilder builder, EHideType Type = EHideType.WorldMonsterAndMonsterTreasure)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHideGroupType.EndIHideGroupType(builder);
 		}
 
-		// Token: 0x0602EDA5 RID: 191909 RVA: 0x006646EA File Offset: 0x006628EA
+		// Token: 0x06031757 RID: 202583 RVA: 0x006B4832 File Offset: 0x006B2A32
 		public static void StartIHideGroupType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602EDA6 RID: 191910 RVA: 0x006646F3 File Offset: 0x006628F3
+		// Token: 0x06031758 RID: 202584 RVA: 0x006B483B File Offset: 0x006B2A3B
 		public static void AddType(FlatBufferBuilder builder, EHideType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602EDA7 RID: 191911 RVA: 0x006646FE File Offset: 0x006628FE
+		// Token: 0x06031759 RID: 202585 RVA: 0x006B4846 File Offset: 0x006B2A46
 		public static Offset<IHideGroupType> EndIHideGroupType(FlatBufferBuilder builder)
 		{
 			return new Offset<IHideGroupType>(builder.EndTable());
 		}
 
-		// Token: 0x0602EDA8 RID: 191912 RVA: 0x0066470C File Offset: 0x0066290C
+		// Token: 0x0603175A RID: 202586 RVA: 0x006B4854 File Offset: 0x006B2A54
 		public IHideGroupTypeT UnPack()
 		{
 			IHideGroupTypeT hideGroupTypeT = new IHideGroupTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return hideGroupTypeT;
 		}
 
-		// Token: 0x0602EDA9 RID: 191913 RVA: 0x00664727 File Offset: 0x00662927
+		// Token: 0x0603175B RID: 202587 RVA: 0x006B486F File Offset: 0x006B2A6F
 		public void UnPackTo(IHideGroupTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602EDAA RID: 191914 RVA: 0x00664738 File Offset: 0x00662938
+		// Token: 0x0603175C RID: 202588 RVA: 0x006B4880 File Offset: 0x006B2A80
 		public static Offset<IHideGroupType> Pack(FlatBufferBuilder builder, IHideGroupTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHideGroupType.CreateIHideGroupType(builder, _o.Type);
 		}
 
-		// Token: 0x04011051 RID: 69713
+		// Token: 0x04011EB8 RID: 73400
 		private Table __p;
 	}
 }

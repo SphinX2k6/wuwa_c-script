@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200610B RID: 24843
+	// Token: 0x0200676D RID: 26477
 	public class IActorTurnToPositionDataT
 	{
-		// Token: 0x1700B716 RID: 46870
-		// (get) Token: 0x0602A727 RID: 173863 RVA: 0x005D8E8F File Offset: 0x005D708F
-		// (set) Token: 0x0602A728 RID: 173864 RVA: 0x005D8E97 File Offset: 0x005D7097
+		// Token: 0x1700C081 RID: 49281
+		// (get) Token: 0x0602CE08 RID: 183816 RVA: 0x00622E37 File Offset: 0x00621037
+		// (set) Token: 0x0602CE09 RID: 183817 RVA: 0x00622E3F File Offset: 0x0062103F
 		public EActorTurnToMode Type { get; set; }
 
-		// Token: 0x1700B717 RID: 46871
-		// (get) Token: 0x0602A729 RID: 173865 RVA: 0x005D8EA0 File Offset: 0x005D70A0
-		// (set) Token: 0x0602A72A RID: 173866 RVA: 0x005D8EA8 File Offset: 0x005D70A8
+		// Token: 0x1700C082 RID: 49282
+		// (get) Token: 0x0602CE0A RID: 183818 RVA: 0x00622E48 File Offset: 0x00621048
+		// (set) Token: 0x0602CE0B RID: 183819 RVA: 0x00622E50 File Offset: 0x00621050
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x0602A72B RID: 173867 RVA: 0x005D8EB1 File Offset: 0x005D70B1
+		// Token: 0x0602CE0C RID: 183820 RVA: 0x00622E59 File Offset: 0x00621059
 		public IActorTurnToPositionDataT()
 		{
 			this.Type = EActorTurnToMode.Talker;

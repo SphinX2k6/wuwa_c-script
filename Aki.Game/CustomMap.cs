@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020034FA RID: 13562
+// Token: 0x02002A6F RID: 10863
 [NullableContext(1)]
 [Nullable(0)]
 public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 {
-	// Token: 0x0601DBC1 RID: 121793 RVA: 0x00854F7D File Offset: 0x0085317D
+	// Token: 0x0601B8D8 RID: 112856 RVA: 0x0087D3D1 File Offset: 0x0087B5D1
 	public int Size()
 	{
 		return this.Key2Index.Count;
 	}
 
-	// Token: 0x0601DBC2 RID: 121794 RVA: 0x00854F8C File Offset: 0x0085318C
+	// Token: 0x0601B8D9 RID: 112857 RVA: 0x0087D3E0 File Offset: 0x0087B5E0
 	public void Set(TKey key, TValue value)
 	{
 		if (value == null)
@@ -32,7 +32,7 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		this.Index2Key[count] = key;
 	}
 
-	// Token: 0x0601DBC3 RID: 121795 RVA: 0x00855004 File Offset: 0x00853204
+	// Token: 0x0601B8DA RID: 112858 RVA: 0x0087D458 File Offset: 0x0087B658
 	public TValue Get(TKey key)
 	{
 		int index;
@@ -43,7 +43,7 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		return default(TValue);
 	}
 
-	// Token: 0x0601DBC4 RID: 121796 RVA: 0x00855038 File Offset: 0x00853238
+	// Token: 0x0601B8DB RID: 112859 RVA: 0x0087D48C File Offset: 0x0087B68C
 	public bool TryGetValue(TKey key, [Nullable(2)] out TValue value)
 	{
 		int index;
@@ -56,7 +56,7 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		return false;
 	}
 
-	// Token: 0x0601DBC5 RID: 121797 RVA: 0x00855074 File Offset: 0x00853274
+	// Token: 0x0601B8DC RID: 112860 RVA: 0x0087D4C8 File Offset: 0x0087B6C8
 	public TValue GetByIndex(int index)
 	{
 		TKey key;
@@ -67,13 +67,13 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		return default(TValue);
 	}
 
-	// Token: 0x0601DBC6 RID: 121798 RVA: 0x008550A2 File Offset: 0x008532A2
+	// Token: 0x0601B8DD RID: 112861 RVA: 0x0087D4F6 File Offset: 0x0087B6F6
 	public bool Contains(TKey key)
 	{
 		return this.Key2Index.ContainsKey(key);
 	}
 
-	// Token: 0x0601DBC7 RID: 121799 RVA: 0x008550B0 File Offset: 0x008532B0
+	// Token: 0x0601B8DE RID: 112862 RVA: 0x0087D504 File Offset: 0x0087B704
 	public bool Remove(TKey key)
 	{
 		int num;
@@ -101,7 +101,7 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		return true;
 	}
 
-	// Token: 0x0601DBC8 RID: 121800 RVA: 0x00855154 File Offset: 0x00853354
+	// Token: 0x0601B8DF RID: 112863 RVA: 0x0087D5A8 File Offset: 0x0087B7A8
 	public bool Remove(TKey key, [Nullable(2)] out TValue value)
 	{
 		int num;
@@ -131,26 +131,26 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		return true;
 	}
 
-	// Token: 0x0601DBC9 RID: 121801 RVA: 0x00855214 File Offset: 0x00853414
+	// Token: 0x0601B8E0 RID: 112864 RVA: 0x0087D668 File Offset: 0x0087B868
 	public bool RemoveByIndex(int index)
 	{
 		TKey key;
 		return this.Index2Key.TryGetValue(index, out key) && this.Remove(key);
 	}
 
-	// Token: 0x0601DBCA RID: 121802 RVA: 0x0085523A File Offset: 0x0085343A
+	// Token: 0x0601B8E1 RID: 112865 RVA: 0x0087D68E File Offset: 0x0087B88E
 	public IEnumerable<TKey> Keys()
 	{
 		return this.Key2Index.Keys;
 	}
 
-	// Token: 0x0601DBCB RID: 121803 RVA: 0x00855247 File Offset: 0x00853447
+	// Token: 0x0601B8E2 RID: 112866 RVA: 0x0087D69B File Offset: 0x0087B89B
 	public IReadOnlyList<TValue> GetItems()
 	{
 		return this.List;
 	}
 
-	// Token: 0x0601DBCC RID: 121804 RVA: 0x0085524F File Offset: 0x0085344F
+	// Token: 0x0601B8E3 RID: 112867 RVA: 0x0087D6A3 File Offset: 0x0087B8A3
 	public void Clear()
 	{
 		this.Key2Index.Clear();
@@ -158,12 +158,12 @@ public class CustomMap<[Nullable(2)] TKey, [Nullable(2)] TValue>
 		this.List.Clear();
 	}
 
-	// Token: 0x0400E956 RID: 59734
+	// Token: 0x0400EE11 RID: 60945
 	private readonly Dictionary<TKey, int> Key2Index = new Dictionary<TKey, int>();
 
-	// Token: 0x0400E957 RID: 59735
+	// Token: 0x0400EE12 RID: 60946
 	private readonly List<TValue> List = new List<TValue>();
 
-	// Token: 0x0400E958 RID: 59736
+	// Token: 0x0400EE13 RID: 60947
 	private readonly Dictionary<int, TKey> Index2Key = new Dictionary<int, TKey>();
 }

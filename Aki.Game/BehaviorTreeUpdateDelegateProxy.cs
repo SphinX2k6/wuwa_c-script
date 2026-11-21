@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.InstanceDungeon;
 
-// Token: 0x02001D55 RID: 7509
+// Token: 0x02001217 RID: 4631
 [NullableContext(1)]
 [Nullable(0)]
 public class BehaviorTreeUpdateDelegateProxy
 {
-	// Token: 0x0600E416 RID: 58390 RVA: 0x0035956C File Offset: 0x0035776C
+	// Token: 0x0600B833 RID: 47155 RVA: 0x00365040 File Offset: 0x00363240
 	public void Init()
 	{
 		this.Clear();
 	}
 
-	// Token: 0x0600E417 RID: 58391 RVA: 0x00359574 File Offset: 0x00357774
+	// Token: 0x0600B834 RID: 47156 RVA: 0x00365048 File Offset: 0x00363248
 	public void Clear()
 	{
 		this.TempTreeVarDelegateMap.Clear();
 		this.BehaviorTreeVarMap.Clear();
 	}
 
-	// Token: 0x0600E418 RID: 58392 RVA: 0x0035958C File Offset: 0x0035778C
+	// Token: 0x0600B835 RID: 47157 RVA: 0x00365060 File Offset: 0x00363260
 	public void SetBehaviorTreeVarRelation(Dictionary<string, string> varType2VarNameMap)
 	{
 		this.BehaviorTreeVarMap.Clear();
@@ -48,7 +48,7 @@ public class BehaviorTreeUpdateDelegateProxy
 		}
 	}
 
-	// Token: 0x0600E419 RID: 58393 RVA: 0x00359694 File Offset: 0x00357894
+	// Token: 0x0600B836 RID: 47158 RVA: 0x00365168 File Offset: 0x00363368
 	[return: Nullable(2)]
 	public VarDefinePb GetBehaviorTreeVar(string varType)
 	{
@@ -70,7 +70,7 @@ public class BehaviorTreeUpdateDelegateProxy
 		return tree.GetTreeVarByKey(key);
 	}
 
-	// Token: 0x0600E41A RID: 58394 RVA: 0x003596D4 File Offset: 0x003578D4
+	// Token: 0x0600B837 RID: 47159 RVA: 0x003651A8 File Offset: 0x003633A8
 	public long GetBehaviorTreeVarToNumber(string varType)
 	{
 		VarDefinePb behaviorTreeVar = this.GetBehaviorTreeVar(varType);
@@ -81,7 +81,7 @@ public class BehaviorTreeUpdateDelegateProxy
 		return behaviorTreeVar.Int;
 	}
 
-	// Token: 0x0600E41B RID: 58395 RVA: 0x003596EC File Offset: 0x003578EC
+	// Token: 0x0600B838 RID: 47160 RVA: 0x003651C0 File Offset: 0x003633C0
 	public void AddTreeVarUpdateDelegate(string varType, TTreeVarUpdateDelegate @delegate)
 	{
 		InstanceDungeonInfo instanceDungeonInfo = InstanceDungeonModel.Instance.GetInstanceDungeonInfo();
@@ -98,7 +98,7 @@ public class BehaviorTreeUpdateDelegateProxy
 		this.SaveTempTreeVarDelegate(varType, @delegate);
 	}
 
-	// Token: 0x0600E41C RID: 58396 RVA: 0x00359738 File Offset: 0x00357938
+	// Token: 0x0600B839 RID: 47161 RVA: 0x0036520C File Offset: 0x0036340C
 	public void RemoveTreeVarUpdateDelegate(string varType, TTreeVarUpdateDelegate @delegate)
 	{
 		InstanceDungeonInfo instanceDungeonInfo = InstanceDungeonModel.Instance.GetInstanceDungeonInfo();
@@ -115,7 +115,7 @@ public class BehaviorTreeUpdateDelegateProxy
 		this.RemoveTempTreeVarDelegate(varType, @delegate);
 	}
 
-	// Token: 0x0600E41D RID: 58397 RVA: 0x00359784 File Offset: 0x00357984
+	// Token: 0x0600B83A RID: 47162 RVA: 0x00365258 File Offset: 0x00363458
 	private void SaveTempTreeVarDelegate(string varType, TTreeVarUpdateDelegate @delegate)
 	{
 		HashSet<TTreeVarUpdateDelegate> hashSet;
@@ -126,7 +126,7 @@ public class BehaviorTreeUpdateDelegateProxy
 		hashSet.Add(@delegate);
 	}
 
-	// Token: 0x0600E41E RID: 58398 RVA: 0x003597BC File Offset: 0x003579BC
+	// Token: 0x0600B83B RID: 47163 RVA: 0x00365290 File Offset: 0x00363490
 	private void RemoveTempTreeVarDelegate(string varType, TTreeVarUpdateDelegate @delegate)
 	{
 		HashSet<TTreeVarUpdateDelegate> hashSet;
@@ -136,9 +136,9 @@ public class BehaviorTreeUpdateDelegateProxy
 		}
 	}
 
-	// Token: 0x04006929 RID: 26921
+	// Token: 0x04006A09 RID: 27145
 	private readonly Dictionary<string, string> BehaviorTreeVarMap = new Dictionary<string, string>();
 
-	// Token: 0x0400692A RID: 26922
+	// Token: 0x04006A0A RID: 27146
 	private readonly Dictionary<string, HashSet<TTreeVarUpdateDelegate>> TempTreeVarDelegateMap = new Dictionary<string, HashSet<TTreeVarUpdateDelegate>>();
 }

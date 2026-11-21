@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.GameMainView.TrapDefense;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001D45 RID: 7493
+// Token: 0x02001207 RID: 4615
 public class TrapDefenseEventBossComingTips : UiViewBase
 {
-	// Token: 0x0600E33D RID: 58173 RVA: 0x00356539 File Offset: 0x00354739
+	// Token: 0x0600B75A RID: 46938 RVA: 0x00361F69 File Offset: 0x00360169
 	[NullableContext(1)]
 	public TrapDefenseEventBossComingTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E33E RID: 58174 RVA: 0x00356542 File Offset: 0x00354742
+	// Token: 0x0600B75B RID: 46939 RVA: 0x00361F72 File Offset: 0x00360172
 	protected override void OnStart()
 	{
 		this.Data = (this.OpenParam as ITrapDefenseBossComingTipsData);
 	}
 
-	// Token: 0x0600E33F RID: 58175 RVA: 0x00356555 File Offset: 0x00354755
+	// Token: 0x0600B75C RID: 46940 RVA: 0x00361F85 File Offset: 0x00360185
 	protected override void OnFinishShow()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E340 RID: 58176 RVA: 0x00356560 File Offset: 0x00354760
+	// Token: 0x0600B75D RID: 46941 RVA: 0x00361F90 File Offset: 0x00360190
 	protected override void OnBeforeDestroy()
 	{
 		ITrapDefenseBossComingTipsData data = this.Data;
@@ -35,7 +35,7 @@ public class TrapDefenseEventBossComingTips : UiViewBase
 		}
 	}
 
-	// Token: 0x040068F0 RID: 26864
+	// Token: 0x040069CF RID: 27087
 	[Nullable(2)]
 	protected ITrapDefenseBossComingTipsData Data;
 }

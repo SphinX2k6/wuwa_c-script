@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E62 RID: 3682
+	// Token: 0x02000F75 RID: 3957
 	public enum EElementCategory
 	{
-		// Token: 0x04003072 RID: 12402
+		// Token: 0x04003373 RID: 13171
 		Element0,
-		// Token: 0x04003073 RID: 12403
+		// Token: 0x04003374 RID: 13172
 		Element1,
-		// Token: 0x04003074 RID: 12404
+		// Token: 0x04003375 RID: 13173
 		Element2,
-		// Token: 0x04003075 RID: 12405
+		// Token: 0x04003376 RID: 13174
 		Element3,
-		// Token: 0x04003076 RID: 12406
+		// Token: 0x04003377 RID: 13175
 		Element4,
-		// Token: 0x04003077 RID: 12407
+		// Token: 0x04003378 RID: 13176
 		Element5,
-		// Token: 0x04003078 RID: 12408
+		// Token: 0x04003379 RID: 13177
 		Element6
 	}
 }

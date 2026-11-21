@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002708 RID: 9992
+	// Token: 0x020007DE RID: 2014
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnShowCaptureDialogue : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060250BB RID: 151739 RVA: 0x0036D418 File Offset: 0x0036B618
+		// Token: 0x0600AD2A RID: 44330 RVA: 0x001000BC File Offset: 0x000FE2BC
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnShowCaptureDialogue.StaticFunctionPtr();
 		}
 
-		// Token: 0x060250BC RID: 151740 RVA: 0x0036D424 File Offset: 0x0036B624
+		// Token: 0x0600AD2B RID: 44331 RVA: 0x001000C8 File Offset: 0x000FE2C8
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnShowCaptureDialogue._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnShowCaptureDialogue._FunctionPtr;
 		}
 
-		// Token: 0x060250BD RID: 151741 RVA: 0x0036D447 File Offset: 0x0036B647
+		// Token: 0x0600AD2C RID: 44332 RVA: 0x001000EB File Offset: 0x000FE2EB
 		public FOnShowCaptureDialogue()
 		{
 		}
 
-		// Token: 0x060250BE RID: 151742 RVA: 0x0036D44F File Offset: 0x0036B64F
+		// Token: 0x0600AD2D RID: 44333 RVA: 0x001000F3 File Offset: 0x000FE2F3
 		[NullableContext(2)]
 		public FOnShowCaptureDialogue(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060250BF RID: 151743 RVA: 0x0036D459 File Offset: 0x0036B659
+		// Token: 0x0600AD2E RID: 44334 RVA: 0x001000FD File Offset: 0x000FE2FD
 		public FOnShowCaptureDialogue(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060250C0 RID: 151744 RVA: 0x0036D464 File Offset: 0x0036B664
+		// Token: 0x0600AD2F RID: 44335 RVA: 0x00100108 File Offset: 0x000FE308
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool, FText, FText>) ?? ((Action<bool, FText, FText>)Delegate.CreateDelegate(typeof(Action<bool, FText, FText>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060250C1 RID: 151745 RVA: 0x0036D496 File Offset: 0x0036B696
+		// Token: 0x0600AD30 RID: 44336 RVA: 0x0010013A File Offset: 0x000FE33A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool, FText, FText> Callback)
 		{
 			if (FOnShowCaptureDialogue.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnShowCaptureDialogue.RegisterId);
 		}
 
-		// Token: 0x060250C2 RID: 151746 RVA: 0x0036D4D0 File Offset: 0x0036B6D0
+		// Token: 0x0600AD31 RID: 44337 RVA: 0x00100174 File Offset: 0x000FE374
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool, FText, FText> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060250C3 RID: 151747 RVA: 0x0036D4DC File Offset: 0x0036B6DC
+		// Token: 0x0600AD32 RID: 44338 RVA: 0x00100180 File Offset: 0x000FE380
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bShow, in FText SpeakerName, in FText DialogueKey)
 		{
 			FOnShowCaptureDialogue.__FOnShowCaptureDialogue_DelegateParams* ptr = stackalloc FOnShowCaptureDialogue.__FOnShowCaptureDialogue_DelegateParams[(UIntPtr)71] + 15L / (long)sizeof(FOnShowCaptureDialogue.__FOnShowCaptureDialogue_DelegateParams) & -16L;
@@ -90,10 +87,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnShowCaptureDialogue._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060250C4 RID: 151748 RVA: 0x0036D550 File Offset: 0x0036B750
+		// Token: 0x0600AD33 RID: 44339 RVA: 0x001001F4 File Offset: 0x000FE3F4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, FText, FText> action = target as Action<bool, FText, FText>;
@@ -106,39 +102,39 @@ namespace UnrealEngine
 			action(((FOnShowCaptureDialogue.__FOnShowCaptureDialogue_DelegateParams*)__Parameters)->bShow, arg, arg2);
 		}
 
-		// Token: 0x04013F50 RID: 81744
+		// Token: 0x04004AA3 RID: 19107
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04013F51 RID: 81745
+		// Token: 0x04004AA4 RID: 19108
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SequenceDialogue.OnShowCaptureDialogue__DelegateSignature";
 
-		// Token: 0x04013F52 RID: 81746
+		// Token: 0x04004AA5 RID: 19109
 		private static int RegisterId;
 
-		// Token: 0x020036AC RID: 13996
+		// Token: 0x02000F89 RID: 3977
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
-		protected ref struct __FOnShowCaptureDialogue_DelegateParams
+		private ref struct __FOnShowCaptureDialogue_DelegateParams
 		{
-			// Token: 0x040177BF RID: 96191
+			// Token: 0x04006383 RID: 25475
 			[FieldOffset(0)]
 			public bool bShow;
 
-			// Token: 0x040177C0 RID: 96192
+			// Token: 0x04006384 RID: 25476
 			[FieldOffset(8)]
 			public byte SpeakerName;
 
-			// Token: 0x040177C1 RID: 96193
+			// Token: 0x04006385 RID: 25477
 			[FieldOffset(32)]
 			public byte DialogueKey;
 		}
 
-		// Token: 0x020036AD RID: 13997
+		// Token: 0x02000F8A RID: 3978
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177C2 RID: 96194
+			// Token: 0x04006386 RID: 25478
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

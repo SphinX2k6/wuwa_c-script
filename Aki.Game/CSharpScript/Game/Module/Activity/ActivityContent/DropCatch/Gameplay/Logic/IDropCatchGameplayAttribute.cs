@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006715 RID: 26389
+	// Token: 0x02005665 RID: 22117
 	public interface IDropCatchGameplayAttribute
 	{
-		// Token: 0x06041E79 RID: 269945
+		// Token: 0x060369C5 RID: 223685
 		float GetBaseValue();
 
-		// Token: 0x06041E7A RID: 269946
+		// Token: 0x060369C6 RID: 223686
 		float GetFinalValue();
 
-		// Token: 0x06041E7B RID: 269947
+		// Token: 0x060369C7 RID: 223687
 		void SetFinalValue(float value);
 
-		// Token: 0x06041E7C RID: 269948
+		// Token: 0x060369C8 RID: 223688
 		void Reset();
 	}
 }

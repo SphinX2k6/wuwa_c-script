@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F34 RID: 3892
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200104A RID: 4170
 	public class IDangoAbyssInformationBoard : IInformationBoardType
 	{
-		// Token: 0x0600567E RID: 22142 RVA: 0x000D3F70 File Offset: 0x000D2170
+		// Token: 0x06005BFA RID: 23546 RVA: 0x000E0118 File Offset: 0x000DE318
 		private IDangoAbyssInformationBoard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600567F RID: 22143 RVA: 0x000D3FA8 File Offset: 0x000D21A8
+		// Token: 0x06005BFB RID: 23547 RVA: 0x000E0150 File Offset: 0x000DE350
 		public static IDangoAbyssInformationBoard Create([Nullable(2)] IDangoAbyssInformationBoard instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005680 RID: 22144 RVA: 0x000D3FBB File Offset: 0x000D21BB
+		// Token: 0x06005BFC RID: 23548 RVA: 0x000E0163 File Offset: 0x000DE363
 		public static IDangoAbyssInformationBoard CreateFromSetValue([Nullable(2)] IDangoAbyssInformationBoard_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005681 RID: 22145 RVA: 0x000D3FCE File Offset: 0x000D21CE
+		// Token: 0x06005BFD RID: 23549 RVA: 0x000E0176 File Offset: 0x000DE376
 		public new IDangoAbyssInformationBoard_SetValue ToSetValue()
 		{
 			return new IDangoAbyssInformationBoard_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CF2 RID: 7410
-		// (get) Token: 0x06005682 RID: 22146 RVA: 0x000D3FE1 File Offset: 0x000D21E1
-		// (set) Token: 0x06005683 RID: 22147 RVA: 0x000D400C File Offset: 0x000D220C
+		// Token: 0x17001E8A RID: 7818
+		// (get) Token: 0x06005BFE RID: 23550 RVA: 0x000E0189 File Offset: 0x000DE389
+		// (set) Token: 0x06005BFF RID: 23551 RVA: 0x000E01B4 File Offset: 0x000DE3B4
 		public override EInformationBoardType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400346F RID: 13423
+		// Token: 0x0400377C RID: 14204
 		[Nullable(2)]
 		protected new IDangoAbyssInformationBoard FbInstance;
 
-		// Token: 0x04003470 RID: 13424
+		// Token: 0x0400377D RID: 14205
 		[Nullable(2)]
 		protected new IDangoAbyssInformationBoard_SetValue PocoInterface;
 	}

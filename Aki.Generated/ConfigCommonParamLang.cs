@@ -8,13 +8,13 @@ namespace Aki.Config
 	// Token: 0x02000007 RID: 7
 	public class ConfigCommonParamLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600002F RID: 47 RVA: 0x0005AFC2 File Offset: 0x000591C2
+		// Token: 0x0600002F RID: 47 RVA: 0x0005E83E File Offset: 0x0005CA3E
 		static ConfigCommonParamLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommonParamLang.CreateStaticDefaultValue), new Action(ConfigCommonParamLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000030 RID: 48 RVA: 0x0005AFE4 File Offset: 0x000591E4
+		// Token: 0x06000030 RID: 48 RVA: 0x0005E860 File Offset: 0x0005CA60
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommonParamLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			ConfigCommonParamLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x06000031 RID: 49 RVA: 0x0005B057 File Offset: 0x00059257
+		// Token: 0x06000031 RID: 49 RVA: 0x0005E8D3 File Offset: 0x0005CAD3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommonParamLang.LogPair = null;
 			ConfigCommonParamLang.LangCache = null;
 		}
 
-		// Token: 0x06000032 RID: 50 RVA: 0x0005B065 File Offset: 0x00059265
+		// Token: 0x06000032 RID: 50 RVA: 0x0005E8E1 File Offset: 0x0005CAE1
 		public static void Init()
 		{
 			ConfigCommon.GetLangStatementId("CommonParam", "lang_common_param.db", "select content from `CommonParam` where id = ?", "");
 		}
 
-		// Token: 0x06000033 RID: 51 RVA: 0x0005B084 File Offset: 0x00059284
+		// Token: 0x06000033 RID: 51 RVA: 0x0005E900 File Offset: 0x0005CB00
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{

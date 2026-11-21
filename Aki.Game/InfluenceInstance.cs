@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001F7B RID: 8059
+// Token: 0x0200143D RID: 5181
 public class InfluenceInstance
 {
-	// Token: 0x17001341 RID: 4929
-	// (get) Token: 0x0600FA04 RID: 64004 RVA: 0x003C926F File Offset: 0x003C746F
+	// Token: 0x1700136B RID: 4971
+	// (get) Token: 0x0600CE23 RID: 52771 RVA: 0x003D4D8B File Offset: 0x003D2F8B
 	public EInfluenceRelation Relation
 	{
 		get
@@ -16,13 +16,13 @@ public class InfluenceInstance
 		}
 	}
 
-	// Token: 0x0600FA05 RID: 64005 RVA: 0x003C9277 File Offset: 0x003C7477
+	// Token: 0x0600CE24 RID: 52772 RVA: 0x003D4D93 File Offset: 0x003D2F93
 	public void SetRelation(EInfluenceRelation relation)
 	{
 		this.RelationInternal = relation;
 	}
 
-	// Token: 0x0600FA06 RID: 64006 RVA: 0x003C9280 File Offset: 0x003C7480
+	// Token: 0x0600CE25 RID: 52773 RVA: 0x003D4D9C File Offset: 0x003D2F9C
 	public InfluenceInstance(int id, int rewardIndex, int relation)
 	{
 		this.Id = id;
@@ -30,8 +30,8 @@ public class InfluenceInstance
 		this.RelationInternal = (EInfluenceRelation)relation;
 	}
 
-	// Token: 0x17001342 RID: 4930
-	// (get) Token: 0x0600FA07 RID: 64007 RVA: 0x003C929D File Offset: 0x003C749D
+	// Token: 0x1700136C RID: 4972
+	// (get) Token: 0x0600CE26 RID: 52774 RVA: 0x003D4DB9 File Offset: 0x003D2FB9
 	public int RewardIndex
 	{
 		get
@@ -40,13 +40,13 @@ public class InfluenceInstance
 		}
 	}
 
-	// Token: 0x0600FA08 RID: 64008 RVA: 0x003C92A5 File Offset: 0x003C74A5
+	// Token: 0x0600CE27 RID: 52775 RVA: 0x003D4DC1 File Offset: 0x003D2FC1
 	public void SetReceiveReward(int rewardIndex)
 	{
 		this.RewardIndexInternal = rewardIndex;
 	}
 
-	// Token: 0x0600FA09 RID: 64009 RVA: 0x003C92B0 File Offset: 0x003C74B0
+	// Token: 0x0600CE28 RID: 52776 RVA: 0x003D4DCC File Offset: 0x003D2FCC
 	[return: TupleElementNames(new string[]
 	{
 		"IsReceived",
@@ -67,7 +67,7 @@ public class InfluenceInstance
 		return new ValueTuple<bool, IntPair>(false, array[this.RewardIndex + 1]);
 	}
 
-	// Token: 0x0600FA0A RID: 64010 RVA: 0x003C932C File Offset: 0x003C752C
+	// Token: 0x0600CE29 RID: 52777 RVA: 0x003D4E48 File Offset: 0x003D3048
 	[NullableContext(1)]
 	public IReadOnlyList<IntPair> GetReward()
 	{
@@ -84,12 +84,12 @@ public class InfluenceInstance
 		return new List<IntPair>();
 	}
 
-	// Token: 0x04007483 RID: 29827
+	// Token: 0x04007564 RID: 30052
 	public readonly int Id;
 
-	// Token: 0x04007484 RID: 29828
+	// Token: 0x04007565 RID: 30053
 	private int RewardIndexInternal;
 
-	// Token: 0x04007485 RID: 29829
+	// Token: 0x04007566 RID: 30054
 	private EInfluenceRelation RelationInternal;
 }

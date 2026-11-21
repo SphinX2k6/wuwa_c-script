@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021C2 RID: 8642
+	// Token: 0x0200242D RID: 9261
 	public class SetJigsawItem_SetValue
 	{
-		// Token: 0x04007148 RID: 29000
-		[Nullable(1)]
+		// Token: 0x04007790 RID: 30608
 		public IMoveJigsawItem Config;
 	}
 }

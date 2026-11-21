@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007178 RID: 29048
+	// Token: 0x0200622C RID: 25132
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemEventListenerComponent : EntityComponent
 	{
-		// Token: 0x06046F05 RID: 290565 RVA: 0x011EC9BC File Offset: 0x011EABBC
+		// Token: 0x0603C783 RID: 247683 RVA: 0x01147B38 File Offset: 0x01145D38
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F06 RID: 290566 RVA: 0x011ECBDC File Offset: 0x011EADDC
+		// Token: 0x0603C784 RID: 247684 RVA: 0x01147D58 File Offset: 0x01145F58
 		protected override bool OnStart()
 		{
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnSceneInteractionSequencePlay, new Action<int, UMovieSceneSequencePlayer>(this.OnSequencePlay));
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F07 RID: 290567 RVA: 0x011ECC30 File Offset: 0x011EAE30
+		// Token: 0x0603C785 RID: 247685 RVA: 0x01147DAC File Offset: 0x01145FAC
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneInteractionSequencePlay, new Action<int, UMovieSceneSequencePlayer>(this.OnSequencePlay));
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046F08 RID: 290568 RVA: 0x011ECD50 File Offset: 0x011EAF50
+		// Token: 0x0603C786 RID: 247686 RVA: 0x01147ECC File Offset: 0x011460CC
 		private void OnSequencePlay(int handleId, UMovieSceneSequencePlayer seqPlayer)
 		{
 			WeakReference<UMovieSceneSequencePlayer> orAddWeakSequencePlayer = this.GetOrAddWeakSequencePlayer(seqPlayer);
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			list.Clear();
 		}
 
-		// Token: 0x06046F09 RID: 290569 RVA: 0x011ECD90 File Offset: 0x011EAF90
+		// Token: 0x0603C787 RID: 247687 RVA: 0x01147F0C File Offset: 0x0114610C
 		private void OnSequenceOver(int handleId, UMovieSceneSequencePlayer seqPlayer)
 		{
 			WeakReference<UMovieSceneSequencePlayer> orAddWeakSequencePlayer = this.GetOrAddWeakSequencePlayer(seqPlayer);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ExecuteMissingEventOnSeqOver(orAddWeakSequencePlayer, handleId);
 		}
 
-		// Token: 0x06046F0A RID: 290570 RVA: 0x011ECDB4 File Offset: 0x011EAFB4
+		// Token: 0x0603C788 RID: 247688 RVA: 0x01147F30 File Offset: 0x01146130
 		private void ClearEventStateObjOnSeqOver(WeakReference<UMovieSceneSequencePlayer> sequencePlayerWeakRef)
 		{
 			Dictionary<string, MechanismEventBase> dictionary;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EventStateMap.Remove(sequencePlayerWeakRef);
 		}
 
-		// Token: 0x06046F0B RID: 290571 RVA: 0x011ECE30 File Offset: 0x011EB030
+		// Token: 0x0603C789 RID: 247689 RVA: 0x01147FAC File Offset: 0x011461AC
 		private void ExecuteMissingEventOnSeqOver(WeakReference<UMovieSceneSequencePlayer> sequencePlayerWeakRef, int handleId)
 		{
 			List<string> list;
@@ -197,19 +197,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F0C RID: 290572 RVA: 0x011ECF40 File Offset: 0x011EB140
+		// Token: 0x0603C78A RID: 247690 RVA: 0x011480BC File Offset: 0x011462BC
 		public int GetPlayerId()
 		{
 			return this.CreatureDataComponent.GetPlayerId();
 		}
 
-		// Token: 0x06046F0D RID: 290573 RVA: 0x011ECF4D File Offset: 0x011EB14D
+		// Token: 0x0603C78B RID: 247691 RVA: 0x011480C9 File Offset: 0x011462C9
 		public long GetCreatureDataId()
 		{
 			return this.CreatureDataComponent.GetCreatureDataId();
 		}
 
-		// Token: 0x06046F0E RID: 290574 RVA: 0x011ECF5C File Offset: 0x011EB15C
+		// Token: 0x0603C78C RID: 247692 RVA: 0x011480D8 File Offset: 0x011462D8
 		public unsafe void ExecuteEvent(UMovieSceneSequencePlayer sequencePlayer, string eventType, string eventName, EMechanismEventExecuteType executeType, MechanismEventContext context)
 		{
 			string pathName = UKismetSystemLibrary.GetPathName(sequencePlayer.Sequence);
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F0F RID: 290575 RVA: 0x011ED368 File Offset: 0x011EB568
+		// Token: 0x0603C78D RID: 247693 RVA: 0x011484E4 File Offset: 0x011466E4
 		private WeakReference<UMovieSceneSequencePlayer> GetOrAddWeakSequencePlayer(UMovieSceneSequencePlayer sequencePlayer)
 		{
 			WeakReference<UMovieSceneSequencePlayer> weakReference;
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return weakReference;
 		}
 
-		// Token: 0x06046F10 RID: 290576 RVA: 0x011ED39C File Offset: 0x011EB59C
+		// Token: 0x0603C78E RID: 247694 RVA: 0x01148518 File Offset: 0x01146718
 		[return: Nullable(2)]
 		private unsafe MechanismEventBase GetEventObj(WeakReference<UMovieSceneSequencePlayer> sequencePlayer, IMechanismEventInfo eventInfo, EMechanismEventExecuteType executeType, MechanismEventContext context)
 		{
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return mechanismEventBase;
 		}
 
-		// Token: 0x06046F11 RID: 290577 RVA: 0x011ED57C File Offset: 0x011EB77C
+		// Token: 0x0603C78F RID: 247695 RVA: 0x011486F8 File Offset: 0x011468F8
 		private unsafe bool DestroyEventObj(WeakReference<UMovieSceneSequencePlayer> sequencePlayer, IMechanismEventInfo eventInfo, EMechanismEventExecuteType executeType)
 		{
 			if (executeType != EMechanismEventExecuteType.End)
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return dictionary.Remove(eventInfo.Info.EventName);
 		}
 
-		// Token: 0x06046F12 RID: 290578 RVA: 0x011ED738 File Offset: 0x011EB938
+		// Token: 0x0603C790 RID: 247696 RVA: 0x011488B4 File Offset: 0x01146AB4
 		public void AddTags(IList<int> tagIds)
 		{
 			foreach (int tagId in tagIds)
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F13 RID: 290579 RVA: 0x011ED7DC File Offset: 0x011EB9DC
+		// Token: 0x0603C791 RID: 247697 RVA: 0x01148958 File Offset: 0x01146B58
 		public void RemoveTags(IList<int> tagIds)
 		{
 			foreach (int tagId in tagIds)
@@ -483,7 +483,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046F14 RID: 290580 RVA: 0x011ED880 File Offset: 0x011EBA80
+		// Token: 0x0603C792 RID: 247698 RVA: 0x011489FC File Offset: 0x01146BFC
 		public int CreateBullet(SeqEventFireBullet param, string eventName)
 		{
 			EntityHandle sceneBulletOwner = BulletController.Instance.GetSceneBulletOwner();
@@ -509,13 +509,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return bulletEntity.Id;
 		}
 
-		// Token: 0x06046F15 RID: 290581 RVA: 0x011ED93B File Offset: 0x011EBB3B
+		// Token: 0x0603C793 RID: 247699 RVA: 0x01148AB7 File Offset: 0x01146CB7
 		public void DestroyBullet(int bulletEntityId)
 		{
 			BulletController.Instance.DestroyBullet(bulletEntityId, false, EBulletDestroyReason.Normal, false);
 		}
 
-		// Token: 0x06046F16 RID: 290582 RVA: 0x011ED94C File Offset: 0x011EBB4C
+		// Token: 0x0603C794 RID: 247700 RVA: 0x01148AC8 File Offset: 0x01146CC8
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -523,111 +523,116 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemEventListenerComponent sceneItemEventListenerComponent = (SceneItemEventListenerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (sceneItemEventListenerComponent.TagComponent == null)
 			{
-				if (sceneItemEventListenerComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
-			{
-				if (sceneItemEventListenerComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
-			{
-				if (sceneItemEventListenerComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SeqPlayerToWeak") && sceneItemEventListenerComponent.SeqPlayerToWeak != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<UMovieSceneSequencePlayer, WeakReference<UMovieSceneSequencePlayer>>(this.SeqPlayerToWeak), "SeqPlayerToWeak"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EventConfigMap") && sceneItemEventListenerComponent.EventConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Dictionary<string, IMechanismEventInfo>>>(this.EventConfigMap), "EventConfigMap"))
+			if (sceneItemEventListenerComponent.ActorComponent == null)
+			{
+				this.ActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EventStateMap") && sceneItemEventListenerComponent.EventStateMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<WeakReference<UMovieSceneSequencePlayer>, Dictionary<string, MechanismEventBase>>>(this.EventStateMap), "EventStateMap"))
+			if (sceneItemEventListenerComponent.CreatureDataComponent == null)
+			{
+				this.CreatureDataComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ExecutedEventMap") && sceneItemEventListenerComponent.ExecutedEventMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<WeakReference<UMovieSceneSequencePlayer>, List<string>>>(this.ExecutedEventMap), "ExecutedEventMap"))
+			if (sceneItemEventListenerComponent.SeqPlayerToWeak != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<UMovieSceneSequencePlayer, WeakReference<UMovieSceneSequencePlayer>>(this.SeqPlayerToWeak), "SeqPlayerToWeak"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SeqPlayerToGuid") && sceneItemEventListenerComponent.SeqPlayerToGuid != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<WeakReference<UMovieSceneSequencePlayer>, string>>(this.SeqPlayerToGuid), "SeqPlayerToGuid"))
+			if (sceneItemEventListenerComponent.EventConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EventConfigMap), "EventConfigMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SeqEventsConfig") && sceneItemEventListenerComponent.SeqEventsConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, List<ISceneItemSeqEventCbType>>>(this.SeqEventsConfig), "SeqEventsConfig"))
+			if (sceneItemEventListenerComponent.EventStateMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EventStateMap), "EventStateMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PbDataId"))
+			if (sceneItemEventListenerComponent.ExecutedEventMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExecutedEventMap), "ExecutedEventMap"))
 			{
-				this.PbDataId = sceneItemEventListenerComponent.PbDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ContextId"))
+			if (sceneItemEventListenerComponent.SeqPlayerToGuid != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeqPlayerToGuid), "SeqPlayerToGuid"))
 			{
-				this.ContextId = sceneItemEventListenerComponent.ContextId;
+				return false;
 			}
+			if (sceneItemEventListenerComponent.SeqEventsConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeqEventsConfig), "SeqEventsConfig"))
+			{
+				return false;
+			}
+			this.PbDataId = sceneItemEventListenerComponent.PbDataId;
+			this.ContextId = sceneItemEventListenerComponent.ContextId;
 			return true;
 		}
 
-		// Token: 0x04025425 RID: 152613
+		// Token: 0x1700723E RID: 29246
+		// (get) Token: 0x0603C795 RID: 247701 RVA: 0x01148C4D File Offset: 0x01146E4D
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700723F RID: 29247
+		// (get) Token: 0x0603C796 RID: 247702 RVA: 0x01148C50 File Offset: 0x01146E50
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402008C RID: 131212
 		private const string SERVER_DATA = "ListenerComponentPb";
 
-		// Token: 0x04025426 RID: 152614
+		// Token: 0x0402008D RID: 131213
 		[Nullable(2)]
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x04025427 RID: 152615
+		// Token: 0x0402008E RID: 131214
 		[Nullable(2)]
 		private BaseActorComponent ActorComponent;
 
-		// Token: 0x04025428 RID: 152616
+		// Token: 0x0402008F RID: 131215
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x04025429 RID: 152617
+		// Token: 0x04020090 RID: 131216
 		private readonly WeakMap<UMovieSceneSequencePlayer, WeakReference<UMovieSceneSequencePlayer>> SeqPlayerToWeak = new WeakMap<UMovieSceneSequencePlayer, WeakReference<UMovieSceneSequencePlayer>>();
 
-		// Token: 0x0402542A RID: 152618
+		// Token: 0x04020091 RID: 131217
 		private readonly Dictionary<string, Dictionary<string, IMechanismEventInfo>> EventConfigMap = new Dictionary<string, Dictionary<string, IMechanismEventInfo>>();
 
-		// Token: 0x0402542B RID: 152619
+		// Token: 0x04020092 RID: 131218
 		private readonly Dictionary<WeakReference<UMovieSceneSequencePlayer>, Dictionary<string, MechanismEventBase>> EventStateMap = new Dictionary<WeakReference<UMovieSceneSequencePlayer>, Dictionary<string, MechanismEventBase>>();
 
-		// Token: 0x0402542C RID: 152620
+		// Token: 0x04020093 RID: 131219
 		private readonly Dictionary<WeakReference<UMovieSceneSequencePlayer>, List<string>> ExecutedEventMap = new Dictionary<WeakReference<UMovieSceneSequencePlayer>, List<string>>();
 
-		// Token: 0x0402542D RID: 152621
+		// Token: 0x04020094 RID: 131220
 		private readonly Dictionary<WeakReference<UMovieSceneSequencePlayer>, string> SeqPlayerToGuid = new Dictionary<WeakReference<UMovieSceneSequencePlayer>, string>();
 
-		// Token: 0x0402542E RID: 152622
+		// Token: 0x04020095 RID: 131221
 		private readonly Dictionary<string, List<ISceneItemSeqEventCbType>> SeqEventsConfig = new Dictionary<string, List<ISceneItemSeqEventCbType>>();
 
-		// Token: 0x0402542F RID: 152623
+		// Token: 0x04020096 RID: 131222
 		private int PbDataId;
 
-		// Token: 0x04025430 RID: 152624
+		// Token: 0x04020097 RID: 131223
 		private long ContextId;
 	}
 }

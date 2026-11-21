@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DC5 RID: 28101
+	// Token: 0x02007540 RID: 30016
 	public struct IPromptStyleBase : IFlatbufferObject
 	{
-		// Token: 0x1700D18C RID: 53644
-		// (get) Token: 0x06031A39 RID: 203321 RVA: 0x006B99DC File Offset: 0x006B7BDC
+		// Token: 0x1700DCD4 RID: 56532
+		// (get) Token: 0x06034A35 RID: 215605 RVA: 0x007150C4 File Offset: 0x007132C4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031A3A RID: 203322 RVA: 0x006B99E9 File Offset: 0x006B7BE9
+		// Token: 0x06034A36 RID: 215606 RVA: 0x007150D1 File Offset: 0x007132D1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031A3B RID: 203323 RVA: 0x006B99F0 File Offset: 0x006B7BF0
+		// Token: 0x06034A37 RID: 215607 RVA: 0x007150D8 File Offset: 0x007132D8
 		public static IPromptStyleBase GetRootAsIPromptStyleBase(ByteBuffer _bb)
 		{
 			return IPromptStyleBase.GetRootAsIPromptStyleBase(_bb, default(IPromptStyleBase));
 		}
 
-		// Token: 0x06031A3C RID: 203324 RVA: 0x006B9A0C File Offset: 0x006B7C0C
+		// Token: 0x06034A38 RID: 215608 RVA: 0x007150F4 File Offset: 0x007132F4
 		public static IPromptStyleBase GetRootAsIPromptStyleBase(ByteBuffer _bb, IPromptStyleBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031A3D RID: 203325 RVA: 0x006B9A29 File Offset: 0x006B7C29
+		// Token: 0x06034A39 RID: 215609 RVA: 0x00715111 File Offset: 0x00713311
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031A3E RID: 203326 RVA: 0x006B9A38 File Offset: 0x006B7C38
+		// Token: 0x06034A3A RID: 215610 RVA: 0x00715120 File Offset: 0x00713320
 		public IPromptStyleBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D18D RID: 53645
-		// (get) Token: 0x06031A3F RID: 203327 RVA: 0x006B9A48 File Offset: 0x006B7C48
+		// Token: 0x1700DCD5 RID: 56533
+		// (get) Token: 0x06034A3B RID: 215611 RVA: 0x00715130 File Offset: 0x00713330
 		public EPromptStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031A40 RID: 203328 RVA: 0x006B9A84 File Offset: 0x006B7C84
+		// Token: 0x06034A3C RID: 215612 RVA: 0x0071516C File Offset: 0x0071336C
 		public static Offset<IPromptStyleBase> CreateIPromptStyleBase(FlatBufferBuilder builder, EPromptStyle Type = EPromptStyle.Default)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPromptStyleBase.EndIPromptStyleBase(builder);
 		}
 
-		// Token: 0x06031A41 RID: 203329 RVA: 0x006B9A9A File Offset: 0x006B7C9A
+		// Token: 0x06034A3D RID: 215613 RVA: 0x00715182 File Offset: 0x00713382
 		public static void StartIPromptStyleBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031A42 RID: 203330 RVA: 0x006B9AA3 File Offset: 0x006B7CA3
+		// Token: 0x06034A3E RID: 215614 RVA: 0x0071518B File Offset: 0x0071338B
 		public static void AddType(FlatBufferBuilder builder, EPromptStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031A43 RID: 203331 RVA: 0x006B9AAE File Offset: 0x006B7CAE
+		// Token: 0x06034A3F RID: 215615 RVA: 0x00715196 File Offset: 0x00713396
 		public static Offset<IPromptStyleBase> EndIPromptStyleBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IPromptStyleBase>(builder.EndTable());
 		}
 
-		// Token: 0x06031A44 RID: 203332 RVA: 0x006B9ABC File Offset: 0x006B7CBC
+		// Token: 0x06034A40 RID: 215616 RVA: 0x007151A4 File Offset: 0x007133A4
 		public IPromptStyleBaseT UnPack()
 		{
 			IPromptStyleBaseT promptStyleBaseT = new IPromptStyleBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return promptStyleBaseT;
 		}
 
-		// Token: 0x06031A45 RID: 203333 RVA: 0x006B9AD7 File Offset: 0x006B7CD7
+		// Token: 0x06034A41 RID: 215617 RVA: 0x007151BF File Offset: 0x007133BF
 		public void UnPackTo(IPromptStyleBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06031A46 RID: 203334 RVA: 0x006B9AE8 File Offset: 0x006B7CE8
+		// Token: 0x06034A42 RID: 215618 RVA: 0x007151D0 File Offset: 0x007133D0
 		public static Offset<IPromptStyleBase> Pack(FlatBufferBuilder builder, IPromptStyleBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPromptStyleBase.CreateIPromptStyleBase(builder, _o.Type);
 		}
 
-		// Token: 0x040117A3 RID: 71587
+		// Token: 0x0401271F RID: 75551
 		private Table __p;
 	}
 }

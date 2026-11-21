@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022EE RID: 8942
+	// Token: 0x0200255D RID: 9565
 	public class EControlElementalBoxTypeJsonConverter : JsonConverter<EControlElementalBoxType>
 	{
-		// Token: 0x0600C3AF RID: 50095 RVA: 0x001C9564 File Offset: 0x001C7764
+		// Token: 0x0600CF7E RID: 53118 RVA: 0x001E13B0 File Offset: 0x001DF5B0
 		public override EControlElementalBoxType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EControlElementalBoxTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C3B0 RID: 50096 RVA: 0x001C9588 File Offset: 0x001C7788
+		// Token: 0x0600CF7F RID: 53119 RVA: 0x001E13D4 File Offset: 0x001DF5D4
 		public override void Write(Utf8JsonWriter writer, EControlElementalBoxType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A3B RID: 10811
+	// Token: 0x02002D28 RID: 11560
 	public class IChargeSlashScanEffect : ISpecificScanEffect
 	{
-		// Token: 0x0600EE16 RID: 60950 RVA: 0x0022AE55 File Offset: 0x00229055
-		[NullableContext(1)]
+		// Token: 0x0600FCAE RID: 64686 RVA: 0x00248809 File Offset: 0x00246A09
 		public static IChargeSlashScanEffect Create(IChargeSlashScanEffect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B62 RID: 19298
-		// (get) Token: 0x0600EE17 RID: 60951 RVA: 0x0022AE74 File Offset: 0x00229074
+		// Token: 0x17004F0C RID: 20236
+		// (get) Token: 0x0600FCAF RID: 64687 RVA: 0x00248828 File Offset: 0x00246A28
 		public override ESpecificScanType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B63 RID: 19299
-		// (get) Token: 0x0600EE18 RID: 60952 RVA: 0x0022AE81 File Offset: 0x00229081
+		// Token: 0x17004F0D RID: 20237
+		// (get) Token: 0x0600FCB0 RID: 64688 RVA: 0x00248835 File Offset: 0x00246A35
 		public virtual int TriggerPosEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008307 RID: 33543
+		// Token: 0x040089FA RID: 35322
 		private IChargeSlashScanEffect Instance;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063A9 RID: 25513
+	// Token: 0x02005327 RID: 21287
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskSortedMap<[Nullable(2)] T>
 	{
-		// Token: 0x06040327 RID: 262951 RVA: 0x00F8B1C1 File Offset: 0x00F893C1
+		// Token: 0x06034FE8 RID: 217064 RVA: 0x00ED2159 File Offset: 0x00ED0359
 		public MowingRiskSortedMap(Func<T, object> getUniqueKey)
 		{
 			if (getUniqueKey == null)
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.MapCache = new Dictionary<object, T>();
 		}
 
-		// Token: 0x06040328 RID: 262952 RVA: 0x00F8B200 File Offset: 0x00F89400
+		// Token: 0x06034FE9 RID: 217065 RVA: 0x00ED2198 File Offset: 0x00ED0398
 		private void Add(T value)
 		{
 			object key = this.GetUniqueKey(value);
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.MapCache[key] = value;
 		}
 
-		// Token: 0x06040329 RID: 262953 RVA: 0x00F8B234 File Offset: 0x00F89434
+		// Token: 0x06034FEA RID: 217066 RVA: 0x00ED21CC File Offset: 0x00ED03CC
 		public void DeleteByKey(object key)
 		{
 			if (key == null)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.MapCache.Remove(key);
 		}
 
-		// Token: 0x0604032A RID: 262954 RVA: 0x00F8B288 File Offset: 0x00F89488
+		// Token: 0x06034FEB RID: 217067 RVA: 0x00ED2220 File Offset: 0x00ED0420
 		public void Set(T value)
 		{
 			if (value == null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.Add(value);
 		}
 
-		// Token: 0x0604032B RID: 262955 RVA: 0x00F8B320 File Offset: 0x00F89520
+		// Token: 0x06034FEC RID: 217068 RVA: 0x00ED22B8 File Offset: 0x00ED04B8
 		public T Get(object key)
 		{
 			if (key == null)
@@ -73,19 +73,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return result;
 		}
 
-		// Token: 0x0604032C RID: 262956 RVA: 0x00F8B34A File Offset: 0x00F8954A
+		// Token: 0x06034FED RID: 217069 RVA: 0x00ED22E2 File Offset: 0x00ED04E2
 		public IEnumerable<T> GetAll()
 		{
 			return this.ListCache.AsReadOnly();
 		}
 
-		// Token: 0x040216D7 RID: 136919
+		// Token: 0x0401C006 RID: 114694
 		private readonly Func<T, object> GetUniqueKey;
 
-		// Token: 0x040216D8 RID: 136920
+		// Token: 0x0401C007 RID: 114695
 		private readonly List<T> ListCache = new List<T>();
 
-		// Token: 0x040216D9 RID: 136921
+		// Token: 0x0401C008 RID: 114696
 		private readonly Dictionary<object, T> MapCache;
 	}
 }

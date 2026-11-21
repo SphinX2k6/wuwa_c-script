@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DFC RID: 7676
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200202F RID: 8239
 	public class ISendBattleStateType
 	{
-		// Token: 0x0600A43D RID: 42045 RVA: 0x001748B8 File Offset: 0x00172AB8
+		// Token: 0x0600AEE5 RID: 44773 RVA: 0x0018A2C0 File Offset: 0x001884C0
 		private ISendBattleStateType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A43E RID: 42046 RVA: 0x001748F0 File Offset: 0x00172AF0
+		// Token: 0x0600AEE6 RID: 44774 RVA: 0x0018A2F8 File Offset: 0x001884F8
 		public static ISendBattleStateType Create([Nullable(2)] ISendBattleStateType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A43F RID: 42047 RVA: 0x00174903 File Offset: 0x00172B03
+		// Token: 0x0600AEE7 RID: 44775 RVA: 0x0018A30B File Offset: 0x0018850B
 		public static ISendBattleStateType CreateFromSetValue([Nullable(2)] ISendBattleStateType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A440 RID: 42048 RVA: 0x00174916 File Offset: 0x00172B16
+		// Token: 0x0600AEE8 RID: 44776 RVA: 0x0018A31E File Offset: 0x0018851E
 		public ISendBattleStateType_SetValue ToSetValue()
 		{
 			return new ISendBattleStateType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700327B RID: 12923
-		// (get) Token: 0x0600A441 RID: 42049 RVA: 0x00174929 File Offset: 0x00172B29
-		// (set) Token: 0x0600A442 RID: 42050 RVA: 0x00174954 File Offset: 0x00172B54
+		// Token: 0x1700353A RID: 13626
+		// (get) Token: 0x0600AEE9 RID: 44777 RVA: 0x0018A331 File Offset: 0x00188531
+		// (set) Token: 0x0600AEEA RID: 44778 RVA: 0x0018A35C File Offset: 0x0018855C
 		public virtual ESetBattleStateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400625C RID: 25180
+		// Token: 0x04006833 RID: 26675
 		[Nullable(2)]
 		protected ISendBattleStateType FbInstance;
 
-		// Token: 0x0400625D RID: 25181
+		// Token: 0x04006834 RID: 26676
 		[Nullable(2)]
 		protected ISendBattleStateType_SetValue PocoInterface;
 	}

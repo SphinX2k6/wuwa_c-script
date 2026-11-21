@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000287 RID: 647
+	// Token: 0x0200029B RID: 667
 	public class ConfigErrorCodeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F2F RID: 3887 RVA: 0x000AF4F0 File Offset: 0x000AD6F0
+		// Token: 0x06000FA7 RID: 4007 RVA: 0x000B57B4 File Offset: 0x000B39B4
 		static ConfigErrorCodeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigErrorCodeById.CreateStaticDefaultValue), new Action(ConfigErrorCodeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F30 RID: 3888 RVA: 0x000AF510 File Offset: 0x000AD710
+		// Token: 0x06000FA8 RID: 4008 RVA: 0x000B57D4 File Offset: 0x000B39D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigErrorCodeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F31 RID: 3889 RVA: 0x000AF58F File Offset: 0x000AD78F
+		// Token: 0x06000FA9 RID: 4009 RVA: 0x000B5853 File Offset: 0x000B3A53
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigErrorCodeById.LogPair = null;
 			ConfigErrorCodeById.HandleId = 0;
 		}
 
-		// Token: 0x06000F32 RID: 3890 RVA: 0x000AF59D File Offset: 0x000AD79D
+		// Token: 0x06000FAA RID: 4010 RVA: 0x000B5861 File Offset: 0x000B3A61
 		public static void Init()
 		{
 			ConfigErrorCodeById.HandleId = ConfigCommon.InitDataStatement(ConfigErrorCodeById.HandleId, "db_error_code.db", "select BinData from `ErrorCode` where Id=?");
 		}
 
-		// Token: 0x06000F33 RID: 3891 RVA: 0x000AF5B8 File Offset: 0x000AD7B8
+		// Token: 0x06000FAB RID: 4011 RVA: 0x000B587C File Offset: 0x000B3A7C
 		public static ErrorCode? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigErrorCodeById.HandleId, ConfigErrorCodeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ErrorCode?(rootAsErrorCode);
 		}
 
-		// Token: 0x04001195 RID: 4501
+		// Token: 0x04001221 RID: 4641
 		private const string DB = "db_error_code.db";
 
-		// Token: 0x04001196 RID: 4502
+		// Token: 0x04001222 RID: 4642
 		private const string FILE = "c.错误码/ErrorCode*";
 
-		// Token: 0x04001197 RID: 4503
+		// Token: 0x04001223 RID: 4643
 		private const string TABLE = "ErrorCode";
 
-		// Token: 0x04001198 RID: 4504
+		// Token: 0x04001224 RID: 4644
 		private const string COMMAND = "select BinData from `ErrorCode` where Id=?";
 
-		// Token: 0x04001199 RID: 4505
+		// Token: 0x04001225 RID: 4645
 		private const string KEY_PREFIX = "ErrorCodeById";
 
-		// Token: 0x0400119A RID: 4506
+		// Token: 0x04001226 RID: 4646
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400119B RID: 4507
+		// Token: 0x04001227 RID: 4647
 		private static int HandleId;
 	}
 }

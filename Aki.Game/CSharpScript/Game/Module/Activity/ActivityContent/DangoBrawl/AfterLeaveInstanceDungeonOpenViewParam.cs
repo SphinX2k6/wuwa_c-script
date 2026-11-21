@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200678A RID: 26506
+	// Token: 0x020056DA RID: 22234
 	public struct AfterLeaveInstanceDungeonOpenViewParam
 	{
-		// Token: 0x060421DB RID: 270811 RVA: 0x0100A1F5 File Offset: 0x010083F5
+		// Token: 0x06036D31 RID: 224561 RVA: 0x00F4B5D9 File Offset: 0x00F497D9
 		public AfterLeaveInstanceDungeonOpenViewParam()
 		{
 			this.OpenViewName = EDangoBrawlViewName.Null;
@@ -13,13 +13,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.LevelId = 0;
 		}
 
-		// Token: 0x040227FE RID: 141310
+		// Token: 0x0401D05B RID: 118875
 		public EDangoBrawlViewName OpenViewName;
 
-		// Token: 0x040227FF RID: 141311
+		// Token: 0x0401D05C RID: 118876
 		public bool IsNormalMode;
 
-		// Token: 0x04022800 RID: 141312
+		// Token: 0x0401D05D RID: 118877
 		public int LevelId;
 	}
 }

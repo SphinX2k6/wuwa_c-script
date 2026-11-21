@@ -7,14 +7,14 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 {
-	// Token: 0x020069E7 RID: 27111
+	// Token: 0x02005B43 RID: 23363
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TimeTrackControlModel : ModelBase
 	{
-		// Token: 0x1700987C RID: 39036
-		// (get) Token: 0x06043700 RID: 276224 RVA: 0x0107B11A File Offset: 0x0107931A
+		// Token: 0x17006D5C RID: 27996
+		// (get) Token: 0x0603973C RID: 235324 RVA: 0x0101F5CE File Offset: 0x0101D7CE
 		public long CreatureDataId
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x1700987D RID: 39037
-		// (get) Token: 0x06043701 RID: 276225 RVA: 0x0107B122 File Offset: 0x01079322
+		// Token: 0x17006D5D RID: 27997
+		// (get) Token: 0x0603973D RID: 235325 RVA: 0x0101F5D6 File Offset: 0x0101D7D6
 		public int ControlPoint
 		{
 			get
@@ -33,9 +33,9 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x1700987E RID: 39038
-		// (get) Token: 0x06043702 RID: 276226 RVA: 0x0107B12A File Offset: 0x0107932A
-		// (set) Token: 0x06043703 RID: 276227 RVA: 0x0107B132 File Offset: 0x01079332
+		// Token: 0x17006D5E RID: 27998
+		// (get) Token: 0x0603973E RID: 235326 RVA: 0x0101F5DE File Offset: 0x0101D7DE
+		// (set) Token: 0x0603973F RID: 235327 RVA: 0x0101F5E6 File Offset: 0x0101D7E6
 		public bool CanUpdated
 		{
 			get
@@ -48,9 +48,9 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x1700987F RID: 39039
-		// (get) Token: 0x06043704 RID: 276228 RVA: 0x0107B13B File Offset: 0x0107933B
-		// (set) Token: 0x06043705 RID: 276229 RVA: 0x0107B143 File Offset: 0x01079343
+		// Token: 0x17006D5F RID: 27999
+		// (get) Token: 0x06039740 RID: 235328 RVA: 0x0101F5EF File Offset: 0x0101D7EF
+		// (set) Token: 0x06039741 RID: 235329 RVA: 0x0101F5F7 File Offset: 0x0101D7F7
 		public long RefEntityId
 		{
 			get
@@ -63,9 +63,9 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x17009880 RID: 39040
-		// (get) Token: 0x06043706 RID: 276230 RVA: 0x0107B14C File Offset: 0x0107934C
-		// (set) Token: 0x06043707 RID: 276231 RVA: 0x0107B154 File Offset: 0x01079354
+		// Token: 0x17006D60 RID: 28000
+		// (get) Token: 0x06039742 RID: 235330 RVA: 0x0101F600 File Offset: 0x0101D800
+		// (set) Token: 0x06039743 RID: 235331 RVA: 0x0101F608 File Offset: 0x0101D808
 		public long RefTrueEntityId
 		{
 			get
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x17009881 RID: 39041
-		// (get) Token: 0x06043708 RID: 276232 RVA: 0x0107B15D File Offset: 0x0107935D
+		// Token: 0x17006D61 RID: 28001
+		// (get) Token: 0x06039744 RID: 235332 RVA: 0x0101F611 File Offset: 0x0101D811
 		public EntityHandle ControllerEntity
 		{
 			get
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x06043709 RID: 276233 RVA: 0x0107B168 File Offset: 0x01079368
+		// Token: 0x06039745 RID: 235333 RVA: 0x0101F61C File Offset: 0x0101D81C
 		public void SetCurrentTimeTrackControl(long inEntityId, int index)
 		{
 			this.CurTimeTrackControlEntity = CreatureModel.Instance.GetEntity(inEntityId);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.CanUpdate = true;
 		}
 
-		// Token: 0x0604370A RID: 276234 RVA: 0x0107B1CC File Offset: 0x010793CC
+		// Token: 0x06039746 RID: 235334 RVA: 0x0101F680 File Offset: 0x0101D880
 		private void UpdateCurConfig()
 		{
 			if (this.CurTimeTrackControlEntity == null || this.CurConfigIndex == null)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.CurConfig = component.GetTimeTrackControlConfig(this.CurConfigIndex.Value);
 		}
 
-		// Token: 0x0604370B RID: 276235 RVA: 0x0107B21C File Offset: 0x0107941C
+		// Token: 0x06039747 RID: 235335 RVA: 0x0101F6D0 File Offset: 0x0101D8D0
 		public int GetConfigStatesCounts()
 		{
 			if (this.CurConfig == null)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return 0;
 		}
 
-		// Token: 0x0604370C RID: 276236 RVA: 0x0107B290 File Offset: 0x01079490
+		// Token: 0x06039748 RID: 235336 RVA: 0x0101F744 File Offset: 0x0101D944
 		public float GetConfigSegmentTime()
 		{
 			if (this.CurConfig == null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return this.CurConfig.SegmentTime.GetValueOrDefault(0.5f);
 		}
 
-		// Token: 0x0604370D RID: 276237 RVA: 0x0107B2C3 File Offset: 0x010794C3
+		// Token: 0x06039749 RID: 235337 RVA: 0x0101F777 File Offset: 0x0101D977
 		[NullableContext(1)]
 		public void InitControlInfo(TimelineTraceStartResponse inInfo)
 		{
@@ -152,14 +152,14 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.UpdatePointsUsable();
 		}
 
-		// Token: 0x0604370E RID: 276238 RVA: 0x0107B2E3 File Offset: 0x010794E3
+		// Token: 0x0603974A RID: 235338 RVA: 0x0101F797 File Offset: 0x0101D997
 		public void UpdateControlInfo(int inIndex)
 		{
 			this.CurControlPoint = inIndex;
 			this.UpdatePointsUsable();
 		}
 
-		// Token: 0x0604370F RID: 276239 RVA: 0x0107B2F4 File Offset: 0x010794F4
+		// Token: 0x0603974B RID: 235339 RVA: 0x0101F7A8 File Offset: 0x0101D9A8
 		public void UpdatePointsUsable()
 		{
 			int configStatesCounts = this.GetConfigStatesCounts();
@@ -198,14 +198,14 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x06043710 RID: 276240 RVA: 0x0107B401 File Offset: 0x01079601
+		// Token: 0x0603974C RID: 235340 RVA: 0x0101F8B5 File Offset: 0x0101DAB5
 		public bool IsControlPointUsable(int index)
 		{
 			return this.ControlPointsUsable != null && this.ControlPointsUsable.Length != 0 && index <= this.ControlPointsUsable.Length - 1 && this.ControlPointsUsable[index];
 		}
 
-		// Token: 0x17009882 RID: 39042
-		// (get) Token: 0x06043711 RID: 276241 RVA: 0x0107B42D File Offset: 0x0107962D
+		// Token: 0x17006D62 RID: 28002
+		// (get) Token: 0x0603974D RID: 235341 RVA: 0x0101F8E1 File Offset: 0x0101DAE1
 		[Nullable(1)]
 		public static TimeTrackControlModel Instance
 		{
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			}
 		}
 
-		// Token: 0x06043712 RID: 276242 RVA: 0x0107B434 File Offset: 0x01079634
+		// Token: 0x0603974E RID: 235342 RVA: 0x0101F8E8 File Offset: 0x0101DAE8
 		[NullableContext(1)]
 		public static TimeTrackControlModel GetOrCreateInstance()
 		{
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return TimeTrackControlModel._Instance;
 		}
 
-		// Token: 0x06043713 RID: 276243 RVA: 0x0107B448 File Offset: 0x01079648
+		// Token: 0x0603974F RID: 235343 RVA: 0x0101F8FC File Offset: 0x0101DAFC
 		public static bool CreateInstance()
 		{
 			if (TimeTrackControlModel._Instance != null)
@@ -238,48 +238,48 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			return true;
 		}
 
-		// Token: 0x06043714 RID: 276244 RVA: 0x0107B45E File Offset: 0x0107965E
+		// Token: 0x06039750 RID: 235344 RVA: 0x0101F912 File Offset: 0x0101DB12
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043715 RID: 276245 RVA: 0x0107B460 File Offset: 0x01079660
+		// Token: 0x06039751 RID: 235345 RVA: 0x0101F914 File Offset: 0x0101DB14
 		public static void ResetStaticDefaultValue()
 		{
 			TimeTrackControlModel._Instance = null;
 		}
 
-		// Token: 0x06043716 RID: 276246 RVA: 0x0107B468 File Offset: 0x01079668
+		// Token: 0x06039752 RID: 235346 RVA: 0x0101F91C File Offset: 0x0101DB1C
 		static TimeTrackControlModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TimeTrackControlModel.CreateStaticDefaultValue), new Action(TimeTrackControlModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402330B RID: 144139
+		// Token: 0x0401E4FB RID: 124155
 		private EntityHandle CurTimeTrackControlEntity;
 
-		// Token: 0x0402330C RID: 144140
+		// Token: 0x0401E4FC RID: 124156
 		private int? CurConfigIndex;
 
-		// Token: 0x0402330D RID: 144141
+		// Token: 0x0401E4FD RID: 124157
 		private ITimelineControlGroup CurConfig;
 
-		// Token: 0x0402330E RID: 144142
+		// Token: 0x0401E4FE RID: 124158
 		private long CurCreatureDataId;
 
-		// Token: 0x0402330F RID: 144143
+		// Token: 0x0401E4FF RID: 124159
 		private int CurControlPoint;
 
-		// Token: 0x04023310 RID: 144144
+		// Token: 0x0401E500 RID: 124160
 		private bool CanUpdate;
 
-		// Token: 0x04023311 RID: 144145
+		// Token: 0x0401E501 RID: 124161
 		private long CurStaticSceneRefEntityId;
 
-		// Token: 0x04023312 RID: 144146
+		// Token: 0x0401E502 RID: 124162
 		private long CurStaticSceneRefTrueEntityId;
 
-		// Token: 0x04023313 RID: 144147
+		// Token: 0x0401E503 RID: 124163
 		[Nullable(new byte[]
 		{
 			2,
@@ -287,10 +287,10 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 		})]
 		private IList<ControlPointData> ControlPointsStates;
 
-		// Token: 0x04023314 RID: 144148
+		// Token: 0x0401E504 RID: 124164
 		private bool[] ControlPointsUsable;
 
-		// Token: 0x04023315 RID: 144149
+		// Token: 0x0401E505 RID: 124165
 		private static TimeTrackControlModel _Instance;
 	}
 }

@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001628 RID: 5672
+	// Token: 0x02001795 RID: 6037
 	[EnumExtensions]
 	public enum EMoveSceneItemType
 	{
-		// Token: 0x04004C21 RID: 19489
+		// Token: 0x04005015 RID: 20501
 		MoveToPoint,
-		// Token: 0x04004C22 RID: 19490
+		// Token: 0x04005016 RID: 20502
 		CycleMoveToPoints,
-		// Token: 0x04004C23 RID: 19491
+		// Token: 0x04005017 RID: 20503
 		MoveToRelativePosition,
-		// Token: 0x04004C24 RID: 19492
+		// Token: 0x04005018 RID: 20504
 		MoveToEntity
 	}
 }

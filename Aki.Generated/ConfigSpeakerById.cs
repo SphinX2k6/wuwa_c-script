@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000969 RID: 2409
+	// Token: 0x02000A3E RID: 2622
 	public class ConfigSpeakerById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600388A RID: 14474 RVA: 0x00199348 File Offset: 0x00197548
+		// Token: 0x06003D88 RID: 15752 RVA: 0x001B86DC File Offset: 0x001B68DC
 		static ConfigSpeakerById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpeakerById.CreateStaticDefaultValue), new Action(ConfigSpeakerById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600388B RID: 14475 RVA: 0x00199368 File Offset: 0x00197568
+		// Token: 0x06003D89 RID: 15753 RVA: 0x001B86FC File Offset: 0x001B68FC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpeakerById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600388C RID: 14476 RVA: 0x001993E7 File Offset: 0x001975E7
+		// Token: 0x06003D8A RID: 15754 RVA: 0x001B877B File Offset: 0x001B697B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpeakerById.LogPair = null;
 			ConfigSpeakerById.HandleId = 0;
 		}
 
-		// Token: 0x0600388D RID: 14477 RVA: 0x001993F5 File Offset: 0x001975F5
+		// Token: 0x06003D8B RID: 15755 RVA: 0x001B8789 File Offset: 0x001B6989
 		public static void Init()
 		{
 			ConfigSpeakerById.HandleId = ConfigCommon.InitDataStatement(ConfigSpeakerById.HandleId, "db_speaker.db", "select BinData from `Speaker` where Id=?");
 		}
 
-		// Token: 0x0600388E RID: 14478 RVA: 0x00199410 File Offset: 0x00197610
+		// Token: 0x06003D8C RID: 15756 RVA: 0x001B87A4 File Offset: 0x001B69A4
 		public static Speaker? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpeakerById.HandleId, ConfigSpeakerById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Speaker?(rootAsSpeaker);
 		}
 
-		// Token: 0x040041C5 RID: 16837
+		// Token: 0x04004798 RID: 18328
 		private const string DB = "db_speaker.db";
 
-		// Token: 0x040041C6 RID: 16838
+		// Token: 0x04004799 RID: 18329
 		private const string FILE = "k.可视化编辑/c.Csv/d.对话人/*.csv*";
 
-		// Token: 0x040041C7 RID: 16839
+		// Token: 0x0400479A RID: 18330
 		private const string TABLE = "Speaker";
 
-		// Token: 0x040041C8 RID: 16840
+		// Token: 0x0400479B RID: 18331
 		private const string COMMAND = "select BinData from `Speaker` where Id=?";
 
-		// Token: 0x040041C9 RID: 16841
+		// Token: 0x0400479C RID: 18332
 		private const string KEY_PREFIX = "SpeakerById";
 
-		// Token: 0x040041CA RID: 16842
+		// Token: 0x0400479D RID: 18333
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041CB RID: 16843
+		// Token: 0x0400479E RID: 18334
 		private static int HandleId;
 	}
 }

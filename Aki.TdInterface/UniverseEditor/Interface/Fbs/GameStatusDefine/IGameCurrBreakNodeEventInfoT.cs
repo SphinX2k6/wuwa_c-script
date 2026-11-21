@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046EF RID: 18159
+	// Token: 0x02004B57 RID: 19287
 	public class IGameCurrBreakNodeEventInfoT
 	{
-		// Token: 0x170081CF RID: 33231
-		// (get) Token: 0x0601BCA7 RID: 113831 RVA: 0x003F08DC File Offset: 0x003EEADC
-		// (set) Token: 0x0601BCA8 RID: 113832 RVA: 0x003F08E4 File Offset: 0x003EEAE4
+		// Token: 0x17008810 RID: 34832
+		// (get) Token: 0x0601D47C RID: 119932 RVA: 0x0041CB78 File Offset: 0x0041AD78
+		// (set) Token: 0x0601D47D RID: 119933 RVA: 0x0041CB80 File Offset: 0x0041AD80
 		public long BtConfigId { get; set; }
 
-		// Token: 0x170081D0 RID: 33232
-		// (get) Token: 0x0601BCA9 RID: 113833 RVA: 0x003F08ED File Offset: 0x003EEAED
-		// (set) Token: 0x0601BCAA RID: 113834 RVA: 0x003F08F5 File Offset: 0x003EEAF5
+		// Token: 0x17008811 RID: 34833
+		// (get) Token: 0x0601D47E RID: 119934 RVA: 0x0041CB89 File Offset: 0x0041AD89
+		// (set) Token: 0x0601D47F RID: 119935 RVA: 0x0041CB91 File Offset: 0x0041AD91
 		public TBehaviorTreeType BtEditorType { get; set; }
 
-		// Token: 0x170081D1 RID: 33233
-		// (get) Token: 0x0601BCAB RID: 113835 RVA: 0x003F08FE File Offset: 0x003EEAFE
-		// (set) Token: 0x0601BCAC RID: 113836 RVA: 0x003F0906 File Offset: 0x003EEB06
+		// Token: 0x17008812 RID: 34834
+		// (get) Token: 0x0601D480 RID: 119936 RVA: 0x0041CB9A File Offset: 0x0041AD9A
+		// (set) Token: 0x0601D481 RID: 119937 RVA: 0x0041CBA2 File Offset: 0x0041ADA2
 		public int NodeId { get; set; }
 
-		// Token: 0x170081D2 RID: 33234
-		// (get) Token: 0x0601BCAD RID: 113837 RVA: 0x003F090F File Offset: 0x003EEB0F
-		// (set) Token: 0x0601BCAE RID: 113838 RVA: 0x003F0917 File Offset: 0x003EEB17
+		// Token: 0x17008813 RID: 34835
+		// (get) Token: 0x0601D482 RID: 119938 RVA: 0x0041CBAB File Offset: 0x0041ADAB
+		// (set) Token: 0x0601D483 RID: 119939 RVA: 0x0041CBB3 File Offset: 0x0041ADB3
 		public ENodeBreakMoment BreakMoment { get; set; }
 
-		// Token: 0x0601BCAF RID: 113839 RVA: 0x003F0920 File Offset: 0x003EEB20
+		// Token: 0x0601D484 RID: 119940 RVA: 0x0041CBBC File Offset: 0x0041ADBC
 		public IGameCurrBreakNodeEventInfoT()
 		{
 			this.BtConfigId = 0L;

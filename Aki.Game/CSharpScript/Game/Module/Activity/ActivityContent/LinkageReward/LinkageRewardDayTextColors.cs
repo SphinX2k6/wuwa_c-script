@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006551 RID: 25937
+	// Token: 0x020054CF RID: 21711
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class LinkageRewardDayTextColors
 	{
-		// Token: 0x04021E40 RID: 138816
+		// Token: 0x0401C771 RID: 116593
 		public const string PendingNormal = "fefe22";
 
-		// Token: 0x04021E41 RID: 138817
+		// Token: 0x0401C772 RID: 116594
 		public const string PendingHover = "fdffa3";
 
-		// Token: 0x04021E42 RID: 138818
+		// Token: 0x0401C773 RID: 116595
 		public const string Claimed = "8694a0";
 
-		// Token: 0x04021E43 RID: 138819
+		// Token: 0x0401C774 RID: 116596
 		public const string Locked = "4dfdff";
 	}
 }

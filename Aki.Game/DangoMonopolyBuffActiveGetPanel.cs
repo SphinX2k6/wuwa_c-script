@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001224 RID: 4644
+// Token: 0x020006D8 RID: 1752
 public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 {
-	// Token: 0x06007DA8 RID: 32168 RVA: 0x001AA434 File Offset: 0x001A8634
+	// Token: 0x0600513F RID: 20799 RVA: 0x001B30F4 File Offset: 0x001B12F4
 	[NullableContext(1)]
 	public UniTask Init(UUIItem item, DangoMonopolyGridData gridData)
 	{
@@ -24,7 +24,7 @@ public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007DA9 RID: 32169 RVA: 0x001AA488 File Offset: 0x001A8688
+	// Token: 0x06005140 RID: 20800 RVA: 0x001B3148 File Offset: 0x001B1348
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,13 +42,13 @@ public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007DAA RID: 32170 RVA: 0x001AA547 File Offset: 0x001A8747
+	// Token: 0x06005141 RID: 20801 RVA: 0x001B3207 File Offset: 0x001B1407
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x06007DAB RID: 32171 RVA: 0x001AA550 File Offset: 0x001A8750
+	// Token: 0x06005142 RID: 20802 RVA: 0x001B3210 File Offset: 0x001B1410
 	public void UpdateData()
 	{
 		DangoData dangoData = this.GridData.GetDangoData();
@@ -78,7 +78,7 @@ public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 		this.UpdateDangoSay(dangoSay);
 	}
 
-	// Token: 0x06007DAC RID: 32172 RVA: 0x001AA625 File Offset: 0x001A8825
+	// Token: 0x06005143 RID: 20803 RVA: 0x001B32E5 File Offset: 0x001B14E5
 	public void SetDialogVisible(bool visible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -89,7 +89,7 @@ public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 		item.SetUIActive(visible);
 	}
 
-	// Token: 0x06007DAD RID: 32173 RVA: 0x001AA639 File Offset: 0x001A8839
+	// Token: 0x06005144 RID: 20804 RVA: 0x001B32F9 File Offset: 0x001B14F9
 	private void OnClickBtnConfirm()
 	{
 		Action onClickCallback = this.OnClickCallback;
@@ -100,7 +100,7 @@ public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 		onClickCallback();
 	}
 
-	// Token: 0x06007DAE RID: 32174 RVA: 0x001AA64C File Offset: 0x001A884C
+	// Token: 0x06005145 RID: 20805 RVA: 0x001B330C File Offset: 0x001B150C
 	[NullableContext(2)]
 	public void UpdateDangoSay(string dangoSay)
 	{
@@ -117,28 +117,28 @@ public class DangoMonopolyBuffActiveGetPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003927 RID: 14631
+	// Token: 0x040039BF RID: 14783
 	[Nullable(1)]
 	public DangoMonopolyGridData GridData;
 
-	// Token: 0x04003928 RID: 14632
+	// Token: 0x040039C0 RID: 14784
 	[Nullable(2)]
 	public Action OnClickCallback;
 
-	// Token: 0x02007815 RID: 30741
+	// Token: 0x020069A0 RID: 27040
 	private enum EChildType
 	{
-		// Token: 0x04027937 RID: 162103
+		// Token: 0x04022C68 RID: 142440
 		BtnConfirm,
-		// Token: 0x04027938 RID: 162104
+		// Token: 0x04022C69 RID: 142441
 		TxtName,
-		// Token: 0x04027939 RID: 162105
+		// Token: 0x04022C6A RID: 142442
 		ItemDialog,
-		// Token: 0x0402793A RID: 162106
+		// Token: 0x04022C6B RID: 142443
 		TxtDangoSay,
-		// Token: 0x0402793B RID: 162107
+		// Token: 0x04022C6C RID: 142444
 		ItemNameRoot,
-		// Token: 0x0402793C RID: 162108
+		// Token: 0x04022C6D RID: 142445
 		TxtDesc
 	}
 }

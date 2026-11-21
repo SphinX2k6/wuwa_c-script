@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F25 RID: 7973
+	// Token: 0x0200215E RID: 8542
 	public class ITalkEffectActionType_SetValue
 	{
-		// Token: 0x04006540 RID: 25920
+		// Token: 0x04006B2F RID: 27439
 		public ETalkEffectActionType Type;
 	}
 }

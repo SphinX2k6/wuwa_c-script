@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FCC RID: 16332
+	// Token: 0x0200440D RID: 17421
 	public class IQuestBuffActiveRangeT
 	{
-		// Token: 0x17007268 RID: 29288
-		// (get) Token: 0x060176EB RID: 95979 RVA: 0x003612BA File Offset: 0x0035F4BA
-		// (set) Token: 0x060176EC RID: 95980 RVA: 0x003612C2 File Offset: 0x0035F4C2
+		// Token: 0x17007868 RID: 30824
+		// (get) Token: 0x06018D7E RID: 101758 RVA: 0x0038AFE2 File Offset: 0x003891E2
+		// (set) Token: 0x06018D7F RID: 101759 RVA: 0x0038AFEA File Offset: 0x003891EA
 		public IQuestBuffActiveCenterRangeT QuestBuffActiveCenterRange { get; set; }
 
-		// Token: 0x17007269 RID: 29289
-		// (get) Token: 0x060176ED RID: 95981 RVA: 0x003612CB File Offset: 0x0035F4CB
-		// (set) Token: 0x060176EE RID: 95982 RVA: 0x003612D3 File Offset: 0x0035F4D3
+		// Token: 0x17007869 RID: 30825
+		// (get) Token: 0x06018D80 RID: 101760 RVA: 0x0038AFF3 File Offset: 0x003891F3
+		// (set) Token: 0x06018D81 RID: 101761 RVA: 0x0038AFFB File Offset: 0x003891FB
 		public List<int> QuestBuffActiveRangeEntities { get; set; }
 
-		// Token: 0x1700726A RID: 29290
-		// (get) Token: 0x060176EF RID: 95983 RVA: 0x003612DC File Offset: 0x0035F4DC
-		// (set) Token: 0x060176F0 RID: 95984 RVA: 0x003612E4 File Offset: 0x0035F4E4
+		// Token: 0x1700786A RID: 30826
+		// (get) Token: 0x06018D82 RID: 101762 RVA: 0x0038B004 File Offset: 0x00389204
+		// (set) Token: 0x06018D83 RID: 101763 RVA: 0x0038B00C File Offset: 0x0038920C
 		public List<int> QuestBuffActiveRangeAreaIds { get; set; }
 
-		// Token: 0x1700726B RID: 29291
-		// (get) Token: 0x060176F1 RID: 95985 RVA: 0x003612ED File Offset: 0x0035F4ED
-		// (set) Token: 0x060176F2 RID: 95986 RVA: 0x003612F5 File Offset: 0x0035F4F5
+		// Token: 0x1700786B RID: 30827
+		// (get) Token: 0x06018D84 RID: 101764 RVA: 0x0038B015 File Offset: 0x00389215
+		// (set) Token: 0x06018D85 RID: 101765 RVA: 0x0038B01D File Offset: 0x0038921D
 		public byte NullMask { get; set; }
 
-		// Token: 0x060176F3 RID: 95987 RVA: 0x003612FE File Offset: 0x0035F4FE
+		// Token: 0x06018D86 RID: 101766 RVA: 0x0038B026 File Offset: 0x00389226
 		public IQuestBuffActiveRangeT()
 		{
 			this.QuestBuffActiveCenterRange = null;

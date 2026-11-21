@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A6C RID: 6764
+	// Token: 0x020004A6 RID: 1190
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.ECurveSourceType")]
 	public enum ECurveSourceType : byte
 	{
-		// Token: 0x0400D8D5 RID: 55509
+		// Token: 0x04002F8D RID: 12173
 		Function,
-		// Token: 0x0400D8D6 RID: 55510
+		// Token: 0x04002F8E RID: 12174
 		CurveFloat,
-		// Token: 0x0400D8D7 RID: 55511
+		// Token: 0x04002F8F RID: 12175
 		ECurveSourceType_MAX
 	}
 }

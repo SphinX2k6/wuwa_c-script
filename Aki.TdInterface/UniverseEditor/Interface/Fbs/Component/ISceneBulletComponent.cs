@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058A3 RID: 22691
+	// Token: 0x02005EB0 RID: 24240
 	public struct ISceneBulletComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A9DF RID: 43487
-		// (get) Token: 0x06026466 RID: 156774 RVA: 0x00546B78 File Offset: 0x00544D78
+		// Token: 0x1700B30F RID: 45839
+		// (get) Token: 0x060289C8 RID: 166344 RVA: 0x0058D6C4 File Offset: 0x0058B8C4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026467 RID: 156775 RVA: 0x00546B85 File Offset: 0x00544D85
+		// Token: 0x060289C9 RID: 166345 RVA: 0x0058D6D1 File Offset: 0x0058B8D1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026468 RID: 156776 RVA: 0x00546B8C File Offset: 0x00544D8C
+		// Token: 0x060289CA RID: 166346 RVA: 0x0058D6D8 File Offset: 0x0058B8D8
 		public static ISceneBulletComponent GetRootAsISceneBulletComponent(ByteBuffer _bb)
 		{
 			return ISceneBulletComponent.GetRootAsISceneBulletComponent(_bb, default(ISceneBulletComponent));
 		}
 
-		// Token: 0x06026469 RID: 156777 RVA: 0x00546BA8 File Offset: 0x00544DA8
+		// Token: 0x060289CB RID: 166347 RVA: 0x0058D6F4 File Offset: 0x0058B8F4
 		public static ISceneBulletComponent GetRootAsISceneBulletComponent(ByteBuffer _bb, ISceneBulletComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602646A RID: 156778 RVA: 0x00546BC5 File Offset: 0x00544DC5
+		// Token: 0x060289CC RID: 166348 RVA: 0x0058D711 File Offset: 0x0058B911
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602646B RID: 156779 RVA: 0x00546BD4 File Offset: 0x00544DD4
+		// Token: 0x060289CD RID: 166349 RVA: 0x0058D720 File Offset: 0x0058B920
 		public ISceneBulletComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A9E0 RID: 43488
-		// (get) Token: 0x0602646C RID: 156780 RVA: 0x00546BE4 File Offset: 0x00544DE4
+		// Token: 0x1700B310 RID: 45840
+		// (get) Token: 0x060289CE RID: 166350 RVA: 0x0058D730 File Offset: 0x0058B930
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A9E1 RID: 43489
-		// (get) Token: 0x0602646D RID: 156781 RVA: 0x00546C24 File Offset: 0x00544E24
+		// Token: 0x1700B311 RID: 45841
+		// (get) Token: 0x060289CF RID: 166351 RVA: 0x0058D770 File Offset: 0x0058B970
 		public bool DisableGenerateByRange
 		{
 			get
@@ -70,7 +70,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602646E RID: 156782 RVA: 0x00546C64 File Offset: 0x00544E64
+		// Token: 0x060289D0 RID: 166352 RVA: 0x0058D7B0 File Offset: 0x0058B9B0
 		public ISceneBulletGroup? BulletGroups(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -81,8 +81,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ISceneBulletGroup?(default(ISceneBulletGroup).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A9E2 RID: 43490
-		// (get) Token: 0x0602646F RID: 156783 RVA: 0x00546CC4 File Offset: 0x00544EC4
+		// Token: 0x1700B312 RID: 45842
+		// (get) Token: 0x060289D1 RID: 166353 RVA: 0x0058D810 File Offset: 0x0058BA10
 		public int BulletGroupsLength
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A9E3 RID: 43491
-		// (get) Token: 0x06026470 RID: 156784 RVA: 0x00546CF0 File Offset: 0x00544EF0
+		// Token: 0x1700B313 RID: 45843
+		// (get) Token: 0x060289D2 RID: 166354 RVA: 0x0058D83C File Offset: 0x0058BA3C
 		public byte NullMask
 		{
 			get
@@ -111,7 +111,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026471 RID: 156785 RVA: 0x00546D2D File Offset: 0x00544F2D
+		// Token: 0x060289D3 RID: 166355 RVA: 0x0058D879 File Offset: 0x0058BA79
 		public static Offset<ISceneBulletComponent> CreateISceneBulletComponent(FlatBufferBuilder builder, bool Disabled = false, bool DisableGenerateByRange = false, VectorOffset BulletGroupsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -122,31 +122,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneBulletComponent.EndISceneBulletComponent(builder);
 		}
 
-		// Token: 0x06026472 RID: 156786 RVA: 0x00546D59 File Offset: 0x00544F59
+		// Token: 0x060289D4 RID: 166356 RVA: 0x0058D8A5 File Offset: 0x0058BAA5
 		public static void StartISceneBulletComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06026473 RID: 156787 RVA: 0x00546D62 File Offset: 0x00544F62
+		// Token: 0x060289D5 RID: 166357 RVA: 0x0058D8AE File Offset: 0x0058BAAE
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06026474 RID: 156788 RVA: 0x00546D6D File Offset: 0x00544F6D
+		// Token: 0x060289D6 RID: 166358 RVA: 0x0058D8B9 File Offset: 0x0058BAB9
 		public static void AddDisableGenerateByRange(FlatBufferBuilder builder, bool disableGenerateByRange)
 		{
 			builder.AddBool(1, disableGenerateByRange, false);
 		}
 
-		// Token: 0x06026475 RID: 156789 RVA: 0x00546D78 File Offset: 0x00544F78
+		// Token: 0x060289D7 RID: 166359 RVA: 0x0058D8C4 File Offset: 0x0058BAC4
 		public static void AddBulletGroups(FlatBufferBuilder builder, VectorOffset bulletGroupsOffset)
 		{
 			builder.AddOffset(2, bulletGroupsOffset.Value, 0);
 		}
 
-		// Token: 0x06026476 RID: 156790 RVA: 0x00546D88 File Offset: 0x00544F88
+		// Token: 0x060289D8 RID: 166360 RVA: 0x0058D8D4 File Offset: 0x0058BAD4
 		public static VectorOffset CreateBulletGroupsVector(FlatBufferBuilder builder, Offset<ISceneBulletGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026477 RID: 156791 RVA: 0x00546DC8 File Offset: 0x00544FC8
+		// Token: 0x060289D9 RID: 166361 RVA: 0x0058D914 File Offset: 0x0058BB14
 		public static VectorOffset CreateBulletGroupsVectorBlock(FlatBufferBuilder builder, Offset<ISceneBulletGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026478 RID: 156792 RVA: 0x00546DE2 File Offset: 0x00544FE2
+		// Token: 0x060289DA RID: 166362 RVA: 0x0058D92E File Offset: 0x0058BB2E
 		public static VectorOffset CreateBulletGroupsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ISceneBulletGroup>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026479 RID: 156793 RVA: 0x00546E00 File Offset: 0x00545000
+		// Token: 0x060289DB RID: 166363 RVA: 0x0058D94C File Offset: 0x0058BB4C
 		public static VectorOffset CreateBulletGroupsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -181,25 +181,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602647A RID: 156794 RVA: 0x00546E19 File Offset: 0x00545019
+		// Token: 0x060289DC RID: 166364 RVA: 0x0058D965 File Offset: 0x0058BB65
 		public static void StartBulletGroupsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602647B RID: 156795 RVA: 0x00546E24 File Offset: 0x00545024
+		// Token: 0x060289DD RID: 166365 RVA: 0x0058D970 File Offset: 0x0058BB70
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602647C RID: 156796 RVA: 0x00546E2F File Offset: 0x0054502F
+		// Token: 0x060289DE RID: 166366 RVA: 0x0058D97B File Offset: 0x0058BB7B
 		public static Offset<ISceneBulletComponent> EndISceneBulletComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneBulletComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602647D RID: 156797 RVA: 0x00546E3C File Offset: 0x0054503C
+		// Token: 0x060289DF RID: 166367 RVA: 0x0058D988 File Offset: 0x0058BB88
 		public ISceneBulletComponentT UnPack()
 		{
 			ISceneBulletComponentT sceneBulletComponentT = new ISceneBulletComponentT();
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneBulletComponentT;
 		}
 
-		// Token: 0x0602647E RID: 156798 RVA: 0x00546E58 File Offset: 0x00545058
+		// Token: 0x060289E0 RID: 166368 RVA: 0x0058D9A4 File Offset: 0x0058BBA4
 		public void UnPackTo(ISceneBulletComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602647F RID: 156799 RVA: 0x00546EDC File Offset: 0x005450DC
+		// Token: 0x060289E1 RID: 166369 RVA: 0x0058DA28 File Offset: 0x0058BC28
 		public static Offset<ISceneBulletComponent> Pack(FlatBufferBuilder builder, ISceneBulletComponentT _o)
 		{
 			if (_o == null)
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneBulletComponent.CreateISceneBulletComponent(builder, _o.Disabled, _o.DisableGenerateByRange, bulletGroupsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EE09 RID: 60937
+		// Token: 0x0400FAFC RID: 64252
 		private Table __p;
 	}
 }

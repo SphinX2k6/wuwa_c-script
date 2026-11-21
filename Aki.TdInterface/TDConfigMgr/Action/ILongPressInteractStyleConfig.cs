@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BA2 RID: 7074
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D89 RID: 7561
 	public class ILongPressInteractStyleConfig
 	{
-		// Token: 0x06009783 RID: 38787 RVA: 0x0015D890 File Offset: 0x0015BA90
+		// Token: 0x0600A087 RID: 41095 RVA: 0x00170350 File Offset: 0x0016E550
 		private ILongPressInteractStyleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009784 RID: 38788 RVA: 0x0015D8C8 File Offset: 0x0015BAC8
+		// Token: 0x0600A088 RID: 41096 RVA: 0x00170388 File Offset: 0x0016E588
 		public static ILongPressInteractStyleConfig Create([Nullable(2)] ILongPressInteractStyleConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009785 RID: 38789 RVA: 0x0015D8DB File Offset: 0x0015BADB
+		// Token: 0x0600A089 RID: 41097 RVA: 0x0017039B File Offset: 0x0016E59B
 		public static ILongPressInteractStyleConfig CreateFromSetValue([Nullable(2)] ILongPressInteractStyleConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009786 RID: 38790 RVA: 0x0015D8EE File Offset: 0x0015BAEE
+		// Token: 0x0600A08A RID: 41098 RVA: 0x001703AE File Offset: 0x0016E5AE
 		public ILongPressInteractStyleConfig_SetValue ToSetValue()
 		{
 			return new ILongPressInteractStyleConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FA5 RID: 12197
-		// (get) Token: 0x06009787 RID: 38791 RVA: 0x0015D901 File Offset: 0x0015BB01
-		// (set) Token: 0x06009788 RID: 38792 RVA: 0x0015D92C File Offset: 0x0015BB2C
+		// Token: 0x17003204 RID: 12804
+		// (get) Token: 0x0600A08B RID: 41099 RVA: 0x001703C1 File Offset: 0x0016E5C1
+		// (set) Token: 0x0600A08C RID: 41100 RVA: 0x001703EC File Offset: 0x0016E5EC
 		public virtual ELongPressInteractStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C80 RID: 23680
+		// Token: 0x04006195 RID: 24981
 		[Nullable(2)]
 		protected ILongPressInteractStyleConfig FbInstance;
 
-		// Token: 0x04005C81 RID: 23681
+		// Token: 0x04006196 RID: 24982
 		[Nullable(2)]
 		protected ILongPressInteractStyleConfig_SetValue PocoInterface;
 	}

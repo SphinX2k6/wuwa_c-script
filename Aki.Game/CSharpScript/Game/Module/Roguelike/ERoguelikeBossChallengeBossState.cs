@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DC8 RID: 19912
+	// Token: 0x02003D91 RID: 15761
 	public enum ERoguelikeBossChallengeBossState
 	{
-		// Token: 0x0401B4A4 RID: 111780
+		// Token: 0x04015E77 RID: 89719
 		Finished,
-		// Token: 0x0401B4A5 RID: 111781
+		// Token: 0x04015E78 RID: 89720
 		Processing,
-		// Token: 0x0401B4A6 RID: 111782
+		// Token: 0x04015E79 RID: 89721
 		Locked
 	}
 }

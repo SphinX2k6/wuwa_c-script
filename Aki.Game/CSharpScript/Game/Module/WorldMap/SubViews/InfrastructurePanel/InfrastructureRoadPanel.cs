@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,18 +15,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 {
-	// Token: 0x02004817 RID: 18455
+	// Token: 0x02003748 RID: 14152
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureRoadPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603052A RID: 197930 RVA: 0x00B36E6F File Offset: 0x00B3506F
+		// Token: 0x06024CFA RID: 150778 RVA: 0x00A66E4B File Offset: 0x00A6504B
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x0603052B RID: 197931 RVA: 0x00B36E78 File Offset: 0x00B35078
+		// Token: 0x06024CFB RID: 150779 RVA: 0x00A66E54 File Offset: 0x00A65054
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrastructureRoadPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603052C RID: 197932 RVA: 0x00B36EBC File Offset: 0x00B350BC
+		// Token: 0x06024CFC RID: 150780 RVA: 0x00A66E98 File Offset: 0x00A65098
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -65,7 +64,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			verticalLayout2.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x0603052D RID: 197933 RVA: 0x00B36F38 File Offset: 0x00B35138
+		// Token: 0x06024CFD RID: 150781 RVA: 0x00A66F14 File Offset: 0x00A65114
 		private UniTask CreateRewardItemBar()
 		{
 			InfrastructureRoadPanel.<CreateRewardItemBar>d__6 <CreateRewardItemBar>d__;
@@ -76,7 +75,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			return <CreateRewardItemBar>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603052E RID: 197934 RVA: 0x00B36F7C File Offset: 0x00B3517C
+		// Token: 0x06024CFE RID: 150782 RVA: 0x00A66F58 File Offset: 0x00A65158
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			}
 		}
 
-		// Token: 0x0603052F RID: 197935 RVA: 0x00B37048 File Offset: 0x00B35248
+		// Token: 0x06024CFF RID: 150783 RVA: 0x00A67024 File Offset: 0x00A65224
 		private void UpdateConfirmButtonEnableClickByTeleportState()
 		{
 			InfrRoadMarkItem infrRoadMarkItem = this.LayoutContext.MarkItem as InfrRoadMarkItem;
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			layoutContext.SetConfirmBtnEnableClick(infrRoadMarkItem == null || !infrRoadMarkItem.IsLocked);
 		}
 
-		// Token: 0x06030530 RID: 197936 RVA: 0x00B37088 File Offset: 0x00B35288
+		// Token: 0x06024D00 RID: 150784 RVA: 0x00A67064 File Offset: 0x00A65264
 		private void RefreshGiftTip()
 		{
 			InfrRoadMarkItem infrRoadMarkItem = this.LayoutContext.MarkItem as InfrRoadMarkItem;
@@ -143,16 +142,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			}
 			InfrastructureModel instance2 = InfrastructureModel.Instance;
 			InfrastructureDefine.IInfrRoadData infrRoadData = (instance2 != null) ? instance2.GetRoadDataByRoadId(infrRoadBuild.Value.Id) : null;
-			int num = (int)((infrRoadData != null) ? infrRoadData.Status : InfrStatusPb.InfrStatusLock);
-			InventoryModel inventoryModel = InventoryModel.Instance;
-			bool flag = infrRoadBuild.Value.RequirementIter().All(delegate(DicIntInt r)
+			InfrStatusPb infrStatusPb = (infrRoadData != null) ? infrRoadData.Status : InfrStatusPb.InfrStatusLock;
+			InventoryModel instance3 = InventoryModel.Instance;
+			bool flag = true;
+			foreach (DicIntInt dicIntInt in infrRoadBuild.Value.RequirementIter())
 			{
-				InventoryModel inventoryModel = inventoryModel;
-				int? num2 = (inventoryModel != null) ? new int?(inventoryModel.GetItemCountByConfigId(r.Key, 0)) : null;
-				int value = r.Value;
-				return num2.GetValueOrDefault() >= value & num2 != null;
-			});
-			if (num == 1 && flag)
+				int? num = (instance3 != null) ? new int?(instance3.GetItemCountByConfigId(dicIntInt.Key, 0)) : null;
+				int value = dicIntInt.Value;
+				if (!(num.GetValueOrDefault() >= value & num != null))
+				{
+					flag = false;
+					break;
+				}
+			}
+			if (infrStatusPb == InfrStatusPb.InfrStatusProgress && flag)
 			{
 				UUIItem item = base.GetItem(25);
 				if (item != null)
@@ -168,7 +171,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			}
 		}
 
-		// Token: 0x06030531 RID: 197937 RVA: 0x00B37168 File Offset: 0x00B35368
+		// Token: 0x06024D01 RID: 150785 RVA: 0x00A671B0 File Offset: 0x00A653B0
 		private unsafe List<IMapSubViewListItemData> GetVerticalLayoutData()
 		{
 			InfrRoadMarkItem infrRoadMarkItem = this.LayoutContext.MarkItem as InfrRoadMarkItem;
@@ -242,7 +245,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			return list2;
 		}
 
-		// Token: 0x06030532 RID: 197938 RVA: 0x00B373A8 File Offset: 0x00B355A8
+		// Token: 0x06024D02 RID: 150786 RVA: 0x00A673F0 File Offset: 0x00A655F0
 		private void RefreshRewardItemBar()
 		{
 			InfrRoadMarkItem infrRoadMarkItem = this.LayoutContext.MarkItem as InfrRoadMarkItem;
@@ -272,14 +275,30 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			{
 				item.SetUIActive(true);
 			}
-			TItem[] data = (from r in infrRoadBuild.Value.RequirementIter()
-			orderby r.Key
-			select new TItem(new InventoryDefine.GetItemData(r.Key, 0), r.Value)).ToArray<TItem>();
-			this.RewardsView.RebuildRewardsByData(data);
+			List<ValueTuple<int, TItem>> list = new List<ValueTuple<int, TItem>>();
+			foreach (DicIntInt dicIntInt in infrRoadBuild.Value.RequirementIter())
+			{
+				list.Add(new ValueTuple<int, TItem>(dicIntInt.Key, new TItem(new InventoryDefine.GetItemData(dicIntInt.Key, 0), dicIntInt.Value)));
+			}
+			list.Sort(([TupleElementNames(new string[]
+			{
+				"Key",
+				"Item"
+			})] ValueTuple<int, TItem> a, [TupleElementNames(new string[]
+			{
+				"Key",
+				"Item"
+			})] ValueTuple<int, TItem> b) => a.Item1.CompareTo(b.Item1));
+			TItem[] array = new TItem[list.Count];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = list[i].Item2;
+			}
+			this.RewardsView.RebuildRewardsByData(array);
 			this.RewardsView.SetTitleNewTxt("PrefabTextItem_3987853903_Text");
 		}
 
-		// Token: 0x06030533 RID: 197939 RVA: 0x00B374D8 File Offset: 0x00B356D8
+		// Token: 0x06024D03 RID: 150787 RVA: 0x00A67594 File Offset: 0x00A65794
 		private void RefreshProgress()
 		{
 			InfrRoadMarkItem infrRoadMarkItem = this.LayoutContext.MarkItem as InfrRoadMarkItem;
@@ -318,7 +337,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0401A004 RID: 106500
+		// Token: 0x040146B8 RID: 83640
 		[Nullable(new byte[]
 		{
 			2,
@@ -327,14 +346,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InfrastructurePanel
 		})]
 		private GenericLayout<MapVerticalLayoutItem, IMapSubViewListItemData> VerticalLayout;
 
-		// Token: 0x0401A005 RID: 106501
+		// Token: 0x040146B9 RID: 83641
 		public MapSubViewRewardPanel RewardsView = new MapSubViewRewardPanel();
 
-		// Token: 0x0200AAEA RID: 43754
+		// Token: 0x0200949A RID: 38042
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F73 RID: 212851
+			// Token: 0x0402E6F5 RID: 190197
 			public const int InfrRoadPanel = 0;
 		}
 	}

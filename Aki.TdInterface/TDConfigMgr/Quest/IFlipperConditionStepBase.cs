@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F91 RID: 3985
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010BB RID: 4283
 	public class IFlipperConditionStepBase
 	{
-		// Token: 0x060058CE RID: 22734 RVA: 0x000D8A60 File Offset: 0x000D6C60
+		// Token: 0x06005EA0 RID: 24224 RVA: 0x000E5488 File Offset: 0x000E3688
 		private IFlipperConditionStepBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060058CF RID: 22735 RVA: 0x000D8A98 File Offset: 0x000D6C98
+		// Token: 0x06005EA1 RID: 24225 RVA: 0x000E54C0 File Offset: 0x000E36C0
 		public static IFlipperConditionStepBase Create([Nullable(2)] IFlipperConditionStepBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058D0 RID: 22736 RVA: 0x000D8AAB File Offset: 0x000D6CAB
+		// Token: 0x06005EA2 RID: 24226 RVA: 0x000E54D3 File Offset: 0x000E36D3
 		public static IFlipperConditionStepBase CreateFromSetValue([Nullable(2)] IFlipperConditionStepBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058D1 RID: 22737 RVA: 0x000D8ABE File Offset: 0x000D6CBE
+		// Token: 0x06005EA3 RID: 24227 RVA: 0x000E54E6 File Offset: 0x000E36E6
 		public IFlipperConditionStepBase_SetValue ToSetValue()
 		{
 			return new IFlipperConditionStepBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D8F RID: 7567
-		// (get) Token: 0x060058D2 RID: 22738 RVA: 0x000D8AD1 File Offset: 0x000D6CD1
-		// (set) Token: 0x060058D3 RID: 22739 RVA: 0x000D8AFC File Offset: 0x000D6CFC
+		// Token: 0x17001F34 RID: 7988
+		// (get) Token: 0x06005EA4 RID: 24228 RVA: 0x000E54F9 File Offset: 0x000E36F9
+		// (set) Token: 0x06005EA5 RID: 24229 RVA: 0x000E5524 File Offset: 0x000E3724
 		public virtual EFlipperConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035A6 RID: 13734
+		// Token: 0x040038D6 RID: 14550
 		[Nullable(2)]
 		protected IFlipperConditionStepBase FbInstance;
 
-		// Token: 0x040035A7 RID: 13735
+		// Token: 0x040038D7 RID: 14551
 		[Nullable(2)]
 		protected IFlipperConditionStepBase_SetValue PocoInterface;
 	}

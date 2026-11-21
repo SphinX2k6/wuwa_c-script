@@ -5,22 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017F4 RID: 6132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000361 RID: 865
 	[UnrealObjectPath("/Script/KuroCurve.KuroCurveVector")]
 	[UnrealStructLayout(424, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 424)]
 	public class FKuroCurveVector : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06016AD2 RID: 92882 RVA: 0x002117D1 File Offset: 0x0020F9D1
+		// Token: 0x0600586F RID: 22639 RVA: 0x0007CA23 File Offset: 0x0007AC23
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroCurveVector._ScriptStructPtr != 0) ? FKuroCurveVector._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroCurve.KuroCurveVector", ref FKuroCurveVector._ScriptStructPtr);
 		}
 
-		// Token: 0x17005BAC RID: 23468
-		// (get) Token: 0x06016AD3 RID: 92883 RVA: 0x002117F5 File Offset: 0x0020F9F5
-		// (set) Token: 0x06016AD4 RID: 92884 RVA: 0x0021180E File Offset: 0x0020FA0E
+		// Token: 0x17001182 RID: 4482
+		// (get) Token: 0x06005870 RID: 22640 RVA: 0x0007CA47 File Offset: 0x0007AC47
+		// (set) Token: 0x06005871 RID: 22641 RVA: 0x0007CA60 File Offset: 0x0007AC60
 		public unsafe bool bUseCurve
 		{
 			get
@@ -33,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BAD RID: 23469
-		// (get) Token: 0x06016AD5 RID: 92885 RVA: 0x0021183E File Offset: 0x0020FA3E
-		// (set) Token: 0x06016AD6 RID: 92886 RVA: 0x00211852 File Offset: 0x0020FA52
+		// Token: 0x17001183 RID: 4483
+		// (get) Token: 0x06005872 RID: 22642 RVA: 0x0007CA90 File Offset: 0x0007AC90
+		// (set) Token: 0x06005873 RID: 22643 RVA: 0x0007CAA4 File Offset: 0x0007ACA4
 		public unsafe FVector Constant
 		{
 			get
@@ -48,93 +46,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BAE RID: 23470
-		// (get) Token: 0x06016AD7 RID: 92887 RVA: 0x00211868 File Offset: 0x0020FA68
-		// (set) Token: 0x06016AD8 RID: 92888 RVA: 0x002118AC File Offset: 0x0020FAAC
-		public TFixedArray<FRuntimeFloatCurve> Curve
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TFixedArray<FRuntimeFloatCurve> result;
-				if ((result = this._Curve) == null)
-				{
-					result = (this._Curve = new TFixedArray<FRuntimeFloatCurve>(base.NativePtr + (IntPtr)FKuroCurveVector.__PropertyOffset_Curve, 3, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				this.Curve.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x06016AD9 RID: 92889 RVA: 0x002118BA File Offset: 0x0020FABA
+		// Token: 0x06005874 RID: 22644 RVA: 0x0007CAB9 File Offset: 0x0007ACB9
 		public FKuroCurveVector()
 		{
 		}
 
-		// Token: 0x06016ADA RID: 92890 RVA: 0x002118C2 File Offset: 0x0020FAC2
-		public FKuroCurveVector(bool bUseCurve, FVector Constant, TFixedArray<FRuntimeFloatCurve> Curve)
-		{
-			this.bUseCurve = bUseCurve;
-			this.Constant = Constant;
-			this.Curve = Curve;
-		}
-
-		// Token: 0x06016ADB RID: 92891 RVA: 0x002118DF File Offset: 0x0020FADF
+		// Token: 0x06005875 RID: 22645 RVA: 0x0007CAC1 File Offset: 0x0007ACC1
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroCurveVector.StaticStruct();
 		}
 
-		// Token: 0x06016ADC RID: 92892 RVA: 0x002118EB File Offset: 0x0020FAEB
+		// Token: 0x06005876 RID: 22646 RVA: 0x0007CACD File Offset: 0x0007ACCD
 		[NullableContext(2)]
 		public FKuroCurveVector(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016ADD RID: 92893 RVA: 0x002118F5 File Offset: 0x0020FAF5
+		// Token: 0x06005877 RID: 22647 RVA: 0x0007CAD7 File Offset: 0x0007ACD7
 		public FKuroCurveVector(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016ADE RID: 92894 RVA: 0x00211900 File Offset: 0x0020FB00
+		// Token: 0x06005878 RID: 22648 RVA: 0x0007CAE2 File Offset: 0x0007ACE2
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroCurveVector(Pointer, false, true);
 		}
 
-		// Token: 0x06016ADF RID: 92895 RVA: 0x0021190A File Offset: 0x0020FB0A
+		// Token: 0x06005879 RID: 22649 RVA: 0x0007CAEC File Offset: 0x0007ACEC
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroCurveVector(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400C4FE RID: 50430
+		// Token: 0x04002486 RID: 9350
+		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroCurve.KuroCurveVector";
 
-		// Token: 0x0400C4FF RID: 50431
+		// Token: 0x04002487 RID: 9351
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400C500 RID: 50432
+		// Token: 0x04002488 RID: 9352
 		internal static int __PropertyOffset_bUseCurve;
 
-		// Token: 0x0400C501 RID: 50433
+		// Token: 0x04002489 RID: 9353
 		internal static byte __PropertyMask_bUseCurve;
 
-		// Token: 0x0400C502 RID: 50434
+		// Token: 0x0400248A RID: 9354
 		internal static int __PropertyOffset_Constant;
-
-		// Token: 0x0400C503 RID: 50435
-		internal static int __PropertyOffset_Curve;
-
-		// Token: 0x0400C504 RID: 50436
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TFixedArray<FRuntimeFloatCurve> _Curve;
 	}
 }

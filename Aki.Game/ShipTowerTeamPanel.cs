@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029D9 RID: 10713
+// Token: 0x02001F54 RID: 8020
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerTeamPanel : UiPanelBase
 {
-	// Token: 0x0601631A RID: 90906 RVA: 0x0059D050 File Offset: 0x0059B250
+	// Token: 0x06013D20 RID: 81184 RVA: 0x005C8008 File Offset: 0x005C6208
 	public UniTask Init(UUIItem item, ShipTowerStageData data)
 	{
 		ShipTowerTeamPanel.<Init>d__15 <Init>d__;
@@ -27,7 +27,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601631B RID: 90907 RVA: 0x0059D0A4 File Offset: 0x0059B2A4
+	// Token: 0x06013D21 RID: 81185 RVA: 0x005C805C File Offset: 0x005C625C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601631C RID: 90908 RVA: 0x0059D150 File Offset: 0x0059B350
+	// Token: 0x06013D22 RID: 81186 RVA: 0x005C8108 File Offset: 0x005C6308
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerTeamPanel.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601631D RID: 90909 RVA: 0x0059D194 File Offset: 0x0059B394
+	// Token: 0x06013D23 RID: 81187 RVA: 0x005C814C File Offset: 0x005C634C
 	private void TeamTabFinish()
 	{
 		foreach (KeyValuePair<int, ShipTowerTeamTabItem> keyValuePair in this.TabComponent.GetTabItemMap())
@@ -66,19 +66,19 @@ public class ShipTowerTeamPanel : UiPanelBase
 		this.TabComponent.SelectToggleByIndex(0, true, true);
 	}
 
-	// Token: 0x0601631E RID: 90910 RVA: 0x0059D218 File Offset: 0x0059B418
+	// Token: 0x06013D24 RID: 81188 RVA: 0x005C81D0 File Offset: 0x005C63D0
 	protected override void OnBeforeShow()
 	{
 		this.ToggleTwoTabCallBack(this.CurSelectTabIndex);
 	}
 
-	// Token: 0x0601631F RID: 90911 RVA: 0x0059D226 File Offset: 0x0059B426
+	// Token: 0x06013D25 RID: 81189 RVA: 0x005C81DE File Offset: 0x005C63DE
 	protected override void OnAfterShow()
 	{
 		EventSystem.Instance.Emit(EEventName.ShipTowerTeamPanelShown);
 	}
 
-	// Token: 0x06016320 RID: 90912 RVA: 0x0059D238 File Offset: 0x0059B438
+	// Token: 0x06013D26 RID: 81190 RVA: 0x005C81F0 File Offset: 0x005C63F0
 	public void UpdateViewAndShow(ShipTowerTeamData teamData)
 	{
 		this.CurTeamData = teamData;
@@ -90,20 +90,20 @@ public class ShipTowerTeamPanel : UiPanelBase
 		this.SetActive(true);
 	}
 
-	// Token: 0x06016321 RID: 90913 RVA: 0x0059D25D File Offset: 0x0059B45D
+	// Token: 0x06013D27 RID: 81191 RVA: 0x005C8215 File Offset: 0x005C6415
 	protected override void OnBeforeDestroy()
 	{
 		this.TabComponent = null;
 		this.FilterComponent = null;
 	}
 
-	// Token: 0x06016322 RID: 90914 RVA: 0x0059D26D File Offset: 0x0059B46D
+	// Token: 0x06013D28 RID: 81192 RVA: 0x005C8225 File Offset: 0x005C6425
 	private ShipTowerTeamTabItem TabItemProxyCreate([Nullable(2)] UUIItem item, int? index)
 	{
 		return new ShipTowerTeamTabItem();
 	}
 
-	// Token: 0x06016323 RID: 90915 RVA: 0x0059D274 File Offset: 0x0059B474
+	// Token: 0x06013D29 RID: 81193 RVA: 0x005C822C File Offset: 0x005C642C
 	private void ToggleTwoTabCallBack(int index)
 	{
 		if (base.IsStartOrStarting)
@@ -125,7 +125,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		this.UpdateTeamList();
 	}
 
-	// Token: 0x06016324 RID: 90916 RVA: 0x0059D2DC File Offset: 0x0059B4DC
+	// Token: 0x06013D2A RID: 81194 RVA: 0x005C8294 File Offset: 0x005C6494
 	public void UpdateRoleListByMainRoleChange()
 	{
 		RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -145,7 +145,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016325 RID: 90917 RVA: 0x0059D344 File Offset: 0x0059B544
+	// Token: 0x06013D2B RID: 81195 RVA: 0x005C82FC File Offset: 0x005C64FC
 	private void UpdateRoleList()
 	{
 		base.GetScrollViewWithScrollbar(2).RootUIComp.Get().SetUIActive(true);
@@ -159,14 +159,14 @@ public class ShipTowerTeamPanel : UiPanelBase
 		this.UpdateRoleListFilter();
 	}
 
-	// Token: 0x06016326 RID: 90918 RVA: 0x0059D3B8 File Offset: 0x0059B5B8
+	// Token: 0x06013D2C RID: 81196 RVA: 0x005C8370 File Offset: 0x005C6570
 	public void UpdateRoleListFilter()
 	{
 		int filterId = FilterConfig.Instance.GetFilterId(EFilterSortGroupId.ShipTower);
 		EventSystem.Instance.Emit<int>(EEventName.OnFilterDataUpdate, filterId);
 	}
 
-	// Token: 0x06016327 RID: 90919 RVA: 0x0059D3E4 File Offset: 0x0059B5E4
+	// Token: 0x06013D2D RID: 81197 RVA: 0x005C839C File Offset: 0x005C659C
 	private void UpdateTeamList()
 	{
 		base.GetScrollViewWithScrollbar(2).RootUIComp.Get().SetUIActive(false);
@@ -186,7 +186,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		this.OnlyUpdateTeamList();
 	}
 
-	// Token: 0x06016328 RID: 90920 RVA: 0x0059D47A File Offset: 0x0059B67A
+	// Token: 0x06013D2E RID: 81198 RVA: 0x005C8432 File Offset: 0x005C6632
 	public void OnlyUpdateTeamList()
 	{
 		GenericScrollViewNew<ShipTowerRoleTeamItem, FormationData> teamScrollView = this.TeamScrollView;
@@ -202,7 +202,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		emptyStateItem.SetUIActive(false);
 	}
 
-	// Token: 0x06016329 RID: 90921 RVA: 0x0059D4A6 File Offset: 0x0059B6A6
+	// Token: 0x06013D2F RID: 81199 RVA: 0x005C845E File Offset: 0x005C665E
 	public void UpdateTeamListByIndex(int index)
 	{
 		GenericScrollViewNew<ShipTowerRoleTeamItem, FormationData> teamScrollView = this.TeamScrollView;
@@ -218,7 +218,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		scrollItemByIndex.Refresh(this.TeamList[index], false, index);
 	}
 
-	// Token: 0x0601632A RID: 90922 RVA: 0x0059D4D4 File Offset: 0x0059B6D4
+	// Token: 0x06013D30 RID: 81200 RVA: 0x005C848C File Offset: 0x005C668C
 	private void OnFilterSort(List<RoleDataBase> dataList, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.RoleList = dataList;
@@ -240,7 +240,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		roleListUpdateCallback();
 	}
 
-	// Token: 0x0601632B RID: 90923 RVA: 0x0059D533 File Offset: 0x0059B733
+	// Token: 0x06013D31 RID: 81201 RVA: 0x005C84EB File Offset: 0x005C66EB
 	private ShipTowerRoleGrid OnGridProxyCreate()
 	{
 		ShipTowerRoleGrid shipTowerRoleGrid = new ShipTowerRoleGrid();
@@ -249,7 +249,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		return shipTowerRoleGrid;
 	}
 
-	// Token: 0x0601632C RID: 90924 RVA: 0x0059D55E File Offset: 0x0059B75E
+	// Token: 0x06013D32 RID: 81202 RVA: 0x005C8516 File Offset: 0x005C6716
 	private ShipTowerRoleTeamItem OnTeamGridProxyCreate()
 	{
 		return new ShipTowerRoleTeamItem
@@ -259,7 +259,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601632D RID: 90925 RVA: 0x0059D580 File Offset: 0x0059B780
+	// Token: 0x06013D33 RID: 81203 RVA: 0x005C8538 File Offset: 0x005C6738
 	protected void ToggleFunction(MediumItemGridExtendCallback params_)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -310,7 +310,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		scrollItemByIndex.Refresh(roleDataBase, flag, num2);
 	}
 
-	// Token: 0x0601632E RID: 90926 RVA: 0x0059D6BC File Offset: 0x0059B8BC
+	// Token: 0x06013D34 RID: 81204 RVA: 0x005C8674 File Offset: 0x005C6874
 	protected bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 	{
 		RoleDataBase roleDataBase = (RoleDataBase)data;
@@ -330,7 +330,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0601632F RID: 90927 RVA: 0x0059D708 File Offset: 0x0059B908
+	// Token: 0x06013D35 RID: 81205 RVA: 0x005C86C0 File Offset: 0x005C68C0
 	private bool RoleIsFull()
 	{
 		for (int i = 1; i <= 3; i++)
@@ -344,7 +344,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06016330 RID: 90928 RVA: 0x0059D744 File Offset: 0x0059B944
+	// Token: 0x06013D36 RID: 81206 RVA: 0x005C86FC File Offset: 0x005C68FC
 	public List<int> GetRoleIdList()
 	{
 		List<int> list = new List<int>();
@@ -355,14 +355,14 @@ public class ShipTowerTeamPanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x06016331 RID: 90929 RVA: 0x0059D788 File Offset: 0x0059B988
+	// Token: 0x06013D37 RID: 81207 RVA: 0x005C8740 File Offset: 0x005C6940
 	private void OnTeamEditClick()
 	{
 		bool flag = false;
 		FormationController.Instance.OpenFormationView(flag, null);
 	}
 
-	// Token: 0x06016332 RID: 90930 RVA: 0x0059D7A8 File Offset: 0x0059B9A8
+	// Token: 0x06013D38 RID: 81208 RVA: 0x005C8760 File Offset: 0x005C6960
 	public void RefreshRole(int roleId)
 	{
 		int num = this.RoleList.FindIndex((RoleDataBase roleData) => roleData.GetDataId() == roleId);
@@ -378,7 +378,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		scrollItemByIndex.Refresh(this.RoleList[num], false, num);
 	}
 
-	// Token: 0x06016333 RID: 90931 RVA: 0x0059D804 File Offset: 0x0059BA04
+	// Token: 0x06013D39 RID: 81209 RVA: 0x005C87BC File Offset: 0x005C69BC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -400,7 +400,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0400A536 RID: 42294
+	// Token: 0x0400A920 RID: 43296
 	[Nullable(new byte[]
 	{
 		2,
@@ -408,10 +408,10 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	private TabComponent<ShipTowerTeamTabItem> TabComponent;
 
-	// Token: 0x0400A537 RID: 42295
+	// Token: 0x0400A921 RID: 43297
 	private int CurSelectTabIndex;
 
-	// Token: 0x0400A538 RID: 42296
+	// Token: 0x0400A922 RID: 43298
 	[Nullable(new byte[]
 	{
 		2,
@@ -419,7 +419,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterComponent;
 
-	// Token: 0x0400A539 RID: 42297
+	// Token: 0x0400A923 RID: 43299
 	[Nullable(new byte[]
 	{
 		2,
@@ -428,7 +428,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<ShipTowerRoleGrid, RoleDataBase> RoleScrollView;
 
-	// Token: 0x0400A53A RID: 42298
+	// Token: 0x0400A924 RID: 43300
 	[Nullable(new byte[]
 	{
 		2,
@@ -437,10 +437,10 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<ShipTowerRoleTeamItem, FormationData> TeamScrollView;
 
-	// Token: 0x0400A53B RID: 42299
+	// Token: 0x0400A925 RID: 43301
 	private List<RoleDataBase> RoleList = new List<RoleDataBase>();
 
-	// Token: 0x0400A53C RID: 42300
+	// Token: 0x0400A926 RID: 43302
 	[Nullable(new byte[]
 	{
 		2,
@@ -448,13 +448,13 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	private List<FormationData> TeamList;
 
-	// Token: 0x0400A53D RID: 42301
+	// Token: 0x0400A927 RID: 43303
 	private ShipTowerStageData StageData;
 
-	// Token: 0x0400A53E RID: 42302
+	// Token: 0x0400A928 RID: 43304
 	private List<ShipTowerTeamTab> TeamTabList;
 
-	// Token: 0x0400A53F RID: 42303
+	// Token: 0x0400A929 RID: 43305
 	[Nullable(new byte[]
 	{
 		2,
@@ -462,7 +462,7 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	public Action<RoleDataBase> RoleSelectCallBack;
 
-	// Token: 0x0400A540 RID: 42304
+	// Token: 0x0400A92A RID: 43306
 	[Nullable(new byte[]
 	{
 		2,
@@ -470,35 +470,35 @@ public class ShipTowerTeamPanel : UiPanelBase
 	})]
 	public Action<FormationData> TeamSelectCallBack;
 
-	// Token: 0x0400A541 RID: 42305
+	// Token: 0x0400A92B RID: 43307
 	[Nullable(2)]
 	private ShipTowerTeamData CurTeamData;
 
-	// Token: 0x0400A542 RID: 42306
+	// Token: 0x0400A92C RID: 43308
 	[Nullable(2)]
 	public UUIItem EmptyStateItem;
 
-	// Token: 0x0400A543 RID: 42307
+	// Token: 0x0400A92D RID: 43309
 	[Nullable(2)]
 	public Action RoleListUpdateCallback;
 
-	// Token: 0x02009003 RID: 36867
+	// Token: 0x0200824A RID: 33354
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402EA1C RID: 191004
+		// Token: 0x0402A114 RID: 172308
 		public const int ItemTabComponent = 0;
 
-		// Token: 0x0402EA1D RID: 191005
+		// Token: 0x0402A115 RID: 172309
 		public const int ScrollBarTeam = 1;
 
-		// Token: 0x0402EA1E RID: 191006
+		// Token: 0x0402A116 RID: 172310
 		public const int ScrollBarRole = 2;
 
-		// Token: 0x0402EA1F RID: 191007
+		// Token: 0x0402A117 RID: 172311
 		public const int ItemFilter = 3;
 
-		// Token: 0x0402EA20 RID: 191008
+		// Token: 0x0402A118 RID: 172312
 		public const int TeamEditButton = 4;
 	}
 }

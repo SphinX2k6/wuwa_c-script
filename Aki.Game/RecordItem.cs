@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200163D RID: 5693
+// Token: 0x02000AF5 RID: 2805
 internal class RecordItem : UiPanelBase
 {
-	// Token: 0x0600A00A RID: 40970 RVA: 0x002333BC File Offset: 0x002315BC
+	// Token: 0x060073E8 RID: 29672 RVA: 0x0023D200 File Offset: 0x0023B400
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -27,13 +27,13 @@ internal class RecordItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A00B RID: 40971 RVA: 0x00233467 File Offset: 0x00231667
+	// Token: 0x060073E9 RID: 29673 RVA: 0x0023D2AB File Offset: 0x0023B4AB
 	protected override void OnStart()
 	{
 		this.ScoreItem = new WheelTowerScoreItem(this, base.GetItem(3));
 	}
 
-	// Token: 0x0600A00C RID: 40972 RVA: 0x0023347C File Offset: 0x0023167C
+	// Token: 0x060073EA RID: 29674 RVA: 0x0023D2C0 File Offset: 0x0023B4C0
 	public void Refresh(bool isRoundTotal)
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -72,7 +72,7 @@ internal class RecordItem : UiPanelBase
 		scoreItem.Refresh(scoreLevel);
 	}
 
-	// Token: 0x040048CC RID: 18636
+	// Token: 0x04004972 RID: 18802
 	[Nullable(2)]
 	private WheelTowerScoreItem ScoreItem;
 }

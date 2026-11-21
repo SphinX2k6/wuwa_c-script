@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006B2 RID: 1714
+	// Token: 0x020006CA RID: 1738
 	public class ConfigPhantomRecommendByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600283C RID: 10300 RVA: 0x0013D17C File Offset: 0x0013B37C
+		// Token: 0x060028CC RID: 10444 RVA: 0x00143BF8 File Offset: 0x00141DF8
 		static ConfigPhantomRecommendByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomRecommendByRoleId.CreateStaticDefaultValue), new Action(ConfigPhantomRecommendByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600283D RID: 10301 RVA: 0x0013D19C File Offset: 0x0013B39C
+		// Token: 0x060028CD RID: 10445 RVA: 0x00143C18 File Offset: 0x00141E18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomRecommendByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600283E RID: 10302 RVA: 0x0013D21B File Offset: 0x0013B41B
+		// Token: 0x060028CE RID: 10446 RVA: 0x00143C97 File Offset: 0x00141E97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomRecommendByRoleId.LogPair = null;
 			ConfigPhantomRecommendByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x0600283F RID: 10303 RVA: 0x0013D229 File Offset: 0x0013B429
+		// Token: 0x060028CF RID: 10447 RVA: 0x00143CA5 File Offset: 0x00141EA5
 		public static void Init()
 		{
 			ConfigPhantomRecommendByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomRecommendByRoleId.HandleId, "db_visionrecommend.db", "select BinData from `PhantomRecommend` where RoleId=?");
 		}
 
-		// Token: 0x06002840 RID: 10304 RVA: 0x0013D244 File Offset: 0x0013B444
+		// Token: 0x060028D0 RID: 10448 RVA: 0x00143CC0 File Offset: 0x00141EC0
 		public static PhantomRecommend? GetConfig(int p0RoleId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomRecommendByRoleId.HandleId, ConfigPhantomRecommendByRoleId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomRecommend?(rootAsPhantomRecommend);
 		}
 
-		// Token: 0x04002EC4 RID: 11972
+		// Token: 0x04002F6C RID: 12140
 		private const string DB = "db_visionrecommend.db";
 
-		// Token: 0x04002EC5 RID: 11973
+		// Token: 0x04002F6D RID: 12141
 		private const string FILE = "h.幻象推荐.xlsx";
 
-		// Token: 0x04002EC6 RID: 11974
+		// Token: 0x04002F6E RID: 12142
 		private const string TABLE = "PhantomRecommend";
 
-		// Token: 0x04002EC7 RID: 11975
+		// Token: 0x04002F6F RID: 12143
 		private const string COMMAND = "select BinData from `PhantomRecommend` where RoleId=?";
 
-		// Token: 0x04002EC8 RID: 11976
+		// Token: 0x04002F70 RID: 12144
 		private const string KEY_PREFIX = "PhantomRecommendByRoleId";
 
-		// Token: 0x04002EC9 RID: 11977
+		// Token: 0x04002F71 RID: 12145
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002ECA RID: 11978
+		// Token: 0x04002F72 RID: 12146
 		private static int HandleId;
 	}
 }

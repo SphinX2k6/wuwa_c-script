@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004907 RID: 18695
+	// Token: 0x0200387E RID: 14462
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationScrollProxy
 	{
-		// Token: 0x06030E00 RID: 200192 RVA: 0x00B5990C File Offset: 0x00B57B0C
+		// Token: 0x0602592D RID: 153901 RVA: 0x00A9477C File Offset: 0x00A9297C
 		private float GetErrorTolerance(bool isVertical)
 		{
 			FVector relativeScale3D = this.Listener.RootUIComp.Get().RelativeScale3D;
@@ -27,20 +27,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return num;
 		}
 
-		// Token: 0x06030E01 RID: 200193 RVA: 0x00B599BD File Offset: 0x00B57BBD
+		// Token: 0x0602592E RID: 153902 RVA: 0x00A9482D File Offset: 0x00A92A2D
 		public void InitScrollView(AActor scrollViewActor, TsUiNavigationBehaviorListener listener)
 		{
 			this.Listener = listener;
 			this.ScrollView = (scrollViewActor.GetComponentByClass(UUIScrollViewWithScrollbarComponent.StaticClass()) as UUIScrollViewWithScrollbarComponent);
 		}
 
-		// Token: 0x06030E02 RID: 200194 RVA: 0x00B599E4 File Offset: 0x00B57BE4
+		// Token: 0x0602592F RID: 153903 RVA: 0x00A94854 File Offset: 0x00A92A54
 		public bool IsScrollViewActive()
 		{
 			return this.ScrollView != null && this.ScrollView.RootUIComp.Get().IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x06030E03 RID: 200195 RVA: 0x00B59A13 File Offset: 0x00B57C13
+		// Token: 0x06025930 RID: 153904 RVA: 0x00A94883 File Offset: 0x00A92A83
 		[NullableContext(2)]
 		public UUIInturnAnimController GetInturnAnimController()
 		{
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return ((content != null) ? content.GetComponentByClass(UUIInturnAnimController.StaticClass()) : null) as UUIInturnAnimController;
 		}
 
-		// Token: 0x170079C6 RID: 31174
-		// (get) Token: 0x06030E04 RID: 200196 RVA: 0x00B59A45 File Offset: 0x00B57C45
+		// Token: 0x17004D2E RID: 19758
+		// (get) Token: 0x06025931 RID: 153905 RVA: 0x00A948B5 File Offset: 0x00A92AB5
 		public bool IsVertical
 		{
 			get
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E05 RID: 200197 RVA: 0x00B59A5C File Offset: 0x00B57C5C
+		// Token: 0x06025932 RID: 153906 RVA: 0x00A948CC File Offset: 0x00A92ACC
 		public bool HasNormalScrollView()
 		{
 			return this.ScrollView != null && !this.HasLoopScrollView() && !this.HasMultiTemplateScrollView() && !this.HasDynamicScrollView();
 		}
 
-		// Token: 0x06030E06 RID: 200198 RVA: 0x00B59A88 File Offset: 0x00B57C88
+		// Token: 0x06025933 RID: 153907 RVA: 0x00A948F8 File Offset: 0x00A92AF8
 		public bool IsInNormalScrollDisplayByGridActor(AUIBaseActor gridBaseActor)
 		{
 			EOutOfBoundsType eoutOfBoundsType = EOutOfBoundsType.NotOut;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return eoutOfBoundsType2 == EOutOfBoundsType.NotOut;
 		}
 
-		// Token: 0x06030E07 RID: 200199 RVA: 0x00B59AC9 File Offset: 0x00B57CC9
+		// Token: 0x06025934 RID: 153908 RVA: 0x00A94939 File Offset: 0x00A92B39
 		public void BindScrollView(UUISelectableComponent selectableComponent)
 		{
 			if (!this.HasLoopScrollView() && !this.HasMultiTemplateScrollView())
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.ScrollView.BindParentUIItem(selectableComponent);
 		}
 
-		// Token: 0x06030E08 RID: 200200 RVA: 0x00B59AE8 File Offset: 0x00B57CE8
+		// Token: 0x06025935 RID: 153909 RVA: 0x00A94958 File Offset: 0x00A92B58
 		public void UnBindScrollView(UUISelectableComponent selectableComponent)
 		{
 			if (!this.HasLoopScrollView() && !this.HasMultiTemplateScrollView())
@@ -105,13 +105,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.ScrollView.UnBindParentUIItem(selectableComponent);
 		}
 
-		// Token: 0x06030E09 RID: 200201 RVA: 0x00B59B15 File Offset: 0x00B57D15
+		// Token: 0x06025936 RID: 153910 RVA: 0x00A94985 File Offset: 0x00A92B85
 		public bool HasLoopScrollView()
 		{
 			return this.ScrollView != null && this.ScrollView is UUILoopScrollViewComponent;
 		}
 
-		// Token: 0x06030E0A RID: 200202 RVA: 0x00B59B31 File Offset: 0x00B57D31
+		// Token: 0x06025937 RID: 153911 RVA: 0x00A949A1 File Offset: 0x00A92BA1
 		public void SetLoopScrollViewNavigationIndex(int gridIndex)
 		{
 			if (!this.HasLoopScrollView())
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			(this.ScrollView as UUILoopScrollViewComponent).SetNavigationIndex(gridIndex);
 		}
 
-		// Token: 0x06030E0B RID: 200203 RVA: 0x00B59B4D File Offset: 0x00B57D4D
+		// Token: 0x06025938 RID: 153912 RVA: 0x00A949BD File Offset: 0x00A92BBD
 		public int GetLoopScrollViewNavigationIndex()
 		{
 			if (!this.HasLoopScrollView())
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return (this.ScrollView as UUILoopScrollViewComponent).NavigationIndex;
 		}
 
-		// Token: 0x06030E0C RID: 200204 RVA: 0x00B59B69 File Offset: 0x00B57D69
+		// Token: 0x06025939 RID: 153913 RVA: 0x00A949D9 File Offset: 0x00A92BD9
 		public bool CheckLoopScrollChangeNavigation()
 		{
 			if (this.ScrollView == null)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return true;
 		}
 
-		// Token: 0x06030E0D RID: 200205 RVA: 0x00B59B90 File Offset: 0x00B57D90
+		// Token: 0x0602593A RID: 153914 RVA: 0x00A94A00 File Offset: 0x00A92C00
 		public bool IsInLoopScrollDisplay(int gridIndex)
 		{
 			if (!this.HasLoopScrollView())
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return uuiloopScrollViewComponent.NavigationIndex == -1 || uuiloopScrollViewComponent.NavigationIndex == gridIndex;
 		}
 
-		// Token: 0x06030E0E RID: 200206 RVA: 0x00B59BC8 File Offset: 0x00B57DC8
+		// Token: 0x0602593B RID: 153915 RVA: 0x00A94A38 File Offset: 0x00A92C38
 		[NullableContext(2)]
 		public bool IsInLoopScrollDisplayByGridActor(AUIBaseActor gridBaseActor)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return eoutOfBoundsType2 == EOutOfBoundsType.NotOut;
 		}
 
-		// Token: 0x06030E0F RID: 200207 RVA: 0x00B59C40 File Offset: 0x00B57E40
+		// Token: 0x0602593C RID: 153916 RVA: 0x00A94AB0 File Offset: 0x00A92CB0
 		[NullableContext(2)]
 		public bool IsScrollDisplayByGridActor(AUIBaseActor gridBaseActor)
 		{
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return eoutOfBoundsType2 == EOutOfBoundsType.NotOut;
 		}
 
-		// Token: 0x06030E10 RID: 200208 RVA: 0x00B59CB8 File Offset: 0x00B57EB8
+		// Token: 0x0602593D RID: 153917 RVA: 0x00A94B28 File Offset: 0x00A92D28
 		[NullableContext(2)]
 		public AActor GetDynamicGridActor()
 		{
@@ -246,13 +246,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return aactor;
 		}
 
-		// Token: 0x06030E11 RID: 200209 RVA: 0x00B59D2D File Offset: 0x00B57F2D
+		// Token: 0x0602593E RID: 153918 RVA: 0x00A94B9D File Offset: 0x00A92D9D
 		public bool HasDynamicScrollView()
 		{
 			return this.ScrollView != null && this.ScrollView is UUIDynScrollViewComponent;
 		}
 
-		// Token: 0x06030E12 RID: 200210 RVA: 0x00B59D4C File Offset: 0x00B57F4C
+		// Token: 0x0602593F RID: 153919 RVA: 0x00A94BBC File Offset: 0x00A92DBC
 		[NullableContext(2)]
 		public bool IsInDynScrollDisplay(AUIBaseActor gridBaseActor)
 		{
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return eoutOfBoundsType2 == EOutOfBoundsType.NotOut;
 		}
 
-		// Token: 0x06030E13 RID: 200211 RVA: 0x00B59DC4 File Offset: 0x00B57FC4
+		// Token: 0x06025940 RID: 153920 RVA: 0x00A94C34 File Offset: 0x00A92E34
 		public bool GetMultiTemplateScrollPositiveFind(FVector direction, int lastIndex, int index)
 		{
 			if (this.ScrollView == null)
@@ -325,13 +325,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E14 RID: 200212 RVA: 0x00B59E5D File Offset: 0x00B5805D
+		// Token: 0x06025941 RID: 153921 RVA: 0x00A94CCD File Offset: 0x00A92ECD
 		public bool IsNeedSlideToEdge(int lastIndex, int findIndex, bool isPositiveFind, NavigationGroup groupConfig)
 		{
 			return !isPositiveFind && ((findIndex < lastIndex && groupConfig.SlideToLeftOrTop) || (findIndex > lastIndex && groupConfig.SlideToRightOrDown));
 		}
 
-		// Token: 0x06030E15 RID: 200213 RVA: 0x00B59E84 File Offset: 0x00B58084
+		// Token: 0x06025942 RID: 153922 RVA: 0x00A94CF4 File Offset: 0x00A92EF4
 		public bool IsNeedReturnBestPick(FVector direction, NavigationGroup groupConfig)
 		{
 			UUIScrollViewWithScrollbarComponent scrollView = this.ScrollView;
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E16 RID: 200214 RVA: 0x00B59F9A File Offset: 0x00B5819A
+		// Token: 0x06025943 RID: 153923 RVA: 0x00A94E0A File Offset: 0x00A9300A
 		public void SetScrollProgress(bool isScrollToTop)
 		{
 			UUIScrollViewWithScrollbarComponent scrollView = this.ScrollView;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			scrollView.SetScrollProgress(!isScrollToTop);
 		}
 
-		// Token: 0x06030E17 RID: 200215 RVA: 0x00B59FB4 File Offset: 0x00B581B4
+		// Token: 0x06025944 RID: 153924 RVA: 0x00A94E24 File Offset: 0x00A93024
 		public void TryMultiTemplateScrollToGridIndex(int lastIndex, int gridIndex)
 		{
 			if (this.ScrollView == null)
@@ -398,13 +398,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			uuimultiTemplateScrollViewComponent.TryScrollToGridIndex(gridIndex, true);
 		}
 
-		// Token: 0x06030E18 RID: 200216 RVA: 0x00B59FEB File Offset: 0x00B581EB
+		// Token: 0x06025945 RID: 153925 RVA: 0x00A94E5B File Offset: 0x00A9305B
 		public bool HasMultiTemplateScrollView()
 		{
 			return this.ScrollView != null && this.ScrollView is UUIMultiTemplateScrollViewComponent;
 		}
 
-		// Token: 0x06030E19 RID: 200217 RVA: 0x00B5A008 File Offset: 0x00B58208
+		// Token: 0x06025946 RID: 153926 RVA: 0x00A94E78 File Offset: 0x00A93078
 		public void RecordFocusListenerIndexInMultiTemplateScrollView()
 		{
 			if (!this.HasMultiTemplateScrollView())
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FocusListenerIndexInMultiTemplateScrollView = uuimultiTemplateScrollViewComponent.GetGridIndexByChildComponent(this.Listener.GetSelectableComponent());
 		}
 
-		// Token: 0x06030E1A RID: 200218 RVA: 0x00B5A044 File Offset: 0x00B58244
+		// Token: 0x06025947 RID: 153927 RVA: 0x00A94EB4 File Offset: 0x00A930B4
 		public TsUiNavigationBehaviorListener GetCurrentFocusListenerInMultiTemplateScrollView()
 		{
 			if (!this.HasMultiTemplateScrollView())
@@ -445,17 +445,17 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return tsUiNavigationBehaviorListener;
 		}
 
-		// Token: 0x0401A3CE RID: 107470
+		// Token: 0x04014C41 RID: 85057
 		private const float ERRORTOLERANCE = 0.001f;
 
-		// Token: 0x0401A3CF RID: 107471
+		// Token: 0x04014C42 RID: 85058
 		[Nullable(2)]
 		public UUIScrollViewWithScrollbarComponent ScrollView;
 
-		// Token: 0x0401A3D0 RID: 107472
+		// Token: 0x04014C43 RID: 85059
 		protected TsUiNavigationBehaviorListener Listener;
 
-		// Token: 0x0401A3D1 RID: 107473
+		// Token: 0x04014C44 RID: 85060
 		private int FocusListenerIndexInMultiTemplateScrollView = -1;
 	}
 }

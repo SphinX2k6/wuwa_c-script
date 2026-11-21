@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000E9F RID: 3743
+	// Token: 0x02000240 RID: 576
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.MemberReference")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class FMemberReference : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600C9E3 RID: 51683 RVA: 0x00125EEB File Offset: 0x001240EB
+		// Token: 0x06003168 RID: 12648 RVA: 0x00046569 File Offset: 0x00044769
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMemberReference._ScriptStructPtr != 0) ? FMemberReference._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.MemberReference", ref FMemberReference._ScriptStructPtr);
 		}
 
-		// Token: 0x17002F57 RID: 12119
-		// (get) Token: 0x0600C9E4 RID: 51684 RVA: 0x00125F0F File Offset: 0x0012410F
-		// (set) Token: 0x0600C9E5 RID: 51685 RVA: 0x00125F23 File Offset: 0x00124123
+		// Token: 0x170006C5 RID: 1733
+		// (get) Token: 0x06003169 RID: 12649 RVA: 0x0004658D File Offset: 0x0004478D
+		// (set) Token: 0x0600316A RID: 12650 RVA: 0x000465A1 File Offset: 0x000447A1
 		[Nullable(2)]
 		public unsafe UObject MemberParent
 		{
@@ -37,9 +37,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F58 RID: 12120
-		// (get) Token: 0x0600C9E6 RID: 51686 RVA: 0x00125F38 File Offset: 0x00124138
-		// (set) Token: 0x0600C9E7 RID: 51687 RVA: 0x00125F4C File Offset: 0x0012414C
+		// Token: 0x170006C6 RID: 1734
+		// (get) Token: 0x0600316B RID: 12651 RVA: 0x000465B6 File Offset: 0x000447B6
+		// (set) Token: 0x0600316C RID: 12652 RVA: 0x000465CA File Offset: 0x000447CA
 		public unsafe string MemberScope
 		{
 			get
@@ -52,9 +52,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F59 RID: 12121
-		// (get) Token: 0x0600C9E8 RID: 51688 RVA: 0x00125F61 File Offset: 0x00124161
-		// (set) Token: 0x0600C9E9 RID: 51689 RVA: 0x00125F75 File Offset: 0x00124175
+		// Token: 0x170006C7 RID: 1735
+		// (get) Token: 0x0600316D RID: 12653 RVA: 0x000465DF File Offset: 0x000447DF
+		// (set) Token: 0x0600316E RID: 12654 RVA: 0x000465F3 File Offset: 0x000447F3
 		public unsafe FName MemberName
 		{
 			get
@@ -67,9 +67,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F5A RID: 12122
-		// (get) Token: 0x0600C9EA RID: 51690 RVA: 0x00125F8A File Offset: 0x0012418A
-		// (set) Token: 0x0600C9EB RID: 51691 RVA: 0x00125F9E File Offset: 0x0012419E
+		// Token: 0x170006C8 RID: 1736
+		// (get) Token: 0x0600316F RID: 12655 RVA: 0x00046608 File Offset: 0x00044808
+		// (set) Token: 0x06003170 RID: 12656 RVA: 0x0004661C File Offset: 0x0004481C
 		public unsafe FGuid MemberGuid
 		{
 			get
@@ -82,9 +82,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F5B RID: 12123
-		// (get) Token: 0x0600C9EC RID: 51692 RVA: 0x00125FB3 File Offset: 0x001241B3
-		// (set) Token: 0x0600C9ED RID: 51693 RVA: 0x00125FC3 File Offset: 0x001241C3
+		// Token: 0x170006C9 RID: 1737
+		// (get) Token: 0x06003171 RID: 12657 RVA: 0x00046631 File Offset: 0x00044831
+		// (set) Token: 0x06003172 RID: 12658 RVA: 0x00046641 File Offset: 0x00044841
 		public unsafe bool bSelfContext
 		{
 			get
@@ -97,9 +97,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F5C RID: 12124
-		// (get) Token: 0x0600C9EE RID: 51694 RVA: 0x00125FD4 File Offset: 0x001241D4
-		// (set) Token: 0x0600C9EF RID: 51695 RVA: 0x00125FE4 File Offset: 0x001241E4
+		// Token: 0x170006CA RID: 1738
+		// (get) Token: 0x06003173 RID: 12659 RVA: 0x00046652 File Offset: 0x00044852
+		// (set) Token: 0x06003174 RID: 12660 RVA: 0x00046662 File Offset: 0x00044862
 		public unsafe bool bWasDeprecated
 		{
 			get
@@ -112,73 +112,62 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600C9F0 RID: 51696 RVA: 0x00125FF5 File Offset: 0x001241F5
+		// Token: 0x06003175 RID: 12661 RVA: 0x00046673 File Offset: 0x00044873
 		public FMemberReference()
 		{
 		}
 
-		// Token: 0x0600C9F1 RID: 51697 RVA: 0x00125FFD File Offset: 0x001241FD
-		public FMemberReference(UObject MemberParent, string MemberScope, FName MemberName, FGuid MemberGuid, bool bSelfContext, bool bWasDeprecated)
-		{
-			this.MemberParent = MemberParent;
-			this.MemberScope = MemberScope;
-			this.MemberName = MemberName;
-			this.MemberGuid = MemberGuid;
-			this.bSelfContext = bSelfContext;
-			this.bWasDeprecated = bWasDeprecated;
-		}
-
-		// Token: 0x0600C9F2 RID: 51698 RVA: 0x00126032 File Offset: 0x00124232
+		// Token: 0x06003176 RID: 12662 RVA: 0x0004667B File Offset: 0x0004487B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMemberReference.StaticStruct();
 		}
 
-		// Token: 0x0600C9F3 RID: 51699 RVA: 0x0012603E File Offset: 0x0012423E
+		// Token: 0x06003177 RID: 12663 RVA: 0x00046687 File Offset: 0x00044887
 		[NullableContext(2)]
 		public FMemberReference(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600C9F4 RID: 51700 RVA: 0x00126048 File Offset: 0x00124248
+		// Token: 0x06003178 RID: 12664 RVA: 0x00046691 File Offset: 0x00044891
 		public FMemberReference(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600C9F5 RID: 51701 RVA: 0x00126053 File Offset: 0x00124253
+		// Token: 0x06003179 RID: 12665 RVA: 0x0004669C File Offset: 0x0004489C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMemberReference(Pointer, false, true);
 		}
 
-		// Token: 0x0600C9F6 RID: 51702 RVA: 0x0012605D File Offset: 0x0012425D
+		// Token: 0x0600317A RID: 12666 RVA: 0x000466A6 File Offset: 0x000448A6
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMemberReference(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04006CAB RID: 27819
+		// Token: 0x040010F0 RID: 4336
 		public const string __ObjectPath = "/Script/Engine.MemberReference";
 
-		// Token: 0x04006CAC RID: 27820
+		// Token: 0x040010F1 RID: 4337
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04006CAD RID: 27821
+		// Token: 0x040010F2 RID: 4338
 		internal static int __PropertyOffset_MemberParent;
 
-		// Token: 0x04006CAE RID: 27822
+		// Token: 0x040010F3 RID: 4339
 		internal static int __PropertyOffset_MemberScope;
 
-		// Token: 0x04006CAF RID: 27823
+		// Token: 0x040010F4 RID: 4340
 		internal static int __PropertyOffset_MemberName;
 
-		// Token: 0x04006CB0 RID: 27824
+		// Token: 0x040010F5 RID: 4341
 		internal static int __PropertyOffset_MemberGuid;
 
-		// Token: 0x04006CB1 RID: 27825
+		// Token: 0x040010F6 RID: 4342
 		internal static int __PropertyOffset_bSelfContext;
 
-		// Token: 0x04006CB2 RID: 27826
+		// Token: 0x040010F7 RID: 4343
 		internal static int __PropertyOffset_bWasDeprecated;
 	}
 }

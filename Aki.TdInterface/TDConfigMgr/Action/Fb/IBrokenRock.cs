@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002864 RID: 10340
+	// Token: 0x02002B37 RID: 11063
 	public class IBrokenRock : IUiGame
 	{
-		// Token: 0x0600E52B RID: 58667 RVA: 0x0021B595 File Offset: 0x00219795
-		[NullableContext(1)]
+		// Token: 0x0600F350 RID: 62288 RVA: 0x002383F9 File Offset: 0x002365F9
 		public static IBrokenRock Create(IBrokenRock? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004625 RID: 17957
-		// (get) Token: 0x0600E52C RID: 58668 RVA: 0x0021B5B4 File Offset: 0x002197B4
+		// Token: 0x17004990 RID: 18832
+		// (get) Token: 0x0600F351 RID: 62289 RVA: 0x00238418 File Offset: 0x00236618
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004626 RID: 17958
-		// (get) Token: 0x0600E52D RID: 58669 RVA: 0x0021B5C1 File Offset: 0x002197C1
+		// Token: 0x17004991 RID: 18833
+		// (get) Token: 0x0600F352 RID: 62290 RVA: 0x00238425 File Offset: 0x00236625
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EC6 RID: 32454
+		// Token: 0x04008583 RID: 34179
 		private IBrokenRock Instance;
 	}
 }

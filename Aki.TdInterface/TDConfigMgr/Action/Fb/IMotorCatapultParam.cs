@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027DB RID: 10203
+	// Token: 0x02002AAE RID: 10926
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMotorCatapultParam : ICatapultParam
 	{
-		// Token: 0x0600E2CB RID: 58059 RVA: 0x0021798F File Offset: 0x00215B8F
-		[NullableContext(1)]
+		// Token: 0x0600F0EF RID: 61679 RVA: 0x002347C3 File Offset: 0x002329C3
+		[NullableContext(0)]
 		public static IMotorCatapultParam Create(IMotorCatapultParam? instance)
 		{
 			if (instance == null)
@@ -24,12 +24,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044D7 RID: 17623
-		// (get) Token: 0x0600E2CC RID: 58060 RVA: 0x002179AE File Offset: 0x00215BAE
-		[Nullable(1)]
+		// Token: 0x17004841 RID: 18497
+		// (get) Token: 0x0600F0F0 RID: 61680 RVA: 0x002347E2 File Offset: 0x002329E2
+		[Nullable(0)]
 		public override VectorInfo P1
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._P1Inited)
@@ -42,12 +42,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D8 RID: 17624
-		// (get) Token: 0x0600E2CD RID: 58061 RVA: 0x002179E2 File Offset: 0x00215BE2
-		[Nullable(1)]
+		// Token: 0x17004842 RID: 18498
+		// (get) Token: 0x0600F0F1 RID: 61681 RVA: 0x00234816 File Offset: 0x00232A16
+		[Nullable(0)]
 		public override VectorInfo P2
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._P2Inited)
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044D9 RID: 17625
-		// (get) Token: 0x0600E2CE RID: 58062 RVA: 0x00217A18 File Offset: 0x00215C18
+		// Token: 0x17004843 RID: 18499
+		// (get) Token: 0x0600F0F2 RID: 61682 RVA: 0x0023484C File Offset: 0x00232A4C
 		public override float? Gravity
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044DA RID: 17626
-		// (get) Token: 0x0600E2CF RID: 58063 RVA: 0x00217A50 File Offset: 0x00215C50
+		// Token: 0x17004844 RID: 18500
+		// (get) Token: 0x0600F0F3 RID: 61683 RVA: 0x00234884 File Offset: 0x00232A84
 		public override float? Time
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044DB RID: 17627
-		// (get) Token: 0x0600E2D0 RID: 58064 RVA: 0x00217A86 File Offset: 0x00215C86
+		// Token: 0x17004845 RID: 18501
+		// (get) Token: 0x0600F0F4 RID: 61684 RVA: 0x002348BA File Offset: 0x00232ABA
 		public override string MotionCurve
 		{
 			get
@@ -98,8 +98,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044DC RID: 17628
-		// (get) Token: 0x0600E2D1 RID: 58065 RVA: 0x00217A93 File Offset: 0x00215C93
+		// Token: 0x17004846 RID: 18502
+		// (get) Token: 0x0600F0F5 RID: 61685 RVA: 0x002348C7 File Offset: 0x00232AC7
 		public virtual VectorInfo P2Rot
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044DD RID: 17629
-		// (get) Token: 0x0600E2D2 RID: 58066 RVA: 0x00217AC7 File Offset: 0x00215CC7
+		// Token: 0x17004847 RID: 18503
+		// (get) Token: 0x0600F0F6 RID: 61686 RVA: 0x002348FB File Offset: 0x00232AFB
 		public virtual string P2RotCurve
 		{
 			get
@@ -124,25 +124,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DB3 RID: 32179
+		// Token: 0x0400846E RID: 33902
 		private IMotorCatapultParam Instance;
 
-		// Token: 0x04007DB4 RID: 32180
+		// Token: 0x0400846F RID: 33903
 		private VectorInfo _P1Cache;
 
-		// Token: 0x04007DB5 RID: 32181
+		// Token: 0x04008470 RID: 33904
 		private bool _P1Inited;
 
-		// Token: 0x04007DB6 RID: 32182
+		// Token: 0x04008471 RID: 33905
 		private VectorInfo _P2Cache;
 
-		// Token: 0x04007DB7 RID: 32183
+		// Token: 0x04008472 RID: 33906
 		private bool _P2Inited;
 
-		// Token: 0x04007DB8 RID: 32184
+		// Token: 0x04008473 RID: 33907
 		private VectorInfo _P2RotCache;
 
-		// Token: 0x04007DB9 RID: 32185
+		// Token: 0x04008474 RID: 33908
 		private bool _P2RotInited;
 	}
 }

@@ -9,24 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x0200631B RID: 25371
+	// Token: 0x02005299 RID: 21145
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballAvgCharacter : IPlotAvgCharacterMove
 	{
-		// Token: 0x0603FD4E RID: 261454 RVA: 0x00F717B3 File Offset: 0x00F6F9B3
+		// Token: 0x06034A0F RID: 215567 RVA: 0x00EB870F File Offset: 0x00EB690F
 		public PinballAvgCharacter()
 		{
 			this.MoveComponent = new PlotAvgCharacterMoveComponent();
 		}
 
-		// Token: 0x0603FD4F RID: 261455 RVA: 0x00F717C6 File Offset: 0x00F6F9C6
+		// Token: 0x06034A10 RID: 215568 RVA: 0x00EB8722 File Offset: 0x00EB6922
 		public void Init(PinballPlotSpineItem item)
 		{
 			this.Item = item;
 		}
 
-		// Token: 0x0603FD50 RID: 261456 RVA: 0x00F717D0 File Offset: 0x00F6F9D0
+		// Token: 0x06034A11 RID: 215569 RVA: 0x00EB872C File Offset: 0x00EB692C
 		public void PlayEnterPerform(EPlotAvgCharacterSpineDirection direction, UUIItem postionItem, EAvgRoleAnimationType animationType, bool isLoop)
 		{
 			if (this.Item == null)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.PlayAnimation(direction, animationType, isLoop);
 		}
 
-		// Token: 0x0603FD51 RID: 261457 RVA: 0x00F71820 File Offset: 0x00F6FA20
+		// Token: 0x06034A12 RID: 215570 RVA: 0x00EB877C File Offset: 0x00EB697C
 		public UniTask PlayMovePerformAsync(UUIItem targetPositionItem, IEaseData easeData)
 		{
 			PinballAvgCharacter.<PlayMovePerformAsync>d__6 <PlayMovePerformAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <PlayMovePerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD52 RID: 261458 RVA: 0x00F71873 File Offset: 0x00F6FA73
+		// Token: 0x06034A13 RID: 215571 RVA: 0x00EB87CF File Offset: 0x00EB69CF
 		public void PlayExitPerform()
 		{
 			if (this.Item == null)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.Item.SetUiActive(false);
 		}
 
-		// Token: 0x0603FD53 RID: 261459 RVA: 0x00F7188C File Offset: 0x00F6FA8C
+		// Token: 0x06034A14 RID: 215572 RVA: 0x00EB87E8 File Offset: 0x00EB69E8
 		public void PlayAnimation(EPlotAvgCharacterSpineDirection direction, EAvgRoleAnimationType animationType, bool isLoop)
 		{
 			if (this.Item == null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x0603FD54 RID: 261460 RVA: 0x00F718DA File Offset: 0x00F6FADA
+		// Token: 0x06034A15 RID: 215573 RVA: 0x00EB8836 File Offset: 0x00EB6A36
 		public void SetPosition(float position)
 		{
 			if (this.Item == null)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.Item.SetPosition(position);
 		}
 
-		// Token: 0x0603FD55 RID: 261461 RVA: 0x00F718F1 File Offset: 0x00F6FAF1
+		// Token: 0x06034A16 RID: 215574 RVA: 0x00EB884D File Offset: 0x00EB6A4D
 		public float GetPosition()
 		{
 			if (this.Item == null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return this.Item.GetPosition();
 		}
 
-		// Token: 0x0603FD56 RID: 261462 RVA: 0x00F7190C File Offset: 0x00F6FB0C
+		// Token: 0x06034A17 RID: 215575 RVA: 0x00EB8868 File Offset: 0x00EB6A68
 		public void UpdateSpeakStatus(bool isSpeaking)
 		{
 			this.IsSpeaking = isSpeaking;
@@ -110,26 +110,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			item.UpdateSpeakStatus(isSpeaking);
 		}
 
-		// Token: 0x0603FD57 RID: 261463 RVA: 0x00F71926 File Offset: 0x00F6FB26
+		// Token: 0x06034A18 RID: 215576 RVA: 0x00EB8882 File Offset: 0x00EB6A82
 		public void Destroy()
 		{
 			this.MoveComponent.Clear();
 		}
 
-		// Token: 0x0603FD58 RID: 261464 RVA: 0x00F71933 File Offset: 0x00F6FB33
+		// Token: 0x06034A19 RID: 215577 RVA: 0x00EB888F File Offset: 0x00EB6A8F
 		public bool GetIsSpeaking()
 		{
 			return this.IsSpeaking;
 		}
 
-		// Token: 0x040214E8 RID: 136424
+		// Token: 0x0401BE17 RID: 114199
 		[Nullable(2)]
 		private PinballPlotSpineItem Item;
 
-		// Token: 0x040214E9 RID: 136425
+		// Token: 0x0401BE18 RID: 114200
 		private bool IsSpeaking;
 
-		// Token: 0x040214EA RID: 136426
+		// Token: 0x0401BE19 RID: 114201
 		public PlotAvgCharacterMoveComponent MoveComponent;
 	}
 }

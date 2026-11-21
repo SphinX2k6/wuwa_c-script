@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 {
-	// Token: 0x020069DB RID: 27099
+	// Token: 0x02005B37 RID: 23351
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TuningStandBubbleProxy
 	{
-		// Token: 0x060436C9 RID: 276169 RVA: 0x0107A214 File Offset: 0x01078414
+		// Token: 0x06039705 RID: 235269 RVA: 0x0101E6C8 File Offset: 0x0101C8C8
 		public TuningStandBubbleProxy(IList<ITuningStandBubbleConfig> bubbleDataList)
 		{
 			this.BubbleClassMap[ETuningStandBubbleTriggerType.Enter] = new TuningStandBubbleTypeEnter();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			EventSystem.Instance.Add<ETuningStandBubbleTriggerType>(EEventName.TuningStandBubbleEnd, new Action<ETuningStandBubbleTriggerType>(this.OnBubbleEnd));
 		}
 
-		// Token: 0x060436CA RID: 276170 RVA: 0x0107A328 File Offset: 0x01078528
+		// Token: 0x06039706 RID: 235270 RVA: 0x0101E7DC File Offset: 0x0101C9DC
 		public bool TryStartBubbleFlow(ETuningStandBubbleTriggerType type)
 		{
 			TuningStandBubbleTypeBase tuningStandBubbleTypeBase;
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			return false;
 		}
 
-		// Token: 0x060436CB RID: 276171 RVA: 0x0107A3D1 File Offset: 0x010785D1
+		// Token: 0x06039707 RID: 235271 RVA: 0x0101E885 File Offset: 0x0101CA85
 		private void OnBubbleEnd(ETuningStandBubbleTriggerType _)
 		{
 			this.CurPlayingType = null;
 		}
 
-		// Token: 0x060436CC RID: 276172 RVA: 0x0107A3E0 File Offset: 0x010785E0
+		// Token: 0x06039708 RID: 235272 RVA: 0x0101E894 File Offset: 0x0101CA94
 		public void Destroy()
 		{
 			foreach (KeyValuePair<ETuningStandBubbleTriggerType, TuningStandBubbleTypeBase> keyValuePair in this.BubbleClassMap)
@@ -78,10 +78,10 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			this.BubbleClassMap.Clear();
 		}
 
-		// Token: 0x040232EE RID: 144110
+		// Token: 0x0401E4DE RID: 124126
 		private readonly Dictionary<ETuningStandBubbleTriggerType, TuningStandBubbleTypeBase> BubbleClassMap = new Dictionary<ETuningStandBubbleTriggerType, TuningStandBubbleTypeBase>();
 
-		// Token: 0x040232EF RID: 144111
+		// Token: 0x0401E4DF RID: 124127
 		private ETuningStandBubbleTriggerType? CurPlayingType;
 	}
 }

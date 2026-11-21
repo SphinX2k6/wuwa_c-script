@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BA8 RID: 11176
+// Token: 0x02002124 RID: 8484
 public class TermExplanationView : UiViewBase
 {
-	// Token: 0x0601726B RID: 94827 RVA: 0x005DE40E File Offset: 0x005DC60E
+	// Token: 0x06014C9C RID: 85148 RVA: 0x0060AFE2 File Offset: 0x006091E2
 	[NullableContext(1)]
 	public TermExplanationView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601726C RID: 94828 RVA: 0x005DE418 File Offset: 0x005DC618
+	// Token: 0x06014C9D RID: 85149 RVA: 0x0060AFEC File Offset: 0x006091EC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -53,7 +53,7 @@ public class TermExplanationView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601726D RID: 94829 RVA: 0x005DE5A8 File Offset: 0x005DC7A8
+	// Token: 0x06014C9E RID: 85150 RVA: 0x0060B17C File Offset: 0x0060937C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TermExplanationView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -64,13 +64,13 @@ public class TermExplanationView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601726E RID: 94830 RVA: 0x005DE5EB File Offset: 0x005DC7EB
+	// Token: 0x06014C9F RID: 85151 RVA: 0x0060B1BF File Offset: 0x006093BF
 	protected override void OnBeforeShow()
 	{
 		this.OnTweenStart();
 	}
 
-	// Token: 0x0601726F RID: 94831 RVA: 0x005DE5F4 File Offset: 0x005DC7F4
+	// Token: 0x06014CA0 RID: 85152 RVA: 0x0060B1C8 File Offset: 0x006093C8
 	protected override void OnAfterShow()
 	{
 		TermExplanationViewParam termExplanationViewParam = this.OpenParam as TermExplanationViewParam;
@@ -99,7 +99,7 @@ public class TermExplanationView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017270 RID: 94832 RVA: 0x005DE6C4 File Offset: 0x005DC8C4
+	// Token: 0x06014CA1 RID: 85153 RVA: 0x0060B298 File Offset: 0x00609498
 	protected override void OnBeforeDestroy()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(2);
@@ -114,27 +114,27 @@ public class TermExplanationView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017271 RID: 94833 RVA: 0x005DE6F1 File Offset: 0x005DC8F1
+	// Token: 0x06014CA2 RID: 85154 RVA: 0x0060B2C5 File Offset: 0x006094C5
 	protected override void OnAfterDestroy()
 	{
 		EventSystem.Instance.Emit(EEventName.OnTermExplanationViewClosed);
 	}
 
-	// Token: 0x06017272 RID: 94834 RVA: 0x005DE703 File Offset: 0x005DC903
+	// Token: 0x06014CA3 RID: 85155 RVA: 0x0060B2D7 File Offset: 0x006094D7
 	[NullableContext(2)]
 	public UUIItem GetTipItem()
 	{
 		return base.GetItem(7);
 	}
 
-	// Token: 0x06017273 RID: 94835 RVA: 0x005DE70C File Offset: 0x005DC90C
+	// Token: 0x06014CA4 RID: 85156 RVA: 0x0060B2E0 File Offset: 0x006094E0
 	[NullableContext(1)]
 	private ExplanationItem GetGrid()
 	{
 		return new ExplanationItem();
 	}
 
-	// Token: 0x06017274 RID: 94836 RVA: 0x005DE713 File Offset: 0x005DC913
+	// Token: 0x06014CA5 RID: 85157 RVA: 0x0060B2E7 File Offset: 0x006094E7
 	private void OnBtnCloseClick()
 	{
 		if (this.IsClosing)
@@ -145,7 +145,7 @@ public class TermExplanationView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06017275 RID: 94837 RVA: 0x005DE72C File Offset: 0x005DC92C
+	// Token: 0x06014CA6 RID: 85158 RVA: 0x0060B300 File Offset: 0x00609500
 	private void OnTweenStart()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(2);
@@ -153,7 +153,7 @@ public class TermExplanationView : UiViewBase
 		scrollViewWithScrollbar.SetRayCastTargetForScrollView(false);
 	}
 
-	// Token: 0x06017276 RID: 94838 RVA: 0x005DE75C File Offset: 0x005DC95C
+	// Token: 0x06014CA7 RID: 85159 RVA: 0x0060B330 File Offset: 0x00609530
 	private void OnTweenComplete()
 	{
 		TermExplanationViewParam termExplanationViewParam = this.OpenParam as TermExplanationViewParam;
@@ -164,7 +164,7 @@ public class TermExplanationView : UiViewBase
 		scrollViewWithScrollbar.SetRayCastTargetForScrollView(true);
 	}
 
-	// Token: 0x0400AD48 RID: 44360
+	// Token: 0x0400B14F RID: 45391
 	[Nullable(new byte[]
 	{
 		2,
@@ -173,34 +173,34 @@ public class TermExplanationView : UiViewBase
 	})]
 	private GenericScrollViewNew<ExplanationItem, string> ScrollView;
 
-	// Token: 0x0400AD49 RID: 44361
+	// Token: 0x0400B150 RID: 45392
 	private bool IsClosing;
 
-	// Token: 0x02009165 RID: 37221
+	// Token: 0x020083A8 RID: 33704
 	private class EComponentDefine
 	{
-		// Token: 0x0402F0FA RID: 192762
+		// Token: 0x0402A7FF RID: 174079
 		public const int SpriteLight = 0;
 
-		// Token: 0x0402F0FB RID: 192763
+		// Token: 0x0402A800 RID: 174080
 		public const int TextTitle = 1;
 
-		// Token: 0x0402F0FC RID: 192764
+		// Token: 0x0402A801 RID: 174081
 		public const int ScrollItemList = 2;
 
-		// Token: 0x0402F0FD RID: 192765
+		// Token: 0x0402A802 RID: 174082
 		public const int LayoutContent = 3;
 
-		// Token: 0x0402F0FE RID: 192766
+		// Token: 0x0402A803 RID: 174083
 		public const int ItemExplanation = 4;
 
-		// Token: 0x0402F0FF RID: 192767
+		// Token: 0x0402A804 RID: 174084
 		public const int BtnClose = 5;
 
-		// Token: 0x0402F100 RID: 192768
+		// Token: 0x0402A805 RID: 174085
 		public const int ItemBtnClose = 6;
 
-		// Token: 0x0402F101 RID: 192769
+		// Token: 0x0402A806 RID: 174086
 		public const int ItemTip = 7;
 	}
 }

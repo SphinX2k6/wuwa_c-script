@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200287B RID: 10363
+	// Token: 0x02000830 RID: 2096
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnTransitionEnteredSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060265CF RID: 157135 RVA: 0x003A4BE7 File Offset: 0x003A2DE7
+		// Token: 0x0600B660 RID: 46688 RVA: 0x00122457 File Offset: 0x00120657
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnTransitionEnteredSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x060265D0 RID: 157136 RVA: 0x003A4BF3 File Offset: 0x003A2DF3
+		// Token: 0x0600B661 RID: 46689 RVA: 0x00122463 File Offset: 0x00120663
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnTransitionEnteredSignature._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnTransitionEnteredSignature._FunctionPtr;
 		}
 
-		// Token: 0x060265D1 RID: 157137 RVA: 0x003A4C16 File Offset: 0x003A2E16
+		// Token: 0x0600B662 RID: 46690 RVA: 0x00122486 File Offset: 0x00120686
 		public FOnTransitionEnteredSignature()
 		{
 		}
 
-		// Token: 0x060265D2 RID: 157138 RVA: 0x003A4C1E File Offset: 0x003A2E1E
+		// Token: 0x0600B663 RID: 46691 RVA: 0x0012248E File Offset: 0x0012068E
 		[NullableContext(2)]
 		public FOnTransitionEnteredSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060265D3 RID: 157139 RVA: 0x003A4C28 File Offset: 0x003A2E28
+		// Token: 0x0600B664 RID: 46692 RVA: 0x00122498 File Offset: 0x00120698
 		public FOnTransitionEnteredSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060265D4 RID: 157140 RVA: 0x003A4C33 File Offset: 0x003A2E33
+		// Token: 0x0600B665 RID: 46693 RVA: 0x001224A3 File Offset: 0x001206A3
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<USMTransitionInstance>) ?? ((Action<USMTransitionInstance>)Delegate.CreateDelegate(typeof(Action<USMTransitionInstance>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060265D5 RID: 157141 RVA: 0x003A4C65 File Offset: 0x003A2E65
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600B666 RID: 46694 RVA: 0x001224D5 File Offset: 0x001206D5
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnTransitionEnteredSignature.RegisterId);
 		}
 
-		// Token: 0x060265D6 RID: 157142 RVA: 0x003A4C9F File Offset: 0x003A2E9F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600B667 RID: 46695 RVA: 0x0012250F File Offset: 0x0012070F
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060265D7 RID: 157143 RVA: 0x003A4CA8 File Offset: 0x003A2EA8
+		// Token: 0x0600B668 RID: 46696 RVA: 0x00122518 File Offset: 0x00120718
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(USMTransitionInstance TransitionInstance)
 		{
 			FOnTransitionEnteredSignature.__FOnTransitionEnteredSignature_DelegateParams* ptr = stackalloc FOnTransitionEnteredSignature.__FOnTransitionEnteredSignature_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnTransitionEnteredSignature.__FOnTransitionEnteredSignature_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060265D8 RID: 157144 RVA: 0x003A4CF4 File Offset: 0x003A2EF4
+		// Token: 0x0600B669 RID: 46697 RVA: 0x00122564 File Offset: 0x00120764
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<USMTransitionInstance> action = target as Action<USMTransitionInstance>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x040150A4 RID: 86180
+		// Token: 0x04005271 RID: 21105
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040150A5 RID: 86181
+		// Token: 0x04005272 RID: 21106
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SMSystem.OnTransitionEnteredSignature__DelegateSignature";
 
-		// Token: 0x040150A6 RID: 86182
+		// Token: 0x04005273 RID: 21107
 		private static int RegisterId;
 
-		// Token: 0x02003A79 RID: 14969
+		// Token: 0x02001346 RID: 4934
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnTransitionEnteredSignature_DelegateParams
+		private ref struct __FOnTransitionEnteredSignature_DelegateParams
 		{
-			// Token: 0x04017BDC RID: 97244
+			// Token: 0x04006786 RID: 26502
 			[FieldOffset(0)]
 			public IntPtr TransitionInstance;
 		}
 
-		// Token: 0x02003A7A RID: 14970
+		// Token: 0x02001347 RID: 4935
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017BDD RID: 97245
+			// Token: 0x04006787 RID: 26503
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

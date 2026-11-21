@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EA7 RID: 28327
+	// Token: 0x0200762B RID: 30251
 	public class IResetPosTypeT
 	{
-		// Token: 0x1700D2E7 RID: 53991
-		// (get) Token: 0x06032111 RID: 205073 RVA: 0x006C548E File Offset: 0x006C368E
-		// (set) Token: 0x06032112 RID: 205074 RVA: 0x006C5496 File Offset: 0x006C3696
+		// Token: 0x1700DE3E RID: 56894
+		// (get) Token: 0x06035151 RID: 217425 RVA: 0x007211C2 File Offset: 0x0071F3C2
+		// (set) Token: 0x06035152 RID: 217426 RVA: 0x007211CA File Offset: 0x0071F3CA
 		public EResetPosType Type { get; set; }
 
-		// Token: 0x06032113 RID: 205075 RVA: 0x006C549F File Offset: 0x006C369F
+		// Token: 0x06035153 RID: 217427 RVA: 0x007211D3 File Offset: 0x0071F3D3
 		public IResetPosTypeT()
 		{
 			this.Type = EResetPosType.PosEntity;

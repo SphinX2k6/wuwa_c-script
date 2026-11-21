@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D53 RID: 23891
+	// Token: 0x0200638A RID: 25482
 	public class IBvbPlayerBattleWinDataT
 	{
-		// Token: 0x1700B30A RID: 45834
-		// (get) Token: 0x06028E0A RID: 167434 RVA: 0x0059E01A File Offset: 0x0059C21A
-		// (set) Token: 0x06028E0B RID: 167435 RVA: 0x0059E022 File Offset: 0x0059C222
+		// Token: 0x1700BC6B RID: 48235
+		// (get) Token: 0x0602B474 RID: 177268 RVA: 0x005E6A8A File Offset: 0x005E4C8A
+		// (set) Token: 0x0602B475 RID: 177269 RVA: 0x005E6A92 File Offset: 0x005E4C92
 		public EBvbEventName Type { get; set; }
 
-		// Token: 0x06028E0C RID: 167436 RVA: 0x0059E02B File Offset: 0x0059C22B
+		// Token: 0x0602B476 RID: 177270 RVA: 0x005E6A9B File Offset: 0x005E4C9B
 		public IBvbPlayerBattleWinDataT()
 		{
 			this.Type = EBvbEventName.AIEvolution;

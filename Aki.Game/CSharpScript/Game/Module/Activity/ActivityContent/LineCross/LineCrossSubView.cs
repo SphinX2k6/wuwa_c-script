@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006568 RID: 25960
+	// Token: 0x020054E6 RID: 21734
 	public class LineCrossSubView : ActivitySubViewBase
 	{
-		// Token: 0x060410E8 RID: 266472 RVA: 0x00FC4620 File Offset: 0x00FC2820
+		// Token: 0x06035DAD RID: 220589 RVA: 0x00F0B604 File Offset: 0x00F09804
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060410E9 RID: 266473 RVA: 0x00FC468C File Offset: 0x00FC288C
+		// Token: 0x06035DAE RID: 220590 RVA: 0x00F0B670 File Offset: 0x00F09870
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LineCrossSubView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060410EA RID: 266474 RVA: 0x00FC46CF File Offset: 0x00FC28CF
+		// Token: 0x06035DAF RID: 220591 RVA: 0x00F0B6B3 File Offset: 0x00F098B3
 		[NullableContext(1)]
 		private void FunctionExecute(ActivityBaseData data)
 		{
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			});
 		}
 
-		// Token: 0x060410EB RID: 266475 RVA: 0x00FC46ED File Offset: 0x00FC28ED
+		// Token: 0x06035DB0 RID: 220592 RVA: 0x00F0B6D1 File Offset: 0x00F098D1
 		protected override void OnStart()
 		{
 			this.LineCrossActivityData = (LineCrossActivityData)this.ActivityBaseData;
 		}
 
-		// Token: 0x060410EC RID: 266476 RVA: 0x00FC4700 File Offset: 0x00FC2900
+		// Token: 0x06035DB1 RID: 220593 RVA: 0x00F0B6E4 File Offset: 0x00F098E4
 		protected override void OnBeforeShow()
 		{
 			if (this.ActivityBaseData.GetUnFinishPreGuideQuestId() > 0)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.UpdateRedDotActivity();
 		}
 
-		// Token: 0x060410ED RID: 266477 RVA: 0x00FC4754 File Offset: 0x00FC2954
+		// Token: 0x06035DB2 RID: 220594 RVA: 0x00F0B738 File Offset: 0x00F09938
 		public void RefreshProgressText()
 		{
 			string progressByActivityId = LineCrossModel.Instance.GetProgressByActivityId(this.LineCrossActivityData.Id, "LineCross_Finish_Progress_Activity");
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			text.SetText(progressByActivityId, true);
 		}
 
-		// Token: 0x060410EE RID: 266478 RVA: 0x00FC4790 File Offset: 0x00FC2990
+		// Token: 0x06035DB3 RID: 220595 RVA: 0x00F0B774 File Offset: 0x00F09974
 		private void UpdateRedDotActivity()
 		{
 			bool redPointShowState = this.LineCrossActivityData.RedPointShowState;
@@ -106,21 +106,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			infoComponent.SetFunctionRedDotVisible(redPointShowState);
 		}
 
-		// Token: 0x04021E83 RID: 138883
+		// Token: 0x0401C7B4 RID: 116660
 		[Nullable(2)]
 		private LineCrossActivityData LineCrossActivityData;
 
-		// Token: 0x04021E84 RID: 138884
+		// Token: 0x0401C7B5 RID: 116661
 		[Nullable(2)]
 		private ActivitySubViewGeneralInfo InfoComponent;
 
-		// Token: 0x0200C75F RID: 51039
+		// Token: 0x0200B144 RID: 45380
 		private class EComponent
 		{
-			// Token: 0x0403C3C4 RID: 246724
+			// Token: 0x04036D16 RID: 224534
 			public const int InfoItem = 0;
 
-			// Token: 0x0403C3C5 RID: 246725
+			// Token: 0x04036D17 RID: 224535
 			public const int ProgressText = 1;
 		}
 	}

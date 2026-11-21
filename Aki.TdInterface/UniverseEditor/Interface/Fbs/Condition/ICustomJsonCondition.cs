@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BF5 RID: 19445
+	// Token: 0x020050E2 RID: 20706
 	public struct ICustomJsonCondition : IFlatbufferObject
 	{
-		// Token: 0x17008D3D RID: 36157
-		// (get) Token: 0x0601EC8D RID: 126093 RVA: 0x0045001C File Offset: 0x0044E21C
+		// Token: 0x17009461 RID: 37985
+		// (get) Token: 0x06020873 RID: 133235 RVA: 0x00483684 File Offset: 0x00481884
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC8E RID: 126094 RVA: 0x00450029 File Offset: 0x0044E229
+		// Token: 0x06020874 RID: 133236 RVA: 0x00483691 File Offset: 0x00481891
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EC8F RID: 126095 RVA: 0x00450030 File Offset: 0x0044E230
+		// Token: 0x06020875 RID: 133237 RVA: 0x00483698 File Offset: 0x00481898
 		public static ICustomJsonCondition GetRootAsICustomJsonCondition(ByteBuffer _bb)
 		{
 			return ICustomJsonCondition.GetRootAsICustomJsonCondition(_bb, default(ICustomJsonCondition));
 		}
 
-		// Token: 0x0601EC90 RID: 126096 RVA: 0x0045004C File Offset: 0x0044E24C
+		// Token: 0x06020876 RID: 133238 RVA: 0x004836B4 File Offset: 0x004818B4
 		public static ICustomJsonCondition GetRootAsICustomJsonCondition(ByteBuffer _bb, ICustomJsonCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EC91 RID: 126097 RVA: 0x00450069 File Offset: 0x0044E269
+		// Token: 0x06020877 RID: 133239 RVA: 0x004836D1 File Offset: 0x004818D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EC92 RID: 126098 RVA: 0x00450078 File Offset: 0x0044E278
+		// Token: 0x06020878 RID: 133240 RVA: 0x004836E0 File Offset: 0x004818E0
 		public ICustomJsonCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D3E RID: 36158
-		// (get) Token: 0x0601EC93 RID: 126099 RVA: 0x00450088 File Offset: 0x0044E288
+		// Token: 0x17009462 RID: 37986
+		// (get) Token: 0x06020879 RID: 133241 RVA: 0x004836F0 File Offset: 0x004818F0
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D3F RID: 36159
-		// (get) Token: 0x0601EC94 RID: 126100 RVA: 0x004500C4 File Offset: 0x0044E2C4
+		// Token: 0x17009463 RID: 37987
+		// (get) Token: 0x0602087A RID: 133242 RVA: 0x0048372C File Offset: 0x0048192C
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC95 RID: 126101 RVA: 0x004500FB File Offset: 0x0044E2FB
+		// Token: 0x0602087B RID: 133243 RVA: 0x00483763 File Offset: 0x00481963
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601EC96 RID: 126102 RVA: 0x0045010A File Offset: 0x0044E30A
+		// Token: 0x0602087C RID: 133244 RVA: 0x00483772 File Offset: 0x00481972
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17008D40 RID: 36160
-		// (get) Token: 0x0601EC97 RID: 126103 RVA: 0x00450118 File Offset: 0x0044E318
+		// Token: 0x17009464 RID: 37988
+		// (get) Token: 0x0602087D RID: 133245 RVA: 0x00483780 File Offset: 0x00481980
 		public string JsonString
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC98 RID: 126104 RVA: 0x0045014F File Offset: 0x0044E34F
+		// Token: 0x0602087E RID: 133246 RVA: 0x004837B7 File Offset: 0x004819B7
 		public Span<byte> GetJsonStringBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0601EC99 RID: 126105 RVA: 0x0045015E File Offset: 0x0044E35E
+		// Token: 0x0602087F RID: 133247 RVA: 0x004837C6 File Offset: 0x004819C6
 		public byte[] GetJsonStringArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x0601EC9A RID: 126106 RVA: 0x0045016C File Offset: 0x0044E36C
+		// Token: 0x06020880 RID: 133248 RVA: 0x004837D4 File Offset: 0x004819D4
 		public static Offset<ICustomJsonCondition> CreateICustomJsonCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, StringOffset NameOffset = default(StringOffset), StringOffset JsonStringOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -126,37 +126,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICustomJsonCondition.EndICustomJsonCondition(builder);
 		}
 
-		// Token: 0x0601EC9B RID: 126107 RVA: 0x00450190 File Offset: 0x0044E390
+		// Token: 0x06020881 RID: 133249 RVA: 0x004837F8 File Offset: 0x004819F8
 		public static void StartICustomJsonCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601EC9C RID: 126108 RVA: 0x00450199 File Offset: 0x0044E399
+		// Token: 0x06020882 RID: 133250 RVA: 0x00483801 File Offset: 0x00481A01
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EC9D RID: 126109 RVA: 0x004501A4 File Offset: 0x0044E3A4
+		// Token: 0x06020883 RID: 133251 RVA: 0x0048380C File Offset: 0x00481A0C
 		public static void AddName(FlatBufferBuilder builder, StringOffset nameOffset)
 		{
 			builder.AddOffset(1, nameOffset.Value, 0);
 		}
 
-		// Token: 0x0601EC9E RID: 126110 RVA: 0x004501B4 File Offset: 0x0044E3B4
+		// Token: 0x06020884 RID: 133252 RVA: 0x0048381C File Offset: 0x00481A1C
 		public static void AddJsonString(FlatBufferBuilder builder, StringOffset jsonStringOffset)
 		{
 			builder.AddOffset(2, jsonStringOffset.Value, 0);
 		}
 
-		// Token: 0x0601EC9F RID: 126111 RVA: 0x004501C4 File Offset: 0x0044E3C4
+		// Token: 0x06020885 RID: 133253 RVA: 0x0048382C File Offset: 0x00481A2C
 		public static Offset<ICustomJsonCondition> EndICustomJsonCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomJsonCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601ECA0 RID: 126112 RVA: 0x004501D4 File Offset: 0x0044E3D4
+		// Token: 0x06020886 RID: 133254 RVA: 0x0048383C File Offset: 0x00481A3C
 		public ICustomJsonConditionT UnPack()
 		{
 			ICustomJsonConditionT customJsonConditionT = new ICustomJsonConditionT();
@@ -164,7 +164,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return customJsonConditionT;
 		}
 
-		// Token: 0x0601ECA1 RID: 126113 RVA: 0x004501EF File Offset: 0x0044E3EF
+		// Token: 0x06020887 RID: 133255 RVA: 0x00483857 File Offset: 0x00481A57
 		public void UnPackTo(ICustomJsonConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.JsonString = this.JsonString;
 		}
 
-		// Token: 0x0601ECA2 RID: 126114 RVA: 0x00450218 File Offset: 0x0044E418
+		// Token: 0x06020888 RID: 133256 RVA: 0x00483880 File Offset: 0x00481A80
 		public static Offset<ICustomJsonCondition> Pack(FlatBufferBuilder builder, ICustomJsonConditionT _o)
 		{
 			if (_o == null)
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICustomJsonCondition.CreateICustomJsonCondition(builder, _o.Type, nameOffset, jsonStringOffset);
 		}
 
-		// Token: 0x0400D580 RID: 54656
+		// Token: 0x0400E097 RID: 57495
 		private Table __p;
 	}
 }

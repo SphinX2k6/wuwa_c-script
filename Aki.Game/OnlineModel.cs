@@ -7,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 using UnrealEngine;
 
-// Token: 0x020022E8 RID: 8936
+// Token: 0x020017CC RID: 6092
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class OnlineModel : ModelBase
 {
-	// Token: 0x0601195F RID: 72031 RVA: 0x0044F7C4 File Offset: 0x0044D9C4
+	// Token: 0x0600EDF7 RID: 60919 RVA: 0x0045C490 File Offset: 0x0045A690
 	protected override bool OnInit()
 	{
 		this.StrangerWorldList = new List<OnlineHallData>();
@@ -29,7 +29,7 @@ public class OnlineModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011960 RID: 72032 RVA: 0x0044F854 File Offset: 0x0044DA54
+	// Token: 0x0600EDF8 RID: 60920 RVA: 0x0045C520 File Offset: 0x0045A720
 	protected override bool OnClear()
 	{
 		if (this.StrangerWorldList != null)
@@ -74,7 +74,7 @@ public class OnlineModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011961 RID: 72033 RVA: 0x0044F944 File Offset: 0x0044DB44
+	// Token: 0x0600EDF9 RID: 60921 RVA: 0x0045C610 File Offset: 0x0045A810
 	protected override bool OnLeaveLevel()
 	{
 		this.ContinuingChallengeConfirmState.Clear();
@@ -85,14 +85,14 @@ public class OnlineModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011962 RID: 72034 RVA: 0x0044F97A File Offset: 0x0044DB7A
+	// Token: 0x0600EDFA RID: 60922 RVA: 0x0045C646 File Offset: 0x0045A846
 	protected override bool OnChangeMode()
 	{
 		this.PlayerEntityDisableHandleMap.Clear();
 		return true;
 	}
 
-	// Token: 0x06011963 RID: 72035 RVA: 0x0044F988 File Offset: 0x0044DB88
+	// Token: 0x0600EDFB RID: 60923 RVA: 0x0045C654 File Offset: 0x0045A854
 	public void ClearOnlineTeamMap()
 	{
 		if (this.OnlineTeamMap != null)
@@ -101,8 +101,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001697 RID: 5783
-	// (get) Token: 0x06011964 RID: 72036 RVA: 0x0044F99D File Offset: 0x0044DB9D
+	// Token: 0x170016CE RID: 5838
+	// (get) Token: 0x0600EDFC RID: 60924 RVA: 0x0045C669 File Offset: 0x0045A869
 	[Nullable(new byte[]
 	{
 		2,
@@ -121,8 +121,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001698 RID: 5784
-	// (get) Token: 0x06011965 RID: 72037 RVA: 0x0044F9A5 File Offset: 0x0044DBA5
+	// Token: 0x170016CF RID: 5839
+	// (get) Token: 0x0600EDFD RID: 60925 RVA: 0x0045C671 File Offset: 0x0045A871
 	[Nullable(new byte[]
 	{
 		2,
@@ -141,8 +141,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001699 RID: 5785
-	// (get) Token: 0x06011966 RID: 72038 RVA: 0x0044F9AD File Offset: 0x0044DBAD
+	// Token: 0x170016D0 RID: 5840
+	// (get) Token: 0x0600EDFE RID: 60926 RVA: 0x0045C679 File Offset: 0x0045A879
 	[Nullable(new byte[]
 	{
 		2,
@@ -161,8 +161,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700169A RID: 5786
-	// (get) Token: 0x06011967 RID: 72039 RVA: 0x0044F9B5 File Offset: 0x0044DBB5
+	// Token: 0x170016D1 RID: 5841
+	// (get) Token: 0x0600EDFF RID: 60927 RVA: 0x0045C681 File Offset: 0x0045A881
 	public WorldEnterPermission CurrentPermissionsSetting
 	{
 		get
@@ -171,8 +171,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700169B RID: 5787
-	// (get) Token: 0x06011968 RID: 72040 RVA: 0x0044F9BD File Offset: 0x0044DBBD
+	// Token: 0x170016D2 RID: 5842
+	// (get) Token: 0x0600EE00 RID: 60928 RVA: 0x0045C689 File Offset: 0x0045A889
 	[Nullable(2)]
 	public OnlineApplyData CurrentApply
 	{
@@ -187,8 +187,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700169C RID: 5788
-	// (get) Token: 0x06011969 RID: 72041 RVA: 0x0044F9E5 File Offset: 0x0044DBE5
+	// Token: 0x170016D3 RID: 5843
+	// (get) Token: 0x0600EE01 RID: 60929 RVA: 0x0045C6B1 File Offset: 0x0045A8B1
 	[Nullable(new byte[]
 	{
 		2,
@@ -207,8 +207,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700169D RID: 5789
-	// (get) Token: 0x0601196A RID: 72042 RVA: 0x0044F9ED File Offset: 0x0044DBED
+	// Token: 0x170016D4 RID: 5844
+	// (get) Token: 0x0600EE02 RID: 60930 RVA: 0x0045C6B9 File Offset: 0x0045A8B9
 	public int ApplyCd
 	{
 		get
@@ -217,8 +217,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700169E RID: 5790
-	// (get) Token: 0x0601196B RID: 72043 RVA: 0x0044F9F5 File Offset: 0x0044DBF5
+	// Token: 0x170016D5 RID: 5845
+	// (get) Token: 0x0600EE03 RID: 60931 RVA: 0x0045C6C1 File Offset: 0x0045A8C1
 	public int EnterDiff
 	{
 		get
@@ -227,8 +227,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700169F RID: 5791
-	// (get) Token: 0x0601196C RID: 72044 RVA: 0x0044F9FD File Offset: 0x0044DBFD
+	// Token: 0x170016D6 RID: 5846
+	// (get) Token: 0x0600EE04 RID: 60932 RVA: 0x0045C6C9 File Offset: 0x0045A8C9
 	public int OwnerId
 	{
 		get
@@ -237,8 +237,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A0 RID: 5792
-	// (get) Token: 0x0601196D RID: 72045 RVA: 0x0044FA05 File Offset: 0x0044DC05
+	// Token: 0x170016D7 RID: 5847
+	// (get) Token: 0x0600EE05 RID: 60933 RVA: 0x0045C6D1 File Offset: 0x0045A8D1
 	public int TeamMaxSize
 	{
 		get
@@ -247,8 +247,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A1 RID: 5793
-	// (get) Token: 0x0601196E RID: 72046 RVA: 0x0044FA0D File Offset: 0x0044DC0D
+	// Token: 0x170016D8 RID: 5848
+	// (get) Token: 0x0600EE06 RID: 60934 RVA: 0x0045C6D9 File Offset: 0x0045A8D9
 	public bool ShowCanJoin
 	{
 		get
@@ -257,8 +257,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A2 RID: 5794
-	// (get) Token: 0x0601196F RID: 72047 RVA: 0x0044FA15 File Offset: 0x0044DC15
+	// Token: 0x170016D9 RID: 5849
+	// (get) Token: 0x0600EE07 RID: 60935 RVA: 0x0045C6E1 File Offset: 0x0045A8E1
 	public bool ShowFriend
 	{
 		get
@@ -267,8 +267,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A3 RID: 5795
-	// (get) Token: 0x06011970 RID: 72048 RVA: 0x0044FA1D File Offset: 0x0044DC1D
+	// Token: 0x170016DA RID: 5850
+	// (get) Token: 0x0600EE08 RID: 60936 RVA: 0x0045C6E9 File Offset: 0x0045A8E9
 	public int ChallengeApplyPlayerId
 	{
 		get
@@ -277,8 +277,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A4 RID: 5796
-	// (get) Token: 0x06011971 RID: 72049 RVA: 0x0044FA25 File Offset: 0x0044DC25
+	// Token: 0x170016DB RID: 5851
+	// (get) Token: 0x0600EE09 RID: 60937 RVA: 0x0045C6F1 File Offset: 0x0045A8F1
 	public double NextInitiateTime
 	{
 		get
@@ -287,8 +287,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A5 RID: 5797
-	// (get) Token: 0x06011972 RID: 72050 RVA: 0x0044FA2D File Offset: 0x0044DC2D
+	// Token: 0x170016DC RID: 5852
+	// (get) Token: 0x0600EE0A RID: 60938 RVA: 0x0045C6F9 File Offset: 0x0045A8F9
 	public double NextInitiateLeftTime
 	{
 		get
@@ -297,8 +297,8 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016A6 RID: 5798
-	// (get) Token: 0x06011973 RID: 72051 RVA: 0x0044FA40 File Offset: 0x0044DC40
+	// Token: 0x170016DD RID: 5853
+	// (get) Token: 0x0600EE0B RID: 60939 RVA: 0x0045C70C File Offset: 0x0045A90C
 	public bool AllowInitiate
 	{
 		get
@@ -307,25 +307,25 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011974 RID: 72052 RVA: 0x0044FA48 File Offset: 0x0044DC48
+	// Token: 0x0600EE0C RID: 60940 RVA: 0x0045C714 File Offset: 0x0045A914
 	public void SetHallShowCanJoin(bool isShow)
 	{
 		this.HallShowCanJoin = isShow;
 	}
 
-	// Token: 0x06011975 RID: 72053 RVA: 0x0044FA51 File Offset: 0x0044DC51
+	// Token: 0x0600EE0D RID: 60941 RVA: 0x0045C71D File Offset: 0x0045A91D
 	public void SetHallShowFriend(bool isShow)
 	{
 		this.HallShowFriend = isShow;
 	}
 
-	// Token: 0x06011976 RID: 72054 RVA: 0x0044FA5A File Offset: 0x0044DC5A
+	// Token: 0x0600EE0E RID: 60942 RVA: 0x0045C726 File Offset: 0x0045A926
 	public void SetTeamOwnerId(int teamOwnerId)
 	{
 		this.TeamOwnerId = teamOwnerId;
 	}
 
-	// Token: 0x06011977 RID: 72055 RVA: 0x0044FA64 File Offset: 0x0044DC64
+	// Token: 0x0600EE0F RID: 60943 RVA: 0x0045C730 File Offset: 0x0045A930
 	public void SetPermissionsSetting(WorldEnterPermission type)
 	{
 		this.PermissionsSetting = type;
@@ -341,7 +341,7 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011978 RID: 72056 RVA: 0x0044FAA8 File Offset: 0x0044DCA8
+	// Token: 0x0600EE10 RID: 60944 RVA: 0x0045C774 File Offset: 0x0045A974
 	public void CleanSearchResultList()
 	{
 		List<OnlineHallData> searchResultList = this.SearchResultList;
@@ -352,7 +352,7 @@ public class OnlineModel : ModelBase
 		searchResultList.Clear();
 	}
 
-	// Token: 0x06011979 RID: 72057 RVA: 0x0044FABA File Offset: 0x0044DCBA
+	// Token: 0x0600EE11 RID: 60945 RVA: 0x0045C786 File Offset: 0x0045A986
 	public void CleanFriendWorldList()
 	{
 		List<OnlineHallData> friendWorldList = this.FriendWorldList;
@@ -363,7 +363,7 @@ public class OnlineModel : ModelBase
 		friendWorldList.Clear();
 	}
 
-	// Token: 0x0601197A RID: 72058 RVA: 0x0044FACC File Offset: 0x0044DCCC
+	// Token: 0x0600EE12 RID: 60946 RVA: 0x0045C798 File Offset: 0x0045A998
 	public void CleanStrangerWorldList()
 	{
 		List<OnlineHallData> strangerWorldList = this.StrangerWorldList;
@@ -374,32 +374,32 @@ public class OnlineModel : ModelBase
 		strangerWorldList.Clear();
 	}
 
-	// Token: 0x0601197B RID: 72059 RVA: 0x0044FADE File Offset: 0x0044DCDE
+	// Token: 0x0600EE13 RID: 60947 RVA: 0x0045C7AA File Offset: 0x0045A9AA
 	public void CleanCurrentApply()
 	{
 		this.ApplyMap.Remove(this.Apply);
 		this.Apply = -1;
 	}
 
-	// Token: 0x0601197C RID: 72060 RVA: 0x0044FAF9 File Offset: 0x0044DCF9
+	// Token: 0x0600EE14 RID: 60948 RVA: 0x0045C7C5 File Offset: 0x0045A9C5
 	public void PushSearchResultList(OnlineHallData data)
 	{
 		this.SearchResultList.Add(data);
 	}
 
-	// Token: 0x0601197D RID: 72061 RVA: 0x0044FB07 File Offset: 0x0044DD07
+	// Token: 0x0600EE15 RID: 60949 RVA: 0x0045C7D3 File Offset: 0x0045A9D3
 	public void PushFriendWorldList(OnlineHallData data)
 	{
 		this.FriendWorldList.Add(data);
 	}
 
-	// Token: 0x0601197E RID: 72062 RVA: 0x0044FB15 File Offset: 0x0044DD15
+	// Token: 0x0600EE16 RID: 60950 RVA: 0x0045C7E1 File Offset: 0x0045A9E1
 	public void PushStrangerWorldList(OnlineHallData data)
 	{
 		this.StrangerWorldList.Add(data);
 	}
 
-	// Token: 0x0601197F RID: 72063 RVA: 0x0044FB23 File Offset: 0x0044DD23
+	// Token: 0x0600EE17 RID: 60951 RVA: 0x0045C7EF File Offset: 0x0045A9EF
 	public void SortWorldList(bool isFriend)
 	{
 		if (isFriend)
@@ -424,7 +424,7 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011980 RID: 72064 RVA: 0x0044FB64 File Offset: 0x0044DD64
+	// Token: 0x0600EE18 RID: 60952 RVA: 0x0045C830 File Offset: 0x0045AA30
 	private int WorldListSortFunction(OnlineHallData a, OnlineHallData b)
 	{
 		int originWorldLevel = WorldLevelModel.Instance.OriginWorldLevel;
@@ -435,7 +435,7 @@ public class OnlineModel : ModelBase
 		return a.PlayerOriginWorldLevel - b.PlayerOriginWorldLevel;
 	}
 
-	// Token: 0x06011981 RID: 72065 RVA: 0x0044FBC2 File Offset: 0x0044DDC2
+	// Token: 0x0600EE19 RID: 60953 RVA: 0x0045C88E File Offset: 0x0045AA8E
 	public void PushCurrentApplyList(OnlineApplyData data)
 	{
 		this.ApplyMap[data.PlayerId] = data;
@@ -445,14 +445,14 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011982 RID: 72066 RVA: 0x0044FBEB File Offset: 0x0044DDEB
+	// Token: 0x0600EE1A RID: 60954 RVA: 0x0045C8B7 File Offset: 0x0045AAB7
 	public void PushCurrentTeamList(OnlineTeamData data)
 	{
 		this.OnlineTeamMap[data.PlayerId] = data;
 		KuroSdkModel.Instance.RefreshPlayerChatPermissionByPlayerDetails(data.PlayerDetails);
 	}
 
-	// Token: 0x06011983 RID: 72067 RVA: 0x0044FC10 File Offset: 0x0044DE10
+	// Token: 0x0600EE1B RID: 60955 RVA: 0x0045C8DC File Offset: 0x0045AADC
 	public void DeleteCurrentApplyListById(int id)
 	{
 		this.ApplyMap.Remove(id);
@@ -473,13 +473,13 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011984 RID: 72068 RVA: 0x0044FCAC File Offset: 0x0044DEAC
+	// Token: 0x0600EE1C RID: 60956 RVA: 0x0045C978 File Offset: 0x0045AB78
 	public void DeleteCurrentTeamListById(int id)
 	{
 		this.OnlineTeamMap.Remove(id);
 	}
 
-	// Token: 0x06011985 RID: 72069 RVA: 0x0044FCBC File Offset: 0x0044DEBC
+	// Token: 0x0600EE1D RID: 60957 RVA: 0x0045C988 File Offset: 0x0045AB88
 	public void ResetTeamDataPlayer(int deletePlayerNumber)
 	{
 		foreach (KeyValuePair<int, OnlineTeamData> keyValuePair in this.OnlineTeamMap)
@@ -494,7 +494,7 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011986 RID: 72070 RVA: 0x0044FD2C File Offset: 0x0044DF2C
+	// Token: 0x0600EE1E RID: 60958 RVA: 0x0045C9F8 File Offset: 0x0045ABF8
 	[NullableContext(2)]
 	public OnlineApplyData GetCurrentApplyListById(int id)
 	{
@@ -505,7 +505,7 @@ public class OnlineModel : ModelBase
 		return this.ApplyMap[id];
 	}
 
-	// Token: 0x06011987 RID: 72071 RVA: 0x0044FD4A File Offset: 0x0044DF4A
+	// Token: 0x0600EE1F RID: 60959 RVA: 0x0045CA16 File Offset: 0x0045AC16
 	[NullableContext(2)]
 	public OnlineTeamData GetCurrentTeamListById(int id)
 	{
@@ -516,7 +516,7 @@ public class OnlineModel : ModelBase
 		return this.OnlineTeamMap[id];
 	}
 
-	// Token: 0x06011988 RID: 72072 RVA: 0x0044FD68 File Offset: 0x0044DF68
+	// Token: 0x0600EE20 RID: 60960 RVA: 0x0045CA34 File Offset: 0x0045AC34
 	public OnlineApplyData[] GetCurrentApplyList()
 	{
 		List<OnlineApplyData> list = new List<OnlineApplyData>();
@@ -531,25 +531,25 @@ public class OnlineModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06011989 RID: 72073 RVA: 0x0044FDFC File Offset: 0x0044DFFC
+	// Token: 0x0600EE21 RID: 60961 RVA: 0x0045CAC8 File Offset: 0x0045ACC8
 	public int GetCurrentApplySize()
 	{
 		return this.ApplyMap.Count;
 	}
 
-	// Token: 0x0601198A RID: 72074 RVA: 0x0044FE09 File Offset: 0x0044E009
+	// Token: 0x0600EE22 RID: 60962 RVA: 0x0045CAD5 File Offset: 0x0045ACD5
 	public int GetCurrentTeamSize()
 	{
 		return this.OnlineTeamMap.Count;
 	}
 
-	// Token: 0x0601198B RID: 72075 RVA: 0x0044FE16 File Offset: 0x0044E016
+	// Token: 0x0600EE23 RID: 60963 RVA: 0x0045CAE2 File Offset: 0x0045ACE2
 	public bool GetIsTeamModel()
 	{
 		return this.TeamOwnerId != -1;
 	}
 
-	// Token: 0x0601198C RID: 72076 RVA: 0x0044FE24 File Offset: 0x0044E024
+	// Token: 0x0600EE24 RID: 60964 RVA: 0x0045CAF0 File Offset: 0x0045ACF0
 	public bool GetIsMyTeam()
 	{
 		int ownerId = this.OwnerId;
@@ -557,13 +557,13 @@ public class OnlineModel : ModelBase
 		return ownerId == id.GetValueOrDefault() & id != null;
 	}
 
-	// Token: 0x0601198D RID: 72077 RVA: 0x0044FE53 File Offset: 0x0044E053
+	// Token: 0x0600EE25 RID: 60965 RVA: 0x0045CB1F File Offset: 0x0045AD1F
 	public bool GetExistOnlineTeam()
 	{
 		return this.OwnerId != -1;
 	}
 
-	// Token: 0x0601198E RID: 72078 RVA: 0x0044FE64 File Offset: 0x0044E064
+	// Token: 0x0600EE26 RID: 60966 RVA: 0x0045CB30 File Offset: 0x0045AD30
 	public List<OnlineHallData> GetCanJoinFormStranger()
 	{
 		int curWorldLevel = WorldLevelModel.Instance.CurWorldLevel;
@@ -578,7 +578,7 @@ public class OnlineModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601198F RID: 72079 RVA: 0x0044FEDC File Offset: 0x0044E0DC
+	// Token: 0x0600EE27 RID: 60967 RVA: 0x0045CBA8 File Offset: 0x0045ADA8
 	public List<OnlineHallData> GetCanJoinFormFriend()
 	{
 		int curWorldLevel = WorldLevelModel.Instance.CurWorldLevel;
@@ -593,13 +593,13 @@ public class OnlineModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011990 RID: 72080 RVA: 0x0044FF50 File Offset: 0x0044E150
+	// Token: 0x0600EE28 RID: 60968 RVA: 0x0045CC1C File Offset: 0x0045AE1C
 	public bool CanJoinOtherWorld(int myWorldLevel, int otherWorldLevel)
 	{
 		return myWorldLevel + this.EnterDiff >= otherWorldLevel;
 	}
 
-	// Token: 0x06011991 RID: 72081 RVA: 0x0044FF60 File Offset: 0x0044E160
+	// Token: 0x0600EE29 RID: 60969 RVA: 0x0045CC2C File Offset: 0x0045AE2C
 	public List<OnlineTeamData> GetTeamList()
 	{
 		List<OnlineTeamData> list = new List<OnlineTeamData>();
@@ -611,7 +611,7 @@ public class OnlineModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011992 RID: 72082 RVA: 0x0044FFE8 File Offset: 0x0044E1E8
+	// Token: 0x0600EE2A RID: 60970 RVA: 0x0045CCB4 File Offset: 0x0045AEB4
 	public void DisableOnline(EDisableOnlineType type, bool enable, int treeId = 0, int nodeId = 0)
 	{
 		if (enable)
@@ -656,13 +656,13 @@ public class OnlineModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnlineDisableStateChange);
 	}
 
-	// Token: 0x06011993 RID: 72083 RVA: 0x00450170 File Offset: 0x0044E370
+	// Token: 0x0600EE2B RID: 60971 RVA: 0x0045CE3C File Offset: 0x0045B03C
 	public bool IsOnlineDisabled()
 	{
 		return this.DisableOnlineSource != null && this.DisableOnlineSource.Count > 0;
 	}
 
-	// Token: 0x06011994 RID: 72084 RVA: 0x0045018A File Offset: 0x0044E38A
+	// Token: 0x0600EE2C RID: 60972 RVA: 0x0045CE56 File Offset: 0x0045B056
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -673,13 +673,13 @@ public class OnlineModel : ModelBase
 		return this.DisableOnlineSource;
 	}
 
-	// Token: 0x06011995 RID: 72085 RVA: 0x00450192 File Offset: 0x0044E392
+	// Token: 0x0600EE2D RID: 60973 RVA: 0x0045CE5E File Offset: 0x0045B05E
 	public void ClearWorldTeamPlayerFightInfo()
 	{
 		this.WorldTeamPlayerFightInfo.Clear();
 	}
 
-	// Token: 0x06011996 RID: 72086 RVA: 0x004501A0 File Offset: 0x0044E3A0
+	// Token: 0x0600EE2E RID: 60974 RVA: 0x0045CE6C File Offset: 0x0045B06C
 	public void DeleteWorldTeamPlayerFightInfo(int playerId)
 	{
 		for (int i = this.WorldTeamPlayerFightInfo.Count - 1; i >= 0; i--)
@@ -691,13 +691,13 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011997 RID: 72087 RVA: 0x004501E5 File Offset: 0x0044E3E5
+	// Token: 0x0600EE2F RID: 60975 RVA: 0x0045CEB1 File Offset: 0x0045B0B1
 	public void PushWorldTeamPlayerFightInfo(global::WorldTeamPlayerFightInfo playerInfo)
 	{
 		this.WorldTeamPlayerFightInfo.Add(playerInfo);
 	}
 
-	// Token: 0x06011998 RID: 72088 RVA: 0x004501F4 File Offset: 0x0044E3F4
+	// Token: 0x0600EE30 RID: 60976 RVA: 0x0045CEC0 File Offset: 0x0045B0C0
 	[NullableContext(2)]
 	public global::WorldTeamPlayerFightInfo GetWorldTeamPlayerFightInfo(int playerId)
 	{
@@ -711,7 +711,7 @@ public class OnlineModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06011999 RID: 72089 RVA: 0x00450250 File Offset: 0x0044E450
+	// Token: 0x0600EE31 RID: 60977 RVA: 0x0045CF1C File Offset: 0x0045B11C
 	public int[] GetAllWorldTeamPlayer()
 	{
 		int[] array = new int[this.WorldTeamPlayerFightInfo.Count];
@@ -722,13 +722,13 @@ public class OnlineModel : ModelBase
 		return array;
 	}
 
-	// Token: 0x0601199A RID: 72090 RVA: 0x00450299 File Offset: 0x0044E499
+	// Token: 0x0600EE32 RID: 60978 RVA: 0x0045CF65 File Offset: 0x0045B165
 	public int GetAllWorldTeamPlayerLength()
 	{
 		return this.WorldTeamPlayerFightInfo.Count;
 	}
 
-	// Token: 0x0601199B RID: 72091 RVA: 0x004502A8 File Offset: 0x0044E4A8
+	// Token: 0x0600EE33 RID: 60979 RVA: 0x0045CF74 File Offset: 0x0045B174
 	public void RefreshWorldTeamRoleInfo(IList<PlayerFightFormations> playersFormations)
 	{
 		foreach (PlayerFightFormations playerFightFormations in playersFormations)
@@ -752,7 +752,7 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601199C RID: 72092 RVA: 0x004503B0 File Offset: 0x0044E5B0
+	// Token: 0x0600EE34 RID: 60980 RVA: 0x0045D07C File Offset: 0x0045B27C
 	public void ResetContinuingChallengeConfirmState()
 	{
 		this.ContinuingChallengeConfirmState.Clear();
@@ -763,13 +763,13 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601199D RID: 72093 RVA: 0x00450420 File Offset: 0x0044E620
+	// Token: 0x0600EE35 RID: 60981 RVA: 0x0045D0EC File Offset: 0x0045B2EC
 	public void SetContinuingChallengeConfirmState(int playerId, EContinuingChallenge bConfirm)
 	{
 		this.ContinuingChallengeConfirmState[playerId] = bConfirm;
 	}
 
-	// Token: 0x0601199E RID: 72094 RVA: 0x00450430 File Offset: 0x0044E630
+	// Token: 0x0600EE36 RID: 60982 RVA: 0x0045D0FC File Offset: 0x0045B2FC
 	public EContinuingChallenge? GetContinuingChallengeConfirmState(int playerId)
 	{
 		if (!this.ContinuingChallengeConfirmState.ContainsKey(playerId))
@@ -779,31 +779,31 @@ public class OnlineModel : ModelBase
 		return new EContinuingChallenge?(this.ContinuingChallengeConfirmState[playerId]);
 	}
 
-	// Token: 0x0601199F RID: 72095 RVA: 0x00450466 File Offset: 0x0044E666
+	// Token: 0x0600EE37 RID: 60983 RVA: 0x0045D132 File Offset: 0x0045B332
 	public void SetChallengeApplyPlayerId(int playerId)
 	{
 		this.InitiateChallengeApplyPlayerId = playerId;
 	}
 
-	// Token: 0x060119A0 RID: 72096 RVA: 0x0045046F File Offset: 0x0044E66F
+	// Token: 0x0600EE38 RID: 60984 RVA: 0x0045D13B File Offset: 0x0045B33B
 	public void RefreshInitiateTime()
 	{
 		this.NextAllowInitiateTime = TimeUtil.Instance.GetServerTime() + (double)this.ApplyCd;
 	}
 
-	// Token: 0x060119A1 RID: 72097 RVA: 0x00450489 File Offset: 0x0044E689
+	// Token: 0x0600EE39 RID: 60985 RVA: 0x0045D155 File Offset: 0x0045B355
 	public void SetAllowInitiate(bool allow)
 	{
 		this.CanInitiate = allow;
 	}
 
-	// Token: 0x060119A2 RID: 72098 RVA: 0x00450492 File Offset: 0x0044E692
+	// Token: 0x0600EE3A RID: 60986 RVA: 0x0045D15E File Offset: 0x0045B35E
 	public void SetPlayerTeleportState(int playerId, EPlayerTeleportState state)
 	{
 		this.PlayerTeleportState[playerId] = state;
 	}
 
-	// Token: 0x060119A3 RID: 72099 RVA: 0x004504A4 File Offset: 0x0044E6A4
+	// Token: 0x0600EE3B RID: 60987 RVA: 0x0045D170 File Offset: 0x0045B370
 	public EPlayerTeleportState? GetPlayerTeleportState(int playerId)
 	{
 		if (!this.PlayerTeleportState.ContainsKey(playerId))
@@ -813,19 +813,19 @@ public class OnlineModel : ModelBase
 		return new EPlayerTeleportState?(this.PlayerTeleportState[playerId]);
 	}
 
-	// Token: 0x060119A4 RID: 72100 RVA: 0x004504DA File Offset: 0x0044E6DA
+	// Token: 0x0600EE3C RID: 60988 RVA: 0x0045D1A6 File Offset: 0x0045B3A6
 	public void DeletePlayerTeleportState(int playerId)
 	{
 		this.PlayerTeleportState.Remove(playerId);
 	}
 
-	// Token: 0x060119A5 RID: 72101 RVA: 0x004504E9 File Offset: 0x0044E6E9
+	// Token: 0x0600EE3D RID: 60989 RVA: 0x0045D1B5 File Offset: 0x0045B3B5
 	public void ClearPlayerTeleportState()
 	{
 		this.PlayerTeleportState.Clear();
 	}
 
-	// Token: 0x060119A6 RID: 72102 RVA: 0x004504F8 File Offset: 0x0044E6F8
+	// Token: 0x0600EE3E RID: 60990 RVA: 0x0045D1C4 File Offset: 0x0045B3C4
 	public void SetRoleActivated(int playerId, bool bActivated)
 	{
 		HashSet<int> hashSet = this.PlayerEntityDisableHandleMap.ContainsKey(playerId) ? this.PlayerEntityDisableHandleMap[playerId] : null;
@@ -874,13 +874,13 @@ public class OnlineModel : ModelBase
 		hashSet.Add(entity.Id);
 	}
 
-	// Token: 0x060119A7 RID: 72103 RVA: 0x00450638 File Offset: 0x0044E838
+	// Token: 0x0600EE3F RID: 60991 RVA: 0x0045D304 File Offset: 0x0045B504
 	public void RemovePlayerDisableHandles(int playerId)
 	{
 		this.PlayerEntityDisableHandleMap.Remove(playerId);
 	}
 
-	// Token: 0x060119A8 RID: 72104 RVA: 0x00450648 File Offset: 0x0044E848
+	// Token: 0x0600EE40 RID: 60992 RVA: 0x0045D314 File Offset: 0x0045B514
 	public EPlayStationJoinAble GetGameJoinTypeToPlayStationJoinType()
 	{
 		EPlayStationJoinAble result;
@@ -903,13 +903,13 @@ public class OnlineModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060119A9 RID: 72105 RVA: 0x00450689 File Offset: 0x0044E889
+	// Token: 0x0600EE41 RID: 60993 RVA: 0x0045D355 File Offset: 0x0045B555
 	public void ClearOtherScenePlayerDataList()
 	{
 		this.OtherScenePlayerDataList.Clear();
 	}
 
-	// Token: 0x060119AA RID: 72106 RVA: 0x00450698 File Offset: 0x0044E898
+	// Token: 0x0600EE42 RID: 60994 RVA: 0x0045D364 File Offset: 0x0045B564
 	public void DeleteOtherScenePlayerDataList(int playerId)
 	{
 		List<OtherScenePlayerData> list = new List<OtherScenePlayerData>();
@@ -923,14 +923,14 @@ public class OnlineModel : ModelBase
 		this.OtherScenePlayerDataList = list;
 	}
 
-	// Token: 0x060119AB RID: 72107 RVA: 0x00450704 File Offset: 0x0044E904
+	// Token: 0x0600EE43 RID: 60995 RVA: 0x0045D3D0 File Offset: 0x0045B5D0
 	public void PushOtherScenePlayerDataList(OtherScenePlayerData playerInfo)
 	{
 		this.OtherScenePlayerDataList.Add(playerInfo);
 		EventSystem.Instance.Emit(EEventName.ScenePlayerChanged);
 	}
 
-	// Token: 0x060119AC RID: 72108 RVA: 0x00450724 File Offset: 0x0044E924
+	// Token: 0x0600EE44 RID: 60996 RVA: 0x0045D3F0 File Offset: 0x0045B5F0
 	[NullableContext(2)]
 	public OtherScenePlayerData GetOtherScenePlayerDataByPlayerId(int playerId)
 	{
@@ -944,7 +944,7 @@ public class OnlineModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060119AD RID: 72109 RVA: 0x00450780 File Offset: 0x0044E980
+	// Token: 0x0600EE45 RID: 60997 RVA: 0x0045D44C File Offset: 0x0045B64C
 	[NullableContext(2)]
 	public void SetPlayerGravityIsNormal(IVector gravity)
 	{
@@ -963,7 +963,7 @@ public class OnlineModel : ModelBase
 		this.DisableOnline(EDisableOnlineType.Gravity, !this.IsNormalGravity, 0, 0);
 	}
 
-	// Token: 0x060119AE RID: 72110 RVA: 0x004507F0 File Offset: 0x0044E9F0
+	// Token: 0x0600EE46 RID: 60998 RVA: 0x0045D4BC File Offset: 0x0045B6BC
 	public string GetMultiInstanceRecommendLevelText(int instanceDungeonId)
 	{
 		string result = "";
@@ -980,8 +980,8 @@ public class OnlineModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x170016A7 RID: 5799
-	// (get) Token: 0x060119AF RID: 72111 RVA: 0x0045085D File Offset: 0x0044EA5D
+	// Token: 0x170016DE RID: 5854
+	// (get) Token: 0x0600EE47 RID: 60999 RVA: 0x0045D529 File Offset: 0x0045B729
 	public static OnlineModel Instance
 	{
 		get
@@ -990,7 +990,7 @@ public class OnlineModel : ModelBase
 		}
 	}
 
-	// Token: 0x060119B0 RID: 72112 RVA: 0x00450864 File Offset: 0x0044EA64
+	// Token: 0x0600EE48 RID: 61000 RVA: 0x0045D530 File Offset: 0x0045B730
 	public static OnlineModel GetOrCreateInstance()
 	{
 		if (OnlineModel._Instance == null)
@@ -1000,7 +1000,7 @@ public class OnlineModel : ModelBase
 		return OnlineModel._Instance;
 	}
 
-	// Token: 0x060119B1 RID: 72113 RVA: 0x00450878 File Offset: 0x0044EA78
+	// Token: 0x0600EE49 RID: 61001 RVA: 0x0045D544 File Offset: 0x0045B744
 	public static bool CreateInstance()
 	{
 		if (OnlineModel._Instance != null)
@@ -1011,24 +1011,24 @@ public class OnlineModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060119B2 RID: 72114 RVA: 0x0045088E File Offset: 0x0044EA8E
+	// Token: 0x0600EE4A RID: 61002 RVA: 0x0045D55A File Offset: 0x0045B75A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060119B3 RID: 72115 RVA: 0x00450890 File Offset: 0x0044EA90
+	// Token: 0x0600EE4B RID: 61003 RVA: 0x0045D55C File Offset: 0x0045B75C
 	public static void ResetStaticDefaultValue()
 	{
 		OnlineModel._Instance = null;
 	}
 
-	// Token: 0x060119B4 RID: 72116 RVA: 0x00450898 File Offset: 0x0044EA98
+	// Token: 0x0600EE4C RID: 61004 RVA: 0x0045D564 File Offset: 0x0045B764
 	static OnlineModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(OnlineModel.CreateStaticDefaultValue), new Action(OnlineModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008591 RID: 34193
+	// Token: 0x040086CF RID: 34511
 	[Nullable(new byte[]
 	{
 		2,
@@ -1036,7 +1036,7 @@ public class OnlineModel : ModelBase
 	})]
 	private List<OnlineHallData> StrangerWorldList;
 
-	// Token: 0x04008592 RID: 34194
+	// Token: 0x040086D0 RID: 34512
 	[Nullable(new byte[]
 	{
 		2,
@@ -1044,7 +1044,7 @@ public class OnlineModel : ModelBase
 	})]
 	private List<OnlineHallData> FriendWorldList;
 
-	// Token: 0x04008593 RID: 34195
+	// Token: 0x040086D1 RID: 34513
 	[Nullable(new byte[]
 	{
 		2,
@@ -1052,13 +1052,13 @@ public class OnlineModel : ModelBase
 	})]
 	private List<OnlineHallData> SearchResultList;
 
-	// Token: 0x04008594 RID: 34196
+	// Token: 0x040086D2 RID: 34514
 	public List<global::WorldTeamPlayerFightInfo> WorldTeamPlayerFightInfo = new List<global::WorldTeamPlayerFightInfo>();
 
-	// Token: 0x04008595 RID: 34197
+	// Token: 0x040086D3 RID: 34515
 	private WorldEnterPermission PermissionsSetting;
 
-	// Token: 0x04008596 RID: 34198
+	// Token: 0x040086D4 RID: 34516
 	[Nullable(new byte[]
 	{
 		2,
@@ -1066,19 +1066,19 @@ public class OnlineModel : ModelBase
 	})]
 	private Dictionary<int, OnlineApplyData> ApplyMap;
 
-	// Token: 0x04008597 RID: 34199
+	// Token: 0x040086D5 RID: 34517
 	private int Apply;
 
-	// Token: 0x04008598 RID: 34200
+	// Token: 0x040086D6 RID: 34518
 	private int ApplyCdTime;
 
-	// Token: 0x04008599 RID: 34201
+	// Token: 0x040086D7 RID: 34519
 	private int WorldEnterDiff;
 
-	// Token: 0x0400859A RID: 34202
+	// Token: 0x040086D8 RID: 34520
 	private int TeamOwnerId;
 
-	// Token: 0x0400859B RID: 34203
+	// Token: 0x040086D9 RID: 34521
 	[Nullable(new byte[]
 	{
 		2,
@@ -1086,16 +1086,16 @@ public class OnlineModel : ModelBase
 	})]
 	private Dictionary<int, OnlineTeamData> OnlineTeamMap;
 
-	// Token: 0x0400859C RID: 34204
+	// Token: 0x040086DA RID: 34522
 	private readonly int OnlineTeamMaxSize = 3;
 
-	// Token: 0x0400859D RID: 34205
+	// Token: 0x040086DB RID: 34523
 	private bool HallShowFriend;
 
-	// Token: 0x0400859E RID: 34206
+	// Token: 0x040086DC RID: 34524
 	private bool HallShowCanJoin;
 
-	// Token: 0x0400859F RID: 34207
+	// Token: 0x040086DD RID: 34525
 	[Nullable(new byte[]
 	{
 		2,
@@ -1103,41 +1103,41 @@ public class OnlineModel : ModelBase
 	})]
 	private Dictionary<DisableOnlineSource, EDisableOnlineType> DisableOnlineSource;
 
-	// Token: 0x040085A0 RID: 34208
+	// Token: 0x040086DE RID: 34526
 	private readonly Dictionary<int, EContinuingChallenge> ContinuingChallengeConfirmState = new Dictionary<int, EContinuingChallenge>();
 
-	// Token: 0x040085A1 RID: 34209
+	// Token: 0x040086DF RID: 34527
 	private int InitiateChallengeApplyPlayerId = -1;
 
-	// Token: 0x040085A2 RID: 34210
+	// Token: 0x040086E0 RID: 34528
 	private double NextAllowInitiateTime = -1.0;
 
-	// Token: 0x040085A3 RID: 34211
+	// Token: 0x040086E1 RID: 34529
 	private bool CanInitiate = true;
 
-	// Token: 0x040085A4 RID: 34212
+	// Token: 0x040086E2 RID: 34530
 	private readonly Dictionary<int, EPlayerTeleportState> PlayerTeleportState = new Dictionary<int, EPlayerTeleportState>();
 
-	// Token: 0x040085A5 RID: 34213
+	// Token: 0x040086E3 RID: 34531
 	[Nullable(2)]
 	public IOnlinePlayerData CachePlayerData;
 
-	// Token: 0x040085A6 RID: 34214
+	// Token: 0x040086E4 RID: 34532
 	public bool SingleTipsOpen;
 
-	// Token: 0x040085A7 RID: 34215
+	// Token: 0x040086E5 RID: 34533
 	private readonly Dictionary<int, HashSet<int>> PlayerEntityDisableHandleMap = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x040085A8 RID: 34216
+	// Token: 0x040086E6 RID: 34534
 	public List<OtherScenePlayerData> OtherScenePlayerDataList = new List<OtherScenePlayerData>();
 
-	// Token: 0x040085A9 RID: 34217
+	// Token: 0x040086E7 RID: 34535
 	private bool IsNormalGravity = true;
 
-	// Token: 0x040085AA RID: 34218
+	// Token: 0x040086E8 RID: 34536
 	public bool HallViewIsShowSearching;
 
-	// Token: 0x040085AB RID: 34219
+	// Token: 0x040086E9 RID: 34537
 	[Nullable(2)]
 	private static OnlineModel _Instance;
 }

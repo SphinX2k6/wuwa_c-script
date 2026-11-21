@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x02004611 RID: 17937
+	// Token: 0x0200353A RID: 13626
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 	})]
 	public class ExecutingState : StateBase<GuideGroupInfo, EGuideGroupState>
 	{
-		// Token: 0x0602E3B0 RID: 189360 RVA: 0x00AB0CAE File Offset: 0x00AAEEAE
+		// Token: 0x06022AA5 RID: 141989 RVA: 0x009DD3A2 File Offset: 0x009DB5A2
 		public ExecutingState(GuideGroupInfo owner, EGuideGroupState state, [Nullable(new byte[]
 		{
 			2,
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 		{
 		}
 
-		// Token: 0x0602E3B1 RID: 189361 RVA: 0x00AB0CB9 File Offset: 0x00AAEEB9
+		// Token: 0x06022AA6 RID: 141990 RVA: 0x009DD3AD File Offset: 0x009DB5AD
 		protected override void OnEnter(EGuideGroupState? lastState)
 		{
 			this.Owner.PumpStep();

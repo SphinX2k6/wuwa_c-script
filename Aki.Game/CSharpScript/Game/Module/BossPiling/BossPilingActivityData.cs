@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,12 +10,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005BF8 RID: 23544
+	// Token: 0x02004BD8 RID: 19416
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingActivityData : ActivityBaseData
 	{
-		// Token: 0x0603B7FC RID: 243708 RVA: 0x00E30A98 File Offset: 0x00E2EC98
+		// Token: 0x06030747 RID: 198471 RVA: 0x00D80D9C File Offset: 0x00D7EF9C
 		protected override void OnInit(ActivityData data)
 		{
 			BossPilingActivityInfo bossPilingActivityInfo = data.BossPilingActivityInfo;
@@ -24,8 +23,8 @@ namespace CSharpScript.Game.Module.BossPiling
 			{
 				return;
 			}
-			this.UpdateTaskData(bossPilingActivityInfo.ConditionTasks.ToArray<ConditionTask>());
-			this.UpdateLevelData(bossPilingActivityInfo.BossPilingLevelInfos.ToArray<BossPilingLevelInfo>());
+			this.UpdateTaskData(bossPilingActivityInfo.ConditionTasks);
+			this.UpdateLevelData(bossPilingActivityInfo.BossPilingLevelInfos);
 			if (BossPilingController.Instance.CacheBuffMap != null)
 			{
 				this.CurLevelId = BossPilingController.Instance.CacheLevelId;
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B7FD RID: 243709 RVA: 0x00E30B14 File Offset: 0x00E2ED14
+		// Token: 0x06030748 RID: 198472 RVA: 0x00D80E10 File Offset: 0x00D7F010
 		protected override void PhraseEx(ActivityData data)
 		{
 			BossPilingActivityInfo bossPilingActivityInfo = data.BossPilingActivityInfo;
@@ -43,12 +42,12 @@ namespace CSharpScript.Game.Module.BossPiling
 			{
 				return;
 			}
-			this.UpdateTaskData(bossPilingActivityInfo.ConditionTasks.ToArray<ConditionTask>());
-			this.UpdateLevelData(bossPilingActivityInfo.BossPilingLevelInfos.ToArray<BossPilingLevelInfo>());
+			this.UpdateTaskData(bossPilingActivityInfo.ConditionTasks);
+			this.UpdateLevelData(bossPilingActivityInfo.BossPilingLevelInfos);
 		}
 
-		// Token: 0x17008D6E RID: 36206
-		// (get) Token: 0x0603B7FE RID: 243710 RVA: 0x00E30B4E File Offset: 0x00E2ED4E
+		// Token: 0x17006140 RID: 24896
+		// (get) Token: 0x06030749 RID: 198473 RVA: 0x00D80E40 File Offset: 0x00D7F040
 		public override bool RedPointShowState
 		{
 			get
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B7FF RID: 243711 RVA: 0x00E30B74 File Offset: 0x00E2ED74
+		// Token: 0x0603074A RID: 198474 RVA: 0x00D80E68 File Offset: 0x00D7F068
 		protected override bool GetExDataFinishShowState()
 		{
 			foreach (KeyValuePair<int, BossPilingTaskInfo> keyValuePair in this.TaskMap)
@@ -73,8 +72,8 @@ namespace CSharpScript.Game.Module.BossPiling
 			return true;
 		}
 
-		// Token: 0x0603B800 RID: 243712 RVA: 0x00E30BE0 File Offset: 0x00E2EDE0
-		public void UpdateTaskData(ConditionTask[] tasks)
+		// Token: 0x0603074B RID: 198475 RVA: 0x00D80ED4 File Offset: 0x00D7F0D4
+		public void UpdateTaskData(IReadOnlyList<ConditionTask> tasks)
 		{
 			foreach (ConditionTask conditionTask in tasks)
 			{
@@ -107,13 +106,13 @@ namespace CSharpScript.Game.Module.BossPiling
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603B801 RID: 243713 RVA: 0x00E30D1A File Offset: 0x00E2EF1A
+		// Token: 0x0603074C RID: 198476 RVA: 0x00D8103C File Offset: 0x00D7F23C
 		public List<BossPilingTaskInfo> GetBaseTaskGroupByLevel(int levelId)
 		{
 			return new List<BossPilingTaskInfo>(this.TaskLevelGroup.GetValueOrDefault(levelId) ?? new HashSet<BossPilingTaskInfo>());
 		}
 
-		// Token: 0x0603B802 RID: 243714 RVA: 0x00E30D38 File Offset: 0x00E2EF38
+		// Token: 0x0603074D RID: 198477 RVA: 0x00D81058 File Offset: 0x00D7F258
 		public List<ActivityRewardData> GetTaskGroupByLevel(int levelId)
 		{
 			List<BossPilingTaskInfo> list = new List<BossPilingTaskInfo>(this.TaskLevelGroup.GetValueOrDefault(levelId) ?? new HashSet<BossPilingTaskInfo>());
@@ -154,7 +153,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return list2;
 		}
 
-		// Token: 0x0603B803 RID: 243715 RVA: 0x00E30F08 File Offset: 0x00E2F108
+		// Token: 0x0603074E RID: 198478 RVA: 0x00D81228 File Offset: 0x00D7F428
 		public List<int> GetTaskTabList()
 		{
 			List<int> list = new List<int>(this.TaskLevelGroup.Keys);
@@ -162,7 +161,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return list;
 		}
 
-		// Token: 0x0603B804 RID: 243716 RVA: 0x00E30F40 File Offset: 0x00E2F140
+		// Token: 0x0603074F RID: 198479 RVA: 0x00D81260 File Offset: 0x00D7F460
 		private int TaskGroupSort(BossPilingTaskInfo a, BossPilingTaskInfo b)
 		{
 			if (a.Status == b.Status)
@@ -174,7 +173,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return num - num2;
 		}
 
-		// Token: 0x0603B805 RID: 243717 RVA: 0x00E30F9C File Offset: 0x00E2F19C
+		// Token: 0x06030750 RID: 198480 RVA: 0x00D812BC File Offset: 0x00D7F4BC
 		public bool CheckLevelTaskRedDot(int levelId)
 		{
 			HashSet<BossPilingTaskInfo> valueOrDefault = this.TaskLevelGroup.GetValueOrDefault(levelId);
@@ -195,7 +194,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return false;
 		}
 
-		// Token: 0x0603B806 RID: 243718 RVA: 0x00E31004 File Offset: 0x00E2F204
+		// Token: 0x06030751 RID: 198481 RVA: 0x00D81324 File Offset: 0x00D7F524
 		public List<int> GetTaskNumState()
 		{
 			int num = 0;
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			};
 		}
 
-		// Token: 0x0603B807 RID: 243719 RVA: 0x00E3108C File Offset: 0x00E2F28C
+		// Token: 0x06030752 RID: 198482 RVA: 0x00D813AC File Offset: 0x00D7F5AC
 		public bool CheckTaskRedDot()
 		{
 			foreach (KeyValuePair<int, BossPilingTaskInfo> keyValuePair in this.TaskMap)
@@ -230,8 +229,8 @@ namespace CSharpScript.Game.Module.BossPiling
 			return false;
 		}
 
-		// Token: 0x0603B808 RID: 243720 RVA: 0x00E310F8 File Offset: 0x00E2F2F8
-		public void UpdateLevelData(BossPilingLevelInfo[] levels)
+		// Token: 0x06030753 RID: 198483 RVA: 0x00D81418 File Offset: 0x00D7F618
+		public void UpdateLevelData(IReadOnlyList<BossPilingLevelInfo> levels)
 		{
 			foreach (BossPilingLevelInfo bossPilingLevelInfo in levels)
 			{
@@ -253,8 +252,8 @@ namespace CSharpScript.Game.Module.BossPiling
 						Id = bossPilingLevelInfo.Id,
 						BossHp = bossPilingLevelInfo.BossHpNum,
 						UnlockTime = this.GetUnlockTime(bossPilingLevelInfo.UnlockTime),
-						SelectedRoleIds = bossPilingLevelInfo.SelectRoleIds.ToList<int>(),
-						SelectedTagBranchIds = bossPilingLevelInfo.SkillBranchId.ToList<int>(),
+						SelectedRoleIds = new List<int>(bossPilingLevelInfo.SelectRoleIds),
+						SelectedTagBranchIds = new List<int>(bossPilingLevelInfo.SkillBranchId),
 						IsUnlock = this.CheckTimeIsUnlock(this.GetUnlockTime(bossPilingLevelInfo.UnlockTime))
 					};
 					this.LevelMap[bossPilingLevelInfo.Id] = value;
@@ -263,7 +262,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603B809 RID: 243721 RVA: 0x00E31242 File Offset: 0x00E2F442
+		// Token: 0x06030754 RID: 198484 RVA: 0x00D8158C File Offset: 0x00D7F78C
 		public List<BossPilingLevelInfo> GetAllLevelInfo()
 		{
 			List<BossPilingLevelInfo> list = new List<BossPilingLevelInfo>(this.LevelMap.Values);
@@ -271,7 +270,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return list;
 		}
 
-		// Token: 0x0603B80A RID: 243722 RVA: 0x00E3127C File Offset: 0x00E2F47C
+		// Token: 0x06030755 RID: 198485 RVA: 0x00D815C4 File Offset: 0x00D7F7C4
 		public List<int> GetStarAchievement(int level)
 		{
 			BossPilingLevels? levelInfo = BossPilingConfig.Instance.GetLevelInfo(level);
@@ -302,7 +301,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			};
 		}
 
-		// Token: 0x0603B80B RID: 243723 RVA: 0x00E31338 File Offset: 0x00E2F538
+		// Token: 0x06030756 RID: 198486 RVA: 0x00D81680 File Offset: 0x00D7F880
 		public void RefreshUnlockState()
 		{
 			foreach (KeyValuePair<int, BossPilingLevelInfo> keyValuePair in this.LevelMap)
@@ -315,7 +314,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B80C RID: 243724 RVA: 0x00E313A4 File Offset: 0x00E2F5A4
+		// Token: 0x06030757 RID: 198487 RVA: 0x00D816EC File Offset: 0x00D7F8EC
 		public int GetFirstSelectLevel()
 		{
 			int num = 0;
@@ -354,25 +353,25 @@ namespace CSharpScript.Game.Module.BossPiling
 			return num;
 		}
 
-		// Token: 0x0603B80D RID: 243725 RVA: 0x00E3148C File Offset: 0x00E2F68C
+		// Token: 0x06030758 RID: 198488 RVA: 0x00D817D4 File Offset: 0x00D7F9D4
 		public BossPilingLevelInfo GetLevelInfo(int id)
 		{
 			return this.LevelMap[id];
 		}
 
-		// Token: 0x0603B80E RID: 243726 RVA: 0x00E3149A File Offset: 0x00E2F69A
+		// Token: 0x06030759 RID: 198489 RVA: 0x00D817E2 File Offset: 0x00D7F9E2
 		private int GetUnlockTime(long time)
 		{
 			return (int)((double)time * TimeUtil.Instance.Millisecond);
 		}
 
-		// Token: 0x0603B80F RID: 243727 RVA: 0x00E314AA File Offset: 0x00E2F6AA
+		// Token: 0x0603075A RID: 198490 RVA: 0x00D817F2 File Offset: 0x00D7F9F2
 		private bool CheckTimeIsUnlock(int time)
 		{
 			return (double)time <= TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x0603B810 RID: 243728 RVA: 0x00E314BD File Offset: 0x00E2F6BD
+		// Token: 0x0603075B RID: 198491 RVA: 0x00D81805 File Offset: 0x00D7FA05
 		public void ClearDungeonInfo()
 		{
 			this.CurLevelId = 0;
@@ -380,7 +379,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			BossPilingModel.Instance.InstKeyBuffList.Clear();
 		}
 
-		// Token: 0x0603B811 RID: 243729 RVA: 0x00E314E0 File Offset: 0x00E2F6E0
+		// Token: 0x0603075C RID: 198492 RVA: 0x00D81828 File Offset: 0x00D7FA28
 		public void InitDungeon(int levelId, Dictionary<int, int> buffInfo)
 		{
 			this.CurLevelId = levelId;
@@ -393,7 +392,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B812 RID: 243730 RVA: 0x00E31564 File Offset: 0x00E2F764
+		// Token: 0x0603075D RID: 198493 RVA: 0x00D818AC File Offset: 0x00D7FAAC
 		public void UpdateDungeonBuff(Dictionary<int, int> buffInfo)
 		{
 			foreach (int num in buffInfo.Keys)
@@ -414,13 +413,13 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B813 RID: 243731 RVA: 0x00E31628 File Offset: 0x00E2F828
+		// Token: 0x0603075E RID: 198494 RVA: 0x00D81970 File Offset: 0x00D7FB70
 		public Dictionary<int, int> GetDungeonBuff()
 		{
 			return this.CurBuffMap;
 		}
 
-		// Token: 0x0603B814 RID: 243732 RVA: 0x00E31630 File Offset: 0x00E2F830
+		// Token: 0x0603075F RID: 198495 RVA: 0x00D81978 File Offset: 0x00D7FB78
 		public bool CheckLevelRedDot()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -441,7 +440,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return false;
 		}
 
-		// Token: 0x0603B815 RID: 243733 RVA: 0x00E316BC File Offset: 0x00E2F8BC
+		// Token: 0x06030760 RID: 198496 RVA: 0x00D81A04 File Offset: 0x00D7FC04
 		public bool CheckLevelRedDotById(int levelId)
 		{
 			BossPilingLevelInfo bossPilingLevelInfo;
@@ -449,7 +448,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return bossPilingLevelInfo != null && bossPilingLevelInfo.BossHp <= 0 && bossPilingLevelInfo.IsUnlock && !(LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.BossPilingLevelNew, null) ?? new HashSet<int>()).Contains(levelId);
 		}
 
-		// Token: 0x0603B816 RID: 243734 RVA: 0x00E3170C File Offset: 0x00E2F90C
+		// Token: 0x06030761 RID: 198497 RVA: 0x00D81A54 File Offset: 0x00D7FC54
 		public void ClearLevelRedDotById(int levelId)
 		{
 			HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.BossPilingLevelNew, null) ?? new HashSet<int>();
@@ -457,7 +456,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.BossPilingLevelNew, hashSet);
 		}
 
-		// Token: 0x0603B817 RID: 243735 RVA: 0x00E31744 File Offset: 0x00E2F944
+		// Token: 0x06030762 RID: 198498 RVA: 0x00D81A8C File Offset: 0x00D7FC8C
 		public void ClearLevelRedDot()
 		{
 			HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.BossPilingLevelNew, null) ?? new HashSet<int>();
@@ -475,19 +474,19 @@ namespace CSharpScript.Game.Module.BossPiling
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.BossPilingLevelNew, hashSet);
 		}
 
-		// Token: 0x0401EFEB RID: 126955
+		// Token: 0x04019A9C RID: 105116
 		protected Dictionary<int, BossPilingTaskInfo> TaskMap = new Dictionary<int, BossPilingTaskInfo>();
 
-		// Token: 0x0401EFEC RID: 126956
+		// Token: 0x04019A9D RID: 105117
 		protected Dictionary<int, HashSet<BossPilingTaskInfo>> TaskLevelGroup = new Dictionary<int, HashSet<BossPilingTaskInfo>>();
 
-		// Token: 0x0401EFED RID: 126957
+		// Token: 0x04019A9E RID: 105118
 		protected Dictionary<int, BossPilingLevelInfo> LevelMap = new Dictionary<int, BossPilingLevelInfo>();
 
-		// Token: 0x0401EFEE RID: 126958
+		// Token: 0x04019A9F RID: 105119
 		protected int CurLevelId;
 
-		// Token: 0x0401EFEF RID: 126959
+		// Token: 0x04019AA0 RID: 105120
 		protected Dictionary<int, int> CurBuffMap = new Dictionary<int, int>();
 	}
 }

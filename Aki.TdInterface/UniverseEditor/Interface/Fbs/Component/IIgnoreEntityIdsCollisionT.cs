@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053E4 RID: 21476
+	// Token: 0x0200596A RID: 22890
 	public class IIgnoreEntityIdsCollisionT
 	{
-		// Token: 0x17009E16 RID: 40470
-		// (get) Token: 0x06023443 RID: 144451 RVA: 0x004E22CD File Offset: 0x004E04CD
-		// (set) Token: 0x06023444 RID: 144452 RVA: 0x004E22D5 File Offset: 0x004E04D5
+		// Token: 0x1700A650 RID: 42576
+		// (get) Token: 0x060254FB RID: 152827 RVA: 0x0051F2F9 File Offset: 0x0051D4F9
+		// (set) Token: 0x060254FC RID: 152828 RVA: 0x0051F301 File Offset: 0x0051D501
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x06023445 RID: 144453 RVA: 0x004E22DE File Offset: 0x004E04DE
+		// Token: 0x060254FD RID: 152829 RVA: 0x0051F30A File Offset: 0x0051D50A
 		public IIgnoreEntityIdsCollisionT()
 		{
 			this.EntityIds = null;

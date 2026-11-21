@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x0200674F RID: 26447
+	// Token: 0x0200569F RID: 22175
 	public class IDirectTrainSubActivityCache
 	{
-		// Token: 0x04022613 RID: 140819
+		// Token: 0x0401CE6C RID: 118380
 		public int Id;
 
-		// Token: 0x04022614 RID: 140820
+		// Token: 0x0401CE6D RID: 118381
 		public bool IsUnLock;
 
-		// Token: 0x04022615 RID: 140821
+		// Token: 0x0401CE6E RID: 118382
 		public bool IsFinish;
 
-		// Token: 0x04022616 RID: 140822
+		// Token: 0x0401CE6F RID: 118383
 		public bool InShowTime;
 	}
 }

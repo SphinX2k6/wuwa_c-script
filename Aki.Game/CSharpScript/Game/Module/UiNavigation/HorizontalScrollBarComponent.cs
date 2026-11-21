@@ -2,21 +2,21 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049C4 RID: 18884
+	// Token: 0x0200393E RID: 14654
 	public class HorizontalScrollBarComponent : ScrollBarComponentBase
 	{
-		// Token: 0x060311D5 RID: 201173 RVA: 0x00B64EE4 File Offset: 0x00B630E4
+		// Token: 0x06025D0B RID: 154891 RVA: 0x00A9FE34 File Offset: 0x00A9E034
 		public HorizontalScrollBarComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311D6 RID: 201174 RVA: 0x00B64EED File Offset: 0x00B630ED
+		// Token: 0x06025D0C RID: 154892 RVA: 0x00A9FE3D File Offset: 0x00A9E03D
 		protected override void HandleScrollBarChange(float value)
 		{
 			UiNavigationNewController.Instance.HorizontalScrollBarChangeSchedule(-value * 4.5f);
 		}
 
-		// Token: 0x0401A4C4 RID: 107716
+		// Token: 0x04014D36 RID: 85302
 		private const float SCROLL_COEFFICIENT = 4.5f;
 	}
 }

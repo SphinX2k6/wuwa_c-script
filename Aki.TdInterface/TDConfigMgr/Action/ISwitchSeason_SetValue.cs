@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F08 RID: 7944
+	// Token: 0x02002141 RID: 8513
 	public class ISwitchSeason_SetValue
 	{
-		// Token: 0x040064FB RID: 25851
+		// Token: 0x04006AEA RID: 27370
 		public EClientSetSeasonStateType Type;
 
-		// Token: 0x040064FC RID: 25852
+		// Token: 0x04006AEB RID: 27371
 		public ESeason Season;
 
-		// Token: 0x040064FD RID: 25853
+		// Token: 0x04006AEC RID: 27372
 		public float TransitionSpeed;
 	}
 }

@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200700B RID: 28683
+	// Token: 0x0200618C RID: 24972
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputCombinationAxisMapping
 	{
-		// Token: 0x06045CBD RID: 285885 RVA: 0x0115B2F4 File Offset: 0x011594F4
+		// Token: 0x0603BE73 RID: 245363 RVA: 0x01105700 File Offset: 0x01103900
 		public void Clear()
 		{
 			foreach (InputCombinationAxisBinding inputCombinationAxisBinding in this.CombinationAxisBindingMap.Values)
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.InputSetting
 			this.MainKeySet.Clear();
 		}
 
-		// Token: 0x06045CBE RID: 285886 RVA: 0x0115B36C File Offset: 0x0115956C
+		// Token: 0x0603BE74 RID: 245364 RVA: 0x01105778 File Offset: 0x01103978
 		public void ClearKeyNameIndex()
 		{
 			this.CombinationAxisBindingKeyMap.Clear();
 			this.MainKeySet.Clear();
 		}
 
-		// Token: 0x06045CBF RID: 285887 RVA: 0x0115B384 File Offset: 0x01159584
+		// Token: 0x0603BE75 RID: 245365 RVA: 0x01105790 File Offset: 0x01103990
 		public void AddKeyNameIndex(InputCombinationAxisBinding combinationAxisBinding, string secondaryKeyName, string mainKeyName)
 		{
 			Dictionary<string, List<InputCombinationAxisBinding>> dictionary;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.InputSetting
 			this.MainKeySet.Add(mainKeyName);
 		}
 
-		// Token: 0x06045CC0 RID: 285888 RVA: 0x0115B3EC File Offset: 0x011595EC
+		// Token: 0x0603BE76 RID: 245366 RVA: 0x011057F8 File Offset: 0x011039F8
 		public void NewCombinationAxisBinding(CombinationAxis config)
 		{
 			string axisName = config.AxisName;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CC1 RID: 285889 RVA: 0x0115B500 File Offset: 0x01159700
+		// Token: 0x0603BE77 RID: 245367 RVA: 0x0110590C File Offset: 0x01103B0C
 		public unsafe void AddKeyMap(InputCombinationAxisBinding combinationAxisBinding, string secondaryKeyName, string mainKeyName, EInputBindingType bindingType)
 		{
 			Dictionary<string, List<InputCombinationAxisBinding>> dictionary;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.InputSetting
 			this.MainKeySet.Add(mainKeyName);
 		}
 
-		// Token: 0x06045CC2 RID: 285890 RVA: 0x0115B5D8 File Offset: 0x011597D8
+		// Token: 0x0603BE78 RID: 245368 RVA: 0x011059E4 File Offset: 0x01103BE4
 		public void RemoveKeyMap(InputCombinationAxisBinding combinationAxisBinding, string mainKeyName, string secondaryKeyName, EInputBindingType bindingType)
 		{
 			combinationAxisBinding.RemoveKey(secondaryKeyName, bindingType);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CC3 RID: 285891 RVA: 0x0115B690 File Offset: 0x01159890
+		// Token: 0x0603BE79 RID: 245369 RVA: 0x01105A9C File Offset: 0x01103C9C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CC4 RID: 285892 RVA: 0x0115B6B0 File Offset: 0x011598B0
+		// Token: 0x0603BE7A RID: 245370 RVA: 0x01105ABC File Offset: 0x01103CBC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CC5 RID: 285893 RVA: 0x0115B6E0 File Offset: 0x011598E0
+		// Token: 0x0603BE7B RID: 245371 RVA: 0x01105AEC File Offset: 0x01103CEC
 		[return: Nullable(2)]
 		public InputCombinationAxisBinding GetCombinationAxisBindingByAxisName(string actionName)
 		{
@@ -195,19 +195,19 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CC6 RID: 285894 RVA: 0x0115B700 File Offset: 0x01159900
+		// Token: 0x0603BE7C RID: 245372 RVA: 0x01105B0C File Offset: 0x01103D0C
 		public Dictionary<string, InputCombinationAxisBinding> GetCombinationAxisBindingMap()
 		{
 			return this.CombinationAxisBindingMap;
 		}
 
-		// Token: 0x06045CC7 RID: 285895 RVA: 0x0115B708 File Offset: 0x01159908
+		// Token: 0x0603BE7D RID: 245373 RVA: 0x01105B14 File Offset: 0x01103D14
 		public bool IsMainKey(string keyName)
 		{
 			return this.MainKeySet.Contains(keyName);
 		}
 
-		// Token: 0x06045CC8 RID: 285896 RVA: 0x0115B718 File Offset: 0x01159918
+		// Token: 0x0603BE7E RID: 245374 RVA: 0x01105B24 File Offset: 0x01103D24
 		public void SwitchKeysByBindingType(EInputBindingType bindingType)
 		{
 			foreach (InputCombinationAxisBinding inputCombinationAxisBinding in this.CombinationAxisBindingMap.Values)
@@ -216,13 +216,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x04024800 RID: 149504
+		// Token: 0x0401FAB6 RID: 129718
 		private readonly Dictionary<string, InputCombinationAxisBinding> CombinationAxisBindingMap = new Dictionary<string, InputCombinationAxisBinding>();
 
-		// Token: 0x04024801 RID: 149505
+		// Token: 0x0401FAB7 RID: 129719
 		private readonly Dictionary<string, Dictionary<string, List<InputCombinationAxisBinding>>> CombinationAxisBindingKeyMap = new Dictionary<string, Dictionary<string, List<InputCombinationAxisBinding>>>();
 
-		// Token: 0x04024802 RID: 149506
+		// Token: 0x0401FAB8 RID: 129720
 		private readonly HashSet<string> MainKeySet = new HashSet<string>();
 	}
 }

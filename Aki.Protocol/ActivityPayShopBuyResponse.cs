@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200008B RID: 139
+	// Token: 0x0200008C RID: 140
 	[NetMessage(EMessageId.ActivityPayShopBuyResponse)]
 	public sealed class ActivityPayShopBuyResponse : IMessage<ActivityPayShopBuyResponse>, IMessage, IEquatable<ActivityPayShopBuyResponse>, IDeepCloneable<ActivityPayShopBuyResponse>, IBufferMessage
 	{
-		// Token: 0x06001A9E RID: 6814 RVA: 0x0004B1E0 File Offset: 0x000493E0
+		// Token: 0x06001AE5 RID: 6885 RVA: 0x0004BDF0 File Offset: 0x00049FF0
 		[NullableContext(1)]
 		public static ActivityPayShopBuyResponse Create()
 		{
 			return new ActivityPayShopBuyResponse();
 		}
 
-		// Token: 0x170002C8 RID: 712
-		// (get) Token: 0x06001A9F RID: 6815 RVA: 0x0004B1E7 File Offset: 0x000493E7
+		// Token: 0x170002D0 RID: 720
+		// (get) Token: 0x06001AE6 RID: 6886 RVA: 0x0004BDF7 File Offset: 0x00049FF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002C9 RID: 713
-		// (get) Token: 0x06001AA0 RID: 6816 RVA: 0x0004B1EA File Offset: 0x000493EA
+		// Token: 0x170002D1 RID: 721
+		// (get) Token: 0x06001AE7 RID: 6887 RVA: 0x0004BDFA File Offset: 0x00049FFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001AA1 RID: 6817 RVA: 0x0004B1F1 File Offset: 0x000493F1
+		// Token: 0x06001AE8 RID: 6888 RVA: 0x0004BE01 File Offset: 0x0004A001
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityPayShopBuyResponse()
 		{
 		}
 
-		// Token: 0x06001AA2 RID: 6818 RVA: 0x0004B204 File Offset: 0x00049404
+		// Token: 0x06001AE9 RID: 6889 RVA: 0x0004BE14 File Offset: 0x0004A014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityPayShopBuyResponse(ActivityPayShopBuyResponse other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001AA3 RID: 6819 RVA: 0x0004B23A File Offset: 0x0004943A
+		// Token: 0x06001AEA RID: 6890 RVA: 0x0004BE4A File Offset: 0x0004A04A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityPayShopBuyResponse Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new ActivityPayShopBuyResponse(this);
 		}
 
-		// Token: 0x170002CA RID: 714
-		// (get) Token: 0x06001AA4 RID: 6820 RVA: 0x0004B242 File Offset: 0x00049442
+		// Token: 0x170002D2 RID: 722
+		// (get) Token: 0x06001AEB RID: 6891 RVA: 0x0004BE52 File Offset: 0x0004A052
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ActivityBuyItem> BuyItems
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170002CB RID: 715
-		// (get) Token: 0x06001AA5 RID: 6821 RVA: 0x0004B24A File Offset: 0x0004944A
-		// (set) Token: 0x06001AA6 RID: 6822 RVA: 0x0004B252 File Offset: 0x00049452
+		// Token: 0x170002D3 RID: 723
+		// (get) Token: 0x06001AEC RID: 6892 RVA: 0x0004BE5A File Offset: 0x0004A05A
+		// (set) Token: 0x06001AED RID: 6893 RVA: 0x0004BE62 File Offset: 0x0004A062
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001AA7 RID: 6823 RVA: 0x0004B25B File Offset: 0x0004945B
+		// Token: 0x06001AEE RID: 6894 RVA: 0x0004BE6B File Offset: 0x0004A06B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ActivityPayShopBuyResponse);
 		}
 
-		// Token: 0x06001AA8 RID: 6824 RVA: 0x0004B26C File Offset: 0x0004946C
+		// Token: 0x06001AEF RID: 6895 RVA: 0x0004BE7C File Offset: 0x0004A07C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ActivityPayShopBuyResponse other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.buyItems_.Equals(other.buyItems_) && this.ErrorCode == other.ErrorCode && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001AA9 RID: 6825 RVA: 0x0004B2BC File Offset: 0x000494BC
+		// Token: 0x06001AF0 RID: 6896 RVA: 0x0004BECC File Offset: 0x0004A0CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001AAA RID: 6826 RVA: 0x0004B30F File Offset: 0x0004950F
+		// Token: 0x06001AF1 RID: 6897 RVA: 0x0004BF1F File Offset: 0x0004A11F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001AAB RID: 6827 RVA: 0x0004B31C File Offset: 0x0004951C
+		// Token: 0x06001AF2 RID: 6898 RVA: 0x0004BF2C File Offset: 0x0004A12C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001AAC RID: 6828 RVA: 0x0004B328 File Offset: 0x00049528
+		// Token: 0x06001AF3 RID: 6899 RVA: 0x0004BF38 File Offset: 0x0004A138
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.buyItems_.WriteTo(ref output, ActivityPayShopBuyResponse._repeated_buyItems_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(40);
 				output.WriteEnum((int)this.ErrorCode);
 			}
+			this.buyItems_.WriteTo(ref output, ActivityPayShopBuyResponse._repeated_buyItems_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06001AAD RID: 6829 RVA: 0x0004B378 File Offset: 0x00049578
+		// Token: 0x06001AF4 RID: 6900 RVA: 0x0004BF88 File Offset: 0x0004A188
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001AAE RID: 6830 RVA: 0x0004B3CC File Offset: 0x000495CC
+		// Token: 0x06001AF5 RID: 6901 RVA: 0x0004BFDC File Offset: 0x0004A1DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ActivityPayShopBuyResponse other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001AAF RID: 6831 RVA: 0x0004B419 File Offset: 0x00049619
+		// Token: 0x06001AF6 RID: 6902 RVA: 0x0004C029 File Offset: 0x0004A229
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001AB0 RID: 6832 RVA: 0x0004B424 File Offset: 0x00049624
+		// Token: 0x06001AF7 RID: 6903 RVA: 0x0004C034 File Offset: 0x0004A234
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 66U)
+				if (num != 40U)
 				{
-					if (num != 80U)
+					if (num != 98U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						this.buyItems_.AddEntriesFrom(ref input, ActivityPayShopBuyResponse._repeated_buyItems_codec);
 					}
 				}
 				else
 				{
-					this.buyItems_.AddEntriesFrom(ref input, ActivityPayShopBuyResponse._repeated_buyItems_codec);
+					this.ErrorCode = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04002262 RID: 8802
+		// Token: 0x040022C3 RID: 8899
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002263 RID: 8803
-		public const int BuyItemsFieldNumber = 8;
+		// Token: 0x040022C4 RID: 8900
+		public const int BuyItemsFieldNumber = 12;
 
-		// Token: 0x04002264 RID: 8804
-		private static readonly FieldCodec<ActivityBuyItem> _repeated_buyItems_codec = FieldCodec.ForMessage<ActivityBuyItem>(66U, ActivityBuyItem.Parser);
+		// Token: 0x040022C5 RID: 8901
+		private static readonly FieldCodec<ActivityBuyItem> _repeated_buyItems_codec = FieldCodec.ForMessage<ActivityBuyItem>(98U, ActivityBuyItem.Parser);
 
-		// Token: 0x04002265 RID: 8805
+		// Token: 0x040022C6 RID: 8902
 		private readonly RepeatedField<ActivityBuyItem> buyItems_ = new RepeatedField<ActivityBuyItem>();
 
-		// Token: 0x04002266 RID: 8806
-		public const int ErrorCodeFieldNumber = 10;
+		// Token: 0x040022C7 RID: 8903
+		public const int ErrorCodeFieldNumber = 5;
 
-		// Token: 0x04002267 RID: 8807
+		// Token: 0x040022C8 RID: 8904
 		private ErrorCode errorCode_;
 	}
 }

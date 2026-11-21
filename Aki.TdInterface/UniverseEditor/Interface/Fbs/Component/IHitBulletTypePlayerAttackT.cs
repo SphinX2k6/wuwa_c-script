@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200537E RID: 21374
+	// Token: 0x02005904 RID: 22788
 	public class IHitBulletTypePlayerAttackT
 	{
-		// Token: 0x17009D0C RID: 40204
-		// (get) Token: 0x06022FC0 RID: 143296 RVA: 0x004D7F3A File Offset: 0x004D613A
-		// (set) Token: 0x06022FC1 RID: 143297 RVA: 0x004D7F42 File Offset: 0x004D6142
+		// Token: 0x1700A544 RID: 42308
+		// (get) Token: 0x06025074 RID: 151668 RVA: 0x00514E0E File Offset: 0x0051300E
+		// (set) Token: 0x06025075 RID: 151669 RVA: 0x00514E16 File Offset: 0x00513016
 		public EHitBulletType Type { get; set; }
 
-		// Token: 0x06022FC2 RID: 143298 RVA: 0x004D7F4B File Offset: 0x004D614B
+		// Token: 0x06025076 RID: 151670 RVA: 0x00514E1F File Offset: 0x0051301F
 		public IHitBulletTypePlayerAttackT()
 		{
 			this.Type = EHitBulletType.OnlyDropAttack;

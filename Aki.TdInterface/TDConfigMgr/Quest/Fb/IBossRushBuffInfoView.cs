@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012CF RID: 4815
+	// Token: 0x02001415 RID: 5141
 	public class IBossRushBuffInfoView : IInformationViewType
 	{
-		// Token: 0x06006E25 RID: 28197 RVA: 0x0010A755 File Offset: 0x00108955
-		[NullableContext(1)]
+		// Token: 0x060074A3 RID: 29859 RVA: 0x001189E5 File Offset: 0x00116BE5
 		public static IBossRushBuffInfoView Create(IBossRushBuffInfoView? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700225A RID: 8794
-		// (get) Token: 0x06006E26 RID: 28198 RVA: 0x0010A774 File Offset: 0x00108974
+		// Token: 0x1700241B RID: 9243
+		// (get) Token: 0x060074A4 RID: 29860 RVA: 0x00118A04 File Offset: 0x00116C04
 		public override EInformationViewType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F21 RID: 16161
+		// Token: 0x0400428F RID: 17039
 		private IBossRushBuffInfoView Instance;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EBC RID: 20156
+	// Token: 0x02003E85 RID: 16005
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleTopPanel : UiPanelBase
 	{
-		// Token: 0x06033C10 RID: 211984 RVA: 0x00C204C4 File Offset: 0x00C1E6C4
+		// Token: 0x06028A7B RID: 166523 RVA: 0x00B699DC File Offset: 0x00B67BDC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033C11 RID: 211985 RVA: 0x00C205C9 File Offset: 0x00C1E7C9
+		// Token: 0x06028A7C RID: 166524 RVA: 0x00B69AE1 File Offset: 0x00B67CE1
 		protected override void OnStart()
 		{
 			this.PopupCaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.PopupCaptionItem.SetHelpBtnActive(false);
 		}
 
-		// Token: 0x06033C12 RID: 211986 RVA: 0x00C205F5 File Offset: 0x00C1E7F5
+		// Token: 0x06028A7D RID: 166525 RVA: 0x00B69B0D File Offset: 0x00B67D0D
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTabBtn();
 		}
 
-		// Token: 0x06033C13 RID: 211987 RVA: 0x00C20600 File Offset: 0x00C1E800
+		// Token: 0x06028A7E RID: 166526 RVA: 0x00B69B18 File Offset: 0x00B67D18
 		public void RefreshTabBtn()
 		{
 			EToggleState state = (RogueBattleModel.Instance.DescMode == EDescModel.SIMPLE) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			extendToggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x06033C14 RID: 211988 RVA: 0x00C20634 File Offset: 0x00C1E834
+		// Token: 0x06028A7F RID: 166527 RVA: 0x00B69B4C File Offset: 0x00B67D4C
 		protected override void OnBeforeDestroy()
 		{
 			this.CloseCallback = null;
 		}
 
-		// Token: 0x06033C15 RID: 211989 RVA: 0x00C2063D File Offset: 0x00C1E83D
+		// Token: 0x06028A80 RID: 166528 RVA: 0x00B69B55 File Offset: 0x00B67D55
 		[NullableContext(1)]
 		public void RefreshSelectTipsText(string selectTipsText, bool isUseTypeB = false, params object[] args)
 		{
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), selectTipsText, args);
 		}
 
-		// Token: 0x06033C16 RID: 211990 RVA: 0x00C20669 File Offset: 0x00C1E869
+		// Token: 0x06028A81 RID: 166529 RVA: 0x00B69B81 File Offset: 0x00B67D81
 		public void EmptySelectTipsText()
 		{
 			base.GetText(5).SetText(string.Empty, true);
 		}
 
-		// Token: 0x06033C17 RID: 211991 RVA: 0x00C2067D File Offset: 0x00C1E87D
+		// Token: 0x06028A82 RID: 166530 RVA: 0x00B69B95 File Offset: 0x00B67D95
 		private void BackBtn()
 		{
 			Action closeCallback = this.CloseCallback;
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			closeCallback();
 		}
 
-		// Token: 0x06033C18 RID: 211992 RVA: 0x00C2068F File Offset: 0x00C1E88F
+		// Token: 0x06028A83 RID: 166531 RVA: 0x00B69BA7 File Offset: 0x00B67DA7
 		private void TabBtn(EToggleState state)
 		{
 			RogueBattleModel.Instance.ChangeDescMode();
 		}
 
-		// Token: 0x06033C19 RID: 211993 RVA: 0x00C2069C File Offset: 0x00C1E89C
+		// Token: 0x06028A84 RID: 166532 RVA: 0x00B69BB4 File Offset: 0x00B67DB4
 		public UUIItem GetCostItemByIndex(int index)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return null;
 		}
 
-		// Token: 0x06033C1A RID: 211994 RVA: 0x00C206D8 File Offset: 0x00C1E8D8
+		// Token: 0x06028A85 RID: 166533 RVA: 0x00B69BF0 File Offset: 0x00B67DF0
 		public void SetCloseBtnActive(bool isActive)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetButton(1).RootUIComp.Get().SetUIActive(isActive);
 		}
 
-		// Token: 0x06033C1B RID: 211995 RVA: 0x00C20711 File Offset: 0x00C1E911
+		// Token: 0x06028A86 RID: 166534 RVA: 0x00B69C29 File Offset: 0x00B67E29
 		private void TotalInfoBtn()
 		{
 			Action clickDetailCallback = this.ClickDetailCallback;
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			clickDetailCallback();
 		}
 
-		// Token: 0x0401B811 RID: 112657
+		// Token: 0x040161E4 RID: 90596
 		private PopupCaptionItem PopupCaptionItem;
 
-		// Token: 0x0401B812 RID: 112658
+		// Token: 0x040161E5 RID: 90597
 		public Action CloseCallback;
 
-		// Token: 0x0401B813 RID: 112659
+		// Token: 0x040161E6 RID: 90598
 		public Action ClickDetailCallback;
 	}
 }

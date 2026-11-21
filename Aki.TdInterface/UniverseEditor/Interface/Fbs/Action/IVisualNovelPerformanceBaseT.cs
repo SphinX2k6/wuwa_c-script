@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200759C RID: 30108
+	// Token: 0x02007D95 RID: 32149
 	public class IVisualNovelPerformanceBaseT
 	{
-		// Token: 0x1700E458 RID: 58456
-		// (get) Token: 0x06036C70 RID: 224368 RVA: 0x0076F90E File Offset: 0x0076DB0E
-		// (set) Token: 0x06036C71 RID: 224369 RVA: 0x0076F916 File Offset: 0x0076DB16
+		// Token: 0x1700F085 RID: 61573
+		// (get) Token: 0x0603A0A0 RID: 237728 RVA: 0x007D2ED6 File Offset: 0x007D10D6
+		// (set) Token: 0x0603A0A1 RID: 237729 RVA: 0x007D2EDE File Offset: 0x007D10DE
 		public EVisualNovelPerformanceType Type { get; set; }
 
-		// Token: 0x1700E459 RID: 58457
-		// (get) Token: 0x06036C72 RID: 224370 RVA: 0x0076F91F File Offset: 0x0076DB1F
-		// (set) Token: 0x06036C73 RID: 224371 RVA: 0x0076F927 File Offset: 0x0076DB27
+		// Token: 0x1700F086 RID: 61574
+		// (get) Token: 0x0603A0A2 RID: 237730 RVA: 0x007D2EE7 File Offset: 0x007D10E7
+		// (set) Token: 0x0603A0A3 RID: 237731 RVA: 0x007D2EEF File Offset: 0x007D10EF
 		public float StartTime { get; set; }
 
-		// Token: 0x1700E45A RID: 58458
-		// (get) Token: 0x06036C74 RID: 224372 RVA: 0x0076F930 File Offset: 0x0076DB30
-		// (set) Token: 0x06036C75 RID: 224373 RVA: 0x0076F938 File Offset: 0x0076DB38
+		// Token: 0x1700F087 RID: 61575
+		// (get) Token: 0x0603A0A4 RID: 237732 RVA: 0x007D2EF8 File Offset: 0x007D10F8
+		// (set) Token: 0x0603A0A5 RID: 237733 RVA: 0x007D2F00 File Offset: 0x007D1100
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036C76 RID: 224374 RVA: 0x0076F941 File Offset: 0x0076DB41
+		// Token: 0x0603A0A6 RID: 237734 RVA: 0x007D2F09 File Offset: 0x007D1109
 		public IVisualNovelPerformanceBaseT()
 		{
 			this.Type = EVisualNovelPerformanceType.Enter;

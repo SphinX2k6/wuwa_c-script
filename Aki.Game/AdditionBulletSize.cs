@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F4D RID: 12109
+// Token: 0x020024A0 RID: 9376
 [NullableContext(1)]
 [Nullable(0)]
 public class AdditionBulletSize : BuffEffect
 {
-	// Token: 0x06019C6A RID: 105578 RVA: 0x006B868C File Offset: 0x006B688C
+	// Token: 0x06017575 RID: 95605 RVA: 0x006DE9A8 File Offset: 0x006DCBA8
 	public AdditionBulletSize(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C6B RID: 105579 RVA: 0x006B86B1 File Offset: 0x006B68B1
+	// Token: 0x06017576 RID: 95606 RVA: 0x006DE9CD File Offset: 0x006DCBCD
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C6C RID: 105580 RVA: 0x006B86B4 File Offset: 0x006B68B4
+	// Token: 0x06017577 RID: 95607 RVA: 0x006DE9D0 File Offset: 0x006DCBD0
 	protected unsafe override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -55,7 +55,7 @@ public class AdditionBulletSize : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C6D RID: 105581 RVA: 0x006B87F8 File Offset: 0x006B69F8
+	// Token: 0x06017578 RID: 95608 RVA: 0x006DEB14 File Offset: 0x006DCD14
 	[NullableContext(0)]
 	public unsafe ValueTuple<float, float, float>? GetBulletSizeScale([Nullable(1)] string bulletRowName)
 	{
@@ -82,24 +82,24 @@ public class AdditionBulletSize : BuffEffect
 		return new ValueTuple<float, float, float>?(new ValueTuple<float, float, float>(this.ScaleArray[num] * (float)stackCount, this.ScaleArray[num + 1] * (float)stackCount, this.ScaleArray[num + 2] * (float)stackCount));
 	}
 
-	// Token: 0x0400C24A RID: 49738
+	// Token: 0x0400C5EC RID: 50668
 	private const int SIZE_SCALE_PARAMS_LEN = 4;
 
-	// Token: 0x0400C24B RID: 49739
+	// Token: 0x0400C5ED RID: 50669
 	private const int SIZE_SCALE_INDEX_BULLETROWNAME = 0;
 
-	// Token: 0x0400C24C RID: 49740
+	// Token: 0x0400C5EE RID: 50670
 	private const int SIZE_SCALE_INDEX_X = 1;
 
-	// Token: 0x0400C24D RID: 49741
+	// Token: 0x0400C5EF RID: 50671
 	private const int SIZE_SCALE_INDEX_Y = 2;
 
-	// Token: 0x0400C24E RID: 49742
+	// Token: 0x0400C5F0 RID: 50672
 	private const int SIZE_SCALE_INDEX_Z = 3;
 
-	// Token: 0x0400C24F RID: 49743
+	// Token: 0x0400C5F1 RID: 50673
 	private readonly Dictionary<string, int> BulletScaleMap = new Dictionary<string, int>();
 
-	// Token: 0x0400C250 RID: 49744
+	// Token: 0x0400C5F2 RID: 50674
 	private readonly List<float> ScaleArray = new List<float>();
 }

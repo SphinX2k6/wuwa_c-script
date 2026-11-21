@@ -8,19 +8,19 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.World.Define;
 using UnrealEngine;
 
-// Token: 0x0200026B RID: 619
+// Token: 0x0200026F RID: 623
 [NullableContext(1)]
 [Nullable(0)]
 public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 {
-	// Token: 0x060025B9 RID: 9657 RVA: 0x000E2790 File Offset: 0x000E0990
+	// Token: 0x06002673 RID: 9843 RVA: 0x000E8D77 File Offset: 0x000E6F77
 	static PreCreateEffect()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PreCreateEffect.CreateStaticDefaultValue), new Action(PreCreateEffect.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170005C5 RID: 1477
-	// (get) Token: 0x060025BA RID: 9658 RVA: 0x000E27AF File Offset: 0x000E09AF
+	// Token: 0x170005EC RID: 1516
+	// (get) Token: 0x06002674 RID: 9844 RVA: 0x000E8D96 File Offset: 0x000E6F96
 	public static HashSet<string> PreCreateEffectSet
 	{
 		get
@@ -29,7 +29,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025BB RID: 9659 RVA: 0x000E27B8 File Offset: 0x000E09B8
+	// Token: 0x06002675 RID: 9845 RVA: 0x000E8DA0 File Offset: 0x000E6FA0
 	public void Init()
 	{
 		EventSystem.Instance.Add(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleStateChanged));
@@ -38,7 +38,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.CurLruCapacity = curLruCapacity;
 	}
 
-	// Token: 0x060025BC RID: 9660 RVA: 0x000E2814 File Offset: 0x000E0A14
+	// Token: 0x06002676 RID: 9846 RVA: 0x000E8DFC File Offset: 0x000E6FFC
 	public void Clear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleStateChanged));
@@ -47,13 +47,13 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.PlayerPreCreateNumberMap.Clear();
 	}
 
-	// Token: 0x060025BD RID: 9661 RVA: 0x000E2870 File Offset: 0x000E0A70
+	// Token: 0x06002677 RID: 9847 RVA: 0x000E8E58 File Offset: 0x000E7058
 	public static bool IsNeedPreCreateEffect()
 	{
 		return !GlobalData.IsPlayInEditor || ((GameModeModel.Instance.MapId > 3000 && GameModeModel.Instance.MapId < 4000) || GameModeModel.Instance.MapId == 2);
 	}
 
-	// Token: 0x060025BE RID: 9662 RVA: 0x000E28B0 File Offset: 0x000E0AB0
+	// Token: 0x06002678 RID: 9848 RVA: 0x000E8E98 File Offset: 0x000E7098
 	private void OnCreateEntity(CreatureDataComponent creatureData, EntityHandle handle)
 	{
 		if (creatureData.GetEntityType() == EEntityType.Player)
@@ -64,7 +64,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		EventSystem.Instance.AddWithTargetUseHoldKey<ERemoveEntityType, EntityHandle>(this, handle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x060025BF RID: 9663 RVA: 0x000E2918 File Offset: 0x000E0B18
+	// Token: 0x06002679 RID: 9849 RVA: 0x000E8F00 File Offset: 0x000E7100
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if (this.ListenEntitySet.Contains(handle.Id))
@@ -80,7 +80,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.PlayerPreCreateNumberMap.Remove(handle.Id);
 	}
 
-	// Token: 0x060025C0 RID: 9664 RVA: 0x000E29C4 File Offset: 0x000E0BC4
+	// Token: 0x0600267A RID: 9850 RVA: 0x000E8FAC File Offset: 0x000E71AC
 	public void AiHateAddOrRemove(bool addOrRemove, AiController from)
 	{
 		if (addOrRemove)
@@ -98,7 +98,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025C1 RID: 9665 RVA: 0x000E2A20 File Offset: 0x000E0C20
+	// Token: 0x0600267B RID: 9851 RVA: 0x000E9008 File Offset: 0x000E7208
 	private void OnBattleStateChanged(bool isInBattleState)
 	{
 		if (isInBattleState)
@@ -112,7 +112,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.CurLruCapacity = curLruCapacity2;
 	}
 
-	// Token: 0x060025C2 RID: 9666 RVA: 0x000E2A67 File Offset: 0x000E0C67
+	// Token: 0x0600267C RID: 9852 RVA: 0x000E904F File Offset: 0x000E724F
 	public void Tick(double delta)
 	{
 		if (!PreCreateEffect.IsOpenPool)
@@ -126,7 +126,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.UpdateLruCapacity();
 	}
 
-	// Token: 0x060025C3 RID: 9667 RVA: 0x000E2A94 File Offset: 0x000E0C94
+	// Token: 0x0600267D RID: 9853 RVA: 0x000E907C File Offset: 0x000E727C
 	private void UpdateLruCapacity()
 	{
 		int effectLruCapacity = EffectSystem.Instance.GetEffectLruCapacity();
@@ -144,13 +144,13 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		EffectSystem.Instance.SetEffectLruCapacity(600);
 	}
 
-	// Token: 0x060025C4 RID: 9668 RVA: 0x000E2B09 File Offset: 0x000E0D09
+	// Token: 0x0600267E RID: 9854 RVA: 0x000E90F1 File Offset: 0x000E72F1
 	public void SetForceLruCapacity(int? lruCapacity)
 	{
 		this.ForceLruCapacity = lruCapacity;
 	}
 
-	// Token: 0x060025C5 RID: 9669 RVA: 0x000E2B14 File Offset: 0x000E0D14
+	// Token: 0x0600267F RID: 9855 RVA: 0x000E90FC File Offset: 0x000E72FC
 	private void InitCommonEffect()
 	{
 		foreach (string path in this.commonFightEffect)
@@ -162,7 +162,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025C6 RID: 9670 RVA: 0x000E2B5C File Offset: 0x000E0D5C
+	// Token: 0x06002680 RID: 9856 RVA: 0x000E9144 File Offset: 0x000E7344
 	private void AddEffect(PreCreateEffectData data)
 	{
 		Entity entity = EntitySystem.Instance.Get(data.EntityId);
@@ -197,7 +197,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.CurPreCreateEffect.Push(data);
 	}
 
-	// Token: 0x060025C7 RID: 9671 RVA: 0x000E2C58 File Offset: 0x000E0E58
+	// Token: 0x06002681 RID: 9857 RVA: 0x000E9240 File Offset: 0x000E7440
 	[NullableContext(2)]
 	public void AddPreCreateEffect(int entityId, string effectPath)
 	{
@@ -216,7 +216,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025C8 RID: 9672 RVA: 0x000E2CD4 File Offset: 0x000E0ED4
+	// Token: 0x06002682 RID: 9858 RVA: 0x000E92BC File Offset: 0x000E74BC
 	public void AddPreCreateHitEffect(int entityId, string hitEffectPath)
 	{
 		if (string.IsNullOrEmpty(hitEffectPath))
@@ -235,7 +235,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025C9 RID: 9673 RVA: 0x000E2D40 File Offset: 0x000E0F40
+	// Token: 0x06002683 RID: 9859 RVA: 0x000E9328 File Offset: 0x000E7528
 	private void PreCreateEffectInternal()
 	{
 		PreCreateEffectData preCreateEffectData = this.CurPreCreateEffect.Pop();
@@ -256,7 +256,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		bool isDebug = this.IsDebug;
 	}
 
-	// Token: 0x060025CA RID: 9674 RVA: 0x000E2E00 File Offset: 0x000E1000
+	// Token: 0x06002684 RID: 9860 RVA: 0x000E93E8 File Offset: 0x000E75E8
 	public void RegisterTick()
 	{
 		if (this.GameBudgetManagedTokenInternal != null)
@@ -277,7 +277,7 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		this.GameBudgetManagedTokenInternal = new uint?(GameBudgetInterfaceController.Instance.RegisterTick(tsIdleExecConfig.GroupName, tsIdleExecConfig.SignificanceGroup, this, null, true, true, true, true));
 	}
 
-	// Token: 0x060025CB RID: 9675 RVA: 0x000E2E9C File Offset: 0x000E109C
+	// Token: 0x06002685 RID: 9861 RVA: 0x000E9484 File Offset: 0x000E7684
 	public void UnregisterTick()
 	{
 		if (this.GameBudgetManagedTokenInternal != null)
@@ -291,14 +291,14 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025CC RID: 9676 RVA: 0x000E2EDA File Offset: 0x000E10DA
+	// Token: 0x06002686 RID: 9862 RVA: 0x000E94C2 File Offset: 0x000E76C2
 	public void ScheduledTick(float deltaSeconds, int deltaFrames, float distance)
 	{
 		this.Tick((double)deltaSeconds);
 	}
 
-	// Token: 0x170005C6 RID: 1478
-	// (get) Token: 0x060025CD RID: 9677 RVA: 0x000E2EE4 File Offset: 0x000E10E4
+	// Token: 0x170005ED RID: 1517
+	// (get) Token: 0x06002687 RID: 9863 RVA: 0x000E94CC File Offset: 0x000E76CC
 	public bool HasScheduledAfterTick
 	{
 		get
@@ -307,8 +307,8 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170005C7 RID: 1479
-	// (get) Token: 0x060025CE RID: 9678 RVA: 0x000E2EE7 File Offset: 0x000E10E7
+	// Token: 0x170005EE RID: 1518
+	// (get) Token: 0x06002688 RID: 9864 RVA: 0x000E94CF File Offset: 0x000E76CF
 	public bool HasOnEnabledChange
 	{
 		get
@@ -317,8 +317,8 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170005C8 RID: 1480
-	// (get) Token: 0x060025CF RID: 9679 RVA: 0x000E2EEA File Offset: 0x000E10EA
+	// Token: 0x170005EF RID: 1519
+	// (get) Token: 0x06002689 RID: 9865 RVA: 0x000E94D2 File Offset: 0x000E76D2
 	public bool HasOnWasRecentlyRenderedOnScreenChange
 	{
 		get
@@ -327,51 +327,51 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060025D0 RID: 9680 RVA: 0x000E2EED File Offset: 0x000E10ED
+	// Token: 0x0600268A RID: 9866 RVA: 0x000E94D5 File Offset: 0x000E76D5
 	public GCHandle GetGCHandle()
 	{
 		return this.GameBudgetGCHandle;
 	}
 
-	// Token: 0x060025D1 RID: 9681 RVA: 0x000E2EF5 File Offset: 0x000E10F5
+	// Token: 0x0600268B RID: 9867 RVA: 0x000E94DD File Offset: 0x000E76DD
 	public static void CreateStaticDefaultValue()
 	{
 		PreCreateEffect.IsOpenPool = true;
 		PreCreateEffect._preCreateEffectSet = new HashSet<string>();
 	}
 
-	// Token: 0x060025D2 RID: 9682 RVA: 0x000E2F07 File Offset: 0x000E1107
+	// Token: 0x0600268C RID: 9868 RVA: 0x000E94EF File Offset: 0x000E76EF
 	public static void ResetStaticDefaultValue()
 	{
 		PreCreateEffect.IsOpenPool = true;
 		PreCreateEffect._preCreateEffectSet = null;
 	}
 
-	// Token: 0x0400245F RID: 9311
+	// Token: 0x040024E0 RID: 9440
 	private const int HIT_EFFECT_COUNT = 3;
 
-	// Token: 0x04002460 RID: 9312
+	// Token: 0x040024E1 RID: 9441
 	private const int FIGHT_EFFECT_LRU_SIZE = 600;
 
-	// Token: 0x04002461 RID: 9313
+	// Token: 0x040024E2 RID: 9442
 	private const int NORMAL_EFFECT_LRU_SIZE = 100;
 
-	// Token: 0x04002462 RID: 9314
+	// Token: 0x040024E3 RID: 9443
 	private const int CHANGE_COUNT_EVERY_TICK = 3;
 
-	// Token: 0x04002463 RID: 9315
+	// Token: 0x040024E4 RID: 9444
 	private const int LOW_MEMORY_HIT_EFFECT_COUNT = 2;
 
-	// Token: 0x04002464 RID: 9316
+	// Token: 0x040024E5 RID: 9445
 	private const int LOW_MEMORY_FIGHT_EFFECT_LRU_SIZE = 300;
 
-	// Token: 0x04002465 RID: 9317
+	// Token: 0x040024E6 RID: 9446
 	private const int LOW_MEMORY_NORMAL_EFFECT_LRU_SIZE = 60;
 
-	// Token: 0x04002466 RID: 9318
+	// Token: 0x040024E7 RID: 9447
 	private const int PLAYER_CREATE_MAX = 150;
 
-	// Token: 0x04002467 RID: 9319
+	// Token: 0x040024E8 RID: 9448
 	private readonly string[] commonFightEffect = new string[]
 	{
 		"/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_ChangeRole.DA_Fx_Group_ChangeRole",
@@ -381,22 +381,22 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 		"/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_WeaponEnd.DA_Fx_Group_WeaponEnd"
 	};
 
-	// Token: 0x04002468 RID: 9320
+	// Token: 0x040024E9 RID: 9449
 	private readonly FTransformDouble DefaultTransform = new FTransformDouble();
 
-	// Token: 0x04002469 RID: 9321
+	// Token: 0x040024EA RID: 9450
 	private readonly Dictionary<int, Queue<PreCreateEffectData>> PreCreateEffectMap = new Dictionary<int, Queue<PreCreateEffectData>>();
 
-	// Token: 0x0400246A RID: 9322
+	// Token: 0x040024EB RID: 9451
 	private readonly Queue<PreCreateEffectData> CurPreCreateEffect = new Queue<PreCreateEffectData>(4);
 
-	// Token: 0x0400246B RID: 9323
+	// Token: 0x040024EC RID: 9452
 	private readonly Dictionary<int, int> PlayerPreCreateNumberMap = new Dictionary<int, int>();
 
-	// Token: 0x0400246C RID: 9324
+	// Token: 0x040024ED RID: 9453
 	private readonly Dictionary<string, int> PreCreateEffectCountMap = new Dictionary<string, int>();
 
-	// Token: 0x0400246D RID: 9325
+	// Token: 0x040024EE RID: 9454
 	[Nullable(new byte[]
 	{
 		2,
@@ -404,27 +404,27 @@ public class PreCreateEffect : IGameBudgetManagedObject, IStaticVariableResetter
 	})]
 	private static HashSet<string> _preCreateEffectSet;
 
-	// Token: 0x0400246E RID: 9326
+	// Token: 0x040024EF RID: 9455
 	private readonly Stat PreCreateEffectStat = Stat.Create("PreCreateEffect", "", "");
 
-	// Token: 0x0400246F RID: 9327
+	// Token: 0x040024F0 RID: 9456
 	private uint? GameBudgetManagedTokenInternal;
 
-	// Token: 0x04002470 RID: 9328
+	// Token: 0x040024F1 RID: 9457
 	private int CurLruCapacity = 100;
 
-	// Token: 0x04002471 RID: 9329
+	// Token: 0x040024F2 RID: 9458
 	public int? ForceLruCapacity;
 
-	// Token: 0x04002472 RID: 9330
+	// Token: 0x040024F3 RID: 9459
 	private readonly HashSet<int> ListenEntitySet = new HashSet<int>();
 
-	// Token: 0x04002473 RID: 9331
+	// Token: 0x040024F4 RID: 9460
 	private readonly bool IsDebug = true;
 
-	// Token: 0x04002474 RID: 9332
+	// Token: 0x040024F5 RID: 9461
 	public static bool IsOpenPool;
 
-	// Token: 0x04002475 RID: 9333
+	// Token: 0x040024F6 RID: 9462
 	private GCHandle GameBudgetGCHandle;
 }

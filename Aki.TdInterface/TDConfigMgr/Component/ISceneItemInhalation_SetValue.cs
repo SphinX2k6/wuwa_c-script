@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006A5 RID: 1701
+	// Token: 0x02000746 RID: 1862
 	public class ISceneItemInhalation_SetValue
 	{
-		// Token: 0x04001904 RID: 6404
+		// Token: 0x04001B01 RID: 6913
 		public EInhalationPerformanceType Type;
 	}
 }

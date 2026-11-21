@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200729B RID: 29339
+	// Token: 0x02007A70 RID: 31344
 	public struct ITalkBackgroundImage : IFlatbufferObject
 	{
-		// Token: 0x1700D998 RID: 55704
-		// (get) Token: 0x060340CF RID: 213199 RVA: 0x006FF5CD File Offset: 0x006FD7CD
+		// Token: 0x1700E591 RID: 58769
+		// (get) Token: 0x060373D3 RID: 226259 RVA: 0x00760969 File Offset: 0x0075EB69
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060340D0 RID: 213200 RVA: 0x006FF5DA File Offset: 0x006FD7DA
+		// Token: 0x060373D4 RID: 226260 RVA: 0x00760976 File Offset: 0x0075EB76
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060340D1 RID: 213201 RVA: 0x006FF5E4 File Offset: 0x006FD7E4
+		// Token: 0x060373D5 RID: 226261 RVA: 0x00760980 File Offset: 0x0075EB80
 		public static ITalkBackgroundImage GetRootAsITalkBackgroundImage(ByteBuffer _bb)
 		{
 			return ITalkBackgroundImage.GetRootAsITalkBackgroundImage(_bb, default(ITalkBackgroundImage));
 		}
 
-		// Token: 0x060340D2 RID: 213202 RVA: 0x006FF600 File Offset: 0x006FD800
+		// Token: 0x060373D6 RID: 226262 RVA: 0x0076099C File Offset: 0x0075EB9C
 		public static ITalkBackgroundImage GetRootAsITalkBackgroundImage(ByteBuffer _bb, ITalkBackgroundImage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060340D3 RID: 213203 RVA: 0x006FF61D File Offset: 0x006FD81D
+		// Token: 0x060373D7 RID: 226263 RVA: 0x007609B9 File Offset: 0x0075EBB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060340D4 RID: 213204 RVA: 0x006FF62C File Offset: 0x006FD82C
+		// Token: 0x060373D8 RID: 226264 RVA: 0x007609C8 File Offset: 0x0075EBC8
 		public ITalkBackgroundImage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D999 RID: 55705
-		// (get) Token: 0x060340D5 RID: 213205 RVA: 0x006FF63C File Offset: 0x006FD83C
+		// Token: 0x1700E592 RID: 58770
+		// (get) Token: 0x060373D9 RID: 226265 RVA: 0x007609D8 File Offset: 0x0075EBD8
 		public ETalkBackgroundType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D99A RID: 55706
-		// (get) Token: 0x060340D6 RID: 213206 RVA: 0x006FF678 File Offset: 0x006FD878
+		// Token: 0x1700E593 RID: 58771
+		// (get) Token: 0x060373DA RID: 226266 RVA: 0x00760A14 File Offset: 0x0075EC14
 		public string ImageAsset
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060340D7 RID: 213207 RVA: 0x006FF6AF File Offset: 0x006FD8AF
+		// Token: 0x060373DB RID: 226267 RVA: 0x00760A4B File Offset: 0x0075EC4B
 		public Span<byte> GetImageAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060340D8 RID: 213208 RVA: 0x006FF6BE File Offset: 0x006FD8BE
+		// Token: 0x060373DC RID: 226268 RVA: 0x00760A5A File Offset: 0x0075EC5A
 		public byte[] GetImageAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060340D9 RID: 213209 RVA: 0x006FF6CC File Offset: 0x006FD8CC
+		// Token: 0x060373DD RID: 226269 RVA: 0x00760A68 File Offset: 0x0075EC68
 		public static Offset<ITalkBackgroundImage> CreateITalkBackgroundImage(FlatBufferBuilder builder, ETalkBackgroundType Type = ETalkBackgroundType.Clean, StringOffset ImageAssetOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkBackgroundImage.EndITalkBackgroundImage(builder);
 		}
 
-		// Token: 0x060340DA RID: 213210 RVA: 0x006FF6E9 File Offset: 0x006FD8E9
+		// Token: 0x060373DE RID: 226270 RVA: 0x00760A85 File Offset: 0x0075EC85
 		public static void StartITalkBackgroundImage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060340DB RID: 213211 RVA: 0x006FF6F2 File Offset: 0x006FD8F2
+		// Token: 0x060373DF RID: 226271 RVA: 0x00760A8E File Offset: 0x0075EC8E
 		public static void AddType(FlatBufferBuilder builder, ETalkBackgroundType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060340DC RID: 213212 RVA: 0x006FF6FD File Offset: 0x006FD8FD
+		// Token: 0x060373E0 RID: 226272 RVA: 0x00760A99 File Offset: 0x0075EC99
 		public static void AddImageAsset(FlatBufferBuilder builder, StringOffset imageAssetOffset)
 		{
 			builder.AddOffset(1, imageAssetOffset.Value, 0);
 		}
 
-		// Token: 0x060340DD RID: 213213 RVA: 0x006FF70D File Offset: 0x006FD90D
+		// Token: 0x060373E1 RID: 226273 RVA: 0x00760AA9 File Offset: 0x0075ECA9
 		public static Offset<ITalkBackgroundImage> EndITalkBackgroundImage(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkBackgroundImage>(builder.EndTable());
 		}
 
-		// Token: 0x060340DE RID: 213214 RVA: 0x006FF71C File Offset: 0x006FD91C
+		// Token: 0x060373E2 RID: 226274 RVA: 0x00760AB8 File Offset: 0x0075ECB8
 		public ITalkBackgroundImageT UnPack()
 		{
 			ITalkBackgroundImageT talkBackgroundImageT = new ITalkBackgroundImageT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkBackgroundImageT;
 		}
 
-		// Token: 0x060340DF RID: 213215 RVA: 0x006FF737 File Offset: 0x006FD937
+		// Token: 0x060373E3 RID: 226275 RVA: 0x00760AD3 File Offset: 0x0075ECD3
 		public void UnPackTo(ITalkBackgroundImageT _o)
 		{
 			_o.Type = this.Type;
 			_o.ImageAsset = this.ImageAsset;
 		}
 
-		// Token: 0x060340E0 RID: 213216 RVA: 0x006FF754 File Offset: 0x006FD954
+		// Token: 0x060373E4 RID: 226276 RVA: 0x00760AF0 File Offset: 0x0075ECF0
 		public static Offset<ITalkBackgroundImage> Pack(FlatBufferBuilder builder, ITalkBackgroundImageT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkBackgroundImage.CreateITalkBackgroundImage(builder, _o.Type, imageAssetOffset);
 		}
 
-		// Token: 0x04011DA5 RID: 73125
+		// Token: 0x04012DA8 RID: 77224
 		private Table __p;
 	}
 }

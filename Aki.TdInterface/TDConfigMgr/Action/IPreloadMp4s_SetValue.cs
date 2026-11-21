@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D4B RID: 7499
+	// Token: 0x02001F5C RID: 8028
 	public class IPreloadMp4s_SetValue
 	{
-		// Token: 0x040060E7 RID: 24807
+		// Token: 0x04006663 RID: 26211
 		public EPreloadObjectType Type;
 
-		// Token: 0x040060E8 RID: 24808
-		[Nullable(1)]
+		// Token: 0x04006664 RID: 26212
 		public List<string> Mp4s;
 	}
 }

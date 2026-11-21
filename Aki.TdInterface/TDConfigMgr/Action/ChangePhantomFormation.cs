@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014E2 RID: 5346
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200163B RID: 5691
 	public class ChangePhantomFormation : ActionParams
 	{
-		// Token: 0x060079AC RID: 31148 RVA: 0x001230EC File Offset: 0x001212EC
-		[NullableContext(1)]
+		// Token: 0x06008079 RID: 32889 RVA: 0x00131D38 File Offset: 0x0012FF38
 		private ChangePhantomFormation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060079AD RID: 31149 RVA: 0x00123124 File Offset: 0x00121324
-		[NullableContext(1)]
+		// Token: 0x0600807A RID: 32890 RVA: 0x00131D70 File Offset: 0x0012FF70
 		public static ChangePhantomFormation Create([Nullable(2)] ChangePhantomFormation instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079AE RID: 31150 RVA: 0x00123137 File Offset: 0x00121337
-		[NullableContext(1)]
+		// Token: 0x0600807B RID: 32891 RVA: 0x00131D83 File Offset: 0x0012FF83
 		public static ChangePhantomFormation CreateFromSetValue([Nullable(2)] ChangePhantomFormation_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079AF RID: 31151 RVA: 0x0012314A File Offset: 0x0012134A
-		[NullableContext(1)]
+		// Token: 0x0600807C RID: 32892 RVA: 0x00131D96 File Offset: 0x0012FF96
 		public ChangePhantomFormation_SetValue ToSetValue()
 		{
 			return new ChangePhantomFormation_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028B9 RID: 10425
-		// (get) Token: 0x060079B0 RID: 31152 RVA: 0x00123181 File Offset: 0x00121381
-		// (set) Token: 0x060079B1 RID: 31153 RVA: 0x001231AC File Offset: 0x001213AC
+		// Token: 0x17002AA3 RID: 10915
+		// (get) Token: 0x0600807D RID: 32893 RVA: 0x00131DCD File Offset: 0x0012FFCD
+		// (set) Token: 0x0600807E RID: 32894 RVA: 0x00131DF8 File Offset: 0x0012FFF8
 		public virtual int FormationId
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028BA RID: 10426
-		// (get) Token: 0x060079B2 RID: 31154 RVA: 0x001231BC File Offset: 0x001213BC
-		// (set) Token: 0x060079B3 RID: 31155 RVA: 0x001231F6 File Offset: 0x001213F6
+		// Token: 0x17002AA4 RID: 10916
+		// (get) Token: 0x0600807F RID: 32895 RVA: 0x00131E08 File Offset: 0x00130008
+		// (set) Token: 0x06008080 RID: 32896 RVA: 0x00131E42 File Offset: 0x00130042
 		public virtual bool? RetainRole
 		{
 			get
@@ -114,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028BB RID: 10427
-		// (get) Token: 0x060079B4 RID: 31156 RVA: 0x00123204 File Offset: 0x00121404
-		// (set) Token: 0x060079B5 RID: 31157 RVA: 0x0012323E File Offset: 0x0012143E
+		// Token: 0x17002AA5 RID: 10917
+		// (get) Token: 0x06008081 RID: 32897 RVA: 0x00131E50 File Offset: 0x00130050
+		// (set) Token: 0x06008082 RID: 32898 RVA: 0x00131E8A File Offset: 0x0013008A
 		public virtual int? TeleportEntityId
 		{
 			get
@@ -138,11 +132,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028BC RID: 10428
-		// (get) Token: 0x060079B6 RID: 31158 RVA: 0x0012324C File Offset: 0x0012144C
-		// (set) Token: 0x060079B7 RID: 31159 RVA: 0x00123273 File Offset: 0x00121473
+		// Token: 0x17002AA6 RID: 10918
+		// (get) Token: 0x06008083 RID: 32899 RVA: 0x00131E98 File Offset: 0x00130098
+		// (set) Token: 0x06008084 RID: 32900 RVA: 0x00131EBF File Offset: 0x001300BF
+		[Nullable(2)]
 		public virtual List<long> AppendBuffIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -156,16 +152,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.AppendBuffIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().AppendBuffIds = value;
 			}
 		}
 
-		// Token: 0x04004694 RID: 18068
+		// Token: 0x04004A2F RID: 18991
+		[Nullable(2)]
 		protected new ChangePhantomFormation FbInstance;
 
-		// Token: 0x04004695 RID: 18069
+		// Token: 0x04004A30 RID: 18992
+		[Nullable(2)]
 		protected ChangePhantomFormation_SetValue PocoInterface;
 	}
 }

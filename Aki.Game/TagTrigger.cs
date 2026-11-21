@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 
-// Token: 0x02002FE5 RID: 12261
+// Token: 0x0200253A RID: 9530
 [NullableContext(1)]
 [Nullable(0)]
 public class TagTrigger : Trigger
 {
-	// Token: 0x06019FCF RID: 106447 RVA: 0x006CCFBD File Offset: 0x006CB1BD
+	// Token: 0x06017903 RID: 96515 RVA: 0x006F4E5D File Offset: 0x006F305D
 	[NullableContext(2)]
 	public TagTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x06019FD0 RID: 106448 RVA: 0x006CCFE4 File Offset: 0x006CB1E4
+	// Token: 0x06017904 RID: 96516 RVA: 0x006F4E84 File Offset: 0x006F3084
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TagIds.Clear();
@@ -36,13 +35,13 @@ public class TagTrigger : Trigger
 		this.LogicRelation = Convert.ToInt32((triggerParams.Length > 4) ? triggerParams[4] : "0");
 	}
 
-	// Token: 0x06019FD1 RID: 106449 RVA: 0x006CD0B4 File Offset: 0x006CB2B4
+	// Token: 0x06017905 RID: 96517 RVA: 0x006F4F54 File Offset: 0x006F3154
 	private bool IsFormationTarget()
 	{
 		return this.TargetType == ETriggerTargetType.LocalFormation || this.TargetType == ETriggerTargetType.AllFormation;
 	}
 
-	// Token: 0x06019FD2 RID: 106450 RVA: 0x006CD0CC File Offset: 0x006CB2CC
+	// Token: 0x06017906 RID: 96518 RVA: 0x006F4F6C File Offset: 0x006F316C
 	[return: TupleElementNames(new string[]
 	{
 		"CreatureDataId",
@@ -102,7 +101,7 @@ public class TagTrigger : Trigger
 		return list;
 	}
 
-	// Token: 0x06019FD3 RID: 106451 RVA: 0x006CD200 File Offset: 0x006CB400
+	// Token: 0x06017907 RID: 96519 RVA: 0x006F50A0 File Offset: 0x006F32A0
 	private bool ShouldInitTrigger(BaseTagComponent tagComp)
 	{
 		switch (this.InitBehavior)
@@ -123,7 +122,7 @@ public class TagTrigger : Trigger
 		return false;
 	}
 
-	// Token: 0x06019FD4 RID: 106452 RVA: 0x006CD28C File Offset: 0x006CB48C
+	// Token: 0x06017908 RID: 96520 RVA: 0x006F512C File Offset: 0x006F332C
 	[NullableContext(2)]
 	private void SubscribeMember(long creatureDataId, int entityId, BaseTagComponent tagComp, bool doInitCheck)
 	{
@@ -147,7 +146,7 @@ public class TagTrigger : Trigger
 		this.ListeningEntries[creatureDataId] = new ValueTuple<int, BaseTagComponent, BaseTagComponent.TTagSwitchedCallback>(entityId, comp, ttagSwitchedCallback);
 	}
 
-	// Token: 0x06019FD5 RID: 106453 RVA: 0x006CD34C File Offset: 0x006CB54C
+	// Token: 0x06017909 RID: 96521 RVA: 0x006F51EC File Offset: 0x006F33EC
 	private void UnsubscribeMember(long creatureDataId)
 	{
 		ValueTuple<int, BaseTagComponent, BaseTagComponent.TTagSwitchedCallback> valueTuple;
@@ -162,7 +161,7 @@ public class TagTrigger : Trigger
 		this.ListeningEntries.Remove(creatureDataId);
 	}
 
-	// Token: 0x06019FD6 RID: 106454 RVA: 0x006CD3AC File Offset: 0x006CB5AC
+	// Token: 0x0601790A RID: 96522 RVA: 0x006F524C File Offset: 0x006F344C
 	protected override void OnActive()
 	{
 		foreach (ValueTuple<long, int, BaseTagComponent> valueTuple in this.CollectTargetMembers())
@@ -178,21 +177,23 @@ public class TagTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FD7 RID: 106455 RVA: 0x006CD43C File Offset: 0x006CB63C
+	// Token: 0x0601790B RID: 96523 RVA: 0x006F52DC File Offset: 0x006F34DC
 	protected override void OnInactive()
 	{
 		if (this.IsFormationTarget())
 		{
 			EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnTeamChanged));
 		}
-		foreach (long creatureDataId in this.ListeningEntries.Keys.ToArray<long>())
+		long[] array = new long[this.ListeningEntries.Count];
+		this.ListeningEntries.Keys.CopyTo(array, 0);
+		foreach (long creatureDataId in array)
 		{
 			this.UnsubscribeMember(creatureDataId);
 		}
 		this.ListeningEntries.Clear();
 	}
 
-	// Token: 0x06019FD8 RID: 106456 RVA: 0x006CD4A4 File Offset: 0x006CB6A4
+	// Token: 0x0601790C RID: 96524 RVA: 0x006F5358 File Offset: 0x006F3558
 	private void OnTeamChanged()
 	{
 		bool onlyMyRole = this.TargetType == ETriggerTargetType.LocalFormation;
@@ -202,7 +203,9 @@ public class TagTrigger : Trigger
 		{
 			hashSet.Add(entityHandle.CreatureDataId);
 		}
-		foreach (long num in this.ListeningEntries.Keys.ToArray<long>())
+		long[] array = new long[this.ListeningEntries.Count];
+		this.ListeningEntries.Keys.CopyTo(array, 0);
+		foreach (long num in array)
 		{
 			if (!hashSet.Contains(num))
 			{
@@ -232,7 +235,7 @@ public class TagTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FD9 RID: 106457 RVA: 0x006CD618 File Offset: 0x006CB818
+	// Token: 0x0601790D RID: 96525 RVA: 0x006F54E4 File Offset: 0x006F36E4
 	private bool CheckTagCondition(BaseTagComponent tagComp, bool needCheckOrLogic = false)
 	{
 		if (this.TagIds.Count == 0)
@@ -265,7 +268,7 @@ public class TagTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FDA RID: 106458 RVA: 0x006CD6B2 File Offset: 0x006CB8B2
+	// Token: 0x0601790E RID: 96526 RVA: 0x006F557E File Offset: 0x006F377E
 	private void OnEvent(BaseTagComponent tagComp, bool tagExist)
 	{
 		if (this.CheckRemove == tagExist)
@@ -282,28 +285,28 @@ public class TagTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FDB RID: 106459 RVA: 0x006CD6E9 File Offset: 0x006CB8E9
+	// Token: 0x0601790F RID: 96527 RVA: 0x006F55B5 File Offset: 0x006F37B5
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4B7 RID: 50359
+	// Token: 0x0400C87F RID: 51327
 	protected bool CheckRemove;
 
-	// Token: 0x0400C4B8 RID: 50360
+	// Token: 0x0400C880 RID: 51328
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4B9 RID: 50361
+	// Token: 0x0400C881 RID: 51329
 	protected TagTrigger.ETagTriggerInitBehavior InitBehavior;
 
-	// Token: 0x0400C4BA RID: 50362
+	// Token: 0x0400C882 RID: 51330
 	protected readonly List<int> TagIds = new List<int>();
 
-	// Token: 0x0400C4BB RID: 50363
+	// Token: 0x0400C883 RID: 51331
 	protected int LogicRelation;
 
-	// Token: 0x0400C4BC RID: 50364
+	// Token: 0x0400C884 RID: 51332
 	[TupleElementNames(new string[]
 	{
 		"EntityId",
@@ -319,15 +322,15 @@ public class TagTrigger : Trigger
 	})]
 	private readonly Dictionary<long, ValueTuple<int, BaseTagComponent, BaseTagComponent.TTagSwitchedCallback>> ListeningEntries = new Dictionary<long, ValueTuple<int, BaseTagComponent, BaseTagComponent.TTagSwitchedCallback>>();
 
-	// Token: 0x02009622 RID: 38434
+	// Token: 0x02008843 RID: 34883
 	[NullableContext(0)]
 	public enum ETagTriggerInitBehavior
 	{
-		// Token: 0x040302BF RID: 197311
+		// Token: 0x0402B94C RID: 178508
 		None,
-		// Token: 0x040302C0 RID: 197312
+		// Token: 0x0402B94D RID: 178509
 		CheckWhenHasTag,
-		// Token: 0x040302C1 RID: 197313
+		// Token: 0x0402B94E RID: 178510
 		CheckWhenNotHasTag
 	}
 }

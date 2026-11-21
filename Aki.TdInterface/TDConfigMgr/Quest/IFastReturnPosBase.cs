@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F6D RID: 3949
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001097 RID: 4247
 	public class IFastReturnPosBase
 	{
-		// Token: 0x060057CC RID: 22476 RVA: 0x000D67F4 File Offset: 0x000D49F4
+		// Token: 0x06005DA0 RID: 23968 RVA: 0x000E3260 File Offset: 0x000E1460
 		private IFastReturnPosBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060057CD RID: 22477 RVA: 0x000D682C File Offset: 0x000D4A2C
+		// Token: 0x06005DA1 RID: 23969 RVA: 0x000E3298 File Offset: 0x000E1498
 		public static IFastReturnPosBase Create([Nullable(2)] IFastReturnPosBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057CE RID: 22478 RVA: 0x000D683F File Offset: 0x000D4A3F
+		// Token: 0x06005DA2 RID: 23970 RVA: 0x000E32AB File Offset: 0x000E14AB
 		public static IFastReturnPosBase CreateFromSetValue([Nullable(2)] IFastReturnPosBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057CF RID: 22479 RVA: 0x000D6852 File Offset: 0x000D4A52
+		// Token: 0x06005DA3 RID: 23971 RVA: 0x000E32BE File Offset: 0x000E14BE
 		public IFastReturnPosBase_SetValue ToSetValue()
 		{
 			return new IFastReturnPosBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D44 RID: 7492
-		// (get) Token: 0x060057D0 RID: 22480 RVA: 0x000D6865 File Offset: 0x000D4A65
-		// (set) Token: 0x060057D1 RID: 22481 RVA: 0x000D6890 File Offset: 0x000D4A90
+		// Token: 0x17001EEA RID: 7914
+		// (get) Token: 0x06005DA4 RID: 23972 RVA: 0x000E32D1 File Offset: 0x000E14D1
+		// (set) Token: 0x06005DA5 RID: 23973 RVA: 0x000E32FC File Offset: 0x000E14FC
 		public virtual EFastReturnPosType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400350F RID: 13583
+		// Token: 0x04003840 RID: 14400
 		[Nullable(2)]
 		protected IFastReturnPosBase FbInstance;
 
-		// Token: 0x04003510 RID: 13584
+		// Token: 0x04003841 RID: 14401
 		[Nullable(2)]
 		protected IFastReturnPosBase_SetValue PocoInterface;
 	}

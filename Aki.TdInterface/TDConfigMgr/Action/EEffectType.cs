@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015CE RID: 5582
+	// Token: 0x0200172D RID: 5933
 	[EnumExtensions]
 	public enum EEffectType
 	{
-		// Token: 0x04004A65 RID: 19045
+		// Token: 0x04004E1F RID: 19999
 		Effect,
-		// Token: 0x04004A66 RID: 19046
+		// Token: 0x04004E20 RID: 20000
 		ScreenEffect,
-		// Token: 0x04004A67 RID: 19047
+		// Token: 0x04004E21 RID: 20001
 		DissolveEffect,
-		// Token: 0x04004A68 RID: 19048
+		// Token: 0x04004E22 RID: 20002
 		MpcEffect,
-		// Token: 0x04004A69 RID: 19049
+		// Token: 0x04004E23 RID: 20003
 		SwitchEffectState
 	}
 }

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x02004591 RID: 17809
+	// Token: 0x020034B9 RID: 13497
 	public enum EWuYinQuBattleState
 	{
-		// Token: 0x04018851 RID: 100433
+		// Token: 0x04012E8C RID: 77452
 		Idle,
-		// Token: 0x04018852 RID: 100434
+		// Token: 0x04012E8D RID: 77453
 		Fighting1,
-		// Token: 0x04018853 RID: 100435
+		// Token: 0x04012E8E RID: 77454
 		Fighting2,
-		// Token: 0x04018854 RID: 100436
+		// Token: 0x04012E8F RID: 77455
 		Fighting3,
-		// Token: 0x04018855 RID: 100437
+		// Token: 0x04012E90 RID: 77456
 		IdleToFighting,
-		// Token: 0x04018856 RID: 100438
+		// Token: 0x04012E91 RID: 77457
 		FightingToFighting,
-		// Token: 0x04018857 RID: 100439
+		// Token: 0x04012E92 RID: 77458
 		FightingToIdle
 	}
 }

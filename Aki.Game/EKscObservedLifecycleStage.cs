@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000E7B RID: 3707
+// Token: 0x02000330 RID: 816
 public enum EKscObservedLifecycleStage
 {
-	// Token: 0x0400294E RID: 10574
+	// Token: 0x040029E9 RID: 10729
 	None,
-	// Token: 0x0400294F RID: 10575
+	// Token: 0x040029EA RID: 10730
 	InitMap,
-	// Token: 0x04002950 RID: 10576
+	// Token: 0x040029EB RID: 10731
 	MapLoad,
-	// Token: 0x04002951 RID: 10577
+	// Token: 0x040029EC RID: 10732
 	Preload,
-	// Token: 0x04002952 RID: 10578
+	// Token: 0x040029ED RID: 10733
 	WorldDone
 }

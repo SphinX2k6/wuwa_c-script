@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A67 RID: 2663
+	// Token: 0x02000B3C RID: 2876
 	public class ConfigUiFloatConfigByViewName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E7E RID: 15998 RVA: 0x001BB4E1 File Offset: 0x001B96E1
+		// Token: 0x0600437C RID: 17276 RVA: 0x001DA875 File Offset: 0x001D8A75
 		static ConfigUiFloatConfigByViewName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiFloatConfigByViewName.CreateStaticDefaultValue), new Action(ConfigUiFloatConfigByViewName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E7F RID: 15999 RVA: 0x001BB500 File Offset: 0x001B9700
+		// Token: 0x0600437D RID: 17277 RVA: 0x001DA894 File Offset: 0x001D8A94
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiFloatConfigByViewName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E80 RID: 16000 RVA: 0x001BB57F File Offset: 0x001B977F
+		// Token: 0x0600437E RID: 17278 RVA: 0x001DA913 File Offset: 0x001D8B13
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiFloatConfigByViewName.LogPair = null;
 			ConfigUiFloatConfigByViewName.HandleId = 0;
 		}
 
-		// Token: 0x06003E81 RID: 16001 RVA: 0x001BB58D File Offset: 0x001B978D
+		// Token: 0x0600437F RID: 17279 RVA: 0x001DA921 File Offset: 0x001D8B21
 		public static void Init()
 		{
 			ConfigUiFloatConfigByViewName.HandleId = ConfigCommon.InitDataStatement(ConfigUiFloatConfigByViewName.HandleId, "db_ui.db", "select BinData from `UiFloatConfig` where ViewName = ?");
 		}
 
-		// Token: 0x06003E82 RID: 16002 RVA: 0x001BB5A8 File Offset: 0x001B97A8
+		// Token: 0x06004380 RID: 17280 RVA: 0x001DA93C File Offset: 0x001D8B3C
 		public static UiFloatConfig? GetConfig(string p0ViewName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiFloatConfigByViewName.HandleId, ConfigUiFloatConfigByViewName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new UiFloatConfig?(rootAsUiFloatConfig);
 		}
 
-		// Token: 0x040048B7 RID: 18615
+		// Token: 0x04004E8A RID: 20106
 		private const string DB = "db_ui.db";
 
-		// Token: 0x040048B8 RID: 18616
+		// Token: 0x04004E8B RID: 20107
 		private const string FILE = "u.UiFloat层级配置.csv";
 
-		// Token: 0x040048B9 RID: 18617
+		// Token: 0x04004E8C RID: 20108
 		private const string TABLE = "UiFloatConfig";
 
-		// Token: 0x040048BA RID: 18618
+		// Token: 0x04004E8D RID: 20109
 		private const string COMMAND = "select BinData from `UiFloatConfig` where ViewName = ?";
 
-		// Token: 0x040048BB RID: 18619
+		// Token: 0x04004E8E RID: 20110
 		private const string KEY_PREFIX = "UiFloatConfigByViewName";
 
-		// Token: 0x040048BC RID: 18620
+		// Token: 0x04004E8F RID: 20111
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048BD RID: 18621
+		// Token: 0x04004E90 RID: 20112
 		private static int HandleId;
 	}
 }

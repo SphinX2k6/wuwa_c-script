@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A0F RID: 18959
+	// Token: 0x02004ECF RID: 20175
 	public struct ICheckEntityPosition : IFlatbufferObject
 	{
-		// Token: 0x17008939 RID: 35129
-		// (get) Token: 0x0601DA7E RID: 121470 RVA: 0x0042C4B4 File Offset: 0x0042A6B4
+		// Token: 0x17009009 RID: 36873
+		// (get) Token: 0x0601F4F1 RID: 128241 RVA: 0x0045D120 File Offset: 0x0045B320
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DA7F RID: 121471 RVA: 0x0042C4C1 File Offset: 0x0042A6C1
+		// Token: 0x0601F4F2 RID: 128242 RVA: 0x0045D12D File Offset: 0x0045B32D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DA80 RID: 121472 RVA: 0x0042C4C8 File Offset: 0x0042A6C8
+		// Token: 0x0601F4F3 RID: 128243 RVA: 0x0045D134 File Offset: 0x0045B334
 		public static ICheckEntityPosition GetRootAsICheckEntityPosition(ByteBuffer _bb)
 		{
 			return ICheckEntityPosition.GetRootAsICheckEntityPosition(_bb, default(ICheckEntityPosition));
 		}
 
-		// Token: 0x0601DA81 RID: 121473 RVA: 0x0042C4E4 File Offset: 0x0042A6E4
+		// Token: 0x0601F4F4 RID: 128244 RVA: 0x0045D150 File Offset: 0x0045B350
 		public static ICheckEntityPosition GetRootAsICheckEntityPosition(ByteBuffer _bb, ICheckEntityPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DA82 RID: 121474 RVA: 0x0042C501 File Offset: 0x0042A701
+		// Token: 0x0601F4F5 RID: 128245 RVA: 0x0045D16D File Offset: 0x0045B36D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DA83 RID: 121475 RVA: 0x0042C510 File Offset: 0x0042A710
+		// Token: 0x0601F4F6 RID: 128246 RVA: 0x0045D17C File Offset: 0x0045B37C
 		public ICheckEntityPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700893A RID: 35130
-		// (get) Token: 0x0601DA84 RID: 121476 RVA: 0x0042C520 File Offset: 0x0042A720
+		// Token: 0x1700900A RID: 36874
+		// (get) Token: 0x0601F4F7 RID: 128247 RVA: 0x0045D18C File Offset: 0x0045B38C
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700893B RID: 35131
-		// (get) Token: 0x0601DA85 RID: 121477 RVA: 0x0042C55C File Offset: 0x0042A75C
+		// Token: 0x1700900B RID: 36875
+		// (get) Token: 0x0601F4F8 RID: 128248 RVA: 0x0045D1C8 File Offset: 0x0045B3C8
 		public int EntityId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700893C RID: 35132
-		// (get) Token: 0x0601DA86 RID: 121478 RVA: 0x0042C598 File Offset: 0x0042A798
+		// Token: 0x1700900C RID: 36876
+		// (get) Token: 0x0601F4F9 RID: 128249 RVA: 0x0045D204 File Offset: 0x0045B404
 		public TRange RangeType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DA87 RID: 121479 RVA: 0x0042C5D4 File Offset: 0x0042A7D4
+		// Token: 0x0601F4FA RID: 128250 RVA: 0x0045D240 File Offset: 0x0045B440
 		public TTable? Range<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,26 +104,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601DA88 RID: 121480 RVA: 0x0042C61C File Offset: 0x0042A81C
+		// Token: 0x0601F4FB RID: 128251 RVA: 0x0045D288 File Offset: 0x0045B488
 		public IBoxRange RangeAsIBoxRange()
 		{
 			return this.Range<IBoxRange>().Value;
 		}
 
-		// Token: 0x0601DA89 RID: 121481 RVA: 0x0042C638 File Offset: 0x0042A838
+		// Token: 0x0601F4FC RID: 128252 RVA: 0x0045D2A4 File Offset: 0x0045B4A4
 		public ICircleRange RangeAsICircleRange()
 		{
 			return this.Range<ICircleRange>().Value;
 		}
 
-		// Token: 0x0601DA8A RID: 121482 RVA: 0x0042C654 File Offset: 0x0042A854
+		// Token: 0x0601F4FD RID: 128253 RVA: 0x0045D2C0 File Offset: 0x0045B4C0
 		public ICylinder RangeAsICylinder()
 		{
 			return this.Range<ICylinder>().Value;
 		}
 
-		// Token: 0x1700893D RID: 35133
-		// (get) Token: 0x0601DA8B RID: 121483 RVA: 0x0042C670 File Offset: 0x0042A870
+		// Token: 0x1700900D RID: 36877
+		// (get) Token: 0x0601F4FE RID: 128254 RVA: 0x0045D2DC File Offset: 0x0045B4DC
 		public bool IsOnRange
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DA8C RID: 121484 RVA: 0x0042C6B0 File Offset: 0x0042A8B0
+		// Token: 0x0601F4FF RID: 128255 RVA: 0x0045D31C File Offset: 0x0045B51C
 		public static Offset<ICheckEntityPosition> CreateICheckEntityPosition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int EntityId = 0, TRange Range_type = TRange.NONE, int RangeOffset = 0, bool IsOnRange = false)
 		{
 			builder.StartTable(5);
@@ -145,49 +145,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckEntityPosition.EndICheckEntityPosition(builder);
 		}
 
-		// Token: 0x0601DA8D RID: 121485 RVA: 0x0042C6E4 File Offset: 0x0042A8E4
+		// Token: 0x0601F500 RID: 128256 RVA: 0x0045D350 File Offset: 0x0045B550
 		public static void StartICheckEntityPosition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601DA8E RID: 121486 RVA: 0x0042C6ED File Offset: 0x0042A8ED
+		// Token: 0x0601F501 RID: 128257 RVA: 0x0045D359 File Offset: 0x0045B559
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DA8F RID: 121487 RVA: 0x0042C6F8 File Offset: 0x0042A8F8
+		// Token: 0x0601F502 RID: 128258 RVA: 0x0045D364 File Offset: 0x0045B564
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0601DA90 RID: 121488 RVA: 0x0042C703 File Offset: 0x0042A903
+		// Token: 0x0601F503 RID: 128259 RVA: 0x0045D36F File Offset: 0x0045B56F
 		public static void AddRangeType(FlatBufferBuilder builder, TRange rangeType)
 		{
 			builder.AddByte(2, (byte)rangeType, 0);
 		}
 
-		// Token: 0x0601DA91 RID: 121489 RVA: 0x0042C70E File Offset: 0x0042A90E
+		// Token: 0x0601F504 RID: 128260 RVA: 0x0045D37A File Offset: 0x0045B57A
 		public static void AddRange(FlatBufferBuilder builder, int rangeOffset)
 		{
 			builder.AddOffset(3, rangeOffset, 0);
 		}
 
-		// Token: 0x0601DA92 RID: 121490 RVA: 0x0042C719 File Offset: 0x0042A919
+		// Token: 0x0601F505 RID: 128261 RVA: 0x0045D385 File Offset: 0x0045B585
 		public static void AddIsOnRange(FlatBufferBuilder builder, bool isOnRange)
 		{
 			builder.AddBool(4, isOnRange, false);
 		}
 
-		// Token: 0x0601DA93 RID: 121491 RVA: 0x0042C724 File Offset: 0x0042A924
+		// Token: 0x0601F506 RID: 128262 RVA: 0x0045D390 File Offset: 0x0045B590
 		public static Offset<ICheckEntityPosition> EndICheckEntityPosition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckEntityPosition>(builder.EndTable());
 		}
 
-		// Token: 0x0601DA94 RID: 121492 RVA: 0x0042C734 File Offset: 0x0042A934
+		// Token: 0x0601F507 RID: 128263 RVA: 0x0045D3A0 File Offset: 0x0045B5A0
 		public ICheckEntityPositionT UnPack()
 		{
 			ICheckEntityPositionT checkEntityPositionT = new ICheckEntityPositionT();
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkEntityPositionT;
 		}
 
-		// Token: 0x0601DA95 RID: 121493 RVA: 0x0042C750 File Offset: 0x0042A950
+		// Token: 0x0601F508 RID: 128264 RVA: 0x0045D3BC File Offset: 0x0045B5BC
 		public void UnPackTo(ICheckEntityPositionT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsOnRange = this.IsOnRange;
 		}
 
-		// Token: 0x0601DA96 RID: 121494 RVA: 0x0042C864 File Offset: 0x0042AA64
+		// Token: 0x0601F509 RID: 128265 RVA: 0x0045D4D0 File Offset: 0x0045B6D0
 		public static Offset<ICheckEntityPosition> Pack(FlatBufferBuilder builder, ICheckEntityPositionT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckEntityPosition.CreateICheckEntityPosition(builder, _o.Type, _o.EntityId, range_type, rangeOffset, _o.IsOnRange);
 		}
 
-		// Token: 0x0400D257 RID: 53847
+		// Token: 0x0400DD2B RID: 56619
 		private Table __p;
 	}
 }

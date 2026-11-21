@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.ItemDeliver;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D0 RID: 22992
+	// Token: 0x020049A9 RID: 18857
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeliverBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A493 RID: 238739 RVA: 0x00DDC447 File Offset: 0x00DDA647
+		// Token: 0x0602F3BA RID: 193466 RVA: 0x00D2BC27 File Offset: 0x00D29E27
 		public DeliverBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B99 RID: 35737
-		// (get) Token: 0x0603A494 RID: 238740 RVA: 0x00DDC466 File Offset: 0x00DDA666
+		// Token: 0x17005F66 RID: 24422
+		// (get) Token: 0x0602F3BB RID: 193467 RVA: 0x00D2BC46 File Offset: 0x00D29E46
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A495 RID: 238741 RVA: 0x00DDC470 File Offset: 0x00DDA670
+		// Token: 0x0602F3BC RID: 193468 RVA: 0x00D2BC50 File Offset: 0x00D29E50
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A496 RID: 238742 RVA: 0x00DDC562 File Offset: 0x00DDA762
+		// Token: 0x0602F3BD RID: 193469 RVA: 0x00D2BD42 File Offset: 0x00D29F42
 		protected override void OnDestroy()
 		{
 			this.InnerInteractOption = null;
@@ -71,21 +71,21 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			base.OnDestroy();
 		}
 
-		// Token: 0x0603A497 RID: 238743 RVA: 0x00DDC578 File Offset: 0x00DDA778
+		// Token: 0x0602F3BE RID: 193470 RVA: 0x00D2BD58 File Offset: 0x00D29F58
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
 			EventSystem.Instance.Add<string>(EEventName.DynamicInteractServerResponse, new Action<string>(this.OnDynamicInteract));
 		}
 
-		// Token: 0x0603A498 RID: 238744 RVA: 0x00DDC59C File Offset: 0x00DDA79C
+		// Token: 0x0602F3BF RID: 193471 RVA: 0x00D2BD7C File Offset: 0x00D29F7C
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			EventSystem.Instance.Remove<string>(EEventName.DynamicInteractServerResponse, new Action<string>(this.OnDynamicInteract));
 			base.RemoveEventsOnChildQuestEnd();
 		}
 
-		// Token: 0x0603A499 RID: 238745 RVA: 0x00DDC5C0 File Offset: 0x00DDA7C0
+		// Token: 0x0602F3C0 RID: 193472 RVA: 0x00D2BDA0 File Offset: 0x00D29FA0
 		private void OnDynamicInteract(string optionGuid)
 		{
 			if (this.InnerInteractOption == null || this.InnerInteractOption.Option.Guid != optionGuid)
@@ -116,14 +116,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E62D RID: 124461
+		// Token: 0x040190CC RID: 102604
 		private int InnerInteractEntityDataId;
 
-		// Token: 0x0401E62E RID: 124462
+		// Token: 0x040190CD RID: 102605
 		[Nullable(2)]
 		private IAddInteractOption InnerInteractOption;
 
-		// Token: 0x0401E62F RID: 124463
+		// Token: 0x040190CE RID: 102606
 		[Nullable(new byte[]
 		{
 			2,
@@ -131,21 +131,21 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 		})]
 		private List<IHandInItem> HandInItems;
 
-		// Token: 0x0401E630 RID: 124464
+		// Token: 0x040190CF RID: 102607
 		[Nullable(2)]
 		private IHandInGroup HandInGroup;
 
-		// Token: 0x0401E631 RID: 124465
+		// Token: 0x040190D0 RID: 102608
 		private string DescText = "";
 
-		// Token: 0x0401E632 RID: 124466
+		// Token: 0x040190D1 RID: 102609
 		[Nullable(2)]
 		private string TitleText;
 
-		// Token: 0x0401E633 RID: 124467
+		// Token: 0x040190D2 RID: 102610
 		public bool CanRepeat;
 
-		// Token: 0x0401E634 RID: 124468
+		// Token: 0x040190D3 RID: 102611
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 	}
 }

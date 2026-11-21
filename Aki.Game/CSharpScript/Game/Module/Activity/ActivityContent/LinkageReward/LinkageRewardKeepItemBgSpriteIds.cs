@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006552 RID: 25938
+	// Token: 0x020054D0 RID: 21712
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class LinkageRewardKeepItemBgSpriteIds
 	{
-		// Token: 0x04021E44 RID: 138820
+		// Token: 0x0401C775 RID: 116597
 		public const string Lock = "SP_CyberWelfareItemABgLock";
 
-		// Token: 0x04021E45 RID: 138821
+		// Token: 0x0401C776 RID: 116598
 		public const string Select = "SP_CyberWelfareItemABgSelect";
 
-		// Token: 0x04021E46 RID: 138822
+		// Token: 0x0401C777 RID: 116599
 		public const string Finish = "SP_CyberWelfareItemABgFinish";
 	}
 }

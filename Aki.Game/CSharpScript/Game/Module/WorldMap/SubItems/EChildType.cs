@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubItems
 {
-	// Token: 0x0200484F RID: 18511
+	// Token: 0x02003780 RID: 14208
 	public static class EChildType
 	{
-		// Token: 0x0401A07A RID: 106618
+		// Token: 0x0401472E RID: 83758
 		public const int SpriteIcon = 0;
 
-		// Token: 0x0401A07B RID: 106619
+		// Token: 0x0401472F RID: 83759
 		public const int TextName = 1;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003B8 RID: 952
+	// Token: 0x020003CE RID: 974
 	public class ConfigGuideDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001657 RID: 5719 RVA: 0x000D7D54 File Offset: 0x000D5F54
+		// Token: 0x060016DB RID: 5851 RVA: 0x000DE4A8 File Offset: 0x000DC6A8
 		static ConfigGuideDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuideDataById.CreateStaticDefaultValue), new Action(ConfigGuideDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001658 RID: 5720 RVA: 0x000D7D74 File Offset: 0x000D5F74
+		// Token: 0x060016DC RID: 5852 RVA: 0x000DE4C8 File Offset: 0x000DC6C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuideDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001659 RID: 5721 RVA: 0x000D7DF3 File Offset: 0x000D5FF3
+		// Token: 0x060016DD RID: 5853 RVA: 0x000DE547 File Offset: 0x000DC747
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuideDataById.LogPair = null;
 			ConfigGuideDataById.HandleId = 0;
 		}
 
-		// Token: 0x0600165A RID: 5722 RVA: 0x000D7E01 File Offset: 0x000D6001
+		// Token: 0x060016DE RID: 5854 RVA: 0x000DE555 File Offset: 0x000DC755
 		public static void Init()
 		{
 			ConfigGuideDataById.HandleId = ConfigCommon.InitDataStatement(ConfigGuideDataById.HandleId, "db_adventure_detect.db", "select BinData from `GuideData` where Id=?");
 		}
 
-		// Token: 0x0600165B RID: 5723 RVA: 0x000D7E1C File Offset: 0x000D601C
+		// Token: 0x060016DF RID: 5855 RVA: 0x000DE570 File Offset: 0x000DC770
 		public static GuideData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuideDataById.HandleId, ConfigGuideDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuideData?(rootAsGuideData);
 		}
 
-		// Token: 0x040019EC RID: 6636
+		// Token: 0x04001A86 RID: 6790
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x040019ED RID: 6637
+		// Token: 0x04001A87 RID: 6791
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x040019EE RID: 6638
+		// Token: 0x04001A88 RID: 6792
 		private const string TABLE = "GuideData";
 
-		// Token: 0x040019EF RID: 6639
+		// Token: 0x04001A89 RID: 6793
 		private const string COMMAND = "select BinData from `GuideData` where Id=?";
 
-		// Token: 0x040019F0 RID: 6640
+		// Token: 0x04001A8A RID: 6794
 		private const string KEY_PREFIX = "GuideDataById";
 
-		// Token: 0x040019F1 RID: 6641
+		// Token: 0x04001A8B RID: 6795
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040019F2 RID: 6642
+		// Token: 0x04001A8C RID: 6796
 		private static int HandleId;
 	}
 }

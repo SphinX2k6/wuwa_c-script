@@ -4,14 +4,14 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005099 RID: 20633
+	// Token: 0x02004069 RID: 16489
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActionRecord
 	{
-		// Token: 0x17008088 RID: 32904
-		// (get) Token: 0x06034E0E RID: 216590 RVA: 0x00C82BBA File Offset: 0x00C80DBA
-		// (set) Token: 0x06034E0F RID: 216591 RVA: 0x00C82BC2 File Offset: 0x00C80DC2
+		// Token: 0x17005448 RID: 21576
+		// (get) Token: 0x06029D07 RID: 171271 RVA: 0x00BCFDDA File Offset: 0x00BCDFDA
+		// (set) Token: 0x06029D08 RID: 171272 RVA: 0x00BCFDE2 File Offset: 0x00BCDFE2
 		public ActionInfo ActionInfo { get; set; }
 	}
 }

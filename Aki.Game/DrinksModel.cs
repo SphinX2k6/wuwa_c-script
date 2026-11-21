@@ -8,28 +8,28 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
 using CSharpScript.Game.Module.ActivityGamePlay.Drinks;
 using CSharpScript.Game.Module.Plot.Flow;
-using CSharpScript.Game.Module.UiCameraAnimation;
+using CSharpScript.Game.Module.UiCamera;
 using UnrealEngine;
 
-// Token: 0x02000F49 RID: 3913
+// Token: 0x020003FE RID: 1022
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class DrinksModel : ModelBase
 {
-	// Token: 0x060063C2 RID: 25538 RVA: 0x00139C49 File Offset: 0x00137E49
+	// Token: 0x0600375A RID: 14170 RVA: 0x00142515 File Offset: 0x00140715
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060063C3 RID: 25539 RVA: 0x00139C4C File Offset: 0x00137E4C
+	// Token: 0x0600375B RID: 14171 RVA: 0x00142518 File Offset: 0x00140718
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060063C4 RID: 25540 RVA: 0x00139C50 File Offset: 0x00137E50
+	// Token: 0x0600375C RID: 14172 RVA: 0x0014251C File Offset: 0x0014071C
 	public bool CheckLevelIsUnlock(int configId)
 	{
 		int unlockLevelConfigId = DrinksConfig.Instance.GetInviteConfig(configId).Value.UnlockLevelConfigId;
@@ -46,7 +46,7 @@ public class DrinksModel : ModelBase
 		return drinksProgressMap.ContainsKey(inviteConfig.Value.RoleId) && drinksProgressMap[inviteConfig.Value.RoleId].FirstPass;
 	}
 
-	// Token: 0x060063C5 RID: 25541 RVA: 0x00139CDC File Offset: 0x00137EDC
+	// Token: 0x0600375D RID: 14173 RVA: 0x001425A8 File Offset: 0x001407A8
 	public void SetUnlockConfig(int roleId, bool? isFirstPass, bool? isBest)
 	{
 		Dictionary<int, IDrinksMixRoleInfo> drinksProgressMap = SpringManorModel.Instance.ActivityData.GetDrinksProgressMap();
@@ -72,7 +72,7 @@ public class DrinksModel : ModelBase
 		drinksProgressMap[roleId] = drinksMixRoleInfo;
 	}
 
-	// Token: 0x060063C6 RID: 25542 RVA: 0x00139DA0 File Offset: 0x00137FA0
+	// Token: 0x0600375E RID: 14174 RVA: 0x0014266C File Offset: 0x0014086C
 	public void SetRewardReceived(int roleId)
 	{
 		IDrinksMixRoleInfo drinksMixRoleInfo;
@@ -83,7 +83,7 @@ public class DrinksModel : ModelBase
 		drinksMixRoleInfo.RewardGet = true;
 	}
 
-	// Token: 0x060063C7 RID: 25543 RVA: 0x00139DD0 File Offset: 0x00137FD0
+	// Token: 0x0600375F RID: 14175 RVA: 0x0014269C File Offset: 0x0014089C
 	public void InitGame(int roleId, int? requireId = null)
 	{
 		if (this.SoftDrinkMap.Count == 0)
@@ -97,31 +97,31 @@ public class DrinksModel : ModelBase
 		FlowController.Instance.StartFlow(value.ScriptName, value.ScriptId, value.ScriptStateId, null, 0L, false, false, false, null);
 	}
 
-	// Token: 0x060063C8 RID: 25544 RVA: 0x00139E4A File Offset: 0x0013804A
+	// Token: 0x06003760 RID: 14176 RVA: 0x00142716 File Offset: 0x00140916
 	public DrinksResultInfo GetCurrentPlayData()
 	{
 		return this.GamePlayData.GetCurData();
 	}
 
-	// Token: 0x060063C9 RID: 25545 RVA: 0x00139E57 File Offset: 0x00138057
+	// Token: 0x06003761 RID: 14177 RVA: 0x00142723 File Offset: 0x00140923
 	public int[] GetCurrentFlavorValue()
 	{
 		return this.GamePlayData.GetFlavorValue();
 	}
 
-	// Token: 0x060063CA RID: 25546 RVA: 0x00139E64 File Offset: 0x00138064
+	// Token: 0x06003762 RID: 14178 RVA: 0x00142730 File Offset: 0x00140930
 	public int[] GetCurrentFlavorValueForce()
 	{
 		return this.GamePlayData.GetCurFlavor(true);
 	}
 
-	// Token: 0x060063CB RID: 25547 RVA: 0x00139E72 File Offset: 0x00138072
+	// Token: 0x06003763 RID: 14179 RVA: 0x0014273E File Offset: 0x0014093E
 	public int[] GetCurrentFlavorValueOnStart()
 	{
 		return this.GamePlayData.UpdateFlavorValue();
 	}
 
-	// Token: 0x060063CC RID: 25548 RVA: 0x00139E80 File Offset: 0x00138080
+	// Token: 0x06003764 RID: 14180 RVA: 0x0014274C File Offset: 0x0014094C
 	public void RegisterProxy(bool isCreated)
 	{
 		if (!isCreated)
@@ -136,19 +136,19 @@ public class DrinksModel : ModelBase
 		this.DrinksProxy = new DrinksPlayProxy();
 	}
 
-	// Token: 0x060063CD RID: 25549 RVA: 0x00139ECA File Offset: 0x001380CA
+	// Token: 0x06003765 RID: 14181 RVA: 0x00142796 File Offset: 0x00140996
 	public DrinksPlayProxy GetProxy()
 	{
 		return this.DrinksProxy;
 	}
 
-	// Token: 0x060063CE RID: 25550 RVA: 0x00139ED2 File Offset: 0x001380D2
+	// Token: 0x06003766 RID: 14182 RVA: 0x0014279E File Offset: 0x0014099E
 	public DrinksSceneController GetSceneController()
 	{
 		return this.SceneController;
 	}
 
-	// Token: 0x060063CF RID: 25551 RVA: 0x00139EDC File Offset: 0x001380DC
+	// Token: 0x06003767 RID: 14183 RVA: 0x001427A8 File Offset: 0x001409A8
 	protected void InitSoftDrink()
 	{
 		this.SoftDrinkMap.Clear();
@@ -164,7 +164,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063D0 RID: 25552 RVA: 0x00139FA8 File Offset: 0x001381A8
+	// Token: 0x06003768 RID: 14184 RVA: 0x00142874 File Offset: 0x00140A74
 	public DrinksSoftDrinkData GetDrinksConfigById(int id)
 	{
 		if (this.SoftDrinkMap.Count == 0)
@@ -174,20 +174,20 @@ public class DrinksModel : ModelBase
 		return this.SoftDrinkMap[id];
 	}
 
-	// Token: 0x060063D1 RID: 25553 RVA: 0x00139FC9 File Offset: 0x001381C9
+	// Token: 0x06003769 RID: 14185 RVA: 0x00142895 File Offset: 0x00140A95
 	public Dictionary<int, int[]> GetDrinksFlavorRange(int drinksId)
 	{
 		return this.SoftDrinkMap[drinksId].GetFlavorRange();
 	}
 
-	// Token: 0x060063D2 RID: 25554 RVA: 0x00139FDC File Offset: 0x001381DC
+	// Token: 0x0600376A RID: 14186 RVA: 0x001428A8 File Offset: 0x00140AA8
 	public DrinksSoftDrinkData GetDrinksByBaseId(int id)
 	{
 		int key = this.SoftDrinkBaseMap[id];
 		return this.SoftDrinkMap[key];
 	}
 
-	// Token: 0x060063D3 RID: 25555 RVA: 0x0013A004 File Offset: 0x00138204
+	// Token: 0x0600376B RID: 14187 RVA: 0x001428D0 File Offset: 0x00140AD0
 	public void UpdateDrinkBase(int drinkId, bool isEnd = false)
 	{
 		EDrinksPlayStep curStep = this.GetCurStep();
@@ -221,7 +221,7 @@ public class DrinksModel : ModelBase
 		drinksProxy3.OnEnterDrinkBaseQTE();
 	}
 
-	// Token: 0x060063D4 RID: 25556 RVA: 0x0013A094 File Offset: 0x00138294
+	// Token: 0x0600376C RID: 14188 RVA: 0x00142960 File Offset: 0x00140B60
 	public void OnDrinkBaseQTEEnd(int drinkId)
 	{
 		EDrinksPlayStep curStep = this.GetCurStep();
@@ -239,7 +239,7 @@ public class DrinksModel : ModelBase
 		EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "MakeDrinkLikeChange");
 	}
 
-	// Token: 0x060063D5 RID: 25557 RVA: 0x0013A0EC File Offset: 0x001382EC
+	// Token: 0x0600376D RID: 14189 RVA: 0x001429B8 File Offset: 0x00140BB8
 	public void UpdateBatching(HashSet<int> batching, bool isEnd = false)
 	{
 		IReadOnlyList<int> batching2 = this.GetCurrentPlayData().Batching;
@@ -327,7 +327,7 @@ public class DrinksModel : ModelBase
 		drinksProxy5.OnLevelSequenceBegin();
 	}
 
-	// Token: 0x060063D6 RID: 25558 RVA: 0x0013A2AC File Offset: 0x001384AC
+	// Token: 0x0600376E RID: 14190 RVA: 0x00142B78 File Offset: 0x00140D78
 	public void UpdateOrnament(int ornamentId, bool isEnd = false)
 	{
 		this.GamePlayData.UpdateOrnament(ornamentId);
@@ -355,7 +355,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063D7 RID: 25559 RVA: 0x0013A327 File Offset: 0x00138527
+	// Token: 0x0600376F RID: 14191 RVA: 0x00142BF3 File Offset: 0x00140DF3
 	public void FinishMixing()
 	{
 		this.GetSceneController().PlayShowDrinks();
@@ -367,19 +367,19 @@ public class DrinksModel : ModelBase
 		drinksProxy.OnFinishMixing();
 	}
 
-	// Token: 0x060063D8 RID: 25560 RVA: 0x0013A344 File Offset: 0x00138544
+	// Token: 0x06003770 RID: 14192 RVA: 0x00142C10 File Offset: 0x00140E10
 	public EDrinksPlayStep GetCurStep()
 	{
 		return this.GamePlayData.GetCurStep();
 	}
 
-	// Token: 0x060063D9 RID: 25561 RVA: 0x0013A351 File Offset: 0x00138551
+	// Token: 0x06003771 RID: 14193 RVA: 0x00142C1D File Offset: 0x00140E1D
 	public int GetRoleId()
 	{
 		return this.GamePlayData.RoleId;
 	}
 
-	// Token: 0x060063DA RID: 25562 RVA: 0x0013A360 File Offset: 0x00138560
+	// Token: 0x06003772 RID: 14194 RVA: 0x00142C2C File Offset: 0x00140E2C
 	public void EnterNextStep()
 	{
 		this.GamePlayData.EnterNextStep();
@@ -403,7 +403,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063DB RID: 25563 RVA: 0x0013A3C0 File Offset: 0x001385C0
+	// Token: 0x06003773 RID: 14195 RVA: 0x00142C8C File Offset: 0x00140E8C
 	public void BackToPrevStep()
 	{
 		EDrinksPlayStep curStep = this.GetCurStep();
@@ -425,7 +425,7 @@ public class DrinksModel : ModelBase
 		}, (float)num, null, null, true, 1f);
 	}
 
-	// Token: 0x060063DC RID: 25564 RVA: 0x0013A410 File Offset: 0x00138610
+	// Token: 0x06003774 RID: 14196 RVA: 0x00142CDC File Offset: 0x00140EDC
 	public void RestartGame()
 	{
 		this.GamePlayData.RestartGame();
@@ -446,7 +446,7 @@ public class DrinksModel : ModelBase
 		}, (float)num, null, null, true, 1f);
 	}
 
-	// Token: 0x060063DD RID: 25565 RVA: 0x0013A458 File Offset: 0x00138658
+	// Token: 0x06003775 RID: 14197 RVA: 0x00142D24 File Offset: 0x00140F24
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -524,7 +524,7 @@ public class DrinksModel : ModelBase
 		return new ValueTuple<int, List<IDrinksRequireInfo>>(num, item2);
 	}
 
-	// Token: 0x060063DE RID: 25566 RVA: 0x0013A670 File Offset: 0x00138870
+	// Token: 0x06003776 RID: 14198 RVA: 0x00142F3C File Offset: 0x0014113C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -564,7 +564,7 @@ public class DrinksModel : ModelBase
 		return new ValueTuple<int, List<IDrinksRequireInfo>>(num, list);
 	}
 
-	// Token: 0x060063DF RID: 25567 RVA: 0x0013A79C File Offset: 0x0013899C
+	// Token: 0x06003777 RID: 14199 RVA: 0x00143068 File Offset: 0x00141268
 	private int GetLikenessListValue(int[] likeIdList)
 	{
 		int num = 0;
@@ -647,7 +647,7 @@ public class DrinksModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060063E0 RID: 25568 RVA: 0x0013AAA4 File Offset: 0x00138CA4
+	// Token: 0x06003778 RID: 14200 RVA: 0x00143370 File Offset: 0x00141570
 	public DrinksDrinkMix? GetMixConfig(IReadOnlyList<int> data)
 	{
 		if (this.SoftDrinkMap.Count == 0)
@@ -676,7 +676,7 @@ public class DrinksModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060063E1 RID: 25569 RVA: 0x0013ABD4 File Offset: 0x00138DD4
+	// Token: 0x06003779 RID: 14201 RVA: 0x001434A0 File Offset: 0x001416A0
 	public string GetCameraNameByLevelId(int configId)
 	{
 		DrinksRoleInvite? inviteConfig = DrinksConfig.Instance.GetInviteConfig(configId);
@@ -685,7 +685,7 @@ public class DrinksModel : ModelBase
 			return null;
 		}
 		int cameraId = inviteConfig.Value.CameraId;
-		UiCameraMapping? uiCameraMappingConfigById = UiCameraAnimationConfig.Instance.GetUiCameraMappingConfigById(cameraId);
+		UiCameraMapping? uiCameraMappingConfigById = UiCameraConfig.Instance.GetUiCameraMappingConfigById(cameraId);
 		if (uiCameraMappingConfigById == null)
 		{
 			return null;
@@ -693,7 +693,7 @@ public class DrinksModel : ModelBase
 		return uiCameraMappingConfigById.GetValueOrDefault().ViewName;
 	}
 
-	// Token: 0x060063E2 RID: 25570 RVA: 0x0013AC30 File Offset: 0x00138E30
+	// Token: 0x0600377A RID: 14202 RVA: 0x001434FC File Offset: 0x001416FC
 	public string GetCameraSettingNameByLevelId(int configId)
 	{
 		DrinksRoleInvite? inviteConfig = DrinksConfig.Instance.GetInviteConfig(configId);
@@ -702,7 +702,7 @@ public class DrinksModel : ModelBase
 			return null;
 		}
 		int cameraId = inviteConfig.Value.CameraId;
-		UiCameraMapping? uiCameraMappingConfigById = UiCameraAnimationConfig.Instance.GetUiCameraMappingConfigById(cameraId);
+		UiCameraMapping? uiCameraMappingConfigById = UiCameraConfig.Instance.GetUiCameraMappingConfigById(cameraId);
 		if (uiCameraMappingConfigById == null)
 		{
 			return null;
@@ -710,14 +710,14 @@ public class DrinksModel : ModelBase
 		return uiCameraMappingConfigById.GetValueOrDefault().DefaultUiCameraSettingsName;
 	}
 
-	// Token: 0x060063E3 RID: 25571 RVA: 0x0013AC8C File Offset: 0x00138E8C
+	// Token: 0x0600377B RID: 14203 RVA: 0x00143558 File Offset: 0x00141758
 	public int GetLikenessMax()
 	{
 		int requireId = this.GetCurrentPlayData().RequireId;
 		return DrinksConfig.Instance.GetRequireList(requireId).Value.ScoreMax;
 	}
 
-	// Token: 0x060063E4 RID: 25572 RVA: 0x0013ACC0 File Offset: 0x00138EC0
+	// Token: 0x0600377C RID: 14204 RVA: 0x0014358C File Offset: 0x0014178C
 	public bool GetSelectedEndMap()
 	{
 		EDrinksPlayStep curStep = this.GetCurStep();
@@ -725,7 +725,7 @@ public class DrinksModel : ModelBase
 		return this.GamePlayData.SelectedEndMap.TryGetValue(curStep, out flag) && flag;
 	}
 
-	// Token: 0x060063E5 RID: 25573 RVA: 0x0013ACEC File Offset: 0x00138EEC
+	// Token: 0x0600377D RID: 14205 RVA: 0x001435B8 File Offset: 0x001417B8
 	public void GmTestCode(DrinksResultInfo data, int roleId)
 	{
 		foreach (EDrinksPlayStep key in new List<EDrinksPlayStep>(this.GamePlayData.SelectedEndMap.Keys))
@@ -743,7 +743,7 @@ public class DrinksModel : ModelBase
 		this.GamePlayData.UpdateFlavorValue();
 	}
 
-	// Token: 0x060063E6 RID: 25574 RVA: 0x0013ADB0 File Offset: 0x00138FB0
+	// Token: 0x0600377E RID: 14206 RVA: 0x0014367C File Offset: 0x0014187C
 	public EDrinksPreferenceLevel GetCurPreferenceLevel()
 	{
 		int item = this.GetRoleState().Item1;
@@ -759,7 +759,7 @@ public class DrinksModel : ModelBase
 		return EDrinksPreferenceLevel.Like;
 	}
 
-	// Token: 0x060063E7 RID: 25575 RVA: 0x0013ADE0 File Offset: 0x00138FE0
+	// Token: 0x0600377F RID: 14207 RVA: 0x001436AC File Offset: 0x001418AC
 	public bool CheckRedDot()
 	{
 		SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -807,7 +807,7 @@ public class DrinksModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060063E8 RID: 25576 RVA: 0x0013AF4C File Offset: 0x0013914C
+	// Token: 0x06003780 RID: 14208 RVA: 0x00143818 File Offset: 0x00141A18
 	public bool CheckIsDrinksEntity(int entityId)
 	{
 		this.InitDrinksEntity();
@@ -824,7 +824,7 @@ public class DrinksModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060063E9 RID: 25577 RVA: 0x0013AFAC File Offset: 0x001391AC
+	// Token: 0x06003781 RID: 14209 RVA: 0x00143878 File Offset: 0x00141A78
 	public void HideNpcByEntityId(int npcId)
 	{
 		if (!this.CheckIsDrinksEntity(npcId))
@@ -839,7 +839,7 @@ public class DrinksModel : ModelBase
 		CreatureController.Instance.SetEntityEnable(entityByPbDataId.Entity, false, "[Drinks] 隐藏调饮料NPC", false);
 	}
 
-	// Token: 0x060063EA RID: 25578 RVA: 0x0013B00C File Offset: 0x0013920C
+	// Token: 0x06003782 RID: 14210 RVA: 0x001438D8 File Offset: 0x00141AD8
 	public void HideMainQuestNpcByEntityId()
 	{
 		if (!this.CheckIsDrinksEntity(this.DrinksEntityRemaind))
@@ -855,7 +855,7 @@ public class DrinksModel : ModelBase
 		CreatureController.Instance.SetEntityEnable(entityByPbDataId.Entity, false, "[Drinks] 隐藏主线调饮料NPC", false);
 	}
 
-	// Token: 0x060063EB RID: 25579 RVA: 0x0013B074 File Offset: 0x00139274
+	// Token: 0x06003783 RID: 14211 RVA: 0x00143940 File Offset: 0x00141B40
 	protected void InitDrinksEntity()
 	{
 		if (this.DrinksEntity.Count == 0)
@@ -867,7 +867,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063EC RID: 25580 RVA: 0x0013B0E4 File Offset: 0x001392E4
+	// Token: 0x06003784 RID: 14212 RVA: 0x001439B0 File Offset: 0x00141BB0
 	public void DoEntityLogicOnInvited()
 	{
 		int roleId = this.GetRoleId();
@@ -891,13 +891,13 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063ED RID: 25581 RVA: 0x0013B1A0 File Offset: 0x001393A0
+	// Token: 0x06003785 RID: 14213 RVA: 0x00143A6C File Offset: 0x00141C6C
 	protected void DoLogicOnInvitePlotFadeIn()
 	{
 		EventSystem.Instance.Add(EEventName.OnExecuteAfterSetPlotMode, new Action(this.OnFadeInStart));
 	}
 
-	// Token: 0x060063EE RID: 25582 RVA: 0x0013B1C0 File Offset: 0x001393C0
+	// Token: 0x06003786 RID: 14214 RVA: 0x00143A8C File Offset: 0x00141C8C
 	private void OnFadeInStart()
 	{
 		EventSystem.Instance.Remove(EEventName.OnExecuteAfterSetPlotMode, new Action(this.OnFadeInStart));
@@ -918,7 +918,7 @@ public class DrinksModel : ModelBase
 		}, 500f, null, null, true, 1f);
 	}
 
-	// Token: 0x060063EF RID: 25583 RVA: 0x0013B210 File Offset: 0x00139410
+	// Token: 0x06003787 RID: 14215 RVA: 0x00143ADC File Offset: 0x00141CDC
 	public unsafe void EntityShowOnOpenInviteView()
 	{
 		this.InitDrinksEntity();
@@ -950,7 +950,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063F0 RID: 25584 RVA: 0x0013B3F4 File Offset: 0x001395F4
+	// Token: 0x06003788 RID: 14216 RVA: 0x00143CC0 File Offset: 0x00141EC0
 	public void EntityHideOnCloseInviteView()
 	{
 		foreach (int num in this.DrinksEntity.Values)
@@ -966,7 +966,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063F1 RID: 25585 RVA: 0x0013B48C File Offset: 0x0013968C
+	// Token: 0x06003789 RID: 14217 RVA: 0x00143D58 File Offset: 0x00141F58
 	public void FlowSpecialRotationByRoleId(int roleId, bool isNormal)
 	{
 		this.InitDrinksEntity();
@@ -989,8 +989,8 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x170007AF RID: 1967
-	// (get) Token: 0x060063F2 RID: 25586 RVA: 0x0013B555 File Offset: 0x00139755
+	// Token: 0x170007D1 RID: 2001
+	// (get) Token: 0x0600378A RID: 14218 RVA: 0x00143E21 File Offset: 0x00142021
 	public static DrinksModel Instance
 	{
 		get
@@ -999,7 +999,7 @@ public class DrinksModel : ModelBase
 		}
 	}
 
-	// Token: 0x060063F3 RID: 25587 RVA: 0x0013B55C File Offset: 0x0013975C
+	// Token: 0x0600378B RID: 14219 RVA: 0x00143E28 File Offset: 0x00142028
 	public static DrinksModel GetOrCreateInstance()
 	{
 		if (DrinksModel._Instance == null)
@@ -1009,7 +1009,7 @@ public class DrinksModel : ModelBase
 		return DrinksModel._Instance;
 	}
 
-	// Token: 0x060063F4 RID: 25588 RVA: 0x0013B570 File Offset: 0x00139770
+	// Token: 0x0600378C RID: 14220 RVA: 0x00143E3C File Offset: 0x0014203C
 	public static bool CreateInstance()
 	{
 		if (DrinksModel._Instance != null)
@@ -1020,60 +1020,60 @@ public class DrinksModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060063F5 RID: 25589 RVA: 0x0013B586 File Offset: 0x00139786
+	// Token: 0x0600378D RID: 14221 RVA: 0x00143E52 File Offset: 0x00142052
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060063F6 RID: 25590 RVA: 0x0013B588 File Offset: 0x00139788
+	// Token: 0x0600378E RID: 14222 RVA: 0x00143E54 File Offset: 0x00142054
 	public static void ResetStaticDefaultValue()
 	{
 		DrinksModel._Instance = null;
 	}
 
-	// Token: 0x060063F7 RID: 25591 RVA: 0x0013B590 File Offset: 0x00139790
+	// Token: 0x0600378F RID: 14223 RVA: 0x00143E5C File Offset: 0x0014205C
 	static DrinksModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DrinksModel.CreateStaticDefaultValue), new Action(DrinksModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002D45 RID: 11589
+	// Token: 0x04002DDE RID: 11742
 	protected DrinksData GamePlayData = new DrinksData();
 
-	// Token: 0x04002D46 RID: 11590
+	// Token: 0x04002DDF RID: 11743
 	protected Dictionary<int, int> SoftDrinkBaseMap = new Dictionary<int, int>();
 
-	// Token: 0x04002D47 RID: 11591
+	// Token: 0x04002DE0 RID: 11744
 	protected Dictionary<int, DrinksSoftDrinkData> SoftDrinkMap = new Dictionary<int, DrinksSoftDrinkData>();
 
-	// Token: 0x04002D48 RID: 11592
+	// Token: 0x04002DE1 RID: 11745
 	protected Dictionary<int, int[]> MixMap = new Dictionary<int, int[]>();
 
-	// Token: 0x04002D49 RID: 11593
+	// Token: 0x04002DE2 RID: 11746
 	protected DrinksPlayProxy DrinksProxy;
 
-	// Token: 0x04002D4A RID: 11594
+	// Token: 0x04002DE3 RID: 11747
 	protected DrinksSceneController SceneController = new DrinksSceneController();
 
-	// Token: 0x04002D4B RID: 11595
+	// Token: 0x04002DE4 RID: 11748
 	public EDrinksGameplayOpenWay GameplayOpenWay = EDrinksGameplayOpenWay.FromView;
 
-	// Token: 0x04002D4C RID: 11596
+	// Token: 0x04002DE5 RID: 11749
 	public double GameplayStamp;
 
-	// Token: 0x04002D4D RID: 11597
+	// Token: 0x04002DE6 RID: 11750
 	public bool GameplayFirstInvite = true;
 
-	// Token: 0x04002D4E RID: 11598
+	// Token: 0x04002DE7 RID: 11751
 	public bool GameplayIsMainQuest;
 
-	// Token: 0x04002D4F RID: 11599
+	// Token: 0x04002DE8 RID: 11752
 	protected Dictionary<int, int> DrinksEntity = new Dictionary<int, int>();
 
-	// Token: 0x04002D50 RID: 11600
+	// Token: 0x04002DE9 RID: 11753
 	protected int DrinksEntityRemaind;
 
-	// Token: 0x04002D51 RID: 11601
+	// Token: 0x04002DEA RID: 11754
 	[Nullable(2)]
 	private static DrinksModel _Instance;
 }

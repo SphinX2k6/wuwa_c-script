@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002C64 RID: 11364
+// Token: 0x020021BD RID: 8637
 [NullableContext(1)]
 [Nullable(0)]
 public class UiTagComponent
 {
-	// Token: 0x06017BFB RID: 97275 RVA: 0x00609968 File Offset: 0x00607B68
+	// Token: 0x0601546D RID: 87149 RVA: 0x0062F410 File Offset: 0x0062D610
 	public void AddTagById(int tagId, params object[] args)
 	{
 		if (tagId == 0)
@@ -23,7 +23,7 @@ public class UiTagComponent
 		this.DispatchEvent(tagId, num, num + 1, args);
 	}
 
-	// Token: 0x06017BFC RID: 97276 RVA: 0x006099B4 File Offset: 0x00607BB4
+	// Token: 0x0601546E RID: 87150 RVA: 0x0062F45C File Offset: 0x0062D65C
 	public void ReduceTagById(int tagId, params object[] args)
 	{
 		if (tagId == 0)
@@ -50,7 +50,7 @@ public class UiTagComponent
 		this.DispatchEvent(tagId, num, num - 1, args);
 	}
 
-	// Token: 0x06017BFD RID: 97277 RVA: 0x00609A14 File Offset: 0x00607C14
+	// Token: 0x0601546F RID: 87151 RVA: 0x0062F4BC File Offset: 0x0062D6BC
 	public void RemoveTagById(int tagId, params object[] args)
 	{
 		if (tagId == 0)
@@ -66,20 +66,20 @@ public class UiTagComponent
 		this.DispatchEvent(tagId, oldCount, 0, args);
 	}
 
-	// Token: 0x06017BFE RID: 97278 RVA: 0x00609A58 File Offset: 0x00607C58
+	// Token: 0x06015470 RID: 87152 RVA: 0x0062F500 File Offset: 0x0062D700
 	public bool ContainsTagById(int tagId)
 	{
 		return this.TagMap.ContainsKey(tagId);
 	}
 
-	// Token: 0x06017BFF RID: 97279 RVA: 0x00609A68 File Offset: 0x00607C68
+	// Token: 0x06015471 RID: 87153 RVA: 0x0062F510 File Offset: 0x0062D710
 	public bool ContainsTagByName(string tagName)
 	{
 		int? num = new int?(GameplayTagUtils.GetTagIdByName(tagName));
 		return num != null && this.ContainsTagById(num.Value);
 	}
 
-	// Token: 0x06017C00 RID: 97280 RVA: 0x00609A9A File Offset: 0x00607C9A
+	// Token: 0x06015472 RID: 87154 RVA: 0x0062F542 File Offset: 0x0062D742
 	public int GetTagCountById(int tagId)
 	{
 		if (tagId == 0)
@@ -93,7 +93,7 @@ public class UiTagComponent
 		return this.TagMap[tagId];
 	}
 
-	// Token: 0x06017C01 RID: 97281 RVA: 0x00609AC0 File Offset: 0x00607CC0
+	// Token: 0x06015473 RID: 87155 RVA: 0x0062F568 File Offset: 0x0062D768
 	private void DispatchEvent(int tagId, int oldCount, int newCount, params object[] args)
 	{
 		if (tagId == 0)
@@ -112,7 +112,7 @@ public class UiTagComponent
 		}
 	}
 
-	// Token: 0x06017C02 RID: 97282 RVA: 0x00609B10 File Offset: 0x00607D10
+	// Token: 0x06015474 RID: 87156 RVA: 0x0062F5B8 File Offset: 0x0062D7B8
 	private unsafe void Emit(int tagId, bool tagExist, IEnumerable<TTagSwitchedCallback> callbacks, params object[] args)
 	{
 		if (tagId == 0 || callbacks == null)
@@ -141,7 +141,7 @@ public class UiTagComponent
 		}
 	}
 
-	// Token: 0x06017C03 RID: 97283 RVA: 0x00609BE4 File Offset: 0x00607DE4
+	// Token: 0x06015475 RID: 87157 RVA: 0x0062F68C File Offset: 0x0062D88C
 	public void AddListener(int tagId, TTagSwitchedCallback callback)
 	{
 		if (!this.TagSwitchedCallbacks.ContainsKey(tagId))
@@ -151,7 +151,7 @@ public class UiTagComponent
 		this.TagSwitchedCallbacks[tagId].Add(callback);
 	}
 
-	// Token: 0x06017C04 RID: 97284 RVA: 0x00609C18 File Offset: 0x00607E18
+	// Token: 0x06015476 RID: 87158 RVA: 0x0062F6C0 File Offset: 0x0062D8C0
 	public void RemoveListener(int tagId, TTagSwitchedCallback callback)
 	{
 		if (!this.TagSwitchedCallbacks.ContainsKey(tagId))
@@ -161,7 +161,7 @@ public class UiTagComponent
 		this.TagSwitchedCallbacks[tagId].Remove(callback);
 	}
 
-	// Token: 0x06017C05 RID: 97285 RVA: 0x00609C3C File Offset: 0x00607E3C
+	// Token: 0x06015477 RID: 87159 RVA: 0x0062F6E4 File Offset: 0x0062D8E4
 	public void RemoveAllTag()
 	{
 		foreach (int tagId in new List<int>(this.TagMap.Keys))
@@ -170,9 +170,9 @@ public class UiTagComponent
 		}
 	}
 
-	// Token: 0x0400B0D5 RID: 45269
+	// Token: 0x0400B440 RID: 46144
 	private readonly Dictionary<int, int> TagMap = new Dictionary<int, int>();
 
-	// Token: 0x0400B0D6 RID: 45270
+	// Token: 0x0400B441 RID: 46145
 	private readonly Dictionary<int, HashSet<TTagSwitchedCallback>> TagSwitchedCallbacks = new Dictionary<int, HashSet<TTagSwitchedCallback>>();
 }

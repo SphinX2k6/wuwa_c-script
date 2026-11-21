@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AA7 RID: 6823
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C40 RID: 7232
 	public class IFocusObject
 	{
-		// Token: 0x06009258 RID: 37464 RVA: 0x001543F0 File Offset: 0x001525F0
+		// Token: 0x060099D8 RID: 39384 RVA: 0x001645DC File Offset: 0x001627DC
 		private IFocusObject_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009259 RID: 37465 RVA: 0x00154428 File Offset: 0x00152628
+		// Token: 0x060099D9 RID: 39385 RVA: 0x00164614 File Offset: 0x00162814
 		public static IFocusObject Create([Nullable(2)] IFocusObject instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600925A RID: 37466 RVA: 0x0015443B File Offset: 0x0015263B
+		// Token: 0x060099DA RID: 39386 RVA: 0x00164627 File Offset: 0x00162827
 		public static IFocusObject CreateFromSetValue([Nullable(2)] IFocusObject_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600925B RID: 37467 RVA: 0x0015444E File Offset: 0x0015264E
+		// Token: 0x060099DB RID: 39387 RVA: 0x0016463A File Offset: 0x0016283A
 		public IFocusObject_SetValue ToSetValue()
 		{
 			return new IFocusObject_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E87 RID: 11911
-		// (get) Token: 0x0600925C RID: 37468 RVA: 0x0015447C File Offset: 0x0015267C
-		// (set) Token: 0x0600925D RID: 37469 RVA: 0x001544DD File Offset: 0x001526DD
+		// Token: 0x17003099 RID: 12441
+		// (get) Token: 0x060099DC RID: 39388 RVA: 0x00164668 File Offset: 0x00162868
+		// (set) Token: 0x060099DD RID: 39389 RVA: 0x001646C9 File Offset: 0x001628C9
 		public virtual IFocusObjectRotationConfig RotationConfig
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E88 RID: 11912
-		// (get) Token: 0x0600925E RID: 37470 RVA: 0x001544F4 File Offset: 0x001526F4
-		// (set) Token: 0x0600925F RID: 37471 RVA: 0x00154555 File Offset: 0x00152755
+		// Token: 0x1700309A RID: 12442
+		// (get) Token: 0x060099DE RID: 39390 RVA: 0x001646E0 File Offset: 0x001628E0
+		// (set) Token: 0x060099DF RID: 39391 RVA: 0x00164741 File Offset: 0x00162941
 		public virtual IFocusObjectCameraConfig CameraConfig
 		{
 			get
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E89 RID: 11913
-		// (get) Token: 0x06009260 RID: 37472 RVA: 0x0015456C File Offset: 0x0015276C
-		// (set) Token: 0x06009261 RID: 37473 RVA: 0x001545A6 File Offset: 0x001527A6
+		// Token: 0x1700309B RID: 12443
+		// (get) Token: 0x060099E0 RID: 39392 RVA: 0x00164758 File Offset: 0x00162958
+		// (set) Token: 0x060099E1 RID: 39393 RVA: 0x00164792 File Offset: 0x00162992
 		public virtual int? LeaveIndex
 		{
 			get
@@ -145,24 +143,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A1C RID: 23068
+		// Token: 0x04005E8C RID: 24204
 		[Nullable(2)]
 		protected IFocusObject FbInstance;
 
-		// Token: 0x04005A1D RID: 23069
+		// Token: 0x04005E8D RID: 24205
 		[Nullable(2)]
 		protected IFocusObject_SetValue PocoInterface;
 
-		// Token: 0x04005A1E RID: 23070
+		// Token: 0x04005E8E RID: 24206
 		private IFocusObjectRotationConfig _RotationConfigCache;
 
-		// Token: 0x04005A1F RID: 23071
+		// Token: 0x04005E8F RID: 24207
 		private bool _RotationConfigInited;
 
-		// Token: 0x04005A20 RID: 23072
+		// Token: 0x04005E90 RID: 24208
 		private IFocusObjectCameraConfig _CameraConfigCache;
 
-		// Token: 0x04005A21 RID: 23073
+		// Token: 0x04005E91 RID: 24209
 		private bool _CameraConfigInited;
 	}
 }

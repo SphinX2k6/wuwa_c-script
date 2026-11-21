@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A50 RID: 6736
+// Token: 0x02000F0F RID: 3855
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -19,7 +19,7 @@ using UnrealEngine;
 })]
 internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 {
-	// Token: 0x0600C64A RID: 50762 RVA: 0x002D14EC File Offset: 0x002CF6EC
+	// Token: 0x06009A5A RID: 39514 RVA: 0x002DC600 File Offset: 0x002DA800
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -37,7 +37,7 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C64B RID: 50763 RVA: 0x002D1598 File Offset: 0x002CF798
+	// Token: 0x06009A5B RID: 39515 RVA: 0x002DC6AC File Offset: 0x002DA8AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RankRoleGridItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C64C RID: 50764 RVA: 0x002D15DC File Offset: 0x002CF7DC
+	// Token: 0x06009A5C RID: 39516 RVA: 0x002DC6F0 File Offset: 0x002DA8F0
 	private void RefreshPosTexture()
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -74,7 +74,7 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		}
 	}
 
-	// Token: 0x0600C64D RID: 50765 RVA: 0x002D1668 File Offset: 0x002CF868
+	// Token: 0x06009A5D RID: 39517 RVA: 0x002DC77C File Offset: 0x002DA97C
 	private void RefreshItemGrid()
 	{
 		if (this.Data.IsEmpty)
@@ -103,7 +103,7 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		this.ItemGrid.Apply<CharacterSmallItemGrid>(this.CacheGridData);
 	}
 
-	// Token: 0x0600C64E RID: 50766 RVA: 0x002D1780 File Offset: 0x002CF980
+	// Token: 0x06009A5E RID: 39518 RVA: 0x002DC894 File Offset: 0x002DAA94
 	private void RefreshDangoIcon()
 	{
 		if (this.Data.IsEmpty)
@@ -122,7 +122,7 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		base.GetTexture(1).SetUIActive(false);
 	}
 
-	// Token: 0x0600C64F RID: 50767 RVA: 0x002D1814 File Offset: 0x002CFA14
+	// Token: 0x06009A5F RID: 39519 RVA: 0x002DC928 File Offset: 0x002DAB28
 	private void RefreshQualityItem()
 	{
 		if (this.Data.IsEmpty)
@@ -137,7 +137,7 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		this.DangoCircleQualityItem.SetActive(true);
 	}
 
-	// Token: 0x0600C650 RID: 50768 RVA: 0x002D186F File Offset: 0x002CFA6F
+	// Token: 0x06009A60 RID: 39520 RVA: 0x002DC983 File Offset: 0x002DAB83
 	public override void Refresh(DangoAbyssRankRoleData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -147,34 +147,34 @@ internal class RankRoleGridItem : GridProxyAbstract<DangoAbyssRankRoleData>
 		this.RefreshQualityItem();
 	}
 
-	// Token: 0x04005B5C RID: 23388
+	// Token: 0x04005C2B RID: 23595
 	private DangoAbyssRankRoleData Data;
 
-	// Token: 0x04005B5D RID: 23389
+	// Token: 0x04005C2C RID: 23596
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04005B5E RID: 23390
+	// Token: 0x04005C2D RID: 23597
 	[Nullable(2)]
 	private CharacterSmallItemGrid CacheGridData;
 
-	// Token: 0x04005B5F RID: 23391
+	// Token: 0x04005C2E RID: 23598
 	[Nullable(2)]
 	private AbyssDangoCircleQualityItem DangoCircleQualityItem;
 
-	// Token: 0x02007F98 RID: 32664
+	// Token: 0x02007127 RID: 28967
 	[NullableContext(0)]
 	private class ERankRoleComponent
 	{
-		// Token: 0x04029A94 RID: 170644
+		// Token: 0x04024DD1 RID: 150993
 		public const int GridItem = 0;
 
-		// Token: 0x04029A95 RID: 170645
+		// Token: 0x04024DD2 RID: 150994
 		public const int DangoTexture = 1;
 
-		// Token: 0x04029A96 RID: 170646
+		// Token: 0x04024DD3 RID: 150995
 		public const int PosTexture = 2;
 
-		// Token: 0x04029A97 RID: 170647
+		// Token: 0x04024DD4 RID: 150996
 		public const int QualityItem = 3;
 	}
 }

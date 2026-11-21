@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001114 RID: 4372
+// Token: 0x020005C8 RID: 1480
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class AvignonTaskItem : GridProxyAbstract<AvignonTaskData>
 {
-	// Token: 0x06007256 RID: 29270 RVA: 0x00176688 File Offset: 0x00174888
+	// Token: 0x060045EC RID: 17900 RVA: 0x0017F044 File Offset: 0x0017D244
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -48,19 +48,19 @@ public class AvignonTaskItem : GridProxyAbstract<AvignonTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007257 RID: 29271 RVA: 0x001767F6 File Offset: 0x001749F6
+	// Token: 0x060045ED RID: 17901 RVA: 0x0017F1B2 File Offset: 0x0017D3B2
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 	}
 
-	// Token: 0x06007258 RID: 29272 RVA: 0x00176819 File Offset: 0x00174A19
+	// Token: 0x060045EE RID: 17902 RVA: 0x0017F1D5 File Offset: 0x0017D3D5
 	private CommonItemSmallItemGrid CreatePropItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06007259 RID: 29273 RVA: 0x00176820 File Offset: 0x00174A20
+	// Token: 0x060045EF RID: 17903 RVA: 0x0017F1DC File Offset: 0x0017D3DC
 	public override void Refresh(AvignonTaskData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -80,13 +80,13 @@ public class AvignonTaskItem : GridProxyAbstract<AvignonTaskData>
 		}));
 	}
 
-	// Token: 0x0600725A RID: 29274 RVA: 0x00176928 File Offset: 0x00174B28
+	// Token: 0x060045F0 RID: 17904 RVA: 0x0017F2E4 File Offset: 0x0017D4E4
 	private void OnClickJump()
 	{
 		SkipTaskManager.RunByConfigId(this.Data.JumpId, null);
 	}
 
-	// Token: 0x0600725B RID: 29275 RVA: 0x0017693B File Offset: 0x00174B3B
+	// Token: 0x060045F1 RID: 17905 RVA: 0x0017F2F7 File Offset: 0x0017D4F7
 	private void OnClickGetButton()
 	{
 		Action<int> receiveDelegate = this.Data.ReceiveDelegate;
@@ -97,11 +97,11 @@ public class AvignonTaskItem : GridProxyAbstract<AvignonTaskData>
 		receiveDelegate(this.Data.TaskId);
 	}
 
-	// Token: 0x040034F6 RID: 13558
+	// Token: 0x0400358F RID: 13711
 	[Nullable(2)]
 	private AvignonTaskData Data;
 
-	// Token: 0x040034F7 RID: 13559
+	// Token: 0x04003590 RID: 13712
 	[Nullable(new byte[]
 	{
 		2,
@@ -109,29 +109,29 @@ public class AvignonTaskItem : GridProxyAbstract<AvignonTaskData>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x020076D7 RID: 30423
+	// Token: 0x0200686B RID: 26731
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027379 RID: 160633
+		// Token: 0x040226C2 RID: 140994
 		public const int JumpBtn = 0;
 
-		// Token: 0x0402737A RID: 160634
+		// Token: 0x040226C3 RID: 140995
 		public const int GetBtn = 1;
 
-		// Token: 0x0402737B RID: 160635
+		// Token: 0x040226C4 RID: 140996
 		public const int DoingText = 2;
 
-		// Token: 0x0402737C RID: 160636
+		// Token: 0x040226C5 RID: 140997
 		public const int FinishItem = 3;
 
-		// Token: 0x0402737D RID: 160637
+		// Token: 0x040226C6 RID: 140998
 		public const int TxtName = 4;
 
-		// Token: 0x0402737E RID: 160638
+		// Token: 0x040226C7 RID: 140999
 		public const int ProgressText = 5;
 
-		// Token: 0x0402737F RID: 160639
+		// Token: 0x040226C8 RID: 141000
 		public const int RewardScroll = 6;
 	}
 }

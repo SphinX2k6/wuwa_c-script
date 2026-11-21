@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069B2 RID: 27058
+	// Token: 0x02005B0E RID: 23310
 	public static class ELevelGeneralConditionExtensions
 	{
-		// Token: 0x06043523 RID: 275747 RVA: 0x0106D778 File Offset: 0x0106B978
+		// Token: 0x0603955B RID: 234843 RVA: 0x010119C4 File Offset: 0x0100FBC4
 		public static string ToEnumString(this ELevelGeneralCondition value)
 		{
 			string result;
@@ -842,6 +842,27 @@ namespace CSharpScript.Game.LevelGamePlay
 			case ELevelGeneralCondition.CheckDangoBrawlLevelPassed:
 				result = "CheckDangoBrawlLevelPassed";
 				break;
+			case ELevelGeneralCondition.OnSolarSchoolItemTipsRefreshed:
+				result = "OnSolarSchoolItemTipsRefreshed";
+				break;
+			case ELevelGeneralCondition.CheckRoleTowerEquippedToken:
+				result = "CheckRoleTowerEquippedToken";
+				break;
+			case ELevelGeneralCondition.CheckRoleTowerCurrentStage:
+				result = "CheckRoleTowerCurrentStage";
+				break;
+			case ELevelGeneralCondition.CheckRoleTowerEchoLevel:
+				result = "CheckRoleTowerEchoLevel";
+				break;
+			case ELevelGeneralCondition.CheckActivityCondition:
+				result = "CheckActivityCondition";
+				break;
+			case ELevelGeneralCondition.OnCommonChildViewShowDone:
+				result = "OnCommonChildViewShowDone";
+				break;
+			case ELevelGeneralCondition.CheckPlayerInOpenArea:
+				result = "CheckPlayerInOpenArea";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -849,7 +870,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x06043524 RID: 275748 RVA: 0x0106E7B0 File Offset: 0x0106C9B0
+		// Token: 0x0603955C RID: 234844 RVA: 0x01012A64 File Offset: 0x01010C64
 		public static ELevelGeneralCondition FromString(string name)
 		{
 			ELevelGeneralCondition result;
@@ -860,7 +881,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x06043525 RID: 275749 RVA: 0x0106E7DC File Offset: 0x0106C9DC
+		// Token: 0x0603955D RID: 234845 RVA: 0x01012A90 File Offset: 0x01010C90
 		public static bool TryFromString(string name, out ELevelGeneralCondition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -1856,173 +1877,108 @@ namespace CSharpScript.Game.LevelGamePlay
 				}
 				case 21:
 				{
-					char c = name[5];
-					if (c <= 'P')
+					char c = name[8];
+					if (c <= 'l')
 					{
-						if (c <= 'I')
+						if (c != 'T')
 						{
-							if (c != 'E')
+							switch (c)
 							{
-								if (c == 'I')
+							case 'a':
+								if (name == "OnEnterDangoMatchView")
 								{
-									if (name == "CheckItemWithOperator")
-									{
-										value = ELevelGeneralCondition.CheckItemWithOperator;
-										return true;
-									}
+									value = ELevelGeneralCondition.OnEnterDangoMatchView;
+									return true;
 								}
-							}
-							else if (name == "CheckExploreSkillFlag")
-							{
-								value = ELevelGeneralCondition.CheckExploreSkillFlag;
-								return true;
-							}
-						}
-						else if (c != 'O')
-						{
-							if (c == 'P')
-							{
+								break;
+							case 'b':
 								if (name == "CheckPinballLevelPass")
 								{
 									value = ELevelGeneralCondition.CheckPinballLevelPass;
 									return true;
 								}
-							}
-						}
-						else if (name == "CheckOriginWorldLevel")
-						{
-							value = ELevelGeneralCondition.CheckOriginWorldLevel;
-							return true;
-						}
-					}
-					else if (c <= 'i')
-					{
-						if (c != 'e')
-						{
-							if (c == 'i')
-							{
-								if (name == "OnActivitySubViewDone")
+								break;
+							case 'c':
+							case 'e':
+							case 'f':
+								break;
+							case 'd':
+								if (name == "TeamCouldEquipPhantom")
 								{
-									value = ELevelGeneralCondition.OnActivitySubViewDone;
+									value = ELevelGeneralCondition.TeamCouldEquipPhantom;
 									return true;
 								}
+								break;
+							case 'g':
+								if (name == "CheckOriginWorldLevel")
+								{
+									value = ELevelGeneralCondition.CheckOriginWorldLevel;
+									return true;
+								}
+								break;
+							default:
+								if (c == 'l')
+								{
+									if (name == "CheckExploreSkillFlag")
+									{
+										value = ELevelGeneralCondition.CheckExploreSkillFlag;
+										return true;
+									}
+								}
+								break;
 							}
 						}
-						else if (name == "OnEnterDangoMatchView")
+						else if (name == "OnNormalTopViewChange")
 						{
-							value = ELevelGeneralCondition.OnEnterDangoMatchView;
+							value = ELevelGeneralCondition.OnNormalTopViewChange;
 							return true;
 						}
 					}
 					else if (c != 'm')
 					{
-						if (c == 'o')
+						if (c != 't')
 						{
-							if (name == "TeamCouldEquipPhantom")
+							if (c == 'y')
 							{
-								value = ELevelGeneralCondition.TeamCouldEquipPhantom;
-								return true;
+								if (name == "CheckPlayerInOpenArea")
+								{
+									value = ELevelGeneralCondition.CheckPlayerInOpenArea;
+									return true;
+								}
 							}
 						}
+						else if (name == "OnActivitySubViewDone")
+						{
+							value = ELevelGeneralCondition.OnActivitySubViewDone;
+							return true;
+						}
 					}
-					else if (name == "OnNormalTopViewChange")
+					else if (name == "CheckItemWithOperator")
 					{
-						value = ELevelGeneralCondition.OnNormalTopViewChange;
+						value = ELevelGeneralCondition.CheckItemWithOperator;
 						return true;
 					}
 					break;
 				}
 				case 22:
 				{
-					char c = name[11];
-					if (c != 'I')
+					char c = name[17];
+					if (c <= 'L')
 					{
-						if (c != 'S')
+						if (c != 'E')
 						{
-							switch (c)
+							if (c == 'L')
 							{
-							case 'c':
-								if (name == "CheckInstanceMatchAble")
-								{
-									value = ELevelGeneralCondition.CheckInstanceMatchAble;
-									return true;
-								}
-								if (name == "OnMotorMusicPlayerShow")
-								{
-									value = ELevelGeneralCondition.OnMotorMusicPlayerShow;
-									return true;
-								}
-								break;
-							case 'e':
-								if (name == "OnMovieRogueMapMoveEnd")
-								{
-									value = ELevelGeneralCondition.OnMovieRogueMapMoveEnd;
-									return true;
-								}
-								break;
-							case 'g':
-								if (name == "CheckFishingTechUnlock")
-								{
-									value = ELevelGeneralCondition.CheckFishingTechUnlock;
-									return true;
-								}
-								break;
-							case 'h':
-								if (name == "CheckInMatchThreeLevel")
-								{
-									value = ELevelGeneralCondition.CheckInMatchThreeLevel;
-									return true;
-								}
-								break;
-							case 'i':
-								if (name == "CheckOperationRestrict")
-								{
-									value = ELevelGeneralCondition.CheckOperationRestrict;
-									return true;
-								}
-								break;
-							case 'l':
-								if (name == "OnKingShipAllAttrShown")
-								{
-									value = ELevelGeneralCondition.OnKingShipAllAttrShown;
-									return true;
-								}
-								break;
-							case 'm':
 								if (name == "OnMonsterNumReachLimit")
 								{
 									value = ELevelGeneralCondition.OnMonsterNumReachLimit;
 									return true;
 								}
-								break;
-							case 's':
-								if (name == "CheckOnTreasureBoxOpen")
+								if (name == "CheckInMatchThreeLevel")
 								{
-									value = ELevelGeneralCondition.CheckOnTreasureBoxOpen;
+									value = ELevelGeneralCondition.CheckInMatchThreeLevel;
 									return true;
 								}
-								break;
-							case 't':
-								if (name == "CheckKurotatoLevelWave")
-								{
-									value = ELevelGeneralCondition.CheckKurotatoLevelWave;
-									return true;
-								}
-								break;
-							case 'u':
-								if (name == "CheckMapFocusByQuestId")
-								{
-									value = ELevelGeneralCondition.CheckMapFocusByQuestId;
-									return true;
-								}
-								break;
-							case 'w':
-								if (name == "CheckShipTowerTeamOpen")
-								{
-									value = ELevelGeneralCondition.CheckShipTowerTeamOpen;
-									return true;
-								}
-								break;
 							}
 						}
 						else if (name == "FinishGuideStepByEvent")
@@ -2031,9 +1987,92 @@ namespace CSharpScript.Game.LevelGamePlay
 							return true;
 						}
 					}
-					else if (name == "HideSettingInCloudGame")
+					else if (c != 'S')
 					{
-						value = ELevelGeneralCondition.HideSettingInCloudGame;
+						switch (c)
+						{
+						case 'd':
+							if (name == "HideSettingInCloudGame")
+							{
+								value = ELevelGeneralCondition.HideSettingInCloudGame;
+								return true;
+							}
+							break;
+						case 'e':
+							if (name == "CheckMapFocusByQuestId")
+							{
+								value = ELevelGeneralCondition.CheckMapFocusByQuestId;
+								return true;
+							}
+							break;
+						case 'h':
+							if (name == "CheckInstanceMatchAble")
+							{
+								value = ELevelGeneralCondition.CheckInstanceMatchAble;
+								return true;
+							}
+							break;
+						case 'i':
+							if (name == "CheckActivityCondition")
+							{
+								value = ELevelGeneralCondition.CheckActivityCondition;
+								return true;
+							}
+							break;
+						case 'l':
+							if (name == "CheckKurotatoLevelWave")
+							{
+								value = ELevelGeneralCondition.CheckKurotatoLevelWave;
+								return true;
+							}
+							break;
+						case 'm':
+							if (name == "CheckShipTowerTeamOpen")
+							{
+								value = ELevelGeneralCondition.CheckShipTowerTeamOpen;
+								return true;
+							}
+							break;
+						case 'n':
+							if (name == "CheckFishingTechUnlock")
+							{
+								value = ELevelGeneralCondition.CheckFishingTechUnlock;
+								return true;
+							}
+							break;
+						case 'r':
+							if (name == "OnMotorMusicPlayerShow")
+							{
+								value = ELevelGeneralCondition.OnMotorMusicPlayerShow;
+								return true;
+							}
+							break;
+						case 't':
+							if (name == "CheckOperationRestrict")
+							{
+								value = ELevelGeneralCondition.CheckOperationRestrict;
+								return true;
+							}
+							break;
+						case 'v':
+							if (name == "OnMovieRogueMapMoveEnd")
+							{
+								value = ELevelGeneralCondition.OnMovieRogueMapMoveEnd;
+								return true;
+							}
+							break;
+						case 'x':
+							if (name == "CheckOnTreasureBoxOpen")
+							{
+								value = ELevelGeneralCondition.CheckOnTreasureBoxOpen;
+								return true;
+							}
+							break;
+						}
+					}
+					else if (name == "OnKingShipAllAttrShown")
+					{
+						value = ELevelGeneralCondition.OnKingShipAllAttrShown;
 						return true;
 					}
 					break;
@@ -2041,7 +2080,7 @@ namespace CSharpScript.Game.LevelGamePlay
 				case 23:
 				{
 					char c = name[15];
-					if (c <= 'P')
+					if (c <= 'M')
 					{
 						if (c <= 'F')
 						{
@@ -2069,21 +2108,13 @@ namespace CSharpScript.Game.LevelGamePlay
 						}
 						else if (c != 'I')
 						{
-							if (c != 'M')
+							if (c == 'M')
 							{
-								if (c == 'P')
+								if (name == "OnDangoMonopolyMoveStop")
 								{
-									if (name == "CheckDangoAbyssProgress")
-									{
-										value = ELevelGeneralCondition.CheckDangoAbyssProgress;
-										return true;
-									}
+									value = ELevelGeneralCondition.OnDangoMonopolyMoveStop;
+									return true;
 								}
-							}
-							else if (name == "OnDangoMonopolyMoveStop")
-							{
-								value = ELevelGeneralCondition.OnDangoMonopolyMoveStop;
-								return true;
 							}
 						}
 						else if (name == "OnMoraleTempExpItemShow")
@@ -2094,10 +2125,24 @@ namespace CSharpScript.Game.LevelGamePlay
 					}
 					else if (c <= 'l')
 					{
-						if (c != 'a')
+						if (c != 'P')
 						{
 							switch (c)
 							{
+							case 'a':
+								if (name == "CheckGiantCanChangeMood")
+								{
+									value = ELevelGeneralCondition.CheckGiantCanChangeMood;
+									return true;
+								}
+								break;
+							case 'c':
+								if (name == "CheckRoleTowerEchoLevel")
+								{
+									value = ELevelGeneralCondition.CheckRoleTowerEchoLevel;
+									return true;
+								}
+								break;
 							case 'd':
 								if (name == "CheckQuestClosedSegment")
 								{
@@ -2135,9 +2180,9 @@ namespace CSharpScript.Game.LevelGamePlay
 								break;
 							}
 						}
-						else if (name == "CheckGiantCanChangeMood")
+						else if (name == "CheckDangoAbyssProgress")
 						{
-							value = ELevelGeneralCondition.CheckGiantCanChangeMood;
+							value = ELevelGeneralCondition.CheckDangoAbyssProgress;
 							return true;
 						}
 					}
@@ -2323,30 +2368,41 @@ namespace CSharpScript.Game.LevelGamePlay
 				case 25:
 				{
 					char c = name[13];
-					if (c <= 'M')
+					if (c <= 'V')
 					{
-						if (c != 'A')
+						if (c <= 'C')
 						{
-							if (c != 'C')
+							if (c != 'A')
 							{
-								if (c == 'M')
+								if (c == 'C')
 								{
-									if (name == "CheckOnSelectMenuMainType")
+									if (name == "CheckTeamRoleCouldLevelUp")
 									{
-										value = ELevelGeneralCondition.CheckOnSelectMenuMainType;
+										value = ELevelGeneralCondition.CheckTeamRoleCouldLevelUp;
 										return true;
 									}
 								}
 							}
-							else if (name == "CheckTeamRoleCouldLevelUp")
+							else if (name == "CheckNoMoraleAreaFinished")
 							{
-								value = ELevelGeneralCondition.CheckTeamRoleCouldLevelUp;
+								value = ELevelGeneralCondition.CheckNoMoraleAreaFinished;
 								return true;
 							}
 						}
-						else if (name == "CheckNoMoraleAreaFinished")
+						else if (c != 'M')
 						{
-							value = ELevelGeneralCondition.CheckNoMoraleAreaFinished;
+							if (c == 'V')
+							{
+								if (name == "OnCommonChildViewShowDone")
+								{
+									value = ELevelGeneralCondition.OnCommonChildViewShowDone;
+									return true;
+								}
+							}
+						}
+						else if (name == "CheckOnSelectMenuMainType")
+						{
+							value = ELevelGeneralCondition.CheckOnSelectMenuMainType;
 							return true;
 						}
 					}
@@ -2448,111 +2504,112 @@ namespace CSharpScript.Game.LevelGamePlay
 							return true;
 						}
 					}
-					else if (c <= 'f')
+					else if (c != 'b')
 					{
-						if (c != 'b')
+						if (c != 'f')
 						{
-							if (c == 'f')
+							switch (c)
 							{
-								if (name == "PickupInTowerDefenceBattle")
+							case 'o':
+								if (name == "CheckGameplayClosedSegment")
 								{
-									value = ELevelGeneralCondition.PickupInTowerDefenceBattle;
+									value = ELevelGeneralCondition.CheckGameplayClosedSegment;
 									return true;
 								}
+								break;
+							case 't':
+								if (name == "CheckClientQuestNodeStatus")
+								{
+									value = ELevelGeneralCondition.CheckClientQuestNodeStatus;
+									return true;
+								}
+								break;
+							case 'u':
+								if (name == "CheckRoleTowerCurrentStage")
+								{
+									value = ELevelGeneralCondition.CheckRoleTowerCurrentStage;
+									return true;
+								}
+								break;
+							case 'v':
+								if (name == "CheckKurotatoLevelFinished")
+								{
+									value = ELevelGeneralCondition.CheckKurotatoLevelFinished;
+									return true;
+								}
+								break;
+							case 'w':
+								if (name == "OnCardDetailShowWithFactor")
+								{
+									value = ELevelGeneralCondition.OnCardDetailShowWithFactor;
+									return true;
+								}
+								break;
 							}
 						}
-						else if (name == "OnSceneItemDurabilityEmpty")
+						else if (name == "PickupInTowerDefenceBattle")
 						{
-							value = ELevelGeneralCondition.OnSceneItemDurabilityEmpty;
+							value = ELevelGeneralCondition.PickupInTowerDefenceBattle;
 							return true;
 						}
 					}
-					else if (c != 'o')
+					else if (name == "OnSceneItemDurabilityEmpty")
 					{
-						switch (c)
-						{
-						case 't':
-							if (name == "CheckClientQuestNodeStatus")
-							{
-								value = ELevelGeneralCondition.CheckClientQuestNodeStatus;
-								return true;
-							}
-							break;
-						case 'v':
-							if (name == "CheckKurotatoLevelFinished")
-							{
-								value = ELevelGeneralCondition.CheckKurotatoLevelFinished;
-								return true;
-							}
-							break;
-						case 'w':
-							if (name == "OnCardDetailShowWithFactor")
-							{
-								value = ELevelGeneralCondition.OnCardDetailShowWithFactor;
-								return true;
-							}
-							break;
-						}
-					}
-					else if (name == "CheckGameplayClosedSegment")
-					{
-						value = ELevelGeneralCondition.CheckGameplayClosedSegment;
+						value = ELevelGeneralCondition.OnSceneItemDurabilityEmpty;
 						return true;
 					}
 					break;
 				}
 				case 27:
 				{
-					char c = name[17];
-					if (c <= 'e')
+					char c = name[14];
+					if (c <= 'V')
 					{
-						if (c <= 'N')
+						if (c <= 'E')
 						{
-							switch (c)
+							if (c != 'C')
 							{
-							case 'E':
-								if (name == "CheckFightSpecialEnergyFull")
+								if (c == 'E')
 								{
-									value = ELevelGeneralCondition.CheckFightSpecialEnergyFull;
-									return true;
-								}
-								break;
-							case 'F':
-								if (name == "OnCiacconaChapterFirstStart")
-								{
-									value = ELevelGeneralCondition.OnCiacconaChapterFirstStart;
-									return true;
-								}
-								break;
-							case 'G':
-							case 'H':
-								break;
-							case 'I':
-								if (name == "HasNotInvitedRoleInSpring25")
-								{
-									value = ELevelGeneralCondition.HasNotInvitedRoleInSpring25;
-									return true;
-								}
-								break;
-							default:
-								if (c == 'N')
-								{
-									if (name == "CheckCharacterTagNotByEvent")
+									if (name == "CheckRoleTowerEquippedToken")
 									{
-										value = ELevelGeneralCondition.CheckCharacterTagNotByEvent;
+										value = ELevelGeneralCondition.CheckRoleTowerEquippedToken;
 										return true;
 									}
 								}
-								break;
+							}
+							else if (name == "OnPhantomArenaChildViewShow")
+							{
+								value = ELevelGeneralCondition.OnPhantomArenaChildViewShow;
+								return true;
 							}
 						}
-						else if (c != 'a')
+						else if (c != 'T')
+						{
+							if (c == 'V')
+							{
+								if (name == "CheckFormationViewDimension")
+								{
+									value = ELevelGeneralCondition.CheckFormationViewDimension;
+									return true;
+								}
+							}
+						}
+						else if (name == "CheckCharacterTagNotByEvent")
+						{
+							value = ELevelGeneralCondition.CheckCharacterTagNotByEvent;
+							return true;
+						}
+					}
+					else if (c <= 'e')
+					{
+						if (c != 'c')
 						{
 							if (c == 'e')
 							{
-								if (name == "CheckTrapDefenseLevelFinish")
+								if (name == "CheckVisionIntensifyTabOpen")
 								{
-									value = ELevelGeneralCondition.CheckTrapDefenseLevelFinish;
+									value = ELevelGeneralCondition.CheckVisionIntensifyTabOpen;
 									return true;
 								}
 							}
@@ -2563,47 +2620,48 @@ namespace CSharpScript.Game.LevelGamePlay
 							return true;
 						}
 					}
-					else if (c <= 'l')
+					else if (c != 'i')
 					{
-						if (c != 'i')
+						switch (c)
 						{
-							if (c == 'l')
+						case 'n':
+							if (name == "CheckTeamWeaponCouldLevelUp")
 							{
-								if (name == "OnPhantomArenaChildViewShow")
-								{
-									value = ELevelGeneralCondition.OnPhantomArenaChildViewShow;
-									return true;
-								}
+								value = ELevelGeneralCondition.CheckTeamWeaponCouldLevelUp;
+								return true;
 							}
-						}
-						else if (name == "CheckVisionIntensifyTabOpen")
-						{
-							value = ELevelGeneralCondition.CheckVisionIntensifyTabOpen;
-							return true;
+							break;
+						case 'o':
+							if (name == "HasNotInvitedRoleInSpring25")
+							{
+								value = ELevelGeneralCondition.HasNotInvitedRoleInSpring25;
+								return true;
+							}
+							break;
+						case 's':
+							if (name == "CheckTrapDefenseLevelFinish")
+							{
+								value = ELevelGeneralCondition.CheckTrapDefenseLevelFinish;
+								return true;
+							}
+							if (name == "CheckTrapDefenseRogueUnlock")
+							{
+								value = ELevelGeneralCondition.CheckTrapDefenseRogueUnlock;
+								return true;
+							}
+							break;
+						case 't':
+							if (name == "OnCiacconaChapterFirstStart")
+							{
+								value = ELevelGeneralCondition.OnCiacconaChapterFirstStart;
+								return true;
+							}
+							break;
 						}
 					}
-					else if (c != 'o')
+					else if (name == "CheckFightSpecialEnergyFull")
 					{
-						if (c != 'u')
-						{
-							if (c == 'w')
-							{
-								if (name == "CheckFormationViewDimension")
-								{
-									value = ELevelGeneralCondition.CheckFormationViewDimension;
-									return true;
-								}
-							}
-						}
-						else if (name == "CheckTeamWeaponCouldLevelUp")
-						{
-							value = ELevelGeneralCondition.CheckTeamWeaponCouldLevelUp;
-							return true;
-						}
-					}
-					else if (name == "CheckTrapDefenseRogueUnlock")
-					{
-						value = ELevelGeneralCondition.CheckTrapDefenseRogueUnlock;
+						value = ELevelGeneralCondition.CheckFightSpecialEnergyFull;
 						return true;
 					}
 					break;
@@ -2822,118 +2880,135 @@ namespace CSharpScript.Game.LevelGamePlay
 				}
 				case 30:
 				{
-					char c = name[5];
-					if (c <= 'S')
+					char c = name[18];
+					if (c <= 'd')
 					{
-						if (c <= 'F')
+						switch (c)
 						{
-							if (c != 'C')
+						case 'E':
+							if (name == "RoguelikeHasSelectEntryAndShow")
 							{
-								if (c == 'F')
-								{
-									if (name == "CheckFishingQteBtnHitValidArea")
-									{
-										value = ELevelGeneralCondition.CheckFishingQteBtnHitValidArea;
-										return true;
-									}
-								}
+								value = ELevelGeneralCondition.RoguelikeHasSelectEntryAndShow;
+								return true;
 							}
-							else if (name == "CheckCalabashChildFunctionOpen")
+							break;
+						case 'F':
+							if (name == "CheckCalabashChildFunctionOpen")
 							{
 								value = ELevelGeneralCondition.CheckCalabashChildFunctionOpen;
 								return true;
 							}
-						}
-						else if (c != 'H')
-						{
-							switch (c)
+							break;
+						case 'G':
+							break;
+						case 'H':
+							if (name == "CheckFishingQteBtnHitValidArea")
 							{
-							case 'M':
-								if (name == "CheckMotorMovieModeStateChange")
-								{
-									value = ELevelGeneralCondition.CheckMotorMovieModeStateChange;
-									return true;
-								}
-								break;
-							case 'P':
-								if (name == "CheckPickUpHonamiStoryItemType")
-								{
-									value = ELevelGeneralCondition.CheckPickUpHonamiStoryItemType;
-									return true;
-								}
-								break;
-							case 'R':
-								if (name == "CheckRhythmShipSubLevelHasRank")
-								{
-									value = ELevelGeneralCondition.CheckRhythmShipSubLevelHasRank;
-									return true;
-								}
-								break;
-							case 'S':
-								if (name == "CheckSubPackageDownLoadBtnShow")
-								{
-									value = ELevelGeneralCondition.CheckSubPackageDownLoadBtnShow;
-									return true;
-								}
-								break;
+								value = ELevelGeneralCondition.CheckFishingQteBtnHitValidArea;
+								return true;
 							}
-						}
-						else if (name == "CheckHasFirstPhantomAtPosition")
-						{
-							value = ELevelGeneralCondition.CheckHasFirstPhantomAtPosition;
-							return true;
-						}
-					}
-					else if (c <= 'a')
-					{
-						if (c != 'W')
-						{
-							if (c == 'a')
+							break;
+						default:
+							if (c != 'L')
 							{
-								if (name == "OnHonamiStoryLifeSupportChange")
+								if (c == 'd')
 								{
-									value = ELevelGeneralCondition.OnHonamiStoryLifeSupportChange;
-									return true;
+									if (name == "CheckWorldMapSecondaryUiOpened")
+									{
+										value = ELevelGeneralCondition.CheckWorldMapSecondaryUiOpened;
+										return true;
+									}
 								}
 							}
-						}
-						else if (name == "CheckWorldMapSecondaryUiOpened")
-						{
-							value = ELevelGeneralCondition.CheckWorldMapSecondaryUiOpened;
-							return true;
+							else if (name == "CheckRhythmShipSubLevelHasRank")
+							{
+								value = ELevelGeneralCondition.CheckRhythmShipSubLevelHasRank;
+								return true;
+							}
+							break;
 						}
 					}
-					else if (c != 'l')
+					else if (c <= 'i')
 					{
-						if (c != 'p')
+						if (c != 'e')
 						{
-							if (c == 'v')
+							if (c == 'i')
 							{
-								if (name == "OnSurvivorsRoguePopViewRefresh")
+								if (name == "OnSolarSchoolItemTipsRefreshed")
 								{
-									value = ELevelGeneralCondition.OnSurvivorsRoguePopViewRefresh;
+									value = ELevelGeneralCondition.OnSolarSchoolItemTipsRefreshed;
 									return true;
 								}
 							}
 						}
 						else
 						{
-							if (name == "OnTrapDefenseDeployingBuilding")
-							{
-								value = ELevelGeneralCondition.OnTrapDefenseDeployingBuilding;
-								return true;
-							}
 							if (name == "OnTrapDefenseMainLevelViewOpen")
 							{
 								value = ELevelGeneralCondition.OnTrapDefenseMainLevelViewOpen;
 								return true;
 							}
+							if (name == "CheckMotorMovieModeStateChange")
+							{
+								value = ELevelGeneralCondition.CheckMotorMovieModeStateChange;
+								return true;
+							}
 						}
 					}
-					else if (name == "RoguelikeHasSelectEntryAndShow")
+					else
 					{
-						value = ELevelGeneralCondition.RoguelikeHasSelectEntryAndShow;
-						return true;
+						switch (c)
+						{
+						case 'n':
+							if (name == "CheckSubPackageDownLoadBtnShow")
+							{
+								value = ELevelGeneralCondition.CheckSubPackageDownLoadBtnShow;
+								return true;
+							}
+							break;
+						case 'o':
+							if (name == "CheckHasFirstPhantomAtPosition")
+							{
+								value = ELevelGeneralCondition.CheckHasFirstPhantomAtPosition;
+								return true;
+							}
+							break;
+						case 'p':
+							if (name == "OnSurvivorsRoguePopViewRefresh")
+							{
+								value = ELevelGeneralCondition.OnSurvivorsRoguePopViewRefresh;
+								return true;
+							}
+							break;
+						case 'q':
+						case 'r':
+						case 's':
+							break;
+						case 't':
+							if (name == "CheckPickUpHonamiStoryItemType")
+							{
+								value = ELevelGeneralCondition.CheckPickUpHonamiStoryItemType;
+								return true;
+							}
+							break;
+						case 'u':
+							if (name == "OnHonamiStoryLifeSupportChange")
+							{
+								value = ELevelGeneralCondition.OnHonamiStoryLifeSupportChange;
+								return true;
+							}
+							break;
+						default:
+							if (c == 'y')
+							{
+								if (name == "OnTrapDefenseDeployingBuilding")
+								{
+									value = ELevelGeneralCondition.OnTrapDefenseDeployingBuilding;
+									return true;
+								}
+							}
+							break;
+						}
 					}
 					break;
 				}
@@ -3375,7 +3450,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return false;
 		}
 
-		// Token: 0x06043526 RID: 275750 RVA: 0x010712F4 File Offset: 0x0106F4F4
+		// Token: 0x0603955E RID: 234846 RVA: 0x01015694 File Offset: 0x01013894
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -3656,11 +3731,18 @@ namespace CSharpScript.Game.LevelGamePlay
 				"OnDangoBrawlBackpackAddItem",
 				"CheckDangoBrawlLevelRound",
 				"OnDangoBrawlHasCombinableItem",
-				"CheckDangoBrawlLevelPassed"
+				"CheckDangoBrawlLevelPassed",
+				"OnSolarSchoolItemTipsRefreshed",
+				"CheckRoleTowerEquippedToken",
+				"CheckRoleTowerCurrentStage",
+				"CheckRoleTowerEchoLevel",
+				"CheckActivityCondition",
+				"OnCommonChildViewShowDone",
+				"CheckPlayerInOpenArea"
 			};
 		}
 
-		// Token: 0x06043527 RID: 275751 RVA: 0x01071E7E File Offset: 0x0107007E
+		// Token: 0x0603955F RID: 234847 RVA: 0x01016272 File Offset: 0x01014472
 		public static ELevelGeneralCondition[] GetValues()
 		{
 			return new ELevelGeneralCondition[]
@@ -3941,11 +4023,18 @@ namespace CSharpScript.Game.LevelGamePlay
 				ELevelGeneralCondition.OnDangoBrawlBackpackAddItem,
 				ELevelGeneralCondition.CheckDangoBrawlLevelRound,
 				ELevelGeneralCondition.OnDangoBrawlHasCombinableItem,
-				ELevelGeneralCondition.CheckDangoBrawlLevelPassed
+				ELevelGeneralCondition.CheckDangoBrawlLevelPassed,
+				ELevelGeneralCondition.OnSolarSchoolItemTipsRefreshed,
+				ELevelGeneralCondition.CheckRoleTowerEquippedToken,
+				ELevelGeneralCondition.CheckRoleTowerCurrentStage,
+				ELevelGeneralCondition.CheckRoleTowerEchoLevel,
+				ELevelGeneralCondition.CheckActivityCondition,
+				ELevelGeneralCondition.OnCommonChildViewShowDone,
+				ELevelGeneralCondition.CheckPlayerInOpenArea
 			};
 		}
 
-		// Token: 0x06043528 RID: 275752 RVA: 0x01071E98 File Offset: 0x01070098
+		// Token: 0x06039560 RID: 234848 RVA: 0x0101628C File Offset: 0x0101448C
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -4226,7 +4315,14 @@ namespace CSharpScript.Game.LevelGamePlay
 				"OnDangoBrawlBackpackAddItem",
 				"CheckDangoBrawlLevelRound",
 				"OnDangoBrawlHasCombinableItem",
-				"CheckDangoBrawlLevelPassed"
+				"CheckDangoBrawlLevelPassed",
+				"OnSolarSchoolItemTipsRefreshed",
+				"CheckRoleTowerEquippedToken",
+				"CheckRoleTowerCurrentStage",
+				"CheckRoleTowerEchoLevel",
+				"CheckActivityCondition",
+				"OnCommonChildViewShowDone",
+				"CheckPlayerInOpenArea"
 			};
 		}
 	}

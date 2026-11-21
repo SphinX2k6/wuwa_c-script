@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A48 RID: 14920
+	// Token: 0x02003E23 RID: 15907
 	public struct IBvbCurRound : IFlatbufferObject
 	{
-		// Token: 0x17006648 RID: 26184
-		// (get) Token: 0x0601434A RID: 82762 RVA: 0x002F4130 File Offset: 0x002F2330
+		// Token: 0x17006B78 RID: 27512
+		// (get) Token: 0x06015666 RID: 87654 RVA: 0x0031731C File Offset: 0x0031551C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x0601434B RID: 82763 RVA: 0x002F413D File Offset: 0x002F233D
+		// Token: 0x06015667 RID: 87655 RVA: 0x00317329 File Offset: 0x00315529
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601434C RID: 82764 RVA: 0x002F4144 File Offset: 0x002F2344
+		// Token: 0x06015668 RID: 87656 RVA: 0x00317330 File Offset: 0x00315530
 		public static IBvbCurRound GetRootAsIBvbCurRound(ByteBuffer _bb)
 		{
 			return IBvbCurRound.GetRootAsIBvbCurRound(_bb, default(IBvbCurRound));
 		}
 
-		// Token: 0x0601434D RID: 82765 RVA: 0x002F4160 File Offset: 0x002F2360
+		// Token: 0x06015669 RID: 87657 RVA: 0x0031734C File Offset: 0x0031554C
 		public static IBvbCurRound GetRootAsIBvbCurRound(ByteBuffer _bb, IBvbCurRound obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601434E RID: 82766 RVA: 0x002F417D File Offset: 0x002F237D
+		// Token: 0x0601566A RID: 87658 RVA: 0x00317369 File Offset: 0x00315569
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601434F RID: 82767 RVA: 0x002F418C File Offset: 0x002F238C
+		// Token: 0x0601566B RID: 87659 RVA: 0x00317378 File Offset: 0x00315578
 		public IBvbCurRound __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006649 RID: 26185
-		// (get) Token: 0x06014350 RID: 82768 RVA: 0x002F419C File Offset: 0x002F239C
+		// Token: 0x17006B79 RID: 27513
+		// (get) Token: 0x0601566C RID: 87660 RVA: 0x00317388 File Offset: 0x00315588
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014351 RID: 82769 RVA: 0x002F41D8 File Offset: 0x002F23D8
+		// Token: 0x0601566D RID: 87661 RVA: 0x003173C4 File Offset: 0x003155C4
 		public static Offset<IBvbCurRound> CreateIBvbCurRound(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbCurRound.EndIBvbCurRound(builder);
 		}
 
-		// Token: 0x06014352 RID: 82770 RVA: 0x002F41EE File Offset: 0x002F23EE
+		// Token: 0x0601566E RID: 87662 RVA: 0x003173DA File Offset: 0x003155DA
 		public static void StartIBvbCurRound(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014353 RID: 82771 RVA: 0x002F41F7 File Offset: 0x002F23F7
+		// Token: 0x0601566F RID: 87663 RVA: 0x003173E3 File Offset: 0x003155E3
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014354 RID: 82772 RVA: 0x002F4202 File Offset: 0x002F2402
+		// Token: 0x06015670 RID: 87664 RVA: 0x003173EE File Offset: 0x003155EE
 		public static Offset<IBvbCurRound> EndIBvbCurRound(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbCurRound>(builder.EndTable());
 		}
 
-		// Token: 0x06014355 RID: 82773 RVA: 0x002F4210 File Offset: 0x002F2410
+		// Token: 0x06015671 RID: 87665 RVA: 0x003173FC File Offset: 0x003155FC
 		public IBvbCurRoundT UnPack()
 		{
 			IBvbCurRoundT bvbCurRoundT = new IBvbCurRoundT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbCurRoundT;
 		}
 
-		// Token: 0x06014356 RID: 82774 RVA: 0x002F422B File Offset: 0x002F242B
+		// Token: 0x06015672 RID: 87666 RVA: 0x00317417 File Offset: 0x00315617
 		public void UnPackTo(IBvbCurRoundT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06014357 RID: 82775 RVA: 0x002F423C File Offset: 0x002F243C
+		// Token: 0x06015673 RID: 87667 RVA: 0x00317428 File Offset: 0x00315628
 		public static Offset<IBvbCurRound> Pack(FlatBufferBuilder builder, IBvbCurRoundT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbCurRound.CreateIBvbCurRound(builder, _o.Type);
 		}
 
-		// Token: 0x0400AECD RID: 44749
+		// Token: 0x0400B7EF RID: 47087
 		private Table __p;
 	}
 }

@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029CA RID: 10698
+// Token: 0x02001F45 RID: 8005
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerRewardView : UiViewBase
 {
-	// Token: 0x060162B6 RID: 90806 RVA: 0x0059B61D File Offset: 0x0059981D
+	// Token: 0x06013CBC RID: 81084 RVA: 0x005C65D5 File Offset: 0x005C47D5
 	public ShipTowerRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060162B7 RID: 90807 RVA: 0x0059B630 File Offset: 0x00599830
+	// Token: 0x06013CBD RID: 81085 RVA: 0x005C65E8 File Offset: 0x005C47E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ public class ShipTowerRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x060162B8 RID: 90808 RVA: 0x0059B6CC File Offset: 0x005998CC
+	// Token: 0x06013CBE RID: 81086 RVA: 0x005C6684 File Offset: 0x005C4884
 	private void InitDataParam()
 	{
 		this.AreaList = ShipTowerModel.Instance.GetAreaList();
 	}
 
-	// Token: 0x060162B9 RID: 90809 RVA: 0x0059B6E0 File Offset: 0x005998E0
+	// Token: 0x06013CBF RID: 81087 RVA: 0x005C6698 File Offset: 0x005C4898
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerRewardView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class ShipTowerRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162BA RID: 90810 RVA: 0x0059B724 File Offset: 0x00599924
+	// Token: 0x06013CC0 RID: 81088 RVA: 0x005C66DC File Offset: 0x005C48DC
 	private UniTask CheckIsNeedShowSeasonReview()
 	{
 		ShipTowerRewardView.<CheckIsNeedShowSeasonReview>d__12 <CheckIsNeedShowSeasonReview>d__;
@@ -59,7 +59,7 @@ public class ShipTowerRewardView : UiViewBase
 		return <CheckIsNeedShowSeasonReview>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162BB RID: 90811 RVA: 0x0059B75F File Offset: 0x0059995F
+	// Token: 0x06013CC1 RID: 81089 RVA: 0x005C6717 File Offset: 0x005C4917
 	private void EventOnActivitySequenceEmitEvent(string name)
 	{
 		if (name == "Start")
@@ -73,21 +73,21 @@ public class ShipTowerRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x060162BC RID: 90812 RVA: 0x0059B785 File Offset: 0x00599985
+	// Token: 0x06013CC2 RID: 81090 RVA: 0x005C673D File Offset: 0x005C493D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.ShipTowerRewardReceive, new Action<int>(this.EventRewardReceive));
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.EventOnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x060162BD RID: 90813 RVA: 0x0059B7BF File Offset: 0x005999BF
+	// Token: 0x06013CC3 RID: 81091 RVA: 0x005C6777 File Offset: 0x005C4977
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ShipTowerRewardReceive, new Action<int>(this.EventRewardReceive));
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.EventOnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x060162BE RID: 90814 RVA: 0x0059B7FC File Offset: 0x005999FC
+	// Token: 0x06013CC4 RID: 81092 RVA: 0x005C67B4 File Offset: 0x005C49B4
 	protected override void OnBeforeShow()
 	{
 		this.UpdateRemainTime();
@@ -95,12 +95,12 @@ public class ShipTowerRewardView : UiViewBase
 		this.RefreshTimerHandle = TimerSystem.Instance.Forever(new TTimerAction(this.OnTimerRefresh), (float)num, 1f, null, null, true);
 	}
 
-	// Token: 0x060162BF RID: 90815 RVA: 0x0059B83B File Offset: 0x00599A3B
+	// Token: 0x06013CC5 RID: 81093 RVA: 0x005C67F3 File Offset: 0x005C49F3
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x060162C0 RID: 90816 RVA: 0x0059B83D File Offset: 0x00599A3D
+	// Token: 0x06013CC6 RID: 81094 RVA: 0x005C67F5 File Offset: 0x005C49F5
 	private ShipTowerAreaItem CreateAreaItem()
 	{
 		return new ShipTowerAreaItem
@@ -109,7 +109,7 @@ public class ShipTowerRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x060162C1 RID: 90817 RVA: 0x0059B856 File Offset: 0x00599A56
+	// Token: 0x06013CC7 RID: 81095 RVA: 0x005C680E File Offset: 0x005C4A0E
 	private ShipTowerRewardItem CreateRewardItem()
 	{
 		return new ShipTowerRewardItem
@@ -118,7 +118,7 @@ public class ShipTowerRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x060162C2 RID: 90818 RVA: 0x0059B86F File Offset: 0x00599A6F
+	// Token: 0x06013CC8 RID: 81096 RVA: 0x005C6827 File Offset: 0x005C4A27
 	private void OnAreaItemClick(ShipTowerAreaItemData data)
 	{
 		this.SelectData = data;
@@ -130,7 +130,7 @@ public class ShipTowerRewardView : UiViewBase
 		this.IsPlayAnim = true;
 	}
 
-	// Token: 0x060162C3 RID: 90819 RVA: 0x0059B8A0 File Offset: 0x00599AA0
+	// Token: 0x06013CC9 RID: 81097 RVA: 0x005C6858 File Offset: 0x005C4A58
 	private void OnRewardItemClick(ShipTowerRewardItemData data)
 	{
 		List<ShipTowerRewardItemData> list = null;
@@ -157,7 +157,7 @@ public class ShipTowerRewardView : UiViewBase
 		ShipTowerModel.Instance.ReceiveAward(data.Id, list2.ToArray()).Forget();
 	}
 
-	// Token: 0x060162C4 RID: 90820 RVA: 0x0059B984 File Offset: 0x00599B84
+	// Token: 0x06013CCA RID: 81098 RVA: 0x005C693C File Offset: 0x005C4B3C
 	private void OnTimerRefresh(float delta)
 	{
 		this.UpdateRemainTime();
@@ -167,7 +167,7 @@ public class ShipTowerRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x060162C5 RID: 90821 RVA: 0x0059B99E File Offset: 0x00599B9E
+	// Token: 0x06013CCB RID: 81099 RVA: 0x005C6956 File Offset: 0x005C4B56
 	private void ClearTimer()
 	{
 		if (this.RefreshTimerHandle != null)
@@ -177,7 +177,7 @@ public class ShipTowerRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x060162C6 RID: 90822 RVA: 0x0059B9C0 File Offset: 0x00599BC0
+	// Token: 0x06013CCC RID: 81100 RVA: 0x005C6978 File Offset: 0x005C4B78
 	private int GetSelectAreaIndex()
 	{
 		ShipTowerRewardViewParams shipTowerRewardViewParams = this.OpenParam as ShipTowerRewardViewParams;
@@ -214,7 +214,7 @@ public class ShipTowerRewardView : UiViewBase
 		return this.GetRangeIndex(index);
 	}
 
-	// Token: 0x060162C7 RID: 90823 RVA: 0x0059BA90 File Offset: 0x00599C90
+	// Token: 0x06013CCD RID: 81101 RVA: 0x005C6A48 File Offset: 0x005C4C48
 	private int GetCanReceiveAwardIndex()
 	{
 		int index = -1;
@@ -245,7 +245,7 @@ public class ShipTowerRewardView : UiViewBase
 		return this.GetRangeIndex(index);
 	}
 
-	// Token: 0x060162C8 RID: 90824 RVA: 0x0059BB24 File Offset: 0x00599D24
+	// Token: 0x06013CCE RID: 81102 RVA: 0x005C6ADC File Offset: 0x005C4CDC
 	private int GetRangeIndex(int index)
 	{
 		if (index == -1)
@@ -255,7 +255,7 @@ public class ShipTowerRewardView : UiViewBase
 		return index;
 	}
 
-	// Token: 0x060162C9 RID: 90825 RVA: 0x0059BB30 File Offset: 0x00599D30
+	// Token: 0x06013CCF RID: 81103 RVA: 0x005C6AE8 File Offset: 0x005C4CE8
 	private void UpdateRemainTime()
 	{
 		string rewardCountDownDesc = ShipTowerModel.Instance.GetRewardCountDownDesc();
@@ -267,7 +267,7 @@ public class ShipTowerRewardView : UiViewBase
 		text.SetText(rewardCountDownDesc, true);
 	}
 
-	// Token: 0x060162CA RID: 90826 RVA: 0x0059BB5B File Offset: 0x00599D5B
+	// Token: 0x06013CD0 RID: 81104 RVA: 0x005C6B13 File Offset: 0x005C4D13
 	private void EventRewardReceive(int id)
 	{
 		if (this.SelectData == null)
@@ -296,11 +296,11 @@ public class ShipTowerRewardView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0400A51B RID: 42267
+	// Token: 0x0400A905 RID: 43269
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x0400A51C RID: 42268
+	// Token: 0x0400A906 RID: 43270
 	[Nullable(new byte[]
 	{
 		2,
@@ -309,7 +309,7 @@ public class ShipTowerRewardView : UiViewBase
 	})]
 	private LoopScrollView<ShipTowerAreaItem, ShipTowerAreaItemData> AreaLoopView;
 
-	// Token: 0x0400A51D RID: 42269
+	// Token: 0x0400A907 RID: 43271
 	[Nullable(new byte[]
 	{
 		2,
@@ -318,40 +318,40 @@ public class ShipTowerRewardView : UiViewBase
 	})]
 	private LoopScrollView<ShipTowerRewardItem, ShipTowerRewardItemData> RewardLoopView;
 
-	// Token: 0x0400A51E RID: 42270
+	// Token: 0x0400A908 RID: 43272
 	private List<ShipTowerAreaItemData> AreaList;
 
-	// Token: 0x0400A51F RID: 42271
+	// Token: 0x0400A909 RID: 43273
 	[Nullable(2)]
 	private ShipTowerAreaItemData SelectData;
 
-	// Token: 0x0400A520 RID: 42272
+	// Token: 0x0400A90A RID: 43274
 	private bool IsPlayAnim = true;
 
-	// Token: 0x0400A521 RID: 42273
+	// Token: 0x0400A90B RID: 43275
 	[Nullable(2)]
 	private TimerHandle RefreshTimerHandle;
 
-	// Token: 0x02008FEC RID: 36844
+	// Token: 0x02008233 RID: 33331
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E9B1 RID: 190897
+		// Token: 0x0402A0A9 RID: 172201
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402E9B2 RID: 190898
+		// Token: 0x0402A0AA RID: 172202
 		public const int LoopViewArea = 1;
 
-		// Token: 0x0402E9B3 RID: 190899
+		// Token: 0x0402A0AB RID: 172203
 		public const int LoopViewReward = 2;
 
-		// Token: 0x0402E9B4 RID: 190900
+		// Token: 0x0402A0AC RID: 172204
 		public const int ItemArea = 3;
 
-		// Token: 0x0402E9B5 RID: 190901
+		// Token: 0x0402A0AD RID: 172205
 		public const int ItemReward = 4;
 
-		// Token: 0x0402E9B6 RID: 190902
+		// Token: 0x0402A0AE RID: 172206
 		public const int CountDownText = 5;
 	}
 }

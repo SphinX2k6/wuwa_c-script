@@ -6,37 +6,33 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001B1 RID: 433
+// Token: 0x020001B5 RID: 437
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyDisableMotorSoarWing.TsAnimNotifyDisableMotorSoarWing_C")]
 public class TsAnimNotifyDisableMotorSoarWing : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06001B4F RID: 6991 RVA: 0x0008D024 File Offset: 0x0008B224
+	// Token: 0x06001BEC RID: 7148 RVA: 0x00093900 File Offset: 0x00091B00
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyDisableMotorSoarWing) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyDisableMotorSoarWing.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001B50 RID: 6992 RVA: 0x0008D0C4 File Offset: 0x0008B2C4
+	// Token: 0x06001BED RID: 7149 RVA: 0x000939B8 File Offset: 0x00091BB8
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -55,37 +51,33 @@ public class TsAnimNotifyDisableMotorSoarWing : TsAnimNotifyBase, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x06001B51 RID: 6993 RVA: 0x0008D108 File Offset: 0x0008B308
+	// Token: 0x06001BEE RID: 7150 RVA: 0x000939FC File Offset: 0x00091BFC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyDisableMotorSoarWing) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyDisableMotorSoarWing.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001B52 RID: 6994 RVA: 0x0008D183 File Offset: 0x0008B383
+	// Token: 0x06001BEF RID: 7151 RVA: 0x00093A8C File Offset: 0x00091C8C
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "隐藏摩托翱翔翼";
 	}
 
-	// Token: 0x06001B53 RID: 6995 RVA: 0x0008D18A File Offset: 0x0008B38A
+	// Token: 0x06001BF0 RID: 7152 RVA: 0x00093A93 File Offset: 0x00091C93
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyDisableMotorSoarWing._ClassPtr == IntPtr.Zero)
@@ -95,23 +87,23 @@ public class TsAnimNotifyDisableMotorSoarWing : TsAnimNotifyBase, IUnrealUObject
 		return TsAnimNotifyDisableMotorSoarWing._ClassPtr;
 	}
 
-	// Token: 0x06001B54 RID: 6996 RVA: 0x0008D1B0 File Offset: 0x0008B3B0
+	// Token: 0x06001BF1 RID: 7153 RVA: 0x00093AB8 File Offset: 0x00091CB8
 	public TsAnimNotifyDisableMotorSoarWing() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyDisableMotorSoarWing.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001B55 RID: 6997 RVA: 0x0008D1D8 File Offset: 0x0008B3D8
+	// Token: 0x06001BF2 RID: 7154 RVA: 0x00093AE0 File Offset: 0x00091CE0
 	[NullableContext(1)]
 	public TsAnimNotifyDisableMotorSoarWing(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyDisableMotorSoarWing.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001B56 RID: 6998 RVA: 0x0008D20B File Offset: 0x0008B40B
+	// Token: 0x06001BF3 RID: 7155 RVA: 0x00093B13 File Offset: 0x00091D13
 	protected TsAnimNotifyDisableMotorSoarWing(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001B57 RID: 6999 RVA: 0x0008D214 File Offset: 0x0008B414
+	// Token: 0x06001BF4 RID: 7156 RVA: 0x00093B1C File Offset: 0x00091D1C
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -119,19 +111,19 @@ public class TsAnimNotifyDisableMotorSoarWing : TsAnimNotifyBase, IUnrealUObject
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001B58 RID: 7000 RVA: 0x0008D247 File Offset: 0x0008B447
+	// Token: 0x06001BF5 RID: 7157 RVA: 0x00093B4F File Offset: 0x00091D4F
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0400117B RID: 4475
+	// Token: 0x040011BE RID: 4542
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyDisableMotorSoarWing.TsAnimNotifyDisableMotorSoarWing_C";
 
-	// Token: 0x0400117C RID: 4476
+	// Token: 0x040011BF RID: 4543
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400117D RID: 4477
+	// Token: 0x040011C0 RID: 4544
 	private static IntPtr _ClassDefaultObjectPtr;
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x02005548 RID: 21832
+	// Token: 0x0200451A RID: 17690
 	public class MarkNameComponent : MarkPanelBase
 	{
-		// Token: 0x06037B6A RID: 228202 RVA: 0x00D38318 File Offset: 0x00D36518
+		// Token: 0x0602CA39 RID: 182841 RVA: 0x00C85DEC File Offset: 0x00C83FEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037B6B RID: 228203 RVA: 0x00D38360 File Offset: 0x00D36560
+		// Token: 0x0602CA3A RID: 182842 RVA: 0x00C85E34 File Offset: 0x00C84034
 		protected override void OnBeforeShow()
 		{
 			this.UpdateName();
 		}
 
-		// Token: 0x06037B6C RID: 228204 RVA: 0x00D38368 File Offset: 0x00D36568
+		// Token: 0x0602CA3B RID: 182843 RVA: 0x00C85E3C File Offset: 0x00C8403C
 		[NullableContext(1)]
 		public void SetNameParam(IMarkItemParam param)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x06037B6D RID: 228205 RVA: 0x00D38380 File Offset: 0x00D36580
+		// Token: 0x0602CA3C RID: 182844 RVA: 0x00C85E54 File Offset: 0x00C84054
 		private void UpdateName()
 		{
 			if (this.Params == null)
@@ -50,18 +50,9 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			{
 				return;
 			}
-			if (this.Params.FontSize != null)
-			{
-				text.SetFontSize((float)this.Params.FontSize.Value);
-			}
-			if (this.Params.AnchorOffset != null)
-			{
-				text.SetAnchorOffset(this.Params.AnchorOffset.Value);
-			}
-			if (this.Params.OutlineSize != null)
-			{
-				text.outlineSize = (int)this.Params.OutlineSize.Value;
-			}
+			text.SetFontSize((float)this.Params.FontSize.GetValueOrDefault(38));
+			text.SetAnchorOffset(this.Params.AnchorOffset ?? MarkNameComponent.DefaultAnchorOffset);
+			text.outlineSize = ((this.Params.OutlineSize != null) ? ((int)this.Params.OutlineSize.Value) : 0);
 			if (this.Params.OutlineColor != null)
 			{
 				text.SetFontOutlineColor(this.Params.OutlineColor.Value);
@@ -69,14 +60,23 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			text.SetText(this.Params.Txt, true);
 		}
 
-		// Token: 0x0401D448 RID: 119880
+		// Token: 0x04017ECE RID: 97998
 		[Nullable(2)]
 		private IMarkItemParam Params;
 
-		// Token: 0x0200B773 RID: 46963
+		// Token: 0x04017ECF RID: 97999
+		private const int DEFAULT_FONT_SIZE = 38;
+
+		// Token: 0x04017ED0 RID: 98000
+		private const int DEFAULT_OUTLINE_SIZE = 0;
+
+		// Token: 0x04017ED1 RID: 98001
+		private static readonly FVector2D DefaultAnchorOffset = new FVector2D(0f, 0f);
+
+		// Token: 0x0200A19E RID: 41374
 		public static class EChildComponents
 		{
-			// Token: 0x040378A4 RID: 227492
+			// Token: 0x040322CF RID: 205519
 			public const int NameText = 0;
 		}
 	}

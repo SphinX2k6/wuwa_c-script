@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Input
 {
-	// Token: 0x0200687F RID: 26751
+	// Token: 0x020057CF RID: 22479
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlMobileAdapter : IDangobrawlInputAdapter
 	{
-		// Token: 0x170097B3 RID: 38835
-		// (get) Token: 0x06042CA5 RID: 273573 RVA: 0x010417D2 File Offset: 0x0103F9D2
+		// Token: 0x17006AF3 RID: 27379
+		// (get) Token: 0x060377FD RID: 227325 RVA: 0x00F82D4A File Offset: 0x00F80F4A
 		public EInputPlatform Platform
 		{
 			get
@@ -23,25 +23,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042CA6 RID: 273574 RVA: 0x010417D5 File Offset: 0x0103F9D5
+		// Token: 0x060377FE RID: 227326 RVA: 0x00F82D4D File Offset: 0x00F80F4D
 		public DangoBrawlMobileAdapter(DangoBrawlDragCtrl dragCtrl)
 		{
 			this.DragCtrl = dragCtrl;
 		}
 
-		// Token: 0x06042CA7 RID: 273575 RVA: 0x010417E4 File Offset: 0x0103F9E4
+		// Token: 0x060377FF RID: 227327 RVA: 0x00F82D5C File Offset: 0x00F80F5C
 		public void Start()
 		{
 			InputDistributeController.Instance.BindTouch(1, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnSecondFingerTouch));
 		}
 
-		// Token: 0x06042CA8 RID: 273576 RVA: 0x010417FD File Offset: 0x0103F9FD
+		// Token: 0x06037800 RID: 227328 RVA: 0x00F82D75 File Offset: 0x00F80F75
 		public void Stop()
 		{
 			InputDistributeController.Instance.UnBindTouch(1, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnSecondFingerTouch));
 		}
 
-		// Token: 0x06042CA9 RID: 273577 RVA: 0x01041818 File Offset: 0x0103FA18
+		// Token: 0x06037801 RID: 227329 RVA: 0x00F82D90 File Offset: 0x00F80F90
 		private void OnSecondFingerTouch(string _, InputDistributeDefine.ITouchData touchData, InputIdentification __)
 		{
 			Log instance = Log.Instance;
@@ -65,36 +65,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042CAA RID: 273578 RVA: 0x010418F6 File Offset: 0x0103FAF6
+		// Token: 0x06037802 RID: 227330 RVA: 0x00F82E6E File Offset: 0x00F8106E
 		public void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x06042CAB RID: 273579 RVA: 0x010418F8 File Offset: 0x0103FAF8
+		// Token: 0x06037803 RID: 227331 RVA: 0x00F82E70 File Offset: 0x00F81070
 		public UniTask OnPointerClick(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06042CAC RID: 273580 RVA: 0x010418FF File Offset: 0x0103FAFF
+		// Token: 0x06037804 RID: 227332 RVA: 0x00F82E77 File Offset: 0x00F81077
 		public UniTask OnPointerBeginDrag(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos)
 		{
 			return this.DragCtrl.BeginDrag(source, view, pointerPos);
 		}
 
-		// Token: 0x06042CAD RID: 273581 RVA: 0x0104190F File Offset: 0x0103FB0F
+		// Token: 0x06037805 RID: 227333 RVA: 0x00F82E87 File Offset: 0x00F81087
 		public void OnPointerDrag(FVector pointerPos)
 		{
 			this.DragCtrl.UpdateDrag(pointerPos);
 		}
 
-		// Token: 0x06042CAE RID: 273582 RVA: 0x0104191D File Offset: 0x0103FB1D
+		// Token: 0x06037806 RID: 227334 RVA: 0x00F82E95 File Offset: 0x00F81095
 		public UniTask OnPointerEndDrag(FVector pointerPos)
 		{
 			return this.DragCtrl.EndDrag(pointerPos);
 		}
 
-		// Token: 0x04022C2C RID: 142380
+		// Token: 0x0401D488 RID: 119944
 		private readonly DangoBrawlDragCtrl DragCtrl;
 	}
 }

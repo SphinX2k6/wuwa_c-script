@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BBC RID: 23484
+	// Token: 0x02004B9C RID: 19356
 	public enum ECiacconaEntryType
 	{
-		// Token: 0x0401EF2F RID: 126767
+		// Token: 0x040199E0 RID: 104928
 		None,
-		// Token: 0x0401EF30 RID: 126768
+		// Token: 0x040199E1 RID: 104929
 		FromActivity,
-		// Token: 0x0401EF31 RID: 126769
+		// Token: 0x040199E2 RID: 104930
 		FromQuest
 	}
 }

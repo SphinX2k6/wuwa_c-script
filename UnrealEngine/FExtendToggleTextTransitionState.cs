@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002010 RID: 8208
+	// Token: 0x0200065F RID: 1631
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.ExtendToggleTextTransitionState")]
 	[UnrealStructLayout(368, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 368)]
 	public class FExtendToggleTextTransitionState : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601EED4 RID: 126676 RVA: 0x002DF908 File Offset: 0x002DDB08
+		// Token: 0x06008D8C RID: 36236 RVA: 0x000D515C File Offset: 0x000D335C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FExtendToggleTextTransitionState._ScriptStructPtr != 0) ? FExtendToggleTextTransitionState._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.ExtendToggleTextTransitionState", ref FExtendToggleTextTransitionState._ScriptStructPtr);
 		}
 
-		// Token: 0x17007B19 RID: 31513
-		// (get) Token: 0x0601EED5 RID: 126677 RVA: 0x002DF92C File Offset: 0x002DDB2C
-		// (set) Token: 0x0601EED6 RID: 126678 RVA: 0x002DF96F File Offset: 0x002DDB6F
+		// Token: 0x17001ACF RID: 6863
+		// (get) Token: 0x06008D8D RID: 36237 RVA: 0x000D5180 File Offset: 0x000D3380
+		// (set) Token: 0x06008D8E RID: 36238 RVA: 0x000D51C3 File Offset: 0x000D33C3
 		public FTextTransitionInfoOfState UnCheckUnHoverState
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B1A RID: 31514
-		// (get) Token: 0x0601EED7 RID: 126679 RVA: 0x002DF990 File Offset: 0x002DDB90
-		// (set) Token: 0x0601EED8 RID: 126680 RVA: 0x002DF9D3 File Offset: 0x002DDBD3
+		// Token: 0x17001AD0 RID: 6864
+		// (get) Token: 0x06008D8F RID: 36239 RVA: 0x000D51E4 File Offset: 0x000D33E4
+		// (set) Token: 0x06008D90 RID: 36240 RVA: 0x000D5227 File Offset: 0x000D3427
 		public FTextTransitionInfoOfState UnCheckHoverState
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B1B RID: 31515
-		// (get) Token: 0x0601EED9 RID: 126681 RVA: 0x002DF9F4 File Offset: 0x002DDBF4
-		// (set) Token: 0x0601EEDA RID: 126682 RVA: 0x002DFA37 File Offset: 0x002DDC37
+		// Token: 0x17001AD1 RID: 6865
+		// (get) Token: 0x06008D91 RID: 36241 RVA: 0x000D5248 File Offset: 0x000D3448
+		// (set) Token: 0x06008D92 RID: 36242 RVA: 0x000D528B File Offset: 0x000D348B
 		public FTextTransitionInfoOfState UnCheckPressedState
 		{
 			get
@@ -82,9 +82,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B1C RID: 31516
-		// (get) Token: 0x0601EEDB RID: 126683 RVA: 0x002DFA58 File Offset: 0x002DDC58
-		// (set) Token: 0x0601EEDC RID: 126684 RVA: 0x002DFA9B File Offset: 0x002DDC9B
+		// Token: 0x17001AD2 RID: 6866
+		// (get) Token: 0x06008D93 RID: 36243 RVA: 0x000D52AC File Offset: 0x000D34AC
+		// (set) Token: 0x06008D94 RID: 36244 RVA: 0x000D52EF File Offset: 0x000D34EF
 		public FTextTransitionInfoOfState CheckUnHoverState
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B1D RID: 31517
-		// (get) Token: 0x0601EEDD RID: 126685 RVA: 0x002DFABC File Offset: 0x002DDCBC
-		// (set) Token: 0x0601EEDE RID: 126686 RVA: 0x002DFAFF File Offset: 0x002DDCFF
+		// Token: 0x17001AD3 RID: 6867
+		// (get) Token: 0x06008D95 RID: 36245 RVA: 0x000D5310 File Offset: 0x000D3510
+		// (set) Token: 0x06008D96 RID: 36246 RVA: 0x000D5353 File Offset: 0x000D3553
 		public FTextTransitionInfoOfState CheckHoverState
 		{
 			get
@@ -124,9 +124,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B1E RID: 31518
-		// (get) Token: 0x0601EEDF RID: 126687 RVA: 0x002DFB20 File Offset: 0x002DDD20
-		// (set) Token: 0x0601EEE0 RID: 126688 RVA: 0x002DFB63 File Offset: 0x002DDD63
+		// Token: 0x17001AD4 RID: 6868
+		// (get) Token: 0x06008D97 RID: 36247 RVA: 0x000D5374 File Offset: 0x000D3574
+		// (set) Token: 0x06008D98 RID: 36248 RVA: 0x000D53B7 File Offset: 0x000D35B7
 		public FTextTransitionInfoOfState CheckPressedState
 		{
 			get
@@ -145,9 +145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B1F RID: 31519
-		// (get) Token: 0x0601EEE1 RID: 126689 RVA: 0x002DFB84 File Offset: 0x002DDD84
-		// (set) Token: 0x0601EEE2 RID: 126690 RVA: 0x002DFBC7 File Offset: 0x002DDDC7
+		// Token: 0x17001AD5 RID: 6869
+		// (get) Token: 0x06008D99 RID: 36249 RVA: 0x000D53D8 File Offset: 0x000D35D8
+		// (set) Token: 0x06008D9A RID: 36250 RVA: 0x000D541B File Offset: 0x000D361B
 		public FTextTransitionInfoOfState UnDetermineUnHoverState
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B20 RID: 31520
-		// (get) Token: 0x0601EEE3 RID: 126691 RVA: 0x002DFBE8 File Offset: 0x002DDDE8
-		// (set) Token: 0x0601EEE4 RID: 126692 RVA: 0x002DFC2B File Offset: 0x002DDE2B
+		// Token: 0x17001AD6 RID: 6870
+		// (get) Token: 0x06008D9B RID: 36251 RVA: 0x000D543C File Offset: 0x000D363C
+		// (set) Token: 0x06008D9C RID: 36252 RVA: 0x000D547F File Offset: 0x000D367F
 		public FTextTransitionInfoOfState UnDetermineHoverState
 		{
 			get
@@ -187,9 +187,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B21 RID: 31521
-		// (get) Token: 0x0601EEE5 RID: 126693 RVA: 0x002DFC4C File Offset: 0x002DDE4C
-		// (set) Token: 0x0601EEE6 RID: 126694 RVA: 0x002DFC8F File Offset: 0x002DDE8F
+		// Token: 0x17001AD7 RID: 6871
+		// (get) Token: 0x06008D9D RID: 36253 RVA: 0x000D54A0 File Offset: 0x000D36A0
+		// (set) Token: 0x06008D9E RID: 36254 RVA: 0x000D54E3 File Offset: 0x000D36E3
 		public FTextTransitionInfoOfState UnDeterminePressedState
 		{
 			get
@@ -208,275 +208,107 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007B22 RID: 31522
-		// (get) Token: 0x0601EEE7 RID: 126695 RVA: 0x002DFCB0 File Offset: 0x002DDEB0
-		// (set) Token: 0x0601EEE8 RID: 126696 RVA: 0x002DFCC9 File Offset: 0x002DDEC9
-		public unsafe bool bEnableUnDetermined
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bEnableUnDetermined) & FExtendToggleTextTransitionState.__PropertyMask_bEnableUnDetermined) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bEnableUnDetermined) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bEnableUnDetermined) & ~FExtendToggleTextTransitionState.__PropertyMask_bEnableUnDetermined) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bEnableUnDetermined : 0));
-			}
-		}
-
-		// Token: 0x17007B23 RID: 31523
-		// (get) Token: 0x0601EEE9 RID: 126697 RVA: 0x002DFCF9 File Offset: 0x002DDEF9
-		// (set) Token: 0x0601EEEA RID: 126698 RVA: 0x002DFD12 File Offset: 0x002DDF12
-		public unsafe bool bCustomUnCheckedHover
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnCheckedHover) & FExtendToggleTextTransitionState.__PropertyMask_bCustomUnCheckedHover) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnCheckedHover) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnCheckedHover) & ~FExtendToggleTextTransitionState.__PropertyMask_bCustomUnCheckedHover) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bCustomUnCheckedHover : 0));
-			}
-		}
-
-		// Token: 0x17007B24 RID: 31524
-		// (get) Token: 0x0601EEEB RID: 126699 RVA: 0x002DFD42 File Offset: 0x002DDF42
-		// (set) Token: 0x0601EEEC RID: 126700 RVA: 0x002DFD5B File Offset: 0x002DDF5B
-		public unsafe bool bCustomUnCheckedPressed
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnCheckedPressed) & FExtendToggleTextTransitionState.__PropertyMask_bCustomUnCheckedPressed) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnCheckedPressed) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnCheckedPressed) & ~FExtendToggleTextTransitionState.__PropertyMask_bCustomUnCheckedPressed) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bCustomUnCheckedPressed : 0));
-			}
-		}
-
-		// Token: 0x17007B25 RID: 31525
-		// (get) Token: 0x0601EEED RID: 126701 RVA: 0x002DFD8B File Offset: 0x002DDF8B
-		// (set) Token: 0x0601EEEE RID: 126702 RVA: 0x002DFDA4 File Offset: 0x002DDFA4
-		public unsafe bool bCustomCheckedHover
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomCheckedHover) & FExtendToggleTextTransitionState.__PropertyMask_bCustomCheckedHover) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomCheckedHover) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomCheckedHover) & ~FExtendToggleTextTransitionState.__PropertyMask_bCustomCheckedHover) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bCustomCheckedHover : 0));
-			}
-		}
-
-		// Token: 0x17007B26 RID: 31526
-		// (get) Token: 0x0601EEEF RID: 126703 RVA: 0x002DFDD4 File Offset: 0x002DDFD4
-		// (set) Token: 0x0601EEF0 RID: 126704 RVA: 0x002DFDED File Offset: 0x002DDFED
-		public unsafe bool bCustomCheckedPressed
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomCheckedPressed) & FExtendToggleTextTransitionState.__PropertyMask_bCustomCheckedPressed) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomCheckedPressed) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomCheckedPressed) & ~FExtendToggleTextTransitionState.__PropertyMask_bCustomCheckedPressed) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bCustomCheckedPressed : 0));
-			}
-		}
-
-		// Token: 0x17007B27 RID: 31527
-		// (get) Token: 0x0601EEF1 RID: 126705 RVA: 0x002DFE1D File Offset: 0x002DE01D
-		// (set) Token: 0x0601EEF2 RID: 126706 RVA: 0x002DFE36 File Offset: 0x002DE036
-		public unsafe bool bCustomUnDeterminedHover
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnDeterminedHover) & FExtendToggleTextTransitionState.__PropertyMask_bCustomUnDeterminedHover) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnDeterminedHover) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnDeterminedHover) & ~FExtendToggleTextTransitionState.__PropertyMask_bCustomUnDeterminedHover) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bCustomUnDeterminedHover : 0));
-			}
-		}
-
-		// Token: 0x17007B28 RID: 31528
-		// (get) Token: 0x0601EEF3 RID: 126707 RVA: 0x002DFE66 File Offset: 0x002DE066
-		// (set) Token: 0x0601EEF4 RID: 126708 RVA: 0x002DFE7F File Offset: 0x002DE07F
-		public unsafe bool bCustomUnDeterminePressed
-		{
-			get
-			{
-				return (*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnDeterminePressed) & FExtendToggleTextTransitionState.__PropertyMask_bCustomUnDeterminePressed) > 0;
-			}
-			set
-			{
-				*(this._NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnDeterminePressed) = ((*(base.NativePtr + (IntPtr)FExtendToggleTextTransitionState.__PropertyOffset_bCustomUnDeterminePressed) & ~FExtendToggleTextTransitionState.__PropertyMask_bCustomUnDeterminePressed) | (value ? FExtendToggleTextTransitionState.__PropertyMask_bCustomUnDeterminePressed : 0));
-			}
-		}
-
-		// Token: 0x0601EEF5 RID: 126709 RVA: 0x002DFEAF File Offset: 0x002DE0AF
+		// Token: 0x06008D9F RID: 36255 RVA: 0x000D5504 File Offset: 0x000D3704
 		public FExtendToggleTextTransitionState()
 		{
 		}
 
-		// Token: 0x0601EEF6 RID: 126710 RVA: 0x002DFEB8 File Offset: 0x002DE0B8
-		public FExtendToggleTextTransitionState(FTextTransitionInfoOfState UnCheckUnHoverState, FTextTransitionInfoOfState UnCheckHoverState, FTextTransitionInfoOfState UnCheckPressedState, FTextTransitionInfoOfState CheckUnHoverState, FTextTransitionInfoOfState CheckHoverState, FTextTransitionInfoOfState CheckPressedState, FTextTransitionInfoOfState UnDetermineUnHoverState, FTextTransitionInfoOfState UnDetermineHoverState, FTextTransitionInfoOfState UnDeterminePressedState, bool bEnableUnDetermined, bool bCustomUnCheckedHover, bool bCustomUnCheckedPressed, bool bCustomCheckedHover, bool bCustomCheckedPressed, bool bCustomUnDeterminedHover, bool bCustomUnDeterminePressed)
-		{
-			this.UnCheckUnHoverState = UnCheckUnHoverState;
-			this.UnCheckHoverState = UnCheckHoverState;
-			this.UnCheckPressedState = UnCheckPressedState;
-			this.CheckUnHoverState = CheckUnHoverState;
-			this.CheckHoverState = CheckHoverState;
-			this.CheckPressedState = CheckPressedState;
-			this.UnDetermineUnHoverState = UnDetermineUnHoverState;
-			this.UnDetermineHoverState = UnDetermineHoverState;
-			this.UnDeterminePressedState = UnDeterminePressedState;
-			this.bEnableUnDetermined = bEnableUnDetermined;
-			this.bCustomUnCheckedHover = bCustomUnCheckedHover;
-			this.bCustomUnCheckedPressed = bCustomUnCheckedPressed;
-			this.bCustomCheckedHover = bCustomCheckedHover;
-			this.bCustomCheckedPressed = bCustomCheckedPressed;
-			this.bCustomUnDeterminedHover = bCustomUnDeterminedHover;
-			this.bCustomUnDeterminePressed = bCustomUnDeterminePressed;
-		}
-
-		// Token: 0x0601EEF7 RID: 126711 RVA: 0x002DFF48 File Offset: 0x002DE148
+		// Token: 0x06008DA0 RID: 36256 RVA: 0x000D550C File Offset: 0x000D370C
 		protected override IntPtr GetUStructPtr()
 		{
 			return FExtendToggleTextTransitionState.StaticStruct();
 		}
 
-		// Token: 0x0601EEF8 RID: 126712 RVA: 0x002DFF54 File Offset: 0x002DE154
+		// Token: 0x06008DA1 RID: 36257 RVA: 0x000D5518 File Offset: 0x000D3718
 		[NullableContext(2)]
 		public FExtendToggleTextTransitionState(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601EEF9 RID: 126713 RVA: 0x002DFF5E File Offset: 0x002DE15E
+		// Token: 0x06008DA2 RID: 36258 RVA: 0x000D5522 File Offset: 0x000D3722
 		public FExtendToggleTextTransitionState(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601EEFA RID: 126714 RVA: 0x002DFF69 File Offset: 0x002DE169
+		// Token: 0x06008DA3 RID: 36259 RVA: 0x000D552D File Offset: 0x000D372D
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FExtendToggleTextTransitionState(Pointer, false, true);
 		}
 
-		// Token: 0x0601EEFB RID: 126715 RVA: 0x002DFF73 File Offset: 0x002DE173
+		// Token: 0x06008DA4 RID: 36260 RVA: 0x000D5537 File Offset: 0x000D3737
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FExtendToggleTextTransitionState(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04010CF4 RID: 68852
+		// Token: 0x04003E58 RID: 15960
 		public const string __ObjectPath = "/Script/LGUI.ExtendToggleTextTransitionState";
 
-		// Token: 0x04010CF5 RID: 68853
+		// Token: 0x04003E59 RID: 15961
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010CF6 RID: 68854
+		// Token: 0x04003E5A RID: 15962
 		internal static int __PropertyOffset_UnCheckUnHoverState;
 
-		// Token: 0x04010CF7 RID: 68855
+		// Token: 0x04003E5B RID: 15963
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _UnCheckUnHoverState;
 
-		// Token: 0x04010CF8 RID: 68856
+		// Token: 0x04003E5C RID: 15964
 		internal static int __PropertyOffset_UnCheckHoverState;
 
-		// Token: 0x04010CF9 RID: 68857
+		// Token: 0x04003E5D RID: 15965
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _UnCheckHoverState;
 
-		// Token: 0x04010CFA RID: 68858
+		// Token: 0x04003E5E RID: 15966
 		internal static int __PropertyOffset_UnCheckPressedState;
 
-		// Token: 0x04010CFB RID: 68859
+		// Token: 0x04003E5F RID: 15967
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _UnCheckPressedState;
 
-		// Token: 0x04010CFC RID: 68860
+		// Token: 0x04003E60 RID: 15968
 		internal static int __PropertyOffset_CheckUnHoverState;
 
-		// Token: 0x04010CFD RID: 68861
+		// Token: 0x04003E61 RID: 15969
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _CheckUnHoverState;
 
-		// Token: 0x04010CFE RID: 68862
+		// Token: 0x04003E62 RID: 15970
 		internal static int __PropertyOffset_CheckHoverState;
 
-		// Token: 0x04010CFF RID: 68863
+		// Token: 0x04003E63 RID: 15971
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _CheckHoverState;
 
-		// Token: 0x04010D00 RID: 68864
+		// Token: 0x04003E64 RID: 15972
 		internal static int __PropertyOffset_CheckPressedState;
 
-		// Token: 0x04010D01 RID: 68865
+		// Token: 0x04003E65 RID: 15973
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _CheckPressedState;
 
-		// Token: 0x04010D02 RID: 68866
+		// Token: 0x04003E66 RID: 15974
 		internal static int __PropertyOffset_UnDetermineUnHoverState;
 
-		// Token: 0x04010D03 RID: 68867
+		// Token: 0x04003E67 RID: 15975
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _UnDetermineUnHoverState;
 
-		// Token: 0x04010D04 RID: 68868
+		// Token: 0x04003E68 RID: 15976
 		internal static int __PropertyOffset_UnDetermineHoverState;
 
-		// Token: 0x04010D05 RID: 68869
+		// Token: 0x04003E69 RID: 15977
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _UnDetermineHoverState;
 
-		// Token: 0x04010D06 RID: 68870
+		// Token: 0x04003E6A RID: 15978
 		internal static int __PropertyOffset_UnDeterminePressedState;
 
-		// Token: 0x04010D07 RID: 68871
+		// Token: 0x04003E6B RID: 15979
 		[Nullable(2)]
 		private FTextTransitionInfoOfState _UnDeterminePressedState;
-
-		// Token: 0x04010D08 RID: 68872
-		internal static int __PropertyOffset_bEnableUnDetermined;
-
-		// Token: 0x04010D09 RID: 68873
-		internal static byte __PropertyMask_bEnableUnDetermined;
-
-		// Token: 0x04010D0A RID: 68874
-		internal static int __PropertyOffset_bCustomUnCheckedHover;
-
-		// Token: 0x04010D0B RID: 68875
-		internal static byte __PropertyMask_bCustomUnCheckedHover;
-
-		// Token: 0x04010D0C RID: 68876
-		internal static int __PropertyOffset_bCustomUnCheckedPressed;
-
-		// Token: 0x04010D0D RID: 68877
-		internal static byte __PropertyMask_bCustomUnCheckedPressed;
-
-		// Token: 0x04010D0E RID: 68878
-		internal static int __PropertyOffset_bCustomCheckedHover;
-
-		// Token: 0x04010D0F RID: 68879
-		internal static byte __PropertyMask_bCustomCheckedHover;
-
-		// Token: 0x04010D10 RID: 68880
-		internal static int __PropertyOffset_bCustomCheckedPressed;
-
-		// Token: 0x04010D11 RID: 68881
-		internal static byte __PropertyMask_bCustomCheckedPressed;
-
-		// Token: 0x04010D12 RID: 68882
-		internal static int __PropertyOffset_bCustomUnDeterminedHover;
-
-		// Token: 0x04010D13 RID: 68883
-		internal static byte __PropertyMask_bCustomUnDeterminedHover;
-
-		// Token: 0x04010D14 RID: 68884
-		internal static int __PropertyOffset_bCustomUnDeterminePressed;
-
-		// Token: 0x04010D15 RID: 68885
-		internal static byte __PropertyMask_bCustomUnDeterminePressed;
 	}
 }

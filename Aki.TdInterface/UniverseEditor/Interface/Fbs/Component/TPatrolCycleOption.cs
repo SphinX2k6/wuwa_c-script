@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C7E RID: 23678
+	// Token: 0x020062AC RID: 25260
 	public enum TPatrolCycleOption : byte
 	{
-		// Token: 0x0400F4E8 RID: 62696
+		// Token: 0x04010228 RID: 66088
 		NONE,
-		// Token: 0x0400F4E9 RID: 62697
+		// Token: 0x04010229 RID: 66089
 		IPatrolCycleLooply,
-		// Token: 0x0400F4EA RID: 62698
+		// Token: 0x0401022A RID: 66090
 		IPatrolCycleOncely
 	}
 }

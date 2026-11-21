@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200077C RID: 1916
+	// Token: 0x02000796 RID: 1942
 	public class ConfigQuestRefMapBlockConfigByQuestId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002CF9 RID: 11513 RVA: 0x00157607 File Offset: 0x00155807
+		// Token: 0x06002D95 RID: 11669 RVA: 0x0015E513 File Offset: 0x0015C713
 		static ConfigQuestRefMapBlockConfigByQuestId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestRefMapBlockConfigByQuestId.CreateStaticDefaultValue), new Action(ConfigQuestRefMapBlockConfigByQuestId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002CFA RID: 11514 RVA: 0x00157628 File Offset: 0x00155828
+		// Token: 0x06002D96 RID: 11670 RVA: 0x0015E534 File Offset: 0x0015C734
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestRefMapBlockConfigByQuestId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002CFB RID: 11515 RVA: 0x001576A7 File Offset: 0x001558A7
+		// Token: 0x06002D97 RID: 11671 RVA: 0x0015E5B3 File Offset: 0x0015C7B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestRefMapBlockConfigByQuestId.LogPair = null;
 			ConfigQuestRefMapBlockConfigByQuestId.HandleId = 0;
 		}
 
-		// Token: 0x06002CFC RID: 11516 RVA: 0x001576B5 File Offset: 0x001558B5
+		// Token: 0x06002D98 RID: 11672 RVA: 0x0015E5C1 File Offset: 0x0015C7C1
 		public static void Init()
 		{
 			ConfigQuestRefMapBlockConfigByQuestId.HandleId = ConfigCommon.InitDataStatement(ConfigQuestRefMapBlockConfigByQuestId.HandleId, "db_questrefmapblock.db", "select BinData from `QuestRefMapBlockConfig` where QuestId=?");
 		}
 
-		// Token: 0x06002CFD RID: 11517 RVA: 0x001576D0 File Offset: 0x001558D0
+		// Token: 0x06002D99 RID: 11673 RVA: 0x0015E5DC File Offset: 0x0015C7DC
 		public static QuestRefMapBlockConfig? GetConfig(int p0QuestId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuestRefMapBlockConfigByQuestId.HandleId, ConfigQuestRefMapBlockConfigByQuestId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new QuestRefMapBlockConfig?(rootAsQuestRefMapBlockConfig);
 		}
 
-		// Token: 0x0400344A RID: 13386
+		// Token: 0x04003500 RID: 13568
 		private const string DB = "db_questrefmapblock.db";
 
-		// Token: 0x0400344B RID: 13387
+		// Token: 0x04003501 RID: 13569
 		private const string FILE = "UniverseEditor/QuestRefMapBlockConfig/QuestRefMapBlock.csv";
 
-		// Token: 0x0400344C RID: 13388
+		// Token: 0x04003502 RID: 13570
 		private const string TABLE = "QuestRefMapBlockConfig";
 
-		// Token: 0x0400344D RID: 13389
+		// Token: 0x04003503 RID: 13571
 		private const string COMMAND = "select BinData from `QuestRefMapBlockConfig` where QuestId=?";
 
-		// Token: 0x0400344E RID: 13390
+		// Token: 0x04003504 RID: 13572
 		private const string KEY_PREFIX = "QuestRefMapBlockConfigByQuestId";
 
-		// Token: 0x0400344F RID: 13391
+		// Token: 0x04003505 RID: 13573
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003450 RID: 13392
+		// Token: 0x04003506 RID: 13574
 		private static int HandleId;
 	}
 }

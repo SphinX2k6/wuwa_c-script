@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF2 RID: 23538
+	// Token: 0x02004BD2 RID: 19410
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CiacconaGalEndingView : UiViewBase
 	{
-		// Token: 0x0603B7C9 RID: 243657 RVA: 0x00E2FD95 File Offset: 0x00E2DF95
+		// Token: 0x06030714 RID: 198420 RVA: 0x00D800A5 File Offset: 0x00D7E2A5
 		[NullableContext(1)]
 		public CiacconaGalEndingView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B7CA RID: 243658 RVA: 0x00E2FDA0 File Offset: 0x00E2DFA0
+		// Token: 0x06030715 RID: 198421 RVA: 0x00D800B0 File Offset: 0x00D7E2B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7CB RID: 243659 RVA: 0x00E2FE6C File Offset: 0x00E2E06C
+		// Token: 0x06030716 RID: 198422 RVA: 0x00D8017C File Offset: 0x00D7E37C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalEndingView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,19 +52,19 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7CC RID: 243660 RVA: 0x00E2FEAF File Offset: 0x00E2E0AF
+		// Token: 0x06030717 RID: 198423 RVA: 0x00D801BF File Offset: 0x00D7E3BF
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<RewardPopupData>(EEventName.RefreshRewardPopUp, new Action<RewardPopupData>(this.OnRefreshRewardPopUp));
 		}
 
-		// Token: 0x0603B7CD RID: 243661 RVA: 0x00E2FECD File Offset: 0x00E2E0CD
+		// Token: 0x06030718 RID: 198424 RVA: 0x00D801DD File Offset: 0x00D7E3DD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshRewardPopUp, new Action<RewardPopupData>(this.OnRefreshRewardPopUp));
 		}
 
-		// Token: 0x0603B7CE RID: 243662 RVA: 0x00E2FEEB File Offset: 0x00E2E0EB
+		// Token: 0x06030719 RID: 198425 RVA: 0x00D801FB File Offset: 0x00D7E3FB
 		[NullableContext(1)]
 		private void OnRefreshRewardPopUp(RewardPopupData data)
 		{
@@ -81,38 +81,38 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			rewardPreviewPopup2.Refresh(data);
 		}
 
-		// Token: 0x0401EFD9 RID: 126937
+		// Token: 0x04019A8A RID: 105098
 		private CiacconaGalEndingItem EndingItem1;
 
-		// Token: 0x0401EFDA RID: 126938
+		// Token: 0x04019A8B RID: 105099
 		private CiacconaGalEndingItem EndingItem2;
 
-		// Token: 0x0401EFDB RID: 126939
+		// Token: 0x04019A8C RID: 105100
 		private CiacconaGalEndingItem EndingItem3;
 
-		// Token: 0x0401EFDC RID: 126940
+		// Token: 0x04019A8D RID: 105101
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401EFDD RID: 126941
+		// Token: 0x04019A8E RID: 105102
 		private CommonRewardPopup RewardPreviewPopup;
 
-		// Token: 0x0200BDD8 RID: 48600
+		// Token: 0x0200A7E0 RID: 42976
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393E5 RID: 234469
+			// Token: 0x04033DA8 RID: 212392
 			public const int ItemCaption = 0;
 
-			// Token: 0x040393E6 RID: 234470
+			// Token: 0x04033DA9 RID: 212393
 			public const int ItemEnding1 = 1;
 
-			// Token: 0x040393E7 RID: 234471
+			// Token: 0x04033DAA RID: 212394
 			public const int ItemEnding2 = 2;
 
-			// Token: 0x040393E8 RID: 234472
+			// Token: 0x04033DAB RID: 212395
 			public const int ItemEnding3 = 3;
 
-			// Token: 0x040393E9 RID: 234473
+			// Token: 0x04033DAC RID: 212396
 			public const int TextTitle = 4;
 		}
 	}

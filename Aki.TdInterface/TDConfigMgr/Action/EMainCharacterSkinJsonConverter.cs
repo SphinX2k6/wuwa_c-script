@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200237C RID: 9084
+	// Token: 0x02002605 RID: 9733
 	public class EMainCharacterSkinJsonConverter : JsonConverter<EMainCharacterSkin>
 	{
-		// Token: 0x0600C62E RID: 50734 RVA: 0x001D0810 File Offset: 0x001CEA10
+		// Token: 0x0600D272 RID: 53874 RVA: 0x001E97E4 File Offset: 0x001E79E4
 		public override EMainCharacterSkin Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMainCharacterSkinExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C62F RID: 50735 RVA: 0x001D0834 File Offset: 0x001CEA34
+		// Token: 0x0600D273 RID: 53875 RVA: 0x001E9808 File Offset: 0x001E7A08
 		public override void Write(Utf8JsonWriter writer, EMainCharacterSkin value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

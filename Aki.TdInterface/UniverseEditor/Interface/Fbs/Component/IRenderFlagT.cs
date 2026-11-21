@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005842 RID: 22594
+	// Token: 0x02005E4C RID: 24140
 	public class IRenderFlagT
 	{
-		// Token: 0x1700A8CC RID: 43212
-		// (get) Token: 0x0602602B RID: 155691 RVA: 0x0053D600 File Offset: 0x0053B800
-		// (set) Token: 0x0602602C RID: 155692 RVA: 0x0053D608 File Offset: 0x0053B808
+		// Token: 0x1700B1F7 RID: 45559
+		// (get) Token: 0x06028572 RID: 165234 RVA: 0x00583E64 File Offset: 0x00582064
+		// (set) Token: 0x06028573 RID: 165235 RVA: 0x00583E6C File Offset: 0x0058206C
 		public ERenderFlagType Type { get; set; }
 
-		// Token: 0x1700A8CD RID: 43213
-		// (get) Token: 0x0602602D RID: 155693 RVA: 0x0053D611 File Offset: 0x0053B811
-		// (set) Token: 0x0602602E RID: 155694 RVA: 0x0053D619 File Offset: 0x0053B819
+		// Token: 0x1700B1F8 RID: 45560
+		// (get) Token: 0x06028574 RID: 165236 RVA: 0x00583E75 File Offset: 0x00582075
+		// (set) Token: 0x06028575 RID: 165237 RVA: 0x00583E7D File Offset: 0x0058207D
 		public bool Enable { get; set; }
 
-		// Token: 0x0602602F RID: 155695 RVA: 0x0053D622 File Offset: 0x0053B822
+		// Token: 0x06028576 RID: 165238 RVA: 0x00583E86 File Offset: 0x00582086
 		public IRenderFlagT()
 		{
 			this.Type = ERenderFlagType.Fog;

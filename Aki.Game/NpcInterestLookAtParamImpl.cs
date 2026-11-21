@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031EE RID: 12782
+// Token: 0x0200275D RID: 10077
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcInterestLookAtParamImpl : INpcInterestLookAtParam
 {
-	// Token: 0x17002621 RID: 9761
-	// (get) Token: 0x0601B940 RID: 112960 RVA: 0x00792369 File Offset: 0x00790569
-	// (set) Token: 0x0601B941 RID: 112961 RVA: 0x00792371 File Offset: 0x00790571
+	// Token: 0x17002862 RID: 10338
+	// (get) Token: 0x060194C5 RID: 103621 RVA: 0x007BAA95 File Offset: 0x007B8C95
+	// (set) Token: 0x060194C6 RID: 103622 RVA: 0x007BAA9D File Offset: 0x007B8C9D
 	public int TargetPbDataId { get; set; }
 
-	// Token: 0x17002622 RID: 9762
-	// (get) Token: 0x0601B942 RID: 112962 RVA: 0x0079237A File Offset: 0x0079057A
-	// (set) Token: 0x0601B943 RID: 112963 RVA: 0x00792382 File Offset: 0x00790582
+	// Token: 0x17002863 RID: 10339
+	// (get) Token: 0x060194C7 RID: 103623 RVA: 0x007BAAA6 File Offset: 0x007B8CA6
+	// (set) Token: 0x060194C8 RID: 103624 RVA: 0x007BAAAE File Offset: 0x007B8CAE
 	public Vector TargetPosition { get; set; }
 
-	// Token: 0x17002623 RID: 9763
-	// (get) Token: 0x0601B944 RID: 112964 RVA: 0x0079238B File Offset: 0x0079058B
-	// (set) Token: 0x0601B945 RID: 112965 RVA: 0x00792393 File Offset: 0x00790593
+	// Token: 0x17002864 RID: 10340
+	// (get) Token: 0x060194C9 RID: 103625 RVA: 0x007BAAB7 File Offset: 0x007B8CB7
+	// (set) Token: 0x060194CA RID: 103626 RVA: 0x007BAABF File Offset: 0x007B8CBF
 	public float MaxAngle { get; set; }
 
-	// Token: 0x17002624 RID: 9764
-	// (get) Token: 0x0601B946 RID: 112966 RVA: 0x0079239C File Offset: 0x0079059C
-	// (set) Token: 0x0601B947 RID: 112967 RVA: 0x007923A4 File Offset: 0x007905A4
+	// Token: 0x17002865 RID: 10341
+	// (get) Token: 0x060194CB RID: 103627 RVA: 0x007BAAC8 File Offset: 0x007B8CC8
+	// (set) Token: 0x060194CC RID: 103628 RVA: 0x007BAAD0 File Offset: 0x007B8CD0
 	public float MaxDistance { get; set; }
 }

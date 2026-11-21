@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CB3 RID: 7347
+	// Token: 0x02001EBA RID: 7866
 	public class IOpenSystemBoardWithReturnType_SetValue
 	{
-		// Token: 0x04005F73 RID: 24435
+		// Token: 0x040064CF RID: 25807
 		public ESystemType Type;
 	}
 }

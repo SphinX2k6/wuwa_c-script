@@ -5,7 +5,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000BA RID: 186
+	// Token: 0x020000BD RID: 189
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,25 +14,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class RefResourceQuestListTable : TableReader<RefResourceQuestListRow>
 	{
-		// Token: 0x06000634 RID: 1588 RVA: 0x00036E64 File Offset: 0x00035064
+		// Token: 0x0600064F RID: 1615 RVA: 0x00038964 File Offset: 0x00036B64
 		protected override string GetTableName()
 		{
 			return "RefResourceQuestList";
 		}
 
-		// Token: 0x06000635 RID: 1589 RVA: 0x00036E6B File Offset: 0x0003506B
+		// Token: 0x06000650 RID: 1616 RVA: 0x0003896B File Offset: 0x00036B6B
 		protected override string GetDbFile()
 		{
 			return "db_refresourcequestlist.db";
 		}
 
-		// Token: 0x06000636 RID: 1590 RVA: 0x00036E72 File Offset: 0x00035072
+		// Token: 0x06000651 RID: 1617 RVA: 0x00038972 File Offset: 0x00036B72
 		protected override string GetIdString()
 		{
 			return "BitId";
 		}
 
-		// Token: 0x06000637 RID: 1591 RVA: 0x00036E7C File Offset: 0x0003507C
+		// Token: 0x06000652 RID: 1618 RVA: 0x0003897C File Offset: 0x00036B7C
 		public override RefResourceQuestListRow Parse(ByteBuffer byteBuffer)
 		{
 			RefResourceQuestListRow refResourceQuestListRow = new RefResourceQuestListRow();

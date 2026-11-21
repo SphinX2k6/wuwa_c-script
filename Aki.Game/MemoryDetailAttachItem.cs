@@ -7,17 +7,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x02001C20 RID: 7200
+// Token: 0x020010DF RID: 4319
 [NullableContext(2)]
 [Nullable(0)]
 public class MemoryDetailAttachItem : AutoAttachItem<int?>
 {
-	// Token: 0x0600D835 RID: 55349 RVA: 0x003205ED File Offset: 0x0031E7ED
+	// Token: 0x0600AC4B RID: 44107 RVA: 0x0032B9C5 File Offset: 0x00329BC5
 	public MemoryDetailAttachItem(AActor actor) : base(actor)
 	{
 	}
 
-	// Token: 0x0600D836 RID: 55350 RVA: 0x003205F8 File Offset: 0x0031E7F8
+	// Token: 0x0600AC4C RID: 44108 RVA: 0x0032B9D0 File Offset: 0x00329BD0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -41,19 +41,19 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D837 RID: 55351 RVA: 0x00320706 File Offset: 0x0031E906
+	// Token: 0x0600AC4D RID: 44109 RVA: 0x0032BADE File Offset: 0x00329CDE
 	protected override UUIExtendToggle GetSelectToggle()
 	{
 		return base.GetExtendToggle(5);
 	}
 
-	// Token: 0x0600D838 RID: 55352 RVA: 0x0032070F File Offset: 0x0031E90F
+	// Token: 0x0600AC4E RID: 44110 RVA: 0x0032BAE7 File Offset: 0x00329CE7
 	protected override void OnSelectToggleClick()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.OnFragmentTopicClick, this.CurrentId);
 	}
 
-	// Token: 0x0600D839 RID: 55353 RVA: 0x00320727 File Offset: 0x0031E927
+	// Token: 0x0600AC4F RID: 44111 RVA: 0x0032BAFF File Offset: 0x00329CFF
 	private void TryInitLevelSequencePlayer()
 	{
 		if (this.LevelSequencePlayer == null)
@@ -62,7 +62,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x0600D83A RID: 55354 RVA: 0x00320744 File Offset: 0x0031E944
+	// Token: 0x0600AC50 RID: 44112 RVA: 0x0032BB1C File Offset: 0x00329D1C
 	protected override void OnRefreshItem(int? id)
 	{
 		this.TryInitLevelSequencePlayer();
@@ -84,7 +84,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		this.BindRedDot(id);
 	}
 
-	// Token: 0x0600D83B RID: 55355 RVA: 0x003207BC File Offset: 0x0031E9BC
+	// Token: 0x0600AC51 RID: 44113 RVA: 0x0032BB94 File Offset: 0x00329D94
 	private void BindRedDot(int? id)
 	{
 		if (id != null)
@@ -104,7 +104,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600D83C RID: 55356 RVA: 0x00320828 File Offset: 0x0031EA28
+	// Token: 0x0600AC52 RID: 44114 RVA: 0x0032BC00 File Offset: 0x00329E00
 	private void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -114,7 +114,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x0600D83D RID: 55357 RVA: 0x0032088C File Offset: 0x0031EA8C
+	// Token: 0x0600AC53 RID: 44115 RVA: 0x0032BC64 File Offset: 0x00329E64
 	private void RefreshSprite()
 	{
 		if (this.CurrentId == -1)
@@ -130,7 +130,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x0600D83E RID: 55358 RVA: 0x0032094C File Offset: 0x0031EB4C
+	// Token: 0x0600AC54 RID: 44116 RVA: 0x0032BD24 File Offset: 0x00329F24
 	private void RefreshNameText()
 	{
 		if (this.CurrentId == -1 || this.CurrentData == null)
@@ -146,7 +146,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		text.ShowTextNew(this.CurrentData.Value.Title);
 	}
 
-	// Token: 0x0600D83F RID: 55359 RVA: 0x003209B0 File Offset: 0x0031EBB0
+	// Token: 0x0600AC55 RID: 44117 RVA: 0x0032BD88 File Offset: 0x00329F88
 	private void RefreshDescText()
 	{
 		if (this.CurrentId == -1 || this.CurrentData == null)
@@ -184,7 +184,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x0600D840 RID: 55360 RVA: 0x00320AA8 File Offset: 0x0031ECA8
+	// Token: 0x0600AC56 RID: 44118 RVA: 0x0032BE80 File Offset: 0x0032A080
 	private void RefreshFinishItem()
 	{
 		if (this.CurrentData == null)
@@ -215,7 +215,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x0600D841 RID: 55361 RVA: 0x00320B14 File Offset: 0x0031ED14
+	// Token: 0x0600AC57 RID: 44119 RVA: 0x0032BEEC File Offset: 0x0032A0EC
 	public override void OnSelect()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -232,7 +232,7 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		this.CurrentSelectState = true;
 	}
 
-	// Token: 0x0600D842 RID: 55362 RVA: 0x00320B74 File Offset: 0x0031ED74
+	// Token: 0x0600AC58 RID: 44120 RVA: 0x0032BF4C File Offset: 0x0032A14C
 	protected override void OnUnSelect()
 	{
 		if (this.CurrentSelectState)
@@ -251,55 +251,55 @@ public class MemoryDetailAttachItem : AutoAttachItem<int?>
 		this.CurrentSelectState = false;
 	}
 
-	// Token: 0x0600D843 RID: 55363 RVA: 0x00320BC6 File Offset: 0x0031EDC6
+	// Token: 0x0600AC59 RID: 44121 RVA: 0x0032BF9E File Offset: 0x0032A19E
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x0600D844 RID: 55364 RVA: 0x00320BCE File Offset: 0x0031EDCE
+	// Token: 0x0600AC5A RID: 44122 RVA: 0x0032BFA6 File Offset: 0x0032A1A6
 	protected override void OnMoveItem()
 	{
 	}
 
-	// Token: 0x04006295 RID: 25237
+	// Token: 0x04006367 RID: 25447
 	private PhotoMemoryTopic? CurrentData;
 
-	// Token: 0x04006296 RID: 25238
+	// Token: 0x04006368 RID: 25448
 	private int CurrentId;
 
-	// Token: 0x04006297 RID: 25239
+	// Token: 0x04006369 RID: 25449
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006298 RID: 25240
+	// Token: 0x0400636A RID: 25450
 	private bool CurrentSelectState;
 
-	// Token: 0x04006299 RID: 25241
+	// Token: 0x0400636B RID: 25451
 	private ERedDotName? RedDotName;
 
-	// Token: 0x020081D9 RID: 33241
+	// Token: 0x02007362 RID: 29538
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A60C RID: 173580
+		// Token: 0x04025933 RID: 153907
 		public const int MemorySprite = 0;
 
-		// Token: 0x0402A60D RID: 173581
+		// Token: 0x04025934 RID: 153908
 		public const int MemorySpriteLight = 1;
 
-		// Token: 0x0402A60E RID: 173582
+		// Token: 0x04025935 RID: 153909
 		public const int NameText = 2;
 
-		// Token: 0x0402A60F RID: 173583
+		// Token: 0x04025936 RID: 153910
 		public const int DescText = 3;
 
-		// Token: 0x0402A610 RID: 173584
+		// Token: 0x04025937 RID: 153911
 		public const int FinishItem = 4;
 
-		// Token: 0x0402A611 RID: 173585
+		// Token: 0x04025938 RID: 153912
 		public const int Toggle = 5;
 
-		// Token: 0x0402A612 RID: 173586
+		// Token: 0x04025939 RID: 153913
 		public const int RedDot = 6;
 	}
 }

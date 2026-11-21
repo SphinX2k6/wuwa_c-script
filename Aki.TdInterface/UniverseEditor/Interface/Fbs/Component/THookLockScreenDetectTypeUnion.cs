@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C3A RID: 23610
+	// Token: 0x0200625F RID: 25183
 	public class THookLockScreenDetectTypeUnion
 	{
-		// Token: 0x1700B204 RID: 45572
-		// (get) Token: 0x060287C9 RID: 165833 RVA: 0x00591FEF File Offset: 0x005901EF
-		// (set) Token: 0x060287CA RID: 165834 RVA: 0x00591FF7 File Offset: 0x005901F7
+		// Token: 0x1700BB56 RID: 47958
+		// (get) Token: 0x0602ADD7 RID: 175575 RVA: 0x005DA207 File Offset: 0x005D8407
+		// (set) Token: 0x0602ADD8 RID: 175576 RVA: 0x005DA20F File Offset: 0x005D840F
 		public THookLockScreenDetectType Type { get; set; }
 
-		// Token: 0x1700B205 RID: 45573
-		// (get) Token: 0x060287CB RID: 165835 RVA: 0x00592000 File Offset: 0x00590200
-		// (set) Token: 0x060287CC RID: 165836 RVA: 0x00592008 File Offset: 0x00590208
+		// Token: 0x1700BB57 RID: 47959
+		// (get) Token: 0x0602ADD9 RID: 175577 RVA: 0x005DA218 File Offset: 0x005D8418
+		// (set) Token: 0x0602ADDA RID: 175578 RVA: 0x005DA220 File Offset: 0x005D8420
 		public object Value { get; set; }
 
-		// Token: 0x060287CD RID: 165837 RVA: 0x00592011 File Offset: 0x00590211
+		// Token: 0x0602ADDB RID: 175579 RVA: 0x005DA229 File Offset: 0x005D8429
 		public THookLockScreenDetectTypeUnion()
 		{
 			this.Type = THookLockScreenDetectType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060287CE RID: 165838 RVA: 0x00592027 File Offset: 0x00590227
+		// Token: 0x0602ADDC RID: 175580 RVA: 0x005DA23F File Offset: 0x005D843F
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060287CF RID: 165839 RVA: 0x00592039 File Offset: 0x00590239
+		// Token: 0x0602ADDD RID: 175581 RVA: 0x005DA251 File Offset: 0x005D8451
 		public IHookLockScreenDetectTypeCentralEllipseT AsIHookLockScreenDetectTypeCentralEllipse()
 		{
 			return this.As<IHookLockScreenDetectTypeCentralEllipseT>();
 		}
 
-		// Token: 0x060287D0 RID: 165840 RVA: 0x00592041 File Offset: 0x00590241
+		// Token: 0x0602ADDE RID: 175582 RVA: 0x005DA259 File Offset: 0x005D8459
 		public static THookLockScreenDetectTypeUnion FromIHookLockScreenDetectTypeCentralEllipse(IHookLockScreenDetectTypeCentralEllipseT _ihooklockscreendetecttypecentralellipse)
 		{
 			return new THookLockScreenDetectTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060287D1 RID: 165841 RVA: 0x00592056 File Offset: 0x00590256
+		// Token: 0x0602ADDF RID: 175583 RVA: 0x005DA26E File Offset: 0x005D846E
 		public IHookLockScreenDetectTypeFullScreenT AsIHookLockScreenDetectTypeFullScreen()
 		{
 			return this.As<IHookLockScreenDetectTypeFullScreenT>();
 		}
 
-		// Token: 0x060287D2 RID: 165842 RVA: 0x0059205E File Offset: 0x0059025E
+		// Token: 0x0602ADE0 RID: 175584 RVA: 0x005DA276 File Offset: 0x005D8476
 		public static THookLockScreenDetectTypeUnion FromIHookLockScreenDetectTypeFullScreen(IHookLockScreenDetectTypeFullScreenT _ihooklockscreendetecttypefullscreen)
 		{
 			return new THookLockScreenDetectTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060287D3 RID: 165843 RVA: 0x00592074 File Offset: 0x00590274
+		// Token: 0x0602ADE1 RID: 175585 RVA: 0x005DA28C File Offset: 0x005D848C
 		public static int Pack(FlatBufferBuilder builder, THookLockScreenDetectTypeUnion _o)
 		{
 			THookLockScreenDetectType type = _o.Type;

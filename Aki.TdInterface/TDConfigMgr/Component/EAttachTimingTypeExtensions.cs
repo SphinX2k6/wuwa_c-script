@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008F6 RID: 2294
+	// Token: 0x0200099F RID: 2463
 	public static class EAttachTimingTypeExtensions
 	{
-		// Token: 0x06003404 RID: 13316 RVA: 0x00084F48 File Offset: 0x00083148
+		// Token: 0x0600375E RID: 14174 RVA: 0x0008C774 File Offset: 0x0008A974
 		public static string ToEnumString(this EAttachTimingType value)
 		{
 			string result;
-			if (value != EAttachTimingType.Default)
+			switch (value)
 			{
-				if (value != EAttachTimingType.OnMoveWithSplineEnd)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "OnMoveWithSplineEnd";
-				}
-			}
-			else
-			{
+			case EAttachTimingType.Default:
 				result = "Default";
+				break;
+			case EAttachTimingType.OnMoveWithSplineEnd:
+				result = "OnMoveWithSplineEnd";
+				break;
+			case EAttachTimingType.OnEntityStateChange:
+				result = "OnEntityStateChange";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x06003405 RID: 13317 RVA: 0x00084F80 File Offset: 0x00083180
+		// Token: 0x0600375F RID: 14175 RVA: 0x0008C7BC File Offset: 0x0008A9BC
 		public static EAttachTimingType FromString(string name)
 		{
 			EAttachTimingType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003406 RID: 13318 RVA: 0x00084FA9 File Offset: 0x000831A9
+		// Token: 0x06003760 RID: 14176 RVA: 0x0008C7E8 File Offset: 0x0008A9E8
 		public static bool TryFromString(string name, out EAttachTimingType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +51,50 @@ namespace Aki.TDConfigMgr.Component
 				value = EAttachTimingType.Default;
 				return true;
 			}
-			if (!(name == "OnMoveWithSplineEnd"))
+			if (name == "OnMoveWithSplineEnd")
+			{
+				value = EAttachTimingType.OnMoveWithSplineEnd;
+				return true;
+			}
+			if (!(name == "OnEntityStateChange"))
 			{
 				value = EAttachTimingType.Default;
 				return false;
 			}
-			value = EAttachTimingType.OnMoveWithSplineEnd;
+			value = EAttachTimingType.OnEntityStateChange;
 			return true;
 		}
 
-		// Token: 0x06003407 RID: 13319 RVA: 0x00084FE2 File Offset: 0x000831E2
+		// Token: 0x06003761 RID: 14177 RVA: 0x0008C83E File Offset: 0x0008AA3E
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"Default",
-				"OnMoveWithSplineEnd"
+				"OnMoveWithSplineEnd",
+				"OnEntityStateChange"
 			};
 		}
 
-		// Token: 0x06003408 RID: 13320 RVA: 0x00084FFA File Offset: 0x000831FA
+		// Token: 0x06003762 RID: 14178 RVA: 0x0008C85E File Offset: 0x0008AA5E
 		public static EAttachTimingType[] GetValues()
 		{
 			return new EAttachTimingType[]
 			{
 				EAttachTimingType.Default,
-				EAttachTimingType.OnMoveWithSplineEnd
+				EAttachTimingType.OnMoveWithSplineEnd,
+				EAttachTimingType.OnEntityStateChange
 			};
 		}
 
-		// Token: 0x06003409 RID: 13321 RVA: 0x00085006 File Offset: 0x00083206
+		// Token: 0x06003763 RID: 14179 RVA: 0x0008C86E File Offset: 0x0008AA6E
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"Default",
-				"OnMoveWithSplineEnd"
+				"OnMoveWithSplineEnd",
+				"OnEntityStateChange"
 			};
 		}
 	}

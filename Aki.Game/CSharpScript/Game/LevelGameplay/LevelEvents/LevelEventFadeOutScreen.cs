@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B2B RID: 27435
+	// Token: 0x02005CA3 RID: 23715
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventFadeOutScreen : LevelEventBase
 	{
-		// Token: 0x0604410E RID: 278798 RVA: 0x010BC6D4 File Offset: 0x010BA8D4
+		// Token: 0x0603A260 RID: 238176 RVA: 0x01065F60 File Offset: 0x01064160
 		public LevelEventFadeOutScreen(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604410F RID: 278799 RVA: 0x010BC6E0 File Offset: 0x010BA8E0
+		// Token: 0x0603A261 RID: 238177 RVA: 0x01065F6C File Offset: 0x0106416C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			FadeBackgroundController.Instance.CloseFadeBackground();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			instance.CloseLoading(reason, context2, callback, duration);
 		}
 
-		// Token: 0x06044110 RID: 278800 RVA: 0x010BC7A8 File Offset: 0x010BA9A8
+		// Token: 0x0603A262 RID: 238178 RVA: 0x01066034 File Offset: 0x01064234
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			FadeBackgroundController.Instance.CloseFadeBackground();
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, new float?(0f));
 		}
 
-		// Token: 0x06044111 RID: 278801 RVA: 0x010BC7D6 File Offset: 0x010BA9D6
+		// Token: 0x0603A263 RID: 238179 RVA: 0x01066062 File Offset: 0x01064262
 		private void OnFadeComplete()
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044112 RID: 278802 RVA: 0x010BC7E4 File Offset: 0x010BA9E4
+		// Token: 0x0603A264 RID: 238180 RVA: 0x01066070 File Offset: 0x01064270
 		protected override void OnUpdateGuarantee()
 		{
 			GuaranteeActionInfo p = new GuaranteeActionInfo

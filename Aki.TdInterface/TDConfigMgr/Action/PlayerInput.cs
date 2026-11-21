@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200210D RID: 8461
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200236E RID: 9070
 	public class PlayerInput : ActionParams
 	{
-		// Token: 0x0600BA20 RID: 47648 RVA: 0x001AE1F0 File Offset: 0x001AC3F0
+		// Token: 0x0600C5AC RID: 50604 RVA: 0x001C5350 File Offset: 0x001C3550
 		private PlayerInput_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BA21 RID: 47649 RVA: 0x001AE228 File Offset: 0x001AC428
+		// Token: 0x0600C5AD RID: 50605 RVA: 0x001C5388 File Offset: 0x001C3588
 		public static PlayerInput Create([Nullable(2)] PlayerInput instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA22 RID: 47650 RVA: 0x001AE23B File Offset: 0x001AC43B
+		// Token: 0x0600C5AE RID: 50606 RVA: 0x001C539B File Offset: 0x001C359B
 		public static PlayerInput CreateFromSetValue([Nullable(2)] PlayerInput_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA23 RID: 47651 RVA: 0x001AE24E File Offset: 0x001AC44E
+		// Token: 0x0600C5AF RID: 50607 RVA: 0x001C53AE File Offset: 0x001C35AE
 		public PlayerInput_SetValue ToSetValue()
 		{
 			return new PlayerInput_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038D6 RID: 14550
-		// (get) Token: 0x0600BA24 RID: 47652 RVA: 0x001AE261 File Offset: 0x001AC461
-		// (set) Token: 0x0600BA25 RID: 47653 RVA: 0x001AE28C File Offset: 0x001AC48C
+		// Token: 0x17003BC2 RID: 15298
+		// (get) Token: 0x0600C5B0 RID: 50608 RVA: 0x001C53C1 File Offset: 0x001C35C1
+		// (set) Token: 0x0600C5B1 RID: 50609 RVA: 0x001C53EC File Offset: 0x001C35EC
 		public virtual EPlayerInputType Input
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F6B RID: 28523
+		// Token: 0x0400759F RID: 30111
 		[Nullable(2)]
 		protected new PlayerInput FbInstance;
 
-		// Token: 0x04006F6C RID: 28524
+		// Token: 0x040075A0 RID: 30112
 		[Nullable(2)]
 		protected PlayerInput_SetValue PocoInterface;
 	}

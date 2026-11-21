@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DF0 RID: 3568
+	// Token: 0x02000ED5 RID: 3797
 	public struct MapMarkRelativeSubType : IFlatbufferObject
 	{
-		// Token: 0x17001E28 RID: 7720
-		// (get) Token: 0x0600916C RID: 37228 RVA: 0x0027F569 File Offset: 0x0027D769
+		// Token: 0x17001E8C RID: 7820
+		// (get) Token: 0x06009788 RID: 38792 RVA: 0x0029D713 File Offset: 0x0029B913
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600916D RID: 37229 RVA: 0x0027F576 File Offset: 0x0027D776
+		// Token: 0x06009789 RID: 38793 RVA: 0x0029D720 File Offset: 0x0029B920
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600916E RID: 37230 RVA: 0x0027F580 File Offset: 0x0027D780
+		// Token: 0x0600978A RID: 38794 RVA: 0x0029D728 File Offset: 0x0029B928
 		public static MapMarkRelativeSubType GetRootAsMapMarkRelativeSubType(ByteBuffer _bb)
 		{
 			return MapMarkRelativeSubType.GetRootAsMapMarkRelativeSubType(_bb, default(MapMarkRelativeSubType));
 		}
 
-		// Token: 0x0600916F RID: 37231 RVA: 0x0027F59C File Offset: 0x0027D79C
+		// Token: 0x0600978B RID: 38795 RVA: 0x0029D744 File Offset: 0x0029B944
 		public static MapMarkRelativeSubType GetRootAsMapMarkRelativeSubType(ByteBuffer _bb, MapMarkRelativeSubType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009170 RID: 37232 RVA: 0x0027F5B9 File Offset: 0x0027D7B9
+		// Token: 0x0600978C RID: 38796 RVA: 0x0029D761 File Offset: 0x0029B961
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009171 RID: 37233 RVA: 0x0027F5C8 File Offset: 0x0027D7C8
+		// Token: 0x0600978D RID: 38797 RVA: 0x0029D770 File Offset: 0x0029B970
 		public MapMarkRelativeSubType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001E29 RID: 7721
-		// (get) Token: 0x06009172 RID: 37234 RVA: 0x0027F5D8 File Offset: 0x0027D7D8
+		// Token: 0x17001E8D RID: 7821
+		// (get) Token: 0x0600978E RID: 38798 RVA: 0x0029D780 File Offset: 0x0029B980
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E2A RID: 7722
-		// (get) Token: 0x06009173 RID: 37235 RVA: 0x0027F614 File Offset: 0x0027D814
+		// Token: 0x17001E8E RID: 7822
+		// (get) Token: 0x0600978F RID: 38799 RVA: 0x0029D7BC File Offset: 0x0029B9BC
 		public int FunctionId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E2B RID: 7723
-		// (get) Token: 0x06009174 RID: 37236 RVA: 0x0027F650 File Offset: 0x0027D850
+		// Token: 0x17001E8F RID: 7823
+		// (get) Token: 0x06009790 RID: 38800 RVA: 0x0029D7F8 File Offset: 0x0029B9F8
 		public IntVector? Position
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001E2C RID: 7724
-		// (get) Token: 0x06009175 RID: 37237 RVA: 0x0027F6B0 File Offset: 0x0027D8B0
+		// Token: 0x17001E90 RID: 7824
+		// (get) Token: 0x06009791 RID: 38801 RVA: 0x0029D858 File Offset: 0x0029BA58
 		public float Scale
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E8D RID: 20109
+		// Token: 0x04005472 RID: 21618
 		private Table __p;
 	}
 }

@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D98 RID: 15768
+	// Token: 0x020041AF RID: 16815
 	public class ICommonEventVarValueChangeT
 	{
-		// Token: 0x17006C72 RID: 27762
-		// (get) Token: 0x06015E73 RID: 89715 RVA: 0x00329A4F File Offset: 0x00327C4F
-		// (set) Token: 0x06015E74 RID: 89716 RVA: 0x00329A57 File Offset: 0x00327C57
+		// Token: 0x1700722C RID: 29228
+		// (get) Token: 0x060173AB RID: 95147 RVA: 0x00350D7B File Offset: 0x0034EF7B
+		// (set) Token: 0x060173AC RID: 95148 RVA: 0x00350D83 File Offset: 0x0034EF83
 		public ECommonEventType Type { get; set; }
 
-		// Token: 0x17006C73 RID: 27763
-		// (get) Token: 0x06015E75 RID: 89717 RVA: 0x00329A60 File Offset: 0x00327C60
-		// (set) Token: 0x06015E76 RID: 89718 RVA: 0x00329A68 File Offset: 0x00327C68
+		// Token: 0x1700722D RID: 29229
+		// (get) Token: 0x060173AD RID: 95149 RVA: 0x00350D8C File Offset: 0x0034EF8C
+		// (set) Token: 0x060173AE RID: 95150 RVA: 0x00350D94 File Offset: 0x0034EF94
 		public TVarRefUnion Var { get; set; }
 
-		// Token: 0x06015E77 RID: 89719 RVA: 0x00329A71 File Offset: 0x00327C71
+		// Token: 0x060173AF RID: 95151 RVA: 0x00350D9D File Offset: 0x0034EF9D
 		public ICommonEventVarValueChangeT()
 		{
 			this.Type = ECommonEventType.VarValueChange;

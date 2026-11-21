@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C17 RID: 7191
+	// Token: 0x020004F1 RID: 1265
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnEnterVolumeBlueprintEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601BBD3 RID: 113619 RVA: 0x0028D1A2 File Offset: 0x0028B3A2
+		// Token: 0x06007723 RID: 30499 RVA: 0x000AE17E File Offset: 0x000AC37E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnEnterVolumeBlueprintEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601BBD4 RID: 113620 RVA: 0x0028D1AE File Offset: 0x0028B3AE
+		// Token: 0x06007724 RID: 30500 RVA: 0x000AE18A File Offset: 0x000AC38A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnEnterVolumeBlueprintEvent._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FOnEnterVolumeBlueprintEvent._FunctionPtr;
 		}
 
-		// Token: 0x0601BBD5 RID: 113621 RVA: 0x0028D1D1 File Offset: 0x0028B3D1
+		// Token: 0x06007725 RID: 30501 RVA: 0x000AE1AD File Offset: 0x000AC3AD
 		public FOnEnterVolumeBlueprintEvent()
 		{
 		}
 
-		// Token: 0x0601BBD6 RID: 113622 RVA: 0x0028D1D9 File Offset: 0x0028B3D9
+		// Token: 0x06007726 RID: 30502 RVA: 0x000AE1B5 File Offset: 0x000AC3B5
 		[NullableContext(2)]
 		public FOnEnterVolumeBlueprintEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601BBD7 RID: 113623 RVA: 0x0028D1E3 File Offset: 0x0028B3E3
+		// Token: 0x06007727 RID: 30503 RVA: 0x000AE1BF File Offset: 0x000AC3BF
 		public FOnEnterVolumeBlueprintEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601BBD8 RID: 113624 RVA: 0x0028D1EE File Offset: 0x0028B3EE
+		// Token: 0x06007728 RID: 30504 RVA: 0x000AE1CA File Offset: 0x000AC3CA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601BBD9 RID: 113625 RVA: 0x0028D220 File Offset: 0x0028B420
+		// Token: 0x06007729 RID: 30505 RVA: 0x000AE1FC File Offset: 0x000AC3FC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FOnEnterVolumeBlueprintEvent.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FOnEnterVolumeBlueprintEvent.RegisterId);
 		}
 
-		// Token: 0x0601BBDA RID: 113626 RVA: 0x0028D25A File Offset: 0x0028B45A
+		// Token: 0x0600772A RID: 30506 RVA: 0x000AE236 File Offset: 0x000AC436
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601BBDB RID: 113627 RVA: 0x0028D263 File Offset: 0x0028B463
+		// Token: 0x0600772B RID: 30507 RVA: 0x000AE23F File Offset: 0x000AC43F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601BBDC RID: 113628 RVA: 0x0028D270 File Offset: 0x0028B470
+		// Token: 0x0600772C RID: 30508 RVA: 0x000AE24C File Offset: 0x000AC44C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400EE96 RID: 61078
+		// Token: 0x0400323B RID: 12859
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400EE97 RID: 61079
+		// Token: 0x0400323C RID: 12860
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.OnEnterVolumeBlueprintEvent__DelegateSignature";
 
-		// Token: 0x0400EE98 RID: 61080
+		// Token: 0x0400323D RID: 12861
 		private static int RegisterId;
 
-		// Token: 0x0200319B RID: 12699
+		// Token: 0x02000C31 RID: 3121
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016FD9 RID: 94169
+			// Token: 0x04005E7E RID: 24190
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B4A RID: 6986
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CF9 RID: 7417
 	public class IInteractionConfirmBoxType
 	{
-		// Token: 0x0600957F RID: 38271 RVA: 0x0015999C File Offset: 0x00157B9C
+		// Token: 0x06009D69 RID: 40297 RVA: 0x0016A678 File Offset: 0x00168878
 		private IInteractionConfirmBoxType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009580 RID: 38272 RVA: 0x001599D4 File Offset: 0x00157BD4
+		// Token: 0x06009D6A RID: 40298 RVA: 0x0016A6B0 File Offset: 0x001688B0
 		public static IInteractionConfirmBoxType Create([Nullable(2)] IInteractionConfirmBoxType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009581 RID: 38273 RVA: 0x001599E7 File Offset: 0x00157BE7
+		// Token: 0x06009D6B RID: 40299 RVA: 0x0016A6C3 File Offset: 0x001688C3
 		public static IInteractionConfirmBoxType CreateFromSetValue([Nullable(2)] IInteractionConfirmBoxType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009582 RID: 38274 RVA: 0x001599FA File Offset: 0x00157BFA
+		// Token: 0x06009D6C RID: 40300 RVA: 0x0016A6D6 File Offset: 0x001688D6
 		public IInteractionConfirmBoxType_SetValue ToSetValue()
 		{
 			return new IInteractionConfirmBoxType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F27 RID: 12071
-		// (get) Token: 0x06009583 RID: 38275 RVA: 0x00159A0D File Offset: 0x00157C0D
-		// (set) Token: 0x06009584 RID: 38276 RVA: 0x00159A38 File Offset: 0x00157C38
+		// Token: 0x1700314D RID: 12621
+		// (get) Token: 0x06009D6D RID: 40301 RVA: 0x0016A6E9 File Offset: 0x001688E9
+		// (set) Token: 0x06009D6E RID: 40302 RVA: 0x0016A714 File Offset: 0x00168914
 		public virtual EInteractionConfirmBoxType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B7A RID: 23418
+		// Token: 0x04006018 RID: 24600
 		[Nullable(2)]
 		protected IInteractionConfirmBoxType FbInstance;
 
-		// Token: 0x04005B7B RID: 23419
+		// Token: 0x04006019 RID: 24601
 		[Nullable(2)]
 		protected IInteractionConfirmBoxType_SetValue PocoInterface;
 	}

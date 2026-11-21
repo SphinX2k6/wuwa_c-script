@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200661D RID: 26141
+	// Token: 0x0200559B RID: 21915
 	public class FishingQuestShapePanelItem : GridProxyAbstract<ValueTuple<int, int>>
 	{
-		// Token: 0x0604188D RID: 268429 RVA: 0x00FE2AA8 File Offset: 0x00FE0CA8
+		// Token: 0x06036552 RID: 222546 RVA: 0x00F29B18 File Offset: 0x00F27D18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604188E RID: 268430 RVA: 0x00FE2AF0 File Offset: 0x00FE0CF0
+		// Token: 0x06036553 RID: 222547 RVA: 0x00F29B60 File Offset: 0x00F27D60
 		public override void Refresh(ValueTuple<int, int> data, bool isSelected, int gridIndex)
 		{
 			this.RowIndex = data.Item1;
 			this.ColumnIndex = data.Item2;
 		}
 
-		// Token: 0x0604188F RID: 268431 RVA: 0x00FE2B0C File Offset: 0x00FE0D0C
+		// Token: 0x06036554 RID: 222548 RVA: 0x00F29B7C File Offset: 0x00F27D7C
 		[NullableContext(1)]
 		public void SetGirdSprite(int category, string path)
 		{
@@ -44,16 +44,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetSpriteByPath(path, sprite2, false, null, null);
 		}
 
-		// Token: 0x0402218E RID: 139662
+		// Token: 0x0401CABF RID: 117439
 		public int RowIndex;
 
-		// Token: 0x0402218F RID: 139663
+		// Token: 0x0401CAC0 RID: 117440
 		public int ColumnIndex;
 
-		// Token: 0x0200C832 RID: 51250
+		// Token: 0x0200B214 RID: 45588
 		private class EComponentDefine
 		{
-			// Token: 0x0403C771 RID: 247665
+			// Token: 0x040370B6 RID: 225462
 			public const int Sprite = 0;
 		}
 	}

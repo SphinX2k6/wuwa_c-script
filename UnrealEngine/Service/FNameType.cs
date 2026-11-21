@@ -2,12 +2,12 @@
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002AF5 RID: 10997
+	// Token: 0x020008A5 RID: 2213
 	public enum FNameType
 	{
-		// Token: 0x040162A4 RID: 90788
+		// Token: 0x040056BC RID: 22204
 		Init,
-		// Token: 0x040162A5 RID: 90789
+		// Token: 0x040056BD RID: 22205
 		Lazy
 	}
 }

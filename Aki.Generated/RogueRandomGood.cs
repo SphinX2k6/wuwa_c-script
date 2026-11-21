@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011D9 RID: 4569
+	// Token: 0x02001310 RID: 4880
 	public struct RogueRandomGood : IFlatbufferObject
 	{
-		// Token: 0x17003F17 RID: 16151
-		// (get) Token: 0x0600EB09 RID: 60169 RVA: 0x00349380 File Offset: 0x00347580
+		// Token: 0x1700427F RID: 17023
+		// (get) Token: 0x0600F882 RID: 63618 RVA: 0x00374070 File Offset: 0x00372270
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,38 +20,38 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB0A RID: 60170 RVA: 0x0034938D File Offset: 0x0034758D
+		// Token: 0x0600F883 RID: 63619 RVA: 0x0037407D File Offset: 0x0037227D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EB0B RID: 60171 RVA: 0x00349394 File Offset: 0x00347594
+		// Token: 0x0600F884 RID: 63620 RVA: 0x00374084 File Offset: 0x00372284
 		public static RogueRandomGood GetRootAsRogueRandomGood(ByteBuffer _bb)
 		{
 			return RogueRandomGood.GetRootAsRogueRandomGood(_bb, default(RogueRandomGood));
 		}
 
-		// Token: 0x0600EB0C RID: 60172 RVA: 0x003493B0 File Offset: 0x003475B0
+		// Token: 0x0600F885 RID: 63621 RVA: 0x003740A0 File Offset: 0x003722A0
 		public static RogueRandomGood GetRootAsRogueRandomGood(ByteBuffer _bb, RogueRandomGood obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EB0D RID: 60173 RVA: 0x003493CD File Offset: 0x003475CD
+		// Token: 0x0600F886 RID: 63622 RVA: 0x003740BD File Offset: 0x003722BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EB0E RID: 60174 RVA: 0x003493DC File Offset: 0x003475DC
+		// Token: 0x0600F887 RID: 63623 RVA: 0x003740CC File Offset: 0x003722CC
 		public RogueRandomGood __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0600EB0F RID: 60175 RVA: 0x003493EC File Offset: 0x003475EC
+		// Token: 0x0600F888 RID: 63624 RVA: 0x003740DC File Offset: 0x003722DC
 		public DicStringInt? GoodsPoolWeight(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -62,8 +62,8 @@ namespace Aki.Config
 			return new DicStringInt?(default(DicStringInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003F18 RID: 16152
-		// (get) Token: 0x0600EB10 RID: 60176 RVA: 0x0034944C File Offset: 0x0034764C
+		// Token: 0x17004280 RID: 17024
+		// (get) Token: 0x0600F889 RID: 63625 RVA: 0x0037413C File Offset: 0x0037233C
 		public int GoodsPoolWeightLength
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F19 RID: 16153
-		// (get) Token: 0x0600EB11 RID: 60177 RVA: 0x00349478 File Offset: 0x00347678
+		// Token: 0x17004281 RID: 17025
+		// (get) Token: 0x0600F88A RID: 63626 RVA: 0x00374168 File Offset: 0x00372368
 		public int Discount
 		{
 			get
@@ -92,24 +92,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB12 RID: 60178 RVA: 0x003494B4 File Offset: 0x003476B4
+		// Token: 0x0600F88B RID: 63627 RVA: 0x003741A4 File Offset: 0x003723A4
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用GoodsPoolWeightFrozenDict()缓存字典，遍历请使用GoodsPoolWeightIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, int> GoodsPoolWeight()
+		public Dictionary<string, int> GoodsPoolWeight()
 		{
 			return this.GoodsPoolWeightIter().ToDictionary((DicStringInt element) => element.Key, (DicStringInt element) => element.Value);
 		}
 
-		// Token: 0x0600EB13 RID: 60179 RVA: 0x0034950A File Offset: 0x0034770A
+		// Token: 0x0600F88C RID: 63628 RVA: 0x003741FA File Offset: 0x003723FA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringInt> GoodsPoolWeightIter()
+		public IEnumerable<DicStringInt> GoodsPoolWeightIter()
 		{
 			RogueRandomGood.<GoodsPoolWeightIter>d__14 <GoodsPoolWeightIter>d__ = new RogueRandomGood.<GoodsPoolWeightIter>d__14(-2);
 			<GoodsPoolWeightIter>d__.<>3__<>4__this = this;
 			return <GoodsPoolWeightIter>d__;
 		}
 
-		// Token: 0x0600EB14 RID: 60180 RVA: 0x00349520 File Offset: 0x00347720
+		// Token: 0x0600F88D RID: 63629 RVA: 0x00374210 File Offset: 0x00372410
 		[NullableContext(1)]
 		public int? GetGoodsPoolWeight(string key)
 		{
@@ -122,7 +121,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600EB15 RID: 60181 RVA: 0x00349554 File Offset: 0x00347754
+		// Token: 0x0600F88E RID: 63630 RVA: 0x00374244 File Offset: 0x00372444
 		private void EnsureGoodsPoolWeightCacheIfNeeded()
 		{
 			if (this.GoodsPoolWeightCache != null)
@@ -132,23 +131,18 @@ namespace Aki.Config
 			this.GoodsPoolWeightCache = this.GoodsPoolWeightIter().ToFrozenDictionary((DicStringInt kvp) => kvp.Key, (DicStringInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600EB16 RID: 60182 RVA: 0x003495BA File Offset: 0x003477BA
+		// Token: 0x0600F88F RID: 63631 RVA: 0x003742AA File Offset: 0x003724AA
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<string, int> GetGoodsPoolWeightFrozenDict(string key)
+		public FrozenDictionary<string, int> GetGoodsPoolWeightFrozenDict()
 		{
 			this.EnsureGoodsPoolWeightCacheIfNeeded();
 			return this.GoodsPoolWeightCache;
 		}
 
-		// Token: 0x04005347 RID: 21319
+		// Token: 0x0400598B RID: 22923
 		private Table __p;
 
-		// Token: 0x04005348 RID: 21320
+		// Token: 0x0400598C RID: 22924
 		[Nullable(new byte[]
 		{
 			2,

@@ -8,34 +8,34 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FE8 RID: 20456
+	// Token: 0x02003FB2 RID: 16306
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class UiParam
 	{
-		// Token: 0x17007FC6 RID: 32710
-		// (get) Token: 0x0603459F RID: 214431 RVA: 0x00C4D7E9 File Offset: 0x00C4B9E9
-		// (set) Token: 0x060345A0 RID: 214432 RVA: 0x00C4D7F1 File Offset: 0x00C4B9F1
+		// Token: 0x1700537A RID: 21370
+		// (get) Token: 0x06029428 RID: 169000 RVA: 0x00B97831 File Offset: 0x00B95A31
+		// (set) Token: 0x06029429 RID: 169001 RVA: 0x00B97839 File Offset: 0x00B95A39
 		public EUiViewName? ViewName { get; set; }
 
-		// Token: 0x17007FC7 RID: 32711
-		// (get) Token: 0x060345A1 RID: 214433 RVA: 0x00C4D7FA File Offset: 0x00C4B9FA
-		// (set) Token: 0x060345A2 RID: 214434 RVA: 0x00C4D802 File Offset: 0x00C4BA02
+		// Token: 0x1700537B RID: 21371
+		// (get) Token: 0x0602942A RID: 169002 RVA: 0x00B97842 File Offset: 0x00B95A42
+		// (set) Token: 0x0602942B RID: 169003 RVA: 0x00B9784A File Offset: 0x00B95A4A
 		public EPlotLowLevelPosition? Position { get; set; }
 
-		// Token: 0x17007FC8 RID: 32712
-		// (get) Token: 0x060345A3 RID: 214435 RVA: 0x00C4D80B File Offset: 0x00C4BA0B
-		// (set) Token: 0x060345A4 RID: 214436 RVA: 0x00C4D813 File Offset: 0x00C4BA13
+		// Token: 0x1700537C RID: 21372
+		// (get) Token: 0x0602942C RID: 169004 RVA: 0x00B97853 File Offset: 0x00B95A53
+		// (set) Token: 0x0602942D RID: 169005 RVA: 0x00B9785B File Offset: 0x00B95A5B
 		public bool? DisableAnim { get; set; }
 
-		// Token: 0x17007FC9 RID: 32713
-		// (get) Token: 0x060345A5 RID: 214437 RVA: 0x00C4D81C File Offset: 0x00C4BA1C
-		// (set) Token: 0x060345A6 RID: 214438 RVA: 0x00C4D824 File Offset: 0x00C4BA24
+		// Token: 0x1700537D RID: 21373
+		// (get) Token: 0x0602942E RID: 169006 RVA: 0x00B97864 File Offset: 0x00B95A64
+		// (set) Token: 0x0602942F RID: 169007 RVA: 0x00B9786C File Offset: 0x00B95A6C
 		public EPlotTextWidthType? TextWidth { get; set; }
 
-		// Token: 0x17007FCA RID: 32714
-		// (get) Token: 0x060345A7 RID: 214439 RVA: 0x00C4D82D File Offset: 0x00C4BA2D
-		// (set) Token: 0x060345A8 RID: 214440 RVA: 0x00C4D835 File Offset: 0x00C4BA35
+		// Token: 0x1700537E RID: 21374
+		// (get) Token: 0x06029430 RID: 169008 RVA: 0x00B97875 File Offset: 0x00B95A75
+		// (set) Token: 0x06029431 RID: 169009 RVA: 0x00B9787D File Offset: 0x00B95A7D
 		[Nullable(new byte[]
 		{
 			2,
@@ -51,24 +51,24 @@ namespace CSharpScript.Game.Module.Plot
 			1
 		})] set; }
 
-		// Token: 0x17007FCB RID: 32715
-		// (get) Token: 0x060345A9 RID: 214441 RVA: 0x00C4D83E File Offset: 0x00C4BA3E
-		// (set) Token: 0x060345AA RID: 214442 RVA: 0x00C4D846 File Offset: 0x00C4BA46
+		// Token: 0x1700537F RID: 21375
+		// (get) Token: 0x06029432 RID: 169010 RVA: 0x00B97886 File Offset: 0x00B95A86
+		// (set) Token: 0x06029433 RID: 169011 RVA: 0x00B9788E File Offset: 0x00B95A8E
 		public EQuestChapterState? ChapterState { get; set; }
 
-		// Token: 0x17007FCC RID: 32716
-		// (get) Token: 0x060345AB RID: 214443 RVA: 0x00C4D84F File Offset: 0x00C4BA4F
-		// (set) Token: 0x060345AC RID: 214444 RVA: 0x00C4D857 File Offset: 0x00C4BA57
+		// Token: 0x17005380 RID: 21376
+		// (get) Token: 0x06029434 RID: 169012 RVA: 0x00B97897 File Offset: 0x00B95A97
+		// (set) Token: 0x06029435 RID: 169013 RVA: 0x00B9789F File Offset: 0x00B95A9F
 		public bool? ResumeTimeDilation { get; set; }
 
-		// Token: 0x17007FCD RID: 32717
-		// (get) Token: 0x060345AD RID: 214445 RVA: 0x00C4D860 File Offset: 0x00C4BA60
-		// (set) Token: 0x060345AE RID: 214446 RVA: 0x00C4D868 File Offset: 0x00C4BA68
+		// Token: 0x17005381 RID: 21377
+		// (get) Token: 0x06029436 RID: 169014 RVA: 0x00B978A8 File Offset: 0x00B95AA8
+		// (set) Token: 0x06029437 RID: 169015 RVA: 0x00B978B0 File Offset: 0x00B95AB0
 		public bool? HideAllUi { get; set; }
 
-		// Token: 0x17007FCE RID: 32718
-		// (get) Token: 0x060345AF RID: 214447 RVA: 0x00C4D871 File Offset: 0x00C4BA71
-		// (set) Token: 0x060345B0 RID: 214448 RVA: 0x00C4D879 File Offset: 0x00C4BA79
+		// Token: 0x17005382 RID: 21378
+		// (get) Token: 0x06029438 RID: 169016 RVA: 0x00B978B9 File Offset: 0x00B95AB9
+		// (set) Token: 0x06029439 RID: 169017 RVA: 0x00B978C1 File Offset: 0x00B95AC1
 		public AActor AudioAttachActor { get; set; }
 	}
 }

@@ -5,22 +5,22 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Effect.Statistics;
 
 namespace CSharpScript.Game.Render.Effect.DebugTools
 {
-	// Token: 0x020045F6 RID: 17910
+	// Token: 0x0200351F RID: 13599
 	public class EffectStatisticsData
 	{
-		// Token: 0x04018C9E RID: 101534
+		// Token: 0x040132DD RID: 78557
 		public int RegisteredCountInterval;
 
-		// Token: 0x04018C9F RID: 101535
+		// Token: 0x040132DE RID: 78558
 		public int ReleasedCountInterval;
 
-		// Token: 0x04018CA0 RID: 101536
+		// Token: 0x040132DF RID: 78559
 		public int CurrentCount;
 
-		// Token: 0x04018CA1 RID: 101537
+		// Token: 0x040132E0 RID: 78560
 		public int TickInFrameCount;
 
-		// Token: 0x04018CA2 RID: 101538
+		// Token: 0x040132E1 RID: 78561
 		[Nullable(new byte[]
 		{
 			2,

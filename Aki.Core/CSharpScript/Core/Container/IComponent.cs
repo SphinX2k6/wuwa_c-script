@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x0200015B RID: 347
+	// Token: 0x02000160 RID: 352
 	[NullableContext(1)]
 	public interface IComponent
 	{
-		// Token: 0x1700012D RID: 301
-		// (get) Token: 0x06000BF1 RID: 3057
-		// (set) Token: 0x06000BF2 RID: 3058
+		// Token: 0x17000140 RID: 320
+		// (get) Token: 0x06000C50 RID: 3152
+		// (set) Token: 0x06000C51 RID: 3153
 		Dictionary<int, int> Degree { get; set; }
 
-		// Token: 0x1700012E RID: 302
-		// (get) Token: 0x06000BF3 RID: 3059
-		// (set) Token: 0x06000BF4 RID: 3060
+		// Token: 0x17000141 RID: 321
+		// (get) Token: 0x06000C52 RID: 3154
+		// (set) Token: 0x06000C53 RID: 3155
 		Dictionary<int, List<IAdjItem>> Adj { get; set; }
 
-		// Token: 0x1700012F RID: 303
-		// (get) Token: 0x06000BF5 RID: 3061
-		// (set) Token: 0x06000BF6 RID: 3062
+		// Token: 0x17000142 RID: 322
+		// (get) Token: 0x06000C54 RID: 3156
+		// (set) Token: 0x06000C55 RID: 3157
 		int EdgeCount { get; set; }
 	}
 }

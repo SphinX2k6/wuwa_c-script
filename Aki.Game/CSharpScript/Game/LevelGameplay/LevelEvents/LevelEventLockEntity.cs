@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B3D RID: 27453
+	// Token: 0x02005CB5 RID: 23733
 	public class LevelEventLockEntity : LevelEventBase
 	{
-		// Token: 0x06044155 RID: 278869 RVA: 0x010BE76B File Offset: 0x010BC96B
+		// Token: 0x0603A2A7 RID: 238247 RVA: 0x010681E7 File Offset: 0x010663E7
 		public LevelEventLockEntity(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044156 RID: 278870 RVA: 0x010BE774 File Offset: 0x010BC974
+		// Token: 0x0603A2A8 RID: 238248 RVA: 0x010681F0 File Offset: 0x010663F0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.Config.EntityIds);
 		}
 
-		// Token: 0x06044157 RID: 278871 RVA: 0x010BE7C4 File Offset: 0x010BC9C4
+		// Token: 0x0603A2A9 RID: 238249 RVA: 0x01068240 File Offset: 0x01066440
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			foreach (int pbDataId in this.Config.EntityIds)
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044158 RID: 278872 RVA: 0x010BE868 File Offset: 0x010BCA68
+		// Token: 0x0603A2AA RID: 238250 RVA: 0x010682E4 File Offset: 0x010664E4
 		protected override void OnReset()
 		{
 			this.Config = null;
 		}
 
-		// Token: 0x04023913 RID: 145683
+		// Token: 0x0401EBB5 RID: 125877
 		[Nullable(2)]
 		private LockEntity Config;
 	}

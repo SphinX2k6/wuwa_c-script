@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200275B RID: 10075
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A27 RID: 10791
 	public class IVisionSettlementHardTip : ICommonTipType
 	{
-		// Token: 0x0600E077 RID: 57463 RVA: 0x002130ED File Offset: 0x002112ED
+		// Token: 0x0600EE77 RID: 61047 RVA: 0x0022FC25 File Offset: 0x0022DE25
 		public static IVisionSettlementHardTip Create(IVisionSettlementHardTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004383 RID: 17283
-		// (get) Token: 0x0600E078 RID: 57464 RVA: 0x0021310C File Offset: 0x0021130C
+		// Token: 0x170046D7 RID: 18135
+		// (get) Token: 0x0600EE78 RID: 61048 RVA: 0x0022FC44 File Offset: 0x0022DE44
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004384 RID: 17284
-		// (get) Token: 0x0600E079 RID: 57465 RVA: 0x00213119 File Offset: 0x00211319
+		// Token: 0x170046D8 RID: 18136
+		// (get) Token: 0x0600EE79 RID: 61049 RVA: 0x0022FC51 File Offset: 0x0022DE51
 		public virtual string TidMainText
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004385 RID: 17285
-		// (get) Token: 0x0600E07A RID: 57466 RVA: 0x00213126 File Offset: 0x00211326
+		// Token: 0x170046D9 RID: 18137
+		// (get) Token: 0x0600EE7A RID: 61050 RVA: 0x0022FC5E File Offset: 0x0022DE5E
 		public virtual string TidSubText
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004386 RID: 17286
-		// (get) Token: 0x0600E07B RID: 57467 RVA: 0x00213133 File Offset: 0x00211333
+		// Token: 0x170046DA RID: 18138
+		// (get) Token: 0x0600EE7B RID: 61051 RVA: 0x0022FC6B File Offset: 0x0022DE6B
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004387 RID: 17287
-		// (get) Token: 0x0600E07C RID: 57468 RVA: 0x00213136 File Offset: 0x00211336
+		// Token: 0x170046DB RID: 18139
+		// (get) Token: 0x0600EE7C RID: 61052 RVA: 0x0022FC6E File Offset: 0x0022DE6E
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -76,7 +74,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C59 RID: 31833
+		// Token: 0x04008307 RID: 33543
 		private IVisionSettlementHardTip Instance;
 	}
 }

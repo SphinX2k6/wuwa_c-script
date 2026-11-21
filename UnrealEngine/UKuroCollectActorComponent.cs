@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EB2 RID: 7858
+	// Token: 0x020005D1 RID: 1489
 	[UnrealObjectPath("/Script/KuroUtility.KuroCollectActorComponent")]
 	[UnrealStructLayout(208, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 208)]
 	public class UKuroCollectActorComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DD35 RID: 122165 RVA: 0x002C1F26 File Offset: 0x002C0126
+		// Token: 0x06008409 RID: 33801 RVA: 0x000C41F6 File Offset: 0x000C23F6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroCollectActorComponent._ClassPtr;
 		}
 
-		// Token: 0x0601DD36 RID: 122166 RVA: 0x002C1F34 File Offset: 0x002C0134
+		// Token: 0x0600840A RID: 33802 RVA: 0x000C4204 File Offset: 0x000C2404
 		public UKuroCollectActorComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroCollectActorComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DD37 RID: 122167 RVA: 0x002C1F5C File Offset: 0x002C015C
+		// Token: 0x0600840B RID: 33803 RVA: 0x000C422C File Offset: 0x000C242C
 		[NullableContext(1)]
 		public UKuroCollectActorComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroCollectActorComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700779B RID: 30619
-		// (get) Token: 0x0601DD38 RID: 122168 RVA: 0x002C1F8F File Offset: 0x002C018F
-		// (set) Token: 0x0601DD39 RID: 122169 RVA: 0x002C1F9F File Offset: 0x002C019F
+		// Token: 0x1700195A RID: 6490
+		// (get) Token: 0x0600840C RID: 33804 RVA: 0x000C425F File Offset: 0x000C245F
+		// (set) Token: 0x0600840D RID: 33805 RVA: 0x000C426F File Offset: 0x000C246F
 		public unsafe ECollectActorType CollectActorType
 		{
 			get
@@ -43,20 +43,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD3A RID: 122170 RVA: 0x002C1FB0 File Offset: 0x002C01B0
+		// Token: 0x0600840E RID: 33806 RVA: 0x000C4280 File Offset: 0x000C2480
 		public void RemoveCollectActorComponentInEditor()
 		{
 			UKuroCollectActorComponent.__RemoveCollectActorComponentInEditor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601DD3B RID: 122171 RVA: 0x002C1FBD File Offset: 0x002C01BD
+		// Token: 0x0600840F RID: 33807 RVA: 0x000C428D File Offset: 0x000C248D
 		[NullableContext(2)]
 		public static AActor GetActorWithTag(FName Tag, ECollectActorType Type)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UKuroCollectActorComponent.__GetActorWithTag_Internal(Tag, Type));
 		}
 
-		// Token: 0x0601DD3C RID: 122172 RVA: 0x002C1FCB File Offset: 0x002C01CB
+		// Token: 0x06008410 RID: 33808 RVA: 0x000C429B File Offset: 0x000C249B
 		public static void GetActorsWithTag(FName Tag, ECollectActorType Type, [Nullable(new byte[]
 		{
 			2,
@@ -66,50 +66,50 @@ namespace UnrealEngine
 			UKuroCollectActorComponent.__GetActorsWithTag_Internal(Tag, Type, (OutResult ?? new TArray<AActor>()).NativePtr);
 		}
 
-		// Token: 0x0601DD3D RID: 122173 RVA: 0x002C1FE4 File Offset: 0x002C01E4
+		// Token: 0x06008411 RID: 33809 RVA: 0x000C42B4 File Offset: 0x000C24B4
 		public void AddCollectActorComponentInEditor()
 		{
 			UKuroCollectActorComponent.__AddCollectActorComponentInEditor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601DD3E RID: 122174
+		// Token: 0x06008412 RID: 33810
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveCollectActorComponentInEditor_Internal(IntPtr @this);
 
-		// Token: 0x0601DD3F RID: 122175
+		// Token: 0x06008413 RID: 33811
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetActorWithTag_Internal(FName Tag, ECollectActorType Type);
 
-		// Token: 0x0601DD40 RID: 122176
+		// Token: 0x06008414 RID: 33812
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetActorsWithTag_Internal(FName Tag, ECollectActorType Type, IntPtr OutResult);
 
-		// Token: 0x0601DD41 RID: 122177
+		// Token: 0x06008415 RID: 33813
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddCollectActorComponentInEditor_Internal(IntPtr @this);
 
-		// Token: 0x0601DD42 RID: 122178 RVA: 0x002C1FF1 File Offset: 0x002C01F1
+		// Token: 0x06008416 RID: 33814 RVA: 0x000C42C1 File Offset: 0x000C24C1
 		static UKuroCollectActorComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroCollectActorComponent");
 		}
 
-		// Token: 0x0601DD43 RID: 122179 RVA: 0x002C1FFF File Offset: 0x002C01FF
+		// Token: 0x06008417 RID: 33815 RVA: 0x000C42CF File Offset: 0x000C24CF
 		protected UKuroCollectActorComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040102A3 RID: 66211
+		// Token: 0x040039BE RID: 14782
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroCollectActorComponent";
 
-		// Token: 0x040102A4 RID: 66212
+		// Token: 0x040039BF RID: 14783
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040102A5 RID: 66213
+		// Token: 0x040039C0 RID: 14784
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040102A6 RID: 66214
+		// Token: 0x040039C1 RID: 14785
 		internal static int __PropertyOffset_CollectActorType;
 	}
 }

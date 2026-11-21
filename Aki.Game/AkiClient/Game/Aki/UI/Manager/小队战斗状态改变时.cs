@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039EE RID: 14830
+	// Token: 0x02003045 RID: 12357
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 小队战斗状态改变时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F0FC RID: 127228 RVA: 0x008A94AB File Offset: 0x008A76AB
+		// Token: 0x0601D55D RID: 120157 RVA: 0x008F1B0B File Offset: 0x008EFD0B
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 小队战斗状态改变时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F0FD RID: 127229 RVA: 0x008A94B7 File Offset: 0x008A76B7
+		// Token: 0x0601D55E RID: 120158 RVA: 0x008F1B17 File Offset: 0x008EFD17
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__小队战斗状态改变时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,32 +28,31 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__小队战斗状态改变时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F0FE RID: 127230 RVA: 0x008A94DA File Offset: 0x008A76DA
+		// Token: 0x0601D55F RID: 120159 RVA: 0x008F1B3A File Offset: 0x008EFD3A
 		public 小队战斗状态改变时()
 		{
 		}
 
-		// Token: 0x0601F0FF RID: 127231 RVA: 0x008A94E2 File Offset: 0x008A76E2
+		// Token: 0x0601D560 RID: 120160 RVA: 0x008F1B42 File Offset: 0x008EFD42
 		[NullableContext(2)]
 		public 小队战斗状态改变时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F100 RID: 127232 RVA: 0x008A94EC File Offset: 0x008A76EC
+		// Token: 0x0601D561 RID: 120161 RVA: 0x008F1B4C File Offset: 0x008EFD4C
 		public 小队战斗状态改变时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F101 RID: 127233 RVA: 0x008A94F7 File Offset: 0x008A76F7
+		// Token: 0x0601D562 RID: 120162 RVA: 0x008F1B57 File Offset: 0x008EFD57
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F102 RID: 127234 RVA: 0x008A9529 File Offset: 0x008A7729
+		// Token: 0x0601D563 RID: 120163 RVA: 0x008F1B89 File Offset: 0x008EFD89
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool> Callback)
 		{
 			if (小队战斗状态改变时.RegisterId == 0)
@@ -68,17 +67,15 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 小队战斗状态改变时.RegisterId);
 		}
 
-		// Token: 0x0601F103 RID: 127235 RVA: 0x008A9563 File Offset: 0x008A7763
+		// Token: 0x0601D564 RID: 120164 RVA: 0x008F1BC3 File Offset: 0x008EFDC3
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F104 RID: 127236 RVA: 0x008A956C File Offset: 0x008A776C
+		// Token: 0x0601D565 RID: 120165 RVA: 0x008F1BCC File Offset: 0x008EFDCC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool 是否进入战斗)
 		{
 			小队战斗状态改变时.__小队战斗状态改变时_DelegateParams* ptr = stackalloc 小队战斗状态改变时.__小队战斗状态改变时_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(小队战斗状态改变时.__小队战斗状态改变时_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F105 RID: 127237 RVA: 0x008A95A8 File Offset: 0x008A77A8
+		// Token: 0x0601D566 RID: 120166 RVA: 0x008F1C08 File Offset: 0x008EFE08
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -101,28 +97,28 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((小队战斗状态改变时.__小队战斗状态改变时_DelegateParams*)__Parameters)->是否进入战斗);
 		}
 
-		// Token: 0x0400EE1E RID: 60958
+		// Token: 0x0400F746 RID: 63302
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:小队战斗状态改变时__DelegateSignature";
 
-		// Token: 0x0400EE1F RID: 60959
+		// Token: 0x0400F747 RID: 63303
 		private static int RegisterId;
 
-		// Token: 0x020099EB RID: 39403
+		// Token: 0x02008C9F RID: 35999
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __小队战斗状态改变时_DelegateParams
+		private ref struct __小队战斗状态改变时_DelegateParams
 		{
-			// Token: 0x04030EC3 RID: 200387
+			// Token: 0x0402C7A3 RID: 182179
 			[FieldOffset(0)]
 			public bool 是否进入战斗;
 		}
 
-		// Token: 0x020099EC RID: 39404
+		// Token: 0x02008CA0 RID: 36000
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EC4 RID: 200388
+			// Token: 0x0402C7A4 RID: 182180
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

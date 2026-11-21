@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Test
 {
-	// Token: 0x02003B75 RID: 15221
+	// Token: 0x02003F7D RID: 16253
 	public struct ITestSummary : IFlatbufferObject
 	{
-		// Token: 0x1700684C RID: 26700
-		// (get) Token: 0x06014D4B RID: 85323 RVA: 0x003066AC File Offset: 0x003048AC
+		// Token: 0x17006DEB RID: 28139
+		// (get) Token: 0x06016215 RID: 90645 RVA: 0x0032CC44 File Offset: 0x0032AE44
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x06014D4C RID: 85324 RVA: 0x003066B9 File Offset: 0x003048B9
+		// Token: 0x06016216 RID: 90646 RVA: 0x0032CC51 File Offset: 0x0032AE51
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014D4D RID: 85325 RVA: 0x003066C0 File Offset: 0x003048C0
+		// Token: 0x06016217 RID: 90647 RVA: 0x0032CC58 File Offset: 0x0032AE58
 		public static ITestSummary GetRootAsITestSummary(ByteBuffer _bb)
 		{
 			return ITestSummary.GetRootAsITestSummary(_bb, default(ITestSummary));
 		}
 
-		// Token: 0x06014D4E RID: 85326 RVA: 0x003066DC File Offset: 0x003048DC
+		// Token: 0x06016218 RID: 90648 RVA: 0x0032CC74 File Offset: 0x0032AE74
 		public static ITestSummary GetRootAsITestSummary(ByteBuffer _bb, ITestSummary obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014D4F RID: 85327 RVA: 0x003066F9 File Offset: 0x003048F9
+		// Token: 0x06016219 RID: 90649 RVA: 0x0032CC91 File Offset: 0x0032AE91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014D50 RID: 85328 RVA: 0x00306708 File Offset: 0x00304908
+		// Token: 0x0601621A RID: 90650 RVA: 0x0032CCA0 File Offset: 0x0032AEA0
 		public ITestSummary __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700684D RID: 26701
-		// (get) Token: 0x06014D51 RID: 85329 RVA: 0x00306718 File Offset: 0x00304918
+		// Token: 0x17006DEC RID: 28140
+		// (get) Token: 0x0601621B RID: 90651 RVA: 0x0032CCB0 File Offset: 0x0032AEB0
 		public int Total
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x1700684E RID: 26702
-		// (get) Token: 0x06014D52 RID: 85330 RVA: 0x00306754 File Offset: 0x00304954
+		// Token: 0x17006DED RID: 28141
+		// (get) Token: 0x0601621C RID: 90652 RVA: 0x0032CCEC File Offset: 0x0032AEEC
 		public int Passed
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x1700684F RID: 26703
-		// (get) Token: 0x06014D53 RID: 85331 RVA: 0x00306790 File Offset: 0x00304990
+		// Token: 0x17006DEE RID: 28142
+		// (get) Token: 0x0601621D RID: 90653 RVA: 0x0032CD28 File Offset: 0x0032AF28
 		public int Failed
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x17006850 RID: 26704
-		// (get) Token: 0x06014D54 RID: 85332 RVA: 0x003067CC File Offset: 0x003049CC
+		// Token: 0x17006DEF RID: 28143
+		// (get) Token: 0x0601621E RID: 90654 RVA: 0x0032CD64 File Offset: 0x0032AF64
 		public bool IsRequiredCaseAllPassed
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x17006851 RID: 26705
-		// (get) Token: 0x06014D55 RID: 85333 RVA: 0x0030680C File Offset: 0x00304A0C
+		// Token: 0x17006DF0 RID: 28144
+		// (get) Token: 0x0601621F RID: 90655 RVA: 0x0032CDA4 File Offset: 0x0032AFA4
 		public int Time
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x17006852 RID: 26706
-		// (get) Token: 0x06014D56 RID: 85334 RVA: 0x0030684C File Offset: 0x00304A4C
+		// Token: 0x17006DF1 RID: 28145
+		// (get) Token: 0x06016220 RID: 90656 RVA: 0x0032CDE4 File Offset: 0x0032AFE4
 		public string ErrorMsg
 		{
 			get
@@ -133,20 +133,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x06014D57 RID: 85335 RVA: 0x00306884 File Offset: 0x00304A84
+		// Token: 0x06016221 RID: 90657 RVA: 0x0032CE1C File Offset: 0x0032B01C
 		public Span<byte> GetErrorMsgBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06014D58 RID: 85336 RVA: 0x00306894 File Offset: 0x00304A94
+		// Token: 0x06016222 RID: 90658 RVA: 0x0032CE2C File Offset: 0x0032B02C
 		public byte[] GetErrorMsgArray()
 		{
 			return this.__p.__vector_as_array<byte>(14);
 		}
 
-		// Token: 0x17006853 RID: 26707
-		// (get) Token: 0x06014D59 RID: 85337 RVA: 0x003068A4 File Offset: 0x00304AA4
+		// Token: 0x17006DF2 RID: 28146
+		// (get) Token: 0x06016223 RID: 90659 RVA: 0x0032CE3C File Offset: 0x0032B03C
 		public byte NullMask
 		{
 			get
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			}
 		}
 
-		// Token: 0x06014D5A RID: 85338 RVA: 0x003068E4 File Offset: 0x00304AE4
+		// Token: 0x06016224 RID: 90660 RVA: 0x0032CE7C File Offset: 0x0032B07C
 		public static Offset<ITestSummary> CreateITestSummary(FlatBufferBuilder builder, int Total = 0, int Passed = 0, int Failed = 0, bool IsRequiredCaseAllPassed = false, int Time = 0, StringOffset ErrorMsgOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -174,61 +174,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			return ITestSummary.EndITestSummary(builder);
 		}
 
-		// Token: 0x06014D5B RID: 85339 RVA: 0x00306933 File Offset: 0x00304B33
+		// Token: 0x06016225 RID: 90661 RVA: 0x0032CECB File Offset: 0x0032B0CB
 		public static void StartITestSummary(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06014D5C RID: 85340 RVA: 0x0030693C File Offset: 0x00304B3C
+		// Token: 0x06016226 RID: 90662 RVA: 0x0032CED4 File Offset: 0x0032B0D4
 		public static void AddTotal(FlatBufferBuilder builder, int total)
 		{
 			builder.AddInt(0, total, 0);
 		}
 
-		// Token: 0x06014D5D RID: 85341 RVA: 0x00306947 File Offset: 0x00304B47
+		// Token: 0x06016227 RID: 90663 RVA: 0x0032CEDF File Offset: 0x0032B0DF
 		public static void AddPassed(FlatBufferBuilder builder, int passed)
 		{
 			builder.AddInt(1, passed, 0);
 		}
 
-		// Token: 0x06014D5E RID: 85342 RVA: 0x00306952 File Offset: 0x00304B52
+		// Token: 0x06016228 RID: 90664 RVA: 0x0032CEEA File Offset: 0x0032B0EA
 		public static void AddFailed(FlatBufferBuilder builder, int failed)
 		{
 			builder.AddInt(2, failed, 0);
 		}
 
-		// Token: 0x06014D5F RID: 85343 RVA: 0x0030695D File Offset: 0x00304B5D
+		// Token: 0x06016229 RID: 90665 RVA: 0x0032CEF5 File Offset: 0x0032B0F5
 		public static void AddIsRequiredCaseAllPassed(FlatBufferBuilder builder, bool isRequiredCaseAllPassed)
 		{
 			builder.AddBool(3, isRequiredCaseAllPassed, false);
 		}
 
-		// Token: 0x06014D60 RID: 85344 RVA: 0x00306968 File Offset: 0x00304B68
+		// Token: 0x0601622A RID: 90666 RVA: 0x0032CF00 File Offset: 0x0032B100
 		public static void AddTime(FlatBufferBuilder builder, int time)
 		{
 			builder.AddInt(4, time, 0);
 		}
 
-		// Token: 0x06014D61 RID: 85345 RVA: 0x00306973 File Offset: 0x00304B73
+		// Token: 0x0601622B RID: 90667 RVA: 0x0032CF0B File Offset: 0x0032B10B
 		public static void AddErrorMsg(FlatBufferBuilder builder, StringOffset errorMsgOffset)
 		{
 			builder.AddOffset(5, errorMsgOffset.Value, 0);
 		}
 
-		// Token: 0x06014D62 RID: 85346 RVA: 0x00306983 File Offset: 0x00304B83
+		// Token: 0x0601622C RID: 90668 RVA: 0x0032CF1B File Offset: 0x0032B11B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06014D63 RID: 85347 RVA: 0x0030698E File Offset: 0x00304B8E
+		// Token: 0x0601622D RID: 90669 RVA: 0x0032CF26 File Offset: 0x0032B126
 		public static Offset<ITestSummary> EndITestSummary(FlatBufferBuilder builder)
 		{
 			return new Offset<ITestSummary>(builder.EndTable());
 		}
 
-		// Token: 0x06014D64 RID: 85348 RVA: 0x0030699C File Offset: 0x00304B9C
+		// Token: 0x0601622E RID: 90670 RVA: 0x0032CF34 File Offset: 0x0032B134
 		public ITestSummaryT UnPack()
 		{
 			ITestSummaryT testSummaryT = new ITestSummaryT();
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			return testSummaryT;
 		}
 
-		// Token: 0x06014D65 RID: 85349 RVA: 0x003069B8 File Offset: 0x00304BB8
+		// Token: 0x0601622F RID: 90671 RVA: 0x0032CF50 File Offset: 0x0032B150
 		public void UnPackTo(ITestSummaryT _o)
 		{
 			_o.Total = this.Total;
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06014D66 RID: 85350 RVA: 0x00306A1C File Offset: 0x00304C1C
+		// Token: 0x06016230 RID: 90672 RVA: 0x0032CFB4 File Offset: 0x0032B1B4
 		public static Offset<ITestSummary> Pack(FlatBufferBuilder builder, ITestSummaryT _o)
 		{
 			if (_o == null)
@@ -259,7 +259,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Test
 			return ITestSummary.CreateITestSummary(builder, _o.Total, _o.Passed, _o.Failed, _o.IsRequiredCaseAllPassed, _o.Time, errorMsgOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B0BB RID: 45243
+		// Token: 0x0400BA38 RID: 47672
 		private Table __p;
 	}
 }

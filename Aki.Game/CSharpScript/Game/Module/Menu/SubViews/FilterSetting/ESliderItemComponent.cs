@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 {
-	// Token: 0x02005443 RID: 21571
+	// Token: 0x02004426 RID: 17446
 	public class ESliderItemComponent
 	{
-		// Token: 0x0401D0EE RID: 119022
+		// Token: 0x04017B87 RID: 97159
 		public const int TitleText = 0;
 
-		// Token: 0x0401D0EF RID: 119023
+		// Token: 0x04017B88 RID: 97160
 		public const int Slider = 1;
 
-		// Token: 0x0401D0F0 RID: 119024
+		// Token: 0x04017B89 RID: 97161
 		public const int SliderHandleSprite = 2;
 	}
 }

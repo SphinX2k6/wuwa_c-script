@@ -8,44 +8,44 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CE3 RID: 11491
+// Token: 0x0200223C RID: 8764
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class VideoBpController : ControllerBase
 {
-	// Token: 0x060181D7 RID: 98775 RVA: 0x00621F25 File Offset: 0x00620125
+	// Token: 0x06015A56 RID: 88662 RVA: 0x00647B99 File Offset: 0x00645D99
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060181D8 RID: 98776 RVA: 0x00621F28 File Offset: 0x00620128
+	// Token: 0x06015A57 RID: 88663 RVA: 0x00647B9C File Offset: 0x00645D9C
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060181D9 RID: 98777 RVA: 0x00621F2B File Offset: 0x0062012B
+	// Token: 0x06015A58 RID: 88664 RVA: 0x00647B9F File Offset: 0x00645D9F
 	[NullableContext(2)]
 	private BP_MediaDissolveManagea_C SpawnOrGetBp()
 	{
 		return VideoBpModel.Instance.SpawnOrGetVideoBp();
 	}
 
-	// Token: 0x060181DA RID: 98778 RVA: 0x00621F37 File Offset: 0x00620137
+	// Token: 0x06015A59 RID: 88665 RVA: 0x00647BAB File Offset: 0x00645DAB
 	public void RemoveBp()
 	{
 		VideoBpModel.Instance.RemoveOnVideoEnd();
 	}
 
-	// Token: 0x060181DB RID: 98779 RVA: 0x00621F43 File Offset: 0x00620143
+	// Token: 0x06015A5A RID: 88666 RVA: 0x00647BB7 File Offset: 0x00645DB7
 	public void RemovePreload()
 	{
 		VideoBpModel.Instance.RemovePreload();
 	}
 
-	// Token: 0x060181DC RID: 98780 RVA: 0x00621F50 File Offset: 0x00620150
+	// Token: 0x06015A5B RID: 88667 RVA: 0x00647BC4 File Offset: 0x00645DC4
 	public UniTask PreloadMp4s(List<string> mp4s)
 	{
 		VideoBpController.<PreloadMp4s>d__5 <PreloadMp4s>d__;
@@ -57,7 +57,7 @@ public class VideoBpController : ControllerBase
 		return <PreloadMp4s>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060181DD RID: 98781 RVA: 0x00621F9C File Offset: 0x0062019C
+	// Token: 0x06015A5C RID: 88668 RVA: 0x00647C10 File Offset: 0x00645E10
 	private UniTask PreloadMp4Internal(string id)
 	{
 		VideoBpController.<PreloadMp4Internal>d__6 <PreloadMp4Internal>d__;
@@ -68,7 +68,7 @@ public class VideoBpController : ControllerBase
 		return <PreloadMp4Internal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060181DE RID: 98782 RVA: 0x00621FE0 File Offset: 0x006201E0
+	// Token: 0x06015A5D RID: 88669 RVA: 0x00647C54 File Offset: 0x00645E54
 	public unsafe bool PlayEffect(IPlayDissolveEffect inParams)
 	{
 		BP_MediaDissolveManagea_C bp = this.SpawnOrGetBp();
@@ -107,8 +107,8 @@ public class VideoBpController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x17002081 RID: 8321
-	// (get) Token: 0x060181DF RID: 98783 RVA: 0x0062217D File Offset: 0x0062037D
+	// Token: 0x170020D4 RID: 8404
+	// (get) Token: 0x06015A5E RID: 88670 RVA: 0x00647DF1 File Offset: 0x00645FF1
 	public static VideoBpController Instance
 	{
 		get
@@ -117,7 +117,7 @@ public class VideoBpController : ControllerBase
 		}
 	}
 
-	// Token: 0x060181E0 RID: 98784 RVA: 0x00622184 File Offset: 0x00620384
+	// Token: 0x06015A5F RID: 88671 RVA: 0x00647DF8 File Offset: 0x00645FF8
 	public static VideoBpController GetOrCreateInstance()
 	{
 		if (VideoBpController._Instance == null)
@@ -127,7 +127,7 @@ public class VideoBpController : ControllerBase
 		return VideoBpController._Instance;
 	}
 
-	// Token: 0x060181E1 RID: 98785 RVA: 0x00622198 File Offset: 0x00620398
+	// Token: 0x06015A60 RID: 88672 RVA: 0x00647E0C File Offset: 0x0064600C
 	public static bool CreateInstance()
 	{
 		if (VideoBpController._Instance != null)
@@ -138,24 +138,24 @@ public class VideoBpController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060181E2 RID: 98786 RVA: 0x006221AE File Offset: 0x006203AE
+	// Token: 0x06015A61 RID: 88673 RVA: 0x00647E22 File Offset: 0x00646022
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060181E3 RID: 98787 RVA: 0x006221B0 File Offset: 0x006203B0
+	// Token: 0x06015A62 RID: 88674 RVA: 0x00647E24 File Offset: 0x00646024
 	public static void ResetStaticDefaultValue()
 	{
 		VideoBpController._Instance = null;
 	}
 
-	// Token: 0x060181E4 RID: 98788 RVA: 0x006221B8 File Offset: 0x006203B8
+	// Token: 0x06015A63 RID: 88675 RVA: 0x00647E2C File Offset: 0x0064602C
 	static VideoBpController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VideoBpController.CreateStaticDefaultValue), new Action(VideoBpController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B35B RID: 45915
+	// Token: 0x0400B6C7 RID: 46791
 	[Nullable(2)]
 	private static VideoBpController _Instance;
 }

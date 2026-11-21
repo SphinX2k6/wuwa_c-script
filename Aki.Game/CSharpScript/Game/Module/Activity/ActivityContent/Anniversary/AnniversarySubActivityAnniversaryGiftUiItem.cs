@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x0200691C RID: 26908
+	// Token: 0x0200586C RID: 22636
 	public class AnniversarySubActivityAnniversaryGiftUiItem : AnniversaryActivityEnterItem
 	{
-		// Token: 0x0604318E RID: 274830 RVA: 0x01059C94 File Offset: 0x01057E94
+		// Token: 0x06037CE6 RID: 228582 RVA: 0x00F9B2C0 File Offset: 0x00F994C0
 		public override void ChildUpdateTips()
 		{
 			UUIText text = base.GetText(1);

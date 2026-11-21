@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007192 RID: 29074
+	// Token: 0x02006246 RID: 25158
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemRotatorComponent : EntityComponent
 	{
-		// Token: 0x0604720B RID: 291339 RVA: 0x0120E2A4 File Offset: 0x0120C4A4
+		// Token: 0x0603CAD4 RID: 248532 RVA: 0x01167E3C File Offset: 0x0116603C
 		protected unsafe override bool OnInitData(IEntityArgs args = null)
 		{
 			RotatorComponent2 rotatorComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemRotatorComponent>() as RotatorComponent2;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604720C RID: 291340 RVA: 0x0120E518 File Offset: 0x0120C718
+		// Token: 0x0603CAD5 RID: 248533 RVA: 0x011680B0 File Offset: 0x011662B0
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604720D RID: 291341 RVA: 0x0120E874 File Offset: 0x0120CA74
+		// Token: 0x0603CAD6 RID: 248534 RVA: 0x0116840C File Offset: 0x0116660C
 		protected override void OnActivate()
 		{
 			this.IsAllCurvesLoaded = false;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604720E RID: 291342 RVA: 0x0120E8C0 File Offset: 0x0120CAC0
+		// Token: 0x0603CAD7 RID: 248535 RVA: 0x01168458 File Offset: 0x01166658
 		protected override void OnTick(float delta)
 		{
 			if (this.NeedTickOutside)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604720F RID: 291343 RVA: 0x0120E8DC File Offset: 0x0120CADC
+		// Token: 0x0603CAD8 RID: 248536 RVA: 0x01168474 File Offset: 0x01166674
 		[NullableContext(1)]
 		protected override void OnDisable(string reason)
 		{
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047210 RID: 291344 RVA: 0x0120E91C File Offset: 0x0120CB1C
+		// Token: 0x0603CAD9 RID: 248537 RVA: 0x011684B4 File Offset: 0x011666B4
 		protected override void OnEnable()
 		{
 			if (!this.IsAllActorsLoaded)
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047211 RID: 291345 RVA: 0x0120E94C File Offset: 0x0120CB4C
+		// Token: 0x0603CADA RID: 248538 RVA: 0x011684E4 File Offset: 0x011666E4
 		private void SetAndLoadCurves()
 		{
 			this.IsAllCurvesLoaded = true;
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047212 RID: 291346 RVA: 0x0120EB88 File Offset: 0x0120CD88
+		// Token: 0x0603CADB RID: 248539 RVA: 0x01168720 File Offset: 0x01166920
 		private void SetAndLoadActors()
 		{
 			this.IsAllActorsLoaded = false;
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047213 RID: 291347 RVA: 0x0120EC74 File Offset: 0x0120CE74
+		// Token: 0x0603CADC RID: 248540 RVA: 0x0116880C File Offset: 0x01166A0C
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047214 RID: 291348 RVA: 0x0120ED70 File Offset: 0x0120CF70
+		// Token: 0x0603CADD RID: 248541 RVA: 0x01168908 File Offset: 0x01166B08
 		[NullableContext(1)]
 		private unsafe void SetupSingleCurve([Nullable(2)] UCurveFloat asset, string path)
 		{
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047215 RID: 291349 RVA: 0x0120EE88 File Offset: 0x0120D088
+		// Token: 0x0603CADE RID: 248542 RVA: 0x01168A20 File Offset: 0x01166C20
 		private unsafe void SetupAllActors()
 		{
 			AActor interactionMainActor = this.ActorComp.GetInteractionMainActor();
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047216 RID: 291350 RVA: 0x0120F0B4 File Offset: 0x0120D2B4
+		// Token: 0x0603CADF RID: 248543 RVA: 0x01168C4C File Offset: 0x01166E4C
 		private void InitRotationData()
 		{
 			if (this.IsRotationDataInit)
@@ -499,7 +499,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.SwitchToState(newStateId, true);
 		}
 
-		// Token: 0x06047217 RID: 291351 RVA: 0x0120F190 File Offset: 0x0120D390
+		// Token: 0x0603CAE0 RID: 248544 RVA: 0x01168D28 File Offset: 0x01166F28
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			if (!this.IsRotationDataInit)
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.SwitchToState(stateId, false);
 		}
 
-		// Token: 0x06047218 RID: 291352 RVA: 0x0120F1A4 File Offset: 0x0120D3A4
+		// Token: 0x0603CAE1 RID: 248545 RVA: 0x01168D3C File Offset: 0x01166F3C
 		private unsafe void SwitchToState(int newStateId, bool isInit)
 		{
 			if (!this.IsRotationDataInit)
@@ -654,7 +654,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047219 RID: 291353 RVA: 0x0120F6E7 File Offset: 0x0120D8E7
+		// Token: 0x0603CAE2 RID: 248546 RVA: 0x0116927F File Offset: 0x0116747F
 		private void OnRotateStop()
 		{
 			UKuroSceneItemMoveComponent ueMoveComp = this.UeMoveComp;
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnSceneItemRotateStopped);
 		}
 
-		// Token: 0x0604721A RID: 291354 RVA: 0x0120F724 File Offset: 0x0120D924
+		// Token: 0x0603CAE3 RID: 248547 RVA: 0x011692BC File Offset: 0x011674BC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -674,173 +674,182 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemRotatorComponent sceneItemRotatorComponent = (SceneItemRotatorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemRotatorComponent.CreatureDataComp == null)
 			{
-				if (sceneItemRotatorComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemRotatorComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			if (sceneItemRotatorComponent.ActorComp == null)
 			{
-				if (sceneItemRotatorComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemRotatorComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("UeTickComp"))
+			if (sceneItemRotatorComponent.StateComp == null)
 			{
-				if (sceneItemRotatorComponent.UeTickComp == null)
-				{
-					this.UeTickComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UeSceneItemMoveTickManagerComponent>(this.UeTickComp), "UeTickComp"))
-				{
-					return false;
-				}
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("UeMoveComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
-				if (sceneItemRotatorComponent.UeMoveComp == null)
-				{
-					this.UeMoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroSceneItemMoveComponent>(this.UeMoveComp), "UeMoveComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateRotationConfigMap"))
+			if (sceneItemRotatorComponent.TagComp == null)
 			{
-				if (sceneItemRotatorComponent.StateRotationConfigMap == null)
-				{
-					this.StateRotationConfigMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IStateRotationConfig>>(this.StateRotationConfigMap), "StateRotationConfigMap"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("CurveMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (sceneItemRotatorComponent.CurveMap == null)
-				{
-					this.CurveMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, UCurveFloat>>(this.CurveMap), "CurveMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RotatePointMap"))
+			if (sceneItemRotatorComponent.UeTickComp == null)
 			{
-				if (sceneItemRotatorComponent.RotatePointMap == null)
-				{
-					this.RotatePointMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, AActor>>(this.RotatePointMap), "RotatePointMap"))
-				{
-					return false;
-				}
+				this.UeTickComp = null;
 			}
-			if (base.CanResetComponentProperty("LoadCurveHandleMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeTickComp), "UeTickComp"))
 			{
-				if (sceneItemRotatorComponent.LoadCurveHandleMap == null)
-				{
-					this.LoadCurveHandleMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.LoadCurveHandleMap), "LoadCurveHandleMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsAllCurvesLoaded"))
+			if (sceneItemRotatorComponent.UeMoveComp == null)
 			{
-				this.IsAllCurvesLoaded = sceneItemRotatorComponent.IsAllCurvesLoaded;
+				this.UeMoveComp = null;
 			}
-			if (base.CanResetComponentProperty("IsAllActorsLoaded"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeMoveComp), "UeMoveComp"))
 			{
-				this.IsAllActorsLoaded = sceneItemRotatorComponent.IsAllActorsLoaded;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsRotationDataInit"))
+			if (sceneItemRotatorComponent.StateRotationConfigMap == null)
 			{
-				this.IsRotationDataInit = sceneItemRotatorComponent.IsRotationDataInit;
+				this.StateRotationConfigMap = null;
 			}
-			if (base.CanResetComponentProperty("CurStateTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateRotationConfigMap), "StateRotationConfigMap"))
 			{
-				this.CurStateTagId = sceneItemRotatorComponent.CurStateTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorBornRotationMap"))
+			if (sceneItemRotatorComponent.CurveMap == null)
 			{
-				if (sceneItemRotatorComponent.ActorBornRotationMap == null)
-				{
-					this.ActorBornRotationMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Rotator>>(this.ActorBornRotationMap), "ActorBornRotationMap"))
-				{
-					return false;
-				}
+				this.CurveMap = null;
 			}
-			if (base.CanResetComponentProperty("PauseRotateStateId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurveMap), "CurveMap"))
 			{
-				this.PauseRotateStateId = sceneItemRotatorComponent.PauseRotateStateId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("NeedTickOutside"))
+			if (sceneItemRotatorComponent.RotatePointMap == null)
 			{
-				this.NeedTickOutside = sceneItemRotatorComponent.NeedTickOutside;
+				this.RotatePointMap = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RotatePointMap), "RotatePointMap"))
+			{
+				return false;
+			}
+			if (sceneItemRotatorComponent.LoadCurveHandleMap == null)
+			{
+				this.LoadCurveHandleMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadCurveHandleMap), "LoadCurveHandleMap"))
+			{
+				return false;
+			}
+			this.IsAllCurvesLoaded = sceneItemRotatorComponent.IsAllCurvesLoaded;
+			this.IsAllActorsLoaded = sceneItemRotatorComponent.IsAllActorsLoaded;
+			this.IsRotationDataInit = sceneItemRotatorComponent.IsRotationDataInit;
+			this.CurStateTagId = sceneItemRotatorComponent.CurStateTagId;
+			if (sceneItemRotatorComponent.ActorBornRotationMap == null)
+			{
+				this.ActorBornRotationMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorBornRotationMap), "ActorBornRotationMap"))
+			{
+				return false;
+			}
+			this.PauseRotateStateId = sceneItemRotatorComponent.PauseRotateStateId;
+			this.NeedTickOutside = sceneItemRotatorComponent.NeedTickOutside;
 			return true;
 		}
 
-		// Token: 0x0402564C RID: 153164
+		// Token: 0x170072C4 RID: 29380
+		// (get) Token: 0x0603CAE4 RID: 248548 RVA: 0x011694FD File Offset: 0x011676FD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C5 RID: 29381
+		// (get) Token: 0x0603CAE5 RID: 248549 RVA: 0x01169500 File Offset: 0x01167700
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C6 RID: 29382
+		// (get) Token: 0x0603CAE6 RID: 248550 RVA: 0x01169503 File Offset: 0x01167703
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C7 RID: 29383
+		// (get) Token: 0x0603CAE7 RID: 248551 RVA: 0x01169506 File Offset: 0x01167706
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C8 RID: 29384
+		// (get) Token: 0x0603CAE8 RID: 248552 RVA: 0x01169509 File Offset: 0x01167709
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C9 RID: 29385
+		// (get) Token: 0x0603CAE9 RID: 248553 RVA: 0x0116950C File Offset: 0x0116770C
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040202B3 RID: 131763
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x0402564D RID: 153165
+		// Token: 0x040202B4 RID: 131764
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x0402564E RID: 153166
+		// Token: 0x040202B5 RID: 131765
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x0402564F RID: 153167
+		// Token: 0x040202B6 RID: 131766
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025650 RID: 153168
+		// Token: 0x040202B7 RID: 131767
 		private UeSceneItemMoveTickManagerComponent UeTickComp;
 
-		// Token: 0x04025651 RID: 153169
+		// Token: 0x040202B8 RID: 131768
 		private UKuroSceneItemMoveComponent UeMoveComp;
 
-		// Token: 0x04025652 RID: 153170
+		// Token: 0x040202B9 RID: 131769
 		[Nullable(new byte[]
 		{
 			2,
@@ -848,7 +857,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<int, IStateRotationConfig> StateRotationConfigMap;
 
-		// Token: 0x04025653 RID: 153171
+		// Token: 0x040202BA RID: 131770
 		[Nullable(new byte[]
 		{
 			2,
@@ -857,7 +866,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<string, UCurveFloat> CurveMap;
 
-		// Token: 0x04025654 RID: 153172
+		// Token: 0x040202BB RID: 131771
 		[Nullable(new byte[]
 		{
 			2,
@@ -866,7 +875,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<string, AActor> RotatePointMap;
 
-		// Token: 0x04025655 RID: 153173
+		// Token: 0x040202BC RID: 131772
 		[Nullable(new byte[]
 		{
 			2,
@@ -874,19 +883,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<string, int> LoadCurveHandleMap;
 
-		// Token: 0x04025656 RID: 153174
+		// Token: 0x040202BD RID: 131773
 		private bool IsAllCurvesLoaded;
 
-		// Token: 0x04025657 RID: 153175
+		// Token: 0x040202BE RID: 131774
 		private bool IsAllActorsLoaded;
 
-		// Token: 0x04025658 RID: 153176
+		// Token: 0x040202BF RID: 131775
 		private bool IsRotationDataInit;
 
-		// Token: 0x04025659 RID: 153177
+		// Token: 0x040202C0 RID: 131776
 		private int CurStateTagId;
 
-		// Token: 0x0402565A RID: 153178
+		// Token: 0x040202C1 RID: 131777
 		[Nullable(new byte[]
 		{
 			2,
@@ -895,10 +904,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<string, Rotator> ActorBornRotationMap;
 
-		// Token: 0x0402565B RID: 153179
+		// Token: 0x040202C2 RID: 131778
 		private int PauseRotateStateId;
 
-		// Token: 0x0402565C RID: 153180
+		// Token: 0x040202C3 RID: 131779
 		private bool NeedTickOutside;
 	}
 }

@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200242E RID: 9262
+// Token: 0x02001913 RID: 6419
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManagerConfigNewSettingDetailInfo>
 {
-	// Token: 0x06012931 RID: 76081 RVA: 0x00494230 File Offset: 0x00492430
+	// Token: 0x0600FDE7 RID: 64999 RVA: 0x004A17FC File Offset: 0x0049F9FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -43,7 +43,7 @@ internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManag
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06012932 RID: 76082 RVA: 0x00494384 File Offset: 0x00492584
+	// Token: 0x0600FDE8 RID: 65000 RVA: 0x004A1950 File Offset: 0x0049FB50
 	protected override void OnStart()
 	{
 		this.LevelSequence = new LevelSequencePlayer(base.GetRootItem());
@@ -60,7 +60,7 @@ internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManag
 		extendToggle2.OnStateChange.Add(new Action<EToggleState>(this.OnClickedLock));
 	}
 
-	// Token: 0x06012933 RID: 76083 RVA: 0x004943E8 File Offset: 0x004925E8
+	// Token: 0x0600FDE9 RID: 65001 RVA: 0x004A19B4 File Offset: 0x0049FBB4
 	public override void Refresh(IPhantomManagerConfigNewSettingDetailInfo data, bool isSelected, int gridIndex)
 	{
 		PropertyIndex? propertyIndexInfo = PropertyIndexConfig.Instance.GetPropertyIndexInfo(data.MainPropId);
@@ -70,7 +70,7 @@ internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManag
 		this.RefreshState(data.IsEdit, false);
 	}
 
-	// Token: 0x06012934 RID: 76084 RVA: 0x0049445C File Offset: 0x0049265C
+	// Token: 0x0600FDEA RID: 65002 RVA: 0x004A1A28 File Offset: 0x0049FC28
 	public void RefreshState(bool isEdit, bool needAnim = false)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -130,7 +130,7 @@ internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManag
 		}
 	}
 
-	// Token: 0x06012935 RID: 76085 RVA: 0x00494558 File Offset: 0x00492758
+	// Token: 0x0600FDEB RID: 65003 RVA: 0x004A1B24 File Offset: 0x0049FD24
 	private void OnClickedDiscard(EToggleState state)
 	{
 		PhantomManagerConfigData phantomConfigData = PhantomBattleModel.Instance.GetPhantomConfigData();
@@ -151,7 +151,7 @@ internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManag
 		this.CurState = EPhantomManagerConfigState.Discard;
 	}
 
-	// Token: 0x06012936 RID: 76086 RVA: 0x004945E0 File Offset: 0x004927E0
+	// Token: 0x0600FDEC RID: 65004 RVA: 0x004A1BAC File Offset: 0x0049FDAC
 	private void OnClickedLock(EToggleState state)
 	{
 		PhantomManagerConfigData phantomConfigData = PhantomBattleModel.Instance.GetPhantomConfigData();
@@ -172,37 +172,37 @@ internal class PhantomManagerConfigNewPropItem : GridProxyAbstract<IPhantomManag
 		this.CurState = EPhantomManagerConfigState.Lock;
 	}
 
-	// Token: 0x04008BFC RID: 35836
+	// Token: 0x04008D43 RID: 36163
 	protected IPhantomManagerConfigNewSettingDetailInfo CurData = new PhantomManagerConfigNewSettingDetailInfo();
 
-	// Token: 0x04008BFD RID: 35837
+	// Token: 0x04008D44 RID: 36164
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequence;
 
-	// Token: 0x04008BFE RID: 35838
+	// Token: 0x04008D45 RID: 36165
 	protected EPhantomManagerConfigState CurState;
 
-	// Token: 0x020089B0 RID: 35248
+	// Token: 0x02007B37 RID: 31543
 	[NullableContext(0)]
 	private enum EItem
 	{
-		// Token: 0x0402CBCF RID: 183247
+		// Token: 0x04027EE5 RID: 163557
 		BtnSetProp,
-		// Token: 0x0402CBD0 RID: 183248
+		// Token: 0x04027EE6 RID: 163558
 		TexIcon,
-		// Token: 0x0402CBD1 RID: 183249
+		// Token: 0x04027EE7 RID: 163559
 		TxtName,
-		// Token: 0x0402CBD2 RID: 183250
+		// Token: 0x04027EE8 RID: 163560
 		PanelPreviewState,
-		// Token: 0x0402CBD3 RID: 183251
+		// Token: 0x04027EE9 RID: 163561
 		SpriteLock,
-		// Token: 0x0402CBD4 RID: 183252
+		// Token: 0x04027EEA RID: 163562
 		SpriteDiscard,
-		// Token: 0x0402CBD5 RID: 183253
+		// Token: 0x04027EEB RID: 163563
 		PanelEdit,
-		// Token: 0x0402CBD6 RID: 183254
+		// Token: 0x04027EEC RID: 163564
 		ToggleDiscard,
-		// Token: 0x0402CBD7 RID: 183255
+		// Token: 0x04027EED RID: 163565
 		ToggleLock
 	}
 }

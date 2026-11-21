@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E83 RID: 28291
+	// Token: 0x02007607 RID: 30215
 	public class IResetEntityConfig_UnionUnion
 	{
-		// Token: 0x1700D2AF RID: 53935
-		// (get) Token: 0x06031FFB RID: 204795 RVA: 0x006C36B9 File Offset: 0x006C18B9
-		// (set) Token: 0x06031FFC RID: 204796 RVA: 0x006C36C1 File Offset: 0x006C18C1
+		// Token: 0x1700DE06 RID: 56838
+		// (get) Token: 0x0603503B RID: 217147 RVA: 0x0071F3ED File Offset: 0x0071D5ED
+		// (set) Token: 0x0603503C RID: 217148 RVA: 0x0071F3F5 File Offset: 0x0071D5F5
 		public IResetEntityConfig_Union Type { get; set; }
 
-		// Token: 0x1700D2B0 RID: 53936
-		// (get) Token: 0x06031FFD RID: 204797 RVA: 0x006C36CA File Offset: 0x006C18CA
-		// (set) Token: 0x06031FFE RID: 204798 RVA: 0x006C36D2 File Offset: 0x006C18D2
+		// Token: 0x1700DE07 RID: 56839
+		// (get) Token: 0x0603503D RID: 217149 RVA: 0x0071F3FE File Offset: 0x0071D5FE
+		// (set) Token: 0x0603503E RID: 217150 RVA: 0x0071F406 File Offset: 0x0071D606
 		public object Value { get; set; }
 
-		// Token: 0x06031FFF RID: 204799 RVA: 0x006C36DB File Offset: 0x006C18DB
+		// Token: 0x0603503F RID: 217151 RVA: 0x0071F40F File Offset: 0x0071D60F
 		public IResetEntityConfig_UnionUnion()
 		{
 			this.Type = IResetEntityConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032000 RID: 204800 RVA: 0x006C36F1 File Offset: 0x006C18F1
+		// Token: 0x06035040 RID: 217152 RVA: 0x0071F425 File Offset: 0x0071D625
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032001 RID: 204801 RVA: 0x006C3703 File Offset: 0x006C1903
+		// Token: 0x06035041 RID: 217153 RVA: 0x0071F437 File Offset: 0x0071D637
 		public IResetEntityConfigT AsIResetEntityConfig()
 		{
 			return this.As<IResetEntityConfigT>();
 		}
 
-		// Token: 0x06032002 RID: 204802 RVA: 0x006C370B File Offset: 0x006C190B
+		// Token: 0x06035042 RID: 217154 RVA: 0x0071F43F File Offset: 0x0071D63F
 		public static IResetEntityConfig_UnionUnion FromIResetEntityConfig(IResetEntityConfigT _iresetentityconfig)
 		{
 			return new IResetEntityConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032003 RID: 204803 RVA: 0x006C3720 File Offset: 0x006C1920
+		// Token: 0x06035043 RID: 217155 RVA: 0x0071F454 File Offset: 0x0071D654
 		public IResetTeleControlEntityT AsIResetTeleControlEntity()
 		{
 			return this.As<IResetTeleControlEntityT>();
 		}
 
-		// Token: 0x06032004 RID: 204804 RVA: 0x006C3728 File Offset: 0x006C1928
+		// Token: 0x06035044 RID: 217156 RVA: 0x0071F45C File Offset: 0x0071D65C
 		public static IResetEntityConfig_UnionUnion FromIResetTeleControlEntity(IResetTeleControlEntityT _iresettelecontrolentity)
 		{
 			return new IResetEntityConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032005 RID: 204805 RVA: 0x006C373D File Offset: 0x006C193D
+		// Token: 0x06035045 RID: 217157 RVA: 0x0071F471 File Offset: 0x0071D671
 		public IJigsawItemEntityT AsIJigsawItemEntity()
 		{
 			return this.As<IJigsawItemEntityT>();
 		}
 
-		// Token: 0x06032006 RID: 204806 RVA: 0x006C3745 File Offset: 0x006C1945
+		// Token: 0x06035046 RID: 217158 RVA: 0x0071F479 File Offset: 0x0071D679
 		public static IResetEntityConfig_UnionUnion FromIJigsawItemEntity(IJigsawItemEntityT _ijigsawitementity)
 		{
 			return new IResetEntityConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032007 RID: 204807 RVA: 0x006C375C File Offset: 0x006C195C
+		// Token: 0x06035047 RID: 217159 RVA: 0x0071F490 File Offset: 0x0071D690
 		public static int Pack(FlatBufferBuilder builder, IResetEntityConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

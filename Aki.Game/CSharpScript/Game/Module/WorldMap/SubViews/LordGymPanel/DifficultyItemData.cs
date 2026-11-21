@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 {
-	// Token: 0x0200480E RID: 18446
+	// Token: 0x0200373F RID: 14143
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DifficultyItemData : IDifficultyItemData
 	{
-		// Token: 0x170078E3 RID: 30947
-		// (get) Token: 0x060304AD RID: 197805 RVA: 0x00B33C64 File Offset: 0x00B31E64
-		// (set) Token: 0x060304AE RID: 197806 RVA: 0x00B33C6C File Offset: 0x00B31E6C
+		// Token: 0x17004BA0 RID: 19360
+		// (get) Token: 0x06024C7D RID: 150653 RVA: 0x00A63BCC File Offset: 0x00A61DCC
+		// (set) Token: 0x06024C7E RID: 150654 RVA: 0x00A63BD4 File Offset: 0x00A61DD4
 		public string NameTextId { get; set; } = "";
 
-		// Token: 0x170078E4 RID: 30948
-		// (get) Token: 0x060304AF RID: 197807 RVA: 0x00B33C75 File Offset: 0x00B31E75
-		// (set) Token: 0x060304B0 RID: 197808 RVA: 0x00B33C7D File Offset: 0x00B31E7D
+		// Token: 0x17004BA1 RID: 19361
+		// (get) Token: 0x06024C7F RID: 150655 RVA: 0x00A63BDD File Offset: 0x00A61DDD
+		// (set) Token: 0x06024C80 RID: 150656 RVA: 0x00A63BE5 File Offset: 0x00A61DE5
 		[Nullable(new byte[]
 		{
 			2,
@@ -32,9 +32,9 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			1
 		})] set; }
 
-		// Token: 0x170078E5 RID: 30949
-		// (get) Token: 0x060304B1 RID: 197809 RVA: 0x00B33C86 File Offset: 0x00B31E86
-		// (set) Token: 0x060304B2 RID: 197810 RVA: 0x00B33C8E File Offset: 0x00B31E8E
+		// Token: 0x17004BA2 RID: 19362
+		// (get) Token: 0x06024C81 RID: 150657 RVA: 0x00A63BEE File Offset: 0x00A61DEE
+		// (set) Token: 0x06024C82 RID: 150658 RVA: 0x00A63BF6 File Offset: 0x00A61DF6
 		public List<ELordGymDifficultyState> StateList { get; set; }
 	}
 }

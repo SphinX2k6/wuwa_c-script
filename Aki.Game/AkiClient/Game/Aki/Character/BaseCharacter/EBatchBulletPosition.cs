@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004294 RID: 17044
+	// Token: 0x020032F1 RID: 13041
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EBatchBulletPosition.EBatchBulletPosition")]
 	public enum EBatchBulletPosition : byte
 	{
-		// Token: 0x040172AC RID: 94892
+		// Token: 0x04011FB4 RID: 73652
 		DotMatrix,
-		// Token: 0x040172AD RID: 94893
+		// Token: 0x04011FB5 RID: 73653
 		Circle,
-		// Token: 0x040172AE RID: 94894
+		// Token: 0x04011FB6 RID: 73654
 		Spline,
-		// Token: 0x040172AF RID: 94895
+		// Token: 0x04011FB7 RID: 73655
 		EBatchBulletPosition_MAX
 	}
 }

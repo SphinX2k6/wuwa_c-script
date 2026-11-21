@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C23 RID: 19491
+	// Token: 0x02003BD4 RID: 15316
 	public class SkillButtonCustomHandleDotIndicator : SkillButtonCustomHandleBase
 	{
-		// Token: 0x0603271F RID: 206623 RVA: 0x00BC14B8 File Offset: 0x00BBF6B8
+		// Token: 0x060274D2 RID: 160978 RVA: 0x00B060D0 File Offset: 0x00B042D0
 		protected override void OnInit()
 		{
 			if (this.Params.Count < 1 || this.Params[0] == "")
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			}
 		}
 
-		// Token: 0x06032720 RID: 206624 RVA: 0x00BC152C File Offset: 0x00BBF72C
+		// Token: 0x060274D3 RID: 160979 RVA: 0x00B06144 File Offset: 0x00B04344
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.ResetSkillButtonData();
 		}
 
-		// Token: 0x06032721 RID: 206625 RVA: 0x00BC15EF File Offset: 0x00BBF7EF
+		// Token: 0x060274D4 RID: 160980 RVA: 0x00B06207 File Offset: 0x00B04407
 		private void ResetSkillButtonData()
 		{
 			if (this.SkillButtonData == null)
@@ -60,23 +60,23 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.SkillButtonData.DotIndicatorIconPath = null;
 		}
 
-		// Token: 0x06032722 RID: 206626 RVA: 0x00BC161E File Offset: 0x00BBF81E
+		// Token: 0x060274D5 RID: 160981 RVA: 0x00B06236 File Offset: 0x00B04436
 		public override void RefreshByTagChanged()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06032723 RID: 206627 RVA: 0x00BC1626 File Offset: 0x00BBF826
+		// Token: 0x060274D6 RID: 160982 RVA: 0x00B0623E File Offset: 0x00B0443E
 		public override bool RefreshOnInputControllerChange()
 		{
 			this.Refresh();
 			return true;
 		}
 
-		// Token: 0x0401ADB7 RID: 110007
+		// Token: 0x04015714 RID: 87828
 		private int ActionType;
 
-		// Token: 0x0401ADB8 RID: 110008
+		// Token: 0x04015715 RID: 87829
 		[Nullable(2)]
 		private string IconPath;
 	}

@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002AF7 RID: 10999
+	// Token: 0x020008A7 RID: 2215
 	[AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 	public class ConsoleVariableBoolAttribute : Attribute
 	{
-		// Token: 0x06028486 RID: 164998 RVA: 0x003D49C4 File Offset: 0x003D2BC4
+		// Token: 0x0600BE40 RID: 48704 RVA: 0x0012FD20 File Offset: 0x0012DF20
 		[NullableContext(1)]
 		public ConsoleVariableBoolAttribute(string Name, bool DefaultValue, string Help, EConsoleVariableFlags Flags = EConsoleVariableFlags.ECVF_Default)
 		{

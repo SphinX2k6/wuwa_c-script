@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007247 RID: 29255
+	// Token: 0x02007A1C RID: 31260
 	public struct ISwing : IFlatbufferObject
 	{
-		// Token: 0x1700D911 RID: 55569
-		// (get) Token: 0x06033E30 RID: 212528 RVA: 0x006FAE78 File Offset: 0x006F9078
+		// Token: 0x1700E50A RID: 58634
+		// (get) Token: 0x06037132 RID: 225586 RVA: 0x0075C1D8 File Offset: 0x0075A3D8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033E31 RID: 212529 RVA: 0x006FAE85 File Offset: 0x006F9085
+		// Token: 0x06037133 RID: 225587 RVA: 0x0075C1E5 File Offset: 0x0075A3E5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033E32 RID: 212530 RVA: 0x006FAE8C File Offset: 0x006F908C
+		// Token: 0x06037134 RID: 225588 RVA: 0x0075C1EC File Offset: 0x0075A3EC
 		public static ISwing GetRootAsISwing(ByteBuffer _bb)
 		{
 			return ISwing.GetRootAsISwing(_bb, default(ISwing));
 		}
 
-		// Token: 0x06033E33 RID: 212531 RVA: 0x006FAEA8 File Offset: 0x006F90A8
+		// Token: 0x06037135 RID: 225589 RVA: 0x0075C208 File Offset: 0x0075A408
 		public static ISwing GetRootAsISwing(ByteBuffer _bb, ISwing obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033E34 RID: 212532 RVA: 0x006FAEC5 File Offset: 0x006F90C5
+		// Token: 0x06037136 RID: 225590 RVA: 0x0075C225 File Offset: 0x0075A425
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033E35 RID: 212533 RVA: 0x006FAED4 File Offset: 0x006F90D4
+		// Token: 0x06037137 RID: 225591 RVA: 0x0075C234 File Offset: 0x0075A434
 		public ISwing __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D912 RID: 55570
-		// (get) Token: 0x06033E36 RID: 212534 RVA: 0x006FAEE4 File Offset: 0x006F90E4
+		// Token: 0x1700E50B RID: 58635
+		// (get) Token: 0x06037138 RID: 225592 RVA: 0x0075C244 File Offset: 0x0075A444
 		public ELeisureInteract Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D913 RID: 55571
-		// (get) Token: 0x06033E37 RID: 212535 RVA: 0x006FAF20 File Offset: 0x006F9120
+		// Token: 0x1700E50C RID: 58636
+		// (get) Token: 0x06037139 RID: 225593 RVA: 0x0075C280 File Offset: 0x0075A480
 		public string SwingDa
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033E38 RID: 212536 RVA: 0x006FAF57 File Offset: 0x006F9157
+		// Token: 0x0603713A RID: 225594 RVA: 0x0075C2B7 File Offset: 0x0075A4B7
 		public Span<byte> GetSwingDaBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06033E39 RID: 212537 RVA: 0x006FAF66 File Offset: 0x006F9166
+		// Token: 0x0603713B RID: 225595 RVA: 0x0075C2C6 File Offset: 0x0075A4C6
 		public byte[] GetSwingDaArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D914 RID: 55572
-		// (get) Token: 0x06033E3A RID: 212538 RVA: 0x006FAF74 File Offset: 0x006F9174
+		// Token: 0x1700E50D RID: 58637
+		// (get) Token: 0x0603713C RID: 225596 RVA: 0x0075C2D4 File Offset: 0x0075A4D4
 		public int EntityId
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033E3B RID: 212539 RVA: 0x006FAFB0 File Offset: 0x006F91B0
+		// Token: 0x0603713D RID: 225597 RVA: 0x0075C310 File Offset: 0x0075A510
 		public static Offset<ISwing> CreateISwing(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill, StringOffset SwingDaOffset = default(StringOffset), int EntityId = 0)
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwing.EndISwing(builder);
 		}
 
-		// Token: 0x06033E3C RID: 212540 RVA: 0x006FAFD4 File Offset: 0x006F91D4
+		// Token: 0x0603713E RID: 225598 RVA: 0x0075C334 File Offset: 0x0075A534
 		public static void StartISwing(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06033E3D RID: 212541 RVA: 0x006FAFDD File Offset: 0x006F91DD
+		// Token: 0x0603713F RID: 225599 RVA: 0x0075C33D File Offset: 0x0075A53D
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033E3E RID: 212542 RVA: 0x006FAFE8 File Offset: 0x006F91E8
+		// Token: 0x06037140 RID: 225600 RVA: 0x0075C348 File Offset: 0x0075A548
 		public static void AddSwingDa(FlatBufferBuilder builder, StringOffset swingDaOffset)
 		{
 			builder.AddOffset(1, swingDaOffset.Value, 0);
 		}
 
-		// Token: 0x06033E3F RID: 212543 RVA: 0x006FAFF8 File Offset: 0x006F91F8
+		// Token: 0x06037141 RID: 225601 RVA: 0x0075C358 File Offset: 0x0075A558
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(2, entityId, 0);
 		}
 
-		// Token: 0x06033E40 RID: 212544 RVA: 0x006FB003 File Offset: 0x006F9203
+		// Token: 0x06037142 RID: 225602 RVA: 0x0075C363 File Offset: 0x0075A563
 		public static Offset<ISwing> EndISwing(FlatBufferBuilder builder)
 		{
 			return new Offset<ISwing>(builder.EndTable());
 		}
 
-		// Token: 0x06033E41 RID: 212545 RVA: 0x006FB010 File Offset: 0x006F9210
+		// Token: 0x06037143 RID: 225603 RVA: 0x0075C370 File Offset: 0x0075A570
 		public ISwingT UnPack()
 		{
 			ISwingT swingT = new ISwingT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return swingT;
 		}
 
-		// Token: 0x06033E42 RID: 212546 RVA: 0x006FB02B File Offset: 0x006F922B
+		// Token: 0x06037144 RID: 225604 RVA: 0x0075C38B File Offset: 0x0075A58B
 		public void UnPackTo(ISwingT _o)
 		{
 			_o.Type = this.Type;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.EntityId = this.EntityId;
 		}
 
-		// Token: 0x06033E43 RID: 212547 RVA: 0x006FB054 File Offset: 0x006F9254
+		// Token: 0x06037145 RID: 225605 RVA: 0x0075C3B4 File Offset: 0x0075A5B4
 		public static Offset<ISwing> Pack(FlatBufferBuilder builder, ISwingT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwing.CreateISwing(builder, _o.Type, swingDaOffset, _o.EntityId);
 		}
 
-		// Token: 0x04011D38 RID: 73016
+		// Token: 0x04012D3A RID: 77114
 		private Table __p;
 	}
 }

@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.HotPatchProcedure
 {
-	// Token: 0x020001D5 RID: 469
+	// Token: 0x020001D9 RID: 473
 	public abstract class BaseHotPatchProcedure : IHotPatchProcedure
 	{
-		// Token: 0x06000C69 RID: 3177 RVA: 0x0004BFE3 File Offset: 0x0004A1E3
+		// Token: 0x06000CA0 RID: 3232 RVA: 0x0004E7F7 File Offset: 0x0004C9F7
 		[NullableContext(1)]
 		public BaseHotPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr)
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			this.ViewMgr = viewMgr;
 		}
 
-		// Token: 0x06000C6A RID: 3178 RVA: 0x0004BFFC File Offset: 0x0004A1FC
+		// Token: 0x06000CA1 RID: 3233 RVA: 0x0004E810 File Offset: 0x0004CA10
 		public virtual UniTask<bool> Start()
 		{
 			BaseHotPatchProcedure.<Start>d__5 <Start>d__;
@@ -31,7 +31,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <Start>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C6B RID: 3179 RVA: 0x0004C040 File Offset: 0x0004A240
+		// Token: 0x06000CA2 RID: 3234 RVA: 0x0004E854 File Offset: 0x0004CA54
 		public UniTask<bool> GetRemoteVersionConfig()
 		{
 			BaseHotPatchProcedure.<GetRemoteVersionConfig>d__6 <GetRemoteVersionConfig>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <GetRemoteVersionConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C6C RID: 3180 RVA: 0x0004C084 File Offset: 0x0004A284
+		// Token: 0x06000CA3 RID: 3235 RVA: 0x0004E898 File Offset: 0x0004CA98
 		public UniTask<bool> IsAppVersionChange()
 		{
 			BaseHotPatchProcedure.<IsAppVersionChange>d__7 <IsAppVersionChange>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <IsAppVersionChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C6D RID: 3181 RVA: 0x0004C0C8 File Offset: 0x0004A2C8
+		// Token: 0x06000CA4 RID: 3236 RVA: 0x0004E8DC File Offset: 0x0004CADC
 		public virtual UniTask<bool> UpdateResource(bool bUseBgDownload, [Nullable(1)] params ResourceUpdate[] updates)
 		{
 			BaseHotPatchProcedure.<UpdateResource>d__8 <UpdateResource>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <UpdateResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C6E RID: 3182 RVA: 0x0004C11C File Offset: 0x0004A31C
+		// Token: 0x06000CA5 RID: 3237 RVA: 0x0004E930 File Offset: 0x0004CB30
 		protected virtual UniTask<bool> CheckResourceVersion([Nullable(1)] ResourceUpdate update)
 		{
 			BaseHotPatchProcedure.<CheckResourceVersion>d__9 <CheckResourceVersion>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <CheckResourceVersion>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C6F RID: 3183 RVA: 0x0004C168 File Offset: 0x0004A368
+		// Token: 0x06000CA6 RID: 3238 RVA: 0x0004E97C File Offset: 0x0004CB7C
 		protected UniTask<bool> DownloadIndexFile([Nullable(1)] ResourceUpdate update)
 		{
 			BaseHotPatchProcedure.<DownloadIndexFile>d__10 <DownloadIndexFile>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <DownloadIndexFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C70 RID: 3184 RVA: 0x0004C1B4 File Offset: 0x0004A3B4
+		// Token: 0x06000CA7 RID: 3239 RVA: 0x0004E9C8 File Offset: 0x0004CBC8
 		protected UniTask<bool> ResolveIndexFile([Nullable(1)] ResourceUpdate update)
 		{
 			BaseHotPatchProcedure.<ResolveIndexFile>d__11 <ResolveIndexFile>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <ResolveIndexFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C71 RID: 3185 RVA: 0x0004C200 File Offset: 0x0004A400
+		// Token: 0x06000CA8 RID: 3240 RVA: 0x0004EA14 File Offset: 0x0004CC14
 		protected UniTask<bool> CheckResourceFiles([Nullable(1)] ResourceUpdate update)
 		{
 			BaseHotPatchProcedure.<CheckResourceFiles>d__12 <CheckResourceFiles>d__;
@@ -114,7 +114,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <CheckResourceFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C72 RID: 3186 RVA: 0x0004C24C File Offset: 0x0004A44C
+		// Token: 0x06000CA9 RID: 3241 RVA: 0x0004EA60 File Offset: 0x0004CC60
 		protected UniTask<bool> DoesSavedDirHaveEnoughSpace(long needSize)
 		{
 			BaseHotPatchProcedure.<DoesSavedDirHaveEnoughSpace>d__13 <DoesSavedDirHaveEnoughSpace>d__;
@@ -126,7 +126,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <DoesSavedDirHaveEnoughSpace>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C73 RID: 3187 RVA: 0x0004C298 File Offset: 0x0004A498
+		// Token: 0x06000CAA RID: 3242 RVA: 0x0004EAAC File Offset: 0x0004CCAC
 		protected virtual UniTask<bool> DownloadFiles(bool bUseBgDownload, [Nullable(1)] params ResourceUpdate[] updates)
 		{
 			BaseHotPatchProcedure.<DownloadFiles>d__14 <DownloadFiles>d__;
@@ -138,7 +138,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <DownloadFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C74 RID: 3188 RVA: 0x0004C2E4 File Offset: 0x0004A4E4
+		// Token: 0x06000CAB RID: 3243 RVA: 0x0004EAF8 File Offset: 0x0004CCF8
 		protected UniTask<bool> CheckNeedRestartApp([Nullable(1)] ResourceUpdate update)
 		{
 			BaseHotPatchProcedure.<CheckNeedRestartApp>d__15 <CheckNeedRestartApp>d__;
@@ -150,7 +150,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <CheckNeedRestartApp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C75 RID: 3189 RVA: 0x0004C330 File Offset: 0x0004A530
+		// Token: 0x06000CAC RID: 3244 RVA: 0x0004EB44 File Offset: 0x0004CD44
 		[NullableContext(1)]
 		public bool NeedRestart(params ResourceUpdate[] updates)
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return false;
 		}
 
-		// Token: 0x06000C76 RID: 3190 RVA: 0x0004C35C File Offset: 0x0004A55C
+		// Token: 0x06000CAD RID: 3245 RVA: 0x0004EB70 File Offset: 0x0004CD70
 		public UniTask<bool> MountPak([Nullable(1)] params ResourceUpdate[] updates)
 		{
 			BaseHotPatchProcedure.<MountPak>d__17 <MountPak>d__;
@@ -176,7 +176,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <MountPak>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C77 RID: 3191 RVA: 0x0004C3A8 File Offset: 0x0004A5A8
+		// Token: 0x06000CAE RID: 3246 RVA: 0x0004EBBC File Offset: 0x0004CDBC
 		public virtual void PreComplete()
 		{
 			RemoteConfig config = RemoteInfo.Instance.Config;
@@ -196,7 +196,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			}
 		}
 
-		// Token: 0x06000C78 RID: 3192 RVA: 0x0004C468 File Offset: 0x0004A668
+		// Token: 0x06000CAF RID: 3247 RVA: 0x0004EC7C File Offset: 0x0004CE7C
 		public virtual UniTask<bool> Complete()
 		{
 			BaseHotPatchProcedure.<Complete>d__19 <Complete>d__;
@@ -207,7 +207,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <Complete>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C79 RID: 3193 RVA: 0x0004C4AC File Offset: 0x0004A6AC
+		// Token: 0x06000CB0 RID: 3248 RVA: 0x0004ECC0 File Offset: 0x0004CEC0
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -226,7 +226,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <RequestRemoteConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C7A RID: 3194 RVA: 0x0004C500 File Offset: 0x0004A700
+		// Token: 0x06000CB1 RID: 3249 RVA: 0x0004ED14 File Offset: 0x0004CF14
 		[NullableContext(1)]
 		private ERemoteConfigResult SetRemoteConfigInfo(long lastUpdateTime, [Nullable(2)] RemoteConfig newestConfig, Dictionary<string, RemoteConfig> configMap, bool ignoreOutDateAndIllegal)
 		{
@@ -289,7 +289,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 				{
 					hotPatchLogResult.success = false;
 					hotPatchLogResult.info = "failed, get all remote configs failed.";
-					hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+					hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 					HotPatchLogReport.Instance.Report(hotPatchLog);
 					return ERemoteConfigResult.None;
 				}
@@ -299,13 +299,13 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 					{
 						hotPatchLogResult.success = false;
 						hotPatchLogResult.info = "failed, the most of remote configs is out of date.";
-						hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+						hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 						HotPatchLogReport.Instance.Report(hotPatchLog);
 						return ERemoteConfigResult.OutDate;
 					}
 					hotPatchLogResult.success = false;
 					hotPatchLogResult.info = "failed, the most of remote config field is illegal.";
-					hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+					hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 					HotPatchLogReport.Instance.Report(hotPatchLog);
 					return ERemoteConfigResult.FieldIllegal;
 				}
@@ -320,7 +320,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 						LauncherLog.Instance.Error("所有远程配置更新时间戳字段都不可用，并且没有获取到有效的配置个数。", default(ReadOnlySpan<ValueTuple<string, object>>));
 						hotPatchLogResult.success = false;
 						hotPatchLogResult.info = "failed, can not assign a valid remote config.";
-						hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+						hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 						HotPatchLogReport.Instance.Report(hotPatchLog);
 						return ERemoteConfigResult.None;
 					}
@@ -336,7 +336,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			}
 			hotPatchLogResult.success = true;
 			hotPatchLogResult.info = "success";
-			hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+			hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 			HotPatchLogReport.Instance.Report(hotPatchLog);
 			RemoteInfo.Instance.Config = remoteConfig;
 			if (!ignoreOutDateAndIllegal)
@@ -350,7 +350,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return ERemoteConfigResult.Success;
 		}
 
-		// Token: 0x06000C7B RID: 3195 RVA: 0x0004C89C File Offset: 0x0004AA9C
+		// Token: 0x06000CB2 RID: 3250 RVA: 0x0004F0B0 File Offset: 0x0004D2B0
 		private UniTask<ERemoteConfigResult> InternalGetRemoteVersionConfig(bool ignoreOutDateAndIllegal = false)
 		{
 			BaseHotPatchProcedure.<InternalGetRemoteVersionConfig>d__22 <InternalGetRemoteVersionConfig>d__;
@@ -362,18 +362,18 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <InternalGetRemoteVersionConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040007D4 RID: 2004
+		// Token: 0x04000811 RID: 2065
 		private bool IsInitUrlPrefix;
 
-		// Token: 0x040007D5 RID: 2005
+		// Token: 0x04000812 RID: 2066
 		[Nullable(2)]
 		private string AppVersion;
 
-		// Token: 0x040007D6 RID: 2006
+		// Token: 0x04000813 RID: 2067
 		[Nullable(2)]
 		private readonly AppPathMisc PathMisc;
 
-		// Token: 0x040007D7 RID: 2007
+		// Token: 0x04000814 RID: 2068
 		[Nullable(2)]
 		protected readonly HotFixManager ViewMgr;
 	}

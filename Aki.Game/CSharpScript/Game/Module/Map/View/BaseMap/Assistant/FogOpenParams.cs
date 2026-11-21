@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 {
-	// Token: 0x02005499 RID: 21657
+	// Token: 0x0200447C RID: 17532
 	public class FogOpenParams
 	{
-		// Token: 0x0401D250 RID: 119376
+		// Token: 0x04017CEC RID: 97516
 		public int ExtraHdMapTileIndex = -1;
 
-		// Token: 0x0401D251 RID: 119377
+		// Token: 0x04017CED RID: 97517
 		public int MapTileIndex = -1;
 
-		// Token: 0x0401D252 RID: 119378
+		// Token: 0x04017CEE RID: 97518
 		public EChannel Channel;
 
-		// Token: 0x0401D253 RID: 119379
+		// Token: 0x04017CEF RID: 97519
 		public int ChannelV2;
 	}
 }

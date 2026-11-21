@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A13 RID: 2579
+	// Token: 0x02000AD8 RID: 2776
 	public class ESpawnMonsterConstraintJsonConverter : JsonConverter<ESpawnMonsterConstraint>
 	{
-		// Token: 0x06003908 RID: 14600 RVA: 0x000935CC File Offset: 0x000917CC
+		// Token: 0x06003CE0 RID: 15584 RVA: 0x0009BEBC File Offset: 0x0009A0BC
 		public override ESpawnMonsterConstraint Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ESpawnMonsterConstraintExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003909 RID: 14601 RVA: 0x000935F0 File Offset: 0x000917F0
+		// Token: 0x06003CE1 RID: 15585 RVA: 0x0009BEE0 File Offset: 0x0009A0E0
 		public override void Write(Utf8JsonWriter writer, ESpawnMonsterConstraint value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200103F RID: 4159
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200116D RID: 4461
 	public class IPhotographCondition
 	{
-		// Token: 0x06005D2C RID: 23852 RVA: 0x000E1BC4 File Offset: 0x000DFDC4
+		// Token: 0x0600631E RID: 25374 RVA: 0x000EEB98 File Offset: 0x000ECD98
 		private IPhotographCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D2D RID: 23853 RVA: 0x000E1BFC File Offset: 0x000DFDFC
+		// Token: 0x0600631F RID: 25375 RVA: 0x000EEBD0 File Offset: 0x000ECDD0
 		public static IPhotographCondition Create([Nullable(2)] IPhotographCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D2E RID: 23854 RVA: 0x000E1C0F File Offset: 0x000DFE0F
+		// Token: 0x06006320 RID: 25376 RVA: 0x000EEBE3 File Offset: 0x000ECDE3
 		public static IPhotographCondition CreateFromSetValue([Nullable(2)] IPhotographCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D2F RID: 23855 RVA: 0x000E1C22 File Offset: 0x000DFE22
+		// Token: 0x06006321 RID: 25377 RVA: 0x000EEBF6 File Offset: 0x000ECDF6
 		public IPhotographCondition_SetValue ToSetValue()
 		{
 			return new IPhotographCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EB9 RID: 7865
-		// (get) Token: 0x06005D30 RID: 23856 RVA: 0x000E1C59 File Offset: 0x000DFE59
-		// (set) Token: 0x06005D31 RID: 23857 RVA: 0x000E1C84 File Offset: 0x000DFE84
+		// Token: 0x17002068 RID: 8296
+		// (get) Token: 0x06006322 RID: 25378 RVA: 0x000EEC2D File Offset: 0x000ECE2D
+		// (set) Token: 0x06006323 RID: 25379 RVA: 0x000EEC58 File Offset: 0x000ECE58
 		public virtual string TidTip
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EBA RID: 7866
-		// (get) Token: 0x06005D32 RID: 23858 RVA: 0x000E1C92 File Offset: 0x000DFE92
-		// (set) Token: 0x06005D33 RID: 23859 RVA: 0x000E1CB9 File Offset: 0x000DFEB9
+		// Token: 0x17002069 RID: 8297
+		// (get) Token: 0x06006324 RID: 25380 RVA: 0x000EEC66 File Offset: 0x000ECE66
+		// (set) Token: 0x06006325 RID: 25381 RVA: 0x000EEC8D File Offset: 0x000ECE8D
 		public virtual IPhotographTarget Target
 		{
 			get
@@ -110,20 +108,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EBB RID: 7867
-		// (get) Token: 0x06005D34 RID: 23860 RVA: 0x000E1CC7 File Offset: 0x000DFEC7
-		// (set) Token: 0x06005D35 RID: 23861 RVA: 0x000E1CEE File Offset: 0x000DFEEE
+		// Token: 0x1700206A RID: 8298
+		// (get) Token: 0x06006326 RID: 25382 RVA: 0x000EEC9B File Offset: 0x000ECE9B
+		// (set) Token: 0x06006327 RID: 25383 RVA: 0x000EECC2 File Offset: 0x000ECEC2
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPhotographSubTarget> SubTargets
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -141,7 +139,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -149,9 +147,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EBC RID: 7868
-		// (get) Token: 0x06005D36 RID: 23862 RVA: 0x000E1CFC File Offset: 0x000DFEFC
-		// (set) Token: 0x06005D37 RID: 23863 RVA: 0x000E1D13 File Offset: 0x000DFF13
+		// Token: 0x1700206B RID: 8299
+		// (get) Token: 0x06006328 RID: 25384 RVA: 0x000EECD0 File Offset: 0x000ECED0
+		// (set) Token: 0x06006329 RID: 25385 RVA: 0x000EECE7 File Offset: 0x000ECEE7
 		[Nullable(2)]
 		public virtual string EdTidTip
 		{
@@ -171,11 +169,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003822 RID: 14370
+		// Token: 0x04003B6A RID: 15210
 		[Nullable(2)]
 		protected IPhotographCondition FbInstance;
 
-		// Token: 0x04003823 RID: 14371
+		// Token: 0x04003B6B RID: 15211
 		[Nullable(2)]
 		protected IPhotographCondition_SetValue PocoInterface;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200025E RID: 606
+	// Token: 0x02000272 RID: 626
 	public class ConfigElementalReactionByReactionId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E38 RID: 3640 RVA: 0x000A9D23 File Offset: 0x000A7F23
+		// Token: 0x06000EB0 RID: 3760 RVA: 0x000AFFE7 File Offset: 0x000AE1E7
 		static ConfigElementalReactionByReactionId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigElementalReactionByReactionId.CreateStaticDefaultValue), new Action(ConfigElementalReactionByReactionId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E39 RID: 3641 RVA: 0x000A9D44 File Offset: 0x000A7F44
+		// Token: 0x06000EB1 RID: 3761 RVA: 0x000B0008 File Offset: 0x000AE208
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigElementalReactionByReactionId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E3A RID: 3642 RVA: 0x000A9DC3 File Offset: 0x000A7FC3
+		// Token: 0x06000EB2 RID: 3762 RVA: 0x000B0087 File Offset: 0x000AE287
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigElementalReactionByReactionId.LogPair = null;
 			ConfigElementalReactionByReactionId.HandleId = 0;
 		}
 
-		// Token: 0x06000E3B RID: 3643 RVA: 0x000A9DD1 File Offset: 0x000A7FD1
+		// Token: 0x06000EB3 RID: 3763 RVA: 0x000B0095 File Offset: 0x000AE295
 		public static void Init()
 		{
 			ConfigElementalReactionByReactionId.HandleId = ConfigCommon.InitDataStatement(ConfigElementalReactionByReactionId.HandleId, "db_element_info.db", "select BinData from `ElementalReaction` where ReactionId=?");
 		}
 
-		// Token: 0x06000E3C RID: 3644 RVA: 0x000A9DEC File Offset: 0x000A7FEC
+		// Token: 0x06000EB4 RID: 3764 RVA: 0x000B00B0 File Offset: 0x000AE2B0
 		public static ElementalReaction? GetConfig(int p0ReactionId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigElementalReactionByReactionId.HandleId, ConfigElementalReactionByReactionId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ElementalReaction?(rootAsElementalReaction);
 		}
 
-		// Token: 0x04001076 RID: 4214
+		// Token: 0x04001102 RID: 4354
 		private const string DB = "db_element_info.db";
 
-		// Token: 0x04001077 RID: 4215
+		// Token: 0x04001103 RID: 4355
 		private const string FILE = "y.元素属性.xlsx";
 
-		// Token: 0x04001078 RID: 4216
+		// Token: 0x04001104 RID: 4356
 		private const string TABLE = "ElementalReaction";
 
-		// Token: 0x04001079 RID: 4217
+		// Token: 0x04001105 RID: 4357
 		private const string COMMAND = "select BinData from `ElementalReaction` where ReactionId=?";
 
-		// Token: 0x0400107A RID: 4218
+		// Token: 0x04001106 RID: 4358
 		private const string KEY_PREFIX = "ElementalReactionByReactionId";
 
-		// Token: 0x0400107B RID: 4219
+		// Token: 0x04001107 RID: 4359
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400107C RID: 4220
+		// Token: 0x04001108 RID: 4360
 		private static int HandleId;
 	}
 }

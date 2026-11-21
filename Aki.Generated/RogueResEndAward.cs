@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FFE RID: 4094
+	// Token: 0x020010E6 RID: 4326
 	public struct RogueResEndAward : IFlatbufferObject
 	{
-		// Token: 0x17003025 RID: 12325
-		// (get) Token: 0x0600C1F5 RID: 49653 RVA: 0x002EB76C File Offset: 0x002E996C
+		// Token: 0x170030A0 RID: 12448
+		// (get) Token: 0x0600C83F RID: 51263 RVA: 0x003079B4 File Offset: 0x00305BB4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C1F6 RID: 49654 RVA: 0x002EB779 File Offset: 0x002E9979
+		// Token: 0x0600C840 RID: 51264 RVA: 0x003079C1 File Offset: 0x00305BC1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C1F7 RID: 49655 RVA: 0x002EB780 File Offset: 0x002E9980
+		// Token: 0x0600C841 RID: 51265 RVA: 0x003079C8 File Offset: 0x00305BC8
 		public static RogueResEndAward GetRootAsRogueResEndAward(ByteBuffer _bb)
 		{
 			return RogueResEndAward.GetRootAsRogueResEndAward(_bb, default(RogueResEndAward));
 		}
 
-		// Token: 0x0600C1F8 RID: 49656 RVA: 0x002EB79C File Offset: 0x002E999C
+		// Token: 0x0600C842 RID: 51266 RVA: 0x003079E4 File Offset: 0x00305BE4
 		public static RogueResEndAward GetRootAsRogueResEndAward(ByteBuffer _bb, RogueResEndAward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C1F9 RID: 49657 RVA: 0x002EB7B9 File Offset: 0x002E99B9
+		// Token: 0x0600C843 RID: 51267 RVA: 0x00307A01 File Offset: 0x00305C01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C1FA RID: 49658 RVA: 0x002EB7C8 File Offset: 0x002E99C8
+		// Token: 0x0600C844 RID: 51268 RVA: 0x00307A10 File Offset: 0x00305C10
 		public RogueResEndAward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003026 RID: 12326
-		// (get) Token: 0x0600C1FB RID: 49659 RVA: 0x002EB7D8 File Offset: 0x002E99D8
+		// Token: 0x170030A1 RID: 12449
+		// (get) Token: 0x0600C845 RID: 51269 RVA: 0x00307A20 File Offset: 0x00305C20
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003027 RID: 12327
-		// (get) Token: 0x0600C1FC RID: 49660 RVA: 0x002EB814 File Offset: 0x002E9A14
+		// Token: 0x170030A2 RID: 12450
+		// (get) Token: 0x0600C846 RID: 51270 RVA: 0x00307A5C File Offset: 0x00305C5C
 		public int Index
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003028 RID: 12328
-		// (get) Token: 0x0600C1FD RID: 49661 RVA: 0x002EB850 File Offset: 0x002E9A50
+		// Token: 0x170030A3 RID: 12451
+		// (get) Token: 0x0600C847 RID: 51271 RVA: 0x00307A98 File Offset: 0x00305C98
 		public int SeasonId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003029 RID: 12329
-		// (get) Token: 0x0600C1FE RID: 49662 RVA: 0x002EB88C File Offset: 0x002E9A8C
+		// Token: 0x170030A4 RID: 12452
+		// (get) Token: 0x0600C848 RID: 51272 RVA: 0x00307AD4 File Offset: 0x00305CD4
 		public string Desc
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C1FF RID: 49663 RVA: 0x002EB8C4 File Offset: 0x002E9AC4
+		// Token: 0x0600C849 RID: 51273 RVA: 0x00307B0C File Offset: 0x00305D0C
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C200 RID: 49664 RVA: 0x002EB8D4 File Offset: 0x002E9AD4
+		// Token: 0x0600C84A RID: 51274 RVA: 0x00307B1C File Offset: 0x00305D1C
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700302A RID: 12330
-		// (get) Token: 0x0600C201 RID: 49665 RVA: 0x002EB8EC File Offset: 0x002E9AEC
+		// Token: 0x170030A5 RID: 12453
+		// (get) Token: 0x0600C84B RID: 51275 RVA: 0x00307B34 File Offset: 0x00305D34
 		public int Award
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040050E6 RID: 20710
+		// Token: 0x040056CE RID: 22222
 		private Table __p;
 	}
 }

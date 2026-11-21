@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 {
-	// Token: 0x0200544E RID: 21582
+	// Token: 0x02004431 RID: 17457
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EyeProtectView : UiViewBase
 	{
-		// Token: 0x0603719B RID: 225691 RVA: 0x00D0F674 File Offset: 0x00D0D874
+		// Token: 0x0602C0E4 RID: 180452 RVA: 0x00C5EA8C File Offset: 0x00C5CC8C
 		public EyeProtectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603719C RID: 225692 RVA: 0x00D0F688 File Offset: 0x00D0D888
+		// Token: 0x0602C0E5 RID: 180453 RVA: 0x00C5EAA0 File Offset: 0x00C5CCA0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			};
 		}
 
-		// Token: 0x0603719D RID: 225693 RVA: 0x00D0F766 File Offset: 0x00D0D966
+		// Token: 0x0602C0E6 RID: 180454 RVA: 0x00C5EB7E File Offset: 0x00C5CD7E
 		protected override void OnBeforeCreate()
 		{
 			this.VmCache = (this.OpenParam as EyeProtectViewModel);
 			this.VmCache.OnSliderValueChange = new Action(this.RefreshApplyBtn);
 		}
 
-		// Token: 0x0603719E RID: 225694 RVA: 0x00D0F790 File Offset: 0x00D0D990
+		// Token: 0x0602C0E7 RID: 180455 RVA: 0x00C5EBA8 File Offset: 0x00C5CDA8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			EyeProtectView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -54,19 +54,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603719F RID: 225695 RVA: 0x00D0F7D3 File Offset: 0x00D0D9D3
+		// Token: 0x0602C0E8 RID: 180456 RVA: 0x00C5EBEB File Offset: 0x00C5CDEB
 		protected override void OnBeforeShow()
 		{
 			UiTimeDilation.Instance.AddWaitSetTimeDilationTag(this.ViewInfo.Name);
 		}
 
-		// Token: 0x060371A0 RID: 225696 RVA: 0x00D0F7EF File Offset: 0x00D0D9EF
+		// Token: 0x0602C0E9 RID: 180457 RVA: 0x00C5EC07 File Offset: 0x00C5CE07
 		protected override void OnBeforeHide()
 		{
 			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag(this.ViewInfo.Name);
 		}
 
-		// Token: 0x060371A1 RID: 225697 RVA: 0x00D0F80C File Offset: 0x00D0DA0C
+		// Token: 0x0602C0EA RID: 180458 RVA: 0x00C5EC24 File Offset: 0x00C5CE24
 		protected override void OnBeforeDestroy()
 		{
 			UiLayer.Instance.SetLayerActive(ELayerType.HUD, true);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			EyeProtectController.Instance.ApplyEyeProtectSetting();
 		}
 
-		// Token: 0x060371A2 RID: 225698 RVA: 0x00D0F874 File Offset: 0x00D0DA74
+		// Token: 0x0602C0EB RID: 180459 RVA: 0x00C5EC8C File Offset: 0x00C5CE8C
 		protected override void OnStart()
 		{
 			if (this.VmCache == null)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.SelectTagByIndex(this.VmCache.ModeCurValue.GetValueOrDefault());
 		}
 
-		// Token: 0x060371A3 RID: 225699 RVA: 0x00D0F8E8 File Offset: 0x00D0DAE8
+		// Token: 0x0602C0EC RID: 180460 RVA: 0x00C5ED00 File Offset: 0x00C5CF00
 		protected override void OnAddEventListener()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(7);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			InputDistributeController.Instance.BindAxis("UiTurn", new TInputHandle<float>(this.OnInputUiTurn));
 		}
 
-		// Token: 0x060371A4 RID: 225700 RVA: 0x00D0F9C4 File Offset: 0x00D0DBC4
+		// Token: 0x0602C0ED RID: 180461 RVA: 0x00C5EDDC File Offset: 0x00C5CFDC
 		protected override void OnRemoveEventListener()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(7);
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			InputDistributeController.Instance.UnBindAxis("UiTurn", new TInputHandle<float>(this.OnInputUiTurn));
 		}
 
-		// Token: 0x060371A5 RID: 225701 RVA: 0x00D0FA73 File Offset: 0x00D0DC73
+		// Token: 0x0602C0EE RID: 180462 RVA: 0x00C5EE8B File Offset: 0x00C5D08B
 		private EyeProtectItem CreateEyeProtectItem()
 		{
 			return new EyeProtectItem
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			};
 		}
 
-		// Token: 0x060371A6 RID: 225702 RVA: 0x00D0FAA0 File Offset: 0x00D0DCA0
+		// Token: 0x0602C0EF RID: 180463 RVA: 0x00C5EEB8 File Offset: 0x00C5D0B8
 		private void SelectTagByIndex(int gridIndex)
 		{
 			EyeProtectItemData eyeProtectItemData = this.ItemDataList[gridIndex];
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x060371A7 RID: 225703 RVA: 0x00D0FB14 File Offset: 0x00D0DD14
+		// Token: 0x0602C0F0 RID: 180464 RVA: 0x00C5EF2C File Offset: 0x00C5D12C
 		private bool CanToggleChange(int gridIndex)
 		{
 			GenericLayout<EyeProtectItem, EyeProtectItemData> layoutItems = this.LayoutItems;
@@ -202,13 +202,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			return !(gridIndex == num.GetValueOrDefault() & num != null);
 		}
 
-		// Token: 0x060371A8 RID: 225704 RVA: 0x00D0FB56 File Offset: 0x00D0DD56
+		// Token: 0x0602C0F1 RID: 180465 RVA: 0x00C5EF6E File Offset: 0x00C5D16E
 		private void OnResetClick(int _)
 		{
 			this.HandleResetClick();
 		}
 
-		// Token: 0x060371A9 RID: 225705 RVA: 0x00D0FB60 File Offset: 0x00D0DD60
+		// Token: 0x0602C0F2 RID: 180466 RVA: 0x00C5EF78 File Offset: 0x00C5D178
 		private void HandleResetClick()
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -249,13 +249,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x060371AA RID: 225706 RVA: 0x00D0FC94 File Offset: 0x00D0DE94
+		// Token: 0x0602C0F3 RID: 180467 RVA: 0x00C5F0AC File Offset: 0x00C5D2AC
 		private void OnConfirmClick(int _)
 		{
 			this.HandleConfirmClick();
 		}
 
-		// Token: 0x060371AB RID: 225707 RVA: 0x00D0FC9C File Offset: 0x00D0DE9C
+		// Token: 0x0602C0F4 RID: 180468 RVA: 0x00C5F0B4 File Offset: 0x00C5D2B4
 		private void HandleConfirmClick()
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -288,14 +288,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.RefreshApplyBtn();
 		}
 
-		// Token: 0x060371AC RID: 225708 RVA: 0x00D0FDB4 File Offset: 0x00D0DFB4
+		// Token: 0x0602C0F5 RID: 180469 RVA: 0x00C5F1CC File Offset: 0x00C5D3CC
 		private void OnEyeToggleStateChange(EToggleState state)
 		{
 			base.GetItem(6).SetUIActive(state == EToggleState.ETT_Checked);
 			base.GetItem(8).SetUIActive(state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x060371AD RID: 225709 RVA: 0x00D0FDD8 File Offset: 0x00D0DFD8
+		// Token: 0x0602C0F6 RID: 180470 RVA: 0x00C5F1F0 File Offset: 0x00C5D3F0
 		private void OnCloseClick()
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -309,19 +309,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.CloseMySelf();
 		}
 
-		// Token: 0x060371AE RID: 225710 RVA: 0x00D0FE2F File Offset: 0x00D0E02F
+		// Token: 0x0602C0F7 RID: 180471 RVA: 0x00C5F247 File Offset: 0x00C5D447
 		public void CloseMySelf()
 		{
 			FilterSettingController.Instance.CloseViewAndReturnWorld();
 		}
 
-		// Token: 0x060371AF RID: 225711 RVA: 0x00D0FE3C File Offset: 0x00D0E03C
+		// Token: 0x0602C0F8 RID: 180472 RVA: 0x00C5F254 File Offset: 0x00C5D454
 		private void OpenHelpView()
 		{
 			HelpController.Instance.OpenHelpById(390);
 		}
 
-		// Token: 0x060371B0 RID: 225712 RVA: 0x00D0FE50 File Offset: 0x00D0E050
+		// Token: 0x0602C0F9 RID: 180473 RVA: 0x00C5F268 File Offset: 0x00C5D468
 		private void RefreshApplyBtn()
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			confirmBtnItem.SetEnableClick(flag.GetValueOrDefault());
 		}
 
-		// Token: 0x060371B1 RID: 225713 RVA: 0x00D0FE94 File Offset: 0x00D0E094
+		// Token: 0x0602C0FA RID: 180474 RVA: 0x00C5F2AC File Offset: 0x00C5D4AC
 		[NullableContext(2)]
 		private void OnDragMoved(ULGUIPointerEventData eventData)
 		{
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			vmCache.OnDragMoved(eventData);
 		}
 
-		// Token: 0x060371B2 RID: 225714 RVA: 0x00D0FEA7 File Offset: 0x00D0E0A7
+		// Token: 0x0602C0FB RID: 180475 RVA: 0x00C5F2BF File Offset: 0x00C5D4BF
 		private void OnDragBegin(ULGUIPointerEventData _)
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			vmCache.OnDragBegin();
 		}
 
-		// Token: 0x060371B3 RID: 225715 RVA: 0x00D0FEB9 File Offset: 0x00D0E0B9
+		// Token: 0x0602C0FC RID: 180476 RVA: 0x00C5F2D1 File Offset: 0x00C5D4D1
 		private void OnDragEnded(ULGUIPointerEventData _)
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			vmCache.OnDragEnded();
 		}
 
-		// Token: 0x060371B4 RID: 225716 RVA: 0x00D0FECB File Offset: 0x00D0E0CB
+		// Token: 0x0602C0FD RID: 180477 RVA: 0x00C5F2E3 File Offset: 0x00C5D4E3
 		private void OnInputUiLookUp(string axisName, float value, InputIdentification _)
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			vmCache.OnInputUiLookUp(axisName, value);
 		}
 
-		// Token: 0x060371B5 RID: 225717 RVA: 0x00D0FEDF File Offset: 0x00D0E0DF
+		// Token: 0x0602C0FE RID: 180478 RVA: 0x00C5F2F7 File Offset: 0x00C5D4F7
 		private void OnInputUiTurn(string axisName, float value, InputIdentification _)
 		{
 			EyeProtectViewModel vmCache = this.VmCache;
@@ -390,15 +390,15 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			vmCache.OnInputUiTurn(axisName, value);
 		}
 
-		// Token: 0x0401D11E RID: 119070
+		// Token: 0x04017BB7 RID: 97207
 		[Nullable(2)]
 		public EyeProtectViewModel VmCache;
 
-		// Token: 0x0401D11F RID: 119071
+		// Token: 0x04017BB8 RID: 97208
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401D120 RID: 119072
+		// Token: 0x04017BB9 RID: 97209
 		[Nullable(new byte[]
 		{
 			2,
@@ -407,46 +407,46 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 		})]
 		private GenericLayout<EyeProtectItem, EyeProtectItemData> LayoutItems;
 
-		// Token: 0x0401D121 RID: 119073
+		// Token: 0x04017BBA RID: 97210
 		private List<EyeProtectItemData> ItemDataList = new List<EyeProtectItemData>();
 
-		// Token: 0x0401D122 RID: 119074
+		// Token: 0x04017BBB RID: 97211
 		[Nullable(2)]
 		private ButtonItem ResetBtnItem;
 
-		// Token: 0x0401D123 RID: 119075
+		// Token: 0x04017BBC RID: 97212
 		[Nullable(2)]
 		private ButtonItem ConfirmBtnItem;
 
-		// Token: 0x0200B6C8 RID: 46792
+		// Token: 0x0200A100 RID: 41216
 		[NullableContext(0)]
 		public class EComponent
 		{
-			// Token: 0x04037600 RID: 226816
+			// Token: 0x04032055 RID: 204885
 			public const int CaptionItem = 0;
 
-			// Token: 0x04037601 RID: 226817
+			// Token: 0x04032056 RID: 204886
 			public const int Layout = 1;
 
-			// Token: 0x04037602 RID: 226818
+			// Token: 0x04032057 RID: 204887
 			public const int Item = 2;
 
-			// Token: 0x04037603 RID: 226819
+			// Token: 0x04032058 RID: 204888
 			public const int BtnReset = 3;
 
-			// Token: 0x04037604 RID: 226820
+			// Token: 0x04032059 RID: 204889
 			public const int BtnConfirm = 4;
 
-			// Token: 0x04037605 RID: 226821
+			// Token: 0x0403205A RID: 204890
 			public const int TogEye = 5;
 
-			// Token: 0x04037606 RID: 226822
+			// Token: 0x0403205B RID: 204891
 			public const int Parent = 6;
 
-			// Token: 0x04037607 RID: 226823
+			// Token: 0x0403205C RID: 204892
 			public const int ScreenDrag = 7;
 
-			// Token: 0x04037608 RID: 226824
+			// Token: 0x0403205D RID: 204893
 			public const int TexMask = 8;
 		}
 	}

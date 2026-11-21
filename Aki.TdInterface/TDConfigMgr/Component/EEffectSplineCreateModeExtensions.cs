@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200092C RID: 2348
+	// Token: 0x020009D9 RID: 2521
 	public static class EEffectSplineCreateModeExtensions
 	{
-		// Token: 0x060034F7 RID: 13559 RVA: 0x0008A614 File Offset: 0x00088814
+		// Token: 0x06003863 RID: 14435 RVA: 0x00092194 File Offset: 0x00090394
 		public static string ToEnumString(this EEffectSplineCreateMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034F8 RID: 13560 RVA: 0x0008A64C File Offset: 0x0008884C
+		// Token: 0x06003864 RID: 14436 RVA: 0x000921CC File Offset: 0x000903CC
 		public static EEffectSplineCreateMode FromString(string name)
 		{
 			EEffectSplineCreateMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034F9 RID: 13561 RVA: 0x0008A675 File Offset: 0x00088875
+		// Token: 0x06003865 RID: 14437 RVA: 0x000921F5 File Offset: 0x000903F5
 		public static bool TryFromString(string name, out EEffectSplineCreateMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060034FA RID: 13562 RVA: 0x0008A6AE File Offset: 0x000888AE
+		// Token: 0x06003866 RID: 14438 RVA: 0x0009222E File Offset: 0x0009042E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034FB RID: 13563 RVA: 0x0008A6C6 File Offset: 0x000888C6
+		// Token: 0x06003867 RID: 14439 RVA: 0x00092246 File Offset: 0x00090446
 		public static EEffectSplineCreateMode[] GetValues()
 		{
 			return new EEffectSplineCreateMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034FC RID: 13564 RVA: 0x0008A6D2 File Offset: 0x000888D2
+		// Token: 0x06003868 RID: 14440 RVA: 0x00092252 File Offset: 0x00090452
 		public static string[] GetNames()
 		{
 			return new string[]

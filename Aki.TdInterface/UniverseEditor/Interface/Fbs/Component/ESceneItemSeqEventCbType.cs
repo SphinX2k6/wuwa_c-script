@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E0F RID: 19983
+	// Token: 0x0200531C RID: 21276
 	public enum ESceneItemSeqEventCbType : byte
 	{
-		// Token: 0x0400DB18 RID: 56088
+		// Token: 0x0400E681 RID: 59009
 		ANS,
-		// Token: 0x0400DB19 RID: 56089
+		// Token: 0x0400E682 RID: 59010
 		AN
 	}
 }

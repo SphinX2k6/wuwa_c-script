@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F48 RID: 24392
+	// Token: 0x02004F2F RID: 20271
 	public class WheelTowerScoreLevelTargetData
 	{
-		// Token: 0x0603DFA0 RID: 253856 RVA: 0x00EF5CCE File Offset: 0x00EF3ECE
+		// Token: 0x06032F3B RID: 208699 RVA: 0x00E479FA File Offset: 0x00E45BFA
 		public WheelTowerScoreLevelTargetData(int levelId, int score)
 		{
 			this.LevelId = levelId;
 			this.Score = score;
 		}
 
-		// Token: 0x17008FB9 RID: 36793
-		// (get) Token: 0x0603DFA1 RID: 253857 RVA: 0x00EF5CE4 File Offset: 0x00EF3EE4
-		// (set) Token: 0x0603DFA2 RID: 253858 RVA: 0x00EF5CEC File Offset: 0x00EF3EEC
+		// Token: 0x1700638B RID: 25483
+		// (get) Token: 0x06032F3C RID: 208700 RVA: 0x00E47A10 File Offset: 0x00E45C10
+		// (set) Token: 0x06032F3D RID: 208701 RVA: 0x00E47A18 File Offset: 0x00E45C18
 		public int LevelId { get; set; }
 
-		// Token: 0x17008FBA RID: 36794
-		// (get) Token: 0x0603DFA3 RID: 253859 RVA: 0x00EF5CF5 File Offset: 0x00EF3EF5
-		// (set) Token: 0x0603DFA4 RID: 253860 RVA: 0x00EF5CFD File Offset: 0x00EF3EFD
+		// Token: 0x1700638C RID: 25484
+		// (get) Token: 0x06032F3E RID: 208702 RVA: 0x00E47A21 File Offset: 0x00E45C21
+		// (set) Token: 0x06032F3F RID: 208703 RVA: 0x00E47A29 File Offset: 0x00E45C29
 		public int Score { get; set; }
 	}
 }

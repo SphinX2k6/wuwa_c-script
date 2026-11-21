@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A6D RID: 2669
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B37 RID: 2871
 	public class IUndergroundStateInfo
 	{
-		// Token: 0x06003D86 RID: 15750 RVA: 0x0009DEF9 File Offset: 0x0009C0F9
+		// Token: 0x060041AF RID: 16815 RVA: 0x000A74B1 File Offset: 0x000A56B1
 		public static IUndergroundStateInfo Create(IUndergroundStateInfo? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E69 RID: 3689
-		// (get) Token: 0x06003D87 RID: 15751 RVA: 0x0009DF18 File Offset: 0x0009C118
+		// Token: 0x17000F3C RID: 3900
+		// (get) Token: 0x060041B0 RID: 16816 RVA: 0x000A74D0 File Offset: 0x000A56D0
 		public virtual int StateId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E6A RID: 3690
-		// (get) Token: 0x06003D88 RID: 15752 RVA: 0x0009DF25 File Offset: 0x0009C125
+		// Token: 0x17000F3D RID: 3901
+		// (get) Token: 0x060041B1 RID: 16817 RVA: 0x000A74DD File Offset: 0x000A56DD
 		public virtual VectorInfo RestartPos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002246 RID: 8774
+		// Token: 0x04002462 RID: 9314
 		private IUndergroundStateInfo Instance;
 
-		// Token: 0x04002247 RID: 8775
+		// Token: 0x04002463 RID: 9315
 		[Nullable(2)]
 		private VectorInfo _RestartPosCache;
 
-		// Token: 0x04002248 RID: 8776
+		// Token: 0x04002464 RID: 9316
 		private bool _RestartPosInited;
 	}
 }

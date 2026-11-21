@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200616C RID: 24940
+	// Token: 0x020050EA RID: 20714
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeEquipmentPanel : UiPanelBase
 	{
-		// Token: 0x0603F0AC RID: 258220 RVA: 0x00F3BE04 File Offset: 0x00F3A004
+		// Token: 0x06033D6C RID: 212332 RVA: 0x00E82CD8 File Offset: 0x00E80ED8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F0AD RID: 258221 RVA: 0x00F3BF30 File Offset: 0x00F3A130
+		// Token: 0x06033D6D RID: 212333 RVA: 0x00E82E04 File Offset: 0x00E81004
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeEquipmentPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -55,21 +55,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F0AE RID: 258222 RVA: 0x00F3BF73 File Offset: 0x00F3A173
+		// Token: 0x06033D6E RID: 212334 RVA: 0x00E82E47 File Offset: 0x00E81047
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603F0AF RID: 258223 RVA: 0x00F3BF7B File Offset: 0x00F3A17B
+		// Token: 0x06033D6F RID: 212335 RVA: 0x00E82E4F File Offset: 0x00E8104F
 		protected override void OnBeforeDestroy()
 		{
 			this.LootGrid = null;
 			this.StarLayout = null;
 		}
 
-		// Token: 0x170091BA RID: 37306
-		// (get) Token: 0x0603F0B0 RID: 258224 RVA: 0x00F3BF8B File Offset: 0x00F3A18B
+		// Token: 0x1700651C RID: 25884
+		// (get) Token: 0x06033D70 RID: 212336 RVA: 0x00E82E5F File Offset: 0x00E8105F
 		private RoverlikeActivityData ActivityData
 		{
 			get
@@ -78,20 +78,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F0B1 RID: 258225 RVA: 0x00F3BF97 File Offset: 0x00F3A197
+		// Token: 0x06033D71 RID: 212337 RVA: 0x00E82E6B File Offset: 0x00E8106B
 		public void Refresh()
 		{
 			this.RefreshByLootId(this.GetCurrentLootId());
 		}
 
-		// Token: 0x0603F0B2 RID: 258226 RVA: 0x00F3BFA5 File Offset: 0x00F3A1A5
+		// Token: 0x06033D72 RID: 212338 RVA: 0x00E82E79 File Offset: 0x00E81079
 		private bool IsLootFeatureUnlocked()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
 			return activityData != null && activityData.IsLootFeatureUnlocked();
 		}
 
-		// Token: 0x0603F0B3 RID: 258227 RVA: 0x00F3BFB8 File Offset: 0x00F3A1B8
+		// Token: 0x06033D73 RID: 212339 RVA: 0x00E82E8C File Offset: 0x00E8108C
 		private int GetCurrentLootId()
 		{
 			RoverlikeActivityData activityData = this.ActivityData;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return activityData.GetEquippedLootId();
 		}
 
-		// Token: 0x0603F0B4 RID: 258228 RVA: 0x00F3BFCC File Offset: 0x00F3A1CC
+		// Token: 0x06033D74 RID: 212340 RVA: 0x00E82EA0 File Offset: 0x00E810A0
 		private void RefreshByLootId(int lootId)
 		{
 			bool flag = this.IsLootFeatureUnlocked();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetRedDotShow(activityData != null && activityData.HasNewLootUnlockRedDot());
 		}
 
-		// Token: 0x0603F0B5 RID: 258229 RVA: 0x00F3C13B File Offset: 0x00F3A33B
+		// Token: 0x06033D75 RID: 212341 RVA: 0x00E8300F File Offset: 0x00E8120F
 		public void SetRedDotShow(bool isShow)
 		{
 			UUIItem item = base.GetItem(2);
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item.SetUIActive(isShow);
 		}
 
-		// Token: 0x0603F0B6 RID: 258230 RVA: 0x00F3C150 File Offset: 0x00F3A350
+		// Token: 0x06033D76 RID: 212342 RVA: 0x00E83024 File Offset: 0x00E81224
 		private void RefreshStars(int lootId, int maxLevel)
 		{
 			if (lootId <= 0 || maxLevel <= 0)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F0B7 RID: 258231 RVA: 0x00F3C1B8 File Offset: 0x00F3A3B8
+		// Token: 0x06033D77 RID: 212343 RVA: 0x00E8308C File Offset: 0x00E8128C
 		private void OnClickEquip()
 		{
 			if (!this.IsLootFeatureUnlocked())
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			RoverlikeController.Instance.OpenRoverRogueLootSelectView(this.GetCurrentLootId(), new Action<int, int>(this.OnLootConfirm));
 		}
 
-		// Token: 0x0603F0B8 RID: 258232 RVA: 0x00F3C21D File Offset: 0x00F3A41D
+		// Token: 0x06033D78 RID: 212344 RVA: 0x00E830F1 File Offset: 0x00E812F1
 		private void OnLootConfirm(int lootId, int lootLv)
 		{
 			RoverlikeController.Instance.RoverRogueOutGameLootChangeRequest(lootId, lootLv, delegate(bool success)
@@ -234,36 +234,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x04020E23 RID: 134691
+		// Token: 0x0401B750 RID: 112464
 		[Nullable(1)]
 		private const string ROVERLIKE_LOOT_STAR_LAYOUT_RESOURCE_ID = "UiItem_RoverLikeStarHLayout";
 
-		// Token: 0x04020E24 RID: 134692
+		// Token: 0x0401B751 RID: 112465
 		private CommonItemSmallItemGrid LootGrid;
 
-		// Token: 0x04020E25 RID: 134693
+		// Token: 0x0401B752 RID: 112466
 		private RoverlikeLootStarLayout StarLayout;
 
-		// Token: 0x0200C3D2 RID: 50130
+		// Token: 0x0200ADB9 RID: 44473
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B171 RID: 242033
+			// Token: 0x04035AD2 RID: 219858
 			public const int BtnEquip = 0;
 
-			// Token: 0x0403B172 RID: 242034
+			// Token: 0x04035AD3 RID: 219859
 			public const int TxtEquippmentName = 1;
 
-			// Token: 0x0403B173 RID: 242035
+			// Token: 0x04035AD4 RID: 219860
 			public const int RedDot = 2;
 
-			// Token: 0x0403B174 RID: 242036
+			// Token: 0x04035AD5 RID: 219861
 			public const int ItemSlot = 3;
 
-			// Token: 0x0403B175 RID: 242037
+			// Token: 0x04035AD6 RID: 219862
 			public const int SprIconSwitch = 4;
 
-			// Token: 0x0403B176 RID: 242038
+			// Token: 0x04035AD7 RID: 219863
 			public const int PnlLock = 5;
 		}
 	}

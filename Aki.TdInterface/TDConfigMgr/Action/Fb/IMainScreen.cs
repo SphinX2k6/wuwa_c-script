@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027A1 RID: 10145
+	// Token: 0x02002A73 RID: 10867
 	public class IMainScreen : IScreenType
 	{
-		// Token: 0x0600E1C0 RID: 57792 RVA: 0x00215A61 File Offset: 0x00213C61
-		[NullableContext(1)]
+		// Token: 0x0600EFDE RID: 61406 RVA: 0x002327F5 File Offset: 0x002309F5
 		public static IMainScreen Create(IMainScreen? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004440 RID: 17472
-		// (get) Token: 0x0600E1C1 RID: 57793 RVA: 0x00215A80 File Offset: 0x00213C80
+		// Token: 0x170047A6 RID: 18342
+		// (get) Token: 0x0600EFDF RID: 61407 RVA: 0x00232814 File Offset: 0x00230A14
 		public override EScreenType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D2D RID: 32045
+		// Token: 0x040083E3 RID: 33763
 		private IMainScreen Instance;
 	}
 }

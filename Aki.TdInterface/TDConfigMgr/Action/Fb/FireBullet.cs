@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B3 RID: 9907
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002976 RID: 10614
 	public class FireBullet : ActionParams
 	{
-		// Token: 0x0600DDA9 RID: 56745 RVA: 0x0020EABB File Offset: 0x0020CCBB
+		// Token: 0x0600EB80 RID: 60288 RVA: 0x0022B25B File Offset: 0x0022945B
 		public static FireBullet Create(IFireBullet? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004205 RID: 16901
-		// (get) Token: 0x0600DDAA RID: 56746 RVA: 0x0020EADA File Offset: 0x0020CCDA
+		// Token: 0x17004542 RID: 17730
+		// (get) Token: 0x0600EB81 RID: 60289 RVA: 0x0022B27A File Offset: 0x0022947A
 		public virtual IFireBulletType Type
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004206 RID: 16902
-		// (get) Token: 0x0600DDAB RID: 56747 RVA: 0x0020EB0C File Offset: 0x0020CD0C
+		// Token: 0x17004543 RID: 17731
+		// (get) Token: 0x0600EB82 RID: 60290 RVA: 0x0022B2AC File Offset: 0x002294AC
 		public virtual EBulletLauncher? Launcher
 		{
 			get
@@ -52,13 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B13 RID: 31507
+		// Token: 0x040081B0 RID: 33200
 		private IFireBullet Instance;
 
-		// Token: 0x04007B14 RID: 31508
+		// Token: 0x040081B1 RID: 33201
 		private IFireBulletType _TypeCache;
 
-		// Token: 0x04007B15 RID: 31509
+		// Token: 0x040081B2 RID: 33202
 		private bool _TypeInited;
 	}
 }

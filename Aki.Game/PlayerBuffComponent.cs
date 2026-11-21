@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using Google.Protobuf.Collections;
 
-// Token: 0x02003291 RID: 12945
+// Token: 0x02002802 RID: 10242
 [NullableContext(1)]
 [Nullable(0)]
 public class PlayerBuffComponent : BaseBuffComponent
 {
-	// Token: 0x0601C051 RID: 114769 RVA: 0x007C9EED File Offset: 0x007C80ED
+	// Token: 0x06019C69 RID: 105577 RVA: 0x007F1149 File Offset: 0x007EF349
 	[NullableContext(2)]
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
@@ -20,7 +19,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C052 RID: 114770 RVA: 0x007C9EFC File Offset: 0x007C80FC
+	// Token: 0x06019C6A RID: 105578 RVA: 0x007F1158 File Offset: 0x007EF358
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -29,7 +28,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C053 RID: 114771 RVA: 0x007C9F20 File Offset: 0x007C8120
+	// Token: 0x06019C6B RID: 105579 RVA: 0x007F117C File Offset: 0x007EF37C
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -48,7 +47,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C054 RID: 114772 RVA: 0x007C9F90 File Offset: 0x007C8190
+	// Token: 0x06019C6C RID: 105580 RVA: 0x007F11EC File Offset: 0x007EF3EC
 	protected override bool OnStart()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -56,13 +55,13 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C055 RID: 114773 RVA: 0x007C9FCB File Offset: 0x007C81CB
+	// Token: 0x06019C6D RID: 105581 RVA: 0x007F1227 File Offset: 0x007EF427
 	protected override void OnActivate()
 	{
 		this.InitBornBuff();
 	}
 
-	// Token: 0x0601C056 RID: 114774 RVA: 0x007C9FD4 File Offset: 0x007C81D4
+	// Token: 0x06019C6E RID: 105582 RVA: 0x007F1230 File Offset: 0x007EF430
 	protected override bool OnClear()
 	{
 		this.TriggerMap.Clear();
@@ -76,7 +75,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C057 RID: 114775 RVA: 0x007CA050 File Offset: 0x007C8250
+	// Token: 0x06019C6F RID: 105583 RVA: 0x007F12AC File Offset: 0x007EF4AC
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -84,14 +83,14 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C058 RID: 114776 RVA: 0x007CA08B File Offset: 0x007C828B
+	// Token: 0x06019C70 RID: 105584 RVA: 0x007F12E7 File Offset: 0x007EF4E7
 	public override bool IsPaused()
 	{
 		CharacterBuffComponent currentBuffComponent = this.GetCurrentBuffComponent();
 		return currentBuffComponent != null && currentBuffComponent.IsPaused();
 	}
 
-	// Token: 0x0601C059 RID: 114777 RVA: 0x007CA0A0 File Offset: 0x007C82A0
+	// Token: 0x06019C71 RID: 105585 RVA: 0x007F12FC File Offset: 0x007EF4FC
 	protected override void InitBornBuff()
 	{
 		CreatureDataComponent creatureDataComponent = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -155,7 +154,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		}
 	}
 
-	// Token: 0x0601C05A RID: 114778 RVA: 0x007CA2F4 File Offset: 0x007C84F4
+	// Token: 0x06019C72 RID: 105586 RVA: 0x007F1550 File Offset: 0x007EF750
 	protected override void OnAnyBuffInhibitionChanged(IActiveBuff buff)
 	{
 		if (buff.Config.FormationPolicy == EBuffFormationPolicy.FormationBuff && !SceneTeamModel.Instance.IsTeamReady)
@@ -168,7 +167,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		this.OnAnyBuffInhibitionChangedInternal(buff);
 	}
 
-	// Token: 0x0601C05B RID: 114779 RVA: 0x007CA356 File Offset: 0x007C8556
+	// Token: 0x06019C73 RID: 105587 RVA: 0x007F15B2 File Offset: 0x007EF7B2
 	private void OnAnyBuffInhibitionChangedInternal(IActiveBuff buff)
 	{
 		if (buff.IsActive())
@@ -179,7 +178,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		base.DestroyGameplayCueByBuff(buff);
 	}
 
-	// Token: 0x0601C05C RID: 114780 RVA: 0x007CA370 File Offset: 0x007C8570
+	// Token: 0x06019C74 RID: 105588 RVA: 0x007F15CC File Offset: 0x007EF7CC
 	public override string GetDebugName()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(7, 1);
@@ -188,7 +187,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601C05D RID: 114781 RVA: 0x007CA3A8 File Offset: 0x007C85A8
+	// Token: 0x06019C75 RID: 105589 RVA: 0x007F1604 File Offset: 0x007EF804
 	[NullableContext(2)]
 	public override Entity GetEntity()
 	{
@@ -220,7 +219,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return entity.Entity;
 	}
 
-	// Token: 0x0601C05E RID: 114782 RVA: 0x007CA424 File Offset: 0x007C8624
+	// Token: 0x06019C76 RID: 105590 RVA: 0x007F1680 File Offset: 0x007EF880
 	public override float GetTimeScale()
 	{
 		Entity entity = base.Entity;
@@ -229,7 +228,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return (num * ((timeScaleComponent != null) ? timeScaleComponent.CurrentTimeScale : 1f)).GetValueOrDefault();
 	}
 
-	// Token: 0x0601C05F RID: 114783 RVA: 0x007CA492 File Offset: 0x007C8692
+	// Token: 0x06019C77 RID: 105591 RVA: 0x007F16EE File Offset: 0x007EF8EE
 	public override float GetLogicTimeScale()
 	{
 		float timeDilation = base.Entity.TimeDilation;
@@ -237,7 +236,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return timeDilation * ((timeScaleComponent != null) ? timeScaleComponent.GetTopForeverTimeScale(new ESourceEffectGroup?(ESourceEffectGroup.LogicAndView)) : 1f);
 	}
 
-	// Token: 0x0601C060 RID: 114784 RVA: 0x007CA4BC File Offset: 0x007C86BC
+	// Token: 0x06019C78 RID: 105592 RVA: 0x007F1718 File Offset: 0x007EF918
 	[NullableContext(2)]
 	public CharacterBuffComponent GetCurrentBuffComponent()
 	{
@@ -249,7 +248,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return entity.GetComponent<CharacterBuffComponent>();
 	}
 
-	// Token: 0x0601C061 RID: 114785 RVA: 0x007CA4CF File Offset: 0x007C86CF
+	// Token: 0x06019C79 RID: 105593 RVA: 0x007F172B File Offset: 0x007EF92B
 	[NullableContext(2)]
 	public override BaseSkillComponent GetSkillComponent()
 	{
@@ -261,7 +260,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return entity.GetComponent<BaseSkillComponent>();
 	}
 
-	// Token: 0x0601C062 RID: 114786 RVA: 0x007CA4E2 File Offset: 0x007C86E2
+	// Token: 0x06019C7A RID: 105594 RVA: 0x007F173E File Offset: 0x007EF93E
 	[NullableContext(2)]
 	public override BaseAttributeComponent GetAttributeComponent()
 	{
@@ -273,7 +272,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return entity.GetComponent<BaseAttributeComponent>();
 	}
 
-	// Token: 0x0601C063 RID: 114787 RVA: 0x007CA4F5 File Offset: 0x007C86F5
+	// Token: 0x06019C7B RID: 105595 RVA: 0x007F1751 File Offset: 0x007EF951
 	[NullableContext(2)]
 	public override BaseTagComponent GetTagComponent()
 	{
@@ -285,19 +284,19 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return entity.GetComponent<BaseTagComponent>();
 	}
 
-	// Token: 0x0601C064 RID: 114788 RVA: 0x007CA508 File Offset: 0x007C8708
+	// Token: 0x06019C7C RID: 105596 RVA: 0x007F1764 File Offset: 0x007EF964
 	protected override bool CheckAdd(BuffDefinition config, long instigatorId, bool fromServer)
 	{
 		return this.GetTagComponent() == null || base.CheckAdd(config, instigatorId, fromServer);
 	}
 
-	// Token: 0x0601C065 RID: 114789 RVA: 0x007CA51D File Offset: 0x007C871D
+	// Token: 0x06019C7D RID: 105597 RVA: 0x007F1779 File Offset: 0x007EF979
 	protected override bool CheckActivate(BuffDefinition config, [Nullable(2)] Entity instigator)
 	{
 		return this.GetTagComponent() == null || base.CheckActivate(config, instigator);
 	}
 
-	// Token: 0x0601C066 RID: 114790 RVA: 0x007CA531 File Offset: 0x007C8731
+	// Token: 0x06019C7E RID: 105598 RVA: 0x007F178D File Offset: 0x007EF98D
 	public override bool HasBuffRoutineExpirationLock(long buffId)
 	{
 		if (this.BuffRoutineExpirationLock.GetValueOrDefault(buffId, 0) <= 0)
@@ -308,7 +307,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return true;
 	}
 
-	// Token: 0x0601C067 RID: 114791 RVA: 0x007CA561 File Offset: 0x007C8761
+	// Token: 0x06019C7F RID: 105599 RVA: 0x007F17BD File Offset: 0x007EF9BD
 	[NullableContext(2)]
 	public override BaseActorComponent GetActorComponent()
 	{
@@ -320,7 +319,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return entity.GetComponent<BaseActorComponent>();
 	}
 
-	// Token: 0x0601C068 RID: 114792 RVA: 0x007CA574 File Offset: 0x007C8774
+	// Token: 0x06019C80 RID: 105600 RVA: 0x007F17D0 File Offset: 0x007EF9D0
 	public override int? GetBuffLevel(long buffId)
 	{
 		Entity entity = this.GetEntity();
@@ -336,27 +335,27 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return component.GetBuffLevel(buffId);
 	}
 
-	// Token: 0x0601C069 RID: 114793 RVA: 0x007CA5AE File Offset: 0x007C87AE
+	// Token: 0x06019C81 RID: 105601 RVA: 0x007F180A File Offset: 0x007EFA0A
 	[NullableContext(2)]
 	public override BaseGameplayCueComponent GetCueComponent()
 	{
 		return base.Entity.GetComponent<BaseGameplayCueComponent>();
 	}
 
-	// Token: 0x0601C06A RID: 114794 RVA: 0x007CA5BB File Offset: 0x007C87BB
+	// Token: 0x06019C82 RID: 105602 RVA: 0x007F1817 File Offset: 0x007EFA17
 	public int GetFormationBuffTotalStackById(long buffId, bool onlyActiveBuff = false)
 	{
 		return base.GetBuffTotalStackById(buffId, onlyActiveBuff);
 	}
 
-	// Token: 0x0601C06B RID: 114795 RVA: 0x007CA5C5 File Offset: 0x007C87C5
+	// Token: 0x06019C83 RID: 105603 RVA: 0x007F1821 File Offset: 0x007EFA21
 	public override int GetBuffTotalStackById(long buffId, bool onlyActiveBuff = false)
 	{
 		CharacterBuffComponent currentBuffComponent = this.GetCurrentBuffComponent();
 		return ((currentBuffComponent != null) ? currentBuffComponent.GetBuffTotalStackById(buffId, onlyActiveBuff) : 0) + base.GetBuffTotalStackById(buffId, onlyActiveBuff);
 	}
 
-	// Token: 0x0601C06C RID: 114796 RVA: 0x007CA5E4 File Offset: 0x007C87E4
+	// Token: 0x06019C84 RID: 105604 RVA: 0x007F1840 File Offset: 0x007EFA40
 	public override bool HasBuffAuthority()
 	{
 		int? id = PlayerInfoModel.Instance.GetId();
@@ -364,7 +363,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return id.GetValueOrDefault() == playerId & id != null;
 	}
 
-	// Token: 0x0601C06D RID: 114797 RVA: 0x007CA618 File Offset: 0x007C8818
+	// Token: 0x06019C85 RID: 105605 RVA: 0x007F1874 File Offset: 0x007EFA74
 	public unsafe override int AddBuffInner(long buffId, [Nullable(2)] BuffDefinition config, long? instigatorId, int level, int? outerStackCount, ApplyGEType? applyType, long? preMessageId, long? messageId, float? duration, bool? isActive, int serverId, string reason, bool fromServer, bool isIterable, bool isServerOrder, int? handle, long? bulletMessageId = null, bool? bornBuff = null)
 	{
 		if ((config == null || config.FormationPolicy != EBuffFormationPolicy.FormationBuff) && buffId != -3L)
@@ -382,7 +381,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return base.AddBuffInner(buffId, config, instigatorId, level, outerStackCount, applyType, preMessageId, messageId, duration, isActive, serverId, reason, fromServer, isIterable, isServerOrder, handle, bulletMessageId, bornBuff);
 	}
 
-	// Token: 0x0601C06E RID: 114798 RVA: 0x007CA6C4 File Offset: 0x007C88C4
+	// Token: 0x06019C86 RID: 105606 RVA: 0x007F1920 File Offset: 0x007EFB20
 	protected override void OnBuffAdded(ActiveBuffInternal buff, int? stackCount, ApplyGEType applyType, long? preMessageId, float? duration, bool? isActive, int serverId, bool fromServer, bool isIterable, bool isServerRequest, string reason)
 	{
 		if (buff == null)
@@ -423,7 +422,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		}
 	}
 
-	// Token: 0x0601C06F RID: 114799 RVA: 0x007CA870 File Offset: 0x007C8A70
+	// Token: 0x06019C87 RID: 105607 RVA: 0x007F1ACC File Offset: 0x007EFCCC
 	protected override void OnBuffRemoved(ActiveBuffInternal buff, bool isPrematureRemoval, [Nullable(2)] string reason, bool? isServerRequest = null, long? preMessageId = null, long? instigatorId = null)
 	{
 		if (buff == null)
@@ -433,23 +432,9 @@ public class PlayerBuffComponent : BaseBuffComponent
 		this.BroadcastRemoveBuff(buff, isPrematureRemoval, isServerRequest, preMessageId, reason, instigatorId);
 		base.OnBuffRemoved(buff, isPrematureRemoval, reason, isServerRequest, preMessageId, instigatorId);
 		base.DestroyGameplayCueByBuff(buff);
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			CharacterStatisticsComponent component = base.Entity.GetComponent<CharacterStatisticsComponent>();
-			if (component != null)
-			{
-				component.OnBuffRemoved(buff);
-			}
-			CharacterGasDebugComponent component2 = base.Entity.GetComponent<CharacterGasDebugComponent>();
-			if (component2 == null)
-			{
-				return;
-			}
-			component2.OnBuffRemoved(buff);
-		}
 	}
 
-	// Token: 0x0601C070 RID: 114800 RVA: 0x007CA8E0 File Offset: 0x007C8AE0
+	// Token: 0x06019C88 RID: 105608 RVA: 0x007F1AF8 File Offset: 0x007EFCF8
 	protected override void OnBuffStackIncreased(ActiveBuffInternal buff, int oldStack, int newStack, long? instigatorId, int level, int? outerStackCount, ApplyGEType applyType, long? preMessageId, float? duration, int serverId, bool isIterable, bool isServerOrder, [Nullable(2)] string reason, EBuffStackDurationOverride stackDurationRefreshPolicy = EBuffStackDurationOverride.Default, EBuffStackPeriodResetOverride stackPeriodResetPolicy = EBuffStackPeriodResetOverride.Default)
 	{
 		if (buff == null)
@@ -460,7 +445,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		this.BroadcastBuffStackChanged(buff, oldStack, newStack, false, stackDurationRefreshPolicy, stackPeriodResetPolicy, reason, instigatorId);
 	}
 
-	// Token: 0x0601C071 RID: 114801 RVA: 0x007CA924 File Offset: 0x007C8B24
+	// Token: 0x06019C89 RID: 105609 RVA: 0x007F1B3C File Offset: 0x007EFD3C
 	protected override void OnBuffStackDecreased(ActiveBuffInternal buff, int oldStack, int newStack, bool isPrematureRemoval, [Nullable(2)] string reason, EBuffStackPeriodResetOverride stackPeriodResetPolicy = EBuffStackPeriodResetOverride.Default, long? instigatorId = null)
 	{
 		if (buff == null)
@@ -471,14 +456,14 @@ public class PlayerBuffComponent : BaseBuffComponent
 		this.BroadcastBuffStackChanged(buff, oldStack, newStack, isPrematureRemoval, EBuffStackDurationOverride.Default, stackPeriodResetPolicy, reason, instigatorId);
 	}
 
-	// Token: 0x0601C072 RID: 114802 RVA: 0x007CA958 File Offset: 0x007C8B58
+	// Token: 0x06019C8A RID: 105610 RVA: 0x007F1B70 File Offset: 0x007EFD70
 	[NullableContext(2)]
 	protected override void OnBuffActiveChanged(ActiveBuffInternal buff, bool isActive, bool? syncedActive = null)
 	{
 		base.OnBuffActiveChanged(buff, isActive, syncedActive);
 	}
 
-	// Token: 0x0601C073 RID: 114803 RVA: 0x007CA964 File Offset: 0x007C8B64
+	// Token: 0x06019C8B RID: 105611 RVA: 0x007F1B7C File Offset: 0x007EFD7C
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		int buffLock = base.BuffLock;
@@ -514,7 +499,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		base.BuffLock = buffLock - 1;
 	}
 
-	// Token: 0x0601C074 RID: 114804 RVA: 0x007CAAE4 File Offset: 0x007C8CE4
+	// Token: 0x06019C8C RID: 105612 RVA: 0x007F1CFC File Offset: 0x007EFEFC
 	private void OnUpdateSceneTeam()
 	{
 		if (this.DelayAddCueBuffIds != null)
@@ -531,7 +516,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		}
 	}
 
-	// Token: 0x0601C075 RID: 114805 RVA: 0x007CAB34 File Offset: 0x007C8D34
+	// Token: 0x06019C8D RID: 105613 RVA: 0x007F1D4C File Offset: 0x007EFF4C
 	protected void BroadcastAddBuff(ActiveBuffInternal buff, ApplyGEType applyType, bool isServerRequest, bool fromServer, string reason)
 	{
 		if (buff == null || buff.Id < 0L || !this.NeedBroadcastBuff(buff, fromServer))
@@ -571,7 +556,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		CombatNet.Instance.Send(EPushMessageId.ApplyGameplayEffectPush, base.Entity, applyGameplayEffectPush, buff.PreMessageId, buff.MessageId, new bool?(isServerRequest));
 	}
 
-	// Token: 0x0601C076 RID: 114806 RVA: 0x007CAC90 File Offset: 0x007C8E90
+	// Token: 0x06019C8E RID: 105614 RVA: 0x007F1EA8 File Offset: 0x007F00A8
 	protected override void BroadcastActivateBuff(ActiveBuffInternal buff, bool on)
 	{
 		if (buff.Id < 0L || !this.NeedBroadcastBuff(buff, false))
@@ -584,7 +569,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		CombatNet.Instance.Send(EPushMessageId.ActivateBuffPush, base.Entity, activateBuffPush, null, null, null);
 	}
 
-	// Token: 0x0601C077 RID: 114807 RVA: 0x007CAD00 File Offset: 0x007C8F00
+	// Token: 0x06019C8F RID: 105615 RVA: 0x007F1F18 File Offset: 0x007F0118
 	protected void BroadcastBuffStackChanged(ActiveBuffInternal buff, int oldStack, int newStack, bool isPrematureRemoval, EBuffStackDurationOverride stackDurationRefreshPolicy, EBuffStackPeriodResetOverride stackPeriodResetPolicy, [Nullable(2)] string reason, long? instigatorId = null)
 	{
 		if (buff.Id < 0L || !this.NeedBroadcastBuff(buff, false))
@@ -606,7 +591,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		CombatNet.Instance.Send(EPushMessageId.BuffStackCountPush, base.Entity, buffStackCountPush, null, null, null);
 	}
 
-	// Token: 0x0601C078 RID: 114808 RVA: 0x007CADB0 File Offset: 0x007C8FB0
+	// Token: 0x06019C90 RID: 105616 RVA: 0x007F1FC8 File Offset: 0x007F01C8
 	protected void BroadcastRemoveBuff(ActiveBuffInternal buff, bool isPrematureRemoval, bool? isServerRequest = null, long? preMessageId = null, [Nullable(2)] string reason = null, long? instigatorId = null)
 	{
 		if (buff.Id < 0L || !this.NeedBroadcastBuff(buff, false))
@@ -624,7 +609,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		CombatNet.Instance.Send(EPushMessageId.RemoveGameplayEffectPush, base.Entity, removeGameplayEffectPush, preMessageId, null, isServerRequest);
 	}
 
-	// Token: 0x0601C079 RID: 114809 RVA: 0x007CAE74 File Offset: 0x007C9074
+	// Token: 0x06019C91 RID: 105617 RVA: 0x007F208C File Offset: 0x007F028C
 	protected unsafe override void AddBuffOrder(long buffId, AddBuffParam @params)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -638,7 +623,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		instance.Warn(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601C07A RID: 114810 RVA: 0x007CAF00 File Offset: 0x007C9100
+	// Token: 0x06019C92 RID: 105618 RVA: 0x007F2118 File Offset: 0x007F0318
 	[NullableContext(2)]
 	protected unsafe override void RemoveBuffOrder(long buffId, int stackCount, string reason, long? instigatorId = null)
 	{
@@ -653,7 +638,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		instance.Warn(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601C07B RID: 114811 RVA: 0x007CAF88 File Offset: 0x007C9188
+	// Token: 0x06019C93 RID: 105619 RVA: 0x007F21A0 File Offset: 0x007F03A0
 	protected unsafe override void RefreshBuffDurationOrder(long[] buffIds, [Nullable(2)] string reason)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -667,12 +652,12 @@ public class PlayerBuffComponent : BaseBuffComponent
 		instance.Warn(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601C07C RID: 114812 RVA: 0x007CB008 File Offset: 0x007C9208
+	// Token: 0x06019C94 RID: 105620 RVA: 0x007F2220 File Offset: 0x007F0420
 	protected void FormationBuffApplyRequest()
 	{
 	}
 
-	// Token: 0x0601C07D RID: 114813 RVA: 0x007CB00C File Offset: 0x007C920C
+	// Token: 0x06019C95 RID: 105621 RVA: 0x007F2224 File Offset: 0x007F0424
 	public override float CalculateDurationExtraRate(long buffId, bool asInstigator)
 	{
 		float num = base.CalculateDurationExtraRate(buffId, asInstigator);
@@ -693,7 +678,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return num;
 	}
 
-	// Token: 0x0601C07E RID: 114814 RVA: 0x007CB098 File Offset: 0x007C9298
+	// Token: 0x06019C96 RID: 105622 RVA: 0x007F22B0 File Offset: 0x007F04B0
 	public override float CalculatePeriodExtraRate(long buffId, bool asInstigator)
 	{
 		float num = base.CalculatePeriodExtraRate(buffId, asInstigator);
@@ -714,7 +699,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		return num;
 	}
 
-	// Token: 0x0601C07F RID: 114815 RVA: 0x007CB124 File Offset: 0x007C9324
+	// Token: 0x06019C97 RID: 105623 RVA: 0x007F233C File Offset: 0x007F053C
 	public override void AddBuffRefEntityId(long buffId, int entityId)
 	{
 		HashSet<int> hashSet;
@@ -726,7 +711,7 @@ public class PlayerBuffComponent : BaseBuffComponent
 		hashSet.Add(entityId);
 	}
 
-	// Token: 0x0601C080 RID: 114816 RVA: 0x007CB15C File Offset: 0x007C935C
+	// Token: 0x06019C98 RID: 105624 RVA: 0x007F2374 File Offset: 0x007F0574
 	public override void RemoveBuffRefEntityId(long buffId, int entityId)
 	{
 		HashSet<int> hashSet;
@@ -741,14 +726,14 @@ public class PlayerBuffComponent : BaseBuffComponent
 		}
 	}
 
-	// Token: 0x0601C081 RID: 114817 RVA: 0x007CB198 File Offset: 0x007C9398
+	// Token: 0x06019C99 RID: 105625 RVA: 0x007F23B0 File Offset: 0x007F05B0
 	public override bool HasBuffRefEntityId(long buffId)
 	{
 		HashSet<int> hashSet;
 		return this.BuffRefEntityIdMap.TryGetValue(buffId, out hashSet) && hashSet.Count > 0;
 	}
 
-	// Token: 0x0601C082 RID: 114818 RVA: 0x007CB1C0 File Offset: 0x007C93C0
+	// Token: 0x06019C9A RID: 105626 RVA: 0x007F23D8 File Offset: 0x007F05D8
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -756,85 +741,153 @@ public class PlayerBuffComponent : BaseBuffComponent
 			return false;
 		}
 		PlayerBuffComponent playerBuffComponent = (PlayerBuffComponent)componentTemplate;
-		if (base.CanResetComponentProperty("PlayerId"))
+		this.PlayerId = playerBuffComponent.PlayerId;
+		if (playerBuffComponent.TimeScaleComponent == null)
 		{
-			this.PlayerId = playerBuffComponent.PlayerId;
+			this.TimeScaleComponent = null;
 		}
-		if (base.CanResetComponentProperty("TimeScaleComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComponent), "TimeScaleComponent"))
 		{
-			if (playerBuffComponent.TimeScaleComponent == null)
-			{
-				this.TimeScaleComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.TimeScaleComponent), "TimeScaleComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DelayAddCueBuffIds"))
+		if (playerBuffComponent.DelayAddCueBuffIds == null)
 		{
-			if (playerBuffComponent.DelayAddCueBuffIds == null)
-			{
-				this.DelayAddCueBuffIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<long[]>(this.DelayAddCueBuffIds), "DelayAddCueBuffIds"))
-			{
-				return false;
-			}
+			this.DelayAddCueBuffIds = null;
 		}
-		if (base.CanResetComponentProperty("BuffRefEntityIdMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayAddCueBuffIds), "DelayAddCueBuffIds"))
 		{
-			if (playerBuffComponent.BuffRefEntityIdMap == null)
-			{
-				this.BuffRefEntityIdMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, HashSet<int>>>(this.BuffRefEntityIdMap), "BuffRefEntityIdMap"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (playerBuffComponent.BuffRefEntityIdMap == null)
+		{
+			this.BuffRefEntityIdMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffRefEntityIdMap), "BuffRefEntityIdMap"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DD88 RID: 56712
+	// Token: 0x17002982 RID: 10626
+	// (get) Token: 0x06019C9B RID: 105627 RVA: 0x007F2485 File Offset: 0x007F0685
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002983 RID: 10627
+	// (get) Token: 0x06019C9C RID: 105628 RVA: 0x007F2488 File Offset: 0x007F0688
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002984 RID: 10628
+	// (get) Token: 0x06019C9D RID: 105629 RVA: 0x007F248B File Offset: 0x007F068B
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002985 RID: 10629
+	// (get) Token: 0x06019C9E RID: 105630 RVA: 0x007F248E File Offset: 0x007F068E
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002986 RID: 10630
+	// (get) Token: 0x06019C9F RID: 105631 RVA: 0x007F2491 File Offset: 0x007F0691
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002987 RID: 10631
+	// (get) Token: 0x06019CA0 RID: 105632 RVA: 0x007F2494 File Offset: 0x007F0694
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002988 RID: 10632
+	// (get) Token: 0x06019CA1 RID: 105633 RVA: 0x007F2497 File Offset: 0x007F0697
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002989 RID: 10633
+	// (get) Token: 0x06019CA2 RID: 105634 RVA: 0x007F249A File Offset: 0x007F069A
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E22F RID: 57903
 	public int PlayerId;
 
-	// Token: 0x0400DD89 RID: 56713
+	// Token: 0x0400E230 RID: 57904
 	[Nullable(2)]
 	public PawnTimeScaleComponent TimeScaleComponent;
 
-	// Token: 0x0400DD8A RID: 56714
+	// Token: 0x0400E231 RID: 57905
 	[Nullable(2)]
 	private long[] DelayAddCueBuffIds;
 
-	// Token: 0x0400DD8B RID: 56715
+	// Token: 0x0400E232 RID: 57906
 	private Dictionary<long, HashSet<int>> BuffRefEntityIdMap = new Dictionary<long, HashSet<int>>();
 
-	// Token: 0x0400DD8C RID: 56716
+	// Token: 0x0400E233 RID: 57907
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnAnyBuffInhibitionChangedStat = Stat.Create("PlayerBuffComponent.OnAnyBuffInhibitionChangedInternal", "", "");
 
-	// Token: 0x0400DD8D RID: 56717
+	// Token: 0x0400E234 RID: 57908
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnBuffAddedStat = Stat.Create("PlayerBuffComponent.OnBuffAdded", "", "");
 
-	// Token: 0x0400DD8E RID: 56718
+	// Token: 0x0400E235 RID: 57909
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnBuffRemovedStat = Stat.Create("PlayerBuffComponent.OnBuffRemoved", "", "");
 
-	// Token: 0x0400DD8F RID: 56719
+	// Token: 0x0400E236 RID: 57910
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnPlayerBuffStackIncreasedStat = Stat.Create("PlayerBuffComponent.OnBuffStackIncreased", "", "");
 
-	// Token: 0x0400DD90 RID: 56720
+	// Token: 0x0400E237 RID: 57911
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnPlayerBuffStackDecreasedStat = Stat.Create("PlayerBuffComponent.OnBuffStackDecreased", "", "");
 
-	// Token: 0x0400DD91 RID: 56721
+	// Token: 0x0400E238 RID: 57912
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnBuffActiveChangedStat = Stat.Create("PlayerBuffComponent.OnBuffActiveChanged", "", "");
 
-	// Token: 0x0400DD92 RID: 56722
+	// Token: 0x0400E239 RID: 57913
 	[StaticVariableRuleIgnore]
 	private static readonly Stat BroadcastActivateBuffStat = Stat.Create("PlayerBuffComponent.BroadcastActivateBuff", "", "");
 }

@@ -2,38 +2,38 @@
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x0200011C RID: 284
+	// Token: 0x02000120 RID: 288
 	public enum actionMappings
 	{
-		// Token: 0x0400054A RID: 1354
+		// Token: 0x04000585 RID: 1413
 		UI左键点击,
-		// Token: 0x0400054B RID: 1355
+		// Token: 0x04000586 RID: 1414
 		手柄右边上键,
-		// Token: 0x0400054C RID: 1356
+		// Token: 0x04000587 RID: 1415
 		手柄右边左键,
-		// Token: 0x0400054D RID: 1357
+		// Token: 0x04000588 RID: 1416
 		手柄右边右键,
-		// Token: 0x0400054E RID: 1358
+		// Token: 0x04000589 RID: 1417
 		手柄右边下键,
-		// Token: 0x0400054F RID: 1359
+		// Token: 0x0400058A RID: 1418
 		手柄左边上键,
-		// Token: 0x04000550 RID: 1360
+		// Token: 0x0400058B RID: 1419
 		手柄左边左键,
-		// Token: 0x04000551 RID: 1361
+		// Token: 0x0400058C RID: 1420
 		手柄左边右键,
-		// Token: 0x04000552 RID: 1362
+		// Token: 0x0400058D RID: 1421
 		手柄左边下键,
-		// Token: 0x04000553 RID: 1363
+		// Token: 0x0400058E RID: 1422
 		手柄左摇杆上,
-		// Token: 0x04000554 RID: 1364
+		// Token: 0x0400058F RID: 1423
 		手柄左摇杆下,
-		// Token: 0x04000555 RID: 1365
+		// Token: 0x04000590 RID: 1424
 		手柄LB,
-		// Token: 0x04000556 RID: 1366
+		// Token: 0x04000591 RID: 1425
 		手柄LT,
-		// Token: 0x04000557 RID: 1367
+		// Token: 0x04000592 RID: 1426
 		手柄RB,
-		// Token: 0x04000558 RID: 1368
+		// Token: 0x04000593 RID: 1427
 		手柄RT
 	}
 }

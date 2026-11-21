@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C36 RID: 7222
+// Token: 0x020010F5 RID: 4341
 [NullableContext(1)]
 public interface IPlayerData
 {
-	// Token: 0x170011CF RID: 4559
-	// (get) Token: 0x0600D971 RID: 55665
+	// Token: 0x170011F5 RID: 4597
+	// (get) Token: 0x0600AD87 RID: 44423
 	int PlayerId { get; }
 
-	// Token: 0x170011D0 RID: 4560
-	// (get) Token: 0x0600D972 RID: 55666
+	// Token: 0x170011F6 RID: 4598
+	// (get) Token: 0x0600AD88 RID: 44424
 	string PlayerName { get; }
 
-	// Token: 0x170011D1 RID: 4561
-	// (get) Token: 0x0600D973 RID: 55667
+	// Token: 0x170011F7 RID: 4599
+	// (get) Token: 0x0600AD89 RID: 44425
 	string Signature { get; }
 }

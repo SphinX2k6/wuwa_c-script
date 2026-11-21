@@ -8,42 +8,42 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B2F RID: 11055
+// Token: 0x020020AB RID: 8363
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabViewBase where TProxy : class, IGridProxy<TData> where TData : ISurvivorsHandbookItemDataBase
 {
-	// Token: 0x06016F23 RID: 93987
+	// Token: 0x06014954 RID: 84308
 	protected abstract TProxy CreateLoopItem();
 
-	// Token: 0x06016F24 RID: 93988
+	// Token: 0x06014955 RID: 84309
 	protected abstract IReadOnlyList<TData> GenerateItemUiDataList();
 
-	// Token: 0x06016F25 RID: 93989
+	// Token: 0x06014956 RID: 84310
 	protected abstract int GetLoopItemIndex();
 
-	// Token: 0x06016F26 RID: 93990
+	// Token: 0x06014957 RID: 84311
 	protected abstract int GetLoopScrollComponentIndex();
 
-	// Token: 0x06016F27 RID: 93991 RVA: 0x005D2E55 File Offset: 0x005D1055
+	// Token: 0x06014958 RID: 84312 RVA: 0x005FF9C9 File Offset: 0x005FDBC9
 	protected virtual UniTask InitSubComponents()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06016F28 RID: 93992
+	// Token: 0x06014959 RID: 84313
 	protected abstract void OnSelectItem(TData data, bool isFromClick);
 
-	// Token: 0x17001E9E RID: 7838
-	// (get) Token: 0x06016F29 RID: 93993
+	// Token: 0x17001EF6 RID: 7926
+	// (get) Token: 0x0601495A RID: 84314
 	protected abstract ESurvivorsRogueItemType ItemType { get; }
 
-	// Token: 0x06016F2A RID: 93994 RVA: 0x005D2E5C File Offset: 0x005D105C
+	// Token: 0x0601495B RID: 84315 RVA: 0x005FF9D0 File Offset: 0x005FDBD0
 	protected virtual void OnTriggerSequenceStartEvent()
 	{
 	}
 
-	// Token: 0x06016F2B RID: 93995 RVA: 0x005D2E5E File Offset: 0x005D105E
+	// Token: 0x0601495C RID: 84316 RVA: 0x005FF9D2 File Offset: 0x005FDBD2
 	private void OnActivitySequenceEmitEvent(string name)
 	{
 		if (name == "Start")
@@ -52,19 +52,19 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		}
 	}
 
-	// Token: 0x06016F2C RID: 93996 RVA: 0x005D2E73 File Offset: 0x005D1073
+	// Token: 0x0601495D RID: 84317 RVA: 0x005FF9E7 File Offset: 0x005FDBE7
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06016F2D RID: 93997 RVA: 0x005D2E91 File Offset: 0x005D1091
+	// Token: 0x0601495E RID: 84318 RVA: 0x005FFA05 File Offset: 0x005FDC05
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06016F2E RID: 93998 RVA: 0x005D2EB0 File Offset: 0x005D10B0
+	// Token: 0x0601495F RID: 84319 RVA: 0x005FFA24 File Offset: 0x005FDC24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsTabViewBase<TProxy, TData>.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F2F RID: 93999 RVA: 0x005D2EF4 File Offset: 0x005D10F4
+	// Token: 0x06014960 RID: 84320 RVA: 0x005FFA68 File Offset: 0x005FDC68
 	protected override void OnShowUiTabViewFromToggle()
 	{
 		LoopScrollView<TProxy, TData> itemScroll = this.ItemScroll;
@@ -91,7 +91,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		uiViewSequence.PlaySequence("Start", false, null);
 	}
 
-	// Token: 0x06016F30 RID: 94000 RVA: 0x005D2F34 File Offset: 0x005D1134
+	// Token: 0x06014961 RID: 84321 RVA: 0x005FFAA8 File Offset: 0x005FDCA8
 	protected override void OnShowUiTabViewFromView()
 	{
 		LoopScrollView<TProxy, TData> itemScroll = this.ItemScroll;
@@ -107,7 +107,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		uiViewSequence.PlaySequence("Start", false, null);
 	}
 
-	// Token: 0x06016F31 RID: 94001 RVA: 0x005D2F74 File Offset: 0x005D1174
+	// Token: 0x06014962 RID: 84322 RVA: 0x005FFAE8 File Offset: 0x005FDCE8
 	private UniTask InitItemScroll()
 	{
 		SurvivorsTabViewBase<TProxy, TData>.<InitItemScroll>d__17 <InitItemScroll>d__;
@@ -118,7 +118,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		return <InitItemScroll>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F32 RID: 94002 RVA: 0x005D2FB8 File Offset: 0x005D11B8
+	// Token: 0x06014963 RID: 84323 RVA: 0x005FFB2C File Offset: 0x005FDD2C
 	[NullableContext(2)]
 	protected bool OnCanClickItem(object data, bool isForceSelected, EToggleState state)
 	{
@@ -132,7 +132,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		return !(id == currentItemId.GetValueOrDefault() & currentItemId != null);
 	}
 
-	// Token: 0x06016F33 RID: 94003 RVA: 0x005D2FFC File Offset: 0x005D11FC
+	// Token: 0x06014964 RID: 84324 RVA: 0x005FFB70 File Offset: 0x005FDD70
 	protected void OnItemClick(TData data, TProxy itemGrid)
 	{
 		int id = data.Id;
@@ -145,7 +145,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		this.SelectItemByIndex(gridIndex, true);
 	}
 
-	// Token: 0x06016F34 RID: 94004 RVA: 0x005D3048 File Offset: 0x005D1248
+	// Token: 0x06014965 RID: 84325 RVA: 0x005FFBBC File Offset: 0x005FDDBC
 	private void SelectItemByIndex(int gridIndex, bool isFromClick = true)
 	{
 		this.ItemScroll.SelectGridProxy(gridIndex, false);
@@ -170,7 +170,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		this.OnSelectItem(tdata, isFromClick);
 	}
 
-	// Token: 0x06016F35 RID: 94005 RVA: 0x005D3100 File Offset: 0x005D1300
+	// Token: 0x06014966 RID: 84326 RVA: 0x005FFC74 File Offset: 0x005FDE74
 	private void RefreshTitle(IReadOnlyList<TData> uiDataList)
 	{
 		int num = 0;
@@ -189,7 +189,7 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 		}));
 	}
 
-	// Token: 0x0400AAD5 RID: 43733
+	// Token: 0x0400AEDB RID: 44763
 	[Nullable(new byte[]
 	{
 		2,
@@ -198,6 +198,6 @@ public abstract class SurvivorsTabViewBase<TProxy, [Nullable(0)] TData> : UiTabV
 	})]
 	protected LoopScrollView<TProxy, TData> ItemScroll;
 
-	// Token: 0x0400AAD6 RID: 43734
+	// Token: 0x0400AEDC RID: 44764
 	protected int? CurrentItemId = new int?(-1);
 }

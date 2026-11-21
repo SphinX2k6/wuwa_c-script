@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044DA RID: 17626
+	// Token: 0x02004942 RID: 18754
 	public class IHitZoneTimesResultT
 	{
-		// Token: 0x17007C68 RID: 31848
-		// (get) Token: 0x0601A5A2 RID: 107938 RVA: 0x003C2FBD File Offset: 0x003C11BD
-		// (set) Token: 0x0601A5A3 RID: 107939 RVA: 0x003C2FC5 File Offset: 0x003C11C5
+		// Token: 0x170082A7 RID: 33447
+		// (get) Token: 0x0601BD73 RID: 114035 RVA: 0x003EF1C9 File Offset: 0x003ED3C9
+		// (set) Token: 0x0601BD74 RID: 114036 RVA: 0x003EF1D1 File Offset: 0x003ED3D1
 		public EDartSkillResultType Type { get; set; }
 
-		// Token: 0x17007C69 RID: 31849
-		// (get) Token: 0x0601A5A4 RID: 107940 RVA: 0x003C2FCE File Offset: 0x003C11CE
-		// (set) Token: 0x0601A5A5 RID: 107941 RVA: 0x003C2FD6 File Offset: 0x003C11D6
+		// Token: 0x170082A8 RID: 33448
+		// (get) Token: 0x0601BD75 RID: 114037 RVA: 0x003EF1DA File Offset: 0x003ED3DA
+		// (set) Token: 0x0601BD76 RID: 114038 RVA: 0x003EF1E2 File Offset: 0x003ED3E2
 		public int HitTimes { get; set; }
 
-		// Token: 0x17007C6A RID: 31850
-		// (get) Token: 0x0601A5A6 RID: 107942 RVA: 0x003C2FDF File Offset: 0x003C11DF
-		// (set) Token: 0x0601A5A7 RID: 107943 RVA: 0x003C2FE7 File Offset: 0x003C11E7
+		// Token: 0x170082A9 RID: 33449
+		// (get) Token: 0x0601BD77 RID: 114039 RVA: 0x003EF1EB File Offset: 0x003ED3EB
+		// (set) Token: 0x0601BD78 RID: 114040 RVA: 0x003EF1F3 File Offset: 0x003ED3F3
 		public List<TDartboardZoneUnion> Zones { get; set; }
 
-		// Token: 0x0601A5A8 RID: 107944 RVA: 0x003C2FF0 File Offset: 0x003C11F0
+		// Token: 0x0601BD79 RID: 114041 RVA: 0x003EF1FC File Offset: 0x003ED3FC
 		public IHitZoneTimesResultT()
 		{
 			this.Type = EDartSkillResultType.NoBust;

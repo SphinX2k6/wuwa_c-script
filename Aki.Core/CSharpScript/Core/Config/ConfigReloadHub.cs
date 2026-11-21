@@ -4,29 +4,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Config
 {
-	// Token: 0x02000162 RID: 354
+	// Token: 0x02000167 RID: 359
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConfigReloadHub : IStaticVariableResetter
 	{
-		// Token: 0x06000C31 RID: 3121 RVA: 0x00039F64 File Offset: 0x00038164
+		// Token: 0x06000C90 RID: 3216 RVA: 0x0003ACA8 File Offset: 0x00038EA8
 		static ConfigReloadHub()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ConfigReloadHub.CreateStaticDefaultValue), new Action(ConfigReloadHub.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C32 RID: 3122 RVA: 0x00039F8D File Offset: 0x0003818D
+		// Token: 0x06000C91 RID: 3217 RVA: 0x0003ACD1 File Offset: 0x00038ED1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000C33 RID: 3123 RVA: 0x00039F8F File Offset: 0x0003818F
+		// Token: 0x06000C92 RID: 3218 RVA: 0x0003ACD3 File Offset: 0x00038ED3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigReloadHub.Callbacks.Clear();
 		}
 
-		// Token: 0x06000C34 RID: 3124 RVA: 0x00039F9C File Offset: 0x0003819C
+		// Token: 0x06000C93 RID: 3219 RVA: 0x0003ACE0 File Offset: 0x00038EE0
 		public unsafe static void RegisterReloadCallback(string dbName, Action callback)
 		{
 			if (string.IsNullOrWhiteSpace(dbName))
@@ -56,7 +56,7 @@ namespace CSharpScript.Core.Config
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06000C35 RID: 3125 RVA: 0x0003A060 File Offset: 0x00038260
+		// Token: 0x06000C94 RID: 3220 RVA: 0x0003ADA4 File Offset: 0x00038FA4
 		public unsafe static void UnregisterReloadCallback(string dbName, Action callback)
 		{
 			HashSet<Action> hashSet;
@@ -75,7 +75,7 @@ namespace CSharpScript.Core.Config
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06000C36 RID: 3126 RVA: 0x0003A0EC File Offset: 0x000382EC
+		// Token: 0x06000C95 RID: 3221 RVA: 0x0003AE30 File Offset: 0x00039030
 		public unsafe static void EmitReload(string dbName)
 		{
 			HashSet<Action> hashSet;
@@ -118,7 +118,7 @@ namespace CSharpScript.Core.Config
 			instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0400071E RID: 1822
+		// Token: 0x0400072D RID: 1837
 		private static readonly Dictionary<string, HashSet<Action>> Callbacks = new Dictionary<string, HashSet<Action>>();
 	}
 }

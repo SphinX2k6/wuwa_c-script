@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200596B RID: 22891
+	// Token: 0x02005F78 RID: 24440
 	public struct ISpecialAnimalTypeConfig : IFlatbufferObject
 	{
-		// Token: 0x1700ABCF RID: 43983
-		// (get) Token: 0x06026C03 RID: 158723 RVA: 0x00555D50 File Offset: 0x00553F50
+		// Token: 0x1700B503 RID: 46339
+		// (get) Token: 0x0602916D RID: 168301 RVA: 0x0059C9BC File Offset: 0x0059ABBC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C04 RID: 158724 RVA: 0x00555D5D File Offset: 0x00553F5D
+		// Token: 0x0602916E RID: 168302 RVA: 0x0059C9C9 File Offset: 0x0059ABC9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026C05 RID: 158725 RVA: 0x00555D64 File Offset: 0x00553F64
+		// Token: 0x0602916F RID: 168303 RVA: 0x0059C9D0 File Offset: 0x0059ABD0
 		public static ISpecialAnimalTypeConfig GetRootAsISpecialAnimalTypeConfig(ByteBuffer _bb)
 		{
 			return ISpecialAnimalTypeConfig.GetRootAsISpecialAnimalTypeConfig(_bb, default(ISpecialAnimalTypeConfig));
 		}
 
-		// Token: 0x06026C06 RID: 158726 RVA: 0x00555D80 File Offset: 0x00553F80
+		// Token: 0x06029170 RID: 168304 RVA: 0x0059C9EC File Offset: 0x0059ABEC
 		public static ISpecialAnimalTypeConfig GetRootAsISpecialAnimalTypeConfig(ByteBuffer _bb, ISpecialAnimalTypeConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026C07 RID: 158727 RVA: 0x00555D9D File Offset: 0x00553F9D
+		// Token: 0x06029171 RID: 168305 RVA: 0x0059CA09 File Offset: 0x0059AC09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026C08 RID: 158728 RVA: 0x00555DAC File Offset: 0x00553FAC
+		// Token: 0x06029172 RID: 168306 RVA: 0x0059CA18 File Offset: 0x0059AC18
 		public ISpecialAnimalTypeConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABD0 RID: 43984
-		// (get) Token: 0x06026C09 RID: 158729 RVA: 0x00555DBC File Offset: 0x00553FBC
+		// Token: 0x1700B504 RID: 46340
+		// (get) Token: 0x06029173 RID: 168307 RVA: 0x0059CA28 File Offset: 0x0059AC28
 		public ESpecialAnimalType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C0A RID: 158730 RVA: 0x00555DF8 File Offset: 0x00553FF8
+		// Token: 0x06029174 RID: 168308 RVA: 0x0059CA64 File Offset: 0x0059AC64
 		public static Offset<ISpecialAnimalTypeConfig> CreateISpecialAnimalTypeConfig(FlatBufferBuilder builder, ESpecialAnimalType Type = ESpecialAnimalType.CollectAnimal)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpecialAnimalTypeConfig.EndISpecialAnimalTypeConfig(builder);
 		}
 
-		// Token: 0x06026C0B RID: 158731 RVA: 0x00555E0E File Offset: 0x0055400E
+		// Token: 0x06029175 RID: 168309 RVA: 0x0059CA7A File Offset: 0x0059AC7A
 		public static void StartISpecialAnimalTypeConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026C0C RID: 158732 RVA: 0x00555E17 File Offset: 0x00554017
+		// Token: 0x06029176 RID: 168310 RVA: 0x0059CA83 File Offset: 0x0059AC83
 		public static void AddType(FlatBufferBuilder builder, ESpecialAnimalType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026C0D RID: 158733 RVA: 0x00555E22 File Offset: 0x00554022
+		// Token: 0x06029177 RID: 168311 RVA: 0x0059CA8E File Offset: 0x0059AC8E
 		public static Offset<ISpecialAnimalTypeConfig> EndISpecialAnimalTypeConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpecialAnimalTypeConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026C0E RID: 158734 RVA: 0x00555E30 File Offset: 0x00554030
+		// Token: 0x06029178 RID: 168312 RVA: 0x0059CA9C File Offset: 0x0059AC9C
 		public ISpecialAnimalTypeConfigT UnPack()
 		{
 			ISpecialAnimalTypeConfigT specialAnimalTypeConfigT = new ISpecialAnimalTypeConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return specialAnimalTypeConfigT;
 		}
 
-		// Token: 0x06026C0F RID: 158735 RVA: 0x00555E4B File Offset: 0x0055404B
+		// Token: 0x06029179 RID: 168313 RVA: 0x0059CAB7 File Offset: 0x0059ACB7
 		public void UnPackTo(ISpecialAnimalTypeConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026C10 RID: 158736 RVA: 0x00555E5C File Offset: 0x0055405C
+		// Token: 0x0602917A RID: 168314 RVA: 0x0059CAC8 File Offset: 0x0059ACC8
 		public static Offset<ISpecialAnimalTypeConfig> Pack(FlatBufferBuilder builder, ISpecialAnimalTypeConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpecialAnimalTypeConfig.CreateISpecialAnimalTypeConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400EF55 RID: 61269
+		// Token: 0x0400FC4A RID: 64586
 		private Table __p;
 	}
 }

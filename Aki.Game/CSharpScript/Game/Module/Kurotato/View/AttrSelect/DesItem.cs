@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x0200577D RID: 22397
+	// Token: 0x02004754 RID: 18260
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 	})]
 	internal class DesItem : SyncGridProxyAbstract<string>
 	{
-		// Token: 0x06038E5A RID: 233050 RVA: 0x00D85C8C File Offset: 0x00D83E8C
+		// Token: 0x0602DD6A RID: 187754 RVA: 0x00CD494C File Offset: 0x00CD2B4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038E5B RID: 233051 RVA: 0x00D85CD4 File Offset: 0x00D83ED4
+		// Token: 0x0602DD6B RID: 187755 RVA: 0x00CD4994 File Offset: 0x00CD2B94
 		protected override void OnStart()
 		{
 			TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -38,17 +38,17 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 		}
 
-		// Token: 0x06038E5C RID: 233052 RVA: 0x00D85D0F File Offset: 0x00D83F0F
+		// Token: 0x0602DD6C RID: 187756 RVA: 0x00CD49CF File Offset: 0x00CD2BCF
 		[NullableContext(1)]
 		public override void Refresh(string data)
 		{
 			base.GetText(0).SetText(data, true);
 		}
 
-		// Token: 0x0200B998 RID: 47512
+		// Token: 0x0200A3B0 RID: 41904
 		private class EDesItemComp
 		{
-			// Token: 0x040381ED RID: 229869
+			// Token: 0x04032BE2 RID: 207842
 			public const int TextDes = 0;
 		}
 	}

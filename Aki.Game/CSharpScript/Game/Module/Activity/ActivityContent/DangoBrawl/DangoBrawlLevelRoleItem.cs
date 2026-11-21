@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200681F RID: 26655
+	// Token: 0x0200576F RID: 22383
 	public class DangoBrawlLevelRoleItem : UiPanelBase
 	{
-		// Token: 0x06042830 RID: 272432 RVA: 0x010293FC File Offset: 0x010275FC
+		// Token: 0x06037385 RID: 226181 RVA: 0x00F6A940 File Offset: 0x00F68B40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042831 RID: 272433 RVA: 0x010294E4 File Offset: 0x010276E4
+		// Token: 0x06037386 RID: 226182 RVA: 0x00F6AA28 File Offset: 0x00F68C28
 		[NullableContext(1)]
 		public void Refresh(DangoBrawlRoleData roleData)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item2.SetUIActive(roleData.IsUnlocked);
 		}
 
-		// Token: 0x06042832 RID: 272434 RVA: 0x01029568 File Offset: 0x01027768
+		// Token: 0x06037387 RID: 226183 RVA: 0x00F6AAAC File Offset: 0x00F68CAC
 		private void OnBtnRoleClick()
 		{
 			DangoBrawlRoleViewOpenData dangoBrawlRoleViewOpenData = new DangoBrawlRoleViewOpenData();
@@ -71,20 +71,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlRoleHandBookView, param, null);
 		}
 
-		// Token: 0x04022A87 RID: 141959
+		// Token: 0x0401D2E4 RID: 119524
 		[Nullable(2)]
 		private DangoBrawlRoleData RoleData;
 
-		// Token: 0x0200C9B7 RID: 51639
+		// Token: 0x0200B384 RID: 45956
 		private enum EComponent
 		{
-			// Token: 0x0403CEFC RID: 249596
+			// Token: 0x040377E9 RID: 227305
 			BtnRole,
-			// Token: 0x0403CEFD RID: 249597
+			// Token: 0x040377EA RID: 227306
 			TexRole,
-			// Token: 0x0403CEFE RID: 249598
+			// Token: 0x040377EB RID: 227307
 			LockItem,
-			// Token: 0x0403CEFF RID: 249599
+			// Token: 0x040377EC RID: 227308
 			UnlockItem
 		}
 	}

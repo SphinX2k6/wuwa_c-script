@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnrealEngine;
 
-// Token: 0x0200286C RID: 10348
+// Token: 0x02001DE7 RID: 7655
 public class RoleFavorDescComponent : RoleFavorViewComponentBase
 {
-	// Token: 0x060154D4 RID: 87252 RVA: 0x00561530 File Offset: 0x0055F730
+	// Token: 0x06012ED2 RID: 77522 RVA: 0x0058C28C File Offset: 0x0058A48C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class RoleFavorDescComponent : RoleFavorViewComponentBase
 		};
 	}
 
-	// Token: 0x060154D5 RID: 87253 RVA: 0x0056158C File Offset: 0x0055F78C
+	// Token: 0x06012ED3 RID: 77523 RVA: 0x0058C2E8 File Offset: 0x0058A4E8
 	protected override void OnRefreshView()
 	{
 		if (this.ContentData == null)
@@ -43,7 +43,7 @@ public class RoleFavorDescComponent : RoleFavorViewComponentBase
 		scrollViewWithScrollbar.SetScrollProgress(0f);
 	}
 
-	// Token: 0x060154D6 RID: 87254 RVA: 0x005615F8 File Offset: 0x0055F7F8
+	// Token: 0x06012ED4 RID: 77524 RVA: 0x0058C354 File Offset: 0x0058A554
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(2);
@@ -53,7 +53,7 @@ public class RoleFavorDescComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x060154D7 RID: 87255 RVA: 0x00561638 File Offset: 0x0055F838
+	// Token: 0x06012ED5 RID: 77525 RVA: 0x0058C394 File Offset: 0x0058A594
 	protected override void OnBeforeDestroy()
 	{
 		UUIText text = base.GetText(2);

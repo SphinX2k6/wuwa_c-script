@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000C2 RID: 194
+	// Token: 0x020000D1 RID: 209
 	public class ConfigAvoidBlockLevelByInstId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600048D RID: 1165 RVA: 0x000737A0 File Offset: 0x000719A0
+		// Token: 0x060004E7 RID: 1255 RVA: 0x00079104 File Offset: 0x00077304
 		static ConfigAvoidBlockLevelByInstId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAvoidBlockLevelByInstId.CreateStaticDefaultValue), new Action(ConfigAvoidBlockLevelByInstId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600048E RID: 1166 RVA: 0x000737C0 File Offset: 0x000719C0
+		// Token: 0x060004E8 RID: 1256 RVA: 0x00079124 File Offset: 0x00077324
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAvoidBlockLevelByInstId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600048F RID: 1167 RVA: 0x0007383F File Offset: 0x00071A3F
+		// Token: 0x060004E9 RID: 1257 RVA: 0x000791A3 File Offset: 0x000773A3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAvoidBlockLevelByInstId.LogPair = null;
 			ConfigAvoidBlockLevelByInstId.HandleId = 0;
 		}
 
-		// Token: 0x06000490 RID: 1168 RVA: 0x0007384D File Offset: 0x00071A4D
+		// Token: 0x060004EA RID: 1258 RVA: 0x000791B1 File Offset: 0x000773B1
 		public static void Init()
 		{
 			ConfigAvoidBlockLevelByInstId.HandleId = ConfigCommon.InitDataStatement(ConfigAvoidBlockLevelByInstId.HandleId, "db_avoidblock.db", "select BinData from `AvoidBlockLevel` where InstId=?");
 		}
 
-		// Token: 0x06000491 RID: 1169 RVA: 0x00073868 File Offset: 0x00071A68
+		// Token: 0x060004EB RID: 1259 RVA: 0x000791CC File Offset: 0x000773CC
 		public static AvoidBlockLevel? GetConfig(int p0InstId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAvoidBlockLevelByInstId.HandleId, ConfigAvoidBlockLevelByInstId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AvoidBlockLevel?(rootAsAvoidBlockLevel);
 		}
 
-		// Token: 0x04000532 RID: 1330
+		// Token: 0x0400059B RID: 1435
 		private const string DB = "db_avoidblock.db";
 
-		// Token: 0x04000533 RID: 1331
+		// Token: 0x0400059C RID: 1436
 		private const string FILE = "d.躲避方块.xlsx";
 
-		// Token: 0x04000534 RID: 1332
+		// Token: 0x0400059D RID: 1437
 		private const string TABLE = "AvoidBlockLevel";
 
-		// Token: 0x04000535 RID: 1333
+		// Token: 0x0400059E RID: 1438
 		private const string COMMAND = "select BinData from `AvoidBlockLevel` where InstId=?";
 
-		// Token: 0x04000536 RID: 1334
+		// Token: 0x0400059F RID: 1439
 		private const string KEY_PREFIX = "AvoidBlockLevelByInstId";
 
-		// Token: 0x04000537 RID: 1335
+		// Token: 0x040005A0 RID: 1440
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000538 RID: 1336
+		// Token: 0x040005A1 RID: 1441
 		private static int HandleId;
 	}
 }

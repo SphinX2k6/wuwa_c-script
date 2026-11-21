@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EB2 RID: 20146
+	// Token: 0x02003E7B RID: 15995
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleTeamRoleGrid : LoopScrollMediumItemGrid<IRogueBattleTeamRoleGridInfo>
 	{
-		// Token: 0x06033BF4 RID: 211956 RVA: 0x00C1FC00 File Offset: 0x00C1DE00
+		// Token: 0x06028A5F RID: 166495 RVA: 0x00B69118 File Offset: 0x00B67318
 		protected override void OnRefresh(IRogueBattleTeamRoleGridInfo data, bool isSelected, int gridIndex)
 		{
 			int dataId = data.RoleData.GetDataId();
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SetSelected(bSelected, true);
 		}
 
-		// Token: 0x06033BF5 RID: 211957 RVA: 0x00C1FCFE File Offset: 0x00C1DEFE
+		// Token: 0x06028A60 RID: 166496 RVA: 0x00B69216 File Offset: 0x00B67416
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x06033BF6 RID: 211958 RVA: 0x00C1FD08 File Offset: 0x00C1DF08
+		// Token: 0x06028A61 RID: 166497 RVA: 0x00B69220 File Offset: 0x00B67420
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x06033BF7 RID: 211959 RVA: 0x00C1FD12 File Offset: 0x00C1DF12
+		// Token: 0x06028A62 RID: 166498 RVA: 0x00B6922A File Offset: 0x00B6742A
 		public void OnForceSelected(bool bSelected)
 		{
 			this.SetSelected(bSelected, true);

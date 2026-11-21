@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E9C RID: 20124
+	// Token: 0x020053C5 RID: 21445
 	public class IAnEventT
 	{
-		// Token: 0x17009051 RID: 36945
-		// (get) Token: 0x0601FAC2 RID: 129730 RVA: 0x00469091 File Offset: 0x00467291
-		// (set) Token: 0x0601FAC3 RID: 129731 RVA: 0x00469099 File Offset: 0x00467299
+		// Token: 0x170097B0 RID: 38832
+		// (get) Token: 0x060217B7 RID: 137143 RVA: 0x0049E2F5 File Offset: 0x0049C4F5
+		// (set) Token: 0x060217B8 RID: 137144 RVA: 0x0049E2FD File Offset: 0x0049C4FD
 		public ESceneItemSeqEventCbType Type { get; set; }
 
-		// Token: 0x17009052 RID: 36946
-		// (get) Token: 0x0601FAC4 RID: 129732 RVA: 0x004690A2 File Offset: 0x004672A2
-		// (set) Token: 0x0601FAC5 RID: 129733 RVA: 0x004690AA File Offset: 0x004672AA
+		// Token: 0x170097B1 RID: 38833
+		// (get) Token: 0x060217B9 RID: 137145 RVA: 0x0049E306 File Offset: 0x0049C506
+		// (set) Token: 0x060217BA RID: 137146 RVA: 0x0049E30E File Offset: 0x0049C50E
 		public string EventName { get; set; }
 
-		// Token: 0x17009053 RID: 36947
-		// (get) Token: 0x0601FAC6 RID: 129734 RVA: 0x004690B3 File Offset: 0x004672B3
-		// (set) Token: 0x0601FAC7 RID: 129735 RVA: 0x004690BB File Offset: 0x004672BB
+		// Token: 0x170097B2 RID: 38834
+		// (get) Token: 0x060217BB RID: 137147 RVA: 0x0049E317 File Offset: 0x0049C517
+		// (set) Token: 0x060217BC RID: 137148 RVA: 0x0049E31F File Offset: 0x0049C51F
 		public IActionInfoT Action { get; set; }
 
-		// Token: 0x0601FAC8 RID: 129736 RVA: 0x004690C4 File Offset: 0x004672C4
+		// Token: 0x060217BD RID: 137149 RVA: 0x0049E328 File Offset: 0x0049C528
 		public IAnEventT()
 		{
 			this.Type = ESceneItemSeqEventCbType.ANS;

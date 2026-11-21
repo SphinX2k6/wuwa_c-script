@@ -3,35 +3,35 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C7D RID: 23677
+	// Token: 0x02004C5D RID: 19549
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiHoverTipsDescInfo : IBattleUiHoverTipsDescInfo
 	{
-		// Token: 0x17008DD6 RID: 36310
-		// (get) Token: 0x0603BD39 RID: 245049 RVA: 0x00E4A6FA File Offset: 0x00E488FA
-		// (set) Token: 0x0603BD3A RID: 245050 RVA: 0x00E4A702 File Offset: 0x00E48902
+		// Token: 0x170061A8 RID: 25000
+		// (get) Token: 0x06030C87 RID: 199815 RVA: 0x00D9AC76 File Offset: 0x00D98E76
+		// (set) Token: 0x06030C88 RID: 199816 RVA: 0x00D9AC7E File Offset: 0x00D98E7E
 		public string DescKey { get; set; }
 
-		// Token: 0x17008DD7 RID: 36311
-		// (get) Token: 0x0603BD3B RID: 245051 RVA: 0x00E4A70B File Offset: 0x00E4890B
-		// (set) Token: 0x0603BD3C RID: 245052 RVA: 0x00E4A713 File Offset: 0x00E48913
+		// Token: 0x170061A9 RID: 25001
+		// (get) Token: 0x06030C89 RID: 199817 RVA: 0x00D9AC87 File Offset: 0x00D98E87
+		// (set) Token: 0x06030C8A RID: 199818 RVA: 0x00D9AC8F File Offset: 0x00D98E8F
 		public bool? DescUseChangeColor { get; set; }
 
-		// Token: 0x17008DD8 RID: 36312
-		// (get) Token: 0x0603BD3D RID: 245053 RVA: 0x00E4A71C File Offset: 0x00E4891C
-		// (set) Token: 0x0603BD3E RID: 245054 RVA: 0x00E4A724 File Offset: 0x00E48924
+		// Token: 0x170061AA RID: 25002
+		// (get) Token: 0x06030C8B RID: 199819 RVA: 0x00D9AC98 File Offset: 0x00D98E98
+		// (set) Token: 0x06030C8C RID: 199820 RVA: 0x00D9ACA0 File Offset: 0x00D98EA0
 		[Nullable(2)]
 		public string StateTitleKey { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008DD9 RID: 36313
-		// (get) Token: 0x0603BD3F RID: 245055 RVA: 0x00E4A72D File Offset: 0x00E4892D
-		// (set) Token: 0x0603BD40 RID: 245056 RVA: 0x00E4A735 File Offset: 0x00E48935
+		// Token: 0x170061AB RID: 25003
+		// (get) Token: 0x06030C8D RID: 199821 RVA: 0x00D9ACA9 File Offset: 0x00D98EA9
+		// (set) Token: 0x06030C8E RID: 199822 RVA: 0x00D9ACB1 File Offset: 0x00D98EB1
 		public bool? IsUnlock { get; set; }
 
-		// Token: 0x17008DDA RID: 36314
-		// (get) Token: 0x0603BD41 RID: 245057 RVA: 0x00E4A73E File Offset: 0x00E4893E
-		// (set) Token: 0x0603BD42 RID: 245058 RVA: 0x00E4A746 File Offset: 0x00E48946
+		// Token: 0x170061AC RID: 25004
+		// (get) Token: 0x06030C8F RID: 199823 RVA: 0x00D9ACBA File Offset: 0x00D98EBA
+		// (set) Token: 0x06030C90 RID: 199824 RVA: 0x00D9ACC2 File Offset: 0x00D98EC2
 		public bool? IsShowState { get; set; }
 	}
 }

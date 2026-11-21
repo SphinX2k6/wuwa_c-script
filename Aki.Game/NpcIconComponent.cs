@@ -9,14 +9,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022D5 RID: 8917
+// Token: 0x020017B9 RID: 6073
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcIconComponent : IGameBudgetManagedObject
 {
-	// Token: 0x1700164A RID: 5706
-	// (get) Token: 0x06011822 RID: 71714 RVA: 0x0044AD73 File Offset: 0x00448F73
-	// (set) Token: 0x06011823 RID: 71715 RVA: 0x0044AD7B File Offset: 0x00448F7B
+	// Token: 0x17001681 RID: 5761
+	// (get) Token: 0x0600ECB9 RID: 60601 RVA: 0x00457A7B File Offset: 0x00455C7B
+	// (set) Token: 0x0600ECBA RID: 60602 RVA: 0x00457A83 File Offset: 0x00455C83
 	private bool IsSelfVisible
 	{
 		get
@@ -29,9 +29,9 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x1700164B RID: 5707
-	// (get) Token: 0x06011824 RID: 71716 RVA: 0x0044AD84 File Offset: 0x00448F84
-	// (set) Token: 0x06011825 RID: 71717 RVA: 0x0044AD8C File Offset: 0x00448F8C
+	// Token: 0x17001682 RID: 5762
+	// (get) Token: 0x0600ECBB RID: 60603 RVA: 0x00457A8C File Offset: 0x00455C8C
+	// (set) Token: 0x0600ECBC RID: 60604 RVA: 0x00457A94 File Offset: 0x00455C94
 	private bool IsNpcVisible
 	{
 		get
@@ -44,8 +44,8 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x1700164C RID: 5708
-	// (get) Token: 0x06011826 RID: 71718 RVA: 0x0044AD95 File Offset: 0x00448F95
+	// Token: 0x17001683 RID: 5763
+	// (get) Token: 0x0600ECBD RID: 60605 RVA: 0x00457A9D File Offset: 0x00455C9D
 	private bool IsVisible
 	{
 		get
@@ -54,7 +54,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011827 RID: 71719 RVA: 0x0044ADA8 File Offset: 0x00448FA8
+	// Token: 0x0600ECBE RID: 60606 RVA: 0x00457AB0 File Offset: 0x00455CB0
 	[NullableContext(1)]
 	public NpcIconComponent(INpcIconFunction data)
 	{
@@ -62,7 +62,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.MaxShowRangeDisSquared = (double)NpcIconConfig.Instance.NpcIconHeadInfoLimitMaxDistanceSquared;
 	}
 
-	// Token: 0x06011828 RID: 71720 RVA: 0x0044AE08 File Offset: 0x00449008
+	// Token: 0x0600ECBF RID: 60607 RVA: 0x00457B10 File Offset: 0x00455D10
 	public unsafe void RegisterTick()
 	{
 		if (this.GameBudgetManagedTokenInternal != null)
@@ -89,7 +89,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.GameBudgetManagedTokenInternal = new uint?(instance2.RegisterTick(groupName, significanceGroup, this, (uiPoolActor != null) ? uiPoolActor.Actor : null, true, true, true, true));
 	}
 
-	// Token: 0x06011829 RID: 71721 RVA: 0x0044AEEA File Offset: 0x004490EA
+	// Token: 0x0600ECC0 RID: 60608 RVA: 0x00457BF2 File Offset: 0x00455DF2
 	public void UnregisterTick()
 	{
 		if (this.GameBudgetManagedTokenInternal != null)
@@ -103,13 +103,13 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601182A RID: 71722 RVA: 0x0044AF28 File Offset: 0x00449128
+	// Token: 0x0600ECC1 RID: 60609 RVA: 0x00457C30 File Offset: 0x00455E30
 	public void ScheduledTick(float deltaSeconds, int deltaFrames, float distance)
 	{
 	}
 
-	// Token: 0x1700164D RID: 5709
-	// (get) Token: 0x0601182B RID: 71723 RVA: 0x0044AF2A File Offset: 0x0044912A
+	// Token: 0x17001684 RID: 5764
+	// (get) Token: 0x0600ECC2 RID: 60610 RVA: 0x00457C32 File Offset: 0x00455E32
 	public bool HasScheduledAfterTick
 	{
 		get
@@ -118,14 +118,14 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601182C RID: 71724 RVA: 0x0044AF2D File Offset: 0x0044912D
+	// Token: 0x0600ECC3 RID: 60611 RVA: 0x00457C35 File Offset: 0x00455E35
 	public void ScheduledAfterTick(float deltaSeconds, int deltaFrames, float distance)
 	{
 		this.Tick(deltaSeconds * 1000f, false);
 	}
 
-	// Token: 0x1700164E RID: 5710
-	// (get) Token: 0x0601182D RID: 71725 RVA: 0x0044AF3D File Offset: 0x0044913D
+	// Token: 0x17001685 RID: 5765
+	// (get) Token: 0x0600ECC4 RID: 60612 RVA: 0x00457C45 File Offset: 0x00455E45
 	public bool HasOnEnabledChange
 	{
 		get
@@ -134,20 +134,20 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601182E RID: 71726 RVA: 0x0044AF40 File Offset: 0x00449140
+	// Token: 0x0600ECC5 RID: 60613 RVA: 0x00457C48 File Offset: 0x00455E48
 	public void OnEnabledChange(bool enable, float distance)
 	{
 		this.SetRootItemState(enable);
 	}
 
-	// Token: 0x0601182F RID: 71727 RVA: 0x0044AF49 File Offset: 0x00449149
+	// Token: 0x0600ECC6 RID: 60614 RVA: 0x00457C51 File Offset: 0x00455E51
 	public void SetInteractionSpotVisible(bool isVisible)
 	{
 		this.IsInteractionSpotVisible = isVisible;
 	}
 
-	// Token: 0x1700164F RID: 5711
-	// (get) Token: 0x06011830 RID: 71728 RVA: 0x0044AF52 File Offset: 0x00449152
+	// Token: 0x17001686 RID: 5766
+	// (get) Token: 0x0600ECC7 RID: 60615 RVA: 0x00457C5A File Offset: 0x00455E5A
 	public bool HasOnWasRecentlyRenderedOnScreenChange
 	{
 		get
@@ -156,31 +156,31 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011831 RID: 71729 RVA: 0x0044AF55 File Offset: 0x00449155
+	// Token: 0x0600ECC8 RID: 60616 RVA: 0x00457C5D File Offset: 0x00455E5D
 	public void OnWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 	{
 		this.IsSelfVisible = wasRecentlyRenderedOnScreen;
 	}
 
-	// Token: 0x06011832 RID: 71730 RVA: 0x0044AF5E File Offset: 0x0044915E
+	// Token: 0x0600ECC9 RID: 60617 RVA: 0x00457C66 File Offset: 0x00455E66
 	public GCHandle GetGCHandle()
 	{
 		return this.GameBudgetGCHandle;
 	}
 
-	// Token: 0x06011833 RID: 71731 RVA: 0x0044AF66 File Offset: 0x00449166
+	// Token: 0x0600ECCA RID: 60618 RVA: 0x00457C6E File Offset: 0x00455E6E
 	public void OnNpcWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 	{
 		this.IsNpcVisible = wasRecentlyRenderedOnScreen;
 	}
 
-	// Token: 0x06011834 RID: 71732 RVA: 0x0044AF6F File Offset: 0x0044916F
+	// Token: 0x0600ECCB RID: 60619 RVA: 0x00457C77 File Offset: 0x00455E77
 	public void SetupCheckRange(double maxDisSquared)
 	{
 		this.MaxShowRangeDisSquared = maxDisSquared;
 	}
 
-	// Token: 0x06011835 RID: 71733 RVA: 0x0044AF78 File Offset: 0x00449178
+	// Token: 0x0600ECCC RID: 60620 RVA: 0x00457C80 File Offset: 0x00455E80
 	[NullableContext(0)]
 	public UniTask<bool> AddNpcIconAsync()
 	{
@@ -192,7 +192,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		return <AddNpcIconAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011836 RID: 71734 RVA: 0x0044AFBC File Offset: 0x004491BC
+	// Token: 0x0600ECCD RID: 60621 RVA: 0x00457CC4 File Offset: 0x00455EC4
 	[NullableContext(0)]
 	protected UniTask<bool> CreateNpcIcon()
 	{
@@ -204,14 +204,14 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		return <CreateNpcIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011837 RID: 71735 RVA: 0x0044AFFF File Offset: 0x004491FF
+	// Token: 0x0600ECCE RID: 60622 RVA: 0x00457D07 File Offset: 0x00455F07
 	[NullableContext(1)]
 	public void RegisterNpcIconCreateCallback(Action callback)
 	{
 		this.NpcIconCreateCallback = callback;
 	}
 
-	// Token: 0x06011838 RID: 71736 RVA: 0x0044B008 File Offset: 0x00449208
+	// Token: 0x0600ECCF RID: 60623 RVA: 0x00457D10 File Offset: 0x00455F10
 	public void SetCharacterIconLocation()
 	{
 		UPrimitiveComponent attachToMeshComponent = this.Data.GetAttachToMeshComponent();
@@ -230,7 +230,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.HeadView.InitItemLocation(this.TmpVector.ToUeVector(false), offsetZ);
 	}
 
-	// Token: 0x06011839 RID: 71737 RVA: 0x0044B09B File Offset: 0x0044929B
+	// Token: 0x0600ECD0 RID: 60624 RVA: 0x00457DA3 File Offset: 0x00455FA3
 	public void SetCharacterName(string headName)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -241,7 +241,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetNpcName(headName);
 	}
 
-	// Token: 0x0601183A RID: 71738 RVA: 0x0044B0AE File Offset: 0x004492AE
+	// Token: 0x0600ECD1 RID: 60625 RVA: 0x00457DB6 File Offset: 0x00455FB6
 	public void SetCharacterSecondName(string name)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -252,7 +252,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetNpcSecondName(name);
 	}
 
-	// Token: 0x0601183B RID: 71739 RVA: 0x0044B0C1 File Offset: 0x004492C1
+	// Token: 0x0600ECD2 RID: 60626 RVA: 0x00457DC9 File Offset: 0x00455FC9
 	public void SetCharacterFunctionIcon(string path)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -263,7 +263,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetFunctionIcon(path, null);
 	}
 
-	// Token: 0x0601183C RID: 71740 RVA: 0x0044B0D5 File Offset: 0x004492D5
+	// Token: 0x0600ECD3 RID: 60627 RVA: 0x00457DDD File Offset: 0x00455FDD
 	public void SetNpcQuest(string path)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -274,7 +274,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetNpcQuestIcon(path);
 	}
 
-	// Token: 0x0601183D RID: 71741 RVA: 0x0044B0E8 File Offset: 0x004492E8
+	// Token: 0x0600ECD4 RID: 60628 RVA: 0x00457DF0 File Offset: 0x00455FF0
 	public void SetHeadItemState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -285,7 +285,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetHeadItemState(bState);
 	}
 
-	// Token: 0x0601183E RID: 71742 RVA: 0x0044B0FB File Offset: 0x004492FB
+	// Token: 0x0600ECD5 RID: 60629 RVA: 0x00457E03 File Offset: 0x00456003
 	public void SetQuestTrackCellState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -296,7 +296,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetQuestTrackCellState(bState);
 	}
 
-	// Token: 0x0601183F RID: 71743 RVA: 0x0044B10E File Offset: 0x0044930E
+	// Token: 0x0600ECD6 RID: 60630 RVA: 0x00457E16 File Offset: 0x00456016
 	public void SetRootItemState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -307,14 +307,14 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetRootItemState(bState, false);
 	}
 
-	// Token: 0x06011840 RID: 71744 RVA: 0x0044B122 File Offset: 0x00449322
+	// Token: 0x0600ECD7 RID: 60631 RVA: 0x00457E2A File Offset: 0x0045602A
 	public bool GetRootItemState()
 	{
 		NpcIconComponentView headView = this.HeadView;
 		return headView != null && headView.GetRootItemState();
 	}
 
-	// Token: 0x06011841 RID: 71745 RVA: 0x0044B135 File Offset: 0x00449335
+	// Token: 0x0600ECD8 RID: 60632 RVA: 0x00457E3D File Offset: 0x0045603D
 	public void SetHeadInfoNameState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -325,14 +325,14 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetHeadInfoNameState(bState);
 	}
 
-	// Token: 0x06011842 RID: 71746 RVA: 0x0044B148 File Offset: 0x00449348
+	// Token: 0x0600ECD9 RID: 60633 RVA: 0x00457E50 File Offset: 0x00456050
 	public bool GetHeadInfoNameState()
 	{
 		NpcIconComponentView headView = this.HeadView;
 		return headView != null && headView.GetHeadInfoNameState();
 	}
 
-	// Token: 0x06011843 RID: 71747 RVA: 0x0044B15B File Offset: 0x0044935B
+	// Token: 0x0600ECDA RID: 60634 RVA: 0x00457E63 File Offset: 0x00456063
 	public void SetQuestInfoState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -343,7 +343,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetNpcQuestIconState(bState);
 	}
 
-	// Token: 0x06011844 RID: 71748 RVA: 0x0044B16E File Offset: 0x0044936E
+	// Token: 0x0600ECDB RID: 60635 RVA: 0x00457E76 File Offset: 0x00456076
 	public void SetQuestTrackEffectState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -354,13 +354,13 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetTrackEffectState(bState);
 	}
 
-	// Token: 0x06011845 RID: 71749 RVA: 0x0044B181 File Offset: 0x00449381
+	// Token: 0x0600ECDC RID: 60636 RVA: 0x00457E89 File Offset: 0x00456089
 	public void SetEntityPbDataId(int id)
 	{
 		this.EntityPbDataId = id;
 	}
 
-	// Token: 0x06011846 RID: 71750 RVA: 0x0044B18A File Offset: 0x0044938A
+	// Token: 0x0600ECDD RID: 60637 RVA: 0x00457E92 File Offset: 0x00456092
 	[NullableContext(1)]
 	public void SetDialogueText(string text, float removeSeconds = -1f, bool redDot = false)
 	{
@@ -381,7 +381,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011847 RID: 71751 RVA: 0x0044B1C9 File Offset: 0x004493C9
+	// Token: 0x0600ECDE RID: 60638 RVA: 0x00457ED1 File Offset: 0x004560D1
 	public void HideDialogueText()
 	{
 		this.RemoveMillSeconds = -1f;
@@ -393,7 +393,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.SetTargetTracking(false);
 	}
 
-	// Token: 0x06011848 RID: 71752 RVA: 0x0044B1F1 File Offset: 0x004493F1
+	// Token: 0x0600ECDF RID: 60639 RVA: 0x00457EF9 File Offset: 0x004560F9
 	public void UpdateDialogWorldScale()
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -404,28 +404,28 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetDialogWorldScale3D(this.Data.GetDialogWorldScale3D());
 	}
 
-	// Token: 0x06011849 RID: 71753 RVA: 0x0044B20E File Offset: 0x0044940E
+	// Token: 0x0600ECE0 RID: 60640 RVA: 0x00457F16 File Offset: 0x00456116
 	public bool IsDialogueTextActive()
 	{
 		NpcIconComponentView headView = this.HeadView;
 		return headView != null && headView.GetDialogueActive();
 	}
 
-	// Token: 0x0601184A RID: 71754 RVA: 0x0044B221 File Offset: 0x00449421
+	// Token: 0x0600ECE1 RID: 60641 RVA: 0x00457F29 File Offset: 0x00456129
 	public bool IsHeadIconActive()
 	{
 		NpcIconComponentView headView = this.HeadView;
 		return headView != null && headView.GetHeadIconActive();
 	}
 
-	// Token: 0x0601184B RID: 71755 RVA: 0x0044B234 File Offset: 0x00449434
+	// Token: 0x0600ECE2 RID: 60642 RVA: 0x00457F3C File Offset: 0x0045613C
 	public bool IsHeadItemActive()
 	{
 		NpcIconComponentView headView = this.HeadView;
 		return headView != null && headView.GetHeadItemState();
 	}
 
-	// Token: 0x0601184C RID: 71756 RVA: 0x0044B248 File Offset: 0x00449448
+	// Token: 0x0600ECE3 RID: 60643 RVA: 0x00457F50 File Offset: 0x00456150
 	private void SetTargetTracking(bool active)
 	{
 		ITrackData trackData = TrackModel.Instance.IsTargetTracking(this.EntityPbDataId);
@@ -436,7 +436,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601184D RID: 71757 RVA: 0x0044B28F File Offset: 0x0044948F
+	// Token: 0x0600ECE4 RID: 60644 RVA: 0x00457F97 File Offset: 0x00456197
 	protected void TickDialogueText(float deltaTime)
 	{
 		if (this.RemoveMillSeconds < 0f)
@@ -450,7 +450,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601184E RID: 71758 RVA: 0x0044B2C0 File Offset: 0x004494C0
+	// Token: 0x0600ECE5 RID: 60645 RVA: 0x00457FC8 File Offset: 0x004561C8
 	public void Tick(float deltaTime, bool isForce = false)
 	{
 		if (!this.Data.CanTick(deltaTime))
@@ -470,7 +470,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601184F RID: 71759 RVA: 0x0044B300 File Offset: 0x00449500
+	// Token: 0x0600ECE6 RID: 60646 RVA: 0x00458008 File Offset: 0x00456208
 	private void RefreshHeadStateFollow()
 	{
 		bool isFollowingHeadState = this.IsFollowingHeadState;
@@ -489,14 +489,14 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011850 RID: 71760 RVA: 0x0044B351 File Offset: 0x00449551
+	// Token: 0x0600ECE7 RID: 60647 RVA: 0x00458059 File Offset: 0x00456259
 	private void FollowHeadStateHook()
 	{
 		this.HeadView.InitItemLocation(this.HeadStateFollowData.Location.ToUeVector(false), 60.0);
 		this.HeadView.SetHeadWorldScale3D(this.HeadStateFollowData.Scale);
 	}
 
-	// Token: 0x06011851 RID: 71761 RVA: 0x0044B390 File Offset: 0x00449590
+	// Token: 0x0600ECE8 RID: 60648 RVA: 0x00458098 File Offset: 0x00456298
 	private void UpdateHeadInfoRotationAndScale()
 	{
 		double num = Vector.DistSquared(CameraModel.Instance.MainModel.CameraLocation, this.Data.GetSelfLocation());
@@ -504,7 +504,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.UpdateCharacterIconRotation();
 	}
 
-	// Token: 0x06011852 RID: 71762 RVA: 0x0044B3CC File Offset: 0x004495CC
+	// Token: 0x0600ECE9 RID: 60649 RVA: 0x004580D4 File Offset: 0x004562D4
 	private void UpdateCharacterIconRotation()
 	{
 		if (this.HeadView != null)
@@ -514,7 +514,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011853 RID: 71763 RVA: 0x0044B408 File Offset: 0x00449608
+	// Token: 0x0600ECEA RID: 60650 RVA: 0x00458110 File Offset: 0x00456310
 	private void TickHeadItem(float cameraDistanceSquare)
 	{
 		bool flag = this.Data.IsInHeadItemShowRange((double)cameraDistanceSquare, this.MaxShowRangeDisSquared, (double)NpcIconConfig.Instance.NpcIconHeadInfoLimitMinDistanceSquared);
@@ -531,7 +531,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011854 RID: 71764 RVA: 0x0044B490 File Offset: 0x00449690
+	// Token: 0x0600ECEB RID: 60651 RVA: 0x00458198 File Offset: 0x00456398
 	private void TickQuestTrackCellState()
 	{
 		if (this.IsInteractionSpotVisible)
@@ -550,28 +550,28 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011855 RID: 71765 RVA: 0x0044B504 File Offset: 0x00449704
+	// Token: 0x0600ECEC RID: 60652 RVA: 0x0045820C File Offset: 0x0045640C
 	private bool IsInHeadItemNameShowRange(float distance)
 	{
 		int npcIconHeadInfoNameLimitDistance = NpcIconConfig.Instance.GetNpcIconHeadInfoNameLimitDistance();
 		return distance <= (float)(npcIconHeadInfoNameLimitDistance * npcIconHeadInfoNameLimitDistance);
 	}
 
-	// Token: 0x06011856 RID: 71766 RVA: 0x0044B528 File Offset: 0x00449728
+	// Token: 0x0600ECED RID: 60653 RVA: 0x00458230 File Offset: 0x00456430
 	private bool IsInPlayerInfoNameShowRange(float distance)
 	{
 		int playerInfoNameLimitDistance = NpcIconConfig.Instance.GetPlayerInfoNameLimitDistance();
 		return distance <= (float)(playerInfoNameLimitDistance * playerInfoNameLimitDistance);
 	}
 
-	// Token: 0x06011857 RID: 71767 RVA: 0x0044B54C File Offset: 0x0044974C
+	// Token: 0x0600ECEE RID: 60654 RVA: 0x00458254 File Offset: 0x00456454
 	private bool IsInPlayerInfoIconShowRange(float distance)
 	{
 		int playerInfoIconLimitDistance = NpcIconConfig.Instance.GetPlayerInfoIconLimitDistance();
 		return distance < (float)(playerInfoIconLimitDistance * playerInfoIconLimitDistance);
 	}
 
-	// Token: 0x06011858 RID: 71768 RVA: 0x0044B56C File Offset: 0x0044976C
+	// Token: 0x0600ECEF RID: 60655 RVA: 0x00458274 File Offset: 0x00456474
 	private void TickHeadItemName(float cameraDistanceSquare)
 	{
 		if (this.Data.IsShowPlayerInfo())
@@ -613,19 +613,19 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x06011859 RID: 71769 RVA: 0x0044B5FF File Offset: 0x004497FF
+	// Token: 0x0600ECF0 RID: 60656 RVA: 0x00458307 File Offset: 0x00456507
 	private bool IsInHeadQuestShowRange(float distance)
 	{
 		return this.MaxShowQuestDisSquared == 0f || distance <= this.MaxShowQuestDisSquared * this.MaxShowQuestDisSquared;
 	}
 
-	// Token: 0x0601185A RID: 71770 RVA: 0x0044B623 File Offset: 0x00449823
+	// Token: 0x0600ECF1 RID: 60657 RVA: 0x0045832B File Offset: 0x0045652B
 	private bool IsInTrackEffectShowRange(float distance)
 	{
 		return this.MaxShowTrackEffectDisSquared == 0f || distance <= this.MaxShowTrackEffectDisSquared * this.MaxShowTrackEffectDisSquared;
 	}
 
-	// Token: 0x0601185B RID: 71771 RVA: 0x0044B648 File Offset: 0x00449848
+	// Token: 0x0600ECF2 RID: 60658 RVA: 0x00458350 File Offset: 0x00456550
 	private void TickHeadQuestInfo(float cameraDistanceSquare)
 	{
 		if (this.Data.IsShowQuestInfo())
@@ -637,7 +637,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		}
 	}
 
-	// Token: 0x0601185C RID: 71772 RVA: 0x0044B680 File Offset: 0x00449880
+	// Token: 0x0600ECF3 RID: 60659 RVA: 0x00458388 File Offset: 0x00456588
 	private void TickHeadInfo(float cameraDistanceSquare)
 	{
 		if (this.DistanceSquare == cameraDistanceSquare)
@@ -650,7 +650,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.TickHeadQuestInfo(cameraDistanceSquare);
 	}
 
-	// Token: 0x0601185D RID: 71773 RVA: 0x0044B6A8 File Offset: 0x004498A8
+	// Token: 0x0600ECF4 RID: 60660 RVA: 0x004583B0 File Offset: 0x004565B0
 	private void SetHeadWorldScale3D(float cameraDistance)
 	{
 		float headStateScaleValue = NpcIconConfig.Instance.GetHeadStateScaleValue(cameraDistance);
@@ -662,7 +662,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetHeadWorldScale3D(headStateScaleValue);
 	}
 
-	// Token: 0x0601185E RID: 71774 RVA: 0x0044B6D2 File Offset: 0x004498D2
+	// Token: 0x0600ECF5 RID: 60661 RVA: 0x004583DA File Offset: 0x004565DA
 	public void SetPlayerInfoIcon(string path)
 	{
 		this.IsPlayerInfoIconReady = false;
@@ -677,7 +677,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		});
 	}
 
-	// Token: 0x0601185F RID: 71775 RVA: 0x0044B6F8 File Offset: 0x004498F8
+	// Token: 0x0600ECF6 RID: 60662 RVA: 0x00458400 File Offset: 0x00456600
 	public void SetPlayerInfoIconState(bool bState)
 	{
 		if (!this.IsPlayerInfoIconReady)
@@ -692,7 +692,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetPlayerInfoItemState(bState);
 	}
 
-	// Token: 0x06011860 RID: 71776 RVA: 0x0044B714 File Offset: 0x00449914
+	// Token: 0x0600ECF7 RID: 60663 RVA: 0x0045841C File Offset: 0x0045661C
 	public void SetNameTextState(bool bState)
 	{
 		NpcIconComponentView headView = this.HeadView;
@@ -703,7 +703,7 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		headView.SetNameTextItemState(bState);
 	}
 
-	// Token: 0x06011861 RID: 71777 RVA: 0x0044B728 File Offset: 0x00449928
+	// Token: 0x0600ECF8 RID: 60664 RVA: 0x00458430 File Offset: 0x00456630
 	public void Destroy()
 	{
 		this.IsDestroy = true;
@@ -732,84 +732,84 @@ public class NpcIconComponent : IGameBudgetManagedObject
 		this.UnregisterTick();
 	}
 
-	// Token: 0x040084E2 RID: 34018
+	// Token: 0x04008620 RID: 34336
 	private const double NAME_ABOVE_HEADSTATE_OFFSET = 60.0;
 
-	// Token: 0x040084E3 RID: 34019
+	// Token: 0x04008621 RID: 34337
 	private UiPoolActor UiPoolActor;
 
-	// Token: 0x040084E4 RID: 34020
+	// Token: 0x04008622 RID: 34338
 	[Nullable(1)]
 	private string Path = "";
 
-	// Token: 0x040084E5 RID: 34021
+	// Token: 0x04008623 RID: 34339
 	protected NpcIconComponentView HeadView;
 
-	// Token: 0x040084E6 RID: 34022
+	// Token: 0x04008624 RID: 34340
 	private INpcIconFunction Data;
 
-	// Token: 0x040084E7 RID: 34023
+	// Token: 0x04008625 RID: 34341
 	private float RemoveMillSeconds = -1f;
 
-	// Token: 0x040084E8 RID: 34024
+	// Token: 0x04008626 RID: 34342
 	private double MaxShowRangeDisSquared;
 
-	// Token: 0x040084E9 RID: 34025
+	// Token: 0x04008627 RID: 34343
 	public float MaxShowQuestDisSquared;
 
-	// Token: 0x040084EA RID: 34026
+	// Token: 0x04008628 RID: 34344
 	private readonly float MaxShowTrackEffectDisSquared;
 
-	// Token: 0x040084EB RID: 34027
+	// Token: 0x04008629 RID: 34345
 	private UniTaskCompletionSource<bool> CustomPromise;
 
-	// Token: 0x040084EC RID: 34028
+	// Token: 0x0400862A RID: 34346
 	private Action ReCreateHeadView;
 
-	// Token: 0x040084ED RID: 34029
+	// Token: 0x0400862B RID: 34347
 	private float DistanceSquare;
 
-	// Token: 0x040084EE RID: 34030
+	// Token: 0x0400862C RID: 34348
 	private bool PendingShowHeadInfoName;
 
-	// Token: 0x040084EF RID: 34031
+	// Token: 0x0400862D RID: 34349
 	private bool IsDestroy;
 
-	// Token: 0x040084F0 RID: 34032
+	// Token: 0x0400862E RID: 34350
 	private uint? GameBudgetManagedTokenInternal;
 
-	// Token: 0x040084F1 RID: 34033
+	// Token: 0x0400862F RID: 34351
 	private int EntityPbDataId;
 
-	// Token: 0x040084F2 RID: 34034
+	// Token: 0x04008630 RID: 34352
 	private bool QuestMarkOccupied;
 
-	// Token: 0x040084F3 RID: 34035
+	// Token: 0x04008631 RID: 34353
 	private bool IsPlayerInfoIconReady;
 
-	// Token: 0x040084F4 RID: 34036
+	// Token: 0x04008632 RID: 34354
 	[Nullable(1)]
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x040084F5 RID: 34037
+	// Token: 0x04008633 RID: 34355
 	[Nullable(1)]
 	private readonly HeadStateFollowData HeadStateFollowData = new HeadStateFollowData();
 
-	// Token: 0x040084F6 RID: 34038
+	// Token: 0x04008634 RID: 34356
 	private bool IsFollowingHeadState;
 
-	// Token: 0x040084F7 RID: 34039
+	// Token: 0x04008635 RID: 34357
 	private bool IsSelfVisibleInner;
 
-	// Token: 0x040084F8 RID: 34040
+	// Token: 0x04008636 RID: 34358
 	private bool IsNpcVisibleInner = true;
 
-	// Token: 0x040084F9 RID: 34041
+	// Token: 0x04008637 RID: 34359
 	private Action NpcIconCreateCallback;
 
-	// Token: 0x040084FA RID: 34042
+	// Token: 0x04008638 RID: 34360
 	private bool IsInteractionSpotVisible;
 
-	// Token: 0x040084FB RID: 34043
+	// Token: 0x04008639 RID: 34361
 	private GCHandle GameBudgetGCHandle;
 }

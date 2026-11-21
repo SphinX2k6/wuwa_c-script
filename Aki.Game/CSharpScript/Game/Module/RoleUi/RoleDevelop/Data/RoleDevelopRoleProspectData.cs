@@ -4,197 +4,197 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 {
-	// Token: 0x02004D61 RID: 19809
+	// Token: 0x02003D2A RID: 15658
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopRoleProspectData : RoleDevelopRoleBaseData
 	{
-		// Token: 0x0603335F RID: 209759 RVA: 0x00BF1AFE File Offset: 0x00BEFCFE
+		// Token: 0x060281CC RID: 164300 RVA: 0x00B3ACBA File Offset: 0x00B38EBA
 		public RoleDevelopRoleProspectData(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06033360 RID: 209760 RVA: 0x00BF1B07 File Offset: 0x00BEFD07
+		// Token: 0x060281CD RID: 164301 RVA: 0x00B3ACC3 File Offset: 0x00B38EC3
 		public override ERoleDevelopRoleType GetRoleType()
 		{
 			return ERoleDevelopRoleType.Prospect;
 		}
 
-		// Token: 0x06033361 RID: 209761 RVA: 0x00BF1B0A File Offset: 0x00BEFD0A
+		// Token: 0x060281CE RID: 164302 RVA: 0x00B3ACC6 File Offset: 0x00B38EC6
 		private IRoleDevProsProjectConfig GetDevPropsProjectConfig()
 		{
 			return RoleDevConfig.Instance.GetRoleDevProsProjectConfig(this.Id);
 		}
 
-		// Token: 0x06033362 RID: 209762 RVA: 0x00BF1B1C File Offset: 0x00BEFD1C
+		// Token: 0x060281CF RID: 164303 RVA: 0x00B3ACD8 File Offset: 0x00B38ED8
 		public override string GetName()
 		{
 			return this.GetDevPropsProjectConfig().RoleName;
 		}
 
-		// Token: 0x06033363 RID: 209763 RVA: 0x00BF1B29 File Offset: 0x00BEFD29
+		// Token: 0x060281D0 RID: 164304 RVA: 0x00B3ACE5 File Offset: 0x00B38EE5
 		public override int GetElementId()
 		{
 			return this.GetDevPropsProjectConfig().ElementId;
 		}
 
-		// Token: 0x06033364 RID: 209764 RVA: 0x00BF1B36 File Offset: 0x00BEFD36
+		// Token: 0x060281D1 RID: 164305 RVA: 0x00B3ACF2 File Offset: 0x00B38EF2
 		public override string GetRoleIllustrationPath()
 		{
 			return this.GetDevPropsProjectConfig().FormationRoleCard;
 		}
 
-		// Token: 0x06033365 RID: 209765 RVA: 0x00BF1B43 File Offset: 0x00BEFD43
+		// Token: 0x060281D2 RID: 164306 RVA: 0x00B3ACFF File Offset: 0x00B38EFF
 		public override string GetRoleIconPath()
 		{
 			return this.GetDevPropsProjectConfig().RoleHeadIcon;
 		}
 
-		// Token: 0x06033366 RID: 209766 RVA: 0x00BF1B50 File Offset: 0x00BEFD50
+		// Token: 0x060281D3 RID: 164307 RVA: 0x00B3AD0C File Offset: 0x00B38F0C
 		public override string GetRoleSmallIconPath()
 		{
 			return this.GetDevPropsProjectConfig().RoleHeadIconSmall;
 		}
 
-		// Token: 0x06033367 RID: 209767 RVA: 0x00BF1B5D File Offset: 0x00BEFD5D
+		// Token: 0x060281D4 RID: 164308 RVA: 0x00B3AD19 File Offset: 0x00B38F19
 		public override string GetRoleCircleIconPath()
 		{
 			return this.GetDevPropsProjectConfig().RoleHeadIconSmall;
 		}
 
-		// Token: 0x06033368 RID: 209768 RVA: 0x00BF1B6A File Offset: 0x00BEFD6A
+		// Token: 0x060281D5 RID: 164309 RVA: 0x00B3AD26 File Offset: 0x00B38F26
 		public override int GetKeyProperty()
 		{
 			return 0;
 		}
 
-		// Token: 0x06033369 RID: 209769 RVA: 0x00BF1B6D File Offset: 0x00BEFD6D
+		// Token: 0x060281D6 RID: 164310 RVA: 0x00B3AD29 File Offset: 0x00B38F29
 		public override int GetRoleLevel()
 		{
 			return 1;
 		}
 
-		// Token: 0x0603336A RID: 209770 RVA: 0x00BF1B70 File Offset: 0x00BEFD70
+		// Token: 0x060281D7 RID: 164311 RVA: 0x00B3AD2C File Offset: 0x00B38F2C
 		public override int GetRoleBreachLevel()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603336B RID: 209771 RVA: 0x00BF1B73 File Offset: 0x00BEFD73
+		// Token: 0x060281D8 RID: 164312 RVA: 0x00B3AD2F File Offset: 0x00B38F2F
 		public override int GetRoleExp()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603336C RID: 209772 RVA: 0x00BF1B76 File Offset: 0x00BEFD76
+		// Token: 0x060281D9 RID: 164313 RVA: 0x00B3AD32 File Offset: 0x00B38F32
 		public override bool IsRoleMaxLevel()
 		{
 			return false;
 		}
 
-		// Token: 0x0603336D RID: 209773 RVA: 0x00BF1B79 File Offset: 0x00BEFD79
+		// Token: 0x060281DA RID: 164314 RVA: 0x00B3AD35 File Offset: 0x00B38F35
 		public override bool IsRoleNeedBreakUp()
 		{
 			return true;
 		}
 
-		// Token: 0x0603336E RID: 209774 RVA: 0x00BF1B7C File Offset: 0x00BEFD7C
+		// Token: 0x060281DB RID: 164315 RVA: 0x00B3AD38 File Offset: 0x00B38F38
 		public override int GetRoleTargetLevel()
 		{
 			return this.GetDevPropsProjectConfig().RoleGoalLevel;
 		}
 
-		// Token: 0x0603336F RID: 209775 RVA: 0x00BF1B89 File Offset: 0x00BEFD89
+		// Token: 0x060281DC RID: 164316 RVA: 0x00B3AD45 File Offset: 0x00B38F45
 		public override int GetRoleTargetBreachLevel()
 		{
 			return 0;
 		}
 
-		// Token: 0x06033370 RID: 209776 RVA: 0x00BF1B8C File Offset: 0x00BEFD8C
+		// Token: 0x060281DD RID: 164317 RVA: 0x00B3AD48 File Offset: 0x00B38F48
 		public override int GetWeaponType()
 		{
 			return this.GetDevPropsProjectConfig().WeaponType;
 		}
 
-		// Token: 0x06033371 RID: 209777 RVA: 0x00BF1B99 File Offset: 0x00BEFD99
+		// Token: 0x060281DE RID: 164318 RVA: 0x00B3AD55 File Offset: 0x00B38F55
 		public override WeaponInstance GetWeaponInstance()
 		{
 			return null;
 		}
 
-		// Token: 0x06033372 RID: 209778 RVA: 0x00BF1B9C File Offset: 0x00BEFD9C
+		// Token: 0x060281DF RID: 164319 RVA: 0x00B3AD58 File Offset: 0x00B38F58
 		public override string GetWeaponName()
 		{
 			return RoleDevConfig.Instance.GetRoleDevWeaponItemConfig(this.GetWeaponType()).Value.WeaponTypeDescribe;
 		}
 
-		// Token: 0x06033373 RID: 209779 RVA: 0x00BF1BC9 File Offset: 0x00BEFDC9
+		// Token: 0x060281E0 RID: 164320 RVA: 0x00B3AD85 File Offset: 0x00B38F85
 		public override int GetWeaponLevel()
 		{
 			return 1;
 		}
 
-		// Token: 0x06033374 RID: 209780 RVA: 0x00BF1BCC File Offset: 0x00BEFDCC
+		// Token: 0x060281E1 RID: 164321 RVA: 0x00B3AD88 File Offset: 0x00B38F88
 		public override int GetWeaponBreachLevel()
 		{
 			return 0;
 		}
 
-		// Token: 0x06033375 RID: 209781 RVA: 0x00BF1BCF File Offset: 0x00BEFDCF
+		// Token: 0x060281E2 RID: 164322 RVA: 0x00B3AD8B File Offset: 0x00B38F8B
 		public override int GetWeaponExp()
 		{
 			return 0;
 		}
 
-		// Token: 0x06033376 RID: 209782 RVA: 0x00BF1BD2 File Offset: 0x00BEFDD2
+		// Token: 0x060281E3 RID: 164323 RVA: 0x00B3AD8E File Offset: 0x00B38F8E
 		public override int GetWeaponTargetLevel()
 		{
 			return this.GetDevPropsProjectConfig().WeaponGoalLevel;
 		}
 
-		// Token: 0x06033377 RID: 209783 RVA: 0x00BF1BDF File Offset: 0x00BEFDDF
+		// Token: 0x060281E4 RID: 164324 RVA: 0x00B3AD9B File Offset: 0x00B38F9B
 		public override int GetWeaponTargetBreachLevel()
 		{
 			return 0;
 		}
 
-		// Token: 0x06033378 RID: 209784 RVA: 0x00BF1BE2 File Offset: 0x00BEFDE2
+		// Token: 0x060281E5 RID: 164325 RVA: 0x00B3AD9E File Offset: 0x00B38F9E
 		public override bool IsWeaponMaxLevel()
 		{
 			return false;
 		}
 
-		// Token: 0x06033379 RID: 209785 RVA: 0x00BF1BE5 File Offset: 0x00BEFDE5
+		// Token: 0x060281E6 RID: 164326 RVA: 0x00B3ADA1 File Offset: 0x00B38FA1
 		public override bool IsWeaponNeedBreakUp()
 		{
 			return false;
 		}
 
-		// Token: 0x0603337A RID: 209786 RVA: 0x00BF1BE8 File Offset: 0x00BEFDE8
+		// Token: 0x060281E7 RID: 164327 RVA: 0x00B3ADA4 File Offset: 0x00B38FA4
 		public override List<int> GetPhantomIdList()
 		{
 			return new List<int>();
 		}
 
-		// Token: 0x0603337B RID: 209787 RVA: 0x00BF1BEF File Offset: 0x00BEFDEF
+		// Token: 0x060281E8 RID: 164328 RVA: 0x00B3ADAB File Offset: 0x00B38FAB
 		public override bool CanDevelopPhantom()
 		{
 			return false;
 		}
 
-		// Token: 0x0603337C RID: 209788 RVA: 0x00BF1BF2 File Offset: 0x00BEFDF2
+		// Token: 0x060281E9 RID: 164329 RVA: 0x00B3ADAE File Offset: 0x00B38FAE
 		public override List<RoleDevelopPhantomSuitData> GetRecommendPhantomSuits(int? planId = null, int? firstVisionMonsterId = null)
 		{
 			return new List<RoleDevelopPhantomSuitData>();
 		}
 
-		// Token: 0x0603337D RID: 209789 RVA: 0x00BF1BF9 File Offset: 0x00BEFDF9
+		// Token: 0x060281EA RID: 164330 RVA: 0x00B3ADB5 File Offset: 0x00B38FB5
 		public override int GetRecommendPlanId()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603337E RID: 209790 RVA: 0x00BF1BFC File Offset: 0x00BEFDFC
+		// Token: 0x060281EB RID: 164331 RVA: 0x00B3ADB8 File Offset: 0x00B38FB8
 		public override int GetRecommendFirstVisionMonsterId()
 		{
 			return 0;

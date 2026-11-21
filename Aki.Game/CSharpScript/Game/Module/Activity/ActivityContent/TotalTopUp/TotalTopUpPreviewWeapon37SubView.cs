@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FAE RID: 24494
+	// Token: 0x02004F95 RID: 20373
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPreviewWeapon37SubView : TotalTopUpPreviewSubViewBase
 	{
-		// Token: 0x0603E19E RID: 254366 RVA: 0x00EFF060 File Offset: 0x00EFD260
+		// Token: 0x06033138 RID: 209208 RVA: 0x00E50D1C File Offset: 0x00E4EF1C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E19F RID: 254367 RVA: 0x00EFF0C8 File Offset: 0x00EFD2C8
+		// Token: 0x06033139 RID: 209209 RVA: 0x00E50D84 File Offset: 0x00E4EF84
 		public UniTask ShowPreviewAsync(ITotalTopUpPreviewViewParam param)
 		{
 			TotalTopUpPreviewWeapon37SubView.<ShowPreviewAsync>d__3 <ShowPreviewAsync>d__;
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <ShowPreviewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1A0 RID: 254368 RVA: 0x00EFF113 File Offset: 0x00EFD313
+		// Token: 0x0603313A RID: 209210 RVA: 0x00E50DCF File Offset: 0x00E4EFCF
 		public override void ShowPreview(ITotalTopUpPreviewViewParam param)
 		{
 			this.ShowPreviewAsync(param).Forget();
 		}
 
-		// Token: 0x0603E1A1 RID: 254369 RVA: 0x00EFF124 File Offset: 0x00EFD324
+		// Token: 0x0603313B RID: 209211 RVA: 0x00E50DE0 File Offset: 0x00E4EFE0
 		private void OnClickPreview()
 		{
 			List<WeaponDataBase> list = new List<WeaponDataBase>();
@@ -63,11 +63,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 		}
 
-		// Token: 0x04020714 RID: 132884
+		// Token: 0x0401B1E6 RID: 111078
 		[Nullable(2)]
 		private TotalTopUpRecharge37InfoItem RechargeInfo;
 
-		// Token: 0x04020715 RID: 132885
+		// Token: 0x0401B1E7 RID: 111079
 		private List<int> TrailIdList = new List<int>();
 	}
 }

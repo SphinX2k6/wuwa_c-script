@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006423 RID: 25635
+	// Token: 0x020053A1 RID: 21409
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightAttrDetailView : UiViewBase
 	{
-		// Token: 0x06040757 RID: 264023 RVA: 0x00F991B8 File Offset: 0x00F973B8
+		// Token: 0x06035418 RID: 218136 RVA: 0x00EE0158 File Offset: 0x00EDE358
 		public MotorFightAttrDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040758 RID: 264024 RVA: 0x00F991D8 File Offset: 0x00F973D8
+		// Token: 0x06035419 RID: 218137 RVA: 0x00EE0178 File Offset: 0x00EDE378
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040759 RID: 264025 RVA: 0x00F99264 File Offset: 0x00F97464
+		// Token: 0x0603541A RID: 218138 RVA: 0x00EE0204 File Offset: 0x00EDE404
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightAttrDetailView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604075A RID: 264026 RVA: 0x00F992A8 File Offset: 0x00F974A8
+		// Token: 0x0603541B RID: 218139 RVA: 0x00EE0248 File Offset: 0x00EDE448
 		private List<MotorFightDetailAttrDetailData> GetAttrInfoByType(EMotorFightAttrShowType type)
 		{
 			List<MotorFightDetailAttrDetailData> result;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return list;
 		}
 
-		// Token: 0x0604075B RID: 264027 RVA: 0x00F99380 File Offset: 0x00F97580
+		// Token: 0x0603541C RID: 218140 RVA: 0x00EE0320 File Offset: 0x00EDE520
 		private void OnTabClickCallBack(EMotorFightAttrShowType type)
 		{
 			this.TabLayout.SelectGridProxyByKey(type, false);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			attrLayout.RefreshByData(attrInfoByType, null, false);
 		}
 
-		// Token: 0x0604075C RID: 264028 RVA: 0x00F993BA File Offset: 0x00F975BA
+		// Token: 0x0603541D RID: 218141 RVA: 0x00EE035A File Offset: 0x00EDE55A
 		private MotorFightAttrTabItem CreateTabItem()
 		{
 			return new MotorFightAttrTabItem
@@ -99,29 +99,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x0604075D RID: 264029 RVA: 0x00F993D3 File Offset: 0x00F975D3
+		// Token: 0x0603541E RID: 218142 RVA: 0x00EE0373 File Offset: 0x00EDE573
 		private MotorFightDetailAttrItem CreateAttrItem()
 		{
 			return new MotorFightDetailAttrItem();
 		}
 
-		// Token: 0x0604075E RID: 264030 RVA: 0x00F993DA File Offset: 0x00F975DA
+		// Token: 0x0603541F RID: 218143 RVA: 0x00EE037A File Offset: 0x00EDE57A
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021830 RID: 137264
+		// Token: 0x0401C15F RID: 115039
 		private readonly Dictionary<EMotorFightAttrShowType, List<MotorFightDetailAttrDetailData>> AttrInfoMap = new Dictionary<EMotorFightAttrShowType, List<MotorFightDetailAttrDetailData>>();
 
-		// Token: 0x04021831 RID: 137265
+		// Token: 0x0401C160 RID: 115040
 		private List<MotorFightAttrShow> AllAttrInfo = new List<MotorFightAttrShow>();
 
-		// Token: 0x04021832 RID: 137266
+		// Token: 0x0401C161 RID: 115041
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021833 RID: 137267
+		// Token: 0x0401C162 RID: 115042
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<MotorFightAttrTabItem, EMotorFightAttrShowType> TabLayout;
 
-		// Token: 0x04021834 RID: 137268
+		// Token: 0x0401C163 RID: 115043
 		[Nullable(new byte[]
 		{
 			2,
@@ -138,17 +138,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<MotorFightDetailAttrItem, MotorFightDetailAttrDetailData> AttrLayout;
 
-		// Token: 0x0200C651 RID: 50769
+		// Token: 0x0200B038 RID: 45112
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BDEF RID: 245231
+			// Token: 0x0403674C RID: 223052
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BDF0 RID: 245232
+			// Token: 0x0403674D RID: 223053
 			public const int LayoutAttrInfo = 1;
 
-			// Token: 0x0403BDF1 RID: 245233
+			// Token: 0x0403674E RID: 223054
 			public const int LayoutTab = 2;
 		}
 	}

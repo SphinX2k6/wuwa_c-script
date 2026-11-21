@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010CD RID: 4301
+	// Token: 0x020011C8 RID: 4552
 	public struct SlashAndTowerReward : IFlatbufferObject
 	{
-		// Token: 0x17003746 RID: 14150
-		// (get) Token: 0x0600D68A RID: 54922 RVA: 0x0031AF5D File Offset: 0x0031915D
+		// Token: 0x17003857 RID: 14423
+		// (get) Token: 0x0600DE67 RID: 56935 RVA: 0x00339ED6 File Offset: 0x003380D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D68B RID: 54923 RVA: 0x0031AF6A File Offset: 0x0031916A
+		// Token: 0x0600DE68 RID: 56936 RVA: 0x00339EE3 File Offset: 0x003380E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D68C RID: 54924 RVA: 0x0031AF74 File Offset: 0x00319174
+		// Token: 0x0600DE69 RID: 56937 RVA: 0x00339EEC File Offset: 0x003380EC
 		public static SlashAndTowerReward GetRootAsSlashAndTowerReward(ByteBuffer _bb)
 		{
 			return SlashAndTowerReward.GetRootAsSlashAndTowerReward(_bb, default(SlashAndTowerReward));
 		}
 
-		// Token: 0x0600D68D RID: 54925 RVA: 0x0031AF90 File Offset: 0x00319190
+		// Token: 0x0600DE6A RID: 56938 RVA: 0x00339F08 File Offset: 0x00338108
 		public static SlashAndTowerReward GetRootAsSlashAndTowerReward(ByteBuffer _bb, SlashAndTowerReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D68E RID: 54926 RVA: 0x0031AFAD File Offset: 0x003191AD
+		// Token: 0x0600DE6B RID: 56939 RVA: 0x00339F25 File Offset: 0x00338125
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D68F RID: 54927 RVA: 0x0031AFBC File Offset: 0x003191BC
+		// Token: 0x0600DE6C RID: 56940 RVA: 0x00339F34 File Offset: 0x00338134
 		public SlashAndTowerReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003747 RID: 14151
-		// (get) Token: 0x0600D690 RID: 54928 RVA: 0x0031AFCC File Offset: 0x003191CC
+		// Token: 0x17003858 RID: 14424
+		// (get) Token: 0x0600DE6D RID: 56941 RVA: 0x00339F44 File Offset: 0x00338144
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003748 RID: 14152
-		// (get) Token: 0x0600D691 RID: 54929 RVA: 0x0031B008 File Offset: 0x00319208
+		// Token: 0x17003859 RID: 14425
+		// (get) Token: 0x0600DE6E RID: 56942 RVA: 0x00339F80 File Offset: 0x00338180
 		public int BelongToSeason
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003749 RID: 14153
-		// (get) Token: 0x0600D692 RID: 54930 RVA: 0x0031B044 File Offset: 0x00319244
+		// Token: 0x1700385A RID: 14426
+		// (get) Token: 0x0600DE6F RID: 56943 RVA: 0x00339FBC File Offset: 0x003381BC
 		public int SumScore
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700374A RID: 14154
-		// (get) Token: 0x0600D693 RID: 54931 RVA: 0x0031B080 File Offset: 0x00319280
+		// Token: 0x1700385B RID: 14427
+		// (get) Token: 0x0600DE70 RID: 56944 RVA: 0x00339FF8 File Offset: 0x003381F8
 		public int RewardId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700374B RID: 14155
-		// (get) Token: 0x0600D694 RID: 54932 RVA: 0x0031B0C0 File Offset: 0x003192C0
+		// Token: 0x1700385C RID: 14428
+		// (get) Token: 0x0600DE71 RID: 56945 RVA: 0x0033A038 File Offset: 0x00338238
 		public string Desc
 		{
 			get
@@ -122,20 +122,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D695 RID: 54933 RVA: 0x0031B0F8 File Offset: 0x003192F8
+		// Token: 0x0600DE72 RID: 56946 RVA: 0x0033A070 File Offset: 0x00338270
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D696 RID: 54934 RVA: 0x0031B108 File Offset: 0x00319308
+		// Token: 0x0600DE73 RID: 56947 RVA: 0x0033A080 File Offset: 0x00338280
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700374C RID: 14156
-		// (get) Token: 0x0600D697 RID: 54935 RVA: 0x0031B120 File Offset: 0x00319320
+		// Token: 0x1700385D RID: 14429
+		// (get) Token: 0x0600DE74 RID: 56948 RVA: 0x0033A098 File Offset: 0x00338298
 		public bool EndLessReward
 		{
 			get
@@ -145,7 +145,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040051FF RID: 20991
+		// Token: 0x040057FE RID: 22526
 		private Table __p;
 	}
 }

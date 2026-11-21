@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B09 RID: 11017
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DFD RID: 11773
 	public class IElementalBoxTargetRelativePos : IElementalBoxTargetPosTypeBase
 	{
-		// Token: 0x0600F13C RID: 61756 RVA: 0x0022FC94 File Offset: 0x0022DE94
+		// Token: 0x0600FFF2 RID: 65522 RVA: 0x0024D9A0 File Offset: 0x0024BBA0
 		public static IElementalBoxTargetRelativePos Create(IElementalBoxTargetRelativePos? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CEC RID: 19692
-		// (get) Token: 0x0600F13D RID: 61757 RVA: 0x0022FCB3 File Offset: 0x0022DEB3
+		// Token: 0x170050A6 RID: 20646
+		// (get) Token: 0x0600FFF3 RID: 65523 RVA: 0x0024D9BF File Offset: 0x0024BBBF
 		public override EElementalBoxTargetPosType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CED RID: 19693
-		// (get) Token: 0x0600F13E RID: 61758 RVA: 0x0022FCC0 File Offset: 0x0022DEC0
+		// Token: 0x170050A7 RID: 20647
+		// (get) Token: 0x0600FFF4 RID: 65524 RVA: 0x0024D9CC File Offset: 0x0024BBCC
 		public virtual VectorInfo RelativePos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084A9 RID: 33961
+		// Token: 0x04008BAD RID: 35757
 		private IElementalBoxTargetRelativePos Instance;
 
-		// Token: 0x040084AA RID: 33962
+		// Token: 0x04008BAE RID: 35758
 		[Nullable(2)]
 		private VectorInfo _RelativePosCache;
 
-		// Token: 0x040084AB RID: 33963
+		// Token: 0x04008BAF RID: 35759
 		private bool _RelativePosInited;
 	}
 }

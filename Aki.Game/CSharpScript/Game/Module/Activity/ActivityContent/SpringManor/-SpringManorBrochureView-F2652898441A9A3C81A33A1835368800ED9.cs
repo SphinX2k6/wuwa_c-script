@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006086 RID: 24710
+	// Token: 0x02005004 RID: 20484
 	internal enum <SpringManorBrochureView>F2652898441A9A3C81A33A1835368800ED999B99BB4604F409A616930025F0E0E__EComponents
 	{
-		// Token: 0x04020AFD RID: 133885
+		// Token: 0x0401B42A RID: 111658
 		TextSlogan,
-		// Token: 0x04020AFE RID: 133886
+		// Token: 0x0401B42B RID: 111659
 		SvDefault,
-		// Token: 0x04020AFF RID: 133887
+		// Token: 0x0401B42C RID: 111660
 		ContentHorizontalLayout,
-		// Token: 0x04020B00 RID: 133888
+		// Token: 0x0401B42D RID: 111661
 		ItemTemplate,
-		// Token: 0x04020B01 RID: 133889
+		// Token: 0x0401B42E RID: 111662
 		UiItemCaption,
-		// Token: 0x04020B02 RID: 133890
+		// Token: 0x0401B42F RID: 111663
 		TxtValue
 	}
 }

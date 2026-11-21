@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066C8 RID: 26312
+	// Token: 0x02005618 RID: 22040
 	public static class EDropCatchResourceIdExtensions
 	{
-		// Token: 0x06041CD7 RID: 269527 RVA: 0x00FF5938 File Offset: 0x00FF3B38
+		// Token: 0x06036823 RID: 223267 RVA: 0x00F36D3C File Offset: 0x00F34F3C
 		public static string ToEnumString(this EDropCatchResourceId value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041CD8 RID: 269528 RVA: 0x00FF59A4 File Offset: 0x00FF3BA4
+		// Token: 0x06036824 RID: 223268 RVA: 0x00F36DA8 File Offset: 0x00F34FA8
 		public static EDropCatchResourceId FromString(string name)
 		{
 			EDropCatchResourceId result;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041CD9 RID: 269529 RVA: 0x00FF59D0 File Offset: 0x00FF3BD0
+		// Token: 0x06036825 RID: 223269 RVA: 0x00F36DD4 File Offset: 0x00F34FD4
 		public static bool TryFromString(string name, out EDropCatchResourceId value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return true;
 		}
 
-		// Token: 0x06041CDA RID: 269530 RVA: 0x00FF5A5C File Offset: 0x00FF3C5C
+		// Token: 0x06036826 RID: 223270 RVA: 0x00F36E60 File Offset: 0x00F35060
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041CDB RID: 269531 RVA: 0x00FF5A94 File Offset: 0x00FF3C94
+		// Token: 0x06036827 RID: 223271 RVA: 0x00F36E98 File Offset: 0x00F35098
 		public static EDropCatchResourceId[] GetValues()
 		{
 			return new EDropCatchResourceId[]
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041CDC RID: 269532 RVA: 0x00FF5AA7 File Offset: 0x00FF3CA7
+		// Token: 0x06036828 RID: 223272 RVA: 0x00F36EAB File Offset: 0x00F350AB
 		public static string[] GetNames()
 		{
 			return new string[]

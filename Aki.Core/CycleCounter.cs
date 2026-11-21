@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Typing;
 using UnrealEngine.Utils;
 
-// Token: 0x020000B7 RID: 183
+// Token: 0x020000B9 RID: 185
 [NullableContext(1)]
 [Nullable(0)]
 public class CycleCounter : Singleton
 {
-	// Token: 0x060005C7 RID: 1479 RVA: 0x0001F00C File Offset: 0x0001D20C
+	// Token: 0x06000608 RID: 1544 RVA: 0x0001F600 File Offset: 0x0001D800
 	public void RefreshState()
 	{
 		this.SwitchChanged = false;
@@ -34,8 +34,8 @@ public class CycleCounter : Singleton
 		}
 	}
 
-	// Token: 0x170000C9 RID: 201
-	// (get) Token: 0x060005C8 RID: 1480 RVA: 0x0001F092 File Offset: 0x0001D292
+	// Token: 0x170000DB RID: 219
+	// (get) Token: 0x06000609 RID: 1545 RVA: 0x0001F686 File Offset: 0x0001D886
 	public bool IsEnabled
 	{
 		get
@@ -44,19 +44,19 @@ public class CycleCounter : Singleton
 		}
 	}
 
-	// Token: 0x060005C9 RID: 1481 RVA: 0x0001F09A File Offset: 0x0001D29A
+	// Token: 0x0600060A RID: 1546 RVA: 0x0001F68E File Offset: 0x0001D88E
 	public void SetEnable(bool enabled)
 	{
 		this.EnabledNew = enabled;
 	}
 
-	// Token: 0x060005CA RID: 1482 RVA: 0x0001F0A3 File Offset: 0x0001D2A3
+	// Token: 0x0600060B RID: 1547 RVA: 0x0001F697 File Offset: 0x0001D897
 	public void SetNeedCheck(bool enable)
 	{
 		this.NeedCheckNew = enable;
 	}
 
-	// Token: 0x060005CB RID: 1483 RVA: 0x0001F0AC File Offset: 0x0001D2AC
+	// Token: 0x0600060C RID: 1548 RVA: 0x0001F6A0 File Offset: 0x0001D8A0
 	public void Start(string statName)
 	{
 		if (!this.Enabled)
@@ -67,7 +67,7 @@ public class CycleCounter : Singleton
 		this.CheckStart(statName);
 	}
 
-	// Token: 0x060005CC RID: 1484 RVA: 0x0001F0C9 File Offset: 0x0001D2C9
+	// Token: 0x0600060D RID: 1549 RVA: 0x0001F6BD File Offset: 0x0001D8BD
 	public void CheckStart(string statName)
 	{
 		if (this.NeedCheck)
@@ -76,7 +76,7 @@ public class CycleCounter : Singleton
 		}
 	}
 
-	// Token: 0x060005CD RID: 1485 RVA: 0x0001F0DF File Offset: 0x0001D2DF
+	// Token: 0x0600060E RID: 1550 RVA: 0x0001F6D3 File Offset: 0x0001D8D3
 	public void Stop(string statName)
 	{
 		if (!this.Enabled)
@@ -89,7 +89,7 @@ public class CycleCounter : Singleton
 		}
 	}
 
-	// Token: 0x060005CE RID: 1486 RVA: 0x0001F0F8 File Offset: 0x0001D2F8
+	// Token: 0x0600060F RID: 1551 RVA: 0x0001F6EC File Offset: 0x0001D8EC
 	public bool IsPassedStackCheck(string statName)
 	{
 		if (!this.NeedCheck)
@@ -139,8 +139,8 @@ public class CycleCounter : Singleton
 		return false;
 	}
 
-	// Token: 0x170000CA RID: 202
-	// (get) Token: 0x060005CF RID: 1487 RVA: 0x0001F228 File Offset: 0x0001D428
+	// Token: 0x170000DC RID: 220
+	// (get) Token: 0x06000610 RID: 1552 RVA: 0x0001F81C File Offset: 0x0001DA1C
 	public static CycleCounter Instance
 	{
 		get
@@ -154,12 +154,12 @@ public class CycleCounter : Singleton
 		}
 	}
 
-	// Token: 0x060005D0 RID: 1488 RVA: 0x0001F24B File Offset: 0x0001D44B
+	// Token: 0x06000611 RID: 1553 RVA: 0x0001F83F File Offset: 0x0001DA3F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060005D1 RID: 1489 RVA: 0x0001F24D File Offset: 0x0001D44D
+	// Token: 0x06000612 RID: 1554 RVA: 0x0001F841 File Offset: 0x0001DA41
 	public static void ResetStaticDefaultValue()
 	{
 		CycleCounter instance = CycleCounter._instance;
@@ -170,34 +170,34 @@ public class CycleCounter : Singleton
 		CycleCounter._instance = null;
 	}
 
-	// Token: 0x060005D2 RID: 1490 RVA: 0x0001F266 File Offset: 0x0001D466
+	// Token: 0x06000613 RID: 1555 RVA: 0x0001F85A File Offset: 0x0001DA5A
 	static CycleCounter()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CycleCounter.CreateStaticDefaultValue), new Action(CycleCounter.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040004AA RID: 1194
+	// Token: 0x040004B8 RID: 1208
 	public const int STAT_MAX_NAME_LENGTH = 800;
 
-	// Token: 0x040004AB RID: 1195
+	// Token: 0x040004B9 RID: 1209
 	private bool Enabled = KuroApplication.IsWithStat();
 
-	// Token: 0x040004AC RID: 1196
+	// Token: 0x040004BA RID: 1210
 	private bool EnabledNew = KuroApplication.IsWithStat();
 
-	// Token: 0x040004AD RID: 1197
+	// Token: 0x040004BB RID: 1211
 	private bool NeedCheck = !KuroApplication.IsBuildShipping();
 
-	// Token: 0x040004AE RID: 1198
+	// Token: 0x040004BC RID: 1212
 	private bool NeedCheckNew = !KuroApplication.IsBuildShipping();
 
-	// Token: 0x040004AF RID: 1199
+	// Token: 0x040004BD RID: 1213
 	private bool SwitchChanged;
 
-	// Token: 0x040004B0 RID: 1200
+	// Token: 0x040004BE RID: 1214
 	private readonly global::Stack<string> NameStack = new global::Stack<string>();
 
-	// Token: 0x040004B1 RID: 1201
+	// Token: 0x040004BF RID: 1215
 	[Nullable(2)]
 	private static CycleCounter _instance;
 }

@@ -5,19 +5,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging
 {
-	// Token: 0x02005642 RID: 22082
+	// Token: 0x02004618 RID: 17944
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ForgingConfig : ConfigBase
 	{
-		// Token: 0x06038244 RID: 229956 RVA: 0x00D4C616 File Offset: 0x00D4A816
+		// Token: 0x0602D142 RID: 184642 RVA: 0x00C9A35E File Offset: 0x00C9855E
 		public string GetLocalText(string id)
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(id, null) ?? "";
 		}
 
-		// Token: 0x06038245 RID: 229957 RVA: 0x00D4C628 File Offset: 0x00D4A828
+		// Token: 0x0602D143 RID: 184643 RVA: 0x00C9A370 File Offset: 0x00C98570
 		public ForgeFormula? GetForgeFormulaByFormulaItemId(int id)
 		{
 			ForgeFormula? config = ConfigForgeFormulaByFormulaItemId.GetConfig(id, true);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return config;
 		}
 
-		// Token: 0x06038246 RID: 229958 RVA: 0x00D4C678 File Offset: 0x00D4A878
+		// Token: 0x0602D144 RID: 184644 RVA: 0x00C9A3C0 File Offset: 0x00C985C0
 		public ForgeFormula? GetForgeFormulaById(int id)
 		{
 			ForgeFormula? config = ConfigForgeFormulaById.GetConfig(id, true);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return config;
 		}
 
-		// Token: 0x06038247 RID: 229959 RVA: 0x00D4C6C8 File Offset: 0x00D4A8C8
+		// Token: 0x0602D145 RID: 184645 RVA: 0x00C9A410 File Offset: 0x00C98610
 		[NullableContext(2)]
 		public IReadOnlyList<ForgeFormula> GetForgeList()
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return configList;
 		}
 
-		// Token: 0x06038248 RID: 229960 RVA: 0x00D4C700 File Offset: 0x00D4A900
+		// Token: 0x0602D146 RID: 184646 RVA: 0x00C9A448 File Offset: 0x00C98648
 		[NullableContext(2)]
 		public IReadOnlyList<ForgeFormula> GetForgeListByType(int type)
 		{
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return configList;
 		}
 
-		// Token: 0x17008739 RID: 34617
-		// (get) Token: 0x06038249 RID: 229961 RVA: 0x00D4C746 File Offset: 0x00D4A946
+		// Token: 0x17005B00 RID: 23296
+		// (get) Token: 0x0602D147 RID: 184647 RVA: 0x00C9A48E File Offset: 0x00C9868E
 		public static ForgingConfig Instance
 		{
 			get
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x0603824A RID: 229962 RVA: 0x00D4C74D File Offset: 0x00D4A94D
+		// Token: 0x0602D148 RID: 184648 RVA: 0x00C9A495 File Offset: 0x00C98695
 		public static ForgingConfig GetOrCreateInstance()
 		{
 			if (ForgingConfig._Instance == null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return ForgingConfig._Instance;
 		}
 
-		// Token: 0x0603824B RID: 229963 RVA: 0x00D4C761 File Offset: 0x00D4A961
+		// Token: 0x0602D149 RID: 184649 RVA: 0x00C9A4A9 File Offset: 0x00C986A9
 		public static bool CreateInstance()
 		{
 			if (ForgingConfig._Instance != null)
@@ -109,24 +109,24 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x0603824C RID: 229964 RVA: 0x00D4C777 File Offset: 0x00D4A977
+		// Token: 0x0602D14A RID: 184650 RVA: 0x00C9A4BF File Offset: 0x00C986BF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603824D RID: 229965 RVA: 0x00D4C779 File Offset: 0x00D4A979
+		// Token: 0x0602D14B RID: 184651 RVA: 0x00C9A4C1 File Offset: 0x00C986C1
 		public static void ResetStaticDefaultValue()
 		{
 			ForgingConfig._Instance = null;
 		}
 
-		// Token: 0x0603824E RID: 229966 RVA: 0x00D4C781 File Offset: 0x00D4A981
+		// Token: 0x0602D14C RID: 184652 RVA: 0x00C9A4C9 File Offset: 0x00C986C9
 		static ForgingConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ForgingConfig.CreateStaticDefaultValue), new Action(ForgingConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D889 RID: 120969
+		// Token: 0x04018314 RID: 99092
 		[Nullable(2)]
 		private static ForgingConfig _Instance;
 	}

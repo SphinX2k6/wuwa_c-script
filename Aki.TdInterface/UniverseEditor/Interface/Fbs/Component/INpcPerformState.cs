@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200563B RID: 22075
+	// Token: 0x02005BD9 RID: 23513
 	public struct INpcPerformState : IFlatbufferObject
 	{
-		// Token: 0x1700A388 RID: 41864
-		// (get) Token: 0x06024B05 RID: 150277 RVA: 0x00510646 File Offset: 0x0050E846
+		// Token: 0x1700AC12 RID: 44050
+		// (get) Token: 0x06026D24 RID: 159012 RVA: 0x00550F6A File Offset: 0x0054F16A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024B06 RID: 150278 RVA: 0x00510653 File Offset: 0x0050E853
+		// Token: 0x06026D25 RID: 159013 RVA: 0x00550F77 File Offset: 0x0054F177
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024B07 RID: 150279 RVA: 0x0051065C File Offset: 0x0050E85C
+		// Token: 0x06026D26 RID: 159014 RVA: 0x00550F80 File Offset: 0x0054F180
 		public static INpcPerformState GetRootAsINpcPerformState(ByteBuffer _bb)
 		{
 			return INpcPerformState.GetRootAsINpcPerformState(_bb, default(INpcPerformState));
 		}
 
-		// Token: 0x06024B08 RID: 150280 RVA: 0x00510678 File Offset: 0x0050E878
+		// Token: 0x06026D27 RID: 159015 RVA: 0x00550F9C File Offset: 0x0054F19C
 		public static INpcPerformState GetRootAsINpcPerformState(ByteBuffer _bb, INpcPerformState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024B09 RID: 150281 RVA: 0x00510695 File Offset: 0x0050E895
+		// Token: 0x06026D28 RID: 159016 RVA: 0x00550FB9 File Offset: 0x0054F1B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024B0A RID: 150282 RVA: 0x005106A4 File Offset: 0x0050E8A4
+		// Token: 0x06026D29 RID: 159017 RVA: 0x00550FC8 File Offset: 0x0054F1C8
 		public INpcPerformState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A389 RID: 41865
-		// (get) Token: 0x06024B0B RID: 150283 RVA: 0x005106B4 File Offset: 0x0050E8B4
+		// Token: 0x1700AC13 RID: 44051
+		// (get) Token: 0x06026D2A RID: 159018 RVA: 0x00550FD8 File Offset: 0x0054F1D8
 		public IInitNpcPerformState? InitState
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024B0C RID: 150284 RVA: 0x00510714 File Offset: 0x0050E914
+		// Token: 0x06026D2B RID: 159019 RVA: 0x00551038 File Offset: 0x0054F238
 		public INpcPerformStateConfig? Configs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new INpcPerformStateConfig?(default(INpcPerformStateConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A38A RID: 41866
-		// (get) Token: 0x06024B0D RID: 150285 RVA: 0x00510774 File Offset: 0x0050E974
+		// Token: 0x1700AC14 RID: 44052
+		// (get) Token: 0x06026D2C RID: 159020 RVA: 0x00551098 File Offset: 0x0054F298
 		public int ConfigsLength
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024B0E RID: 150286 RVA: 0x0051079F File Offset: 0x0050E99F
+		// Token: 0x06026D2D RID: 159021 RVA: 0x005510C3 File Offset: 0x0054F2C3
 		public static Offset<INpcPerformState> CreateINpcPerformState(FlatBufferBuilder builder, Offset<IInitNpcPerformState> InitStateOffset = default(Offset<IInitNpcPerformState>), VectorOffset ConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -99,25 +99,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcPerformState.EndINpcPerformState(builder);
 		}
 
-		// Token: 0x06024B0F RID: 150287 RVA: 0x005107BC File Offset: 0x0050E9BC
+		// Token: 0x06026D2E RID: 159022 RVA: 0x005510E0 File Offset: 0x0054F2E0
 		public static void StartINpcPerformState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06024B10 RID: 150288 RVA: 0x005107C5 File Offset: 0x0050E9C5
+		// Token: 0x06026D2F RID: 159023 RVA: 0x005510E9 File Offset: 0x0054F2E9
 		public static void AddInitState(FlatBufferBuilder builder, Offset<IInitNpcPerformState> initStateOffset)
 		{
 			builder.AddOffset(0, initStateOffset.Value, 0);
 		}
 
-		// Token: 0x06024B11 RID: 150289 RVA: 0x005107D5 File Offset: 0x0050E9D5
+		// Token: 0x06026D30 RID: 159024 RVA: 0x005510F9 File Offset: 0x0054F2F9
 		public static void AddConfigs(FlatBufferBuilder builder, VectorOffset configsOffset)
 		{
 			builder.AddOffset(1, configsOffset.Value, 0);
 		}
 
-		// Token: 0x06024B12 RID: 150290 RVA: 0x005107E8 File Offset: 0x0050E9E8
+		// Token: 0x06026D31 RID: 159025 RVA: 0x0055110C File Offset: 0x0054F30C
 		public static VectorOffset CreateConfigsVector(FlatBufferBuilder builder, Offset<INpcPerformStateConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024B13 RID: 150291 RVA: 0x00510828 File Offset: 0x0050EA28
+		// Token: 0x06026D32 RID: 159026 RVA: 0x0055114C File Offset: 0x0054F34C
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, Offset<INpcPerformStateConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024B14 RID: 150292 RVA: 0x00510842 File Offset: 0x0050EA42
+		// Token: 0x06026D33 RID: 159027 RVA: 0x00551166 File Offset: 0x0054F366
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<INpcPerformStateConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024B15 RID: 150293 RVA: 0x00510860 File Offset: 0x0050EA60
+		// Token: 0x06026D34 RID: 159028 RVA: 0x00551184 File Offset: 0x0054F384
 		public static VectorOffset CreateConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -152,19 +152,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06024B16 RID: 150294 RVA: 0x00510879 File Offset: 0x0050EA79
+		// Token: 0x06026D35 RID: 159029 RVA: 0x0055119D File Offset: 0x0054F39D
 		public static void StartConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06024B17 RID: 150295 RVA: 0x00510884 File Offset: 0x0050EA84
+		// Token: 0x06026D36 RID: 159030 RVA: 0x005511A8 File Offset: 0x0054F3A8
 		public static Offset<INpcPerformState> EndINpcPerformState(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcPerformState>(builder.EndTable());
 		}
 
-		// Token: 0x06024B18 RID: 150296 RVA: 0x00510894 File Offset: 0x0050EA94
+		// Token: 0x06026D37 RID: 159031 RVA: 0x005511B8 File Offset: 0x0054F3B8
 		public INpcPerformStateT UnPack()
 		{
 			INpcPerformStateT npcPerformStateT = new INpcPerformStateT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcPerformStateT;
 		}
 
-		// Token: 0x06024B19 RID: 150297 RVA: 0x005108B0 File Offset: 0x0050EAB0
+		// Token: 0x06026D38 RID: 159032 RVA: 0x005511D4 File Offset: 0x0054F3D4
 		public void UnPackTo(INpcPerformStateT _o)
 		{
 			_o.InitState = ((this.InitState != null) ? this.InitState.Value.UnPack() : null);
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024B1A RID: 150298 RVA: 0x00510940 File Offset: 0x0050EB40
+		// Token: 0x06026D39 RID: 159033 RVA: 0x00551264 File Offset: 0x0054F464
 		public static Offset<INpcPerformState> Pack(FlatBufferBuilder builder, INpcPerformStateT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcPerformState.CreateINpcPerformState(builder, initStateOffset, configsOffset);
 		}
 
-		// Token: 0x0400E9E0 RID: 59872
+		// Token: 0x0400F645 RID: 63045
 		private Table __p;
 	}
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D41 RID: 11585
+// Token: 0x0200229B RID: 8859
 public class WeeklyRogueSettleInfoPanelItem : GridProxyAbstract<WeeklyRogueSettleInfoItemData>
 {
-	// Token: 0x0601858C RID: 99724 RVA: 0x0063284C File Offset: 0x00630A4C
+	// Token: 0x06015E2E RID: 89646 RVA: 0x0065885C File Offset: 0x00656A5C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class WeeklyRogueSettleInfoPanelItem : GridProxyAbstract<WeeklyRogueSettl
 		};
 	}
 
-	// Token: 0x0601858D RID: 99725 RVA: 0x006328D4 File Offset: 0x00630AD4
+	// Token: 0x06015E2F RID: 89647 RVA: 0x006588E4 File Offset: 0x00656AE4
 	public override void Refresh(WeeklyRogueSettleInfoItemData data, bool isSelected, int gridIndex)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Title, Array.Empty<object>());
@@ -46,18 +46,18 @@ public class WeeklyRogueSettleInfoPanelItem : GridProxyAbstract<WeeklyRogueSettl
 		item.SetUIActive(data.IsScoreUp);
 	}
 
-	// Token: 0x020092CF RID: 37583
+	// Token: 0x020084F6 RID: 34038
 	private enum EWeeklyRogueSettleInfoPanelItemDefine
 	{
-		// Token: 0x0402F732 RID: 194354
+		// Token: 0x0402ADBA RID: 175546
 		SpriteBg,
-		// Token: 0x0402F733 RID: 194355
+		// Token: 0x0402ADBB RID: 175547
 		TxtTitle,
-		// Token: 0x0402F734 RID: 194356
+		// Token: 0x0402ADBC RID: 175548
 		TxtContent,
-		// Token: 0x0402F735 RID: 194357
+		// Token: 0x0402ADBD RID: 175549
 		ScoreUpItem,
-		// Token: 0x0402F736 RID: 194358
+		// Token: 0x0402ADBE RID: 175550
 		TxtScoreUp
 	}
 }

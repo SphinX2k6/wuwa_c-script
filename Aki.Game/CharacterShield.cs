@@ -1,10 +1,10 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02003085 RID: 12421
+// Token: 0x020025DC RID: 9692
 public class CharacterShield
 {
-	// Token: 0x0601A88A RID: 108682 RVA: 0x0071A87C File Offset: 0x00718A7C
+	// Token: 0x0601826D RID: 98925 RVA: 0x00740D10 File Offset: 0x0073EF10
 	public CharacterShield(int id, int templateId, float value)
 	{
 		this.Id = id;
@@ -26,21 +26,21 @@ public class CharacterShield
 		this.ShieldValue = value;
 	}
 
-	// Token: 0x0400CBCE RID: 52174
+	// Token: 0x0400CFB1 RID: 53169
 	public readonly int Priority;
 
-	// Token: 0x0400CBCF RID: 52175
+	// Token: 0x0400CFB2 RID: 53170
 	public float ShieldValue;
 
-	// Token: 0x0400CBD0 RID: 52176
+	// Token: 0x0400CFB3 RID: 53171
 	public int HandleId;
 
-	// Token: 0x0400CBD1 RID: 52177
+	// Token: 0x0400CFB4 RID: 53172
 	public readonly int Id;
 
-	// Token: 0x0400CBD2 RID: 52178
+	// Token: 0x0400CFB5 RID: 53173
 	public readonly int TemplateId;
 
-	// Token: 0x0400CBD3 RID: 52179
+	// Token: 0x0400CFB6 RID: 53174
 	public readonly float Value;
 }

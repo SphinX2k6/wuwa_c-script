@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -8,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200587C RID: 22652
+	// Token: 0x02004854 RID: 18516
 	public class InstanceDungeonMonsterGrid : GridProxyAbstract<int>
 	{
-		// Token: 0x06039A75 RID: 236149 RVA: 0x00DB3820 File Offset: 0x00DB1A20
+		// Token: 0x0602E998 RID: 190872 RVA: 0x00D02734 File Offset: 0x00D00934
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -29,13 +28,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039A76 RID: 236150 RVA: 0x00DB38CB File Offset: 0x00DB1ACB
+		// Token: 0x0602E999 RID: 190873 RVA: 0x00D027DF File Offset: 0x00D009DF
 		protected override void OnStart()
 		{
 			this.ElementLayout = new GenericLayout<TowerElementItem, int>(base.GetHorizontalLayout(3), new Func<TowerElementItem>(this.CreateElementItem), null, false, true);
 		}
 
-		// Token: 0x06039A77 RID: 236151 RVA: 0x00DB38F0 File Offset: 0x00DB1AF0
+		// Token: 0x0602E99A RID: 190874 RVA: 0x00D02804 File Offset: 0x00D00A04
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.CurrentMonsterId = data;
@@ -61,7 +60,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			LguiUtil.Instance.SetLocalText(base.GetText(1), "LevelText", new <>z__ReadOnlySingleElementList<object>(num));
 			string monsterIcon = MonsterInfoConfig.Instance.GetMonsterIcon(this.CurrentMonsterId);
 			base.SetTextureByPath(monsterIcon, base.GetTexture(2), null, null);
-			List<int> data2 = MonsterInfoConfig.Instance.GetMonsterInfoConfig(data).Value.ElementIdArrayIter().ToList<int>();
+			List<int> data2 = new List<int>(MonsterInfoConfig.Instance.GetMonsterInfoConfig(data).Value.ElementIdArrayIter());
 			GenericLayout<TowerElementItem, int> elementLayout = this.ElementLayout;
 			if (elementLayout == null)
 			{
@@ -70,20 +69,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			elementLayout.RefreshByData(data2, null, false);
 		}
 
-		// Token: 0x06039A78 RID: 236152 RVA: 0x00DB3A1F File Offset: 0x00DB1C1F
+		// Token: 0x0602E99B RID: 190875 RVA: 0x00D02933 File Offset: 0x00D00B33
 		[NullableContext(1)]
 		private TowerElementItem CreateElementItem()
 		{
 			return new TowerElementItem();
 		}
 
-		// Token: 0x0401E20D RID: 123405
+		// Token: 0x04018CAA RID: 101546
 		public int CurrentInstanceId;
 
-		// Token: 0x0401E20E RID: 123406
+		// Token: 0x04018CAB RID: 101547
 		private int CurrentMonsterId;
 
-		// Token: 0x0401E20F RID: 123407
+		// Token: 0x04018CAC RID: 101548
 		[Nullable(new byte[]
 		{
 			2,
@@ -91,19 +90,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private GenericLayout<TowerElementItem, int> ElementLayout;
 
-		// Token: 0x0200BAD6 RID: 47830
+		// Token: 0x0200A4EF RID: 42223
 		private static class EChildType
 		{
-			// Token: 0x0403875F RID: 231263
+			// Token: 0x04033160 RID: 209248
 			public const int NameText = 0;
 
-			// Token: 0x04038760 RID: 231264
+			// Token: 0x04033161 RID: 209249
 			public const int LevelText = 1;
 
-			// Token: 0x04038761 RID: 231265
+			// Token: 0x04033162 RID: 209250
 			public const int MonsterIcon = 2;
 
-			// Token: 0x04038762 RID: 231266
+			// Token: 0x04033163 RID: 209251
 			public const int ElementLayout = 3;
 		}
 	}

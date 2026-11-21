@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200751D RID: 29981
+	// Token: 0x02007D13 RID: 32019
 	public struct IVehicleExitPlayer : IFlatbufferObject
 	{
-		// Token: 0x1700E37E RID: 58238
-		// (get) Token: 0x0603687E RID: 223358 RVA: 0x00768790 File Offset: 0x00766990
+		// Token: 0x1700EFA8 RID: 61352
+		// (get) Token: 0x06039C94 RID: 236692 RVA: 0x007CBA38 File Offset: 0x007C9C38
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603687F RID: 223359 RVA: 0x0076879D File Offset: 0x0076699D
+		// Token: 0x06039C95 RID: 236693 RVA: 0x007CBA45 File Offset: 0x007C9C45
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036880 RID: 223360 RVA: 0x007687A4 File Offset: 0x007669A4
+		// Token: 0x06039C96 RID: 236694 RVA: 0x007CBA4C File Offset: 0x007C9C4C
 		public static IVehicleExitPlayer GetRootAsIVehicleExitPlayer(ByteBuffer _bb)
 		{
 			return IVehicleExitPlayer.GetRootAsIVehicleExitPlayer(_bb, default(IVehicleExitPlayer));
 		}
 
-		// Token: 0x06036881 RID: 223361 RVA: 0x007687C0 File Offset: 0x007669C0
+		// Token: 0x06039C97 RID: 236695 RVA: 0x007CBA68 File Offset: 0x007C9C68
 		public static IVehicleExitPlayer GetRootAsIVehicleExitPlayer(ByteBuffer _bb, IVehicleExitPlayer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036882 RID: 223362 RVA: 0x007687DD File Offset: 0x007669DD
+		// Token: 0x06039C98 RID: 236696 RVA: 0x007CBA85 File Offset: 0x007C9C85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036883 RID: 223363 RVA: 0x007687EC File Offset: 0x007669EC
+		// Token: 0x06039C99 RID: 236697 RVA: 0x007CBA94 File Offset: 0x007C9C94
 		public IVehicleExitPlayer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E37F RID: 58239
-		// (get) Token: 0x06036884 RID: 223364 RVA: 0x007687FC File Offset: 0x007669FC
+		// Token: 0x1700EFA9 RID: 61353
+		// (get) Token: 0x06039C9A RID: 236698 RVA: 0x007CBAA4 File Offset: 0x007C9CA4
 		public bool DestroyVehicle
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E380 RID: 58240
-		// (get) Token: 0x06036885 RID: 223365 RVA: 0x0076883C File Offset: 0x00766A3C
+		// Token: 0x1700EFAA RID: 61354
+		// (get) Token: 0x06039C9B RID: 236699 RVA: 0x007CBAE4 File Offset: 0x007C9CE4
 		public TExitVehicleType ExitTypeType
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036886 RID: 223366 RVA: 0x00768878 File Offset: 0x00766A78
+		// Token: 0x06039C9C RID: 236700 RVA: 0x007CBB20 File Offset: 0x007C9D20
 		public TTable? ExitType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -84,32 +84,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06036887 RID: 223367 RVA: 0x007688BC File Offset: 0x00766ABC
+		// Token: 0x06039C9D RID: 236701 RVA: 0x007CBB64 File Offset: 0x007C9D64
 		public IExitVehicleLaunch ExitTypeAsIExitVehicleLaunch()
 		{
 			return this.ExitType<IExitVehicleLaunch>().Value;
 		}
 
-		// Token: 0x06036888 RID: 223368 RVA: 0x007688D8 File Offset: 0x00766AD8
+		// Token: 0x06039C9E RID: 236702 RVA: 0x007CBB80 File Offset: 0x007C9D80
 		public IExitVehicleSeatStandUp ExitTypeAsIExitVehicleSeatStandUp()
 		{
 			return this.ExitType<IExitVehicleSeatStandUp>().Value;
 		}
 
-		// Token: 0x06036889 RID: 223369 RVA: 0x007688F4 File Offset: 0x00766AF4
+		// Token: 0x06039C9F RID: 236703 RVA: 0x007CBB9C File Offset: 0x007C9D9C
 		public IExitVehicleStandUp ExitTypeAsIExitVehicleStandUp()
 		{
 			return this.ExitType<IExitVehicleStandUp>().Value;
 		}
 
-		// Token: 0x0603688A RID: 223370 RVA: 0x00768910 File Offset: 0x00766B10
+		// Token: 0x06039CA0 RID: 236704 RVA: 0x007CBBB8 File Offset: 0x007C9DB8
 		public IExitVehicleTeleport ExitTypeAsIExitVehicleTeleport()
 		{
 			return this.ExitType<IExitVehicleTeleport>().Value;
 		}
 
-		// Token: 0x1700E381 RID: 58241
-		// (get) Token: 0x0603688B RID: 223371 RVA: 0x0076892C File Offset: 0x00766B2C
+		// Token: 0x1700EFAB RID: 61355
+		// (get) Token: 0x06039CA1 RID: 236705 RVA: 0x007CBBD4 File Offset: 0x007C9DD4
 		public byte NullMask
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603688C RID: 223372 RVA: 0x00768969 File Offset: 0x00766B69
+		// Token: 0x06039CA2 RID: 236706 RVA: 0x007CBC11 File Offset: 0x007C9E11
 		public static Offset<IVehicleExitPlayer> CreateIVehicleExitPlayer(FlatBufferBuilder builder, bool DestroyVehicle = false, TExitVehicleType ExitType_type = TExitVehicleType.NONE, int ExitTypeOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -134,43 +134,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehicleExitPlayer.EndIVehicleExitPlayer(builder);
 		}
 
-		// Token: 0x0603688D RID: 223373 RVA: 0x00768995 File Offset: 0x00766B95
+		// Token: 0x06039CA3 RID: 236707 RVA: 0x007CBC3D File Offset: 0x007C9E3D
 		public static void StartIVehicleExitPlayer(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0603688E RID: 223374 RVA: 0x0076899E File Offset: 0x00766B9E
+		// Token: 0x06039CA4 RID: 236708 RVA: 0x007CBC46 File Offset: 0x007C9E46
 		public static void AddDestroyVehicle(FlatBufferBuilder builder, bool destroyVehicle)
 		{
 			builder.AddBool(0, destroyVehicle, false);
 		}
 
-		// Token: 0x0603688F RID: 223375 RVA: 0x007689A9 File Offset: 0x00766BA9
+		// Token: 0x06039CA5 RID: 236709 RVA: 0x007CBC51 File Offset: 0x007C9E51
 		public static void AddExitTypeType(FlatBufferBuilder builder, TExitVehicleType exitTypeType)
 		{
 			builder.AddByte(1, (byte)exitTypeType, 0);
 		}
 
-		// Token: 0x06036890 RID: 223376 RVA: 0x007689B4 File Offset: 0x00766BB4
+		// Token: 0x06039CA6 RID: 236710 RVA: 0x007CBC5C File Offset: 0x007C9E5C
 		public static void AddExitType(FlatBufferBuilder builder, int exitTypeOffset)
 		{
 			builder.AddOffset(2, exitTypeOffset, 0);
 		}
 
-		// Token: 0x06036891 RID: 223377 RVA: 0x007689BF File Offset: 0x00766BBF
+		// Token: 0x06039CA7 RID: 236711 RVA: 0x007CBC67 File Offset: 0x007C9E67
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06036892 RID: 223378 RVA: 0x007689CA File Offset: 0x00766BCA
+		// Token: 0x06039CA8 RID: 236712 RVA: 0x007CBC72 File Offset: 0x007C9E72
 		public static Offset<IVehicleExitPlayer> EndIVehicleExitPlayer(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehicleExitPlayer>(builder.EndTable());
 		}
 
-		// Token: 0x06036893 RID: 223379 RVA: 0x007689D8 File Offset: 0x00766BD8
+		// Token: 0x06039CA9 RID: 236713 RVA: 0x007CBC80 File Offset: 0x007C9E80
 		public IVehicleExitPlayerT UnPack()
 		{
 			IVehicleExitPlayerT vehicleExitPlayerT = new IVehicleExitPlayerT();
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return vehicleExitPlayerT;
 		}
 
-		// Token: 0x06036894 RID: 223380 RVA: 0x007689F4 File Offset: 0x00766BF4
+		// Token: 0x06039CAA RID: 236714 RVA: 0x007CBC9C File Offset: 0x007C9E9C
 		public void UnPackTo(IVehicleExitPlayerT _o)
 		{
 			_o.DestroyVehicle = this.DestroyVehicle;
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06036895 RID: 223381 RVA: 0x00768B3C File Offset: 0x00766D3C
+		// Token: 0x06039CAB RID: 236715 RVA: 0x007CBDE4 File Offset: 0x007C9FE4
 		public static Offset<IVehicleExitPlayer> Pack(FlatBufferBuilder builder, IVehicleExitPlayerT _o)
 		{
 			if (_o == null)
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehicleExitPlayer.CreateIVehicleExitPlayer(builder, _o.DestroyVehicle, exitType_type, exitTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401240B RID: 74763
+		// Token: 0x0401343C RID: 78908
 		private Table __p;
 	}
 }

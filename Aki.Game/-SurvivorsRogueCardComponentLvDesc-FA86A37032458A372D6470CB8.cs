@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002ACA RID: 10954
+// Token: 0x02002046 RID: 8262
 internal enum <SurvivorsRogueCardComponentLvDesc>FA86A37032458A372D6470CB84D1A29A7D7096CEAC5864FB93424678FF2AD9BD5__EComponents
 {
-	// Token: 0x0400A958 RID: 43352
+	// Token: 0x0400AD5E RID: 44382
 	TxtDesc
 }

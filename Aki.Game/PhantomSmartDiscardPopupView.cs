@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FE2 RID: 8162
+// Token: 0x020014B5 RID: 5301
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomSmartDiscardPopupView : UiViewBase
 {
-	// Token: 0x0600FFCC RID: 65484 RVA: 0x003E4A6B File Offset: 0x003E2C6B
+	// Token: 0x0600D434 RID: 54324 RVA: 0x003F106B File Offset: 0x003EF26B
 	public PhantomSmartDiscardPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FFCD RID: 65485 RVA: 0x003E4A98 File Offset: 0x003E2C98
+	// Token: 0x0600D435 RID: 54325 RVA: 0x003F1098 File Offset: 0x003EF298
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -57,7 +57,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FFCE RID: 65486 RVA: 0x003E4C70 File Offset: 0x003E2E70
+	// Token: 0x0600D436 RID: 54326 RVA: 0x003F1270 File Offset: 0x003EF470
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomSmartDiscardPopupView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FFCF RID: 65487 RVA: 0x003E4CB3 File Offset: 0x003E2EB3
+	// Token: 0x0600D437 RID: 54327 RVA: 0x003F12B3 File Offset: 0x003EF4B3
 	protected override void OnBeforeShow()
 	{
 		this.InitPlanList();
@@ -76,7 +76,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		this.UpdateDiscardFilter();
 	}
 
-	// Token: 0x0600FFD0 RID: 65488 RVA: 0x003E4CC8 File Offset: 0x003E2EC8
+	// Token: 0x0600D438 RID: 54328 RVA: 0x003F12C8 File Offset: 0x003EF4C8
 	private void UpdateDiscardFilter()
 	{
 		this.DiscardPhantomList = this.CalculateDiscardList();
@@ -87,14 +87,14 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		base.GetButton(6).SetSelfInteractive(count > 0);
 	}
 
-	// Token: 0x0600FFD1 RID: 65489 RVA: 0x003E4D2C File Offset: 0x003E2F2C
+	// Token: 0x0600D439 RID: 54329 RVA: 0x003F132C File Offset: 0x003EF52C
 	private void InitPlanList()
 	{
 		this.DiscardPhantomRecommendList = this.ConfigData.GetPhantomSmartDiscardRecommendPlan();
 		this.DiscardPhantomUserPlanList = this.ConfigData.GetPhantomSmartDiscardUserPlan();
 	}
 
-	// Token: 0x0600FFD2 RID: 65490 RVA: 0x003E4D50 File Offset: 0x003E2F50
+	// Token: 0x0600D43A RID: 54330 RVA: 0x003F1350 File Offset: 0x003EF550
 	private void UpdateUserFilterToggleInteractive()
 	{
 		Dictionary<int, bool> isUsingMap = this.ConfigData.IsUsingMap;
@@ -121,7 +121,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FFD3 RID: 65491 RVA: 0x003E4DE8 File Offset: 0x003E2FE8
+	// Token: 0x0600D43B RID: 54331 RVA: 0x003F13E8 File Offset: 0x003EF5E8
 	private List<PhantomItemData> CalculateDiscardList()
 	{
 		HashSet<PhantomItemData> hashSet = new HashSet<PhantomItemData>();
@@ -147,13 +147,13 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600FFD4 RID: 65492 RVA: 0x003E4EE0 File Offset: 0x003E30E0
+	// Token: 0x0600D43C RID: 54332 RVA: 0x003F14E0 File Offset: 0x003EF6E0
 	private void OnClickHelpBtn()
 	{
 		HelpController.Instance.OpenHelpById(532);
 	}
 
-	// Token: 0x0600FFD5 RID: 65493 RVA: 0x003E4EF4 File Offset: 0x003E30F4
+	// Token: 0x0600D43D RID: 54333 RVA: 0x003F14F4 File Offset: 0x003EF6F4
 	private void OnClickChoose()
 	{
 		HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.PhantomDiscardPlanRecycleSet, null);
@@ -169,7 +169,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		InventoryController.Instance.OpenManageConfigNewView();
 	}
 
-	// Token: 0x0600FFD6 RID: 65494 RVA: 0x003E4F5C File Offset: 0x003E315C
+	// Token: 0x0600D43E RID: 54334 RVA: 0x003F155C File Offset: 0x003EF75C
 	private void OnToggleUserFilter(EToggleState state)
 	{
 		bool flag = FunctionModel.Instance.IsOpen(10096);
@@ -198,7 +198,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FFD7 RID: 65495 RVA: 0x003E5020 File Offset: 0x003E3220
+	// Token: 0x0600D43F RID: 54335 RVA: 0x003F1620 File Offset: 0x003EF820
 	private void OnToggleRecommendFilter(EToggleState state)
 	{
 		HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.PhantomDiscardPlanRecycleSet, null);
@@ -215,7 +215,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		this.UpdateDiscardFilter();
 	}
 
-	// Token: 0x0600FFD8 RID: 65496 RVA: 0x003E508C File Offset: 0x003E328C
+	// Token: 0x0600D440 RID: 54336 RVA: 0x003F168C File Offset: 0x003EF88C
 	private void OnClickConfirmBtn()
 	{
 		if (this.DiscardPhantomList.Count == 0)
@@ -226,7 +226,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		this.ShowConfirmPopup();
 	}
 
-	// Token: 0x0600FFD9 RID: 65497 RVA: 0x003E50B8 File Offset: 0x003E32B8
+	// Token: 0x0600D441 RID: 54337 RVA: 0x003F16B8 File Offset: 0x003EF8B8
 	private void ShowConfirmPopup()
 	{
 		PhantomDiscardPlanSmartDiscardConfirmReport logData = new PhantomDiscardPlanSmartDiscardConfirmReport();
@@ -277,7 +277,7 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomBatchConfirmPopupView, param, null);
 	}
 
-	// Token: 0x0600FFDA RID: 65498 RVA: 0x003E51A0 File Offset: 0x003E33A0
+	// Token: 0x0600D442 RID: 54338 RVA: 0x003F17A0 File Offset: 0x003EF9A0
 	private UniTask ExecuteBatchDiscard()
 	{
 		PhantomSmartDiscardPopupView.<ExecuteBatchDiscard>d__25 <ExecuteBatchDiscard>d__;
@@ -288,54 +288,54 @@ public class PhantomSmartDiscardPopupView : UiViewBase
 		return <ExecuteBatchDiscard>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04007655 RID: 30293
+	// Token: 0x0400773E RID: 30526
 	private const int HELP_ID = 532;
 
-	// Token: 0x04007656 RID: 30294
+	// Token: 0x0400773F RID: 30527
 	[Nullable(2)]
 	private IPhantomSmartDiscardViewData ViewData;
 
-	// Token: 0x04007657 RID: 30295
+	// Token: 0x04007740 RID: 30528
 	protected PhantomManagerConfigData ConfigData;
 
-	// Token: 0x04007658 RID: 30296
+	// Token: 0x04007741 RID: 30529
 	private bool UseUserFilter;
 
-	// Token: 0x04007659 RID: 30297
+	// Token: 0x04007742 RID: 30530
 	private bool UseRecommendFilter;
 
-	// Token: 0x0400765A RID: 30298
+	// Token: 0x04007743 RID: 30531
 	private List<PhantomItemData> DiscardPhantomRecommendList = new List<PhantomItemData>();
 
-	// Token: 0x0400765B RID: 30299
+	// Token: 0x04007744 RID: 30532
 	private List<PhantomItemData> DiscardPhantomUserPlanList = new List<PhantomItemData>();
 
-	// Token: 0x0400765C RID: 30300
+	// Token: 0x04007745 RID: 30533
 	private List<PhantomItemData> DiscardPhantomList = new List<PhantomItemData>();
 
-	// Token: 0x0400765D RID: 30301
+	// Token: 0x04007746 RID: 30534
 	private bool HasUserOnPlan;
 
-	// Token: 0x0400765E RID: 30302
+	// Token: 0x04007747 RID: 30535
 	private PhantomSmartDiscardPopupActivatePanel ActivatePanel;
 
-	// Token: 0x020085F3 RID: 34291
+	// Token: 0x0200777A RID: 30586
 	[NullableContext(0)]
 	private enum EPhantomSmartDiscardComp
 	{
-		// Token: 0x0402B991 RID: 178577
+		// Token: 0x04026CA0 RID: 158880
 		BtnHelpInfo,
-		// Token: 0x0402B992 RID: 178578
+		// Token: 0x04026CA1 RID: 158881
 		TogRecommendFilter,
-		// Token: 0x0402B993 RID: 178579
+		// Token: 0x04026CA2 RID: 158882
 		BtnChoose,
-		// Token: 0x0402B994 RID: 178580
+		// Token: 0x04026CA3 RID: 158883
 		TogUserFilter,
-		// Token: 0x0402B995 RID: 178581
+		// Token: 0x04026CA4 RID: 158884
 		PanelEmptyTips,
-		// Token: 0x0402B996 RID: 178582
+		// Token: 0x04026CA5 RID: 158885
 		TxtDiscardNumber,
-		// Token: 0x0402B997 RID: 178583
+		// Token: 0x04026CA6 RID: 158886
 		BtnConfirmA
 	}
 }

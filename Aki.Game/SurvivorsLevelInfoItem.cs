@@ -6,7 +6,7 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B18 RID: 11032
+// Token: 0x02002094 RID: 8340
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 {
-	// Token: 0x06016EBF RID: 93887 RVA: 0x005D11CC File Offset: 0x005CF3CC
+	// Token: 0x060148F0 RID: 84208 RVA: 0x005FDD48 File Offset: 0x005FBF48
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,14 +32,14 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		};
 	}
 
-	// Token: 0x06016EC0 RID: 93888 RVA: 0x005D12AA File Offset: 0x005CF4AA
+	// Token: 0x060148F1 RID: 84209 RVA: 0x005FDE26 File Offset: 0x005FC026
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		base.GetItem(7).SetUIActive(false);
 	}
 
-	// Token: 0x06016EC1 RID: 93889 RVA: 0x005D12CC File Offset: 0x005CF4CC
+	// Token: 0x060148F2 RID: 84210 RVA: 0x005FDE48 File Offset: 0x005FC048
 	public override void Refresh(ISurvivorsLevelInfo data, bool isSelected, int gridIndex)
 	{
 		this.LevelInfo = data;
@@ -74,7 +74,7 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		this.RefreshSpriteDiff(survivorsLevel.Value);
 	}
 
-	// Token: 0x06016EC2 RID: 93890 RVA: 0x005D1394 File Offset: 0x005CF594
+	// Token: 0x060148F3 RID: 84211 RVA: 0x005FDF10 File Offset: 0x005FC110
 	private void RefreshEndlessMode(SurvivorsLevel levelConfig)
 	{
 		ModeInfo info = this.LevelInfo.Info;
@@ -108,7 +108,7 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		this.SetSpriteByPath(levelUnlockState ? "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemBoss.SP_IconSurvivorLvItemBoss" : "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemLock.SP_IconSurvivorLvItemLock", sprite, false, null, null);
 	}
 
-	// Token: 0x06016EC3 RID: 93891 RVA: 0x005D149C File Offset: 0x005CF69C
+	// Token: 0x060148F4 RID: 84212 RVA: 0x005FE018 File Offset: 0x005FC218
 	private void RefreshNormalMode(SurvivorsLevel levelConfig)
 	{
 		ModeInfo info = this.LevelInfo.Info;
@@ -144,7 +144,7 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		this.SetSpriteByPath(levelUnlockState ? "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemLv.SP_IconSurvivorLvItemLv" : "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemLock.SP_IconSurvivorLvItemLock", sprite, false, null, null);
 	}
 
-	// Token: 0x06016EC4 RID: 93892 RVA: 0x005D15C4 File Offset: 0x005CF7C4
+	// Token: 0x060148F5 RID: 84213 RVA: 0x005FE140 File Offset: 0x005FC340
 	private void RefreshSpriteDiff(SurvivorsLevel levelConfig)
 	{
 		string path = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_SurvivorLvItemBlur.SP_SurvivorLvItemBlur";
@@ -163,7 +163,7 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		this.SetSpriteByPath(path, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x06016EC5 RID: 93893 RVA: 0x005D1624 File Offset: 0x005CF824
+	// Token: 0x060148F6 RID: 84214 RVA: 0x005FE1A0 File Offset: 0x005FC3A0
 	private void RefreshLockState(bool isInit = true)
 	{
 		int levelId = this.LevelInfo.LevelId;
@@ -180,7 +180,7 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		}
 	}
 
-	// Token: 0x06016EC6 RID: 93894 RVA: 0x005D16A8 File Offset: 0x005CF8A8
+	// Token: 0x060148F7 RID: 84215 RVA: 0x005FE224 File Offset: 0x005FC424
 	public void SetSaveFile(SurvivorsActivityDefine.SurvivorsLevelInfo saveFile)
 	{
 		if (saveFile.LevelId == this.LevelInfo.LevelId)
@@ -196,7 +196,7 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		base.GetItem(7).SetUIActive(false);
 	}
 
-	// Token: 0x06016EC7 RID: 93895 RVA: 0x005D1720 File Offset: 0x005CF920
+	// Token: 0x060148F8 RID: 84216 RVA: 0x005FE29C File Offset: 0x005FC49C
 	public void OnTick(float deltaTime)
 	{
 		if (this.LevelInfo == null)
@@ -210,59 +210,59 @@ public class SurvivorsLevelInfoItem : GridProxyAbstract<ISurvivorsLevelInfo>
 		this.RefreshLockState(false);
 	}
 
-	// Token: 0x06016EC8 RID: 93896 RVA: 0x005D173C File Offset: 0x005CF93C
+	// Token: 0x060148F9 RID: 84217 RVA: 0x005FE2B8 File Offset: 0x005FC4B8
 	public void PlaySequenceByName(ESurvivorsLevelInfoSeqName seqName)
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName(seqName.ToString(), true, null, false);
 	}
 
-	// Token: 0x06016EC9 RID: 93897 RVA: 0x005D176C File Offset: 0x005CF96C
+	// Token: 0x060148FA RID: 84218 RVA: 0x005FE2E8 File Offset: 0x005FC4E8
 	public override object GetKey(ISurvivorsLevelInfo data, int displayIndex)
 	{
 		return data.LevelId;
 	}
 
-	// Token: 0x0400AA72 RID: 43634
+	// Token: 0x0400AE78 RID: 44664
 	private const string SPRITE_STATE_EASY = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_SurvivorLvItemBlur.SP_SurvivorLvItemBlur";
 
-	// Token: 0x0400AA73 RID: 43635
+	// Token: 0x0400AE79 RID: 44665
 	private const string SPRITE_STATE_NORMAL = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_SurvivorLvItemPurple.SP_SurvivorLvItemPurple";
 
-	// Token: 0x0400AA74 RID: 43636
+	// Token: 0x0400AE7A RID: 44666
 	private const string SPRITE_STATE_CHALLENGE = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_SurvivorLvItemRed.SP_SurvivorLvItemRed";
 
-	// Token: 0x0400AA75 RID: 43637
+	// Token: 0x0400AE7B RID: 44667
 	private const string SPRITE_STATE_ICON_LOCK = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemLock.SP_IconSurvivorLvItemLock";
 
-	// Token: 0x0400AA76 RID: 43638
+	// Token: 0x0400AE7C RID: 44668
 	private const string SPRITE_STATE_ICON_NORMAL = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemLv.SP_IconSurvivorLvItemLv";
 
-	// Token: 0x0400AA77 RID: 43639
+	// Token: 0x0400AE7D RID: 44669
 	private const string SPRITE_STATE_ICON_ENDLESS = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Level1/SP_IconSurvivorLvItemBoss.SP_IconSurvivorLvItemBoss";
 
-	// Token: 0x0400AA78 RID: 43640
+	// Token: 0x0400AE7E RID: 44670
 	private const string INFO_FINISHED = "SurvivorsLevelSelection_CustomsClearanceTips";
 
-	// Token: 0x0400AA79 RID: 43641
+	// Token: 0x0400AE7F RID: 44671
 	private const string INFO_ENDLESS_OPEN = "SurvivorsLevelSelection_EndlessTips";
 
-	// Token: 0x0400AA7A RID: 43642
+	// Token: 0x0400AE80 RID: 44672
 	private const string INFO_WAVE = "SurvivorsLevelSelection_ProgressTips";
 
-	// Token: 0x0400AA7B RID: 43643
+	// Token: 0x0400AE81 RID: 44673
 	private const string INFO_LOCK_TIME = "SurvivorsLevelSelection_UnlockTimeTips";
 
-	// Token: 0x0400AA7C RID: 43644
+	// Token: 0x0400AE82 RID: 44674
 	private const string INFO_KILL_COUNT = "SurvivorsLevelSelection_KillNumberTips";
 
-	// Token: 0x0400AA7D RID: 43645
+	// Token: 0x0400AE83 RID: 44675
 	[Nullable(2)]
 	protected ISurvivorsLevelInfo LevelInfo;
 
-	// Token: 0x0400AA7E RID: 43646
+	// Token: 0x0400AE84 RID: 44676
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AA7F RID: 43647
+	// Token: 0x0400AE85 RID: 44677
 	private bool IsTimeUnlock;
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200338F RID: 13199
+// Token: 0x02002901 RID: 10497
 public class RedDotFlagChallengeBattleBuffNewlyUnlocked : RedDotBase
 {
-	// Token: 0x0601CAD4 RID: 117460 RVA: 0x00806D54 File Offset: 0x00804F54
+	// Token: 0x0601A7CC RID: 108492 RVA: 0x0082D318 File Offset: 0x0082B518
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnFlagChallengeBattleBuffNewlyUnlock, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CAD5 RID: 117461 RVA: 0x00806D72 File Offset: 0x00804F72
+	// Token: 0x0601A7CD RID: 108493 RVA: 0x0082D336 File Offset: 0x0082B536
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFlagChallengeBattleBuffNewlyUnlock, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CAD6 RID: 117462 RVA: 0x00806D90 File Offset: 0x00804F90
+	// Token: 0x0601A7CE RID: 108494 RVA: 0x0082D354 File Offset: 0x0082B554
 	protected override bool OnCheck(int uId = 0)
 	{
 		return false;

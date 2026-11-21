@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D87 RID: 7559
+	// Token: 0x02001F98 RID: 8088
 	public class IRandomPrefabConfig_SetValue
 	{
-		// Token: 0x04006163 RID: 24931
+		// Token: 0x040066DF RID: 26335
 		public ECreatePrefabType Type;
 
-		// Token: 0x04006164 RID: 24932
+		// Token: 0x040066E0 RID: 26336
 		public int RandomPrefabId;
 	}
 }

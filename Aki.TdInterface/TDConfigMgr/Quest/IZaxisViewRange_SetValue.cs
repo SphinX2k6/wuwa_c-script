@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200121B RID: 4635
+	// Token: 0x02001357 RID: 4951
 	public class IZaxisViewRange_SetValue
 	{
-		// Token: 0x04003ED8 RID: 16088
+		// Token: 0x04004246 RID: 16966
 		public int? Up;
 
-		// Token: 0x04003ED9 RID: 16089
+		// Token: 0x04004247 RID: 16967
 		public int? Down;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002EE5 RID: 12005
+// Token: 0x02002438 RID: 9272
 public enum ETagChannel
 {
-	// Token: 0x0400C021 RID: 49185
+	// Token: 0x0400C3BC RID: 50108
 	Common = 1,
-	// Token: 0x0400C022 RID: 49186
+	// Token: 0x0400C3BD RID: 50109
 	BattleBuff,
-	// Token: 0x0400C023 RID: 49187
+	// Token: 0x0400C3BE RID: 50110
 	LevelServer,
-	// Token: 0x0400C024 RID: 49188
+	// Token: 0x0400C3BF RID: 50111
 	Anim,
-	// Token: 0x0400C025 RID: 49189
+	// Token: 0x0400C3C0 RID: 50112
 	Player,
-	// Token: 0x0400C026 RID: 49190
+	// Token: 0x0400C3C1 RID: 50113
 	Frozen,
-	// Token: 0x0400C027 RID: 49191
+	// Token: 0x0400C3C2 RID: 50114
 	PassiveSkill
 }

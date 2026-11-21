@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000907 RID: 2311
+	// Token: 0x02000952 RID: 2386
 	public class ConfigSettleFlagAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600363D RID: 13885 RVA: 0x0018BF30 File Offset: 0x0018A130
+		// Token: 0x060037FF RID: 14335 RVA: 0x00199150 File Offset: 0x00197350
 		static ConfigSettleFlagAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSettleFlagAll.CreateStaticDefaultValue), new Action(ConfigSettleFlagAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600363E RID: 13886 RVA: 0x0018BF50 File Offset: 0x0018A150
+		// Token: 0x06003800 RID: 14336 RVA: 0x00199170 File Offset: 0x00197370
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSettleFlagAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600363F RID: 13887 RVA: 0x0018BFCF File Offset: 0x0018A1CF
+		// Token: 0x06003801 RID: 14337 RVA: 0x001991EF File Offset: 0x001973EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSettleFlagAll.LogPair = null;
 			ConfigSettleFlagAll.HandleId = 0;
 		}
 
-		// Token: 0x06003640 RID: 13888 RVA: 0x0018BFDD File Offset: 0x0018A1DD
+		// Token: 0x06003802 RID: 14338 RVA: 0x001991FD File Offset: 0x001973FD
 		public static void Init()
 		{
 			ConfigSettleFlagAll.HandleId = ConfigCommon.InitDataStatement(ConfigSettleFlagAll.HandleId, "db_teamparkour.db", "select BinData from `SettleFlag`");
 		}
 
-		// Token: 0x06003641 RID: 13889 RVA: 0x0018BFF8 File Offset: 0x0018A1F8
+		// Token: 0x06003803 RID: 14339 RVA: 0x00199218 File Offset: 0x00197418
 		[NullableContext(2)]
 		public static IReadOnlyList<SettleFlag> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003F17 RID: 16151
+		// Token: 0x04004124 RID: 16676
 		private const string DB = "db_teamparkour.db";
 
-		// Token: 0x04003F18 RID: 16152
+		// Token: 0x04004125 RID: 16677
 		private const string FILE = "l.联机跑酷活动.xlsx";
 
-		// Token: 0x04003F19 RID: 16153
+		// Token: 0x04004126 RID: 16678
 		private const string TABLE = "SettleFlag";
 
-		// Token: 0x04003F1A RID: 16154
+		// Token: 0x04004127 RID: 16679
 		private const string COMMAND = "select BinData from `SettleFlag`";
 
-		// Token: 0x04003F1B RID: 16155
+		// Token: 0x04004128 RID: 16680
 		private const string KEY_PREFIX = "SettleFlagAll";
 
-		// Token: 0x04003F1C RID: 16156
+		// Token: 0x04004129 RID: 16681
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F1D RID: 16157
+		// Token: 0x0400412A RID: 16682
 		private static int HandleId;
 	}
 }

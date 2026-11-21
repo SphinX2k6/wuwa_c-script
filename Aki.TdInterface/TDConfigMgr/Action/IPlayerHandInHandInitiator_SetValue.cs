@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D03 RID: 7427
+	// Token: 0x02001F14 RID: 7956
 	public class IPlayerHandInHandInitiator_SetValue
 	{
-		// Token: 0x0400603A RID: 24634
+		// Token: 0x040065B3 RID: 26035
 		public EHandInHandInitiatorType Type;
 	}
 }

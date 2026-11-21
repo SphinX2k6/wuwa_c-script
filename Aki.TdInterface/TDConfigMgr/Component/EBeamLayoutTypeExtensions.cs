@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000900 RID: 2304
+	// Token: 0x020009A9 RID: 2473
 	public static class EBeamLayoutTypeExtensions
 	{
-		// Token: 0x06003431 RID: 13361 RVA: 0x00085594 File Offset: 0x00083794
+		// Token: 0x0600378B RID: 14219 RVA: 0x0008CE04 File Offset: 0x0008B004
 		public static string ToEnumString(this EBeamLayoutType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003432 RID: 13362 RVA: 0x000855BC File Offset: 0x000837BC
+		// Token: 0x0600378C RID: 14220 RVA: 0x0008CE2C File Offset: 0x0008B02C
 		public static EBeamLayoutType FromString(string name)
 		{
 			EBeamLayoutType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003433 RID: 13363 RVA: 0x000855E5 File Offset: 0x000837E5
+		// Token: 0x0600378D RID: 14221 RVA: 0x0008CE55 File Offset: 0x0008B055
 		public static bool TryFromString(string name, out EBeamLayoutType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003434 RID: 13364 RVA: 0x0008560A File Offset: 0x0008380A
+		// Token: 0x0600378E RID: 14222 RVA: 0x0008CE7A File Offset: 0x0008B07A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003435 RID: 13365 RVA: 0x0008561A File Offset: 0x0008381A
+		// Token: 0x0600378F RID: 14223 RVA: 0x0008CE8A File Offset: 0x0008B08A
 		public static EBeamLayoutType[] GetValues()
 		{
 			return new EBeamLayoutType[1];
 		}
 
-		// Token: 0x06003436 RID: 13366 RVA: 0x00085622 File Offset: 0x00083822
+		// Token: 0x06003790 RID: 14224 RVA: 0x0008CE92 File Offset: 0x0008B092
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -4,16 +4,16 @@ using CSharpScript.Game.NewWorld.SceneItem.Jigsaw;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071EA RID: 29162
+	// Token: 0x0200629F RID: 25247
 	public class SceneItemManipulableMatchJigsawBaseState : SceneItemManipulableMatchOutletState
 	{
-		// Token: 0x06047615 RID: 292373 RVA: 0x01228B01 File Offset: 0x01226D01
+		// Token: 0x0603CF17 RID: 249623 RVA: 0x01182939 File Offset: 0x01180B39
 		[NullableContext(1)]
 		public SceneItemManipulableMatchJigsawBaseState(SceneItemManipulatableComponent SceneItem) : base(SceneItem)
 		{
 		}
 
-		// Token: 0x06047616 RID: 292374 RVA: 0x01228B0C File Offset: 0x01226D0C
+		// Token: 0x0603CF18 RID: 249624 RVA: 0x01182944 File Offset: 0x01180B44
 		protected override void OnEnter()
 		{
 			this.SceneItem.TryAddTagById(this.GetIsCorrect() ? GameplayTagDefine.EGameplayTagId["关卡.Common.属性.底座中.正确"] : GameplayTagDefine.EGameplayTagId["关卡.Common.属性.底座中.错误"]);
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			base.OpenPhysicsSplit();
 		}
 
-		// Token: 0x06047617 RID: 292375 RVA: 0x01228B5E File Offset: 0x01226D5E
+		// Token: 0x0603CF19 RID: 249625 RVA: 0x01182996 File Offset: 0x01180B96
 		protected override void OnExit()
 		{
 			this.SceneItem.TryRemoveTagById(GameplayTagDefine.EGameplayTagId["关卡.Common.属性.底座中.正确"]);
@@ -29,11 +29,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			base.ClosePhysicsSplit();
 		}
 
-		// Token: 0x06047618 RID: 292376 RVA: 0x01228B9C File Offset: 0x01226D9C
+		// Token: 0x0603CF1A RID: 249626 RVA: 0x011829D4 File Offset: 0x01180BD4
 		private bool GetIsCorrect()
 		{
 			SceneItemJigsawItemComponent component = this.SceneItem.Entity.GetComponent<SceneItemJigsawItemComponent>();
-			return this.SceneItem.ActivatedOutlet.GetIsCorrect(this.SceneItem.Entity, component.PutDownIndex);
+			SceneItemJigsawBaseComponent putDownBase = component.PutDownBase;
+			JigsawIndex index = (putDownBase != null && putDownBase.Valid) ? component.PutDownIndex : null;
+			return this.SceneItem.ActivatedOutlet.GetIsCorrect(this.SceneItem.Entity, index);
 		}
 	}
 }

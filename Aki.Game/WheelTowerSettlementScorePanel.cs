@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015E6 RID: 5606
+// Token: 0x02000A9E RID: 2718
 public class WheelTowerSettlementScorePanel : UiPanelBase
 {
-	// Token: 0x06009E60 RID: 40544 RVA: 0x002288E4 File Offset: 0x00226AE4
+	// Token: 0x0600723E RID: 29246 RVA: 0x00232698 File Offset: 0x00230898
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -42,7 +42,7 @@ public class WheelTowerSettlementScorePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E61 RID: 40545 RVA: 0x00228A9C File Offset: 0x00226C9C
+	// Token: 0x0600723F RID: 29247 RVA: 0x00232850 File Offset: 0x00230A50
 	public void RefreshRoundWave(bool isEndless, int curBossRound, int curBossWave, int maxBossWave)
 	{
 		string textStringId = isEndless ? "WheelTower_Settlement_RoundScore" : "WheelTower_Settlement_RoundScore_Normal";
@@ -63,7 +63,7 @@ public class WheelTowerSettlementScorePanel : UiPanelBase
 		}));
 	}
 
-	// Token: 0x06009E62 RID: 40546 RVA: 0x00228B26 File Offset: 0x00226D26
+	// Token: 0x06007240 RID: 29248 RVA: 0x002328DA File Offset: 0x00230ADA
 	public void RefreshTotalScore(int score)
 	{
 		UUIText text = base.GetText(3);
@@ -74,7 +74,7 @@ public class WheelTowerSettlementScorePanel : UiPanelBase
 		text.SetText(score.ToString(), true);
 	}
 
-	// Token: 0x06009E63 RID: 40547 RVA: 0x00228B44 File Offset: 0x00226D44
+	// Token: 0x06007241 RID: 29249 RVA: 0x002328F8 File Offset: 0x00230AF8
 	public void RefreshScoreLevel(int scoreLevel)
 	{
 		NewTowerScoreLevel? scoreLevelConfigById = WheelTowerConfig.Instance.GetScoreLevelConfigById(scoreLevel);

@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071A3 RID: 29091
+	// Token: 0x02006258 RID: 25176
 	[NullableContext(2)]
 	public interface IEffectVisibilityRecord
 	{
-		// Token: 0x17009D9E RID: 40350
-		// (get) Token: 0x060472FF RID: 291583
-		// (set) Token: 0x06047300 RID: 291584
+		// Token: 0x170072EB RID: 29419
+		// (get) Token: 0x0603CBF7 RID: 248823
+		// (set) Token: 0x0603CBF8 RID: 248824
 		[Nullable(1)]
 		DragPlayEffectVisibilityProvider Provider { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17009D9F RID: 40351
-		// (get) Token: 0x06047301 RID: 291585
-		// (set) Token: 0x06047302 RID: 291586
+		// Token: 0x170072EC RID: 29420
+		// (get) Token: 0x0603CBF9 RID: 248825
+		// (set) Token: 0x0603CBFA RID: 248826
 		IGuidePathVisibilityHost Attached { get; set; }
 
-		// Token: 0x17009DA0 RID: 40352
-		// (get) Token: 0x06047303 RID: 291587
-		// (set) Token: 0x06047304 RID: 291588
+		// Token: 0x170072ED RID: 29421
+		// (get) Token: 0x0603CBFB RID: 248827
+		// (set) Token: 0x0603CBFC RID: 248828
 		Action CancelPending { get; set; }
 	}
 }

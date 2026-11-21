@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005096 RID: 20630
+	// Token: 0x020055FB RID: 22011
 	public struct IDollGrabInfiniteModeData : IFlatbufferObject
 	{
-		// Token: 0x170095D3 RID: 38355
-		// (get) Token: 0x060211D1 RID: 135633 RVA: 0x00499E14 File Offset: 0x00498014
+		// Token: 0x17009DC0 RID: 40384
+		// (get) Token: 0x06023125 RID: 143653 RVA: 0x004D3DA0 File Offset: 0x004D1FA0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211D2 RID: 135634 RVA: 0x00499E21 File Offset: 0x00498021
+		// Token: 0x06023126 RID: 143654 RVA: 0x004D3DAD File Offset: 0x004D1FAD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060211D3 RID: 135635 RVA: 0x00499E28 File Offset: 0x00498028
+		// Token: 0x06023127 RID: 143655 RVA: 0x004D3DB4 File Offset: 0x004D1FB4
 		public static IDollGrabInfiniteModeData GetRootAsIDollGrabInfiniteModeData(ByteBuffer _bb)
 		{
 			return IDollGrabInfiniteModeData.GetRootAsIDollGrabInfiniteModeData(_bb, default(IDollGrabInfiniteModeData));
 		}
 
-		// Token: 0x060211D4 RID: 135636 RVA: 0x00499E44 File Offset: 0x00498044
+		// Token: 0x06023128 RID: 143656 RVA: 0x004D3DD0 File Offset: 0x004D1FD0
 		public static IDollGrabInfiniteModeData GetRootAsIDollGrabInfiniteModeData(ByteBuffer _bb, IDollGrabInfiniteModeData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060211D5 RID: 135637 RVA: 0x00499E61 File Offset: 0x00498061
+		// Token: 0x06023129 RID: 143657 RVA: 0x004D3DED File Offset: 0x004D1FED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060211D6 RID: 135638 RVA: 0x00499E70 File Offset: 0x00498070
+		// Token: 0x0602312A RID: 143658 RVA: 0x004D3DFC File Offset: 0x004D1FFC
 		public IDollGrabInfiniteModeData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x060211D7 RID: 135639 RVA: 0x00499E80 File Offset: 0x00498080
+		// Token: 0x0602312B RID: 143659 RVA: 0x004D3E0C File Offset: 0x004D200C
 		public IDollGrabStandbyPoolItem? StandbyItemPool(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IDollGrabStandbyPoolItem?(default(IDollGrabStandbyPoolItem).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170095D4 RID: 38356
-		// (get) Token: 0x060211D8 RID: 135640 RVA: 0x00499EE0 File Offset: 0x004980E0
+		// Token: 0x17009DC1 RID: 40385
+		// (get) Token: 0x0602312C RID: 143660 RVA: 0x004D3E6C File Offset: 0x004D206C
 		public int StandbyItemPoolLength
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095D5 RID: 38357
-		// (get) Token: 0x060211D9 RID: 135641 RVA: 0x00499F0C File Offset: 0x0049810C
+		// Token: 0x17009DC2 RID: 40386
+		// (get) Token: 0x0602312D RID: 143661 RVA: 0x004D3E98 File Offset: 0x004D2098
 		public string RefreshIntervalCurve
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211DA RID: 135642 RVA: 0x00499F43 File Offset: 0x00498143
+		// Token: 0x0602312E RID: 143662 RVA: 0x004D3ECF File Offset: 0x004D20CF
 		public Span<byte> GetRefreshIntervalCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060211DB RID: 135643 RVA: 0x00499F52 File Offset: 0x00498152
+		// Token: 0x0602312F RID: 143663 RVA: 0x004D3EDE File Offset: 0x004D20DE
 		public byte[] GetRefreshIntervalCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060211DC RID: 135644 RVA: 0x00499F60 File Offset: 0x00498160
+		// Token: 0x06023130 RID: 143664 RVA: 0x004D3EEC File Offset: 0x004D20EC
 		public IDollGrabInfiniteStageConfig? StageConfigs(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IDollGrabInfiniteStageConfig?(default(IDollGrabInfiniteStageConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170095D6 RID: 38358
-		// (get) Token: 0x060211DD RID: 135645 RVA: 0x00499FC0 File Offset: 0x004981C0
+		// Token: 0x17009DC3 RID: 40387
+		// (get) Token: 0x06023131 RID: 143665 RVA: 0x004D3F4C File Offset: 0x004D214C
 		public int StageConfigsLength
 		{
 			get
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211DE RID: 135646 RVA: 0x00499FEC File Offset: 0x004981EC
+		// Token: 0x06023132 RID: 143666 RVA: 0x004D3F78 File Offset: 0x004D2178
 		public IDollGrabInfiniteScoreReward? ScoreRewards(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IDollGrabInfiniteScoreReward?(default(IDollGrabInfiniteScoreReward).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170095D7 RID: 38359
-		// (get) Token: 0x060211DF RID: 135647 RVA: 0x0049A050 File Offset: 0x00498250
+		// Token: 0x17009DC4 RID: 40388
+		// (get) Token: 0x06023133 RID: 143667 RVA: 0x004D3FDC File Offset: 0x004D21DC
 		public int ScoreRewardsLength
 		{
 			get
@@ -153,8 +153,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095D8 RID: 38360
-		// (get) Token: 0x060211E0 RID: 135648 RVA: 0x0049A07C File Offset: 0x0049827C
+		// Token: 0x17009DC5 RID: 40389
+		// (get) Token: 0x06023134 RID: 143668 RVA: 0x004D4008 File Offset: 0x004D2208
 		public IDollGrabInfiniteScoreReward? ScoreReward
 		{
 			get
@@ -168,8 +168,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095D9 RID: 38361
-		// (get) Token: 0x060211E1 RID: 135649 RVA: 0x0049A0DC File Offset: 0x004982DC
+		// Token: 0x17009DC6 RID: 40390
+		// (get) Token: 0x06023135 RID: 143669 RVA: 0x004D4068 File Offset: 0x004D2268
 		public int UnlockConditionGroupId
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095DA RID: 38362
-		// (get) Token: 0x060211E2 RID: 135650 RVA: 0x0049A11C File Offset: 0x0049831C
+		// Token: 0x17009DC7 RID: 40391
+		// (get) Token: 0x06023136 RID: 143670 RVA: 0x004D40A8 File Offset: 0x004D22A8
 		public byte NullMask
 		{
 			get
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060211E3 RID: 135651 RVA: 0x0049A15C File Offset: 0x0049835C
+		// Token: 0x06023137 RID: 143671 RVA: 0x004D40E8 File Offset: 0x004D22E8
 		public static Offset<IDollGrabInfiniteModeData> CreateIDollGrabInfiniteModeData(FlatBufferBuilder builder, VectorOffset StandbyItemPoolOffset = default(VectorOffset), StringOffset RefreshIntervalCurveOffset = default(StringOffset), VectorOffset StageConfigsOffset = default(VectorOffset), VectorOffset ScoreRewardsOffset = default(VectorOffset), Offset<IDollGrabInfiniteScoreReward> ScoreRewardOffset = default(Offset<IDollGrabInfiniteScoreReward>), int UnlockConditionGroupId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -212,19 +212,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollGrabInfiniteModeData.EndIDollGrabInfiniteModeData(builder);
 		}
 
-		// Token: 0x060211E4 RID: 135652 RVA: 0x0049A1AB File Offset: 0x004983AB
+		// Token: 0x06023138 RID: 143672 RVA: 0x004D4137 File Offset: 0x004D2337
 		public static void StartIDollGrabInfiniteModeData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060211E5 RID: 135653 RVA: 0x0049A1B4 File Offset: 0x004983B4
+		// Token: 0x06023139 RID: 143673 RVA: 0x004D4140 File Offset: 0x004D2340
 		public static void AddStandbyItemPool(FlatBufferBuilder builder, VectorOffset standbyItemPoolOffset)
 		{
 			builder.AddOffset(0, standbyItemPoolOffset.Value, 0);
 		}
 
-		// Token: 0x060211E6 RID: 135654 RVA: 0x0049A1C4 File Offset: 0x004983C4
+		// Token: 0x0602313A RID: 143674 RVA: 0x004D4150 File Offset: 0x004D2350
 		public static VectorOffset CreateStandbyItemPoolVector(FlatBufferBuilder builder, Offset<IDollGrabStandbyPoolItem>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -235,7 +235,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211E7 RID: 135655 RVA: 0x0049A204 File Offset: 0x00498404
+		// Token: 0x0602313B RID: 143675 RVA: 0x004D4190 File Offset: 0x004D2390
 		public static VectorOffset CreateStandbyItemPoolVectorBlock(FlatBufferBuilder builder, Offset<IDollGrabStandbyPoolItem>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211E8 RID: 135656 RVA: 0x0049A21E File Offset: 0x0049841E
+		// Token: 0x0602313C RID: 143676 RVA: 0x004D41AA File Offset: 0x004D23AA
 		public static VectorOffset CreateStandbyItemPoolVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDollGrabStandbyPoolItem>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211E9 RID: 135657 RVA: 0x0049A23C File Offset: 0x0049843C
+		// Token: 0x0602313D RID: 143677 RVA: 0x004D41C8 File Offset: 0x004D23C8
 		public static VectorOffset CreateStandbyItemPoolVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -259,25 +259,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211EA RID: 135658 RVA: 0x0049A255 File Offset: 0x00498455
+		// Token: 0x0602313E RID: 143678 RVA: 0x004D41E1 File Offset: 0x004D23E1
 		public static void StartStandbyItemPoolVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060211EB RID: 135659 RVA: 0x0049A260 File Offset: 0x00498460
+		// Token: 0x0602313F RID: 143679 RVA: 0x004D41EC File Offset: 0x004D23EC
 		public static void AddRefreshIntervalCurve(FlatBufferBuilder builder, StringOffset refreshIntervalCurveOffset)
 		{
 			builder.AddOffset(1, refreshIntervalCurveOffset.Value, 0);
 		}
 
-		// Token: 0x060211EC RID: 135660 RVA: 0x0049A270 File Offset: 0x00498470
+		// Token: 0x06023140 RID: 143680 RVA: 0x004D41FC File Offset: 0x004D23FC
 		public static void AddStageConfigs(FlatBufferBuilder builder, VectorOffset stageConfigsOffset)
 		{
 			builder.AddOffset(2, stageConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x060211ED RID: 135661 RVA: 0x0049A280 File Offset: 0x00498480
+		// Token: 0x06023141 RID: 143681 RVA: 0x004D420C File Offset: 0x004D240C
 		public static VectorOffset CreateStageConfigsVector(FlatBufferBuilder builder, Offset<IDollGrabInfiniteStageConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -288,7 +288,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211EE RID: 135662 RVA: 0x0049A2C0 File Offset: 0x004984C0
+		// Token: 0x06023142 RID: 143682 RVA: 0x004D424C File Offset: 0x004D244C
 		public static VectorOffset CreateStageConfigsVectorBlock(FlatBufferBuilder builder, Offset<IDollGrabInfiniteStageConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -296,7 +296,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211EF RID: 135663 RVA: 0x0049A2DA File Offset: 0x004984DA
+		// Token: 0x06023143 RID: 143683 RVA: 0x004D4266 File Offset: 0x004D2466
 		public static VectorOffset CreateStageConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDollGrabInfiniteStageConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -304,7 +304,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211F0 RID: 135664 RVA: 0x0049A2F8 File Offset: 0x004984F8
+		// Token: 0x06023144 RID: 143684 RVA: 0x004D4284 File Offset: 0x004D2484
 		public static VectorOffset CreateStageConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -312,19 +312,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211F1 RID: 135665 RVA: 0x0049A311 File Offset: 0x00498511
+		// Token: 0x06023145 RID: 143685 RVA: 0x004D429D File Offset: 0x004D249D
 		public static void StartStageConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060211F2 RID: 135666 RVA: 0x0049A31C File Offset: 0x0049851C
+		// Token: 0x06023146 RID: 143686 RVA: 0x004D42A8 File Offset: 0x004D24A8
 		public static void AddScoreRewards(FlatBufferBuilder builder, VectorOffset scoreRewardsOffset)
 		{
 			builder.AddOffset(3, scoreRewardsOffset.Value, 0);
 		}
 
-		// Token: 0x060211F3 RID: 135667 RVA: 0x0049A32C File Offset: 0x0049852C
+		// Token: 0x06023147 RID: 143687 RVA: 0x004D42B8 File Offset: 0x004D24B8
 		public static VectorOffset CreateScoreRewardsVector(FlatBufferBuilder builder, Offset<IDollGrabInfiniteScoreReward>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -335,7 +335,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211F4 RID: 135668 RVA: 0x0049A36C File Offset: 0x0049856C
+		// Token: 0x06023148 RID: 143688 RVA: 0x004D42F8 File Offset: 0x004D24F8
 		public static VectorOffset CreateScoreRewardsVectorBlock(FlatBufferBuilder builder, Offset<IDollGrabInfiniteScoreReward>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -343,7 +343,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211F5 RID: 135669 RVA: 0x0049A386 File Offset: 0x00498586
+		// Token: 0x06023149 RID: 143689 RVA: 0x004D4312 File Offset: 0x004D2512
 		public static VectorOffset CreateScoreRewardsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDollGrabInfiniteScoreReward>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -351,7 +351,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211F6 RID: 135670 RVA: 0x0049A3A4 File Offset: 0x004985A4
+		// Token: 0x0602314A RID: 143690 RVA: 0x004D4330 File Offset: 0x004D2530
 		public static VectorOffset CreateScoreRewardsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -359,37 +359,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060211F7 RID: 135671 RVA: 0x0049A3BD File Offset: 0x004985BD
+		// Token: 0x0602314B RID: 143691 RVA: 0x004D4349 File Offset: 0x004D2549
 		public static void StartScoreRewardsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060211F8 RID: 135672 RVA: 0x0049A3C8 File Offset: 0x004985C8
+		// Token: 0x0602314C RID: 143692 RVA: 0x004D4354 File Offset: 0x004D2554
 		public static void AddScoreReward(FlatBufferBuilder builder, Offset<IDollGrabInfiniteScoreReward> scoreRewardOffset)
 		{
 			builder.AddOffset(4, scoreRewardOffset.Value, 0);
 		}
 
-		// Token: 0x060211F9 RID: 135673 RVA: 0x0049A3D8 File Offset: 0x004985D8
+		// Token: 0x0602314D RID: 143693 RVA: 0x004D4364 File Offset: 0x004D2564
 		public static void AddUnlockConditionGroupId(FlatBufferBuilder builder, int unlockConditionGroupId)
 		{
 			builder.AddInt(5, unlockConditionGroupId, 0);
 		}
 
-		// Token: 0x060211FA RID: 135674 RVA: 0x0049A3E3 File Offset: 0x004985E3
+		// Token: 0x0602314E RID: 143694 RVA: 0x004D436F File Offset: 0x004D256F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x060211FB RID: 135675 RVA: 0x0049A3EE File Offset: 0x004985EE
+		// Token: 0x0602314F RID: 143695 RVA: 0x004D437A File Offset: 0x004D257A
 		public static Offset<IDollGrabInfiniteModeData> EndIDollGrabInfiniteModeData(FlatBufferBuilder builder)
 		{
 			return new Offset<IDollGrabInfiniteModeData>(builder.EndTable());
 		}
 
-		// Token: 0x060211FC RID: 135676 RVA: 0x0049A3FC File Offset: 0x004985FC
+		// Token: 0x06023150 RID: 143696 RVA: 0x004D4388 File Offset: 0x004D2588
 		public IDollGrabInfiniteModeDataT UnPack()
 		{
 			IDollGrabInfiniteModeDataT dollGrabInfiniteModeDataT = new IDollGrabInfiniteModeDataT();
@@ -397,7 +397,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dollGrabInfiniteModeDataT;
 		}
 
-		// Token: 0x060211FD RID: 135677 RVA: 0x0049A418 File Offset: 0x00498618
+		// Token: 0x06023151 RID: 143697 RVA: 0x004D43A4 File Offset: 0x004D25A4
 		public void UnPackTo(IDollGrabInfiniteModeDataT _o)
 		{
 			_o.StandbyItemPool = new List<IDollGrabStandbyPoolItemT>();
@@ -421,7 +421,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060211FE RID: 135678 RVA: 0x0049A580 File Offset: 0x00498780
+		// Token: 0x06023152 RID: 143698 RVA: 0x004D450C File Offset: 0x004D270C
 		public static Offset<IDollGrabInfiniteModeData> Pack(FlatBufferBuilder builder, IDollGrabInfiniteModeDataT _o)
 		{
 			if (_o == null)
@@ -463,7 +463,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollGrabInfiniteModeData.CreateIDollGrabInfiniteModeData(builder, standbyItemPoolOffset, refreshIntervalCurveOffset, stageConfigsOffset, scoreRewardsOffset, scoreRewardOffset, _o.UnlockConditionGroupId, _o.NullMask);
 		}
 
-		// Token: 0x0400E0AF RID: 57519
+		// Token: 0x0400ECAC RID: 60588
 		private Table __p;
 	}
 }

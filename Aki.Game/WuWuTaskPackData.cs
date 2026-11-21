@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200166F RID: 5743
+// Token: 0x02000B27 RID: 2855
 public class WuWuTaskPackData
 {
-	// Token: 0x17000DA5 RID: 3493
-	// (get) Token: 0x0600A1E5 RID: 41445 RVA: 0x0023C0C8 File Offset: 0x0023A2C8
+	// Token: 0x17000DC6 RID: 3526
+	// (get) Token: 0x060075C3 RID: 30147 RVA: 0x00245F64 File Offset: 0x00244164
 	public bool IsUnlock
 	{
 		get
@@ -13,15 +13,15 @@ public class WuWuTaskPackData
 		}
 	}
 
-	// Token: 0x040049C3 RID: 18883
+	// Token: 0x04004A69 RID: 19049
 	public int TaskPackId;
 
-	// Token: 0x040049C4 RID: 18884
+	// Token: 0x04004A6A RID: 19050
 	public long UnlockTime;
 
-	// Token: 0x040049C5 RID: 18885
+	// Token: 0x04004A6B RID: 19051
 	public bool HadReward;
 
-	// Token: 0x040049C6 RID: 18886
+	// Token: 0x04004A6C RID: 19052
 	public int PrePackCfgId;
 }

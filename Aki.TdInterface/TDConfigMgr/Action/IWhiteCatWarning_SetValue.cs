@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020B6 RID: 8374
+	// Token: 0x0200230B RID: 8971
 	public class IWhiteCatWarning_SetValue
 	{
-		// Token: 0x04006E6F RID: 28271
+		// Token: 0x0400748D RID: 29837
 		public ECommonTipType Type;
 
-		// Token: 0x04006E70 RID: 28272
-		[Nullable(1)]
+		// Token: 0x0400748E RID: 29838
 		public string WarningText;
 	}
 }

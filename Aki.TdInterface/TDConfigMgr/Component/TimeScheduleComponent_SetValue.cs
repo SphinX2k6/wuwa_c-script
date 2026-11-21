@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C5 RID: 2245
+	// Token: 0x02000968 RID: 2408
 	public class TimeScheduleComponent_SetValue
 	{
-		// Token: 0x0400212A RID: 8490
+		// Token: 0x0400233C RID: 9020
 		public bool? Disabled;
 
-		// Token: 0x0400212B RID: 8491
+		// Token: 0x0400233D RID: 9021
 		public bool? EdIsLocked;
 
-		// Token: 0x0400212C RID: 8492
-		[Nullable(1)]
+		// Token: 0x0400233E RID: 9022
 		public List<ITimeScheduleConfig> TimeScheduleConfigs;
 	}
 }

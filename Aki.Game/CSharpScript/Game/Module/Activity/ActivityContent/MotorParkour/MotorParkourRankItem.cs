@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F4 RID: 25588
+	// Token: 0x02005372 RID: 21362
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 	})]
 	public class MotorParkourRankItem : GridProxyAbstract<MotorParkourRankData>
 	{
-		// Token: 0x060405B8 RID: 263608 RVA: 0x00F9121C File Offset: 0x00F8F41C
+		// Token: 0x06035279 RID: 217721 RVA: 0x00ED8204 File Offset: 0x00ED6404
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060405B9 RID: 263609 RVA: 0x00F912C8 File Offset: 0x00F8F4C8
+		// Token: 0x0603527A RID: 217722 RVA: 0x00ED82B0 File Offset: 0x00ED64B0
 		[NullableContext(1)]
 		public override void Refresh(MotorParkourRankData data, bool isSelected, int gridIndex)
 		{
@@ -62,19 +62,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			text2.SetText(playerName, true);
 		}
 
-		// Token: 0x0200C610 RID: 50704
+		// Token: 0x0200AFF7 RID: 45047
 		private class EComponents
 		{
-			// Token: 0x0403BCC2 RID: 244930
+			// Token: 0x04036621 RID: 222753
 			public const int SpriteRankNum = 0;
 
-			// Token: 0x0403BCC3 RID: 244931
+			// Token: 0x04036622 RID: 222754
 			public const int SpriteRankBg = 1;
 
-			// Token: 0x0403BCC4 RID: 244932
+			// Token: 0x04036623 RID: 222755
 			public const int TextName = 2;
 
-			// Token: 0x0403BCC5 RID: 244933
+			// Token: 0x04036624 RID: 222756
 			public const int TextTime = 3;
 		}
 	}

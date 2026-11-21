@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200204E RID: 8270
+	// Token: 0x02002297 RID: 8855
 	public class IVillageInfrTreeProcess_SetValue
 	{
-		// Token: 0x04006D49 RID: 27977
+		// Token: 0x04007352 RID: 29522
 		public EVillageInfrBuildType Type;
 
-		// Token: 0x04006D4A RID: 27978
+		// Token: 0x04007353 RID: 29523
 		public int Id;
 	}
 }

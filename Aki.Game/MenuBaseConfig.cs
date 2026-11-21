@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.KeySetting;
 
-// Token: 0x02002207 RID: 8711
+// Token: 0x020016EB RID: 5867
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class MenuBaseConfig : ConfigBase
 {
-	// Token: 0x06010F57 RID: 69463 RVA: 0x00421558 File Offset: 0x0041F758
+	// Token: 0x0600E3EA RID: 58346 RVA: 0x0042DEFC File Offset: 0x0042C0FC
 	public IReadOnlyList<MenuConfig> GetMenuBaseConfig()
 	{
 		IReadOnlyList<MenuConfig> configList = ConfigMenuConfigAll.GetConfigList(true);
@@ -22,7 +22,7 @@ public class MenuBaseConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06010F58 RID: 69464 RVA: 0x00421598 File Offset: 0x0041F798
+	// Token: 0x0600E3EB RID: 58347 RVA: 0x0042DF3C File Offset: 0x0042C13C
 	public Dictionary<int, MainType> GetMainConfig()
 	{
 		IReadOnlyList<MainType> configList = ConfigMainTypeAll.GetConfigList(true);
@@ -39,74 +39,74 @@ public class MenuBaseConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06010F59 RID: 69465 RVA: 0x00421620 File Offset: 0x0041F820
+	// Token: 0x0600E3EC RID: 58348 RVA: 0x0042DFC4 File Offset: 0x0042C1C4
 	public MainType? GetMainTypeConfigById(int tabId)
 	{
 		return ConfigMainTypeById.GetConfig(tabId, true);
 	}
 
-	// Token: 0x06010F5A RID: 69466 RVA: 0x00421629 File Offset: 0x0041F829
+	// Token: 0x0600E3ED RID: 58349 RVA: 0x0042DFCD File Offset: 0x0042C1CD
 	public MenuConfig? GetMenuConfigByFunctionId(int functionId)
 	{
 		return ConfigMenuConfigByFunctionId.GetConfig(functionId, true);
 	}
 
-	// Token: 0x06010F5B RID: 69467 RVA: 0x00421632 File Offset: 0x0041F832
+	// Token: 0x0600E3EE RID: 58350 RVA: 0x0042DFD6 File Offset: 0x0042C1D6
 	public IReadOnlyList<MenuConfig> GetMenuConfigListByFunctionId(int functionId)
 	{
 		return ConfigMenuConfigByFunctionId.GetConfigList(functionId, true);
 	}
 
-	// Token: 0x06010F5C RID: 69468 RVA: 0x0042163B File Offset: 0x0041F83B
+	// Token: 0x0600E3EF RID: 58351 RVA: 0x0042DFDF File Offset: 0x0042C1DF
 	public IReadOnlyList<KeyType> GetAllKeyTypeConfig()
 	{
 		return ConfigKeyTypeAll.GetConfigList(true);
 	}
 
-	// Token: 0x06010F5D RID: 69469 RVA: 0x00421643 File Offset: 0x0041F843
+	// Token: 0x0600E3F0 RID: 58352 RVA: 0x0042DFE7 File Offset: 0x0042C1E7
 	public IReadOnlyList<KeySetting> GetKeySettingConfigListByTypeIdAndInputControllerType(int typeId, int inputControllerTypeId)
 	{
 		return ConfigKeySettingByTypeIdAndInputControllerType.GetConfigList(typeId, inputControllerTypeId, true);
 	}
 
-	// Token: 0x06010F5E RID: 69470 RVA: 0x0042164D File Offset: 0x0041F84D
+	// Token: 0x0600E3F1 RID: 58353 RVA: 0x0042DFF1 File Offset: 0x0042C1F1
 	public IReadOnlyList<AxisRevert> GetAxisRevertConfigListByRevertType(int revertType)
 	{
 		return ConfigAxisRevertByRevertType.GetConfigList(revertType, true);
 	}
 
-	// Token: 0x06010F5F RID: 69471 RVA: 0x00421656 File Offset: 0x0041F856
+	// Token: 0x0600E3F2 RID: 58354 RVA: 0x0042DFFA File Offset: 0x0042C1FA
 	public IReadOnlyList<KeySetting> GetExclusiveKeySettingConfigByTypeIdAndInputControllerType(int typeId, int inputControllerTypeId, EKeySettingExclusiveType exclusiveType)
 	{
 		return ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.GetConfigList(typeId, inputControllerTypeId, (int)exclusiveType, true);
 	}
 
-	// Token: 0x06010F60 RID: 69472 RVA: 0x00421661 File Offset: 0x0041F861
+	// Token: 0x0600E3F3 RID: 58355 RVA: 0x0042E005 File Offset: 0x0042C205
 	public KeyExclusiveType? GetExclusiveTypeConfigById(int typeId)
 	{
 		return ConfigKeyExclusiveTypeById.GetConfig(typeId, true);
 	}
 
-	// Token: 0x06010F61 RID: 69473 RVA: 0x0042166A File Offset: 0x0041F86A
+	// Token: 0x0600E3F4 RID: 58356 RVA: 0x0042E00E File Offset: 0x0042C20E
 	public MenuDetailPop? GetMenuDetailPopConfigById(int configId)
 	{
 		return ConfigMenuDetailPopById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06010F62 RID: 69474 RVA: 0x00421673 File Offset: 0x0041F873
+	// Token: 0x0600E3F5 RID: 58357 RVA: 0x0042E017 File Offset: 0x0042C217
 	public MenuDetailPopItem? GetMenuDetailPopItemConfigById(int configId)
 	{
 		return ConfigMenuDetailPopItemById.GetConfig(configId, true);
 	}
 
-	// Token: 0x06010F63 RID: 69475 RVA: 0x0042167C File Offset: 0x0041F87C
+	// Token: 0x0600E3F6 RID: 58358 RVA: 0x0042E020 File Offset: 0x0042C220
 	public RoleVoiceLanguage? GetRoleLangCustomConfigById(int configId)
 	{
 		return ConfigRoleVoiceLanguageByLanguageId.GetConfig(configId, true);
 	}
 
-	// Token: 0x17001589 RID: 5513
-	// (get) Token: 0x06010F64 RID: 69476 RVA: 0x00421685 File Offset: 0x0041F885
+	// Token: 0x170015C0 RID: 5568
+	// (get) Token: 0x0600E3F7 RID: 58359 RVA: 0x0042E029 File Offset: 0x0042C229
 	[Nullable(1)]
 	public static MenuBaseConfig Instance
 	{
@@ -117,7 +117,7 @@ public class MenuBaseConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010F65 RID: 69477 RVA: 0x0042168C File Offset: 0x0041F88C
+	// Token: 0x0600E3F8 RID: 58360 RVA: 0x0042E030 File Offset: 0x0042C230
 	[NullableContext(1)]
 	public static MenuBaseConfig GetOrCreateInstance()
 	{
@@ -128,7 +128,7 @@ public class MenuBaseConfig : ConfigBase
 		return MenuBaseConfig._Instance;
 	}
 
-	// Token: 0x06010F66 RID: 69478 RVA: 0x004216A0 File Offset: 0x0041F8A0
+	// Token: 0x0600E3F9 RID: 58361 RVA: 0x0042E044 File Offset: 0x0042C244
 	public static bool CreateInstance()
 	{
 		if (MenuBaseConfig._Instance != null)
@@ -139,23 +139,23 @@ public class MenuBaseConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06010F67 RID: 69479 RVA: 0x004216B6 File Offset: 0x0041F8B6
+	// Token: 0x0600E3FA RID: 58362 RVA: 0x0042E05A File Offset: 0x0042C25A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010F68 RID: 69480 RVA: 0x004216B8 File Offset: 0x0041F8B8
+	// Token: 0x0600E3FB RID: 58363 RVA: 0x0042E05C File Offset: 0x0042C25C
 	public static void ResetStaticDefaultValue()
 	{
 		MenuBaseConfig._Instance = null;
 	}
 
-	// Token: 0x06010F69 RID: 69481 RVA: 0x004216C0 File Offset: 0x0041F8C0
+	// Token: 0x0600E3FC RID: 58364 RVA: 0x0042E064 File Offset: 0x0042C264
 	static MenuBaseConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MenuBaseConfig.CreateStaticDefaultValue), new Action(MenuBaseConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040080F5 RID: 33013
+	// Token: 0x04008233 RID: 33331
 	private static MenuBaseConfig _Instance;
 }

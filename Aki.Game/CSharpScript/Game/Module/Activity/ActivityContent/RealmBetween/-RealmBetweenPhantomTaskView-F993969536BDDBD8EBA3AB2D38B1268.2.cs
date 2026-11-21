@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200627D RID: 25213
+	// Token: 0x020051FB RID: 20987
 	internal enum <RealmBetweenPhantomTaskView>F993969536BDDBD8EBA3AB2D38B12684E462E6B7866908411AC3E71BD321FB845__ECardComponent
 	{
-		// Token: 0x040212AB RID: 135851
+		// Token: 0x0401BBDA RID: 113626
 		UiItemTheMeMapMonsterItem,
-		// Token: 0x040212AC RID: 135852
+		// Token: 0x0401BBDB RID: 113627
 		PanelLock,
-		// Token: 0x040212AD RID: 135853
+		// Token: 0x0401BBDC RID: 113628
 		PanelUnlock,
-		// Token: 0x040212AE RID: 135854
+		// Token: 0x0401BBDD RID: 113629
 		TexChipBg,
-		// Token: 0x040212AF RID: 135855
+		// Token: 0x0401BBDE RID: 113630
 		TexChipMonsterIcon,
-		// Token: 0x040212B0 RID: 135856
+		// Token: 0x0401BBDF RID: 113631
 		TexSmallIcon,
-		// Token: 0x040212B1 RID: 135857
+		// Token: 0x0401BBE0 RID: 113632
 		TxtName
 	}
 }

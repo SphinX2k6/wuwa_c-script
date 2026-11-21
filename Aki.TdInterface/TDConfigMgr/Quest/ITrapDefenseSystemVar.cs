@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011DC RID: 4572
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001318 RID: 4888
 	public class ITrapDefenseSystemVar
 	{
-		// Token: 0x060067DA RID: 26586 RVA: 0x000F8638 File Offset: 0x000F6838
+		// Token: 0x06006E1B RID: 28187 RVA: 0x00105F44 File Offset: 0x00104144
 		private ITrapDefenseSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060067DB RID: 26587 RVA: 0x000F8670 File Offset: 0x000F6870
+		// Token: 0x06006E1C RID: 28188 RVA: 0x00105F7C File Offset: 0x0010417C
 		public static ITrapDefenseSystemVar Create([Nullable(2)] ITrapDefenseSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067DC RID: 26588 RVA: 0x000F8683 File Offset: 0x000F6883
+		// Token: 0x06006E1D RID: 28189 RVA: 0x00105F8F File Offset: 0x0010418F
 		public static ITrapDefenseSystemVar CreateFromSetValue([Nullable(2)] ITrapDefenseSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067DD RID: 26589 RVA: 0x000F8696 File Offset: 0x000F6896
+		// Token: 0x06006E1E RID: 28190 RVA: 0x00105FA2 File Offset: 0x001041A2
 		public ITrapDefenseSystemVar_SetValue ToSetValue()
 		{
 			return new ITrapDefenseSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021A8 RID: 8616
-		// (get) Token: 0x060067DE RID: 26590 RVA: 0x000F86B5 File Offset: 0x000F68B5
-		// (set) Token: 0x060067DF RID: 26591 RVA: 0x000F86E0 File Offset: 0x000F68E0
+		// Token: 0x17002369 RID: 9065
+		// (get) Token: 0x06006E1F RID: 28191 RVA: 0x00105FC1 File Offset: 0x001041C1
+		// (set) Token: 0x06006E20 RID: 28192 RVA: 0x00105FEC File Offset: 0x001041EC
 		public virtual ETrapDefenseSystemVarType VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021A9 RID: 8617
-		// (get) Token: 0x060067E0 RID: 26592 RVA: 0x000F86EE File Offset: 0x000F68EE
-		// (set) Token: 0x060067E1 RID: 26593 RVA: 0x000F8715 File Offset: 0x000F6915
+		// Token: 0x1700236A RID: 9066
+		// (get) Token: 0x06006E21 RID: 28193 RVA: 0x00105FFA File Offset: 0x001041FA
+		// (set) Token: 0x06006E22 RID: 28194 RVA: 0x00106021 File Offset: 0x00104221
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E47 RID: 15943
+		// Token: 0x040041B5 RID: 16821
 		[Nullable(2)]
 		protected ITrapDefenseSystemVar FbInstance;
 
-		// Token: 0x04003E48 RID: 15944
+		// Token: 0x040041B6 RID: 16822
 		[Nullable(2)]
 		protected ITrapDefenseSystemVar_SetValue PocoInterface;
 	}

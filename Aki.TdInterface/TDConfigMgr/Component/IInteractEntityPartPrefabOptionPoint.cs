@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000481 RID: 1153
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004DA RID: 1242
 	public class IInteractEntityPartPrefabOptionPoint
 	{
-		// Token: 0x06001734 RID: 5940 RVA: 0x000469D8 File Offset: 0x00044BD8
+		// Token: 0x060018CE RID: 6350 RVA: 0x0004A720 File Offset: 0x00048920
 		private IInteractEntityPartPrefabOptionPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001735 RID: 5941 RVA: 0x00046A10 File Offset: 0x00044C10
+		// Token: 0x060018CF RID: 6351 RVA: 0x0004A758 File Offset: 0x00048958
 		public static IInteractEntityPartPrefabOptionPoint Create([Nullable(2)] IInteractEntityPartPrefabOptionPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001736 RID: 5942 RVA: 0x00046A23 File Offset: 0x00044C23
+		// Token: 0x060018D0 RID: 6352 RVA: 0x0004A76B File Offset: 0x0004896B
 		public static IInteractEntityPartPrefabOptionPoint CreateFromSetValue([Nullable(2)] IInteractEntityPartPrefabOptionPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001737 RID: 5943 RVA: 0x00046A36 File Offset: 0x00044C36
+		// Token: 0x060018D1 RID: 6353 RVA: 0x0004A77E File Offset: 0x0004897E
 		public IInteractEntityPartPrefabOptionPoint_SetValue ToSetValue()
 		{
 			return new IInteractEntityPartPrefabOptionPoint_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000637 RID: 1591
-		// (get) Token: 0x06001738 RID: 5944 RVA: 0x00046A55 File Offset: 0x00044C55
-		// (set) Token: 0x06001739 RID: 5945 RVA: 0x00046A80 File Offset: 0x00044C80
+		// Token: 0x1700069E RID: 1694
+		// (get) Token: 0x060018D2 RID: 6354 RVA: 0x0004A79D File Offset: 0x0004899D
+		// (set) Token: 0x060018D3 RID: 6355 RVA: 0x0004A7C8 File Offset: 0x000489C8
 		public virtual string UiStyle
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000638 RID: 1592
-		// (get) Token: 0x0600173A RID: 5946 RVA: 0x00046A8E File Offset: 0x00044C8E
-		// (set) Token: 0x0600173B RID: 5947 RVA: 0x00046AB9 File Offset: 0x00044CB9
+		// Token: 0x1700069F RID: 1695
+		// (get) Token: 0x060018D4 RID: 6356 RVA: 0x0004A7D6 File Offset: 0x000489D6
+		// (set) Token: 0x060018D5 RID: 6357 RVA: 0x0004A801 File Offset: 0x00048A01
 		public virtual string BindName
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001176 RID: 4470
+		// Token: 0x04001298 RID: 4760
 		[Nullable(2)]
 		protected IInteractEntityPartPrefabOptionPoint FbInstance;
 
-		// Token: 0x04001177 RID: 4471
+		// Token: 0x04001299 RID: 4761
 		[Nullable(2)]
 		protected IInteractEntityPartPrefabOptionPoint_SetValue PocoInterface;
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050F9 RID: 20729
+	// Token: 0x0200565E RID: 22110
 	public struct IDynamicSpawnMonsterComponent : IFlatbufferObject
 	{
-		// Token: 0x170096F8 RID: 38648
-		// (get) Token: 0x06021619 RID: 136729 RVA: 0x004A2A6B File Offset: 0x004A0C6B
+		// Token: 0x17009EE5 RID: 40677
+		// (get) Token: 0x0602356D RID: 144749 RVA: 0x004DC9F7 File Offset: 0x004DABF7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602161A RID: 136730 RVA: 0x004A2A78 File Offset: 0x004A0C78
+		// Token: 0x0602356E RID: 144750 RVA: 0x004DCA04 File Offset: 0x004DAC04
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602161B RID: 136731 RVA: 0x004A2A80 File Offset: 0x004A0C80
+		// Token: 0x0602356F RID: 144751 RVA: 0x004DCA0C File Offset: 0x004DAC0C
 		public static IDynamicSpawnMonsterComponent GetRootAsIDynamicSpawnMonsterComponent(ByteBuffer _bb)
 		{
 			return IDynamicSpawnMonsterComponent.GetRootAsIDynamicSpawnMonsterComponent(_bb, default(IDynamicSpawnMonsterComponent));
 		}
 
-		// Token: 0x0602161C RID: 136732 RVA: 0x004A2A9C File Offset: 0x004A0C9C
+		// Token: 0x06023570 RID: 144752 RVA: 0x004DCA28 File Offset: 0x004DAC28
 		public static IDynamicSpawnMonsterComponent GetRootAsIDynamicSpawnMonsterComponent(ByteBuffer _bb, IDynamicSpawnMonsterComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602161D RID: 136733 RVA: 0x004A2AB9 File Offset: 0x004A0CB9
+		// Token: 0x06023571 RID: 144753 RVA: 0x004DCA45 File Offset: 0x004DAC45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602161E RID: 136734 RVA: 0x004A2AC8 File Offset: 0x004A0CC8
+		// Token: 0x06023572 RID: 144754 RVA: 0x004DCA54 File Offset: 0x004DAC54
 		public IDynamicSpawnMonsterComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170096F9 RID: 38649
-		// (get) Token: 0x0602161F RID: 136735 RVA: 0x004A2AD8 File Offset: 0x004A0CD8
+		// Token: 0x17009EE6 RID: 40678
+		// (get) Token: 0x06023573 RID: 144755 RVA: 0x004DCA64 File Offset: 0x004DAC64
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021620 RID: 136736 RVA: 0x004A2B18 File Offset: 0x004A0D18
+		// Token: 0x06023574 RID: 144756 RVA: 0x004DCAA4 File Offset: 0x004DACA4
 		public IConditionSpawnMonster? Group(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IConditionSpawnMonster?(default(IConditionSpawnMonster).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170096FA RID: 38650
-		// (get) Token: 0x06021621 RID: 136737 RVA: 0x004A2B78 File Offset: 0x004A0D78
+		// Token: 0x17009EE7 RID: 40679
+		// (get) Token: 0x06023575 RID: 144757 RVA: 0x004DCB04 File Offset: 0x004DAD04
 		public int GroupLength
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096FB RID: 38651
-		// (get) Token: 0x06021622 RID: 136738 RVA: 0x004A2BA4 File Offset: 0x004A0DA4
+		// Token: 0x17009EE8 RID: 40680
+		// (get) Token: 0x06023576 RID: 144758 RVA: 0x004DCB30 File Offset: 0x004DAD30
 		public byte NullMask
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021623 RID: 136739 RVA: 0x004A2BE0 File Offset: 0x004A0DE0
+		// Token: 0x06023577 RID: 144759 RVA: 0x004DCB6C File Offset: 0x004DAD6C
 		public static Offset<IDynamicSpawnMonsterComponent> CreateIDynamicSpawnMonsterComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset GroupOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicSpawnMonsterComponent.EndIDynamicSpawnMonsterComponent(builder);
 		}
 
-		// Token: 0x06021624 RID: 136740 RVA: 0x004A2C04 File Offset: 0x004A0E04
+		// Token: 0x06023578 RID: 144760 RVA: 0x004DCB90 File Offset: 0x004DAD90
 		public static void StartIDynamicSpawnMonsterComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06021625 RID: 136741 RVA: 0x004A2C0D File Offset: 0x004A0E0D
+		// Token: 0x06023579 RID: 144761 RVA: 0x004DCB99 File Offset: 0x004DAD99
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06021626 RID: 136742 RVA: 0x004A2C18 File Offset: 0x004A0E18
+		// Token: 0x0602357A RID: 144762 RVA: 0x004DCBA4 File Offset: 0x004DADA4
 		public static void AddGroup(FlatBufferBuilder builder, VectorOffset groupOffset)
 		{
 			builder.AddOffset(1, groupOffset.Value, 0);
 		}
 
-		// Token: 0x06021627 RID: 136743 RVA: 0x004A2C28 File Offset: 0x004A0E28
+		// Token: 0x0602357B RID: 144763 RVA: 0x004DCBB4 File Offset: 0x004DADB4
 		public static VectorOffset CreateGroupVector(FlatBufferBuilder builder, Offset<IConditionSpawnMonster>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021628 RID: 136744 RVA: 0x004A2C68 File Offset: 0x004A0E68
+		// Token: 0x0602357C RID: 144764 RVA: 0x004DCBF4 File Offset: 0x004DADF4
 		public static VectorOffset CreateGroupVectorBlock(FlatBufferBuilder builder, Offset<IConditionSpawnMonster>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021629 RID: 136745 RVA: 0x004A2C82 File Offset: 0x004A0E82
+		// Token: 0x0602357D RID: 144765 RVA: 0x004DCC0E File Offset: 0x004DAE0E
 		public static VectorOffset CreateGroupVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IConditionSpawnMonster>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602162A RID: 136746 RVA: 0x004A2CA0 File Offset: 0x004A0EA0
+		// Token: 0x0602357E RID: 144766 RVA: 0x004DCC2C File Offset: 0x004DAE2C
 		public static VectorOffset CreateGroupVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,25 +163,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602162B RID: 136747 RVA: 0x004A2CB9 File Offset: 0x004A0EB9
+		// Token: 0x0602357F RID: 144767 RVA: 0x004DCC45 File Offset: 0x004DAE45
 		public static void StartGroupVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602162C RID: 136748 RVA: 0x004A2CC4 File Offset: 0x004A0EC4
+		// Token: 0x06023580 RID: 144768 RVA: 0x004DCC50 File Offset: 0x004DAE50
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602162D RID: 136749 RVA: 0x004A2CCF File Offset: 0x004A0ECF
+		// Token: 0x06023581 RID: 144769 RVA: 0x004DCC5B File Offset: 0x004DAE5B
 		public static Offset<IDynamicSpawnMonsterComponent> EndIDynamicSpawnMonsterComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicSpawnMonsterComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602162E RID: 136750 RVA: 0x004A2CDC File Offset: 0x004A0EDC
+		// Token: 0x06023582 RID: 144770 RVA: 0x004DCC68 File Offset: 0x004DAE68
 		public IDynamicSpawnMonsterComponentT UnPack()
 		{
 			IDynamicSpawnMonsterComponentT dynamicSpawnMonsterComponentT = new IDynamicSpawnMonsterComponentT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dynamicSpawnMonsterComponentT;
 		}
 
-		// Token: 0x0602162F RID: 136751 RVA: 0x004A2CF8 File Offset: 0x004A0EF8
+		// Token: 0x06023583 RID: 144771 RVA: 0x004DCC84 File Offset: 0x004DAE84
 		public void UnPackTo(IDynamicSpawnMonsterComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021630 RID: 136752 RVA: 0x004A2D70 File Offset: 0x004A0F70
+		// Token: 0x06023584 RID: 144772 RVA: 0x004DCCFC File Offset: 0x004DAEFC
 		public static Offset<IDynamicSpawnMonsterComponent> Pack(FlatBufferBuilder builder, IDynamicSpawnMonsterComponentT _o)
 		{
 			if (_o == null)
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicSpawnMonsterComponent.CreateIDynamicSpawnMonsterComponent(builder, _o.Disabled, groupOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E15B RID: 57691
+		// Token: 0x0400ED58 RID: 60760
 		private Table __p;
 	}
 }

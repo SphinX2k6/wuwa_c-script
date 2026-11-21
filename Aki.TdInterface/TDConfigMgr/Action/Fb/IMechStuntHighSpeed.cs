@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200280E RID: 10254
+	// Token: 0x02002AE1 RID: 10977
 	public class IMechStuntHighSpeed : IMechStuntConfigType
 	{
-		// Token: 0x0600E381 RID: 58241 RVA: 0x00218722 File Offset: 0x00216922
-		[NullableContext(1)]
+		// Token: 0x0600F1A6 RID: 61862 RVA: 0x00235586 File Offset: 0x00233786
 		public static IMechStuntHighSpeed Create(IMechStuntHighSpeed? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004527 RID: 17703
-		// (get) Token: 0x0600E382 RID: 58242 RVA: 0x00218741 File Offset: 0x00216941
+		// Token: 0x17004892 RID: 18578
+		// (get) Token: 0x0600F1A7 RID: 61863 RVA: 0x002355A5 File Offset: 0x002337A5
 		public override EMechStuntType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DF4 RID: 32244
+		// Token: 0x040084B1 RID: 33969
 		private IMechStuntHighSpeed Instance;
 	}
 }

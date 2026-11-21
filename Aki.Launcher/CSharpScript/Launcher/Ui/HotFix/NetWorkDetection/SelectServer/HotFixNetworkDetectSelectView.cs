@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 {
-	// Token: 0x020000FC RID: 252
+	// Token: 0x02000100 RID: 256
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixNetworkDetectSelectView : LaunchComponentsAction
 	{
-		// Token: 0x06000851 RID: 2129 RVA: 0x0003DDF0 File Offset: 0x0003BFF0
+		// Token: 0x06000885 RID: 2181 RVA: 0x00040190 File Offset: 0x0003E390
 		protected override void OnStart()
 		{
 			base.GetButton(1).OnClickCallBack.Bind(new Action(this.OnBackBtnClick));
@@ -32,7 +32,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			this.RegisteredInput = true;
 		}
 
-		// Token: 0x06000852 RID: 2130 RVA: 0x0003DF40 File Offset: 0x0003C140
+		// Token: 0x06000886 RID: 2182 RVA: 0x000402E0 File Offset: 0x0003E4E0
 		protected override void OnShow()
 		{
 			List<IHotFixNetworkDetectSelectData> loginServersLayoutItemData = HotFixNetworkDetectionModel.Instance.GetLoginServersLayoutItemData();
@@ -44,7 +44,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			this.TryMoveToItem(loginServersLayoutItemData);
 		}
 
-		// Token: 0x06000853 RID: 2131 RVA: 0x0003DFA4 File Offset: 0x0003C1A4
+		// Token: 0x06000887 RID: 2183 RVA: 0x00040344 File Offset: 0x0003E544
 		private void BindToggleGroupChanged()
 		{
 			IReadOnlyList<IHotFixLayoutItem> layoutItemList = this.HotFixNetworkDetectSelectLayout.GetLayoutItemList();
@@ -54,7 +54,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			}
 		}
 
-		// Token: 0x06000854 RID: 2132 RVA: 0x0003DFEC File Offset: 0x0003C1EC
+		// Token: 0x06000888 RID: 2184 RVA: 0x0004038C File Offset: 0x0003E58C
 		private void RefreshToggleGroupState()
 		{
 			IReadOnlyList<IHotFixLayoutItem> layoutItemList = this.HotFixNetworkDetectSelectLayout.GetLayoutItemList();
@@ -64,7 +64,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			}
 		}
 
-		// Token: 0x06000855 RID: 2133 RVA: 0x0003E028 File Offset: 0x0003C228
+		// Token: 0x06000889 RID: 2185 RVA: 0x000403C8 File Offset: 0x0003E5C8
 		protected override void OnBeforeDestroy()
 		{
 			this.HotFixNetworkDetectSelectLayout.ClearChildren();
@@ -79,19 +79,19 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			}
 		}
 
-		// Token: 0x06000856 RID: 2134 RVA: 0x0003E0D9 File Offset: 0x0003C2D9
+		// Token: 0x0600088A RID: 2186 RVA: 0x00040479 File Offset: 0x0003E679
 		private void OnBackBtnClick()
 		{
 			this.CloseMe();
 		}
 
-		// Token: 0x06000857 RID: 2135 RVA: 0x0003E0E1 File Offset: 0x0003C2E1
+		// Token: 0x0600088B RID: 2187 RVA: 0x00040481 File Offset: 0x0003E681
 		private void OnLeftBtnClick()
 		{
 			this.CloseMe();
 		}
 
-		// Token: 0x06000858 RID: 2136 RVA: 0x0003E0EC File Offset: 0x0003C2EC
+		// Token: 0x0600088C RID: 2188 RVA: 0x0004048C File Offset: 0x0003E68C
 		private void OnRightBtnClick()
 		{
 			ILoginServersData currentUiSelectSeverData = HotFixNetworkDetectionModel.Instance.CurrentUiSelectSeverData;
@@ -104,13 +104,13 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			this.CloseMe();
 		}
 
-		// Token: 0x06000859 RID: 2137 RVA: 0x0003E126 File Offset: 0x0003C326
+		// Token: 0x0600088D RID: 2189 RVA: 0x000404C6 File Offset: 0x0003E6C6
 		private void CloseMe()
 		{
 			base.SetActive(false);
 		}
 
-		// Token: 0x0600085A RID: 2138 RVA: 0x0003E130 File Offset: 0x0003C330
+		// Token: 0x0600088E RID: 2190 RVA: 0x000404D0 File Offset: 0x0003E6D0
 		private void TryMoveToItem(IReadOnlyList<IHotFixNetworkDetectSelectData> dataList)
 		{
 			int recommendedServerIndex = this.GetRecommendedServerIndex(dataList);
@@ -118,7 +118,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			base.GetUiScrollViewWithScrollBar(3).ScrollTo(gridItemByIndex, false);
 		}
 
-		// Token: 0x0600085B RID: 2139 RVA: 0x0003E160 File Offset: 0x0003C360
+		// Token: 0x0600088F RID: 2191 RVA: 0x00040500 File Offset: 0x0003E700
 		private int GetRecommendedServerIndex(IReadOnlyList<IHotFixNetworkDetectSelectData> dataList)
 		{
 			int result = 0;
@@ -134,7 +134,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			return result;
 		}
 
-		// Token: 0x0600085C RID: 2140 RVA: 0x0003E1A0 File Offset: 0x0003C3A0
+		// Token: 0x06000890 RID: 2192 RVA: 0x00040540 File Offset: 0x0003E740
 		private void InputAxis(float value, string axisName)
 		{
 			if (value == 0f)
@@ -158,7 +158,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			}
 		}
 
-		// Token: 0x0600085D RID: 2141 RVA: 0x0003E200 File Offset: 0x0003C400
+		// Token: 0x06000891 RID: 2193 RVA: 0x000405A0 File Offset: 0x0003E7A0
 		private void InputAction(bool bPress, string actionName)
 		{
 			if (!bPress)
@@ -175,7 +175,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			}
 		}
 
-		// Token: 0x0600085E RID: 2142 RVA: 0x0003E254 File Offset: 0x0003C454
+		// Token: 0x06000892 RID: 2194 RVA: 0x000405F4 File Offset: 0x0003E7F4
 		private void FocusPrev()
 		{
 			int val = 0;
@@ -185,7 +185,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			this.HandleFocusScrollItem();
 		}
 
-		// Token: 0x0600085F RID: 2143 RVA: 0x0003E284 File Offset: 0x0003C484
+		// Token: 0x06000893 RID: 2195 RVA: 0x00040624 File Offset: 0x0003E824
 		private void FocusNext()
 		{
 			int val = this.HotFixNetworkDetectSelectLayout.GetDataList().Count - 1;
@@ -195,7 +195,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			this.HandleFocusScrollItem();
 		}
 
-		// Token: 0x06000860 RID: 2144 RVA: 0x0003E2C8 File Offset: 0x0003C4C8
+		// Token: 0x06000894 RID: 2196 RVA: 0x00040668 File Offset: 0x0003E868
 		private void HandleFocusScrollItem()
 		{
 			HotFixNetworkDetectSelectItem hotFixNetworkDetectSelectItem = this.HotFixNetworkDetectSelectLayout.GetLayoutItemByIndex(this.CurrentSelectIndex) as HotFixNetworkDetectSelectItem;
@@ -209,45 +209,45 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection.SelectServer
 			}
 		}
 
-		// Token: 0x040004B5 RID: 1205
+		// Token: 0x040004F0 RID: 1264
 		private HotFixLayout<HotFixNetworkDetectSelectItem, IHotFixNetworkDetectSelectData> HotFixNetworkDetectSelectLayout;
 
-		// Token: 0x040004B6 RID: 1206
+		// Token: 0x040004F1 RID: 1265
 		[Nullable(2)]
 		public TOnSelectServerCallback OnSelectServerCallBack;
 
-		// Token: 0x040004B7 RID: 1207
+		// Token: 0x040004F2 RID: 1266
 		private int CurrentSelectIndex = -1;
 
-		// Token: 0x040004B8 RID: 1208
+		// Token: 0x040004F3 RID: 1267
 		private bool RegisteredInput;
 
-		// Token: 0x02000395 RID: 917
+		// Token: 0x020003A2 RID: 930
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0400127C RID: 4732
+			// Token: 0x040012F2 RID: 4850
 			public const int BtnMask = 0;
 
-			// Token: 0x0400127D RID: 4733
+			// Token: 0x040012F3 RID: 4851
 			public const int BtnBack = 1;
 
-			// Token: 0x0400127E RID: 4734
+			// Token: 0x040012F4 RID: 4852
 			public const int TxtTitle = 2;
 
-			// Token: 0x0400127F RID: 4735
+			// Token: 0x040012F5 RID: 4853
 			public const int ScrollView = 3;
 
-			// Token: 0x04001280 RID: 4736
+			// Token: 0x040012F6 RID: 4854
 			public const int ServerItem = 4;
 
-			// Token: 0x04001281 RID: 4737
+			// Token: 0x040012F7 RID: 4855
 			public const int LeftBtn = 5;
 
-			// Token: 0x04001282 RID: 4738
+			// Token: 0x040012F8 RID: 4856
 			public const int RightBtn = 6;
 
-			// Token: 0x04001283 RID: 4739
+			// Token: 0x040012F9 RID: 4857
 			public const int Content = 7;
 		}
 	}

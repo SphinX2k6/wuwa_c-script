@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005909 RID: 22793
+	// Token: 0x02005F16 RID: 24342
 	public class ISharingVehicleFeatureT
 	{
-		// Token: 0x1700AADA RID: 43738
-		// (get) Token: 0x06026858 RID: 157784 RVA: 0x0054E9CA File Offset: 0x0054CBCA
-		// (set) Token: 0x06026859 RID: 157785 RVA: 0x0054E9D2 File Offset: 0x0054CBD2
+		// Token: 0x1700B40E RID: 46094
+		// (get) Token: 0x06028DC2 RID: 167362 RVA: 0x00595636 File Offset: 0x00593836
+		// (set) Token: 0x06028DC3 RID: 167363 RVA: 0x0059563E File Offset: 0x0059383E
 		public EVehicleFeatureFlag Type { get; set; }
 
-		// Token: 0x1700AADB RID: 43739
-		// (get) Token: 0x0602685A RID: 157786 RVA: 0x0054E9DB File Offset: 0x0054CBDB
-		// (set) Token: 0x0602685B RID: 157787 RVA: 0x0054E9E3 File Offset: 0x0054CBE3
+		// Token: 0x1700B40F RID: 46095
+		// (get) Token: 0x06028DC4 RID: 167364 RVA: 0x00595647 File Offset: 0x00593847
+		// (set) Token: 0x06028DC5 RID: 167365 RVA: 0x0059564F File Offset: 0x0059384F
 		public EAffectionDegreeSourceType AffectionDegreeSourceType { get; set; }
 
-		// Token: 0x1700AADC RID: 43740
-		// (get) Token: 0x0602685C RID: 157788 RVA: 0x0054E9EC File Offset: 0x0054CBEC
-		// (set) Token: 0x0602685D RID: 157789 RVA: 0x0054E9F4 File Offset: 0x0054CBF4
+		// Token: 0x1700B410 RID: 46096
+		// (get) Token: 0x06028DC6 RID: 167366 RVA: 0x00595658 File Offset: 0x00593858
+		// (set) Token: 0x06028DC7 RID: 167367 RVA: 0x00595660 File Offset: 0x00593860
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602685E RID: 157790 RVA: 0x0054E9FD File Offset: 0x0054CBFD
+		// Token: 0x06028DC8 RID: 167368 RVA: 0x00595669 File Offset: 0x00593869
 		public ISharingVehicleFeatureT()
 		{
 			this.Type = EVehicleFeatureFlag.None;

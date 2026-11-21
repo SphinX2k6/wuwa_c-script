@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005E8 RID: 1512
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000685 RID: 1669
 	public class IPatrolRange
 	{
-		// Token: 0x06002006 RID: 8198 RVA: 0x000595B8 File Offset: 0x000577B8
+		// Token: 0x06002304 RID: 8964 RVA: 0x0006012C File Offset: 0x0005E32C
 		private IPatrolRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002007 RID: 8199 RVA: 0x000595F0 File Offset: 0x000577F0
+		// Token: 0x06002305 RID: 8965 RVA: 0x00060164 File Offset: 0x0005E364
 		public static IPatrolRange Create([Nullable(2)] IPatrolRange instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002008 RID: 8200 RVA: 0x00059603 File Offset: 0x00057803
+		// Token: 0x06002306 RID: 8966 RVA: 0x00060177 File Offset: 0x0005E377
 		public static IPatrolRange CreateFromSetValue([Nullable(2)] IPatrolRange_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002009 RID: 8201 RVA: 0x00059616 File Offset: 0x00057816
+		// Token: 0x06002307 RID: 8967 RVA: 0x0006018A File Offset: 0x0005E38A
 		public IPatrolRange_SetValue ToSetValue()
 		{
 			return new IPatrolRange_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000886 RID: 2182
-		// (get) Token: 0x0600200A RID: 8202 RVA: 0x00059638 File Offset: 0x00057838
-		// (set) Token: 0x0600200B RID: 8203 RVA: 0x00059699 File Offset: 0x00057899
+		// Token: 0x17000939 RID: 2361
+		// (get) Token: 0x06002308 RID: 8968 RVA: 0x000601AC File Offset: 0x0005E3AC
+		// (set) Token: 0x06002309 RID: 8969 RVA: 0x0006020D File Offset: 0x0005E40D
 		public virtual VectorInfo Center
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000887 RID: 2183
-		// (get) Token: 0x0600200C RID: 8204 RVA: 0x000596AE File Offset: 0x000578AE
-		// (set) Token: 0x0600200D RID: 8205 RVA: 0x000596D9 File Offset: 0x000578D9
+		// Token: 0x1700093A RID: 2362
+		// (get) Token: 0x0600230A RID: 8970 RVA: 0x00060222 File Offset: 0x0005E422
+		// (set) Token: 0x0600230B RID: 8971 RVA: 0x0006024D File Offset: 0x0005E44D
 		public virtual int Radius
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001680 RID: 5760
+		// Token: 0x0400186C RID: 6252
 		[Nullable(2)]
 		protected IPatrolRange FbInstance;
 
-		// Token: 0x04001681 RID: 5761
+		// Token: 0x0400186D RID: 6253
 		[Nullable(2)]
 		protected IPatrolRange_SetValue PocoInterface;
 
-		// Token: 0x04001682 RID: 5762
+		// Token: 0x0400186E RID: 6254
 		private VectorInfo _CenterCache;
 
-		// Token: 0x04001683 RID: 5763
+		// Token: 0x0400186F RID: 6255
 		private bool _CenterInited;
 	}
 }

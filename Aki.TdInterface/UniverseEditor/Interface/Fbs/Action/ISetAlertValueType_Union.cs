@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F99 RID: 28569
+	// Token: 0x0200775F RID: 30559
 	public enum ISetAlertValueType_Union : byte
 	{
-		// Token: 0x04011996 RID: 72086
+		// Token: 0x04012978 RID: 76152
 		NONE,
-		// Token: 0x04011997 RID: 72087
+		// Token: 0x04012979 RID: 76153
 		ISetAlertValueType,
-		// Token: 0x04011998 RID: 72088
+		// Token: 0x0401297A RID: 76154
 		IAddOrSubAlertValue,
-		// Token: 0x04011999 RID: 72089
+		// Token: 0x0401297B RID: 76155
 		ICustomAlertValue,
-		// Token: 0x0401199A RID: 72090
+		// Token: 0x0401297C RID: 76156
 		IMinAlertValue,
-		// Token: 0x0401199B RID: 72091
+		// Token: 0x0401297D RID: 76157
 		IMaxAlertValue
 	}
 }

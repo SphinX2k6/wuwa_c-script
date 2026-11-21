@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AFB RID: 2811
+	// Token: 0x02000BC6 RID: 3014
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IRagDollJumpingPoint : IHookInteractType
 	{
-		// Token: 0x060040B7 RID: 16567 RVA: 0x000A58BE File Offset: 0x000A3ABE
-		[NullableContext(1)]
+		// Token: 0x060044F2 RID: 17650 RVA: 0x000AF3F2 File Offset: 0x000AD5F2
+		[NullableContext(0)]
 		public static IRagDollJumpingPoint Create(IRagDollJumpingPoint? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700107E RID: 4222
-		// (get) Token: 0x060040B8 RID: 16568 RVA: 0x000A58DD File Offset: 0x000A3ADD
+		// Token: 0x17001161 RID: 4449
+		// (get) Token: 0x060044F3 RID: 17651 RVA: 0x000AF411 File Offset: 0x000AD611
 		public override EHookInteractType Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700107F RID: 4223
-		// (get) Token: 0x060040B9 RID: 16569 RVA: 0x000A58EC File Offset: 0x000A3AEC
+		// Token: 0x17001162 RID: 4450
+		// (get) Token: 0x060044F4 RID: 17652 RVA: 0x000AF420 File Offset: 0x000AD620
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001080 RID: 4224
-		// (get) Token: 0x060040BA RID: 16570 RVA: 0x000A5968 File Offset: 0x000A3B68
+		// Token: 0x17001163 RID: 4451
+		// (get) Token: 0x060044F5 RID: 17653 RVA: 0x000AF49C File Offset: 0x000AD69C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001081 RID: 4225
-		// (get) Token: 0x060040BB RID: 16571 RVA: 0x000A59E4 File Offset: 0x000A3BE4
+		// Token: 0x17001164 RID: 4452
+		// (get) Token: 0x060044F6 RID: 17654 RVA: 0x000AF518 File Offset: 0x000AD718
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001082 RID: 4226
-		// (get) Token: 0x060040BC RID: 16572 RVA: 0x000A5A5E File Offset: 0x000A3C5E
+		// Token: 0x17001165 RID: 4453
+		// (get) Token: 0x060044F7 RID: 17655 RVA: 0x000AF592 File Offset: 0x000AD792
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -156,46 +156,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400243C RID: 9276
+		// Token: 0x0400266F RID: 9839
 		private IRagDollJumpingPoint Instance;
 
-		// Token: 0x0400243D RID: 9277
+		// Token: 0x04002670 RID: 9840
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x0400243E RID: 9278
+		// Token: 0x04002671 RID: 9841
 		private bool _HookActionsInited;
 
-		// Token: 0x0400243F RID: 9279
+		// Token: 0x04002672 RID: 9842
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x04002440 RID: 9280
+		// Token: 0x04002673 RID: 9843
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x04002441 RID: 9281
+		// Token: 0x04002674 RID: 9844
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x04002442 RID: 9282
+		// Token: 0x04002675 RID: 9845
 		private bool _FinishActionsInited;
 
-		// Token: 0x04002443 RID: 9283
+		// Token: 0x04002676 RID: 9846
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x04002444 RID: 9284
+		// Token: 0x04002677 RID: 9847
 		private bool _ClientHookActionConfigInited;
 	}
 }

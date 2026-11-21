@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000906 RID: 2310
+	// Token: 0x020009AF RID: 2479
 	public static class EBulletCreateConditionExtensions
 	{
-		// Token: 0x0600344C RID: 13388 RVA: 0x000858A4 File Offset: 0x00083AA4
+		// Token: 0x060037A6 RID: 14246 RVA: 0x0008D114 File Offset: 0x0008B314
 		public static string ToEnumString(this EBulletCreateCondition value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600344D RID: 13389 RVA: 0x00085904 File Offset: 0x00083B04
+		// Token: 0x060037A7 RID: 14247 RVA: 0x0008D174 File Offset: 0x0008B374
 		public static EBulletCreateCondition FromString(string name)
 		{
 			EBulletCreateCondition result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600344E RID: 13390 RVA: 0x00085930 File Offset: 0x00083B30
+		// Token: 0x060037A8 RID: 14248 RVA: 0x0008D1A0 File Offset: 0x0008B3A0
 		public static bool TryFromString(string name, out EBulletCreateCondition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600344F RID: 13391 RVA: 0x000859AA File Offset: 0x00083BAA
+		// Token: 0x060037A9 RID: 14249 RVA: 0x0008D21A File Offset: 0x0008B41A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003450 RID: 13392 RVA: 0x000859DA File Offset: 0x00083BDA
+		// Token: 0x060037AA RID: 14250 RVA: 0x0008D24A File Offset: 0x0008B44A
 		public static EBulletCreateCondition[] GetValues()
 		{
 			return new EBulletCreateCondition[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003451 RID: 13393 RVA: 0x000859ED File Offset: 0x00083BED
+		// Token: 0x060037AB RID: 14251 RVA: 0x0008D25D File Offset: 0x0008B45D
 		public static string[] GetNames()
 		{
 			return new string[]

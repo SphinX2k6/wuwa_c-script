@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.MachineryFactory
 {
-	// Token: 0x02006AC4 RID: 27332
+	// Token: 0x02005C3C RID: 23612
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MachineryFactoryTouchMoveView : UiViewBase
 	{
-		// Token: 0x06043EA0 RID: 278176 RVA: 0x010A6A93 File Offset: 0x010A4C93
+		// Token: 0x06039FE9 RID: 237545 RVA: 0x01050143 File Offset: 0x0104E343
 		[NullableContext(1)]
 		public MachineryFactoryTouchMoveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043EA1 RID: 278177 RVA: 0x010A6AA8 File Offset: 0x010A4CA8
+		// Token: 0x06039FEA RID: 237546 RVA: 0x01050158 File Offset: 0x0104E358
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.MachineryFactory
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043EA2 RID: 278178 RVA: 0x010A6B70 File Offset: 0x010A4D70
+		// Token: 0x06039FEB RID: 237547 RVA: 0x01050220 File Offset: 0x0104E420
 		protected override void OnBeforeShow()
 		{
 			this.PnlMask = base.GetItem(0);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.MachineryFactory
 			this.RefreshTitle();
 		}
 
-		// Token: 0x06043EA3 RID: 278179 RVA: 0x010A6C04 File Offset: 0x010A4E04
+		// Token: 0x06039FEC RID: 237548 RVA: 0x010502B4 File Offset: 0x0104E4B4
 		private void RefreshTitle()
 		{
 			if (this.ClickCount < this.TextKeys.Count)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.MachineryFactory
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06043EA4 RID: 278180 RVA: 0x010A6C8F File Offset: 0x010A4E8F
+		// Token: 0x06039FED RID: 237549 RVA: 0x0105033F File Offset: 0x0104E53F
 		protected override void OnBeforeDestroy()
 		{
 			if (this.DelayClickHandle != null)
@@ -94,20 +94,20 @@ namespace CSharpScript.Game.LevelGamePlay.MachineryFactory
 			}
 		}
 
-		// Token: 0x06043EA5 RID: 278181 RVA: 0x010A6CB1 File Offset: 0x010A4EB1
+		// Token: 0x06039FEE RID: 237550 RVA: 0x01050361 File Offset: 0x0104E561
 		private void OnButtonClick()
 		{
 			this.ClickCount++;
 			this.RefreshTitle();
 		}
 
-		// Token: 0x040237CE RID: 145358
+		// Token: 0x0401EA6E RID: 125550
 		private UUIItem PnlMask;
 
-		// Token: 0x040237CF RID: 145359
+		// Token: 0x0401EA6F RID: 125551
 		private UUIText TxtTitle;
 
-		// Token: 0x040237D0 RID: 145360
+		// Token: 0x0401EA70 RID: 125552
 		[Nullable(new byte[]
 		{
 			2,
@@ -115,24 +115,24 @@ namespace CSharpScript.Game.LevelGamePlay.MachineryFactory
 		})]
 		private List<string> TextKeys = new List<string>();
 
-		// Token: 0x040237D1 RID: 145361
+		// Token: 0x0401EA71 RID: 125553
 		private int ClickCount;
 
-		// Token: 0x040237D2 RID: 145362
+		// Token: 0x0401EA72 RID: 125554
 		private UUIButtonComponent BtnProceed;
 
-		// Token: 0x040237D3 RID: 145363
+		// Token: 0x0401EA73 RID: 125555
 		private TimerHandle DelayClickHandle;
 
-		// Token: 0x0200CBA8 RID: 52136
+		// Token: 0x0200B799 RID: 47001
 		[NullableContext(0)]
 		private enum EViewComponent
 		{
-			// Token: 0x0403D788 RID: 251784
+			// Token: 0x04038BAB RID: 232363
 			PnlMask,
-			// Token: 0x0403D789 RID: 251785
+			// Token: 0x04038BAC RID: 232364
 			TxtTitle,
-			// Token: 0x0403D78A RID: 251786
+			// Token: 0x04038BAD RID: 232365
 			BtnProceed
 		}
 	}

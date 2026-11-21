@@ -8,16 +8,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032BB RID: 12987
+// Token: 0x0200282C RID: 10284
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/TriggerItems/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/TriggerItems/TsExploreCameraTriggerVolume.TsExploreCameraTriggerVolume_C")]
 public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170026E8 RID: 9960
-	// (get) Token: 0x0601C258 RID: 115288 RVA: 0x007D5AF8 File Offset: 0x007D3CF8
-	// (set) Token: 0x0601C259 RID: 115289 RVA: 0x007D5B08 File Offset: 0x007D3D08
+	// Token: 0x170029D4 RID: 10708
+	// (get) Token: 0x06019E98 RID: 106136 RVA: 0x007FCC94 File Offset: 0x007FAE94
+	// (set) Token: 0x06019E99 RID: 106137 RVA: 0x007FCCA4 File Offset: 0x007FAEA4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Id
 	{
@@ -31,9 +31,9 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170026E9 RID: 9961
-	// (get) Token: 0x0601C25A RID: 115290 RVA: 0x007D5B19 File Offset: 0x007D3D19
-	// (set) Token: 0x0601C25B RID: 115291 RVA: 0x007D5B2D File Offset: 0x007D3D2D
+	// Token: 0x170029D5 RID: 10709
+	// (get) Token: 0x06019E9A RID: 106138 RVA: 0x007FCCB5 File Offset: 0x007FAEB5
+	// (set) Token: 0x06019E9B RID: 106139 RVA: 0x007FCCC9 File Offset: 0x007FAEC9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor LookAtActor1
 	{
@@ -47,9 +47,9 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170026EA RID: 9962
-	// (get) Token: 0x0601C25C RID: 115292 RVA: 0x007D5B42 File Offset: 0x007D3D42
-	// (set) Token: 0x0601C25D RID: 115293 RVA: 0x007D5B56 File Offset: 0x007D3D56
+	// Token: 0x170029D6 RID: 10710
+	// (get) Token: 0x06019E9C RID: 106140 RVA: 0x007FCCDE File Offset: 0x007FAEDE
+	// (set) Token: 0x06019E9D RID: 106141 RVA: 0x007FCCF2 File Offset: 0x007FAEF2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor LookAtActor2
 	{
@@ -63,9 +63,9 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170026EB RID: 9963
-	// (get) Token: 0x0601C25E RID: 115294 RVA: 0x007D5B6B File Offset: 0x007D3D6B
-	// (set) Token: 0x0601C25F RID: 115295 RVA: 0x007D5B7B File Offset: 0x007D3D7B
+	// Token: 0x170029D7 RID: 10711
+	// (get) Token: 0x06019E9E RID: 106142 RVA: 0x007FCD07 File Offset: 0x007FAF07
+	// (set) Token: 0x06019E9F RID: 106143 RVA: 0x007FCD17 File Offset: 0x007FAF17
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float PrepTime
 	{
@@ -79,9 +79,9 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170026EC RID: 9964
-	// (get) Token: 0x0601C260 RID: 115296 RVA: 0x007D5B8C File Offset: 0x007D3D8C
-	// (set) Token: 0x0601C261 RID: 115297 RVA: 0x007D5B9C File Offset: 0x007D3D9C
+	// Token: 0x170029D8 RID: 10712
+	// (get) Token: 0x06019EA0 RID: 106144 RVA: 0x007FCD28 File Offset: 0x007FAF28
+	// (set) Token: 0x06019EA1 RID: 106145 RVA: 0x007FCD38 File Offset: 0x007FAF38
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FadeDistance
 	{
@@ -95,9 +95,9 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170026ED RID: 9965
-	// (get) Token: 0x0601C262 RID: 115298 RVA: 0x007D5BAD File Offset: 0x007D3DAD
-	// (set) Token: 0x0601C263 RID: 115299 RVA: 0x007D5BBD File Offset: 0x007D3DBD
+	// Token: 0x170029D9 RID: 10713
+	// (get) Token: 0x06019EA2 RID: 106146 RVA: 0x007FCD49 File Offset: 0x007FAF49
+	// (set) Token: 0x06019EA3 RID: 106147 RVA: 0x007FCD59 File Offset: 0x007FAF59
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ArmLengthMin
 	{
@@ -111,9 +111,9 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170026EE RID: 9966
-	// (get) Token: 0x0601C264 RID: 115300 RVA: 0x007D5BCE File Offset: 0x007D3DCE
-	// (set) Token: 0x0601C265 RID: 115301 RVA: 0x007D5BDE File Offset: 0x007D3DDE
+	// Token: 0x170029DA RID: 10714
+	// (get) Token: 0x06019EA4 RID: 106148 RVA: 0x007FCD6A File Offset: 0x007FAF6A
+	// (set) Token: 0x06019EA5 RID: 106149 RVA: 0x007FCD7A File Offset: 0x007FAF7A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ArmLengthMax
 	{
@@ -127,7 +127,7 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x0601C266 RID: 115302 RVA: 0x007D5BF0 File Offset: 0x007D3DF0
+	// Token: 0x06019EA6 RID: 106150 RVA: 0x007FCD8C File Offset: 0x007FAF8C
 	protected override void OnCollisionEnterFunc(AActor otherActor, AActor overlapped)
 	{
 		if (!(otherActor is TsBaseCharacter))
@@ -153,7 +153,7 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		CameraController.Instance.EnterCameraExplore(this.Id, null, null, this.PrepTime, this.FadeDistance, this.ArmLengthMin, this.ArmLengthMax, "MainCamera");
 	}
 
-	// Token: 0x0601C267 RID: 115303 RVA: 0x007D5CC8 File Offset: 0x007D3EC8
+	// Token: 0x06019EA7 RID: 106151 RVA: 0x007FCE64 File Offset: 0x007FB064
 	protected override void OnCollisionExitFunc(AActor otherActor, AActor overlapped)
 	{
 		if (!(otherActor is TsBaseCharacter))
@@ -167,7 +167,7 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		CameraController.Instance.ExitCameraExplore(this.Id, "MainCamera");
 	}
 
-	// Token: 0x0601C268 RID: 115304 RVA: 0x007D5CF1 File Offset: 0x007D3EF1
+	// Token: 0x06019EA8 RID: 106152 RVA: 0x007FCE8D File Offset: 0x007FB08D
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsExploreCameraTriggerVolume._ClassPtr == IntPtr.Zero)
@@ -177,50 +177,50 @@ public class TsExploreCameraTriggerVolume : TsTriggerVolume, IUnrealUObject, IUn
 		return TsExploreCameraTriggerVolume._ClassPtr;
 	}
 
-	// Token: 0x0601C269 RID: 115305 RVA: 0x007D5D18 File Offset: 0x007D3F18
+	// Token: 0x06019EA9 RID: 106153 RVA: 0x007FCEB4 File Offset: 0x007FB0B4
 	public TsExploreCameraTriggerVolume() : this(BuiltinUtils.AllocNativeUObject(TsExploreCameraTriggerVolume.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C26A RID: 115306 RVA: 0x007D5D40 File Offset: 0x007D3F40
+	// Token: 0x06019EAA RID: 106154 RVA: 0x007FCEDC File Offset: 0x007FB0DC
 	[NullableContext(1)]
 	public TsExploreCameraTriggerVolume(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsExploreCameraTriggerVolume.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C26B RID: 115307 RVA: 0x007D5D73 File Offset: 0x007D3F73
+	// Token: 0x06019EAB RID: 106155 RVA: 0x007FCF0F File Offset: 0x007FB10F
 	protected TsExploreCameraTriggerVolume(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400DEBC RID: 57020
+	// Token: 0x0400E361 RID: 58209
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/TriggerItems/TsExploreCameraTriggerVolume.TsExploreCameraTriggerVolume_C";
 
-	// Token: 0x0400DEBD RID: 57021
+	// Token: 0x0400E362 RID: 58210
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DEBE RID: 57022
+	// Token: 0x0400E363 RID: 58211
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400DEBF RID: 57023
+	// Token: 0x0400E364 RID: 58212
 	private static int __PropertyOffset_Id;
 
-	// Token: 0x0400DEC0 RID: 57024
+	// Token: 0x0400E365 RID: 58213
 	private static int __PropertyOffset_LookAtActor1;
 
-	// Token: 0x0400DEC1 RID: 57025
+	// Token: 0x0400E366 RID: 58214
 	private static int __PropertyOffset_LookAtActor2;
 
-	// Token: 0x0400DEC2 RID: 57026
+	// Token: 0x0400E367 RID: 58215
 	private static int __PropertyOffset_PrepTime;
 
-	// Token: 0x0400DEC3 RID: 57027
+	// Token: 0x0400E368 RID: 58216
 	private static int __PropertyOffset_FadeDistance;
 
-	// Token: 0x0400DEC4 RID: 57028
+	// Token: 0x0400E369 RID: 58217
 	private static int __PropertyOffset_ArmLengthMin;
 
-	// Token: 0x0400DEC5 RID: 57029
+	// Token: 0x0400E36A RID: 58218
 	private static int __PropertyOffset_ArmLengthMax;
 }

@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005016 RID: 20502
+	// Token: 0x02003FE0 RID: 16352
 	public enum ESequenceState
 	{
-		// Token: 0x0401BF35 RID: 114485
+		// Token: 0x0401691E RID: 92446
 		Null,
-		// Token: 0x0401BF36 RID: 114486
+		// Token: 0x0401691F RID: 92447
 		Loading,
-		// Token: 0x0401BF37 RID: 114487
+		// Token: 0x04016920 RID: 92448
 		PrePlay,
-		// Token: 0x0401BF38 RID: 114488
+		// Token: 0x04016921 RID: 92449
 		Playing,
-		// Token: 0x0401BF39 RID: 114489
+		// Token: 0x04016922 RID: 92450
 		Stopping,
-		// Token: 0x0401BF3A RID: 114490
+		// Token: 0x04016923 RID: 92451
 		Ending
 	}
 }

@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200772A RID: 30506
+	// Token: 0x02007F53 RID: 32595
 	public static class TMoveDriveModeVerify
 	{
-		// Token: 0x06037717 RID: 227095 RVA: 0x00781B1C File Offset: 0x0077FD1C
+		// Token: 0x0603AC52 RID: 240722 RVA: 0x007E6AAC File Offset: 0x007E4CAC
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

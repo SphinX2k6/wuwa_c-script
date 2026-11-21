@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F9D RID: 8093
+	// Token: 0x020021E0 RID: 8672
 	public class ITeleportToLatestResetPointDirectly_SetValue
 	{
-		// Token: 0x04006B82 RID: 27522
+		// Token: 0x0400717D RID: 29053
 		public ETeleportToLatestResetPointType Type;
 	}
 }

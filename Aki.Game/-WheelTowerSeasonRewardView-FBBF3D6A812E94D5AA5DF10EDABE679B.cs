@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x02001643 RID: 5699
+// Token: 0x02000AFB RID: 2811
 internal enum <WheelTowerSeasonRewardView>FBBF3D6A812E94D5AA5DF10EDABE679BF50A994B28144B2AF50A6ACDB52EB89EF__EWheelTowerSeasonRewardViewComponent
 {
-	// Token: 0x040048DF RID: 18655
+	// Token: 0x04004985 RID: 18821
 	CaptionItem,
-	// Token: 0x040048E0 RID: 18656
+	// Token: 0x04004986 RID: 18822
 	TxtRemainTime,
-	// Token: 0x040048E1 RID: 18657
+	// Token: 0x04004987 RID: 18823
 	RewardInfo,
-	// Token: 0x040048E2 RID: 18658
+	// Token: 0x04004988 RID: 18824
 	TaskLoopScroll,
-	// Token: 0x040048E3 RID: 18659
+	// Token: 0x04004989 RID: 18825
 	ScoreProgressItem,
-	// Token: 0x040048E4 RID: 18660
+	// Token: 0x0400498A RID: 18826
 	TxtSeasonTitle,
-	// Token: 0x040048E5 RID: 18661
+	// Token: 0x0400498B RID: 18827
 	TexSeasonIcon,
-	// Token: 0x040048E6 RID: 18662
+	// Token: 0x0400498C RID: 18828
 	TexSeasonTitle,
-	// Token: 0x040048E7 RID: 18663
+	// Token: 0x0400498D RID: 18829
 	PnlEndless,
-	// Token: 0x040048E8 RID: 18664
+	// Token: 0x0400498E RID: 18830
 	PnlNormal,
-	// Token: 0x040048E9 RID: 18665
+	// Token: 0x0400498F RID: 18831
 	SeasonMedalItem,
-	// Token: 0x040048EA RID: 18666
+	// Token: 0x04004990 RID: 18832
 	PnlDesc,
-	// Token: 0x040048EB RID: 18667
+	// Token: 0x04004991 RID: 18833
 	TxtDesc
 }

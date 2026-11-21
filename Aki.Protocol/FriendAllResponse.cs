@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200064A RID: 1610
+	// Token: 0x02000636 RID: 1590
 	[NetMessage(EMessageId.FriendAllResponse)]
 	public sealed class FriendAllResponse : IMessage<FriendAllResponse>, IMessage, IEquatable<FriendAllResponse>, IDeepCloneable<FriendAllResponse>, IBufferMessage
 	{
-		// Token: 0x06009421 RID: 37921 RVA: 0x00166102 File Offset: 0x00164302
+		// Token: 0x060092CB RID: 37579 RVA: 0x001636D2 File Offset: 0x001618D2
 		[NullableContext(1)]
 		public static FriendAllResponse Create()
 		{
 			return new FriendAllResponse();
 		}
 
-		// Token: 0x17001D7C RID: 7548
-		// (get) Token: 0x06009422 RID: 37922 RVA: 0x00166109 File Offset: 0x00164309
+		// Token: 0x17001D32 RID: 7474
+		// (get) Token: 0x060092CC RID: 37580 RVA: 0x001636D9 File Offset: 0x001618D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001D7D RID: 7549
-		// (get) Token: 0x06009423 RID: 37923 RVA: 0x0016610C File Offset: 0x0016430C
+		// Token: 0x17001D33 RID: 7475
+		// (get) Token: 0x060092CD RID: 37581 RVA: 0x001636DC File Offset: 0x001618DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009424 RID: 37924 RVA: 0x00166113 File Offset: 0x00164313
+		// Token: 0x060092CE RID: 37582 RVA: 0x001636E3 File Offset: 0x001618E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FriendAllResponse()
 		{
 		}
 
-		// Token: 0x06009425 RID: 37925 RVA: 0x00166134 File Offset: 0x00164334
+		// Token: 0x060092CF RID: 37583 RVA: 0x00163704 File Offset: 0x00161904
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FriendAllResponse(FriendAllResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06009426 RID: 37926 RVA: 0x00166186 File Offset: 0x00164386
+		// Token: 0x060092D0 RID: 37584 RVA: 0x00163756 File Offset: 0x00161956
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FriendAllResponse Clone()
@@ -69,8 +69,8 @@ namespace Aki.Protocol
 			return new FriendAllResponse(this);
 		}
 
-		// Token: 0x17001D7E RID: 7550
-		// (get) Token: 0x06009427 RID: 37927 RVA: 0x0016618E File Offset: 0x0016438E
+		// Token: 0x17001D34 RID: 7476
+		// (get) Token: 0x060092D1 RID: 37585 RVA: 0x0016375E File Offset: 0x0016195E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FriendInfo> FriendInfoList
@@ -81,8 +81,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001D7F RID: 7551
-		// (get) Token: 0x06009428 RID: 37928 RVA: 0x00166196 File Offset: 0x00164396
+		// Token: 0x17001D35 RID: 7477
+		// (get) Token: 0x060092D2 RID: 37586 RVA: 0x00163766 File Offset: 0x00161966
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FriendApply> FriendApplyList
@@ -93,9 +93,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001D80 RID: 7552
-		// (get) Token: 0x06009429 RID: 37929 RVA: 0x0016619E File Offset: 0x0016439E
-		// (set) Token: 0x0600942A RID: 37930 RVA: 0x001661A6 File Offset: 0x001643A6
+		// Token: 0x17001D36 RID: 7478
+		// (get) Token: 0x060092D3 RID: 37587 RVA: 0x0016376E File Offset: 0x0016196E
+		// (set) Token: 0x060092D4 RID: 37588 RVA: 0x00163776 File Offset: 0x00161976
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600942B RID: 37931 RVA: 0x001661AF File Offset: 0x001643AF
+		// Token: 0x060092D5 RID: 37589 RVA: 0x0016377F File Offset: 0x0016197F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FriendAllResponse);
 		}
 
-		// Token: 0x0600942C RID: 37932 RVA: 0x001661C0 File Offset: 0x001643C0
+		// Token: 0x060092D6 RID: 37590 RVA: 0x00163790 File Offset: 0x00161990
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FriendAllResponse other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.friendInfoList_.Equals(other.friendInfoList_) && this.friendApplyList_.Equals(other.friendApplyList_) && this.ErrorCode == other.ErrorCode && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600942D RID: 37933 RVA: 0x00166224 File Offset: 0x00164424
+		// Token: 0x060092D7 RID: 37591 RVA: 0x001637F4 File Offset: 0x001619F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600942E RID: 37934 RVA: 0x00166285 File Offset: 0x00164485
+		// Token: 0x060092D8 RID: 37592 RVA: 0x00163855 File Offset: 0x00161A55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600942F RID: 37935 RVA: 0x00166292 File Offset: 0x00164492
+		// Token: 0x060092D9 RID: 37593 RVA: 0x00163862 File Offset: 0x00161A62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,25 +161,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009430 RID: 37936 RVA: 0x0016629C File Offset: 0x0016449C
+		// Token: 0x060092DA RID: 37594 RVA: 0x0016386C File Offset: 0x00161A6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.friendApplyList_.WriteTo(ref output, FriendAllResponse._repeated_friendApplyList_codec);
 			this.friendInfoList_.WriteTo(ref output, FriendAllResponse._repeated_friendInfoList_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(80);
 				output.WriteEnum((int)this.ErrorCode);
 			}
-			this.friendApplyList_.WriteTo(ref output, FriendAllResponse._repeated_friendApplyList_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06009431 RID: 37937 RVA: 0x001662FC File Offset: 0x001644FC
+		// Token: 0x060092DB RID: 37595 RVA: 0x001638CC File Offset: 0x00161ACC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009432 RID: 37938 RVA: 0x00166360 File Offset: 0x00164560
+		// Token: 0x060092DC RID: 37596 RVA: 0x00163930 File Offset: 0x00161B30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FriendAllResponse other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009433 RID: 37939 RVA: 0x001663BE File Offset: 0x001645BE
+		// Token: 0x060092DD RID: 37597 RVA: 0x0016398E File Offset: 0x00161B8E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009434 RID: 37940 RVA: 0x001663C8 File Offset: 0x001645C8
+		// Token: 0x060092DE RID: 37598 RVA: 0x00163998 File Offset: 0x00161B98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,56 +236,56 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 42U)
+				if (num != 26U)
 				{
-					if (num != 64U)
+					if (num != 58U)
 					{
-						if (num != 90U)
+						if (num != 80U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.friendApplyList_.AddEntriesFrom(ref input, FriendAllResponse._repeated_friendApplyList_codec);
+							this.ErrorCode = (ErrorCode)input.ReadEnum();
 						}
 					}
 					else
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						this.friendInfoList_.AddEntriesFrom(ref input, FriendAllResponse._repeated_friendInfoList_codec);
 					}
 				}
 				else
 				{
-					this.friendInfoList_.AddEntriesFrom(ref input, FriendAllResponse._repeated_friendInfoList_codec);
+					this.friendApplyList_.AddEntriesFrom(ref input, FriendAllResponse._repeated_friendApplyList_codec);
 				}
 			}
 		}
 
-		// Token: 0x04004710 RID: 18192
+		// Token: 0x04004709 RID: 18185
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004711 RID: 18193
-		public const int FriendInfoListFieldNumber = 5;
+		// Token: 0x0400470A RID: 18186
+		public const int FriendInfoListFieldNumber = 7;
 
-		// Token: 0x04004712 RID: 18194
-		private static readonly FieldCodec<FriendInfo> _repeated_friendInfoList_codec = FieldCodec.ForMessage<FriendInfo>(42U, FriendInfo.Parser);
+		// Token: 0x0400470B RID: 18187
+		private static readonly FieldCodec<FriendInfo> _repeated_friendInfoList_codec = FieldCodec.ForMessage<FriendInfo>(58U, FriendInfo.Parser);
 
-		// Token: 0x04004713 RID: 18195
+		// Token: 0x0400470C RID: 18188
 		private readonly RepeatedField<FriendInfo> friendInfoList_ = new RepeatedField<FriendInfo>();
 
-		// Token: 0x04004714 RID: 18196
-		public const int FriendApplyListFieldNumber = 11;
+		// Token: 0x0400470D RID: 18189
+		public const int FriendApplyListFieldNumber = 3;
 
-		// Token: 0x04004715 RID: 18197
-		private static readonly FieldCodec<FriendApply> _repeated_friendApplyList_codec = FieldCodec.ForMessage<FriendApply>(90U, FriendApply.Parser);
+		// Token: 0x0400470E RID: 18190
+		private static readonly FieldCodec<FriendApply> _repeated_friendApplyList_codec = FieldCodec.ForMessage<FriendApply>(26U, FriendApply.Parser);
 
-		// Token: 0x04004716 RID: 18198
+		// Token: 0x0400470F RID: 18191
 		private readonly RepeatedField<FriendApply> friendApplyList_ = new RepeatedField<FriendApply>();
 
-		// Token: 0x04004717 RID: 18199
-		public const int ErrorCodeFieldNumber = 8;
+		// Token: 0x04004710 RID: 18192
+		public const int ErrorCodeFieldNumber = 10;
 
-		// Token: 0x04004718 RID: 18200
+		// Token: 0x04004711 RID: 18193
 		private ErrorCode errorCode_;
 	}
 }

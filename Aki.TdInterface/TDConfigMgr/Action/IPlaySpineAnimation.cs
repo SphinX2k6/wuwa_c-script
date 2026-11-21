@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D20 RID: 7456
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F31 RID: 7985
 	public class IPlaySpineAnimation : ISetSpineAnimationType
 	{
-		// Token: 0x0600A001 RID: 40961 RVA: 0x0016D40C File Offset: 0x0016B60C
+		// Token: 0x0600A9ED RID: 43501 RVA: 0x00181830 File Offset: 0x0017FA30
 		private IPlaySpineAnimation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A002 RID: 40962 RVA: 0x0016D444 File Offset: 0x0016B644
+		// Token: 0x0600A9EE RID: 43502 RVA: 0x00181868 File Offset: 0x0017FA68
 		public static IPlaySpineAnimation Create([Nullable(2)] IPlaySpineAnimation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A003 RID: 40963 RVA: 0x0016D457 File Offset: 0x0016B657
+		// Token: 0x0600A9EF RID: 43503 RVA: 0x0018187B File Offset: 0x0017FA7B
 		public static IPlaySpineAnimation CreateFromSetValue([Nullable(2)] IPlaySpineAnimation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A004 RID: 40964 RVA: 0x0016D46A File Offset: 0x0016B66A
+		// Token: 0x0600A9F0 RID: 43504 RVA: 0x0018188E File Offset: 0x0017FA8E
 		public new IPlaySpineAnimation_SetValue ToSetValue()
 		{
 			return new IPlaySpineAnimation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031A7 RID: 12711
-		// (get) Token: 0x0600A005 RID: 40965 RVA: 0x0016D495 File Offset: 0x0016B695
-		// (set) Token: 0x0600A006 RID: 40966 RVA: 0x0016D4C0 File Offset: 0x0016B6C0
+		// Token: 0x1700343B RID: 13371
+		// (get) Token: 0x0600A9F1 RID: 43505 RVA: 0x001818B9 File Offset: 0x0017FAB9
+		// (set) Token: 0x0600A9F2 RID: 43506 RVA: 0x001818E4 File Offset: 0x0017FAE4
 		public override ESetSpineAnimation Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031A8 RID: 12712
-		// (get) Token: 0x0600A007 RID: 40967 RVA: 0x0016D4CE File Offset: 0x0016B6CE
-		// (set) Token: 0x0600A008 RID: 40968 RVA: 0x0016D4F9 File Offset: 0x0016B6F9
+		// Token: 0x1700343C RID: 13372
+		// (get) Token: 0x0600A9F3 RID: 43507 RVA: 0x001818F2 File Offset: 0x0017FAF2
+		// (set) Token: 0x0600A9F4 RID: 43508 RVA: 0x0018191D File Offset: 0x0017FB1D
 		public virtual string Name
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031A9 RID: 12713
-		// (get) Token: 0x0600A009 RID: 40969 RVA: 0x0016D507 File Offset: 0x0016B707
-		// (set) Token: 0x0600A00A RID: 40970 RVA: 0x0016D532 File Offset: 0x0016B732
+		// Token: 0x1700343D RID: 13373
+		// (get) Token: 0x0600A9F5 RID: 43509 RVA: 0x0018192B File Offset: 0x0017FB2B
+		// (set) Token: 0x0600A9F6 RID: 43510 RVA: 0x00181956 File Offset: 0x0017FB56
 		public virtual bool IsLoop
 		{
 			get
@@ -126,11 +124,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400607E RID: 24702
+		// Token: 0x040065FA RID: 26106
 		[Nullable(2)]
 		protected new IPlaySpineAnimation FbInstance;
 
-		// Token: 0x0400607F RID: 24703
+		// Token: 0x040065FB RID: 26107
 		[Nullable(2)]
 		protected new IPlaySpineAnimation_SetValue PocoInterface;
 	}

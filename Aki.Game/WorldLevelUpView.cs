@@ -11,16 +11,16 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002D6D RID: 11629
+// Token: 0x020022C7 RID: 8903
 public class WorldLevelUpView : UiTickViewBase
 {
-	// Token: 0x06018740 RID: 100160 RVA: 0x00639924 File Offset: 0x00637B24
+	// Token: 0x06015FE2 RID: 90082 RVA: 0x0065F93C File Offset: 0x0065DB3C
 	[NullableContext(1)]
 	public WorldLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06018741 RID: 100161 RVA: 0x00639950 File Offset: 0x00637B50
+	// Token: 0x06015FE3 RID: 90083 RVA: 0x0065F968 File Offset: 0x0065DB68
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -36,26 +36,26 @@ public class WorldLevelUpView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06018742 RID: 100162 RVA: 0x006399DA File Offset: 0x00637BDA
+	// Token: 0x06015FE4 RID: 90084 RVA: 0x0065F9F2 File Offset: 0x0065DBF2
 	protected override void OnStart()
 	{
 		this.SetLevelText();
 		this.PlayWorldLevelUpEffect();
 	}
 
-	// Token: 0x06018743 RID: 100163 RVA: 0x006399E8 File Offset: 0x00637BE8
+	// Token: 0x06015FE5 RID: 90085 RVA: 0x0065FA00 File Offset: 0x0065DC00
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WorldLevelUpViewRefresh, new Action(this.OnViewRefresh));
 	}
 
-	// Token: 0x06018744 RID: 100164 RVA: 0x00639A06 File Offset: 0x00637C06
+	// Token: 0x06015FE6 RID: 90086 RVA: 0x0065FA1E File Offset: 0x0065DC1E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldLevelUpViewRefresh, new Action(this.OnViewRefresh));
 	}
 
-	// Token: 0x06018745 RID: 100165 RVA: 0x00639A24 File Offset: 0x00637C24
+	// Token: 0x06015FE7 RID: 90087 RVA: 0x0065FA3C File Offset: 0x0065DC3C
 	private void SetLevelText()
 	{
 		int originWorldLevel = WorldLevelModel.Instance.OriginWorldLevel;
@@ -71,7 +71,7 @@ public class WorldLevelUpView : UiTickViewBase
 		}));
 	}
 
-	// Token: 0x06018746 RID: 100166 RVA: 0x00639AF3 File Offset: 0x00637CF3
+	// Token: 0x06015FE8 RID: 90088 RVA: 0x0065FB0B File Offset: 0x0065DD0B
 	protected override void OnTick(float delta)
 	{
 		if (this.Time < 0f)
@@ -86,25 +86,25 @@ public class WorldLevelUpView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06018747 RID: 100167 RVA: 0x00639B31 File Offset: 0x00637D31
+	// Token: 0x06015FE9 RID: 90089 RVA: 0x0065FB49 File Offset: 0x0065DD49
 	private void OnViewRefresh()
 	{
 		this.SetLevelText();
 	}
 
-	// Token: 0x06018748 RID: 100168 RVA: 0x00639B39 File Offset: 0x00637D39
+	// Token: 0x06015FEA RID: 90090 RVA: 0x0065FB51 File Offset: 0x0065DD51
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06018749 RID: 100169 RVA: 0x00639B42 File Offset: 0x00637D42
+	// Token: 0x06015FEB RID: 90091 RVA: 0x0065FB5A File Offset: 0x0065DD5A
 	protected override void OnBeforeDestroy()
 	{
 		this.RecycleEffect();
 	}
 
-	// Token: 0x0601874A RID: 100170 RVA: 0x00639B4C File Offset: 0x00637D4C
+	// Token: 0x06015FEC RID: 90092 RVA: 0x0065FB64 File Offset: 0x0065DD64
 	private void PlayWorldLevelUpEffect()
 	{
 		if (Global.BaseCharacter == null)
@@ -129,7 +129,7 @@ public class WorldLevelUpView : UiTickViewBase
 		EffectSystem.Instance.SetAdditionTimeScale(ETimeScaleSourceType.SelfCentered, this.EffectHandle, CharacterModel.Instance.InverseSelfCenteredTimeDilation);
 	}
 
-	// Token: 0x0601874B RID: 100171 RVA: 0x00639BF8 File Offset: 0x00637DF8
+	// Token: 0x06015FED RID: 90093 RVA: 0x0065FC10 File Offset: 0x0065DE10
 	private void RecycleEffect()
 	{
 		if (EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -139,12 +139,12 @@ public class WorldLevelUpView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0400B552 RID: 46418
+	// Token: 0x0400B8C7 RID: 47303
 	private int EffectHandle;
 
-	// Token: 0x0400B553 RID: 46419
+	// Token: 0x0400B8C8 RID: 47304
 	private float Time;
 
-	// Token: 0x0400B554 RID: 46420
+	// Token: 0x0400B8C9 RID: 47305
 	private readonly int CloseTime = ConfigCommonParamById.GetIntConfig("WorldLevelDisplayTime").Value;
 }

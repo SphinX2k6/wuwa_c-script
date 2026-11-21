@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000296 RID: 662
+	// Token: 0x020002DB RID: 731
 	public class ICurveControlConfig_SetValue
 	{
-		// Token: 0x04000BA4 RID: 2980
+		// Token: 0x04000C89 RID: 3209
 		public ECurveControlType Type;
 	}
 }

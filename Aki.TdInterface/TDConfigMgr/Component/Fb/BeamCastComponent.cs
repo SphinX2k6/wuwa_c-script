@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF2 RID: 3314
+	// Token: 0x02000DEA RID: 3562
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BeamCastComponent : IComponentBase
 	{
-		// Token: 0x06004BAB RID: 19371 RVA: 0x000BCD5F File Offset: 0x000BAF5F
-		[NullableContext(1)]
+		// Token: 0x060050B9 RID: 20665 RVA: 0x000C828F File Offset: 0x000C648F
+		[NullableContext(0)]
 		public static BeamCastComponent Create(IBeamCastComponent? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001784 RID: 6020
-		// (get) Token: 0x06004BAC RID: 19372 RVA: 0x000BCD80 File Offset: 0x000BAF80
+		// Token: 0x170018E0 RID: 6368
+		// (get) Token: 0x060050BA RID: 20666 RVA: 0x000C82B0 File Offset: 0x000C64B0
 		public override bool? Disabled
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001785 RID: 6021
-		// (get) Token: 0x06004BAD RID: 19373 RVA: 0x000BCDB8 File Offset: 0x000BAFB8
+		// Token: 0x170018E1 RID: 6369
+		// (get) Token: 0x060050BB RID: 20667 RVA: 0x000C82E8 File Offset: 0x000C64E8
 		public override bool? EdIsLocked
 		{
 			get
@@ -50,20 +50,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001786 RID: 6022
-		// (get) Token: 0x06004BAE RID: 19374 RVA: 0x000BCDCE File Offset: 0x000BAFCE
-		[Nullable(1)]
+		// Token: 0x170018E2 RID: 6370
+		// (get) Token: 0x060050BC RID: 20668 RVA: 0x000C82FE File Offset: 0x000C64FE
+		[Nullable(0)]
 		public virtual string EffectPath
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.EffectPath;
 			}
 		}
 
-		// Token: 0x17001787 RID: 6023
-		// (get) Token: 0x06004BAF RID: 19375 RVA: 0x000BCDDC File Offset: 0x000BAFDC
+		// Token: 0x170018E3 RID: 6371
+		// (get) Token: 0x060050BD RID: 20669 RVA: 0x000C830C File Offset: 0x000C650C
 		public virtual bool? DelayDestroyEffect
 		{
 			get
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001788 RID: 6024
-		// (get) Token: 0x06004BB0 RID: 19376 RVA: 0x000BCE12 File Offset: 0x000BB012
+		// Token: 0x170018E4 RID: 6372
+		// (get) Token: 0x060050BE RID: 20670 RVA: 0x000C8342 File Offset: 0x000C6542
 		public virtual string StartEffectPath
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001789 RID: 6025
-		// (get) Token: 0x06004BB1 RID: 19377 RVA: 0x000BCE1F File Offset: 0x000BB01F
+		// Token: 0x170018E5 RID: 6373
+		// (get) Token: 0x060050BF RID: 20671 RVA: 0x000C834F File Offset: 0x000C654F
 		public virtual string HitEffectPath
 		{
 			get
@@ -96,12 +96,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700178A RID: 6026
-		// (get) Token: 0x06004BB2 RID: 19378 RVA: 0x000BCE2C File Offset: 0x000BB02C
-		[Nullable(1)]
+		// Token: 0x170018E6 RID: 6374
+		// (get) Token: 0x060050C0 RID: 20672 RVA: 0x000C835C File Offset: 0x000C655C
+		[Nullable(0)]
 		public virtual ICylinderTriggerShape Range
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._RangeInited)
@@ -114,8 +114,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700178B RID: 6027
-		// (get) Token: 0x06004BB3 RID: 19379 RVA: 0x000BCE60 File Offset: 0x000BB060
+		// Token: 0x170018E7 RID: 6375
+		// (get) Token: 0x060050C1 RID: 20673 RVA: 0x000C8390 File Offset: 0x000C6590
 		public virtual IBeamReflectionConfig Reflection
 		{
 			get
@@ -130,20 +130,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700178C RID: 6028
-		// (get) Token: 0x06004BB4 RID: 19380 RVA: 0x000BCE94 File Offset: 0x000BB094
-		[Nullable(1)]
+		// Token: 0x170018E8 RID: 6376
+		// (get) Token: 0x060050C2 RID: 20674 RVA: 0x000C83C4 File Offset: 0x000C65C4
+		[Nullable(0)]
 		public virtual string TargetState
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.TargetState;
 			}
 		}
 
-		// Token: 0x1700178D RID: 6029
-		// (get) Token: 0x06004BB5 RID: 19381 RVA: 0x000BCEA4 File Offset: 0x000BB0A4
+		// Token: 0x170018E9 RID: 6377
+		// (get) Token: 0x060050C3 RID: 20675 RVA: 0x000C83D4 File Offset: 0x000C65D4
 		public virtual bool? IgnoreMonsterCollision
 		{
 			get
@@ -156,8 +156,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700178E RID: 6030
-		// (get) Token: 0x06004BB6 RID: 19382 RVA: 0x000BCEDA File Offset: 0x000BB0DA
+		// Token: 0x170018EA RID: 6378
+		// (get) Token: 0x060050C4 RID: 20676 RVA: 0x000C840A File Offset: 0x000C660A
 		public virtual IBeamLayoutConfigWall BeamLayout
 		{
 			get
@@ -172,19 +172,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700178F RID: 6031
-		// (get) Token: 0x06004BB7 RID: 19383 RVA: 0x000BCF10 File Offset: 0x000BB110
+		// Token: 0x170018EB RID: 6379
+		// (get) Token: 0x060050C5 RID: 20677 RVA: 0x000C8440 File Offset: 0x000C6640
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> TriggerActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -207,8 +207,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001790 RID: 6032
-		// (get) Token: 0x06004BB8 RID: 19384 RVA: 0x000BCF8C File Offset: 0x000BB18C
+		// Token: 0x170018EC RID: 6380
+		// (get) Token: 0x060050C6 RID: 20678 RVA: 0x000C84BC File Offset: 0x000C66BC
 		public virtual bool? DisableDynamicRange
 		{
 			get
@@ -221,36 +221,36 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B3F RID: 11071
+		// Token: 0x04002DF9 RID: 11769
 		private IBeamCastComponent Instance;
 
-		// Token: 0x04002B40 RID: 11072
+		// Token: 0x04002DFA RID: 11770
 		private ICylinderTriggerShape _RangeCache;
 
-		// Token: 0x04002B41 RID: 11073
+		// Token: 0x04002DFB RID: 11771
 		private bool _RangeInited;
 
-		// Token: 0x04002B42 RID: 11074
+		// Token: 0x04002DFC RID: 11772
 		private IBeamReflectionConfig _ReflectionCache;
 
-		// Token: 0x04002B43 RID: 11075
+		// Token: 0x04002DFD RID: 11773
 		private bool _ReflectionInited;
 
-		// Token: 0x04002B44 RID: 11076
+		// Token: 0x04002DFE RID: 11774
 		private IBeamLayoutConfigWall _BeamLayoutCache;
 
-		// Token: 0x04002B45 RID: 11077
+		// Token: 0x04002DFF RID: 11775
 		private bool _BeamLayoutInited;
 
-		// Token: 0x04002B46 RID: 11078
+		// Token: 0x04002E00 RID: 11776
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _TriggerActionsCache;
 
-		// Token: 0x04002B47 RID: 11079
+		// Token: 0x04002E01 RID: 11777
 		private bool _TriggerActionsInited;
 	}
 }

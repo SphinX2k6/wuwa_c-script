@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.AI.StateMachine
 {
-	// Token: 0x02007315 RID: 29461
+	// Token: 0x02006498 RID: 25752
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineModel : ModelBase
 	{
-		// Token: 0x06048501 RID: 296193 RVA: 0x01298F4B File Offset: 0x0129714B
+		// Token: 0x0603E94E RID: 256334 RVA: 0x0123B9CB File Offset: 0x01239BCB
 		protected override bool OnInit()
 		{
 			this.AiStateMachineFactory = new AiStateMachineFactory();
 			return true;
 		}
 
-		// Token: 0x17009F80 RID: 40832
-		// (get) Token: 0x06048502 RID: 296194 RVA: 0x01298F59 File Offset: 0x01297159
+		// Token: 0x1700771E RID: 30494
+		// (get) Token: 0x0603E94F RID: 256335 RVA: 0x0123B9D9 File Offset: 0x01239BD9
 		public static AiStateMachineModel Instance
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.AI.StateMachine
 			}
 		}
 
-		// Token: 0x06048503 RID: 296195 RVA: 0x01298F60 File Offset: 0x01297160
+		// Token: 0x0603E950 RID: 256336 RVA: 0x0123B9E0 File Offset: 0x01239BE0
 		public static AiStateMachineModel GetOrCreateInstance()
 		{
 			if (AiStateMachineModel._Instance == null)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.AI.StateMachine
 			return AiStateMachineModel._Instance;
 		}
 
-		// Token: 0x06048504 RID: 296196 RVA: 0x01298F74 File Offset: 0x01297174
+		// Token: 0x0603E951 RID: 256337 RVA: 0x0123B9F4 File Offset: 0x01239BF4
 		public static bool CreateInstance()
 		{
 			if (AiStateMachineModel._Instance != null)
@@ -46,28 +46,28 @@ namespace CSharpScript.Game.AI.StateMachine
 			return true;
 		}
 
-		// Token: 0x06048505 RID: 296197 RVA: 0x01298F8A File Offset: 0x0129718A
+		// Token: 0x0603E952 RID: 256338 RVA: 0x0123BA0A File Offset: 0x01239C0A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06048506 RID: 296198 RVA: 0x01298F8C File Offset: 0x0129718C
+		// Token: 0x0603E953 RID: 256339 RVA: 0x0123BA0C File Offset: 0x01239C0C
 		public static void ResetStaticDefaultValue()
 		{
 			AiStateMachineModel._Instance = null;
 		}
 
-		// Token: 0x06048507 RID: 296199 RVA: 0x01298F94 File Offset: 0x01297194
+		// Token: 0x0603E954 RID: 256340 RVA: 0x0123BA14 File Offset: 0x01239C14
 		static AiStateMachineModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AiStateMachineModel.CreateStaticDefaultValue), new Action(AiStateMachineModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040263B0 RID: 156592
+		// Token: 0x0402169D RID: 136861
 		[Nullable(2)]
 		public AiStateMachineFactory AiStateMachineFactory;
 
-		// Token: 0x040263B1 RID: 156593
+		// Token: 0x0402169E RID: 136862
 		[Nullable(2)]
 		private static AiStateMachineModel _Instance;
 	}

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E28 RID: 28200
+	// Token: 0x02005FA8 RID: 24488
 	public enum EFishingQteAreaRefreshMode
 	{
-		// Token: 0x04023C30 RID: 146480
+		// Token: 0x0401EED3 RID: 126675
 		Never,
-		// Token: 0x04023C31 RID: 146481
+		// Token: 0x0401EED4 RID: 126676
 		Any,
-		// Token: 0x04023C32 RID: 146482
+		// Token: 0x0401EED5 RID: 126677
 		All
 	}
 }

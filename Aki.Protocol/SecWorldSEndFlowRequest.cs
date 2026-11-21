@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011B8 RID: 4536
+	// Token: 0x020011F2 RID: 4594
 	[NetMessage(EMessageId.SecWorldSEndFlowRequest)]
 	public sealed class SecWorldSEndFlowRequest : IMessage<SecWorldSEndFlowRequest>, IMessage, IEquatable<SecWorldSEndFlowRequest>, IDeepCloneable<SecWorldSEndFlowRequest>, IBufferMessage
 	{
-		// Token: 0x06018326 RID: 99110 RVA: 0x0038535A File Offset: 0x0038355A
+		// Token: 0x060188C7 RID: 100551 RVA: 0x003946A7 File Offset: 0x003928A7
 		[NullableContext(1)]
 		public static SecWorldSEndFlowRequest Create()
 		{
 			return new SecWorldSEndFlowRequest();
 		}
 
-		// Token: 0x1700517A RID: 20858
-		// (get) Token: 0x06018327 RID: 99111 RVA: 0x00385361 File Offset: 0x00383561
+		// Token: 0x170052E6 RID: 21222
+		// (get) Token: 0x060188C8 RID: 100552 RVA: 0x003946AE File Offset: 0x003928AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700517B RID: 20859
-		// (get) Token: 0x06018328 RID: 99112 RVA: 0x00385364 File Offset: 0x00383564
+		// Token: 0x170052E7 RID: 21223
+		// (get) Token: 0x060188C9 RID: 100553 RVA: 0x003946B1 File Offset: 0x003928B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018329 RID: 99113 RVA: 0x0038536B File Offset: 0x0038356B
+		// Token: 0x060188CA RID: 100554 RVA: 0x003946B8 File Offset: 0x003928B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SecWorldSEndFlowRequest()
 		{
 		}
 
-		// Token: 0x0601832A RID: 99114 RVA: 0x00385380 File Offset: 0x00383580
+		// Token: 0x060188CB RID: 100555 RVA: 0x003946CC File Offset: 0x003928CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SecWorldSEndFlowRequest(SecWorldSEndFlowRequest other) : this()
@@ -76,7 +76,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601832B RID: 99115 RVA: 0x00385488 File Offset: 0x00383688
+		// Token: 0x060188CC RID: 100556 RVA: 0x003947D4 File Offset: 0x003929D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SecWorldSEndFlowRequest Clone()
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			return new SecWorldSEndFlowRequest(this);
 		}
 
-		// Token: 0x1700517C RID: 20860
-		// (get) Token: 0x0601832C RID: 99116 RVA: 0x00385490 File Offset: 0x00383690
-		// (set) Token: 0x0601832D RID: 99117 RVA: 0x00385498 File Offset: 0x00383698
+		// Token: 0x170052E8 RID: 21224
+		// (get) Token: 0x060188CD RID: 100557 RVA: 0x003947DC File Offset: 0x003929DC
+		// (set) Token: 0x060188CE RID: 100558 RVA: 0x003947E4 File Offset: 0x003929E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LogId
@@ -101,9 +101,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700517D RID: 20861
-		// (get) Token: 0x0601832E RID: 99118 RVA: 0x003854A1 File Offset: 0x003836A1
-		// (set) Token: 0x0601832F RID: 99119 RVA: 0x003854A9 File Offset: 0x003836A9
+		// Token: 0x170052E9 RID: 21225
+		// (get) Token: 0x060188CF RID: 100559 RVA: 0x003947ED File Offset: 0x003929ED
+		// (set) Token: 0x060188D0 RID: 100560 RVA: 0x003947F5 File Offset: 0x003929F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ClientEndTime
@@ -118,9 +118,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700517E RID: 20862
-		// (get) Token: 0x06018330 RID: 99120 RVA: 0x003854BC File Offset: 0x003836BC
-		// (set) Token: 0x06018331 RID: 99121 RVA: 0x003854C4 File Offset: 0x003836C4
+		// Token: 0x170052EA RID: 21226
+		// (get) Token: 0x060188D1 RID: 100561 RVA: 0x00394808 File Offset: 0x00392A08
+		// (set) Token: 0x060188D2 RID: 100562 RVA: 0x00394810 File Offset: 0x00392A10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoundTimeUse
@@ -135,9 +135,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700517F RID: 20863
-		// (get) Token: 0x06018332 RID: 99122 RVA: 0x003854CD File Offset: 0x003836CD
-		// (set) Token: 0x06018333 RID: 99123 RVA: 0x003854D5 File Offset: 0x003836D5
+		// Token: 0x170052EB RID: 21227
+		// (get) Token: 0x060188D3 RID: 100563 RVA: 0x00394819 File Offset: 0x00392A19
+		// (set) Token: 0x060188D4 RID: 100564 RVA: 0x00394821 File Offset: 0x00392A21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SpeedMax
@@ -152,9 +152,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005180 RID: 20864
-		// (get) Token: 0x06018334 RID: 99124 RVA: 0x003854DE File Offset: 0x003836DE
-		// (set) Token: 0x06018335 RID: 99125 RVA: 0x003854E6 File Offset: 0x003836E6
+		// Token: 0x170052EC RID: 21228
+		// (get) Token: 0x060188D5 RID: 100565 RVA: 0x0039482A File Offset: 0x00392A2A
+		// (set) Token: 0x060188D6 RID: 100566 RVA: 0x00394832 File Offset: 0x00392A32
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SpeedMin
@@ -169,9 +169,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005181 RID: 20865
-		// (get) Token: 0x06018336 RID: 99126 RVA: 0x003854EF File Offset: 0x003836EF
-		// (set) Token: 0x06018337 RID: 99127 RVA: 0x003854F7 File Offset: 0x003836F7
+		// Token: 0x170052ED RID: 21229
+		// (get) Token: 0x060188D7 RID: 100567 RVA: 0x0039483B File Offset: 0x00392A3B
+		// (set) Token: 0x060188D8 RID: 100568 RVA: 0x00394843 File Offset: 0x00392A43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SprintMax
@@ -186,9 +186,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005182 RID: 20866
-		// (get) Token: 0x06018338 RID: 99128 RVA: 0x00385500 File Offset: 0x00383700
-		// (set) Token: 0x06018339 RID: 99129 RVA: 0x00385508 File Offset: 0x00383708
+		// Token: 0x170052EE RID: 21230
+		// (get) Token: 0x060188D9 RID: 100569 RVA: 0x0039484C File Offset: 0x00392A4C
+		// (set) Token: 0x060188DA RID: 100570 RVA: 0x00394854 File Offset: 0x00392A54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SprintMin
@@ -203,9 +203,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005183 RID: 20867
-		// (get) Token: 0x0601833A RID: 99130 RVA: 0x00385511 File Offset: 0x00383711
-		// (set) Token: 0x0601833B RID: 99131 RVA: 0x00385519 File Offset: 0x00383719
+		// Token: 0x170052EF RID: 21231
+		// (get) Token: 0x060188DB RID: 100571 RVA: 0x0039485D File Offset: 0x00392A5D
+		// (set) Token: 0x060188DC RID: 100572 RVA: 0x00394865 File Offset: 0x00392A65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SpeedAvg
@@ -220,9 +220,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005184 RID: 20868
-		// (get) Token: 0x0601833C RID: 99132 RVA: 0x00385522 File Offset: 0x00383722
-		// (set) Token: 0x0601833D RID: 99133 RVA: 0x0038552A File Offset: 0x0038372A
+		// Token: 0x170052F0 RID: 21232
+		// (get) Token: 0x060188DD RID: 100573 RVA: 0x0039486E File Offset: 0x00392A6E
+		// (set) Token: 0x060188DE RID: 100574 RVA: 0x00394876 File Offset: 0x00392A76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long PSReplyTotal
@@ -237,9 +237,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005185 RID: 20869
-		// (get) Token: 0x0601833E RID: 99134 RVA: 0x00385533 File Offset: 0x00383733
-		// (set) Token: 0x0601833F RID: 99135 RVA: 0x0038553B File Offset: 0x0038373B
+		// Token: 0x170052F1 RID: 21233
+		// (get) Token: 0x060188DF RID: 100575 RVA: 0x0039487F File Offset: 0x00392A7F
+		// (set) Token: 0x060188E0 RID: 100576 RVA: 0x00394887 File Offset: 0x00392A87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long PSCostTotal
@@ -254,9 +254,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005186 RID: 20870
-		// (get) Token: 0x06018340 RID: 99136 RVA: 0x00385544 File Offset: 0x00383744
-		// (set) Token: 0x06018341 RID: 99137 RVA: 0x0038554C File Offset: 0x0038374C
+		// Token: 0x170052F2 RID: 21234
+		// (get) Token: 0x060188E1 RID: 100577 RVA: 0x00394890 File Offset: 0x00392A90
+		// (set) Token: 0x060188E2 RID: 100578 RVA: 0x00394898 File Offset: 0x00392A98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PSReplySpeedMax
@@ -271,9 +271,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005187 RID: 20871
-		// (get) Token: 0x06018342 RID: 99138 RVA: 0x00385555 File Offset: 0x00383755
-		// (set) Token: 0x06018343 RID: 99139 RVA: 0x0038555D File Offset: 0x0038375D
+		// Token: 0x170052F3 RID: 21235
+		// (get) Token: 0x060188E3 RID: 100579 RVA: 0x003948A1 File Offset: 0x00392AA1
+		// (set) Token: 0x060188E4 RID: 100580 RVA: 0x003948A9 File Offset: 0x00392AA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PSReplySpeedMin
@@ -288,9 +288,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005188 RID: 20872
-		// (get) Token: 0x06018344 RID: 99140 RVA: 0x00385566 File Offset: 0x00383766
-		// (set) Token: 0x06018345 RID: 99141 RVA: 0x0038556E File Offset: 0x0038376E
+		// Token: 0x170052F4 RID: 21236
+		// (get) Token: 0x060188E5 RID: 100581 RVA: 0x003948B2 File Offset: 0x00392AB2
+		// (set) Token: 0x060188E6 RID: 100582 RVA: 0x003948BA File Offset: 0x00392ABA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PSUseCount
@@ -305,9 +305,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005189 RID: 20873
-		// (get) Token: 0x06018346 RID: 99142 RVA: 0x00385577 File Offset: 0x00383777
-		// (set) Token: 0x06018347 RID: 99143 RVA: 0x0038557F File Offset: 0x0038377F
+		// Token: 0x170052F5 RID: 21237
+		// (get) Token: 0x060188E7 RID: 100583 RVA: 0x003948C3 File Offset: 0x00392AC3
+		// (set) Token: 0x060188E8 RID: 100584 RVA: 0x003948CB File Offset: 0x00392ACB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PSUseNumMax
@@ -322,9 +322,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700518A RID: 20874
-		// (get) Token: 0x06018348 RID: 99144 RVA: 0x00385588 File Offset: 0x00383788
-		// (set) Token: 0x06018349 RID: 99145 RVA: 0x00385590 File Offset: 0x00383790
+		// Token: 0x170052F6 RID: 21238
+		// (get) Token: 0x060188E9 RID: 100585 RVA: 0x003948D4 File Offset: 0x00392AD4
+		// (set) Token: 0x060188EA RID: 100586 RVA: 0x003948DC File Offset: 0x00392ADC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PSUseNumMin
@@ -339,9 +339,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700518B RID: 20875
-		// (get) Token: 0x0601834A RID: 99146 RVA: 0x00385599 File Offset: 0x00383799
-		// (set) Token: 0x0601834B RID: 99147 RVA: 0x003855A1 File Offset: 0x003837A1
+		// Token: 0x170052F7 RID: 21239
+		// (get) Token: 0x060188EB RID: 100587 RVA: 0x003948E5 File Offset: 0x00392AE5
+		// (set) Token: 0x060188EC RID: 100588 RVA: 0x003948ED File Offset: 0x00392AED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemGetCount
@@ -356,9 +356,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700518C RID: 20876
-		// (get) Token: 0x0601834C RID: 99148 RVA: 0x003855AA File Offset: 0x003837AA
-		// (set) Token: 0x0601834D RID: 99149 RVA: 0x003855B2 File Offset: 0x003837B2
+		// Token: 0x170052F8 RID: 21240
+		// (get) Token: 0x060188ED RID: 100589 RVA: 0x003948F6 File Offset: 0x00392AF6
+		// (set) Token: 0x060188EE RID: 100590 RVA: 0x003948FE File Offset: 0x00392AFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemGetDistanceMax
@@ -373,9 +373,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700518D RID: 20877
-		// (get) Token: 0x0601834E RID: 99150 RVA: 0x003855BB File Offset: 0x003837BB
-		// (set) Token: 0x0601834F RID: 99151 RVA: 0x003855C3 File Offset: 0x003837C3
+		// Token: 0x170052F9 RID: 21241
+		// (get) Token: 0x060188EF RID: 100591 RVA: 0x00394907 File Offset: 0x00392B07
+		// (set) Token: 0x060188F0 RID: 100592 RVA: 0x0039490F File Offset: 0x00392B0F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemGetDistanceMin
@@ -390,9 +390,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700518E RID: 20878
-		// (get) Token: 0x06018350 RID: 99152 RVA: 0x003855CC File Offset: 0x003837CC
-		// (set) Token: 0x06018351 RID: 99153 RVA: 0x003855D4 File Offset: 0x003837D4
+		// Token: 0x170052FA RID: 21242
+		// (get) Token: 0x060188F1 RID: 100593 RVA: 0x00394918 File Offset: 0x00392B18
+		// (set) Token: 0x060188F2 RID: 100594 RVA: 0x00394920 File Offset: 0x00392B20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ComboMax
@@ -407,7 +407,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018352 RID: 99154 RVA: 0x003855DD File Offset: 0x003837DD
+		// Token: 0x060188F3 RID: 100595 RVA: 0x00394929 File Offset: 0x00392B29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -415,7 +415,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SecWorldSEndFlowRequest);
 		}
 
-		// Token: 0x06018353 RID: 99155 RVA: 0x003855EC File Offset: 0x003837EC
+		// Token: 0x060188F4 RID: 100596 RVA: 0x00394938 File Offset: 0x00392B38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SecWorldSEndFlowRequest other)
@@ -423,7 +423,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LogId == other.LogId && !(this.ClientEndTime != other.ClientEndTime) && this.RoundTimeUse == other.RoundTimeUse && this.SpeedMax == other.SpeedMax && this.SpeedMin == other.SpeedMin && this.SprintMax == other.SprintMax && this.SprintMin == other.SprintMin && this.SpeedAvg == other.SpeedAvg && this.PSReplyTotal == other.PSReplyTotal && this.PSCostTotal == other.PSCostTotal && this.PSReplySpeedMax == other.PSReplySpeedMax && this.PSReplySpeedMin == other.PSReplySpeedMin && this.PSUseCount == other.PSUseCount && this.PSUseNumMax == other.PSUseNumMax && this.PSUseNumMin == other.PSUseNumMin && this.ItemGetCount == other.ItemGetCount && this.ItemGetDistanceMax == other.ItemGetDistanceMax && this.ItemGetDistanceMin == other.ItemGetDistanceMin && this.ComboMax == other.ComboMax && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018354 RID: 99156 RVA: 0x0038574C File Offset: 0x0038394C
+		// Token: 0x060188F5 RID: 100597 RVA: 0x00394A98 File Offset: 0x00392C98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -512,7 +512,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018355 RID: 99157 RVA: 0x0038594F File Offset: 0x00383B4F
+		// Token: 0x060188F6 RID: 100598 RVA: 0x00394C9B File Offset: 0x00392E9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -520,7 +520,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018356 RID: 99158 RVA: 0x0038595C File Offset: 0x00383B5C
+		// Token: 0x060188F7 RID: 100599 RVA: 0x00394CA8 File Offset: 0x00392EA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -528,105 +528,105 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018357 RID: 99159 RVA: 0x00385968 File Offset: 0x00383B68
+		// Token: 0x060188F8 RID: 100600 RVA: 0x00394CB4 File Offset: 0x00392EB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.SpeedMin != 0)
-			{
-				output.WriteRawTag(88);
-				output.WriteInt32(this.SpeedMin);
-			}
-			if (this.SpeedAvg != 0)
-			{
-				output.WriteRawTag(232, 2);
-				output.WriteInt32(this.SpeedAvg);
-			}
-			if (this.PSReplySpeedMax != 0)
-			{
-				output.WriteRawTag(136, 3);
-				output.WriteInt32(this.PSReplySpeedMax);
-			}
-			if (this.PSReplyTotal != 0L)
-			{
-				output.WriteRawTag(200, 3);
-				output.WriteInt64(this.PSReplyTotal);
-			}
-			if (this.PSCostTotal != 0L)
-			{
-				output.WriteRawTag(160, 5);
-				output.WriteInt64(this.PSCostTotal);
-			}
-			if (this.ItemGetDistanceMax != 0)
-			{
-				output.WriteRawTag(224, 5);
-				output.WriteInt32(this.ItemGetDistanceMax);
-			}
 			if (this.SprintMax != 0)
 			{
-				output.WriteRawTag(200, 7);
+				output.WriteRawTag(8);
 				output.WriteInt32(this.SprintMax);
-			}
-			if (this.ClientEndTime.Length != 0)
-			{
-				output.WriteRawTag(242, 7);
-				output.WriteString(this.ClientEndTime);
-			}
-			if (this.RoundTimeUse != 0)
-			{
-				output.WriteRawTag(192, 9);
-				output.WriteInt32(this.RoundTimeUse);
-			}
-			if (this.ItemGetCount != 0)
-			{
-				output.WriteRawTag(144, 10);
-				output.WriteInt32(this.ItemGetCount);
-			}
-			if (this.SprintMin != 0)
-			{
-				output.WriteRawTag(232, 10);
-				output.WriteInt32(this.SprintMin);
-			}
-			if (this.LogId != 0L)
-			{
-				output.WriteRawTag(160, 12);
-				output.WriteInt64(this.LogId);
-			}
-			if (this.SpeedMax != 0)
-			{
-				output.WriteRawTag(208, 12);
-				output.WriteInt32(this.SpeedMax);
-			}
-			if (this.PSUseNumMax != 0)
-			{
-				output.WriteRawTag(208, 13);
-				output.WriteInt32(this.PSUseNumMax);
-			}
-			if (this.PSReplySpeedMin != 0)
-			{
-				output.WriteRawTag(152, 14);
-				output.WriteInt32(this.PSReplySpeedMin);
-			}
-			if (this.PSUseCount != 0)
-			{
-				output.WriteRawTag(184, 14);
-				output.WriteInt32(this.PSUseCount);
-			}
-			if (this.ItemGetDistanceMin != 0)
-			{
-				output.WriteRawTag(144, 15);
-				output.WriteInt32(this.ItemGetDistanceMin);
 			}
 			if (this.PSUseNumMin != 0)
 			{
-				output.WriteRawTag(168, 15);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.PSUseNumMin);
 			}
 			if (this.ComboMax != 0)
 			{
-				output.WriteRawTag(224, 15);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.ComboMax);
+			}
+			if (this.RoundTimeUse != 0)
+			{
+				output.WriteRawTag(184, 1);
+				output.WriteInt32(this.RoundTimeUse);
+			}
+			if (this.ClientEndTime.Length != 0)
+			{
+				output.WriteRawTag(210, 3);
+				output.WriteString(this.ClientEndTime);
+			}
+			if (this.PSUseNumMax != 0)
+			{
+				output.WriteRawTag(232, 5);
+				output.WriteInt32(this.PSUseNumMax);
+			}
+			if (this.ItemGetDistanceMin != 0)
+			{
+				output.WriteRawTag(192, 6);
+				output.WriteInt32(this.ItemGetDistanceMin);
+			}
+			if (this.SpeedMin != 0)
+			{
+				output.WriteRawTag(240, 6);
+				output.WriteInt32(this.SpeedMin);
+			}
+			if (this.LogId != 0L)
+			{
+				output.WriteRawTag(200, 7);
+				output.WriteInt64(this.LogId);
+			}
+			if (this.PSUseCount != 0)
+			{
+				output.WriteRawTag(224, 7);
+				output.WriteInt32(this.PSUseCount);
+			}
+			if (this.ItemGetCount != 0)
+			{
+				output.WriteRawTag(144, 8);
+				output.WriteInt32(this.ItemGetCount);
+			}
+			if (this.PSReplyTotal != 0L)
+			{
+				output.WriteRawTag(184, 8);
+				output.WriteInt64(this.PSReplyTotal);
+			}
+			if (this.PSCostTotal != 0L)
+			{
+				output.WriteRawTag(152, 9);
+				output.WriteInt64(this.PSCostTotal);
+			}
+			if (this.SpeedAvg != 0)
+			{
+				output.WriteRawTag(160, 9);
+				output.WriteInt32(this.SpeedAvg);
+			}
+			if (this.SpeedMax != 0)
+			{
+				output.WriteRawTag(152, 10);
+				output.WriteInt32(this.SpeedMax);
+			}
+			if (this.ItemGetDistanceMax != 0)
+			{
+				output.WriteRawTag(184, 10);
+				output.WriteInt32(this.ItemGetDistanceMax);
+			}
+			if (this.PSReplySpeedMin != 0)
+			{
+				output.WriteRawTag(232, 10);
+				output.WriteInt32(this.PSReplySpeedMin);
+			}
+			if (this.PSReplySpeedMax != 0)
+			{
+				output.WriteRawTag(160, 11);
+				output.WriteInt32(this.PSReplySpeedMax);
+			}
+			if (this.SprintMin != 0)
+			{
+				output.WriteRawTag(248, 12);
+				output.WriteInt32(this.SprintMin);
 			}
 			if (this._unknownFields != null)
 			{
@@ -634,7 +634,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018358 RID: 99160 RVA: 0x00385BF8 File Offset: 0x00383DF8
+		// Token: 0x060188F9 RID: 100601 RVA: 0x00394F34 File Offset: 0x00393134
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -658,11 +658,11 @@ namespace Aki.Protocol
 			}
 			if (this.SpeedMin != 0)
 			{
-				num += 1 + CodedOutputStream.ComputeInt32Size(this.SpeedMin);
+				num += 2 + CodedOutputStream.ComputeInt32Size(this.SpeedMin);
 			}
 			if (this.SprintMax != 0)
 			{
-				num += 2 + CodedOutputStream.ComputeInt32Size(this.SprintMax);
+				num += 1 + CodedOutputStream.ComputeInt32Size(this.SprintMax);
 			}
 			if (this.SprintMin != 0)
 			{
@@ -698,7 +698,7 @@ namespace Aki.Protocol
 			}
 			if (this.PSUseNumMin != 0)
 			{
-				num += 2 + CodedOutputStream.ComputeInt32Size(this.PSUseNumMin);
+				num += 1 + CodedOutputStream.ComputeInt32Size(this.PSUseNumMin);
 			}
 			if (this.ItemGetCount != 0)
 			{
@@ -714,7 +714,7 @@ namespace Aki.Protocol
 			}
 			if (this.ComboMax != 0)
 			{
-				num += 2 + CodedOutputStream.ComputeInt32Size(this.ComboMax);
+				num += 1 + CodedOutputStream.ComputeInt32Size(this.ComboMax);
 			}
 			if (this._unknownFields != null)
 			{
@@ -723,7 +723,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018359 RID: 99161 RVA: 0x00385DEC File Offset: 0x00383FEC
+		// Token: 0x060188FA RID: 100602 RVA: 0x00395128 File Offset: 0x00393328
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SecWorldSEndFlowRequest other)
@@ -811,7 +811,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601835A RID: 99162 RVA: 0x00385F95 File Offset: 0x00384195
+		// Token: 0x060188FB RID: 100603 RVA: 0x003952D1 File Offset: 0x003934D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -819,7 +819,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601835B RID: 99163 RVA: 0x00385FA0 File Offset: 0x003841A0
+		// Token: 0x060188FC RID: 100604 RVA: 0x003952DC File Offset: 0x003934DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -831,131 +831,131 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 1216U)
+				if (num <= 968U)
 				{
-					if (num <= 456U)
+					if (num <= 184U)
 					{
-						if (num <= 360U)
+						if (num <= 40U)
 						{
-							if (num == 88U)
+							if (num == 8U)
 							{
-								this.SpeedMin = input.ReadInt32();
+								this.SprintMax = input.ReadInt32();
 								continue;
 							}
-							if (num == 360U)
+							if (num == 40U)
 							{
-								this.SpeedAvg = input.ReadInt32();
+								this.PSUseNumMin = input.ReadInt32();
 								continue;
 							}
 						}
 						else
 						{
-							if (num == 392U)
+							if (num == 56U)
 							{
-								this.PSReplySpeedMax = input.ReadInt32();
+								this.ComboMax = input.ReadInt32();
 								continue;
 							}
-							if (num == 456U)
+							if (num == 184U)
 							{
-								this.PSReplyTotal = input.ReadInt64();
+								this.RoundTimeUse = input.ReadInt32();
 								continue;
 							}
 						}
 					}
-					else if (num <= 736U)
+					else if (num <= 744U)
 					{
-						if (num == 672U)
-						{
-							this.PSCostTotal = input.ReadInt64();
-							continue;
-						}
-						if (num == 736U)
-						{
-							this.ItemGetDistanceMax = input.ReadInt32();
-							continue;
-						}
-					}
-					else
-					{
-						if (num == 968U)
-						{
-							this.SprintMax = input.ReadInt32();
-							continue;
-						}
-						if (num == 1010U)
+						if (num == 466U)
 						{
 							this.ClientEndTime = input.ReadString();
 							continue;
 						}
-						if (num == 1216U)
-						{
-							this.RoundTimeUse = input.ReadInt32();
-							continue;
-						}
-					}
-				}
-				else if (num <= 1744U)
-				{
-					if (num <= 1384U)
-					{
-						if (num == 1296U)
-						{
-							this.ItemGetCount = input.ReadInt32();
-							continue;
-						}
-						if (num == 1384U)
-						{
-							this.SprintMin = input.ReadInt32();
-							continue;
-						}
-					}
-					else
-					{
-						if (num == 1568U)
-						{
-							this.LogId = input.ReadInt64();
-							continue;
-						}
-						if (num == 1616U)
-						{
-							this.SpeedMax = input.ReadInt32();
-							continue;
-						}
-						if (num == 1744U)
+						if (num == 744U)
 						{
 							this.PSUseNumMax = input.ReadInt32();
 							continue;
 						}
 					}
-				}
-				else if (num <= 1848U)
-				{
-					if (num == 1816U)
+					else
 					{
-						this.PSReplySpeedMin = input.ReadInt32();
+						if (num == 832U)
+						{
+							this.ItemGetDistanceMin = input.ReadInt32();
+							continue;
+						}
+						if (num == 880U)
+						{
+							this.SpeedMin = input.ReadInt32();
+							continue;
+						}
+						if (num == 968U)
+						{
+							this.LogId = input.ReadInt64();
+							continue;
+						}
+					}
+				}
+				else if (num <= 1184U)
+				{
+					if (num <= 1040U)
+					{
+						if (num == 992U)
+						{
+							this.PSUseCount = input.ReadInt32();
+							continue;
+						}
+						if (num == 1040U)
+						{
+							this.ItemGetCount = input.ReadInt32();
+							continue;
+						}
+					}
+					else
+					{
+						if (num == 1080U)
+						{
+							this.PSReplyTotal = input.ReadInt64();
+							continue;
+						}
+						if (num == 1176U)
+						{
+							this.PSCostTotal = input.ReadInt64();
+							continue;
+						}
+						if (num == 1184U)
+						{
+							this.SpeedAvg = input.ReadInt32();
+							continue;
+						}
+					}
+				}
+				else if (num <= 1336U)
+				{
+					if (num == 1304U)
+					{
+						this.SpeedMax = input.ReadInt32();
 						continue;
 					}
-					if (num == 1848U)
+					if (num == 1336U)
 					{
-						this.PSUseCount = input.ReadInt32();
+						this.ItemGetDistanceMax = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 1936U)
+					if (num == 1384U)
 					{
-						this.ItemGetDistanceMin = input.ReadInt32();
+						this.PSReplySpeedMin = input.ReadInt32();
 						continue;
 					}
-					if (num == 1960U)
+					if (num == 1440U)
 					{
-						this.PSUseNumMin = input.ReadInt32();
+						this.PSReplySpeedMax = input.ReadInt32();
 						continue;
 					}
-					if (num == 2016U)
+					if (num == 1656U)
 					{
-						this.ComboMax = input.ReadInt32();
+						this.SprintMin = input.ReadInt32();
 						continue;
 					}
 				}
@@ -963,121 +963,121 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008F6D RID: 36717
+		// Token: 0x04009200 RID: 37376
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008F6E RID: 36718
-		public const int LogIdFieldNumber = 196;
+		// Token: 0x04009201 RID: 37377
+		public const int LogIdFieldNumber = 121;
 
-		// Token: 0x04008F6F RID: 36719
+		// Token: 0x04009202 RID: 37378
 		private long logId_;
 
-		// Token: 0x04008F70 RID: 36720
-		public const int ClientEndTimeFieldNumber = 126;
+		// Token: 0x04009203 RID: 37379
+		public const int ClientEndTimeFieldNumber = 58;
 
-		// Token: 0x04008F71 RID: 36721
+		// Token: 0x04009204 RID: 37380
 		private string clientEndTime_ = "";
 
-		// Token: 0x04008F72 RID: 36722
-		public const int RoundTimeUseFieldNumber = 152;
+		// Token: 0x04009205 RID: 37381
+		public const int RoundTimeUseFieldNumber = 23;
 
-		// Token: 0x04008F73 RID: 36723
+		// Token: 0x04009206 RID: 37382
 		private int roundTimeUse_;
 
-		// Token: 0x04008F74 RID: 36724
-		public const int SpeedMaxFieldNumber = 202;
+		// Token: 0x04009207 RID: 37383
+		public const int SpeedMaxFieldNumber = 163;
 
-		// Token: 0x04008F75 RID: 36725
+		// Token: 0x04009208 RID: 37384
 		private int speedMax_;
 
-		// Token: 0x04008F76 RID: 36726
-		public const int SpeedMinFieldNumber = 11;
+		// Token: 0x04009209 RID: 37385
+		public const int SpeedMinFieldNumber = 110;
 
-		// Token: 0x04008F77 RID: 36727
+		// Token: 0x0400920A RID: 37386
 		private int speedMin_;
 
-		// Token: 0x04008F78 RID: 36728
-		public const int SprintMaxFieldNumber = 121;
+		// Token: 0x0400920B RID: 37387
+		public const int SprintMaxFieldNumber = 1;
 
-		// Token: 0x04008F79 RID: 36729
+		// Token: 0x0400920C RID: 37388
 		private int sprintMax_;
 
-		// Token: 0x04008F7A RID: 36730
-		public const int SprintMinFieldNumber = 173;
+		// Token: 0x0400920D RID: 37389
+		public const int SprintMinFieldNumber = 207;
 
-		// Token: 0x04008F7B RID: 36731
+		// Token: 0x0400920E RID: 37390
 		private int sprintMin_;
 
-		// Token: 0x04008F7C RID: 36732
-		public const int SpeedAvgFieldNumber = 45;
+		// Token: 0x0400920F RID: 37391
+		public const int SpeedAvgFieldNumber = 148;
 
-		// Token: 0x04008F7D RID: 36733
+		// Token: 0x04009210 RID: 37392
 		private int speedAvg_;
 
-		// Token: 0x04008F7E RID: 36734
-		public const int PSReplyTotalFieldNumber = 57;
+		// Token: 0x04009211 RID: 37393
+		public const int PSReplyTotalFieldNumber = 135;
 
-		// Token: 0x04008F7F RID: 36735
+		// Token: 0x04009212 RID: 37394
 		private long pSReplyTotal_;
 
-		// Token: 0x04008F80 RID: 36736
-		public const int PSCostTotalFieldNumber = 84;
+		// Token: 0x04009213 RID: 37395
+		public const int PSCostTotalFieldNumber = 147;
 
-		// Token: 0x04008F81 RID: 36737
+		// Token: 0x04009214 RID: 37396
 		private long pSCostTotal_;
 
-		// Token: 0x04008F82 RID: 36738
-		public const int PSReplySpeedMaxFieldNumber = 49;
+		// Token: 0x04009215 RID: 37397
+		public const int PSReplySpeedMaxFieldNumber = 180;
 
-		// Token: 0x04008F83 RID: 36739
+		// Token: 0x04009216 RID: 37398
 		private int pSReplySpeedMax_;
 
-		// Token: 0x04008F84 RID: 36740
-		public const int PSReplySpeedMinFieldNumber = 227;
+		// Token: 0x04009217 RID: 37399
+		public const int PSReplySpeedMinFieldNumber = 173;
 
-		// Token: 0x04008F85 RID: 36741
+		// Token: 0x04009218 RID: 37400
 		private int pSReplySpeedMin_;
 
-		// Token: 0x04008F86 RID: 36742
-		public const int PSUseCountFieldNumber = 231;
+		// Token: 0x04009219 RID: 37401
+		public const int PSUseCountFieldNumber = 124;
 
-		// Token: 0x04008F87 RID: 36743
+		// Token: 0x0400921A RID: 37402
 		private int pSUseCount_;
 
-		// Token: 0x04008F88 RID: 36744
-		public const int PSUseNumMaxFieldNumber = 218;
+		// Token: 0x0400921B RID: 37403
+		public const int PSUseNumMaxFieldNumber = 93;
 
-		// Token: 0x04008F89 RID: 36745
+		// Token: 0x0400921C RID: 37404
 		private int pSUseNumMax_;
 
-		// Token: 0x04008F8A RID: 36746
-		public const int PSUseNumMinFieldNumber = 245;
+		// Token: 0x0400921D RID: 37405
+		public const int PSUseNumMinFieldNumber = 5;
 
-		// Token: 0x04008F8B RID: 36747
+		// Token: 0x0400921E RID: 37406
 		private int pSUseNumMin_;
 
-		// Token: 0x04008F8C RID: 36748
-		public const int ItemGetCountFieldNumber = 162;
+		// Token: 0x0400921F RID: 37407
+		public const int ItemGetCountFieldNumber = 130;
 
-		// Token: 0x04008F8D RID: 36749
+		// Token: 0x04009220 RID: 37408
 		private int itemGetCount_;
 
-		// Token: 0x04008F8E RID: 36750
-		public const int ItemGetDistanceMaxFieldNumber = 92;
+		// Token: 0x04009221 RID: 37409
+		public const int ItemGetDistanceMaxFieldNumber = 167;
 
-		// Token: 0x04008F8F RID: 36751
+		// Token: 0x04009222 RID: 37410
 		private int itemGetDistanceMax_;
 
-		// Token: 0x04008F90 RID: 36752
-		public const int ItemGetDistanceMinFieldNumber = 242;
+		// Token: 0x04009223 RID: 37411
+		public const int ItemGetDistanceMinFieldNumber = 104;
 
-		// Token: 0x04008F91 RID: 36753
+		// Token: 0x04009224 RID: 37412
 		private int itemGetDistanceMin_;
 
-		// Token: 0x04008F92 RID: 36754
-		public const int ComboMaxFieldNumber = 252;
+		// Token: 0x04009225 RID: 37413
+		public const int ComboMaxFieldNumber = 7;
 
-		// Token: 0x04008F93 RID: 36755
+		// Token: 0x04009226 RID: 37414
 		private int comboMax_;
 	}
 }

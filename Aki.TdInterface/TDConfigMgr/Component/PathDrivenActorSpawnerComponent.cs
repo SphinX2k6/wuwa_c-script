@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200084D RID: 2125
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008F0 RID: 2288
 	public class PathDrivenActorSpawnerComponent : IComponentBase
 	{
-		// Token: 0x06002ED7 RID: 11991 RVA: 0x0007919C File Offset: 0x0007739C
+		// Token: 0x06003213 RID: 12819 RVA: 0x00080684 File Offset: 0x0007E884
 		private PathDrivenActorSpawnerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002ED8 RID: 11992 RVA: 0x000791D4 File Offset: 0x000773D4
+		// Token: 0x06003214 RID: 12820 RVA: 0x000806BC File Offset: 0x0007E8BC
 		public static PathDrivenActorSpawnerComponent Create([Nullable(2)] PathDrivenActorSpawnerComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002ED9 RID: 11993 RVA: 0x000791E7 File Offset: 0x000773E7
+		// Token: 0x06003215 RID: 12821 RVA: 0x000806CF File Offset: 0x0007E8CF
 		public static PathDrivenActorSpawnerComponent CreateFromSetValue([Nullable(2)] PathDrivenActorSpawnerComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002EDA RID: 11994 RVA: 0x000791FA File Offset: 0x000773FA
+		// Token: 0x06003216 RID: 12822 RVA: 0x000806E2 File Offset: 0x0007E8E2
 		public new PathDrivenActorSpawnerComponent_SetValue ToSetValue()
 		{
 			return new PathDrivenActorSpawnerComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C5B RID: 3163
-		// (get) Token: 0x06002EDB RID: 11995 RVA: 0x00079234 File Offset: 0x00077434
-		// (set) Token: 0x06002EDC RID: 11996 RVA: 0x0007926E File Offset: 0x0007746E
+		// Token: 0x17000D24 RID: 3364
+		// (get) Token: 0x06003217 RID: 12823 RVA: 0x0008071C File Offset: 0x0007E91C
+		// (set) Token: 0x06003218 RID: 12824 RVA: 0x00080756 File Offset: 0x0007E956
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C5C RID: 3164
-		// (get) Token: 0x06002EDD RID: 11997 RVA: 0x0007927C File Offset: 0x0007747C
-		// (set) Token: 0x06002EDE RID: 11998 RVA: 0x000792A6 File Offset: 0x000774A6
+		// Token: 0x17000D25 RID: 3365
+		// (get) Token: 0x06003219 RID: 12825 RVA: 0x00080764 File Offset: 0x0007E964
+		// (set) Token: 0x0600321A RID: 12826 RVA: 0x0008078E File Offset: 0x0007E98E
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C5D RID: 3165
-		// (get) Token: 0x06002EDF RID: 11999 RVA: 0x000792B4 File Offset: 0x000774B4
-		// (set) Token: 0x06002EE0 RID: 12000 RVA: 0x00079315 File Offset: 0x00077515
+		// Token: 0x17000D26 RID: 3366
+		// (get) Token: 0x0600321B RID: 12827 RVA: 0x0008079C File Offset: 0x0007E99C
+		// (set) Token: 0x0600321C RID: 12828 RVA: 0x000807FD File Offset: 0x0007E9FD
 		public virtual IIntervalSplineSpawn SpawnRule
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C5E RID: 3166
-		// (get) Token: 0x06002EE1 RID: 12001 RVA: 0x0007932A File Offset: 0x0007752A
-		// (set) Token: 0x06002EE2 RID: 12002 RVA: 0x00079351 File Offset: 0x00077551
+		// Token: 0x17000D27 RID: 3367
+		// (get) Token: 0x0600321D RID: 12829 RVA: 0x00080812 File Offset: 0x0007EA12
+		// (set) Token: 0x0600321E RID: 12830 RVA: 0x00080839 File Offset: 0x0007EA39
 		[Nullable(2)]
 		public virtual ITargetEntityType Target
 		{
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001EF7 RID: 7927
+		// Token: 0x04002109 RID: 8457
 		[Nullable(2)]
 		protected new PathDrivenActorSpawnerComponent FbInstance;
 
-		// Token: 0x04001EF8 RID: 7928
+		// Token: 0x0400210A RID: 8458
 		[Nullable(2)]
 		protected new PathDrivenActorSpawnerComponent_SetValue PocoInterface;
 
-		// Token: 0x04001EF9 RID: 7929
+		// Token: 0x0400210B RID: 8459
 		private IIntervalSplineSpawn _SpawnRuleCache;
 
-		// Token: 0x04001EFA RID: 7930
+		// Token: 0x0400210C RID: 8460
 		private bool _SpawnRuleInited;
 	}
 }

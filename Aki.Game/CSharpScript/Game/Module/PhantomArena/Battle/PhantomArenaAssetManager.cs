@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x0200522A RID: 21034
+	// Token: 0x020041FA RID: 16890
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaAssetManager : IStaticVariableResetter
 	{
-		// Token: 0x06035C47 RID: 220231 RVA: 0x00CB9957 File Offset: 0x00CB7B57
+		// Token: 0x0602AB42 RID: 174914 RVA: 0x00C06F97 File Offset: 0x00C05197
 		static PhantomArenaAssetManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PhantomArenaAssetManager.CreateStaticDefaultValue), new Action(PhantomArenaAssetManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06035C48 RID: 220232 RVA: 0x00CB9976 File Offset: 0x00CB7B76
+		// Token: 0x0602AB43 RID: 174915 RVA: 0x00C06FB6 File Offset: 0x00C051B6
 		public static void CreateStaticDefaultValue()
 		{
 			PhantomArenaAssetManager.IdAssetElementMap = new Dictionary<int, ModelAssetElement>();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			PhantomArenaAssetManager.PreloadModelProfiler = new LogProfiler("加载声骸竞技场模型资源", false);
 		}
 
-		// Token: 0x06035C49 RID: 220233 RVA: 0x00CB999C File Offset: 0x00CB7B9C
+		// Token: 0x0602AB44 RID: 174916 RVA: 0x00C06FDC File Offset: 0x00C051DC
 		public static void ResetStaticDefaultValue()
 		{
 			PhantomArenaAssetManager.IdAssetElementMap = null;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			PhantomArenaAssetManager.PreloadModelProfiler = null;
 		}
 
-		// Token: 0x06035C4A RID: 220234 RVA: 0x00CB99B0 File Offset: 0x00CB7BB0
+		// Token: 0x0602AB45 RID: 174917 RVA: 0x00C06FF0 File Offset: 0x00C051F0
 		private static ModelAssetElement CreatePreloadAssetElement(int modelId)
 		{
 			ModelAssetElement modelAssetElement = new ModelAssetElement();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			return modelAssetElement;
 		}
 
-		// Token: 0x06035C4B RID: 220235 RVA: 0x00CB99D0 File Offset: 0x00CB7BD0
+		// Token: 0x0602AB46 RID: 174918 RVA: 0x00C07010 File Offset: 0x00C05210
 		private static ModelAssetElement GetPreloadAssetElement(int modelId)
 		{
 			if (!PhantomArenaAssetManager.IdAssetElementMap.ContainsKey(modelId))
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			return PhantomArenaAssetManager.IdAssetElementMap[modelId];
 		}
 
-		// Token: 0x06035C4C RID: 220236 RVA: 0x00CB99EC File Offset: 0x00CB7BEC
+		// Token: 0x0602AB47 RID: 174919 RVA: 0x00C0702C File Offset: 0x00C0522C
 		private static bool DestroyPreloadAssetElement(int modelId)
 		{
 			if (PhantomArenaAssetManager.IdAssetElementMap.ContainsKey(modelId))
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			return false;
 		}
 
-		// Token: 0x06035C4D RID: 220237 RVA: 0x00CB9A20 File Offset: 0x00CB7C20
+		// Token: 0x0602AB48 RID: 174920 RVA: 0x00C07060 File Offset: 0x00C05260
 		[NullableContext(0)]
 		public static UniTask<ELoadResultType> PreloadPhantomArenaAsset(int modelId, [Nullable(1)] Action<ELoadResultType> callback)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			return <PreloadPhantomArenaAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035C4E RID: 220238 RVA: 0x00CB9A6C File Offset: 0x00CB7C6C
+		// Token: 0x0602AB49 RID: 174921 RVA: 0x00C070AC File Offset: 0x00C052AC
 		public static void RemovePhantomArenaAsset(int modelId)
 		{
 			PreloadModelNew instance = PreloadModelNew.Instance;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			instance4.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
 		}
 
-		// Token: 0x06035C4F RID: 220239 RVA: 0x00CB9B40 File Offset: 0x00CB7D40
+		// Token: 0x0602AB4A RID: 174922 RVA: 0x00C07180 File Offset: 0x00C05380
 		public static void PreloadPhantomArenaAssetByCardConfigId(int cardConfigId)
 		{
 			int entityConfigId = PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(cardConfigId).EntityConfigId;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			}).Forget<ELoadResultType>();
 		}
 
-		// Token: 0x06035C50 RID: 220240 RVA: 0x00CB9C60 File Offset: 0x00CB7E60
+		// Token: 0x0602AB4B RID: 174923 RVA: 0x00C072A0 File Offset: 0x00C054A0
 		public static void RemovePhantomArenaAssetByCardConfigId(int cardConfigId)
 		{
 			int entityConfigId = PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(cardConfigId).EntityConfigId;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			PhantomArenaAssetManager.RemovePhantomArenaAsset(modelId);
 		}
 
-		// Token: 0x06035C51 RID: 220241 RVA: 0x00CB9D60 File Offset: 0x00CB7F60
+		// Token: 0x0602AB4C RID: 174924 RVA: 0x00C073A0 File Offset: 0x00C055A0
 		public static void Clear()
 		{
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "[预加载] 清理", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			PhantomArenaAssetManager.ModelIdMap.Clear();
 		}
 
-		// Token: 0x06035C52 RID: 220242 RVA: 0x00CB9DEC File Offset: 0x00CB7FEC
+		// Token: 0x0602AB4D RID: 174925 RVA: 0x00C0742C File Offset: 0x00C0562C
 		public static string ToDisplayString()
 		{
 			StringBuilder stringBuilder = new StringBuilder();
@@ -232,13 +232,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x0401C7DD RID: 116701
+		// Token: 0x04017212 RID: 94738
 		private static Dictionary<int, ModelAssetElement> IdAssetElementMap;
 
-		// Token: 0x0401C7DE RID: 116702
+		// Token: 0x04017213 RID: 94739
 		private static Dictionary<int, int> ModelIdMap;
 
-		// Token: 0x0401C7DF RID: 116703
+		// Token: 0x04017214 RID: 94740
 		private static LogProfiler PreloadModelProfiler;
 	}
 }

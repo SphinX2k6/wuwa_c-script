@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F37 RID: 7991
+	// Token: 0x02000637 RID: 1591
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVehicle.MotorShapeConfig")]
 	[UnrealStructLayout(208, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 208)]
 	public class FMotorShapeConfig : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E69B RID: 124571 RVA: 0x002D355C File Offset: 0x002D175C
+		// Token: 0x06008BA6 RID: 35750 RVA: 0x000D2269 File Offset: 0x000D0469
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMotorShapeConfig._ScriptStructPtr != 0) ? FMotorShapeConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroVehicle.MotorShapeConfig", ref FMotorShapeConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170078FA RID: 30970
-		// (get) Token: 0x0601E69C RID: 124572 RVA: 0x002D3580 File Offset: 0x002D1780
-		// (set) Token: 0x0601E69D RID: 124573 RVA: 0x002D35C3 File Offset: 0x002D17C3
+		// Token: 0x17001A50 RID: 6736
+		// (get) Token: 0x06008BA7 RID: 35751 RVA: 0x000D2290 File Offset: 0x000D0490
+		// (set) Token: 0x06008BA8 RID: 35752 RVA: 0x000D22D3 File Offset: 0x000D04D3
 		public FMotorBodyShapeConfig BodyShape
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078FB RID: 30971
-		// (get) Token: 0x0601E69E RID: 124574 RVA: 0x002D35E4 File Offset: 0x002D17E4
-		// (set) Token: 0x0601E69F RID: 124575 RVA: 0x002D3627 File Offset: 0x002D1827
+		// Token: 0x17001A51 RID: 6737
+		// (get) Token: 0x06008BA9 RID: 35753 RVA: 0x000D22F4 File Offset: 0x000D04F4
+		// (set) Token: 0x06008BAA RID: 35754 RVA: 0x000D2337 File Offset: 0x000D0537
 		public TArray<FMotorBodyShapeConfig> BodyOtherShapes
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078FC RID: 30972
-		// (get) Token: 0x0601E6A0 RID: 124576 RVA: 0x002D3638 File Offset: 0x002D1838
-		// (set) Token: 0x0601E6A1 RID: 124577 RVA: 0x002D367B File Offset: 0x002D187B
+		// Token: 0x17001A52 RID: 6738
+		// (get) Token: 0x06008BAB RID: 35755 RVA: 0x000D2348 File Offset: 0x000D0548
+		// (set) Token: 0x06008BAC RID: 35756 RVA: 0x000D238B File Offset: 0x000D058B
 		public FMotorWheelShapeConfig FrontWheelShape
 		{
 			get
@@ -82,9 +82,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078FD RID: 30973
-		// (get) Token: 0x0601E6A2 RID: 124578 RVA: 0x002D369C File Offset: 0x002D189C
-		// (set) Token: 0x0601E6A3 RID: 124579 RVA: 0x002D36DF File Offset: 0x002D18DF
+		// Token: 0x17001A53 RID: 6739
+		// (get) Token: 0x06008BAD RID: 35757 RVA: 0x000D23AC File Offset: 0x000D05AC
+		// (set) Token: 0x06008BAE RID: 35758 RVA: 0x000D23EF File Offset: 0x000D05EF
 		public FMotorWheelShapeConfig BackWheelShape
 		{
 			get
@@ -103,66 +103,57 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E6A4 RID: 124580 RVA: 0x002D3700 File Offset: 0x002D1900
+		// Token: 0x06008BAF RID: 35759 RVA: 0x000D2410 File Offset: 0x000D0610
 		public FMotorShapeConfig()
 		{
 		}
 
-		// Token: 0x0601E6A5 RID: 124581 RVA: 0x002D3708 File Offset: 0x002D1908
-		public FMotorShapeConfig(FMotorBodyShapeConfig BodyShape, TArray<FMotorBodyShapeConfig> BodyOtherShapes, FMotorWheelShapeConfig FrontWheelShape, FMotorWheelShapeConfig BackWheelShape)
-		{
-			this.BodyShape = BodyShape;
-			this.BodyOtherShapes = BodyOtherShapes;
-			this.FrontWheelShape = FrontWheelShape;
-			this.BackWheelShape = BackWheelShape;
-		}
-
-		// Token: 0x0601E6A6 RID: 124582 RVA: 0x002D372D File Offset: 0x002D192D
+		// Token: 0x06008BB0 RID: 35760 RVA: 0x000D2418 File Offset: 0x000D0618
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMotorShapeConfig.StaticStruct();
 		}
 
-		// Token: 0x0601E6A7 RID: 124583 RVA: 0x002D3739 File Offset: 0x002D1939
+		// Token: 0x06008BB1 RID: 35761 RVA: 0x000D2424 File Offset: 0x000D0624
 		[NullableContext(2)]
 		public FMotorShapeConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E6A8 RID: 124584 RVA: 0x002D3743 File Offset: 0x002D1943
+		// Token: 0x06008BB2 RID: 35762 RVA: 0x000D242E File Offset: 0x000D062E
 		public FMotorShapeConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E6A9 RID: 124585 RVA: 0x002D374E File Offset: 0x002D194E
+		// Token: 0x06008BB3 RID: 35763 RVA: 0x000D2439 File Offset: 0x000D0639
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMotorShapeConfig(Pointer, false, true);
 		}
 
-		// Token: 0x0601E6AA RID: 124586 RVA: 0x002D3758 File Offset: 0x002D1958
+		// Token: 0x06008BB4 RID: 35764 RVA: 0x000D2443 File Offset: 0x000D0643
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMotorShapeConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401067D RID: 67197
+		// Token: 0x04003CAE RID: 15534
 		public const string __ObjectPath = "/Script/KuroVehicle.MotorShapeConfig";
 
-		// Token: 0x0401067E RID: 67198
+		// Token: 0x04003CAF RID: 15535
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401067F RID: 67199
+		// Token: 0x04003CB0 RID: 15536
 		internal static int __PropertyOffset_BodyShape;
 
-		// Token: 0x04010680 RID: 67200
+		// Token: 0x04003CB1 RID: 15537
 		[Nullable(2)]
 		private FMotorBodyShapeConfig _BodyShape;
 
-		// Token: 0x04010681 RID: 67201
+		// Token: 0x04003CB2 RID: 15538
 		internal static int __PropertyOffset_BodyOtherShapes;
 
-		// Token: 0x04010682 RID: 67202
+		// Token: 0x04003CB3 RID: 15539
 		[Nullable(new byte[]
 		{
 			2,
@@ -170,17 +161,17 @@ namespace UnrealEngine
 		})]
 		private TArray<FMotorBodyShapeConfig> _BodyOtherShapes;
 
-		// Token: 0x04010683 RID: 67203
+		// Token: 0x04003CB4 RID: 15540
 		internal static int __PropertyOffset_FrontWheelShape;
 
-		// Token: 0x04010684 RID: 67204
+		// Token: 0x04003CB5 RID: 15541
 		[Nullable(2)]
 		private FMotorWheelShapeConfig _FrontWheelShape;
 
-		// Token: 0x04010685 RID: 67205
+		// Token: 0x04003CB6 RID: 15542
 		internal static int __PropertyOffset_BackWheelShape;
 
-		// Token: 0x04010686 RID: 67206
+		// Token: 0x04003CB7 RID: 15543
 		[Nullable(2)]
 		private FMotorWheelShapeConfig _BackWheelShape;
 	}

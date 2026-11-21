@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B62 RID: 7010
+// Token: 0x02001021 RID: 4129
 public class FloroRanchDungeonSuccessSettleView : UiViewBase
 {
-	// Token: 0x0600D00E RID: 53262 RVA: 0x002F70B7 File Offset: 0x002F52B7
+	// Token: 0x0600A41F RID: 42015 RVA: 0x0030218F File Offset: 0x0030038F
 	[NullableContext(1)]
 	public FloroRanchDungeonSuccessSettleView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D00F RID: 53263 RVA: 0x002F70C0 File Offset: 0x002F52C0
+	// Token: 0x0600A420 RID: 42016 RVA: 0x00302198 File Offset: 0x00300398
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -43,7 +43,7 @@ public class FloroRanchDungeonSuccessSettleView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D010 RID: 53264 RVA: 0x002F71AC File Offset: 0x002F53AC
+	// Token: 0x0600A421 RID: 42017 RVA: 0x00302284 File Offset: 0x00300484
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchDungeonSuccessSettleView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ public class FloroRanchDungeonSuccessSettleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D011 RID: 53265 RVA: 0x002F71F0 File Offset: 0x002F53F0
+	// Token: 0x0600A422 RID: 42018 RVA: 0x003022C8 File Offset: 0x003004C8
 	protected override void OnBeforeShow()
 	{
 		FloroRanchSettleDataResponse floroRanchSettleDataResponse = this.OpenParam as FloroRanchSettleDataResponse;
@@ -69,7 +69,7 @@ public class FloroRanchDungeonSuccessSettleView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnFloroRanchSuccessSettleViewOpen, floroRanchPlaySettleData.EnableUnlimitedMode);
 	}
 
-	// Token: 0x0600D012 RID: 53266 RVA: 0x002F7280 File Offset: 0x002F5480
+	// Token: 0x0600A423 RID: 42019 RVA: 0x00302358 File Offset: 0x00300558
 	private void OnEndlessModeButton()
 	{
 		global::FloroRanchActivityData currentActivityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -96,26 +96,26 @@ public class FloroRanchDungeonSuccessSettleView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D013 RID: 53267 RVA: 0x002F72C6 File Offset: 0x002F54C6
+	// Token: 0x0600A424 RID: 42020 RVA: 0x0030239E File Offset: 0x0030059E
 	private void OnExitGameButton()
 	{
 		FloroRanchGamePlayModel.Instance.ExitGame(true);
 	}
 
-	// Token: 0x04005F9A RID: 24474
+	// Token: 0x04006069 RID: 24681
 	[Nullable(1)]
 	private FloroRanchDungeonSettleItem SettleItem;
 
-	// Token: 0x020080BB RID: 32955
+	// Token: 0x02007249 RID: 29257
 	private class EComponent
 	{
-		// Token: 0x04029FCB RID: 171979
+		// Token: 0x040252FF RID: 152319
 		public const int DungeonSettleItem = 0;
 
-		// Token: 0x04029FCC RID: 171980
+		// Token: 0x04025300 RID: 152320
 		public const int EndlessModeButton = 1;
 
-		// Token: 0x04029FCD RID: 171981
+		// Token: 0x04025301 RID: 152321
 		public const int ExitGameButton = 2;
 	}
 }

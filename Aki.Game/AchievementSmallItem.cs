@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000F34 RID: 3892
+// Token: 0x020003E9 RID: 1001
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class AchievementSmallItem : GridProxyAbstract<AchievementData>
 {
-	// Token: 0x060062C7 RID: 25287 RVA: 0x00135618 File Offset: 0x00133818
+	// Token: 0x0600365F RID: 13919 RVA: 0x0013DF40 File Offset: 0x0013C140
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -48,25 +48,25 @@ public class AchievementSmallItem : GridProxyAbstract<AchievementData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060062C8 RID: 25288 RVA: 0x00135784 File Offset: 0x00133984
+	// Token: 0x06003660 RID: 13920 RVA: 0x0013E0AC File Offset: 0x0013C2AC
 	protected override void OnStart()
 	{
 		this.AddEventListener();
 	}
 
-	// Token: 0x060062C9 RID: 25289 RVA: 0x0013578C File Offset: 0x0013398C
+	// Token: 0x06003661 RID: 13921 RVA: 0x0013E0B4 File Offset: 0x0013C2B4
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 	}
 
-	// Token: 0x060062CA RID: 25290 RVA: 0x001357AA File Offset: 0x001339AA
+	// Token: 0x06003662 RID: 13922 RVA: 0x0013E0D2 File Offset: 0x0013C2D2
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 	}
 
-	// Token: 0x060062CB RID: 25291 RVA: 0x001357C8 File Offset: 0x001339C8
+	// Token: 0x06003663 RID: 13923 RVA: 0x0013E0F0 File Offset: 0x0013C2F0
 	public override void Refresh(AchievementData data, bool isSelected, int gridIndex)
 	{
 		this.AchievementData = data;
@@ -74,7 +74,7 @@ public class AchievementSmallItem : GridProxyAbstract<AchievementData>
 		this.RefreshUi(data);
 	}
 
-	// Token: 0x060062CC RID: 25292 RVA: 0x001357E0 File Offset: 0x001339E0
+	// Token: 0x06003664 RID: 13924 RVA: 0x0013E108 File Offset: 0x0013C308
 	private void RefreshUi(AchievementData data)
 	{
 		EAchievementStateEnum finishState = data.GetFinishState();
@@ -93,7 +93,7 @@ public class AchievementSmallItem : GridProxyAbstract<AchievementData>
 		}
 	}
 
-	// Token: 0x060062CD RID: 25293 RVA: 0x0013589C File Offset: 0x00133A9C
+	// Token: 0x06003665 RID: 13925 RVA: 0x0013E1C4 File Offset: 0x0013C3C4
 	private void OnAchievementDataWithIdNotify(int id)
 	{
 		AchievementData achievementData = this.AchievementData;
@@ -104,7 +104,7 @@ public class AchievementSmallItem : GridProxyAbstract<AchievementData>
 		}
 	}
 
-	// Token: 0x060062CE RID: 25294 RVA: 0x001358EC File Offset: 0x00133AEC
+	// Token: 0x06003666 RID: 13926 RVA: 0x0013E214 File Offset: 0x0013C414
 	private void OnClickButton()
 	{
 		Action<int> onClickButtonCallback = this.OnClickButtonCallback;
@@ -120,39 +120,39 @@ public class AchievementSmallItem : GridProxyAbstract<AchievementData>
 		}
 	}
 
-	// Token: 0x060062CF RID: 25295 RVA: 0x0013596F File Offset: 0x00133B6F
+	// Token: 0x06003667 RID: 13927 RVA: 0x0013E297 File Offset: 0x0013C497
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x04002CCB RID: 11467
+	// Token: 0x04002D64 RID: 11620
 	[Nullable(2)]
 	private AchievementData AchievementData;
 
-	// Token: 0x04002CCC RID: 11468
+	// Token: 0x04002D65 RID: 11621
 	[Nullable(2)]
 	public Action<int> OnClickButtonCallback;
 
-	// Token: 0x02007581 RID: 30081
+	// Token: 0x02006715 RID: 26389
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04026D88 RID: 159112
+		// Token: 0x040220D3 RID: 139475
 		Desc,
-		// Token: 0x04026D89 RID: 159113
+		// Token: 0x040220D4 RID: 139476
 		Icon,
-		// Token: 0x04026D8A RID: 159114
+		// Token: 0x040220D5 RID: 139477
 		ReceiveFrameObj,
-		// Token: 0x04026D8B RID: 159115
+		// Token: 0x040220D6 RID: 139478
 		RedPoint,
-		// Token: 0x04026D8C RID: 159116
+		// Token: 0x040220D7 RID: 139479
 		ArrowObj,
-		// Token: 0x04026D8D RID: 159117
+		// Token: 0x040220D8 RID: 139480
 		ReceivedObj,
-		// Token: 0x04026D8E RID: 159118
+		// Token: 0x040220D9 RID: 139481
 		ConfirmButton,
-		// Token: 0x04026D8F RID: 159119
+		// Token: 0x040220DA RID: 139482
 		IconTransition
 	}
 }

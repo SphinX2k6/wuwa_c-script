@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000961 RID: 2401
+	// Token: 0x020009AC RID: 2476
 	public class ConfigSoarChallengeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600385A RID: 14426 RVA: 0x0019821B File Offset: 0x0019641B
+		// Token: 0x06003A1C RID: 14876 RVA: 0x001A543B File Offset: 0x001A363B
 		static ConfigSoarChallengeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSoarChallengeById.CreateStaticDefaultValue), new Action(ConfigSoarChallengeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600385B RID: 14427 RVA: 0x0019823C File Offset: 0x0019643C
+		// Token: 0x06003A1D RID: 14877 RVA: 0x001A545C File Offset: 0x001A365C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSoarChallengeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600385C RID: 14428 RVA: 0x001982BB File Offset: 0x001964BB
+		// Token: 0x06003A1E RID: 14878 RVA: 0x001A54DB File Offset: 0x001A36DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSoarChallengeById.LogPair = null;
 			ConfigSoarChallengeById.HandleId = 0;
 		}
 
-		// Token: 0x0600385D RID: 14429 RVA: 0x001982C9 File Offset: 0x001964C9
+		// Token: 0x06003A1F RID: 14879 RVA: 0x001A54E9 File Offset: 0x001A36E9
 		public static void Init()
 		{
 			ConfigSoarChallengeById.HandleId = ConfigCommon.InitDataStatement(ConfigSoarChallengeById.HandleId, "db_activitymaptravel.db", "select BinData from `SoarChallenge` where Id=?");
 		}
 
-		// Token: 0x0600385E RID: 14430 RVA: 0x001982E4 File Offset: 0x001964E4
+		// Token: 0x06003A20 RID: 14880 RVA: 0x001A5504 File Offset: 0x001A3704
 		public static SoarChallenge? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSoarChallengeById.HandleId, ConfigSoarChallengeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SoarChallenge?(rootAsSoarChallenge);
 		}
 
-		// Token: 0x0400418D RID: 16781
+		// Token: 0x0400439A RID: 17306
 		private const string DB = "db_activitymaptravel.db";
 
-		// Token: 0x0400418E RID: 16782
+		// Token: 0x0400439B RID: 17307
 		private const string FILE = "d.地图主题活动.xlsx";
 
-		// Token: 0x0400418F RID: 16783
+		// Token: 0x0400439C RID: 17308
 		private const string TABLE = "SoarChallenge";
 
-		// Token: 0x04004190 RID: 16784
+		// Token: 0x0400439D RID: 17309
 		private const string COMMAND = "select BinData from `SoarChallenge` where Id=?";
 
-		// Token: 0x04004191 RID: 16785
+		// Token: 0x0400439E RID: 17310
 		private const string KEY_PREFIX = "SoarChallengeById";
 
-		// Token: 0x04004192 RID: 16786
+		// Token: 0x0400439F RID: 17311
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004193 RID: 16787
+		// Token: 0x040043A0 RID: 17312
 		private static int HandleId;
 	}
 }

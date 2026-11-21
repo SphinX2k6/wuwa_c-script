@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001610 RID: 5648
+	// Token: 0x0200177C RID: 6012
 	[EnumExtensions]
 	public enum EMainCharacterSkin
 	{
-		// Token: 0x04004BCE RID: 19406
+		// Token: 0x04004FBC RID: 20412
 		Uniform
 	}
 }

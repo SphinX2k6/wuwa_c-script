@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BAB RID: 19371
+	// Token: 0x02005095 RID: 20629
 	public class ICompareGameDifficultyT
 	{
-		// Token: 0x17008CA1 RID: 36001
-		// (get) Token: 0x0601E8D0 RID: 125136 RVA: 0x004462DA File Offset: 0x004444DA
-		// (set) Token: 0x0601E8D1 RID: 125137 RVA: 0x004462E2 File Offset: 0x004444E2
+		// Token: 0x170093BA RID: 37818
+		// (get) Token: 0x0602047C RID: 132220 RVA: 0x00478E3E File Offset: 0x0047703E
+		// (set) Token: 0x0602047D RID: 132221 RVA: 0x00478E46 File Offset: 0x00477046
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008CA2 RID: 36002
-		// (get) Token: 0x0601E8D2 RID: 125138 RVA: 0x004462EB File Offset: 0x004444EB
-		// (set) Token: 0x0601E8D3 RID: 125139 RVA: 0x004462F3 File Offset: 0x004444F3
+		// Token: 0x170093BB RID: 37819
+		// (get) Token: 0x0602047E RID: 132222 RVA: 0x00478E4F File Offset: 0x0047704F
+		// (set) Token: 0x0602047F RID: 132223 RVA: 0x00478E57 File Offset: 0x00477057
 		public EVarCompare CompareType { get; set; }
 
-		// Token: 0x17008CA3 RID: 36003
-		// (get) Token: 0x0601E8D4 RID: 125140 RVA: 0x004462FC File Offset: 0x004444FC
-		// (set) Token: 0x0601E8D5 RID: 125141 RVA: 0x00446304 File Offset: 0x00444504
+		// Token: 0x170093BC RID: 37820
+		// (get) Token: 0x06020480 RID: 132224 RVA: 0x00478E60 File Offset: 0x00477060
+		// (set) Token: 0x06020481 RID: 132225 RVA: 0x00478E68 File Offset: 0x00477068
 		public EGameDifficultyType Difficulty { get; set; }
 
-		// Token: 0x0601E8D6 RID: 125142 RVA: 0x0044630D File Offset: 0x0044450D
+		// Token: 0x06020482 RID: 132226 RVA: 0x00478E71 File Offset: 0x00477071
 		public ICompareGameDifficultyT()
 		{
 			this.Type = ECondition.CompareVar;

@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055CE RID: 21966
+	// Token: 0x020045A4 RID: 17828
 	[NullableContext(1)]
 	public interface IToggleItemData
 	{
-		// Token: 0x170086EA RID: 34538
-		// (get) Token: 0x06037FB0 RID: 229296
-		// (set) Token: 0x06037FB1 RID: 229297
+		// Token: 0x17005AB1 RID: 23217
+		// (get) Token: 0x0602CEAE RID: 183982
+		// (set) Token: 0x0602CEAF RID: 183983
 		int Id { get; set; }
 
-		// Token: 0x170086EB RID: 34539
-		// (get) Token: 0x06037FB2 RID: 229298
-		// (set) Token: 0x06037FB3 RID: 229299
+		// Token: 0x17005AB2 RID: 23218
+		// (get) Token: 0x0602CEB0 RID: 183984
+		// (set) Token: 0x0602CEB1 RID: 183985
 		string Icon { get; set; }
 
-		// Token: 0x170086EC RID: 34540
-		// (get) Token: 0x06037FB4 RID: 229300
-		// (set) Token: 0x06037FB5 RID: 229301
+		// Token: 0x17005AB3 RID: 23219
+		// (get) Token: 0x0602CEB2 RID: 183986
+		// (set) Token: 0x0602CEB3 RID: 183987
 		string TitleId { get; set; }
 
-		// Token: 0x170086ED RID: 34541
-		// (get) Token: 0x06037FB6 RID: 229302
-		// (set) Token: 0x06037FB7 RID: 229303
+		// Token: 0x17005AB4 RID: 23220
+		// (get) Token: 0x0602CEB4 RID: 183988
+		// (set) Token: 0x0602CEB5 RID: 183989
 		string DescId { get; set; }
 
-		// Token: 0x170086EE RID: 34542
-		// (get) Token: 0x06037FB8 RID: 229304
-		// (set) Token: 0x06037FB9 RID: 229305
+		// Token: 0x17005AB5 RID: 23221
+		// (get) Token: 0x0602CEB6 RID: 183990
+		// (set) Token: 0x0602CEB7 RID: 183991
 		[Nullable(new byte[]
 		{
 			2,
@@ -45,15 +45,15 @@ namespace CSharpScript.Game.Module.MapRogue
 			1
 		})] set; }
 
-		// Token: 0x170086EF RID: 34543
-		// (get) Token: 0x06037FBA RID: 229306
-		// (set) Token: 0x06037FBB RID: 229307
+		// Token: 0x17005AB6 RID: 23222
+		// (get) Token: 0x0602CEB8 RID: 183992
+		// (set) Token: 0x0602CEB9 RID: 183993
 		[Nullable(2)]
 		string ProgressId { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x170086F0 RID: 34544
-		// (get) Token: 0x06037FBC RID: 229308
-		// (set) Token: 0x06037FBD RID: 229309
+		// Token: 0x17005AB7 RID: 23223
+		// (get) Token: 0x0602CEBA RID: 183994
+		// (set) Token: 0x0602CEBB RID: 183995
 		[Nullable(new byte[]
 		{
 			2,
@@ -69,9 +69,9 @@ namespace CSharpScript.Game.Module.MapRogue
 			1
 		})] set; }
 
-		// Token: 0x170086F1 RID: 34545
-		// (get) Token: 0x06037FBE RID: 229310
-		// (set) Token: 0x06037FBF RID: 229311
+		// Token: 0x17005AB8 RID: 23224
+		// (get) Token: 0x0602CEBC RID: 183996
+		// (set) Token: 0x0602CEBD RID: 183997
 		bool IsDisabled { get; set; }
 	}
 }

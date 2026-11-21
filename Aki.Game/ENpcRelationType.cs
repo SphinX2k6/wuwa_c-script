@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020031FB RID: 12795
+// Token: 0x0200276A RID: 10090
 public enum ENpcRelationType
 {
-	// Token: 0x0400D910 RID: 55568
+	// Token: 0x0400DDAE RID: 56750
 	None,
-	// Token: 0x0400D911 RID: 55569
+	// Token: 0x0400DDAF RID: 56751
 	HoldingHands,
-	// Token: 0x0400D912 RID: 55570
+	// Token: 0x0400DDB0 RID: 56752
 	MotorcycleSharing,
-	// Token: 0x0400D913 RID: 55571
+	// Token: 0x0400DDB1 RID: 56753
 	AssistedWalk,
-	// Token: 0x0400D914 RID: 55572
+	// Token: 0x0400DDB2 RID: 56754
 	CancelAssistedWalk
 }

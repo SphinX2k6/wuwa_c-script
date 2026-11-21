@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020011B6 RID: 4534
+// Token: 0x0200066A RID: 1642
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class BossRushConfig : ConfigBase
 {
-	// Token: 0x06007850 RID: 30800 RVA: 0x001937BF File Offset: 0x001919BF
+	// Token: 0x06004BE7 RID: 19431 RVA: 0x0019C38B File Offset: 0x0019A58B
 	public BossRushActivity? GetBossRushActivityConfigById(int id)
 	{
 		return ConfigBossRushActivityById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007851 RID: 30801 RVA: 0x001937C8 File Offset: 0x001919C8
+	// Token: 0x06004BE8 RID: 19432 RVA: 0x0019C394 File Offset: 0x0019A594
 	public BossRushActivity? GetBossRushByActivityIdAndInstanceId(int id, int instanceId)
 	{
 		IReadOnlyList<BossRushActivity> configList = ConfigBossRushActivityByActivityIdAndInstanceId.GetConfigList(id, instanceId, true);
@@ -26,25 +26,25 @@ public class BossRushConfig : ConfigBase
 		return new BossRushActivity?(configList[0]);
 	}
 
-	// Token: 0x06007852 RID: 30802 RVA: 0x001937FF File Offset: 0x001919FF
+	// Token: 0x06004BE9 RID: 19433 RVA: 0x0019C3CB File Offset: 0x0019A5CB
 	public BossRushBuff? GetBossRushBuffConfigById(int id)
 	{
 		return ConfigBossRushBuffById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007853 RID: 30803 RVA: 0x00193808 File Offset: 0x00191A08
+	// Token: 0x06004BEA RID: 19434 RVA: 0x0019C3D4 File Offset: 0x0019A5D4
 	public BossRushScore? GetBossRushScoreConfigById(int id)
 	{
 		return ConfigBossRushScoreById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007854 RID: 30804 RVA: 0x00193811 File Offset: 0x00191A11
+	// Token: 0x06004BEB RID: 19435 RVA: 0x0019C3DD File Offset: 0x0019A5DD
 	public int GetBossRushMarkTypeByActivityId(int id)
 	{
 		return 0;
 	}
 
-	// Token: 0x06007855 RID: 30805 RVA: 0x00193814 File Offset: 0x00191A14
+	// Token: 0x06004BEC RID: 19436 RVA: 0x0019C3E0 File Offset: 0x0019A5E0
 	public int GetBossRushMarkByActivityId(int id)
 	{
 		BossRushMapMark? config = ConfigBossRushMapMarkByActivityId.GetConfig(id, true);
@@ -55,7 +55,7 @@ public class BossRushConfig : ConfigBase
 		return config.Value.MarkId;
 	}
 
-	// Token: 0x06007856 RID: 30806 RVA: 0x00193844 File Offset: 0x00191A44
+	// Token: 0x06004BED RID: 19437 RVA: 0x0019C410 File Offset: 0x0019A610
 	public BossRushTaskConfig GetBossRushTaskConfig(int id)
 	{
 		BossRushTaskConfig? config = ConfigBossRushTaskConfigByTaskId.GetConfig(id, true);
@@ -69,7 +69,7 @@ public class BossRushConfig : ConfigBase
 		return config.Value;
 	}
 
-	// Token: 0x06007857 RID: 30807 RVA: 0x00193894 File Offset: 0x00191A94
+	// Token: 0x06004BEE RID: 19438 RVA: 0x0019C460 File Offset: 0x0019A660
 	public IReadOnlyList<BossRushTaskTab> GetBossRushTabListByActivityId(int id)
 	{
 		IReadOnlyList<BossRushTaskTab> configList = ConfigBossRushTaskTabAll.GetConfigList(true);
@@ -89,13 +89,13 @@ public class BossRushConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x06007858 RID: 30808 RVA: 0x0019390C File Offset: 0x00191B0C
+	// Token: 0x06004BEF RID: 19439 RVA: 0x0019C4D8 File Offset: 0x0019A6D8
 	public BossRushTaskTab? GetBossRushTabByTabId(int id)
 	{
 		return ConfigBossRushTaskTabByTabId.GetConfig(id, true);
 	}
 
-	// Token: 0x06007859 RID: 30809 RVA: 0x00193918 File Offset: 0x00191B18
+	// Token: 0x06004BF0 RID: 19440 RVA: 0x0019C4E4 File Offset: 0x0019A6E4
 	public BossRushBuffDesc? GetBossRushBuffDescByClassLevel(int buffId, int classLevel)
 	{
 		BossRushBuff? bossRushBuffConfigById = this.GetBossRushBuffConfigById(buffId);
@@ -111,8 +111,8 @@ public class BossRushConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x17000A4B RID: 2635
-	// (get) Token: 0x0600785A RID: 30810 RVA: 0x00193969 File Offset: 0x00191B69
+	// Token: 0x17000A6B RID: 2667
+	// (get) Token: 0x06004BF1 RID: 19441 RVA: 0x0019C535 File Offset: 0x0019A735
 	public static BossRushConfig Instance
 	{
 		get
@@ -121,7 +121,7 @@ public class BossRushConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600785B RID: 30811 RVA: 0x00193970 File Offset: 0x00191B70
+	// Token: 0x06004BF2 RID: 19442 RVA: 0x0019C53C File Offset: 0x0019A73C
 	public static BossRushConfig GetOrCreateInstance()
 	{
 		if (BossRushConfig._Instance == null)
@@ -131,7 +131,7 @@ public class BossRushConfig : ConfigBase
 		return BossRushConfig._Instance;
 	}
 
-	// Token: 0x0600785C RID: 30812 RVA: 0x00193984 File Offset: 0x00191B84
+	// Token: 0x06004BF3 RID: 19443 RVA: 0x0019C550 File Offset: 0x0019A750
 	public static bool CreateInstance()
 	{
 		if (BossRushConfig._Instance != null)
@@ -142,24 +142,24 @@ public class BossRushConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600785D RID: 30813 RVA: 0x0019399A File Offset: 0x00191B9A
+	// Token: 0x06004BF4 RID: 19444 RVA: 0x0019C566 File Offset: 0x0019A766
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600785E RID: 30814 RVA: 0x0019399C File Offset: 0x00191B9C
+	// Token: 0x06004BF5 RID: 19445 RVA: 0x0019C568 File Offset: 0x0019A768
 	public static void ResetStaticDefaultValue()
 	{
 		BossRushConfig._Instance = null;
 	}
 
-	// Token: 0x0600785F RID: 30815 RVA: 0x001939A4 File Offset: 0x00191BA4
+	// Token: 0x06004BF6 RID: 19446 RVA: 0x0019C570 File Offset: 0x0019A770
 	static BossRushConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BossRushConfig.CreateStaticDefaultValue), new Action(BossRushConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003762 RID: 14178
+	// Token: 0x040037FB RID: 14331
 	[Nullable(2)]
 	private static BossRushConfig _Instance;
 }

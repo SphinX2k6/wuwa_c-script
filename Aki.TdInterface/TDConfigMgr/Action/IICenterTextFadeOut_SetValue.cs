@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B22 RID: 6946
+	// Token: 0x02001CD1 RID: 7377
 	public class IICenterTextFadeOut_SetValue
 	{
-		// Token: 0x04005B1D RID: 23325
+		// Token: 0x04005FBB RID: 24507
 		public ECenterTextShowAnim Type;
 
-		// Token: 0x04005B1E RID: 23326
+		// Token: 0x04005FBC RID: 24508
 		public float FadeInTime;
 
-		// Token: 0x04005B1F RID: 23327
+		// Token: 0x04005FBD RID: 24509
 		public float FadeOutTime;
 	}
 }

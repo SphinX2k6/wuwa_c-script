@@ -5,25 +5,25 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F85 RID: 28549
+	// Token: 0x02006106 RID: 24838
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowEnterVehicleNpc : LevelFlowActionBase
 	{
-		// Token: 0x060456E8 RID: 284392 RVA: 0x01137843 File Offset: 0x01135A43
+		// Token: 0x0603B896 RID: 243862 RVA: 0x010E1647 File Offset: 0x010DF847
 		public LevelFlowEnterVehicleNpc Init(EnterNpcVehicle params_)
 		{
 			this.Params = params_;
 			return this;
 		}
 
-		// Token: 0x060456E9 RID: 284393 RVA: 0x0113784D File Offset: 0x01135A4D
+		// Token: 0x0603B897 RID: 243863 RVA: 0x010E1651 File Offset: 0x010DF851
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<VehiclePassengerInfo, bool>(EEventName.OnEnterVehicle, new Action<VehiclePassengerInfo, bool>(this.OnEnterVehicle));
 		}
 
-		// Token: 0x060456EA RID: 284394 RVA: 0x0113786B File Offset: 0x01135A6B
+		// Token: 0x0603B898 RID: 243864 RVA: 0x010E166F File Offset: 0x010DF86F
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.CreateWaitEntityTask(this.Params.Target);
 		}
 
-		// Token: 0x060456EB RID: 284395 RVA: 0x011378A8 File Offset: 0x01135AA8
+		// Token: 0x0603B899 RID: 243865 RVA: 0x010E16AC File Offset: 0x010DF8AC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<VehiclePassengerInfo, bool>(EEventName.OnEnterVehicle, new Action<VehiclePassengerInfo, bool>(this.OnEnterVehicle));
 		}
 
-		// Token: 0x060456EC RID: 284396 RVA: 0x011378C8 File Offset: 0x01135AC8
+		// Token: 0x0603B89A RID: 243866 RVA: 0x010E16CC File Offset: 0x010DF8CC
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			if (this.Params == null)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456ED RID: 284397 RVA: 0x01137A78 File Offset: 0x01135C78
+		// Token: 0x0603B89B RID: 243867 RVA: 0x010E187C File Offset: 0x010DFA7C
 		private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.Params.Target);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x040243B7 RID: 148407
+		// Token: 0x0401F66C RID: 128620
 		[Nullable(2)]
 		private EnterNpcVehicle Params;
 	}

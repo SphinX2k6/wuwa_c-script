@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D65 RID: 19813
+	// Token: 0x02005261 RID: 21089
 	public enum EAiGearStrategy : byte
 	{
-		// Token: 0x0400D7BF RID: 55231
+		// Token: 0x0400E2EF RID: 58095
 		RenjuStrategy,
-		// Token: 0x0400D7C0 RID: 55232
+		// Token: 0x0400E2F0 RID: 58096
 		RaceStrategy
 	}
 }

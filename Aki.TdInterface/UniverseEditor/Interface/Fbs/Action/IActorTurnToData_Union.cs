@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060FE RID: 24830
+	// Token: 0x02006760 RID: 26464
 	public enum IActorTurnToData_Union : byte
 	{
-		// Token: 0x040104C4 RID: 66756
+		// Token: 0x040112C8 RID: 70344
 		NONE,
-		// Token: 0x040104C5 RID: 66757
+		// Token: 0x040112C9 RID: 70345
 		IActorTurnToData,
-		// Token: 0x040104C6 RID: 66758
+		// Token: 0x040112CA RID: 70346
 		IActorTurnToTalkerData,
-		// Token: 0x040104C7 RID: 66759
+		// Token: 0x040112CB RID: 70347
 		IActorTurnToEmptyData,
-		// Token: 0x040104C8 RID: 66760
+		// Token: 0x040112CC RID: 70348
 		IActorTurnToEntityData,
-		// Token: 0x040104C9 RID: 66761
+		// Token: 0x040112CD RID: 70349
 		IActorTurnToPositionData,
-		// Token: 0x040104CA RID: 66762
+		// Token: 0x040112CE RID: 70350
 		IActorTurnToPlayerData
 	}
 }

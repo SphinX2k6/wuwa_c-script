@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F9 RID: 22777
+	// Token: 0x020048D2 RID: 18642
 	public class RoleTrialExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D38 RID: 236856 RVA: 0x00DBC318 File Offset: 0x00DBA518
+		// Token: 0x0602EC5E RID: 191582 RVA: 0x00D0B2E4 File Offset: 0x00D094E4
 		public override bool Checker()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return config != null && config.Value.InstSubType == 40;
 		}
 
-		// Token: 0x06039D39 RID: 236857 RVA: 0x00DBC36C File Offset: 0x00DBA56C
+		// Token: 0x0602EC5F RID: 191583 RVA: 0x00D0B338 File Offset: 0x00D09538
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06039D3A RID: 236858 RVA: 0x00DBC404 File Offset: 0x00DBA604
+		// Token: 0x0602EC60 RID: 191584 RVA: 0x00D0B3D0 File Offset: 0x00D095D0
 		private bool IsCyberPunkRoleTrialInstance()
 		{
 			foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetCurrentActivitiesByType(8))

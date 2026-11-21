@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200745D RID: 29789
+	// Token: 0x02007C50 RID: 31824
 	public struct ITrapDefensePlayerOperationConstructTrap : IFlatbufferObject
 	{
-		// Token: 0x1700E225 RID: 57893
-		// (get) Token: 0x060361F2 RID: 221682 RVA: 0x0075C0F4 File Offset: 0x0075A2F4
+		// Token: 0x1700EE42 RID: 60994
+		// (get) Token: 0x060395DB RID: 234971 RVA: 0x007BEE20 File Offset: 0x007BD020
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060361F3 RID: 221683 RVA: 0x0075C101 File Offset: 0x0075A301
+		// Token: 0x060395DC RID: 234972 RVA: 0x007BEE2D File Offset: 0x007BD02D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060361F4 RID: 221684 RVA: 0x0075C108 File Offset: 0x0075A308
+		// Token: 0x060395DD RID: 234973 RVA: 0x007BEE34 File Offset: 0x007BD034
 		public static ITrapDefensePlayerOperationConstructTrap GetRootAsITrapDefensePlayerOperationConstructTrap(ByteBuffer _bb)
 		{
 			return ITrapDefensePlayerOperationConstructTrap.GetRootAsITrapDefensePlayerOperationConstructTrap(_bb, default(ITrapDefensePlayerOperationConstructTrap));
 		}
 
-		// Token: 0x060361F5 RID: 221685 RVA: 0x0075C124 File Offset: 0x0075A324
+		// Token: 0x060395DE RID: 234974 RVA: 0x007BEE50 File Offset: 0x007BD050
 		public static ITrapDefensePlayerOperationConstructTrap GetRootAsITrapDefensePlayerOperationConstructTrap(ByteBuffer _bb, ITrapDefensePlayerOperationConstructTrap obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060361F6 RID: 221686 RVA: 0x0075C141 File Offset: 0x0075A341
+		// Token: 0x060395DF RID: 234975 RVA: 0x007BEE6D File Offset: 0x007BD06D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060361F7 RID: 221687 RVA: 0x0075C150 File Offset: 0x0075A350
+		// Token: 0x060395E0 RID: 234976 RVA: 0x007BEE7C File Offset: 0x007BD07C
 		public ITrapDefensePlayerOperationConstructTrap __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E226 RID: 57894
-		// (get) Token: 0x060361F8 RID: 221688 RVA: 0x0075C160 File Offset: 0x0075A360
+		// Token: 0x1700EE43 RID: 60995
+		// (get) Token: 0x060395E1 RID: 234977 RVA: 0x007BEE8C File Offset: 0x007BD08C
 		public ETrapDefensePlayerOperationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060361F9 RID: 221689 RVA: 0x0075C19C File Offset: 0x0075A39C
+		// Token: 0x060395E2 RID: 234978 RVA: 0x007BEEC8 File Offset: 0x007BD0C8
 		public static Offset<ITrapDefensePlayerOperationConstructTrap> CreateITrapDefensePlayerOperationConstructTrap(FlatBufferBuilder builder, ETrapDefensePlayerOperationType Type = ETrapDefensePlayerOperationType.SpawnMonster)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITrapDefensePlayerOperationConstructTrap.EndITrapDefensePlayerOperationConstructTrap(builder);
 		}
 
-		// Token: 0x060361FA RID: 221690 RVA: 0x0075C1B2 File Offset: 0x0075A3B2
+		// Token: 0x060395E3 RID: 234979 RVA: 0x007BEEDE File Offset: 0x007BD0DE
 		public static void StartITrapDefensePlayerOperationConstructTrap(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060361FB RID: 221691 RVA: 0x0075C1BB File Offset: 0x0075A3BB
+		// Token: 0x060395E4 RID: 234980 RVA: 0x007BEEE7 File Offset: 0x007BD0E7
 		public static void AddType(FlatBufferBuilder builder, ETrapDefensePlayerOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060361FC RID: 221692 RVA: 0x0075C1C6 File Offset: 0x0075A3C6
+		// Token: 0x060395E5 RID: 234981 RVA: 0x007BEEF2 File Offset: 0x007BD0F2
 		public static Offset<ITrapDefensePlayerOperationConstructTrap> EndITrapDefensePlayerOperationConstructTrap(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefensePlayerOperationConstructTrap>(builder.EndTable());
 		}
 
-		// Token: 0x060361FD RID: 221693 RVA: 0x0075C1D4 File Offset: 0x0075A3D4
+		// Token: 0x060395E6 RID: 234982 RVA: 0x007BEF00 File Offset: 0x007BD100
 		public ITrapDefensePlayerOperationConstructTrapT UnPack()
 		{
 			ITrapDefensePlayerOperationConstructTrapT trapDefensePlayerOperationConstructTrapT = new ITrapDefensePlayerOperationConstructTrapT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return trapDefensePlayerOperationConstructTrapT;
 		}
 
-		// Token: 0x060361FE RID: 221694 RVA: 0x0075C1EF File Offset: 0x0075A3EF
+		// Token: 0x060395E7 RID: 234983 RVA: 0x007BEF1B File Offset: 0x007BD11B
 		public void UnPackTo(ITrapDefensePlayerOperationConstructTrapT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060361FF RID: 221695 RVA: 0x0075C200 File Offset: 0x0075A400
+		// Token: 0x060395E8 RID: 234984 RVA: 0x007BEF2C File Offset: 0x007BD12C
 		public static Offset<ITrapDefensePlayerOperationConstructTrap> Pack(FlatBufferBuilder builder, ITrapDefensePlayerOperationConstructTrapT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITrapDefensePlayerOperationConstructTrap.CreateITrapDefensePlayerOperationConstructTrap(builder, _o.Type);
 		}
 
-		// Token: 0x040122E7 RID: 74471
+		// Token: 0x0401330E RID: 78606
 		private Table __p;
 	}
 }

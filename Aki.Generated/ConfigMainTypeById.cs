@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000509 RID: 1289
+	// Token: 0x0200051F RID: 1311
 	public class ConfigMainTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E41 RID: 7745 RVA: 0x0010428B File Offset: 0x0010248B
+		// Token: 0x06001EC5 RID: 7877 RVA: 0x0010A9DF File Offset: 0x00108BDF
 		static ConfigMainTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMainTypeById.CreateStaticDefaultValue), new Action(ConfigMainTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E42 RID: 7746 RVA: 0x001042AC File Offset: 0x001024AC
+		// Token: 0x06001EC6 RID: 7878 RVA: 0x0010AA00 File Offset: 0x00108C00
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMainTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E43 RID: 7747 RVA: 0x0010432B File Offset: 0x0010252B
+		// Token: 0x06001EC7 RID: 7879 RVA: 0x0010AA7F File Offset: 0x00108C7F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMainTypeById.LogPair = null;
 			ConfigMainTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06001E44 RID: 7748 RVA: 0x00104339 File Offset: 0x00102539
+		// Token: 0x06001EC8 RID: 7880 RVA: 0x0010AA8D File Offset: 0x00108C8D
 		public static void Init()
 		{
 			ConfigMainTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigMainTypeById.HandleId, "db_menu.db", "select BinData from `MainType` where Id=?");
 		}
 
-		// Token: 0x06001E45 RID: 7749 RVA: 0x00104354 File Offset: 0x00102554
+		// Token: 0x06001EC9 RID: 7881 RVA: 0x0010AAA8 File Offset: 0x00108CA8
 		public static MainType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMainTypeById.HandleId, ConfigMainTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MainType?(rootAsMainType);
 		}
 
-		// Token: 0x04002323 RID: 8995
+		// Token: 0x040023BD RID: 9149
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04002324 RID: 8996
+		// Token: 0x040023BE RID: 9150
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04002325 RID: 8997
+		// Token: 0x040023BF RID: 9151
 		private const string TABLE = "MainType";
 
-		// Token: 0x04002326 RID: 8998
+		// Token: 0x040023C0 RID: 9152
 		private const string COMMAND = "select BinData from `MainType` where Id=?";
 
-		// Token: 0x04002327 RID: 8999
+		// Token: 0x040023C1 RID: 9153
 		private const string KEY_PREFIX = "MainTypeById";
 
-		// Token: 0x04002328 RID: 9000
+		// Token: 0x040023C2 RID: 9154
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002329 RID: 9001
+		// Token: 0x040023C3 RID: 9155
 		private static int HandleId;
 	}
 }

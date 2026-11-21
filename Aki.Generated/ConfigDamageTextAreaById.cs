@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001C1 RID: 449
+	// Token: 0x020001D3 RID: 467
 	public class ConfigDamageTextAreaById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A89 RID: 2697 RVA: 0x0009529B File Offset: 0x0009349B
+		// Token: 0x06000AF5 RID: 2805 RVA: 0x0009B1D3 File Offset: 0x000993D3
 		static ConfigDamageTextAreaById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDamageTextAreaById.CreateStaticDefaultValue), new Action(ConfigDamageTextAreaById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A8A RID: 2698 RVA: 0x000952BC File Offset: 0x000934BC
+		// Token: 0x06000AF6 RID: 2806 RVA: 0x0009B1F4 File Offset: 0x000993F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDamageTextAreaById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A8B RID: 2699 RVA: 0x0009533B File Offset: 0x0009353B
+		// Token: 0x06000AF7 RID: 2807 RVA: 0x0009B273 File Offset: 0x00099473
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDamageTextAreaById.LogPair = null;
 			ConfigDamageTextAreaById.HandleId = 0;
 		}
 
-		// Token: 0x06000A8C RID: 2700 RVA: 0x00095349 File Offset: 0x00093549
+		// Token: 0x06000AF8 RID: 2808 RVA: 0x0009B281 File Offset: 0x00099481
 		public static void Init()
 		{
 			ConfigDamageTextAreaById.HandleId = ConfigCommon.InitDataStatement(ConfigDamageTextAreaById.HandleId, "db_damage_text.db", "select BinData from `DamageTextArea` where Id=?");
 		}
 
-		// Token: 0x06000A8D RID: 2701 RVA: 0x00095364 File Offset: 0x00093564
+		// Token: 0x06000AF9 RID: 2809 RVA: 0x0009B29C File Offset: 0x0009949C
 		public static DamageTextArea? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDamageTextAreaById.HandleId, ConfigDamageTextAreaById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DamageTextArea?(rootAsDamageTextArea);
 		}
 
-		// Token: 0x04000C2B RID: 3115
+		// Token: 0x04000CA9 RID: 3241
 		private const string DB = "db_damage_text.db";
 
-		// Token: 0x04000C2C RID: 3116
+		// Token: 0x04000CAA RID: 3242
 		private const string FILE = "s.伤害飘字.xlsx";
 
-		// Token: 0x04000C2D RID: 3117
+		// Token: 0x04000CAB RID: 3243
 		private const string TABLE = "DamageTextArea";
 
-		// Token: 0x04000C2E RID: 3118
+		// Token: 0x04000CAC RID: 3244
 		private const string COMMAND = "select BinData from `DamageTextArea` where Id=?";
 
-		// Token: 0x04000C2F RID: 3119
+		// Token: 0x04000CAD RID: 3245
 		private const string KEY_PREFIX = "DamageTextAreaById";
 
-		// Token: 0x04000C30 RID: 3120
+		// Token: 0x04000CAE RID: 3246
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000C31 RID: 3121
+		// Token: 0x04000CAF RID: 3247
 		private static int HandleId;
 	}
 }

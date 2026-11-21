@@ -3,25 +3,25 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B57 RID: 23383
+	// Token: 0x02004B36 RID: 19254
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class MediumItemGridBase : IMediumItemGridBase
 	{
-		// Token: 0x17008CAD RID: 36013
-		// (get) Token: 0x0603B37C RID: 242556
+		// Token: 0x1700607F RID: 24703
+		// (get) Token: 0x060302C8 RID: 197320
 		public abstract EMediumItemGridType Type { get; }
 
-		// Token: 0x0401ED92 RID: 126354
+		// Token: 0x0401983E RID: 104510
 		public object Data;
 
-		// Token: 0x0401ED93 RID: 126355
+		// Token: 0x0401983F RID: 104511
 		public int? ItemConfigId;
 
-		// Token: 0x0401ED94 RID: 126356
+		// Token: 0x04019840 RID: 104512
 		public string BottomTextId;
 
-		// Token: 0x0401ED95 RID: 126357
+		// Token: 0x04019841 RID: 104513
 		[Nullable(new byte[]
 		{
 			2,
@@ -29,31 +29,31 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 		})]
 		public object[] BottomTextParameter;
 
-		// Token: 0x0401ED96 RID: 126358
+		// Token: 0x04019842 RID: 104514
 		public string BottomText;
 
-		// Token: 0x0401ED97 RID: 126359
+		// Token: 0x04019843 RID: 104515
 		public bool? IsOmitBottomText;
 
-		// Token: 0x0401ED98 RID: 126360
+		// Token: 0x04019844 RID: 104516
 		public string IconPath;
 
-		// Token: 0x0401ED99 RID: 126361
+		// Token: 0x04019845 RID: 104517
 		public int? QualityId;
 
-		// Token: 0x0401ED9A RID: 126362
+		// Token: 0x04019846 RID: 104518
 		public string QualityIcon;
 
-		// Token: 0x0401ED9B RID: 126363
+		// Token: 0x04019847 RID: 104519
 		public CommonDefine.EQualityIconType? QualityType;
 
-		// Token: 0x0401ED9C RID: 126364
+		// Token: 0x04019848 RID: 104520
 		public bool? IsQualityHidden;
 
-		// Token: 0x0401ED9D RID: 126365
+		// Token: 0x04019849 RID: 104521
 		public string SpriteIconPath;
 
-		// Token: 0x0401ED9E RID: 126366
+		// Token: 0x0401984A RID: 104522
 		public string LeftUpperIconPath;
 	}
 }

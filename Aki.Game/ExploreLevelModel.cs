@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Module.ExploreLevel;
 
-// Token: 0x02001A92 RID: 6802
+// Token: 0x02000F51 RID: 3921
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ExploreLevelModel : ModelBase
 {
-	// Token: 0x0600C8CD RID: 51405 RVA: 0x002DCBA4 File Offset: 0x002DADA4
+	// Token: 0x06009CDE RID: 40158 RVA: 0x002E7CD8 File Offset: 0x002E5ED8
 	protected override bool OnInit()
 	{
 		foreach (Country country in InfluenceConfig.Instance.GetCountryList())
@@ -39,14 +39,14 @@ public class ExploreLevelModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C8CE RID: 51406 RVA: 0x002DCCE0 File Offset: 0x002DAEE0
+	// Token: 0x06009CDF RID: 40159 RVA: 0x002E7E14 File Offset: 0x002E6014
 	protected override bool OnClear()
 	{
 		this.CountryExploreLevelDataMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0600C8CF RID: 51407 RVA: 0x002DCCF0 File Offset: 0x002DAEF0
+	// Token: 0x06009CE0 RID: 40160 RVA: 0x002E7E24 File Offset: 0x002E6024
 	public CountryExploreLevelData AddCountryExploreLevelData(int countryId)
 	{
 		IReadOnlyList<ExploreReward> exploreRewardListByCountry = ExploreLevelConfig.Instance.GetExploreRewardListByCountry(countryId);
@@ -56,7 +56,7 @@ public class ExploreLevelModel : ModelBase
 		return countryExploreLevelData;
 	}
 
-	// Token: 0x0600C8D0 RID: 51408 RVA: 0x002DCD28 File Offset: 0x002DAF28
+	// Token: 0x06009CE1 RID: 40161 RVA: 0x002E7E5C File Offset: 0x002E605C
 	[NullableContext(2)]
 	public CountryExploreLevelData GetCountryExploreLevelData(int countryId)
 	{
@@ -65,14 +65,14 @@ public class ExploreLevelModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600C8D1 RID: 51409 RVA: 0x002DCD48 File Offset: 0x002DAF48
+	// Token: 0x06009CE2 RID: 40162 RVA: 0x002E7E7C File Offset: 0x002E607C
 	[NullableContext(2)]
 	public CountryExploreLevelData GetCurrentCountryExploreLevelData()
 	{
 		return this.GetCountryExploreLevelData(AreaModel.Instance.GetAreaCountryId().Value);
 	}
 
-	// Token: 0x0600C8D2 RID: 51410 RVA: 0x002DCD70 File Offset: 0x002DAF70
+	// Token: 0x06009CE3 RID: 40163 RVA: 0x002E7EA4 File Offset: 0x002E60A4
 	public void SetCountryExploreLevel(int countryId, int countryExploreLevel)
 	{
 		CountryExploreLevelData countryExploreLevelData = this.GetCountryExploreLevelData(countryId);
@@ -83,7 +83,7 @@ public class ExploreLevelModel : ModelBase
 		countryExploreLevelData.SetExploreLevel(countryExploreLevel);
 	}
 
-	// Token: 0x0600C8D3 RID: 51411 RVA: 0x002DCD90 File Offset: 0x002DAF90
+	// Token: 0x06009CE4 RID: 40164 RVA: 0x002E7EC4 File Offset: 0x002E60C4
 	public void SetCountryExploreScore(int countryId, int exploreScore)
 	{
 		CountryExploreLevelData countryExploreLevelData = this.GetCountryExploreLevelData(countryId);
@@ -94,7 +94,7 @@ public class ExploreLevelModel : ModelBase
 		countryExploreLevelData.SetExploreScore(exploreScore);
 	}
 
-	// Token: 0x0600C8D4 RID: 51412 RVA: 0x002DCDB0 File Offset: 0x002DAFB0
+	// Token: 0x06009CE5 RID: 40165 RVA: 0x002E7EE4 File Offset: 0x002E60E4
 	public void SetCountryExploreScoreReceived(int areaId, int progress, bool bReceived)
 	{
 		Area? areaInfo = AreaConfig.Instance.GetAreaInfo(areaId);
@@ -111,8 +111,8 @@ public class ExploreLevelModel : ModelBase
 		countryExploreLevelData.SetExploreScoreDataReceived(areaId, progress, bReceived);
 	}
 
-	// Token: 0x17001076 RID: 4214
-	// (get) Token: 0x0600C8D5 RID: 51413 RVA: 0x002DCDF7 File Offset: 0x002DAFF7
+	// Token: 0x1700109B RID: 4251
+	// (get) Token: 0x06009CE6 RID: 40166 RVA: 0x002E7F2B File Offset: 0x002E612B
 	public static ExploreLevelModel Instance
 	{
 		get
@@ -121,7 +121,7 @@ public class ExploreLevelModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C8D6 RID: 51414 RVA: 0x002DCDFE File Offset: 0x002DAFFE
+	// Token: 0x06009CE7 RID: 40167 RVA: 0x002E7F32 File Offset: 0x002E6132
 	public static ExploreLevelModel GetOrCreateInstance()
 	{
 		if (ExploreLevelModel._Instance == null)
@@ -131,7 +131,7 @@ public class ExploreLevelModel : ModelBase
 		return ExploreLevelModel._Instance;
 	}
 
-	// Token: 0x0600C8D7 RID: 51415 RVA: 0x002DCE12 File Offset: 0x002DB012
+	// Token: 0x06009CE8 RID: 40168 RVA: 0x002E7F46 File Offset: 0x002E6146
 	public static bool CreateInstance()
 	{
 		if (ExploreLevelModel._Instance != null)
@@ -142,30 +142,30 @@ public class ExploreLevelModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C8D8 RID: 51416 RVA: 0x002DCE28 File Offset: 0x002DB028
+	// Token: 0x06009CE9 RID: 40169 RVA: 0x002E7F5C File Offset: 0x002E615C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C8D9 RID: 51417 RVA: 0x002DCE2A File Offset: 0x002DB02A
+	// Token: 0x06009CEA RID: 40170 RVA: 0x002E7F5E File Offset: 0x002E615E
 	public static void ResetStaticDefaultValue()
 	{
 		ExploreLevelModel._Instance = null;
 	}
 
-	// Token: 0x0600C8DA RID: 51418 RVA: 0x002DCE32 File Offset: 0x002DB032
+	// Token: 0x06009CEB RID: 40171 RVA: 0x002E7F66 File Offset: 0x002E6166
 	static ExploreLevelModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExploreLevelModel.CreateStaticDefaultValue), new Action(ExploreLevelModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C80 RID: 23680
+	// Token: 0x04005D4F RID: 23887
 	private Dictionary<int, CountryExploreLevelData> CountryExploreLevelDataMap = new Dictionary<int, CountryExploreLevelData>();
 
-	// Token: 0x04005C81 RID: 23681
+	// Token: 0x04005D50 RID: 23888
 	public string ExploreScoreItemTexturePath = "";
 
-	// Token: 0x04005C82 RID: 23682
+	// Token: 0x04005D51 RID: 23889
 	[Nullable(2)]
 	private static ExploreLevelModel _Instance;
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x0200351F RID: 13599
+// Token: 0x02002A94 RID: 10900
 public enum ETimeDilationType
 {
-	// Token: 0x0400EA42 RID: 59970
+	// Token: 0x0400EEFF RID: 61183
 	Default,
-	// Token: 0x0400EA43 RID: 59971
+	// Token: 0x0400EF00 RID: 61184
 	Teleport,
-	// Token: 0x0400EA44 RID: 59972
+	// Token: 0x0400EF01 RID: 61185
 	Pause,
-	// Token: 0x0400EA45 RID: 59973
+	// Token: 0x0400EF02 RID: 61186
 	PhantomBattleArena,
-	// Token: 0x0400EA46 RID: 59974
+	// Token: 0x0400EF03 RID: 61187
 	Photograph,
-	// Token: 0x0400EA47 RID: 59975
+	// Token: 0x0400EF04 RID: 61188
 	DeadEyeJumpCamp,
-	// Token: 0x0400EA48 RID: 59976
+	// Token: 0x0400EF05 RID: 61189
 	QuickHack,
-	// Token: 0x0400EA49 RID: 59977
+	// Token: 0x0400EF06 RID: 61190
 	CommonQte
 }

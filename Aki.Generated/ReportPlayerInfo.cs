@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FB8 RID: 4024
+	// Token: 0x020010A0 RID: 4256
 	public struct ReportPlayerInfo : IFlatbufferObject
 	{
-		// Token: 0x17002DEB RID: 11755
-		// (get) Token: 0x0600BB91 RID: 48017 RVA: 0x002DD36E File Offset: 0x002DB56E
+		// Token: 0x17002E66 RID: 11878
+		// (get) Token: 0x0600C1DB RID: 49627 RVA: 0x002F9AFE File Offset: 0x002F7CFE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BB92 RID: 48018 RVA: 0x002DD37B File Offset: 0x002DB57B
+		// Token: 0x0600C1DC RID: 49628 RVA: 0x002F9B0B File Offset: 0x002F7D0B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BB93 RID: 48019 RVA: 0x002DD384 File Offset: 0x002DB584
+		// Token: 0x0600C1DD RID: 49629 RVA: 0x002F9B14 File Offset: 0x002F7D14
 		public static ReportPlayerInfo GetRootAsReportPlayerInfo(ByteBuffer _bb)
 		{
 			return ReportPlayerInfo.GetRootAsReportPlayerInfo(_bb, default(ReportPlayerInfo));
 		}
 
-		// Token: 0x0600BB94 RID: 48020 RVA: 0x002DD3A0 File Offset: 0x002DB5A0
+		// Token: 0x0600C1DE RID: 49630 RVA: 0x002F9B30 File Offset: 0x002F7D30
 		public static ReportPlayerInfo GetRootAsReportPlayerInfo(ByteBuffer _bb, ReportPlayerInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BB95 RID: 48021 RVA: 0x002DD3BD File Offset: 0x002DB5BD
+		// Token: 0x0600C1DF RID: 49631 RVA: 0x002F9B4D File Offset: 0x002F7D4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BB96 RID: 48022 RVA: 0x002DD3CC File Offset: 0x002DB5CC
+		// Token: 0x0600C1E0 RID: 49632 RVA: 0x002F9B5C File Offset: 0x002F7D5C
 		public ReportPlayerInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002DEC RID: 11756
-		// (get) Token: 0x0600BB97 RID: 48023 RVA: 0x002DD3DC File Offset: 0x002DB5DC
+		// Token: 0x17002E67 RID: 11879
+		// (get) Token: 0x0600C1E1 RID: 49633 RVA: 0x002F9B6C File Offset: 0x002F7D6C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DED RID: 11757
-		// (get) Token: 0x0600BB98 RID: 48024 RVA: 0x002DD418 File Offset: 0x002DB618
+		// Token: 0x17002E68 RID: 11880
+		// (get) Token: 0x0600C1E2 RID: 49634 RVA: 0x002F9BA8 File Offset: 0x002F7DA8
 		public string Reason
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BB99 RID: 48025 RVA: 0x002DD44F File Offset: 0x002DB64F
+		// Token: 0x0600C1E3 RID: 49635 RVA: 0x002F9BDF File Offset: 0x002F7DDF
 		public Span<byte> GetReasonBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600BB9A RID: 48026 RVA: 0x002DD45E File Offset: 0x002DB65E
+		// Token: 0x0600C1E4 RID: 49636 RVA: 0x002F9BEE File Offset: 0x002F7DEE
 		public byte[] GetReasonArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005091 RID: 20625
+		// Token: 0x04005679 RID: 22137
 		private Table __p;
 	}
 }

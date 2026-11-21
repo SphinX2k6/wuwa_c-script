@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 {
-	// Token: 0x02006A59 RID: 27225
+	// Token: 0x02005BB6 RID: 23478
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeekTraceDefine
 	{
-		// Token: 0x06043B3E RID: 277310 RVA: 0x01091DE4 File Offset: 0x0108FFE4
+		// Token: 0x06039B8C RID: 236428 RVA: 0x01036618 File Offset: 0x01034818
 		// Note: this type is marked as 'beforefieldinit'.
 		static SeekTraceDefine()
 		{
@@ -34,20 +34,20 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			SeekTraceDefine.preSelectedOffsetList = array;
 		}
 
-		// Token: 0x040235AA RID: 144810
+		// Token: 0x0401E79C RID: 124828
 		[StaticVariableRuleIgnore]
 		public static readonly int[][] preSelectedOffsetList;
 
-		// Token: 0x040235AB RID: 144811
+		// Token: 0x0401E79D RID: 124829
 		public const int BIG_CONTENT_SIZE = 8;
 
-		// Token: 0x040235AC RID: 144812
+		// Token: 0x0401E79E RID: 124830
 		public const string BIG_CONTENT_KEY = "UiItem_CrosslGridB";
 
-		// Token: 0x040235AD RID: 144813
+		// Token: 0x0401E79F RID: 124831
 		public const int SMALL_CONTNET_SIZE = 5;
 
-		// Token: 0x040235AE RID: 144814
+		// Token: 0x0401E7A0 RID: 124832
 		public const string SMALL_CONTENT_KEY = "UiItem_CrosslGridS";
 	}
 }

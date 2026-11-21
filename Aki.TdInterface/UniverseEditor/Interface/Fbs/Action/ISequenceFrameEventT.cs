@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F82 RID: 28546
+	// Token: 0x02007748 RID: 30536
 	public class ISequenceFrameEventT
 	{
-		// Token: 0x1700D404 RID: 54276
-		// (get) Token: 0x060326FC RID: 206588 RVA: 0x006CECEC File Offset: 0x006CCEEC
-		// (set) Token: 0x060326FD RID: 206589 RVA: 0x006CECF4 File Offset: 0x006CCEF4
+		// Token: 0x1700DFD3 RID: 57299
+		// (get) Token: 0x0603594C RID: 219468 RVA: 0x0072E6A4 File Offset: 0x0072C8A4
+		// (set) Token: 0x0603594D RID: 219469 RVA: 0x0072E6AC File Offset: 0x0072C8AC
 		public string EventKey { get; set; }
 
-		// Token: 0x1700D405 RID: 54277
-		// (get) Token: 0x060326FE RID: 206590 RVA: 0x006CECFD File Offset: 0x006CCEFD
-		// (set) Token: 0x060326FF RID: 206591 RVA: 0x006CED05 File Offset: 0x006CCF05
+		// Token: 0x1700DFD4 RID: 57300
+		// (get) Token: 0x0603594E RID: 219470 RVA: 0x0072E6B5 File Offset: 0x0072C8B5
+		// (set) Token: 0x0603594F RID: 219471 RVA: 0x0072E6BD File Offset: 0x0072C8BD
 		public List<IActionInfoT> EventActions { get; set; }
 
-		// Token: 0x06032700 RID: 206592 RVA: 0x006CED0E File Offset: 0x006CCF0E
+		// Token: 0x06035950 RID: 219472 RVA: 0x0072E6C6 File Offset: 0x0072C8C6
 		public ISequenceFrameEventT()
 		{
 			this.EventKey = null;

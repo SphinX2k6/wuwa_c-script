@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AA0 RID: 10912
+// Token: 0x0200201C RID: 8220
 [NullableContext(1)]
 [Nullable(0)]
 public class SubPackageDownLoadDynamicItem : UiPanelBase, IDynamicScrollBaseItem<SubPackageDownLoadDynamicData>
 {
-	// Token: 0x06016B9C RID: 93084 RVA: 0x005C3474 File Offset: 0x005C1674
+	// Token: 0x060145CB RID: 83403 RVA: 0x005EFEF0 File Offset: 0x005EE0F0
 	public UniTask Init(UUIItem actor)
 	{
 		SubPackageDownLoadDynamicItem.<Init>d__0 <Init>d__;
@@ -24,7 +24,7 @@ public class SubPackageDownLoadDynamicItem : UiPanelBase, IDynamicScrollBaseItem
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016B9D RID: 93085 RVA: 0x005C34C0 File Offset: 0x005C16C0
+	// Token: 0x060145CC RID: 83404 RVA: 0x005EFF3C File Offset: 0x005EE13C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class SubPackageDownLoadDynamicItem : UiPanelBase, IDynamicScrollBaseItem
 		};
 	}
 
-	// Token: 0x06016B9E RID: 93086 RVA: 0x005C351C File Offset: 0x005C171C
+	// Token: 0x060145CD RID: 83405 RVA: 0x005EFF98 File Offset: 0x005EE198
 	public FVector2D GetItemSize(SubPackageDownLoadDynamicData data)
 	{
 		if (data.Type != null && data.Type.Value != (ESubPackageDownLoadVersionType)0)
@@ -52,7 +52,7 @@ public class SubPackageDownLoadDynamicItem : UiPanelBase, IDynamicScrollBaseItem
 		return new FVector2D(item3.GetWidth(), item3.GetHeight());
 	}
 
-	// Token: 0x06016B9F RID: 93087 RVA: 0x005C35AA File Offset: 0x005C17AA
+	// Token: 0x060145CE RID: 83406 RVA: 0x005F0026 File Offset: 0x005EE226
 	public void ClearItem()
 	{
 	}

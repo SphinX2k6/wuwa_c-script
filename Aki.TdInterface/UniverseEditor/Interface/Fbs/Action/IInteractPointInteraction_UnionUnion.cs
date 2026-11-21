@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069A6 RID: 27046
+	// Token: 0x02007059 RID: 28761
 	public class IInteractPointInteraction_UnionUnion
 	{
-		// Token: 0x1700C8A3 RID: 51363
-		// (get) Token: 0x0602F40D RID: 193549 RVA: 0x0066FC8D File Offset: 0x0066DE8D
-		// (set) Token: 0x0602F40E RID: 193550 RVA: 0x0066FC95 File Offset: 0x0066DE95
+		// Token: 0x1700D2A8 RID: 53928
+		// (get) Token: 0x06031DE9 RID: 204265 RVA: 0x006C0391 File Offset: 0x006BE591
+		// (set) Token: 0x06031DEA RID: 204266 RVA: 0x006C0399 File Offset: 0x006BE599
 		public IInteractPointInteraction_Union Type { get; set; }
 
-		// Token: 0x1700C8A4 RID: 51364
-		// (get) Token: 0x0602F40F RID: 193551 RVA: 0x0066FC9E File Offset: 0x0066DE9E
-		// (set) Token: 0x0602F410 RID: 193552 RVA: 0x0066FCA6 File Offset: 0x0066DEA6
+		// Token: 0x1700D2A9 RID: 53929
+		// (get) Token: 0x06031DEB RID: 204267 RVA: 0x006C03A2 File Offset: 0x006BE5A2
+		// (set) Token: 0x06031DEC RID: 204268 RVA: 0x006C03AA File Offset: 0x006BE5AA
 		public object Value { get; set; }
 
-		// Token: 0x0602F411 RID: 193553 RVA: 0x0066FCAF File Offset: 0x0066DEAF
+		// Token: 0x06031DED RID: 204269 RVA: 0x006C03B3 File Offset: 0x006BE5B3
 		public IInteractPointInteraction_UnionUnion()
 		{
 			this.Type = IInteractPointInteraction_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602F412 RID: 193554 RVA: 0x0066FCC5 File Offset: 0x0066DEC5
+		// Token: 0x06031DEE RID: 204270 RVA: 0x006C03C9 File Offset: 0x006BE5C9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602F413 RID: 193555 RVA: 0x0066FCD7 File Offset: 0x0066DED7
+		// Token: 0x06031DEF RID: 204271 RVA: 0x006C03DB File Offset: 0x006BE5DB
 		public IInteractPointInteractionT AsIInteractPointInteraction()
 		{
 			return this.As<IInteractPointInteractionT>();
 		}
 
-		// Token: 0x0602F414 RID: 193556 RVA: 0x0066FCDF File Offset: 0x0066DEDF
+		// Token: 0x06031DF0 RID: 204272 RVA: 0x006C03E3 File Offset: 0x006BE5E3
 		public static IInteractPointInteraction_UnionUnion FromIInteractPointInteraction(IInteractPointInteractionT _iinteractpointinteraction)
 		{
 			return new IInteractPointInteraction_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F415 RID: 193557 RVA: 0x0066FCF4 File Offset: 0x0066DEF4
+		// Token: 0x06031DF1 RID: 204273 RVA: 0x006C03F8 File Offset: 0x006BE5F8
 		public IDragInteractPointInteractionT AsIDragInteractPointInteraction()
 		{
 			return this.As<IDragInteractPointInteractionT>();
 		}
 
-		// Token: 0x0602F416 RID: 193558 RVA: 0x0066FCFC File Offset: 0x0066DEFC
+		// Token: 0x06031DF2 RID: 204274 RVA: 0x006C0400 File Offset: 0x006BE600
 		public static IInteractPointInteraction_UnionUnion FromIDragInteractPointInteraction(IDragInteractPointInteractionT _idraginteractpointinteraction)
 		{
 			return new IInteractPointInteraction_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F417 RID: 193559 RVA: 0x0066FD14 File Offset: 0x0066DF14
+		// Token: 0x06031DF3 RID: 204275 RVA: 0x006C0418 File Offset: 0x006BE618
 		public static int Pack(FlatBufferBuilder builder, IInteractPointInteraction_UnionUnion _o)
 		{
 			IInteractPointInteraction_Union type = _o.Type;

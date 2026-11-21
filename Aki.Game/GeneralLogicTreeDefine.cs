@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001D8D RID: 7565
+// Token: 0x0200124F RID: 4687
 [NullableContext(1)]
 [Nullable(0)]
 public class GeneralLogicTreeDefine
 {
-	// Token: 0x04006A2E RID: 27182
+	// Token: 0x04006B0F RID: 27407
 	public const int INVALID_INTERACTOPTION_ID = -1;
 
-	// Token: 0x04006A2F RID: 27183
+	// Token: 0x04006B10 RID: 27408
 	public const int COMMONLEVELPLAY_TRACKICONID = 8;
 
-	// Token: 0x04006A30 RID: 27184
+	// Token: 0x04006B11 RID: 27409
 	public const int CHALLENGELEVELPLAY_TRACKICONID = 9;
 
-	// Token: 0x04006A31 RID: 27185
+	// Token: 0x04006B12 RID: 27410
 	public const string OUTRANGEFAILED_TIMERTYPE = "FailedNodeOutRangeTimerType";
 
-	// Token: 0x04006A32 RID: 27186
+	// Token: 0x04006B13 RID: 27411
 	public const string NPCFARAWAY_TIMERTYPE = "NpcFarAwayOutRangeTimerType";
 
-	// Token: 0x04006A33 RID: 27187
+	// Token: 0x04006B14 RID: 27412
 	public const int TEMP_INSTANCE_TREE_CUSTOM_MARK_ID = 29;
 
-	// Token: 0x04006A34 RID: 27188
+	// Token: 0x04006B15 RID: 27413
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<int> tempInstanceTreeIdSetNeedCustomMark = new HashSet<int>
 	{
@@ -40,7 +40,7 @@ public class GeneralLogicTreeDefine
 		171700006
 	};
 
-	// Token: 0x04006A35 RID: 27189
+	// Token: 0x04006B16 RID: 27414
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<BtType, string> btTypeLogString = new Dictionary<BtType, string>
 	{
@@ -62,7 +62,7 @@ public class GeneralLogicTreeDefine
 		}
 	};
 
-	// Token: 0x04006A36 RID: 27190
+	// Token: 0x04006B17 RID: 27415
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<NodeStatus, string> btNodeStatusLogString = new Dictionary<NodeStatus, string>
 	{
@@ -100,7 +100,7 @@ public class GeneralLogicTreeDefine
 		}
 	};
 
-	// Token: 0x04006A37 RID: 27191
+	// Token: 0x04006B18 RID: 27416
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<ChildQuestNodeStatus, string> btChildQuestNodeStatusLogString = new Dictionary<ChildQuestNodeStatus, string>
 	{

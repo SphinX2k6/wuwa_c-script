@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006416 RID: 25622
+	// Token: 0x02005394 RID: 21396
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MotorFightRankItemStatic
 	{
-		// Token: 0x04021810 RID: 137232
+		// Token: 0x0401C13F RID: 115007
 		[StaticVariableRuleIgnore]
 		public static readonly List<string> rankLightBgList = new List<string>
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			"/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/MotorcycleBattle/Rank/RankList/T_ItemBgCopper.T_ItemBgCopper"
 		};
 
-		// Token: 0x04021811 RID: 137233
+		// Token: 0x0401C140 RID: 115008
 		[StaticVariableRuleIgnore]
 		public static readonly List<string> rankBgList = new List<string>
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			"/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/MotorcycleBattle/Rank/RankList/T_ItemRankRoleBg4.T_ItemRankRoleBg4"
 		};
 
-		// Token: 0x04021812 RID: 137234
+		// Token: 0x0401C141 RID: 115009
 		[StaticVariableRuleIgnore]
 		public static readonly List<string> rankNumberColor = new List<string>
 		{

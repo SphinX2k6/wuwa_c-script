@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EB1 RID: 16049
+	// Token: 0x020042EF RID: 17135
 	public enum IInformationViewType_Union : byte
 	{
-		// Token: 0x0400B87D RID: 47229
+		// Token: 0x0400C259 RID: 49753
 		NONE,
-		// Token: 0x0400B87E RID: 47230
+		// Token: 0x0400C25A RID: 49754
 		IInformationViewType,
-		// Token: 0x0400B87F RID: 47231
+		// Token: 0x0400C25B RID: 49755
 		ILevelPlayInformationView,
-		// Token: 0x0400B880 RID: 47232
+		// Token: 0x0400C25C RID: 49756
 		IBossRushBuffInfoView,
-		// Token: 0x0400B881 RID: 47233
+		// Token: 0x0400C25D RID: 49757
 		IDangoAbyssInformationView
 	}
 }

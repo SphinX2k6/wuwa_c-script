@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 {
-	// Token: 0x02007065 RID: 28773
+	// Token: 0x020061E6 RID: 25062
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractEntity
 	{
-		// Token: 0x06046074 RID: 286836 RVA: 0x01174C7C File Offset: 0x01172E7C
+		// Token: 0x0603C26F RID: 246383 RVA: 0x0111E840 File Offset: 0x0111CA40
 		public InteractEntity(Entity entity)
 		{
 			this.Entity = entity;
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.DirectOptionNames = new List<string>();
 		}
 
-		// Token: 0x17009BFB RID: 39931
-		// (get) Token: 0x06046075 RID: 286837 RVA: 0x01174D18 File Offset: 0x01172F18
+		// Token: 0x17007181 RID: 29057
+		// (get) Token: 0x0603C270 RID: 246384 RVA: 0x0111E8DC File Offset: 0x0111CADC
 		public int Priority
 		{
 			get
@@ -41,42 +41,42 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046076 RID: 286838 RVA: 0x01174D94 File Offset: 0x01172F94
+		// Token: 0x0603C271 RID: 246385 RVA: 0x0111E958 File Offset: 0x0111CB58
 		public Entity GetEntity()
 		{
 			return this.Entity;
 		}
 
-		// Token: 0x04024A92 RID: 150162
+		// Token: 0x0401FD48 RID: 130376
 		private const int AdvicePriority = -100;
 
-		// Token: 0x04024A93 RID: 150163
+		// Token: 0x0401FD49 RID: 130377
 		private const int MinPriority = -9999;
 
-		// Token: 0x04024A94 RID: 150164
+		// Token: 0x0401FD4A RID: 130378
 		public readonly bool IsAdvice;
 
-		// Token: 0x04024A95 RID: 150165
+		// Token: 0x0401FD4B RID: 130379
 		[Nullable(2)]
 		private readonly Entity Entity;
 
-		// Token: 0x04024A96 RID: 150166
+		// Token: 0x0401FD4C RID: 130380
 		[Nullable(2)]
 		private readonly BaseActorComponent ActorComp;
 
-		// Token: 0x04024A97 RID: 150167
+		// Token: 0x0401FD4D RID: 130381
 		public int? EntityId;
 
-		// Token: 0x04024A98 RID: 150168
+		// Token: 0x0401FD4E RID: 130382
 		public float InteractRange;
 
-		// Token: 0x04024A99 RID: 150169
+		// Token: 0x0401FD4F RID: 130383
 		private int PriorityInternal;
 
-		// Token: 0x04024A9A RID: 150170
+		// Token: 0x0401FD50 RID: 130384
 		public List<int> DirectOptionInstanceIds = new List<int>();
 
-		// Token: 0x04024A9B RID: 150171
+		// Token: 0x0401FD51 RID: 130385
 		[Nullable(new byte[]
 		{
 			1,
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		public List<string> DirectOptionNames = new List<string>();
 
-		// Token: 0x04024A9C RID: 150172
+		// Token: 0x0401FD52 RID: 130386
 		[Nullable(new byte[]
 		{
 			1,
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 		})]
 		public List<string> DirectOptionConditionIcon = new List<string>();
 
-		// Token: 0x04024A9D RID: 150173
+		// Token: 0x0401FD53 RID: 130387
 		public List<bool> DirectOptionGray = new List<bool>();
 	}
 }

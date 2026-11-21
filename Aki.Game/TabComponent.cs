@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019B5 RID: 6581
+// Token: 0x02000E73 RID: 3699
 [NullableContext(1)]
 [Nullable(0)]
 public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem : CommonTabItemBase
 {
-	// Token: 0x0600BFEC RID: 49132 RVA: 0x002B4B87 File Offset: 0x002B2D87
+	// Token: 0x060093F6 RID: 37878 RVA: 0x002BFB17 File Offset: 0x002BDD17
 	public TabComponent(UUIItem uiItem, [Nullable(new byte[]
 	{
 		1,
@@ -27,7 +27,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600BFED RID: 49133 RVA: 0x002B4BBC File Offset: 0x002B2DBC
+	// Token: 0x060093F7 RID: 37879 RVA: 0x002BFB4C File Offset: 0x002BDD4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -39,20 +39,20 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BFEE RID: 49134 RVA: 0x002B4C04 File Offset: 0x002B2E04
+	// Token: 0x060093F8 RID: 37880 RVA: 0x002BFB94 File Offset: 0x002BDD94
 	protected override void OnStart()
 	{
 		AUIBaseActor gridActor = (this.LayoutOriginItem != null) ? (this.LayoutOriginItem.GetOwner() as AUIBaseActor) : null;
 		this.Layout = new GenericLayout<TTabItem, CommonTabItemData>(base.GetLayoutBase(0), new Func<TTabItem>(this.InitTabItem), gridActor, false, true);
 	}
 
-	// Token: 0x0600BFEF RID: 49135 RVA: 0x002B4C4E File Offset: 0x002B2E4E
+	// Token: 0x060093F9 RID: 37881 RVA: 0x002BFBDE File Offset: 0x002BDDDE
 	protected override void OnBeforeDestroy()
 	{
 		this.LayoutOriginItem = null;
 	}
 
-	// Token: 0x0600BFF0 RID: 49136 RVA: 0x002B4C58 File Offset: 0x002B2E58
+	// Token: 0x060093FA RID: 37882 RVA: 0x002BFBE8 File Offset: 0x002BDDE8
 	private TTabItem InitTabItem()
 	{
 		TTabItem ttabItem = this.ProxyCreate(null, null);
@@ -62,7 +62,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		return ttabItem;
 	}
 
-	// Token: 0x0600BFF1 RID: 49137 RVA: 0x002B4CB3 File Offset: 0x002B2EB3
+	// Token: 0x060093FB RID: 37883 RVA: 0x002BFC43 File Offset: 0x002BDE43
 	private void ToggleEvent(int index)
 	{
 		this.SwitchLastToggle();
@@ -70,7 +70,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		this.ToggleCallBack(index);
 	}
 
-	// Token: 0x0600BFF2 RID: 49138 RVA: 0x002B4CD0 File Offset: 0x002B2ED0
+	// Token: 0x060093FC RID: 37884 RVA: 0x002BFC60 File Offset: 0x002BDE60
 	private void SwitchLastToggle()
 	{
 		if (this.CurrentIndex == -1)
@@ -84,13 +84,13 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		}
 	}
 
-	// Token: 0x0600BFF3 RID: 49139 RVA: 0x002B4D13 File Offset: 0x002B2F13
+	// Token: 0x060093FD RID: 37885 RVA: 0x002BFCA3 File Offset: 0x002BDEA3
 	private bool CanExecuteChange(int index, bool forceSwitch)
 	{
 		return (this.CurrentIndex != index || forceSwitch) && (this.CanExecuteChangeInternal == null || this.CanExecuteChangeInternal(index, new bool?(forceSwitch)));
 	}
 
-	// Token: 0x0600BFF4 RID: 49140 RVA: 0x002B4D40 File Offset: 0x002B2F40
+	// Token: 0x060093FE RID: 37886 RVA: 0x002BFCD0 File Offset: 0x002BDED0
 	public void RefreshTabItem(List<CommonTabItemData> array, [Nullable(2)] Action callBack = null)
 	{
 		if (this.CurrentIndex != -1)
@@ -105,7 +105,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		this.Layout.RefreshByData(array, callBack, false);
 	}
 
-	// Token: 0x0600BFF5 RID: 49141 RVA: 0x002B4D90 File Offset: 0x002B2F90
+	// Token: 0x060093FF RID: 37887 RVA: 0x002BFD20 File Offset: 0x002BDF20
 	public UniTask RefreshTabItemAsync(List<CommonTabItemData> array, bool resetSelect = true)
 	{
 		TabComponent<TTabItem>.<RefreshTabItemAsync>d__16 <RefreshTabItemAsync>d__;
@@ -118,7 +118,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		return <RefreshTabItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BFF6 RID: 49142 RVA: 0x002B4DE4 File Offset: 0x002B2FE4
+	// Token: 0x06009400 RID: 37888 RVA: 0x002BFD74 File Offset: 0x002BDF74
 	[NullableContext(2)]
 	public void RefreshTabItemByLength(int length, Action callBack = null)
 	{
@@ -133,7 +133,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		this.RefreshTabItem(list, callBack);
 	}
 
-	// Token: 0x0600BFF7 RID: 49143 RVA: 0x002B4E20 File Offset: 0x002B3020
+	// Token: 0x06009401 RID: 37889 RVA: 0x002BFDB0 File Offset: 0x002BDFB0
 	public UniTask RefreshTabItemByLengthAsync(int length)
 	{
 		TabComponent<TTabItem>.<RefreshTabItemByLengthAsync>d__18 <RefreshTabItemByLengthAsync>d__;
@@ -145,7 +145,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		return <RefreshTabItemByLengthAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BFF8 RID: 49144 RVA: 0x002B4E6C File Offset: 0x002B306C
+	// Token: 0x06009402 RID: 37890 RVA: 0x002BFDFC File Offset: 0x002BDFFC
 	public void ResetLastSelectTab()
 	{
 		TTabItem layoutItemByKey = this.Layout.GetLayoutItemByKey(this.CurrentIndex);
@@ -155,7 +155,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		}
 	}
 
-	// Token: 0x0600BFF9 RID: 49145 RVA: 0x002B4EA8 File Offset: 0x002B30A8
+	// Token: 0x06009403 RID: 37891 RVA: 0x002BFE38 File Offset: 0x002BE038
 	public void SelectToggleByIndex(int index, bool bIgnored = false, bool bFire = true)
 	{
 		if (bIgnored)
@@ -173,13 +173,13 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		}
 	}
 
-	// Token: 0x0600BFFA RID: 49146 RVA: 0x002B4EEF File Offset: 0x002B30EF
+	// Token: 0x06009404 RID: 37892 RVA: 0x002BFE7F File Offset: 0x002BE07F
 	public int GetSelectedIndex()
 	{
 		return this.CurrentIndex;
 	}
 
-	// Token: 0x0600BFFB RID: 49147 RVA: 0x002B4EF7 File Offset: 0x002B30F7
+	// Token: 0x06009405 RID: 37893 RVA: 0x002BFE87 File Offset: 0x002BE087
 	public int TryGetSelectedIndex(int defaultValue)
 	{
 		if (this.CurrentIndex == -1)
@@ -189,21 +189,21 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		return this.CurrentIndex;
 	}
 
-	// Token: 0x0600BFFC RID: 49148 RVA: 0x002B4F0A File Offset: 0x002B310A
+	// Token: 0x06009406 RID: 37894 RVA: 0x002BFE9A File Offset: 0x002BE09A
 	public void ResetSelectIndex()
 	{
 		this.ResetLastSelectTab();
 		this.CurrentIndex = -1;
 	}
 
-	// Token: 0x0600BFFD RID: 49149 RVA: 0x002B4F19 File Offset: 0x002B3119
+	// Token: 0x06009407 RID: 37895 RVA: 0x002BFEA9 File Offset: 0x002BE0A9
 	[NullableContext(2)]
 	public TTabItem GetTabItemByIndex(int index)
 	{
 		return this.Layout.GetLayoutItemByKey(index);
 	}
 
-	// Token: 0x0600BFFE RID: 49150 RVA: 0x002B4F2C File Offset: 0x002B312C
+	// Token: 0x06009408 RID: 37896 RVA: 0x002BFEBC File Offset: 0x002BE0BC
 	public Dictionary<int, TTabItem> GetTabItemMap()
 	{
 		Dictionary<int, TTabItem> dictionary = new Dictionary<int, TTabItem>();
@@ -214,7 +214,7 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		return dictionary;
 	}
 
-	// Token: 0x0600BFFF RID: 49151 RVA: 0x002B4FA0 File Offset: 0x002B31A0
+	// Token: 0x06009409 RID: 37897 RVA: 0x002BFF30 File Offset: 0x002BE130
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -226,13 +226,13 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 		return this.Layout;
 	}
 
-	// Token: 0x0600C000 RID: 49152 RVA: 0x002B4FA8 File Offset: 0x002B31A8
+	// Token: 0x0600940A RID: 37898 RVA: 0x002BFF38 File Offset: 0x002BE138
 	public void SetCanChange(Func<int, bool?, bool> callback)
 	{
 		this.CanExecuteChangeInternal = callback;
 	}
 
-	// Token: 0x0400564E RID: 22094
+	// Token: 0x04005700 RID: 22272
 	[Nullable(new byte[]
 	{
 		2,
@@ -241,18 +241,18 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 	})]
 	private GenericLayout<TTabItem, CommonTabItemData> Layout;
 
-	// Token: 0x0400564F RID: 22095
+	// Token: 0x04005701 RID: 22273
 	private int CurrentIndex = -1;
 
-	// Token: 0x04005650 RID: 22096
+	// Token: 0x04005702 RID: 22274
 	[Nullable(2)]
 	private UUIItem LayoutOriginItem;
 
-	// Token: 0x04005651 RID: 22097
+	// Token: 0x04005703 RID: 22275
 	[Nullable(2)]
 	private Func<int, bool?, bool> CanExecuteChangeInternal;
 
-	// Token: 0x04005652 RID: 22098
+	// Token: 0x04005704 RID: 22276
 	[Nullable(new byte[]
 	{
 		1,
@@ -261,14 +261,14 @@ public class TabComponent<[Nullable(0)] TTabItem> : UiPanelBase where TTabItem :
 	})]
 	public readonly Func<UUIItem, int?, TTabItem> ProxyCreate;
 
-	// Token: 0x04005653 RID: 22099
+	// Token: 0x04005705 RID: 22277
 	public readonly Action<int> ToggleCallBack;
 
-	// Token: 0x02007ED8 RID: 32472
+	// Token: 0x02007067 RID: 28775
 	[NullableContext(0)]
 	private class ETabComponent
 	{
-		// Token: 0x04029731 RID: 169777
+		// Token: 0x04024A6E RID: 150126
 		public const int Layout = 0;
 	}
 }

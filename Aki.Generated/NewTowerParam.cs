@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E8E RID: 3726
+	// Token: 0x02000F73 RID: 3955
 	public struct NewTowerParam : IFlatbufferObject
 	{
-		// Token: 0x1700235A RID: 9050
-		// (get) Token: 0x06009F63 RID: 40803 RVA: 0x0029E464 File Offset: 0x0029C664
+		// Token: 0x170023BF RID: 9151
+		// (get) Token: 0x0600A583 RID: 42371 RVA: 0x002BBA24 File Offset: 0x002B9C24
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F64 RID: 40804 RVA: 0x0029E471 File Offset: 0x0029C671
+		// Token: 0x0600A584 RID: 42372 RVA: 0x002BBA31 File Offset: 0x002B9C31
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009F65 RID: 40805 RVA: 0x0029E478 File Offset: 0x0029C678
+		// Token: 0x0600A585 RID: 42373 RVA: 0x002BBA38 File Offset: 0x002B9C38
 		public static NewTowerParam GetRootAsNewTowerParam(ByteBuffer _bb)
 		{
 			return NewTowerParam.GetRootAsNewTowerParam(_bb, default(NewTowerParam));
 		}
 
-		// Token: 0x06009F66 RID: 40806 RVA: 0x0029E494 File Offset: 0x0029C694
+		// Token: 0x0600A586 RID: 42374 RVA: 0x002BBA54 File Offset: 0x002B9C54
 		public static NewTowerParam GetRootAsNewTowerParam(ByteBuffer _bb, NewTowerParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009F67 RID: 40807 RVA: 0x0029E4B1 File Offset: 0x0029C6B1
+		// Token: 0x0600A587 RID: 42375 RVA: 0x002BBA71 File Offset: 0x002B9C71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009F68 RID: 40808 RVA: 0x0029E4C0 File Offset: 0x0029C6C0
+		// Token: 0x0600A588 RID: 42376 RVA: 0x002BBA80 File Offset: 0x002B9C80
 		public NewTowerParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700235B RID: 9051
-		// (get) Token: 0x06009F69 RID: 40809 RVA: 0x0029E4D0 File Offset: 0x0029C6D0
+		// Token: 0x170023C0 RID: 9152
+		// (get) Token: 0x0600A589 RID: 42377 RVA: 0x002BBA90 File Offset: 0x002B9C90
 		public int CycleId
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700235C RID: 9052
-		// (get) Token: 0x06009F6A RID: 40810 RVA: 0x0029E50C File Offset: 0x0029C70C
+		// Token: 0x170023C1 RID: 9153
+		// (get) Token: 0x0600A58A RID: 42378 RVA: 0x002BBACC File Offset: 0x002B9CCC
 		public int SeasonId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700235D RID: 9053
-		// (get) Token: 0x06009F6B RID: 40811 RVA: 0x0029E548 File Offset: 0x0029C748
+		// Token: 0x170023C2 RID: 9154
+		// (get) Token: 0x0600A58B RID: 42379 RVA: 0x002BBB08 File Offset: 0x002B9D08
 		public int ActivityId
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700235E RID: 9054
-		// (get) Token: 0x06009F6C RID: 40812 RVA: 0x0029E584 File Offset: 0x0029C784
+		// Token: 0x170023C3 RID: 9155
+		// (get) Token: 0x0600A58C RID: 42380 RVA: 0x002BBB44 File Offset: 0x002B9D44
 		public int TimerId
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700235F RID: 9055
-		// (get) Token: 0x06009F6D RID: 40813 RVA: 0x0029E5C4 File Offset: 0x0029C7C4
+		// Token: 0x170023C4 RID: 9156
+		// (get) Token: 0x0600A58D RID: 42381 RVA: 0x002BBB84 File Offset: 0x002B9D84
 		public int ShowTimerId
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002360 RID: 9056
-		// (get) Token: 0x06009F6E RID: 40814 RVA: 0x0029E604 File Offset: 0x0029C804
+		// Token: 0x170023C5 RID: 9157
+		// (get) Token: 0x0600A58E RID: 42382 RVA: 0x002BBBC4 File Offset: 0x002B9DC4
 		public int RoleCount
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002361 RID: 9057
-		// (get) Token: 0x06009F6F RID: 40815 RVA: 0x0029E644 File Offset: 0x0029C844
+		// Token: 0x170023C6 RID: 9158
+		// (get) Token: 0x0600A58F RID: 42383 RVA: 0x002BBC04 File Offset: 0x002B9E04
 		public int DefaultCostEnergy
 		{
 			get
@@ -156,7 +156,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F70 RID: 40816 RVA: 0x0029E684 File Offset: 0x0029C884
+		// Token: 0x0600A590 RID: 42384 RVA: 0x002BBC44 File Offset: 0x002B9E44
 		public DicIntInt? CostEnergy(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -167,8 +167,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002362 RID: 9058
-		// (get) Token: 0x06009F71 RID: 40817 RVA: 0x0029E6E8 File Offset: 0x0029C8E8
+		// Token: 0x170023C7 RID: 9159
+		// (get) Token: 0x0600A591 RID: 42385 RVA: 0x002BBCA8 File Offset: 0x002B9EA8
 		public int CostEnergyLength
 		{
 			get
@@ -182,7 +182,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F72 RID: 40818 RVA: 0x0029E714 File Offset: 0x0029C914
+		// Token: 0x0600A592 RID: 42386 RVA: 0x002BBCD4 File Offset: 0x002B9ED4
 		public int EnhanceRoleIds(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -193,8 +193,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002363 RID: 9059
-		// (get) Token: 0x06009F73 RID: 40819 RVA: 0x0029E754 File Offset: 0x0029C954
+		// Token: 0x170023C8 RID: 9160
+		// (get) Token: 0x0600A593 RID: 42387 RVA: 0x002BBD14 File Offset: 0x002B9F14
 		public int EnhanceRoleIdsLength
 		{
 			get
@@ -208,19 +208,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F74 RID: 40820 RVA: 0x0029E780 File Offset: 0x0029C980
+		// Token: 0x0600A594 RID: 42388 RVA: 0x002BBD40 File Offset: 0x002B9F40
 		public Span<int> GetEnhanceRoleIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x06009F75 RID: 40821 RVA: 0x0029E790 File Offset: 0x0029C990
+		// Token: 0x0600A595 RID: 42389 RVA: 0x002BBD50 File Offset: 0x002B9F50
 		public int[] GetEnhanceRoleIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009F76 RID: 40822 RVA: 0x0029E7A8 File Offset: 0x0029C9A8
+		// Token: 0x0600A596 RID: 42390 RVA: 0x002BBD68 File Offset: 0x002B9F68
 		public DicIntInt? SpecialUpRoleIds(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -231,8 +231,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002364 RID: 9060
-		// (get) Token: 0x06009F77 RID: 40823 RVA: 0x0029E80C File Offset: 0x0029CA0C
+		// Token: 0x170023C9 RID: 9161
+		// (get) Token: 0x0600A597 RID: 42391 RVA: 0x002BBDCC File Offset: 0x002B9FCC
 		public int SpecialUpRoleIdsLength
 		{
 			get
@@ -246,8 +246,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002365 RID: 9061
-		// (get) Token: 0x06009F78 RID: 40824 RVA: 0x0029E838 File Offset: 0x0029CA38
+		// Token: 0x170023CA RID: 9162
+		// (get) Token: 0x0600A598 RID: 42392 RVA: 0x002BBDF8 File Offset: 0x002B9FF8
 		public string CycleName
 		{
 			get
@@ -261,71 +261,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009F79 RID: 40825 RVA: 0x0029E870 File Offset: 0x0029CA70
+		// Token: 0x0600A599 RID: 42393 RVA: 0x002BBE30 File Offset: 0x002BA030
 		public Span<byte> GetCycleNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x06009F7A RID: 40826 RVA: 0x0029E880 File Offset: 0x0029CA80
+		// Token: 0x0600A59A RID: 42394 RVA: 0x002BBE40 File Offset: 0x002BA040
 		public byte[] GetCycleNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009F7B RID: 40827 RVA: 0x0029E898 File Offset: 0x0029CA98
+		// Token: 0x0600A59B RID: 42395 RVA: 0x002BBE58 File Offset: 0x002BA058
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用CostEnergyFrozenDict()缓存字典，遍历请使用CostEnergyIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> CostEnergy()
+		public Dictionary<int, int> CostEnergy()
 		{
 			return this.CostEnergyIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06009F7C RID: 40828 RVA: 0x0029E8EE File Offset: 0x0029CAEE
+		// Token: 0x0600A59C RID: 42396 RVA: 0x002BBEAE File Offset: 0x002BA0AE
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> CostEnergyIter()
+		public IEnumerable<DicIntInt> CostEnergyIter()
 		{
 			NewTowerParam.<CostEnergyIter>d__38 <CostEnergyIter>d__ = new NewTowerParam.<CostEnergyIter>d__38(-2);
 			<CostEnergyIter>d__.<>3__<>4__this = this;
 			return <CostEnergyIter>d__;
 		}
 
-		// Token: 0x06009F7D RID: 40829 RVA: 0x0029E904 File Offset: 0x0029CB04
+		// Token: 0x0600A59D RID: 42397 RVA: 0x002BBEC3 File Offset: 0x002BA0C3
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EnhanceRoleIdsIter()或GetEnhanceRoleIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] EnhanceRoleIds()
+		public int[] EnhanceRoleIds()
 		{
-			NewTowerParam newTowerParam = this;
-			return newTowerParam.GetEnhanceRoleIdsArray() ?? Array.Empty<int>();
+			return this.GetEnhanceRoleIdsArray();
 		}
 
-		// Token: 0x06009F7E RID: 40830 RVA: 0x0029E928 File Offset: 0x0029CB28
+		// Token: 0x0600A59E RID: 42398 RVA: 0x002BBECB File Offset: 0x002BA0CB
 		[NullableContext(1)]
-		public readonly IEnumerable<int> EnhanceRoleIdsIter()
+		public IEnumerable<int> EnhanceRoleIdsIter()
 		{
 			NewTowerParam.<EnhanceRoleIdsIter>d__40 <EnhanceRoleIdsIter>d__ = new NewTowerParam.<EnhanceRoleIdsIter>d__40(-2);
 			<EnhanceRoleIdsIter>d__.<>3__<>4__this = this;
 			return <EnhanceRoleIdsIter>d__;
 		}
 
-		// Token: 0x06009F7F RID: 40831 RVA: 0x0029E940 File Offset: 0x0029CB40
+		// Token: 0x0600A59F RID: 42399 RVA: 0x002BBEE0 File Offset: 0x002BA0E0
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用SpecialUpRoleIdsFrozenDict()缓存字典，遍历请使用SpecialUpRoleIdsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> SpecialUpRoleIds()
+		public Dictionary<int, int> SpecialUpRoleIds()
 		{
 			return this.SpecialUpRoleIdsIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06009F80 RID: 40832 RVA: 0x0029E996 File Offset: 0x0029CB96
+		// Token: 0x0600A5A0 RID: 42400 RVA: 0x002BBF36 File Offset: 0x002BA136
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> SpecialUpRoleIdsIter()
+		public IEnumerable<DicIntInt> SpecialUpRoleIdsIter()
 		{
 			NewTowerParam.<SpecialUpRoleIdsIter>d__42 <SpecialUpRoleIdsIter>d__ = new NewTowerParam.<SpecialUpRoleIdsIter>d__42(-2);
 			<SpecialUpRoleIdsIter>d__.<>3__<>4__this = this;
 			return <SpecialUpRoleIdsIter>d__;
 		}
 
-		// Token: 0x06009F81 RID: 40833 RVA: 0x0029E9AC File Offset: 0x0029CBAC
+		// Token: 0x0600A5A1 RID: 42401 RVA: 0x002BBF4C File Offset: 0x002BA14C
 		public int? GetCostEnergy(int key)
 		{
 			this.EnsureCostEnergyCacheIfNeeded();
@@ -337,7 +333,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06009F82 RID: 40834 RVA: 0x0029E9E0 File Offset: 0x0029CBE0
+		// Token: 0x0600A5A2 RID: 42402 RVA: 0x002BBF80 File Offset: 0x002BA180
 		public int? GetSpecialUpRoleIds(int key)
 		{
 			this.EnsureSpecialUpRoleIdsCacheIfNeeded();
@@ -349,7 +345,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06009F83 RID: 40835 RVA: 0x0029EA14 File Offset: 0x0029CC14
+		// Token: 0x0600A5A3 RID: 42403 RVA: 0x002BBFB4 File Offset: 0x002BA1B4
 		private void EnsureCostEnergyCacheIfNeeded()
 		{
 			if (this.CostEnergyCache != null)
@@ -359,7 +355,7 @@ namespace Aki.Config
 			this.CostEnergyCache = this.CostEnergyIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009F84 RID: 40836 RVA: 0x0029EA7C File Offset: 0x0029CC7C
+		// Token: 0x0600A5A4 RID: 42404 RVA: 0x002BC01C File Offset: 0x002BA21C
 		private void EnsureSpecialUpRoleIdsCacheIfNeeded()
 		{
 			if (this.SpecialUpRoleIdsCache != null)
@@ -369,30 +365,30 @@ namespace Aki.Config
 			this.SpecialUpRoleIdsCache = this.SpecialUpRoleIdsIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009F85 RID: 40837 RVA: 0x0029EAE2 File Offset: 0x0029CCE2
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetCostEnergyFrozenDict(int key)
+		// Token: 0x0600A5A5 RID: 42405 RVA: 0x002BC082 File Offset: 0x002BA282
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetCostEnergyFrozenDict()
 		{
 			this.EnsureCostEnergyCacheIfNeeded();
 			return this.CostEnergyCache;
 		}
 
-		// Token: 0x06009F86 RID: 40838 RVA: 0x0029EAF0 File Offset: 0x0029CCF0
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetSpecialUpRoleIdsFrozenDict(int key)
+		// Token: 0x0600A5A6 RID: 42406 RVA: 0x002BC090 File Offset: 0x002BA290
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetSpecialUpRoleIdsFrozenDict()
 		{
 			this.EnsureSpecialUpRoleIdsCacheIfNeeded();
 			return this.SpecialUpRoleIdsCache;
 		}
 
-		// Token: 0x04004F3D RID: 20285
+		// Token: 0x04005522 RID: 21794
 		private Table __p;
 
-		// Token: 0x04004F3E RID: 20286
+		// Token: 0x04005523 RID: 21795
 		[Nullable(2)]
 		private FrozenDictionary<int, int> CostEnergyCache;
 
-		// Token: 0x04004F3F RID: 20287
+		// Token: 0x04005524 RID: 21796
 		[Nullable(2)]
 		private FrozenDictionary<int, int> SpecialUpRoleIdsCache;
 	}

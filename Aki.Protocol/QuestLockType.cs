@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200161C RID: 5660
+	// Token: 0x0200168F RID: 5775
 	public enum QuestLockType
 	{
-		// Token: 0x0400BFF2 RID: 49138
+		// Token: 0x0400C4EC RID: 50412
 		[OriginalName("QuestResource")]
 		QuestResource,
-		// Token: 0x0400BFF3 RID: 49139
+		// Token: 0x0400C4ED RID: 50413
 		[OriginalName("QuestResourceShow")]
 		QuestResourceShow,
-		// Token: 0x0400BFF4 RID: 49140
+		// Token: 0x0400C4EE RID: 50414
 		[OriginalName("QuestFocus")]
 		QuestFocus
 	}

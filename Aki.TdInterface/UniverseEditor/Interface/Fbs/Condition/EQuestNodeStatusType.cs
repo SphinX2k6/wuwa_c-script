@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200494A RID: 18762
+	// Token: 0x02004E01 RID: 19969
 	public enum EQuestNodeStatusType : byte
 	{
-		// Token: 0x0400D0F9 RID: 53497
+		// Token: 0x0400DBC0 RID: 56256
 		CqnsNotActive,
-		// Token: 0x0400D0FA RID: 53498
+		// Token: 0x0400DBC1 RID: 56257
 		CqnsEnter,
-		// Token: 0x0400D0FB RID: 53499
+		// Token: 0x0400DBC2 RID: 56258
 		CqnsEnterAction,
-		// Token: 0x0400D0FC RID: 53500
+		// Token: 0x0400DBC3 RID: 56259
 		CqnsProgress,
-		// Token: 0x0400D0FD RID: 53501
+		// Token: 0x0400DBC4 RID: 56260
 		CqnsFinished,
-		// Token: 0x0400D0FE RID: 53502
+		// Token: 0x0400DBC5 RID: 56261
 		CqnsFinishActiton,
-		// Token: 0x0400D0FF RID: 53503
+		// Token: 0x0400DBC6 RID: 56262
 		CqnsFail
 	}
 }

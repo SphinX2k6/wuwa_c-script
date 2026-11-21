@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BF7 RID: 3063
+	// Token: 0x02000211 RID: 529
 	[UnrealObjectPath("/Script/Engine.FXSystemAsset")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public abstract class UFXSystemAsset : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06009725 RID: 38693 RVA: 0x000D78D9 File Offset: 0x000D5AD9
+		// Token: 0x060021F0 RID: 8688 RVA: 0x00031C0F File Offset: 0x0002FE0F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UFXSystemAsset._ClassPtr;
 		}
 
-		// Token: 0x17002440 RID: 9280
-		// (get) Token: 0x06009726 RID: 38694 RVA: 0x000D78E5 File Offset: 0x000D5AE5
-		// (set) Token: 0x06009727 RID: 38695 RVA: 0x000D78F5 File Offset: 0x000D5AF5
+		// Token: 0x170004CD RID: 1229
+		// (get) Token: 0x060021F1 RID: 8689 RVA: 0x00031C1B File Offset: 0x0002FE1B
+		// (set) Token: 0x060021F2 RID: 8690 RVA: 0x00031C2B File Offset: 0x0002FE2B
 		public unsafe uint MaxPoolSize
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002441 RID: 9281
-		// (get) Token: 0x06009728 RID: 38696 RVA: 0x000D7906 File Offset: 0x000D5B06
-		// (set) Token: 0x06009729 RID: 38697 RVA: 0x000D7916 File Offset: 0x000D5B16
+		// Token: 0x170004CE RID: 1230
+		// (get) Token: 0x060021F3 RID: 8691 RVA: 0x00031C3C File Offset: 0x0002FE3C
+		// (set) Token: 0x060021F4 RID: 8692 RVA: 0x00031C4C File Offset: 0x0002FE4C
 		public unsafe uint PoolPrimeSize
 		{
 			get
@@ -47,36 +47,36 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600972A RID: 38698 RVA: 0x000D7927 File Offset: 0x000D5B27
+		// Token: 0x060021F5 RID: 8693 RVA: 0x00031C5D File Offset: 0x0002FE5D
 		static UFXSystemAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.FXSystemAsset");
 		}
 
-		// Token: 0x0600972B RID: 38699 RVA: 0x000D7938 File Offset: 0x000D5B38
+		// Token: 0x060021F6 RID: 8694 RVA: 0x00031C6C File Offset: 0x0002FE6C
 		protected UFXSystemAsset() : this(BuiltinUtils.AllocNativeUObject(UFXSystemAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600972C RID: 38700 RVA: 0x000D7960 File Offset: 0x000D5B60
+		// Token: 0x060021F7 RID: 8695 RVA: 0x00031C94 File Offset: 0x0002FE94
 		protected UFXSystemAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040054BC RID: 21692
+		// Token: 0x04000D4C RID: 3404
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.FXSystemAsset";
 
-		// Token: 0x040054BD RID: 21693
+		// Token: 0x04000D4D RID: 3405
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040054BE RID: 21694
+		// Token: 0x04000D4E RID: 3406
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040054BF RID: 21695
+		// Token: 0x04000D4F RID: 3407
 		internal static int __PropertyOffset_MaxPoolSize;
 
-		// Token: 0x040054C0 RID: 21696
+		// Token: 0x04000D50 RID: 3408
 		internal static int __PropertyOffset_PoolPrimeSize;
 	}
 }

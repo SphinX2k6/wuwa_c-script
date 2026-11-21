@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003D4 RID: 980
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200042B RID: 1067
 	public class IGazeNextPointAfterInteract
 	{
-		// Token: 0x060013AF RID: 5039 RVA: 0x0003FB34 File Offset: 0x0003DD34
+		// Token: 0x0600153D RID: 5437 RVA: 0x000436B4 File Offset: 0x000418B4
 		private IGazeNextPointAfterInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060013B0 RID: 5040 RVA: 0x0003FB6C File Offset: 0x0003DD6C
+		// Token: 0x0600153E RID: 5438 RVA: 0x000436EC File Offset: 0x000418EC
 		public static IGazeNextPointAfterInteract Create([Nullable(2)] IGazeNextPointAfterInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013B1 RID: 5041 RVA: 0x0003FB7F File Offset: 0x0003DD7F
+		// Token: 0x0600153F RID: 5439 RVA: 0x000436FF File Offset: 0x000418FF
 		public static IGazeNextPointAfterInteract CreateFromSetValue([Nullable(2)] IGazeNextPointAfterInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013B2 RID: 5042 RVA: 0x0003FB92 File Offset: 0x0003DD92
+		// Token: 0x06001540 RID: 5440 RVA: 0x00043712 File Offset: 0x00041912
 		public IGazeNextPointAfterInteract_SetValue ToSetValue()
 		{
 			return new IGazeNextPointAfterInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000577 RID: 1399
-		// (get) Token: 0x060013B3 RID: 5043 RVA: 0x0003FBB4 File Offset: 0x0003DDB4
-		// (set) Token: 0x060013B4 RID: 5044 RVA: 0x0003FC15 File Offset: 0x0003DE15
+		// Token: 0x170005DB RID: 1499
+		// (get) Token: 0x06001541 RID: 5441 RVA: 0x00043734 File Offset: 0x00041934
+		// (set) Token: 0x06001542 RID: 5442 RVA: 0x00043795 File Offset: 0x00041995
 		[Nullable(2)]
 		public virtual IGazeCondition GazeCondition
 		{
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000578 RID: 1400
-		// (get) Token: 0x060013B5 RID: 5045 RVA: 0x0003FC2C File Offset: 0x0003DE2C
-		// (set) Token: 0x060013B6 RID: 5046 RVA: 0x0003FC8D File Offset: 0x0003DE8D
+		// Token: 0x170005DC RID: 1500
+		// (get) Token: 0x06001543 RID: 5443 RVA: 0x000437AC File Offset: 0x000419AC
+		// (set) Token: 0x06001544 RID: 5444 RVA: 0x0004380D File Offset: 0x00041A0D
 		public virtual IGazePerformance GazePerformance
 		{
 			get
@@ -123,24 +121,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FA4 RID: 4004
+		// Token: 0x040010BD RID: 4285
 		[Nullable(2)]
 		protected IGazeNextPointAfterInteract FbInstance;
 
-		// Token: 0x04000FA5 RID: 4005
+		// Token: 0x040010BE RID: 4286
 		[Nullable(2)]
 		protected IGazeNextPointAfterInteract_SetValue PocoInterface;
 
-		// Token: 0x04000FA6 RID: 4006
+		// Token: 0x040010BF RID: 4287
 		private IGazeCondition _GazeConditionCache;
 
-		// Token: 0x04000FA7 RID: 4007
+		// Token: 0x040010C0 RID: 4288
 		private bool _GazeConditionInited;
 
-		// Token: 0x04000FA8 RID: 4008
+		// Token: 0x040010C1 RID: 4289
 		private IGazePerformance _GazePerformanceCache;
 
-		// Token: 0x04000FA9 RID: 4009
+		// Token: 0x040010C2 RID: 4290
 		private bool _GazePerformanceInited;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056E1 RID: 22241
+	// Token: 0x020046B8 RID: 18104
 	public enum EKurotatoFormulaType
 	{
-		// Token: 0x0401DB64 RID: 121700
+		// Token: 0x040185FA RID: 99834
 		PropertyGet = 1,
-		// Token: 0x0401DB65 RID: 121701
+		// Token: 0x040185FB RID: 99835
 		DamageCalc,
-		// Token: 0x0401DB66 RID: 121702
+		// Token: 0x040185FC RID: 99836
 		DivideCalc,
-		// Token: 0x0401DB67 RID: 121703
+		// Token: 0x040185FD RID: 99837
 		MultiplyCalc,
-		// Token: 0x0401DB68 RID: 121704
+		// Token: 0x040185FE RID: 99838
 		MultiplyParamCalc,
-		// Token: 0x0401DB69 RID: 121705
+		// Token: 0x040185FF RID: 99839
 		MultiplyParamDivCalc
 	}
 }

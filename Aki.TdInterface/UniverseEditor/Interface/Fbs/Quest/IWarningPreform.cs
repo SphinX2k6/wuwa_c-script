@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200428C RID: 17036
+	// Token: 0x020046E8 RID: 18152
 	public struct IWarningPreform : IFlatbufferObject
 	{
-		// Token: 0x170078FD RID: 30973
-		// (get) Token: 0x060193CF RID: 103375 RVA: 0x003A03BE File Offset: 0x0039E5BE
+		// Token: 0x17007F2E RID: 32558
+		// (get) Token: 0x0601AB3B RID: 109371 RVA: 0x003CBA96 File Offset: 0x003C9C96
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060193D0 RID: 103376 RVA: 0x003A03CB File Offset: 0x0039E5CB
+		// Token: 0x0601AB3C RID: 109372 RVA: 0x003CBAA3 File Offset: 0x003C9CA3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060193D1 RID: 103377 RVA: 0x003A03D4 File Offset: 0x0039E5D4
+		// Token: 0x0601AB3D RID: 109373 RVA: 0x003CBAAC File Offset: 0x003C9CAC
 		public static IWarningPreform GetRootAsIWarningPreform(ByteBuffer _bb)
 		{
 			return IWarningPreform.GetRootAsIWarningPreform(_bb, default(IWarningPreform));
 		}
 
-		// Token: 0x060193D2 RID: 103378 RVA: 0x003A03F0 File Offset: 0x0039E5F0
+		// Token: 0x0601AB3E RID: 109374 RVA: 0x003CBAC8 File Offset: 0x003C9CC8
 		public static IWarningPreform GetRootAsIWarningPreform(ByteBuffer _bb, IWarningPreform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060193D3 RID: 103379 RVA: 0x003A040D File Offset: 0x0039E60D
+		// Token: 0x0601AB3F RID: 109375 RVA: 0x003CBAE5 File Offset: 0x003C9CE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060193D4 RID: 103380 RVA: 0x003A041C File Offset: 0x0039E61C
+		// Token: 0x0601AB40 RID: 109376 RVA: 0x003CBAF4 File Offset: 0x003C9CF4
 		public IWarningPreform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170078FE RID: 30974
-		// (get) Token: 0x060193D5 RID: 103381 RVA: 0x003A042C File Offset: 0x0039E62C
+		// Token: 0x17007F2F RID: 32559
+		// (get) Token: 0x0601AB41 RID: 109377 RVA: 0x003CBB04 File Offset: 0x003C9D04
 		public TWarningPreformConfig TypeType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060193D6 RID: 103382 RVA: 0x003A0468 File Offset: 0x0039E668
+		// Token: 0x0601AB42 RID: 109378 RVA: 0x003CBB40 File Offset: 0x003C9D40
 		public TTable? Type<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060193D7 RID: 103383 RVA: 0x003A04AC File Offset: 0x0039E6AC
+		// Token: 0x0601AB43 RID: 109379 RVA: 0x003CBB84 File Offset: 0x003C9D84
 		public IWarningPreformActivateStateRecordEntity TypeAsIWarningPreformActivateStateRecordEntity()
 		{
 			return this.Type<IWarningPreformActivateStateRecordEntity>().Value;
 		}
 
-		// Token: 0x060193D8 RID: 103384 RVA: 0x003A04C8 File Offset: 0x0039E6C8
+		// Token: 0x0601AB44 RID: 109380 RVA: 0x003CBBA0 File Offset: 0x003C9DA0
 		public IWarningPreformFadeInScreen TypeAsIWarningPreformFadeInScreen()
 		{
 			return this.Type<IWarningPreformFadeInScreen>().Value;
 		}
 
-		// Token: 0x060193D9 RID: 103385 RVA: 0x003A04E3 File Offset: 0x0039E6E3
+		// Token: 0x0601AB45 RID: 109381 RVA: 0x003CBBBB File Offset: 0x003C9DBB
 		public static Offset<IWarningPreform> CreateIWarningPreform(FlatBufferBuilder builder, TWarningPreformConfig Type_type = TWarningPreformConfig.NONE, int TypeOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IWarningPreform.EndIWarningPreform(builder);
 		}
 
-		// Token: 0x060193DA RID: 103386 RVA: 0x003A0500 File Offset: 0x0039E700
+		// Token: 0x0601AB46 RID: 109382 RVA: 0x003CBBD8 File Offset: 0x003C9DD8
 		public static void StartIWarningPreform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060193DB RID: 103387 RVA: 0x003A0509 File Offset: 0x0039E709
+		// Token: 0x0601AB47 RID: 109383 RVA: 0x003CBBE1 File Offset: 0x003C9DE1
 		public static void AddTypeType(FlatBufferBuilder builder, TWarningPreformConfig typeType)
 		{
 			builder.AddByte(0, (byte)typeType, 0);
 		}
 
-		// Token: 0x060193DC RID: 103388 RVA: 0x003A0514 File Offset: 0x0039E714
+		// Token: 0x0601AB48 RID: 109384 RVA: 0x003CBBEC File Offset: 0x003C9DEC
 		public static void AddType(FlatBufferBuilder builder, int typeOffset)
 		{
 			builder.AddOffset(1, typeOffset, 0);
 		}
 
-		// Token: 0x060193DD RID: 103389 RVA: 0x003A051F File Offset: 0x0039E71F
+		// Token: 0x0601AB49 RID: 109385 RVA: 0x003CBBF7 File Offset: 0x003C9DF7
 		public static Offset<IWarningPreform> EndIWarningPreform(FlatBufferBuilder builder)
 		{
 			return new Offset<IWarningPreform>(builder.EndTable());
 		}
 
-		// Token: 0x060193DE RID: 103390 RVA: 0x003A052C File Offset: 0x0039E72C
+		// Token: 0x0601AB4A RID: 109386 RVA: 0x003CBC04 File Offset: 0x003C9E04
 		public IWarningPreformT UnPack()
 		{
 			IWarningPreformT warningPreformT = new IWarningPreformT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return warningPreformT;
 		}
 
-		// Token: 0x060193DF RID: 103391 RVA: 0x003A0548 File Offset: 0x0039E748
+		// Token: 0x0601AB4B RID: 109387 RVA: 0x003CBC20 File Offset: 0x003C9E20
 		public void UnPackTo(IWarningPreformT _o)
 		{
 			_o.Type = new TWarningPreformConfigUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.Type.Value = ((this.Type<IWarningPreformFadeInScreen>() != null) ? this.Type<IWarningPreformFadeInScreen>().Value.UnPack() : null);
 		}
 
-		// Token: 0x060193E0 RID: 103392 RVA: 0x003A05EC File Offset: 0x0039E7EC
+		// Token: 0x0601AB4C RID: 109388 RVA: 0x003CBCC4 File Offset: 0x003C9EC4
 		public static Offset<IWarningPreform> Pack(FlatBufferBuilder builder, IWarningPreformT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IWarningPreform.CreateIWarningPreform(builder, type_type, typeOffset);
 		}
 
-		// Token: 0x0400BF2D RID: 48941
+		// Token: 0x0400C93A RID: 51514
 		private Table __p;
 	}
 }

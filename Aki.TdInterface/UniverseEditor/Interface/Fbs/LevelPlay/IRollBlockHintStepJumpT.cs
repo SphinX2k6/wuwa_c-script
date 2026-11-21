@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004588 RID: 17800
+	// Token: 0x020049F0 RID: 18928
 	public class IRollBlockHintStepJumpT
 	{
-		// Token: 0x17007E78 RID: 32376
-		// (get) Token: 0x0601AE35 RID: 110133 RVA: 0x003D6556 File Offset: 0x003D4756
-		// (set) Token: 0x0601AE36 RID: 110134 RVA: 0x003D655E File Offset: 0x003D475E
+		// Token: 0x170084B9 RID: 33977
+		// (get) Token: 0x0601C60A RID: 116234 RVA: 0x004027F2 File Offset: 0x004009F2
+		// (set) Token: 0x0601C60B RID: 116235 RVA: 0x004027FA File Offset: 0x004009FA
 		public ERollBlockHintStepType Type { get; set; }
 
-		// Token: 0x17007E79 RID: 32377
-		// (get) Token: 0x0601AE37 RID: 110135 RVA: 0x003D6567 File Offset: 0x003D4767
-		// (set) Token: 0x0601AE38 RID: 110136 RVA: 0x003D656F File Offset: 0x003D476F
+		// Token: 0x170084BA RID: 33978
+		// (get) Token: 0x0601C60C RID: 116236 RVA: 0x00402803 File Offset: 0x00400A03
+		// (set) Token: 0x0601C60D RID: 116237 RVA: 0x0040280B File Offset: 0x00400A0B
 		public int BlockId { get; set; }
 
-		// Token: 0x17007E7A RID: 32378
-		// (get) Token: 0x0601AE39 RID: 110137 RVA: 0x003D6578 File Offset: 0x003D4778
-		// (set) Token: 0x0601AE3A RID: 110138 RVA: 0x003D6580 File Offset: 0x003D4780
+		// Token: 0x170084BB RID: 33979
+		// (get) Token: 0x0601C60E RID: 116238 RVA: 0x00402814 File Offset: 0x00400A14
+		// (set) Token: 0x0601C60F RID: 116239 RVA: 0x0040281C File Offset: 0x00400A1C
 		public ERollBlockLayType Direction { get; set; }
 
-		// Token: 0x0601AE3B RID: 110139 RVA: 0x003D6589 File Offset: 0x003D4789
+		// Token: 0x0601C610 RID: 116240 RVA: 0x00402825 File Offset: 0x00400A25
 		public IRollBlockHintStepJumpT()
 		{
 			this.Type = ERollBlockHintStepType.Roll;

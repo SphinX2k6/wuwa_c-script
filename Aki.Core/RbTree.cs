@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 
-// Token: 0x0200005D RID: 93
+// Token: 0x0200005F RID: 95
 [NullableContext(1)]
 [Nullable(0)]
 public class RbTree<[Nullable(2)] T>
 {
-	// Token: 0x060002B3 RID: 691 RVA: 0x0000EAFB File Offset: 0x0000CCFB
+	// Token: 0x060002EE RID: 750 RVA: 0x0000F8E3 File Offset: 0x0000DAE3
 	public RbTree(Comparison<T> compare)
 	{
 		this.Compare = compare;
 	}
 
-	// Token: 0x060002B4 RID: 692 RVA: 0x0000EB20 File Offset: 0x0000CD20
+	// Token: 0x060002EF RID: 751 RVA: 0x0000F908 File Offset: 0x0000DB08
 	public void Clear()
 	{
 		foreach (KeyValuePair<T, RbNode<T>> keyValuePair in this.ItemNodeMap)
@@ -29,8 +29,8 @@ public class RbTree<[Nullable(2)] T>
 		this.ExtremelyLeftInternal = null;
 	}
 
-	// Token: 0x17000061 RID: 97
-	// (get) Token: 0x060002B5 RID: 693 RVA: 0x0000EBA8 File Offset: 0x0000CDA8
+	// Token: 0x17000068 RID: 104
+	// (get) Token: 0x060002F0 RID: 752 RVA: 0x0000F990 File Offset: 0x0000DB90
 	public bool IsEmpty
 	{
 		get
@@ -39,8 +39,8 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x17000062 RID: 98
-	// (get) Token: 0x060002B6 RID: 694 RVA: 0x0000EBB3 File Offset: 0x0000CDB3
+	// Token: 0x17000069 RID: 105
+	// (get) Token: 0x060002F1 RID: 753 RVA: 0x0000F99B File Offset: 0x0000DB9B
 	public int Size
 	{
 		get
@@ -49,8 +49,8 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x17000063 RID: 99
-	// (get) Token: 0x060002B7 RID: 695 RVA: 0x0000EBBC File Offset: 0x0000CDBC
+	// Token: 0x1700006A RID: 106
+	// (get) Token: 0x060002F2 RID: 754 RVA: 0x0000F9A4 File Offset: 0x0000DBA4
 	[Nullable(2)]
 	public T ExtremelyLeft
 	{
@@ -65,13 +65,13 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002B8 RID: 696 RVA: 0x0000EBE6 File Offset: 0x0000CDE6
+	// Token: 0x060002F3 RID: 755 RVA: 0x0000F9CE File Offset: 0x0000DBCE
 	public void RemoveExtremelyLeft()
 	{
 		this.RemoveInternal(this.ExtremelyLeftInternal);
 	}
 
-	// Token: 0x060002B9 RID: 697 RVA: 0x0000EBF4 File Offset: 0x0000CDF4
+	// Token: 0x060002F4 RID: 756 RVA: 0x0000F9DC File Offset: 0x0000DBDC
 	public void Insert(T item)
 	{
 		if (this.ItemNodeMap.ContainsKey(item))
@@ -99,7 +99,7 @@ public class RbTree<[Nullable(2)] T>
 		this.InsertInternal(rbNode);
 	}
 
-	// Token: 0x060002BA RID: 698 RVA: 0x0000EC9C File Offset: 0x0000CE9C
+	// Token: 0x060002F5 RID: 757 RVA: 0x0000FA84 File Offset: 0x0000DC84
 	public void Remove(T item)
 	{
 		RbNode<T> deleteNode;
@@ -116,7 +116,7 @@ public class RbTree<[Nullable(2)] T>
 		this.RemoveInternal(deleteNode);
 	}
 
-	// Token: 0x060002BB RID: 699 RVA: 0x0000ECEC File Offset: 0x0000CEEC
+	// Token: 0x060002F6 RID: 758 RVA: 0x0000FAD4 File Offset: 0x0000DCD4
 	private void InsertInternal(RbNode<T> newNode)
 	{
 		this.Count++;
@@ -159,7 +159,7 @@ public class RbTree<[Nullable(2)] T>
 		this.FindRootAndExtremelyLeft();
 	}
 
-	// Token: 0x060002BC RID: 700 RVA: 0x0000EDAC File Offset: 0x0000CFAC
+	// Token: 0x060002F7 RID: 759 RVA: 0x0000FB94 File Offset: 0x0000DD94
 	private void RemoveInternal(RbNode<T> deleteNode)
 	{
 		this.Count--;
@@ -230,7 +230,7 @@ public class RbTree<[Nullable(2)] T>
 		this.FindRootAndExtremelyLeft();
 	}
 
-	// Token: 0x060002BD RID: 701 RVA: 0x0000EF24 File Offset: 0x0000D124
+	// Token: 0x060002F8 RID: 760 RVA: 0x0000FD0C File Offset: 0x0000DF0C
 	private void FixUp(RbNode<T> node)
 	{
 		this.Root.IsRed = false;
@@ -302,7 +302,7 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002BE RID: 702 RVA: 0x0000F078 File Offset: 0x0000D278
+	// Token: 0x060002F9 RID: 761 RVA: 0x0000FE60 File Offset: 0x0000E060
 	private void AfterRemove(RbNode<T> node, bool isLeftInput)
 	{
 		bool flag = isLeftInput;
@@ -441,7 +441,7 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002BF RID: 703 RVA: 0x0000F38C File Offset: 0x0000D58C
+	// Token: 0x060002FA RID: 762 RVA: 0x00010174 File Offset: 0x0000E374
 	private void FindRootAndExtremelyLeft()
 	{
 		while (this.Root.Parent != null)
@@ -464,7 +464,7 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002C0 RID: 704 RVA: 0x0000F418 File Offset: 0x0000D618
+	// Token: 0x060002FB RID: 763 RVA: 0x00010200 File Offset: 0x0000E400
 	private void RotateL(RbNode<T> node)
 	{
 		RbNode<T> parent = node.Parent;
@@ -490,7 +490,7 @@ public class RbTree<[Nullable(2)] T>
 		parent.Right = left;
 	}
 
-	// Token: 0x060002C1 RID: 705 RVA: 0x0000F47C File Offset: 0x0000D67C
+	// Token: 0x060002FC RID: 764 RVA: 0x00010264 File Offset: 0x0000E464
 	private void RotateR(RbNode<T> node)
 	{
 		RbNode<T> parent = node.Parent;
@@ -516,7 +516,7 @@ public class RbTree<[Nullable(2)] T>
 		parent.Right = right;
 	}
 
-	// Token: 0x060002C2 RID: 706 RVA: 0x0000F4E0 File Offset: 0x0000D6E0
+	// Token: 0x060002FD RID: 765 RVA: 0x000102C8 File Offset: 0x0000E4C8
 	public void ForEach(Func<T, bool> callback)
 	{
 		if (this.Root == null)
@@ -561,7 +561,7 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002C3 RID: 707 RVA: 0x0000F56C File Offset: 0x0000D76C
+	// Token: 0x060002FE RID: 766 RVA: 0x00010354 File Offset: 0x0000E554
 	public void ForEachReverse(Func<T, bool> callback)
 	{
 		if (this.Root == null)
@@ -610,7 +610,7 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002C4 RID: 708 RVA: 0x0000F60C File Offset: 0x0000D80C
+	// Token: 0x060002FF RID: 767 RVA: 0x000103F4 File Offset: 0x0000E5F4
 	public void ForEachFrom(T from, Func<T, bool> callback)
 	{
 		if (this.Root == null)
@@ -665,7 +665,7 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002C5 RID: 709 RVA: 0x0000F6D0 File Offset: 0x0000D8D0
+	// Token: 0x06000300 RID: 768 RVA: 0x000104B8 File Offset: 0x0000E6B8
 	public bool CheckRbTree()
 	{
 		if (this.Root == null)
@@ -728,7 +728,7 @@ public class RbTree<[Nullable(2)] T>
 		return true;
 	}
 
-	// Token: 0x060002C6 RID: 710 RVA: 0x0000F840 File Offset: 0x0000DA40
+	// Token: 0x06000301 RID: 769 RVA: 0x00010628 File Offset: 0x0000E828
 	public void PrintRbTree()
 	{
 		if (this.Root == null)
@@ -780,16 +780,16 @@ public class RbTree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x040001F8 RID: 504
+	// Token: 0x0400020E RID: 526
 	private readonly List<RbNode<T>> NodePool = new List<RbNode<T>>();
 
-	// Token: 0x040001F9 RID: 505
+	// Token: 0x0400020F RID: 527
 	private readonly Dictionary<T, RbNode<T>> ItemNodeMap = new Dictionary<T, RbNode<T>>();
 
-	// Token: 0x040001FA RID: 506
+	// Token: 0x04000210 RID: 528
 	private int Count;
 
-	// Token: 0x040001FB RID: 507
+	// Token: 0x04000211 RID: 529
 	[Nullable(new byte[]
 	{
 		2,
@@ -797,7 +797,7 @@ public class RbTree<[Nullable(2)] T>
 	})]
 	private RbNode<T> Root;
 
-	// Token: 0x040001FC RID: 508
+	// Token: 0x04000212 RID: 530
 	[Nullable(new byte[]
 	{
 		2,
@@ -805,6 +805,6 @@ public class RbTree<[Nullable(2)] T>
 	})]
 	private RbNode<T> ExtremelyLeftInternal;
 
-	// Token: 0x040001FD RID: 509
+	// Token: 0x04000213 RID: 531
 	private readonly Comparison<T> Compare;
 }

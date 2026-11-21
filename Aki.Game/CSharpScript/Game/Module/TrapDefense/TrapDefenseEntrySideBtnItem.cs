@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A8E RID: 19086
+	// Token: 0x02003A36 RID: 14902
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseEntrySideBtnItem : UiPanelBase
 	{
-		// Token: 0x06031788 RID: 202632 RVA: 0x00B778EC File Offset: 0x00B75AEC
+		// Token: 0x06026518 RID: 156952 RVA: 0x00ABB8A0 File Offset: 0x00AB9AA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031789 RID: 202633 RVA: 0x00B779D4 File Offset: 0x00B75BD4
+		// Token: 0x06026519 RID: 156953 RVA: 0x00ABB988 File Offset: 0x00AB9B88
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0603178A RID: 202634 RVA: 0x00B779DC File Offset: 0x00B75BDC
+		// Token: 0x0602651A RID: 156954 RVA: 0x00ABB990 File Offset: 0x00AB9B90
 		private void ButtonClick()
 		{
 			if (this.ButtonFunction != null)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603178B RID: 202635 RVA: 0x00B779F4 File Offset: 0x00B75BF4
+		// Token: 0x0602651B RID: 156955 RVA: 0x00ABB9A8 File Offset: 0x00AB9BA8
 		public void SetText(string text)
 		{
 			UUIText text2 = base.GetText(1);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603178C RID: 202636 RVA: 0x00B77A14 File Offset: 0x00B75C14
+		// Token: 0x0602651C RID: 156956 RVA: 0x00ABB9C8 File Offset: 0x00AB9BC8
 		public void SetProgressText(string text)
 		{
 			UUIText text2 = base.GetText(3);
@@ -72,31 +72,31 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603178D RID: 202637 RVA: 0x00B77A34 File Offset: 0x00B75C34
+		// Token: 0x0602651D RID: 156957 RVA: 0x00ABB9E8 File Offset: 0x00AB9BE8
 		public void SetProgressTextWithLabel(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textId, args);
 		}
 
-		// Token: 0x0603178E RID: 202638 RVA: 0x00B77A49 File Offset: 0x00B75C49
+		// Token: 0x0602651E RID: 156958 RVA: 0x00ABB9FD File Offset: 0x00AB9BFD
 		public void SetLocalTextNew(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x0603178F RID: 202639 RVA: 0x00B77A5E File Offset: 0x00B75C5E
+		// Token: 0x0602651F RID: 156959 RVA: 0x00ABBA12 File Offset: 0x00AB9C12
 		public void TrySetLocalTextNew(string textId, params object[] args)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x06031790 RID: 202640 RVA: 0x00B77A73 File Offset: 0x00B75C73
+		// Token: 0x06026520 RID: 156960 RVA: 0x00ABBA27 File Offset: 0x00AB9C27
 		public void SetShowText(string text)
 		{
 			base.GetText(1).ShowTextNew(text);
 		}
 
-		// Token: 0x06031791 RID: 202641 RVA: 0x00B77A82 File Offset: 0x00B75C82
+		// Token: 0x06026521 RID: 156961 RVA: 0x00ABBA36 File Offset: 0x00AB9C36
 		public void SetEnableClick(bool state)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -107,19 +107,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			button.SetSelfInteractive(state);
 		}
 
-		// Token: 0x06031792 RID: 202642 RVA: 0x00B77A96 File Offset: 0x00B75C96
+		// Token: 0x06026522 RID: 156962 RVA: 0x00ABBA4A File Offset: 0x00AB9C4A
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x06031793 RID: 202643 RVA: 0x00B77A9F File Offset: 0x00B75C9F
+		// Token: 0x06026523 RID: 156963 RVA: 0x00ABBA53 File Offset: 0x00AB9C53
 		public void SetRedDotVisible(bool bVisible)
 		{
 			base.GetItem(2).SetUIActive(bVisible);
 		}
 
-		// Token: 0x06031794 RID: 202644 RVA: 0x00B77AB0 File Offset: 0x00B75CB0
+		// Token: 0x06026524 RID: 156964 RVA: 0x00ABBA64 File Offset: 0x00AB9C64
 		public void BindRedDot(ERedDotName redDotName, int uId = 0)
 		{
 			UUIItem item = base.GetItem(2);
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031795 RID: 202645 RVA: 0x00B77AF6 File Offset: 0x00B75CF6
+		// Token: 0x06026525 RID: 156965 RVA: 0x00ABBAAA File Offset: 0x00AB9CAA
 		public void UnBindRedDot()
 		{
 			if (this.RedDotName != null)
@@ -145,27 +145,27 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A73F RID: 108351
+		// Token: 0x04015091 RID: 86161
 		private ERedDotName? RedDotName;
 
-		// Token: 0x0401A740 RID: 108352
+		// Token: 0x04015092 RID: 86162
 		[Nullable(2)]
 		private Action ButtonFunction;
 
-		// Token: 0x0200ABDF RID: 43999
+		// Token: 0x020095FF RID: 38399
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040343B2 RID: 213938
+			// Token: 0x0402ED63 RID: 191843
 			public const int Button = 0;
 
-			// Token: 0x040343B3 RID: 213939
+			// Token: 0x0402ED64 RID: 191844
 			public const int ButtonText = 1;
 
-			// Token: 0x040343B4 RID: 213940
+			// Token: 0x0402ED65 RID: 191845
 			public const int RedDot = 2;
 
-			// Token: 0x040343B5 RID: 213941
+			// Token: 0x0402ED66 RID: 191846
 			public const int TextProgress = 3;
 		}
 	}

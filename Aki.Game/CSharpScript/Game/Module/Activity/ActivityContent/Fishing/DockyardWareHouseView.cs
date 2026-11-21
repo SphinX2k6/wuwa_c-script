@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065D3 RID: 26067
+	// Token: 0x02005551 RID: 21841
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardWareHouseView : UiTickViewBase
 	{
-		// Token: 0x060415F0 RID: 267760 RVA: 0x00FD7670 File Offset: 0x00FD5870
+		// Token: 0x060362B5 RID: 221877 RVA: 0x00F1E6B0 File Offset: 0x00F1C8B0
 		public DockyardWareHouseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060415F1 RID: 267761 RVA: 0x00FD7680 File Offset: 0x00FD5880
+		// Token: 0x060362B6 RID: 221878 RVA: 0x00F1E6C0 File Offset: 0x00F1C8C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.InitViewModel();
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060415F2 RID: 267762 RVA: 0x00FD7773 File Offset: 0x00FD5973
+		// Token: 0x060362B7 RID: 221879 RVA: 0x00F1E7B3 File Offset: 0x00F1C9B3
 		private void InitViewModel()
 		{
 			this.Vm = (this.OpenParam as DockyardWareHouseViewModelBase);
 			this.Vm.RegisterView(this);
 		}
 
-		// Token: 0x060415F3 RID: 267763 RVA: 0x00FD7794 File Offset: 0x00FD5994
+		// Token: 0x060362B8 RID: 221880 RVA: 0x00F1E7D4 File Offset: 0x00F1C9D4
 		private UniTask InitFishingCurrencyItem()
 		{
 			DockyardWareHouseView.<InitFishingCurrencyItem>d__15 <InitFishingCurrencyItem>d__;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitFishingCurrencyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415F4 RID: 267764 RVA: 0x00FD77D8 File Offset: 0x00FD59D8
+		// Token: 0x060362B9 RID: 221881 RVA: 0x00F1E818 File Offset: 0x00F1CA18
 		private UniTask InitCaption()
 		{
 			DockyardWareHouseView.<InitCaption>d__16 <InitCaption>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415F5 RID: 267765 RVA: 0x00FD781C File Offset: 0x00FD5A1C
+		// Token: 0x060362BA RID: 221882 RVA: 0x00F1E85C File Offset: 0x00F1CA5C
 		private UniTask InitBackpackPanel()
 		{
 			DockyardWareHouseView.<InitBackpackPanel>d__17 <InitBackpackPanel>d__;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitBackpackPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415F6 RID: 267766 RVA: 0x00FD7860 File Offset: 0x00FD5A60
+		// Token: 0x060362BB RID: 221883 RVA: 0x00F1E8A0 File Offset: 0x00F1CAA0
 		private UniTask InitLoopScroll()
 		{
 			DockyardWareHouseView.<InitLoopScroll>d__18 <InitLoopScroll>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitLoopScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415F7 RID: 267767 RVA: 0x00FD78A4 File Offset: 0x00FD5AA4
+		// Token: 0x060362BC RID: 221884 RVA: 0x00F1E8E4 File Offset: 0x00F1CAE4
 		private UniTask InitTipsPanel()
 		{
 			DockyardWareHouseView.<InitTipsPanel>d__19 <InitTipsPanel>d__;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTipsPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415F8 RID: 267768 RVA: 0x00FD78E7 File Offset: 0x00FD5AE7
+		// Token: 0x060362BD RID: 221885 RVA: 0x00F1E927 File Offset: 0x00F1CB27
 		private IDockyardLeftTipsInterface GetLeftInfoPanel()
 		{
 			if (this.QteSkipPanel != null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.QuestPanel;
 		}
 
-		// Token: 0x060415F9 RID: 267769 RVA: 0x00FD7900 File Offset: 0x00FD5B00
+		// Token: 0x060362BE RID: 221886 RVA: 0x00F1E940 File Offset: 0x00F1CB40
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DockyardWareHouseView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415FA RID: 267770 RVA: 0x00FD7943 File Offset: 0x00FD5B43
+		// Token: 0x060362BF RID: 221887 RVA: 0x00F1E983 File Offset: 0x00F1CB83
 		protected override void OnBeforeShow()
 		{
 			DockyardQuestInfoPanel questPanel = this.QuestPanel;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			questPanel.Refresh();
 		}
 
-		// Token: 0x060415FB RID: 267771 RVA: 0x00FD7958 File Offset: 0x00FD5B58
+		// Token: 0x060362C0 RID: 221888 RVA: 0x00F1E998 File Offset: 0x00F1CB98
 		protected override void OnTick(float delta)
 		{
 			if (this.TipDirty)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060415FC RID: 267772 RVA: 0x00FD79DF File Offset: 0x00FD5BDF
+		// Token: 0x060362C1 RID: 221889 RVA: 0x00F1EA1F File Offset: 0x00F1CC1F
 		public void ShowTipsPanel(int id)
 		{
 			this.TipDirty = true;
@@ -169,20 +169,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.CacheId = id;
 		}
 
-		// Token: 0x060415FD RID: 267773 RVA: 0x00FD79F6 File Offset: 0x00FD5BF6
+		// Token: 0x060362C2 RID: 221890 RVA: 0x00F1EA36 File Offset: 0x00F1CC36
 		public void HideTipsPanel()
 		{
 			this.TipDirty = true;
 			this.LeftTipsType = 1;
 		}
 
-		// Token: 0x060415FE RID: 267774 RVA: 0x00FD7A06 File Offset: 0x00FD5C06
+		// Token: 0x060362C3 RID: 221891 RVA: 0x00F1EA46 File Offset: 0x00F1CC46
 		public UUIItem GetPanelParentItem()
 		{
 			return base.GetItem(4);
 		}
 
-		// Token: 0x060415FF RID: 267775 RVA: 0x00FD7A10 File Offset: 0x00FD5C10
+		// Token: 0x060362C4 RID: 221892 RVA: 0x00F1EA50 File Offset: 0x00F1CC50
 		public void NotifyQuicklySellActive(bool isActive)
 		{
 			IDockyardLeftTipsInterface leftInfoPanel = this.GetLeftInfoPanel();
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			dockyardLeftTipsInterface2.SetPanelVisible(true);
 		}
 
-		// Token: 0x06041600 RID: 267776 RVA: 0x00FD7A70 File Offset: 0x00FD5C70
+		// Token: 0x060362C5 RID: 221893 RVA: 0x00F1EAB0 File Offset: 0x00F1CCB0
 		public UniTask CreateQteSkipPanel()
 		{
 			DockyardWareHouseView.<CreateQteSkipPanel>d__28 <CreateQteSkipPanel>d__;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <CreateQteSkipPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041601 RID: 267777 RVA: 0x00FD7AB4 File Offset: 0x00FD5CB4
+		// Token: 0x060362C6 RID: 221894 RVA: 0x00F1EAF4 File Offset: 0x00F1CCF4
 		public UniTask CreateQuestPanel(bool withExitButton)
 		{
 			DockyardWareHouseView.<CreateQuestPanel>d__29 <CreateQuestPanel>d__;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <CreateQuestPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041602 RID: 267778 RVA: 0x00FD7AFF File Offset: 0x00FD5CFF
+		// Token: 0x060362C7 RID: 221895 RVA: 0x00F1EB3F File Offset: 0x00F1CD3F
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -243,14 +243,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.ListPanel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x06041603 RID: 267779 RVA: 0x00FD7B0D File Offset: 0x00FD5D0D
+		// Token: 0x060362C8 RID: 221896 RVA: 0x00F1EB4D File Offset: 0x00F1CD4D
 		[CompilerGenerated]
 		private void <CreateQteSkipPanel>g__continueFunc|28_0()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06041604 RID: 267780 RVA: 0x00FD7B16 File Offset: 0x00FD5D16
+		// Token: 0x060362C9 RID: 221897 RVA: 0x00F1EB56 File Offset: 0x00F1CD56
 		[CompilerGenerated]
 		private void <CreateQteSkipPanel>g__exitFunc|28_1()
 		{
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x06041606 RID: 267782 RVA: 0x00FD7B3A File Offset: 0x00FD5D3A
+		// Token: 0x060362CB RID: 221899 RVA: 0x00F1EB7A File Offset: 0x00F1CD7A
 		[CompilerGenerated]
 		private void <CreateQuestPanel>g__exitFunc|29_0()
 		{
@@ -276,69 +276,69 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			});
 		}
 
-		// Token: 0x04022025 RID: 139301
+		// Token: 0x0401C956 RID: 117078
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022026 RID: 139302
+		// Token: 0x0401C957 RID: 117079
 		private DockyardBackpackPanel BackpackPanel;
 
-		// Token: 0x04022027 RID: 139303
+		// Token: 0x0401C958 RID: 117080
 		private DockyardItemListPanel ListPanel;
 
-		// Token: 0x04022028 RID: 139304
+		// Token: 0x0401C959 RID: 117081
 		private DockyardTipsPanel TipsPanel;
 
-		// Token: 0x04022029 RID: 139305
+		// Token: 0x0401C95A RID: 117082
 		[Nullable(2)]
 		private DockyardQteSkipPanel QteSkipPanel;
 
-		// Token: 0x0402202A RID: 139306
+		// Token: 0x0401C95B RID: 117083
 		[Nullable(2)]
 		private DockyardQuestInfoPanel QuestPanel;
 
-		// Token: 0x0402202B RID: 139307
+		// Token: 0x0401C95C RID: 117084
 		private DockyardWareHouseViewModelBase Vm;
 
-		// Token: 0x0402202C RID: 139308
+		// Token: 0x0401C95D RID: 117085
 		private int LeftTipsType = 1;
 
-		// Token: 0x0402202D RID: 139309
+		// Token: 0x0401C95E RID: 117086
 		private bool TipDirty;
 
-		// Token: 0x0402202E RID: 139310
+		// Token: 0x0401C95F RID: 117087
 		private int CacheId;
 
-		// Token: 0x0200C7F8 RID: 51192
+		// Token: 0x0200B1DB RID: 45531
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C646 RID: 247366
+			// Token: 0x04036F94 RID: 225172
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C647 RID: 247367
+			// Token: 0x04036F95 RID: 225173
 			public const int BackpackItem = 1;
 
-			// Token: 0x0403C648 RID: 247368
+			// Token: 0x04036F96 RID: 225174
 			public const int ListItem = 2;
 
-			// Token: 0x0403C649 RID: 247369
+			// Token: 0x04036F97 RID: 225175
 			public const int TipsItem = 3;
 
-			// Token: 0x0403C64A RID: 247370
+			// Token: 0x04036F98 RID: 225176
 			public const int ParentItem = 4;
 
-			// Token: 0x0403C64B RID: 247371
+			// Token: 0x04036F99 RID: 225177
 			public const int PanelRootItem = 5;
 		}
 
-		// Token: 0x0200C7F9 RID: 51193
+		// Token: 0x0200B1DC RID: 45532
 		[NullableContext(0)]
 		private class ELeftTipsType
 		{
-			// Token: 0x0403C64C RID: 247372
+			// Token: 0x04036F9A RID: 225178
 			public const int ItemTips = 0;
 
-			// Token: 0x0403C64D RID: 247373
+			// Token: 0x04036F9B RID: 225179
 			public const int InfoTips = 1;
 		}
 	}

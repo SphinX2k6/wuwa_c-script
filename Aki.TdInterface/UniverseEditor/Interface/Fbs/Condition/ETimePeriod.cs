@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200495C RID: 18780
+	// Token: 0x02004E13 RID: 19987
 	public enum ETimePeriod : byte
 	{
-		// Token: 0x0400D13A RID: 53562
+		// Token: 0x0400DC01 RID: 56321
 		DayTime,
-		// Token: 0x0400D13B RID: 53563
+		// Token: 0x0400DC02 RID: 56322
 		Night
 	}
 }

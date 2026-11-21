@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C07 RID: 27655
+	// Token: 0x0200736B RID: 29547
 	public class IOpenGreatSwordChallengeResultT
 	{
-		// Token: 0x1700CDAC RID: 52652
-		// (get) Token: 0x060309FD RID: 199165 RVA: 0x00699B79 File Offset: 0x00697D79
-		// (set) Token: 0x060309FE RID: 199166 RVA: 0x00699B81 File Offset: 0x00697D81
+		// Token: 0x1700D8BA RID: 55482
+		// (get) Token: 0x0603391D RID: 211229 RVA: 0x006F350D File Offset: 0x006F170D
+		// (set) Token: 0x0603391E RID: 211230 RVA: 0x006F3515 File Offset: 0x006F1715
 		public ESystemType Type { get; set; }
 
-		// Token: 0x1700CDAD RID: 52653
-		// (get) Token: 0x060309FF RID: 199167 RVA: 0x00699B8A File Offset: 0x00697D8A
-		// (set) Token: 0x06030A00 RID: 199168 RVA: 0x00699B92 File Offset: 0x00697D92
+		// Token: 0x1700D8BB RID: 55483
+		// (get) Token: 0x0603391F RID: 211231 RVA: 0x006F351E File Offset: 0x006F171E
+		// (set) Token: 0x06033920 RID: 211232 RVA: 0x006F3526 File Offset: 0x006F1726
 		public int Id { get; set; }
 
-		// Token: 0x1700CDAE RID: 52654
-		// (get) Token: 0x06030A01 RID: 199169 RVA: 0x00699B9B File Offset: 0x00697D9B
-		// (set) Token: 0x06030A02 RID: 199170 RVA: 0x00699BA3 File Offset: 0x00697DA3
+		// Token: 0x1700D8BC RID: 55484
+		// (get) Token: 0x06033921 RID: 211233 RVA: 0x006F352F File Offset: 0x006F172F
+		// (set) Token: 0x06033922 RID: 211234 RVA: 0x006F3537 File Offset: 0x006F1737
 		public TVarRefUnion ReturnVar { get; set; }
 
-		// Token: 0x06030A03 RID: 199171 RVA: 0x00699BAC File Offset: 0x00697DAC
+		// Token: 0x06033923 RID: 211235 RVA: 0x006F3540 File Offset: 0x006F1740
 		public IOpenGreatSwordChallengeResultT()
 		{
 			this.Type = ESystemType.Shop;

@@ -8,13 +8,13 @@ using CSharpScript.Launcher.Platform.PlatformSdk;
 using CSharpScript.Launcher.Server;
 using UnrealEngine;
 
-// Token: 0x020020A4 RID: 8356
+// Token: 0x0200157B RID: 5499
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class LoginServerModel : ModelBase
 {
-	// Token: 0x060107AB RID: 67499 RVA: 0x00405EAC File Offset: 0x004040AC
+	// Token: 0x0600DC19 RID: 56345 RVA: 0x004124C0 File Offset: 0x004106C0
 	public string GetCurrentSelectPayServerName()
 	{
 		string text = BaseConfigController.Instance.GetPublicValue("SdkArea");
@@ -33,7 +33,7 @@ public class LoginServerModel : ModelBase
 		return text;
 	}
 
-	// Token: 0x060107AC RID: 67500 RVA: 0x00405F04 File Offset: 0x00404104
+	// Token: 0x0600DC1A RID: 56346 RVA: 0x00412518 File Offset: 0x00410718
 	public string GetCurrentSelectServerIp()
 	{
 		if (!KuroSdkController.Instance.CanUseSdk() && !PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -60,7 +60,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107AD RID: 67501 RVA: 0x00405FA4 File Offset: 0x004041A4
+	// Token: 0x0600DC1B RID: 56347 RVA: 0x004125B8 File Offset: 0x004107B8
 	public string GetCurrentSelectServerRegion()
 	{
 		if (LoginController.Instance.IsGlobalSdkLoginMode())
@@ -82,7 +82,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107AE RID: 67502 RVA: 0x00405FFC File Offset: 0x004041FC
+	// Token: 0x0600DC1C RID: 56348 RVA: 0x00412610 File Offset: 0x00410810
 	public List<string> GetCurrentServerLoginUrl()
 	{
 		if (LoginController.Instance.IsGlobalSdkLoginMode())
@@ -105,7 +105,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107AF RID: 67503 RVA: 0x00406070 File Offset: 0x00404270
+	// Token: 0x0600DC1D RID: 56349 RVA: 0x00412684 File Offset: 0x00410884
 	public string GetCurrentServerLoginUrlByIndex(int index)
 	{
 		List<string> currentServerLoginUrl = this.GetCurrentServerLoginUrl();
@@ -121,7 +121,7 @@ public class LoginServerModel : ModelBase
 		return currentServerLoginUrl[index];
 	}
 
-	// Token: 0x060107B0 RID: 67504 RVA: 0x004060CC File Offset: 0x004042CC
+	// Token: 0x0600DC1E RID: 56350 RVA: 0x004126E0 File Offset: 0x004108E0
 	public string GetCurrentSelectServerName()
 	{
 		if (LoginController.Instance.IsGlobalSdkLoginMode())
@@ -144,7 +144,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107B1 RID: 67505 RVA: 0x00406140 File Offset: 0x00404340
+	// Token: 0x0600DC1F RID: 56351 RVA: 0x00412754 File Offset: 0x00410954
 	public string GetCurrentLoginServerId()
 	{
 		if (!KuroSdkController.Instance.CanUseSdk() && !PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -171,7 +171,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107B2 RID: 67506 RVA: 0x004061E0 File Offset: 0x004043E0
+	// Token: 0x0600DC20 RID: 56352 RVA: 0x004127F4 File Offset: 0x004109F4
 	public List<ILoginServersData> GetLoginServersByClientRegion()
 	{
 		if (this.LoginServerData != null)
@@ -232,7 +232,7 @@ public class LoginServerModel : ModelBase
 		return this.LoginServerData;
 	}
 
-	// Token: 0x060107B3 RID: 67507 RVA: 0x004063E8 File Offset: 0x004045E8
+	// Token: 0x0600DC21 RID: 56353 RVA: 0x004129FC File Offset: 0x00410BFC
 	public void SelectCurrentSelectServerByServerId(string serverIp, string serverId)
 	{
 		LoginModel.Instance.SetServerIp(serverIp, 1);
@@ -258,14 +258,14 @@ public class LoginServerModel : ModelBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060107B4 RID: 67508 RVA: 0x004064BC File Offset: 0x004046BC
+	// Token: 0x0600DC22 RID: 56354 RVA: 0x00412AD0 File Offset: 0x00410CD0
 	public bool IsFirstLogin(string sdkUid)
 	{
 		Dictionary<string, RegionAndIpSt> global = LocalStorage.GetGlobal<Dictionary<string, RegionAndIpSt>>(ELocalStorageGlobalKey.SdkLastTimeLoginData, null);
 		return global == null || !global.ContainsKey(sdkUid);
 	}
 
-	// Token: 0x060107B5 RID: 67509 RVA: 0x004064E4 File Offset: 0x004046E4
+	// Token: 0x0600DC23 RID: 56355 RVA: 0x00412AF8 File Offset: 0x00410CF8
 	[return: Nullable(2)]
 	public RegionAndIpSt LastTimeLoginData(string sdkUid)
 	{
@@ -277,7 +277,7 @@ public class LoginServerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060107B6 RID: 67510 RVA: 0x00406510 File Offset: 0x00404710
+	// Token: 0x0600DC24 RID: 56356 RVA: 0x00412B24 File Offset: 0x00410D24
 	public void SaveFirstLogin(string sdkUid, ILoginServersData data)
 	{
 		Dictionary<string, RegionAndIpSt> global = LocalStorage.GetGlobal<Dictionary<string, RegionAndIpSt>>(ELocalStorageGlobalKey.SdkLastTimeLoginData, null);
@@ -295,13 +295,13 @@ public class LoginServerModel : ModelBase
 		LocalStorage.SetGlobal<Dictionary<string, RegionAndIpSt>>(ELocalStorageGlobalKey.SdkLastTimeLoginData, dictionary);
 	}
 
-	// Token: 0x060107B7 RID: 67511 RVA: 0x004065A8 File Offset: 0x004047A8
+	// Token: 0x0600DC25 RID: 56357 RVA: 0x00412BBC File Offset: 0x00410DBC
 	public void AddRegionPingValue(ILoginServersData data, float ping)
 	{
 		this.RegionPingMap[data] = ping;
 	}
 
-	// Token: 0x060107B8 RID: 67512 RVA: 0x004065B8 File Offset: 0x004047B8
+	// Token: 0x0600DC26 RID: 56358 RVA: 0x00412BCC File Offset: 0x00410DCC
 	public void RefreshIpPing(string ipAddress, float time)
 	{
 		List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -315,7 +315,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107B9 RID: 67513 RVA: 0x00406618 File Offset: 0x00404818
+	// Token: 0x0600DC27 RID: 56359 RVA: 0x00412C2C File Offset: 0x00410E2C
 	[return: Nullable(2)]
 	public global::LoginPlayerInfo GetPlayerLoginInfo(string sdkUid)
 	{
@@ -327,13 +327,13 @@ public class LoginServerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060107BA RID: 67514 RVA: 0x00406638 File Offset: 0x00404838
+	// Token: 0x0600DC28 RID: 56360 RVA: 0x00412C4C File Offset: 0x00410E4C
 	public void SetPlayerLoginInfo(string sdkUid, global::LoginPlayerInfo data)
 	{
 		this.CurrentLoginPlayerInfoMap[sdkUid] = data;
 	}
 
-	// Token: 0x060107BB RID: 67515 RVA: 0x00406648 File Offset: 0x00404848
+	// Token: 0x0600DC29 RID: 56361 RVA: 0x00412C5C File Offset: 0x00410E5C
 	[return: Nullable(2)]
 	private ILoginServersData FindRegionServerData(RegionAndIpSt data)
 	{
@@ -349,7 +349,7 @@ public class LoginServerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060107BC RID: 67516 RVA: 0x0040669C File Offset: 0x0040489C
+	// Token: 0x0600DC2A RID: 56362 RVA: 0x00412CB0 File Offset: 0x00410EB0
 	public void InitSuggestData(string sdkUid, [Nullable(new byte[]
 	{
 		1,
@@ -402,7 +402,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107BD RID: 67517 RVA: 0x004067F0 File Offset: 0x004049F0
+	// Token: 0x0600DC2B RID: 56363 RVA: 0x00412E04 File Offset: 0x00411004
 	private RegionAndIpSt GetSuggestServerData(string sdkUid)
 	{
 		List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -471,7 +471,7 @@ public class LoginServerModel : ModelBase
 		return this.GetPingMiniData("America");
 	}
 
-	// Token: 0x060107BE RID: 67518 RVA: 0x004069DC File Offset: 0x00404BDC
+	// Token: 0x0600DC2C RID: 56364 RVA: 0x00412FF0 File Offset: 0x004111F0
 	[return: Nullable(2)]
 	private ILoginServersData FindRegionData(string region)
 	{
@@ -487,7 +487,7 @@ public class LoginServerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060107BF RID: 67519 RVA: 0x00406A2C File Offset: 0x00404C2C
+	// Token: 0x0600DC2D RID: 56365 RVA: 0x00413040 File Offset: 0x00411240
 	private bool CheckIfAllServerPingHigh()
 	{
 		List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -503,7 +503,7 @@ public class LoginServerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060107C0 RID: 67520 RVA: 0x00406A84 File Offset: 0x00404C84
+	// Token: 0x0600DC2E RID: 56366 RVA: 0x00413098 File Offset: 0x00411298
 	private RegionAndIpSt GetPingMiniData(string defaultServerRegion)
 	{
 		List<ILoginServersData> list = new List<ILoginServersData>(this.RegionPingMap.Keys);
@@ -530,7 +530,7 @@ public class LoginServerModel : ModelBase
 		return regionAndIpSt;
 	}
 
-	// Token: 0x060107C1 RID: 67521 RVA: 0x00406B54 File Offset: 0x00404D54
+	// Token: 0x0600DC2F RID: 56367 RVA: 0x00413168 File Offset: 0x00411368
 	public int GetLoginLevel(string sdkUid, string region)
 	{
 		global::LoginPlayerInfo playerLoginInfo = this.GetPlayerLoginInfo(sdkUid);
@@ -549,7 +549,7 @@ public class LoginServerModel : ModelBase
 		return this.GetLocalRegionLevel(sdkUid, region);
 	}
 
-	// Token: 0x060107C2 RID: 67522 RVA: 0x00406BD4 File Offset: 0x00404DD4
+	// Token: 0x0600DC30 RID: 56368 RVA: 0x004131E8 File Offset: 0x004113E8
 	private int GetLocalRegionLevel(string sdkUid, string region)
 	{
 		Dictionary<string, LocalPlayerIpLevelData[]> global = LocalStorage.GetGlobal<Dictionary<string, LocalPlayerIpLevelData[]>>(ELocalStorageGlobalKey.SdkLevelData, null);
@@ -569,7 +569,7 @@ public class LoginServerModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x060107C3 RID: 67523 RVA: 0x00406C2C File Offset: 0x00404E2C
+	// Token: 0x0600DC31 RID: 56369 RVA: 0x00413240 File Offset: 0x00411440
 	public string GetCurrentArea()
 	{
 		string[] array = UKuroStaticLibrary.GetCultureRegion().Split('-', StringSplitOptions.None);
@@ -585,7 +585,7 @@ public class LoginServerModel : ModelBase
 		return "US";
 	}
 
-	// Token: 0x060107C4 RID: 67524 RVA: 0x00406C74 File Offset: 0x00404E74
+	// Token: 0x0600DC32 RID: 56370 RVA: 0x00413288 File Offset: 0x00411488
 	public void SaveLocalRegionLevel(string sdkUid, string region, int level)
 	{
 		Dictionary<string, LocalPlayerIpLevelData[]> global = LocalStorage.GetGlobal<Dictionary<string, LocalPlayerIpLevelData[]>>(ELocalStorageGlobalKey.SdkLevelData, null);
@@ -628,7 +628,7 @@ public class LoginServerModel : ModelBase
 		LocalStorage.SetGlobal<Dictionary<string, LocalPlayerIpLevelData[]>>(ELocalStorageGlobalKey.SdkLevelData, dictionary);
 	}
 
-	// Token: 0x060107C5 RID: 67525 RVA: 0x00406D6C File Offset: 0x00404F6C
+	// Token: 0x0600DC33 RID: 56371 RVA: 0x00413380 File Offset: 0x00411580
 	public void SetOnlyRegion(string region)
 	{
 		this.OnlyRegion = region;
@@ -642,14 +642,14 @@ public class LoginServerModel : ModelBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060107C6 RID: 67526 RVA: 0x00406DB5 File Offset: 0x00404FB5
+	// Token: 0x0600DC34 RID: 56372 RVA: 0x004133C9 File Offset: 0x004115C9
 	public bool GetIfSetOnlyRegion()
 	{
 		return this.TrySetRegionState;
 	}
 
-	// Token: 0x17001459 RID: 5209
-	// (get) Token: 0x060107C7 RID: 67527 RVA: 0x00406DBD File Offset: 0x00404FBD
+	// Token: 0x17001486 RID: 5254
+	// (get) Token: 0x0600DC35 RID: 56373 RVA: 0x004133D1 File Offset: 0x004115D1
 	public static LoginServerModel Instance
 	{
 		get
@@ -658,7 +658,7 @@ public class LoginServerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060107C8 RID: 67528 RVA: 0x00406DC4 File Offset: 0x00404FC4
+	// Token: 0x0600DC36 RID: 56374 RVA: 0x004133D8 File Offset: 0x004115D8
 	public static LoginServerModel GetOrCreateInstance()
 	{
 		if (LoginServerModel._Instance == null)
@@ -668,7 +668,7 @@ public class LoginServerModel : ModelBase
 		return LoginServerModel._Instance;
 	}
 
-	// Token: 0x060107C9 RID: 67529 RVA: 0x00406DD8 File Offset: 0x00404FD8
+	// Token: 0x0600DC37 RID: 56375 RVA: 0x004133EC File Offset: 0x004115EC
 	public static bool CreateInstance()
 	{
 		if (LoginServerModel._Instance != null)
@@ -679,54 +679,54 @@ public class LoginServerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060107CA RID: 67530 RVA: 0x00406DEE File Offset: 0x00404FEE
+	// Token: 0x0600DC38 RID: 56376 RVA: 0x00413402 File Offset: 0x00411602
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060107CB RID: 67531 RVA: 0x00406DF0 File Offset: 0x00404FF0
+	// Token: 0x0600DC39 RID: 56377 RVA: 0x00413404 File Offset: 0x00411604
 	public static void ResetStaticDefaultValue()
 	{
 		LoginServerModel._Instance = null;
 	}
 
-	// Token: 0x060107CC RID: 67532 RVA: 0x00406DF8 File Offset: 0x00404FF8
+	// Token: 0x0600DC3A RID: 56378 RVA: 0x0041340C File Offset: 0x0041160C
 	static LoginServerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoginServerModel.CreateStaticDefaultValue), new Action(LoginServerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040079E7 RID: 31207
+	// Token: 0x04007AE5 RID: 31461
 	private const string DEFAULTSERVERREGION = "America";
 
-	// Token: 0x040079E8 RID: 31208
+	// Token: 0x04007AE6 RID: 31462
 	private const string SEASERVER = "SEA";
 
-	// Token: 0x040079E9 RID: 31209
+	// Token: 0x04007AE7 RID: 31463
 	private const string CNSERVERNAME = "Default";
 
-	// Token: 0x040079EA RID: 31210
+	// Token: 0x04007AE8 RID: 31464
 	public const int DEFAULTPING = 9999;
 
-	// Token: 0x040079EB RID: 31211
+	// Token: 0x04007AE9 RID: 31465
 	private readonly Dictionary<string, global::LoginPlayerInfo> CurrentLoginPlayerInfoMap = new Dictionary<string, global::LoginPlayerInfo>();
 
-	// Token: 0x040079EC RID: 31212
+	// Token: 0x04007AEA RID: 31466
 	private readonly Dictionary<ILoginServersData, float> RegionPingMap = new Dictionary<ILoginServersData, float>();
 
-	// Token: 0x040079ED RID: 31213
+	// Token: 0x04007AEB RID: 31467
 	[Nullable(2)]
 	public ILoginServersData OnBeginSuggestServerData;
 
-	// Token: 0x040079EE RID: 31214
+	// Token: 0x04007AEC RID: 31468
 	[Nullable(2)]
 	public ILoginServersData CurrentSelectServerData;
 
-	// Token: 0x040079EF RID: 31215
+	// Token: 0x04007AED RID: 31469
 	[Nullable(2)]
 	public ILoginServersData CurrentUiSelectSeverData;
 
-	// Token: 0x040079F0 RID: 31216
+	// Token: 0x04007AEE RID: 31470
 	[Nullable(new byte[]
 	{
 		2,
@@ -734,13 +734,13 @@ public class LoginServerModel : ModelBase
 	})]
 	private List<ILoginServersData> LoginServerData;
 
-	// Token: 0x040079F1 RID: 31217
+	// Token: 0x04007AEF RID: 31471
 	public string OnlyRegion = string.Empty;
 
-	// Token: 0x040079F2 RID: 31218
+	// Token: 0x04007AF0 RID: 31472
 	private bool TrySetRegionState;
 
-	// Token: 0x040079F3 RID: 31219
+	// Token: 0x04007AF1 RID: 31473
 	[Nullable(2)]
 	private static LoginServerModel _Instance;
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200131B RID: 4891
+// Token: 0x020007CF RID: 1999
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessInteractivePanel : UiPanelBase
 {
-	// Token: 0x060087B5 RID: 34741 RVA: 0x001CF72C File Offset: 0x001CD92C
+	// Token: 0x06005B50 RID: 23376 RVA: 0x001D8598 File Offset: 0x001D6798
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class BusinessInteractivePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060087B6 RID: 34742 RVA: 0x001CF7B4 File Offset: 0x001CD9B4
+	// Token: 0x06005B51 RID: 23377 RVA: 0x001D8620 File Offset: 0x001D6820
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessInteractivePanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class BusinessInteractivePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060087B7 RID: 34743 RVA: 0x001CF7F8 File Offset: 0x001CD9F8
+	// Token: 0x06005B52 RID: 23378 RVA: 0x001D8664 File Offset: 0x001D6864
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		BusinessInteractivePanel.<OnBeforeShowAsyncImplement>d__9 <OnBeforeShowAsyncImplement>d__;
@@ -48,7 +48,7 @@ public class BusinessInteractivePanel : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060087B8 RID: 34744 RVA: 0x001CF83C File Offset: 0x001CDA3C
+	// Token: 0x06005B53 RID: 23379 RVA: 0x001D86A8 File Offset: 0x001D68A8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -68,7 +68,7 @@ public class BusinessInteractivePanel : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x060087B9 RID: 34745 RVA: 0x001CF868 File Offset: 0x001CDA68
+	// Token: 0x06005B54 RID: 23380 RVA: 0x001D86D4 File Offset: 0x001D68D4
 	private void OnInteractiveToggle(RoleDevelopCurve data)
 	{
 		if (MoonChasingModel.Instance.GetWishValue() < data.WishConsume)
@@ -84,7 +84,7 @@ public class BusinessInteractivePanel : UiPanelBase
 		MoonChasingController.Instance.RoleTrainRequest(this.RoleId, data.TrainType);
 	}
 
-	// Token: 0x060087BA RID: 34746 RVA: 0x001CF8E2 File Offset: 0x001CDAE2
+	// Token: 0x06005B55 RID: 23381 RVA: 0x001D874E File Offset: 0x001D694E
 	private BusinessInteractivePanel.InteractiveItem InitInteractiveItem()
 	{
 		BusinessInteractivePanel.InteractiveItem interactiveItem = new BusinessInteractivePanel.InteractiveItem();
@@ -92,19 +92,19 @@ public class BusinessInteractivePanel : UiPanelBase
 		return interactiveItem;
 	}
 
-	// Token: 0x060087BB RID: 34747 RVA: 0x001CF8FB File Offset: 0x001CDAFB
+	// Token: 0x06005B56 RID: 23382 RVA: 0x001D8767 File Offset: 0x001D6967
 	private CharacterItem InitCharacterItem()
 	{
 		return new CharacterItem();
 	}
 
-	// Token: 0x060087BC RID: 34748 RVA: 0x001CF902 File Offset: 0x001CDB02
+	// Token: 0x06005B57 RID: 23383 RVA: 0x001D876E File Offset: 0x001D696E
 	public void RegisterViewController(BusinessHelperViewController vc)
 	{
 		this.Vc = vc;
 	}
 
-	// Token: 0x060087BD RID: 34749 RVA: 0x001CF90C File Offset: 0x001CDB0C
+	// Token: 0x06005B58 RID: 23384 RVA: 0x001D8778 File Offset: 0x001D6978
 	public UniTask Refresh()
 	{
 		BusinessInteractivePanel.<Refresh>d__15 <Refresh>d__;
@@ -115,44 +115,44 @@ public class BusinessInteractivePanel : UiPanelBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04003C82 RID: 15490
+	// Token: 0x04003D1A RID: 15642
 	protected int RoleId;
 
-	// Token: 0x04003C83 RID: 15491
+	// Token: 0x04003D1B RID: 15643
 	protected CharacterListModule<CharacterItem> CharacterListModule;
 
-	// Token: 0x04003C84 RID: 15492
+	// Token: 0x04003D1C RID: 15644
 	protected GenericLayout<BusinessInteractivePanel.InteractiveItem, RoleDevelopCurve> InteractiveLayout;
 
-	// Token: 0x04003C85 RID: 15493
+	// Token: 0x04003D1D RID: 15645
 	[Nullable(2)]
 	private BusinessHelperViewController Vc;
 
-	// Token: 0x0200796D RID: 31085
+	// Token: 0x02006AF7 RID: 27383
 	[NullableContext(0)]
 	private static class EInteractiveItem
 	{
-		// Token: 0x04027FD9 RID: 163801
+		// Token: 0x04023306 RID: 144134
 		public const int Button = 0;
 
-		// Token: 0x04027FDA RID: 163802
+		// Token: 0x04023307 RID: 144135
 		public const int Icon = 1;
 
-		// Token: 0x04027FDB RID: 163803
+		// Token: 0x04023308 RID: 144136
 		public const int IconTransition = 2;
 
-		// Token: 0x04027FDC RID: 163804
+		// Token: 0x04023309 RID: 144137
 		public const int Content = 3;
 
-		// Token: 0x04027FDD RID: 163805
+		// Token: 0x0402330A RID: 144138
 		public const int CostItem = 4;
 	}
 
-	// Token: 0x0200796E RID: 31086
+	// Token: 0x02006AF8 RID: 27384
 	[Nullable(0)]
 	protected class InteractiveItem : GridProxyAbstract<RoleDevelopCurve>
 	{
-		// Token: 0x0604931B RID: 299803 RVA: 0x012E7794 File Offset: 0x012E5994
+		// Token: 0x0603F74F RID: 259919 RVA: 0x0128A990 File Offset: 0x01288B90
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -169,7 +169,7 @@ public class BusinessInteractivePanel : UiPanelBase
 			};
 		}
 
-		// Token: 0x0604931C RID: 299804 RVA: 0x012E7840 File Offset: 0x012E5A40
+		// Token: 0x0603F750 RID: 259920 RVA: 0x0128AA3C File Offset: 0x01288C3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BusinessInteractivePanel.InteractiveItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -180,7 +180,7 @@ public class BusinessInteractivePanel : UiPanelBase
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604931D RID: 299805 RVA: 0x012E7883 File Offset: 0x012E5A83
+		// Token: 0x0603F751 RID: 259921 RVA: 0x0128AA7F File Offset: 0x01288C7F
 		private void OnButton()
 		{
 			Action<RoleDevelopCurve> buttonFunction = this.ButtonFunction;
@@ -191,7 +191,7 @@ public class BusinessInteractivePanel : UiPanelBase
 			buttonFunction(this.Data);
 		}
 
-		// Token: 0x0604931E RID: 299806 RVA: 0x012E789C File Offset: 0x012E5A9C
+		// Token: 0x0603F752 RID: 259922 RVA: 0x0128AA98 File Offset: 0x01288C98
 		public override void Refresh(RoleDevelopCurve data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -210,40 +210,40 @@ public class BusinessInteractivePanel : UiPanelBase
 			});
 		}
 
-		// Token: 0x0604931F RID: 299807 RVA: 0x012E7944 File Offset: 0x012E5B44
+		// Token: 0x0603F753 RID: 259923 RVA: 0x0128AB40 File Offset: 0x01288D40
 		public void SetButtonFunction(Action<RoleDevelopCurve> callback)
 		{
 			this.ButtonFunction = callback;
 		}
 
-		// Token: 0x04027FDE RID: 163806
+		// Token: 0x0402330B RID: 144139
 		[Nullable(2)]
 		private Action<RoleDevelopCurve> ButtonFunction;
 
-		// Token: 0x04027FDF RID: 163807
+		// Token: 0x0402330C RID: 144140
 		private RoleDevelopCurve Data;
 
-		// Token: 0x04027FE0 RID: 163808
+		// Token: 0x0402330D RID: 144141
 		private CommonCostItem CostItem;
 	}
 
-	// Token: 0x0200796F RID: 31087
+	// Token: 0x02006AF9 RID: 27385
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027FE1 RID: 163809
+		// Token: 0x0402330E RID: 144142
 		public const int Name = 0;
 
-		// Token: 0x04027FE2 RID: 163810
+		// Token: 0x0402330F RID: 144143
 		public const int CharacterListItem = 1;
 
-		// Token: 0x04027FE3 RID: 163811
+		// Token: 0x04023310 RID: 144144
 		public const int Level = 2;
 
-		// Token: 0x04027FE4 RID: 163812
+		// Token: 0x04023311 RID: 144145
 		public const int InteractiveLayout = 3;
 
-		// Token: 0x04027FE5 RID: 163813
+		// Token: 0x04023312 RID: 144146
 		public const int InteractiveItem = 4;
 	}
 }

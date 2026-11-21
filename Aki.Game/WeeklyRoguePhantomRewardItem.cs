@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D36 RID: 11574
+// Token: 0x02002290 RID: 8848
 public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantomRewardInfo>
 {
-	// Token: 0x06018552 RID: 99666 RVA: 0x006317D4 File Offset: 0x0062F9D4
+	// Token: 0x06015DF4 RID: 89588 RVA: 0x006577E8 File Offset: 0x006559E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +27,7 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		};
 	}
 
-	// Token: 0x06018553 RID: 99667 RVA: 0x006318AC File Offset: 0x0062FAAC
+	// Token: 0x06015DF5 RID: 89589 RVA: 0x006578C0 File Offset: 0x00655AC0
 	protected override void OnStart()
 	{
 		this.InventoryGiftItem = new InventoryGiftCellItem();
@@ -37,7 +36,7 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		this.ElementLayout = new GenericLayout<WeeklyRogueRewardFetterItem, int>(base.GetHorizontalLayout(4), new Func<WeeklyRogueRewardFetterItem>(this.CreateFetter), null, false, true);
 	}
 
-	// Token: 0x06018554 RID: 99668 RVA: 0x0063191C File Offset: 0x0062FB1C
+	// Token: 0x06015DF6 RID: 89590 RVA: 0x00657930 File Offset: 0x00655B30
 	public override void Refresh(WeeklyRoguePhantomRewardInfo data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -49,7 +48,7 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		this.SilentAreaId = blackFlowerConfig.Value.Id;
 		GiftItemData giftItemData = new GiftItemData(blackFlowerConfig.Value.ShowItemId, 0, 0);
 		this.InventoryGiftItem.RefreshByConfigId(giftItemData);
-		List<int> source = new List<int>
+		List<int> data2 = new List<int>
 		{
 			blackFlowerConfig.Value.IconId1,
 			blackFlowerConfig.Value.IconId2
@@ -57,7 +56,7 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		GenericLayout<WeeklyRogueRewardFetterItem, int> elementLayout = this.ElementLayout;
 		if (elementLayout != null)
 		{
-			elementLayout.RefreshByData(source.ToList<int>(), null, false);
+			elementLayout.RefreshByData(data2, null, false);
 		}
 		SilentAreaDetection? silentAreaDetectionConfById = AdventureGuideConfig.Instance.GetSilentAreaDetectionConfById(blackFlowerConfig.Value.SilentAreaDetectionId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), silentAreaDetectionConfById.Value.Name, Array.Empty<object>());
@@ -92,14 +91,14 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		extendToggle2.RootUIComp.Get().SetRaycastTarget(false);
 	}
 
-	// Token: 0x06018555 RID: 99669 RVA: 0x00631AB7 File Offset: 0x0062FCB7
+	// Token: 0x06015DF7 RID: 89591 RVA: 0x00657AC6 File Offset: 0x00655CC6
 	[NullableContext(1)]
 	private WeeklyRogueRewardFetterItem CreateFetter()
 	{
 		return new WeeklyRogueRewardFetterItem();
 	}
 
-	// Token: 0x06018556 RID: 99670 RVA: 0x00631ABE File Offset: 0x0062FCBE
+	// Token: 0x06015DF8 RID: 89592 RVA: 0x00657ACD File Offset: 0x00655CCD
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.IsSelectOnCb != null)
@@ -108,20 +107,20 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		}
 	}
 
-	// Token: 0x06018557 RID: 99671 RVA: 0x00631AE0 File Offset: 0x0062FCE0
+	// Token: 0x06015DF9 RID: 89593 RVA: 0x00657AF0 File Offset: 0x00655CF0
 	private void SetSelected(bool bSelectOn, bool bFireEvent = false)
 	{
 		base.GetExtendToggle(3).SetToggleState(bSelectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent, false, false);
 		base.GetButton(2).RootUIComp.Get().SetUIActive(bSelectOn);
 	}
 
-	// Token: 0x06018558 RID: 99672 RVA: 0x00631B1E File Offset: 0x0062FD1E
+	// Token: 0x06015DFA RID: 89594 RVA: 0x00657B2E File Offset: 0x00655D2E
 	private void OnClickReduce()
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x06018559 RID: 99673 RVA: 0x00631B28 File Offset: 0x0062FD28
+	// Token: 0x06015DFB RID: 89595 RVA: 0x00657B38 File Offset: 0x00655D38
 	private void OnToggleStateChange(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -132,13 +131,13 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 		}
 	}
 
-	// Token: 0x0400B4A6 RID: 46246
+	// Token: 0x0400B81B RID: 47131
 	protected WeeklyRoguePhantomRewardInfo Data;
 
-	// Token: 0x0400B4A7 RID: 46247
+	// Token: 0x0400B81C RID: 47132
 	protected int SilentAreaId;
 
-	// Token: 0x0400B4A8 RID: 46248
+	// Token: 0x0400B81D RID: 47133
 	[Nullable(new byte[]
 	{
 		2,
@@ -146,15 +145,15 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 	})]
 	protected GenericLayout<WeeklyRogueRewardFetterItem, int> ElementLayout;
 
-	// Token: 0x0400B4A9 RID: 46249
+	// Token: 0x0400B81E RID: 47134
 	[Nullable(1)]
 	protected InventoryGiftCellItem InventoryGiftItem;
 
-	// Token: 0x0400B4AA RID: 46250
+	// Token: 0x0400B81F RID: 47135
 	[Nullable(2)]
 	public Func<int, bool> IsSelectOnCb;
 
-	// Token: 0x0400B4AB RID: 46251
+	// Token: 0x0400B820 RID: 47136
 	[Nullable(new byte[]
 	{
 		2,
@@ -163,22 +162,22 @@ public class WeeklyRoguePhantomRewardItem : GridProxyAbstract<WeeklyRoguePhantom
 	})]
 	public Action<UUIExtendToggle, UUIButtonComponent, int, bool> OnToggleStateChangeFunction;
 
-	// Token: 0x020092C5 RID: 37573
+	// Token: 0x020084EC RID: 34028
 	private enum EDefine
 	{
-		// Token: 0x0402F70F RID: 194319
+		// Token: 0x0402AD97 RID: 175511
 		Item,
-		// Token: 0x0402F710 RID: 194320
+		// Token: 0x0402AD98 RID: 175512
 		TxtName,
-		// Token: 0x0402F711 RID: 194321
+		// Token: 0x0402AD99 RID: 175513
 		BtnReduce,
-		// Token: 0x0402F712 RID: 194322
+		// Token: 0x0402AD9A RID: 175514
 		Toggle,
-		// Token: 0x0402F713 RID: 194323
+		// Token: 0x0402AD9B RID: 175515
 		ElementLayout,
-		// Token: 0x0402F714 RID: 194324
+		// Token: 0x0402AD9C RID: 175516
 		ElementItem,
-		// Token: 0x0402F715 RID: 194325
+		// Token: 0x0402AD9D RID: 175517
 		PanelLock
 	}
 }

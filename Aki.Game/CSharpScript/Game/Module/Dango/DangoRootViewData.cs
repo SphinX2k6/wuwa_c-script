@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005AD8 RID: 23256
+	// Token: 0x02004AB9 RID: 19129
 	public class DangoRootViewData
 	{
-		// Token: 0x0401EBD4 RID: 125908
+		// Token: 0x04019690 RID: 104080
 		public int ActivityId;
 
-		// Token: 0x0401EBD5 RID: 125909
+		// Token: 0x04019691 RID: 104081
 		public int DangoId;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028DD RID: 10461
+	// Token: 0x02002BB2 RID: 11186
 	public class IAirPassageMoveLimit
 	{
-		// Token: 0x0600E85D RID: 59485 RVA: 0x00221A85 File Offset: 0x0021FC85
-		[NullableContext(1)]
+		// Token: 0x0600F68C RID: 63116 RVA: 0x0023EA05 File Offset: 0x0023CC05
 		public static IAirPassageMoveLimit Create(IAirPassageMoveLimit? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004865 RID: 18533
-		// (get) Token: 0x0600E85E RID: 59486 RVA: 0x00221AA4 File Offset: 0x0021FCA4
+		// Token: 0x17004BD6 RID: 19414
+		// (get) Token: 0x0600F68D RID: 63117 RVA: 0x0023EA24 File Offset: 0x0023CC24
 		public virtual float DirectionAngleLimit
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004866 RID: 18534
-		// (get) Token: 0x0600E85F RID: 59487 RVA: 0x00221AB1 File Offset: 0x0021FCB1
+		// Token: 0x17004BD7 RID: 19415
+		// (get) Token: 0x0600F68E RID: 63118 RVA: 0x0023EA31 File Offset: 0x0023CC31
 		public virtual float EdgeLimitCurveFactor
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400805D RID: 32861
+		// Token: 0x0400871C RID: 34588
 		private IAirPassageMoveLimit Instance;
 	}
 }

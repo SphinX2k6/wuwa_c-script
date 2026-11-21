@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046AC RID: 18092
+	// Token: 0x02004B14 RID: 19220
 	public class IStartCombatOperationReplayT
 	{
-		// Token: 0x17008083 RID: 32899
-		// (get) Token: 0x0601B7D9 RID: 112601 RVA: 0x003E71BF File Offset: 0x003E53BF
-		// (set) Token: 0x0601B7DA RID: 112602 RVA: 0x003E71C7 File Offset: 0x003E53C7
+		// Token: 0x170086C4 RID: 34500
+		// (get) Token: 0x0601CFAE RID: 118702 RVA: 0x0041345B File Offset: 0x0041165B
+		// (set) Token: 0x0601CFAF RID: 118703 RVA: 0x00413463 File Offset: 0x00411663
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17008084 RID: 32900
-		// (get) Token: 0x0601B7DB RID: 112603 RVA: 0x003E71D0 File Offset: 0x003E53D0
-		// (set) Token: 0x0601B7DC RID: 112604 RVA: 0x003E71D8 File Offset: 0x003E53D8
+		// Token: 0x170086C5 RID: 34501
+		// (get) Token: 0x0601CFB0 RID: 118704 RVA: 0x0041346C File Offset: 0x0041166C
+		// (set) Token: 0x0601CFB1 RID: 118705 RVA: 0x00413474 File Offset: 0x00411674
 		public string FileId { get; set; }
 
-		// Token: 0x0601B7DD RID: 112605 RVA: 0x003E71E1 File Offset: 0x003E53E1
+		// Token: 0x0601CFB2 RID: 118706 RVA: 0x0041347D File Offset: 0x0041167D
 		public IStartCombatOperationReplayT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

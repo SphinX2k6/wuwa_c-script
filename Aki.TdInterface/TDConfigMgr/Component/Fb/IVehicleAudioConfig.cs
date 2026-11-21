@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D48 RID: 3400
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E42 RID: 3650
 	public class IVehicleAudioConfig
 	{
-		// Token: 0x06004D85 RID: 19845 RVA: 0x000C0CE6 File Offset: 0x000BEEE6
+		// Token: 0x060052A1 RID: 21153 RVA: 0x000CC42A File Offset: 0x000CA62A
 		public static IVehicleAudioConfig Create(IVehicleAudioConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018B2 RID: 6322
-		// (get) Token: 0x06004D86 RID: 19846 RVA: 0x000C0D05 File Offset: 0x000BEF05
+		// Token: 0x17001A18 RID: 6680
+		// (get) Token: 0x060052A2 RID: 21154 RVA: 0x000CC449 File Offset: 0x000CA649
 		public virtual float MinVehicleSpeed
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018B3 RID: 6323
-		// (get) Token: 0x06004D87 RID: 19847 RVA: 0x000C0D12 File Offset: 0x000BEF12
+		// Token: 0x17001A19 RID: 6681
+		// (get) Token: 0x060052A3 RID: 21155 RVA: 0x000CC456 File Offset: 0x000CA656
 		public virtual float MaxVehicleSpeed
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018B4 RID: 6324
-		// (get) Token: 0x06004D88 RID: 19848 RVA: 0x000C0D1F File Offset: 0x000BEF1F
+		// Token: 0x17001A1A RID: 6682
+		// (get) Token: 0x060052A4 RID: 21156 RVA: 0x000CC463 File Offset: 0x000CA663
 		public virtual string AudioEvent
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C71 RID: 11377
+		// Token: 0x04002F31 RID: 12081
 		private IVehicleAudioConfig Instance;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200466F RID: 18031
+	// Token: 0x02004AD7 RID: 19159
 	public struct IGmTeleportToEntity : IFlatbufferObject
 	{
-		// Token: 0x17008006 RID: 32774
-		// (get) Token: 0x0601B5DB RID: 112091 RVA: 0x003E3FC0 File Offset: 0x003E21C0
+		// Token: 0x17008647 RID: 34375
+		// (get) Token: 0x0601CDB0 RID: 118192 RVA: 0x0041025C File Offset: 0x0040E45C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B5DC RID: 112092 RVA: 0x003E3FCD File Offset: 0x003E21CD
+		// Token: 0x0601CDB1 RID: 118193 RVA: 0x00410269 File Offset: 0x0040E469
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B5DD RID: 112093 RVA: 0x003E3FD4 File Offset: 0x003E21D4
+		// Token: 0x0601CDB2 RID: 118194 RVA: 0x00410270 File Offset: 0x0040E470
 		public static IGmTeleportToEntity GetRootAsIGmTeleportToEntity(ByteBuffer _bb)
 		{
 			return IGmTeleportToEntity.GetRootAsIGmTeleportToEntity(_bb, default(IGmTeleportToEntity));
 		}
 
-		// Token: 0x0601B5DE RID: 112094 RVA: 0x003E3FF0 File Offset: 0x003E21F0
+		// Token: 0x0601CDB3 RID: 118195 RVA: 0x0041028C File Offset: 0x0040E48C
 		public static IGmTeleportToEntity GetRootAsIGmTeleportToEntity(ByteBuffer _bb, IGmTeleportToEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B5DF RID: 112095 RVA: 0x003E400D File Offset: 0x003E220D
+		// Token: 0x0601CDB4 RID: 118196 RVA: 0x004102A9 File Offset: 0x0040E4A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B5E0 RID: 112096 RVA: 0x003E401C File Offset: 0x003E221C
+		// Token: 0x0601CDB5 RID: 118197 RVA: 0x004102B8 File Offset: 0x0040E4B8
 		public IGmTeleportToEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008007 RID: 32775
-		// (get) Token: 0x0601B5E1 RID: 112097 RVA: 0x003E402C File Offset: 0x003E222C
+		// Token: 0x17008648 RID: 34376
+		// (get) Token: 0x0601CDB6 RID: 118198 RVA: 0x004102C8 File Offset: 0x0040E4C8
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008008 RID: 32776
-		// (get) Token: 0x0601B5E2 RID: 112098 RVA: 0x003E4068 File Offset: 0x003E2268
+		// Token: 0x17008649 RID: 34377
+		// (get) Token: 0x0601CDB7 RID: 118199 RVA: 0x00410304 File Offset: 0x0040E504
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008009 RID: 32777
-		// (get) Token: 0x0601B5E3 RID: 112099 RVA: 0x003E40A4 File Offset: 0x003E22A4
+		// Token: 0x1700864A RID: 34378
+		// (get) Token: 0x0601CDB8 RID: 118200 RVA: 0x00410340 File Offset: 0x0040E540
 		public int PreIncId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B5E4 RID: 112100 RVA: 0x003E40E0 File Offset: 0x003E22E0
+		// Token: 0x0601CDB9 RID: 118201 RVA: 0x0041037C File Offset: 0x0040E57C
 		public static Offset<IGmTeleportToEntity> CreateIGmTeleportToEntity(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, int EntityId = 0, int PreIncId = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IGmTeleportToEntity.EndIGmTeleportToEntity(builder);
 		}
 
-		// Token: 0x0601B5E5 RID: 112101 RVA: 0x003E4104 File Offset: 0x003E2304
+		// Token: 0x0601CDBA RID: 118202 RVA: 0x004103A0 File Offset: 0x0040E5A0
 		public static void StartIGmTeleportToEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601B5E6 RID: 112102 RVA: 0x003E410D File Offset: 0x003E230D
+		// Token: 0x0601CDBB RID: 118203 RVA: 0x004103A9 File Offset: 0x0040E5A9
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B5E7 RID: 112103 RVA: 0x003E4118 File Offset: 0x003E2318
+		// Token: 0x0601CDBC RID: 118204 RVA: 0x004103B4 File Offset: 0x0040E5B4
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0601B5E8 RID: 112104 RVA: 0x003E4123 File Offset: 0x003E2323
+		// Token: 0x0601CDBD RID: 118205 RVA: 0x004103BF File Offset: 0x0040E5BF
 		public static void AddPreIncId(FlatBufferBuilder builder, int preIncId)
 		{
 			builder.AddInt(2, preIncId, 0);
 		}
 
-		// Token: 0x0601B5E9 RID: 112105 RVA: 0x003E412E File Offset: 0x003E232E
+		// Token: 0x0601CDBE RID: 118206 RVA: 0x004103CA File Offset: 0x0040E5CA
 		public static Offset<IGmTeleportToEntity> EndIGmTeleportToEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<IGmTeleportToEntity>(builder.EndTable());
 		}
 
-		// Token: 0x0601B5EA RID: 112106 RVA: 0x003E413C File Offset: 0x003E233C
+		// Token: 0x0601CDBF RID: 118207 RVA: 0x004103D8 File Offset: 0x0040E5D8
 		public IGmTeleportToEntityT UnPack()
 		{
 			IGmTeleportToEntityT gmTeleportToEntityT = new IGmTeleportToEntityT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return gmTeleportToEntityT;
 		}
 
-		// Token: 0x0601B5EB RID: 112107 RVA: 0x003E4157 File Offset: 0x003E2357
+		// Token: 0x0601CDC0 RID: 118208 RVA: 0x004103F3 File Offset: 0x0040E5F3
 		public void UnPackTo(IGmTeleportToEntityT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			_o.PreIncId = this.PreIncId;
 		}
 
-		// Token: 0x0601B5EC RID: 112108 RVA: 0x003E4180 File Offset: 0x003E2380
+		// Token: 0x0601CDC1 RID: 118209 RVA: 0x0041041C File Offset: 0x0040E61C
 		public static Offset<IGmTeleportToEntity> Pack(FlatBufferBuilder builder, IGmTeleportToEntityT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IGmTeleportToEntity.CreateIGmTeleportToEntity(builder, _o.Type, _o.EntityId, _o.PreIncId);
 		}
 
-		// Token: 0x0400C82F RID: 51247
+		// Token: 0x0400D25E RID: 53854
 		private Table __p;
 	}
 }

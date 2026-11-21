@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002729 RID: 10025
+	// Token: 0x020029F3 RID: 10739
 	public class ISceneItemNewSplineMoveTarget : INewSplineMoveTarget
 	{
-		// Token: 0x0600DF8C RID: 57228 RVA: 0x00211FC4 File Offset: 0x002101C4
-		[NullableContext(1)]
+		// Token: 0x0600ED84 RID: 60804 RVA: 0x0022EA54 File Offset: 0x0022CC54
 		public static ISceneItemNewSplineMoveTarget Create(ISceneItemNewSplineMoveTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042FC RID: 17148
-		// (get) Token: 0x0600DF8D RID: 57229 RVA: 0x00211FE3 File Offset: 0x002101E3
+		// Token: 0x1700464C RID: 17996
+		// (get) Token: 0x0600ED85 RID: 60805 RVA: 0x0022EA73 File Offset: 0x0022CC73
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042FD RID: 17149
-		// (get) Token: 0x0600DF8E RID: 57230 RVA: 0x00211FF0 File Offset: 0x002101F0
+		// Token: 0x1700464D RID: 17997
+		// (get) Token: 0x0600ED86 RID: 60806 RVA: 0x0022EA80 File Offset: 0x0022CC80
 		public virtual int EntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042FE RID: 17150
-		// (get) Token: 0x0600DF8F RID: 57231 RVA: 0x00212000 File Offset: 0x00210200
+		// Token: 0x1700464E RID: 17998
+		// (get) Token: 0x0600ED87 RID: 60807 RVA: 0x0022EA90 File Offset: 0x0022CC90
 		public virtual bool? IsLookDir
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C11 RID: 31761
+		// Token: 0x040082BB RID: 33467
 		private ISceneItemNewSplineMoveTarget Instance;
 	}
 }

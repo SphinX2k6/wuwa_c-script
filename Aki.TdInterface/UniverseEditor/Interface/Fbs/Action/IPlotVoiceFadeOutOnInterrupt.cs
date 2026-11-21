@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D5F RID: 27999
+	// Token: 0x020074DA RID: 29914
 	public struct IPlotVoiceFadeOutOnInterrupt : IFlatbufferObject
 	{
-		// Token: 0x1700D0C9 RID: 53449
-		// (get) Token: 0x060316F6 RID: 202486 RVA: 0x006B3F10 File Offset: 0x006B2110
+		// Token: 0x1700DC11 RID: 56337
+		// (get) Token: 0x060346F2 RID: 214770 RVA: 0x0070F5F8 File Offset: 0x0070D7F8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060316F7 RID: 202487 RVA: 0x006B3F1D File Offset: 0x006B211D
+		// Token: 0x060346F3 RID: 214771 RVA: 0x0070F605 File Offset: 0x0070D805
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060316F8 RID: 202488 RVA: 0x006B3F24 File Offset: 0x006B2124
+		// Token: 0x060346F4 RID: 214772 RVA: 0x0070F60C File Offset: 0x0070D80C
 		public static IPlotVoiceFadeOutOnInterrupt GetRootAsIPlotVoiceFadeOutOnInterrupt(ByteBuffer _bb)
 		{
 			return IPlotVoiceFadeOutOnInterrupt.GetRootAsIPlotVoiceFadeOutOnInterrupt(_bb, default(IPlotVoiceFadeOutOnInterrupt));
 		}
 
-		// Token: 0x060316F9 RID: 202489 RVA: 0x006B3F40 File Offset: 0x006B2140
+		// Token: 0x060346F5 RID: 214773 RVA: 0x0070F628 File Offset: 0x0070D828
 		public static IPlotVoiceFadeOutOnInterrupt GetRootAsIPlotVoiceFadeOutOnInterrupt(ByteBuffer _bb, IPlotVoiceFadeOutOnInterrupt obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060316FA RID: 202490 RVA: 0x006B3F5D File Offset: 0x006B215D
+		// Token: 0x060346F6 RID: 214774 RVA: 0x0070F645 File Offset: 0x0070D845
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060316FB RID: 202491 RVA: 0x006B3F6C File Offset: 0x006B216C
+		// Token: 0x060346F7 RID: 214775 RVA: 0x0070F654 File Offset: 0x0070D854
 		public IPlotVoiceFadeOutOnInterrupt __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D0CA RID: 53450
-		// (get) Token: 0x060316FC RID: 202492 RVA: 0x006B3F7C File Offset: 0x006B217C
+		// Token: 0x1700DC12 RID: 56338
+		// (get) Token: 0x060346F8 RID: 214776 RVA: 0x0070F664 File Offset: 0x0070D864
 		public float FadeDuration
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D0CB RID: 53451
-		// (get) Token: 0x060316FD RID: 202493 RVA: 0x006B3FBC File Offset: 0x006B21BC
+		// Token: 0x1700DC13 RID: 56339
+		// (get) Token: 0x060346F9 RID: 214777 RVA: 0x0070F6A4 File Offset: 0x0070D8A4
 		public EAudioFadeCurveType FadeCurve
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D0CC RID: 53452
-		// (get) Token: 0x060316FE RID: 202494 RVA: 0x006B3FF8 File Offset: 0x006B21F8
+		// Token: 0x1700DC14 RID: 56340
+		// (get) Token: 0x060346FA RID: 214778 RVA: 0x0070F6E0 File Offset: 0x0070D8E0
 		public byte NullMask
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060316FF RID: 202495 RVA: 0x006B4034 File Offset: 0x006B2234
+		// Token: 0x060346FB RID: 214779 RVA: 0x0070F71C File Offset: 0x0070D91C
 		public static Offset<IPlotVoiceFadeOutOnInterrupt> CreateIPlotVoiceFadeOutOnInterrupt(FlatBufferBuilder builder, float FadeDuration = 0f, EAudioFadeCurveType FadeCurve = EAudioFadeCurveType.Log3, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlotVoiceFadeOutOnInterrupt.EndIPlotVoiceFadeOutOnInterrupt(builder);
 		}
 
-		// Token: 0x06031700 RID: 202496 RVA: 0x006B4058 File Offset: 0x006B2258
+		// Token: 0x060346FC RID: 214780 RVA: 0x0070F740 File Offset: 0x0070D940
 		public static void StartIPlotVoiceFadeOutOnInterrupt(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06031701 RID: 202497 RVA: 0x006B4061 File Offset: 0x006B2261
+		// Token: 0x060346FD RID: 214781 RVA: 0x0070F749 File Offset: 0x0070D949
 		public static void AddFadeDuration(FlatBufferBuilder builder, float fadeDuration)
 		{
 			builder.AddFloat(0, fadeDuration, 0.0);
 		}
 
-		// Token: 0x06031702 RID: 202498 RVA: 0x006B4074 File Offset: 0x006B2274
+		// Token: 0x060346FE RID: 214782 RVA: 0x0070F75C File Offset: 0x0070D95C
 		public static void AddFadeCurve(FlatBufferBuilder builder, EAudioFadeCurveType fadeCurve)
 		{
 			builder.AddByte(1, (byte)fadeCurve, 0);
 		}
 
-		// Token: 0x06031703 RID: 202499 RVA: 0x006B407F File Offset: 0x006B227F
+		// Token: 0x060346FF RID: 214783 RVA: 0x0070F767 File Offset: 0x0070D967
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06031704 RID: 202500 RVA: 0x006B408A File Offset: 0x006B228A
+		// Token: 0x06034700 RID: 214784 RVA: 0x0070F772 File Offset: 0x0070D972
 		public static Offset<IPlotVoiceFadeOutOnInterrupt> EndIPlotVoiceFadeOutOnInterrupt(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlotVoiceFadeOutOnInterrupt>(builder.EndTable());
 		}
 
-		// Token: 0x06031705 RID: 202501 RVA: 0x006B4098 File Offset: 0x006B2298
+		// Token: 0x06034701 RID: 214785 RVA: 0x0070F780 File Offset: 0x0070D980
 		public IPlotVoiceFadeOutOnInterruptT UnPack()
 		{
 			IPlotVoiceFadeOutOnInterruptT plotVoiceFadeOutOnInterruptT = new IPlotVoiceFadeOutOnInterruptT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return plotVoiceFadeOutOnInterruptT;
 		}
 
-		// Token: 0x06031706 RID: 202502 RVA: 0x006B40B3 File Offset: 0x006B22B3
+		// Token: 0x06034702 RID: 214786 RVA: 0x0070F79B File Offset: 0x0070D99B
 		public void UnPackTo(IPlotVoiceFadeOutOnInterruptT _o)
 		{
 			_o.FadeDuration = this.FadeDuration;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06031707 RID: 202503 RVA: 0x006B40DC File Offset: 0x006B22DC
+		// Token: 0x06034703 RID: 214787 RVA: 0x0070F7C4 File Offset: 0x0070D9C4
 		public static Offset<IPlotVoiceFadeOutOnInterrupt> Pack(FlatBufferBuilder builder, IPlotVoiceFadeOutOnInterruptT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlotVoiceFadeOutOnInterrupt.CreateIPlotVoiceFadeOutOnInterrupt(builder, _o.FadeDuration, _o.FadeCurve, _o.NullMask);
 		}
 
-		// Token: 0x04011713 RID: 71443
+		// Token: 0x0401268F RID: 75407
 		private Table __p;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200202C RID: 8236
+	// Token: 0x02002275 RID: 8821
 	public class IUnlockSystemItemType_SetValue
 	{
-		// Token: 0x04006D02 RID: 27906
+		// Token: 0x0400730B RID: 29451
 		public EUnlockSystemItemType Type;
 	}
 }

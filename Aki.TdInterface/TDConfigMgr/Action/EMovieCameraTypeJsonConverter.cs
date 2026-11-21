@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A4 RID: 9124
+	// Token: 0x0200262F RID: 9775
 	public class EMovieCameraTypeJsonConverter : JsonConverter<EMovieCameraType>
 	{
-		// Token: 0x0600C6E2 RID: 50914 RVA: 0x001D1FAC File Offset: 0x001D01AC
+		// Token: 0x0600D32F RID: 54063 RVA: 0x001EB14C File Offset: 0x001E934C
 		public override EMovieCameraType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMovieCameraTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C6E3 RID: 50915 RVA: 0x001D1FD0 File Offset: 0x001D01D0
+		// Token: 0x0600D330 RID: 54064 RVA: 0x001EB170 File Offset: 0x001E9370
 		public override void Write(Utf8JsonWriter writer, EMovieCameraType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

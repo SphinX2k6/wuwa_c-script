@@ -1,46 +1,46 @@
 ﻿using System;
 
-// Token: 0x02001CED RID: 7405
+// Token: 0x020011AF RID: 4527
 internal enum <PinballBattleMainBattlePanel>F13954715AA9E400802E82B74BFA19540AB238E6555C9E1ECFC5E2AF3E01CA6FF__EComp
 {
-	// Token: 0x04006756 RID: 26454
+	// Token: 0x04006835 RID: 26677
 	Caption,
-	// Token: 0x04006757 RID: 26455
+	// Token: 0x04006836 RID: 26678
 	BtnReset,
-	// Token: 0x04006758 RID: 26456
+	// Token: 0x04006837 RID: 26679
 	RoleSkillItem1,
-	// Token: 0x04006759 RID: 26457
+	// Token: 0x04006838 RID: 26680
 	RoleSkillItem2,
-	// Token: 0x0400675A RID: 26458
+	// Token: 0x04006839 RID: 26681
 	RoleSkillItem3,
-	// Token: 0x0400675B RID: 26459
+	// Token: 0x0400683A RID: 26682
 	BtnShoot,
-	// Token: 0x0400675C RID: 26460
+	// Token: 0x0400683B RID: 26683
 	BtnSkill,
-	// Token: 0x0400675D RID: 26461
+	// Token: 0x0400683C RID: 26684
 	SkillBar,
-	// Token: 0x0400675E RID: 26462
+	// Token: 0x0400683D RID: 26685
 	Time,
-	// Token: 0x0400675F RID: 26463
+	// Token: 0x0400683E RID: 26686
 	Score,
-	// Token: 0x04006760 RID: 26464
+	// Token: 0x0400683F RID: 26687
 	ProgressBarPanel,
-	// Token: 0x04006761 RID: 26465
+	// Token: 0x04006840 RID: 26688
 	ScoreProgressBar,
-	// Token: 0x04006762 RID: 26466
+	// Token: 0x04006841 RID: 26689
 	StarLayout,
-	// Token: 0x04006763 RID: 26467
+	// Token: 0x04006842 RID: 26690
 	StarItem,
-	// Token: 0x04006764 RID: 26468
+	// Token: 0x04006843 RID: 26691
 	ComboPanel,
-	// Token: 0x04006765 RID: 26469
+	// Token: 0x04006844 RID: 26692
 	ComboNum,
-	// Token: 0x04006766 RID: 26470
+	// Token: 0x04006845 RID: 26693
 	BossHpBar,
-	// Token: 0x04006767 RID: 26471
+	// Token: 0x04006846 RID: 26694
 	CenterPanel,
-	// Token: 0x04006768 RID: 26472
+	// Token: 0x04006847 RID: 26695
 	CenterButton,
-	// Token: 0x04006769 RID: 26473
+	// Token: 0x04006848 RID: 26696
 	CutScene
 }

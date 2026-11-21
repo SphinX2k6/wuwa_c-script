@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x020011E9 RID: 4585
+// Token: 0x0200069D RID: 1693
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityShopGridItem : ActivityGrid
 {
-	// Token: 0x06007A71 RID: 31345 RVA: 0x0019C8BF File Offset: 0x0019AABF
+	// Token: 0x06004E08 RID: 19976 RVA: 0x001A556B File Offset: 0x001A376B
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -15,7 +15,7 @@ public class ActivityShopGridItem : ActivityGrid
 		base.SetRedDotState(false);
 	}
 
-	// Token: 0x06007A72 RID: 31346 RVA: 0x0019C8E0 File Offset: 0x0019AAE0
+	// Token: 0x06004E09 RID: 19977 RVA: 0x001A558C File Offset: 0x001A378C
 	public override void Refresh(IPayShopUnionData data, bool isSelected, int gridIndex)
 	{
 		PayShopGoods payShopGoods = data as PayShopGoods;
@@ -27,7 +27,7 @@ public class ActivityShopGridItem : ActivityGrid
 		base.SetNewFlagState(payShopGoods.GetIfNeedRemind());
 	}
 
-	// Token: 0x06007A73 RID: 31347 RVA: 0x0019C90D File Offset: 0x0019AB0D
+	// Token: 0x06004E0A RID: 19978 RVA: 0x001A55B9 File Offset: 0x001A37B9
 	private void ClearNewFlagState(PayShopItem item, PayShopGoods data)
 	{
 		base.SetNewFlagState(data.GetIfNeedRemind());

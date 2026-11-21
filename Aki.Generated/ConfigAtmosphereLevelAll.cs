@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000B5 RID: 181
+	// Token: 0x020000BD RID: 189
 	public class ConfigAtmosphereLevelAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600043F RID: 1087 RVA: 0x00071C30 File Offset: 0x0006FE30
+		// Token: 0x0600046F RID: 1135 RVA: 0x000764E4 File Offset: 0x000746E4
 		static ConfigAtmosphereLevelAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAtmosphereLevelAll.CreateStaticDefaultValue), new Action(ConfigAtmosphereLevelAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000440 RID: 1088 RVA: 0x00071C50 File Offset: 0x0006FE50
+		// Token: 0x06000470 RID: 1136 RVA: 0x00076504 File Offset: 0x00074704
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAtmosphereLevelAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000441 RID: 1089 RVA: 0x00071CCF File Offset: 0x0006FECF
+		// Token: 0x06000471 RID: 1137 RVA: 0x00076583 File Offset: 0x00074783
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAtmosphereLevelAll.LogPair = null;
 			ConfigAtmosphereLevelAll.HandleId = 0;
 		}
 
-		// Token: 0x06000442 RID: 1090 RVA: 0x00071CDD File Offset: 0x0006FEDD
+		// Token: 0x06000472 RID: 1138 RVA: 0x00076591 File Offset: 0x00074791
 		public static void Init()
 		{
 			ConfigAtmosphereLevelAll.HandleId = ConfigCommon.InitDataStatement(ConfigAtmosphereLevelAll.HandleId, "db_spring26.db", "select BinData from `AtmosphereLevel`");
 		}
 
-		// Token: 0x06000443 RID: 1091 RVA: 0x00071CF8 File Offset: 0x0006FEF8
+		// Token: 0x06000473 RID: 1139 RVA: 0x000765AC File Offset: 0x000747AC
 		[NullableContext(2)]
 		public static IReadOnlyList<AtmosphereLevel> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040004D7 RID: 1239
+		// Token: 0x0400050F RID: 1295
 		private const string DB = "db_spring26.db";
 
-		// Token: 0x040004D8 RID: 1240
+		// Token: 0x04000510 RID: 1296
 		private const string FILE = "c.3.1春节活动外围.xlsx";
 
-		// Token: 0x040004D9 RID: 1241
+		// Token: 0x04000511 RID: 1297
 		private const string TABLE = "AtmosphereLevel";
 
-		// Token: 0x040004DA RID: 1242
+		// Token: 0x04000512 RID: 1298
 		private const string COMMAND = "select BinData from `AtmosphereLevel`";
 
-		// Token: 0x040004DB RID: 1243
+		// Token: 0x04000513 RID: 1299
 		private const string KEY_PREFIX = "AtmosphereLevelAll";
 
-		// Token: 0x040004DC RID: 1244
+		// Token: 0x04000514 RID: 1300
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040004DD RID: 1245
+		// Token: 0x04000515 RID: 1301
 		private static int HandleId;
 	}
 }

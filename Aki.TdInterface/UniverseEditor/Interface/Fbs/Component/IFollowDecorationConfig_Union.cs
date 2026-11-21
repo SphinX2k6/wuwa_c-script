@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005294 RID: 21140
+	// Token: 0x020057FC RID: 22524
 	public enum IFollowDecorationConfig_Union : byte
 	{
-		// Token: 0x0400E401 RID: 58369
+		// Token: 0x0400F008 RID: 61448
 		NONE,
-		// Token: 0x0400E402 RID: 58370
+		// Token: 0x0400F009 RID: 61449
 		IFollowDecorationConfig,
-		// Token: 0x0400E403 RID: 58371
+		// Token: 0x0400F00A RID: 61450
 		IFollowDecorationChairConfig
 	}
 }

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013B6 RID: 5046
+	// Token: 0x02001507 RID: 5383
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITakePhoto2Target
 	{
-		// Token: 0x06007332 RID: 29490 RVA: 0x00114970 File Offset: 0x00112B70
-		[NullableContext(1)]
+		// Token: 0x060079D9 RID: 31193 RVA: 0x0012302C File Offset: 0x0012122C
+		[NullableContext(0)]
 		public static ITakePhoto2Target Create(ITakePhoto2Target? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002599 RID: 9625
-		// (get) Token: 0x06007333 RID: 29491 RVA: 0x0011498F File Offset: 0x00112B8F
+		// Token: 0x1700276D RID: 10093
+		// (get) Token: 0x060079DA RID: 31194 RVA: 0x0012304B File Offset: 0x0012124B
 		public virtual ETakePhoto2TargetType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700259A RID: 9626
-		// (get) Token: 0x06007334 RID: 29492 RVA: 0x0011499C File Offset: 0x00112B9C
+		// Token: 0x1700276E RID: 10094
+		// (get) Token: 0x060079DB RID: 31195 RVA: 0x00123058 File Offset: 0x00121258
 		public virtual bool? IsOptionalTarget
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700259B RID: 9627
-		// (get) Token: 0x06007335 RID: 29493 RVA: 0x001149D2 File Offset: 0x00112BD2
+		// Token: 0x1700276F RID: 10095
+		// (get) Token: 0x060079DC RID: 31196 RVA: 0x0012308E File Offset: 0x0012128E
 		public virtual ITakePhoto2TargetCameraDistanceCondition TargetCameraDistanceCondition
 		{
 			get
@@ -63,13 +63,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400429C RID: 17052
+		// Token: 0x0400461D RID: 17949
 		private ITakePhoto2Target Instance;
 
-		// Token: 0x0400429D RID: 17053
+		// Token: 0x0400461E RID: 17950
 		private ITakePhoto2TargetCameraDistanceCondition _TargetCameraDistanceConditionCache;
 
-		// Token: 0x0400429E RID: 17054
+		// Token: 0x0400461F RID: 17951
 		private bool _TargetCameraDistanceConditionInited;
 	}
 }

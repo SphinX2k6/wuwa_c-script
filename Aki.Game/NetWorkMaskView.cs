@@ -7,30 +7,30 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002754 RID: 10068
+// Token: 0x02001C3F RID: 7231
 public class NetWorkMaskView : UiTickViewBase
 {
-	// Token: 0x06014A62 RID: 84578 RVA: 0x00539708 File Offset: 0x00537908
+	// Token: 0x06011F45 RID: 73541 RVA: 0x0054859C File Offset: 0x0054679C
 	[NullableContext(1)]
 	public NetWorkMaskView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014A63 RID: 84579 RVA: 0x0053971D File Offset: 0x0053791D
+	// Token: 0x06011F46 RID: 73542 RVA: 0x005485B1 File Offset: 0x005467B1
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ReConnectSuccess, new Action(this.ReConnectSuccess));
 		EventSystem.Instance.Add(EEventName.ReConnectFail, new Action(this.ReConnectFail));
 	}
 
-	// Token: 0x06014A64 RID: 84580 RVA: 0x00539757 File Offset: 0x00537957
+	// Token: 0x06011F47 RID: 73543 RVA: 0x005485EB File Offset: 0x005467EB
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ReConnectSuccess, new Action(this.ReConnectSuccess));
 		EventSystem.Instance.Remove(EEventName.ReConnectFail, new Action(this.ReConnectFail));
 	}
 
-	// Token: 0x06014A65 RID: 84581 RVA: 0x00539794 File Offset: 0x00537994
+	// Token: 0x06011F48 RID: 73544 RVA: 0x00548628 File Offset: 0x00546828
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -46,7 +46,7 @@ public class NetWorkMaskView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014A66 RID: 84582 RVA: 0x00539820 File Offset: 0x00537A20
+	// Token: 0x06011F49 RID: 73545 RVA: 0x005486B4 File Offset: 0x005468B4
 	protected override void OnStart()
 	{
 		this.TotalTime = 0f;
@@ -57,13 +57,13 @@ public class NetWorkMaskView : UiTickViewBase
 		base.GetItem(0).SetUIActive(false);
 	}
 
-	// Token: 0x06014A67 RID: 84583 RVA: 0x00539879 File Offset: 0x00537A79
+	// Token: 0x06011F4A RID: 73546 RVA: 0x0054870D File Offset: 0x0054690D
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearConfirmId();
 	}
 
-	// Token: 0x06014A68 RID: 84584 RVA: 0x00539881 File Offset: 0x00537A81
+	// Token: 0x06011F4B RID: 73547 RVA: 0x00548715 File Offset: 0x00546915
 	private void ClearConfirmId()
 	{
 		if (this.ConfirmBoxId != null)
@@ -73,7 +73,7 @@ public class NetWorkMaskView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014A69 RID: 84585 RVA: 0x005398B4 File Offset: 0x00537AB4
+	// Token: 0x06011F4C RID: 73548 RVA: 0x00548748 File Offset: 0x00546948
 	private void TickTipsTimeVisible(float deltaTime)
 	{
 		if (this.DelayTime < 0f || Net.Instance.IsNotifyCallbackPaused())
@@ -88,7 +88,7 @@ public class NetWorkMaskView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014A6A RID: 84586 RVA: 0x00539918 File Offset: 0x00537B18
+	// Token: 0x06011F4D RID: 73549 RVA: 0x005487AC File Offset: 0x005469AC
 	protected override void OnTick(float delta)
 	{
 		this.TotalTime += delta;
@@ -108,7 +108,7 @@ public class NetWorkMaskView : UiTickViewBase
 		this.TickTipsTimeVisible(delta);
 	}
 
-	// Token: 0x06014A6B RID: 84587 RVA: 0x005399BC File Offset: 0x00537BBC
+	// Token: 0x06011F4E RID: 73550 RVA: 0x00548850 File Offset: 0x00546A50
 	private void InitBoxItem()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.NetWorkMaskTip);
@@ -122,38 +122,38 @@ public class NetWorkMaskView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06014A6C RID: 84588 RVA: 0x00539A37 File Offset: 0x00537C37
+	// Token: 0x06011F4F RID: 73551 RVA: 0x005488CB File Offset: 0x00546ACB
 	private void BackBtn()
 	{
 		ReConnectController.Instance.Logout(ELogoutReason.NetWorkMaskViewBackBtn);
 	}
 
-	// Token: 0x06014A6D RID: 84589 RVA: 0x00539A44 File Offset: 0x00537C44
+	// Token: 0x06011F50 RID: 73552 RVA: 0x005488D8 File Offset: 0x00546AD8
 	private void OkBtn()
 	{
 	}
 
-	// Token: 0x06014A6E RID: 84590 RVA: 0x00539A46 File Offset: 0x00537C46
+	// Token: 0x06011F51 RID: 73553 RVA: 0x005488DA File Offset: 0x00546ADA
 	private void ReConnectSuccess()
 	{
 		UiManager.Instance.CloseView(EUiViewName.NetWorkMaskView, null);
 	}
 
-	// Token: 0x06014A6F RID: 84591 RVA: 0x00539A58 File Offset: 0x00537C58
+	// Token: 0x06011F52 RID: 73554 RVA: 0x005488EC File Offset: 0x00546AEC
 	private void ReConnectFail()
 	{
 		this.InitBoxItem();
 	}
 
-	// Token: 0x04009B3B RID: 39739
+	// Token: 0x04009C94 RID: 40084
 	private int Number;
 
-	// Token: 0x04009B3C RID: 39740
+	// Token: 0x04009C95 RID: 40085
 	private float TotalTime;
 
-	// Token: 0x04009B3D RID: 39741
+	// Token: 0x04009C96 RID: 40086
 	private int? ConfirmBoxId = new int?(0);
 
-	// Token: 0x04009B3E RID: 39742
+	// Token: 0x04009C97 RID: 40087
 	private float DelayTime;
 }

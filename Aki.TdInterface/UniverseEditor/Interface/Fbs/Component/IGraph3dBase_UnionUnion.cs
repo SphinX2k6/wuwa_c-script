@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005304 RID: 21252
+	// Token: 0x0200588A RID: 22666
 	public class IGraph3dBase_UnionUnion
 	{
-		// Token: 0x17009C0C RID: 39948
-		// (get) Token: 0x06022B6C RID: 142188 RVA: 0x004CF8D6 File Offset: 0x004CDAD6
-		// (set) Token: 0x06022B6D RID: 142189 RVA: 0x004CF8DE File Offset: 0x004CDADE
+		// Token: 0x1700A444 RID: 42052
+		// (get) Token: 0x06024C20 RID: 150560 RVA: 0x0050C7AA File Offset: 0x0050A9AA
+		// (set) Token: 0x06024C21 RID: 150561 RVA: 0x0050C7B2 File Offset: 0x0050A9B2
 		public IGraph3dBase_Union Type { get; set; }
 
-		// Token: 0x17009C0D RID: 39949
-		// (get) Token: 0x06022B6E RID: 142190 RVA: 0x004CF8E7 File Offset: 0x004CDAE7
-		// (set) Token: 0x06022B6F RID: 142191 RVA: 0x004CF8EF File Offset: 0x004CDAEF
+		// Token: 0x1700A445 RID: 42053
+		// (get) Token: 0x06024C22 RID: 150562 RVA: 0x0050C7BB File Offset: 0x0050A9BB
+		// (set) Token: 0x06024C23 RID: 150563 RVA: 0x0050C7C3 File Offset: 0x0050A9C3
 		public object Value { get; set; }
 
-		// Token: 0x06022B70 RID: 142192 RVA: 0x004CF8F8 File Offset: 0x004CDAF8
+		// Token: 0x06024C24 RID: 150564 RVA: 0x0050C7CC File Offset: 0x0050A9CC
 		public IGraph3dBase_UnionUnion()
 		{
 			this.Type = IGraph3dBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06022B71 RID: 142193 RVA: 0x004CF90E File Offset: 0x004CDB0E
+		// Token: 0x06024C25 RID: 150565 RVA: 0x0050C7E2 File Offset: 0x0050A9E2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06022B72 RID: 142194 RVA: 0x004CF920 File Offset: 0x004CDB20
+		// Token: 0x06024C26 RID: 150566 RVA: 0x0050C7F4 File Offset: 0x0050A9F4
 		public IGraph3dBaseT AsIGraph3dBase()
 		{
 			return this.As<IGraph3dBaseT>();
 		}
 
-		// Token: 0x06022B73 RID: 142195 RVA: 0x004CF928 File Offset: 0x004CDB28
+		// Token: 0x06024C27 RID: 150567 RVA: 0x0050C7FC File Offset: 0x0050A9FC
 		public static IGraph3dBase_UnionUnion FromIGraph3dBase(IGraph3dBaseT _igraph3dbase)
 		{
 			return new IGraph3dBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022B74 RID: 142196 RVA: 0x004CF93D File Offset: 0x004CDB3D
+		// Token: 0x06024C28 RID: 150568 RVA: 0x0050C811 File Offset: 0x0050AA11
 		public IGraph3dNormalT AsIGraph3dNormal()
 		{
 			return this.As<IGraph3dNormalT>();
 		}
 
-		// Token: 0x06022B75 RID: 142197 RVA: 0x004CF945 File Offset: 0x004CDB45
+		// Token: 0x06024C29 RID: 150569 RVA: 0x0050C819 File Offset: 0x0050AA19
 		public static IGraph3dBase_UnionUnion FromIGraph3dNormal(IGraph3dNormalT _igraph3dnormal)
 		{
 			return new IGraph3dBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022B76 RID: 142198 RVA: 0x004CF95C File Offset: 0x004CDB5C
+		// Token: 0x06024C2A RID: 150570 RVA: 0x0050C830 File Offset: 0x0050AA30
 		public static int Pack(FlatBufferBuilder builder, IGraph3dBase_UnionUnion _o)
 		{
 			IGraph3dBase_Union type = _o.Type;

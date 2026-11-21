@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200185E RID: 6238
+// Token: 0x02000D17 RID: 3351
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomBatchConfirmPopupView : UiViewBase
 {
-	// Token: 0x0600B6EC RID: 46828 RVA: 0x00295305 File Offset: 0x00293505
+	// Token: 0x06008AD5 RID: 35541 RVA: 0x0029FA29 File Offset: 0x0029DC29
 	[NullableContext(1)]
 	public PhantomBatchConfirmPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B6ED RID: 46829 RVA: 0x00295310 File Offset: 0x00293510
+	// Token: 0x06008AD6 RID: 35542 RVA: 0x0029FA34 File Offset: 0x0029DC34
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -46,7 +46,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B6EE RID: 46830 RVA: 0x00295440 File Offset: 0x00293640
+	// Token: 0x06008AD7 RID: 35543 RVA: 0x0029FB64 File Offset: 0x0029DD64
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomBatchConfirmPopupView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B6EF RID: 46831 RVA: 0x00295484 File Offset: 0x00293684
+	// Token: 0x06008AD8 RID: 35544 RVA: 0x0029FBA8 File Offset: 0x0029DDA8
 	protected override void OnStart()
 	{
 		this.ViewData = (this.OpenParam as IPhantomConfirmPopupViewData);
@@ -146,21 +146,21 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600B6F0 RID: 46832 RVA: 0x00295631 File Offset: 0x00293831
+	// Token: 0x06008AD9 RID: 35545 RVA: 0x0029FD55 File Offset: 0x0029DF55
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.OnItemFuncValueChange));
 		EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.OnItemFuncValueBatchChange, new Action<IReadOnlyList<int>>(this.OnItemFuncValueBatchChange));
 	}
 
-	// Token: 0x0600B6F1 RID: 46833 RVA: 0x0029566B File Offset: 0x0029386B
+	// Token: 0x06008ADA RID: 35546 RVA: 0x0029FD8F File Offset: 0x0029DF8F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnItemFuncValueChange, new Action<int>(this.OnItemFuncValueChange));
 		EventSystem.Instance.Remove(EEventName.OnItemFuncValueBatchChange, new Action<IReadOnlyList<int>>(this.OnItemFuncValueBatchChange));
 	}
 
-	// Token: 0x0600B6F2 RID: 46834 RVA: 0x002956A8 File Offset: 0x002938A8
+	// Token: 0x06008ADB RID: 35547 RVA: 0x0029FDCC File Offset: 0x0029DFCC
 	private void RefreshView()
 	{
 		if (this.ViewData == null)
@@ -190,7 +190,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		loopScrollView.RefreshByData(this.ViewData.PhantomUniqueIdList, false, null, false);
 	}
 
-	// Token: 0x0600B6F3 RID: 46835 RVA: 0x00295749 File Offset: 0x00293949
+	// Token: 0x06008ADC RID: 35548 RVA: 0x0029FE6D File Offset: 0x0029E06D
 	[NullableContext(1)]
 	private PhantomConfirmMediumItemGrid CreateGridItem()
 	{
@@ -199,7 +199,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		return phantomConfirmMediumItemGrid;
 	}
 
-	// Token: 0x0600B6F4 RID: 46836 RVA: 0x00295757 File Offset: 0x00293957
+	// Token: 0x06008ADD RID: 35549 RVA: 0x0029FE7B File Offset: 0x0029E07B
 	private void OnClickLeft(int _)
 	{
 		IPhantomConfirmPopupViewData viewData = this.ViewData;
@@ -214,7 +214,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B6F5 RID: 46837 RVA: 0x0029577C File Offset: 0x0029397C
+	// Token: 0x06008ADE RID: 35550 RVA: 0x0029FEA0 File Offset: 0x0029E0A0
 	private void OnClickMiddle(int _)
 	{
 		IPhantomConfirmPopupViewData viewData = this.ViewData;
@@ -229,7 +229,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B6F6 RID: 46838 RVA: 0x002957A1 File Offset: 0x002939A1
+	// Token: 0x06008ADF RID: 35551 RVA: 0x0029FEC5 File Offset: 0x0029E0C5
 	private void OnClickRight(int _)
 	{
 		IPhantomConfirmPopupViewData viewData = this.ViewData;
@@ -244,7 +244,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B6F7 RID: 46839 RVA: 0x002957C8 File Offset: 0x002939C8
+	// Token: 0x06008AE0 RID: 35552 RVA: 0x0029FEEC File Offset: 0x0029E0EC
 	private void OnItemFuncValueChange(int changeId)
 	{
 		int i = 0;
@@ -268,7 +268,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B6F8 RID: 46840 RVA: 0x00295818 File Offset: 0x00293A18
+	// Token: 0x06008AE1 RID: 35553 RVA: 0x0029FF3C File Offset: 0x0029E13C
 	[NullableContext(1)]
 	private void OnItemFuncValueBatchChange(IReadOnlyList<int> uniqueIdList)
 	{
@@ -287,7 +287,7 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400529B RID: 21147
+	// Token: 0x04005346 RID: 21318
 	[Nullable(new byte[]
 	{
 		2,
@@ -295,44 +295,44 @@ public class PhantomBatchConfirmPopupView : UiViewBase
 	})]
 	private LoopScrollView<PhantomConfirmMediumItemGrid, int> LoopScrollView;
 
-	// Token: 0x0400529C RID: 21148
+	// Token: 0x04005347 RID: 21319
 	private ButtonItem LeftButton;
 
-	// Token: 0x0400529D RID: 21149
+	// Token: 0x04005348 RID: 21320
 	private ButtonItem MiddleButton;
 
-	// Token: 0x0400529E RID: 21150
+	// Token: 0x04005349 RID: 21321
 	private ButtonItem RightButton;
 
-	// Token: 0x0400529F RID: 21151
+	// Token: 0x0400534A RID: 21322
 	private IPhantomConfirmPopupViewData ViewData;
 
-	// Token: 0x02007E1E RID: 32286
+	// Token: 0x02006FA5 RID: 28581
 	[NullableContext(0)]
 	private class EPhantomBatchConfirmComp
 	{
-		// Token: 0x04029476 RID: 169078
+		// Token: 0x040247A3 RID: 149411
 		public const int TxtTitle = 0;
 
-		// Token: 0x04029477 RID: 169079
+		// Token: 0x040247A4 RID: 149412
 		public const int TxtCount = 1;
 
-		// Token: 0x04029478 RID: 169080
+		// Token: 0x040247A5 RID: 149413
 		public const int Scroller = 2;
 
-		// Token: 0x04029479 RID: 169081
+		// Token: 0x040247A6 RID: 149414
 		public const int LoopItem = 3;
 
-		// Token: 0x0402947A RID: 169082
+		// Token: 0x040247A7 RID: 149415
 		public const int BtnLeft = 4;
 
-		// Token: 0x0402947B RID: 169083
+		// Token: 0x040247A8 RID: 149416
 		public const int BtnMiddle = 5;
 
-		// Token: 0x0402947C RID: 169084
+		// Token: 0x040247A9 RID: 149417
 		public const int TxtSubTitle = 6;
 
-		// Token: 0x0402947D RID: 169085
+		// Token: 0x040247AA RID: 149418
 		public const int BtnRight = 7;
 	}
 }

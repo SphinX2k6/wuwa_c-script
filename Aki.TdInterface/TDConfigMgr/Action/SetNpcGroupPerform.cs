@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021C7 RID: 8647
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002432 RID: 9266
 	public class SetNpcGroupPerform : ActionParams
 	{
-		// Token: 0x0600BDE2 RID: 48610 RVA: 0x001B5400 File Offset: 0x001B3600
+		// Token: 0x0600C99C RID: 51612 RVA: 0x001CCA38 File Offset: 0x001CAC38
 		private SetNpcGroupPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDE3 RID: 48611 RVA: 0x001B5438 File Offset: 0x001B3638
+		// Token: 0x0600C99D RID: 51613 RVA: 0x001CCA70 File Offset: 0x001CAC70
 		public static SetNpcGroupPerform Create([Nullable(2)] SetNpcGroupPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDE4 RID: 48612 RVA: 0x001B544B File Offset: 0x001B364B
+		// Token: 0x0600C99E RID: 51614 RVA: 0x001CCA83 File Offset: 0x001CAC83
 		public static SetNpcGroupPerform CreateFromSetValue([Nullable(2)] SetNpcGroupPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDE5 RID: 48613 RVA: 0x001B545E File Offset: 0x001B365E
+		// Token: 0x0600C99F RID: 51615 RVA: 0x001CCA96 File Offset: 0x001CAC96
 		public SetNpcGroupPerform_SetValue ToSetValue()
 		{
 			return new SetNpcGroupPerform_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039A7 RID: 14759
-		// (get) Token: 0x0600BDE6 RID: 48614 RVA: 0x001B5489 File Offset: 0x001B3689
-		// (set) Token: 0x0600BDE7 RID: 48615 RVA: 0x001B54B4 File Offset: 0x001B36B4
+		// Token: 0x17003C9B RID: 15515
+		// (get) Token: 0x0600C9A0 RID: 51616 RVA: 0x001CCAC1 File Offset: 0x001CACC1
+		// (set) Token: 0x0600C9A1 RID: 51617 RVA: 0x001CCAEC File Offset: 0x001CACEC
 		public virtual string Key
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039A8 RID: 14760
-		// (get) Token: 0x0600BDE8 RID: 48616 RVA: 0x001B54C2 File Offset: 0x001B36C2
-		// (set) Token: 0x0600BDE9 RID: 48617 RVA: 0x001B54E9 File Offset: 0x001B36E9
+		// Token: 0x17003C9C RID: 15516
+		// (get) Token: 0x0600C9A2 RID: 51618 RVA: 0x001CCAFA File Offset: 0x001CACFA
+		// (set) Token: 0x0600C9A3 RID: 51619 RVA: 0x001CCB21 File Offset: 0x001CAD21
 		public virtual ISetNpcGroupPerformType PerformType
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039A9 RID: 14761
-		// (get) Token: 0x0600BDEA RID: 48618 RVA: 0x001B54F8 File Offset: 0x001B36F8
-		// (set) Token: 0x0600BDEB RID: 48619 RVA: 0x001B5532 File Offset: 0x001B3732
+		// Token: 0x17003C9D RID: 15517
+		// (get) Token: 0x0600C9A4 RID: 51620 RVA: 0x001CCB30 File Offset: 0x001CAD30
+		// (set) Token: 0x0600C9A5 RID: 51621 RVA: 0x001CCB6A File Offset: 0x001CAD6A
 		public virtual bool? IsWaitActionFinish
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007154 RID: 29012
+		// Token: 0x0400779C RID: 30620
 		[Nullable(2)]
 		protected new SetNpcGroupPerform FbInstance;
 
-		// Token: 0x04007155 RID: 29013
+		// Token: 0x0400779D RID: 30621
 		[Nullable(2)]
 		protected SetNpcGroupPerform_SetValue PocoInterface;
 	}

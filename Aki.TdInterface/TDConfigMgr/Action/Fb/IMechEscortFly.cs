@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002814 RID: 10260
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AE7 RID: 10983
 	public class IMechEscortFly : ILeisureInteractType
 	{
-		// Token: 0x0600E39C RID: 58268 RVA: 0x002189D8 File Offset: 0x00216BD8
+		// Token: 0x0600F1C1 RID: 61889 RVA: 0x0023583C File Offset: 0x00233A3C
 		public static IMechEscortFly Create(IMechEscortFly? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004536 RID: 17718
-		// (get) Token: 0x0600E39D RID: 58269 RVA: 0x002189F7 File Offset: 0x00216BF7
+		// Token: 0x170048A1 RID: 18593
+		// (get) Token: 0x0600F1C2 RID: 61890 RVA: 0x0023585B File Offset: 0x00233A5B
 		public override ELeisureInteract Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004537 RID: 17719
-		// (get) Token: 0x0600E39E RID: 58270 RVA: 0x00218A04 File Offset: 0x00216C04
+		// Token: 0x170048A2 RID: 18594
+		// (get) Token: 0x0600F1C3 RID: 61891 RVA: 0x00235868 File Offset: 0x00233A68
 		public virtual int TargetEntity
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004538 RID: 17720
-		// (get) Token: 0x0600E39F RID: 58271 RVA: 0x00218A11 File Offset: 0x00216C11
+		// Token: 0x170048A3 RID: 18595
+		// (get) Token: 0x0600F1C4 RID: 61892 RVA: 0x00235875 File Offset: 0x00233A75
 		public virtual int TargetSpline
 		{
 			get
@@ -53,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004539 RID: 17721
-		// (get) Token: 0x0600E3A0 RID: 58272 RVA: 0x00218A20 File Offset: 0x00216C20
+		// Token: 0x170048A4 RID: 18596
+		// (get) Token: 0x0600F1C5 RID: 61893 RVA: 0x00235884 File Offset: 0x00233A84
 		public virtual List<IMechEscortPoint> EscortPoints
 		{
 			get
@@ -74,13 +71,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E04 RID: 32260
+		// Token: 0x040084C1 RID: 33985
 		private IMechEscortFly Instance;
 
-		// Token: 0x04007E05 RID: 32261
+		// Token: 0x040084C2 RID: 33986
 		private List<IMechEscortPoint> _EscortPointsCache;
 
-		// Token: 0x04007E06 RID: 32262
+		// Token: 0x040084C3 RID: 33987
 		private bool _EscortPointsInited;
 	}
 }

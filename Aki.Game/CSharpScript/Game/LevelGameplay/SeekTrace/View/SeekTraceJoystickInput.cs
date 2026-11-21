@@ -4,18 +4,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 {
-	// Token: 0x02006A65 RID: 27237
+	// Token: 0x02005BC2 RID: 23490
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeekTraceJoystickInput
 	{
-		// Token: 0x06043B88 RID: 277384 RVA: 0x01093950 File Offset: 0x01091B50
+		// Token: 0x06039BD6 RID: 236502 RVA: 0x01038184 File Offset: 0x01036384
 		public void RegisterMovePress(Action<ESeekTraceMoveDirection> onMovePress)
 		{
 			this.OnMovePress = onMovePress;
 		}
 
-		// Token: 0x06043B89 RID: 277385 RVA: 0x01093959 File Offset: 0x01091B59
+		// Token: 0x06039BD7 RID: 236503 RVA: 0x0103818D File Offset: 0x0103638D
 		public void MoveAxisInput(ESeekTraceMoveDirection direction, double value)
 		{
 			if (direction == ESeekTraceMoveDirection.Up || direction == ESeekTraceMoveDirection.Down)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.InputX = value;
 		}
 
-		// Token: 0x06043B8A RID: 277386 RVA: 0x01093972 File Offset: 0x01091B72
+		// Token: 0x06039BD8 RID: 236504 RVA: 0x010381A6 File Offset: 0x010363A6
 		public void Tick(double delta)
 		{
 			this.TickAxis(delta);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B8B RID: 277387 RVA: 0x01093990 File Offset: 0x01091B90
+		// Token: 0x06039BD9 RID: 236505 RVA: 0x010381C4 File Offset: 0x010363C4
 		private void TickAxis(double delta)
 		{
 			if (this.IsTickRepeatAction)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.IsPress = true;
 		}
 
-		// Token: 0x06043B8C RID: 277388 RVA: 0x01093A24 File Offset: 0x01091C24
+		// Token: 0x06039BDA RID: 236506 RVA: 0x01038258 File Offset: 0x01036458
 		private void HandleDirectionPress(double inputX, double inputY)
 		{
 			bool flag = this.IsSmallerThenPressThreshold(inputX);
@@ -101,19 +101,19 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			onMovePress(eseekTraceMoveDirection);
 		}
 
-		// Token: 0x06043B8D RID: 277389 RVA: 0x01093B21 File Offset: 0x01091D21
+		// Token: 0x06039BDB RID: 236507 RVA: 0x01038355 File Offset: 0x01036555
 		private bool IsSmallerThenPressThreshold(double value)
 		{
 			return Math.Abs(value) < 0.7;
 		}
 
-		// Token: 0x06043B8E RID: 277390 RVA: 0x01093B34 File Offset: 0x01091D34
+		// Token: 0x06039BDC RID: 236508 RVA: 0x01038368 File Offset: 0x01036568
 		private bool IsSmallerThenReleaseThreshold(double value)
 		{
 			return Math.Abs(value) < 0.2;
 		}
 
-		// Token: 0x06043B8F RID: 277391 RVA: 0x01093B48 File Offset: 0x01091D48
+		// Token: 0x06039BDD RID: 236509 RVA: 0x0103837C File Offset: 0x0103657C
 		private void RepeatPressHandle(ESeekTraceMoveDirection direction, double delta)
 		{
 			if (direction == ESeekTraceMoveDirection.None)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B90 RID: 277392 RVA: 0x01093C10 File Offset: 0x01091E10
+		// Token: 0x06039BDE RID: 236510 RVA: 0x01038444 File Offset: 0x01036644
 		public void MoveActionInput(ESeekTraceMoveDirection direction, bool isPress)
 		{
 			if (this.IsPress)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			onMovePress(direction);
 		}
 
-		// Token: 0x06043B91 RID: 277393 RVA: 0x01093C9B File Offset: 0x01091E9B
+		// Token: 0x06039BDF RID: 236511 RVA: 0x010384CF File Offset: 0x010366CF
 		public void ResetMoveActionInput()
 		{
 			if (this.ActionDirection != ESeekTraceMoveDirection.None)
@@ -188,52 +188,52 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x04023609 RID: 144905
+		// Token: 0x0401E7FB RID: 124923
 		private const double PRESS_THRESHOLD = 0.7;
 
-		// Token: 0x0402360A RID: 144906
+		// Token: 0x0401E7FC RID: 124924
 		private const double RELEASE_THRESHOLD = 0.2;
 
-		// Token: 0x0402360B RID: 144907
+		// Token: 0x0401E7FD RID: 124925
 		private const int FIRST_PRESS_INTERVAL = 500;
 
-		// Token: 0x0402360C RID: 144908
+		// Token: 0x0401E7FE RID: 124926
 		private const int REPEAT_PRESS_INTERVAL = 100;
 
-		// Token: 0x0402360D RID: 144909
+		// Token: 0x0401E7FF RID: 124927
 		private const int RELEASE_INTERVAL = 100;
 
-		// Token: 0x0402360E RID: 144910
+		// Token: 0x0401E800 RID: 124928
 		private double InputX;
 
-		// Token: 0x0402360F RID: 144911
+		// Token: 0x0401E801 RID: 124929
 		private double InputY;
 
-		// Token: 0x04023610 RID: 144912
+		// Token: 0x0401E802 RID: 124930
 		private ESeekTraceMoveDirection AxisDirection;
 
-		// Token: 0x04023611 RID: 144913
+		// Token: 0x0401E803 RID: 124931
 		private int PressInterval;
 
-		// Token: 0x04023612 RID: 144914
+		// Token: 0x0401E804 RID: 124932
 		private double RepeatPressTime;
 
-		// Token: 0x04023613 RID: 144915
+		// Token: 0x0401E805 RID: 124933
 		private InputDistributeDefine.EActionType? TargetActionType;
 
-		// Token: 0x04023614 RID: 144916
+		// Token: 0x0401E806 RID: 124934
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04023615 RID: 144917
+		// Token: 0x0401E807 RID: 124935
 		private bool IsPress;
 
-		// Token: 0x04023616 RID: 144918
+		// Token: 0x0401E808 RID: 124936
 		private ESeekTraceMoveDirection ActionDirection;
 
-		// Token: 0x04023617 RID: 144919
+		// Token: 0x0401E809 RID: 124937
 		private bool IsTickRepeatAction;
 
-		// Token: 0x04023618 RID: 144920
+		// Token: 0x0401E80A RID: 124938
 		[Nullable(2)]
 		private Action<ESeekTraceMoveDirection> OnMovePress;
 	}

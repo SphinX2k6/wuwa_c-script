@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD4 RID: 8148
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200221B RID: 8731
 	public class ITowerDungeonPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600B342 RID: 45890 RVA: 0x001A1620 File Offset: 0x0019F820
+		// Token: 0x0600BE58 RID: 48728 RVA: 0x001B7B8C File Offset: 0x001B5D8C
 		private ITowerDungeonPrefabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B343 RID: 45891 RVA: 0x001A1658 File Offset: 0x0019F858
+		// Token: 0x0600BE59 RID: 48729 RVA: 0x001B7BC4 File Offset: 0x001B5DC4
 		public static ITowerDungeonPrefabConfig Create([Nullable(2)] ITowerDungeonPrefabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B344 RID: 45892 RVA: 0x001A166B File Offset: 0x0019F86B
+		// Token: 0x0600BE5A RID: 48730 RVA: 0x001B7BD7 File Offset: 0x001B5DD7
 		public static ITowerDungeonPrefabConfig CreateFromSetValue([Nullable(2)] ITowerDungeonPrefabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B345 RID: 45893 RVA: 0x001A167E File Offset: 0x0019F87E
+		// Token: 0x0600BE5B RID: 48731 RVA: 0x001B7BEA File Offset: 0x001B5DEA
 		public new ITowerDungeonPrefabConfig_SetValue ToSetValue()
 		{
 			return new ITowerDungeonPrefabConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700373B RID: 14139
-		// (get) Token: 0x0600B346 RID: 45894 RVA: 0x001A169D File Offset: 0x0019F89D
-		// (set) Token: 0x0600B347 RID: 45895 RVA: 0x001A16C8 File Offset: 0x0019F8C8
+		// Token: 0x17003A13 RID: 14867
+		// (get) Token: 0x0600BE5C RID: 48732 RVA: 0x001B7C09 File Offset: 0x001B5E09
+		// (set) Token: 0x0600BE5D RID: 48733 RVA: 0x001B7C34 File Offset: 0x001B5E34
 		public override ECreatePrefabType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700373C RID: 14140
-		// (get) Token: 0x0600B348 RID: 45896 RVA: 0x001A16D6 File Offset: 0x0019F8D6
-		// (set) Token: 0x0600B349 RID: 45897 RVA: 0x001A1701 File Offset: 0x0019F901
+		// Token: 0x17003A14 RID: 14868
+		// (get) Token: 0x0600BE5E RID: 48734 RVA: 0x001B7C42 File Offset: 0x001B5E42
+		// (set) Token: 0x0600BE5F RID: 48735 RVA: 0x001B7C6D File Offset: 0x001B5E6D
 		public virtual int Index
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C28 RID: 27688
+		// Token: 0x0400722A RID: 29226
 		[Nullable(2)]
 		protected new ITowerDungeonPrefabConfig FbInstance;
 
-		// Token: 0x04006C29 RID: 27689
+		// Token: 0x0400722B RID: 29227
 		[Nullable(2)]
 		protected new ITowerDungeonPrefabConfig_SetValue PocoInterface;
 	}

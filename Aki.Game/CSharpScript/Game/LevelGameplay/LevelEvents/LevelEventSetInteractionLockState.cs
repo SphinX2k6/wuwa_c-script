@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.Interaction;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B75 RID: 27509
+	// Token: 0x02005CED RID: 23789
 	public class LevelEventSetInteractionLockState : LevelEventBase
 	{
-		// Token: 0x06044240 RID: 279104 RVA: 0x010C9065 File Offset: 0x010C7265
+		// Token: 0x0603A392 RID: 238482 RVA: 0x01072CD9 File Offset: 0x01070ED9
 		public LevelEventSetInteractionLockState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044241 RID: 279105 RVA: 0x010C9070 File Offset: 0x010C7270
+		// Token: 0x0603A393 RID: 238483 RVA: 0x01072CE4 File Offset: 0x01070EE4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

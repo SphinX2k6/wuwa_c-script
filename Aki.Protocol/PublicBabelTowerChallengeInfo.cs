@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000DF2 RID: 3570
+	// Token: 0x02000DE2 RID: 3554
 	public sealed class PublicBabelTowerChallengeInfo : IMessage<PublicBabelTowerChallengeInfo>, IMessage, IEquatable<PublicBabelTowerChallengeInfo>, IDeepCloneable<PublicBabelTowerChallengeInfo>, IBufferMessage
 	{
-		// Token: 0x06013333 RID: 78643 RVA: 0x002CBB1F File Offset: 0x002C9D1F
+		// Token: 0x0601324E RID: 78414 RVA: 0x002CA45B File Offset: 0x002C865B
 		[NullableContext(1)]
 		public static PublicBabelTowerChallengeInfo Create()
 		{
 			return new PublicBabelTowerChallengeInfo();
 		}
 
-		// Token: 0x17003FB0 RID: 16304
-		// (get) Token: 0x06013334 RID: 78644 RVA: 0x002CBB26 File Offset: 0x002C9D26
+		// Token: 0x17003F86 RID: 16262
+		// (get) Token: 0x0601324F RID: 78415 RVA: 0x002CA462 File Offset: 0x002C8662
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PublicBabelTowerChallengeInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003FB1 RID: 16305
-		// (get) Token: 0x06013335 RID: 78645 RVA: 0x002CBB2D File Offset: 0x002C9D2D
+		// Token: 0x17003F87 RID: 16263
+		// (get) Token: 0x06013250 RID: 78416 RVA: 0x002CA469 File Offset: 0x002C8669
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003FB2 RID: 16306
-		// (get) Token: 0x06013336 RID: 78646 RVA: 0x002CBB30 File Offset: 0x002C9D30
+		// Token: 0x17003F88 RID: 16264
+		// (get) Token: 0x06013251 RID: 78417 RVA: 0x002CA46C File Offset: 0x002C866C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013337 RID: 78647 RVA: 0x002CBB37 File Offset: 0x002C9D37
+		// Token: 0x06013252 RID: 78418 RVA: 0x002CA473 File Offset: 0x002C8673
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PublicBabelTowerChallengeInfo()
 		{
 		}
 
-		// Token: 0x06013338 RID: 78648 RVA: 0x002CBB4C File Offset: 0x002C9D4C
+		// Token: 0x06013253 RID: 78419 RVA: 0x002CA488 File Offset: 0x002C8688
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PublicBabelTowerChallengeInfo(PublicBabelTowerChallengeInfo other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06013339 RID: 78649 RVA: 0x002CBBA5 File Offset: 0x002C9DA5
+		// Token: 0x06013254 RID: 78420 RVA: 0x002CA4E1 File Offset: 0x002C86E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PublicBabelTowerChallengeInfo Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new PublicBabelTowerChallengeInfo(this);
 		}
 
-		// Token: 0x17003FB3 RID: 16307
-		// (get) Token: 0x0601333A RID: 78650 RVA: 0x002CBBAD File Offset: 0x002C9DAD
-		// (set) Token: 0x0601333B RID: 78651 RVA: 0x002CBBB5 File Offset: 0x002C9DB5
+		// Token: 0x17003F89 RID: 16265
+		// (get) Token: 0x06013255 RID: 78421 RVA: 0x002CA4E9 File Offset: 0x002C86E9
+		// (set) Token: 0x06013256 RID: 78422 RVA: 0x002CA4F1 File Offset: 0x002C86F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChallengeId
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003FB4 RID: 16308
-		// (get) Token: 0x0601333C RID: 78652 RVA: 0x002CBBBE File Offset: 0x002C9DBE
-		// (set) Token: 0x0601333D RID: 78653 RVA: 0x002CBBC6 File Offset: 0x002C9DC6
+		// Token: 0x17003F8A RID: 16266
+		// (get) Token: 0x06013257 RID: 78423 RVA: 0x002CA4FA File Offset: 0x002C86FA
+		// (set) Token: 0x06013258 RID: 78424 RVA: 0x002CA502 File Offset: 0x002C8702
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Star
@@ -115,9 +115,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003FB5 RID: 16309
-		// (get) Token: 0x0601333E RID: 78654 RVA: 0x002CBBCF File Offset: 0x002C9DCF
-		// (set) Token: 0x0601333F RID: 78655 RVA: 0x002CBBD7 File Offset: 0x002C9DD7
+		// Token: 0x17003F8B RID: 16267
+		// (get) Token: 0x06013259 RID: 78425 RVA: 0x002CA50B File Offset: 0x002C870B
+		// (set) Token: 0x0601325A RID: 78426 RVA: 0x002CA513 File Offset: 0x002C8713
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UseTime
@@ -132,8 +132,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003FB6 RID: 16310
-		// (get) Token: 0x06013340 RID: 78656 RVA: 0x002CBBE0 File Offset: 0x002C9DE0
+		// Token: 0x17003F8C RID: 16268
+		// (get) Token: 0x0601325B RID: 78427 RVA: 0x002CA51C File Offset: 0x002C871C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<BabelPassRoleInfo> BabelPassRoleInfos
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013341 RID: 78657 RVA: 0x002CBBE8 File Offset: 0x002C9DE8
+		// Token: 0x0601325C RID: 78428 RVA: 0x002CA524 File Offset: 0x002C8724
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PublicBabelTowerChallengeInfo);
 		}
 
-		// Token: 0x06013342 RID: 78658 RVA: 0x002CBBF8 File Offset: 0x002C9DF8
+		// Token: 0x0601325D RID: 78429 RVA: 0x002CA534 File Offset: 0x002C8734
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PublicBabelTowerChallengeInfo other)
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChallengeId == other.ChallengeId && this.Star == other.Star && this.UseTime == other.UseTime && this.babelPassRoleInfos_.Equals(other.babelPassRoleInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013343 RID: 78659 RVA: 0x002CBC68 File Offset: 0x002C9E68
+		// Token: 0x0601325E RID: 78430 RVA: 0x002CA5A4 File Offset: 0x002C87A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013344 RID: 78660 RVA: 0x002CBCE7 File Offset: 0x002C9EE7
+		// Token: 0x0601325F RID: 78431 RVA: 0x002CA623 File Offset: 0x002C8823
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013345 RID: 78661 RVA: 0x002CBCF4 File Offset: 0x002C9EF4
+		// Token: 0x06013260 RID: 78432 RVA: 0x002CA630 File Offset: 0x002C8830
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013346 RID: 78662 RVA: 0x002CBD00 File Offset: 0x002C9F00
+		// Token: 0x06013261 RID: 78433 RVA: 0x002CA63C File Offset: 0x002C883C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013347 RID: 78663 RVA: 0x002CBD88 File Offset: 0x002C9F88
+		// Token: 0x06013262 RID: 78434 RVA: 0x002CA6C4 File Offset: 0x002C88C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -255,7 +255,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013348 RID: 78664 RVA: 0x002CBE0C File Offset: 0x002CA00C
+		// Token: 0x06013263 RID: 78435 RVA: 0x002CA748 File Offset: 0x002C8948
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PublicBabelTowerChallengeInfo other)
@@ -280,7 +280,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013349 RID: 78665 RVA: 0x002CBE81 File Offset: 0x002CA081
+		// Token: 0x06013264 RID: 78436 RVA: 0x002CA7BD File Offset: 0x002C89BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -288,7 +288,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601334A RID: 78666 RVA: 0x002CBE8C File Offset: 0x002CA08C
+		// Token: 0x06013265 RID: 78437 RVA: 0x002CA7C8 File Offset: 0x002C89C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -330,37 +330,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400762C RID: 30252
+		// Token: 0x04007656 RID: 30294
 		private static readonly MessageParser<PublicBabelTowerChallengeInfo> _parser = new MessageParser<PublicBabelTowerChallengeInfo>(() => new PublicBabelTowerChallengeInfo());
 
-		// Token: 0x0400762D RID: 30253
+		// Token: 0x04007657 RID: 30295
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400762E RID: 30254
+		// Token: 0x04007658 RID: 30296
 		public const int ChallengeIdFieldNumber = 1;
 
-		// Token: 0x0400762F RID: 30255
+		// Token: 0x04007659 RID: 30297
 		private int challengeId_;
 
-		// Token: 0x04007630 RID: 30256
+		// Token: 0x0400765A RID: 30298
 		public const int StarFieldNumber = 2;
 
-		// Token: 0x04007631 RID: 30257
+		// Token: 0x0400765B RID: 30299
 		private int star_;
 
-		// Token: 0x04007632 RID: 30258
+		// Token: 0x0400765C RID: 30300
 		public const int UseTimeFieldNumber = 3;
 
-		// Token: 0x04007633 RID: 30259
+		// Token: 0x0400765D RID: 30301
 		private int useTime_;
 
-		// Token: 0x04007634 RID: 30260
+		// Token: 0x0400765E RID: 30302
 		public const int BabelPassRoleInfosFieldNumber = 4;
 
-		// Token: 0x04007635 RID: 30261
+		// Token: 0x0400765F RID: 30303
 		private static readonly FieldCodec<BabelPassRoleInfo> _repeated_babelPassRoleInfos_codec = FieldCodec.ForMessage<BabelPassRoleInfo>(34U, BabelPassRoleInfo.Parser);
 
-		// Token: 0x04007636 RID: 30262
+		// Token: 0x04007660 RID: 30304
 		private readonly RepeatedField<BabelPassRoleInfo> babelPassRoleInfos_ = new RepeatedField<BabelPassRoleInfo>();
 	}
 }

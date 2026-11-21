@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000926 RID: 2342
+	// Token: 0x020009D3 RID: 2515
 	public static class EDragHintTypeExtensions
 	{
-		// Token: 0x060034DC RID: 13532 RVA: 0x0008A304 File Offset: 0x00088504
+		// Token: 0x06003848 RID: 14408 RVA: 0x00091E84 File Offset: 0x00090084
 		public static string ToEnumString(this EDragHintType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034DD RID: 13533 RVA: 0x0008A34C File Offset: 0x0008854C
+		// Token: 0x06003849 RID: 14409 RVA: 0x00091ECC File Offset: 0x000900CC
 		public static EDragHintType FromString(string name)
 		{
 			EDragHintType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034DE RID: 13534 RVA: 0x0008A378 File Offset: 0x00088578
+		// Token: 0x0600384A RID: 14410 RVA: 0x00091EF8 File Offset: 0x000900F8
 		public static bool TryFromString(string name, out EDragHintType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060034DF RID: 13535 RVA: 0x0008A3CE File Offset: 0x000885CE
+		// Token: 0x0600384B RID: 14411 RVA: 0x00091F4E File Offset: 0x0009014E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034E0 RID: 13536 RVA: 0x0008A3EE File Offset: 0x000885EE
+		// Token: 0x0600384C RID: 14412 RVA: 0x00091F6E File Offset: 0x0009016E
 		public static EDragHintType[] GetValues()
 		{
 			return new EDragHintType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034E1 RID: 13537 RVA: 0x0008A3FE File Offset: 0x000885FE
+		// Token: 0x0600384D RID: 14413 RVA: 0x00091F7E File Offset: 0x0009017E
 		public static string[] GetNames()
 		{
 			return new string[]

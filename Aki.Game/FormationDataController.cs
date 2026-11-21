@@ -12,14 +12,14 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using Google.Protobuf;
 
-// Token: 0x02000F0C RID: 3852
+// Token: 0x020003C1 RID: 961
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class FormationDataController : ControllerBase
 {
-	// Token: 0x1700078E RID: 1934
-	// (get) Token: 0x060060D5 RID: 24789 RVA: 0x0012E2B3 File Offset: 0x0012C4B3
+	// Token: 0x170007B0 RID: 1968
+	// (get) Token: 0x0600346D RID: 13421 RVA: 0x00136BD7 File Offset: 0x00134DD7
 	[Nullable(2)]
 	protected FormationDataModel Model
 	{
@@ -30,7 +30,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060D6 RID: 24790 RVA: 0x0012E2BA File Offset: 0x0012C4BA
+	// Token: 0x0600346E RID: 13422 RVA: 0x00136BDE File Offset: 0x00134DDE
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.PlayerFollowerNotify, new Action<IMessage, Net.CallbackStatus>(this.PlayerFollowerNotify));
@@ -38,7 +38,7 @@ public class FormationDataController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060060D7 RID: 24791 RVA: 0x0012E2F5 File Offset: 0x0012C4F5
+	// Token: 0x0600346F RID: 13423 RVA: 0x00136C19 File Offset: 0x00134E19
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PlayerFollowerNotify);
@@ -46,7 +46,7 @@ public class FormationDataController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060060D8 RID: 24792 RVA: 0x0012E324 File Offset: 0x0012C524
+	// Token: 0x06003470 RID: 13424 RVA: 0x00136C48 File Offset: 0x00134E48
 	protected override void OnTick(float deltaTime)
 	{
 		this.RefreshFightState();
@@ -58,29 +58,29 @@ public class FormationDataController : ControllerBase
 		model.RefreshOnLandPosition();
 	}
 
-	// Token: 0x060060D9 RID: 24793 RVA: 0x0012E33C File Offset: 0x0012C53C
+	// Token: 0x06003471 RID: 13425 RVA: 0x00136C60 File Offset: 0x00134E60
 	protected override bool OnLeaveLevel()
 	{
 		this.NotifyInFight(false);
 		return true;
 	}
 
-	// Token: 0x060060DA RID: 24794 RVA: 0x0012E346 File Offset: 0x0012C546
+	// Token: 0x06003472 RID: 13426 RVA: 0x00136C6A File Offset: 0x00134E6A
 	protected override bool OnChangeMode()
 	{
 		this.NotifyInFight(false);
 		return true;
 	}
 
-	// Token: 0x060060DB RID: 24795 RVA: 0x0012E350 File Offset: 0x0012C550
+	// Token: 0x06003473 RID: 13427 RVA: 0x00136C74 File Offset: 0x00134E74
 	private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		this.RefreshLockEnemyModeTag();
 	}
 
-	// Token: 0x1700078F RID: 1935
-	// (get) Token: 0x060060DC RID: 24796 RVA: 0x0012E358 File Offset: 0x0012C558
-	// (set) Token: 0x060060DD RID: 24797 RVA: 0x0012E360 File Offset: 0x0012C560
+	// Token: 0x170007B1 RID: 1969
+	// (get) Token: 0x06003474 RID: 13428 RVA: 0x00136C7C File Offset: 0x00134E7C
+	// (set) Token: 0x06003475 RID: 13429 RVA: 0x00136C84 File Offset: 0x00134E84
 	public bool GlobalIsInFight
 	{
 		get
@@ -93,7 +93,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060DE RID: 24798 RVA: 0x0012E36C File Offset: 0x0012C56C
+	// Token: 0x06003476 RID: 13430 RVA: 0x00136C90 File Offset: 0x00134E90
 	public void SetTimeDilation(float timeDilation)
 	{
 		foreach (WorldEntity worldEntity in this.PlayerEntityMap.Values)
@@ -105,7 +105,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060DF RID: 24799 RVA: 0x0012E3CC File Offset: 0x0012C5CC
+	// Token: 0x06003477 RID: 13431 RVA: 0x00136CF0 File Offset: 0x00134EF0
 	public void RegisterPlayerEntity(int playerId, WorldEntity entity)
 	{
 		this.PlayerEntityMap[playerId] = entity;
@@ -115,13 +115,13 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060E0 RID: 24800 RVA: 0x0012E3EE File Offset: 0x0012C5EE
+	// Token: 0x06003478 RID: 13432 RVA: 0x00136D12 File Offset: 0x00134F12
 	public void UnRegisterPlayerEntity(int playerId)
 	{
 		this.PlayerEntityMap.Remove(playerId);
 	}
 
-	// Token: 0x060060E1 RID: 24801 RVA: 0x0012E3FD File Offset: 0x0012C5FD
+	// Token: 0x06003479 RID: 13433 RVA: 0x00136D21 File Offset: 0x00134F21
 	[NullableContext(2)]
 	public WorldEntity GetPlayerEntity(int playerId)
 	{
@@ -132,19 +132,19 @@ public class FormationDataController : ControllerBase
 		return this.PlayerEntityMap[playerId];
 	}
 
-	// Token: 0x060060E2 RID: 24802 RVA: 0x0012E41B File Offset: 0x0012C61B
+	// Token: 0x0600347A RID: 13434 RVA: 0x00136D3F File Offset: 0x00134F3F
 	public void RefreshPlayerEntities()
 	{
 		this.PlayerEntityMap.Clear();
 	}
 
-	// Token: 0x060060E3 RID: 24803 RVA: 0x0012E428 File Offset: 0x0012C628
+	// Token: 0x0600347B RID: 13435 RVA: 0x00136D4C File Offset: 0x00134F4C
 	public bool IsPlayerExist(int playerId)
 	{
 		return this.PlayerEntityMap.ContainsKey(playerId);
 	}
 
-	// Token: 0x060060E4 RID: 24804 RVA: 0x0012E438 File Offset: 0x0012C638
+	// Token: 0x0600347C RID: 13436 RVA: 0x00136D5C File Offset: 0x00134F5C
 	[NullableContext(2)]
 	private void PlayerFollowerNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -177,13 +177,13 @@ public class FormationDataController : ControllerBase
 		playerFollowableComponent.UpdatePlayerFollowers(list);
 	}
 
-	// Token: 0x060060E5 RID: 24805 RVA: 0x0012E50C File Offset: 0x0012C70C
+	// Token: 0x0600347D RID: 13437 RVA: 0x00136E30 File Offset: 0x00135030
 	public void MarkAggroDirty()
 	{
 		this.IsAggroDirty = true;
 	}
 
-	// Token: 0x060060E6 RID: 24806 RVA: 0x0012E518 File Offset: 0x0012C718
+	// Token: 0x0600347E RID: 13438 RVA: 0x00136E3C File Offset: 0x0013503C
 	public void RefreshFightState()
 	{
 		if (!this.IsAggroDirty)
@@ -266,7 +266,7 @@ public class FormationDataController : ControllerBase
 		EventSystem.Instance.Emit<IReadOnlyList<int>>(EEventName.OnAggroRemoved, list2);
 	}
 
-	// Token: 0x060060E7 RID: 24807 RVA: 0x0012E7A4 File Offset: 0x0012C9A4
+	// Token: 0x0600347F RID: 13439 RVA: 0x001370C8 File Offset: 0x001352C8
 	public void NotifyInFight(bool isInFight)
 	{
 		Log.Instance.Info(ELogModule.Battle, ELogAuthor.WY, "NotifyInFight: " + isInFight.ToString(), default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -281,7 +281,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060E8 RID: 24808 RVA: 0x0012E80C File Offset: 0x0012CA0C
+	// Token: 0x06003480 RID: 13440 RVA: 0x00137130 File Offset: 0x00135330
 	public void AddPlayerTag(int playerId, int? tagId)
 	{
 		WorldEntity playerEntity = this.GetPlayerEntity(playerId);
@@ -302,7 +302,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060E9 RID: 24809 RVA: 0x0012E868 File Offset: 0x0012CA68
+	// Token: 0x06003481 RID: 13441 RVA: 0x0013718C File Offset: 0x0013538C
 	public void RemovePlayerTag(int playerId, int? tagId)
 	{
 		WorldEntity playerEntity = this.GetPlayerEntity(playerId);
@@ -323,7 +323,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060EA RID: 24810 RVA: 0x0012E8C4 File Offset: 0x0012CAC4
+	// Token: 0x06003482 RID: 13442 RVA: 0x001371E8 File Offset: 0x001353E8
 	public int GetPlayerTagCount(int playerId, int tagId)
 	{
 		WorldEntity playerEntity = this.GetPlayerEntity(playerId);
@@ -345,7 +345,7 @@ public class FormationDataController : ControllerBase
 		return playerTagComponent.GetTagCount(tagId);
 	}
 
-	// Token: 0x060060EB RID: 24811 RVA: 0x0012E924 File Offset: 0x0012CB24
+	// Token: 0x06003483 RID: 13443 RVA: 0x00137248 File Offset: 0x00135448
 	public bool HasPlayerTag(int playerId, int tagId, bool checkInTagContainer = false)
 	{
 		WorldEntity playerEntity = this.GetPlayerEntity(playerId);
@@ -363,21 +363,21 @@ public class FormationDataController : ControllerBase
 		return (checkInTagContainer && playerTagComponent != null && playerTagComponent.TagContainerHasTag(tagId)) || (playerTagComponent != null && playerTagComponent.HasTag(tagId));
 	}
 
-	// Token: 0x060060EC RID: 24812 RVA: 0x0012E993 File Offset: 0x0012CB93
+	// Token: 0x06003484 RID: 13444 RVA: 0x001372B7 File Offset: 0x001354B7
 	public void SetKeyboardLockEnemyMode(ELockEnemyMode value)
 	{
 		FormationDataModel.Instance.KeyboardLockEnemyMode = value;
 		this.RefreshLockEnemyModeTag();
 	}
 
-	// Token: 0x060060ED RID: 24813 RVA: 0x0012E9A6 File Offset: 0x0012CBA6
+	// Token: 0x06003485 RID: 13445 RVA: 0x001372CA File Offset: 0x001354CA
 	public void SetGamepadLockEnemyMode(ELockEnemyMode value)
 	{
 		FormationDataModel.Instance.GamepadLockEnemyMode = value;
 		this.RefreshLockEnemyModeTag();
 	}
 
-	// Token: 0x060060EE RID: 24814 RVA: 0x0012E9BC File Offset: 0x0012CBBC
+	// Token: 0x06003486 RID: 13446 RVA: 0x001372E0 File Offset: 0x001354E0
 	private void RefreshLockEnemyModeTag()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -416,14 +416,14 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060EF RID: 24815 RVA: 0x0012EA73 File Offset: 0x0012CC73
+	// Token: 0x06003487 RID: 13447 RVA: 0x00137397 File Offset: 0x00135597
 	public bool IsBattleMulti()
 	{
 		return (GameModeController.Instance.IsInInstance() ? SceneTeamModel.Instance.GetTeamPlayerSize() : OnlineModel.Instance.GetAllWorldTeamPlayerLength()) > 1;
 	}
 
-	// Token: 0x17000790 RID: 1936
-	// (get) Token: 0x060060F0 RID: 24816 RVA: 0x0012EA9A File Offset: 0x0012CC9A
+	// Token: 0x170007B2 RID: 1970
+	// (get) Token: 0x06003488 RID: 13448 RVA: 0x001373BE File Offset: 0x001355BE
 	public static FormationDataController Instance
 	{
 		get
@@ -432,7 +432,7 @@ public class FormationDataController : ControllerBase
 		}
 	}
 
-	// Token: 0x060060F1 RID: 24817 RVA: 0x0012EAA1 File Offset: 0x0012CCA1
+	// Token: 0x06003489 RID: 13449 RVA: 0x001373C5 File Offset: 0x001355C5
 	public static FormationDataController GetOrCreateInstance()
 	{
 		if (FormationDataController._Instance == null)
@@ -442,7 +442,7 @@ public class FormationDataController : ControllerBase
 		return FormationDataController._Instance;
 	}
 
-	// Token: 0x060060F2 RID: 24818 RVA: 0x0012EAB5 File Offset: 0x0012CCB5
+	// Token: 0x0600348A RID: 13450 RVA: 0x001373D9 File Offset: 0x001355D9
 	public static bool CreateInstance()
 	{
 		if (FormationDataController._Instance != null)
@@ -453,39 +453,39 @@ public class FormationDataController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060060F3 RID: 24819 RVA: 0x0012EACB File Offset: 0x0012CCCB
+	// Token: 0x0600348B RID: 13451 RVA: 0x001373EF File Offset: 0x001355EF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060060F4 RID: 24820 RVA: 0x0012EACD File Offset: 0x0012CCCD
+	// Token: 0x0600348C RID: 13452 RVA: 0x001373F1 File Offset: 0x001355F1
 	public static void ResetStaticDefaultValue()
 	{
 		FormationDataController._Instance = null;
 	}
 
-	// Token: 0x060060F5 RID: 24821 RVA: 0x0012EAD5 File Offset: 0x0012CCD5
+	// Token: 0x0600348D RID: 13453 RVA: 0x001373F9 File Offset: 0x001355F9
 	static FormationDataController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationDataController.CreateStaticDefaultValue), new Action(FormationDataController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002C2E RID: 11310
+	// Token: 0x04002CC7 RID: 11463
 	private readonly Dictionary<int, WorldEntity> PlayerEntityMap = new Dictionary<int, WorldEntity>();
 
-	// Token: 0x04002C2F RID: 11311
+	// Token: 0x04002CC8 RID: 11464
 	private readonly int[] AddList = new int[0];
 
-	// Token: 0x04002C30 RID: 11312
+	// Token: 0x04002CC9 RID: 11465
 	private readonly int[] RemoveList = new int[0];
 
-	// Token: 0x04002C31 RID: 11313
+	// Token: 0x04002CCA RID: 11466
 	private bool IsAggroDirty;
 
-	// Token: 0x04002C32 RID: 11314
+	// Token: 0x04002CCB RID: 11467
 	private bool IsInFight;
 
-	// Token: 0x04002C33 RID: 11315
+	// Token: 0x04002CCC RID: 11468
 	[Nullable(2)]
 	private static FormationDataController _Instance;
 }

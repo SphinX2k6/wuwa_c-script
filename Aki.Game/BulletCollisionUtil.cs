@@ -11,18 +11,18 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002DE0 RID: 11744
+// Token: 0x0200233B RID: 9019
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletCollisionUtil : IStaticVariableResetter
 {
-	// Token: 0x06018A5E RID: 100958 RVA: 0x0064FB44 File Offset: 0x0064DD44
+	// Token: 0x0601630B RID: 90891 RVA: 0x00675C80 File Offset: 0x00673E80
 	static BulletCollisionUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletCollisionUtil.CreateStaticDefaultValue), new Action(BulletCollisionUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06018A5F RID: 100959 RVA: 0x0064FBFC File Offset: 0x0064DDFC
+	// Token: 0x0601630C RID: 90892 RVA: 0x00675D38 File Offset: 0x00673F38
 	public static void UpdateCollisionExtend(global::EBulletShape shape, UPrimitiveComponent collisionComponent, Vector size, Vector centerLocalLocation, Rotator compRotator)
 	{
 		switch (shape)
@@ -52,7 +52,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A60 RID: 100960 RVA: 0x0064FCC0 File Offset: 0x0064DEC0
+	// Token: 0x0601630D RID: 90893 RVA: 0x00675DFC File Offset: 0x00673FFC
 	public static void UpdateRegionExtend(global::EBulletShape shape, UKuroRegionShapeComponent regionComponent, Vector size)
 	{
 		switch (shape)
@@ -83,7 +83,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A61 RID: 100961 RVA: 0x0064FD58 File Offset: 0x0064DF58
+	// Token: 0x0601630E RID: 90894 RVA: 0x00675E94 File Offset: 0x00674094
 	public static Vector GetSectorExtent(Vector size, Vector centerLocalLocation)
 	{
 		BulletCollisionUtil.CollisionLocalLocation.FromUeVector(centerLocalLocation);
@@ -102,7 +102,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return vector;
 	}
 
-	// Token: 0x06018A62 RID: 100962 RVA: 0x0064FE68 File Offset: 0x0064E068
+	// Token: 0x0601630F RID: 90895 RVA: 0x00675FA4 File Offset: 0x006741A4
 	public static void ShowBulletDeBugDraw(BulletInfo bulletInfo)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.GameInstance, bulletInfo.ActorComponent.ActorLocation, 10f, 12, new FLinearColor?(ColorUtils.LinearRed), 0f, 0f);
@@ -305,7 +305,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A63 RID: 100963 RVA: 0x006507C0 File Offset: 0x0064E9C0
+	// Token: 0x06016310 RID: 90896 RVA: 0x006768FC File Offset: 0x00674AFC
 	public static void EntityLeave(BulletInfo bulletInfo, BulletHitActorData hitActorData)
 	{
 		EntityHandle entityHandle = hitActorData.EntityHandle;
@@ -381,7 +381,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A64 RID: 100964 RVA: 0x0065093C File Offset: 0x0064EB3C
+	// Token: 0x06016311 RID: 90897 RVA: 0x00676A78 File Offset: 0x00674C78
 	public static void EntityEnter(BulletInfo bulletInfo, Entity entity)
 	{
 		int[] tagIdOnVictimEnter = bulletInfo.BulletDataMain.Execution.TagIdOnVictimEnter;
@@ -403,7 +403,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A65 RID: 100965 RVA: 0x006509A0 File Offset: 0x0064EBA0
+	// Token: 0x06016312 RID: 90898 RVA: 0x00676ADC File Offset: 0x00674CDC
 	private static void CharacterLeaveBulletUseBuff(BulletInfo bulletInfo, Entity entity, bool isRoleAndCtrlByMe)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -442,8 +442,8 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170021BD RID: 8637
-	// (get) Token: 0x06018A66 RID: 100966 RVA: 0x00650A84 File Offset: 0x0064EC84
+	// Token: 0x17002219 RID: 8729
+	// (get) Token: 0x06016313 RID: 90899 RVA: 0x00676BC0 File Offset: 0x00674DC0
 	private static Dictionary<FName, EHitEffectType> OnHitEffectMap
 	{
 		get
@@ -452,7 +452,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A67 RID: 100967 RVA: 0x00650A8C File Offset: 0x0064EC8C
+	// Token: 0x06016314 RID: 90900 RVA: 0x00676BC8 File Offset: 0x00674DC8
 	[NullableContext(2)]
 	[return: Nullable(1)]
 	public static Dictionary<FName, EHitEffectType> GetHitEffects([Nullable(1)] CharacterActorComponent victimActorComp, [Nullable(1)] BulletDataRender renderConf, bool isWeakness, string boneName, bool hasDamageId, bool enablePartHitAudio, CharacterHitComponent victimHitComp = null, BaseTagComponent victimTagComp = null, Entity attackEntity = null)
@@ -522,7 +522,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return BulletCollisionUtil.OnHitEffectMap;
 	}
 
-	// Token: 0x06018A68 RID: 100968 RVA: 0x00650D04 File Offset: 0x0064EF04
+	// Token: 0x06016315 RID: 90901 RVA: 0x00676E40 File Offset: 0x00675040
 	[NullableContext(2)]
 	private static FName GetSrcEffectOnHitPath([Nullable(1)] BulletDataRender renderConf, bool isWeakness, BaseTagComponent victimTagComp = null, Entity attackEntity = null)
 	{
@@ -548,7 +548,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return renderConf.EffectOnHit.GetValueOrDefault(EBulletHitEffect.碰撞单位触发, default(FName));
 	}
 
-	// Token: 0x06018A69 RID: 100969 RVA: 0x00650DCC File Offset: 0x0064EFCC
+	// Token: 0x06016316 RID: 90902 RVA: 0x00676F08 File Offset: 0x00675108
 	private static FName? ReplaceBulletHitEffect(FName? srcPath, FName? replacePath)
 	{
 		if (srcPath == null || srcPath.Value.IsNone())
@@ -562,7 +562,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return srcPath;
 	}
 
-	// Token: 0x06018A6A RID: 100970 RVA: 0x00650E1C File Offset: 0x0064F01C
+	// Token: 0x06016317 RID: 90903 RVA: 0x00676F58 File Offset: 0x00675158
 	private static FName? ReplacePartHitEffect(FName? srcPath, FName? replacePath, bool isIgnore)
 	{
 		if (!isIgnore && replacePath != null && !replacePath.Value.IsNone())
@@ -576,7 +576,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06018A6B RID: 100971 RVA: 0x00650E70 File Offset: 0x0064F070
+	// Token: 0x06016318 RID: 90904 RVA: 0x00676FAC File Offset: 0x006751AC
 	public static void PlayHitEffect(BulletInfo bulletInfo, CharacterActorComponent victimActorComp, string boneName, bool isWeakness, Vector impactPoint, Rotator hitRotator, [Nullable(2)] CharacterHitComponent victimHitComp = null)
 	{
 		BulletDataMain bulletDataMain = bulletInfo.BulletDataMain;
@@ -708,7 +708,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A6C RID: 100972 RVA: 0x00651204 File Offset: 0x0064F404
+	// Token: 0x06016319 RID: 90905 RVA: 0x00677340 File Offset: 0x00675540
 	public static void PlayHitMesh(BulletInfo bulletInfo, Entity hitEntity, FName? hitPart, Vector impactPoint, Rotator hitRotator)
 	{
 		FName valueOrDefault = bulletInfo.BulletDataMain.Render.EffectOnHit.GetValueOrDefault(EBulletHitEffect.命中处插箭, default(FName));
@@ -730,7 +730,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		charRenderingComponent.AddHitMeshInfoByPath(valueOrDefault.ToString(), hitPart, impactPoint, hitRotator);
 	}
 
-	// Token: 0x06018A6D RID: 100973 RVA: 0x0065127C File Offset: 0x0064F47C
+	// Token: 0x0601631A RID: 90906 RVA: 0x006773B8 File Offset: 0x006755B8
 	private static void ClampImpactPointHigh(BulletInfo bulletInfo, Vector2D limit, Vector impactPoint)
 	{
 		CharacterMoveComponent attackerMoveComp = bulletInfo.AttackerMoveComp;
@@ -761,7 +761,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		BulletPool.RecycleVector(vector);
 	}
 
-	// Token: 0x06018A6E RID: 100974 RVA: 0x00651364 File Offset: 0x0064F564
+	// Token: 0x0601631B RID: 90907 RVA: 0x006774A0 File Offset: 0x006756A0
 	public static void PlaySceneItemHitEffect(Entity attacker, string effect, FTransformDouble transform, string audioOnHit, bool disablePostProcess)
 	{
 		Dictionary<string, Queue<int>> dictionary;
@@ -825,7 +825,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A6F RID: 100975 RVA: 0x006514B8 File Offset: 0x0064F6B8
+	// Token: 0x0601631C RID: 90908 RVA: 0x006775F4 File Offset: 0x006757F4
 	public static void PlayVehicleHitEffect(BulletInfo bulletInfo, Vector impactPoint, Rotator hitRotator)
 	{
 		BulletCollisionUtil.<>c__DisplayClass22_0 CS$<>8__locals1 = new BulletCollisionUtil.<>c__DisplayClass22_0();
@@ -916,7 +916,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A70 RID: 100976 RVA: 0x00651704 File Offset: 0x0064F904
+	// Token: 0x0601631D RID: 90909 RVA: 0x00677840 File Offset: 0x00675A40
 	public static float CalcPartDistance(UPrimitiveComponent partComp, BulletInfo bulletInfo)
 	{
 		Vector vector = BulletPool.CreateVector(false);
@@ -931,7 +931,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return (float)num;
 	}
 
-	// Token: 0x06018A71 RID: 100977 RVA: 0x00651768 File Offset: 0x0064F968
+	// Token: 0x0601631E RID: 90910 RVA: 0x006778A4 File Offset: 0x00675AA4
 	public unsafe static void GetImpactPointCharacter(UPrimitiveComponent partComp, BulletInfo bulletInfo, Vector outPoint)
 	{
 		UCapsuleComponent ucapsuleComponent = partComp as UCapsuleComponent;
@@ -982,7 +982,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		outPoint.FromUeVector(bulletInfo.GetActorLocation());
 	}
 
-	// Token: 0x06018A72 RID: 100978 RVA: 0x00651950 File Offset: 0x0064FB50
+	// Token: 0x0601631F RID: 90911 RVA: 0x00677A8C File Offset: 0x00675C8C
 	public unsafe static void GetHitPointBoxComp(UBoxComponent comp, BulletInfo bulletInfo, Vector outPoint, [Nullable(2)] Vector startLocation = null)
 	{
 		Transform transformPart = BulletCollisionUtil.TransformPart;
@@ -1028,7 +1028,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A73 RID: 100979 RVA: 0x00651B10 File Offset: 0x0064FD10
+	// Token: 0x06016320 RID: 90912 RVA: 0x00677C4C File Offset: 0x00675E4C
 	private static int GetHitPointRayWithAabb(Vector p, Vector d, float[] min, float[] max, Vector q)
 	{
 		float num = 0f;
@@ -1072,7 +1072,7 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		return 1;
 	}
 
-	// Token: 0x06018A74 RID: 100980 RVA: 0x00651BE0 File Offset: 0x0064FDE0
+	// Token: 0x06016321 RID: 90913 RVA: 0x00677D1C File Offset: 0x00675F1C
 	public static void GetImpactPointSceneItem(UPrimitiveComponent collision, BulletInfo bulletInfo, Vector outPoint)
 	{
 		Vector vector = BulletPool.CreateVector(false);
@@ -1110,63 +1110,63 @@ public class BulletCollisionUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018A75 RID: 100981 RVA: 0x00651D20 File Offset: 0x0064FF20
+	// Token: 0x06016322 RID: 90914 RVA: 0x00677E5C File Offset: 0x0067605C
 	public static void CreateStaticDefaultValue()
 	{
 		BulletCollisionUtil._onHitEffectMap = new Dictionary<FName, EHitEffectType>();
 	}
 
-	// Token: 0x06018A76 RID: 100982 RVA: 0x00651D2C File Offset: 0x0064FF2C
+	// Token: 0x06016323 RID: 90915 RVA: 0x00677E68 File Offset: 0x00676068
 	public static void ResetStaticDefaultValue()
 	{
 		BulletCollisionUtil._onHitEffectMap = null;
 	}
 
-	// Token: 0x0400B7AA RID: 47018
+	// Token: 0x0400BB30 RID: 47920
 	[StaticVariableRuleIgnore]
 	private static readonly Vector CollisionLocalLocation = Vector.Create();
 
-	// Token: 0x0400B7AB RID: 47019
+	// Token: 0x0400BB31 RID: 47921
 	[Nullable(2)]
 	private static Dictionary<FName, EHitEffectType> _onHitEffectMap;
 
-	// Token: 0x0400B7AC RID: 47020
+	// Token: 0x0400BB32 RID: 47922
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PlayHitEffectStat = Stat.Create("PlayHitEffect", "", "");
 
-	// Token: 0x0400B7AD RID: 47021
+	// Token: 0x0400BB33 RID: 47923
 	[StaticVariableRuleIgnore]
 	private static readonly Transform HitEffectTransform = Transform.Create();
 
-	// Token: 0x0400B7AE RID: 47022
+	// Token: 0x0400BB34 RID: 47924
 	[StaticVariableRuleIgnore]
 	private static readonly Vector PartPos = Vector.Create();
 
-	// Token: 0x0400B7AF RID: 47023
+	// Token: 0x0400BB35 RID: 47925
 	[StaticVariableRuleIgnore]
 	private static readonly Vector PartToBullet = Vector.Create();
 
-	// Token: 0x0400B7B0 RID: 47024
+	// Token: 0x0400BB36 RID: 47926
 	[StaticVariableRuleIgnore]
 	private static readonly Vector ProjectToBullet = Vector.Create();
 
-	// Token: 0x0400B7B1 RID: 47025
+	// Token: 0x0400BB37 RID: 47927
 	[StaticVariableRuleIgnore]
 	private static readonly Transform TransformPart = Transform.Create();
 
-	// Token: 0x0400B7B2 RID: 47026
+	// Token: 0x0400BB38 RID: 47928
 	[StaticVariableRuleIgnore]
 	private static readonly Vector RayStartLocal = Vector.Create();
 
-	// Token: 0x0400B7B3 RID: 47027
+	// Token: 0x0400BB39 RID: 47929
 	[StaticVariableRuleIgnore]
 	private static readonly Vector RayDir = Vector.Create();
 
-	// Token: 0x0400B7B4 RID: 47028
+	// Token: 0x0400BB3A RID: 47930
 	[StaticVariableRuleIgnore]
 	private static readonly Vector OutPosLocal = Vector.Create();
 
-	// Token: 0x0400B7B5 RID: 47029
+	// Token: 0x0400BB3B RID: 47931
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatGetHitPointBoxComp = Stat.Create("GetHitPointBoxComp", "", "");
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomInteract
 {
-	// Token: 0x020050FF RID: 20735
+	// Token: 0x020040CF RID: 16591
 	internal enum EGridComp
 	{
-		// Token: 0x0401C38A RID: 115594
+		// Token: 0x04016DBD RID: 93629
 		SpriteBg,
-		// Token: 0x0401C38B RID: 115595
+		// Token: 0x04016DBE RID: 93630
 		TextureIcon
 	}
 }

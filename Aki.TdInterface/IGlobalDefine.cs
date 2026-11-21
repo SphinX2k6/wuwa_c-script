@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000006 RID: 6
+// Token: 0x02000007 RID: 7
 [NullableContext(1)]
 [Nullable(0)]
 public static class IGlobalDefine
 {
-	// Token: 0x06000005 RID: 5 RVA: 0x00012D28 File Offset: 0x00010F28
+	// Token: 0x06000006 RID: 6 RVA: 0x00013628 File Offset: 0x00011828
 	public static IGlobalDefine.IGlobalConfig GetGlobalConfig()
 	{
 		return new IGlobalDefine.IGlobalConfig
@@ -110,7 +110,7 @@ public static class IGlobalDefine
 		};
 	}
 
-	// Token: 0x04000009 RID: 9
+	// Token: 0x0400000B RID: 11
 	public static readonly IGlobalDefine.IGlobalConfig globalConfigTemp = new IGlobalDefine.IGlobalConfig
 	{
 		ActionConfigPath = "Content/Data/Json/Action.json",
@@ -207,1079 +207,1079 @@ public static class IGlobalDefine
 		RecallEntityConfigPath = "Content/Aki/UniverseEditorConfig/Json/RecallEntityConfig.json"
 	};
 
-	// Token: 0x0400000A RID: 10
+	// Token: 0x0400000C RID: 12
 	public static readonly IGlobalDefine.IGlobalConfig globalConfig = IGlobalDefine.GetGlobalConfig();
 
-	// Token: 0x0200781A RID: 30746
+	// Token: 0x0200805E RID: 32862
 	[Nullable(0)]
 	public class IGlobalConfig
 	{
-		// Token: 0x1700E6FF RID: 59135
-		// (get) Token: 0x06037BF3 RID: 228339 RVA: 0x0078918C File Offset: 0x0078738C
-		// (set) Token: 0x06037BF4 RID: 228340 RVA: 0x00789194 File Offset: 0x00787394
+		// Token: 0x1700F361 RID: 62305
+		// (get) Token: 0x0603B1B0 RID: 242096 RVA: 0x007EED04 File Offset: 0x007ECF04
+		// (set) Token: 0x0603B1B1 RID: 242097 RVA: 0x007EED0C File Offset: 0x007ECF0C
 		public string ActionConfigPath { get; set; }
 
-		// Token: 0x1700E700 RID: 59136
-		// (get) Token: 0x06037BF5 RID: 228341 RVA: 0x0078919D File Offset: 0x0078739D
-		// (set) Token: 0x06037BF6 RID: 228342 RVA: 0x007891A5 File Offset: 0x007873A5
+		// Token: 0x1700F362 RID: 62306
+		// (get) Token: 0x0603B1B2 RID: 242098 RVA: 0x007EED15 File Offset: 0x007ECF15
+		// (set) Token: 0x0603B1B3 RID: 242099 RVA: 0x007EED1D File Offset: 0x007ECF1D
 		public string ComponentConfigPath { get; set; }
 
-		// Token: 0x1700E701 RID: 59137
-		// (get) Token: 0x06037BF7 RID: 228343 RVA: 0x007891AE File Offset: 0x007873AE
-		// (set) Token: 0x06037BF8 RID: 228344 RVA: 0x007891B6 File Offset: 0x007873B6
+		// Token: 0x1700F363 RID: 62307
+		// (get) Token: 0x0603B1B4 RID: 242100 RVA: 0x007EED26 File Offset: 0x007ECF26
+		// (set) Token: 0x0603B1B5 RID: 242101 RVA: 0x007EED2E File Offset: 0x007ECF2E
 		public string EntityConfigPath { get; set; }
 
-		// Token: 0x1700E702 RID: 59138
-		// (get) Token: 0x06037BF9 RID: 228345 RVA: 0x007891BF File Offset: 0x007873BF
-		// (set) Token: 0x06037BFA RID: 228346 RVA: 0x007891C7 File Offset: 0x007873C7
+		// Token: 0x1700F364 RID: 62308
+		// (get) Token: 0x0603B1B6 RID: 242102 RVA: 0x007EED37 File Offset: 0x007ECF37
+		// (set) Token: 0x0603B1B7 RID: 242103 RVA: 0x007EED3F File Offset: 0x007ECF3F
 		public string BlueprintConfigPath { get; set; }
 
-		// Token: 0x1700E703 RID: 59139
-		// (get) Token: 0x06037BFB RID: 228347 RVA: 0x007891D0 File Offset: 0x007873D0
-		// (set) Token: 0x06037BFC RID: 228348 RVA: 0x007891D8 File Offset: 0x007873D8
+		// Token: 0x1700F365 RID: 62309
+		// (get) Token: 0x0603B1B8 RID: 242104 RVA: 0x007EED48 File Offset: 0x007ECF48
+		// (set) Token: 0x0603B1B9 RID: 242105 RVA: 0x007EED50 File Offset: 0x007ECF50
 		public string LevelsConfigPath { get; set; }
 
-		// Token: 0x1700E704 RID: 59140
-		// (get) Token: 0x06037BFD RID: 228349 RVA: 0x007891E1 File Offset: 0x007873E1
-		// (set) Token: 0x06037BFE RID: 228350 RVA: 0x007891E9 File Offset: 0x007873E9
+		// Token: 0x1700F366 RID: 62310
+		// (get) Token: 0x0603B1BA RID: 242106 RVA: 0x007EED59 File Offset: 0x007ECF59
+		// (set) Token: 0x0603B1BB RID: 242107 RVA: 0x007EED61 File Offset: 0x007ECF61
 		public string SubWpMapConfigPath { get; set; }
 
-		// Token: 0x1700E705 RID: 59141
-		// (get) Token: 0x06037BFF RID: 228351 RVA: 0x007891F2 File Offset: 0x007873F2
-		// (set) Token: 0x06037C00 RID: 228352 RVA: 0x007891FA File Offset: 0x007873FA
+		// Token: 0x1700F367 RID: 62311
+		// (get) Token: 0x0603B1BC RID: 242108 RVA: 0x007EED6A File Offset: 0x007ECF6A
+		// (set) Token: 0x0603B1BD RID: 242109 RVA: 0x007EED72 File Offset: 0x007ECF72
 		public string LevelsDir { get; set; }
 
-		// Token: 0x1700E706 RID: 59142
-		// (get) Token: 0x06037C01 RID: 228353 RVA: 0x00789203 File Offset: 0x00787403
-		// (set) Token: 0x06037C02 RID: 228354 RVA: 0x0078920B File Offset: 0x0078740B
+		// Token: 0x1700F368 RID: 62312
+		// (get) Token: 0x0603B1BE RID: 242110 RVA: 0x007EED7B File Offset: 0x007ECF7B
+		// (set) Token: 0x0603B1BF RID: 242111 RVA: 0x007EED83 File Offset: 0x007ECF83
 		public string LevelsDataDir { get; set; }
 
-		// Token: 0x1700E707 RID: 59143
-		// (get) Token: 0x06037C03 RID: 228355 RVA: 0x00789214 File Offset: 0x00787414
-		// (set) Token: 0x06037C04 RID: 228356 RVA: 0x0078921C File Offset: 0x0078741C
+		// Token: 0x1700F369 RID: 62313
+		// (get) Token: 0x0603B1C0 RID: 242112 RVA: 0x007EED8C File Offset: 0x007ECF8C
+		// (set) Token: 0x0603B1C1 RID: 242113 RVA: 0x007EED94 File Offset: 0x007ECF94
 		public string TemplateDir { get; set; }
 
-		// Token: 0x1700E708 RID: 59144
-		// (get) Token: 0x06037C05 RID: 228357 RVA: 0x00789225 File Offset: 0x00787425
-		// (set) Token: 0x06037C06 RID: 228358 RVA: 0x0078922D File Offset: 0x0078742D
+		// Token: 0x1700F36A RID: 62314
+		// (get) Token: 0x0603B1C2 RID: 242114 RVA: 0x007EED9D File Offset: 0x007ECF9D
+		// (set) Token: 0x0603B1C3 RID: 242115 RVA: 0x007EEDA5 File Offset: 0x007ECFA5
 		public string TemplateConfigPath { get; set; }
 
-		// Token: 0x1700E709 RID: 59145
-		// (get) Token: 0x06037C07 RID: 228359 RVA: 0x00789236 File Offset: 0x00787436
-		// (set) Token: 0x06037C08 RID: 228360 RVA: 0x0078923E File Offset: 0x0078743E
+		// Token: 0x1700F36B RID: 62315
+		// (get) Token: 0x0603B1C4 RID: 242116 RVA: 0x007EEDAE File Offset: 0x007ECFAE
+		// (set) Token: 0x0603B1C5 RID: 242117 RVA: 0x007EEDB6 File Offset: 0x007ECFB6
 		public string EntityDataConfigPath { get; set; }
 
-		// Token: 0x1700E70A RID: 59146
-		// (get) Token: 0x06037C09 RID: 228361 RVA: 0x00789247 File Offset: 0x00787447
-		// (set) Token: 0x06037C0A RID: 228362 RVA: 0x0078924F File Offset: 0x0078744F
+		// Token: 0x1700F36C RID: 62316
+		// (get) Token: 0x0603B1C6 RID: 242118 RVA: 0x007EEDBF File Offset: 0x007ECFBF
+		// (set) Token: 0x0603B1C7 RID: 242119 RVA: 0x007EEDC7 File Offset: 0x007ECFC7
 		public string TypeScriptRoot { get; set; }
 
-		// Token: 0x1700E70B RID: 59147
-		// (get) Token: 0x06037C0B RID: 228363 RVA: 0x00789258 File Offset: 0x00787458
-		// (set) Token: 0x06037C0C RID: 228364 RVA: 0x00789260 File Offset: 0x00787460
+		// Token: 0x1700F36D RID: 62317
+		// (get) Token: 0x0603B1C8 RID: 242120 RVA: 0x007EEDD0 File Offset: 0x007ECFD0
+		// (set) Token: 0x0603B1C9 RID: 242121 RVA: 0x007EEDD8 File Offset: 0x007ECFD8
 		public string CsvFileDir { get; set; }
 
-		// Token: 0x1700E70C RID: 59148
-		// (get) Token: 0x06037C0D RID: 228365 RVA: 0x00789269 File Offset: 0x00787469
-		// (set) Token: 0x06037C0E RID: 228366 RVA: 0x00789271 File Offset: 0x00787471
+		// Token: 0x1700F36E RID: 62318
+		// (get) Token: 0x0603B1CA RID: 242122 RVA: 0x007EEDE1 File Offset: 0x007ECFE1
+		// (set) Token: 0x0603B1CB RID: 242123 RVA: 0x007EEDE9 File Offset: 0x007ECFE9
 		public string FlowListDir { get; set; }
 
-		// Token: 0x1700E70D RID: 59149
-		// (get) Token: 0x06037C0F RID: 228367 RVA: 0x0078927A File Offset: 0x0078747A
-		// (set) Token: 0x06037C10 RID: 228368 RVA: 0x00789282 File Offset: 0x00787482
+		// Token: 0x1700F36F RID: 62319
+		// (get) Token: 0x0603B1CC RID: 242124 RVA: 0x007EEDF2 File Offset: 0x007ECFF2
+		// (set) Token: 0x0603B1CD RID: 242125 RVA: 0x007EEDFA File Offset: 0x007ECFFA
 		public string QuestListDir { get; set; }
 
-		// Token: 0x1700E70E RID: 59150
-		// (get) Token: 0x06037C11 RID: 228369 RVA: 0x0078928B File Offset: 0x0078748B
-		// (set) Token: 0x06037C12 RID: 228370 RVA: 0x00789293 File Offset: 0x00787493
+		// Token: 0x1700F370 RID: 62320
+		// (get) Token: 0x0603B1CE RID: 242126 RVA: 0x007EEE03 File Offset: 0x007ED003
+		// (set) Token: 0x0603B1CF RID: 242127 RVA: 0x007EEE0B File Offset: 0x007ED00B
 		public string QuestListExportDir { get; set; }
 
-		// Token: 0x1700E70F RID: 59151
-		// (get) Token: 0x06037C13 RID: 228371 RVA: 0x0078929C File Offset: 0x0078749C
-		// (set) Token: 0x06037C14 RID: 228372 RVA: 0x007892A4 File Offset: 0x007874A4
+		// Token: 0x1700F371 RID: 62321
+		// (get) Token: 0x0603B1D0 RID: 242128 RVA: 0x007EEE14 File Offset: 0x007ED014
+		// (set) Token: 0x0603B1D1 RID: 242129 RVA: 0x007EEE1C File Offset: 0x007ED01C
 		public string EntityStateConfigPath { get; set; }
 
-		// Token: 0x1700E710 RID: 59152
-		// (get) Token: 0x06037C15 RID: 228373 RVA: 0x007892AD File Offset: 0x007874AD
-		// (set) Token: 0x06037C16 RID: 228374 RVA: 0x007892B5 File Offset: 0x007874B5
+		// Token: 0x1700F372 RID: 62322
+		// (get) Token: 0x0603B1D2 RID: 242130 RVA: 0x007EEE25 File Offset: 0x007ED025
+		// (set) Token: 0x0603B1D3 RID: 242131 RVA: 0x007EEE2D File Offset: 0x007ED02D
 		public string EntityOwnerConfigPath { get; set; }
 
-		// Token: 0x1700E711 RID: 59153
-		// (get) Token: 0x06037C17 RID: 228375 RVA: 0x007892BE File Offset: 0x007874BE
-		// (set) Token: 0x06037C18 RID: 228376 RVA: 0x007892C6 File Offset: 0x007874C6
+		// Token: 0x1700F373 RID: 62323
+		// (get) Token: 0x0603B1D4 RID: 242132 RVA: 0x007EEE36 File Offset: 0x007ED036
+		// (set) Token: 0x0603B1D5 RID: 242133 RVA: 0x007EEE3E File Offset: 0x007ED03E
 		public string ChildEntityOwnerConfigPath { get; set; }
 
-		// Token: 0x1700E712 RID: 59154
-		// (get) Token: 0x06037C19 RID: 228377 RVA: 0x007892CF File Offset: 0x007874CF
-		// (set) Token: 0x06037C1A RID: 228378 RVA: 0x007892D7 File Offset: 0x007874D7
+		// Token: 0x1700F374 RID: 62324
+		// (get) Token: 0x0603B1D6 RID: 242134 RVA: 0x007EEE47 File Offset: 0x007ED047
+		// (set) Token: 0x0603B1D7 RID: 242135 RVA: 0x007EEE4F File Offset: 0x007ED04F
 		public string AlwaysLoadEntityConfigPath { get; set; }
 
-		// Token: 0x1700E713 RID: 59155
-		// (get) Token: 0x06037C1B RID: 228379 RVA: 0x007892E0 File Offset: 0x007874E0
-		// (set) Token: 0x06037C1C RID: 228380 RVA: 0x007892E8 File Offset: 0x007874E8
+		// Token: 0x1700F375 RID: 62325
+		// (get) Token: 0x0603B1D8 RID: 242136 RVA: 0x007EEE58 File Offset: 0x007ED058
+		// (set) Token: 0x0603B1D9 RID: 242137 RVA: 0x007EEE60 File Offset: 0x007ED060
 		public string LevelPlayListDir { get; set; }
 
-		// Token: 0x1700E714 RID: 59156
-		// (get) Token: 0x06037C1D RID: 228381 RVA: 0x007892F1 File Offset: 0x007874F1
-		// (set) Token: 0x06037C1E RID: 228382 RVA: 0x007892F9 File Offset: 0x007874F9
+		// Token: 0x1700F376 RID: 62326
+		// (get) Token: 0x0603B1DA RID: 242138 RVA: 0x007EEE69 File Offset: 0x007ED069
+		// (set) Token: 0x0603B1DB RID: 242139 RVA: 0x007EEE71 File Offset: 0x007ED071
 		public string LevelPlayListExportDir { get; set; }
 
-		// Token: 0x1700E715 RID: 59157
-		// (get) Token: 0x06037C1F RID: 228383 RVA: 0x00789302 File Offset: 0x00787502
-		// (set) Token: 0x06037C20 RID: 228384 RVA: 0x0078930A File Offset: 0x0078750A
+		// Token: 0x1700F377 RID: 62327
+		// (get) Token: 0x0603B1DC RID: 242140 RVA: 0x007EEE7A File Offset: 0x007ED07A
+		// (set) Token: 0x0603B1DD RID: 242141 RVA: 0x007EEE82 File Offset: 0x007ED082
 		public string DynamicLevelPlayListExportDir { get; set; }
 
-		// Token: 0x1700E716 RID: 59158
-		// (get) Token: 0x06037C21 RID: 228385 RVA: 0x00789313 File Offset: 0x00787513
-		// (set) Token: 0x06037C22 RID: 228386 RVA: 0x0078931B File Offset: 0x0078751B
+		// Token: 0x1700F378 RID: 62328
+		// (get) Token: 0x0603B1DE RID: 242142 RVA: 0x007EEE8B File Offset: 0x007ED08B
+		// (set) Token: 0x0603B1DF RID: 242143 RVA: 0x007EEE93 File Offset: 0x007ED093
 		public string TwoDimensionLevelListDir { get; set; }
 
-		// Token: 0x1700E717 RID: 59159
-		// (get) Token: 0x06037C23 RID: 228387 RVA: 0x00789324 File Offset: 0x00787524
-		// (set) Token: 0x06037C24 RID: 228388 RVA: 0x0078932C File Offset: 0x0078752C
+		// Token: 0x1700F379 RID: 62329
+		// (get) Token: 0x0603B1E0 RID: 242144 RVA: 0x007EEE9C File Offset: 0x007ED09C
+		// (set) Token: 0x0603B1E1 RID: 242145 RVA: 0x007EEEA4 File Offset: 0x007ED0A4
 		public string DangoBrawlObjectTemplateDir { get; set; }
 
-		// Token: 0x1700E718 RID: 59160
-		// (get) Token: 0x06037C25 RID: 228389 RVA: 0x00789335 File Offset: 0x00787535
-		// (set) Token: 0x06037C26 RID: 228390 RVA: 0x0078933D File Offset: 0x0078753D
+		// Token: 0x1700F37A RID: 62330
+		// (get) Token: 0x0603B1E2 RID: 242146 RVA: 0x007EEEAD File Offset: 0x007ED0AD
+		// (set) Token: 0x0603B1E3 RID: 242147 RVA: 0x007EEEB5 File Offset: 0x007ED0B5
 		public string MarbleLevelConfigPath { get; set; }
 
-		// Token: 0x1700E719 RID: 59161
-		// (get) Token: 0x06037C27 RID: 228391 RVA: 0x00789346 File Offset: 0x00787546
-		// (set) Token: 0x06037C28 RID: 228392 RVA: 0x0078934E File Offset: 0x0078754E
+		// Token: 0x1700F37B RID: 62331
+		// (get) Token: 0x0603B1E4 RID: 242148 RVA: 0x007EEEBE File Offset: 0x007ED0BE
+		// (set) Token: 0x0603B1E5 RID: 242149 RVA: 0x007EEEC6 File Offset: 0x007ED0C6
 		public string DangoBrawlLevelConfigPath { get; set; }
 
-		// Token: 0x1700E71A RID: 59162
-		// (get) Token: 0x06037C29 RID: 228393 RVA: 0x00789357 File Offset: 0x00787557
-		// (set) Token: 0x06037C2A RID: 228394 RVA: 0x0078935F File Offset: 0x0078755F
+		// Token: 0x1700F37C RID: 62332
+		// (get) Token: 0x0603B1E6 RID: 242150 RVA: 0x007EEECF File Offset: 0x007ED0CF
+		// (set) Token: 0x0603B1E7 RID: 242151 RVA: 0x007EEED7 File Offset: 0x007ED0D7
 		public string DangoBrawlObjectTemplateConfigPath { get; set; }
 
-		// Token: 0x1700E71B RID: 59163
-		// (get) Token: 0x06037C2B RID: 228395 RVA: 0x00789368 File Offset: 0x00787568
-		// (set) Token: 0x06037C2C RID: 228396 RVA: 0x00789370 File Offset: 0x00787570
+		// Token: 0x1700F37D RID: 62333
+		// (get) Token: 0x0603B1E8 RID: 242152 RVA: 0x007EEEE0 File Offset: 0x007ED0E0
+		// (set) Token: 0x0603B1E9 RID: 242153 RVA: 0x007EEEE8 File Offset: 0x007ED0E8
 		public string FunctionalTestDir { get; set; }
 
-		// Token: 0x1700E71C RID: 59164
-		// (get) Token: 0x06037C2D RID: 228397 RVA: 0x00789379 File Offset: 0x00787579
-		// (set) Token: 0x06037C2E RID: 228398 RVA: 0x00789381 File Offset: 0x00787581
+		// Token: 0x1700F37E RID: 62334
+		// (get) Token: 0x0603B1EA RID: 242154 RVA: 0x007EEEF1 File Offset: 0x007ED0F1
+		// (set) Token: 0x0603B1EB RID: 242155 RVA: 0x007EEEF9 File Offset: 0x007ED0F9
 		public string FlowTemplateConfigPath { get; set; }
 
-		// Token: 0x1700E71D RID: 59165
-		// (get) Token: 0x06037C2F RID: 228399 RVA: 0x0078938A File Offset: 0x0078758A
-		// (set) Token: 0x06037C30 RID: 228400 RVA: 0x00789392 File Offset: 0x00787592
+		// Token: 0x1700F37F RID: 62335
+		// (get) Token: 0x0603B1EC RID: 242156 RVA: 0x007EEF02 File Offset: 0x007ED102
+		// (set) Token: 0x0603B1ED RID: 242157 RVA: 0x007EEF0A File Offset: 0x007ED10A
 		public string FlowTemplateCameraDir { get; set; }
 
-		// Token: 0x1700E71E RID: 59166
-		// (get) Token: 0x06037C31 RID: 228401 RVA: 0x0078939B File Offset: 0x0078759B
-		// (set) Token: 0x06037C32 RID: 228402 RVA: 0x007893A3 File Offset: 0x007875A3
+		// Token: 0x1700F380 RID: 62336
+		// (get) Token: 0x0603B1EE RID: 242158 RVA: 0x007EEF13 File Offset: 0x007ED113
+		// (set) Token: 0x0603B1EF RID: 242159 RVA: 0x007EEF1B File Offset: 0x007ED11B
 		public string FlowTemplateCameraConfigPath { get; set; }
 
-		// Token: 0x1700E71F RID: 59167
-		// (get) Token: 0x06037C33 RID: 228403 RVA: 0x007893AC File Offset: 0x007875AC
-		// (set) Token: 0x06037C34 RID: 228404 RVA: 0x007893B4 File Offset: 0x007875B4
+		// Token: 0x1700F381 RID: 62337
+		// (get) Token: 0x0603B1F0 RID: 242160 RVA: 0x007EEF24 File Offset: 0x007ED124
+		// (set) Token: 0x0603B1F1 RID: 242161 RVA: 0x007EEF2C File Offset: 0x007ED12C
 		public string FlowTemplateCameraConfgSourcePath { get; set; }
 
-		// Token: 0x1700E720 RID: 59168
-		// (get) Token: 0x06037C35 RID: 228405 RVA: 0x007893BD File Offset: 0x007875BD
-		// (set) Token: 0x06037C36 RID: 228406 RVA: 0x007893C5 File Offset: 0x007875C5
+		// Token: 0x1700F382 RID: 62338
+		// (get) Token: 0x0603B1F2 RID: 242162 RVA: 0x007EEF35 File Offset: 0x007ED135
+		// (set) Token: 0x0603B1F3 RID: 242163 RVA: 0x007EEF3D File Offset: 0x007ED13D
 		public string GlobalVarConfigPath { get; set; }
 
-		// Token: 0x1700E721 RID: 59169
-		// (get) Token: 0x06037C37 RID: 228407 RVA: 0x007893CE File Offset: 0x007875CE
-		// (set) Token: 0x06037C38 RID: 228408 RVA: 0x007893D6 File Offset: 0x007875D6
+		// Token: 0x1700F383 RID: 62339
+		// (get) Token: 0x0603B1F4 RID: 242164 RVA: 0x007EEF46 File Offset: 0x007ED146
+		// (set) Token: 0x0603B1F5 RID: 242165 RVA: 0x007EEF4E File Offset: 0x007ED14E
 		public string SystemVarConfigPath { get; set; }
 
-		// Token: 0x1700E722 RID: 59170
-		// (get) Token: 0x06037C39 RID: 228409 RVA: 0x007893DF File Offset: 0x007875DF
-		// (set) Token: 0x06037C3A RID: 228410 RVA: 0x007893E7 File Offset: 0x007875E7
+		// Token: 0x1700F384 RID: 62340
+		// (get) Token: 0x0603B1F6 RID: 242166 RVA: 0x007EEF57 File Offset: 0x007ED157
+		// (set) Token: 0x0603B1F7 RID: 242167 RVA: 0x007EEF5F File Offset: 0x007ED15F
 		public string VehicleRidingRolesConfigPath { get; set; }
 
-		// Token: 0x1700E723 RID: 59171
-		// (get) Token: 0x06037C3B RID: 228411 RVA: 0x007893F0 File Offset: 0x007875F0
-		// (set) Token: 0x06037C3C RID: 228412 RVA: 0x007893F8 File Offset: 0x007875F8
+		// Token: 0x1700F385 RID: 62341
+		// (get) Token: 0x0603B1F8 RID: 242168 RVA: 0x007EEF68 File Offset: 0x007ED168
+		// (set) Token: 0x0603B1F9 RID: 242169 RVA: 0x007EEF70 File Offset: 0x007ED170
 		public string OccupationConfigPath { get; set; }
 
-		// Token: 0x1700E724 RID: 59172
-		// (get) Token: 0x06037C3D RID: 228413 RVA: 0x00789401 File Offset: 0x00787601
-		// (set) Token: 0x06037C3E RID: 228414 RVA: 0x00789409 File Offset: 0x00787609
+		// Token: 0x1700F386 RID: 62342
+		// (get) Token: 0x0603B1FA RID: 242170 RVA: 0x007EEF79 File Offset: 0x007ED179
+		// (set) Token: 0x0603B1FB RID: 242171 RVA: 0x007EEF81 File Offset: 0x007ED181
 		public string OccupiedExportPath { get; set; }
 
-		// Token: 0x1700E725 RID: 59173
-		// (get) Token: 0x06037C3F RID: 228415 RVA: 0x00789412 File Offset: 0x00787612
-		// (set) Token: 0x06037C40 RID: 228416 RVA: 0x0078941A File Offset: 0x0078761A
+		// Token: 0x1700F387 RID: 62343
+		// (get) Token: 0x0603B1FC RID: 242172 RVA: 0x007EEF8A File Offset: 0x007ED18A
+		// (set) Token: 0x0603B1FD RID: 242173 RVA: 0x007EEF92 File Offset: 0x007ED192
 		public string InteractOptionConfigPath { get; set; }
 
-		// Token: 0x1700E726 RID: 59174
-		// (get) Token: 0x06037C41 RID: 228417 RVA: 0x00789423 File Offset: 0x00787623
-		// (set) Token: 0x06037C42 RID: 228418 RVA: 0x0078942B File Offset: 0x0078762B
+		// Token: 0x1700F388 RID: 62344
+		// (get) Token: 0x0603B1FE RID: 242174 RVA: 0x007EEF9B File Offset: 0x007ED19B
+		// (set) Token: 0x0603B1FF RID: 242175 RVA: 0x007EEFA3 File Offset: 0x007ED1A3
 		public string AreaEntitiesPath { get; set; }
 
-		// Token: 0x1700E727 RID: 59175
-		// (get) Token: 0x06037C43 RID: 228419 RVA: 0x00789434 File Offset: 0x00787634
-		// (set) Token: 0x06037C44 RID: 228420 RVA: 0x0078943C File Offset: 0x0078763C
+		// Token: 0x1700F389 RID: 62345
+		// (get) Token: 0x0603B200 RID: 242176 RVA: 0x007EEFAC File Offset: 0x007ED1AC
+		// (set) Token: 0x0603B201 RID: 242177 RVA: 0x007EEFB4 File Offset: 0x007ED1B4
 		public string BtConfigPath { get; set; }
 
-		// Token: 0x1700E728 RID: 59176
-		// (get) Token: 0x06037C45 RID: 228421 RVA: 0x00789445 File Offset: 0x00787645
-		// (set) Token: 0x06037C46 RID: 228422 RVA: 0x0078944D File Offset: 0x0078764D
+		// Token: 0x1700F38A RID: 62346
+		// (get) Token: 0x0603B202 RID: 242178 RVA: 0x007EEFBD File Offset: 0x007ED1BD
+		// (set) Token: 0x0603B203 RID: 242179 RVA: 0x007EEFC5 File Offset: 0x007ED1C5
 		public string MontageConfigPath { get; set; }
 
-		// Token: 0x1700E729 RID: 59177
-		// (get) Token: 0x06037C47 RID: 228423 RVA: 0x00789456 File Offset: 0x00787656
-		// (set) Token: 0x06037C48 RID: 228424 RVA: 0x0078945E File Offset: 0x0078765E
+		// Token: 0x1700F38B RID: 62347
+		// (get) Token: 0x0603B204 RID: 242180 RVA: 0x007EEFCE File Offset: 0x007ED1CE
+		// (set) Token: 0x0603B205 RID: 242181 RVA: 0x007EEFD6 File Offset: 0x007ED1D6
 		public string AbpMontageConfigPath { get; set; }
 
-		// Token: 0x1700E72A RID: 59178
-		// (get) Token: 0x06037C49 RID: 228425 RVA: 0x00789467 File Offset: 0x00787667
-		// (set) Token: 0x06037C4A RID: 228426 RVA: 0x0078946F File Offset: 0x0078766F
+		// Token: 0x1700F38C RID: 62348
+		// (get) Token: 0x0603B206 RID: 242182 RVA: 0x007EEFDF File Offset: 0x007ED1DF
+		// (set) Token: 0x0603B207 RID: 242183 RVA: 0x007EEFE7 File Offset: 0x007ED1E7
 		public string AbpOverlayMontageConfigPath { get; set; }
 
-		// Token: 0x1700E72B RID: 59179
-		// (get) Token: 0x06037C4B RID: 228427 RVA: 0x00789478 File Offset: 0x00787678
-		// (set) Token: 0x06037C4C RID: 228428 RVA: 0x00789480 File Offset: 0x00787680
+		// Token: 0x1700F38D RID: 62349
+		// (get) Token: 0x0603B208 RID: 242184 RVA: 0x007EEFF0 File Offset: 0x007ED1F0
+		// (set) Token: 0x0603B209 RID: 242185 RVA: 0x007EEFF8 File Offset: 0x007ED1F8
 		public string AbpStateConfigPath { get; set; }
 
-		// Token: 0x1700E72C RID: 59180
-		// (get) Token: 0x06037C4D RID: 228429 RVA: 0x00789489 File Offset: 0x00787689
-		// (set) Token: 0x06037C4E RID: 228430 RVA: 0x00789491 File Offset: 0x00787691
+		// Token: 0x1700F38E RID: 62350
+		// (get) Token: 0x0603B20A RID: 242186 RVA: 0x007EF001 File Offset: 0x007ED201
+		// (set) Token: 0x0603B20B RID: 242187 RVA: 0x007EF009 File Offset: 0x007ED209
 		public string FaceExpressionConfigPath { get; set; }
 
-		// Token: 0x1700E72D RID: 59181
-		// (get) Token: 0x06037C4F RID: 228431 RVA: 0x0078949A File Offset: 0x0078769A
-		// (set) Token: 0x06037C50 RID: 228432 RVA: 0x007894A2 File Offset: 0x007876A2
+		// Token: 0x1700F38F RID: 62351
+		// (get) Token: 0x0603B20C RID: 242188 RVA: 0x007EF012 File Offset: 0x007ED212
+		// (set) Token: 0x0603B20D RID: 242189 RVA: 0x007EF01A File Offset: 0x007ED21A
 		public string AoiGroupPath { get; set; }
 
-		// Token: 0x1700E72E RID: 59182
-		// (get) Token: 0x06037C51 RID: 228433 RVA: 0x007894AB File Offset: 0x007876AB
-		// (set) Token: 0x06037C52 RID: 228434 RVA: 0x007894B3 File Offset: 0x007876B3
+		// Token: 0x1700F390 RID: 62352
+		// (get) Token: 0x0603B20E RID: 242190 RVA: 0x007EF023 File Offset: 0x007ED223
+		// (set) Token: 0x0603B20F RID: 242191 RVA: 0x007EF02B File Offset: 0x007ED22B
 		public string EntityPerformanceDataPath { get; set; }
 
-		// Token: 0x1700E72F RID: 59183
-		// (get) Token: 0x06037C53 RID: 228435 RVA: 0x007894BC File Offset: 0x007876BC
-		// (set) Token: 0x06037C54 RID: 228436 RVA: 0x007894C4 File Offset: 0x007876C4
+		// Token: 0x1700F391 RID: 62353
+		// (get) Token: 0x0603B210 RID: 242192 RVA: 0x007EF034 File Offset: 0x007ED234
+		// (set) Token: 0x0603B211 RID: 242193 RVA: 0x007EF03C File Offset: 0x007ED23C
 		public string ActorRefConfigPath { get; set; }
 
-		// Token: 0x1700E730 RID: 59184
-		// (get) Token: 0x06037C55 RID: 228437 RVA: 0x007894CD File Offset: 0x007876CD
-		// (set) Token: 0x06037C56 RID: 228438 RVA: 0x007894D5 File Offset: 0x007876D5
+		// Token: 0x1700F392 RID: 62354
+		// (get) Token: 0x0603B212 RID: 242194 RVA: 0x007EF045 File Offset: 0x007ED245
+		// (set) Token: 0x0603B213 RID: 242195 RVA: 0x007EF04D File Offset: 0x007ED24D
 		public string AoiDefineDataPath { get; set; }
 
-		// Token: 0x1700E731 RID: 59185
-		// (get) Token: 0x06037C57 RID: 228439 RVA: 0x007894DE File Offset: 0x007876DE
-		// (set) Token: 0x06037C58 RID: 228440 RVA: 0x007894E6 File Offset: 0x007876E6
+		// Token: 0x1700F393 RID: 62355
+		// (get) Token: 0x0603B214 RID: 242196 RVA: 0x007EF056 File Offset: 0x007ED256
+		// (set) Token: 0x0603B215 RID: 242197 RVA: 0x007EF05E File Offset: 0x007ED25E
 		public string PrefabDir { get; set; }
 
-		// Token: 0x1700E732 RID: 59186
-		// (get) Token: 0x06037C59 RID: 228441 RVA: 0x007894EF File Offset: 0x007876EF
-		// (set) Token: 0x06037C5A RID: 228442 RVA: 0x007894F7 File Offset: 0x007876F7
+		// Token: 0x1700F394 RID: 62356
+		// (get) Token: 0x0603B216 RID: 242198 RVA: 0x007EF067 File Offset: 0x007ED267
+		// (set) Token: 0x0603B217 RID: 242199 RVA: 0x007EF06F File Offset: 0x007ED26F
 		public string BundleDir { get; set; }
 
-		// Token: 0x1700E733 RID: 59187
-		// (get) Token: 0x06037C5B RID: 228443 RVA: 0x00789500 File Offset: 0x00787700
-		// (set) Token: 0x06037C5C RID: 228444 RVA: 0x00789508 File Offset: 0x00787708
+		// Token: 0x1700F395 RID: 62357
+		// (get) Token: 0x0603B218 RID: 242200 RVA: 0x007EF078 File Offset: 0x007ED278
+		// (set) Token: 0x0603B219 RID: 242201 RVA: 0x007EF080 File Offset: 0x007ED280
 		public string PrefabConfigPath { get; set; }
 
-		// Token: 0x1700E734 RID: 59188
-		// (get) Token: 0x06037C5D RID: 228445 RVA: 0x00789511 File Offset: 0x00787711
-		// (set) Token: 0x06037C5E RID: 228446 RVA: 0x00789519 File Offset: 0x00787719
+		// Token: 0x1700F396 RID: 62358
+		// (get) Token: 0x0603B21A RID: 242202 RVA: 0x007EF089 File Offset: 0x007ED289
+		// (set) Token: 0x0603B21B RID: 242203 RVA: 0x007EF091 File Offset: 0x007ED291
 		public string EditorStartConfig { get; set; }
 
-		// Token: 0x1700E735 RID: 59189
-		// (get) Token: 0x06037C5F RID: 228447 RVA: 0x00789522 File Offset: 0x00787722
-		// (set) Token: 0x06037C60 RID: 228448 RVA: 0x0078952A File Offset: 0x0078772A
+		// Token: 0x1700F397 RID: 62359
+		// (get) Token: 0x0603B21C RID: 242204 RVA: 0x007EF09A File Offset: 0x007ED29A
+		// (set) Token: 0x0603B21D RID: 242205 RVA: 0x007EF0A2 File Offset: 0x007ED2A2
 		[Nullable(2)]
 		public string BubbleConfigPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E736 RID: 59190
-		// (get) Token: 0x06037C61 RID: 228449 RVA: 0x00789533 File Offset: 0x00787733
-		// (set) Token: 0x06037C62 RID: 228450 RVA: 0x0078953B File Offset: 0x0078773B
+		// Token: 0x1700F398 RID: 62360
+		// (get) Token: 0x0603B21E RID: 242206 RVA: 0x007EF0AB File Offset: 0x007ED2AB
+		// (set) Token: 0x0603B21F RID: 242207 RVA: 0x007EF0B3 File Offset: 0x007ED2B3
 		public string LevelEntityVoxelPath { get; set; }
 
-		// Token: 0x1700E737 RID: 59191
-		// (get) Token: 0x06037C63 RID: 228451 RVA: 0x00789544 File Offset: 0x00787744
-		// (set) Token: 0x06037C64 RID: 228452 RVA: 0x0078954C File Offset: 0x0078774C
+		// Token: 0x1700F399 RID: 62361
+		// (get) Token: 0x0603B220 RID: 242208 RVA: 0x007EF0BC File Offset: 0x007ED2BC
+		// (set) Token: 0x0603B221 RID: 242209 RVA: 0x007EF0C4 File Offset: 0x007ED2C4
 		public string TidTextTempPath { get; set; }
 
-		// Token: 0x1700E738 RID: 59192
-		// (get) Token: 0x06037C65 RID: 228453 RVA: 0x00789555 File Offset: 0x00787755
-		// (set) Token: 0x06037C66 RID: 228454 RVA: 0x0078955D File Offset: 0x0078775D
+		// Token: 0x1700F39A RID: 62362
+		// (get) Token: 0x0603B222 RID: 242210 RVA: 0x007EF0CD File Offset: 0x007ED2CD
+		// (set) Token: 0x0603B223 RID: 242211 RVA: 0x007EF0D5 File Offset: 0x007ED2D5
 		public string AudioStatePath { get; set; }
 
-		// Token: 0x1700E739 RID: 59193
-		// (get) Token: 0x06037C67 RID: 228455 RVA: 0x00789566 File Offset: 0x00787766
-		// (set) Token: 0x06037C68 RID: 228456 RVA: 0x0078956E File Offset: 0x0078776E
+		// Token: 0x1700F39B RID: 62363
+		// (get) Token: 0x0603B224 RID: 242212 RVA: 0x007EF0DE File Offset: 0x007ED2DE
+		// (set) Token: 0x0603B225 RID: 242213 RVA: 0x007EF0E6 File Offset: 0x007ED2E6
 		public string PlotHandBookPath { get; set; }
 
-		// Token: 0x1700E73A RID: 59194
-		// (get) Token: 0x06037C69 RID: 228457 RVA: 0x00789577 File Offset: 0x00787777
-		// (set) Token: 0x06037C6A RID: 228458 RVA: 0x0078957F File Offset: 0x0078777F
+		// Token: 0x1700F39C RID: 62364
+		// (get) Token: 0x0603B226 RID: 242214 RVA: 0x007EF0EF File Offset: 0x007ED2EF
+		// (set) Token: 0x0603B227 RID: 242215 RVA: 0x007EF0F7 File Offset: 0x007ED2F7
 		public string PlotPositionPath { get; set; }
 
-		// Token: 0x1700E73B RID: 59195
-		// (get) Token: 0x06037C6B RID: 228459 RVA: 0x00789588 File Offset: 0x00787788
-		// (set) Token: 0x06037C6C RID: 228460 RVA: 0x00789590 File Offset: 0x00787790
+		// Token: 0x1700F39D RID: 62365
+		// (get) Token: 0x0603B228 RID: 242216 RVA: 0x007EF100 File Offset: 0x007ED300
+		// (set) Token: 0x0603B229 RID: 242217 RVA: 0x007EF108 File Offset: 0x007ED308
 		public string TextLibraryDir { get; set; }
 
-		// Token: 0x1700E73C RID: 59196
-		// (get) Token: 0x06037C6D RID: 228461 RVA: 0x00789599 File Offset: 0x00787799
-		// (set) Token: 0x06037C6E RID: 228462 RVA: 0x007895A1 File Offset: 0x007877A1
+		// Token: 0x1700F39E RID: 62366
+		// (get) Token: 0x0603B22A RID: 242218 RVA: 0x007EF111 File Offset: 0x007ED311
+		// (set) Token: 0x0603B22B RID: 242219 RVA: 0x007EF119 File Offset: 0x007ED319
 		public string EnrichmentArea { get; set; }
 
-		// Token: 0x1700E73D RID: 59197
-		// (get) Token: 0x06037C6F RID: 228463 RVA: 0x007895AA File Offset: 0x007877AA
-		// (set) Token: 0x06037C70 RID: 228464 RVA: 0x007895B2 File Offset: 0x007877B2
+		// Token: 0x1700F39F RID: 62367
+		// (get) Token: 0x0603B22C RID: 242220 RVA: 0x007EF122 File Offset: 0x007ED322
+		// (set) Token: 0x0603B22D RID: 242221 RVA: 0x007EF12A File Offset: 0x007ED32A
 		[Nullable(2)]
 		public string MarkedErrorCsvPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E73E RID: 59198
-		// (get) Token: 0x06037C71 RID: 228465 RVA: 0x007895BB File Offset: 0x007877BB
-		// (set) Token: 0x06037C72 RID: 228466 RVA: 0x007895C3 File Offset: 0x007877C3
+		// Token: 0x1700F3A0 RID: 62368
+		// (get) Token: 0x0603B22E RID: 242222 RVA: 0x007EF133 File Offset: 0x007ED333
+		// (set) Token: 0x0603B22F RID: 242223 RVA: 0x007EF13B File Offset: 0x007ED33B
 		[Nullable(2)]
 		public string BrokenRockConfig { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E73F RID: 59199
-		// (get) Token: 0x06037C73 RID: 228467 RVA: 0x007895CC File Offset: 0x007877CC
-		// (set) Token: 0x06037C74 RID: 228468 RVA: 0x007895D4 File Offset: 0x007877D4
+		// Token: 0x1700F3A1 RID: 62369
+		// (get) Token: 0x0603B230 RID: 242224 RVA: 0x007EF144 File Offset: 0x007ED344
+		// (set) Token: 0x0603B231 RID: 242225 RVA: 0x007EF14C File Offset: 0x007ED34C
 		public string GridItemShapeConfigPath { get; set; }
 
-		// Token: 0x1700E740 RID: 59200
-		// (get) Token: 0x06037C75 RID: 228469 RVA: 0x007895DD File Offset: 0x007877DD
-		// (set) Token: 0x06037C76 RID: 228470 RVA: 0x007895E5 File Offset: 0x007877E5
+		// Token: 0x1700F3A2 RID: 62370
+		// (get) Token: 0x0603B232 RID: 242226 RVA: 0x007EF155 File Offset: 0x007ED355
+		// (set) Token: 0x0603B233 RID: 242227 RVA: 0x007EF15D File Offset: 0x007ED35D
 		[Nullable(2)]
 		public string FishingRouletteConfig { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E741 RID: 59201
-		// (get) Token: 0x06037C77 RID: 228471 RVA: 0x007895EE File Offset: 0x007877EE
-		// (set) Token: 0x06037C78 RID: 228472 RVA: 0x007895F6 File Offset: 0x007877F6
+		// Token: 0x1700F3A3 RID: 62371
+		// (get) Token: 0x0603B234 RID: 242228 RVA: 0x007EF166 File Offset: 0x007ED366
+		// (set) Token: 0x0603B235 RID: 242229 RVA: 0x007EF16E File Offset: 0x007ED36E
 		public string AreaQuestTracking { get; set; }
 
-		// Token: 0x1700E742 RID: 59202
-		// (get) Token: 0x06037C79 RID: 228473 RVA: 0x007895FF File Offset: 0x007877FF
-		// (set) Token: 0x06037C7A RID: 228474 RVA: 0x00789607 File Offset: 0x00787807
+		// Token: 0x1700F3A4 RID: 62372
+		// (get) Token: 0x0603B236 RID: 242230 RVA: 0x007EF177 File Offset: 0x007ED377
+		// (set) Token: 0x0603B237 RID: 242231 RVA: 0x007EF17F File Offset: 0x007ED37F
 		[Nullable(2)]
 		public string OfflineComponentExportPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E743 RID: 59203
-		// (get) Token: 0x06037C7B RID: 228475 RVA: 0x00789610 File Offset: 0x00787810
-		// (set) Token: 0x06037C7C RID: 228476 RVA: 0x00789618 File Offset: 0x00787818
+		// Token: 0x1700F3A5 RID: 62373
+		// (get) Token: 0x0603B238 RID: 242232 RVA: 0x007EF188 File Offset: 0x007ED388
+		// (set) Token: 0x0603B239 RID: 242233 RVA: 0x007EF190 File Offset: 0x007ED390
 		[Nullable(2)]
 		public string SummonGongduolaConfigExportPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E744 RID: 59204
-		// (get) Token: 0x06037C7D RID: 228477 RVA: 0x00789621 File Offset: 0x00787821
-		// (set) Token: 0x06037C7E RID: 228478 RVA: 0x00789629 File Offset: 0x00787829
+		// Token: 0x1700F3A6 RID: 62374
+		// (get) Token: 0x0603B23A RID: 242234 RVA: 0x007EF199 File Offset: 0x007ED399
+		// (set) Token: 0x0603B23B RID: 242235 RVA: 0x007EF1A1 File Offset: 0x007ED3A1
 		[Nullable(2)]
 		public string HideGroupFixConfigPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E745 RID: 59205
-		// (get) Token: 0x06037C7F RID: 228479 RVA: 0x00789632 File Offset: 0x00787832
-		// (set) Token: 0x06037C80 RID: 228480 RVA: 0x0078963A File Offset: 0x0078783A
+		// Token: 0x1700F3A7 RID: 62375
+		// (get) Token: 0x0603B23C RID: 242236 RVA: 0x007EF1AA File Offset: 0x007ED3AA
+		// (set) Token: 0x0603B23D RID: 242237 RVA: 0x007EF1B2 File Offset: 0x007ED3B2
 		public string EntityFixProcessorPath { get; set; }
 
-		// Token: 0x1700E746 RID: 59206
-		// (get) Token: 0x06037C81 RID: 228481 RVA: 0x00789643 File Offset: 0x00787843
-		// (set) Token: 0x06037C82 RID: 228482 RVA: 0x0078964B File Offset: 0x0078784B
+		// Token: 0x1700F3A8 RID: 62376
+		// (get) Token: 0x0603B23E RID: 242238 RVA: 0x007EF1BB File Offset: 0x007ED3BB
+		// (set) Token: 0x0603B23F RID: 242239 RVA: 0x007EF1C3 File Offset: 0x007ED3C3
 		[Nullable(2)]
 		public string GravityAbnormalEntityListPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E747 RID: 59207
-		// (get) Token: 0x06037C83 RID: 228483 RVA: 0x00789654 File Offset: 0x00787854
-		// (set) Token: 0x06037C84 RID: 228484 RVA: 0x0078965C File Offset: 0x0078785C
+		// Token: 0x1700F3A9 RID: 62377
+		// (get) Token: 0x0603B240 RID: 242240 RVA: 0x007EF1CC File Offset: 0x007ED3CC
+		// (set) Token: 0x0603B241 RID: 242241 RVA: 0x007EF1D4 File Offset: 0x007ED3D4
 		[Nullable(2)]
 		public string ActorRefComponentsConfigPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E748 RID: 59208
-		// (get) Token: 0x06037C85 RID: 228485 RVA: 0x00789665 File Offset: 0x00787865
-		// (set) Token: 0x06037C86 RID: 228486 RVA: 0x0078966D File Offset: 0x0078786D
+		// Token: 0x1700F3AA RID: 62378
+		// (get) Token: 0x0603B242 RID: 242242 RVA: 0x007EF1DD File Offset: 0x007ED3DD
+		// (set) Token: 0x0603B243 RID: 242243 RVA: 0x007EF1E5 File Offset: 0x007ED3E5
 		[Nullable(2)]
 		public string SeqRefComponentsConfigPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E749 RID: 59209
-		// (get) Token: 0x06037C87 RID: 228487 RVA: 0x00789676 File Offset: 0x00787876
-		// (set) Token: 0x06037C88 RID: 228488 RVA: 0x0078967E File Offset: 0x0078787E
+		// Token: 0x1700F3AB RID: 62379
+		// (get) Token: 0x0603B244 RID: 242244 RVA: 0x007EF1EE File Offset: 0x007ED3EE
+		// (set) Token: 0x0603B245 RID: 242245 RVA: 0x007EF1F6 File Offset: 0x007ED3F6
 		[Nullable(2)]
 		public string QuestRefMp4Path { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E74A RID: 59210
-		// (get) Token: 0x06037C89 RID: 228489 RVA: 0x00789687 File Offset: 0x00787887
-		// (set) Token: 0x06037C8A RID: 228490 RVA: 0x0078968F File Offset: 0x0078788F
+		// Token: 0x1700F3AC RID: 62380
+		// (get) Token: 0x0603B246 RID: 242246 RVA: 0x007EF1FF File Offset: 0x007ED3FF
+		// (set) Token: 0x0603B247 RID: 242247 RVA: 0x007EF207 File Offset: 0x007ED407
 		[Nullable(2)]
 		public string BehaviorTreeFragmentDir { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E74B RID: 59211
-		// (get) Token: 0x06037C8B RID: 228491 RVA: 0x00789698 File Offset: 0x00787898
-		// (set) Token: 0x06037C8C RID: 228492 RVA: 0x007896A0 File Offset: 0x007878A0
+		// Token: 0x1700F3AD RID: 62381
+		// (get) Token: 0x0603B248 RID: 242248 RVA: 0x007EF210 File Offset: 0x007ED410
+		// (set) Token: 0x0603B249 RID: 242249 RVA: 0x007EF218 File Offset: 0x007ED418
 		[Nullable(2)]
 		public string CommonBtDir { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E74C RID: 59212
-		// (get) Token: 0x06037C8D RID: 228493 RVA: 0x007896A9 File Offset: 0x007878A9
-		// (set) Token: 0x06037C8E RID: 228494 RVA: 0x007896B1 File Offset: 0x007878B1
+		// Token: 0x1700F3AE RID: 62382
+		// (get) Token: 0x0603B24A RID: 242250 RVA: 0x007EF221 File Offset: 0x007ED421
+		// (set) Token: 0x0603B24B RID: 242251 RVA: 0x007EF229 File Offset: 0x007ED429
 		[Nullable(2)]
 		public string CommonBtExportDir { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700E74D RID: 59213
-		// (get) Token: 0x06037C8F RID: 228495 RVA: 0x007896BA File Offset: 0x007878BA
-		// (set) Token: 0x06037C90 RID: 228496 RVA: 0x007896C2 File Offset: 0x007878C2
+		// Token: 0x1700F3AF RID: 62383
+		// (get) Token: 0x0603B24C RID: 242252 RVA: 0x007EF232 File Offset: 0x007ED432
+		// (set) Token: 0x0603B24D RID: 242253 RVA: 0x007EF23A File Offset: 0x007ED43A
 		public string LevelBuildingGrids { get; set; }
 
-		// Token: 0x1700E74E RID: 59214
-		// (get) Token: 0x06037C91 RID: 228497 RVA: 0x007896CB File Offset: 0x007878CB
-		// (set) Token: 0x06037C92 RID: 228498 RVA: 0x007896D3 File Offset: 0x007878D3
+		// Token: 0x1700F3B0 RID: 62384
+		// (get) Token: 0x0603B24E RID: 242254 RVA: 0x007EF243 File Offset: 0x007ED443
+		// (set) Token: 0x0603B24F RID: 242255 RVA: 0x007EF24B File Offset: 0x007ED44B
 		public string GlobalFixConfigPath { get; set; }
 
-		// Token: 0x1700E74F RID: 59215
-		// (get) Token: 0x06037C93 RID: 228499 RVA: 0x007896DC File Offset: 0x007878DC
-		// (set) Token: 0x06037C94 RID: 228500 RVA: 0x007896E4 File Offset: 0x007878E4
+		// Token: 0x1700F3B1 RID: 62385
+		// (get) Token: 0x0603B250 RID: 242256 RVA: 0x007EF254 File Offset: 0x007ED454
+		// (set) Token: 0x0603B251 RID: 242257 RVA: 0x007EF25C File Offset: 0x007ED45C
 		public string AreaFunctionConfigPath { get; set; }
 
-		// Token: 0x1700E750 RID: 59216
-		// (get) Token: 0x06037C95 RID: 228501 RVA: 0x007896ED File Offset: 0x007878ED
-		// (set) Token: 0x06037C96 RID: 228502 RVA: 0x007896F5 File Offset: 0x007878F5
+		// Token: 0x1700F3B2 RID: 62386
+		// (get) Token: 0x0603B252 RID: 242258 RVA: 0x007EF265 File Offset: 0x007ED465
+		// (set) Token: 0x0603B253 RID: 242259 RVA: 0x007EF26D File Offset: 0x007ED46D
 		public string DynamicSpawnMonsterRandomPoolConfigPath { get; set; }
 
-		// Token: 0x1700E751 RID: 59217
-		// (get) Token: 0x06037C97 RID: 228503 RVA: 0x007896FE File Offset: 0x007878FE
-		// (set) Token: 0x06037C98 RID: 228504 RVA: 0x00789706 File Offset: 0x00787906
+		// Token: 0x1700F3B3 RID: 62387
+		// (get) Token: 0x0603B254 RID: 242260 RVA: 0x007EF276 File Offset: 0x007ED476
+		// (set) Token: 0x0603B255 RID: 242261 RVA: 0x007EF27E File Offset: 0x007ED47E
 		public string EntityCustomPrimitiveData { get; set; }
 
-		// Token: 0x1700E752 RID: 59218
-		// (get) Token: 0x06037C99 RID: 228505 RVA: 0x0078970F File Offset: 0x0078790F
-		// (set) Token: 0x06037C9A RID: 228506 RVA: 0x00789717 File Offset: 0x00787917
+		// Token: 0x1700F3B4 RID: 62388
+		// (get) Token: 0x0603B256 RID: 242262 RVA: 0x007EF287 File Offset: 0x007ED487
+		// (set) Token: 0x0603B257 RID: 242263 RVA: 0x007EF28F File Offset: 0x007ED48F
 		public string AnimalStandbyTagPath { get; set; }
 
-		// Token: 0x1700E753 RID: 59219
-		// (get) Token: 0x06037C9B RID: 228507 RVA: 0x00789720 File Offset: 0x00787920
-		// (set) Token: 0x06037C9C RID: 228508 RVA: 0x00789728 File Offset: 0x00787928
+		// Token: 0x1700F3B5 RID: 62389
+		// (get) Token: 0x0603B258 RID: 242264 RVA: 0x007EF298 File Offset: 0x007ED498
+		// (set) Token: 0x0603B259 RID: 242265 RVA: 0x007EF2A0 File Offset: 0x007ED4A0
 		public string AnsPerformDataPath { get; set; }
 
-		// Token: 0x1700E754 RID: 59220
-		// (get) Token: 0x06037C9D RID: 228509 RVA: 0x00789731 File Offset: 0x00787931
-		// (set) Token: 0x06037C9E RID: 228510 RVA: 0x00789739 File Offset: 0x00787939
+		// Token: 0x1700F3B6 RID: 62390
+		// (get) Token: 0x0603B25A RID: 242266 RVA: 0x007EF2A9 File Offset: 0x007ED4A9
+		// (set) Token: 0x0603B25B RID: 242267 RVA: 0x007EF2B1 File Offset: 0x007ED4B1
 		public string RoadZonePath { get; set; }
 
-		// Token: 0x1700E755 RID: 59221
-		// (get) Token: 0x06037C9F RID: 228511 RVA: 0x00789742 File Offset: 0x00787942
-		// (set) Token: 0x06037CA0 RID: 228512 RVA: 0x0078974A File Offset: 0x0078794A
+		// Token: 0x1700F3B7 RID: 62391
+		// (get) Token: 0x0603B25C RID: 242268 RVA: 0x007EF2BA File Offset: 0x007ED4BA
+		// (set) Token: 0x0603B25D RID: 242269 RVA: 0x007EF2C2 File Offset: 0x007ED4C2
 		public string UltraLeaveRadiusLevelPlayPath { get; set; }
 
-		// Token: 0x1700E756 RID: 59222
-		// (get) Token: 0x06037CA1 RID: 228513 RVA: 0x00789753 File Offset: 0x00787953
-		// (set) Token: 0x06037CA2 RID: 228514 RVA: 0x0078975B File Offset: 0x0078795B
+		// Token: 0x1700F3B8 RID: 62392
+		// (get) Token: 0x0603B25E RID: 242270 RVA: 0x007EF2CB File Offset: 0x007ED4CB
+		// (set) Token: 0x0603B25F RID: 242271 RVA: 0x007EF2D3 File Offset: 0x007ED4D3
 		public string AreaTeleportPath { get; set; }
 
-		// Token: 0x1700E757 RID: 59223
-		// (get) Token: 0x06037CA3 RID: 228515 RVA: 0x00789764 File Offset: 0x00787964
-		// (set) Token: 0x06037CA4 RID: 228516 RVA: 0x0078976C File Offset: 0x0078796C
+		// Token: 0x1700F3B9 RID: 62393
+		// (get) Token: 0x0603B260 RID: 242272 RVA: 0x007EF2DC File Offset: 0x007ED4DC
+		// (set) Token: 0x0603B261 RID: 242273 RVA: 0x007EF2E4 File Offset: 0x007ED4E4
 		public string SeqAreaPath { get; set; }
 
-		// Token: 0x1700E758 RID: 59224
-		// (get) Token: 0x06037CA5 RID: 228517 RVA: 0x00789775 File Offset: 0x00787975
-		// (set) Token: 0x06037CA6 RID: 228518 RVA: 0x0078977D File Offset: 0x0078797D
+		// Token: 0x1700F3BA RID: 62394
+		// (get) Token: 0x0603B262 RID: 242274 RVA: 0x007EF2ED File Offset: 0x007ED4ED
+		// (set) Token: 0x0603B263 RID: 242275 RVA: 0x007EF2F5 File Offset: 0x007ED4F5
 		public string DungeonAreaOwnerDataPath { get; set; }
 
-		// Token: 0x1700E759 RID: 59225
-		// (get) Token: 0x06037CA7 RID: 228519 RVA: 0x00789786 File Offset: 0x00787986
-		// (set) Token: 0x06037CA8 RID: 228520 RVA: 0x0078978E File Offset: 0x0078798E
+		// Token: 0x1700F3BB RID: 62395
+		// (get) Token: 0x0603B264 RID: 242276 RVA: 0x007EF2FE File Offset: 0x007ED4FE
+		// (set) Token: 0x0603B265 RID: 242277 RVA: 0x007EF306 File Offset: 0x007ED506
 		public string DungeonAreaReachableDataPath { get; set; }
 
-		// Token: 0x1700E75A RID: 59226
-		// (get) Token: 0x06037CA9 RID: 228521 RVA: 0x00789797 File Offset: 0x00787997
-		// (set) Token: 0x06037CAA RID: 228522 RVA: 0x0078979F File Offset: 0x0078799F
+		// Token: 0x1700F3BC RID: 62396
+		// (get) Token: 0x0603B266 RID: 242278 RVA: 0x007EF30F File Offset: 0x007ED50F
+		// (set) Token: 0x0603B267 RID: 242279 RVA: 0x007EF317 File Offset: 0x007ED517
 		public string TimeSchedulePath { get; set; }
 
-		// Token: 0x1700E75B RID: 59227
-		// (get) Token: 0x06037CAB RID: 228523 RVA: 0x007897A8 File Offset: 0x007879A8
-		// (set) Token: 0x06037CAC RID: 228524 RVA: 0x007897B0 File Offset: 0x007879B0
+		// Token: 0x1700F3BD RID: 62397
+		// (get) Token: 0x0603B268 RID: 242280 RVA: 0x007EF320 File Offset: 0x007ED520
+		// (set) Token: 0x0603B269 RID: 242281 RVA: 0x007EF328 File Offset: 0x007ED528
 		public string AiBehaviorTreePath { get; set; }
 
-		// Token: 0x1700E75C RID: 59228
-		// (get) Token: 0x06037CAD RID: 228525 RVA: 0x007897B9 File Offset: 0x007879B9
-		// (set) Token: 0x06037CAE RID: 228526 RVA: 0x007897C1 File Offset: 0x007879C1
+		// Token: 0x1700F3BE RID: 62398
+		// (get) Token: 0x0603B26A RID: 242282 RVA: 0x007EF331 File Offset: 0x007ED531
+		// (set) Token: 0x0603B26B RID: 242283 RVA: 0x007EF339 File Offset: 0x007ED539
 		public string RecallDataConfigPath { get; set; }
 
-		// Token: 0x1700E75D RID: 59229
-		// (get) Token: 0x06037CAF RID: 228527 RVA: 0x007897CA File Offset: 0x007879CA
-		// (set) Token: 0x06037CB0 RID: 228528 RVA: 0x007897D2 File Offset: 0x007879D2
+		// Token: 0x1700F3BF RID: 62399
+		// (get) Token: 0x0603B26C RID: 242284 RVA: 0x007EF342 File Offset: 0x007ED542
+		// (set) Token: 0x0603B26D RID: 242285 RVA: 0x007EF34A File Offset: 0x007ED54A
 		public string CombatOperationCaptureDir { get; set; }
 
-		// Token: 0x1700E75E RID: 59230
-		// (get) Token: 0x06037CB1 RID: 228529 RVA: 0x007897DB File Offset: 0x007879DB
-		// (set) Token: 0x06037CB2 RID: 228530 RVA: 0x007897E3 File Offset: 0x007879E3
+		// Token: 0x1700F3C0 RID: 62400
+		// (get) Token: 0x0603B26E RID: 242286 RVA: 0x007EF353 File Offset: 0x007ED553
+		// (set) Token: 0x0603B26F RID: 242287 RVA: 0x007EF35B File Offset: 0x007ED55B
 		public string RecallEntityConfigPath { get; set; }
 	}
 
-	// Token: 0x0200781B RID: 30747
+	// Token: 0x0200805F RID: 32863
 	[Nullable(0)]
 	public class GlobalConfigTemp
 	{
-		// Token: 0x04012B40 RID: 76608
+		// Token: 0x04013C15 RID: 80917
 		public const string ActionConfigPath = "Content/Data/Json/Action.json";
 
-		// Token: 0x04012B41 RID: 76609
+		// Token: 0x04013C16 RID: 80918
 		public const string ComponentConfigPath = "Content/Data/Json/Component.json";
 
-		// Token: 0x04012B42 RID: 76610
+		// Token: 0x04013C17 RID: 80919
 		public const string EntityConfigPath = "Content/Aki/Data/UniverseEditorConfig/Entity.json";
 
-		// Token: 0x04012B43 RID: 76611
+		// Token: 0x04013C18 RID: 80920
 		public const string BlueprintConfigPath = "Content/Aki/UniverseEditorConfig/Blueprint.json";
 
-		// Token: 0x04012B44 RID: 76612
+		// Token: 0x04013C19 RID: 80921
 		public const string EntityStateConfigPath = "Content/Aki/UniverseEditorConfig/EntityState.json";
 
-		// Token: 0x04012B45 RID: 76613
+		// Token: 0x04013C1A RID: 80922
 		public const string EntityOwnerConfigPath = "Content/Aki/UniverseEditorConfig/EntityOwner.json";
 
-		// Token: 0x04012B46 RID: 76614
+		// Token: 0x04013C1B RID: 80923
 		public const string ChildEntityOwnerConfigPath = "Content/Aki/UniverseEditorConfig/ChildEntityOwner.json";
 
-		// Token: 0x04012B47 RID: 76615
+		// Token: 0x04013C1C RID: 80924
 		public const string EntityFixProcessorPath = "Content/Aki/UniverseEditorConfig/EntityFixProcessor.json";
 
-		// Token: 0x04012B48 RID: 76616
+		// Token: 0x04013C1D RID: 80925
 		public const string AlwaysLoadEntityConfigPath = "Content/Aki/UniverseEditorConfig/AlwaysLoadEntity.json";
 
-		// Token: 0x04012B49 RID: 76617
+		// Token: 0x04013C1E RID: 80926
 		public const string LevelsConfigPath = "Content/Aki/UniverseEditorConfig/Level.json";
 
-		// Token: 0x04012B4A RID: 76618
+		// Token: 0x04013C1F RID: 80927
 		public const string SubWpMapConfigPath = "Content/Aki/UniverseEditorConfig/SubWpMap.json";
 
-		// Token: 0x04012B4B RID: 76619
+		// Token: 0x04013C20 RID: 80928
 		public const string FlowListDir = "Content/Aki/UniverseEditorConfig/FlowList";
 
-		// Token: 0x04012B4C RID: 76620
+		// Token: 0x04013C21 RID: 80929
 		public const string QuestListDir = "Content/Aki/UniverseEditorConfig/Quest";
 
-		// Token: 0x04012B4D RID: 76621
+		// Token: 0x04013C22 RID: 80930
 		public const string LevelPlayListDir = "Content/Aki/UniverseEditorConfig/LevelPlay";
 
-		// Token: 0x04012B4E RID: 76622
+		// Token: 0x04013C23 RID: 80931
 		public const string TwoDimensionLevelListDir = "Content/Aki/UniverseEditorConfig/TowDimensionLevel";
 
-		// Token: 0x04012B4F RID: 76623
+		// Token: 0x04013C24 RID: 80932
 		public const string DangoBrawlObjectTemplateDir = "Content/Aki/UniverseEditorConfig/DangoBrawlObjectTemplate";
 
-		// Token: 0x04012B50 RID: 76624
+		// Token: 0x04013C25 RID: 80933
 		public const string TextLibraryDir = "Content/Data/Tables";
 
-		// Token: 0x04012B51 RID: 76625
+		// Token: 0x04013C26 RID: 80934
 		public const string CsvFileDir = "../Config/Raw/Tables/k.可视化编辑/c.Csv";
 
-		// Token: 0x04012B52 RID: 76626
+		// Token: 0x04013C27 RID: 80935
 		public const string TemplateDir = "Content/Aki/UniverseEditor/Template";
 
-		// Token: 0x04012B53 RID: 76627
+		// Token: 0x04013C28 RID: 80936
 		public const string PrefabDir = "Content/Aki/UniverseEditor/Prefab";
 
-		// Token: 0x04012B54 RID: 76628
+		// Token: 0x04013C29 RID: 80937
 		public const string BundleDir = "Content/Aki/UniverseEditor/Bundle";
 
-		// Token: 0x04012B55 RID: 76629
+		// Token: 0x04013C2A RID: 80938
 		public const string FlowTemplateCameraDir = "Content/Aki/UniverseEditor/FlowTemplateCamera";
 
-		// Token: 0x04012B56 RID: 76630
+		// Token: 0x04013C2B RID: 80939
 		public const string LevelsDir = "Content/Aki/UniverseEditor/Levels";
 
-		// Token: 0x04012B57 RID: 76631
+		// Token: 0x04013C2C RID: 80940
 		public const string FunctionalTestDir = "Content/Aki/UniverseEditor/FunctionalTest";
 
-		// Token: 0x04012B58 RID: 76632
+		// Token: 0x04013C2D RID: 80941
 		public const string LevelsDataDir = "Content/Aki/UniverseEditorConfig/Levels";
 
-		// Token: 0x04012B59 RID: 76633
+		// Token: 0x04013C2E RID: 80942
 		public const string TemplateConfigPath = "Content/Aki/UniverseEditorConfig/Json/Template.json";
 
-		// Token: 0x04012B5A RID: 76634
+		// Token: 0x04013C2F RID: 80943
 		public const string PrefabConfigPath = "Content/Aki/UniverseEditorConfig/Json/Prefab.json";
 
-		// Token: 0x04012B5B RID: 76635
+		// Token: 0x04013C30 RID: 80944
 		public const string EntityDataConfigPath = "Content/Aki/UniverseEditorConfig/Json/EntityData.json";
 
-		// Token: 0x04012B5C RID: 76636
+		// Token: 0x04013C31 RID: 80945
 		public const string FlowTemplateConfigPath = "Content/Aki/UniverseEditorConfig/Json/FlowTemplate.json";
 
-		// Token: 0x04012B5D RID: 76637
+		// Token: 0x04013C32 RID: 80946
 		public const string MarbleLevelConfigPath = "Content/Aki/UniverseEditorConfig/Json/MarbleLevel.json";
 
-		// Token: 0x04012B5E RID: 76638
+		// Token: 0x04013C33 RID: 80947
 		public const string DangoBrawlLevelConfigPath = "Content/Aki/UniverseEditorConfig/Json/DangoBrawlLevel.json";
 
-		// Token: 0x04012B5F RID: 76639
+		// Token: 0x04013C34 RID: 80948
 		public const string DangoBrawlObjectTemplateConfigPath = "Content/Aki/UniverseEditorConfig/Json/DangoBrawlObjectTemplate.json";
 
-		// Token: 0x04012B60 RID: 76640
+		// Token: 0x04013C35 RID: 80949
 		public const string FlowTemplateCameraConfgSourcePath = "Content/Aki/UniverseEditorConfig/FlowTemplateCamera/FlowTemplateCamera.json";
 
-		// Token: 0x04012B61 RID: 76641
+		// Token: 0x04013C36 RID: 80950
 		public const string FlowTemplateCameraConfigPath = "Content/Aki/UniverseEditorConfig/Json/FlowTemplateCamera.json";
 
-		// Token: 0x04012B62 RID: 76642
+		// Token: 0x04013C37 RID: 80951
 		public const string TypeScriptRoot = "TypeScript/Src";
 
-		// Token: 0x04012B63 RID: 76643
+		// Token: 0x04013C38 RID: 80952
 		public const string GlobalVarConfigPath = "Content/Aki/UniverseEditorConfig/Json/GlobalVar.json";
 
-		// Token: 0x04012B64 RID: 76644
+		// Token: 0x04013C39 RID: 80953
 		public const string SystemVarConfigPath = "Content/Aki/UniverseEditorConfig/Json/SystemVar.json";
 
-		// Token: 0x04012B65 RID: 76645
+		// Token: 0x04013C3A RID: 80954
 		public const string VehicleRidingRolesConfigPath = "Content/Aki/UniverseEditorConfig/Json/VehicleRidingRoles.json";
 
-		// Token: 0x04012B66 RID: 76646
+		// Token: 0x04013C3B RID: 80955
 		public const string GridItemShapeConfigPath = "Content/Aki/UniverseEditorConfig/Json/GridItemShapeConfigPath.json";
 
-		// Token: 0x04012B67 RID: 76647
+		// Token: 0x04013C3C RID: 80956
 		public const string OccupationConfigPath = "Content/Aki/UniverseEditorConfig/Json/Occupation.json";
 
-		// Token: 0x04012B68 RID: 76648
+		// Token: 0x04013C3D RID: 80957
 		public const string OccupiedExportPath = "Content/Aki/UniverseEditorConfig/Json/OccupiedExport.json";
 
-		// Token: 0x04012B69 RID: 76649
+		// Token: 0x04013C3E RID: 80958
 		public const string InteractOptionConfigPath = "Content/Aki/UniverseEditorConfig/InteractOption.json";
 
-		// Token: 0x04012B6A RID: 76650
+		// Token: 0x04013C3F RID: 80959
 		public const string AreaEntitiesPath = "Content/Aki/UniverseEditorConfig/AreaEntitiesPath.json";
 
-		// Token: 0x04012B6B RID: 76651
+		// Token: 0x04013C40 RID: 80960
 		public const string BtConfigPath = "Content/Aki/UniverseEditorConfig/Json/BtConfig.json";
 
-		// Token: 0x04012B6C RID: 76652
+		// Token: 0x04013C41 RID: 80961
 		public const string MontageConfigPath = "Content/Aki/UniverseEditorConfig/Json/MontageConfig.json";
 
-		// Token: 0x04012B6D RID: 76653
+		// Token: 0x04013C42 RID: 80962
 		public const string AbpMontageConfigPath = "Content/Aki/UniverseEditorConfig/Json/AbpMontageConfig.json";
 
-		// Token: 0x04012B6E RID: 76654
+		// Token: 0x04013C43 RID: 80963
 		public const string AbpOverlayMontageConfigPath = "Content/Aki/UniverseEditorConfig/Json/AbpOverlayMontageConfig.json";
 
-		// Token: 0x04012B6F RID: 76655
+		// Token: 0x04013C44 RID: 80964
 		public const string AbpStateConfigPath = "Content/Aki/UniverseEditorConfig/Json/AbpStateConfig.json";
 
-		// Token: 0x04012B70 RID: 76656
+		// Token: 0x04013C45 RID: 80965
 		public const string FaceExpressionConfigPath = "Content/Aki/UniverseEditorConfig/Json/FaceExpressionConfig.json";
 
-		// Token: 0x04012B71 RID: 76657
+		// Token: 0x04013C46 RID: 80966
 		public const string AoiGroupPath = "Content/Aki/UniverseEditorConfig/Json/AoiGroupPath.json";
 
-		// Token: 0x04012B72 RID: 76658
+		// Token: 0x04013C47 RID: 80967
 		public const string ActorRefConfigPath = "Content/Aki/UniverseEditorConfig/Json/ActorRefConfig.json";
 
-		// Token: 0x04012B73 RID: 76659
+		// Token: 0x04013C48 RID: 80968
 		public const string EntityPerformanceDataPath = "Content/Aki/UniverseEditorConfig/EntityPerformanceData.json";
 
-		// Token: 0x04012B74 RID: 76660
+		// Token: 0x04013C49 RID: 80969
 		public const string CommonBtDir = "Content/Aki/UniverseEditorConfig/CommonBt";
 
-		// Token: 0x04012B75 RID: 76661
+		// Token: 0x04013C4A RID: 80970
 		public const string CommonBtExportDir = "Content/Aki/UniverseEditorConfig/CommonBt";
 
-		// Token: 0x04012B76 RID: 76662
+		// Token: 0x04013C4B RID: 80971
 		public const string AoiDefineDataPath = "Content/Aki/UniverseEditorConfig/Json/AoiDefine.json";
 
-		// Token: 0x04012B77 RID: 76663
+		// Token: 0x04013C4C RID: 80972
 		public const string EditorStartConfig = "Content/Aki/UniverseEditorConfig/Json/EditorStartConfig.json";
 
-		// Token: 0x04012B78 RID: 76664
+		// Token: 0x04013C4D RID: 80973
 		public const string BubbleConfigPath = "Content/Aki/UniverseEditorConfig/Json/BubbleConfig.json";
 
-		// Token: 0x04012B79 RID: 76665
+		// Token: 0x04013C4E RID: 80974
 		public const string LevelEntityVoxelPath = "Content/Aki/UniverseEditorConfig/LevelEntityVoxel.json";
 
-		// Token: 0x04012B7A RID: 76666
+		// Token: 0x04013C4F RID: 80975
 		public const string TidTextTempPath = "";
 
-		// Token: 0x04012B7B RID: 76667
+		// Token: 0x04013C50 RID: 80976
 		public const string AudioStatePath = "Content/Aki/UniverseEditorConfig/Json/a.AudioState.json";
 
-		// Token: 0x04012B7C RID: 76668
+		// Token: 0x04013C51 RID: 80977
 		public const string PlotHandBookPath = "Content/Aki/UniverseEditorConfig/Json/PlotHandBook.json";
 
-		// Token: 0x04012B7D RID: 76669
+		// Token: 0x04013C52 RID: 80978
 		public const string PlotPositionPath = "Content/Aki/UniverseEditorConfig/Json/PlotPosition.json";
 
-		// Token: 0x04012B7E RID: 76670
+		// Token: 0x04013C53 RID: 80979
 		public const string EnrichmentArea = "Content/Aki/UniverseEditorConfig/Json/EnrichmentArea.json";
 
-		// Token: 0x04012B7F RID: 76671
+		// Token: 0x04013C54 RID: 80980
 		public const string BrokenRockConfig = "Content/Aki/UniverseEditorConfig/Json/BrokenRockConfig.json";
 
-		// Token: 0x04012B80 RID: 76672
+		// Token: 0x04013C55 RID: 80981
 		public const string FishingRouletteConfig = "Content/Aki/UniverseEditorConfig/Json/FishingRouletteConfig.json";
 
-		// Token: 0x04012B81 RID: 76673
+		// Token: 0x04013C56 RID: 80982
 		public const string AreaQuestTracking = "Content/Aki/UniverseEditorConfig/AreaQuestTracking.json";
 
-		// Token: 0x04012B82 RID: 76674
+		// Token: 0x04013C57 RID: 80983
 		public const string LevelBuildingGrids = "Content/Aki/UniverseEditorConfig/LevelBuildingGrids.json";
 
-		// Token: 0x04012B83 RID: 76675
+		// Token: 0x04013C58 RID: 80984
 		public const string HideGroupFixConfigPath = "Content/Aki/UniverseEditorConfig/Json/HideGroupFixConfig.json";
 
-		// Token: 0x04012B84 RID: 76676
+		// Token: 0x04013C59 RID: 80985
 		public const string GravityAbnormalEntityListPath = "Content/Aki/UniverseEditorConfig/Json/GravityAbnormalEntityList.json";
 
-		// Token: 0x04012B85 RID: 76677
+		// Token: 0x04013C5A RID: 80986
 		public const string ActorRefComponentsConfigPath = "Content/Aki/UniverseEditorConfig/Json/ActorRefComponentsConfig.json";
 
-		// Token: 0x04012B86 RID: 76678
+		// Token: 0x04013C5B RID: 80987
 		public const string SeqRefComponentsConfigPath = "Content/Aki/UniverseEditorConfig/Json/SeqRefComponentsConfig.json";
 
-		// Token: 0x04012B87 RID: 76679
+		// Token: 0x04013C5C RID: 80988
 		public const string QuestRefMp4Path = "Content/Aki/UniverseEditorConfig/Json/QuestRefMp4Config.json";
 
-		// Token: 0x04012B88 RID: 76680
+		// Token: 0x04013C5D RID: 80989
 		public const string GlobalFixConfigPath = "Content/Aki/UniverseEditorConfig/Json/GlobalFixConfig.json";
 
-		// Token: 0x04012B89 RID: 76681
+		// Token: 0x04013C5E RID: 80990
 		public const string AreaFunctionConfigPath = "Content/Aki/UniverseEditorConfig/Json/AreaFunctionConfig.json";
 
-		// Token: 0x04012B8A RID: 76682
+		// Token: 0x04013C5F RID: 80991
 		public const string DynamicSpawnMonsterRandomPoolConfigPath = "Content/Aki/UniverseEditorConfig/Json/DynamicSpawnMonsterRandomPoolConfig.json";
 
-		// Token: 0x04012B8B RID: 76683
+		// Token: 0x04013C60 RID: 80992
 		public const string EntityCustomPrimitiveData = "Content/Aki/UniverseEditorConfig/Json/EntityCustomPrimitiveData.json";
 
-		// Token: 0x04012B8C RID: 76684
+		// Token: 0x04013C61 RID: 80993
 		public const string AnimalStandbyTagPath = "Content/Aki/UniverseEditorConfig/Json/AnimalStandbyTag.json";
 
-		// Token: 0x04012B8D RID: 76685
+		// Token: 0x04013C62 RID: 80994
 		public const string AnsPerformDataPath = "Content/Aki/UniverseEditorConfig/Json/AnsPerformData.json";
 
-		// Token: 0x04012B8E RID: 76686
+		// Token: 0x04013C63 RID: 80995
 		public const string RoadZonePath = "Content/Aki/UniverseEditorConfig/Json/RoadZone.json";
 
-		// Token: 0x04012B8F RID: 76687
+		// Token: 0x04013C64 RID: 80996
 		public const string UltraLeaveRadiusLevelPlayPath = "Content/Aki/UniverseEditorConfig/Json/UltraLeaveRadiusLevelPlay.json";
 
-		// Token: 0x04012B90 RID: 76688
+		// Token: 0x04013C65 RID: 80997
 		public const string AreaTeleportPath = "Content/Aki/UniverseEditorConfig/Json/AreaTeleportData.json";
 
-		// Token: 0x04012B91 RID: 76689
+		// Token: 0x04013C66 RID: 80998
 		public const string SeqAreaPath = "Content/Aki/UniverseEditorConfig/SeqAreaData.json";
 
-		// Token: 0x04012B92 RID: 76690
+		// Token: 0x04013C67 RID: 80999
 		public const string DungeonAreaOwnerDataPath = "Content/Aki/UniverseEditorConfig/Json/DungeonAreaOwnerData.json";
 
-		// Token: 0x04012B93 RID: 76691
+		// Token: 0x04013C68 RID: 81000
 		public const string DungeonAreaReachableDataPath = "Content/Aki/UniverseEditorConfig/Json/DungeonAreaReachableData.json";
 
-		// Token: 0x04012B94 RID: 76692
+		// Token: 0x04013C69 RID: 81001
 		public const string TimeSchedulePath = "Content/Aki/UniverseEditorConfig/Json/TimeSchedule.json";
 
-		// Token: 0x04012B95 RID: 76693
+		// Token: 0x04013C6A RID: 81002
 		public const string AiBehaviorTreePath = "Content/Aki/UniverseEditorConfig/Json/AiBehaviorTree.json";
 
-		// Token: 0x04012B96 RID: 76694
+		// Token: 0x04013C6B RID: 81003
 		public const string QuestListExportDir = "Content/Aki/UniverseEditorConfig/Quest";
 
-		// Token: 0x04012B97 RID: 76695
+		// Token: 0x04013C6C RID: 81004
 		public const string LevelPlayListExportDir = "Content/Aki/UniverseEditorConfig/LevelPlay";
 
-		// Token: 0x04012B98 RID: 76696
+		// Token: 0x04013C6D RID: 81005
 		public const string DynamicLevelPlayListExportDir = "Content/Aki/UniverseEditorConfig/DynamicLevelPlay";
 
-		// Token: 0x04012B99 RID: 76697
+		// Token: 0x04013C6E RID: 81006
 		public const string RecallDataConfigPath = "Content/Aki/UniverseEditorConfig/Json/RecallData.json";
 
-		// Token: 0x04012B9A RID: 76698
+		// Token: 0x04013C6F RID: 81007
 		public const string CombatOperationCaptureDir = "Content/Aki/UniverseEditorConfig/CombatOperationCapture";
 
-		// Token: 0x04012B9B RID: 76699
+		// Token: 0x04013C70 RID: 81008
 		public const string RecallEntityConfigPath = "Content/Aki/UniverseEditorConfig/Json/RecallEntityConfig.json";
 	}
 
-	// Token: 0x0200781C RID: 30748
+	// Token: 0x02008060 RID: 32864
 	[Nullable(0)]
 	public class GlobalConfig
 	{
-		// Token: 0x04012B9C RID: 76700
+		// Token: 0x04013C71 RID: 81009
 		public const string FlowListDir = "../Config/Raw/Tables/k.可视化编辑/j.剧情";
 
-		// Token: 0x04012B9D RID: 76701
+		// Token: 0x04013C72 RID: 81010
 		public const string QuestListDir = "../Config/Raw/Tables/k.可视化编辑/r.任务";
 
-		// Token: 0x04012B9E RID: 76702
+		// Token: 0x04013C73 RID: 81011
 		public const string LevelPlayListDir = "../Config/Raw/Tables/k.可视化编辑/w.玩法";
 
-		// Token: 0x04012B9F RID: 76703
+		// Token: 0x04013C74 RID: 81012
 		public const string TwoDimensionLevelListDir = "../Config/Raw/Tables/k.可视化编辑/e.2D关卡配置";
 
-		// Token: 0x04012BA0 RID: 76704
+		// Token: 0x04013C75 RID: 81013
 		public const string DangoBrawlObjectTemplateDir = "../Config/Raw/Tables/k.可视化编辑/e.2D关卡配置/t.团子乱斗物体模板";
 
-		// Token: 0x04012BA1 RID: 76705
+		// Token: 0x04013C76 RID: 81014
 		public const string TextLibraryDir = "../Config/Raw/Tables/w.文本库";
 
-		// Token: 0x04012BA2 RID: 76706
+		// Token: 0x04013C77 RID: 81015
 		public const string CsvFileDir = "../Config/Raw/Tables/k.可视化编辑/c.Csv";
 
-		// Token: 0x04012BA3 RID: 76707
+		// Token: 0x04013C78 RID: 81016
 		public const string LevelsDir = "../Config/Raw/Tables/k.可视化编辑/d.地图";
 
-		// Token: 0x04012BA4 RID: 76708
+		// Token: 0x04013C79 RID: 81017
 		public const string TemplateDir = "../Config/Raw/Tables/k.可视化编辑/m.模板";
 
-		// Token: 0x04012BA5 RID: 76709
+		// Token: 0x04013C7A RID: 81018
 		public const string PrefabDir = "../Config/Raw/Tables/k.可视化编辑/y.预制体";
 
-		// Token: 0x04012BA6 RID: 76710
+		// Token: 0x04013C7B RID: 81019
 		public const string BundleDir = "../Config/Raw/Tables/k.可视化编辑/s.实体包";
 
-		// Token: 0x04012BA7 RID: 76711
+		// Token: 0x04013C7C RID: 81020
 		public const string AreaEntitiesPath = "../Config/Raw/Tables/k.可视化编辑/AreaEntitiesPath.json";
 
-		// Token: 0x04012BA8 RID: 76712
+		// Token: 0x04013C7D RID: 81021
 		public const string LevelEntityVoxelPath = "../Config/Raw/Tables/k.可视化编辑/LevelEntityVoxel.json";
 
-		// Token: 0x04012BA9 RID: 76713
+		// Token: 0x04013C7E RID: 81022
 		public const string FlowTemplateCameraDir = "../Config/Raw/Tables/k.可视化编辑/y.演出模板";
 
-		// Token: 0x04012BAA RID: 76714
+		// Token: 0x04013C7F RID: 81023
 		public const string EntityPerformanceDataPath = "../Config/Raw/Tables/k.可视化编辑/EntityPerformanceData.json";
 
-		// Token: 0x04012BAB RID: 76715
+		// Token: 0x04013C80 RID: 81024
 		public const string MarkedErrorCsvPath = "../Config/Raw/Tables/k.可视化编辑/MarkedErrorData.csv";
 
-		// Token: 0x04012BAC RID: 76716
+		// Token: 0x04013C81 RID: 81025
 		public const string BehaviorTreeFragmentDir = "../Config/Raw/Tables/k.可视化编辑/x.行为树片段";
 
-		// Token: 0x04012BAD RID: 76717
+		// Token: 0x04013C82 RID: 81026
 		public const string CommonBtDir = "../Config/Raw/Tables/k.可视化编辑/t.通用AI配置";
 
-		// Token: 0x04012BAE RID: 76718
+		// Token: 0x04013C83 RID: 81027
 		public const string CombatOperationCaptureDir = "../Config/Raw/Tables/k.可视化编辑/y.演示序列";
 
-		// Token: 0x04012BAF RID: 76719
+		// Token: 0x04013C84 RID: 81028
 		public const string FunctionalTestDir = "Content/Aki/UniverseEditor/FunctionalTest";
 
-		// Token: 0x04012BB0 RID: 76720
+		// Token: 0x04013C85 RID: 81029
 		public const string AreaQuestTracking = "../Config/Raw/Tables/k.可视化编辑/AreaQuestTracking.json";
 
-		// Token: 0x04012BB1 RID: 76721
+		// Token: 0x04013C86 RID: 81030
 		public const string LevelBuildingGrids = "../Config/Raw/Tables/k.可视化编辑/LevelBuildingGrids.json";
 
-		// Token: 0x04012BB2 RID: 76722
+		// Token: 0x04013C87 RID: 81031
 		public const string EntityCustomPrimitiveData = "../Config/Raw/Tables/k.可视化编辑/EntityCustomPrimitiveData.json";
 
-		// Token: 0x04012BB3 RID: 76723
+		// Token: 0x04013C88 RID: 81032
 		public const string QuestListExportDir = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Quest";
 
-		// Token: 0x04012BB4 RID: 76724
+		// Token: 0x04013C89 RID: 81033
 		public const string LevelPlayListExportDir = "../Config/Raw/Tables/k.可视化编辑/__Temp__/LevelPlay";
 
-		// Token: 0x04012BB5 RID: 76725
+		// Token: 0x04013C8A RID: 81034
 		public const string DynamicLevelPlayListExportDir = "../Config/Raw/Tables/k.可视化编辑/__Temp__/DynamicLevelPlay";
 
-		// Token: 0x04012BB6 RID: 76726
+		// Token: 0x04013C8B RID: 81035
 		public const string CommonBtExportDir = "../Config/Raw/Tables/k.可视化编辑/__Temp__/CommonBt";
 
-		// Token: 0x04012BB7 RID: 76727
+		// Token: 0x04013C8C RID: 81036
 		public const string LevelsConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Level.json";
 
-		// Token: 0x04012BB8 RID: 76728
+		// Token: 0x04013C8D RID: 81037
 		public const string SubWpMapConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/SubWpMap.json";
 
-		// Token: 0x04012BB9 RID: 76729
+		// Token: 0x04013C8E RID: 81038
 		public const string ActionConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Action.json";
 
-		// Token: 0x04012BBA RID: 76730
+		// Token: 0x04013C8F RID: 81039
 		public const string ComponentConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Component.json";
 
-		// Token: 0x04012BBB RID: 76731
+		// Token: 0x04013C90 RID: 81040
 		public const string EntityConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Entity.json";
 
-		// Token: 0x04012BBC RID: 76732
+		// Token: 0x04013C91 RID: 81041
 		public const string BlueprintConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Blueprint.json";
 
-		// Token: 0x04012BBD RID: 76733
+		// Token: 0x04013C92 RID: 81042
 		public const string EntityStateConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/EntityState.json";
 
-		// Token: 0x04012BBE RID: 76734
+		// Token: 0x04013C93 RID: 81043
 		public const string EntityOwnerConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/EntityOwner.json";
 
-		// Token: 0x04012BBF RID: 76735
+		// Token: 0x04013C94 RID: 81044
 		public const string ChildEntityOwnerConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/ChildEntityOwner.json";
 
-		// Token: 0x04012BC0 RID: 76736
+		// Token: 0x04013C95 RID: 81045
 		public const string AlwaysLoadEntityConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/AlwaysLoadEntity.json";
 
-		// Token: 0x04012BC1 RID: 76737
+		// Token: 0x04013C96 RID: 81046
 		public const string LevelsDataDir = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Levels";
 
-		// Token: 0x04012BC2 RID: 76738
+		// Token: 0x04013C97 RID: 81047
 		public const string TemplateConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/Template.json";
 
-		// Token: 0x04012BC3 RID: 76739
+		// Token: 0x04013C98 RID: 81048
 		public const string PrefabConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/Prefab.json";
 
-		// Token: 0x04012BC4 RID: 76740
+		// Token: 0x04013C99 RID: 81049
 		public const string EntityDataConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/EntityData.json";
 
-		// Token: 0x04012BC5 RID: 76741
+		// Token: 0x04013C9A RID: 81050
 		public const string OccupationConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/Occupation.json";
 
-		// Token: 0x04012BC6 RID: 76742
+		// Token: 0x04013C9B RID: 81051
 		public const string OccupiedExportPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/OccupiedExport.json";
 
-		// Token: 0x04012BC7 RID: 76743
+		// Token: 0x04013C9C RID: 81052
 		public const string FlowTemplateConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/FlowTemplate.json";
 
-		// Token: 0x04012BC8 RID: 76744
+		// Token: 0x04013C9D RID: 81053
 		public const string MarbleLevelConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/MarbleLevel.json";
 
-		// Token: 0x04012BC9 RID: 76745
+		// Token: 0x04013C9E RID: 81054
 		public const string DangoBrawlLevelConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/DangoBrawlLevel.json";
 
-		// Token: 0x04012BCA RID: 76746
+		// Token: 0x04013C9F RID: 81055
 		public const string DangoBrawlObjectTemplateConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/DangoBrawlObjectTemplate.json";
 
-		// Token: 0x04012BCB RID: 76747
+		// Token: 0x04013CA0 RID: 81056
 		public const string FlowTemplateCameraConfgSourcePath = "../Config/Raw/Tables/k.可视化编辑/y.演出模板/FlowTemplateCamera.json";
 
-		// Token: 0x04012BCC RID: 76748
+		// Token: 0x04013CA1 RID: 81057
 		public const string FlowTemplateCameraConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/FlowTemplateCamera.json";
 
-		// Token: 0x04012BCD RID: 76749
+		// Token: 0x04013CA2 RID: 81058
 		public const string InteractOptionConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/InteractOption.json";
 
-		// Token: 0x04012BCE RID: 76750
+		// Token: 0x04013CA3 RID: 81059
 		public const string BtConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/BtConfig.json";
 
-		// Token: 0x04012BCF RID: 76751
+		// Token: 0x04013CA4 RID: 81060
 		public const string MontageConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/MontageConfig.json";
 
-		// Token: 0x04012BD0 RID: 76752
+		// Token: 0x04013CA5 RID: 81061
 		public const string AbpMontageConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AbpMontageConfig.json";
 
-		// Token: 0x04012BD1 RID: 76753
+		// Token: 0x04013CA6 RID: 81062
 		public const string AbpOverlayMontageConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AbpOverlayMontageConfig.json";
 
-		// Token: 0x04012BD2 RID: 76754
+		// Token: 0x04013CA7 RID: 81063
 		public const string AbpStateConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AbpStateConfig.json";
 
-		// Token: 0x04012BD3 RID: 76755
+		// Token: 0x04013CA8 RID: 81064
 		public const string FaceExpressionConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/FaceExpressionConfig.json";
 
-		// Token: 0x04012BD4 RID: 76756
+		// Token: 0x04013CA9 RID: 81065
 		public const string AoiGroupPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AoiGroupPath.json";
 
-		// Token: 0x04012BD5 RID: 76757
+		// Token: 0x04013CAA RID: 81066
 		public const string ActorRefConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/ActorRefConfig.json";
 
-		// Token: 0x04012BD6 RID: 76758
+		// Token: 0x04013CAB RID: 81067
 		public const string AoiDefineDataPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AoiDefine.json";
 
-		// Token: 0x04012BD7 RID: 76759
+		// Token: 0x04013CAC RID: 81068
 		public const string EditorStartConfig = "../Config/Raw/Tables/k.可视化编辑/__Temp__/EditorStartConfig.json";
 
-		// Token: 0x04012BD8 RID: 76760
+		// Token: 0x04013CAD RID: 81069
 		public const string BubbleConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/BubbleConfig.json";
 
-		// Token: 0x04012BD9 RID: 76761
+		// Token: 0x04013CAE RID: 81070
 		public const string TidTextTempPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Csv/TidText.csv";
 
-		// Token: 0x04012BDA RID: 76762
+		// Token: 0x04013CAF RID: 81071
 		public const string AudioStatePath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/a.AudioState.json";
 
-		// Token: 0x04012BDB RID: 76763
+		// Token: 0x04013CB0 RID: 81072
 		public const string PlotHandBookPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/PlotHandBook.json";
 
-		// Token: 0x04012BDC RID: 76764
+		// Token: 0x04013CB1 RID: 81073
 		public const string PlotPositionPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/PlotPosition.json";
 
-		// Token: 0x04012BDD RID: 76765
+		// Token: 0x04013CB2 RID: 81074
 		public const string EnrichmentArea = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/EnrichmentArea.json";
 
-		// Token: 0x04012BDE RID: 76766
+		// Token: 0x04013CB3 RID: 81075
 		public const string BrokenRockConfig = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/BrokenRockConfig.json";
 
-		// Token: 0x04012BDF RID: 76767
+		// Token: 0x04013CB4 RID: 81076
 		public const string FishingRouletteConfig = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/FishingRouletteConfig.json";
 
-		// Token: 0x04012BE0 RID: 76768
+		// Token: 0x04013CB5 RID: 81077
 		public const string OfflineComponentExportPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/OfflineComponentConfig.json";
 
-		// Token: 0x04012BE1 RID: 76769
+		// Token: 0x04013CB6 RID: 81078
 		public const string SummonGongduolaConfigExportPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/SummonGongduolaConfig.json";
 
-		// Token: 0x04012BE2 RID: 76770
+		// Token: 0x04013CB7 RID: 81079
 		public const string HideGroupFixConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/HideGroupFixConfig.json";
 
-		// Token: 0x04012BE3 RID: 76771
+		// Token: 0x04013CB8 RID: 81080
 		public const string EntityFixProcessorPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/EntityFixProcessor.json";
 
-		// Token: 0x04012BE4 RID: 76772
+		// Token: 0x04013CB9 RID: 81081
 		public const string GravityAbnormalEntityListPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/GravityAbnormalEntityList.json";
 
-		// Token: 0x04012BE5 RID: 76773
+		// Token: 0x04013CBA RID: 81082
 		public const string ActorRefComponentsConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/ActorRefComponentsConfig.json";
 
-		// Token: 0x04012BE6 RID: 76774
+		// Token: 0x04013CBB RID: 81083
 		public const string SeqRefComponentsConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/SeqRefComponentsConfig.json";
 
-		// Token: 0x04012BE7 RID: 76775
+		// Token: 0x04013CBC RID: 81084
 		public const string QuestRefMp4Path = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/QuestRefMp4Config.json";
 
-		// Token: 0x04012BE8 RID: 76776
+		// Token: 0x04013CBD RID: 81085
 		public const string UltraLeaveRadiusLevelPlayPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/UltraLeaveRadiusLevelPlay.json";
 
-		// Token: 0x04012BE9 RID: 76777
+		// Token: 0x04013CBE RID: 81086
 		public const string TypeScriptRoot = "TypeScript/Src";
 
-		// Token: 0x04012BEA RID: 76778
+		// Token: 0x04013CBF RID: 81087
 		public const string GlobalVarConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/GlobalVar.json";
 
-		// Token: 0x04012BEB RID: 76779
+		// Token: 0x04013CC0 RID: 81088
 		public const string SystemVarConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/SystemVar.json";
 
-		// Token: 0x04012BEC RID: 76780
+		// Token: 0x04013CC1 RID: 81089
 		public const string VehicleRidingRolesConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/VehicleRidingRoles.json";
 
-		// Token: 0x04012BED RID: 76781
+		// Token: 0x04013CC2 RID: 81090
 		public const string GridItemShapeConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/GridItemShapeConfig.json";
 
-		// Token: 0x04012BEE RID: 76782
+		// Token: 0x04013CC3 RID: 81091
 		public const string GlobalFixConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/GlobalFixConfig.json";
 
-		// Token: 0x04012BEF RID: 76783
+		// Token: 0x04013CC4 RID: 81092
 		public const string AreaFunctionConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AreaFunctionConfig.json";
 
-		// Token: 0x04012BF0 RID: 76784
+		// Token: 0x04013CC5 RID: 81093
 		public const string DynamicSpawnMonsterRandomPoolConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/DynamicSpawnMonsterRandomPoolConfig.json";
 
-		// Token: 0x04012BF1 RID: 76785
+		// Token: 0x04013CC6 RID: 81094
 		public const string AnimalStandbyTagPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AnimalStandbyTag.json";
 
-		// Token: 0x04012BF2 RID: 76786
+		// Token: 0x04013CC7 RID: 81095
 		public const string AnsPerformDataPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AnsPerformData.json";
 
-		// Token: 0x04012BF3 RID: 76787
+		// Token: 0x04013CC8 RID: 81096
 		public const string RoadZonePath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/RoadZone.json";
 
-		// Token: 0x04012BF4 RID: 76788
+		// Token: 0x04013CC9 RID: 81097
 		public const string AreaTeleportPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AreaTeleportData.json";
 
-		// Token: 0x04012BF5 RID: 76789
+		// Token: 0x04013CCA RID: 81098
 		public const string SeqAreaPath = "../Config/Raw/Tables/k.可视化编辑/SeqAreaData.json";
 
-		// Token: 0x04012BF6 RID: 76790
+		// Token: 0x04013CCB RID: 81099
 		public const string DungeonAreaOwnerDataPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/DungeonAreaOwnerData.json";
 
-		// Token: 0x04012BF7 RID: 76791
+		// Token: 0x04013CCC RID: 81100
 		public const string DungeonAreaReachableDataPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/DungeonAreaReachableData.json";
 
-		// Token: 0x04012BF8 RID: 76792
+		// Token: 0x04013CCD RID: 81101
 		public const string TimeSchedulePath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/TimeSchedule.json";
 
-		// Token: 0x04012BF9 RID: 76793
+		// Token: 0x04013CCE RID: 81102
 		public const string AiBehaviorTreePath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AiBehaviorTree.json";
 
-		// Token: 0x04012BFA RID: 76794
+		// Token: 0x04013CCF RID: 81103
 		public const string RecallDataConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/RecallData.json";
 
-		// Token: 0x04012BFB RID: 76795
+		// Token: 0x04013CD0 RID: 81104
 		public const string RecallEntityConfigPath = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/RecallEntityConfig.json";
 	}
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020031A2 RID: 12706
+// Token: 0x02002711 RID: 10001
 [NullableContext(1)]
 [Nullable(0)]
 public class SwimConfig : ConfigBase
 {
-	// Token: 0x0601B60D RID: 112141 RVA: 0x0077C26A File Offset: 0x0077A46A
+	// Token: 0x06019136 RID: 102710 RVA: 0x007A44A6 File Offset: 0x007A26A6
 	protected override bool OnInit()
 	{
 		this.CacheConfig = new Dictionary<string, Swim>();
@@ -19,7 +19,7 @@ public class SwimConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601B60E RID: 112142 RVA: 0x0077C2A5 File Offset: 0x0077A4A5
+	// Token: 0x06019137 RID: 102711 RVA: 0x007A44E1 File Offset: 0x007A26E1
 	protected override bool OnClear()
 	{
 		this.CacheConfig = null;
@@ -29,7 +29,7 @@ public class SwimConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601B60F RID: 112143 RVA: 0x0077C2D4 File Offset: 0x0077A4D4
+	// Token: 0x06019138 RID: 102712 RVA: 0x007A4510 File Offset: 0x007A2710
 	public Swim? GetSwimConfigByRoleBodyId(string roleBodyId)
 	{
 		Swim value;
@@ -51,7 +51,7 @@ public class SwimConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601B610 RID: 112144 RVA: 0x0077C344 File Offset: 0x0077A544
+	// Token: 0x06019139 RID: 102713 RVA: 0x007A4580 File Offset: 0x007A2780
 	public long? GetSwimBuffId(bool hasInput, bool bFastSwim)
 	{
 		if (!hasInput)
@@ -65,7 +65,7 @@ public class SwimConfig : ConfigBase
 		return this.BuffIdWithInputForNormalSwim;
 	}
 
-	// Token: 0x0601B611 RID: 112145 RVA: 0x0077C360 File Offset: 0x0077A560
+	// Token: 0x0601913A RID: 102714 RVA: 0x007A459C File Offset: 0x007A279C
 	public void InitSwimBuffConfig()
 	{
 		SwimBuff? config = ConfigSwimBuffById.GetConfig(0, true);
@@ -91,8 +91,8 @@ public class SwimConfig : ConfigBase
 		this.BuffIdWithInputForFastSwim = new long?((long)config3.Value.BuffId);
 	}
 
-	// Token: 0x170025D8 RID: 9688
-	// (get) Token: 0x0601B612 RID: 112146 RVA: 0x0077C44B File Offset: 0x0077A64B
+	// Token: 0x170027D1 RID: 10193
+	// (get) Token: 0x0601913B RID: 102715 RVA: 0x007A4687 File Offset: 0x007A2887
 	public static SwimConfig Instance
 	{
 		get
@@ -101,7 +101,7 @@ public class SwimConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601B613 RID: 112147 RVA: 0x0077C452 File Offset: 0x0077A652
+	// Token: 0x0601913C RID: 102716 RVA: 0x007A468E File Offset: 0x007A288E
 	public static SwimConfig GetOrCreateInstance()
 	{
 		if (SwimConfig._Instance == null)
@@ -111,7 +111,7 @@ public class SwimConfig : ConfigBase
 		return SwimConfig._Instance;
 	}
 
-	// Token: 0x0601B614 RID: 112148 RVA: 0x0077C466 File Offset: 0x0077A666
+	// Token: 0x0601913D RID: 102717 RVA: 0x007A46A2 File Offset: 0x007A28A2
 	public static bool CreateInstance()
 	{
 		if (SwimConfig._Instance != null)
@@ -122,33 +122,33 @@ public class SwimConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601B615 RID: 112149 RVA: 0x0077C47C File Offset: 0x0077A67C
+	// Token: 0x0601913E RID: 102718 RVA: 0x007A46B8 File Offset: 0x007A28B8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B616 RID: 112150 RVA: 0x0077C47E File Offset: 0x0077A67E
+	// Token: 0x0601913F RID: 102719 RVA: 0x007A46BA File Offset: 0x007A28BA
 	public static void ResetStaticDefaultValue()
 	{
 		SwimConfig._Instance = null;
 	}
 
-	// Token: 0x0601B617 RID: 112151 RVA: 0x0077C486 File Offset: 0x0077A686
+	// Token: 0x06019140 RID: 102720 RVA: 0x007A46C2 File Offset: 0x007A28C2
 	static SwimConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SwimConfig.CreateStaticDefaultValue), new Action(SwimConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D679 RID: 54905
+	// Token: 0x0400DAFF RID: 56063
 	private const int NORMAL_SWIM_CONFIG_ID = 0;
 
-	// Token: 0x0400D67A RID: 54906
+	// Token: 0x0400DB00 RID: 56064
 	private const int NO_INPUT_CONFIG_ID = 1;
 
-	// Token: 0x0400D67B RID: 54907
+	// Token: 0x0400DB01 RID: 56065
 	private const int FAST_SWIM_CONFIG_ID = 3;
 
-	// Token: 0x0400D67C RID: 54908
+	// Token: 0x0400DB02 RID: 56066
 	[Nullable(new byte[]
 	{
 		2,
@@ -156,16 +156,16 @@ public class SwimConfig : ConfigBase
 	})]
 	private Dictionary<string, Swim> CacheConfig;
 
-	// Token: 0x0400D67D RID: 54909
+	// Token: 0x0400DB03 RID: 56067
 	private long? BuffIdWithInputForNormalSwim;
 
-	// Token: 0x0400D67E RID: 54910
+	// Token: 0x0400DB04 RID: 56068
 	private long? BuffIdWithInputForFastSwim;
 
-	// Token: 0x0400D67F RID: 54911
+	// Token: 0x0400DB05 RID: 56069
 	private long? BuffIdWithNoInput;
 
-	// Token: 0x0400D680 RID: 54912
+	// Token: 0x0400DB06 RID: 56070
 	[Nullable(2)]
 	private static SwimConfig _Instance;
 }

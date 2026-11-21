@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Forging
 {
-	// Token: 0x02005644 RID: 22084
+	// Token: 0x0200461A RID: 17946
 	public enum EForgingListType
 	{
-		// Token: 0x0401D894 RID: 120980
+		// Token: 0x0401831F RID: 99103
 		WeaponForging
 	}
 }

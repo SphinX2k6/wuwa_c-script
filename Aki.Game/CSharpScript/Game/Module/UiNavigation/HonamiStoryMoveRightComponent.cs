@@ -4,15 +4,15 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004975 RID: 18805
+	// Token: 0x020038ED RID: 14573
 	public class HonamiStoryMoveRightComponent : HonamiStoryComponentBase
 	{
-		// Token: 0x0603106E RID: 200814 RVA: 0x00B61B10 File Offset: 0x00B5FD10
+		// Token: 0x06025B9E RID: 154526 RVA: 0x00A9C9F0 File Offset: 0x00A9ABF0
 		public HonamiStoryMoveRightComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603106F RID: 200815 RVA: 0x00B61B19 File Offset: 0x00B5FD19
+		// Token: 0x06025B9F RID: 154527 RVA: 0x00A9C9F9 File Offset: 0x00A9ABF9
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (base.Logic == null)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.Logic.JumpToNextPanelNew();
 		}
 
-		// Token: 0x06031070 RID: 200816 RVA: 0x00B61B2F File Offset: 0x00B5FD2F
+		// Token: 0x06025BA0 RID: 154528 RVA: 0x00A9CA0F File Offset: 0x00A9AC0F
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

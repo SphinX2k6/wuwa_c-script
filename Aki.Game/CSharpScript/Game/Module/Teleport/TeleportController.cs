@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using System.Text.Json;
 using Aki.Protocol;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
@@ -15,11 +14,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B69 RID: 19305
+	// Token: 0x02003B13 RID: 15123
 	[TickController(0)]
 	public class TeleportController : ControllerBase
 	{
-		// Token: 0x06031FA7 RID: 204711 RVA: 0x00B9968C File Offset: 0x00B9788C
+		// Token: 0x06026D41 RID: 159041 RVA: 0x00ADDB18 File Offset: 0x00ADBD18
 		public UniTask<bool> TeleportPlayer([Nullable(1)] ITeleportContext param)
 		{
 			TeleportController.<TeleportPlayer>d__3 <TeleportPlayer>d__;
@@ -31,7 +30,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <TeleportPlayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FA8 RID: 204712 RVA: 0x00B996D8 File Offset: 0x00B978D8
+		// Token: 0x06026D42 RID: 159042 RVA: 0x00ADDB64 File Offset: 0x00ADBD64
 		public UniTask<bool> TeleportPlayerInVehicle([Nullable(1)] ITeleportContext param)
 		{
 			TeleportController.<TeleportPlayerInVehicle>d__4 <TeleportPlayerInVehicle>d__;
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <TeleportPlayerInVehicle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FA9 RID: 204713 RVA: 0x00B99724 File Offset: 0x00B97924
+		// Token: 0x06026D43 RID: 159043 RVA: 0x00ADDBB0 File Offset: 0x00ADBDB0
 		private UniTask<bool> TeleportPlayerInternal([Nullable(1)] TeleportContext teleportContext, bool isInVehicle)
 		{
 			TeleportController.<TeleportPlayerInternal>d__5 <TeleportPlayerInternal>d__;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <TeleportPlayerInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FAA RID: 204714 RVA: 0x00B99778 File Offset: 0x00B97978
+		// Token: 0x06026D44 RID: 159044 RVA: 0x00ADDC04 File Offset: 0x00ADBE04
 		public UniTask<bool> TeleportElevatorAndPlayerSeparately([Nullable(1)] ITeleportContext param)
 		{
 			TeleportController.<TeleportElevatorAndPlayerSeparately>d__6 <TeleportElevatorAndPlayerSeparately>d__;
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <TeleportElevatorAndPlayerSeparately>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FAB RID: 204715 RVA: 0x00B997BC File Offset: 0x00B979BC
+		// Token: 0x06026D45 RID: 159045 RVA: 0x00ADDC48 File Offset: 0x00ADBE48
 		public bool QueryCanTeleportNoLoading(FVectorDouble targetPosition)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -92,13 +91,13 @@ namespace CSharpScript.Game.Module.Teleport
 			return uworldPartitionSubsystem.IsStreamingCompleted(EWorldPartitionRuntimeCellState.Activated, tarray, false, ref num, ref num2, true, false);
 		}
 
-		// Token: 0x06031FAC RID: 204716 RVA: 0x00B99870 File Offset: 0x00B97A70
+		// Token: 0x06026D46 RID: 159046 RVA: 0x00ADDCFC File Offset: 0x00ADBEFC
 		private bool CheckNeedFakeTeleport(TeleportReason? serverReason)
 		{
 			return ((serverReason.GetValueOrDefault() == TeleportReason.Action || serverReason.GetValueOrDefault() == TeleportReason.FlowAction || serverReason.GetValueOrDefault() == TeleportReason.Fall) && AutoRunModel.Instance.IsInLogicTreeGmMode()) || (serverReason.GetValueOrDefault() == TeleportReason.Gm && PlotModel.Instance.IsInHighLevelPlot());
 		}
 
-		// Token: 0x06031FAD RID: 204717 RVA: 0x00B998C4 File Offset: 0x00B97AC4
+		// Token: 0x06026D47 RID: 159047 RVA: 0x00ADDD50 File Offset: 0x00ADBF50
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.TeleportNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTeleportNotify));
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return true;
 		}
 
-		// Token: 0x06031FAE RID: 204718 RVA: 0x00B99926 File Offset: 0x00B97B26
+		// Token: 0x06026D48 RID: 159048 RVA: 0x00ADDDB2 File Offset: 0x00ADBFB2
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.TeleportNotify);
@@ -116,7 +115,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return true;
 		}
 
-		// Token: 0x06031FAF RID: 204719 RVA: 0x00B9995C File Offset: 0x00B97B5C
+		// Token: 0x06026D49 RID: 159049 RVA: 0x00ADDDE8 File Offset: 0x00ADBFE8
 		protected override void OnTick(float delta)
 		{
 			TeleportContext teleportContext = TeleportModel.Instance.TeleportContext;
@@ -144,7 +143,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FB0 RID: 204720 RVA: 0x00B999CC File Offset: 0x00B97BCC
+		// Token: 0x06026D4A RID: 159050 RVA: 0x00ADDE58 File Offset: 0x00ADC058
 		private void HandleCacheServerTeleportNotify()
 		{
 			if (this.TeleportPlayerNotifyCache != null)
@@ -158,7 +157,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FB1 RID: 204721 RVA: 0x00B999FC File Offset: 0x00B97BFC
+		// Token: 0x06026D4B RID: 159051 RVA: 0x00ADDE88 File Offset: 0x00ADC088
 		public UniTask<bool> TeleportToPositionNoLoading(FVectorDouble targetPosition, FRotator? targetRotation, [Nullable(1)] string reason, bool bNeedRestoreCamera = true)
 		{
 			TeleportController.<TeleportToPositionNoLoading>d__13 <TeleportToPositionNoLoading>d__;
@@ -173,7 +172,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <TeleportToPositionNoLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031FB2 RID: 204722 RVA: 0x00B99A60 File Offset: 0x00B97C60
+		// Token: 0x06026D4C RID: 159052 RVA: 0x00ADDEEC File Offset: 0x00ADC0EC
 		[NullableContext(2)]
 		private unsafe void OnTeleportNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -186,7 +185,7 @@ namespace CSharpScript.Game.Module.Teleport
 			ELogAuthor author = ELogAuthor.CK;
 			string message = "传送: 收到传送协议";
 			<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray5<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Context", JsonSerializer.Serialize<GameCtxPb>(teleportNotify.GameCtx, null));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Context", teleportNotify.GameCtx);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Pos", teleportNotify.Position);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("Rot", teleportNotify.Rotation);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("Gravity", teleportNotify.GravityDirection);
@@ -230,7 +229,7 @@ namespace CSharpScript.Game.Module.Teleport
 			this.TeleportPlayer(teleportContextParam);
 		}
 
-		// Token: 0x06031FB3 RID: 204723 RVA: 0x00B99CC0 File Offset: 0x00B97EC0
+		// Token: 0x06026D4D RID: 159053 RVA: 0x00ADE148 File Offset: 0x00ADC348
 		[NullableContext(2)]
 		private void OnTeleportFlowNotify(IMessage __msg, Net.CallbackStatus status)
 		{
@@ -293,7 +292,7 @@ namespace CSharpScript.Game.Module.Teleport
 			});
 		}
 
-		// Token: 0x06031FB4 RID: 204724 RVA: 0x00B99D6C File Offset: 0x00B97F6C
+		// Token: 0x06026D4E RID: 159054 RVA: 0x00ADE1F4 File Offset: 0x00ADC3F4
 		[NullableContext(2)]
 		private unsafe void OnTeleportVehicleNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -348,7 +347,7 @@ namespace CSharpScript.Game.Module.Teleport
 			});
 		}
 
-		// Token: 0x06031FB5 RID: 204725 RVA: 0x00B99F60 File Offset: 0x00B98160
+		// Token: 0x06026D4F RID: 159055 RVA: 0x00ADE3E8 File Offset: 0x00ADC5E8
 		private bool IsPlayerInVehicle()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -366,7 +365,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return baseActorComponent2 != null && baseActorComponent2.Entity.CheckGetComponent<CharacterDriveVehicleComponent>().VehicleEntity != null;
 		}
 
-		// Token: 0x06031FB6 RID: 204726 RVA: 0x00B99FAC File Offset: 0x00B981AC
+		// Token: 0x06026D50 RID: 159056 RVA: 0x00ADE434 File Offset: 0x00ADC634
 		[NullableContext(1)]
 		private unsafe void SetEntityLocation(long creatureDataId, IVector targetPosition, global::Rotator targetRotation, IVector targetGravityDirection)
 		{
@@ -421,7 +420,7 @@ namespace CSharpScript.Game.Module.Teleport
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x06031FB7 RID: 204727 RVA: 0x00B9A174 File Offset: 0x00B98374
+		// Token: 0x06026D51 RID: 159057 RVA: 0x00ADE5FC File Offset: 0x00ADC7FC
 		protected override bool OnLeaveLevel()
 		{
 			TeleportContext teleportContext = TeleportModel.Instance.TeleportContext;
@@ -450,8 +449,8 @@ namespace CSharpScript.Game.Module.Teleport
 			return true;
 		}
 
-		// Token: 0x17007BDC RID: 31708
-		// (get) Token: 0x06031FB8 RID: 204728 RVA: 0x00B9A1E8 File Offset: 0x00B983E8
+		// Token: 0x17004F89 RID: 20361
+		// (get) Token: 0x06026D52 RID: 159058 RVA: 0x00ADE670 File Offset: 0x00ADC870
 		[Nullable(1)]
 		public static TeleportController Instance
 		{
@@ -462,7 +461,7 @@ namespace CSharpScript.Game.Module.Teleport
 			}
 		}
 
-		// Token: 0x06031FB9 RID: 204729 RVA: 0x00B9A1EF File Offset: 0x00B983EF
+		// Token: 0x06026D53 RID: 159059 RVA: 0x00ADE677 File Offset: 0x00ADC877
 		[NullableContext(1)]
 		public static TeleportController GetOrCreateInstance()
 		{
@@ -473,7 +472,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return TeleportController._Instance;
 		}
 
-		// Token: 0x06031FBA RID: 204730 RVA: 0x00B9A203 File Offset: 0x00B98403
+		// Token: 0x06026D54 RID: 159060 RVA: 0x00ADE68B File Offset: 0x00ADC88B
 		public static bool CreateInstance()
 		{
 			if (TeleportController._Instance != null)
@@ -484,35 +483,35 @@ namespace CSharpScript.Game.Module.Teleport
 			return true;
 		}
 
-		// Token: 0x06031FBB RID: 204731 RVA: 0x00B9A219 File Offset: 0x00B98419
+		// Token: 0x06026D55 RID: 159061 RVA: 0x00ADE6A1 File Offset: 0x00ADC8A1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031FBC RID: 204732 RVA: 0x00B9A21B File Offset: 0x00B9841B
+		// Token: 0x06026D56 RID: 159062 RVA: 0x00ADE6A3 File Offset: 0x00ADC8A3
 		public static void ResetStaticDefaultValue()
 		{
 			TeleportController._Instance = null;
 		}
 
-		// Token: 0x06031FBD RID: 204733 RVA: 0x00B9A223 File Offset: 0x00B98423
+		// Token: 0x06026D57 RID: 159063 RVA: 0x00ADE6AB File Offset: 0x00ADC8AB
 		static TeleportController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TeleportController.CreateStaticDefaultValue), new Action(TeleportController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AA47 RID: 109127
+		// Token: 0x0401539F RID: 86943
 		private const int STREAMING_SOURCE_RADIUS_TELEPORT_NO_LOADING = 3000;
 
-		// Token: 0x0401AA48 RID: 109128
+		// Token: 0x040153A0 RID: 86944
 		[Nullable(2)]
 		private TeleportNotify TeleportPlayerNotifyCache;
 
-		// Token: 0x0401AA49 RID: 109129
+		// Token: 0x040153A1 RID: 86945
 		[Nullable(2)]
 		private TeleportVehicleNotify TeleportVehicleNotifyCache;
 
-		// Token: 0x0401AA4A RID: 109130
+		// Token: 0x040153A2 RID: 86946
 		[Nullable(2)]
 		private static TeleportController _Instance;
 	}

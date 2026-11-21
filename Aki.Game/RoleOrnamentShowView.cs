@@ -6,26 +6,25 @@ using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Ornament;
 using CSharpScript.Game.Module.PayShop;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Skin;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A2C RID: 10796
+// Token: 0x02001FA7 RID: 8103
 [NullableContext(2)]
 [Nullable(0)]
-public class RoleOrnamentShowView : UiTickViewBase
+public class RoleOrnamentShowView : UiTickViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x17001DD7 RID: 7639
-	// (get) Token: 0x0601674C RID: 91980 RVA: 0x005AF8D7 File Offset: 0x005ADAD7
+	// Token: 0x17001E2F RID: 7727
+	// (get) Token: 0x06014152 RID: 82258 RVA: 0x005DA8C7 File Offset: 0x005D8AC7
 	private bool IsBuyPreview
 	{
 		get
@@ -34,13 +33,40 @@ public class RoleOrnamentShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601674D RID: 91981 RVA: 0x005AF8E2 File Offset: 0x005ADAE2
+	// Token: 0x06014153 RID: 82259 RVA: 0x005DA8D2 File Offset: 0x005D8AD2
 	[NullableContext(1)]
 	public RoleOrnamentShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601674E RID: 91982 RVA: 0x005AF8F8 File Offset: 0x005ADAF8
+	// Token: 0x06014154 RID: 82260 RVA: 0x005DA8E8 File Offset: 0x005D8AE8
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
+	{
+		IReadOnlyList<UiCameraHandleData> normalHandleStack = UiCameraModel.Instance.NormalHandleStack;
+		for (int i = 0; i < normalHandleStack.Count; i++)
+		{
+			int? viewId2 = normalHandleStack[i].GetViewId();
+			if (viewId2.GetValueOrDefault() == viewId & viewId2 != null)
+			{
+				return;
+			}
+		}
+		UiCameraHandleData uiCameraHandleData = this.CreateCameraHandleData();
+		if (uiCameraHandleData == null)
+		{
+			return;
+		}
+		uiCameraHandleData.SetViewId(new int?(viewId));
+		UiCameraModel.Instance.PushCameraHandle(uiCameraHandleData, false, false, null, false, null);
+	}
+
+	// Token: 0x06014155 RID: 82261 RVA: 0x005DA95F File Offset: 0x005D8B5F
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
+	{
+		UiCameraController.Instance.PopCameraHandleByCloseView(viewName, nextViewName, closeViewId, operationType);
+	}
+
+	// Token: 0x06014156 RID: 82262 RVA: 0x005DA970 File Offset: 0x005D8B70
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -102,7 +128,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0601674F RID: 91983 RVA: 0x005AFDAC File Offset: 0x005ADFAC
+	// Token: 0x06014157 RID: 82263 RVA: 0x005DAE24 File Offset: 0x005D9024
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
@@ -110,7 +136,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		EventSystem.Instance.Add(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06016750 RID: 91984 RVA: 0x005AFE10 File Offset: 0x005AE010
+	// Token: 0x06014158 RID: 82264 RVA: 0x005DAE88 File Offset: 0x005D9088
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
@@ -118,29 +144,29 @@ public class RoleOrnamentShowView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06016751 RID: 91985 RVA: 0x005AFE74 File Offset: 0x005AE074
+	// Token: 0x06014159 RID: 82265 RVA: 0x005DAEEC File Offset: 0x005D90EC
 	protected override UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 	{
-		RoleOrnamentShowView.<OnHandlePostLoadSceneAsync>d__20 <OnHandlePostLoadSceneAsync>d__;
+		RoleOrnamentShowView.<OnHandlePostLoadSceneAsync>d__22 <OnHandlePostLoadSceneAsync>d__;
 		<OnHandlePostLoadSceneAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnHandlePostLoadSceneAsync>d__.<>4__this = this;
 		<OnHandlePostLoadSceneAsync>d__.<>1__state = -1;
-		<OnHandlePostLoadSceneAsync>d__.<>t__builder.Start<RoleOrnamentShowView.<OnHandlePostLoadSceneAsync>d__20>(ref <OnHandlePostLoadSceneAsync>d__);
+		<OnHandlePostLoadSceneAsync>d__.<>t__builder.Start<RoleOrnamentShowView.<OnHandlePostLoadSceneAsync>d__22>(ref <OnHandlePostLoadSceneAsync>d__);
 		return <OnHandlePostLoadSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016752 RID: 91986 RVA: 0x005AFEB8 File Offset: 0x005AE0B8
+	// Token: 0x0601415A RID: 82266 RVA: 0x005DAF30 File Offset: 0x005D9130
 	protected override UniTask OnBeforeStartAsync()
 	{
-		RoleOrnamentShowView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
+		RoleOrnamentShowView.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
 		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnBeforeStartAsync>d__.<>4__this = this;
 		<OnBeforeStartAsync>d__.<>1__state = -1;
-		<OnBeforeStartAsync>d__.<>t__builder.Start<RoleOrnamentShowView.<OnBeforeStartAsync>d__21>(ref <OnBeforeStartAsync>d__);
+		<OnBeforeStartAsync>d__.<>t__builder.Start<RoleOrnamentShowView.<OnBeforeStartAsync>d__23>(ref <OnBeforeStartAsync>d__);
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016753 RID: 91987 RVA: 0x005AFEFC File Offset: 0x005AE0FC
+	// Token: 0x0601415B RID: 82267 RVA: 0x005DAF74 File Offset: 0x005D9174
 	protected override void OnStart()
 	{
 		this.InitData();
@@ -198,14 +224,14 @@ public class RoleOrnamentShowView : UiTickViewBase
 		this.ExtraRewardLayout = new GenericLayout<SkinRewardItemGrid, SkinRewardData>(base.GetHorizontalLayout(10), new Func<SkinRewardItemGrid>(this.InitExtraRewardGridItem), null, false, true);
 	}
 
-	// Token: 0x06016754 RID: 91988 RVA: 0x005B00E7 File Offset: 0x005AE2E7
+	// Token: 0x0601415C RID: 82268 RVA: 0x005DB15F File Offset: 0x005D935F
 	[NullableContext(1)]
 	private SkinRewardItemGrid InitExtraRewardGridItem()
 	{
 		return new SkinRewardItemGrid();
 	}
 
-	// Token: 0x06016755 RID: 91989 RVA: 0x005B00F0 File Offset: 0x005AE2F0
+	// Token: 0x0601415D RID: 82269 RVA: 0x005DB168 File Offset: 0x005D9368
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TsUiSceneRoleActor != null)
@@ -220,13 +246,12 @@ public class RoleOrnamentShowView : UiTickViewBase
 		this.TsUiSceneRoleActor = null;
 	}
 
-	// Token: 0x06016756 RID: 91990 RVA: 0x005B0134 File Offset: 0x005AE334
+	// Token: 0x0601415E RID: 82270 RVA: 0x005DB1AC File Offset: 0x005D93AC
 	protected override void OnHandleReleaseScene()
 	{
-		UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
 	}
 
-	// Token: 0x06016757 RID: 91991 RVA: 0x005B014C File Offset: 0x005AE34C
+	// Token: 0x0601415F RID: 82271 RVA: 0x005DB1B0 File Offset: 0x005D93B0
 	protected override void OnBeforeShow()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -234,14 +259,15 @@ public class RoleOrnamentShowView : UiTickViewBase
 		{
 			UiModelUtil.Instance.SetVisible(this.TsUiSceneRoleActor.Model, true);
 		}
-		this.TryPushCamera(false);
 		this.RefreshView();
-		this.CameraInputComponent.Start();
-		this.CameraInputComponent.TryActivate();
+		if (this.IsAllowCameraRotate())
+		{
+			this.CameraInputBinding.Bind();
+		}
 		this.TryPlayRoleMontage();
 	}
 
-	// Token: 0x06016758 RID: 91992 RVA: 0x005B01AE File Offset: 0x005AE3AE
+	// Token: 0x06014160 RID: 82272 RVA: 0x005DB207 File Offset: 0x005D9407
 	protected override void OnAfterHide()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -251,13 +277,13 @@ public class RoleOrnamentShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016759 RID: 91993 RVA: 0x005B01DB File Offset: 0x005AE3DB
+	// Token: 0x06014161 RID: 82273 RVA: 0x005DB234 File Offset: 0x005D9434
 	protected override void OnBeforeHide()
 	{
-		this.CameraInputComponent.End();
+		this.CameraInputBinding.Unbind();
 	}
 
-	// Token: 0x0601675A RID: 91994 RVA: 0x005B01E8 File Offset: 0x005AE3E8
+	// Token: 0x06014162 RID: 82274 RVA: 0x005DB244 File Offset: 0x005D9444
 	private void InitData()
 	{
 		RoleOrnamentShowViewParams roleOrnamentShowViewParams = (RoleOrnamentShowViewParams)this.OpenParam;
@@ -311,19 +337,36 @@ public class RoleOrnamentShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601675B RID: 91995 RVA: 0x005B0354 File Offset: 0x005AE554
-	private void TryPushCamera(bool useBlend = true)
+	// Token: 0x06014163 RID: 82275 RVA: 0x005DB3B0 File Offset: 0x005D95B0
+	private void TryPushCamera()
+	{
+		UiCameraHandleData uiCameraHandleData = this.CreateCameraHandleData();
+		if (uiCameraHandleData == null)
+		{
+			return;
+		}
+		uiCameraHandleData.SetViewId(new int?(base.GetViewId()));
+		string viewName = "RoleOrnamentShowView";
+		UiLayer.Instance.SetShowMaskLayer(viewName, true);
+		UiCameraModel.Instance.PushCameraHandle(uiCameraHandleData, true, true, "1001", true, delegate(UiCameraDefine.IFinishData _)
+		{
+			UiLayer.Instance.SetShowMaskLayer(viewName, false);
+		});
+	}
+
+	// Token: 0x06014164 RID: 82276 RVA: 0x005DB41C File Offset: 0x005D961C
+	private UiCameraHandleData CreateCameraHandleData()
 	{
 		Ornament? ornamentConfig = RoleConfig.Instance.GetOrnamentConfig(this.OrnamentId);
 		if (ornamentConfig == null)
 		{
-			return;
+			return null;
 		}
 		Ornament value = ornamentConfig.Value;
 		RoleSkin? roleSkinConfig = SkinConfig.Instance.GetRoleSkinConfig(this.SkinId);
 		if (roleSkinConfig == null)
 		{
-			return;
+			return null;
 		}
 		RoleSkin value2 = roleSkinConfig.Value;
 		string text;
@@ -346,25 +389,12 @@ public class RoleOrnamentShowView : UiTickViewBase
 		{
 			text = ((RoleConfig.Instance.GetMainRoleById(value2.RoleId).Value.Gender == 1) ? (value.UiCamera(0) ?? string.Empty) : (value.UiCamera(1) ?? string.Empty));
 		}
-		string viewName = "RoleOrnamentShowView";
-		UiCameraHandleData uiCameraHandleData = UiCameraHandleData.NewByHandleName(text, null);
-		uiCameraHandleData.ViewName = text;
-		uiCameraHandleData.OwnerViewName = viewName;
-		if (useBlend)
-		{
-			UiLayer.Instance.SetShowMaskLayer(viewName, true);
-			UiCameraAnimationManager.Instance.PushCameraHandle(uiCameraHandleData, true, true, "1001", true, delegate(UiCameraAnimationDefine.IFinishData _)
-			{
-				UiLayer.Instance.SetShowMaskLayer(viewName, false);
-			});
-			return;
-		}
-		UiCameraAnimationManager.Instance.PushCameraHandle(uiCameraHandleData, false, false, null, false, null);
+		return UiCameraUtil.CreateHandleData(text, text);
 	}
 
-	// Token: 0x0601675C RID: 91996 RVA: 0x005B0520 File Offset: 0x005AE720
+	// Token: 0x06014165 RID: 82277 RVA: 0x005DB570 File Offset: 0x005D9770
 	[NullableContext(1)]
-	private IUiCameraInputComponentData GetCameraInputData()
+	private UiCameraInputBindingData GetCameraInputData()
 	{
 		Ornament value = RoleConfig.Instance.GetOrnamentConfig(this.OrnamentId).Value;
 		string text = this.IsHidingUi() ? value.HideUiCameraConfig : value.UiCameraConfig;
@@ -384,7 +414,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 			}
 		}
 		FVectorDouble fvectorDouble = this.TsUiSceneRoleActor.D_K2_GetActorLocation();
-		return new UiCameraInputComponentData
+		return new UiCameraInputBindingData
 		{
 			DragComponent = base.GetDraggable(29),
 			CameraSettingConfig = value2,
@@ -393,23 +423,27 @@ public class RoleOrnamentShowView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0601675D RID: 91997 RVA: 0x005B0614 File Offset: 0x005AE814
+	// Token: 0x06014166 RID: 82278 RVA: 0x005DB664 File Offset: 0x005D9864
 	private void InitCameraInputData()
 	{
-		IUiCameraInputComponentData cameraInputData = this.GetCameraInputData();
-		this.CameraInputComponent.InitData(cameraInputData);
-		this.CameraInputComponent.CanCameraInput = this.IsAllowCameraRotate();
+		UiCameraInputBindingData cameraInputData = this.GetCameraInputData();
+		this.CameraInputBinding.Configure(cameraInputData);
 	}
 
-	// Token: 0x0601675E RID: 91998 RVA: 0x005B0648 File Offset: 0x005AE848
+	// Token: 0x06014167 RID: 82279 RVA: 0x005DB684 File Offset: 0x005D9884
 	private void UpdateCameraInputData()
 	{
-		IUiCameraInputComponentData cameraInputData = this.GetCameraInputData();
-		this.CameraInputComponent.UpdateData(cameraInputData);
-		this.CameraInputComponent.CanCameraInput = this.IsAllowCameraRotate();
+		UiCameraInputBindingData cameraInputData = this.GetCameraInputData();
+		this.CameraInputBinding.Configure(cameraInputData);
+		if (this.IsAllowCameraRotate())
+		{
+			this.CameraInputBinding.Bind();
+			return;
+		}
+		this.CameraInputBinding.Unbind();
 	}
 
-	// Token: 0x0601675F RID: 91999 RVA: 0x005B067C File Offset: 0x005AE87C
+	// Token: 0x06014168 RID: 82280 RVA: 0x005DB6C4 File Offset: 0x005D98C4
 	private void RefreshView()
 	{
 		if (this.OrnamentId == 0)
@@ -440,7 +474,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		this.RefreshSellCountDown();
 	}
 
-	// Token: 0x06016760 RID: 92000 RVA: 0x005B07A8 File Offset: 0x005AE9A8
+	// Token: 0x06014169 RID: 82281 RVA: 0x005DB7F0 File Offset: 0x005D99F0
 	private void RefreshExtraReward()
 	{
 		ShopRoleOrnamentData shopRoleOrnamentData = this.ShopRoleOrnamentData;
@@ -477,7 +511,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		extraRewardLayout2.RefreshByData(list2, null, false);
 	}
 
-	// Token: 0x06016761 RID: 92001 RVA: 0x005B08B8 File Offset: 0x005AEAB8
+	// Token: 0x0601416A RID: 82282 RVA: 0x005DB900 File Offset: 0x005D9B00
 	private void RefreshSellCountDown()
 	{
 		UUIItem item = base.GetItem(56);
@@ -510,7 +544,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016762 RID: 92002 RVA: 0x005B096C File Offset: 0x005AEB6C
+	// Token: 0x0601416B RID: 82283 RVA: 0x005DB9B4 File Offset: 0x005D9BB4
 	private void RefreshOrnamentModel()
 	{
 		if (base.IsDestroyOrDestroying || this.TsUiSceneRoleActor == null)
@@ -534,7 +568,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		uiRoleOrnamentComponent.RefreshModels(contexts, false);
 	}
 
-	// Token: 0x06016763 RID: 92003 RVA: 0x005B09C8 File Offset: 0x005AEBC8
+	// Token: 0x0601416C RID: 82284 RVA: 0x005DBA10 File Offset: 0x005D9C10
 	private bool IsAllowCameraRotate()
 	{
 		Ornament value = RoleConfig.Instance.GetOrnamentConfig(this.OrnamentId).Value;
@@ -545,13 +579,13 @@ public class RoleOrnamentShowView : UiTickViewBase
 		return value.AllowHideUiCameraRotate;
 	}
 
-	// Token: 0x06016764 RID: 92004 RVA: 0x005B0A05 File Offset: 0x005AEC05
+	// Token: 0x0601416D RID: 82285 RVA: 0x005DBA4D File Offset: 0x005D9C4D
 	private bool IsHidingUi()
 	{
 		return base.GetExtendToggle(1).GetToggleState() == EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x06016765 RID: 92005 RVA: 0x005B0A18 File Offset: 0x005AEC18
+	// Token: 0x0601416E RID: 82286 RVA: 0x005DBA60 File Offset: 0x005D9C60
 	private void TryPlayRoleMontage()
 	{
 		if (RoleConfig.Instance.GetOrnamentConfig(this.OrnamentId).Value.UiRoleState != 0)
@@ -563,13 +597,13 @@ public class RoleOrnamentShowView : UiTickViewBase
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, false, false);
 	}
 
-	// Token: 0x06016766 RID: 92006 RVA: 0x005B0A7A File Offset: 0x005AEC7A
+	// Token: 0x0601416F RID: 82287 RVA: 0x005DBAC2 File Offset: 0x005D9CC2
 	private void OnCloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016767 RID: 92007 RVA: 0x005B0A84 File Offset: 0x005AEC84
+	// Token: 0x06014170 RID: 82288 RVA: 0x005DBACC File Offset: 0x005D9CCC
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsBuyPreview)
@@ -606,7 +640,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06016768 RID: 92008 RVA: 0x005B0B44 File Offset: 0x005AED44
+	// Token: 0x06014171 RID: 82289 RVA: 0x005DBB8C File Offset: 0x005D9D8C
 	private void OnClickOnlyUiToggle(EToggleState toggleState)
 	{
 		bool state = base.GetItem(28).bIsUIActive;
@@ -633,11 +667,11 @@ public class RoleOrnamentShowView : UiTickViewBase
 		{
 			item.SetUIActive(state);
 		}
-		this.TryPushCamera(true);
+		this.TryPushCamera();
 		this.UpdateCameraInputData();
 	}
 
-	// Token: 0x06016769 RID: 92009 RVA: 0x005B0BFC File Offset: 0x005AEDFC
+	// Token: 0x06014172 RID: 82290 RVA: 0x005DBC44 File Offset: 0x005D9E44
 	private bool GetIfHaveRoleForCurrentOrnament()
 	{
 		RoleSkinData roleSkinData = RoleSkinModel.Instance.GetRoleSkinData(this.SkinId);
@@ -645,7 +679,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		return num == null || RoleModel.Instance.GetRoleInstanceById(num.Value) != null;
 	}
 
-	// Token: 0x0601676A RID: 92010 RVA: 0x005B0C52 File Offset: 0x005AEE52
+	// Token: 0x06014173 RID: 82291 RVA: 0x005DBC9A File Offset: 0x005D9E9A
 	[NullableContext(1)]
 	private void StartBuyProcess(PayShopGoods goods)
 	{
@@ -657,7 +691,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		PayShopController.Instance.OpenBuyViewByGoodsId(goods, null);
 	}
 
-	// Token: 0x0601676B RID: 92011 RVA: 0x005B0C7C File Offset: 0x005AEE7C
+	// Token: 0x06014174 RID: 82292 RVA: 0x005DBCC4 File Offset: 0x005D9EC4
 	private void RefreshBuyButtonState(ShopRoleOrnamentData data)
 	{
 		if (data == null)
@@ -669,7 +703,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		base.GetButton(17).RootUIComp.Get().SetUIActive(ifCanBuy);
 	}
 
-	// Token: 0x0601676C RID: 92012 RVA: 0x005B0CCC File Offset: 0x005AEECC
+	// Token: 0x06014175 RID: 82293 RVA: 0x005DBD14 File Offset: 0x005D9F14
 	private void RefreshHaveItem(ShopRoleOrnamentData data)
 	{
 		if (data == null)
@@ -681,7 +715,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		base.GetItem(27).SetUIActive(!ifCanBuy);
 	}
 
-	// Token: 0x0601676D RID: 92013 RVA: 0x005B0D04 File Offset: 0x005AEF04
+	// Token: 0x06014176 RID: 82294 RVA: 0x005DBD4C File Offset: 0x005D9F4C
 	private void RefreshNotHaveRoleItem(ShopRoleOrnamentData data)
 	{
 		if (data == null)
@@ -693,7 +727,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		base.GetItem(13).SetUIActive(!ifHaveRoleForCurrentOrnament);
 	}
 
-	// Token: 0x0601676E RID: 92014 RVA: 0x005B0D3C File Offset: 0x005AEF3C
+	// Token: 0x06014177 RID: 82295 RVA: 0x005DBD84 File Offset: 0x005D9F84
 	private void RefreshBuyItemIcon()
 	{
 		UUITexture texture = base.GetTexture(14);
@@ -714,7 +748,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601676F RID: 92015 RVA: 0x005B0DA4 File Offset: 0x005AEFA4
+	// Token: 0x06014178 RID: 82296 RVA: 0x005DBDEC File Offset: 0x005D9FEC
 	private void RefreshBuyPart()
 	{
 		if (this.ShopRoleOrnamentData == null)
@@ -749,7 +783,7 @@ public class RoleOrnamentShowView : UiTickViewBase
 		totalTopUpTagItem.RefreshByGoodsId(this.ShopRoleOrnamentData.GetCurrentGoodsData().GetGoodsId());
 	}
 
-	// Token: 0x06016770 RID: 92016 RVA: 0x005B0EA0 File Offset: 0x005AF0A0
+	// Token: 0x06014179 RID: 82297 RVA: 0x005DBEE8 File Offset: 0x005DA0E8
 	private void OnClickBuyButton()
 	{
 		ShopRoleOrnamentData shopRoleOrnamentData = this.ShopRoleOrnamentData;
@@ -772,20 +806,20 @@ public class RoleOrnamentShowView : UiTickViewBase
 		this.StartBuyProcess(goods);
 	}
 
-	// Token: 0x06016771 RID: 92017 RVA: 0x005B0F33 File Offset: 0x005AF133
+	// Token: 0x0601417A RID: 82298 RVA: 0x005DBF7B File Offset: 0x005DA17B
 	[NullableContext(1)]
 	private void OnPayItemSuccess(PayItemSuccess notify)
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06016772 RID: 92018 RVA: 0x005B0F3B File Offset: 0x005AF13B
+	// Token: 0x0601417B RID: 82299 RVA: 0x005DBF83 File Offset: 0x005DA183
 	private void OnPayShopGoodsBuy()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06016773 RID: 92019 RVA: 0x005B0F44 File Offset: 0x005AF144
+	// Token: 0x0601417C RID: 82300 RVA: 0x005DBF8C File Offset: 0x005DA18C
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		ShopRoleOrnamentData shopRoleOrnamentData = this.ShopRoleOrnamentData;
@@ -811,38 +845,38 @@ public class RoleOrnamentShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016774 RID: 92020 RVA: 0x005B0FAB File Offset: 0x005AF1AB
+	// Token: 0x0601417D RID: 82301 RVA: 0x005DBFF3 File Offset: 0x005DA1F3
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(627);
 	}
 
-	// Token: 0x0400A6DE RID: 42718
+	// Token: 0x0400AAC8 RID: 43720
 	private const int SHOP_HELP_ID = 627;
 
-	// Token: 0x0400A6DF RID: 42719
+	// Token: 0x0400AAC9 RID: 43721
 	private int SkinId;
 
-	// Token: 0x0400A6E0 RID: 42720
+	// Token: 0x0400AACA RID: 43722
 	private int OrnamentId;
 
-	// Token: 0x0400A6E1 RID: 42721
+	// Token: 0x0400AACB RID: 43723
 	private int ResolvedRoleId;
 
-	// Token: 0x0400A6E2 RID: 42722
+	// Token: 0x0400AACC RID: 43724
 	[Nullable(1)]
-	public UiCameraInputComponent CameraInputComponent = new UiCameraInputComponent();
+	public UiCameraInputBinding CameraInputBinding = new UiCameraInputBinding();
 
-	// Token: 0x0400A6E3 RID: 42723
+	// Token: 0x0400AACD RID: 43725
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A6E4 RID: 42724
+	// Token: 0x0400AACE RID: 43726
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400A6E5 RID: 42725
+	// Token: 0x0400AACF RID: 43727
 	private ShopRoleOrnamentData ShopRoleOrnamentData;
 
-	// Token: 0x0400A6E6 RID: 42726
+	// Token: 0x0400AAD0 RID: 43728
 	[Nullable(new byte[]
 	{
 		2,
@@ -851,127 +885,127 @@ public class RoleOrnamentShowView : UiTickViewBase
 	})]
 	private GenericLayout<SkinRewardItemGrid, SkinRewardData> ExtraRewardLayout;
 
-	// Token: 0x0400A6E7 RID: 42727
+	// Token: 0x0400AAD1 RID: 43729
 	private int CurrentPayItemId;
 
-	// Token: 0x0400A6E8 RID: 42728
+	// Token: 0x0400AAD2 RID: 43730
 	private bool CurrentDiscountState;
 
-	// Token: 0x0400A6E9 RID: 42729
+	// Token: 0x0400AAD3 RID: 43731
 	private bool CurrentInSellTime;
 
-	// Token: 0x0400A6EA RID: 42730
+	// Token: 0x0400AAD4 RID: 43732
 	private TotalTopUpPayAdditiveTagItem TotalTopUpTagItem;
 
-	// Token: 0x02009068 RID: 36968
+	// Token: 0x020082AF RID: 33455
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402EC96 RID: 191638
+		// Token: 0x0402A38E RID: 172942
 		CaptionItem,
-		// Token: 0x0402EC97 RID: 191639
+		// Token: 0x0402A38F RID: 172943
 		OnlyUiToggle,
-		// Token: 0x0402EC98 RID: 191640
+		// Token: 0x0402A390 RID: 172944
 		DetailIconButton,
-		// Token: 0x0402EC99 RID: 191641
+		// Token: 0x0402A391 RID: 172945
 		ButtonLeft,
-		// Token: 0x0402EC9A RID: 191642
+		// Token: 0x0402A392 RID: 172946
 		ButtonRight,
-		// Token: 0x0402EC9B RID: 191643
+		// Token: 0x0402A393 RID: 172947
 		TitleText,
-		// Token: 0x0402EC9C RID: 191644
+		// Token: 0x0402A394 RID: 172948
 		SubTitleText,
-		// Token: 0x0402EC9D RID: 191645
+		// Token: 0x0402A395 RID: 172949
 		SwitchItem,
-		// Token: 0x0402EC9E RID: 191646
+		// Token: 0x0402A396 RID: 172950
 		ToggleLeft,
-		// Token: 0x0402EC9F RID: 191647
+		// Token: 0x0402A397 RID: 172951
 		ExtraRewardItem,
-		// Token: 0x0402ECA0 RID: 191648
+		// Token: 0x0402A398 RID: 172952
 		ExtraRewardContentHorizontalLayout,
-		// Token: 0x0402ECA1 RID: 191649
+		// Token: 0x0402A399 RID: 172953
 		RewardItem,
-		// Token: 0x0402ECA2 RID: 191650
+		// Token: 0x0402A39A RID: 172954
 		DescText,
-		// Token: 0x0402ECA3 RID: 191651
+		// Token: 0x0402A39B RID: 172955
 		NotHaveRoleItem,
-		// Token: 0x0402ECA4 RID: 191652
+		// Token: 0x0402A39C RID: 172956
 		BuyItemIcon,
-		// Token: 0x0402ECA5 RID: 191653
+		// Token: 0x0402A39D RID: 172957
 		NowPrice,
-		// Token: 0x0402ECA6 RID: 191654
+		// Token: 0x0402A39E RID: 172958
 		BeforePrice,
-		// Token: 0x0402ECA7 RID: 191655
+		// Token: 0x0402A39F RID: 172959
 		BuyButton,
-		// Token: 0x0402ECA8 RID: 191656
+		// Token: 0x0402A3A0 RID: 172960
 		DiscountItem,
-		// Token: 0x0402ECA9 RID: 191657
+		// Token: 0x0402A3A1 RID: 172961
 		DiscountText,
-		// Token: 0x0402ECAA RID: 191658
+		// Token: 0x0402A3A2 RID: 172962
 		LeftTimeItem,
-		// Token: 0x0402ECAB RID: 191659
+		// Token: 0x0402A3A3 RID: 172963
 		LeftTimeText,
-		// Token: 0x0402ECAC RID: 191660
+		// Token: 0x0402A3A4 RID: 172964
 		QualityTexture,
-		// Token: 0x0402ECAD RID: 191661
+		// Token: 0x0402A3A5 RID: 172965
 		ItemTexture,
-		// Token: 0x0402ECAE RID: 191662
+		// Token: 0x0402A3A6 RID: 172966
 		FrameTexture,
-		// Token: 0x0402ECAF RID: 191663
+		// Token: 0x0402A3A7 RID: 172967
 		WeaponRootItem,
-		// Token: 0x0402ECB0 RID: 191664
+		// Token: 0x0402A3A8 RID: 172968
 		WeaponTexture,
-		// Token: 0x0402ECB1 RID: 191665
+		// Token: 0x0402A3A9 RID: 172969
 		HaveItem,
-		// Token: 0x0402ECB2 RID: 191666
+		// Token: 0x0402A3AA RID: 172970
 		HideUiParentItem,
-		// Token: 0x0402ECB3 RID: 191667
+		// Token: 0x0402A3AB RID: 172971
 		DragComponent,
-		// Token: 0x0402ECB4 RID: 191668
+		// Token: 0x0402A3AC RID: 172972
 		WeaponQualityTexture,
-		// Token: 0x0402ECB5 RID: 191669
+		// Token: 0x0402A3AD RID: 172973
 		ToggleRight,
-		// Token: 0x0402ECB6 RID: 191670
+		// Token: 0x0402A3AE RID: 172974
 		EffectItemB,
-		// Token: 0x0402ECB7 RID: 191671
+		// Token: 0x0402A3AF RID: 172975
 		EffectItemA,
-		// Token: 0x0402ECB8 RID: 191672
+		// Token: 0x0402A3B0 RID: 172976
 		TextureToggleLeft,
-		// Token: 0x0402ECB9 RID: 191673
+		// Token: 0x0402A3B1 RID: 172977
 		TextToggleLeft,
-		// Token: 0x0402ECBA RID: 191674
+		// Token: 0x0402A3B2 RID: 172978
 		TextureToggleRight,
-		// Token: 0x0402ECBB RID: 191675
+		// Token: 0x0402A3B3 RID: 172979
 		TextToggleRight,
-		// Token: 0x0402ECBC RID: 191676
+		// Token: 0x0402A3B4 RID: 172980
 		ItemGamePadKeyTipA = 45,
-		// Token: 0x0402ECBD RID: 191677
+		// Token: 0x0402A3B5 RID: 172981
 		ItemGamePadKeyTipB,
-		// Token: 0x0402ECBE RID: 191678
+		// Token: 0x0402A3B6 RID: 172982
 		ToggleLayout,
-		// Token: 0x0402ECBF RID: 191679
+		// Token: 0x0402A3B7 RID: 172983
 		ToggleMale,
-		// Token: 0x0402ECC0 RID: 191680
+		// Token: 0x0402A3B8 RID: 172984
 		ToggleFemale,
-		// Token: 0x0402ECC1 RID: 191681
+		// Token: 0x0402A3B9 RID: 172985
 		ExtraRewardText,
-		// Token: 0x0402ECC2 RID: 191682
+		// Token: 0x0402A3BA RID: 172986
 		ItemBuyPanel,
-		// Token: 0x0402ECC3 RID: 191683
+		// Token: 0x0402A3BB RID: 172987
 		ItemRolePanel,
-		// Token: 0x0402ECC4 RID: 191684
+		// Token: 0x0402A3BC RID: 172988
 		ItemBottomLeftPanel,
-		// Token: 0x0402ECC5 RID: 191685
+		// Token: 0x0402A3BD RID: 172989
 		ItemGamePadKeyTipC,
-		// Token: 0x0402ECC6 RID: 191686
+		// Token: 0x0402A3BE RID: 172990
 		SpecialBgTexture,
-		// Token: 0x0402ECC7 RID: 191687
+		// Token: 0x0402A3BF RID: 172991
 		ItemCountDownPanel,
-		// Token: 0x0402ECC8 RID: 191688
+		// Token: 0x0402A3C0 RID: 172992
 		TextCountDown,
-		// Token: 0x0402ECC9 RID: 191689
+		// Token: 0x0402A3C1 RID: 172993
 		TextDirectTips,
-		// Token: 0x0402ECCA RID: 191690
+		// Token: 0x0402A3C2 RID: 172994
 		ItemTagRoot = 60
 	}
 }

@@ -10,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B82 RID: 19330
+	// Token: 0x02003B2C RID: 15148
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SlidingBlocksModel : ModelBase
 	{
-		// Token: 0x17007C43 RID: 31811
-		// (get) Token: 0x0603217A RID: 205178 RVA: 0x00BA1F88 File Offset: 0x00BA0188
+		// Token: 0x17004FED RID: 20461
+		// (get) Token: 0x06026F0B RID: 159499 RVA: 0x00AE6130 File Offset: 0x00AE4330
 		public bool IsInGame
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x17007C44 RID: 31812
-		// (get) Token: 0x0603217B RID: 205179 RVA: 0x00BA1FA9 File Offset: 0x00BA01A9
+		// Token: 0x17004FEE RID: 20462
+		// (get) Token: 0x06026F0C RID: 159500 RVA: 0x00AE6151 File Offset: 0x00AE4351
 		public bool IsGameRunning
 		{
 			get
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603217C RID: 205180 RVA: 0x00BA1FB4 File Offset: 0x00BA01B4
+		// Token: 0x06026F0D RID: 159501 RVA: 0x00AE615C File Offset: 0x00AE435C
 		protected override bool OnLeaveLevel()
 		{
 			EffectSystem.Instance.StopEffectById(this.GameData.AreaLoopEffectHandle, "SlidingBlocksModel.OnLeaveLevel", true, null);
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x0603217D RID: 205181 RVA: 0x00BA1FF3 File Offset: 0x00BA01F3
+		// Token: 0x06026F0E RID: 159502 RVA: 0x00AE619B File Offset: 0x00AE439B
 		protected override bool OnClear()
 		{
 			this.BoxMeshCache = null;
 			return true;
 		}
 
-		// Token: 0x0603217E RID: 205182 RVA: 0x00BA2000 File Offset: 0x00BA0200
+		// Token: 0x06026F0F RID: 159503 RVA: 0x00AE61A8 File Offset: 0x00AE43A8
 		[return: Nullable(0)]
 		public UniTask<bool> InitGameData(IFinishTetris config, Transform originTransform, GeneralLogicTreeContext context)
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <InitGameData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603217F RID: 205183 RVA: 0x00BA205B File Offset: 0x00BA025B
+		// Token: 0x06026F10 RID: 159504 RVA: 0x00AE6203 File Offset: 0x00AE4403
 		public void OnGameOver()
 		{
 			this.SwitchStage(SlidingBlocksDefine.EGameStage.None, false);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			SlidingBlocksGlobal.ClearSettingData();
 		}
 
-		// Token: 0x06032180 RID: 205184 RVA: 0x00BA2078 File Offset: 0x00BA0278
+		// Token: 0x06026F11 RID: 159505 RVA: 0x00AE6220 File Offset: 0x00AE4420
 		public unsafe bool AddMino(string styleName, double x, double y, SlidingBlocksDefine.EAddMinoReason reason)
 		{
 			AActor aactor = SlidingBlocksUtil.CreateDynamicCube(styleName, x, y, this.GameData.OriginTransform, this.BoxMeshCache);
@@ -104,14 +104,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x06032181 RID: 205185 RVA: 0x00BA2170 File Offset: 0x00BA0370
+		// Token: 0x06026F12 RID: 159506 RVA: 0x00AE6318 File Offset: 0x00AE4518
 		public void EnterNextStage()
 		{
 			this.GameStage++;
 			EventSystem.Instance.Emit(EEventName.SlidingBlockGameStageChanged);
 		}
 
-		// Token: 0x06032182 RID: 205186 RVA: 0x00BA2190 File Offset: 0x00BA0390
+		// Token: 0x06026F13 RID: 159507 RVA: 0x00AE6338 File Offset: 0x00AE4538
 		public void SwitchStage(SlidingBlocksDefine.EGameStage stage, bool bFireEvent = true)
 		{
 			this.GameStage = stage;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032183 RID: 205187 RVA: 0x00BA21AC File Offset: 0x00BA03AC
+		// Token: 0x06026F14 RID: 159508 RVA: 0x00AE6354 File Offset: 0x00AE4554
 		[NullableContext(2)]
 		public void SetCurTetromino(Tetromino tetromino)
 		{
@@ -134,14 +134,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.GameData.CurTetromino = null;
 		}
 
-		// Token: 0x06032184 RID: 205188 RVA: 0x00BA21DC File Offset: 0x00BA03DC
+		// Token: 0x06026F15 RID: 159509 RVA: 0x00AE6384 File Offset: 0x00AE4584
 		public bool CheckGridOccupied(double x, double y)
 		{
 			TetrisGridColumn tetrisGridColumn;
 			return this.GameData.GridColumns.TryGetValue(x, out tetrisGridColumn) && tetrisGridColumn.CheckOccupied(y);
 		}
 
-		// Token: 0x06032185 RID: 205189 RVA: 0x00BA2208 File Offset: 0x00BA0408
+		// Token: 0x06026F16 RID: 159510 RVA: 0x00AE63B0 File Offset: 0x00AE45B0
 		public double FindUnoccupiedGrid(double x, double y)
 		{
 			TetrisGridColumn tetrisGridColumn;
@@ -152,20 +152,20 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return tetrisGridColumn.FindUnoccupiedGrid(y);
 		}
 
-		// Token: 0x06032186 RID: 205190 RVA: 0x00BA2240 File Offset: 0x00BA0440
+		// Token: 0x06026F17 RID: 159511 RVA: 0x00AE63E8 File Offset: 0x00AE45E8
 		public bool CheckGridOccupiedUnderPlayer()
 		{
 			Vector2D playerCoord = this.GameData.PlayerCoord;
 			return this.CheckGridOccupiedUnderCoord(playerCoord.X, playerCoord.Y);
 		}
 
-		// Token: 0x06032187 RID: 205191 RVA: 0x00BA226B File Offset: 0x00BA046B
+		// Token: 0x06026F18 RID: 159512 RVA: 0x00AE6413 File Offset: 0x00AE4613
 		public bool CheckGridOccupiedUnderCoord(double x, double y)
 		{
 			return y.Equals(this.GameData.GridMaxY) || this.CheckGridOccupied(x, y + 1.0);
 		}
 
-		// Token: 0x06032188 RID: 205192 RVA: 0x00BA2298 File Offset: 0x00BA0498
+		// Token: 0x06026F19 RID: 159513 RVA: 0x00AE6440 File Offset: 0x00AE4640
 		public bool CheckBeyondGrid(double x, double y)
 		{
 			double gridMinX = this.GameData.GridMinX;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return x < gridMinX || x > gridMaxX || y < gridMinY || y > gridMaxY;
 		}
 
-		// Token: 0x06032189 RID: 205193 RVA: 0x00BA22E7 File Offset: 0x00BA04E7
+		// Token: 0x06026F1A RID: 159514 RVA: 0x00AE648F File Offset: 0x00AE468F
 		public void RegisterMinoTick(Mino mino)
 		{
 			if (!this.GameData.TickMinos.Contains(mino))
@@ -184,14 +184,14 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603218A RID: 205194 RVA: 0x00BA230D File Offset: 0x00BA050D
+		// Token: 0x06026F1B RID: 159515 RVA: 0x00AE64B5 File Offset: 0x00AE46B5
 		public void UnRegisterMinoTick(Mino mino)
 		{
 			this.GameData.TickMinos.Remove(mino);
 		}
 
-		// Token: 0x17007C45 RID: 31813
-		// (get) Token: 0x0603218B RID: 205195 RVA: 0x00BA2321 File Offset: 0x00BA0521
+		// Token: 0x17004FEF RID: 20463
+		// (get) Token: 0x06026F1C RID: 159516 RVA: 0x00AE64C9 File Offset: 0x00AE46C9
 		public static SlidingBlocksModel Instance
 		{
 			get
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x0603218C RID: 205196 RVA: 0x00BA2328 File Offset: 0x00BA0528
+		// Token: 0x06026F1D RID: 159517 RVA: 0x00AE64D0 File Offset: 0x00AE46D0
 		public static SlidingBlocksModel GetOrCreateInstance()
 		{
 			if (SlidingBlocksModel._Instance == null)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return SlidingBlocksModel._Instance;
 		}
 
-		// Token: 0x0603218D RID: 205197 RVA: 0x00BA233C File Offset: 0x00BA053C
+		// Token: 0x06026F1E RID: 159518 RVA: 0x00AE64E4 File Offset: 0x00AE46E4
 		public static bool CreateInstance()
 		{
 			if (SlidingBlocksModel._Instance != null)
@@ -221,37 +221,37 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return true;
 		}
 
-		// Token: 0x0603218E RID: 205198 RVA: 0x00BA2352 File Offset: 0x00BA0552
+		// Token: 0x06026F1F RID: 159519 RVA: 0x00AE64FA File Offset: 0x00AE46FA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603218F RID: 205199 RVA: 0x00BA2354 File Offset: 0x00BA0554
+		// Token: 0x06026F20 RID: 159520 RVA: 0x00AE64FC File Offset: 0x00AE46FC
 		public static void ResetStaticDefaultValue()
 		{
 			SlidingBlocksModel._Instance = null;
 		}
 
-		// Token: 0x06032190 RID: 205200 RVA: 0x00BA235C File Offset: 0x00BA055C
+		// Token: 0x06026F21 RID: 159521 RVA: 0x00AE6504 File Offset: 0x00AE4704
 		static SlidingBlocksModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SlidingBlocksModel.CreateStaticDefaultValue), new Action(SlidingBlocksModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AB15 RID: 109333
+		// Token: 0x04015469 RID: 87145
 		public readonly bool EnableDebug;
 
-		// Token: 0x0401AB16 RID: 109334
+		// Token: 0x0401546A RID: 87146
 		[Nullable(2)]
 		public UStaticMesh BoxMeshCache;
 
-		// Token: 0x0401AB17 RID: 109335
+		// Token: 0x0401546B RID: 87147
 		public readonly SlidingBlocksGameData GameData = new SlidingBlocksGameData();
 
-		// Token: 0x0401AB18 RID: 109336
+		// Token: 0x0401546C RID: 87148
 		public SlidingBlocksDefine.EGameStage GameStage;
 
-		// Token: 0x0401AB19 RID: 109337
+		// Token: 0x0401546D RID: 87149
 		[Nullable(2)]
 		private static SlidingBlocksModel _Instance;
 	}

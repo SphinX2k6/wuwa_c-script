@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 {
-	// Token: 0x02006A9C RID: 27292
+	// Token: 0x02005BF9 RID: 23545
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlacedExploreInteractSkillPointContext : ExploreSkillInteractPointContextBase
 	{
-		// Token: 0x06043CE8 RID: 277736 RVA: 0x01098C1C File Offset: 0x01096E1C
+		// Token: 0x06039D36 RID: 236854 RVA: 0x0103D464 File Offset: 0x0103B664
 		public PlacedExploreInteractSkillPointContext(IExploreSkillInteract config, EntityHandle entityHandle, AActor ownerActor, Vector location, int enableRangeId, int disableRangeId, [Nullable(2)] Vector raycastDestLocation = null, int landingSplineEntityId = 0) : base(config, entityHandle)
 		{
 			this.RaycastDestLocation = raycastDestLocation;
@@ -26,44 +26,44 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 			}
 		}
 
-		// Token: 0x06043CE9 RID: 277737 RVA: 0x01098C78 File Offset: 0x01096E78
+		// Token: 0x06039D37 RID: 236855 RVA: 0x0103D4C0 File Offset: 0x0103B6C0
 		public override ESceneInteractPointType GetInteractPointType()
 		{
 			return ESceneInteractPointType.PlacedExploreInteractPoint;
 		}
 
-		// Token: 0x06043CEA RID: 277738 RVA: 0x01098C7B File Offset: 0x01096E7B
+		// Token: 0x06039D38 RID: 236856 RVA: 0x0103D4C3 File Offset: 0x0103B6C3
 		public override AActor GetOwnerActor()
 		{
 			return this.ActorBindingSlot.Actor;
 		}
 
-		// Token: 0x06043CEB RID: 277739 RVA: 0x01098C88 File Offset: 0x01096E88
+		// Token: 0x06039D39 RID: 236857 RVA: 0x0103D4D0 File Offset: 0x0103B6D0
 		public override Vector GetLocation()
 		{
 			return this.LocationBindingSlot.Location;
 		}
 
-		// Token: 0x06043CEC RID: 277740 RVA: 0x01098C95 File Offset: 0x01096E95
+		// Token: 0x06039D3A RID: 236858 RVA: 0x0103D4DD File Offset: 0x0103B6DD
 		public int GetEnableRangeId()
 		{
 			return this.RangeGateBindingSlot.EnableRangeId;
 		}
 
-		// Token: 0x06043CED RID: 277741 RVA: 0x01098CA2 File Offset: 0x01096EA2
+		// Token: 0x06039D3B RID: 236859 RVA: 0x0103D4EA File Offset: 0x0103B6EA
 		public int GetDisableRangeId()
 		{
 			return this.RangeGateBindingSlot.DisableRangeId;
 		}
 
-		// Token: 0x06043CEE RID: 277742 RVA: 0x01098CAF File Offset: 0x01096EAF
+		// Token: 0x06039D3C RID: 236860 RVA: 0x0103D4F7 File Offset: 0x0103B6F7
 		[NullableContext(2)]
 		public Vector GetRaycastDestLocation()
 		{
 			return this.RaycastDestLocation;
 		}
 
-		// Token: 0x040236C9 RID: 145097
+		// Token: 0x0401E8BB RID: 125115
 		[Nullable(2)]
 		private readonly Vector RaycastDestLocation;
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200117F RID: 4479
+	// Token: 0x020012B9 RID: 4793
 	public class ITakePhoto2TargetPartCondition_SetValue
 	{
-		// Token: 0x04003D16 RID: 15638
-		[Nullable(1)]
+		// Token: 0x0400407E RID: 16510
 		public List<string> Tags;
 	}
 }

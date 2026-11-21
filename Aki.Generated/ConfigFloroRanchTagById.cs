@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000328 RID: 808
+	// Token: 0x0200033D RID: 829
 	public class ConfigFloroRanchTagById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060012F5 RID: 4853 RVA: 0x000C488B File Offset: 0x000C2A8B
+		// Token: 0x06001373 RID: 4979 RVA: 0x000CAD97 File Offset: 0x000C8F97
 		static ConfigFloroRanchTagById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFloroRanchTagById.CreateStaticDefaultValue), new Action(ConfigFloroRanchTagById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060012F6 RID: 4854 RVA: 0x000C48AC File Offset: 0x000C2AAC
+		// Token: 0x06001374 RID: 4980 RVA: 0x000CADB8 File Offset: 0x000C8FB8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFloroRanchTagById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060012F7 RID: 4855 RVA: 0x000C492B File Offset: 0x000C2B2B
+		// Token: 0x06001375 RID: 4981 RVA: 0x000CAE37 File Offset: 0x000C9037
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFloroRanchTagById.LogPair = null;
 			ConfigFloroRanchTagById.HandleId = 0;
 		}
 
-		// Token: 0x060012F8 RID: 4856 RVA: 0x000C4939 File Offset: 0x000C2B39
+		// Token: 0x06001376 RID: 4982 RVA: 0x000CAE45 File Offset: 0x000C9045
 		public static void Init()
 		{
 			ConfigFloroRanchTagById.HandleId = ConfigCommon.InitDataStatement(ConfigFloroRanchTagById.HandleId, "db_flororanchtag.db", "select BinData from `FloroRanchTag` where Id=?");
 		}
 
-		// Token: 0x060012F9 RID: 4857 RVA: 0x000C4954 File Offset: 0x000C2B54
+		// Token: 0x06001377 RID: 4983 RVA: 0x000CAE60 File Offset: 0x000C9060
 		public static FloroRanchTag? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFloroRanchTagById.HandleId, ConfigFloroRanchTagById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FloroRanchTag?(rootAsFloroRanchTag);
 		}
 
-		// Token: 0x040015FC RID: 5628
+		// Token: 0x0400168F RID: 5775
 		private const string DB = "db_flororanchtag.db";
 
-		// Token: 0x040015FD RID: 5629
+		// Token: 0x04001690 RID: 5776
 		private const string FILE = "f.弗洛洛牧场_词条.xlsx";
 
-		// Token: 0x040015FE RID: 5630
+		// Token: 0x04001691 RID: 5777
 		private const string TABLE = "FloroRanchTag";
 
-		// Token: 0x040015FF RID: 5631
+		// Token: 0x04001692 RID: 5778
 		private const string COMMAND = "select BinData from `FloroRanchTag` where Id=?";
 
-		// Token: 0x04001600 RID: 5632
+		// Token: 0x04001693 RID: 5779
 		private const string KEY_PREFIX = "FloroRanchTagById";
 
-		// Token: 0x04001601 RID: 5633
+		// Token: 0x04001694 RID: 5780
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001602 RID: 5634
+		// Token: 0x04001695 RID: 5781
 		private static int HandleId;
 	}
 }

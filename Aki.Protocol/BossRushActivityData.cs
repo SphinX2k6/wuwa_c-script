@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020001CD RID: 461
+	// Token: 0x020001D1 RID: 465
 	public sealed class BossRushActivityData : IMessage<BossRushActivityData>, IMessage, IEquatable<BossRushActivityData>, IDeepCloneable<BossRushActivityData>, IBufferMessage
 	{
-		// Token: 0x0600349B RID: 13467 RVA: 0x000848FD File Offset: 0x00082AFD
+		// Token: 0x06003528 RID: 13608 RVA: 0x00086071 File Offset: 0x00084271
 		[NullableContext(1)]
 		public static BossRushActivityData Create()
 		{
 			return new BossRushActivityData();
 		}
 
-		// Token: 0x17000858 RID: 2136
-		// (get) Token: 0x0600349C RID: 13468 RVA: 0x00084904 File Offset: 0x00082B04
+		// Token: 0x17000871 RID: 2161
+		// (get) Token: 0x06003529 RID: 13609 RVA: 0x00086078 File Offset: 0x00084278
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000859 RID: 2137
-		// (get) Token: 0x0600349D RID: 13469 RVA: 0x00084907 File Offset: 0x00082B07
+		// Token: 0x17000872 RID: 2162
+		// (get) Token: 0x0600352A RID: 13610 RVA: 0x0008607B File Offset: 0x0008427B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600349E RID: 13470 RVA: 0x0008490E File Offset: 0x00082B0E
+		// Token: 0x0600352B RID: 13611 RVA: 0x00086082 File Offset: 0x00084282
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossRushActivityData()
 		{
 		}
 
-		// Token: 0x0600349F RID: 13471 RVA: 0x00084944 File Offset: 0x00082B44
+		// Token: 0x0600352C RID: 13612 RVA: 0x000860B8 File Offset: 0x000842B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossRushActivityData(BossRushActivityData other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060034A0 RID: 13472 RVA: 0x000849AC File Offset: 0x00082BAC
+		// Token: 0x0600352D RID: 13613 RVA: 0x00086120 File Offset: 0x00084320
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossRushActivityData Clone()
@@ -69,8 +69,8 @@ namespace Aki.Protocol
 			return new BossRushActivityData(this);
 		}
 
-		// Token: 0x1700085A RID: 2138
-		// (get) Token: 0x060034A1 RID: 13473 RVA: 0x000849B4 File Offset: 0x00082BB4
+		// Token: 0x17000873 RID: 2163
+		// (get) Token: 0x0600352E RID: 13614 RVA: 0x00086128 File Offset: 0x00084328
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<BossRushLevelData> BossRushLevelInfo
@@ -81,8 +81,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700085B RID: 2139
-		// (get) Token: 0x060034A2 RID: 13474 RVA: 0x000849BC File Offset: 0x00082BBC
+		// Token: 0x17000874 RID: 2164
+		// (get) Token: 0x0600352F RID: 13615 RVA: 0x00086130 File Offset: 0x00084330
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<BossRushScoreRewardData> BossRushScoreScoreRewardInfo
@@ -93,8 +93,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700085C RID: 2140
-		// (get) Token: 0x060034A3 RID: 13475 RVA: 0x000849C4 File Offset: 0x00082BC4
+		// Token: 0x17000875 RID: 2165
+		// (get) Token: 0x06003530 RID: 13616 RVA: 0x00086138 File Offset: 0x00084338
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockedBuffIndices
@@ -105,8 +105,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700085D RID: 2141
-		// (get) Token: 0x060034A4 RID: 13476 RVA: 0x000849CC File Offset: 0x00082BCC
+		// Token: 0x17000876 RID: 2166
+		// (get) Token: 0x06003531 RID: 13617 RVA: 0x00086140 File Offset: 0x00084340
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ActivityTask> ActivityTasks
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060034A5 RID: 13477 RVA: 0x000849D4 File Offset: 0x00082BD4
+		// Token: 0x06003532 RID: 13618 RVA: 0x00086148 File Offset: 0x00084348
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BossRushActivityData);
 		}
 
-		// Token: 0x060034A6 RID: 13478 RVA: 0x000849E4 File Offset: 0x00082BE4
+		// Token: 0x06003533 RID: 13619 RVA: 0x00086158 File Offset: 0x00084358
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BossRushActivityData other)
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.bossRushLevelInfo_.Equals(other.bossRushLevelInfo_) && this.bossRushScoreScoreRewardInfo_.Equals(other.bossRushScoreScoreRewardInfo_) && this.unlockedBuffIndices_.Equals(other.unlockedBuffIndices_) && this.activityTasks_.Equals(other.activityTasks_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060034A7 RID: 13479 RVA: 0x00084A64 File Offset: 0x00082C64
+		// Token: 0x06003534 RID: 13620 RVA: 0x000861D8 File Offset: 0x000843D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060034A8 RID: 13480 RVA: 0x00084AC2 File Offset: 0x00082CC2
+		// Token: 0x06003535 RID: 13621 RVA: 0x00086236 File Offset: 0x00084436
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060034A9 RID: 13481 RVA: 0x00084ACF File Offset: 0x00082CCF
+		// Token: 0x06003536 RID: 13622 RVA: 0x00086243 File Offset: 0x00084443
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060034AA RID: 13482 RVA: 0x00084AD8 File Offset: 0x00082CD8
+		// Token: 0x06003537 RID: 13623 RVA: 0x0008624C File Offset: 0x0008444C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060034AB RID: 13483 RVA: 0x00084B40 File Offset: 0x00082D40
+		// Token: 0x06003538 RID: 13624 RVA: 0x000862B4 File Offset: 0x000844B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060034AC RID: 13484 RVA: 0x00084BB4 File Offset: 0x00082DB4
+		// Token: 0x06003539 RID: 13625 RVA: 0x00086328 File Offset: 0x00084528
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BossRushActivityData other)
@@ -214,7 +214,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060034AD RID: 13485 RVA: 0x00084C20 File Offset: 0x00082E20
+		// Token: 0x0600353A RID: 13626 RVA: 0x00086394 File Offset: 0x00084594
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -222,7 +222,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060034AE RID: 13486 RVA: 0x00084C2C File Offset: 0x00082E2C
+		// Token: 0x0600353B RID: 13627 RVA: 0x000863A0 File Offset: 0x000845A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -264,43 +264,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002A0F RID: 10767
+		// Token: 0x04002A8A RID: 10890
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002A10 RID: 10768
+		// Token: 0x04002A8B RID: 10891
 		public const int BossRushLevelInfoFieldNumber = 1;
 
-		// Token: 0x04002A11 RID: 10769
+		// Token: 0x04002A8C RID: 10892
 		private static readonly FieldCodec<BossRushLevelData> _repeated_bossRushLevelInfo_codec = FieldCodec.ForMessage<BossRushLevelData>(10U, BossRushLevelData.Parser);
 
-		// Token: 0x04002A12 RID: 10770
+		// Token: 0x04002A8D RID: 10893
 		private readonly RepeatedField<BossRushLevelData> bossRushLevelInfo_ = new RepeatedField<BossRushLevelData>();
 
-		// Token: 0x04002A13 RID: 10771
+		// Token: 0x04002A8E RID: 10894
 		public const int BossRushScoreScoreRewardInfoFieldNumber = 2;
 
-		// Token: 0x04002A14 RID: 10772
+		// Token: 0x04002A8F RID: 10895
 		private static readonly FieldCodec<BossRushScoreRewardData> _repeated_bossRushScoreScoreRewardInfo_codec = FieldCodec.ForMessage<BossRushScoreRewardData>(18U, BossRushScoreRewardData.Parser);
 
-		// Token: 0x04002A15 RID: 10773
+		// Token: 0x04002A90 RID: 10896
 		private readonly RepeatedField<BossRushScoreRewardData> bossRushScoreScoreRewardInfo_ = new RepeatedField<BossRushScoreRewardData>();
 
-		// Token: 0x04002A16 RID: 10774
+		// Token: 0x04002A91 RID: 10897
 		public const int UnlockedBuffIndicesFieldNumber = 3;
 
-		// Token: 0x04002A17 RID: 10775
+		// Token: 0x04002A92 RID: 10898
 		private static readonly FieldCodec<int> _repeated_unlockedBuffIndices_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x04002A18 RID: 10776
+		// Token: 0x04002A93 RID: 10899
 		private readonly RepeatedField<int> unlockedBuffIndices_ = new RepeatedField<int>();
 
-		// Token: 0x04002A19 RID: 10777
+		// Token: 0x04002A94 RID: 10900
 		public const int ActivityTasksFieldNumber = 4;
 
-		// Token: 0x04002A1A RID: 10778
+		// Token: 0x04002A95 RID: 10901
 		private static readonly FieldCodec<ActivityTask> _repeated_activityTasks_codec = FieldCodec.ForMessage<ActivityTask>(34U, ActivityTask.Parser);
 
-		// Token: 0x04002A1B RID: 10779
+		// Token: 0x04002A96 RID: 10902
 		private readonly RepeatedField<ActivityTask> activityTasks_ = new RepeatedField<ActivityTask>();
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200723F RID: 29247
+	// Token: 0x02007A14 RID: 31252
 	public class ISunPalaceInteractT
 	{
-		// Token: 0x1700D906 RID: 55558
-		// (get) Token: 0x06033E00 RID: 212480 RVA: 0x006FA9A6 File Offset: 0x006F8BA6
-		// (set) Token: 0x06033E01 RID: 212481 RVA: 0x006FA9AE File Offset: 0x006F8BAE
+		// Token: 0x1700E4FF RID: 58623
+		// (get) Token: 0x06037102 RID: 225538 RVA: 0x0075BD06 File Offset: 0x00759F06
+		// (set) Token: 0x06037103 RID: 225539 RVA: 0x0075BD0E File Offset: 0x00759F0E
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x06033E02 RID: 212482 RVA: 0x006FA9B7 File Offset: 0x006F8BB7
+		// Token: 0x06037104 RID: 225540 RVA: 0x0075BD17 File Offset: 0x00759F17
 		public ISunPalaceInteractT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

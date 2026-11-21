@@ -5,20 +5,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052D1 RID: 21201
+	// Token: 0x0200583C RID: 22588
 	public class IFoxJumpShapeAndPointsParamsT
 	{
-		// Token: 0x17009B8D RID: 39821
-		// (get) Token: 0x0602297F RID: 141695 RVA: 0x004CB9EC File Offset: 0x004C9BEC
-		// (set) Token: 0x06022980 RID: 141696 RVA: 0x004CB9F4 File Offset: 0x004C9BF4
+		// Token: 0x1700A396 RID: 41878
+		// (get) Token: 0x06024943 RID: 149827 RVA: 0x00506AE8 File Offset: 0x00504CE8
+		// (set) Token: 0x06024944 RID: 149828 RVA: 0x00506AF0 File Offset: 0x00504CF0
 		public IBoxTriggerShapeT BoxShape { get; set; }
 
-		// Token: 0x17009B8E RID: 39822
-		// (get) Token: 0x06022981 RID: 141697 RVA: 0x004CB9FD File Offset: 0x004C9BFD
-		// (set) Token: 0x06022982 RID: 141698 RVA: 0x004CBA05 File Offset: 0x004C9C05
+		// Token: 0x1700A397 RID: 41879
+		// (get) Token: 0x06024945 RID: 149829 RVA: 0x00506AF9 File Offset: 0x00504CF9
+		// (set) Token: 0x06024946 RID: 149830 RVA: 0x00506B01 File Offset: 0x00504D01
 		public List<IVectorInfoT> PointOffsets { get; set; }
 
-		// Token: 0x06022983 RID: 141699 RVA: 0x004CBA0E File Offset: 0x004C9C0E
+		// Token: 0x06024947 RID: 149831 RVA: 0x00506B0A File Offset: 0x00504D0A
 		public IFoxJumpShapeAndPointsParamsT()
 		{
 			this.BoxShape = null;

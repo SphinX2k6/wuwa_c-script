@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE9 RID: 19177
+	// Token: 0x02003A91 RID: 14993
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMapView : UiViewBase
 	{
-		// Token: 0x06031AD7 RID: 203479 RVA: 0x00B883B5 File Offset: 0x00B865B5
+		// Token: 0x06026867 RID: 157799 RVA: 0x00ACC369 File Offset: 0x00ACA569
 		public TrapDefenseMapView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031AD8 RID: 203480 RVA: 0x00B883D4 File Offset: 0x00B865D4
+		// Token: 0x06026868 RID: 157800 RVA: 0x00ACC388 File Offset: 0x00ACA588
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031AD9 RID: 203481 RVA: 0x00B884BC File Offset: 0x00B866BC
+		// Token: 0x06026869 RID: 157801 RVA: 0x00ACC470 File Offset: 0x00ACA670
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseMapView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -57,33 +57,33 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031ADA RID: 203482 RVA: 0x00B884FF File Offset: 0x00B866FF
+		// Token: 0x0602686A RID: 157802 RVA: 0x00ACC4B3 File Offset: 0x00ACA6B3
 		protected override void OnStart()
 		{
 			this.RefreshWaveTips();
 			this.RefreshHpPanel();
 		}
 
-		// Token: 0x06031ADB RID: 203483 RVA: 0x00B8850D File Offset: 0x00B8670D
+		// Token: 0x0602686B RID: 157803 RVA: 0x00ACC4C1 File Offset: 0x00ACA6C1
 		protected override void OnBeforeShow()
 		{
 			this.CampsiteHpPanel.ShowBattleChildViewPanel();
 		}
 
-		// Token: 0x06031ADC RID: 203484 RVA: 0x00B8851A File Offset: 0x00B8671A
+		// Token: 0x0602686C RID: 157804 RVA: 0x00ACC4CE File Offset: 0x00ACA6CE
 		protected override void OnAfterHide()
 		{
 			this.CampsiteHpPanel.HideBattleChildViewPanel();
 		}
 
-		// Token: 0x06031ADD RID: 203485 RVA: 0x00B88527 File Offset: 0x00B86727
+		// Token: 0x0602686D RID: 157805 RVA: 0x00ACC4DB File Offset: 0x00ACA6DB
 		protected override void OnBeforeDestroy()
 		{
 			this.MiniMap.Reset();
 			this.CampsiteHpPanel.Reset();
 		}
 
-		// Token: 0x06031ADE RID: 203486 RVA: 0x00B88540 File Offset: 0x00B86740
+		// Token: 0x0602686E RID: 157806 RVA: 0x00ACC4F4 File Offset: 0x00ACA6F4
 		private void RefreshWaveTips()
 		{
 			TrapDefenseModel instance = TrapDefenseModel.Instance;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}));
 		}
 
-		// Token: 0x06031ADF RID: 203487 RVA: 0x00B885B0 File Offset: 0x00B867B0
+		// Token: 0x0602686F RID: 157807 RVA: 0x00ACC564 File Offset: 0x00ACA764
 		private void RefreshHpPanel()
 		{
 			FKSC_MiniMapContext[] entityPositions = KuroSimpleCombatController.Instance.GetEntityPositions();
@@ -119,16 +119,16 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.CampsiteHpPanel.SetLightItemActive(false);
 		}
 
-		// Token: 0x06031AE0 RID: 203488 RVA: 0x00B88619 File Offset: 0x00B86819
+		// Token: 0x06026870 RID: 157808 RVA: 0x00ACC5CD File Offset: 0x00ACA7CD
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401A877 RID: 108663
+		// Token: 0x040151C9 RID: 86473
 		public TrapDefenseMiniMapPanel MiniMap = new TrapDefenseMiniMapPanel();
 
-		// Token: 0x0401A878 RID: 108664
+		// Token: 0x040151CA RID: 86474
 		public TrapDefenseCampsiteHpPanel CampsiteHpPanel = new TrapDefenseCampsiteHpPanel();
 	}
 }

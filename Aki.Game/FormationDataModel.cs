@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F0D RID: 3853
+// Token: 0x020003C2 RID: 962
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationDataModel : ModelBase
 {
-	// Token: 0x060060F7 RID: 24823 RVA: 0x0012EB1F File Offset: 0x0012CD1F
+	// Token: 0x0600348F RID: 13455 RVA: 0x00137443 File Offset: 0x00135643
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060060F8 RID: 24824 RVA: 0x0012EB22 File Offset: 0x0012CD22
+	// Token: 0x06003490 RID: 13456 RVA: 0x00137446 File Offset: 0x00135646
 	protected override bool OnClear()
 	{
 		this.PlayerAggroSet.Clear();
@@ -22,14 +22,14 @@ public class FormationDataModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060060F9 RID: 24825 RVA: 0x0012EB3B File Offset: 0x0012CD3B
+	// Token: 0x06003491 RID: 13457 RVA: 0x0013745F File Offset: 0x0013565F
 	protected override bool OnLeaveLevel()
 	{
 		this.OnLandPositionQueue.Clear();
 		return true;
 	}
 
-	// Token: 0x060060FA RID: 24826 RVA: 0x0012EB4C File Offset: 0x0012CD4C
+	// Token: 0x06003492 RID: 13458 RVA: 0x00137470 File Offset: 0x00135670
 	public void RefreshOnLandPosition()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -78,15 +78,15 @@ public class FormationDataModel : ModelBase
 		this.OnLandPositionQueue.Push(vector);
 	}
 
-	// Token: 0x060060FB RID: 24827 RVA: 0x0012EC56 File Offset: 0x0012CE56
+	// Token: 0x06003493 RID: 13459 RVA: 0x0013757A File Offset: 0x0013577A
 	[NullableContext(2)]
 	public Vector GetLastPositionOnLand()
 	{
 		return this.OnLandPositionQueue.Front;
 	}
 
-	// Token: 0x17000791 RID: 1937
-	// (get) Token: 0x060060FC RID: 24828 RVA: 0x0012EC63 File Offset: 0x0012CE63
+	// Token: 0x170007B3 RID: 1971
+	// (get) Token: 0x06003494 RID: 13460 RVA: 0x00137587 File Offset: 0x00135787
 	public static FormationDataModel Instance
 	{
 		get
@@ -95,7 +95,7 @@ public class FormationDataModel : ModelBase
 		}
 	}
 
-	// Token: 0x060060FD RID: 24829 RVA: 0x0012EC6A File Offset: 0x0012CE6A
+	// Token: 0x06003495 RID: 13461 RVA: 0x0013758E File Offset: 0x0013578E
 	public static FormationDataModel GetOrCreateInstance()
 	{
 		if (FormationDataModel._Instance == null)
@@ -105,7 +105,7 @@ public class FormationDataModel : ModelBase
 		return FormationDataModel._Instance;
 	}
 
-	// Token: 0x060060FE RID: 24830 RVA: 0x0012EC7E File Offset: 0x0012CE7E
+	// Token: 0x06003496 RID: 13462 RVA: 0x001375A2 File Offset: 0x001357A2
 	public static bool CreateInstance()
 	{
 		if (FormationDataModel._Instance != null)
@@ -116,39 +116,39 @@ public class FormationDataModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060060FF RID: 24831 RVA: 0x0012EC94 File Offset: 0x0012CE94
+	// Token: 0x06003497 RID: 13463 RVA: 0x001375B8 File Offset: 0x001357B8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006100 RID: 24832 RVA: 0x0012EC96 File Offset: 0x0012CE96
+	// Token: 0x06003498 RID: 13464 RVA: 0x001375BA File Offset: 0x001357BA
 	public static void ResetStaticDefaultValue()
 	{
 		FormationDataModel._Instance = null;
 	}
 
-	// Token: 0x06006101 RID: 24833 RVA: 0x0012EC9E File Offset: 0x0012CE9E
+	// Token: 0x06003499 RID: 13465 RVA: 0x001375C2 File Offset: 0x001357C2
 	static FormationDataModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationDataModel.CreateStaticDefaultValue), new Action(FormationDataModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002C34 RID: 11316
+	// Token: 0x04002CCD RID: 11469
 	private const int CACHE_ON_LAND_SIZE = 15;
 
-	// Token: 0x04002C35 RID: 11317
+	// Token: 0x04002CCE RID: 11470
 	public readonly HashSet<int> PlayerAggroSet = new HashSet<int>();
 
-	// Token: 0x04002C36 RID: 11318
+	// Token: 0x04002CCF RID: 11471
 	public Queue<Vector> OnLandPositionQueue = new Queue<Vector>(15);
 
-	// Token: 0x04002C37 RID: 11319
+	// Token: 0x04002CD0 RID: 11472
 	public ELockEnemyMode KeyboardLockEnemyMode;
 
-	// Token: 0x04002C38 RID: 11320
+	// Token: 0x04002CD1 RID: 11473
 	public ELockEnemyMode GamepadLockEnemyMode;
 
-	// Token: 0x04002C39 RID: 11321
+	// Token: 0x04002CD2 RID: 11474
 	[Nullable(2)]
 	private static FormationDataModel _Instance;
 }

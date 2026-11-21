@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200484A RID: 18506
+	// Token: 0x02004CB2 RID: 19634
 	public struct IDangoBrawlLevel : IFlatbufferObject
 	{
-		// Token: 0x170084D8 RID: 34008
-		// (get) Token: 0x0601C9FC RID: 117244 RVA: 0x0040BD77 File Offset: 0x00409F77
+		// Token: 0x17008B23 RID: 35619
+		// (get) Token: 0x0601E1F9 RID: 123385 RVA: 0x004386C7 File Offset: 0x004368C7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C9FD RID: 117245 RVA: 0x0040BD84 File Offset: 0x00409F84
+		// Token: 0x0601E1FA RID: 123386 RVA: 0x004386D4 File Offset: 0x004368D4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C9FE RID: 117246 RVA: 0x0040BD8C File Offset: 0x00409F8C
+		// Token: 0x0601E1FB RID: 123387 RVA: 0x004386DC File Offset: 0x004368DC
 		public static IDangoBrawlLevel GetRootAsIDangoBrawlLevel(ByteBuffer _bb)
 		{
 			return IDangoBrawlLevel.GetRootAsIDangoBrawlLevel(_bb, default(IDangoBrawlLevel));
 		}
 
-		// Token: 0x0601C9FF RID: 117247 RVA: 0x0040BDA8 File Offset: 0x00409FA8
+		// Token: 0x0601E1FC RID: 123388 RVA: 0x004386F8 File Offset: 0x004368F8
 		public static IDangoBrawlLevel GetRootAsIDangoBrawlLevel(ByteBuffer _bb, IDangoBrawlLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CA00 RID: 117248 RVA: 0x0040BDC5 File Offset: 0x00409FC5
+		// Token: 0x0601E1FD RID: 123389 RVA: 0x00438715 File Offset: 0x00436915
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CA01 RID: 117249 RVA: 0x0040BDD4 File Offset: 0x00409FD4
+		// Token: 0x0601E1FE RID: 123390 RVA: 0x00438724 File Offset: 0x00436924
 		public IDangoBrawlLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170084D9 RID: 34009
-		// (get) Token: 0x0601CA02 RID: 117250 RVA: 0x0040BDE4 File Offset: 0x00409FE4
+		// Token: 0x17008B24 RID: 35620
+		// (get) Token: 0x0601E1FF RID: 123391 RVA: 0x00438734 File Offset: 0x00436934
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170084DA RID: 34010
-		// (get) Token: 0x0601CA03 RID: 117251 RVA: 0x0040BE20 File Offset: 0x0040A020
+		// Token: 0x17008B25 RID: 35621
+		// (get) Token: 0x0601E200 RID: 123392 RVA: 0x00438770 File Offset: 0x00436970
 		public ETwoDimensionLevelType Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CA04 RID: 117252 RVA: 0x0040BE5C File Offset: 0x0040A05C
+		// Token: 0x0601E201 RID: 123393 RVA: 0x004387AC File Offset: 0x004369AC
 		public TTwoDimensionItem ItemListType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return (TTwoDimensionItem)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x170084DB RID: 34011
-		// (get) Token: 0x0601CA05 RID: 117253 RVA: 0x0040BE9C File Offset: 0x0040A09C
+		// Token: 0x17008B26 RID: 35622
+		// (get) Token: 0x0601E202 RID: 123394 RVA: 0x004387EC File Offset: 0x004369EC
 		public int ItemListTypeLength
 		{
 			get
@@ -105,13 +105,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CA06 RID: 117254 RVA: 0x0040BEC7 File Offset: 0x0040A0C7
+		// Token: 0x0601E203 RID: 123395 RVA: 0x00438817 File Offset: 0x00436A17
 		public Span<TTwoDimensionItem> GetItemListTypeBytes()
 		{
 			return this.__p.__vector_as_span<TTwoDimensionItem>(8, 1);
 		}
 
-		// Token: 0x0601CA07 RID: 117255 RVA: 0x0040BED8 File Offset: 0x0040A0D8
+		// Token: 0x0601E204 RID: 123396 RVA: 0x00438828 File Offset: 0x00436A28
 		public TTwoDimensionItem[] GetItemListTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -129,7 +129,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return array;
 		}
 
-		// Token: 0x0601CA08 RID: 117256 RVA: 0x0040BF44 File Offset: 0x0040A144
+		// Token: 0x0601E205 RID: 123397 RVA: 0x00438894 File Offset: 0x00436A94
 		public TTable? ItemList<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -140,8 +140,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x170084DC RID: 34012
-		// (get) Token: 0x0601CA09 RID: 117257 RVA: 0x0040BF8C File Offset: 0x0040A18C
+		// Token: 0x17008B27 RID: 35623
+		// (get) Token: 0x0601E206 RID: 123398 RVA: 0x004388DC File Offset: 0x00436ADC
 		public int ItemListLength
 		{
 			get
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CA0A RID: 117258 RVA: 0x0040BFB8 File Offset: 0x0040A1B8
+		// Token: 0x0601E207 RID: 123399 RVA: 0x00438908 File Offset: 0x00436B08
 		public static Offset<IDangoBrawlLevel> CreateIDangoBrawlLevel(FlatBufferBuilder builder, int Id = 0, ETwoDimensionLevelType Type = ETwoDimensionLevelType.Marble, VectorOffset ItemList_typeOffset = default(VectorOffset), VectorOffset ItemListOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -166,31 +166,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IDangoBrawlLevel.EndIDangoBrawlLevel(builder);
 		}
 
-		// Token: 0x0601CA0B RID: 117259 RVA: 0x0040BFE4 File Offset: 0x0040A1E4
+		// Token: 0x0601E208 RID: 123400 RVA: 0x00438934 File Offset: 0x00436B34
 		public static void StartIDangoBrawlLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601CA0C RID: 117260 RVA: 0x0040BFED File Offset: 0x0040A1ED
+		// Token: 0x0601E209 RID: 123401 RVA: 0x0043893D File Offset: 0x00436B3D
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601CA0D RID: 117261 RVA: 0x0040BFF8 File Offset: 0x0040A1F8
+		// Token: 0x0601E20A RID: 123402 RVA: 0x00438948 File Offset: 0x00436B48
 		public static void AddType(FlatBufferBuilder builder, ETwoDimensionLevelType type)
 		{
 			builder.AddByte(1, (byte)type, 0);
 		}
 
-		// Token: 0x0601CA0E RID: 117262 RVA: 0x0040C003 File Offset: 0x0040A203
+		// Token: 0x0601E20B RID: 123403 RVA: 0x00438953 File Offset: 0x00436B53
 		public static void AddItemListType(FlatBufferBuilder builder, VectorOffset itemListTypeOffset)
 		{
 			builder.AddOffset(2, itemListTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601CA0F RID: 117263 RVA: 0x0040C014 File Offset: 0x0040A214
+		// Token: 0x0601E20C RID: 123404 RVA: 0x00438964 File Offset: 0x00436B64
 		public static VectorOffset CreateItemListTypeVector(FlatBufferBuilder builder, TTwoDimensionItem[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA10 RID: 117264 RVA: 0x0040C04B File Offset: 0x0040A24B
+		// Token: 0x0601E20D RID: 123405 RVA: 0x0043899B File Offset: 0x00436B9B
 		public static VectorOffset CreateItemListTypeVectorBlock(FlatBufferBuilder builder, TTwoDimensionItem[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA11 RID: 117265 RVA: 0x0040C065 File Offset: 0x0040A265
+		// Token: 0x0601E20E RID: 123406 RVA: 0x004389B5 File Offset: 0x00436BB5
 		public static VectorOffset CreateItemListTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TTwoDimensionItem> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA12 RID: 117266 RVA: 0x0040C083 File Offset: 0x0040A283
+		// Token: 0x0601E20F RID: 123407 RVA: 0x004389D3 File Offset: 0x00436BD3
 		public static VectorOffset CreateItemListTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -225,19 +225,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA13 RID: 117267 RVA: 0x0040C09C File Offset: 0x0040A29C
+		// Token: 0x0601E210 RID: 123408 RVA: 0x004389EC File Offset: 0x00436BEC
 		public static void StartItemListTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601CA14 RID: 117268 RVA: 0x0040C0A7 File Offset: 0x0040A2A7
+		// Token: 0x0601E211 RID: 123409 RVA: 0x004389F7 File Offset: 0x00436BF7
 		public static void AddItemList(FlatBufferBuilder builder, VectorOffset itemListOffset)
 		{
 			builder.AddOffset(3, itemListOffset.Value, 0);
 		}
 
-		// Token: 0x0601CA15 RID: 117269 RVA: 0x0040C0B8 File Offset: 0x0040A2B8
+		// Token: 0x0601E212 RID: 123410 RVA: 0x00438A08 File Offset: 0x00436C08
 		public static VectorOffset CreateItemListVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA16 RID: 117270 RVA: 0x0040C0EF File Offset: 0x0040A2EF
+		// Token: 0x0601E213 RID: 123411 RVA: 0x00438A3F File Offset: 0x00436C3F
 		public static VectorOffset CreateItemListVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -256,7 +256,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA17 RID: 117271 RVA: 0x0040C109 File Offset: 0x0040A309
+		// Token: 0x0601E214 RID: 123412 RVA: 0x00438A59 File Offset: 0x00436C59
 		public static VectorOffset CreateItemListVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -264,7 +264,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA18 RID: 117272 RVA: 0x0040C127 File Offset: 0x0040A327
+		// Token: 0x0601E215 RID: 123413 RVA: 0x00438A77 File Offset: 0x00436C77
 		public static VectorOffset CreateItemListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -272,19 +272,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CA19 RID: 117273 RVA: 0x0040C140 File Offset: 0x0040A340
+		// Token: 0x0601E216 RID: 123414 RVA: 0x00438A90 File Offset: 0x00436C90
 		public static void StartItemListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601CA1A RID: 117274 RVA: 0x0040C14B File Offset: 0x0040A34B
+		// Token: 0x0601E217 RID: 123415 RVA: 0x00438A9B File Offset: 0x00436C9B
 		public static Offset<IDangoBrawlLevel> EndIDangoBrawlLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<IDangoBrawlLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601CA1B RID: 117275 RVA: 0x0040C158 File Offset: 0x0040A358
+		// Token: 0x0601E218 RID: 123416 RVA: 0x00438AA8 File Offset: 0x00436CA8
 		public IDangoBrawlLevelT UnPack()
 		{
 			IDangoBrawlLevelT dangoBrawlLevelT = new IDangoBrawlLevelT();
@@ -292,7 +292,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return dangoBrawlLevelT;
 		}
 
-		// Token: 0x0601CA1C RID: 117276 RVA: 0x0040C174 File Offset: 0x0040A374
+		// Token: 0x0601E219 RID: 123417 RVA: 0x00438AC4 File Offset: 0x00436CC4
 		public void UnPackTo(IDangoBrawlLevelT _o)
 		{
 			_o.Id = this.Id;
@@ -321,7 +321,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CA1D RID: 117277 RVA: 0x0040C2D8 File Offset: 0x0040A4D8
+		// Token: 0x0601E21A RID: 123418 RVA: 0x00438C28 File Offset: 0x00436E28
 		public static Offset<IDangoBrawlLevel> Pack(FlatBufferBuilder builder, IDangoBrawlLevelT _o)
 		{
 			if (_o == null)
@@ -351,7 +351,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IDangoBrawlLevel.CreateIDangoBrawlLevel(builder, _o.Id, _o.Type, itemList_typeOffset, itemListOffset);
 		}
 
-		// Token: 0x0400CD7D RID: 52605
+		// Token: 0x0400D7B8 RID: 55224
 		private Table __p;
 	}
 }

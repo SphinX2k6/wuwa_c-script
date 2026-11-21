@@ -2,10 +2,10 @@
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.PCG.PBD_PhysicBridge.BP
 {
-	// Token: 0x02003C45 RID: 15429
+	// Token: 0x020030E4 RID: 12516
 	internal static class IBPI_BridgeModels_BrokenMobile_C_ReflectionImplementationFields
 	{
-		// Token: 0x04011A46 RID: 72262
+		// Token: 0x0401002F RID: 65583
 		public static IntPtr __BreakTrigger_NativeFunctionPtr;
 	}
 }

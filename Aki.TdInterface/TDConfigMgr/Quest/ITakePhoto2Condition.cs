@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200116A RID: 4458
+	// Token: 0x0200129E RID: 4766
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITakePhoto2Condition : IQuestCondition
 	{
-		// Token: 0x06006528 RID: 25896 RVA: 0x000F2BC0 File Offset: 0x000F0DC0
-		[NullableContext(1)]
+		// Token: 0x06006B41 RID: 27457 RVA: 0x0010003C File Offset: 0x000FE23C
+		[NullableContext(0)]
 		private ITakePhoto2Condition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006529 RID: 25897 RVA: 0x000F2BF8 File Offset: 0x000F0DF8
-		[NullableContext(1)]
+		// Token: 0x06006B42 RID: 27458 RVA: 0x00100074 File Offset: 0x000FE274
+		[NullableContext(0)]
 		public static ITakePhoto2Condition Create([Nullable(2)] ITakePhoto2Condition instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600652A RID: 25898 RVA: 0x000F2C0B File Offset: 0x000F0E0B
-		[NullableContext(1)]
+		// Token: 0x06006B43 RID: 27459 RVA: 0x00100087 File Offset: 0x000FE287
+		[NullableContext(0)]
 		public static ITakePhoto2Condition CreateFromSetValue([Nullable(2)] ITakePhoto2Condition_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600652B RID: 25899 RVA: 0x000F2C20 File Offset: 0x000F0E20
-		[NullableContext(1)]
+		// Token: 0x06006B44 RID: 27460 RVA: 0x0010009C File Offset: 0x000FE29C
+		[NullableContext(0)]
 		public new ITakePhoto2Condition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2Condition_SetValue
@@ -70,14 +70,17 @@ namespace Aki.TDConfigMgr.Quest
 				FovCondition = this.FovCondition,
 				SequenceCondition = this.SequenceCondition,
 				BoundCameraSeqPath = this.BoundCameraSeqPath,
+				BackgroundImagePath = this.BackgroundImagePath,
 				PhotoTargets = this.PhotoTargets,
+				PhotoMode = this.PhotoMode,
+				CanDetectWhenNotTracking = this.CanDetectWhenNotTracking,
 				EdTidConditionDescription = this.EdTidConditionDescription
 			};
 		}
 
-		// Token: 0x170020FA RID: 8442
-		// (get) Token: 0x0600652C RID: 25900 RVA: 0x000F2CB6 File Offset: 0x000F0EB6
-		// (set) Token: 0x0600652D RID: 25901 RVA: 0x000F2CE1 File Offset: 0x000F0EE1
+		// Token: 0x170022B3 RID: 8883
+		// (get) Token: 0x06006B45 RID: 27461 RVA: 0x00100156 File Offset: 0x000FE356
+		// (set) Token: 0x06006B46 RID: 27462 RVA: 0x00100181 File Offset: 0x000FE381
 		public override EChildQuest Type
 		{
 			get
@@ -98,9 +101,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020FB RID: 8443
-		// (get) Token: 0x0600652E RID: 25902 RVA: 0x000F2CF0 File Offset: 0x000F0EF0
-		// (set) Token: 0x0600652F RID: 25903 RVA: 0x000F2D51 File Offset: 0x000F0F51
+		// Token: 0x170022B4 RID: 8884
+		// (get) Token: 0x06006B47 RID: 27463 RVA: 0x00100190 File Offset: 0x000FE390
+		// (set) Token: 0x06006B48 RID: 27464 RVA: 0x001001F1 File Offset: 0x000FE3F1
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -128,13 +131,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020FC RID: 8444
-		// (get) Token: 0x06006530 RID: 25904 RVA: 0x000F2D66 File Offset: 0x000F0F66
-		// (set) Token: 0x06006531 RID: 25905 RVA: 0x000F2D91 File Offset: 0x000F0F91
-		[Nullable(1)]
+		// Token: 0x170022B5 RID: 8885
+		// (get) Token: 0x06006B49 RID: 27465 RVA: 0x00100206 File Offset: 0x000FE406
+		// (set) Token: 0x06006B4A RID: 27466 RVA: 0x00100231 File Offset: 0x000FE431
+		[Nullable(0)]
 		public virtual string TidConditionDescription
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -147,16 +150,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return this.PocoInterface.TidConditionDescription;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().TidConditionDescription = value;
 			}
 		}
 
-		// Token: 0x170020FD RID: 8445
-		// (get) Token: 0x06006532 RID: 25906 RVA: 0x000F2D9F File Offset: 0x000F0F9F
-		// (set) Token: 0x06006533 RID: 25907 RVA: 0x000F2DC6 File Offset: 0x000F0FC6
+		// Token: 0x170022B6 RID: 8886
+		// (get) Token: 0x06006B4B RID: 27467 RVA: 0x0010023F File Offset: 0x000FE43F
+		// (set) Token: 0x06006B4C RID: 27468 RVA: 0x00100266 File Offset: 0x000FE466
 		public virtual string TargetPreviewImagePath
 		{
 			get
@@ -178,9 +181,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020FE RID: 8446
-		// (get) Token: 0x06006534 RID: 25908 RVA: 0x000F2DD4 File Offset: 0x000F0FD4
-		// (set) Token: 0x06006535 RID: 25909 RVA: 0x000F2E35 File Offset: 0x000F1035
+		// Token: 0x170022B7 RID: 8887
+		// (get) Token: 0x06006B4D RID: 27469 RVA: 0x00100274 File Offset: 0x000FE474
+		// (set) Token: 0x06006B4E RID: 27470 RVA: 0x001002D5 File Offset: 0x000FE4D5
 		public virtual ITakePhoto2TimeCondition TimeCondition
 		{
 			get
@@ -208,9 +211,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020FF RID: 8447
-		// (get) Token: 0x06006536 RID: 25910 RVA: 0x000F2E4C File Offset: 0x000F104C
-		// (set) Token: 0x06006537 RID: 25911 RVA: 0x000F2EAD File Offset: 0x000F10AD
+		// Token: 0x170022B8 RID: 8888
+		// (get) Token: 0x06006B4F RID: 27471 RVA: 0x001002EC File Offset: 0x000FE4EC
+		// (set) Token: 0x06006B50 RID: 27472 RVA: 0x0010034D File Offset: 0x000FE54D
 		public virtual ITakePhoto2PosCondition PosCondition
 		{
 			get
@@ -238,9 +241,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002100 RID: 8448
-		// (get) Token: 0x06006538 RID: 25912 RVA: 0x000F2EC4 File Offset: 0x000F10C4
-		// (set) Token: 0x06006539 RID: 25913 RVA: 0x000F2F25 File Offset: 0x000F1125
+		// Token: 0x170022B9 RID: 8889
+		// (get) Token: 0x06006B51 RID: 27473 RVA: 0x00100364 File Offset: 0x000FE564
+		// (set) Token: 0x06006B52 RID: 27474 RVA: 0x001003C5 File Offset: 0x000FE5C5
 		public virtual ITakePhoto2CameraFovCondition FovCondition
 		{
 			get
@@ -268,9 +271,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002101 RID: 8449
-		// (get) Token: 0x0600653A RID: 25914 RVA: 0x000F2F3C File Offset: 0x000F113C
-		// (set) Token: 0x0600653B RID: 25915 RVA: 0x000F2F9D File Offset: 0x000F119D
+		// Token: 0x170022BA RID: 8890
+		// (get) Token: 0x06006B53 RID: 27475 RVA: 0x001003DC File Offset: 0x000FE5DC
+		// (set) Token: 0x06006B54 RID: 27476 RVA: 0x0010043D File Offset: 0x000FE63D
 		public virtual ITakePhoto2SequenceCondition SequenceCondition
 		{
 			get
@@ -298,9 +301,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002102 RID: 8450
-		// (get) Token: 0x0600653C RID: 25916 RVA: 0x000F2FB2 File Offset: 0x000F11B2
-		// (set) Token: 0x0600653D RID: 25917 RVA: 0x000F2FD9 File Offset: 0x000F11D9
+		// Token: 0x170022BB RID: 8891
+		// (get) Token: 0x06006B55 RID: 27477 RVA: 0x00100452 File Offset: 0x000FE652
+		// (set) Token: 0x06006B56 RID: 27478 RVA: 0x00100479 File Offset: 0x000FE679
 		public virtual string BoundCameraSeqPath
 		{
 			get
@@ -322,13 +325,37 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002103 RID: 8451
-		// (get) Token: 0x0600653E RID: 25918 RVA: 0x000F2FE7 File Offset: 0x000F11E7
-		// (set) Token: 0x0600653F RID: 25919 RVA: 0x000F300E File Offset: 0x000F120E
-		[Nullable(1)]
+		// Token: 0x170022BC RID: 8892
+		// (get) Token: 0x06006B57 RID: 27479 RVA: 0x00100487 File Offset: 0x000FE687
+		// (set) Token: 0x06006B58 RID: 27480 RVA: 0x001004AE File Offset: 0x000FE6AE
+		public virtual string BackgroundImagePath
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.BackgroundImagePath;
+				}
+				ITakePhoto2Condition_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.BackgroundImagePath;
+			}
+			set
+			{
+				this.GetOrCreatePoco().BackgroundImagePath = value;
+			}
+		}
+
+		// Token: 0x170022BD RID: 8893
+		// (get) Token: 0x06006B59 RID: 27481 RVA: 0x001004BC File Offset: 0x000FE6BC
+		// (set) Token: 0x06006B5A RID: 27482 RVA: 0x001004E3 File Offset: 0x000FE6E3
+		[Nullable(0)]
 		public virtual List<ITakePhoto2Target> PhotoTargets
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -342,16 +369,70 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.PhotoTargets;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().PhotoTargets = value;
 			}
 		}
 
-		// Token: 0x17002104 RID: 8452
-		// (get) Token: 0x06006540 RID: 25920 RVA: 0x000F301C File Offset: 0x000F121C
-		// (set) Token: 0x06006541 RID: 25921 RVA: 0x000F3033 File Offset: 0x000F1233
+		// Token: 0x170022BE RID: 8894
+		// (get) Token: 0x06006B5B RID: 27483 RVA: 0x001004F4 File Offset: 0x000FE6F4
+		// (set) Token: 0x06006B5C RID: 27484 RVA: 0x00100555 File Offset: 0x000FE755
+		public virtual ITakePhoto2BeforeYourEyesMode PhotoMode
+		{
+			get
+			{
+				if (this._PhotoModeInited)
+				{
+					return this._PhotoModeCache;
+				}
+				this._PhotoModeInited = true;
+				if (this.FbInstance != null)
+				{
+					this._PhotoModeCache = ITakePhoto2BeforeYourEyesMode.Create(this.FbInstance.PhotoMode);
+				}
+				else
+				{
+					ITakePhoto2Condition_SetValue pocoInterface = this.PocoInterface;
+					this._PhotoModeCache = ((pocoInterface != null) ? pocoInterface.PhotoMode : null);
+				}
+				return this._PhotoModeCache;
+			}
+			set
+			{
+				this.GetOrCreatePoco().PhotoMode = value;
+				this._PhotoModeInited = false;
+			}
+		}
+
+		// Token: 0x170022BF RID: 8895
+		// (get) Token: 0x06006B5D RID: 27485 RVA: 0x0010056C File Offset: 0x000FE76C
+		// (set) Token: 0x06006B5E RID: 27486 RVA: 0x001005A6 File Offset: 0x000FE7A6
+		public virtual bool? CanDetectWhenNotTracking
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.CanDetectWhenNotTracking;
+				}
+				ITakePhoto2Condition_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.CanDetectWhenNotTracking;
+			}
+			set
+			{
+				this.GetOrCreatePoco().CanDetectWhenNotTracking = value;
+			}
+		}
+
+		// Token: 0x170022C0 RID: 8896
+		// (get) Token: 0x06006B5F RID: 27487 RVA: 0x001005B4 File Offset: 0x000FE7B4
+		// (set) Token: 0x06006B60 RID: 27488 RVA: 0x001005CB File Offset: 0x000FE7CB
 		public virtual string EdTidConditionDescription
 		{
 			get
@@ -368,45 +449,52 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CAB RID: 15531
+		// Token: 0x04004005 RID: 16389
 		protected new ITakePhoto2Condition FbInstance;
 
-		// Token: 0x04003CAC RID: 15532
+		// Token: 0x04004006 RID: 16390
 		protected new ITakePhoto2Condition_SetValue PocoInterface;
 
-		// Token: 0x04003CAD RID: 15533
-		[Nullable(1)]
+		// Token: 0x04004007 RID: 16391
+		[Nullable(0)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003CAE RID: 15534
+		// Token: 0x04004008 RID: 16392
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003CAF RID: 15535
-		[Nullable(1)]
+		// Token: 0x04004009 RID: 16393
+		[Nullable(0)]
 		private ITakePhoto2TimeCondition _TimeConditionCache;
 
-		// Token: 0x04003CB0 RID: 15536
+		// Token: 0x0400400A RID: 16394
 		private bool _TimeConditionInited;
 
-		// Token: 0x04003CB1 RID: 15537
-		[Nullable(1)]
+		// Token: 0x0400400B RID: 16395
+		[Nullable(0)]
 		private ITakePhoto2PosCondition _PosConditionCache;
 
-		// Token: 0x04003CB2 RID: 15538
+		// Token: 0x0400400C RID: 16396
 		private bool _PosConditionInited;
 
-		// Token: 0x04003CB3 RID: 15539
-		[Nullable(1)]
+		// Token: 0x0400400D RID: 16397
+		[Nullable(0)]
 		private ITakePhoto2CameraFovCondition _FovConditionCache;
 
-		// Token: 0x04003CB4 RID: 15540
+		// Token: 0x0400400E RID: 16398
 		private bool _FovConditionInited;
 
-		// Token: 0x04003CB5 RID: 15541
-		[Nullable(1)]
+		// Token: 0x0400400F RID: 16399
+		[Nullable(0)]
 		private ITakePhoto2SequenceCondition _SequenceConditionCache;
 
-		// Token: 0x04003CB6 RID: 15542
+		// Token: 0x04004010 RID: 16400
 		private bool _SequenceConditionInited;
+
+		// Token: 0x04004011 RID: 16401
+		[Nullable(0)]
+		private ITakePhoto2BeforeYourEyesMode _PhotoModeCache;
+
+		// Token: 0x04004012 RID: 16402
+		private bool _PhotoModeInited;
 	}
 }

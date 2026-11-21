@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200094D RID: 2381
+	// Token: 0x02000998 RID: 2456
 	public class ConfigSkillVehicleButtonByTemplateId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060037E1 RID: 14305 RVA: 0x00195680 File Offset: 0x00193880
+		// Token: 0x060039A3 RID: 14755 RVA: 0x001A28A0 File Offset: 0x001A0AA0
 		static ConfigSkillVehicleButtonByTemplateId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillVehicleButtonByTemplateId.CreateStaticDefaultValue), new Action(ConfigSkillVehicleButtonByTemplateId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060037E2 RID: 14306 RVA: 0x001956A0 File Offset: 0x001938A0
+		// Token: 0x060039A4 RID: 14756 RVA: 0x001A28C0 File Offset: 0x001A0AC0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillVehicleButtonByTemplateId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060037E3 RID: 14307 RVA: 0x0019571F File Offset: 0x0019391F
+		// Token: 0x060039A5 RID: 14757 RVA: 0x001A293F File Offset: 0x001A0B3F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillVehicleButtonByTemplateId.LogPair = null;
 			ConfigSkillVehicleButtonByTemplateId.HandleId = 0;
 		}
 
-		// Token: 0x060037E4 RID: 14308 RVA: 0x0019572D File Offset: 0x0019392D
+		// Token: 0x060039A6 RID: 14758 RVA: 0x001A294D File Offset: 0x001A0B4D
 		public static void Init()
 		{
 			ConfigSkillVehicleButtonByTemplateId.HandleId = ConfigCommon.InitDataStatement(ConfigSkillVehicleButtonByTemplateId.HandleId, "db_skillbutton.db", "select BinData from `SkillVehicleButton` where TemplateId=?");
 		}
 
-		// Token: 0x060037E5 RID: 14309 RVA: 0x00195748 File Offset: 0x00193948
+		// Token: 0x060039A7 RID: 14759 RVA: 0x001A2968 File Offset: 0x001A0B68
 		[NullableContext(2)]
 		public static IReadOnlyList<SkillVehicleButton> GetConfigList(int p0TemplateId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004101 RID: 16641
+		// Token: 0x0400430E RID: 17166
 		private const string DB = "db_skillbutton.db";
 
-		// Token: 0x04004102 RID: 16642
+		// Token: 0x0400430F RID: 17167
 		private const string FILE = "j.技能按钮.xlsx";
 
-		// Token: 0x04004103 RID: 16643
+		// Token: 0x04004310 RID: 17168
 		private const string TABLE = "SkillVehicleButton";
 
-		// Token: 0x04004104 RID: 16644
+		// Token: 0x04004311 RID: 17169
 		private const string COMMAND = "select BinData from `SkillVehicleButton` where TemplateId=?";
 
-		// Token: 0x04004105 RID: 16645
+		// Token: 0x04004312 RID: 17170
 		private const string KEY_PREFIX = "SkillVehicleButtonByTemplateId";
 
-		// Token: 0x04004106 RID: 16646
+		// Token: 0x04004313 RID: 17171
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004107 RID: 16647
+		// Token: 0x04004314 RID: 17172
 		private static int HandleId;
 	}
 }

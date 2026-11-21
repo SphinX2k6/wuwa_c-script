@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020011FE RID: 4606
+// Token: 0x020006B2 RID: 1714
 public class RedDotActivityCorniceMeeting : RedDotBase
 {
-	// Token: 0x06007B3F RID: 31551 RVA: 0x0019FB16 File Offset: 0x0019DD16
+	// Token: 0x06004ED5 RID: 20181 RVA: 0x001A87CE File Offset: 0x001A69CE
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCorniceMeetingRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x06007B40 RID: 31552 RVA: 0x0019FB34 File Offset: 0x0019DD34
+	// Token: 0x06004ED6 RID: 20182 RVA: 0x001A87EC File Offset: 0x001A69EC
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshCorniceMeetingRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x06007B41 RID: 31553 RVA: 0x0019FB54 File Offset: 0x0019DD54
+	// Token: 0x06004ED7 RID: 20183 RVA: 0x001A880C File Offset: 0x001A6A0C
 	protected override bool OnCheck(int uid)
 	{
 		ActivityCorniceMeetingData currentActivityData = ActivityCorniceMeetingController.Instance.GetCurrentActivityData();

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021DC RID: 8668
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002447 RID: 9287
 	public class SetSportsState : ActionParams
 	{
-		// Token: 0x0600BE77 RID: 48759 RVA: 0x001B6824 File Offset: 0x001B4A24
+		// Token: 0x0600CA33 RID: 51763 RVA: 0x001CDEB0 File Offset: 0x001CC0B0
 		private SetSportsState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE78 RID: 48760 RVA: 0x001B685C File Offset: 0x001B4A5C
+		// Token: 0x0600CA34 RID: 51764 RVA: 0x001CDEE8 File Offset: 0x001CC0E8
 		public static SetSportsState Create([Nullable(2)] SetSportsState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE79 RID: 48761 RVA: 0x001B686F File Offset: 0x001B4A6F
+		// Token: 0x0600CA35 RID: 51765 RVA: 0x001CDEFB File Offset: 0x001CC0FB
 		public static SetSportsState CreateFromSetValue([Nullable(2)] SetSportsState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE7A RID: 48762 RVA: 0x001B6882 File Offset: 0x001B4A82
+		// Token: 0x0600CA36 RID: 51766 RVA: 0x001CDF0E File Offset: 0x001CC10E
 		public SetSportsState_SetValue ToSetValue()
 		{
 			return new SetSportsState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039D3 RID: 14803
-		// (get) Token: 0x0600BE7B RID: 48763 RVA: 0x001B6895 File Offset: 0x001B4A95
-		// (set) Token: 0x0600BE7C RID: 48764 RVA: 0x001B68BC File Offset: 0x001B4ABC
+		// Token: 0x17003CC8 RID: 15560
+		// (get) Token: 0x0600CA37 RID: 51767 RVA: 0x001CDF21 File Offset: 0x001CC121
+		// (set) Token: 0x0600CA38 RID: 51768 RVA: 0x001CDF48 File Offset: 0x001CC148
 		public virtual ISportConfig Config
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071AB RID: 29099
+		// Token: 0x040077F4 RID: 30708
 		[Nullable(2)]
 		protected new SetSportsState FbInstance;
 
-		// Token: 0x040071AC RID: 29100
+		// Token: 0x040077F5 RID: 30709
 		[Nullable(2)]
 		protected SetSportsState_SetValue PocoInterface;
 	}

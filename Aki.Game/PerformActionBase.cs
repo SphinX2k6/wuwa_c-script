@@ -1,57 +1,57 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003112 RID: 12562
+// Token: 0x0200266D RID: 9837
 [NullableContext(2)]
 [Nullable(0)]
 public class PerformActionBase : IPerformActionBase
 {
-	// Token: 0x0601B00B RID: 110603 RVA: 0x00754B94 File Offset: 0x00752D94
+	// Token: 0x06018A66 RID: 100966 RVA: 0x0077ABFF File Offset: 0x00778DFF
 	public PerformActionBase(EPerformAction name)
 	{
 		this.Name = name;
 	}
 
-	// Token: 0x17002556 RID: 9558
-	// (get) Token: 0x0601B00C RID: 110604 RVA: 0x00754BA3 File Offset: 0x00752DA3
-	// (set) Token: 0x0601B00D RID: 110605 RVA: 0x00754BAB File Offset: 0x00752DAB
+	// Token: 0x17002701 RID: 9985
+	// (get) Token: 0x06018A67 RID: 100967 RVA: 0x0077AC0E File Offset: 0x00778E0E
+	// (set) Token: 0x06018A68 RID: 100968 RVA: 0x0077AC16 File Offset: 0x00778E16
 	public EPerformAction Name { get; private set; }
 
-	// Token: 0x17002557 RID: 9559
-	// (get) Token: 0x0601B00E RID: 110606 RVA: 0x00754BB4 File Offset: 0x00752DB4
-	// (set) Token: 0x0601B00F RID: 110607 RVA: 0x00754BBC File Offset: 0x00752DBC
+	// Token: 0x17002702 RID: 9986
+	// (get) Token: 0x06018A69 RID: 100969 RVA: 0x0077AC1F File Offset: 0x00778E1F
+	// (set) Token: 0x06018A6A RID: 100970 RVA: 0x0077AC27 File Offset: 0x00778E27
 	public int Id { get; set; }
 
-	// Token: 0x17002558 RID: 9560
-	// (get) Token: 0x0601B010 RID: 110608 RVA: 0x00754BC5 File Offset: 0x00752DC5
-	// (set) Token: 0x0601B011 RID: 110609 RVA: 0x00754BCD File Offset: 0x00752DCD
+	// Token: 0x17002703 RID: 9987
+	// (get) Token: 0x06018A6B RID: 100971 RVA: 0x0077AC30 File Offset: 0x00778E30
+	// (set) Token: 0x06018A6C RID: 100972 RVA: 0x0077AC38 File Offset: 0x00778E38
 	public EPerformMode Mode { get; set; }
 
-	// Token: 0x17002559 RID: 9561
-	// (get) Token: 0x0601B012 RID: 110610 RVA: 0x00754BD6 File Offset: 0x00752DD6
-	// (set) Token: 0x0601B013 RID: 110611 RVA: 0x00754BDE File Offset: 0x00752DDE
+	// Token: 0x17002704 RID: 9988
+	// (get) Token: 0x06018A6D RID: 100973 RVA: 0x0077AC41 File Offset: 0x00778E41
+	// (set) Token: 0x06018A6E RID: 100974 RVA: 0x0077AC49 File Offset: 0x00778E49
 	public EPerformGroup Group { get; set; }
 
-	// Token: 0x1700255A RID: 9562
-	// (get) Token: 0x0601B014 RID: 110612 RVA: 0x00754BE7 File Offset: 0x00752DE7
-	// (set) Token: 0x0601B015 RID: 110613 RVA: 0x00754BEF File Offset: 0x00752DEF
+	// Token: 0x17002705 RID: 9989
+	// (get) Token: 0x06018A6F RID: 100975 RVA: 0x0077AC52 File Offset: 0x00778E52
+	// (set) Token: 0x06018A70 RID: 100976 RVA: 0x0077AC5A File Offset: 0x00778E5A
 	public bool Executed { get; set; }
 
-	// Token: 0x1700255B RID: 9563
-	// (get) Token: 0x0601B016 RID: 110614 RVA: 0x00754BF8 File Offset: 0x00752DF8
+	// Token: 0x17002706 RID: 9990
+	// (get) Token: 0x06018A71 RID: 100977 RVA: 0x0077AC63 File Offset: 0x00778E63
 	public virtual bool IsAtomic { get; }
 
-	// Token: 0x1700255C RID: 9564
-	// (get) Token: 0x0601B017 RID: 110615 RVA: 0x00754C00 File Offset: 0x00752E00
-	// (set) Token: 0x0601B018 RID: 110616 RVA: 0x00754C08 File Offset: 0x00752E08
+	// Token: 0x17002707 RID: 9991
+	// (get) Token: 0x06018A72 RID: 100978 RVA: 0x0077AC6B File Offset: 0x00778E6B
+	// (set) Token: 0x06018A73 RID: 100979 RVA: 0x0077AC73 File Offset: 0x00778E73
 	public bool IsValid { get; set; }
 
-	// Token: 0x1700255D RID: 9565
-	// (get) Token: 0x0601B019 RID: 110617 RVA: 0x00754C11 File Offset: 0x00752E11
-	// (set) Token: 0x0601B01A RID: 110618 RVA: 0x00754C19 File Offset: 0x00752E19
+	// Token: 0x17002708 RID: 9992
+	// (get) Token: 0x06018A74 RID: 100980 RVA: 0x0077AC7C File Offset: 0x00778E7C
+	// (set) Token: 0x06018A75 RID: 100981 RVA: 0x0077AC84 File Offset: 0x00778E84
 	public bool IsPersistent { get; set; }
 
-	// Token: 0x0601B01B RID: 110619 RVA: 0x00754C24 File Offset: 0x00752E24
+	// Token: 0x06018A76 RID: 100982 RVA: 0x0077AC90 File Offset: 0x00778E90
 	public void Execute()
 	{
 		if (this.IsValid)
@@ -82,7 +82,7 @@ public class PerformActionBase : IPerformActionBase
 		}
 	}
 
-	// Token: 0x0601B01C RID: 110620 RVA: 0x00754C7D File Offset: 0x00752E7D
+	// Token: 0x06018A77 RID: 100983 RVA: 0x0077ACE9 File Offset: 0x00778EE9
 	protected void FinishExecute()
 	{
 		Action<int> onAfterExecute = this.OnAfterExecute;
@@ -98,13 +98,13 @@ public class PerformActionBase : IPerformActionBase
 		onFinish();
 	}
 
-	// Token: 0x0601B01D RID: 110621 RVA: 0x00754CA6 File Offset: 0x00752EA6
+	// Token: 0x06018A78 RID: 100984 RVA: 0x0077AD12 File Offset: 0x00778F12
 	public void Interrupt()
 	{
 		this.OnInterrupt();
 	}
 
-	// Token: 0x0601B01E RID: 110622 RVA: 0x00754CB0 File Offset: 0x00752EB0
+	// Token: 0x06018A79 RID: 100985 RVA: 0x0077AD1C File Offset: 0x00778F1C
 	public void Reset()
 	{
 		this.IsValid = false;
@@ -120,39 +120,39 @@ public class PerformActionBase : IPerformActionBase
 		this.OnReset();
 	}
 
-	// Token: 0x0601B01F RID: 110623 RVA: 0x00754D09 File Offset: 0x00752F09
+	// Token: 0x06018A7A RID: 100986 RVA: 0x0077AD75 File Offset: 0x00778F75
 	protected virtual void OnExecute()
 	{
 	}
 
-	// Token: 0x0601B020 RID: 110624 RVA: 0x00754D0B File Offset: 0x00752F0B
+	// Token: 0x06018A7B RID: 100987 RVA: 0x0077AD77 File Offset: 0x00778F77
 	protected virtual void OnInterrupt()
 	{
 	}
 
-	// Token: 0x0601B021 RID: 110625 RVA: 0x00754D0D File Offset: 0x00752F0D
+	// Token: 0x06018A7C RID: 100988 RVA: 0x0077AD79 File Offset: 0x00778F79
 	protected virtual void OnRestore()
 	{
 		this.OnExecute();
 	}
 
-	// Token: 0x0601B022 RID: 110626 RVA: 0x00754D15 File Offset: 0x00752F15
+	// Token: 0x06018A7D RID: 100989 RVA: 0x0077AD81 File Offset: 0x00778F81
 	protected virtual void OnReset()
 	{
 	}
 
-	// Token: 0x0400D1FC RID: 53756
+	// Token: 0x0400D61E RID: 54814
 	public IActionParamMap Param;
 
-	// Token: 0x0400D1FD RID: 53757
+	// Token: 0x0400D61F RID: 54815
 	public BasePerformComponent PerformComp;
 
-	// Token: 0x0400D1FE RID: 53758
+	// Token: 0x0400D620 RID: 54816
 	public Action OnFinish;
 
-	// Token: 0x0400D1FF RID: 53759
+	// Token: 0x0400D621 RID: 54817
 	public Action<int> OnBeforeExecute;
 
-	// Token: 0x0400D200 RID: 53760
+	// Token: 0x0400D622 RID: 54818
 	public Action<int> OnAfterExecute;
 }

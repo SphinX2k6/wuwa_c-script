@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000511 RID: 1297
+	// Token: 0x02000578 RID: 1400
 	public class IMonsterNpcInteractionSwordRiding_SetValue
 	{
-		// Token: 0x04001316 RID: 4886
+		// Token: 0x04001480 RID: 5248
 		public EMonsterNpcInteractionType Type;
 	}
 }

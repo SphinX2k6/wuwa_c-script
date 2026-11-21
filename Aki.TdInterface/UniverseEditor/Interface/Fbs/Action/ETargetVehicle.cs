@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200602B RID: 24619
+	// Token: 0x0200668A RID: 26250
 	public enum ETargetVehicle : byte
 	{
-		// Token: 0x0401012F RID: 65839
+		// Token: 0x04010F1B RID: 69403
 		Current,
-		// Token: 0x04010130 RID: 65840
+		// Token: 0x04010F1C RID: 69404
 		Self,
-		// Token: 0x04010131 RID: 65841
+		// Token: 0x04010F1D RID: 69405
 		Appointed,
-		// Token: 0x04010132 RID: 65842
+		// Token: 0x04010F1E RID: 69406
 		Triggered,
-		// Token: 0x04010133 RID: 65843
+		// Token: 0x04010F1F RID: 69407
 		FishingBoat,
-		// Token: 0x04010134 RID: 65844
+		// Token: 0x04010F20 RID: 69408
 		VehicleTeam,
-		// Token: 0x04010135 RID: 65845
+		// Token: 0x04010F21 RID: 69409
 		PlayerMotor
 	}
 }

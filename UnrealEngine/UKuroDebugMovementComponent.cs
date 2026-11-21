@@ -6,32 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019E1 RID: 6625
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200046F RID: 1135
 	[UnrealObjectPath("/Script/KuroMovement.KuroDebugMovementComponent")]
 	[UnrealStructLayout(2176, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2176)]
 	public class UKuroDebugMovementComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018949 RID: 100681 RVA: 0x00243362 File Offset: 0x00241562
+		// Token: 0x06006BF8 RID: 27640 RVA: 0x0009D28F File Offset: 0x0009B48F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroDebugMovementComponent._ClassPtr;
 		}
 
-		// Token: 0x0601894A RID: 100682 RVA: 0x00243370 File Offset: 0x00241570
+		// Token: 0x06006BF9 RID: 27641 RVA: 0x0009D29C File Offset: 0x0009B49C
 		public UKuroDebugMovementComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroDebugMovementComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601894B RID: 100683 RVA: 0x00243398 File Offset: 0x00241598
+		// Token: 0x06006BFA RID: 27642 RVA: 0x0009D2C4 File Offset: 0x0009B4C4
+		[NullableContext(1)]
 		public UKuroDebugMovementComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroDebugMovementComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170061EA RID: 25066
-		// (get) Token: 0x0601894C RID: 100684 RVA: 0x002433CB File Offset: 0x002415CB
-		// (set) Token: 0x0601894D RID: 100685 RVA: 0x002433DB File Offset: 0x002415DB
+		// Token: 0x17001565 RID: 5477
+		// (get) Token: 0x06006BFB RID: 27643 RVA: 0x0009D2F7 File Offset: 0x0009B4F7
+		// (set) Token: 0x06006BFC RID: 27644 RVA: 0x0009D307 File Offset: 0x0009B507
 		public unsafe int DrawDebugCount
 		{
 			get
@@ -44,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061EB RID: 25067
-		// (get) Token: 0x0601894E RID: 100686 RVA: 0x002433EC File Offset: 0x002415EC
-		// (set) Token: 0x0601894F RID: 100687 RVA: 0x00243405 File Offset: 0x00241605
+		// Token: 0x17001566 RID: 5478
+		// (get) Token: 0x06006BFD RID: 27645 RVA: 0x0009D318 File Offset: 0x0009B518
+		// (set) Token: 0x06006BFE RID: 27646 RVA: 0x0009D331 File Offset: 0x0009B531
 		public unsafe bool bShowLog
 		{
 			get
@@ -59,24 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061EC RID: 25068
-		// (get) Token: 0x06018950 RID: 100688 RVA: 0x00243435 File Offset: 0x00241635
-		// (set) Token: 0x06018951 RID: 100689 RVA: 0x00243445 File Offset: 0x00241645
-		public unsafe EKDMDrawDebugType bDrawDebug
-		{
-			get
-			{
-				return (EKDMDrawDebugType)(*(base.NativePtr + (IntPtr)UKuroDebugMovementComponent.__PropertyOffset_bDrawDebug));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UKuroDebugMovementComponent.__PropertyOffset_bDrawDebug) = (byte)value;
-			}
-		}
-
-		// Token: 0x170061ED RID: 25069
-		// (get) Token: 0x06018952 RID: 100690 RVA: 0x00243456 File Offset: 0x00241656
-		// (set) Token: 0x06018953 RID: 100691 RVA: 0x0024346F File Offset: 0x0024166F
+		// Token: 0x17001567 RID: 5479
+		// (get) Token: 0x06006BFF RID: 27647 RVA: 0x0009D361 File Offset: 0x0009B561
+		// (set) Token: 0x06006C00 RID: 27648 RVA: 0x0009D37A File Offset: 0x0009B57A
 		public unsafe bool bRecording
 		{
 			get
@@ -89,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061EE RID: 25070
-		// (get) Token: 0x06018954 RID: 100692 RVA: 0x0024349F File Offset: 0x0024169F
-		// (set) Token: 0x06018955 RID: 100693 RVA: 0x002434B8 File Offset: 0x002416B8
+		// Token: 0x17001568 RID: 5480
+		// (get) Token: 0x06006C01 RID: 27649 RVA: 0x0009D3AA File Offset: 0x0009B5AA
+		// (set) Token: 0x06006C02 RID: 27650 RVA: 0x0009D3C3 File Offset: 0x0009B5C3
 		public unsafe bool bHasPersistentRecord
 		{
 			get
@@ -104,25 +88,26 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06018956 RID: 100694 RVA: 0x002434E8 File Offset: 0x002416E8
+		// Token: 0x06006C03 RID: 27651 RVA: 0x0009D3F3 File Offset: 0x0009B5F3
 		public void UnResigter()
 		{
 			UKuroDebugMovementComponent.__UnResigter_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018957 RID: 100695 RVA: 0x002434F5 File Offset: 0x002416F5
+		// Token: 0x06006C04 RID: 27652 RVA: 0x0009D400 File Offset: 0x0009B600
 		public void SetDebug(bool bDebug, bool bDetial)
 		{
 			UKuroDebugMovementComponent.__SetDebug_Internal(base.NativePtr, bDebug, bDetial);
 		}
 
-		// Token: 0x06018958 RID: 100696 RVA: 0x00243504 File Offset: 0x00241704
+		// Token: 0x06006C05 RID: 27653 RVA: 0x0009D40F File Offset: 0x0009B60F
 		public void Resigter()
 		{
 			UKuroDebugMovementComponent.__Resigter_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018959 RID: 100697 RVA: 0x00243514 File Offset: 0x00241714
+		// Token: 0x06006C06 RID: 27654 RVA: 0x0009D41C File Offset: 0x0009B61C
+		[NullableContext(1)]
 		public unsafe void RecordModifyInfo(string Context, FVector CustomVector, EKDMRecordType Type = EKDMRecordType.KDM_ALL)
 		{
 			FString fstring = FString.AllocTemp(Context);
@@ -130,148 +115,103 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601895A RID: 100698 RVA: 0x00243545 File Offset: 0x00241745
-		public static string KuroDebugMovementBaseRecordToString([Nullable(2)] FBaseRecord Record)
-		{
-			return FString.ToStringAndDeleteNativePtr(UKuroDebugMovementComponent.__KuroDebugMovementBaseRecordToString_Internal((Record ?? new FBaseRecord()).NativePtr));
-		}
-
-		// Token: 0x0601895B RID: 100699 RVA: 0x00243560 File Offset: 0x00241760
+		// Token: 0x06006C07 RID: 27655 RVA: 0x0009D44D File Offset: 0x0009B64D
 		public int GetRecordFrames()
 		{
 			return UKuroDebugMovementComponent.__GetRecordFrames_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601895C RID: 100700 RVA: 0x0024356D File Offset: 0x0024176D
-		public TArray<FSingleFrameDebugInfo> GetRecentRecords()
-		{
-			return new TArray<FSingleFrameDebugInfo>(UKuroDebugMovementComponent.__GetRecentRecords_Internal(base.NativePtr), null);
-		}
-
-		// Token: 0x0601895D RID: 100701 RVA: 0x00243580 File Offset: 0x00241780
-		public FSingleFrameDebugInfo GetPreviousRecord(int preNum)
-		{
-			return new FSingleFrameDebugInfo(UKuroDebugMovementComponent.__GetPreviousRecord_Internal(base.NativePtr, preNum), null);
-		}
-
-		// Token: 0x0601895E RID: 100702 RVA: 0x00243594 File Offset: 0x00241794
+		// Token: 0x06006C08 RID: 27656 RVA: 0x0009D45A File Offset: 0x0009B65A
 		public int GetMaxRecordFrameCount()
 		{
 			return UKuroDebugMovementComponent.__GetMaxRecordFrameCount_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601895F RID: 100703 RVA: 0x002435A1 File Offset: 0x002417A1
+		// Token: 0x06006C09 RID: 27657 RVA: 0x0009D467 File Offset: 0x0009B667
+		[NullableContext(1)]
 		public string GetFrameCountInfo()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroDebugMovementComponent.__GetFrameCountInfo_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06018960 RID: 100704 RVA: 0x002435B3 File Offset: 0x002417B3
+		// Token: 0x06006C0A RID: 27658 RVA: 0x0009D479 File Offset: 0x0009B679
 		public int GetCurrentFrameIndex()
 		{
 			return UKuroDebugMovementComponent.__GetCurrentFrameIndex_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018961 RID: 100705 RVA: 0x002435C0 File Offset: 0x002417C0
-		[NullableContext(2)]
-		public void DrawRecord(in FBaseRecord Record, float SphereRadius = 4f, float ArrowLength = 50f)
-		{
-			UKuroDebugMovementComponent.__DrawRecord_Internal(base.NativePtr, (Record ?? new FBaseRecord()).NativePtr, SphereRadius, ArrowLength);
-		}
-
-		// Token: 0x06018962 RID: 100706
+		// Token: 0x06006C0B RID: 27659
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnResigter_Internal(IntPtr @this);
 
-		// Token: 0x06018963 RID: 100707
+		// Token: 0x06006C0C RID: 27660
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDebug_Internal(IntPtr @this, bool bDebug, bool bDetial);
 
-		// Token: 0x06018964 RID: 100708
+		// Token: 0x06006C0D RID: 27661
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Resigter_Internal(IntPtr @this);
 
-		// Token: 0x06018965 RID: 100709
-		[NullableContext(0)]
+		// Token: 0x06006C0E RID: 27662
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RecordModifyInfo_Internal(IntPtr @this, in FString Context, FVector CustomVector, TEnumAsByte<EKDMRecordType> Type);
 
-		// Token: 0x06018966 RID: 100710
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private unsafe static extern FString* __KuroDebugMovementBaseRecordToString_Internal(IntPtr Record);
-
-		// Token: 0x06018967 RID: 100711
+		// Token: 0x06006C0F RID: 27663
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetRecordFrames_Internal(IntPtr @this);
 
-		// Token: 0x06018968 RID: 100712
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetRecentRecords_Internal(IntPtr @this);
-
-		// Token: 0x06018969 RID: 100713
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetPreviousRecord_Internal(IntPtr @this, int preNum);
-
-		// Token: 0x0601896A RID: 100714
+		// Token: 0x06006C10 RID: 27664
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetMaxRecordFrameCount_Internal(IntPtr @this);
 
-		// Token: 0x0601896B RID: 100715
-		[NullableContext(0)]
+		// Token: 0x06006C11 RID: 27665
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetFrameCountInfo_Internal(IntPtr @this);
 
-		// Token: 0x0601896C RID: 100716
+		// Token: 0x06006C12 RID: 27666
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetCurrentFrameIndex_Internal(IntPtr @this);
 
-		// Token: 0x0601896D RID: 100717
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __DrawRecord_Internal(IntPtr @this, IntPtr Record, float SphereRadius, float ArrowLength);
-
-		// Token: 0x0601896E RID: 100718 RVA: 0x002435DF File Offset: 0x002417DF
+		// Token: 0x06006C13 RID: 27667 RVA: 0x0009D486 File Offset: 0x0009B686
 		static UKuroDebugMovementComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroMovement.KuroDebugMovementComponent");
 		}
 
-		// Token: 0x0601896F RID: 100719 RVA: 0x002435ED File Offset: 0x002417ED
+		// Token: 0x06006C14 RID: 27668 RVA: 0x0009D494 File Offset: 0x0009B694
 		protected UKuroDebugMovementComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D499 RID: 54425
+		// Token: 0x04002E18 RID: 11800
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroMovement.KuroDebugMovementComponent";
 
-		// Token: 0x0400D49A RID: 54426
+		// Token: 0x04002E19 RID: 11801
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D49B RID: 54427
+		// Token: 0x04002E1A RID: 11802
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D49C RID: 54428
+		// Token: 0x04002E1B RID: 11803
 		internal static int __PropertyOffset_DrawDebugCount;
 
-		// Token: 0x0400D49D RID: 54429
+		// Token: 0x04002E1C RID: 11804
 		internal static int __PropertyOffset_bShowLog;
 
-		// Token: 0x0400D49E RID: 54430
+		// Token: 0x04002E1D RID: 11805
 		internal static byte __PropertyMask_bShowLog;
 
-		// Token: 0x0400D49F RID: 54431
-		internal static int __PropertyOffset_bDrawDebug;
-
-		// Token: 0x0400D4A0 RID: 54432
+		// Token: 0x04002E1E RID: 11806
 		internal static int __PropertyOffset_bRecording;
 
-		// Token: 0x0400D4A1 RID: 54433
+		// Token: 0x04002E1F RID: 11807
 		internal static byte __PropertyMask_bRecording;
 
-		// Token: 0x0400D4A2 RID: 54434
+		// Token: 0x04002E20 RID: 11808
 		internal static int __PropertyOffset_bHasPersistentRecord;
 
-		// Token: 0x0400D4A3 RID: 54435
+		// Token: 0x04002E21 RID: 11809
 		internal static byte __PropertyMask_bHasPersistentRecord;
 	}
 }

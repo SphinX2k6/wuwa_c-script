@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E4 RID: 9956
+	// Token: 0x020029A8 RID: 10664
 	public class IExecBattleActionType
 	{
-		// Token: 0x0600DE6A RID: 56938 RVA: 0x0020FFB8 File Offset: 0x0020E1B8
-		[NullableContext(1)]
+		// Token: 0x0600EC46 RID: 60486 RVA: 0x0022C7F8 File Offset: 0x0022A9F8
 		public static IExecBattleActionType Create(IExecBattleActionType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004264 RID: 16996
-		// (get) Token: 0x0600DE6B RID: 56939 RVA: 0x0020FFD7 File Offset: 0x0020E1D7
+		// Token: 0x170045A4 RID: 17828
+		// (get) Token: 0x0600EC47 RID: 60487 RVA: 0x0022C817 File Offset: 0x0022AA17
 		public virtual EExecBattleActionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B76 RID: 31606
+		// Token: 0x04008216 RID: 33302
 		private IExecBattleActionType Instance;
 	}
 }

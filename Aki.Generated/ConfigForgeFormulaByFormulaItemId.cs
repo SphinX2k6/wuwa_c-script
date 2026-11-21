@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200034A RID: 842
+	// Token: 0x0200035F RID: 863
 	public class ConfigForgeFormulaByFormulaItemId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060013C1 RID: 5057 RVA: 0x000C924B File Offset: 0x000C744B
+		// Token: 0x0600143F RID: 5183 RVA: 0x000CF757 File Offset: 0x000CD957
 		static ConfigForgeFormulaByFormulaItemId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigForgeFormulaByFormulaItemId.CreateStaticDefaultValue), new Action(ConfigForgeFormulaByFormulaItemId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060013C2 RID: 5058 RVA: 0x000C926C File Offset: 0x000C746C
+		// Token: 0x06001440 RID: 5184 RVA: 0x000CF778 File Offset: 0x000CD978
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigForgeFormulaByFormulaItemId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060013C3 RID: 5059 RVA: 0x000C92EB File Offset: 0x000C74EB
+		// Token: 0x06001441 RID: 5185 RVA: 0x000CF7F7 File Offset: 0x000CD9F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigForgeFormulaByFormulaItemId.LogPair = null;
 			ConfigForgeFormulaByFormulaItemId.HandleId = 0;
 		}
 
-		// Token: 0x060013C4 RID: 5060 RVA: 0x000C92F9 File Offset: 0x000C74F9
+		// Token: 0x06001442 RID: 5186 RVA: 0x000CF805 File Offset: 0x000CDA05
 		public static void Init()
 		{
 			ConfigForgeFormulaByFormulaItemId.HandleId = ConfigCommon.InitDataStatement(ConfigForgeFormulaByFormulaItemId.HandleId, "db_forge.db", "select BinData from `ForgeFormula` where FormulaItemId=?");
 		}
 
-		// Token: 0x060013C5 RID: 5061 RVA: 0x000C9314 File Offset: 0x000C7514
+		// Token: 0x06001443 RID: 5187 RVA: 0x000CF820 File Offset: 0x000CDA20
 		public static ForgeFormula? GetConfig(int p0FormulaItemId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigForgeFormulaByFormulaItemId.HandleId, ConfigForgeFormulaByFormulaItemId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ForgeFormula?(rootAsForgeFormula);
 		}
 
-		// Token: 0x040016EA RID: 5866
+		// Token: 0x0400177D RID: 6013
 		private const string DB = "db_forge.db";
 
-		// Token: 0x040016EB RID: 5867
+		// Token: 0x0400177E RID: 6014
 		private const string FILE = "d.锻造.xlsx";
 
-		// Token: 0x040016EC RID: 5868
+		// Token: 0x0400177F RID: 6015
 		private const string TABLE = "ForgeFormula";
 
-		// Token: 0x040016ED RID: 5869
+		// Token: 0x04001780 RID: 6016
 		private const string COMMAND = "select BinData from `ForgeFormula` where FormulaItemId=?";
 
-		// Token: 0x040016EE RID: 5870
+		// Token: 0x04001781 RID: 6017
 		private const string KEY_PREFIX = "ForgeFormulaByFormulaItemId";
 
-		// Token: 0x040016EF RID: 5871
+		// Token: 0x04001782 RID: 6018
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040016F0 RID: 5872
+		// Token: 0x04001783 RID: 6019
 		private static int HandleId;
 	}
 }

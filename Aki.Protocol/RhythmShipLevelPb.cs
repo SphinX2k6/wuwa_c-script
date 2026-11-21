@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F4A RID: 3914
+	// Token: 0x02000F3A RID: 3898
 	public sealed class RhythmShipLevelPb : IMessage<RhythmShipLevelPb>, IMessage, IEquatable<RhythmShipLevelPb>, IDeepCloneable<RhythmShipLevelPb>, IBufferMessage
 	{
-		// Token: 0x06014F0D RID: 85773 RVA: 0x00309D3F File Offset: 0x00307F3F
+		// Token: 0x06014E28 RID: 85544 RVA: 0x00308683 File Offset: 0x00306883
 		[NullableContext(1)]
 		public static RhythmShipLevelPb Create()
 		{
 			return new RhythmShipLevelPb();
 		}
 
-		// Token: 0x170045A5 RID: 17829
-		// (get) Token: 0x06014F0E RID: 85774 RVA: 0x00309D46 File Offset: 0x00307F46
+		// Token: 0x1700457B RID: 17787
+		// (get) Token: 0x06014E29 RID: 85545 RVA: 0x0030868A File Offset: 0x0030688A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RhythmShipLevelPb> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170045A6 RID: 17830
-		// (get) Token: 0x06014F0F RID: 85775 RVA: 0x00309D4D File Offset: 0x00307F4D
+		// Token: 0x1700457C RID: 17788
+		// (get) Token: 0x06014E2A RID: 85546 RVA: 0x00308691 File Offset: 0x00306891
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170045A7 RID: 17831
-		// (get) Token: 0x06014F10 RID: 85776 RVA: 0x00309D50 File Offset: 0x00307F50
+		// Token: 0x1700457D RID: 17789
+		// (get) Token: 0x06014E2B RID: 85547 RVA: 0x00308694 File Offset: 0x00306894
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014F11 RID: 85777 RVA: 0x00309D57 File Offset: 0x00307F57
+		// Token: 0x06014E2C RID: 85548 RVA: 0x0030869B File Offset: 0x0030689B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmShipLevelPb()
 		{
 		}
 
-		// Token: 0x06014F12 RID: 85778 RVA: 0x00309D6A File Offset: 0x00307F6A
+		// Token: 0x06014E2D RID: 85549 RVA: 0x003086AE File Offset: 0x003068AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmShipLevelPb(RhythmShipLevelPb other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014F13 RID: 85779 RVA: 0x00309DA0 File Offset: 0x00307FA0
+		// Token: 0x06014E2E RID: 85550 RVA: 0x003086E4 File Offset: 0x003068E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmShipLevelPb Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new RhythmShipLevelPb(this);
 		}
 
-		// Token: 0x170045A8 RID: 17832
-		// (get) Token: 0x06014F14 RID: 85780 RVA: 0x00309DA8 File Offset: 0x00307FA8
-		// (set) Token: 0x06014F15 RID: 85781 RVA: 0x00309DB0 File Offset: 0x00307FB0
+		// Token: 0x1700457E RID: 17790
+		// (get) Token: 0x06014E2F RID: 85551 RVA: 0x003086EC File Offset: 0x003068EC
+		// (set) Token: 0x06014E30 RID: 85552 RVA: 0x003086F4 File Offset: 0x003068F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170045A9 RID: 17833
-		// (get) Token: 0x06014F16 RID: 85782 RVA: 0x00309DB9 File Offset: 0x00307FB9
+		// Token: 0x1700457F RID: 17791
+		// (get) Token: 0x06014E31 RID: 85553 RVA: 0x003086FD File Offset: 0x003068FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RhythmSubLevelPb> RhythmSubLevelPb
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014F17 RID: 85783 RVA: 0x00309DC1 File Offset: 0x00307FC1
+		// Token: 0x06014E32 RID: 85554 RVA: 0x00308705 File Offset: 0x00306905
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RhythmShipLevelPb);
 		}
 
-		// Token: 0x06014F18 RID: 85784 RVA: 0x00309DD0 File Offset: 0x00307FD0
+		// Token: 0x06014E33 RID: 85555 RVA: 0x00308714 File Offset: 0x00306914
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RhythmShipLevelPb other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelId == other.LevelId && this.rhythmSubLevelPb_.Equals(other.rhythmSubLevelPb_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014F19 RID: 85785 RVA: 0x00309E20 File Offset: 0x00308020
+		// Token: 0x06014E34 RID: 85556 RVA: 0x00308764 File Offset: 0x00306964
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014F1A RID: 85786 RVA: 0x00309E6D File Offset: 0x0030806D
+		// Token: 0x06014E35 RID: 85557 RVA: 0x003087B1 File Offset: 0x003069B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014F1B RID: 85787 RVA: 0x00309E7A File Offset: 0x0030807A
+		// Token: 0x06014E36 RID: 85558 RVA: 0x003087BE File Offset: 0x003069BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014F1C RID: 85788 RVA: 0x00309E84 File Offset: 0x00308084
+		// Token: 0x06014E37 RID: 85559 RVA: 0x003087C8 File Offset: 0x003069C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014F1D RID: 85789 RVA: 0x00309ED4 File Offset: 0x003080D4
+		// Token: 0x06014E38 RID: 85560 RVA: 0x00308818 File Offset: 0x00306A18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014F1E RID: 85790 RVA: 0x00309F28 File Offset: 0x00308128
+		// Token: 0x06014E39 RID: 85561 RVA: 0x0030886C File Offset: 0x00306A6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RhythmShipLevelPb other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014F1F RID: 85791 RVA: 0x00309F75 File Offset: 0x00308175
+		// Token: 0x06014E3A RID: 85562 RVA: 0x003088B9 File Offset: 0x00306AB9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014F20 RID: 85792 RVA: 0x00309F80 File Offset: 0x00308180
+		// Token: 0x06014E3B RID: 85563 RVA: 0x003088C4 File Offset: 0x00306AC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007E44 RID: 32324
+		// Token: 0x04007E6E RID: 32366
 		private static readonly MessageParser<RhythmShipLevelPb> _parser = new MessageParser<RhythmShipLevelPb>(() => new RhythmShipLevelPb());
 
-		// Token: 0x04007E45 RID: 32325
+		// Token: 0x04007E6F RID: 32367
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007E46 RID: 32326
+		// Token: 0x04007E70 RID: 32368
 		public const int LevelIdFieldNumber = 1;
 
-		// Token: 0x04007E47 RID: 32327
+		// Token: 0x04007E71 RID: 32369
 		private int levelId_;
 
-		// Token: 0x04007E48 RID: 32328
+		// Token: 0x04007E72 RID: 32370
 		public const int RhythmSubLevelPbFieldNumber = 2;
 
-		// Token: 0x04007E49 RID: 32329
+		// Token: 0x04007E73 RID: 32371
 		private static readonly FieldCodec<RhythmSubLevelPb> _repeated_rhythmSubLevelPb_codec = FieldCodec.ForMessage<RhythmSubLevelPb>(18U, Aki.Protocol.RhythmSubLevelPb.Parser);
 
-		// Token: 0x04007E4A RID: 32330
+		// Token: 0x04007E74 RID: 32372
 		private readonly RepeatedField<RhythmSubLevelPb> rhythmSubLevelPb_ = new RepeatedField<RhythmSubLevelPb>();
 	}
 }

@@ -12,39 +12,39 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 {
-	// Token: 0x020069B4 RID: 27060
+	// Token: 0x02005B10 RID: 23312
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class WriteLetterController : ControllerBase
 	{
-		// Token: 0x0604352C RID: 275756 RVA: 0x01072A5E File Offset: 0x01070C5E
+		// Token: 0x06039564 RID: 234852 RVA: 0x01016EA6 File Offset: 0x010150A6
 		protected override bool OnInit()
 		{
 			this.OnRegisterNetEvent();
 			return true;
 		}
 
-		// Token: 0x0604352D RID: 275757 RVA: 0x01072A67 File Offset: 0x01070C67
+		// Token: 0x06039565 RID: 234853 RVA: 0x01016EAF File Offset: 0x010150AF
 		protected override bool OnClear()
 		{
 			this.OnUnRegisterNetEvent();
 			return true;
 		}
 
-		// Token: 0x0604352E RID: 275758 RVA: 0x01072A70 File Offset: 0x01070C70
+		// Token: 0x06039566 RID: 234854 RVA: 0x01016EB8 File Offset: 0x010150B8
 		protected void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MiniWriteLetterLoginNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMiniWriteLetterLoginNotify));
 		}
 
-		// Token: 0x0604352F RID: 275759 RVA: 0x01072A8E File Offset: 0x01070C8E
+		// Token: 0x06039567 RID: 234855 RVA: 0x01016ED6 File Offset: 0x010150D6
 		protected void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MiniWriteLetterLoginNotify);
 		}
 
-		// Token: 0x06043530 RID: 275760 RVA: 0x01072AA0 File Offset: 0x01070CA0
+		// Token: 0x06039568 RID: 234856 RVA: 0x01016EE8 File Offset: 0x010150E8
 		public void OpenWriteLetter(IWriteLetter gameplayConfig)
 		{
 			WriteLetter? config = ConfigWriteLetterById.GetConfig(gameplayConfig.Id, true);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			UiManager.Instance.OpenView(EUiViewName.WriteLetterView, param, null);
 		}
 
-		// Token: 0x06043531 RID: 275761 RVA: 0x01072C40 File Offset: 0x01070E40
+		// Token: 0x06039569 RID: 234857 RVA: 0x01017088 File Offset: 0x01015288
 		public bool OpenLetterBackupDisplayByConfig(int letterId, bool inPlot = false)
 		{
 			WriteLetter? config = ConfigWriteLetterById.GetConfig(letterId, true);
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return true;
 		}
 
-		// Token: 0x06043532 RID: 275762 RVA: 0x01072DC0 File Offset: 0x01070FC0
+		// Token: 0x0603956A RID: 234858 RVA: 0x01017208 File Offset: 0x01015408
 		public ELetterStyle GetLetterStyleByLetterId(int letterId)
 		{
 			WriteLetter? config = ConfigWriteLetterById.GetConfig(letterId, true);
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return this.ParseWriteLetterStyle(config.Value.Style);
 		}
 
-		// Token: 0x06043533 RID: 275763 RVA: 0x01072DF8 File Offset: 0x01070FF8
+		// Token: 0x0603956B RID: 234859 RVA: 0x01017240 File Offset: 0x01015440
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return this.CollectDisplayTalkItems(writeLetterViewOpenParam.FlowListName, writeLetterViewOpenParam.FlowId, writeLetterViewOpenParam.StateId);
 		}
 
-		// Token: 0x06043534 RID: 275764 RVA: 0x01072E94 File Offset: 0x01071094
+		// Token: 0x0603956C RID: 234860 RVA: 0x010172DC File Offset: 0x010154DC
 		private List<ITalkItem> CollectDisplayTalkItems(string flowListName, int flowId, int stateId)
 		{
 			List<ActionInfo> flowStateActions = FlowConfig.Instance.GetFlowStateActions(flowListName, flowId, stateId);
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return list;
 		}
 
-		// Token: 0x06043535 RID: 275765 RVA: 0x01072FCC File Offset: 0x010711CC
+		// Token: 0x0603956D RID: 234861 RVA: 0x01017414 File Offset: 0x01015614
 		public void RequestWriteLetterComplete(string gameplayId)
 		{
 			UiGamePlayRequest uiGamePlayRequest = UiGamePlayRequest.Create();
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			Net.Instance.Call(ERequestMessageId.UiGamePlayRequest, uiGamePlayRequest, null, 0);
 		}
 
-		// Token: 0x06043536 RID: 275766 RVA: 0x01073000 File Offset: 0x01071200
+		// Token: 0x0603956E RID: 234862 RVA: 0x01017448 File Offset: 0x01015648
 		public void RecordWriteLetterContent(int letterId, ITalkItem talkItem)
 		{
 			WriteLetterModel instance = WriteLetterModel.Instance;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			instance.RecordLetterContent(letterId, talkItem);
 		}
 
-		// Token: 0x06043537 RID: 275767 RVA: 0x01073020 File Offset: 0x01071220
+		// Token: 0x0603956F RID: 234863 RVA: 0x01017468 File Offset: 0x01015668
 		public unsafe void RequestWriteLetterSaveContent(int letterId)
 		{
 			WriteLetterModel instance = WriteLetterModel.Instance;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			}, 0);
 		}
 
-		// Token: 0x06043538 RID: 275768 RVA: 0x01073094 File Offset: 0x01071294
+		// Token: 0x06039570 RID: 234864 RVA: 0x010174DC File Offset: 0x010156DC
 		[NullableContext(2)]
 		private void OnMiniWriteLetterLoginNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			instance.SetLetterContentsFromProto(miniWriteLetterLoginNotify.LetterContent);
 		}
 
-		// Token: 0x06043539 RID: 275769 RVA: 0x010730C4 File Offset: 0x010712C4
+		// Token: 0x06039571 RID: 234865 RVA: 0x0101750C File Offset: 0x0101570C
 		private ELetterStyle ParseWriteLetterStyle(string style)
 		{
 			string a = style.Trim();
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return ELetterStyle.A;
 		}
 
-		// Token: 0x0604353A RID: 275770 RVA: 0x01073120 File Offset: 0x01071320
+		// Token: 0x06039572 RID: 234866 RVA: 0x01017568 File Offset: 0x01015768
 		[return: Nullable(2)]
 		private WriteLetterViewOpenParam ParseWriteLetterFlowInfo(string flowListNameRaw, string flowIdRaw, string stateIdRaw)
 		{
@@ -347,8 +347,8 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			};
 		}
 
-		// Token: 0x17009859 RID: 39001
-		// (get) Token: 0x0604353B RID: 275771 RVA: 0x01073173 File Offset: 0x01071373
+		// Token: 0x17006D39 RID: 27961
+		// (get) Token: 0x06039573 RID: 234867 RVA: 0x010175BB File Offset: 0x010157BB
 		public static WriteLetterController Instance
 		{
 			get
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			}
 		}
 
-		// Token: 0x0604353C RID: 275772 RVA: 0x0107317A File Offset: 0x0107137A
+		// Token: 0x06039574 RID: 234868 RVA: 0x010175C2 File Offset: 0x010157C2
 		public static WriteLetterController GetOrCreateInstance()
 		{
 			if (WriteLetterController._Instance == null)
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return WriteLetterController._Instance;
 		}
 
-		// Token: 0x0604353D RID: 275773 RVA: 0x0107318E File Offset: 0x0107138E
+		// Token: 0x06039575 RID: 234869 RVA: 0x010175D6 File Offset: 0x010157D6
 		public static bool CreateInstance()
 		{
 			if (WriteLetterController._Instance != null)
@@ -378,24 +378,24 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return true;
 		}
 
-		// Token: 0x0604353E RID: 275774 RVA: 0x010731A4 File Offset: 0x010713A4
+		// Token: 0x06039576 RID: 234870 RVA: 0x010175EC File Offset: 0x010157EC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604353F RID: 275775 RVA: 0x010731A6 File Offset: 0x010713A6
+		// Token: 0x06039577 RID: 234871 RVA: 0x010175EE File Offset: 0x010157EE
 		public static void ResetStaticDefaultValue()
 		{
 			WriteLetterController._Instance = null;
 		}
 
-		// Token: 0x06043540 RID: 275776 RVA: 0x010731AE File Offset: 0x010713AE
+		// Token: 0x06039578 RID: 234872 RVA: 0x010175F6 File Offset: 0x010157F6
 		static WriteLetterController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WriteLetterController.CreateStaticDefaultValue), new Action(WriteLetterController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040231FD RID: 143869
+		// Token: 0x0401E3EC RID: 123884
 		[Nullable(2)]
 		private static WriteLetterController _Instance;
 	}

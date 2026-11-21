@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E6F RID: 7791
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020A4 RID: 8356
 	public class ISignalDevice2 : IUiGame
 	{
-		// Token: 0x0600A6C0 RID: 42688 RVA: 0x001793E8 File Offset: 0x001775E8
+		// Token: 0x0600B178 RID: 45432 RVA: 0x0018F0E8 File Offset: 0x0018D2E8
 		private ISignalDevice2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A6C1 RID: 42689 RVA: 0x00179420 File Offset: 0x00177620
+		// Token: 0x0600B179 RID: 45433 RVA: 0x0018F120 File Offset: 0x0018D320
 		public static ISignalDevice2 Create([Nullable(2)] ISignalDevice2 instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6C2 RID: 42690 RVA: 0x00179433 File Offset: 0x00177633
+		// Token: 0x0600B17A RID: 45434 RVA: 0x0018F133 File Offset: 0x0018D333
 		public static ISignalDevice2 CreateFromSetValue([Nullable(2)] ISignalDevice2_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6C3 RID: 42691 RVA: 0x00179446 File Offset: 0x00177646
+		// Token: 0x0600B17B RID: 45435 RVA: 0x0018F146 File Offset: 0x0018D346
 		public new ISignalDevice2_SetValue ToSetValue()
 		{
 			return new ISignalDevice2_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003311 RID: 13073
-		// (get) Token: 0x0600A6C4 RID: 42692 RVA: 0x00179465 File Offset: 0x00177665
-		// (set) Token: 0x0600A6C5 RID: 42693 RVA: 0x00179490 File Offset: 0x00177690
+		// Token: 0x170035D5 RID: 13781
+		// (get) Token: 0x0600B17C RID: 45436 RVA: 0x0018F165 File Offset: 0x0018D365
+		// (set) Token: 0x0600B17D RID: 45437 RVA: 0x0018F190 File Offset: 0x0018D390
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003312 RID: 13074
-		// (get) Token: 0x0600A6C6 RID: 42694 RVA: 0x001794A0 File Offset: 0x001776A0
-		// (set) Token: 0x0600A6C7 RID: 42695 RVA: 0x00179533 File Offset: 0x00177733
+		// Token: 0x170035D6 RID: 13782
+		// (get) Token: 0x0600B17E RID: 45438 RVA: 0x0018F1A0 File Offset: 0x0018D3A0
+		// (set) Token: 0x0600B17F RID: 45439 RVA: 0x0018F233 File Offset: 0x0018D433
 		public virtual List<IColorPiece> Config
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006394 RID: 25492
+		// Token: 0x04006978 RID: 27000
 		[Nullable(2)]
 		protected new ISignalDevice2 FbInstance;
 
-		// Token: 0x04006395 RID: 25493
+		// Token: 0x04006979 RID: 27001
 		[Nullable(2)]
 		protected new ISignalDevice2_SetValue PocoInterface;
 
-		// Token: 0x04006396 RID: 25494
+		// Token: 0x0400697A RID: 27002
 		private List<IColorPiece> _ConfigCache;
 
-		// Token: 0x04006397 RID: 25495
+		// Token: 0x0400697B RID: 27003
 		private bool _ConfigInited;
 	}
 }

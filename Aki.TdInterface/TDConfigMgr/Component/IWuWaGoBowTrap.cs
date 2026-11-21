@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007F5 RID: 2037
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000898 RID: 2200
 	public class IWuWaGoBowTrap : IWuWaGoEntityBase
 	{
-		// Token: 0x06002C41 RID: 11329 RVA: 0x000730D4 File Offset: 0x000712D4
+		// Token: 0x06002F71 RID: 12145 RVA: 0x0007A438 File Offset: 0x00078638
 		private IWuWaGoBowTrap_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C42 RID: 11330 RVA: 0x0007310C File Offset: 0x0007130C
+		// Token: 0x06002F72 RID: 12146 RVA: 0x0007A470 File Offset: 0x00078670
 		public static IWuWaGoBowTrap Create([Nullable(2)] IWuWaGoBowTrap instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C43 RID: 11331 RVA: 0x0007311F File Offset: 0x0007131F
+		// Token: 0x06002F73 RID: 12147 RVA: 0x0007A483 File Offset: 0x00078683
 		public static IWuWaGoBowTrap CreateFromSetValue([Nullable(2)] IWuWaGoBowTrap_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C44 RID: 11332 RVA: 0x00073132 File Offset: 0x00071332
+		// Token: 0x06002F74 RID: 12148 RVA: 0x0007A496 File Offset: 0x00078696
 		public new IWuWaGoBowTrap_SetValue ToSetValue()
 		{
 			return new IWuWaGoBowTrap_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B94 RID: 2964
-		// (get) Token: 0x06002C45 RID: 11333 RVA: 0x00073145 File Offset: 0x00071345
-		// (set) Token: 0x06002C46 RID: 11334 RVA: 0x00073170 File Offset: 0x00071370
+		// Token: 0x17000C57 RID: 3159
+		// (get) Token: 0x06002F75 RID: 12149 RVA: 0x0007A4A9 File Offset: 0x000786A9
+		// (set) Token: 0x06002F76 RID: 12150 RVA: 0x0007A4D4 File Offset: 0x000786D4
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D54 RID: 7508
+		// Token: 0x04001F60 RID: 8032
 		[Nullable(2)]
 		protected new IWuWaGoBowTrap FbInstance;
 
-		// Token: 0x04001D55 RID: 7509
+		// Token: 0x04001F61 RID: 8033
 		[Nullable(2)]
 		protected new IWuWaGoBowTrap_SetValue PocoInterface;
 	}

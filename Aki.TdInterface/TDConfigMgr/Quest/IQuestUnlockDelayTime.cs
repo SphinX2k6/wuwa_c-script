@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010CC RID: 4300
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011FA RID: 4602
 	public class IQuestUnlockDelayTime
 	{
-		// Token: 0x0600611E RID: 24862 RVA: 0x000EA90C File Offset: 0x000E8B0C
+		// Token: 0x06006717 RID: 26391 RVA: 0x000F7A2C File Offset: 0x000F5C2C
 		private IQuestUnlockDelayTime_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600611F RID: 24863 RVA: 0x000EA944 File Offset: 0x000E8B44
+		// Token: 0x06006718 RID: 26392 RVA: 0x000F7A64 File Offset: 0x000F5C64
 		public static IQuestUnlockDelayTime Create([Nullable(2)] IQuestUnlockDelayTime instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006120 RID: 24864 RVA: 0x000EA957 File Offset: 0x000E8B57
+		// Token: 0x06006719 RID: 26393 RVA: 0x000F7A77 File Offset: 0x000F5C77
 		public static IQuestUnlockDelayTime CreateFromSetValue([Nullable(2)] IQuestUnlockDelayTime_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006121 RID: 24865 RVA: 0x000EA96A File Offset: 0x000E8B6A
+		// Token: 0x0600671A RID: 26394 RVA: 0x000F7A8A File Offset: 0x000F5C8A
 		public IQuestUnlockDelayTime_SetValue ToSetValue()
 		{
 			return new IQuestUnlockDelayTime_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FE1 RID: 8161
-		// (get) Token: 0x06006122 RID: 24866 RVA: 0x000EA995 File Offset: 0x000E8B95
-		// (set) Token: 0x06006123 RID: 24867 RVA: 0x000EA9C0 File Offset: 0x000E8BC0
+		// Token: 0x17002193 RID: 8595
+		// (get) Token: 0x0600671B RID: 26395 RVA: 0x000F7AB5 File Offset: 0x000F5CB5
+		// (set) Token: 0x0600671C RID: 26396 RVA: 0x000F7AE0 File Offset: 0x000F5CE0
 		public virtual int Day
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FE2 RID: 8162
-		// (get) Token: 0x06006124 RID: 24868 RVA: 0x000EA9CE File Offset: 0x000E8BCE
-		// (set) Token: 0x06006125 RID: 24869 RVA: 0x000EA9F9 File Offset: 0x000E8BF9
+		// Token: 0x17002194 RID: 8596
+		// (get) Token: 0x0600671D RID: 26397 RVA: 0x000F7AEE File Offset: 0x000F5CEE
+		// (set) Token: 0x0600671E RID: 26398 RVA: 0x000F7B19 File Offset: 0x000F5D19
 		public virtual int Hour
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FE3 RID: 8163
-		// (get) Token: 0x06006126 RID: 24870 RVA: 0x000EAA07 File Offset: 0x000E8C07
-		// (set) Token: 0x06006127 RID: 24871 RVA: 0x000EAA32 File Offset: 0x000E8C32
+		// Token: 0x17002195 RID: 8597
+		// (get) Token: 0x0600671F RID: 26399 RVA: 0x000F7B27 File Offset: 0x000F5D27
+		// (set) Token: 0x06006720 RID: 26400 RVA: 0x000F7B52 File Offset: 0x000F5D52
 		public virtual int Minute
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A76 RID: 14966
+		// Token: 0x04003DC3 RID: 15811
 		[Nullable(2)]
 		protected IQuestUnlockDelayTime FbInstance;
 
-		// Token: 0x04003A77 RID: 14967
+		// Token: 0x04003DC4 RID: 15812
 		[Nullable(2)]
 		protected IQuestUnlockDelayTime_SetValue PocoInterface;
 	}

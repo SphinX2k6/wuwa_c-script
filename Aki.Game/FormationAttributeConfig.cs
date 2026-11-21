@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000F07 RID: 3847
+// Token: 0x020003BC RID: 956
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationAttributeConfig : IFormationAttributeConfig
 {
-	// Token: 0x1700078A RID: 1930
-	// (get) Token: 0x060060B3 RID: 24755 RVA: 0x0012DB94 File Offset: 0x0012BD94
-	// (set) Token: 0x060060B4 RID: 24756 RVA: 0x0012DB9C File Offset: 0x0012BD9C
+	// Token: 0x170007AC RID: 1964
+	// (get) Token: 0x0600344B RID: 13387 RVA: 0x00136498 File Offset: 0x00134698
+	// (set) Token: 0x0600344C RID: 13388 RVA: 0x001364A0 File Offset: 0x001346A0
 	public FormationProperty? RawConfig { get; set; }
 
-	// Token: 0x1700078B RID: 1931
-	// (get) Token: 0x060060B5 RID: 24757 RVA: 0x0012DBA5 File Offset: 0x0012BDA5
-	// (set) Token: 0x060060B6 RID: 24758 RVA: 0x0012DBAD File Offset: 0x0012BDAD
+	// Token: 0x170007AD RID: 1965
+	// (get) Token: 0x0600344D RID: 13389 RVA: 0x001364A9 File Offset: 0x001346A9
+	// (set) Token: 0x0600344E RID: 13390 RVA: 0x001364B1 File Offset: 0x001346B1
 	public int?[] ForbidIncreaseTags { get; set; }
 
-	// Token: 0x1700078C RID: 1932
-	// (get) Token: 0x060060B7 RID: 24759 RVA: 0x0012DBB6 File Offset: 0x0012BDB6
-	// (set) Token: 0x060060B8 RID: 24760 RVA: 0x0012DBBE File Offset: 0x0012BDBE
+	// Token: 0x170007AE RID: 1966
+	// (get) Token: 0x0600344F RID: 13391 RVA: 0x001364BA File Offset: 0x001346BA
+	// (set) Token: 0x06003450 RID: 13392 RVA: 0x001364C2 File Offset: 0x001346C2
 	public int?[] ForbidDecreaseTags { get; set; }
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070D1 RID: 28881
+	// Token: 0x0200789D RID: 30877
 	public class ISheriffUnlockProgressT
 	{
-		// Token: 0x1700D685 RID: 54917
-		// (get) Token: 0x06033272 RID: 209522 RVA: 0x006E5912 File Offset: 0x006E3B12
-		// (set) Token: 0x06033273 RID: 209523 RVA: 0x006E591A File Offset: 0x006E3B1A
+		// Token: 0x1700E268 RID: 57960
+		// (get) Token: 0x06036514 RID: 222484 RVA: 0x00745F1E File Offset: 0x0074411E
+		// (set) Token: 0x06036515 RID: 222485 RVA: 0x00745F26 File Offset: 0x00744126
 		public int ProgressId { get; set; }
 
-		// Token: 0x06033274 RID: 209524 RVA: 0x006E5923 File Offset: 0x006E3B23
+		// Token: 0x06036516 RID: 222486 RVA: 0x00745F2F File Offset: 0x0074412F
 		public ISheriffUnlockProgressT()
 		{
 			this.ProgressId = 0;

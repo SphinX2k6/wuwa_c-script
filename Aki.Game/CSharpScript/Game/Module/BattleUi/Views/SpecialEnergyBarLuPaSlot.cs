@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DF3 RID: 24051
+	// Token: 0x02004DD8 RID: 19928
 	public class SpecialEnergyBarLuPaSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D239 RID: 250425 RVA: 0x00EB89DD File Offset: 0x00EB6BDD
+		// Token: 0x060321C8 RID: 205256 RVA: 0x00E09F25 File Offset: 0x00E08125
 		public void SetTagCount(int tagCount)
 		{
 			this.TagCount = tagCount;
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D23A RID: 250426 RVA: 0x00EB89F0 File Offset: 0x00EB6BF0
+		// Token: 0x060321C9 RID: 205257 RVA: 0x00E09F38 File Offset: 0x00E08138
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable && this.TagCount < num, isStart);
 		}
 
-		// Token: 0x0401FDE9 RID: 130537
+		// Token: 0x0401A8B0 RID: 108720
 		private int TagCount;
 	}
 }

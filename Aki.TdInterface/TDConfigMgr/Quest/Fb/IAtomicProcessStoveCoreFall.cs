@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200140C RID: 5132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001563 RID: 5475
 	public class IAtomicProcessStoveCoreFall : IAtomicProcessBase
 	{
-		// Token: 0x060074B5 RID: 29877 RVA: 0x001170C7 File Offset: 0x001152C7
+		// Token: 0x06007B76 RID: 31606 RVA: 0x00125AAB File Offset: 0x00123CAB
 		public static IAtomicProcessStoveCoreFall Create(IAtomicProcessStoveCoreFall? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002670 RID: 9840
-		// (get) Token: 0x060074B6 RID: 29878 RVA: 0x001170E6 File Offset: 0x001152E6
+		// Token: 0x17002852 RID: 10322
+		// (get) Token: 0x06007B77 RID: 31607 RVA: 0x00125ACA File Offset: 0x00123CCA
 		public override EAtomicProcess Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002671 RID: 9841
-		// (get) Token: 0x060074B7 RID: 29879 RVA: 0x001170F4 File Offset: 0x001152F4
+		// Token: 0x17002853 RID: 10323
+		// (get) Token: 0x06007B78 RID: 31608 RVA: 0x00125AD8 File Offset: 0x00123CD8
 		public virtual List<int> SplineEntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004390 RID: 17296
+		// Token: 0x04004721 RID: 18209
 		private IAtomicProcessStoveCoreFall Instance;
 
-		// Token: 0x04004391 RID: 17297
+		// Token: 0x04004722 RID: 18210
 		private List<int> _SplineEntityIdsCache;
 
-		// Token: 0x04004392 RID: 17298
+		// Token: 0x04004723 RID: 18211
 		private bool _SplineEntityIdsInited;
 	}
 }

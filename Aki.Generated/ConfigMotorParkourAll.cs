@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005B5 RID: 1461
+	// Token: 0x020005CC RID: 1484
 	public class ConfigMotorParkourAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600224B RID: 8779 RVA: 0x0011B768 File Offset: 0x00119968
+		// Token: 0x060022D5 RID: 8917 RVA: 0x00122050 File Offset: 0x00120250
 		static ConfigMotorParkourAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorParkourAll.CreateStaticDefaultValue), new Action(ConfigMotorParkourAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600224C RID: 8780 RVA: 0x0011B788 File Offset: 0x00119988
+		// Token: 0x060022D6 RID: 8918 RVA: 0x00122070 File Offset: 0x00120270
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorParkourAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600224D RID: 8781 RVA: 0x0011B807 File Offset: 0x00119A07
+		// Token: 0x060022D7 RID: 8919 RVA: 0x001220EF File Offset: 0x001202EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorParkourAll.LogPair = null;
 			ConfigMotorParkourAll.HandleId = 0;
 		}
 
-		// Token: 0x0600224E RID: 8782 RVA: 0x0011B815 File Offset: 0x00119A15
+		// Token: 0x060022D8 RID: 8920 RVA: 0x001220FD File Offset: 0x001202FD
 		public static void Init()
 		{
 			ConfigMotorParkourAll.HandleId = ConfigCommon.InitDataStatement(ConfigMotorParkourAll.HandleId, "db_motorparkour.db", "select BinData from `MotorParkour`");
 		}
 
-		// Token: 0x0600224F RID: 8783 RVA: 0x0011B830 File Offset: 0x00119A30
+		// Token: 0x060022D9 RID: 8921 RVA: 0x00122118 File Offset: 0x00120318
 		[NullableContext(2)]
 		public static IReadOnlyList<MotorParkour> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040027D7 RID: 10199
+		// Token: 0x04002878 RID: 10360
 		private const string DB = "db_motorparkour.db";
 
-		// Token: 0x040027D8 RID: 10200
+		// Token: 0x04002879 RID: 10361
 		private const string FILE = "m.摩托跑酷.xlsx";
 
-		// Token: 0x040027D9 RID: 10201
+		// Token: 0x0400287A RID: 10362
 		private const string TABLE = "MotorParkour";
 
-		// Token: 0x040027DA RID: 10202
+		// Token: 0x0400287B RID: 10363
 		private const string COMMAND = "select BinData from `MotorParkour`";
 
-		// Token: 0x040027DB RID: 10203
+		// Token: 0x0400287C RID: 10364
 		private const string KEY_PREFIX = "MotorParkourAll";
 
-		// Token: 0x040027DC RID: 10204
+		// Token: 0x0400287D RID: 10365
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040027DD RID: 10205
+		// Token: 0x0400287E RID: 10366
 		private static int HandleId;
 	}
 }

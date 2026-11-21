@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002714 RID: 10004
+	// Token: 0x020029DB RID: 10715
 	public class ClientUnlockAchievementSystemItem : ActionParams
 	{
-		// Token: 0x0600DF28 RID: 57128 RVA: 0x0021126D File Offset: 0x0020F46D
-		[NullableContext(1)]
+		// Token: 0x0600ED14 RID: 60692 RVA: 0x0022DC15 File Offset: 0x0022BE15
 		public static ClientUnlockAchievementSystemItem Create(IClientUnlockAchievementSystemItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042C2 RID: 17090
-		// (get) Token: 0x0600DF29 RID: 57129 RVA: 0x0021128C File Offset: 0x0020F48C
+		// Token: 0x1700460C RID: 17932
+		// (get) Token: 0x0600ED15 RID: 60693 RVA: 0x0022DC34 File Offset: 0x0022BE34
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BD6 RID: 31702
+		// Token: 0x0400827B RID: 33403
 		private IClientUnlockAchievementSystemItem Instance;
 	}
 }

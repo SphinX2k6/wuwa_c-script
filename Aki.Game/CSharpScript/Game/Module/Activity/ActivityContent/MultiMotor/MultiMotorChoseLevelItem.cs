@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200638C RID: 25484
+	// Token: 0x0200530A RID: 21258
 	public class MultiMotorChoseLevelItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06040170 RID: 262512 RVA: 0x00F82C30 File Offset: 0x00F80E30
+		// Token: 0x06034E31 RID: 216625 RVA: 0x00EC9BA4 File Offset: 0x00EC7DA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040171 RID: 262513 RVA: 0x00F82D7C File Offset: 0x00F80F7C
+		// Token: 0x06034E32 RID: 216626 RVA: 0x00EC9CF0 File Offset: 0x00EC7EF0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.LevelId = data;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.GetSprite(6).SetUIActive(num > 0);
 		}
 
-		// Token: 0x06040172 RID: 262514 RVA: 0x00F82F08 File Offset: 0x00F81108
+		// Token: 0x06034E33 RID: 216627 RVA: 0x00EC9E7C File Offset: 0x00EC807C
 		[NullableContext(1)]
 		private UniTask LoadTitleTextureAsync(OnlineMotorLevel config, UUIExtendToggleTextureTransition titleTexture)
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <LoadTitleTextureAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040173 RID: 262515 RVA: 0x00F82F5C File Offset: 0x00F8115C
+		// Token: 0x06034E34 RID: 216628 RVA: 0x00EC9ED0 File Offset: 0x00EC80D0
 		private void OnClickToggle(EToggleState _)
 		{
 			MultiMotorLevelData multiMotorLevelData = null;
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			onClickToggleCallBack(this.LevelId, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x06040174 RID: 262516 RVA: 0x00F82FC9 File Offset: 0x00F811C9
+		// Token: 0x06034E35 RID: 216629 RVA: 0x00EC9F3D File Offset: 0x00EC813D
 		public void SelectToggle()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 		}
 
-		// Token: 0x0402164F RID: 136783
+		// Token: 0x0401BF7E RID: 114558
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,31 +136,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 		})]
 		public Action<int, UUIExtendToggle> OnClickToggleCallBack;
 
-		// Token: 0x04021650 RID: 136784
+		// Token: 0x0401BF7F RID: 114559
 		private int LevelId;
 
-		// Token: 0x0200C5A3 RID: 50595
+		// Token: 0x0200AF8A RID: 44938
 		private class EItemComponents
 		{
-			// Token: 0x0403BAAE RID: 244398
+			// Token: 0x0403640F RID: 222223
 			public const int Toggle = 0;
 
-			// Token: 0x0403BAAF RID: 244399
+			// Token: 0x04036410 RID: 222224
 			public const int TitleTexture = 1;
 
-			// Token: 0x0403BAB0 RID: 244400
+			// Token: 0x04036411 RID: 222225
 			public const int NumberSprite = 2;
 
-			// Token: 0x0403BAB1 RID: 244401
+			// Token: 0x04036412 RID: 222226
 			public const int FinishItem = 3;
 
-			// Token: 0x0403BAB2 RID: 244402
+			// Token: 0x04036413 RID: 222227
 			public const int LockItem = 4;
 
-			// Token: 0x0403BAB3 RID: 244403
+			// Token: 0x04036414 RID: 222228
 			public const int RedDotItem = 5;
 
-			// Token: 0x0403BAB4 RID: 244404
+			// Token: 0x04036415 RID: 222229
 			public const int RankSprite = 6;
 		}
 	}

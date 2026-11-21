@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x0200564E RID: 22094
+	// Token: 0x02004624 RID: 17956
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WeaponAttributeView : UiPanelBase
 	{
-		// Token: 0x060382B6 RID: 230070 RVA: 0x00D4E138 File Offset: 0x00D4C338
+		// Token: 0x0602D1B4 RID: 184756 RVA: 0x00C9BE88 File Offset: 0x00C9A088
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060382B7 RID: 230071 RVA: 0x00D4E254 File Offset: 0x00D4C454
+		// Token: 0x0602D1B5 RID: 184757 RVA: 0x00C9BFA4 File Offset: 0x00C9A1A4
 		protected override void OnStart()
 		{
 			if (this.FirstAttributeComponent == null)
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x060382B8 RID: 230072 RVA: 0x00D4E305 File Offset: 0x00D4C505
+		// Token: 0x0602D1B6 RID: 184758 RVA: 0x00C9C055 File Offset: 0x00C9A255
 		private WeaponAttributeView.StarItem InitStarItem()
 		{
 			return new WeaponAttributeView.StarItem();
 		}
 
-		// Token: 0x060382B9 RID: 230073 RVA: 0x00D4E30C File Offset: 0x00D4C50C
+		// Token: 0x0602D1B7 RID: 184759 RVA: 0x00C9C05C File Offset: 0x00C9A25C
 		private void RefreshSkillNameText()
 		{
 			WeaponReson? weaponResonanceConfig = global::WeaponConfig.Instance.GetWeaponResonanceConfig(this.WeaponConfig.Value.ResonId, 1);
@@ -78,14 +78,14 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x060382BA RID: 230074 RVA: 0x00D4E35C File Offset: 0x00D4C55C
+		// Token: 0x0602D1B8 RID: 184760 RVA: 0x00C9C0AC File Offset: 0x00C9A2AC
 		private void RefreshStar()
 		{
 			List<EStartState> data = new List<EStartState>(WeaponModel.Instance.GetWeaponBreachMaxLevel(this.WeaponConfig.Value.BreachId));
 			this.StarView.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x060382BB RID: 230075 RVA: 0x00D4E39C File Offset: 0x00D4C59C
+		// Token: 0x0602D1B9 RID: 184761 RVA: 0x00C9C0EC File Offset: 0x00C9A2EC
 		private void RefreshWeaponLevel()
 		{
 			int num = 1;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}));
 		}
 
-		// Token: 0x060382BC RID: 230076 RVA: 0x00D4E3F4 File Offset: 0x00D4C5F4
+		// Token: 0x0602D1BA RID: 184762 RVA: 0x00C9C144 File Offset: 0x00C9A344
 		private void RefreshWeaponAttribute()
 		{
 			this.FirstAttributeComponent.UpdateParam(this.WeaponConfig.Value.FirstPropId.Value.Id, this.WeaponConfig.Value.FirstPropId.Value.IsRatio);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			LguiUtil.Instance.SetLocalText(base.GetText(0), "WeaponResonanceItemLevelText", new <>z__ReadOnlySingleElementList<object>("1"));
 		}
 
-		// Token: 0x060382BD RID: 230077 RVA: 0x00D4E568 File Offset: 0x00D4C768
+		// Token: 0x0602D1BB RID: 184763 RVA: 0x00C9C2B8 File Offset: 0x00C9A4B8
 		public void RefreshTips(IWeaponForgingData data)
 		{
 			ForgeFormula? forgeFormulaById = ForgingConfig.Instance.GetForgeFormulaById(data.ItemId);
@@ -121,13 +121,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.RefreshWeaponAttribute();
 		}
 
-		// Token: 0x0401D8C3 RID: 121027
+		// Token: 0x0401834E RID: 99150
 		private WeaponConf? WeaponConfig;
 
-		// Token: 0x0401D8C4 RID: 121028
+		// Token: 0x0401834F RID: 99151
 		private WeaponBreach? WeaponBreachConfig;
 
-		// Token: 0x0401D8C5 RID: 121029
+		// Token: 0x04018350 RID: 99152
 		[Nullable(new byte[]
 		{
 			2,
@@ -135,27 +135,27 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 		})]
 		private GenericLayout<WeaponAttributeView.StarItem, EStartState> StarView;
 
-		// Token: 0x0401D8C6 RID: 121030
+		// Token: 0x04018351 RID: 99153
 		[Nullable(2)]
 		private AttributeItemInternal FirstAttributeComponent;
 
-		// Token: 0x0401D8C7 RID: 121031
+		// Token: 0x04018352 RID: 99154
 		[Nullable(2)]
 		private AttributeItemInternal SecondAttributeComponent;
 
-		// Token: 0x0401D8C8 RID: 121032
+		// Token: 0x04018353 RID: 99155
 		private const int CurrentLevel = 1;
 
-		// Token: 0x0401D8C9 RID: 121033
+		// Token: 0x04018354 RID: 99156
 		private const int CurrentBreach = 0;
 
-		// Token: 0x0200B801 RID: 47105
+		// Token: 0x0200A22C RID: 41516
 		[Nullable(0)]
 		public class StarItem : UiPanelBase, IGridProxy<EStartState>
 		{
-			// Token: 0x1700A1B8 RID: 41400
-			// (get) Token: 0x0604F304 RID: 324356 RVA: 0x0152D732 File Offset: 0x0152B932
-			// (set) Token: 0x0604F305 RID: 324357 RVA: 0x0152D73A File Offset: 0x0152B93A
+			// Token: 0x17007955 RID: 31061
+			// (get) Token: 0x060458DE RID: 284894 RVA: 0x014E7196 File Offset: 0x014E5396
+			// (set) Token: 0x060458DF RID: 284895 RVA: 0x014E719E File Offset: 0x014E539E
 			[Nullable(new byte[]
 			{
 				2,
@@ -171,17 +171,17 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 				1
 			})] set; }
 
-			// Token: 0x1700A1B9 RID: 41401
-			// (get) Token: 0x0604F306 RID: 324358 RVA: 0x0152D743 File Offset: 0x0152B943
-			// (set) Token: 0x0604F307 RID: 324359 RVA: 0x0152D74B File Offset: 0x0152B94B
+			// Token: 0x17007956 RID: 31062
+			// (get) Token: 0x060458E0 RID: 284896 RVA: 0x014E71A7 File Offset: 0x014E53A7
+			// (set) Token: 0x060458E1 RID: 284897 RVA: 0x014E71AF File Offset: 0x014E53AF
 			public int GridIndex { get; set; }
 
-			// Token: 0x1700A1BA RID: 41402
-			// (get) Token: 0x0604F308 RID: 324360 RVA: 0x0152D754 File Offset: 0x0152B954
-			// (set) Token: 0x0604F309 RID: 324361 RVA: 0x0152D75C File Offset: 0x0152B95C
+			// Token: 0x17007957 RID: 31063
+			// (get) Token: 0x060458E2 RID: 284898 RVA: 0x014E71B8 File Offset: 0x014E53B8
+			// (set) Token: 0x060458E3 RID: 284899 RVA: 0x014E71C0 File Offset: 0x014E53C0
 			public int DisplayIndex { get; set; }
 
-			// Token: 0x0604F30A RID: 324362 RVA: 0x0152D765 File Offset: 0x0152B965
+			// Token: 0x060458E4 RID: 284900 RVA: 0x014E71C9 File Offset: 0x014E53C9
 			public void Refresh(EStartState data, bool isSelected, int gridIndex)
 			{
 				if (data == EStartState.ON)
@@ -194,28 +194,28 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 				base.GetSprite(1).SetUIActive(true);
 			}
 
-			// Token: 0x0604F30B RID: 324363 RVA: 0x0152D7A2 File Offset: 0x0152B9A2
+			// Token: 0x060458E5 RID: 284901 RVA: 0x014E7206 File Offset: 0x014E5406
 			public void Clear()
 			{
 			}
 
-			// Token: 0x0604F30C RID: 324364 RVA: 0x0152D7A4 File Offset: 0x0152B9A4
+			// Token: 0x060458E6 RID: 284902 RVA: 0x014E7208 File Offset: 0x014E5408
 			public void OnSelected(bool fireEvent)
 			{
 			}
 
-			// Token: 0x0604F30D RID: 324365 RVA: 0x0152D7A6 File Offset: 0x0152B9A6
+			// Token: 0x060458E7 RID: 284903 RVA: 0x014E720A File Offset: 0x014E540A
 			public void OnDeselected(bool fireEvent)
 			{
 			}
 
-			// Token: 0x0604F30E RID: 324366 RVA: 0x0152D7A8 File Offset: 0x0152B9A8
+			// Token: 0x060458E8 RID: 284904 RVA: 0x014E720C File Offset: 0x014E540C
 			public void CreateThenShowByActor(AActor actor)
 			{
 				base.CreateThenShowByActor(actor, null);
 			}
 
-			// Token: 0x0604F30F RID: 324367 RVA: 0x0152D7B4 File Offset: 0x0152B9B4
+			// Token: 0x060458E9 RID: 284905 RVA: 0x014E7218 File Offset: 0x014E5418
 			public UniTask CreateThenShowByActorAsync(AActor actor)
 			{
 				WeaponAttributeView.StarItem.<CreateThenShowByActorAsync>d__18 <CreateThenShowByActorAsync>d__;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 				return <CreateThenShowByActorAsync>d__.<>t__builder.Task;
 			}
 
-			// Token: 0x0604F310 RID: 324368 RVA: 0x0152D800 File Offset: 0x0152BA00
+			// Token: 0x060458EA RID: 284906 RVA: 0x014E7264 File Offset: 0x014E5464
 			public UniTask CreateByActorAsync(AActor actor)
 			{
 				WeaponAttributeView.StarItem.<CreateByActorAsync>d__19 <CreateByActorAsync>d__;
@@ -239,13 +239,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 				return <CreateByActorAsync>d__.<>t__builder.Task;
 			}
 
-			// Token: 0x0604F311 RID: 324369 RVA: 0x0152D84B File Offset: 0x0152BA4B
+			// Token: 0x060458EB RID: 284907 RVA: 0x014E72AF File Offset: 0x014E54AF
 			public object GetKey(EStartState data, int gridIndex)
 			{
 				return data;
 			}
 
-			// Token: 0x0604F312 RID: 324370 RVA: 0x0152D854 File Offset: 0x0152BA54
+			// Token: 0x060458EC RID: 284908 RVA: 0x014E72B8 File Offset: 0x014E54B8
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -262,55 +262,55 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 				this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 			}
 
-			// Token: 0x0604F313 RID: 324371 RVA: 0x0152D8E9 File Offset: 0x0152BAE9
+			// Token: 0x060458ED RID: 284909 RVA: 0x014E734D File Offset: 0x014E554D
 			protected override void OnStart()
 			{
 				base.GetSprite(2).SetUIActive(false);
 			}
 
-			// Token: 0x0604F314 RID: 324372 RVA: 0x0152D8F8 File Offset: 0x0152BAF8
+			// Token: 0x060458EE RID: 284910 RVA: 0x014E735C File Offset: 0x014E555C
 			public void SetState(bool isOn)
 			{
 			}
 
-			// Token: 0x0200D163 RID: 53603
+			// Token: 0x0200BD41 RID: 48449
 			[NullableContext(0)]
 			public class EStarItemComponents
 			{
-				// Token: 0x0403ED72 RID: 257394
+				// Token: 0x0403A1BA RID: 238010
 				public const int ImgStarOn = 0;
 
-				// Token: 0x0403ED73 RID: 257395
+				// Token: 0x0403A1BB RID: 238011
 				public const int ImgStarOff = 1;
 
-				// Token: 0x0403ED74 RID: 257396
+				// Token: 0x0403A1BC RID: 238012
 				public const int ImgStarNext = 2;
 			}
 		}
 
-		// Token: 0x0200B802 RID: 47106
+		// Token: 0x0200A22D RID: 41517
 		[NullableContext(0)]
 		private class EWeaponAttributeComponents
 		{
-			// Token: 0x04037AA9 RID: 228009
+			// Token: 0x040324D3 RID: 206035
 			public const int TxtSkillGrade = 0;
 
-			// Token: 0x04037AAA RID: 228010
+			// Token: 0x040324D4 RID: 206036
 			public const int TxtSkillName = 1;
 
-			// Token: 0x04037AAB RID: 228011
+			// Token: 0x040324D5 RID: 206037
 			public const int TxtLevel = 2;
 
-			// Token: 0x04037AAC RID: 228012
+			// Token: 0x040324D6 RID: 206038
 			public const int PnlStar = 3;
 
-			// Token: 0x04037AAD RID: 228013
+			// Token: 0x040324D7 RID: 206039
 			public const int PnlAttr = 4;
 
-			// Token: 0x04037AAE RID: 228014
+			// Token: 0x040324D8 RID: 206040
 			public const int FirstAttributeItem = 5;
 
-			// Token: 0x04037AAF RID: 228015
+			// Token: 0x040324D9 RID: 206041
 			public const int SecondAttributeItem = 6;
 		}
 	}

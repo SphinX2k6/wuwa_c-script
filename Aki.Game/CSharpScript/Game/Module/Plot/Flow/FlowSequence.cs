@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x020050A0 RID: 20640
+	// Token: 0x02004070 RID: 16496
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowSequence
 	{
-		// Token: 0x1700808E RID: 32910
-		// (get) Token: 0x06034E46 RID: 216646 RVA: 0x00C8557C File Offset: 0x00C8377C
+		// Token: 0x1700544E RID: 21582
+		// (get) Token: 0x06029D3F RID: 171327 RVA: 0x00BD2804 File Offset: 0x00BD0A04
 		public bool IsInit
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x1700808F RID: 32911
-		// (get) Token: 0x06034E47 RID: 216647 RVA: 0x00C85584 File Offset: 0x00C83784
+		// Token: 0x1700544F RID: 21583
+		// (get) Token: 0x06029D40 RID: 171328 RVA: 0x00BD280C File Offset: 0x00BD0A0C
 		public bool IsPlaying
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E48 RID: 216648 RVA: 0x00C8558C File Offset: 0x00C8378C
+		// Token: 0x06029D41 RID: 171329 RVA: 0x00BD2814 File Offset: 0x00BD0A14
 		public void Clear()
 		{
 			this.IsInitInner = false;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.NpcPerformRelationMap.Clear();
 		}
 
-		// Token: 0x06034E49 RID: 216649 RVA: 0x00C85674 File Offset: 0x00C83874
+		// Token: 0x06029D42 RID: 171330 RVA: 0x00BD28FC File Offset: 0x00BD0AFC
 		public void Init(ShowTalk inParams, FlowContext context)
 		{
 			this.Clear();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			EventSystem.Instance.Add<float>(EEventName.PlotSequencePlay, new Action<float>(this.OnSequenceStart));
 		}
 
-		// Token: 0x06034E4A RID: 216650 RVA: 0x00C857BC File Offset: 0x00C839BC
+		// Token: 0x06029D43 RID: 171331 RVA: 0x00BD2A44 File Offset: 0x00BD0C44
 		private void OnSequenceStart(float viewBlendDuration)
 		{
 			float num = viewBlendDuration * 1000f;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.EnableSkip(true);
 		}
 
-		// Token: 0x06034E4B RID: 216651 RVA: 0x00C85814 File Offset: 0x00C83A14
+		// Token: 0x06029D44 RID: 171332 RVA: 0x00BD2A9C File Offset: 0x00BD0C9C
 		public void Start(bool bSeamless)
 		{
 			if (!this.IsInit || this.IsPlaying)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, new Action(this.Skip));
 		}
 
-		// Token: 0x06034E4C RID: 216652 RVA: 0x00C85B34 File Offset: 0x00C83D34
+		// Token: 0x06029D45 RID: 171333 RVA: 0x00BD2DBC File Offset: 0x00BD0FBC
 		public void Stop(bool isForced = false)
 		{
 			if (!this.IsInit)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.StopPromise().ContinueWith(new Action(this.FinalHandle)).Forget();
 		}
 
-		// Token: 0x06034E4D RID: 216653 RVA: 0x00C85B74 File Offset: 0x00C83D74
+		// Token: 0x06029D46 RID: 171334 RVA: 0x00BD2DFC File Offset: 0x00BD0FFC
 		private UniTask StopPromise()
 		{
 			FlowSequence.<StopPromise>d__35 <StopPromise>d__;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return <StopPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E4E RID: 216654 RVA: 0x00C85BB8 File Offset: 0x00C83DB8
+		// Token: 0x06029D47 RID: 171335 RVA: 0x00BD2E40 File Offset: 0x00BD1040
 		private void FinalHandle()
 		{
 			this.Context.CurTalkId = -1;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.RunNextAction();
 		}
 
-		// Token: 0x06034E4F RID: 216655 RVA: 0x00C85C68 File Offset: 0x00C83E68
+		// Token: 0x06029D48 RID: 171336 RVA: 0x00BD2EF0 File Offset: 0x00BD10F0
 		public void Skip()
 		{
 			if (!this.IsInit || !this.IsPlaying || this.IsSkipping)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.OnSubtitleEnd(new int?(id));
 		}
 
-		// Token: 0x06034E50 RID: 216656 RVA: 0x00C860D0 File Offset: 0x00C842D0
+		// Token: 0x06029D49 RID: 171337 RVA: 0x00BD3358 File Offset: 0x00BD1558
 		private void SubtitleActionCallback(bool result)
 		{
 			if (this.SubtitleActionPromise != null)
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.OnSubtitleEnd(new int?(id));
 		}
 
-		// Token: 0x06034E51 RID: 216657 RVA: 0x00C86190 File Offset: 0x00C84390
+		// Token: 0x06029D4A RID: 171338 RVA: 0x00BD3418 File Offset: 0x00BD1618
 		private void OptionActionCallback(bool result)
 		{
 			if (this.OptionActionPromise != null)
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.OnSubtitleEnd(new int?(id));
 		}
 
-		// Token: 0x06034E52 RID: 216658 RVA: 0x00C86230 File Offset: 0x00C84430
+		// Token: 0x06029D4B RID: 171339 RVA: 0x00BD34B8 File Offset: 0x00BD16B8
 		private bool HasOption()
 		{
 			ITalkItem curTalkItem = this.CurTalkItem;
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return num.GetValueOrDefault() > num2 & num != null;
 		}
 
-		// Token: 0x06034E53 RID: 216659 RVA: 0x00C86294 File Offset: 0x00C84494
+		// Token: 0x06029D4C RID: 171340 RVA: 0x00BD351C File Offset: 0x00BD171C
 		private void CheckLastAndSetNew()
 		{
 			if (this.LastHasOption && !this.IsOptionSelected)
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.LastHasOption = this.HasOption();
 		}
 
-		// Token: 0x06034E54 RID: 216660 RVA: 0x00C86304 File Offset: 0x00C84504
+		// Token: 0x06029D4D RID: 171341 RVA: 0x00BD358C File Offset: 0x00BD178C
 		public void OnJumpTalk(int talkId)
 		{
 			if (!this.IsInit)
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E55 RID: 216661 RVA: 0x00C863A7 File Offset: 0x00C845A7
+		// Token: 0x06029D4E RID: 171342 RVA: 0x00BD362F File Offset: 0x00BD182F
 		public void OnFinishTalk()
 		{
 			if (!this.IsInit)
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E56 RID: 216662 RVA: 0x00C863D8 File Offset: 0x00C845D8
+		// Token: 0x06029D4F RID: 171343 RVA: 0x00BD3660 File Offset: 0x00BD1860
 		public bool IsCurrentSubtitle(int talkId)
 		{
 			if (this.IsSubtitleShowed)
@@ -471,7 +471,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return false;
 		}
 
-		// Token: 0x06034E57 RID: 216663 RVA: 0x00C863F8 File Offset: 0x00C845F8
+		// Token: 0x06029D50 RID: 171344 RVA: 0x00BD3680 File Offset: 0x00BD1880
 		public unsafe void OnSubtitleStart(int talkId)
 		{
 			if (!this.IsInit)
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.IsOptionSelected = false;
 		}
 
-		// Token: 0x06034E58 RID: 216664 RVA: 0x00C865D4 File Offset: 0x00C847D4
+		// Token: 0x06029D51 RID: 171345 RVA: 0x00BD385C File Offset: 0x00BD1A5C
 		public unsafe bool OnSubtitleEnd(int? id = null)
 		{
 			if (this.IsSkipping)
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x06034E59 RID: 216665 RVA: 0x00C866EC File Offset: 0x00C848EC
+		// Token: 0x06029D52 RID: 171346 RVA: 0x00BD3974 File Offset: 0x00BD1B74
 		public unsafe int OnQteStart(int id)
 		{
 			ITalkItem talkItem = null;
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return talkItemQte.QteId;
 		}
 
-		// Token: 0x06034E5A RID: 216666 RVA: 0x00C86878 File Offset: 0x00C84A78
+		// Token: 0x06029D53 RID: 171347 RVA: 0x00BD3B00 File Offset: 0x00BD1D00
 		public unsafe void OnQteExecute(int talkId, bool result)
 		{
 			ITalkItemQte talkItemQte;
@@ -653,7 +653,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E5B RID: 216667 RVA: 0x00C86A18 File Offset: 0x00C84C18
+		// Token: 0x06029D54 RID: 171348 RVA: 0x00BD3CA0 File Offset: 0x00BD1EA0
 		public unsafe void OnQteEnd(int talkId)
 		{
 			if (!this.CurrentQte.ContainsKey(talkId))
@@ -688,7 +688,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06034E5C RID: 216668 RVA: 0x00C86B15 File Offset: 0x00C84D15
+		// Token: 0x06029D55 RID: 171349 RVA: 0x00BD3D9D File Offset: 0x00BD1F9D
 		public void OnSequenceStop(bool _)
 		{
 			this.CheckLastAndSetNew();
@@ -696,7 +696,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.Stop(false);
 		}
 
-		// Token: 0x06034E5D RID: 216669 RVA: 0x00C86B2C File Offset: 0x00C84D2C
+		// Token: 0x06029D56 RID: 171350 RVA: 0x00BD3DB4 File Offset: 0x00BD1FB4
 		public bool OnSelectOption(int index)
 		{
 			if (!this.IsInit)
@@ -729,7 +729,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x06034E5E RID: 216670 RVA: 0x00C86C14 File Offset: 0x00C84E14
+		// Token: 0x06029D57 RID: 171351 RVA: 0x00BD3E9C File Offset: 0x00BD209C
 		private void OnQteOption(ITalkItem talkItem, int index)
 		{
 			if (talkItem.Options == null || talkItem.Options.Count == 0)
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.RunSubActions(talkItem.Options[index].Actions, null, true);
 		}
 
-		// Token: 0x06034E5F RID: 216671 RVA: 0x00C86C64 File Offset: 0x00C84E64
+		// Token: 0x06029D58 RID: 171352 RVA: 0x00BD3EEC File Offset: 0x00BD20EC
 		[NullableContext(2)]
 		private void RunSubActions([Nullable(new byte[]
 		{
@@ -759,7 +759,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, append);
 		}
 
-		// Token: 0x06034E60 RID: 216672 RVA: 0x00C86C98 File Offset: 0x00C84E98
+		// Token: 0x06029D59 RID: 171353 RVA: 0x00BD3F20 File Offset: 0x00BD2120
 		[NullableContext(2)]
 		public ITalkItem CreateSubtitleFromTalkItem(int talkId)
 		{
@@ -786,7 +786,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return talkItem;
 		}
 
-		// Token: 0x06034E61 RID: 216673 RVA: 0x00C86D30 File Offset: 0x00C84F30
+		// Token: 0x06029D5A RID: 171354 RVA: 0x00BD3FB8 File Offset: 0x00BD21B8
 		[NullableContext(2)]
 		public ITalkItem GetNextTalkItem()
 		{
@@ -802,7 +802,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return null;
 		}
 
-		// Token: 0x06034E62 RID: 216674 RVA: 0x00C86DAC File Offset: 0x00C84FAC
+		// Token: 0x06029D5B RID: 171355 RVA: 0x00BD4034 File Offset: 0x00BD2234
 		public unsafe void RunSequenceFrameEventsWhenSkip(int? id)
 		{
 			if (id == null)
@@ -839,7 +839,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E63 RID: 216675 RVA: 0x00C86EE8 File Offset: 0x00C850E8
+		// Token: 0x06029D5C RID: 171356 RVA: 0x00BD4170 File Offset: 0x00BD2370
 		public List<int> GetAllQte()
 		{
 			List<int> list = new List<int>();
@@ -857,89 +857,89 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return list;
 		}
 
-		// Token: 0x0401C2D5 RID: 115413
+		// Token: 0x04016D06 RID: 93446
 		public const int FINISH_INDEX = -1;
 
-		// Token: 0x0401C2D6 RID: 115414
+		// Token: 0x04016D07 RID: 93447
 		public const int INVALID_INDEX = -2;
 
-		// Token: 0x0401C2D7 RID: 115415
+		// Token: 0x04016D08 RID: 93448
 		private bool IsInitInner;
 
-		// Token: 0x0401C2D8 RID: 115416
+		// Token: 0x04016D09 RID: 93449
 		private bool IsPlayingInner;
 
-		// Token: 0x0401C2D9 RID: 115417
+		// Token: 0x04016D0A RID: 93450
 		[Nullable(2)]
 		private ShowTalk CurShowTalk;
 
-		// Token: 0x0401C2DA RID: 115418
+		// Token: 0x04016D0B RID: 93451
 		private readonly Dictionary<int, int> IdIndexMap = new Dictionary<int, int>();
 
-		// Token: 0x0401C2DB RID: 115419
+		// Token: 0x04016D0C RID: 93452
 		private int NextSequenceIndex = -2;
 
-		// Token: 0x0401C2DC RID: 115420
+		// Token: 0x04016D0D RID: 93453
 		[Nullable(2)]
 		private ITalkItem CurTalkItem;
 
-		// Token: 0x0401C2DD RID: 115421
+		// Token: 0x04016D0E RID: 93454
 		[Nullable(2)]
 		private FlowContext Context;
 
-		// Token: 0x0401C2DE RID: 115422
+		// Token: 0x04016D0F RID: 93455
 		private bool IsSubtitleShowed;
 
-		// Token: 0x0401C2DF RID: 115423
+		// Token: 0x04016D10 RID: 93456
 		private bool IsOptionSelected;
 
-		// Token: 0x0401C2E0 RID: 115424
+		// Token: 0x04016D11 RID: 93457
 		private bool IsSkipping;
 
-		// Token: 0x0401C2E1 RID: 115425
+		// Token: 0x04016D12 RID: 93458
 		private int? NextTalkIndex = new int?(0);
 
-		// Token: 0x0401C2E2 RID: 115426
+		// Token: 0x04016D13 RID: 93459
 		[Nullable(2)]
 		private List<Transform> FinalPos;
 
-		// Token: 0x0401C2E3 RID: 115427
+		// Token: 0x04016D14 RID: 93460
 		private readonly List<bool> IsFadeEnd = new List<bool>();
 
-		// Token: 0x0401C2E4 RID: 115428
+		// Token: 0x04016D15 RID: 93461
 		private readonly Dictionary<int, HashSet<string>> FrameEventsMap = new Dictionary<int, HashSet<string>>();
 
-		// Token: 0x0401C2E5 RID: 115429
+		// Token: 0x04016D16 RID: 93462
 		private readonly Dictionary<string, List<ActionInfo>> FrameEvents = new Dictionary<string, List<ActionInfo>>();
 
-		// Token: 0x0401C2E6 RID: 115430
+		// Token: 0x04016D17 RID: 93463
 		[Nullable(2)]
 		public CustomPromise SubtitleActionPromise;
 
-		// Token: 0x0401C2E7 RID: 115431
+		// Token: 0x04016D18 RID: 93464
 		[Nullable(2)]
 		public CustomPromise OptionActionPromise;
 
-		// Token: 0x0401C2E8 RID: 115432
+		// Token: 0x04016D19 RID: 93465
 		private readonly Dictionary<int, ITalkItemQte> CurrentQte = new Dictionary<int, ITalkItemQte>();
 
-		// Token: 0x0401C2E9 RID: 115433
+		// Token: 0x04016D1A RID: 93466
 		private readonly Dictionary<int, int> QteLatentAction = new Dictionary<int, int>();
 
-		// Token: 0x0401C2EA RID: 115434
+		// Token: 0x04016D1B RID: 93467
 		[Nullable(2)]
 		private TimerHandle DelayEnableSkipTimer;
 
-		// Token: 0x0401C2EB RID: 115435
+		// Token: 0x04016D1C RID: 93468
 		private readonly List<FName> NpcPerformArray = new List<FName>();
 
-		// Token: 0x0401C2EC RID: 115436
+		// Token: 0x04016D1D RID: 93469
 		private readonly Dictionary<FName, NpcRelation> NpcPerformRelationMap = new Dictionary<FName, NpcRelation>();
 
-		// Token: 0x0401C2ED RID: 115437
+		// Token: 0x04016D1E RID: 93470
 		private int LastId = -1;
 
-		// Token: 0x0401C2EE RID: 115438
+		// Token: 0x04016D1F RID: 93471
 		private bool LastHasOption;
 	}
 }

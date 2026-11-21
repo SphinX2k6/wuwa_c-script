@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000096 RID: 150
+	// Token: 0x0200009B RID: 155
 	public enum EDropEvent
 	{
-		// Token: 0x040003A7 RID: 935
+		// Token: 0x040003C0 RID: 960
 		All,
-		// Token: 0x040003A8 RID: 936
+		// Token: 0x040003C1 RID: 961
 		OnlyCollect
 	}
 }

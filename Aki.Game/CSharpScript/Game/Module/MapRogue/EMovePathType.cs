@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200559D RID: 21917
+	// Token: 0x02004573 RID: 17779
 	public enum EMovePathType
 	{
-		// Token: 0x0401D587 RID: 120199
+		// Token: 0x04018012 RID: 98322
 		CanMove,
-		// Token: 0x0401D588 RID: 120200
+		// Token: 0x04018013 RID: 98323
 		UnSelect,
-		// Token: 0x0401D589 RID: 120201
+		// Token: 0x04018014 RID: 98324
 		CannotAchieve,
-		// Token: 0x0401D58A RID: 120202
+		// Token: 0x04018015 RID: 98325
 		EventInterrupt,
-		// Token: 0x0401D58B RID: 120203
+		// Token: 0x04018016 RID: 98326
 		CannotWalk,
-		// Token: 0x0401D58C RID: 120204
+		// Token: 0x04018017 RID: 98327
 		EventLock
 	}
 }

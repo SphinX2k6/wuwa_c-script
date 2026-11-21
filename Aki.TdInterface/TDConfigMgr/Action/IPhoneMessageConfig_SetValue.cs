@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CE1 RID: 7393
+	// Token: 0x02001EF0 RID: 7920
 	public class IPhoneMessageConfig_SetValue
 	{
-		// Token: 0x04005FDE RID: 24542
+		// Token: 0x04006551 RID: 25937
 		public bool? IsJumpToFirstOption;
 	}
 }

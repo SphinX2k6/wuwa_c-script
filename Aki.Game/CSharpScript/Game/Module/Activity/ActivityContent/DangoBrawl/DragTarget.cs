@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006791 RID: 26513
+	// Token: 0x020056E1 RID: 22241
 	public class DragTarget
 	{
-		// Token: 0x04022813 RID: 141331
+		// Token: 0x0401D070 RID: 118896
 		public EDragTargetKind Kind;
 
-		// Token: 0x04022814 RID: 141332
+		// Token: 0x0401D071 RID: 118897
 		public DragTargetBag? Bag;
 
-		// Token: 0x04022815 RID: 141333
+		// Token: 0x0401D072 RID: 118898
 		public DragTargetBench? Bench;
 
-		// Token: 0x04022816 RID: 141334
+		// Token: 0x0401D073 RID: 118899
 		public DragTargetShop? Shop;
 	}
 }

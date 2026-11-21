@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FF6 RID: 4086
+	// Token: 0x02000FE6 RID: 4070
 	[NetMessage(EMessageId.RogueResMoodUpdateNotify)]
 	public sealed class RogueResMoodUpdateNotify : IMessage<RogueResMoodUpdateNotify>, IMessage, IEquatable<RogueResMoodUpdateNotify>, IDeepCloneable<RogueResMoodUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06015D70 RID: 89456 RVA: 0x0032C078 File Offset: 0x0032A278
+		// Token: 0x06015C8B RID: 89227 RVA: 0x0032A9B4 File Offset: 0x00328BB4
 		[NullableContext(1)]
 		public static RogueResMoodUpdateNotify Create()
 		{
 			return new RogueResMoodUpdateNotify();
 		}
 
-		// Token: 0x170048E8 RID: 18664
-		// (get) Token: 0x06015D71 RID: 89457 RVA: 0x0032C07F File Offset: 0x0032A27F
+		// Token: 0x170048BE RID: 18622
+		// (get) Token: 0x06015C8C RID: 89228 RVA: 0x0032A9BB File Offset: 0x00328BBB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048E9 RID: 18665
-		// (get) Token: 0x06015D72 RID: 89458 RVA: 0x0032C082 File Offset: 0x0032A282
+		// Token: 0x170048BF RID: 18623
+		// (get) Token: 0x06015C8D RID: 89229 RVA: 0x0032A9BE File Offset: 0x00328BBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015D73 RID: 89459 RVA: 0x0032C089 File Offset: 0x0032A289
+		// Token: 0x06015C8E RID: 89230 RVA: 0x0032A9C5 File Offset: 0x00328BC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResMoodUpdateNotify()
 		{
 		}
 
-		// Token: 0x06015D74 RID: 89460 RVA: 0x0032C094 File Offset: 0x0032A294
+		// Token: 0x06015C8F RID: 89231 RVA: 0x0032A9D0 File Offset: 0x00328BD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResMoodUpdateNotify(RogueResMoodUpdateNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015D75 RID: 89461 RVA: 0x0032C0E8 File Offset: 0x0032A2E8
+		// Token: 0x06015C90 RID: 89232 RVA: 0x0032AA24 File Offset: 0x00328C24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResMoodUpdateNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new RogueResMoodUpdateNotify(this);
 		}
 
-		// Token: 0x170048EA RID: 18666
-		// (get) Token: 0x06015D76 RID: 89462 RVA: 0x0032C0F0 File Offset: 0x0032A2F0
-		// (set) Token: 0x06015D77 RID: 89463 RVA: 0x0032C0F8 File Offset: 0x0032A2F8
+		// Token: 0x170048C0 RID: 18624
+		// (get) Token: 0x06015C91 RID: 89233 RVA: 0x0032AA2C File Offset: 0x00328C2C
+		// (set) Token: 0x06015C92 RID: 89234 RVA: 0x0032AA34 File Offset: 0x00328C34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Mood
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048EB RID: 18667
-		// (get) Token: 0x06015D78 RID: 89464 RVA: 0x0032C101 File Offset: 0x0032A301
-		// (set) Token: 0x06015D79 RID: 89465 RVA: 0x0032C109 File Offset: 0x0032A309
+		// Token: 0x170048C1 RID: 18625
+		// (get) Token: 0x06015C93 RID: 89235 RVA: 0x0032AA3D File Offset: 0x00328C3D
+		// (set) Token: 0x06015C94 RID: 89236 RVA: 0x0032AA45 File Offset: 0x00328C45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MoodRuleId
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048EC RID: 18668
-		// (get) Token: 0x06015D7A RID: 89466 RVA: 0x0032C112 File Offset: 0x0032A312
-		// (set) Token: 0x06015D7B RID: 89467 RVA: 0x0032C11A File Offset: 0x0032A31A
+		// Token: 0x170048C2 RID: 18626
+		// (get) Token: 0x06015C95 RID: 89237 RVA: 0x0032AA4E File Offset: 0x00328C4E
+		// (set) Token: 0x06015C96 RID: 89238 RVA: 0x0032AA56 File Offset: 0x00328C56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EventType
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170048ED RID: 18669
-		// (get) Token: 0x06015D7C RID: 89468 RVA: 0x0032C123 File Offset: 0x0032A323
-		// (set) Token: 0x06015D7D RID: 89469 RVA: 0x0032C12B File Offset: 0x0032A32B
+		// Token: 0x170048C3 RID: 18627
+		// (get) Token: 0x06015C97 RID: 89239 RVA: 0x0032AA5F File Offset: 0x00328C5F
+		// (set) Token: 0x06015C98 RID: 89240 RVA: 0x0032AA67 File Offset: 0x00328C67
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IgnorePerformance
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015D7E RID: 89470 RVA: 0x0032C134 File Offset: 0x0032A334
+		// Token: 0x06015C99 RID: 89241 RVA: 0x0032AA70 File Offset: 0x00328C70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueResMoodUpdateNotify);
 		}
 
-		// Token: 0x06015D7F RID: 89471 RVA: 0x0032C144 File Offset: 0x0032A344
+		// Token: 0x06015C9A RID: 89242 RVA: 0x0032AA80 File Offset: 0x00328C80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueResMoodUpdateNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Mood == other.Mood && this.MoodRuleId == other.MoodRuleId && this.EventType == other.EventType && this.IgnorePerformance == other.IgnorePerformance && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015D80 RID: 89472 RVA: 0x0032C1B0 File Offset: 0x0032A3B0
+		// Token: 0x06015C9B RID: 89243 RVA: 0x0032AAEC File Offset: 0x00328CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015D81 RID: 89473 RVA: 0x0032C23A File Offset: 0x0032A43A
+		// Token: 0x06015C9C RID: 89244 RVA: 0x0032AB76 File Offset: 0x00328D76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015D82 RID: 89474 RVA: 0x0032C247 File Offset: 0x0032A447
+		// Token: 0x06015C9D RID: 89245 RVA: 0x0032AB83 File Offset: 0x00328D83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015D83 RID: 89475 RVA: 0x0032C250 File Offset: 0x0032A450
+		// Token: 0x06015C9E RID: 89246 RVA: 0x0032AB8C File Offset: 0x00328D8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.MoodRuleId != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.MoodRuleId);
-			}
 			if (this.IgnorePerformance)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(8);
 				output.WriteBool(this.IgnorePerformance);
-			}
-			if (this.EventType != 0)
-			{
-				output.WriteRawTag(80);
-				output.WriteInt32(this.EventType);
 			}
 			if (this.Mood != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.Mood);
+			}
+			if (this.MoodRuleId != 0)
+			{
+				output.WriteRawTag(48);
+				output.WriteInt32(this.MoodRuleId);
+			}
+			if (this.EventType != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.EventType);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015D84 RID: 89476 RVA: 0x0032C2E0 File Offset: 0x0032A4E0
+		// Token: 0x06015C9F RID: 89247 RVA: 0x0032AC1C File Offset: 0x00328E1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015D85 RID: 89477 RVA: 0x0032C35C File Offset: 0x0032A55C
+		// Token: 0x06015CA0 RID: 89248 RVA: 0x0032AC98 File Offset: 0x00328E98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueResMoodUpdateNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015D86 RID: 89478 RVA: 0x0032C3D4 File Offset: 0x0032A5D4
+		// Token: 0x06015CA1 RID: 89249 RVA: 0x0032AD10 File Offset: 0x00328F10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015D87 RID: 89479 RVA: 0x0032C3E0 File Offset: 0x0032A5E0
+		// Token: 0x06015CA2 RID: 89250 RVA: 0x0032AD1C File Offset: 0x00328F1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -310,25 +310,25 @@ namespace Aki.Protocol
 				{
 					if (num == 8U)
 					{
-						this.MoodRuleId = input.ReadInt32();
+						this.IgnorePerformance = input.ReadBool();
 						continue;
 					}
 					if (num == 32U)
 					{
-						this.IgnorePerformance = input.ReadBool();
+						this.Mood = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 80U)
+					if (num == 48U)
 					{
-						this.EventType = input.ReadInt32();
+						this.MoodRuleId = input.ReadInt32();
 						continue;
 					}
-					if (num == 96U)
+					if (num == 104U)
 					{
-						this.Mood = input.ReadInt32();
+						this.EventType = input.ReadInt32();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008305 RID: 33541
+		// Token: 0x0400832F RID: 33583
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008306 RID: 33542
-		public const int MoodFieldNumber = 12;
+		// Token: 0x04008330 RID: 33584
+		public const int MoodFieldNumber = 4;
 
-		// Token: 0x04008307 RID: 33543
+		// Token: 0x04008331 RID: 33585
 		private int mood_;
 
-		// Token: 0x04008308 RID: 33544
-		public const int MoodRuleIdFieldNumber = 1;
+		// Token: 0x04008332 RID: 33586
+		public const int MoodRuleIdFieldNumber = 6;
 
-		// Token: 0x04008309 RID: 33545
+		// Token: 0x04008333 RID: 33587
 		private int moodRuleId_;
 
-		// Token: 0x0400830A RID: 33546
-		public const int EventTypeFieldNumber = 10;
+		// Token: 0x04008334 RID: 33588
+		public const int EventTypeFieldNumber = 13;
 
-		// Token: 0x0400830B RID: 33547
+		// Token: 0x04008335 RID: 33589
 		private int eventType_;
 
-		// Token: 0x0400830C RID: 33548
-		public const int IgnorePerformanceFieldNumber = 4;
+		// Token: 0x04008336 RID: 33590
+		public const int IgnorePerformanceFieldNumber = 1;
 
-		// Token: 0x0400830D RID: 33549
+		// Token: 0x04008337 RID: 33591
 		private bool ignorePerformance_;
 	}
 }

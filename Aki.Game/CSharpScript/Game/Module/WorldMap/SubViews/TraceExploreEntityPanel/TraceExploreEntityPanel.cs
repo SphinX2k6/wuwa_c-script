@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.TraceExploreEntityPanel
 {
-	// Token: 0x020047EA RID: 18410
+	// Token: 0x0200371B RID: 14107
 	public class TraceExploreEntityPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030389 RID: 197513 RVA: 0x00B2D0BB File Offset: 0x00B2B2BB
+		// Token: 0x06024B59 RID: 150361 RVA: 0x00A5CFFF File Offset: 0x00A5B1FF
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x0603038A RID: 197514 RVA: 0x00B2D0C2 File Offset: 0x00B2B2C2
+		// Token: 0x06024B5A RID: 150362 RVA: 0x00A5D006 File Offset: 0x00A5B206
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TraceExploreEntityPanel
 			this.SetPanelItemLayoutActive(false);
 		}
 
-		// Token: 0x0603038B RID: 197515 RVA: 0x00B2D0F8 File Offset: 0x00B2B2F8
+		// Token: 0x06024B5B RID: 150363 RVA: 0x00A5D03C File Offset: 0x00A5B23C
 		private void SetPanelItemLayoutActive(bool active)
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(7);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TraceExploreEntityPanel
 			verticalLayout.RootUIComp.Get().SetUIActive(active);
 		}
 
-		// Token: 0x0603038C RID: 197516 RVA: 0x00B2D124 File Offset: 0x00B2B324
+		// Token: 0x06024B5C RID: 150364 RVA: 0x00A5D068 File Offset: 0x00A5B268
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -67,10 +67,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TraceExploreEntityPanel
 			}
 		}
 
-		// Token: 0x0200AAAD RID: 43693
+		// Token: 0x0200945F RID: 37983
 		public static class EComponents
 		{
-			// Token: 0x04033EC0 RID: 212672
+			// Token: 0x0402E646 RID: 190022
 			public const int TraceExploreEntityPanel = 0;
 		}
 	}

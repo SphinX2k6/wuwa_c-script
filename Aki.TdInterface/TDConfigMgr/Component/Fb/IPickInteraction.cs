@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D32 RID: 3378
+	// Token: 0x02000E2C RID: 3628
 	public class IPickInteraction
 	{
-		// Token: 0x06004D14 RID: 19732 RVA: 0x000BFC89 File Offset: 0x000BDE89
-		[NullableContext(1)]
+		// Token: 0x06005230 RID: 21040 RVA: 0x000CB3CD File Offset: 0x000C95CD
 		public static IPickInteraction Create(IPickInteraction? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700186D RID: 6253
-		// (get) Token: 0x06004D15 RID: 19733 RVA: 0x000BFCA8 File Offset: 0x000BDEA8
+		// Token: 0x170019D3 RID: 6611
+		// (get) Token: 0x06005231 RID: 21041 RVA: 0x000CB3EC File Offset: 0x000C95EC
 		public virtual EPickInteraction Type
 		{
 			get
@@ -33,19 +32,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700186E RID: 6254
-		// (get) Token: 0x06004D16 RID: 19734 RVA: 0x000BFCB8 File Offset: 0x000BDEB8
+		// Token: 0x170019D4 RID: 6612
+		// (get) Token: 0x06005232 RID: 21042 RVA: 0x000CB3FC File Offset: 0x000C95FC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> CheckedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -68,19 +67,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700186F RID: 6255
-		// (get) Token: 0x06004D17 RID: 19735 RVA: 0x000BFD34 File Offset: 0x000BDF34
+		// Token: 0x170019D5 RID: 6613
+		// (get) Token: 0x06005233 RID: 21043 RVA: 0x000CB478 File Offset: 0x000C9678
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> UncheckedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -103,29 +102,29 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C2B RID: 11307
+		// Token: 0x04002EEB RID: 12011
 		private IPickInteraction Instance;
 
-		// Token: 0x04002C2C RID: 11308
+		// Token: 0x04002EEC RID: 12012
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _CheckedActionsCache;
 
-		// Token: 0x04002C2D RID: 11309
+		// Token: 0x04002EED RID: 12013
 		private bool _CheckedActionsInited;
 
-		// Token: 0x04002C2E RID: 11310
+		// Token: 0x04002EEE RID: 12014
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _UncheckedActionsCache;
 
-		// Token: 0x04002C2F RID: 11311
+		// Token: 0x04002EEF RID: 12015
 		private bool _UncheckedActionsInited;
 	}
 }

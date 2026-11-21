@@ -1,53 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Aki.Config;
 using Aki.TDConfigMgr.Action;
-using CSharpScript.Core.Common;
+using Aki.TDConfigMgr.Action.Fb;
+using Aki.UniverseEditor.Interface.Fbs.Action;
+using CSharpScript.Game.Common;
+using Google.FlatBuffers;
+using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x02005369 RID: 21353
+	// Token: 0x0200434C RID: 17228
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GuqinSubModel : MusicalInstrumentSubModel
 	{
-		// Token: 0x060368F7 RID: 223479 RVA: 0x00CEB804 File Offset: 0x00CE9A04
-		public override EInstrumentType GetType()
+		// Token: 0x0602B83D RID: 178237 RVA: 0x00C3A678 File Offset: 0x00C38878
+		public override Aki.TDConfigMgr.Action.EInstrumentType GetType()
 		{
-			return EInstrumentType.ChineseZither;
+			return Aki.TDConfigMgr.Action.EInstrumentType.ChineseZither;
 		}
 
-		// Token: 0x060368F8 RID: 223480 RVA: 0x00CEB808 File Offset: 0x00CE9A08
+		// Token: 0x0602B83E RID: 178238 RVA: 0x00C3A67C File Offset: 0x00C3887C
 		public override void OnRegister()
 		{
-			MusicalInstrumentConfig? config = ConfigMusicalInstrumentConfigById.GetConfig(800001, true);
-			if (config != null)
+			Aki.TDConfigMgr.Action.IInstrumentKeyConfigs instrumentKeyConfigs = this.KeyConfigsFbLru.Get(800001);
+			if (instrumentKeyConfigs == null)
 			{
-				GuqinSubModel.KeyConfigsJson keyConfigsJson = Json.Parse<GuqinSubModel.KeyConfigsJson>(config.GetValueOrDefault().KeyConfigs, null);
-				List<GuqinSubModel.GridJson> grids = keyConfigsJson.Grids;
-				GuqinSubModel.BoardSizeJson boardSize = keyConfigsJson.BoardSize;
-				for (int i = 0; i < boardSize.Y; i++)
-				{
-					List<GuqinKeyConfig> list = new List<GuqinKeyConfig>();
-					for (int j = 0; j < boardSize.X; j++)
-					{
-						GuqinSubModel.GridJson gridJson = grids[i * boardSize.X + j];
-						list.Add(new GuqinKeyConfig
-						{
-							FundamentalToneAudioEvent = AudioSystem.Instance.parseAudioEventPath(gridJson.FundamentalToneAssetPath),
-							OverToneAudioEvent = AudioSystem.Instance.parseAudioEventPath(gridJson.OverToneAssetPath),
-							KeyIconPath = gridJson.TextureAssetPath
-						});
-					}
-					this.Configs.Add(list);
-				}
+				global::Log.Instance.Error(ELogModule.MusicalInstrument, ELogAuthor.CB, "古琴玩法:读取古琴按键配置FB数据失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 				return;
 			}
-			global::Log.Instance.Error(ELogModule.MusicalInstrument, ELogAuthor.CB, "古琴玩法:获取古琴配置失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Aki.TDConfigMgr.Action.IInstrumentKeyConfigs instrumentKeyConfigs2 = instrumentKeyConfigs;
+			List<Aki.TDConfigMgr.Action.IInstrumentKeyAttribute> grids = instrumentKeyConfigs2.Grids;
+			Aki.TDConfigMgr.Action.IInstrumentBoardSize boardSize = instrumentKeyConfigs2.BoardSize;
+			for (int i = 0; i < boardSize.Y; i++)
+			{
+				List<GuqinKeyConfig> list = new List<GuqinKeyConfig>();
+				for (int j = 0; j < boardSize.X; j++)
+				{
+					Aki.TDConfigMgr.Action.IInstrumentKeyAttribute instrumentKeyAttribute = grids[i * boardSize.X + j];
+					list.Add(new GuqinKeyConfig
+					{
+						FundamentalToneAudioEvent = AudioSystem.Instance.parseAudioEventPath(instrumentKeyAttribute.FundamentalToneAssetPath),
+						OverToneAudioEvent = AudioSystem.Instance.parseAudioEventPath(instrumentKeyAttribute.OverToneAssetPath),
+						KeyIconPath = instrumentKeyAttribute.TextureAssetPath
+					});
+				}
+				this.Configs.Add(list);
+			}
 		}
 
-		// Token: 0x060368F9 RID: 223481 RVA: 0x00CEB910 File Offset: 0x00CE9B10
+		// Token: 0x0602B83F RID: 178239 RVA: 0x00C3A770 File Offset: 0x00C38970
 		[NullableContext(2)]
 		public unsafe GuqinKeyConfig GetKeyConfig(int rowIndex, int columnIndex)
 		{
@@ -66,66 +69,35 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return this.Configs[rowIndex][columnIndex];
 		}
 
-		// Token: 0x060368FA RID: 223482 RVA: 0x00CEB9BB File Offset: 0x00CE9BBB
+		// Token: 0x0602B840 RID: 178240 RVA: 0x00C3A81B File Offset: 0x00C38A1B
 		public override void OnClear()
 		{
 			this.Configs.Clear();
 		}
 
-		// Token: 0x0401CD7C RID: 118140
+		// Token: 0x04017810 RID: 96272
 		private const int GUQIN_CONFIG_ID = 800001;
 
-		// Token: 0x0401CD7D RID: 118141
+		// Token: 0x04017811 RID: 96273
+		private const int GUQIN_KEY_CONFIGS_FB_LRU_CAPACITY = 50;
+
+		// Token: 0x04017812 RID: 96274
 		private readonly List<List<GuqinKeyConfig>> Configs = new List<List<GuqinKeyConfig>>();
 
-		// Token: 0x0200B5E0 RID: 46560
-		[Nullable(0)]
-		private class KeyConfigsJson
+		// Token: 0x04017813 RID: 96275
+		private readonly CacheLru<int, Aki.TDConfigMgr.Action.IInstrumentKeyConfigs> KeyConfigsFbLru = new CacheLru<int, Aki.TDConfigMgr.Action.IInstrumentKeyConfigs>(50, delegate(int configId)
 		{
-			// Token: 0x1700A1B0 RID: 41392
-			// (get) Token: 0x0604EEEC RID: 323308 RVA: 0x015123FA File Offset: 0x015105FA
-			// (set) Token: 0x0604EEED RID: 323309 RVA: 0x01512402 File Offset: 0x01510602
-			public List<GuqinSubModel.GridJson> Grids { get; set; } = new List<GuqinSubModel.GridJson>();
-
-			// Token: 0x1700A1B1 RID: 41393
-			// (get) Token: 0x0604EEEE RID: 323310 RVA: 0x0151240B File Offset: 0x0151060B
-			// (set) Token: 0x0604EEEF RID: 323311 RVA: 0x01512413 File Offset: 0x01510613
-			public GuqinSubModel.BoardSizeJson BoardSize { get; set; } = new GuqinSubModel.BoardSizeJson();
-		}
-
-		// Token: 0x0200B5E1 RID: 46561
-		[Nullable(0)]
-		private class GridJson
-		{
-			// Token: 0x1700A1B2 RID: 41394
-			// (get) Token: 0x0604EEF1 RID: 323313 RVA: 0x0151243A File Offset: 0x0151063A
-			// (set) Token: 0x0604EEF2 RID: 323314 RVA: 0x01512442 File Offset: 0x01510642
-			public string FundamentalToneAssetPath { get; set; } = "";
-
-			// Token: 0x1700A1B3 RID: 41395
-			// (get) Token: 0x0604EEF3 RID: 323315 RVA: 0x0151244B File Offset: 0x0151064B
-			// (set) Token: 0x0604EEF4 RID: 323316 RVA: 0x01512453 File Offset: 0x01510653
-			public string OverToneAssetPath { get; set; } = "";
-
-			// Token: 0x1700A1B4 RID: 41396
-			// (get) Token: 0x0604EEF5 RID: 323317 RVA: 0x0151245C File Offset: 0x0151065C
-			// (set) Token: 0x0604EEF6 RID: 323318 RVA: 0x01512464 File Offset: 0x01510664
-			public string TextureAssetPath { get; set; } = "";
-		}
-
-		// Token: 0x0200B5E2 RID: 46562
-		[NullableContext(0)]
-		private class BoardSizeJson
-		{
-			// Token: 0x1700A1B5 RID: 41397
-			// (get) Token: 0x0604EEF8 RID: 323320 RVA: 0x01512496 File Offset: 0x01510696
-			// (set) Token: 0x0604EEF9 RID: 323321 RVA: 0x0151249E File Offset: 0x0151069E
-			public int X { get; set; }
-
-			// Token: 0x1700A1B6 RID: 41398
-			// (get) Token: 0x0604EEFA RID: 323322 RVA: 0x015124A7 File Offset: 0x015106A7
-			// (set) Token: 0x0604EEFB RID: 323323 RVA: 0x015124AF File Offset: 0x015106AF
-			public int Y { get; set; }
-		}
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(57, 2);
+			defaultInterpolatedStringHandler.AppendFormatted(UBlueprintPathsLibrary.ProjectContentDir());
+			defaultInterpolatedStringHandler.AppendLiteral("Aki/Config/UniverseEditorConfig/MusicalInstruments/");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(configId);
+			defaultInterpolatedStringHandler.AppendLiteral(".bytes");
+			ByteBuffer byteBuffer = FbFileLoader.LoadBytes(defaultInterpolatedStringHandler.ToStringAndClear());
+			if (byteBuffer == null)
+			{
+				return null;
+			}
+			return Aki.TDConfigMgr.Action.IInstrumentKeyConfigs.Create(Aki.TDConfigMgr.Action.Fb.IInstrumentKeyConfigs.Create(Aki.UniverseEditor.Interface.Fbs.Action.IInstrumentConfig.GetRootAsIInstrumentConfig(byteBuffer).KeyConfigs));
+		});
 	}
 }

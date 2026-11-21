@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02000DC4 RID: 3524
+// Token: 0x02000276 RID: 630
 public enum EGameQualityRange
 {
-	// Token: 0x040024C5 RID: 9413
+	// Token: 0x04002545 RID: 9541
 	Zero2Two,
-	// Token: 0x040024C6 RID: 9414
+	// Token: 0x04002546 RID: 9542
 	One2Three,
-	// Token: 0x040024C7 RID: 9415
+	// Token: 0x04002547 RID: 9543
 	Zero2One,
-	// Token: 0x040024C8 RID: 9416
+	// Token: 0x04002548 RID: 9544
 	One,
-	// Token: 0x040024C9 RID: 9417
+	// Token: 0x04002549 RID: 9545
 	Two2Four,
-	// Token: 0x040024CA RID: 9418
+	// Token: 0x0400254A RID: 9546
 	Three2Five
 }

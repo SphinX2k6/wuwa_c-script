@@ -16,17 +16,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002665 RID: 9829
+// Token: 0x02001B50 RID: 6992
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestView : UiTickViewBase
 {
-	// Token: 0x060141D0 RID: 82384 RVA: 0x005130EB File Offset: 0x005112EB
+	// Token: 0x060116B2 RID: 71346 RVA: 0x00521DA3 File Offset: 0x0051FFA3
 	public QuestView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060141D1 RID: 82385 RVA: 0x0051312C File Offset: 0x0051132C
+	// Token: 0x060116B3 RID: 71347 RVA: 0x00521DE4 File Offset: 0x0051FFE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 31;
@@ -109,7 +109,7 @@ public class QuestView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060141D2 RID: 82386 RVA: 0x005135F0 File Offset: 0x005117F0
+	// Token: 0x060116B4 RID: 71348 RVA: 0x005222A8 File Offset: 0x005204A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -120,13 +120,13 @@ public class QuestView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060141D3 RID: 82387 RVA: 0x00513633 File Offset: 0x00511833
+	// Token: 0x060116B5 RID: 71349 RVA: 0x005222EB File Offset: 0x005204EB
 	protected override void OnAfterShow()
 	{
 		this.UpdateQuestListAndDetailsByQuestId(0);
 	}
 
-	// Token: 0x060141D4 RID: 82388 RVA: 0x0051363C File Offset: 0x0051183C
+	// Token: 0x060116B6 RID: 71350 RVA: 0x005222F4 File Offset: 0x005204F4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TabComponent != null)
@@ -158,7 +158,7 @@ public class QuestView : UiTickViewBase
 		this.QuestViewStep = null;
 	}
 
-	// Token: 0x060141D5 RID: 82389 RVA: 0x00513760 File Offset: 0x00511960
+	// Token: 0x060116B7 RID: 71351 RVA: 0x00522418 File Offset: 0x00520618
 	protected override void OnTick(float delta)
 	{
 		if (this.QuestTypeList != null)
@@ -170,7 +170,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141D6 RID: 82390 RVA: 0x005137BC File Offset: 0x005119BC
+	// Token: 0x060116B8 RID: 71352 RVA: 0x00522474 File Offset: 0x00520674
 	private unsafe void InitQuestList()
 	{
 		InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
@@ -260,7 +260,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141D7 RID: 82391 RVA: 0x00513A48 File Offset: 0x00511C48
+	// Token: 0x060116B9 RID: 71353 RVA: 0x00522700 File Offset: 0x00520900
 	private void SelectDefaultQuest(int? questId = null)
 	{
 		if (questId == null || questId.Value == 0)
@@ -316,7 +316,7 @@ public class QuestView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x060141D8 RID: 82392 RVA: 0x00513B24 File Offset: 0x00511D24
+	// Token: 0x060116BA RID: 71354 RVA: 0x005227DC File Offset: 0x005209DC
 	private void DelayToSelectNavigation(UUIItem taskItem)
 	{
 		TimerSystem.GameplayTimeInstance.Next(delegate(float _)
@@ -325,7 +325,7 @@ public class QuestView : UiTickViewBase
 		}, null, null);
 	}
 
-	// Token: 0x060141D9 RID: 82393 RVA: 0x00513B58 File Offset: 0x00511D58
+	// Token: 0x060116BB RID: 71355 RVA: 0x00522810 File Offset: 0x00520A10
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, bool>(EEventName.UpdateQuestDetails, new Action<int, bool>(this.UpdateQuestDetails));
@@ -339,7 +339,7 @@ public class QuestView : UiTickViewBase
 		TermExplanationController.Instance.RegisterTextHyperlink(base.GetText(8), ETermExplanationViewType.Side, ETermExplanationReportType.Quest, ETermExplanationViewAttachDirection.Left, null, null, null, ETermExplanationGroup.Default, 0, ETermExplanationViewStyle.Default);
 	}
 
-	// Token: 0x060141DA RID: 82394 RVA: 0x00513C6C File Offset: 0x00511E6C
+	// Token: 0x060116BC RID: 71356 RVA: 0x00522924 File Offset: 0x00520B24
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, bool>(EEventName.UpdateQuestDetails, new Action<int, bool>(this.UpdateQuestDetails));
@@ -353,7 +353,7 @@ public class QuestView : UiTickViewBase
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(8));
 	}
 
-	// Token: 0x060141DB RID: 82395 RVA: 0x00513D60 File Offset: 0x00511F60
+	// Token: 0x060116BD RID: 71357 RVA: 0x00522A18 File Offset: 0x00520C18
 	protected void QuestDescChangeLang()
 	{
 		if (this.CurrentSelectQuestId != 0)
@@ -363,7 +363,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141DC RID: 82396 RVA: 0x00513D94 File Offset: 0x00511F94
+	// Token: 0x060116BE RID: 71358 RVA: 0x00522A4C File Offset: 0x00520C4C
 	private void SetSelected(int questId)
 	{
 		foreach (QuestTypeItem questTypeItem in this.QuestTypeList)
@@ -372,7 +372,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141DD RID: 82397 RVA: 0x00513DEC File Offset: 0x00511FEC
+	// Token: 0x060116BF RID: 71359 RVA: 0x00522AA4 File Offset: 0x00520CA4
 	private void SetSelected(int? questId)
 	{
 		foreach (QuestTypeItem questTypeItem in this.QuestTypeList)
@@ -381,7 +381,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141DE RID: 82398 RVA: 0x00513E40 File Offset: 0x00512040
+	// Token: 0x060116C0 RID: 71360 RVA: 0x00522AF8 File Offset: 0x00520CF8
 	private void OnQuestTrackUpdate(BtType btType, long? treeIncId)
 	{
 		if (btType != BtType.Quest || treeIncId == null)
@@ -398,13 +398,13 @@ public class QuestView : UiTickViewBase
 		this.UpdateQuestListAndDetailsByQuestId(0);
 	}
 
-	// Token: 0x060141DF RID: 82399 RVA: 0x00513E9E File Offset: 0x0051209E
+	// Token: 0x060116C1 RID: 71361 RVA: 0x00522B56 File Offset: 0x00520D56
 	private void OnGeneralLogicTreeSuspend(long treeId, int _2, EBehaviorTreeSuspendType _3)
 	{
 		this.UpdateQuestListAndDetails(treeId);
 	}
 
-	// Token: 0x060141E0 RID: 82400 RVA: 0x00513EA8 File Offset: 0x005120A8
+	// Token: 0x060116C2 RID: 71362 RVA: 0x00522B60 File Offset: 0x00520D60
 	private void UpdateQuestListAndDetails(long treeId)
 	{
 		BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeId), false);
@@ -436,7 +436,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141E1 RID: 82401 RVA: 0x00513F70 File Offset: 0x00512170
+	// Token: 0x060116C3 RID: 71363 RVA: 0x00522C28 File Offset: 0x00520E28
 	private void UpdateQuestListAndDetailsByQuestId(int questId)
 	{
 		if (questId != 0)
@@ -489,13 +489,13 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141E2 RID: 82402 RVA: 0x00514098 File Offset: 0x00512298
+	// Token: 0x060116C4 RID: 71364 RVA: 0x00522D50 File Offset: 0x00520F50
 	private void OnNavigationQuest(int questId)
 	{
 		this.SelectDefaultQuest(new int?(questId));
 	}
 
-	// Token: 0x060141E3 RID: 82403 RVA: 0x005140A8 File Offset: 0x005122A8
+	// Token: 0x060116C5 RID: 71365 RVA: 0x00522D60 File Offset: 0x00520F60
 	private void OnActivityQuestCountdownEnd(int questId)
 	{
 		if (this.QuestTypeList == null)
@@ -509,7 +509,7 @@ public class QuestView : UiTickViewBase
 		this.OnTabSelected(0);
 	}
 
-	// Token: 0x060141E4 RID: 82404 RVA: 0x00514108 File Offset: 0x00512308
+	// Token: 0x060116C6 RID: 71366 RVA: 0x00522DC0 File Offset: 0x00520FC0
 	private void OnRefreshSubPackageDownLoadByPriority()
 	{
 		if (this.CurrentSelectQuestId > 0)
@@ -525,7 +525,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141E5 RID: 82405 RVA: 0x00514178 File Offset: 0x00512378
+	// Token: 0x060116C7 RID: 71367 RVA: 0x00522E30 File Offset: 0x00521030
 	private void OnQuestSelected(string _)
 	{
 		UUIItem item = base.GetItem(0);
@@ -541,7 +541,7 @@ public class QuestView : UiTickViewBase
 		focusModeToggle.Show(null);
 	}
 
-	// Token: 0x060141E6 RID: 82406 RVA: 0x005141A0 File Offset: 0x005123A0
+	// Token: 0x060116C8 RID: 71368 RVA: 0x00522E58 File Offset: 0x00521058
 	protected void OnStartSequenceEvent(string _)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -569,7 +569,7 @@ public class QuestView : UiTickViewBase
 		this.SequenceEnd = true;
 	}
 
-	// Token: 0x060141E7 RID: 82407 RVA: 0x00514240 File Offset: 0x00512440
+	// Token: 0x060116C9 RID: 71369 RVA: 0x00522EF8 File Offset: 0x005210F8
 	private UniTask CreateTabs()
 	{
 		QuestView.<CreateTabs>d__45 <CreateTabs>d__;
@@ -580,13 +580,13 @@ public class QuestView : UiTickViewBase
 		return <CreateTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060141E8 RID: 82408 RVA: 0x00514283 File Offset: 0x00512483
+	// Token: 0x060116CA RID: 71370 RVA: 0x00522F3B File Offset: 0x0052113B
 	private CommonTabItem ProxyCreateTabItem([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x060141E9 RID: 82409 RVA: 0x0051428C File Offset: 0x0051248C
+	// Token: 0x060116CB RID: 71371 RVA: 0x00522F44 File Offset: 0x00521144
 	private void OnTabSelected(int index)
 	{
 		bool flag = true;
@@ -664,7 +664,7 @@ public class QuestView : UiTickViewBase
 		item4.SetUIActive(false);
 	}
 
-	// Token: 0x060141EA RID: 82410 RVA: 0x00514424 File Offset: 0x00512624
+	// Token: 0x060116CC RID: 71372 RVA: 0x005230DC File Offset: 0x005212DC
 	private CommonTabData GetCommonData(int index)
 	{
 		QuestType questType = this.QuestConfigList[index];
@@ -673,12 +673,12 @@ public class QuestView : UiTickViewBase
 		return new CommonTabData(questTabIcon, new CommonTabTitleData(((questMainTypeConfig != null) ? questMainTypeConfig.GetValueOrDefault().MainTypeName : null) ?? "", Array.Empty<object>()), null);
 	}
 
-	// Token: 0x060141EB RID: 82411 RVA: 0x00514495 File Offset: 0x00512695
+	// Token: 0x060116CD RID: 71373 RVA: 0x0052314D File Offset: 0x0052134D
 	private void OnFocusModeToggleStateChange(EToggleState state)
 	{
 	}
 
-	// Token: 0x060141EC RID: 82412 RVA: 0x00514498 File Offset: 0x00512698
+	// Token: 0x060116CE RID: 71374 RVA: 0x00523150 File Offset: 0x00521350
 	private void OnPointUpFocusModeToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_UnChecked)
@@ -712,13 +712,13 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141ED RID: 82413 RVA: 0x0051454A File Offset: 0x0051274A
+	// Token: 0x060116CF RID: 71375 RVA: 0x00523202 File Offset: 0x00521402
 	private void OnClickBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060141EE RID: 82414 RVA: 0x00514554 File Offset: 0x00512754
+	// Token: 0x060116D0 RID: 71376 RVA: 0x0052320C File Offset: 0x0052140C
 	private void OnLeftButtonClick()
 	{
 		if (!this.IsQuestTracked)
@@ -742,7 +742,7 @@ public class QuestView : UiTickViewBase
 		this.UpdateQuestTrackList();
 	}
 
-	// Token: 0x060141EF RID: 82415 RVA: 0x005145F4 File Offset: 0x005127F4
+	// Token: 0x060116D1 RID: 71377 RVA: 0x005232AC File Offset: 0x005214AC
 	private void OnRightButtonClick()
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -864,13 +864,13 @@ public class QuestView : UiTickViewBase
 		this.ClickTrackImp();
 	}
 
-	// Token: 0x060141F0 RID: 82416 RVA: 0x00514871 File Offset: 0x00512A71
+	// Token: 0x060116D2 RID: 71378 RVA: 0x00523529 File Offset: 0x00521729
 	private void ClickTrackImp()
 	{
 		this.ClickTrackImp(true);
 	}
 
-	// Token: 0x060141F1 RID: 82417 RVA: 0x0051487C File Offset: 0x00512A7C
+	// Token: 0x060116D3 RID: 71379 RVA: 0x00523534 File Offset: 0x00521734
 	private unsafe void ClickTrackImp(bool bExecuteGo)
 	{
 		ESetTrackResult esetTrackResult = QuestNewController.Instance.RequestTrackQuest(this.CurrentSelectQuestId, true, ERequestTrackOperate.Manual, ESetTrackReason.None, null);
@@ -933,7 +933,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141F2 RID: 82418 RVA: 0x00514A10 File Offset: 0x00512C10
+	// Token: 0x060116D4 RID: 71380 RVA: 0x005236C8 File Offset: 0x005218C8
 	private bool ExecuteGo()
 	{
 		bool flag = this.OnClickGo();
@@ -950,7 +950,7 @@ public class QuestView : UiTickViewBase
 		return flag;
 	}
 
-	// Token: 0x060141F3 RID: 82419 RVA: 0x00514A6C File Offset: 0x00512C6C
+	// Token: 0x060116D5 RID: 71381 RVA: 0x00523724 File Offset: 0x00521924
 	private bool OnClickGo()
 	{
 		global::Quest quest = QuestNewModel.Instance.GetQuest(this.CurrentSelectQuestId);
@@ -1040,7 +1040,7 @@ public class QuestView : UiTickViewBase
 		return false;
 	}
 
-	// Token: 0x060141F4 RID: 82420 RVA: 0x00514CE0 File Offset: 0x00512EE0
+	// Token: 0x060116D6 RID: 71382 RVA: 0x00523998 File Offset: 0x00521B98
 	private void OnClickTips()
 	{
 		if (this.CurrentSelectQuestId == 0)
@@ -1087,7 +1087,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141F5 RID: 82421 RVA: 0x00514DD4 File Offset: 0x00512FD4
+	// Token: 0x060116D7 RID: 71383 RVA: 0x00523A8C File Offset: 0x00521C8C
 	private void OnClickQuestReview()
 	{
 		QuestReviewEntryData questEntryDataByQuestId = QuestReviewModel.Instance.GetQuestEntryDataByQuestId(this.CurrentSelectQuestId);
@@ -1097,13 +1097,13 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141F6 RID: 82422 RVA: 0x00514E06 File Offset: 0x00513006
+	// Token: 0x060116D8 RID: 71384 RVA: 0x00523ABE File Offset: 0x00521CBE
 	private void OnClickQuestTree()
 	{
 		QuestTreeController.Instance.OpenMainView();
 	}
 
-	// Token: 0x060141F7 RID: 82423 RVA: 0x00514E14 File Offset: 0x00513014
+	// Token: 0x060116D9 RID: 71385 RVA: 0x00523ACC File Offset: 0x00521CCC
 	private void UpdateQuestTrackList()
 	{
 		foreach (QuestTypeItem questTypeItem in this.QuestTypeList)
@@ -1112,7 +1112,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141F8 RID: 82424 RVA: 0x00514E64 File Offset: 0x00513064
+	// Token: 0x060116DA RID: 71386 RVA: 0x00523B1C File Offset: 0x00521D1C
 	private void UpdateQuestDetails(int questId, bool bPlaySequence)
 	{
 		QuestNewController.Instance.RedDotRequest(questId, EQuestRedDotOperate.Delete);
@@ -1155,7 +1155,7 @@ public class QuestView : UiTickViewBase
 		uuiitem.SetUIActive(questEntryDataByQuestId != null && questEntryDataByQuestId.ShouldShow);
 	}
 
-	// Token: 0x060141F9 RID: 82425 RVA: 0x00514F58 File Offset: 0x00513158
+	// Token: 0x060116DB RID: 71387 RVA: 0x00523C10 File Offset: 0x00521E10
 	private void UpdateDetailBottom(int questId)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -1351,7 +1351,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141FA RID: 82426 RVA: 0x005155C4 File Offset: 0x005137C4
+	// Token: 0x060116DC RID: 71388 RVA: 0x0052427C File Offset: 0x0052247C
 	private void ReplaceTipsNodeIcon(string spritePath)
 	{
 		UUISprite sprite = base.GetSprite(22);
@@ -1376,7 +1376,7 @@ public class QuestView : UiTickViewBase
 		}, 102, "js_undefined");
 	}
 
-	// Token: 0x060141FB RID: 82427 RVA: 0x00515624 File Offset: 0x00513824
+	// Token: 0x060116DD RID: 71389 RVA: 0x005242DC File Offset: 0x005224DC
 	private UniTask UpdateQuestSteps(int questId)
 	{
 		QuestView.<UpdateQuestSteps>d__65 <UpdateQuestSteps>d__;
@@ -1388,7 +1388,7 @@ public class QuestView : UiTickViewBase
 		return <UpdateQuestSteps>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060141FC RID: 82428 RVA: 0x00515670 File Offset: 0x00513870
+	// Token: 0x060116DE RID: 71390 RVA: 0x00524328 File Offset: 0x00522528
 	private bool NeedFirstReward(int questId)
 	{
 		global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -1404,7 +1404,7 @@ public class QuestView : UiTickViewBase
 		return displayRewardInfo != null && displayRewardInfo.Count != 0;
 	}
 
-	// Token: 0x060141FD RID: 82429 RVA: 0x005156B4 File Offset: 0x005138B4
+	// Token: 0x060116DF RID: 71391 RVA: 0x0052436C File Offset: 0x0052256C
 	private void UpdateDetailsRewards(int questId)
 	{
 		List<QuestRewardInfo> questRewardList = this.QuestRewardList;
@@ -1451,7 +1451,7 @@ public class QuestView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060141FE RID: 82430 RVA: 0x00515814 File Offset: 0x00513A14
+	// Token: 0x060116E0 RID: 71392 RVA: 0x005244CC File Offset: 0x005226CC
 	private unsafe void UpdateDetailsQuestTag(int questId)
 	{
 		UUISprite sprite = base.GetSprite(24);
@@ -1520,7 +1520,7 @@ public class QuestView : UiTickViewBase
 		this.SetSpriteByPath(config.Value.BgSpritePath, sprite, false, null, null);
 	}
 
-	// Token: 0x060141FF RID: 82431 RVA: 0x0051598C File Offset: 0x00513B8C
+	// Token: 0x060116E1 RID: 71393 RVA: 0x00524644 File Offset: 0x00522844
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1614,57 +1614,57 @@ public class QuestView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06014200 RID: 82432 RVA: 0x00515B50 File Offset: 0x00513D50
+	// Token: 0x060116E2 RID: 71394 RVA: 0x00524808 File Offset: 0x00522A08
 	[NullableContext(2)]
 	public override UUIScrollViewComponent GetGuideScrollViewToLock()
 	{
 		return base.GetScrollViewWithScrollbar(17);
 	}
 
-	// Token: 0x04009798 RID: 38808
+	// Token: 0x040098F0 RID: 39152
 	private const int ALL_QUEST_TYPE = 0;
 
-	// Token: 0x04009799 RID: 38809
+	// Token: 0x040098F1 RID: 39153
 	private const int LEVEL_HELP = 49;
 
-	// Token: 0x0400979A RID: 38810
+	// Token: 0x040098F2 RID: 39154
 	private const int TEMP_CYBERPUNK_TAG_ID = 12;
 
-	// Token: 0x0400979B RID: 38811
+	// Token: 0x040098F3 RID: 39155
 	private const int TEMP_CYBERPUNK_TAG_STRETCH_LEFT = 43;
 
-	// Token: 0x0400979C RID: 38812
+	// Token: 0x040098F4 RID: 39156
 	private const int TEMP_CYBERPUNK_TAG_HEIGHT = 44;
 
-	// Token: 0x0400979D RID: 38813
+	// Token: 0x040098F5 RID: 39157
 	private readonly QuestViewButton PanelLeftButton = new QuestViewButton();
 
-	// Token: 0x0400979E RID: 38814
+	// Token: 0x040098F6 RID: 39158
 	private readonly QuestViewButton PanelRightButton = new QuestViewButton();
 
-	// Token: 0x0400979F RID: 38815
+	// Token: 0x040098F7 RID: 39159
 	private readonly FocusModeToggle FocusModeToggle = new FocusModeToggle();
 
-	// Token: 0x040097A0 RID: 38816
+	// Token: 0x040098F8 RID: 39160
 	private float OriginalTagSizeHeight;
 
-	// Token: 0x040097A1 RID: 38817
+	// Token: 0x040098F9 RID: 39161
 	private bool SequenceEnd;
 
-	// Token: 0x040097A2 RID: 38818
+	// Token: 0x040098FA RID: 39162
 	private bool ShowQuestDetail;
 
-	// Token: 0x040097A3 RID: 38819
+	// Token: 0x040098FB RID: 39163
 	private int CurrentSelectQuestId;
 
-	// Token: 0x040097A4 RID: 38820
+	// Token: 0x040098FC RID: 39164
 	private bool IsQuestTracked;
 
-	// Token: 0x040097A5 RID: 38821
+	// Token: 0x040098FD RID: 39165
 	[Nullable(2)]
 	private List<QuestType> QuestConfigList = new List<QuestType>();
 
-	// Token: 0x040097A6 RID: 38822
+	// Token: 0x040098FE RID: 39166
 	[Nullable(new byte[]
 	{
 		2,
@@ -1672,11 +1672,11 @@ public class QuestView : UiTickViewBase
 	})]
 	private List<QuestTypeItem> QuestTypeList = new List<QuestTypeItem>();
 
-	// Token: 0x040097A7 RID: 38823
+	// Token: 0x040098FF RID: 39167
 	[Nullable(2)]
 	private QuestViewStep QuestViewStep;
 
-	// Token: 0x040097A8 RID: 38824
+	// Token: 0x04009900 RID: 39168
 	[Nullable(new byte[]
 	{
 		2,
@@ -1684,7 +1684,7 @@ public class QuestView : UiTickViewBase
 	})]
 	private List<CommonItemSmallItemGrid> RewardItemList;
 
-	// Token: 0x040097A9 RID: 38825
+	// Token: 0x04009901 RID: 39169
 	[Nullable(new byte[]
 	{
 		2,
@@ -1692,7 +1692,7 @@ public class QuestView : UiTickViewBase
 	})]
 	private List<QuestRewardInfo> QuestRewardList;
 
-	// Token: 0x040097AA RID: 38826
+	// Token: 0x04009902 RID: 39170
 	[Nullable(new byte[]
 	{
 		2,
@@ -1700,107 +1700,107 @@ public class QuestView : UiTickViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x040097AB RID: 38827
+	// Token: 0x04009903 RID: 39171
 	private int TargetSelectQuestId;
 
-	// Token: 0x040097AC RID: 38828
+	// Token: 0x04009904 RID: 39172
 	private bool ScrollToLock;
 
-	// Token: 0x02008CA0 RID: 36000
+	// Token: 0x02007E29 RID: 32297
 	[NullableContext(0)]
 	private class EQuestViewComponent
 	{
-		// Token: 0x0402DA46 RID: 186950
+		// Token: 0x04028D5D RID: 167261
 		public const int PanelDetails = 0;
 
-		// Token: 0x0402DA47 RID: 186951
+		// Token: 0x04028D5E RID: 167262
 		public const int BtnRight = 1;
 
-		// Token: 0x0402DA48 RID: 186952
+		// Token: 0x04028D5F RID: 167263
 		public const int TrackStateText = 2;
 
-		// Token: 0x0402DA49 RID: 186953
+		// Token: 0x04028D60 RID: 167264
 		public const int FirstRewardItem = 3;
 
-		// Token: 0x0402DA4A RID: 186954
+		// Token: 0x04028D61 RID: 167265
 		public const int DetailsStepsRoot = 4;
 
-		// Token: 0x0402DA4B RID: 186955
+		// Token: 0x04028D62 RID: 167266
 		public const int ParentStep = 5;
 
-		// Token: 0x0402DA4C RID: 186956
+		// Token: 0x04028D63 RID: 167267
 		public const int DetailsName = 6;
 
-		// Token: 0x0402DA4D RID: 186957
+		// Token: 0x04028D64 RID: 167268
 		public const int CommonTabComponent = 7;
 
-		// Token: 0x0402DA4E RID: 186958
+		// Token: 0x04028D65 RID: 167269
 		public const int QuestDesc = 8;
 
-		// Token: 0x0402DA4F RID: 186959
+		// Token: 0x04028D66 RID: 167270
 		public const int QuestTypeListPanel = 9;
 
-		// Token: 0x0402DA50 RID: 186960
+		// Token: 0x04028D67 RID: 167271
 		public const int TimeNode = 10;
 
-		// Token: 0x0402DA51 RID: 186961
+		// Token: 0x04028D68 RID: 167272
 		public const int TimeText = 11;
 
-		// Token: 0x0402DA52 RID: 186962
+		// Token: 0x04028D69 RID: 167273
 		public const int NonQuestTextNode = 12;
 
-		// Token: 0x0402DA53 RID: 186963
+		// Token: 0x04028D6A RID: 167274
 		public const int ShowQuestCondition = 13;
 
-		// Token: 0x0402DA54 RID: 186964
+		// Token: 0x04028D6B RID: 167275
 		public const int BoundaryLine = 14;
 
-		// Token: 0x0402DA55 RID: 186965
+		// Token: 0x04028D6C RID: 167276
 		public const int LockHelpButton = 15;
 
-		// Token: 0x0402DA56 RID: 186966
+		// Token: 0x04028D6D RID: 167277
 		public const int QuestTypeItem = 16;
 
-		// Token: 0x0402DA57 RID: 186967
+		// Token: 0x04028D6E RID: 167278
 		public const int ScrollView = 17;
 
-		// Token: 0x0402DA58 RID: 186968
+		// Token: 0x04028D6F RID: 167279
 		public const int QuestRewardNode = 18;
 
-		// Token: 0x0402DA59 RID: 186969
+		// Token: 0x04028D70 RID: 167280
 		public const int LockIcon = 19;
 
-		// Token: 0x0402DA5A RID: 186970
+		// Token: 0x04028D71 RID: 167281
 		public const int PanelDetailTipsNode = 20;
 
-		// Token: 0x0402DA5B RID: 186971
+		// Token: 0x04028D72 RID: 167282
 		public const int TipsNodeBg = 21;
 
-		// Token: 0x0402DA5C RID: 186972
+		// Token: 0x04028D73 RID: 167283
 		public const int TipsNodeIcon = 22;
 
-		// Token: 0x0402DA5D RID: 186973
+		// Token: 0x04028D74 RID: 167284
 		public const int QuestTagRoot = 23;
 
-		// Token: 0x0402DA5E RID: 186974
+		// Token: 0x04028D75 RID: 167285
 		public const int QuestTagBgSprite = 24;
 
-		// Token: 0x0402DA5F RID: 186975
+		// Token: 0x04028D76 RID: 167286
 		public const int QuestTagText = 25;
 
-		// Token: 0x0402DA60 RID: 186976
+		// Token: 0x04028D77 RID: 167287
 		public const int BtnParent = 26;
 
-		// Token: 0x0402DA61 RID: 186977
+		// Token: 0x04028D78 RID: 167288
 		public const int BtnLeft = 27;
 
-		// Token: 0x0402DA62 RID: 186978
+		// Token: 0x04028D79 RID: 167289
 		public const int FocusModeItem = 28;
 
-		// Token: 0x0402DA63 RID: 186979
+		// Token: 0x04028D7A RID: 167290
 		public const int BtnQuestReview = 29;
 
-		// Token: 0x0402DA64 RID: 186980
+		// Token: 0x04028D7B RID: 167291
 		public const int BtnQuestTree = 30;
 	}
 }

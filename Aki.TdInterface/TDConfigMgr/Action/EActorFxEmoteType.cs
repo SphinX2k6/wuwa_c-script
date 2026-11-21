@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200157C RID: 5500
+	// Token: 0x020016DA RID: 5850
 	[EnumExtensions]
 	public enum EActorFxEmoteType
 	{
-		// Token: 0x04004903 RID: 18691
+		// Token: 0x04004CB2 RID: 19634
 		Play,
-		// Token: 0x04004904 RID: 18692
+		// Token: 0x04004CB3 RID: 19635
 		Stop
 	}
 }

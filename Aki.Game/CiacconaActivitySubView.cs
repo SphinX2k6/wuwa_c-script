@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011E0 RID: 4576
+// Token: 0x02000694 RID: 1684
 [NullableContext(1)]
 [Nullable(0)]
 public class CiacconaActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x060079FA RID: 31226 RVA: 0x0019AB28 File Offset: 0x00198D28
+	// Token: 0x06004D91 RID: 19857 RVA: 0x001A37D8 File Offset: 0x001A19D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -53,7 +52,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060079FB RID: 31227 RVA: 0x0019AD04 File Offset: 0x00198F04
+	// Token: 0x06004D92 RID: 19858 RVA: 0x001A39B4 File Offset: 0x001A1BB4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CiacconaActivitySubView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -64,13 +63,13 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060079FC RID: 31228 RVA: 0x0019AD47 File Offset: 0x00198F47
+	// Token: 0x06004D93 RID: 19859 RVA: 0x001A39F7 File Offset: 0x001A1BF7
 	protected override void OnStart()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x060079FD RID: 31229 RVA: 0x0019AD4F File Offset: 0x00198F4F
+	// Token: 0x06004D94 RID: 19860 RVA: 0x001A39FF File Offset: 0x001A1BFF
 	protected override void OnBeforeDestroy()
 	{
 		ActivityCircleButtonItem endingRewardItem = this.EndingRewardItem;
@@ -86,13 +85,13 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		progressRewardItem.UnBindRedDot();
 	}
 
-	// Token: 0x060079FE RID: 31230 RVA: 0x0019AD72 File Offset: 0x00198F72
+	// Token: 0x06004D95 RID: 19861 RVA: 0x001A3A22 File Offset: 0x001A1C22
 	protected override void OnRefreshView()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x060079FF RID: 31231 RVA: 0x0019AD7C File Offset: 0x00198F7C
+	// Token: 0x06004D96 RID: 19862 RVA: 0x001A3A2C File Offset: 0x001A1C2C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnCiacconaActivityStateUpdate, new Action(this.OnDataUpdate));
@@ -101,7 +100,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		EventSystem.Instance.Add(EEventName.OnCiacconaRewardDataUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x06007A00 RID: 31232 RVA: 0x0019ADFC File Offset: 0x00198FFC
+	// Token: 0x06004D97 RID: 19863 RVA: 0x001A3AAC File Offset: 0x001A1CAC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCiacconaActivityStateUpdate, new Action(this.OnDataUpdate));
@@ -110,7 +109,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		EventSystem.Instance.Remove(EEventName.OnCiacconaRewardDataUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x06007A01 RID: 31233 RVA: 0x0019AE7C File Offset: 0x0019907C
+	// Token: 0x06004D98 RID: 19864 RVA: 0x001A3B2C File Offset: 0x001A1D2C
 	protected override void OnTimer(float _)
 	{
 		CiacconaGalModel instance = CiacconaGalModel.Instance;
@@ -132,7 +131,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A02 RID: 31234 RVA: 0x0019AEF4 File Offset: 0x001990F4
+	// Token: 0x06004D99 RID: 19865 RVA: 0x001A3BA4 File Offset: 0x001A1DA4
 	private void Refresh()
 	{
 		this.CommonActivityInfo.SetTitle(this.ActivityBaseData.GetTitle());
@@ -144,7 +143,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		CiacconaGalActivityData activityDataById = CiacconaGalModel.Instance.GetActivityDataById(this.ActivityBaseData.Id);
 		this.CommonActivityInfo.RefreshFunctionArea();
 		CiacconaGalEndingData[] allEndingDataList = CiacconaGalModel.Instance.GetAllEndingDataList();
-		this.LayoutEndings.RefreshByData(allEndingDataList.ToList<CiacconaGalEndingData>(), null, false);
+		this.LayoutEndings.RefreshByData(allEndingDataList, null, false);
 		base.GetItem(7).SetUIActive(false);
 		ValueTuple<int, int> progressRewardProgress = CiacconaGalModel.Instance.GetProgressRewardProgress();
 		int item = progressRewardProgress.Item1;
@@ -181,7 +180,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		this.ProgressRewardItem.SetRedDotVisible(CiacconaGalModel.Instance.HasAnyProgressReward());
 	}
 
-	// Token: 0x06007A03 RID: 31235 RVA: 0x0019B1E8 File Offset: 0x001993E8
+	// Token: 0x06004D9A RID: 19866 RVA: 0x001A3E94 File Offset: 0x001A2094
 	private void RefreshTimeText()
 	{
 		string item = this.GetTimeVisibleAndRemainTime().Item2;
@@ -193,7 +192,7 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		commonActivityInfo.SetTimer(false, item);
 	}
 
-	// Token: 0x06007A04 RID: 31236 RVA: 0x0019B214 File Offset: 0x00199414
+	// Token: 0x06004D9B RID: 19867 RVA: 0x001A3EC0 File Offset: 0x001A20C0
 	private void RefreshRewardTimeText()
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew("Xkjsx_Rewards_Timeless", null);
@@ -207,25 +206,25 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x06007A05 RID: 31237 RVA: 0x0019B25C File Offset: 0x0019945C
+	// Token: 0x06004D9C RID: 19868 RVA: 0x001A3F08 File Offset: 0x001A2108
 	private CiacconaEndingIcon GetEndingItem()
 	{
 		return new CiacconaEndingIcon();
 	}
 
-	// Token: 0x06007A06 RID: 31238 RVA: 0x0019B263 File Offset: 0x00199463
+	// Token: 0x06004D9D RID: 19869 RVA: 0x001A3F0F File Offset: 0x001A210F
 	private void OnEndingRewardClick()
 	{
 		CiacconaGalController.Instance.OpenEndingView();
 	}
 
-	// Token: 0x06007A07 RID: 31239 RVA: 0x0019B26F File Offset: 0x0019946F
+	// Token: 0x06004D9E RID: 19870 RVA: 0x001A3F1B File Offset: 0x001A211B
 	private void OnProgressRewardClick()
 	{
 		CiacconaGalController.Instance.OpenRewardViewByActivityId(this.ActivityBaseData.Id);
 	}
 
-	// Token: 0x06007A08 RID: 31240 RVA: 0x0019B288 File Offset: 0x00199488
+	// Token: 0x06004D9F RID: 19871 RVA: 0x001A3F34 File Offset: 0x001A2134
 	private void OnQuestTipsClick()
 	{
 		CiacconaGalActivityData activityDataById = CiacconaGalModel.Instance.GetActivityDataById(this.ActivityBaseData.Id);
@@ -235,13 +234,13 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A09 RID: 31241 RVA: 0x0019B2CF File Offset: 0x001994CF
+	// Token: 0x06004DA0 RID: 19872 RVA: 0x001A3F7B File Offset: 0x001A217B
 	private void OnDataUpdate()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x06007A0A RID: 31242 RVA: 0x0019B2D7 File Offset: 0x001994D7
+	// Token: 0x06004DA1 RID: 19873 RVA: 0x001A3F83 File Offset: 0x001A2183
 	public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 	{
 		if (configParams.Length == 0)
@@ -256,62 +255,62 @@ public class CiacconaActivitySubView : ActivitySubViewBase
 		return commonActivityInfo.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x04003803 RID: 14339
+	// Token: 0x0400389C RID: 14492
 	private CiacconaActivityInfoPanel CommonActivityInfo;
 
-	// Token: 0x04003804 RID: 14340
+	// Token: 0x0400389D RID: 14493
 	private GenericLayout<CiacconaEndingIcon, CiacconaGalEndingData> LayoutEndings;
 
-	// Token: 0x04003805 RID: 14341
+	// Token: 0x0400389E RID: 14494
 	private ActivityCircleButtonItem EndingRewardItem;
 
-	// Token: 0x04003806 RID: 14342
+	// Token: 0x0400389F RID: 14495
 	private ActivityCircleButtonItem ProgressRewardItem;
 
-	// Token: 0x04003807 RID: 14343
+	// Token: 0x040038A0 RID: 14496
 	private ActivityQuestTipsItem QuestTipsItem;
 
-	// Token: 0x020077CB RID: 30667
+	// Token: 0x02006956 RID: 26966
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040277EA RID: 161770
+		// Token: 0x04022B1C RID: 142108
 		public const int ItemCommonActivityInfo = 0;
 
-		// Token: 0x040277EB RID: 161771
+		// Token: 0x04022B1D RID: 142109
 		public const int ItemBtnConfirm = 1;
 
-		// Token: 0x040277EC RID: 161772
+		// Token: 0x04022B1E RID: 142110
 		public const int ItemRedDot = 2;
 
-		// Token: 0x040277ED RID: 161773
+		// Token: 0x04022B1F RID: 142111
 		public const int LayoutEndings = 3;
 
-		// Token: 0x040277EE RID: 161774
+		// Token: 0x04022B20 RID: 142112
 		public const int ItemEndingIcon = 4;
 
-		// Token: 0x040277EF RID: 161775
+		// Token: 0x04022B21 RID: 142113
 		public const int TextProgress = 5;
 
-		// Token: 0x040277F0 RID: 161776
+		// Token: 0x04022B22 RID: 142114
 		public const int SpriteProgress = 6;
 
-		// Token: 0x040277F1 RID: 161777
+		// Token: 0x04022B23 RID: 142115
 		public const int ItemEndings = 7;
 
-		// Token: 0x040277F2 RID: 161778
+		// Token: 0x04022B24 RID: 142116
 		public const int ItemProgress = 8;
 
-		// Token: 0x040277F3 RID: 161779
+		// Token: 0x04022B25 RID: 142117
 		public const int ItemProgressReward = 9;
 
-		// Token: 0x040277F4 RID: 161780
+		// Token: 0x04022B26 RID: 142118
 		public const int ItemEndingReward = 10;
 
-		// Token: 0x040277F5 RID: 161781
+		// Token: 0x04022B27 RID: 142119
 		public const int ItemQuestTips = 11;
 
-		// Token: 0x040277F6 RID: 161782
+		// Token: 0x04022B28 RID: 142120
 		public const int TextRewardLimitTime = 12;
 	}
 }

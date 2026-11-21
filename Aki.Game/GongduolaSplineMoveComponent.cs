@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032EE RID: 13038
+// Token: 0x02002860 RID: 10336
 [NullableContext(1)]
 [Nullable(0)]
 public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 {
-	// Token: 0x0601C60B RID: 116235 RVA: 0x007F1A68 File Offset: 0x007EFC68
+	// Token: 0x0601A2CD RID: 107213 RVA: 0x00817FA4 File Offset: 0x008161A4
 	protected override void InputAdjustSlideTrack(Vector inputDirect)
 	{
 		this.SplineQuat.Inverse(this.TmpQuat);
@@ -36,10 +36,10 @@ public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 		{
 			return;
 		}
-		vehicleActorComp.SetInputDirect(this.TmpVector1, false);
+		vehicleActorComp.SetInputDirect(this.TmpVector1, false, EInputDirectSpace.Relative);
 	}
 
-	// Token: 0x0601C60C RID: 116236 RVA: 0x007F1BC4 File Offset: 0x007EFDC4
+	// Token: 0x0601A2CE RID: 107214 RVA: 0x00818100 File Offset: 0x00816300
 	protected void ConvertToTriangleInput(Vector inOutInput)
 	{
 		double absMax = inOutInput.GetAbsMax();
@@ -54,7 +54,7 @@ public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 		inOutInput.MultiplyEqual(1.0 / absMax);
 	}
 
-	// Token: 0x0601C60D RID: 116237 RVA: 0x007F1C09 File Offset: 0x007EFE09
+	// Token: 0x0601A2CF RID: 107215 RVA: 0x00818145 File Offset: 0x00816345
 	protected void ConvertToCircleInput(Vector inOutInput)
 	{
 		if (inOutInput.Size() < 1.0)
@@ -64,7 +64,7 @@ public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 		inOutInput.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601C60E RID: 116238 RVA: 0x007F1C30 File Offset: 0x007EFE30
+	// Token: 0x0601A2D0 RID: 107216 RVA: 0x0081816C File Offset: 0x0081636C
 	protected void AdjustInputForValid(Vector inOutInput, float curDist, float curYaw, float minYaw, float maxYaw)
 	{
 		SplineMoveParams currentSplineMoveParams = base.CurrentSplineMoveParams;
@@ -119,7 +119,7 @@ public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 		}
 	}
 
-	// Token: 0x0601C60F RID: 116239 RVA: 0x007F1D9C File Offset: 0x007EFF9C
+	// Token: 0x0601A2D1 RID: 107217 RVA: 0x008182D8 File Offset: 0x008164D8
 	protected override void ApplySplineMoveDaConfig()
 	{
 		if (this.ExtraMoveParams == null)
@@ -137,7 +137,7 @@ public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 		component.SetEnableInputSprint(!this.ExtraMoveParams.DisableSprint.GetValueOrDefault());
 	}
 
-	// Token: 0x0601C610 RID: 116240 RVA: 0x007F1E2A File Offset: 0x007F002A
+	// Token: 0x0601A2D2 RID: 107218 RVA: 0x00818366 File Offset: 0x00816566
 	protected override void ResetSplineMoveDaConfig()
 	{
 		GongduolaPerformComponent component = base.Entity.GetComponent<GongduolaPerformComponent>();
@@ -152,37 +152,63 @@ public class GongduolaSplineMoveComponent : VehicleSplineMoveComponent
 		component.SetEnableInputSprint(true);
 	}
 
-	// Token: 0x0601C611 RID: 116241 RVA: 0x007F1E50 File Offset: 0x007F0050
+	// Token: 0x0601A2D3 RID: 107219 RVA: 0x0081838B File Offset: 0x0081658B
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
 		{
 			return false;
 		}
-		GongduolaSplineMoveComponent gongduolaSplineMoveComponent = (GongduolaSplineMoveComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LastLockedInput"))
+		if (((GongduolaSplineMoveComponent)componentTemplate).LastLockedInput == null)
 		{
-			if (gongduolaSplineMoveComponent.LastLockedInput == null)
-			{
-				this.LastLockedInput = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastLockedInput), "LastLockedInput"))
-			{
-				return false;
-			}
+			this.LastLockedInput = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLockedInput), "LastLockedInput"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400E119 RID: 57625
+	// Token: 0x17002AB4 RID: 10932
+	// (get) Token: 0x0601A2D4 RID: 107220 RVA: 0x008183C9 File Offset: 0x008165C9
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AB5 RID: 10933
+	// (get) Token: 0x0601A2D5 RID: 107221 RVA: 0x008183CC File Offset: 0x008165CC
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AB6 RID: 10934
+	// (get) Token: 0x0601A2D6 RID: 107222 RVA: 0x008183CF File Offset: 0x008165CF
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E5C4 RID: 58820
 	private const float UNLOCK_TURN_INPUT_MIN_ANGLE = 10f;
 
-	// Token: 0x0400E11A RID: 57626
+	// Token: 0x0400E5C5 RID: 58821
 	private const float INPUT_ADJUST_FORWARD_MIN_YAW = 45f;
 
-	// Token: 0x0400E11B RID: 57627
+	// Token: 0x0400E5C6 RID: 58822
 	private const float INPUT_ADJUST_FORWARD_MAX_YAW = 60f;
 
-	// Token: 0x0400E11C RID: 57628
+	// Token: 0x0400E5C7 RID: 58823
 	protected Vector LastLockedInput = Vector.Create();
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002025 RID: 8229
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200226E RID: 8814
 	public class IUnlockCookSystemType
 	{
-		// Token: 0x0600B4EA RID: 46314 RVA: 0x001A4704 File Offset: 0x001A2904
+		// Token: 0x0600C010 RID: 49168 RVA: 0x001BAE70 File Offset: 0x001B9070
 		private IUnlockCookSystemType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B4EB RID: 46315 RVA: 0x001A473C File Offset: 0x001A293C
+		// Token: 0x0600C011 RID: 49169 RVA: 0x001BAEA8 File Offset: 0x001B90A8
 		public static IUnlockCookSystemType Create([Nullable(2)] IUnlockCookSystemType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4EC RID: 46316 RVA: 0x001A474F File Offset: 0x001A294F
+		// Token: 0x0600C012 RID: 49170 RVA: 0x001BAEBB File Offset: 0x001B90BB
 		public static IUnlockCookSystemType CreateFromSetValue([Nullable(2)] IUnlockCookSystemType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4ED RID: 46317 RVA: 0x001A4762 File Offset: 0x001A2962
+		// Token: 0x0600C013 RID: 49171 RVA: 0x001BAECE File Offset: 0x001B90CE
 		public IUnlockCookSystemType_SetValue ToSetValue()
 		{
 			return new IUnlockCookSystemType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003796 RID: 14230
-		// (get) Token: 0x0600B4EE RID: 46318 RVA: 0x001A4775 File Offset: 0x001A2975
-		// (set) Token: 0x0600B4EF RID: 46319 RVA: 0x001A47A0 File Offset: 0x001A29A0
+		// Token: 0x17003A73 RID: 14963
+		// (get) Token: 0x0600C014 RID: 49172 RVA: 0x001BAEE1 File Offset: 0x001B90E1
+		// (set) Token: 0x0600C015 RID: 49173 RVA: 0x001BAF0C File Offset: 0x001B910C
 		public virtual EUnlockCookSystemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CF5 RID: 27893
+		// Token: 0x040072FE RID: 29438
 		[Nullable(2)]
 		protected IUnlockCookSystemType FbInstance;
 
-		// Token: 0x04006CF6 RID: 27894
+		// Token: 0x040072FF RID: 29439
 		[Nullable(2)]
 		protected IUnlockCookSystemType_SetValue PocoInterface;
 	}

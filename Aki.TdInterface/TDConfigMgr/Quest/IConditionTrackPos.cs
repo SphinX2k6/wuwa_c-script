@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F2E RID: 3886
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001044 RID: 4164
 	public class IConditionTrackPos
 	{
-		// Token: 0x0600565C RID: 22108 RVA: 0x000D3AE8 File Offset: 0x000D1CE8
+		// Token: 0x06005BD8 RID: 23512 RVA: 0x000DFC90 File Offset: 0x000DDE90
 		private IConditionTrackPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600565D RID: 22109 RVA: 0x000D3B20 File Offset: 0x000D1D20
+		// Token: 0x06005BD9 RID: 23513 RVA: 0x000DFCC8 File Offset: 0x000DDEC8
 		public static IConditionTrackPos Create([Nullable(2)] IConditionTrackPos instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600565E RID: 22110 RVA: 0x000D3B33 File Offset: 0x000D1D33
+		// Token: 0x06005BDA RID: 23514 RVA: 0x000DFCDB File Offset: 0x000DDEDB
 		public static IConditionTrackPos CreateFromSetValue([Nullable(2)] IConditionTrackPos_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600565F RID: 22111 RVA: 0x000D3B46 File Offset: 0x000D1D46
+		// Token: 0x06005BDB RID: 23515 RVA: 0x000DFCEE File Offset: 0x000DDEEE
 		public IConditionTrackPos_SetValue ToSetValue()
 		{
 			return new IConditionTrackPos_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CEA RID: 7402
-		// (get) Token: 0x06005660 RID: 22112 RVA: 0x000D3B68 File Offset: 0x000D1D68
-		// (set) Token: 0x06005661 RID: 22113 RVA: 0x000D3BC9 File Offset: 0x000D1DC9
+		// Token: 0x17001E82 RID: 7810
+		// (get) Token: 0x06005BDC RID: 23516 RVA: 0x000DFD10 File Offset: 0x000DDF10
+		// (set) Token: 0x06005BDD RID: 23517 RVA: 0x000DFD71 File Offset: 0x000DDF71
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CEB RID: 7403
-		// (get) Token: 0x06005662 RID: 22114 RVA: 0x000D3BE0 File Offset: 0x000D1DE0
-		// (set) Token: 0x06005663 RID: 22115 RVA: 0x000D3C41 File Offset: 0x000D1E41
+		// Token: 0x17001E83 RID: 7811
+		// (get) Token: 0x06005BDE RID: 23518 RVA: 0x000DFD88 File Offset: 0x000DDF88
+		// (set) Token: 0x06005BDF RID: 23519 RVA: 0x000DFDE9 File Offset: 0x000DDFE9
 		public virtual VectorInfo TrackPos
 		{
 			get
@@ -122,24 +120,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003459 RID: 13401
+		// Token: 0x04003766 RID: 14182
 		[Nullable(2)]
 		protected IConditionTrackPos FbInstance;
 
-		// Token: 0x0400345A RID: 13402
+		// Token: 0x04003767 RID: 14183
 		[Nullable(2)]
 		protected IConditionTrackPos_SetValue PocoInterface;
 
-		// Token: 0x0400345B RID: 13403
+		// Token: 0x04003768 RID: 14184
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400345C RID: 13404
+		// Token: 0x04003769 RID: 14185
 		private bool _ConditionInited;
 
-		// Token: 0x0400345D RID: 13405
+		// Token: 0x0400376A RID: 14186
 		private VectorInfo _TrackPosCache;
 
-		// Token: 0x0400345E RID: 13406
+		// Token: 0x0400376B RID: 14187
 		private bool _TrackPosInited;
 	}
 }

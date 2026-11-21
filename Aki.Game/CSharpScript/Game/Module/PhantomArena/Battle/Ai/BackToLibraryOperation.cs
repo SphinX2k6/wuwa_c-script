@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052D6 RID: 21206
+	// Token: 0x020042A6 RID: 17062
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BackToLibraryOperation : NpcAiOperation
 	{
-		// Token: 0x170082FB RID: 33531
-		// (get) Token: 0x0603645E RID: 222302 RVA: 0x00CD7003 File Offset: 0x00CD5203
-		// (set) Token: 0x0603645F RID: 222303 RVA: 0x00CD700B File Offset: 0x00CD520B
+		// Token: 0x170056BB RID: 22203
+		// (get) Token: 0x0602B359 RID: 176985 RVA: 0x00C2472B File Offset: 0x00C2292B
+		// (set) Token: 0x0602B35A RID: 176986 RVA: 0x00C24733 File Offset: 0x00C22933
 		public NpcPhantomBattleBackCardLibrary Info { get; private set; }
 
-		// Token: 0x06036460 RID: 222304 RVA: 0x00CD7014 File Offset: 0x00CD5214
+		// Token: 0x0602B35B RID: 176987 RVA: 0x00C2473C File Offset: 0x00C2293C
 		public BackToLibraryOperation(NpcPhantomBattleBackCardLibrary info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x06036461 RID: 222305 RVA: 0x00CD7024 File Offset: 0x00CD5224
+		// Token: 0x0602B35C RID: 176988 RVA: 0x00C2474C File Offset: 0x00C2294C
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			BackToLibraryOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

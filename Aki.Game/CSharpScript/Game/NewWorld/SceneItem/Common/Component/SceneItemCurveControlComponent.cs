@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.SceneItem.CurveControl;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007217 RID: 29207
+	// Token: 0x020062CC RID: 25292
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemCurveControlComponent : EntityComponent
 	{
-		// Token: 0x0604780D RID: 292877 RVA: 0x01239B50 File Offset: 0x01237D50
+		// Token: 0x0603D133 RID: 250163 RVA: 0x01193294 File Offset: 0x01191494
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreateEntityData createEntityData = (args != null) ? args.GetP1<CreateEntityData>() : null;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604780E RID: 292878 RVA: 0x01239C34 File Offset: 0x01237E34
+		// Token: 0x0603D134 RID: 250164 RVA: 0x01193378 File Offset: 0x01191578
 		protected override void OnTick(float delta)
 		{
 			if (this.FirstTick)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604780F RID: 292879 RVA: 0x01239CD8 File Offset: 0x01237ED8
+		// Token: 0x0603D135 RID: 250165 RVA: 0x0119341C File Offset: 0x0119161C
 		public void StartPerformance(float delayTime)
 		{
 			if (this.CurveControl == null)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			base.EnableByKey(EEntityDisableKey.CurveControlComponent, true);
 		}
 
-		// Token: 0x06047810 RID: 292880 RVA: 0x01239E04 File Offset: 0x01238004
+		// Token: 0x0603D136 RID: 250166 RVA: 0x01193548 File Offset: 0x01191748
 		public void StopPerformance()
 		{
 			if (this.CurveControl == null || this.CurveControl.IsStop())
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.CurveControl.Stop(false);
 		}
 
-		// Token: 0x06047811 RID: 292881 RVA: 0x01239E28 File Offset: 0x01238028
+		// Token: 0x0603D137 RID: 250167 RVA: 0x0119356C File Offset: 0x0119176C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -121,45 +121,46 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemCurveControlComponent sceneItemCurveControlComponent = (SceneItemCurveControlComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CurveControl"))
+			if (sceneItemCurveControlComponent.CurveControl == null)
 			{
-				if (sceneItemCurveControlComponent.CurveControl == null)
-				{
-					this.CurveControl = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveControlBase>(this.CurveControl), "CurveControl"))
-				{
-					return false;
-				}
+				this.CurveControl = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurveControl), "CurveControl"))
 			{
-				if (sceneItemCurveControlComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FirstTick"))
+			if (sceneItemCurveControlComponent.ActorComp == null)
 			{
-				this.FirstTick = sceneItemCurveControlComponent.FirstTick;
+				this.ActorComp = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+			{
+				return false;
+			}
+			this.FirstTick = sceneItemCurveControlComponent.FirstTick;
 			return true;
 		}
 
-		// Token: 0x040259EC RID: 154092
+		// Token: 0x170073A1 RID: 29601
+		// (get) Token: 0x0603D138 RID: 250168 RVA: 0x011935EE File Offset: 0x011917EE
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402065B RID: 132699
 		private const float STEP_TIME = 0.05f;
 
-		// Token: 0x040259ED RID: 154093
+		// Token: 0x0402065C RID: 132700
 		private CurveControlBase CurveControl;
 
-		// Token: 0x040259EE RID: 154094
+		// Token: 0x0402065D RID: 132701
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x040259EF RID: 154095
+		// Token: 0x0402065E RID: 132702
 		private bool FirstTick = true;
 	}
 }

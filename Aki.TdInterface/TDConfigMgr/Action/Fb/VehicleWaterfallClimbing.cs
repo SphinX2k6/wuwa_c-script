@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029CF RID: 10703
+	// Token: 0x02002CBC RID: 11452
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VehicleWaterfallClimbing : ActionParams
 	{
-		// Token: 0x0600EC90 RID: 60560 RVA: 0x00228AE2 File Offset: 0x00226CE2
-		[NullableContext(1)]
+		// Token: 0x0600FB27 RID: 64295 RVA: 0x00246466 File Offset: 0x00244666
+		[NullableContext(0)]
 		public static VehicleWaterfallClimbing Create(IVehicleWaterfallClimbing? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AB4 RID: 19124
-		// (get) Token: 0x0600EC91 RID: 60561 RVA: 0x00228B01 File Offset: 0x00226D01
+		// Token: 0x17004E5D RID: 20061
+		// (get) Token: 0x0600FB28 RID: 64296 RVA: 0x00246485 File Offset: 0x00244685
 		public virtual int SplineEntityId
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AB5 RID: 19125
-		// (get) Token: 0x0600EC92 RID: 60562 RVA: 0x00228B0E File Offset: 0x00226D0E
+		// Token: 0x17004E5E RID: 20062
+		// (get) Token: 0x0600FB29 RID: 64297 RVA: 0x00246492 File Offset: 0x00244692
 		public virtual IVehicleWaterfallClimbGravityConfig ChangeGravity
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008243 RID: 33347
+		// Token: 0x04008934 RID: 35124
 		private IVehicleWaterfallClimbing Instance;
 
-		// Token: 0x04008244 RID: 33348
+		// Token: 0x04008935 RID: 35125
 		private IVehicleWaterfallClimbGravityConfig _ChangeGravityCache;
 
-		// Token: 0x04008245 RID: 33349
+		// Token: 0x04008936 RID: 35126
 		private bool _ChangeGravityInited;
 	}
 }

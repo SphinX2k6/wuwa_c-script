@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029AA RID: 10666
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C97 RID: 11415
 	public class OpenSystemBoardWithReturn : ActionParams
 	{
-		// Token: 0x0600EC05 RID: 60421 RVA: 0x00227D1A File Offset: 0x00225F1A
+		// Token: 0x0600FA9C RID: 64156 RVA: 0x0024569F File Offset: 0x0024389F
 		public static OpenSystemBoardWithReturn Create(IOpenSystemBoardWithReturn? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A73 RID: 19059
-		// (get) Token: 0x0600EC06 RID: 60422 RVA: 0x00227D39 File Offset: 0x00225F39
+		// Token: 0x17004E1C RID: 19996
+		// (get) Token: 0x0600FA9D RID: 64157 RVA: 0x002456BE File Offset: 0x002438BE
 		public virtual IOpenSystemBoardWithReturnType SystemType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081F8 RID: 33272
+		// Token: 0x040088E9 RID: 35049
 		private IOpenSystemBoardWithReturn Instance;
 
-		// Token: 0x040081F9 RID: 33273
+		// Token: 0x040088EA RID: 35050
 		private IOpenSystemBoardWithReturnType _SystemTypeCache;
 
-		// Token: 0x040081FA RID: 33274
+		// Token: 0x040088EB RID: 35051
 		private bool _SystemTypeInited;
 	}
 }

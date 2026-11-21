@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Role
 {
-	// Token: 0x02004BEC RID: 19436
+	// Token: 0x02003B9D RID: 15261
 	public class RoleSkinRecommendView : UiTabViewBase
 	{
-		// Token: 0x06032431 RID: 205873 RVA: 0x00BAD483 File Offset: 0x00BAB683
+		// Token: 0x060271D5 RID: 160213 RVA: 0x00AF1A03 File Offset: 0x00AEFC03
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			};
 		}
 
-		// Token: 0x06032432 RID: 205874 RVA: 0x00BAD4A8 File Offset: 0x00BAB6A8
+		// Token: 0x060271D6 RID: 160214 RVA: 0x00AF1A28 File Offset: 0x00AEFC28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleSkinRecommendView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -32,19 +32,19 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032433 RID: 205875 RVA: 0x00BAD4EB File Offset: 0x00BAB6EB
+		// Token: 0x060271D7 RID: 160215 RVA: 0x00AF1A6B File Offset: 0x00AEFC6B
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		}
 
-		// Token: 0x06032434 RID: 205876 RVA: 0x00BAD509 File Offset: 0x00BAB709
+		// Token: 0x060271D8 RID: 160216 RVA: 0x00AF1A89 File Offset: 0x00AEFC89
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		}
 
-		// Token: 0x06032435 RID: 205877 RVA: 0x00BAD527 File Offset: 0x00BAB727
+		// Token: 0x060271D9 RID: 160217 RVA: 0x00AF1AA7 File Offset: 0x00AEFCA7
 		private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 		{
 			if (this.RecommendData.RecommendId != goodsId)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			this.RefreshView();
 		}
 
-		// Token: 0x06032436 RID: 205878 RVA: 0x00BAD540 File Offset: 0x00BAB740
+		// Token: 0x060271DA RID: 160218 RVA: 0x00AF1AC0 File Offset: 0x00AEFCC0
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
@@ -62,24 +62,24 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			((tabBehavior != null) ? tabBehavior.GetLevelSequencePlayer() : null).PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06032437 RID: 205879 RVA: 0x00BAD57A File Offset: 0x00BAB77A
+		// Token: 0x060271DB RID: 160219 RVA: 0x00AF1AFA File Offset: 0x00AEFCFA
 		private void RefreshView()
 		{
 			this.RoleSkinItemContent.Refresh(this.RecommendData.Id);
 		}
 
-		// Token: 0x0401ABCD RID: 109517
+		// Token: 0x04015528 RID: 87336
 		[Nullable(2)]
 		private RoleSkinItemContent RoleSkinItemContent;
 
-		// Token: 0x0401ABCE RID: 109518
+		// Token: 0x04015529 RID: 87337
 		[Nullable(2)]
 		private PayShopRecommendData RecommendData;
 
-		// Token: 0x0200ADE1 RID: 44513
+		// Token: 0x02009800 RID: 38912
 		private enum EComponent
 		{
-			// Token: 0x04034CF2 RID: 216306
+			// Token: 0x0402F699 RID: 194201
 			Content
 		}
 	}

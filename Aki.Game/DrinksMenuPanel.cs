@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F62 RID: 3938
+// Token: 0x02000417 RID: 1047
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksMenuPanel : UiPanelBase
 {
-	// Token: 0x060064BF RID: 25791 RVA: 0x0013F4A0 File Offset: 0x0013D6A0
+	// Token: 0x06003857 RID: 14423 RVA: 0x00147D3C File Offset: 0x00145F3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class DrinksMenuPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060064C0 RID: 25792 RVA: 0x0013F5A4 File Offset: 0x0013D7A4
+	// Token: 0x06003858 RID: 14424 RVA: 0x00147E40 File Offset: 0x00146040
 	protected override void OnStart()
 	{
 		this.FlavorScroll = new GenericScrollViewNew<DrinksMenuFlavorItem, int>(base.GetScrollViewWithScrollbar(1), new Func<DrinksMenuFlavorItem>(this.CreateDrinksItem), null, false, null);
@@ -47,7 +47,7 @@ public class DrinksMenuPanel : UiPanelBase
 		this.OrnamentScroll.RefreshByData(this.OrnamentList, null, false);
 	}
 
-	// Token: 0x060064C1 RID: 25793 RVA: 0x0013F68C File Offset: 0x0013D88C
+	// Token: 0x06003859 RID: 14425 RVA: 0x00147F28 File Offset: 0x00146128
 	public void SetRaycastOnStepEnd()
 	{
 		UUIButtonComponent button = base.GetButton(7);
@@ -58,7 +58,7 @@ public class DrinksMenuPanel : UiPanelBase
 		button.RootUIComp.Get().SetRaycastTarget(false);
 	}
 
-	// Token: 0x060064C2 RID: 25794 RVA: 0x0013F6B8 File Offset: 0x0013D8B8
+	// Token: 0x0600385A RID: 14426 RVA: 0x00147F54 File Offset: 0x00146154
 	public void UpdateOnStepStart()
 	{
 		UUIButtonComponent button = base.GetButton(7);
@@ -141,7 +141,7 @@ public class DrinksMenuPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060064C3 RID: 25795 RVA: 0x0013F930 File Offset: 0x0013DB30
+	// Token: 0x0600385B RID: 14427 RVA: 0x001481CC File Offset: 0x001463CC
 	public void RefreshFlavor(EDrinksPlayStep step)
 	{
 		if (step == EDrinksPlayStep.Batching)
@@ -238,7 +238,7 @@ public class DrinksMenuPanel : UiPanelBase
 		}, true);
 	}
 
-	// Token: 0x060064C4 RID: 25796 RVA: 0x0013FA40 File Offset: 0x0013DC40
+	// Token: 0x0600385C RID: 14428 RVA: 0x001482DC File Offset: 0x001464DC
 	private DrinksMenuFlavorItem CreateDrinksItem()
 	{
 		return new DrinksMenuFlavorItem
@@ -249,7 +249,7 @@ public class DrinksMenuPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060064C5 RID: 25797 RVA: 0x0013FA7D File Offset: 0x0013DC7D
+	// Token: 0x0600385D RID: 14429 RVA: 0x00148319 File Offset: 0x00146519
 	private DrinksMenuOrnamentItem CreateOrnamentItem()
 	{
 		return new DrinksMenuOrnamentItem
@@ -259,7 +259,7 @@ public class DrinksMenuPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060064C6 RID: 25798 RVA: 0x0013FAA8 File Offset: 0x0013DCA8
+	// Token: 0x0600385E RID: 14430 RVA: 0x00148344 File Offset: 0x00146544
 	private bool GetToggleStateSelected(int id)
 	{
 		EDrinksPlayStep curStep = DrinksModel.Instance.GetCurStep();
@@ -274,13 +274,13 @@ public class DrinksMenuPanel : UiPanelBase
 		return this.CurrentSelectedBatching.Contains(id);
 	}
 
-	// Token: 0x060064C7 RID: 25799 RVA: 0x0013FAEB File Offset: 0x0013DCEB
+	// Token: 0x0600385F RID: 14431 RVA: 0x00148387 File Offset: 0x00146587
 	private bool GetIsToggleEnable(int id)
 	{
 		return DrinksModel.Instance.GetCurStep() != EDrinksPlayStep.Batching || this.CurrentSelectedBatching.Count < 2 || this.CurrentSelectedBatching.Contains(id);
 	}
 
-	// Token: 0x060064C8 RID: 25800 RVA: 0x0013FB18 File Offset: 0x0013DD18
+	// Token: 0x06003860 RID: 14432 RVA: 0x001483B4 File Offset: 0x001465B4
 	private void OnToggleStateChange(UUIExtendToggle toggle, UUIButtonComponent reduceButton, int id, bool isSelected)
 	{
 		EDrinksPlayStep curStep = DrinksModel.Instance.GetCurStep();
@@ -330,7 +330,7 @@ public class DrinksMenuPanel : UiPanelBase
 		DrinksModel.Instance.UpdateBatching(this.CurrentSelectedBatching, false);
 	}
 
-	// Token: 0x060064C9 RID: 25801 RVA: 0x0013FC93 File Offset: 0x0013DE93
+	// Token: 0x06003861 RID: 14433 RVA: 0x0014852F File Offset: 0x0014672F
 	private void OnOrnamentToggleStateChange(int id)
 	{
 		this.CurrentSelectedOrnament = id;
@@ -342,7 +342,7 @@ public class DrinksMenuPanel : UiPanelBase
 		DrinksModel.Instance.UpdateOrnament(this.CurrentSelectedOrnament, false);
 	}
 
-	// Token: 0x060064CA RID: 25802 RVA: 0x0013FCC8 File Offset: 0x0013DEC8
+	// Token: 0x06003862 RID: 14434 RVA: 0x00148564 File Offset: 0x00146764
 	private void OnClickedConfirm()
 	{
 		DrinksModel instance = DrinksModel.Instance;
@@ -383,7 +383,7 @@ public class DrinksMenuPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060064CB RID: 25803 RVA: 0x0013FDBC File Offset: 0x0013DFBC
+	// Token: 0x06003863 RID: 14435 RVA: 0x00148658 File Offset: 0x00146858
 	[NullableContext(2)]
 	public UUIItem GuideGetOrnamentItem(int id)
 	{
@@ -402,7 +402,7 @@ public class DrinksMenuPanel : UiPanelBase
 		return uuiitem;
 	}
 
-	// Token: 0x04002DBA RID: 11706
+	// Token: 0x04002E53 RID: 11859
 	[Nullable(new byte[]
 	{
 		2,
@@ -410,10 +410,10 @@ public class DrinksMenuPanel : UiPanelBase
 	})]
 	protected GenericScrollViewNew<DrinksMenuFlavorItem, int> FlavorScroll;
 
-	// Token: 0x04002DBB RID: 11707
+	// Token: 0x04002E54 RID: 11860
 	protected int CurrentSelectedDrinks;
 
-	// Token: 0x04002DBC RID: 11708
+	// Token: 0x04002E55 RID: 11861
 	[Nullable(new byte[]
 	{
 		2,
@@ -421,53 +421,53 @@ public class DrinksMenuPanel : UiPanelBase
 	})]
 	protected GenericScrollViewNew<DrinksMenuOrnamentItem, int> OrnamentScroll;
 
-	// Token: 0x04002DBD RID: 11709
+	// Token: 0x04002E56 RID: 11862
 	protected HashSet<int> CurrentSelectedBatching = new HashSet<int>();
 
-	// Token: 0x04002DBE RID: 11710
+	// Token: 0x04002E57 RID: 11863
 	protected int CurrentSelectedOrnament;
 
-	// Token: 0x04002DBF RID: 11711
+	// Token: 0x04002E58 RID: 11864
 	protected List<int> OrnamentList = new List<int>();
 
-	// Token: 0x04002DC0 RID: 11712
+	// Token: 0x04002E59 RID: 11865
 	protected List<int> DrinksList = new List<int>();
 
-	// Token: 0x04002DC1 RID: 11713
+	// Token: 0x04002E5A RID: 11866
 	protected List<int> BatchingList = new List<int>();
 
-	// Token: 0x04002DC2 RID: 11714
+	// Token: 0x04002E5B RID: 11867
 	protected string BatchingKey = "";
 
-	// Token: 0x020075AE RID: 30126
+	// Token: 0x02006742 RID: 26434
 	[NullableContext(0)]
 	private static class EDefine
 	{
-		// Token: 0x04026E54 RID: 159316
+		// Token: 0x0402219F RID: 139679
 		public const int Title = 0;
 
-		// Token: 0x04026E55 RID: 159317
+		// Token: 0x040221A0 RID: 139680
 		public const int ScrollDrink = 1;
 
-		// Token: 0x04026E56 RID: 159318
+		// Token: 0x040221A1 RID: 139681
 		public const int ContentDrink = 2;
 
-		// Token: 0x04026E57 RID: 159319
+		// Token: 0x040221A2 RID: 139682
 		public const int ItemDrink = 3;
 
-		// Token: 0x04026E58 RID: 159320
+		// Token: 0x040221A3 RID: 139683
 		public const int ScrollBatching = 4;
 
-		// Token: 0x04026E59 RID: 159321
+		// Token: 0x040221A4 RID: 139684
 		public const int ContentBatching = 5;
 
-		// Token: 0x04026E5A RID: 159322
+		// Token: 0x040221A5 RID: 139685
 		public const int ItemBatching = 6;
 
-		// Token: 0x04026E5B RID: 159323
+		// Token: 0x040221A6 RID: 139686
 		public const int BtnConfirm = 7;
 
-		// Token: 0x04026E5C RID: 159324
+		// Token: 0x040221A7 RID: 139687
 		public const int TxtConfirm = 8;
 	}
 }

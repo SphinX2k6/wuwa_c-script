@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E9 RID: 2025
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200088C RID: 2188
 	public class IWindSourceBase
 	{
-		// Token: 0x06002C01 RID: 11265 RVA: 0x000728B0 File Offset: 0x00070AB0
+		// Token: 0x06002F31 RID: 12081 RVA: 0x00079C14 File Offset: 0x00077E14
 		private IWindSourceBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C02 RID: 11266 RVA: 0x000728E8 File Offset: 0x00070AE8
+		// Token: 0x06002F32 RID: 12082 RVA: 0x00079C4C File Offset: 0x00077E4C
 		public static IWindSourceBase Create([Nullable(2)] IWindSourceBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C03 RID: 11267 RVA: 0x000728FB File Offset: 0x00070AFB
+		// Token: 0x06002F33 RID: 12083 RVA: 0x00079C5F File Offset: 0x00077E5F
 		public static IWindSourceBase CreateFromSetValue([Nullable(2)] IWindSourceBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C04 RID: 11268 RVA: 0x0007290E File Offset: 0x00070B0E
+		// Token: 0x06002F34 RID: 12084 RVA: 0x00079C72 File Offset: 0x00077E72
 		public IWindSourceBase_SetValue ToSetValue()
 		{
 			return new IWindSourceBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B86 RID: 2950
-		// (get) Token: 0x06002C05 RID: 11269 RVA: 0x00072921 File Offset: 0x00070B21
-		// (set) Token: 0x06002C06 RID: 11270 RVA: 0x0007294C File Offset: 0x00070B4C
+		// Token: 0x17000C49 RID: 3145
+		// (get) Token: 0x06002F35 RID: 12085 RVA: 0x00079C85 File Offset: 0x00077E85
+		// (set) Token: 0x06002F36 RID: 12086 RVA: 0x00079CB0 File Offset: 0x00077EB0
 		public virtual EWindSourceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D2E RID: 7470
+		// Token: 0x04001F3A RID: 7994
 		[Nullable(2)]
 		protected IWindSourceBase FbInstance;
 
-		// Token: 0x04001D2F RID: 7471
+		// Token: 0x04001F3B RID: 7995
 		[Nullable(2)]
 		protected IWindSourceBase_SetValue PocoInterface;
 	}

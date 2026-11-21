@@ -2,12 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200600D RID: 24589
+	// Token: 0x0200666C RID: 26220
 	public enum ESplineMoveTargetType : byte
 	{
-		// Token: 0x0401003C RID: 65596
+		// Token: 0x04010E1F RID: 69151
 		Entity,
-		// Token: 0x0401003D RID: 65597
-		Player
+		// Token: 0x04010E20 RID: 69152
+		Player,
+		// Token: 0x04010E21 RID: 69153
+		AssistCharacter
 	}
 }

@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A04 RID: 6660
+	// Token: 0x02000487 RID: 1159
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnKcpConnectTcpFailedDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018AFD RID: 101117 RVA: 0x0024687E File Offset: 0x00244A7E
+		// Token: 0x06006D47 RID: 27975 RVA: 0x0009FB7E File Offset: 0x0009DD7E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnKcpConnectTcpFailedDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018AFE RID: 101118 RVA: 0x0024688A File Offset: 0x00244A8A
+		// Token: 0x06006D48 RID: 27976 RVA: 0x0009FB8A File Offset: 0x0009DD8A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnKcpConnectTcpFailedDelegate._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FOnKcpConnectTcpFailedDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018AFF RID: 101119 RVA: 0x002468AD File Offset: 0x00244AAD
+		// Token: 0x06006D49 RID: 27977 RVA: 0x0009FBAD File Offset: 0x0009DDAD
 		public FOnKcpConnectTcpFailedDelegate()
 		{
 		}
 
-		// Token: 0x06018B00 RID: 101120 RVA: 0x002468B5 File Offset: 0x00244AB5
+		// Token: 0x06006D4A RID: 27978 RVA: 0x0009FBB5 File Offset: 0x0009DDB5
 		[NullableContext(2)]
 		public FOnKcpConnectTcpFailedDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018B01 RID: 101121 RVA: 0x002468BF File Offset: 0x00244ABF
+		// Token: 0x06006D4B RID: 27979 RVA: 0x0009FBBF File Offset: 0x0009DDBF
 		public FOnKcpConnectTcpFailedDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018B02 RID: 101122 RVA: 0x002468CA File Offset: 0x00244ACA
+		// Token: 0x06006D4C RID: 27980 RVA: 0x0009FBCA File Offset: 0x0009DDCA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018B03 RID: 101123 RVA: 0x002468FC File Offset: 0x00244AFC
+		// Token: 0x06006D4D RID: 27981 RVA: 0x0009FBFC File Offset: 0x0009DDFC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FOnKcpConnectTcpFailedDelegate.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FOnKcpConnectTcpFailedDelegate.RegisterId);
 		}
 
-		// Token: 0x06018B04 RID: 101124 RVA: 0x00246936 File Offset: 0x00244B36
+		// Token: 0x06006D4E RID: 27982 RVA: 0x0009FC36 File Offset: 0x0009DE36
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018B05 RID: 101125 RVA: 0x0024693F File Offset: 0x00244B3F
+		// Token: 0x06006D4F RID: 27983 RVA: 0x0009FC3F File Offset: 0x0009DE3F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x06018B06 RID: 101126 RVA: 0x0024694C File Offset: 0x00244B4C
+		// Token: 0x06006D50 RID: 27984 RVA: 0x0009FC4C File Offset: 0x0009DE4C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400D55C RID: 54620
+		// Token: 0x04002EA6 RID: 11942
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D55D RID: 54621
+		// Token: 0x04002EA7 RID: 11943
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.OnKcpConnectTcpFailedDelegate__DelegateSignature";
 
-		// Token: 0x0400D55E RID: 54622
+		// Token: 0x04002EA8 RID: 11944
 		private static int RegisterId;
 
-		// Token: 0x020030B5 RID: 12469
+		// Token: 0x02000B92 RID: 2962
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E05 RID: 93701
+			// Token: 0x04005D0B RID: 23819
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

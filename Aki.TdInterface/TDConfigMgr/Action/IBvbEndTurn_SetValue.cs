@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200182B RID: 6187
+	// Token: 0x020019B6 RID: 6582
 	public class IBvbEndTurn_SetValue
 	{
-		// Token: 0x040053FA RID: 21498
+		// Token: 0x04005846 RID: 22598
 		public EBvbPlayerOperationType Type;
 	}
 }

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056BF RID: 22207
+	// Token: 0x02004696 RID: 18070
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PendingProcess<[Nullable(2)] T>
 	{
-		// Token: 0x060387D6 RID: 231382 RVA: 0x00D6B1DC File Offset: 0x00D693DC
+		// Token: 0x0602D6DD RID: 186077 RVA: 0x00CB9324 File Offset: 0x00CB7524
 		public PendingProcess(T processType)
 		{
 			this.ProcessId = ++PendingProcessDefine.Id;
 			this.ProcessType = processType;
 		}
 
-		// Token: 0x17008793 RID: 34707
-		// (get) Token: 0x060387D7 RID: 231383 RVA: 0x00D6B1FE File Offset: 0x00D693FE
+		// Token: 0x17005B5B RID: 23387
+		// (get) Token: 0x0602D6DE RID: 186078 RVA: 0x00CB9346 File Offset: 0x00CB7546
 		public T ProcessType { get; }
 
-		// Token: 0x0401DAAE RID: 121518
+		// Token: 0x0401853B RID: 99643
 		public int ProcessId;
 	}
 }

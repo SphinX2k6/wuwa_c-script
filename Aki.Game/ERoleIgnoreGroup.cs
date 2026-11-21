@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02003258 RID: 12888
+// Token: 0x020027C7 RID: 10183
 public enum ERoleIgnoreGroup
 {
-	// Token: 0x0400DB59 RID: 56153
+	// Token: 0x0400DFF8 RID: 57336
 	None,
-	// Token: 0x0400DB5A RID: 56154
+	// Token: 0x0400DFF9 RID: 57337
 	Level1,
-	// Token: 0x0400DB5B RID: 56155
+	// Token: 0x0400DFFA RID: 57338
 	Level2,
-	// Token: 0x0400DB5C RID: 56156
+	// Token: 0x0400DFFB RID: 57339
 	Level3 = 4,
-	// Token: 0x0400DB5D RID: 56157
+	// Token: 0x0400DFFC RID: 57340
 	Level4 = 8
 }

@@ -4,13 +4,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200583E RID: 22590
+	// Token: 0x02004815 RID: 18453
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class InteractionConfig : ConfigBase
 	{
-		// Token: 0x060396AF RID: 235183 RVA: 0x00DA09C0 File Offset: 0x00D9EBC0
+		// Token: 0x0602E5C3 RID: 189891 RVA: 0x00CEF8CC File Offset: 0x00CEDACC
 		public InteractData? GetInteractionConfig(string guid)
 		{
 			InteractData? config = ConfigInteractDataByGuid.GetConfig(guid, false);
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.Interaction
 			return config;
 		}
 
-		// Token: 0x17008A38 RID: 35384
-		// (get) Token: 0x060396B0 RID: 235184 RVA: 0x00DA0A09 File Offset: 0x00D9EC09
+		// Token: 0x17005E01 RID: 24065
+		// (get) Token: 0x0602E5C4 RID: 189892 RVA: 0x00CEF915 File Offset: 0x00CEDB15
 		public static InteractionConfig Instance
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060396B1 RID: 235185 RVA: 0x00DA0A10 File Offset: 0x00D9EC10
+		// Token: 0x0602E5C5 RID: 189893 RVA: 0x00CEF91C File Offset: 0x00CEDB1C
 		public static InteractionConfig GetOrCreateInstance()
 		{
 			if (InteractionConfig._Instance == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return InteractionConfig._Instance;
 		}
 
-		// Token: 0x060396B2 RID: 235186 RVA: 0x00DA0A24 File Offset: 0x00D9EC24
+		// Token: 0x0602E5C6 RID: 189894 RVA: 0x00CEF930 File Offset: 0x00CEDB30
 		public static bool CreateInstance()
 		{
 			if (InteractionConfig._Instance != null)
@@ -57,24 +57,24 @@ namespace CSharpScript.Game.Module.Interaction
 			return true;
 		}
 
-		// Token: 0x060396B3 RID: 235187 RVA: 0x00DA0A3A File Offset: 0x00D9EC3A
+		// Token: 0x0602E5C7 RID: 189895 RVA: 0x00CEF946 File Offset: 0x00CEDB46
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060396B4 RID: 235188 RVA: 0x00DA0A3C File Offset: 0x00D9EC3C
+		// Token: 0x0602E5C8 RID: 189896 RVA: 0x00CEF948 File Offset: 0x00CEDB48
 		public static void ResetStaticDefaultValue()
 		{
 			InteractionConfig._Instance = null;
 		}
 
-		// Token: 0x060396B5 RID: 235189 RVA: 0x00DA0A44 File Offset: 0x00D9EC44
+		// Token: 0x0602E5C9 RID: 189897 RVA: 0x00CEF950 File Offset: 0x00CEDB50
 		static InteractionConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InteractionConfig.CreateStaticDefaultValue), new Action(InteractionConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E071 RID: 122993
+		// Token: 0x04018B0A RID: 101130
 		[Nullable(2)]
 		private static InteractionConfig _Instance;
 	}

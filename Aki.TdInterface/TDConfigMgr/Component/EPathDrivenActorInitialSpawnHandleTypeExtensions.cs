@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009C2 RID: 2498
+	// Token: 0x02000A83 RID: 2691
 	public static class EPathDrivenActorInitialSpawnHandleTypeExtensions
 	{
-		// Token: 0x0600379A RID: 14234 RVA: 0x00090950 File Offset: 0x0008EB50
+		// Token: 0x06003B60 RID: 15200 RVA: 0x00099020 File Offset: 0x00097220
 		public static string ToEnumString(this EPathDrivenActorInitialSpawnHandleType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600379B RID: 14235 RVA: 0x00090978 File Offset: 0x0008EB78
+		// Token: 0x06003B61 RID: 15201 RVA: 0x00099048 File Offset: 0x00097248
 		public static EPathDrivenActorInitialSpawnHandleType FromString(string name)
 		{
 			EPathDrivenActorInitialSpawnHandleType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600379C RID: 14236 RVA: 0x000909A1 File Offset: 0x0008EBA1
+		// Token: 0x06003B62 RID: 15202 RVA: 0x00099071 File Offset: 0x00097271
 		public static bool TryFromString(string name, out EPathDrivenActorInitialSpawnHandleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600379D RID: 14237 RVA: 0x000909C6 File Offset: 0x0008EBC6
+		// Token: 0x06003B63 RID: 15203 RVA: 0x00099096 File Offset: 0x00097296
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600379E RID: 14238 RVA: 0x000909D6 File Offset: 0x0008EBD6
+		// Token: 0x06003B64 RID: 15204 RVA: 0x000990A6 File Offset: 0x000972A6
 		public static EPathDrivenActorInitialSpawnHandleType[] GetValues()
 		{
 			return new EPathDrivenActorInitialSpawnHandleType[1];
 		}
 
-		// Token: 0x0600379F RID: 14239 RVA: 0x000909DE File Offset: 0x0008EBDE
+		// Token: 0x06003B65 RID: 15205 RVA: 0x000990AE File Offset: 0x000972AE
 		public static string[] GetNames()
 		{
 			return new string[]

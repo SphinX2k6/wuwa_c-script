@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010D0 RID: 4304
+// Token: 0x02000584 RID: 1412
 public class AdvanceNoticeMultiGridItem : UiPanelBase
 {
-	// Token: 0x0600701C RID: 28700 RVA: 0x0016D0E3 File Offset: 0x0016B2E3
+	// Token: 0x060043B2 RID: 17330 RVA: 0x00175A9F File Offset: 0x00173C9F
 	public AdvanceNoticeMultiGridItem(int advertisingPageInfoId)
 	{
 		this.AdvertisingPageInfoId = advertisingPageInfoId;
 	}
 
-	// Token: 0x0600701D RID: 28701 RVA: 0x0016D100 File Offset: 0x0016B300
+	// Token: 0x060043B3 RID: 17331 RVA: 0x00175ABC File Offset: 0x00173CBC
 	protected override void OnRegisterComponent()
 	{
 		int gridCount = this.GetGridCount();
@@ -25,7 +25,7 @@ public class AdvanceNoticeMultiGridItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600701E RID: 28702 RVA: 0x0016D13C File Offset: 0x0016B33C
+	// Token: 0x060043B4 RID: 17332 RVA: 0x00175AF8 File Offset: 0x00173CF8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AdvanceNoticeMultiGridItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -36,13 +36,13 @@ public class AdvanceNoticeMultiGridItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600701F RID: 28703 RVA: 0x0016D180 File Offset: 0x0016B380
+	// Token: 0x060043B5 RID: 17333 RVA: 0x00175B3C File Offset: 0x00173D3C
 	public int GetGridCount()
 	{
 		return AdvanceNoticeConfig.Instance.GetAdvertisingPageInfoById(this.AdvertisingPageInfoId).GetTabIdArrayArray().Length;
 	}
 
-	// Token: 0x06007020 RID: 28704 RVA: 0x0016D1A7 File Offset: 0x0016B3A7
+	// Token: 0x060043B6 RID: 17334 RVA: 0x00175B63 File Offset: 0x00173D63
 	public void PlayAnim()
 	{
 		UUIInturnAnimController animControllerComponent = this.AnimControllerComponent;
@@ -53,14 +53,14 @@ public class AdvanceNoticeMultiGridItem : UiPanelBase
 		animControllerComponent.Play("", -1, false);
 	}
 
-	// Token: 0x0400340D RID: 13325
+	// Token: 0x040034A6 RID: 13478
 	[Nullable(1)]
 	private readonly List<AdvanceNoticeGridItem> GridItemList = new List<AdvanceNoticeGridItem>();
 
-	// Token: 0x0400340E RID: 13326
+	// Token: 0x040034A7 RID: 13479
 	[Nullable(2)]
 	protected UUIInturnAnimController AnimControllerComponent;
 
-	// Token: 0x0400340F RID: 13327
+	// Token: 0x040034A8 RID: 13480
 	public readonly int AdvertisingPageInfoId;
 }

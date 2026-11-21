@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 {
-	// Token: 0x020047F6 RID: 18422
+	// Token: 0x02003727 RID: 14119
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PunishReportTargetListItemPanel : UiPanelBase
 	{
-		// Token: 0x0603040B RID: 197643 RVA: 0x00B30F54 File Offset: 0x00B2F154
+		// Token: 0x06024BDB RID: 150491 RVA: 0x00A60EF4 File Offset: 0x00A5F0F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603040C RID: 197644 RVA: 0x00B31000 File Offset: 0x00B2F200
+		// Token: 0x06024BDC RID: 150492 RVA: 0x00A60FA0 File Offset: 0x00A5F1A0
 		public void SetDescLocalNewTxt(string txtKey)
 		{
 			UUIText text = base.GetText(0);
 			LguiUtil.Instance.SetLocalTextNew(text, txtKey, Array.Empty<object>());
 		}
 
-		// Token: 0x0603040D RID: 197645 RVA: 0x00B31026 File Offset: 0x00B2F226
+		// Token: 0x06024BDD RID: 150493 RVA: 0x00A60FC6 File Offset: 0x00A5F1C6
 		public void SetDescTxt(string txt)
 		{
 			UUIText text = base.GetText(0);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			text.SetText(txt, true);
 		}
 
-		// Token: 0x0603040E RID: 197646 RVA: 0x00B3103B File Offset: 0x00B2F23B
+		// Token: 0x06024BDE RID: 150494 RVA: 0x00A60FDB File Offset: 0x00A5F1DB
 		public void SetNumTxt(string txt)
 		{
 			UUIText text = base.GetText(3);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			text.SetText(txt, true);
 		}
 
-		// Token: 0x0603040F RID: 197647 RVA: 0x00B31050 File Offset: 0x00B2F250
+		// Token: 0x06024BDF RID: 150495 RVA: 0x00A60FF0 File Offset: 0x00A5F1F0
 		public void SetState(EPunishReportTargetListItemPanelState state)
 		{
 			string text;
@@ -83,20 +83,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			base.SetTextureByPath(resourcePath, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200AAC0 RID: 43712
+		// Token: 0x02009471 RID: 38001
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033EFB RID: 212731
+			// Token: 0x0402E67E RID: 190078
 			public const int TxtL = 0;
 
-			// Token: 0x04033EFC RID: 212732
+			// Token: 0x0402E67F RID: 190079
 			public const int TexState = 1;
 
-			// Token: 0x04033EFD RID: 212733
+			// Token: 0x0402E680 RID: 190080
 			public const int PnlGift = 2;
 
-			// Token: 0x04033EFE RID: 212734
+			// Token: 0x0402E681 RID: 190081
 			public const int TxtLNum = 3;
 		}
 	}

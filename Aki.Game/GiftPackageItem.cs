@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200239A RID: 9114
+// Token: 0x0200187F RID: 6271
 public class GiftPackageItem : UiPanelBase
 {
-	// Token: 0x060123A6 RID: 74662 RVA: 0x0047D89D File Offset: 0x0047BA9D
+	// Token: 0x0600F858 RID: 63576 RVA: 0x0048ACDD File Offset: 0x00488EDD
 	[NullableContext(1)]
 	public void Initialize(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x060123A7 RID: 74663 RVA: 0x0047D8AC File Offset: 0x0047BAAC
+	// Token: 0x0600F859 RID: 63577 RVA: 0x0048ACEC File Offset: 0x00488EEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,19 +32,19 @@ public class GiftPackageItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060123A8 RID: 74664 RVA: 0x0047D936 File Offset: 0x0047BB36
+	// Token: 0x0600F85A RID: 63578 RVA: 0x0048AD76 File Offset: 0x00488F76
 	protected override void OnStart()
 	{
 		this.CommonItemSimpleGrid = new CommonItemSmallItemGrid();
 		this.CommonItemSimpleGrid.Initialize(base.GetItem(0).GetOwner());
 	}
 
-	// Token: 0x060123A9 RID: 74665 RVA: 0x0047D95A File Offset: 0x0047BB5A
+	// Token: 0x0600F85B RID: 63579 RVA: 0x0048AD9A File Offset: 0x00488F9A
 	public void SetBelongViewName(EUiViewName viewName)
 	{
 	}
 
-	// Token: 0x060123AA RID: 74666 RVA: 0x0047D95C File Offset: 0x0047BB5C
+	// Token: 0x0600F85C RID: 63580 RVA: 0x0048AD9C File Offset: 0x00488F9C
 	public void UpdateItem(int itemId, int count)
 	{
 		this.ItemId = itemId;
@@ -54,28 +54,28 @@ public class GiftPackageItem : UiPanelBase
 		LguiUtil.Instance.SetLocalText(base.GetText(2), "Quantity", new <>z__ReadOnlySingleElementList<object>(count));
 	}
 
-	// Token: 0x060123AB RID: 74667 RVA: 0x0047D9C7 File Offset: 0x0047BBC7
+	// Token: 0x0600F85D RID: 63581 RVA: 0x0048AE07 File Offset: 0x00489007
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x040089B6 RID: 35254
+	// Token: 0x04008AFD RID: 35581
 	[Nullable(2)]
 	protected CommonItemSmallItemGrid CommonItemSimpleGrid;
 
-	// Token: 0x040089B7 RID: 35255
+	// Token: 0x04008AFE RID: 35582
 	protected int ItemId;
 
-	// Token: 0x0200893E RID: 35134
+	// Token: 0x02007AC9 RID: 31433
 	private class EGiftPackageItem
 	{
-		// Token: 0x0402C9E0 RID: 182752
+		// Token: 0x04027CFD RID: 163069
 		public const int CommonItemSimpleGrid = 0;
 
-		// Token: 0x0402C9E1 RID: 182753
+		// Token: 0x04027CFE RID: 163070
 		public const int Name = 1;
 
-		// Token: 0x0402C9E2 RID: 182754
+		// Token: 0x04027CFF RID: 163071
 		public const int Count = 2;
 	}
 }

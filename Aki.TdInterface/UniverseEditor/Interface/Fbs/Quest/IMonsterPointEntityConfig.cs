@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F3E RID: 16190
+	// Token: 0x0200437C RID: 17276
 	public struct IMonsterPointEntityConfig : IFlatbufferObject
 	{
-		// Token: 0x17007097 RID: 28823
-		// (get) Token: 0x06017025 RID: 94245 RVA: 0x003518FF File Offset: 0x0034FAFF
+		// Token: 0x17007688 RID: 30344
+		// (get) Token: 0x06018687 RID: 99975 RVA: 0x0037AD73 File Offset: 0x00378F73
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017026 RID: 94246 RVA: 0x0035190C File Offset: 0x0034FB0C
+		// Token: 0x06018688 RID: 99976 RVA: 0x0037AD80 File Offset: 0x00378F80
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017027 RID: 94247 RVA: 0x00351914 File Offset: 0x0034FB14
+		// Token: 0x06018689 RID: 99977 RVA: 0x0037AD88 File Offset: 0x00378F88
 		public static IMonsterPointEntityConfig GetRootAsIMonsterPointEntityConfig(ByteBuffer _bb)
 		{
 			return IMonsterPointEntityConfig.GetRootAsIMonsterPointEntityConfig(_bb, default(IMonsterPointEntityConfig));
 		}
 
-		// Token: 0x06017028 RID: 94248 RVA: 0x00351930 File Offset: 0x0034FB30
+		// Token: 0x0601868A RID: 99978 RVA: 0x0037ADA4 File Offset: 0x00378FA4
 		public static IMonsterPointEntityConfig GetRootAsIMonsterPointEntityConfig(ByteBuffer _bb, IMonsterPointEntityConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017029 RID: 94249 RVA: 0x0035194D File Offset: 0x0034FB4D
+		// Token: 0x0601868B RID: 99979 RVA: 0x0037ADC1 File Offset: 0x00378FC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601702A RID: 94250 RVA: 0x0035195C File Offset: 0x0034FB5C
+		// Token: 0x0601868C RID: 99980 RVA: 0x0037ADD0 File Offset: 0x00378FD0
 		public IMonsterPointEntityConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007098 RID: 28824
-		// (get) Token: 0x0601702B RID: 94251 RVA: 0x0035196C File Offset: 0x0034FB6C
+		// Token: 0x17007689 RID: 30345
+		// (get) Token: 0x0601868D RID: 99981 RVA: 0x0037ADE0 File Offset: 0x00378FE0
 		public int EntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007099 RID: 28825
-		// (get) Token: 0x0601702C RID: 94252 RVA: 0x003519A8 File Offset: 0x0034FBA8
+		// Token: 0x1700768A RID: 30346
+		// (get) Token: 0x0601868E RID: 99982 RVA: 0x0037AE1C File Offset: 0x0037901C
 		public int Point
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601702D RID: 94253 RVA: 0x003519E4 File Offset: 0x0034FBE4
+		// Token: 0x0601868F RID: 99983 RVA: 0x0037AE58 File Offset: 0x00379058
 		public static Offset<IMonsterPointEntityConfig> CreateIMonsterPointEntityConfig(FlatBufferBuilder builder, int EntityId = 0, int Point = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMonsterPointEntityConfig.EndIMonsterPointEntityConfig(builder);
 		}
 
-		// Token: 0x0601702E RID: 94254 RVA: 0x00351A01 File Offset: 0x0034FC01
+		// Token: 0x06018690 RID: 99984 RVA: 0x0037AE75 File Offset: 0x00379075
 		public static void StartIMonsterPointEntityConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601702F RID: 94255 RVA: 0x00351A0A File Offset: 0x0034FC0A
+		// Token: 0x06018691 RID: 99985 RVA: 0x0037AE7E File Offset: 0x0037907E
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x06017030 RID: 94256 RVA: 0x00351A15 File Offset: 0x0034FC15
+		// Token: 0x06018692 RID: 99986 RVA: 0x0037AE89 File Offset: 0x00379089
 		public static void AddPoint(FlatBufferBuilder builder, int point)
 		{
 			builder.AddInt(1, point, 0);
 		}
 
-		// Token: 0x06017031 RID: 94257 RVA: 0x00351A20 File Offset: 0x0034FC20
+		// Token: 0x06018693 RID: 99987 RVA: 0x0037AE94 File Offset: 0x00379094
 		public static Offset<IMonsterPointEntityConfig> EndIMonsterPointEntityConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterPointEntityConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06017032 RID: 94258 RVA: 0x00351A30 File Offset: 0x0034FC30
+		// Token: 0x06018694 RID: 99988 RVA: 0x0037AEA4 File Offset: 0x003790A4
 		public IMonsterPointEntityConfigT UnPack()
 		{
 			IMonsterPointEntityConfigT monsterPointEntityConfigT = new IMonsterPointEntityConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return monsterPointEntityConfigT;
 		}
 
-		// Token: 0x06017033 RID: 94259 RVA: 0x00351A4B File Offset: 0x0034FC4B
+		// Token: 0x06018695 RID: 99989 RVA: 0x0037AEBF File Offset: 0x003790BF
 		public void UnPackTo(IMonsterPointEntityConfigT _o)
 		{
 			_o.EntityId = this.EntityId;
 			_o.Point = this.Point;
 		}
 
-		// Token: 0x06017034 RID: 94260 RVA: 0x00351A68 File Offset: 0x0034FC68
+		// Token: 0x06018696 RID: 99990 RVA: 0x0037AEDC File Offset: 0x003790DC
 		public static Offset<IMonsterPointEntityConfig> Pack(FlatBufferBuilder builder, IMonsterPointEntityConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMonsterPointEntityConfig.CreateIMonsterPointEntityConfig(builder, _o.EntityId, _o.Point);
 		}
 
-		// Token: 0x0400B94E RID: 47438
+		// Token: 0x0400C32C RID: 49964
 		private Table __p;
 	}
 }

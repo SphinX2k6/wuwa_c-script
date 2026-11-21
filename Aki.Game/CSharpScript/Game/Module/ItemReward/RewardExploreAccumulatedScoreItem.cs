@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057F9 RID: 22521
+	// Token: 0x020047D0 RID: 18384
 	public class RewardExploreAccumulatedScoreItem : UiPanelBase
 	{
-		// Token: 0x0603942A RID: 234538 RVA: 0x00D93DD4 File Offset: 0x00D91FD4
+		// Token: 0x0602E33E RID: 189246 RVA: 0x00CE2C1C File Offset: 0x00CE0E1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -33,21 +33,21 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603942B RID: 234539 RVA: 0x00D93EC4 File Offset: 0x00D920C4
+		// Token: 0x0602E33F RID: 189247 RVA: 0x00CE2D0C File Offset: 0x00CE0F0C
 		protected override void OnStart()
 		{
 			this.DetailScoreLayout = new GenericLayout<RewardExploreAccumulatedScoreItem.ScoreItem, IAccumulatedScoreLineData>(base.GetVerticalLayout(0), new Func<RewardExploreAccumulatedScoreItem.ScoreItem>(this.CreateScoreItem), null, false, true);
 			this.TotalScoreLayout = new GenericLayout<RewardExploreAccumulatedScoreItem.ScoreItem, IAccumulatedScoreLineData>(base.GetVerticalLayout(2), new Func<RewardExploreAccumulatedScoreItem.ScoreItem>(this.CreateScoreItem), null, false, true);
 		}
 
-		// Token: 0x0603942C RID: 234540 RVA: 0x00D93F13 File Offset: 0x00D92113
+		// Token: 0x0602E340 RID: 189248 RVA: 0x00CE2D5B File Offset: 0x00CE0F5B
 		[NullableContext(1)]
 		private RewardExploreAccumulatedScoreItem.ScoreItem CreateScoreItem()
 		{
 			return new RewardExploreAccumulatedScoreItem.ScoreItem();
 		}
 
-		// Token: 0x0603942D RID: 234541 RVA: 0x00D93F1C File Offset: 0x00D9211C
+		// Token: 0x0602E341 RID: 189249 RVA: 0x00CE2D64 File Offset: 0x00CE0F64
 		[NullableContext(1)]
 		public void Refresh(AccumulatedScoreData data)
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			base.GetItem(5).SetUIActive(flag);
 		}
 
-		// Token: 0x0401DF2E RID: 122670
+		// Token: 0x040189C5 RID: 100805
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericLayout<RewardExploreAccumulatedScoreItem.ScoreItem, IAccumulatedScoreLineData> DetailScoreLayout;
 
-		// Token: 0x0401DF2F RID: 122671
+		// Token: 0x040189C6 RID: 100806
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,29 +113,29 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericLayout<RewardExploreAccumulatedScoreItem.ScoreItem, IAccumulatedScoreLineData> TotalScoreLayout;
 
-		// Token: 0x0200B9EB RID: 47595
+		// Token: 0x0200A401 RID: 41985
 		private class EChildType
 		{
-			// Token: 0x0403835A RID: 230234
+			// Token: 0x04032D47 RID: 208199
 			public const int DetailScoreLayout = 0;
 
-			// Token: 0x0403835B RID: 230235
+			// Token: 0x04032D48 RID: 208200
 			public const int DetailScoreTemplateItem = 1;
 
-			// Token: 0x0403835C RID: 230236
+			// Token: 0x04032D49 RID: 208201
 			public const int TotalScoreLayout = 2;
 
-			// Token: 0x0403835D RID: 230237
+			// Token: 0x04032D4A RID: 208202
 			public const int TotalScoreTemplateItem = 3;
 
-			// Token: 0x0403835E RID: 230238
+			// Token: 0x04032D4B RID: 208203
 			public const int LimitScoreText = 4;
 
-			// Token: 0x0403835F RID: 230239
+			// Token: 0x04032D4C RID: 208204
 			public const int ArriveMaxScoreItem = 5;
 		}
 
-		// Token: 0x0200B9EC RID: 47596
+		// Token: 0x0200A402 RID: 41986
 		[Nullable(new byte[]
 		{
 			0,
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		public class ScoreItem : GridProxyAbstract<IAccumulatedScoreLineData>
 		{
-			// Token: 0x0604F6F9 RID: 325369 RVA: 0x01542B00 File Offset: 0x01540D00
+			// Token: 0x06045C85 RID: 285829 RVA: 0x014FBE48 File Offset: 0x014FA048
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 2;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x0604F6FA RID: 325370 RVA: 0x01542B69 File Offset: 0x01540D69
+			// Token: 0x06045C86 RID: 285830 RVA: 0x014FBEB1 File Offset: 0x014FA0B1
 			[NullableContext(1)]
 			public override void Refresh(IAccumulatedScoreLineData data, bool isSelected, int gridIndex)
 			{
@@ -165,13 +165,13 @@ namespace CSharpScript.Game.Module.ItemReward
 				base.GetText(1).SetText(data.ScoreText, true);
 			}
 
-			// Token: 0x0200D16A RID: 53610
+			// Token: 0x0200BD48 RID: 48456
 			private class EScoreItemComponent
 			{
-				// Token: 0x0403ED92 RID: 257426
+				// Token: 0x0403A1DA RID: 238042
 				public const int DescText = 0;
 
-				// Token: 0x0403ED93 RID: 257427
+				// Token: 0x0403A1DB RID: 238043
 				public const int ScoreText = 1;
 			}
 		}

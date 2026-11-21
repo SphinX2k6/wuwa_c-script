@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200005E RID: 94
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class DynamicLevelPlayComponent : IComponentBase
 	{
-		// Token: 0x06000316 RID: 790 RVA: 0x0001B144 File Offset: 0x00019344
+		// Token: 0x0600031A RID: 794 RVA: 0x0001BAB8 File Offset: 0x00019CB8
 		private DynamicLevelPlayComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000317 RID: 791 RVA: 0x0001B17C File Offset: 0x0001937C
+		// Token: 0x0600031B RID: 795 RVA: 0x0001BAF0 File Offset: 0x00019CF0
 		public static DynamicLevelPlayComponent Create([Nullable(2)] DynamicLevelPlayComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000318 RID: 792 RVA: 0x0001B18F File Offset: 0x0001938F
+		// Token: 0x0600031C RID: 796 RVA: 0x0001BB03 File Offset: 0x00019D03
 		public static DynamicLevelPlayComponent CreateFromSetValue([Nullable(2)] DynamicLevelPlayComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000319 RID: 793 RVA: 0x0001B1A2 File Offset: 0x000193A2
+		// Token: 0x0600031D RID: 797 RVA: 0x0001BB16 File Offset: 0x00019D16
 		public new DynamicLevelPlayComponent_SetValue ToSetValue()
 		{
 			return new DynamicLevelPlayComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000110 RID: 272
-		// (get) Token: 0x0600031A RID: 794 RVA: 0x0001B1D0 File Offset: 0x000193D0
-		// (set) Token: 0x0600031B RID: 795 RVA: 0x0001B20A File Offset: 0x0001940A
+		// Token: 0x17000112 RID: 274
+		// (get) Token: 0x0600031E RID: 798 RVA: 0x0001BB44 File Offset: 0x00019D44
+		// (set) Token: 0x0600031F RID: 799 RVA: 0x0001BB7E File Offset: 0x00019D7E
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000111 RID: 273
-		// (get) Token: 0x0600031C RID: 796 RVA: 0x0001B218 File Offset: 0x00019418
-		// (set) Token: 0x0600031D RID: 797 RVA: 0x0001B242 File Offset: 0x00019442
+		// Token: 0x17000113 RID: 275
+		// (get) Token: 0x06000320 RID: 800 RVA: 0x0001BB8C File Offset: 0x00019D8C
+		// (set) Token: 0x06000321 RID: 801 RVA: 0x0001BBB6 File Offset: 0x00019DB6
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000112 RID: 274
-		// (get) Token: 0x0600031E RID: 798 RVA: 0x0001B250 File Offset: 0x00019450
-		// (set) Token: 0x0600031F RID: 799 RVA: 0x0001B27B File Offset: 0x0001947B
+		// Token: 0x17000114 RID: 276
+		// (get) Token: 0x06000322 RID: 802 RVA: 0x0001BBC4 File Offset: 0x00019DC4
+		// (set) Token: 0x06000323 RID: 803 RVA: 0x0001BBEF File Offset: 0x00019DEF
 		public virtual int DynamicLevelPlayId
 		{
 			get
@@ -127,11 +125,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040001F7 RID: 503
+		// Token: 0x040001FC RID: 508
 		[Nullable(2)]
 		protected new DynamicLevelPlayComponent FbInstance;
 
-		// Token: 0x040001F8 RID: 504
+		// Token: 0x040001FD RID: 509
 		[Nullable(2)]
 		protected new DynamicLevelPlayComponent_SetValue PocoInterface;
 	}

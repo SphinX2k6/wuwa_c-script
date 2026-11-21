@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200302F RID: 12335
+// Token: 0x02002585 RID: 9605
 public enum ECounterAttackType
 {
-	// Token: 0x0400C66D RID: 50797
+	// Token: 0x0400CA3C RID: 51772
 	None,
-	// Token: 0x0400C66E RID: 50798
+	// Token: 0x0400CA3D RID: 51773
 	Normal,
-	// Token: 0x0400C66F RID: 50799
+	// Token: 0x0400CA3E RID: 51774
 	Vision
 }

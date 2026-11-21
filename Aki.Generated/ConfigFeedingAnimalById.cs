@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002BB RID: 699
+	// Token: 0x020002D0 RID: 720
 	public class ConfigFeedingAnimalById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001067 RID: 4199 RVA: 0x000B6393 File Offset: 0x000B4593
+		// Token: 0x060010E5 RID: 4325 RVA: 0x000BC89F File Offset: 0x000BAA9F
 		static ConfigFeedingAnimalById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFeedingAnimalById.CreateStaticDefaultValue), new Action(ConfigFeedingAnimalById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001068 RID: 4200 RVA: 0x000B63B4 File Offset: 0x000B45B4
+		// Token: 0x060010E6 RID: 4326 RVA: 0x000BC8C0 File Offset: 0x000BAAC0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFeedingAnimalById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001069 RID: 4201 RVA: 0x000B6433 File Offset: 0x000B4633
+		// Token: 0x060010E7 RID: 4327 RVA: 0x000BC93F File Offset: 0x000BAB3F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFeedingAnimalById.LogPair = null;
 			ConfigFeedingAnimalById.HandleId = 0;
 		}
 
-		// Token: 0x0600106A RID: 4202 RVA: 0x000B6441 File Offset: 0x000B4641
+		// Token: 0x060010E8 RID: 4328 RVA: 0x000BC94D File Offset: 0x000BAB4D
 		public static void Init()
 		{
 			ConfigFeedingAnimalById.HandleId = ConfigCommon.InitDataStatement(ConfigFeedingAnimalById.HandleId, "db_feedinganimal.db", "select BinData from `FeedingAnimal` where Id=?");
 		}
 
-		// Token: 0x0600106B RID: 4203 RVA: 0x000B645C File Offset: 0x000B465C
+		// Token: 0x060010E9 RID: 4329 RVA: 0x000BC968 File Offset: 0x000BAB68
 		public static FeedingAnimal? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFeedingAnimalById.HandleId, ConfigFeedingAnimalById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FeedingAnimal?(rootAsFeedingAnimal);
 		}
 
-		// Token: 0x04001301 RID: 4865
+		// Token: 0x04001394 RID: 5012
 		private const string DB = "db_feedinganimal.db";
 
-		// Token: 0x04001302 RID: 4866
+		// Token: 0x04001395 RID: 5013
 		private const string FILE = "t.投喂动物.xlsx";
 
-		// Token: 0x04001303 RID: 4867
+		// Token: 0x04001396 RID: 5014
 		private const string TABLE = "FeedingAnimal";
 
-		// Token: 0x04001304 RID: 4868
+		// Token: 0x04001397 RID: 5015
 		private const string COMMAND = "select BinData from `FeedingAnimal` where Id=?";
 
-		// Token: 0x04001305 RID: 4869
+		// Token: 0x04001398 RID: 5016
 		private const string KEY_PREFIX = "FeedingAnimalById";
 
-		// Token: 0x04001306 RID: 4870
+		// Token: 0x04001399 RID: 5017
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001307 RID: 4871
+		// Token: 0x0400139A RID: 5018
 		private static int HandleId;
 	}
 }

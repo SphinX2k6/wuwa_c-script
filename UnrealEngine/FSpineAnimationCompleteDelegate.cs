@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028A4 RID: 10404
+	// Token: 0x02000838 RID: 2104
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSpineAnimationCompleteDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06026952 RID: 158034 RVA: 0x003ADE79 File Offset: 0x003AC079
+		// Token: 0x0600B790 RID: 46992 RVA: 0x001262D1 File Offset: 0x001244D1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSpineAnimationCompleteDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06026953 RID: 158035 RVA: 0x003ADE85 File Offset: 0x003AC085
+		// Token: 0x0600B791 RID: 46993 RVA: 0x001262DD File Offset: 0x001244DD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSpineAnimationCompleteDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FSpineAnimationCompleteDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06026954 RID: 158036 RVA: 0x003ADEA8 File Offset: 0x003AC0A8
+		// Token: 0x0600B792 RID: 46994 RVA: 0x00126300 File Offset: 0x00124500
 		public FSpineAnimationCompleteDelegate()
 		{
 		}
 
-		// Token: 0x06026955 RID: 158037 RVA: 0x003ADEB0 File Offset: 0x003AC0B0
+		// Token: 0x0600B793 RID: 46995 RVA: 0x00126308 File Offset: 0x00124508
 		[NullableContext(2)]
 		public FSpineAnimationCompleteDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06026956 RID: 158038 RVA: 0x003ADEBA File Offset: 0x003AC0BA
+		// Token: 0x0600B794 RID: 46996 RVA: 0x00126312 File Offset: 0x00124512
 		public FSpineAnimationCompleteDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06026957 RID: 158039 RVA: 0x003ADEC5 File Offset: 0x003AC0C5
+		// Token: 0x0600B795 RID: 46997 RVA: 0x0012631D File Offset: 0x0012451D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UTrackEntry>) ?? ((Action<UTrackEntry>)Delegate.CreateDelegate(typeof(Action<UTrackEntry>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06026958 RID: 158040 RVA: 0x003ADEF7 File Offset: 0x003AC0F7
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600B796 RID: 46998 RVA: 0x0012634F File Offset: 0x0012454F
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FSpineAnimationCompleteDelegate.RegisterId);
 		}
 
-		// Token: 0x06026959 RID: 158041 RVA: 0x003ADF31 File Offset: 0x003AC131
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600B797 RID: 46999 RVA: 0x00126389 File Offset: 0x00124589
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0602695A RID: 158042 RVA: 0x003ADF3C File Offset: 0x003AC13C
+		// Token: 0x0600B798 RID: 47000 RVA: 0x00126394 File Offset: 0x00124594
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UTrackEntry entry)
 		{
 			FSpineAnimationCompleteDelegate.__FSpineAnimationCompleteDelegate_DelegateParams* ptr = stackalloc FSpineAnimationCompleteDelegate.__FSpineAnimationCompleteDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FSpineAnimationCompleteDelegate.__FSpineAnimationCompleteDelegate_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0602695B RID: 158043 RVA: 0x003ADF88 File Offset: 0x003AC188
+		// Token: 0x0600B799 RID: 47001 RVA: 0x001263E0 File Offset: 0x001245E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UTrackEntry> action = target as Action<UTrackEntry>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04015321 RID: 86817
+		// Token: 0x0400536E RID: 21358
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04015322 RID: 86818
+		// Token: 0x0400536F RID: 21359
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SpinePlugin.SpineAnimationCompleteDelegate__DelegateSignature";
 
-		// Token: 0x04015323 RID: 86819
+		// Token: 0x04005370 RID: 21360
 		private static int RegisterId;
 
-		// Token: 0x02003B3A RID: 15162
+		// Token: 0x020013CC RID: 5068
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FSpineAnimationCompleteDelegate_DelegateParams
+		private ref struct __FSpineAnimationCompleteDelegate_DelegateParams
 		{
-			// Token: 0x04017CDE RID: 97502
+			// Token: 0x04006837 RID: 26679
 			[FieldOffset(0)]
 			public IntPtr entry;
 		}
 
-		// Token: 0x02003B3B RID: 15163
+		// Token: 0x020013CD RID: 5069
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017CDF RID: 97503
+			// Token: 0x04006838 RID: 26680
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007014 RID: 28692
+	// Token: 0x02006195 RID: 24981
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TouchUiEditApplyHelper : IStaticVariableResetter
 	{
-		// Token: 0x06045D38 RID: 286008 RVA: 0x0115D820 File Offset: 0x0115BA20
+		// Token: 0x0603BEEE RID: 245486 RVA: 0x01107C1C File Offset: 0x01105E1C
 		static TouchUiEditApplyHelper()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TouchUiEditApplyHelper.CreateStaticDefaultValue), new Action(TouchUiEditApplyHelper.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045D39 RID: 286009 RVA: 0x0115D83F File Offset: 0x0115BA3F
+		// Token: 0x0603BEEF RID: 245487 RVA: 0x01107C3B File Offset: 0x01105E3B
 		[NullableContext(2)]
 		private static bool TryGetDataFacade(ECommonTouchUiEditGroup group, out CommonTouchUiEditDataFacade dataFacade)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045D3A RID: 286010 RVA: 0x0115D870 File Offset: 0x0115BA70
+		// Token: 0x0603BEF0 RID: 245488 RVA: 0x01107C6C File Offset: 0x01105E6C
 		private static void CacheData(UiPanelBase panel, string resId, ITouchUiEditDataFacade dataFacade)
 		{
 			AActor rootActor = panel.GetRootActor();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045D3B RID: 286011 RVA: 0x0115D960 File Offset: 0x0115BB60
+		// Token: 0x0603BEF1 RID: 245489 RVA: 0x01107D5C File Offset: 0x01105F5C
 		private static void ApplyData(UiPanelBase panel, string resId, ITouchUiEditDataFacade dataFacade)
 		{
 			AActor rootActor = panel.GetRootActor();
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045D3C RID: 286012 RVA: 0x0115DAF0 File Offset: 0x0115BCF0
+		// Token: 0x0603BEF2 RID: 245490 RVA: 0x01107EEC File Offset: 0x011060EC
 		public static void ApplyCommonTouchUiEditData(ECommonTouchUiEditGroup group, UiPanelBase panel, string resId)
 		{
 			CommonTouchUiEditDataFacade commonTouchUiEditDataFacade;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditApplyHelper.ApplyData(panel, resId, commonTouchUiEditDataFacade);
 		}
 
-		// Token: 0x06045D3D RID: 286013 RVA: 0x0115DB14 File Offset: 0x0115BD14
+		// Token: 0x0603BEF3 RID: 245491 RVA: 0x01107F10 File Offset: 0x01106110
 		public static void CacheTouchUiEditInitData(ECommonTouchUiEditGroup group, UiPanelBase panel, string resId)
 		{
 			CommonTouchUiEditDataFacade commonTouchUiEditDataFacade;
@@ -153,19 +153,19 @@ namespace CSharpScript.Game.InputSetting
 			TouchUiEditApplyHelper.CacheData(panel, resId, commonTouchUiEditDataFacade);
 		}
 
-		// Token: 0x06045D3E RID: 286014 RVA: 0x0115DB37 File Offset: 0x0115BD37
+		// Token: 0x0603BEF4 RID: 245492 RVA: 0x01107F33 File Offset: 0x01106133
 		public static void CreateStaticDefaultValue()
 		{
 			TouchUiEditApplyHelper.OriginalOffsetCache = new Dictionary<int, ValueTuple<float, float>>();
 		}
 
-		// Token: 0x06045D3F RID: 286015 RVA: 0x0115DB43 File Offset: 0x0115BD43
+		// Token: 0x0603BEF5 RID: 245493 RVA: 0x01107F3F File Offset: 0x0110613F
 		public static void ResetStaticDefaultValue()
 		{
 			TouchUiEditApplyHelper.OriginalOffsetCache = null;
 		}
 
-		// Token: 0x04024823 RID: 149539
+		// Token: 0x0401FAD9 RID: 129753
 		[Nullable(new byte[]
 		{
 			1,

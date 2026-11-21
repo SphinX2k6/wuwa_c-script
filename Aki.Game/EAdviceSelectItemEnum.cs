@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020016C2 RID: 5826
+// Token: 0x02000B7A RID: 2938
 public enum EAdviceSelectItemEnum
 {
-	// Token: 0x04004B21 RID: 19233
+	// Token: 0x04004BC8 RID: 19400
 	SelectWord1,
-	// Token: 0x04004B22 RID: 19234
+	// Token: 0x04004BC9 RID: 19401
 	Conjunction,
-	// Token: 0x04004B23 RID: 19235
+	// Token: 0x04004BCA RID: 19402
 	SelectWord2,
-	// Token: 0x04004B24 RID: 19236
+	// Token: 0x04004BCB RID: 19403
 	AddExpression,
-	// Token: 0x04004B25 RID: 19237
+	// Token: 0x04004BCC RID: 19404
 	CutLine,
-	// Token: 0x04004B26 RID: 19238
+	// Token: 0x04004BCD RID: 19405
 	ChangeWordBtn,
-	// Token: 0x04004B27 RID: 19239
+	// Token: 0x04004BCE RID: 19406
 	AddOrDecreaseBtn
 }

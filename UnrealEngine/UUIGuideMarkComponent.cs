@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002176 RID: 8566
+	// Token: 0x02000709 RID: 1801
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIGuideMarkComponent")]
 	[UnrealStructLayout(336, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 336)]
 	public class UUIGuideMarkComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060205B5 RID: 132533 RVA: 0x003007F8 File Offset: 0x002FE9F8
+		// Token: 0x06009978 RID: 39288 RVA: 0x000E6DEB File Offset: 0x000E4FEB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIGuideMarkComponent._ClassPtr;
 		}
 
-		// Token: 0x060205B6 RID: 132534 RVA: 0x00300804 File Offset: 0x002FEA04
+		// Token: 0x06009979 RID: 39289 RVA: 0x000E6DF8 File Offset: 0x000E4FF8
 		public UUIGuideMarkComponent() : this(BuiltinUtils.AllocNativeUObject(UUIGuideMarkComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060205B7 RID: 132535 RVA: 0x0030082C File Offset: 0x002FEA2C
+		// Token: 0x0600997A RID: 39290 RVA: 0x000E6E20 File Offset: 0x000E5020
 		public UUIGuideMarkComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIGuideMarkComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007ECF RID: 32463
-		// (get) Token: 0x060205B8 RID: 132536 RVA: 0x0030085F File Offset: 0x002FEA5F
-		// (set) Token: 0x060205B9 RID: 132537 RVA: 0x0030086F File Offset: 0x002FEA6F
+		// Token: 0x17001C84 RID: 7300
+		// (get) Token: 0x0600997B RID: 39291 RVA: 0x000E6E53 File Offset: 0x000E5053
+		// (set) Token: 0x0600997C RID: 39292 RVA: 0x000E6E63 File Offset: 0x000E5063
 		public unsafe EUIGuideMarkType Type
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007ED0 RID: 32464
-		// (get) Token: 0x060205BA RID: 132538 RVA: 0x00300880 File Offset: 0x002FEA80
-		// (set) Token: 0x060205BB RID: 132539 RVA: 0x00300894 File Offset: 0x002FEA94
+		// Token: 0x17001C85 RID: 7301
+		// (get) Token: 0x0600997D RID: 39293 RVA: 0x000E6E74 File Offset: 0x000E5074
+		// (set) Token: 0x0600997E RID: 39294 RVA: 0x000E6E88 File Offset: 0x000E5088
 		public unsafe string Name
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007ED1 RID: 32465
-		// (get) Token: 0x060205BC RID: 132540 RVA: 0x003008AC File Offset: 0x002FEAAC
-		// (set) Token: 0x060205BD RID: 132541 RVA: 0x003008E5 File Offset: 0x002FEAE5
+		// Token: 0x17001C86 RID: 7302
+		// (get) Token: 0x0600997F RID: 39295 RVA: 0x000E6EA0 File Offset: 0x000E50A0
+		// (set) Token: 0x06009980 RID: 39296 RVA: 0x000E6ED9 File Offset: 0x000E50D9
 		[Nullable(new byte[]
 		{
 			1,
@@ -101,36 +101,36 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060205BE RID: 132542 RVA: 0x003008F3 File Offset: 0x002FEAF3
+		// Token: 0x06009981 RID: 39297 RVA: 0x000E6EE7 File Offset: 0x000E50E7
 		static UUIGuideMarkComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIGuideMarkComponent");
 		}
 
-		// Token: 0x060205BF RID: 132543 RVA: 0x00300901 File Offset: 0x002FEB01
+		// Token: 0x06009982 RID: 39298 RVA: 0x000E6EF5 File Offset: 0x000E50F5
 		protected UUIGuideMarkComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011600 RID: 71168
+		// Token: 0x040042A7 RID: 17063
 		public new const string __ObjectPath = "/Script/LGUI.UIGuideMarkComponent";
 
-		// Token: 0x04011601 RID: 71169
+		// Token: 0x040042A8 RID: 17064
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011602 RID: 71170
+		// Token: 0x040042A9 RID: 17065
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011603 RID: 71171
+		// Token: 0x040042AA RID: 17066
 		internal static int __PropertyOffset_Type;
 
-		// Token: 0x04011604 RID: 71172
+		// Token: 0x040042AB RID: 17067
 		internal static int __PropertyOffset_Name;
 
-		// Token: 0x04011605 RID: 71173
+		// Token: 0x040042AC RID: 17068
 		internal static int __PropertyOffset_Children;
 
-		// Token: 0x04011606 RID: 71174
+		// Token: 0x040042AD RID: 17069
 		[Nullable(new byte[]
 		{
 			2,

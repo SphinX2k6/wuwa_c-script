@@ -10,30 +10,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LifePoint
 {
-	// Token: 0x02006ACB RID: 27339
+	// Token: 0x02005C43 RID: 23619
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LifePointModel : ModelBase
 	{
-		// Token: 0x06043EDA RID: 278234 RVA: 0x010A7B46 File Offset: 0x010A5D46
+		// Token: 0x0603A023 RID: 237603 RVA: 0x010511F6 File Offset: 0x0104F3F6
 		public string GetText(EPieceColorType color)
 		{
 			return this.ColorMap[color][4];
 		}
 
-		// Token: 0x06043EDB RID: 278235 RVA: 0x010A7B56 File Offset: 0x010A5D56
+		// Token: 0x0603A024 RID: 237604 RVA: 0x01051206 File Offset: 0x0104F406
 		public string GetColorHex(EPieceColorType color)
 		{
 			return this.ColorMap[color][0];
 		}
 
-		// Token: 0x06043EDC RID: 278236 RVA: 0x010A7B66 File Offset: 0x010A5D66
+		// Token: 0x0603A025 RID: 237605 RVA: 0x01051216 File Offset: 0x0104F416
 		public string GetFramePath(EPieceColorType color)
 		{
 			return this.ColorMap[color][1];
 		}
 
-		// Token: 0x06043EDD RID: 278237 RVA: 0x010A7B78 File Offset: 0x010A5D78
+		// Token: 0x0603A026 RID: 237606 RVA: 0x01051228 File Offset: 0x0104F428
 		protected override bool OnInit()
 		{
 			this.ColorMap[EPieceColorType.Blue] = new string[]
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return true;
 		}
 
-		// Token: 0x06043EDE RID: 278238 RVA: 0x010A7D74 File Offset: 0x010A5F74
+		// Token: 0x0603A027 RID: 237607 RVA: 0x01051424 File Offset: 0x0104F624
 		protected override bool OnClear()
 		{
 			this.ColorMap.Clear();
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return true;
 		}
 
-		// Token: 0x06043EDF RID: 278239 RVA: 0x010A7DA3 File Offset: 0x010A5FA3
+		// Token: 0x0603A028 RID: 237608 RVA: 0x01051453 File Offset: 0x0104F653
 		public float CalcCountDownTime(int order)
 		{
 			return (float)((double)this.AnimParam.MaxTime * (-(float)Math.Exp((double)((float)(-(float)order) * this.AnimParam.AccelerationRes)) + 1.0) + (double)(this.AnimParam.MinInterval * (float)order));
 		}
 
-		// Token: 0x06043EE0 RID: 278240 RVA: 0x010A7DE4 File Offset: 0x010A5FE4
+		// Token: 0x0603A029 RID: 237609 RVA: 0x01051494 File Offset: 0x0104F694
 		public float CalPlayRate(float time)
 		{
 			return MathUtils.Instance.Clamp((this.AnimParam.GridMinRate + (this.AnimParam.GridMaxRate - this.AnimParam.GridMinRate) * time) / this.AnimParam.GridAccelerationTime, this.AnimParam.GridMinRate, this.AnimParam.GridMaxRate);
 		}
 
-		// Token: 0x06043EE1 RID: 278241 RVA: 0x010A7E44 File Offset: 0x010A6044
+		// Token: 0x0603A02A RID: 237610 RVA: 0x010514F4 File Offset: 0x0104F6F4
 		public float BlendDirectionParam(float a1, EDirection a2Direction)
 		{
 			if (a1 < 0f)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return num2;
 		}
 
-		// Token: 0x06043EE2 RID: 278242 RVA: 0x010A7EBC File Offset: 0x010A60BC
+		// Token: 0x0603A02B RID: 237611 RVA: 0x0105156C File Offset: 0x0104F76C
 		public UniTask LoadDataAsync(ILifePoint config, int entityId)
 		{
 			LifePointModel.<LoadDataAsync>d__26 <LoadDataAsync>d__;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return <LoadDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043EE3 RID: 278243 RVA: 0x010A7F0F File Offset: 0x010A610F
+		// Token: 0x0603A02C RID: 237612 RVA: 0x010515BF File Offset: 0x0104F7BF
 		public void UnloadData()
 		{
 			this.Entity = null;
@@ -157,13 +157,13 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.BonusRules = null;
 		}
 
-		// Token: 0x06043EE4 RID: 278244 RVA: 0x010A7F4E File Offset: 0x010A614E
+		// Token: 0x0603A02D RID: 237613 RVA: 0x010515FE File Offset: 0x0104F7FE
 		public void AddStep()
 		{
 			LevelGeneralNetworks.RequestEntitySendEvent(this.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId(), "LifePointPaint");
 		}
 
-		// Token: 0x06043EE5 RID: 278245 RVA: 0x010A7F6C File Offset: 0x010A616C
+		// Token: 0x0603A02E RID: 237614 RVA: 0x0105161C File Offset: 0x0104F81C
 		public int GetStepBonus()
 		{
 			if (this.BonusRules == null)
@@ -187,8 +187,8 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return 0;
 		}
 
-		// Token: 0x17009978 RID: 39288
-		// (get) Token: 0x06043EE6 RID: 278246 RVA: 0x010A8002 File Offset: 0x010A6202
+		// Token: 0x17006E7B RID: 28283
+		// (get) Token: 0x0603A02F RID: 237615 RVA: 0x010516B2 File Offset: 0x0104F8B2
 		public static LifePointModel Instance
 		{
 			get
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043EE7 RID: 278247 RVA: 0x010A8009 File Offset: 0x010A6209
+		// Token: 0x0603A030 RID: 237616 RVA: 0x010516B9 File Offset: 0x0104F8B9
 		public static LifePointModel GetOrCreateInstance()
 		{
 			if (LifePointModel._Instance == null)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return LifePointModel._Instance;
 		}
 
-		// Token: 0x06043EE8 RID: 278248 RVA: 0x010A801D File Offset: 0x010A621D
+		// Token: 0x0603A031 RID: 237617 RVA: 0x010516CD File Offset: 0x0104F8CD
 		public static bool CreateInstance()
 		{
 			if (LifePointModel._Instance != null)
@@ -218,77 +218,77 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return true;
 		}
 
-		// Token: 0x06043EE9 RID: 278249 RVA: 0x010A8033 File Offset: 0x010A6233
+		// Token: 0x0603A032 RID: 237618 RVA: 0x010516E3 File Offset: 0x0104F8E3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043EEA RID: 278250 RVA: 0x010A8035 File Offset: 0x010A6235
+		// Token: 0x0603A033 RID: 237619 RVA: 0x010516E5 File Offset: 0x0104F8E5
 		public static void ResetStaticDefaultValue()
 		{
 			LifePointModel._Instance = null;
 		}
 
-		// Token: 0x06043EEB RID: 278251 RVA: 0x010A803D File Offset: 0x010A623D
+		// Token: 0x0603A034 RID: 237620 RVA: 0x010516ED File Offset: 0x0104F8ED
 		static LifePointModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LifePointModel.CreateStaticDefaultValue), new Action(LifePointModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040237F7 RID: 145399
+		// Token: 0x0401EA97 RID: 125591
 		public bool IsDataInit;
 
-		// Token: 0x040237F8 RID: 145400
+		// Token: 0x0401EA98 RID: 125592
 		[Nullable(2)]
 		public ILifePoint Config;
 
-		// Token: 0x040237F9 RID: 145401
+		// Token: 0x0401EA99 RID: 125593
 		private readonly Dictionary<EPieceColorType, string[]> ColorMap = new Dictionary<EPieceColorType, string[]>();
 
-		// Token: 0x040237FA RID: 145402
+		// Token: 0x0401EA9A RID: 125594
 		public Dictionary<EPieceColorType, UTexture2D> GridTextureMap = new Dictionary<EPieceColorType, UTexture2D>();
 
-		// Token: 0x040237FB RID: 145403
+		// Token: 0x0401EA9B RID: 125595
 		public Dictionary<EPieceColorType, UTexture2D> HitGridTextureMap = new Dictionary<EPieceColorType, UTexture2D>();
 
-		// Token: 0x040237FC RID: 145404
+		// Token: 0x0401EA9C RID: 125596
 		public Dictionary<EDirection, float> DirectionParam = new Dictionary<EDirection, float>();
 
-		// Token: 0x040237FD RID: 145405
+		// Token: 0x0401EA9D RID: 125597
 		public FName ParamName = new FName("LocalFadeInoutRotate");
 
-		// Token: 0x040237FE RID: 145406
+		// Token: 0x0401EA9E RID: 125598
 		public FColor InitColor = FColor.FromHex("FFFF00FF");
 
-		// Token: 0x040237FF RID: 145407
+		// Token: 0x0401EA9F RID: 125599
 		public AnimParam AnimParam = new AnimParam();
 
-		// Token: 0x04023800 RID: 145408
+		// Token: 0x0401EAA0 RID: 125600
 		public string AudioEvent = "play_interact_life_point_click";
 
-		// Token: 0x04023801 RID: 145409
+		// Token: 0x0401EAA1 RID: 125601
 		public string RtpcCount = "mini_game_lifepoint_spreads_counting";
 
-		// Token: 0x04023802 RID: 145410
+		// Token: 0x0401EAA2 RID: 125602
 		public string RtpcGrids = "mini_game_lifepoint_spreading_grids";
 
-		// Token: 0x04023803 RID: 145411
+		// Token: 0x0401EAA3 RID: 125603
 		public string RtpcSpeed = "mini_game_lifepoint_spreading_speed";
 
-		// Token: 0x04023804 RID: 145412
+		// Token: 0x0401EAA4 RID: 125604
 		public Dictionary<int, float[]> AudioMap = new Dictionary<int, float[]>();
 
-		// Token: 0x04023805 RID: 145413
+		// Token: 0x0401EAA5 RID: 125605
 		public FColor DangerStepColor = FColor.FromHex("FF7D6EFF");
 
-		// Token: 0x04023806 RID: 145414
+		// Token: 0x0401EAA6 RID: 125606
 		public FColor NormalStepColor = FColor.FromHex("FFCB3FFF");
 
-		// Token: 0x04023807 RID: 145415
+		// Token: 0x0401EAA7 RID: 125607
 		[Nullable(2)]
 		private Entity Entity;
 
-		// Token: 0x04023808 RID: 145416
+		// Token: 0x0401EAA8 RID: 125608
 		[Nullable(new byte[]
 		{
 			2,
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 		})]
 		private ILifePointMaxStepRewardRuleItem[] BonusRules;
 
-		// Token: 0x04023809 RID: 145417
+		// Token: 0x0401EAA9 RID: 125609
 		[Nullable(2)]
 		private static LifePointModel _Instance;
 	}

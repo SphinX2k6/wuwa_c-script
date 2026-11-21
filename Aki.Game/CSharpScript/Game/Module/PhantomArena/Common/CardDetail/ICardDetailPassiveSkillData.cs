@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005220 RID: 21024
+	// Token: 0x020041F0 RID: 16880
 	[NullableContext(1)]
 	public interface ICardDetailPassiveSkillData
 	{
-		// Token: 0x17008227 RID: 33319
-		// (get) Token: 0x06035C0E RID: 220174
-		// (set) Token: 0x06035C0F RID: 220175
+		// Token: 0x170055E7 RID: 21991
+		// (get) Token: 0x0602AB09 RID: 174857
+		// (set) Token: 0x0602AB0A RID: 174858
 		string Desc { get; set; }
 
-		// Token: 0x17008228 RID: 33320
-		// (get) Token: 0x06035C10 RID: 220176
-		// (set) Token: 0x06035C11 RID: 220177
+		// Token: 0x170055E8 RID: 21992
+		// (get) Token: 0x0602AB0B RID: 174859
+		// (set) Token: 0x0602AB0C RID: 174860
 		List<string> Params { get; set; }
 
-		// Token: 0x17008229 RID: 33321
-		// (get) Token: 0x06035C12 RID: 220178
-		// (set) Token: 0x06035C13 RID: 220179
+		// Token: 0x170055E9 RID: 21993
+		// (get) Token: 0x0602AB0D RID: 174861
+		// (set) Token: 0x0602AB0E RID: 174862
 		ICardDetailEffectCountData EffectCountData { get; set; }
 
-		// Token: 0x1700822A RID: 33322
-		// (get) Token: 0x06035C14 RID: 220180
-		// (set) Token: 0x06035C15 RID: 220181
+		// Token: 0x170055EA RID: 21994
+		// (get) Token: 0x0602AB0F RID: 174863
+		// (set) Token: 0x0602AB10 RID: 174864
 		ICardDetailPassiveSkillFieldData FieldData { get; set; }
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002222 RID: 8738
+// Token: 0x02001706 RID: 5894
 public class MoraleBuffActiveTipsInfo
 {
-	// Token: 0x040081AD RID: 33197
+	// Token: 0x040082EB RID: 33515
 	public int BuffId;
 
-	// Token: 0x040081AE RID: 33198
+	// Token: 0x040082EC RID: 33516
 	public EMoraleBuffState State;
 }

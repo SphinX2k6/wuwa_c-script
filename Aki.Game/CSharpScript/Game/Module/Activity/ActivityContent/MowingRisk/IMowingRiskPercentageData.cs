@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063D1 RID: 25553
+	// Token: 0x0200534F RID: 21327
 	public interface IMowingRiskPercentageData
 	{
-		// Token: 0x170093F1 RID: 37873
-		// (get) Token: 0x0604044A RID: 263242
-		// (set) Token: 0x0604044B RID: 263243
+		// Token: 0x17006753 RID: 26451
+		// (get) Token: 0x0603510B RID: 217355
+		// (set) Token: 0x0603510C RID: 217356
 		int Count { get; set; }
 
-		// Token: 0x170093F2 RID: 37874
-		// (get) Token: 0x0604044C RID: 263244
-		// (set) Token: 0x0604044D RID: 263245
+		// Token: 0x17006754 RID: 26452
+		// (get) Token: 0x0603510D RID: 217357
+		// (set) Token: 0x0603510E RID: 217358
 		int SuperLevel { get; set; }
 
-		// Token: 0x170093F3 RID: 37875
-		// (get) Token: 0x0604044E RID: 263246
-		// (set) Token: 0x0604044F RID: 263247
+		// Token: 0x17006755 RID: 26453
+		// (get) Token: 0x0603510F RID: 217359
+		// (set) Token: 0x06035110 RID: 217360
 		float Partial { get; set; }
 
-		// Token: 0x170093F4 RID: 37876
-		// (get) Token: 0x06040450 RID: 263248
-		// (set) Token: 0x06040451 RID: 263249
+		// Token: 0x17006756 RID: 26454
+		// (get) Token: 0x06035111 RID: 217361
+		// (set) Token: 0x06035112 RID: 217362
 		float Overall { get; set; }
 	}
 }

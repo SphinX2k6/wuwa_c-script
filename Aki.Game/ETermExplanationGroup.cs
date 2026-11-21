@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002BA7 RID: 11175
+// Token: 0x02002123 RID: 8483
 public enum ETermExplanationGroup
 {
-	// Token: 0x0400AD43 RID: 44355
+	// Token: 0x0400B14A RID: 45386
 	Default,
-	// Token: 0x0400AD44 RID: 44356
+	// Token: 0x0400B14B RID: 45387
 	PlotReview,
-	// Token: 0x0400AD45 RID: 44357
+	// Token: 0x0400B14C RID: 45388
 	ExitSkill,
-	// Token: 0x0400AD46 RID: 44358
+	// Token: 0x0400B14D RID: 45389
 	FloroRanchCard,
-	// Token: 0x0400AD47 RID: 44359
+	// Token: 0x0400B14E RID: 45390
 	FloroRanchPopupToy
 }

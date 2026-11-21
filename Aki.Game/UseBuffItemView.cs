@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Common.NumberSelect;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200171B RID: 5915
+// Token: 0x02000BD3 RID: 3027
 [NullableContext(1)]
 [Nullable(0)]
 public class UseBuffItemView : UiTickViewBase
 {
-	// Token: 0x0600AAB8 RID: 43704 RVA: 0x00265B19 File Offset: 0x00263D19
+	// Token: 0x06007E9B RID: 32411 RVA: 0x00270069 File Offset: 0x0026E269
 	public UseBuffItemView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600AAB9 RID: 43705 RVA: 0x00265B30 File Offset: 0x00263D30
+	// Token: 0x06007E9C RID: 32412 RVA: 0x00270080 File Offset: 0x0026E280
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class UseBuffItemView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600AABA RID: 43706 RVA: 0x00265C20 File Offset: 0x00263E20
+	// Token: 0x06007E9D RID: 32413 RVA: 0x00270170 File Offset: 0x0026E370
 	private void OnClickedEnsureButton()
 	{
 		if (this.SelectedUseBuffItemRoleData == null)
@@ -96,13 +96,13 @@ public class UseBuffItemView : UiTickViewBase
 		this.EnsureUseItem();
 	}
 
-	// Token: 0x0600AABB RID: 43707 RVA: 0x00265DAA File Offset: 0x00263FAA
+	// Token: 0x06007E9E RID: 32414 RVA: 0x002702FA File Offset: 0x0026E4FA
 	private void OnClickedCancelButton()
 	{
 		this.CloseUseBuffItemView();
 	}
 
-	// Token: 0x0600AABC RID: 43708 RVA: 0x00265DB4 File Offset: 0x00263FB4
+	// Token: 0x06007E9F RID: 32415 RVA: 0x00270304 File Offset: 0x0026E504
 	private void InitializeUseBuffItemView(int useItemConfigId)
 	{
 		this.CreateAllBuffTargetRoleItems();
@@ -125,20 +125,20 @@ public class UseBuffItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AABD RID: 43709 RVA: 0x00265E54 File Offset: 0x00264054
+	// Token: 0x06007EA0 RID: 32416 RVA: 0x002703A4 File Offset: 0x0026E5A4
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("ItemUseCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x0600AABE RID: 43710 RVA: 0x00265E75 File Offset: 0x00264075
+	// Token: 0x06007EA1 RID: 32417 RVA: 0x002703C5 File Offset: 0x0026E5C5
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.SelectedUseBuffItemRoleData.SetUseItemCount(selectValue);
 		this.RefreshAttributePreview();
 	}
 
-	// Token: 0x0600AABF RID: 43711 RVA: 0x00265E8C File Offset: 0x0026408C
+	// Token: 0x06007EA2 RID: 32418 RVA: 0x002703DC File Offset: 0x0026E5DC
 	private int GetUseBuffItemMaxNumber()
 	{
 		int useItemConfigId = this.SelectedUseBuffItemRoleData.UseItemConfigId;
@@ -153,7 +153,7 @@ public class UseBuffItemView : UiTickViewBase
 		return this.SelectedUseBuffItemRoleData.GetUseItemMaxCount();
 	}
 
-	// Token: 0x0600AAC0 RID: 43712 RVA: 0x00265ED0 File Offset: 0x002640D0
+	// Token: 0x06007EA3 RID: 32419 RVA: 0x00270420 File Offset: 0x0026E620
 	private void InitNumberSelect()
 	{
 		this.NumberSelect = new NumberSelectComponent(base.GetItem(6));
@@ -166,7 +166,7 @@ public class UseBuffItemView : UiTickViewBase
 		this.NumberSelect.Init(this.NumberSelectData);
 	}
 
-	// Token: 0x0600AAC1 RID: 43713 RVA: 0x00265F3C File Offset: 0x0026413C
+	// Token: 0x06007EA4 RID: 32420 RVA: 0x0027048C File Offset: 0x0026E68C
 	protected override void OnStart()
 	{
 		int? num = this.OpenParam as int?;
@@ -178,7 +178,7 @@ public class UseBuffItemView : UiTickViewBase
 		this.InitNumberSelect();
 	}
 
-	// Token: 0x0600AAC2 RID: 43714 RVA: 0x00265F77 File Offset: 0x00264177
+	// Token: 0x06007EA5 RID: 32421 RVA: 0x002704C7 File Offset: 0x0026E6C7
 	protected override void OnBeforeDestroy()
 	{
 		this.ResetUseBuffItemView();
@@ -188,19 +188,19 @@ public class UseBuffItemView : UiTickViewBase
 		ConfirmBoxController.Instance.CloseConfirmBoxView();
 	}
 
-	// Token: 0x0600AAC3 RID: 43715 RVA: 0x00265FA3 File Offset: 0x002641A3
+	// Token: 0x06007EA6 RID: 32422 RVA: 0x002704F3 File Offset: 0x0026E6F3
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, long, int>(EEventName.OnUseBuffItem, new Action<int, long, int>(this.OnUseBuffItem));
 	}
 
-	// Token: 0x0600AAC4 RID: 43716 RVA: 0x00265FC1 File Offset: 0x002641C1
+	// Token: 0x06007EA7 RID: 32423 RVA: 0x00270511 File Offset: 0x0026E711
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnUseBuffItem, new Action<int, long, int>(this.OnUseBuffItem));
 	}
 
-	// Token: 0x0600AAC5 RID: 43717 RVA: 0x00265FE0 File Offset: 0x002641E0
+	// Token: 0x06007EA8 RID: 32424 RVA: 0x00270530 File Offset: 0x0026E730
 	protected override void OnTick(float delta)
 	{
 		foreach (BuffTargetRoleItem buffTargetRoleItem in this.BuffTargetRoleItemList)
@@ -209,7 +209,7 @@ public class UseBuffItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AAC6 RID: 43718 RVA: 0x00266034 File Offset: 0x00264234
+	// Token: 0x06007EA9 RID: 32425 RVA: 0x00270584 File Offset: 0x0026E784
 	private void OnUseBuffItem(int itemConfigId, long endCdTimeStamp, int useCount)
 	{
 		if (this.SelectedBuffTargetRoleItem == null)
@@ -219,13 +219,13 @@ public class UseBuffItemView : UiTickViewBase
 		this.FinishUseBuffItem();
 	}
 
-	// Token: 0x0600AAC7 RID: 43719 RVA: 0x00266045 File Offset: 0x00264245
+	// Token: 0x06007EAA RID: 32426 RVA: 0x00270595 File Offset: 0x0026E795
 	private void CloseUseBuffItemView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.UseBuffItemView, null);
 	}
 
-	// Token: 0x0600AAC8 RID: 43720 RVA: 0x00266058 File Offset: 0x00264258
+	// Token: 0x06007EAB RID: 32427 RVA: 0x002705A8 File Offset: 0x0026E7A8
 	public void ResetUseBuffItemView()
 	{
 		foreach (BuffTargetRoleItem buffTargetRoleItem in this.BuffTargetRoleItemList)
@@ -238,7 +238,7 @@ public class UseBuffItemView : UiTickViewBase
 		BuffItemModel.Instance.ClearAllUseBuffItemRoleData();
 	}
 
-	// Token: 0x0600AAC9 RID: 43721 RVA: 0x002660CC File Offset: 0x002642CC
+	// Token: 0x06007EAC RID: 32428 RVA: 0x0027061C File Offset: 0x0026E81C
 	private void CreateAllBuffTargetRoleItems()
 	{
 		foreach (UUIItem uuiitem in new List<UUIItem>
@@ -257,13 +257,13 @@ public class UseBuffItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AACA RID: 43722 RVA: 0x00266180 File Offset: 0x00264380
+	// Token: 0x06007EAD RID: 32429 RVA: 0x002706D0 File Offset: 0x0026E8D0
 	private void OnClickedBuffTargetRoleItem(BuffTargetRoleItem buffTargetRoleItem)
 	{
 		this.SelectedUseBuffTargetRoleItem(buffTargetRoleItem);
 	}
 
-	// Token: 0x0600AACB RID: 43723 RVA: 0x0026618C File Offset: 0x0026438C
+	// Token: 0x06007EAE RID: 32430 RVA: 0x002706DC File Offset: 0x0026E8DC
 	private void SelectedUseBuffTargetRoleItem(BuffTargetRoleItem buffTargetRoleItem)
 	{
 		UseBuffItemRoleData useBuffItemRoleData = buffTargetRoleItem.GetUseBuffItemRoleData();
@@ -301,13 +301,13 @@ public class UseBuffItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AACC RID: 43724 RVA: 0x0026622F File Offset: 0x0026442F
+	// Token: 0x06007EAF RID: 32431 RVA: 0x0027077F File Offset: 0x0026E97F
 	private void OnUseItemAnimationFinished()
 	{
 		this.FinishUseBuffItem();
 	}
 
-	// Token: 0x0600AACD RID: 43725 RVA: 0x00266238 File Offset: 0x00264438
+	// Token: 0x06007EB0 RID: 32432 RVA: 0x00270788 File Offset: 0x0026E988
 	private void FinishUseBuffItem()
 	{
 		InventoryModel instance = InventoryModel.Instance;
@@ -322,7 +322,7 @@ public class UseBuffItemView : UiTickViewBase
 		this.NumberSelect.Refresh(useBuffItemMaxNumber);
 	}
 
-	// Token: 0x0600AACE RID: 43726 RVA: 0x00266288 File Offset: 0x00264488
+	// Token: 0x06007EB1 RID: 32433 RVA: 0x002707D8 File Offset: 0x0026E9D8
 	private void RefreshAllBuffTargetRoleItems()
 	{
 		IReadOnlyDictionary<int, UseBuffItemRoleData> allUseBuffItemRole = BuffItemModel.Instance.GetAllUseBuffItemRole();
@@ -350,7 +350,7 @@ public class UseBuffItemView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600AACF RID: 43727 RVA: 0x0026633C File Offset: 0x0026453C
+	// Token: 0x06007EB2 RID: 32434 RVA: 0x0027088C File Offset: 0x0026EA8C
 	private void RefreshAttributePreview()
 	{
 		if (this.SelectedUseBuffItemRoleData == null)
@@ -367,7 +367,7 @@ public class UseBuffItemView : UiTickViewBase
 		this.SelectedBuffTargetRoleItem.RefreshPreviewUseItem(currentAttribute, maxAttribute, addAttribute);
 	}
 
-	// Token: 0x0600AAD0 RID: 43728 RVA: 0x00266390 File Offset: 0x00264590
+	// Token: 0x06007EB3 RID: 32435 RVA: 0x002708E0 File Offset: 0x0026EAE0
 	private void RefreshTitleText()
 	{
 		if (this.SelectedUseBuffItemRoleData == null)
@@ -379,7 +379,7 @@ public class UseBuffItemView : UiTickViewBase
 		LguiUtil.Instance.SetLocalText(text, "UseBuffTitle", new <>z__ReadOnlySingleElementList<object>(roleName));
 	}
 
-	// Token: 0x0600AAD1 RID: 43729 RVA: 0x002663D0 File Offset: 0x002645D0
+	// Token: 0x06007EB4 RID: 32436 RVA: 0x00270920 File Offset: 0x0026EB20
 	private void EnsureUseItem()
 	{
 		if (this.SelectedUseBuffItemRoleData == null)
@@ -393,42 +393,42 @@ public class UseBuffItemView : UiTickViewBase
 		BuffItemControl.Instance.RequestUseBuffItem(useItemConfigId, useItemCount, roleConfigId);
 	}
 
-	// Token: 0x04004D7F RID: 19839
+	// Token: 0x04004E27 RID: 20007
 	private readonly List<BuffTargetRoleItem> BuffTargetRoleItemList = new List<BuffTargetRoleItem>();
 
-	// Token: 0x04004D80 RID: 19840
+	// Token: 0x04004E28 RID: 20008
 	[Nullable(2)]
 	private BuffTargetRoleItem SelectedBuffTargetRoleItem;
 
-	// Token: 0x04004D81 RID: 19841
+	// Token: 0x04004E29 RID: 20009
 	[Nullable(2)]
 	private UseBuffItemRoleData SelectedUseBuffItemRoleData;
 
-	// Token: 0x04004D82 RID: 19842
+	// Token: 0x04004E2A RID: 20010
 	[Nullable(2)]
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x04004D83 RID: 19843
+	// Token: 0x04004E2B RID: 20011
 	[Nullable(2)]
 	private INumberSelectData NumberSelectData;
 
-	// Token: 0x02007D1A RID: 32026
+	// Token: 0x02006E9F RID: 28319
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04028F8E RID: 167822
+		// Token: 0x040242B7 RID: 148151
 		TitleText,
-		// Token: 0x04028F8F RID: 167823
+		// Token: 0x040242B8 RID: 148152
 		TargetRoleItem1,
-		// Token: 0x04028F90 RID: 167824
+		// Token: 0x040242B9 RID: 148153
 		TargetRoleItem2,
-		// Token: 0x04028F91 RID: 167825
+		// Token: 0x040242BA RID: 148154
 		TargetRoleItem3,
-		// Token: 0x04028F92 RID: 167826
+		// Token: 0x040242BB RID: 148155
 		EnsureButton,
-		// Token: 0x04028F93 RID: 167827
+		// Token: 0x040242BC RID: 148156
 		CancelButton,
-		// Token: 0x04028F94 RID: 167828
+		// Token: 0x040242BD RID: 148157
 		NumberSelect
 	}
 }

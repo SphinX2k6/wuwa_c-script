@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001534 RID: 5428
+// Token: 0x020009EC RID: 2540
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTurntableComponent : UiPanelBase
 {
-	// Token: 0x06009B0F RID: 39695 RVA: 0x00219004 File Offset: 0x00217204
+	// Token: 0x06006EED RID: 28397 RVA: 0x00222DA4 File Offset: 0x00220FA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -41,7 +41,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009B10 RID: 39696 RVA: 0x00219158 File Offset: 0x00217358
+	// Token: 0x06006EEE RID: 28398 RVA: 0x00222EF8 File Offset: 0x002210F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityTurntableComponent.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B11 RID: 39697 RVA: 0x0021919C File Offset: 0x0021739C
+	// Token: 0x06006EEF RID: 28399 RVA: 0x00222F3C File Offset: 0x0022113C
 	private UniTask CreateRewardItem(AActor itemActor)
 	{
 		ActivityTurntableComponent.<CreateRewardItem>d__16 <CreateRewardItem>d__;
@@ -64,25 +64,25 @@ public class ActivityTurntableComponent : UiPanelBase
 		return <CreateRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B12 RID: 39698 RVA: 0x002191E7 File Offset: 0x002173E7
+	// Token: 0x06006EF0 RID: 28400 RVA: 0x00222F87 File Offset: 0x00221187
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06009B13 RID: 39699 RVA: 0x00219205 File Offset: 0x00217405
+	// Token: 0x06006EF1 RID: 28401 RVA: 0x00222FA5 File Offset: 0x002211A5
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06009B14 RID: 39700 RVA: 0x00219223 File Offset: 0x00217423
+	// Token: 0x06006EF2 RID: 28402 RVA: 0x00222FC3 File Offset: 0x002211C3
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveAnimationTimer();
 	}
 
-	// Token: 0x06009B15 RID: 39701 RVA: 0x0021922C File Offset: 0x0021742C
+	// Token: 0x06006EF3 RID: 28403 RVA: 0x00222FCC File Offset: 0x002211CC
 	public UniTask Refresh(List<ITurntableReward> rewardList)
 	{
 		ActivityTurntableComponent.<Refresh>d__20 <Refresh>d__;
@@ -94,7 +94,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B16 RID: 39702 RVA: 0x00219277 File Offset: 0x00217477
+	// Token: 0x06006EF4 RID: 28404 RVA: 0x00223017 File Offset: 0x00221217
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param != "TurntableRotate" || !this.Activate)
@@ -104,7 +104,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		this.StartRotateGrid(this.AnimationRotateAngle);
 	}
 
-	// Token: 0x06009B17 RID: 39703 RVA: 0x0021929C File Offset: 0x0021749C
+	// Token: 0x06006EF5 RID: 28405 RVA: 0x0022303C File Offset: 0x0022123C
 	[NullableContext(2)]
 	public void RunTurntableByRewardId(int rewardId, Action finishedCallback = null)
 	{
@@ -119,7 +119,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		});
 	}
 
-	// Token: 0x06009B18 RID: 39704 RVA: 0x002192D8 File Offset: 0x002174D8
+	// Token: 0x06006EF6 RID: 28406 RVA: 0x00223078 File Offset: 0x00221278
 	[NullableContext(2)]
 	private UniTask RunTurntableAnimation(int rewardId, Action finishedCallback = null)
 	{
@@ -133,7 +133,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		return <RunTurntableAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B19 RID: 39705 RVA: 0x0021932C File Offset: 0x0021752C
+	// Token: 0x06006EF7 RID: 28407 RVA: 0x002230CC File Offset: 0x002212CC
 	[NullableContext(0)]
 	private ValueTuple<float, bool, bool> GetRotateInfoByRewardId(int rewardId)
 	{
@@ -157,7 +157,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		return new ValueTuple<float, bool, bool>((float)(-90 + -45 * num), item, item2);
 	}
 
-	// Token: 0x06009B1A RID: 39706 RVA: 0x002193B4 File Offset: 0x002175B4
+	// Token: 0x06006EF8 RID: 28408 RVA: 0x00223154 File Offset: 0x00221354
 	private void StartRotateGrid(float rotateAngle)
 	{
 		if (rotateAngle == 0f)
@@ -172,7 +172,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		}, 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x06009B1B RID: 39707 RVA: 0x00219424 File Offset: 0x00217624
+	// Token: 0x06006EF9 RID: 28409 RVA: 0x002231C4 File Offset: 0x002213C4
 	private void RotateAllGridInner(float changeAngle)
 	{
 		foreach (ActivityTurntableGrid activityTurntableGrid in this.RewardItemList)
@@ -181,7 +181,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009B1C RID: 39708 RVA: 0x00219478 File Offset: 0x00217678
+	// Token: 0x06006EFA RID: 28410 RVA: 0x00223218 File Offset: 0x00221418
 	private void RunAnimationTimer(float deltaTime, float totalAngle)
 	{
 		this.AnimationTime += deltaTime;
@@ -196,7 +196,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009B1D RID: 39709 RVA: 0x002194FF File Offset: 0x002176FF
+	// Token: 0x06006EFB RID: 28411 RVA: 0x0022329F File Offset: 0x0022149F
 	private void RemoveAnimationTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.AnimationTimerId))
@@ -207,7 +207,7 @@ public class ActivityTurntableComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009B1E RID: 39710 RVA: 0x00219538 File Offset: 0x00217738
+	// Token: 0x06006EFC RID: 28412 RVA: 0x002232D8 File Offset: 0x002214D8
 	private UniTask PlayTurntableAnimation(string sequenceName, bool blockClick = false)
 	{
 		ActivityTurntableComponent.<PlayTurntableAnimation>d__29 <PlayTurntableAnimation>d__;
@@ -220,76 +220,76 @@ public class ActivityTurntableComponent : UiPanelBase
 		return <PlayTurntableAnimation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04004427 RID: 17447
+	// Token: 0x040044CD RID: 17613
 	private readonly List<ActivityTurntableGrid> RewardItemList = new List<ActivityTurntableGrid>();
 
-	// Token: 0x04004428 RID: 17448
+	// Token: 0x040044CE RID: 17614
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004429 RID: 17449
+	// Token: 0x040044CF RID: 17615
 	[Nullable(2)]
 	private TimerHandle AnimationTimerId;
 
-	// Token: 0x0400442A RID: 17450
+	// Token: 0x040044D0 RID: 17616
 	private float AnimationTime;
 
-	// Token: 0x0400442B RID: 17451
+	// Token: 0x040044D1 RID: 17617
 	private float AnimationRotateAngle;
 
-	// Token: 0x0400442C RID: 17452
+	// Token: 0x040044D2 RID: 17618
 	private FRotator AnimationRotator = new FRotator();
 
-	// Token: 0x0400442D RID: 17453
+	// Token: 0x040044D3 RID: 17619
 	public bool Activate = true;
 
-	// Token: 0x0400442E RID: 17454
+	// Token: 0x040044D4 RID: 17620
 	private float AnimationRotateTime;
 
-	// Token: 0x0400442F RID: 17455
+	// Token: 0x040044D5 RID: 17621
 	private const int TURNTABLE_GRID_SIZE = 8;
 
-	// Token: 0x04004430 RID: 17456
+	// Token: 0x040044D6 RID: 17622
 	private const int ROTATE_DEFAULT_ANGLE = -90;
 
-	// Token: 0x04004431 RID: 17457
+	// Token: 0x040044D7 RID: 17623
 	private const int ROTATE_GRID_ANGLE = -45;
 
-	// Token: 0x04004432 RID: 17458
+	// Token: 0x040044D8 RID: 17624
 	private const int ROTATE_LOOP_ANIMATION_TIME = 500;
 
-	// Token: 0x04004433 RID: 17459
+	// Token: 0x040044D9 RID: 17625
 	private const string TURNTABLE_ROTATE_PARAM = "TurntableRotate";
 
-	// Token: 0x02007B67 RID: 31591
+	// Token: 0x02006CF2 RID: 27890
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028943 RID: 166211
+		// Token: 0x04023C7E RID: 146558
 		public const int Grid1 = 0;
 
-		// Token: 0x04028944 RID: 166212
+		// Token: 0x04023C7F RID: 146559
 		public const int Grid2 = 1;
 
-		// Token: 0x04028945 RID: 166213
+		// Token: 0x04023C80 RID: 146560
 		public const int Grid3 = 2;
 
-		// Token: 0x04028946 RID: 166214
+		// Token: 0x04023C81 RID: 146561
 		public const int Grid4 = 3;
 
-		// Token: 0x04028947 RID: 166215
+		// Token: 0x04023C82 RID: 146562
 		public const int Grid5 = 4;
 
-		// Token: 0x04028948 RID: 166216
+		// Token: 0x04023C83 RID: 146563
 		public const int Grid6 = 5;
 
-		// Token: 0x04028949 RID: 166217
+		// Token: 0x04023C84 RID: 146564
 		public const int Grid7 = 6;
 
-		// Token: 0x0402894A RID: 166218
+		// Token: 0x04023C85 RID: 146565
 		public const int Grid8 = 7;
 
-		// Token: 0x0402894B RID: 166219
+		// Token: 0x04023C86 RID: 146566
 		public const int Rotator = 8;
 	}
 }

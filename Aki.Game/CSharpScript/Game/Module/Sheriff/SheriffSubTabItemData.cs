@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C40 RID: 19520
+	// Token: 0x02003BF1 RID: 15345
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffSubTabItemData : ISheriffSubTabItemData
 	{
-		// Token: 0x17007CB6 RID: 31926
-		// (get) Token: 0x060327DC RID: 206812 RVA: 0x00BC3235 File Offset: 0x00BC1435
-		// (set) Token: 0x060327DD RID: 206813 RVA: 0x00BC323D File Offset: 0x00BC143D
+		// Token: 0x17005060 RID: 20576
+		// (get) Token: 0x0602758F RID: 161167 RVA: 0x00B07E4D File Offset: 0x00B0604D
+		// (set) Token: 0x06027590 RID: 161168 RVA: 0x00B07E55 File Offset: 0x00B06055
 		public ESheriffSubTabType TabType { get; set; }
 
-		// Token: 0x17007CB7 RID: 31927
-		// (get) Token: 0x060327DE RID: 206814 RVA: 0x00BC3246 File Offset: 0x00BC1446
-		// (set) Token: 0x060327DF RID: 206815 RVA: 0x00BC324E File Offset: 0x00BC144E
+		// Token: 0x17005061 RID: 20577
+		// (get) Token: 0x06027591 RID: 161169 RVA: 0x00B07E5E File Offset: 0x00B0605E
+		// (set) Token: 0x06027592 RID: 161170 RVA: 0x00B07E66 File Offset: 0x00B06066
 		public string TabIcon { get; set; } = "";
 
-		// Token: 0x17007CB8 RID: 31928
-		// (get) Token: 0x060327E0 RID: 206816 RVA: 0x00BC3257 File Offset: 0x00BC1457
-		// (set) Token: 0x060327E1 RID: 206817 RVA: 0x00BC325F File Offset: 0x00BC145F
+		// Token: 0x17005062 RID: 20578
+		// (get) Token: 0x06027593 RID: 161171 RVA: 0x00B07E6F File Offset: 0x00B0606F
+		// (set) Token: 0x06027594 RID: 161172 RVA: 0x00B07E77 File Offset: 0x00B06077
 		public string TabTxt { get; set; } = "";
 
-		// Token: 0x17007CB9 RID: 31929
-		// (get) Token: 0x060327E2 RID: 206818 RVA: 0x00BC3268 File Offset: 0x00BC1468
-		// (set) Token: 0x060327E3 RID: 206819 RVA: 0x00BC3270 File Offset: 0x00BC1470
+		// Token: 0x17005063 RID: 20579
+		// (get) Token: 0x06027595 RID: 161173 RVA: 0x00B07E80 File Offset: 0x00B06080
+		// (set) Token: 0x06027596 RID: 161174 RVA: 0x00B07E88 File Offset: 0x00B06088
 		public bool IsFinished { get; set; }
 	}
 }

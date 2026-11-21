@@ -4,39 +4,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005BFE RID: 23550
+	// Token: 0x02004BDE RID: 19422
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingLevelInfo : IBossPilingLevelInfo
 	{
-		// Token: 0x17008D7F RID: 36223
-		// (get) Token: 0x0603B85B RID: 243803 RVA: 0x00E320D0 File Offset: 0x00E302D0
-		// (set) Token: 0x0603B85C RID: 243804 RVA: 0x00E320D8 File Offset: 0x00E302D8
+		// Token: 0x17006151 RID: 24913
+		// (get) Token: 0x060307A6 RID: 198566 RVA: 0x00D82410 File Offset: 0x00D80610
+		// (set) Token: 0x060307A7 RID: 198567 RVA: 0x00D82418 File Offset: 0x00D80618
 		public int Id { get; set; }
 
-		// Token: 0x17008D80 RID: 36224
-		// (get) Token: 0x0603B85D RID: 243805 RVA: 0x00E320E1 File Offset: 0x00E302E1
-		// (set) Token: 0x0603B85E RID: 243806 RVA: 0x00E320E9 File Offset: 0x00E302E9
+		// Token: 0x17006152 RID: 24914
+		// (get) Token: 0x060307A8 RID: 198568 RVA: 0x00D82421 File Offset: 0x00D80621
+		// (set) Token: 0x060307A9 RID: 198569 RVA: 0x00D82429 File Offset: 0x00D80629
 		public int UnlockTime { get; set; }
 
-		// Token: 0x17008D81 RID: 36225
-		// (get) Token: 0x0603B85F RID: 243807 RVA: 0x00E320F2 File Offset: 0x00E302F2
-		// (set) Token: 0x0603B860 RID: 243808 RVA: 0x00E320FA File Offset: 0x00E302FA
+		// Token: 0x17006153 RID: 24915
+		// (get) Token: 0x060307AA RID: 198570 RVA: 0x00D82432 File Offset: 0x00D80632
+		// (set) Token: 0x060307AB RID: 198571 RVA: 0x00D8243A File Offset: 0x00D8063A
 		public int BossHp { get; set; }
 
-		// Token: 0x17008D82 RID: 36226
-		// (get) Token: 0x0603B861 RID: 243809 RVA: 0x00E32103 File Offset: 0x00E30303
-		// (set) Token: 0x0603B862 RID: 243810 RVA: 0x00E3210B File Offset: 0x00E3030B
+		// Token: 0x17006154 RID: 24916
+		// (get) Token: 0x060307AC RID: 198572 RVA: 0x00D82443 File Offset: 0x00D80643
+		// (set) Token: 0x060307AD RID: 198573 RVA: 0x00D8244B File Offset: 0x00D8064B
 		public List<int> SelectedRoleIds { get; set; }
 
-		// Token: 0x17008D83 RID: 36227
-		// (get) Token: 0x0603B863 RID: 243811 RVA: 0x00E32114 File Offset: 0x00E30314
-		// (set) Token: 0x0603B864 RID: 243812 RVA: 0x00E3211C File Offset: 0x00E3031C
+		// Token: 0x17006155 RID: 24917
+		// (get) Token: 0x060307AE RID: 198574 RVA: 0x00D82454 File Offset: 0x00D80654
+		// (set) Token: 0x060307AF RID: 198575 RVA: 0x00D8245C File Offset: 0x00D8065C
 		public List<int> SelectedTagBranchIds { get; set; }
 
-		// Token: 0x17008D84 RID: 36228
-		// (get) Token: 0x0603B865 RID: 243813 RVA: 0x00E32125 File Offset: 0x00E30325
-		// (set) Token: 0x0603B866 RID: 243814 RVA: 0x00E3212D File Offset: 0x00E3032D
+		// Token: 0x17006156 RID: 24918
+		// (get) Token: 0x060307B0 RID: 198576 RVA: 0x00D82465 File Offset: 0x00D80665
+		// (set) Token: 0x060307B1 RID: 198577 RVA: 0x00D8246D File Offset: 0x00D8066D
 		public bool IsUnlock { get; set; }
 	}
 }

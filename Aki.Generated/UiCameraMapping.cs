@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001181 RID: 4481
+	// Token: 0x020012B7 RID: 4791
 	public struct UiCameraMapping : IFlatbufferObject
 	{
-		// Token: 0x17003D1A RID: 15642
-		// (get) Token: 0x0600E5EB RID: 58859 RVA: 0x0033DE71 File Offset: 0x0033C071
+		// Token: 0x1700407E RID: 16510
+		// (get) Token: 0x0600F359 RID: 62297 RVA: 0x00368C69 File Offset: 0x00366E69
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E5EC RID: 58860 RVA: 0x0033DE7E File Offset: 0x0033C07E
+		// Token: 0x0600F35A RID: 62298 RVA: 0x00368C76 File Offset: 0x00366E76
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E5ED RID: 58861 RVA: 0x0033DE88 File Offset: 0x0033C088
+		// Token: 0x0600F35B RID: 62299 RVA: 0x00368C80 File Offset: 0x00366E80
 		public static UiCameraMapping GetRootAsUiCameraMapping(ByteBuffer _bb)
 		{
 			return UiCameraMapping.GetRootAsUiCameraMapping(_bb, default(UiCameraMapping));
 		}
 
-		// Token: 0x0600E5EE RID: 58862 RVA: 0x0033DEA4 File Offset: 0x0033C0A4
+		// Token: 0x0600F35C RID: 62300 RVA: 0x00368C9C File Offset: 0x00366E9C
 		public static UiCameraMapping GetRootAsUiCameraMapping(ByteBuffer _bb, UiCameraMapping obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E5EF RID: 58863 RVA: 0x0033DEC1 File Offset: 0x0033C0C1
+		// Token: 0x0600F35D RID: 62301 RVA: 0x00368CB9 File Offset: 0x00366EB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E5F0 RID: 58864 RVA: 0x0033DED0 File Offset: 0x0033C0D0
+		// Token: 0x0600F35E RID: 62302 RVA: 0x00368CC8 File Offset: 0x00366EC8
 		public UiCameraMapping __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003D1B RID: 15643
-		// (get) Token: 0x0600E5F1 RID: 58865 RVA: 0x0033DEE0 File Offset: 0x0033C0E0
+		// Token: 0x1700407F RID: 16511
+		// (get) Token: 0x0600F35F RID: 62303 RVA: 0x00368CD8 File Offset: 0x00366ED8
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D1C RID: 15644
-		// (get) Token: 0x0600E5F2 RID: 58866 RVA: 0x0033DF1C File Offset: 0x0033C11C
+		// Token: 0x17004080 RID: 16512
+		// (get) Token: 0x0600F360 RID: 62304 RVA: 0x00368D14 File Offset: 0x00366F14
 		public string ViewName
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E5F3 RID: 58867 RVA: 0x0033DF53 File Offset: 0x0033C153
+		// Token: 0x0600F361 RID: 62305 RVA: 0x00368D4B File Offset: 0x00366F4B
 		public Span<byte> GetViewNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600E5F4 RID: 58868 RVA: 0x0033DF62 File Offset: 0x0033C162
+		// Token: 0x0600F362 RID: 62306 RVA: 0x00368D5A File Offset: 0x00366F5A
 		public byte[] GetViewNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003D1D RID: 15645
-		// (get) Token: 0x0600E5F5 RID: 58869 RVA: 0x0033DF7C File Offset: 0x0033C17C
+		// Token: 0x17004081 RID: 16513
+		// (get) Token: 0x0600F363 RID: 62307 RVA: 0x00368D74 File Offset: 0x00366F74
 		public string DefaultUiCameraSettingsName
 		{
 			get
@@ -108,20 +108,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E5F6 RID: 58870 RVA: 0x0033DFB3 File Offset: 0x0033C1B3
+		// Token: 0x0600F364 RID: 62308 RVA: 0x00368DAB File Offset: 0x00366FAB
 		public Span<byte> GetDefaultUiCameraSettingsNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600E5F7 RID: 58871 RVA: 0x0033DFC2 File Offset: 0x0033C1C2
+		// Token: 0x0600F365 RID: 62309 RVA: 0x00368DBA File Offset: 0x00366FBA
 		public byte[] GetDefaultUiCameraSettingsNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003D1E RID: 15646
-		// (get) Token: 0x0600E5F8 RID: 58872 RVA: 0x0033DFDC File Offset: 0x0033C1DC
+		// Token: 0x17004082 RID: 16514
+		// (get) Token: 0x0600F366 RID: 62310 RVA: 0x00368DD4 File Offset: 0x00366FD4
 		public bool IsCheckSpecialState
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D1F RID: 15647
-		// (get) Token: 0x0600E5F9 RID: 58873 RVA: 0x0033E01C File Offset: 0x0033C21C
+		// Token: 0x17004083 RID: 16515
+		// (get) Token: 0x0600F367 RID: 62311 RVA: 0x00368E14 File Offset: 0x00367014
 		public string SpecialStateCameraSettingName
 		{
 			get
@@ -146,20 +146,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E5FA RID: 58874 RVA: 0x0033E054 File Offset: 0x0033C254
+		// Token: 0x0600F368 RID: 62312 RVA: 0x00368E4C File Offset: 0x0036704C
 		public Span<byte> GetSpecialStateCameraSettingNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600E5FB RID: 58875 RVA: 0x0033E064 File Offset: 0x0033C264
+		// Token: 0x0600F369 RID: 62313 RVA: 0x00368E5C File Offset: 0x0036705C
 		public byte[] GetSpecialStateCameraSettingNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003D20 RID: 15648
-		// (get) Token: 0x0600E5FC RID: 58876 RVA: 0x0033E07C File Offset: 0x0033C27C
+		// Token: 0x17004084 RID: 16516
+		// (get) Token: 0x0600F36A RID: 62314 RVA: 0x00368E74 File Offset: 0x00367074
 		public bool BPlayLoadingCameraAnimation
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D21 RID: 15649
-		// (get) Token: 0x0600E5FD RID: 58877 RVA: 0x0033E0BC File Offset: 0x0033C2BC
+		// Token: 0x17004085 RID: 16517
+		// (get) Token: 0x0600F36B RID: 62315 RVA: 0x00368EB4 File Offset: 0x003670B4
 		public int BodyTargetType
 		{
 			get
@@ -184,7 +184,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E5FE RID: 58878 RVA: 0x0033E0FC File Offset: 0x0033C2FC
+		// Token: 0x0600F36C RID: 62316 RVA: 0x00368EF4 File Offset: 0x003670F4
 		public DicStringString? BodyCameraSettingsNameMap(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -195,8 +195,8 @@ namespace Aki.Config
 			return new DicStringString?(default(DicStringString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003D22 RID: 15650
-		// (get) Token: 0x0600E5FF RID: 58879 RVA: 0x0033E160 File Offset: 0x0033C360
+		// Token: 0x17004086 RID: 16518
+		// (get) Token: 0x0600F36D RID: 62317 RVA: 0x00368F58 File Offset: 0x00367158
 		public int BodyCameraSettingsNameMapLength
 		{
 			get
@@ -210,8 +210,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D23 RID: 15651
-		// (get) Token: 0x0600E600 RID: 58880 RVA: 0x0033E18C File Offset: 0x0033C38C
+		// Token: 0x17004087 RID: 16519
+		// (get) Token: 0x0600F36E RID: 62318 RVA: 0x00368F84 File Offset: 0x00367184
 		public string DefaultCameraBlendName
 		{
 			get
@@ -225,19 +225,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E601 RID: 58881 RVA: 0x0033E1C4 File Offset: 0x0033C3C4
+		// Token: 0x0600F36F RID: 62319 RVA: 0x00368FBC File Offset: 0x003671BC
 		public Span<byte> GetDefaultCameraBlendNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600E602 RID: 58882 RVA: 0x0033E1D4 File Offset: 0x0033C3D4
+		// Token: 0x0600F370 RID: 62320 RVA: 0x00368FCC File Offset: 0x003671CC
 		public byte[] GetDefaultCameraBlendNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600E603 RID: 58883 RVA: 0x0033E1EC File Offset: 0x0033C3EC
+		// Token: 0x0600F371 RID: 62321 RVA: 0x00368FE4 File Offset: 0x003671E4
 		public DicStringString? UiCameraBlendNameMap(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -248,8 +248,8 @@ namespace Aki.Config
 			return new DicStringString?(default(DicStringString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003D24 RID: 15652
-		// (get) Token: 0x0600E604 RID: 58884 RVA: 0x0033E250 File Offset: 0x0033C450
+		// Token: 0x17004088 RID: 16520
+		// (get) Token: 0x0600F372 RID: 62322 RVA: 0x00369048 File Offset: 0x00367248
 		public int UiCameraBlendNameMapLength
 		{
 			get
@@ -263,8 +263,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D25 RID: 15653
-		// (get) Token: 0x0600E605 RID: 58885 RVA: 0x0033E27C File Offset: 0x0033C47C
+		// Token: 0x17004089 RID: 16521
+		// (get) Token: 0x0600F373 RID: 62323 RVA: 0x00369074 File Offset: 0x00367274
 		public int UiCameraDelayTime
 		{
 			get
@@ -278,41 +278,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E606 RID: 58886 RVA: 0x0033E2BC File Offset: 0x0033C4BC
+		// Token: 0x0600F374 RID: 62324 RVA: 0x003690B4 File Offset: 0x003672B4
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用BodyCameraSettingsNameMapFrozenDict()缓存字典，遍历请使用BodyCameraSettingsNameMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, string> BodyCameraSettingsNameMap()
+		public Dictionary<string, string> BodyCameraSettingsNameMap()
 		{
 			return this.BodyCameraSettingsNameMapIter().ToDictionary((DicStringString element) => element.Key, (DicStringString element) => element.Value);
 		}
 
-		// Token: 0x0600E607 RID: 58887 RVA: 0x0033E312 File Offset: 0x0033C512
+		// Token: 0x0600F375 RID: 62325 RVA: 0x0036910A File Offset: 0x0036730A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringString> BodyCameraSettingsNameMapIter()
+		public IEnumerable<DicStringString> BodyCameraSettingsNameMapIter()
 		{
 			UiCameraMapping.<BodyCameraSettingsNameMapIter>d__41 <BodyCameraSettingsNameMapIter>d__ = new UiCameraMapping.<BodyCameraSettingsNameMapIter>d__41(-2);
 			<BodyCameraSettingsNameMapIter>d__.<>3__<>4__this = this;
 			return <BodyCameraSettingsNameMapIter>d__;
 		}
 
-		// Token: 0x0600E608 RID: 58888 RVA: 0x0033E328 File Offset: 0x0033C528
+		// Token: 0x0600F376 RID: 62326 RVA: 0x00369120 File Offset: 0x00367320
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用UiCameraBlendNameMapFrozenDict()缓存字典，遍历请使用UiCameraBlendNameMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, string> UiCameraBlendNameMap()
+		public Dictionary<string, string> UiCameraBlendNameMap()
 		{
 			return this.UiCameraBlendNameMapIter().ToDictionary((DicStringString element) => element.Key, (DicStringString element) => element.Value);
 		}
 
-		// Token: 0x0600E609 RID: 58889 RVA: 0x0033E37E File Offset: 0x0033C57E
+		// Token: 0x0600F377 RID: 62327 RVA: 0x00369176 File Offset: 0x00367376
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringString> UiCameraBlendNameMapIter()
+		public IEnumerable<DicStringString> UiCameraBlendNameMapIter()
 		{
 			UiCameraMapping.<UiCameraBlendNameMapIter>d__43 <UiCameraBlendNameMapIter>d__ = new UiCameraMapping.<UiCameraBlendNameMapIter>d__43(-2);
 			<UiCameraBlendNameMapIter>d__.<>3__<>4__this = this;
 			return <UiCameraBlendNameMapIter>d__;
 		}
 
-		// Token: 0x0600E60A RID: 58890 RVA: 0x0033E394 File Offset: 0x0033C594
+		// Token: 0x0600F378 RID: 62328 RVA: 0x0036918C File Offset: 0x0036738C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public string GetBodyCameraSettingsNameMap(string key)
@@ -326,7 +324,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600E60B RID: 58891 RVA: 0x0033E3BC File Offset: 0x0033C5BC
+		// Token: 0x0600F379 RID: 62329 RVA: 0x003691B4 File Offset: 0x003673B4
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public string GetUiCameraBlendNameMap(string key)
@@ -340,7 +338,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600E60C RID: 58892 RVA: 0x0033E3E4 File Offset: 0x0033C5E4
+		// Token: 0x0600F37A RID: 62330 RVA: 0x003691DC File Offset: 0x003673DC
 		private void EnsureBodyCameraSettingsNameMapCacheIfNeeded()
 		{
 			if (this.BodyCameraSettingsNameMapCache != null)
@@ -350,7 +348,7 @@ namespace Aki.Config
 			this.BodyCameraSettingsNameMapCache = this.BodyCameraSettingsNameMapIter().ToFrozenDictionary((DicStringString kvp) => kvp.Key, (DicStringString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600E60D RID: 58893 RVA: 0x0033E44C File Offset: 0x0033C64C
+		// Token: 0x0600F37B RID: 62331 RVA: 0x00369244 File Offset: 0x00367444
 		private void EnsureUiCameraBlendNameMapCacheIfNeeded()
 		{
 			if (this.UiCameraBlendNameMapCache != null)
@@ -360,38 +358,26 @@ namespace Aki.Config
 			this.UiCameraBlendNameMapCache = this.UiCameraBlendNameMapIter().ToFrozenDictionary((DicStringString kvp) => kvp.Key, (DicStringString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600E60E RID: 58894 RVA: 0x0033E4B2 File Offset: 0x0033C6B2
+		// Token: 0x0600F37C RID: 62332 RVA: 0x003692AA File Offset: 0x003674AA
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		public FrozenDictionary<string, string> GetBodyCameraSettingsNameMapFrozenDict(string key)
+		public FrozenDictionary<string, string> GetBodyCameraSettingsNameMapFrozenDict()
 		{
 			this.EnsureBodyCameraSettingsNameMapCacheIfNeeded();
 			return this.BodyCameraSettingsNameMapCache;
 		}
 
-		// Token: 0x0600E60F RID: 58895 RVA: 0x0033E4C0 File Offset: 0x0033C6C0
+		// Token: 0x0600F37D RID: 62333 RVA: 0x003692B8 File Offset: 0x003674B8
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		public FrozenDictionary<string, string> GetUiCameraBlendNameMapFrozenDict(string key)
+		public FrozenDictionary<string, string> GetUiCameraBlendNameMapFrozenDict()
 		{
 			this.EnsureUiCameraBlendNameMapCacheIfNeeded();
 			return this.UiCameraBlendNameMapCache;
 		}
 
-		// Token: 0x040052C8 RID: 21192
+		// Token: 0x0400590B RID: 22795
 		private Table __p;
 
-		// Token: 0x040052C9 RID: 21193
+		// Token: 0x0400590C RID: 22796
 		[Nullable(new byte[]
 		{
 			2,
@@ -400,7 +386,7 @@ namespace Aki.Config
 		})]
 		private FrozenDictionary<string, string> BodyCameraSettingsNameMapCache;
 
-		// Token: 0x040052CA RID: 21194
+		// Token: 0x0400590D RID: 22797
 		[Nullable(new byte[]
 		{
 			2,

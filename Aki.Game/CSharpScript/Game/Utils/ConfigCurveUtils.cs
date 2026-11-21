@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x0200454A RID: 17738
+	// Token: 0x02003472 RID: 13426
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConfigCurveUtils
 	{
-		// Token: 0x0602DD7A RID: 187770 RVA: 0x00A8A16C File Offset: 0x00A8836C
+		// Token: 0x0602245C RID: 140380 RVA: 0x009B5888 File Offset: 0x009B3A88
 		public static CurveBase CreateCurveByBaseCurve(IBaseCurve baseCurve, [Nullable(2)] UCurveFloat preloadedCurveAsset = null)
 		{
 			return CurveUtils.CreateCurveByStruct(ConfigCurveUtils.ConvertToBaseCurve(baseCurve, preloadedCurveAsset));
 		}
 
-		// Token: 0x0602DD7B RID: 187771 RVA: 0x00A8A17C File Offset: 0x00A8837C
+		// Token: 0x0602245D RID: 140381 RVA: 0x009B5898 File Offset: 0x009B3A98
 		private static SBaseCurve ConvertToBaseCurve(IBaseCurve baseCurve, [Nullable(2)] UCurveFloat preloadedCurveAsset)
 		{
 			SBaseCurve sbaseCurve = new SBaseCurve();

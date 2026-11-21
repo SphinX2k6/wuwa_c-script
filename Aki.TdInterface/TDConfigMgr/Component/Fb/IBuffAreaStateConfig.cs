@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D0C RID: 3340
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E05 RID: 3589
 	public class IBuffAreaStateConfig
 	{
-		// Token: 0x06004C42 RID: 19522 RVA: 0x000BE16E File Offset: 0x000BC36E
+		// Token: 0x06005155 RID: 20821 RVA: 0x000C9716 File Offset: 0x000C7916
 		public static IBuffAreaStateConfig Create(IBuffAreaStateConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017E7 RID: 6119
-		// (get) Token: 0x06004C43 RID: 19523 RVA: 0x000BE18D File Offset: 0x000BC38D
+		// Token: 0x17001946 RID: 6470
+		// (get) Token: 0x06005156 RID: 20822 RVA: 0x000C9735 File Offset: 0x000C7935
 		public virtual string State
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017E8 RID: 6120
-		// (get) Token: 0x06004C44 RID: 19524 RVA: 0x000BE19C File Offset: 0x000BC39C
+		// Token: 0x17001947 RID: 6471
+		// (get) Token: 0x06005157 RID: 20823 RVA: 0x000C9744 File Offset: 0x000C7944
 		public virtual List<long> BuffIds
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017E9 RID: 6121
-		// (get) Token: 0x06004C45 RID: 19525 RVA: 0x000BE200 File Offset: 0x000BC400
+		// Token: 0x17001948 RID: 6472
+		// (get) Token: 0x06005158 RID: 20824 RVA: 0x000C97A8 File Offset: 0x000C79A8
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -73,20 +71,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BA5 RID: 11173
+		// Token: 0x04002E62 RID: 11874
 		private IBuffAreaStateConfig Instance;
 
-		// Token: 0x04002BA6 RID: 11174
+		// Token: 0x04002E63 RID: 11875
 		private List<long> _BuffIdsCache;
 
-		// Token: 0x04002BA7 RID: 11175
+		// Token: 0x04002E64 RID: 11876
 		private bool _BuffIdsInited;
 
-		// Token: 0x04002BA8 RID: 11176
+		// Token: 0x04002E65 RID: 11877
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002BA9 RID: 11177
+		// Token: 0x04002E66 RID: 11878
 		private bool _ConditionInited;
 	}
 }

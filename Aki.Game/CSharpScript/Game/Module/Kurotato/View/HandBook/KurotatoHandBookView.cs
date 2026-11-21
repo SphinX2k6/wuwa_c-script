@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 {
-	// Token: 0x02005765 RID: 22373
+	// Token: 0x0200473C RID: 18236
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoHandBookView : UiViewBase
 	{
-		// Token: 0x06038D6C RID: 232812 RVA: 0x00D80CF4 File Offset: 0x00D7EEF4
+		// Token: 0x0602DC7C RID: 187516 RVA: 0x00CCF7B8 File Offset: 0x00CCD9B8
 		public KurotatoHandBookView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038D6D RID: 232813 RVA: 0x00D80D08 File Offset: 0x00D7EF08
+		// Token: 0x0602DC7D RID: 187517 RVA: 0x00CCF7CC File Offset: 0x00CCD9CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D6E RID: 232814 RVA: 0x00D80D74 File Offset: 0x00D7EF74
+		// Token: 0x0602DC7E RID: 187518 RVA: 0x00CCF838 File Offset: 0x00CCDA38
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoHandBookView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D6F RID: 232815 RVA: 0x00D80DB8 File Offset: 0x00D7EFB8
+		// Token: 0x0602DC7F RID: 187519 RVA: 0x00CCF87C File Offset: 0x00CCDA7C
 		protected override void OnBeforeShow()
 		{
 			KurotatoLevelSelectViewData kurotatoLevelSelectViewData = this.OpenParam as KurotatoLevelSelectViewData;
@@ -66,32 +66,32 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.BindRedDot();
 		}
 
-		// Token: 0x06038D70 RID: 232816 RVA: 0x00D80E13 File Offset: 0x00D7F013
+		// Token: 0x0602DC80 RID: 187520 RVA: 0x00CCF8D7 File Offset: 0x00CCDAD7
 		protected override void OnBeforeHide()
 		{
 			this.ReadCurrentTabRedDot();
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x06038D71 RID: 232817 RVA: 0x00D80E21 File Offset: 0x00D7F021
+		// Token: 0x0602DC81 RID: 187521 RVA: 0x00CCF8E5 File Offset: 0x00CCDAE5
 		private void OnClickBtnBack()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038D72 RID: 232818 RVA: 0x00D80E2A File Offset: 0x00D7F02A
+		// Token: 0x0602DC82 RID: 187522 RVA: 0x00CCF8EE File Offset: 0x00CCDAEE
 		private void OnClickBtnHelp()
 		{
 			HelpController.Instance.OpenHelpById(575);
 		}
 
-		// Token: 0x06038D73 RID: 232819 RVA: 0x00D80E3B File Offset: 0x00D7F03B
+		// Token: 0x0602DC83 RID: 187523 RVA: 0x00CCF8FF File Offset: 0x00CCDAFF
 		private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new KurotatoTabItem();
 		}
 
-		// Token: 0x06038D74 RID: 232820 RVA: 0x00D80E44 File Offset: 0x00D7F044
+		// Token: 0x0602DC84 RID: 187524 RVA: 0x00CCF908 File Offset: 0x00CCDB08
 		private void ToggleCallBack(int index)
 		{
 			UiDynamicTab data = this.TabDataList[index];
@@ -105,28 +105,28 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.TabViewComponent.ToggleCallBack(data, viewName, tabItemByIndex, extraParams, null);
 		}
 
-		// Token: 0x06038D75 RID: 232821 RVA: 0x00D80EBC File Offset: 0x00D7F0BC
+		// Token: 0x0602DC85 RID: 187525 RVA: 0x00CCF980 File Offset: 0x00CCDB80
 		private CommonTabData GetCommonData(int index)
 		{
 			UiDynamicTab uiDynamicTab = this.TabDataList[index];
 			return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06038D76 RID: 232822 RVA: 0x00D80EF4 File Offset: 0x00D7F0F4
+		// Token: 0x0602DC86 RID: 187526 RVA: 0x00CCF9B8 File Offset: 0x00CCDBB8
 		private void BindRedDot()
 		{
 			this.BindRedDotByName(EUiTabViewName.KurotatoHandBookRoleTabView, ERedDotName.RedDotKurotatoRole, true);
 			this.BindRedDotByName(EUiTabViewName.KurotatoHandBookWeaponTabView, ERedDotName.RedDotKurotatoWeaponAndProp, true);
 		}
 
-		// Token: 0x06038D77 RID: 232823 RVA: 0x00D80F18 File Offset: 0x00D7F118
+		// Token: 0x0602DC87 RID: 187527 RVA: 0x00CCF9DC File Offset: 0x00CCDBDC
 		private void UnBindRedDot()
 		{
 			this.BindRedDotByName(EUiTabViewName.KurotatoHandBookRoleTabView, ERedDotName.RedDotKurotatoRole, false);
 			this.BindRedDotByName(EUiTabViewName.KurotatoHandBookWeaponTabView, ERedDotName.RedDotKurotatoWeaponAndProp, false);
 		}
 
-		// Token: 0x06038D78 RID: 232824 RVA: 0x00D80F3C File Offset: 0x00D7F13C
+		// Token: 0x0602DC88 RID: 187528 RVA: 0x00CCFA00 File Offset: 0x00CCDC00
 		private void ReadCurrentTabRedDot()
 		{
 			int selectedIndex = this.TabComponent.GetSelectedIndex();
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			}
 		}
 
-		// Token: 0x06038D79 RID: 232825 RVA: 0x00D80FAC File Offset: 0x00D7F1AC
+		// Token: 0x0602DC89 RID: 187529 RVA: 0x00CCFA70 File Offset: 0x00CCDC70
 		private void BindRedDotByName(EUiTabViewName viewName, ERedDotName redDotName, bool bIsBind)
 		{
 			int num = this.TabDataList.FindIndex((UiDynamicTab config) => (EUiTabViewName)config.ChildViewName == viewName);
@@ -168,10 +168,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			}
 		}
 
-		// Token: 0x0401DD05 RID: 122117
+		// Token: 0x0401879B RID: 100251
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x0401DD06 RID: 122118
+		// Token: 0x0401879C RID: 100252
 		[Nullable(new byte[]
 		{
 			2,
@@ -179,17 +179,17 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 		})]
 		private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401DD07 RID: 122119
+		// Token: 0x0401879D RID: 100253
 		[Nullable(2)]
 		private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x0200B968 RID: 47464
+		// Token: 0x0200A383 RID: 41859
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04038116 RID: 229654
+			// Token: 0x04032B12 RID: 207634
 			ItemCaption,
-			// Token: 0x04038117 RID: 229655
+			// Token: 0x04032B13 RID: 207635
 			ItemContent
 		}
 	}

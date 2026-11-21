@@ -6,15 +6,15 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000098 RID: 152
+	// Token: 0x0200007D RID: 125
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.Class")]
 	[UnrealStructLayout(632, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 632)]
 	public class UClass : UStruct, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x170004C7 RID: 1223
-		// (get) Token: 0x06001049 RID: 4169 RVA: 0x000187DC File Offset: 0x000169DC
+		// Token: 0x170000CF RID: 207
+		// (get) Token: 0x06000BDC RID: 3036 RVA: 0x00013500 File Offset: 0x00011700
 		public UClassStackOnlyPtr ClassStackOnlyPtr
 		{
 			get
@@ -23,102 +23,102 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600104A RID: 4170 RVA: 0x000187E9 File Offset: 0x000169E9
+		// Token: 0x06000BDD RID: 3037 RVA: 0x0001350D File Offset: 0x0001170D
 		public static implicit operator UClassStackOnlyPtr(UClass @class)
 		{
 			return new UClassStackOnlyPtr(@class.NativePtr);
 		}
 
-		// Token: 0x0600104B RID: 4171 RVA: 0x000187F8 File Offset: 0x000169F8
+		// Token: 0x06000BDE RID: 3038 RVA: 0x0001351C File Offset: 0x0001171C
 		[NullableContext(2)]
 		public bool IsChildOf(UClass Class)
 		{
 			return UClass.IsChildOf(this.ClassStackOnlyPtr, (Class != null) ? Class.ClassStackOnlyPtr : default(UClassStackOnlyPtr));
 		}
 
-		// Token: 0x0600104C RID: 4172 RVA: 0x00018824 File Offset: 0x00016A24
+		// Token: 0x06000BDF RID: 3039 RVA: 0x00013548 File Offset: 0x00011748
 		public bool IsChildOf(UClassStackOnlyPtr Class)
 		{
 			return UClass.IsChildOf(this.ClassStackOnlyPtr, Class);
 		}
 
-		// Token: 0x0600104D RID: 4173 RVA: 0x00018834 File Offset: 0x00016A34
+		// Token: 0x06000BE0 RID: 3040 RVA: 0x00013558 File Offset: 0x00011758
 		[NullableContext(2)]
 		public bool IsA(UClass Class)
 		{
 			return UClass.IsA(this.ClassStackOnlyPtr, (Class != null) ? Class.ClassStackOnlyPtr : default(UClassStackOnlyPtr));
 		}
 
-		// Token: 0x0600104E RID: 4174
+		// Token: 0x06000BE1 RID: 3041
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern bool IsValid(UClassStackOnlyPtr Class);
 
-		// Token: 0x0600104F RID: 4175
+		// Token: 0x06000BE2 RID: 3042
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern bool IsChildOf(UClassStackOnlyPtr A, UClassStackOnlyPtr B);
 
-		// Token: 0x06001050 RID: 4176
+		// Token: 0x06000BE3 RID: 3043
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern bool IsA(UClassStackOnlyPtr A, UClassStackOnlyPtr B);
 
-		// Token: 0x06001051 RID: 4177
+		// Token: 0x06000BE4 RID: 3044
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern FName GetFName(UClassStackOnlyPtr Class);
 
-		// Token: 0x06001052 RID: 4178
+		// Token: 0x06000BE5 RID: 3045
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern string GetName(UClassStackOnlyPtr Class);
 
-		// Token: 0x06001053 RID: 4179
+		// Token: 0x06000BE6 RID: 3046
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern string GetPathName(UClassStackOnlyPtr Class);
 
-		// Token: 0x06001054 RID: 4180
+		// Token: 0x06000BE7 RID: 3047
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern UClassStackOnlyPtr GetClass(UClassStackOnlyPtr Class);
 
-		// Token: 0x06001055 RID: 4181
+		// Token: 0x06000BE8 RID: 3048
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern int GetObjectIndex(UClassStackOnlyPtr Class);
 
-		// Token: 0x06001056 RID: 4182
+		// Token: 0x06000BE9 RID: 3049
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern int GetObjectSerialNumber(UClassStackOnlyPtr Class);
 
-		// Token: 0x06001057 RID: 4183 RVA: 0x00018860 File Offset: 0x00016A60
+		// Token: 0x06000BEA RID: 3050 RVA: 0x00013584 File Offset: 0x00011784
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UClass._ClassPtr;
 		}
 
-		// Token: 0x06001058 RID: 4184 RVA: 0x0001886C File Offset: 0x00016A6C
+		// Token: 0x06000BEB RID: 3051 RVA: 0x00013590 File Offset: 0x00011790
 		public UClass() : this(BuiltinUtils.AllocNativeUObject(UClass.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06001059 RID: 4185 RVA: 0x00018894 File Offset: 0x00016A94
+		// Token: 0x06000BEC RID: 3052 RVA: 0x000135B8 File Offset: 0x000117B8
 		public UClass(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UClass.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0600105A RID: 4186 RVA: 0x000188C7 File Offset: 0x00016AC7
+		// Token: 0x06000BED RID: 3053 RVA: 0x000135EB File Offset: 0x000117EB
 		static UClass()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.Class");
 		}
 
-		// Token: 0x0600105B RID: 4187 RVA: 0x000188D5 File Offset: 0x00016AD5
+		// Token: 0x06000BEE RID: 3054 RVA: 0x000135F9 File Offset: 0x000117F9
 		protected UClass(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040001FD RID: 509
+		// Token: 0x040001B6 RID: 438
 		public new const string __ObjectPath = "/Script/CoreUObject.Class";
 
-		// Token: 0x040001FE RID: 510
+		// Token: 0x040001B7 RID: 439
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040001FF RID: 511
+		// Token: 0x040001B8 RID: 440
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

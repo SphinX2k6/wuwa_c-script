@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EDC RID: 28380
+	// Token: 0x02007660 RID: 30304
 	public struct IRogueActivatePortal : IFlatbufferObject
 	{
-		// Token: 0x1700D32A RID: 54058
-		// (get) Token: 0x0603226D RID: 205421 RVA: 0x006C754A File Offset: 0x006C574A
+		// Token: 0x1700DE81 RID: 56961
+		// (get) Token: 0x060352AD RID: 217773 RVA: 0x0072327E File Offset: 0x0072147E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603226E RID: 205422 RVA: 0x006C7557 File Offset: 0x006C5757
+		// Token: 0x060352AE RID: 217774 RVA: 0x0072328B File Offset: 0x0072148B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603226F RID: 205423 RVA: 0x006C7560 File Offset: 0x006C5760
+		// Token: 0x060352AF RID: 217775 RVA: 0x00723294 File Offset: 0x00721494
 		public static IRogueActivatePortal GetRootAsIRogueActivatePortal(ByteBuffer _bb)
 		{
 			return IRogueActivatePortal.GetRootAsIRogueActivatePortal(_bb, default(IRogueActivatePortal));
 		}
 
-		// Token: 0x06032270 RID: 205424 RVA: 0x006C757C File Offset: 0x006C577C
+		// Token: 0x060352B0 RID: 217776 RVA: 0x007232B0 File Offset: 0x007214B0
 		public static IRogueActivatePortal GetRootAsIRogueActivatePortal(ByteBuffer _bb, IRogueActivatePortal obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032271 RID: 205425 RVA: 0x006C7599 File Offset: 0x006C5799
+		// Token: 0x060352B1 RID: 217777 RVA: 0x007232CD File Offset: 0x007214CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032272 RID: 205426 RVA: 0x006C75A8 File Offset: 0x006C57A8
+		// Token: 0x060352B2 RID: 217778 RVA: 0x007232DC File Offset: 0x007214DC
 		public IRogueActivatePortal __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06032273 RID: 205427 RVA: 0x006C75B8 File Offset: 0x006C57B8
+		// Token: 0x060352B3 RID: 217779 RVA: 0x007232EC File Offset: 0x007214EC
 		public static void StartIRogueActivatePortal(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x06032274 RID: 205428 RVA: 0x006C75C1 File Offset: 0x006C57C1
+		// Token: 0x060352B4 RID: 217780 RVA: 0x007232F5 File Offset: 0x007214F5
 		public static Offset<IRogueActivatePortal> EndIRogueActivatePortal(FlatBufferBuilder builder)
 		{
 			return new Offset<IRogueActivatePortal>(builder.EndTable());
 		}
 
-		// Token: 0x06032275 RID: 205429 RVA: 0x006C75D0 File Offset: 0x006C57D0
+		// Token: 0x060352B5 RID: 217781 RVA: 0x00723304 File Offset: 0x00721504
 		public IRogueActivatePortalT UnPack()
 		{
 			IRogueActivatePortalT rogueActivatePortalT = new IRogueActivatePortalT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return rogueActivatePortalT;
 		}
 
-		// Token: 0x06032276 RID: 205430 RVA: 0x006C75EB File Offset: 0x006C57EB
+		// Token: 0x060352B6 RID: 217782 RVA: 0x0072331F File Offset: 0x0072151F
 		public void UnPackTo(IRogueActivatePortalT _o)
 		{
 		}
 
-		// Token: 0x06032277 RID: 205431 RVA: 0x006C75F0 File Offset: 0x006C57F0
+		// Token: 0x060352B7 RID: 217783 RVA: 0x00723324 File Offset: 0x00721524
 		public static Offset<IRogueActivatePortal> Pack(FlatBufferBuilder builder, IRogueActivatePortalT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRogueActivatePortal.EndIRogueActivatePortal(builder);
 		}
 
-		// Token: 0x040118D2 RID: 71890
+		// Token: 0x04012857 RID: 75863
 		private Table __p;
 	}
 }

@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200608B RID: 24715
+	// Token: 0x02005009 RID: 20489
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorGameplayEntryView : UiTickViewBase
 	{
-		// Token: 0x0603E7B0 RID: 255920 RVA: 0x00F19F10 File Offset: 0x00F18110
+		// Token: 0x06033474 RID: 210036 RVA: 0x00E60CD4 File Offset: 0x00E5EED4
 		public SpringManorGameplayEntryView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E7B1 RID: 255921 RVA: 0x00F19F24 File Offset: 0x00F18124
+		// Token: 0x06033475 RID: 210037 RVA: 0x00E60CE8 File Offset: 0x00E5EEE8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E7B2 RID: 255922 RVA: 0x00F19FE4 File Offset: 0x00F181E4
+		// Token: 0x06033476 RID: 210038 RVA: 0x00E60DA8 File Offset: 0x00E5EFA8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorGameplayEntryView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -47,19 +47,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E7B3 RID: 255923 RVA: 0x00F1A027 File Offset: 0x00F18227
+		// Token: 0x06033477 RID: 210039 RVA: 0x00E60DEB File Offset: 0x00E5EFEB
 		protected override void OnBeforeShow()
 		{
 			this.PauseTimeDilation();
 		}
 
-		// Token: 0x0603E7B4 RID: 255924 RVA: 0x00F1A02F File Offset: 0x00F1822F
+		// Token: 0x06033478 RID: 210040 RVA: 0x00E60DF3 File Offset: 0x00E5EFF3
 		protected override void OnBeforeHide()
 		{
 			this.ResumeTimeDilation();
 		}
 
-		// Token: 0x0603E7B5 RID: 255925 RVA: 0x00F1A037 File Offset: 0x00F18237
+		// Token: 0x06033479 RID: 210041 RVA: 0x00E60DFB File Offset: 0x00E5EFFB
 		protected override void OnStart()
 		{
 			PopupCaptionItem caption = this.Caption;
@@ -70,19 +70,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			caption.SetCloseCallBack(new Action(this.OnClickClose));
 		}
 
-		// Token: 0x0603E7B6 RID: 255926 RVA: 0x00F1A055 File Offset: 0x00F18255
+		// Token: 0x0603347A RID: 210042 RVA: 0x00E60E19 File Offset: 0x00E5F019
 		protected void PauseTimeDilation()
 		{
 			UiTimeDilation.Instance.AddWaitSetTimeDilationTag("SpringManorGameplayEntryView");
 		}
 
-		// Token: 0x0603E7B7 RID: 255927 RVA: 0x00F1A066 File Offset: 0x00F18266
+		// Token: 0x0603347B RID: 210043 RVA: 0x00E60E2A File Offset: 0x00E5F02A
 		protected void ResumeTimeDilation()
 		{
 			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("SpringManorGameplayEntryView");
 		}
 
-		// Token: 0x0603E7B8 RID: 255928 RVA: 0x00F1A078 File Offset: 0x00F18278
+		// Token: 0x0603347C RID: 210044 RVA: 0x00E60E3C File Offset: 0x00E5F03C
 		protected override void OnTick(float delta)
 		{
 			if (this.Timer > 0.0)
@@ -97,23 +97,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7B9 RID: 255929 RVA: 0x00F1A0F8 File Offset: 0x00F182F8
+		// Token: 0x0603347D RID: 210045 RVA: 0x00E60EBC File Offset: 0x00E5F0BC
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020B1E RID: 133918
+		// Token: 0x0401B44B RID: 111691
 		private const int TICK_INTERVAL = 500;
 
-		// Token: 0x04020B1F RID: 133919
+		// Token: 0x0401B44C RID: 111692
 		private readonly List<FunctionItem> FunctionItems = new List<FunctionItem>();
 
-		// Token: 0x04020B20 RID: 133920
+		// Token: 0x0401B44D RID: 111693
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x04020B21 RID: 133921
+		// Token: 0x0401B44E RID: 111694
 		private double Timer;
 	}
 }

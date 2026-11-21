@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010B9 RID: 4281
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011E7 RID: 4583
 	public class IQuestScheduleType
 	{
-		// Token: 0x0600609E RID: 24734 RVA: 0x000E9908 File Offset: 0x000E7B08
+		// Token: 0x06006697 RID: 26263 RVA: 0x000F6A28 File Offset: 0x000F4C28
 		private IQuestScheduleType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600609F RID: 24735 RVA: 0x000E9940 File Offset: 0x000E7B40
+		// Token: 0x06006698 RID: 26264 RVA: 0x000F6A60 File Offset: 0x000F4C60
 		public static IQuestScheduleType Create([Nullable(2)] IQuestScheduleType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060060A0 RID: 24736 RVA: 0x000E9953 File Offset: 0x000E7B53
+		// Token: 0x06006699 RID: 26265 RVA: 0x000F6A73 File Offset: 0x000F4C73
 		public static IQuestScheduleType CreateFromSetValue([Nullable(2)] IQuestScheduleType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060060A1 RID: 24737 RVA: 0x000E9966 File Offset: 0x000E7B66
+		// Token: 0x0600669A RID: 26266 RVA: 0x000F6A86 File Offset: 0x000F4C86
 		public IQuestScheduleType_SetValue ToSetValue()
 		{
 			return new IQuestScheduleType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FBD RID: 8125
-		// (get) Token: 0x060060A2 RID: 24738 RVA: 0x000E9979 File Offset: 0x000E7B79
-		// (set) Token: 0x060060A3 RID: 24739 RVA: 0x000E99A4 File Offset: 0x000E7BA4
+		// Token: 0x1700216F RID: 8559
+		// (get) Token: 0x0600669B RID: 26267 RVA: 0x000F6A99 File Offset: 0x000F4C99
+		// (set) Token: 0x0600669C RID: 26268 RVA: 0x000F6AC4 File Offset: 0x000F4CC4
 		public virtual EQuestScheduleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A38 RID: 14904
+		// Token: 0x04003D85 RID: 15749
 		[Nullable(2)]
 		protected IQuestScheduleType FbInstance;
 
-		// Token: 0x04003A39 RID: 14905
+		// Token: 0x04003D86 RID: 15750
 		[Nullable(2)]
 		protected IQuestScheduleType_SetValue PocoInterface;
 	}

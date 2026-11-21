@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ECD RID: 7885
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002106 RID: 8454
 	public class ISubPlotModeBase
 	{
-		// Token: 0x0600A8BE RID: 43198 RVA: 0x0017CD5C File Offset: 0x0017AF5C
+		// Token: 0x0600B390 RID: 45968 RVA: 0x00192D54 File Offset: 0x00190F54
 		private ISubPlotModeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A8BF RID: 43199 RVA: 0x0017CD94 File Offset: 0x0017AF94
+		// Token: 0x0600B391 RID: 45969 RVA: 0x00192D8C File Offset: 0x00190F8C
 		public static ISubPlotModeBase Create([Nullable(2)] ISubPlotModeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A8C0 RID: 43200 RVA: 0x0017CDA7 File Offset: 0x0017AFA7
+		// Token: 0x0600B392 RID: 45970 RVA: 0x00192D9F File Offset: 0x00190F9F
 		public static ISubPlotModeBase CreateFromSetValue([Nullable(2)] ISubPlotModeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A8C1 RID: 43201 RVA: 0x0017CDBA File Offset: 0x0017AFBA
+		// Token: 0x0600B393 RID: 45971 RVA: 0x00192DB2 File Offset: 0x00190FB2
 		public ISubPlotModeBase_SetValue ToSetValue()
 		{
 			return new ISubPlotModeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003383 RID: 13187
-		// (get) Token: 0x0600A8C2 RID: 43202 RVA: 0x0017CDCD File Offset: 0x0017AFCD
-		// (set) Token: 0x0600A8C3 RID: 43203 RVA: 0x0017CDF8 File Offset: 0x0017AFF8
+		// Token: 0x1700364E RID: 13902
+		// (get) Token: 0x0600B394 RID: 45972 RVA: 0x00192DC5 File Offset: 0x00190FC5
+		// (set) Token: 0x0600B395 RID: 45973 RVA: 0x00192DF0 File Offset: 0x00190FF0
 		public virtual ESubPlotModeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400647C RID: 25724
+		// Token: 0x04006A6B RID: 27243
 		[Nullable(2)]
 		protected ISubPlotModeBase FbInstance;
 
-		// Token: 0x0400647D RID: 25725
+		// Token: 0x04006A6C RID: 27244
 		[Nullable(2)]
 		protected ISubPlotModeBase_SetValue PocoInterface;
 	}

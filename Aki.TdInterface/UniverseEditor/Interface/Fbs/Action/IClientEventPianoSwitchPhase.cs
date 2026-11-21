@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063A6 RID: 25510
+	// Token: 0x02006A17 RID: 27159
 	public struct IClientEventPianoSwitchPhase : IFlatbufferObject
 	{
-		// Token: 0x1700BE28 RID: 48680
-		// (get) Token: 0x0602C213 RID: 180755 RVA: 0x0060F8A4 File Offset: 0x0060DAA4
+		// Token: 0x1700C7AC RID: 51116
+		// (get) Token: 0x0602E975 RID: 190837 RVA: 0x0065A8DC File Offset: 0x00658ADC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C214 RID: 180756 RVA: 0x0060F8B1 File Offset: 0x0060DAB1
+		// Token: 0x0602E976 RID: 190838 RVA: 0x0065A8E9 File Offset: 0x00658AE9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C215 RID: 180757 RVA: 0x0060F8B8 File Offset: 0x0060DAB8
+		// Token: 0x0602E977 RID: 190839 RVA: 0x0065A8F0 File Offset: 0x00658AF0
 		public static IClientEventPianoSwitchPhase GetRootAsIClientEventPianoSwitchPhase(ByteBuffer _bb)
 		{
 			return IClientEventPianoSwitchPhase.GetRootAsIClientEventPianoSwitchPhase(_bb, default(IClientEventPianoSwitchPhase));
 		}
 
-		// Token: 0x0602C216 RID: 180758 RVA: 0x0060F8D4 File Offset: 0x0060DAD4
+		// Token: 0x0602E978 RID: 190840 RVA: 0x0065A90C File Offset: 0x00658B0C
 		public static IClientEventPianoSwitchPhase GetRootAsIClientEventPianoSwitchPhase(ByteBuffer _bb, IClientEventPianoSwitchPhase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C217 RID: 180759 RVA: 0x0060F8F1 File Offset: 0x0060DAF1
+		// Token: 0x0602E979 RID: 190841 RVA: 0x0065A929 File Offset: 0x00658B29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C218 RID: 180760 RVA: 0x0060F900 File Offset: 0x0060DB00
+		// Token: 0x0602E97A RID: 190842 RVA: 0x0065A938 File Offset: 0x00658B38
 		public IClientEventPianoSwitchPhase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE29 RID: 48681
-		// (get) Token: 0x0602C219 RID: 180761 RVA: 0x0060F910 File Offset: 0x0060DB10
+		// Token: 0x1700C7AD RID: 51117
+		// (get) Token: 0x0602E97B RID: 190843 RVA: 0x0065A948 File Offset: 0x00658B48
 		public EClientEventPianoEventType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C21A RID: 180762 RVA: 0x0060F94C File Offset: 0x0060DB4C
+		// Token: 0x0602E97C RID: 190844 RVA: 0x0065A984 File Offset: 0x00658B84
 		public static Offset<IClientEventPianoSwitchPhase> CreateIClientEventPianoSwitchPhase(FlatBufferBuilder builder, EClientEventPianoEventType Type = EClientEventPianoEventType.UpdateSubtitle)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientEventPianoSwitchPhase.EndIClientEventPianoSwitchPhase(builder);
 		}
 
-		// Token: 0x0602C21B RID: 180763 RVA: 0x0060F962 File Offset: 0x0060DB62
+		// Token: 0x0602E97D RID: 190845 RVA: 0x0065A99A File Offset: 0x00658B9A
 		public static void StartIClientEventPianoSwitchPhase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602C21C RID: 180764 RVA: 0x0060F96B File Offset: 0x0060DB6B
+		// Token: 0x0602E97E RID: 190846 RVA: 0x0065A9A3 File Offset: 0x00658BA3
 		public static void AddType(FlatBufferBuilder builder, EClientEventPianoEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C21D RID: 180765 RVA: 0x0060F976 File Offset: 0x0060DB76
+		// Token: 0x0602E97F RID: 190847 RVA: 0x0065A9AE File Offset: 0x00658BAE
 		public static Offset<IClientEventPianoSwitchPhase> EndIClientEventPianoSwitchPhase(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientEventPianoSwitchPhase>(builder.EndTable());
 		}
 
-		// Token: 0x0602C21E RID: 180766 RVA: 0x0060F984 File Offset: 0x0060DB84
+		// Token: 0x0602E980 RID: 190848 RVA: 0x0065A9BC File Offset: 0x00658BBC
 		public IClientEventPianoSwitchPhaseT UnPack()
 		{
 			IClientEventPianoSwitchPhaseT clientEventPianoSwitchPhaseT = new IClientEventPianoSwitchPhaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientEventPianoSwitchPhaseT;
 		}
 
-		// Token: 0x0602C21F RID: 180767 RVA: 0x0060F99F File Offset: 0x0060DB9F
+		// Token: 0x0602E981 RID: 190849 RVA: 0x0065A9D7 File Offset: 0x00658BD7
 		public void UnPackTo(IClientEventPianoSwitchPhaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602C220 RID: 180768 RVA: 0x0060F9B0 File Offset: 0x0060DBB0
+		// Token: 0x0602E982 RID: 190850 RVA: 0x0065A9E8 File Offset: 0x00658BE8
 		public static Offset<IClientEventPianoSwitchPhase> Pack(FlatBufferBuilder builder, IClientEventPianoSwitchPhaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientEventPianoSwitchPhase.CreateIClientEventPianoSwitchPhase(builder, _o.Type);
 		}
 
-		// Token: 0x0401097A RID: 67962
+		// Token: 0x0401178D RID: 71565
 		private Table __p;
 	}
 }

@@ -3,39 +3,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 {
-	// Token: 0x02007204 RID: 29188
+	// Token: 0x020062B9 RID: 25273
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElevatorContext
 	{
-		// Token: 0x0402595D RID: 153949
+		// Token: 0x040205CC RID: 132556
 		public BaseActorComponent ActorComp;
 
-		// Token: 0x0402595E RID: 153950
+		// Token: 0x040205CD RID: 132557
 		public int CurFloor = 1;
 
-		// Token: 0x0402595F RID: 153951
+		// Token: 0x040205CE RID: 132558
 		public float? DelayMoveTime;
 
-		// Token: 0x04025960 RID: 153952
+		// Token: 0x040205CF RID: 132559
 		public Entity Entity;
 
-		// Token: 0x04025961 RID: 153953
+		// Token: 0x040205D0 RID: 132560
 		public int? EntityConfigId;
 
-		// Token: 0x04025962 RID: 153954
+		// Token: 0x040205D1 RID: 132561
 		public bool IsAnnular;
 
-		// Token: 0x04025963 RID: 153955
+		// Token: 0x040205D2 RID: 132562
 		public float? MaxSpeed;
 
-		// Token: 0x04025964 RID: 153956
+		// Token: 0x040205D3 RID: 132563
 		public EGamePlayElevatorState State;
 
-		// Token: 0x04025965 RID: 153957
+		// Token: 0x040205D4 RID: 132564
 		public int TargetFloor;
 
-		// Token: 0x04025966 RID: 153958
+		// Token: 0x040205D5 RID: 132565
 		public bool? UniformMovement;
 	}
 }

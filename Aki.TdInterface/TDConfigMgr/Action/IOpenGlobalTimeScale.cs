@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C96 RID: 7318
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E9B RID: 7835
 	public class IOpenGlobalTimeScale : ISetGlobalTimeScaleType
 	{
-		// Token: 0x06009D07 RID: 40199 RVA: 0x00167DD4 File Offset: 0x00165FD4
+		// Token: 0x0600A6A3 RID: 42659 RVA: 0x0017B81C File Offset: 0x00179A1C
 		private IOpenGlobalTimeScale_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009D08 RID: 40200 RVA: 0x00167E0C File Offset: 0x0016600C
+		// Token: 0x0600A6A4 RID: 42660 RVA: 0x0017B854 File Offset: 0x00179A54
 		public static IOpenGlobalTimeScale Create([Nullable(2)] IOpenGlobalTimeScale instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D09 RID: 40201 RVA: 0x00167E1F File Offset: 0x0016601F
+		// Token: 0x0600A6A5 RID: 42661 RVA: 0x0017B867 File Offset: 0x00179A67
 		public static IOpenGlobalTimeScale CreateFromSetValue([Nullable(2)] IOpenGlobalTimeScale_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009D0A RID: 40202 RVA: 0x00167E32 File Offset: 0x00166032
+		// Token: 0x0600A6A6 RID: 42662 RVA: 0x0017B87A File Offset: 0x00179A7A
 		public new IOpenGlobalTimeScale_SetValue ToSetValue()
 		{
 			return new IOpenGlobalTimeScale_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030F9 RID: 12537
-		// (get) Token: 0x06009D0B RID: 40203 RVA: 0x00167E5D File Offset: 0x0016605D
-		// (set) Token: 0x06009D0C RID: 40204 RVA: 0x00167E88 File Offset: 0x00166088
+		// Token: 0x17003377 RID: 13175
+		// (get) Token: 0x0600A6A7 RID: 42663 RVA: 0x0017B8A5 File Offset: 0x00179AA5
+		// (set) Token: 0x0600A6A8 RID: 42664 RVA: 0x0017B8D0 File Offset: 0x00179AD0
 		public override ESetTimeScaleType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030FA RID: 12538
-		// (get) Token: 0x06009D0D RID: 40205 RVA: 0x00167E96 File Offset: 0x00166096
-		// (set) Token: 0x06009D0E RID: 40206 RVA: 0x00167EC5 File Offset: 0x001660C5
+		// Token: 0x17003378 RID: 13176
+		// (get) Token: 0x0600A6A9 RID: 42665 RVA: 0x0017B8DE File Offset: 0x00179ADE
+		// (set) Token: 0x0600A6AA RID: 42666 RVA: 0x0017B90D File Offset: 0x00179B0D
 		public virtual float TimeScale
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030FB RID: 12539
-		// (get) Token: 0x06009D0F RID: 40207 RVA: 0x00167ED3 File Offset: 0x001660D3
-		// (set) Token: 0x06009D10 RID: 40208 RVA: 0x00167F02 File Offset: 0x00166102
+		// Token: 0x17003379 RID: 13177
+		// (get) Token: 0x0600A6AB RID: 42667 RVA: 0x0017B91B File Offset: 0x00179B1B
+		// (set) Token: 0x0600A6AC RID: 42668 RVA: 0x0017B94A File Offset: 0x00179B4A
 		public virtual float Duration
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F20 RID: 24352
+		// Token: 0x04006474 RID: 25716
 		[Nullable(2)]
 		protected new IOpenGlobalTimeScale FbInstance;
 
-		// Token: 0x04005F21 RID: 24353
+		// Token: 0x04006475 RID: 25717
 		[Nullable(2)]
 		protected new IOpenGlobalTimeScale_SetValue PocoInterface;
 	}

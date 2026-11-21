@@ -14,31 +14,31 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 {
-	// Token: 0x020059C5 RID: 22981
+	// Token: 0x0200499E RID: 18846
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TreeExpressAssistant : ControllerAssistantBase
 	{
-		// Token: 0x0603A41C RID: 238620 RVA: 0x00DD9CD3 File Offset: 0x00DD7ED3
+		// Token: 0x0602F343 RID: 193347 RVA: 0x00D291AB File Offset: 0x00D273AB
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x0603A41D RID: 238621 RVA: 0x00DD9CD5 File Offset: 0x00DD7ED5
+		// Token: 0x0602F344 RID: 193348 RVA: 0x00D291AD File Offset: 0x00D273AD
 		public override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(EEventName.GeneralLogicTreeStartShowTrackText, new Action<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(this.OnBehaviorTreeStartShow));
 			EventSystem.Instance.Add<BehaviorTreeViewShowData, bool>(EEventName.GeneralLogicTreeUpdateShowTrackText, new Action<BehaviorTreeViewShowData, bool>(this.OnBehaviorTreeUpdateShow));
 		}
 
-		// Token: 0x0603A41E RID: 238622 RVA: 0x00DD9D0F File Offset: 0x00DD7F0F
+		// Token: 0x0602F345 RID: 193349 RVA: 0x00D291E7 File Offset: 0x00D273E7
 		public override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(EEventName.GeneralLogicTreeStartShowTrackText, new Action<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(this.OnBehaviorTreeStartShow));
 			EventSystem.Instance.Remove<BehaviorTreeViewShowData, bool>(EEventName.GeneralLogicTreeUpdateShowTrackText, new Action<BehaviorTreeViewShowData, bool>(this.OnBehaviorTreeUpdateShow));
 		}
 
-		// Token: 0x0603A41F RID: 238623 RVA: 0x00DD9D49 File Offset: 0x00DD7F49
+		// Token: 0x0602F346 RID: 193350 RVA: 0x00D29221 File Offset: 0x00D27421
 		private void OnBehaviorTreeStartShow(BehaviorTreeViewShowData showData, ETreeTextExpressReason reason, bool _)
 		{
 			if (showData == null)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			TreeExpressAssistant.ApplyOccupyTreeExpression(showData.BtType, showData.Id, showData.IsInChallenge);
 		}
 
-		// Token: 0x0603A420 RID: 238624 RVA: 0x00DD9D66 File Offset: 0x00DD7F66
+		// Token: 0x0602F347 RID: 193351 RVA: 0x00D2923E File Offset: 0x00D2743E
 		private void OnBehaviorTreeUpdateShow(BehaviorTreeViewShowData showData, bool _)
 		{
 			if (showData == null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			TreeExpressAssistant.ApplyOccupyTreeExpression(showData.BtType, showData.Id, showData.IsInChallenge);
 		}
 
-		// Token: 0x0603A421 RID: 238625 RVA: 0x00DD9D84 File Offset: 0x00DD7F84
+		// Token: 0x0602F348 RID: 193352 RVA: 0x00D2925C File Offset: 0x00D2745C
 		public static bool IsShowNodeStatus(IQuestScheduleType schedule)
 		{
 			bool result = false;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return result;
 		}
 
-		// Token: 0x0603A422 RID: 238626 RVA: 0x00DD9DC0 File Offset: 0x00DD7FC0
+		// Token: 0x0602F349 RID: 193353 RVA: 0x00D29298 File Offset: 0x00D27498
 		[NullableContext(2)]
 		public static int GetTitleTrackNodeId(IQuestScheduleType schedule)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return result;
 		}
 
-		// Token: 0x0603A423 RID: 238627 RVA: 0x00DD9DEC File Offset: 0x00DD7FEC
+		// Token: 0x0602F34A RID: 193354 RVA: 0x00D292C4 File Offset: 0x00D274C4
 		[NullableContext(2)]
 		public static bool IsShowTrackDistance(long treeIncId, IQuestScheduleType schedule)
 		{
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return result;
 		}
 
-		// Token: 0x0603A424 RID: 238628 RVA: 0x00DD9E34 File Offset: 0x00DD8034
+		// Token: 0x0602F34B RID: 193355 RVA: 0x00D2930C File Offset: 0x00D2750C
 		public static bool IsShowNodeTrackDistance(long treeIncId, int nodeId)
 		{
 			BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return node != null && node.ContainTag(EBehaviorTreeTag.CanShow);
 		}
 
-		// Token: 0x0603A425 RID: 238629 RVA: 0x00DD9E84 File Offset: 0x00DD8084
+		// Token: 0x0602F34C RID: 193356 RVA: 0x00D2935C File Offset: 0x00D2755C
 		[NullableContext(2)]
 		public static int GetQCount(long treeIncId, IQuestScheduleType schedule)
 		{
@@ -180,8 +180,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return result;
 		}
 
-		// Token: 0x0603A426 RID: 238630 RVA: 0x00DD9FAC File Offset: 0x00DD81AC
-		public static string GetTitleText(long treeIncId, string tidTitle, [Nullable(2)] IQuestScheduleType schedule, bool bUsePreStateText, [Nullable(new byte[]
+		// Token: 0x0602F34D RID: 193357 RVA: 0x00D29484 File Offset: 0x00D27684
+		public unsafe static string GetTitleText(long treeIncId, string tidTitle, [Nullable(2)] IQuestScheduleType schedule, bool bUsePreStateText, [Nullable(new byte[]
 		{
 			2,
 			1
@@ -202,10 +202,10 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 					int childQuestId = questScheduleChildQuestCompleted.ChildQuestId;
 					ITitlePreState titlePreState = questScheduleChildQuestCompleted.TitlePreState;
 					text = TreeExpressAssistant.GetNodeTrackText(treeIncId, childQuestId, (titlePreState != null) ? titlePreState.TidPreStateTitle : null, questScheduleChildQuestCompleted.Vars, questScheduleChildQuestCompleted.OnlyShowWhileRunning);
-					goto IL_5C1;
+					goto IL_970;
 				}
 				text = TreeExpressAssistant.GetNodeTrackText(treeIncId, questScheduleChildQuestCompleted.ChildQuestId, tidTitle, questScheduleChildQuestCompleted.Vars, questScheduleChildQuestCompleted.OnlyShowWhileRunning);
-				goto IL_5C1;
+				goto IL_970;
 			}
 			case EQuestScheduleType.EntityHP:
 			{
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				defaultInterpolatedStringHandler.AppendFormatted<int>(qcount);
 				defaultInterpolatedStringHandler.AppendLiteral("%");
 				text = text2.Replace(oldValue, defaultInterpolatedStringHandler.ToStringAndClear());
-				goto IL_5C1;
+				goto IL_970;
 			}
 			case EQuestScheduleType.Score:
 			{
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 				defaultInterpolatedStringHandler.AppendFormatted<int>(ScoreModel.Instance.GetTargetScore());
 				text = text4.Replace(oldValue2, defaultInterpolatedStringHandler.ToStringAndClear());
-				goto IL_5C1;
+				goto IL_970;
 			}
 			case EQuestScheduleType.ChildQuestCompletedCount:
 			{
@@ -256,37 +256,156 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 					defaultInterpolatedStringHandler.AppendFormatted<int>(count);
 					defaultInterpolatedStringHandler.AppendLiteral(")");
 					text = defaultInterpolatedStringHandler.ToStringAndClear();
-					goto IL_5C1;
+					goto IL_970;
 				}
-				goto IL_5C1;
+				goto IL_970;
 			}
 			case EQuestScheduleType.TowerChallengeTitle:
 				if (TowerModel.Instance.CheckInTower())
 				{
 					text = TowerModel.Instance.GetCurrentFloorName();
-					goto IL_5C1;
+					goto IL_970;
 				}
-				goto IL_5C1;
+				goto IL_970;
 			case EQuestScheduleType.RoleTowerChallengeTitle:
-				goto IL_5C1;
+				if (!RoleTowerModel.Instance.InBattle)
+				{
+					if (text.Contains("{q_count"))
+					{
+						text = string.Empty;
+						goto IL_970;
+					}
+					goto IL_970;
+				}
+				else
+				{
+					IRoleTowerChallengeTitleTypeBase titleType = ((IQuestScheduleRoleTowerChallengeTitle)schedule).TitleType;
+					switch ((titleType != null) ? titleType.Type : ERoleTowerChallengeTitleType.KillProgress)
+					{
+					case ERoleTowerChallengeTitleType.KillProgress:
+					{
+						BaseBehaviorTree behaviorTree2 = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
+						BehaviorNodeBase behaviorNodeBase = (behaviorTree2 != null) ? behaviorTree2.GetCurrentActiveChildQuestNode(true) : null;
+						if (behaviorNodeBase == null)
+						{
+							global::Log instance = global::Log.Instance;
+							ELogModule module = ELogModule.Temp;
+							ELogAuthor author = ELogAuthor.LJQ;
+							string message = "RoleTower.GetTitleText KillProgress 未取到当前激活子任务节点，回退纯配置文本";
+							<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("treeIncId", treeIncId);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("tidTitle", tidTitle);
+							instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+							if (text.Contains("{q_count"))
+							{
+								text = string.Empty;
+								goto IL_970;
+							}
+							goto IL_970;
+						}
+						else
+						{
+							if (behaviorNodeBase.GetProgressMax() == "0")
+							{
+								text = string.Empty;
+								global::Log instance2 = global::Log.Instance;
+								ELogModule module2 = ELogModule.Temp;
+								ELogAuthor author2 = ELogAuthor.LJQ;
+								string message2 = "RoleTower.GetTitleText KillProgress 当前上限为0, 保持当前追踪不刷新";
+								<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("treeIncId", treeIncId);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("nodeId", behaviorNodeBase.NodeId);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("tidTitle", tidTitle);
+								instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
+								goto IL_970;
+							}
+							KillBehaviorNode killBehaviorNode = behaviorNodeBase as KillBehaviorNode;
+							if (killBehaviorNode == null)
+							{
+								text = TreeExpressAssistant.GetNodeTrackText(treeIncId, behaviorNodeBase.NodeId, tidTitle, null, null);
+								goto IL_970;
+							}
+							string roleTowerKillCount = killBehaviorNode.GetRoleTowerKillCount();
+							string progressMax = killBehaviorNode.GetProgressMax();
+							int num2;
+							int num3;
+							if (!int.TryParse(roleTowerKillCount, out num2) || !int.TryParse(progressMax, out num3) || num3 <= 0 || num2 > num3)
+							{
+								text = string.Empty;
+								global::Log instance3 = global::Log.Instance;
+								ELogModule module3 = ELogModule.Temp;
+								ELogAuthor author3 = ELogAuthor.LJQ;
+								string message3 = "RoleTower.GetTitleText KillProgress 追踪数字异常, 不刷新";
+								<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray4<ValueTuple<string, object>>);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("treeIncId", treeIncId);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("nodeId", behaviorNodeBase.NodeId);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("kill", roleTowerKillCount);
+								*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 3) = new ValueTuple<string, object>("max", progressMax);
+								instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 4));
+								goto IL_970;
+							}
+							text = PublicUtil.Instance.GetConfigTextByKey(tidTitle).Replace("{q_count}", roleTowerKillCount).Replace("{q_countMax}", progressMax);
+							goto IL_970;
+						}
+						break;
+					}
+					case ERoleTowerChallengeTitleType.PhantomExp:
+					{
+						text = PublicUtil.Instance.GetConfigTextByKey(tidTitle);
+						int curEchoExp = RoleTowerModel.Instance.GetCurEchoExp();
+						string text5 = text;
+						string oldValue3 = "{q_count}";
+						DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
+						defaultInterpolatedStringHandler.AppendFormatted<int>(curEchoExp);
+						text = text5.Replace(oldValue3, defaultInterpolatedStringHandler.ToStringAndClear());
+						if (text.Contains("{q_countMax}"))
+						{
+							global::Log instance4 = global::Log.Instance;
+							ELogModule module4 = ELogModule.Temp;
+							ELogAuthor author4 = ELogAuthor.LJQ;
+							string message4 = "RoleTower.GetTitleText PhantomExp 经验上限暂无数据源，{q_countMax} 待接";
+							<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("treeIncId", treeIncId);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("curEchoExp", curEchoExp);
+							instance4.Info(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 2));
+							goto IL_970;
+						}
+						goto IL_970;
+					}
+					case ERoleTowerChallengeTitleType.CurrentFloor:
+					{
+						text = PublicUtil.Instance.GetConfigTextByKey(tidTitle);
+						int currentFloorIndex = RoleTowerModel.Instance.GetCurrentFloorIndex();
+						string text6 = text;
+						string oldValue4 = "{q_count}";
+						DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
+						defaultInterpolatedStringHandler.AppendFormatted<int>(currentFloorIndex);
+						text = text6.Replace(oldValue4, defaultInterpolatedStringHandler.ToStringAndClear());
+						goto IL_970;
+					}
+					default:
+						goto IL_970;
+					}
+				}
+				break;
 			case EQuestScheduleType.Var:
 			{
-				BaseBehaviorTree behaviorTree2 = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
-				if (behaviorTree2 != null)
+				BaseBehaviorTree behaviorTree3 = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
+				if (behaviorTree3 != null)
 				{
 					IQuestScheduleBtTreeVar questScheduleBtTreeVar = (IQuestScheduleBtTreeVar)schedule;
-					text = TreeExpressAssistant.GetVarValueTextByKey(tidTitle, questScheduleBtTreeVar.Var, questScheduleBtTreeVar.ShowAsWordArt != null, GeneralLogicTreeContext.Create(behaviorTree2.BtType, behaviorTree2.TreeIncId, behaviorTree2.TreeConfigId, 0, null));
-					goto IL_5C1;
+					text = TreeExpressAssistant.GetVarValueTextByKey(tidTitle, questScheduleBtTreeVar.Var, questScheduleBtTreeVar.ShowAsWordArt != null, GeneralLogicTreeContext.Create(behaviorTree3.BtType, behaviorTree3.TreeIncId, behaviorTree3.TreeConfigId, 0, null));
+					goto IL_970;
 				}
-				goto IL_5C1;
+				goto IL_970;
 			}
 			case EQuestScheduleType.MultiVar:
 			case EQuestScheduleType.Condition:
 			{
-				BaseBehaviorTree behaviorTree3 = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
-				if (behaviorTree3 == null)
+				BaseBehaviorTree behaviorTree4 = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
+				if (behaviorTree4 == null)
 				{
-					goto IL_5C1;
+					goto IL_970;
 				}
 				IQuestScheduleMultiBtTreeVar questScheduleMultiBtTreeVar = schedule as IQuestScheduleMultiBtTreeVar;
 				List<VarRef> list;
@@ -310,7 +429,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				text = PublicUtil.Instance.GetConfigTextByKey(tidTitle);
 				if (list2 == null || list2.Count == 0)
 				{
-					goto IL_5C1;
+					goto IL_970;
 				}
 				IQuestScheduleMultiBtTreeVar questScheduleMultiBtTreeVar2 = schedule as IQuestScheduleMultiBtTreeVar;
 				bool bShowArtText = ((questScheduleMultiBtTreeVar2 != null) ? questScheduleMultiBtTreeVar2.ShowAsWordArt : null) != null;
@@ -319,9 +438,9 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 					while (enumerator2.MoveNext())
 					{
 						VarRef varTemp = enumerator2.Current;
-						text = TreeExpressAssistant.GetVarValueText(text, varTemp, bShowArtText, GeneralLogicTreeContext.Create(behaviorTree3.BtType, behaviorTree3.TreeIncId, behaviorTree3.TreeConfigId, 0, null));
+						text = TreeExpressAssistant.GetVarValueText(text, varTemp, bShowArtText, GeneralLogicTreeContext.Create(behaviorTree4.BtType, behaviorTree4.TreeIncId, behaviorTree4.TreeConfigId, 0, null));
 					}
-					goto IL_5C1;
+					goto IL_970;
 				}
 				break;
 			}
@@ -330,14 +449,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				if (((IQuestScheduleTimeLeft)schedule).ShowTime.GetValueOrDefault())
 				{
 					int qcount2 = TreeExpressAssistant.GetQCount(treeIncId, schedule);
-					string text5 = text;
-					string oldValue3 = "{q_count}";
+					string text7 = text;
+					string oldValue5 = "{q_count}";
 					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 					defaultInterpolatedStringHandler.AppendFormatted<int>(qcount2);
-					text = text5.Replace(oldValue3, defaultInterpolatedStringHandler.ToStringAndClear());
-					goto IL_5C1;
+					text = text7.Replace(oldValue5, defaultInterpolatedStringHandler.ToStringAndClear());
+					goto IL_970;
 				}
-				goto IL_5C1;
+				goto IL_970;
 			case EQuestScheduleType.ProgressValue:
 				break;
 			case EQuestScheduleType.DistanceValue:
@@ -352,12 +471,12 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 						((int)Math.Round(global::Vector.Dist2D(playerLocation, v) * 0.01)).ToString()
 					});
 					text += str;
-					goto IL_5C1;
+					goto IL_970;
 				}
-				goto IL_5C1;
+				goto IL_970;
 			}
 			default:
-				goto IL_5C1;
+				goto IL_970;
 			}
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(((IQuestScheduleProgressValue)schedule).TargetProgressEntity);
 			if (entityByPbDataId == null)
@@ -374,26 +493,26 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 				else
 				{
 					SceneItemProgressControlComponent.TProgressData progressData = component.GetProgressData();
-					float num2 = (progressData != null) ? progressData.CurrentValue : 0f;
+					float num4 = (progressData != null) ? progressData.CurrentValue : 0f;
 					SceneItemProgressControlComponent.TProgressData progressData2 = component.GetProgressData();
-					float num3 = (progressData2 != null) ? progressData2.MaxValue : 0f;
-					int value = (num3 == 0f) ? 0 : ((int)Math.Round((double)(num2 / num3 * 100f)));
-					int value2 = (int)MathF.Round(num2);
+					float num5 = (progressData2 != null) ? progressData2.MaxValue : 0f;
+					int value = (num5 == 0f) ? 0 : ((int)Math.Round((double)(num4 / num5 * 100f)));
+					int value2 = (int)MathF.Round(num4);
 					text = PublicUtil.Instance.GetConfigTextByKey(tidTitle);
-					string text6 = text;
-					string oldValue4 = "{percent}";
+					string text8 = text;
+					string oldValue6 = "{percent}";
 					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 1);
 					defaultInterpolatedStringHandler.AppendFormatted<int>(value);
 					defaultInterpolatedStringHandler.AppendLiteral("%");
-					text = text6.Replace(oldValue4, defaultInterpolatedStringHandler.ToStringAndClear());
-					string text7 = text;
-					string oldValue5 = "{real_progress}";
+					text = text8.Replace(oldValue6, defaultInterpolatedStringHandler.ToStringAndClear());
+					string text9 = text;
+					string oldValue7 = "{real_progress}";
 					defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 					defaultInterpolatedStringHandler.AppendFormatted<int>(value2);
-					text = text7.Replace(oldValue5, defaultInterpolatedStringHandler.ToStringAndClear());
+					text = text9.Replace(oldValue7, defaultInterpolatedStringHandler.ToStringAndClear());
 				}
 			}
-			IL_5C1:
+			IL_970:
 			if (customPlaceholderBindingProgressList != null)
 			{
 				foreach (ICustomPlaceholderBindingProgress customPlaceholderBindingProgress in customPlaceholderBindingProgressList)
@@ -404,7 +523,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return text;
 		}
 
-		// Token: 0x0603A427 RID: 238631 RVA: 0x00DDA5FC File Offset: 0x00DD87FC
+		// Token: 0x0602F34E RID: 193358 RVA: 0x00D29E84 File Offset: 0x00D28084
 		private static string GetBindingProgressText(IBindingProgressType bindInfo)
 		{
 			if (bindInfo.Type == EBindingProgressType.PlayerHavingItemCount)
@@ -415,7 +534,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return string.Empty;
 		}
 
-		// Token: 0x0603A428 RID: 238632 RVA: 0x00DDA638 File Offset: 0x00DD8838
+		// Token: 0x0602F34F RID: 193359 RVA: 0x00D29EC0 File Offset: 0x00D280C0
 		private static string GetVarValueTextByKey(string tidTitle, VarRef varTemp, bool bShowArtText, [Nullable(2)] GeneralLogicTreeContext context = null)
 		{
 			string result = "";
@@ -427,7 +546,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return TreeExpressAssistant.FormatStepTextByVarValueByKey(tidTitle, varTemp, varValue, bShowArtText);
 		}
 
-		// Token: 0x0603A429 RID: 238633 RVA: 0x00DDA664 File Offset: 0x00DD8864
+		// Token: 0x0602F350 RID: 193360 RVA: 0x00D29EEC File Offset: 0x00D280EC
 		private static string GetVarValueText(string titleText, VarRef varTemp, bool bShowArtText, [Nullable(2)] GeneralLogicTreeContext context = null)
 		{
 			string result = "";
@@ -439,7 +558,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return TreeExpressAssistant.FormatStepTextByVarValue(titleText, varTemp, varValue, bShowArtText);
 		}
 
-		// Token: 0x0603A42A RID: 238634 RVA: 0x00DDA690 File Offset: 0x00DD8890
+		// Token: 0x0602F351 RID: 193361 RVA: 0x00D29F18 File Offset: 0x00D28118
 		public static string GetNodeTrackText(long treeIncId, int nodeId, [Nullable(2)] string textTemplate = null, [Nullable(new byte[]
 		{
 			2,
@@ -508,13 +627,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return text2;
 		}
 
-		// Token: 0x0603A42B RID: 238635 RVA: 0x00DDA828 File Offset: 0x00DD8A28
+		// Token: 0x0602F352 RID: 193362 RVA: 0x00D2A0B0 File Offset: 0x00D282B0
 		public static string FormatStepTextByVarValueByKey(string tidTitle, VarRef varRef, object varValue, bool bShowArtText)
 		{
 			return TreeExpressAssistant.FormatStepTextByVarValue(PublicUtil.Instance.GetConfigTextByKey(tidTitle), varRef, varValue, bShowArtText);
 		}
 
-		// Token: 0x0603A42C RID: 238636 RVA: 0x00DDA840 File Offset: 0x00DD8A40
+		// Token: 0x0602F353 RID: 193363 RVA: 0x00D2A0C8 File Offset: 0x00D282C8
 		private static string FormatStepTextByVarValue(string titleText, VarRef varRef, object varValue, bool bShowArtText)
 		{
 			string text = titleText;
@@ -538,7 +657,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return text.Replace("{q_count}", text2);
 		}
 
-		// Token: 0x0603A42D RID: 238637 RVA: 0x00DDA900 File Offset: 0x00DD8B00
+		// Token: 0x0602F354 RID: 193364 RVA: 0x00D2A188 File Offset: 0x00D28388
 		private static string ConvertStringToScoreTexture([Nullable(2)] string score)
 		{
 			if (string.IsNullOrEmpty(score))
@@ -564,7 +683,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x0603A42E RID: 238638 RVA: 0x00DDA9AC File Offset: 0x00DD8BAC
+		// Token: 0x0602F355 RID: 193365 RVA: 0x00D2A234 File Offset: 0x00D28434
 		private static void ApplyOccupyTreeExpression(BtType btType, long treeIncId, bool bInChallenge)
 		{
 			if (btType != BtType.Quest && btType - BtType.LevelPlay <= 1)
@@ -584,19 +703,19 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.ControllerAssistant
 			}
 		}
 
-		// Token: 0x0603A42F RID: 238639 RVA: 0x00DDA9FE File Offset: 0x00DD8BFE
+		// Token: 0x0602F356 RID: 193366 RVA: 0x00D2A286 File Offset: 0x00D28486
 		private static void SetExpressionOccupation(long treeIncId)
 		{
 			GeneralLogicTreeModel.Instance.ApplyExpressionOccupation(treeIncId);
 		}
 
-		// Token: 0x0603A430 RID: 238640 RVA: 0x00DDAA0B File Offset: 0x00DD8C0B
+		// Token: 0x0602F357 RID: 193367 RVA: 0x00D2A293 File Offset: 0x00D28493
 		public static void TryReleaseExpressionOccupation(long treeIncId)
 		{
 			GeneralLogicTreeModel.Instance.TryReleaseExpressionOccupation(treeIncId);
 		}
 
-		// Token: 0x0401E60E RID: 124430
+		// Token: 0x040190AD RID: 102573
 		private const int ONE_HUNDRED = 100;
 	}
 }

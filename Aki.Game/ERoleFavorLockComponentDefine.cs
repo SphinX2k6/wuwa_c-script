@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200286D RID: 10349
+// Token: 0x02001DE8 RID: 7656
 public enum ERoleFavorLockComponentDefine
 {
-	// Token: 0x04009F2D RID: 40749
+	// Token: 0x0400A316 RID: 41750
 	Layout,
-	// Token: 0x04009F2E RID: 40750
+	// Token: 0x0400A317 RID: 41751
 	TipsText,
-	// Token: 0x04009F2F RID: 40751
+	// Token: 0x0400A318 RID: 41752
 	TitleText,
-	// Token: 0x04009F30 RID: 40752
+	// Token: 0x0400A319 RID: 41753
 	LineItem,
-	// Token: 0x04009F31 RID: 40753
+	// Token: 0x0400A31A RID: 41754
 	TipsItem,
-	// Token: 0x04009F32 RID: 40754
+	// Token: 0x0400A31B RID: 41755
 	LockItem
 }

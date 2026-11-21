@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Actor
 {
-	// Token: 0x02005F00 RID: 24320
+	// Token: 0x02006543 RID: 25923
 	public struct IStreamingGroup : IFlatbufferObject
 	{
-		// Token: 0x1700B5CD RID: 46541
-		// (get) Token: 0x06029C5C RID: 171100 RVA: 0x005BB597 File Offset: 0x005B9797
+		// Token: 0x1700BF38 RID: 48952
+		// (get) Token: 0x0602C310 RID: 181008 RVA: 0x00604A7B File Offset: 0x00602C7B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			}
 		}
 
-		// Token: 0x06029C5D RID: 171101 RVA: 0x005BB5A4 File Offset: 0x005B97A4
+		// Token: 0x0602C311 RID: 181009 RVA: 0x00604A88 File Offset: 0x00602C88
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029C5E RID: 171102 RVA: 0x005BB5AC File Offset: 0x005B97AC
+		// Token: 0x0602C312 RID: 181010 RVA: 0x00604A90 File Offset: 0x00602C90
 		public static IStreamingGroup GetRootAsIStreamingGroup(ByteBuffer _bb)
 		{
 			return IStreamingGroup.GetRootAsIStreamingGroup(_bb, default(IStreamingGroup));
 		}
 
-		// Token: 0x06029C5F RID: 171103 RVA: 0x005BB5C8 File Offset: 0x005B97C8
+		// Token: 0x0602C313 RID: 181011 RVA: 0x00604AAC File Offset: 0x00602CAC
 		public static IStreamingGroup GetRootAsIStreamingGroup(ByteBuffer _bb, IStreamingGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029C60 RID: 171104 RVA: 0x005BB5E5 File Offset: 0x005B97E5
+		// Token: 0x0602C314 RID: 181012 RVA: 0x00604AC9 File Offset: 0x00602CC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029C61 RID: 171105 RVA: 0x005BB5F4 File Offset: 0x005B97F4
+		// Token: 0x0602C315 RID: 181013 RVA: 0x00604AD8 File Offset: 0x00602CD8
 		public IStreamingGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B5CE RID: 46542
-		// (get) Token: 0x06029C62 RID: 171106 RVA: 0x005BB604 File Offset: 0x005B9804
+		// Token: 0x1700BF39 RID: 48953
+		// (get) Token: 0x0602C316 RID: 181014 RVA: 0x00604AE8 File Offset: 0x00602CE8
 		public int EntityId
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			}
 		}
 
-		// Token: 0x06029C63 RID: 171107 RVA: 0x005BB640 File Offset: 0x005B9840
+		// Token: 0x0602C317 RID: 181015 RVA: 0x00604B24 File Offset: 0x00602D24
 		public IActorRef? RefData(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return new IActorRef?(default(IActorRef).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B5CF RID: 46543
-		// (get) Token: 0x06029C64 RID: 171108 RVA: 0x005BB6A0 File Offset: 0x005B98A0
+		// Token: 0x1700BF3A RID: 48954
+		// (get) Token: 0x0602C318 RID: 181016 RVA: 0x00604B84 File Offset: 0x00602D84
 		public int RefDataLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			}
 		}
 
-		// Token: 0x06029C65 RID: 171109 RVA: 0x005BB6CB File Offset: 0x005B98CB
+		// Token: 0x0602C319 RID: 181017 RVA: 0x00604BAF File Offset: 0x00602DAF
 		public static Offset<IStreamingGroup> CreateIStreamingGroup(FlatBufferBuilder builder, int EntityId = 0, VectorOffset RefDataOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return IStreamingGroup.EndIStreamingGroup(builder);
 		}
 
-		// Token: 0x06029C66 RID: 171110 RVA: 0x005BB6E8 File Offset: 0x005B98E8
+		// Token: 0x0602C31A RID: 181018 RVA: 0x00604BCC File Offset: 0x00602DCC
 		public static void StartIStreamingGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06029C67 RID: 171111 RVA: 0x005BB6F1 File Offset: 0x005B98F1
+		// Token: 0x0602C31B RID: 181019 RVA: 0x00604BD5 File Offset: 0x00602DD5
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x06029C68 RID: 171112 RVA: 0x005BB6FC File Offset: 0x005B98FC
+		// Token: 0x0602C31C RID: 181020 RVA: 0x00604BE0 File Offset: 0x00602DE0
 		public static void AddRefData(FlatBufferBuilder builder, VectorOffset refDataOffset)
 		{
 			builder.AddOffset(1, refDataOffset.Value, 0);
 		}
 
-		// Token: 0x06029C69 RID: 171113 RVA: 0x005BB70C File Offset: 0x005B990C
+		// Token: 0x0602C31D RID: 181021 RVA: 0x00604BF0 File Offset: 0x00602DF0
 		public static VectorOffset CreateRefDataVector(FlatBufferBuilder builder, Offset<IActorRef>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029C6A RID: 171114 RVA: 0x005BB74C File Offset: 0x005B994C
+		// Token: 0x0602C31E RID: 181022 RVA: 0x00604C30 File Offset: 0x00602E30
 		public static VectorOffset CreateRefDataVectorBlock(FlatBufferBuilder builder, Offset<IActorRef>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029C6B RID: 171115 RVA: 0x005BB766 File Offset: 0x005B9966
+		// Token: 0x0602C31F RID: 181023 RVA: 0x00604C4A File Offset: 0x00602E4A
 		public static VectorOffset CreateRefDataVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActorRef>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029C6C RID: 171116 RVA: 0x005BB784 File Offset: 0x005B9984
+		// Token: 0x0602C320 RID: 181024 RVA: 0x00604C68 File Offset: 0x00602E68
 		public static VectorOffset CreateRefDataVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029C6D RID: 171117 RVA: 0x005BB79D File Offset: 0x005B999D
+		// Token: 0x0602C321 RID: 181025 RVA: 0x00604C81 File Offset: 0x00602E81
 		public static void StartRefDataVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06029C6E RID: 171118 RVA: 0x005BB7A8 File Offset: 0x005B99A8
+		// Token: 0x0602C322 RID: 181026 RVA: 0x00604C8C File Offset: 0x00602E8C
 		public static Offset<IStreamingGroup> EndIStreamingGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<IStreamingGroup>(builder.EndTable());
 		}
 
-		// Token: 0x06029C6F RID: 171119 RVA: 0x005BB7B8 File Offset: 0x005B99B8
+		// Token: 0x0602C323 RID: 181027 RVA: 0x00604C9C File Offset: 0x00602E9C
 		public IStreamingGroupT UnPack()
 		{
 			IStreamingGroupT streamingGroupT = new IStreamingGroupT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return streamingGroupT;
 		}
 
-		// Token: 0x06029C70 RID: 171120 RVA: 0x005BB7D4 File Offset: 0x005B99D4
+		// Token: 0x0602C324 RID: 181028 RVA: 0x00604CB8 File Offset: 0x00602EB8
 		public void UnPackTo(IStreamingGroupT _o)
 		{
 			_o.EntityId = this.EntityId;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			}
 		}
 
-		// Token: 0x06029C71 RID: 171121 RVA: 0x005BB840 File Offset: 0x005B9A40
+		// Token: 0x0602C325 RID: 181029 RVA: 0x00604D24 File Offset: 0x00602F24
 		public static Offset<IStreamingGroup> Pack(FlatBufferBuilder builder, IStreamingGroupT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Actor
 			return IStreamingGroup.CreateIStreamingGroup(builder, _o.EntityId, refDataOffset);
 		}
 
-		// Token: 0x0400FA05 RID: 64005
+		// Token: 0x04010769 RID: 67433
 		private Table __p;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068B3 RID: 26803
+	// Token: 0x02006F54 RID: 28500
 	public class IGuestOperateUiAnimationTypeT
 	{
-		// Token: 0x1700C6F3 RID: 50931
-		// (get) Token: 0x0602EC06 RID: 191494 RVA: 0x0065F5AA File Offset: 0x0065D7AA
-		// (set) Token: 0x0602EC07 RID: 191495 RVA: 0x0065F5B2 File Offset: 0x0065D7B2
+		// Token: 0x1700D0D9 RID: 53465
+		// (get) Token: 0x06031540 RID: 202048 RVA: 0x006AE62A File Offset: 0x006AC82A
+		// (set) Token: 0x06031541 RID: 202049 RVA: 0x006AE632 File Offset: 0x006AC832
 		public EGuestOperateUiAnimation Type { get; set; }
 
-		// Token: 0x0602EC08 RID: 191496 RVA: 0x0065F5BB File Offset: 0x0065D7BB
+		// Token: 0x06031542 RID: 202050 RVA: 0x006AE63B File Offset: 0x006AC83B
 		public IGuestOperateUiAnimationTypeT()
 		{
 			this.Type = EGuestOperateUiAnimation.Play;

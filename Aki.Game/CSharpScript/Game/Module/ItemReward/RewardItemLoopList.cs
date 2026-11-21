@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x0200580D RID: 22541
+	// Token: 0x020047E4 RID: 18404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardItemLoopList : UiPanelBase
 	{
-		// Token: 0x060394B7 RID: 234679 RVA: 0x00D96878 File Offset: 0x00D94A78
+		// Token: 0x0602E3CB RID: 189387 RVA: 0x00CE5708 File Offset: 0x00CE3908
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,26 +30,26 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060394B8 RID: 234680 RVA: 0x00D968EC File Offset: 0x00D94AEC
+		// Token: 0x0602E3CC RID: 189388 RVA: 0x00CE577C File Offset: 0x00CE397C
 		protected override void OnStart()
 		{
 			this.LoopScrollViewOb = new LoopScrollView<RewardSmallItemGrid, RewardItemData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<RewardSmallItemGrid>(this.InitItem), false);
 		}
 
-		// Token: 0x060394B9 RID: 234681 RVA: 0x00D9691E File Offset: 0x00D94B1E
+		// Token: 0x0602E3CD RID: 189389 RVA: 0x00CE57AE File Offset: 0x00CE39AE
 		protected override void OnBeforeDestroy()
 		{
 			this.LoopScrollViewOb = null;
 			this.SelectedItemGrid = null;
 		}
 
-		// Token: 0x060394BA RID: 234682 RVA: 0x00D9692E File Offset: 0x00D94B2E
+		// Token: 0x0602E3CE RID: 189390 RVA: 0x00CE57BE File Offset: 0x00CE39BE
 		private RewardSmallItemGrid InitItem()
 		{
 			return this.NewRewardItem();
 		}
 
-		// Token: 0x060394BB RID: 234683 RVA: 0x00D96938 File Offset: 0x00D94B38
+		// Token: 0x0602E3CF RID: 189391 RVA: 0x00CE57C8 File Offset: 0x00CE39C8
 		public void Refresh(List<RewardItemData> rewardItemDataList, bool tipsCanSkip = true)
 		{
 			rewardItemDataList.Sort(delegate(RewardItemData aRewardItem, RewardItemData bRewardItem)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.TipsCanSkip = new bool?(tipsCanSkip);
 		}
 
-		// Token: 0x060394BC RID: 234684 RVA: 0x00D96985 File Offset: 0x00D94B85
+		// Token: 0x0602E3D0 RID: 189392 RVA: 0x00CE5815 File Offset: 0x00CE3A15
 		private RewardSmallItemGrid NewRewardItem()
 		{
 			RewardSmallItemGrid rewardSmallItemGrid = new RewardSmallItemGrid();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return rewardSmallItemGrid;
 		}
 
-		// Token: 0x060394BD RID: 234685 RVA: 0x00D969C4 File Offset: 0x00D94BC4
+		// Token: 0x0602E3D1 RID: 189393 RVA: 0x00CE5854 File Offset: 0x00CE3A54
 		private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 		{
 			ItemGridBase selectedItemGrid = this.SelectedItemGrid;
@@ -104,10 +104,10 @@ namespace CSharpScript.Game.Module.ItemReward
 				ItemController.Instance.OpenItemTipsByItemUid(uniqueId, configId, this.TipsCanSkip.GetValueOrDefault(true), null);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(configId, this.TipsCanSkip.GetValueOrDefault(true), null);
+			ItemController.Instance.OpenItemTipsByItemId(configId, this.TipsCanSkip.GetValueOrDefault(true), null, false);
 		}
 
-		// Token: 0x0401DF5F RID: 122719
+		// Token: 0x040189F6 RID: 100854
 		[Nullable(new byte[]
 		{
 			2,
@@ -116,21 +116,21 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private LoopScrollView<RewardSmallItemGrid, RewardItemData> LoopScrollViewOb;
 
-		// Token: 0x0401DF60 RID: 122720
+		// Token: 0x040189F7 RID: 100855
 		[Nullable(2)]
 		private ItemGridBase SelectedItemGrid;
 
-		// Token: 0x0401DF61 RID: 122721
+		// Token: 0x040189F8 RID: 100856
 		private bool? TipsCanSkip;
 
-		// Token: 0x0200BA0F RID: 47631
+		// Token: 0x0200A425 RID: 42021
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040383CC RID: 230348
+			// Token: 0x04032DB9 RID: 208313
 			public const int ItemLoopList = 0;
 
-			// Token: 0x040383CD RID: 230349
+			// Token: 0x04032DBA RID: 208314
 			public const int SourceItem = 1;
 		}
 	}

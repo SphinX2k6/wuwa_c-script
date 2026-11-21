@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001710 RID: 5904
+	// Token: 0x0200188D RID: 6285
 	public class ExecResurrection_SetValue
 	{
-		// Token: 0x04004FE4 RID: 20452
+		// Token: 0x04005413 RID: 21523
 		public int ReviveId;
 	}
 }

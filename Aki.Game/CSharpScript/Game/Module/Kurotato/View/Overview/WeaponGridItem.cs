@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005751 RID: 22353
+	// Token: 0x02004728 RID: 18216
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 	})]
 	internal class WeaponGridItem : SyncGridProxyAbstract<IKurotatoMediumItemGridData>
 	{
-		// Token: 0x06038D04 RID: 232708 RVA: 0x00D7E5F0 File Offset: 0x00D7C7F0
+		// Token: 0x0602DC14 RID: 187412 RVA: 0x00CCCFD0 File Offset: 0x00CCB1D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,20 +30,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D05 RID: 232709 RVA: 0x00D7E659 File Offset: 0x00D7C859
+		// Token: 0x0602DC15 RID: 187413 RVA: 0x00CCD039 File Offset: 0x00CCB239
 		protected override void OnStart()
 		{
 			this.GridItem.CreateThenShowByActor(base.GetItem(0).GetOwner());
 		}
 
-		// Token: 0x06038D06 RID: 232710 RVA: 0x00D7E674 File Offset: 0x00D7C874
+		// Token: 0x0602DC16 RID: 187414 RVA: 0x00CCD054 File Offset: 0x00CCB254
 		public void SetSelected(bool selected, bool force = false)
 		{
 			this.GridItem.Refresh(this.Data, null);
 			this.GridItem.SetSelected(selected, force);
 		}
 
-		// Token: 0x06038D07 RID: 232711 RVA: 0x00D7E6A8 File Offset: 0x00D7C8A8
+		// Token: 0x0602DC17 RID: 187415 RVA: 0x00CCD088 File Offset: 0x00CCB288
 		public override void Refresh(IKurotatoMediumItemGridData data)
 		{
 			this.Data = data;
@@ -69,17 +69,17 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			});
 		}
 
-		// Token: 0x0401DCBB RID: 122043
+		// Token: 0x04018751 RID: 100177
 		public IKurotatoMediumItemGridData Data;
 
-		// Token: 0x0401DCBC RID: 122044
+		// Token: 0x04018752 RID: 100178
 		private readonly KurotatoWeaponMediumItemGrid GridItem = new KurotatoWeaponMediumItemGrid();
 
-		// Token: 0x0401DCBD RID: 122045
+		// Token: 0x04018753 RID: 100179
 		[Nullable(2)]
 		public Action<bool> OnClickCb;
 
-		// Token: 0x0401DCBE RID: 122046
+		// Token: 0x04018754 RID: 100180
 		[Nullable(new byte[]
 		{
 			2,
@@ -87,13 +87,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		public Func<IKurotatoMediumItemGridData, bool> IsSelectedCb;
 
-		// Token: 0x0200B949 RID: 47433
+		// Token: 0x0200A367 RID: 41831
 		[NullableContext(0)]
 		private enum EGridComp
 		{
-			// Token: 0x0403809D RID: 229533
+			// Token: 0x04032AA3 RID: 207523
 			GridItem,
-			// Token: 0x0403809E RID: 229534
+			// Token: 0x04032AA4 RID: 207524
 			PanelEmpty
 		}
 	}

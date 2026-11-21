@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200026C RID: 620
+// Token: 0x02000270 RID: 624
 public enum EffectActorPoolEnum
 {
-	// Token: 0x04002477 RID: 9335
+	// Token: 0x040024F8 RID: 9464
 	None,
-	// Token: 0x04002478 RID: 9336
+	// Token: 0x040024F9 RID: 9465
 	ActorSystem,
-	// Token: 0x04002479 RID: 9337
+	// Token: 0x040024FA RID: 9466
 	LRU
 }

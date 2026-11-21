@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043E7 RID: 17383
+	// Token: 0x0200484C RID: 18508
 	public enum EHonamiStoryMapMarkType : byte
 	{
-		// Token: 0x0400C2B2 RID: 49842
+		// Token: 0x0400CCD6 RID: 52438
 		EvacuateMachine,
-		// Token: 0x0400C2B3 RID: 49843
+		// Token: 0x0400CCD7 RID: 52439
 		ScanMachine,
-		// Token: 0x0400C2B4 RID: 49844
+		// Token: 0x0400CCD8 RID: 52440
 		CorruptedChest,
-		// Token: 0x0400C2B5 RID: 49845
+		// Token: 0x0400CCD9 RID: 52441
 		Portal,
-		// Token: 0x0400C2B6 RID: 49846
+		// Token: 0x0400CCDA RID: 52442
 		CorruptedArea,
-		// Token: 0x0400C2B7 RID: 49847
+		// Token: 0x0400CCDB RID: 52443
 		BossPoint,
-		// Token: 0x0400C2B8 RID: 49848
+		// Token: 0x0400CCDC RID: 52444
 		Mascot,
-		// Token: 0x0400C2B9 RID: 49849
+		// Token: 0x0400CCDD RID: 52445
 		SideStory
 	}
 }

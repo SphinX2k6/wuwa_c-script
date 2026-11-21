@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020023FB RID: 9211
+// Token: 0x020018E0 RID: 6368
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerConfigFetterData
 {
-	// Token: 0x060126C9 RID: 75465 RVA: 0x0048B4AA File Offset: 0x004896AA
+	// Token: 0x0600FB7B RID: 64379 RVA: 0x0049899E File Offset: 0x00496B9E
 	public PhantomManagerConfigFetterData(int fetterId)
 	{
 		this.FetterId = fetterId;
 	}
 
-	// Token: 0x060126CA RID: 75466 RVA: 0x0048B4C4 File Offset: 0x004896C4
-	public void UpdateMainPropMap(List<PhBaOneCostPlan> mainPropData)
+	// Token: 0x0600FB7C RID: 64380 RVA: 0x004989B8 File Offset: 0x00496BB8
+	public void UpdateMainPropMap(IEnumerable<PhBaOneCostPlan> mainPropData)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhBaOneCostPlan phBaOneCostPlan in mainPropData)
 		{
 			hashSet.Add((int)phBaOneCostPlan.CostType);
 			this.TryInitCost((int)phBaOneCostPlan.CostType);
-			this.CostMap[(int)phBaOneCostPlan.CostType].UpdateMainProp(phBaOneCostPlan.AttrList.ToList<PhBaPlanAttr>());
+			this.CostMap[(int)phBaOneCostPlan.CostType].UpdateMainProp(phBaOneCostPlan.AttrList);
 		}
 		foreach (KeyValuePair<int, PhantomManagerConfigCostGroupData> keyValuePair in this.CostMap)
 		{
@@ -35,15 +34,15 @@ public class PhantomManagerConfigFetterData
 		}
 	}
 
-	// Token: 0x060126CB RID: 75467 RVA: 0x0048B5A8 File Offset: 0x004897A8
-	public void CacheSharePropMap(List<PhBaOneCostPlan> propData)
+	// Token: 0x0600FB7D RID: 64381 RVA: 0x00498A90 File Offset: 0x00496C90
+	public void CacheSharePropMap(IEnumerable<PhBaOneCostPlan> propData)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhBaOneCostPlan phBaOneCostPlan in propData)
 		{
 			hashSet.Add((int)phBaOneCostPlan.CostType);
 			this.TryInitCost((int)phBaOneCostPlan.CostType);
-			this.CostMap[(int)phBaOneCostPlan.CostType].CacheShareProp(phBaOneCostPlan.AttrList.ToList<PhBaPlanAttr>());
+			this.CostMap[(int)phBaOneCostPlan.CostType].CacheShareProp(phBaOneCostPlan.AttrList);
 		}
 		foreach (KeyValuePair<int, PhantomManagerConfigCostGroupData> keyValuePair in this.CostMap)
 		{
@@ -54,7 +53,7 @@ public class PhantomManagerConfigFetterData
 		}
 	}
 
-	// Token: 0x060126CC RID: 75468 RVA: 0x0048B68C File Offset: 0x0048988C
+	// Token: 0x0600FB7E RID: 64382 RVA: 0x00498B68 File Offset: 0x00496D68
 	public void TryInitCost(int cost)
 	{
 		if (!this.CostMap.ContainsKey(cost))
@@ -63,7 +62,7 @@ public class PhantomManagerConfigFetterData
 		}
 	}
 
-	// Token: 0x060126CD RID: 75469 RVA: 0x0048B6B4 File Offset: 0x004898B4
+	// Token: 0x0600FB7F RID: 64383 RVA: 0x00498B90 File Offset: 0x00496D90
 	public EPhantomManagerConfigState GetPropCurrentState(IPhantomManagerConfigNewSettingDetailInfo data)
 	{
 		PhantomManagerConfigCostGroupData phantomManagerConfigCostGroupData;
@@ -74,14 +73,14 @@ public class PhantomManagerConfigFetterData
 		return phantomManagerConfigCostGroupData.GetPropCurrentState(data.MainPropId);
 	}
 
-	// Token: 0x060126CE RID: 75470 RVA: 0x0048B6E4 File Offset: 0x004898E4
+	// Token: 0x0600FB80 RID: 64384 RVA: 0x00498BC0 File Offset: 0x00496DC0
 	public void SetPropState(IPhantomManagerConfigNewSettingDetailInfo data, EPhantomManagerConfigState state, bool isCache)
 	{
 		this.TryInitCost(data.Cost);
 		this.CostMap[data.Cost].SetPropState(data.MainPropId, state, isCache);
 	}
 
-	// Token: 0x060126CF RID: 75471 RVA: 0x0048B710 File Offset: 0x00489910
+	// Token: 0x0600FB81 RID: 64385 RVA: 0x00498BEC File Offset: 0x00496DEC
 	public void DoCacheDataUpdate(bool apply)
 	{
 		foreach (KeyValuePair<int, PhantomManagerConfigCostGroupData> keyValuePair in this.CostMap)
@@ -90,7 +89,7 @@ public class PhantomManagerConfigFetterData
 		}
 	}
 
-	// Token: 0x060126D0 RID: 75472 RVA: 0x0048B76C File Offset: 0x0048996C
+	// Token: 0x0600FB82 RID: 64386 RVA: 0x00498C48 File Offset: 0x00496E48
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -118,7 +117,7 @@ public class PhantomManagerConfigFetterData
 		return new ValueTuple<bool, PhBaOneSuitPlan>(flag, phBaOneSuitPlan);
 	}
 
-	// Token: 0x060126D1 RID: 75473 RVA: 0x0048B82C File Offset: 0x00489A2C
+	// Token: 0x0600FB83 RID: 64387 RVA: 0x00498D08 File Offset: 0x00496F08
 	public void ResetFetterConfig()
 	{
 		foreach (KeyValuePair<int, PhantomManagerConfigCostGroupData> keyValuePair in this.CostMap)
@@ -127,7 +126,7 @@ public class PhantomManagerConfigFetterData
 		}
 	}
 
-	// Token: 0x060126D2 RID: 75474 RVA: 0x0048B884 File Offset: 0x00489A84
+	// Token: 0x0600FB84 RID: 64388 RVA: 0x00498D60 File Offset: 0x00496F60
 	public bool GetEditFetterConfigRecommendDirty()
 	{
 		IReadOnlyList<PhantomManagePlanV2> phantomManagerPlanByFetterId = PhantomBattleConfig.Instance.GetPhantomManagerPlanByFetterId(this.FetterId);
@@ -135,23 +134,30 @@ public class PhantomManagerConfigFetterData
 		{
 			return true;
 		}
-		HashSet<int> configCostSet = new HashSet<int>();
+		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhantomManagePlanV2 config in phantomManagerPlanByFetterId)
 		{
 			if (!this.CostMap.ContainsKey(config.Cost))
 			{
 				return true;
 			}
-			configCostSet.Add(config.Cost);
+			hashSet.Add(config.Cost);
 			if (this.CostMap[config.Cost].GetRecommendDirty(config))
 			{
 				return true;
 			}
 		}
-		return this.CostMap.Keys.Any((int cost) => !configCostSet.Contains(cost));
+		foreach (int item in this.CostMap.Keys)
+		{
+			if (!hashSet.Contains(item))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
-	// Token: 0x060126D3 RID: 75475 RVA: 0x0048B968 File Offset: 0x00489B68
+	// Token: 0x0600FB85 RID: 64389 RVA: 0x00498E6C File Offset: 0x0049706C
 	public bool SetFetterConfigRecommend()
 	{
 		IEnumerable<PhantomManagePlanV2> phantomManagerPlanByFetterId = PhantomBattleConfig.Instance.GetPhantomManagerPlanByFetterId(this.FetterId);
@@ -166,7 +172,7 @@ public class PhantomManagerConfigFetterData
 			hashSet.Add(config.Cost);
 			flag = (this.CostMap[config.Cost].CacheRecommend(config) || flag);
 		}
-		foreach (int num in this.CostMap.Keys.ToList<int>())
+		foreach (int num in this.CostMap.Keys)
 		{
 			if (!hashSet.Contains(num))
 			{
@@ -176,7 +182,7 @@ public class PhantomManagerConfigFetterData
 		return flag;
 	}
 
-	// Token: 0x060126D4 RID: 75476 RVA: 0x0048BA84 File Offset: 0x00489C84
+	// Token: 0x0600FB86 RID: 64390 RVA: 0x00498F80 File Offset: 0x00497180
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -200,9 +206,9 @@ public class PhantomManagerConfigFetterData
 		return list;
 	}
 
-	// Token: 0x04008B55 RID: 35669
+	// Token: 0x04008C9C RID: 35996
 	protected readonly Dictionary<int, PhantomManagerConfigCostGroupData> CostMap = new Dictionary<int, PhantomManagerConfigCostGroupData>();
 
-	// Token: 0x04008B56 RID: 35670
+	// Token: 0x04008C9D RID: 35997
 	public int FetterId;
 }

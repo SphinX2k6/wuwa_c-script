@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005162 RID: 20834
+	// Token: 0x02004132 RID: 16690
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,12 +14,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 	})]
 	public class DropDownTitle : TitleItemBase<GymChallengeData>
 	{
-		// Token: 0x06035445 RID: 218181 RVA: 0x00C9D47D File Offset: 0x00C9B67D
+		// Token: 0x0602A341 RID: 172865 RVA: 0x00BEA9AD File Offset: 0x00BE8BAD
 		public DropDownTitle(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06035446 RID: 218182 RVA: 0x00C9D486 File Offset: 0x00C9B686
+		// Token: 0x0602A342 RID: 172866 RVA: 0x00BEA9B6 File Offset: 0x00BE8BB6
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035447 RID: 218183 RVA: 0x00C9D4AC File Offset: 0x00C9B6AC
+		// Token: 0x0602A343 RID: 172867 RVA: 0x00BEA9DC File Offset: 0x00BE8BDC
 		public override void ShowTemp(GymChallengeData data, DropDownItemBase<GymChallengeData> selectedItemObj)
 		{
 			string textStringId = data.IsLast ? "PhantomBattle_1115" : "PhantomBattle_1114";

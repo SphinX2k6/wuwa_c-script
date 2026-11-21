@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F28 RID: 28456
+	// Token: 0x020076AF RID: 30383
 	public class ISceneActorMusicPlantsEventT
 	{
-		// Token: 0x1700D383 RID: 54147
-		// (get) Token: 0x06032463 RID: 205923 RVA: 0x006CA5E2 File Offset: 0x006C87E2
-		// (set) Token: 0x06032464 RID: 205924 RVA: 0x006CA5EA File Offset: 0x006C87EA
+		// Token: 0x1700DEDF RID: 57055
+		// (get) Token: 0x060354BB RID: 218299 RVA: 0x0072654A File Offset: 0x0072474A
+		// (set) Token: 0x060354BC RID: 218300 RVA: 0x00726552 File Offset: 0x00724752
 		public ESceneActorEventType Type { get; set; }
 
-		// Token: 0x06032465 RID: 205925 RVA: 0x006CA5F3 File Offset: 0x006C87F3
+		// Token: 0x060354BD RID: 218301 RVA: 0x0072655B File Offset: 0x0072475B
 		public ISceneActorMusicPlantsEventT()
 		{
 			this.Type = ESceneActorEventType.PlayMusicPlants;

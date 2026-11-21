@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F5 RID: 29429
+	// Token: 0x02006478 RID: 25720
 	public class PhotoInputProcessorFirstPerson : PhotoInputProcessorBase
 	{
-		// Token: 0x06048373 RID: 295795 RVA: 0x0128CA0B File Offset: 0x0128AC0B
+		// Token: 0x0603E7BF RID: 255935 RVA: 0x0122F3BF File Offset: 0x0122D5BF
 		[NullableContext(1)]
 		public override void Process(IPhotoInputSnapshot raw, IPhotoInputContext context, IPhotoInputSnapshot @out)
 		{

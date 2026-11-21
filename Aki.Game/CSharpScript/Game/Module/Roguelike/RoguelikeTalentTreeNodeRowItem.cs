@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E44 RID: 20036
+	// Token: 0x02003E0D RID: 15885
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeTalentTreeNodeRowItem : GridProxyAbstract<RoguelikeTalentTreeNodeRowData>
 	{
-		// Token: 0x06033A72 RID: 211570 RVA: 0x00C17504 File Offset: 0x00C15704
+		// Token: 0x060288DD RID: 166109 RVA: 0x00B60A2C File Offset: 0x00B5EC2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033A73 RID: 211571 RVA: 0x00C17570 File Offset: 0x00C15770
+		// Token: 0x060288DE RID: 166110 RVA: 0x00B60A98 File Offset: 0x00B5EC98
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeTalentTreeNodeRowItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033A74 RID: 211572 RVA: 0x00C175B3 File Offset: 0x00C157B3
+		// Token: 0x060288DF RID: 166111 RVA: 0x00B60ADB File Offset: 0x00B5ECDB
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RoguelikeTalentLevelUp, new Action<int>(this.OnSkillLevelUp));
 		}
 
-		// Token: 0x06033A75 RID: 211573 RVA: 0x00C175D1 File Offset: 0x00C157D1
+		// Token: 0x060288E0 RID: 166112 RVA: 0x00B60AF9 File Offset: 0x00B5ECF9
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeTalentLevelUp, new Action<int>(this.OnSkillLevelUp));
 		}
 
-		// Token: 0x06033A76 RID: 211574 RVA: 0x00C175F0 File Offset: 0x00C157F0
+		// Token: 0x060288E1 RID: 166113 RVA: 0x00B60B18 File Offset: 0x00B5ED18
 		private void OnSkillLevelUp(int skillId)
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in RoguelikeModel.Instance.GetTalentTreeViewModel().LineActiveMap[this.Data.Row])
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A77 RID: 211575 RVA: 0x00C176F0 File Offset: 0x00C158F0
+		// Token: 0x060288E2 RID: 166114 RVA: 0x00B60C18 File Offset: 0x00B5EE18
 		public override void Refresh(RoguelikeTalentTreeNodeRowData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A78 RID: 211576 RVA: 0x00C178B4 File Offset: 0x00C15AB4
+		// Token: 0x060288E3 RID: 166115 RVA: 0x00B60DDC File Offset: 0x00B5EFDC
 		public override object GetKey(RoguelikeTalentTreeNodeRowData data, int displayIndex)
 		{
 			return data.Row;
 		}
 
-		// Token: 0x06033A79 RID: 211577 RVA: 0x00C178C4 File Offset: 0x00C15AC4
+		// Token: 0x060288E4 RID: 166116 RVA: 0x00B60DEC File Offset: 0x00B5EFEC
 		private void ResetAllLines()
 		{
 			foreach (UUIItem uuiitem in this.LineList.GetAllLines())
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A7A RID: 211578 RVA: 0x00C17960 File Offset: 0x00C15B60
+		// Token: 0x060288E5 RID: 166117 RVA: 0x00B60E88 File Offset: 0x00B5F088
 		private void ResetAllNodes()
 		{
 			for (int i = 0; i < 6; i++)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A7B RID: 211579 RVA: 0x00C17994 File Offset: 0x00C15B94
+		// Token: 0x060288E6 RID: 166118 RVA: 0x00B60EBC File Offset: 0x00B5F0BC
 		private void RefreshAllDots()
 		{
 			foreach (UUIItem uuiitem in this.LineList.GetAllDots())
@@ -175,30 +175,30 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033A7C RID: 211580 RVA: 0x00C179EC File Offset: 0x00C15BEC
+		// Token: 0x060288E7 RID: 166119 RVA: 0x00B60F14 File Offset: 0x00B5F114
 		[NullableContext(2)]
 		private UUIItem GetLineByIndex(int index)
 		{
 			return this.LineList.GetLinesByIndexInLineId(index) ?? this.NodeList.GetLineByIndexInLineId(index);
 		}
 
-		// Token: 0x0401B631 RID: 112177
+		// Token: 0x04016004 RID: 90116
 		private RoguelikeTalentTreeNodeRowData Data;
 
-		// Token: 0x0401B632 RID: 112178
+		// Token: 0x04016005 RID: 90117
 		private RoguelikeTalentTreeNodeGroupItem NodeList;
 
-		// Token: 0x0401B633 RID: 112179
+		// Token: 0x04016006 RID: 90118
 		private RoguelikeTalentTreeLineGroupItem LineList;
 
-		// Token: 0x0200B001 RID: 45057
+		// Token: 0x02009A33 RID: 39475
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04035707 RID: 218887
+			// Token: 0x04030137 RID: 196919
 			public const int ItemNodeList = 0;
 
-			// Token: 0x04035708 RID: 218888
+			// Token: 0x04030138 RID: 196920
 			public const int ItemLineList = 1;
 		}
 	}

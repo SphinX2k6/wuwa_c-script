@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000644 RID: 1604
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006E1 RID: 1761
 	public class IRaceStrategy : IAiGearStrategy
 	{
-		// Token: 0x06002242 RID: 8770 RVA: 0x0005E37C File Offset: 0x0005C57C
+		// Token: 0x06002548 RID: 9544 RVA: 0x00065090 File Offset: 0x00063290
 		private IRaceStrategy_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002243 RID: 8771 RVA: 0x0005E3B4 File Offset: 0x0005C5B4
+		// Token: 0x06002549 RID: 9545 RVA: 0x000650C8 File Offset: 0x000632C8
 		public static IRaceStrategy Create([Nullable(2)] IRaceStrategy instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002244 RID: 8772 RVA: 0x0005E3C7 File Offset: 0x0005C5C7
+		// Token: 0x0600254A RID: 9546 RVA: 0x000650DB File Offset: 0x000632DB
 		public static IRaceStrategy CreateFromSetValue([Nullable(2)] IRaceStrategy_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002245 RID: 8773 RVA: 0x0005E3DA File Offset: 0x0005C5DA
+		// Token: 0x0600254B RID: 9547 RVA: 0x000650EE File Offset: 0x000632EE
 		public new IRaceStrategy_SetValue ToSetValue()
 		{
 			return new IRaceStrategy_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700091A RID: 2330
-		// (get) Token: 0x06002246 RID: 8774 RVA: 0x0005E411 File Offset: 0x0005C611
-		// (set) Token: 0x06002247 RID: 8775 RVA: 0x0005E43C File Offset: 0x0005C63C
+		// Token: 0x170009D1 RID: 2513
+		// (get) Token: 0x0600254C RID: 9548 RVA: 0x00065125 File Offset: 0x00063325
+		// (set) Token: 0x0600254D RID: 9549 RVA: 0x00065150 File Offset: 0x00063350
 		public override EAiGearStrategy Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700091B RID: 2331
-		// (get) Token: 0x06002248 RID: 8776 RVA: 0x0005E44C File Offset: 0x0005C64C
-		// (set) Token: 0x06002249 RID: 8777 RVA: 0x0005E4AD File Offset: 0x0005C6AD
+		// Token: 0x170009D2 RID: 2514
+		// (get) Token: 0x0600254E RID: 9550 RVA: 0x00065160 File Offset: 0x00063360
+		// (set) Token: 0x0600254F RID: 9551 RVA: 0x000651C1 File Offset: 0x000633C1
 		[Nullable(2)]
 		public override IConditionGroup Condition
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700091C RID: 2332
-		// (get) Token: 0x0600224A RID: 8778 RVA: 0x0005E4C2 File Offset: 0x0005C6C2
-		// (set) Token: 0x0600224B RID: 8779 RVA: 0x0005E4ED File Offset: 0x0005C6ED
+		// Token: 0x170009D3 RID: 2515
+		// (get) Token: 0x06002550 RID: 9552 RVA: 0x000651D6 File Offset: 0x000633D6
+		// (set) Token: 0x06002551 RID: 9553 RVA: 0x00065201 File Offset: 0x00063401
 		public virtual int SplineEntityId
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700091D RID: 2333
-		// (get) Token: 0x0600224C RID: 8780 RVA: 0x0005E4FB File Offset: 0x0005C6FB
-		// (set) Token: 0x0600224D RID: 8781 RVA: 0x0005E526 File Offset: 0x0005C726
+		// Token: 0x170009D4 RID: 2516
+		// (get) Token: 0x06002552 RID: 9554 RVA: 0x0006520F File Offset: 0x0006340F
+		// (set) Token: 0x06002553 RID: 9555 RVA: 0x0006523A File Offset: 0x0006343A
 		public virtual string CommonConfig
 		{
 			get
@@ -165,18 +163,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017CC RID: 6092
+		// Token: 0x040019BE RID: 6590
 		[Nullable(2)]
 		protected new IRaceStrategy FbInstance;
 
-		// Token: 0x040017CD RID: 6093
+		// Token: 0x040019BF RID: 6591
 		[Nullable(2)]
 		protected new IRaceStrategy_SetValue PocoInterface;
 
-		// Token: 0x040017CE RID: 6094
+		// Token: 0x040019C0 RID: 6592
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040017CF RID: 6095
+		// Token: 0x040019C1 RID: 6593
 		private bool _ConditionInited;
 	}
 }

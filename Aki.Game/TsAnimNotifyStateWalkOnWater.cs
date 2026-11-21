@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000188 RID: 392
+// Token: 0x0200018C RID: 396
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotifyState/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateWalkOnWater.TsAnimNotifyStateWalkOnWater_C")]
 public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000408 RID: 1032
-	// (get) Token: 0x060018EE RID: 6382 RVA: 0x0008464F File Offset: 0x0008284F
-	// (set) Token: 0x060018EF RID: 6383 RVA: 0x00084663 File Offset: 0x00082863
+	// Token: 0x1700042A RID: 1066
+	// (get) Token: 0x0600198B RID: 6539 RVA: 0x0008A83F File Offset: 0x00088A3F
+	// (set) Token: 0x0600198C RID: 6540 RVA: 0x0008A853 File Offset: 0x00088A53
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string Key
 	{
@@ -29,9 +29,9 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x17000409 RID: 1033
-	// (get) Token: 0x060018F0 RID: 6384 RVA: 0x00084678 File Offset: 0x00082878
-	// (set) Token: 0x060018F1 RID: 6385 RVA: 0x00084688 File Offset: 0x00082888
+	// Token: 0x1700042B RID: 1067
+	// (get) Token: 0x0600198D RID: 6541 RVA: 0x0008A868 File Offset: 0x00088A68
+	// (set) Token: 0x0600198E RID: 6542 RVA: 0x0008A878 File Offset: 0x00088A78
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool FixLocation
 	{
@@ -45,33 +45,29 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x060018F2 RID: 6386 RVA: 0x0008469C File Offset: 0x0008289C
+	// Token: 0x0600198F RID: 6543 RVA: 0x0008A88C File Offset: 0x00088A8C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateWalkOnWater) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateWalkOnWater.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060018F3 RID: 6387 RVA: 0x00084744 File Offset: 0x00082944
+	// Token: 0x06001990 RID: 6544 RVA: 0x0008A94C File Offset: 0x00088B4C
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -99,32 +95,28 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		return true;
 	}
 
-	// Token: 0x060018F4 RID: 6388 RVA: 0x000847A4 File Offset: 0x000829A4
+	// Token: 0x06001991 RID: 6545 RVA: 0x0008A9AC File Offset: 0x00088BAC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateWalkOnWater) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateWalkOnWater.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060018F5 RID: 6389 RVA: 0x00084844 File Offset: 0x00082A44
+	// Token: 0x06001992 RID: 6546 RVA: 0x0008AA64 File Offset: 0x00088C64
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -152,35 +144,31 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		return true;
 	}
 
-	// Token: 0x060018F6 RID: 6390 RVA: 0x000848A0 File Offset: 0x00082AA0
+	// Token: 0x06001993 RID: 6547 RVA: 0x0008AAC0 File Offset: 0x00088CC0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateWalkOnWater) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateWalkOnWater.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x060018F7 RID: 6391 RVA: 0x0008491B File Offset: 0x00082B1B
+	// Token: 0x06001994 RID: 6548 RVA: 0x0008AB50 File Offset: 0x00088D50
 	protected override string GetNotifyName_Implementation()
 	{
 		return "水上行走";
 	}
 
-	// Token: 0x060018F8 RID: 6392 RVA: 0x00084922 File Offset: 0x00082B22
+	// Token: 0x06001995 RID: 6549 RVA: 0x0008AB57 File Offset: 0x00088D57
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateWalkOnWater._ClassPtr == IntPtr.Zero)
@@ -190,22 +178,22 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		return TsAnimNotifyStateWalkOnWater._ClassPtr;
 	}
 
-	// Token: 0x060018F9 RID: 6393 RVA: 0x00084948 File Offset: 0x00082B48
+	// Token: 0x06001996 RID: 6550 RVA: 0x0008AB7C File Offset: 0x00088D7C
 	public TsAnimNotifyStateWalkOnWater() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateWalkOnWater.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060018FA RID: 6394 RVA: 0x00084970 File Offset: 0x00082B70
+	// Token: 0x06001997 RID: 6551 RVA: 0x0008ABA4 File Offset: 0x00088DA4
 	public TsAnimNotifyStateWalkOnWater(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateWalkOnWater.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060018FB RID: 6395 RVA: 0x000849A3 File Offset: 0x00082BA3
+	// Token: 0x06001998 RID: 6552 RVA: 0x0008ABD7 File Offset: 0x00088DD7
 	protected TsAnimNotifyStateWalkOnWater(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060018FC RID: 6396 RVA: 0x000849AC File Offset: 0x00082BAC
+	// Token: 0x06001999 RID: 6553 RVA: 0x0008ABE0 File Offset: 0x00088DE0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -214,7 +202,7 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x060018FD RID: 6397 RVA: 0x000849E8 File Offset: 0x00082BE8
+	// Token: 0x0600199A RID: 6554 RVA: 0x0008AC1C File Offset: 0x00088E1C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -223,25 +211,25 @@ public class TsAnimNotifyStateWalkOnWater : TsAnimNotifyStateBase, IUnrealUObjec
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060018FE RID: 6398 RVA: 0x00084A1B File Offset: 0x00082C1B
+	// Token: 0x0600199B RID: 6555 RVA: 0x0008AC4F File Offset: 0x00088E4F
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001088 RID: 4232
+	// Token: 0x040010CB RID: 4299
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateWalkOnWater.TsAnimNotifyStateWalkOnWater_C";
 
-	// Token: 0x04001089 RID: 4233
+	// Token: 0x040010CC RID: 4300
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400108A RID: 4234
+	// Token: 0x040010CD RID: 4301
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400108B RID: 4235
+	// Token: 0x040010CE RID: 4302
 	private static int __PropertyOffset_Key;
 
-	// Token: 0x0400108C RID: 4236
+	// Token: 0x040010CF RID: 4303
 	private static int __PropertyOffset_FixLocation;
 }

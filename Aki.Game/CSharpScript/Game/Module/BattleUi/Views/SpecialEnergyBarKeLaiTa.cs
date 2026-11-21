@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DE7 RID: 24039
+	// Token: 0x02004DCB RID: 19915
 	internal class SpecialEnergyBarKeLaiTa : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D1B8 RID: 250296 RVA: 0x00EB59EC File Offset: 0x00EB3BEC
+		// Token: 0x0603212F RID: 205103 RVA: 0x00E068EC File Offset: 0x00E04AEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D1B9 RID: 250297 RVA: 0x00EB5ADC File Offset: 0x00EB3CDC
+		// Token: 0x06032130 RID: 205104 RVA: 0x00E069DC File Offset: 0x00E04BDC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarKeLaiTa.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D1BA RID: 250298 RVA: 0x00EB5B20 File Offset: 0x00EB3D20
+		// Token: 0x06032131 RID: 205105 RVA: 0x00E06A20 File Offset: 0x00E04C20
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarKeLaiTa.<InitBarItem>d__9 <InitBarItem>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D1BB RID: 250299 RVA: 0x00EB5B63 File Offset: 0x00EB3D63
+		// Token: 0x06032132 RID: 205106 RVA: 0x00E06A63 File Offset: 0x00E04C63
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetRedState(this.Buff == null, true);
 		}
 
-		// Token: 0x0603D1BC RID: 250300 RVA: 0x00EB5B98 File Offset: 0x00EB3D98
+		// Token: 0x06032133 RID: 205107 RVA: 0x00E06A98 File Offset: 0x00E04C98
 		protected void RefreshBuff()
 		{
 			SpecialEnergyBarInfo config = this.Config;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D1BD RID: 250301 RVA: 0x00EB5C08 File Offset: 0x00EB3E08
+		// Token: 0x06032134 RID: 205108 RVA: 0x00E06B08 File Offset: 0x00E04D08
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetRedState(true, false);
 		}
 
-		// Token: 0x0603D1BE RID: 250302 RVA: 0x00EB5CA6 File Offset: 0x00EB3EA6
+		// Token: 0x06032135 RID: 205109 RVA: 0x00E06BA8 File Offset: 0x00E04DA8
 		private void SetBuffBarPercent(float percent)
 		{
 			if (this.LastBuffBarPercent == percent)
@@ -128,11 +128,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				return;
 			}
 			this.LastBuffBarPercent = percent;
-			base.GetUiNiagara(3).SetNiagaraVarFloat("Dissolve", percent);
-			base.GetUiNiagara(4).SetNiagaraVarFloat("Dissolve", percent);
+			UUINiagara uiNiagara = base.GetUiNiagara(3);
+			if (uiNiagara != null)
+			{
+				uiNiagara.SetNiagaraVarFloat("Dissolve", percent);
+			}
+			UUINiagara uiNiagara2 = base.GetUiNiagara(4);
+			if (uiNiagara2 == null)
+			{
+				return;
+			}
+			uiNiagara2.SetNiagaraVarFloat("Dissolve", percent);
 		}
 
-		// Token: 0x0603D1BF RID: 250303 RVA: 0x00EB5CE0 File Offset: 0x00EB3EE0
+		// Token: 0x06032136 RID: 205110 RVA: 0x00E06BF8 File Offset: 0x00E04DF8
 		private void SetRedState(bool isRed, bool bForce = false)
 		{
 			if (this.IsRedState == isRed && !bForce)
@@ -156,40 +165,40 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FD97 RID: 130455
+		// Token: 0x0401A854 RID: 108628
 		private const float EFFECT_BASE_PERCENT = 0.46341464f;
 
-		// Token: 0x0401FD98 RID: 130456
+		// Token: 0x0401A855 RID: 108629
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarItem;
 
-		// Token: 0x0401FD99 RID: 130457
+		// Token: 0x0401A856 RID: 108630
 		[Nullable(2)]
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FD9A RID: 130458
+		// Token: 0x0401A857 RID: 108631
 		private int BuffHandle;
 
-		// Token: 0x0401FD9B RID: 130459
+		// Token: 0x0401A858 RID: 108632
 		private bool IsRedState;
 
-		// Token: 0x0401FD9C RID: 130460
+		// Token: 0x0401A859 RID: 108633
 		private float LastBuffBarPercent = -1f;
 
-		// Token: 0x0200C111 RID: 49425
+		// Token: 0x0200AB1A RID: 43802
 		private enum EChildType
 		{
-			// Token: 0x0403A4B0 RID: 238768
+			// Token: 0x04034E82 RID: 216706
 			SlotBarItem,
-			// Token: 0x0403A4B1 RID: 238769
+			// Token: 0x04034E83 RID: 216707
 			BlueItem,
-			// Token: 0x0403A4B2 RID: 238770
+			// Token: 0x04034E84 RID: 216708
 			RedItem,
-			// Token: 0x0403A4B3 RID: 238771
+			// Token: 0x04034E85 RID: 216709
 			BlueBarL,
-			// Token: 0x0403A4B4 RID: 238772
+			// Token: 0x04034E86 RID: 216710
 			BlueBarR,
-			// Token: 0x0403A4B5 RID: 238773
+			// Token: 0x04034E87 RID: 216711
 			AniBurst
 		}
 	}

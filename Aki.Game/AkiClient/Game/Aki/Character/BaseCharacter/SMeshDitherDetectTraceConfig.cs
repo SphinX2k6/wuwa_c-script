@@ -6,196 +6,184 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004323 RID: 17187
+	// Token: 0x0200335C RID: 13148
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SMeshDitherDetectTraceConfig.SMeshDitherDetectTraceConfig")]
 	[UnrealStructLayout(72, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 69)]
 	public class SMeshDitherDetectTraceConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C7E4 RID: 182244 RVA: 0x00A20FE5 File Offset: 0x00A1F1E5
+		// Token: 0x060214EE RID: 136430 RVA: 0x0095DA98 File Offset: 0x0095BC98
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMeshDitherDetectTraceConfig._ScriptStructPtr != 0) ? SMeshDitherDetectTraceConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SMeshDitherDetectTraceConfig.SMeshDitherDetectTraceConfig", ref SMeshDitherDetectTraceConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F82 RID: 28546
-		// (get) Token: 0x0602C7E5 RID: 182245 RVA: 0x00A21009 File Offset: 0x00A1F209
-		// (set) Token: 0x0602C7E6 RID: 182246 RVA: 0x00A2101D File Offset: 0x00A1F21D
+		// Token: 0x170043AD RID: 17325
+		// (get) Token: 0x060214EF RID: 136431 RVA: 0x0095DABC File Offset: 0x0095BCBC
+		// (set) Token: 0x060214F0 RID: 136432 RVA: 0x0095DAD0 File Offset: 0x0095BCD0
 		public unsafe FName BaseBoneName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_BaseBoneName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_BaseBoneName) = value;
 			}
 		}
 
-		// Token: 0x17006F83 RID: 28547
-		// (get) Token: 0x0602C7E7 RID: 182247 RVA: 0x00A21032 File Offset: 0x00A1F232
-		// (set) Token: 0x0602C7E8 RID: 182248 RVA: 0x00A21046 File Offset: 0x00A1F246
+		// Token: 0x170043AE RID: 17326
+		// (get) Token: 0x060214F1 RID: 136433 RVA: 0x0095DAE5 File Offset: 0x0095BCE5
+		// (set) Token: 0x060214F2 RID: 136434 RVA: 0x0095DAF9 File Offset: 0x0095BCF9
 		public unsafe FName TargetBoneName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_TargetBoneName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_TargetBoneName) = value;
 			}
 		}
 
-		// Token: 0x17006F84 RID: 28548
-		// (get) Token: 0x0602C7E9 RID: 182249 RVA: 0x00A2105B File Offset: 0x00A1F25B
-		// (set) Token: 0x0602C7EA RID: 182250 RVA: 0x00A2106F File Offset: 0x00A1F26F
+		// Token: 0x170043AF RID: 17327
+		// (get) Token: 0x060214F3 RID: 136435 RVA: 0x0095DB0E File Offset: 0x0095BD0E
+		// (set) Token: 0x060214F4 RID: 136436 RVA: 0x0095DB22 File Offset: 0x0095BD22
 		public unsafe FName BasisBoneName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_BasisBoneName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_BasisBoneName) = value;
 			}
 		}
 
-		// Token: 0x17006F85 RID: 28549
-		// (get) Token: 0x0602C7EB RID: 182251 RVA: 0x00A21084 File Offset: 0x00A1F284
-		// (set) Token: 0x0602C7EC RID: 182252 RVA: 0x00A21098 File Offset: 0x00A1F298
+		// Token: 0x170043B0 RID: 17328
+		// (get) Token: 0x060214F5 RID: 136437 RVA: 0x0095DB37 File Offset: 0x0095BD37
+		// (set) Token: 0x060214F6 RID: 136438 RVA: 0x0095DB4B File Offset: 0x0095BD4B
 		public unsafe FVector2D AdditionCapsuleSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_AdditionCapsuleSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_AdditionCapsuleSize) = value;
 			}
 		}
 
-		// Token: 0x17006F86 RID: 28550
-		// (get) Token: 0x0602C7ED RID: 182253 RVA: 0x00A210AD File Offset: 0x00A1F2AD
-		// (set) Token: 0x0602C7EE RID: 182254 RVA: 0x00A210C1 File Offset: 0x00A1F2C1
+		// Token: 0x170043B1 RID: 17329
+		// (get) Token: 0x060214F7 RID: 136439 RVA: 0x0095DB60 File Offset: 0x0095BD60
+		// (set) Token: 0x060214F8 RID: 136440 RVA: 0x0095DB74 File Offset: 0x0095BD74
 		public unsafe FVector AdditionCapsuleOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_AdditionCapsuleOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_AdditionCapsuleOffset) = value;
 			}
 		}
 
-		// Token: 0x17006F87 RID: 28551
-		// (get) Token: 0x0602C7EF RID: 182255 RVA: 0x00A210D6 File Offset: 0x00A1F2D6
-		// (set) Token: 0x0602C7F0 RID: 182256 RVA: 0x00A210EA File Offset: 0x00A1F2EA
+		// Token: 0x170043B2 RID: 17330
+		// (get) Token: 0x060214F9 RID: 136441 RVA: 0x0095DB89 File Offset: 0x0095BD89
+		// (set) Token: 0x060214FA RID: 136442 RVA: 0x0095DB9D File Offset: 0x0095BD9D
 		public unsafe FRotator AdditionCapsuleRotator
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_AdditionCapsuleRotator);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_AdditionCapsuleRotator) = value;
 			}
 		}
 
-		// Token: 0x17006F88 RID: 28552
-		// (get) Token: 0x0602C7F1 RID: 182257 RVA: 0x00A210FF File Offset: 0x00A1F2FF
-		// (set) Token: 0x0602C7F2 RID: 182258 RVA: 0x00A2110F File Offset: 0x00A1F30F
+		// Token: 0x170043B3 RID: 17331
+		// (get) Token: 0x060214FB RID: 136443 RVA: 0x0095DBB2 File Offset: 0x0095BDB2
+		// (set) Token: 0x060214FC RID: 136444 RVA: 0x0095DBC2 File Offset: 0x0095BDC2
 		public unsafe bool Debug
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_Debug) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SMeshDitherDetectTraceConfig.__PropertyOffset_Debug) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602C7F3 RID: 182259 RVA: 0x00A21120 File Offset: 0x00A1F320
+		// Token: 0x060214FD RID: 136445 RVA: 0x0095DBD3 File Offset: 0x0095BDD3
 		public SMeshDitherDetectTraceConfig()
 		{
 		}
 
-		// Token: 0x0602C7F4 RID: 182260 RVA: 0x00A21128 File Offset: 0x00A1F328
-		public SMeshDitherDetectTraceConfig(FName BaseBoneName, FName TargetBoneName, FName BasisBoneName, FVector2D AdditionCapsuleSize, FVector AdditionCapsuleOffset, FRotator AdditionCapsuleRotator, bool Debug)
-		{
-			this.BaseBoneName = BaseBoneName;
-			this.TargetBoneName = TargetBoneName;
-			this.BasisBoneName = BasisBoneName;
-			this.AdditionCapsuleSize = AdditionCapsuleSize;
-			this.AdditionCapsuleOffset = AdditionCapsuleOffset;
-			this.AdditionCapsuleRotator = AdditionCapsuleRotator;
-			this.Debug = Debug;
-		}
-
-		// Token: 0x0602C7F5 RID: 182261 RVA: 0x00A21165 File Offset: 0x00A1F365
+		// Token: 0x060214FE RID: 136446 RVA: 0x0095DBDB File Offset: 0x0095BDDB
 		protected override IntPtr GetUStructPtr()
 		{
 			return SMeshDitherDetectTraceConfig.StaticStruct();
 		}
 
-		// Token: 0x0602C7F6 RID: 182262 RVA: 0x00A21171 File Offset: 0x00A1F371
+		// Token: 0x060214FF RID: 136447 RVA: 0x0095DBE7 File Offset: 0x0095BDE7
 		[NullableContext(2)]
 		public SMeshDitherDetectTraceConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C7F7 RID: 182263 RVA: 0x00A2117B File Offset: 0x00A1F37B
+		// Token: 0x06021500 RID: 136448 RVA: 0x0095DBF1 File Offset: 0x0095BDF1
 		public SMeshDitherDetectTraceConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C7F8 RID: 182264 RVA: 0x00A21186 File Offset: 0x00A1F386
+		// Token: 0x06021501 RID: 136449 RVA: 0x0095DBFC File Offset: 0x0095BDFC
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SMeshDitherDetectTraceConfig(Pointer, false, true);
 		}
 
-		// Token: 0x0602C7F9 RID: 182265 RVA: 0x00A21190 File Offset: 0x00A1F390
+		// Token: 0x06021502 RID: 136450 RVA: 0x0095DC06 File Offset: 0x0095BE06
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SMeshDitherDetectTraceConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017743 RID: 96067
+		// Token: 0x04012347 RID: 74567
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SMeshDitherDetectTraceConfig.SMeshDitherDetectTraceConfig";
 
-		// Token: 0x04017744 RID: 96068
+		// Token: 0x04012348 RID: 74568
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017745 RID: 96069
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012349 RID: 74569
+		internal static int __PropertyOffset_BaseBoneName;
 
-		// Token: 0x04017746 RID: 96070
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401234A RID: 74570
+		internal static int __PropertyOffset_TargetBoneName;
 
-		// Token: 0x04017747 RID: 96071
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401234B RID: 74571
+		internal static int __PropertyOffset_BasisBoneName;
 
-		// Token: 0x04017748 RID: 96072
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401234C RID: 74572
+		internal static int __PropertyOffset_AdditionCapsuleSize;
 
-		// Token: 0x04017749 RID: 96073
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401234D RID: 74573
+		internal static int __PropertyOffset_AdditionCapsuleOffset;
 
-		// Token: 0x0401774A RID: 96074
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401234E RID: 74574
+		internal static int __PropertyOffset_AdditionCapsuleRotator;
 
-		// Token: 0x0401774B RID: 96075
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401234F RID: 74575
+		internal static int __PropertyOffset_Debug;
 	}
 }

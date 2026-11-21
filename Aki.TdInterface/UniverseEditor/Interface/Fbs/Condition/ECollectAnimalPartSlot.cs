@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200492F RID: 18735
+	// Token: 0x02004DE3 RID: 19939
 	public enum ECollectAnimalPartSlot : byte
 	{
-		// Token: 0x0400CFF3 RID: 53235
+		// Token: 0x0400DAA5 RID: 55973
 		Slot0,
-		// Token: 0x0400CFF4 RID: 53236
+		// Token: 0x0400DAA6 RID: 55974
 		Slot1,
-		// Token: 0x0400CFF5 RID: 53237
+		// Token: 0x0400DAA7 RID: 55975
 		Slot2
 	}
 }

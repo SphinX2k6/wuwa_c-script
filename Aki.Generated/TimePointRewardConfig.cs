@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200112E RID: 4398
+	// Token: 0x02001264 RID: 4708
 	public struct TimePointRewardConfig : IFlatbufferObject
 	{
-		// Token: 0x17003A74 RID: 14964
-		// (get) Token: 0x0600DEE2 RID: 57058 RVA: 0x0032E088 File Offset: 0x0032C288
+		// Token: 0x17003DD8 RID: 15832
+		// (get) Token: 0x0600EC50 RID: 60496 RVA: 0x0035965C File Offset: 0x0035785C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEE3 RID: 57059 RVA: 0x0032E095 File Offset: 0x0032C295
+		// Token: 0x0600EC51 RID: 60497 RVA: 0x00359669 File Offset: 0x00357869
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DEE4 RID: 57060 RVA: 0x0032E09C File Offset: 0x0032C29C
+		// Token: 0x0600EC52 RID: 60498 RVA: 0x00359670 File Offset: 0x00357870
 		public static TimePointRewardConfig GetRootAsTimePointRewardConfig(ByteBuffer _bb)
 		{
 			return TimePointRewardConfig.GetRootAsTimePointRewardConfig(_bb, default(TimePointRewardConfig));
 		}
 
-		// Token: 0x0600DEE5 RID: 57061 RVA: 0x0032E0B8 File Offset: 0x0032C2B8
+		// Token: 0x0600EC53 RID: 60499 RVA: 0x0035968C File Offset: 0x0035788C
 		public static TimePointRewardConfig GetRootAsTimePointRewardConfig(ByteBuffer _bb, TimePointRewardConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DEE6 RID: 57062 RVA: 0x0032E0D5 File Offset: 0x0032C2D5
+		// Token: 0x0600EC54 RID: 60500 RVA: 0x003596A9 File Offset: 0x003578A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DEE7 RID: 57063 RVA: 0x0032E0E4 File Offset: 0x0032C2E4
+		// Token: 0x0600EC55 RID: 60501 RVA: 0x003596B8 File Offset: 0x003578B8
 		public TimePointRewardConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003A75 RID: 14965
-		// (get) Token: 0x0600DEE8 RID: 57064 RVA: 0x0032E0F4 File Offset: 0x0032C2F4
+		// Token: 0x17003DD9 RID: 15833
+		// (get) Token: 0x0600EC56 RID: 60502 RVA: 0x003596C8 File Offset: 0x003578C8
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A76 RID: 14966
-		// (get) Token: 0x0600DEE9 RID: 57065 RVA: 0x0032E130 File Offset: 0x0032C330
+		// Token: 0x17003DDA RID: 15834
+		// (get) Token: 0x0600EC57 RID: 60503 RVA: 0x00359704 File Offset: 0x00357904
 		public string UiPrefab
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEEA RID: 57066 RVA: 0x0032E167 File Offset: 0x0032C367
+		// Token: 0x0600EC58 RID: 60504 RVA: 0x0035973B File Offset: 0x0035793B
 		public Span<byte> GetUiPrefabBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600DEEB RID: 57067 RVA: 0x0032E176 File Offset: 0x0032C376
+		// Token: 0x0600EC59 RID: 60505 RVA: 0x0035974A File Offset: 0x0035794A
 		public byte[] GetUiPrefabArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400526F RID: 21103
+		// Token: 0x040058B2 RID: 22706
 		private Table __p;
 	}
 }

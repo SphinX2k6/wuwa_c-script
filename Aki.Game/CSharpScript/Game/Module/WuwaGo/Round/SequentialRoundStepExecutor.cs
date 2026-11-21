@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Round
 {
-	// Token: 0x0200472A RID: 18218
+	// Token: 0x0200365B RID: 13915
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequentialRoundStepExecutor : IRoundStepExecutor
 	{
-		// Token: 0x0602F9C5 RID: 195013 RVA: 0x00B0756D File Offset: 0x00B0576D
+		// Token: 0x0602418F RID: 147855 RVA: 0x00A373F9 File Offset: 0x00A355F9
 		public SequentialRoundStepExecutor([Nullable(new byte[]
 		{
 			1,
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		{
 		}
 
-		// Token: 0x0602F9C6 RID: 195014 RVA: 0x00B07594 File Offset: 0x00B05794
+		// Token: 0x06024190 RID: 147856 RVA: 0x00A37420 File Offset: 0x00A35620
 		public UniTask Execute(ERoundStep step, IReadOnlyList<IExecutableUnit> units, int executionToken)
 		{
 			SequentialRoundStepExecutor.<Execute>d__5 <Execute>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <Execute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019B53 RID: 105299
+		// Token: 0x04014203 RID: 82435
 		[Nullable(new byte[]
 		{
 			1,
@@ -50,11 +50,11 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		[CompilerGenerated]
 		private Func<ERoundStep, IReadOnlyList<IExecutableUnit>> <getRegisteredUnits>P = getRegisteredUnits;
 
-		// Token: 0x04019B54 RID: 105300
+		// Token: 0x04014204 RID: 82436
 		[CompilerGenerated]
 		private Func<int> <getExecutionToken>P = getExecutionToken;
 
-		// Token: 0x04019B55 RID: 105301
+		// Token: 0x04014205 RID: 82437
 		[Nullable(new byte[]
 		{
 			1,
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		[CompilerGenerated]
 		private Action<IExecutableUnit, string> <setCurrentProcess>P = setCurrentProcess;
 
-		// Token: 0x04019B56 RID: 105302
+		// Token: 0x04014206 RID: 82438
 		[CompilerGenerated]
 		private Func<int, bool> <shouldAbortRound>P = shouldAbortRound;
 	}

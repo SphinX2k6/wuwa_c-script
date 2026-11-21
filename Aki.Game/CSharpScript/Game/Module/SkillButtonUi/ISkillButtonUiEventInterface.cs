@@ -4,21 +4,21 @@ using CSharpScript.Game.Module.Battle;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004BFD RID: 19453
+	// Token: 0x02003BAE RID: 15278
 	[NullableContext(1)]
 	public interface ISkillButtonUiEventInterface
 	{
-		// Token: 0x060324D8 RID: 206040 RVA: 0x00BB05C5 File Offset: 0x00BAE7C5
+		// Token: 0x0602727E RID: 160382 RVA: 0x00AF4BD9 File Offset: 0x00AF2DD9
 		void EquipExplorePhantomSkill()
 		{
 		}
 
-		// Token: 0x060324D9 RID: 206041 RVA: 0x00BB05C7 File Offset: 0x00BAE7C7
+		// Token: 0x0602727F RID: 160383 RVA: 0x00AF4BDB File Offset: 0x00AF2DDB
 		void SkillCountChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
 		}
 
-		// Token: 0x060324DA RID: 206042 RVA: 0x00BB05C9 File Offset: 0x00BAE7C9
+		// Token: 0x06027280 RID: 160384 RVA: 0x00AF4BDD File Offset: 0x00AF2DDD
 		void SkillRemainCdChanged(GroupSkillCdInfo groupSkillCdInfo)
 		{
 		}

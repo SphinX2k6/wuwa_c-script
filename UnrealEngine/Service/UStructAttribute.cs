@@ -3,16 +3,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002B05 RID: 11013
+	// Token: 0x020008B5 RID: 2229
 	[AttributeUsage(AttributeTargets.Struct, Inherited = false)]
 	public class UStructAttribute : Attribute
 	{
-		// Token: 0x060284A3 RID: 165027 RVA: 0x003D4BDA File Offset: 0x003D2DDA
+		// Token: 0x0600BE5D RID: 48733 RVA: 0x0012FF36 File Offset: 0x0012E136
 		public UStructAttribute(EStructFlags flags = EStructFlags.STRUCT_NoFlags)
 		{
 		}
 
-		// Token: 0x040162C8 RID: 90824
+		// Token: 0x040056E0 RID: 22240
 		public EStructFlags Flags = flags;
 	}
 }

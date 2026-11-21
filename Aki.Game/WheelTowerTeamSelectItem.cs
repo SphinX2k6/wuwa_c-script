@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015FC RID: 5628
+// Token: 0x02000AB4 RID: 2740
 internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009EC0 RID: 40640 RVA: 0x0022AD3C File Offset: 0x00228F3C
+	// Token: 0x0600729E RID: 29342 RVA: 0x00234B14 File Offset: 0x00232D14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -37,7 +37,7 @@ internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009EC1 RID: 40641 RVA: 0x0022AE48 File Offset: 0x00229048
+	// Token: 0x0600729F RID: 29343 RVA: 0x00234C20 File Offset: 0x00232E20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerTeamSelectItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009EC2 RID: 40642 RVA: 0x0022AE8C File Offset: 0x0022908C
+	// Token: 0x060072A0 RID: 29344 RVA: 0x00234C64 File Offset: 0x00232E64
 	protected override void OnStart()
 	{
 		UUIExtendToggle toggle = base.GetExtendToggle(0);
@@ -58,7 +58,7 @@ internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06009EC3 RID: 40643 RVA: 0x0022AED0 File Offset: 0x002290D0
+	// Token: 0x060072A1 RID: 29345 RVA: 0x00234CA8 File Offset: 0x00232EA8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TeamId = data;
@@ -106,13 +106,13 @@ internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x06009EC4 RID: 40644 RVA: 0x0022B01C File Offset: 0x0022921C
+	// Token: 0x060072A2 RID: 29346 RVA: 0x00234DF4 File Offset: 0x00232FF4
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleForce(false, false);
 	}
 
-	// Token: 0x06009EC5 RID: 40645 RVA: 0x0022B026 File Offset: 0x00229226
+	// Token: 0x060072A3 RID: 29347 RVA: 0x00234DFE File Offset: 0x00232FFE
 	private void OnToggleClick(EToggleState state)
 	{
 		Action<int, int> onToggleClickCallback = this.OnToggleClickCallback;
@@ -123,7 +123,7 @@ internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 		onToggleClickCallback(this.TeamId, base.GridIndex);
 	}
 
-	// Token: 0x06009EC6 RID: 40646 RVA: 0x0022B044 File Offset: 0x00229244
+	// Token: 0x060072A4 RID: 29348 RVA: 0x00234E1C File Offset: 0x0023301C
 	public void SetToggleForce(bool selected, bool skipAnim = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -134,14 +134,14 @@ internal class WheelTowerTeamSelectItem : GridProxyAbstract<int>
 		extendToggle.SetToggleStateForce(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, skipAnim);
 	}
 
-	// Token: 0x04004703 RID: 18179
+	// Token: 0x040047A9 RID: 18345
 	[Nullable(2)]
 	public Action<int, int> OnToggleClickCallback;
 
-	// Token: 0x04004704 RID: 18180
+	// Token: 0x040047AA RID: 18346
 	private int TeamId = -1;
 
-	// Token: 0x04004705 RID: 18181
+	// Token: 0x040047AB RID: 18347
 	[Nullable(1)]
 	private readonly List<WheelTowerRoleGridItem> SlotList = new List<WheelTowerRoleGridItem>();
 }

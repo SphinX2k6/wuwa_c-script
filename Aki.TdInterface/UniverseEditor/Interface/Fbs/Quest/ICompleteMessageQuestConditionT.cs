@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DAA RID: 15786
+	// Token: 0x020041C1 RID: 16833
 	public class ICompleteMessageQuestConditionT
 	{
-		// Token: 0x17006C9D RID: 27805
-		// (get) Token: 0x06015F3A RID: 89914 RVA: 0x0032B872 File Offset: 0x00329A72
-		// (set) Token: 0x06015F3B RID: 89915 RVA: 0x0032B87A File Offset: 0x00329A7A
+		// Token: 0x17007257 RID: 29271
+		// (get) Token: 0x06017472 RID: 95346 RVA: 0x00352B9E File Offset: 0x00350D9E
+		// (set) Token: 0x06017473 RID: 95347 RVA: 0x00352BA6 File Offset: 0x00350DA6
 		public EPhoneMessageProgressType Type { get; set; }
 
-		// Token: 0x06015F3C RID: 89916 RVA: 0x0032B883 File Offset: 0x00329A83
+		// Token: 0x06017474 RID: 95348 RVA: 0x00352BAF File Offset: 0x00350DAF
 		public ICompleteMessageQuestConditionT()
 		{
 			this.Type = EPhoneMessageProgressType.CompleteMessage;

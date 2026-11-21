@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.AdventureGuide;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058EF RID: 22767
+	// Token: 0x020048C7 RID: 18631
 	public static class DungeonExitHandlerDefine
 	{
-		// Token: 0x06039D16 RID: 236822 RVA: 0x00DBB9B8 File Offset: 0x00DB9BB8
+		// Token: 0x0602EC39 RID: 191545 RVA: 0x00D0A910 File Offset: 0x00D08B10
 		// Note: this type is marked as 'beforefieldinit'.
 		static DungeonExitHandlerDefine()
 		{
@@ -42,10 +42,11 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			dictionary[EDungeonSubType.SilentAreaInstShare] = new LordInInstanceExitHandler();
 			dictionary[EDungeonSubType.DangoBrawl] = new DangoBrawlExitHandler();
 			dictionary[EDungeonSubType.RoverRogue] = new RoverlikeExitHandler();
+			dictionary[EDungeonSubType.RoleTower] = new RoleTowerExitHandler();
 			DungeonExitHandlerDefine.DungeonExitHandlerMap = dictionary;
 		}
 
-		// Token: 0x0401E2D6 RID: 123606
+		// Token: 0x04018D73 RID: 101747
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EDungeonSubType, InstanceDungeonExitHandlerBase> DungeonExitHandlerMap;

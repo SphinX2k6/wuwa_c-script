@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200250B RID: 9483
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027B1 RID: 10161
 	public class ITalkOptionCondition : ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600D390 RID: 54160 RVA: 0x001F5A98 File Offset: 0x001F3C98
+		// Token: 0x0600E0EC RID: 57580 RVA: 0x00211490 File Offset: 0x0020F690
 		public static ITalkOptionCondition Create(ITalkOptionCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B3C RID: 15164
-		// (get) Token: 0x0600D391 RID: 54161 RVA: 0x001F5AB7 File Offset: 0x001F3CB7
+		// Token: 0x17003E38 RID: 15928
+		// (get) Token: 0x0600E0ED RID: 57581 RVA: 0x002114AF File Offset: 0x0020F6AF
 		public override ETalkOptionPreConditionType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B3D RID: 15165
-		// (get) Token: 0x0600D392 RID: 54162 RVA: 0x001F5AC4 File Offset: 0x001F3CC4
+		// Token: 0x17003E39 RID: 15929
+		// (get) Token: 0x0600E0EE RID: 57582 RVA: 0x002114BC File Offset: 0x0020F6BC
 		public virtual IConditionGroup Conditions
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073F9 RID: 29689
+		// Token: 0x04007A4B RID: 31307
 		private ITalkOptionCondition Instance;
 
-		// Token: 0x040073FA RID: 29690
+		// Token: 0x04007A4C RID: 31308
 		[Nullable(2)]
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x040073FB RID: 29691
+		// Token: 0x04007A4D RID: 31309
 		private bool _ConditionsInited;
 	}
 }

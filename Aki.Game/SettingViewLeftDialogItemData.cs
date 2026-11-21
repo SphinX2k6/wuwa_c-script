@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002525 RID: 9509
+// Token: 0x02001A0C RID: 6668
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using System.Runtime.CompilerServices;
 })]
 public class SettingViewLeftDialogItemData : MultiTemplateGridDataBase<PhoneMsgDialogItemData, PhoneMsgDialogItem>
 {
-	// Token: 0x06013200 RID: 78336 RVA: 0x004BF75B File Offset: 0x004BD95B
+	// Token: 0x060106C0 RID: 67264 RVA: 0x004CD467 File Offset: 0x004CB667
 	public override int GetTemplateIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x06013201 RID: 78337 RVA: 0x004BF75E File Offset: 0x004BD95E
+	// Token: 0x060106C1 RID: 67265 RVA: 0x004CD46A File Offset: 0x004CB66A
 	public override PhoneMsgDialogItem CreateProxy()
 	{
 		return new PhoneMsgDialogItem
@@ -26,19 +26,19 @@ public class SettingViewLeftDialogItemData : MultiTemplateGridDataBase<PhoneMsgD
 		};
 	}
 
-	// Token: 0x06013202 RID: 78338 RVA: 0x004BF771 File Offset: 0x004BD971
+	// Token: 0x060106C2 RID: 67266 RVA: 0x004CD47D File Offset: 0x004CB67D
 	public SettingViewLeftDialogItemData(PhoneMsgDialogItemData dialogData)
 	{
 		base.Data = dialogData;
 	}
 
-	// Token: 0x06013203 RID: 78339 RVA: 0x004BF780 File Offset: 0x004BD980
+	// Token: 0x060106C3 RID: 67267 RVA: 0x004CD48C File Offset: 0x004CB68C
 	public int GetDialogId()
 	{
 		return base.Data.DialogId;
 	}
 
-	// Token: 0x04009067 RID: 36967
+	// Token: 0x040091BC RID: 37308
 	[Nullable(new byte[]
 	{
 		2,

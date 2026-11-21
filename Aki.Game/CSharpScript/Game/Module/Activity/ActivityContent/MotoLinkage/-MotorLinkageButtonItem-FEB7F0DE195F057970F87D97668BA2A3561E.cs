@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x02006452 RID: 25682
+	// Token: 0x020053D0 RID: 21456
 	internal enum <MotorLinkageButtonItem>FEB7F0DE195F057970F87D97668BA2A3561E824CF9B7BF2E4B19CF901231125A4__EComp
 	{
-		// Token: 0x04021918 RID: 137496
+		// Token: 0x0401C247 RID: 115271
 		Button,
-		// Token: 0x04021919 RID: 137497
+		// Token: 0x0401C248 RID: 115272
 		DoneA,
-		// Token: 0x0402191A RID: 137498
+		// Token: 0x0401C249 RID: 115273
 		DoneB,
-		// Token: 0x0402191B RID: 137499
+		// Token: 0x0401C24A RID: 115274
 		RedPoint
 	}
 }

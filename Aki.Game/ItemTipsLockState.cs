@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018F4 RID: 6388
+// Token: 0x02000DAD RID: 3501
 [NullableContext(2)]
 [Nullable(0)]
 public class ItemTipsLockState : UiPanelBase
 {
-	// Token: 0x0600BB34 RID: 47924 RVA: 0x002A60D8 File Offset: 0x002A42D8
+	// Token: 0x06008F1E RID: 36638 RVA: 0x002B0838 File Offset: 0x002AEA38
 	[NullableContext(1)]
 	public UniTask Init(UUIItem item)
 	{
@@ -25,7 +25,7 @@ public class ItemTipsLockState : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BB35 RID: 47925 RVA: 0x002A6124 File Offset: 0x002A4324
+	// Token: 0x06008F1F RID: 36639 RVA: 0x002B0884 File Offset: 0x002AEA84
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -48,7 +48,7 @@ public class ItemTipsLockState : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BB36 RID: 47926 RVA: 0x002A61EC File Offset: 0x002A43EC
+	// Token: 0x06008F20 RID: 36640 RVA: 0x002B094C File Offset: 0x002AEB4C
 	public void UpdateData(IItemTipsLockStateData data = null)
 	{
 		this.PanelData = data;
@@ -60,7 +60,7 @@ public class ItemTipsLockState : UiPanelBase
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BB37 RID: 47927 RVA: 0x002A62A3 File Offset: 0x002A44A3
+	// Token: 0x06008F21 RID: 36641 RVA: 0x002B0A03 File Offset: 0x002AEC03
 	private void OnClickHelpButton()
 	{
 		Action helpBtnCallback = this.HelpBtnCallback;
@@ -71,21 +71,21 @@ public class ItemTipsLockState : UiPanelBase
 		helpBtnCallback();
 	}
 
-	// Token: 0x040054FF RID: 21759
+	// Token: 0x040055AA RID: 21930
 	public Action HelpBtnCallback;
 
-	// Token: 0x04005500 RID: 21760
+	// Token: 0x040055AB RID: 21931
 	public IItemTipsLockStateData PanelData;
 
-	// Token: 0x02007E68 RID: 32360
+	// Token: 0x02006FEF RID: 28655
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x040295C1 RID: 169409
+		// Token: 0x040248ED RID: 149741
 		SpriteLockIcon,
-		// Token: 0x040295C2 RID: 169410
+		// Token: 0x040248EE RID: 149742
 		TxtTipsDesc,
-		// Token: 0x040295C3 RID: 169411
+		// Token: 0x040248EF RID: 149743
 		BtnHelp
 	}
 }

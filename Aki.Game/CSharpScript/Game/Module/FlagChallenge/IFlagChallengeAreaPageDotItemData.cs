@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A47 RID: 23111
+	// Token: 0x02004A23 RID: 18979
 	public interface IFlagChallengeAreaPageDotItemData
 	{
-		// Token: 0x17008BF4 RID: 35828
-		// (get) Token: 0x0603A9D4 RID: 240084
-		// (set) Token: 0x0603A9D5 RID: 240085
+		// Token: 0x17005FC2 RID: 24514
+		// (get) Token: 0x0602F91D RID: 194845
+		// (set) Token: 0x0602F91E RID: 194846
 		bool IsHighlight { get; set; }
 	}
 }

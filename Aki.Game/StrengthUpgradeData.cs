@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200288B RID: 10379
+// Token: 0x02001E06 RID: 7686
 public class StrengthUpgradeData : IStrengthUpgradeData
 {
-	// Token: 0x17001CA7 RID: 7335
-	// (get) Token: 0x060155D1 RID: 87505 RVA: 0x00563518 File Offset: 0x00561718
-	// (set) Token: 0x060155D2 RID: 87506 RVA: 0x00563520 File Offset: 0x00561720
+	// Token: 0x17001CFF RID: 7423
+	// (get) Token: 0x06012FCF RID: 77775 RVA: 0x0058E274 File Offset: 0x0058C474
+	// (set) Token: 0x06012FD0 RID: 77776 RVA: 0x0058E27C File Offset: 0x0058C47C
 	public EFormationAttributeId AttributeId { get; set; }
 
-	// Token: 0x17001CA8 RID: 7336
-	// (get) Token: 0x060155D3 RID: 87507 RVA: 0x00563529 File Offset: 0x00561729
-	// (set) Token: 0x060155D4 RID: 87508 RVA: 0x00563531 File Offset: 0x00561731
+	// Token: 0x17001D00 RID: 7424
+	// (get) Token: 0x06012FD1 RID: 77777 RVA: 0x0058E285 File Offset: 0x0058C485
+	// (set) Token: 0x06012FD2 RID: 77778 RVA: 0x0058E28D File Offset: 0x0058C48D
 	public int SingleStrengthValue { get; set; }
 
-	// Token: 0x17001CA9 RID: 7337
-	// (get) Token: 0x060155D5 RID: 87509 RVA: 0x0056353A File Offset: 0x0056173A
-	// (set) Token: 0x060155D6 RID: 87510 RVA: 0x00563542 File Offset: 0x00561742
+	// Token: 0x17001D01 RID: 7425
+	// (get) Token: 0x06012FD3 RID: 77779 RVA: 0x0058E296 File Offset: 0x0058C496
+	// (set) Token: 0x06012FD4 RID: 77780 RVA: 0x0058E29E File Offset: 0x0058C49E
 	public int MaxSingleStrengthItemCount { get; set; }
 
-	// Token: 0x17001CAA RID: 7338
-	// (get) Token: 0x060155D7 RID: 87511 RVA: 0x0056354B File Offset: 0x0056174B
-	// (set) Token: 0x060155D8 RID: 87512 RVA: 0x00563553 File Offset: 0x00561753
+	// Token: 0x17001D02 RID: 7426
+	// (get) Token: 0x06012FD5 RID: 77781 RVA: 0x0058E2A7 File Offset: 0x0058C4A7
+	// (set) Token: 0x06012FD6 RID: 77782 RVA: 0x0058E2AF File Offset: 0x0058C4AF
 	public int MaxStrength { get; set; }
 }

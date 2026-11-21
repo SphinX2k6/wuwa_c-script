@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002311 RID: 8977
+	// Token: 0x02002580 RID: 9600
 	public static class EEditFlagExtensions
 	{
-		// Token: 0x0600C44B RID: 50251 RVA: 0x001CA780 File Offset: 0x001C8980
+		// Token: 0x0600D01A RID: 53274 RVA: 0x001E2648 File Offset: 0x001E0848
 		public static string ToEnumString(this EEditFlag value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C44C RID: 50252 RVA: 0x001CA7C8 File Offset: 0x001C89C8
+		// Token: 0x0600D01B RID: 53275 RVA: 0x001E2690 File Offset: 0x001E0890
 		public static EEditFlag FromString(string name)
 		{
 			EEditFlag result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C44D RID: 50253 RVA: 0x001CA7F4 File Offset: 0x001C89F4
+		// Token: 0x0600D01C RID: 53276 RVA: 0x001E26BC File Offset: 0x001E08BC
 		public static bool TryFromString(string name, out EEditFlag value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C44E RID: 50254 RVA: 0x001CA84A File Offset: 0x001C8A4A
+		// Token: 0x0600D01D RID: 53277 RVA: 0x001E2712 File Offset: 0x001E0912
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C44F RID: 50255 RVA: 0x001CA86A File Offset: 0x001C8A6A
+		// Token: 0x0600D01E RID: 53278 RVA: 0x001E2732 File Offset: 0x001E0932
 		public static EEditFlag[] GetValues()
 		{
 			return new EEditFlag[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C450 RID: 50256 RVA: 0x001CA87A File Offset: 0x001C8A7A
+		// Token: 0x0600D01F RID: 53279 RVA: 0x001E2742 File Offset: 0x001E0942
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E49 RID: 24137
+	// Token: 0x02004E2E RID: 20014
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HeadStateWeaknessItem : UiPanelBase
 	{
-		// Token: 0x0603D621 RID: 251425 RVA: 0x00ECE73C File Offset: 0x00ECC93C
+		// Token: 0x060325B1 RID: 206257 RVA: 0x00E1FCAC File Offset: 0x00E1DEAC
 		[NullableContext(1)]
 		public UniTask InitializeAsync(USceneComponent parentItem, float scale = 1f)
 		{
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D622 RID: 251426 RVA: 0x00ECE78F File Offset: 0x00ECC98F
+		// Token: 0x060325B2 RID: 206258 RVA: 0x00E1FCFF File Offset: 0x00E1DEFF
 		public void DisableRecycleItem()
 		{
 			this.IsDisableRecycleItem = true;
 		}
 
-		// Token: 0x0603D623 RID: 251427 RVA: 0x00ECE798 File Offset: 0x00ECC998
+		// Token: 0x060325B3 RID: 206259 RVA: 0x00E1FD08 File Offset: 0x00E1DF08
 		protected override bool DestroyOverride()
 		{
 			if (this.RootActor != null)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603D624 RID: 251428 RVA: 0x00ECE7FC File Offset: 0x00ECC9FC
+		// Token: 0x060325B4 RID: 206260 RVA: 0x00E1FD6C File Offset: 0x00E1DF6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D625 RID: 251429 RVA: 0x00ECE970 File Offset: 0x00ECCB70
+		// Token: 0x060325B5 RID: 206261 RVA: 0x00E1FEE0 File Offset: 0x00E1E0E0
 		protected override void OnStart()
 		{
 			if (this.Scale != 1f)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BarCdSprite.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603D626 RID: 251430 RVA: 0x00ECEA68 File Offset: 0x00ECCC68
+		// Token: 0x060325B6 RID: 206262 RVA: 0x00E1FFD8 File Offset: 0x00E1E1D8
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603D627 RID: 251431 RVA: 0x00ECEA98 File Offset: 0x00ECCC98
+		// Token: 0x060325B7 RID: 206263 RVA: 0x00E20008 File Offset: 0x00E1E208
 		protected override UniTask OnBeforeHideAsync()
 		{
 			HeadStateWeaknessItem.<OnBeforeHideAsync>d__48 <OnBeforeHideAsync>d__;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D628 RID: 251432 RVA: 0x00ECEADB File Offset: 0x00ECCCDB
+		// Token: 0x060325B8 RID: 206264 RVA: 0x00E2004B File Offset: 0x00E1E24B
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveBreakAnimTimer();
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603D629 RID: 251433 RVA: 0x00ECEAF0 File Offset: 0x00ECCCF0
+		// Token: 0x060325B9 RID: 206265 RVA: 0x00E20060 File Offset: 0x00E1E260
 		private void OnRoleSpecialStateChanged(ERoleSpecialState state, bool enable)
 		{
 			if (state == ERoleSpecialState.ForbidWeakness)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D62A RID: 251434 RVA: 0x00ECEB04 File Offset: 0x00ECCD04
+		// Token: 0x060325BA RID: 206266 RVA: 0x00E20074 File Offset: 0x00E1E274
 		public void Refresh(Entity entity)
 		{
 			int num = (entity != null) ? entity.Id : 0;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshVisible();
 		}
 
-		// Token: 0x0603D62B RID: 251435 RVA: 0x00ECED18 File Offset: 0x00ECCF18
+		// Token: 0x060325BB RID: 206267 RVA: 0x00E20288 File Offset: 0x00E1E488
 		private void AddEntityEvent()
 		{
 			if (this.AttributeComponent != null)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ListenForTagAddOrRemove(HeadStateWeaknessItem.ForbidTag, new BaseTagComponent.TTagSwitchedCallback(this.OnForbidTagChanged));
 		}
 
-		// Token: 0x0603D62C RID: 251436 RVA: 0x00ECEDF4 File Offset: 0x00ECCFF4
+		// Token: 0x060325BC RID: 206268 RVA: 0x00E20364 File Offset: 0x00E1E564
 		private void RemoveEntityEvent()
 		{
 			if (this.AttributeComponent != null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagTaskList.Clear();
 		}
 
-		// Token: 0x0603D62D RID: 251437 RVA: 0x00ECEE94 File Offset: 0x00ECD094
+		// Token: 0x060325BD RID: 206269 RVA: 0x00E20404 File Offset: 0x00E1E604
 		private void AddRoleSpecialStateListener()
 		{
 			if (this.IsRoleSpecialStateListening)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<ERoleSpecialState, bool>(EEventName.BattleUiRoleSpecialStateChanged, new Action<ERoleSpecialState, bool>(this.OnRoleSpecialStateChanged));
 		}
 
-		// Token: 0x0603D62E RID: 251438 RVA: 0x00ECEEC2 File Offset: 0x00ECD0C2
+		// Token: 0x060325BE RID: 206270 RVA: 0x00E20432 File Offset: 0x00E1E632
 		private void RemoveRoleSpecialStateListener()
 		{
 			if (!this.IsRoleSpecialStateListening)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.BattleUiRoleSpecialStateChanged, new Action<ERoleSpecialState, bool>(this.OnRoleSpecialStateChanged));
 		}
 
-		// Token: 0x0603D62F RID: 251439 RVA: 0x00ECEEF0 File Offset: 0x00ECD0F0
+		// Token: 0x060325BF RID: 206271 RVA: 0x00E20460 File Offset: 0x00E1E660
 		[NullableContext(1)]
 		private void ListenForTagAddOrRemove(int tagId, BaseTagComponent.TTagSwitchedCallback handle)
 		{
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D630 RID: 251440 RVA: 0x00ECEF27 File Offset: 0x00ECD127
+		// Token: 0x060325C0 RID: 206272 RVA: 0x00E20497 File Offset: 0x00E1E697
 		private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			if (attributeId == EAttributeType.WeaknessBuildUp)
@@ -298,21 +298,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshWeaknessState();
 		}
 
-		// Token: 0x0603D631 RID: 251441 RVA: 0x00ECEF55 File Offset: 0x00ECD155
+		// Token: 0x060325C1 RID: 206273 RVA: 0x00E204C5 File Offset: 0x00E1E6C5
 		private void OnLockTagChanged(int tagId, bool tagExist)
 		{
 			this.IsLock = tagExist;
 			this.RefreshWeaknessState();
 		}
 
-		// Token: 0x0603D632 RID: 251442 RVA: 0x00ECEF64 File Offset: 0x00ECD164
+		// Token: 0x060325C2 RID: 206274 RVA: 0x00E204D4 File Offset: 0x00E1E6D4
 		private void OnFullTagChanged(int tagId, bool tagExist)
 		{
 			this.IsFull = tagExist;
 			this.RefreshWeaknessState();
 		}
 
-		// Token: 0x0603D633 RID: 251443 RVA: 0x00ECEF73 File Offset: 0x00ECD173
+		// Token: 0x060325C3 RID: 206275 RVA: 0x00E204E3 File Offset: 0x00E1E6E3
 		private void OnBreakTagChanged(int tagId, bool tagExist)
 		{
 			if (this.Breaking != tagExist)
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D634 RID: 251444 RVA: 0x00ECEFA4 File Offset: 0x00ECD1A4
+		// Token: 0x060325C4 RID: 206276 RVA: 0x00E20514 File Offset: 0x00E1E714
 		private void OnCdTagChanged(int tagId, bool tagExist)
 		{
 			this.IsInCd = tagExist;
@@ -339,21 +339,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshWeaknessState();
 		}
 
-		// Token: 0x0603D635 RID: 251445 RVA: 0x00ECEFD4 File Offset: 0x00ECD1D4
+		// Token: 0x060325C5 RID: 206277 RVA: 0x00E20544 File Offset: 0x00E1E744
 		private void OnDeBuffTagChanged(int tagId, bool tagExist)
 		{
 			this.IsDeBuff = tagExist;
 			this.RefreshWeaknessState();
 		}
 
-		// Token: 0x0603D636 RID: 251446 RVA: 0x00ECEFE3 File Offset: 0x00ECD1E3
+		// Token: 0x060325C6 RID: 206278 RVA: 0x00E20553 File Offset: 0x00E1E753
 		private void OnForbidTagChanged(int tagId, bool tagExist)
 		{
 			this.HasPlayerForbidTag = tagExist;
 			this.RefreshWeaknessState();
 		}
 
-		// Token: 0x0603D637 RID: 251447 RVA: 0x00ECEFF4 File Offset: 0x00ECD1F4
+		// Token: 0x060325C7 RID: 206279 RVA: 0x00E20564 File Offset: 0x00E1E764
 		private void RefreshBarPercent()
 		{
 			float num = 0f;
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D638 RID: 251448 RVA: 0x00ECF070 File Offset: 0x00ECD270
+		// Token: 0x060325C8 RID: 206280 RVA: 0x00E205E0 File Offset: 0x00E1E7E0
 		private void RefreshWeaknessState()
 		{
 			HeadStateWeaknessItem.EState estate = HeadStateWeaknessItem.EState.None;
@@ -443,26 +443,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onWeaknessStateChanged();
 		}
 
-		// Token: 0x0603D639 RID: 251449 RVA: 0x00ECF26A File Offset: 0x00ECD46A
+		// Token: 0x060325C9 RID: 206281 RVA: 0x00E207DA File Offset: 0x00E1E9DA
 		public bool IsFullState(bool includeBreakAndFull = true)
 		{
 			return this.State == HeadStateWeaknessItem.EState.Full || (includeBreakAndFull && this.State == HeadStateWeaknessItem.EState.BreakAndFull);
 		}
 
-		// Token: 0x0603D63A RID: 251450 RVA: 0x00ECF286 File Offset: 0x00ECD486
+		// Token: 0x060325CA RID: 206282 RVA: 0x00E207F6 File Offset: 0x00E1E9F6
 		public bool IsInBreakAnim()
 		{
 			return this.InBreakAnim;
 		}
 
-		// Token: 0x0603D63B RID: 251451 RVA: 0x00ECF28E File Offset: 0x00ECD48E
+		// Token: 0x060325CB RID: 206283 RVA: 0x00E207FE File Offset: 0x00E1E9FE
 		[NullableContext(1)]
 		public void SetStateChangeCallback(Action onWeaknessStateChanged)
 		{
 			this.OnWeaknessStateChanged = onWeaknessStateChanged;
 		}
 
-		// Token: 0x0603D63C RID: 251452 RVA: 0x00ECF298 File Offset: 0x00ECD498
+		// Token: 0x060325CC RID: 206284 RVA: 0x00E20808 File Offset: 0x00E1EA08
 		private void RefreshCdBarPercent()
 		{
 			if (!this.IsInCd)
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D63D RID: 251453 RVA: 0x00ECF36C File Offset: 0x00ECD56C
+		// Token: 0x060325CD RID: 206285 RVA: 0x00E208DC File Offset: 0x00E1EADC
 		private void RefreshVisible()
 		{
 			bool flag = this.State > HeadStateWeaknessItem.EState.None;
@@ -513,13 +513,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Hide(null);
 		}
 
-		// Token: 0x0603D63E RID: 251454 RVA: 0x00ECF3AC File Offset: 0x00ECD5AC
+		// Token: 0x060325CE RID: 206286 RVA: 0x00E2091C File Offset: 0x00E1EB1C
 		public void Tick(float delta)
 		{
 			this.RefreshCdBarPercent();
 		}
 
-		// Token: 0x0603D63F RID: 251455 RVA: 0x00ECF3B4 File Offset: 0x00ECD5B4
+		// Token: 0x060325CF RID: 206287 RVA: 0x00E20924 File Offset: 0x00E1EB24
 		private void RefreshIcon()
 		{
 			bool uiactive = this.State == HeadStateWeaknessItem.EState.Break || this.State == HeadStateWeaknessItem.EState.DeBuff || this.State == HeadStateWeaknessItem.EState.BreakAndFull;
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(5).SetUIActive(this.State == HeadStateWeaknessItem.EState.Lock);
 		}
 
-		// Token: 0x0603D640 RID: 251456 RVA: 0x00ECF430 File Offset: 0x00ECD630
+		// Token: 0x060325D0 RID: 206288 RVA: 0x00E209A0 File Offset: 0x00E1EBA0
 		private void PlayBreakingAnim()
 		{
 			this.InBreakAnim = true;
@@ -547,7 +547,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onWeaknessStateChanged();
 		}
 
-		// Token: 0x0603D641 RID: 251457 RVA: 0x00ECF49D File Offset: 0x00ECD69D
+		// Token: 0x060325D1 RID: 206289 RVA: 0x00E20A0D File Offset: 0x00E1EC0D
 		private void OnBreakAnimEnd(float _)
 		{
 			this.InBreakAnim = false;
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onWeaknessStateChanged();
 		}
 
-		// Token: 0x0603D642 RID: 251458 RVA: 0x00ECF4BD File Offset: 0x00ECD6BD
+		// Token: 0x060325D2 RID: 206290 RVA: 0x00E20A2D File Offset: 0x00E1EC2D
 		private void RemoveBreakAnimTimer()
 		{
 			if (this.BreakAnimTimer != null)
@@ -571,17 +571,17 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0402006B RID: 131179
+		// Token: 0x0401AB32 RID: 109362
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StartStat = Stat.Create("HeadStateWeaknessItemStart", "", "");
 
-		// Token: 0x0402006C RID: 131180
+		// Token: 0x0401AB33 RID: 109363
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat RefreshStat = Stat.Create("HeadStateWeaknessItemRefresh", "", "");
 
-		// Token: 0x0402006D RID: 131181
+		// Token: 0x0401AB34 RID: 109364
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EMonsterMatchType, long> MonsterTypeToBuffIdMap = new Dictionary<EMonsterMatchType, long>
@@ -604,167 +604,167 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		};
 
-		// Token: 0x0402006E RID: 131182
+		// Token: 0x0401AB35 RID: 109365
 		private const long CD_BUFF_ID = 3199L;
 
-		// Token: 0x0402006F RID: 131183
+		// Token: 0x0401AB36 RID: 109366
 		[StaticVariableRuleIgnore]
 		private static readonly int LockTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.禁止进入弱点状态"];
 
-		// Token: 0x04020070 RID: 131184
+		// Token: 0x0401AB37 RID: 109367
 		[StaticVariableRuleIgnore]
 		private static readonly int FullTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.弱点状态"];
 
-		// Token: 0x04020071 RID: 131185
+		// Token: 0x0401AB38 RID: 109368
 		[StaticVariableRuleIgnore]
 		private static readonly int BreakTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.弱点击破.破弱持续"];
 
-		// Token: 0x04020072 RID: 131186
+		// Token: 0x0401AB39 RID: 109369
 		[StaticVariableRuleIgnore]
 		private static readonly int CdTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.状态标识.击破冷却"];
 
-		// Token: 0x04020073 RID: 131187
+		// Token: 0x0401AB3A RID: 109370
 		[StaticVariableRuleIgnore]
 		private static readonly int DeBuffTag = GameplayTagDefine.EGameplayTagId["角色.Common.弱点响应"];
 
-		// Token: 0x04020074 RID: 131188
+		// Token: 0x0401AB3B RID: 109371
 		[StaticVariableRuleIgnore]
 		private static readonly int ForbidTag = GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.新手教程.屏蔽弱点"];
 
-		// Token: 0x04020075 RID: 131189
+		// Token: 0x0401AB3C RID: 109372
 		private long CdBuffId;
 
-		// Token: 0x04020076 RID: 131190
+		// Token: 0x0401AB3D RID: 109373
 		private float Scale = 1f;
 
-		// Token: 0x04020077 RID: 131191
+		// Token: 0x0401AB3E RID: 109374
 		private Action OnWeaknessStateChanged;
 
-		// Token: 0x04020078 RID: 131192
+		// Token: 0x0401AB3F RID: 109375
 		private HeadStateWeaknessItem.EState State;
 
-		// Token: 0x04020079 RID: 131193
+		// Token: 0x0401AB40 RID: 109376
 		private int EntityId;
 
-		// Token: 0x0402007A RID: 131194
+		// Token: 0x0401AB41 RID: 109377
 		private BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0402007B RID: 131195
+		// Token: 0x0401AB42 RID: 109378
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x0402007C RID: 131196
+		// Token: 0x0401AB43 RID: 109379
 		private BaseBuffComponent BuffComponent;
 
-		// Token: 0x0402007D RID: 131197
+		// Token: 0x0401AB44 RID: 109380
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0402007E RID: 131198
+		// Token: 0x0401AB45 RID: 109381
 		private UUISprite BarSprite;
 
-		// Token: 0x0402007F RID: 131199
+		// Token: 0x0401AB46 RID: 109382
 		private UUISprite BarCdSprite;
 
-		// Token: 0x04020080 RID: 131200
+		// Token: 0x0401AB47 RID: 109383
 		private float CurPercent = -1f;
 
-		// Token: 0x04020081 RID: 131201
+		// Token: 0x0401AB48 RID: 109384
 		private float CurValue;
 
-		// Token: 0x04020082 RID: 131202
+		// Token: 0x0401AB49 RID: 109385
 		private float MaxValue;
 
-		// Token: 0x04020083 RID: 131203
+		// Token: 0x0401AB4A RID: 109386
 		private float CurCdPercent;
 
-		// Token: 0x04020084 RID: 131204
+		// Token: 0x0401AB4B RID: 109387
 		private bool IsLock;
 
-		// Token: 0x04020085 RID: 131205
+		// Token: 0x0401AB4C RID: 109388
 		private bool IsFull;
 
-		// Token: 0x04020086 RID: 131206
+		// Token: 0x0401AB4D RID: 109389
 		private bool IsInCd;
 
-		// Token: 0x04020087 RID: 131207
+		// Token: 0x0401AB4E RID: 109390
 		private bool IsDeBuff;
 
-		// Token: 0x04020088 RID: 131208
+		// Token: 0x0401AB4F RID: 109391
 		private IActiveBuff Buff;
 
-		// Token: 0x04020089 RID: 131209
+		// Token: 0x0401AB50 RID: 109392
 		private int BuffHandle;
 
-		// Token: 0x0402008A RID: 131210
+		// Token: 0x0401AB51 RID: 109393
 		private bool Breaking;
 
-		// Token: 0x0402008B RID: 131211
+		// Token: 0x0401AB52 RID: 109394
 		private bool HasForbidTag;
 
-		// Token: 0x0402008C RID: 131212
+		// Token: 0x0401AB53 RID: 109395
 		private bool HasPlayerForbidTag;
 
-		// Token: 0x0402008D RID: 131213
+		// Token: 0x0401AB54 RID: 109396
 		private bool TargetVisible;
 
-		// Token: 0x0402008E RID: 131214
+		// Token: 0x0401AB55 RID: 109397
 		[Nullable(1)]
 		private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-		// Token: 0x0402008F RID: 131215
+		// Token: 0x0401AB56 RID: 109398
 		private bool InBreakAnim;
 
-		// Token: 0x04020090 RID: 131216
+		// Token: 0x0401AB57 RID: 109399
 		private TimerHandle BreakAnimTimer;
 
-		// Token: 0x04020091 RID: 131217
+		// Token: 0x0401AB58 RID: 109400
 		private bool IsRoleSpecialStateListening;
 
-		// Token: 0x04020092 RID: 131218
+		// Token: 0x0401AB59 RID: 109401
 		private bool IsDisableRecycleItem;
 
-		// Token: 0x0200C1C9 RID: 49609
+		// Token: 0x0200ABD8 RID: 43992
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403A901 RID: 239873
+			// Token: 0x040352F3 RID: 217843
 			None,
-			// Token: 0x0403A902 RID: 239874
+			// Token: 0x040352F4 RID: 217844
 			Normal,
-			// Token: 0x0403A903 RID: 239875
+			// Token: 0x040352F5 RID: 217845
 			Full,
-			// Token: 0x0403A904 RID: 239876
+			// Token: 0x040352F6 RID: 217846
 			Break,
-			// Token: 0x0403A905 RID: 239877
+			// Token: 0x040352F7 RID: 217847
 			BreakAndFull,
-			// Token: 0x0403A906 RID: 239878
+			// Token: 0x040352F8 RID: 217848
 			Lock,
-			// Token: 0x0403A907 RID: 239879
+			// Token: 0x040352F9 RID: 217849
 			DeBuff
 		}
 
-		// Token: 0x0200C1CA RID: 49610
+		// Token: 0x0200ABD9 RID: 43993
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A909 RID: 239881
+			// Token: 0x040352FB RID: 217851
 			BarNode,
-			// Token: 0x0403A90A RID: 239882
+			// Token: 0x040352FC RID: 217852
 			BarSprite,
-			// Token: 0x0403A90B RID: 239883
+			// Token: 0x040352FD RID: 217853
 			IconNormal,
-			// Token: 0x0403A90C RID: 239884
+			// Token: 0x040352FE RID: 217854
 			IconBreak,
-			// Token: 0x0403A90D RID: 239885
+			// Token: 0x040352FF RID: 217855
 			BreakNode,
-			// Token: 0x0403A90E RID: 239886
+			// Token: 0x04035300 RID: 217856
 			LockNode,
-			// Token: 0x0403A90F RID: 239887
+			// Token: 0x04035301 RID: 217857
 			LockEffect,
-			// Token: 0x0403A910 RID: 239888
+			// Token: 0x04035302 RID: 217858
 			IconLock,
-			// Token: 0x0403A911 RID: 239889
+			// Token: 0x04035303 RID: 217859
 			CdNode,
-			// Token: 0x0403A912 RID: 239890
+			// Token: 0x04035304 RID: 217860
 			BarCdSprite
 		}
 	}

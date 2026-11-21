@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005907 RID: 22791
+	// Token: 0x020048E0 RID: 18656
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,8 +16,8 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrArchiveMenuItem : GridProxyAbstract<IInfrArchiveMenuItemData>
 	{
-		// Token: 0x17008AD8 RID: 35544
-		// (get) Token: 0x06039E08 RID: 237064 RVA: 0x00DBEFA2 File Offset: 0x00DBD1A2
+		// Token: 0x17005EA4 RID: 24228
+		// (get) Token: 0x0602ED2B RID: 191787 RVA: 0x00D0E23A File Offset: 0x00D0C43A
 		public InfrastructureDefine.EInfrArchiveTabType CardType
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E09 RID: 237065 RVA: 0x00DBEFB0 File Offset: 0x00DBD1B0
+		// Token: 0x0602ED2C RID: 191788 RVA: 0x00D0E248 File Offset: 0x00D0C448
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -47,26 +47,26 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E0A RID: 237066 RVA: 0x00DBF056 File Offset: 0x00DBD256
+		// Token: 0x0602ED2D RID: 191789 RVA: 0x00D0E2EE File Offset: 0x00D0C4EE
 		public override void Refresh(IInfrArchiveMenuItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			base.GetText(1).ShowTextNew(data.DesText);
 		}
 
-		// Token: 0x06039E0B RID: 237067 RVA: 0x00DBF071 File Offset: 0x00DBD271
+		// Token: 0x0602ED2E RID: 191790 RVA: 0x00D0E309 File Offset: 0x00D0C509
 		public void SetToggleClickCb(Action<int> callback)
 		{
 			this.SelectedCallBack = callback;
 		}
 
-		// Token: 0x06039E0C RID: 237068 RVA: 0x00DBF07A File Offset: 0x00DBD27A
+		// Token: 0x0602ED2F RID: 191791 RVA: 0x00D0E312 File Offset: 0x00D0C512
 		public void SetToggleSelected(EToggleState state)
 		{
 			base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x06039E0D RID: 237069 RVA: 0x00DBF08D File Offset: 0x00DBD28D
+		// Token: 0x0602ED30 RID: 191792 RVA: 0x00D0E325 File Offset: 0x00D0C525
 		private void ToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06039E0E RID: 237070 RVA: 0x00DBF0C0 File Offset: 0x00DBD2C0
+		// Token: 0x0602ED31 RID: 191793 RVA: 0x00D0E358 File Offset: 0x00D0C558
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -98,20 +98,20 @@ namespace CSharpScript.Game.Module.Infrastructure
 			};
 		}
 
-		// Token: 0x0401E307 RID: 123655
+		// Token: 0x04018DA4 RID: 101796
 		private IInfrArchiveMenuItemData Data;
 
-		// Token: 0x0401E308 RID: 123656
+		// Token: 0x04018DA5 RID: 101797
 		public Action<int> SelectedCallBack;
 
-		// Token: 0x0200BB6E RID: 47982
+		// Token: 0x0200A57E RID: 42366
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038933 RID: 231731
+			// Token: 0x0403331D RID: 209693
 			public const int ToggleItem = 0;
 
-			// Token: 0x04038934 RID: 231732
+			// Token: 0x0403331E RID: 209694
 			public const int TextTitle = 1;
 		}
 	}

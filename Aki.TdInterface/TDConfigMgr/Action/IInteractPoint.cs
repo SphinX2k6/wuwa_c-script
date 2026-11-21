@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B52 RID: 6994
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D01 RID: 7425
 	public class IInteractPoint
 	{
-		// Token: 0x060095BF RID: 38335 RVA: 0x0015A288 File Offset: 0x00158488
+		// Token: 0x06009DAB RID: 40363 RVA: 0x0016AFA4 File Offset: 0x001691A4
 		private IInteractPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060095C0 RID: 38336 RVA: 0x0015A2C0 File Offset: 0x001584C0
+		// Token: 0x06009DAC RID: 40364 RVA: 0x0016AFDC File Offset: 0x001691DC
 		public static IInteractPoint Create([Nullable(2)] IInteractPoint instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095C1 RID: 38337 RVA: 0x0015A2D3 File Offset: 0x001584D3
+		// Token: 0x06009DAD RID: 40365 RVA: 0x0016AFEF File Offset: 0x001691EF
 		public static IInteractPoint CreateFromSetValue([Nullable(2)] IInteractPoint_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095C2 RID: 38338 RVA: 0x0015A2E8 File Offset: 0x001584E8
+		// Token: 0x06009DAE RID: 40366 RVA: 0x0016B004 File Offset: 0x00169204
 		public IInteractPoint_SetValue ToSetValue()
 		{
 			return new IInteractPoint_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F3B RID: 12091
-		// (get) Token: 0x060095C3 RID: 38339 RVA: 0x0015A342 File Offset: 0x00158542
-		// (set) Token: 0x060095C4 RID: 38340 RVA: 0x0015A36D File Offset: 0x0015856D
+		// Token: 0x17003162 RID: 12642
+		// (get) Token: 0x06009DAF RID: 40367 RVA: 0x0016B05E File Offset: 0x0016925E
+		// (set) Token: 0x06009DB0 RID: 40368 RVA: 0x0016B089 File Offset: 0x00169289
 		public virtual int Tag
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F3C RID: 12092
-		// (get) Token: 0x060095C5 RID: 38341 RVA: 0x0015A37B File Offset: 0x0015857B
-		// (set) Token: 0x060095C6 RID: 38342 RVA: 0x0015A3A2 File Offset: 0x001585A2
+		// Token: 0x17003163 RID: 12643
+		// (get) Token: 0x06009DB1 RID: 40369 RVA: 0x0016B097 File Offset: 0x00169297
+		// (set) Token: 0x06009DB2 RID: 40370 RVA: 0x0016B0BE File Offset: 0x001692BE
 		public virtual List<IInteractEffect> InteractEffects
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F3D RID: 12093
-		// (get) Token: 0x060095C7 RID: 38343 RVA: 0x0015A3B0 File Offset: 0x001585B0
-		// (set) Token: 0x060095C8 RID: 38344 RVA: 0x0015A3DB File Offset: 0x001585DB
+		// Token: 0x17003164 RID: 12644
+		// (get) Token: 0x06009DB3 RID: 40371 RVA: 0x0016B0CC File Offset: 0x001692CC
+		// (set) Token: 0x06009DB4 RID: 40372 RVA: 0x0016B0F7 File Offset: 0x001692F7
 		public virtual bool IsValidPoint
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F3E RID: 12094
-		// (get) Token: 0x060095C9 RID: 38345 RVA: 0x0015A3EC File Offset: 0x001585EC
-		// (set) Token: 0x060095CA RID: 38346 RVA: 0x0015A426 File Offset: 0x00158626
+		// Token: 0x17003165 RID: 12645
+		// (get) Token: 0x06009DB5 RID: 40373 RVA: 0x0016B108 File Offset: 0x00169308
+		// (set) Token: 0x06009DB6 RID: 40374 RVA: 0x0016B142 File Offset: 0x00169342
 		public virtual float? ProtectTime
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F3F RID: 12095
-		// (get) Token: 0x060095CB RID: 38347 RVA: 0x0015A434 File Offset: 0x00158634
-		// (set) Token: 0x060095CC RID: 38348 RVA: 0x0015A46E File Offset: 0x0015866E
+		// Token: 0x17003166 RID: 12646
+		// (get) Token: 0x06009DB7 RID: 40375 RVA: 0x0016B150 File Offset: 0x00169350
+		// (set) Token: 0x06009DB8 RID: 40376 RVA: 0x0016B18A File Offset: 0x0016938A
 		public virtual bool? CancelRaycast
 		{
 			get
@@ -179,9 +177,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F40 RID: 12096
-		// (get) Token: 0x060095CD RID: 38349 RVA: 0x0015A47C File Offset: 0x0015867C
-		// (set) Token: 0x060095CE RID: 38350 RVA: 0x0015A4DD File Offset: 0x001586DD
+		// Token: 0x17003167 RID: 12647
+		// (get) Token: 0x06009DB9 RID: 40377 RVA: 0x0016B198 File Offset: 0x00169398
+		// (set) Token: 0x06009DBA RID: 40378 RVA: 0x0016B1F9 File Offset: 0x001693F9
 		[Nullable(2)]
 		public virtual IDragInteractPointInteraction InteractionConfig
 		{
@@ -212,18 +210,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BA2 RID: 23458
+		// Token: 0x04006041 RID: 24641
 		[Nullable(2)]
 		protected IInteractPoint FbInstance;
 
-		// Token: 0x04005BA3 RID: 23459
+		// Token: 0x04006042 RID: 24642
 		[Nullable(2)]
 		protected IInteractPoint_SetValue PocoInterface;
 
-		// Token: 0x04005BA4 RID: 23460
+		// Token: 0x04006043 RID: 24643
 		private IDragInteractPointInteraction _InteractionConfigCache;
 
-		// Token: 0x04005BA5 RID: 23461
+		// Token: 0x04006044 RID: 24644
 		private bool _InteractionConfigInited;
 	}
 }

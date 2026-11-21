@@ -6,29 +6,29 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000EFB RID: 3835
+	// Token: 0x0200024B RID: 587
 	[UnrealObjectPath("/Script/Engine.ObjectPool")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UObjectPool : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600CFC9 RID: 53193 RVA: 0x0012F0DC File Offset: 0x0012D2DC
+		// Token: 0x060032A5 RID: 12965 RVA: 0x000483C1 File Offset: 0x000465C1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UObjectPool._ClassPtr;
 		}
 
-		// Token: 0x0600CFCA RID: 53194 RVA: 0x0012F0E8 File Offset: 0x0012D2E8
+		// Token: 0x060032A6 RID: 12966 RVA: 0x000483D0 File Offset: 0x000465D0
 		public UObjectPool() : this(BuiltinUtils.AllocNativeUObject(UObjectPool.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600CFCB RID: 53195 RVA: 0x0012F110 File Offset: 0x0012D310
+		// Token: 0x060032A7 RID: 12967 RVA: 0x000483F8 File Offset: 0x000465F8
 		[NullableContext(1)]
 		public UObjectPool(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UObjectPool.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0600CFCC RID: 53196 RVA: 0x0012F144 File Offset: 0x0012D344
+		// Token: 0x060032A8 RID: 12968 RVA: 0x0004842C File Offset: 0x0004662C
 		[NullableContext(2)]
 		public unsafe static AActor SpawnActor(UObject WorldContext, [Nullable(new byte[]
 		{
@@ -41,18 +41,18 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UObjectPool.__SpawnActor_Internal((WorldContext != null) ? WorldContext.NativePtr : IntPtr.Zero, Class._NativePtr, ptr, CollisionHandlingOverride, (Owner != null) ? Owner.NativePtr : IntPtr.Zero, (Instigator != null) ? Instigator.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0600CFCD RID: 53197
+		// Token: 0x060032A9 RID: 12969
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Preload();
 
-		// Token: 0x0600CFCE RID: 53198 RVA: 0x0012F1B3 File Offset: 0x0012D3B3
+		// Token: 0x060032AA RID: 12970 RVA: 0x0004849B File Offset: 0x0004669B
 		[NullableContext(2)]
 		public static void DespawnActor(AActor Actor, bool DestroyImmediately = false)
 		{
 			UObjectPool.__DespawnActor_Internal((Actor != null) ? Actor.NativePtr : IntPtr.Zero, DestroyImmediately);
 		}
 
-		// Token: 0x0600CFCF RID: 53199 RVA: 0x0012F1CC File Offset: 0x0012D3CC
+		// Token: 0x060032AB RID: 12971 RVA: 0x000484B4 File Offset: 0x000466B4
 		[NullableContext(2)]
 		public unsafe static AActor D_SpawnActor(UObject WorldContext, [Nullable(new byte[]
 		{
@@ -65,37 +65,37 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UObjectPool.__D_SpawnActor_Internal((WorldContext != null) ? WorldContext.NativePtr : IntPtr.Zero, Class._NativePtr, ptr, CollisionHandlingOverride, (Owner != null) ? Owner.NativePtr : IntPtr.Zero, (Instigator != null) ? Instigator.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0600CFD0 RID: 53200
+		// Token: 0x060032AC RID: 12972
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SpawnActor_Internal(IntPtr WorldContext, IntPtr Class, in FTransform SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, IntPtr Owner, IntPtr Instigator);
 
-		// Token: 0x0600CFD1 RID: 53201
+		// Token: 0x060032AD RID: 12973
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DespawnActor_Internal(IntPtr Actor, bool DestroyImmediately);
 
-		// Token: 0x0600CFD2 RID: 53202
+		// Token: 0x060032AE RID: 12974
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __D_SpawnActor_Internal(IntPtr WorldContext, IntPtr Class, in FTransformDouble SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, IntPtr Owner, IntPtr Instigator);
 
-		// Token: 0x0600CFD3 RID: 53203 RVA: 0x0012F23B File Offset: 0x0012D43B
+		// Token: 0x060032AF RID: 12975 RVA: 0x00048523 File Offset: 0x00046723
 		static UObjectPool()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.ObjectPool");
 		}
 
-		// Token: 0x0600CFD4 RID: 53204 RVA: 0x0012F249 File Offset: 0x0012D449
+		// Token: 0x060032B0 RID: 12976 RVA: 0x00048531 File Offset: 0x00046731
 		protected UObjectPool(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04007005 RID: 28677
+		// Token: 0x040011AF RID: 4527
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.ObjectPool";
 
-		// Token: 0x04007006 RID: 28678
+		// Token: 0x040011B0 RID: 4528
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04007007 RID: 28679
+		// Token: 0x040011B1 RID: 4529
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

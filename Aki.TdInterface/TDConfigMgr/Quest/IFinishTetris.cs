@@ -7,13 +7,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F87 RID: 3975
+	// Token: 0x020010B1 RID: 4273
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFinishTetris : IQuestCondition
 	{
-		// Token: 0x06005886 RID: 22662 RVA: 0x000D8110 File Offset: 0x000D6310
-		[NullableContext(1)]
+		// Token: 0x06005E58 RID: 24152 RVA: 0x000E4B38 File Offset: 0x000E2D38
+		[NullableContext(0)]
 		private IFinishTetris_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005887 RID: 22663 RVA: 0x000D8148 File Offset: 0x000D6348
-		[NullableContext(1)]
+		// Token: 0x06005E59 RID: 24153 RVA: 0x000E4B70 File Offset: 0x000E2D70
+		[NullableContext(0)]
 		public static IFinishTetris Create([Nullable(2)] IFinishTetris instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005888 RID: 22664 RVA: 0x000D815B File Offset: 0x000D635B
-		[NullableContext(1)]
+		// Token: 0x06005E5A RID: 24154 RVA: 0x000E4B83 File Offset: 0x000E2D83
+		[NullableContext(0)]
 		public static IFinishTetris CreateFromSetValue([Nullable(2)] IFinishTetris_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005889 RID: 22665 RVA: 0x000D8170 File Offset: 0x000D6370
-		[NullableContext(1)]
+		// Token: 0x06005E5B RID: 24155 RVA: 0x000E4B98 File Offset: 0x000E2D98
+		[NullableContext(0)]
 		public new IFinishTetris_SetValue ToSetValue()
 		{
 			return new IFinishTetris_SetValue
@@ -76,9 +76,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D7A RID: 7546
-		// (get) Token: 0x0600588A RID: 22666 RVA: 0x000D8206 File Offset: 0x000D6406
-		// (set) Token: 0x0600588B RID: 22667 RVA: 0x000D8231 File Offset: 0x000D6431
+		// Token: 0x17001F1F RID: 7967
+		// (get) Token: 0x06005E5C RID: 24156 RVA: 0x000E4C2E File Offset: 0x000E2E2E
+		// (set) Token: 0x06005E5D RID: 24157 RVA: 0x000E4C59 File Offset: 0x000E2E59
 		public override EChildQuest Type
 		{
 			get
@@ -99,9 +99,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D7B RID: 7547
-		// (get) Token: 0x0600588C RID: 22668 RVA: 0x000D8240 File Offset: 0x000D6440
-		// (set) Token: 0x0600588D RID: 22669 RVA: 0x000D82A1 File Offset: 0x000D64A1
+		// Token: 0x17001F20 RID: 7968
+		// (get) Token: 0x06005E5E RID: 24158 RVA: 0x000E4C68 File Offset: 0x000E2E68
+		// (set) Token: 0x06005E5F RID: 24159 RVA: 0x000E4CC9 File Offset: 0x000E2EC9
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -129,9 +129,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D7C RID: 7548
-		// (get) Token: 0x0600588E RID: 22670 RVA: 0x000D82B6 File Offset: 0x000D64B6
-		// (set) Token: 0x0600588F RID: 22671 RVA: 0x000D82E1 File Offset: 0x000D64E1
+		// Token: 0x17001F21 RID: 7969
+		// (get) Token: 0x06005E60 RID: 24160 RVA: 0x000E4CDE File Offset: 0x000E2EDE
+		// (set) Token: 0x06005E61 RID: 24161 RVA: 0x000E4D09 File Offset: 0x000E2F09
 		public virtual int OriginPosEntityId
 		{
 			get
@@ -152,13 +152,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D7D RID: 7549
-		// (get) Token: 0x06005890 RID: 22672 RVA: 0x000D82EF File Offset: 0x000D64EF
-		// (set) Token: 0x06005891 RID: 22673 RVA: 0x000D8316 File Offset: 0x000D6516
-		[Nullable(1)]
+		// Token: 0x17001F22 RID: 7970
+		// (get) Token: 0x06005E62 RID: 24162 RVA: 0x000E4D17 File Offset: 0x000E2F17
+		// (set) Token: 0x06005E63 RID: 24163 RVA: 0x000E4D3E File Offset: 0x000E2F3E
+		[Nullable(0)]
 		public virtual ITetrisPlayModeBase PlayMode
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -172,16 +172,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.PlayMode;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().PlayMode = value;
 			}
 		}
 
-		// Token: 0x17001D7E RID: 7550
-		// (get) Token: 0x06005892 RID: 22674 RVA: 0x000D8324 File Offset: 0x000D6524
-		// (set) Token: 0x06005893 RID: 22675 RVA: 0x000D834F File Offset: 0x000D654F
+		// Token: 0x17001F23 RID: 7971
+		// (get) Token: 0x06005E64 RID: 24164 RVA: 0x000E4D4C File Offset: 0x000E2F4C
+		// (set) Token: 0x06005E65 RID: 24165 RVA: 0x000E4D77 File Offset: 0x000E2F77
 		public virtual ETetrisDirection Direction
 		{
 			get
@@ -202,9 +202,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D7F RID: 7551
-		// (get) Token: 0x06005894 RID: 22676 RVA: 0x000D8360 File Offset: 0x000D6560
-		// (set) Token: 0x06005895 RID: 22677 RVA: 0x000D839A File Offset: 0x000D659A
+		// Token: 0x17001F24 RID: 7972
+		// (get) Token: 0x06005E66 RID: 24166 RVA: 0x000E4D88 File Offset: 0x000E2F88
+		// (set) Token: 0x06005E67 RID: 24167 RVA: 0x000E4DC2 File Offset: 0x000E2FC2
 		public virtual float? PrepareTime
 		{
 			get
@@ -226,9 +226,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D80 RID: 7552
-		// (get) Token: 0x06005896 RID: 22678 RVA: 0x000D83A8 File Offset: 0x000D65A8
-		// (set) Token: 0x06005897 RID: 22679 RVA: 0x000D83E2 File Offset: 0x000D65E2
+		// Token: 0x17001F25 RID: 7973
+		// (get) Token: 0x06005E68 RID: 24168 RVA: 0x000E4DD0 File Offset: 0x000E2FD0
+		// (set) Token: 0x06005E69 RID: 24169 RVA: 0x000E4E0A File Offset: 0x000E300A
 		public virtual float? FallSpeed
 		{
 			get
@@ -250,9 +250,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D81 RID: 7553
-		// (get) Token: 0x06005898 RID: 22680 RVA: 0x000D83F0 File Offset: 0x000D65F0
-		// (set) Token: 0x06005899 RID: 22681 RVA: 0x000D8451 File Offset: 0x000D6651
+		// Token: 0x17001F26 RID: 7974
+		// (get) Token: 0x06005E6A RID: 24170 RVA: 0x000E4E18 File Offset: 0x000E3018
+		// (set) Token: 0x06005E6B RID: 24171 RVA: 0x000E4E79 File Offset: 0x000E3079
 		public virtual ITetrisIndexedBoard PresetBlocks
 		{
 			get
@@ -280,20 +280,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D82 RID: 7554
-		// (get) Token: 0x0600589A RID: 22682 RVA: 0x000D8466 File Offset: 0x000D6666
-		// (set) Token: 0x0600589B RID: 22683 RVA: 0x000D848D File Offset: 0x000D668D
+		// Token: 0x17001F27 RID: 7975
+		// (get) Token: 0x06005E6C RID: 24172 RVA: 0x000E4E8E File Offset: 0x000E308E
+		// (set) Token: 0x06005E6D RID: 24173 RVA: 0x000E4EB5 File Offset: 0x000E30B5
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> AvailableCombineBlocks
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -311,7 +311,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -319,9 +319,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D83 RID: 7555
-		// (get) Token: 0x0600589C RID: 22684 RVA: 0x000D849B File Offset: 0x000D669B
-		// (set) Token: 0x0600589D RID: 22685 RVA: 0x000D84C2 File Offset: 0x000D66C2
+		// Token: 0x17001F28 RID: 7976
+		// (get) Token: 0x06005E6E RID: 24174 RVA: 0x000E4EC3 File Offset: 0x000E30C3
+		// (set) Token: 0x06005E6F RID: 24175 RVA: 0x000E4EEA File Offset: 0x000E30EA
 		public virtual VarRef IsSuccessVar
 		{
 			get
@@ -343,9 +343,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D84 RID: 7556
-		// (get) Token: 0x0600589E RID: 22686 RVA: 0x000D84D0 File Offset: 0x000D66D0
-		// (set) Token: 0x0600589F RID: 22687 RVA: 0x000D84F7 File Offset: 0x000D66F7
+		// Token: 0x17001F29 RID: 7977
+		// (get) Token: 0x06005E70 RID: 24176 RVA: 0x000E4EF8 File Offset: 0x000E30F8
+		// (set) Token: 0x06005E71 RID: 24177 RVA: 0x000E4F1F File Offset: 0x000E311F
 		public virtual VarRef IsInitializedVar
 		{
 			get
@@ -367,24 +367,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400357F RID: 13695
+		// Token: 0x040038AF RID: 14511
 		protected new IFinishTetris FbInstance;
 
-		// Token: 0x04003580 RID: 13696
+		// Token: 0x040038B0 RID: 14512
 		protected new IFinishTetris_SetValue PocoInterface;
 
-		// Token: 0x04003581 RID: 13697
-		[Nullable(1)]
+		// Token: 0x040038B1 RID: 14513
+		[Nullable(0)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003582 RID: 13698
+		// Token: 0x040038B2 RID: 14514
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003583 RID: 13699
-		[Nullable(1)]
+		// Token: 0x040038B3 RID: 14515
+		[Nullable(0)]
 		private ITetrisIndexedBoard _PresetBlocksCache;
 
-		// Token: 0x04003584 RID: 13700
+		// Token: 0x040038B4 RID: 14516
 		private bool _PresetBlocksInited;
 	}
 }

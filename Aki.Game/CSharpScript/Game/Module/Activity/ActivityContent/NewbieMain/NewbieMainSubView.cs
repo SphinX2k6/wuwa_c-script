@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x02006388 RID: 25480
+	// Token: 0x02005306 RID: 21254
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NewbieMainSubView : ActivitySubViewBase
 	{
-		// Token: 0x06040122 RID: 262434 RVA: 0x00F80900 File Offset: 0x00F7EB00
+		// Token: 0x06034DE3 RID: 216547 RVA: 0x00EC7864 File Offset: 0x00EC5A64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040123 RID: 262435 RVA: 0x00F80A30 File Offset: 0x00F7EC30
+		// Token: 0x06034DE4 RID: 216548 RVA: 0x00EC7994 File Offset: 0x00EC5B94
 		protected override UniTask OnBeforeStartAsync()
 		{
 			NewbieMainSubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040124 RID: 262436 RVA: 0x00F80A73 File Offset: 0x00F7EC73
+		// Token: 0x06034DE5 RID: 216549 RVA: 0x00EC79D7 File Offset: 0x00EC5BD7
 		private NewbieMainRewardItem CreateRewardItem()
 		{
 			NewbieMainRewardItem newbieMainRewardItem = new NewbieMainRewardItem();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return newbieMainRewardItem;
 		}
 
-		// Token: 0x06040125 RID: 262437 RVA: 0x00F80A8C File Offset: 0x00F7EC8C
+		// Token: 0x06034DE6 RID: 216550 RVA: 0x00EC79F0 File Offset: 0x00EC5BF0
 		private NewbieMainTabItem CreateTabItem()
 		{
 			return new NewbieMainTabItem
@@ -77,21 +77,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			};
 		}
 
-		// Token: 0x06040126 RID: 262438 RVA: 0x00F80AA5 File Offset: 0x00F7ECA5
+		// Token: 0x06034DE7 RID: 216551 RVA: 0x00EC7A09 File Offset: 0x00EC5C09
 		protected override void OnAddEventListener()
 		{
 			base.OnAddEventListener();
 			EventSystem.Instance.Add(EEventName.OnNewbieMainTaskUpdate, new Action(this.OnNewbieMainTaskUpdateHandler));
 		}
 
-		// Token: 0x06040127 RID: 262439 RVA: 0x00F80AC9 File Offset: 0x00F7ECC9
+		// Token: 0x06034DE8 RID: 216552 RVA: 0x00EC7A2D File Offset: 0x00EC5C2D
 		protected override void OnRemoveEventListener()
 		{
 			base.OnRemoveEventListener();
 			EventSystem.Instance.Remove(EEventName.OnNewbieMainTaskUpdate, new Action(this.OnNewbieMainTaskUpdateHandler));
 		}
 
-		// Token: 0x06040128 RID: 262440 RVA: 0x00F80AED File Offset: 0x00F7ECED
+		// Token: 0x06034DE9 RID: 216553 RVA: 0x00EC7A51 File Offset: 0x00EC5C51
 		protected override void OnSequenceStart(string sequenceName)
 		{
 			if (sequenceName == "Start")
@@ -105,19 +105,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x06040129 RID: 262441 RVA: 0x00F80B0C File Offset: 0x00F7ED0C
+		// Token: 0x06034DEA RID: 216554 RVA: 0x00EC7A70 File Offset: 0x00EC5C70
 		private void OnNewbieMainTaskUpdateHandler()
 		{
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0604012A RID: 262442 RVA: 0x00F80B14 File Offset: 0x00F7ED14
+		// Token: 0x06034DEB RID: 216555 RVA: 0x00EC7A78 File Offset: 0x00EC5C78
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x0604012B RID: 262443 RVA: 0x00F80B1C File Offset: 0x00F7ED1C
+		// Token: 0x06034DEC RID: 216556 RVA: 0x00EC7A80 File Offset: 0x00EC5C80
 		protected override void OnRefreshView()
 		{
 			if (this.ActivityBaseData == null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.RefreshCompletedCount();
 		}
 
-		// Token: 0x0604012C RID: 262444 RVA: 0x00F80B58 File Offset: 0x00F7ED58
+		// Token: 0x06034DED RID: 216557 RVA: 0x00EC7ABC File Offset: 0x00EC5CBC
 		private void RefreshTitleText()
 		{
 			ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604012D RID: 262445 RVA: 0x00F80BAC File Offset: 0x00F7EDAC
+		// Token: 0x06034DEE RID: 216558 RVA: 0x00EC7B10 File Offset: 0x00EC5D10
 		private void RefreshActivityDescText()
 		{
 			ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604012E RID: 262446 RVA: 0x00F80C00 File Offset: 0x00F7EE00
+		// Token: 0x06034DEF RID: 216559 RVA: 0x00EC7B64 File Offset: 0x00EC5D64
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604012F RID: 262447 RVA: 0x00F80C3E File Offset: 0x00F7EE3E
+		// Token: 0x06034DF0 RID: 216560 RVA: 0x00EC7BA2 File Offset: 0x00EC5DA2
 		private void RefreshTabList()
 		{
 			GenericScrollViewNew<NewbieMainTabItem, NewbieMainTabItemData> tabScrollView = this.TabScrollView;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			tabScrollView.RefreshByData(this.TabDataList, null, false);
 		}
 
-		// Token: 0x06040130 RID: 262448 RVA: 0x00F80C58 File Offset: 0x00F7EE58
+		// Token: 0x06034DF1 RID: 216561 RVA: 0x00EC7BBC File Offset: 0x00EC5DBC
 		private List<NewbieMainTabItemData> BuildTabDisplayDataList()
 		{
 			if (this.ActivityBaseData == null)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return list;
 		}
 
-		// Token: 0x06040131 RID: 262449 RVA: 0x00F80D88 File Offset: 0x00F7EF88
+		// Token: 0x06034DF2 RID: 216562 RVA: 0x00EC7CEC File Offset: 0x00EC5EEC
 		private void UpdateTabDataList()
 		{
 			if (this.ActivityBaseData == null)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x06040132 RID: 262450 RVA: 0x00F80F14 File Offset: 0x00F7F114
+		// Token: 0x06034DF3 RID: 216563 RVA: 0x00EC7E78 File Offset: 0x00EC6078
 		private void UpdateRewardDataList()
 		{
 			if (this.ActivityBaseData == null)
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x06040133 RID: 262451 RVA: 0x00F81004 File Offset: 0x00F7F204
+		// Token: 0x06034DF4 RID: 216564 RVA: 0x00EC7F68 File Offset: 0x00EC6168
 		private void OnClickTabCard(NewbieMainTabItemData tabItemData)
 		{
 			if (tabItemData.TabConfig.Type == 1)
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x06040134 RID: 262452 RVA: 0x00F81034 File Offset: 0x00F7F234
+		// Token: 0x06034DF5 RID: 216565 RVA: 0x00EC7F98 File Offset: 0x00EC6198
 		private void HandleMainTabClick(NewbieMainTabItemData tabItemData)
 		{
 			if (tabItemData.State == ENewbieMainTabState.Finished)
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			UiManager.Instance.OpenView(EUiViewName.DirectTrainDetailView, directTrainSubActivityViewModel, null);
 		}
 
-		// Token: 0x06040135 RID: 262453 RVA: 0x00F810E4 File Offset: 0x00F7F2E4
+		// Token: 0x06034DF6 RID: 216566 RVA: 0x00EC8048 File Offset: 0x00EC6248
 		private void HandleRoleTabClick(NewbieMainTabItemData tabItemData)
 		{
 			if (tabItemData.State == ENewbieMainTabState.Finished)
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			UiManager.Instance.OpenView(EUiViewName.QuestView, firstShowRoleQuest.Id, null);
 		}
 
-		// Token: 0x06040136 RID: 262454 RVA: 0x00F8116C File Offset: 0x00F7F36C
+		// Token: 0x06034DF7 RID: 216567 RVA: 0x00EC80D0 File Offset: 0x00EC62D0
 		private List<NewbieMainRewardItemData> BuildScoreRewardDisplayDataList()
 		{
 			if (this.ActivityBaseData == null)
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return list;
 		}
 
-		// Token: 0x06040137 RID: 262455 RVA: 0x00F81290 File Offset: 0x00F7F490
+		// Token: 0x06034DF8 RID: 216568 RVA: 0x00EC81F4 File Offset: 0x00EC63F4
 		private TItem? GetDropPreviewReward(int dropId)
 		{
 			if (dropId <= 0)
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return new TItem?(dropPackagePreviewItemList[0]);
 		}
 
-		// Token: 0x06040138 RID: 262456 RVA: 0x00F812D8 File Offset: 0x00F7F4D8
+		// Token: 0x06034DF9 RID: 216569 RVA: 0x00EC823C File Offset: 0x00EC643C
 		private void RefreshRewardList()
 		{
 			if (this.RewardScrollView == null)
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.RewardScrollView.RefreshByData(this.RewardDataList, new Action(this.ScrollToFirstClaimableReward), false);
 		}
 
-		// Token: 0x06040139 RID: 262457 RVA: 0x00F81304 File Offset: 0x00F7F504
+		// Token: 0x06034DFA RID: 216570 RVA: 0x00EC8268 File Offset: 0x00EC6468
 		private void ScrollToFirstClaimableReward()
 		{
 			int num = -1;
@@ -452,7 +452,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0604013A RID: 262458 RVA: 0x00F81358 File Offset: 0x00F7F558
+		// Token: 0x06034DFB RID: 216571 RVA: 0x00EC82BC File Offset: 0x00EC64BC
 		private void GetRewardAsync(NewbieMainRewardItemData data)
 		{
 			if (this.ActivityBaseData == null)
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			{
 				if (data.PreviewReward != null)
 				{
-					ItemController.Instance.OpenItemTipsByItemId(data.PreviewReward.Value.ItemData.ItemId, true, null);
+					ItemController.Instance.OpenItemTipsByItemId(data.PreviewReward.Value.ItemData.ItemId, true, null, false);
 				}
 				return;
 			}
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			});
 		}
 
-		// Token: 0x0604013B RID: 262459 RVA: 0x00F81434 File Offset: 0x00F7F634
+		// Token: 0x06034DFC RID: 216572 RVA: 0x00EC8398 File Offset: 0x00EC6598
 		private void RefreshCompletedCount()
 		{
 			if (this.ActivityBaseData == null)
@@ -514,13 +514,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			text.SetText(progressScore.ToString(), true);
 		}
 
-		// Token: 0x0402163E RID: 136766
+		// Token: 0x0401BF6D RID: 114541
 		private List<NewbieMainTabItemData> TabDataList = new List<NewbieMainTabItemData>();
 
-		// Token: 0x0402163F RID: 136767
+		// Token: 0x0401BF6E RID: 114542
 		private List<NewbieMainRewardItemData> RewardDataList = new List<NewbieMainRewardItemData>();
 
-		// Token: 0x04021640 RID: 136768
+		// Token: 0x0401BF6F RID: 114543
 		[Nullable(new byte[]
 		{
 			2,
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 		})]
 		private GenericScrollViewNew<NewbieMainRewardItem, NewbieMainRewardItemData> RewardScrollView;
 
-		// Token: 0x04021641 RID: 136769
+		// Token: 0x0401BF70 RID: 114544
 		[Nullable(new byte[]
 		{
 			2,
@@ -538,32 +538,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 		})]
 		private GenericScrollViewNew<NewbieMainTabItem, NewbieMainTabItemData> TabScrollView;
 
-		// Token: 0x0200C599 RID: 50585
+		// Token: 0x0200AF80 RID: 44928
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BA5F RID: 244319
+			// Token: 0x040363C1 RID: 222145
 			public const int TitleText = 0;
 
-			// Token: 0x0403BA60 RID: 244320
+			// Token: 0x040363C2 RID: 222146
 			public const int ActivityDescText = 1;
 
-			// Token: 0x0403BA61 RID: 244321
+			// Token: 0x040363C3 RID: 222147
 			public const int RewardCountText = 2;
 
-			// Token: 0x0403BA62 RID: 244322
+			// Token: 0x040363C4 RID: 222148
 			public const int RewardScrollView = 3;
 
-			// Token: 0x0403BA63 RID: 244323
+			// Token: 0x040363C5 RID: 222149
 			public const int RewardTemplateItem = 4;
 
-			// Token: 0x0403BA64 RID: 244324
+			// Token: 0x040363C6 RID: 222150
 			public const int TabScrollView = 5;
 
-			// Token: 0x0403BA65 RID: 244325
+			// Token: 0x040363C7 RID: 222151
 			public const int TabTemplateItem = 6;
 
-			// Token: 0x0403BA66 RID: 244326
+			// Token: 0x040363C8 RID: 222152
 			public const int TimeText = 7;
 		}
 	}

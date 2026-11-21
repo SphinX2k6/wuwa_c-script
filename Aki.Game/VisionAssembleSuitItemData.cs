@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200248F RID: 9359
+// Token: 0x02001976 RID: 6518
 public class VisionAssembleSuitItemData
 {
-	// Token: 0x06012C8C RID: 76940 RVA: 0x004A249C File Offset: 0x004A069C
+	// Token: 0x0601014D RID: 65869 RVA: 0x004AFF8C File Offset: 0x004AE18C
 	[NullableContext(1)]
 	public void Phrase(VisionFetterData data)
 	{
@@ -13,12 +13,12 @@ public class VisionAssembleSuitItemData
 		this.MaxProgress = data.NeedActiveNum;
 	}
 
-	// Token: 0x04008D70 RID: 36208
+	// Token: 0x04008EB9 RID: 36537
 	public int FetterGroupId;
 
-	// Token: 0x04008D71 RID: 36209
+	// Token: 0x04008EBA RID: 36538
 	public int CurrentProgress;
 
-	// Token: 0x04008D72 RID: 36210
+	// Token: 0x04008EBB RID: 36539
 	public int MaxProgress;
 }

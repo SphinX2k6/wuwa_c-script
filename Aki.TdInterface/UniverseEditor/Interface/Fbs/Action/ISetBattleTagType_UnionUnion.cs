@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FC7 RID: 28615
+	// Token: 0x02007790 RID: 30608
 	public class ISetBattleTagType_UnionUnion
 	{
-		// Token: 0x1700D473 RID: 54387
-		// (get) Token: 0x06032936 RID: 207158 RVA: 0x006D31FD File Offset: 0x006D13FD
-		// (set) Token: 0x06032937 RID: 207159 RVA: 0x006D3205 File Offset: 0x006D1405
+		// Token: 0x1700E047 RID: 57415
+		// (get) Token: 0x06035B9C RID: 220060 RVA: 0x00732E41 File Offset: 0x00731041
+		// (set) Token: 0x06035B9D RID: 220061 RVA: 0x00732E49 File Offset: 0x00731049
 		public ISetBattleTagType_Union Type { get; set; }
 
-		// Token: 0x1700D474 RID: 54388
-		// (get) Token: 0x06032938 RID: 207160 RVA: 0x006D320E File Offset: 0x006D140E
-		// (set) Token: 0x06032939 RID: 207161 RVA: 0x006D3216 File Offset: 0x006D1416
+		// Token: 0x1700E048 RID: 57416
+		// (get) Token: 0x06035B9E RID: 220062 RVA: 0x00732E52 File Offset: 0x00731052
+		// (set) Token: 0x06035B9F RID: 220063 RVA: 0x00732E5A File Offset: 0x0073105A
 		public object Value { get; set; }
 
-		// Token: 0x0603293A RID: 207162 RVA: 0x006D321F File Offset: 0x006D141F
+		// Token: 0x06035BA0 RID: 220064 RVA: 0x00732E63 File Offset: 0x00731063
 		public ISetBattleTagType_UnionUnion()
 		{
 			this.Type = ISetBattleTagType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603293B RID: 207163 RVA: 0x006D3235 File Offset: 0x006D1435
+		// Token: 0x06035BA1 RID: 220065 RVA: 0x00732E79 File Offset: 0x00731079
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603293C RID: 207164 RVA: 0x006D3247 File Offset: 0x006D1447
+		// Token: 0x06035BA2 RID: 220066 RVA: 0x00732E8B File Offset: 0x0073108B
 		public ISetBattleTagTypeT AsISetBattleTagType()
 		{
 			return this.As<ISetBattleTagTypeT>();
 		}
 
-		// Token: 0x0603293D RID: 207165 RVA: 0x006D324F File Offset: 0x006D144F
+		// Token: 0x06035BA3 RID: 220067 RVA: 0x00732E93 File Offset: 0x00731093
 		public static ISetBattleTagType_UnionUnion FromISetBattleTagType(ISetBattleTagTypeT _isetbattletagtype)
 		{
 			return new ISetBattleTagType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603293E RID: 207166 RVA: 0x006D3264 File Offset: 0x006D1464
+		// Token: 0x06035BA4 RID: 220068 RVA: 0x00732EA8 File Offset: 0x007310A8
 		public IBattleStateMonsterLandingT AsIBattleStateMonsterLanding()
 		{
 			return this.As<IBattleStateMonsterLandingT>();
 		}
 
-		// Token: 0x0603293F RID: 207167 RVA: 0x006D326C File Offset: 0x006D146C
+		// Token: 0x06035BA5 RID: 220069 RVA: 0x00732EB0 File Offset: 0x007310B0
 		public static ISetBattleTagType_UnionUnion FromIBattleStateMonsterLanding(IBattleStateMonsterLandingT _ibattlestatemonsterlanding)
 		{
 			return new ISetBattleTagType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032940 RID: 207168 RVA: 0x006D3281 File Offset: 0x006D1481
+		// Token: 0x06035BA6 RID: 220070 RVA: 0x00732EC5 File Offset: 0x007310C5
 		public IBattleStateFinalMonsterLandingT AsIBattleStateFinalMonsterLanding()
 		{
 			return this.As<IBattleStateFinalMonsterLandingT>();
 		}
 
-		// Token: 0x06032941 RID: 207169 RVA: 0x006D3289 File Offset: 0x006D1489
+		// Token: 0x06035BA7 RID: 220071 RVA: 0x00732ECD File Offset: 0x007310CD
 		public static ISetBattleTagType_UnionUnion FromIBattleStateFinalMonsterLanding(IBattleStateFinalMonsterLandingT _ibattlestatefinalmonsterlanding)
 		{
 			return new ISetBattleTagType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032942 RID: 207170 RVA: 0x006D329E File Offset: 0x006D149E
+		// Token: 0x06035BA8 RID: 220072 RVA: 0x00732EE2 File Offset: 0x007310E2
 		public IBattleStateMonsterSleepT AsIBattleStateMonsterSleep()
 		{
 			return this.As<IBattleStateMonsterSleepT>();
 		}
 
-		// Token: 0x06032943 RID: 207171 RVA: 0x006D32A6 File Offset: 0x006D14A6
+		// Token: 0x06035BA9 RID: 220073 RVA: 0x00732EEA File Offset: 0x007310EA
 		public static ISetBattleTagType_UnionUnion FromIBattleStateMonsterSleep(IBattleStateMonsterSleepT _ibattlestatemonstersleep)
 		{
 			return new ISetBattleTagType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032944 RID: 207172 RVA: 0x006D32BC File Offset: 0x006D14BC
+		// Token: 0x06035BAA RID: 220074 RVA: 0x00732F00 File Offset: 0x00731100
 		public static int Pack(FlatBufferBuilder builder, ISetBattleTagType_UnionUnion _o)
 		{
 			switch (_o.Type)

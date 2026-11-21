@@ -4,12 +4,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C94 RID: 23700
+	// Token: 0x02004C76 RID: 19574
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MergeHeadStateMonsterInfo
 	{
-		// Token: 0x0603BDAE RID: 245166 RVA: 0x00E4BB10 File Offset: 0x00E49D10
+		// Token: 0x06030D01 RID: 199937 RVA: 0x00D9C104 File Offset: 0x00D9A304
 		public bool AddListener()
 		{
 			if (this.FightTagListenTask != null || this.AttributeComponent != null)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BDAF RID: 245167 RVA: 0x00E4BC84 File Offset: 0x00E49E84
+		// Token: 0x06030D02 RID: 199938 RVA: 0x00D9C278 File Offset: 0x00D9A478
 		public void RemoveListener()
 		{
 			if (this.FightTagListenTask != null)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BDB0 RID: 245168 RVA: 0x00E4BCE7 File Offset: 0x00E49EE7
+		// Token: 0x06030D03 RID: 199939 RVA: 0x00D9C2DB File Offset: 0x00D9A4DB
 		private void OnFightTagChanged(int tagId, bool bTagExists)
 		{
 			if (this.HasFightTag == bTagExists)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.MergeHeadStateData.OnMonsterFightTagChange(this.Id, bTagExists);
 		}
 
-		// Token: 0x0603BDB1 RID: 245169 RVA: 0x00E4BD10 File Offset: 0x00E49F10
+		// Token: 0x06030D04 RID: 199940 RVA: 0x00D9C304 File Offset: 0x00D9A504
 		private void OnHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			float hp = this.Hp;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.MergeHeadStateData.OnMonsterHealthChange(this.Id, hpChange);
 		}
 
-		// Token: 0x0603BDB2 RID: 245170 RVA: 0x00E4BD68 File Offset: 0x00E49F68
+		// Token: 0x06030D05 RID: 199941 RVA: 0x00D9C35C File Offset: 0x00D9A55C
 		private void OnHealthMaxChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			float hpMax = this.HpMax;
@@ -112,34 +112,34 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.MergeHeadStateData.OnMonsterHealthChange(this.Id, hpChange);
 		}
 
-		// Token: 0x0401F35A RID: 127834
+		// Token: 0x04019E13 RID: 106003
 		public int Id;
 
-		// Token: 0x0401F35B RID: 127835
+		// Token: 0x04019E14 RID: 106004
 		public int PbDataId;
 
-		// Token: 0x0401F35C RID: 127836
+		// Token: 0x04019E15 RID: 106005
 		public EntityHandle EntityHandle;
 
-		// Token: 0x0401F35D RID: 127837
+		// Token: 0x04019E16 RID: 106006
 		public bool IsDead;
 
-		// Token: 0x0401F35E RID: 127838
+		// Token: 0x04019E17 RID: 106007
 		public float BaseLife;
 
-		// Token: 0x0401F35F RID: 127839
+		// Token: 0x04019E18 RID: 106008
 		public BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401F360 RID: 127840
+		// Token: 0x04019E19 RID: 106009
 		public ITagTask FightTagListenTask;
 
-		// Token: 0x0401F361 RID: 127841
+		// Token: 0x04019E1A RID: 106010
 		public bool HasFightTag;
 
-		// Token: 0x0401F362 RID: 127842
+		// Token: 0x04019E1B RID: 106011
 		public float Hp;
 
-		// Token: 0x0401F363 RID: 127843
+		// Token: 0x04019E1C RID: 106012
 		public float HpMax;
 	}
 }

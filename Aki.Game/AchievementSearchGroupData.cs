@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F16 RID: 3862
+// Token: 0x020003CB RID: 971
 public class AchievementSearchGroupData
 {
-	// Token: 0x04002C5A RID: 11354
+	// Token: 0x04002CF3 RID: 11507
 	[Nullable(2)]
 	public AchievementGroupData AchievementGroupData;
 
-	// Token: 0x04002C5B RID: 11355
+	// Token: 0x04002CF4 RID: 11508
 	public int AchievementDataLength;
 }

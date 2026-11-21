@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EF0 RID: 20208
+	// Token: 0x02003EB9 RID: 16057
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleMapSummaryTeamTabView : UiTabViewBase
 	{
-		// Token: 0x06033D89 RID: 212361 RVA: 0x00C250CA File Offset: 0x00C232CA
+		// Token: 0x06028BF4 RID: 166900 RVA: 0x00B6E672 File Offset: 0x00B6C872
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,27 +23,27 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D8A RID: 212362 RVA: 0x00C25103 File Offset: 0x00C23303
+		// Token: 0x06028BF5 RID: 166901 RVA: 0x00B6E6AB File Offset: 0x00B6C8AB
 		protected override void AddEventListener()
 		{
 			this.Attribute.BindEvent();
 			this.RoleList.BindEvent();
 		}
 
-		// Token: 0x06033D8B RID: 212363 RVA: 0x00C2511B File Offset: 0x00C2331B
+		// Token: 0x06028BF6 RID: 166902 RVA: 0x00B6E6C3 File Offset: 0x00B6C8C3
 		protected override void RemoveEventListener()
 		{
 			this.Attribute.UnbindEvent();
 			this.RoleList.UnbindEvent();
 		}
 
-		// Token: 0x06033D8C RID: 212364 RVA: 0x00C25134 File Offset: 0x00C23334
+		// Token: 0x06028BF7 RID: 166903 RVA: 0x00B6E6DC File Offset: 0x00B6C8DC
 		protected override void OnAfterShow()
 		{
 			this.UiViewSequence.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x06033D8D RID: 212365 RVA: 0x00C2515C File Offset: 0x00C2335C
+		// Token: 0x06028BF8 RID: 166904 RVA: 0x00B6E704 File Offset: 0x00B6C904
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleMapSummaryTeamTabView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,17 +54,17 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033D8E RID: 212366 RVA: 0x00C2519F File Offset: 0x00C2339F
+		// Token: 0x06028BF9 RID: 166905 RVA: 0x00B6E747 File Offset: 0x00B6C947
 		protected override void OnBeforeDestroy()
 		{
 			this.Attribute = null;
 			this.RoleList = null;
 		}
 
-		// Token: 0x0401B8BB RID: 112827
+		// Token: 0x0401628E RID: 90766
 		private RogueBattleMapRoleAttributeItem Attribute;
 
-		// Token: 0x0401B8BC RID: 112828
+		// Token: 0x0401628F RID: 90767
 		private RogueBattleMapRoleListPanel RoleList;
 	}
 }

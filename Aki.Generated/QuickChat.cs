@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F80 RID: 3968
+	// Token: 0x02001067 RID: 4199
 	public struct QuickChat : IFlatbufferObject
 	{
-		// Token: 0x17002C51 RID: 11345
-		// (get) Token: 0x0600B74E RID: 46926 RVA: 0x002D3699 File Offset: 0x002D1899
+		// Token: 0x17002CC9 RID: 11465
+		// (get) Token: 0x0600BD8B RID: 48523 RVA: 0x002F00FE File Offset: 0x002EE2FE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B74F RID: 46927 RVA: 0x002D36A6 File Offset: 0x002D18A6
+		// Token: 0x0600BD8C RID: 48524 RVA: 0x002F010B File Offset: 0x002EE30B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B750 RID: 46928 RVA: 0x002D36B0 File Offset: 0x002D18B0
+		// Token: 0x0600BD8D RID: 48525 RVA: 0x002F0114 File Offset: 0x002EE314
 		public static QuickChat GetRootAsQuickChat(ByteBuffer _bb)
 		{
 			return QuickChat.GetRootAsQuickChat(_bb, default(QuickChat));
 		}
 
-		// Token: 0x0600B751 RID: 46929 RVA: 0x002D36CC File Offset: 0x002D18CC
+		// Token: 0x0600BD8E RID: 48526 RVA: 0x002F0130 File Offset: 0x002EE330
 		public static QuickChat GetRootAsQuickChat(ByteBuffer _bb, QuickChat obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B752 RID: 46930 RVA: 0x002D36E9 File Offset: 0x002D18E9
+		// Token: 0x0600BD8F RID: 48527 RVA: 0x002F014D File Offset: 0x002EE34D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B753 RID: 46931 RVA: 0x002D36F8 File Offset: 0x002D18F8
+		// Token: 0x0600BD90 RID: 48528 RVA: 0x002F015C File Offset: 0x002EE35C
 		public QuickChat __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002C52 RID: 11346
-		// (get) Token: 0x0600B754 RID: 46932 RVA: 0x002D3708 File Offset: 0x002D1908
+		// Token: 0x17002CCA RID: 11466
+		// (get) Token: 0x0600BD91 RID: 48529 RVA: 0x002F016C File Offset: 0x002EE36C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C53 RID: 11347
-		// (get) Token: 0x0600B755 RID: 46933 RVA: 0x002D3744 File Offset: 0x002D1944
+		// Token: 0x17002CCB RID: 11467
+		// (get) Token: 0x0600BD92 RID: 48530 RVA: 0x002F01A8 File Offset: 0x002EE3A8
 		public string QuickChatContent
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B756 RID: 46934 RVA: 0x002D377B File Offset: 0x002D197B
+		// Token: 0x0600BD93 RID: 48531 RVA: 0x002F01DF File Offset: 0x002EE3DF
 		public Span<byte> GetQuickChatContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600B757 RID: 46935 RVA: 0x002D378A File Offset: 0x002D198A
+		// Token: 0x0600BD94 RID: 48532 RVA: 0x002F01EE File Offset: 0x002EE3EE
 		public byte[] GetQuickChatContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400504E RID: 20558
+		// Token: 0x04005635 RID: 22069
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BA5 RID: 2981
+	// Token: 0x02000C87 RID: 3207
 	public struct CoopSpReward : IFlatbufferObject
 	{
-		// Token: 0x170009A2 RID: 2466
-		// (get) Token: 0x06005A08 RID: 23048 RVA: 0x0020115D File Offset: 0x001FF35D
+		// Token: 0x170009E8 RID: 2536
+		// (get) Token: 0x06005FE1 RID: 24545 RVA: 0x00220EA1 File Offset: 0x0021F0A1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005A09 RID: 23049 RVA: 0x0020116A File Offset: 0x001FF36A
+		// Token: 0x06005FE2 RID: 24546 RVA: 0x00220EAE File Offset: 0x0021F0AE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005A0A RID: 23050 RVA: 0x00201174 File Offset: 0x001FF374
+		// Token: 0x06005FE3 RID: 24547 RVA: 0x00220EB8 File Offset: 0x0021F0B8
 		public static CoopSpReward GetRootAsCoopSpReward(ByteBuffer _bb)
 		{
 			return CoopSpReward.GetRootAsCoopSpReward(_bb, default(CoopSpReward));
 		}
 
-		// Token: 0x06005A0B RID: 23051 RVA: 0x00201190 File Offset: 0x001FF390
+		// Token: 0x06005FE4 RID: 24548 RVA: 0x00220ED4 File Offset: 0x0021F0D4
 		public static CoopSpReward GetRootAsCoopSpReward(ByteBuffer _bb, CoopSpReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005A0C RID: 23052 RVA: 0x002011AD File Offset: 0x001FF3AD
+		// Token: 0x06005FE5 RID: 24549 RVA: 0x00220EF1 File Offset: 0x0021F0F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005A0D RID: 23053 RVA: 0x002011BC File Offset: 0x001FF3BC
+		// Token: 0x06005FE6 RID: 24550 RVA: 0x00220F00 File Offset: 0x0021F100
 		public CoopSpReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170009A3 RID: 2467
-		// (get) Token: 0x06005A0E RID: 23054 RVA: 0x002011CC File Offset: 0x001FF3CC
+		// Token: 0x170009E9 RID: 2537
+		// (get) Token: 0x06005FE7 RID: 24551 RVA: 0x00220F10 File Offset: 0x0021F110
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170009A4 RID: 2468
-		// (get) Token: 0x06005A0F RID: 23055 RVA: 0x00201208 File Offset: 0x001FF408
+		// Token: 0x170009EA RID: 2538
+		// (get) Token: 0x06005FE8 RID: 24552 RVA: 0x00220F4C File Offset: 0x0021F14C
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170009A5 RID: 2469
-		// (get) Token: 0x06005A10 RID: 23056 RVA: 0x00201244 File Offset: 0x001FF444
+		// Token: 0x170009EB RID: 2539
+		// (get) Token: 0x06005FE9 RID: 24553 RVA: 0x00220F88 File Offset: 0x0021F188
 		public int Reward
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170009A6 RID: 2470
-		// (get) Token: 0x06005A11 RID: 23057 RVA: 0x00201280 File Offset: 0x001FF480
+		// Token: 0x170009EC RID: 2540
+		// (get) Token: 0x06005FEA RID: 24554 RVA: 0x00220FC4 File Offset: 0x0021F1C4
 		public string ShowText
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005A12 RID: 23058 RVA: 0x002012B8 File Offset: 0x001FF4B8
+		// Token: 0x06005FEB RID: 24555 RVA: 0x00220FFC File Offset: 0x0021F1FC
 		public Span<byte> GetShowTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06005A13 RID: 23059 RVA: 0x002012C8 File Offset: 0x001FF4C8
+		// Token: 0x06005FEC RID: 24556 RVA: 0x0022100C File Offset: 0x0021F20C
 		public byte[] GetShowTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170009A7 RID: 2471
-		// (get) Token: 0x06005A14 RID: 23060 RVA: 0x002012E0 File Offset: 0x001FF4E0
+		// Token: 0x170009ED RID: 2541
+		// (get) Token: 0x06005FED RID: 24557 RVA: 0x00221024 File Offset: 0x0021F224
 		public int RoleLevelSum
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BC8 RID: 19400
+		// Token: 0x040051AA RID: 20906
 		private Table __p;
 	}
 }

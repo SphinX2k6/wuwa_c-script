@@ -6,10 +6,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002821 RID: 10273
+// Token: 0x02001D9C RID: 7580
 public class RoleDevSkillSlotItem : UiPanelBase
 {
-	// Token: 0x0601522B RID: 86571 RVA: 0x00558C08 File Offset: 0x00556E08
+	// Token: 0x06012C29 RID: 76841 RVA: 0x0058391C File Offset: 0x00581B1C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class RoleDevSkillSlotItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601522C RID: 86572 RVA: 0x00558C9C File Offset: 0x00556E9C
+	// Token: 0x06012C2A RID: 76842 RVA: 0x005839B0 File Offset: 0x00581BB0
 	[NullableContext(2)]
 	public void Refresh(ISkillSlotExtendData data)
 	{
@@ -51,7 +51,7 @@ public class RoleDevSkillSlotItem : UiPanelBase
 		button.SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x0601522D RID: 86573 RVA: 0x00558D38 File Offset: 0x00556F38
+	// Token: 0x06012C2B RID: 76843 RVA: 0x00583A4C File Offset: 0x00581C4C
 	private void RefreshSkillIcon()
 	{
 		if (this.IsForecastRole)
@@ -87,7 +87,7 @@ public class RoleDevSkillSlotItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601522E RID: 86574 RVA: 0x00558DE8 File Offset: 0x00556FE8
+	// Token: 0x06012C2C RID: 76844 RVA: 0x00583AFC File Offset: 0x00581CFC
 	private void RefreshSkillLevel()
 	{
 		UUIText text = base.GetText(2);
@@ -150,7 +150,7 @@ public class RoleDevSkillSlotItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601522F RID: 86575 RVA: 0x00558F50 File Offset: 0x00557150
+	// Token: 0x06012C2D RID: 76845 RVA: 0x00583C64 File Offset: 0x00581E64
 	private void RefreshLockState()
 	{
 		bool isForecastRole = this.IsForecastRole;
@@ -173,20 +173,20 @@ public class RoleDevSkillSlotItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015230 RID: 86576 RVA: 0x00558FCB File Offset: 0x005571CB
+	// Token: 0x06012C2E RID: 76846 RVA: 0x00583CDF File Offset: 0x00581EDF
 	public void SetIsPerfectPlan(bool isPerfectPlan)
 	{
 		this.IsPerfectPlan = isPerfectPlan;
 	}
 
-	// Token: 0x06015231 RID: 86577 RVA: 0x00558FD4 File Offset: 0x005571D4
+	// Token: 0x06012C2F RID: 76847 RVA: 0x00583CE8 File Offset: 0x00581EE8
 	[NullableContext(1)]
 	public void SetClickCallback(Action callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x06015232 RID: 86578 RVA: 0x00558FDD File Offset: 0x005571DD
+	// Token: 0x06012C30 RID: 76848 RVA: 0x00583CF1 File Offset: 0x00581EF1
 	private void OnSkillSlotClick()
 	{
 		Action clickCallback = this.ClickCallback;
@@ -197,41 +197,41 @@ public class RoleDevSkillSlotItem : UiPanelBase
 		clickCallback();
 	}
 
-	// Token: 0x04009E59 RID: 40537
+	// Token: 0x0400A242 RID: 41538
 	private int RoleId;
 
-	// Token: 0x04009E5A RID: 40538
+	// Token: 0x0400A243 RID: 41539
 	private int SkillNodeId;
 
-	// Token: 0x04009E5B RID: 40539
+	// Token: 0x0400A244 RID: 41540
 	private int CurrentLevel;
 
-	// Token: 0x04009E5C RID: 40540
+	// Token: 0x0400A245 RID: 41541
 	private int NormalTargetLevel;
 
-	// Token: 0x04009E5D RID: 40541
+	// Token: 0x0400A246 RID: 41542
 	private int PerfectTargetLevel;
 
-	// Token: 0x04009E5E RID: 40542
+	// Token: 0x0400A247 RID: 41543
 	private bool IsPerfectPlan;
 
-	// Token: 0x04009E5F RID: 40543
+	// Token: 0x0400A248 RID: 41544
 	private bool IsForecastRole;
 
-	// Token: 0x04009E60 RID: 40544
+	// Token: 0x0400A249 RID: 41545
 	[Nullable(2)]
 	private Action ClickCallback;
 
-	// Token: 0x02008E64 RID: 36452
+	// Token: 0x020080AC RID: 32940
 	private enum EComponent
 	{
-		// Token: 0x0402E2EC RID: 189164
+		// Token: 0x040299E8 RID: 170472
 		SpriteSkill,
-		// Token: 0x0402E2ED RID: 189165
+		// Token: 0x040299E9 RID: 170473
 		SpriteLock,
-		// Token: 0x0402E2EE RID: 189166
+		// Token: 0x040299EA RID: 170474
 		TxtSkillNum,
-		// Token: 0x0402E2EF RID: 189167
+		// Token: 0x040299EB RID: 170475
 		BtnSkillSlot
 	}
 }

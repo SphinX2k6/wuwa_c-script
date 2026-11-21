@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E1 RID: 9953
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029A5 RID: 10661
 	public class IMonsterStandByConfig
 	{
-		// Token: 0x0600DE5D RID: 56925 RVA: 0x0020FDD5 File Offset: 0x0020DFD5
+		// Token: 0x0600EC39 RID: 60473 RVA: 0x0022C615 File Offset: 0x0022A815
 		public static IMonsterStandByConfig Create(IMonsterStandByConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700425D RID: 16989
-		// (get) Token: 0x0600DE5E RID: 56926 RVA: 0x0020FDF4 File Offset: 0x0020DFF4
+		// Token: 0x1700459D RID: 17821
+		// (get) Token: 0x0600EC3A RID: 60474 RVA: 0x0022C634 File Offset: 0x0022A834
 		public virtual string Tag
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700425E RID: 16990
-		// (get) Token: 0x0600DE5F RID: 56927 RVA: 0x0020FE04 File Offset: 0x0020E004
+		// Token: 0x1700459E RID: 17822
+		// (get) Token: 0x0600EC3B RID: 60475 RVA: 0x0022C644 File Offset: 0x0022A844
 		public virtual float? Duration
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700425F RID: 16991
-		// (get) Token: 0x0600DE60 RID: 56928 RVA: 0x0020FE3C File Offset: 0x0020E03C
+		// Token: 0x1700459F RID: 17823
+		// (get) Token: 0x0600EC3C RID: 60476 RVA: 0x0022C67C File Offset: 0x0022A87C
 		public virtual int? RepeatTimes
 		{
 			get
@@ -60,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004260 RID: 16992
-		// (get) Token: 0x0600DE61 RID: 56929 RVA: 0x0020FE74 File Offset: 0x0020E074
+		// Token: 0x170045A0 RID: 17824
+		// (get) Token: 0x0600EC3D RID: 60477 RVA: 0x0022C6B4 File Offset: 0x0022A8B4
 		public virtual int? EmotionId
 		{
 			get
@@ -74,7 +71,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B6F RID: 31599
+		// Token: 0x0400820F RID: 33295
 		private IMonsterStandByConfig Instance;
 	}
 }

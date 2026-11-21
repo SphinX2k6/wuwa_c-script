@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,18 +13,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 {
-	// Token: 0x020047E2 RID: 18402
+	// Token: 0x02003713 RID: 14099
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VillageInfrTreePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603033F RID: 197439 RVA: 0x00B2C046 File Offset: 0x00B2A246
+		// Token: 0x06024B0F RID: 150287 RVA: 0x00A5BF12 File Offset: 0x00A5A112
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030340 RID: 197440 RVA: 0x00B2C050 File Offset: 0x00B2A250
+		// Token: 0x06024B10 RID: 150288 RVA: 0x00A5BF1C File Offset: 0x00A5A11C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VillageInfrTreePanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -36,7 +35,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030341 RID: 197441 RVA: 0x00B2C094 File Offset: 0x00B2A294
+		// Token: 0x06024B11 RID: 150289 RVA: 0x00A5BF60 File Offset: 0x00A5A160
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			base.GetVerticalLayout(5).RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x06030342 RID: 197442 RVA: 0x00B2C0F8 File Offset: 0x00B2A2F8
+		// Token: 0x06024B12 RID: 150290 RVA: 0x00A5BFC4 File Offset: 0x00A5A1C4
 		private UniTask CreateRewardItemBar()
 		{
 			VillageInfrTreePanel.<CreateRewardItemBar>d__5 <CreateRewardItemBar>d__;
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			return <CreateRewardItemBar>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030343 RID: 197443 RVA: 0x00B2C13C File Offset: 0x00B2A33C
+		// Token: 0x06024B13 RID: 150291 RVA: 0x00A5C008 File Offset: 0x00A5A208
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
 			VillageInfrTreeMarkItem villageInfrTreeMarkItem = (VillageInfrTreeMarkItem)parameters[0];
@@ -77,14 +76,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			this.RefreshRewardItemBar();
 		}
 
-		// Token: 0x06030344 RID: 197444 RVA: 0x00B2C1E4 File Offset: 0x00B2A3E4
+		// Token: 0x06024B14 RID: 150292 RVA: 0x00A5C0B0 File Offset: 0x00A5A2B0
 		private void UpdateConfirmButtonEnableClickByTeleportState()
 		{
 			VillageInfrTreeMarkItem villageInfrTreeMarkItem = (VillageInfrTreeMarkItem)this.LayoutContext.MarkItem;
 			this.LayoutContext.SetConfirmBtnEnableClick(!villageInfrTreeMarkItem.IsLocked);
 		}
 
-		// Token: 0x06030345 RID: 197445 RVA: 0x00B2C218 File Offset: 0x00B2A418
+		// Token: 0x06024B15 RID: 150293 RVA: 0x00A5C0E4 File Offset: 0x00A5A2E4
 		private void RefreshGiftTip()
 		{
 			VillageInfrTreeMarkItem villageInfrTreeMarkItem = (VillageInfrTreeMarkItem)this.LayoutContext.MarkItem;
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			base.GetItem(25).SetUIActive(false);
 		}
 
-		// Token: 0x06030346 RID: 197446 RVA: 0x00B2C294 File Offset: 0x00B2A494
+		// Token: 0x06024B16 RID: 150294 RVA: 0x00A5C160 File Offset: 0x00A5A360
 		private List<IMapSubViewListItemData> GetVerticalLayoutData()
 		{
 			VillageInfrTreeMarkItem villageInfrTreeMarkItem = (VillageInfrTreeMarkItem)this.LayoutContext.MarkItem;
@@ -120,7 +119,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			};
 		}
 
-		// Token: 0x06030347 RID: 197447 RVA: 0x00B2C33C File Offset: 0x00B2A53C
+		// Token: 0x06024B17 RID: 150295 RVA: 0x00A5C208 File Offset: 0x00A5A408
 		private void RefreshRewardItemBar()
 		{
 			VillageInfrTreeMarkItem villageInfrTreeMarkItem = (VillageInfrTreeMarkItem)this.LayoutContext.MarkItem;
@@ -132,14 +131,30 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 			}
 			base.GetVerticalLayout(7).RootUIComp.Get().SetUIActive(true);
 			base.GetItem(8).SetUIActive(true);
-			TItem[] data = (from r in treeConfigByMarkId.Value.RequirementIter()
-			orderby r.Key
-			select new TItem(new InventoryDefine.GetItemData(r.Key, 0), r.Value)).ToArray<TItem>();
-			this.RewardsView.RebuildRewardsByData(data);
+			List<ValueTuple<int, TItem>> list = new List<ValueTuple<int, TItem>>();
+			foreach (DicIntInt dicIntInt in treeConfigByMarkId.Value.RequirementIter())
+			{
+				list.Add(new ValueTuple<int, TItem>(dicIntInt.Key, new TItem(new InventoryDefine.GetItemData(dicIntInt.Key, 0), dicIntInt.Value)));
+			}
+			list.Sort(([TupleElementNames(new string[]
+			{
+				"Key",
+				"Item"
+			})] ValueTuple<int, TItem> a, [TupleElementNames(new string[]
+			{
+				"Key",
+				"Item"
+			})] ValueTuple<int, TItem> b) => a.Item1.CompareTo(b.Item1));
+			TItem[] array = new TItem[list.Count];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = list[i].Item2;
+			}
+			this.RewardsView.RebuildRewardsByData(array);
 			this.RewardsView.SetTitleNewTxt("VillageInfr_Map_Tree4");
 		}
 
-		// Token: 0x04019F56 RID: 106326
+		// Token: 0x0401460A RID: 83466
 		[Nullable(new byte[]
 		{
 			2,
@@ -148,7 +163,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.VillageInfrPanel
 		})]
 		private GenericLayout<MapVerticalLayoutItem, IMapSubViewListItemData> VerticalLayout;
 
-		// Token: 0x04019F57 RID: 106327
+		// Token: 0x0401460B RID: 83467
 		public MapSubViewRewardPanel RewardsView = new MapSubViewRewardPanel();
 	}
 }

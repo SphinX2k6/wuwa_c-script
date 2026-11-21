@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x0200536B RID: 21355
+	// Token: 0x0200434E RID: 17230
 	public class GuqinModeToggleItem : UiPanelBase
 	{
-		// Token: 0x06036912 RID: 223506 RVA: 0x00CEC0A8 File Offset: 0x00CEA2A8
+		// Token: 0x0602B858 RID: 178264 RVA: 0x00C3AF34 File Offset: 0x00C39134
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06036913 RID: 223507 RVA: 0x00CEC16F File Offset: 0x00CEA36F
+		// Token: 0x0602B859 RID: 178265 RVA: 0x00C3AFFB File Offset: 0x00C391FB
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).bLockStateOnSelect = true;
 			this.SetToggleState(EToggleState.ETT_UnChecked, true);
 		}
 
-		// Token: 0x06036914 RID: 223508 RVA: 0x00CEC186 File Offset: 0x00CEA386
+		// Token: 0x0602B85A RID: 178266 RVA: 0x00C3B012 File Offset: 0x00C39212
 		private void OnClickToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -54,27 +54,27 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x06036915 RID: 223509 RVA: 0x00CEC1A2 File Offset: 0x00CEA3A2
+		// Token: 0x0602B85B RID: 178267 RVA: 0x00C3B02E File Offset: 0x00C3922E
 		public void SetToggleState(EToggleState state, bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(state, fireEvent, false, false);
 		}
 
-		// Token: 0x0401CD85 RID: 118149
+		// Token: 0x0401781B RID: 96283
 		public EZitherAudioType AudioType = EZitherAudioType.FundamentalTone;
 
-		// Token: 0x0401CD86 RID: 118150
+		// Token: 0x0401781C RID: 96284
 		[Nullable(2)]
 		public Action<EZitherAudioType> SelectCallback;
 
-		// Token: 0x0200B5E6 RID: 46566
+		// Token: 0x0200A01D RID: 40989
 		private enum EGuqinModeToggleItemComponent
 		{
-			// Token: 0x04037197 RID: 225687
+			// Token: 0x04031BEA RID: 203754
 			Toggle,
-			// Token: 0x04037198 RID: 225688
+			// Token: 0x04031BEB RID: 203755
 			SpriteIcon,
-			// Token: 0x04037199 RID: 225689
+			// Token: 0x04031BEC RID: 203756
 			TextureIcon
 		}
 	}

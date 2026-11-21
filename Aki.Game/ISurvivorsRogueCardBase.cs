@@ -1,45 +1,45 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002B8C RID: 11148
+// Token: 0x02002108 RID: 8456
 [NullableContext(2)]
 public interface ISurvivorsRogueCardBase
 {
-	// Token: 0x17001EE1 RID: 7905
-	// (get) Token: 0x06017196 RID: 94614
+	// Token: 0x17001F39 RID: 7993
+	// (get) Token: 0x06014BC7 RID: 84935
 	ESurvivorsRogueItemType Type { get; }
 
-	// Token: 0x17001EE2 RID: 7906
-	// (get) Token: 0x06017197 RID: 94615
+	// Token: 0x17001F3A RID: 7994
+	// (get) Token: 0x06014BC8 RID: 84936
 	int Id { get; }
 
-	// Token: 0x17001EE3 RID: 7907
-	// (get) Token: 0x06017198 RID: 94616
+	// Token: 0x17001F3B RID: 7995
+	// (get) Token: 0x06014BC9 RID: 84937
 	int? IncId { get; }
 
-	// Token: 0x17001EE4 RID: 7908
-	// (get) Token: 0x06017199 RID: 94617
+	// Token: 0x17001F3C RID: 7996
+	// (get) Token: 0x06014BCA RID: 84938
 	int Index { get; }
 
-	// Token: 0x17001EE5 RID: 7909
-	// (get) Token: 0x0601719A RID: 94618
+	// Token: 0x17001F3D RID: 7997
+	// (get) Token: 0x06014BCB RID: 84939
 	int QualityId { get; }
 
-	// Token: 0x17001EE6 RID: 7910
-	// (get) Token: 0x0601719B RID: 94619
+	// Token: 0x17001F3E RID: 7998
+	// (get) Token: 0x06014BCC RID: 84940
 	string TitleId { get; }
 
-	// Token: 0x17001EE7 RID: 7911
-	// (get) Token: 0x0601719C RID: 94620
+	// Token: 0x17001F3F RID: 7999
+	// (get) Token: 0x06014BCD RID: 84941
 	string TitleText { get; }
 
-	// Token: 0x17001EE8 RID: 7912
-	// (get) Token: 0x0601719D RID: 94621
+	// Token: 0x17001F40 RID: 8000
+	// (get) Token: 0x06014BCE RID: 84942
 	[Nullable(1)]
 	string DescId { [NullableContext(1)] get; }
 
-	// Token: 0x17001EE9 RID: 7913
-	// (get) Token: 0x0601719E RID: 94622
+	// Token: 0x17001F41 RID: 8001
+	// (get) Token: 0x06014BCF RID: 84943
 	[Nullable(new byte[]
 	{
 		2,
@@ -51,16 +51,16 @@ public interface ISurvivorsRogueCardBase
 		1
 	})] get; }
 
-	// Token: 0x17001EEA RID: 7914
-	// (get) Token: 0x0601719F RID: 94623
+	// Token: 0x17001F42 RID: 8002
+	// (get) Token: 0x06014BD0 RID: 84944
 	bool? TagVisible { get; }
 
-	// Token: 0x17001EEB RID: 7915
-	// (get) Token: 0x060171A0 RID: 94624
+	// Token: 0x17001F43 RID: 8003
+	// (get) Token: 0x06014BD1 RID: 84945
 	string TagId { get; }
 
-	// Token: 0x17001EEC RID: 7916
-	// (get) Token: 0x060171A1 RID: 94625
+	// Token: 0x17001F44 RID: 8004
+	// (get) Token: 0x06014BD2 RID: 84946
 	[Nullable(new byte[]
 	{
 		2,
@@ -72,27 +72,27 @@ public interface ISurvivorsRogueCardBase
 		1
 	})] get; }
 
-	// Token: 0x17001EED RID: 7917
-	// (get) Token: 0x060171A2 RID: 94626
+	// Token: 0x17001F45 RID: 8005
+	// (get) Token: 0x06014BD3 RID: 84947
 	bool? UseToggle { get; }
 
-	// Token: 0x17001EEE RID: 7918
-	// (get) Token: 0x060171A3 RID: 94627
+	// Token: 0x17001F46 RID: 8006
+	// (get) Token: 0x06014BD4 RID: 84948
 	bool? IsLevelUp { get; }
 
-	// Token: 0x17001EEF RID: 7919
-	// (get) Token: 0x060171A4 RID: 94628
+	// Token: 0x17001F47 RID: 8007
+	// (get) Token: 0x06014BD5 RID: 84949
 	bool? NeedLock { get; }
 
-	// Token: 0x17001EF0 RID: 7920
-	// (get) Token: 0x060171A5 RID: 94629
+	// Token: 0x17001F48 RID: 8008
+	// (get) Token: 0x06014BD6 RID: 84950
 	bool? LockState { get; }
 
-	// Token: 0x17001EF1 RID: 7921
-	// (get) Token: 0x060171A6 RID: 94630
+	// Token: 0x17001F49 RID: 8009
+	// (get) Token: 0x06014BD7 RID: 84951
 	int? Cost { get; }
 
-	// Token: 0x17001EF2 RID: 7922
-	// (get) Token: 0x060171A7 RID: 94631
+	// Token: 0x17001F4A RID: 8010
+	// (get) Token: 0x06014BD8 RID: 84952
 	bool? CostEnoughCheck { get; }
 }

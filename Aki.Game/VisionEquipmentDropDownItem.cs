@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020024A3 RID: 9379
+// Token: 0x0200198A RID: 6538
 public class VisionEquipmentDropDownItem : DropDownItemBase<int>
 {
-	// Token: 0x06012D45 RID: 77125 RVA: 0x004A5DA2 File Offset: 0x004A3FA2
+	// Token: 0x06010206 RID: 66054 RVA: 0x004B387A File Offset: 0x004B1A7A
 	[NullableContext(1)]
 	public VisionEquipmentDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06012D46 RID: 77126 RVA: 0x004A5DAC File Offset: 0x004A3FAC
+	// Token: 0x06010207 RID: 66055 RVA: 0x004B3884 File Offset: 0x004B1A84
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,20 +27,20 @@ public class VisionEquipmentDropDownItem : DropDownItemBase<int>
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06012D47 RID: 77127 RVA: 0x004A5E3D File Offset: 0x004A403D
+	// Token: 0x06010208 RID: 66056 RVA: 0x004B3915 File Offset: 0x004B1B15
 	[NullableContext(2)]
 	protected override UUIExtendToggle GetDropDownToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06012D48 RID: 77128 RVA: 0x004A5E46 File Offset: 0x004A4046
+	// Token: 0x06010209 RID: 66057 RVA: 0x004B391E File Offset: 0x004B1B1E
 	public void SetRoleId(int id)
 	{
 		this.CurrentRoleId = id;
 	}
 
-	// Token: 0x06012D49 RID: 77129 RVA: 0x004A5E50 File Offset: 0x004A4050
+	// Token: 0x0601020A RID: 66058 RVA: 0x004B3928 File Offset: 0x004B1B28
 	protected override void OnShowDropDownItemBase(int data)
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.CurrentRoleId);
@@ -58,12 +57,12 @@ public class VisionEquipmentDropDownItem : DropDownItemBase<int>
 		string newText;
 		if (data > 0)
 		{
-			list = PhantomBattleModel.Instance.GetVisionSortUseDataList(data, 0).ToList<IPhantomItemData>();
+			list = new List<IPhantomItemData>(PhantomBattleModel.Instance.GetVisionSortUseDataList(data, 0));
 			newText = (ConfigMultiTextLang.GetLocalTextNew(PhantomBattleConfig.Instance.GetFetterGroupById(data).FetterGroupName, null) ?? "");
 		}
 		else
 		{
-			list = PhantomBattleModel.Instance.GetVisionSortUseDataList(0, 0).ToList<IPhantomItemData>();
+			list = new List<IPhantomItemData>(PhantomBattleModel.Instance.GetVisionSortUseDataList(0, 0));
 			newText = (ConfigMultiTextLang.GetLocalTextNew("Text_FilterTextAllVisionFetter_Text", null) ?? "");
 		}
 		base.GetText(3).SetText(list.Count.ToString(), true);
@@ -77,7 +76,7 @@ public class VisionEquipmentDropDownItem : DropDownItemBase<int>
 		this.VisionFetterSuitItem.SetActive(flag);
 	}
 
-	// Token: 0x06012D4A RID: 77130 RVA: 0x004A5FB6 File Offset: 0x004A41B6
+	// Token: 0x0601020B RID: 66059 RVA: 0x004B3A8E File Offset: 0x004B1C8E
 	protected override void OnBeforeDestroy()
 	{
 		VisionFetterSuitItem visionFetterSuitItem = this.VisionFetterSuitItem;
@@ -88,25 +87,25 @@ public class VisionEquipmentDropDownItem : DropDownItemBase<int>
 		visionFetterSuitItem.Destroy(null);
 	}
 
-	// Token: 0x04008DD1 RID: 36305
+	// Token: 0x04008F1B RID: 36635
 	private int CurrentRoleId;
 
-	// Token: 0x04008DD2 RID: 36306
+	// Token: 0x04008F1C RID: 36636
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02008A27 RID: 35367
+	// Token: 0x02007BB1 RID: 31665
 	private enum EComponent
 	{
-		// Token: 0x0402CDC3 RID: 183747
+		// Token: 0x040280E3 RID: 164067
 		TogOption,
-		// Token: 0x0402CDC4 RID: 183748
+		// Token: 0x040280E4 RID: 164068
 		TxtOption,
-		// Token: 0x0402CDC5 RID: 183749
+		// Token: 0x040280E5 RID: 164069
 		SuitElementItem,
-		// Token: 0x0402CDC6 RID: 183750
+		// Token: 0x040280E6 RID: 164070
 		CurrentNumText,
-		// Token: 0x0402CDC7 RID: 183751
+		// Token: 0x040280E7 RID: 164071
 		LikeItem
 	}
 }

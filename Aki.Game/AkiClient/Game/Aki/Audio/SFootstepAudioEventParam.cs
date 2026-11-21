@@ -7,22 +7,22 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Audio
 {
-	// Token: 0x02004438 RID: 17464
+	// Token: 0x02003400 RID: 13312
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Audio/SFootstepAudioEventParam.SFootstepAudioEventParam")]
 	[UnrealStructLayout(200, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 200)]
 	public class SFootstepAudioEventParam : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602D32A RID: 185130 RVA: 0x00A35E8A File Offset: 0x00A3408A
+		// Token: 0x06021C99 RID: 138393 RVA: 0x0096B1B8 File Offset: 0x009693B8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFootstepAudioEventParam._ScriptStructPtr != 0) ? SFootstepAudioEventParam._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Audio/SFootstepAudioEventParam.SFootstepAudioEventParam", ref SFootstepAudioEventParam._ScriptStructPtr);
 		}
 
-		// Token: 0x1700727E RID: 29310
-		// (get) Token: 0x0602D32B RID: 185131 RVA: 0x00A35EB0 File Offset: 0x00A340B0
-		// (set) Token: 0x0602D32C RID: 185132 RVA: 0x00A35EF3 File Offset: 0x00A340F3
+		// Token: 0x1700460E RID: 17934
+		// (get) Token: 0x06021C9A RID: 138394 RVA: 0x0096B1DC File Offset: 0x009693DC
+		// (set) Token: 0x06021C9B RID: 138395 RVA: 0x0096B21F File Offset: 0x0096941F
 		[Nullable(1)]
 		public FHitResult 碰撞信息
 		{
@@ -33,279 +33,261 @@ namespace AkiClient.Game.Aki.Audio
 				FHitResult result;
 				if ((result = this._碰撞信息) == null)
 				{
-					result = (this._碰撞信息 = new FHitResult(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._碰撞信息 = new FHitResult(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_碰撞信息, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FHitResult.StaticStruct(), base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_0, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FHitResult.StaticStruct(), base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_碰撞信息, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700727F RID: 29311
-		// (get) Token: 0x0602D32D RID: 185133 RVA: 0x00A35F14 File Offset: 0x00A34114
-		// (set) Token: 0x0602D32E RID: 185134 RVA: 0x00A35F24 File Offset: 0x00A34124
+		// Token: 0x1700460F RID: 17935
+		// (get) Token: 0x06021C9C RID: 138396 RVA: 0x0096B240 File Offset: 0x00969440
+		// (set) Token: 0x06021C9D RID: 138397 RVA: 0x0096B250 File Offset: 0x00969450
 		public unsafe bool 状态_地面_Walk
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_地面_Walk) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_地面_Walk) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007280 RID: 29312
-		// (get) Token: 0x0602D32F RID: 185135 RVA: 0x00A35F35 File Offset: 0x00A34135
-		// (set) Token: 0x0602D330 RID: 185136 RVA: 0x00A35F45 File Offset: 0x00A34145
+		// Token: 0x17004610 RID: 17936
+		// (get) Token: 0x06021C9E RID: 138398 RVA: 0x0096B261 File Offset: 0x00969461
+		// (set) Token: 0x06021C9F RID: 138399 RVA: 0x0096B271 File Offset: 0x00969471
 		public unsafe bool 状态_地面_Run
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_地面_Run) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_地面_Run) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007281 RID: 29313
-		// (get) Token: 0x0602D331 RID: 185137 RVA: 0x00A35F56 File Offset: 0x00A34156
-		// (set) Token: 0x0602D332 RID: 185138 RVA: 0x00A35F66 File Offset: 0x00A34166
+		// Token: 0x17004611 RID: 17937
+		// (get) Token: 0x06021CA0 RID: 138400 RVA: 0x0096B282 File Offset: 0x00969482
+		// (set) Token: 0x06021CA1 RID: 138401 RVA: 0x0096B292 File Offset: 0x00969492
 		public unsafe bool 状态_地面_Sprint
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_地面_Sprint) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_地面_Sprint) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007282 RID: 29314
-		// (get) Token: 0x0602D333 RID: 185139 RVA: 0x00A35F77 File Offset: 0x00A34177
-		// (set) Token: 0x0602D334 RID: 185140 RVA: 0x00A35F87 File Offset: 0x00A34187
+		// Token: 0x17004612 RID: 17938
+		// (get) Token: 0x06021CA2 RID: 138402 RVA: 0x0096B2A3 File Offset: 0x009694A3
+		// (set) Token: 0x06021CA3 RID: 138403 RVA: 0x0096B2B3 File Offset: 0x009694B3
 		public unsafe bool 状态_跑停_WalkStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_跑停_WalkStop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_跑停_WalkStop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007283 RID: 29315
-		// (get) Token: 0x0602D335 RID: 185141 RVA: 0x00A35F98 File Offset: 0x00A34198
-		// (set) Token: 0x0602D336 RID: 185142 RVA: 0x00A35FA8 File Offset: 0x00A341A8
+		// Token: 0x17004613 RID: 17939
+		// (get) Token: 0x06021CA4 RID: 138404 RVA: 0x0096B2C4 File Offset: 0x009694C4
+		// (set) Token: 0x06021CA5 RID: 138405 RVA: 0x0096B2D4 File Offset: 0x009694D4
 		public unsafe bool 状态_跑停_RunStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_跑停_RunStop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_跑停_RunStop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007284 RID: 29316
-		// (get) Token: 0x0602D337 RID: 185143 RVA: 0x00A35FB9 File Offset: 0x00A341B9
-		// (set) Token: 0x0602D338 RID: 185144 RVA: 0x00A35FC9 File Offset: 0x00A341C9
+		// Token: 0x17004614 RID: 17940
+		// (get) Token: 0x06021CA6 RID: 138406 RVA: 0x0096B2E5 File Offset: 0x009694E5
+		// (set) Token: 0x06021CA7 RID: 138407 RVA: 0x0096B2F5 File Offset: 0x009694F5
 		public unsafe bool 状态_跑停_SprintStop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_跑停_SprintStop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_状态_跑停_SprintStop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007285 RID: 29317
-		// (get) Token: 0x0602D339 RID: 185145 RVA: 0x00A35FDA File Offset: 0x00A341DA
-		// (set) Token: 0x0602D33A RID: 185146 RVA: 0x00A35FEE File Offset: 0x00A341EE
+		// Token: 0x17004615 RID: 17941
+		// (get) Token: 0x06021CA8 RID: 138408 RVA: 0x0096B306 File Offset: 0x00969506
+		// (set) Token: 0x06021CA9 RID: 138409 RVA: 0x0096B31A File Offset: 0x0096951A
 		public unsafe FVector 缓存角色位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_缓存角色位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SFootstepAudioEventParam.__PropertyOffset_缓存角色位置) = value;
 			}
 		}
 
-		// Token: 0x17007286 RID: 29318
-		// (get) Token: 0x0602D33B RID: 185147 RVA: 0x00A36003 File Offset: 0x00A34203
-		// (set) Token: 0x0602D33C RID: 185148 RVA: 0x00A36017 File Offset: 0x00A34217
+		// Token: 0x17004616 RID: 17942
+		// (get) Token: 0x06021CAA RID: 138410 RVA: 0x0096B32F File Offset: 0x0096952F
+		// (set) Token: 0x06021CAB RID: 138411 RVA: 0x0096B343 File Offset: 0x00969543
 		public unsafe UAkAudioEvent WalkAkAudioEvent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_WalkAkAudioEvent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_WalkAkAudioEvent, value);
 			}
 		}
 
-		// Token: 0x17007287 RID: 29319
-		// (get) Token: 0x0602D33D RID: 185149 RVA: 0x00A3602C File Offset: 0x00A3422C
-		// (set) Token: 0x0602D33E RID: 185150 RVA: 0x00A36040 File Offset: 0x00A34240
+		// Token: 0x17004617 RID: 17943
+		// (get) Token: 0x06021CAC RID: 138412 RVA: 0x0096B358 File Offset: 0x00969558
+		// (set) Token: 0x06021CAD RID: 138413 RVA: 0x0096B36C File Offset: 0x0096956C
 		public unsafe UAkAudioEvent RunAkAudioEvent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_9);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_RunAkAudioEvent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_9, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_RunAkAudioEvent, value);
 			}
 		}
 
-		// Token: 0x17007288 RID: 29320
-		// (get) Token: 0x0602D33F RID: 185151 RVA: 0x00A36055 File Offset: 0x00A34255
-		// (set) Token: 0x0602D340 RID: 185152 RVA: 0x00A36069 File Offset: 0x00A34269
+		// Token: 0x17004618 RID: 17944
+		// (get) Token: 0x06021CAE RID: 138414 RVA: 0x0096B381 File Offset: 0x00969581
+		// (set) Token: 0x06021CAF RID: 138415 RVA: 0x0096B395 File Offset: 0x00969595
 		public unsafe UAkAudioEvent SprintAkAudioEvent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_10);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_SprintAkAudioEvent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_10, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_SprintAkAudioEvent, value);
 			}
 		}
 
-		// Token: 0x17007289 RID: 29321
-		// (get) Token: 0x0602D341 RID: 185153 RVA: 0x00A3607E File Offset: 0x00A3427E
-		// (set) Token: 0x0602D342 RID: 185154 RVA: 0x00A36092 File Offset: 0x00A34292
+		// Token: 0x17004619 RID: 17945
+		// (get) Token: 0x06021CB0 RID: 138416 RVA: 0x0096B3AA File Offset: 0x009695AA
+		// (set) Token: 0x06021CB1 RID: 138417 RVA: 0x0096B3BE File Offset: 0x009695BE
 		public unsafe UAkAudioEvent FallbackAkAudioEvent
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_11);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_FallbackAkAudioEvent);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_11, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFootstepAudioEventParam.__PropertyOffset_FallbackAkAudioEvent, value);
 			}
 		}
 
-		// Token: 0x0602D343 RID: 185155 RVA: 0x00A360A7 File Offset: 0x00A342A7
+		// Token: 0x06021CB2 RID: 138418 RVA: 0x0096B3D3 File Offset: 0x009695D3
 		public SFootstepAudioEventParam()
 		{
 		}
 
-		// Token: 0x0602D344 RID: 185156 RVA: 0x00A360B0 File Offset: 0x00A342B0
-		[NullableContext(1)]
-		public SFootstepAudioEventParam(FHitResult 碰撞信息, bool 状态_地面_Walk, bool 状态_地面_Run, bool 状态_地面_Sprint, bool 状态_跑停_WalkStop, bool 状态_跑停_RunStop, bool 状态_跑停_SprintStop, FVector 缓存角色位置, UAkAudioEvent WalkAkAudioEvent, UAkAudioEvent RunAkAudioEvent, UAkAudioEvent SprintAkAudioEvent, UAkAudioEvent FallbackAkAudioEvent)
-		{
-			this.碰撞信息 = 碰撞信息;
-			this.状态_地面_Walk = 状态_地面_Walk;
-			this.状态_地面_Run = 状态_地面_Run;
-			this.状态_地面_Sprint = 状态_地面_Sprint;
-			this.状态_跑停_WalkStop = 状态_跑停_WalkStop;
-			this.状态_跑停_RunStop = 状态_跑停_RunStop;
-			this.状态_跑停_SprintStop = 状态_跑停_SprintStop;
-			this.缓存角色位置 = 缓存角色位置;
-			this.WalkAkAudioEvent = WalkAkAudioEvent;
-			this.RunAkAudioEvent = RunAkAudioEvent;
-			this.SprintAkAudioEvent = SprintAkAudioEvent;
-			this.FallbackAkAudioEvent = FallbackAkAudioEvent;
-		}
-
-		// Token: 0x0602D345 RID: 185157 RVA: 0x00A36120 File Offset: 0x00A34320
+		// Token: 0x06021CB3 RID: 138419 RVA: 0x0096B3DB File Offset: 0x009695DB
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFootstepAudioEventParam.StaticStruct();
 		}
 
-		// Token: 0x0602D346 RID: 185158 RVA: 0x00A3612C File Offset: 0x00A3432C
+		// Token: 0x06021CB4 RID: 138420 RVA: 0x0096B3E7 File Offset: 0x009695E7
 		public SFootstepAudioEventParam(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602D347 RID: 185159 RVA: 0x00A36136 File Offset: 0x00A34336
+		// Token: 0x06021CB5 RID: 138421 RVA: 0x0096B3F1 File Offset: 0x009695F1
 		public SFootstepAudioEventParam(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602D348 RID: 185160 RVA: 0x00A36141 File Offset: 0x00A34341
+		// Token: 0x06021CB6 RID: 138422 RVA: 0x0096B3FC File Offset: 0x009695FC
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFootstepAudioEventParam(Pointer, false, true);
 		}
 
-		// Token: 0x0602D349 RID: 185161 RVA: 0x00A3614B File Offset: 0x00A3434B
+		// Token: 0x06021CB7 RID: 138423 RVA: 0x0096B406 File Offset: 0x00969606
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFootstepAudioEventParam(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04018068 RID: 98408
+		// Token: 0x04012A15 RID: 76309
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Audio/SFootstepAudioEventParam.SFootstepAudioEventParam";
 
-		// Token: 0x04018069 RID: 98409
+		// Token: 0x04012A16 RID: 76310
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401806A RID: 98410
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012A17 RID: 76311
+		internal static int __PropertyOffset_碰撞信息;
 
-		// Token: 0x0401806B RID: 98411
+		// Token: 0x04012A18 RID: 76312
 		private FHitResult _碰撞信息;
 
-		// Token: 0x0401806C RID: 98412
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012A19 RID: 76313
+		internal static int __PropertyOffset_状态_地面_Walk;
 
-		// Token: 0x0401806D RID: 98413
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012A1A RID: 76314
+		internal static int __PropertyOffset_状态_地面_Run;
 
-		// Token: 0x0401806E RID: 98414
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012A1B RID: 76315
+		internal static int __PropertyOffset_状态_地面_Sprint;
 
-		// Token: 0x0401806F RID: 98415
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012A1C RID: 76316
+		internal static int __PropertyOffset_状态_跑停_WalkStop;
 
-		// Token: 0x04018070 RID: 98416
-		internal static int __PropertyOffset_5;
+		// Token: 0x04012A1D RID: 76317
+		internal static int __PropertyOffset_状态_跑停_RunStop;
 
-		// Token: 0x04018071 RID: 98417
-		internal static int __PropertyOffset_6;
+		// Token: 0x04012A1E RID: 76318
+		internal static int __PropertyOffset_状态_跑停_SprintStop;
 
-		// Token: 0x04018072 RID: 98418
-		internal static int __PropertyOffset_7;
+		// Token: 0x04012A1F RID: 76319
+		internal static int __PropertyOffset_缓存角色位置;
 
-		// Token: 0x04018073 RID: 98419
-		internal static int __PropertyOffset_8;
+		// Token: 0x04012A20 RID: 76320
+		internal static int __PropertyOffset_WalkAkAudioEvent;
 
-		// Token: 0x04018074 RID: 98420
-		internal static int __PropertyOffset_9;
+		// Token: 0x04012A21 RID: 76321
+		internal static int __PropertyOffset_RunAkAudioEvent;
 
-		// Token: 0x04018075 RID: 98421
-		internal static int __PropertyOffset_10;
+		// Token: 0x04012A22 RID: 76322
+		internal static int __PropertyOffset_SprintAkAudioEvent;
 
-		// Token: 0x04018076 RID: 98422
-		internal static int __PropertyOffset_11;
+		// Token: 0x04012A23 RID: 76323
+		internal static int __PropertyOffset_FallbackAkAudioEvent;
 	}
 }

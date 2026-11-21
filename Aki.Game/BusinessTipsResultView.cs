@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200132E RID: 4910
+// Token: 0x020007E2 RID: 2018
 [NullableContext(2)]
 [Nullable(0)]
 public class BusinessTipsResultView : UiViewBase
 {
-	// Token: 0x06008869 RID: 34921 RVA: 0x001D1F7B File Offset: 0x001D017B
+	// Token: 0x06005C04 RID: 23556 RVA: 0x001DADE7 File Offset: 0x001D8FE7
 	[NullableContext(1)]
 	public BusinessTipsResultView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600886A RID: 34922 RVA: 0x001D1F84 File Offset: 0x001D0184
+	// Token: 0x06005C05 RID: 23557 RVA: 0x001DADF0 File Offset: 0x001D8FF0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class BusinessTipsResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600886B RID: 34923 RVA: 0x001D2070 File Offset: 0x001D0270
+	// Token: 0x06005C06 RID: 23558 RVA: 0x001DAEDC File Offset: 0x001D90DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessTipsResultView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -51,25 +51,25 @@ public class BusinessTipsResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600886C RID: 34924 RVA: 0x001D20B3 File Offset: 0x001D02B3
+	// Token: 0x06005C07 RID: 23559 RVA: 0x001DAF1F File Offset: 0x001D911F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BusinessInvestResult, new Action(this.BusinessInvestResult));
 	}
 
-	// Token: 0x0600886D RID: 34925 RVA: 0x001D20D1 File Offset: 0x001D02D1
+	// Token: 0x06005C08 RID: 23560 RVA: 0x001DAF3D File Offset: 0x001D913D
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BusinessInvestResult, new Action(this.BusinessInvestResult));
 	}
 
-	// Token: 0x0600886E RID: 34926 RVA: 0x001D20EF File Offset: 0x001D02EF
+	// Token: 0x06005C09 RID: 23561 RVA: 0x001DAF5B File Offset: 0x001D915B
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTimerHandle();
 	}
 
-	// Token: 0x0600886F RID: 34927 RVA: 0x001D20F7 File Offset: 0x001D02F7
+	// Token: 0x06005C0A RID: 23562 RVA: 0x001DAF63 File Offset: 0x001D9163
 	private void OnSkip()
 	{
 		if (this.TimerHandleField == null)
@@ -80,7 +80,7 @@ public class BusinessTipsResultView : UiViewBase
 		this.ShowSettlement();
 	}
 
-	// Token: 0x06008870 RID: 34928 RVA: 0x001D2110 File Offset: 0x001D0310
+	// Token: 0x06005C0B RID: 23563 RVA: 0x001DAF7C File Offset: 0x001D917C
 	private void BusinessInvestResult()
 	{
 		BusinessTipsInvestModule investModule = this.InvestModule;
@@ -112,7 +112,7 @@ public class BusinessTipsResultView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06008871 RID: 34929 RVA: 0x001D21A8 File Offset: 0x001D03A8
+	// Token: 0x06005C0C RID: 23564 RVA: 0x001DB014 File Offset: 0x001D9214
 	private UniTask RefreshRoleTexture()
 	{
 		BusinessTipsResultView.<RefreshRoleTexture>d__14 <RefreshRoleTexture>d__;
@@ -123,7 +123,7 @@ public class BusinessTipsResultView : UiViewBase
 		return <RefreshRoleTexture>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008872 RID: 34930 RVA: 0x001D21EC File Offset: 0x001D03EC
+	// Token: 0x06005C0D RID: 23565 RVA: 0x001DB058 File Offset: 0x001D9258
 	private UniTask InitCurrencyItem()
 	{
 		BusinessTipsResultView.<InitCurrencyItem>d__15 <InitCurrencyItem>d__;
@@ -134,7 +134,7 @@ public class BusinessTipsResultView : UiViewBase
 		return <InitCurrencyItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008873 RID: 34931 RVA: 0x001D2230 File Offset: 0x001D0430
+	// Token: 0x06005C0E RID: 23566 RVA: 0x001DB09C File Offset: 0x001D929C
 	private void InitDialogText()
 	{
 		DelegationResultData resultData = MoonChasingBusinessModel.Instance.GetResultData();
@@ -142,7 +142,7 @@ public class BusinessTipsResultView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), entrustRoleById.InvestDialog, Array.Empty<object>());
 	}
 
-	// Token: 0x06008874 RID: 34932 RVA: 0x001D2278 File Offset: 0x001D0478
+	// Token: 0x06005C0F RID: 23567 RVA: 0x001DB0E4 File Offset: 0x001D92E4
 	private UniTask InitInvestModule()
 	{
 		BusinessTipsResultView.<InitInvestModule>d__17 <InitInvestModule>d__;
@@ -153,7 +153,7 @@ public class BusinessTipsResultView : UiViewBase
 		return <InitInvestModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008875 RID: 34933 RVA: 0x001D22BC File Offset: 0x001D04BC
+	// Token: 0x06005C10 RID: 23568 RVA: 0x001DB128 File Offset: 0x001D9328
 	private UniTask InitSettlementModule()
 	{
 		BusinessTipsResultView.<InitSettlementModule>d__18 <InitSettlementModule>d__;
@@ -164,7 +164,7 @@ public class BusinessTipsResultView : UiViewBase
 		return <InitSettlementModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008876 RID: 34934 RVA: 0x001D22FF File Offset: 0x001D04FF
+	// Token: 0x06005C11 RID: 23569 RVA: 0x001DB16B File Offset: 0x001D936B
 	private void AddTimerHandle()
 	{
 		this.TimerHandleField = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -174,7 +174,7 @@ public class BusinessTipsResultView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06008877 RID: 34935 RVA: 0x001D232A File Offset: 0x001D052A
+	// Token: 0x06005C12 RID: 23570 RVA: 0x001DB196 File Offset: 0x001D9396
 	private void RemoveTimerHandle()
 	{
 		if (this.TimerHandleField != null)
@@ -184,7 +184,7 @@ public class BusinessTipsResultView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008878 RID: 34936 RVA: 0x001D234C File Offset: 0x001D054C
+	// Token: 0x06005C13 RID: 23571 RVA: 0x001DB1B8 File Offset: 0x001D93B8
 	private void ShowSettlement()
 	{
 		AudioSystem.Instance.ExecuteAction("play_ui_zuiyuejie_loading", EAudioActionType.Stop, null);
@@ -225,7 +225,7 @@ public class BusinessTipsResultView : UiViewBase
 		base.PlaySequence("Fail", null, false);
 	}
 
-	// Token: 0x06008879 RID: 34937 RVA: 0x001D2446 File Offset: 0x001D0646
+	// Token: 0x06005C14 RID: 23572 RVA: 0x001DB2B2 File Offset: 0x001D94B2
 	private void SwitchRoleSpineAnim(ESpineAnimation animName, float mixDuration)
 	{
 		UTrackEntry utrackEntry = base.GetSpine(0).SetAnimation(0, animName.ToString(), true);
@@ -236,7 +236,7 @@ public class BusinessTipsResultView : UiViewBase
 		utrackEntry.SetMixDuration(mixDuration);
 	}
 
-	// Token: 0x0600887A RID: 34938 RVA: 0x001D2470 File Offset: 0x001D0670
+	// Token: 0x06005C15 RID: 23573 RVA: 0x001DB2DC File Offset: 0x001D94DC
 	private void RefreshCurrencyItem()
 	{
 		DelegationResultData resultData = MoonChasingBusinessModel.Instance.GetResultData();
@@ -244,47 +244,47 @@ public class BusinessTipsResultView : UiViewBase
 		this.CurrencyItem.PlayReduceTweener(resultData.OriginGold, targetValue);
 	}
 
-	// Token: 0x04003CD2 RID: 15570
+	// Token: 0x04003D6A RID: 15722
 	protected BusinessTipsInvestModule InvestModule;
 
-	// Token: 0x04003CD3 RID: 15571
+	// Token: 0x04003D6B RID: 15723
 	protected BusinessTipsSettlementModule SettlementModule;
 
-	// Token: 0x04003CD4 RID: 15572
+	// Token: 0x04003D6C RID: 15724
 	protected TimerHandle TimerHandleField;
 
-	// Token: 0x04003CD5 RID: 15573
+	// Token: 0x04003D6D RID: 15725
 	protected BusinessTipsCurrencyItem CurrencyItem;
 
-	// Token: 0x04003CD6 RID: 15574
+	// Token: 0x04003D6E RID: 15726
 	private const int ANIM_TIME = 2000;
 
-	// Token: 0x02007989 RID: 31113
+	// Token: 0x02006B13 RID: 27411
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04028055 RID: 163925
+		// Token: 0x04023382 RID: 144258
 		public const int RoleSpine = 0;
 
-		// Token: 0x04028056 RID: 163926
+		// Token: 0x04023383 RID: 144259
 		public const int DialogItem = 1;
 
-		// Token: 0x04028057 RID: 163927
+		// Token: 0x04023384 RID: 144260
 		public const int DialogText = 2;
 
-		// Token: 0x04028058 RID: 163928
+		// Token: 0x04023385 RID: 144261
 		public const int InvestItem = 3;
 
-		// Token: 0x04028059 RID: 163929
+		// Token: 0x04023386 RID: 144262
 		public const int ResultItem = 4;
 
-		// Token: 0x0402805A RID: 163930
+		// Token: 0x04023387 RID: 144263
 		public const int SkipBtn = 5;
 
-		// Token: 0x0402805B RID: 163931
+		// Token: 0x04023388 RID: 144264
 		public const int TitleItem = 6;
 
-		// Token: 0x0402805C RID: 163932
+		// Token: 0x04023389 RID: 144265
 		public const int CurrencyItem = 7;
 	}
 }

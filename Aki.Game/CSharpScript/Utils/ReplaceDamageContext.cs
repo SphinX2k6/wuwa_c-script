@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004517 RID: 17687
+	// Token: 0x02003439 RID: 13369
 	public class ReplaceDamageContext : BaseContext, IExpressionContext
 	{
-		// Token: 0x170073F3 RID: 29683
-		// (get) Token: 0x0602D83B RID: 186427 RVA: 0x00A45D4B File Offset: 0x00A43F4B
-		// (set) Token: 0x0602D83C RID: 186428 RVA: 0x00A45D53 File Offset: 0x00A43F53
+		// Token: 0x170046AB RID: 18091
+		// (get) Token: 0x06021F0B RID: 139019 RVA: 0x00971B5B File Offset: 0x0096FD5B
+		// (set) Token: 0x06021F0C RID: 139020 RVA: 0x00971B63 File Offset: 0x0096FD63
 		public EContextType ContextType { get; set; }
 
-		// Token: 0x0401855D RID: 99677
+		// Token: 0x04012B85 RID: 76677
 		[Nullable(1)]
 		public Action<long> DamageCb;
 	}

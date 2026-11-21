@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000142 RID: 322
+	// Token: 0x02000145 RID: 325
 	[NetMessage(EMessageId.BabelActivityInstInfoNotify)]
 	public sealed class BabelActivityInstInfoNotify : IMessage<BabelActivityInstInfoNotify>, IMessage, IEquatable<BabelActivityInstInfoNotify>, IDeepCloneable<BabelActivityInstInfoNotify>, IBufferMessage
 	{
-		// Token: 0x060029A3 RID: 10659 RVA: 0x0006D296 File Offset: 0x0006B496
+		// Token: 0x06002A1A RID: 10778 RVA: 0x0006E6CA File Offset: 0x0006C8CA
 		[NullableContext(1)]
 		public static BabelActivityInstInfoNotify Create()
 		{
 			return new BabelActivityInstInfoNotify();
 		}
 
-		// Token: 0x17000612 RID: 1554
-		// (get) Token: 0x060029A4 RID: 10660 RVA: 0x0006D29D File Offset: 0x0006B49D
+		// Token: 0x17000626 RID: 1574
+		// (get) Token: 0x06002A1B RID: 10779 RVA: 0x0006E6D1 File Offset: 0x0006C8D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000613 RID: 1555
-		// (get) Token: 0x060029A5 RID: 10661 RVA: 0x0006D2A0 File Offset: 0x0006B4A0
+		// Token: 0x17000627 RID: 1575
+		// (get) Token: 0x06002A1C RID: 10780 RVA: 0x0006E6D4 File Offset: 0x0006C8D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060029A6 RID: 10662 RVA: 0x0006D2A7 File Offset: 0x0006B4A7
+		// Token: 0x06002A1D RID: 10781 RVA: 0x0006E6DB File Offset: 0x0006C8DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityInstInfoNotify()
 		{
 		}
 
-		// Token: 0x060029A7 RID: 10663 RVA: 0x0006D2C8 File Offset: 0x0006B4C8
+		// Token: 0x06002A1E RID: 10782 RVA: 0x0006E6FC File Offset: 0x0006C8FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityInstInfoNotify(BabelActivityInstInfoNotify other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060029A8 RID: 10664 RVA: 0x0006D33E File Offset: 0x0006B53E
+		// Token: 0x06002A1F RID: 10783 RVA: 0x0006E772 File Offset: 0x0006C972
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityInstInfoNotify Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new BabelActivityInstInfoNotify(this);
 		}
 
-		// Token: 0x17000614 RID: 1556
-		// (get) Token: 0x060029A9 RID: 10665 RVA: 0x0006D346 File Offset: 0x0006B546
-		// (set) Token: 0x060029AA RID: 10666 RVA: 0x0006D34E File Offset: 0x0006B54E
+		// Token: 0x17000628 RID: 1576
+		// (get) Token: 0x06002A20 RID: 10784 RVA: 0x0006E77A File Offset: 0x0006C97A
+		// (set) Token: 0x06002A21 RID: 10785 RVA: 0x0006E782 File Offset: 0x0006C982
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelId
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000615 RID: 1557
-		// (get) Token: 0x060029AB RID: 10667 RVA: 0x0006D357 File Offset: 0x0006B557
-		// (set) Token: 0x060029AC RID: 10668 RVA: 0x0006D35F File Offset: 0x0006B55F
+		// Token: 0x17000629 RID: 1577
+		// (get) Token: 0x06002A22 RID: 10786 RVA: 0x0006E78B File Offset: 0x0006C98B
+		// (set) Token: 0x06002A23 RID: 10787 RVA: 0x0006E793 File Offset: 0x0006C993
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UseReviveCount
@@ -106,8 +106,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000616 RID: 1558
-		// (get) Token: 0x060029AD RID: 10669 RVA: 0x0006D368 File Offset: 0x0006B568
+		// Token: 0x1700062A RID: 1578
+		// (get) Token: 0x06002A24 RID: 10788 RVA: 0x0006E79C File Offset: 0x0006C99C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BuffSelection
@@ -118,8 +118,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000617 RID: 1559
-		// (get) Token: 0x060029AE RID: 10670 RVA: 0x0006D370 File Offset: 0x0006B570
+		// Token: 0x1700062B RID: 1579
+		// (get) Token: 0x06002A25 RID: 10789 RVA: 0x0006E7A4 File Offset: 0x0006C9A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BabelDeTermId
@@ -130,9 +130,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000618 RID: 1560
-		// (get) Token: 0x060029AF RID: 10671 RVA: 0x0006D378 File Offset: 0x0006B578
-		// (set) Token: 0x060029B0 RID: 10672 RVA: 0x0006D380 File Offset: 0x0006B580
+		// Token: 0x1700062C RID: 1580
+		// (get) Token: 0x06002A26 RID: 10790 RVA: 0x0006E7AC File Offset: 0x0006C9AC
+		// (set) Token: 0x06002A27 RID: 10791 RVA: 0x0006E7B4 File Offset: 0x0006C9B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleCD
@@ -147,9 +147,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000619 RID: 1561
-		// (get) Token: 0x060029B1 RID: 10673 RVA: 0x0006D389 File Offset: 0x0006B589
-		// (set) Token: 0x060029B2 RID: 10674 RVA: 0x0006D391 File Offset: 0x0006B591
+		// Token: 0x1700062D RID: 1581
+		// (get) Token: 0x06002A28 RID: 10792 RVA: 0x0006E7BD File Offset: 0x0006C9BD
+		// (set) Token: 0x06002A29 RID: 10793 RVA: 0x0006E7C5 File Offset: 0x0006C9C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurStar
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060029B3 RID: 10675 RVA: 0x0006D39A File Offset: 0x0006B59A
+		// Token: 0x06002A2A RID: 10794 RVA: 0x0006E7CE File Offset: 0x0006C9CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelActivityInstInfoNotify);
 		}
 
-		// Token: 0x060029B4 RID: 10676 RVA: 0x0006D3A8 File Offset: 0x0006B5A8
+		// Token: 0x06002A2B RID: 10795 RVA: 0x0006E7DC File Offset: 0x0006C9DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelActivityInstInfoNotify other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelId == other.LevelId && this.UseReviveCount == other.UseReviveCount && this.buffSelection_.Equals(other.buffSelection_) && this.babelDeTermId_.Equals(other.babelDeTermId_) && this.RoleCD == other.RoleCD && this.CurStar == other.CurStar && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060029B5 RID: 10677 RVA: 0x0006D43C File Offset: 0x0006B63C
+		// Token: 0x06002A2C RID: 10796 RVA: 0x0006E870 File Offset: 0x0006CA70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060029B6 RID: 10678 RVA: 0x0006D4E2 File Offset: 0x0006B6E2
+		// Token: 0x06002A2D RID: 10797 RVA: 0x0006E916 File Offset: 0x0006CB16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060029B7 RID: 10679 RVA: 0x0006D4EF File Offset: 0x0006B6EF
+		// Token: 0x06002A2E RID: 10798 RVA: 0x0006E923 File Offset: 0x0006CB23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -227,40 +227,40 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060029B8 RID: 10680 RVA: 0x0006D4F8 File Offset: 0x0006B6F8
+		// Token: 0x06002A2F RID: 10799 RVA: 0x0006E92C File Offset: 0x0006CB2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.babelDeTermId_.WriteTo(ref output, BabelActivityInstInfoNotify._repeated_babelDeTermId_codec);
-			this.buffSelection_.WriteTo(ref output, BabelActivityInstInfoNotify._repeated_buffSelection_codec);
 			if (this.RoleCD != 0)
 			{
 				output.WriteRawTag(32);
 				output.WriteInt32(this.RoleCD);
 			}
-			if (this.CurStar != 0)
-			{
-				output.WriteRawTag(88);
-				output.WriteInt32(this.CurStar);
-			}
-			if (this.LevelId != 0)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.LevelId);
-			}
 			if (this.UseReviveCount != 0)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(48);
 				output.WriteInt32(this.UseReviveCount);
 			}
+			if (this.CurStar != 0)
+			{
+				output.WriteRawTag(56);
+				output.WriteInt32(this.CurStar);
+			}
+			this.buffSelection_.WriteTo(ref output, BabelActivityInstInfoNotify._repeated_buffSelection_codec);
+			if (this.LevelId != 0)
+			{
+				output.WriteRawTag(88);
+				output.WriteInt32(this.LevelId);
+			}
+			this.babelDeTermId_.WriteTo(ref output, BabelActivityInstInfoNotify._repeated_babelDeTermId_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060029B9 RID: 10681 RVA: 0x0006D5AC File Offset: 0x0006B7AC
+		// Token: 0x06002A30 RID: 10800 RVA: 0x0006E9E0 File Offset: 0x0006CBE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -291,7 +291,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060029BA RID: 10682 RVA: 0x0006D658 File Offset: 0x0006B858
+		// Token: 0x06002A31 RID: 10801 RVA: 0x0006EA8C File Offset: 0x0006CC8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelActivityInstInfoNotify other)
@@ -321,7 +321,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060029BB RID: 10683 RVA: 0x0006D6F2 File Offset: 0x0006B8F2
+		// Token: 0x06002A32 RID: 10802 RVA: 0x0006EB26 File Offset: 0x0006CD26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060029BC RID: 10684 RVA: 0x0006D6FC File Offset: 0x0006B8FC
+		// Token: 0x06002A33 RID: 10803 RVA: 0x0006EB30 File Offset: 0x0006CD30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -341,95 +341,101 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 18U)
+				if (num <= 80U)
 				{
-					if (num <= 10U)
+					if (num <= 48U)
 					{
-						if (num == 8U || num == 10U)
+						if (num == 32U)
 						{
-							this.babelDeTermId_.AddEntriesFrom(ref input, BabelActivityInstInfoNotify._repeated_babelDeTermId_codec);
+							this.RoleCD = input.ReadInt32();
+							continue;
+						}
+						if (num == 48U)
+						{
+							this.UseReviveCount = input.ReadInt32();
 							continue;
 						}
 					}
-					else if (num == 16U || num == 18U)
+					else
 					{
-						this.buffSelection_.AddEntriesFrom(ref input, BabelActivityInstInfoNotify._repeated_buffSelection_codec);
-						continue;
+						if (num == 56U)
+						{
+							this.CurStar = input.ReadInt32();
+							continue;
+						}
+						if (num == 80U)
+						{
+							goto IL_87;
+						}
 					}
 				}
 				else if (num <= 88U)
 				{
-					if (num == 32U)
+					if (num == 82U)
 					{
-						this.RoleCD = input.ReadInt32();
-						continue;
+						goto IL_87;
 					}
 					if (num == 88U)
-					{
-						this.CurStar = input.ReadInt32();
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 96U)
 					{
 						this.LevelId = input.ReadInt32();
 						continue;
 					}
-					if (num == 104U)
-					{
-						this.UseReviveCount = input.ReadInt32();
-						continue;
-					}
+				}
+				else if (num == 120U || num == 122U)
+				{
+					this.babelDeTermId_.AddEntriesFrom(ref input, BabelActivityInstInfoNotify._repeated_babelDeTermId_codec);
+					continue;
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_87:
+				this.buffSelection_.AddEntriesFrom(ref input, BabelActivityInstInfoNotify._repeated_buffSelection_codec);
 			}
 		}
 
-		// Token: 0x04002708 RID: 9992
+		// Token: 0x0400277C RID: 10108
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002709 RID: 9993
-		public const int LevelIdFieldNumber = 12;
+		// Token: 0x0400277D RID: 10109
+		public const int LevelIdFieldNumber = 11;
 
-		// Token: 0x0400270A RID: 9994
+		// Token: 0x0400277E RID: 10110
 		private int levelId_;
 
-		// Token: 0x0400270B RID: 9995
-		public const int UseReviveCountFieldNumber = 13;
+		// Token: 0x0400277F RID: 10111
+		public const int UseReviveCountFieldNumber = 6;
 
-		// Token: 0x0400270C RID: 9996
+		// Token: 0x04002780 RID: 10112
 		private int useReviveCount_;
 
-		// Token: 0x0400270D RID: 9997
-		public const int BuffSelectionFieldNumber = 2;
+		// Token: 0x04002781 RID: 10113
+		public const int BuffSelectionFieldNumber = 10;
 
-		// Token: 0x0400270E RID: 9998
-		private static readonly FieldCodec<int> _repeated_buffSelection_codec = FieldCodec.ForInt32(18U);
+		// Token: 0x04002782 RID: 10114
+		private static readonly FieldCodec<int> _repeated_buffSelection_codec = FieldCodec.ForInt32(82U);
 
-		// Token: 0x0400270F RID: 9999
+		// Token: 0x04002783 RID: 10115
 		private readonly RepeatedField<int> buffSelection_ = new RepeatedField<int>();
 
-		// Token: 0x04002710 RID: 10000
-		public const int BabelDeTermIdFieldNumber = 1;
+		// Token: 0x04002784 RID: 10116
+		public const int BabelDeTermIdFieldNumber = 15;
 
-		// Token: 0x04002711 RID: 10001
-		private static readonly FieldCodec<int> _repeated_babelDeTermId_codec = FieldCodec.ForInt32(10U);
+		// Token: 0x04002785 RID: 10117
+		private static readonly FieldCodec<int> _repeated_babelDeTermId_codec = FieldCodec.ForInt32(122U);
 
-		// Token: 0x04002712 RID: 10002
+		// Token: 0x04002786 RID: 10118
 		private readonly RepeatedField<int> babelDeTermId_ = new RepeatedField<int>();
 
-		// Token: 0x04002713 RID: 10003
+		// Token: 0x04002787 RID: 10119
 		public const int RoleCDFieldNumber = 4;
 
-		// Token: 0x04002714 RID: 10004
+		// Token: 0x04002788 RID: 10120
 		private int roleCD_;
 
-		// Token: 0x04002715 RID: 10005
-		public const int CurStarFieldNumber = 11;
+		// Token: 0x04002789 RID: 10121
+		public const int CurStarFieldNumber = 7;
 
-		// Token: 0x04002716 RID: 10006
+		// Token: 0x0400278A RID: 10122
 		private int curStar_;
 	}
 }

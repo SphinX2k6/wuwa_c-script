@@ -12,16 +12,16 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200206A RID: 8298
+// Token: 0x0200153D RID: 5437
 public class LevelUpView : UiViewBase
 {
-	// Token: 0x0601055D RID: 66909 RVA: 0x003FC2DC File Offset: 0x003FA4DC
+	// Token: 0x0600D9C5 RID: 55749 RVA: 0x00408724 File Offset: 0x00406924
 	[NullableContext(1)]
 	public LevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601055E RID: 66910 RVA: 0x003FC320 File Offset: 0x003FA520
+	// Token: 0x0600D9C6 RID: 55750 RVA: 0x00408768 File Offset: 0x00406968
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class LevelUpView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601055F RID: 66911 RVA: 0x003FC37C File Offset: 0x003FA57C
+	// Token: 0x0600D9C7 RID: 55751 RVA: 0x004087C4 File Offset: 0x004069C4
 	protected override void OnStart()
 	{
 		ILevelUpViewViedData cacheData = LevelUpModel.Instance.GetCacheData();
@@ -60,7 +60,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010560 RID: 66912 RVA: 0x003FC500 File Offset: 0x003FA700
+	// Token: 0x0600D9C8 RID: 55752 RVA: 0x00408948 File Offset: 0x00406B48
 	private void LevelUpTryCloseMe()
 	{
 		if (this.IsLevelUpAnimeDown && this.ShowingExp >= this.TargetExp)
@@ -69,7 +69,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010561 RID: 66913 RVA: 0x003FC51E File Offset: 0x003FA71E
+	// Token: 0x0600D9C9 RID: 55753 RVA: 0x00408966 File Offset: 0x00406B66
 	private void TryCloseMe()
 	{
 		if (this.IsInClosing)
@@ -80,7 +80,7 @@ public class LevelUpView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010562 RID: 66914 RVA: 0x003FC537 File Offset: 0x003FA737
+	// Token: 0x0600D9CA RID: 55754 RVA: 0x0040897F File Offset: 0x00406B7F
 	protected override void OnBeforeShow()
 	{
 		if (this.IsLevelUp)
@@ -93,7 +93,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010563 RID: 66915 RVA: 0x003FC558 File Offset: 0x003FA758
+	// Token: 0x0600D9CB RID: 55755 RVA: 0x004089A0 File Offset: 0x00406BA0
 	protected override void OnAfterShow()
 	{
 		this.ClearAnimeTimer();
@@ -108,8 +108,8 @@ public class LevelUpView : UiViewBase
 		}, (float)this.CloseTime, null, null, true, 1f);
 	}
 
-	// Token: 0x17001429 RID: 5161
-	// (get) Token: 0x06010564 RID: 66916 RVA: 0x003FC5C8 File Offset: 0x003FA7C8
+	// Token: 0x17001456 RID: 5206
+	// (get) Token: 0x0600D9CC RID: 55756 RVA: 0x00408A10 File Offset: 0x00406C10
 	private bool GetIsOverLoop
 	{
 		get
@@ -118,7 +118,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010565 RID: 66917 RVA: 0x003FC5E8 File Offset: 0x003FA7E8
+	// Token: 0x0600D9CD RID: 55757 RVA: 0x00408A30 File Offset: 0x00406C30
 	private void RefreshExp()
 	{
 		if (this.AnimePlayer != null && !this.IsOverLoop && this.GetIsOverLoop)
@@ -147,7 +147,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010566 RID: 66918 RVA: 0x003FC708 File Offset: 0x003FA908
+	// Token: 0x0600D9CE RID: 55758 RVA: 0x00408B50 File Offset: 0x00406D50
 	private void BarExpAnime(float delta)
 	{
 		if (this.IsInClosing || base.IsDestroyOrDestroying)
@@ -165,14 +165,14 @@ public class LevelUpView : UiViewBase
 		this.RefreshExp();
 	}
 
-	// Token: 0x06010567 RID: 66919 RVA: 0x003FC778 File Offset: 0x003FA978
+	// Token: 0x0600D9CF RID: 55759 RVA: 0x00408BC0 File Offset: 0x00406DC0
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearAnimeTimer();
 		this.RecycleEffect();
 	}
 
-	// Token: 0x06010568 RID: 66920 RVA: 0x003FC786 File Offset: 0x003FA986
+	// Token: 0x0600D9D0 RID: 55760 RVA: 0x00408BCE File Offset: 0x00406DCE
 	private void ClearAnimeTimer()
 	{
 		if (this.AnimePlayer != null && TimerSystem.GameplayTimeInstance.Has(this.AnimePlayer))
@@ -182,26 +182,26 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010569 RID: 66921 RVA: 0x003FC7BA File Offset: 0x003FA9BA
+	// Token: 0x0600D9D1 RID: 55761 RVA: 0x00408C02 File Offset: 0x00406E02
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 	}
 
-	// Token: 0x0601056A RID: 66922 RVA: 0x003FC7D8 File Offset: 0x003FA9D8
+	// Token: 0x0600D9D2 RID: 55762 RVA: 0x00408C20 File Offset: 0x00406E20
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 	}
 
-	// Token: 0x0601056B RID: 66923 RVA: 0x003FC7F6 File Offset: 0x003FA9F6
+	// Token: 0x0600D9D3 RID: 55763 RVA: 0x00408C3E File Offset: 0x00406E3E
 	[NullableContext(1)]
 	private void OnSequenceNetworkStart(PlotInfo plotInfo)
 	{
 		this.TryCloseMe();
 	}
 
-	// Token: 0x0601056C RID: 66924 RVA: 0x003FC800 File Offset: 0x003FAA00
+	// Token: 0x0600D9D4 RID: 55764 RVA: 0x00408C48 File Offset: 0x00406E48
 	private void ShowLevelUpQuestTips()
 	{
 		if (!LevelUpModel.Instance.CanBreakTipsShowFlag)
@@ -220,7 +220,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601056D RID: 66925 RVA: 0x003FC880 File Offset: 0x003FAA80
+	// Token: 0x0600D9D5 RID: 55765 RVA: 0x00408CC8 File Offset: 0x00406EC8
 	private void PlayLevelUpEffect()
 	{
 		if (Global.BaseCharacter == null)
@@ -251,7 +251,7 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601056E RID: 66926 RVA: 0x003FC938 File Offset: 0x003FAB38
+	// Token: 0x0600D9D6 RID: 55766 RVA: 0x00408D80 File Offset: 0x00406F80
 	private void RecycleEffect()
 	{
 		if (EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -261,65 +261,65 @@ public class LevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x040078A9 RID: 30889
+	// Token: 0x04007992 RID: 31122
 	private int EffectHandle;
 
-	// Token: 0x040078AA RID: 30890
+	// Token: 0x04007993 RID: 31123
 	private bool IsLevelUp;
 
-	// Token: 0x040078AB RID: 30891
+	// Token: 0x04007994 RID: 31124
 	private bool IsExpUp;
 
-	// Token: 0x040078AC RID: 30892
+	// Token: 0x04007995 RID: 31125
 	private bool IsOverLevel;
 
-	// Token: 0x040078AD RID: 30893
+	// Token: 0x04007996 RID: 31126
 	private bool IsOverLoop;
 
-	// Token: 0x040078AE RID: 30894
+	// Token: 0x04007997 RID: 31127
 	private float ShowingExp;
 
-	// Token: 0x040078AF RID: 30895
+	// Token: 0x04007998 RID: 31128
 	private float PreMaxExp;
 
-	// Token: 0x040078B0 RID: 30896
+	// Token: 0x04007999 RID: 31129
 	private float TargetExp;
 
-	// Token: 0x040078B1 RID: 30897
+	// Token: 0x0400799A RID: 31130
 	private float CurMaxExp;
 
-	// Token: 0x040078B2 RID: 30898
+	// Token: 0x0400799B RID: 31131
 	private float AddExp;
 
-	// Token: 0x040078B3 RID: 30899
+	// Token: 0x0400799C RID: 31132
 	private int CurrentLevel;
 
-	// Token: 0x040078B4 RID: 30900
+	// Token: 0x0400799D RID: 31133
 	private bool IsLevelUpAnimeDown;
 
-	// Token: 0x040078B5 RID: 30901
+	// Token: 0x0400799E RID: 31134
 	[Nullable(2)]
 	private TimerHandle AnimePlayer;
 
-	// Token: 0x040078B6 RID: 30902
+	// Token: 0x0400799F RID: 31135
 	private bool IsInClosing;
 
-	// Token: 0x040078B7 RID: 30903
+	// Token: 0x040079A0 RID: 31136
 	private readonly int AnimeTime = ConfigCommonParamById.GetIntConfig("ExpDisplayTime").Value;
 
-	// Token: 0x040078B8 RID: 30904
+	// Token: 0x040079A1 RID: 31137
 	private readonly int CloseTime = ConfigCommonParamById.GetIntConfig("ExpDisplayCloseTime").Value;
 
-	// Token: 0x0200865A RID: 34394
+	// Token: 0x020077E1 RID: 30689
 	private class EChildType
 	{
-		// Token: 0x0402BB79 RID: 179065
+		// Token: 0x04026E88 RID: 159368
 		public const int LevelTxt = 0;
 
-		// Token: 0x0402BB7A RID: 179066
+		// Token: 0x04026E89 RID: 159369
 		public const int TxtExp = 1;
 
-		// Token: 0x0402BB7B RID: 179067
+		// Token: 0x04026E8A RID: 159370
 		public const int BarExp = 2;
 	}
 }

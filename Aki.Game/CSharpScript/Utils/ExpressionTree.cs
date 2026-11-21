@@ -5,18 +5,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004512 RID: 17682
+	// Token: 0x02003434 RID: 13364
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExpressionTree : IStaticVariableResetter
 	{
-		// Token: 0x0602D81D RID: 186397 RVA: 0x00A44F52 File Offset: 0x00A43152
+		// Token: 0x06021EED RID: 138989 RVA: 0x00970D62 File Offset: 0x0096EF62
 		static ExpressionTree()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ExpressionTree.CreateStaticDefaultValue), new Action(ExpressionTree.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602D81E RID: 186398 RVA: 0x00A44F74 File Offset: 0x00A43174
+		// Token: 0x06021EEE RID: 138990 RVA: 0x00970D84 File Offset: 0x0096EF84
 		public static void CreateStaticDefaultValue()
 		{
 			Dictionary<string, ENodeType> dictionary = new Dictionary<string, ENodeType>();
@@ -35,14 +35,14 @@ namespace CSharpScript.Utils
 			ExpressionTree.RelationOperatorMap = dictionary2;
 		}
 
-		// Token: 0x0602D81F RID: 186399 RVA: 0x00A4500E File Offset: 0x00A4320E
+		// Token: 0x06021EEF RID: 138991 RVA: 0x00970E1E File Offset: 0x0096F01E
 		public static void ResetStaticDefaultValue()
 		{
 			ExpressionTree.OperatorMap = null;
 			ExpressionTree.RelationOperatorMap = null;
 		}
 
-		// Token: 0x0602D820 RID: 186400 RVA: 0x00A4501C File Offset: 0x00A4321C
+		// Token: 0x06021EF0 RID: 138992 RVA: 0x00970E2C File Offset: 0x0096F02C
 		public void ResetData()
 		{
 			this.Formula = string.Empty;
@@ -55,7 +55,7 @@ namespace CSharpScript.Utils
 			this.IsRunning = false;
 		}
 
-		// Token: 0x0602D821 RID: 186401 RVA: 0x00A45070 File Offset: 0x00A43270
+		// Token: 0x06021EF1 RID: 138993 RVA: 0x00970E80 File Offset: 0x0096F080
 		public unsafe bool Parse(string reason, string formula, [Nullable(new byte[]
 		{
 			2,
@@ -99,7 +99,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D822 RID: 186402 RVA: 0x00A45164 File Offset: 0x00A43364
+		// Token: 0x06021EF2 RID: 138994 RVA: 0x00970F74 File Offset: 0x0096F174
 		[NullableContext(2)]
 		private INode ParseStatement()
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Utils
 			return null;
 		}
 
-		// Token: 0x0602D823 RID: 186403 RVA: 0x00A45260 File Offset: 0x00A43460
+		// Token: 0x06021EF3 RID: 138995 RVA: 0x00971070 File Offset: 0x0096F270
 		[NullableContext(2)]
 		private INode ParseArguments()
 		{
@@ -202,7 +202,7 @@ namespace CSharpScript.Utils
 			return node;
 		}
 
-		// Token: 0x0602D824 RID: 186404 RVA: 0x00A45370 File Offset: 0x00A43570
+		// Token: 0x06021EF4 RID: 138996 RVA: 0x00971180 File Offset: 0x0096F380
 		private INode ParseNumber()
 		{
 			int position = this.Position;
@@ -226,7 +226,7 @@ namespace CSharpScript.Utils
 			};
 		}
 
-		// Token: 0x0602D825 RID: 186405 RVA: 0x00A45464 File Offset: 0x00A43664
+		// Token: 0x06021EF5 RID: 138997 RVA: 0x00971274 File Offset: 0x0096F474
 		private INode ParseRelationOperator()
 		{
 			int length = Math.Min(2, this.Formula.Length - this.Position);
@@ -246,7 +246,7 @@ namespace CSharpScript.Utils
 			};
 		}
 
-		// Token: 0x0602D826 RID: 186406 RVA: 0x00A45524 File Offset: 0x00A43724
+		// Token: 0x06021EF6 RID: 138998 RVA: 0x00971334 File Offset: 0x0096F534
 		private INode ParseIdentifier()
 		{
 			int position = this.Position;
@@ -304,14 +304,14 @@ namespace CSharpScript.Utils
 			return node;
 		}
 
-		// Token: 0x0602D827 RID: 186407 RVA: 0x00A456A2 File Offset: 0x00A438A2
+		// Token: 0x06021EF7 RID: 138999 RVA: 0x009714B2 File Offset: 0x0096F6B2
 		private bool IsRelationOperatorStart(char ch)
 		{
 			return ch == '=' || ch == '!' || ch == '<' || ch == '>';
 		}
 
-		// Token: 0x170073EF RID: 29679
-		// (get) Token: 0x0602D828 RID: 186408 RVA: 0x00A456BA File Offset: 0x00A438BA
+		// Token: 0x170046A7 RID: 18087
+		// (get) Token: 0x06021EF8 RID: 139000 RVA: 0x009714CA File Offset: 0x0096F6CA
 		private bool IsEnd
 		{
 			get
@@ -320,7 +320,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D829 RID: 186409 RVA: 0x00A456D4 File Offset: 0x00A438D4
+		// Token: 0x06021EF9 RID: 139001 RVA: 0x009714E4 File Offset: 0x0096F6E4
 		private void PassEmpty()
 		{
 			while (this.Position < this.Formula.Length)
@@ -334,13 +334,13 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D82A RID: 186410 RVA: 0x00A45723 File Offset: 0x00A43923
+		// Token: 0x06021EFA RID: 139002 RVA: 0x00971533 File Offset: 0x0096F733
 		private void ThrowError(string errorInfo)
 		{
 			throw new Exception(errorInfo);
 		}
 
-		// Token: 0x0602D82B RID: 186411 RVA: 0x00A4572C File Offset: 0x00A4392C
+		// Token: 0x06021EFB RID: 139003 RVA: 0x0097153C File Offset: 0x0096F73C
 		private TFormulaValue EvaluateNode(INode node)
 		{
 			TFormulaValue tformulaValue;
@@ -443,7 +443,7 @@ namespace CSharpScript.Utils
 			return tformulaValue;
 		}
 
-		// Token: 0x0602D82C RID: 186412 RVA: 0x00A459E4 File Offset: 0x00A43BE4
+		// Token: 0x06021EFC RID: 139004 RVA: 0x009717F4 File Offset: 0x0096F9F4
 		private TFormulaValue EvaluateRelationNode(INode node)
 		{
 			TFormulaValue left = this.EvaluateNode(node.Children[0]);
@@ -467,7 +467,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D82D RID: 186413 RVA: 0x00A45A94 File Offset: 0x00A43C94
+		// Token: 0x06021EFD RID: 139005 RVA: 0x009718A4 File Offset: 0x0096FAA4
 		public unsafe TFormulaValue Evaluate(IExpressionContext context, [Nullable(new byte[]
 		{
 			2,
@@ -529,19 +529,19 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D82E RID: 186414 RVA: 0x00A45C5C File Offset: 0x00A43E5C
+		// Token: 0x06021EFE RID: 139006 RVA: 0x00971A6C File Offset: 0x0096FC6C
 		[Conditional("DEBUG")]
 		private void PrintRunTimeLogInfo()
 		{
 		}
 
-		// Token: 0x0602D82F RID: 186415 RVA: 0x00A45C5E File Offset: 0x00A43E5E
+		// Token: 0x06021EFF RID: 139007 RVA: 0x00971A6E File Offset: 0x0096FC6E
 		[Conditional("DEBUG")]
 		private void AddRunTimeLogInfo(string info)
 		{
 		}
 
-		// Token: 0x0602D830 RID: 186416 RVA: 0x00A45C60 File Offset: 0x00A43E60
+		// Token: 0x06021F00 RID: 139008 RVA: 0x00971A70 File Offset: 0x0096FC70
 		private static bool ToBool(TFormulaValue value)
 		{
 			bool result;
@@ -572,10 +572,10 @@ namespace CSharpScript.Utils
 			return !value.IsNull;
 		}
 
-		// Token: 0x04018539 RID: 99641
+		// Token: 0x04012B61 RID: 76641
 		private const int RELATION_OPERATOR_MAX_LENGTH = 2;
 
-		// Token: 0x0401853A RID: 99642
+		// Token: 0x04012B62 RID: 76642
 		[Nullable(new byte[]
 		{
 			2,
@@ -583,7 +583,7 @@ namespace CSharpScript.Utils
 		})]
 		private static Dictionary<string, ENodeType> OperatorMap;
 
-		// Token: 0x0401853B RID: 99643
+		// Token: 0x04012B63 RID: 76643
 		[Nullable(new byte[]
 		{
 			2,
@@ -591,31 +591,31 @@ namespace CSharpScript.Utils
 		})]
 		private static Dictionary<string, ENodeType> RelationOperatorMap;
 
-		// Token: 0x0401853C RID: 99644
+		// Token: 0x04012B64 RID: 76644
 		private static readonly bool IsDebug;
 
-		// Token: 0x0401853D RID: 99645
+		// Token: 0x04012B65 RID: 76645
 		private string Formula = string.Empty;
 
-		// Token: 0x0401853E RID: 99646
+		// Token: 0x04012B66 RID: 76646
 		[Nullable(2)]
 		private CustomVariable CustomVariable;
 
-		// Token: 0x0401853F RID: 99647
+		// Token: 0x04012B67 RID: 76647
 		private readonly List<string> LogInfo = new List<string>();
 
-		// Token: 0x04018540 RID: 99648
+		// Token: 0x04012B68 RID: 76648
 		private int Position;
 
-		// Token: 0x04018541 RID: 99649
+		// Token: 0x04012B69 RID: 76649
 		[Nullable(2)]
 		private INode RootNode;
 
-		// Token: 0x04018542 RID: 99650
+		// Token: 0x04012B6A RID: 76650
 		[Nullable(2)]
 		private IExpressionContext Context;
 
-		// Token: 0x04018543 RID: 99651
+		// Token: 0x04012B6B RID: 76651
 		[Nullable(new byte[]
 		{
 			2,
@@ -623,10 +623,10 @@ namespace CSharpScript.Utils
 		})]
 		private Dictionary<string, TFormulaValue> ExtraParams;
 
-		// Token: 0x04018544 RID: 99652
+		// Token: 0x04012B6C RID: 76652
 		private bool IsRunning;
 
-		// Token: 0x04018545 RID: 99653
+		// Token: 0x04012B6D RID: 76653
 		private string Reason = string.Empty;
 	}
 }

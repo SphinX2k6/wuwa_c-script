@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BB4 RID: 7092
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D9B RID: 7579
 	public class ILookAtTarget : IDefaultLookAtType
 	{
-		// Token: 0x060097DB RID: 38875 RVA: 0x0015E288 File Offset: 0x0015C488
+		// Token: 0x0600A0DF RID: 41183 RVA: 0x00170D48 File Offset: 0x0016EF48
 		private ILookAtTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060097DC RID: 38876 RVA: 0x0015E2C0 File Offset: 0x0015C4C0
+		// Token: 0x0600A0E0 RID: 41184 RVA: 0x00170D80 File Offset: 0x0016EF80
 		public static ILookAtTarget Create([Nullable(2)] ILookAtTarget instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097DD RID: 38877 RVA: 0x0015E2D3 File Offset: 0x0015C4D3
+		// Token: 0x0600A0E1 RID: 41185 RVA: 0x00170D93 File Offset: 0x0016EF93
 		public static ILookAtTarget CreateFromSetValue([Nullable(2)] ILookAtTarget_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097DE RID: 38878 RVA: 0x0015E2E6 File Offset: 0x0015C4E6
+		// Token: 0x0600A0E2 RID: 41186 RVA: 0x00170DA6 File Offset: 0x0016EFA6
 		public new ILookAtTarget_SetValue ToSetValue()
 		{
 			return new ILookAtTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FB6 RID: 12214
-		// (get) Token: 0x060097DF RID: 38879 RVA: 0x0015E305 File Offset: 0x0015C505
-		// (set) Token: 0x060097E0 RID: 38880 RVA: 0x0015E330 File Offset: 0x0015C530
+		// Token: 0x17003215 RID: 12821
+		// (get) Token: 0x0600A0E3 RID: 41187 RVA: 0x00170DC5 File Offset: 0x0016EFC5
+		// (set) Token: 0x0600A0E4 RID: 41188 RVA: 0x00170DF0 File Offset: 0x0016EFF0
 		public override EDefaultLookAtType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FB7 RID: 12215
-		// (get) Token: 0x060097E1 RID: 38881 RVA: 0x0015E340 File Offset: 0x0015C540
-		// (set) Token: 0x060097E2 RID: 38882 RVA: 0x0015E3D3 File Offset: 0x0015C5D3
+		// Token: 0x17003216 RID: 12822
+		// (get) Token: 0x0600A0E5 RID: 41189 RVA: 0x00170E00 File Offset: 0x0016F000
+		// (set) Token: 0x0600A0E6 RID: 41190 RVA: 0x00170E93 File Offset: 0x0016F093
 		public virtual List<INpcLookAtConfig> LookAtConfigs
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005CA9 RID: 23721
+		// Token: 0x040061BE RID: 25022
 		[Nullable(2)]
 		protected new ILookAtTarget FbInstance;
 
-		// Token: 0x04005CAA RID: 23722
+		// Token: 0x040061BF RID: 25023
 		[Nullable(2)]
 		protected new ILookAtTarget_SetValue PocoInterface;
 
-		// Token: 0x04005CAB RID: 23723
+		// Token: 0x040061C0 RID: 25024
 		private List<INpcLookAtConfig> _LookAtConfigsCache;
 
-		// Token: 0x04005CAC RID: 23724
+		// Token: 0x040061C1 RID: 25025
 		private bool _LookAtConfigsInited;
 	}
 }

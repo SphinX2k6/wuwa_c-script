@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB3 RID: 23987
+	// Token: 0x02004D97 RID: 19863
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ScanTrackedMarksView : BattleChildView
 	{
-		// Token: 0x0603CEDE RID: 249566 RVA: 0x00EA3A55 File Offset: 0x00EA1C55
+		// Token: 0x06031E55 RID: 204373 RVA: 0x00DF4929 File Offset: 0x00DF2B29
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BindEvents();
 		}
 
-		// Token: 0x0603CEDF RID: 249567 RVA: 0x00EA3A64 File Offset: 0x00EA1C64
+		// Token: 0x06031E56 RID: 204374 RVA: 0x00DF4938 File Offset: 0x00DF2B38
 		public override void Reset()
 		{
 			base.Reset();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TrackedMarks.Clear();
 		}
 
-		// Token: 0x0603CEE0 RID: 249568 RVA: 0x00EA3A80 File Offset: 0x00EA1C80
+		// Token: 0x06031E57 RID: 204375 RVA: 0x00DF4954 File Offset: 0x00DF2B54
 		public void Update()
 		{
 			foreach (ScanTrackedMarks scanTrackedMarks in this.TrackedMarks.Values)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEE1 RID: 249569 RVA: 0x00EA3AD8 File Offset: 0x00EA1CD8
+		// Token: 0x06031E58 RID: 204376 RVA: 0x00DF49AC File Offset: 0x00DF2BAC
 		[NullableContext(2)]
 		private void ScanTrackedStart(int entityId, IScanCompositeResult scanComposite)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEE2 RID: 249570 RVA: 0x00EA3C20 File Offset: 0x00EA1E20
+		// Token: 0x06031E59 RID: 204377 RVA: 0x00DF4AF4 File Offset: 0x00DF2CF4
 		private void ScanTrackedEnd(int entityId)
 		{
 			this.TrackedMarksLoaded.Remove(entityId);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEE3 RID: 249571 RVA: 0x00EA3C50 File Offset: 0x00EA1E50
+		// Token: 0x06031E5A RID: 204378 RVA: 0x00DF4B24 File Offset: 0x00DF2D24
 		private void InnerAddTrackMark(int id, ULGUISpriteData_BaseObject markIconSprite, float markHideDis, string effectPath, FVectorDouble? originPosition = null, [Nullable(2)] AActor trackActor = null, [Nullable(2)] global::Vector offset = null, int? level = null, bool? showDistance = null, bool? needClampToEllipse = null)
 		{
 			if (!this.TrackedMarks.ContainsKey(id))
@@ -114,30 +114,30 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CEE4 RID: 249572 RVA: 0x00EA3C94 File Offset: 0x00EA1E94
+		// Token: 0x06031E5B RID: 204379 RVA: 0x00DF4B68 File Offset: 0x00DF2D68
 		private void BindEvents()
 		{
 			EventSystem.Instance.Add<int, IScanCompositeResult>(EEventName.ScanTrackedStart, new Action<int, IScanCompositeResult>(this.ScanTrackedStart));
 			EventSystem.Instance.Add<int>(EEventName.ScanTrackedEnd, new Action<int>(this.ScanTrackedEnd));
 		}
 
-		// Token: 0x0603CEE5 RID: 249573 RVA: 0x00EA3CCE File Offset: 0x00EA1ECE
+		// Token: 0x06031E5C RID: 204380 RVA: 0x00DF4BA2 File Offset: 0x00DF2DA2
 		private void UnbindEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.ScanTrackedStart, new Action<int, IScanCompositeResult>(this.ScanTrackedStart));
 			EventSystem.Instance.Remove(EEventName.ScanTrackedEnd, new Action<int>(this.ScanTrackedEnd));
 		}
 
-		// Token: 0x0603CEE6 RID: 249574 RVA: 0x00EA3D08 File Offset: 0x00EA1F08
+		// Token: 0x06031E5D RID: 204381 RVA: 0x00DF4BDC File Offset: 0x00DF2DDC
 		protected override bool DestroyOverride()
 		{
 			return true;
 		}
 
-		// Token: 0x0401FBBD RID: 129981
+		// Token: 0x0401A67A RID: 108154
 		private readonly Dictionary<int, ScanTrackedMarks> TrackedMarks = new Dictionary<int, ScanTrackedMarks>();
 
-		// Token: 0x0401FBBE RID: 129982
+		// Token: 0x0401A67B RID: 108155
 		private readonly HashSet<int> TrackedMarksLoaded = new HashSet<int>();
 	}
 }

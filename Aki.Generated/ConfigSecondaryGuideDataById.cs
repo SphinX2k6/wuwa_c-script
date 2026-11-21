@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000900 RID: 2304
+	// Token: 0x0200094B RID: 2379
 	public class ConfigSecondaryGuideDataById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003613 RID: 13843 RVA: 0x0018B04C File Offset: 0x0018924C
+		// Token: 0x060037D5 RID: 14293 RVA: 0x0019826C File Offset: 0x0019646C
 		static ConfigSecondaryGuideDataById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSecondaryGuideDataById.CreateStaticDefaultValue), new Action(ConfigSecondaryGuideDataById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003614 RID: 13844 RVA: 0x0018B06C File Offset: 0x0018926C
+		// Token: 0x060037D6 RID: 14294 RVA: 0x0019828C File Offset: 0x0019648C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSecondaryGuideDataById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003615 RID: 13845 RVA: 0x0018B0EB File Offset: 0x001892EB
+		// Token: 0x060037D7 RID: 14295 RVA: 0x0019830B File Offset: 0x0019650B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSecondaryGuideDataById.LogPair = null;
 			ConfigSecondaryGuideDataById.HandleId = 0;
 		}
 
-		// Token: 0x06003616 RID: 13846 RVA: 0x0018B0F9 File Offset: 0x001892F9
+		// Token: 0x060037D8 RID: 14296 RVA: 0x00198319 File Offset: 0x00196519
 		public static void Init()
 		{
 			ConfigSecondaryGuideDataById.HandleId = ConfigCommon.InitDataStatement(ConfigSecondaryGuideDataById.HandleId, "db_adventure_detect.db", "select BinData from `SecondaryGuideData` where Id=?");
 		}
 
-		// Token: 0x06003617 RID: 13847 RVA: 0x0018B114 File Offset: 0x00189314
+		// Token: 0x060037D9 RID: 14297 RVA: 0x00198334 File Offset: 0x00196534
 		public static SecondaryGuideData? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSecondaryGuideDataById.HandleId, ConfigSecondaryGuideDataById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SecondaryGuideData?(rootAsSecondaryGuideData);
 		}
 
-		// Token: 0x04003EE6 RID: 16102
+		// Token: 0x040040F3 RID: 16627
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04003EE7 RID: 16103
+		// Token: 0x040040F4 RID: 16628
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x04003EE8 RID: 16104
+		// Token: 0x040040F5 RID: 16629
 		private const string TABLE = "SecondaryGuideData";
 
-		// Token: 0x04003EE9 RID: 16105
+		// Token: 0x040040F6 RID: 16630
 		private const string COMMAND = "select BinData from `SecondaryGuideData` where Id=?";
 
-		// Token: 0x04003EEA RID: 16106
+		// Token: 0x040040F7 RID: 16631
 		private const string KEY_PREFIX = "SecondaryGuideDataById";
 
-		// Token: 0x04003EEB RID: 16107
+		// Token: 0x040040F8 RID: 16632
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003EEC RID: 16108
+		// Token: 0x040040F9 RID: 16633
 		private static int HandleId;
 	}
 }

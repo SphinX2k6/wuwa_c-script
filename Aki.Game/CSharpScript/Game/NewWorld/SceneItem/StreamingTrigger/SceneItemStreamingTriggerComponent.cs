@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 {
-	// Token: 0x020071A0 RID: 29088
+	// Token: 0x02006255 RID: 25173
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemStreamingTriggerComponent : EntityComponent
 	{
-		// Token: 0x060472C8 RID: 291528 RVA: 0x01215E80 File Offset: 0x01214080
+		// Token: 0x0603CBBE RID: 248766 RVA: 0x0116FEA0 File Offset: 0x0116E0A0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			Entity entity = base.Entity;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return true;
 		}
 
-		// Token: 0x060472C9 RID: 291529 RVA: 0x01215F20 File Offset: 0x01214120
+		// Token: 0x0603CBBF RID: 248767 RVA: 0x0116FF40 File Offset: 0x0116E140
 		protected override void OnActivate()
 		{
 			PawnSensoryInfoComponent component = base.Entity.GetComponent<PawnSensoryInfoComponent>();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.LeaveLogicRange, new Action(this.OnPlayerLeave));
 		}
 
-		// Token: 0x060472CA RID: 291530 RVA: 0x01215F94 File Offset: 0x01214194
+		// Token: 0x0603CBC0 RID: 248768 RVA: 0x0116FFB4 File Offset: 0x0116E1B4
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.EnterLogicRange, new Action(this.OnPlayerEnter)))
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return true;
 		}
 
-		// Token: 0x060472CB RID: 291531 RVA: 0x01216048 File Offset: 0x01214248
+		// Token: 0x0603CBC1 RID: 248769 RVA: 0x01170068 File Offset: 0x0116E268
 		private void OnPlayerEnter()
 		{
 			if (this.IsPlayerInRange)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.SetActiveStreamingSource((this.StreamingConfig as IFixedStreamingSource).StreamingSourceConfig);
 		}
 
-		// Token: 0x060472CC RID: 291532 RVA: 0x012160A9 File Offset: 0x012142A9
+		// Token: 0x0603CBC2 RID: 248770 RVA: 0x011700C9 File Offset: 0x0116E2C9
 		private void OnPlayerLeave()
 		{
 			if (!this.IsPlayerInRange)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.SetActiveStreamingSource(null);
 		}
 
-		// Token: 0x060472CD RID: 291533 RVA: 0x012160C8 File Offset: 0x012142C8
+		// Token: 0x0603CBC3 RID: 248771 RVA: 0x011700E8 File Offset: 0x0116E2E8
 		[NullableContext(1)]
 		private void StartConditionListen(List<IConditionalStreamingSourceConfig> configs)
 		{
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.RefreshActiveStreamingSource();
 		}
 
-		// Token: 0x060472CE RID: 291534 RVA: 0x01216248 File Offset: 0x01214448
+		// Token: 0x0603CBC4 RID: 248772 RVA: 0x01170268 File Offset: 0x0116E468
 		[NullableContext(1)]
 		private void OnConditionListenCallback(SceneItemStreamingTriggerComponent.ConditionalStreamingListenInfo listenInfo, [Nullable(2)] GeneralContext callbackContext = null, params object[] otherCallbackParams)
 		{
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.RefreshActiveStreamingSource();
 		}
 
-		// Token: 0x060472CF RID: 291535 RVA: 0x012162C8 File Offset: 0x012144C8
+		// Token: 0x0603CBC5 RID: 248773 RVA: 0x011702E8 File Offset: 0x0116E4E8
 		private void RefreshActiveStreamingSource()
 		{
 			IStreamingSourceConfig activeStreamingSource = null;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.SetActiveStreamingSource(activeStreamingSource);
 		}
 
-		// Token: 0x060472D0 RID: 291536 RVA: 0x01216334 File Offset: 0x01214534
+		// Token: 0x0603CBC6 RID: 248774 RVA: 0x01170354 File Offset: 0x0116E554
 		private void SetActiveStreamingSource(IStreamingSourceConfig config)
 		{
 			if (config == this.DesiredStreamingSourceConfig)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			SceneItemStreamingTriggerController.Instance.Unregister(this);
 		}
 
-		// Token: 0x060472D1 RID: 291537 RVA: 0x01216374 File Offset: 0x01214574
+		// Token: 0x0603CBC7 RID: 248775 RVA: 0x01170394 File Offset: 0x0116E594
 		public global::Vector GetWorldLocation()
 		{
 			BaseActorComponent component = base.Entity.GetComponent<BaseActorComponent>();
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return component.ActorLocationProxy;
 		}
 
-		// Token: 0x060472D2 RID: 291538 RVA: 0x0121638C File Offset: 0x0121458C
+		// Token: 0x0603CBC8 RID: 248776 RVA: 0x011703AC File Offset: 0x0116E5AC
 		public EntityHandle GetConnectedTarget()
 		{
 			EntityHandle connectedTargetHandle = this.ConnectedTargetHandle;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return this.ConnectedTargetHandle;
 		}
 
-		// Token: 0x060472D3 RID: 291539 RVA: 0x012163AC File Offset: 0x012145AC
+		// Token: 0x0603CBC9 RID: 248777 RVA: 0x011703CC File Offset: 0x0116E5CC
 		public UWorldPartitionStreamingSourceComponent GetTargetStreamingSourceComponent()
 		{
 			AWorldPartitionStreamingPortal selfStreaming = this.SelfStreaming;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return uworldPartitionStreamingSourceComponent;
 		}
 
-		// Token: 0x060472D4 RID: 291540 RVA: 0x012163DC File Offset: 0x012145DC
+		// Token: 0x0603CBCA RID: 248778 RVA: 0x011703FC File Offset: 0x0116E5FC
 		public int? GetActiveConditionIndex()
 		{
 			if (this.AppliedStreamingSourceConfig == null)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return null;
 		}
 
-		// Token: 0x060472D5 RID: 291541 RVA: 0x0121643F File Offset: 0x0121463F
+		// Token: 0x0603CBCB RID: 248779 RVA: 0x0117045F File Offset: 0x0116E65F
 		public void NotifyApplyStreamingSource(bool isApply)
 		{
 			if (this.IsApply == isApply)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.RefreshAppliedStreamingSource();
 		}
 
-		// Token: 0x060472D6 RID: 291542 RVA: 0x01216458 File Offset: 0x01214658
+		// Token: 0x0603CBCC RID: 248780 RVA: 0x01170478 File Offset: 0x0116E678
 		private void RefreshAppliedStreamingSource()
 		{
 			IStreamingSourceConfig streamingSourceConfig = this.IsApply ? this.DesiredStreamingSourceConfig : null;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.ApplyStreamingSource(streamingSourceConfig);
 		}
 
-		// Token: 0x060472D7 RID: 291543 RVA: 0x01216490 File Offset: 0x01214690
+		// Token: 0x0603CBCD RID: 248781 RVA: 0x011704B0 File Offset: 0x0116E6B0
 		private void RefreshConnectedState()
 		{
 			bool flag = this.GetConnectedTarget() != null;
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			EventSystem.Instance.EmitWithTarget<bool>(base.Entity, EEventName.OnStreamingTriggerConnected, flag);
 		}
 
-		// Token: 0x060472D8 RID: 291544 RVA: 0x012164D0 File Offset: 0x012146D0
+		// Token: 0x0603CBCE RID: 248782 RVA: 0x011704F0 File Offset: 0x0116E6F0
 		private void ApplyStreamingSource(IStreamingSourceConfig config)
 		{
 			int value = (config != null) ? config.StreamingSourceTargetEntityId : 0;
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.TryConnectDesiredTarget();
 		}
 
-		// Token: 0x060472D9 RID: 291545 RVA: 0x0121655D File Offset: 0x0121475D
+		// Token: 0x0603CBCF RID: 248783 RVA: 0x0117057D File Offset: 0x0116E77D
 		private void RefreshStreamingSourceDisableBehavior()
 		{
 			UWorldPartitionStreamingSourceComponent targetStreamingSourceComp = this.TargetStreamingSourceComp;
@@ -319,14 +319,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.TargetStreamingSourceComp.DisableBehavior = (this.DesiredIsNoRenderStreaming ? EStreamingSourceDisableBehavior.Render : EStreamingSourceDisableBehavior.None);
 		}
 
-		// Token: 0x060472DA RID: 291546 RVA: 0x0121658E File Offset: 0x0121478E
+		// Token: 0x0603CBD0 RID: 248784 RVA: 0x011705AE File Offset: 0x0116E7AE
 		private void TryConnectDesiredTarget()
 		{
 			this.TryConnectDesiredTargetInner();
 			this.RefreshConnectedState();
 		}
 
-		// Token: 0x060472DB RID: 291547 RVA: 0x0121659C File Offset: 0x0121479C
+		// Token: 0x0603CBD1 RID: 248785 RVA: 0x011705BC File Offset: 0x0116E7BC
 		private void TryConnectDesiredTargetInner()
 		{
 			if (this.DesiredTargetPbDataId == 0)
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			}
 		}
 
-		// Token: 0x060472DC RID: 291548 RVA: 0x0121667C File Offset: 0x0121487C
+		// Token: 0x0603CBD2 RID: 248786 RVA: 0x0117069C File Offset: 0x0116E89C
 		private void DisconnectCurrentTarget()
 		{
 			EntityHandle connectedTargetHandle = this.ConnectedTargetHandle;
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			}
 		}
 
-		// Token: 0x060472DD RID: 291549 RVA: 0x012166DC File Offset: 0x012148DC
+		// Token: 0x0603CBD3 RID: 248787 RVA: 0x011706FC File Offset: 0x0116E8FC
 		[NullableContext(1)]
 		private void OnTargetEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.TryConnectDesiredTarget();
 		}
 
-		// Token: 0x060472DE RID: 291550 RVA: 0x012166F0 File Offset: 0x012148F0
+		// Token: 0x0603CBD4 RID: 248788 RVA: 0x01170710 File Offset: 0x0116E910
 		private void StartWaitingTargetAdd()
 		{
 			if (this.IsWaitingTargetAdd)
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			EventSystem.Instance.Add<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnEntityAdd));
 		}
 
-		// Token: 0x060472DF RID: 291551 RVA: 0x0121671E File Offset: 0x0121491E
+		// Token: 0x0603CBD5 RID: 248789 RVA: 0x0117073E File Offset: 0x0116E93E
 		private void StopWaitingTargetAdd()
 		{
 			if (!this.IsWaitingTargetAdd)
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			EventSystem.Instance.Remove<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnEntityAdd));
 		}
 
-		// Token: 0x060472E0 RID: 291552 RVA: 0x0121674C File Offset: 0x0121494C
+		// Token: 0x0603CBD6 RID: 248790 RVA: 0x0117076C File Offset: 0x0116E96C
 		[NullableContext(1)]
 		private void OnEntityAdd(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.TryConnectDesiredTarget();
 		}
 
-		// Token: 0x060472E1 RID: 291553 RVA: 0x01216780 File Offset: 0x01214980
+		// Token: 0x0603CBD7 RID: 248791 RVA: 0x011707A0 File Offset: 0x0116E9A0
 		[NullableContext(1)]
 		private bool ConnectStreamingSource(BaseActorComponent targetActorComp)
 		{
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return true;
 		}
 
-		// Token: 0x060472E2 RID: 291554 RVA: 0x012167C8 File Offset: 0x012149C8
+		// Token: 0x0603CBD8 RID: 248792 RVA: 0x011707E8 File Offset: 0x0116E9E8
 		private void DisconnectStreamingSource()
 		{
 			AWorldPartitionStreamingPortal selfStreaming = this.SelfStreaming;
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.ClearStreamingSource();
 		}
 
-		// Token: 0x060472E3 RID: 291555 RVA: 0x01216814 File Offset: 0x01214A14
+		// Token: 0x0603CBD9 RID: 248793 RVA: 0x01170834 File Offset: 0x0116EA34
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private UWorldPartitionStreamingSourceComponent GetOrCreateStreamingSource(BaseActorComponent targetActorComp)
@@ -486,7 +486,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return this.TargetStreamingSourceComp;
 		}
 
-		// Token: 0x060472E4 RID: 291556 RVA: 0x0121692C File Offset: 0x01214B2C
+		// Token: 0x0603CBDA RID: 248794 RVA: 0x0117094C File Offset: 0x0116EB4C
 		private void ClearStreamingSource()
 		{
 			UWorldPartitionStreamingSourceComponent targetStreamingSourceComp = this.TargetStreamingSourceComp;
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.TargetStreamingSourceActor = null;
 		}
 
-		// Token: 0x060472E5 RID: 291557 RVA: 0x01216994 File Offset: 0x01214B94
+		// Token: 0x0603CBDB RID: 248795 RVA: 0x011709B4 File Offset: 0x0116EBB4
 		private AWorldPartitionStreamingPortal GetOrCreateWpStreamingPortal()
 		{
 			GameModeModel instance = GameModeModel.Instance;
@@ -547,7 +547,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			return this.SelfStreaming;
 		}
 
-		// Token: 0x060472E6 RID: 291558 RVA: 0x01216AD0 File Offset: 0x01214CD0
+		// Token: 0x0603CBDC RID: 248796 RVA: 0x01170AF0 File Offset: 0x0116ECF0
 		private void ClearWpStreamingPortal()
 		{
 			AWorldPartitionStreamingPortal selfStreaming = this.SelfStreaming;
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.SelfStreaming = null;
 		}
 
-		// Token: 0x060472E7 RID: 291559 RVA: 0x01216B34 File Offset: 0x01214D34
+		// Token: 0x0603CBDD RID: 248797 RVA: 0x01170B54 File Offset: 0x0116ED54
 		private void ClearConditionListeners()
 		{
 			foreach (SceneItemStreamingTriggerComponent.ConditionalStreamingListenInfo conditionalStreamingListenInfo in this.ConditionalListenInfos)
@@ -576,7 +576,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 			this.ConditionalListenInfos = new List<SceneItemStreamingTriggerComponent.ConditionalStreamingListenInfo>();
 		}
 
-		// Token: 0x060472E8 RID: 291560 RVA: 0x01216BC8 File Offset: 0x01214DC8
+		// Token: 0x0603CBDE RID: 248798 RVA: 0x01170BE8 File Offset: 0x0116EDE8
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -585,193 +585,168 @@ namespace CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger
 				return false;
 			}
 			SceneItemStreamingTriggerComponent sceneItemStreamingTriggerComponent = (SceneItemStreamingTriggerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Radius"))
+			this.Radius = sceneItemStreamingTriggerComponent.Radius;
+			if (sceneItemStreamingTriggerComponent.StreamingConfig == null)
 			{
-				this.Radius = sceneItemStreamingTriggerComponent.Radius;
+				this.StreamingConfig = null;
 			}
-			if (base.CanResetComponentProperty("StreamingConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StreamingConfig), "StreamingConfig"))
 			{
-				if (sceneItemStreamingTriggerComponent.StreamingConfig == null)
-				{
-					this.StreamingConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IStreamingSourceConfigBase>(this.StreamingConfig), "StreamingConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsPlayerInRange"))
+			this.IsPlayerInRange = sceneItemStreamingTriggerComponent.IsPlayerInRange;
+			if (sceneItemStreamingTriggerComponent.ConditionalListenInfos == null)
 			{
-				this.IsPlayerInRange = sceneItemStreamingTriggerComponent.IsPlayerInRange;
+				this.ConditionalListenInfos = null;
 			}
-			if (base.CanResetComponentProperty("ConditionalListenInfos"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConditionalListenInfos), "ConditionalListenInfos"))
 			{
-				if (sceneItemStreamingTriggerComponent.ConditionalListenInfos == null)
-				{
-					this.ConditionalListenInfos = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<SceneItemStreamingTriggerComponent.ConditionalStreamingListenInfo>>(this.ConditionalListenInfos), "ConditionalListenInfos"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DesiredStreamingSourceConfig"))
+			if (sceneItemStreamingTriggerComponent.DesiredStreamingSourceConfig == null)
 			{
-				if (sceneItemStreamingTriggerComponent.DesiredStreamingSourceConfig == null)
-				{
-					this.DesiredStreamingSourceConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IStreamingSourceConfig>(this.DesiredStreamingSourceConfig), "DesiredStreamingSourceConfig"))
-				{
-					return false;
-				}
+				this.DesiredStreamingSourceConfig = null;
 			}
-			if (base.CanResetComponentProperty("IsApply"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DesiredStreamingSourceConfig), "DesiredStreamingSourceConfig"))
 			{
-				this.IsApply = sceneItemStreamingTriggerComponent.IsApply;
+				return false;
 			}
-			if (base.CanResetComponentProperty("AppliedStreamingSourceConfig"))
+			this.IsApply = sceneItemStreamingTriggerComponent.IsApply;
+			if (sceneItemStreamingTriggerComponent.AppliedStreamingSourceConfig == null)
 			{
-				if (sceneItemStreamingTriggerComponent.AppliedStreamingSourceConfig == null)
-				{
-					this.AppliedStreamingSourceConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IStreamingSourceConfig>(this.AppliedStreamingSourceConfig), "AppliedStreamingSourceConfig"))
-				{
-					return false;
-				}
+				this.AppliedStreamingSourceConfig = null;
 			}
-			if (base.CanResetComponentProperty("SelfStreaming"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AppliedStreamingSourceConfig), "AppliedStreamingSourceConfig"))
 			{
-				if (sceneItemStreamingTriggerComponent.SelfStreaming == null)
-				{
-					this.SelfStreaming = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AWorldPartitionStreamingPortal>(this.SelfStreaming), "SelfStreaming"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DesiredTargetPbDataId"))
+			if (sceneItemStreamingTriggerComponent.SelfStreaming == null)
 			{
-				this.DesiredTargetPbDataId = sceneItemStreamingTriggerComponent.DesiredTargetPbDataId;
+				this.SelfStreaming = null;
 			}
-			if (base.CanResetComponentProperty("DesiredIsNoRenderStreaming"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelfStreaming), "SelfStreaming"))
 			{
-				this.DesiredIsNoRenderStreaming = sceneItemStreamingTriggerComponent.DesiredIsNoRenderStreaming;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ConnectedTargetHandle"))
+			this.DesiredTargetPbDataId = sceneItemStreamingTriggerComponent.DesiredTargetPbDataId;
+			this.DesiredIsNoRenderStreaming = sceneItemStreamingTriggerComponent.DesiredIsNoRenderStreaming;
+			if (sceneItemStreamingTriggerComponent.ConnectedTargetHandle == null)
 			{
-				if (sceneItemStreamingTriggerComponent.ConnectedTargetHandle == null)
-				{
-					this.ConnectedTargetHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.ConnectedTargetHandle), "ConnectedTargetHandle"))
-				{
-					return false;
-				}
+				this.ConnectedTargetHandle = null;
 			}
-			if (base.CanResetComponentProperty("IsConnectedNotified"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConnectedTargetHandle), "ConnectedTargetHandle"))
 			{
-				this.IsConnectedNotified = sceneItemStreamingTriggerComponent.IsConnectedNotified;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsWaitingTargetAdd"))
+			this.IsConnectedNotified = sceneItemStreamingTriggerComponent.IsConnectedNotified;
+			this.IsWaitingTargetAdd = sceneItemStreamingTriggerComponent.IsWaitingTargetAdd;
+			if (sceneItemStreamingTriggerComponent.TargetStreamingSourceActor == null)
 			{
-				this.IsWaitingTargetAdd = sceneItemStreamingTriggerComponent.IsWaitingTargetAdd;
+				this.TargetStreamingSourceActor = null;
 			}
-			if (base.CanResetComponentProperty("TargetStreamingSourceActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetStreamingSourceActor), "TargetStreamingSourceActor"))
 			{
-				if (sceneItemStreamingTriggerComponent.TargetStreamingSourceActor == null)
-				{
-					this.TargetStreamingSourceActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.TargetStreamingSourceActor), "TargetStreamingSourceActor"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetStreamingSourceComp"))
+			if (sceneItemStreamingTriggerComponent.TargetStreamingSourceComp == null)
 			{
-				if (sceneItemStreamingTriggerComponent.TargetStreamingSourceComp == null)
-				{
-					this.TargetStreamingSourceComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UWorldPartitionStreamingSourceComponent>(this.TargetStreamingSourceComp), "TargetStreamingSourceComp"))
-				{
-					return false;
-				}
+				this.TargetStreamingSourceComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetStreamingSourceComp), "TargetStreamingSourceComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040256CE RID: 153294
+		// Token: 0x170072E7 RID: 29415
+		// (get) Token: 0x0603CBDF RID: 248799 RVA: 0x01170DB4 File Offset: 0x0116EFB4
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072E8 RID: 29416
+		// (get) Token: 0x0603CBE0 RID: 248800 RVA: 0x01170DB7 File Offset: 0x0116EFB7
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402033D RID: 131901
 		private const int TRIGGER_DEFAULT_RADIUS = 5000;
 
-		// Token: 0x040256CF RID: 153295
+		// Token: 0x0402033E RID: 131902
 		private Number Radius = 0;
 
-		// Token: 0x040256D0 RID: 153296
+		// Token: 0x0402033F RID: 131903
 		private IStreamingSourceConfigBase StreamingConfig;
 
-		// Token: 0x040256D1 RID: 153297
+		// Token: 0x04020340 RID: 131904
 		private bool IsPlayerInRange;
 
-		// Token: 0x040256D2 RID: 153298
+		// Token: 0x04020341 RID: 131905
 		[Nullable(1)]
 		private List<SceneItemStreamingTriggerComponent.ConditionalStreamingListenInfo> ConditionalListenInfos = new List<SceneItemStreamingTriggerComponent.ConditionalStreamingListenInfo>();
 
-		// Token: 0x040256D3 RID: 153299
+		// Token: 0x04020342 RID: 131906
 		private IStreamingSourceConfig DesiredStreamingSourceConfig;
 
-		// Token: 0x040256D4 RID: 153300
+		// Token: 0x04020343 RID: 131907
 		private bool IsApply;
 
-		// Token: 0x040256D5 RID: 153301
+		// Token: 0x04020344 RID: 131908
 		private IStreamingSourceConfig AppliedStreamingSourceConfig;
 
-		// Token: 0x040256D6 RID: 153302
+		// Token: 0x04020345 RID: 131909
 		private AWorldPartitionStreamingPortal SelfStreaming;
 
-		// Token: 0x040256D7 RID: 153303
+		// Token: 0x04020346 RID: 131910
 		private Number DesiredTargetPbDataId = 0;
 
-		// Token: 0x040256D8 RID: 153304
+		// Token: 0x04020347 RID: 131911
 		private bool DesiredIsNoRenderStreaming;
 
-		// Token: 0x040256D9 RID: 153305
+		// Token: 0x04020348 RID: 131912
 		private EntityHandle ConnectedTargetHandle;
 
-		// Token: 0x040256DA RID: 153306
+		// Token: 0x04020349 RID: 131913
 		private bool IsConnectedNotified;
 
-		// Token: 0x040256DB RID: 153307
+		// Token: 0x0402034A RID: 131914
 		private bool IsWaitingTargetAdd;
 
-		// Token: 0x040256DC RID: 153308
+		// Token: 0x0402034B RID: 131915
 		private AActor TargetStreamingSourceActor;
 
-		// Token: 0x040256DD RID: 153309
+		// Token: 0x0402034C RID: 131916
 		private UWorldPartitionStreamingSourceComponent TargetStreamingSourceComp;
 
-		// Token: 0x0200CF02 RID: 52994
+		// Token: 0x0200BA97 RID: 47767
 		[NullableContext(1)]
 		[Nullable(0)]
 		private class ConditionalStreamingListenInfo
 		{
-			// Token: 0x06052005 RID: 335877 RVA: 0x01648548 File Offset: 0x01646748
+			// Token: 0x060487AF RID: 296879 RVA: 0x0161A670 File Offset: 0x01618870
 			public ConditionalStreamingListenInfo(IConditionalStreamingSourceConfig config, bool checkResult)
 			{
 				this.Config = config;
 				this.CheckResult = checkResult;
 			}
 
-			// Token: 0x0403E42F RID: 255023
+			// Token: 0x04039754 RID: 235348
 			public readonly IConditionalStreamingSourceConfig Config;
 
-			// Token: 0x0403E430 RID: 255024
+			// Token: 0x04039755 RID: 235349
 			public bool CheckResult;
 
-			// Token: 0x0403E431 RID: 255025
+			// Token: 0x04039756 RID: 235350
 			public List<int> LevelListenerIds = new List<int>();
 		}
 	}

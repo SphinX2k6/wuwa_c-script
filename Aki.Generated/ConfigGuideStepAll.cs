@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003C1 RID: 961
+	// Token: 0x020003D7 RID: 983
 	public class ConfigGuideStepAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600168D RID: 5773 RVA: 0x000D9024 File Offset: 0x000D7224
+		// Token: 0x06001711 RID: 5905 RVA: 0x000DF778 File Offset: 0x000DD978
 		static ConfigGuideStepAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuideStepAll.CreateStaticDefaultValue), new Action(ConfigGuideStepAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600168E RID: 5774 RVA: 0x000D9044 File Offset: 0x000D7244
+		// Token: 0x06001712 RID: 5906 RVA: 0x000DF798 File Offset: 0x000DD998
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuideStepAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600168F RID: 5775 RVA: 0x000D90C3 File Offset: 0x000D72C3
+		// Token: 0x06001713 RID: 5907 RVA: 0x000DF817 File Offset: 0x000DDA17
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuideStepAll.LogPair = null;
 			ConfigGuideStepAll.HandleId = 0;
 		}
 
-		// Token: 0x06001690 RID: 5776 RVA: 0x000D90D1 File Offset: 0x000D72D1
+		// Token: 0x06001714 RID: 5908 RVA: 0x000DF825 File Offset: 0x000DDA25
 		public static void Init()
 		{
 			ConfigGuideStepAll.HandleId = ConfigCommon.InitDataStatement(ConfigGuideStepAll.HandleId, "db_guide_new.db", "select BinData from `GuideStep`");
 		}
 
-		// Token: 0x06001691 RID: 5777 RVA: 0x000D90EC File Offset: 0x000D72EC
+		// Token: 0x06001715 RID: 5909 RVA: 0x000DF840 File Offset: 0x000DDA40
 		[NullableContext(2)]
 		public static IReadOnlyList<GuideStep> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001A2B RID: 6699
+		// Token: 0x04001AC5 RID: 6853
 		private const string DB = "db_guide_new.db";
 
-		// Token: 0x04001A2C RID: 6700
+		// Token: 0x04001AC6 RID: 6854
 		private const string FILE = "y.引导(新).xlsx";
 
-		// Token: 0x04001A2D RID: 6701
+		// Token: 0x04001AC7 RID: 6855
 		private const string TABLE = "GuideStep";
 
-		// Token: 0x04001A2E RID: 6702
+		// Token: 0x04001AC8 RID: 6856
 		private const string COMMAND = "select BinData from `GuideStep`";
 
-		// Token: 0x04001A2F RID: 6703
+		// Token: 0x04001AC9 RID: 6857
 		private const string KEY_PREFIX = "GuideStepAll";
 
-		// Token: 0x04001A30 RID: 6704
+		// Token: 0x04001ACA RID: 6858
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A31 RID: 6705
+		// Token: 0x04001ACB RID: 6859
 		private static int HandleId;
 	}
 }

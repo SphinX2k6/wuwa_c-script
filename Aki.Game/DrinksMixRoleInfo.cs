@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02000F47 RID: 3911
+// Token: 0x020003FC RID: 1020
 public class DrinksMixRoleInfo : IDrinksMixRoleInfo
 {
-	// Token: 0x170007AB RID: 1963
-	// (get) Token: 0x060063A7 RID: 25511 RVA: 0x00139AE2 File Offset: 0x00137CE2
-	// (set) Token: 0x060063A8 RID: 25512 RVA: 0x00139AEA File Offset: 0x00137CEA
+	// Token: 0x170007CD RID: 1997
+	// (get) Token: 0x0600373F RID: 14143 RVA: 0x001423AE File Offset: 0x001405AE
+	// (set) Token: 0x06003740 RID: 14144 RVA: 0x001423B6 File Offset: 0x001405B6
 	public int RoleId { get; set; }
 
-	// Token: 0x170007AC RID: 1964
-	// (get) Token: 0x060063A9 RID: 25513 RVA: 0x00139AF3 File Offset: 0x00137CF3
-	// (set) Token: 0x060063AA RID: 25514 RVA: 0x00139AFB File Offset: 0x00137CFB
+	// Token: 0x170007CE RID: 1998
+	// (get) Token: 0x06003741 RID: 14145 RVA: 0x001423BF File Offset: 0x001405BF
+	// (set) Token: 0x06003742 RID: 14146 RVA: 0x001423C7 File Offset: 0x001405C7
 	public bool FirstPass { get; set; }
 
-	// Token: 0x170007AD RID: 1965
-	// (get) Token: 0x060063AB RID: 25515 RVA: 0x00139B04 File Offset: 0x00137D04
-	// (set) Token: 0x060063AC RID: 25516 RVA: 0x00139B0C File Offset: 0x00137D0C
+	// Token: 0x170007CF RID: 1999
+	// (get) Token: 0x06003743 RID: 14147 RVA: 0x001423D0 File Offset: 0x001405D0
+	// (set) Token: 0x06003744 RID: 14148 RVA: 0x001423D8 File Offset: 0x001405D8
 	public bool MaxLike { get; set; }
 
-	// Token: 0x170007AE RID: 1966
-	// (get) Token: 0x060063AD RID: 25517 RVA: 0x00139B15 File Offset: 0x00137D15
-	// (set) Token: 0x060063AE RID: 25518 RVA: 0x00139B1D File Offset: 0x00137D1D
+	// Token: 0x170007D0 RID: 2000
+	// (get) Token: 0x06003745 RID: 14149 RVA: 0x001423E1 File Offset: 0x001405E1
+	// (set) Token: 0x06003746 RID: 14150 RVA: 0x001423E9 File Offset: 0x001405E9
 	public bool RewardGet { get; set; }
 }

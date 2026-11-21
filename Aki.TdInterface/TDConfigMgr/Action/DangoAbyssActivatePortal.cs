@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001555 RID: 5461
+	// Token: 0x020016B1 RID: 5809
 	public class DangoAbyssActivatePortal : ActionParams
 	{
-		// Token: 0x06007B77 RID: 31607 RVA: 0x0012987F File Offset: 0x00127A7F
-		[NullableContext(1)]
+		// Token: 0x0600824B RID: 33355 RVA: 0x0013882B File Offset: 0x00136A2B
 		public static DangoAbyssActivatePortal Create([Nullable(2)] DangoAbyssActivatePortal instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400471D RID: 18205
+		// Token: 0x04004AB9 RID: 19129
 		[Nullable(2)]
 		protected new DangoAbyssActivatePortal FbInstance;
 	}

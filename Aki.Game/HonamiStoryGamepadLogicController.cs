@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E87 RID: 7815
+// Token: 0x02001349 RID: 4937
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryGamepadLogicController
 {
-	// Token: 0x0600EE21 RID: 60961 RVA: 0x0038C547 File Offset: 0x0038A747
+	// Token: 0x0600C240 RID: 49728 RVA: 0x00398137 File Offset: 0x00396337
 	public void InitInteract(UUIItem attachPanel)
 	{
 		if (this.InteractController == null)
@@ -21,25 +21,25 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE22 RID: 60962 RVA: 0x0038C55C File Offset: 0x0038A75C
+	// Token: 0x0600C241 RID: 49729 RVA: 0x0039814C File Offset: 0x0039634C
 	public void RegisterPanel(HonamiStoryBackpackPanelBase panel)
 	{
 		this.InteractController.RegisterPanel(panel);
 	}
 
-	// Token: 0x0600EE23 RID: 60963 RVA: 0x0038C56A File Offset: 0x0038A76A
+	// Token: 0x0600C242 RID: 49730 RVA: 0x0039815A File Offset: 0x0039635A
 	public void RegisterBtnToGrid(UUIItem btnItem, HonamiStoryGridItemBase gridItem)
 	{
 		this.BtnMap[btnItem] = gridItem;
 	}
 
-	// Token: 0x0600EE24 RID: 60964 RVA: 0x0038C579 File Offset: 0x0038A779
+	// Token: 0x0600C243 RID: 49731 RVA: 0x00398169 File Offset: 0x00396369
 	public void RegisterItemToGrid(UUIItem realItem, HonamiStoryGridItemBase gridItem)
 	{
 		this.ItemToGridMap[realItem] = gridItem;
 	}
 
-	// Token: 0x0600EE25 RID: 60965 RVA: 0x0038C588 File Offset: 0x0038A788
+	// Token: 0x0600C244 RID: 49732 RVA: 0x00398178 File Offset: 0x00396378
 	[NullableContext(2)]
 	public void SetCurItem(HonamiStoryItemGridItem item)
 	{
@@ -58,33 +58,33 @@ public class HonamiStoryGamepadLogicController
 		this.CurItemDataId = num2.GetValueOrDefault(-1);
 	}
 
-	// Token: 0x0600EE26 RID: 60966 RVA: 0x0038C5D8 File Offset: 0x0038A7D8
+	// Token: 0x0600C245 RID: 49733 RVA: 0x003981C8 File Offset: 0x003963C8
 	public void SetScrollingPosition(int position)
 	{
 		this.CurScrollingPosition = position;
 	}
 
-	// Token: 0x0600EE27 RID: 60967 RVA: 0x0038C5E1 File Offset: 0x0038A7E1
+	// Token: 0x0600C246 RID: 49734 RVA: 0x003981D1 File Offset: 0x003963D1
 	[NullableContext(2)]
 	public HonamiStoryItemGridItem GetCurItem()
 	{
 		return this.CurItem;
 	}
 
-	// Token: 0x0600EE28 RID: 60968 RVA: 0x0038C5E9 File Offset: 0x0038A7E9
+	// Token: 0x0600C247 RID: 49735 RVA: 0x003981D9 File Offset: 0x003963D9
 	[NullableContext(2)]
 	public HonamiStoryItemGridItem GetSelectItem()
 	{
 		return null;
 	}
 
-	// Token: 0x0600EE29 RID: 60969 RVA: 0x0038C5EC File Offset: 0x0038A7EC
+	// Token: 0x0600C248 RID: 49736 RVA: 0x003981DC File Offset: 0x003963DC
 	public int GetScrollingPosition()
 	{
 		return this.CurScrollingPosition;
 	}
 
-	// Token: 0x0600EE2A RID: 60970 RVA: 0x0038C5F4 File Offset: 0x0038A7F4
+	// Token: 0x0600C249 RID: 49737 RVA: 0x003981E4 File Offset: 0x003963E4
 	[return: Nullable(2)]
 	public HonamiStoryGridItemBase GetGridItemByAnyItem(UUIItem anyItem)
 	{
@@ -97,7 +97,7 @@ public class HonamiStoryGamepadLogicController
 		return honamiStoryGridItemBase;
 	}
 
-	// Token: 0x0600EE2B RID: 60971 RVA: 0x0038C628 File Offset: 0x0038A828
+	// Token: 0x0600C24A RID: 49738 RVA: 0x00398218 File Offset: 0x00396418
 	[return: Nullable(2)]
 	public HonamiStoryGridItemBase GetGridItemByBtnItem(UUIItem btnItem)
 	{
@@ -109,19 +109,19 @@ public class HonamiStoryGamepadLogicController
 		return null;
 	}
 
-	// Token: 0x0600EE2C RID: 60972 RVA: 0x0038C648 File Offset: 0x0038A848
+	// Token: 0x0600C24B RID: 49739 RVA: 0x00398238 File Offset: 0x00396438
 	public int GetCurPanelIndex()
 	{
 		return this.CurPanelIndex;
 	}
 
-	// Token: 0x0600EE2D RID: 60973 RVA: 0x0038C650 File Offset: 0x0038A850
+	// Token: 0x0600C24C RID: 49740 RVA: 0x00398240 File Offset: 0x00396440
 	public HonamiStoryGamepadInteractController GetInteractController()
 	{
 		return this.InteractController;
 	}
 
-	// Token: 0x0600EE2E RID: 60974 RVA: 0x0038C658 File Offset: 0x0038A858
+	// Token: 0x0600C24D RID: 49741 RVA: 0x00398248 File Offset: 0x00396448
 	public int GetBackpackTypeByPanelIndex(int index)
 	{
 		int result = -1;
@@ -140,13 +140,13 @@ public class HonamiStoryGamepadLogicController
 		return result;
 	}
 
-	// Token: 0x0600EE2F RID: 60975 RVA: 0x0038C686 File Offset: 0x0038A886
+	// Token: 0x0600C24E RID: 49742 RVA: 0x00398276 File Offset: 0x00396476
 	public bool IsInGame()
 	{
 		return HonamiStoryUtil.CheckInHonamiStoryDungeon();
 	}
 
-	// Token: 0x0600EE30 RID: 60976 RVA: 0x0038C690 File Offset: 0x0038A890
+	// Token: 0x0600C24F RID: 49743 RVA: 0x00398280 File Offset: 0x00396480
 	[NullableContext(0)]
 	private ValueTuple<int, bool> GetMousePositionNearlyPanelData()
 	{
@@ -181,7 +181,7 @@ public class HonamiStoryGamepadLogicController
 		return new ValueTuple<int, bool>(item, item2);
 	}
 
-	// Token: 0x0600EE31 RID: 60977 RVA: 0x0038C794 File Offset: 0x0038A994
+	// Token: 0x0600C250 RID: 49744 RVA: 0x00398384 File Offset: 0x00396584
 	public void JumpToPrevPanelNew()
 	{
 		ValueTuple<int, bool> mousePositionNearlyPanelData = this.GetMousePositionNearlyPanelData();
@@ -202,7 +202,7 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE32 RID: 60978 RVA: 0x0038C818 File Offset: 0x0038AA18
+	// Token: 0x0600C251 RID: 49745 RVA: 0x00398408 File Offset: 0x00396608
 	public void JumpToNextPanelNew()
 	{
 		int item = this.GetMousePositionNearlyPanelData().Item1;
@@ -214,7 +214,7 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE33 RID: 60979 RVA: 0x0038C874 File Offset: 0x0038AA74
+	// Token: 0x0600C252 RID: 49746 RVA: 0x00398464 File Offset: 0x00396664
 	public void SetPanelIndexByGridItem(HonamiStoryGridItemBase gridItem)
 	{
 		this.CurPanelIndex = this.InteractController.GetPanelIndexByGridItem(gridItem);
@@ -227,7 +227,7 @@ public class HonamiStoryGamepadLogicController
 		this.CurPosition = gridItem.GetEmptyPosition();
 	}
 
-	// Token: 0x0600EE34 RID: 60980 RVA: 0x0038C8B8 File Offset: 0x0038AAB8
+	// Token: 0x0600C253 RID: 49747 RVA: 0x003984A8 File Offset: 0x003966A8
 	public void SetFocusByGridItem(HonamiStoryGridItemBase gridItem)
 	{
 		if (gridItem.Data == null)
@@ -245,7 +245,7 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE35 RID: 60981 RVA: 0x0038C8F8 File Offset: 0x0038AAF8
+	// Token: 0x0600C254 RID: 49748 RVA: 0x003984E8 File Offset: 0x003966E8
 	private HonamiStoryGridItemBase FindSuitableGridByItemList(List<HonamiStoryGridItemBase> list)
 	{
 		HonamiStoryGridItemBase result = list[0];
@@ -260,7 +260,7 @@ public class HonamiStoryGamepadLogicController
 		return result;
 	}
 
-	// Token: 0x0600EE36 RID: 60982 RVA: 0x0038C954 File Offset: 0x0038AB54
+	// Token: 0x0600C255 RID: 49749 RVA: 0x00398544 File Offset: 0x00396744
 	public void SetFocusByCurPanelIndex()
 	{
 		int backpackTypeByPanelIndex = this.GetBackpackTypeByPanelIndex(this.CurPanelIndex);
@@ -278,21 +278,21 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE37 RID: 60983 RVA: 0x0038C9AA File Offset: 0x0038ABAA
+	// Token: 0x0600C256 RID: 49750 RVA: 0x0039859A File Offset: 0x0039679A
 	public void PickUp(HonamiStoryGridItemBase targetItem)
 	{
 		this.CurSelectItem = targetItem.GetItemGridItem();
 		this.InteractController.OnPickUp(targetItem);
 	}
 
-	// Token: 0x0600EE38 RID: 60984 RVA: 0x0038C9C4 File Offset: 0x0038ABC4
+	// Token: 0x0600C257 RID: 49751 RVA: 0x003985B4 File Offset: 0x003967B4
 	public void PutDown(HonamiStoryGridItemBase targetItem)
 	{
 		this.InteractController.OnPutDown(targetItem);
 		this.CurSelectItem = null;
 	}
 
-	// Token: 0x0600EE39 RID: 60985 RVA: 0x0038C9DC File Offset: 0x0038ABDC
+	// Token: 0x0600C258 RID: 49752 RVA: 0x003985CC File Offset: 0x003967CC
 	private void HideAllTips()
 	{
 		HonamiStoryBackpackView honamiStoryBackpackView = UiManager.Instance.GetViewByName(EUiViewName.HonamiStoryBackpackView) as HonamiStoryBackpackView;
@@ -307,19 +307,19 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE3A RID: 60986 RVA: 0x0038CA25 File Offset: 0x0038AC25
+	// Token: 0x0600C259 RID: 49753 RVA: 0x00398615 File Offset: 0x00396815
 	public void Reset()
 	{
 		this.Cancel();
 	}
 
-	// Token: 0x0600EE3B RID: 60987 RVA: 0x0038CA2D File Offset: 0x0038AC2D
+	// Token: 0x0600C25A RID: 49754 RVA: 0x0039861D File Offset: 0x0039681D
 	public void SwitchToKeyboardState()
 	{
 		this.Cancel();
 	}
 
-	// Token: 0x0600EE3C RID: 60988 RVA: 0x0038CA38 File Offset: 0x0038AC38
+	// Token: 0x0600C25B RID: 49755 RVA: 0x00398628 File Offset: 0x00396828
 	public void SwitchToGamepadState(bool isPickUp = false)
 	{
 		bool lockUseDragState = HonamiStoryModel.Instance.GetBackpackLogicState() == EHonamiStoryBackpackLogicState.Sell;
@@ -327,7 +327,7 @@ public class HonamiStoryGamepadLogicController
 		this.SetDefaultFocus(isPickUp);
 	}
 
-	// Token: 0x0600EE3D RID: 60989 RVA: 0x0038CA68 File Offset: 0x0038AC68
+	// Token: 0x0600C25C RID: 49756 RVA: 0x00398658 File Offset: 0x00396858
 	public void CancelOperationByGamepad()
 	{
 		if (this.CurSelectItem != null)
@@ -341,14 +341,14 @@ public class HonamiStoryGamepadLogicController
 		this.Cancel();
 	}
 
-	// Token: 0x0600EE3E RID: 60990 RVA: 0x0038CA9E File Offset: 0x0038AC9E
+	// Token: 0x0600C25D RID: 49757 RVA: 0x0039868E File Offset: 0x0039688E
 	public void SetDefaultFocus(bool isPickUp = false)
 	{
 		this.CurPanelIndex = (isPickUp ? 3 : 2);
 		this.SetFocusByCurPanelIndex();
 	}
 
-	// Token: 0x0600EE3F RID: 60991 RVA: 0x0038CAB4 File Offset: 0x0038ACB4
+	// Token: 0x0600C25E RID: 49758 RVA: 0x003986A4 File Offset: 0x003968A4
 	private bool IsGamepadInCurItem()
 	{
 		if (this.CurItem == null)
@@ -359,7 +359,7 @@ public class HonamiStoryGamepadLogicController
 		return pointerEventData != null && HonamiStoryUtil.CheckEventDataInItemViewport(pointerEventData, this.CurItem.GetRootItem(), true);
 	}
 
-	// Token: 0x0600EE40 RID: 60992 RVA: 0x0038CAF4 File Offset: 0x0038ACF4
+	// Token: 0x0600C25F RID: 49759 RVA: 0x003986E4 File Offset: 0x003968E4
 	public void Cancel()
 	{
 		if (this.CurSelectItem != null)
@@ -384,7 +384,7 @@ public class HonamiStoryGamepadLogicController
 		this.CurSelectItem = null;
 	}
 
-	// Token: 0x0600EE41 RID: 60993 RVA: 0x0038CB5C File Offset: 0x0038AD5C
+	// Token: 0x0600C260 RID: 49760 RVA: 0x0039874C File Offset: 0x0039694C
 	public void Discard()
 	{
 		if (this.CurItem == null)
@@ -414,7 +414,7 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE42 RID: 60994 RVA: 0x0038CBE4 File Offset: 0x0038ADE4
+	// Token: 0x0600C261 RID: 49761 RVA: 0x003987D4 File Offset: 0x003969D4
 	public UniTask SellSingleOne()
 	{
 		HonamiStoryGamepadLogicController.<SellSingleOne>d__44 <SellSingleOne>d__;
@@ -425,7 +425,7 @@ public class HonamiStoryGamepadLogicController
 		return <SellSingleOne>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EE43 RID: 60995 RVA: 0x0038CC28 File Offset: 0x0038AE28
+	// Token: 0x0600C262 RID: 49762 RVA: 0x00398818 File Offset: 0x00396A18
 	public void QuickEquipOn()
 	{
 		if (this.CurItem == null)
@@ -458,7 +458,7 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE44 RID: 60996 RVA: 0x0038CCBC File Offset: 0x0038AEBC
+	// Token: 0x0600C263 RID: 49763 RVA: 0x003988AC File Offset: 0x00396AAC
 	public void QuickEquipOff()
 	{
 		if (this.CurItem == null)
@@ -477,7 +477,7 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x0600EE45 RID: 60997 RVA: 0x0038CD14 File Offset: 0x0038AF14
+	// Token: 0x0600C264 RID: 49764 RVA: 0x00398904 File Offset: 0x00396B04
 	public UniTask SetLockStatus()
 	{
 		HonamiStoryGamepadLogicController.<SetLockStatus>d__47 <SetLockStatus>d__;
@@ -488,7 +488,7 @@ public class HonamiStoryGamepadLogicController
 		return <SetLockStatus>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EE46 RID: 60998 RVA: 0x0038CD58 File Offset: 0x0038AF58
+	// Token: 0x0600C265 RID: 49765 RVA: 0x00398948 File Offset: 0x00396B48
 	public void Collect()
 	{
 		if (this.CurItem == null)
@@ -504,7 +504,7 @@ public class HonamiStoryGamepadLogicController
 		HonamiStoryModel.Instance.QuickPickUpFromPickUpBox(data, position);
 	}
 
-	// Token: 0x0600EE47 RID: 60999 RVA: 0x0038CD94 File Offset: 0x0038AF94
+	// Token: 0x0600C266 RID: 49766 RVA: 0x00398984 File Offset: 0x00396B84
 	public void TriggerCurItemEnterGrid()
 	{
 		if (this.CurItem != null)
@@ -517,38 +517,38 @@ public class HonamiStoryGamepadLogicController
 		}
 	}
 
-	// Token: 0x04006E83 RID: 28291
+	// Token: 0x04006F64 RID: 28516
 	[Nullable(2)]
 	private HonamiStoryItemGridItem CurItem;
 
-	// Token: 0x04006E84 RID: 28292
+	// Token: 0x04006F65 RID: 28517
 	[Nullable(2)]
 	private HonamiStoryItemGridItem CurSelectItem;
 
-	// Token: 0x04006E85 RID: 28293
+	// Token: 0x04006F66 RID: 28518
 	private int CurItemDataId = -1;
 
-	// Token: 0x04006E86 RID: 28294
+	// Token: 0x04006F67 RID: 28519
 	private HonamiStoryGamepadInteractController InteractController;
 
-	// Token: 0x04006E87 RID: 28295
+	// Token: 0x04006F68 RID: 28520
 	private int CurPanelIndex = 1;
 
-	// Token: 0x04006E88 RID: 28296
+	// Token: 0x04006F69 RID: 28521
 	private int CurPosition = -1;
 
-	// Token: 0x04006E89 RID: 28297
+	// Token: 0x04006F6A RID: 28522
 	private int CurScrollingPosition = -1;
 
-	// Token: 0x04006E8A RID: 28298
+	// Token: 0x04006F6B RID: 28523
 	private readonly Dictionary<int, HonamiStoryGridItemBase> JumpMap = new Dictionary<int, HonamiStoryGridItemBase>();
 
-	// Token: 0x04006E8B RID: 28299
+	// Token: 0x04006F6C RID: 28524
 	private readonly Dictionary<UUIItem, HonamiStoryGridItemBase> BtnMap = new Dictionary<UUIItem, HonamiStoryGridItemBase>();
 
-	// Token: 0x04006E8C RID: 28300
+	// Token: 0x04006F6D RID: 28525
 	private readonly Dictionary<UUIItem, HonamiStoryGridItemBase> ItemToGridMap = new Dictionary<UUIItem, HonamiStoryGridItemBase>();
 
-	// Token: 0x04006E8D RID: 28301
+	// Token: 0x04006F6E RID: 28526
 	private readonly Vector2D TempPivot = Vector2D.Create();
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,12 +13,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024CF RID: 9423
+// Token: 0x020019B6 RID: 6582
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionLevelUpView : UiTabViewBase
 {
-	// Token: 0x06012F00 RID: 77568 RVA: 0x004AF280 File Offset: 0x004AD480
+	// Token: 0x060103BF RID: 66495 RVA: 0x004BCE80 File Offset: 0x004BB080
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +42,7 @@ public class VisionLevelUpView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06012F01 RID: 77569 RVA: 0x004AF3CC File Offset: 0x004AD5CC
+	// Token: 0x060103C0 RID: 66496 RVA: 0x004BCFCC File Offset: 0x004BB1CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionLevelUpView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -54,7 +53,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012F02 RID: 77570 RVA: 0x004AF410 File Offset: 0x004AD610
+	// Token: 0x060103C1 RID: 66497 RVA: 0x004BD010 File Offset: 0x004BB210
 	protected override void OnStart()
 	{
 		this.ExpComponent = new ExpComponent(base.GetItem(0), false);
@@ -83,7 +82,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.VisionNameText = new VisionNameText(base.GetText(4));
 	}
 
-	// Token: 0x06012F03 RID: 77571 RVA: 0x004AF51C File Offset: 0x004AD71C
+	// Token: 0x060103C2 RID: 66498 RVA: 0x004BD11C File Offset: 0x004BB31C
 	private void ConditionFunction(int index)
 	{
 		this.CurrentAutoQualityIndex = index;
@@ -91,7 +90,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.ItemGridConsumeComponent.RefreshConditionText(CommonConfig.Instance.GetItemQualityById(id).Value.ConsumeFilterText);
 	}
 
-	// Token: 0x06012F04 RID: 77572 RVA: 0x004AF574 File Offset: 0x004AD774
+	// Token: 0x060103C3 RID: 66499 RVA: 0x004BD174 File Offset: 0x004BB374
 	private void OnTweenComplete(bool isFinish)
 	{
 		if (!isFinish)
@@ -105,7 +104,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.ExpComponent.UpdateInitState(currentExpData);
 	}
 
-	// Token: 0x06012F05 RID: 77573 RVA: 0x004AF5B8 File Offset: 0x004AD7B8
+	// Token: 0x060103C4 RID: 66500 RVA: 0x004BD1B8 File Offset: 0x004BB3B8
 	private void ShowLevelSuccessView()
 	{
 		LevelUpPastVisionData cachePhantomLevelUpData = PhantomBattleModel.Instance.GetCachePhantomLevelUpData();
@@ -164,7 +163,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}, (float)visionLevelUpDelay, null, null, true, 1f);
 	}
 
-	// Token: 0x06012F06 RID: 77574 RVA: 0x004AF644 File Offset: 0x004AD844
+	// Token: 0x060103C5 RID: 66501 RVA: 0x004BD244 File Offset: 0x004BB444
 	private void CheckAndCloseItemHintViewNew()
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.ItemHintViewNew))
@@ -174,7 +173,7 @@ public class VisionLevelUpView : UiTabViewBase
 		UiManager.Instance.CloseView(EUiViewName.ItemHintViewNew, null);
 	}
 
-	// Token: 0x06012F07 RID: 77575 RVA: 0x004AF668 File Offset: 0x004AD868
+	// Token: 0x060103C6 RID: 66502 RVA: 0x004BD268 File Offset: 0x004BB468
 	private void OnPhantomInfoUpdate()
 	{
 		this.CurrentSelectedMat.Clear();
@@ -187,7 +186,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.ShowLevelSuccessView();
 	}
 
-	// Token: 0x06012F08 RID: 77576 RVA: 0x004AF6B8 File Offset: 0x004AD8B8
+	// Token: 0x060103C7 RID: 66503 RVA: 0x004BD2B8 File Offset: 0x004BB4B8
 	private void PlayExpTween()
 	{
 		if (this.CurrentExpData.GetCurrentAddExp() > 0f)
@@ -198,7 +197,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F09 RID: 77577 RVA: 0x004AF6F4 File Offset: 0x004AD8F4
+	// Token: 0x060103C8 RID: 66504 RVA: 0x004BD2F4 File Offset: 0x004BB4F4
 	private void OnItemFuncValueChange(int uniqueId)
 	{
 		if (uniqueId != this.CurrentVisionUniqueId)
@@ -208,19 +207,19 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x06012F0A RID: 77578 RVA: 0x004AF706 File Offset: 0x004AD906
+	// Token: 0x060103C9 RID: 66505 RVA: 0x004BD306 File Offset: 0x004BB506
 	private void OnVisionLevelUpMaterialPutInModeChange()
 	{
 		this.RefreshPutInModeState();
 	}
 
-	// Token: 0x06012F0B RID: 77579 RVA: 0x004AF70E File Offset: 0x004AD90E
+	// Token: 0x060103CA RID: 66506 RVA: 0x004BD30E File Offset: 0x004BB50E
 	private void OnVisionLevelUpIdentifyChange()
 	{
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06012F0C RID: 77580 RVA: 0x004AF718 File Offset: 0x004AD918
+	// Token: 0x060103CB RID: 66507 RVA: 0x004BD318 File Offset: 0x004BB518
 	private void SetUniqueId(int uniqueId)
 	{
 		this.CurrentVisionUniqueId = uniqueId;
@@ -229,7 +228,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.OnChangeSelectedFunction(new List<ISelectedData>(), currentExpData);
 	}
 
-	// Token: 0x06012F0D RID: 77581 RVA: 0x004AF74C File Offset: 0x004AD94C
+	// Token: 0x060103CC RID: 66508 RVA: 0x004BD34C File Offset: 0x004BB54C
 	private SelectableExpData GetCurrentExpData()
 	{
 		CommonIntensifyPropExpData commonIntensifyPropExpData = new CommonIntensifyPropExpData();
@@ -245,7 +244,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return SelectableExpData.PhraseData(commonIntensifyPropExpData);
 	}
 
-	// Token: 0x06012F0E RID: 77582 RVA: 0x004AF7C0 File Offset: 0x004AD9C0
+	// Token: 0x060103CD RID: 66509 RVA: 0x004BD3C0 File Offset: 0x004BB5C0
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.PhantomLevelUp, new Action(this.OnPhantomInfoUpdate));
@@ -261,7 +260,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshPutInModeState();
 	}
 
-	// Token: 0x06012F0F RID: 77583 RVA: 0x004AF884 File Offset: 0x004ADA84
+	// Token: 0x060103CE RID: 66510 RVA: 0x004BD484 File Offset: 0x004BB684
 	private void RefreshName()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -272,7 +271,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.VisionNameText.Update(phantomItemDataByUniqueId);
 	}
 
-	// Token: 0x06012F10 RID: 77584 RVA: 0x004AF8B4 File Offset: 0x004ADAB4
+	// Token: 0x060103CF RID: 66511 RVA: 0x004BD4B4 File Offset: 0x004BB6B4
 	private void RefreshAttributePreview()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -292,7 +291,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.LevelUpIdentifyComponent.GetRootItem().SetUIActive(levelSubPropPreviewData.Count > 0);
 	}
 
-	// Token: 0x06012F11 RID: 77585 RVA: 0x004AF968 File Offset: 0x004ADB68
+	// Token: 0x060103D0 RID: 66512 RVA: 0x004BD568 File Offset: 0x004BB768
 	private void RefreshToggleState()
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.CurrentVisionUniqueId);
@@ -306,7 +305,7 @@ public class VisionLevelUpView : UiTabViewBase
 		base.GetExtendToggle(6).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x06012F12 RID: 77586 RVA: 0x004AF9C8 File Offset: 0x004ADBC8
+	// Token: 0x060103D1 RID: 66513 RVA: 0x004BD5C8 File Offset: 0x004BB7C8
 	private void RefreshPutInModeState()
 	{
 		string textId = (PhantomBattleModel.Instance.GetVisionLevelUpMaterialPutInMode() == EVisionLevelUpMaterialPutInMode.AllIn) ? "Text_QuickInsertion_Text" : "Text_StageInsertion_Text";
@@ -318,7 +317,7 @@ public class VisionLevelUpView : UiTabViewBase
 		itemGridConsumeComponent.UpdateAutoSelectTextByTextId(textId);
 	}
 
-	// Token: 0x06012F13 RID: 77587 RVA: 0x004AFA00 File Offset: 0x004ADC00
+	// Token: 0x060103D2 RID: 66514 RVA: 0x004BD600 File Offset: 0x004BB800
 	private bool CheckEnableIdentify(PhantomDataBase data)
 	{
 		bool flag = PhantomBattleModel.Instance.GetVisionLevelUpIdentify() == EVisionLevelUpIdentify.EnableIdentify;
@@ -326,7 +325,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return flag && flag2;
 	}
 
-	// Token: 0x06012F14 RID: 77588 RVA: 0x004AFA28 File Offset: 0x004ADC28
+	// Token: 0x060103D3 RID: 66515 RVA: 0x004BD628 File Offset: 0x004BB828
 	private void RemoveEvent()
 	{
 		if (this.EventRegistState)
@@ -339,13 +338,13 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F15 RID: 77589 RVA: 0x004AFAB4 File Offset: 0x004ADCB4
+	// Token: 0x060103D4 RID: 66516 RVA: 0x004BD6B4 File Offset: 0x004BB8B4
 	protected override void OnBeforeHide()
 	{
 		this.RemoveEvent();
 	}
 
-	// Token: 0x06012F16 RID: 77590 RVA: 0x004AFABC File Offset: 0x004ADCBC
+	// Token: 0x060103D5 RID: 66517 RVA: 0x004BD6BC File Offset: 0x004BB8BC
 	private bool CheckSelectedMat()
 	{
 		if (this.CurrentSelectedMat == null || this.CurrentSelectedMat.Count == 0)
@@ -361,7 +360,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x06012F17 RID: 77591 RVA: 0x004AFB12 File Offset: 0x004ADD12
+	// Token: 0x060103D6 RID: 66518 RVA: 0x004BD712 File Offset: 0x004BB912
 	private bool CheckEnoughMoney()
 	{
 		if (!this.ItemGridConsumeComponent.GetEnoughMoney())
@@ -372,13 +371,13 @@ public class VisionLevelUpView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x06012F18 RID: 77592 RVA: 0x004AFB38 File Offset: 0x004ADD38
+	// Token: 0x060103D7 RID: 66519 RVA: 0x004BD738 File Offset: 0x004BB938
 	private void OnClickStrengthBtn(int _)
 	{
 		this.CheckCanLevelUp().Forget();
 	}
 
-	// Token: 0x06012F19 RID: 77593 RVA: 0x004AFB48 File Offset: 0x004ADD48
+	// Token: 0x060103D8 RID: 66520 RVA: 0x004BD748 File Offset: 0x004BB948
 	private UniTask CheckCanLevelUp()
 	{
 		VisionLevelUpView.<CheckCanLevelUp>d__44 <CheckCanLevelUp>d__;
@@ -389,7 +388,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return <CheckCanLevelUp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012F1A RID: 77594 RVA: 0x004AFB8C File Offset: 0x004ADD8C
+	// Token: 0x060103D9 RID: 66521 RVA: 0x004BD78C File Offset: 0x004BB98C
 	[NullableContext(0)]
 	private UniTask<bool> CheckIdentify()
 	{
@@ -421,7 +420,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return customPromise.Promise;
 	}
 
-	// Token: 0x06012F1B RID: 77595 RVA: 0x004AFC98 File Offset: 0x004ADE98
+	// Token: 0x060103DA RID: 66522 RVA: 0x004BD898 File Offset: 0x004BBA98
 	private void LevelUpClick()
 	{
 		List<PhantomConsumeItem> data = new List<PhantomConsumeItem>();
@@ -458,7 +457,7 @@ public class VisionLevelUpView : UiTabViewBase
 		request();
 	}
 
-	// Token: 0x06012F1C RID: 77596 RVA: 0x004AFDB0 File Offset: 0x004ADFB0
+	// Token: 0x060103DB RID: 66523 RVA: 0x004BD9B0 File Offset: 0x004BBBB0
 	private void ProcessSelectedMat(List<PhantomConsumeItem> data, Dictionary<int, int> overItemMap)
 	{
 		foreach (ISelectedData selectedData in this.CurrentSelectedMat)
@@ -477,7 +476,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F1D RID: 77597 RVA: 0x004AFE54 File Offset: 0x004AE054
+	// Token: 0x060103DC RID: 66524 RVA: 0x004BDA54 File Offset: 0x004BBC54
 	private void ProcessAutoIdentity(Dictionary<int, int> overItemMap)
 	{
 		if (this.TargetIdentifyNum > 0)
@@ -501,7 +500,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F1E RID: 77598 RVA: 0x004AFEBC File Offset: 0x004AE0BC
+	// Token: 0x060103DD RID: 66525 RVA: 0x004BDABC File Offset: 0x004BBCBC
 	private void ProcessOverExp(Dictionary<int, int> overItemMap)
 	{
 		int overExp = this.CurrentExpData.GetOverExp();
@@ -512,7 +511,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F1F RID: 77599 RVA: 0x004AFEF0 File Offset: 0x004AE0F0
+	// Token: 0x060103DE RID: 66526 RVA: 0x004BDAF0 File Offset: 0x004BBCF0
 	private bool TryOpenLevelUpTipConfirmBox(List<PhantomConsumeItem> data, Dictionary<int, int> overItemMap)
 	{
 		if (PhantomBattleModel.Instance.LevelUpConfirmTipsNotShow)
@@ -599,7 +598,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x06012F20 RID: 77600 RVA: 0x004B00F8 File Offset: 0x004AE2F8
+	// Token: 0x060103DF RID: 66527 RVA: 0x004BDCF8 File Offset: 0x004BBEF8
 	private ConfirmBoxDataNew CreateLevelUpTipsWithCondition(List<string> words)
 	{
 		EConfirmBoxConfigId? econfirmBoxConfigId = null;
@@ -624,7 +623,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return confirmBoxDataNew;
 	}
 
-	// Token: 0x06012F21 RID: 77601 RVA: 0x004B0172 File Offset: 0x004AE372
+	// Token: 0x060103E0 RID: 66528 RVA: 0x004BDD72 File Offset: 0x004BBF72
 	private ConfirmBoxDataNew CreateLevelUpTipsWithOverflow(Dictionary<int, int> overItemMap)
 	{
 		return new ConfirmBoxDataNew(EConfirmBoxConfigId.WeaponOverflowExpTip)
@@ -633,7 +632,7 @@ public class VisionLevelUpView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06012F22 RID: 77602 RVA: 0x004B0184 File Offset: 0x004AE384
+	// Token: 0x060103E1 RID: 66529 RVA: 0x004BDD84 File Offset: 0x004BBF84
 	private ConfirmBoxDataNew CreateLevelUpTipsWithAll(List<string> words, Dictionary<int, int> overItemMap)
 	{
 		EConfirmBoxConfigId? econfirmBoxConfigId = null;
@@ -659,7 +658,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return confirmBoxDataNew;
 	}
 
-	// Token: 0x06012F23 RID: 77603 RVA: 0x004B0214 File Offset: 0x004AE414
+	// Token: 0x060103E2 RID: 66530 RVA: 0x004BDE14 File Offset: 0x004BC014
 	private void AddBackItemToTargetMap(Dictionary<int, int> source, Dictionary<int, int> target)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in source)
@@ -673,14 +672,14 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F24 RID: 77604 RVA: 0x004B0284 File Offset: 0x004AE484
+	// Token: 0x060103E3 RID: 66531 RVA: 0x004BDE84 File Offset: 0x004BC084
 	private void OnClickDeleteSelectFunction()
 	{
 		this.CurrentSelectedMat.Clear();
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06012F25 RID: 77605 RVA: 0x004B0298 File Offset: 0x004AE498
+	// Token: 0x060103E4 RID: 66532 RVA: 0x004BDE98 File Offset: 0x004BC098
 	private void OnClickAutoFunction(int _)
 	{
 		int id = CommonConfig.Instance.GetItemQualityList()[this.CurrentAutoQualityIndex].Id;
@@ -746,7 +745,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06012F26 RID: 77606 RVA: 0x004B0488 File Offset: 0x004AE688
+	// Token: 0x060103E5 RID: 66533 RVA: 0x004BE088 File Offset: 0x004BC288
 	private void RefreshItemAndExp()
 	{
 		int num = 0;
@@ -773,7 +772,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshAttributePreview();
 	}
 
-	// Token: 0x06012F27 RID: 77607 RVA: 0x004B059C File Offset: 0x004AE79C
+	// Token: 0x060103E6 RID: 66534 RVA: 0x004BE19C File Offset: 0x004BC39C
 	private void ClearConsume()
 	{
 		for (int i = 0; i < this.ConsumeList.Count; i++)
@@ -783,7 +782,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F28 RID: 77608 RVA: 0x004B05DC File Offset: 0x004AE7DC
+	// Token: 0x060103E7 RID: 66535 RVA: 0x004BE1DC File Offset: 0x004BC3DC
 	private void OnClickItemReduce(int? incId, int? itemId)
 	{
 		for (int i = this.CurrentSelectedMat.Count - 1; i >= 0; i--)
@@ -809,13 +808,13 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06012F29 RID: 77609 RVA: 0x004B0693 File Offset: 0x004AE893
+	// Token: 0x060103E8 RID: 66536 RVA: 0x004BE293 File Offset: 0x004BC493
 	private void ItemClickFunction()
 	{
 		this.MaterialItemFunction(new int?(0), new int?(0));
 	}
 
-	// Token: 0x06012F2A RID: 77610 RVA: 0x004B06A8 File Offset: 0x004AE8A8
+	// Token: 0x060103E9 RID: 66537 RVA: 0x004BE2A8 File Offset: 0x004BC4A8
 	private void MaterialItemFunction(int? incId, int? itemId)
 	{
 		CommonItemSelectViewOpenViewData<ItemDataBase> commonItemSelectViewOpenViewData = new CommonItemSelectViewOpenViewData<ItemDataBase>();
@@ -832,7 +831,7 @@ public class VisionLevelUpView : UiTabViewBase
 		commonIntensifyPropExpData.MaxExpFunction = new Func<int, int>(this.MaxExpFunction);
 		commonIntensifyPropExpData.GetItemExpFunction = new Func<ISelectedData, int>(this.GetItemExpFunction);
 		List<ISelectedData> currentSelectedMat = this.CurrentSelectedMat;
-		commonItemSelectViewOpenViewData.ItemDataBaseList = expMaterialList.ToList<ItemDataBase>();
+		commonItemSelectViewOpenViewData.ItemDataBaseList = new List<ItemDataBase>(expMaterialList);
 		commonItemSelectViewOpenViewData.SelectedDataList = (currentSelectedMat ?? new List<ISelectedData>());
 		commonItemSelectViewOpenViewData.UseWayId = EFilterSortGroupId.VisionLevelUp;
 		commonItemSelectViewOpenViewData.ExpData = commonIntensifyPropExpData;
@@ -844,7 +843,7 @@ public class VisionLevelUpView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.CommonItemSelectViewRight, commonItemSelectViewOpenViewData, null);
 	}
 
-	// Token: 0x06012F2B RID: 77611 RVA: 0x004B07C0 File Offset: 0x004AE9C0
+	// Token: 0x060103EA RID: 66538 RVA: 0x004BE3C0 File Offset: 0x004BC5C0
 	private int MaxExpFunction(int level)
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -860,7 +859,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return PhantomBattleConfig.Instance.GetPhantomLevelExpByGroupIdAndLevel(phantomInstanceByItemId.PhantomItem.Value.LevelUpGroupId, level + 1);
 	}
 
-	// Token: 0x06012F2C RID: 77612 RVA: 0x004B082A File Offset: 0x004AEA2A
+	// Token: 0x060103EB RID: 66539 RVA: 0x004BE42A File Offset: 0x004BC62A
 	private void OnChangeSelectedFunction(List<ISelectedData> currentSelectedData, SelectableExpData expData)
 	{
 		this.CurrentSelectedMat = currentSelectedData;
@@ -868,7 +867,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshItemAndExp();
 	}
 
-	// Token: 0x06012F2D RID: 77613 RVA: 0x004B0840 File Offset: 0x004AEA40
+	// Token: 0x060103EC RID: 66540 RVA: 0x004BE440 File Offset: 0x004BC640
 	private int GetItemExpFunction(ISelectedData selectedData)
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(selectedData.IncId);
@@ -879,7 +878,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return PhantomBattleConfig.Instance.GetPhantomExpItemById(selectedData.ItemId).Exp;
 	}
 
-	// Token: 0x06012F2E RID: 77614 RVA: 0x004B0880 File Offset: 0x004AEA80
+	// Token: 0x060103ED RID: 66541 RVA: 0x004BE480 File Offset: 0x004BC680
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEvent();
@@ -892,7 +891,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F2F RID: 77615 RVA: 0x004B08C0 File Offset: 0x004AEAC0
+	// Token: 0x060103EE RID: 66542 RVA: 0x004BE4C0 File Offset: 0x004BC6C0
 	protected void OnClickLockToggle(EToggleState toggleState)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.CurrentVisionUniqueId);
@@ -903,7 +902,7 @@ public class VisionLevelUpView : UiTabViewBase
 		InventoryController.Instance.ItemLockRequest(this.CurrentVisionUniqueId, !attributeItemData.GetIsLock());
 	}
 
-	// Token: 0x06012F30 RID: 77616 RVA: 0x004B08FC File Offset: 0x004AEAFC
+	// Token: 0x060103EF RID: 66543 RVA: 0x004BE4FC File Offset: 0x004BC6FC
 	protected void OnClickDeprecateToggle(EToggleState toggleState)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.CurrentVisionUniqueId);
@@ -914,7 +913,7 @@ public class VisionLevelUpView : UiTabViewBase
 		InventoryController.Instance.ItemDeprecateRequest(this.CurrentVisionUniqueId, !attributeItemData.GetIsDeprecated());
 	}
 
-	// Token: 0x06012F31 RID: 77617 RVA: 0x004B0938 File Offset: 0x004AEB38
+	// Token: 0x060103F0 RID: 66544 RVA: 0x004BE538 File Offset: 0x004BC738
 	private void RefreshItemGridConsume()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -927,7 +926,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.RefreshIdentifyConsume(phantomItemDataByUniqueId, enableIdentify);
 	}
 
-	// Token: 0x06012F32 RID: 77618 RVA: 0x004B0974 File Offset: 0x004AEB74
+	// Token: 0x060103F1 RID: 66545 RVA: 0x004BE574 File Offset: 0x004BC774
 	private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 	{
 		MediumItemGrid itemGridVariantSelect = this.ItemGridVariantSelect;
@@ -952,10 +951,10 @@ public class VisionLevelUpView : UiTabViewBase
 			ItemController.Instance.OpenItemTipsByItemUid(num, currentIdentifyCostId, true, null);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(currentIdentifyCostId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(currentIdentifyCostId, true, null, false);
 	}
 
-	// Token: 0x06012F33 RID: 77619 RVA: 0x004B09F4 File Offset: 0x004AEBF4
+	// Token: 0x060103F2 RID: 66546 RVA: 0x004BE5F8 File Offset: 0x004BC7F8
 	private void RefreshIdentifyConsume(PhantomDataBase itemData, bool enableIdentify)
 	{
 		this.TargetIdentifyNum = 0;
@@ -1059,7 +1058,7 @@ public class VisionLevelUpView : UiTabViewBase
 		this.ItemGridConsumeComponent.UpdateComponent(2, num5 + currentCostCount, this.ConsumeList);
 	}
 
-	// Token: 0x06012F34 RID: 77620 RVA: 0x004B0CE8 File Offset: 0x004AEEE8
+	// Token: 0x060103F3 RID: 66547 RVA: 0x004BE8EC File Offset: 0x004BCAEC
 	private int GetIdentifyCostItemValue()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -1070,14 +1069,14 @@ public class VisionLevelUpView : UiTabViewBase
 		return phantomItemDataByUniqueId.GetIdentifyCostItemValue();
 	}
 
-	// Token: 0x06012F35 RID: 77621 RVA: 0x004B0D11 File Offset: 0x004AEF11
+	// Token: 0x060103F4 RID: 66548 RVA: 0x004BE915 File Offset: 0x004BCB15
 	private void RefreshStrengthBtnTxt(PhantomDataBase itemData, bool enableIdentify)
 	{
 		this.BtnState = new VisionLevelUpView.EStrengthBtnState?(this.CalculateBtnState(itemData, enableIdentify));
 		this.OnBtnState();
 	}
 
-	// Token: 0x06012F36 RID: 77622 RVA: 0x004B0D2C File Offset: 0x004AEF2C
+	// Token: 0x060103F5 RID: 66549 RVA: 0x004BE930 File Offset: 0x004BCB30
 	private VisionLevelUpView.EStrengthBtnState CalculateBtnState(PhantomDataBase itemData, bool enableIdentify)
 	{
 		int phantomLevel = itemData.GetPhantomLevel();
@@ -1139,7 +1138,7 @@ public class VisionLevelUpView : UiTabViewBase
 		return result;
 	}
 
-	// Token: 0x06012F37 RID: 77623 RVA: 0x004B0F20 File Offset: 0x004AF120
+	// Token: 0x060103F6 RID: 66550 RVA: 0x004BEB24 File Offset: 0x004BCD24
 	private void SetMaxState(bool isMaxLevel, bool isMaxIdentify, string text)
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.CurrentVisionUniqueId);
@@ -1234,7 +1233,7 @@ public class VisionLevelUpView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012F38 RID: 77624 RVA: 0x004B1044 File Offset: 0x004AF244
+	// Token: 0x060103F7 RID: 66551 RVA: 0x004BEC48 File Offset: 0x004BCE48
 	private void OnBtnState()
 	{
 		bool isMaxLevel = false;
@@ -1278,108 +1277,108 @@ public class VisionLevelUpView : UiTabViewBase
 		this.SetMaxState(isMaxLevel, isMaxIdentify, text);
 	}
 
-	// Token: 0x04008EA5 RID: 36517
+	// Token: 0x04008FEF RID: 36847
 	[Nullable(2)]
 	private ExpComponent ExpComponent;
 
-	// Token: 0x04008EA6 RID: 36518
+	// Token: 0x04008FF0 RID: 36848
 	[Nullable(2)]
 	private ItemGridConsumeComponent ItemGridConsumeComponent;
 
-	// Token: 0x04008EA7 RID: 36519
+	// Token: 0x04008FF1 RID: 36849
 	private int CurrentVisionUniqueId;
 
-	// Token: 0x04008EA8 RID: 36520
+	// Token: 0x04008FF2 RID: 36850
 	private int CurrentAddLevel;
 
-	// Token: 0x04008EA9 RID: 36521
+	// Token: 0x04008FF3 RID: 36851
 	private List<ISelectedData> CurrentSelectedMat = new List<ISelectedData>();
 
-	// Token: 0x04008EAA RID: 36522
+	// Token: 0x04008FF4 RID: 36852
 	[Nullable(2)]
 	private List<TCommonMultipleConsumeData> ConsumeList;
 
-	// Token: 0x04008EAB RID: 36523
+	// Token: 0x04008FF5 RID: 36853
 	[Nullable(2)]
 	private SelectableExpData CurrentExpData;
 
-	// Token: 0x04008EAC RID: 36524
+	// Token: 0x04008FF6 RID: 36854
 	[Nullable(2)]
 	private VisionMainAttributeComponent VisionMainAttributeComponent;
 
-	// Token: 0x04008EAD RID: 36525
+	// Token: 0x04008FF7 RID: 36855
 	[Nullable(2)]
 	private LevelUpIdentifyComponent LevelUpIdentifyComponent;
 
-	// Token: 0x04008EAE RID: 36526
+	// Token: 0x04008FF8 RID: 36856
 	private int CurrentAutoQualityIndex;
 
-	// Token: 0x04008EAF RID: 36527
+	// Token: 0x04008FF9 RID: 36857
 	private bool EventRegistState;
 
-	// Token: 0x04008EB0 RID: 36528
+	// Token: 0x04008FFA RID: 36858
 	[Nullable(2)]
 	private VisionNameText VisionNameText;
 
-	// Token: 0x04008EB1 RID: 36529
+	// Token: 0x04008FFB RID: 36859
 	private bool AnimateState;
 
-	// Token: 0x04008EB2 RID: 36530
+	// Token: 0x04008FFC RID: 36860
 	[Nullable(2)]
 	private MediumItemGrid ItemGridVariantSelect;
 
-	// Token: 0x04008EB3 RID: 36531
+	// Token: 0x04008FFD RID: 36861
 	private int TargetIdentifyNum;
 
-	// Token: 0x04008EB4 RID: 36532
+	// Token: 0x04008FFE RID: 36862
 	private VisionLevelUpView.EStrengthBtnState? BtnState;
 
-	// Token: 0x04008EB5 RID: 36533
+	// Token: 0x04008FFF RID: 36863
 	private EConfirmBoxConfigId? IdentifyConfirmBoxConfigId;
 
-	// Token: 0x02008A5A RID: 35418
+	// Token: 0x02007BE3 RID: 31715
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CEC6 RID: 184006
+		// Token: 0x040281E4 RID: 164324
 		ExpItem,
-		// Token: 0x0402CEC7 RID: 184007
+		// Token: 0x040281E5 RID: 164325
 		AttributeItem,
-		// Token: 0x0402CEC8 RID: 184008
+		// Token: 0x040281E6 RID: 164326
 		ConsumeItem,
-		// Token: 0x0402CEC9 RID: 184009
+		// Token: 0x040281E7 RID: 164327
 		SubAttributeItem,
-		// Token: 0x0402CECA RID: 184010
+		// Token: 0x040281E8 RID: 164328
 		VisionName,
-		// Token: 0x0402CECB RID: 184011
+		// Token: 0x040281E9 RID: 164329
 		LockToggle,
-		// Token: 0x0402CECC RID: 184012
+		// Token: 0x040281EA RID: 164330
 		DeprecateToggle,
-		// Token: 0x0402CECD RID: 184013
+		// Token: 0x040281EB RID: 164331
 		VisionIdentifyLayOutItem = 9,
-		// Token: 0x0402CECE RID: 184014
+		// Token: 0x040281EC RID: 164332
 		VisionIdentifyCostItem,
-		// Token: 0x0402CECF RID: 184015
+		// Token: 0x040281ED RID: 164333
 		MaxLevelTips,
-		// Token: 0x0402CED0 RID: 184016
+		// Token: 0x040281EE RID: 164334
 		MaxLevelTipsText
 	}
 
-	// Token: 0x02008A5B RID: 35419
+	// Token: 0x02007BE4 RID: 31716
 	[NullableContext(0)]
 	private enum EStrengthBtnState
 	{
-		// Token: 0x0402CED2 RID: 184018
+		// Token: 0x040281F0 RID: 164336
 		Strength,
-		// Token: 0x0402CED3 RID: 184019
+		// Token: 0x040281F1 RID: 164337
 		Identify,
-		// Token: 0x0402CED4 RID: 184020
+		// Token: 0x040281F2 RID: 164338
 		StrengthAndIdentify,
-		// Token: 0x0402CED5 RID: 184021
+		// Token: 0x040281F3 RID: 164339
 		MaxLevelOnlyIdentify,
-		// Token: 0x0402CED6 RID: 184022
+		// Token: 0x040281F4 RID: 164340
 		MaxLevelNoIdentify,
-		// Token: 0x0402CED7 RID: 184023
+		// Token: 0x040281F5 RID: 164341
 		MaxLevelAndIdentify
 	}
 }

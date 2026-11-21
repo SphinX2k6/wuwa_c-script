@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A3 RID: 9123
+	// Token: 0x0200262E RID: 9774
 	public static class EMovieCameraTypeExtensions
 	{
-		// Token: 0x0600C6DC RID: 50908 RVA: 0x001D1E90 File Offset: 0x001D0090
+		// Token: 0x0600D329 RID: 54057 RVA: 0x001EB030 File Offset: 0x001E9230
 		public static string ToEnumString(this EMovieCameraType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6DD RID: 50909 RVA: 0x001D1ED8 File Offset: 0x001D00D8
+		// Token: 0x0600D32A RID: 54058 RVA: 0x001EB078 File Offset: 0x001E9278
 		public static EMovieCameraType FromString(string name)
 		{
 			EMovieCameraType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6DE RID: 50910 RVA: 0x001D1F04 File Offset: 0x001D0104
+		// Token: 0x0600D32B RID: 54059 RVA: 0x001EB0A4 File Offset: 0x001E92A4
 		public static bool TryFromString(string name, out EMovieCameraType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C6DF RID: 50911 RVA: 0x001D1F5A File Offset: 0x001D015A
+		// Token: 0x0600D32C RID: 54060 RVA: 0x001EB0FA File Offset: 0x001E92FA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6E0 RID: 50912 RVA: 0x001D1F7A File Offset: 0x001D017A
+		// Token: 0x0600D32D RID: 54061 RVA: 0x001EB11A File Offset: 0x001E931A
 		public static EMovieCameraType[] GetValues()
 		{
 			return new EMovieCameraType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6E1 RID: 50913 RVA: 0x001D1F8A File Offset: 0x001D018A
+		// Token: 0x0600D32E RID: 54062 RVA: 0x001EB12A File Offset: 0x001E932A
 		public static string[] GetNames()
 		{
 			return new string[]

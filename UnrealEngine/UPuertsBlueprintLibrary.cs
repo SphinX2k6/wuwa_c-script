@@ -7,170 +7,140 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002675 RID: 9845
+	// Token: 0x020007B9 RID: 1977
 	[UnrealObjectPath("/Script/Puerts.PuertsBlueprintLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UPuertsBlueprintLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06024937 RID: 149815 RVA: 0x003623F9 File Offset: 0x003605F9
+		// Token: 0x0600ABA0 RID: 43936 RVA: 0x000FD096 File Offset: 0x000FB296
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UPuertsBlueprintLibrary._ClassPtr;
 		}
 
-		// Token: 0x06024938 RID: 149816 RVA: 0x00362408 File Offset: 0x00360608
+		// Token: 0x0600ABA1 RID: 43937 RVA: 0x000FD0A4 File Offset: 0x000FB2A4
 		public UPuertsBlueprintLibrary() : this(BuiltinUtils.AllocNativeUObject(UPuertsBlueprintLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06024939 RID: 149817 RVA: 0x00362430 File Offset: 0x00360630
+		// Token: 0x0600ABA2 RID: 43938 RVA: 0x000FD0CC File Offset: 0x000FB2CC
 		[NullableContext(1)]
 		public UPuertsBlueprintLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UPuertsBlueprintLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0602493A RID: 149818 RVA: 0x00362464 File Offset: 0x00360664
+		// Token: 0x0600ABA3 RID: 43939 RVA: 0x000FD100 File Offset: 0x000FB300
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void StartShareJsEnv(FName ModuleName, UGameInstance GameInstance)
 		{
 			UPuertsBlueprintLibrary.__StartShareJsEnv_FunctionParams* ptr = stackalloc UPuertsBlueprintLibrary.__StartShareJsEnv_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UPuertsBlueprintLibrary.__StartShareJsEnv_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UPuertsBlueprintLibrary.__StartShareJsEnv_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->ModuleName = ModuleName;
 			ptr->GameInstance = ((GameInstance != null) ? GameInstance.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__StartShareJsEnv_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__StartShareJsEnv_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602493B RID: 149819 RVA: 0x003624C0 File Offset: 0x003606C0
+		// Token: 0x0600ABA4 RID: 43940 RVA: 0x000FD15C File Offset: 0x000FB35C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void SetEnableBlueprintBind(bool value)
 		{
 			UPuertsBlueprintLibrary.__SetEnableBlueprintBind_FunctionParams* ptr = stackalloc UPuertsBlueprintLibrary.__SetEnableBlueprintBind_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UPuertsBlueprintLibrary.__SetEnableBlueprintBind_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UPuertsBlueprintLibrary.__SetEnableBlueprintBind_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->value = value;
-			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__SetEnableBlueprintBind_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__SetEnableBlueprintBind_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602493C RID: 149820 RVA: 0x00362506 File Offset: 0x00360706
+		// Token: 0x0600ABA5 RID: 43941 RVA: 0x000FD1A1 File Offset: 0x000FB3A1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void PreStartShareJsEnv()
 		{
-			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__PreStartShareJsEnv_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__PreStartShareJsEnv_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602493D RID: 149821 RVA: 0x0036251C File Offset: 0x0036071C
-		[NullableContext(2)]
+		// Token: 0x0600ABA6 RID: 43942 RVA: 0x000FD1B4 File Offset: 0x000FB3B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void PreloadJS(UKuroPreloadJSCallback Callback)
-		{
-			UPuertsBlueprintLibrary.__PreloadJS_FunctionParams* ptr = stackalloc UPuertsBlueprintLibrary.__PreloadJS_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UPuertsBlueprintLibrary.__PreloadJS_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(UPuertsBlueprintLibrary.__PreloadJS_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->Callback = ((Callback != null) ? Callback.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__PreloadJS_NativeFunctionPtr, (void*)ptr, 0);
-		}
-
-		// Token: 0x0602493E RID: 149822 RVA: 0x00362574 File Offset: 0x00360774
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void ExecuteModuleInSharedJsEnv(FName ModuleName)
 		{
 			UPuertsBlueprintLibrary.__ExecuteModuleInSharedJsEnv_FunctionParams* ptr = stackalloc UPuertsBlueprintLibrary.__ExecuteModuleInSharedJsEnv_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UPuertsBlueprintLibrary.__ExecuteModuleInSharedJsEnv_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UPuertsBlueprintLibrary.__ExecuteModuleInSharedJsEnv_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->ModuleName = ModuleName;
-			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__ExecuteModuleInSharedJsEnv_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__ExecuteModuleInSharedJsEnv_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602493F RID: 149823 RVA: 0x003625BA File Offset: 0x003607BA
+		// Token: 0x0600ABA7 RID: 43943 RVA: 0x000FD1F9 File Offset: 0x000FB3F9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public static void ClearJSCache()
 		{
-			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__ClearJSCache_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(UPuertsBlueprintLibrary._ClassDefaultObjectPtr, UPuertsBlueprintLibrary.__ClearJSCache_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06024940 RID: 149824 RVA: 0x003625CE File Offset: 0x003607CE
+		// Token: 0x0600ABA8 RID: 43944 RVA: 0x000FD20C File Offset: 0x000FB40C
 		static UPuertsBlueprintLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Puerts.PuertsBlueprintLibrary");
 		}
 
-		// Token: 0x06024941 RID: 149825 RVA: 0x003625DC File Offset: 0x003607DC
+		// Token: 0x0600ABA9 RID: 43945 RVA: 0x000FD21A File Offset: 0x000FB41A
 		protected UPuertsBlueprintLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013A72 RID: 80498
+		// Token: 0x040049B6 RID: 18870
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Puerts.PuertsBlueprintLibrary";
 
-		// Token: 0x04013A73 RID: 80499
+		// Token: 0x040049B7 RID: 18871
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013A74 RID: 80500
+		// Token: 0x040049B8 RID: 18872
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013A75 RID: 80501
+		// Token: 0x040049B9 RID: 18873
 		private static IntPtr __StartShareJsEnv_NativeFunctionPtr;
 
-		// Token: 0x04013A76 RID: 80502
+		// Token: 0x040049BA RID: 18874
 		private static IntPtr __SetEnableBlueprintBind_NativeFunctionPtr;
 
-		// Token: 0x04013A77 RID: 80503
+		// Token: 0x040049BB RID: 18875
 		private static IntPtr __PreStartShareJsEnv_NativeFunctionPtr;
 
-		// Token: 0x04013A78 RID: 80504
-		private static IntPtr __PreloadJS_NativeFunctionPtr;
-
-		// Token: 0x04013A79 RID: 80505
+		// Token: 0x040049BC RID: 18876
 		private static IntPtr __ExecuteModuleInSharedJsEnv_NativeFunctionPtr;
 
-		// Token: 0x04013A7A RID: 80506
+		// Token: 0x040049BD RID: 18877
 		private static IntPtr __ClearJSCache_NativeFunctionPtr;
 
-		// Token: 0x02003689 RID: 13961
+		// Token: 0x02000F67 RID: 3943
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __StartShareJsEnv_FunctionParams
 		{
-			// Token: 0x04017776 RID: 96118
+			// Token: 0x0400633E RID: 25406
 			[FieldOffset(0)]
 			public FName ModuleName;
 
-			// Token: 0x04017777 RID: 96119
+			// Token: 0x0400633F RID: 25407
 			[FieldOffset(16)]
 			public IntPtr GameInstance;
 		}
 
-		// Token: 0x0200368A RID: 13962
+		// Token: 0x02000F68 RID: 3944
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetEnableBlueprintBind_FunctionParams
 		{
-			// Token: 0x04017778 RID: 96120
+			// Token: 0x04006340 RID: 25408
 			[FieldOffset(0)]
 			public bool value;
 		}
 
-		// Token: 0x0200368B RID: 13963
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __PreloadJS_FunctionParams
-		{
-			// Token: 0x04017779 RID: 96121
-			[FieldOffset(0)]
-			public IntPtr Callback;
-		}
-
-		// Token: 0x0200368C RID: 13964
+		// Token: 0x02000F69 RID: 3945
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __ExecuteModuleInSharedJsEnv_FunctionParams
 		{
-			// Token: 0x0401777A RID: 96122
+			// Token: 0x04006341 RID: 25409
 			[FieldOffset(0)]
 			public FName ModuleName;
 		}

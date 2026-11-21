@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200154A RID: 5450
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x020016A6 RID: 5798
 	public class ISceneInteractionOperationTypeConverter : JsonConverter<ISceneInteractionOperationType>
 	{
-		// Token: 0x06007B4C RID: 31564 RVA: 0x00129110 File Offset: 0x00127310
+		// Token: 0x06008220 RID: 33312 RVA: 0x001380BC File Offset: 0x001362BC
 		[return: Nullable(2)]
 		public override ISceneInteractionOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -54,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B4D RID: 31565 RVA: 0x001291B4 File Offset: 0x001273B4
+		// Token: 0x06008221 RID: 33313 RVA: 0x00138160 File Offset: 0x00136360
 		public override void Write(Utf8JsonWriter writer, ISceneInteractionOperationType value, JsonSerializerOptions options)
 		{
 			IEnableSceneInteractionOperation enableSceneInteractionOperation = value as IEnableSceneInteractionOperation;

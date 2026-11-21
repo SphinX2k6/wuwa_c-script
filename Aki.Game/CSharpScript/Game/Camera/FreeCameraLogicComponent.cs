@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072D1 RID: 29393
+	// Token: 0x02006453 RID: 25683
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FreeCameraLogicComponent : EntityComponent
 	{
-		// Token: 0x17009F38 RID: 40760
-		// (get) Token: 0x06048218 RID: 295448 RVA: 0x01280854 File Offset: 0x0127EA54
+		// Token: 0x170076AB RID: 30379
+		// (get) Token: 0x0603E625 RID: 255525 RVA: 0x01223284 File Offset: 0x01221484
 		[Nullable(2)]
 		private ACameraActor CameraActor
 		{
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048219 RID: 295449 RVA: 0x01280867 File Offset: 0x0127EA67
+		// Token: 0x0603E626 RID: 255526 RVA: 0x01223297 File Offset: 0x01221497
 		protected override bool OnInit()
 		{
 			this.DisplayComponent = base.Entity.GetComponent<FreeCameraDisplayComponent>();
 			return true;
 		}
 
-		// Token: 0x0604821A RID: 295450 RVA: 0x0128087C File Offset: 0x0127EA7C
+		// Token: 0x0603E627 RID: 255527 RVA: 0x012232AC File Offset: 0x012214AC
 		public void InitConfig(float[] configIdList)
 		{
 			bool flag = Info.Instance.IsMobileInputModel();
@@ -64,20 +64,20 @@ namespace CSharpScript.Game.Camera
 			this.ResetToInit(0f, null, null);
 		}
 
-		// Token: 0x0604821B RID: 295451 RVA: 0x0128093E File Offset: 0x0127EB3E
+		// Token: 0x0603E628 RID: 255528 RVA: 0x0122336E File Offset: 0x0122156E
 		[NullableContext(2)]
 		public void ResetToInit(float blendTime = 0f, CurveBase blendCurve = null, Action callback = null)
 		{
 			this.ApplyCameraBlend(this.InitLocation, this.InitRotation, 0f, blendTime, blendCurve, this.InitFov, callback);
 		}
 
-		// Token: 0x0604821C RID: 295452 RVA: 0x01280960 File Offset: 0x0127EB60
+		// Token: 0x0603E629 RID: 255529 RVA: 0x01223390 File Offset: 0x01221590
 		public void ReceiveCameraInput(FreeCameraLogicComponent.ICameraMoveData forwardData, FreeCameraLogicComponent.ICameraMoveData rightData, FreeCameraLogicComponent.ICameraMoveData upData, float deltaLookUp, float deltaTurn, float deltaFov, float blendTime = 0f, [Nullable(2)] CurveBase blendCurve = null, bool blendOnlyWhenExceedLimit = false)
 		{
 			this.HandleCameraInput(forwardData, rightData, upData, deltaLookUp, deltaTurn, deltaFov, blendTime, blendCurve, blendOnlyWhenExceedLimit, null);
 		}
 
-		// Token: 0x0604821D RID: 295453 RVA: 0x01280984 File Offset: 0x0127EB84
+		// Token: 0x0603E62A RID: 255530 RVA: 0x012233B4 File Offset: 0x012215B4
 		public void HandleCameraInput(FreeCameraLogicComponent.ICameraMoveData forwardData, FreeCameraLogicComponent.ICameraMoveData rightData, FreeCameraLogicComponent.ICameraMoveData upData, float lookUp, float turn, float deltaFov, float blendTime, [Nullable(2)] CurveBase blendCurve = null, bool blendOnlyWhenExceedLimit = false, [Nullable(2)] Action callback = null)
 		{
 			if (this.CameraState == FreeCameraLogicComponent.ECameraState.Blending)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraState = ((!blendOnlyWhenExceedLimit || (blendOnlyWhenExceedLimit && flag)) ? FreeCameraLogicComponent.ECameraState.Blending : FreeCameraLogicComponent.ECameraState.None);
 		}
 
-		// Token: 0x0604821E RID: 295454 RVA: 0x01280D08 File Offset: 0x0127EF08
+		// Token: 0x0603E62B RID: 255531 RVA: 0x01223738 File Offset: 0x01221938
 		[NullableContext(2)]
 		public void ApplyCameraBlend([Nullable(1)] Vector lookAtPosition, Rotator lookAtRotation, float forwardDistance, float blendTime, CurveBase blendCurve = null, float fov = -1f, Action callback = null)
 		{
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraState = FreeCameraLogicComponent.ECameraState.Blending;
 		}
 
-		// Token: 0x0604821F RID: 295455 RVA: 0x01280ED4 File Offset: 0x0127F0D4
+		// Token: 0x0603E62C RID: 255532 RVA: 0x01223904 File Offset: 0x01221B04
 		private void BlendFinish()
 		{
 			this.DesiredFov = -1f;
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Camera
 			this.BlendFinishCallback = null;
 		}
 
-		// Token: 0x06048220 RID: 295456 RVA: 0x01280F30 File Offset: 0x0127F130
+		// Token: 0x0603E62D RID: 255533 RVA: 0x01223960 File Offset: 0x01221B60
 		protected override void OnAfterTick(float deltaTime)
 		{
 			ACameraActor cameraActor = this.CameraActor;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Camera
 			cameraActor2.D_K2_SetActorLocationAndRotation(this.CameraLocation.ToUeVector(false), this.CameraRotation.ToUeRotator(), false, ref WorldGlobal.SweepHitResult, true);
 		}
 
-		// Token: 0x06048221 RID: 295457 RVA: 0x01280FBC File Offset: 0x0127F1BC
+		// Token: 0x0603E62E RID: 255534 RVA: 0x012239EC File Offset: 0x01221BEC
 		private void UpdateBlending(float deltaSeconds)
 		{
 			if (this.CameraState == FreeCameraLogicComponent.ECameraState.None)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048222 RID: 295458 RVA: 0x01281068 File Offset: 0x0127F268
+		// Token: 0x0603E62F RID: 255535 RVA: 0x01223A98 File Offset: 0x01221C98
 		[NullableContext(0)]
 		[return: Nullable(new byte[]
 		{
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Camera
 			return dictionary;
 		}
 
-		// Token: 0x06048223 RID: 295459 RVA: 0x012810D8 File Offset: 0x0127F2D8
+		// Token: 0x0603E630 RID: 255536 RVA: 0x01223B0C File Offset: 0x01221D0C
 		protected bool CorrectLocation(Vector location)
 		{
 			bool flag = false;
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Camera
 			return flag;
 		}
 
-		// Token: 0x06048224 RID: 295460 RVA: 0x012812EC File Offset: 0x0127F4EC
+		// Token: 0x0603E631 RID: 255537 RVA: 0x01223D20 File Offset: 0x01221F20
 		protected void CorrectRotation(Rotator Rotation)
 		{
 			float max = this.LimitConfigs.ContainsKey(EFreeCameraLimit.Yaw限制Max) ? MathUtils.Instance.WrapAngle(this.LimitConfigs[EFreeCameraLimit.Yaw限制Max]) : 180f;
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Camera
 			Rotation.Pitch = MathUtils.Instance.Clamp(Rotation.Pitch, min2, max2);
 		}
 
-		// Token: 0x06048225 RID: 295461 RVA: 0x0128140C File Offset: 0x0127F60C
+		// Token: 0x0603E632 RID: 255538 RVA: 0x01223E40 File Offset: 0x01222040
 		protected float CorrectFOV(float FoV)
 		{
 			float min = this.LimitConfigs.ContainsKey(EFreeCameraLimit.最小FOV) ? this.LimitConfigs[EFreeCameraLimit.最小FOV] : 0f;
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Camera
 			return MathUtils.Instance.Clamp(FoV, min, max);
 		}
 
-		// Token: 0x06048226 RID: 295462 RVA: 0x01281480 File Offset: 0x0127F680
+		// Token: 0x0603E633 RID: 255539 RVA: 0x01223EB4 File Offset: 0x012220B4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -413,260 +413,244 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			FreeCameraLogicComponent freeCameraLogicComponent = (FreeCameraLogicComponent)componentTemplate;
-			if (base.CanResetComponentProperty("DisplayComponent"))
+			if (freeCameraLogicComponent.DisplayComponent == null)
 			{
-				if (freeCameraLogicComponent.DisplayComponent == null)
-				{
-					this.DisplayComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FreeCameraDisplayComponent>(this.DisplayComponent), "DisplayComponent"))
-				{
-					return false;
-				}
+				this.DisplayComponent = null;
 			}
-			if (base.CanResetComponentProperty("InitLocation") && freeCameraLogicComponent.InitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.InitLocation), "InitLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisplayComponent), "DisplayComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InitRotation") && freeCameraLogicComponent.InitRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.InitRotation), "InitRotation"))
+			if (freeCameraLogicComponent.InitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InitLocation), "InitLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InitFov"))
-			{
-				this.InitFov = freeCameraLogicComponent.InitFov;
-			}
-			if (base.CanResetComponentProperty("CameraState"))
-			{
-				this.CameraState = freeCameraLogicComponent.CameraState;
-			}
-			if (base.CanResetComponentProperty("BlendTime"))
-			{
-				this.BlendTime = freeCameraLogicComponent.BlendTime;
-			}
-			if (base.CanResetComponentProperty("BlendElapsedTime"))
-			{
-				this.BlendElapsedTime = freeCameraLogicComponent.BlendElapsedTime;
-			}
-			if (base.CanResetComponentProperty("BlendCurve"))
-			{
-				if (freeCameraLogicComponent.BlendCurve == null)
-				{
-					this.BlendCurve = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CurveBase>(this.BlendCurve), "BlendCurve"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BlendFinishCallback"))
-			{
-				if (freeCameraLogicComponent.BlendFinishCallback == null)
-				{
-					this.BlendFinishCallback = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.BlendFinishCallback), "BlendFinishCallback"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CameraRotation") && freeCameraLogicComponent.CameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.CameraRotation), "CameraRotation"))
+			if (freeCameraLogicComponent.InitRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InitRotation), "InitRotation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("StartCameraRotation") && freeCameraLogicComponent.StartCameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.StartCameraRotation), "StartCameraRotation"))
+			this.InitFov = freeCameraLogicComponent.InitFov;
+			this.CameraState = freeCameraLogicComponent.CameraState;
+			this.BlendTime = freeCameraLogicComponent.BlendTime;
+			this.BlendElapsedTime = freeCameraLogicComponent.BlendElapsedTime;
+			if (freeCameraLogicComponent.BlendCurve == null)
+			{
+				this.BlendCurve = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BlendCurve), "BlendCurve"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DesiredCameraRotation") && freeCameraLogicComponent.DesiredCameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.DesiredCameraRotation), "DesiredCameraRotation"))
+			if (freeCameraLogicComponent.BlendFinishCallback == null)
+			{
+				this.BlendFinishCallback = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BlendFinishCallback), "BlendFinishCallback"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsBlendFov"))
-			{
-				this.IsBlendFov = freeCameraLogicComponent.IsBlendFov;
-			}
-			if (base.CanResetComponentProperty("StartFov"))
-			{
-				this.StartFov = freeCameraLogicComponent.StartFov;
-			}
-			if (base.CanResetComponentProperty("DesiredFov"))
-			{
-				this.DesiredFov = freeCameraLogicComponent.DesiredFov;
-			}
-			if (base.CanResetComponentProperty("CurrentFov"))
-			{
-				this.CurrentFov = freeCameraLogicComponent.CurrentFov;
-			}
-			if (base.CanResetComponentProperty("StartCameraLocation") && freeCameraLogicComponent.StartCameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.StartCameraLocation), "StartCameraLocation"))
+			if (freeCameraLogicComponent.CameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRotation), "CameraRotation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("DesiredCameraLocation") && freeCameraLogicComponent.DesiredCameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.DesiredCameraLocation), "DesiredCameraLocation"))
+			if (freeCameraLogicComponent.StartCameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartCameraRotation), "StartCameraRotation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraLocation") && freeCameraLogicComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CameraLocation), "CameraLocation"))
+			if (freeCameraLogicComponent.DesiredCameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DesiredCameraRotation), "DesiredCameraRotation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraForward") && freeCameraLogicComponent.CameraForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CameraForward), "CameraForward"))
+			this.IsBlendFov = freeCameraLogicComponent.IsBlendFov;
+			this.StartFov = freeCameraLogicComponent.StartFov;
+			this.DesiredFov = freeCameraLogicComponent.DesiredFov;
+			this.CurrentFov = freeCameraLogicComponent.CurrentFov;
+			if (freeCameraLogicComponent.StartCameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartCameraLocation), "StartCameraLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraRight") && freeCameraLogicComponent.CameraRight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CameraRight), "CameraRight"))
+			if (freeCameraLogicComponent.DesiredCameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DesiredCameraLocation), "DesiredCameraLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraUp") && freeCameraLogicComponent.CameraUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CameraUp), "CameraUp"))
+			if (freeCameraLogicComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraLocation), "CameraLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempForwardVector") && freeCameraLogicComponent.TempForwardVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempForwardVector), "TempForwardVector"))
+			if (freeCameraLogicComponent.CameraForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraForward), "CameraForward"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempRightVector") && freeCameraLogicComponent.TempRightVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempRightVector), "TempRightVector"))
+			if (freeCameraLogicComponent.CameraRight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRight), "CameraRight"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempUpVector") && freeCameraLogicComponent.TempUpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempUpVector), "TempUpVector"))
+			if (freeCameraLogicComponent.CameraUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraUp), "CameraUp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempRotator") && freeCameraLogicComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
+			if (freeCameraLogicComponent.TempForwardVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempForwardVector), "TempForwardVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempQuat") && freeCameraLogicComponent.TempQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat), "TempQuat"))
+			if (freeCameraLogicComponent.TempRightVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRightVector), "TempRightVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempCameraRotation") && freeCameraLogicComponent.TempCameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempCameraRotation), "TempCameraRotation"))
+			if (freeCameraLogicComponent.TempUpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempUpVector), "TempUpVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempQuat2") && freeCameraLogicComponent.TempQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat2), "TempQuat2"))
+			if (freeCameraLogicComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LimitConfigs"))
+			if (freeCameraLogicComponent.TempQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat), "TempQuat"))
 			{
-				if (freeCameraLogicComponent.LimitConfigs == null)
-				{
-					this.LimitConfigs = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<TEnumAsByte<EFreeCameraLimit>, float>>(this.LimitConfigs), "LimitConfigs"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (freeCameraLogicComponent.TempCameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempCameraRotation), "TempCameraRotation"))
+			{
+				return false;
+			}
+			if (freeCameraLogicComponent.TempQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat2), "TempQuat2"))
+			{
+				return false;
+			}
+			if (freeCameraLogicComponent.LimitConfigs == null)
+			{
+				this.LimitConfigs = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LimitConfigs), "LimitConfigs"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040260E0 RID: 155872
+		// Token: 0x170076AC RID: 30380
+		// (get) Token: 0x0603E634 RID: 255540 RVA: 0x01224244 File Offset: 0x01222444
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076AD RID: 30381
+		// (get) Token: 0x0603E635 RID: 255541 RVA: 0x01224247 File Offset: 0x01222447
+		public override bool NeedAfterTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040213C3 RID: 136131
 		private const int YAW_MAX = 180;
 
-		// Token: 0x040260E1 RID: 155873
+		// Token: 0x040213C4 RID: 136132
 		private const int PITCH_MAX = 90;
 
-		// Token: 0x040260E2 RID: 155874
+		// Token: 0x040213C5 RID: 136133
 		private const int FOV_MIN = 0;
 
-		// Token: 0x040260E3 RID: 155875
+		// Token: 0x040213C6 RID: 136134
 		private const int FOV_MAX = 170;
 
-		// Token: 0x040260E4 RID: 155876
+		// Token: 0x040213C7 RID: 136135
 		[Nullable(2)]
 		private FreeCameraDisplayComponent DisplayComponent;
 
-		// Token: 0x040260E5 RID: 155877
+		// Token: 0x040213C8 RID: 136136
 		private readonly Vector InitLocation = Vector.Create();
 
-		// Token: 0x040260E6 RID: 155878
+		// Token: 0x040213C9 RID: 136137
 		private readonly Rotator InitRotation = Rotator.Create();
 
-		// Token: 0x040260E7 RID: 155879
+		// Token: 0x040213CA RID: 136138
 		private float InitFov;
 
-		// Token: 0x040260E8 RID: 155880
+		// Token: 0x040213CB RID: 136139
 		private FreeCameraLogicComponent.ECameraState CameraState;
 
-		// Token: 0x040260E9 RID: 155881
+		// Token: 0x040213CC RID: 136140
 		private float BlendTime;
 
-		// Token: 0x040260EA RID: 155882
+		// Token: 0x040213CD RID: 136141
 		private float BlendElapsedTime;
 
-		// Token: 0x040260EB RID: 155883
+		// Token: 0x040213CE RID: 136142
 		[Nullable(2)]
 		private CurveBase BlendCurve;
 
-		// Token: 0x040260EC RID: 155884
+		// Token: 0x040213CF RID: 136143
 		[Nullable(2)]
 		private Action BlendFinishCallback;
 
-		// Token: 0x040260ED RID: 155885
+		// Token: 0x040213D0 RID: 136144
 		private readonly Rotator CameraRotation = Rotator.Create();
 
-		// Token: 0x040260EE RID: 155886
+		// Token: 0x040213D1 RID: 136145
 		private readonly Rotator StartCameraRotation = Rotator.Create();
 
-		// Token: 0x040260EF RID: 155887
+		// Token: 0x040213D2 RID: 136146
 		private readonly Rotator DesiredCameraRotation = Rotator.Create();
 
-		// Token: 0x040260F0 RID: 155888
+		// Token: 0x040213D3 RID: 136147
 		private bool IsBlendFov;
 
-		// Token: 0x040260F1 RID: 155889
+		// Token: 0x040213D4 RID: 136148
 		private float StartFov;
 
-		// Token: 0x040260F2 RID: 155890
+		// Token: 0x040213D5 RID: 136149
 		private float DesiredFov;
 
-		// Token: 0x040260F3 RID: 155891
+		// Token: 0x040213D6 RID: 136150
 		private float CurrentFov;
 
-		// Token: 0x040260F4 RID: 155892
+		// Token: 0x040213D7 RID: 136151
 		private readonly Vector StartCameraLocation = Vector.Create();
 
-		// Token: 0x040260F5 RID: 155893
+		// Token: 0x040213D8 RID: 136152
 		private readonly Vector DesiredCameraLocation = Vector.Create();
 
-		// Token: 0x040260F6 RID: 155894
+		// Token: 0x040213D9 RID: 136153
 		private readonly Vector CameraLocation = Vector.Create();
 
-		// Token: 0x040260F7 RID: 155895
+		// Token: 0x040213DA RID: 136154
 		private readonly Vector CameraForward = Vector.Create();
 
-		// Token: 0x040260F8 RID: 155896
+		// Token: 0x040213DB RID: 136155
 		private readonly Vector CameraRight = Vector.Create();
 
-		// Token: 0x040260F9 RID: 155897
+		// Token: 0x040213DC RID: 136156
 		private readonly Vector CameraUp = Vector.Create();
 
-		// Token: 0x040260FA RID: 155898
+		// Token: 0x040213DD RID: 136157
 		private readonly Vector TempForwardVector = Vector.Create();
 
-		// Token: 0x040260FB RID: 155899
+		// Token: 0x040213DE RID: 136158
 		private readonly Vector TempRightVector = Vector.Create();
 
-		// Token: 0x040260FC RID: 155900
+		// Token: 0x040213DF RID: 136159
 		private readonly Vector TempUpVector = Vector.Create();
 
-		// Token: 0x040260FD RID: 155901
+		// Token: 0x040213E0 RID: 136160
 		private readonly Rotator TempRotator = Rotator.Create();
 
-		// Token: 0x040260FE RID: 155902
+		// Token: 0x040213E1 RID: 136161
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040260FF RID: 155903
+		// Token: 0x040213E2 RID: 136162
 		private readonly Rotator TempCameraRotation = Rotator.Create();
 
-		// Token: 0x04026100 RID: 155904
+		// Token: 0x040213E3 RID: 136163
 		private readonly Quat TempQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026101 RID: 155905
+		// Token: 0x040213E4 RID: 136164
 		[Nullable(new byte[]
 		{
 			1,
@@ -674,42 +658,42 @@ namespace CSharpScript.Game.Camera
 		})]
 		public Dictionary<TEnumAsByte<EFreeCameraLimit>, float> LimitConfigs = new Dictionary<TEnumAsByte<EFreeCameraLimit>, float>();
 
-		// Token: 0x0200CFCB RID: 53195
+		// Token: 0x0200BBA6 RID: 48038
 		[NullableContext(0)]
 		public enum ECameraState
 		{
-			// Token: 0x0403E7C3 RID: 255939
+			// Token: 0x04039C00 RID: 236544
 			None,
-			// Token: 0x0403E7C4 RID: 255940
+			// Token: 0x04039C01 RID: 236545
 			Blending
 		}
 
-		// Token: 0x0200CFCC RID: 53196
+		// Token: 0x0200BBA7 RID: 48039
 		public interface ICameraMoveData
 		{
-			// Token: 0x1700A2DE RID: 41694
-			// (get) Token: 0x0605227C RID: 336508
-			// (set) Token: 0x0605227D RID: 336509
+			// Token: 0x17007A84 RID: 31364
+			// (get) Token: 0x06048B15 RID: 297749
+			// (set) Token: 0x06048B16 RID: 297750
 			float Distance { get; set; }
 
-			// Token: 0x1700A2DF RID: 41695
-			// (get) Token: 0x0605227E RID: 336510
-			// (set) Token: 0x0605227F RID: 336511
+			// Token: 0x17007A85 RID: 31365
+			// (get) Token: 0x06048B17 RID: 297751
+			// (set) Token: 0x06048B18 RID: 297752
 			bool IsMoveBySelf { get; set; }
 		}
 
-		// Token: 0x0200CFCD RID: 53197
+		// Token: 0x0200BBA8 RID: 48040
 		[NullableContext(0)]
 		public class CameraMoveDataImpl : FreeCameraLogicComponent.ICameraMoveData
 		{
-			// Token: 0x1700A2E0 RID: 41696
-			// (get) Token: 0x06052280 RID: 336512 RVA: 0x0164E743 File Offset: 0x0164C943
-			// (set) Token: 0x06052281 RID: 336513 RVA: 0x0164E74B File Offset: 0x0164C94B
+			// Token: 0x17007A86 RID: 31366
+			// (get) Token: 0x06048B19 RID: 297753 RVA: 0x0162382B File Offset: 0x01621A2B
+			// (set) Token: 0x06048B1A RID: 297754 RVA: 0x01623833 File Offset: 0x01621A33
 			public float Distance { get; set; }
 
-			// Token: 0x1700A2E1 RID: 41697
-			// (get) Token: 0x06052282 RID: 336514 RVA: 0x0164E754 File Offset: 0x0164C954
-			// (set) Token: 0x06052283 RID: 336515 RVA: 0x0164E75C File Offset: 0x0164C95C
+			// Token: 0x17007A87 RID: 31367
+			// (get) Token: 0x06048B1B RID: 297755 RVA: 0x0162383C File Offset: 0x01621A3C
+			// (set) Token: 0x06048B1C RID: 297756 RVA: 0x01623844 File Offset: 0x01621A44
 			public bool IsMoveBySelf { get; set; }
 		}
 	}

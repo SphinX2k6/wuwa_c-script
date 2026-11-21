@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058B8 RID: 22712
+	// Token: 0x02004890 RID: 18576
 	public enum EInstanceCostType
 	{
-		// Token: 0x0401E28F RID: 123535
+		// Token: 0x04018D2C RID: 101676
 		ComeTimeNotComing,
-		// Token: 0x0401E290 RID: 123536
+		// Token: 0x04018D2D RID: 101677
 		ComeTimeNotReward,
-		// Token: 0x0401E291 RID: 123537
+		// Token: 0x04018D2E RID: 101678
 		RewardTimeNotReward,
-		// Token: 0x0401E292 RID: 123538
+		// Token: 0x04018D2F RID: 101679
 		RewardTimeNotComing
 	}
 }

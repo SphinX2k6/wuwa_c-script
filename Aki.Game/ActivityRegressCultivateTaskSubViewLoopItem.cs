@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020014B3 RID: 5299
+// Token: 0x02000967 RID: 2407
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IActivityRegressRoleCultivateSubViewLoopData>
 {
-	// Token: 0x06009628 RID: 38440 RVA: 0x0020699C File Offset: 0x00204B9C
+	// Token: 0x060069BD RID: 27069 RVA: 0x0020F908 File Offset: 0x0020DB08
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06009629 RID: 38441 RVA: 0x00206A5C File Offset: 0x00204C5C
+	// Token: 0x060069BE RID: 27070 RVA: 0x0020F9C8 File Offset: 0x0020DBC8
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
@@ -45,7 +45,7 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 		this.ButtonItemB.SetFunction(new Action<int>(this.OnConfirmBtnClick));
 	}
 
-	// Token: 0x0600962A RID: 38442 RVA: 0x00206B00 File Offset: 0x00204D00
+	// Token: 0x060069BF RID: 27071 RVA: 0x0020FA6C File Offset: 0x0020DC6C
 	[NullableContext(1)]
 	public override void Refresh(IActivityRegressRoleCultivateSubViewLoopData data, bool isSelected, int gridIndex)
 	{
@@ -56,14 +56,14 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 		this.RefreshRewardLayout();
 	}
 
-	// Token: 0x0600962B RID: 38443 RVA: 0x00206B24 File Offset: 0x00204D24
+	// Token: 0x060069C0 RID: 27072 RVA: 0x0020FA90 File Offset: 0x0020DC90
 	private void RefreshName()
 	{
 		UUIText text = base.GetText(0);
 		LguiUtil.Instance.SetLocalTextNew(text, this.Data.Config.TargetName, Array.Empty<object>());
 	}
 
-	// Token: 0x0600962C RID: 38444 RVA: 0x00206B5C File Offset: 0x00204D5C
+	// Token: 0x060069C1 RID: 27073 RVA: 0x0020FAC8 File Offset: 0x0020DCC8
 	private void RefreshProgress()
 	{
 		int id = this.Data.Config.Id;
@@ -78,7 +78,7 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600962D RID: 38445 RVA: 0x00206BD4 File Offset: 0x00204DD4
+	// Token: 0x060069C2 RID: 27074 RVA: 0x0020FB40 File Offset: 0x0020DD40
 	private void RefreshState()
 	{
 		int id = this.Data.Config.Id;
@@ -89,21 +89,21 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 		this.ButtonItemB.SetUiActive(taskRewardState == ERegressRewardState.Reached);
 	}
 
-	// Token: 0x0600962E RID: 38446 RVA: 0x00206C44 File Offset: 0x00204E44
+	// Token: 0x060069C3 RID: 27075 RVA: 0x0020FBB0 File Offset: 0x0020DDB0
 	private void RefreshRewardLayout()
 	{
 		List<TItem> dropPreviewRewardItemListForPreview = ActivityRegressModel.Instance.GetDropPreviewRewardItemListForPreview(this.Data.Config.TargetReward);
 		this.RewardScrollView.RefreshByData(dropPreviewRewardItemListForPreview, null, false);
 	}
 
-	// Token: 0x0600962F RID: 38447 RVA: 0x00206C7D File Offset: 0x00204E7D
+	// Token: 0x060069C4 RID: 27076 RVA: 0x0020FBE9 File Offset: 0x0020DDE9
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid CreatePropItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06009630 RID: 38448 RVA: 0x00206C84 File Offset: 0x00204E84
+	// Token: 0x060069C5 RID: 27077 RVA: 0x0020FBF0 File Offset: 0x0020DDF0
 	private void OnConfirmBtnClick(int _)
 	{
 		RegressQuest config = this.Data.Config;
@@ -119,10 +119,10 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 		}
 	}
 
-	// Token: 0x04004251 RID: 16977
+	// Token: 0x040042E9 RID: 17129
 	private IActivityRegressRoleCultivateSubViewLoopData Data;
 
-	// Token: 0x04004252 RID: 16978
+	// Token: 0x040042EA RID: 17130
 	[Nullable(new byte[]
 	{
 		2,
@@ -130,38 +130,38 @@ public class ActivityRegressCultivateTaskSubViewLoopItem : GridProxyAbstract<IAc
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x04004253 RID: 16979
+	// Token: 0x040042EB RID: 17131
 	private ButtonItem ButtonItemE;
 
-	// Token: 0x04004254 RID: 16980
+	// Token: 0x040042EC RID: 17132
 	private ButtonItem ButtonItemB;
 
-	// Token: 0x02007AED RID: 31469
+	// Token: 0x02006C71 RID: 27761
 	[NullableContext(0)]
 	private class EActivityRegressCultivateTaskSubViewLoopItemComponents
 	{
-		// Token: 0x040286FB RID: 165627
+		// Token: 0x04023A15 RID: 145941
 		public const int TxtName = 0;
 
-		// Token: 0x040286FC RID: 165628
+		// Token: 0x04023A16 RID: 145942
 		public const int TxtNum = 1;
 
-		// Token: 0x040286FD RID: 165629
+		// Token: 0x04023A17 RID: 145943
 		public const int SVRoot = 2;
 
-		// Token: 0x040286FE RID: 165630
+		// Token: 0x04023A18 RID: 145944
 		public const int SVItem = 3;
 
-		// Token: 0x040286FF RID: 165631
+		// Token: 0x04023A19 RID: 145945
 		public const int BtnSecConfirmE2 = 4;
 
-		// Token: 0x04028700 RID: 165632
+		// Token: 0x04023A1A RID: 145946
 		public const int DoneRoot = 5;
 
-		// Token: 0x04028701 RID: 165633
+		// Token: 0x04023A1B RID: 145947
 		public const int BtnSecConfirmB2 = 6;
 
-		// Token: 0x04028702 RID: 165634
+		// Token: 0x04023A1C RID: 145948
 		public const int DoingRoot = 7;
 	}
 }

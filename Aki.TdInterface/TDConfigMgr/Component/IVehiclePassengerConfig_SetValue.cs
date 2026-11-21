@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007C0 RID: 1984
+	// Token: 0x02000863 RID: 2147
 	public class IVehiclePassengerConfig_SetValue
 	{
-		// Token: 0x04001C9F RID: 7327
+		// Token: 0x04001EAB RID: 7851
 		public int PassengerNpc;
 
-		// Token: 0x04001CA0 RID: 7328
+		// Token: 0x04001EAC RID: 7852
 		public int Seat;
 	}
 }

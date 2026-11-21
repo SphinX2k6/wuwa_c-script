@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011AE RID: 4526
+// Token: 0x02000662 RID: 1634
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewBlackCoast : ActivitySubViewBase
 {
-	// Token: 0x060077FC RID: 30716 RVA: 0x0019193D File Offset: 0x0018FB3D
+	// Token: 0x06004B93 RID: 19347 RVA: 0x0019A519 File Offset: 0x00198719
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityBlackCoastData)this.ActivityBaseData;
 	}
 
-	// Token: 0x060077FD RID: 30717 RVA: 0x00191950 File Offset: 0x0018FB50
+	// Token: 0x06004B94 RID: 19348 RVA: 0x0019A52C File Offset: 0x0019872C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -43,7 +43,7 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060077FE RID: 30718 RVA: 0x00191A60 File Offset: 0x0018FC60
+	// Token: 0x06004B95 RID: 19349 RVA: 0x0019A63C File Offset: 0x0019883C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewBlackCoast.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060077FF RID: 30719 RVA: 0x00191AA4 File Offset: 0x0018FCA4
+	// Token: 0x06004B96 RID: 19350 RVA: 0x0019A680 File Offset: 0x00198880
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityData.LocalConfig;
@@ -83,7 +83,7 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06007800 RID: 30720 RVA: 0x00191C65 File Offset: 0x0018FE65
+	// Token: 0x06004B97 RID: 19351 RVA: 0x0019A841 File Offset: 0x00198A41
 	protected override void OnRefreshView()
 	{
 		this.RefreshCount();
@@ -91,13 +91,13 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06007801 RID: 30721 RVA: 0x00191C79 File Offset: 0x0018FE79
+	// Token: 0x06004B98 RID: 19352 RVA: 0x0019A855 File Offset: 0x00198A55
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06007802 RID: 30722 RVA: 0x00191C84 File Offset: 0x0018FE84
+	// Token: 0x06004B99 RID: 19353 RVA: 0x0019A860 File Offset: 0x00198A60
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -110,14 +110,14 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007803 RID: 30723 RVA: 0x00191CC4 File Offset: 0x0018FEC4
+	// Token: 0x06004B9A RID: 19354 RVA: 0x0019A8A0 File Offset: 0x00198AA0
 	private void RefreshCount()
 	{
 		base.GetText(4).SetText(this.ActivityData.GetProgressItemCount().ToString() + "/", true);
 		base.GetText(5).SetText(this.ActivityData.GetProgressItemTotal().ToString(), true);
 	}
 
-	// Token: 0x06007804 RID: 30724 RVA: 0x00191D1C File Offset: 0x0018FF1C
+	// Token: 0x06004B9B RID: 19355 RVA: 0x0019A8F8 File Offset: 0x00198AF8
 	private void RefreshState()
 	{
 		bool flag = this.ActivityData.IsUnLock();
@@ -129,14 +129,14 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetActive(flag);
 	}
 
-	// Token: 0x06007805 RID: 30725 RVA: 0x00191D7C File Offset: 0x0018FF7C
+	// Token: 0x06004B9C RID: 19356 RVA: 0x0019A958 File Offset: 0x00198B58
 	private void RefreshRedDot()
 	{
 		bool functionRedDotVisible = this.ActivityData.RewardRedDotState();
 		this.FunctionalComponent.SetFunctionRedDotVisible(functionRedDotVisible);
 	}
 
-	// Token: 0x06007806 RID: 30726 RVA: 0x00191DA1 File Offset: 0x0018FFA1
+	// Token: 0x06004B9D RID: 19357 RVA: 0x0019A97D File Offset: 0x00198B7D
 	private void ButtonFunction()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -145,16 +145,16 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0400373C RID: 14140
+	// Token: 0x040037D5 RID: 14293
 	protected ActivityBlackCoastData ActivityData;
 
-	// Token: 0x0400373D RID: 14141
+	// Token: 0x040037D6 RID: 14294
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x0400373E RID: 14142
+	// Token: 0x040037D7 RID: 14295
 	private ActivityDescriptionTypeB DescriptionComponent;
 
-	// Token: 0x0400373F RID: 14143
+	// Token: 0x040037D8 RID: 14296
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,32 +162,32 @@ public class ActivitySubViewBlackCoast : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04003740 RID: 14144
+	// Token: 0x040037D9 RID: 14297
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x0200778C RID: 30604
+	// Token: 0x02006918 RID: 26904
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040276B6 RID: 161462
+		// Token: 0x040229EC RID: 141804
 		public const int TitleItem = 0;
 
-		// Token: 0x040276B7 RID: 161463
+		// Token: 0x040229ED RID: 141805
 		public const int TextItem = 1;
 
-		// Token: 0x040276B8 RID: 161464
+		// Token: 0x040229EE RID: 141806
 		public const int RewardItem = 2;
 
-		// Token: 0x040276B9 RID: 161465
+		// Token: 0x040229EF RID: 141807
 		public const int PanelBottom = 3;
 
-		// Token: 0x040276BA RID: 161466
+		// Token: 0x040229F0 RID: 141808
 		public const int DataCount = 4;
 
-		// Token: 0x040276BB RID: 161467
+		// Token: 0x040229F1 RID: 141809
 		public const int DataTotal = 5;
 
-		// Token: 0x040276BC RID: 161468
+		// Token: 0x040229F2 RID: 141810
 		public const int DataIcon = 6;
 	}
 }

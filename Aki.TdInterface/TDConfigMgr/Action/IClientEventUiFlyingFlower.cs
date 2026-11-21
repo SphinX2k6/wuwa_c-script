@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018B4 RID: 6324
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A3F RID: 6719
 	public class IClientEventUiFlyingFlower : IClientEventUi
 	{
-		// Token: 0x060087B7 RID: 34743 RVA: 0x0014188C File Offset: 0x0013FA8C
+		// Token: 0x06008EDF RID: 36575 RVA: 0x001510C0 File Offset: 0x0014F2C0
 		private IClientEventUiFlyingFlower_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060087B8 RID: 34744 RVA: 0x001418C4 File Offset: 0x0013FAC4
+		// Token: 0x06008EE0 RID: 36576 RVA: 0x001510F8 File Offset: 0x0014F2F8
 		public static IClientEventUiFlyingFlower Create([Nullable(2)] IClientEventUiFlyingFlower instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087B9 RID: 34745 RVA: 0x001418D7 File Offset: 0x0013FAD7
+		// Token: 0x06008EE1 RID: 36577 RVA: 0x0015110B File Offset: 0x0014F30B
 		public static IClientEventUiFlyingFlower CreateFromSetValue([Nullable(2)] IClientEventUiFlyingFlower_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087BA RID: 34746 RVA: 0x001418EA File Offset: 0x0013FAEA
+		// Token: 0x06008EE2 RID: 36578 RVA: 0x0015111E File Offset: 0x0014F31E
 		public new IClientEventUiFlyingFlower_SetValue ToSetValue()
 		{
 			return new IClientEventUiFlyingFlower_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C22 RID: 11298
-		// (get) Token: 0x060087BB RID: 34747 RVA: 0x00141909 File Offset: 0x0013FB09
-		// (set) Token: 0x060087BC RID: 34748 RVA: 0x00141934 File Offset: 0x0013FB34
+		// Token: 0x17002E1D RID: 11805
+		// (get) Token: 0x06008EE3 RID: 36579 RVA: 0x0015113D File Offset: 0x0014F33D
+		// (set) Token: 0x06008EE4 RID: 36580 RVA: 0x00151168 File Offset: 0x0014F368
 		public override EClientEventUiType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C23 RID: 11299
-		// (get) Token: 0x060087BD RID: 34749 RVA: 0x00141944 File Offset: 0x0013FB44
-		// (set) Token: 0x060087BE RID: 34750 RVA: 0x001419A5 File Offset: 0x0013FBA5
+		// Token: 0x17002E1E RID: 11806
+		// (get) Token: 0x06008EE5 RID: 36581 RVA: 0x00151178 File Offset: 0x0014F378
+		// (set) Token: 0x06008EE6 RID: 36582 RVA: 0x001511D9 File Offset: 0x0014F3D9
 		public virtual IClientEventFlyingFlowerUpdateSubtitle EventType
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400555D RID: 21853
+		// Token: 0x040059AA RID: 22954
 		[Nullable(2)]
 		protected new IClientEventUiFlyingFlower FbInstance;
 
-		// Token: 0x0400555E RID: 21854
+		// Token: 0x040059AB RID: 22955
 		[Nullable(2)]
 		protected new IClientEventUiFlyingFlower_SetValue PocoInterface;
 
-		// Token: 0x0400555F RID: 21855
+		// Token: 0x040059AC RID: 22956
 		private IClientEventFlyingFlowerUpdateSubtitle _EventTypeCache;
 
-		// Token: 0x04005560 RID: 21856
+		// Token: 0x040059AD RID: 22957
 		private bool _EventTypeInited;
 	}
 }

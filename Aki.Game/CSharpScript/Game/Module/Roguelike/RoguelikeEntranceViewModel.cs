@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,12 +12,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD7 RID: 19927
+	// Token: 0x02003DA0 RID: 15776
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeEntranceViewModel
 	{
-		// Token: 0x060336F3 RID: 210675 RVA: 0x00C03440 File Offset: 0x00C01640
+		// Token: 0x06028560 RID: 165216 RVA: 0x00B4C998 File Offset: 0x00B4AB98
 		public UniTask InitAsync(int instanceId)
 		{
 			RoguelikeEntranceViewModel.<InitAsync>d__1 <InitAsync>d__;
@@ -30,9 +29,9 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17007EB9 RID: 32441
-		// (get) Token: 0x060336F4 RID: 210676 RVA: 0x00C0348B File Offset: 0x00C0168B
-		// (set) Token: 0x060336F5 RID: 210677 RVA: 0x00C03494 File Offset: 0x00C01694
+		// Token: 0x17005269 RID: 21097
+		// (get) Token: 0x06028561 RID: 165217 RVA: 0x00B4C9E3 File Offset: 0x00B4ABE3
+		// (set) Token: 0x06028562 RID: 165218 RVA: 0x00B4C9EC File Offset: 0x00B4ABEC
 		public int CurrentEntriesGroupIndex
 		{
 			get
@@ -75,8 +74,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EBA RID: 32442
-		// (get) Token: 0x060336F6 RID: 210678 RVA: 0x00C035D6 File Offset: 0x00C017D6
+		// Token: 0x1700526A RID: 21098
+		// (get) Token: 0x06028563 RID: 165219 RVA: 0x00B4CB2E File Offset: 0x00B4AD2E
 		public RoguelikeEntriesGroupData CurrentEntriesGroupData
 		{
 			get
@@ -85,8 +84,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EBB RID: 32443
-		// (get) Token: 0x060336F7 RID: 210679 RVA: 0x00C035E9 File Offset: 0x00C017E9
+		// Token: 0x1700526B RID: 21099
+		// (get) Token: 0x06028564 RID: 165220 RVA: 0x00B4CB41 File Offset: 0x00B4AD41
 		public bool IsReduceMultiplierAvailable
 		{
 			get
@@ -95,8 +94,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EBC RID: 32444
-		// (get) Token: 0x060336F8 RID: 210680 RVA: 0x00C035FE File Offset: 0x00C017FE
+		// Token: 0x1700526C RID: 21100
+		// (get) Token: 0x06028565 RID: 165221 RVA: 0x00B4CB56 File Offset: 0x00B4AD56
 		public bool IsAddMultiplierAvailable
 		{
 			get
@@ -105,14 +104,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336F9 RID: 210681 RVA: 0x00C03613 File Offset: 0x00C01813
+		// Token: 0x06028566 RID: 165222 RVA: 0x00B4CB6B File Offset: 0x00B4AD6B
 		[NullableContext(2)]
 		public void SetCurrentSelectEntryData(RoguelikeEntryData entryData)
 		{
 			this.CurrentSelectEntryData = entryData;
 		}
 
-		// Token: 0x060336FA RID: 210682 RVA: 0x00C0361C File Offset: 0x00C0181C
+		// Token: 0x06028567 RID: 165223 RVA: 0x00B4CB74 File Offset: 0x00B4AD74
 		private void InitEntries(RogueHotEntryInfo info)
 		{
 			RepeatedField<int> visibleHotEntryGroupIds = info.VisibleHotEntryGroupIds;
@@ -163,34 +162,40 @@ namespace CSharpScript.Game.Module.Roguelike
 					if (roguelikeEntriesGroupData.IsActive)
 					{
 						int num5 = 0;
-						using (IEnumerator<IReadOnlyList<int>> enumerator = (from x in array
-						select x.Item1).GetEnumerator())
+						ValueTuple<IReadOnlyList<int>, ERoguelikeEntryType, List<RoguelikeEntryData>>[] array2 = array;
+						for (int j = 0; j < array2.Length; j++)
 						{
-							while (enumerator.MoveNext())
+							IReadOnlyList<int> item3 = array2[j].Item1;
+							if (item3.Count != 0)
 							{
-								IReadOnlyList<int> readOnlyList = enumerator.Current;
-								if (readOnlyList.Count != 0)
+								int num6 = item3.Count - 1;
+								if (num5 <= num6)
 								{
-									int num6 = readOnlyList.Count<int>() - 1;
-									if (num5 <= num6)
-									{
-										num5 = num6;
-										num3 = readOnlyList[num6];
-									}
+									num5 = num6;
+									num3 = item3[num6];
 								}
 							}
-							goto IL_2CA;
 						}
-						goto IL_261;
 					}
-					goto IL_261;
-					IL_2CA:
+					else if (!flag)
+					{
+						ValueTuple<IReadOnlyList<int>, ERoguelikeEntryType, List<RoguelikeEntryData>>[] array2 = array;
+						for (int j = 0; j < array2.Length; j++)
+						{
+							IReadOnlyList<int> item4 = array2[j].Item1;
+							if (item4.Count != 0)
+							{
+								num3 = item4[0];
+							}
+						}
+						flag = true;
+					}
 					foreach (ValueTuple<IReadOnlyList<int>, ERoguelikeEntryType, List<RoguelikeEntryData>> valueTuple in array)
 					{
-						IReadOnlyList<int> item3 = valueTuple.Item1;
-						ERoguelikeEntryType item4 = valueTuple.Item2;
-						List<RoguelikeEntryData> item5 = valueTuple.Item3;
-						foreach (int num7 in item3)
+						IReadOnlyList<int> item5 = valueTuple.Item1;
+						ERoguelikeEntryType item6 = valueTuple.Item2;
+						List<RoguelikeEntryData> item7 = valueTuple.Item3;
+						foreach (int num7 in item5)
 						{
 							RogueHotEntry? rogueHotEntryConfig = RoguelikeConfig.Instance.GetRogueHotEntryConfig(num7);
 							if (rogueHotEntryConfig != null)
@@ -198,10 +203,10 @@ namespace CSharpScript.Game.Module.Roguelike
 								RoguelikeEntryData roguelikeEntryData = new RoguelikeEntryData();
 								roguelikeEntryData.Id = num7;
 								roguelikeEntryData.GroupId = num4;
-								roguelikeEntryData.Type = item4;
+								roguelikeEntryData.Type = item6;
 								roguelikeEntryData.OverviewId = rogueHotEntryConfig.Value.OverviewId;
-								roguelikeEntryData.OverviewParam = rogueHotEntryConfig.Value.OverviewShowParam().ToList<int>();
-								item5.Add(roguelikeEntryData);
+								roguelikeEntryData.OverviewParam = new List<int>(rogueHotEntryConfig.Value.OverviewShowParam());
+								item7.Add(roguelikeEntryData);
 								if (num7 == num3)
 								{
 									this.CurrentSelectEntryData = roguelikeEntryData;
@@ -211,29 +216,12 @@ namespace CSharpScript.Game.Module.Roguelike
 					}
 					this.EntriesDataGroupMap[num4] = roguelikeEntriesGroupData;
 					this.EntriesDataGroupList.Add(roguelikeEntriesGroupData);
-					goto IL_3D7;
-					IL_261:
-					if (!flag)
-					{
-						foreach (IReadOnlyList<int> readOnlyList2 in from x in array
-						select x.Item1)
-						{
-							if (readOnlyList2.Count != 0)
-							{
-								num3 = readOnlyList2[0];
-							}
-						}
-						flag = true;
-						goto IL_2CA;
-					}
-					goto IL_2CA;
 				}
-				IL_3D7:;
 			}
 			this.UpdateCurrentActiveOverviewId();
 		}
 
-		// Token: 0x060336FB RID: 210683 RVA: 0x00C03A44 File Offset: 0x00C01C44
+		// Token: 0x06028568 RID: 165224 RVA: 0x00B4CF34 File Offset: 0x00B4B134
 		public bool GetEntryDataActiveState(RoguelikeEntryData entryData)
 		{
 			RoguelikeEntriesGroupData roguelikeEntriesGroupData2;
@@ -241,7 +229,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return roguelikeEntriesGroupData != null && roguelikeEntriesGroupData.IsActive;
 		}
 
-		// Token: 0x060336FC RID: 210684 RVA: 0x00C03A78 File Offset: 0x00C01C78
+		// Token: 0x06028569 RID: 165225 RVA: 0x00B4CF68 File Offset: 0x00B4B168
 		public bool HasMultiAvailableEntriesGroup()
 		{
 			int num = 0;
@@ -259,7 +247,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return false;
 		}
 
-		// Token: 0x060336FD RID: 210685 RVA: 0x00C03AC8 File Offset: 0x00C01CC8
+		// Token: 0x0602856A RID: 165226 RVA: 0x00B4CFB8 File Offset: 0x00B4B1B8
 		private void UpdateCurrentActiveOverviewId()
 		{
 			this.CurrentActiveOverviewId.Clear();
@@ -272,13 +260,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336FE RID: 210686 RVA: 0x00C03B50 File Offset: 0x00C01D50
+		// Token: 0x0602856B RID: 165227 RVA: 0x00B4D040 File Offset: 0x00B4B240
 		public bool GetOverviewIdActiveState(int overviewId)
 		{
 			return this.CurrentActiveOverviewId.Contains(overviewId);
 		}
 
-		// Token: 0x060336FF RID: 210687 RVA: 0x00C03B60 File Offset: 0x00C01D60
+		// Token: 0x0602856C RID: 165228 RVA: 0x00B4D050 File Offset: 0x00B4B250
 		public List<int> GetEntriesOverviewIdList()
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -289,7 +277,7 @@ namespace CSharpScript.Game.Module.Roguelike
 					hashSet.Add(roguelikeEntryData.OverviewId);
 				}
 			}
-			List<int> list = hashSet.ToList<int>();
+			List<int> list = new List<int>(hashSet);
 			list.Sort(delegate(int a, int b)
 			{
 				RogueHotEntryOverview value = RoguelikeConfig.Instance.GetRogueHotEntryOverviewConfig(a).Value;
@@ -299,7 +287,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033700 RID: 210688 RVA: 0x00C03C0C File Offset: 0x00C01E0C
+		// Token: 0x0602856D RID: 165229 RVA: 0x00B4D0FC File Offset: 0x00B4B2FC
 		public List<int> GetEntriesOverviewIdParam(int overviewId)
 		{
 			List<int> list = new List<int>();
@@ -311,7 +299,7 @@ namespace CSharpScript.Game.Module.Roguelike
 					{
 						if (list.Count == 0)
 						{
-							list = roguelikeEntryData.OverviewParam.ToList<int>();
+							list = new List<int>(roguelikeEntryData.OverviewParam);
 						}
 						else
 						{
@@ -330,7 +318,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033701 RID: 210689 RVA: 0x00C03CEC File Offset: 0x00C01EEC
+		// Token: 0x0602856E RID: 165230 RVA: 0x00B4D1DC File Offset: 0x00B4B3DC
 		public int GetEntriesOverviewIdCount(int overviewId)
 		{
 			int num = 0;
@@ -347,13 +335,18 @@ namespace CSharpScript.Game.Module.Roguelike
 			return num;
 		}
 
-		// Token: 0x06033702 RID: 210690 RVA: 0x00C03D64 File Offset: 0x00C01F64
+		// Token: 0x0602856F RID: 165231 RVA: 0x00B4D254 File Offset: 0x00B4B454
 		private void InitFormation(RogueHotEntryInfo info, IReadOnlyList<int> validRoleList)
 		{
-			this.VisibleRoleList = info.VisibleRoleIds.ToList<int>();
-			this.ValidRoleList = (from roleId in validRoleList
-			where this.VisibleRoleList.Contains(roleId)
-			select roleId).ToList<int>();
+			this.VisibleRoleList = new List<int>(info.VisibleRoleIds);
+			this.ValidRoleList = new List<int>();
+			foreach (int item in validRoleList)
+			{
+				if (this.VisibleRoleList.Contains(item))
+				{
+					this.ValidRoleList.Add(item);
+				}
+			}
 			this.RoleShowLevel = info.RoleShowLevel;
 			foreach (int num in this.ValidRoleList)
 			{
@@ -377,7 +370,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ShowNewUnlockRole = this.HasNewUnlockRoleId();
 		}
 
-		// Token: 0x06033703 RID: 210691 RVA: 0x00C03E80 File Offset: 0x00C02080
+		// Token: 0x06028570 RID: 165232 RVA: 0x00B4D3B0 File Offset: 0x00B4B5B0
 		private void InitFormationIdList()
 		{
 			this.FormationIdList = new List<int>(new int[3]);
@@ -386,7 +379,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			{
 				return;
 			}
-			for (int i = 0; i < player.Count<int>(); i++)
+			for (int i = 0; i < player.Count; i++)
 			{
 				int num = player[i];
 				if (num != 0)
@@ -421,16 +414,16 @@ namespace CSharpScript.Game.Module.Roguelike
 					}
 				}
 			}
-			this.FormationIdList = player.ToList<int>();
+			this.FormationIdList = new List<int>(player);
 		}
 
-		// Token: 0x06033704 RID: 210692 RVA: 0x00C03F9F File Offset: 0x00C0219F
+		// Token: 0x06028571 RID: 165233 RVA: 0x00B4D4CF File Offset: 0x00B4B6CF
 		public void CacheRoleSelect()
 		{
 			LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.RoguelikeFormationIdList, this.FormationIdList);
 		}
 
-		// Token: 0x06033705 RID: 210693 RVA: 0x00C03FB4 File Offset: 0x00C021B4
+		// Token: 0x06028572 RID: 165234 RVA: 0x00B4D4E4 File Offset: 0x00B4B6E4
 		public List<RoleDataBase> GetFormationRoleDataList()
 		{
 			HashSet<RoleDataBase> hashSet = new HashSet<RoleDataBase>();
@@ -442,10 +435,10 @@ namespace CSharpScript.Game.Module.Roguelike
 					hashSet.Add(roguelikeRoleData);
 				}
 			}
-			return hashSet.ToList<RoleDataBase>();
+			return new List<RoleDataBase>(hashSet);
 		}
 
-		// Token: 0x06033706 RID: 210694 RVA: 0x00C04040 File Offset: 0x00C02240
+		// Token: 0x06028573 RID: 165235 RVA: 0x00B4D570 File Offset: 0x00B4B770
 		public List<TeamRoleSkillData> GetSupportCustomSkillShowData(int roleId)
 		{
 			List<TeamRoleSkillData> list = new List<TeamRoleSkillData>();
@@ -482,7 +475,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033707 RID: 210695 RVA: 0x00C041D0 File Offset: 0x00C023D0
+		// Token: 0x06028574 RID: 165236 RVA: 0x00B4D700 File Offset: 0x00B4B900
 		public bool HasNewUnlockRoleId()
 		{
 			ServerStorageSet serverStorageSet = (ServerStorageSet)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RoguelikeNewCharacterUnlock);
@@ -497,7 +490,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return false;
 		}
 
-		// Token: 0x06033708 RID: 210696 RVA: 0x00C04268 File Offset: 0x00C02468
+		// Token: 0x06028575 RID: 165237 RVA: 0x00B4D798 File Offset: 0x00B4B998
 		public void CacheNewUnlockRoleId()
 		{
 			ServerStorageSet serverStorageSet = (ServerStorageSet)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RoguelikeNewCharacterUnlock);
@@ -512,7 +505,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ShowNewUnlockRole = false;
 		}
 
-		// Token: 0x06033709 RID: 210697 RVA: 0x00C04304 File Offset: 0x00C02504
+		// Token: 0x06028576 RID: 165238 RVA: 0x00B4D834 File Offset: 0x00B4BA34
 		[NullableContext(0)]
 		public ValueTuple<int, int>? GetNewUnlockEntriesGroupId()
 		{
@@ -549,27 +542,27 @@ namespace CSharpScript.Game.Module.Roguelike
 			return new ValueTuple<int, int>?(new ValueTuple<int, int>(num, num2));
 		}
 
-		// Token: 0x0401B4DD RID: 111837
+		// Token: 0x04015EB0 RID: 89776
 		public int InstanceId;
 
-		// Token: 0x0401B4DE RID: 111838
+		// Token: 0x04015EB1 RID: 89777
 		public Dictionary<int, RoguelikeEntriesGroupData> EntriesDataGroupMap = new Dictionary<int, RoguelikeEntriesGroupData>();
 
-		// Token: 0x0401B4DF RID: 111839
+		// Token: 0x04015EB2 RID: 89778
 		public List<RoguelikeEntriesGroupData> EntriesDataGroupList = new List<RoguelikeEntriesGroupData>();
 
-		// Token: 0x0401B4E0 RID: 111840
+		// Token: 0x04015EB3 RID: 89779
 		[Nullable(2)]
 		public RoguelikeEntryData CurrentSelectEntryData;
 
-		// Token: 0x0401B4E1 RID: 111841
+		// Token: 0x04015EB4 RID: 89780
 		[Nullable(0)]
 		private ValueTuple<int, int> EntriesGroupAvailableIndexRange = new ValueTuple<int, int>(0, 0);
 
-		// Token: 0x0401B4E2 RID: 111842
+		// Token: 0x04015EB5 RID: 89781
 		private int CurrentEntriesGroupIndexInternal = -1;
 
-		// Token: 0x0401B4E3 RID: 111843
+		// Token: 0x04015EB6 RID: 89782
 		[Nullable(new byte[]
 		{
 			2,
@@ -577,28 +570,28 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public Action<bool, RoguelikeEntryData> OnClickEntry;
 
-		// Token: 0x0401B4E4 RID: 111844
+		// Token: 0x04015EB7 RID: 89783
 		private HashSet<int> CurrentActiveOverviewId = new HashSet<int>();
 
-		// Token: 0x0401B4E5 RID: 111845
+		// Token: 0x04015EB8 RID: 89784
 		public List<int> FormationIdList = new List<int>();
 
-		// Token: 0x0401B4E6 RID: 111846
+		// Token: 0x04015EB9 RID: 89785
 		public List<int> VisibleRoleList = new List<int>();
 
-		// Token: 0x0401B4E7 RID: 111847
+		// Token: 0x04015EBA RID: 89786
 		public List<int> ValidRoleList = new List<int>();
 
-		// Token: 0x0401B4E8 RID: 111848
+		// Token: 0x04015EBB RID: 89787
 		public Dictionary<int, int> RoleId2ValidRoleId = new Dictionary<int, int>();
 
-		// Token: 0x0401B4E9 RID: 111849
+		// Token: 0x04015EBC RID: 89788
 		public Dictionary<int, int> RoleTrialId2ValidRoleId = new Dictionary<int, int>();
 
-		// Token: 0x0401B4EA RID: 111850
+		// Token: 0x04015EBD RID: 89789
 		public int RoleShowLevel;
 
-		// Token: 0x0401B4EB RID: 111851
+		// Token: 0x04015EBE RID: 89790
 		public bool ShowNewUnlockRole;
 	}
 }

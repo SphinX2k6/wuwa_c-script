@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D8D RID: 3469
+	// Token: 0x02000E89 RID: 3721
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITemplateMatrix : ISpawnConfigType
 	{
-		// Token: 0x06004EE0 RID: 20192 RVA: 0x000C38D1 File Offset: 0x000C1AD1
-		[NullableContext(1)]
+		// Token: 0x06005405 RID: 21509 RVA: 0x000CF121 File Offset: 0x000CD321
+		[NullableContext(0)]
 		public static ITemplateMatrix Create(ITemplateMatrix? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001983 RID: 6531
-		// (get) Token: 0x06004EE1 RID: 20193 RVA: 0x000C38F0 File Offset: 0x000C1AF0
+		// Token: 0x17001AEE RID: 6894
+		// (get) Token: 0x06005406 RID: 21510 RVA: 0x000CF140 File Offset: 0x000CD340
 		public override ESpawnConfigType Type
 		{
 			get
@@ -36,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001984 RID: 6532
-		// (get) Token: 0x06004EE2 RID: 20194 RVA: 0x000C38FD File Offset: 0x000C1AFD
+		// Token: 0x17001AEF RID: 6895
+		// (get) Token: 0x06005407 RID: 21511 RVA: 0x000CF14D File Offset: 0x000CD34D
 		public virtual IVector2 MatrixSize
 		{
 			get
@@ -52,12 +52,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001985 RID: 6533
-		// (get) Token: 0x06004EE3 RID: 20195 RVA: 0x000C3934 File Offset: 0x000C1B34
-		[Nullable(1)]
+		// Token: 0x17001AF0 RID: 6896
+		// (get) Token: 0x06005408 RID: 21512 RVA: 0x000CF184 File Offset: 0x000CD384
+		[Nullable(0)]
 		public virtual List<ITemplateMatrixRow> TemplateMatrix
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TemplateMatrixInited)
@@ -75,8 +75,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001986 RID: 6534
-		// (get) Token: 0x06004EE4 RID: 20196 RVA: 0x000C399D File Offset: 0x000C1B9D
+		// Token: 0x17001AF1 RID: 6897
+		// (get) Token: 0x06005409 RID: 21513 RVA: 0x000CF1ED File Offset: 0x000CD3ED
 		public virtual VectorInfo EntityInterval
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001987 RID: 6535
-		// (get) Token: 0x06004EE5 RID: 20197 RVA: 0x000C39D4 File Offset: 0x000C1BD4
+		// Token: 0x17001AF2 RID: 6898
+		// (get) Token: 0x0600540A RID: 21514 RVA: 0x000CF224 File Offset: 0x000CD424
 		public virtual bool? IsInitHide
 		{
 			get
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001988 RID: 6536
-		// (get) Token: 0x06004EE6 RID: 20198 RVA: 0x000C3A0C File Offset: 0x000C1C0C
+		// Token: 0x17001AF3 RID: 6899
+		// (get) Token: 0x0600540B RID: 21515 RVA: 0x000CF25C File Offset: 0x000CD45C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IGroupDestroyListenConfig> GroupDestroyListenConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,19 +140,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001989 RID: 6537
-		// (get) Token: 0x06004EE7 RID: 20199 RVA: 0x000C3A88 File Offset: 0x000C1C88
+		// Token: 0x17001AF4 RID: 6900
+		// (get) Token: 0x0600540C RID: 21516 RVA: 0x000CF2D8 File Offset: 0x000CD4D8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IChildEntityStateControl> ChildEntityStateControls
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -175,19 +175,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700198A RID: 6538
-		// (get) Token: 0x06004EE8 RID: 20200 RVA: 0x000C3B04 File Offset: 0x000C1D04
+		// Token: 0x17001AF5 RID: 6901
+		// (get) Token: 0x0600540D RID: 21517 RVA: 0x000CF354 File Offset: 0x000CD554
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> OnNonGroupEntityDestroy
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -210,8 +210,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700198B RID: 6539
-		// (get) Token: 0x06004EE9 RID: 20201 RVA: 0x000C3B7E File Offset: 0x000C1D7E
+		// Token: 0x17001AF6 RID: 6902
+		// (get) Token: 0x0600540E RID: 21518 RVA: 0x000CF3CE File Offset: 0x000CD5CE
 		public virtual IChangeTemplateInstanceStateConfig NonGroupDestroyChangeInstanceStateConfig
 		{
 			get
@@ -226,65 +226,65 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D4C RID: 11596
+		// Token: 0x04003012 RID: 12306
 		private ITemplateMatrix Instance;
 
-		// Token: 0x04002D4D RID: 11597
+		// Token: 0x04003013 RID: 12307
 		private IVector2 _MatrixSizeCache;
 
-		// Token: 0x04002D4E RID: 11598
+		// Token: 0x04003014 RID: 12308
 		private bool _MatrixSizeInited;
 
-		// Token: 0x04002D4F RID: 11599
-		[Nullable(1)]
+		// Token: 0x04003015 RID: 12309
+		[Nullable(0)]
 		private List<ITemplateMatrixRow> _TemplateMatrixCache;
 
-		// Token: 0x04002D50 RID: 11600
+		// Token: 0x04003016 RID: 12310
 		private bool _TemplateMatrixInited;
 
-		// Token: 0x04002D51 RID: 11601
+		// Token: 0x04003017 RID: 12311
 		private VectorInfo _EntityIntervalCache;
 
-		// Token: 0x04002D52 RID: 11602
+		// Token: 0x04003018 RID: 12312
 		private bool _EntityIntervalInited;
 
-		// Token: 0x04002D53 RID: 11603
+		// Token: 0x04003019 RID: 12313
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IGroupDestroyListenConfig> _GroupDestroyListenConfigsCache;
 
-		// Token: 0x04002D54 RID: 11604
+		// Token: 0x0400301A RID: 12314
 		private bool _GroupDestroyListenConfigsInited;
 
-		// Token: 0x04002D55 RID: 11605
+		// Token: 0x0400301B RID: 12315
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IChildEntityStateControl> _ChildEntityStateControlsCache;
 
-		// Token: 0x04002D56 RID: 11606
+		// Token: 0x0400301C RID: 12316
 		private bool _ChildEntityStateControlsInited;
 
-		// Token: 0x04002D57 RID: 11607
+		// Token: 0x0400301D RID: 12317
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _OnNonGroupEntityDestroyCache;
 
-		// Token: 0x04002D58 RID: 11608
+		// Token: 0x0400301E RID: 12318
 		private bool _OnNonGroupEntityDestroyInited;
 
-		// Token: 0x04002D59 RID: 11609
+		// Token: 0x0400301F RID: 12319
 		private IChangeTemplateInstanceStateConfig _NonGroupDestroyChangeInstanceStateConfigCache;
 
-		// Token: 0x04002D5A RID: 11610
+		// Token: 0x04003020 RID: 12320
 		private bool _NonGroupDestroyChangeInstanceStateConfigInited;
 	}
 }

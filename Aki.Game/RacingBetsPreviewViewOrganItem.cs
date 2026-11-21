@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200271E RID: 10014
+// Token: 0x02001C09 RID: 7177
 public class RacingBetsPreviewViewOrganItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601485B RID: 84059 RVA: 0x0052E7A2 File Offset: 0x0052C9A2
+	// Token: 0x06011D3D RID: 73021 RVA: 0x0053D4BE File Offset: 0x0053B6BE
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x0601485C RID: 84060 RVA: 0x0052E7B4 File Offset: 0x0052C9B4
+	// Token: 0x06011D3E RID: 73022 RVA: 0x0053D4D0 File Offset: 0x0053B6D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,33 +27,33 @@ public class RacingBetsPreviewViewOrganItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0601485D RID: 84061 RVA: 0x0052E81C File Offset: 0x0052CA1C
+	// Token: 0x06011D3F RID: 73023 RVA: 0x0053D538 File Offset: 0x0053B738
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.Id = data;
 		base.SetTextureByPath(RacingBetsConfig.Instance.GetOrganConfig(this.Id).Value.IconPath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0601485E RID: 84062 RVA: 0x0052E868 File Offset: 0x0052CA68
+	// Token: 0x06011D40 RID: 73024 RVA: 0x0053D584 File Offset: 0x0053B784
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0601485F RID: 84063 RVA: 0x0052E88E File Offset: 0x0052CA8E
+	// Token: 0x06011D41 RID: 73025 RVA: 0x0053D5AA File Offset: 0x0053B7AA
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x06014860 RID: 84064 RVA: 0x0052E897 File Offset: 0x0052CA97
+	// Token: 0x06011D42 RID: 73026 RVA: 0x0053D5B3 File Offset: 0x0053B7B3
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x06014861 RID: 84065 RVA: 0x0052E8A0 File Offset: 0x0052CAA0
+	// Token: 0x06011D43 RID: 73027 RVA: 0x0053D5BC File Offset: 0x0053B7BC
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<int, int> onToggleCallBack = this.OnToggleCallBack;
@@ -64,20 +64,20 @@ public class RacingBetsPreviewViewOrganItem : GridProxyAbstract<int>
 		onToggleCallBack(base.GridIndex, this.Id);
 	}
 
-	// Token: 0x04009A59 RID: 39513
+	// Token: 0x04009BB1 RID: 39857
 	public int Id;
 
-	// Token: 0x04009A5A RID: 39514
+	// Token: 0x04009BB2 RID: 39858
 	[Nullable(2)]
 	public Action<int, int> OnToggleCallBack;
 
-	// Token: 0x02008D71 RID: 36209
+	// Token: 0x02007EFA RID: 32506
 	private class EComponent
 	{
-		// Token: 0x0402DE49 RID: 187977
+		// Token: 0x04029160 RID: 168288
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402DE4A RID: 187978
+		// Token: 0x04029161 RID: 168289
 		public const int TextureIcon = 1;
 	}
 }

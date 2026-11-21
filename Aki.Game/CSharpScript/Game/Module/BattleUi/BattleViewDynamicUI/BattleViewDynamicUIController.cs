@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 {
-	// Token: 0x02005E57 RID: 24151
+	// Token: 0x02004E3C RID: 20028
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BattleViewDynamicUIController : UiControllerBase
 	{
-		// Token: 0x0603D68F RID: 251535 RVA: 0x00ED0330 File Offset: 0x00ECE530
+		// Token: 0x0603261F RID: 206367 RVA: 0x00E218A0 File Offset: 0x00E1FAA0
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603D690 RID: 251536 RVA: 0x00ED0333 File Offset: 0x00ECE533
+		// Token: 0x06032620 RID: 206368 RVA: 0x00E218A3 File Offset: 0x00E1FAA3
 		protected override bool OnClear()
 		{
 			this.PendingUITypes.Clear();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			return true;
 		}
 
-		// Token: 0x0603D691 RID: 251537 RVA: 0x00ED034E File Offset: 0x00ECE54E
+		// Token: 0x06032621 RID: 206369 RVA: 0x00E218BE File Offset: 0x00E1FABE
 		protected override bool OnLeaveLevel()
 		{
 			this.PendingUITypes.Clear();
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			return true;
 		}
 
-		// Token: 0x0603D692 RID: 251538 RVA: 0x00ED0369 File Offset: 0x00ECE569
+		// Token: 0x06032622 RID: 206370 RVA: 0x00E218D9 File Offset: 0x00E1FAD9
 		public void RegisterBattleView(BattleView battleView)
 		{
 			this.CurrentBattleView = battleView;
 			this.FlushPendingUITypes();
 		}
 
-		// Token: 0x0603D693 RID: 251539 RVA: 0x00ED0378 File Offset: 0x00ECE578
+		// Token: 0x06032623 RID: 206371 RVA: 0x00E218E8 File Offset: 0x00E1FAE8
 		public void UnregisterBattleView(BattleView battleView)
 		{
 			if (this.CurrentBattleView == battleView)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			}
 		}
 
-		// Token: 0x0603D694 RID: 251540 RVA: 0x00ED039C File Offset: 0x00ECE59C
+		// Token: 0x06032624 RID: 206372 RVA: 0x00E2190C File Offset: 0x00E1FB0C
 		public void TryCreateDynamicUI(EBattleViewDynamicUIType uiType)
 		{
 			BattleViewDynamicUIConfig battleViewDynamicUIConfig;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			this.CreateDynamicUIAsync(uiType, battleViewDynamicUIConfig.ResourceId, dynamicUIRootItem, panel).Forget();
 		}
 
-		// Token: 0x0603D695 RID: 251541 RVA: 0x00ED0520 File Offset: 0x00ECE720
+		// Token: 0x06032625 RID: 206373 RVA: 0x00E21A90 File Offset: 0x00E1FC90
 		public void TryDestroyDynamicUI(EBattleViewDynamicUIType uiType)
 		{
 			DynamicUIRecord uiRecord;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			BattleViewDynamicUIController.DestroyUIFromRecord(uiRecord);
 		}
 
-		// Token: 0x0603D696 RID: 251542 RVA: 0x00ED0584 File Offset: 0x00ECE784
+		// Token: 0x06032626 RID: 206374 RVA: 0x00E21AF4 File Offset: 0x00E1FCF4
 		public void ClearAllDynamicUI()
 		{
 			if (this.DynamicUIMap.Count == 0)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			this.IsClearing = false;
 		}
 
-		// Token: 0x0603D697 RID: 251543 RVA: 0x00ED0600 File Offset: 0x00ECE800
+		// Token: 0x06032627 RID: 206375 RVA: 0x00E21B70 File Offset: 0x00E1FD70
 		private UniTask CreateDynamicUIAsync(EBattleViewDynamicUIType uiType, string resourceId, UUIItem parentItem, BattleViewDynamicUiBase panel)
 		{
 			BattleViewDynamicUIController.<CreateDynamicUIAsync>d__12 <CreateDynamicUIAsync>d__;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			return <CreateDynamicUIAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D698 RID: 251544 RVA: 0x00ED0664 File Offset: 0x00ECE864
+		// Token: 0x06032628 RID: 206376 RVA: 0x00E21BD4 File Offset: 0x00E1FDD4
 		private void OnUILoadCompleted(EBattleViewDynamicUIType uiType, BattleViewDynamicUiBase panel)
 		{
 			if (this.IsClearing)
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			};
 		}
 
-		// Token: 0x0603D699 RID: 251545 RVA: 0x00ED06DC File Offset: 0x00ECE8DC
+		// Token: 0x06032629 RID: 206377 RVA: 0x00E21C4C File Offset: 0x00E1FE4C
 		private void FlushPendingUITypes()
 		{
 			if (this.PendingUITypes.Count == 0)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			}
 		}
 
-		// Token: 0x0603D69A RID: 251546 RVA: 0x00ED0728 File Offset: 0x00ECE928
+		// Token: 0x0603262A RID: 206378 RVA: 0x00E21C98 File Offset: 0x00E1FE98
 		private static void DestroyUIFromRecord(DynamicUIRecord uiRecord)
 		{
 			if (uiRecord.IsLoading || uiRecord.Instance == null)
@@ -229,8 +229,8 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			instance.Destroy(null);
 		}
 
-		// Token: 0x17008E73 RID: 36467
-		// (get) Token: 0x0603D69B RID: 251547 RVA: 0x00ED075D File Offset: 0x00ECE95D
+		// Token: 0x17006245 RID: 25157
+		// (get) Token: 0x0603262B RID: 206379 RVA: 0x00E21CCD File Offset: 0x00E1FECD
 		public static BattleViewDynamicUIController Instance
 		{
 			get
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			}
 		}
 
-		// Token: 0x0603D69C RID: 251548 RVA: 0x00ED0764 File Offset: 0x00ECE964
+		// Token: 0x0603262C RID: 206380 RVA: 0x00E21CD4 File Offset: 0x00E1FED4
 		public static BattleViewDynamicUIController GetOrCreateInstance()
 		{
 			if (BattleViewDynamicUIController._Instance == null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			return BattleViewDynamicUIController._Instance;
 		}
 
-		// Token: 0x0603D69D RID: 251549 RVA: 0x00ED0778 File Offset: 0x00ECE978
+		// Token: 0x0603262D RID: 206381 RVA: 0x00E21CE8 File Offset: 0x00E1FEE8
 		public static bool CreateInstance()
 		{
 			if (BattleViewDynamicUIController._Instance != null)
@@ -260,37 +260,37 @@ namespace CSharpScript.Game.Module.BattleUi.BattleViewDynamicUI
 			return true;
 		}
 
-		// Token: 0x0603D69E RID: 251550 RVA: 0x00ED078E File Offset: 0x00ECE98E
+		// Token: 0x0603262E RID: 206382 RVA: 0x00E21CFE File Offset: 0x00E1FEFE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D69F RID: 251551 RVA: 0x00ED0790 File Offset: 0x00ECE990
+		// Token: 0x0603262F RID: 206383 RVA: 0x00E21D00 File Offset: 0x00E1FF00
 		public static void ResetStaticDefaultValue()
 		{
 			BattleViewDynamicUIController._Instance = null;
 		}
 
-		// Token: 0x0603D6A0 RID: 251552 RVA: 0x00ED0798 File Offset: 0x00ECE998
+		// Token: 0x06032630 RID: 206384 RVA: 0x00E21D08 File Offset: 0x00E1FF08
 		static BattleViewDynamicUIController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleViewDynamicUIController.CreateStaticDefaultValue), new Action(BattleViewDynamicUIController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040200AB RID: 131243
+		// Token: 0x0401AB72 RID: 109426
 		[Nullable(2)]
 		private BattleView CurrentBattleView;
 
-		// Token: 0x040200AC RID: 131244
+		// Token: 0x0401AB73 RID: 109427
 		private readonly Dictionary<EBattleViewDynamicUIType, DynamicUIRecord> DynamicUIMap = new Dictionary<EBattleViewDynamicUIType, DynamicUIRecord>();
 
-		// Token: 0x040200AD RID: 131245
+		// Token: 0x0401AB74 RID: 109428
 		private bool IsClearing;
 
-		// Token: 0x040200AE RID: 131246
+		// Token: 0x0401AB75 RID: 109429
 		private readonly List<EBattleViewDynamicUIType> PendingUITypes = new List<EBattleViewDynamicUIType>();
 
-		// Token: 0x040200AF RID: 131247
+		// Token: 0x0401AB76 RID: 109430
 		[Nullable(2)]
 		private static BattleViewDynamicUIController _Instance;
 	}

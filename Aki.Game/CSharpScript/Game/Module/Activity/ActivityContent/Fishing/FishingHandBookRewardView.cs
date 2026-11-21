@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -12,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006615 RID: 26133
+	// Token: 0x02005593 RID: 21907
 	public class FishingHandBookRewardView : UiViewBase
 	{
-		// Token: 0x060417CD RID: 268237 RVA: 0x00FDCF4B File Offset: 0x00FDB14B
+		// Token: 0x06036492 RID: 222354 RVA: 0x00F23FE3 File Offset: 0x00F221E3
 		[NullableContext(1)]
 		public FishingHandBookRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060417CE RID: 268238 RVA: 0x00FDCF54 File Offset: 0x00FDB154
+		// Token: 0x06036493 RID: 222355 RVA: 0x00F23FEC File Offset: 0x00F221EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,19 +36,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060417CF RID: 268239 RVA: 0x00FDCFDE File Offset: 0x00FDB1DE
+		// Token: 0x06036494 RID: 222356 RVA: 0x00F24076 File Offset: 0x00F22276
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FishingRefreshHandBookRewardView, new Action(this.FishingRefreshHandBookRewardView));
 		}
 
-		// Token: 0x060417D0 RID: 268240 RVA: 0x00FDCFFC File Offset: 0x00FDB1FC
+		// Token: 0x06036495 RID: 222357 RVA: 0x00F24094 File Offset: 0x00F22294
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingRefreshHandBookRewardView, new Action(this.FishingRefreshHandBookRewardView));
 		}
 
-		// Token: 0x060417D1 RID: 268241 RVA: 0x00FDD01C File Offset: 0x00FDB21C
+		// Token: 0x06036496 RID: 222358 RVA: 0x00F240B4 File Offset: 0x00F222B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingHandBookRewardView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -60,30 +59,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060417D2 RID: 268242 RVA: 0x00FDD05F File Offset: 0x00FDB25F
+		// Token: 0x06036497 RID: 222359 RVA: 0x00F240F7 File Offset: 0x00F222F7
 		protected override void OnStart()
 		{
 			this.RewardItemLayout = new GenericLayout<FishingHandBookRewardItem, int>(base.GetVerticalLayout(1), new Func<FishingHandBookRewardItem>(this.InitRewardItem), null, false, true);
 			this.RefreshLayout();
 		}
 
-		// Token: 0x060417D3 RID: 268243 RVA: 0x00FDD088 File Offset: 0x00FDB288
+		// Token: 0x06036498 RID: 222360 RVA: 0x00F24120 File Offset: 0x00F22320
 		[NullableContext(1)]
 		private FishingHandBookRewardItem InitRewardItem()
 		{
 			return new FishingHandBookRewardItem();
 		}
 
-		// Token: 0x060417D4 RID: 268244 RVA: 0x00FDD08F File Offset: 0x00FDB28F
+		// Token: 0x06036499 RID: 222361 RVA: 0x00F24127 File Offset: 0x00F22327
 		private void FishingRefreshHandBookRewardView()
 		{
 			this.RefreshLayout();
 		}
 
-		// Token: 0x060417D5 RID: 268245 RVA: 0x00FDD098 File Offset: 0x00FDB298
+		// Token: 0x0603649A RID: 222362 RVA: 0x00F24130 File Offset: 0x00F22330
 		private void RefreshLayout()
 		{
-			List<IFishingReward> list = FishingModel.Instance.FishingItemHandBookRewardMap.Values.ToList<IFishingReward>();
+			List<IFishingReward> list = new List<IFishingReward>(FishingModel.Instance.FishingItemHandBookRewardMap.Values);
 			list.Sort(delegate(IFishingReward a, IFishingReward b)
 			{
 				int num = a.IsTaken ? 2 : ((!a.IsFinished) ? 1 : 0);
@@ -111,11 +110,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, false);
 		}
 
-		// Token: 0x04022142 RID: 139586
+		// Token: 0x0401CA73 RID: 117363
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022143 RID: 139587
+		// Token: 0x0401CA74 RID: 117364
 		[Nullable(new byte[]
 		{
 			2,
@@ -123,16 +122,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingHandBookRewardItem, int> RewardItemLayout;
 
-		// Token: 0x0200C825 RID: 51237
+		// Token: 0x0200B207 RID: 45575
 		private class EComponentDefine
 		{
-			// Token: 0x0403C727 RID: 247591
+			// Token: 0x0403706C RID: 225388
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C728 RID: 247592
+			// Token: 0x0403706D RID: 225389
 			public const int RewardItemLayout = 1;
 
-			// Token: 0x0403C729 RID: 247593
+			// Token: 0x0403706E RID: 225390
 			public const int RewardItem = 2;
 		}
 	}

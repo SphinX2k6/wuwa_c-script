@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200013E RID: 318
+	// Token: 0x02000142 RID: 322
 	public enum EReportRoleDataType
 	{
-		// Token: 0x040005E4 RID: 1508
+		// Token: 0x0400061F RID: 1567
 		Create,
-		// Token: 0x040005E5 RID: 1509
+		// Token: 0x04000620 RID: 1568
 		Select,
-		// Token: 0x040005E6 RID: 1510
+		// Token: 0x04000621 RID: 1569
 		LevelUp
 	}
 }

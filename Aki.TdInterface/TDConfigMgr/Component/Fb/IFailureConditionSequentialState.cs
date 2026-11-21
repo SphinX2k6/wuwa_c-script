@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BA3 RID: 2979
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C71 RID: 3185
 	public class IFailureConditionSequentialState : ITargetGearGroupFailureCondition
 	{
-		// Token: 0x06004465 RID: 17509 RVA: 0x000ADBC6 File Offset: 0x000ABDC6
+		// Token: 0x060048BE RID: 18622 RVA: 0x000B7C8A File Offset: 0x000B5E8A
 		public static IFailureConditionSequentialState Create(IFailureConditionSequentialState? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012DC RID: 4828
-		// (get) Token: 0x06004466 RID: 17510 RVA: 0x000ADBE5 File Offset: 0x000ABDE5
+		// Token: 0x170013D7 RID: 5079
+		// (get) Token: 0x060048BF RID: 18623 RVA: 0x000B7CA9 File Offset: 0x000B5EA9
 		public override ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012DD RID: 4829
-		// (get) Token: 0x06004467 RID: 17511 RVA: 0x000ADBF4 File Offset: 0x000ABDF4
+		// Token: 0x170013D8 RID: 5080
+		// (get) Token: 0x060048C0 RID: 18624 RVA: 0x000B7CB8 File Offset: 0x000B5EB8
 		public virtual List<int> Order
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400269C RID: 9884
+		// Token: 0x040028E4 RID: 10468
 		private IFailureConditionSequentialState Instance;
 
-		// Token: 0x0400269D RID: 9885
+		// Token: 0x040028E5 RID: 10469
 		private List<int> _OrderCache;
 
-		// Token: 0x0400269E RID: 9886
+		// Token: 0x040028E6 RID: 10470
 		private bool _OrderInited;
 	}
 }

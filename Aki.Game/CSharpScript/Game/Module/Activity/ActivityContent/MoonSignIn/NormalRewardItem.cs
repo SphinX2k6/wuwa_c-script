@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x0200646A RID: 25706
+	// Token: 0x020053E8 RID: 21480
 	internal class NormalRewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0604099D RID: 264605 RVA: 0x00FA3528 File Offset: 0x00FA1728
+		// Token: 0x0603565E RID: 218718 RVA: 0x00EEA4A4 File Offset: 0x00EE86A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604099E RID: 264606 RVA: 0x00FA3638 File Offset: 0x00FA1838
+		// Token: 0x0603565F RID: 218719 RVA: 0x00EEA5B4 File Offset: 0x00EE87B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			NormalRewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604099F RID: 264607 RVA: 0x00FA367C File Offset: 0x00FA187C
+		// Token: 0x06035660 RID: 218720 RVA: 0x00EEA5F8 File Offset: 0x00EE87F8
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			PhaseOfMoon? phaseOfMoonById = MoonSignInConfig.Instance.GetPhaseOfMoonById(data);
@@ -100,36 +100,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0402195B RID: 137563
+		// Token: 0x0401C28A RID: 115338
 		[Nullable(1)]
 		private readonly List<RewardItem> RewardItemList = new List<RewardItem>();
 
-		// Token: 0x0402195C RID: 137564
+		// Token: 0x0401C28B RID: 115339
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C697 RID: 50839
+		// Token: 0x0200B07D RID: 45181
 		private class EMoonSignInNormalRewardItemDefine
 		{
-			// Token: 0x0403BF4D RID: 245581
+			// Token: 0x040368A8 RID: 223400
 			public const int MoonTexture = 0;
 
-			// Token: 0x0403BF4E RID: 245582
+			// Token: 0x040368A9 RID: 223401
 			public const int SimpleTexture = 1;
 
-			// Token: 0x0403BF4F RID: 245583
+			// Token: 0x040368AA RID: 223402
 			public const int RewardItem1 = 2;
 
-			// Token: 0x0403BF50 RID: 245584
+			// Token: 0x040368AB RID: 223403
 			public const int RewardItem2 = 3;
 
-			// Token: 0x0403BF51 RID: 245585
+			// Token: 0x040368AC RID: 223404
 			public const int RewardItem3 = 4;
 
-			// Token: 0x0403BF52 RID: 245586
+			// Token: 0x040368AD RID: 223405
 			public const int MaskItem = 5;
 
-			// Token: 0x0403BF53 RID: 245587
+			// Token: 0x040368AE RID: 223406
 			public const int DisableTexture = 6;
 		}
 	}

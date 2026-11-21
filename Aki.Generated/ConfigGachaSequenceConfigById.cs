@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000373 RID: 883
+	// Token: 0x02000388 RID: 904
 	public class ConfigGachaSequenceConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014B8 RID: 5304 RVA: 0x000CEAFF File Offset: 0x000CCCFF
+		// Token: 0x06001536 RID: 5430 RVA: 0x000D500B File Offset: 0x000D320B
 		static ConfigGachaSequenceConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaSequenceConfigById.CreateStaticDefaultValue), new Action(ConfigGachaSequenceConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014B9 RID: 5305 RVA: 0x000CEB20 File Offset: 0x000CCD20
+		// Token: 0x06001537 RID: 5431 RVA: 0x000D502C File Offset: 0x000D322C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaSequenceConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014BA RID: 5306 RVA: 0x000CEB9F File Offset: 0x000CCD9F
+		// Token: 0x06001538 RID: 5432 RVA: 0x000D50AB File Offset: 0x000D32AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaSequenceConfigById.LogPair = null;
 			ConfigGachaSequenceConfigById.HandleId = 0;
 		}
 
-		// Token: 0x060014BB RID: 5307 RVA: 0x000CEBAD File Offset: 0x000CCDAD
+		// Token: 0x06001539 RID: 5433 RVA: 0x000D50B9 File Offset: 0x000D32B9
 		public static void Init()
 		{
 			ConfigGachaSequenceConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigGachaSequenceConfigById.HandleId, "db_gacha.db", "select BinData from `GachaSequenceConfig` where Id=?");
 		}
 
-		// Token: 0x060014BC RID: 5308 RVA: 0x000CEBC8 File Offset: 0x000CCDC8
+		// Token: 0x0600153A RID: 5434 RVA: 0x000D50D4 File Offset: 0x000D32D4
 		public static GachaSequenceConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGachaSequenceConfigById.HandleId, ConfigGachaSequenceConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GachaSequenceConfig?(rootAsGachaSequenceConfig);
 		}
 
-		// Token: 0x04001809 RID: 6153
+		// Token: 0x0400189C RID: 6300
 		private const string DB = "db_gacha.db";
 
-		// Token: 0x0400180A RID: 6154
+		// Token: 0x0400189D RID: 6301
 		private const string FILE = "c.抽卡.xlsx";
 
-		// Token: 0x0400180B RID: 6155
+		// Token: 0x0400189E RID: 6302
 		private const string TABLE = "GachaSequenceConfig";
 
-		// Token: 0x0400180C RID: 6156
+		// Token: 0x0400189F RID: 6303
 		private const string COMMAND = "select BinData from `GachaSequenceConfig` where Id=?";
 
-		// Token: 0x0400180D RID: 6157
+		// Token: 0x040018A0 RID: 6304
 		private const string KEY_PREFIX = "GachaSequenceConfigById";
 
-		// Token: 0x0400180E RID: 6158
+		// Token: 0x040018A1 RID: 6305
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400180F RID: 6159
+		// Token: 0x040018A2 RID: 6306
 		private static int HandleId;
 	}
 }

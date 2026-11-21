@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023AF RID: 9135
+	// Token: 0x0200263C RID: 9788
 	public static class ENpcGroupPerformNpcTypeExtensions
 	{
-		// Token: 0x0600C712 RID: 50962 RVA: 0x001D2594 File Offset: 0x001D0794
+		// Token: 0x0600D368 RID: 54120 RVA: 0x001EB810 File Offset: 0x001E9A10
 		public static string ToEnumString(this ENpcGroupPerformNpcType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C713 RID: 50963 RVA: 0x001D25DC File Offset: 0x001D07DC
+		// Token: 0x0600D369 RID: 54121 RVA: 0x001EB858 File Offset: 0x001E9A58
 		public static ENpcGroupPerformNpcType FromString(string name)
 		{
 			ENpcGroupPerformNpcType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C714 RID: 50964 RVA: 0x001D2608 File Offset: 0x001D0808
+		// Token: 0x0600D36A RID: 54122 RVA: 0x001EB884 File Offset: 0x001E9A84
 		public static bool TryFromString(string name, out ENpcGroupPerformNpcType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C715 RID: 50965 RVA: 0x001D265E File Offset: 0x001D085E
+		// Token: 0x0600D36B RID: 54123 RVA: 0x001EB8DA File Offset: 0x001E9ADA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C716 RID: 50966 RVA: 0x001D267E File Offset: 0x001D087E
+		// Token: 0x0600D36C RID: 54124 RVA: 0x001EB8FA File Offset: 0x001E9AFA
 		public static ENpcGroupPerformNpcType[] GetValues()
 		{
 			return new ENpcGroupPerformNpcType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C717 RID: 50967 RVA: 0x001D268E File Offset: 0x001D088E
+		// Token: 0x0600D36D RID: 54125 RVA: 0x001EB90A File Offset: 0x001E9B0A
 		public static string[] GetNames()
 		{
 			return new string[]

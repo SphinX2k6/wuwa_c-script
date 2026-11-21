@@ -15,18 +15,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006067 RID: 24679
+	// Token: 0x02004FE5 RID: 20453
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpringManorQuestView : UiTickViewBase
 	{
-		// Token: 0x0603E6BE RID: 255678 RVA: 0x00F1407D File Offset: 0x00F1227D
+		// Token: 0x06033382 RID: 209794 RVA: 0x00E5AE41 File Offset: 0x00E59041
 		[NullableContext(1)]
 		public SpringManorQuestView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E6BF RID: 255679 RVA: 0x00F14088 File Offset: 0x00F12288
+		// Token: 0x06033383 RID: 209795 RVA: 0x00E5AE4C File Offset: 0x00E5904C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E6C0 RID: 255680 RVA: 0x00F14350 File Offset: 0x00F12550
+		// Token: 0x06033384 RID: 209796 RVA: 0x00E5B114 File Offset: 0x00E59314
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorQuestView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E6C1 RID: 255681 RVA: 0x00F14394 File Offset: 0x00F12594
+		// Token: 0x06033385 RID: 209797 RVA: 0x00E5B158 File Offset: 0x00E59358
 		protected override void OnStart()
 		{
 			this.InitCaption();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6C2 RID: 255682 RVA: 0x00F14464 File Offset: 0x00F12664
+		// Token: 0x06033386 RID: 209798 RVA: 0x00E5B228 File Offset: 0x00E59428
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			SpringManorQuestView.<OnBeforeShowAsyncImplementImplement>d__15 <OnBeforeShowAsyncImplementImplement>d__;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E6C3 RID: 255683 RVA: 0x00F144A8 File Offset: 0x00F126A8
+		// Token: 0x06033387 RID: 209799 RVA: 0x00E5B26C File Offset: 0x00E5946C
 		private UniTask RefreshQuestScroll(bool playScrollAnim = true)
 		{
 			SpringManorQuestView.<RefreshQuestScroll>d__16 <RefreshQuestScroll>d__;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <RefreshQuestScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E6C4 RID: 255684 RVA: 0x00F144F4 File Offset: 0x00F126F4
+		// Token: 0x06033388 RID: 209800 RVA: 0x00E5B2B8 File Offset: 0x00E594B8
 		protected override void OnTick(float delta)
 		{
 			if (this.TickTimer > 0.0)
@@ -145,27 +145,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6C5 RID: 255685 RVA: 0x00F1454B File Offset: 0x00F1274B
+		// Token: 0x06033389 RID: 209801 RVA: 0x00E5B30F File Offset: 0x00E5950F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnLogicTreeTrackUpdate, new Action<BtType, long?>(this.OnLogicTreeTrackUpdate));
 			EventSystem.Instance.Add(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603E6C6 RID: 255686 RVA: 0x00F14585 File Offset: 0x00F12785
+		// Token: 0x0603338A RID: 209802 RVA: 0x00E5B349 File Offset: 0x00E59549
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnLogicTreeTrackUpdate, new Action<BtType, long?>(this.OnLogicTreeTrackUpdate));
 			EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603E6C7 RID: 255687 RVA: 0x00F145BF File Offset: 0x00F127BF
+		// Token: 0x0603338B RID: 209803 RVA: 0x00E5B383 File Offset: 0x00E59583
 		private void RefreshView()
 		{
 			this.RefreshQuestScroll(false);
 		}
 
-		// Token: 0x0603E6C8 RID: 255688 RVA: 0x00F145CC File Offset: 0x00F127CC
+		// Token: 0x0603338C RID: 209804 RVA: 0x00E5B390 File Offset: 0x00E59590
 		private void InitCaption()
 		{
 			PopupCaptionItem captionItem = this.CaptionItem;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x0603E6C9 RID: 255689 RVA: 0x00F14628 File Offset: 0x00F12828
+		// Token: 0x0603338D RID: 209805 RVA: 0x00E5B3EC File Offset: 0x00E595EC
 		private void RefreshEmpty()
 		{
 			bool flag = SpringManorModel.Instance.HasAnyQuest();
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			base.GetItem(2).SetUIActive(flag);
 		}
 
-		// Token: 0x0603E6CA RID: 255690 RVA: 0x00F1465D File Offset: 0x00F1285D
+		// Token: 0x0603338E RID: 209806 RVA: 0x00E5B421 File Offset: 0x00E59621
 		[NullableContext(1)]
 		private SpringManorQuestItem CreateMainQuestItem()
 		{
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E6CB RID: 255691 RVA: 0x00F14676 File Offset: 0x00F12876
+		// Token: 0x0603338F RID: 209807 RVA: 0x00E5B43A File Offset: 0x00E5963A
 		[NullableContext(1)]
 		private SpringManorQuestItem CreateSubQuestItem()
 		{
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E6CC RID: 255692 RVA: 0x00F1468F File Offset: 0x00F1288F
+		// Token: 0x06033390 RID: 209808 RVA: 0x00E5B453 File Offset: 0x00E59653
 		private void OnClickMainQuestToggle(int gridIndex, int questId)
 		{
 			GenericLayout<SpringManorQuestItem, int> mainQuestLayout = this.MainQuestLayout;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdateQuestDetails(questId, true);
 		}
 
-		// Token: 0x0603E6CD RID: 255693 RVA: 0x00F146BD File Offset: 0x00F128BD
+		// Token: 0x06033391 RID: 209809 RVA: 0x00E5B481 File Offset: 0x00E59681
 		private void OnClickSubQuestToggle(int gridIndex, int questId)
 		{
 			GenericLayout<SpringManorQuestItem, int> subQuestLayout = this.SubQuestLayout;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdateQuestDetails(questId, true);
 		}
 
-		// Token: 0x0603E6CE RID: 255694 RVA: 0x00F146EC File Offset: 0x00F128EC
+		// Token: 0x06033392 RID: 209810 RVA: 0x00E5B4B0 File Offset: 0x00E596B0
 		private void UpdateQuestDetails(int questId, bool playAnim = false)
 		{
 			this.CurrentSelectQuestId = questId;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshBottomByQuestState();
 		}
 
-		// Token: 0x0603E6CF RID: 255695 RVA: 0x00F14794 File Offset: 0x00F12994
+		// Token: 0x06033393 RID: 209811 RVA: 0x00E5B558 File Offset: 0x00E59758
 		private void RefreshLockState()
 		{
 			IQuest questConfig = QuestNewModel.Instance.GetQuestConfig(this.CurrentSelectQuestId);
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshWarningTipsText();
 		}
 
-		// Token: 0x0603E6D0 RID: 255696 RVA: 0x00F14884 File Offset: 0x00F12A84
+		// Token: 0x06033394 RID: 209812 RVA: 0x00E5B648 File Offset: 0x00E59848
 		private void RefreshWarningTipsText()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6D1 RID: 255697 RVA: 0x00F148C8 File Offset: 0x00F12AC8
+		// Token: 0x06033395 RID: 209813 RVA: 0x00E5B68C File Offset: 0x00E5988C
 		private void UpdateQuestState(int questId)
 		{
 			if (!SpringManorModel.Instance.IsQuestUnlocked(questId))
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.CurrentSpringManorQuestState = ESpringManorQuestState.UnTrack;
 		}
 
-		// Token: 0x0603E6D2 RID: 255698 RVA: 0x00F14900 File Offset: 0x00F12B00
+		// Token: 0x06033396 RID: 209814 RVA: 0x00E5B6C4 File Offset: 0x00E598C4
 		private void RefreshBottomByQuestState()
 		{
 			ButtonItem buttonRight = this.ButtonRight;
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			buttonRight3.SetLocalTextNew("Spring26_Quest_Track", Array.Empty<object>());
 		}
 
-		// Token: 0x0603E6D3 RID: 255699 RVA: 0x00F14A04 File Offset: 0x00F12C04
+		// Token: 0x06033397 RID: 209815 RVA: 0x00E5B7C8 File Offset: 0x00E599C8
 		private UniTask UpdateQuestSteps(int questId)
 		{
 			SpringManorQuestView.<UpdateQuestSteps>d__32 <UpdateQuestSteps>d__;
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <UpdateQuestSteps>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E6D4 RID: 255700 RVA: 0x00F14A50 File Offset: 0x00F12C50
+		// Token: 0x06033398 RID: 209816 RVA: 0x00E5B814 File Offset: 0x00E59A14
 		private void RefreshRewardPreview(int questId)
 		{
 			List<TItem> list = QuestNewModel.Instance.GetDisplayRewardCommonInfo(questId);
@@ -451,20 +451,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			rewardPreviewScroll.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603E6D5 RID: 255701 RVA: 0x00F14B60 File Offset: 0x00F12D60
+		// Token: 0x06033399 RID: 209817 RVA: 0x00E5B924 File Offset: 0x00E59B24
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E6D6 RID: 255702 RVA: 0x00F14B69 File Offset: 0x00F12D69
+		// Token: 0x0603339A RID: 209818 RVA: 0x00E5B92D File Offset: 0x00E59B2D
 		private void OnClickLeft(int __)
 		{
 			SpringManorController.Instance.RequestTrackQuest(this.CurrentSelectQuestId, false);
 			this.RefreshQuestScroll(false);
 		}
 
-		// Token: 0x0603E6D7 RID: 255703 RVA: 0x00F14B84 File Offset: 0x00F12D84
+		// Token: 0x0603339B RID: 209819 RVA: 0x00E5B948 File Offset: 0x00E59B48
 		private void OnClickRight(int __)
 		{
 			if (this.CurrentSpringManorQuestState == ESpringManorQuestState.UnTrack)
@@ -474,34 +474,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			UiManager.Instance.ResetToBattleView(null);
 		}
 
-		// Token: 0x0603E6D8 RID: 255704 RVA: 0x00F14BAB File Offset: 0x00F12DAB
+		// Token: 0x0603339C RID: 209820 RVA: 0x00E5B96F File Offset: 0x00E59B6F
 		private void OnLogicTreeTrackUpdate(BtType btType, long? treeIncId)
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x0603E6D9 RID: 255705 RVA: 0x00F14BB3 File Offset: 0x00F12DB3
+		// Token: 0x0603339D RID: 209821 RVA: 0x00E5B977 File Offset: 0x00E59B77
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x04020A0C RID: 133644
+		// Token: 0x0401B339 RID: 111417
 		private int CurrentSelectQuestId;
 
-		// Token: 0x04020A0D RID: 133645
+		// Token: 0x0401B33A RID: 111418
 		private ESpringManorQuestState CurrentSpringManorQuestState;
 
-		// Token: 0x04020A0E RID: 133646
+		// Token: 0x0401B33B RID: 111419
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020A0F RID: 133647
+		// Token: 0x0401B33C RID: 111420
 		private StepBaseItem QuestStepItem;
 
-		// Token: 0x04020A10 RID: 133648
+		// Token: 0x0401B33D RID: 111421
 		private FunctionalPanelConditionLock WarningTipsItem;
 
-		// Token: 0x04020A11 RID: 133649
+		// Token: 0x0401B33E RID: 111422
 		[Nullable(new byte[]
 		{
 			2,
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardPreviewScroll;
 
-		// Token: 0x04020A12 RID: 133650
+		// Token: 0x0401B33F RID: 111423
 		[Nullable(new byte[]
 		{
 			2,
@@ -517,7 +517,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericLayout<SpringManorQuestItem, int> MainQuestLayout;
 
-		// Token: 0x04020A13 RID: 133651
+		// Token: 0x0401B340 RID: 111424
 		[Nullable(new byte[]
 		{
 			2,
@@ -525,13 +525,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericLayout<SpringManorQuestItem, int> SubQuestLayout;
 
-		// Token: 0x04020A14 RID: 133652
+		// Token: 0x0401B341 RID: 111425
 		private ButtonItem ButtonLeft;
 
-		// Token: 0x04020A15 RID: 133653
+		// Token: 0x0401B342 RID: 111426
 		private ButtonItem ButtonRight;
 
-		// Token: 0x04020A16 RID: 133654
+		// Token: 0x0401B343 RID: 111427
 		private double TickTimer;
 	}
 }

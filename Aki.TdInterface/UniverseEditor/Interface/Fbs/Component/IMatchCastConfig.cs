@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005521 RID: 21793
+	// Token: 0x02005AA7 RID: 23207
 	public struct IMatchCastConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A0DA RID: 41178
-		// (get) Token: 0x06023FE3 RID: 147427 RVA: 0x004F9490 File Offset: 0x004F7690
+		// Token: 0x1700A914 RID: 43284
+		// (get) Token: 0x0602609D RID: 155805 RVA: 0x005365B4 File Offset: 0x005347B4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023FE4 RID: 147428 RVA: 0x004F949D File Offset: 0x004F769D
+		// Token: 0x0602609E RID: 155806 RVA: 0x005365C1 File Offset: 0x005347C1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023FE5 RID: 147429 RVA: 0x004F94A4 File Offset: 0x004F76A4
+		// Token: 0x0602609F RID: 155807 RVA: 0x005365C8 File Offset: 0x005347C8
 		public static IMatchCastConfig GetRootAsIMatchCastConfig(ByteBuffer _bb)
 		{
 			return IMatchCastConfig.GetRootAsIMatchCastConfig(_bb, default(IMatchCastConfig));
 		}
 
-		// Token: 0x06023FE6 RID: 147430 RVA: 0x004F94C0 File Offset: 0x004F76C0
+		// Token: 0x060260A0 RID: 155808 RVA: 0x005365E4 File Offset: 0x005347E4
 		public static IMatchCastConfig GetRootAsIMatchCastConfig(ByteBuffer _bb, IMatchCastConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023FE7 RID: 147431 RVA: 0x004F94DD File Offset: 0x004F76DD
+		// Token: 0x060260A1 RID: 155809 RVA: 0x00536601 File Offset: 0x00534801
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023FE8 RID: 147432 RVA: 0x004F94EC File Offset: 0x004F76EC
+		// Token: 0x060260A2 RID: 155810 RVA: 0x00536610 File Offset: 0x00534810
 		public IMatchCastConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A0DB RID: 41179
-		// (get) Token: 0x06023FE9 RID: 147433 RVA: 0x004F94FC File Offset: 0x004F76FC
+		// Token: 0x1700A915 RID: 43285
+		// (get) Token: 0x060260A3 RID: 155811 RVA: 0x00536620 File Offset: 0x00534820
 		public int Time
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A0DC RID: 41180
-		// (get) Token: 0x06023FEA RID: 147434 RVA: 0x004F9538 File Offset: 0x004F7738
+		// Token: 0x1700A916 RID: 43286
+		// (get) Token: 0x060260A4 RID: 155812 RVA: 0x0053665C File Offset: 0x0053485C
 		public string Spline
 		{
 			get
@@ -78,19 +78,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023FEB RID: 147435 RVA: 0x004F956F File Offset: 0x004F776F
+		// Token: 0x060260A5 RID: 155813 RVA: 0x00536693 File Offset: 0x00534893
 		public Span<byte> GetSplineBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06023FEC RID: 147436 RVA: 0x004F957E File Offset: 0x004F777E
+		// Token: 0x060260A6 RID: 155814 RVA: 0x005366A2 File Offset: 0x005348A2
 		public byte[] GetSplineArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06023FED RID: 147437 RVA: 0x004F958C File Offset: 0x004F778C
+		// Token: 0x060260A7 RID: 155815 RVA: 0x005366B0 File Offset: 0x005348B0
 		public IMatchSequence? MatchSequence(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -101,8 +101,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IMatchSequence?(default(IMatchSequence).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A0DD RID: 41181
-		// (get) Token: 0x06023FEE RID: 147438 RVA: 0x004F95EC File Offset: 0x004F77EC
+		// Token: 0x1700A917 RID: 43287
+		// (get) Token: 0x060260A8 RID: 155816 RVA: 0x00536710 File Offset: 0x00534910
 		public int MatchSequenceLength
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A0DE RID: 41182
-		// (get) Token: 0x06023FEF RID: 147439 RVA: 0x004F9618 File Offset: 0x004F7818
+		// Token: 0x1700A918 RID: 43288
+		// (get) Token: 0x060260A9 RID: 155817 RVA: 0x0053673C File Offset: 0x0053493C
 		public string SpeedCurve
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023FF0 RID: 147440 RVA: 0x004F9650 File Offset: 0x004F7850
+		// Token: 0x060260AA RID: 155818 RVA: 0x00536774 File Offset: 0x00534974
 		public Span<byte> GetSpeedCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06023FF1 RID: 147441 RVA: 0x004F9660 File Offset: 0x004F7860
+		// Token: 0x060260AB RID: 155819 RVA: 0x00536784 File Offset: 0x00534984
 		public byte[] GetSpeedCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700A0DF RID: 41183
-		// (get) Token: 0x06023FF2 RID: 147442 RVA: 0x004F9670 File Offset: 0x004F7870
+		// Token: 0x1700A919 RID: 43289
+		// (get) Token: 0x060260AC RID: 155820 RVA: 0x00536794 File Offset: 0x00534994
 		public byte NullMask
 		{
 			get
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023FF3 RID: 147443 RVA: 0x004F96AD File Offset: 0x004F78AD
+		// Token: 0x060260AD RID: 155821 RVA: 0x005367D1 File Offset: 0x005349D1
 		public static Offset<IMatchCastConfig> CreateIMatchCastConfig(FlatBufferBuilder builder, int Time = 0, StringOffset SplineOffset = default(StringOffset), VectorOffset MatchSequenceOffset = default(VectorOffset), StringOffset SpeedCurveOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -170,31 +170,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMatchCastConfig.EndIMatchCastConfig(builder);
 		}
 
-		// Token: 0x06023FF4 RID: 147444 RVA: 0x004F96E1 File Offset: 0x004F78E1
+		// Token: 0x060260AE RID: 155822 RVA: 0x00536805 File Offset: 0x00534A05
 		public static void StartIMatchCastConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06023FF5 RID: 147445 RVA: 0x004F96EA File Offset: 0x004F78EA
+		// Token: 0x060260AF RID: 155823 RVA: 0x0053680E File Offset: 0x00534A0E
 		public static void AddTime(FlatBufferBuilder builder, int time)
 		{
 			builder.AddInt(0, time, 0);
 		}
 
-		// Token: 0x06023FF6 RID: 147446 RVA: 0x004F96F5 File Offset: 0x004F78F5
+		// Token: 0x060260B0 RID: 155824 RVA: 0x00536819 File Offset: 0x00534A19
 		public static void AddSpline(FlatBufferBuilder builder, StringOffset splineOffset)
 		{
 			builder.AddOffset(1, splineOffset.Value, 0);
 		}
 
-		// Token: 0x06023FF7 RID: 147447 RVA: 0x004F9705 File Offset: 0x004F7905
+		// Token: 0x060260B1 RID: 155825 RVA: 0x00536829 File Offset: 0x00534A29
 		public static void AddMatchSequence(FlatBufferBuilder builder, VectorOffset matchSequenceOffset)
 		{
 			builder.AddOffset(2, matchSequenceOffset.Value, 0);
 		}
 
-		// Token: 0x06023FF8 RID: 147448 RVA: 0x004F9718 File Offset: 0x004F7918
+		// Token: 0x060260B2 RID: 155826 RVA: 0x0053683C File Offset: 0x00534A3C
 		public static VectorOffset CreateMatchSequenceVector(FlatBufferBuilder builder, Offset<IMatchSequence>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023FF9 RID: 147449 RVA: 0x004F9758 File Offset: 0x004F7958
+		// Token: 0x060260B3 RID: 155827 RVA: 0x0053687C File Offset: 0x00534A7C
 		public static VectorOffset CreateMatchSequenceVectorBlock(FlatBufferBuilder builder, Offset<IMatchSequence>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023FFA RID: 147450 RVA: 0x004F9772 File Offset: 0x004F7972
+		// Token: 0x060260B4 RID: 155828 RVA: 0x00536896 File Offset: 0x00534A96
 		public static VectorOffset CreateMatchSequenceVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMatchSequence>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023FFB RID: 147451 RVA: 0x004F9790 File Offset: 0x004F7990
+		// Token: 0x060260B5 RID: 155829 RVA: 0x005368B4 File Offset: 0x00534AB4
 		public static VectorOffset CreateMatchSequenceVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -229,31 +229,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023FFC RID: 147452 RVA: 0x004F97A9 File Offset: 0x004F79A9
+		// Token: 0x060260B6 RID: 155830 RVA: 0x005368CD File Offset: 0x00534ACD
 		public static void StartMatchSequenceVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06023FFD RID: 147453 RVA: 0x004F97B4 File Offset: 0x004F79B4
+		// Token: 0x060260B7 RID: 155831 RVA: 0x005368D8 File Offset: 0x00534AD8
 		public static void AddSpeedCurve(FlatBufferBuilder builder, StringOffset speedCurveOffset)
 		{
 			builder.AddOffset(3, speedCurveOffset.Value, 0);
 		}
 
-		// Token: 0x06023FFE RID: 147454 RVA: 0x004F97C4 File Offset: 0x004F79C4
+		// Token: 0x060260B8 RID: 155832 RVA: 0x005368E8 File Offset: 0x00534AE8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06023FFF RID: 147455 RVA: 0x004F97CF File Offset: 0x004F79CF
+		// Token: 0x060260B9 RID: 155833 RVA: 0x005368F3 File Offset: 0x00534AF3
 		public static Offset<IMatchCastConfig> EndIMatchCastConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMatchCastConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06024000 RID: 147456 RVA: 0x004F97DC File Offset: 0x004F79DC
+		// Token: 0x060260BA RID: 155834 RVA: 0x00536900 File Offset: 0x00534B00
 		public IMatchCastConfigT UnPack()
 		{
 			IMatchCastConfigT matchCastConfigT = new IMatchCastConfigT();
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return matchCastConfigT;
 		}
 
-		// Token: 0x06024001 RID: 147457 RVA: 0x004F97F8 File Offset: 0x004F79F8
+		// Token: 0x060260BB RID: 155835 RVA: 0x0053691C File Offset: 0x00534B1C
 		public void UnPackTo(IMatchCastConfigT _o)
 		{
 			_o.Time = this.Time;
@@ -275,7 +275,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06024002 RID: 147458 RVA: 0x004F9888 File Offset: 0x004F7A88
+		// Token: 0x060260BC RID: 155836 RVA: 0x005369AC File Offset: 0x00534BAC
 		public static Offset<IMatchCastConfig> Pack(FlatBufferBuilder builder, IMatchCastConfigT _o)
 		{
 			if (_o == null)
@@ -297,7 +297,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMatchCastConfig.CreateIMatchCastConfig(builder, _o.Time, splineOffset, matchSequenceOffset, speedCurveOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E813 RID: 59411
+		// Token: 0x0400F444 RID: 62532
 		private Table __p;
 	}
 }

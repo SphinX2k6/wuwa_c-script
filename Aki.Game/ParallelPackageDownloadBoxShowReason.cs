@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002314 RID: 8980
+// Token: 0x020017F9 RID: 6137
 public enum ParallelPackageDownloadBoxShowReason
 {
-	// Token: 0x040086AA RID: 34474
+	// Token: 0x040087ED RID: 34797
 	Auto,
-	// Token: 0x040086AB RID: 34475
+	// Token: 0x040087EE RID: 34798
 	Manual
 }

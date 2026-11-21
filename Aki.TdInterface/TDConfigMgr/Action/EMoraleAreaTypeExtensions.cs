@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200238B RID: 9099
+	// Token: 0x02002614 RID: 9748
 	public static class EMoraleAreaTypeExtensions
 	{
-		// Token: 0x0600C670 RID: 50800 RVA: 0x001D107C File Offset: 0x001CF27C
+		// Token: 0x0600D2B4 RID: 53940 RVA: 0x001EA050 File Offset: 0x001E8250
 		public static string ToEnumString(this EMoraleAreaType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C671 RID: 50801 RVA: 0x001D10DC File Offset: 0x001CF2DC
+		// Token: 0x0600D2B5 RID: 53941 RVA: 0x001EA0B0 File Offset: 0x001E82B0
 		public static EMoraleAreaType FromString(string name)
 		{
 			EMoraleAreaType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C672 RID: 50802 RVA: 0x001D1108 File Offset: 0x001CF308
+		// Token: 0x0600D2B6 RID: 53942 RVA: 0x001EA0DC File Offset: 0x001E82DC
 		public static bool TryFromString(string name, out EMoraleAreaType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C673 RID: 50803 RVA: 0x001D1182 File Offset: 0x001CF382
+		// Token: 0x0600D2B7 RID: 53943 RVA: 0x001EA156 File Offset: 0x001E8356
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C674 RID: 50804 RVA: 0x001D11B2 File Offset: 0x001CF3B2
+		// Token: 0x0600D2B8 RID: 53944 RVA: 0x001EA186 File Offset: 0x001E8386
 		public static EMoraleAreaType[] GetValues()
 		{
 			return new EMoraleAreaType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C675 RID: 50805 RVA: 0x001D11C5 File Offset: 0x001CF3C5
+		// Token: 0x0600D2B9 RID: 53945 RVA: 0x001EA199 File Offset: 0x001E8399
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026B3 RID: 9907
+// Token: 0x02001B9E RID: 7070
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,8 +16,8 @@ using UnrealEngine;
 })]
 public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeData>>
 {
-	// Token: 0x17001A52 RID: 6738
-	// (get) Token: 0x060144C7 RID: 83143 RVA: 0x005215CC File Offset: 0x0051F7CC
+	// Token: 0x17001A8A RID: 6794
+	// (get) Token: 0x060119A9 RID: 72105 RVA: 0x00530304 File Offset: 0x0052E504
 	public override EQuestTreeNodeType Type
 	{
 		get
@@ -26,7 +26,7 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		}
 	}
 
-	// Token: 0x060144C8 RID: 83144 RVA: 0x005215D0 File Offset: 0x0051F7D0
+	// Token: 0x060119AA RID: 72106 RVA: 0x00530308 File Offset: 0x0052E508
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -48,7 +48,7 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060144C9 RID: 83145 RVA: 0x005216C0 File Offset: 0x0051F8C0
+	// Token: 0x060119AB RID: 72107 RVA: 0x005303F8 File Offset: 0x0052E5F8
 	protected override void OnStart()
 	{
 		this.ItemPool = new QuestTreeNodeItemPool(base.Loader, base.GetItem(2));
@@ -56,7 +56,7 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		this.TickId = ((ticker != null) ? ticker.Id : -1);
 	}
 
-	// Token: 0x060144CA RID: 83146 RVA: 0x00521716 File Offset: 0x0051F916
+	// Token: 0x060119AC RID: 72108 RVA: 0x0053044E File Offset: 0x0052E64E
 	protected override void OnBeforeDestroy()
 	{
 		this.ItemPool.ClearPool();
@@ -67,13 +67,13 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		}
 	}
 
-	// Token: 0x060144CB RID: 83147 RVA: 0x00521744 File Offset: 0x0051F944
+	// Token: 0x060119AD RID: 72109 RVA: 0x0053047C File Offset: 0x0052E67C
 	public override void Refresh(List<QuestTreeNodeData> data, bool isSelected, int gridIndex)
 	{
 		this.RefreshAsync(data, isSelected, gridIndex);
 	}
 
-	// Token: 0x060144CC RID: 83148 RVA: 0x00521750 File Offset: 0x0051F950
+	// Token: 0x060119AE RID: 72110 RVA: 0x00530488 File Offset: 0x0052E688
 	public override UniTask RefreshAsync(List<QuestTreeNodeData> data, bool isSelected, int gridIndex)
 	{
 		QuestTreeNodeContainer.<RefreshAsync>d__11 <RefreshAsync>d__;
@@ -85,17 +85,17 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144CD RID: 83149 RVA: 0x0052179B File Offset: 0x0051F99B
+	// Token: 0x060119AF RID: 72111 RVA: 0x005304D3 File Offset: 0x0052E6D3
 	public override void UpdateData(QuestTreeNodeData data)
 	{
 	}
 
-	// Token: 0x060144CE RID: 83150 RVA: 0x0052179D File Offset: 0x0051F99D
+	// Token: 0x060119B0 RID: 72112 RVA: 0x005304D5 File Offset: 0x0052E6D5
 	public override void UpdateDataList(List<QuestTreeNodeData> data)
 	{
 	}
 
-	// Token: 0x060144CF RID: 83151 RVA: 0x005217A0 File Offset: 0x0051F9A0
+	// Token: 0x060119B1 RID: 72113 RVA: 0x005304D8 File Offset: 0x0052E6D8
 	public override UniTask CreateSelf(UUIItem parent)
 	{
 		QuestTreeNodeContainer.<CreateSelf>d__14 <CreateSelf>d__;
@@ -107,7 +107,7 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		return <CreateSelf>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144D0 RID: 83152 RVA: 0x005217EC File Offset: 0x0051F9EC
+	// Token: 0x060119B2 RID: 72114 RVA: 0x00530524 File Offset: 0x0052E724
 	public override float GetAdditionalHeight()
 	{
 		IQuestTreeNodeItem itemByData = this.ItemPool.GetItemByData(this.Data[0]);
@@ -118,7 +118,7 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		return 0f;
 	}
 
-	// Token: 0x060144D1 RID: 83153 RVA: 0x00521838 File Offset: 0x0051FA38
+	// Token: 0x060119B3 RID: 72115 RVA: 0x00530570 File Offset: 0x0052E770
 	private void OnTick(float delta)
 	{
 		float additionalHeight = this.GetAdditionalHeight();
@@ -126,38 +126,38 @@ public class QuestTreeNodeContainer : QuestTreeNodeItemBase<List<QuestTreeNodeDa
 		base.GetVerticalLayout(0).SetPadding(this.LayoutMargin);
 	}
 
-	// Token: 0x040098B3 RID: 39091
+	// Token: 0x04009A0B RID: 39435
 	private QuestTreeNodeItemPool ItemPool;
 
-	// Token: 0x040098B4 RID: 39092
+	// Token: 0x04009A0C RID: 39436
 	private List<QuestTreeNodeData> Data = new List<QuestTreeNodeData>();
 
-	// Token: 0x040098B5 RID: 39093
+	// Token: 0x04009A0D RID: 39437
 	private int TickId = -1;
 
-	// Token: 0x040098B6 RID: 39094
+	// Token: 0x04009A0E RID: 39438
 	private FMargin LayoutMargin = new FMargin(0f, 0f, 0f, 0f);
 
-	// Token: 0x02008CFD RID: 36093
+	// Token: 0x02007E86 RID: 32390
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DBE8 RID: 187368
+		// Token: 0x04028EFF RID: 167679
 		public const int LayoutSelf = 0;
 
-		// Token: 0x0402DBE9 RID: 187369
+		// Token: 0x04028F00 RID: 167680
 		public const int ItemLayoutUp = 1;
 
-		// Token: 0x0402DBEA RID: 187370
+		// Token: 0x04028F01 RID: 167681
 		public const int ItemContainer = 2;
 
-		// Token: 0x0402DBEB RID: 187371
+		// Token: 0x04028F02 RID: 167682
 		public const int ItemLineTypeA = 3;
 
-		// Token: 0x0402DBEC RID: 187372
+		// Token: 0x04028F03 RID: 167683
 		public const int ItemLineTypeB = 4;
 
-		// Token: 0x0402DBED RID: 187373
+		// Token: 0x04028F04 RID: 167684
 		public const int ItemLayoutDown = 5;
 	}
 }

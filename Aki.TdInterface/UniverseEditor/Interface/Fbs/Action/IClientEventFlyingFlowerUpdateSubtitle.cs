@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200639D RID: 25501
+	// Token: 0x02006A0E RID: 27150
 	public struct IClientEventFlyingFlowerUpdateSubtitle : IFlatbufferObject
 	{
-		// Token: 0x1700BE1E RID: 48670
-		// (get) Token: 0x0602C1DD RID: 180701 RVA: 0x0060F356 File Offset: 0x0060D556
+		// Token: 0x1700C7A2 RID: 51106
+		// (get) Token: 0x0602E93F RID: 190783 RVA: 0x0065A38E File Offset: 0x0065858E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C1DE RID: 180702 RVA: 0x0060F363 File Offset: 0x0060D563
+		// Token: 0x0602E940 RID: 190784 RVA: 0x0065A39B File Offset: 0x0065859B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C1DF RID: 180703 RVA: 0x0060F36C File Offset: 0x0060D56C
+		// Token: 0x0602E941 RID: 190785 RVA: 0x0065A3A4 File Offset: 0x006585A4
 		public static IClientEventFlyingFlowerUpdateSubtitle GetRootAsIClientEventFlyingFlowerUpdateSubtitle(ByteBuffer _bb)
 		{
 			return IClientEventFlyingFlowerUpdateSubtitle.GetRootAsIClientEventFlyingFlowerUpdateSubtitle(_bb, default(IClientEventFlyingFlowerUpdateSubtitle));
 		}
 
-		// Token: 0x0602C1E0 RID: 180704 RVA: 0x0060F388 File Offset: 0x0060D588
+		// Token: 0x0602E942 RID: 190786 RVA: 0x0065A3C0 File Offset: 0x006585C0
 		public static IClientEventFlyingFlowerUpdateSubtitle GetRootAsIClientEventFlyingFlowerUpdateSubtitle(ByteBuffer _bb, IClientEventFlyingFlowerUpdateSubtitle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C1E1 RID: 180705 RVA: 0x0060F3A5 File Offset: 0x0060D5A5
+		// Token: 0x0602E943 RID: 190787 RVA: 0x0065A3DD File Offset: 0x006585DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C1E2 RID: 180706 RVA: 0x0060F3B4 File Offset: 0x0060D5B4
+		// Token: 0x0602E944 RID: 190788 RVA: 0x0065A3EC File Offset: 0x006585EC
 		public IClientEventFlyingFlowerUpdateSubtitle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE1F RID: 48671
-		// (get) Token: 0x0602C1E3 RID: 180707 RVA: 0x0060F3C4 File Offset: 0x0060D5C4
+		// Token: 0x1700C7A3 RID: 51107
+		// (get) Token: 0x0602E945 RID: 190789 RVA: 0x0065A3FC File Offset: 0x006585FC
 		public EClientEventFlyingFlowerEventType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE20 RID: 48672
-		// (get) Token: 0x0602C1E4 RID: 180708 RVA: 0x0060F400 File Offset: 0x0060D600
+		// Token: 0x1700C7A4 RID: 51108
+		// (get) Token: 0x0602E946 RID: 190790 RVA: 0x0065A438 File Offset: 0x00658638
 		public IPlayFlow? Flow
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C1E5 RID: 180709 RVA: 0x0060F45D File Offset: 0x0060D65D
+		// Token: 0x0602E947 RID: 190791 RVA: 0x0065A495 File Offset: 0x00658695
 		public static Offset<IClientEventFlyingFlowerUpdateSubtitle> CreateIClientEventFlyingFlowerUpdateSubtitle(FlatBufferBuilder builder, EClientEventFlyingFlowerEventType Type = EClientEventFlyingFlowerEventType.UpdateSubtitle, Offset<IPlayFlow> FlowOffset = default(Offset<IPlayFlow>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientEventFlyingFlowerUpdateSubtitle.EndIClientEventFlyingFlowerUpdateSubtitle(builder);
 		}
 
-		// Token: 0x0602C1E6 RID: 180710 RVA: 0x0060F47A File Offset: 0x0060D67A
+		// Token: 0x0602E948 RID: 190792 RVA: 0x0065A4B2 File Offset: 0x006586B2
 		public static void StartIClientEventFlyingFlowerUpdateSubtitle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602C1E7 RID: 180711 RVA: 0x0060F483 File Offset: 0x0060D683
+		// Token: 0x0602E949 RID: 190793 RVA: 0x0065A4BB File Offset: 0x006586BB
 		public static void AddType(FlatBufferBuilder builder, EClientEventFlyingFlowerEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C1E8 RID: 180712 RVA: 0x0060F48E File Offset: 0x0060D68E
+		// Token: 0x0602E94A RID: 190794 RVA: 0x0065A4C6 File Offset: 0x006586C6
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IPlayFlow> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x0602C1E9 RID: 180713 RVA: 0x0060F49E File Offset: 0x0060D69E
+		// Token: 0x0602E94B RID: 190795 RVA: 0x0065A4D6 File Offset: 0x006586D6
 		public static Offset<IClientEventFlyingFlowerUpdateSubtitle> EndIClientEventFlyingFlowerUpdateSubtitle(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientEventFlyingFlowerUpdateSubtitle>(builder.EndTable());
 		}
 
-		// Token: 0x0602C1EA RID: 180714 RVA: 0x0060F4AC File Offset: 0x0060D6AC
+		// Token: 0x0602E94C RID: 190796 RVA: 0x0065A4E4 File Offset: 0x006586E4
 		public IClientEventFlyingFlowerUpdateSubtitleT UnPack()
 		{
 			IClientEventFlyingFlowerUpdateSubtitleT clientEventFlyingFlowerUpdateSubtitleT = new IClientEventFlyingFlowerUpdateSubtitleT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientEventFlyingFlowerUpdateSubtitleT;
 		}
 
-		// Token: 0x0602C1EB RID: 180715 RVA: 0x0060F4C8 File Offset: 0x0060D6C8
+		// Token: 0x0602E94D RID: 190797 RVA: 0x0065A500 File Offset: 0x00658700
 		public void UnPackTo(IClientEventFlyingFlowerUpdateSubtitleT _o)
 		{
 			_o.Type = this.Type;
 			_o.Flow = ((this.Flow != null) ? this.Flow.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602C1EC RID: 180716 RVA: 0x0060F510 File Offset: 0x0060D710
+		// Token: 0x0602E94E RID: 190798 RVA: 0x0065A548 File Offset: 0x00658748
 		public static Offset<IClientEventFlyingFlowerUpdateSubtitle> Pack(FlatBufferBuilder builder, IClientEventFlyingFlowerUpdateSubtitleT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientEventFlyingFlowerUpdateSubtitle.CreateIClientEventFlyingFlowerUpdateSubtitle(builder, _o.Type, flowOffset);
 		}
 
-		// Token: 0x0401096E RID: 67950
+		// Token: 0x04011781 RID: 71553
 		private Table __p;
 	}
 }

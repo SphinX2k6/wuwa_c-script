@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029AC RID: 10668
+	// Token: 0x02000869 RID: 2153
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnListItemScrolledIntoViewDynamic : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06027742 RID: 161602 RVA: 0x003C2FFD File Offset: 0x003C11FD
+		// Token: 0x0600BB10 RID: 47888 RVA: 0x0012B8C1 File Offset: 0x00129AC1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnListItemScrolledIntoViewDynamic.StaticFunctionPtr();
 		}
 
-		// Token: 0x06027743 RID: 161603 RVA: 0x003C3009 File Offset: 0x003C1209
+		// Token: 0x0600BB11 RID: 47889 RVA: 0x0012B8CD File Offset: 0x00129ACD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnListItemScrolledIntoViewDynamic._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnListItemScrolledIntoViewDynamic._FunctionPtr;
 		}
 
-		// Token: 0x06027744 RID: 161604 RVA: 0x003C302C File Offset: 0x003C122C
+		// Token: 0x0600BB12 RID: 47890 RVA: 0x0012B8F0 File Offset: 0x00129AF0
 		public FOnListItemScrolledIntoViewDynamic()
 		{
 		}
 
-		// Token: 0x06027745 RID: 161605 RVA: 0x003C3034 File Offset: 0x003C1234
+		// Token: 0x0600BB13 RID: 47891 RVA: 0x0012B8F8 File Offset: 0x00129AF8
 		[NullableContext(2)]
 		public FOnListItemScrolledIntoViewDynamic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06027746 RID: 161606 RVA: 0x003C303E File Offset: 0x003C123E
+		// Token: 0x0600BB14 RID: 47892 RVA: 0x0012B902 File Offset: 0x00129B02
 		public FOnListItemScrolledIntoViewDynamic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06027747 RID: 161607 RVA: 0x003C3049 File Offset: 0x003C1249
+		// Token: 0x0600BB15 RID: 47893 RVA: 0x0012B90D File Offset: 0x00129B0D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UObject, UUserWidget>) ?? ((Action<UObject, UUserWidget>)Delegate.CreateDelegate(typeof(Action<UObject, UUserWidget>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06027748 RID: 161608 RVA: 0x003C307B File Offset: 0x003C127B
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600BB16 RID: 47894 RVA: 0x0012B93F File Offset: 0x00129B3F
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnListItemScrolledIntoViewDynamic.RegisterId);
 		}
 
-		// Token: 0x06027749 RID: 161609 RVA: 0x003C30B5 File Offset: 0x003C12B5
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600BB17 RID: 47895 RVA: 0x0012B979 File Offset: 0x00129B79
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0602774A RID: 161610 RVA: 0x003C30C0 File Offset: 0x003C12C0
+		// Token: 0x0600BB18 RID: 47896 RVA: 0x0012B984 File Offset: 0x00129B84
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UObject Item, UUserWidget Widget)
 		{
 			FOnListItemScrolledIntoViewDynamic.__FOnListItemScrolledIntoViewDynamic_DelegateParams* ptr = stackalloc FOnListItemScrolledIntoViewDynamic.__FOnListItemScrolledIntoViewDynamic_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnListItemScrolledIntoViewDynamic.__FOnListItemScrolledIntoViewDynamic_DelegateParams) & -16L;
@@ -96,10 +93,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0602774B RID: 161611 RVA: 0x003C3124 File Offset: 0x003C1324
+		// Token: 0x0600BB19 RID: 47897 RVA: 0x0012B9E8 File Offset: 0x00129BE8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UObject, UUserWidget> action = target as Action<UObject, UUserWidget>;
@@ -112,35 +108,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 		}
 
-		// Token: 0x04015A62 RID: 88674
+		// Token: 0x040054C5 RID: 21701
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04015A63 RID: 88675
+		// Token: 0x040054C6 RID: 21702
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.OnListItemScrolledIntoViewDynamic__DelegateSignature";
 
-		// Token: 0x04015A64 RID: 88676
+		// Token: 0x040054C7 RID: 21703
 		private static int RegisterId;
 
-		// Token: 0x02003BAF RID: 15279
+		// Token: 0x02001407 RID: 5127
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnListItemScrolledIntoViewDynamic_DelegateParams
+		private ref struct __FOnListItemScrolledIntoViewDynamic_DelegateParams
 		{
-			// Token: 0x04017D90 RID: 97680
+			// Token: 0x040068B3 RID: 26803
 			[FieldOffset(0)]
 			public IntPtr Item;
 
-			// Token: 0x04017D91 RID: 97681
+			// Token: 0x040068B4 RID: 26804
 			[FieldOffset(8)]
 			public IntPtr Widget;
 		}
 
-		// Token: 0x02003BB0 RID: 15280
+		// Token: 0x02001408 RID: 5128
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D92 RID: 97682
+			// Token: 0x040068B5 RID: 26805
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

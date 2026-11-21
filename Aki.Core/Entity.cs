@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x02000075 RID: 117
+// Token: 0x02000076 RID: 118
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVariableResetter
 {
-	// Token: 0x06000334 RID: 820 RVA: 0x0001369C File Offset: 0x0001189C
+	// Token: 0x0600036D RID: 877 RVA: 0x000143F8 File Offset: 0x000125F8
 	static Entity()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Entity.CreateStaticDefaultValue), new Action(Entity.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000335 RID: 821 RVA: 0x000136BB File Offset: 0x000118BB
+	// Token: 0x0600036E RID: 878 RVA: 0x00014417 File Offset: 0x00012617
 	public static void CreateStaticDefaultValue()
 	{
 		Entity._statMap = new Dictionary<string, Stat[]>();
 	}
 
-	// Token: 0x06000336 RID: 822 RVA: 0x000136C7 File Offset: 0x000118C7
+	// Token: 0x0600036F RID: 879 RVA: 0x00014423 File Offset: 0x00012623
 	public static void ResetStaticDefaultValue()
 	{
 		Entity._staticGameBudgetConfigInternal = null;
@@ -31,13 +29,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		Entity.GetCreatureIdsHook = null;
 	}
 
-	// Token: 0x17000075 RID: 117
-	// (get) Token: 0x06000337 RID: 823 RVA: 0x000136DB File Offset: 0x000118DB
+	// Token: 0x1700007C RID: 124
+	// (get) Token: 0x06000370 RID: 880 RVA: 0x00014437 File Offset: 0x00012637
 	public virtual bool UsePool { get; }
 
-	// Token: 0x17000076 RID: 118
-	// (get) Token: 0x06000338 RID: 824 RVA: 0x000136E3 File Offset: 0x000118E3
-	// (set) Token: 0x06000339 RID: 825 RVA: 0x000136EB File Offset: 0x000118EB
+	// Token: 0x1700007D RID: 125
+	// (get) Token: 0x06000371 RID: 881 RVA: 0x0001443F File Offset: 0x0001263F
+	// (set) Token: 0x06000372 RID: 882 RVA: 0x00014447 File Offset: 0x00012647
 	public bool IsEncloseSpace
 	{
 		get
@@ -50,8 +48,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000077 RID: 119
-	// (get) Token: 0x0600033A RID: 826 RVA: 0x000136F4 File Offset: 0x000118F4
+	// Token: 0x1700007E RID: 126
+	// (get) Token: 0x06000373 RID: 883 RVA: 0x00014450 File Offset: 0x00012650
 	[Nullable(1)]
 	protected static TsGameBudgetGroupConfig StaticGameBudgetConfigInternal
 	{
@@ -62,7 +60,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x0600033B RID: 827 RVA: 0x000136FC File Offset: 0x000118FC
+	// Token: 0x06000374 RID: 884 RVA: 0x00014458 File Offset: 0x00012658
 	[NullableContext(1)]
 	protected virtual TsGameBudgetGroupConfig StaticGameBudgetConfig()
 	{
@@ -73,8 +71,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return Entity.StaticGameBudgetConfigInternal;
 	}
 
-	// Token: 0x17000078 RID: 120
-	// (get) Token: 0x0600033C RID: 828 RVA: 0x00013732 File Offset: 0x00011932
+	// Token: 0x1700007F RID: 127
+	// (get) Token: 0x06000375 RID: 885 RVA: 0x0001448E File Offset: 0x0001268E
 	public uint GameBudgetManagedToken
 	{
 		get
@@ -83,8 +81,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000079 RID: 121
-	// (get) Token: 0x0600033D RID: 829 RVA: 0x0001373A File Offset: 0x0001193A
+	// Token: 0x17000080 RID: 128
+	// (get) Token: 0x06000376 RID: 886 RVA: 0x00014496 File Offset: 0x00012696
 	public EExecutedFlag Flag
 	{
 		get
@@ -93,8 +91,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x1700007A RID: 122
-	// (get) Token: 0x0600033E RID: 830 RVA: 0x00013742 File Offset: 0x00011942
+	// Token: 0x17000081 RID: 129
+	// (get) Token: 0x06000377 RID: 887 RVA: 0x0001449E File Offset: 0x0001269E
 	public TsGameBudgetGroupConfig GameBudgetConfig
 	{
 		get
@@ -103,8 +101,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x1700007B RID: 123
-	// (get) Token: 0x0600033F RID: 831 RVA: 0x0001374A File Offset: 0x0001194A
+	// Token: 0x17000082 RID: 130
+	// (get) Token: 0x06000378 RID: 888 RVA: 0x000144A6 File Offset: 0x000126A6
 	public float DistanceWithCamera
 	{
 		get
@@ -113,8 +111,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x1700007C RID: 124
-	// (get) Token: 0x06000340 RID: 832 RVA: 0x00013752 File Offset: 0x00011952
+	// Token: 0x17000083 RID: 131
+	// (get) Token: 0x06000379 RID: 889 RVA: 0x000144AE File Offset: 0x000126AE
 	[Nullable(new byte[]
 	{
 		1,
@@ -137,12 +135,12 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000341 RID: 833 RVA: 0x0001375C File Offset: 0x0001195C
+	// Token: 0x0600037A RID: 890 RVA: 0x000144B8 File Offset: 0x000126B8
 	public Entity(int id, int index) : base(id, index)
 	{
 	}
 
-	// Token: 0x06000342 RID: 834 RVA: 0x000137C0 File Offset: 0x000119C0
+	// Token: 0x0600037B RID: 891 RVA: 0x0001451C File Offset: 0x0001271C
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -171,8 +169,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return array;
 	}
 
-	// Token: 0x1700007D RID: 125
-	// (get) Token: 0x06000343 RID: 835 RVA: 0x00013828 File Offset: 0x00011A28
+	// Token: 0x17000084 RID: 132
+	// (get) Token: 0x0600037C RID: 892 RVA: 0x00014584 File Offset: 0x00012784
 	public bool Active
 	{
 		get
@@ -181,8 +179,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x1700007E RID: 126
-	// (get) Token: 0x06000344 RID: 836 RVA: 0x00013847 File Offset: 0x00011A47
+	// Token: 0x17000085 RID: 133
+	// (get) Token: 0x0600037D RID: 893 RVA: 0x000145A3 File Offset: 0x000127A3
 	public float TimeDilation
 	{
 		get
@@ -191,8 +189,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x1700007F RID: 127
-	// (get) Token: 0x06000345 RID: 837 RVA: 0x0001384F File Offset: 0x00011A4F
+	// Token: 0x17000086 RID: 134
+	// (get) Token: 0x0600037E RID: 894 RVA: 0x000145AB File Offset: 0x000127AB
 	public bool IsCreate
 	{
 		get
@@ -201,8 +199,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000080 RID: 128
-	// (get) Token: 0x06000346 RID: 838 RVA: 0x0001385C File Offset: 0x00011A5C
+	// Token: 0x17000087 RID: 135
+	// (get) Token: 0x0600037F RID: 895 RVA: 0x000145B8 File Offset: 0x000127B8
 	public bool IsStart
 	{
 		get
@@ -211,8 +209,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000081 RID: 129
-	// (get) Token: 0x06000347 RID: 839 RVA: 0x00013869 File Offset: 0x00011A69
+	// Token: 0x17000088 RID: 136
+	// (get) Token: 0x06000380 RID: 896 RVA: 0x000145C5 File Offset: 0x000127C5
 	public bool IsInit
 	{
 		get
@@ -221,8 +219,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000082 RID: 130
-	// (get) Token: 0x06000348 RID: 840 RVA: 0x00013877 File Offset: 0x00011A77
+	// Token: 0x17000089 RID: 137
+	// (get) Token: 0x06000381 RID: 897 RVA: 0x000145D3 File Offset: 0x000127D3
 	public bool IsEnd
 	{
 		get
@@ -231,8 +229,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000083 RID: 131
-	// (get) Token: 0x06000349 RID: 841 RVA: 0x00013885 File Offset: 0x00011A85
+	// Token: 0x1700008A RID: 138
+	// (get) Token: 0x06000382 RID: 898 RVA: 0x000145E1 File Offset: 0x000127E1
 	public bool IsClear
 	{
 		get
@@ -241,39 +239,39 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x0600034A RID: 842 RVA: 0x00013896 File Offset: 0x00011A96
+	// Token: 0x06000383 RID: 899 RVA: 0x000145F2 File Offset: 0x000127F2
 	public void ResetFlag()
 	{
 		this.FlagInternal = EExecutedFlag.None;
 	}
 
-	// Token: 0x0600034B RID: 843 RVA: 0x000138A0 File Offset: 0x00011AA0
+	// Token: 0x06000384 RID: 900 RVA: 0x000145FC File Offset: 0x000127FC
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public T GetComponent<T>() where T : EntityComponent
 	{
-		int num = ComponentIndexGetter.IndexOf<T>();
-		if (num >= this.ComponentsRegistry.Count || num < 0)
+		int index = ComponentIndexGetter<T>.Index;
+		if (index >= this.ComponentsRegistry.Count || index < 0)
 		{
 			return default(T);
 		}
-		return this.ComponentsRegistry[num] as T;
+		return this.ComponentsRegistry[index] as T;
 	}
 
-	// Token: 0x0600034C RID: 844 RVA: 0x000138E8 File Offset: 0x00011AE8
+	// Token: 0x06000385 RID: 901 RVA: 0x00014644 File Offset: 0x00012844
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public EntityComponent GetComponent(Type componentType)
 	{
-		int byType = ComponentIndexGetter.GetByType(componentType.Name, false);
-		if (byType >= this.ComponentsRegistry.Count || byType < 0)
+		int componentIndex = EntityComponentConstant.GetComponentIndex(componentType);
+		if (componentIndex >= this.ComponentsRegistry.Count || componentIndex < 0)
 		{
 			return null;
 		}
-		return this.ComponentsRegistry[byType];
+		return this.ComponentsRegistry[componentIndex];
 	}
 
-	// Token: 0x0600034D RID: 845 RVA: 0x00013924 File Offset: 0x00011B24
+	// Token: 0x06000386 RID: 902 RVA: 0x00014678 File Offset: 0x00012878
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public unsafe T CheckGetComponent<T>() where T : EntityComponent
@@ -294,10 +292,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return component;
 	}
 
-	// Token: 0x0600034E RID: 846 RVA: 0x000139D0 File Offset: 0x00011BD0
-	[NullableContext(1)]
-	[return: Nullable(2)]
-	protected unsafe T AddComponent<[Nullable(0)] T>(int? priority = null, [Nullable(2)] IEntityArgs args = null) where T : EntityComponent, IComponentDependency, new()
+	// Token: 0x06000387 RID: 903 RVA: 0x00014724 File Offset: 0x00012924
+	protected unsafe T AddComponent<[Nullable(0)] T>(int? priority = null, IEntityArgs args = null) where T : EntityComponent, new()
 	{
 		if ((this.FlagInternal & EExecutedFlag.Create) != EExecutedFlag.None)
 		{
@@ -321,7 +317,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("entity", base.GetType().Name);
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("component", typeof(T).Name);
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
-		if (ComponentIndexGetter.IndexOf<T>() < 0)
+		if (ComponentIndexGetter<T>.Index < 0)
 		{
 			Log instance3 = Log.Instance;
 			ELogModule module3 = ELogModule.Entity;
@@ -333,13 +329,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 			instance3.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 			return default(T);
 		}
-		Type[] dependencies = IComponentDependency.Dependencies;
-		if (dependencies != null)
+		Type[] componentDependencies = EntityComponentConstant.GetComponentDependencies(typeof(T));
+		if (componentDependencies != null)
 		{
-			foreach (Type type in dependencies)
+			foreach (Type type in componentDependencies)
 			{
-				int byType = ComponentIndexGetter.GetByType(type.Name, false);
-				if (byType < 0)
+				int componentIndex = EntityComponentConstant.GetComponentIndex(type);
+				if (componentIndex < 0)
 				{
 					Log instance4 = Log.Instance;
 					ELogModule module4 = ELogModule.Entity;
@@ -351,7 +347,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 					instance4.Error(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 2));
 					return default(T);
 				}
-				if (this.ComponentsRegistry[byType] == null)
+				if (this.ComponentsRegistry[componentIndex] == null)
 				{
 					Log instance5 = Log.Instance;
 					ELogModule module5 = ELogModule.Entity;
@@ -367,7 +363,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 				}
 			}
 		}
-		Entity entity = EntitySystem.Instance.Get<Entity>(this.Id);
+		Entity entity = EntitySystem.Instance.Get(this.Id);
 		T t = EntityComponentSystem.Instance.Create<T>(entity, args);
 		if (t == null)
 		{
@@ -377,8 +373,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		Type type2 = typeof(T);
 		while (type2 != null && !(type2 == typeFromHandle) && type2.IsSubclassOf(typeFromHandle))
 		{
-			int byType2 = ComponentIndexGetter.GetByType(type2.Name, false);
-			if (byType2 < 0)
+			int componentIndex2 = EntityComponentConstant.GetComponentIndex(type2);
+			if (componentIndex2 < 0)
 			{
 				Log instance6 = Log.Instance;
 				ELogModule module6 = ELogModule.Entity;
@@ -390,7 +386,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 				instance6.Error(module6, author6, message6, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray6, 2));
 				return default(T);
 			}
-			EntityComponent entityComponent = (byType2 < this.ComponentsRegistry.Count) ? this.ComponentsRegistry[byType2] : null;
+			EntityComponent entityComponent = (componentIndex2 < this.ComponentsRegistry.Count) ? this.ComponentsRegistry[componentIndex2] : null;
 			if (entityComponent != null)
 			{
 				Log instance7 = Log.Instance;
@@ -405,11 +401,11 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 				instance7.Error(module7, author7, message7, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray7, 4));
 				return default(T);
 			}
-			while (this.ComponentsRegistry.Count <= byType2)
+			while (this.ComponentsRegistry.Count <= componentIndex2)
 			{
 				this.ComponentsRegistry.Add(null);
 			}
-			this.ComponentsRegistry[byType2] = t;
+			this.ComponentsRegistry[componentIndex2] = t;
 			type2 = type2.BaseType;
 		}
 		this.Components.Add(t);
@@ -417,7 +413,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return t;
 	}
 
-	// Token: 0x0600034F RID: 847 RVA: 0x00013F34 File Offset: 0x00012134
+	// Token: 0x06000388 RID: 904 RVA: 0x00014C80 File Offset: 0x00012E80
 	protected unsafe EntityComponent AddComponent([Nullable(1)] Type componentType, int? priority = null, IEntityArgs args = null)
 	{
 		if ((this.FlagInternal & EExecutedFlag.Create) != EExecutedFlag.None)
@@ -433,7 +429,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 			return null;
 		}
-		if (ComponentIndexGetter.GetByType(componentType.Name, false) < 0)
+		if (EntityComponentConstant.GetComponentIndex(componentType) < 0)
 		{
 			Log instance2 = Log.Instance;
 			ELogModule module2 = ELogModule.Entity;
@@ -445,45 +441,41 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 			instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 			return null;
 		}
-		PropertyInfo property = componentType.GetProperty("Dependencies", BindingFlags.Static | BindingFlags.Public | BindingFlags.FlattenHierarchy);
-		if (property != null)
+		Type[] componentDependencies = EntityComponentConstant.GetComponentDependencies(componentType);
+		if (componentDependencies != null)
 		{
-			Type[] array = (Type[])property.GetValue(null);
-			if (array != null)
+			foreach (Type type in componentDependencies)
 			{
-				foreach (Type type in array)
+				int componentIndex = EntityComponentConstant.GetComponentIndex(type);
+				if (componentIndex < 0)
 				{
-					int byType = ComponentIndexGetter.GetByType(type.Name, false);
-					if (byType < 0)
-					{
-						Log instance3 = Log.Instance;
-						ELogModule module3 = ELogModule.Entity;
-						ELogAuthor author3 = ELogAuthor.LFJW;
-						string message3 = "依赖组件没有在EComponent定义";
-						<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("entity", base.GetType().Name);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("component", type.Name);
-						instance3.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
-						return null;
-					}
-					if (this.ComponentsRegistry[byType] == null)
-					{
-						Log instance4 = Log.Instance;
-						ELogModule module4 = ELogModule.Entity;
-						ELogAuthor author4 = ELogAuthor.LCC;
-						string message4 = "添加组件检查依赖失败";
-						<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray4<ValueTuple<string, object>>);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("Id", this.Id);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("entity", base.GetType().Name);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("component", componentType.Name);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 3) = new ValueTuple<string, object>("dependence", type.Name);
-						instance4.Error(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 4));
-						return null;
-					}
+					Log instance3 = Log.Instance;
+					ELogModule module3 = ELogModule.Entity;
+					ELogAuthor author3 = ELogAuthor.LFJW;
+					string message3 = "依赖组件没有在EComponent定义";
+					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("entity", base.GetType().Name);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("component", type.Name);
+					instance3.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
+					return null;
+				}
+				if (this.ComponentsRegistry[componentIndex] == null)
+				{
+					Log instance4 = Log.Instance;
+					ELogModule module4 = ELogModule.Entity;
+					ELogAuthor author4 = ELogAuthor.LCC;
+					string message4 = "添加组件检查依赖失败";
+					<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray4<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("Id", this.Id);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("entity", base.GetType().Name);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("component", componentType.Name);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 3) = new ValueTuple<string, object>("dependence", type.Name);
+					instance4.Error(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 4));
+					return null;
 				}
 			}
 		}
-		Entity entity = EntitySystem.Instance.Get<Entity>(this.Id);
+		Entity entity = EntitySystem.Instance.Get(this.Id);
 		EntityComponent entityComponent = EntityComponentSystem.Instance.Create(componentType, entity, args);
 		if (entityComponent == null)
 		{
@@ -493,8 +485,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		Type type2 = componentType;
 		while (type2 != null && !(type2 == typeFromHandle) && type2.IsSubclassOf(typeFromHandle))
 		{
-			int byType2 = ComponentIndexGetter.GetByType(type2.Name, false);
-			if (byType2 < 0)
+			int componentIndex2 = EntityComponentConstant.GetComponentIndex(type2);
+			if (componentIndex2 < 0)
 			{
 				Log instance5 = Log.Instance;
 				ELogModule module5 = ELogModule.Entity;
@@ -506,7 +498,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 				instance5.Error(module5, author5, message5, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray5, 2));
 				return null;
 			}
-			EntityComponent entityComponent2 = (byType2 < this.ComponentsRegistry.Count) ? this.ComponentsRegistry[byType2] : null;
+			EntityComponent entityComponent2 = (componentIndex2 < this.ComponentsRegistry.Count) ? this.ComponentsRegistry[componentIndex2] : null;
 			if (entityComponent2 != null)
 			{
 				Log instance6 = Log.Instance;
@@ -521,11 +513,11 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 				instance6.Error(module6, author6, message6, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray6, 4));
 				return null;
 			}
-			while (this.ComponentsRegistry.Count <= byType2)
+			while (this.ComponentsRegistry.Count <= componentIndex2)
 			{
 				this.ComponentsRegistry.Add(null);
 			}
-			this.ComponentsRegistry[byType2] = entityComponent;
+			this.ComponentsRegistry[componentIndex2] = entityComponent;
 			type2 = type2.BaseType;
 		}
 		this.Components.Add(entityComponent);
@@ -533,7 +525,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return entityComponent;
 	}
 
-	// Token: 0x06000350 RID: 848 RVA: 0x000143B8 File Offset: 0x000125B8
+	// Token: 0x06000389 RID: 905 RVA: 0x000150D0 File Offset: 0x000132D0
 	public void SetTimeDilation(float timeDilation)
 	{
 		this.TimeDilationInternal = timeDilation;
@@ -543,25 +535,25 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000351 RID: 849 RVA: 0x00014410 File Offset: 0x00012610
+	// Token: 0x0600038A RID: 906 RVA: 0x00015128 File Offset: 0x00013328
 	public void ChangeTickInterval(int interval)
 	{
 		this.TickInterval = interval;
 	}
 
-	// Token: 0x06000352 RID: 850 RVA: 0x00014419 File Offset: 0x00012619
+	// Token: 0x0600038B RID: 907 RVA: 0x00015131 File Offset: 0x00013331
 	public int GetTickInterval()
 	{
 		return this.TickInterval;
 	}
 
-	// Token: 0x06000353 RID: 851 RVA: 0x00014421 File Offset: 0x00012621
+	// Token: 0x0600038C RID: 908 RVA: 0x00015139 File Offset: 0x00013339
 	public float GetDeltaSeconds()
 	{
 		return this.DeltaSeconds;
 	}
 
-	// Token: 0x06000354 RID: 852 RVA: 0x0001442C File Offset: 0x0001262C
+	// Token: 0x0600038D RID: 909 RVA: 0x00015144 File Offset: 0x00013344
 	public unsafe void RegisterToGameBudgetController(AActor actor)
 	{
 		if (!GameBudgetInterfaceController.IsOpen)
@@ -574,7 +566,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 			bool afterTick = false;
 			foreach (EntityComponent entityComponent in this.Components)
 			{
-				if (new Action<bool>(entityComponent.OnEntityWasRecentlyRenderedOnScreenChange) != null)
+				if (entityComponent.NeedEntityWasRecentlyRenderedOnScreenChangeInternal)
 				{
 					if (this.OnWasRecentlyRenderComponents == null)
 					{
@@ -582,7 +574,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 					}
 					this.OnWasRecentlyRenderComponents.Add(entityComponent);
 				}
-				if (new Action<bool>(entityComponent.OnEntityBudgetTickEnableChange) != null)
+				if (entityComponent.NeedEntityBudgetTickEnableChangeInternal)
 				{
 					if (this.OnBudgetTickEnableChangeComponents == null)
 					{
@@ -612,7 +604,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06000355 RID: 853 RVA: 0x000145C0 File Offset: 0x000127C0
+	// Token: 0x0600038E RID: 910 RVA: 0x000152C8 File Offset: 0x000134C8
 	public void UnregisterFromGameBudgetController()
 	{
 		if (!GameBudgetInterfaceController.IsOpen)
@@ -631,23 +623,9 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000356 RID: 854 RVA: 0x00014610 File Offset: 0x00012810
+	// Token: 0x0600038F RID: 911 RVA: 0x00015318 File Offset: 0x00013518
 	public unsafe bool Create(IEntityArgs args = null)
 	{
-		if (Stat.Enable)
-		{
-			Stat[] stats = this.GetStats();
-			this.CreateStat = stats[0];
-			this.InitDataStat = stats[1];
-			this.InitStat = stats[2];
-			this.ClearStat = stats[3];
-			this.StartStat = stats[4];
-			this.EndStat = stats[5];
-			this.ActivateStat = stats[6];
-			this.PostActivateStat = stats[7];
-			this.TickStat = stats[8];
-			this.AfterTickStat = stats[9];
-		}
 		try
 		{
 			if (!this.OnCreate(args))
@@ -680,7 +658,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x06000357 RID: 855 RVA: 0x00014790 File Offset: 0x00012990
+	// Token: 0x06000390 RID: 912 RVA: 0x00015430 File Offset: 0x00013630
 	public unsafe virtual bool Respawn(IEntityArgs args = null)
 	{
 		try
@@ -715,13 +693,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x06000358 RID: 856 RVA: 0x000148A8 File Offset: 0x00012AA8
+	// Token: 0x06000391 RID: 913 RVA: 0x00015548 File Offset: 0x00013748
 	protected virtual bool OnRespawn(IEntityArgs args = null)
 	{
 		return true;
 	}
 
-	// Token: 0x06000359 RID: 857 RVA: 0x000148AC File Offset: 0x00012AAC
+	// Token: 0x06000392 RID: 914 RVA: 0x0001554C File Offset: 0x0001374C
 	public unsafe bool InitData(IEntityArgs args = null)
 	{
 		if ((this.FlagInternal & EExecutedFlag.InitData) != EExecutedFlag.None)
@@ -783,13 +761,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x0600035A RID: 858 RVA: 0x00014AB0 File Offset: 0x00012CB0
+	// Token: 0x06000393 RID: 915 RVA: 0x00015750 File Offset: 0x00013950
 	protected virtual bool OnInitData(IEntityArgs args = null)
 	{
 		return true;
 	}
 
-	// Token: 0x0600035B RID: 859 RVA: 0x00014AB4 File Offset: 0x00012CB4
+	// Token: 0x06000394 RID: 916 RVA: 0x00015754 File Offset: 0x00013954
 	public unsafe bool Init()
 	{
 		if ((this.FlagInternal & EExecutedFlag.Init) != EExecutedFlag.None)
@@ -846,13 +824,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x0600035C RID: 860 RVA: 0x00014C88 File Offset: 0x00012E88
+	// Token: 0x06000395 RID: 917 RVA: 0x00015928 File Offset: 0x00013B28
 	public unsafe bool Clear()
 	{
 		bool flag = false;
 		for (int i = this.Components.Count - 1; i >= 0; i--)
 		{
-			if (!EntityComponentSystem.Instance.Destroy<EntityComponent>(this, this.Components[i]))
+			if (!EntityComponentSystem.Instance.Destroy(this, this.Components[i]))
 			{
 				flag = true;
 			}
@@ -893,7 +871,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x0600035D RID: 861 RVA: 0x00014DE0 File Offset: 0x00012FE0
+	// Token: 0x06000396 RID: 918 RVA: 0x00015A80 File Offset: 0x00013C80
 	private void ClearInternal()
 	{
 		this.DisableCount = 0;
@@ -906,7 +884,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.PendingEnable = null;
 	}
 
-	// Token: 0x0600035E RID: 862 RVA: 0x00014E38 File Offset: 0x00013038
+	// Token: 0x06000397 RID: 919 RVA: 0x00015AD8 File Offset: 0x00013CD8
 	public unsafe bool Start()
 	{
 		if ((this.FlagInternal & EExecutedFlag.Start) != EExecutedFlag.None)
@@ -962,7 +940,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x0600035F RID: 863 RVA: 0x00015004 File Offset: 0x00013204
+	// Token: 0x06000398 RID: 920 RVA: 0x00015CA4 File Offset: 0x00013EA4
 	public void Activate()
 	{
 		foreach (EntityComponent entityComponent in this.Components)
@@ -972,7 +950,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.FlagInternal |= EExecutedFlag.Activate;
 	}
 
-	// Token: 0x06000360 RID: 864 RVA: 0x00015064 File Offset: 0x00013264
+	// Token: 0x06000399 RID: 921 RVA: 0x00015D04 File Offset: 0x00013F04
 	public unsafe void PostActivate()
 	{
 		if ((this.FlagInternal & EExecutedFlag.Activate) == EExecutedFlag.None)
@@ -1000,7 +978,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.FlagInternal |= EExecutedFlag.PostActivate;
 	}
 
-	// Token: 0x06000361 RID: 865 RVA: 0x00015178 File Offset: 0x00013378
+	// Token: 0x0600039A RID: 922 RVA: 0x00015E18 File Offset: 0x00014018
 	public unsafe bool End()
 	{
 		if ((this.FlagInternal & EExecutedFlag.Start) == EExecutedFlag.None)
@@ -1051,43 +1029,29 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return true;
 	}
 
-	// Token: 0x06000362 RID: 866 RVA: 0x000152D8 File Offset: 0x000134D8
+	// Token: 0x0600039B RID: 923 RVA: 0x00015F78 File Offset: 0x00014178
 	[NullableContext(1)]
 	public unsafe bool Enable(int handle, string reason)
 	{
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
+		if (!this.DisableHandlesMap.Remove(handle))
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Entity;
-			ELogAuthor author = ELogAuthor.LFJW;
-			string message = "Entity.Enable";
+			ELogAuthor author = ELogAuthor.LCC;
+			string message = "Entity实体激活失败句柄不存在";
 			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("EntityId", this.Id);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("EntityName", base.GetType().Name);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("Handle", handle);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("Reason", reason);
-			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
-		}
-		if (!this.DisableHandlesMap.ContainsKey(handle))
-		{
-			Log instance2 = Log.Instance;
-			ELogModule module2 = ELogModule.Entity;
-			ELogAuthor author2 = ELogAuthor.LCC;
-			string message2 = "Entity实体激活失败句柄不存在";
-			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray4<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("EntityId", this.Id);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("EntityName", base.GetType().Name);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("Handle", handle);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("Reason", reason);
-			instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
+			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 			return false;
 		}
-		this.DisableHandlesMap.Remove(handle);
 		this.RefreshComponentsEnable(reason);
 		return true;
 	}
 
-	// Token: 0x06000363 RID: 867 RVA: 0x00015454 File Offset: 0x00013654
+	// Token: 0x0600039C RID: 924 RVA: 0x0001603C File Offset: 0x0001423C
 	[NullableContext(1)]
 	public unsafe int Disable(string reason)
 	{
@@ -1118,38 +1082,12 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		int num2 = num;
 		this.DisableHandlesMap[num2] = reason;
 		this.RefreshComponentsEnable(reason);
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			Log instance3 = Log.Instance;
-			ELogModule module3 = ELogModule.Entity;
-			ELogAuthor author3 = ELogAuthor.LFJW;
-			string message3 = "Entity.Disable";
-			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray4<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("EntityId", this.Id);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("EntityName", base.GetType().Name);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("Handle", num2);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("Reason", reason);
-			instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
-		}
 		return num2;
 	}
 
-	// Token: 0x06000364 RID: 868 RVA: 0x0001561C File Offset: 0x0001381C
-	public unsafe void EnableByKey(EEntityDisableKey key, bool removeAll = true)
+	// Token: 0x0600039D RID: 925 RVA: 0x00016158 File Offset: 0x00014358
+	public void EnableByKey(EEntityDisableKey key, bool removeAll = true)
 	{
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.Entity;
-			ELogAuthor author = ELogAuthor.LYY;
-			string message = "Entity.EnableByKey";
-			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("EntityId", this.Id);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("EntityName", base.GetType().Name);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("Key", key);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("RemoveAll", removeAll);
-			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
-		}
 		if (key != EEntityDisableKey.SetEntityEnable)
 		{
 			this.EnableByKey(EEntityDisableKey.SetEntityEnable, true);
@@ -1174,28 +1112,15 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.RefreshComponentsEnable(key);
 	}
 
-	// Token: 0x06000365 RID: 869 RVA: 0x0001573B File Offset: 0x0001393B
+	// Token: 0x0600039E RID: 926 RVA: 0x000161C7 File Offset: 0x000143C7
 	public bool HasDisableKey(EEntityDisableKey key)
 	{
 		return this.DisableKeysMap.ContainsKey(key);
 	}
 
-	// Token: 0x06000366 RID: 870 RVA: 0x0001574C File Offset: 0x0001394C
-	public unsafe void DisableByKey(EEntityDisableKey key, bool noDuplicate = true)
+	// Token: 0x0600039F RID: 927 RVA: 0x000161D8 File Offset: 0x000143D8
+	public void DisableByKey(EEntityDisableKey key, bool noDuplicate = true)
 	{
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.Entity;
-			ELogAuthor author = ELogAuthor.LYY;
-			string message = "Entity.DisableByKey";
-			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("EntityId", this.Id);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("EntityName", base.GetType().Name);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("Key", key);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("NoDuplicate", noDuplicate);
-			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
-		}
 		int num;
 		this.DisableKeysMap.TryGetValue(key, out num);
 		num = Math.Max(0, num);
@@ -1207,7 +1132,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.RefreshComponentsEnable(key);
 	}
 
-	// Token: 0x06000367 RID: 871 RVA: 0x00015844 File Offset: 0x00013A44
+	// Token: 0x060003A0 RID: 928 RVA: 0x00016220 File Offset: 0x00014420
 	[NullableContext(1)]
 	private void RefreshComponentsEnable(object reason)
 	{
@@ -1222,7 +1147,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000368 RID: 872 RVA: 0x00015890 File Offset: 0x00013A90
+	// Token: 0x060003A1 RID: 929 RVA: 0x0001626C File Offset: 0x0001446C
 	public void ExecutePendingEnableProcess()
 	{
 		if (!this.IsStart || this.PendingEnable == null)
@@ -1236,7 +1161,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.PendingEnable = null;
 	}
 
-	// Token: 0x06000369 RID: 873 RVA: 0x000158E9 File Offset: 0x00013AE9
+	// Token: 0x060003A2 RID: 930 RVA: 0x000162C5 File Offset: 0x000144C5
 	public void ForceTick(float delta)
 	{
 		if (!this.Active)
@@ -1246,7 +1171,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.TickComponentManager.ForceTick(delta * this.TimeDilationInternal);
 	}
 
-	// Token: 0x0600036A RID: 874 RVA: 0x00015908 File Offset: 0x00013B08
+	// Token: 0x060003A3 RID: 931 RVA: 0x000162E4 File Offset: 0x000144E4
 	public void ScheduledTick(float deltaSeconds, int deltaFrames, float distance)
 	{
 		this.DeltaSeconds = deltaSeconds;
@@ -1266,7 +1191,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x0600036B RID: 875 RVA: 0x0001598C File Offset: 0x00013B8C
+	// Token: 0x060003A4 RID: 932 RVA: 0x00016368 File Offset: 0x00014568
 	public virtual void Tick(float delta)
 	{
 		if (!this.Active)
@@ -1277,7 +1202,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.TickComponentManager.Tick(this.TickInterval, delta * this.TimeDilationInternal);
 	}
 
-	// Token: 0x0600036C RID: 876 RVA: 0x000159BB File Offset: 0x00013BBB
+	// Token: 0x060003A5 RID: 933 RVA: 0x00016397 File Offset: 0x00014597
 	public void ForceAfterTick(float delta)
 	{
 		if (!this.Active)
@@ -1287,8 +1212,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.TickComponentManager.ForceAfterTick(delta * this.TimeDilationInternal);
 	}
 
-	// Token: 0x17000084 RID: 132
-	// (get) Token: 0x0600036D RID: 877 RVA: 0x000159D9 File Offset: 0x00013BD9
+	// Token: 0x1700008B RID: 139
+	// (get) Token: 0x060003A6 RID: 934 RVA: 0x000163B5 File Offset: 0x000145B5
 	public bool HasScheduledAfterTick
 	{
 		get
@@ -1297,7 +1222,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x0600036E RID: 878 RVA: 0x000159DC File Offset: 0x00013BDC
+	// Token: 0x060003A7 RID: 935 RVA: 0x000163B8 File Offset: 0x000145B8
 	public void ScheduledAfterTick(float deltaSeconds, int deltaFrames, float distance)
 	{
 		if (base.Valid && this.IsInit)
@@ -1306,8 +1231,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000085 RID: 133
-	// (get) Token: 0x0600036F RID: 879 RVA: 0x000159FB File Offset: 0x00013BFB
+	// Token: 0x1700008C RID: 140
+	// (get) Token: 0x060003A8 RID: 936 RVA: 0x000163D7 File Offset: 0x000145D7
 	public bool HasOnEnabledChange
 	{
 		get
@@ -1316,7 +1241,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000370 RID: 880 RVA: 0x00015A00 File Offset: 0x00013C00
+	// Token: 0x060003A9 RID: 937 RVA: 0x000163DC File Offset: 0x000145DC
 	public void OnEnabledChange(bool enable, float distance)
 	{
 		if (this.OnBudgetTickEnableChangeComponents != null)
@@ -1328,8 +1253,8 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x17000086 RID: 134
-	// (get) Token: 0x06000371 RID: 881 RVA: 0x00015A5C File Offset: 0x00013C5C
+	// Token: 0x1700008D RID: 141
+	// (get) Token: 0x060003AA RID: 938 RVA: 0x00016438 File Offset: 0x00014638
 	public bool HasOnWasRecentlyRenderedOnScreenChange
 	{
 		get
@@ -1338,7 +1263,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000372 RID: 882 RVA: 0x00015A60 File Offset: 0x00013C60
+	// Token: 0x060003AB RID: 939 RVA: 0x0001643C File Offset: 0x0001463C
 	public void OnWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 	{
 		if (this.OnWasRecentlyRenderComponents != null)
@@ -1350,13 +1275,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		}
 	}
 
-	// Token: 0x06000373 RID: 883 RVA: 0x00015ABC File Offset: 0x00013CBC
+	// Token: 0x060003AC RID: 940 RVA: 0x00016498 File Offset: 0x00014698
 	public GCHandle GetGCHandle()
 	{
 		return this.GameBudgetGCHandle;
 	}
 
-	// Token: 0x06000374 RID: 884 RVA: 0x00015AC4 File Offset: 0x00013CC4
+	// Token: 0x060003AD RID: 941 RVA: 0x000164A0 File Offset: 0x000146A0
 	public void AfterTick(float delta)
 	{
 		if (!this.Active)
@@ -1367,43 +1292,43 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		this.TickComponentManager.AfterTick(this.TickInterval, delta * this.TimeDilationInternal);
 	}
 
-	// Token: 0x06000375 RID: 885 RVA: 0x00015AF3 File Offset: 0x00013CF3
+	// Token: 0x060003AE RID: 942 RVA: 0x000164CF File Offset: 0x000146CF
 	protected virtual bool OnCreate(IEntityArgs args = null)
 	{
 		return true;
 	}
 
-	// Token: 0x06000376 RID: 886 RVA: 0x00015AF6 File Offset: 0x00013CF6
+	// Token: 0x060003AF RID: 943 RVA: 0x000164D2 File Offset: 0x000146D2
 	protected virtual bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06000377 RID: 887 RVA: 0x00015AF9 File Offset: 0x00013CF9
+	// Token: 0x060003B0 RID: 944 RVA: 0x000164D5 File Offset: 0x000146D5
 	protected virtual bool OnDeinit()
 	{
 		return true;
 	}
 
-	// Token: 0x06000378 RID: 888 RVA: 0x00015AFC File Offset: 0x00013CFC
+	// Token: 0x060003B1 RID: 945 RVA: 0x000164D8 File Offset: 0x000146D8
 	protected virtual bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x06000379 RID: 889 RVA: 0x00015AFF File Offset: 0x00013CFF
+	// Token: 0x060003B2 RID: 946 RVA: 0x000164DB File Offset: 0x000146DB
 	protected virtual bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x0600037A RID: 890 RVA: 0x00015B02 File Offset: 0x00013D02
+	// Token: 0x060003B3 RID: 947 RVA: 0x000164DE File Offset: 0x000146DE
 	protected virtual bool OnEnd()
 	{
 		return true;
 	}
 
-	// Token: 0x0600037B RID: 891 RVA: 0x00015B08 File Offset: 0x00013D08
+	// Token: 0x060003B4 RID: 948 RVA: 0x000164E4 File Offset: 0x000146E4
 	[NullableContext(1)]
 	public override string ToString()
 	{
@@ -1417,7 +1342,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600037C RID: 892 RVA: 0x00015B84 File Offset: 0x00013D84
+	// Token: 0x060003B5 RID: 949 RVA: 0x00016560 File Offset: 0x00014760
 	[NullableContext(1)]
 	public string DumpDisableInfo()
 	{
@@ -1439,7 +1364,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return string.Join("", list);
 	}
 
-	// Token: 0x0600037D RID: 893 RVA: 0x00015C4C File Offset: 0x00013E4C
+	// Token: 0x060003B6 RID: 950 RVA: 0x00016628 File Offset: 0x00014828
 	[NullableContext(1)]
 	public string DumpComponentsDisableInfo()
 	{
@@ -1457,13 +1382,13 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 		return string.Join("", list);
 	}
 
-	// Token: 0x0600037E RID: 894 RVA: 0x00015CD0 File Offset: 0x00013ED0
+	// Token: 0x060003B7 RID: 951 RVA: 0x000166AC File Offset: 0x000148AC
 	public static bool operator !(Entity entity)
 	{
 		return entity == null || !entity.Valid;
 	}
 
-	// Token: 0x04000355 RID: 853
+	// Token: 0x0400036D RID: 877
 	[TupleElementNames(new string[]
 	{
 		"CreatureDataId",
@@ -1477,71 +1402,71 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 	})]
 	public static Func<Entity, ValueTuple<long?, int?>> GetCreatureIdsHook;
 
-	// Token: 0x04000356 RID: 854
+	// Token: 0x0400036E RID: 878
 	public const int DISABLE_REASON_LENGTH_LIMIT = 4;
 
-	// Token: 0x04000357 RID: 855
+	// Token: 0x0400036F RID: 879
 	public const int MILLIONSECOND_PER_SECOND = 1000;
 
-	// Token: 0x04000359 RID: 857
+	// Token: 0x04000371 RID: 881
 	private Stat CreateStat;
 
-	// Token: 0x0400035A RID: 858
+	// Token: 0x04000372 RID: 882
 	private Stat InitDataStat;
 
-	// Token: 0x0400035B RID: 859
+	// Token: 0x04000373 RID: 883
 	private Stat InitStat;
 
-	// Token: 0x0400035C RID: 860
+	// Token: 0x04000374 RID: 884
 	protected Stat InitStatTdType;
 
-	// Token: 0x0400035D RID: 861
+	// Token: 0x04000375 RID: 885
 	private Stat ClearStat;
 
-	// Token: 0x0400035E RID: 862
+	// Token: 0x04000376 RID: 886
 	protected Stat ClearStatTdType;
 
-	// Token: 0x0400035F RID: 863
+	// Token: 0x04000377 RID: 887
 	private Stat StartStat;
 
-	// Token: 0x04000360 RID: 864
+	// Token: 0x04000378 RID: 888
 	protected Stat StartStatTdType;
 
-	// Token: 0x04000361 RID: 865
+	// Token: 0x04000379 RID: 889
 	private Stat EndStat;
 
-	// Token: 0x04000362 RID: 866
+	// Token: 0x0400037A RID: 890
 	protected Stat EndStatTdType;
 
-	// Token: 0x04000363 RID: 867
+	// Token: 0x0400037B RID: 891
 	private Stat ActivateStat;
 
-	// Token: 0x04000364 RID: 868
+	// Token: 0x0400037C RID: 892
 	private Stat PostActivateStat;
 
-	// Token: 0x04000365 RID: 869
+	// Token: 0x0400037D RID: 893
 	protected Stat ActivateStatTdType;
 
-	// Token: 0x04000366 RID: 870
+	// Token: 0x0400037E RID: 894
 	private Stat TickStat;
 
-	// Token: 0x04000367 RID: 871
+	// Token: 0x0400037F RID: 895
 	protected Stat TickStatTdType;
 
-	// Token: 0x04000368 RID: 872
+	// Token: 0x04000380 RID: 896
 	private Stat AfterTickStat;
 
-	// Token: 0x04000369 RID: 873
+	// Token: 0x04000381 RID: 897
 	protected Stat AfterTickStatTdType;
 
-	// Token: 0x0400036A RID: 874
+	// Token: 0x04000382 RID: 898
 	private EExecutedFlag FlagInternal;
 
-	// Token: 0x0400036B RID: 875
+	// Token: 0x04000383 RID: 899
 	[Nullable(1)]
 	public List<EntityComponent> Components = new List<EntityComponent>();
 
-	// Token: 0x0400036C RID: 876
+	// Token: 0x04000384 RID: 900
 	[Nullable(new byte[]
 	{
 		2,
@@ -1549,7 +1474,7 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 	})]
 	public List<EntityComponent> OnWasRecentlyRenderComponents;
 
-	// Token: 0x0400036D RID: 877
+	// Token: 0x04000385 RID: 901
 	[Nullable(new byte[]
 	{
 		2,
@@ -1557,41 +1482,41 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 	})]
 	public List<EntityComponent> OnBudgetTickEnableChangeComponents;
 
-	// Token: 0x0400036E RID: 878
+	// Token: 0x04000386 RID: 902
 	[Nullable(1)]
 	public TickComponentManager TickComponentManager = new TickComponentManager();
 
-	// Token: 0x0400036F RID: 879
+	// Token: 0x04000387 RID: 903
 	private int DisableCount;
 
-	// Token: 0x04000370 RID: 880
+	// Token: 0x04000388 RID: 904
 	private float DeltaSeconds;
 
-	// Token: 0x04000371 RID: 881
+	// Token: 0x04000389 RID: 905
 	private int TickInterval;
 
-	// Token: 0x04000372 RID: 882
+	// Token: 0x0400038A RID: 906
 	public int LastTickFrame;
 
-	// Token: 0x04000373 RID: 883
+	// Token: 0x0400038B RID: 907
 	private bool IsEncloseSpaceInternal;
 
-	// Token: 0x04000374 RID: 884
+	// Token: 0x0400038C RID: 908
 	private float TimeDilationInternal = 1f;
 
-	// Token: 0x04000375 RID: 885
+	// Token: 0x0400038D RID: 909
 	private static TsGameBudgetGroupConfig _staticGameBudgetConfigInternal;
 
-	// Token: 0x04000376 RID: 886
+	// Token: 0x0400038E RID: 910
 	private uint GameBudgetManagedTokenInternal;
 
-	// Token: 0x04000377 RID: 887
+	// Token: 0x0400038F RID: 911
 	private TsGameBudgetGroupConfig GameBudgetConfigInternal;
 
-	// Token: 0x04000378 RID: 888
+	// Token: 0x04000390 RID: 912
 	private float DistanceWithCameraInternal = -1f;
 
-	// Token: 0x04000379 RID: 889
+	// Token: 0x04000391 RID: 913
 	[Nullable(new byte[]
 	{
 		1,
@@ -1599,19 +1524,19 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 	})]
 	private readonly List<EntityComponent> ComponentsRegistry = new List<EntityComponent>();
 
-	// Token: 0x0400037A RID: 890
+	// Token: 0x04000392 RID: 914
 	[Nullable(1)]
 	private readonly Dictionary<int, string> DisableHandlesMap = new Dictionary<int, string>();
 
-	// Token: 0x0400037B RID: 891
+	// Token: 0x04000393 RID: 915
 	[Nullable(1)]
 	private readonly Dictionary<EEntityDisableKey, int> DisableKeysMap = new Dictionary<EEntityDisableKey, int>();
 
-	// Token: 0x0400037C RID: 892
+	// Token: 0x04000394 RID: 916
 	[Nullable(1)]
 	private object PendingEnable;
 
-	// Token: 0x0400037D RID: 893
+	// Token: 0x04000395 RID: 917
 	[Nullable(new byte[]
 	{
 		2,
@@ -1621,6 +1546,6 @@ public abstract class Entity : ObjectBase, IGameBudgetManagedObject, IStaticVari
 	})]
 	private static Dictionary<string, Stat[]> _statMap;
 
-	// Token: 0x0400037E RID: 894
+	// Token: 0x04000396 RID: 918
 	private GCHandle GameBudgetGCHandle;
 }

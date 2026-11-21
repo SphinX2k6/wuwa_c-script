@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D6C RID: 7532
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F7D RID: 8061
 	public class IQiuyuanQinggongEnd : ILeisureInteractType
 	{
-		// Token: 0x0600A181 RID: 41345 RVA: 0x0016FD90 File Offset: 0x0016DF90
+		// Token: 0x0600AB6D RID: 43885 RVA: 0x001841B4 File Offset: 0x001823B4
 		private IQiuyuanQinggongEnd_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A182 RID: 41346 RVA: 0x0016FDC8 File Offset: 0x0016DFC8
+		// Token: 0x0600AB6E RID: 43886 RVA: 0x001841EC File Offset: 0x001823EC
 		public static IQiuyuanQinggongEnd Create([Nullable(2)] IQiuyuanQinggongEnd instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A183 RID: 41347 RVA: 0x0016FDDB File Offset: 0x0016DFDB
+		// Token: 0x0600AB6F RID: 43887 RVA: 0x001841FF File Offset: 0x001823FF
 		public static IQiuyuanQinggongEnd CreateFromSetValue([Nullable(2)] IQiuyuanQinggongEnd_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A184 RID: 41348 RVA: 0x0016FDEE File Offset: 0x0016DFEE
+		// Token: 0x0600AB70 RID: 43888 RVA: 0x00184212 File Offset: 0x00182412
 		public new IQiuyuanQinggongEnd_SetValue ToSetValue()
 		{
 			return new IQiuyuanQinggongEnd_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031F5 RID: 12789
-		// (get) Token: 0x0600A185 RID: 41349 RVA: 0x0016FE01 File Offset: 0x0016E001
-		// (set) Token: 0x0600A186 RID: 41350 RVA: 0x0016FE2C File Offset: 0x0016E02C
+		// Token: 0x17003489 RID: 13449
+		// (get) Token: 0x0600AB71 RID: 43889 RVA: 0x00184225 File Offset: 0x00182425
+		// (set) Token: 0x0600AB72 RID: 43890 RVA: 0x00184250 File Offset: 0x00182450
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400612A RID: 24874
+		// Token: 0x040066A6 RID: 26278
 		[Nullable(2)]
 		protected new IQiuyuanQinggongEnd FbInstance;
 
-		// Token: 0x0400612B RID: 24875
+		// Token: 0x040066A7 RID: 26279
 		[Nullable(2)]
 		protected new IQiuyuanQinggongEnd_SetValue PocoInterface;
 	}

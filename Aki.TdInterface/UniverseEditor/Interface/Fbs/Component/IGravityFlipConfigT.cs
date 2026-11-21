@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005325 RID: 21285
+	// Token: 0x020058AB RID: 22699
 	public class IGravityFlipConfigT
 	{
-		// Token: 0x17009C4E RID: 40014
-		// (get) Token: 0x06022C88 RID: 142472 RVA: 0x004D1978 File Offset: 0x004CFB78
-		// (set) Token: 0x06022C89 RID: 142473 RVA: 0x004D1980 File Offset: 0x004CFB80
+		// Token: 0x1700A486 RID: 42118
+		// (get) Token: 0x06024D3C RID: 150844 RVA: 0x0050E84C File Offset: 0x0050CA4C
+		// (set) Token: 0x06024D3D RID: 150845 RVA: 0x0050E854 File Offset: 0x0050CA54
 		public EGravityFlipType Type { get; set; }
 
-		// Token: 0x17009C4F RID: 40015
-		// (get) Token: 0x06022C8A RID: 142474 RVA: 0x004D1989 File Offset: 0x004CFB89
-		// (set) Token: 0x06022C8B RID: 142475 RVA: 0x004D1991 File Offset: 0x004CFB91
+		// Token: 0x1700A487 RID: 42119
+		// (get) Token: 0x06024D3E RID: 150846 RVA: 0x0050E85D File Offset: 0x0050CA5D
+		// (set) Token: 0x06024D3F RID: 150847 RVA: 0x0050E865 File Offset: 0x0050CA65
 		public int LocationEntityId { get; set; }
 
-		// Token: 0x06022C8C RID: 142476 RVA: 0x004D199A File Offset: 0x004CFB9A
+		// Token: 0x06024D40 RID: 150848 RVA: 0x0050E86E File Offset: 0x0050CA6E
 		public IGravityFlipConfigT()
 		{
 			this.Type = EGravityFlipType.None;

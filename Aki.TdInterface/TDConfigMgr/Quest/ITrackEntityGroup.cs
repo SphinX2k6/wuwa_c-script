@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011BA RID: 4538
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012F4 RID: 4852
 	public class ITrackEntityGroup : ITrackType
 	{
-		// Token: 0x0600671A RID: 26394 RVA: 0x000F6F48 File Offset: 0x000F5148
+		// Token: 0x06006D53 RID: 27987 RVA: 0x00104798 File Offset: 0x00102998
 		private ITrackEntityGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600671B RID: 26395 RVA: 0x000F6F80 File Offset: 0x000F5180
+		// Token: 0x06006D54 RID: 27988 RVA: 0x001047D0 File Offset: 0x001029D0
 		public static ITrackEntityGroup Create([Nullable(2)] ITrackEntityGroup instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600671C RID: 26396 RVA: 0x000F6F93 File Offset: 0x000F5193
+		// Token: 0x06006D55 RID: 27989 RVA: 0x001047E3 File Offset: 0x001029E3
 		public static ITrackEntityGroup CreateFromSetValue([Nullable(2)] ITrackEntityGroup_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600671D RID: 26397 RVA: 0x000F6FA6 File Offset: 0x000F51A6
+		// Token: 0x06006D56 RID: 27990 RVA: 0x001047F6 File Offset: 0x001029F6
 		public new ITrackEntityGroup_SetValue ToSetValue()
 		{
 			return new ITrackEntityGroup_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700217B RID: 8571
-		// (get) Token: 0x0600671E RID: 26398 RVA: 0x000F6FDD File Offset: 0x000F51DD
-		// (set) Token: 0x0600671F RID: 26399 RVA: 0x000F7008 File Offset: 0x000F5208
+		// Token: 0x1700233B RID: 9019
+		// (get) Token: 0x06006D57 RID: 27991 RVA: 0x0010482D File Offset: 0x00102A2D
+		// (set) Token: 0x06006D58 RID: 27992 RVA: 0x00104858 File Offset: 0x00102A58
 		public override ETrackType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700217C RID: 8572
-		// (get) Token: 0x06006720 RID: 26400 RVA: 0x000F7016 File Offset: 0x000F5216
-		// (set) Token: 0x06006721 RID: 26401 RVA: 0x000F703D File Offset: 0x000F523D
+		// Token: 0x1700233C RID: 9020
+		// (get) Token: 0x06006D59 RID: 27993 RVA: 0x00104866 File Offset: 0x00102A66
+		// (set) Token: 0x06006D5A RID: 27994 RVA: 0x0010488D File Offset: 0x00102A8D
 		[Nullable(2)]
 		public override IGravityDirectionType GravityDirection
 		{
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700217D RID: 8573
-		// (get) Token: 0x06006722 RID: 26402 RVA: 0x000F704B File Offset: 0x000F524B
-		// (set) Token: 0x06006723 RID: 26403 RVA: 0x000F7072 File Offset: 0x000F5272
+		// Token: 0x1700233D RID: 9021
+		// (get) Token: 0x06006D5B RID: 27995 RVA: 0x0010489B File Offset: 0x00102A9B
+		// (set) Token: 0x06006D5C RID: 27996 RVA: 0x001048C2 File Offset: 0x00102AC2
 		public virtual List<int> Entities
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700217E RID: 8574
-		// (get) Token: 0x06006724 RID: 26404 RVA: 0x000F7080 File Offset: 0x000F5280
-		// (set) Token: 0x06006725 RID: 26405 RVA: 0x000F70A7 File Offset: 0x000F52A7
+		// Token: 0x1700233E RID: 9022
+		// (get) Token: 0x06006D5D RID: 27997 RVA: 0x001048D0 File Offset: 0x00102AD0
+		// (set) Token: 0x06006D5E RID: 27998 RVA: 0x001048F7 File Offset: 0x00102AF7
 		public virtual ITrackRuleTypeBase TrackRuleType
 		{
 			get
@@ -162,11 +160,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003DE8 RID: 15848
+		// Token: 0x04004153 RID: 16723
 		[Nullable(2)]
 		protected new ITrackEntityGroup FbInstance;
 
-		// Token: 0x04003DE9 RID: 15849
+		// Token: 0x04004154 RID: 16724
 		[Nullable(2)]
 		protected new ITrackEntityGroup_SetValue PocoInterface;
 	}

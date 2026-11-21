@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200013F RID: 319
+	// Token: 0x0200014E RID: 334
 	public class ConfigCharacterAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600077B RID: 1915 RVA: 0x00083F29 File Offset: 0x00082129
+		// Token: 0x060007D5 RID: 2005 RVA: 0x0008988D File Offset: 0x00087A8D
 		static ConfigCharacterAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCharacterAll.CreateStaticDefaultValue), new Action(ConfigCharacterAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600077C RID: 1916 RVA: 0x00083F48 File Offset: 0x00082148
+		// Token: 0x060007D6 RID: 2006 RVA: 0x000898AC File Offset: 0x00087AAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCharacterAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600077D RID: 1917 RVA: 0x00083FC7 File Offset: 0x000821C7
+		// Token: 0x060007D7 RID: 2007 RVA: 0x0008992B File Offset: 0x00087B2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCharacterAll.LogPair = null;
 			ConfigCharacterAll.HandleId = 0;
 		}
 
-		// Token: 0x0600077E RID: 1918 RVA: 0x00083FD5 File Offset: 0x000821D5
+		// Token: 0x060007D8 RID: 2008 RVA: 0x00089939 File Offset: 0x00087B39
 		public static void Init()
 		{
 			ConfigCharacterAll.HandleId = ConfigCommon.InitDataStatement(ConfigCharacterAll.HandleId, "db_moonchasing.db", "select BinData from `Character`");
 		}
 
-		// Token: 0x0600077F RID: 1919 RVA: 0x00083FF0 File Offset: 0x000821F0
+		// Token: 0x060007D9 RID: 2009 RVA: 0x00089954 File Offset: 0x00087B54
 		[NullableContext(2)]
 		public static IReadOnlyList<Character> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400089D RID: 2205
+		// Token: 0x04000906 RID: 2310
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x0400089E RID: 2206
+		// Token: 0x04000907 RID: 2311
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x0400089F RID: 2207
+		// Token: 0x04000908 RID: 2312
 		private const string TABLE = "Character";
 
-		// Token: 0x040008A0 RID: 2208
+		// Token: 0x04000909 RID: 2313
 		private const string COMMAND = "select BinData from `Character`";
 
-		// Token: 0x040008A1 RID: 2209
+		// Token: 0x0400090A RID: 2314
 		private const string KEY_PREFIX = "CharacterAll";
 
-		// Token: 0x040008A2 RID: 2210
+		// Token: 0x0400090B RID: 2315
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040008A3 RID: 2211
+		// Token: 0x0400090C RID: 2316
 		private static int HandleId;
 	}
 }

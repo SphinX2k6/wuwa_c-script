@@ -6,7 +6,7 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001014 RID: 4116
+// Token: 0x020004C8 RID: 1224
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,13 +15,13 @@ using UnrealEngine;
 })]
 public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInfo>
 {
-	// Token: 0x0600698D RID: 27021 RVA: 0x001511B0 File Offset: 0x0014F3B0
+	// Token: 0x06003D22 RID: 15650 RVA: 0x00159AD8 File Offset: 0x00157CD8
 	public GolemHackingCodeKeyItem(GolemHackingGameProxy proxy)
 	{
 		this.Proxy = proxy;
 	}
 
-	// Token: 0x0600698E RID: 27022 RVA: 0x001511C0 File Offset: 0x0014F3C0
+	// Token: 0x06003D23 RID: 15651 RVA: 0x00159AE8 File Offset: 0x00157CE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600698F RID: 27023 RVA: 0x0015124C File Offset: 0x0014F44C
+	// Token: 0x06003D24 RID: 15652 RVA: 0x00159B74 File Offset: 0x00157D74
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -93,7 +93,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		}
 	}
 
-	// Token: 0x06006990 RID: 27024 RVA: 0x00151390 File Offset: 0x0014F590
+	// Token: 0x06003D25 RID: 15653 RVA: 0x00159CB8 File Offset: 0x00157EB8
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearDelayTimer();
@@ -150,7 +150,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		}
 	}
 
-	// Token: 0x06006991 RID: 27025 RVA: 0x00151479 File Offset: 0x0014F679
+	// Token: 0x06003D26 RID: 15654 RVA: 0x00159DA1 File Offset: 0x00157FA1
 	private void ClearDelayTimer()
 	{
 		if (this.DelayTimerHandle != null)
@@ -163,7 +163,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		}
 	}
 
-	// Token: 0x06006992 RID: 27026 RVA: 0x001514A8 File Offset: 0x0014F6A8
+	// Token: 0x06003D27 RID: 15655 RVA: 0x00159DD0 File Offset: 0x00157FD0
 	public override void Refresh(GolemHackingCodeGridInfo data, bool isSelected, int gridIndex)
 	{
 		this.GridData = data;
@@ -206,7 +206,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		this.UpdateInfo();
 	}
 
-	// Token: 0x06006993 RID: 27027 RVA: 0x001515AC File Offset: 0x0014F7AC
+	// Token: 0x06003D28 RID: 15656 RVA: 0x00159ED4 File Offset: 0x001580D4
 	public void UpdateInfo()
 	{
 		UUIText text = base.GetText(1);
@@ -228,7 +228,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		text.SetColor(GolemHackingCodeKeyItem.FailColor);
 	}
 
-	// Token: 0x06006994 RID: 27028 RVA: 0x00151638 File Offset: 0x0014F838
+	// Token: 0x06003D29 RID: 15657 RVA: 0x00159F60 File Offset: 0x00158160
 	public void OnMatrixHover(string value)
 	{
 		UUIItem item = base.GetItem(0);
@@ -239,7 +239,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		item.SetUIActive(this.GridData.Code == value);
 	}
 
-	// Token: 0x06006995 RID: 27029 RVA: 0x0015165C File Offset: 0x0014F85C
+	// Token: 0x06003D2A RID: 15658 RVA: 0x00159F84 File Offset: 0x00158184
 	public void OnMatrixUnHover()
 	{
 		UUIItem item = base.GetItem(0);
@@ -250,40 +250,40 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06006996 RID: 27030 RVA: 0x00151670 File Offset: 0x0014F870
+	// Token: 0x06003D2B RID: 15659 RVA: 0x00159F98 File Offset: 0x00158198
 	private void OnHovered()
 	{
 		this.Proxy.OnHoveredCodeGrid(this.GridData.Code);
 	}
 
-	// Token: 0x06006997 RID: 27031 RVA: 0x00151688 File Offset: 0x0014F888
+	// Token: 0x06003D2C RID: 15660 RVA: 0x00159FB0 File Offset: 0x001581B0
 	private void OnUnHovered()
 	{
 		this.Proxy.OnUnHoveredCodeGrid();
 	}
 
-	// Token: 0x06006998 RID: 27032 RVA: 0x00151695 File Offset: 0x0014F895
+	// Token: 0x06003D2D RID: 15661 RVA: 0x00159FBD File Offset: 0x001581BD
 	private void OnMobilePointDown()
 	{
 		this.Proxy.IsCodePressing = true;
 		this.Proxy.OnHoveredCodeGrid(this.GridData.Code);
 	}
 
-	// Token: 0x06006999 RID: 27033 RVA: 0x001516B9 File Offset: 0x0014F8B9
+	// Token: 0x06003D2E RID: 15662 RVA: 0x00159FE1 File Offset: 0x001581E1
 	private void OnMobilePointUp()
 	{
 		this.Proxy.IsCodePressing = false;
 		this.Proxy.OnUnHoveredCodeGrid();
 	}
 
-	// Token: 0x0600699A RID: 27034 RVA: 0x001516D2 File Offset: 0x0014F8D2
+	// Token: 0x06003D2F RID: 15663 RVA: 0x00159FFA File Offset: 0x001581FA
 	private void OnMobilePointCancel()
 	{
 		this.Proxy.IsCodePressing = false;
 		this.Proxy.OnUnHoveredCodeGrid();
 	}
 
-	// Token: 0x0600699B RID: 27035 RVA: 0x001516EB File Offset: 0x0014F8EB
+	// Token: 0x06003D30 RID: 15664 RVA: 0x0015A013 File Offset: 0x00158213
 	private void OnMobilePointEnter()
 	{
 		if (!this.Proxy.IsCodePressing)
@@ -293,7 +293,7 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		this.Proxy.OnHoveredCodeGrid(this.GridData.Code);
 	}
 
-	// Token: 0x0600699C RID: 27036 RVA: 0x00151711 File Offset: 0x0014F911
+	// Token: 0x06003D31 RID: 15665 RVA: 0x0015A039 File Offset: 0x00158239
 	private void OnMobilePointExit()
 	{
 		if (!this.Proxy.IsCodePressing)
@@ -303,33 +303,33 @@ public class GolemHackingCodeKeyItem : GridProxyAbstract<GolemHackingCodeGridInf
 		this.Proxy.OnUnHoveredCodeGrid();
 	}
 
-	// Token: 0x040030AC RID: 12460
+	// Token: 0x04003145 RID: 12613
 	[StaticVariableRuleIgnore]
 	private static readonly FColor DefaultColor = FColor.FromHex("FFFFFF");
 
-	// Token: 0x040030AD RID: 12461
+	// Token: 0x04003146 RID: 12614
 	[StaticVariableRuleIgnore]
 	private static readonly FColor SuccessColor = FColor.FromHex("0BBE77");
 
-	// Token: 0x040030AE RID: 12462
+	// Token: 0x04003147 RID: 12615
 	[StaticVariableRuleIgnore]
 	private static readonly FColor AllClearColor = FColor.FromHex("0A482A");
 
-	// Token: 0x040030AF RID: 12463
+	// Token: 0x04003148 RID: 12616
 	[StaticVariableRuleIgnore]
 	private static readonly FColor FailColor = FColor.FromHex("6F0D0D");
 
-	// Token: 0x040030B0 RID: 12464
+	// Token: 0x04003149 RID: 12617
 	protected GolemHackingGameProxy Proxy;
 
-	// Token: 0x040030B1 RID: 12465
+	// Token: 0x0400314A RID: 12618
 	protected GolemHackingCodeGridInfo GridData;
 
-	// Token: 0x040030B2 RID: 12466
+	// Token: 0x0400314B RID: 12619
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040030B3 RID: 12467
+	// Token: 0x0400314C RID: 12620
 	[Nullable(2)]
 	private TimerHandle DelayTimerHandle;
 }

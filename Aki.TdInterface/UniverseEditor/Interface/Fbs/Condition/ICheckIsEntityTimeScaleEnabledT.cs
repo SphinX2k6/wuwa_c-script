@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A88 RID: 19080
+	// Token: 0x02004F4E RID: 20302
 	public class ICheckIsEntityTimeScaleEnabledT
 	{
-		// Token: 0x17008A3B RID: 35387
-		// (get) Token: 0x0601DEC4 RID: 122564 RVA: 0x00433DF9 File Offset: 0x00431FF9
-		// (set) Token: 0x0601DEC5 RID: 122565 RVA: 0x00433E01 File Offset: 0x00432001
+		// Token: 0x17009117 RID: 37143
+		// (get) Token: 0x0601F967 RID: 129383 RVA: 0x00464F85 File Offset: 0x00463185
+		// (set) Token: 0x0601F968 RID: 129384 RVA: 0x00464F8D File Offset: 0x0046318D
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A3C RID: 35388
-		// (get) Token: 0x0601DEC6 RID: 122566 RVA: 0x00433E0A File Offset: 0x0043200A
-		// (set) Token: 0x0601DEC7 RID: 122567 RVA: 0x00433E12 File Offset: 0x00432012
+		// Token: 0x17009118 RID: 37144
+		// (get) Token: 0x0601F969 RID: 129385 RVA: 0x00464F96 File Offset: 0x00463196
+		// (set) Token: 0x0601F96A RID: 129386 RVA: 0x00464F9E File Offset: 0x0046319E
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x17008A3D RID: 35389
-		// (get) Token: 0x0601DEC8 RID: 122568 RVA: 0x00433E1B File Offset: 0x0043201B
-		// (set) Token: 0x0601DEC9 RID: 122569 RVA: 0x00433E23 File Offset: 0x00432023
+		// Token: 0x17009119 RID: 37145
+		// (get) Token: 0x0601F96B RID: 129387 RVA: 0x00464FA7 File Offset: 0x004631A7
+		// (set) Token: 0x0601F96C RID: 129388 RVA: 0x00464FAF File Offset: 0x004631AF
 		public bool Enabled { get; set; }
 
-		// Token: 0x0601DECA RID: 122570 RVA: 0x00433E2C File Offset: 0x0043202C
+		// Token: 0x0601F96D RID: 129389 RVA: 0x00464FB8 File Offset: 0x004631B8
 		public ICheckIsEntityTimeScaleEnabledT()
 		{
 			this.Type = ECondition.CompareVar;

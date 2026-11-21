@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A1A RID: 23066
+	// Token: 0x020049F6 RID: 18934
 	public class FunctionBottomButtonItem : UiPanelBase
 	{
-		// Token: 0x0603A816 RID: 239638 RVA: 0x00DEC24B File Offset: 0x00DEA44B
+		// Token: 0x0602F75F RID: 194399 RVA: 0x00D3C7DB File Offset: 0x00D3A9DB
 		[NullableContext(1)]
 		public FunctionBottomButtonItem(UUIItem uiItem, ERedDotName redDotName)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Functional
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603A817 RID: 239639 RVA: 0x00DEC268 File Offset: 0x00DEA468
+		// Token: 0x0602F760 RID: 194400 RVA: 0x00D3C7F8 File Offset: 0x00D3A9F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,27 +30,27 @@ namespace CSharpScript.Game.Module.Functional
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A818 RID: 239640 RVA: 0x00DEC2B0 File Offset: 0x00DEA4B0
+		// Token: 0x0602F761 RID: 194401 RVA: 0x00D3C840 File Offset: 0x00D3AA40
 		public void BindRedDot()
 		{
 			UUIItem item = base.GetItem(0);
 			RedDotController.Instance.BindRedDot(this.RedDotName, item, null, 0);
 		}
 
-		// Token: 0x0603A819 RID: 239641 RVA: 0x00DEC2D8 File Offset: 0x00DEA4D8
+		// Token: 0x0602F762 RID: 194402 RVA: 0x00D3C868 File Offset: 0x00D3AA68
 		public void UnBindRedDot()
 		{
 			UUIItem item = base.GetItem(0);
 			RedDotController.Instance.UnBindGivenUi(this.RedDotName, item, 0);
 		}
 
-		// Token: 0x0401E79C RID: 124828
+		// Token: 0x04019243 RID: 102979
 		private readonly ERedDotName RedDotName;
 
-		// Token: 0x0200BC8F RID: 48271
+		// Token: 0x0200A698 RID: 42648
 		private class ECompDefine
 		{
-			// Token: 0x04038E33 RID: 233011
+			// Token: 0x040337FE RID: 210942
 			public const int RedDot = 0;
 		}
 	}

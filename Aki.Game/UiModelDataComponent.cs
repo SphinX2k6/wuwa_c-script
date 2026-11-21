@@ -2,16 +2,16 @@
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002C86 RID: 11398
+// Token: 0x020021DF RID: 8671
 public class UiModelDataComponent : UiModelComponentBase
 {
-	// Token: 0x06017CF3 RID: 97523 RVA: 0x0060E64A File Offset: 0x0060C84A
+	// Token: 0x06015566 RID: 87398 RVA: 0x00634112 File Offset: 0x00632312
 	public EUiModelLoadState GetModelLoadState()
 	{
 		return this.ModelLoadStateInternal;
 	}
 
-	// Token: 0x06017CF4 RID: 97524 RVA: 0x0060E652 File Offset: 0x0060C852
+	// Token: 0x06015567 RID: 87399 RVA: 0x0063411A File Offset: 0x0063231A
 	public void SetModelLoadState(EUiModelLoadState state)
 	{
 		this.ModelLoadStateInternal = state;
@@ -26,25 +26,25 @@ public class UiModelDataComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017CF5 RID: 97525 RVA: 0x0060E690 File Offset: 0x0060C890
+	// Token: 0x06015568 RID: 87400 RVA: 0x00634158 File Offset: 0x00632358
 	public bool GetVisible()
 	{
 		return this.Visible;
 	}
 
-	// Token: 0x06017CF6 RID: 97526 RVA: 0x0060E698 File Offset: 0x0060C898
+	// Token: 0x06015569 RID: 87401 RVA: 0x00634160 File Offset: 0x00632360
 	public bool? GetLoadingVisible()
 	{
 		return this.LoadingVisible;
 	}
 
-	// Token: 0x06017CF7 RID: 97527 RVA: 0x0060E6A0 File Offset: 0x0060C8A0
+	// Token: 0x0601556A RID: 87402 RVA: 0x00634168 File Offset: 0x00632368
 	public void ClearLoadingVisible()
 	{
 		this.LoadingVisible = null;
 	}
 
-	// Token: 0x06017CF8 RID: 97528 RVA: 0x0060E6B0 File Offset: 0x0060C8B0
+	// Token: 0x0601556B RID: 87403 RVA: 0x00634178 File Offset: 0x00632378
 	public unsafe bool SetVisible(bool visible)
 	{
 		if (this.ModelLoadStateInternal == EUiModelLoadState.IsLoading)
@@ -69,32 +69,32 @@ public class UiModelDataComponent : UiModelComponentBase
 		return true;
 	}
 
-	// Token: 0x06017CF9 RID: 97529 RVA: 0x0060E75A File Offset: 0x0060C95A
+	// Token: 0x0601556C RID: 87404 RVA: 0x00634222 File Offset: 0x00632422
 	public float GetDitherEffectValue()
 	{
 		return this.DitherEffectValue;
 	}
 
-	// Token: 0x06017CFA RID: 97530 RVA: 0x0060E762 File Offset: 0x0060C962
+	// Token: 0x0601556D RID: 87405 RVA: 0x0063422A File Offset: 0x0063242A
 	public void SetDitherEffect(float value)
 	{
 		this.DitherEffectValue = value;
 		base.Owner.OnSetDitherEffect(value);
 	}
 
-	// Token: 0x06017CFB RID: 97531 RVA: 0x0060E777 File Offset: 0x0060C977
+	// Token: 0x0601556E RID: 87406 RVA: 0x0063423F File Offset: 0x0063243F
 	public bool? GetPlanarReflectionRenderOffsetEnabled()
 	{
 		return this.PlanarReflectionRenderOffsetEnabled;
 	}
 
-	// Token: 0x06017CFC RID: 97532 RVA: 0x0060E77F File Offset: 0x0060C97F
+	// Token: 0x0601556F RID: 87407 RVA: 0x00634247 File Offset: 0x00632447
 	public FVector? GetPlanarReflectionRenderOffset()
 	{
 		return this.PlanarReflectionRenderOffset;
 	}
 
-	// Token: 0x06017CFD RID: 97533 RVA: 0x0060E787 File Offset: 0x0060C987
+	// Token: 0x06015570 RID: 87408 RVA: 0x0063424F File Offset: 0x0063244F
 	public void SetPlanarReflectionRenderOffset(bool enable, FVector? offset)
 	{
 		this.PlanarReflectionRenderOffsetEnabled = new bool?(enable);
@@ -102,48 +102,48 @@ public class UiModelDataComponent : UiModelComponentBase
 		base.Owner.OnPlanarReflectionRenderOffsetChange(enable, offset);
 	}
 
-	// Token: 0x06017CFE RID: 97534 RVA: 0x0060E7A9 File Offset: 0x0060C9A9
+	// Token: 0x06015571 RID: 87409 RVA: 0x00634271 File Offset: 0x00632471
 	public bool GetLoadingIconFollowState()
 	{
 		return this.LoadingIconFollowActor;
 	}
 
-	// Token: 0x06017CFF RID: 97535 RVA: 0x0060E7B1 File Offset: 0x0060C9B1
+	// Token: 0x06015572 RID: 87410 RVA: 0x00634279 File Offset: 0x00632479
 	public void SetLoadingIconFollowState(bool state)
 	{
 		this.LoadingIconFollowActor = state;
 	}
 
-	// Token: 0x0400B17D RID: 45437
+	// Token: 0x0400B4E8 RID: 46312
 	public int ModelConfigId;
 
-	// Token: 0x0400B17E RID: 45438
+	// Token: 0x0400B4E9 RID: 46313
 	public EUiModelActorType? ModelActorType;
 
-	// Token: 0x0400B17F RID: 45439
+	// Token: 0x0400B4EA RID: 46314
 	public EUiModelUseWay? ModelUseWay;
 
-	// Token: 0x0400B180 RID: 45440
+	// Token: 0x0400B4EB RID: 46315
 	public EUiModelType? ModelType;
 
-	// Token: 0x0400B181 RID: 45441
+	// Token: 0x0400B4EC RID: 46316
 	private EUiModelLoadState ModelLoadStateInternal;
 
-	// Token: 0x0400B182 RID: 45442
+	// Token: 0x0400B4ED RID: 46317
 	private bool Visible;
 
-	// Token: 0x0400B183 RID: 45443
+	// Token: 0x0400B4EE RID: 46318
 	private bool? LoadingVisible;
 
-	// Token: 0x0400B184 RID: 45444
+	// Token: 0x0400B4EF RID: 46319
 	private float DitherEffectValue = 1f;
 
-	// Token: 0x0400B185 RID: 45445
+	// Token: 0x0400B4F0 RID: 46320
 	private bool? PlanarReflectionRenderOffsetEnabled;
 
-	// Token: 0x0400B186 RID: 45446
+	// Token: 0x0400B4F1 RID: 46321
 	private FVector? PlanarReflectionRenderOffset;
 
-	// Token: 0x0400B187 RID: 45447
+	// Token: 0x0400B4F2 RID: 46322
 	private bool LoadingIconFollowActor;
 }

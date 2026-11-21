@@ -2,47 +2,47 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C92 RID: 11410
+// Token: 0x020021EB RID: 8683
 [NullableContext(2)]
 public interface IMaterialHandle
 {
-	// Token: 0x17002022 RID: 8226
-	// (get) Token: 0x06017D88 RID: 97672
-	// (set) Token: 0x06017D89 RID: 97673
+	// Token: 0x17002073 RID: 8307
+	// (get) Token: 0x060155FC RID: 87548
+	// (set) Token: 0x060155FD RID: 87549
 	string EffectId { get; set; }
 
-	// Token: 0x17002023 RID: 8227
-	// (get) Token: 0x06017D8A RID: 97674
-	// (set) Token: 0x06017D8B RID: 97675
+	// Token: 0x17002074 RID: 8308
+	// (get) Token: 0x060155FE RID: 87550
+	// (set) Token: 0x060155FF RID: 87551
 	string EffectPath { get; set; }
 
-	// Token: 0x17002024 RID: 8228
-	// (get) Token: 0x06017D8C RID: 97676
-	// (set) Token: 0x06017D8D RID: 97677
+	// Token: 0x17002075 RID: 8309
+	// (get) Token: 0x06015600 RID: 87552
+	// (set) Token: 0x06015601 RID: 87553
 	int HandleId { get; set; }
 
-	// Token: 0x17002025 RID: 8229
-	// (get) Token: 0x06017D8E RID: 97678
-	// (set) Token: 0x06017D8F RID: 97679
+	// Token: 0x17002076 RID: 8310
+	// (get) Token: 0x06015602 RID: 87554
+	// (set) Token: 0x06015603 RID: 87555
 	int RenderingId { get; set; }
 
-	// Token: 0x17002026 RID: 8230
-	// (get) Token: 0x06017D90 RID: 97680
-	// (set) Token: 0x06017D91 RID: 97681
+	// Token: 0x17002077 RID: 8311
+	// (get) Token: 0x06015604 RID: 87556
+	// (set) Token: 0x06015605 RID: 87557
 	UObject MaterialAssetData { get; set; }
 
-	// Token: 0x17002027 RID: 8231
-	// (get) Token: 0x06017D92 RID: 97682
-	// (set) Token: 0x06017D93 RID: 97683
+	// Token: 0x17002078 RID: 8312
+	// (get) Token: 0x06015606 RID: 87558
+	// (set) Token: 0x06015607 RID: 87559
 	bool? WithAnimObject { get; set; }
 
-	// Token: 0x17002028 RID: 8232
-	// (get) Token: 0x06017D94 RID: 97684
-	// (set) Token: 0x06017D95 RID: 97685
+	// Token: 0x17002079 RID: 8313
+	// (get) Token: 0x06015608 RID: 87560
+	// (set) Token: 0x06015609 RID: 87561
 	USkeletalMeshComponent AnimMeshComp { get; set; }
 
-	// Token: 0x17002029 RID: 8233
-	// (get) Token: 0x06017D96 RID: 97686
-	// (set) Token: 0x06017D97 RID: 97687
+	// Token: 0x1700207A RID: 8314
+	// (get) Token: 0x0601560A RID: 87562
+	// (set) Token: 0x0601560B RID: 87563
 	bool? IsGroup { get; set; }
 }

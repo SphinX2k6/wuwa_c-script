@@ -13,7 +13,7 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class AppLinks : Singleton
 	{
-		// Token: 0x06000247 RID: 583 RVA: 0x0000B5E0 File Offset: 0x000097E0
+		// Token: 0x06000247 RID: 583 RVA: 0x0000B618 File Offset: 0x00009818
 		public void Init()
 		{
 			if (this.Initialized)
@@ -50,7 +50,7 @@ namespace CSharpScript.Launcher
 			this.Initialized = true;
 		}
 
-		// Token: 0x06000248 RID: 584 RVA: 0x0000B6A8 File Offset: 0x000098A8
+		// Token: 0x06000248 RID: 584 RVA: 0x0000B6E0 File Offset: 0x000098E0
 		public void Destroy()
 		{
 			if (!this.Initialized)
@@ -62,7 +62,7 @@ namespace CSharpScript.Launcher
 			this.Initialized = false;
 		}
 
-		// Token: 0x06000249 RID: 585 RVA: 0x0000B6D4 File Offset: 0x000098D4
+		// Token: 0x06000249 RID: 585 RVA: 0x0000B70C File Offset: 0x0000990C
 		public void ReportApplinksActivation(string host, string deepValue, string source)
 		{
 			if (host == "mc.kurogame.com" || host == "wutheringwaves.kurogame.com")
@@ -84,7 +84,7 @@ namespace CSharpScript.Launcher
 			instance.Info(defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0600024A RID: 586 RVA: 0x0000B798 File Offset: 0x00009998
+		// Token: 0x0600024A RID: 586 RVA: 0x0000B7D0 File Offset: 0x000099D0
 		public void SetDeepValueHandle(string deepValue, Action<string, string> handle)
 		{
 			if (this.DeepValueHandleMap.ContainsKey(deepValue))
@@ -95,7 +95,7 @@ namespace CSharpScript.Launcher
 			this.DeepValueHandleMap[deepValue] = handle;
 		}
 
-		// Token: 0x0600024B RID: 587 RVA: 0x0000B7E0 File Offset: 0x000099E0
+		// Token: 0x0600024B RID: 587 RVA: 0x0000B818 File Offset: 0x00009A18
 		public void RemoveDeepValueHandle(string deepValue)
 		{
 			if (!this.DeepValueHandleMap.ContainsKey(deepValue))
@@ -107,7 +107,7 @@ namespace CSharpScript.Launcher
 		}
 
 		// Token: 0x17000039 RID: 57
-		// (get) Token: 0x0600024C RID: 588 RVA: 0x0000B827 File Offset: 0x00009A27
+		// (get) Token: 0x0600024C RID: 588 RVA: 0x0000B85F File Offset: 0x00009A5F
 		public static AppLinks Instance
 		{
 			get
@@ -121,12 +121,12 @@ namespace CSharpScript.Launcher
 			}
 		}
 
-		// Token: 0x0600024D RID: 589 RVA: 0x0000B84A File Offset: 0x00009A4A
+		// Token: 0x0600024D RID: 589 RVA: 0x0000B882 File Offset: 0x00009A82
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0600024E RID: 590 RVA: 0x0000B84C File Offset: 0x00009A4C
+		// Token: 0x0600024E RID: 590 RVA: 0x0000B884 File Offset: 0x00009A84
 		public static void ResetStaticDefaultValue()
 		{
 			AppLinks instance = AppLinks._instance;
@@ -137,25 +137,25 @@ namespace CSharpScript.Launcher
 			AppLinks._instance = null;
 		}
 
-		// Token: 0x0600024F RID: 591 RVA: 0x0000B865 File Offset: 0x00009A65
+		// Token: 0x0600024F RID: 591 RVA: 0x0000B89D File Offset: 0x00009A9D
 		static AppLinks()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AppLinks.CreateStaticDefaultValue), new Action(AppLinks.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040000F2 RID: 242
+		// Token: 0x040000F3 RID: 243
 		private const string APP_LINKS_HOST = "mc.kurogame.com";
 
-		// Token: 0x040000F3 RID: 243
+		// Token: 0x040000F4 RID: 244
 		private const string APP_LINKS_HOST_GLOBAL = "wutheringwaves.kurogame.com";
 
-		// Token: 0x040000F4 RID: 244
+		// Token: 0x040000F5 RID: 245
 		private bool Initialized;
 
-		// Token: 0x040000F5 RID: 245
+		// Token: 0x040000F6 RID: 246
 		private readonly Dictionary<string, Action<string, string>> DeepValueHandleMap = new Dictionary<string, Action<string, string>>();
 
-		// Token: 0x040000F6 RID: 246
+		// Token: 0x040000F7 RID: 247
 		[Nullable(2)]
 		private static AppLinks _instance;
 	}

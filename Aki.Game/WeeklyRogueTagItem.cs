@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D43 RID: 11587
+// Token: 0x0200229D RID: 8861
 public class WeeklyRogueTagItem : GridProxyAbstract<int>
 {
-	// Token: 0x06018596 RID: 99734 RVA: 0x00632DF1 File Offset: 0x00630FF1
+	// Token: 0x06015E38 RID: 89656 RVA: 0x00658E01 File Offset: 0x00657001
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class WeeklyRogueTagItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06018597 RID: 99735 RVA: 0x00632E2C File Offset: 0x0063102C
+	// Token: 0x06015E39 RID: 89657 RVA: 0x00658E3C File Offset: 0x0065703C
 	public override void Refresh(int tagId, bool isSelected, int gridIndex)
 	{
 		RogueWeekTag? rogueWeekTagConfig = WeeklyRogueConfig.Instance.GetRogueWeekTagConfig(tagId);
@@ -29,12 +29,12 @@ public class WeeklyRogueTagItem : GridProxyAbstract<int>
 		base.GetSprite(0).SetColor(FColor.FromHex(rogueWeekTagConfig.Value.Color));
 	}
 
-	// Token: 0x020092D1 RID: 37585
+	// Token: 0x020084F8 RID: 34040
 	private enum EComponents
 	{
-		// Token: 0x0402F747 RID: 194375
+		// Token: 0x0402ADCF RID: 175567
 		SpriteBg,
-		// Token: 0x0402F748 RID: 194376
+		// Token: 0x0402ADD0 RID: 175568
 		TxtTag
 	}
 }

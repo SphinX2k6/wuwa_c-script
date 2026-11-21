@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A5 RID: 22693
+	// Token: 0x0200487D RID: 18557
 	public class InstanceDungeonRecommendElementItem : UiPanelBase
 	{
-		// Token: 0x06039BB0 RID: 236464 RVA: 0x00DB8570 File Offset: 0x00DB6770
+		// Token: 0x0602EAD3 RID: 191187 RVA: 0x00D07488 File Offset: 0x00D05688
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BB1 RID: 236465 RVA: 0x00DB85B8 File Offset: 0x00DB67B8
+		// Token: 0x0602EAD4 RID: 191188 RVA: 0x00D074D0 File Offset: 0x00D056D0
 		protected override void OnStart()
 		{
 			this.ElementLayout = new GenericLayout<TowerElementItem, int>(base.GetHorizontalLayout(0), new Func<TowerElementItem>(this.CreateElementItem), null, false, true);
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BB2 RID: 236466 RVA: 0x00DB85F4 File Offset: 0x00DB67F4
+		// Token: 0x0602EAD5 RID: 191189 RVA: 0x00D0750C File Offset: 0x00D0570C
 		[NullableContext(1)]
 		private TowerElementItem CreateElementItem()
 		{
 			return new TowerElementItem();
 		}
 
-		// Token: 0x06039BB3 RID: 236467 RVA: 0x00DB85FB File Offset: 0x00DB67FB
+		// Token: 0x0602EAD6 RID: 191190 RVA: 0x00D07513 File Offset: 0x00D05713
 		[NullableContext(1)]
 		public void RefreshItem(List<int> element)
 		{
@@ -60,11 +60,11 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			elementLayout.RefreshByData(element, null, false);
 		}
 
-		// Token: 0x0401E272 RID: 123506
+		// Token: 0x04018D0F RID: 101647
 		[Nullable(2)]
 		private IInstanceDungeonRecommendElementItem ItemDataHandle;
 
-		// Token: 0x0401E273 RID: 123507
+		// Token: 0x04018D10 RID: 101648
 		[Nullable(new byte[]
 		{
 			2,
@@ -72,10 +72,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 		})]
 		private GenericLayout<TowerElementItem, int> ElementLayout;
 
-		// Token: 0x0200BB0D RID: 47885
+		// Token: 0x0200A526 RID: 42278
 		private enum EChildType
 		{
-			// Token: 0x04038820 RID: 231456
+			// Token: 0x04033221 RID: 209441
 			RecommendElementLayout
 		}
 	}

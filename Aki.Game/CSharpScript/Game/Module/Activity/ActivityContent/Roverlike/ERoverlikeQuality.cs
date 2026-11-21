@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060EA RID: 24810
+	// Token: 0x02005068 RID: 20584
 	public enum ERoverlikeQuality
 	{
-		// Token: 0x04020CA8 RID: 134312
+		// Token: 0x0401B5D5 RID: 112085
 		Blue = 3,
-		// Token: 0x04020CA9 RID: 134313
+		// Token: 0x0401B5D6 RID: 112086
 		Purple,
-		// Token: 0x04020CAA RID: 134314
+		// Token: 0x0401B5D7 RID: 112087
 		Gold,
-		// Token: 0x04020CAB RID: 134315
+		// Token: 0x0401B5D8 RID: 112088
 		Red
 	}
 }

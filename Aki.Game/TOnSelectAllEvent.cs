@@ -1,6 +1,6 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001858 RID: 6232
-// (Invoke) Token: 0x0600B699 RID: 46745
+// Token: 0x02000D11 RID: 3345
+// (Invoke) Token: 0x06008A82 RID: 35458
 public delegate void TOnSelectAllEvent(EToggleState state, int filterId, string name);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,19 +13,19 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C52 RID: 19538
+	// Token: 0x02003C03 RID: 15363
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SheriffModel : ModelBase
 	{
-		// Token: 0x06032834 RID: 206900 RVA: 0x00BC3B38 File Offset: 0x00BC1D38
+		// Token: 0x060275E7 RID: 161255 RVA: 0x00B08756 File Offset: 0x00B06956
 		public SheriffActivityData GetActivityData()
 		{
 			return SheriffController.Instance.GetActivityData();
 		}
 
-		// Token: 0x06032835 RID: 206901 RVA: 0x00BC3B44 File Offset: 0x00BC1D44
+		// Token: 0x060275E8 RID: 161256 RVA: 0x00B08764 File Offset: 0x00B06964
 		public List<int> GetClueListByAnomalyId(int anomalyId)
 		{
 			if (this.ClueListMap.Count == 0)
@@ -48,7 +47,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return new List<int>();
 		}
 
-		// Token: 0x06032836 RID: 206902 RVA: 0x00BC3BFC File Offset: 0x00BC1DFC
+		// Token: 0x060275E9 RID: 161257 RVA: 0x00B0881C File Offset: 0x00B06A1C
 		public int GetAnomalyProgressPercent(int anomalyId)
 		{
 			SheriffAnomalyInfo anomalyInfo = this.GetAnomalyInfo(anomalyId);
@@ -59,21 +58,21 @@ namespace CSharpScript.Game.Module.Sheriff
 			return anomalyInfo.Progress;
 		}
 
-		// Token: 0x06032837 RID: 206903 RVA: 0x00BC3C10 File Offset: 0x00BC1E10
+		// Token: 0x060275EA RID: 161258 RVA: 0x00B08830 File Offset: 0x00B06A30
 		public bool CheckGameplayActivated(int anomalyId)
 		{
 			SheriffAnomalyInfo anomalyInfo = this.GetAnomalyInfo(anomalyId);
 			return anomalyInfo != null && anomalyInfo.State > ESheriffAnomalyState.UnActivated;
 		}
 
-		// Token: 0x06032838 RID: 206904 RVA: 0x00BC3C34 File Offset: 0x00BC1E34
+		// Token: 0x060275EB RID: 161259 RVA: 0x00B08854 File Offset: 0x00B06A54
 		public bool CheckInBehaviorTreeRange(int anomalyId)
 		{
 			SheriffAnomaly value = SheriffConfig.Instance.GetAnomalyConfigById(anomalyId).Value;
 			return GeneralLogicTreeModel.Instance.GetBehaviorTreeByConfigId(BtType.LevelPlay, value.MainBTId) != null;
 		}
 
-		// Token: 0x06032839 RID: 206905 RVA: 0x00BC3C6C File Offset: 0x00BC1E6C
+		// Token: 0x060275EC RID: 161260 RVA: 0x00B0888C File Offset: 0x00B06A8C
 		public bool IsBehaviorTreeTracking(int anomalyId)
 		{
 			SheriffAnomaly value = SheriffConfig.Instance.GetAnomalyConfigById(anomalyId).Value;
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return behaviorTreeByConfigId != null && behaviorTreeByConfigId.IsTracking();
 		}
 
-		// Token: 0x0603283A RID: 206906 RVA: 0x00BC3CAC File Offset: 0x00BC1EAC
+		// Token: 0x060275ED RID: 161261 RVA: 0x00B088CC File Offset: 0x00B06ACC
 		public string GetCurrentBehaviorTreeNodeText(int anomalyId)
 		{
 			SheriffAnomaly value = SheriffConfig.Instance.GetAnomalyConfigById(anomalyId).Value;
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return result;
 		}
 
-		// Token: 0x0603283B RID: 206907 RVA: 0x00BC3D50 File Offset: 0x00BC1F50
+		// Token: 0x060275EE RID: 161262 RVA: 0x00B08970 File Offset: 0x00B06B70
 		public bool CheckInReasoningNode(int anomalyId)
 		{
 			SheriffAnomaly value = SheriffConfig.Instance.GetAnomalyConfigById(anomalyId).Value;
@@ -115,8 +114,8 @@ namespace CSharpScript.Game.Module.Sheriff
 			return treeVarByKey != null && treeVarByKey != null && treeVarByKey.Boolean;
 		}
 
-		// Token: 0x17007CCE RID: 31950
-		// (get) Token: 0x0603283C RID: 206908 RVA: 0x00BC3DAA File Offset: 0x00BC1FAA
+		// Token: 0x17005078 RID: 20600
+		// (get) Token: 0x060275EF RID: 161263 RVA: 0x00B089CA File Offset: 0x00B06BCA
 		public PayShopDefine.EPayShopTabType ShopId
 		{
 			get
@@ -125,13 +124,13 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x0603283D RID: 206909 RVA: 0x00BC3DB1 File Offset: 0x00BC1FB1
+		// Token: 0x060275F0 RID: 161264 RVA: 0x00B089D1 File Offset: 0x00B06BD1
 		public List<PayShopGoods> GetShopDataList(int level)
 		{
 			return PayShopModel.Instance.GetPayShopTabData(this.ShopId, level, true);
 		}
 
-		// Token: 0x0603283E RID: 206910 RVA: 0x00BC3DC8 File Offset: 0x00BC1FC8
+		// Token: 0x060275F1 RID: 161265 RVA: 0x00B089E8 File Offset: 0x00B06BE8
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -162,7 +161,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return new ValueTuple<int, int, int>(num2, num3, itemCountByConfigId);
 		}
 
-		// Token: 0x0603283F RID: 206911 RVA: 0x00BC3EF4 File Offset: 0x00BC20F4
+		// Token: 0x060275F2 RID: 161266 RVA: 0x00B08B14 File Offset: 0x00B06D14
 		public int GetShopItemCount()
 		{
 			int num = 0;
@@ -173,7 +172,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return num;
 		}
 
-		// Token: 0x06032840 RID: 206912 RVA: 0x00BC3F4C File Offset: 0x00BC214C
+		// Token: 0x060275F3 RID: 161267 RVA: 0x00B08B6C File Offset: 0x00B06D6C
 		public int GetShopCurrencyId()
 		{
 			List<int> payShopInfoMoney = PayShopModel.Instance.GetPayShopInfoMoney(this.ShopId);
@@ -184,7 +183,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return payShopInfoMoney[0];
 		}
 
-		// Token: 0x06032841 RID: 206913 RVA: 0x00BC3F7C File Offset: 0x00BC217C
+		// Token: 0x060275F4 RID: 161268 RVA: 0x00B08B9C File Offset: 0x00B06D9C
 		private bool HasShopAffordableGoods()
 		{
 			int shopCurrencyId = this.GetShopCurrencyId();
@@ -206,13 +205,13 @@ namespace CSharpScript.Game.Module.Sheriff
 			return false;
 		}
 
-		// Token: 0x06032842 RID: 206914 RVA: 0x00BC4080 File Offset: 0x00BC2280
+		// Token: 0x060275F5 RID: 161269 RVA: 0x00B08CA0 File Offset: 0x00B06EA0
 		public bool CheckShopRedDot()
 		{
 			return !this.ShopRedDotChecked && this.HasShopAffordableGoods();
 		}
 
-		// Token: 0x06032843 RID: 206915 RVA: 0x00BC4092 File Offset: 0x00BC2292
+		// Token: 0x060275F6 RID: 161270 RVA: 0x00B08CB2 File Offset: 0x00B06EB2
 		public void ReArmShopRedDot()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.SheriffShopView))
@@ -223,14 +222,14 @@ namespace CSharpScript.Game.Module.Sheriff
 			this.EmitShopRedDotRefresh();
 		}
 
-		// Token: 0x06032844 RID: 206916 RVA: 0x00BC40B3 File Offset: 0x00BC22B3
+		// Token: 0x060275F7 RID: 161271 RVA: 0x00B08CD3 File Offset: 0x00B06ED3
 		public void ClearShopRedDot()
 		{
 			this.ShopRedDotChecked = true;
 			this.EmitShopRedDotRefresh();
 		}
 
-		// Token: 0x06032845 RID: 206917 RVA: 0x00BC40C4 File Offset: 0x00BC22C4
+		// Token: 0x060275F8 RID: 161272 RVA: 0x00B08CE4 File Offset: 0x00B06EE4
 		private void EmitShopRedDotRefresh()
 		{
 			int activityId = SheriffController.Instance.ActivityId;
@@ -241,25 +240,25 @@ namespace CSharpScript.Game.Module.Sheriff
 			EventSystem.Instance.Emit(EEventName.OnSheriffShopRedDotRefresh);
 		}
 
-		// Token: 0x06032846 RID: 206918 RVA: 0x00BC4104 File Offset: 0x00BC2304
-		public void UpdateZoneInfo(List<SheriffZoneInfo> info)
+		// Token: 0x060275F9 RID: 161273 RVA: 0x00B08D24 File Offset: 0x00B06F24
+		public void UpdateZoneInfo(IEnumerable<SheriffZoneInfo> info)
 		{
 			foreach (SheriffZoneInfo sheriffZoneInfo in info)
 			{
-				this.UpdateAnomalyInfo(sheriffZoneInfo.AnomalyInfos.ToList<SheriffAnomalyInfo>(), new int?(sheriffZoneInfo.ZoneId));
-				this.UpdateCriminalInfo(sheriffZoneInfo.CriminalInfos.ToList<SheriffCriminalInfo>(), new int?(sheriffZoneInfo.ZoneId));
+				this.UpdateAnomalyInfo(sheriffZoneInfo.AnomalyInfos, new int?(sheriffZoneInfo.ZoneId));
+				this.UpdateCriminalInfo(sheriffZoneInfo.CriminalInfos, new int?(sheriffZoneInfo.ZoneId));
 				this.ZoneItemCountMap[sheriffZoneInfo.ZoneId] = (int)sheriffZoneInfo.ItemCount;
 			}
 		}
 
-		// Token: 0x06032847 RID: 206919 RVA: 0x00BC419C File Offset: 0x00BC239C
+		// Token: 0x060275FA RID: 161274 RVA: 0x00B08DAC File Offset: 0x00B06FAC
 		public void UpdateZoneItemCount(int zoneId, int itemCount)
 		{
 			this.ZoneItemCountMap[zoneId] = itemCount;
 		}
 
-		// Token: 0x06032848 RID: 206920 RVA: 0x00BC41AC File Offset: 0x00BC23AC
-		public void UpdateAnomalyInfo(List<SheriffAnomalyInfo> info, int? zoneId = null)
+		// Token: 0x060275FB RID: 161275 RVA: 0x00B08DBC File Offset: 0x00B06FBC
+		public void UpdateAnomalyInfo(IReadOnlyList<SheriffAnomalyInfo> info, int? zoneId = null)
 		{
 			int num = info.Count - 1;
 			for (int i = 0; i < info.Count; i++)
@@ -299,8 +298,8 @@ namespace CSharpScript.Game.Module.Sheriff
 			instance.Info(module, author, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06032849 RID: 206921 RVA: 0x00BC430C File Offset: 0x00BC250C
-		public void UpdateCriminalInfo(List<SheriffCriminalInfo> info, int? zoneId = null)
+		// Token: 0x060275FC RID: 161276 RVA: 0x00B08F1C File Offset: 0x00B0711C
+		public void UpdateCriminalInfo(IEnumerable<SheriffCriminalInfo> info, int? zoneId = null)
 		{
 			foreach (SheriffCriminalInfo sheriffCriminalInfo in info)
 			{
@@ -318,7 +317,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x0603284A RID: 206922 RVA: 0x00BC43B4 File Offset: 0x00BC25B4
+		// Token: 0x060275FD RID: 161277 RVA: 0x00B08FBC File Offset: 0x00B071BC
 		[NullableContext(2)]
 		public SheriffAnomalyInfo GetAnomalyInfo(int anomalyId)
 		{
@@ -327,7 +326,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return result;
 		}
 
-		// Token: 0x0603284B RID: 206923 RVA: 0x00BC43D4 File Offset: 0x00BC25D4
+		// Token: 0x060275FE RID: 161278 RVA: 0x00B08FDC File Offset: 0x00B071DC
 		[NullableContext(2)]
 		public SheriffCriminalInfo GetCriminalInfo(int criminalId)
 		{
@@ -336,7 +335,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return result;
 		}
 
-		// Token: 0x0603284C RID: 206924 RVA: 0x00BC43F4 File Offset: 0x00BC25F4
+		// Token: 0x060275FF RID: 161279 RVA: 0x00B08FFC File Offset: 0x00B071FC
 		public void CheckNeedOpenReportPop()
 		{
 			foreach (KeyValuePair<int, SheriffAnomalyInfo> keyValuePair in this.AnomalyInfoMap)
@@ -354,7 +353,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x0603284D RID: 206925 RVA: 0x00BC4470 File Offset: 0x00BC2670
+		// Token: 0x06027600 RID: 161280 RVA: 0x00B09078 File Offset: 0x00B07278
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -380,7 +379,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return new ValueTuple<int, int>(num, num2);
 		}
 
-		// Token: 0x0603284E RID: 206926 RVA: 0x00BC44F8 File Offset: 0x00BC26F8
+		// Token: 0x06027601 RID: 161281 RVA: 0x00B09100 File Offset: 0x00B07300
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -405,21 +404,25 @@ namespace CSharpScript.Game.Module.Sheriff
 			return new ValueTuple<int, int>(num, num2);
 		}
 
-		// Token: 0x0603284F RID: 206927 RVA: 0x00BC4570 File Offset: 0x00BC2770
+		// Token: 0x06027602 RID: 161282 RVA: 0x00B09178 File Offset: 0x00B07378
 		public List<SheriffCriminalInfo> GetCriminalList(int zoneId)
 		{
-			return this.CriminalInfoMap.Values.Where(delegate(SheriffCriminalInfo item)
+			List<SheriffCriminalInfo> list = new List<SheriffCriminalInfo>();
+			foreach (SheriffCriminalInfo sheriffCriminalInfo in this.CriminalInfoMap.Values)
 			{
-				if (item.ZoneId == zoneId)
+				if (sheriffCriminalInfo.ZoneId == zoneId)
 				{
-					SheriffAnomalyInfo anomalyInfo = this.GetAnomalyInfo(item.AnomalyId);
-					return anomalyInfo == null || anomalyInfo.MarkId != 0;
+					SheriffAnomalyInfo anomalyInfo = this.GetAnomalyInfo(sheriffCriminalInfo.AnomalyId);
+					if (anomalyInfo == null || anomalyInfo.MarkId != 0)
+					{
+						list.Add(sheriffCriminalInfo);
+					}
 				}
-				return false;
-			}).ToList<SheriffCriminalInfo>();
+			}
+			return list;
 		}
 
-		// Token: 0x06032850 RID: 206928 RVA: 0x00BC45B4 File Offset: 0x00BC27B4
+		// Token: 0x06027603 RID: 161283 RVA: 0x00B09200 File Offset: 0x00B07400
 		public SheriffQuestState GetQuestState(int zoneId, ESheriffQuestType questType)
 		{
 			List<int> list = new List<int>();
@@ -446,7 +449,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			};
 		}
 
-		// Token: 0x06032851 RID: 206929 RVA: 0x00BC465C File Offset: 0x00BC285C
+		// Token: 0x06027604 RID: 161284 RVA: 0x00B092A8 File Offset: 0x00B074A8
 		public int GetTodoCount()
 		{
 			int num = 0;
@@ -460,7 +463,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return num;
 		}
 
-		// Token: 0x06032852 RID: 206930 RVA: 0x00BC46D0 File Offset: 0x00BC28D0
+		// Token: 0x06027605 RID: 161285 RVA: 0x00B0931C File Offset: 0x00B0751C
 		public int GetTargetAnomalyMarkId()
 		{
 			foreach (SheriffAnomalyInfo sheriffAnomalyInfo in this.AnomalyInfoMap.Values)
@@ -493,7 +496,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return num;
 		}
 
-		// Token: 0x06032853 RID: 206931 RVA: 0x00BC47CC File Offset: 0x00BC29CC
+		// Token: 0x06027606 RID: 161286 RVA: 0x00B09418 File Offset: 0x00B07618
 		public int GetAnomalyCurrentPercent(int anomalyId)
 		{
 			SheriffAnomalyInfo anomalyInfo = this.GetAnomalyInfo(anomalyId);
@@ -504,7 +507,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return anomalyInfo.Progress;
 		}
 
-		// Token: 0x06032854 RID: 206932 RVA: 0x00BC47EC File Offset: 0x00BC29EC
+		// Token: 0x06027607 RID: 161287 RVA: 0x00B09438 File Offset: 0x00B07638
 		public int GetTargetMapMarkIdByQuestIds(List<int> questIds)
 		{
 			int num = 0;
@@ -537,7 +540,7 @@ namespace CSharpScript.Game.Module.Sheriff
 						break;
 					}
 				}
-				global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(configMark.Value.EntityConfigId, configMark.Value.MapId);
+				global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(configMark.Value.EntityConfigId, configMark.Value.MapId, false);
 				entityPosition.DivisionEqual((double)(num2 * 100));
 				double num5 = global::Vector.DistSquared(playerPosition, entityPosition);
 				if (num5 < num3)
@@ -553,7 +556,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return num;
 		}
 
-		// Token: 0x06032855 RID: 206933 RVA: 0x00BC49D4 File Offset: 0x00BC2BD4
+		// Token: 0x06027608 RID: 161288 RVA: 0x00B09620 File Offset: 0x00B07820
 		public bool IsShortcutShowMainBoard(BaseBehaviorTree tree)
 		{
 			ITrackCustomBoard currentNodeCustomTrackBoard = tree.GetCurrentNodeCustomTrackBoard();
@@ -576,8 +579,8 @@ namespace CSharpScript.Game.Module.Sheriff
 			return false;
 		}
 
-		// Token: 0x17007CCF RID: 31951
-		// (get) Token: 0x06032856 RID: 206934 RVA: 0x00BC4A5C File Offset: 0x00BC2C5C
+		// Token: 0x17005079 RID: 20601
+		// (get) Token: 0x06027609 RID: 161289 RVA: 0x00B096A8 File Offset: 0x00B078A8
 		public static SheriffModel Instance
 		{
 			get
@@ -586,7 +589,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x06032857 RID: 206935 RVA: 0x00BC4A63 File Offset: 0x00BC2C63
+		// Token: 0x0602760A RID: 161290 RVA: 0x00B096AF File Offset: 0x00B078AF
 		public static SheriffModel GetOrCreateInstance()
 		{
 			if (SheriffModel._Instance == null)
@@ -596,7 +599,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			return SheriffModel._Instance;
 		}
 
-		// Token: 0x06032858 RID: 206936 RVA: 0x00BC4A77 File Offset: 0x00BC2C77
+		// Token: 0x0602760B RID: 161291 RVA: 0x00B096C3 File Offset: 0x00B078C3
 		public static bool CreateInstance()
 		{
 			if (SheriffModel._Instance != null)
@@ -607,48 +610,48 @@ namespace CSharpScript.Game.Module.Sheriff
 			return true;
 		}
 
-		// Token: 0x06032859 RID: 206937 RVA: 0x00BC4A8D File Offset: 0x00BC2C8D
+		// Token: 0x0602760C RID: 161292 RVA: 0x00B096D9 File Offset: 0x00B078D9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603285A RID: 206938 RVA: 0x00BC4A8F File Offset: 0x00BC2C8F
+		// Token: 0x0602760D RID: 161293 RVA: 0x00B096DB File Offset: 0x00B078DB
 		public static void ResetStaticDefaultValue()
 		{
 			SheriffModel._Instance = null;
 		}
 
-		// Token: 0x0603285B RID: 206939 RVA: 0x00BC4A97 File Offset: 0x00BC2C97
+		// Token: 0x0602760E RID: 161294 RVA: 0x00B096E3 File Offset: 0x00B078E3
 		static SheriffModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SheriffModel.CreateStaticDefaultValue), new Action(SheriffModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AE4C RID: 110156
+		// Token: 0x040157A9 RID: 87977
 		protected Dictionary<int, List<int>> ClueListMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401AE4D RID: 110157
+		// Token: 0x040157AA RID: 87978
 		protected Dictionary<int, SheriffAnomalyInfo> AnomalyInfoMap = new Dictionary<int, SheriffAnomalyInfo>();
 
-		// Token: 0x0401AE4E RID: 110158
+		// Token: 0x040157AB RID: 87979
 		protected Dictionary<int, SheriffCriminalInfo> CriminalInfoMap = new Dictionary<int, SheriffCriminalInfo>();
 
-		// Token: 0x0401AE4F RID: 110159
+		// Token: 0x040157AC RID: 87980
 		protected Dictionary<int, int> ZoneItemCountMap = new Dictionary<int, int>();
 
-		// Token: 0x0401AE50 RID: 110160
+		// Token: 0x040157AD RID: 87981
 		public Dictionary<int, ESheriffAnomalyState> GmAnomalyStateMap = new Dictionary<int, ESheriffAnomalyState>();
 
-		// Token: 0x0401AE51 RID: 110161
+		// Token: 0x040157AE RID: 87982
 		public int LastCacheAnomaly;
 
-		// Token: 0x0401AE52 RID: 110162
+		// Token: 0x040157AF RID: 87983
 		public int LastCacheClue;
 
-		// Token: 0x0401AE53 RID: 110163
+		// Token: 0x040157B0 RID: 87984
 		private bool ShopRedDotChecked = true;
 
-		// Token: 0x0401AE54 RID: 110164
+		// Token: 0x040157B1 RID: 87985
 		[Nullable(2)]
 		private static SheriffModel _Instance;
 	}

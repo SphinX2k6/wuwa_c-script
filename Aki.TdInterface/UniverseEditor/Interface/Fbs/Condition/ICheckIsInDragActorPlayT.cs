@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A94 RID: 19092
+	// Token: 0x02004F5D RID: 20317
 	public class ICheckIsInDragActorPlayT
 	{
-		// Token: 0x17008A54 RID: 35412
-		// (get) Token: 0x0601DF26 RID: 122662 RVA: 0x00434800 File Offset: 0x00432A00
-		// (set) Token: 0x0601DF27 RID: 122663 RVA: 0x00434808 File Offset: 0x00432A08
+		// Token: 0x17009135 RID: 37173
+		// (get) Token: 0x0601F9DF RID: 129503 RVA: 0x00465B8C File Offset: 0x00463D8C
+		// (set) Token: 0x0601F9E0 RID: 129504 RVA: 0x00465B94 File Offset: 0x00463D94
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A55 RID: 35413
-		// (get) Token: 0x0601DF28 RID: 122664 RVA: 0x00434811 File Offset: 0x00432A11
-		// (set) Token: 0x0601DF29 RID: 122665 RVA: 0x00434819 File Offset: 0x00432A19
+		// Token: 0x17009136 RID: 37174
+		// (get) Token: 0x0601F9E1 RID: 129505 RVA: 0x00465B9D File Offset: 0x00463D9D
+		// (set) Token: 0x0601F9E2 RID: 129506 RVA: 0x00465BA5 File Offset: 0x00463DA5
 		public bool IsIn { get; set; }
 
-		// Token: 0x0601DF2A RID: 122666 RVA: 0x00434822 File Offset: 0x00432A22
+		// Token: 0x0601F9E3 RID: 129507 RVA: 0x00465BAE File Offset: 0x00463DAE
 		public ICheckIsInDragActorPlayT()
 		{
 			this.Type = ECondition.CompareVar;

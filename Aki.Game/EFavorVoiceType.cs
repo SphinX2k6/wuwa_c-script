@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002856 RID: 10326
+// Token: 0x02001DD1 RID: 7633
 public enum EFavorVoiceType
 {
-	// Token: 0x04009EF9 RID: 40697
+	// Token: 0x0400A2E2 RID: 41698
 	FavorNatureVoice = 1,
-	// Token: 0x04009EFA RID: 40698
+	// Token: 0x0400A2E3 RID: 41699
 	FavorFightVoice
 }

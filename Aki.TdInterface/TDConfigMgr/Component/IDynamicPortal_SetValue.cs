@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002E6 RID: 742
+	// Token: 0x0200032D RID: 813
 	public class IDynamicPortal_SetValue
 	{
-		// Token: 0x04000C9A RID: 3226
+		// Token: 0x04000D84 RID: 3460
 		public EPortalType Type;
 
-		// Token: 0x04000C9B RID: 3227
+		// Token: 0x04000D85 RID: 3461
 		public EPortalModel PortalModel;
 
-		// Token: 0x04000C9C RID: 3228
+		// Token: 0x04000D86 RID: 3462
 		[Nullable(2)]
 		public IPortalRenderConfig RenderConfig;
 	}

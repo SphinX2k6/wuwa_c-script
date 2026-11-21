@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002452 RID: 9298
+// Token: 0x02001937 RID: 6455
 public class VisionSelectRecommendData
 {
-	// Token: 0x04008C80 RID: 35968
+	// Token: 0x04008DC7 RID: 36295
 	public int AttrId;
 
-	// Token: 0x04008C81 RID: 35969
+	// Token: 0x04008DC8 RID: 36296
 	public int AddType;
 }

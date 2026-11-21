@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AD5 RID: 19157
+	// Token: 0x02004FA7 RID: 20391
 	public struct ICheckPhotographCameraParam : IFlatbufferObject
 	{
-		// Token: 0x17008AE4 RID: 35556
-		// (get) Token: 0x0601E15E RID: 123230 RVA: 0x00438758 File Offset: 0x00436958
+		// Token: 0x170091D6 RID: 37334
+		// (get) Token: 0x0601FC5D RID: 130141 RVA: 0x0046A204 File Offset: 0x00468404
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E15F RID: 123231 RVA: 0x00438765 File Offset: 0x00436965
+		// Token: 0x0601FC5E RID: 130142 RVA: 0x0046A211 File Offset: 0x00468411
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E160 RID: 123232 RVA: 0x0043876C File Offset: 0x0043696C
+		// Token: 0x0601FC5F RID: 130143 RVA: 0x0046A218 File Offset: 0x00468418
 		public static ICheckPhotographCameraParam GetRootAsICheckPhotographCameraParam(ByteBuffer _bb)
 		{
 			return ICheckPhotographCameraParam.GetRootAsICheckPhotographCameraParam(_bb, default(ICheckPhotographCameraParam));
 		}
 
-		// Token: 0x0601E161 RID: 123233 RVA: 0x00438788 File Offset: 0x00436988
+		// Token: 0x0601FC60 RID: 130144 RVA: 0x0046A234 File Offset: 0x00468434
 		public static ICheckPhotographCameraParam GetRootAsICheckPhotographCameraParam(ByteBuffer _bb, ICheckPhotographCameraParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E162 RID: 123234 RVA: 0x004387A5 File Offset: 0x004369A5
+		// Token: 0x0601FC61 RID: 130145 RVA: 0x0046A251 File Offset: 0x00468451
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E163 RID: 123235 RVA: 0x004387B4 File Offset: 0x004369B4
+		// Token: 0x0601FC62 RID: 130146 RVA: 0x0046A260 File Offset: 0x00468460
 		public ICheckPhotographCameraParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AE5 RID: 35557
-		// (get) Token: 0x0601E164 RID: 123236 RVA: 0x004387C4 File Offset: 0x004369C4
+		// Token: 0x170091D7 RID: 37335
+		// (get) Token: 0x0601FC63 RID: 130147 RVA: 0x0046A270 File Offset: 0x00468470
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AE6 RID: 35558
-		// (get) Token: 0x0601E165 RID: 123237 RVA: 0x00438800 File Offset: 0x00436A00
+		// Token: 0x170091D8 RID: 37336
+		// (get) Token: 0x0601FC64 RID: 130148 RVA: 0x0046A2AC File Offset: 0x004684AC
 		public ECommonMatchType CheckType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E166 RID: 123238 RVA: 0x0043883C File Offset: 0x00436A3C
+		// Token: 0x0601FC65 RID: 130149 RVA: 0x0046A2E8 File Offset: 0x004684E8
 		public TPhotographCameraCheckType CameraParamType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return (TPhotographCameraCheckType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17008AE7 RID: 35559
-		// (get) Token: 0x0601E167 RID: 123239 RVA: 0x0043887C File Offset: 0x00436A7C
+		// Token: 0x170091D9 RID: 37337
+		// (get) Token: 0x0601FC66 RID: 130150 RVA: 0x0046A328 File Offset: 0x00468528
 		public int CameraParamTypeLength
 		{
 			get
@@ -104,13 +104,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E168 RID: 123240 RVA: 0x004388A7 File Offset: 0x00436AA7
+		// Token: 0x0601FC67 RID: 130151 RVA: 0x0046A353 File Offset: 0x00468553
 		public Span<TPhotographCameraCheckType> GetCameraParamTypeBytes()
 		{
 			return this.__p.__vector_as_span<TPhotographCameraCheckType>(8, 1);
 		}
 
-		// Token: 0x0601E169 RID: 123241 RVA: 0x004388B8 File Offset: 0x00436AB8
+		// Token: 0x0601FC68 RID: 130152 RVA: 0x0046A364 File Offset: 0x00468564
 		public TPhotographCameraCheckType[] GetCameraParamTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return array;
 		}
 
-		// Token: 0x0601E16A RID: 123242 RVA: 0x00438924 File Offset: 0x00436B24
+		// Token: 0x0601FC69 RID: 130153 RVA: 0x0046A3D0 File Offset: 0x004685D0
 		public TTable? CameraParam<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17008AE8 RID: 35560
-		// (get) Token: 0x0601E16B RID: 123243 RVA: 0x0043896C File Offset: 0x00436B6C
+		// Token: 0x170091DA RID: 37338
+		// (get) Token: 0x0601FC6A RID: 130154 RVA: 0x0046A418 File Offset: 0x00468618
 		public int CameraParamLength
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E16C RID: 123244 RVA: 0x00438998 File Offset: 0x00436B98
+		// Token: 0x0601FC6B RID: 130155 RVA: 0x0046A444 File Offset: 0x00468644
 		public static Offset<ICheckPhotographCameraParam> CreateICheckPhotographCameraParam(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ECommonMatchType CheckType = ECommonMatchType.MatchAll, VectorOffset CameraParam_typeOffset = default(VectorOffset), VectorOffset CameraParamOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -165,31 +165,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPhotographCameraParam.EndICheckPhotographCameraParam(builder);
 		}
 
-		// Token: 0x0601E16D RID: 123245 RVA: 0x004389C4 File Offset: 0x00436BC4
+		// Token: 0x0601FC6C RID: 130156 RVA: 0x0046A470 File Offset: 0x00468670
 		public static void StartICheckPhotographCameraParam(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E16E RID: 123246 RVA: 0x004389CD File Offset: 0x00436BCD
+		// Token: 0x0601FC6D RID: 130157 RVA: 0x0046A479 File Offset: 0x00468679
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E16F RID: 123247 RVA: 0x004389D8 File Offset: 0x00436BD8
+		// Token: 0x0601FC6E RID: 130158 RVA: 0x0046A484 File Offset: 0x00468684
 		public static void AddCheckType(FlatBufferBuilder builder, ECommonMatchType checkType)
 		{
 			builder.AddByte(1, (byte)checkType, 0);
 		}
 
-		// Token: 0x0601E170 RID: 123248 RVA: 0x004389E3 File Offset: 0x00436BE3
+		// Token: 0x0601FC6F RID: 130159 RVA: 0x0046A48F File Offset: 0x0046868F
 		public static void AddCameraParamType(FlatBufferBuilder builder, VectorOffset cameraParamTypeOffset)
 		{
 			builder.AddOffset(2, cameraParamTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601E171 RID: 123249 RVA: 0x004389F4 File Offset: 0x00436BF4
+		// Token: 0x0601FC70 RID: 130160 RVA: 0x0046A4A0 File Offset: 0x004686A0
 		public static VectorOffset CreateCameraParamTypeVector(FlatBufferBuilder builder, TPhotographCameraCheckType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E172 RID: 123250 RVA: 0x00438A2B File Offset: 0x00436C2B
+		// Token: 0x0601FC71 RID: 130161 RVA: 0x0046A4D7 File Offset: 0x004686D7
 		public static VectorOffset CreateCameraParamTypeVectorBlock(FlatBufferBuilder builder, TPhotographCameraCheckType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E173 RID: 123251 RVA: 0x00438A45 File Offset: 0x00436C45
+		// Token: 0x0601FC72 RID: 130162 RVA: 0x0046A4F1 File Offset: 0x004686F1
 		public static VectorOffset CreateCameraParamTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TPhotographCameraCheckType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E174 RID: 123252 RVA: 0x00438A63 File Offset: 0x00436C63
+		// Token: 0x0601FC73 RID: 130163 RVA: 0x0046A50F File Offset: 0x0046870F
 		public static VectorOffset CreateCameraParamTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -224,19 +224,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E175 RID: 123253 RVA: 0x00438A7C File Offset: 0x00436C7C
+		// Token: 0x0601FC74 RID: 130164 RVA: 0x0046A528 File Offset: 0x00468728
 		public static void StartCameraParamTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601E176 RID: 123254 RVA: 0x00438A87 File Offset: 0x00436C87
+		// Token: 0x0601FC75 RID: 130165 RVA: 0x0046A533 File Offset: 0x00468733
 		public static void AddCameraParam(FlatBufferBuilder builder, VectorOffset cameraParamOffset)
 		{
 			builder.AddOffset(3, cameraParamOffset.Value, 0);
 		}
 
-		// Token: 0x0601E177 RID: 123255 RVA: 0x00438A98 File Offset: 0x00436C98
+		// Token: 0x0601FC76 RID: 130166 RVA: 0x0046A544 File Offset: 0x00468744
 		public static VectorOffset CreateCameraParamVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -247,7 +247,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E178 RID: 123256 RVA: 0x00438ACF File Offset: 0x00436CCF
+		// Token: 0x0601FC77 RID: 130167 RVA: 0x0046A57B File Offset: 0x0046877B
 		public static VectorOffset CreateCameraParamVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E179 RID: 123257 RVA: 0x00438AE9 File Offset: 0x00436CE9
+		// Token: 0x0601FC78 RID: 130168 RVA: 0x0046A595 File Offset: 0x00468795
 		public static VectorOffset CreateCameraParamVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E17A RID: 123258 RVA: 0x00438B07 File Offset: 0x00436D07
+		// Token: 0x0601FC79 RID: 130169 RVA: 0x0046A5B3 File Offset: 0x004687B3
 		public static VectorOffset CreateCameraParamVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -271,19 +271,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E17B RID: 123259 RVA: 0x00438B20 File Offset: 0x00436D20
+		// Token: 0x0601FC7A RID: 130170 RVA: 0x0046A5CC File Offset: 0x004687CC
 		public static void StartCameraParamVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601E17C RID: 123260 RVA: 0x00438B2B File Offset: 0x00436D2B
+		// Token: 0x0601FC7B RID: 130171 RVA: 0x0046A5D7 File Offset: 0x004687D7
 		public static Offset<ICheckPhotographCameraParam> EndICheckPhotographCameraParam(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPhotographCameraParam>(builder.EndTable());
 		}
 
-		// Token: 0x0601E17D RID: 123261 RVA: 0x00438B38 File Offset: 0x00436D38
+		// Token: 0x0601FC7C RID: 130172 RVA: 0x0046A5E4 File Offset: 0x004687E4
 		public ICheckPhotographCameraParamT UnPack()
 		{
 			ICheckPhotographCameraParamT checkPhotographCameraParamT = new ICheckPhotographCameraParamT();
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPhotographCameraParamT;
 		}
 
-		// Token: 0x0601E17E RID: 123262 RVA: 0x00438B54 File Offset: 0x00436D54
+		// Token: 0x0601FC7D RID: 130173 RVA: 0x0046A600 File Offset: 0x00468800
 		public void UnPackTo(ICheckPhotographCameraParamT _o)
 		{
 			_o.Type = this.Type;
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E17F RID: 123263 RVA: 0x00438C7C File Offset: 0x00436E7C
+		// Token: 0x0601FC7E RID: 130174 RVA: 0x0046A728 File Offset: 0x00468928
 		public static Offset<ICheckPhotographCameraParam> Pack(FlatBufferBuilder builder, ICheckPhotographCameraParamT _o)
 		{
 			if (_o == null)
@@ -347,7 +347,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPhotographCameraParam.CreateICheckPhotographCameraParam(builder, _o.Type, _o.CheckType, cameraParam_typeOffset, cameraParamOffset);
 		}
 
-		// Token: 0x0400D35E RID: 54110
+		// Token: 0x0400DE46 RID: 56902
 		private Table __p;
 	}
 }

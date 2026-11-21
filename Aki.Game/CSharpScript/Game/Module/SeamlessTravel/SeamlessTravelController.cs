@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C84 RID: 19588
+	// Token: 0x02003C35 RID: 15413
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class SeamlessTravelController : ControllerBase
 	{
-		// Token: 0x06032A0F RID: 207375 RVA: 0x00BCD620 File Offset: 0x00BCB820
+		// Token: 0x060277C2 RID: 161730 RVA: 0x00B12284 File Offset: 0x00B10484
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.OnEnterTransitionMap, this.EnterTransitionMap);
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A10 RID: 207376 RVA: 0x00BCD655 File Offset: 0x00BCB855
+		// Token: 0x060277C3 RID: 161731 RVA: 0x00B122B9 File Offset: 0x00B104B9
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.OnEnterTransitionMap, this.EnterTransitionMap);
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A11 RID: 207377 RVA: 0x00BCD684 File Offset: 0x00BCB884
+		// Token: 0x060277C4 RID: 161732 RVA: 0x00B122E8 File Offset: 0x00B104E8
 		protected override void OnTick(float delta)
 		{
 			SeamlessTravelModel instance = SeamlessTravelModel.Instance;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A12 RID: 207378 RVA: 0x00BCD734 File Offset: 0x00BCB934
+		// Token: 0x060277C5 RID: 161733 RVA: 0x00B12398 File Offset: 0x00B10598
 		public bool StartTravel(string levelName)
 		{
 			if (!SeamlessTravelModel.Instance.IsSeamlessTravel)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A13 RID: 207379 RVA: 0x00BCD7F8 File Offset: 0x00BCB9F8
+		// Token: 0x060277C6 RID: 161734 RVA: 0x00B1245C File Offset: 0x00B1065C
 		[NullableContext(0)]
 		public UniTask<bool> EnableSeamlessTravel([Nullable(1)] SeamlessTravelContext context, bool isPreEnable = false)
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return <EnableSeamlessTravel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032A14 RID: 207380 RVA: 0x00BCD84C File Offset: 0x00BCBA4C
+		// Token: 0x060277C7 RID: 161735 RVA: 0x00B124B0 File Offset: 0x00B106B0
 		private void SetupSeamlessTravelEntity(EntityHandle entityHandle)
 		{
 			SeamlessTravelModel instance = SeamlessTravelModel.Instance;
@@ -155,14 +155,14 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A15 RID: 207381 RVA: 0x00BCD97F File Offset: 0x00BCBB7F
+		// Token: 0x060277C8 RID: 161736 RVA: 0x00B125E3 File Offset: 0x00B107E3
 		[NullableContext(2)]
 		public void AddSeamlessTravelActor(AActor actor)
 		{
 			SeamlessTravelModel.Instance.AddSeamlessTravelActor(actor);
 		}
 
-		// Token: 0x06032A16 RID: 207382 RVA: 0x00BCD990 File Offset: 0x00BCBB90
+		// Token: 0x060277C9 RID: 161737 RVA: 0x00B125F4 File Offset: 0x00B107F4
 		public UniTask PreLeaveLevel()
 		{
 			SeamlessTravelController.<PreLeaveLevel>d__7 <PreLeaveLevel>d__;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return <PreLeaveLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032A17 RID: 207383 RVA: 0x00BCD9D4 File Offset: 0x00BCBBD4
+		// Token: 0x060277CA RID: 161738 RVA: 0x00B12638 File Offset: 0x00B10838
 		public UniTask PreLeaveLevelWaitEnd()
 		{
 			SeamlessTravelController.<PreLeaveLevelWaitEnd>d__8 <PreLeaveLevelWaitEnd>d__;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return <PreLeaveLevelWaitEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032A18 RID: 207384 RVA: 0x00BCDA18 File Offset: 0x00BCBC18
+		// Token: 0x060277CB RID: 161739 RVA: 0x00B1267C File Offset: 0x00B1087C
 		public void PostLeaveLevel()
 		{
 			if (!SeamlessTravelModel.Instance.IsSeamlessTravel)
@@ -194,13 +194,13 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			Log.Instance.Info(ELogModule.SeamlessTravel, ELogAuthor.CJH, "[无缝加载:PostLeaveLevel完成]", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06032A19 RID: 207385 RVA: 0x00BCDA51 File Offset: 0x00BCBC51
+		// Token: 0x060277CC RID: 161740 RVA: 0x00B126B5 File Offset: 0x00B108B5
 		public bool PreOpenLevel()
 		{
 			return true;
 		}
 
-		// Token: 0x06032A1A RID: 207386 RVA: 0x00BCDA54 File Offset: 0x00BCBC54
+		// Token: 0x060277CD RID: 161741 RVA: 0x00B126B8 File Offset: 0x00B108B8
 		[NullableContext(0)]
 		public UniTask<bool> PostOpenLevel()
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return <PostOpenLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032A1B RID: 207387 RVA: 0x00BCDA90 File Offset: 0x00BCBC90
+		// Token: 0x060277CE RID: 161742 RVA: 0x00B126F4 File Offset: 0x00B108F4
 		public void PostLoadedLevel()
 		{
 			if (!SeamlessTravelModel.Instance.IsSeamlessTravel)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			Log.Instance.Info(ELogModule.SeamlessTravel, ELogAuthor.CJH, "[无缝加载:PostLoadedLevel完成]", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06032A1C RID: 207388 RVA: 0x00BCDACC File Offset: 0x00BCBCCC
+		// Token: 0x060277CF RID: 161743 RVA: 0x00B12730 File Offset: 0x00B10930
 		public bool SetCurrentEntityAction(InstanceDungeon config)
 		{
 			if (!SeamlessTravelModel.Instance.IsSeamlessTravel)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A1D RID: 207389 RVA: 0x00BCDC84 File Offset: 0x00BCBE84
+		// Token: 0x060277D0 RID: 161744 RVA: 0x00B128E8 File Offset: 0x00B10AE8
 		public UniTask EndSeamlessTravel()
 		{
 			SeamlessTravelController.<EndSeamlessTravel>d__14 <EndSeamlessTravel>d__;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return <EndSeamlessTravel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032A1E RID: 207390 RVA: 0x00BCDCC8 File Offset: 0x00BCBEC8
+		// Token: 0x060277D1 RID: 161745 RVA: 0x00B1292C File Offset: 0x00B10B2C
 		public UniTask EndSeamlessTravelWaitEnd()
 		{
 			SeamlessTravelController.<EndSeamlessTravelWaitEnd>d__15 <EndSeamlessTravelWaitEnd>d__;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return <EndSeamlessTravelWaitEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032A1F RID: 207391 RVA: 0x00BCDD04 File Offset: 0x00BCBF04
+		// Token: 0x060277D2 RID: 161746 RVA: 0x00B12968 File Offset: 0x00B10B68
 		public void FinishSeamlessTravel()
 		{
 			SeamlessTravelModel instance = SeamlessTravelModel.Instance;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			Log.Instance.Info(ELogModule.SeamlessTravel, ELogAuthor.YJX, "[无缝加载:完成]", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06032A20 RID: 207392 RVA: 0x00BCDF5C File Offset: 0x00BCC15C
+		// Token: 0x060277D3 RID: 161747 RVA: 0x00B12BC0 File Offset: 0x00B10DC0
 		[NullableContext(2)]
 		public bool WasRoleEntityInSeamlessTraveling(Entity entity)
 		{
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return component != null && this.WasRoleInSeamlessTraveling(component.GetCreatureDataId());
 		}
 
-		// Token: 0x06032A21 RID: 207393 RVA: 0x00BCDFA0 File Offset: 0x00BCC1A0
+		// Token: 0x060277D4 RID: 161748 RVA: 0x00B12C04 File Offset: 0x00B10E04
 		public bool WasRoleInSeamlessTraveling(long creatureDataId)
 		{
 			SeamlessTravelModel instance = SeamlessTravelModel.Instance;
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return false;
 		}
 
-		// Token: 0x06032A22 RID: 207394 RVA: 0x00BCE060 File Offset: 0x00BCC260
+		// Token: 0x060277D5 RID: 161749 RVA: 0x00B12CC4 File Offset: 0x00B10EC4
 		public void SeamlessTravelingRefreshData(Entity entity)
 		{
 			BaseAttributeComponent component = entity.GetComponent<BaseAttributeComponent>();
@@ -430,8 +430,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			component2.SeamlessTravelingRefresh();
 		}
 
-		// Token: 0x17007CF4 RID: 31988
-		// (get) Token: 0x06032A23 RID: 207395 RVA: 0x00BCE083 File Offset: 0x00BCC283
+		// Token: 0x1700509E RID: 20638
+		// (get) Token: 0x060277D6 RID: 161750 RVA: 0x00B12CE7 File Offset: 0x00B10EE7
 		public static SeamlessTravelController Instance
 		{
 			get
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A24 RID: 207396 RVA: 0x00BCE08A File Offset: 0x00BCC28A
+		// Token: 0x060277D7 RID: 161751 RVA: 0x00B12CEE File Offset: 0x00B10EEE
 		public static SeamlessTravelController GetOrCreateInstance()
 		{
 			if (SeamlessTravelController._Instance == null)
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return SeamlessTravelController._Instance;
 		}
 
-		// Token: 0x06032A25 RID: 207397 RVA: 0x00BCE09E File Offset: 0x00BCC29E
+		// Token: 0x060277D8 RID: 161752 RVA: 0x00B12D02 File Offset: 0x00B10F02
 		public static bool CreateInstance()
 		{
 			if (SeamlessTravelController._Instance != null)
@@ -461,24 +461,24 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A26 RID: 207398 RVA: 0x00BCE0B4 File Offset: 0x00BCC2B4
+		// Token: 0x060277D9 RID: 161753 RVA: 0x00B12D18 File Offset: 0x00B10F18
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032A27 RID: 207399 RVA: 0x00BCE0B6 File Offset: 0x00BCC2B6
+		// Token: 0x060277DA RID: 161754 RVA: 0x00B12D1A File Offset: 0x00B10F1A
 		public static void ResetStaticDefaultValue()
 		{
 			SeamlessTravelController._Instance = null;
 		}
 
-		// Token: 0x06032A28 RID: 207400 RVA: 0x00BCE0BE File Offset: 0x00BCC2BE
+		// Token: 0x060277DB RID: 161755 RVA: 0x00B12D22 File Offset: 0x00B10F22
 		static SeamlessTravelController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SeamlessTravelController.CreateStaticDefaultValue), new Action(SeamlessTravelController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AEE7 RID: 110311
+		// Token: 0x04015844 RID: 88132
 		private readonly Action EnterTransitionMap = delegate()
 		{
 			SeamlessTravelModel instance = SeamlessTravelModel.Instance;
@@ -494,7 +494,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			enterTransitionMapPromise.SetResult(true);
 		};
 
-		// Token: 0x0401AEE8 RID: 110312
+		// Token: 0x04015845 RID: 88133
 		private readonly Action EnterDestinationMap = delegate()
 		{
 			SeamlessTravelModel seamlessTravelModel = SeamlessTravelModel.Instance;
@@ -537,7 +537,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		};
 
-		// Token: 0x0401AEE9 RID: 110313
+		// Token: 0x04015846 RID: 88134
 		[Nullable(2)]
 		private static SeamlessTravelController _Instance;
 	}

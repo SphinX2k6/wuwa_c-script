@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B58 RID: 27480
+	// Token: 0x02005CD0 RID: 23760
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventPlotInterludeAction : LevelEventBase
 	{
-		// Token: 0x060441D0 RID: 278992 RVA: 0x010C3635 File Offset: 0x010C1835
+		// Token: 0x0603A322 RID: 238370 RVA: 0x0106D1E9 File Offset: 0x0106B3E9
 		public LevelEventPlotInterludeAction(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441D1 RID: 278993 RVA: 0x010C3640 File Offset: 0x010C1840
+		// Token: 0x0603A323 RID: 238371 RVA: 0x0106D1F4 File Offset: 0x0106B3F4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			TimerSystem.Instance.Delay(new TTimerAction(this.OnFadeInEnded), this.Param.FadeInTime * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x060441D2 RID: 278994 RVA: 0x010C3711 File Offset: 0x010C1911
+		// Token: 0x0603A324 RID: 238372 RVA: 0x0106D2C5 File Offset: 0x0106B4C5
 		private void OnFadeInEnded(float _)
 		{
 			LevelGeneralController.Instance.ExecuteActionsNew(this.Param.ActionList, GeneralContext.Copy(this.Context), delegate(ELevelEventState _)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x060441D3 RID: 278995 RVA: 0x010C3740 File Offset: 0x010C1940
+		// Token: 0x0603A325 RID: 238373 RVA: 0x0106D2F4 File Offset: 0x0106B4F4
 		private void OnActionDone(float _)
 		{
 			if (!ObjectUtils.IsValid(this.CameraManager))
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			TimerSystem.Instance.Delay(new TTimerAction(this.OnInterludeEnded), this.Param.FadeOutTime, null, null, true, 1f);
 		}
 
-		// Token: 0x060441D4 RID: 278996 RVA: 0x010C37BC File Offset: 0x010C19BC
+		// Token: 0x0603A326 RID: 238374 RVA: 0x0106D370 File Offset: 0x0106B570
 		private void OnInterludeEnded(float _)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441D5 RID: 278997 RVA: 0x010C37C7 File Offset: 0x010C19C7
+		// Token: 0x0603A327 RID: 238375 RVA: 0x0106D37B File Offset: 0x0106B57B
 		protected override void OnReset()
 		{
 			this.Param = null;
@@ -73,16 +73,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.CameraManager = null;
 		}
 
-		// Token: 0x04023938 RID: 145720
+		// Token: 0x0401EBDA RID: 125914
 		private ActionPlotInterludeAction Param;
 
-		// Token: 0x04023939 RID: 145721
+		// Token: 0x0401EBDB RID: 125915
 		private GeneralContext Context;
 
-		// Token: 0x0402393A RID: 145722
+		// Token: 0x0401EBDC RID: 125916
 		private FLinearColor? Color;
 
-		// Token: 0x0402393B RID: 145723
+		// Token: 0x0401EBDD RID: 125917
 		private APlayerCameraManager CameraManager;
 	}
 }

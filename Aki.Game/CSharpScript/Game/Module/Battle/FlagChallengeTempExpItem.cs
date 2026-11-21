@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C43 RID: 23619
+	// Token: 0x02004C23 RID: 19491
 	public class FlagChallengeTempExpItem : UiPanelBase
 	{
-		// Token: 0x0603BAA2 RID: 244386 RVA: 0x00E3D434 File Offset: 0x00E3B634
+		// Token: 0x060309ED RID: 199149 RVA: 0x00D8D7A4 File Offset: 0x00D8B9A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BAA3 RID: 244387 RVA: 0x00E3D500 File Offset: 0x00E3B700
+		// Token: 0x060309EE RID: 199150 RVA: 0x00D8D870 File Offset: 0x00D8BA70
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -108,39 +108,39 @@ namespace CSharpScript.Game.Module.Battle
 			this.ArrowSprite = base.GetSprite(0);
 		}
 
-		// Token: 0x0603BAA4 RID: 244388 RVA: 0x00E3D6D0 File Offset: 0x00E3B8D0
+		// Token: 0x060309EF RID: 199151 RVA: 0x00D8DA54 File Offset: 0x00D8BC54
 		public void Clean()
 		{
 			this.TweenInComps = null;
 			this.TweenOutComps = null;
 		}
 
-		// Token: 0x0603BAA5 RID: 244389 RVA: 0x00E3D6E0 File Offset: 0x00E3B8E0
+		// Token: 0x060309F0 RID: 199152 RVA: 0x00D8DA64 File Offset: 0x00D8BC64
 		public void SetIndex(int index)
 		{
 			this.Index = index;
 			this.StartProgress = (float)index * 0.1f;
 		}
 
-		// Token: 0x0603BAA6 RID: 244390 RVA: 0x00E3D6F7 File Offset: 0x00E3B8F7
+		// Token: 0x060309F1 RID: 199153 RVA: 0x00D8DA7B File Offset: 0x00D8BC7B
 		public int GetIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x0603BAA7 RID: 244391 RVA: 0x00E3D6FF File Offset: 0x00E3B8FF
+		// Token: 0x060309F2 RID: 199154 RVA: 0x00D8DA83 File Offset: 0x00D8BC83
 		public bool IsShowItem(float progress)
 		{
 			return progress > this.StartProgress;
 		}
 
-		// Token: 0x0603BAA8 RID: 244392 RVA: 0x00E3D70A File Offset: 0x00E3B90A
+		// Token: 0x060309F3 RID: 199155 RVA: 0x00D8DA8E File Offset: 0x00D8BC8E
 		public bool IsHideItem(float progress)
 		{
 			return progress <= this.StartProgress;
 		}
 
-		// Token: 0x0603BAA9 RID: 244393 RVA: 0x00E3D718 File Offset: 0x00E3B918
+		// Token: 0x060309F4 RID: 199156 RVA: 0x00D8DA9C File Offset: 0x00D8BC9C
 		public void Reset()
 		{
 			if (this.IsPlayTweenOut)
@@ -158,19 +158,19 @@ namespace CSharpScript.Game.Module.Battle
 			this.IsPlayTweenRed = false;
 		}
 
-		// Token: 0x0603BAAA RID: 244394 RVA: 0x00E3D765 File Offset: 0x00E3B965
+		// Token: 0x060309F5 RID: 199157 RVA: 0x00D8DAE9 File Offset: 0x00D8BCE9
 		public void ShowItem()
 		{
 			base.SetUiActive(true);
 		}
 
-		// Token: 0x0603BAAB RID: 244395 RVA: 0x00E3D76E File Offset: 0x00E3B96E
+		// Token: 0x060309F6 RID: 199158 RVA: 0x00D8DAF2 File Offset: 0x00D8BCF2
 		public void HideItem(bool playAnim = true)
 		{
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x0603BAAC RID: 244396 RVA: 0x00E3D778 File Offset: 0x00E3B978
+		// Token: 0x060309F7 RID: 199159 RVA: 0x00D8DAFC File Offset: 0x00D8BCFC
 		public void PlayTweenIn()
 		{
 			if (this.TweenInComps == null || this.IsPlayTweenIn)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAAD RID: 244397 RVA: 0x00E3D7E0 File Offset: 0x00E3B9E0
+		// Token: 0x060309F8 RID: 199160 RVA: 0x00D8DB64 File Offset: 0x00D8BD64
 		public void PlayTweenOut()
 		{
 			if (this.TweenOutComps == null || this.IsPlayTweenOut)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAAE RID: 244398 RVA: 0x00E3D848 File Offset: 0x00E3BA48
+		// Token: 0x060309F9 RID: 199161 RVA: 0x00D8DBCC File Offset: 0x00D8BDCC
 		public void PlayTweenRed()
 		{
 			if (this.TweenRedComps == null)
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAAF RID: 244399 RVA: 0x00E3D8A8 File Offset: 0x00E3BAA8
+		// Token: 0x060309FA RID: 199162 RVA: 0x00D8DC2C File Offset: 0x00D8BE2C
 		public void StopTweenOut()
 		{
 			if (this.TweenOutComps == null || !this.IsPlayTweenOut)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAB0 RID: 244400 RVA: 0x00E3D910 File Offset: 0x00E3BB10
+		// Token: 0x060309FB RID: 199163 RVA: 0x00D8DC94 File Offset: 0x00D8BE94
 		public void PlayTweenAnim(EFlagChallengeExpItemTweenAnimType tweenType)
 		{
 			switch (tweenType)
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0401F0F5 RID: 127221
+		// Token: 0x04019BA6 RID: 105382
 		[Nullable(new byte[]
 		{
 			2,
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private List<ULGUIPlayTweenComponent> TweenInComps;
 
-		// Token: 0x0401F0F6 RID: 127222
+		// Token: 0x04019BA7 RID: 105383
 		[Nullable(new byte[]
 		{
 			2,
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private List<ULGUIPlayTweenComponent> TweenOutComps;
 
-		// Token: 0x0401F0F7 RID: 127223
+		// Token: 0x04019BA8 RID: 105384
 		[Nullable(new byte[]
 		{
 			2,
@@ -271,37 +271,37 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private List<ULGUIPlayTweenComponent> TweenRedComps;
 
-		// Token: 0x0401F0F8 RID: 127224
+		// Token: 0x04019BA9 RID: 105385
 		[Nullable(2)]
 		private UUISprite ArrowSprite;
 
-		// Token: 0x0401F0F9 RID: 127225
+		// Token: 0x04019BAA RID: 105386
 		private int Index;
 
-		// Token: 0x0401F0FA RID: 127226
+		// Token: 0x04019BAB RID: 105387
 		private float StartProgress;
 
-		// Token: 0x0401F0FB RID: 127227
+		// Token: 0x04019BAC RID: 105388
 		private bool IsPlayTweenIn;
 
-		// Token: 0x0401F0FC RID: 127228
+		// Token: 0x04019BAD RID: 105389
 		private bool IsPlayTweenOut;
 
-		// Token: 0x0401F0FD RID: 127229
+		// Token: 0x04019BAE RID: 105390
 		private bool IsPlayTweenRed;
 
-		// Token: 0x0200BE3F RID: 48703
+		// Token: 0x0200A847 RID: 43079
 		private enum EComponentType
 		{
-			// Token: 0x040395F3 RID: 234995
+			// Token: 0x04033FB6 RID: 212918
 			ArrowSprite,
-			// Token: 0x040395F4 RID: 234996
+			// Token: 0x04033FB7 RID: 212919
 			TweenIn,
-			// Token: 0x040395F5 RID: 234997
+			// Token: 0x04033FB8 RID: 212920
 			TweenOut,
-			// Token: 0x040395F6 RID: 234998
+			// Token: 0x04033FB9 RID: 212921
 			TweenBreakOff,
-			// Token: 0x040395F7 RID: 234999
+			// Token: 0x04033FBA RID: 212922
 			TweenRed
 		}
 	}

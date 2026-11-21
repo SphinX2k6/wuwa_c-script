@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016D3 RID: 5843
+	// Token: 0x0200184E RID: 6222
 	public enum ETeleportType
 	{
-		// Token: 0x04004F00 RID: 20224
+		// Token: 0x0400532A RID: 21290
 		FixedPos,
-		// Token: 0x04004F01 RID: 20225
+		// Token: 0x0400532B RID: 21291
 		NearestEntity,
-		// Token: 0x04004F02 RID: 20226
+		// Token: 0x0400532C RID: 21292
 		GravityFlipFixedPos,
-		// Token: 0x04004F03 RID: 20227
+		// Token: 0x0400532D RID: 21293
 		SafePos
 	}
 }

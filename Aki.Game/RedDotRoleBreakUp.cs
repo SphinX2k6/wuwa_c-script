@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200341F RID: 13343
+// Token: 0x02002991 RID: 10641
 public class RedDotRoleBreakUp : RedDotBase
 {
-	// Token: 0x0601CD7A RID: 118138 RVA: 0x0080C498 File Offset: 0x0080A698
+	// Token: 0x0601AA72 RID: 109170 RVA: 0x00832A5C File Offset: 0x00830C5C
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CD7B RID: 118139 RVA: 0x0080C49C File Offset: 0x0080A69C
+	// Token: 0x0601AA73 RID: 109171 RVA: 0x00832A60 File Offset: 0x00830C60
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int, int, int>(EEventName.RoleLevelUp, new Action<int, int, int>(this.OnRoleLevelUp));
@@ -20,7 +20,7 @@ public class RedDotRoleBreakUp : RedDotBase
 		EventSystem.Instance.Add<int>(EEventName.ActiveRole, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CD7C RID: 118140 RVA: 0x0080C538 File Offset: 0x0080A738
+	// Token: 0x0601AA74 RID: 109172 RVA: 0x00832AFC File Offset: 0x00830CFC
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int, int, int>(EEventName.RoleLevelUp, new Action<int, int, int>(this.OnRoleLevelUp));
@@ -30,19 +30,19 @@ public class RedDotRoleBreakUp : RedDotBase
 		EventSystem.Instance.Remove<int>(EEventName.ActiveRole, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CD7D RID: 118141 RVA: 0x0080C5D1 File Offset: 0x0080A7D1
+	// Token: 0x0601AA75 RID: 109173 RVA: 0x00832B95 File Offset: 0x00830D95
 	protected override bool OnCheck(int uId = 0)
 	{
 		return RoleModel.Instance.RedDotAttributeTabBreakUpCondition(uId);
 	}
 
-	// Token: 0x0601CD7E RID: 118142 RVA: 0x0080C5DE File Offset: 0x0080A7DE
+	// Token: 0x0601AA76 RID: 109174 RVA: 0x00832BA2 File Offset: 0x00830DA2
 	private void OnRoleLevelUp(int roleId, int oldLevel, int newLevel)
 	{
 		base.EventCheckWithUid(roleId);
 	}
 
-	// Token: 0x0601CD7F RID: 118143 RVA: 0x0080C5E7 File Offset: 0x0080A7E7
+	// Token: 0x0601AA77 RID: 109175 RVA: 0x00832BAB File Offset: 0x00830DAB
 	private void OnRoleBreakUp(int roleId, int level)
 	{
 		base.EventCheckWithUid(roleId);

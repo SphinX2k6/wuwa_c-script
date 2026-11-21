@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EDF RID: 7903
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002118 RID: 8472
 	public class ISubScreenModeInit : ISubScreenModeConfig
 	{
-		// Token: 0x0600A916 RID: 43286 RVA: 0x0017D7C8 File Offset: 0x0017B9C8
+		// Token: 0x0600B3E8 RID: 46056 RVA: 0x001937C0 File Offset: 0x001919C0
 		private ISubScreenModeInit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A917 RID: 43287 RVA: 0x0017D800 File Offset: 0x0017BA00
+		// Token: 0x0600B3E9 RID: 46057 RVA: 0x001937F8 File Offset: 0x001919F8
 		public static ISubScreenModeInit Create([Nullable(2)] ISubScreenModeInit instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A918 RID: 43288 RVA: 0x0017D813 File Offset: 0x0017BA13
+		// Token: 0x0600B3EA RID: 46058 RVA: 0x0019380B File Offset: 0x00191A0B
 		public static ISubScreenModeInit CreateFromSetValue([Nullable(2)] ISubScreenModeInit_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A919 RID: 43289 RVA: 0x0017D826 File Offset: 0x0017BA26
+		// Token: 0x0600B3EB RID: 46059 RVA: 0x0019381E File Offset: 0x00191A1E
 		public new ISubScreenModeInit_SetValue ToSetValue()
 		{
 			return new ISubScreenModeInit_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003394 RID: 13204
-		// (get) Token: 0x0600A91A RID: 43290 RVA: 0x0017D845 File Offset: 0x0017BA45
-		// (set) Token: 0x0600A91B RID: 43291 RVA: 0x0017D870 File Offset: 0x0017BA70
+		// Token: 0x1700365F RID: 13919
+		// (get) Token: 0x0600B3EC RID: 46060 RVA: 0x0019383D File Offset: 0x00191A3D
+		// (set) Token: 0x0600B3ED RID: 46061 RVA: 0x00193868 File Offset: 0x00191A68
 		public override ESubScreenOperationType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003395 RID: 13205
-		// (get) Token: 0x0600A91C RID: 43292 RVA: 0x0017D87E File Offset: 0x0017BA7E
-		// (set) Token: 0x0600A91D RID: 43293 RVA: 0x0017D8A5 File Offset: 0x0017BAA5
+		// Token: 0x17003660 RID: 13920
+		// (get) Token: 0x0600B3EE RID: 46062 RVA: 0x00193876 File Offset: 0x00191A76
+		// (set) Token: 0x0600B3EF RID: 46063 RVA: 0x0019389D File Offset: 0x00191A9D
 		public virtual List<ISubScreenInitData> InitConfigs
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064A9 RID: 25769
+		// Token: 0x04006A98 RID: 27288
 		[Nullable(2)]
 		protected new ISubScreenModeInit FbInstance;
 
-		// Token: 0x040064AA RID: 25770
+		// Token: 0x04006A99 RID: 27289
 		[Nullable(2)]
 		protected new ISubScreenModeInit_SetValue PocoInterface;
 	}

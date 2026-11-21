@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CEC RID: 3308
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000DE4 RID: 3556
 	public class IEntityBundleChildInfo
 	{
-		// Token: 0x06004B8F RID: 19343 RVA: 0x000BCACF File Offset: 0x000BACCF
-		[NullableContext(1)]
+		// Token: 0x0600509D RID: 20637 RVA: 0x000C7FFD File Offset: 0x000C61FD
 		public static IEntityBundleChildInfo Create(IEntityBundleChildInfo? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001774 RID: 6004
-		// (get) Token: 0x06004B90 RID: 19344 RVA: 0x000BCAEE File Offset: 0x000BACEE
+		// Token: 0x170018D0 RID: 6352
+		// (get) Token: 0x0600509E RID: 20638 RVA: 0x000C801C File Offset: 0x000C621C
 		public virtual bool IsDisable
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001775 RID: 6005
-		// (get) Token: 0x06004B91 RID: 19345 RVA: 0x000BCAFB File Offset: 0x000BACFB
+		// Token: 0x170018D1 RID: 6353
+		// (get) Token: 0x0600509F RID: 20639 RVA: 0x000C8029 File Offset: 0x000C6229
 		public virtual int ChildId
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001776 RID: 6006
-		// (get) Token: 0x06004B92 RID: 19346 RVA: 0x000BCB08 File Offset: 0x000BAD08
+		// Token: 0x170018D2 RID: 6354
+		// (get) Token: 0x060050A0 RID: 20640 RVA: 0x000C8036 File Offset: 0x000C6236
 		public virtual int EntityId
 		{
 			get
@@ -54,17 +51,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001777 RID: 6007
-		// (get) Token: 0x06004B93 RID: 19347 RVA: 0x000BCB15 File Offset: 0x000BAD15
+		// Token: 0x170018D3 RID: 6355
+		// (get) Token: 0x060050A1 RID: 20641 RVA: 0x000C8043 File Offset: 0x000C6243
+		[Nullable(2)]
 		public virtual IEntityData DiffDataByBundle
 		{
+			[NullableContext(2)]
 			get
 			{
 				return null;
 			}
 		}
 
-		// Token: 0x04002B33 RID: 11059
+		// Token: 0x04002DED RID: 11757
 		private IEntityBundleChildInfo Instance;
 	}
 }

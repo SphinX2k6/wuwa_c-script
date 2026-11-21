@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001162 RID: 4450
+	// Token: 0x02001298 RID: 4760
 	public struct TrapDefenseGoldenCoin : IFlatbufferObject
 	{
-		// Token: 0x17003C2A RID: 15402
-		// (get) Token: 0x0600E39F RID: 58271 RVA: 0x00338BDC File Offset: 0x00336DDC
+		// Token: 0x17003F8E RID: 16270
+		// (get) Token: 0x0600F10D RID: 61709 RVA: 0x00363BC0 File Offset: 0x00361DC0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E3A0 RID: 58272 RVA: 0x00338BE9 File Offset: 0x00336DE9
+		// Token: 0x0600F10E RID: 61710 RVA: 0x00363BCD File Offset: 0x00361DCD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E3A1 RID: 58273 RVA: 0x00338BF0 File Offset: 0x00336DF0
+		// Token: 0x0600F10F RID: 61711 RVA: 0x00363BD4 File Offset: 0x00361DD4
 		public static TrapDefenseGoldenCoin GetRootAsTrapDefenseGoldenCoin(ByteBuffer _bb)
 		{
 			return TrapDefenseGoldenCoin.GetRootAsTrapDefenseGoldenCoin(_bb, default(TrapDefenseGoldenCoin));
 		}
 
-		// Token: 0x0600E3A2 RID: 58274 RVA: 0x00338C0C File Offset: 0x00336E0C
+		// Token: 0x0600F110 RID: 61712 RVA: 0x00363BF0 File Offset: 0x00361DF0
 		public static TrapDefenseGoldenCoin GetRootAsTrapDefenseGoldenCoin(ByteBuffer _bb, TrapDefenseGoldenCoin obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E3A3 RID: 58275 RVA: 0x00338C29 File Offset: 0x00336E29
+		// Token: 0x0600F111 RID: 61713 RVA: 0x00363C0D File Offset: 0x00361E0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E3A4 RID: 58276 RVA: 0x00338C38 File Offset: 0x00336E38
+		// Token: 0x0600F112 RID: 61714 RVA: 0x00363C1C File Offset: 0x00361E1C
 		public TrapDefenseGoldenCoin __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003C2B RID: 15403
-		// (get) Token: 0x0600E3A5 RID: 58277 RVA: 0x00338C48 File Offset: 0x00336E48
+		// Token: 0x17003F8F RID: 16271
+		// (get) Token: 0x0600F113 RID: 61715 RVA: 0x00363C2C File Offset: 0x00361E2C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C2C RID: 15404
-		// (get) Token: 0x0600E3A6 RID: 58278 RVA: 0x00338C84 File Offset: 0x00336E84
+		// Token: 0x17003F90 RID: 16272
+		// (get) Token: 0x0600F114 RID: 61716 RVA: 0x00363C68 File Offset: 0x00361E68
 		public int TemplateId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C2D RID: 15405
-		// (get) Token: 0x0600E3A7 RID: 58279 RVA: 0x00338CC0 File Offset: 0x00336EC0
+		// Token: 0x17003F91 RID: 16273
+		// (get) Token: 0x0600F115 RID: 61717 RVA: 0x00363CA4 File Offset: 0x00361EA4
 		public int SimpleCombatSubtypeId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C2E RID: 15406
-		// (get) Token: 0x0600E3A8 RID: 58280 RVA: 0x00338CFC File Offset: 0x00336EFC
+		// Token: 0x17003F92 RID: 16274
+		// (get) Token: 0x0600F116 RID: 61718 RVA: 0x00363CE0 File Offset: 0x00361EE0
 		public int AbsorbGold
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052A8 RID: 21160
+		// Token: 0x040058EB RID: 22763
 		private Table __p;
 	}
 }

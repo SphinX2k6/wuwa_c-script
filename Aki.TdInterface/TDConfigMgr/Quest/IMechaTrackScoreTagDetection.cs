@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200100F RID: 4111
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200113B RID: 4411
 	public class IMechaTrackScoreTagDetection : IMechaTrackScoreDetectionType
 	{
-		// Token: 0x06005BBC RID: 23484 RVA: 0x000DE8D0 File Offset: 0x000DCAD0
+		// Token: 0x0600619C RID: 24988 RVA: 0x000EB510 File Offset: 0x000E9710
 		private IMechaTrackScoreTagDetection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005BBD RID: 23485 RVA: 0x000DE908 File Offset: 0x000DCB08
+		// Token: 0x0600619D RID: 24989 RVA: 0x000EB548 File Offset: 0x000E9748
 		public static IMechaTrackScoreTagDetection Create([Nullable(2)] IMechaTrackScoreTagDetection instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BBE RID: 23486 RVA: 0x000DE91B File Offset: 0x000DCB1B
+		// Token: 0x0600619E RID: 24990 RVA: 0x000EB55B File Offset: 0x000E975B
 		public static IMechaTrackScoreTagDetection CreateFromSetValue([Nullable(2)] IMechaTrackScoreTagDetection_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BBF RID: 23487 RVA: 0x000DE92E File Offset: 0x000DCB2E
+		// Token: 0x0600619F RID: 24991 RVA: 0x000EB56E File Offset: 0x000E976E
 		public new IMechaTrackScoreTagDetection_SetValue ToSetValue()
 		{
 			return new IMechaTrackScoreTagDetection_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E49 RID: 7753
-		// (get) Token: 0x06005BC0 RID: 23488 RVA: 0x000DE941 File Offset: 0x000DCB41
-		// (set) Token: 0x06005BC1 RID: 23489 RVA: 0x000DE96C File Offset: 0x000DCB6C
+		// Token: 0x17001FF2 RID: 8178
+		// (get) Token: 0x060061A0 RID: 24992 RVA: 0x000EB581 File Offset: 0x000E9781
+		// (set) Token: 0x060061A1 RID: 24993 RVA: 0x000EB5AC File Offset: 0x000E97AC
 		public override EMechaTrackScoreDetectionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003740 RID: 14144
+		// Token: 0x04003A78 RID: 14968
 		[Nullable(2)]
 		protected new IMechaTrackScoreTagDetection FbInstance;
 
-		// Token: 0x04003741 RID: 14145
+		// Token: 0x04003A79 RID: 14969
 		[Nullable(2)]
 		protected new IMechaTrackScoreTagDetection_SetValue PocoInterface;
 	}

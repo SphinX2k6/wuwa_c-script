@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019C9 RID: 6601
+	// Token: 0x02001B56 RID: 6998
 	public class IDurationInteract_SetValue
 	{
-		// Token: 0x040057D8 RID: 22488
+		// Token: 0x04005C2D RID: 23597
 		public float Duration;
 	}
 }

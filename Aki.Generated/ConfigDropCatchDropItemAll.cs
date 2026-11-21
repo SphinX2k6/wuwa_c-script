@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000235 RID: 565
+	// Token: 0x02000247 RID: 583
 	public class ConfigDropCatchDropItemAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000D42 RID: 3394 RVA: 0x000A4848 File Offset: 0x000A2A48
+		// Token: 0x06000DAE RID: 3502 RVA: 0x000AA780 File Offset: 0x000A8980
 		static ConfigDropCatchDropItemAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDropCatchDropItemAll.CreateStaticDefaultValue), new Action(ConfigDropCatchDropItemAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000D43 RID: 3395 RVA: 0x000A4868 File Offset: 0x000A2A68
+		// Token: 0x06000DAF RID: 3503 RVA: 0x000AA7A0 File Offset: 0x000A89A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDropCatchDropItemAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000D44 RID: 3396 RVA: 0x000A48E7 File Offset: 0x000A2AE7
+		// Token: 0x06000DB0 RID: 3504 RVA: 0x000AA81F File Offset: 0x000A8A1F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDropCatchDropItemAll.LogPair = null;
 			ConfigDropCatchDropItemAll.HandleId = 0;
 		}
 
-		// Token: 0x06000D45 RID: 3397 RVA: 0x000A48F5 File Offset: 0x000A2AF5
+		// Token: 0x06000DB1 RID: 3505 RVA: 0x000AA82D File Offset: 0x000A8A2D
 		public static void Init()
 		{
 			ConfigDropCatchDropItemAll.HandleId = ConfigCommon.InitDataStatement(ConfigDropCatchDropItemAll.HandleId, "db_dropcatch.db", "select BinData from `DropCatchDropItem`");
 		}
 
-		// Token: 0x06000D46 RID: 3398 RVA: 0x000A4910 File Offset: 0x000A2B10
+		// Token: 0x06000DB2 RID: 3506 RVA: 0x000AA848 File Offset: 0x000A8A48
 		[NullableContext(2)]
 		public static IReadOnlyList<DropCatchDropItem> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000F57 RID: 3927
+		// Token: 0x04000FD5 RID: 4053
 		private const string DB = "db_dropcatch.db";
 
-		// Token: 0x04000F58 RID: 3928
+		// Token: 0x04000FD6 RID: 4054
 		private const string FILE = "j.接金币活动.xlsx";
 
-		// Token: 0x04000F59 RID: 3929
+		// Token: 0x04000FD7 RID: 4055
 		private const string TABLE = "DropCatchDropItem";
 
-		// Token: 0x04000F5A RID: 3930
+		// Token: 0x04000FD8 RID: 4056
 		private const string COMMAND = "select BinData from `DropCatchDropItem`";
 
-		// Token: 0x04000F5B RID: 3931
+		// Token: 0x04000FD9 RID: 4057
 		private const string KEY_PREFIX = "DropCatchDropItemAll";
 
-		// Token: 0x04000F5C RID: 3932
+		// Token: 0x04000FDA RID: 4058
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000F5D RID: 3933
+		// Token: 0x04000FDB RID: 4059
 		private static int HandleId;
 	}
 }

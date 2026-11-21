@@ -9,12 +9,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D0 RID: 20688
+	// Token: 0x020040A0 RID: 16544
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowActionSetEntityVisible : FlowActionServerAction
 	{
-		// Token: 0x06034F27 RID: 216871 RVA: 0x00C8A75C File Offset: 0x00C8895C
+		// Token: 0x06029E20 RID: 171552 RVA: 0x00BD7A44 File Offset: 0x00BD5C44
 		protected unsafe override void OnExecute()
 		{
 			if (AutoRunModel.Instance.IsInLogicTreeGmMode())
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.Task = WaitEntityTask.CreateWithPbDataId("FlowActionSetEntityVisible.OnExecute", setEntityVisible.EntityIds, new Action<bool?>(this.OnEntityReady), 20000, !setEntityVisible.Visible, false);
 		}
 
-		// Token: 0x06034F28 RID: 216872 RVA: 0x00C8A964 File Offset: 0x00C88B64
+		// Token: 0x06029E21 RID: 171553 RVA: 0x00BD7C4C File Offset: 0x00BD5E4C
 		private void OnEntityReady(bool? result)
 		{
 			this.Task = null;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F29 RID: 216873 RVA: 0x00C8AA88 File Offset: 0x00C88C88
+		// Token: 0x06029E22 RID: 171554 RVA: 0x00BD7D70 File Offset: 0x00BD5F70
 		private void HandleEntityVisible(int pbDataId, Entity entity, bool visible, bool? performDestroy, Dictionary<int, int> entityStateTagIdMap)
 		{
 			if (visible)
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			CreatureController.Instance.SetEntityEnable(entity, false, "FlowActionSetEntityVisible.OnEntityReady", false);
 		}
 
-		// Token: 0x06034F2A RID: 216874 RVA: 0x00C8AB3C File Offset: 0x00C88D3C
+		// Token: 0x06029E23 RID: 171555 RVA: 0x00BD7E24 File Offset: 0x00BD6024
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034F2B RID: 216875 RVA: 0x00C8AB44 File Offset: 0x00C88D44
+		// Token: 0x06029E24 RID: 171556 RVA: 0x00BD7E2C File Offset: 0x00BD602C
 		protected override void OnInterruptExecute()
 		{
 			WaitEntityTask task = this.Task;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F2C RID: 216876 RVA: 0x00C8AB68 File Offset: 0x00C88D68
+		// Token: 0x06029E25 RID: 171557 RVA: 0x00BD7E50 File Offset: 0x00BD6050
 		protected override void OnRollback(ActionRecord actionRecord, FlowContext context)
 		{
 			SetEntityVisibleActionRecord setEntityVisibleActionRecord = actionRecord as SetEntityVisibleActionRecord;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x0401C30C RID: 115468
+		// Token: 0x04016D3D RID: 93501
 		[Nullable(2)]
 		public WaitEntityTask Task;
 	}

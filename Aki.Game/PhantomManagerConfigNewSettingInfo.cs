@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002416 RID: 9238
+// Token: 0x020018FB RID: 6395
 public class PhantomManagerConfigNewSettingInfo : IPhantomManagerConfigNewSettingInfo
 {
-	// Token: 0x170017E9 RID: 6121
-	// (get) Token: 0x060127E5 RID: 75749 RVA: 0x0048F411 File Offset: 0x0048D611
-	// (set) Token: 0x060127E6 RID: 75750 RVA: 0x0048F419 File Offset: 0x0048D619
+	// Token: 0x17001823 RID: 6179
+	// (get) Token: 0x0600FC9B RID: 64667 RVA: 0x0049CA2D File Offset: 0x0049AC2D
+	// (set) Token: 0x0600FC9C RID: 64668 RVA: 0x0049CA35 File Offset: 0x0049AC35
 	public int FetterId { get; set; }
 
-	// Token: 0x170017EA RID: 6122
-	// (get) Token: 0x060127E7 RID: 75751 RVA: 0x0048F422 File Offset: 0x0048D622
-	// (set) Token: 0x060127E8 RID: 75752 RVA: 0x0048F42A File Offset: 0x0048D62A
+	// Token: 0x17001824 RID: 6180
+	// (get) Token: 0x0600FC9D RID: 64669 RVA: 0x0049CA3E File Offset: 0x0049AC3E
+	// (set) Token: 0x0600FC9E RID: 64670 RVA: 0x0049CA46 File Offset: 0x0049AC46
 	public int Cost { get; set; }
 
-	// Token: 0x170017EB RID: 6123
-	// (get) Token: 0x060127E9 RID: 75753 RVA: 0x0048F433 File Offset: 0x0048D633
-	// (set) Token: 0x060127EA RID: 75754 RVA: 0x0048F43B File Offset: 0x0048D63B
+	// Token: 0x17001825 RID: 6181
+	// (get) Token: 0x0600FC9F RID: 64671 RVA: 0x0049CA4F File Offset: 0x0049AC4F
+	// (set) Token: 0x0600FCA0 RID: 64672 RVA: 0x0049CA57 File Offset: 0x0049AC57
 	public int Count { get; set; }
 
-	// Token: 0x170017EC RID: 6124
-	// (get) Token: 0x060127EB RID: 75755 RVA: 0x0048F444 File Offset: 0x0048D644
-	// (set) Token: 0x060127EC RID: 75756 RVA: 0x0048F44C File Offset: 0x0048D64C
+	// Token: 0x17001826 RID: 6182
+	// (get) Token: 0x0600FCA1 RID: 64673 RVA: 0x0049CA60 File Offset: 0x0049AC60
+	// (set) Token: 0x0600FCA2 RID: 64674 RVA: 0x0049CA68 File Offset: 0x0049AC68
 	public int ItemId { get; set; }
 
-	// Token: 0x170017ED RID: 6125
-	// (get) Token: 0x060127ED RID: 75757 RVA: 0x0048F455 File Offset: 0x0048D655
-	// (set) Token: 0x060127EE RID: 75758 RVA: 0x0048F45D File Offset: 0x0048D65D
+	// Token: 0x17001827 RID: 6183
+	// (get) Token: 0x0600FCA3 RID: 64675 RVA: 0x0049CA71 File Offset: 0x0049AC71
+	// (set) Token: 0x0600FCA4 RID: 64676 RVA: 0x0049CA79 File Offset: 0x0049AC79
 	public bool IsEdit { get; set; }
 }

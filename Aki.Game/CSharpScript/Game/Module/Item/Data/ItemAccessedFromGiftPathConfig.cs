@@ -5,19 +5,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Item.Data
 {
-	// Token: 0x0200582E RID: 22574
+	// Token: 0x02004805 RID: 18437
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ItemAccessedFromGiftPathConfig : ConfigBase
 	{
-		// Token: 0x0603959B RID: 234907 RVA: 0x00D9A067 File Offset: 0x00D98267
+		// Token: 0x0602E4AF RID: 189615 RVA: 0x00CE8EFB File Offset: 0x00CE70FB
 		public ItemAccessedPath? GetItemAccessedFromGiftPathConfig(int id)
 		{
 			return ConfigItemAccessedPathById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603959C RID: 234908 RVA: 0x00D9A070 File Offset: 0x00D98270
+		// Token: 0x0602E4B0 RID: 189616 RVA: 0x00CE8F04 File Offset: 0x00CE7104
 		public unsafe List<int> GetGiftItemGroupById(int itemID, bool ignoreNotExistError = false)
 		{
 			List<int> list = new List<int>();
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.Item.Data
 			return list;
 		}
 
-		// Token: 0x17008A2C RID: 35372
-		// (get) Token: 0x0603959D RID: 234909 RVA: 0x00D9A242 File Offset: 0x00D98442
+		// Token: 0x17005DF6 RID: 24054
+		// (get) Token: 0x0602E4B1 RID: 189617 RVA: 0x00CE90D6 File Offset: 0x00CE72D6
 		public static ItemAccessedFromGiftPathConfig Instance
 		{
 			get
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Item.Data
 			}
 		}
 
-		// Token: 0x0603959E RID: 234910 RVA: 0x00D9A249 File Offset: 0x00D98449
+		// Token: 0x0602E4B2 RID: 189618 RVA: 0x00CE90DD File Offset: 0x00CE72DD
 		public static ItemAccessedFromGiftPathConfig GetOrCreateInstance()
 		{
 			if (ItemAccessedFromGiftPathConfig._Instance == null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Item.Data
 			return ItemAccessedFromGiftPathConfig._Instance;
 		}
 
-		// Token: 0x0603959F RID: 234911 RVA: 0x00D9A25D File Offset: 0x00D9845D
+		// Token: 0x0602E4B3 RID: 189619 RVA: 0x00CE90F1 File Offset: 0x00CE72F1
 		public static bool CreateInstance()
 		{
 			if (ItemAccessedFromGiftPathConfig._Instance != null)
@@ -103,24 +103,24 @@ namespace CSharpScript.Game.Module.Item.Data
 			return true;
 		}
 
-		// Token: 0x060395A0 RID: 234912 RVA: 0x00D9A273 File Offset: 0x00D98473
+		// Token: 0x0602E4B4 RID: 189620 RVA: 0x00CE9107 File Offset: 0x00CE7307
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060395A1 RID: 234913 RVA: 0x00D9A275 File Offset: 0x00D98475
+		// Token: 0x0602E4B5 RID: 189621 RVA: 0x00CE9109 File Offset: 0x00CE7309
 		public static void ResetStaticDefaultValue()
 		{
 			ItemAccessedFromGiftPathConfig._Instance = null;
 		}
 
-		// Token: 0x060395A2 RID: 234914 RVA: 0x00D9A27D File Offset: 0x00D9847D
+		// Token: 0x0602E4B6 RID: 189622 RVA: 0x00CE9111 File Offset: 0x00CE7311
 		static ItemAccessedFromGiftPathConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemAccessedFromGiftPathConfig.CreateStaticDefaultValue), new Action(ItemAccessedFromGiftPathConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DFE3 RID: 122851
+		// Token: 0x04018A7C RID: 100988
 		[Nullable(2)]
 		private static ItemAccessedFromGiftPathConfig _Instance;
 	}

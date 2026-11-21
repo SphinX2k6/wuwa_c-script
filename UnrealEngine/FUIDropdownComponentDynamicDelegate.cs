@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200213E RID: 8510
+	// Token: 0x020006F2 RID: 1778
 	public sealed class FUIDropdownComponentDynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060200DF RID: 131295 RVA: 0x002FAADC File Offset: 0x002F8CDC
+		// Token: 0x06009731 RID: 38705 RVA: 0x000E414A File Offset: 0x000E234A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FUIDropdownComponentDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x060200E0 RID: 131296 RVA: 0x002FAAE8 File Offset: 0x002F8CE8
+		// Token: 0x06009732 RID: 38706 RVA: 0x000E4156 File Offset: 0x000E2356
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FUIDropdownComponentDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FUIDropdownComponentDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x060200E1 RID: 131297 RVA: 0x002FAB0B File Offset: 0x002F8D0B
+		// Token: 0x06009733 RID: 38707 RVA: 0x000E4179 File Offset: 0x000E2379
 		public FUIDropdownComponentDynamicDelegate()
 		{
 		}
 
-		// Token: 0x060200E2 RID: 131298 RVA: 0x002FAB13 File Offset: 0x002F8D13
+		// Token: 0x06009734 RID: 38708 RVA: 0x000E4181 File Offset: 0x000E2381
 		[NullableContext(2)]
 		public FUIDropdownComponentDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060200E3 RID: 131299 RVA: 0x002FAB1D File Offset: 0x002F8D1D
+		// Token: 0x06009735 RID: 38709 RVA: 0x000E418B File Offset: 0x000E238B
 		public FUIDropdownComponentDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060200E4 RID: 131300 RVA: 0x002FAB28 File Offset: 0x002F8D28
+		// Token: 0x06009736 RID: 38710 RVA: 0x000E4196 File Offset: 0x000E2396
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060200E5 RID: 131301 RVA: 0x002FAB5A File Offset: 0x002F8D5A
+		// Token: 0x06009737 RID: 38711 RVA: 0x000E41C8 File Offset: 0x000E23C8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FUIDropdownComponentDynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FUIDropdownComponentDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x060200E6 RID: 131302 RVA: 0x002FAB94 File Offset: 0x002F8D94
+		// Token: 0x06009738 RID: 38712 RVA: 0x000E4204 File Offset: 0x000E2404
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int InSelectIndex)
 		{
 			FUIDropdownComponentDynamicDelegate.__FUIDropdownComponentDynamicDelegate_DelegateParams* ptr = stackalloc FUIDropdownComponentDynamicDelegate.__FUIDropdownComponentDynamicDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FUIDropdownComponentDynamicDelegate.__FUIDropdownComponentDynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x060200E7 RID: 131303 RVA: 0x002FABD4 File Offset: 0x002F8DD4
+		// Token: 0x06009739 RID: 38713 RVA: 0x000E4244 File Offset: 0x000E2444
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FUIDropdownComponentDynamicDelegate.__FUIDropdownComponentDynamicDelegate_DelegateParams*)__Parameters)->InSelectIndex);
 		}
 
-		// Token: 0x04011418 RID: 70680
+		// Token: 0x040041CA RID: 16842
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011419 RID: 70681
+		// Token: 0x040041CB RID: 16843
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.UIDropdownComponentDynamicDelegate__DelegateSignature";
 
-		// Token: 0x0401141A RID: 70682
+		// Token: 0x040041CC RID: 16844
 		private static int RegisterId;
 
-		// Token: 0x020034F3 RID: 13555
+		// Token: 0x02000F16 RID: 3862
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FUIDropdownComponentDynamicDelegate_DelegateParams
+		private ref struct __FUIDropdownComponentDynamicDelegate_DelegateParams
 		{
-			// Token: 0x04017517 RID: 95511
+			// Token: 0x040062E5 RID: 25317
 			[FieldOffset(0)]
 			public int InSelectIndex;
 		}
 
-		// Token: 0x020034F4 RID: 13556
+		// Token: 0x02000F17 RID: 3863
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017518 RID: 95512
+			// Token: 0x040062E6 RID: 25318
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

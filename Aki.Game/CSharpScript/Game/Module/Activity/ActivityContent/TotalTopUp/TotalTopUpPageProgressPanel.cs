@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FBC RID: 24508
+	// Token: 0x02004FA3 RID: 20387
 	public class TotalTopUpPageProgressPanel : UiPanelBase
 	{
-		// Token: 0x0603E207 RID: 254471 RVA: 0x00F01088 File Offset: 0x00EFF288
+		// Token: 0x060331A1 RID: 209313 RVA: 0x00E52D44 File Offset: 0x00E50F44
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E208 RID: 254472 RVA: 0x00F01124 File Offset: 0x00EFF324
+		// Token: 0x060331A2 RID: 209314 RVA: 0x00E52DE0 File Offset: 0x00E50FE0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUpPageProgressPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E209 RID: 254473 RVA: 0x00F01168 File Offset: 0x00EFF368
+		// Token: 0x060331A3 RID: 209315 RVA: 0x00E52E24 File Offset: 0x00E51024
 		[NullableContext(1)]
 		public void Refresh(TotalTopUpPageViewModel viewModel)
 		{
@@ -71,33 +71,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item2.SetUIActive(!flag);
 		}
 
-		// Token: 0x0402074A RID: 132938
+		// Token: 0x0401B21C RID: 111132
 		[Nullable(2)]
 		private TotalTopUpPageViewModel PageViewModel;
 
-		// Token: 0x0402074B RID: 132939
+		// Token: 0x0401B21D RID: 111133
 		[Nullable(2)]
 		private TotalTopUpPageGetScoreBtnItem GetScoreBtn;
 
-		// Token: 0x0200C293 RID: 49811
+		// Token: 0x0200AC9E RID: 44190
 		private class ENode
 		{
-			// Token: 0x0403AC76 RID: 240758
+			// Token: 0x04035652 RID: 218706
 			public const int TextCurrentScore = 0;
 
-			// Token: 0x0403AC77 RID: 240759
+			// Token: 0x04035653 RID: 218707
 			public const int TextNextScore = 1;
 
-			// Token: 0x0403AC78 RID: 240760
+			// Token: 0x04035654 RID: 218708
 			public const int SpriteProgressBar = 2;
 
-			// Token: 0x0403AC79 RID: 240761
+			// Token: 0x04035655 RID: 218709
 			public const int BtnGetScore = 3;
 
-			// Token: 0x0403AC7A RID: 240762
+			// Token: 0x04035656 RID: 218710
 			public const int ItemProgressBar = 4;
 
-			// Token: 0x0403AC7B RID: 240763
+			// Token: 0x04035657 RID: 218711
 			public const int ItemFinished = 5;
 		}
 	}

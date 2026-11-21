@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022C5 RID: 8901
+	// Token: 0x02002534 RID: 9524
 	public static class EBvbPlayDialogTypeExtensions
 	{
-		// Token: 0x0600C2F5 RID: 49909 RVA: 0x001C7BA8 File Offset: 0x001C5DA8
+		// Token: 0x0600CEC4 RID: 52932 RVA: 0x001DF9B0 File Offset: 0x001DDBB0
 		public static string ToEnumString(this EBvbPlayDialogType value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2F6 RID: 49910 RVA: 0x001C7C08 File Offset: 0x001C5E08
+		// Token: 0x0600CEC5 RID: 52933 RVA: 0x001DFA10 File Offset: 0x001DDC10
 		public static EBvbPlayDialogType FromString(string name)
 		{
 			EBvbPlayDialogType result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2F7 RID: 49911 RVA: 0x001C7C34 File Offset: 0x001C5E34
+		// Token: 0x0600CEC6 RID: 52934 RVA: 0x001DFA3C File Offset: 0x001DDC3C
 		public static bool TryFromString(string name, out EBvbPlayDialogType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C2F8 RID: 49912 RVA: 0x001C7CAE File Offset: 0x001C5EAE
+		// Token: 0x0600CEC7 RID: 52935 RVA: 0x001DFAB6 File Offset: 0x001DDCB6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2F9 RID: 49913 RVA: 0x001C7CDE File Offset: 0x001C5EDE
+		// Token: 0x0600CEC8 RID: 52936 RVA: 0x001DFAE6 File Offset: 0x001DDCE6
 		public static EBvbPlayDialogType[] GetValues()
 		{
 			return new EBvbPlayDialogType[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2FA RID: 49914 RVA: 0x001C7CF1 File Offset: 0x001C5EF1
+		// Token: 0x0600CEC9 RID: 52937 RVA: 0x001DFAF9 File Offset: 0x001DDCF9
 		public static string[] GetNames()
 		{
 			return new string[]

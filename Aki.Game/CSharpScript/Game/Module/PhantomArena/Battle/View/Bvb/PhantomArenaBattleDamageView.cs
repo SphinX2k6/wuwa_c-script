@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 {
-	// Token: 0x0200526D RID: 21101
+	// Token: 0x0200423D RID: 16957
 	public class PhantomArenaBattleDamageView : UiViewBase
 	{
-		// Token: 0x06035F48 RID: 221000 RVA: 0x00CC3C9A File Offset: 0x00CC1E9A
+		// Token: 0x0602AE43 RID: 175683 RVA: 0x00C1139A File Offset: 0x00C0F59A
 		[NullableContext(1)]
 		public PhantomArenaBattleDamageView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035F49 RID: 221001 RVA: 0x00CC3CA4 File Offset: 0x00CC1EA4
+		// Token: 0x0602AE44 RID: 175684 RVA: 0x00C113A4 File Offset: 0x00C0F5A4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			};
 		}
 
-		// Token: 0x06035F4A RID: 221002 RVA: 0x00CC3D00 File Offset: 0x00CC1F00
+		// Token: 0x0602AE45 RID: 175685 RVA: 0x00C11400 File Offset: 0x00C0F600
 		protected override void OnStart()
 		{
 			int? num = this.OpenParam as int?;
@@ -51,16 +51,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}
 		}
 
-		// Token: 0x0200B457 RID: 46167
+		// Token: 0x02009E8F RID: 40591
 		private class EComponentDefine
 		{
-			// Token: 0x04036A41 RID: 223809
+			// Token: 0x04031494 RID: 201876
 			public const int ArtText1 = 0;
 
-			// Token: 0x04036A42 RID: 223810
+			// Token: 0x04031495 RID: 201877
 			public const int ArtText2 = 1;
 
-			// Token: 0x04036A43 RID: 223811
+			// Token: 0x04031496 RID: 201878
 			public const int ArtText3 = 2;
 		}
 	}

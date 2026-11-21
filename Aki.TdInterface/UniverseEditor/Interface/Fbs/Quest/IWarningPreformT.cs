@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200428D RID: 17037
+	// Token: 0x020046E9 RID: 18153
 	public class IWarningPreformT
 	{
-		// Token: 0x170078FF RID: 30975
-		// (get) Token: 0x060193E1 RID: 103393 RVA: 0x003A063D File Offset: 0x0039E83D
-		// (set) Token: 0x060193E2 RID: 103394 RVA: 0x003A0645 File Offset: 0x0039E845
+		// Token: 0x17007F30 RID: 32560
+		// (get) Token: 0x0601AB4D RID: 109389 RVA: 0x003CBD15 File Offset: 0x003C9F15
+		// (set) Token: 0x0601AB4E RID: 109390 RVA: 0x003CBD1D File Offset: 0x003C9F1D
 		public TWarningPreformConfigUnion Type { get; set; }
 
-		// Token: 0x060193E3 RID: 103395 RVA: 0x003A064E File Offset: 0x0039E84E
+		// Token: 0x0601AB4F RID: 109391 RVA: 0x003CBD26 File Offset: 0x003C9F26
 		public IWarningPreformT()
 		{
 			this.Type = null;

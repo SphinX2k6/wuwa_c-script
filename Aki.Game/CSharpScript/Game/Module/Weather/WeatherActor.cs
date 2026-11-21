@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Weather
 {
-	// Token: 0x02004861 RID: 18529
+	// Token: 0x02003792 RID: 14226
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WeatherActor
 	{
-		// Token: 0x17007922 RID: 31010
-		// (get) Token: 0x060307DE RID: 198622 RVA: 0x00B4295F File Offset: 0x00B40B5F
+		// Token: 0x17004BDF RID: 19423
+		// (get) Token: 0x06024FAD RID: 151469 RVA: 0x00A72BA3 File Offset: 0x00A70DA3
 		public bool IsWeatherForbidden
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307DF RID: 198623 RVA: 0x00B42968 File Offset: 0x00B40B68
+		// Token: 0x06024FAE RID: 151470 RVA: 0x00A72BAC File Offset: 0x00A70DAC
 		private void CheckActorExistThenInit()
 		{
 			BP_Weather_C weatherActorInternal = this.WeatherActorInternal;
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E0 RID: 198624 RVA: 0x00B42A35 File Offset: 0x00B40C35
+		// Token: 0x06024FAF RID: 151471 RVA: 0x00A72C79 File Offset: 0x00A70E79
 		public void BanWeather()
 		{
 			this.Destroy();
 			this.BanState = !this.BanState;
 		}
 
-		// Token: 0x060307E1 RID: 198625 RVA: 0x00B42A4C File Offset: 0x00B40C4C
+		// Token: 0x06024FB0 RID: 151472 RVA: 0x00A72C90 File Offset: 0x00A70E90
 		public void SetActorState(bool state)
 		{
 			if (this.CurrentState != state)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E2 RID: 198626 RVA: 0x00B42A81 File Offset: 0x00B40C81
+		// Token: 0x06024FB1 RID: 151473 RVA: 0x00A72CC5 File Offset: 0x00A70EC5
 		private void CancelCurrentLoadTask()
 		{
 			if (this.CurrentLoadTask != 0)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E3 RID: 198627 RVA: 0x00B42AA4 File Offset: 0x00B40CA4
+		// Token: 0x06024FB2 RID: 151474 RVA: 0x00A72CE8 File Offset: 0x00A70EE8
 		public unsafe void ChangeWeather(int targetId, float tweenTime)
 		{
 			this.ClearTimer();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E4 RID: 198628 RVA: 0x00B42C5C File Offset: 0x00B40E5C
+		// Token: 0x06024FB3 RID: 151475 RVA: 0x00A72EA0 File Offset: 0x00A710A0
 		public void SetWeatherForbidden(bool bForbidWeather)
 		{
 			this.ForbidWeather = bForbidWeather;
@@ -144,7 +144,16 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E5 RID: 198629 RVA: 0x00B42C98 File Offset: 0x00B40E98
+		// Token: 0x06024FB4 RID: 151476 RVA: 0x00A72EDC File Offset: 0x00A710DC
+		public void SetWeatherForbiddenImmediately(bool bForbidWeather)
+		{
+			this.ForbidWeather = bForbidWeather;
+			this.WeatherScalar = (bForbidWeather ? 0f : 1f);
+			this.ApplyWeight(this.CurrentComponent);
+			this.ApplyWeight(this.TargetComponent);
+		}
+
+		// Token: 0x06024FB5 RID: 151477 RVA: 0x00A72F12 File Offset: 0x00A71112
 		private void ClearTimer()
 		{
 			if (this.Ticker != -1)
@@ -154,7 +163,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E6 RID: 198630 RVA: 0x00B42CBC File Offset: 0x00B40EBC
+		// Token: 0x06024FB6 RID: 151478 RVA: 0x00A72F38 File Offset: 0x00A71138
 		private void OnTick(float _)
 		{
 			this.CurrentRunningTime += Time.Instance.DeltaTime;
@@ -173,7 +182,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E7 RID: 198631 RVA: 0x00B42DCB File Offset: 0x00B40FCB
+		// Token: 0x06024FB7 RID: 151479 RVA: 0x00A73047 File Offset: 0x00A71247
 		private void OnTweenCurrentUpdate(float value)
 		{
 			if (this.CurrentComponent != null)
@@ -183,7 +192,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E8 RID: 198632 RVA: 0x00B42DED File Offset: 0x00B40FED
+		// Token: 0x06024FB8 RID: 151480 RVA: 0x00A73069 File Offset: 0x00A71269
 		private void OnTweenTargetUpdate(float value)
 		{
 			if (this.TargetComponent != null)
@@ -193,7 +202,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307E9 RID: 198633 RVA: 0x00B42E0F File Offset: 0x00B4100F
+		// Token: 0x06024FB9 RID: 151481 RVA: 0x00A7308B File Offset: 0x00A7128B
 		private void OnActorDestroy(AActor _)
 		{
 			this.ClearTimer();
@@ -202,7 +211,7 @@ namespace CSharpScript.Game.Module.Weather
 			this.WeatherActorInternal = null;
 		}
 
-		// Token: 0x060307EA RID: 198634 RVA: 0x00B42E2C File Offset: 0x00B4102C
+		// Token: 0x06024FBA RID: 151482 RVA: 0x00A730A8 File Offset: 0x00A712A8
 		public void Destroy()
 		{
 			BP_Weather_C weatherActorInternal = this.WeatherActorInternal;
@@ -214,19 +223,19 @@ namespace CSharpScript.Game.Module.Weather
 			this.WeatherActorInternal = null;
 		}
 
-		// Token: 0x060307EB RID: 198635 RVA: 0x00B42E5B File Offset: 0x00B4105B
+		// Token: 0x06024FBB RID: 151483 RVA: 0x00A730D7 File Offset: 0x00A712D7
 		public void SuppressPostProcessWeight()
 		{
 			this.SetExternalWeightScale(0f);
 		}
 
-		// Token: 0x060307EC RID: 198636 RVA: 0x00B42E68 File Offset: 0x00B41068
+		// Token: 0x06024FBC RID: 151484 RVA: 0x00A730E4 File Offset: 0x00A712E4
 		public void RestorePostProcessWeight()
 		{
 			this.SetExternalWeightScale(1f);
 		}
 
-		// Token: 0x060307ED RID: 198637 RVA: 0x00B42E78 File Offset: 0x00B41078
+		// Token: 0x06024FBD RID: 151485 RVA: 0x00A730F4 File Offset: 0x00A712F4
 		private void SetExternalWeightScale(float scale)
 		{
 			this.ExternalWeightScale = scale;
@@ -240,7 +249,7 @@ namespace CSharpScript.Game.Module.Weather
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060307EE RID: 198638 RVA: 0x00B42ED3 File Offset: 0x00B410D3
+		// Token: 0x06024FBE RID: 151486 RVA: 0x00A7314F File Offset: 0x00A7134F
 		private void ApplyWeight(WeatherComponent component)
 		{
 			if (((component != null) ? component.Component : null) == null)
@@ -250,60 +259,60 @@ namespace CSharpScript.Game.Module.Weather
 			component.Component.BlendWeight = component.BlendWeightNonScale * this.WeatherScalar * this.ExternalWeightScale;
 		}
 
-		// Token: 0x0401A0C7 RID: 106695
+		// Token: 0x0401477B RID: 83835
 		private BP_Weather_C WeatherActorInternal;
 
-		// Token: 0x0401A0C8 RID: 106696
+		// Token: 0x0401477C RID: 83836
 		[Nullable(1)]
 		private readonly WeatherComponent WeatherComponent1 = new WeatherComponent();
 
-		// Token: 0x0401A0C9 RID: 106697
+		// Token: 0x0401477D RID: 83837
 		[Nullable(1)]
 		private readonly WeatherComponent WeatherComponent2 = new WeatherComponent();
 
-		// Token: 0x0401A0CA RID: 106698
+		// Token: 0x0401477E RID: 83838
 		private WeatherComponent CurrentComponent;
 
-		// Token: 0x0401A0CB RID: 106699
+		// Token: 0x0401477F RID: 83839
 		private WeatherComponent TargetComponent;
 
-		// Token: 0x0401A0CC RID: 106700
+		// Token: 0x04014780 RID: 83840
 		private float Timer1StartValue;
 
-		// Token: 0x0401A0CD RID: 106701
+		// Token: 0x04014781 RID: 83841
 		private float Timer2StartValue;
 
-		// Token: 0x0401A0CE RID: 106702
+		// Token: 0x04014782 RID: 83842
 		private float Timer1EndValue;
 
-		// Token: 0x0401A0CF RID: 106703
+		// Token: 0x04014783 RID: 83843
 		private float Timer2EndValue;
 
-		// Token: 0x0401A0D0 RID: 106704
+		// Token: 0x04014784 RID: 83844
 		private float CurrentRunningTime;
 
-		// Token: 0x0401A0D1 RID: 106705
+		// Token: 0x04014785 RID: 83845
 		private float TweenTime;
 
-		// Token: 0x0401A0D2 RID: 106706
+		// Token: 0x04014786 RID: 83846
 		private bool BanState;
 
-		// Token: 0x0401A0D3 RID: 106707
+		// Token: 0x04014787 RID: 83847
 		private int Ticker = -1;
 
-		// Token: 0x0401A0D4 RID: 106708
+		// Token: 0x04014788 RID: 83848
 		private bool CurrentState;
 
-		// Token: 0x0401A0D5 RID: 106709
+		// Token: 0x04014789 RID: 83849
 		private int CurrentLoadTask;
 
-		// Token: 0x0401A0D6 RID: 106710
+		// Token: 0x0401478A RID: 83850
 		private bool ForbidWeather;
 
-		// Token: 0x0401A0D7 RID: 106711
+		// Token: 0x0401478B RID: 83851
 		private float WeatherScalar = 1f;
 
-		// Token: 0x0401A0D8 RID: 106712
+		// Token: 0x0401478C RID: 83852
 		private float ExternalWeightScale = 1f;
 	}
 }

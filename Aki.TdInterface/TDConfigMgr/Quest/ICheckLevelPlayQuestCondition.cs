@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EEC RID: 3820
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001002 RID: 4098
 	public class ICheckLevelPlayQuestCondition : IQuestCondition
 	{
-		// Token: 0x06005448 RID: 21576 RVA: 0x000CF018 File Offset: 0x000CD218
+		// Token: 0x060059C4 RID: 22980 RVA: 0x000DB1C0 File Offset: 0x000D93C0
 		private ICheckLevelPlayQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005449 RID: 21577 RVA: 0x000CF050 File Offset: 0x000CD250
+		// Token: 0x060059C5 RID: 22981 RVA: 0x000DB1F8 File Offset: 0x000D93F8
 		public static ICheckLevelPlayQuestCondition Create([Nullable(2)] ICheckLevelPlayQuestCondition instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600544A RID: 21578 RVA: 0x000CF063 File Offset: 0x000CD263
+		// Token: 0x060059C6 RID: 22982 RVA: 0x000DB20B File Offset: 0x000D940B
 		public static ICheckLevelPlayQuestCondition CreateFromSetValue([Nullable(2)] ICheckLevelPlayQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600544B RID: 21579 RVA: 0x000CF076 File Offset: 0x000CD276
+		// Token: 0x060059C7 RID: 22983 RVA: 0x000DB21E File Offset: 0x000D941E
 		public new ICheckLevelPlayQuestCondition_SetValue ToSetValue()
 		{
 			return new ICheckLevelPlayQuestCondition_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C43 RID: 7235
-		// (get) Token: 0x0600544C RID: 21580 RVA: 0x000CF0AD File Offset: 0x000CD2AD
-		// (set) Token: 0x0600544D RID: 21581 RVA: 0x000CF0D8 File Offset: 0x000CD2D8
+		// Token: 0x17001DDB RID: 7643
+		// (get) Token: 0x060059C8 RID: 22984 RVA: 0x000DB255 File Offset: 0x000D9455
+		// (set) Token: 0x060059C9 RID: 22985 RVA: 0x000DB280 File Offset: 0x000D9480
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C44 RID: 7236
-		// (get) Token: 0x0600544E RID: 21582 RVA: 0x000CF0E8 File Offset: 0x000CD2E8
-		// (set) Token: 0x0600544F RID: 21583 RVA: 0x000CF149 File Offset: 0x000CD349
+		// Token: 0x17001DDC RID: 7644
+		// (get) Token: 0x060059CA RID: 22986 RVA: 0x000DB290 File Offset: 0x000D9490
+		// (set) Token: 0x060059CB RID: 22987 RVA: 0x000DB2F1 File Offset: 0x000D94F1
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C45 RID: 7237
-		// (get) Token: 0x06005450 RID: 21584 RVA: 0x000CF15E File Offset: 0x000CD35E
-		// (set) Token: 0x06005451 RID: 21585 RVA: 0x000CF185 File Offset: 0x000CD385
+		// Token: 0x17001DDD RID: 7645
+		// (get) Token: 0x060059CC RID: 22988 RVA: 0x000DB306 File Offset: 0x000D9506
+		// (set) Token: 0x060059CD RID: 22989 RVA: 0x000DB32D File Offset: 0x000D952D
 		public virtual List<int> LevelPlayIds
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C46 RID: 7238
-		// (get) Token: 0x06005452 RID: 21586 RVA: 0x000CF193 File Offset: 0x000CD393
-		// (set) Token: 0x06005453 RID: 21587 RVA: 0x000CF1BE File Offset: 0x000CD3BE
+		// Token: 0x17001DDE RID: 7646
+		// (get) Token: 0x060059CE RID: 22990 RVA: 0x000DB33B File Offset: 0x000D953B
+		// (set) Token: 0x060059CF RID: 22991 RVA: 0x000DB366 File Offset: 0x000D9566
 		public virtual int CompleteNumber
 		{
 			get
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003310 RID: 13072
+		// Token: 0x0400361D RID: 13853
 		[Nullable(2)]
 		protected new ICheckLevelPlayQuestCondition FbInstance;
 
-		// Token: 0x04003311 RID: 13073
+		// Token: 0x0400361E RID: 13854
 		[Nullable(2)]
 		protected new ICheckLevelPlayQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003312 RID: 13074
+		// Token: 0x0400361F RID: 13855
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003313 RID: 13075
+		// Token: 0x04003620 RID: 13856
 		private bool _PreConditionsInited;
 	}
 }

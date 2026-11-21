@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EAF RID: 20143
+	// Token: 0x02003E78 RID: 15992
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleTeamEditSlot : UiPanelBase, IDraggableSlot
 	{
-		// Token: 0x06033BCF RID: 211919 RVA: 0x00C1EF09 File Offset: 0x00C1D109
+		// Token: 0x06028A3A RID: 166458 RVA: 0x00B68421 File Offset: 0x00B66621
 		public RogueBattleTeamEditSlot(int index)
 		{
 			this.Index = index;
 		}
 
-		// Token: 0x06033BD0 RID: 211920 RVA: 0x00C1EF18 File Offset: 0x00C1D118
+		// Token: 0x06028A3B RID: 166459 RVA: 0x00B68430 File Offset: 0x00B66630
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BD1 RID: 211921 RVA: 0x00C1F0BA File Offset: 0x00C1D2BA
+		// Token: 0x06028A3C RID: 166460 RVA: 0x00B685D2 File Offset: 0x00B667D2
 		private void OnBtnSelf()
 		{
 			Action<int> onClickCallBack = this.OnClickCallBack;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onClickCallBack(this.Index);
 		}
 
-		// Token: 0x06033BD2 RID: 211922 RVA: 0x00C1F0D4 File Offset: 0x00C1D2D4
+		// Token: 0x06028A3D RID: 166461 RVA: 0x00B685EC File Offset: 0x00B667EC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleTeamEditSlot.<OnBeforeStartAsync>d__22 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033BD3 RID: 211923 RVA: 0x00C1F118 File Offset: 0x00C1D318
+		// Token: 0x06028A3E RID: 166462 RVA: 0x00B68630 File Offset: 0x00B66830
 		protected override void OnStart()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(17);
@@ -88,21 +88,21 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.RoleItem = base.GetItem(1);
 		}
 
-		// Token: 0x06033BD4 RID: 211924 RVA: 0x00C1F195 File Offset: 0x00C1D395
+		// Token: 0x06028A3F RID: 166463 RVA: 0x00B686AD File Offset: 0x00B668AD
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.RogueResNewRoleFlagChange, new Action(this.RefreshRedDot));
 			EventSystem.Instance.Add(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey));
 		}
 
-		// Token: 0x06033BD5 RID: 211925 RVA: 0x00C1F1CF File Offset: 0x00C1D3CF
+		// Token: 0x06028A40 RID: 166464 RVA: 0x00B686E7 File Offset: 0x00B668E7
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResNewRoleFlagChange, new Action(this.RefreshRedDot));
 			EventSystem.Instance.Remove(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey));
 		}
 
-		// Token: 0x06033BD6 RID: 211926 RVA: 0x00C1F20C File Offset: 0x00C1D40C
+		// Token: 0x06028A41 RID: 166465 RVA: 0x00B68724 File Offset: 0x00B66924
 		private void OnPointerUp(ULGUIPointerEventData eventData)
 		{
 			if (FormationViewDragController.DraggingIndex != this.Index + 1)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.StopMove(null);
 		}
 
-		// Token: 0x06033BD7 RID: 211927 RVA: 0x00C1F24C File Offset: 0x00C1D44C
+		// Token: 0x06028A42 RID: 166466 RVA: 0x00B68764 File Offset: 0x00B66964
 		private void OnPointerDown(ULGUIPointerEventData eventData)
 		{
 			if (this.ConfigId == 0)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onPointDown(eventData, this.ConfigId, this.SkinId.GetValueOrDefault(), this.Index + 1);
 		}
 
-		// Token: 0x06033BD8 RID: 211928 RVA: 0x00C1F2CE File Offset: 0x00C1D4CE
+		// Token: 0x06028A43 RID: 166467 RVA: 0x00B687E6 File Offset: 0x00B669E6
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
 			if (eventData == null || !this.StartDrag)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onDragMove(eventData);
 		}
 
-		// Token: 0x06033BD9 RID: 211929 RVA: 0x00C1F2ED File Offset: 0x00C1D4ED
+		// Token: 0x06028A44 RID: 166468 RVA: 0x00B68805 File Offset: 0x00B66A05
 		public void OnTick(float delta)
 		{
 			if (!this.NeedTick)
@@ -172,13 +172,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BDA RID: 211930 RVA: 0x00C1F32D File Offset: 0x00C1D52D
+		// Token: 0x06028A45 RID: 166469 RVA: 0x00B68845 File Offset: 0x00B66A45
 		public int? GetConfigId()
 		{
 			return new int?(this.ConfigId);
 		}
 
-		// Token: 0x06033BDB RID: 211931 RVA: 0x00C1F33A File Offset: 0x00C1D53A
+		// Token: 0x06028A46 RID: 166470 RVA: 0x00B68852 File Offset: 0x00B66A52
 		public void Reset()
 		{
 			this.NeedTick = false;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.StartDragTime = 0f;
 		}
 
-		// Token: 0x06033BDC RID: 211932 RVA: 0x00C1F358 File Offset: 0x00C1D558
+		// Token: 0x06028A47 RID: 166471 RVA: 0x00B68870 File Offset: 0x00B66A70
 		private void StartShowDragItem()
 		{
 			if (this.IsPlayingCircleIn)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			dragStateItem.SetBarFill((this.StartDragTime - 250f) / 500f);
 		}
 
-		// Token: 0x06033BDD RID: 211933 RVA: 0x00C1F3F0 File Offset: 0x00C1D5F0
+		// Token: 0x06028A48 RID: 166472 RVA: 0x00B68908 File Offset: 0x00B66B08
 		public void EndShowDragItem()
 		{
 			if (this.IsPlayingCircleIn)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			dragStateItem.SetBarFill(0f);
 		}
 
-		// Token: 0x06033BDE RID: 211934 RVA: 0x00C1F47A File Offset: 0x00C1D67A
+		// Token: 0x06028A49 RID: 166473 RVA: 0x00B68992 File Offset: 0x00B66B92
 		public void GamePadUp(bool isCancel = false)
 		{
 			if (this.ConfigId == 0)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.StopMove(new bool?(isCancel));
 		}
 
-		// Token: 0x06033BDF RID: 211935 RVA: 0x00C1F4B4 File Offset: 0x00C1D6B4
+		// Token: 0x06028A4A RID: 166474 RVA: 0x00B689CC File Offset: 0x00B66BCC
 		public void GamePadPress()
 		{
 			if (this.ConfigId == 0)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onGamePadDown(this.RootItem, this.ConfigId, this.SkinId.GetValueOrDefault(), this.Index + 1);
 		}
 
-		// Token: 0x06033BE0 RID: 211936 RVA: 0x00C1F53B File Offset: 0x00C1D73B
+		// Token: 0x06028A4B RID: 166475 RVA: 0x00B68A53 File Offset: 0x00B66C53
 		public void GamePadRelease()
 		{
 			if (!this.StartDrag)
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BE1 RID: 211937 RVA: 0x00C1F568 File Offset: 0x00C1D768
+		// Token: 0x06028A4C RID: 166476 RVA: 0x00B68A80 File Offset: 0x00B66C80
 		public void MouseCancelDrag()
 		{
 			if (this.ConfigId == 0)
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.StopMove(new bool?(true));
 		}
 
-		// Token: 0x06033BE2 RID: 211938 RVA: 0x00C1F5A2 File Offset: 0x00C1D7A2
+		// Token: 0x06028A4D RID: 166477 RVA: 0x00B68ABA File Offset: 0x00B66CBA
 		private void StartMoveDragItem()
 		{
 			if (this.StartDrag)
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.RoleItem.SetUIActive(false);
 		}
 
-		// Token: 0x06033BE3 RID: 211939 RVA: 0x00C1F5D7 File Offset: 0x00C1D7D7
+		// Token: 0x06028A4E RID: 166478 RVA: 0x00B68AEF File Offset: 0x00B66CEF
 		private void StopMove(bool? isCancel = null)
 		{
 			if (this.ConfigId == 0 || !this.StartDrag)
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onDragEnd(isCancel.GetValueOrDefault());
 		}
 
-		// Token: 0x06033BE4 RID: 211940 RVA: 0x00C1F614 File Offset: 0x00C1D814
+		// Token: 0x06028A4F RID: 166479 RVA: 0x00B68B2C File Offset: 0x00B66D2C
 		public void ShowOtherItemUpState()
 		{
 			if (!this.IsPlayingCircleIn && !this.StartDrag)
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BE5 RID: 211941 RVA: 0x00C1F66C File Offset: 0x00C1D86C
+		// Token: 0x06028A50 RID: 166480 RVA: 0x00B68B84 File Offset: 0x00B66D84
 		public void RefreshLockItemState(bool isDrag)
 		{
 			if (!isDrag)
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BE6 RID: 211942 RVA: 0x00C1F6BE File Offset: 0x00C1D8BE
+		// Token: 0x06028A51 RID: 166481 RVA: 0x00B68BD6 File Offset: 0x00B66DD6
 		[NullableContext(1)]
 		private void OnInputAnyKey(bool bPress, FKey key)
 		{
@@ -394,13 +394,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033BE7 RID: 211943 RVA: 0x00C1F6DC File Offset: 0x00C1D8DC
+		// Token: 0x06028A52 RID: 166482 RVA: 0x00B68BF4 File Offset: 0x00B66DF4
 		public int GetPlayerId()
 		{
 			return PlayerInfoModel.Instance.GetId().GetValueOrDefault();
 		}
 
-		// Token: 0x06033BE8 RID: 211944 RVA: 0x00C1F6FC File Offset: 0x00C1D8FC
+		// Token: 0x06028A53 RID: 166483 RVA: 0x00B68C14 File Offset: 0x00B66E14
 		public void UpdateRoleInfo(int configId, int formationIndex)
 		{
 			RogueBattleTeamEditSlot.<>c__DisplayClass46_0 CS$<>8__locals1 = new RogueBattleTeamEditSlot.<>c__DisplayClass46_0();
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.ConfigId = configId;
 		}
 
-		// Token: 0x06033BE9 RID: 211945 RVA: 0x00C1F96C File Offset: 0x00C1DB6C
+		// Token: 0x06028A54 RID: 166484 RVA: 0x00B68E84 File Offset: 0x00B67084
 		private void RefreshRedDot()
 		{
 			bool flag = this.Index == 0;
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetItem(10).SetUIActive(flag && rogueResNewRoleFlag);
 		}
 
-		// Token: 0x06033BEA RID: 211946 RVA: 0x00C1F9A0 File Offset: 0x00C1DBA0
+		// Token: 0x06028A55 RID: 166485 RVA: 0x00B68EB8 File Offset: 0x00B670B8
 		private void SetAnimState(int configId)
 		{
 			if (this.ConfigId == configId)
@@ -536,20 +536,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B7D6 RID: 112598
+		// Token: 0x040161A9 RID: 90537
 		public Action<ULGUIPointerEventData, int, int, int> OnPointDown;
 
-		// Token: 0x0401B7D7 RID: 112599
+		// Token: 0x040161AA RID: 90538
 		public Action OnDragStart;
 
-		// Token: 0x0401B7D8 RID: 112600
+		// Token: 0x040161AB RID: 90539
 		public Action<ULGUIPointerEventData> OnDragMove;
 
-		// Token: 0x0401B7D9 RID: 112601
+		// Token: 0x040161AC RID: 90540
 		[Nullable(1)]
 		public Action<bool> OnDragEnd;
 
-		// Token: 0x0401B7DA RID: 112602
+		// Token: 0x040161AD RID: 90541
 		[Nullable(new byte[]
 		{
 			2,
@@ -557,43 +557,43 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public Action<UUIItem, int, int, int> OnGamePadDown;
 
-		// Token: 0x0401B7DB RID: 112603
+		// Token: 0x040161AE RID: 90542
 		private int? SkinId;
 
-		// Token: 0x0401B7DC RID: 112604
+		// Token: 0x040161AF RID: 90543
 		private FormationRoleDragStateItem DragStateItem;
 
-		// Token: 0x0401B7DD RID: 112605
+		// Token: 0x040161B0 RID: 90544
 		private UUIItem RoleItem;
 
-		// Token: 0x0401B7DE RID: 112606
+		// Token: 0x040161B1 RID: 90545
 		private bool NeedTick;
 
-		// Token: 0x0401B7DF RID: 112607
+		// Token: 0x040161B2 RID: 90546
 		private bool StartDrag;
 
-		// Token: 0x0401B7E0 RID: 112608
+		// Token: 0x040161B3 RID: 90547
 		private float StartDragTime;
 
-		// Token: 0x0401B7E1 RID: 112609
+		// Token: 0x040161B4 RID: 90548
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B7E2 RID: 112610
+		// Token: 0x040161B5 RID: 90549
 		private LevelSequencePlayer CircleInLevelSequencePlayer;
 
-		// Token: 0x0401B7E3 RID: 112611
+		// Token: 0x040161B6 RID: 90550
 		private LevelSequencePlayer CircleOutLevelSequencePlayer;
 
-		// Token: 0x0401B7E4 RID: 112612
+		// Token: 0x040161B7 RID: 90551
 		public int ConfigId;
 
-		// Token: 0x0401B7E5 RID: 112613
+		// Token: 0x040161B8 RID: 90552
 		public int Index;
 
-		// Token: 0x0401B7E6 RID: 112614
+		// Token: 0x040161B9 RID: 90553
 		public RogueBattleTokenElement ElementItem;
 
-		// Token: 0x0401B7E7 RID: 112615
+		// Token: 0x040161BA RID: 90554
 		[Nullable(new byte[]
 		{
 			2,
@@ -602,20 +602,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		protected GenericLayout<RogueBattleTeamEditFetterIconItem, IRogueBattleRoleBondUpdateInfo> FetterLayout;
 
-		// Token: 0x0401B7E8 RID: 112616
+		// Token: 0x040161BB RID: 90555
 		public Action<int> OnClickCallBack;
 
-		// Token: 0x0401B7E9 RID: 112617
+		// Token: 0x040161BC RID: 90556
 		private bool HaveCustomShield;
 
-		// Token: 0x0401B7EA RID: 112618
+		// Token: 0x040161BD RID: 90557
 		private bool IsPlayingCircleIn;
 
-		// Token: 0x0200B01E RID: 45086
+		// Token: 0x02009A50 RID: 39504
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403576A RID: 218986
+			// Token: 0x0403019A RID: 197018
 			[Nullable(new byte[]
 			{
 				0,

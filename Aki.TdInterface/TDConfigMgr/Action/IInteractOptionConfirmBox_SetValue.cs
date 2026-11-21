@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B51 RID: 6993
+	// Token: 0x02001D00 RID: 7424
 	public class IInteractOptionConfirmBox_SetValue
 	{
-		// Token: 0x04005BA1 RID: 23457
-		[Nullable(1)]
+		// Token: 0x04006040 RID: 24640
 		public IInteractionConfirmBoxType Type;
 	}
 }

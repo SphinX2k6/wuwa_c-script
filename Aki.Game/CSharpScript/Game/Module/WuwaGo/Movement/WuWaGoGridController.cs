@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.WuwaGo.Model;
 
 namespace CSharpScript.Game.Module.WuwaGo.Movement
 {
-	// Token: 0x0200472C RID: 18220
+	// Token: 0x0200365D RID: 13917
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoGridController
 	{
-		// Token: 0x0602F9D0 RID: 195024 RVA: 0x00B07930 File Offset: 0x00B05B30
+		// Token: 0x0602419A RID: 147866 RVA: 0x00A377BC File Offset: 0x00A359BC
 		public WuWaGoGridController(WuWaGoGrid grid)
 		{
 		}
 
-		// Token: 0x0602F9D1 RID: 195025 RVA: 0x00B07940 File Offset: 0x00B05B40
+		// Token: 0x0602419B RID: 147867 RVA: 0x00A377CC File Offset: 0x00A359CC
 		public IWuWaGoGridRelocationRequest CreateRelocationRequest(Vector targetCoordinate)
 		{
 			Vector vector = Vector.Create(this.Grid.Coordinate);
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			};
 		}
 
-		// Token: 0x0602F9D2 RID: 195026 RVA: 0x00B079B4 File Offset: 0x00B05BB4
+		// Token: 0x0602419C RID: 147868 RVA: 0x00A37840 File Offset: 0x00A35A40
 		public List<IWuWaGoWorldMoveTarget> BuildWorldMoveTargets(IWuWaGoGridRelocationRequest request)
 		{
 			List<IWuWaGoWorldMoveTarget> list = new List<IWuWaGoWorldMoveTarget>();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return WuWaGoActorMoveHelper.BuildGridMoveTargets(request.Grid, null, null, list);
 		}
 
-		// Token: 0x04019B5B RID: 105307
+		// Token: 0x0401420B RID: 82443
 		public readonly WuWaGoGrid Grid = grid;
 	}
 }

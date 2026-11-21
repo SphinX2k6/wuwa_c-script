@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200032B RID: 811
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000372 RID: 882
 	public class IEntityMatchPlayer : IEntityMatchConfig
 	{
-		// Token: 0x06000FF2 RID: 4082 RVA: 0x00037CDC File Offset: 0x00035EDC
+		// Token: 0x06001124 RID: 4388 RVA: 0x0003ACA8 File Offset: 0x00038EA8
 		private IEntityMatchPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FF3 RID: 4083 RVA: 0x00037D14 File Offset: 0x00035F14
+		// Token: 0x06001125 RID: 4389 RVA: 0x0003ACE0 File Offset: 0x00038EE0
 		public static IEntityMatchPlayer Create([Nullable(2)] IEntityMatchPlayer instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FF4 RID: 4084 RVA: 0x00037D27 File Offset: 0x00035F27
+		// Token: 0x06001126 RID: 4390 RVA: 0x0003ACF3 File Offset: 0x00038EF3
 		public static IEntityMatchPlayer CreateFromSetValue([Nullable(2)] IEntityMatchPlayer_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FF5 RID: 4085 RVA: 0x00037D3A File Offset: 0x00035F3A
+		// Token: 0x06001127 RID: 4391 RVA: 0x0003AD06 File Offset: 0x00038F06
 		public new IEntityMatchPlayer_SetValue ToSetValue()
 		{
 			return new IEntityMatchPlayer_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000495 RID: 1173
-		// (get) Token: 0x06000FF6 RID: 4086 RVA: 0x00037D65 File Offset: 0x00035F65
-		// (set) Token: 0x06000FF7 RID: 4087 RVA: 0x00037D90 File Offset: 0x00035F90
+		// Token: 0x170004E3 RID: 1251
+		// (get) Token: 0x06001128 RID: 4392 RVA: 0x0003AD31 File Offset: 0x00038F31
+		// (set) Token: 0x06001129 RID: 4393 RVA: 0x0003AD5C File Offset: 0x00038F5C
 		public override EEntityMatchType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000496 RID: 1174
-		// (get) Token: 0x06000FF8 RID: 4088 RVA: 0x00037D9E File Offset: 0x00035F9E
-		// (set) Token: 0x06000FF9 RID: 4089 RVA: 0x00037DC5 File Offset: 0x00035FC5
+		// Token: 0x170004E4 RID: 1252
+		// (get) Token: 0x0600112A RID: 4394 RVA: 0x0003AD6A File Offset: 0x00038F6A
+		// (set) Token: 0x0600112B RID: 4395 RVA: 0x0003AD91 File Offset: 0x00038F91
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000497 RID: 1175
-		// (get) Token: 0x06000FFA RID: 4090 RVA: 0x00037DD4 File Offset: 0x00035FD4
-		// (set) Token: 0x06000FFB RID: 4091 RVA: 0x00037E0E File Offset: 0x0003600E
+		// Token: 0x170004E5 RID: 1253
+		// (get) Token: 0x0600112C RID: 4396 RVA: 0x0003ADA0 File Offset: 0x00038FA0
+		// (set) Token: 0x0600112D RID: 4397 RVA: 0x0003ADDA File Offset: 0x00038FDA
 		public virtual bool? ChangeRoleTrigger
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D84 RID: 3460
+		// Token: 0x04000E6F RID: 3695
 		[Nullable(2)]
 		protected new IEntityMatchPlayer FbInstance;
 
-		// Token: 0x04000D85 RID: 3461
+		// Token: 0x04000E70 RID: 3696
 		[Nullable(2)]
 		protected new IEntityMatchPlayer_SetValue PocoInterface;
 	}

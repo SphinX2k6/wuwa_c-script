@@ -3,70 +3,70 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055D0 RID: 21968
+	// Token: 0x02005B6E RID: 23406
 	public class IMotorSlideSplinePointT
 	{
-		// Token: 0x1700A278 RID: 41592
-		// (get) Token: 0x060246AF RID: 149167 RVA: 0x005071E1 File Offset: 0x005053E1
-		// (set) Token: 0x060246B0 RID: 149168 RVA: 0x005071E9 File Offset: 0x005053E9
+		// Token: 0x1700AB00 RID: 43776
+		// (get) Token: 0x060268BC RID: 157884 RVA: 0x00547759 File Offset: 0x00545959
+		// (set) Token: 0x060268BD RID: 157885 RVA: 0x00547761 File Offset: 0x00545961
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700A279 RID: 41593
-		// (get) Token: 0x060246B1 RID: 149169 RVA: 0x005071F2 File Offset: 0x005053F2
-		// (set) Token: 0x060246B2 RID: 149170 RVA: 0x005071FA File Offset: 0x005053FA
+		// Token: 0x1700AB01 RID: 43777
+		// (get) Token: 0x060268BE RID: 157886 RVA: 0x0054776A File Offset: 0x0054596A
+		// (set) Token: 0x060268BF RID: 157887 RVA: 0x00547772 File Offset: 0x00545972
 		public IVectorInfoT ArriveTangent { get; set; }
 
-		// Token: 0x1700A27A RID: 41594
-		// (get) Token: 0x060246B3 RID: 149171 RVA: 0x00507203 File Offset: 0x00505403
-		// (set) Token: 0x060246B4 RID: 149172 RVA: 0x0050720B File Offset: 0x0050540B
+		// Token: 0x1700AB02 RID: 43778
+		// (get) Token: 0x060268C0 RID: 157888 RVA: 0x0054777B File Offset: 0x0054597B
+		// (set) Token: 0x060268C1 RID: 157889 RVA: 0x00547783 File Offset: 0x00545983
 		public IVectorInfoT LeaveTangent { get; set; }
 
-		// Token: 0x1700A27B RID: 41595
-		// (get) Token: 0x060246B5 RID: 149173 RVA: 0x00507214 File Offset: 0x00505414
-		// (set) Token: 0x060246B6 RID: 149174 RVA: 0x0050721C File Offset: 0x0050541C
+		// Token: 0x1700AB03 RID: 43779
+		// (get) Token: 0x060268C2 RID: 157890 RVA: 0x0054778C File Offset: 0x0054598C
+		// (set) Token: 0x060268C3 RID: 157891 RVA: 0x00547794 File Offset: 0x00545994
 		public ESplineLine LineType { get; set; }
 
-		// Token: 0x1700A27C RID: 41596
-		// (get) Token: 0x060246B7 RID: 149175 RVA: 0x00507225 File Offset: 0x00505425
-		// (set) Token: 0x060246B8 RID: 149176 RVA: 0x0050722D File Offset: 0x0050542D
+		// Token: 0x1700AB04 RID: 43780
+		// (get) Token: 0x060268C4 RID: 157892 RVA: 0x0054779D File Offset: 0x0054599D
+		// (set) Token: 0x060268C5 RID: 157893 RVA: 0x005477A5 File Offset: 0x005459A5
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x1700A27D RID: 41597
-		// (get) Token: 0x060246B9 RID: 149177 RVA: 0x00507236 File Offset: 0x00505436
-		// (set) Token: 0x060246BA RID: 149178 RVA: 0x0050723E File Offset: 0x0050543E
+		// Token: 0x1700AB05 RID: 43781
+		// (get) Token: 0x060268C6 RID: 157894 RVA: 0x005477AE File Offset: 0x005459AE
+		// (set) Token: 0x060268C7 RID: 157895 RVA: 0x005477B6 File Offset: 0x005459B6
 		public float MaxSpeed { get; set; }
 
-		// Token: 0x1700A27E RID: 41598
-		// (get) Token: 0x060246BB RID: 149179 RVA: 0x00507247 File Offset: 0x00505447
-		// (set) Token: 0x060246BC RID: 149180 RVA: 0x0050724F File Offset: 0x0050544F
+		// Token: 0x1700AB06 RID: 43782
+		// (get) Token: 0x060268C8 RID: 157896 RVA: 0x005477BF File Offset: 0x005459BF
+		// (set) Token: 0x060268C9 RID: 157897 RVA: 0x005477C7 File Offset: 0x005459C7
 		public float AbsAcceleration { get; set; }
 
-		// Token: 0x1700A27F RID: 41599
-		// (get) Token: 0x060246BD RID: 149181 RVA: 0x00507258 File Offset: 0x00505458
-		// (set) Token: 0x060246BE RID: 149182 RVA: 0x00507260 File Offset: 0x00505460
+		// Token: 0x1700AB07 RID: 43783
+		// (get) Token: 0x060268CA RID: 157898 RVA: 0x005477D0 File Offset: 0x005459D0
+		// (set) Token: 0x060268CB RID: 157899 RVA: 0x005477D8 File Offset: 0x005459D8
 		public EMotorSlideOffDirection OffDirection { get; set; }
 
-		// Token: 0x1700A280 RID: 41600
-		// (get) Token: 0x060246BF RID: 149183 RVA: 0x00507269 File Offset: 0x00505469
-		// (set) Token: 0x060246C0 RID: 149184 RVA: 0x00507271 File Offset: 0x00505471
+		// Token: 0x1700AB08 RID: 43784
+		// (get) Token: 0x060268CC RID: 157900 RVA: 0x005477E1 File Offset: 0x005459E1
+		// (set) Token: 0x060268CD RID: 157901 RVA: 0x005477E9 File Offset: 0x005459E9
 		public int LeftTargetId { get; set; }
 
-		// Token: 0x1700A281 RID: 41601
-		// (get) Token: 0x060246C1 RID: 149185 RVA: 0x0050727A File Offset: 0x0050547A
-		// (set) Token: 0x060246C2 RID: 149186 RVA: 0x00507282 File Offset: 0x00505482
+		// Token: 0x1700AB09 RID: 43785
+		// (get) Token: 0x060268CE RID: 157902 RVA: 0x005477F2 File Offset: 0x005459F2
+		// (set) Token: 0x060268CF RID: 157903 RVA: 0x005477FA File Offset: 0x005459FA
 		public int RightTargetId { get; set; }
 
-		// Token: 0x1700A282 RID: 41602
-		// (get) Token: 0x060246C3 RID: 149187 RVA: 0x0050728B File Offset: 0x0050548B
-		// (set) Token: 0x060246C4 RID: 149188 RVA: 0x00507293 File Offset: 0x00505493
+		// Token: 0x1700AB0A RID: 43786
+		// (get) Token: 0x060268D0 RID: 157904 RVA: 0x00547803 File Offset: 0x00545A03
+		// (set) Token: 0x060268D1 RID: 157905 RVA: 0x0054780B File Offset: 0x00545A0B
 		public int SubCameraTag { get; set; }
 
-		// Token: 0x1700A283 RID: 41603
-		// (get) Token: 0x060246C5 RID: 149189 RVA: 0x0050729C File Offset: 0x0050549C
-		// (set) Token: 0x060246C6 RID: 149190 RVA: 0x005072A4 File Offset: 0x005054A4
+		// Token: 0x1700AB0B RID: 43787
+		// (get) Token: 0x060268D2 RID: 157906 RVA: 0x00547814 File Offset: 0x00545A14
+		// (set) Token: 0x060268D3 RID: 157907 RVA: 0x0054781C File Offset: 0x00545A1C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060246C7 RID: 149191 RVA: 0x005072B0 File Offset: 0x005054B0
+		// Token: 0x060268D4 RID: 157908 RVA: 0x00547828 File Offset: 0x00545A28
 		public IMotorSlideSplinePointT()
 		{
 			this.Position = null;

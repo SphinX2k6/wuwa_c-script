@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F13 RID: 28435
+	// Token: 0x0200769A RID: 30362
 	public class IRunActorCustomEventT
 	{
-		// Token: 0x1700D366 RID: 54118
-		// (get) Token: 0x060323D3 RID: 205779 RVA: 0x006C98D7 File Offset: 0x006C7AD7
-		// (set) Token: 0x060323D4 RID: 205780 RVA: 0x006C98DF File Offset: 0x006C7ADF
+		// Token: 0x1700DEC2 RID: 57026
+		// (get) Token: 0x0603542B RID: 218155 RVA: 0x0072583F File Offset: 0x00723A3F
+		// (set) Token: 0x0603542C RID: 218156 RVA: 0x00725847 File Offset: 0x00723A47
 		public IActorRefT ActorRef { get; set; }
 
-		// Token: 0x1700D367 RID: 54119
-		// (get) Token: 0x060323D5 RID: 205781 RVA: 0x006C98E8 File Offset: 0x006C7AE8
-		// (set) Token: 0x060323D6 RID: 205782 RVA: 0x006C98F0 File Offset: 0x006C7AF0
+		// Token: 0x1700DEC3 RID: 57027
+		// (get) Token: 0x0603542D RID: 218157 RVA: 0x00725850 File Offset: 0x00723A50
+		// (set) Token: 0x0603542E RID: 218158 RVA: 0x00725858 File Offset: 0x00723A58
 		public string EventName { get; set; }
 
-		// Token: 0x060323D7 RID: 205783 RVA: 0x006C98F9 File Offset: 0x006C7AF9
+		// Token: 0x0603542F RID: 218159 RVA: 0x00725861 File Offset: 0x00723A61
 		public IRunActorCustomEventT()
 		{
 			this.ActorRef = null;

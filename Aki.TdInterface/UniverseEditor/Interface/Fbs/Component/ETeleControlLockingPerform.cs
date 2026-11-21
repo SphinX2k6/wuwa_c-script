@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E28 RID: 20008
+	// Token: 0x02005337 RID: 21303
 	public enum ETeleControlLockingPerform : byte
 	{
-		// Token: 0x0400DB76 RID: 56182
+		// Token: 0x0400E6E8 RID: 59112
 		RightMatch,
-		// Token: 0x0400DB77 RID: 56183
+		// Token: 0x0400E6E9 RID: 59113
 		WrongMatch
 	}
 }

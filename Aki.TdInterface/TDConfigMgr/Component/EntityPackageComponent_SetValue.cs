@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000102 RID: 258
+	// Token: 0x0200010B RID: 267
 	public class EntityPackageComponent_SetValue
 	{
-		// Token: 0x0400055D RID: 1373
+		// Token: 0x04000587 RID: 1415
 		public bool? Disabled;
 
-		// Token: 0x0400055E RID: 1374
+		// Token: 0x04000588 RID: 1416
 		public bool? EdIsLocked;
 
-		// Token: 0x0400055F RID: 1375
+		// Token: 0x04000589 RID: 1417
 		public bool BindTemplate;
 
-		// Token: 0x04000560 RID: 1376
+		// Token: 0x0400058A RID: 1418
 		[Nullable(2)]
 		public IEntityPackageData PackageData;
 	}

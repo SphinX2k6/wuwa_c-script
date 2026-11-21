@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013DB RID: 5083
+	// Token: 0x02001532 RID: 5426
 	public class ICheckTrapDefenseEventMonsterKilled : ICheckTrapDefenseEventBase
 	{
-		// Token: 0x060073F3 RID: 29683 RVA: 0x00115E22 File Offset: 0x00114022
-		[NullableContext(1)]
+		// Token: 0x06007AB4 RID: 31412 RVA: 0x00124806 File Offset: 0x00122A06
 		public static ICheckTrapDefenseEventMonsterKilled Create(ICheckTrapDefenseEventMonsterKilled? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002610 RID: 9744
-		// (get) Token: 0x060073F4 RID: 29684 RVA: 0x00115E41 File Offset: 0x00114041
+		// Token: 0x170027F2 RID: 10226
+		// (get) Token: 0x06007AB5 RID: 31413 RVA: 0x00124825 File Offset: 0x00122A25
 		public override ECheckTrapDefenseEvent Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002611 RID: 9745
-		// (get) Token: 0x060073F5 RID: 29685 RVA: 0x00115E4E File Offset: 0x0011404E
+		// Token: 0x170027F3 RID: 10227
+		// (get) Token: 0x06007AB6 RID: 31414 RVA: 0x00124832 File Offset: 0x00122A32
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400431F RID: 17183
+		// Token: 0x040046B0 RID: 18096
 		private ICheckTrapDefenseEventMonsterKilled Instance;
 	}
 }

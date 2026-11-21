@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005A3 RID: 1443
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200060C RID: 1548
 	public class InteractiveComponent_SetValue
 	{
-		// Token: 0x040015B4 RID: 5556
+		// Token: 0x04001722 RID: 5922
 		public bool? Disabled;
 
-		// Token: 0x040015B5 RID: 5557
+		// Token: 0x04001723 RID: 5923
 		public bool? EdIsLocked;
 
-		// Token: 0x040015B6 RID: 5558
+		// Token: 0x04001724 RID: 5924
 		public string Content;
 
-		// Token: 0x040015B7 RID: 5559
+		// Token: 0x04001725 RID: 5925
 		public string Icon;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200222B RID: 8747
+	// Token: 0x02002496 RID: 9366
 	public class SwitchSubLevels_SetValue
 	{
-		// Token: 0x04007279 RID: 29305
+		// Token: 0x040078C3 RID: 30915
 		public ESwitchSubLevelsType Type;
 	}
 }

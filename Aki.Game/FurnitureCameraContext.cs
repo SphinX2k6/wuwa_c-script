@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F97 RID: 3991
+// Token: 0x0200044C RID: 1100
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureCameraContext : IFurnitureCameraContext
 {
-	// Token: 0x17000809 RID: 2057
-	// (get) Token: 0x06006638 RID: 26168 RVA: 0x00143FE4 File Offset: 0x001421E4
-	// (set) Token: 0x06006639 RID: 26169 RVA: 0x00143FEC File Offset: 0x001421EC
+	// Token: 0x1700082B RID: 2091
+	// (get) Token: 0x060039D0 RID: 14800 RVA: 0x0014C878 File Offset: 0x0014AA78
+	// (set) Token: 0x060039D1 RID: 14801 RVA: 0x0014C880 File Offset: 0x0014AA80
 	public Vector Pos { get; set; }
 
-	// Token: 0x1700080A RID: 2058
-	// (get) Token: 0x0600663A RID: 26170 RVA: 0x00143FF5 File Offset: 0x001421F5
-	// (set) Token: 0x0600663B RID: 26171 RVA: 0x00143FFD File Offset: 0x001421FD
+	// Token: 0x1700082C RID: 2092
+	// (get) Token: 0x060039D2 RID: 14802 RVA: 0x0014C889 File Offset: 0x0014AA89
+	// (set) Token: 0x060039D3 RID: 14803 RVA: 0x0014C891 File Offset: 0x0014AA91
 	public Rotator Rot { get; set; }
 
-	// Token: 0x1700080B RID: 2059
-	// (get) Token: 0x0600663C RID: 26172 RVA: 0x00144006 File Offset: 0x00142206
-	// (set) Token: 0x0600663D RID: 26173 RVA: 0x0014400E File Offset: 0x0014220E
+	// Token: 0x1700082D RID: 2093
+	// (get) Token: 0x060039D4 RID: 14804 RVA: 0x0014C89A File Offset: 0x0014AA9A
+	// (set) Token: 0x060039D5 RID: 14805 RVA: 0x0014C8A2 File Offset: 0x0014AAA2
 	public float Fov { get; set; }
 }

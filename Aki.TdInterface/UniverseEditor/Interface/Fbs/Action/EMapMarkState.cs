@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F9E RID: 24478
+	// Token: 0x020065EF RID: 26095
 	public enum EMapMarkState : byte
 	{
-		// Token: 0x0400FE82 RID: 65154
+		// Token: 0x04010C34 RID: 68660
 		Show,
-		// Token: 0x0400FE83 RID: 65155
+		// Token: 0x04010C35 RID: 68661
 		Hide,
-		// Token: 0x0400FE84 RID: 65156
+		// Token: 0x04010C36 RID: 68662
 		Disable
 	}
 }

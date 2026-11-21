@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -9,17 +8,17 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 
 namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x020044BE RID: 17598
+	// Token: 0x02002F90 RID: 12176
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChairRemotePresenter
 	{
-		// Token: 0x0602D5CA RID: 185802 RVA: 0x00A3B65E File Offset: 0x00A3985E
+		// Token: 0x0601CDF0 RID: 118256 RVA: 0x008D1DCA File Offset: 0x008CFFCA
 		public ChairRemotePresenter(IChairPresentationHost host)
 		{
 		}
 
-		// Token: 0x0602D5CB RID: 185803 RVA: 0x00A3B670 File Offset: 0x00A39870
+		// Token: 0x0601CDF1 RID: 118257 RVA: 0x008D1DDC File Offset: 0x008CFFDC
 		public unsafe void TryStartRemoteVisibilityByChairEntity(Entity chairEntity)
 		{
 			DecorationFollowerComponent component = chairEntity.GetComponent<DecorationFollowerComponent>();
@@ -51,7 +50,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.EnsureRemoteChairSetup(chairEntity, num.Value);
 		}
 
-		// Token: 0x0602D5CC RID: 185804 RVA: 0x00A3B77C File Offset: 0x00A3997C
+		// Token: 0x0601CDF2 RID: 118258 RVA: 0x008D1EE8 File Offset: 0x008D00E8
 		private void EnsureRemoteChairSetup(Entity chairEntity, long chairCreatureDataId)
 		{
 			if (this.<host>P.ChairCreatureDataId > 0L && this.<host>P.ChairCreatureDataId != chairCreatureDataId)
@@ -66,7 +65,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StartRemoteVisibility(chairEntity);
 		}
 
-		// Token: 0x0602D5CD RID: 185805 RVA: 0x00A3B80C File Offset: 0x00A39A0C
+		// Token: 0x0601CDF3 RID: 118259 RVA: 0x008D1F78 File Offset: 0x008D0178
 		[return: Nullable(2)]
 		private Entity GetSummonerRoleEntity(Entity chairEntity)
 		{
@@ -85,7 +84,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return worldEntity;
 		}
 
-		// Token: 0x0602D5CE RID: 185806 RVA: 0x00A3B89C File Offset: 0x00A39A9C
+		// Token: 0x0601CDF4 RID: 118260 RVA: 0x008D2008 File Offset: 0x008D0208
 		[NullableContext(2)]
 		private static Entity GetPlayerControlledRoleEntity(int playerId)
 		{
@@ -93,27 +92,29 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			{
 				return null;
 			}
-			return (from item in SceneTeamModel.Instance.GetTeamItemsByPlayer(playerId)
-			where item.IsControl()
-			select item).Select(delegate(SceneTeamItem item)
+			foreach (SceneTeamItem sceneTeamItem in SceneTeamModel.Instance.GetTeamItemsByPlayer(playerId))
 			{
-				EntityHandle entityHandle = item.EntityHandle;
-				if (entityHandle == null)
+				if (sceneTeamItem.IsControl())
 				{
-					return null;
+					EntityHandle entityHandle = sceneTeamItem.EntityHandle;
+					WorldEntity worldEntity = (entityHandle != null) ? entityHandle.Entity : null;
+					if (worldEntity != null && worldEntity.Valid)
+					{
+						return worldEntity;
+					}
 				}
-				return entityHandle.Entity;
-			}).FirstOrDefault((WorldEntity entity) => entity != null && entity.Valid);
+			}
+			return null;
 		}
 
-		// Token: 0x0602D5CF RID: 185807 RVA: 0x00A3B926 File Offset: 0x00A39B26
+		// Token: 0x0601CDF5 RID: 118261 RVA: 0x008D208C File Offset: 0x008D028C
 		private void StartRemoteVisibility(Entity chairEntity)
 		{
 			this.StopInitialRestoreRetry();
 			this.StartRemoteSitListen(chairEntity);
 		}
 
-		// Token: 0x0602D5D0 RID: 185808 RVA: 0x00A3B935 File Offset: 0x00A39B35
+		// Token: 0x0601CDF6 RID: 118262 RVA: 0x008D209B File Offset: 0x008D029B
 		public void TryRestoreFromEntityState(Entity chairEntity)
 		{
 			if (!ChairRemotePresenter.IsChairInteracting(chairEntity))
@@ -126,7 +127,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D5D1 RID: 185809 RVA: 0x00A3B950 File Offset: 0x00A39B50
+		// Token: 0x0601CDF7 RID: 118263 RVA: 0x008D20B6 File Offset: 0x008D02B6
 		private void StartRemoteSitListen(Entity chairEntity)
 		{
 			this.StopRemoteSitListen();
@@ -138,7 +139,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RemoteSitListenChairEntity = chairEntity;
 		}
 
-		// Token: 0x0602D5D2 RID: 185810 RVA: 0x00A3B985 File Offset: 0x00A39B85
+		// Token: 0x0601CDF8 RID: 118264 RVA: 0x008D20EB File Offset: 0x008D02EB
 		private void StopRemoteSitListen()
 		{
 			if (this.RemoteSitListenChairEntity == null)
@@ -149,7 +150,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RemoteSitListenChairEntity = null;
 		}
 
-		// Token: 0x0602D5D3 RID: 185811 RVA: 0x00A3B9BC File Offset: 0x00A39BBC
+		// Token: 0x0601CDF9 RID: 118265 RVA: 0x008D2120 File Offset: 0x008D0320
 		private unsafe void OnChairInteractTagChanged(IReadOnlyList<int> addedTags, IReadOnlyList<int> removedTags)
 		{
 			Entity remoteSitListenChairEntity = this.RemoteSitListenChairEntity;
@@ -157,8 +158,24 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			{
 				return;
 			}
-			bool flag = addedTags.Contains(ChairRemotePresenter.ChairInteractingTagId);
-			bool flag2 = removedTags.Contains(ChairRemotePresenter.ChairInteractingTagId);
+			bool flag = false;
+			for (int i = 0; i < addedTags.Count; i++)
+			{
+				if (addedTags[i] == ChairRemotePresenter.ChairInteractingTagId)
+				{
+					flag = true;
+					break;
+				}
+			}
+			bool flag2 = false;
+			for (int j = 0; j < removedTags.Count; j++)
+			{
+				if (removedTags[j] == ChairRemotePresenter.ChairInteractingTagId)
+				{
+					flag2 = true;
+					break;
+				}
+			}
 			if (!flag && !flag2)
 			{
 				return;
@@ -178,7 +195,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.<host>P.ChangeChairPerformanceState(remoteSitListenChairEntity, flag ? EChairPerformanceState.Seated : EChairPerformanceState.StoodUp);
 		}
 
-		// Token: 0x0602D5D4 RID: 185812 RVA: 0x00A3BA84 File Offset: 0x00A39C84
+		// Token: 0x0601CDFA RID: 118266 RVA: 0x008D2224 File Offset: 0x008D0424
 		private bool TryShowInitialSeatedChair(Entity chairEntity)
 		{
 			if (!chairEntity.Valid || this.<host>P.ChairCreatureDataId <= 0L || this.<host>P.IsChairShown)
@@ -211,14 +228,14 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x0602D5D5 RID: 185813 RVA: 0x00A3BB57 File Offset: 0x00A39D57
+		// Token: 0x0601CDFB RID: 118267 RVA: 0x008D22F7 File Offset: 0x008D04F7
 		private static bool IsChairInteracting(Entity chairEntity)
 		{
 			LevelTagComponent component = chairEntity.GetComponent<LevelTagComponent>();
 			return component != null && component.HasTag(ChairRemotePresenter.ChairInteractingTagId);
 		}
 
-		// Token: 0x0602D5D6 RID: 185814 RVA: 0x00A3BB70 File Offset: 0x00A39D70
+		// Token: 0x0601CDFC RID: 118268 RVA: 0x008D2310 File Offset: 0x008D0510
 		private unsafe static void PlaceChairRemoteBySeatedRole(Entity chairEntity, Entity roleEntity)
 		{
 			BaseActorComponent component = chairEntity.GetComponent<BaseActorComponent>();
@@ -256,7 +273,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			component.SetActorLocationAndRotation(vector2.ToUeVector(false), rotator.ToUeRotator(), "PlayerFollowerChairHandler.RemotePlace", false, null);
 		}
 
-		// Token: 0x0602D5D7 RID: 185815 RVA: 0x00A3BD50 File Offset: 0x00A39F50
+		// Token: 0x0601CDFD RID: 118269 RVA: 0x008D24F0 File Offset: 0x008D06F0
 		[NullableContext(2)]
 		public unsafe void OnRemotePresentationNotify(long chairCreatureDataId, bool isShow, Aki.Protocol.Vector location, Aki.Protocol.Rotator rotation)
 		{
@@ -311,7 +328,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			CreatureController.Instance.SetEntityEnable(worldEntity, true, "PlayerFollowerChairHandler.RemoteEnsureShown", false);
 		}
 
-		// Token: 0x0602D5D8 RID: 185816 RVA: 0x00A3BF08 File Offset: 0x00A3A108
+		// Token: 0x0601CDFE RID: 118270 RVA: 0x008D26A8 File Offset: 0x008D08A8
 		[NullableContext(2)]
 		private static bool NeedReapplyChairTransform([Nullable(1)] Entity chairEntity, Aki.Protocol.Vector location, Aki.Protocol.Rotator rotation)
 		{
@@ -328,7 +345,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return global::Vector.DistSquared(component.ActorLocationProxy, v) > 625.0 || Math.Abs(global::Rotator.NormalizeAxis(rotation.Yaw - component.ActorRotationProxy.Yaw)) > 5f;
 		}
 
-		// Token: 0x0602D5D9 RID: 185817 RVA: 0x00A3BF80 File Offset: 0x00A3A180
+		// Token: 0x0601CDFF RID: 118271 RVA: 0x008D2720 File Offset: 0x008D0920
 		[NullableContext(2)]
 		private void PlaceChairRemoteByProtocol([Nullable(1)] Entity chairEntity, Aki.Protocol.Vector location, Aki.Protocol.Rotator rotation)
 		{
@@ -346,7 +363,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			component.SetActorLocationAndRotation(vector.ToUeVector(false), rotator.ToUeRotator(), "PlayerFollowerChairHandler.RemotePresentationPlace", false, null);
 		}
 
-		// Token: 0x0602D5DA RID: 185818 RVA: 0x00A3BFF8 File Offset: 0x00A3A1F8
+		// Token: 0x0601CE00 RID: 118272 RVA: 0x008D2798 File Offset: 0x008D0998
 		private void ShowChairRemote(Entity chairEntity)
 		{
 			this.StopInitialRestoreRetry();
@@ -375,7 +392,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, null, null);
 		}
 
-		// Token: 0x0602D5DB RID: 185819 RVA: 0x00A3C0C8 File Offset: 0x00A3A2C8
+		// Token: 0x0601CE01 RID: 118273 RVA: 0x008D2868 File Offset: 0x008D0A68
 		private unsafe void HideChairRemote(string reason)
 		{
 			this.StopInitialRestoreRetry();
@@ -398,7 +415,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.<host>P.IsChairShown = false;
 		}
 
-		// Token: 0x0602D5DC RID: 185820 RVA: 0x00A3C1B0 File Offset: 0x00A3A3B0
+		// Token: 0x0601CE02 RID: 118274 RVA: 0x008D2950 File Offset: 0x008D0B50
 		private void StartInitialRestoreRetry(Entity chairEntity)
 		{
 			if (this.InitialRestoreRetryTimer != null && this.InitialRestoreRetryTimer.Valid())
@@ -419,7 +436,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, 500f, 1f, null, null, true);
 		}
 
-		// Token: 0x0602D5DD RID: 185821 RVA: 0x00A3C210 File Offset: 0x00A3A410
+		// Token: 0x0601CE03 RID: 118275 RVA: 0x008D29B0 File Offset: 0x008D0BB0
 		private void StopInitialRestoreRetry()
 		{
 			if (this.InitialRestoreRetryTimer == null)
@@ -430,34 +447,34 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.InitialRestoreRetryTimer = null;
 		}
 
-		// Token: 0x0602D5DE RID: 185822 RVA: 0x00A3C233 File Offset: 0x00A3A433
+		// Token: 0x0601CE04 RID: 118276 RVA: 0x008D29D3 File Offset: 0x008D0BD3
 		public void StopRemoteVisibility()
 		{
 			this.StopRemoteSitListen();
 			this.StopInitialRestoreRetry();
 		}
 
-		// Token: 0x040183EC RID: 99308
+		// Token: 0x0400F376 RID: 62326
 		[CompilerGenerated]
 		private IChairPresentationHost <host>P = host;
 
-		// Token: 0x040183ED RID: 99309
+		// Token: 0x0400F377 RID: 62327
 		private const float INITIAL_RESTORE_RETRY_INTERVAL_MS = 500f;
 
-		// Token: 0x040183EE RID: 99310
+		// Token: 0x0400F378 RID: 62328
 		private const double CHAIR_REAPPLY_DIST_SQUARED_THRESHOLD = 625.0;
 
-		// Token: 0x040183EF RID: 99311
+		// Token: 0x0400F379 RID: 62329
 		private const float CHAIR_REAPPLY_YAW_THRESHOLD_DEG = 5f;
 
-		// Token: 0x040183F0 RID: 99312
+		// Token: 0x0400F37A RID: 62330
 		private static readonly int ChairInteractingTagId = GameplayTagDefine.EGameplayTagId["关卡.Common.状态.场景物件交互中"];
 
-		// Token: 0x040183F1 RID: 99313
+		// Token: 0x0400F37B RID: 62331
 		[Nullable(2)]
 		private TimerHandle InitialRestoreRetryTimer;
 
-		// Token: 0x040183F2 RID: 99314
+		// Token: 0x0400F37C RID: 62332
 		[Nullable(2)]
 		private Entity RemoteSitListenChairEntity;
 	}

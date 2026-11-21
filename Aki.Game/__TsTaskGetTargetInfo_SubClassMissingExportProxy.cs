@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200362B RID: 13867
+// Token: 0x02002BA0 RID: 11168
 public class __TsTaskGetTargetInfo_SubClassMissingExportProxy : __TsTaskGetTargetInfo_InheritProxy
 {
-	// Token: 0x0601E1E5 RID: 123365 RVA: 0x00881698 File Offset: 0x0087F898
+	// Token: 0x0601BF0D RID: 114445 RVA: 0x008A972C File Offset: 0x008A792C
 	[NullableContext(1)]
 	protected __TsTaskGetTargetInfo_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskGetTargetInfo.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E1E6 RID: 123366 RVA: 0x008816CB File Offset: 0x0087F8CB
+	// Token: 0x0601BF0E RID: 114446 RVA: 0x008A975F File Offset: 0x008A795F
 	protected __TsTaskGetTargetInfo_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002805 RID: 10245
+// Token: 0x02001D80 RID: 7552
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleDevPhantomViewItemDataBase
 {
-	// Token: 0x06015056 RID: 86102 RVA: 0x00552C8B File Offset: 0x00550E8B
+	// Token: 0x06012A56 RID: 76374 RVA: 0x0057DA5F File Offset: 0x0057BC5F
 	public void InitByRoleId(int roleId, ERoleDevDataType roleType, RoleDevViewModel roleDevViewModel)
 	{
 		this.RoleIdInternal = roleId;
@@ -17,11 +17,11 @@ public abstract class RoleDevPhantomViewItemDataBase
 		this.InitByRoleType(roleId);
 	}
 
-	// Token: 0x06015057 RID: 86103
+	// Token: 0x06012A57 RID: 76375
 	protected abstract void InitByRoleType(int roleId);
 
-	// Token: 0x17001BBB RID: 7099
-	// (get) Token: 0x06015058 RID: 86104 RVA: 0x00552CA9 File Offset: 0x00550EA9
+	// Token: 0x17001C13 RID: 7187
+	// (get) Token: 0x06012A58 RID: 76376 RVA: 0x0057DA7D File Offset: 0x0057BC7D
 	public int RoleId
 	{
 		get
@@ -30,8 +30,8 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BBC RID: 7100
-	// (get) Token: 0x06015059 RID: 86105 RVA: 0x00552CB1 File Offset: 0x00550EB1
+	// Token: 0x17001C14 RID: 7188
+	// (get) Token: 0x06012A59 RID: 76377 RVA: 0x0057DA85 File Offset: 0x0057BC85
 	public ERoleDevDataType RoleType
 	{
 		get
@@ -40,11 +40,11 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x0601505A RID: 86106
+	// Token: 0x06012A5A RID: 76378
 	protected abstract List<RoleDevPhantomSuitItemData> GetSuitDataList();
 
-	// Token: 0x17001BBD RID: 7101
-	// (get) Token: 0x0601505B RID: 86107 RVA: 0x00552CB9 File Offset: 0x00550EB9
+	// Token: 0x17001C15 RID: 7189
+	// (get) Token: 0x06012A5B RID: 76379 RVA: 0x0057DA8D File Offset: 0x0057BC8D
 	public List<RoleDevPhantomSuitItemData> SuitDataList
 	{
 		get
@@ -53,8 +53,8 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BBE RID: 7102
-	// (get) Token: 0x0601505C RID: 86108 RVA: 0x00552CC1 File Offset: 0x00550EC1
+	// Token: 0x17001C16 RID: 7190
+	// (get) Token: 0x06012A5C RID: 76380 RVA: 0x0057DA95 File Offset: 0x0057BC95
 	public bool IsRoleObtained
 	{
 		get
@@ -63,8 +63,8 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BBF RID: 7103
-	// (get) Token: 0x0601505D RID: 86109 RVA: 0x00552CCC File Offset: 0x00550ECC
+	// Token: 0x17001C17 RID: 7191
+	// (get) Token: 0x06012A5D RID: 76381 RVA: 0x0057DAA0 File Offset: 0x0057BCA0
 	public bool IsForecast
 	{
 		get
@@ -73,8 +73,8 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BC0 RID: 7104
-	// (get) Token: 0x0601505E RID: 86110 RVA: 0x00552CD7 File Offset: 0x00550ED7
+	// Token: 0x17001C18 RID: 7192
+	// (get) Token: 0x06012A5E RID: 76382 RVA: 0x0057DAAB File Offset: 0x0057BCAB
 	public bool IsNotObtained
 	{
 		get
@@ -83,8 +83,8 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BC1 RID: 7105
-	// (get) Token: 0x0601505F RID: 86111 RVA: 0x00552CE2 File Offset: 0x00550EE2
+	// Token: 0x17001C19 RID: 7193
+	// (get) Token: 0x06012A5F RID: 76383 RVA: 0x0057DAB6 File Offset: 0x0057BCB6
 	[Nullable(2)]
 	public RoleDevViewModel RoleDevViewModel
 	{
@@ -95,16 +95,16 @@ public abstract class RoleDevPhantomViewItemDataBase
 		}
 	}
 
-	// Token: 0x06015060 RID: 86112
+	// Token: 0x06012A60 RID: 76384
 	public abstract void RefreshSuitDataList();
 
-	// Token: 0x04009E04 RID: 40452
+	// Token: 0x0400A1ED RID: 41453
 	protected int RoleIdInternal;
 
-	// Token: 0x04009E05 RID: 40453
+	// Token: 0x0400A1EE RID: 41454
 	protected ERoleDevDataType RoleTypeInternal;
 
-	// Token: 0x04009E06 RID: 40454
+	// Token: 0x0400A1EF RID: 41455
 	[Nullable(2)]
 	protected RoleDevViewModel RoleDevViewModelInternal;
 }

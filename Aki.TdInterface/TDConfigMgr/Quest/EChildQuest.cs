@@ -3,139 +3,139 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E5C RID: 3676
+	// Token: 0x02000F6D RID: 3949
 	[EnumExtensions]
 	public enum EChildQuest
 	{
-		// Token: 0x04002FDA RID: 12250
+		// Token: 0x040032D1 RID: 13009
 		DoInteract,
-		// Token: 0x04002FDB RID: 12251
+		// Token: 0x040032D2 RID: 13010
 		ReachArea,
-		// Token: 0x04002FDC RID: 12252
+		// Token: 0x040032D3 RID: 13011
 		Kill,
-		// Token: 0x04002FDD RID: 12253
+		// Token: 0x040032D4 RID: 13012
 		GetItem,
-		// Token: 0x04002FDE RID: 12254
+		// Token: 0x040032D5 RID: 13013
 		UseSkill,
-		// Token: 0x04002FDF RID: 12255
+		// Token: 0x040032D6 RID: 13014
 		GetSkill,
-		// Token: 0x04002FE0 RID: 12256
+		// Token: 0x040032D7 RID: 13015
 		PlayFlow,
-		// Token: 0x04002FE1 RID: 12257
+		// Token: 0x040032D8 RID: 13016
 		DetectCombatState,
-		// Token: 0x04002FE2 RID: 12258
+		// Token: 0x040032D9 RID: 13017
 		Parkour,
-		// Token: 0x04002FE3 RID: 12259
+		// Token: 0x040032DA RID: 13018
 		Timer,
-		// Token: 0x04002FE4 RID: 12260
+		// Token: 0x040032DB RID: 13019
 		HandInItems,
-		// Token: 0x04002FE5 RID: 12261
+		// Token: 0x040032DC RID: 13020
 		NewHandInItems,
-		// Token: 0x04002FE6 RID: 12262
+		// Token: 0x040032DD RID: 13021
 		MonsterCreator,
-		// Token: 0x04002FE7 RID: 12263
+		// Token: 0x040032DE RID: 13022
 		InformationViewCheck,
-		// Token: 0x04002FE8 RID: 12264
+		// Token: 0x040032DF RID: 13023
 		UseItem,
-		// Token: 0x04002FE9 RID: 12265
+		// Token: 0x040032E0 RID: 13024
 		CheckEntityState,
-		// Token: 0x04002FEA RID: 12266
+		// Token: 0x040032E1 RID: 13025
 		CheckLevelPlay,
-		// Token: 0x04002FEB RID: 12267
+		// Token: 0x040032E2 RID: 13026
 		CheckUiGame,
-		// Token: 0x04002FEC RID: 12268
+		// Token: 0x040032E3 RID: 13027
 		FinishDungeon,
-		// Token: 0x04002FED RID: 12269
+		// Token: 0x040032E4 RID: 13028
 		WaitTime,
-		// Token: 0x04002FEE RID: 12270
+		// Token: 0x040032E5 RID: 13029
 		ScheduleTime,
-		// Token: 0x04002FEF RID: 12271
+		// Token: 0x040032E6 RID: 13030
 		ReadMail,
-		// Token: 0x04002FF0 RID: 12272
+		// Token: 0x040032E7 RID: 13031
 		Guide,
-		// Token: 0x04002FF1 RID: 12273
+		// Token: 0x040032E8 RID: 13032
 		EnterDungeon,
-		// Token: 0x04002FF2 RID: 12274
+		// Token: 0x040032E9 RID: 13033
 		LeaveDungeon,
-		// Token: 0x04002FF3 RID: 12275
+		// Token: 0x040032EA RID: 13034
 		CheckTargetBattleAttribute,
-		// Token: 0x04002FF4 RID: 12276
+		// Token: 0x040032EB RID: 13035
 		WaitBattleCondition,
-		// Token: 0x04002FF5 RID: 12277
+		// Token: 0x040032EC RID: 13036
 		CompareVar,
-		// Token: 0x04002FF6 RID: 12278
+		// Token: 0x040032ED RID: 13037
 		CompareActorVar,
-		// Token: 0x04002FF7 RID: 12279
+		// Token: 0x040032EE RID: 13038
 		ReceiveTelecom,
-		// Token: 0x04002FF8 RID: 12280
+		// Token: 0x040032EF RID: 13039
 		ShowUi,
-		// Token: 0x04002FF9 RID: 12281
+		// Token: 0x040032F0 RID: 13040
 		TakePhoto,
-		// Token: 0x04002FFA RID: 12282
+		// Token: 0x040032F1 RID: 13041
 		TakePhoto2,
-		// Token: 0x04002FFB RID: 12283
+		// Token: 0x040032F2 RID: 13042
 		VisionSystem,
-		// Token: 0x04002FFC RID: 12284
+		// Token: 0x040032F3 RID: 13043
 		ParallaxAlign,
-		// Token: 0x04002FFD RID: 12285
+		// Token: 0x040032F4 RID: 13044
 		CheckConditionGroup,
-		// Token: 0x04002FFE RID: 12286
+		// Token: 0x040032F5 RID: 13045
 		CheckClientConditionGroup,
-		// Token: 0x04002FFF RID: 12287
+		// Token: 0x040032F6 RID: 13046
 		CheckActivityState,
-		// Token: 0x04003000 RID: 12288
+		// Token: 0x040032F7 RID: 13047
 		CheckPlayerInput,
-		// Token: 0x04003001 RID: 12289
+		// Token: 0x040032F8 RID: 13048
 		AwakeAndLoadEntity,
-		// Token: 0x04003002 RID: 12290
+		// Token: 0x040032F9 RID: 13049
 		WalkingPattern,
-		// Token: 0x04003003 RID: 12291
+		// Token: 0x040032FA RID: 13050
 		DetectCombatState2,
-		// Token: 0x04003004 RID: 12292
+		// Token: 0x040032FB RID: 13051
 		FinishBvbChallenge,
-		// Token: 0x04003005 RID: 12293
+		// Token: 0x040032FC RID: 13052
 		FinishTrapDefense,
-		// Token: 0x04003006 RID: 12294
+		// Token: 0x040032FD RID: 13053
 		CheckTrapDefenseEvent,
-		// Token: 0x04003007 RID: 12295
+		// Token: 0x040032FE RID: 13054
 		ProgramSpecialProcess,
-		// Token: 0x04003008 RID: 12296
+		// Token: 0x040032FF RID: 13055
 		WaitUntilLevelSequenceReachMark,
-		// Token: 0x04003009 RID: 12297
+		// Token: 0x04003300 RID: 13056
 		FinishSurvivorsRouge,
-		// Token: 0x0400300A RID: 12298
+		// Token: 0x04003301 RID: 13057
 		TakePicturesWithTimeScale,
-		// Token: 0x0400300B RID: 12299
+		// Token: 0x04003302 RID: 13058
 		FinishRollBlock,
-		// Token: 0x0400300C RID: 12300
+		// Token: 0x04003303 RID: 13059
 		ReadPhoneMessage,
-		// Token: 0x0400300D RID: 12301
+		// Token: 0x04003304 RID: 13060
 		ListenToEvent,
-		// Token: 0x0400300E RID: 12302
+		// Token: 0x04003305 RID: 13061
 		AtomicProcess,
-		// Token: 0x0400300F RID: 12303
+		// Token: 0x04003306 RID: 13062
 		UseWeatherSwitch,
-		// Token: 0x04003010 RID: 12304
+		// Token: 0x04003307 RID: 13063
 		FinishRhythmSpaceship,
-		// Token: 0x04003011 RID: 12305
+		// Token: 0x04003308 RID: 13064
 		FinishFlipper,
-		// Token: 0x04003012 RID: 12306
+		// Token: 0x04003309 RID: 13065
 		FinishKurotato,
-		// Token: 0x04003013 RID: 12307
+		// Token: 0x0400330A RID: 13066
 		FinishRoleTower,
-		// Token: 0x04003014 RID: 12308
+		// Token: 0x0400330B RID: 13067
 		CheckSpringFestivalGameplayCompleted,
-		// Token: 0x04003015 RID: 12309
+		// Token: 0x0400330C RID: 13068
 		FinishTetris,
-		// Token: 0x04003016 RID: 12310
+		// Token: 0x0400330D RID: 13069
 		FinishArcadeGameplay,
-		// Token: 0x04003017 RID: 12311
+		// Token: 0x0400330E RID: 13070
 		FinishKuroSimpleCombatKillMonster,
-		// Token: 0x04003018 RID: 12312
+		// Token: 0x0400330F RID: 13071
 		CrossSceneSyncKillMonster,
-		// Token: 0x04003019 RID: 12313
+		// Token: 0x04003310 RID: 13072
 		PlaybackShowTimeline,
-		// Token: 0x0400301A RID: 12314
+		// Token: 0x04003311 RID: 13073
 		FinishJellyfishReturn
 	}
 }

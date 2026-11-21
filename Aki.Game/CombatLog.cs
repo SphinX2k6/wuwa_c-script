@@ -6,12 +6,12 @@ using System.Text;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x020034B1 RID: 13489
+// Token: 0x02002A25 RID: 10789
 [NullableContext(1)]
 [Nullable(0)]
 public class CombatLog : Singleton
 {
-	// Token: 0x0601D614 RID: 120340 RVA: 0x008320D0 File Offset: 0x008302D0
+	// Token: 0x0601B313 RID: 111379 RVA: 0x008594F0 File Offset: 0x008576F0
 	private void GetEntityLogInfo([Nullable(2)] Entity entity, out long entityId, out string entityTypeName, out string actorName)
 	{
 		entityId = 0L;
@@ -38,7 +38,7 @@ public class CombatLog : Singleton
 		}
 	}
 
-	// Token: 0x0601D615 RID: 120341 RVA: 0x00832160 File Offset: 0x00830360
+	// Token: 0x0601B314 RID: 111380 RVA: 0x00859580 File Offset: 0x00857780
 	private void LogInternal(int logType, CombatLog.EDebugModule flag, long entityId, string entityTypeName, string actorName, string message, [Nullable(new byte[]
 	{
 		0,
@@ -82,7 +82,7 @@ public class CombatLog : Singleton
 		}
 	}
 
-	// Token: 0x0601D616 RID: 120342 RVA: 0x00832258 File Offset: 0x00830458
+	// Token: 0x0601B315 RID: 111381 RVA: 0x00859678 File Offset: 0x00857878
 	public void Info(CombatLog.EDebugModule flag, [Nullable(2)] Entity entity, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -98,7 +98,7 @@ public class CombatLog : Singleton
 		this.LogInternal(0, flag, entityId, entityTypeName, actorName, message, pairs, null);
 	}
 
-	// Token: 0x0601D617 RID: 120343 RVA: 0x00832284 File Offset: 0x00830484
+	// Token: 0x0601B316 RID: 111382 RVA: 0x008596A4 File Offset: 0x008578A4
 	public void Info(CombatLog.EDebugModule flag, long entityId, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -110,7 +110,7 @@ public class CombatLog : Singleton
 		this.LogInternal(0, flag, entityId, string.Empty, string.Empty, message, pairs, null);
 	}
 
-	// Token: 0x0601D618 RID: 120344 RVA: 0x008322A8 File Offset: 0x008304A8
+	// Token: 0x0601B317 RID: 111383 RVA: 0x008596C8 File Offset: 0x008578C8
 	[Conditional("DEBUG")]
 	public void Debug(CombatLog.EDebugModule flag, [Nullable(2)] Entity entity, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
@@ -122,7 +122,7 @@ public class CombatLog : Singleton
 	{
 	}
 
-	// Token: 0x0601D619 RID: 120345 RVA: 0x008322AA File Offset: 0x008304AA
+	// Token: 0x0601B318 RID: 111384 RVA: 0x008596CA File Offset: 0x008578CA
 	[Conditional("DEBUG")]
 	public void Debug(CombatLog.EDebugModule flag, long entityId, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
@@ -134,7 +134,7 @@ public class CombatLog : Singleton
 	{
 	}
 
-	// Token: 0x0601D61A RID: 120346 RVA: 0x008322AC File Offset: 0x008304AC
+	// Token: 0x0601B319 RID: 111385 RVA: 0x008596CC File Offset: 0x008578CC
 	[Conditional("DEBUG")]
 	public void DebugEx(CombatLog.EDebugModule flag, [Nullable(2)] Entity entity, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
@@ -146,7 +146,7 @@ public class CombatLog : Singleton
 	{
 	}
 
-	// Token: 0x0601D61B RID: 120347 RVA: 0x008322AE File Offset: 0x008304AE
+	// Token: 0x0601B31A RID: 111386 RVA: 0x008596CE File Offset: 0x008578CE
 	[Conditional("DEBUG")]
 	public void DebugEx(CombatLog.EDebugModule flag, long entityId, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
@@ -158,7 +158,7 @@ public class CombatLog : Singleton
 	{
 	}
 
-	// Token: 0x0601D61C RID: 120348 RVA: 0x008322B0 File Offset: 0x008304B0
+	// Token: 0x0601B31B RID: 111387 RVA: 0x008596D0 File Offset: 0x008578D0
 	public void Warn(CombatLog.EDebugModule flag, [Nullable(2)] Entity entity, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -174,7 +174,7 @@ public class CombatLog : Singleton
 		this.LogInternal(2, flag, entityId, entityTypeName, actorName, message, pairs, null);
 	}
 
-	// Token: 0x0601D61D RID: 120349 RVA: 0x008322DC File Offset: 0x008304DC
+	// Token: 0x0601B31C RID: 111388 RVA: 0x008596FC File Offset: 0x008578FC
 	public void Warn(CombatLog.EDebugModule flag, long entityId, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -186,7 +186,7 @@ public class CombatLog : Singleton
 		this.LogInternal(2, flag, entityId, string.Empty, string.Empty, message, pairs, null);
 	}
 
-	// Token: 0x0601D61E RID: 120350 RVA: 0x00832300 File Offset: 0x00830500
+	// Token: 0x0601B31D RID: 111389 RVA: 0x00859720 File Offset: 0x00857920
 	public unsafe void Error(CombatLog.EDebugModule flag, [Nullable(2)] Entity entity, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -222,7 +222,7 @@ public class CombatLog : Singleton
 		this.LogInternal(3, flag, entityId, entityTypeName, actorName, message, pairs, null);
 	}
 
-	// Token: 0x0601D61F RID: 120351 RVA: 0x008323E0 File Offset: 0x008305E0
+	// Token: 0x0601B31E RID: 111390 RVA: 0x00859800 File Offset: 0x00857A00
 	public unsafe void Error(CombatLog.EDebugModule flag, long entityId, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -253,13 +253,13 @@ public class CombatLog : Singleton
 		this.LogInternal(3, flag, entityId, string.Empty, string.Empty, message, pairs, null);
 	}
 
-	// Token: 0x0601D620 RID: 120352 RVA: 0x008324A9 File Offset: 0x008306A9
+	// Token: 0x0601B31F RID: 111391 RVA: 0x008598C9 File Offset: 0x00857AC9
 	[Conditional("DEBUG")]
 	private void PrintOnScreen(string message, FLinearColor color)
 	{
 	}
 
-	// Token: 0x0601D621 RID: 120353 RVA: 0x008324AC File Offset: 0x008306AC
+	// Token: 0x0601B320 RID: 111392 RVA: 0x008598CC File Offset: 0x00857ACC
 	public void ErrorWithStack(CombatLog.EDebugModule flag, [Nullable(2)] Entity entity, string message, Exception e, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -275,7 +275,7 @@ public class CombatLog : Singleton
 		this.LogInternal(3, flag, entityId, entityTypeName, actorName, message, pairs, e);
 	}
 
-	// Token: 0x0601D622 RID: 120354 RVA: 0x008324D8 File Offset: 0x008306D8
+	// Token: 0x0601B321 RID: 111393 RVA: 0x008598F8 File Offset: 0x00857AF8
 	public void ErrorWithStack(CombatLog.EDebugModule flag, long entityId, string message, Exception e, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -287,8 +287,8 @@ public class CombatLog : Singleton
 		this.LogInternal(3, flag, entityId, string.Empty, string.Empty, message, pairs, e);
 	}
 
-	// Token: 0x170028BD RID: 10429
-	// (get) Token: 0x0601D623 RID: 120355 RVA: 0x008324FD File Offset: 0x008306FD
+	// Token: 0x17002C55 RID: 11349
+	// (get) Token: 0x0601B322 RID: 111394 RVA: 0x0085991D File Offset: 0x00857B1D
 	public static CombatLog Instance
 	{
 		get
@@ -302,12 +302,12 @@ public class CombatLog : Singleton
 		}
 	}
 
-	// Token: 0x0601D624 RID: 120356 RVA: 0x00832520 File Offset: 0x00830720
+	// Token: 0x0601B323 RID: 111395 RVA: 0x00859940 File Offset: 0x00857B40
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D625 RID: 120357 RVA: 0x00832522 File Offset: 0x00830722
+	// Token: 0x0601B324 RID: 111396 RVA: 0x00859942 File Offset: 0x00857B42
 	public static void ResetStaticDefaultValue()
 	{
 		CombatLog instance = CombatLog._instance;
@@ -318,98 +318,98 @@ public class CombatLog : Singleton
 		CombatLog._instance = null;
 	}
 
-	// Token: 0x0601D626 RID: 120358 RVA: 0x0083253B File Offset: 0x0083073B
+	// Token: 0x0601B325 RID: 111397 RVA: 0x0085995B File Offset: 0x00857B5B
 	static CombatLog()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CombatLog.CreateStaticDefaultValue), new Action(CombatLog.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E76D RID: 59245
+	// Token: 0x0400EC21 RID: 60449
 	public HashSet<CombatLog.EDebugModule> DebugCombatInfo = new HashSet<CombatLog.EDebugModule>();
 
-	// Token: 0x0400E76E RID: 59246
+	// Token: 0x0400EC22 RID: 60450
 	[StaticVariableRuleIgnore]
 	private static StringBuilder Sb = new StringBuilder(256);
 
-	// Token: 0x0400E76F RID: 59247
+	// Token: 0x0400EC23 RID: 60451
 	[Nullable(2)]
 	private static CombatLog _instance;
 
-	// Token: 0x02009866 RID: 39014
+	// Token: 0x02008A81 RID: 35457
 	[NullableContext(0)]
 	public enum ELogType
 	{
-		// Token: 0x040308FC RID: 198908
+		// Token: 0x0402BF81 RID: 180097
 		Info,
-		// Token: 0x040308FD RID: 198909
+		// Token: 0x0402BF82 RID: 180098
 		Debug,
-		// Token: 0x040308FE RID: 198910
+		// Token: 0x0402BF83 RID: 180099
 		Warn,
-		// Token: 0x040308FF RID: 198911
+		// Token: 0x0402BF84 RID: 180100
 		Error
 	}
 
-	// Token: 0x02009867 RID: 39015
+	// Token: 0x02008A82 RID: 35458
 	[NullableContext(0)]
 	public enum EDebugModule
 	{
-		// Token: 0x04030901 RID: 198913
+		// Token: 0x0402BF86 RID: 180102
 		Notify,
-		// Token: 0x04030902 RID: 198914
+		// Token: 0x0402BF87 RID: 180103
 		Request,
-		// Token: 0x04030903 RID: 198915
+		// Token: 0x0402BF88 RID: 180104
 		Ai,
-		// Token: 0x04030904 RID: 198916
+		// Token: 0x0402BF89 RID: 180105
 		Buff,
-		// Token: 0x04030905 RID: 198917
+		// Token: 0x0402BF8A RID: 180106
 		Cue,
-		// Token: 0x04030906 RID: 198918
+		// Token: 0x0402BF8B RID: 180107
 		Skill,
-		// Token: 0x04030907 RID: 198919
+		// Token: 0x0402BF8C RID: 180108
 		Hit,
-		// Token: 0x04030908 RID: 198920
+		// Token: 0x0402BF8D RID: 180109
 		Control,
-		// Token: 0x04030909 RID: 198921
+		// Token: 0x0402BF8E RID: 180110
 		Animation,
-		// Token: 0x0403090A RID: 198922
+		// Token: 0x0402BF8F RID: 180111
 		Caught,
-		// Token: 0x0403090B RID: 198923
+		// Token: 0x0402BF90 RID: 180112
 		Message,
-		// Token: 0x0403090C RID: 198924
+		// Token: 0x0402BF91 RID: 180113
 		LogicState,
-		// Token: 0x0403090D RID: 198925
+		// Token: 0x0402BF92 RID: 180114
 		Move,
-		// Token: 0x0403090E RID: 198926
+		// Token: 0x0402BF93 RID: 180115
 		StateMachine,
-		// Token: 0x0403090F RID: 198927
+		// Token: 0x0402BF94 RID: 180116
 		StateMachineNew,
-		// Token: 0x04030910 RID: 198928
+		// Token: 0x0402BF95 RID: 180117
 		Actor,
-		// Token: 0x04030911 RID: 198929
+		// Token: 0x0402BF96 RID: 180118
 		Material,
-		// Token: 0x04030912 RID: 198930
+		// Token: 0x0402BF97 RID: 180119
 		Part,
-		// Token: 0x04030913 RID: 198931
+		// Token: 0x0402BF98 RID: 180120
 		UnifiedState,
-		// Token: 0x04030914 RID: 198932
+		// Token: 0x0402BF99 RID: 180121
 		BehaviorTree,
-		// Token: 0x04030915 RID: 198933
+		// Token: 0x0402BF9A RID: 180122
 		FightState,
-		// Token: 0x04030916 RID: 198934
+		// Token: 0x0402BF9B RID: 180123
 		Attribute,
-		// Token: 0x04030917 RID: 198935
+		// Token: 0x0402BF9C RID: 180124
 		PassiveSkill,
-		// Token: 0x04030918 RID: 198936
+		// Token: 0x0402BF9D RID: 180125
 		Bullet,
-		// Token: 0x04030919 RID: 198937
+		// Token: 0x0402BF9E RID: 180126
 		BattleUi,
-		// Token: 0x0403091A RID: 198938
+		// Token: 0x0402BF9F RID: 180127
 		Damage,
-		// Token: 0x0403091B RID: 198939
+		// Token: 0x0402BFA0 RID: 180128
 		Death,
-		// Token: 0x0403091C RID: 198940
+		// Token: 0x0402BFA1 RID: 180129
 		LockOn,
-		// Token: 0x0403091D RID: 198941
+		// Token: 0x0402BFA2 RID: 180130
 		Vehicle
 	}
 }

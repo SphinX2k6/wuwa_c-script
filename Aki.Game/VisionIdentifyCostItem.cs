@@ -12,24 +12,24 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024CB RID: 9419
+// Token: 0x020019B2 RID: 6578
 [NullableContext(1)]
 [Nullable(0)]
 internal class VisionIdentifyCostItem : UiPanelBase
 {
-	// Token: 0x06012EB0 RID: 77488 RVA: 0x004ADA5D File Offset: 0x004ABC5D
+	// Token: 0x0601036F RID: 66415 RVA: 0x004BB65D File Offset: 0x004B985D
 	public VisionIdentifyCostItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06012EB1 RID: 77489 RVA: 0x004ADA6C File Offset: 0x004ABC6C
+	// Token: 0x06010370 RID: 66416 RVA: 0x004BB66C File Offset: 0x004B986C
 	public void Init()
 	{
 		base.SetRootActor(this.SourceItem.GetOwner(), true);
 	}
 
-	// Token: 0x06012EB2 RID: 77490 RVA: 0x004ADA80 File Offset: 0x004ABC80
+	// Token: 0x06010371 RID: 66417 RVA: 0x004BB680 File Offset: 0x004B9880
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +51,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012EB3 RID: 77491 RVA: 0x004ADBD4 File Offset: 0x004ABDD4
+	// Token: 0x06010372 RID: 66418 RVA: 0x004BB7D4 File Offset: 0x004B99D4
 	protected override void OnStart()
 	{
 		this.NumberSelect = new NumberSelectComponent(base.GetItem(8));
@@ -62,7 +62,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		this.ItemGridVariantSelect.BindOnExtendToggleStateChanged(new Action<MediumItemGridExtendCallback>(this.OnClickedRewardItem));
 	}
 
-	// Token: 0x06012EB4 RID: 77492 RVA: 0x004ADC58 File Offset: 0x004ABE58
+	// Token: 0x06010373 RID: 66419 RVA: 0x004BB858 File Offset: 0x004B9A58
 	private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 	{
 		MediumItemGrid itemGridVariantSelect = this.ItemGridVariantSelect;
@@ -82,10 +82,10 @@ internal class VisionIdentifyCostItem : UiPanelBase
 			ItemController.Instance.OpenItemTipsByItemUid(num, currentIdentifyCostId, true, null);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(currentIdentifyCostId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(currentIdentifyCostId, true, null, false);
 	}
 
-	// Token: 0x06012EB5 RID: 77493 RVA: 0x004ADCCC File Offset: 0x004ABECC
+	// Token: 0x06010374 RID: 66420 RVA: 0x004BB8CC File Offset: 0x004B9ACC
 	private void OnClickStrengthButton(int _)
 	{
 		if (!this.GetRedItemEnoughItemState(this.Data))
@@ -101,7 +101,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		this.RequestIdentify().Forget();
 	}
 
-	// Token: 0x06012EB6 RID: 77494 RVA: 0x004ADD30 File Offset: 0x004ABF30
+	// Token: 0x06010375 RID: 66421 RVA: 0x004BB930 File Offset: 0x004B9B30
 	private UniTask RequestIdentify()
 	{
 		VisionIdentifyCostItem.<RequestIdentify>d__13 <RequestIdentify>d__;
@@ -112,18 +112,18 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		return <RequestIdentify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012EB7 RID: 77495 RVA: 0x004ADD73 File Offset: 0x004ABF73
+	// Token: 0x06010376 RID: 66422 RVA: 0x004BB973 File Offset: 0x004B9B73
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("IdentifyCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x06012EB8 RID: 77496 RVA: 0x004ADD94 File Offset: 0x004ABF94
+	// Token: 0x06010377 RID: 66423 RVA: 0x004BB994 File Offset: 0x004B9B94
 	private void RefreshStrengthButton()
 	{
 	}
 
-	// Token: 0x06012EB9 RID: 77497 RVA: 0x004ADD96 File Offset: 0x004ABF96
+	// Token: 0x06010378 RID: 66424 RVA: 0x004BB996 File Offset: 0x004B9B96
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.RefreshView();
@@ -135,7 +135,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		onChangeValueCall();
 	}
 
-	// Token: 0x06012EBA RID: 77498 RVA: 0x004ADDB0 File Offset: 0x004ABFB0
+	// Token: 0x06010379 RID: 66425 RVA: 0x004BB9B0 File Offset: 0x004B9BB0
 	private void RefreshItemShow(PhantomDataBase data)
 	{
 		int currentIdentifyCostId = data.GetCurrentIdentifyCostId();
@@ -180,7 +180,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		this.ItemGridVariantSelect.Apply<PropMediumItemGrid>(propMediumItemGrid);
 	}
 
-	// Token: 0x06012EBB RID: 77499 RVA: 0x004ADEC0 File Offset: 0x004AC0C0
+	// Token: 0x0601037A RID: 66426 RVA: 0x004BBAC0 File Offset: 0x004B9CC0
 	private void RefreshNumSelectComponent(PhantomDataBase data)
 	{
 		int currentCanIdentifyCount = data.GetCurrentCanIdentifyCount();
@@ -198,7 +198,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		this.NumberSelect.SetReduceButtonInteractive(this.CurrentConsumeSelectNum() > 1);
 	}
 
-	// Token: 0x06012EBC RID: 77500 RVA: 0x004ADF58 File Offset: 0x004AC158
+	// Token: 0x0601037B RID: 66427 RVA: 0x004BBB58 File Offset: 0x004B9D58
 	private void RefreshConsume(PhantomDataBase data)
 	{
 		int identifyCostItemId = data.GetIdentifyCostItemId();
@@ -215,14 +215,14 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x06012EBD RID: 77501 RVA: 0x004ADFD4 File Offset: 0x004AC1D4
+	// Token: 0x0601037C RID: 66428 RVA: 0x004BBBD4 File Offset: 0x004B9DD4
 	private void RefreshGreenItem(PhantomDataBase data)
 	{
 		bool ifNeedShowGreenItem = this.GetIfNeedShowGreenItem(data);
 		base.GetItem(3).SetUIActive(ifNeedShowGreenItem);
 	}
 
-	// Token: 0x06012EBE RID: 77502 RVA: 0x004ADFF8 File Offset: 0x004AC1F8
+	// Token: 0x0601037D RID: 66429 RVA: 0x004BBBF8 File Offset: 0x004B9DF8
 	private bool GetIfNeedShowGreenItem(PhantomDataBase data)
 	{
 		List<VisionSubPropData> levelSubPropData = data.GetLevelSubPropData(data.GetPhantomLevel());
@@ -241,7 +241,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x06012EBF RID: 77503 RVA: 0x004AE058 File Offset: 0x004AC258
+	// Token: 0x0601037E RID: 66430 RVA: 0x004BBC58 File Offset: 0x004B9E58
 	private void RefreshRedItem(PhantomDataBase data)
 	{
 		bool redItemShowState = this.GetRedItemShowState(data);
@@ -257,13 +257,13 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012EC0 RID: 77504 RVA: 0x004AE0CA File Offset: 0x004AC2CA
+	// Token: 0x0601037F RID: 66431 RVA: 0x004BBCCA File Offset: 0x004B9ECA
 	private bool GetRedItemEnoughItemState(PhantomDataBase data)
 	{
 		return data.GetIfHaveEnoughIdentifyConsumeItem(this.CurrentConsumeSelectNum());
 	}
 
-	// Token: 0x06012EC1 RID: 77505 RVA: 0x004AE0D8 File Offset: 0x004AC2D8
+	// Token: 0x06010380 RID: 66432 RVA: 0x004BBCD8 File Offset: 0x004B9ED8
 	private bool GetRedItemShowState(PhantomDataBase data)
 	{
 		bool ifHaveEnoughIdentifyConsumeItem = data.GetIfHaveEnoughIdentifyConsumeItem(this.CurrentConsumeSelectNum());
@@ -271,7 +271,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		return !this.GetIfNeedShowGreenItem(data) && (!ifHaveUnIdentifySubProp || !ifHaveEnoughIdentifyConsumeItem);
 	}
 
-	// Token: 0x06012EC2 RID: 77506 RVA: 0x004AE110 File Offset: 0x004AC310
+	// Token: 0x06010381 RID: 66433 RVA: 0x004BBD10 File Offset: 0x004B9F10
 	private void RefreshItemShowState(PhantomDataBase data)
 	{
 		bool ifNeedShowGreenItem = this.GetIfNeedShowGreenItem(data);
@@ -294,13 +294,13 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012EC3 RID: 77507 RVA: 0x004AE195 File Offset: 0x004AC395
+	// Token: 0x06010382 RID: 66434 RVA: 0x004BBD95 File Offset: 0x004B9F95
 	public int CurrentConsumeSelectNum()
 	{
 		return this.NumberSelect.GetSelectNumber();
 	}
 
-	// Token: 0x06012EC4 RID: 77508 RVA: 0x004AE1A2 File Offset: 0x004AC3A2
+	// Token: 0x06010383 RID: 66435 RVA: 0x004BBDA2 File Offset: 0x004B9FA2
 	public void Update(PhantomDataBase data)
 	{
 		this.Data = data;
@@ -308,13 +308,13 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06012EC5 RID: 77509 RVA: 0x004AE1BD File Offset: 0x004AC3BD
+	// Token: 0x06010384 RID: 66436 RVA: 0x004BBDBD File Offset: 0x004B9FBD
 	public void SetOnChangeValueCallBack(Action call)
 	{
 		this.OnChangeValueCall = call;
 	}
 
-	// Token: 0x06012EC6 RID: 77510 RVA: 0x004AE1C8 File Offset: 0x004AC3C8
+	// Token: 0x06010385 RID: 66437 RVA: 0x004BBDC8 File Offset: 0x004B9FC8
 	private void RefreshNumberSelectIdentifyText(PhantomDataBase data)
 	{
 		if (!data.GetIfHaveEnoughIdentifyConsumeItem(this.CurrentConsumeSelectNum()) && this.CurrentConsumeSelectNum() == 1)
@@ -327,7 +327,7 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012EC7 RID: 77511 RVA: 0x004AE224 File Offset: 0x004AC424
+	// Token: 0x06010386 RID: 66438 RVA: 0x004BBE24 File Offset: 0x004BA024
 	private void RefreshView()
 	{
 		this.RefreshConsume(this.Data);
@@ -339,61 +339,61 @@ internal class VisionIdentifyCostItem : UiPanelBase
 		this.RefreshNumberSelectIdentifyText(this.Data);
 	}
 
-	// Token: 0x04008E91 RID: 36497
+	// Token: 0x04008FDB RID: 36827
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x04008E92 RID: 36498
+	// Token: 0x04008FDC RID: 36828
 	[Nullable(2)]
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x04008E93 RID: 36499
+	// Token: 0x04008FDD RID: 36829
 	[Nullable(2)]
 	private PhantomDataBase Data;
 
-	// Token: 0x04008E94 RID: 36500
+	// Token: 0x04008FDE RID: 36830
 	[Nullable(2)]
 	private ButtonItem StrengthItem;
 
-	// Token: 0x04008E95 RID: 36501
+	// Token: 0x04008FDF RID: 36831
 	[Nullable(2)]
 	private Action OnChangeValueCall;
 
-	// Token: 0x04008E96 RID: 36502
+	// Token: 0x04008FE0 RID: 36832
 	[Nullable(2)]
 	private MediumItemGrid ItemGridVariantSelect;
 
-	// Token: 0x02008A55 RID: 35413
+	// Token: 0x02007BDE RID: 31710
 	[NullableContext(0)]
 	private enum EVisionIdentifyCostItemEnum
 	{
-		// Token: 0x0402CEA5 RID: 183973
+		// Token: 0x040281C3 RID: 164291
 		TitleText,
-		// Token: 0x0402CEA6 RID: 183974
+		// Token: 0x040281C4 RID: 164292
 		MoneyItem,
-		// Token: 0x0402CEA7 RID: 183975
+		// Token: 0x040281C5 RID: 164293
 		ConsumeItemParent,
-		// Token: 0x0402CEA8 RID: 183976
+		// Token: 0x040281C6 RID: 164294
 		GreenItem,
-		// Token: 0x0402CEA9 RID: 183977
+		// Token: 0x040281C7 RID: 164295
 		RedItem,
-		// Token: 0x0402CEAA RID: 183978
+		// Token: 0x040281C8 RID: 164296
 		RedText,
-		// Token: 0x0402CEAB RID: 183979
+		// Token: 0x040281C9 RID: 164297
 		GreenText,
-		// Token: 0x0402CEAC RID: 183980
+		// Token: 0x040281CA RID: 164298
 		IdentifyTitleItem,
-		// Token: 0x0402CEAD RID: 183981
+		// Token: 0x040281CB RID: 164299
 		NumSelectComponent,
-		// Token: 0x0402CEAE RID: 183982
+		// Token: 0x040281CC RID: 164300
 		ConsumeTexture,
-		// Token: 0x0402CEAF RID: 183983
+		// Token: 0x040281CD RID: 164301
 		ConsumeText,
-		// Token: 0x0402CEB0 RID: 183984
+		// Token: 0x040281CE RID: 164302
 		ConfirmButtonItem,
-		// Token: 0x0402CEB1 RID: 183985
+		// Token: 0x040281CF RID: 164303
 		ItemBase,
-		// Token: 0x0402CEB2 RID: 183986
+		// Token: 0x040281D0 RID: 164304
 		ItemDownText
 	}
 }

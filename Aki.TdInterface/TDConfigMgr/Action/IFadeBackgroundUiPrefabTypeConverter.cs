@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001543 RID: 5443
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x0200169E RID: 5790
 	public class IFadeBackgroundUiPrefabTypeConverter : JsonConverter<IFadeBackgroundUiPrefabType>
 	{
-		// Token: 0x06007B37 RID: 31543 RVA: 0x00128CD4 File Offset: 0x00126ED4
+		// Token: 0x06008208 RID: 33288 RVA: 0x00137B70 File Offset: 0x00135D70
 		[return: Nullable(2)]
 		public override IFadeBackgroundUiPrefabType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -40,7 +34,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B38 RID: 31544 RVA: 0x00128D50 File Offset: 0x00126F50
+		// Token: 0x06008209 RID: 33289 RVA: 0x00137BEC File Offset: 0x00135DEC
 		public override void Write(Utf8JsonWriter writer, IFadeBackgroundUiPrefabType value, JsonSerializerOptions options)
 		{
 			IFadeBackgroundUiPrefabBlackScreenWhiteText fadeBackgroundUiPrefabBlackScreenWhiteText = value as IFadeBackgroundUiPrefabBlackScreenWhiteText;

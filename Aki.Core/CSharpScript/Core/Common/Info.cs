@@ -7,13 +7,13 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x0200016A RID: 362
+	// Token: 0x0200016F RID: 367
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Info : Singleton
 	{
-		// Token: 0x17000138 RID: 312
-		// (get) Token: 0x06000C4F RID: 3151 RVA: 0x0003A42F File Offset: 0x0003862F
+		// Token: 0x1700014B RID: 331
+		// (get) Token: 0x06000CAE RID: 3246 RVA: 0x0003B173 File Offset: 0x00039373
 		public UGameInstance GameInstance
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x17000139 RID: 313
-		// (get) Token: 0x06000C50 RID: 3152 RVA: 0x0003A437 File Offset: 0x00038637
+		// Token: 0x1700014C RID: 332
+		// (get) Token: 0x06000CAF RID: 3247 RVA: 0x0003B17B File Offset: 0x0003937B
 		[Nullable(2)]
 		public UWorld World
 		{
@@ -35,76 +35,32 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x06000C51 RID: 3153 RVA: 0x0003A450 File Offset: 0x00038650
+		// Token: 0x06000CB0 RID: 3248 RVA: 0x0003B194 File Offset: 0x00039394
 		public void Initialize(UGameInstance gameInstance)
 		{
 			this.GameInstanceInternal = gameInstance;
 			this.Environment = EEnvironment.UE4;
-			this.IsInEditor = UKuroStaticLibrary.IsEditor(gameInstance);
-			this.IsShipping = KuroApplication.IsBuildShipping();
-			this.IsTest = KuroApplication.IsBuildTest();
-			this.IsDevelopmentOrDebug = (!this.IsShipping && !this.IsTest);
 			this.IsLowMemoryDeviceInternal = UKuroStaticLibrary.IsLowMemoryDevice();
-			this.IsInCgInternal = (this.IsInEditor && UKuroRenderingRuntimeBPPluginBPLibrary.GetCVarFloat("r.Kuro.Movie.EnableCGMovieRendering") > 0f);
+			this.IsInCgInternal = false;
 			this.IsInSimulateInEditorInternal = false;
 			this.InitializePlatformType();
 			Func<string> cloudGamePlatformHook = Info.CloudGamePlatformHook;
 			this.InitCloudGame(((cloudGamePlatformHook != null) ? cloudGamePlatformHook() : null) ?? string.Empty);
 		}
 
-		// Token: 0x1700013A RID: 314
-		// (get) Token: 0x06000C52 RID: 3154 RVA: 0x0003A501 File Offset: 0x00038701
-		public bool IsPlayInEditor
-		{
-			get
-			{
-				return this.IsInEditor;
-			}
-		}
-
-		// Token: 0x1700013B RID: 315
-		// (get) Token: 0x06000C53 RID: 3155 RVA: 0x0003A509 File Offset: 0x00038709
-		public bool IsBuildShipping
-		{
-			get
-			{
-				return this.IsShipping;
-			}
-		}
-
-		// Token: 0x1700013C RID: 316
-		// (get) Token: 0x06000C54 RID: 3156 RVA: 0x0003A511 File Offset: 0x00038711
-		public bool IsBuildTest
-		{
-			get
-			{
-				return this.IsTest;
-			}
-		}
-
-		// Token: 0x1700013D RID: 317
-		// (get) Token: 0x06000C55 RID: 3157 RVA: 0x0003A519 File Offset: 0x00038719
-		public bool IsBuildDevelopmentOrDebug
-		{
-			get
-			{
-				return this.IsDevelopmentOrDebug;
-			}
-		}
-
-		// Token: 0x06000C56 RID: 3158 RVA: 0x0003A521 File Offset: 0x00038721
+		// Token: 0x06000CB1 RID: 3249 RVA: 0x0003B1EE File Offset: 0x000393EE
 		public bool IsGameRunning()
 		{
 			return this.Environment == EEnvironment.UE4;
 		}
 
-		// Token: 0x06000C57 RID: 3159 RVA: 0x0003A52C File Offset: 0x0003872C
+		// Token: 0x06000CB2 RID: 3250 RVA: 0x0003B1F9 File Offset: 0x000393F9
 		public bool IsInCg()
 		{
 			return this.IsInCgInternal;
 		}
 
-		// Token: 0x06000C58 RID: 3160 RVA: 0x0003A534 File Offset: 0x00038734
+		// Token: 0x06000CB3 RID: 3251 RVA: 0x0003B201 File Offset: 0x00039401
 		public void SetInCg(bool value)
 		{
 			if (this.IsInCgInternal != value)
@@ -114,14 +70,14 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x06000C59 RID: 3161 RVA: 0x0003A551 File Offset: 0x00038751
+		// Token: 0x06000CB4 RID: 3252 RVA: 0x0003B21E File Offset: 0x0003941E
 		public bool IsInEditorTick()
 		{
 			return this.IsInSimulateInEditorInternal || this.IsInCgInternal;
 		}
 
-		// Token: 0x1700013E RID: 318
-		// (get) Token: 0x06000C5A RID: 3162 RVA: 0x0003A563 File Offset: 0x00038763
+		// Token: 0x1700014D RID: 333
+		// (get) Token: 0x06000CB5 RID: 3253 RVA: 0x0003B230 File Offset: 0x00039430
 		public bool IsLowMemoryDevice
 		{
 			get
@@ -130,8 +86,8 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x1700013F RID: 319
-		// (get) Token: 0x06000C5B RID: 3163 RVA: 0x0003A56B File Offset: 0x0003876B
+		// Token: 0x1700014E RID: 334
+		// (get) Token: 0x06000CB6 RID: 3254 RVA: 0x0003B238 File Offset: 0x00039438
 		public bool IsApplicationLowMemoryDevice
 		{
 			get
@@ -140,8 +96,8 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x17000140 RID: 320
-		// (get) Token: 0x06000C5C RID: 3164 RVA: 0x0003A580 File Offset: 0x00038780
+		// Token: 0x1700014F RID: 335
+		// (get) Token: 0x06000CB7 RID: 3255 RVA: 0x0003B24D File Offset: 0x0003944D
 		public ESourcePlatformType PlatformType
 		{
 			get
@@ -150,8 +106,8 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x17000141 RID: 321
-		// (get) Token: 0x06000C5D RID: 3165 RVA: 0x0003A588 File Offset: 0x00038788
+		// Token: 0x17000150 RID: 336
+		// (get) Token: 0x06000CB8 RID: 3256 RVA: 0x0003B255 File Offset: 0x00039455
 		public EInputControllerType InputControllerType
 		{
 			get
@@ -160,9 +116,9 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x17000142 RID: 322
-		// (get) Token: 0x06000C5E RID: 3166 RVA: 0x0003A590 File Offset: 0x00038790
-		// (set) Token: 0x06000C5F RID: 3167 RVA: 0x0003A598 File Offset: 0x00038798
+		// Token: 0x17000151 RID: 337
+		// (get) Token: 0x06000CB9 RID: 3257 RVA: 0x0003B25D File Offset: 0x0003945D
+		// (set) Token: 0x06000CBA RID: 3258 RVA: 0x0003B265 File Offset: 0x00039465
 		public EInputControllerMainType InputControllerMainType
 		{
 			get
@@ -180,8 +136,8 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x17000143 RID: 323
-		// (get) Token: 0x06000C60 RID: 3168 RVA: 0x0003A5C4 File Offset: 0x000387C4
+		// Token: 0x17000152 RID: 338
+		// (get) Token: 0x06000CBB RID: 3259 RVA: 0x0003B291 File Offset: 0x00039491
 		public EOperationType OperationType
 		{
 			get
@@ -190,7 +146,7 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x06000C61 RID: 3169 RVA: 0x0003A5CC File Offset: 0x000387CC
+		// Token: 0x06000CBC RID: 3260 RVA: 0x0003B29C File Offset: 0x0003949C
 		private void InitializePlatformType()
 		{
 			string text = KuroApplication.IniPlatformName();
@@ -320,7 +276,7 @@ namespace CSharpScript.Core.Common
 			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x06000C62 RID: 3170 RVA: 0x0003A84C File Offset: 0x00038A4C
+		// Token: 0x06000CBD RID: 3261 RVA: 0x0003B51C File Offset: 0x0003971C
 		private void InitCloudGame(string platform)
 		{
 			Func<bool> isCloudGameHook = Info.IsCloudGameHook;
@@ -339,7 +295,7 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x06000C63 RID: 3171 RVA: 0x0003A8C0 File Offset: 0x00038AC0
+		// Token: 0x06000CBE RID: 3262 RVA: 0x0003B590 File Offset: 0x00039790
 		public unsafe void SetInputControllerType(EInputControllerType inputController, string reason)
 		{
 			if (this.InputControllerTypeInternal == inputController)
@@ -376,7 +332,7 @@ namespace CSharpScript.Core.Common
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x06000C64 RID: 3172 RVA: 0x0003A9F4 File Offset: 0x00038BF4
+		// Token: 0x06000CBF RID: 3263 RVA: 0x0003B6C4 File Offset: 0x000398C4
 		private void SetShowType(EInputControllerType inputController)
 		{
 			EOperationType eoperationType = InfoDefine.ShowTypeAndInputControllerMap[inputController];
@@ -394,7 +350,7 @@ namespace CSharpScript.Core.Common
 			showTypeChangeFunc(operationTypeInternal, eoperationType);
 		}
 
-		// Token: 0x06000C65 RID: 3173 RVA: 0x0003AA38 File Offset: 0x00038C38
+		// Token: 0x06000CC0 RID: 3264 RVA: 0x0003B708 File Offset: 0x00039908
 		private void SetInputControllerMainType()
 		{
 			EInputControllerMainType einputControllerMainType = InfoDefine.InputControllerMainTypeMap[this.InputControllerTypeInternal];
@@ -412,157 +368,157 @@ namespace CSharpScript.Core.Common
 			inputMainTypeChangeFunc(inputControllerMainTypeInternal, einputControllerMainType);
 		}
 
-		// Token: 0x06000C66 RID: 3174 RVA: 0x0003AA80 File Offset: 0x00038C80
+		// Token: 0x06000CC1 RID: 3265 RVA: 0x0003B750 File Offset: 0x00039950
 		public bool IsPcOrGamepadPlatform()
 		{
 			return this.IsPcPlatform() || this.IsGamepadPlatform();
 		}
 
-		// Token: 0x06000C67 RID: 3175 RVA: 0x0003AA92 File Offset: 0x00038C92
+		// Token: 0x06000CC2 RID: 3266 RVA: 0x0003B762 File Offset: 0x00039962
 		public bool IsPcPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.Windows || this.PlatformTypeInternal == ESourcePlatformType.Mac || this.PlatformTypeInternal == ESourcePlatformType.Linux || this.PlatformTypeInternal == ESourcePlatformType.WinGDK;
 		}
 
-		// Token: 0x06000C68 RID: 3176 RVA: 0x0003AABB File Offset: 0x00038CBB
+		// Token: 0x06000CC3 RID: 3267 RVA: 0x0003B78B File Offset: 0x0003998B
 		public bool IsXboxPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.XboxOne || this.PlatformTypeInternal == ESourcePlatformType.XSX || this.PlatformTypeInternal == ESourcePlatformType.WinGDK;
 		}
 
-		// Token: 0x06000C69 RID: 3177 RVA: 0x0003AADC File Offset: 0x00038CDC
+		// Token: 0x06000CC4 RID: 3268 RVA: 0x0003B7AC File Offset: 0x000399AC
 		public bool IsXSXPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.XSX;
 		}
 
-		// Token: 0x06000C6A RID: 3178 RVA: 0x0003AAE8 File Offset: 0x00038CE8
+		// Token: 0x06000CC5 RID: 3269 RVA: 0x0003B7B8 File Offset: 0x000399B8
 		public bool IsWinGDKPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.WinGDK;
 		}
 
-		// Token: 0x06000C6B RID: 3179 RVA: 0x0003AAF4 File Offset: 0x00038CF4
+		// Token: 0x06000CC6 RID: 3270 RVA: 0x0003B7C4 File Offset: 0x000399C4
 		public bool IsHomeConsolePlatform()
 		{
 			return this.IsPs5Platform() || this.IsXboxPlatform();
 		}
 
-		// Token: 0x06000C6C RID: 3180 RVA: 0x0003AB06 File Offset: 0x00038D06
+		// Token: 0x06000CC7 RID: 3271 RVA: 0x0003B7D6 File Offset: 0x000399D6
 		public bool IsMobilePlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.IOS || this.PlatformTypeInternal == ESourcePlatformType.Android || this.PlatformTypeInternal == ESourcePlatformType.OpenHarmony;
 		}
 
-		// Token: 0x06000C6D RID: 3181 RVA: 0x0003AB26 File Offset: 0x00038D26
+		// Token: 0x06000CC8 RID: 3272 RVA: 0x0003B7F6 File Offset: 0x000399F6
 		public bool IsIosPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.IOS;
 		}
 
-		// Token: 0x06000C6E RID: 3182 RVA: 0x0003AB31 File Offset: 0x00038D31
+		// Token: 0x06000CC9 RID: 3273 RVA: 0x0003B801 File Offset: 0x00039A01
 		public bool IsGamepadPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.XboxOne || this.PlatformTypeInternal == ESourcePlatformType.XSX || this.PlatformTypeInternal == ESourcePlatformType.PS4 || this.PlatformTypeInternal == ESourcePlatformType.PS5;
 		}
 
-		// Token: 0x06000C6F RID: 3183 RVA: 0x0003AB5A File Offset: 0x00038D5A
+		// Token: 0x06000CCA RID: 3274 RVA: 0x0003B82A File Offset: 0x00039A2A
 		public bool IsPs5Platform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.PS5;
 		}
 
-		// Token: 0x06000C70 RID: 3184 RVA: 0x0003AB65 File Offset: 0x00038D65
+		// Token: 0x06000CCB RID: 3275 RVA: 0x0003B835 File Offset: 0x00039A35
 		public bool IsMacPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.Mac;
 		}
 
-		// Token: 0x06000C71 RID: 3185 RVA: 0x0003AB70 File Offset: 0x00038D70
+		// Token: 0x06000CCC RID: 3276 RVA: 0x0003B840 File Offset: 0x00039A40
 		public bool IsWindowsPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.Windows || this.IsWinGDKPlatform();
 		}
 
-		// Token: 0x06000C72 RID: 3186 RVA: 0x0003AB83 File Offset: 0x00038D83
+		// Token: 0x06000CCD RID: 3277 RVA: 0x0003B853 File Offset: 0x00039A53
 		public bool IsWindowsOnlyPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.Windows;
 		}
 
-		// Token: 0x06000C73 RID: 3187 RVA: 0x0003AB8E File Offset: 0x00038D8E
+		// Token: 0x06000CCE RID: 3278 RVA: 0x0003B85E File Offset: 0x00039A5E
 		public bool IsAndroidPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.Android;
 		}
 
-		// Token: 0x06000C74 RID: 3188 RVA: 0x0003AB99 File Offset: 0x00038D99
+		// Token: 0x06000CCF RID: 3279 RVA: 0x0003B869 File Offset: 0x00039A69
 		public bool IsOpenHarmonyPlatform()
 		{
 			return this.PlatformTypeInternal == ESourcePlatformType.OpenHarmony;
 		}
 
-		// Token: 0x06000C75 RID: 3189 RVA: 0x0003ABA5 File Offset: 0x00038DA5
+		// Token: 0x06000CD0 RID: 3280 RVA: 0x0003B875 File Offset: 0x00039A75
 		public bool IsInKeyBoard()
 		{
 			return this.InputControllerMainType == EInputControllerMainType.Keyboard;
 		}
 
-		// Token: 0x06000C76 RID: 3190 RVA: 0x0003ABB0 File Offset: 0x00038DB0
+		// Token: 0x06000CD1 RID: 3281 RVA: 0x0003B880 File Offset: 0x00039A80
 		public bool IsInTouch()
 		{
 			return this.InputControllerMainType == EInputControllerMainType.Touch;
 		}
 
-		// Token: 0x06000C77 RID: 3191 RVA: 0x0003ABBB File Offset: 0x00038DBB
+		// Token: 0x06000CD2 RID: 3282 RVA: 0x0003B88B File Offset: 0x00039A8B
 		public bool IsInGamepad()
 		{
 			return this.InputControllerMainType == EInputControllerMainType.Gamepad;
 		}
 
-		// Token: 0x06000C78 RID: 3192 RVA: 0x0003ABC6 File Offset: 0x00038DC6
+		// Token: 0x06000CD3 RID: 3283 RVA: 0x0003B896 File Offset: 0x00039A96
 		public bool IsXboxGamepad()
 		{
 			return this.IsInGamepad() && this.InputControllerType == EInputControllerType.XboxOne;
 		}
 
-		// Token: 0x06000C79 RID: 3193 RVA: 0x0003ABDB File Offset: 0x00038DDB
+		// Token: 0x06000CD4 RID: 3284 RVA: 0x0003B8AB File Offset: 0x00039AAB
 		public bool IsPsGamepad()
 		{
 			return this.IsInGamepad() && (this.InputControllerType == EInputControllerType.PS4 || this.InputControllerType == EInputControllerType.PS5);
 		}
 
-		// Token: 0x06000C7A RID: 3194 RVA: 0x0003ABFB File Offset: 0x00038DFB
+		// Token: 0x06000CD5 RID: 3285 RVA: 0x0003B8CB File Offset: 0x00039ACB
 		public bool IsBackBoneGamepad()
 		{
 			return this.IsInGamepad() && this.InputControllerType == EInputControllerType.BackBone;
 		}
 
-		// Token: 0x06000C7B RID: 3195 RVA: 0x0003AC10 File Offset: 0x00038E10
+		// Token: 0x06000CD6 RID: 3286 RVA: 0x0003B8E0 File Offset: 0x00039AE0
 		public bool IsNsProGamepad()
 		{
 			return this.IsInGamepad() && this.InputControllerType == EInputControllerType.NsPro;
 		}
 
-		// Token: 0x06000C7C RID: 3196 RVA: 0x0003AC25 File Offset: 0x00038E25
+		// Token: 0x06000CD7 RID: 3287 RVA: 0x0003B8F5 File Offset: 0x00039AF5
 		public bool CheckIsBackBoneGamepad(EInputControllerType type)
 		{
 			return type == EInputControllerType.BackBone;
 		}
 
-		// Token: 0x06000C7D RID: 3197 RVA: 0x0003AC2B File Offset: 0x00038E2B
+		// Token: 0x06000CD8 RID: 3288 RVA: 0x0003B8FB File Offset: 0x00039AFB
 		public bool CheckIsNsProGamepad(EInputControllerType type)
 		{
 			return type == EInputControllerType.NsPro;
 		}
 
-		// Token: 0x06000C7E RID: 3198 RVA: 0x0003AC31 File Offset: 0x00038E31
+		// Token: 0x06000CD9 RID: 3289 RVA: 0x0003B901 File Offset: 0x00039B01
 		public bool CheckIsPsGamepad(EInputControllerType type)
 		{
 			return type == EInputControllerType.PS4 || type == EInputControllerType.PS5;
 		}
 
-		// Token: 0x06000C7F RID: 3199 RVA: 0x0003AC40 File Offset: 0x00038E40
+		// Token: 0x06000CDA RID: 3290 RVA: 0x0003B910 File Offset: 0x00039B10
 		public bool IsMobileInputModel()
 		{
 			if (this.IsMobilePlatform())
@@ -589,7 +545,7 @@ namespace CSharpScript.Core.Common
 			return false;
 		}
 
-		// Token: 0x06000C80 RID: 3200 RVA: 0x0003ACB0 File Offset: 0x00038EB0
+		// Token: 0x06000CDB RID: 3291 RVA: 0x0003B980 File Offset: 0x00039B80
 		public bool IsPcInputModel()
 		{
 			if (this.PlatformTypeInternal == ESourcePlatformType.Mac || this.PlatformTypeInternal == ESourcePlatformType.Linux || this.PlatformTypeInternal == ESourcePlatformType.WinGDK)
@@ -616,7 +572,7 @@ namespace CSharpScript.Core.Common
 			return false;
 		}
 
-		// Token: 0x06000C81 RID: 3201 RVA: 0x0003AD38 File Offset: 0x00038F38
+		// Token: 0x06000CDC RID: 3292 RVA: 0x0003BA08 File Offset: 0x00039C08
 		public void SwitchInputControllerType(EInputControllerType inputControllerType, string reason)
 		{
 			if (inputControllerType == EInputControllerType.None)
@@ -645,50 +601,50 @@ namespace CSharpScript.Core.Common
 			this.SetShowType(inputControllerType);
 		}
 
-		// Token: 0x06000C82 RID: 3202 RVA: 0x0003ADA5 File Offset: 0x00038FA5
+		// Token: 0x06000CDD RID: 3293 RVA: 0x0003BA75 File Offset: 0x00039C75
 		[Conditional("DEBUG")]
 		public void GmSwitchInputControllerType(EInputControllerType inputControllerType, string reason)
 		{
 		}
 
-		// Token: 0x06000C83 RID: 3203 RVA: 0x0003ADA7 File Offset: 0x00038FA7
+		// Token: 0x06000CDE RID: 3294 RVA: 0x0003BA77 File Offset: 0x00039C77
 		public void SetInputTypeChangeFunc(TInputTypeChange func)
 		{
 			this.InputTypeChangeFunc = func;
 		}
 
-		// Token: 0x06000C84 RID: 3204 RVA: 0x0003ADB0 File Offset: 0x00038FB0
+		// Token: 0x06000CDF RID: 3295 RVA: 0x0003BA80 File Offset: 0x00039C80
 		public void ClearInputTypeChangeFunc()
 		{
 			this.InputTypeChangeFunc = null;
 		}
 
-		// Token: 0x06000C85 RID: 3205 RVA: 0x0003ADB9 File Offset: 0x00038FB9
+		// Token: 0x06000CE0 RID: 3296 RVA: 0x0003BA89 File Offset: 0x00039C89
 		public void SetShowTypeChangeFunc(TShowTypeChange func)
 		{
 			this.ShowTypeChangeFunc = func;
 		}
 
-		// Token: 0x06000C86 RID: 3206 RVA: 0x0003ADC2 File Offset: 0x00038FC2
+		// Token: 0x06000CE1 RID: 3297 RVA: 0x0003BA92 File Offset: 0x00039C92
 		public void ClearShowTypeChangeFunc()
 		{
 			this.ShowTypeChangeFunc = null;
 		}
 
-		// Token: 0x06000C87 RID: 3207 RVA: 0x0003ADCB File Offset: 0x00038FCB
+		// Token: 0x06000CE2 RID: 3298 RVA: 0x0003BA9B File Offset: 0x00039C9B
 		public void SetInputMainTypeChangeFunc(TInputMainTypeChange func)
 		{
 			this.InputMainTypeChangeFunc = func;
 		}
 
-		// Token: 0x06000C88 RID: 3208 RVA: 0x0003ADD4 File Offset: 0x00038FD4
+		// Token: 0x06000CE3 RID: 3299 RVA: 0x0003BAA4 File Offset: 0x00039CA4
 		public void ClearInputMainTypeChangeFunc()
 		{
 			this.InputMainTypeChangeFunc = null;
 		}
 
-		// Token: 0x17000144 RID: 324
-		// (get) Token: 0x06000C89 RID: 3209 RVA: 0x0003ADDD File Offset: 0x00038FDD
+		// Token: 0x17000153 RID: 339
+		// (get) Token: 0x06000CE4 RID: 3300 RVA: 0x0003BAAD File Offset: 0x00039CAD
 		public static Info Instance
 		{
 			get
@@ -702,13 +658,13 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x06000C8A RID: 3210 RVA: 0x0003AE00 File Offset: 0x00039000
+		// Token: 0x06000CE5 RID: 3301 RVA: 0x0003BAD0 File Offset: 0x00039CD0
 		public static void CreateStaticDefaultValue()
 		{
 			Info.OnCreateStaticDefaultValue();
 		}
 
-		// Token: 0x06000C8B RID: 3211 RVA: 0x0003AE07 File Offset: 0x00039007
+		// Token: 0x06000CE6 RID: 3302 RVA: 0x0003BAD7 File Offset: 0x00039CD7
 		public static void ResetStaticDefaultValue()
 		{
 			Info instance = Info._instance;
@@ -720,97 +676,97 @@ namespace CSharpScript.Core.Common
 			Info.OnResetStaticDefaultValue();
 		}
 
-		// Token: 0x06000C8C RID: 3212 RVA: 0x0003AE25 File Offset: 0x00039025
+		// Token: 0x06000CE7 RID: 3303 RVA: 0x0003BAF5 File Offset: 0x00039CF5
 		private static void OnCreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000C8D RID: 3213 RVA: 0x0003AE27 File Offset: 0x00039027
+		// Token: 0x06000CE8 RID: 3304 RVA: 0x0003BAF7 File Offset: 0x00039CF7
 		private static void OnResetStaticDefaultValue()
 		{
 			Info.IsCloudGameHook = null;
 			Info.CloudGamePlatformHook = null;
 		}
 
-		// Token: 0x06000C8E RID: 3214 RVA: 0x0003AE35 File Offset: 0x00039035
+		// Token: 0x06000CE9 RID: 3305 RVA: 0x0003BB05 File Offset: 0x00039D05
 		static Info()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(Info.CreateStaticDefaultValue), new Action(Info.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000727 RID: 1831
+		// Token: 0x04000736 RID: 1846
 		public static Func<bool> IsCloudGameHook;
 
-		// Token: 0x04000728 RID: 1832
+		// Token: 0x04000737 RID: 1847
 		public static Func<string> CloudGamePlatformHook;
 
-		// Token: 0x04000729 RID: 1833
+		// Token: 0x04000738 RID: 1848
 		private UGameInstance GameInstanceInternal;
 
-		// Token: 0x0400072A RID: 1834
+		// Token: 0x04000739 RID: 1849
 		public readonly string Version = "1.0.0";
 
-		// Token: 0x0400072B RID: 1835
+		// Token: 0x0400073A RID: 1850
 		public EEnvironment Environment;
 
-		// Token: 0x0400072C RID: 1836
+		// Token: 0x0400073B RID: 1851
 		public readonly bool EnableForceTick;
 
-		// Token: 0x0400072D RID: 1837
-		private bool IsInEditor = true;
-
-		// Token: 0x0400072E RID: 1838
-		private bool IsShipping = true;
-
-		// Token: 0x0400072F RID: 1839
-		private bool IsTest;
-
-		// Token: 0x04000730 RID: 1840
-		private bool IsDevelopmentOrDebug;
-
-		// Token: 0x04000731 RID: 1841
+		// Token: 0x0400073C RID: 1852
 		private bool IsInCgInternal;
 
-		// Token: 0x04000732 RID: 1842
+		// Token: 0x0400073D RID: 1853
 		public bool UseFastInputCallback = true;
 
-		// Token: 0x04000733 RID: 1843
+		// Token: 0x0400073E RID: 1854
 		public bool AxisInputOptimize = true;
 
-		// Token: 0x04000734 RID: 1844
+		// Token: 0x0400073F RID: 1855
 		private bool IsInSimulateInEditorInternal;
 
-		// Token: 0x04000735 RID: 1845
+		// Token: 0x04000740 RID: 1856
 		private bool IsLowMemoryDeviceInternal;
 
-		// Token: 0x04000736 RID: 1846
+		// Token: 0x04000741 RID: 1857
+		public const bool IsPlayInEditor = false;
+
+		// Token: 0x04000742 RID: 1858
+		public const bool IsBuildShipping = true;
+
+		// Token: 0x04000743 RID: 1859
+		public const bool IsBuildTest = false;
+
+		// Token: 0x04000744 RID: 1860
+		public const bool IsBuildDevelopmentOrDebug = false;
+
+		// Token: 0x04000745 RID: 1861
 		private ESourcePlatformType PlatformTypeInternal;
 
-		// Token: 0x04000737 RID: 1847
+		// Token: 0x04000746 RID: 1862
 		private EInputControllerType InputControllerTypeInternal;
 
-		// Token: 0x04000738 RID: 1848
+		// Token: 0x04000747 RID: 1863
 		private EInputControllerMainType InputControllerMainTypeInternal;
 
-		// Token: 0x04000739 RID: 1849
+		// Token: 0x04000748 RID: 1864
 		private EOperationType OperationTypeInternal;
 
-		// Token: 0x0400073A RID: 1850
+		// Token: 0x04000749 RID: 1865
 		public bool IsGmLockGamepad;
 
-		// Token: 0x0400073B RID: 1851
+		// Token: 0x0400074A RID: 1866
 		[Nullable(2)]
 		private TInputTypeChange InputTypeChangeFunc;
 
-		// Token: 0x0400073C RID: 1852
+		// Token: 0x0400074B RID: 1867
 		[Nullable(2)]
 		private TShowTypeChange ShowTypeChangeFunc;
 
-		// Token: 0x0400073D RID: 1853
+		// Token: 0x0400074C RID: 1868
 		[Nullable(2)]
 		private TInputMainTypeChange InputMainTypeChangeFunc;
 
-		// Token: 0x0400073E RID: 1854
+		// Token: 0x0400074D RID: 1869
 		[Nullable(2)]
 		private static Info _instance;
 	}

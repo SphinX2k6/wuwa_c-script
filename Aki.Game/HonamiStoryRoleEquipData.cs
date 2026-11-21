@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.HonamiStory.Data;
 
-// Token: 0x02001E7C RID: 7804
+// Token: 0x0200133E RID: 4926
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryRoleEquipData
 {
-	// Token: 0x0600EDDB RID: 60891 RVA: 0x0038B6FC File Offset: 0x003898FC
+	// Token: 0x0600C1FA RID: 49658 RVA: 0x003972EC File Offset: 0x003954EC
 	public HonamiStoryRoleEquipData(int rolePosition)
 	{
 		this.RolePosition = rolePosition;
 	}
 
-	// Token: 0x0600EDDC RID: 60892 RVA: 0x0038B728 File Offset: 0x00389928
+	// Token: 0x0600C1FB RID: 49659 RVA: 0x00397318 File Offset: 0x00395518
 	public List<HonamiStoryEquipItemData> GetEquipItemDataList()
 	{
 		List<HonamiStoryEquipItemData> list = new List<HonamiStoryEquipItemData>();
@@ -30,14 +30,14 @@ public class HonamiStoryRoleEquipData
 		return list;
 	}
 
-	// Token: 0x0600EDDD RID: 60893 RVA: 0x0038B78C File Offset: 0x0038998C
+	// Token: 0x0600C1FC RID: 49660 RVA: 0x0039737C File Offset: 0x0039557C
 	public int GetCurPowerLevel(bool isForShow = true)
 	{
 		List<HonamiStoryEquipItemData> equipItemDataList = this.GetEquipItemDataList();
 		return this.GetPowerLevelByItemList(equipItemDataList, isForShow);
 	}
 
-	// Token: 0x0600EDDE RID: 60894 RVA: 0x0038B7A8 File Offset: 0x003899A8
+	// Token: 0x0600C1FD RID: 49661 RVA: 0x00397398 File Offset: 0x00395598
 	public int GetPowerLevelByItemList(List<HonamiStoryEquipItemData> itemList, bool isForShow)
 	{
 		if (this.RoleId <= 0)
@@ -113,13 +113,13 @@ public class HonamiStoryRoleEquipData
 		return num;
 	}
 
-	// Token: 0x0600EDDF RID: 60895 RVA: 0x0038B9D8 File Offset: 0x00389BD8
+	// Token: 0x0600C1FE RID: 49662 RVA: 0x003975C8 File Offset: 0x003957C8
 	public int GetParentRoleId()
 	{
 		return HonamiStoryModel.Instance.GetParentRoleId(this.RoleId);
 	}
 
-	// Token: 0x0600EDE0 RID: 60896 RVA: 0x0038B9EC File Offset: 0x00389BEC
+	// Token: 0x0600C1FF RID: 49663 RVA: 0x003975DC File Offset: 0x003957DC
 	public bool CheckItemBuffIsActive(HonamiStoryEquipItemData itemData)
 	{
 		if (itemData.GetRoleId() != 0)
@@ -160,7 +160,7 @@ public class HonamiStoryRoleEquipData
 		return result;
 	}
 
-	// Token: 0x0600EDE1 RID: 60897 RVA: 0x0038BAB8 File Offset: 0x00389CB8
+	// Token: 0x0600C200 RID: 49664 RVA: 0x003976A8 File Offset: 0x003958A8
 	public bool CheckRoleItemBuffIsActive(HonamiStoryEquipItemData itemData)
 	{
 		bool groupId = itemData.GetGroupId() != 0;
@@ -199,7 +199,7 @@ public class HonamiStoryRoleEquipData
 		return result;
 	}
 
-	// Token: 0x0600EDE2 RID: 60898 RVA: 0x0038BB9C File Offset: 0x00389D9C
+	// Token: 0x0600C201 RID: 49665 RVA: 0x0039778C File Offset: 0x0039598C
 	[NullableContext(2)]
 	public void SetItemData(int position, HonamiStoryEquipItemData itemData)
 	{
@@ -208,7 +208,7 @@ public class HonamiStoryRoleEquipData
 		this.SlotData[honamiStoryPluginIndex].SetItemData(itemData);
 	}
 
-	// Token: 0x0600EDE3 RID: 60899 RVA: 0x0038BBD0 File Offset: 0x00389DD0
+	// Token: 0x0600C202 RID: 49666 RVA: 0x003977C0 File Offset: 0x003959C0
 	[NullableContext(2)]
 	public HonamiStoryEquipItemData GetItemDataByPosition(int position)
 	{
@@ -220,7 +220,7 @@ public class HonamiStoryRoleEquipData
 		return null;
 	}
 
-	// Token: 0x0600EDE4 RID: 60900 RVA: 0x0038BBF0 File Offset: 0x00389DF0
+	// Token: 0x0600C203 RID: 49667 RVA: 0x003977E0 File Offset: 0x003959E0
 	public void RemoveItemData(int position)
 	{
 		this.ItemDataMap.Remove(position);
@@ -228,7 +228,7 @@ public class HonamiStoryRoleEquipData
 		this.SlotData[honamiStoryPluginIndex].SetItemData(null);
 	}
 
-	// Token: 0x0600EDE5 RID: 60901 RVA: 0x0038BC24 File Offset: 0x00389E24
+	// Token: 0x0600C204 RID: 49668 RVA: 0x00397814 File Offset: 0x00395A14
 	[NullableContext(2)]
 	public void SetEquipData(HonamiStoryRackInfo info)
 	{
@@ -256,43 +256,43 @@ public class HonamiStoryRoleEquipData
 		}
 	}
 
-	// Token: 0x0600EDE6 RID: 60902 RVA: 0x0038BD0C File Offset: 0x00389F0C
+	// Token: 0x0600C205 RID: 49669 RVA: 0x003978FC File Offset: 0x00395AFC
 	public void SetRoleInfo(int roleId)
 	{
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x0600EDE7 RID: 60903 RVA: 0x0038BD15 File Offset: 0x00389F15
+	// Token: 0x0600C206 RID: 49670 RVA: 0x00397905 File Offset: 0x00395B05
 	public void SetWeaponInfo(int weaponId)
 	{
 		this.WeaponId = weaponId;
 	}
 
-	// Token: 0x0600EDE8 RID: 60904 RVA: 0x0038BD1E File Offset: 0x00389F1E
+	// Token: 0x0600C207 RID: 49671 RVA: 0x0039790E File Offset: 0x00395B0E
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x0600EDE9 RID: 60905 RVA: 0x0038BD26 File Offset: 0x00389F26
+	// Token: 0x0600C208 RID: 49672 RVA: 0x00397916 File Offset: 0x00395B16
 	public int GetPosition()
 	{
 		return this.RolePosition;
 	}
 
-	// Token: 0x0600EDEA RID: 60906 RVA: 0x0038BD2E File Offset: 0x00389F2E
+	// Token: 0x0600C209 RID: 49673 RVA: 0x0039791E File Offset: 0x00395B1E
 	public int GetHonamiStoryPluginPosition(int pluginIndex)
 	{
 		return (this.RolePosition + 1) * 100 + pluginIndex + 1;
 	}
 
-	// Token: 0x0600EDEB RID: 60907 RVA: 0x0038BD3F File Offset: 0x00389F3F
+	// Token: 0x0600C20A RID: 49674 RVA: 0x0039792F File Offset: 0x00395B2F
 	public int GetHonamiStoryPluginIndex(int pluginPosition)
 	{
 		return pluginPosition - (this.RolePosition + 1) * 100 - 1;
 	}
 
-	// Token: 0x0600EDEC RID: 60908 RVA: 0x0038BD50 File Offset: 0x00389F50
+	// Token: 0x0600C20B RID: 49675 RVA: 0x00397940 File Offset: 0x00395B40
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -308,13 +308,13 @@ public class HonamiStoryRoleEquipData
 		return list;
 	}
 
-	// Token: 0x0600EDED RID: 60909 RVA: 0x0038BDB0 File Offset: 0x00389FB0
+	// Token: 0x0600C20C RID: 49676 RVA: 0x003979A0 File Offset: 0x00395BA0
 	public int GetWeaponId()
 	{
 		return this.WeaponId;
 	}
 
-	// Token: 0x0600EDEE RID: 60910 RVA: 0x0038BDB8 File Offset: 0x00389FB8
+	// Token: 0x0600C20D RID: 49677 RVA: 0x003979A8 File Offset: 0x00395BA8
 	public int GetUnlockCounts()
 	{
 		int num = 0;
@@ -325,13 +325,13 @@ public class HonamiStoryRoleEquipData
 		return num;
 	}
 
-	// Token: 0x0600EDEF RID: 60911 RVA: 0x0038BE14 File Offset: 0x0038A014
+	// Token: 0x0600C20E RID: 49678 RVA: 0x00397A04 File Offset: 0x00395C04
 	public List<HonamiStoryRoleEquipSlotData> GetSlotList()
 	{
 		return this.SlotData;
 	}
 
-	// Token: 0x0600EDF0 RID: 60912 RVA: 0x0038BE1C File Offset: 0x0038A01C
+	// Token: 0x0600C20F RID: 49679 RVA: 0x00397A0C File Offset: 0x00395C0C
 	public List<HonamiStoryEquipItemData> GetEquipRoleItemList()
 	{
 		List<HonamiStoryEquipItemData> list = new List<HonamiStoryEquipItemData>();
@@ -345,7 +345,7 @@ public class HonamiStoryRoleEquipData
 		return list;
 	}
 
-	// Token: 0x0600EDF1 RID: 60913 RVA: 0x0038BE94 File Offset: 0x0038A094
+	// Token: 0x0600C210 RID: 49680 RVA: 0x00397A84 File Offset: 0x00395C84
 	public HonamiStoryWeaponSuitActiveData IsSuitActivate(int suitId, [Nullable(new byte[]
 	{
 		2,
@@ -396,7 +396,7 @@ public class HonamiStoryRoleEquipData
 		};
 	}
 
-	// Token: 0x0600EDF2 RID: 60914 RVA: 0x0038BF9C File Offset: 0x0038A19C
+	// Token: 0x0600C211 RID: 49681 RVA: 0x00397B8C File Offset: 0x00395D8C
 	public int CheckEquipOnEmpty(HonamiStoryEquipItemData itemData)
 	{
 		List<HonamiStoryEquipItemData> list = new List<HonamiStoryEquipItemData>();
@@ -422,7 +422,7 @@ public class HonamiStoryRoleEquipData
 		return this.GetPowerLevelByItemList(list, false) - this.GetCurPowerLevel(false);
 	}
 
-	// Token: 0x0600EDF3 RID: 60915 RVA: 0x0038C030 File Offset: 0x0038A230
+	// Token: 0x0600C212 RID: 49682 RVA: 0x00397C20 File Offset: 0x00395E20
 	public int GetNextEmptySlot()
 	{
 		foreach (HonamiStoryRoleEquipSlotData honamiStoryRoleEquipSlotData in this.SlotData)
@@ -435,7 +435,7 @@ public class HonamiStoryRoleEquipData
 		return -1;
 	}
 
-	// Token: 0x0600EDF4 RID: 60916 RVA: 0x0038C0A0 File Offset: 0x0038A2A0
+	// Token: 0x0600C213 RID: 49683 RVA: 0x00397C90 File Offset: 0x00395E90
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -482,19 +482,19 @@ public class HonamiStoryRoleEquipData
 		return new ValueTuple<int, int, HonamiStoryEquipItemData>(item2, item3, item);
 	}
 
-	// Token: 0x04006E60 RID: 28256
+	// Token: 0x04006F41 RID: 28481
 	private int RoleId;
 
-	// Token: 0x04006E61 RID: 28257
+	// Token: 0x04006F42 RID: 28482
 	private int WeaponId = -1;
 
-	// Token: 0x04006E62 RID: 28258
+	// Token: 0x04006F43 RID: 28483
 	private readonly List<HonamiStoryRoleEquipSlotData> SlotData = new List<HonamiStoryRoleEquipSlotData>();
 
-	// Token: 0x04006E63 RID: 28259
+	// Token: 0x04006F44 RID: 28484
 	private readonly int RolePosition;
 
-	// Token: 0x04006E64 RID: 28260
+	// Token: 0x04006F45 RID: 28485
 	[Nullable(new byte[]
 	{
 		1,

@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 {
-	// Token: 0x020048B6 RID: 18614
+	// Token: 0x0200382D RID: 14381
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VehicleSmBlackBoard
 	{
-		// Token: 0x1700796D RID: 31085
-		// (get) Token: 0x06030A5A RID: 199258 RVA: 0x00B4B15A File Offset: 0x00B4935A
+		// Token: 0x17004CD5 RID: 19669
+		// (get) Token: 0x06025586 RID: 152966 RVA: 0x00A85F62 File Offset: 0x00A84162
 		public UKuroRoadway StartRoadway
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x1700796E RID: 31086
-		// (get) Token: 0x06030A5B RID: 199259 RVA: 0x00B4B168 File Offset: 0x00B49368
+		// Token: 0x17004CD6 RID: 19670
+		// (get) Token: 0x06025587 RID: 152967 RVA: 0x00A85F70 File Offset: 0x00A84170
 		public UKuroRoadway EndRoadway
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x1700796F RID: 31087
-		// (get) Token: 0x06030A5C RID: 199260 RVA: 0x00B4B17D File Offset: 0x00B4937D
+		// Token: 0x17004CD7 RID: 19671
+		// (get) Token: 0x06025588 RID: 152968 RVA: 0x00A85F85 File Offset: 0x00A84185
 		[Nullable(2)]
 		public UKuroRoadway CurrentRoadway
 		{
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007970 RID: 31088
-		// (get) Token: 0x06030A5D RID: 199261 RVA: 0x00B4B1B0 File Offset: 0x00B493B0
+		// Token: 0x17004CD8 RID: 19672
+		// (get) Token: 0x06025589 RID: 152969 RVA: 0x00A85FB8 File Offset: 0x00A841B8
 		[Nullable(2)]
 		public UKuroRoadway LastRoadway
 		{
@@ -76,8 +76,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007971 RID: 31089
-		// (get) Token: 0x06030A5E RID: 199262 RVA: 0x00B4B1E7 File Offset: 0x00B493E7
+		// Token: 0x17004CD9 RID: 19673
+		// (get) Token: 0x0602558A RID: 152970 RVA: 0x00A85FEF File Offset: 0x00A841EF
 		[Nullable(2)]
 		public UKuroRoadway NextRoadway
 		{
@@ -96,8 +96,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007972 RID: 31090
-		// (get) Token: 0x06030A5F RID: 199263 RVA: 0x00B4B21E File Offset: 0x00B4941E
+		// Token: 0x17004CDA RID: 19674
+		// (get) Token: 0x0602558B RID: 152971 RVA: 0x00A86026 File Offset: 0x00A84226
 		public float CurrentMeshCenterDistance
 		{
 			get
@@ -110,8 +110,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007973 RID: 31091
-		// (get) Token: 0x06030A60 RID: 199264 RVA: 0x00B4B235 File Offset: 0x00B49435
+		// Token: 0x17004CDB RID: 19675
+		// (get) Token: 0x0602558C RID: 152972 RVA: 0x00A8603D File Offset: 0x00A8423D
 		public float CurrentRootHeadDistance
 		{
 			get
@@ -120,8 +120,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007974 RID: 31092
-		// (get) Token: 0x06030A61 RID: 199265 RVA: 0x00B4B244 File Offset: 0x00B49444
+		// Token: 0x17004CDC RID: 19676
+		// (get) Token: 0x0602558D RID: 152973 RVA: 0x00A8604C File Offset: 0x00A8424C
 		public float CurrentRootTailDistance
 		{
 			get
@@ -130,8 +130,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007975 RID: 31093
-		// (get) Token: 0x06030A62 RID: 199266 RVA: 0x00B4B253 File Offset: 0x00B49453
+		// Token: 0x17004CDD RID: 19677
+		// (get) Token: 0x0602558E RID: 152974 RVA: 0x00A8605B File Offset: 0x00A8425B
 		public float CurrentMeshHeadDistance
 		{
 			get
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x17007976 RID: 31094
-		// (get) Token: 0x06030A63 RID: 199267 RVA: 0x00B4B262 File Offset: 0x00B49462
+		// Token: 0x17004CDE RID: 19678
+		// (get) Token: 0x0602558F RID: 152975 RVA: 0x00A8606A File Offset: 0x00A8426A
 		public float CurrentMeshTailDistance
 		{
 			get
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x06030A64 RID: 199268 RVA: 0x00B4B274 File Offset: 0x00B49474
+		// Token: 0x06025590 RID: 152976 RVA: 0x00A8607C File Offset: 0x00A8427C
 		public VehicleSmBlackBoard(int teamId, int memberId, long creatureDataId, int pbDataId, global::Vector startActorLocation, global::Rotator startActorRotator, global::Vector destinationLocation, List<UKuroRoadway> roadways, global::Vector startLocationInRoad, global::Vector endLocationInRoad, int destRoadId, int destRoadIndex, CSharpScript.Game.NewWorld.Common.Component.RoadNetworkNavigationComponent roadNetworkNavigationComponent, ITrafficNavigationConfig baseConfig, VehicleSmBlackBoard.SwitchStateHandleType switchStateHandle)
 		{
 			this.TeamId = teamId;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			this.CacheRtpcObj.Actor = this.RoadNetworkNavigationComponent.GetActor();
 		}
 
-		// Token: 0x06030A65 RID: 199269 RVA: 0x00B4B4A8 File Offset: 0x00B496A8
+		// Token: 0x06025591 RID: 152977 RVA: 0x00A862B0 File Offset: 0x00A844B0
 		public void InitTrace()
 		{
 			this.BoxTrace = new UTraceBoxElement();
@@ -209,14 +209,14 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			this.BoxTraceEndPosition.DeepCopy(this.BoxTracePosition);
 		}
 
-		// Token: 0x06030A66 RID: 199270 RVA: 0x00B4B676 File Offset: 0x00B49876
+		// Token: 0x06025592 RID: 152978 RVA: 0x00A8647E File Offset: 0x00A8467E
 		[NullableContext(2)]
 		public bool SwitchState(EVehicleStateType state, string reason = null)
 		{
 			return this.SwitchStateHandle(state, reason);
 		}
 
-		// Token: 0x06030A67 RID: 199271 RVA: 0x00B4B688 File Offset: 0x00B49888
+		// Token: 0x06025593 RID: 152979 RVA: 0x00A86490 File Offset: 0x00A84690
 		[NullableContext(2)]
 		public UKuroRoadway EnterNextRoadway()
 		{
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			return currentRoadway;
 		}
 
-		// Token: 0x06030A68 RID: 199272 RVA: 0x00B4B704 File Offset: 0x00B49904
+		// Token: 0x06025594 RID: 152980 RVA: 0x00A8650C File Offset: 0x00A8470C
 		public void GetHeadDistanceAndRoadway(float rootDistance, IDistanceAndRoadway out_)
 		{
 			float num = rootDistance + this.RootCenterToHead;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			out_.Roadway = this.NextRoadway;
 		}
 
-		// Token: 0x06030A69 RID: 199273 RVA: 0x00B4B770 File Offset: 0x00B49970
+		// Token: 0x06025595 RID: 152981 RVA: 0x00A86578 File Offset: 0x00A84778
 		public void GetTailDistanceAndRoadway(float rootDistance, IDistanceAndRoadway out_)
 		{
 			float num = rootDistance - this.RootCenterToTail;
@@ -276,20 +276,20 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			out_.Roadway = this.LastRoadway;
 		}
 
-		// Token: 0x06030A6A RID: 199274 RVA: 0x00B4B7E7 File Offset: 0x00B499E7
+		// Token: 0x06025596 RID: 152982 RVA: 0x00A865EF File Offset: 0x00A847EF
 		public bool CheckArrivedDestination()
 		{
 			return this.NextRoadway == null && this.CurrentMeshHeadDistance >= this.EndPointInSplineDistance;
 		}
 
-		// Token: 0x06030A6B RID: 199275 RVA: 0x00B4B804 File Offset: 0x00B49A04
+		// Token: 0x06025597 RID: 152983 RVA: 0x00A8660C File Offset: 0x00A8480C
 		public bool CheckArrivedSplineEndPoint()
 		{
 			int num = 100;
 			return this.CurrentRootHeadDistance + (float)num >= this.CurrentSplineLength;
 		}
 
-		// Token: 0x06030A6C RID: 199276 RVA: 0x00B4B828 File Offset: 0x00B49A28
+		// Token: 0x06025598 RID: 152984 RVA: 0x00A86630 File Offset: 0x00A84830
 		public void UpdateSkeletalMeshDistance()
 		{
 			if (this.SkeletalMeshComponent == null)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}
 		}
 
-		// Token: 0x06030A6D RID: 199277 RVA: 0x00B4B8C4 File Offset: 0x00B49AC4
+		// Token: 0x06025599 RID: 152985 RVA: 0x00A866CC File Offset: 0x00A848CC
 		public int OpenAudio(string @event, bool bLoopAudio)
 		{
 			if (!this.IsInPlayerRange)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			return num;
 		}
 
-		// Token: 0x06030A6E RID: 199278 RVA: 0x00B4B90C File Offset: 0x00B49B0C
+		// Token: 0x0602559A RID: 152986 RVA: 0x00A86714 File Offset: 0x00A84914
 		public void StopAudio(int eventHandle, bool bDelete = true)
 		{
 			if (eventHandle == 0)
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			AudioSystem.Instance.ExecuteAction(eventHandle, EAudioActionType.Stop, null);
 		}
 
-		// Token: 0x06030A6F RID: 199279 RVA: 0x00B4B944 File Offset: 0x00B49B44
+		// Token: 0x0602559B RID: 152987 RVA: 0x00A8674C File Offset: 0x00A8494C
 		public void UpdateRtpc(float delta)
 		{
 			if (!this.IsInPlayerRange)
@@ -359,191 +359,191 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine
 			}));
 		}
 
-		// Token: 0x06030A70 RID: 199280 RVA: 0x00B4BA20 File Offset: 0x00B49C20
+		// Token: 0x0602559C RID: 152988 RVA: 0x00A86828 File Offset: 0x00A84A28
 		public double ModelCenterOffsetX()
 		{
 			return this.ModelCenterOffset.X;
 		}
 
-		// Token: 0x0401A240 RID: 107072
+		// Token: 0x04014AB3 RID: 84659
 		public readonly global::Vector DesireLocation = global::Vector.Create();
 
-		// Token: 0x0401A241 RID: 107073
+		// Token: 0x04014AB4 RID: 84660
 		public readonly global::Rotator DesireRotator = global::Rotator.Create();
 
-		// Token: 0x0401A242 RID: 107074
+		// Token: 0x04014AB5 RID: 84661
 		public readonly global::Vector VehicleSize = global::Vector.Create();
 
-		// Token: 0x0401A243 RID: 107075
+		// Token: 0x04014AB6 RID: 84662
 		public readonly global::Vector RelativeLocationToStart = global::Vector.Create();
 
-		// Token: 0x0401A244 RID: 107076
+		// Token: 0x04014AB7 RID: 84663
 		public readonly global::Vector RelativeLocationToStartWithoutX = global::Vector.Create();
 
-		// Token: 0x0401A245 RID: 107077
+		// Token: 0x04014AB8 RID: 84664
 		public readonly global::Vector SkeletalMeshRelativeLocation = global::Vector.Create();
 
-		// Token: 0x0401A246 RID: 107078
+		// Token: 0x04014AB9 RID: 84665
 		public readonly global::Vector ModelCenterOffset = global::Vector.Create();
 
-		// Token: 0x0401A247 RID: 107079
+		// Token: 0x04014ABA RID: 84666
 		public float RootCenterToHead;
 
-		// Token: 0x0401A248 RID: 107080
+		// Token: 0x04014ABB RID: 84667
 		public float RootCenterToTail;
 
-		// Token: 0x0401A249 RID: 107081
+		// Token: 0x04014ABC RID: 84668
 		public float MeshCenterToHead;
 
-		// Token: 0x0401A24A RID: 107082
+		// Token: 0x04014ABD RID: 84669
 		public float MeshCenterToTail;
 
-		// Token: 0x0401A24B RID: 107083
+		// Token: 0x04014ABE RID: 84670
 		public readonly float NormalSpeed = 0.5f;
 
-		// Token: 0x0401A24C RID: 107084
+		// Token: 0x04014ABF RID: 84671
 		public readonly float AcceleratedSpeedConfig = 0.3f;
 
-		// Token: 0x0401A24D RID: 107085
+		// Token: 0x04014AC0 RID: 84672
 		[Nullable(2)]
 		public string EngineAudio;
 
-		// Token: 0x0401A24E RID: 107086
+		// Token: 0x04014AC1 RID: 84673
 		[Nullable(2)]
 		public string BrakingAudio;
 
-		// Token: 0x0401A24F RID: 107087
+		// Token: 0x04014AC2 RID: 84674
 		[Nullable(2)]
 		public string BrakingShortAudio;
 
-		// Token: 0x0401A250 RID: 107088
+		// Token: 0x04014AC3 RID: 84675
 		[Nullable(2)]
 		public string HornAudio;
 
-		// Token: 0x0401A251 RID: 107089
+		// Token: 0x04014AC4 RID: 84676
 		public bool IsInPlayerRange;
 
-		// Token: 0x0401A252 RID: 107090
+		// Token: 0x04014AC5 RID: 84677
 		public HashSet<int> AudioHandleSet = new HashSet<int>();
 
-		// Token: 0x0401A253 RID: 107091
+		// Token: 0x04014AC6 RID: 84678
 		public int CurrentRoadwayIndex = -1;
 
-		// Token: 0x0401A254 RID: 107092
+		// Token: 0x04014AC7 RID: 84679
 		public float CurrentRootDistance;
 
-		// Token: 0x0401A255 RID: 107093
+		// Token: 0x04014AC8 RID: 84680
 		public float CurrentSkeletalMeshDistance;
 
-		// Token: 0x0401A256 RID: 107094
+		// Token: 0x04014AC9 RID: 84681
 		public float CurrentSplineLength;
 
-		// Token: 0x0401A257 RID: 107095
+		// Token: 0x04014ACA RID: 84682
 		public float EndPointInSplineDistance;
 
-		// Token: 0x0401A258 RID: 107096
+		// Token: 0x04014ACB RID: 84683
 		public float CurrentSpeed;
 
-		// Token: 0x0401A259 RID: 107097
+		// Token: 0x04014ACC RID: 84684
 		public float CurrentAcceleratedSpeed;
 
-		// Token: 0x0401A25A RID: 107098
+		// Token: 0x04014ACD RID: 84685
 		private float RtpcSpeed;
 
-		// Token: 0x0401A25B RID: 107099
+		// Token: 0x04014ACE RID: 84686
 		private float LastUpdateRtpcSpeed;
 
-		// Token: 0x0401A25C RID: 107100
+		// Token: 0x04014ACF RID: 84687
 		public bool LastRenderOnScreen;
 
-		// Token: 0x0401A25D RID: 107101
+		// Token: 0x04014AD0 RID: 84688
 		public bool WaitingModelBuffer;
 
-		// Token: 0x0401A25E RID: 107102
+		// Token: 0x04014AD1 RID: 84689
 		public bool UpdateMoved;
 
-		// Token: 0x0401A25F RID: 107103
+		// Token: 0x04014AD2 RID: 84690
 		public float TimeSinceLastTick;
 
-		// Token: 0x0401A260 RID: 107104
+		// Token: 0x04014AD3 RID: 84691
 		public int TickNum;
 
-		// Token: 0x0401A261 RID: 107105
+		// Token: 0x04014AD4 RID: 84692
 		public int LastTickNum;
 
-		// Token: 0x0401A262 RID: 107106
+		// Token: 0x04014AD5 RID: 84693
 		public EEntityType? BlockTarget;
 
-		// Token: 0x0401A263 RID: 107107
+		// Token: 0x04014AD6 RID: 84694
 		[Nullable(2)]
 		public UTraceBoxElement BoxTrace;
 
-		// Token: 0x0401A264 RID: 107108
+		// Token: 0x04014AD7 RID: 84695
 		public bool IsLaunch;
 
-		// Token: 0x0401A265 RID: 107109
+		// Token: 0x04014AD8 RID: 84696
 		public readonly global::Vector BoxTracePosition = global::Vector.Create();
 
-		// Token: 0x0401A266 RID: 107110
+		// Token: 0x04014AD9 RID: 84697
 		public readonly global::Vector BoxTraceEndPosition = global::Vector.Create();
 
-		// Token: 0x0401A267 RID: 107111
+		// Token: 0x04014ADA RID: 84698
 		public readonly List<float> KeyPointDistances = new List<float>();
 
-		// Token: 0x0401A268 RID: 107112
+		// Token: 0x04014ADB RID: 84699
 		public readonly Dictionary<int, bool> KeyPointDistanceSyncRecord = new Dictionary<int, bool>();
 
-		// Token: 0x0401A269 RID: 107113
+		// Token: 0x04014ADC RID: 84700
 		[Nullable(2)]
 		public USkeletalMeshComponent SkeletalMeshComponent;
 
-		// Token: 0x0401A26A RID: 107114
+		// Token: 0x04014ADD RID: 84701
 		private readonly CacheRtpcObjType CacheRtpcObj = new CacheRtpcObjType();
 
-		// Token: 0x0401A26B RID: 107115
+		// Token: 0x04014ADE RID: 84702
 		public readonly int TeamId;
 
-		// Token: 0x0401A26C RID: 107116
+		// Token: 0x04014ADF RID: 84703
 		public readonly int MemberId;
 
-		// Token: 0x0401A26D RID: 107117
+		// Token: 0x04014AE0 RID: 84704
 		public readonly long CreatureDataId;
 
-		// Token: 0x0401A26E RID: 107118
+		// Token: 0x04014AE1 RID: 84705
 		public readonly int PbDataId;
 
-		// Token: 0x0401A26F RID: 107119
+		// Token: 0x04014AE2 RID: 84706
 		public readonly global::Vector StartActorLocation;
 
-		// Token: 0x0401A270 RID: 107120
+		// Token: 0x04014AE3 RID: 84707
 		public readonly global::Rotator StartActorRotator;
 
-		// Token: 0x0401A271 RID: 107121
+		// Token: 0x04014AE4 RID: 84708
 		public readonly global::Vector DestinationLocation;
 
-		// Token: 0x0401A272 RID: 107122
+		// Token: 0x04014AE5 RID: 84709
 		public readonly List<UKuroRoadway> Roadways;
 
-		// Token: 0x0401A273 RID: 107123
+		// Token: 0x04014AE6 RID: 84710
 		public readonly global::Vector StartLocationInRoad;
 
-		// Token: 0x0401A274 RID: 107124
+		// Token: 0x04014AE7 RID: 84711
 		public readonly global::Vector EndLocationInRoad;
 
-		// Token: 0x0401A275 RID: 107125
+		// Token: 0x04014AE8 RID: 84712
 		public readonly int DestRoadId;
 
-		// Token: 0x0401A276 RID: 107126
+		// Token: 0x04014AE9 RID: 84713
 		public readonly int DestRoadIndex;
 
-		// Token: 0x0401A277 RID: 107127
+		// Token: 0x04014AEA RID: 84714
 		public readonly CSharpScript.Game.NewWorld.Common.Component.RoadNetworkNavigationComponent RoadNetworkNavigationComponent;
 
-		// Token: 0x0401A278 RID: 107128
+		// Token: 0x04014AEB RID: 84715
 		private readonly VehicleSmBlackBoard.SwitchStateHandleType SwitchStateHandle;
 
-		// Token: 0x0200AB79 RID: 43897
-		// (Invoke) Token: 0x0604DAB9 RID: 318137
+		// Token: 0x02009586 RID: 38278
+		// (Invoke) Token: 0x06044079 RID: 278649
 		[NullableContext(0)]
 		public delegate bool SwitchStateHandleType(EVehicleStateType state, string reason = null);
 	}

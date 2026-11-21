@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Item;
 using UnrealEngine;
 
-// Token: 0x02002430 RID: 9264
+// Token: 0x02001915 RID: 6421
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,26 +13,26 @@ using UnrealEngine;
 })]
 internal class PhantomConfigRemoveItemGrid : LoopScrollMediumItemGrid<PhantomItemData>
 {
-	// Token: 0x06012941 RID: 76097 RVA: 0x00494B58 File Offset: 0x00492D58
+	// Token: 0x0600FDF7 RID: 65015 RVA: 0x004A2124 File Offset: 0x004A0324
 	protected override void OnStart()
 	{
 		this.GetItemGridExtendToggle().OnStateChange.Add(new Action<EToggleState>(this.OnToggleClicked));
 	}
 
-	// Token: 0x06012942 RID: 76098 RVA: 0x00494B76 File Offset: 0x00492D76
+	// Token: 0x0600FDF8 RID: 65016 RVA: 0x004A2142 File Offset: 0x004A0342
 	protected override void OnBeforeDestroy()
 	{
 		this.GetItemGridExtendToggle().OnStateChange.Remove(new Action<EToggleState>(this.OnToggleClicked));
 	}
 
-	// Token: 0x06012943 RID: 76099 RVA: 0x00494B94 File Offset: 0x00492D94
+	// Token: 0x0600FDF9 RID: 65017 RVA: 0x004A2160 File Offset: 0x004A0360
 	protected override void OnRefresh(PhantomItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurData = data;
 		this.RefreshPrivate(data);
 	}
 
-	// Token: 0x06012944 RID: 76100 RVA: 0x00494BA4 File Offset: 0x00492DA4
+	// Token: 0x0600FDFA RID: 65018 RVA: 0x004A2170 File Offset: 0x004A0370
 	private void RefreshPrivate(PhantomItemData data)
 	{
 		PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(data.GetUniqueId());
@@ -68,7 +68,7 @@ internal class PhantomConfigRemoveItemGrid : LoopScrollMediumItemGrid<PhantomIte
 		base.Apply<PropMediumItemGrid>(propMediumItemGrid);
 	}
 
-	// Token: 0x06012945 RID: 76101 RVA: 0x00494CC2 File Offset: 0x00492EC2
+	// Token: 0x0600FDFB RID: 65019 RVA: 0x004A228E File Offset: 0x004A048E
 	private void OnToggleClicked(EToggleState state)
 	{
 		this.SetSelected(false, false);
@@ -78,7 +78,7 @@ internal class PhantomConfigRemoveItemGrid : LoopScrollMediumItemGrid<PhantomIte
 		}
 	}
 
-	// Token: 0x04008C02 RID: 35842
+	// Token: 0x04008D49 RID: 36169
 	[Nullable(2)]
 	protected PhantomItemData CurData;
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200249C RID: 9372
+	// Token: 0x0200273F RID: 10047
 	public class EVehicleEnteringTargetJsonConverter : JsonConverter<EVehicleEnteringTarget>
 	{
-		// Token: 0x0600CB3E RID: 52030 RVA: 0x001DEB9C File Offset: 0x001DCD9C
+		// Token: 0x0600D7F7 RID: 55287 RVA: 0x001F8D64 File Offset: 0x001F6F64
 		public override EVehicleEnteringTarget Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EVehicleEnteringTargetExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CB3F RID: 52031 RVA: 0x001DEBC0 File Offset: 0x001DCDC0
+		// Token: 0x0600D7F8 RID: 55288 RVA: 0x001F8D88 File Offset: 0x001F6F88
 		public override void Write(Utf8JsonWriter writer, EVehicleEnteringTarget value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

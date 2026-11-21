@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A65 RID: 2661
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B2E RID: 2862
 	public class IKeyRotatorConfig : ICommonRotationConfig
 	{
-		// Token: 0x06003D53 RID: 15699 RVA: 0x0009D7EC File Offset: 0x0009B9EC
+		// Token: 0x06004173 RID: 16755 RVA: 0x000A6C64 File Offset: 0x000A4E64
 		public static IKeyRotatorConfig Create(IKeyRotatorConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E46 RID: 3654
-		// (get) Token: 0x06003D54 RID: 15700 RVA: 0x0009D80B File Offset: 0x0009BA0B
+		// Token: 0x17000F12 RID: 3858
+		// (get) Token: 0x06004174 RID: 16756 RVA: 0x000A6C83 File Offset: 0x000A4E83
 		public override ERotationType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E47 RID: 3655
-		// (get) Token: 0x06003D55 RID: 15701 RVA: 0x0009D818 File Offset: 0x0009BA18
+		// Token: 0x17000F13 RID: 3859
+		// (get) Token: 0x06004175 RID: 16757 RVA: 0x000A6C90 File Offset: 0x000A4E90
 		public override float Time
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E48 RID: 3656
-		// (get) Token: 0x06003D56 RID: 15702 RVA: 0x0009D828 File Offset: 0x0009BA28
+		// Token: 0x17000F14 RID: 3860
+		// (get) Token: 0x06004176 RID: 16758 RVA: 0x000A6CA0 File Offset: 0x000A4EA0
 		public override float? Cd
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E49 RID: 3657
-		// (get) Token: 0x06003D57 RID: 15703 RVA: 0x0009D85E File Offset: 0x0009BA5E
+		// Token: 0x17000F15 RID: 3861
+		// (get) Token: 0x06004177 RID: 16759 RVA: 0x000A6CD6 File Offset: 0x000A4ED6
 		[Nullable(2)]
 		public override string Curve
 		{
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E4A RID: 3658
-		// (get) Token: 0x06003D58 RID: 15704 RVA: 0x0009D86B File Offset: 0x0009BA6B
+		// Token: 0x17000F16 RID: 3862
+		// (get) Token: 0x06004178 RID: 16760 RVA: 0x000A6CE3 File Offset: 0x000A4EE3
 		public virtual VectorInfo KeyRotator
 		{
 			get
@@ -85,14 +83,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002228 RID: 8744
+		// Token: 0x0400243F RID: 9279
 		private IKeyRotatorConfig Instance;
 
-		// Token: 0x04002229 RID: 8745
+		// Token: 0x04002440 RID: 9280
 		[Nullable(2)]
 		private VectorInfo _KeyRotatorCache;
 
-		// Token: 0x0400222A RID: 8746
+		// Token: 0x04002441 RID: 9281
 		private bool _KeyRotatorInited;
 	}
 }

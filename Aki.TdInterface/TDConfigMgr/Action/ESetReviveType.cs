@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200169A RID: 5786
+	// Token: 0x02001813 RID: 6163
 	[EnumExtensions]
 	public enum ESetReviveType
 	{
-		// Token: 0x04004D87 RID: 19847
+		// Token: 0x0400519E RID: 20894
 		Add,
-		// Token: 0x04004D88 RID: 19848
+		// Token: 0x0400519F RID: 20895
 		Remove
 	}
 }

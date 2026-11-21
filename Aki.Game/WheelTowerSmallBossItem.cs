@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015C4 RID: 5572
+// Token: 0x02000A7C RID: 2684
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,12 +16,12 @@ using UnrealEngine;
 })]
 public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 {
-	// Token: 0x17000D7E RID: 3454
-	// (get) Token: 0x06009DF5 RID: 40437 RVA: 0x00225904 File Offset: 0x00223B04
-	// (set) Token: 0x06009DF6 RID: 40438 RVA: 0x0022590C File Offset: 0x00223B0C
+	// Token: 0x17000D9F RID: 3487
+	// (get) Token: 0x060071D3 RID: 29139 RVA: 0x0022F6B4 File Offset: 0x0022D8B4
+	// (set) Token: 0x060071D4 RID: 29140 RVA: 0x0022F6BC File Offset: 0x0022D8BC
 	public bool IsSmall { get; set; }
 
-	// Token: 0x06009DF7 RID: 40439 RVA: 0x00225918 File Offset: 0x00223B18
+	// Token: 0x060071D5 RID: 29141 RVA: 0x0022F6C8 File Offset: 0x0022D8C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 21;
@@ -80,7 +80,7 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009DF8 RID: 40440 RVA: 0x00225C40 File Offset: 0x00223E40
+	// Token: 0x060071D6 RID: 29142 RVA: 0x0022F9F0 File Offset: 0x0022DBF0
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
@@ -160,7 +160,7 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		uiNiagara3.SetChangeColor(bUseChangeColor3, fcolor);
 	}
 
-	// Token: 0x06009DF9 RID: 40441 RVA: 0x00225D74 File Offset: 0x00223F74
+	// Token: 0x060071D7 RID: 29143 RVA: 0x0022FB24 File Offset: 0x0022DD24
 	public override void Refresh(IBossItemData data, bool isSelected, int gridIndex)
 	{
 		IBossInfo bossInfo = data.BossInfo;
@@ -226,7 +226,7 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		}
 	}
 
-	// Token: 0x06009DFA RID: 40442 RVA: 0x00225F5C File Offset: 0x0022415C
+	// Token: 0x060071D8 RID: 29144 RVA: 0x0022FD0C File Offset: 0x0022DF0C
 	public void SetFinished(bool isFinished)
 	{
 		UUIText text = base.GetText(9);
@@ -260,14 +260,14 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		}
 	}
 
-	// Token: 0x06009DFB RID: 40443 RVA: 0x00225FE8 File Offset: 0x002241E8
+	// Token: 0x060071D9 RID: 29145 RVA: 0x0022FD98 File Offset: 0x0022DF98
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x06009DFC RID: 40444 RVA: 0x0022600E File Offset: 0x0022420E
+	// Token: 0x060071DA RID: 29146 RVA: 0x0022FDBE File Offset: 0x0022DFBE
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
@@ -284,7 +284,7 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		item2.SetUIActive(true);
 	}
 
-	// Token: 0x06009DFD RID: 40445 RVA: 0x0022603C File Offset: 0x0022423C
+	// Token: 0x060071DB RID: 29147 RVA: 0x0022FDEC File Offset: 0x0022DFEC
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
@@ -301,13 +301,13 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		item2.SetUIActive(true);
 	}
 
-	// Token: 0x06009DFE RID: 40446 RVA: 0x0022606A File Offset: 0x0022426A
+	// Token: 0x060071DC RID: 29148 RVA: 0x0022FE1A File Offset: 0x0022E01A
 	public void SetClickCallback(Action<int, int> callback)
 	{
 		this.ToggleCallback = callback;
 	}
 
-	// Token: 0x06009DFF RID: 40447 RVA: 0x00226073 File Offset: 0x00224273
+	// Token: 0x060071DD RID: 29149 RVA: 0x0022FE23 File Offset: 0x0022E023
 	private void ToggleClick(EToggleState state)
 	{
 		Action<int, int> toggleCallback = this.ToggleCallback;
@@ -318,16 +318,16 @@ public class WheelTowerSmallBossItem : GridProxyAbstract<IBossItemData>
 		toggleCallback(base.GridIndex, this.BossId);
 	}
 
-	// Token: 0x04004610 RID: 17936
+	// Token: 0x040046B6 RID: 18102
 	private const string NormalBgFramePath = "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/LevelMode/Normal/T_LevelModeNormalBossItemSelBg.T_LevelModeNormalBossItemSelBg";
 
-	// Token: 0x04004611 RID: 17937
+	// Token: 0x040046B7 RID: 18103
 	private const string EndlessBgFramePath = "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/LevelMode/Endless/T_LevelModeEndlessBossItemSelBg.T_LevelModeEndlessBossItemSelBg";
 
-	// Token: 0x04004612 RID: 17938
+	// Token: 0x040046B8 RID: 18104
 	private int BossId;
 
-	// Token: 0x04004614 RID: 17940
+	// Token: 0x040046BA RID: 18106
 	[Nullable(2)]
 	private Action<int, int> ToggleCallback;
 }

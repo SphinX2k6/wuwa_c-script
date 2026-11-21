@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001456 RID: 5206
+// Token: 0x0200090A RID: 2314
 public enum EActivityNewVersionSubViewType
 {
-	// Token: 0x0400413A RID: 16698
+	// Token: 0x040041D2 RID: 16850
 	RoleGachaPool,
-	// Token: 0x0400413B RID: 16699
+	// Token: 0x040041D3 RID: 16851
 	MainLine
 }

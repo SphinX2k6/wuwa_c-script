@@ -6,12 +6,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006842 RID: 26690
+	// Token: 0x02005792 RID: 22418
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlShopItemProxy : CommonGameplayShopItemProxy
 	{
-		// Token: 0x060429DE RID: 272862 RVA: 0x0103295C File Offset: 0x01030B5C
+		// Token: 0x06037532 RID: 226610 RVA: 0x00F73E68 File Offset: 0x00F72068
 		public override void UpdatePriceData()
 		{
 			base.UpdatePriceData();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.NowPriceTextColor = nowPriceTextColor;
 		}
 
-		// Token: 0x060429DF RID: 272863 RVA: 0x010329AC File Offset: 0x01030BAC
+		// Token: 0x06037533 RID: 226611 RVA: 0x00F73EB8 File Offset: 0x00F720B8
 		public override void UpdateBuyLimitCountText()
 		{
 			if (this.GoodsData == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.BuyLimitCountTextData.SetContent(content);
 		}
 
-		// Token: 0x060429E0 RID: 272864 RVA: 0x01032A38 File Offset: 0x01030C38
+		// Token: 0x06037534 RID: 226612 RVA: 0x00F73F44 File Offset: 0x00F72144
 		public override void UpdateQualityData()
 		{
 			if (this.GoodsData == null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.QualityTexturePath = itemQualityConfigById.Value.ShopItemIcon;
 		}
 
-		// Token: 0x060429E1 RID: 272865 RVA: 0x01032A8C File Offset: 0x01030C8C
+		// Token: 0x06037535 RID: 226613 RVA: 0x00F73F98 File Offset: 0x00F72198
 		public override void OnBuyButtonClick()
 		{
 			if (this.GoodsData == null)
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlShopExchangePopView, dangoBrawlShopExchangePopViewProxy, null);
 		}
 
-		// Token: 0x04022B30 RID: 142128
+		// Token: 0x0401D38D RID: 119693
 		private const string NormalColor = "3b3742";
 
-		// Token: 0x04022B31 RID: 142129
+		// Token: 0x0401D38E RID: 119694
 		private const string RedColor = "9c4242";
 
-		// Token: 0x04022B32 RID: 142130
+		// Token: 0x0401D38F RID: 119695
 		public float LimitCountAlpha = 0.7f;
 
-		// Token: 0x04022B33 RID: 142131
+		// Token: 0x0401D390 RID: 119696
 		public int ActivityId;
 
-		// Token: 0x04022B34 RID: 142132
+		// Token: 0x0401D391 RID: 119697
 		public string QualityTexturePath = "";
 	}
 }

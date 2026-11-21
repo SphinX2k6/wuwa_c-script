@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 {
-	// Token: 0x02005F7B RID: 24443
+	// Token: 0x02004F62 RID: 20322
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 	})]
 	public class ActivityRewardPopUpContent : GridProxyAbstract<IActivityRewardData>
 	{
-		// Token: 0x0603E095 RID: 254101 RVA: 0x00EFA7C4 File Offset: 0x00EF89C4
+		// Token: 0x0603302F RID: 208943 RVA: 0x00E4C4AC File Offset: 0x00E4A6AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,20 +29,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			};
 		}
 
-		// Token: 0x0603E096 RID: 254102 RVA: 0x00EFA860 File Offset: 0x00EF8A60
+		// Token: 0x06033030 RID: 208944 RVA: 0x00E4C548 File Offset: 0x00E4A748
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(1), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
 			this.ButtonItem = new ButtonItem(base.GetItem(3));
 		}
 
-		// Token: 0x0603E097 RID: 254103 RVA: 0x00EFA895 File Offset: 0x00EF8A95
+		// Token: 0x06033031 RID: 208945 RVA: 0x00E4C57D File Offset: 0x00E4A77D
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603E098 RID: 254104 RVA: 0x00EFA89C File Offset: 0x00EF8A9C
+		// Token: 0x06033032 RID: 208946 RVA: 0x00E4C584 File Offset: 0x00E4A784
 		public override void Refresh(IActivityRewardData data, bool isSelected, int gridIndex)
 		{
 			if (!string.IsNullOrEmpty(data.NameTextId))
@@ -59,19 +58,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			this.RefreshState(data);
 		}
 
-		// Token: 0x0603E099 RID: 254105 RVA: 0x00EFA903 File Offset: 0x00EF8B03
+		// Token: 0x06033033 RID: 208947 RVA: 0x00E4C5EB File Offset: 0x00E4A7EB
 		private void RefreshTitle(string text)
 		{
 			base.GetText(0).SetText(text, true);
 		}
 
-		// Token: 0x0603E09A RID: 254106 RVA: 0x00EFA913 File Offset: 0x00EF8B13
+		// Token: 0x06033034 RID: 208948 RVA: 0x00E4C5FB File Offset: 0x00E4A7FB
 		private void RefreshTitleByTextId(string textId, string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x0603E09B RID: 254107 RVA: 0x00EFA928 File Offset: 0x00EF8B28
+		// Token: 0x06033035 RID: 208949 RVA: 0x00E4C610 File Offset: 0x00E4A810
 		private void RefreshLayout(TItem[] itemList, EActivityRewardState dataState)
 		{
 			GenericLayout<CommonItemSmallItemGrid, TItem> itemLayout = this.ItemLayout;
@@ -88,10 +87,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			{
 				return;
 			}
-			itemLayout2.RefreshByData(itemList.ToList<TItem>(), null, false);
+			itemLayout2.RefreshByData(itemList, null, false);
 		}
 
-		// Token: 0x0603E09C RID: 254108 RVA: 0x00EFA960 File Offset: 0x00EF8B60
+		// Token: 0x06033036 RID: 208950 RVA: 0x00E4C640 File Offset: 0x00E4A840
 		private void RefreshState(IActivityRewardData data)
 		{
 			this.ButtonItem.SetActive(data.RewardState == EActivityRewardState.Enable);
@@ -185,11 +184,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			}
 		}
 
-		// Token: 0x04020663 RID: 132707
+		// Token: 0x0401B135 RID: 110901
 		[Nullable(2)]
 		private ButtonItem ButtonItem;
 
-		// Token: 0x04020664 RID: 132708
+		// Token: 0x0401B136 RID: 110902
 		[Nullable(new byte[]
 		{
 			2,
@@ -197,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-		// Token: 0x04020665 RID: 132709
+		// Token: 0x0401B137 RID: 110903
 		[Nullable(2)]
 		public Action CloseViewFunction;
 	}

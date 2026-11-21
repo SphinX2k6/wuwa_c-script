@@ -5,18 +5,18 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006319 RID: 25369
+	// Token: 0x02005297 RID: 21143
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballRoleViewProxy : IPinballRoleAttributeTabViewProxy, IPinballRoleWeaponTabViewProxy
 	{
-		// Token: 0x0603FD3A RID: 261434 RVA: 0x00F7110C File Offset: 0x00F6F30C
+		// Token: 0x060349FB RID: 215547 RVA: 0x00EB8068 File Offset: 0x00EB6268
 		public void SetActivityData(PinballActivityData activityData)
 		{
 			this.ActivityData = activityData;
 		}
 
-		// Token: 0x0603FD3B RID: 261435 RVA: 0x00F71118 File Offset: 0x00F6F318
+		// Token: 0x060349FC RID: 215548 RVA: 0x00EB8074 File Offset: 0x00EB6274
 		[NullableContext(2)]
 		public void BuildRoleDataList(List<int> formationRoleIds)
 		{
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			});
 		}
 
-		// Token: 0x0603FD3C RID: 261436 RVA: 0x00F711FC File Offset: 0x00F6F3FC
+		// Token: 0x060349FD RID: 215549 RVA: 0x00EB8158 File Offset: 0x00EB6358
 		public void SetRoleSelectedDataByIndex(int index)
 		{
 			if (this.SelectedRoleIndex == index || index < 0 || index >= this.RoleDataList.Count)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.SelectedRoleId = this.RoleDataList[index].GetId();
 		}
 
-		// Token: 0x0603FD3D RID: 261437 RVA: 0x00F71238 File Offset: 0x00F6F438
+		// Token: 0x060349FE RID: 215550 RVA: 0x00EB8194 File Offset: 0x00EB6394
 		public void SetSelectedRoleDataById(int roleId)
 		{
 			if (this.SelectedRoleId == roleId)
@@ -109,47 +109,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.SelectedRoleIndex = this.RoleDataList.FindIndex((PinballRoleDataBase data) => data.GetId() == roleId);
 		}
 
-		// Token: 0x0603FD3E RID: 261438 RVA: 0x00F7128A File Offset: 0x00F6F48A
+		// Token: 0x060349FF RID: 215551 RVA: 0x00EB81E6 File Offset: 0x00EB63E6
 		public int GetSelectedRoleId()
 		{
 			return this.SelectedRoleId;
 		}
 
-		// Token: 0x0603FD3F RID: 261439 RVA: 0x00F71292 File Offset: 0x00F6F492
+		// Token: 0x06034A00 RID: 215552 RVA: 0x00EB81EE File Offset: 0x00EB63EE
 		public int GetSelectedRoleIndex()
 		{
 			return this.SelectedRoleIndex;
 		}
 
-		// Token: 0x0603FD40 RID: 261440 RVA: 0x00F7129A File Offset: 0x00F6F49A
+		// Token: 0x06034A01 RID: 215553 RVA: 0x00EB81F6 File Offset: 0x00EB63F6
 		public List<PinballRoleDataBase> GetRoleDataList()
 		{
 			return this.RoleDataList;
 		}
 
-		// Token: 0x0603FD41 RID: 261441 RVA: 0x00F712A2 File Offset: 0x00F6F4A2
+		// Token: 0x06034A02 RID: 215554 RVA: 0x00EB81FE File Offset: 0x00EB63FE
 		public PinballActivityData GetActivityData()
 		{
 			return this.ActivityData;
 		}
 
-		// Token: 0x0603FD42 RID: 261442 RVA: 0x00F712AA File Offset: 0x00F6F4AA
+		// Token: 0x06034A03 RID: 215555 RVA: 0x00EB8206 File Offset: 0x00EB6406
 		public PinballRoleDataBase GetRoleData()
 		{
 			return this.RoleDataList[this.SelectedRoleIndex];
 		}
 
-		// Token: 0x040214E1 RID: 136417
+		// Token: 0x0401BE10 RID: 114192
 		[Nullable(2)]
 		private PinballActivityData ActivityData;
 
-		// Token: 0x040214E2 RID: 136418
+		// Token: 0x0401BE11 RID: 114193
 		private int SelectedRoleId;
 
-		// Token: 0x040214E3 RID: 136419
+		// Token: 0x0401BE12 RID: 114194
 		private int SelectedRoleIndex;
 
-		// Token: 0x040214E4 RID: 136420
+		// Token: 0x0401BE13 RID: 114195
 		private List<PinballRoleDataBase> RoleDataList;
 	}
 }

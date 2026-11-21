@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AE5 RID: 2789
+	// Token: 0x02000BAF RID: 2991
 	public class ITrampleTipType
 	{
-		// Token: 0x06004034 RID: 16436 RVA: 0x000A3E8D File Offset: 0x000A208D
-		[NullableContext(1)]
+		// Token: 0x0600445E RID: 17502 RVA: 0x000AD481 File Offset: 0x000AB681
 		public static ITrampleTipType Create(ITrampleTipType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001027 RID: 4135
-		// (get) Token: 0x06004035 RID: 16437 RVA: 0x000A3EAC File Offset: 0x000A20AC
+		// Token: 0x170010FB RID: 4347
+		// (get) Token: 0x0600445F RID: 17503 RVA: 0x000AD4A0 File Offset: 0x000AB6A0
 		public virtual ETrampleTipType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023B8 RID: 9144
+		// Token: 0x040025D4 RID: 9684
 		private ITrampleTipType Instance;
 	}
 }

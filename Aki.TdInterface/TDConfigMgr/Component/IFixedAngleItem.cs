@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200038E RID: 910
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003D7 RID: 983
 	public class IFixedAngleItem
 	{
-		// Token: 0x06001209 RID: 4617 RVA: 0x0003BF90 File Offset: 0x0003A190
+		// Token: 0x0600134D RID: 4941 RVA: 0x0003F274 File Offset: 0x0003D474
 		private IFixedAngleItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600120A RID: 4618 RVA: 0x0003BFC8 File Offset: 0x0003A1C8
+		// Token: 0x0600134E RID: 4942 RVA: 0x0003F2AC File Offset: 0x0003D4AC
 		public static IFixedAngleItem Create([Nullable(2)] IFixedAngleItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600120B RID: 4619 RVA: 0x0003BFDB File Offset: 0x0003A1DB
+		// Token: 0x0600134F RID: 4943 RVA: 0x0003F2BF File Offset: 0x0003D4BF
 		public static IFixedAngleItem CreateFromSetValue([Nullable(2)] IFixedAngleItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600120C RID: 4620 RVA: 0x0003BFEE File Offset: 0x0003A1EE
+		// Token: 0x06001350 RID: 4944 RVA: 0x0003F2D2 File Offset: 0x0003D4D2
 		public IFixedAngleItem_SetValue ToSetValue()
 		{
 			return new IFixedAngleItem_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700050D RID: 1293
-		// (get) Token: 0x0600120D RID: 4621 RVA: 0x0003C019 File Offset: 0x0003A219
-		// (set) Token: 0x0600120E RID: 4622 RVA: 0x0003C044 File Offset: 0x0003A244
+		// Token: 0x17000561 RID: 1377
+		// (get) Token: 0x06001351 RID: 4945 RVA: 0x0003F2FD File Offset: 0x0003D4FD
+		// (set) Token: 0x06001352 RID: 4946 RVA: 0x0003F328 File Offset: 0x0003D528
 		public virtual int InitAngle
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700050E RID: 1294
-		// (get) Token: 0x0600120F RID: 4623 RVA: 0x0003C052 File Offset: 0x0003A252
-		// (set) Token: 0x06001210 RID: 4624 RVA: 0x0003C07D File Offset: 0x0003A27D
+		// Token: 0x17000562 RID: 1378
+		// (get) Token: 0x06001353 RID: 4947 RVA: 0x0003F336 File Offset: 0x0003D536
+		// (set) Token: 0x06001354 RID: 4948 RVA: 0x0003F361 File Offset: 0x0003D561
 		public virtual int TargetAngle
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700050F RID: 1295
-		// (get) Token: 0x06001211 RID: 4625 RVA: 0x0003C08B File Offset: 0x0003A28B
-		// (set) Token: 0x06001212 RID: 4626 RVA: 0x0003C0B6 File Offset: 0x0003A2B6
+		// Token: 0x17000563 RID: 1379
+		// (get) Token: 0x06001355 RID: 4949 RVA: 0x0003F36F File Offset: 0x0003D56F
+		// (set) Token: 0x06001356 RID: 4950 RVA: 0x0003F39A File Offset: 0x0003D59A
 		public virtual int RotateAngle
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E9C RID: 3740
+		// Token: 0x04000F93 RID: 3987
 		[Nullable(2)]
 		protected IFixedAngleItem FbInstance;
 
-		// Token: 0x04000E9D RID: 3741
+		// Token: 0x04000F94 RID: 3988
 		[Nullable(2)]
 		protected IFixedAngleItem_SetValue PocoInterface;
 	}

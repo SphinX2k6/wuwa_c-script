@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BCA RID: 23498
+	// Token: 0x02004BAA RID: 19370
 	public class CiacconaGalTextConfig
 	{
-		// Token: 0x0603B671 RID: 243313 RVA: 0x00E2B028 File Offset: 0x00E29228
+		// Token: 0x060305BD RID: 198077 RVA: 0x00D7B31C File Offset: 0x00D7951C
 		[NullableContext(1)]
 		public static string GetTextId(int numberId)
 		{

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020012BF RID: 4799
+	// Token: 0x0200132E RID: 4910
 	public sealed class SurvivorsActivityData : IMessage<SurvivorsActivityData>, IMessage, IEquatable<SurvivorsActivityData>, IDeepCloneable<SurvivorsActivityData>, IBufferMessage
 	{
-		// Token: 0x06019890 RID: 104592 RVA: 0x003B5FDE File Offset: 0x003B41DE
+		// Token: 0x0601A2C6 RID: 107206 RVA: 0x003D071A File Offset: 0x003CE91A
 		[NullableContext(1)]
 		public static SurvivorsActivityData Create()
 		{
 			return new SurvivorsActivityData();
 		}
 
-		// Token: 0x1700561D RID: 22045
-		// (get) Token: 0x06019891 RID: 104593 RVA: 0x003B5FE5 File Offset: 0x003B41E5
+		// Token: 0x1700589E RID: 22686
+		// (get) Token: 0x0601A2C7 RID: 107207 RVA: 0x003D0721 File Offset: 0x003CE921
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700561E RID: 22046
-		// (get) Token: 0x06019892 RID: 104594 RVA: 0x003B5FE8 File Offset: 0x003B41E8
+		// Token: 0x1700589F RID: 22687
+		// (get) Token: 0x0601A2C8 RID: 107208 RVA: 0x003D0724 File Offset: 0x003CE924
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019893 RID: 104595 RVA: 0x003B5FF0 File Offset: 0x003B41F0
+		// Token: 0x0601A2C9 RID: 107209 RVA: 0x003D072C File Offset: 0x003CE92C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsActivityData()
 		{
 		}
 
-		// Token: 0x06019894 RID: 104596 RVA: 0x003B6048 File Offset: 0x003B4248
+		// Token: 0x0601A2CA RID: 107210 RVA: 0x003D0784 File Offset: 0x003CE984
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsActivityData(SurvivorsActivityData other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06019895 RID: 104597 RVA: 0x003B60EE File Offset: 0x003B42EE
+		// Token: 0x0601A2CB RID: 107211 RVA: 0x003D082A File Offset: 0x003CEA2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsActivityData Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new SurvivorsActivityData(this);
 		}
 
-		// Token: 0x1700561F RID: 22047
-		// (get) Token: 0x06019896 RID: 104598 RVA: 0x003B60F6 File Offset: 0x003B42F6
-		// (set) Token: 0x06019897 RID: 104599 RVA: 0x003B60FE File Offset: 0x003B42FE
+		// Token: 0x170058A0 RID: 22688
+		// (get) Token: 0x0601A2CC RID: 107212 RVA: 0x003D0832 File Offset: 0x003CEA32
+		// (set) Token: 0x0601A2CD RID: 107213 RVA: 0x003D083A File Offset: 0x003CEA3A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityTaskData NormalTaskData
@@ -89,8 +89,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005620 RID: 22048
-		// (get) Token: 0x06019898 RID: 104600 RVA: 0x003B6107 File Offset: 0x003B4307
+		// Token: 0x170058A1 RID: 22689
+		// (get) Token: 0x0601A2CE RID: 107214 RVA: 0x003D0843 File Offset: 0x003CEA43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> ScoreTaskDatas
@@ -101,8 +101,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005621 RID: 22049
-		// (get) Token: 0x06019899 RID: 104601 RVA: 0x003B610F File Offset: 0x003B430F
+		// Token: 0x170058A2 RID: 22690
+		// (get) Token: 0x0601A2CF RID: 107215 RVA: 0x003D084B File Offset: 0x003CEA4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockWeaponHandBooks
@@ -113,8 +113,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005622 RID: 22050
-		// (get) Token: 0x0601989A RID: 104602 RVA: 0x003B6117 File Offset: 0x003B4317
+		// Token: 0x170058A3 RID: 22691
+		// (get) Token: 0x0601A2D0 RID: 107216 RVA: 0x003D0853 File Offset: 0x003CEA53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockRoleHandBooks
@@ -125,8 +125,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005623 RID: 22051
-		// (get) Token: 0x0601989B RID: 104603 RVA: 0x003B611F File Offset: 0x003B431F
+		// Token: 0x170058A4 RID: 22692
+		// (get) Token: 0x0601A2D1 RID: 107217 RVA: 0x003D085B File Offset: 0x003CEA5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockItemHandBooks
@@ -137,8 +137,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005624 RID: 22052
-		// (get) Token: 0x0601989C RID: 104604 RVA: 0x003B6127 File Offset: 0x003B4327
+		// Token: 0x170058A5 RID: 22693
+		// (get) Token: 0x0601A2D2 RID: 107218 RVA: 0x003D0863 File Offset: 0x003CEA63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> TalentSkillDict
@@ -149,8 +149,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005625 RID: 22053
-		// (get) Token: 0x0601989D RID: 104605 RVA: 0x003B612F File Offset: 0x003B432F
+		// Token: 0x170058A6 RID: 22694
+		// (get) Token: 0x0601A2D3 RID: 107219 RVA: 0x003D086B File Offset: 0x003CEA6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SurvivorsChallengeInfo> SurvivorsChallengeInfos
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601989E RID: 104606 RVA: 0x003B6137 File Offset: 0x003B4337
+		// Token: 0x0601A2D4 RID: 107220 RVA: 0x003D0873 File Offset: 0x003CEA73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SurvivorsActivityData);
 		}
 
-		// Token: 0x0601989F RID: 104607 RVA: 0x003B6148 File Offset: 0x003B4348
+		// Token: 0x0601A2D5 RID: 107221 RVA: 0x003D0884 File Offset: 0x003CEA84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SurvivorsActivityData other)
@@ -177,7 +177,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.NormalTaskData, other.NormalTaskData) && this.scoreTaskDatas_.Equals(other.scoreTaskDatas_) && this.unlockWeaponHandBooks_.Equals(other.unlockWeaponHandBooks_) && this.unlockRoleHandBooks_.Equals(other.unlockRoleHandBooks_) && this.unlockItemHandBooks_.Equals(other.unlockItemHandBooks_) && this.TalentSkillDict.Equals(other.TalentSkillDict) && this.survivorsChallengeInfos_.Equals(other.survivorsChallengeInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060198A0 RID: 104608 RVA: 0x003B6204 File Offset: 0x003B4404
+		// Token: 0x0601A2D6 RID: 107222 RVA: 0x003D0940 File Offset: 0x003CEB40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060198A1 RID: 104609 RVA: 0x003B6294 File Offset: 0x003B4494
+		// Token: 0x0601A2D7 RID: 107223 RVA: 0x003D09D0 File Offset: 0x003CEBD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -208,7 +208,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060198A2 RID: 104610 RVA: 0x003B62A1 File Offset: 0x003B44A1
+		// Token: 0x0601A2D8 RID: 107224 RVA: 0x003D09DD File Offset: 0x003CEBDD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060198A3 RID: 104611 RVA: 0x003B62AC File Offset: 0x003B44AC
+		// Token: 0x0601A2D9 RID: 107225 RVA: 0x003D09E8 File Offset: 0x003CEBE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060198A4 RID: 104612 RVA: 0x003B6350 File Offset: 0x003B4550
+		// Token: 0x0601A2DA RID: 107226 RVA: 0x003D0A8C File Offset: 0x003CEC8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -261,7 +261,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060198A5 RID: 104613 RVA: 0x003B6400 File Offset: 0x003B4600
+		// Token: 0x0601A2DB RID: 107227 RVA: 0x003D0B3C File Offset: 0x003CED3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SurvivorsActivityData other)
@@ -287,7 +287,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060198A6 RID: 104614 RVA: 0x003B64BA File Offset: 0x003B46BA
+		// Token: 0x0601A2DC RID: 107228 RVA: 0x003D0BF6 File Offset: 0x003CEDF6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -295,7 +295,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060198A7 RID: 104615 RVA: 0x003B64C4 File Offset: 0x003B46C4
+		// Token: 0x0601A2DD RID: 107229 RVA: 0x003D0C00 File Offset: 0x003CEE00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -370,67 +370,67 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040095C7 RID: 38343
+		// Token: 0x040099F1 RID: 39409
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040095C8 RID: 38344
+		// Token: 0x040099F2 RID: 39410
 		public const int NormalTaskDataFieldNumber = 1;
 
-		// Token: 0x040095C9 RID: 38345
+		// Token: 0x040099F3 RID: 39411
 		private ActivityTaskData normalTaskData_;
 
-		// Token: 0x040095CA RID: 38346
+		// Token: 0x040099F4 RID: 39412
 		public const int ScoreTaskDatasFieldNumber = 2;
 
-		// Token: 0x040095CB RID: 38347
+		// Token: 0x040099F5 RID: 39413
 		private static readonly FieldCodec<int> _repeated_scoreTaskDatas_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x040095CC RID: 38348
+		// Token: 0x040099F6 RID: 39414
 		private readonly RepeatedField<int> scoreTaskDatas_ = new RepeatedField<int>();
 
-		// Token: 0x040095CD RID: 38349
+		// Token: 0x040099F7 RID: 39415
 		public const int UnlockWeaponHandBooksFieldNumber = 3;
 
-		// Token: 0x040095CE RID: 38350
+		// Token: 0x040099F8 RID: 39416
 		private static readonly FieldCodec<int> _repeated_unlockWeaponHandBooks_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x040095CF RID: 38351
+		// Token: 0x040099F9 RID: 39417
 		private readonly RepeatedField<int> unlockWeaponHandBooks_ = new RepeatedField<int>();
 
-		// Token: 0x040095D0 RID: 38352
+		// Token: 0x040099FA RID: 39418
 		public const int UnlockRoleHandBooksFieldNumber = 4;
 
-		// Token: 0x040095D1 RID: 38353
+		// Token: 0x040099FB RID: 39419
 		private static readonly FieldCodec<int> _repeated_unlockRoleHandBooks_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x040095D2 RID: 38354
+		// Token: 0x040099FC RID: 39420
 		private readonly RepeatedField<int> unlockRoleHandBooks_ = new RepeatedField<int>();
 
-		// Token: 0x040095D3 RID: 38355
+		// Token: 0x040099FD RID: 39421
 		public const int UnlockItemHandBooksFieldNumber = 5;
 
-		// Token: 0x040095D4 RID: 38356
+		// Token: 0x040099FE RID: 39422
 		private static readonly FieldCodec<int> _repeated_unlockItemHandBooks_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x040095D5 RID: 38357
+		// Token: 0x040099FF RID: 39423
 		private readonly RepeatedField<int> unlockItemHandBooks_ = new RepeatedField<int>();
 
-		// Token: 0x040095D6 RID: 38358
+		// Token: 0x04009A00 RID: 39424
 		public const int TalentSkillDictFieldNumber = 6;
 
-		// Token: 0x040095D7 RID: 38359
+		// Token: 0x04009A01 RID: 39425
 		private static readonly MapField<int, int>.Codec _map_talentSkillDict_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 50U);
 
-		// Token: 0x040095D8 RID: 38360
+		// Token: 0x04009A02 RID: 39426
 		private readonly MapField<int, int> talentSkillDict_ = new MapField<int, int>();
 
-		// Token: 0x040095D9 RID: 38361
+		// Token: 0x04009A03 RID: 39427
 		public const int SurvivorsChallengeInfosFieldNumber = 7;
 
-		// Token: 0x040095DA RID: 38362
+		// Token: 0x04009A04 RID: 39428
 		private static readonly FieldCodec<SurvivorsChallengeInfo> _repeated_survivorsChallengeInfos_codec = FieldCodec.ForMessage<SurvivorsChallengeInfo>(58U, SurvivorsChallengeInfo.Parser);
 
-		// Token: 0x040095DB RID: 38363
+		// Token: 0x04009A05 RID: 39429
 		private readonly RepeatedField<SurvivorsChallengeInfo> survivorsChallengeInfos_ = new RepeatedField<SurvivorsChallengeInfo>();
 	}
 }

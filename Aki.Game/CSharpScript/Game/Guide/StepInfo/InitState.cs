@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.StepInfo
 {
-	// Token: 0x02004606 RID: 17926
+	// Token: 0x0200352F RID: 13615
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 	})]
 	internal class InitState : StateBase<GuideStepInfo, EGuideStepState>
 	{
-		// Token: 0x0602E381 RID: 189313 RVA: 0x00AAFAE3 File Offset: 0x00AADCE3
+		// Token: 0x06022A76 RID: 141942 RVA: 0x009DC1D7 File Offset: 0x009DA3D7
 		public InitState(GuideStepInfo owner, EGuideStepState state, [Nullable(new byte[]
 		{
 			2,

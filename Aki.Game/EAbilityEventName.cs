@@ -1,24 +1,26 @@
 ﻿using System;
 
-// Token: 0x02002E4B RID: 11851
+// Token: 0x020023A7 RID: 9127
 public enum EAbilityEventName
 {
-	// Token: 0x0400BC10 RID: 48144
+	// Token: 0x0400BFA3 RID: 49059
 	BuffStackChanged,
-	// Token: 0x0400BC11 RID: 48145
+	// Token: 0x0400BFA4 RID: 49060
 	BuffStackInstigatorChanged,
-	// Token: 0x0400BC12 RID: 48146
+	// Token: 0x0400BFA5 RID: 49061
 	AddBuffToOthers,
-	// Token: 0x0400BC13 RID: 48147
+	// Token: 0x0400BFA6 RID: 49062
 	AddBuffFailure,
-	// Token: 0x0400BC14 RID: 48148
+	// Token: 0x0400BFA7 RID: 49063
 	OnBuffAdd,
-	// Token: 0x0400BC15 RID: 48149
+	// Token: 0x0400BFA8 RID: 49064
 	ShieldChange,
-	// Token: 0x0400BC16 RID: 48150
+	// Token: 0x0400BFA9 RID: 49065
 	OnGameplayTagChanged,
-	// Token: 0x0400BC17 RID: 48151
+	// Token: 0x0400BFAA RID: 49066
 	OnAttributeChange,
-	// Token: 0x0400BC18 RID: 48152
-	OnBuffMaxStackModifier
+	// Token: 0x0400BFAB RID: 49067
+	OnBuffMaxStackModifier,
+	// Token: 0x0400BFAC RID: 49068
+	BuffStackMaxChanged
 }

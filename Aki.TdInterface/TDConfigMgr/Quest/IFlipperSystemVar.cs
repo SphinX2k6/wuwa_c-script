@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F97 RID: 3991
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010C1 RID: 4289
 	public class IFlipperSystemVar
 	{
-		// Token: 0x060058E8 RID: 22760 RVA: 0x000D8D48 File Offset: 0x000D6F48
+		// Token: 0x06005EBA RID: 24250 RVA: 0x000E5770 File Offset: 0x000E3970
 		private IFlipperSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060058E9 RID: 22761 RVA: 0x000D8D80 File Offset: 0x000D6F80
+		// Token: 0x06005EBB RID: 24251 RVA: 0x000E57A8 File Offset: 0x000E39A8
 		public static IFlipperSystemVar Create([Nullable(2)] IFlipperSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058EA RID: 22762 RVA: 0x000D8D93 File Offset: 0x000D6F93
+		// Token: 0x06005EBC RID: 24252 RVA: 0x000E57BB File Offset: 0x000E39BB
 		public static IFlipperSystemVar CreateFromSetValue([Nullable(2)] IFlipperSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058EB RID: 22763 RVA: 0x000D8DA6 File Offset: 0x000D6FA6
+		// Token: 0x06005EBD RID: 24253 RVA: 0x000E57CE File Offset: 0x000E39CE
 		public IFlipperSystemVar_SetValue ToSetValue()
 		{
 			return new IFlipperSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D93 RID: 7571
-		// (get) Token: 0x060058EC RID: 22764 RVA: 0x000D8DC5 File Offset: 0x000D6FC5
-		// (set) Token: 0x060058ED RID: 22765 RVA: 0x000D8DF0 File Offset: 0x000D6FF0
+		// Token: 0x17001F38 RID: 7992
+		// (get) Token: 0x06005EBE RID: 24254 RVA: 0x000E57ED File Offset: 0x000E39ED
+		// (set) Token: 0x06005EBF RID: 24255 RVA: 0x000E5818 File Offset: 0x000E3A18
 		public virtual EFlipperSystemVar VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D94 RID: 7572
-		// (get) Token: 0x060058EE RID: 22766 RVA: 0x000D8DFE File Offset: 0x000D6FFE
-		// (set) Token: 0x060058EF RID: 22767 RVA: 0x000D8E25 File Offset: 0x000D7025
+		// Token: 0x17001F39 RID: 7993
+		// (get) Token: 0x06005EC0 RID: 24256 RVA: 0x000E5826 File Offset: 0x000E3A26
+		// (set) Token: 0x06005EC1 RID: 24257 RVA: 0x000E584D File Offset: 0x000E3A4D
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035B2 RID: 13746
+		// Token: 0x040038E2 RID: 14562
 		[Nullable(2)]
 		protected IFlipperSystemVar FbInstance;
 
-		// Token: 0x040035B3 RID: 13747
+		// Token: 0x040038E3 RID: 14563
 		[Nullable(2)]
 		protected IFlipperSystemVar_SetValue PocoInterface;
 	}

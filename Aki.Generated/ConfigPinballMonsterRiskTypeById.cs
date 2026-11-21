@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000723 RID: 1827
+	// Token: 0x0200073B RID: 1851
 	public class ConfigPinballMonsterRiskTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002AE2 RID: 10978 RVA: 0x0014BCA0 File Offset: 0x00149EA0
+		// Token: 0x06002B72 RID: 11122 RVA: 0x0015271C File Offset: 0x0015091C
 		static ConfigPinballMonsterRiskTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPinballMonsterRiskTypeById.CreateStaticDefaultValue), new Action(ConfigPinballMonsterRiskTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002AE3 RID: 10979 RVA: 0x0014BCC0 File Offset: 0x00149EC0
+		// Token: 0x06002B73 RID: 11123 RVA: 0x0015273C File Offset: 0x0015093C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPinballMonsterRiskTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002AE4 RID: 10980 RVA: 0x0014BD3F File Offset: 0x00149F3F
+		// Token: 0x06002B74 RID: 11124 RVA: 0x001527BB File Offset: 0x001509BB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPinballMonsterRiskTypeById.LogPair = null;
 			ConfigPinballMonsterRiskTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06002AE5 RID: 10981 RVA: 0x0014BD4D File Offset: 0x00149F4D
+		// Token: 0x06002B75 RID: 11125 RVA: 0x001527C9 File Offset: 0x001509C9
 		public static void Init()
 		{
 			ConfigPinballMonsterRiskTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigPinballMonsterRiskTypeById.HandleId, "db_pinballbattle.db", "select BinData from `PinballMonsterRiskType` where Id=?");
 		}
 
-		// Token: 0x06002AE6 RID: 10982 RVA: 0x0014BD68 File Offset: 0x00149F68
+		// Token: 0x06002B76 RID: 11126 RVA: 0x001527E4 File Offset: 0x001509E4
 		public static PinballMonsterRiskType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPinballMonsterRiskTypeById.HandleId, ConfigPinballMonsterRiskTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PinballMonsterRiskType?(rootAsPinballMonsterRiskType);
 		}
 
-		// Token: 0x040031DB RID: 12763
+		// Token: 0x04003283 RID: 12931
 		private const string DB = "db_pinballbattle.db";
 
-		// Token: 0x040031DC RID: 12764
+		// Token: 0x04003284 RID: 12932
 		private const string FILE = "x.星弹奇游_怪物.xlsx";
 
-		// Token: 0x040031DD RID: 12765
+		// Token: 0x04003285 RID: 12933
 		private const string TABLE = "PinballMonsterRiskType";
 
-		// Token: 0x040031DE RID: 12766
+		// Token: 0x04003286 RID: 12934
 		private const string COMMAND = "select BinData from `PinballMonsterRiskType` where Id=?";
 
-		// Token: 0x040031DF RID: 12767
+		// Token: 0x04003287 RID: 12935
 		private const string KEY_PREFIX = "PinballMonsterRiskTypeById";
 
-		// Token: 0x040031E0 RID: 12768
+		// Token: 0x04003288 RID: 12936
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040031E1 RID: 12769
+		// Token: 0x04003289 RID: 12937
 		private static int HandleId;
 	}
 }

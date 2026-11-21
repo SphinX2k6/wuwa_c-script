@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F5 RID: 9461
+	// Token: 0x0200279B RID: 10139
 	public class AdjustTodTime : ActionParams
 	{
-		// Token: 0x0600D33F RID: 54079 RVA: 0x001F5376 File Offset: 0x001F3576
-		[NullableContext(1)]
+		// Token: 0x0600E09B RID: 57499 RVA: 0x00210D6E File Offset: 0x0020EF6E
 		public static AdjustTodTime Create(IAdjustTodTime? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B17 RID: 15127
-		// (get) Token: 0x0600D340 RID: 54080 RVA: 0x001F5395 File Offset: 0x001F3595
+		// Token: 0x17003E13 RID: 15891
+		// (get) Token: 0x0600E09C RID: 57500 RVA: 0x00210D8D File Offset: 0x0020EF8D
 		public virtual int Hour
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B18 RID: 15128
-		// (get) Token: 0x0600D341 RID: 54081 RVA: 0x001F53A2 File Offset: 0x001F35A2
+		// Token: 0x17003E14 RID: 15892
+		// (get) Token: 0x0600E09D RID: 57501 RVA: 0x00210D9A File Offset: 0x0020EF9A
 		public virtual int Min
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B19 RID: 15129
-		// (get) Token: 0x0600D342 RID: 54082 RVA: 0x001F53AF File Offset: 0x001F35AF
+		// Token: 0x17003E15 RID: 15893
+		// (get) Token: 0x0600E09E RID: 57502 RVA: 0x00210DA7 File Offset: 0x0020EFA7
 		public virtual bool ShowUi
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073D3 RID: 29651
+		// Token: 0x04007A25 RID: 31269
 		private IAdjustTodTime Instance;
 	}
 }

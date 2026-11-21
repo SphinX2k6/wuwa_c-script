@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.PayShop
 {
-	// Token: 0x02005356 RID: 21334
+	// Token: 0x02004339 RID: 17209
 	public static class PayShopUtil
 	{
-		// Token: 0x0603682A RID: 223274 RVA: 0x00CE852C File Offset: 0x00CE672C
+		// Token: 0x0602B770 RID: 178032 RVA: 0x00C373B4 File Offset: 0x00C355B4
 		public static void OpenItemPreview(InventoryDefine.EItemDataType itemType, int itemId)
 		{
 			if (itemType == InventoryDefine.EItemDataType.OrnamentItem)

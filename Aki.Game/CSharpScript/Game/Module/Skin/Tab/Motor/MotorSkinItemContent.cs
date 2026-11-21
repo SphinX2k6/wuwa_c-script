@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Motor
 {
-	// Token: 0x02004BEE RID: 19438
+	// Token: 0x02003B9F RID: 15263
 	public class MotorSkinItemContent : UiPanelBase
 	{
-		// Token: 0x06032439 RID: 205881 RVA: 0x00BAD59A File Offset: 0x00BAB79A
+		// Token: 0x060271DD RID: 160221 RVA: 0x00AF1B1A File Offset: 0x00AEFD1A
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			};
 		}
 
-		// Token: 0x0603243A RID: 205882 RVA: 0x00BAD5D4 File Offset: 0x00BAB7D4
+		// Token: 0x060271DE RID: 160222 RVA: 0x00AF1B54 File Offset: 0x00AEFD54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorSkinItemContent.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603243B RID: 205883 RVA: 0x00BAD618 File Offset: 0x00BAB818
+		// Token: 0x060271DF RID: 160223 RVA: 0x00AF1B98 File Offset: 0x00AEFD98
 		public void Refresh(int recommendId)
 		{
 			MotorSkinRecommendItem motorSkinRecommendItem = this.MotorSkinRecommendItem;
@@ -49,16 +49,16 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			base.GetSpine(1).SetAnimation(0, ESpineAnimation.Idle.ToString(), true);
 		}
 
-		// Token: 0x0401ABD2 RID: 109522
+		// Token: 0x0401552D RID: 87341
 		[Nullable(2)]
 		private MotorSkinRecommendItem MotorSkinRecommendItem;
 
-		// Token: 0x0200ADE3 RID: 44515
+		// Token: 0x02009802 RID: 38914
 		private enum EContentComponent
 		{
-			// Token: 0x04034CF8 RID: 216312
+			// Token: 0x0402F69F RID: 194207
 			Content,
-			// Token: 0x04034CF9 RID: 216313
+			// Token: 0x0402F6A0 RID: 194208
 			SpineTexture
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A4F RID: 23119
+	// Token: 0x0200605C RID: 24668
 	public struct ITeleportSceneEffect : IFlatbufferObject
 	{
-		// Token: 0x1700ADE9 RID: 44521
-		// (get) Token: 0x06027506 RID: 161030 RVA: 0x00568D15 File Offset: 0x00566F15
+		// Token: 0x1700B721 RID: 46881
+		// (get) Token: 0x06029A7E RID: 170622 RVA: 0x005AFD21 File Offset: 0x005ADF21
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027507 RID: 161031 RVA: 0x00568D22 File Offset: 0x00566F22
+		// Token: 0x06029A7F RID: 170623 RVA: 0x005AFD2E File Offset: 0x005ADF2E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027508 RID: 161032 RVA: 0x00568D2C File Offset: 0x00566F2C
+		// Token: 0x06029A80 RID: 170624 RVA: 0x005AFD38 File Offset: 0x005ADF38
 		public static ITeleportSceneEffect GetRootAsITeleportSceneEffect(ByteBuffer _bb)
 		{
 			return ITeleportSceneEffect.GetRootAsITeleportSceneEffect(_bb, default(ITeleportSceneEffect));
 		}
 
-		// Token: 0x06027509 RID: 161033 RVA: 0x00568D48 File Offset: 0x00566F48
+		// Token: 0x06029A81 RID: 170625 RVA: 0x005AFD54 File Offset: 0x005ADF54
 		public static ITeleportSceneEffect GetRootAsITeleportSceneEffect(ByteBuffer _bb, ITeleportSceneEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602750A RID: 161034 RVA: 0x00568D65 File Offset: 0x00566F65
+		// Token: 0x06029A82 RID: 170626 RVA: 0x005AFD71 File Offset: 0x005ADF71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602750B RID: 161035 RVA: 0x00568D74 File Offset: 0x00566F74
+		// Token: 0x06029A83 RID: 170627 RVA: 0x005AFD80 File Offset: 0x005ADF80
 		public ITeleportSceneEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ADEA RID: 44522
-		// (get) Token: 0x0602750C RID: 161036 RVA: 0x00568D84 File Offset: 0x00566F84
+		// Token: 0x1700B722 RID: 46882
+		// (get) Token: 0x06029A84 RID: 170628 RVA: 0x005AFD90 File Offset: 0x005ADF90
 		public string WorldEffectPath
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602750D RID: 161037 RVA: 0x00568DBB File Offset: 0x00566FBB
+		// Token: 0x06029A85 RID: 170629 RVA: 0x005AFDC7 File Offset: 0x005ADFC7
 		public Span<byte> GetWorldEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602750E RID: 161038 RVA: 0x00568DCA File Offset: 0x00566FCA
+		// Token: 0x06029A86 RID: 170630 RVA: 0x005AFDD6 File Offset: 0x005ADFD6
 		public byte[] GetWorldEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700ADEB RID: 44523
-		// (get) Token: 0x0602750F RID: 161039 RVA: 0x00568DD8 File Offset: 0x00566FD8
+		// Token: 0x1700B723 RID: 46883
+		// (get) Token: 0x06029A87 RID: 170631 RVA: 0x005AFDE4 File Offset: 0x005ADFE4
 		public string ScreenEffectPath
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027510 RID: 161040 RVA: 0x00568E0F File Offset: 0x0056700F
+		// Token: 0x06029A88 RID: 170632 RVA: 0x005AFE1B File Offset: 0x005AE01B
 		public Span<byte> GetScreenEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06027511 RID: 161041 RVA: 0x00568E1E File Offset: 0x0056701E
+		// Token: 0x06029A89 RID: 170633 RVA: 0x005AFE2A File Offset: 0x005AE02A
 		public byte[] GetScreenEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06027512 RID: 161042 RVA: 0x00568E2C File Offset: 0x0056702C
+		// Token: 0x06029A8A RID: 170634 RVA: 0x005AFE38 File Offset: 0x005AE038
 		public static Offset<ITeleportSceneEffect> CreateITeleportSceneEffect(FlatBufferBuilder builder, StringOffset WorldEffectPathOffset = default(StringOffset), StringOffset ScreenEffectPathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITeleportSceneEffect.EndITeleportSceneEffect(builder);
 		}
 
-		// Token: 0x06027513 RID: 161043 RVA: 0x00568E49 File Offset: 0x00567049
+		// Token: 0x06029A8B RID: 170635 RVA: 0x005AFE55 File Offset: 0x005AE055
 		public static void StartITeleportSceneEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06027514 RID: 161044 RVA: 0x00568E52 File Offset: 0x00567052
+		// Token: 0x06029A8C RID: 170636 RVA: 0x005AFE5E File Offset: 0x005AE05E
 		public static void AddWorldEffectPath(FlatBufferBuilder builder, StringOffset worldEffectPathOffset)
 		{
 			builder.AddOffset(0, worldEffectPathOffset.Value, 0);
 		}
 
-		// Token: 0x06027515 RID: 161045 RVA: 0x00568E62 File Offset: 0x00567062
+		// Token: 0x06029A8D RID: 170637 RVA: 0x005AFE6E File Offset: 0x005AE06E
 		public static void AddScreenEffectPath(FlatBufferBuilder builder, StringOffset screenEffectPathOffset)
 		{
 			builder.AddOffset(1, screenEffectPathOffset.Value, 0);
 		}
 
-		// Token: 0x06027516 RID: 161046 RVA: 0x00568E72 File Offset: 0x00567072
+		// Token: 0x06029A8E RID: 170638 RVA: 0x005AFE7E File Offset: 0x005AE07E
 		public static Offset<ITeleportSceneEffect> EndITeleportSceneEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportSceneEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06027517 RID: 161047 RVA: 0x00568E80 File Offset: 0x00567080
+		// Token: 0x06029A8F RID: 170639 RVA: 0x005AFE8C File Offset: 0x005AE08C
 		public ITeleportSceneEffectT UnPack()
 		{
 			ITeleportSceneEffectT teleportSceneEffectT = new ITeleportSceneEffectT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return teleportSceneEffectT;
 		}
 
-		// Token: 0x06027518 RID: 161048 RVA: 0x00568E9B File Offset: 0x0056709B
+		// Token: 0x06029A90 RID: 170640 RVA: 0x005AFEA7 File Offset: 0x005AE0A7
 		public void UnPackTo(ITeleportSceneEffectT _o)
 		{
 			_o.WorldEffectPath = this.WorldEffectPath;
 			_o.ScreenEffectPath = this.ScreenEffectPath;
 		}
 
-		// Token: 0x06027519 RID: 161049 RVA: 0x00568EB8 File Offset: 0x005670B8
+		// Token: 0x06029A91 RID: 170641 RVA: 0x005AFEC4 File Offset: 0x005AE0C4
 		public static Offset<ITeleportSceneEffect> Pack(FlatBufferBuilder builder, ITeleportSceneEffectT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITeleportSceneEffect.CreateITeleportSceneEffect(builder, worldEffectPathOffset, screenEffectPathOffset);
 		}
 
-		// Token: 0x0400F0D5 RID: 61653
+		// Token: 0x0400FDCC RID: 64972
 		private Table __p;
 	}
 }

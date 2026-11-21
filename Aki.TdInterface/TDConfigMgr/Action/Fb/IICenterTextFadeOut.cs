@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026CE RID: 9934
+	// Token: 0x02002992 RID: 10642
 	public class IICenterTextFadeOut : ICenterTextShowType
 	{
-		// Token: 0x0600DE14 RID: 56852 RVA: 0x0020F5CE File Offset: 0x0020D7CE
-		[NullableContext(1)]
+		// Token: 0x0600EBF0 RID: 60400 RVA: 0x0022BE0E File Offset: 0x0022A00E
 		public static IICenterTextFadeOut Create(IICenterTextFadeOut? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700423A RID: 16954
-		// (get) Token: 0x0600DE15 RID: 56853 RVA: 0x0020F5ED File Offset: 0x0020D7ED
+		// Token: 0x1700457A RID: 17786
+		// (get) Token: 0x0600EBF1 RID: 60401 RVA: 0x0022BE2D File Offset: 0x0022A02D
 		public override ECenterTextShowAnim Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700423B RID: 16955
-		// (get) Token: 0x0600DE16 RID: 56854 RVA: 0x0020F5FA File Offset: 0x0020D7FA
+		// Token: 0x1700457B RID: 17787
+		// (get) Token: 0x0600EBF2 RID: 60402 RVA: 0x0022BE3A File Offset: 0x0022A03A
 		public virtual float FadeInTime
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700423C RID: 16956
-		// (get) Token: 0x0600DE17 RID: 56855 RVA: 0x0020F607 File Offset: 0x0020D807
+		// Token: 0x1700457C RID: 17788
+		// (get) Token: 0x0600EBF3 RID: 60403 RVA: 0x0022BE47 File Offset: 0x0022A047
 		public virtual float FadeOutTime
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B4C RID: 31564
+		// Token: 0x040081EC RID: 33260
 		private IICenterTextFadeOut Instance;
 	}
 }

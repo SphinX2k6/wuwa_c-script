@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041BB RID: 16827
+	// Token: 0x02004614 RID: 17940
 	public class ITetrisIndexedBoardT
 	{
-		// Token: 0x17007753 RID: 30547
-		// (get) Token: 0x06018C80 RID: 101504 RVA: 0x00391471 File Offset: 0x0038F671
-		// (set) Token: 0x06018C81 RID: 101505 RVA: 0x00391479 File Offset: 0x0038F679
+		// Token: 0x17007D7F RID: 32127
+		// (get) Token: 0x0601A3D6 RID: 107478 RVA: 0x003BC8C5 File Offset: 0x003BAAC5
+		// (set) Token: 0x0601A3D7 RID: 107479 RVA: 0x003BC8CD File Offset: 0x003BAACD
 		public List<ITetrisSingleIndexGridT> IndexedGrids { get; set; }
 
-		// Token: 0x17007754 RID: 30548
-		// (get) Token: 0x06018C82 RID: 101506 RVA: 0x00391482 File Offset: 0x0038F682
-		// (set) Token: 0x06018C83 RID: 101507 RVA: 0x0039148A File Offset: 0x0038F68A
+		// Token: 0x17007D80 RID: 32128
+		// (get) Token: 0x0601A3D8 RID: 107480 RVA: 0x003BC8D6 File Offset: 0x003BAAD6
+		// (set) Token: 0x0601A3D9 RID: 107481 RVA: 0x003BC8DE File Offset: 0x003BAADE
 		public IRequiredVector2T BoardSize { get; set; }
 
-		// Token: 0x06018C84 RID: 101508 RVA: 0x00391493 File Offset: 0x0038F693
+		// Token: 0x0601A3DA RID: 107482 RVA: 0x003BC8E7 File Offset: 0x003BAAE7
 		public ITetrisIndexedBoardT()
 		{
 			this.IndexedGrids = null;

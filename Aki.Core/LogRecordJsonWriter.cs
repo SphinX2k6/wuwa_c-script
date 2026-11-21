@@ -8,7 +8,7 @@ using CSharpScript.Core.Common;
 [Nullable(0)]
 public static class LogRecordJsonWriter
 {
-	// Token: 0x06000157 RID: 343 RVA: 0x00009730 File Offset: 0x00007930
+	// Token: 0x06000159 RID: 345 RVA: 0x00009414 File Offset: 0x00007614
 	public static string EscapeJsString(string value)
 	{
 		StringBuilder stringBuilder = null;
@@ -86,7 +86,7 @@ public static class LogRecordJsonWriter
 		return ((stringBuilder != null) ? stringBuilder.ToString() : null) ?? value;
 	}
 
-	// Token: 0x06000158 RID: 344 RVA: 0x0000983C File Offset: 0x00007A3C
+	// Token: 0x0600015A RID: 346 RVA: 0x00009520 File Offset: 0x00007720
 	[return: Nullable(2)]
 	public static string Write(ILogRecord content)
 	{
@@ -98,12 +98,12 @@ public static class LogRecordJsonWriter
 		LogReportRecord logReportRecord = content as LogReportRecord;
 		if (logReportRecord == null)
 		{
-			return Json.Stringify<ILogRecord>(content, null);
+			return Json.Stringify(content, null);
 		}
 		return LogRecordJsonWriter.WriteLogReportRecord(logReportRecord);
 	}
 
-	// Token: 0x06000159 RID: 345 RVA: 0x00009874 File Offset: 0x00007A74
+	// Token: 0x0600015B RID: 347 RVA: 0x00009558 File Offset: 0x00007758
 	private static string WriteLogRecord(LogRecord r)
 	{
 		StringBuilder stringBuilder = new StringBuilder(512);
@@ -139,7 +139,7 @@ public static class LogRecordJsonWriter
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0600015A RID: 346 RVA: 0x00009A64 File Offset: 0x00007C64
+	// Token: 0x0600015C RID: 348 RVA: 0x00009748 File Offset: 0x00007948
 	private static string WriteLogReportRecord(LogReportRecord r)
 	{
 		StringBuilder stringBuilder = new StringBuilder(512);

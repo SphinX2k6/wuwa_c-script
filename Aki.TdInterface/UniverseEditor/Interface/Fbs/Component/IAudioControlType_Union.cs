@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004ECE RID: 20174
+	// Token: 0x020053FD RID: 21501
 	public enum IAudioControlType_Union : byte
 	{
-		// Token: 0x0400DCD3 RID: 56531
+		// Token: 0x0400E87A RID: 59514
 		NONE,
-		// Token: 0x0400DCD4 RID: 56532
+		// Token: 0x0400E87B RID: 59515
 		IAudioControlType,
-		// Token: 0x0400DCD5 RID: 56533
+		// Token: 0x0400E87C RID: 59516
 		IGramophoneAudioControl,
-		// Token: 0x0400DCD6 RID: 56534
+		// Token: 0x0400E87D RID: 59517
 		ITrafficAudioControl
 	}
 }

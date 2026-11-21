@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001270 RID: 4720
+// Token: 0x02000724 RID: 1828
 public enum EFightPhotoSetupOptionType
 {
-	// Token: 0x04003A61 RID: 14945
+	// Token: 0x04003AF9 RID: 15097
 	ImageQuality = 1,
-	// Token: 0x04003A62 RID: 14946
+	// Token: 0x04003AFA RID: 15098
 	DepthOfFieldRadius,
-	// Token: 0x04003A63 RID: 14947
+	// Token: 0x04003AFB RID: 15099
 	TiltAngle,
-	// Token: 0x04003A64 RID: 14948
+	// Token: 0x04003AFC RID: 15100
 	DepthOfFieldDistance
 }

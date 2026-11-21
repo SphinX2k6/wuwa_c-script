@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002A4 RID: 676
+	// Token: 0x020002B8 RID: 696
 	public class ConfigExploreSkillInteractById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FDD RID: 4061 RVA: 0x000B31DC File Offset: 0x000B13DC
+		// Token: 0x06001055 RID: 4181 RVA: 0x000B94A0 File Offset: 0x000B76A0
 		static ConfigExploreSkillInteractById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreSkillInteractById.CreateStaticDefaultValue), new Action(ConfigExploreSkillInteractById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FDE RID: 4062 RVA: 0x000B31FC File Offset: 0x000B13FC
+		// Token: 0x06001056 RID: 4182 RVA: 0x000B94C0 File Offset: 0x000B76C0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreSkillInteractById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FDF RID: 4063 RVA: 0x000B327B File Offset: 0x000B147B
+		// Token: 0x06001057 RID: 4183 RVA: 0x000B953F File Offset: 0x000B773F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreSkillInteractById.LogPair = null;
 			ConfigExploreSkillInteractById.HandleId = 0;
 		}
 
-		// Token: 0x06000FE0 RID: 4064 RVA: 0x000B3289 File Offset: 0x000B1489
+		// Token: 0x06001058 RID: 4184 RVA: 0x000B954D File Offset: 0x000B774D
 		public static void Init()
 		{
 			ConfigExploreSkillInteractById.HandleId = ConfigCommon.InitDataStatement(ConfigExploreSkillInteractById.HandleId, "db_exploreskillinteract.db", "select BinData from `ExploreSkillInteract` where Id=?");
 		}
 
-		// Token: 0x06000FE1 RID: 4065 RVA: 0x000B32A4 File Offset: 0x000B14A4
+		// Token: 0x06001059 RID: 4185 RVA: 0x000B9568 File Offset: 0x000B7768
 		public static ExploreSkillInteract? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExploreSkillInteractById.HandleId, ConfigExploreSkillInteractById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExploreSkillInteract?(rootAsExploreSkillInteract);
 		}
 
-		// Token: 0x04001260 RID: 4704
+		// Token: 0x040012EC RID: 4844
 		private const string DB = "db_exploreskillinteract.db";
 
-		// Token: 0x04001261 RID: 4705
+		// Token: 0x040012ED RID: 4845
 		private const string FILE = "k.可视化编辑/c.Csv/t.探索技能交互物/*.csv*";
 
-		// Token: 0x04001262 RID: 4706
+		// Token: 0x040012EE RID: 4846
 		private const string TABLE = "ExploreSkillInteract";
 
-		// Token: 0x04001263 RID: 4707
+		// Token: 0x040012EF RID: 4847
 		private const string COMMAND = "select BinData from `ExploreSkillInteract` where Id=?";
 
-		// Token: 0x04001264 RID: 4708
+		// Token: 0x040012F0 RID: 4848
 		private const string KEY_PREFIX = "ExploreSkillInteractById";
 
-		// Token: 0x04001265 RID: 4709
+		// Token: 0x040012F1 RID: 4849
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001266 RID: 4710
+		// Token: 0x040012F2 RID: 4850
 		private static int HandleId;
 	}
 }

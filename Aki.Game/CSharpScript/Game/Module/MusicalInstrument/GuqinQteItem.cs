@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x0200536D RID: 21357
+	// Token: 0x02004350 RID: 17232
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 	})]
 	public class GuqinQteItem : GridProxyAbstract<MusicalInstrumentQteItemData>
 	{
-		// Token: 0x06036920 RID: 223520 RVA: 0x00CEC410 File Offset: 0x00CEA610
+		// Token: 0x0602B866 RID: 178278 RVA: 0x00C3B29C File Offset: 0x00C3949C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036921 RID: 223521 RVA: 0x00CEC49C File Offset: 0x00CEA69C
+		// Token: 0x0602B867 RID: 178279 RVA: 0x00C3B328 File Offset: 0x00C39528
 		[NullableContext(1)]
 		public override void Refresh(MusicalInstrumentQteItemData data, bool isSelected, int gridIndex)
 		{
@@ -53,18 +53,18 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			sprite2.SetUIActive(false);
 		}
 
-		// Token: 0x0401CD88 RID: 118152
+		// Token: 0x0401781E RID: 96286
 		[Nullable(2)]
 		public Func<int, int, GuqinKeyConfig> GetKeyConfigCallback;
 
-		// Token: 0x0200B5E8 RID: 46568
+		// Token: 0x0200A01F RID: 40991
 		private enum EGuqinQteItemComponent
 		{
-			// Token: 0x040371A5 RID: 225701
+			// Token: 0x04031BF8 RID: 203768
 			SprIcon,
-			// Token: 0x040371A6 RID: 225702
+			// Token: 0x04031BF9 RID: 203769
 			SprFinished,
-			// Token: 0x040371A7 RID: 225703
+			// Token: 0x04031BFA RID: 203770
 			PnlKey
 		}
 	}

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001039 RID: 4153
+// Token: 0x020004ED RID: 1261
 public class GuessJokerRoundStartTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A99 RID: 27289 RVA: 0x001572CC File Offset: 0x001554CC
+	// Token: 0x06003E2E RID: 15918 RVA: 0x0015FBF4 File Offset: 0x0015DDF4
 	[NullableContext(1)]
 	public GuessJokerRoundStartTask(JokerGuessRoundInfo data)
 	{
@@ -14,7 +14,7 @@ public class GuessJokerRoundStartTask : GuessJokerTaskBase
 		this.BlankCardChangeId = data.ChangeResult;
 	}
 
-	// Token: 0x06006A9A RID: 27290 RVA: 0x001572EC File Offset: 0x001554EC
+	// Token: 0x06003E2F RID: 15919 RVA: 0x0015FC14 File Offset: 0x0015DE14
 	protected override void OnExecute()
 	{
 		GuessJokerRoundStartTask.<>c__DisplayClass3_0 CS$<>8__locals1 = new GuessJokerRoundStartTask.<>c__DisplayClass3_0();
@@ -81,9 +81,9 @@ public class GuessJokerRoundStartTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.PushActions(list.ToArray());
 	}
 
-	// Token: 0x04003120 RID: 12576
+	// Token: 0x040031B9 RID: 12729
 	private readonly int RoundNumber;
 
-	// Token: 0x04003121 RID: 12577
+	// Token: 0x040031BA RID: 12730
 	private readonly int BlankCardChangeId;
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020010DA RID: 4314
+	// Token: 0x02001114 RID: 4372
 	public sealed class RollBlockGamePlayPbInfo : IMessage<RollBlockGamePlayPbInfo>, IMessage, IEquatable<RollBlockGamePlayPbInfo>, IDeepCloneable<RollBlockGamePlayPbInfo>, IBufferMessage
 	{
-		// Token: 0x06017030 RID: 94256 RVA: 0x00356D9F File Offset: 0x00354F9F
+		// Token: 0x060175D1 RID: 95697 RVA: 0x003660F7 File Offset: 0x003642F7
 		[NullableContext(1)]
 		public static RollBlockGamePlayPbInfo Create()
 		{
 			return new RollBlockGamePlayPbInfo();
 		}
 
-		// Token: 0x17004D11 RID: 19729
-		// (get) Token: 0x06017031 RID: 94257 RVA: 0x00356DA6 File Offset: 0x00354FA6
+		// Token: 0x17004E7D RID: 20093
+		// (get) Token: 0x060175D2 RID: 95698 RVA: 0x003660FE File Offset: 0x003642FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RollBlockGamePlayPbInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D12 RID: 19730
-		// (get) Token: 0x06017032 RID: 94258 RVA: 0x00356DAD File Offset: 0x00354FAD
+		// Token: 0x17004E7E RID: 20094
+		// (get) Token: 0x060175D3 RID: 95699 RVA: 0x00366105 File Offset: 0x00364305
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D13 RID: 19731
-		// (get) Token: 0x06017033 RID: 94259 RVA: 0x00356DB0 File Offset: 0x00354FB0
+		// Token: 0x17004E7F RID: 20095
+		// (get) Token: 0x060175D4 RID: 95700 RVA: 0x00366108 File Offset: 0x00364308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017034 RID: 94260 RVA: 0x00356DB7 File Offset: 0x00354FB7
+		// Token: 0x060175D5 RID: 95701 RVA: 0x0036610F File Offset: 0x0036430F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RollBlockGamePlayPbInfo()
 		{
 		}
 
-		// Token: 0x06017035 RID: 94261 RVA: 0x00356DE0 File Offset: 0x00354FE0
+		// Token: 0x060175D6 RID: 95702 RVA: 0x00366138 File Offset: 0x00364338
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RollBlockGamePlayPbInfo(RollBlockGamePlayPbInfo other) : this()
@@ -84,7 +84,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017036 RID: 94262 RVA: 0x00356EE7 File Offset: 0x003550E7
+		// Token: 0x060175D7 RID: 95703 RVA: 0x0036623F File Offset: 0x0036443F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RollBlockGamePlayPbInfo Clone()
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			return new RollBlockGamePlayPbInfo(this);
 		}
 
-		// Token: 0x17004D14 RID: 19732
-		// (get) Token: 0x06017037 RID: 94263 RVA: 0x00356EEF File Offset: 0x003550EF
-		// (set) Token: 0x06017038 RID: 94264 RVA: 0x00356EF7 File Offset: 0x003550F7
+		// Token: 0x17004E80 RID: 20096
+		// (get) Token: 0x060175D8 RID: 95704 RVA: 0x00366247 File Offset: 0x00364447
+		// (set) Token: 0x060175D9 RID: 95705 RVA: 0x0036624F File Offset: 0x0036444F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int IncId
@@ -109,9 +109,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D15 RID: 19733
-		// (get) Token: 0x06017039 RID: 94265 RVA: 0x00356F00 File Offset: 0x00355100
-		// (set) Token: 0x0601703A RID: 94266 RVA: 0x00356F08 File Offset: 0x00355108
+		// Token: 0x17004E81 RID: 20097
+		// (get) Token: 0x060175DA RID: 95706 RVA: 0x00366258 File Offset: 0x00364458
+		// (set) Token: 0x060175DB RID: 95707 RVA: 0x00366260 File Offset: 0x00364460
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GroupId
@@ -126,9 +126,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D16 RID: 19734
-		// (get) Token: 0x0601703B RID: 94267 RVA: 0x00356F11 File Offset: 0x00355111
-		// (set) Token: 0x0601703C RID: 94268 RVA: 0x00356F19 File Offset: 0x00355119
+		// Token: 0x17004E82 RID: 20098
+		// (get) Token: 0x060175DC RID: 95708 RVA: 0x00366269 File Offset: 0x00364469
+		// (set) Token: 0x060175DD RID: 95709 RVA: 0x00366271 File Offset: 0x00364471
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Difficulty
@@ -143,9 +143,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D17 RID: 19735
-		// (get) Token: 0x0601703D RID: 94269 RVA: 0x00356F22 File Offset: 0x00355122
-		// (set) Token: 0x0601703E RID: 94270 RVA: 0x00356F2A File Offset: 0x0035512A
+		// Token: 0x17004E83 RID: 20099
+		// (get) Token: 0x060175DE RID: 95710 RVA: 0x0036627A File Offset: 0x0036447A
+		// (set) Token: 0x060175DF RID: 95711 RVA: 0x00366282 File Offset: 0x00364482
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsMainControl
@@ -160,8 +160,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D18 RID: 19736
-		// (get) Token: 0x0601703F RID: 94271 RVA: 0x00356F33 File Offset: 0x00355133
+		// Token: 0x17004E84 RID: 20100
+		// (get) Token: 0x060175E0 RID: 95712 RVA: 0x0036628B File Offset: 0x0036448B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<long> InitVisibleEntityIds
@@ -172,9 +172,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D19 RID: 19737
-		// (get) Token: 0x06017040 RID: 94272 RVA: 0x00356F3B File Offset: 0x0035513B
-		// (set) Token: 0x06017041 RID: 94273 RVA: 0x00356F43 File Offset: 0x00355143
+		// Token: 0x17004E85 RID: 20101
+		// (get) Token: 0x060175E1 RID: 95713 RVA: 0x00366293 File Offset: 0x00364493
+		// (set) Token: 0x060175E2 RID: 95714 RVA: 0x0036629B File Offset: 0x0036449B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Position
@@ -189,9 +189,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D1A RID: 19738
-		// (get) Token: 0x06017042 RID: 94274 RVA: 0x00356F4C File Offset: 0x0035514C
-		// (set) Token: 0x06017043 RID: 94275 RVA: 0x00356F54 File Offset: 0x00355154
+		// Token: 0x17004E86 RID: 20102
+		// (get) Token: 0x060175E3 RID: 95715 RVA: 0x003662A4 File Offset: 0x003644A4
+		// (set) Token: 0x060175E4 RID: 95716 RVA: 0x003662AC File Offset: 0x003644AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Rotation
@@ -206,8 +206,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D1B RID: 19739
-		// (get) Token: 0x06017044 RID: 94276 RVA: 0x00356F5D File Offset: 0x0035515D
+		// Token: 0x17004E87 RID: 20103
+		// (get) Token: 0x060175E5 RID: 95717 RVA: 0x003662B5 File Offset: 0x003644B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RbInput> AvailableInputs
@@ -218,9 +218,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D1C RID: 19740
-		// (get) Token: 0x06017045 RID: 94277 RVA: 0x00356F65 File Offset: 0x00355165
-		// (set) Token: 0x06017046 RID: 94278 RVA: 0x00356F6D File Offset: 0x0035516D
+		// Token: 0x17004E88 RID: 20104
+		// (get) Token: 0x060175E6 RID: 95718 RVA: 0x003662BD File Offset: 0x003644BD
+		// (set) Token: 0x060175E7 RID: 95719 RVA: 0x003662C5 File Offset: 0x003644C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GridSizeX
@@ -235,9 +235,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D1D RID: 19741
-		// (get) Token: 0x06017047 RID: 94279 RVA: 0x00356F76 File Offset: 0x00355176
-		// (set) Token: 0x06017048 RID: 94280 RVA: 0x00356F7E File Offset: 0x0035517E
+		// Token: 0x17004E89 RID: 20105
+		// (get) Token: 0x060175E8 RID: 95720 RVA: 0x003662CE File Offset: 0x003644CE
+		// (set) Token: 0x060175E9 RID: 95721 RVA: 0x003662D6 File Offset: 0x003644D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GridSizeY
@@ -252,9 +252,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D1E RID: 19742
-		// (get) Token: 0x06017049 RID: 94281 RVA: 0x00356F87 File Offset: 0x00355187
-		// (set) Token: 0x0601704A RID: 94282 RVA: 0x00356F8F File Offset: 0x0035518F
+		// Token: 0x17004E8A RID: 20106
+		// (get) Token: 0x060175EA RID: 95722 RVA: 0x003662DF File Offset: 0x003644DF
+		// (set) Token: 0x060175EB RID: 95723 RVA: 0x003662E7 File Offset: 0x003644E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ShowHintErrorInputCount
@@ -269,9 +269,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D1F RID: 19743
-		// (get) Token: 0x0601704B RID: 94283 RVA: 0x00356F98 File Offset: 0x00355198
-		// (set) Token: 0x0601704C RID: 94284 RVA: 0x00356FA0 File Offset: 0x003551A0
+		// Token: 0x17004E8B RID: 20107
+		// (get) Token: 0x060175EC RID: 95724 RVA: 0x003662F0 File Offset: 0x003644F0
+		// (set) Token: 0x060175ED RID: 95725 RVA: 0x003662F8 File Offset: 0x003644F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SubCameraTag
@@ -286,9 +286,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D20 RID: 19744
-		// (get) Token: 0x0601704D RID: 94285 RVA: 0x00356FA9 File Offset: 0x003551A9
-		// (set) Token: 0x0601704E RID: 94286 RVA: 0x00356FB1 File Offset: 0x003551B1
+		// Token: 0x17004E8C RID: 20108
+		// (get) Token: 0x060175EE RID: 95726 RVA: 0x00366301 File Offset: 0x00364501
+		// (set) Token: 0x060175EF RID: 95727 RVA: 0x00366309 File Offset: 0x00364509
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalDifficultyCount
@@ -303,9 +303,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D21 RID: 19745
-		// (get) Token: 0x0601704F RID: 94287 RVA: 0x00356FBA File Offset: 0x003551BA
-		// (set) Token: 0x06017050 RID: 94288 RVA: 0x00356FC2 File Offset: 0x003551C2
+		// Token: 0x17004E8D RID: 20109
+		// (get) Token: 0x060175F0 RID: 95728 RVA: 0x00366312 File Offset: 0x00364512
+		// (set) Token: 0x060175F1 RID: 95729 RVA: 0x0036631A File Offset: 0x0036451A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ReadyDelaySecond
@@ -320,8 +320,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004D22 RID: 19746
-		// (get) Token: 0x06017051 RID: 94289 RVA: 0x00356FCB File Offset: 0x003551CB
+		// Token: 0x17004E8E RID: 20110
+		// (get) Token: 0x060175F2 RID: 95730 RVA: 0x00366323 File Offset: 0x00364523
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<long> InitInvisibleEntityIds
@@ -332,7 +332,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017052 RID: 94290 RVA: 0x00356FD3 File Offset: 0x003551D3
+		// Token: 0x060175F3 RID: 95731 RVA: 0x0036632B File Offset: 0x0036452B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -340,7 +340,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RollBlockGamePlayPbInfo);
 		}
 
-		// Token: 0x06017053 RID: 94291 RVA: 0x00356FE4 File Offset: 0x003551E4
+		// Token: 0x060175F4 RID: 95732 RVA: 0x0036633C File Offset: 0x0036453C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RollBlockGamePlayPbInfo other)
@@ -348,7 +348,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.IncId == other.IncId && this.GroupId == other.GroupId && this.Difficulty == other.Difficulty && this.IsMainControl == other.IsMainControl && this.initVisibleEntityIds_.Equals(other.initVisibleEntityIds_) && object.Equals(this.Position, other.Position) && object.Equals(this.Rotation, other.Rotation) && this.availableInputs_.Equals(other.availableInputs_) && this.GridSizeX == other.GridSizeX && this.GridSizeY == other.GridSizeY && this.ShowHintErrorInputCount == other.ShowHintErrorInputCount && this.SubCameraTag == other.SubCameraTag && this.TotalDifficultyCount == other.TotalDifficultyCount && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ReadyDelaySecond, other.ReadyDelaySecond) && this.initInvisibleEntityIds_.Equals(other.initInvisibleEntityIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06017054 RID: 94292 RVA: 0x00357120 File Offset: 0x00355320
+		// Token: 0x060175F5 RID: 95733 RVA: 0x00366478 File Offset: 0x00364678
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -412,7 +412,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017055 RID: 94293 RVA: 0x0035729D File Offset: 0x0035549D
+		// Token: 0x060175F6 RID: 95734 RVA: 0x003665F5 File Offset: 0x003647F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -420,7 +420,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017056 RID: 94294 RVA: 0x003572AA File Offset: 0x003554AA
+		// Token: 0x060175F7 RID: 95735 RVA: 0x00366602 File Offset: 0x00364802
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -428,7 +428,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017057 RID: 94295 RVA: 0x003572B4 File Offset: 0x003554B4
+		// Token: 0x060175F8 RID: 95736 RVA: 0x0036660C File Offset: 0x0036480C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -502,7 +502,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017058 RID: 94296 RVA: 0x0035745C File Offset: 0x0035565C
+		// Token: 0x060175F9 RID: 95737 RVA: 0x003667B4 File Offset: 0x003649B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -566,7 +566,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017059 RID: 94297 RVA: 0x003575C8 File Offset: 0x003557C8
+		// Token: 0x060175FA RID: 95738 RVA: 0x00366920 File Offset: 0x00364B20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RollBlockGamePlayPbInfo other)
@@ -637,7 +637,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601705A RID: 94298 RVA: 0x00357748 File Offset: 0x00355948
+		// Token: 0x060175FB RID: 95739 RVA: 0x00366AA0 File Offset: 0x00364CA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -645,7 +645,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601705B RID: 94299 RVA: 0x00357754 File Offset: 0x00355954
+		// Token: 0x060175FC RID: 95740 RVA: 0x00366AAC File Offset: 0x00364CAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -777,109 +777,109 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040088F6 RID: 35062
+		// Token: 0x04008B89 RID: 35721
 		private static readonly MessageParser<RollBlockGamePlayPbInfo> _parser = new MessageParser<RollBlockGamePlayPbInfo>(() => new RollBlockGamePlayPbInfo());
 
-		// Token: 0x040088F7 RID: 35063
+		// Token: 0x04008B8A RID: 35722
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040088F8 RID: 35064
+		// Token: 0x04008B8B RID: 35723
 		public const int IncIdFieldNumber = 1;
 
-		// Token: 0x040088F9 RID: 35065
+		// Token: 0x04008B8C RID: 35724
 		private int incId_;
 
-		// Token: 0x040088FA RID: 35066
+		// Token: 0x04008B8D RID: 35725
 		public const int GroupIdFieldNumber = 2;
 
-		// Token: 0x040088FB RID: 35067
+		// Token: 0x04008B8E RID: 35726
 		private int groupId_;
 
-		// Token: 0x040088FC RID: 35068
+		// Token: 0x04008B8F RID: 35727
 		public const int DifficultyFieldNumber = 3;
 
-		// Token: 0x040088FD RID: 35069
+		// Token: 0x04008B90 RID: 35728
 		private int difficulty_;
 
-		// Token: 0x040088FE RID: 35070
+		// Token: 0x04008B91 RID: 35729
 		public const int IsMainControlFieldNumber = 4;
 
-		// Token: 0x040088FF RID: 35071
+		// Token: 0x04008B92 RID: 35730
 		private bool isMainControl_;
 
-		// Token: 0x04008900 RID: 35072
+		// Token: 0x04008B93 RID: 35731
 		public const int InitVisibleEntityIdsFieldNumber = 5;
 
-		// Token: 0x04008901 RID: 35073
+		// Token: 0x04008B94 RID: 35732
 		private static readonly FieldCodec<long> _repeated_initVisibleEntityIds_codec = FieldCodec.ForInt64(42U);
 
-		// Token: 0x04008902 RID: 35074
+		// Token: 0x04008B95 RID: 35733
 		private readonly RepeatedField<long> initVisibleEntityIds_ = new RepeatedField<long>();
 
-		// Token: 0x04008903 RID: 35075
+		// Token: 0x04008B96 RID: 35734
 		public const int PositionFieldNumber = 6;
 
-		// Token: 0x04008904 RID: 35076
+		// Token: 0x04008B97 RID: 35735
 		private Vector position_;
 
-		// Token: 0x04008905 RID: 35077
+		// Token: 0x04008B98 RID: 35736
 		public const int RotationFieldNumber = 7;
 
-		// Token: 0x04008906 RID: 35078
+		// Token: 0x04008B99 RID: 35737
 		private Vector rotation_;
 
-		// Token: 0x04008907 RID: 35079
+		// Token: 0x04008B9A RID: 35738
 		public const int AvailableInputsFieldNumber = 8;
 
-		// Token: 0x04008908 RID: 35080
+		// Token: 0x04008B9B RID: 35739
 		private static readonly FieldCodec<RbInput> _repeated_availableInputs_codec = FieldCodec.ForMessage<RbInput>(66U, RbInput.Parser);
 
-		// Token: 0x04008909 RID: 35081
+		// Token: 0x04008B9C RID: 35740
 		private readonly RepeatedField<RbInput> availableInputs_ = new RepeatedField<RbInput>();
 
-		// Token: 0x0400890A RID: 35082
+		// Token: 0x04008B9D RID: 35741
 		public const int GridSizeXFieldNumber = 9;
 
-		// Token: 0x0400890B RID: 35083
+		// Token: 0x04008B9E RID: 35742
 		private int gridSizeX_;
 
-		// Token: 0x0400890C RID: 35084
+		// Token: 0x04008B9F RID: 35743
 		public const int GridSizeYFieldNumber = 10;
 
-		// Token: 0x0400890D RID: 35085
+		// Token: 0x04008BA0 RID: 35744
 		private int gridSizeY_;
 
-		// Token: 0x0400890E RID: 35086
+		// Token: 0x04008BA1 RID: 35745
 		public const int ShowHintErrorInputCountFieldNumber = 11;
 
-		// Token: 0x0400890F RID: 35087
+		// Token: 0x04008BA2 RID: 35746
 		private int showHintErrorInputCount_;
 
-		// Token: 0x04008910 RID: 35088
+		// Token: 0x04008BA3 RID: 35747
 		public const int SubCameraTagFieldNumber = 12;
 
-		// Token: 0x04008911 RID: 35089
+		// Token: 0x04008BA4 RID: 35748
 		private int subCameraTag_;
 
-		// Token: 0x04008912 RID: 35090
+		// Token: 0x04008BA5 RID: 35749
 		public const int TotalDifficultyCountFieldNumber = 13;
 
-		// Token: 0x04008913 RID: 35091
+		// Token: 0x04008BA6 RID: 35750
 		private int totalDifficultyCount_;
 
-		// Token: 0x04008914 RID: 35092
+		// Token: 0x04008BA7 RID: 35751
 		public const int ReadyDelaySecondFieldNumber = 14;
 
-		// Token: 0x04008915 RID: 35093
+		// Token: 0x04008BA8 RID: 35752
 		private float readyDelaySecond_;
 
-		// Token: 0x04008916 RID: 35094
+		// Token: 0x04008BA9 RID: 35753
 		public const int InitInvisibleEntityIdsFieldNumber = 15;
 
-		// Token: 0x04008917 RID: 35095
+		// Token: 0x04008BAA RID: 35754
 		private static readonly FieldCodec<long> _repeated_initInvisibleEntityIds_codec = FieldCodec.ForInt64(122U);
 
-		// Token: 0x04008918 RID: 35096
+		// Token: 0x04008BAB RID: 35755
 		private readonly RepeatedField<long> initInvisibleEntityIds_ = new RepeatedField<long>();
 	}
 }

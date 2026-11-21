@@ -2,15 +2,15 @@
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E32 RID: 28210
+	// Token: 0x02005FB3 RID: 24499
 	public class ContinuousRingArea : RingArea
 	{
-		// Token: 0x17009A29 RID: 39465
-		// (get) Token: 0x06044C46 RID: 281670 RVA: 0x010F7CB7 File Offset: 0x010F5EB7
-		// (set) Token: 0x06044C47 RID: 281671 RVA: 0x010F7CBF File Offset: 0x010F5EBF
+		// Token: 0x17006F3E RID: 28478
+		// (get) Token: 0x0603ADD4 RID: 241108 RVA: 0x010A238B File Offset: 0x010A058B
+		// (set) Token: 0x0603ADD5 RID: 241109 RVA: 0x010A2393 File Offset: 0x010A0593
 		public int ContinuousIndex { get; set; }
 
-		// Token: 0x06044C48 RID: 281672 RVA: 0x010F7CC8 File Offset: 0x010F5EC8
+		// Token: 0x0603ADD6 RID: 241110 RVA: 0x010A239C File Offset: 0x010A059C
 		public ContinuousRingArea(int continuousIndex, int startCellIndex, int endCellIndex, EArrowDirection arrowDirection) : base(startCellIndex, endCellIndex, arrowDirection)
 		{
 			this.ContinuousIndex = continuousIndex;

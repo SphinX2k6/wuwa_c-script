@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,13 +14,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002393 RID: 9107
+// Token: 0x02001878 RID: 6264
 [NullableContext(2)]
 [Nullable(0)]
 public class ExchangePopView : UiViewBase
 {
-	// Token: 0x1700179E RID: 6046
-	// (get) Token: 0x06012352 RID: 74578 RVA: 0x0047B88B File Offset: 0x00479A8B
+	// Token: 0x170017D8 RID: 6104
+	// (get) Token: 0x0600F804 RID: 63492 RVA: 0x00488BDB File Offset: 0x00486DDB
 	private int BuyCount
 	{
 		get
@@ -30,13 +29,13 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012353 RID: 74579 RVA: 0x0047B898 File Offset: 0x00479A98
+	// Token: 0x0600F805 RID: 63493 RVA: 0x00488BE8 File Offset: 0x00486DE8
 	[NullableContext(1)]
 	public ExchangePopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012354 RID: 74580 RVA: 0x0047B8A8 File Offset: 0x00479AA8
+	// Token: 0x0600F806 RID: 63494 RVA: 0x00488BF8 File Offset: 0x00486DF8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -93,14 +92,14 @@ public class ExchangePopView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012355 RID: 74581 RVA: 0x0047BBB0 File Offset: 0x00479DB0
+	// Token: 0x0600F807 RID: 63495 RVA: 0x00488F00 File Offset: 0x00487100
 	protected override void OnBeforeCreate()
 	{
 		ExchangePopData exchangePopData = (ExchangePopData)this.OpenParam;
 		this.Goods = exchangePopData.PayShopGoods;
 	}
 
-	// Token: 0x06012356 RID: 74582 RVA: 0x0047BBD8 File Offset: 0x00479DD8
+	// Token: 0x0600F808 RID: 63496 RVA: 0x00488F28 File Offset: 0x00487128
 	protected override UniTask OnCreateAsync()
 	{
 		ExchangePopView.<OnCreateAsync>d__14 <OnCreateAsync>d__;
@@ -111,13 +110,13 @@ public class ExchangePopView : UiViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012357 RID: 74583 RVA: 0x0047BC1B File Offset: 0x00479E1B
+	// Token: 0x0600F809 RID: 63497 RVA: 0x00488F6B File Offset: 0x0048716B
 	private void CancelClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012358 RID: 74584 RVA: 0x0047BC24 File Offset: 0x00479E24
+	// Token: 0x0600F80A RID: 63498 RVA: 0x00488F74 File Offset: 0x00487174
 	private void ConfirmClick()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
@@ -143,14 +142,14 @@ public class ExchangePopView : UiViewBase
 		this.SendBuyRequest();
 	}
 
-	// Token: 0x06012359 RID: 74585 RVA: 0x0047BCBC File Offset: 0x00479EBC
+	// Token: 0x0600F80B RID: 63499 RVA: 0x0048900C File Offset: 0x0048720C
 	private bool NeedShowSecondConfirm()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
 		return goodsData != null && goodsData.ConfirmLimitCount > 0 && this.BuyCount >= goodsData.ConfirmLimitCount;
 	}
 
-	// Token: 0x0601235A RID: 74586 RVA: 0x0047BCF8 File Offset: 0x00479EF8
+	// Token: 0x0600F80C RID: 63500 RVA: 0x00489048 File Offset: 0x00487248
 	private void ShowBuySecondConfirmBox()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.BuyItemSecondConfirm);
@@ -180,47 +179,47 @@ public class ExchangePopView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0601235B RID: 74587 RVA: 0x0047BE10 File Offset: 0x0047A010
+	// Token: 0x0600F80D RID: 63501 RVA: 0x00489160 File Offset: 0x00487360
 	private void SendBuyRequest()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
 		PayShopController.Instance.SendRequestPayShopBuy(goodsData.Id, this.BuyCount);
 	}
 
-	// Token: 0x0601235C RID: 74588 RVA: 0x0047BE3F File Offset: 0x0047A03F
+	// Token: 0x0600F80E RID: 63502 RVA: 0x0048918F File Offset: 0x0048738F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.PayShopGoodsBuy, new Action(this.CancelClick));
 		EventSystem.Instance.Add(EEventName.DiscountShopTimerRefresh, new Action(this.OnDiscountShopTimerRefresh));
 	}
 
-	// Token: 0x0601235D RID: 74589 RVA: 0x0047BE79 File Offset: 0x0047A079
+	// Token: 0x0600F80F RID: 63503 RVA: 0x004891C9 File Offset: 0x004873C9
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PayShopGoodsBuy, new Action(this.CancelClick));
 		EventSystem.Instance.Remove(EEventName.DiscountShopTimerRefresh, new Action(this.OnDiscountShopTimerRefresh));
 	}
 
-	// Token: 0x0601235E RID: 74590 RVA: 0x0047BEB3 File Offset: 0x0047A0B3
+	// Token: 0x0600F810 RID: 63504 RVA: 0x00489203 File Offset: 0x00487403
 	private void OnDiscountShopTimerRefresh()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0601235F RID: 74591 RVA: 0x0047BEBB File Offset: 0x0047A0BB
+	// Token: 0x0600F811 RID: 63505 RVA: 0x0048920B File Offset: 0x0048740B
 	[NullableContext(1)]
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("BugCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x06012360 RID: 74592 RVA: 0x0047BEDC File Offset: 0x0047A0DC
+	// Token: 0x0600F812 RID: 63506 RVA: 0x0048922C File Offset: 0x0048742C
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.SetPrice();
 	}
 
-	// Token: 0x06012361 RID: 74593 RVA: 0x0047BEE4 File Offset: 0x0047A0E4
+	// Token: 0x0600F813 RID: 63507 RVA: 0x00489234 File Offset: 0x00487434
 	protected override void OnStart()
 	{
 		this.SetMaxCanBuyCount();
@@ -238,7 +237,7 @@ public class ExchangePopView : UiViewBase
 		base.GetItem(13).SetUIActive(true);
 	}
 
-	// Token: 0x06012362 RID: 74594 RVA: 0x0047BFA1 File Offset: 0x0047A1A1
+	// Token: 0x0600F814 RID: 63508 RVA: 0x004892F1 File Offset: 0x004874F1
 	private void RefreshNumberSelectComponentButtonState()
 	{
 		if (this.NumberSelect.GetIfLimit())
@@ -248,7 +247,7 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012363 RID: 74595 RVA: 0x0047BFC8 File Offset: 0x0047A1C8
+	// Token: 0x0600F815 RID: 63509 RVA: 0x00489318 File Offset: 0x00487518
 	protected override void OnBeforeShow()
 	{
 		base.GetText(10).SetUIActive(false);
@@ -258,7 +257,7 @@ public class ExchangePopView : UiViewBase
 		this.RefreshCurrency().Forget();
 	}
 
-	// Token: 0x06012364 RID: 74596 RVA: 0x0047C000 File Offset: 0x0047A200
+	// Token: 0x0600F816 RID: 63510 RVA: 0x00489350 File Offset: 0x00487550
 	private void RefreshView()
 	{
 		UUIItem item = base.GetItem(2);
@@ -278,7 +277,7 @@ public class ExchangePopView : UiViewBase
 		this.RefreshCurrentNum();
 	}
 
-	// Token: 0x06012365 RID: 74597 RVA: 0x0047C090 File Offset: 0x0047A290
+	// Token: 0x0600F817 RID: 63511 RVA: 0x004893E0 File Offset: 0x004875E0
 	private UniTask RefreshCurrency()
 	{
 		ExchangePopView.<RefreshCurrency>d__29 <RefreshCurrency>d__;
@@ -289,13 +288,13 @@ public class ExchangePopView : UiViewBase
 		return <RefreshCurrency>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012366 RID: 74598 RVA: 0x0047C0D3 File Offset: 0x0047A2D3
+	// Token: 0x0600F818 RID: 63512 RVA: 0x00489423 File Offset: 0x00487623
 	private void BeforeEnterPayShop()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012367 RID: 74599 RVA: 0x0047C0DC File Offset: 0x0047A2DC
+	// Token: 0x0600F819 RID: 63513 RVA: 0x0048942C File Offset: 0x0048762C
 	protected override void OnBeforeDestroy()
 	{
 		this.NumberSelect.Destroy(null);
@@ -303,7 +302,7 @@ public class ExchangePopView : UiViewBase
 		this.RemoveResellTimer();
 	}
 
-	// Token: 0x06012368 RID: 74600 RVA: 0x0047C0FC File Offset: 0x0047A2FC
+	// Token: 0x0600F81A RID: 63514 RVA: 0x0048944C File Offset: 0x0048764C
 	protected void SetMaxCanBuyCount()
 	{
 		ExchangePopData exchangePopData = (ExchangePopData)this.OpenParam;
@@ -329,11 +328,11 @@ public class ExchangePopView : UiViewBase
 		}
 		CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(goodsData.ItemId);
 		InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(goodsData.ItemId));
-		if (itemConfigData != null && itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem && itemConfigData.ShowTypes.ToList<int>().Contains(30))
+		if (itemConfigData != null && itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem && Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0)
 		{
 			this.BuyCountMax = 1;
 		}
-		if (itemConfigData.ShowTypes.ToList<int>().Contains(30))
+		if (Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0)
 		{
 			int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(goodsData.ItemId);
 			int num2 = RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(resonantItemRoleId[0]);
@@ -342,9 +341,28 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012369 RID: 74601 RVA: 0x0047C248 File Offset: 0x0047A448
+	// Token: 0x0600F81B RID: 63515 RVA: 0x00489590 File Offset: 0x00487790
 	protected void SetEndTime()
 	{
+		if (this.Goods.IsShowTimePreview())
+		{
+			base.GetText(1).SetUIActive(false);
+			base.GetItem(15).SetUIActive(true);
+			this.CurrentEndTimeShowState = true;
+			base.GetText(14).SetUIActive(true);
+			PayShopGoodsData goodsData = this.Goods.GetGoodsData();
+			DateTime dataFromTimeStamp = TimeUtil.Instance.GetDataFromTimeStamp((double)goodsData.BeginTime);
+			DateTime dataFromTimeStamp2 = TimeUtil.Instance.GetDataFromTimeStamp((double)goodsData.EndTime);
+			string text = dataFromTimeStamp.ToString("yyyy.MM.dd HH:mm");
+			string text2 = (dataFromTimeStamp2.Year == dataFromTimeStamp.Year) ? dataFromTimeStamp2.ToString("MM.dd HH:mm") : dataFromTimeStamp2.ToString("yyyy.MM.dd HH:mm");
+			string item = StringUtils.Format("{0} ~ {1}", new string[]
+			{
+				text,
+				text2
+			});
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(14), "PreviewTimeText", new <>z__ReadOnlySingleElementList<object>(item));
+			return;
+		}
 		ValueTuple<EPayCountTimeType, CommonDefine.IPayShowCountDownRemainTime, double> countDownData = this.Goods.GetCountDownData();
 		if (countDownData.Item3 == 0.0)
 		{
@@ -352,7 +370,7 @@ public class ExchangePopView : UiViewBase
 			this.CurrentEndTimeShowState = false;
 			return;
 		}
-		CommonDefine.IPayShowCountDownRemainTime item = this.Goods.GetCountDownData().Item2;
+		CommonDefine.IPayShowCountDownRemainTime item2 = this.Goods.GetCountDownData().Item2;
 		base.GetText(14).SetUIActive(countDownData.Item1 == EPayCountTimeType.NeverResell);
 		if (countDownData.Item1 == EPayCountTimeType.NeverResell)
 		{
@@ -366,21 +384,25 @@ public class ExchangePopView : UiViewBase
 		{
 			base.GetText(14).ShowTextNew("DiscountItem");
 		}
-		if (item != null)
+		if (item2 != null)
 		{
 			base.GetItem(15).SetUIActive(true);
 			this.CurrentEndTimeShowState = true;
-			UUIText text = base.GetText(1);
-			CommonDefine.PayShowCountDownRemainTime<string> payShowCountDownRemainTime = item as CommonDefine.PayShowCountDownRemainTime<string>;
+			UUIText text3 = base.GetText(1);
+			if (text3 != null)
+			{
+				text3.SetUIActive(true);
+			}
+			CommonDefine.PayShowCountDownRemainTime<string> payShowCountDownRemainTime = item2 as CommonDefine.PayShowCountDownRemainTime<string>;
 			if (payShowCountDownRemainTime != null)
 			{
-				text.SetText(payShowCountDownRemainTime.Value, true);
+				text3.SetText(payShowCountDownRemainTime.Value, true);
 				return;
 			}
-			CommonDefine.IRemainTime remainTime = item as CommonDefine.IRemainTime;
+			CommonDefine.IRemainTime remainTime = item2 as CommonDefine.IRemainTime;
 			if (remainTime != null)
 			{
-				LguiUtil.Instance.SetLocalText(text, remainTime.TextId, new <>z__ReadOnlySingleElementList<object>(remainTime.TimeValue));
+				LguiUtil.Instance.SetLocalText(text3, remainTime.TextId, new <>z__ReadOnlySingleElementList<object>(remainTime.TimeValue));
 				return;
 			}
 		}
@@ -391,7 +413,7 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601236A RID: 74602 RVA: 0x0047C384 File Offset: 0x0047A584
+	// Token: 0x0600F81C RID: 63516 RVA: 0x004897C4 File Offset: 0x004879C4
 	protected void SetInteractionGroup()
 	{
 		if (this.Goods.IsLocked() || this.Goods.IsSoldOut() || !this.Goods.IfCanBuy() || !this.Goods.GetPriceData().Enough)
@@ -402,7 +424,7 @@ public class ExchangePopView : UiViewBase
 		this.BuyInteractionGroup.SetInteractable(true);
 	}
 
-	// Token: 0x0601236B RID: 74603 RVA: 0x0047C3E4 File Offset: 0x0047A5E4
+	// Token: 0x0600F81D RID: 63517 RVA: 0x00489824 File Offset: 0x00487A24
 	protected void SetPriceIcon()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
@@ -411,7 +433,7 @@ public class ExchangePopView : UiViewBase
 		base.GetText(4).SetText((this.BuyCount * goodsData.GetNowPrice()).ToString(), true);
 	}
 
-	// Token: 0x0601236C RID: 74604 RVA: 0x0047C444 File Offset: 0x0047A644
+	// Token: 0x0600F81E RID: 63518 RVA: 0x00489884 File Offset: 0x00487A84
 	protected void SetPrice()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
@@ -425,7 +447,7 @@ public class ExchangePopView : UiViewBase
 		text.SetText(num.ToString(), true);
 	}
 
-	// Token: 0x0601236D RID: 74605 RVA: 0x0047C4A4 File Offset: 0x0047A6A4
+	// Token: 0x0600F81F RID: 63519 RVA: 0x004898E4 File Offset: 0x00487AE4
 	protected void SetNameAndDescribe()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
@@ -441,21 +463,17 @@ public class ExchangePopView : UiViewBase
 		base.GetText(5).ShowTextNew(key);
 	}
 
-	// Token: 0x0601236E RID: 74606 RVA: 0x0047C524 File Offset: 0x0047A724
+	// Token: 0x0600F820 RID: 63520 RVA: 0x00489964 File Offset: 0x00487B64
 	protected bool IsEnoughMoney()
 	{
 		CSharpScript.Game.Module.Inventory.ItemConfig itemConfig = this.Goods.GetGoodsData().GetItemConfig();
-		if (itemConfig != null)
+		if (itemConfig != null && itemConfig.ShowTypes != null && Array.IndexOf<int>(itemConfig.ShowTypes, 30) >= 0)
 		{
-			int[] showTypes = itemConfig.ShowTypes;
-			if (showTypes != null && showTypes.ToList<int>().Contains(30))
+			int roleId = RoleModel.Instance.GetResonantItemRoleId(this.Goods.GetGoodsData().ItemId)[0];
+			int roleLeftResonantCountWithInventoryItem = RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(roleId);
+			if (this.BuyCount > roleLeftResonantCountWithInventoryItem)
 			{
-				int roleId = RoleModel.Instance.GetResonantItemRoleId(this.Goods.GetGoodsData().ItemId)[0];
-				int roleLeftResonantCountWithInventoryItem = RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(roleId);
-				if (this.BuyCount > roleLeftResonantCountWithInventoryItem)
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
@@ -463,7 +481,7 @@ public class ExchangePopView : UiViewBase
 		return InventoryModel.Instance.GetItemCountByConfigId(id, 0) >= goodsData.GetNowPrice() * this.BuyCount;
 	}
 
-	// Token: 0x0601236F RID: 74607 RVA: 0x0047C5CC File Offset: 0x0047A7CC
+	// Token: 0x0600F821 RID: 63521 RVA: 0x00489A0C File Offset: 0x00487C0C
 	private void RefreshTimeItem()
 	{
 		string buyLimitText = this.Goods.GetBuyLimitText();
@@ -471,7 +489,7 @@ public class ExchangePopView : UiViewBase
 		base.GetItem(8).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012370 RID: 74608 RVA: 0x0047C608 File Offset: 0x0047A808
+	// Token: 0x0600F822 RID: 63522 RVA: 0x00489A48 File Offset: 0x00487C48
 	private void RefreshLeftTimeText()
 	{
 		string exchangeViewShopTipsText = this.Goods.GetExchangeViewShopTipsText();
@@ -492,7 +510,7 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012371 RID: 74609 RVA: 0x0047C66C File Offset: 0x0047A86C
+	// Token: 0x0600F823 RID: 63523 RVA: 0x00489AAC File Offset: 0x00487CAC
 	private void RefreshCurrentNum()
 	{
 		PayShopGoodsData goodsData = this.Goods.GetGoodsData();
@@ -506,7 +524,7 @@ public class ExchangePopView : UiViewBase
 		base.GetItem(17).SetUIActive(false);
 	}
 
-	// Token: 0x06012372 RID: 74610 RVA: 0x0047C6DE File Offset: 0x0047A8DE
+	// Token: 0x0600F824 RID: 63524 RVA: 0x00489B1E File Offset: 0x00487D1E
 	protected void RemoveResellTimer()
 	{
 		if (this.ResellTimerId != null)
@@ -516,7 +534,7 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012373 RID: 74611 RVA: 0x0047C700 File Offset: 0x0047A900
+	// Token: 0x0600F825 RID: 63525 RVA: 0x00489B40 File Offset: 0x00487D40
 	private void RefreshReSellText()
 	{
 		this.RemoveResellTimer();
@@ -579,90 +597,90 @@ public class ExchangePopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400899C RID: 35228
+	// Token: 0x04008AE3 RID: 35555
 	[Nullable(1)]
 	private const string COLOR = "FED12E";
 
-	// Token: 0x0400899D RID: 35229
+	// Token: 0x04008AE4 RID: 35556
 	private PayShopItem ShowItem;
 
-	// Token: 0x0400899E RID: 35230
+	// Token: 0x04008AE5 RID: 35557
 	protected PayShopGoods Goods;
 
-	// Token: 0x0400899F RID: 35231
+	// Token: 0x04008AE6 RID: 35558
 	private bool CurrentEndTimeShowState = true;
 
-	// Token: 0x040089A0 RID: 35232
+	// Token: 0x04008AE7 RID: 35559
 	private UUIInteractionGroup BuyInteractionGroup;
 
-	// Token: 0x040089A1 RID: 35233
+	// Token: 0x04008AE8 RID: 35560
 	protected TimerHandle ResellTimerId;
 
-	// Token: 0x040089A2 RID: 35234
+	// Token: 0x04008AE9 RID: 35561
 	private int BuyCountMax;
 
-	// Token: 0x040089A3 RID: 35235
+	// Token: 0x04008AEA RID: 35562
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x02008934 RID: 35124
+	// Token: 0x02007ABF RID: 31423
 	[NullableContext(0)]
 	private class EExchangePopViewDefine
 	{
-		// Token: 0x0402C99C RID: 182684
+		// Token: 0x04027CBA RID: 163002
 		public const int EndTimeIcon = 0;
 
-		// Token: 0x0402C99D RID: 182685
+		// Token: 0x04027CBB RID: 163003
 		public const int EndTimeText = 1;
 
-		// Token: 0x0402C99E RID: 182686
+		// Token: 0x04027CBC RID: 163004
 		public const int ItemAttach = 2;
 
-		// Token: 0x0402C99F RID: 182687
+		// Token: 0x04027CBD RID: 163005
 		public const int CurrencyIcon = 3;
 
-		// Token: 0x0402C9A0 RID: 182688
+		// Token: 0x04027CBE RID: 163006
 		public const int CurrencyCount = 4;
 
-		// Token: 0x0402C9A1 RID: 182689
+		// Token: 0x04027CBF RID: 163007
 		public const int DescribeText = 5;
 
-		// Token: 0x0402C9A2 RID: 182690
+		// Token: 0x04027CC0 RID: 163008
 		public const int CancelButton = 6;
 
-		// Token: 0x0402C9A3 RID: 182691
+		// Token: 0x04027CC1 RID: 163009
 		public const int ConfirmButton = 7;
 
-		// Token: 0x0402C9A4 RID: 182692
+		// Token: 0x04027CC2 RID: 163010
 		public const int DateTitleItem = 8;
 
-		// Token: 0x0402C9A5 RID: 182693
+		// Token: 0x04027CC3 RID: 163011
 		public const int NumberSelect = 9;
 
-		// Token: 0x0402C9A6 RID: 182694
+		// Token: 0x04027CC4 RID: 163012
 		public const int LeftTimeText = 10;
 
-		// Token: 0x0402C9A7 RID: 182695
+		// Token: 0x04027CC5 RID: 163013
 		public const int ReSellItem = 11;
 
-		// Token: 0x0402C9A8 RID: 182696
+		// Token: 0x04027CC6 RID: 163014
 		public const int ReSellText = 12;
 
-		// Token: 0x0402C9A9 RID: 182697
+		// Token: 0x04027CC7 RID: 163015
 		public const int ItemPanel = 13;
 
-		// Token: 0x0402C9AA RID: 182698
+		// Token: 0x04027CC8 RID: 163016
 		public const int DownItemText = 14;
 
-		// Token: 0x0402C9AB RID: 182699
+		// Token: 0x04027CC9 RID: 163017
 		public const int EndTimeItem = 15;
 
-		// Token: 0x0402C9AC RID: 182700
+		// Token: 0x04027CCA RID: 163018
 		public const int LeftLimitText = 16;
 
-		// Token: 0x0402C9AD RID: 182701
+		// Token: 0x04027CCB RID: 163019
 		public const int ItemCurrentNum = 17;
 
-		// Token: 0x0402C9AE RID: 182702
+		// Token: 0x04027CCC RID: 163020
 		public const int TextCurrentNum = 18;
 	}
 }

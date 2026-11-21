@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200215A RID: 8538
+	// Token: 0x020006FC RID: 1788
 	[UnrealObjectPath("/Script/LGUI.UIEffectTextAnimation_RangeSelector")]
 	[UnrealStructLayout(96, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 96)]
 	public class UUIEffectTextAnimation_RangeSelector : UUIEffectTextAnimation_Selector, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020324 RID: 131876 RVA: 0x002FD37A File Offset: 0x002FB57A
+		// Token: 0x06009849 RID: 38985 RVA: 0x000E556A File Offset: 0x000E376A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIEffectTextAnimation_RangeSelector._ClassPtr;
 		}
 
-		// Token: 0x06020325 RID: 131877 RVA: 0x002FD388 File Offset: 0x002FB588
+		// Token: 0x0600984A RID: 38986 RVA: 0x000E5578 File Offset: 0x000E3778
 		public UUIEffectTextAnimation_RangeSelector() : this(BuiltinUtils.AllocNativeUObject(UUIEffectTextAnimation_RangeSelector.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020326 RID: 131878 RVA: 0x002FD3B0 File Offset: 0x002FB5B0
+		// Token: 0x0600984B RID: 38987 RVA: 0x000E55A0 File Offset: 0x000E37A0
 		[NullableContext(1)]
 		public UUIEffectTextAnimation_RangeSelector(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIEffectTextAnimation_RangeSelector.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E4D RID: 32333
-		// (get) Token: 0x06020327 RID: 131879 RVA: 0x002FD3E3 File Offset: 0x002FB5E3
-		// (set) Token: 0x06020328 RID: 131880 RVA: 0x002FD3F3 File Offset: 0x002FB5F3
+		// Token: 0x17001C46 RID: 7238
+		// (get) Token: 0x0600984C RID: 38988 RVA: 0x000E55D3 File Offset: 0x000E37D3
+		// (set) Token: 0x0600984D RID: 38989 RVA: 0x000E55E3 File Offset: 0x000E37E3
 		public unsafe float range
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E4E RID: 32334
-		// (get) Token: 0x06020329 RID: 131881 RVA: 0x002FD404 File Offset: 0x002FB604
-		// (set) Token: 0x0602032A RID: 131882 RVA: 0x002FD414 File Offset: 0x002FB614
+		// Token: 0x17001C47 RID: 7239
+		// (get) Token: 0x0600984E RID: 38990 RVA: 0x000E55F4 File Offset: 0x000E37F4
+		// (set) Token: 0x0600984F RID: 38991 RVA: 0x000E5604 File Offset: 0x000E3804
 		public unsafe bool flipDirection
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E4F RID: 32335
-		// (get) Token: 0x0602032B RID: 131883 RVA: 0x002FD425 File Offset: 0x002FB625
-		// (set) Token: 0x0602032C RID: 131884 RVA: 0x002FD435 File Offset: 0x002FB635
+		// Token: 0x17001C48 RID: 7240
+		// (get) Token: 0x06009850 RID: 38992 RVA: 0x000E5615 File Offset: 0x000E3815
+		// (set) Token: 0x06009851 RID: 38993 RVA: 0x000E5625 File Offset: 0x000E3825
 		public unsafe float start
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E50 RID: 32336
-		// (get) Token: 0x0602032D RID: 131885 RVA: 0x002FD446 File Offset: 0x002FB646
-		// (set) Token: 0x0602032E RID: 131886 RVA: 0x002FD456 File Offset: 0x002FB656
+		// Token: 0x17001C49 RID: 7241
+		// (get) Token: 0x06009852 RID: 38994 RVA: 0x000E5636 File Offset: 0x000E3836
+		// (set) Token: 0x06009853 RID: 38995 RVA: 0x000E5646 File Offset: 0x000E3846
 		public unsafe float end
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E51 RID: 32337
-		// (get) Token: 0x0602032F RID: 131887 RVA: 0x002FD467 File Offset: 0x002FB667
-		// (set) Token: 0x06020330 RID: 131888 RVA: 0x002FD477 File Offset: 0x002FB677
+		// Token: 0x17001C4A RID: 7242
+		// (get) Token: 0x06009854 RID: 38996 RVA: 0x000E5657 File Offset: 0x000E3857
+		// (set) Token: 0x06009855 RID: 38997 RVA: 0x000E5667 File Offset: 0x000E3867
 		public unsafe bool lineByLine
 		{
 			get
@@ -103,120 +103,120 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020331 RID: 131889 RVA: 0x002FD488 File Offset: 0x002FB688
+		// Token: 0x06009856 RID: 38998 RVA: 0x000E5678 File Offset: 0x000E3878
 		public void SetStart(float value)
 		{
 			UUIEffectTextAnimation_RangeSelector.__SetStart_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020332 RID: 131890 RVA: 0x002FD496 File Offset: 0x002FB696
+		// Token: 0x06009857 RID: 38999 RVA: 0x000E5686 File Offset: 0x000E3886
 		public void SetRange(float value)
 		{
 			UUIEffectTextAnimation_RangeSelector.__SetRange_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020333 RID: 131891 RVA: 0x002FD4A4 File Offset: 0x002FB6A4
+		// Token: 0x06009858 RID: 39000 RVA: 0x000E5694 File Offset: 0x000E3894
 		public void SetFlipDirection(bool value)
 		{
 			UUIEffectTextAnimation_RangeSelector.__SetFlipDirection_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020334 RID: 131892 RVA: 0x002FD4B2 File Offset: 0x002FB6B2
+		// Token: 0x06009859 RID: 39001 RVA: 0x000E56A2 File Offset: 0x000E38A2
 		public void SetEnd(float value)
 		{
 			UUIEffectTextAnimation_RangeSelector.__SetEnd_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020335 RID: 131893 RVA: 0x002FD4C0 File Offset: 0x002FB6C0
+		// Token: 0x0600985A RID: 39002 RVA: 0x000E56B0 File Offset: 0x000E38B0
 		public float GetStart()
 		{
 			return UUIEffectTextAnimation_RangeSelector.__GetStart_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020336 RID: 131894 RVA: 0x002FD4CD File Offset: 0x002FB6CD
+		// Token: 0x0600985B RID: 39003 RVA: 0x000E56BD File Offset: 0x000E38BD
 		public float GetRange()
 		{
 			return UUIEffectTextAnimation_RangeSelector.__GetRange_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020337 RID: 131895 RVA: 0x002FD4DA File Offset: 0x002FB6DA
+		// Token: 0x0600985C RID: 39004 RVA: 0x000E56CA File Offset: 0x000E38CA
 		public bool GetFlipDirection()
 		{
 			return UUIEffectTextAnimation_RangeSelector.__GetFlipDirection_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020338 RID: 131896 RVA: 0x002FD4E7 File Offset: 0x002FB6E7
+		// Token: 0x0600985D RID: 39005 RVA: 0x000E56D7 File Offset: 0x000E38D7
 		public float GetEnd()
 		{
 			return UUIEffectTextAnimation_RangeSelector.__GetEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020339 RID: 131897
+		// Token: 0x0600985E RID: 39006
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStart_Internal(IntPtr @this, float value);
 
-		// Token: 0x0602033A RID: 131898
+		// Token: 0x0600985F RID: 39007
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRange_Internal(IntPtr @this, float value);
 
-		// Token: 0x0602033B RID: 131899
+		// Token: 0x06009860 RID: 39008
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFlipDirection_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0602033C RID: 131900
+		// Token: 0x06009861 RID: 39009
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEnd_Internal(IntPtr @this, float value);
 
-		// Token: 0x0602033D RID: 131901
+		// Token: 0x06009862 RID: 39010
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetStart_Internal(IntPtr @this);
 
-		// Token: 0x0602033E RID: 131902
+		// Token: 0x06009863 RID: 39011
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetRange_Internal(IntPtr @this);
 
-		// Token: 0x0602033F RID: 131903
+		// Token: 0x06009864 RID: 39012
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetFlipDirection_Internal(IntPtr @this);
 
-		// Token: 0x06020340 RID: 131904
+		// Token: 0x06009865 RID: 39013
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetEnd_Internal(IntPtr @this);
 
-		// Token: 0x06020341 RID: 131905 RVA: 0x002FD4F4 File Offset: 0x002FB6F4
+		// Token: 0x06009866 RID: 39014 RVA: 0x000E56E4 File Offset: 0x000E38E4
 		static UUIEffectTextAnimation_RangeSelector()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIEffectTextAnimation_RangeSelector");
 		}
 
-		// Token: 0x06020342 RID: 131906 RVA: 0x002FD502 File Offset: 0x002FB702
+		// Token: 0x06009867 RID: 39015 RVA: 0x000E56F2 File Offset: 0x000E38F2
 		protected UUIEffectTextAnimation_RangeSelector(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040114E9 RID: 70889
+		// Token: 0x04004227 RID: 16935
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIEffectTextAnimation_RangeSelector";
 
-		// Token: 0x040114EA RID: 70890
+		// Token: 0x04004228 RID: 16936
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040114EB RID: 70891
+		// Token: 0x04004229 RID: 16937
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040114EC RID: 70892
+		// Token: 0x0400422A RID: 16938
 		internal static int __PropertyOffset_range;
 
-		// Token: 0x040114ED RID: 70893
+		// Token: 0x0400422B RID: 16939
 		internal static int __PropertyOffset_flipDirection;
 
-		// Token: 0x040114EE RID: 70894
+		// Token: 0x0400422C RID: 16940
 		internal static int __PropertyOffset_start;
 
-		// Token: 0x040114EF RID: 70895
+		// Token: 0x0400422D RID: 16941
 		internal static int __PropertyOffset_end;
 
-		// Token: 0x040114F0 RID: 70896
+		// Token: 0x0400422E RID: 16942
 		internal static int __PropertyOffset_lineByLine;
 	}
 }

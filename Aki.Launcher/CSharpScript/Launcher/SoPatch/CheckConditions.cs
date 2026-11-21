@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.SoPatch
 {
-	// Token: 0x02000105 RID: 261
+	// Token: 0x02000109 RID: 265
 	public class CheckConditions
 	{
-		// Token: 0x0600087B RID: 2171 RVA: 0x0003E9AC File Offset: 0x0003CBAC
+		// Token: 0x060008AF RID: 2223 RVA: 0x00040D4C File Offset: 0x0003EF4C
 		public void ExpectChange(int num)
 		{
 			int num2 = 1 << num;
@@ -16,7 +16,7 @@ namespace CSharpScript.Launcher.SoPatch
 			this.Expect += 1 << num;
 		}
 
-		// Token: 0x0600087C RID: 2172 RVA: 0x0003E9E0 File Offset: 0x0003CBE0
+		// Token: 0x060008B0 RID: 2224 RVA: 0x00040D80 File Offset: 0x0003EF80
 		public void ValueChange(int num)
 		{
 			int num2 = 1 << num;
@@ -27,16 +27,16 @@ namespace CSharpScript.Launcher.SoPatch
 			this.Value += 1 << num;
 		}
 
-		// Token: 0x0600087D RID: 2173 RVA: 0x0003EA13 File Offset: 0x0003CC13
+		// Token: 0x060008B1 RID: 2225 RVA: 0x00040DB3 File Offset: 0x0003EFB3
 		public bool Meet()
 		{
 			return this.Expect == this.Value;
 		}
 
-		// Token: 0x040004D5 RID: 1237
+		// Token: 0x04000510 RID: 1296
 		private int Expect;
 
-		// Token: 0x040004D6 RID: 1238
+		// Token: 0x04000511 RID: 1297
 		private int Value;
 	}
 }

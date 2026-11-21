@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002990 RID: 10640
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C77 RID: 11383
 	public class PerformerAiMoveTo : ActionParams
 	{
-		// Token: 0x0600EB94 RID: 60308 RVA: 0x00227393 File Offset: 0x00225593
+		// Token: 0x0600FA12 RID: 64018 RVA: 0x00244B1F File Offset: 0x00242D1F
 		public static PerformerAiMoveTo Create(IPerformerAiMoveTo? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A36 RID: 18998
-		// (get) Token: 0x0600EB95 RID: 60309 RVA: 0x002273B2 File Offset: 0x002255B2
+		// Token: 0x17004DD2 RID: 19922
+		// (get) Token: 0x0600FA13 RID: 64019 RVA: 0x00244B3E File Offset: 0x00242D3E
 		public virtual IPerformerAiMoveConfig Config
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A37 RID: 18999
-		// (get) Token: 0x0600EB96 RID: 60310 RVA: 0x002273E4 File Offset: 0x002255E4
+		// Token: 0x17004DD3 RID: 19923
+		// (get) Token: 0x0600FA14 RID: 64020 RVA: 0x00244B70 File Offset: 0x00242D70
 		public virtual float? StopDistance
 		{
 			get
@@ -52,13 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081BC RID: 33212
+		// Token: 0x040088A1 RID: 34977
 		private IPerformerAiMoveTo Instance;
 
-		// Token: 0x040081BD RID: 33213
+		// Token: 0x040088A2 RID: 34978
 		private IPerformerAiMoveConfig _ConfigCache;
 
-		// Token: 0x040081BE RID: 33214
+		// Token: 0x040088A3 RID: 34979
 		private bool _ConfigInited;
 	}
 }

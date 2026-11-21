@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F11 RID: 7953
+// Token: 0x020013D3 RID: 5075
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,14 +15,14 @@ using UnrealEngine;
 })]
 public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaData>
 {
-	// Token: 0x0600F50F RID: 62735 RVA: 0x003B23C1 File Offset: 0x003B05C1
+	// Token: 0x0600C92E RID: 51502 RVA: 0x003BDEAD File Offset: 0x003BC0AD
 	protected override void OnBeforeCreateImplement()
 	{
 		this.LevelPlaySequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.LevelPlaySequence);
 	}
 
-	// Token: 0x0600F510 RID: 62736 RVA: 0x003B23DC File Offset: 0x003B05DC
+	// Token: 0x0600C92F RID: 51503 RVA: 0x003BDEC8 File Offset: 0x003BC0C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,7 +47,7 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 		};
 	}
 
-	// Token: 0x0600F511 RID: 62737 RVA: 0x003B2539 File Offset: 0x003B0739
+	// Token: 0x0600C930 RID: 51504 RVA: 0x003BE025 File Offset: 0x003BC225
 	protected override void OnStart()
 	{
 		if (this.ActivityData == null)
@@ -57,8 +57,8 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x17001324 RID: 4900
-	// (get) Token: 0x0600F512 RID: 62738 RVA: 0x003B2564 File Offset: 0x003B0764
+	// Token: 0x1700134E RID: 4942
+	// (get) Token: 0x0600C931 RID: 51505 RVA: 0x003BE050 File Offset: 0x003BC250
 	public HonamiStoryAreaData Data
 	{
 		get
@@ -67,7 +67,7 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 		}
 	}
 
-	// Token: 0x0600F513 RID: 62739 RVA: 0x003B256C File Offset: 0x003B076C
+	// Token: 0x0600C932 RID: 51506 RVA: 0x003BE058 File Offset: 0x003BC258
 	public override void Refresh(HonamiStoryAreaData areaData, bool isSelected, int gridIndex)
 	{
 		this.AreaData = areaData;
@@ -83,7 +83,7 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 		}
 	}
 
-	// Token: 0x0600F514 RID: 62740 RVA: 0x003B25B0 File Offset: 0x003B07B0
+	// Token: 0x0600C933 RID: 51507 RVA: 0x003BE09C File Offset: 0x003BC29C
 	private void RefreshItem()
 	{
 		bool isAreaUnlock = this.AreaData.IsAreaUnlock;
@@ -141,13 +141,13 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 		base.SetTextureShowUntilLoaded(this.AreaData.Config.Value.ToggleBgPath, base.GetTexture(12), null);
 	}
 
-	// Token: 0x0600F515 RID: 62741 RVA: 0x003B2750 File Offset: 0x003B0950
+	// Token: 0x0600C934 RID: 51508 RVA: 0x003BE23C File Offset: 0x003BC43C
 	public void BindStageToggleClick(Action<MascotCollectBookStageToggle> callback)
 	{
 		this.StageToggleClick = callback;
 	}
 
-	// Token: 0x0600F516 RID: 62742 RVA: 0x003B2759 File Offset: 0x003B0959
+	// Token: 0x0600C935 RID: 51509 RVA: 0x003BE245 File Offset: 0x003BC445
 	private void OnToggle(EToggleState toggleState)
 	{
 		Action<MascotCollectBookStageToggle> stageToggleClick = this.StageToggleClick;
@@ -158,25 +158,25 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 		stageToggleClick(this);
 	}
 
-	// Token: 0x0600F517 RID: 62743 RVA: 0x003B276C File Offset: 0x003B096C
+	// Token: 0x0600C936 RID: 51510 RVA: 0x003BE258 File Offset: 0x003BC458
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600F518 RID: 62744 RVA: 0x003B277E File Offset: 0x003B097E
+	// Token: 0x0600C937 RID: 51511 RVA: 0x003BE26A File Offset: 0x003BC46A
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400715D RID: 29021
+	// Token: 0x0400723E RID: 29246
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x0400715E RID: 29022
+	// Token: 0x0400723F RID: 29247
 	private HonamiStoryAreaData AreaData;
 
-	// Token: 0x0400715F RID: 29023
+	// Token: 0x04007240 RID: 29248
 	[Nullable(new byte[]
 	{
 		2,
@@ -184,39 +184,39 @@ public class MascotCollectBookStageToggle : GridProxyAbstract<HonamiStoryAreaDat
 	})]
 	private Action<MascotCollectBookStageToggle> StageToggleClick;
 
-	// Token: 0x04007160 RID: 29024
+	// Token: 0x04007241 RID: 29249
 	[Nullable(2)]
 	private UiBehaviorLevelSequence LevelPlaySequence;
 
-	// Token: 0x02008522 RID: 34082
+	// Token: 0x020076A7 RID: 30375
 	[NullableContext(0)]
 	private enum EMascotCollectBookStageToggleComponent
 	{
-		// Token: 0x0402B544 RID: 177476
+		// Token: 0x04026868 RID: 157800
 		Toggle,
-		// Token: 0x0402B545 RID: 177477
+		// Token: 0x04026869 RID: 157801
 		BgTexture,
-		// Token: 0x0402B546 RID: 177478
+		// Token: 0x0402686A RID: 157802
 		DescTexture,
-		// Token: 0x0402B547 RID: 177479
+		// Token: 0x0402686B RID: 157803
 		LockTexture,
-		// Token: 0x0402B548 RID: 177480
+		// Token: 0x0402686C RID: 157804
 		GiftSprite,
-		// Token: 0x0402B549 RID: 177481
+		// Token: 0x0402686D RID: 157805
 		FindOneSprite,
-		// Token: 0x0402B54A RID: 177482
+		// Token: 0x0402686E RID: 157806
 		FindTwoSprite,
-		// Token: 0x0402B54B RID: 177483
+		// Token: 0x0402686F RID: 157807
 		FindThreeSprite,
-		// Token: 0x0402B54C RID: 177484
+		// Token: 0x04026870 RID: 157808
 		NameText,
-		// Token: 0x0402B54D RID: 177485
+		// Token: 0x04026871 RID: 157809
 		EmptyPanel,
-		// Token: 0x0402B54E RID: 177486
+		// Token: 0x04026872 RID: 157810
 		InfoPanel,
-		// Token: 0x0402B54F RID: 177487
+		// Token: 0x04026873 RID: 157811
 		MascotStatePanel,
-		// Token: 0x0402B550 RID: 177488
+		// Token: 0x04026874 RID: 157812
 		GrayBgTexture
 	}
 }

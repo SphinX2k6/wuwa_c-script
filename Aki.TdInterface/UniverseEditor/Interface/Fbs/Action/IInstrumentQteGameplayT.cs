@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006979 RID: 27001
+	// Token: 0x0200702C RID: 28716
 	public class IInstrumentQteGameplayT
 	{
-		// Token: 0x1700C842 RID: 51266
-		// (get) Token: 0x0602F278 RID: 193144 RVA: 0x0066C8A2 File Offset: 0x0066AAA2
-		// (set) Token: 0x0602F279 RID: 193145 RVA: 0x0066C8AA File Offset: 0x0066AAAA
+		// Token: 0x1700D245 RID: 53829
+		// (get) Token: 0x06031C48 RID: 203848 RVA: 0x006BCD8A File Offset: 0x006BAF8A
+		// (set) Token: 0x06031C49 RID: 203849 RVA: 0x006BCD92 File Offset: 0x006BAF92
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700C843 RID: 51267
-		// (get) Token: 0x0602F27A RID: 193146 RVA: 0x0066C8B3 File Offset: 0x0066AAB3
-		// (set) Token: 0x0602F27B RID: 193147 RVA: 0x0066C8BB File Offset: 0x0066AABB
+		// Token: 0x1700D246 RID: 53830
+		// (get) Token: 0x06031C4A RID: 203850 RVA: 0x006BCD9B File Offset: 0x006BAF9B
+		// (set) Token: 0x06031C4B RID: 203851 RVA: 0x006BCDA3 File Offset: 0x006BAFA3
 		public EInstrumentType InstrumentType { get; set; }
 
-		// Token: 0x1700C844 RID: 51268
-		// (get) Token: 0x0602F27C RID: 193148 RVA: 0x0066C8C4 File Offset: 0x0066AAC4
-		// (set) Token: 0x0602F27D RID: 193149 RVA: 0x0066C8CC File Offset: 0x0066AACC
+		// Token: 0x1700D247 RID: 53831
+		// (get) Token: 0x06031C4C RID: 203852 RVA: 0x006BCDAC File Offset: 0x006BAFAC
+		// (set) Token: 0x06031C4D RID: 203853 RVA: 0x006BCDB4 File Offset: 0x006BAFB4
 		public int Id { get; set; }
 
-		// Token: 0x0602F27E RID: 193150 RVA: 0x0066C8D5 File Offset: 0x0066AAD5
+		// Token: 0x06031C4E RID: 203854 RVA: 0x006BCDBD File Offset: 0x006BAFBD
 		public IInstrumentQteGameplayT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

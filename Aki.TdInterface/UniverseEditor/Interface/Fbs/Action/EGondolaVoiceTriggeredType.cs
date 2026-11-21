@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F7B RID: 24443
+	// Token: 0x020065C1 RID: 26049
 	public enum EGondolaVoiceTriggeredType : byte
 	{
-		// Token: 0x0400FD9B RID: 64923
+		// Token: 0x04010B22 RID: 68386
 		FindTreasure,
-		// Token: 0x0400FD9C RID: 64924
+		// Token: 0x04010B23 RID: 68387
 		OpenCompass,
-		// Token: 0x0400FD9D RID: 64925
+		// Token: 0x04010B24 RID: 68388
 		KeepMoving,
-		// Token: 0x0400FD9E RID: 64926
+		// Token: 0x04010B25 RID: 68389
 		StopMoving,
-		// Token: 0x0400FD9F RID: 64927
+		// Token: 0x04010B26 RID: 68390
 		StayIdle,
-		// Token: 0x0400FDA0 RID: 64928
+		// Token: 0x04010B27 RID: 68391
 		InviteRole,
-		// Token: 0x0400FDA1 RID: 64929
+		// Token: 0x04010B28 RID: 68392
 		InArea0,
-		// Token: 0x0400FDA2 RID: 64930
+		// Token: 0x04010B29 RID: 68393
 		InArea1,
-		// Token: 0x0400FDA3 RID: 64931
+		// Token: 0x04010B2A RID: 68394
 		InArea2,
-		// Token: 0x0400FDA4 RID: 64932
+		// Token: 0x04010B2B RID: 68395
 		NearFishingPoint,
-		// Token: 0x0400FDA5 RID: 64933
+		// Token: 0x04010B2C RID: 68396
 		KeepMovingByCustomSec
 	}
 }

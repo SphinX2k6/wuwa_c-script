@@ -1,22 +1,26 @@
 ﻿using System;
 
-// Token: 0x02002EEC RID: 12012
+// Token: 0x0200243F RID: 9279
 public enum ECharPositionState
 {
-	// Token: 0x0400C061 RID: 49249
+	// Token: 0x0400C3FC RID: 50172
 	Ground,
-	// Token: 0x0400C062 RID: 49250
+	// Token: 0x0400C3FD RID: 50173
 	Climb,
-	// Token: 0x0400C063 RID: 49251
+	// Token: 0x0400C3FE RID: 50174
 	Air,
-	// Token: 0x0400C064 RID: 49252
+	// Token: 0x0400C3FF RID: 50175
 	Water,
-	// Token: 0x0400C065 RID: 49253
+	// Token: 0x0400C400 RID: 50176
 	Ski,
-	// Token: 0x0400C066 RID: 49254
+	// Token: 0x0400C401 RID: 50177
 	Ride,
-	// Token: 0x0400C067 RID: 49255
+	// Token: 0x0400C402 RID: 50178
 	RailSlide,
-	// Token: 0x0400C068 RID: 49256
-	Floating
+	// Token: 0x0400C403 RID: 50179
+	Floating,
+	// Token: 0x0400C404 RID: 50180
+	MechAllTerrain,
+	// Token: 0x0400C405 RID: 50181
+	FlowerAllTerrain
 }

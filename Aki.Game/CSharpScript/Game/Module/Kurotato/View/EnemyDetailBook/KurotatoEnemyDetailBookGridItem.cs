@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 {
-	// Token: 0x0200576D RID: 22381
+	// Token: 0x02004744 RID: 18244
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 	})]
 	public class KurotatoEnemyDetailBookGridItem : LoopScrollMediumItemGrid<KurotatoEnemyData>
 	{
-		// Token: 0x06038DA7 RID: 232871 RVA: 0x00D82001 File Offset: 0x00D80201
+		// Token: 0x0602DCB7 RID: 187575 RVA: 0x00CD0AFD File Offset: 0x00CCECFD
 		protected override void OnRefresh(KurotatoEnemyData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.UpdateView();
 		}
 
-		// Token: 0x06038DA8 RID: 232872 RVA: 0x00D82018 File Offset: 0x00D80218
+		// Token: 0x0602DCB8 RID: 187576 RVA: 0x00CD0B14 File Offset: 0x00CCED14
 		public void UpdateView()
 		{
 			PropMediumItemGrid propMediumItemGrid = new PropMediumItemGrid();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06038DA9 RID: 232873 RVA: 0x00D820BF File Offset: 0x00D802BF
+		// Token: 0x0602DCB9 RID: 187577 RVA: 0x00CD0BBB File Offset: 0x00CCEDBB
 		protected override void OnExtendToggleClicked()
 		{
 			Action<KurotatoEnemyData> onItemClickCallback = this.OnItemClickCallback;
@@ -59,25 +59,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			onItemClickCallback(this.Data);
 		}
 
-		// Token: 0x06038DAA RID: 232874 RVA: 0x00D820D7 File Offset: 0x00D802D7
+		// Token: 0x0602DCBA RID: 187578 RVA: 0x00CD0BD3 File Offset: 0x00CCEDD3
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x06038DAB RID: 232875 RVA: 0x00D820E1 File Offset: 0x00D802E1
+		// Token: 0x0602DCBB RID: 187579 RVA: 0x00CD0BDD File Offset: 0x00CCEDDD
 		protected override bool OnCanExecuteChange()
 		{
 			return this.CanExecuteChangeCb == null || this.CanExecuteChangeCb(this.Data);
 		}
 
-		// Token: 0x06038DAC RID: 232876 RVA: 0x00D820FE File Offset: 0x00D802FE
+		// Token: 0x0602DCBC RID: 187580 RVA: 0x00CD0BFA File Offset: 0x00CCEDFA
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x06038DAD RID: 232877 RVA: 0x00D82108 File Offset: 0x00D80308
+		// Token: 0x0602DCBD RID: 187581 RVA: 0x00CD0C04 File Offset: 0x00CCEE04
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -91,11 +91,11 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			}
 		}
 
-		// Token: 0x0401DD1A RID: 122138
+		// Token: 0x040187B0 RID: 100272
 		[Nullable(2)]
 		public new KurotatoEnemyData Data;
 
-		// Token: 0x0401DD1B RID: 122139
+		// Token: 0x040187B1 RID: 100273
 		[Nullable(new byte[]
 		{
 			2,
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		public Action<KurotatoEnemyData> OnItemClickCallback;
 
-		// Token: 0x0401DD1C RID: 122140
+		// Token: 0x040187B2 RID: 100274
 		[Nullable(new byte[]
 		{
 			2,

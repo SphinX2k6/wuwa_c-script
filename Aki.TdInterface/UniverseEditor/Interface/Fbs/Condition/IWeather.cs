@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D24 RID: 19748
+	// Token: 0x02005220 RID: 21024
 	public struct IWeather : IFlatbufferObject
 	{
-		// Token: 0x17008F2A RID: 36650
-		// (get) Token: 0x0601F57C RID: 128380 RVA: 0x0045EB36 File Offset: 0x0045CD36
+		// Token: 0x17009663 RID: 38499
+		// (get) Token: 0x060211C3 RID: 135619 RVA: 0x00492AC6 File Offset: 0x00490CC6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F57D RID: 128381 RVA: 0x0045EB43 File Offset: 0x0045CD43
+		// Token: 0x060211C4 RID: 135620 RVA: 0x00492AD3 File Offset: 0x00490CD3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F57E RID: 128382 RVA: 0x0045EB4C File Offset: 0x0045CD4C
+		// Token: 0x060211C5 RID: 135621 RVA: 0x00492ADC File Offset: 0x00490CDC
 		public static IWeather GetRootAsIWeather(ByteBuffer _bb)
 		{
 			return IWeather.GetRootAsIWeather(_bb, default(IWeather));
 		}
 
-		// Token: 0x0601F57F RID: 128383 RVA: 0x0045EB68 File Offset: 0x0045CD68
+		// Token: 0x060211C6 RID: 135622 RVA: 0x00492AF8 File Offset: 0x00490CF8
 		public static IWeather GetRootAsIWeather(ByteBuffer _bb, IWeather obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F580 RID: 128384 RVA: 0x0045EB85 File Offset: 0x0045CD85
+		// Token: 0x060211C7 RID: 135623 RVA: 0x00492B15 File Offset: 0x00490D15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F581 RID: 128385 RVA: 0x0045EB94 File Offset: 0x0045CD94
+		// Token: 0x060211C8 RID: 135624 RVA: 0x00492B24 File Offset: 0x00490D24
 		public IWeather __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008F2B RID: 36651
-		// (get) Token: 0x0601F582 RID: 128386 RVA: 0x0045EBA4 File Offset: 0x0045CDA4
+		// Token: 0x17009664 RID: 38500
+		// (get) Token: 0x060211C9 RID: 135625 RVA: 0x00492B34 File Offset: 0x00490D34
 		public EVisibleCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008F2C RID: 36652
-		// (get) Token: 0x0601F583 RID: 128387 RVA: 0x0045EBE0 File Offset: 0x0045CDE0
+		// Token: 0x17009665 RID: 38501
+		// (get) Token: 0x060211CA RID: 135626 RVA: 0x00492B70 File Offset: 0x00490D70
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008F2D RID: 36653
-		// (get) Token: 0x0601F584 RID: 128388 RVA: 0x0045EC1C File Offset: 0x0045CE1C
+		// Token: 0x17009666 RID: 38502
+		// (get) Token: 0x060211CB RID: 135627 RVA: 0x00492BAC File Offset: 0x00490DAC
 		public EWeather Weather
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008F2E RID: 36654
-		// (get) Token: 0x0601F585 RID: 128389 RVA: 0x0045EC58 File Offset: 0x0045CE58
+		// Token: 0x17009667 RID: 38503
+		// (get) Token: 0x060211CC RID: 135628 RVA: 0x00492BE8 File Offset: 0x00490DE8
 		public int WeatherId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008F2F RID: 36655
-		// (get) Token: 0x0601F586 RID: 128390 RVA: 0x0045EC98 File Offset: 0x0045CE98
+		// Token: 0x17009668 RID: 38504
+		// (get) Token: 0x060211CD RID: 135629 RVA: 0x00492C28 File Offset: 0x00490E28
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F587 RID: 128391 RVA: 0x0045ECD5 File Offset: 0x0045CED5
+		// Token: 0x060211CE RID: 135630 RVA: 0x00492C65 File Offset: 0x00490E65
 		public static Offset<IWeather> CreateIWeather(FlatBufferBuilder builder, EVisibleCondition Type = EVisibleCondition.Weather, ECompare Compare = ECompare.Eq, EWeather Weather = EWeather.Sunny, int WeatherId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IWeather.EndIWeather(builder);
 		}
 
-		// Token: 0x0601F588 RID: 128392 RVA: 0x0045ED09 File Offset: 0x0045CF09
+		// Token: 0x060211CF RID: 135631 RVA: 0x00492C99 File Offset: 0x00490E99
 		public static void StartIWeather(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601F589 RID: 128393 RVA: 0x0045ED12 File Offset: 0x0045CF12
+		// Token: 0x060211D0 RID: 135632 RVA: 0x00492CA2 File Offset: 0x00490EA2
 		public static void AddType(FlatBufferBuilder builder, EVisibleCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F58A RID: 128394 RVA: 0x0045ED1D File Offset: 0x0045CF1D
+		// Token: 0x060211D1 RID: 135633 RVA: 0x00492CAD File Offset: 0x00490EAD
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601F58B RID: 128395 RVA: 0x0045ED28 File Offset: 0x0045CF28
+		// Token: 0x060211D2 RID: 135634 RVA: 0x00492CB8 File Offset: 0x00490EB8
 		public static void AddWeather(FlatBufferBuilder builder, EWeather weather)
 		{
 			builder.AddByte(2, (byte)weather, 0);
 		}
 
-		// Token: 0x0601F58C RID: 128396 RVA: 0x0045ED33 File Offset: 0x0045CF33
+		// Token: 0x060211D3 RID: 135635 RVA: 0x00492CC3 File Offset: 0x00490EC3
 		public static void AddWeatherId(FlatBufferBuilder builder, int weatherId)
 		{
 			builder.AddInt(3, weatherId, 0);
 		}
 
-		// Token: 0x0601F58D RID: 128397 RVA: 0x0045ED3E File Offset: 0x0045CF3E
+		// Token: 0x060211D4 RID: 135636 RVA: 0x00492CCE File Offset: 0x00490ECE
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601F58E RID: 128398 RVA: 0x0045ED49 File Offset: 0x0045CF49
+		// Token: 0x060211D5 RID: 135637 RVA: 0x00492CD9 File Offset: 0x00490ED9
 		public static Offset<IWeather> EndIWeather(FlatBufferBuilder builder)
 		{
 			return new Offset<IWeather>(builder.EndTable());
 		}
 
-		// Token: 0x0601F58F RID: 128399 RVA: 0x0045ED58 File Offset: 0x0045CF58
+		// Token: 0x060211D6 RID: 135638 RVA: 0x00492CE8 File Offset: 0x00490EE8
 		public IWeatherT UnPack()
 		{
 			IWeatherT weatherT = new IWeatherT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return weatherT;
 		}
 
-		// Token: 0x0601F590 RID: 128400 RVA: 0x0045ED73 File Offset: 0x0045CF73
+		// Token: 0x060211D7 RID: 135639 RVA: 0x00492D03 File Offset: 0x00490F03
 		public void UnPackTo(IWeatherT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601F591 RID: 128401 RVA: 0x0045EDB4 File Offset: 0x0045CFB4
+		// Token: 0x060211D8 RID: 135640 RVA: 0x00492D44 File Offset: 0x00490F44
 		public static Offset<IWeather> Pack(FlatBufferBuilder builder, IWeatherT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IWeather.CreateIWeather(builder, _o.Type, _o.Compare, _o.Weather, _o.WeatherId, _o.NullMask);
 		}
 
-		// Token: 0x0400D70F RID: 55055
+		// Token: 0x0400E23D RID: 57917
 		private Table __p;
 	}
 }

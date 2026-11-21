@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024D0 RID: 9424
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002775 RID: 10101
 	public class IActionConfigItem : IActionFunctionalConfigItem
 	{
-		// Token: 0x0600D27F RID: 53887 RVA: 0x001F3B4E File Offset: 0x001F1D4E
+		// Token: 0x0600DFD4 RID: 57300 RVA: 0x0020F3AA File Offset: 0x0020D5AA
 		public static IActionConfigItem Create(IActionConfigItem? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AA1 RID: 15009
-		// (get) Token: 0x0600D280 RID: 53888 RVA: 0x001F3B70 File Offset: 0x001F1D70
+		// Token: 0x17003D98 RID: 15768
+		// (get) Token: 0x0600DFD5 RID: 57301 RVA: 0x0020F3CC File Offset: 0x0020D5CC
 		public override EOnlineParticipateRule? OnlineParticipateRule
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA2 RID: 15010
-		// (get) Token: 0x0600D281 RID: 53889 RVA: 0x001F3BA8 File Offset: 0x001F1DA8
+		// Token: 0x17003D99 RID: 15769
+		// (get) Token: 0x0600DFD6 RID: 57302 RVA: 0x0020F404 File Offset: 0x0020D604
 		public override bool? IsDetectScreenOccupation
 		{
 			get
@@ -50,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA3 RID: 15011
-		// (get) Token: 0x0600D282 RID: 53890 RVA: 0x001F3BE0 File Offset: 0x001F1DE0
+		// Token: 0x17003D9A RID: 15770
+		// (get) Token: 0x0600DFD7 RID: 57303 RVA: 0x0020F43C File Offset: 0x0020D63C
 		public override bool? IsWithResultOnly
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA4 RID: 15012
-		// (get) Token: 0x0600D283 RID: 53891 RVA: 0x001F3C18 File Offset: 0x001F1E18
+		// Token: 0x17003D9B RID: 15771
+		// (get) Token: 0x0600DFD8 RID: 57304 RVA: 0x0020F474 File Offset: 0x0020D674
 		public override bool? IsOperatePlayer
 		{
 			get
@@ -78,8 +75,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA5 RID: 15013
-		// (get) Token: 0x0600D284 RID: 53892 RVA: 0x001F3C4E File Offset: 0x001F1E4E
+		// Token: 0x17003D9C RID: 15772
+		// (get) Token: 0x0600DFD9 RID: 57305 RVA: 0x0020F4AA File Offset: 0x0020D6AA
 		public virtual string CnName
 		{
 			get
@@ -88,7 +85,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400737A RID: 29562
+		// Token: 0x040079C7 RID: 31175
 		private IActionConfigItem Instance;
 	}
 }

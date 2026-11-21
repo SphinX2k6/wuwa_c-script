@@ -1,62 +1,62 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FC1 RID: 4033
+// Token: 0x02000476 RID: 1142
 [NullableContext(1)]
 public interface IFurnitureAreaSelectItemData
 {
-	// Token: 0x17000845 RID: 2117
-	// (get) Token: 0x06006733 RID: 26419
-	// (set) Token: 0x06006734 RID: 26420
+	// Token: 0x17000867 RID: 2151
+	// (get) Token: 0x06003ACB RID: 15051
+	// (set) Token: 0x06003ACC RID: 15052
 	int AreaId { get; set; }
 
-	// Token: 0x17000846 RID: 2118
-	// (get) Token: 0x06006735 RID: 26421
-	// (set) Token: 0x06006736 RID: 26422
+	// Token: 0x17000868 RID: 2152
+	// (get) Token: 0x06003ACD RID: 15053
+	// (set) Token: 0x06003ACE RID: 15054
 	int FloorId { get; set; }
 
-	// Token: 0x17000847 RID: 2119
-	// (get) Token: 0x06006737 RID: 26423
-	// (set) Token: 0x06006738 RID: 26424
+	// Token: 0x17000869 RID: 2153
+	// (get) Token: 0x06003ACF RID: 15055
+	// (set) Token: 0x06003AD0 RID: 15056
 	string AreaName { get; set; }
 
-	// Token: 0x17000848 RID: 2120
-	// (get) Token: 0x06006739 RID: 26425
-	// (set) Token: 0x0600673A RID: 26426
+	// Token: 0x1700086A RID: 2154
+	// (get) Token: 0x06003AD1 RID: 15057
+	// (set) Token: 0x06003AD2 RID: 15058
 	string LockAreaIcon { get; set; }
 
-	// Token: 0x17000849 RID: 2121
-	// (get) Token: 0x0600673B RID: 26427
-	// (set) Token: 0x0600673C RID: 26428
+	// Token: 0x1700086B RID: 2155
+	// (get) Token: 0x06003AD3 RID: 15059
+	// (set) Token: 0x06003AD4 RID: 15060
 	string UnlockAreaIcon { get; set; }
 
-	// Token: 0x1700084A RID: 2122
-	// (get) Token: 0x0600673D RID: 26429
-	// (set) Token: 0x0600673E RID: 26430
+	// Token: 0x1700086C RID: 2156
+	// (get) Token: 0x06003AD5 RID: 15061
+	// (set) Token: 0x06003AD6 RID: 15062
 	bool IsSelected { get; set; }
 
-	// Token: 0x1700084B RID: 2123
-	// (get) Token: 0x0600673F RID: 26431
-	// (set) Token: 0x06006740 RID: 26432
+	// Token: 0x1700086D RID: 2157
+	// (get) Token: 0x06003AD7 RID: 15063
+	// (set) Token: 0x06003AD8 RID: 15064
 	bool IsUnlock { get; set; }
 
-	// Token: 0x1700084C RID: 2124
-	// (get) Token: 0x06006741 RID: 26433
-	// (set) Token: 0x06006742 RID: 26434
+	// Token: 0x1700086E RID: 2158
+	// (get) Token: 0x06003AD9 RID: 15065
+	// (set) Token: 0x06003ADA RID: 15066
 	int PlacedSlotCount { get; set; }
 
-	// Token: 0x1700084D RID: 2125
-	// (get) Token: 0x06006743 RID: 26435
-	// (set) Token: 0x06006744 RID: 26436
+	// Token: 0x1700086F RID: 2159
+	// (get) Token: 0x06003ADB RID: 15067
+	// (set) Token: 0x06003ADC RID: 15068
 	int MaxSlotCount { get; set; }
 
-	// Token: 0x1700084E RID: 2126
-	// (get) Token: 0x06006745 RID: 26437
-	// (set) Token: 0x06006746 RID: 26438
+	// Token: 0x17000870 RID: 2160
+	// (get) Token: 0x06003ADD RID: 15069
+	// (set) Token: 0x06003ADE RID: 15070
 	bool RedDotShowState { get; set; }
 
-	// Token: 0x1700084F RID: 2127
-	// (get) Token: 0x06006747 RID: 26439
-	// (set) Token: 0x06006748 RID: 26440
+	// Token: 0x17000871 RID: 2161
+	// (get) Token: 0x06003ADF RID: 15071
+	// (set) Token: 0x06003AE0 RID: 15072
 	Action<int> OnSelected { get; set; }
 }

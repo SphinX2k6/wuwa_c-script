@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057A0 RID: 22432
+	// Token: 0x02005DA7 RID: 23975
 	public class IProgressBarControlComponentT
 	{
-		// Token: 0x1700A763 RID: 42851
-		// (get) Token: 0x06025A1C RID: 154140 RVA: 0x00531010 File Offset: 0x0052F210
-		// (set) Token: 0x06025A1D RID: 154141 RVA: 0x00531018 File Offset: 0x0052F218
+		// Token: 0x1700B087 RID: 45191
+		// (get) Token: 0x06027F3C RID: 163644 RVA: 0x0057719C File Offset: 0x0057539C
+		// (set) Token: 0x06027F3D RID: 163645 RVA: 0x005771A4 File Offset: 0x005753A4
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A764 RID: 42852
-		// (get) Token: 0x06025A1E RID: 154142 RVA: 0x00531021 File Offset: 0x0052F221
-		// (set) Token: 0x06025A1F RID: 154143 RVA: 0x00531029 File Offset: 0x0052F229
+		// Token: 0x1700B088 RID: 45192
+		// (get) Token: 0x06027F3E RID: 163646 RVA: 0x005771AD File Offset: 0x005753AD
+		// (set) Token: 0x06027F3F RID: 163647 RVA: 0x005771B5 File Offset: 0x005753B5
 		public THitBulletTypeUnion HitBullet { get; set; }
 
-		// Token: 0x1700A765 RID: 42853
-		// (get) Token: 0x06025A20 RID: 154144 RVA: 0x00531032 File Offset: 0x0052F232
-		// (set) Token: 0x06025A21 RID: 154145 RVA: 0x0053103A File Offset: 0x0052F23A
+		// Token: 0x1700B089 RID: 45193
+		// (get) Token: 0x06027F40 RID: 163648 RVA: 0x005771BE File Offset: 0x005753BE
+		// (set) Token: 0x06027F41 RID: 163649 RVA: 0x005771C6 File Offset: 0x005753C6
 		public IHitTimeScaleRatioT AttackerHitTimeScaleRatio { get; set; }
 
-		// Token: 0x1700A766 RID: 42854
-		// (get) Token: 0x06025A22 RID: 154146 RVA: 0x00531043 File Offset: 0x0052F243
-		// (set) Token: 0x06025A23 RID: 154147 RVA: 0x0053104B File Offset: 0x0052F24B
+		// Token: 0x1700B08A RID: 45194
+		// (get) Token: 0x06027F42 RID: 163650 RVA: 0x005771CF File Offset: 0x005753CF
+		// (set) Token: 0x06027F43 RID: 163651 RVA: 0x005771D7 File Offset: 0x005753D7
 		public IHitTimeScaleRatioT VictimHitTimeScaleRatio { get; set; }
 
-		// Token: 0x1700A767 RID: 42855
-		// (get) Token: 0x06025A24 RID: 154148 RVA: 0x00531054 File Offset: 0x0052F254
-		// (set) Token: 0x06025A25 RID: 154149 RVA: 0x0053105C File Offset: 0x0052F25C
+		// Token: 0x1700B08B RID: 45195
+		// (get) Token: 0x06027F44 RID: 163652 RVA: 0x005771E0 File Offset: 0x005753E0
+		// (set) Token: 0x06027F45 RID: 163653 RVA: 0x005771E8 File Offset: 0x005753E8
 		public List<IAimPartT> AimParts { get; set; }
 
-		// Token: 0x1700A768 RID: 42856
-		// (get) Token: 0x06025A26 RID: 154150 RVA: 0x00531065 File Offset: 0x0052F265
-		// (set) Token: 0x06025A27 RID: 154151 RVA: 0x0053106D File Offset: 0x0052F26D
+		// Token: 0x1700B08C RID: 45196
+		// (get) Token: 0x06027F46 RID: 163654 RVA: 0x005771F1 File Offset: 0x005753F1
+		// (set) Token: 0x06027F47 RID: 163655 RVA: 0x005771F9 File Offset: 0x005753F9
 		public TProgressBarControlUnion Control { get; set; }
 
-		// Token: 0x1700A769 RID: 42857
-		// (get) Token: 0x06025A28 RID: 154152 RVA: 0x00531076 File Offset: 0x0052F276
-		// (set) Token: 0x06025A29 RID: 154153 RVA: 0x0053107E File Offset: 0x0052F27E
+		// Token: 0x1700B08D RID: 45197
+		// (get) Token: 0x06027F48 RID: 163656 RVA: 0x00577202 File Offset: 0x00575402
+		// (set) Token: 0x06027F49 RID: 163657 RVA: 0x0057720A File Offset: 0x0057540A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025A2A RID: 154154 RVA: 0x00531087 File Offset: 0x0052F287
+		// Token: 0x06027F4A RID: 163658 RVA: 0x00577213 File Offset: 0x00575413
 		public IProgressBarControlComponentT()
 		{
 			this.Disabled = false;

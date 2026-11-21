@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001461 RID: 5217
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015BA RID: 5562
 	public class IQuestList
 	{
-		// Token: 0x060076BD RID: 30397 RVA: 0x0011BD10 File Offset: 0x00119F10
+		// Token: 0x06007D8B RID: 32139 RVA: 0x0012A928 File Offset: 0x00128B28
 		public static IQuestList Create(IQuestList? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170027CE RID: 10190
-		// (get) Token: 0x060076BE RID: 30398 RVA: 0x0011BD30 File Offset: 0x00119F30
+		// Token: 0x170029B9 RID: 10681
+		// (get) Token: 0x06007D8C RID: 32140 RVA: 0x0012A948 File Offset: 0x00128B48
 		public virtual List<IQuest> Quests
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027CF RID: 10191
-		// (get) Token: 0x060076BF RID: 30399 RVA: 0x0011BD9C File Offset: 0x00119F9C
+		// Token: 0x170029BA RID: 10682
+		// (get) Token: 0x06007D8D RID: 32141 RVA: 0x0012A9B4 File Offset: 0x00128BB4
 		public virtual int? _Selected
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027D0 RID: 10192
-		// (get) Token: 0x060076C0 RID: 30400 RVA: 0x0011BDD4 File Offset: 0x00119FD4
+		// Token: 0x170029BB RID: 10683
+		// (get) Token: 0x06007D8E RID: 32142 RVA: 0x0012A9EC File Offset: 0x00128BEC
 		public virtual bool? _IsSelectBt
 		{
 			get
@@ -73,19 +71,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027D1 RID: 10193
-		// (get) Token: 0x060076C1 RID: 30401 RVA: 0x0011BE0C File Offset: 0x0011A00C
+		// Token: 0x170029BC RID: 10684
+		// (get) Token: 0x06007D8F RID: 32143 RVA: 0x0012AA24 File Offset: 0x00128C24
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISyncBlockGroup> _SyncBlockGroups
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -108,24 +106,24 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004505 RID: 17669
+		// Token: 0x040048A0 RID: 18592
 		private IQuestList Instance;
 
-		// Token: 0x04004506 RID: 17670
+		// Token: 0x040048A1 RID: 18593
 		private List<IQuest> _QuestsCache;
 
-		// Token: 0x04004507 RID: 17671
+		// Token: 0x040048A2 RID: 18594
 		private bool _QuestsInited;
 
-		// Token: 0x04004508 RID: 17672
+		// Token: 0x040048A3 RID: 18595
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISyncBlockGroup> __SyncBlockGroupsCache;
 
-		// Token: 0x04004509 RID: 17673
+		// Token: 0x040048A4 RID: 18596
 		private bool __SyncBlockGroupsInited;
 	}
 }

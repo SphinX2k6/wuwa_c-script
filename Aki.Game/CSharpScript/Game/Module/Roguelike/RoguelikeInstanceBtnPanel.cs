@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E0E RID: 19982
+	// Token: 0x02003DD7 RID: 15831
 	public class RoguelikeInstanceBtnPanel : UiPanelBase
 	{
-		// Token: 0x060338D8 RID: 211160 RVA: 0x00C0CA14 File Offset: 0x00C0AC14
+		// Token: 0x06028743 RID: 165699 RVA: 0x00B55F20 File Offset: 0x00B54120
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060338D9 RID: 211161 RVA: 0x00C0CB84 File Offset: 0x00C0AD84
+		// Token: 0x06028744 RID: 165700 RVA: 0x00B56090 File Offset: 0x00B54290
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeInstanceBtnPanel.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -57,39 +57,39 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060338DA RID: 211162 RVA: 0x00C0CBBF File Offset: 0x00C0ADBF
+		// Token: 0x06028745 RID: 165701 RVA: 0x00B560CB File Offset: 0x00B542CB
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060338DB RID: 211163 RVA: 0x00C0CBC7 File Offset: 0x00C0ADC7
+		// Token: 0x06028746 RID: 165702 RVA: 0x00B560D3 File Offset: 0x00B542D3
 		protected override void OnBeforeShow()
 		{
 			this.BindRedDot();
 		}
 
-		// Token: 0x060338DC RID: 211164 RVA: 0x00C0CBCF File Offset: 0x00C0ADCF
+		// Token: 0x06028747 RID: 165703 RVA: 0x00B560DB File Offset: 0x00B542DB
 		protected override void OnAfterHide()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x060338DD RID: 211165 RVA: 0x00C0CBD7 File Offset: 0x00C0ADD7
+		// Token: 0x06028748 RID: 165704 RVA: 0x00B560E3 File Offset: 0x00B542E3
 		public void BindRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RogueSkillUnlock, base.GetItem(5), null, 0);
 			RedDotController.Instance.BindRedDot(ERedDotName.RoguelikeShop, base.GetItem(6), null, 0);
 		}
 
-		// Token: 0x060338DE RID: 211166 RVA: 0x00C0CC03 File Offset: 0x00C0AE03
+		// Token: 0x06028749 RID: 165705 RVA: 0x00B5610F File Offset: 0x00B5430F
 		public void UnBindRedDot()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RogueSkillUnlock, base.GetItem(5), 0);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RoguelikeShop, base.GetItem(6), 0);
 		}
 
-		// Token: 0x060338DF RID: 211167 RVA: 0x00C0CC30 File Offset: 0x00C0AE30
+		// Token: 0x0602874A RID: 165706 RVA: 0x00B5613C File Offset: 0x00B5433C
 		private unsafe void OnBtnShopClick()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			PayShopController.Instance.OpenPayShopView(payShopViewData, null);
 		}
 
-		// Token: 0x060338E0 RID: 211168 RVA: 0x00C0CCD8 File Offset: 0x00C0AED8
+		// Token: 0x0602874B RID: 165707 RVA: 0x00B561E4 File Offset: 0x00B543E4
 		private void OnBtnSkillTreeClick()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.OpenRoguelikeSkillView(rogueSeasonData.SeasonId);
 		}
 
-		// Token: 0x060338E1 RID: 211169 RVA: 0x00C0CD10 File Offset: 0x00C0AF10
+		// Token: 0x0602874C RID: 165708 RVA: 0x00B5621C File Offset: 0x00B5441C
 		public void Refresh()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -155,28 +155,28 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalText(base.GetText(2), remainTime.TextId, new <>z__ReadOnlySingleElementList<object>(remainTime.TimeValue));
 		}
 
-		// Token: 0x0200AFA5 RID: 44965
+		// Token: 0x020099DA RID: 39386
 		private class ERoguelikeInstanceBtnPanelDefine
 		{
-			// Token: 0x04035530 RID: 218416
+			// Token: 0x0402FF63 RID: 196451
 			public const int BtnSkillTree = 0;
 
-			// Token: 0x04035531 RID: 218417
+			// Token: 0x0402FF64 RID: 196452
 			public const int BtnShop = 1;
 
-			// Token: 0x04035532 RID: 218418
+			// Token: 0x0402FF65 RID: 196453
 			public const int TxtShopTime = 2;
 
-			// Token: 0x04035533 RID: 218419
+			// Token: 0x0402FF66 RID: 196454
 			public const int TxtShopPoint = 3;
 
-			// Token: 0x04035534 RID: 218420
+			// Token: 0x0402FF67 RID: 196455
 			public const int SpriteProgress = 4;
 
-			// Token: 0x04035535 RID: 218421
+			// Token: 0x0402FF68 RID: 196456
 			public const int SkillTreeRedItem = 5;
 
-			// Token: 0x04035536 RID: 218422
+			// Token: 0x0402FF69 RID: 196457
 			public const int ShopRedItem = 6;
 		}
 	}

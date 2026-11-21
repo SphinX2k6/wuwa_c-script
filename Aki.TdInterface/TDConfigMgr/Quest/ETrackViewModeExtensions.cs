@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012AE RID: 4782
+	// Token: 0x020013F4 RID: 5108
 	public static class ETrackViewModeExtensions
 	{
-		// Token: 0x06006BB6 RID: 27574 RVA: 0x00103274 File Offset: 0x00101474
+		// Token: 0x06007224 RID: 29220 RVA: 0x0011123C File Offset: 0x0010F43C
 		public static string ToEnumString(this ETrackViewMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BB7 RID: 27575 RVA: 0x001032AC File Offset: 0x001014AC
+		// Token: 0x06007225 RID: 29221 RVA: 0x00111274 File Offset: 0x0010F474
 		public static ETrackViewMode FromString(string name)
 		{
 			ETrackViewMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BB8 RID: 27576 RVA: 0x001032D5 File Offset: 0x001014D5
+		// Token: 0x06007226 RID: 29222 RVA: 0x0011129D File Offset: 0x0010F49D
 		public static bool TryFromString(string name, out ETrackViewMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006BB9 RID: 27577 RVA: 0x0010330E File Offset: 0x0010150E
+		// Token: 0x06007227 RID: 29223 RVA: 0x001112D6 File Offset: 0x0010F4D6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BBA RID: 27578 RVA: 0x00103326 File Offset: 0x00101526
+		// Token: 0x06007228 RID: 29224 RVA: 0x001112EE File Offset: 0x0010F4EE
 		public static ETrackViewMode[] GetValues()
 		{
 			return new ETrackViewMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BBB RID: 27579 RVA: 0x00103332 File Offset: 0x00101532
+		// Token: 0x06007229 RID: 29225 RVA: 0x001112FA File Offset: 0x0010F4FA
 		public static string[] GetNames()
 		{
 			return new string[]

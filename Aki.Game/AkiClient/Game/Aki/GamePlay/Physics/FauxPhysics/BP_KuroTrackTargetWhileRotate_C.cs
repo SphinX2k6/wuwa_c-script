@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.GamePlay.Physics.FauxPhysics
 {
-	// Token: 0x02003E5A RID: 15962
+	// Token: 0x0200314D RID: 12621
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/GamePlay/Physics/FauxPhysics/BP_KuroTrackTargetWhileRotate.BP_KuroTrackTargetWhileRotate_C")]
 	[UnrealStructLayout(1072, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1072)]
 	public class BP_KuroTrackTargetWhileRotate_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602820D RID: 164365 RVA: 0x009A4D12 File Offset: 0x009A2F12
+		// Token: 0x0601F0AC RID: 127148 RVA: 0x00924F56 File Offset: 0x00923156
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KuroTrackTargetWhileRotate_C._ClassPtr == IntPtr.Zero)
@@ -24,102 +24,102 @@ namespace AkiClient.Game.Aki.GamePlay.Physics.FauxPhysics
 			return BP_KuroTrackTargetWhileRotate_C._ClassPtr;
 		}
 
-		// Token: 0x0602820E RID: 164366 RVA: 0x009A4D38 File Offset: 0x009A2F38
+		// Token: 0x0601F0AD RID: 127149 RVA: 0x00924F7C File Offset: 0x0092317C
 		public BP_KuroTrackTargetWhileRotate_C() : this(BuiltinUtils.AllocNativeUObject(BP_KuroTrackTargetWhileRotate_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602820F RID: 164367 RVA: 0x009A4D60 File Offset: 0x009A2F60
+		// Token: 0x0601F0AE RID: 127150 RVA: 0x00924FA4 File Offset: 0x009231A4
 		[NullableContext(1)]
 		public BP_KuroTrackTargetWhileRotate_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KuroTrackTargetWhileRotate_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BDB RID: 23515
-		// (get) Token: 0x06028210 RID: 164368 RVA: 0x009A4D93 File Offset: 0x009A2F93
-		// (set) Token: 0x06028211 RID: 164369 RVA: 0x009A4DA7 File Offset: 0x009A2FA7
+		// Token: 0x17003701 RID: 14081
+		// (get) Token: 0x0601F0AF RID: 127151 RVA: 0x00924FD7 File Offset: 0x009231D7
+		// (set) Token: 0x0601F0B0 RID: 127152 RVA: 0x00924FEB File Offset: 0x009231EB
 		public unsafe UKuroFauxPhysicsAxisRotateComponent KuroFauxPhysicsAxisRotate
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsAxisRotateComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsAxisRotateComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsAxisRotate);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsAxisRotate, value);
 			}
 		}
 
-		// Token: 0x17005BDC RID: 23516
-		// (get) Token: 0x06028212 RID: 164370 RVA: 0x009A4DBC File Offset: 0x009A2FBC
-		// (set) Token: 0x06028213 RID: 164371 RVA: 0x009A4DD0 File Offset: 0x009A2FD0
+		// Token: 0x17003702 RID: 14082
+		// (get) Token: 0x0601F0B1 RID: 127153 RVA: 0x00925000 File Offset: 0x00923200
+		// (set) Token: 0x0601F0B2 RID: 127154 RVA: 0x00925014 File Offset: 0x00923214
 		public unsafe UKuroFauxPhysicsConeRotateComponent KuroFauxPhysicsConeRotate
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsConeRotateComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsConeRotateComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsConeRotate);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsConeRotate, value);
 			}
 		}
 
-		// Token: 0x17005BDD RID: 23517
-		// (get) Token: 0x06028214 RID: 164372 RVA: 0x009A4DE5 File Offset: 0x009A2FE5
-		// (set) Token: 0x06028215 RID: 164373 RVA: 0x009A4DF9 File Offset: 0x009A2FF9
+		// Token: 0x17003703 RID: 14083
+		// (get) Token: 0x0601F0B3 RID: 127155 RVA: 0x00925029 File Offset: 0x00923229
+		// (set) Token: 0x0601F0B4 RID: 127156 RVA: 0x0092503D File Offset: 0x0092323D
 		public unsafe UKuroFauxPhysicsFreeRotateComponent KuroFauxPhysicsFreeRotate
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsFreeRotateComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsFreeRotateComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsFreeRotate);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsFreeRotate, value);
 			}
 		}
 
-		// Token: 0x17005BDE RID: 23518
-		// (get) Token: 0x06028216 RID: 164374 RVA: 0x009A4E0E File Offset: 0x009A300E
-		// (set) Token: 0x06028217 RID: 164375 RVA: 0x009A4E22 File Offset: 0x009A3022
+		// Token: 0x17003704 RID: 14084
+		// (get) Token: 0x0601F0B5 RID: 127157 RVA: 0x00925052 File Offset: 0x00923252
+		// (set) Token: 0x0601F0B6 RID: 127158 RVA: 0x00925066 File Offset: 0x00923266
 		public unsafe UKuroFauxPhysicsTrackTargetComponent KuroFauxPhysicsTrackTarget
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsTrackTargetComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroFauxPhysicsTrackTargetComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsTrackTarget);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroTrackTargetWhileRotate_C.__PropertyOffset_KuroFauxPhysicsTrackTarget, value);
 			}
 		}
 
-		// Token: 0x06028218 RID: 164376 RVA: 0x009A4E37 File Offset: 0x009A3037
+		// Token: 0x0601F0B7 RID: 127159 RVA: 0x0092507B File Offset: 0x0092327B
 		protected BP_KuroTrackTargetWhileRotate_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040146CA RID: 83658
+		// Token: 0x04010956 RID: 67926
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/GamePlay/Physics/FauxPhysics/BP_KuroTrackTargetWhileRotate.BP_KuroTrackTargetWhileRotate_C";
 
-		// Token: 0x040146CB RID: 83659
+		// Token: 0x04010957 RID: 67927
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040146CC RID: 83660
+		// Token: 0x04010958 RID: 67928
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040146CD RID: 83661
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010959 RID: 67929
+		internal static int __PropertyOffset_KuroFauxPhysicsAxisRotate;
 
-		// Token: 0x040146CE RID: 83662
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401095A RID: 67930
+		internal static int __PropertyOffset_KuroFauxPhysicsConeRotate;
 
-		// Token: 0x040146CF RID: 83663
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401095B RID: 67931
+		internal static int __PropertyOffset_KuroFauxPhysicsFreeRotate;
 
-		// Token: 0x040146D0 RID: 83664
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401095C RID: 67932
+		internal static int __PropertyOffset_KuroFauxPhysicsTrackTarget;
 	}
 }

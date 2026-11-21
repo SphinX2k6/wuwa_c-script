@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AD3 RID: 19155
+	// Token: 0x02003A7B RID: 14971
 	public class TrapDefenseTalentTreeDetailPanel : UiPanelBase
 	{
-		// Token: 0x060319D7 RID: 203223 RVA: 0x00B822C0 File Offset: 0x00B804C0
+		// Token: 0x06026767 RID: 157543 RVA: 0x00AC6274 File Offset: 0x00AC4474
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060319D8 RID: 203224 RVA: 0x00B823B0 File Offset: 0x00B805B0
+		// Token: 0x06026768 RID: 157544 RVA: 0x00AC6364 File Offset: 0x00AC4564
 		public void Refresh()
 		{
 			TrapDefenseTalentTreeNodeData selectedNode = TrapDefenseModel.Instance.ViewModelTalentTree.SelectedNode;
@@ -45,25 +45,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetSpriteByPath(selectedNode.IconBig, base.GetSprite(2), false, null, null);
 		}
 
-		// Token: 0x0200AC4D RID: 44109
+		// Token: 0x0200966D RID: 38509
 		private class EComponentDefine
 		{
-			// Token: 0x040345B6 RID: 214454
+			// Token: 0x0402EF67 RID: 192359
 			public const int TextName = 0;
 
-			// Token: 0x040345B7 RID: 214455
+			// Token: 0x0402EF68 RID: 192360
 			public const int TextType = 1;
 
-			// Token: 0x040345B8 RID: 214456
+			// Token: 0x0402EF69 RID: 192361
 			public const int SpriteIcon = 2;
 
-			// Token: 0x040345B9 RID: 214457
+			// Token: 0x0402EF6A RID: 192362
 			public const int Layout = 3;
 
-			// Token: 0x040345BA RID: 214458
+			// Token: 0x0402EF6B RID: 192363
 			public const int ItemDesc = 4;
 
-			// Token: 0x040345BB RID: 214459
+			// Token: 0x0402EF6C RID: 192364
 			public const int TextDesc = 5;
 		}
 	}

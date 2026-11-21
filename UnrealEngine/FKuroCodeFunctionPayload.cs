@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018C2 RID: 6338
+	// Token: 0x020003DD RID: 989
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroCodeFunctionPayload")]
 	[UnrealStructLayout(880, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 880)]
 	public class FKuroCodeFunctionPayload : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060176B1 RID: 95921 RVA: 0x00223DB2 File Offset: 0x00221FB2
+		// Token: 0x0600612C RID: 24876 RVA: 0x0008ADB3 File Offset: 0x00088FB3
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroCodeFunctionPayload._ScriptStructPtr != 0) ? FKuroCodeFunctionPayload._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroCodeFunctionPayload", ref FKuroCodeFunctionPayload._ScriptStructPtr);
 		}
 
-		// Token: 0x17005E8E RID: 24206
-		// (get) Token: 0x060176B2 RID: 95922 RVA: 0x00223DD8 File Offset: 0x00221FD8
-		// (set) Token: 0x060176B3 RID: 95923 RVA: 0x00223E1B File Offset: 0x0022201B
+		// Token: 0x170013C6 RID: 5062
+		// (get) Token: 0x0600612D RID: 24877 RVA: 0x0008ADD8 File Offset: 0x00088FD8
+		// (set) Token: 0x0600612E RID: 24878 RVA: 0x0008AE1B File Offset: 0x0008901B
 		public TMap<string, int> IntValues
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E8F RID: 24207
-		// (get) Token: 0x060176B4 RID: 95924 RVA: 0x00223E2C File Offset: 0x0022202C
-		// (set) Token: 0x060176B5 RID: 95925 RVA: 0x00223E6F File Offset: 0x0022206F
+		// Token: 0x170013C7 RID: 5063
+		// (get) Token: 0x0600612F RID: 24879 RVA: 0x0008AE2C File Offset: 0x0008902C
+		// (set) Token: 0x06006130 RID: 24880 RVA: 0x0008AE6F File Offset: 0x0008906F
 		public TMap<string, long> Int64Values
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E90 RID: 24208
-		// (get) Token: 0x060176B6 RID: 95926 RVA: 0x00223E80 File Offset: 0x00222080
-		// (set) Token: 0x060176B7 RID: 95927 RVA: 0x00223EC3 File Offset: 0x002220C3
+		// Token: 0x170013C8 RID: 5064
+		// (get) Token: 0x06006131 RID: 24881 RVA: 0x0008AE80 File Offset: 0x00089080
+		// (set) Token: 0x06006132 RID: 24882 RVA: 0x0008AEC3 File Offset: 0x000890C3
 		public TMap<string, float> FloatValues
 		{
 			get
@@ -81,9 +81,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E91 RID: 24209
-		// (get) Token: 0x060176B8 RID: 95928 RVA: 0x00223ED4 File Offset: 0x002220D4
-		// (set) Token: 0x060176B9 RID: 95929 RVA: 0x00223F17 File Offset: 0x00222117
+		// Token: 0x170013C9 RID: 5065
+		// (get) Token: 0x06006133 RID: 24883 RVA: 0x0008AED4 File Offset: 0x000890D4
+		// (set) Token: 0x06006134 RID: 24884 RVA: 0x0008AF17 File Offset: 0x00089117
 		public TMap<string, bool> BoolValues
 		{
 			get
@@ -102,9 +102,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E92 RID: 24210
-		// (get) Token: 0x060176BA RID: 95930 RVA: 0x00223F28 File Offset: 0x00222128
-		// (set) Token: 0x060176BB RID: 95931 RVA: 0x00223F6B File Offset: 0x0022216B
+		// Token: 0x170013CA RID: 5066
+		// (get) Token: 0x06006135 RID: 24885 RVA: 0x0008AF28 File Offset: 0x00089128
+		// (set) Token: 0x06006136 RID: 24886 RVA: 0x0008AF6B File Offset: 0x0008916B
 		public TMap<string, string> StringValues
 		{
 			get
@@ -123,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E93 RID: 24211
-		// (get) Token: 0x060176BC RID: 95932 RVA: 0x00223F7C File Offset: 0x0022217C
-		// (set) Token: 0x060176BD RID: 95933 RVA: 0x00223FBF File Offset: 0x002221BF
+		// Token: 0x170013CB RID: 5067
+		// (get) Token: 0x06006137 RID: 24887 RVA: 0x0008AF7C File Offset: 0x0008917C
+		// (set) Token: 0x06006138 RID: 24888 RVA: 0x0008AFBF File Offset: 0x000891BF
 		public TMap<string, FName> NameValues
 		{
 			get
@@ -144,9 +144,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E94 RID: 24212
-		// (get) Token: 0x060176BE RID: 95934 RVA: 0x00223FD0 File Offset: 0x002221D0
-		// (set) Token: 0x060176BF RID: 95935 RVA: 0x00224013 File Offset: 0x00222213
+		// Token: 0x170013CC RID: 5068
+		// (get) Token: 0x06006139 RID: 24889 RVA: 0x0008AFD0 File Offset: 0x000891D0
+		// (set) Token: 0x0600613A RID: 24890 RVA: 0x0008B013 File Offset: 0x00089213
 		public TMap<string, FVector> VectorValues
 		{
 			get
@@ -165,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E95 RID: 24213
-		// (get) Token: 0x060176C0 RID: 95936 RVA: 0x00224024 File Offset: 0x00222224
-		// (set) Token: 0x060176C1 RID: 95937 RVA: 0x00224067 File Offset: 0x00222267
+		// Token: 0x170013CD RID: 5069
+		// (get) Token: 0x0600613B RID: 24891 RVA: 0x0008B024 File Offset: 0x00089224
+		// (set) Token: 0x0600613C RID: 24892 RVA: 0x0008B067 File Offset: 0x00089267
 		public TMap<string, FRotator> RotatorValues
 		{
 			get
@@ -186,9 +186,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E96 RID: 24214
-		// (get) Token: 0x060176C2 RID: 95938 RVA: 0x00224078 File Offset: 0x00222278
-		// (set) Token: 0x060176C3 RID: 95939 RVA: 0x002240BB File Offset: 0x002222BB
+		// Token: 0x170013CE RID: 5070
+		// (get) Token: 0x0600613D RID: 24893 RVA: 0x0008B078 File Offset: 0x00089278
+		// (set) Token: 0x0600613E RID: 24894 RVA: 0x0008B0BB File Offset: 0x000892BB
 		public TMap<string, FTransform> TransformValues
 		{
 			get
@@ -207,9 +207,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E97 RID: 24215
-		// (get) Token: 0x060176C4 RID: 95940 RVA: 0x002240CC File Offset: 0x002222CC
-		// (set) Token: 0x060176C5 RID: 95941 RVA: 0x0022410F File Offset: 0x0022230F
+		// Token: 0x170013CF RID: 5071
+		// (get) Token: 0x0600613F RID: 24895 RVA: 0x0008B0CC File Offset: 0x000892CC
+		// (set) Token: 0x06006140 RID: 24896 RVA: 0x0008B10F File Offset: 0x0008930F
 		public TMap<string, FGameplayTag> GameplayTagValues
 		{
 			get
@@ -228,9 +228,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E98 RID: 24216
-		// (get) Token: 0x060176C6 RID: 95942 RVA: 0x00224120 File Offset: 0x00222320
-		// (set) Token: 0x060176C7 RID: 95943 RVA: 0x00224163 File Offset: 0x00222363
+		// Token: 0x170013D0 RID: 5072
+		// (get) Token: 0x06006141 RID: 24897 RVA: 0x0008B120 File Offset: 0x00089320
+		// (set) Token: 0x06006142 RID: 24898 RVA: 0x0008B163 File Offset: 0x00089363
 		public TMap<string, UObject> ObjectValues
 		{
 			get
@@ -249,66 +249,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060176C8 RID: 95944 RVA: 0x00224171 File Offset: 0x00222371
+		// Token: 0x06006143 RID: 24899 RVA: 0x0008B171 File Offset: 0x00089371
 		public FKuroCodeFunctionPayload()
 		{
 		}
 
-		// Token: 0x060176C9 RID: 95945 RVA: 0x0022417C File Offset: 0x0022237C
-		public FKuroCodeFunctionPayload(TMap<string, int> IntValues, TMap<string, long> Int64Values, TMap<string, float> FloatValues, TMap<string, bool> BoolValues, TMap<string, string> StringValues, TMap<string, FName> NameValues, TMap<string, FVector> VectorValues, TMap<string, FRotator> RotatorValues, TMap<string, FTransform> TransformValues, TMap<string, FGameplayTag> GameplayTagValues, TMap<string, UObject> ObjectValues)
-		{
-			this.IntValues = IntValues;
-			this.Int64Values = Int64Values;
-			this.FloatValues = FloatValues;
-			this.BoolValues = BoolValues;
-			this.StringValues = StringValues;
-			this.NameValues = NameValues;
-			this.VectorValues = VectorValues;
-			this.RotatorValues = RotatorValues;
-			this.TransformValues = TransformValues;
-			this.GameplayTagValues = GameplayTagValues;
-			this.ObjectValues = ObjectValues;
-		}
-
-		// Token: 0x060176CA RID: 95946 RVA: 0x002241E4 File Offset: 0x002223E4
+		// Token: 0x06006144 RID: 24900 RVA: 0x0008B179 File Offset: 0x00089379
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroCodeFunctionPayload.StaticStruct();
 		}
 
-		// Token: 0x060176CB RID: 95947 RVA: 0x002241F0 File Offset: 0x002223F0
+		// Token: 0x06006145 RID: 24901 RVA: 0x0008B185 File Offset: 0x00089385
 		[NullableContext(2)]
 		public FKuroCodeFunctionPayload(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060176CC RID: 95948 RVA: 0x002241FA File Offset: 0x002223FA
+		// Token: 0x06006146 RID: 24902 RVA: 0x0008B18F File Offset: 0x0008938F
 		public FKuroCodeFunctionPayload(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060176CD RID: 95949 RVA: 0x00224205 File Offset: 0x00222405
+		// Token: 0x06006147 RID: 24903 RVA: 0x0008B19A File Offset: 0x0008939A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroCodeFunctionPayload(Pointer, false, true);
 		}
 
-		// Token: 0x060176CE RID: 95950 RVA: 0x0022420F File Offset: 0x0022240F
+		// Token: 0x06006148 RID: 24904 RVA: 0x0008B1A4 File Offset: 0x000893A4
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroCodeFunctionPayload(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CBC5 RID: 52165
+		// Token: 0x04002966 RID: 10598
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroCodeFunctionPayload";
 
-		// Token: 0x0400CBC6 RID: 52166
+		// Token: 0x04002967 RID: 10599
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CBC7 RID: 52167
+		// Token: 0x04002968 RID: 10600
 		internal static int __PropertyOffset_IntValues;
 
-		// Token: 0x0400CBC8 RID: 52168
+		// Token: 0x04002969 RID: 10601
 		[Nullable(new byte[]
 		{
 			2,
@@ -316,10 +300,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, int> _IntValues;
 
-		// Token: 0x0400CBC9 RID: 52169
+		// Token: 0x0400296A RID: 10602
 		internal static int __PropertyOffset_Int64Values;
 
-		// Token: 0x0400CBCA RID: 52170
+		// Token: 0x0400296B RID: 10603
 		[Nullable(new byte[]
 		{
 			2,
@@ -327,10 +311,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, long> _Int64Values;
 
-		// Token: 0x0400CBCB RID: 52171
+		// Token: 0x0400296C RID: 10604
 		internal static int __PropertyOffset_FloatValues;
 
-		// Token: 0x0400CBCC RID: 52172
+		// Token: 0x0400296D RID: 10605
 		[Nullable(new byte[]
 		{
 			2,
@@ -338,10 +322,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, float> _FloatValues;
 
-		// Token: 0x0400CBCD RID: 52173
+		// Token: 0x0400296E RID: 10606
 		internal static int __PropertyOffset_BoolValues;
 
-		// Token: 0x0400CBCE RID: 52174
+		// Token: 0x0400296F RID: 10607
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,10 +333,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, bool> _BoolValues;
 
-		// Token: 0x0400CBCF RID: 52175
+		// Token: 0x04002970 RID: 10608
 		internal static int __PropertyOffset_StringValues;
 
-		// Token: 0x0400CBD0 RID: 52176
+		// Token: 0x04002971 RID: 10609
 		[Nullable(new byte[]
 		{
 			2,
@@ -361,10 +345,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, string> _StringValues;
 
-		// Token: 0x0400CBD1 RID: 52177
+		// Token: 0x04002972 RID: 10610
 		internal static int __PropertyOffset_NameValues;
 
-		// Token: 0x0400CBD2 RID: 52178
+		// Token: 0x04002973 RID: 10611
 		[Nullable(new byte[]
 		{
 			2,
@@ -372,10 +356,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FName> _NameValues;
 
-		// Token: 0x0400CBD3 RID: 52179
+		// Token: 0x04002974 RID: 10612
 		internal static int __PropertyOffset_VectorValues;
 
-		// Token: 0x0400CBD4 RID: 52180
+		// Token: 0x04002975 RID: 10613
 		[Nullable(new byte[]
 		{
 			2,
@@ -383,10 +367,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FVector> _VectorValues;
 
-		// Token: 0x0400CBD5 RID: 52181
+		// Token: 0x04002976 RID: 10614
 		internal static int __PropertyOffset_RotatorValues;
 
-		// Token: 0x0400CBD6 RID: 52182
+		// Token: 0x04002977 RID: 10615
 		[Nullable(new byte[]
 		{
 			2,
@@ -394,10 +378,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FRotator> _RotatorValues;
 
-		// Token: 0x0400CBD7 RID: 52183
+		// Token: 0x04002978 RID: 10616
 		internal static int __PropertyOffset_TransformValues;
 
-		// Token: 0x0400CBD8 RID: 52184
+		// Token: 0x04002979 RID: 10617
 		[Nullable(new byte[]
 		{
 			2,
@@ -405,10 +389,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FTransform> _TransformValues;
 
-		// Token: 0x0400CBD9 RID: 52185
+		// Token: 0x0400297A RID: 10618
 		internal static int __PropertyOffset_GameplayTagValues;
 
-		// Token: 0x0400CBDA RID: 52186
+		// Token: 0x0400297B RID: 10619
 		[Nullable(new byte[]
 		{
 			2,
@@ -416,10 +400,10 @@ namespace UnrealEngine
 		})]
 		private TMap<string, FGameplayTag> _GameplayTagValues;
 
-		// Token: 0x0400CBDB RID: 52187
+		// Token: 0x0400297C RID: 10620
 		internal static int __PropertyOffset_ObjectValues;
 
-		// Token: 0x0400CBDC RID: 52188
+		// Token: 0x0400297D RID: 10621
 		[Nullable(new byte[]
 		{
 			2,

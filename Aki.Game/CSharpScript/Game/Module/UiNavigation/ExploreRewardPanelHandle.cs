@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048FA RID: 18682
+	// Token: 0x02003871 RID: 14449
 	public class ExploreRewardPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030D9F RID: 200095 RVA: 0x00B5860F File Offset: 0x00B5680F
+		// Token: 0x060258CC RID: 153804 RVA: 0x00A9347F File Offset: 0x00A9167F
 		[NullableContext(1)]
 		public ExploreRewardPanelHandle(string type) : base(type)
 		{

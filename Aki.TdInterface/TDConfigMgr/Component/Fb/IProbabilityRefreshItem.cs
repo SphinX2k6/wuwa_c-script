@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB8 RID: 2744
+	// Token: 0x02000B82 RID: 2946
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IProbabilityRefreshItem
 	{
-		// Token: 0x06003F3E RID: 16190 RVA: 0x000A1A0C File Offset: 0x0009FC0C
-		[NullableContext(1)]
+		// Token: 0x06004368 RID: 17256 RVA: 0x000AB000 File Offset: 0x000A9200
+		[NullableContext(0)]
 		public static IProbabilityRefreshItem Create(IProbabilityRefreshItem? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F8B RID: 3979
-		// (get) Token: 0x06003F3F RID: 16191 RVA: 0x000A1A2B File Offset: 0x0009FC2B
+		// Token: 0x1700105F RID: 4191
+		// (get) Token: 0x06004369 RID: 17257 RVA: 0x000AB01F File Offset: 0x000A921F
 		public virtual int Probability
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F8C RID: 3980
-		// (get) Token: 0x06003F40 RID: 16192 RVA: 0x000A1A38 File Offset: 0x0009FC38
+		// Token: 0x17001060 RID: 4192
+		// (get) Token: 0x0600436A RID: 17258 RVA: 0x000AB02C File Offset: 0x000A922C
 		public virtual int RefreshEntityId
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F8D RID: 3981
-		// (get) Token: 0x06003F41 RID: 16193 RVA: 0x000A1A45 File Offset: 0x0009FC45
+		// Token: 0x17001061 RID: 4193
+		// (get) Token: 0x0600436B RID: 17259 RVA: 0x000AB039 File Offset: 0x000A9239
 		public virtual IConditionGroup AdditionalCondition
 		{
 			get
@@ -60,13 +60,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400231D RID: 8989
+		// Token: 0x04002539 RID: 9529
 		private IProbabilityRefreshItem Instance;
 
-		// Token: 0x0400231E RID: 8990
+		// Token: 0x0400253A RID: 9530
 		private IConditionGroup _AdditionalConditionCache;
 
-		// Token: 0x0400231F RID: 8991
+		// Token: 0x0400253B RID: 9531
 		private bool _AdditionalConditionInited;
 	}
 }

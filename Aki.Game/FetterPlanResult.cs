@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002454 RID: 9300
+// Token: 0x02001939 RID: 6457
 public class FetterPlanResult
 {
-	// Token: 0x04008C84 RID: 35972
+	// Token: 0x04008DCB RID: 36299
 	public int Score;
 
-	// Token: 0x04008C85 RID: 35973
+	// Token: 0x04008DCC RID: 36300
 	[Nullable(1)]
 	public List<int> SelectedList;
 }

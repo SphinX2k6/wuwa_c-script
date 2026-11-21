@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200073F RID: 1855
+	// Token: 0x02000757 RID: 1879
 	public class ConfigPlayerExpAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002B8A RID: 11146 RVA: 0x0014FA78 File Offset: 0x0014DC78
+		// Token: 0x06002C1A RID: 11290 RVA: 0x001564F4 File Offset: 0x001546F4
 		static ConfigPlayerExpAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlayerExpAll.CreateStaticDefaultValue), new Action(ConfigPlayerExpAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002B8B RID: 11147 RVA: 0x0014FA98 File Offset: 0x0014DC98
+		// Token: 0x06002C1B RID: 11291 RVA: 0x00156514 File Offset: 0x00154714
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlayerExpAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002B8C RID: 11148 RVA: 0x0014FB17 File Offset: 0x0014DD17
+		// Token: 0x06002C1C RID: 11292 RVA: 0x00156593 File Offset: 0x00154793
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlayerExpAll.LogPair = null;
 			ConfigPlayerExpAll.HandleId = 0;
 		}
 
-		// Token: 0x06002B8D RID: 11149 RVA: 0x0014FB25 File Offset: 0x0014DD25
+		// Token: 0x06002C1D RID: 11293 RVA: 0x001565A1 File Offset: 0x001547A1
 		public static void Init()
 		{
 			ConfigPlayerExpAll.HandleId = ConfigCommon.InitDataStatement(ConfigPlayerExpAll.HandleId, "db_player_exp.db", "select BinData from `PlayerExp`");
 		}
 
-		// Token: 0x06002B8E RID: 11150 RVA: 0x0014FB40 File Offset: 0x0014DD40
+		// Token: 0x06002C1E RID: 11294 RVA: 0x001565BC File Offset: 0x001547BC
 		public static PlayerExp? GetConfig(bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlayerExpAll.HandleId, ConfigPlayerExpAll.LogPair))
@@ -79,7 +79,7 @@ namespace Aki.Config
 			return new PlayerExp?(rootAsPlayerExp);
 		}
 
-		// Token: 0x06002B8F RID: 11151 RVA: 0x0014FC28 File Offset: 0x0014DE28
+		// Token: 0x06002C1F RID: 11295 RVA: 0x001566A4 File Offset: 0x001548A4
 		[NullableContext(2)]
 		public static IReadOnlyList<PlayerExp> GetConfigList(bool useCache = true)
 		{
@@ -117,22 +117,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400329F RID: 12959
+		// Token: 0x04003347 RID: 13127
 		private const string DB = "db_player_exp.db";
 
-		// Token: 0x040032A0 RID: 12960
+		// Token: 0x04003348 RID: 13128
 		private const string FILE = "j.经验.xlsx";
 
-		// Token: 0x040032A1 RID: 12961
+		// Token: 0x04003349 RID: 13129
 		private const string TABLE = "PlayerExp";
 
-		// Token: 0x040032A2 RID: 12962
+		// Token: 0x0400334A RID: 13130
 		private const string COMMAND = "select BinData from `PlayerExp`";
 
-		// Token: 0x040032A3 RID: 12963
+		// Token: 0x0400334B RID: 13131
 		private const string KEY_PREFIX = "PlayerExpAll";
 
-		// Token: 0x040032A4 RID: 12964
+		// Token: 0x0400334C RID: 13132
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,7 +142,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032A5 RID: 12965
+		// Token: 0x0400334D RID: 13133
 		private static int HandleId;
 	}
 }

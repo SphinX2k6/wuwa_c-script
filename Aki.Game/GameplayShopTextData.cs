@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002340 RID: 9024
+// Token: 0x02001825 RID: 6181
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayShopTextData
 {
-	// Token: 0x06011E4E RID: 73294 RVA: 0x0046711C File Offset: 0x0046531C
+	// Token: 0x0600F2FE RID: 62206 RVA: 0x004741E4 File Offset: 0x004723E4
 	public void SetContent(string content)
 	{
 		this.Content = content;
 		this.Data = null;
 	}
 
-	// Token: 0x06011E4F RID: 73295 RVA: 0x0046712C File Offset: 0x0046532C
+	// Token: 0x0600F2FF RID: 62207 RVA: 0x004741F4 File Offset: 0x004723F4
 	[NullableContext(2)]
 	public void SetData(TableTextArgNew data)
 	{
@@ -21,10 +21,10 @@ public class GameplayShopTextData
 		this.Content = "";
 	}
 
-	// Token: 0x04008787 RID: 34695
+	// Token: 0x040088CA RID: 35018
 	public string Content = "";
 
-	// Token: 0x04008788 RID: 34696
+	// Token: 0x040088CB RID: 35019
 	[Nullable(2)]
 	public TableTextArgNew Data;
 }

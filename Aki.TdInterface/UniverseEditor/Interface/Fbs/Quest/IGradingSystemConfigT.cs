@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E7F RID: 15999
+	// Token: 0x020042BA RID: 17082
 	public class IGradingSystemConfigT
 	{
-		// Token: 0x17006EFA RID: 28410
-		// (get) Token: 0x060168CF RID: 92367 RVA: 0x00342327 File Offset: 0x00340527
-		// (set) Token: 0x060168D0 RID: 92368 RVA: 0x0034232F File Offset: 0x0034052F
+		// Token: 0x170074E2 RID: 29922
+		// (get) Token: 0x06017F06 RID: 98054 RVA: 0x0036B0AB File Offset: 0x003692AB
+		// (set) Token: 0x06017F07 RID: 98055 RVA: 0x0036B0B3 File Offset: 0x003692B3
 		public EEnableSystemType Type { get; set; }
 
-		// Token: 0x17006EFB RID: 28411
-		// (get) Token: 0x060168D1 RID: 92369 RVA: 0x00342338 File Offset: 0x00340538
-		// (set) Token: 0x060168D2 RID: 92370 RVA: 0x00342340 File Offset: 0x00340540
+		// Token: 0x170074E3 RID: 29923
+		// (get) Token: 0x06017F08 RID: 98056 RVA: 0x0036B0BC File Offset: 0x003692BC
+		// (set) Token: 0x06017F09 RID: 98057 RVA: 0x0036B0C4 File Offset: 0x003692C4
 		public int GradingSystemId { get; set; }
 
-		// Token: 0x17006EFC RID: 28412
-		// (get) Token: 0x060168D3 RID: 92371 RVA: 0x00342349 File Offset: 0x00340549
-		// (set) Token: 0x060168D4 RID: 92372 RVA: 0x00342351 File Offset: 0x00340551
+		// Token: 0x170074E4 RID: 29924
+		// (get) Token: 0x06017F0A RID: 98058 RVA: 0x0036B0CD File Offset: 0x003692CD
+		// (set) Token: 0x06017F0B RID: 98059 RVA: 0x0036B0D5 File Offset: 0x003692D5
 		public List<IGradingSystemVarT> Vars { get; set; }
 
-		// Token: 0x17006EFD RID: 28413
-		// (get) Token: 0x060168D5 RID: 92373 RVA: 0x0034235A File Offset: 0x0034055A
-		// (set) Token: 0x060168D6 RID: 92374 RVA: 0x00342362 File Offset: 0x00340562
+		// Token: 0x170074E5 RID: 29925
+		// (get) Token: 0x06017F0C RID: 98060 RVA: 0x0036B0DE File Offset: 0x003692DE
+		// (set) Token: 0x06017F0D RID: 98061 RVA: 0x0036B0E6 File Offset: 0x003692E6
 		public byte NullMask { get; set; }
 
-		// Token: 0x060168D7 RID: 92375 RVA: 0x0034236B File Offset: 0x0034056B
+		// Token: 0x06017F0E RID: 98062 RVA: 0x0036B0EF File Offset: 0x003692EF
 		public IGradingSystemConfigT()
 		{
 			this.Type = EEnableSystemType.GradingSystem;

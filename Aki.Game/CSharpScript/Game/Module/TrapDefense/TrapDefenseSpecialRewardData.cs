@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A19 RID: 18969
+	// Token: 0x020039C1 RID: 14785
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseSpecialRewardData
 	{
-		// Token: 0x060313EA RID: 201706 RVA: 0x00B6B886 File Offset: 0x00B69A86
+		// Token: 0x0602617A RID: 156026 RVA: 0x00AAF882 File Offset: 0x00AADA82
 		public static TrapDefenseSpecialRewardData Create(TrapDefenseSpecialReward config)
 		{
 			TrapDefenseSpecialRewardData trapDefenseSpecialRewardData = new TrapDefenseSpecialRewardData();
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseSpecialRewardData;
 		}
 
-		// Token: 0x060313EB RID: 201707 RVA: 0x00B6B89A File Offset: 0x00B69A9A
+		// Token: 0x0602617B RID: 156027 RVA: 0x00AAF896 File Offset: 0x00AADA96
 		public void UpdateByServerData(TrapDefenseRewardInfo serverData)
 		{
 			this.State = TrapDefenseDefine.trapDefenseRewardServerState2ClientState[serverData.TaskInfo.Status];
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.TotalProgress = serverData.TaskInfo.Target;
 		}
 
-		// Token: 0x060313EC RID: 201708 RVA: 0x00B6B8D9 File Offset: 0x00B69AD9
+		// Token: 0x0602617C RID: 156028 RVA: 0x00AAF8D5 File Offset: 0x00AADAD5
 		private void Init()
 		{
 			this.Id = this.Config.Id;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.InitRewardItemList();
 		}
 
-		// Token: 0x060313ED RID: 201709 RVA: 0x00B6B904 File Offset: 0x00B69B04
+		// Token: 0x0602617D RID: 156029 RVA: 0x00AAF900 File Offset: 0x00AADB00
 		private void InitRewardItemList()
 		{
 			this.ItemList.Clear();
@@ -58,25 +58,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A542 RID: 107842
+		// Token: 0x04014E99 RID: 85657
 		private TrapDefenseSpecialReward Config;
 
-		// Token: 0x0401A543 RID: 107843
+		// Token: 0x04014E9A RID: 85658
 		public int Id;
 
-		// Token: 0x0401A544 RID: 107844
+		// Token: 0x04014E9B RID: 85659
 		public string Desc = "";
 
-		// Token: 0x0401A545 RID: 107845
+		// Token: 0x04014E9C RID: 85660
 		public List<TItem> ItemList = new List<TItem>();
 
-		// Token: 0x0401A546 RID: 107846
+		// Token: 0x04014E9D RID: 85661
 		public int CurrentProgress;
 
-		// Token: 0x0401A547 RID: 107847
+		// Token: 0x04014E9E RID: 85662
 		public int TotalProgress;
 
-		// Token: 0x0401A548 RID: 107848
+		// Token: 0x04014E9F RID: 85663
 		public ETrapDefenseRewardState State = ETrapDefenseRewardState.InProgress;
 	}
 }

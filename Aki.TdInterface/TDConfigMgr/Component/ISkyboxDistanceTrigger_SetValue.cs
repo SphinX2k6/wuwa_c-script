@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006D3 RID: 1747
+	// Token: 0x02000774 RID: 1908
 	public class ISkyboxDistanceTrigger_SetValue
 	{
-		// Token: 0x040019A4 RID: 6564
+		// Token: 0x04001BA3 RID: 7075
 		public ETriggerMode Type;
 
-		// Token: 0x040019A5 RID: 6565
+		// Token: 0x04001BA4 RID: 7076
 		public float Distance;
 	}
 }

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C13 RID: 3091
+	// Token: 0x02000CE3 RID: 3299
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMarkMainStateTextTarget
 	{
-		// Token: 0x060046E8 RID: 18152 RVA: 0x000B2CF2 File Offset: 0x000B0EF2
-		[NullableContext(1)]
+		// Token: 0x06004B4B RID: 19275 RVA: 0x000BCEBE File Offset: 0x000BB0BE
+		[NullableContext(0)]
 		public static IMarkMainStateTextTarget Create(IMarkMainStateTextTarget? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700147F RID: 5247
-		// (get) Token: 0x060046E9 RID: 18153 RVA: 0x000B2D11 File Offset: 0x000B0F11
+		// Token: 0x17001580 RID: 5504
+		// (get) Token: 0x06004B4C RID: 19276 RVA: 0x000BCEDD File Offset: 0x000BB0DD
 		public virtual string TidTargetName
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001480 RID: 5248
-		// (get) Token: 0x060046EA RID: 18154 RVA: 0x000B2D1E File Offset: 0x000B0F1E
+		// Token: 0x17001581 RID: 5505
+		// (get) Token: 0x06004B4D RID: 19277 RVA: 0x000BCEEA File Offset: 0x000BB0EA
 		public virtual string EdTidTargetName
 		{
 			get
@@ -43,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002848 RID: 10312
+		// Token: 0x04002A94 RID: 10900
 		private IMarkMainStateTextTarget Instance;
 	}
 }

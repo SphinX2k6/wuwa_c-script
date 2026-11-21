@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.Avg
 {
-	// Token: 0x020050E8 RID: 20712
+	// Token: 0x020040B8 RID: 16568
 	public class PlotAvgUtils
 	{
-		// Token: 0x06034FA1 RID: 216993 RVA: 0x00C8C666 File Offset: 0x00C8A866
+		// Token: 0x06029E9A RID: 171674 RVA: 0x00BD994E File Offset: 0x00BD7B4E
 		public static EPlotAvgCharacterSpineDirection GetSpineDirectionByPosition(EAvgRolePosition position)
 		{
 			if (position <= EAvgRolePosition.Left2)
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return EPlotAvgCharacterSpineDirection.Left;
 		}
 
-		// Token: 0x06034FA2 RID: 216994 RVA: 0x00C8C67C File Offset: 0x00C8A87C
+		// Token: 0x06029E9B RID: 171675 RVA: 0x00BD9964 File Offset: 0x00BD7B64
 		public static AvgTalkerConfig? GetAvgTalkerConfigByTalkerId(int talkerId)
 		{
 			if (talkerId == 750088)
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return ConfigAvgTalkerConfigById.GetConfig(avgTalkerConfig, true);
 		}
 
-		// Token: 0x06034FA3 RID: 216995 RVA: 0x00C8C700 File Offset: 0x00C8A900
+		// Token: 0x06029E9C RID: 171676 RVA: 0x00BD99E8 File Offset: 0x00BD7BE8
 		public static int GetAvgTalkerIdBySpeakerId(int speakerId)
 		{
 			Speaker? config = ConfigSpeakerById.GetConfig(speakerId, true);

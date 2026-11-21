@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x0200026A RID: 618
+	// Token: 0x02000271 RID: 625
 	public class IUdpProbe
 	{
-		// Token: 0x040009FF RID: 2559
+		// Token: 0x04000A4D RID: 2637
 		[Nullable(1)]
 		public string ip;
 
-		// Token: 0x04000A00 RID: 2560
+		// Token: 0x04000A4E RID: 2638
 		public int port;
 
-		// Token: 0x04000A01 RID: 2561
+		// Token: 0x04000A4F RID: 2639
 		[Nullable(new byte[]
 		{
 			2,

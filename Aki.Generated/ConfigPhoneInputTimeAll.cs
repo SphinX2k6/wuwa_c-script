@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006BD RID: 1725
+	// Token: 0x020006D5 RID: 1749
 	public class ConfigPhoneInputTimeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600287E RID: 10366 RVA: 0x0013E858 File Offset: 0x0013CA58
+		// Token: 0x0600290E RID: 10510 RVA: 0x001452D4 File Offset: 0x001434D4
 		static ConfigPhoneInputTimeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhoneInputTimeAll.CreateStaticDefaultValue), new Action(ConfigPhoneInputTimeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600287F RID: 10367 RVA: 0x0013E878 File Offset: 0x0013CA78
+		// Token: 0x0600290F RID: 10511 RVA: 0x001452F4 File Offset: 0x001434F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhoneInputTimeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002880 RID: 10368 RVA: 0x0013E8F7 File Offset: 0x0013CAF7
+		// Token: 0x06002910 RID: 10512 RVA: 0x00145373 File Offset: 0x00143573
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhoneInputTimeAll.LogPair = null;
 			ConfigPhoneInputTimeAll.HandleId = 0;
 		}
 
-		// Token: 0x06002881 RID: 10369 RVA: 0x0013E905 File Offset: 0x0013CB05
+		// Token: 0x06002911 RID: 10513 RVA: 0x00145381 File Offset: 0x00143581
 		public static void Init()
 		{
 			ConfigPhoneInputTimeAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhoneInputTimeAll.HandleId, "db_phonemsg.db", "select BinData from `PhoneInputTime`");
 		}
 
-		// Token: 0x06002882 RID: 10370 RVA: 0x0013E920 File Offset: 0x0013CB20
+		// Token: 0x06002912 RID: 10514 RVA: 0x0014539C File Offset: 0x0014359C
 		[NullableContext(2)]
 		public static IReadOnlyList<PhoneInputTime> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002F11 RID: 12049
+		// Token: 0x04002FB9 RID: 12217
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x04002F12 RID: 12050
+		// Token: 0x04002FBA RID: 12218
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x04002F13 RID: 12051
+		// Token: 0x04002FBB RID: 12219
 		private const string TABLE = "PhoneInputTime";
 
-		// Token: 0x04002F14 RID: 12052
+		// Token: 0x04002FBC RID: 12220
 		private const string COMMAND = "select BinData from `PhoneInputTime`";
 
-		// Token: 0x04002F15 RID: 12053
+		// Token: 0x04002FBD RID: 12221
 		private const string KEY_PREFIX = "PhoneInputTimeAll";
 
-		// Token: 0x04002F16 RID: 12054
+		// Token: 0x04002FBE RID: 12222
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F17 RID: 12055
+		// Token: 0x04002FBF RID: 12223
 		private static int HandleId;
 	}
 }

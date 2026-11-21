@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F01 RID: 3841
+// Token: 0x020003B6 RID: 950
 [NullableContext(1)]
 public interface IThresholdListenerInfo
 {
-	// Token: 0x17000771 RID: 1905
-	// (get) Token: 0x06006056 RID: 24662
-	// (set) Token: 0x06006057 RID: 24663
+	// Token: 0x17000793 RID: 1939
+	// (get) Token: 0x060033EE RID: 13294
+	// (set) Token: 0x060033EF RID: 13295
 	TThresholdListener Func { get; set; }
 
-	// Token: 0x17000772 RID: 1906
-	// (get) Token: 0x06006058 RID: 24664
-	// (set) Token: 0x06006059 RID: 24665
+	// Token: 0x17000794 RID: 1940
+	// (get) Token: 0x060033F0 RID: 13296
+	// (set) Token: 0x060033F1 RID: 13297
 	float Max { get; set; }
 
-	// Token: 0x17000773 RID: 1907
-	// (get) Token: 0x0600605A RID: 24666
-	// (set) Token: 0x0600605B RID: 24667
+	// Token: 0x17000795 RID: 1941
+	// (get) Token: 0x060033F2 RID: 13298
+	// (set) Token: 0x060033F3 RID: 13299
 	float Min { get; set; }
 
-	// Token: 0x17000774 RID: 1908
-	// (get) Token: 0x0600605C RID: 24668
-	// (set) Token: 0x0600605D RID: 24669
+	// Token: 0x17000796 RID: 1942
+	// (get) Token: 0x060033F4 RID: 13300
+	// (set) Token: 0x060033F5 RID: 13301
 	bool InInterval { get; set; }
 }

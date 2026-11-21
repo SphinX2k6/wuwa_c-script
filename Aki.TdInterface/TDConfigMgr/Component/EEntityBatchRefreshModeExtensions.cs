@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000932 RID: 2354
+	// Token: 0x020009DF RID: 2527
 	public static class EEntityBatchRefreshModeExtensions
 	{
-		// Token: 0x06003512 RID: 13586 RVA: 0x0008A950 File Offset: 0x00088B50
+		// Token: 0x0600387E RID: 14462 RVA: 0x000924D0 File Offset: 0x000906D0
 		public static string ToEnumString(this EEntityBatchRefreshMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003513 RID: 13587 RVA: 0x0008A998 File Offset: 0x00088B98
+		// Token: 0x0600387F RID: 14463 RVA: 0x00092518 File Offset: 0x00090718
 		public static EEntityBatchRefreshMode FromString(string name)
 		{
 			EEntityBatchRefreshMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003514 RID: 13588 RVA: 0x0008A9C4 File Offset: 0x00088BC4
+		// Token: 0x06003880 RID: 14464 RVA: 0x00092544 File Offset: 0x00090744
 		public static bool TryFromString(string name, out EEntityBatchRefreshMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003515 RID: 13589 RVA: 0x0008AA1A File Offset: 0x00088C1A
+		// Token: 0x06003881 RID: 14465 RVA: 0x0009259A File Offset: 0x0009079A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003516 RID: 13590 RVA: 0x0008AA3A File Offset: 0x00088C3A
+		// Token: 0x06003882 RID: 14466 RVA: 0x000925BA File Offset: 0x000907BA
 		public static EEntityBatchRefreshMode[] GetValues()
 		{
 			return new EEntityBatchRefreshMode[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003517 RID: 13591 RVA: 0x0008AA4A File Offset: 0x00088C4A
+		// Token: 0x06003883 RID: 14467 RVA: 0x000925CA File Offset: 0x000907CA
 		public static string[] GetNames()
 		{
 			return new string[]

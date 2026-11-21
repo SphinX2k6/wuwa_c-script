@@ -5,41 +5,39 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001000 RID: 4096
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200112C RID: 4396
 	public class ILogicNodeOccupation_SetValue
 	{
-		// Token: 0x0400371A RID: 14106
+		// Token: 0x04003A52 RID: 14930
 		public List<string> Occupations;
 
-		// Token: 0x0400371B RID: 14107
+		// Token: 0x04003A53 RID: 14931
 		public string TidDesc;
 
-		// Token: 0x0400371C RID: 14108
+		// Token: 0x04003A54 RID: 14932
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitActions;
 
-		// Token: 0x0400371D RID: 14109
+		// Token: 0x04003A55 RID: 14933
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ReenterActions;
 
-		// Token: 0x0400371E RID: 14110
+		// Token: 0x04003A56 RID: 14934
 		[Nullable(2)]
 		public List<int> BanInteractEntities;
 
-		// Token: 0x0400371F RID: 14111
+		// Token: 0x04003A57 RID: 14935
 		public bool? ReclaimOccupationWhenEnter;
 
-		// Token: 0x04003720 RID: 14112
+		// Token: 0x04003A58 RID: 14936
 		[Nullable(2)]
 		public string EdTidDesc;
 	}

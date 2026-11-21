@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001716 RID: 5910
+// Token: 0x02000BCE RID: 3022
 public class BuffItemData
 {
-	// Token: 0x0600AA59 RID: 43609 RVA: 0x002646AE File Offset: 0x002628AE
+	// Token: 0x06007E3C RID: 32316 RVA: 0x0026EBFE File Offset: 0x0026CDFE
 	public BuffItemData(int itemConfigId, double endCdTimeStamp, double totalCdTime)
 	{
 		this.ItemConfigIdInternal = itemConfigId;
@@ -11,8 +11,8 @@ public class BuffItemData
 		this.SetEndCdTimeStamp(endCdTimeStamp);
 	}
 
-	// Token: 0x17000E06 RID: 3590
-	// (get) Token: 0x0600AA5A RID: 43610 RVA: 0x002646CB File Offset: 0x002628CB
+	// Token: 0x17000E27 RID: 3623
+	// (get) Token: 0x06007E3D RID: 32317 RVA: 0x0026EC1B File Offset: 0x0026CE1B
 	public int ItemConfigId
 	{
 		get
@@ -21,8 +21,8 @@ public class BuffItemData
 		}
 	}
 
-	// Token: 0x17000E07 RID: 3591
-	// (get) Token: 0x0600AA5B RID: 43611 RVA: 0x002646D3 File Offset: 0x002628D3
+	// Token: 0x17000E28 RID: 3624
+	// (get) Token: 0x06007E3E RID: 32318 RVA: 0x0026EC23 File Offset: 0x0026CE23
 	public double EndCdTimeStamp
 	{
 		get
@@ -31,7 +31,7 @@ public class BuffItemData
 		}
 	}
 
-	// Token: 0x0600AA5C RID: 43612 RVA: 0x002646DB File Offset: 0x002628DB
+	// Token: 0x06007E3F RID: 32319 RVA: 0x0026EC2B File Offset: 0x0026CE2B
 	public void SetEndCdTimeStamp(double endCdTimeStamp)
 	{
 		this.EndCdTimeStampInternal = endCdTimeStamp / (double)TimeUtil.Instance.InverseMillisecond;
@@ -39,36 +39,36 @@ public class BuffItemData
 		this.StartCdWorldTime = Time.Instance.WorldTimeSeconds;
 	}
 
-	// Token: 0x0600AA5D RID: 43613 RVA: 0x00264710 File Offset: 0x00262910
+	// Token: 0x06007E40 RID: 32320 RVA: 0x0026EC60 File Offset: 0x0026CE60
 	public void SetTotalCdTime(double totalCdTime)
 	{
 		this.TotalCdTime = totalCdTime;
 	}
 
-	// Token: 0x0600AA5E RID: 43614 RVA: 0x00264719 File Offset: 0x00262919
+	// Token: 0x06007E41 RID: 32321 RVA: 0x0026EC69 File Offset: 0x0026CE69
 	public double GetBuffItemRemainCdTime()
 	{
 		return Math.Max(this.EndCdTimeStampInternal - (Time.Instance.WorldTimeSeconds - this.StartCdWorldTime + this.StartCdTimeStampInternal), 0.0);
 	}
 
-	// Token: 0x0600AA5F RID: 43615 RVA: 0x00264748 File Offset: 0x00262948
+	// Token: 0x06007E42 RID: 32322 RVA: 0x0026EC98 File Offset: 0x0026CE98
 	public double GetBuffItemTotalCdTime()
 	{
 		return this.TotalCdTime;
 	}
 
-	// Token: 0x04004D51 RID: 19793
+	// Token: 0x04004DF9 RID: 19961
 	private readonly int ItemConfigIdInternal;
 
-	// Token: 0x04004D52 RID: 19794
+	// Token: 0x04004DFA RID: 19962
 	private double EndCdTimeStampInternal;
 
-	// Token: 0x04004D53 RID: 19795
+	// Token: 0x04004DFB RID: 19963
 	private double StartCdTimeStampInternal;
 
-	// Token: 0x04004D54 RID: 19796
+	// Token: 0x04004DFC RID: 19964
 	private double StartCdWorldTime;
 
-	// Token: 0x04004D55 RID: 19797
+	// Token: 0x04004DFD RID: 19965
 	private double TotalCdTime;
 }

@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x02000994 RID: 2452
+	// Token: 0x02000A69 RID: 2665
 	public class ConfigSubtitleTextLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600398C RID: 14732 RVA: 0x0019EEA0 File Offset: 0x0019D0A0
+		// Token: 0x06003E8A RID: 16010 RVA: 0x001BE234 File Offset: 0x001BC434
 		static ConfigSubtitleTextLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSubtitleTextLang.CreateStaticDefaultValue), new Action(ConfigSubtitleTextLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600398D RID: 14733 RVA: 0x0019EEC0 File Offset: 0x0019D0C0
+		// Token: 0x06003E8B RID: 16011 RVA: 0x001BE254 File Offset: 0x001BC454
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSubtitleTextLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigSubtitleTextLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x0600398E RID: 14734 RVA: 0x0019EF33 File Offset: 0x0019D133
+		// Token: 0x06003E8C RID: 16012 RVA: 0x001BE2C7 File Offset: 0x001BC4C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSubtitleTextLang.LogPair = null;
@@ -35,13 +35,13 @@ namespace Aki.Config
 			ConfigSubtitleTextLang.HandleId = 0;
 		}
 
-		// Token: 0x0600398F RID: 14735 RVA: 0x0019EF47 File Offset: 0x0019D147
+		// Token: 0x06003E8D RID: 16013 RVA: 0x001BE2DB File Offset: 0x001BC4DB
 		public static void Init()
 		{
 			ConfigSubtitleTextLang.HandleId = ConfigCommon.GetLangStatementId("SubtitleText", "lang_subtitle_text.db", "select content from `SubtitleText` where id = ?", "");
 		}
 
-		// Token: 0x06003990 RID: 14736 RVA: 0x0019EF68 File Offset: 0x0019D168
+		// Token: 0x06003E8E RID: 16014 RVA: 0x001BE2FC File Offset: 0x001BC4FC
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
@@ -107,19 +107,19 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x040042F2 RID: 17138
+		// Token: 0x040048C5 RID: 18629
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x040042F3 RID: 17139
+		// Token: 0x040048C6 RID: 18630
 		private const string DB = "lang_subtitle_text.db";
 
-		// Token: 0x040042F4 RID: 17140
+		// Token: 0x040048C7 RID: 18631
 		private const string TABLE = "SubtitleText";
 
-		// Token: 0x040042F5 RID: 17141
+		// Token: 0x040048C8 RID: 18632
 		private const string COMMAND = "select content from `SubtitleText` where id = ?";
 
-		// Token: 0x040042F6 RID: 17142
+		// Token: 0x040048C9 RID: 18633
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042F7 RID: 17143
+		// Token: 0x040048CA RID: 18634
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<int, Dictionary<string, string>> LangCache;
 
-		// Token: 0x040042F8 RID: 17144
+		// Token: 0x040048CB RID: 18635
 		private static int HandleId;
 	}
 }

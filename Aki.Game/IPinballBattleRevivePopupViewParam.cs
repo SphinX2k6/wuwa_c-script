@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001D0F RID: 7439
+// Token: 0x020011D1 RID: 4561
 [NullableContext(2)]
 public interface IPinballBattleRevivePopupViewParam
 {
-	// Token: 0x17001215 RID: 4629
-	// (get) Token: 0x0600E0EE RID: 57582
+	// Token: 0x1700123F RID: 4671
+	// (get) Token: 0x0600B50B RID: 46347
 	Action ConfirmCallback { get; }
 
-	// Token: 0x17001216 RID: 4630
-	// (get) Token: 0x0600E0EF RID: 57583
+	// Token: 0x17001240 RID: 4672
+	// (get) Token: 0x0600B50C RID: 46348
 	Action CancelCallback { get; }
 }

@@ -3,43 +3,41 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016FF RID: 5887
+	// Token: 0x0200187B RID: 6267
 	[EnumExtensions]
 	public enum EVisualNovelPerformanceType
 	{
-		// Token: 0x04004FAE RID: 20398
+		// Token: 0x040053DC RID: 21468
 		Enter,
-		// Token: 0x04004FAF RID: 20399
+		// Token: 0x040053DD RID: 21469
 		Exit,
-		// Token: 0x04004FB0 RID: 20400
+		// Token: 0x040053DE RID: 21470
 		Move,
-		// Token: 0x04004FB1 RID: 20401
+		// Token: 0x040053DF RID: 21471
 		ModifyRole,
-		// Token: 0x04004FB2 RID: 20402
+		// Token: 0x040053E0 RID: 21472
 		PortraitEffect,
-		// Token: 0x04004FB3 RID: 20403
-		UiShake,
-		// Token: 0x04004FB4 RID: 20404
+		// Token: 0x040053E1 RID: 21473
 		BackgroundMove,
-		// Token: 0x04004FB5 RID: 20405
+		// Token: 0x040053E2 RID: 21474
 		CgMove,
-		// Token: 0x04004FB6 RID: 20406
+		// Token: 0x040053E3 RID: 21475
 		EnterBlackScreen,
-		// Token: 0x04004FB7 RID: 20407
+		// Token: 0x040053E4 RID: 21476
 		LeaveBlackScreen,
-		// Token: 0x04004FB8 RID: 20408
+		// Token: 0x040053E5 RID: 21477
 		PlayScreenEffect,
-		// Token: 0x04004FB9 RID: 20409
+		// Token: 0x040053E6 RID: 21478
 		StopScreenEffect,
-		// Token: 0x04004FBA RID: 20410
+		// Token: 0x040053E7 RID: 21479
 		SendAudioEvent,
-		// Token: 0x04004FBB RID: 20411
+		// Token: 0x040053E8 RID: 21480
 		SwitchAudioState,
-		// Token: 0x04004FBC RID: 20412
+		// Token: 0x040053E9 RID: 21481
 		Transition,
-		// Token: 0x04004FBD RID: 20413
+		// Token: 0x040053EA RID: 21482
 		RoleIntroduction,
-		// Token: 0x04004FBE RID: 20414
+		// Token: 0x040053EB RID: 21483
 		ActivityAction
 	}
 }

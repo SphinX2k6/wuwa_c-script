@@ -3,16 +3,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002B00 RID: 11008
+	// Token: 0x020008B0 RID: 2224
 	[AttributeUsage(AttributeTargets.Method, Inherited = false)]
 	public class UFunctionAttribute : Attribute
 	{
-		// Token: 0x0602849E RID: 165022 RVA: 0x003D4B81 File Offset: 0x003D2D81
+		// Token: 0x0600BE58 RID: 48728 RVA: 0x0012FEDD File Offset: 0x0012E0DD
 		public UFunctionAttribute(EFunctionFlags flags = EFunctionFlags.FUNC_None)
 		{
 		}
 
-		// Token: 0x040162C0 RID: 90816
+		// Token: 0x040056D8 RID: 22232
 		public EFunctionFlags Flags = flags;
 	}
 }

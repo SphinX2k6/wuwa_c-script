@@ -7,8 +7,8 @@ using UnrealEngine.Utils;
 // Token: 0x020000FA RID: 250
 public class AsyncAiSenseObject
 {
-	// Token: 0x17000262 RID: 610
-	// (get) Token: 0x06000E16 RID: 3606 RVA: 0x00050517 File Offset: 0x0004E717
+	// Token: 0x17000265 RID: 613
+	// (get) Token: 0x06000E1C RID: 3612 RVA: 0x000510A7 File Offset: 0x0004F2A7
 	public static int Size
 	{
 		get
@@ -17,8 +17,8 @@ public class AsyncAiSenseObject
 		}
 	}
 
-	// Token: 0x17000263 RID: 611
-	// (get) Token: 0x06000E17 RID: 3607 RVA: 0x0005051F File Offset: 0x0004E71F
+	// Token: 0x17000266 RID: 614
+	// (get) Token: 0x06000E1D RID: 3613 RVA: 0x000510AF File Offset: 0x0004F2AF
 	public static int MinAlignment
 	{
 		get
@@ -27,7 +27,7 @@ public class AsyncAiSenseObject
 		}
 	}
 
-	// Token: 0x06000E18 RID: 3608 RVA: 0x00050524 File Offset: 0x0004E724
+	// Token: 0x06000E1E RID: 3614 RVA: 0x000510B4 File Offset: 0x0004F2B4
 	public unsafe AsyncAiSenseObject(AiSense AiSense)
 	{
 		this.AiSenseObjectData = (FAiSenseObject*)BuiltinUtils.Malloc((UIntPtr)((IntPtr)AsyncAiSenseObject.Size), (uint)AsyncAiSenseObject.MinAlignment);
@@ -45,7 +45,7 @@ public class AsyncAiSenseObject
 		this.AiSenseObjectData->SquaredAirSenseRate = AiSense.AirSenseRate * AiSense.AirSenseRate;
 	}
 
-	// Token: 0x06000E19 RID: 3609 RVA: 0x00050714 File Offset: 0x0004E914
+	// Token: 0x06000E1F RID: 3615 RVA: 0x000512A4 File Offset: 0x0004F4A4
 	unsafe ~AsyncAiSenseObject()
 	{
 		if (this.AiSenseObjectData != null)
@@ -55,7 +55,7 @@ public class AsyncAiSenseObject
 		}
 	}
 
-	// Token: 0x06000E1A RID: 3610 RVA: 0x00050758 File Offset: 0x0004E958
+	// Token: 0x06000E20 RID: 3616 RVA: 0x000512E8 File Offset: 0x0004F4E8
 	public unsafe void Clear()
 	{
 		if (this.AiPerceptionDataHandle != 0)
@@ -65,18 +65,18 @@ public class AsyncAiSenseObject
 		}
 	}
 
-	// Token: 0x04000B77 RID: 2935
+	// Token: 0x04000B7F RID: 2943
 	public unsafe FAiSenseObject* AiSenseObjectData;
 
-	// Token: 0x04000B78 RID: 2936
+	// Token: 0x04000B80 RID: 2944
 	public int AiPerceptionDataHandle;
 
-	// Token: 0x04000B79 RID: 2937
+	// Token: 0x04000B81 RID: 2945
 	private const float MINUS_HALF = -180f;
 
-	// Token: 0x04000B7A RID: 2938
+	// Token: 0x04000B82 RID: 2946
 	private const float MINUS_QUATER = -90f;
 
-	// Token: 0x04000B7B RID: 2939
+	// Token: 0x04000B83 RID: 2947
 	public readonly AiSense AiSense;
 }

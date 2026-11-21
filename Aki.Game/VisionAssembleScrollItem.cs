@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200248E RID: 9358
+// Token: 0x02001975 RID: 6517
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollItemData>
 {
-	// Token: 0x06012C83 RID: 76931 RVA: 0x004A2108 File Offset: 0x004A0308
+	// Token: 0x06010144 RID: 65860 RVA: 0x004AFBF8 File Offset: 0x004ADDF8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,13 +37,13 @@ public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollIt
 		};
 	}
 
-	// Token: 0x06012C84 RID: 76932 RVA: 0x004A2221 File Offset: 0x004A0421
+	// Token: 0x06010145 RID: 65861 RVA: 0x004AFD11 File Offset: 0x004ADF11
 	private bool CanToggleExecuteChange()
 	{
 		return !this.CurrentData.CurrentSelectState && this.CurrentData.CheckIfCanSelect();
 	}
 
-	// Token: 0x06012C85 RID: 76933 RVA: 0x004A2244 File Offset: 0x004A0444
+	// Token: 0x06010146 RID: 65862 RVA: 0x004AFD34 File Offset: 0x004ADF34
 	[NullableContext(0)]
 	private UniTask<bool> InitItem()
 	{
@@ -55,7 +55,7 @@ public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollIt
 		return <InitItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C86 RID: 76934 RVA: 0x004A2287 File Offset: 0x004A0487
+	// Token: 0x06010147 RID: 65863 RVA: 0x004AFD77 File Offset: 0x004ADF77
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.CurrentData != null)
@@ -64,7 +64,7 @@ public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollIt
 		}
 	}
 
-	// Token: 0x06012C87 RID: 76935 RVA: 0x004A22AC File Offset: 0x004A04AC
+	// Token: 0x06010148 RID: 65864 RVA: 0x004AFD9C File Offset: 0x004ADF9C
 	public override void Refresh(VisionAssembleScrollItemData data, bool isSelected, int gridIndex)
 	{
 		base.GetExtendToggle(9).CanExecuteChange.Unbind();
@@ -93,13 +93,13 @@ public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollIt
 		this.RefreshAssembleItem(data);
 	}
 
-	// Token: 0x06012C88 RID: 76936 RVA: 0x004A23DD File Offset: 0x004A05DD
+	// Token: 0x06010149 RID: 65865 RVA: 0x004AFECD File Offset: 0x004AE0CD
 	public override void Clear()
 	{
 		this.ResetToUnCheckedWithAnimSkipped();
 	}
 
-	// Token: 0x06012C89 RID: 76937 RVA: 0x004A23E8 File Offset: 0x004A05E8
+	// Token: 0x0601014A RID: 65866 RVA: 0x004AFED8 File Offset: 0x004AE0D8
 	private UniTask RefreshAssembleItem(VisionAssembleScrollItemData data)
 	{
 		VisionAssembleScrollItem.<RefreshAssembleItem>d__10 <RefreshAssembleItem>d__;
@@ -111,7 +111,7 @@ public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollIt
 		return <RefreshAssembleItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C8A RID: 76938 RVA: 0x004A2434 File Offset: 0x004A0634
+	// Token: 0x0601014B RID: 65867 RVA: 0x004AFF24 File Offset: 0x004AE124
 	private void ResetToUnCheckedWithAnimSkipped()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(9);
@@ -125,40 +125,40 @@ public class VisionAssembleScrollItem : GridProxyAbstract<VisionAssembleScrollIt
 		(extendToggle.GetOwner() as AUIBaseActor).SequenceJumpToEnd(levelSequence);
 	}
 
-	// Token: 0x04008D6D RID: 36205
+	// Token: 0x04008EB6 RID: 36534
 	private readonly List<VisionAssembleItem> AssembleItemList = new List<VisionAssembleItem>();
 
-	// Token: 0x04008D6E RID: 36206
+	// Token: 0x04008EB7 RID: 36535
 	[Nullable(2)]
 	private VisionAssembleScrollItemData CurrentData;
 
-	// Token: 0x04008D6F RID: 36207
+	// Token: 0x04008EB8 RID: 36536
 	[Nullable(2)]
 	private CustomPromise<bool> InitCustomPromise;
 
-	// Token: 0x02008A07 RID: 35335
+	// Token: 0x02007B91 RID: 31633
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD30 RID: 183600
+		// Token: 0x04028050 RID: 163920
 		EmptyItem,
-		// Token: 0x0402CD31 RID: 183601
+		// Token: 0x04028051 RID: 163921
 		EmptyItemText,
-		// Token: 0x0402CD32 RID: 183602
+		// Token: 0x04028052 RID: 163922
 		VisionAssembleItem1,
-		// Token: 0x0402CD33 RID: 183603
+		// Token: 0x04028053 RID: 163923
 		VisionAssembleItem2,
-		// Token: 0x0402CD34 RID: 183604
+		// Token: 0x04028054 RID: 163924
 		VisionAssembleItem3,
-		// Token: 0x0402CD35 RID: 183605
+		// Token: 0x04028055 RID: 163925
 		VisionAssembleItem4,
-		// Token: 0x0402CD36 RID: 183606
+		// Token: 0x04028056 RID: 163926
 		VisionAssembleItem5,
-		// Token: 0x0402CD37 RID: 183607
+		// Token: 0x04028057 RID: 163927
 		NumText,
-		// Token: 0x0402CD38 RID: 183608
+		// Token: 0x04028058 RID: 163928
 		NameText,
-		// Token: 0x0402CD39 RID: 183609
+		// Token: 0x04028059 RID: 163929
 		Toggle
 	}
 }

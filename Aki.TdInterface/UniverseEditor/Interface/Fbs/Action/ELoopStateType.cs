@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F9C RID: 24476
+	// Token: 0x020065ED RID: 26093
 	public enum ELoopStateType : byte
 	{
-		// Token: 0x0400FE7D RID: 65149
+		// Token: 0x04010C2F RID: 68655
 		Prev,
-		// Token: 0x0400FE7E RID: 65150
+		// Token: 0x04010C30 RID: 68656
 		Next
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001970 RID: 6512
+// Token: 0x02000E2D RID: 3629
 [NullableContext(1)]
 [Nullable(0)]
 public class SmallItemGridCurrentEquipmentComponent : SmallItemGridVisibleComponent
 {
-	// Token: 0x0600BEBD RID: 48829 RVA: 0x002B2884 File Offset: 0x002B0A84
+	// Token: 0x060092C5 RID: 37573 RVA: 0x002BD808 File Offset: 0x002BBA08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -23,7 +23,7 @@ public class SmallItemGridCurrentEquipmentComponent : SmallItemGridVisibleCompon
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BEBE RID: 48830 RVA: 0x002B28F0 File Offset: 0x002B0AF0
+	// Token: 0x060092C6 RID: 37574 RVA: 0x002BD874 File Offset: 0x002BBA74
 	protected override void OnStart()
 	{
 		FColor color = FColor.FromHex("D5A831FF");
@@ -32,39 +32,39 @@ public class SmallItemGridCurrentEquipmentComponent : SmallItemGridVisibleCompon
 		base.GetSprite(1).SetColor(color2);
 	}
 
-	// Token: 0x0600BEBF RID: 48831 RVA: 0x002B292D File Offset: 0x002B0B2D
+	// Token: 0x060092C7 RID: 37575 RVA: 0x002BD8B1 File Offset: 0x002BBAB1
 	[NullableContext(2)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemSelTick";
 	}
 
-	// Token: 0x0600BEC0 RID: 48832 RVA: 0x002B2934 File Offset: 0x002B0B34
+	// Token: 0x060092C8 RID: 37576 RVA: 0x002BD8B8 File Offset: 0x002BBAB8
 	protected override void OnRefresh(object bVisible)
 	{
 		base.OnRefresh(bVisible);
 		base.SetUiActive((bool)bVisible);
 	}
 
-	// Token: 0x0600BEC1 RID: 48833 RVA: 0x002B2949 File Offset: 0x002B0B49
+	// Token: 0x060092C9 RID: 37577 RVA: 0x002BD8CD File Offset: 0x002BBACD
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x040055C4 RID: 21956
+	// Token: 0x04005671 RID: 22129
 	private const string BG_COLOR = "D5A831FF";
 
-	// Token: 0x040055C5 RID: 21957
+	// Token: 0x04005672 RID: 22130
 	private const string TOP_COLOR = "FFFFFFFF";
 
-	// Token: 0x02007EBF RID: 32447
+	// Token: 0x0200704E RID: 28750
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x040296F6 RID: 169718
+		// Token: 0x04024A33 RID: 150067
 		Sprite,
-		// Token: 0x040296F7 RID: 169719
+		// Token: 0x04024A34 RID: 150068
 		TopSprite
 	}
 }

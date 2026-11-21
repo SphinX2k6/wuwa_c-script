@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003553 RID: 13651
+// Token: 0x02002AC8 RID: 10952
 public static class CharacterFootEffectComponent_EFootstepTextureExtensions
 {
-	// Token: 0x0601DF9C RID: 122780 RVA: 0x00866BE0 File Offset: 0x00864DE0
+	// Token: 0x0601BCC4 RID: 113860 RVA: 0x0088E7A4 File Offset: 0x0088C9A4
 	public static string ToEnumString(this CharacterFootEffectComponent.EFootstepTexture value)
 	{
 		string result;
@@ -52,7 +52,7 @@ public static class CharacterFootEffectComponent_EFootstepTextureExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF9D RID: 122781 RVA: 0x00866C94 File Offset: 0x00864E94
+	// Token: 0x0601BCC5 RID: 113861 RVA: 0x0088E858 File Offset: 0x0088CA58
 	public static CharacterFootEffectComponent.EFootstepTexture FromString(string name)
 	{
 		CharacterFootEffectComponent.EFootstepTexture result;
@@ -63,7 +63,7 @@ public static class CharacterFootEffectComponent_EFootstepTextureExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF9E RID: 122782 RVA: 0x00866CC0 File Offset: 0x00864EC0
+	// Token: 0x0601BCC6 RID: 113862 RVA: 0x0088E884 File Offset: 0x0088CA84
 	public static bool TryFromString(string name, out CharacterFootEffectComponent.EFootstepTexture value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -188,7 +188,7 @@ public static class CharacterFootEffectComponent_EFootstepTextureExtensions
 		return false;
 	}
 
-	// Token: 0x0601DF9F RID: 122783 RVA: 0x00866E94 File Offset: 0x00865094
+	// Token: 0x0601BCC7 RID: 113863 RVA: 0x0088EA58 File Offset: 0x0088CC58
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -208,7 +208,7 @@ public static class CharacterFootEffectComponent_EFootstepTextureExtensions
 		};
 	}
 
-	// Token: 0x0601DFA0 RID: 122784 RVA: 0x00866F0B File Offset: 0x0086510B
+	// Token: 0x0601BCC8 RID: 113864 RVA: 0x0088EACF File Offset: 0x0088CCCF
 	public static CharacterFootEffectComponent.EFootstepTexture[] GetValues()
 	{
 		return new CharacterFootEffectComponent.EFootstepTexture[]
@@ -228,7 +228,7 @@ public static class CharacterFootEffectComponent_EFootstepTextureExtensions
 		};
 	}
 
-	// Token: 0x0601DFA1 RID: 122785 RVA: 0x00866F20 File Offset: 0x00865120
+	// Token: 0x0601BCC9 RID: 113865 RVA: 0x0088EAE4 File Offset: 0x0088CCE4
 	public static string[] GetNames()
 	{
 		return new string[]

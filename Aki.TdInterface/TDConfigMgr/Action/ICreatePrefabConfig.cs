@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001940 RID: 6464
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AC9 RID: 6857
 	public class ICreatePrefabConfig
 	{
-		// Token: 0x06008A8F RID: 35471 RVA: 0x00146514 File Offset: 0x00144714
+		// Token: 0x060091BB RID: 37307 RVA: 0x00155E54 File Offset: 0x00154054
 		private ICreatePrefabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A90 RID: 35472 RVA: 0x0014654C File Offset: 0x0014474C
+		// Token: 0x060091BC RID: 37308 RVA: 0x00155E8C File Offset: 0x0015408C
 		public static ICreatePrefabConfig Create([Nullable(2)] ICreatePrefabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A91 RID: 35473 RVA: 0x0014655F File Offset: 0x0014475F
+		// Token: 0x060091BD RID: 37309 RVA: 0x00155E9F File Offset: 0x0015409F
 		public static ICreatePrefabConfig CreateFromSetValue([Nullable(2)] ICreatePrefabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A92 RID: 35474 RVA: 0x00146572 File Offset: 0x00144772
+		// Token: 0x060091BE RID: 37310 RVA: 0x00155EB2 File Offset: 0x001540B2
 		public ICreatePrefabConfig_SetValue ToSetValue()
 		{
 			return new ICreatePrefabConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CBC RID: 11452
-		// (get) Token: 0x06008A93 RID: 35475 RVA: 0x00146585 File Offset: 0x00144785
-		// (set) Token: 0x06008A94 RID: 35476 RVA: 0x001465B0 File Offset: 0x001447B0
+		// Token: 0x17002EBC RID: 11964
+		// (get) Token: 0x060091BF RID: 37311 RVA: 0x00155EC5 File Offset: 0x001540C5
+		// (set) Token: 0x060091C0 RID: 37312 RVA: 0x00155EF0 File Offset: 0x001540F0
 		public virtual ECreatePrefabType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005697 RID: 22167
+		// Token: 0x04005AE7 RID: 23271
 		[Nullable(2)]
 		protected ICreatePrefabConfig FbInstance;
 
-		// Token: 0x04005698 RID: 22168
+		// Token: 0x04005AE8 RID: 23272
 		[Nullable(2)]
 		protected ICreatePrefabConfig_SetValue PocoInterface;
 	}

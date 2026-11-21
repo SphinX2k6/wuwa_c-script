@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064CB RID: 25803
+	// Token: 0x02005449 RID: 21577
 	public static class EMatchThreePieceSequenceExtensions
 	{
-		// Token: 0x06040C25 RID: 265253 RVA: 0x00FADFB4 File Offset: 0x00FAC1B4
+		// Token: 0x060358E9 RID: 219369 RVA: 0x00EF4FFC File Offset: 0x00EF31FC
 		public static string ToEnumString(this EMatchThreePieceSequence value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return result;
 		}
 
-		// Token: 0x06040C26 RID: 265254 RVA: 0x00FADFFC File Offset: 0x00FAC1FC
+		// Token: 0x060358EA RID: 219370 RVA: 0x00EF5044 File Offset: 0x00EF3244
 		public static EMatchThreePieceSequence FromString(string name)
 		{
 			EMatchThreePieceSequence result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return result;
 		}
 
-		// Token: 0x06040C27 RID: 265255 RVA: 0x00FAE028 File Offset: 0x00FAC228
+		// Token: 0x060358EB RID: 219371 RVA: 0x00EF5070 File Offset: 0x00EF3270
 		public static bool TryFromString(string name, out EMatchThreePieceSequence value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return true;
 		}
 
-		// Token: 0x06040C28 RID: 265256 RVA: 0x00FAE07E File Offset: 0x00FAC27E
+		// Token: 0x060358EC RID: 219372 RVA: 0x00EF50C6 File Offset: 0x00EF32C6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			};
 		}
 
-		// Token: 0x06040C29 RID: 265257 RVA: 0x00FAE09E File Offset: 0x00FAC29E
+		// Token: 0x060358ED RID: 219373 RVA: 0x00EF50E6 File Offset: 0x00EF32E6
 		public static EMatchThreePieceSequence[] GetValues()
 		{
 			return new EMatchThreePieceSequence[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			};
 		}
 
-		// Token: 0x06040C2A RID: 265258 RVA: 0x00FAE0AE File Offset: 0x00FAC2AE
+		// Token: 0x060358EE RID: 219374 RVA: 0x00EF50F6 File Offset: 0x00EF32F6
 		public static string[] GetNames()
 		{
 			return new string[]

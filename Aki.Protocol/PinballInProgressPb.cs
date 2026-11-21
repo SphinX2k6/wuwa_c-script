@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D4F RID: 3407
+	// Token: 0x02000D3F RID: 3391
 	public sealed class PinballInProgressPb : IMessage<PinballInProgressPb>, IMessage, IEquatable<PinballInProgressPb>, IDeepCloneable<PinballInProgressPb>, IBufferMessage
 	{
-		// Token: 0x06012607 RID: 75271 RVA: 0x002AE591 File Offset: 0x002AC791
+		// Token: 0x0601250B RID: 75019 RVA: 0x002AC971 File Offset: 0x002AAB71
 		[NullableContext(1)]
 		public static PinballInProgressPb Create()
 		{
 			return new PinballInProgressPb();
 		}
 
-		// Token: 0x17003CE2 RID: 15586
-		// (get) Token: 0x06012608 RID: 75272 RVA: 0x002AE598 File Offset: 0x002AC798
+		// Token: 0x17003CAD RID: 15533
+		// (get) Token: 0x0601250C RID: 75020 RVA: 0x002AC978 File Offset: 0x002AAB78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CE3 RID: 15587
-		// (get) Token: 0x06012609 RID: 75273 RVA: 0x002AE59B File Offset: 0x002AC79B
+		// Token: 0x17003CAE RID: 15534
+		// (get) Token: 0x0601250D RID: 75021 RVA: 0x002AC97B File Offset: 0x002AAB7B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601260A RID: 75274 RVA: 0x002AE5A2 File Offset: 0x002AC7A2
+		// Token: 0x0601250E RID: 75022 RVA: 0x002AC982 File Offset: 0x002AAB82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInProgressPb()
 		{
 		}
 
-		// Token: 0x0601260B RID: 75275 RVA: 0x002AE5D8 File Offset: 0x002AC7D8
+		// Token: 0x0601250F RID: 75023 RVA: 0x002AC9B8 File Offset: 0x002AABB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInProgressPb(PinballInProgressPb other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601260C RID: 75276 RVA: 0x002AE664 File Offset: 0x002AC864
+		// Token: 0x06012510 RID: 75024 RVA: 0x002ACA44 File Offset: 0x002AAC44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballInProgressPb Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new PinballInProgressPb(this);
 		}
 
-		// Token: 0x17003CE4 RID: 15588
-		// (get) Token: 0x0601260D RID: 75277 RVA: 0x002AE66C File Offset: 0x002AC86C
-		// (set) Token: 0x0601260E RID: 75278 RVA: 0x002AE674 File Offset: 0x002AC874
+		// Token: 0x17003CAF RID: 15535
+		// (get) Token: 0x06012511 RID: 75025 RVA: 0x002ACA4C File Offset: 0x002AAC4C
+		// (set) Token: 0x06012512 RID: 75026 RVA: 0x002ACA54 File Offset: 0x002AAC54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelId
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CE5 RID: 15589
-		// (get) Token: 0x0601260F RID: 75279 RVA: 0x002AE67D File Offset: 0x002AC87D
-		// (set) Token: 0x06012610 RID: 75280 RVA: 0x002AE685 File Offset: 0x002AC885
+		// Token: 0x17003CB0 RID: 15536
+		// (get) Token: 0x06012513 RID: 75027 RVA: 0x002ACA5D File Offset: 0x002AAC5D
+		// (set) Token: 0x06012514 RID: 75028 RVA: 0x002ACA65 File Offset: 0x002AAC65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ReviveTimesCost
@@ -106,9 +106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CE6 RID: 15590
-		// (get) Token: 0x06012611 RID: 75281 RVA: 0x002AE68E File Offset: 0x002AC88E
-		// (set) Token: 0x06012612 RID: 75282 RVA: 0x002AE696 File Offset: 0x002AC896
+		// Token: 0x17003CB1 RID: 15537
+		// (get) Token: 0x06012515 RID: 75029 RVA: 0x002ACA6E File Offset: 0x002AAC6E
+		// (set) Token: 0x06012516 RID: 75030 RVA: 0x002ACA76 File Offset: 0x002AAC76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxReviveTimes
@@ -123,8 +123,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CE7 RID: 15591
-		// (get) Token: 0x06012613 RID: 75283 RVA: 0x002AE69F File Offset: 0x002AC89F
+		// Token: 0x17003CB2 RID: 15538
+		// (get) Token: 0x06012517 RID: 75031 RVA: 0x002ACA7F File Offset: 0x002AAC7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PinballFormationRolePb> PinballFormation
@@ -135,8 +135,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CE8 RID: 15592
-		// (get) Token: 0x06012614 RID: 75284 RVA: 0x002AE6A7 File Offset: 0x002AC8A7
+		// Token: 0x17003CB3 RID: 15539
+		// (get) Token: 0x06012518 RID: 75032 RVA: 0x002ACA87 File Offset: 0x002AAC87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> StarInfo
@@ -147,8 +147,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CE9 RID: 15593
-		// (get) Token: 0x06012615 RID: 75285 RVA: 0x002AE6AF File Offset: 0x002AC8AF
+		// Token: 0x17003CB4 RID: 15540
+		// (get) Token: 0x06012519 RID: 75033 RVA: 0x002ACA8F File Offset: 0x002AAC8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> MonsterAttrRate
@@ -159,8 +159,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CEA RID: 15594
-		// (get) Token: 0x06012616 RID: 75286 RVA: 0x002AE6B7 File Offset: 0x002AC8B7
+		// Token: 0x17003CB5 RID: 15541
+		// (get) Token: 0x0601251A RID: 75034 RVA: 0x002ACA97 File Offset: 0x002AAC97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> AllyKscBuffIds
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012617 RID: 75287 RVA: 0x002AE6BF File Offset: 0x002AC8BF
+		// Token: 0x0601251B RID: 75035 RVA: 0x002ACA9F File Offset: 0x002AAC9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PinballInProgressPb);
 		}
 
-		// Token: 0x06012618 RID: 75288 RVA: 0x002AE6D0 File Offset: 0x002AC8D0
+		// Token: 0x0601251C RID: 75036 RVA: 0x002ACAB0 File Offset: 0x002AACB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PinballInProgressPb other)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelId == other.LevelId && this.ReviveTimesCost == other.ReviveTimesCost && this.MaxReviveTimes == other.MaxReviveTimes && this.pinballFormation_.Equals(other.pinballFormation_) && this.starInfo_.Equals(other.starInfo_) && this.monsterAttrRate_.Equals(other.monsterAttrRate_) && this.allyKscBuffIds_.Equals(other.allyKscBuffIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012619 RID: 75289 RVA: 0x002AE780 File Offset: 0x002AC980
+		// Token: 0x0601251D RID: 75037 RVA: 0x002ACB60 File Offset: 0x002AAD60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601261A RID: 75290 RVA: 0x002AE829 File Offset: 0x002ACA29
+		// Token: 0x0601251E RID: 75038 RVA: 0x002ACC09 File Offset: 0x002AAE09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601261B RID: 75291 RVA: 0x002AE836 File Offset: 0x002ACA36
+		// Token: 0x0601251F RID: 75039 RVA: 0x002ACC16 File Offset: 0x002AAE16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -232,7 +232,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601261C RID: 75292 RVA: 0x002AE840 File Offset: 0x002ACA40
+		// Token: 0x06012520 RID: 75040 RVA: 0x002ACC20 File Offset: 0x002AAE20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601261D RID: 75293 RVA: 0x002AE8F8 File Offset: 0x002ACAF8
+		// Token: 0x06012521 RID: 75041 RVA: 0x002ACCD8 File Offset: 0x002AAED8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -291,7 +291,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601261E RID: 75294 RVA: 0x002AE9B4 File Offset: 0x002ACBB4
+		// Token: 0x06012522 RID: 75042 RVA: 0x002ACD94 File Offset: 0x002AAF94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PinballInProgressPb other)
@@ -319,7 +319,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601261F RID: 75295 RVA: 0x002AEA5C File Offset: 0x002ACC5C
+		// Token: 0x06012523 RID: 75043 RVA: 0x002ACE3C File Offset: 0x002AB03C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -327,7 +327,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012620 RID: 75296 RVA: 0x002AEA68 File Offset: 0x002ACC68
+		// Token: 0x06012524 RID: 75044 RVA: 0x002ACE48 File Offset: 0x002AB048
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -402,61 +402,61 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400726A RID: 29290
+		// Token: 0x04007282 RID: 29314
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400726B RID: 29291
+		// Token: 0x04007283 RID: 29315
 		public const int LevelIdFieldNumber = 1;
 
-		// Token: 0x0400726C RID: 29292
+		// Token: 0x04007284 RID: 29316
 		private int levelId_;
 
-		// Token: 0x0400726D RID: 29293
+		// Token: 0x04007285 RID: 29317
 		public const int ReviveTimesCostFieldNumber = 2;
 
-		// Token: 0x0400726E RID: 29294
+		// Token: 0x04007286 RID: 29318
 		private int reviveTimesCost_;
 
-		// Token: 0x0400726F RID: 29295
+		// Token: 0x04007287 RID: 29319
 		public const int MaxReviveTimesFieldNumber = 3;
 
-		// Token: 0x04007270 RID: 29296
+		// Token: 0x04007288 RID: 29320
 		private int maxReviveTimes_;
 
-		// Token: 0x04007271 RID: 29297
+		// Token: 0x04007289 RID: 29321
 		public const int PinballFormationFieldNumber = 4;
 
-		// Token: 0x04007272 RID: 29298
+		// Token: 0x0400728A RID: 29322
 		private static readonly FieldCodec<PinballFormationRolePb> _repeated_pinballFormation_codec = FieldCodec.ForMessage<PinballFormationRolePb>(34U, PinballFormationRolePb.Parser);
 
-		// Token: 0x04007273 RID: 29299
+		// Token: 0x0400728B RID: 29323
 		private readonly RepeatedField<PinballFormationRolePb> pinballFormation_ = new RepeatedField<PinballFormationRolePb>();
 
-		// Token: 0x04007274 RID: 29300
+		// Token: 0x0400728C RID: 29324
 		public const int StarInfoFieldNumber = 5;
 
-		// Token: 0x04007275 RID: 29301
+		// Token: 0x0400728D RID: 29325
 		private static readonly FieldCodec<int> _repeated_starInfo_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x04007276 RID: 29302
+		// Token: 0x0400728E RID: 29326
 		private readonly RepeatedField<int> starInfo_ = new RepeatedField<int>();
 
-		// Token: 0x04007277 RID: 29303
+		// Token: 0x0400728F RID: 29327
 		public const int MonsterAttrRateFieldNumber = 6;
 
-		// Token: 0x04007278 RID: 29304
+		// Token: 0x04007290 RID: 29328
 		private static readonly FieldCodec<int> _repeated_monsterAttrRate_codec = FieldCodec.ForInt32(50U);
 
-		// Token: 0x04007279 RID: 29305
+		// Token: 0x04007291 RID: 29329
 		private readonly RepeatedField<int> monsterAttrRate_ = new RepeatedField<int>();
 
-		// Token: 0x0400727A RID: 29306
+		// Token: 0x04007292 RID: 29330
 		public const int AllyKscBuffIdsFieldNumber = 7;
 
-		// Token: 0x0400727B RID: 29307
+		// Token: 0x04007293 RID: 29331
 		private static readonly FieldCodec<int> _repeated_allyKscBuffIds_codec = FieldCodec.ForInt32(58U);
 
-		// Token: 0x0400727C RID: 29308
+		// Token: 0x04007294 RID: 29332
 		private readonly RepeatedField<int> allyKscBuffIds_ = new RepeatedField<int>();
 	}
 }

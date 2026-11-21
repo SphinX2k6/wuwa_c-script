@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000EE8 RID: 3816
+// Token: 0x0200039D RID: 925
 [NullableContext(2)]
 [Nullable(0)]
 public class ProjectionPhotoItem : UiPanelBase
 {
-	// Token: 0x06005F9B RID: 24475 RVA: 0x0011E41E File Offset: 0x0011C61E
+	// Token: 0x06003331 RID: 13105 RVA: 0x00126276 File Offset: 0x00124476
 	public ProjectionPhotoItem(string photoPath)
 	{
 	}
 
-	// Token: 0x06005F9C RID: 24476 RVA: 0x0011E434 File Offset: 0x0011C634
+	// Token: 0x06003332 RID: 13106 RVA: 0x0012628C File Offset: 0x0012448C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06005F9D RID: 24477 RVA: 0x0011E4A4 File Offset: 0x0011C6A4
+	// Token: 0x06003333 RID: 13107 RVA: 0x001262FC File Offset: 0x001244FC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ProjectionPhotoItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005F9E RID: 24478 RVA: 0x0011E4E8 File Offset: 0x0011C6E8
+	// Token: 0x06003334 RID: 13108 RVA: 0x00126340 File Offset: 0x00124540
 	protected override void OnStart()
 	{
 		this.ButtonRoot.OnPointerBeginDragCallBack.Bind(new Func<ULGUIPointerEventData, bool>(this.OnPointerBeginDrag));
@@ -50,7 +50,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		this.ButtonRoot.OnPointUpCallBack.Bind(new Action(this.OnPointUp));
 	}
 
-	// Token: 0x06005F9F RID: 24479 RVA: 0x0011E584 File Offset: 0x0011C784
+	// Token: 0x06003335 RID: 13109 RVA: 0x001263DC File Offset: 0x001245DC
 	protected override void OnBeforeDestroy()
 	{
 		this.ButtonRoot.OnPointerBeginDragCallBack.Unbind();
@@ -60,7 +60,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		this.ButtonRoot.OnPointUpCallBack.Unbind();
 	}
 
-	// Token: 0x06005FA0 RID: 24480 RVA: 0x0011E5E4 File Offset: 0x0011C7E4
+	// Token: 0x06003336 RID: 13110 RVA: 0x0012643C File Offset: 0x0012463C
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -78,7 +78,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		grayItem.SetUIActive(this.IsDisable);
 	}
 
-	// Token: 0x06005FA1 RID: 24481 RVA: 0x0011E634 File Offset: 0x0011C834
+	// Token: 0x06003337 RID: 13111 RVA: 0x0012648C File Offset: 0x0012468C
 	public void SetDisable(bool isDisable)
 	{
 		this.IsDisable = isDisable;
@@ -100,14 +100,14 @@ public class ProjectionPhotoItem : UiPanelBase
 		buttonRoot.SetSelfInteractive(!isDisable);
 	}
 
-	// Token: 0x06005FA2 RID: 24482 RVA: 0x0011E685 File Offset: 0x0011C885
+	// Token: 0x06003338 RID: 13112 RVA: 0x001264DD File Offset: 0x001246DD
 	public void SetHidden(bool isHidden)
 	{
 		this.IsHidden = isHidden;
 		this.RootItem.SetUIActive(!isHidden);
 	}
 
-	// Token: 0x06005FA3 RID: 24483 RVA: 0x0011E6A0 File Offset: 0x0011C8A0
+	// Token: 0x06003339 RID: 13113 RVA: 0x001264F8 File Offset: 0x001246F8
 	public UniTask SetPhoto(string photoPath)
 	{
 		ProjectionPhotoItem.<SetPhoto>d__17 <SetPhoto>d__;
@@ -119,7 +119,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		return <SetPhoto>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005FA4 RID: 24484 RVA: 0x0011E6EB File Offset: 0x0011C8EB
+	// Token: 0x0600333A RID: 13114 RVA: 0x00126543 File Offset: 0x00124743
 	private bool OnPointerBeginDrag(ULGUIPointerEventData eventData)
 	{
 		if (this.IsDisable || this.DragItem == null || eventData == null)
@@ -130,7 +130,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06005FA5 RID: 24485 RVA: 0x0011E71A File Offset: 0x0011C91A
+	// Token: 0x0600333B RID: 13115 RVA: 0x00126572 File Offset: 0x00124772
 	private bool OnPointerDrag(ULGUIPointerEventData eventData)
 	{
 		if (this.IsDisable || this.DragItem == null || eventData == null)
@@ -141,7 +141,7 @@ public class ProjectionPhotoItem : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06005FA6 RID: 24486 RVA: 0x0011E73D File Offset: 0x0011C93D
+	// Token: 0x0600333C RID: 13116 RVA: 0x00126595 File Offset: 0x00124795
 	private bool OnPointerEndDrag(ULGUIPointerEventData eventData)
 	{
 		if (this.IsDisable || this.DragItem == null)
@@ -152,61 +152,61 @@ public class ProjectionPhotoItem : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06005FA7 RID: 24487 RVA: 0x0011E75D File Offset: 0x0011C95D
+	// Token: 0x0600333D RID: 13117 RVA: 0x001265B5 File Offset: 0x001247B5
 	[NullableContext(1)]
 	public void SetDragItem(ProjectionPhotoDragItem dragItem)
 	{
 		this.DragItem = dragItem;
 	}
 
-	// Token: 0x06005FA8 RID: 24488 RVA: 0x0011E766 File Offset: 0x0011C966
+	// Token: 0x0600333E RID: 13118 RVA: 0x001265BE File Offset: 0x001247BE
 	private void OnPointDown()
 	{
 		EventSystem.Instance.Emit(EEventName.OnProjectionPhotoItemPointDown);
 	}
 
-	// Token: 0x06005FA9 RID: 24489 RVA: 0x0011E778 File Offset: 0x0011C978
+	// Token: 0x0600333F RID: 13119 RVA: 0x001265D0 File Offset: 0x001247D0
 	private void OnPointUp()
 	{
 		EventSystem.Instance.Emit(EEventName.OnProjectionPhotoItemPointUp);
 	}
 
-	// Token: 0x04002B4F RID: 11087
+	// Token: 0x04002BE8 RID: 11240
 	[CompilerGenerated]
 	private string <photoPath>P = photoPath;
 
-	// Token: 0x04002B50 RID: 11088
+	// Token: 0x04002BE9 RID: 11241
 	private UUIButtonComponent ButtonRoot;
 
-	// Token: 0x04002B51 RID: 11089
+	// Token: 0x04002BEA RID: 11242
 	protected UUITexture PhotoTexture;
 
-	// Token: 0x04002B52 RID: 11090
+	// Token: 0x04002BEB RID: 11243
 	private UUIItem DisableItem;
 
-	// Token: 0x04002B53 RID: 11091
+	// Token: 0x04002BEC RID: 11244
 	private UUIItem GrayItem;
 
-	// Token: 0x04002B54 RID: 11092
+	// Token: 0x04002BED RID: 11245
 	private ProjectionPhotoDragItem DragItem;
 
-	// Token: 0x04002B55 RID: 11093
+	// Token: 0x04002BEE RID: 11246
 	private bool IsDisable;
 
-	// Token: 0x04002B56 RID: 11094
+	// Token: 0x04002BEF RID: 11247
 	private bool IsHidden = true;
 
-	// Token: 0x02007547 RID: 30023
+	// Token: 0x020066DB RID: 26331
 	[NullableContext(0)]
 	private enum EViewComponent
 	{
-		// Token: 0x04026C7E RID: 158846
+		// Token: 0x04021FC9 RID: 139209
 		Root,
-		// Token: 0x04026C7F RID: 158847
+		// Token: 0x04021FCA RID: 139210
 		TexPhoto,
-		// Token: 0x04026C80 RID: 158848
+		// Token: 0x04021FCB RID: 139211
 		PnlDisable,
-		// Token: 0x04026C81 RID: 158849
+		// Token: 0x04021FCC RID: 139212
 		PnlGrayState
 	}
 }

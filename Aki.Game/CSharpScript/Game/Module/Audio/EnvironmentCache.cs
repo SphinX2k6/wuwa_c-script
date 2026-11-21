@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E8C RID: 24204
+	// Token: 0x02004E71 RID: 20081
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EnvironmentCache
 	{
-		// Token: 0x0402020D RID: 131597
+		// Token: 0x0401ACD4 RID: 109780
 		public string StateEvent = "";
 
-		// Token: 0x0402020E RID: 131598
+		// Token: 0x0401ACD5 RID: 109781
 		public string StateEvent_MusicCompatible = "";
 
-		// Token: 0x0402020F RID: 131599
+		// Token: 0x0401ACD6 RID: 109782
 		public float DynamicReverbRtpc1;
 
-		// Token: 0x04020210 RID: 131600
+		// Token: 0x0401ACD7 RID: 109783
 		public float DynamicReverbRtpc2;
 
-		// Token: 0x04020211 RID: 131601
+		// Token: 0x0401ACD8 RID: 109784
 		public bool DynamicReverbEnabled;
 	}
 }

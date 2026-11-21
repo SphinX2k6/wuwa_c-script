@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004289 RID: 17033
+	// Token: 0x020032EA RID: 13034
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EAimViewState.EAimViewState")]
 	public enum EAimViewState : byte
 	{
-		// Token: 0x04017271 RID: 94833
+		// Token: 0x04011F8F RID: 73615
 		瞄准154身高,
-		// Token: 0x04017272 RID: 94834
+		// Token: 0x04011F90 RID: 73616
 		瞄准180身高,
-		// Token: 0x04017273 RID: 94835
+		// Token: 0x04011F91 RID: 73617
 		寂寞小姐身高,
-		// Token: 0x04017274 RID: 94836
+		// Token: 0x04011F92 RID: 73618
 		露帕瞄准,
-		// Token: 0x04017275 RID: 94837
+		// Token: 0x04011F93 RID: 73619
 		Rebecca瞄准,
-		// Token: 0x04017276 RID: 94838
+		// Token: 0x04011F94 RID: 73620
 		EAimViewState_MAX
 	}
 }

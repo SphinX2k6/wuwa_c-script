@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001560 RID: 5472
+	// Token: 0x020016BE RID: 5822
 	public class DestroyFishingBoat : ActionParams
 	{
-		// Token: 0x06007B9B RID: 31643 RVA: 0x00129BDC File Offset: 0x00127DDC
-		[NullableContext(1)]
+		// Token: 0x06008279 RID: 33401 RVA: 0x00138C88 File Offset: 0x00136E88
 		public static DestroyFishingBoat Create([Nullable(2)] DestroyFishingBoat instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400472E RID: 18222
+		// Token: 0x04004ACE RID: 19150
 		[Nullable(2)]
 		protected new DestroyFishingBoat FbInstance;
 	}

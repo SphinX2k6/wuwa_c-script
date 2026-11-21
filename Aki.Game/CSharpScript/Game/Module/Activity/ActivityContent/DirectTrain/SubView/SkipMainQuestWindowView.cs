@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.SubView
 {
-	// Token: 0x02006747 RID: 26439
+	// Token: 0x02005697 RID: 22167
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkipMainQuestWindowView : UiViewBase
 	{
-		// Token: 0x06041FD6 RID: 270294 RVA: 0x01001D4B File Offset: 0x00FFFF4B
+		// Token: 0x06036B25 RID: 224037 RVA: 0x00F4313F File Offset: 0x00F4133F
 		public SkipMainQuestWindowView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041FD7 RID: 270295 RVA: 0x01001D54 File Offset: 0x00FFFF54
+		// Token: 0x06036B26 RID: 224038 RVA: 0x00F43148 File Offset: 0x00F41348
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.SubView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041FD8 RID: 270296 RVA: 0x01001E20 File Offset: 0x01000020
+		// Token: 0x06036B27 RID: 224039 RVA: 0x00F43214 File Offset: 0x00F41414
 		protected override void OnStart()
 		{
 			ISkipMainQuestWindowParam skipMainQuestWindowParam = this.OpenParam as ISkipMainQuestWindowParam;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.SubView
 			this.SetPlotTxtByTextId(instance.GetSkipTipContentTextId(this.ActivityId), Array.Empty<string>());
 		}
 
-		// Token: 0x06041FD9 RID: 270297 RVA: 0x01001F12 File Offset: 0x01000112
+		// Token: 0x06036B28 RID: 224040 RVA: 0x00F43306 File Offset: 0x00F41506
 		private void OnCancelBtnClick(int _)
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06041FDA RID: 270298 RVA: 0x01001F1B File Offset: 0x0100011B
+		// Token: 0x06036B29 RID: 224041 RVA: 0x00F4330F File Offset: 0x00F4150F
 		private void OnSkipBtnClick(int _)
 		{
 			base.CloseMe(null);
@@ -71,46 +71,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.SubView
 			skipCallBack();
 		}
 
-		// Token: 0x06041FDB RID: 270299 RVA: 0x01001F34 File Offset: 0x01000134
+		// Token: 0x06036B2A RID: 224042 RVA: 0x00F43328 File Offset: 0x00F41528
 		private void SetPlotTxtByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x06041FDC RID: 270300 RVA: 0x01001F49 File Offset: 0x01000149
+		// Token: 0x06036B2B RID: 224043 RVA: 0x00F4333D File Offset: 0x00F4153D
 		private void SetDescriptionTxtByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), textId, args);
 		}
 
-		// Token: 0x040225FE RID: 140798
+		// Token: 0x0401CE57 RID: 118359
 		[Nullable(2)]
 		private ButtonItem CancelBtn;
 
-		// Token: 0x040225FF RID: 140799
+		// Token: 0x0401CE58 RID: 118360
 		[Nullable(2)]
 		private ButtonItem SkipBtn;
 
-		// Token: 0x04022600 RID: 140800
+		// Token: 0x0401CE59 RID: 118361
 		[Nullable(2)]
 		private TSkipMainQuestWindowSkipCallBack SkipCallBack;
 
-		// Token: 0x04022601 RID: 140801
+		// Token: 0x0401CE5A RID: 118362
 		private int ActivityId;
 
-		// Token: 0x0200C8BF RID: 51391
+		// Token: 0x0200B28E RID: 45710
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403C9BB RID: 248251
+			// Token: 0x040372B5 RID: 225973
 			TxtPlot,
-			// Token: 0x0403C9BC RID: 248252
+			// Token: 0x040372B6 RID: 225974
 			TxtContent,
-			// Token: 0x0403C9BD RID: 248253
+			// Token: 0x040372B7 RID: 225975
 			BtnConfirmA,
-			// Token: 0x0403C9BE RID: 248254
+			// Token: 0x040372B8 RID: 225976
 			BtnConfirmA2,
-			// Token: 0x0403C9BF RID: 248255
+			// Token: 0x040372B9 RID: 225977
 			TxtDescription
 		}
 	}

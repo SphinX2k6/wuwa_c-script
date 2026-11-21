@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000297 RID: 663
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002DC RID: 732
 	public class ICustomAoizRadius
 	{
-		// Token: 0x06000C5F RID: 3167 RVA: 0x00030104 File Offset: 0x0002E304
+		// Token: 0x06000D83 RID: 3459 RVA: 0x00032EF4 File Offset: 0x000310F4
 		private ICustomAoizRadius_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C60 RID: 3168 RVA: 0x0003013C File Offset: 0x0002E33C
+		// Token: 0x06000D84 RID: 3460 RVA: 0x00032F2C File Offset: 0x0003112C
 		public static ICustomAoizRadius Create([Nullable(2)] ICustomAoizRadius instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C61 RID: 3169 RVA: 0x0003014F File Offset: 0x0002E34F
+		// Token: 0x06000D85 RID: 3461 RVA: 0x00032F3F File Offset: 0x0003113F
 		public static ICustomAoizRadius CreateFromSetValue([Nullable(2)] ICustomAoizRadius_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C62 RID: 3170 RVA: 0x00030162 File Offset: 0x0002E362
+		// Token: 0x06000D86 RID: 3462 RVA: 0x00032F52 File Offset: 0x00031152
 		public ICustomAoizRadius_SetValue ToSetValue()
 		{
 			return new ICustomAoizRadius_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003AA RID: 938
-		// (get) Token: 0x06000C63 RID: 3171 RVA: 0x00030184 File Offset: 0x0002E384
-		// (set) Token: 0x06000C64 RID: 3172 RVA: 0x000301BE File Offset: 0x0002E3BE
+		// Token: 0x170003F4 RID: 1012
+		// (get) Token: 0x06000D87 RID: 3463 RVA: 0x00032F74 File Offset: 0x00031174
+		// (set) Token: 0x06000D88 RID: 3464 RVA: 0x00032FAE File Offset: 0x000311AE
 		public virtual int? Up
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003AB RID: 939
-		// (get) Token: 0x06000C65 RID: 3173 RVA: 0x000301CC File Offset: 0x0002E3CC
-		// (set) Token: 0x06000C66 RID: 3174 RVA: 0x00030206 File Offset: 0x0002E406
+		// Token: 0x170003F5 RID: 1013
+		// (get) Token: 0x06000D89 RID: 3465 RVA: 0x00032FBC File Offset: 0x000311BC
+		// (set) Token: 0x06000D8A RID: 3466 RVA: 0x00032FF6 File Offset: 0x000311F6
 		public virtual int? Down
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BA5 RID: 2981
+		// Token: 0x04000C8A RID: 3210
 		[Nullable(2)]
 		protected ICustomAoizRadius FbInstance;
 
-		// Token: 0x04000BA6 RID: 2982
+		// Token: 0x04000C8B RID: 3211
 		[Nullable(2)]
 		protected ICustomAoizRadius_SetValue PocoInterface;
 	}

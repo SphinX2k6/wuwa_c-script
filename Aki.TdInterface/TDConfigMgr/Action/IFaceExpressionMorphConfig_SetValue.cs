@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A3A RID: 6714
+	// Token: 0x02001BCF RID: 7119
 	public class IFaceExpressionMorphConfig_SetValue
 	{
-		// Token: 0x040058E0 RID: 22752
+		// Token: 0x04005D45 RID: 23877
 		public EFaceExpressionConfigType Type;
 
-		// Token: 0x040058E1 RID: 22753
-		[Nullable(1)]
+		// Token: 0x04005D46 RID: 23878
 		public string MorphData;
 	}
 }

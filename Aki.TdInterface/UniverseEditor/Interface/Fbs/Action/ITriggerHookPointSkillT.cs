@@ -2,33 +2,39 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007485 RID: 29829
+	// Token: 0x02007C78 RID: 31864
 	public class ITriggerHookPointSkillT
 	{
-		// Token: 0x1700E274 RID: 57972
-		// (get) Token: 0x0603635C RID: 222044 RVA: 0x0075EC48 File Offset: 0x0075CE48
-		// (set) Token: 0x0603635D RID: 222045 RVA: 0x0075EC50 File Offset: 0x0075CE50
+		// Token: 0x1700EE92 RID: 61074
+		// (get) Token: 0x06039747 RID: 235335 RVA: 0x007C19DA File Offset: 0x007BFBDA
+		// (set) Token: 0x06039748 RID: 235336 RVA: 0x007C19E2 File Offset: 0x007BFBE2
 		public EExecClientBattleActionType Type { get; set; }
 
-		// Token: 0x1700E275 RID: 57973
-		// (get) Token: 0x0603635E RID: 222046 RVA: 0x0075EC59 File Offset: 0x0075CE59
-		// (set) Token: 0x0603635F RID: 222047 RVA: 0x0075EC61 File Offset: 0x0075CE61
+		// Token: 0x1700EE93 RID: 61075
+		// (get) Token: 0x06039749 RID: 235337 RVA: 0x007C19EB File Offset: 0x007BFBEB
+		// (set) Token: 0x0603974A RID: 235338 RVA: 0x007C19F3 File Offset: 0x007BFBF3
+		public int AssistCharacterId { get; set; }
+
+		// Token: 0x1700EE94 RID: 61076
+		// (get) Token: 0x0603974B RID: 235339 RVA: 0x007C19FC File Offset: 0x007BFBFC
+		// (set) Token: 0x0603974C RID: 235340 RVA: 0x007C1A04 File Offset: 0x007BFC04
 		public int HookEntityId { get; set; }
 
-		// Token: 0x1700E276 RID: 57974
-		// (get) Token: 0x06036360 RID: 222048 RVA: 0x0075EC6A File Offset: 0x0075CE6A
-		// (set) Token: 0x06036361 RID: 222049 RVA: 0x0075EC72 File Offset: 0x0075CE72
+		// Token: 0x1700EE95 RID: 61077
+		// (get) Token: 0x0603974D RID: 235341 RVA: 0x007C1A0D File Offset: 0x007BFC0D
+		// (set) Token: 0x0603974E RID: 235342 RVA: 0x007C1A15 File Offset: 0x007BFC15
 		public EHookTriggerType SpecTriggerType { get; set; }
 
-		// Token: 0x1700E277 RID: 57975
-		// (get) Token: 0x06036362 RID: 222050 RVA: 0x0075EC7B File Offset: 0x0075CE7B
-		// (set) Token: 0x06036363 RID: 222051 RVA: 0x0075EC83 File Offset: 0x0075CE83
+		// Token: 0x1700EE96 RID: 61078
+		// (get) Token: 0x0603974F RID: 235343 RVA: 0x007C1A1E File Offset: 0x007BFC1E
+		// (set) Token: 0x06039750 RID: 235344 RVA: 0x007C1A26 File Offset: 0x007BFC26
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036364 RID: 222052 RVA: 0x0075EC8C File Offset: 0x0075CE8C
+		// Token: 0x06039751 RID: 235345 RVA: 0x007C1A2F File Offset: 0x007BFC2F
 		public ITriggerHookPointSkillT()
 		{
 			this.Type = EExecClientBattleActionType.SendTagEventToControlCharacter;
+			this.AssistCharacterId = 0;
 			this.HookEntityId = 0;
 			this.SpecTriggerType = EHookTriggerType.Motor;
 			this.NullMask = 0;

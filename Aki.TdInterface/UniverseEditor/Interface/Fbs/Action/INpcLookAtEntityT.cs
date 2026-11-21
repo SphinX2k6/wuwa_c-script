@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BCB RID: 27595
+	// Token: 0x0200732F RID: 29487
 	public class INpcLookAtEntityT
 	{
-		// Token: 0x1700CD16 RID: 52502
-		// (get) Token: 0x060307B2 RID: 198578 RVA: 0x006954F4 File Offset: 0x006936F4
-		// (set) Token: 0x060307B3 RID: 198579 RVA: 0x006954FC File Offset: 0x006936FC
+		// Token: 0x1700D822 RID: 55330
+		// (get) Token: 0x060336CE RID: 210638 RVA: 0x006EEDF4 File Offset: 0x006ECFF4
+		// (set) Token: 0x060336CF RID: 210639 RVA: 0x006EEDFC File Offset: 0x006ECFFC
 		public ECommonTargetType Type { get; set; }
 
-		// Token: 0x1700CD17 RID: 52503
-		// (get) Token: 0x060307B4 RID: 198580 RVA: 0x00695505 File Offset: 0x00693705
-		// (set) Token: 0x060307B5 RID: 198581 RVA: 0x0069550D File Offset: 0x0069370D
+		// Token: 0x1700D823 RID: 55331
+		// (get) Token: 0x060336D0 RID: 210640 RVA: 0x006EEE05 File Offset: 0x006ED005
+		// (set) Token: 0x060336D1 RID: 210641 RVA: 0x006EEE0D File Offset: 0x006ED00D
 		public int EntityId { get; set; }
 
-		// Token: 0x060307B6 RID: 198582 RVA: 0x00695516 File Offset: 0x00693716
+		// Token: 0x060336D2 RID: 210642 RVA: 0x006EEE16 File Offset: 0x006ED016
 		public INpcLookAtEntityT()
 		{
 			this.Type = ECommonTargetType.Player;

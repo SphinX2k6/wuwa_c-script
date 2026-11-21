@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008FB RID: 2299
+	// Token: 0x02000946 RID: 2374
 	public class ConfigScratchCardActivityReById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060035F5 RID: 13813 RVA: 0x0018A4F4 File Offset: 0x001886F4
+		// Token: 0x060037B7 RID: 14263 RVA: 0x00197714 File Offset: 0x00195914
 		static ConfigScratchCardActivityReById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigScratchCardActivityReById.CreateStaticDefaultValue), new Action(ConfigScratchCardActivityReById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060035F6 RID: 13814 RVA: 0x0018A514 File Offset: 0x00188714
+		// Token: 0x060037B8 RID: 14264 RVA: 0x00197734 File Offset: 0x00195934
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigScratchCardActivityReById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060035F7 RID: 13815 RVA: 0x0018A593 File Offset: 0x00188793
+		// Token: 0x060037B9 RID: 14265 RVA: 0x001977B3 File Offset: 0x001959B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigScratchCardActivityReById.LogPair = null;
 			ConfigScratchCardActivityReById.HandleId = 0;
 		}
 
-		// Token: 0x060035F8 RID: 13816 RVA: 0x0018A5A1 File Offset: 0x001887A1
+		// Token: 0x060037BA RID: 14266 RVA: 0x001977C1 File Offset: 0x001959C1
 		public static void Init()
 		{
 			ConfigScratchCardActivityReById.HandleId = ConfigCommon.InitDataStatement(ConfigScratchCardActivityReById.HandleId, "db_scratchcard.db", "select BinData from `ScratchCardActivityRe` where Id=?");
 		}
 
-		// Token: 0x060035F9 RID: 13817 RVA: 0x0018A5BC File Offset: 0x001887BC
+		// Token: 0x060037BB RID: 14267 RVA: 0x001977DC File Offset: 0x001959DC
 		public static ScratchCardActivityRe? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigScratchCardActivityReById.HandleId, ConfigScratchCardActivityReById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ScratchCardActivityRe?(rootAsScratchCardActivityRe);
 		}
 
-		// Token: 0x04003EC3 RID: 16067
+		// Token: 0x040040D0 RID: 16592
 		private const string DB = "db_scratchcard.db";
 
-		// Token: 0x04003EC4 RID: 16068
+		// Token: 0x040040D1 RID: 16593
 		private const string FILE = "g.刮刮乐.xlsx";
 
-		// Token: 0x04003EC5 RID: 16069
+		// Token: 0x040040D2 RID: 16594
 		private const string TABLE = "ScratchCardActivityRe";
 
-		// Token: 0x04003EC6 RID: 16070
+		// Token: 0x040040D3 RID: 16595
 		private const string COMMAND = "select BinData from `ScratchCardActivityRe` where Id=?";
 
-		// Token: 0x04003EC7 RID: 16071
+		// Token: 0x040040D4 RID: 16596
 		private const string KEY_PREFIX = "ScratchCardActivityReById";
 
-		// Token: 0x04003EC8 RID: 16072
+		// Token: 0x040040D5 RID: 16597
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003EC9 RID: 16073
+		// Token: 0x040040D6 RID: 16598
 		private static int HandleId;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DD3 RID: 15827
+	// Token: 0x0200420E RID: 16910
 	public struct IDisableHLOD : IFlatbufferObject
 	{
-		// Token: 0x17006D4D RID: 27981
-		// (get) Token: 0x06016197 RID: 90519 RVA: 0x00331D4B File Offset: 0x0032FF4B
+		// Token: 0x1700732D RID: 29485
+		// (get) Token: 0x060177B6 RID: 96182 RVA: 0x0035A74F File Offset: 0x0035894F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016198 RID: 90520 RVA: 0x00331D58 File Offset: 0x0032FF58
+		// Token: 0x060177B7 RID: 96183 RVA: 0x0035A75C File Offset: 0x0035895C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016199 RID: 90521 RVA: 0x00331D60 File Offset: 0x0032FF60
+		// Token: 0x060177B8 RID: 96184 RVA: 0x0035A764 File Offset: 0x00358964
 		public static IDisableHLOD GetRootAsIDisableHLOD(ByteBuffer _bb)
 		{
 			return IDisableHLOD.GetRootAsIDisableHLOD(_bb, default(IDisableHLOD));
 		}
 
-		// Token: 0x0601619A RID: 90522 RVA: 0x00331D7C File Offset: 0x0032FF7C
+		// Token: 0x060177B9 RID: 96185 RVA: 0x0035A780 File Offset: 0x00358980
 		public static IDisableHLOD GetRootAsIDisableHLOD(ByteBuffer _bb, IDisableHLOD obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601619B RID: 90523 RVA: 0x00331D99 File Offset: 0x0032FF99
+		// Token: 0x060177BA RID: 96186 RVA: 0x0035A79D File Offset: 0x0035899D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601619C RID: 90524 RVA: 0x00331DA8 File Offset: 0x0032FFA8
+		// Token: 0x060177BB RID: 96187 RVA: 0x0035A7AC File Offset: 0x003589AC
 		public IDisableHLOD __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D4E RID: 27982
-		// (get) Token: 0x0601619D RID: 90525 RVA: 0x00331DB8 File Offset: 0x0032FFB8
+		// Token: 0x1700732E RID: 29486
+		// (get) Token: 0x060177BC RID: 96188 RVA: 0x0035A7BC File Offset: 0x003589BC
 		public EOperation Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D4F RID: 27983
-		// (get) Token: 0x0601619E RID: 90526 RVA: 0x00331DF4 File Offset: 0x0032FFF4
+		// Token: 0x1700732F RID: 29487
+		// (get) Token: 0x060177BD RID: 96189 RVA: 0x0035A7F8 File Offset: 0x003589F8
 		public bool IsDisable
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601619F RID: 90527 RVA: 0x00331E33 File Offset: 0x00330033
+		// Token: 0x060177BE RID: 96190 RVA: 0x0035A837 File Offset: 0x00358A37
 		public static Offset<IDisableHLOD> CreateIDisableHLOD(FlatBufferBuilder builder, EOperation Type = EOperation.DisableHLOD, bool IsDisable = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDisableHLOD.EndIDisableHLOD(builder);
 		}
 
-		// Token: 0x060161A0 RID: 90528 RVA: 0x00331E50 File Offset: 0x00330050
+		// Token: 0x060177BF RID: 96191 RVA: 0x0035A854 File Offset: 0x00358A54
 		public static void StartIDisableHLOD(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060161A1 RID: 90529 RVA: 0x00331E59 File Offset: 0x00330059
+		// Token: 0x060177C0 RID: 96192 RVA: 0x0035A85D File Offset: 0x00358A5D
 		public static void AddType(FlatBufferBuilder builder, EOperation type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060161A2 RID: 90530 RVA: 0x00331E64 File Offset: 0x00330064
+		// Token: 0x060177C1 RID: 96193 RVA: 0x0035A868 File Offset: 0x00358A68
 		public static void AddIsDisable(FlatBufferBuilder builder, bool isDisable)
 		{
 			builder.AddBool(1, isDisable, false);
 		}
 
-		// Token: 0x060161A3 RID: 90531 RVA: 0x00331E6F File Offset: 0x0033006F
+		// Token: 0x060177C2 RID: 96194 RVA: 0x0035A873 File Offset: 0x00358A73
 		public static Offset<IDisableHLOD> EndIDisableHLOD(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableHLOD>(builder.EndTable());
 		}
 
-		// Token: 0x060161A4 RID: 90532 RVA: 0x00331E7C File Offset: 0x0033007C
+		// Token: 0x060177C3 RID: 96195 RVA: 0x0035A880 File Offset: 0x00358A80
 		public IDisableHLODT UnPack()
 		{
 			IDisableHLODT disableHLODT = new IDisableHLODT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return disableHLODT;
 		}
 
-		// Token: 0x060161A5 RID: 90533 RVA: 0x00331E97 File Offset: 0x00330097
+		// Token: 0x060177C4 RID: 96196 RVA: 0x0035A89B File Offset: 0x00358A9B
 		public void UnPackTo(IDisableHLODT _o)
 		{
 			_o.Type = this.Type;
 			_o.IsDisable = this.IsDisable;
 		}
 
-		// Token: 0x060161A6 RID: 90534 RVA: 0x00331EB4 File Offset: 0x003300B4
+		// Token: 0x060177C5 RID: 96197 RVA: 0x0035A8B8 File Offset: 0x00358AB8
 		public static Offset<IDisableHLOD> Pack(FlatBufferBuilder builder, IDisableHLODT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDisableHLOD.CreateIDisableHLOD(builder, _o.Type, _o.IsDisable);
 		}
 
-		// Token: 0x0400B71B RID: 46875
+		// Token: 0x0400C0EF RID: 49391
 		private Table __p;
 	}
 }

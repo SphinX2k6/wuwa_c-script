@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000B5 RID: 181
+	// Token: 0x020000B8 RID: 184
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PackSelectionTables : IStaticVariableResetter
 	{
-		// Token: 0x06000622 RID: 1570 RVA: 0x00036BE8 File Offset: 0x00034DE8
+		// Token: 0x0600063D RID: 1597 RVA: 0x000386E8 File Offset: 0x000368E8
 		public static void CreateStaticDefaultValue()
 		{
 			PackSelectionTables.DownLoadSubPackageTableInstance = new DownLoadSubPackageTable();
@@ -22,7 +22,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 			PackSelectionTables.RecallConfigTableInstance = new RecallConfigTable();
 		}
 
-		// Token: 0x06000623 RID: 1571 RVA: 0x00036C4F File Offset: 0x00034E4F
+		// Token: 0x0600063E RID: 1598 RVA: 0x0003874F File Offset: 0x0003694F
 		public static void ResetStaticDefaultValue()
 		{
 			PackSelectionTables.DownLoadSubPackageTableInstance = null;
@@ -36,37 +36,37 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 			PackSelectionTables.RecallConfigTableInstance = null;
 		}
 
-		// Token: 0x06000624 RID: 1572 RVA: 0x00036C87 File Offset: 0x00034E87
+		// Token: 0x0600063F RID: 1599 RVA: 0x00038787 File Offset: 0x00036987
 		static PackSelectionTables()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PackSelectionTables.CreateStaticDefaultValue), new Action(PackSelectionTables.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040003C0 RID: 960
+		// Token: 0x040003EF RID: 1007
 		public static DownLoadSubPackageTable DownLoadSubPackageTableInstance;
 
-		// Token: 0x040003C1 RID: 961
+		// Token: 0x040003F0 RID: 1008
 		public static DungeonPackInfoTable DungeonPackInfoTableInstance;
 
-		// Token: 0x040003C2 RID: 962
+		// Token: 0x040003F1 RID: 1009
 		public static MapBlockInfoTable MapBlockInfoTableInstance;
 
-		// Token: 0x040003C3 RID: 963
+		// Token: 0x040003F2 RID: 1010
 		public static QuestRefMapBlockTable QuestRefMapBlockTableInstance;
 
-		// Token: 0x040003C4 RID: 964
+		// Token: 0x040003F3 RID: 1011
 		public static QuestRefVideoConfigTable QuestRefVideoConfigTableInstance;
 
-		// Token: 0x040003C5 RID: 965
+		// Token: 0x040003F4 RID: 1012
 		public static RefResourceQuestListTable RefResourceQuestListTableInstance;
 
-		// Token: 0x040003C6 RID: 966
+		// Token: 0x040003F5 RID: 1013
 		public static RecommendPackTable RecommendPackTableInstance;
 
-		// Token: 0x040003C7 RID: 967
+		// Token: 0x040003F6 RID: 1014
 		public static RoleVoiceLanguageTable RoleVoiceLanguageTableInstance;
 
-		// Token: 0x040003C8 RID: 968
+		// Token: 0x040003F7 RID: 1015
 		public static RecallConfigTable RecallConfigTableInstance;
 	}
 }

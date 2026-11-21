@@ -9,7 +9,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200003A RID: 58
+	// Token: 0x0200001F RID: 31
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 12)]
@@ -17,7 +17,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 12)]
 	public struct FRotator : IEquatable<FRotator>, IEqualityOperators<FRotator, FRotator, bool>, IRotator, IUnrealScriptStruct
 	{
-		// Token: 0x06000400 RID: 1024 RVA: 0x0000AD18 File Offset: 0x00008F18
+		// Token: 0x06000385 RID: 901 RVA: 0x00007584 File Offset: 0x00005784
 		[Conditional("ENABLE_NAN_DIAGNOSTIC")]
 		public void DiagnosticCheckNaN()
 		{
@@ -30,7 +30,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000401 RID: 1025 RVA: 0x0000AD4E File Offset: 0x00008F4E
+		// Token: 0x06000386 RID: 902 RVA: 0x000075BA File Offset: 0x000057BA
 		public FRotator()
 		{
 			this.Pitch = 0f;
@@ -38,7 +38,7 @@ namespace UnrealEngine
 			this.Roll = 0f;
 		}
 
-		// Token: 0x06000402 RID: 1026 RVA: 0x0000AD71 File Offset: 0x00008F71
+		// Token: 0x06000387 RID: 903 RVA: 0x000075DD File Offset: 0x000057DD
 		public FRotator(float value)
 		{
 			this.Pitch = value;
@@ -46,7 +46,7 @@ namespace UnrealEngine
 			this.Roll = value;
 		}
 
-		// Token: 0x06000403 RID: 1027 RVA: 0x0000AD88 File Offset: 0x00008F88
+		// Token: 0x06000388 RID: 904 RVA: 0x000075F4 File Offset: 0x000057F4
 		public FRotator(float inPitch, float inYaw, float inRoll)
 		{
 			this.Pitch = inPitch;
@@ -54,31 +54,31 @@ namespace UnrealEngine
 			this.Roll = inRoll;
 		}
 
-		// Token: 0x06000404 RID: 1028 RVA: 0x0000AD9F File Offset: 0x00008F9F
+		// Token: 0x06000389 RID: 905 RVA: 0x0000760B File Offset: 0x0000580B
 		public FRotator(FQuat quat)
 		{
 			this = quat.Rotator();
 		}
 
-		// Token: 0x06000405 RID: 1029 RVA: 0x0000ADAE File Offset: 0x00008FAE
+		// Token: 0x0600038A RID: 906 RVA: 0x0000761A File Offset: 0x0000581A
 		public static bool operator ==(FRotator a, FRotator b)
 		{
 			return a.Pitch == b.Pitch && a.Yaw == b.Yaw && a.Roll == b.Roll;
 		}
 
-		// Token: 0x06000406 RID: 1030 RVA: 0x0000ADDC File Offset: 0x00008FDC
+		// Token: 0x0600038B RID: 907 RVA: 0x00007648 File Offset: 0x00005848
 		public static bool operator !=(FRotator a, FRotator b)
 		{
 			return a.Pitch != b.Pitch || a.Yaw != b.Yaw || a.Roll != b.Roll;
 		}
 
-		// Token: 0x06000407 RID: 1031 RVA: 0x0000AE0D File Offset: 0x0000900D
+		// Token: 0x0600038C RID: 908 RVA: 0x00007679 File Offset: 0x00005879
 		public readonly bool Equals(FRotator other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06000408 RID: 1032 RVA: 0x0000AE1C File Offset: 0x0000901C
+		// Token: 0x0600038D RID: 909 RVA: 0x00007688 File Offset: 0x00005888
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -90,13 +90,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000409 RID: 1033 RVA: 0x0000AE46 File Offset: 0x00009046
+		// Token: 0x0600038E RID: 910 RVA: 0x000076B2 File Offset: 0x000058B2
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<float, float, float>(this.Pitch, this.Yaw, this.Roll);
 		}
 
-		// Token: 0x0600040A RID: 1034 RVA: 0x0000AE60 File Offset: 0x00009060
+		// Token: 0x0600038F RID: 911 RVA: 0x000076CC File Offset: 0x000058CC
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -110,20 +110,20 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0600040B RID: 1035 RVA: 0x0000AEC8 File Offset: 0x000090C8
+		// Token: 0x06000390 RID: 912 RVA: 0x00007734 File Offset: 0x00005934
 		public static FRotator operator *(float scale, in FRotator r)
 		{
 			return r * scale;
 		}
 
-		// Token: 0x0600040C RID: 1036 RVA: 0x0000AED4 File Offset: 0x000090D4
+		// Token: 0x06000391 RID: 913 RVA: 0x00007740 File Offset: 0x00005940
 		public readonly FVectorDouble VectorDouble()
 		{
 			FVector fvector = this.Vector();
 			return fvector;
 		}
 
-		// Token: 0x0600040D RID: 1037 RVA: 0x0000AEF0 File Offset: 0x000090F0
+		// Token: 0x06000392 RID: 914 RVA: 0x0000775C File Offset: 0x0000595C
 		public readonly FVectorDouble RotateVectorDouble(in FVectorDouble vector)
 		{
 			FVector fvector = vector;
@@ -131,171 +131,171 @@ namespace UnrealEngine
 			return fvector2;
 		}
 
-		// Token: 0x0600040E RID: 1038
+		// Token: 0x06000393 RID: 915
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Internal_ClampAxis(float angle);
 
-		// Token: 0x0600040F RID: 1039
+		// Token: 0x06000394 RID: 916
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Internal_NormalizeAxis(float angle);
 
-		// Token: 0x06000410 RID: 1040
+		// Token: 0x06000395 RID: 917
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern byte Internal_CompressAxisToByte(float angle);
 
-		// Token: 0x06000411 RID: 1041
+		// Token: 0x06000396 RID: 918
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Internal_DecompressAxisFromByte(byte compressed);
 
-		// Token: 0x06000412 RID: 1042
+		// Token: 0x06000397 RID: 919
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern ushort Internal_CompressAxisToShort(float angle);
 
-		// Token: 0x06000413 RID: 1043
+		// Token: 0x06000398 RID: 920
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float Internal_DecompressAxisFromShort(ushort compressed);
 
-		// Token: 0x06000414 RID: 1044
+		// Token: 0x06000399 RID: 921
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FRotator Internal_MakeFromEuler(in FVector euler);
 
-		// Token: 0x06000415 RID: 1045
+		// Token: 0x0600039A RID: 922
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_Add(in FRotator a, in FRotator b);
 
-		// Token: 0x06000416 RID: 1046
+		// Token: 0x0600039B RID: 923
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_Sub(in FRotator a, in FRotator b);
 
-		// Token: 0x06000417 RID: 1047
+		// Token: 0x0600039C RID: 924
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_Mul(in FRotator a, float scale);
 
-		// Token: 0x06000418 RID: 1048
+		// Token: 0x0600039D RID: 925
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Equals(in FRotator a, in FRotator other, float tolerance);
 
-		// Token: 0x06000419 RID: 1049
+		// Token: 0x0600039E RID: 926
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsNearlyZero(in FRotator a);
 
-		// Token: 0x0600041A RID: 1050
+		// Token: 0x0600039F RID: 927
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsZero(in FRotator a);
 
-		// Token: 0x0600041B RID: 1051
+		// Token: 0x060003A0 RID: 928
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Add_float_float_float(ref FRotator a, float pitch, float yaw, float roll);
 
-		// Token: 0x0600041C RID: 1052
+		// Token: 0x060003A1 RID: 929
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_GetInverse(in FRotator a);
 
-		// Token: 0x0600041D RID: 1053
+		// Token: 0x060003A2 RID: 930
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_GridSnap(in FRotator a, in FRotator grid);
 
-		// Token: 0x0600041E RID: 1054
+		// Token: 0x060003A3 RID: 931
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_Vector(in FRotator a);
 
-		// Token: 0x0600041F RID: 1055
+		// Token: 0x060003A4 RID: 932
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat Internal_Quaternion(in FRotator a);
 
-		// Token: 0x06000420 RID: 1056
+		// Token: 0x060003A5 RID: 933
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_Euler(in FRotator a);
 
-		// Token: 0x06000421 RID: 1057
+		// Token: 0x060003A6 RID: 934
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_RotateVector(in FRotator a, in FVector vector);
 
-		// Token: 0x06000422 RID: 1058
+		// Token: 0x060003A7 RID: 935
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_UnrotateVector(in FRotator a, in FVector vector);
 
-		// Token: 0x06000423 RID: 1059
+		// Token: 0x060003A8 RID: 936
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_Clamp(in FRotator a);
 
-		// Token: 0x06000424 RID: 1060
+		// Token: 0x060003A9 RID: 937
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_GetNormalized(in FRotator a);
 
-		// Token: 0x06000425 RID: 1061
+		// Token: 0x060003AA RID: 938
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_GetDenormalized(in FRotator a);
 
-		// Token: 0x06000426 RID: 1062
+		// Token: 0x060003AB RID: 939
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Normalize(ref FRotator a);
 
-		// Token: 0x06000427 RID: 1063
+		// Token: 0x060003AC RID: 940
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetComponentForAxis(in FRotator a, EAxis axis);
 
-		// Token: 0x06000428 RID: 1064
+		// Token: 0x060003AD RID: 941
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetComponentForAxis(ref FRotator a, EAxis axis, float value);
 
-		// Token: 0x06000429 RID: 1065
+		// Token: 0x060003AE RID: 942
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_GetWindingAndRemainder(in FRotator a, out FRotator winding, out FRotator remainder);
 
-		// Token: 0x0600042A RID: 1066
+		// Token: 0x060003AF RID: 943
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetManhattanDistance(in FRotator a, in FRotator other);
 
-		// Token: 0x0600042B RID: 1067
+		// Token: 0x060003B0 RID: 944
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_GetEquivalentRotator(in FRotator a);
 
-		// Token: 0x0600042C RID: 1068
+		// Token: 0x060003B1 RID: 945
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetClosestToMe(in FRotator a, ref FRotator other);
 
-		// Token: 0x0600042D RID: 1069
+		// Token: 0x060003B2 RID: 946
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_ContainsNaN(in FRotator a);
 
-		// Token: 0x0600042E RID: 1070 RVA: 0x0000AF14 File Offset: 0x00009114
+		// Token: 0x060003B3 RID: 947 RVA: 0x00007780 File Offset: 0x00005980
 		public static float ClampAxis(float angle)
 		{
 			return FRotator.Internal_ClampAxis(angle);
 		}
 
-		// Token: 0x0600042F RID: 1071 RVA: 0x0000AF1C File Offset: 0x0000911C
+		// Token: 0x060003B4 RID: 948 RVA: 0x00007788 File Offset: 0x00005988
 		public static float NormalizeAxis(float angle)
 		{
 			return FRotator.Internal_NormalizeAxis(angle);
 		}
 
-		// Token: 0x06000430 RID: 1072 RVA: 0x0000AF24 File Offset: 0x00009124
+		// Token: 0x060003B5 RID: 949 RVA: 0x00007790 File Offset: 0x00005990
 		public static byte CompressAxisToByte(float angle)
 		{
 			return FRotator.Internal_CompressAxisToByte(angle);
 		}
 
-		// Token: 0x06000431 RID: 1073 RVA: 0x0000AF2C File Offset: 0x0000912C
+		// Token: 0x060003B6 RID: 950 RVA: 0x00007798 File Offset: 0x00005998
 		public static float DecompressAxisFromByte(byte compressed)
 		{
 			return FRotator.Internal_DecompressAxisFromByte(compressed);
 		}
 
-		// Token: 0x06000432 RID: 1074 RVA: 0x0000AF34 File Offset: 0x00009134
+		// Token: 0x060003B7 RID: 951 RVA: 0x000077A0 File Offset: 0x000059A0
 		public static ushort CompressAxisToShort(float angle)
 		{
 			return FRotator.Internal_CompressAxisToShort(angle);
 		}
 
-		// Token: 0x06000433 RID: 1075 RVA: 0x0000AF3C File Offset: 0x0000913C
+		// Token: 0x060003B8 RID: 952 RVA: 0x000077A8 File Offset: 0x000059A8
 		public static float DecompressAxisFromShort(ushort compressed)
 		{
 			return FRotator.Internal_DecompressAxisFromShort(compressed);
 		}
 
-		// Token: 0x06000434 RID: 1076 RVA: 0x0000AF44 File Offset: 0x00009144
+		// Token: 0x060003B9 RID: 953 RVA: 0x000077B0 File Offset: 0x000059B0
 		public unsafe static FRotator MakeFromEuler(in FVector euler)
 		{
 			fixed (FVector* ptr = &euler)
@@ -304,7 +304,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000435 RID: 1077 RVA: 0x0000AF5C File Offset: 0x0000915C
+		// Token: 0x060003BA RID: 954 RVA: 0x000077C8 File Offset: 0x000059C8
 		public unsafe static FRotator operator +(in FRotator a, in FRotator b)
 		{
 			fixed (FRotator* ptr = &a)
@@ -316,7 +316,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000436 RID: 1078 RVA: 0x0000AF78 File Offset: 0x00009178
+		// Token: 0x060003BB RID: 955 RVA: 0x000077E4 File Offset: 0x000059E4
 		public unsafe static FRotator operator -(in FRotator a, in FRotator b)
 		{
 			fixed (FRotator* ptr = &a)
@@ -328,7 +328,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000437 RID: 1079 RVA: 0x0000AF94 File Offset: 0x00009194
+		// Token: 0x060003BC RID: 956 RVA: 0x00007800 File Offset: 0x00005A00
 		public unsafe static FRotator operator *(in FRotator a, float scale)
 		{
 			fixed (FRotator* ptr = &a)
@@ -337,7 +337,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000438 RID: 1080 RVA: 0x0000AFAC File Offset: 0x000091AC
+		// Token: 0x060003BD RID: 957 RVA: 0x00007818 File Offset: 0x00005A18
 		public unsafe readonly bool Equals(in FRotator other, float tolerance = 0.0001f)
 		{
 			fixed (FRotator* ptr = &other)
@@ -349,7 +349,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000439 RID: 1081 RVA: 0x0000AFCC File Offset: 0x000091CC
+		// Token: 0x060003BE RID: 958 RVA: 0x00007838 File Offset: 0x00005A38
 		public unsafe readonly bool IsNearlyZero()
 		{
 			fixed (FRotator* ptr = &this)
@@ -358,7 +358,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600043A RID: 1082 RVA: 0x0000AFE4 File Offset: 0x000091E4
+		// Token: 0x060003BF RID: 959 RVA: 0x00007850 File Offset: 0x00005A50
 		public unsafe readonly bool IsZero()
 		{
 			fixed (FRotator* ptr = &this)
@@ -367,7 +367,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600043B RID: 1083 RVA: 0x0000AFFC File Offset: 0x000091FC
+		// Token: 0x060003C0 RID: 960 RVA: 0x00007868 File Offset: 0x00005A68
 		public unsafe FRotator Add(float pitch, float yaw, float roll)
 		{
 			fixed (FRotator* ptr = &this)
@@ -377,7 +377,7 @@ namespace UnrealEngine
 			return this;
 		}
 
-		// Token: 0x0600043C RID: 1084 RVA: 0x0000B020 File Offset: 0x00009220
+		// Token: 0x060003C1 RID: 961 RVA: 0x0000788C File Offset: 0x00005A8C
 		public unsafe readonly FRotator GetInverse()
 		{
 			fixed (FRotator* ptr = &this)
@@ -386,7 +386,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600043D RID: 1085 RVA: 0x0000B038 File Offset: 0x00009238
+		// Token: 0x060003C2 RID: 962 RVA: 0x000078A4 File Offset: 0x00005AA4
 		public unsafe readonly FRotator GridSnap(in FRotator grid)
 		{
 			fixed (FRotator* ptr = &this)
@@ -398,7 +398,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600043E RID: 1086 RVA: 0x0000B054 File Offset: 0x00009254
+		// Token: 0x060003C3 RID: 963 RVA: 0x000078C0 File Offset: 0x00005AC0
 		public unsafe readonly FVector Vector()
 		{
 			fixed (FRotator* ptr = &this)
@@ -407,7 +407,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600043F RID: 1087 RVA: 0x0000B06C File Offset: 0x0000926C
+		// Token: 0x060003C4 RID: 964 RVA: 0x000078D8 File Offset: 0x00005AD8
 		public unsafe readonly FQuat Quaternion()
 		{
 			fixed (FRotator* ptr = &this)
@@ -416,7 +416,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000440 RID: 1088 RVA: 0x0000B084 File Offset: 0x00009284
+		// Token: 0x060003C5 RID: 965 RVA: 0x000078F0 File Offset: 0x00005AF0
 		public unsafe readonly FVector Euler()
 		{
 			fixed (FRotator* ptr = &this)
@@ -425,7 +425,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000441 RID: 1089 RVA: 0x0000B09C File Offset: 0x0000929C
+		// Token: 0x060003C6 RID: 966 RVA: 0x00007908 File Offset: 0x00005B08
 		public unsafe readonly FVector RotateVector(in FVector vector)
 		{
 			fixed (FRotator* ptr = &this)
@@ -437,7 +437,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000442 RID: 1090 RVA: 0x0000B0B8 File Offset: 0x000092B8
+		// Token: 0x060003C7 RID: 967 RVA: 0x00007924 File Offset: 0x00005B24
 		public unsafe readonly FVector UnrotateVector(in FVector vector)
 		{
 			fixed (FRotator* ptr = &this)
@@ -449,7 +449,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000443 RID: 1091 RVA: 0x0000B0D4 File Offset: 0x000092D4
+		// Token: 0x060003C8 RID: 968 RVA: 0x00007940 File Offset: 0x00005B40
 		public unsafe readonly FRotator Clamp()
 		{
 			fixed (FRotator* ptr = &this)
@@ -458,7 +458,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000444 RID: 1092 RVA: 0x0000B0EC File Offset: 0x000092EC
+		// Token: 0x060003C9 RID: 969 RVA: 0x00007958 File Offset: 0x00005B58
 		public unsafe readonly FRotator GetNormalized()
 		{
 			fixed (FRotator* ptr = &this)
@@ -467,7 +467,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000445 RID: 1093 RVA: 0x0000B104 File Offset: 0x00009304
+		// Token: 0x060003CA RID: 970 RVA: 0x00007970 File Offset: 0x00005B70
 		public unsafe readonly FRotator GetDenormalized()
 		{
 			fixed (FRotator* ptr = &this)
@@ -476,7 +476,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000446 RID: 1094 RVA: 0x0000B11C File Offset: 0x0000931C
+		// Token: 0x060003CB RID: 971 RVA: 0x00007988 File Offset: 0x00005B88
 		public unsafe void Normalize()
 		{
 			fixed (FRotator* ptr = &this)
@@ -485,7 +485,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000447 RID: 1095 RVA: 0x0000B138 File Offset: 0x00009338
+		// Token: 0x060003CC RID: 972 RVA: 0x000079A4 File Offset: 0x00005BA4
 		public unsafe readonly float GetComponentForAxis(EAxis axis)
 		{
 			fixed (FRotator* ptr = &this)
@@ -494,7 +494,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000448 RID: 1096 RVA: 0x0000B150 File Offset: 0x00009350
+		// Token: 0x060003CD RID: 973 RVA: 0x000079BC File Offset: 0x00005BBC
 		public unsafe void SetComponentForAxis(EAxis axis, float value)
 		{
 			fixed (FRotator* ptr = &this)
@@ -503,7 +503,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000449 RID: 1097 RVA: 0x0000B16C File Offset: 0x0000936C
+		// Token: 0x060003CE RID: 974 RVA: 0x000079D8 File Offset: 0x00005BD8
 		public unsafe readonly void GetWindingAndRemainder(out FRotator winding, out FRotator remainder)
 		{
 			fixed (FRotator* ptr = &this)
@@ -518,7 +518,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600044A RID: 1098 RVA: 0x0000B198 File Offset: 0x00009398
+		// Token: 0x060003CF RID: 975 RVA: 0x00007A04 File Offset: 0x00005C04
 		public unsafe readonly float GetManhattanDistance(in FRotator other)
 		{
 			fixed (FRotator* ptr = &this)
@@ -530,7 +530,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600044B RID: 1099 RVA: 0x0000B1B4 File Offset: 0x000093B4
+		// Token: 0x060003D0 RID: 976 RVA: 0x00007A20 File Offset: 0x00005C20
 		public unsafe readonly FRotator GetEquivalentRotator()
 		{
 			fixed (FRotator* ptr = &this)
@@ -539,7 +539,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600044C RID: 1100 RVA: 0x0000B1CC File Offset: 0x000093CC
+		// Token: 0x060003D1 RID: 977 RVA: 0x00007A38 File Offset: 0x00005C38
 		public unsafe readonly void SetClosestToMe(ref FRotator other)
 		{
 			fixed (FRotator* ptr = &this)
@@ -551,7 +551,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600044D RID: 1101 RVA: 0x0000B1F0 File Offset: 0x000093F0
+		// Token: 0x060003D2 RID: 978 RVA: 0x00007A5C File Offset: 0x00005C5C
 		public unsafe readonly bool ContainsNaN()
 		{
 			fixed (FRotator* ptr = &this)
@@ -560,9 +560,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000012 RID: 18
-		// (get) Token: 0x0600044E RID: 1102 RVA: 0x0000B207 File Offset: 0x00009407
-		// (set) Token: 0x0600044F RID: 1103 RVA: 0x0000B20F File Offset: 0x0000940F
+		// Token: 0x17000011 RID: 17
+		// (get) Token: 0x060003D3 RID: 979 RVA: 0x00007A73 File Offset: 0x00005C73
+		// (set) Token: 0x060003D4 RID: 980 RVA: 0x00007A7B File Offset: 0x00005C7B
 		float IRotator.Pitch
 		{
 			get
@@ -575,9 +575,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x06000450 RID: 1104 RVA: 0x0000B218 File Offset: 0x00009418
-		// (set) Token: 0x06000451 RID: 1105 RVA: 0x0000B220 File Offset: 0x00009420
+		// Token: 0x17000012 RID: 18
+		// (get) Token: 0x060003D5 RID: 981 RVA: 0x00007A84 File Offset: 0x00005C84
+		// (set) Token: 0x060003D6 RID: 982 RVA: 0x00007A8C File Offset: 0x00005C8C
 		float IRotator.Yaw
 		{
 			get
@@ -590,9 +590,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000014 RID: 20
-		// (get) Token: 0x06000452 RID: 1106 RVA: 0x0000B229 File Offset: 0x00009429
-		// (set) Token: 0x06000453 RID: 1107 RVA: 0x0000B231 File Offset: 0x00009431
+		// Token: 0x17000013 RID: 19
+		// (get) Token: 0x060003D7 RID: 983 RVA: 0x00007A95 File Offset: 0x00005C95
+		// (set) Token: 0x060003D8 RID: 984 RVA: 0x00007A9D File Offset: 0x00005C9D
 		float IRotator.Roll
 		{
 			get
@@ -605,31 +605,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000454 RID: 1108 RVA: 0x0000B23A File Offset: 0x0000943A
+		// Token: 0x060003D9 RID: 985 RVA: 0x00007AA6 File Offset: 0x00005CA6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FRotator._ScriptStructPtr != 0) ? FRotator._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.Rotator", ref FRotator._ScriptStructPtr);
 		}
 
-		// Token: 0x040000EA RID: 234
+		// Token: 0x040000A3 RID: 163
 		public static readonly FRotator ZeroRotator = new FRotator(0f, 0f, 0f);
 
-		// Token: 0x040000EB RID: 235
+		// Token: 0x040000A4 RID: 164
 		[FieldOffset(0)]
 		public float Pitch;
 
-		// Token: 0x040000EC RID: 236
+		// Token: 0x040000A5 RID: 165
 		[FieldOffset(4)]
 		public float Yaw;
 
-		// Token: 0x040000ED RID: 237
+		// Token: 0x040000A6 RID: 166
 		[FieldOffset(8)]
 		public float Roll;
 
-		// Token: 0x040000EE RID: 238
+		// Token: 0x040000A7 RID: 167
 		public const string __ObjectPath = "/Script/CoreUObject.Rotator";
 
-		// Token: 0x040000EF RID: 239
+		// Token: 0x040000A8 RID: 168
 		private static IntPtr _ScriptStructPtr;
 	}
 }

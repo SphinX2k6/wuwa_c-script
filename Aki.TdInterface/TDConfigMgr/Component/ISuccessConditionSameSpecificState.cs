@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000733 RID: 1843
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007D4 RID: 2004
 	public class ISuccessConditionSameSpecificState : ITargetGearGroupSuccessContdion
 	{
-		// Token: 0x060027C3 RID: 10179 RVA: 0x00069950 File Offset: 0x00067B50
+		// Token: 0x06002AE7 RID: 10983 RVA: 0x00070AF8 File Offset: 0x0006ECF8
 		private ISuccessConditionSameSpecificState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027C4 RID: 10180 RVA: 0x00069988 File Offset: 0x00067B88
+		// Token: 0x06002AE8 RID: 10984 RVA: 0x00070B30 File Offset: 0x0006ED30
 		public static ISuccessConditionSameSpecificState Create([Nullable(2)] ISuccessConditionSameSpecificState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027C5 RID: 10181 RVA: 0x0006999B File Offset: 0x00067B9B
+		// Token: 0x06002AE9 RID: 10985 RVA: 0x00070B43 File Offset: 0x0006ED43
 		public static ISuccessConditionSameSpecificState CreateFromSetValue([Nullable(2)] ISuccessConditionSameSpecificState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027C6 RID: 10182 RVA: 0x000699AE File Offset: 0x00067BAE
+		// Token: 0x06002AEA RID: 10986 RVA: 0x00070B56 File Offset: 0x0006ED56
 		public new ISuccessConditionSameSpecificState_SetValue ToSetValue()
 		{
 			return new ISuccessConditionSameSpecificState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A75 RID: 2677
-		// (get) Token: 0x060027C7 RID: 10183 RVA: 0x000699CD File Offset: 0x00067BCD
-		// (set) Token: 0x060027C8 RID: 10184 RVA: 0x000699F8 File Offset: 0x00067BF8
+		// Token: 0x17000B35 RID: 2869
+		// (get) Token: 0x06002AEB RID: 10987 RVA: 0x00070B75 File Offset: 0x0006ED75
+		// (set) Token: 0x06002AEC RID: 10988 RVA: 0x00070BA0 File Offset: 0x0006EDA0
 		public override ETargetGearGroupSuccessCondition Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A76 RID: 2678
-		// (get) Token: 0x060027C9 RID: 10185 RVA: 0x00069A06 File Offset: 0x00067C06
-		// (set) Token: 0x060027CA RID: 10186 RVA: 0x00069A31 File Offset: 0x00067C31
+		// Token: 0x17000B36 RID: 2870
+		// (get) Token: 0x06002AED RID: 10989 RVA: 0x00070BAE File Offset: 0x0006EDAE
+		// (set) Token: 0x06002AEE RID: 10990 RVA: 0x00070BD9 File Offset: 0x0006EDD9
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AC9 RID: 6857
+		// Token: 0x04001CCE RID: 7374
 		[Nullable(2)]
 		protected new ISuccessConditionSameSpecificState FbInstance;
 
-		// Token: 0x04001ACA RID: 6858
+		// Token: 0x04001CCF RID: 7375
 		[Nullable(2)]
 		protected new ISuccessConditionSameSpecificState_SetValue PocoInterface;
 	}

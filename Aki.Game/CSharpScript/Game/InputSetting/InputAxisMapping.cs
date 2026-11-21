@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007009 RID: 28681
+	// Token: 0x0200618A RID: 24970
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputAxisMapping
 	{
-		// Token: 0x06045CA4 RID: 285860 RVA: 0x0115AC48 File Offset: 0x01158E48
+		// Token: 0x0603BE5A RID: 245338 RVA: 0x01105054 File Offset: 0x01103254
 		public void Initialize()
 		{
 			IReadOnlyList<AxisMapping> allAxisMappingConfig = InputSettingsConfig.Instance.GetAllAxisMappingConfig();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CA5 RID: 285861 RVA: 0x0115AC84 File Offset: 0x01158E84
+		// Token: 0x0603BE5B RID: 245339 RVA: 0x01105090 File Offset: 0x01103290
 		public void Clear()
 		{
 			foreach (InputAxisBinding inputAxisBinding in this.AxisBindingMap.Values)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.InputSetting
 			this.AxisBindingTypeMapping.Clear();
 		}
 
-		// Token: 0x06045CA6 RID: 285862 RVA: 0x0115ACF0 File Offset: 0x01158EF0
+		// Token: 0x0603BE5C RID: 245340 RVA: 0x011050FC File Offset: 0x011032FC
 		public void NewAxisBinding(AxisMapping config)
 		{
 			string axisName = config.AxisName;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.InputSetting
 			hashSet.Add(inputAxisBinding);
 		}
 
-		// Token: 0x06045CA7 RID: 285863 RVA: 0x0115AD54 File Offset: 0x01158F54
+		// Token: 0x0603BE5D RID: 245341 RVA: 0x01105160 File Offset: 0x01103360
 		public void RemoveAxisBinding(string axisName)
 		{
 			InputAxisBinding inputAxisBinding;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.InputSetting
 			inputAxisBinding.Clear();
 		}
 
-		// Token: 0x06045CA8 RID: 285864 RVA: 0x0115ADA4 File Offset: 0x01158FA4
+		// Token: 0x0603BE5E RID: 245342 RVA: 0x011051B0 File Offset: 0x011033B0
 		public void ClearAllAxisKeys()
 		{
 			foreach (InputAxisBinding inputAxisBinding in this.AxisBindingMap.Values)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CA9 RID: 285865 RVA: 0x0115ADFC File Offset: 0x01158FFC
+		// Token: 0x0603BE5F RID: 245343 RVA: 0x01105208 File Offset: 0x01103408
 		[return: Nullable(2)]
 		public InputAxisBinding GetAxisBinding(string actionName)
 		{
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CAA RID: 285866 RVA: 0x0115AE1C File Offset: 0x0115901C
+		// Token: 0x0603BE60 RID: 245344 RVA: 0x01105228 File Offset: 0x01103428
 		public Dictionary<string, InputAxisBinding> GetAxisBindingMap()
 		{
 			return this.AxisBindingMap;
 		}
 
-		// Token: 0x06045CAB RID: 285867 RVA: 0x0115AE24 File Offset: 0x01159024
+		// Token: 0x0603BE61 RID: 245345 RVA: 0x01105230 File Offset: 0x01103430
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CAC RID: 285868 RVA: 0x0115AE44 File Offset: 0x01159044
+		// Token: 0x0603BE62 RID: 245346 RVA: 0x01105250 File Offset: 0x01103450
 		public void SetKeys(string axisName, Dictionary<string, float> keyScaleMap, EInputBindingType bindingType)
 		{
 			InputAxisBinding inputAxisBinding;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.InputSetting
 			EventSystem.Instance.Emit<string, InputAxisBinding>(EEventName.OnChangedAxisKeys, axisName, inputAxisBinding);
 		}
 
-		// Token: 0x06045CAD RID: 285869 RVA: 0x0115AEA4 File Offset: 0x011590A4
+		// Token: 0x0603BE63 RID: 245347 RVA: 0x011052B0 File Offset: 0x011034B0
 		public void RefreshKeys(string axisName, TArray<FInputAxisKeyMapping> axisMappings, EInputBindingType bindingType)
 		{
 			InputAxisBinding inputAxisBinding;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.InputSetting
 			EventSystem.Instance.Emit<string, InputAxisBinding>(EEventName.OnChangedAxisKeys, axisName, inputAxisBinding);
 		}
 
-		// Token: 0x06045CAE RID: 285870 RVA: 0x0115AF04 File Offset: 0x01159104
+		// Token: 0x0603BE64 RID: 245348 RVA: 0x01105310 File Offset: 0x01103510
 		public void ResetAllAxisBindingStates()
 		{
 			foreach (InputAxisBinding inputAxisBinding in this.AxisBindingMap.Values)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CAF RID: 285871 RVA: 0x0115AF5C File Offset: 0x0115915C
+		// Token: 0x0603BE65 RID: 245349 RVA: 0x01105368 File Offset: 0x01103568
 		public void SwitchKeysByBindingType(EInputBindingType bindingType)
 		{
 			foreach (InputAxisBinding inputAxisBinding in this.AxisBindingMap.Values)
@@ -170,10 +170,10 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x040247FB RID: 149499
+		// Token: 0x0401FAB1 RID: 129713
 		private readonly Dictionary<string, InputAxisBinding> AxisBindingMap = new Dictionary<string, InputAxisBinding>();
 
-		// Token: 0x040247FC RID: 149500
+		// Token: 0x0401FAB2 RID: 129714
 		private readonly Dictionary<EAxisMappingType, HashSet<InputAxisBinding>> AxisBindingTypeMapping = new Dictionary<EAxisMappingType, HashSet<InputAxisBinding>>();
 	}
 }

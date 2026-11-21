@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010A5 RID: 4261
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020011D3 RID: 4563
 	public class IQuestScheduleMainTitle
 	{
-		// Token: 0x06006022 RID: 24610 RVA: 0x000E89D0 File Offset: 0x000E6BD0
-		[NullableContext(1)]
+		// Token: 0x0600661B RID: 26139 RVA: 0x000F5AF0 File Offset: 0x000F3CF0
 		private IQuestScheduleMainTitle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006023 RID: 24611 RVA: 0x000E8A08 File Offset: 0x000E6C08
-		[NullableContext(1)]
+		// Token: 0x0600661C RID: 26140 RVA: 0x000F5B28 File Offset: 0x000F3D28
 		public static IQuestScheduleMainTitle Create([Nullable(2)] IQuestScheduleMainTitle instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006024 RID: 24612 RVA: 0x000E8A1B File Offset: 0x000E6C1B
-		[NullableContext(1)]
+		// Token: 0x0600661D RID: 26141 RVA: 0x000F5B3B File Offset: 0x000F3D3B
 		public static IQuestScheduleMainTitle CreateFromSetValue([Nullable(2)] IQuestScheduleMainTitle_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006025 RID: 24613 RVA: 0x000E8A2E File Offset: 0x000E6C2E
-		[NullableContext(1)]
+		// Token: 0x0600661E RID: 26142 RVA: 0x000F5B4E File Offset: 0x000F3D4E
 		public IQuestScheduleMainTitle_SetValue ToSetValue()
 		{
 			return new IQuestScheduleMainTitle_SetValue
@@ -66,13 +60,11 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F9D RID: 8093
-		// (get) Token: 0x06006026 RID: 24614 RVA: 0x000E8A65 File Offset: 0x000E6C65
-		// (set) Token: 0x06006027 RID: 24615 RVA: 0x000E8A90 File Offset: 0x000E6C90
-		[Nullable(1)]
+		// Token: 0x1700214F RID: 8527
+		// (get) Token: 0x0600661F RID: 26143 RVA: 0x000F5B85 File Offset: 0x000F3D85
+		// (set) Token: 0x06006620 RID: 26144 RVA: 0x000F5BB0 File Offset: 0x000F3DB0
 		public virtual string TidTitle
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -85,18 +77,19 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return this.PocoInterface.TidTitle;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().TidTitle = value;
 			}
 		}
 
-		// Token: 0x17001F9E RID: 8094
-		// (get) Token: 0x06006028 RID: 24616 RVA: 0x000E8A9E File Offset: 0x000E6C9E
-		// (set) Token: 0x06006029 RID: 24617 RVA: 0x000E8AC5 File Offset: 0x000E6CC5
+		// Token: 0x17002150 RID: 8528
+		// (get) Token: 0x06006621 RID: 26145 RVA: 0x000F5BBE File Offset: 0x000F3DBE
+		// (set) Token: 0x06006622 RID: 26146 RVA: 0x000F5BE5 File Offset: 0x000F3DE5
+		[Nullable(2)]
 		public virtual IQuestScheduleType QuestScheduleType
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -110,15 +103,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.QuestScheduleType;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().QuestScheduleType = value;
 			}
 		}
 
-		// Token: 0x17001F9F RID: 8095
-		// (get) Token: 0x0600602A RID: 24618 RVA: 0x000E8AD4 File Offset: 0x000E6CD4
-		// (set) Token: 0x0600602B RID: 24619 RVA: 0x000E8B0E File Offset: 0x000E6D0E
+		// Token: 0x17002151 RID: 8529
+		// (get) Token: 0x06006623 RID: 26147 RVA: 0x000F5BF4 File Offset: 0x000F3DF4
+		// (set) Token: 0x06006624 RID: 26148 RVA: 0x000F5C2E File Offset: 0x000F3E2E
 		public virtual int? CustomIcon
 		{
 			get
@@ -140,11 +134,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FA0 RID: 8096
-		// (get) Token: 0x0600602C RID: 24620 RVA: 0x000E8B1C File Offset: 0x000E6D1C
-		// (set) Token: 0x0600602D RID: 24621 RVA: 0x000E8B33 File Offset: 0x000E6D33
+		// Token: 0x17002152 RID: 8530
+		// (get) Token: 0x06006625 RID: 26149 RVA: 0x000F5C3C File Offset: 0x000F3E3C
+		// (set) Token: 0x06006626 RID: 26150 RVA: 0x000F5C53 File Offset: 0x000F3E53
+		[Nullable(2)]
 		public virtual string EdTidTitle
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -153,16 +149,19 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EdTidTitle = value;
 			}
 		}
 
-		// Token: 0x040039F8 RID: 14840
+		// Token: 0x04003D45 RID: 15685
+		[Nullable(2)]
 		protected IQuestScheduleMainTitle FbInstance;
 
-		// Token: 0x040039F9 RID: 14841
+		// Token: 0x04003D46 RID: 15686
+		[Nullable(2)]
 		protected IQuestScheduleMainTitle_SetValue PocoInterface;
 	}
 }

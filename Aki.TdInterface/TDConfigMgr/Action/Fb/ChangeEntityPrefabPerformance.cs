@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002955 RID: 10581
+	// Token: 0x02002C3A RID: 11322
 	public class ChangeEntityPrefabPerformance : ActionParams
 	{
-		// Token: 0x0600EAA6 RID: 60070 RVA: 0x00225CA1 File Offset: 0x00223EA1
-		[NullableContext(1)]
+		// Token: 0x0600F91C RID: 63772 RVA: 0x00243359 File Offset: 0x00241559
 		public static ChangeEntityPrefabPerformance Create(IChangeEntityPrefabPerformance? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049BE RID: 18878
-		// (get) Token: 0x0600EAA7 RID: 60071 RVA: 0x00225CC0 File Offset: 0x00223EC0
+		// Token: 0x17004D56 RID: 19798
+		// (get) Token: 0x0600F91D RID: 63773 RVA: 0x00243378 File Offset: 0x00241578
 		public virtual EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008151 RID: 33105
+		// Token: 0x04008832 RID: 34866
 		private IChangeEntityPrefabPerformance Instance;
 	}
 }

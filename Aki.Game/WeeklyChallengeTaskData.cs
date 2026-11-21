@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002D28 RID: 11560
+// Token: 0x02002282 RID: 8834
 public class WeeklyChallengeTaskData
 {
-	// Token: 0x170020C2 RID: 8386
-	// (get) Token: 0x060184D0 RID: 99536 RVA: 0x0062F9D5 File Offset: 0x0062DBD5
-	// (set) Token: 0x060184D1 RID: 99537 RVA: 0x0062F9DD File Offset: 0x0062DBDD
+	// Token: 0x1700211D RID: 8477
+	// (get) Token: 0x06015D72 RID: 89458 RVA: 0x006559E9 File Offset: 0x00653BE9
+	// (set) Token: 0x06015D73 RID: 89459 RVA: 0x006559F1 File Offset: 0x00653BF1
 	public int ConfigId { get; set; }
 
-	// Token: 0x170020C3 RID: 8387
-	// (get) Token: 0x060184D2 RID: 99538 RVA: 0x0062F9E6 File Offset: 0x0062DBE6
-	// (set) Token: 0x060184D3 RID: 99539 RVA: 0x0062F9EE File Offset: 0x0062DBEE
+	// Token: 0x1700211E RID: 8478
+	// (get) Token: 0x06015D74 RID: 89460 RVA: 0x006559FA File Offset: 0x00653BFA
+	// (set) Token: 0x06015D75 RID: 89461 RVA: 0x00655A02 File Offset: 0x00653C02
 	public bool IsUnlocked { get; set; }
 }

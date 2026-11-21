@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002029 RID: 8233
+	// Token: 0x0200066D RID: 1645
 	public sealed class FLGUIButtonAudioDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F17D RID: 127357 RVA: 0x002E3315 File Offset: 0x002E1515
+		// Token: 0x06008EDF RID: 36575 RVA: 0x000D6C01 File Offset: 0x000D4E01
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIButtonAudioDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F17E RID: 127358 RVA: 0x002E3321 File Offset: 0x002E1521
+		// Token: 0x06008EE0 RID: 36576 RVA: 0x000D6C0D File Offset: 0x000D4E0D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIButtonAudioDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIButtonAudioDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F17F RID: 127359 RVA: 0x002E3344 File Offset: 0x002E1544
+		// Token: 0x06008EE1 RID: 36577 RVA: 0x000D6C30 File Offset: 0x000D4E30
 		public FLGUIButtonAudioDelegate()
 		{
 		}
 
-		// Token: 0x0601F180 RID: 127360 RVA: 0x002E334C File Offset: 0x002E154C
+		// Token: 0x06008EE2 RID: 36578 RVA: 0x000D6C38 File Offset: 0x000D4E38
 		[NullableContext(2)]
 		public FLGUIButtonAudioDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F181 RID: 127361 RVA: 0x002E3356 File Offset: 0x002E1556
+		// Token: 0x06008EE3 RID: 36579 RVA: 0x000D6C42 File Offset: 0x000D4E42
 		public FLGUIButtonAudioDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F182 RID: 127362 RVA: 0x002E3361 File Offset: 0x002E1561
+		// Token: 0x06008EE4 RID: 36580 RVA: 0x000D6C4D File Offset: 0x000D4E4D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F183 RID: 127363 RVA: 0x002E3393 File Offset: 0x002E1593
+		// Token: 0x06008EE5 RID: 36581 RVA: 0x000D6C7F File Offset: 0x000D4E7F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string> Callback)
 		{
 			if (FLGUIButtonAudioDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIButtonAudioDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F184 RID: 127364 RVA: 0x002E33D0 File Offset: 0x002E15D0
+		// Token: 0x06008EE6 RID: 36582 RVA: 0x000D6CBC File Offset: 0x000D4EBC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string eventName)
 		{
 			FLGUIButtonAudioDelegate.__FLGUIButtonAudioDelegate_DelegateParams* ptr = stackalloc FLGUIButtonAudioDelegate.__FLGUIButtonAudioDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FLGUIButtonAudioDelegate.__FLGUIButtonAudioDelegate_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FLGUIButtonAudioDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F185 RID: 127365 RVA: 0x002E3424 File Offset: 0x002E1624
+		// Token: 0x06008EE7 RID: 36583 RVA: 0x000D6D10 File Offset: 0x000D4F10
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -93,31 +90,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x04010DA8 RID: 69032
+		// Token: 0x04003EA5 RID: 16037
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010DA9 RID: 69033
+		// Token: 0x04003EA6 RID: 16038
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIButtonAudioDelegate__DelegateSignature";
 
-		// Token: 0x04010DAA RID: 69034
+		// Token: 0x04003EA7 RID: 16039
 		private static int RegisterId;
 
-		// Token: 0x02003435 RID: 13365
+		// Token: 0x02000E78 RID: 3704
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FLGUIButtonAudioDelegate_DelegateParams
+		private ref struct __FLGUIButtonAudioDelegate_DelegateParams
 		{
-			// Token: 0x04017414 RID: 95252
+			// Token: 0x04006223 RID: 25123
 			[FieldOffset(0)]
 			public FString eventName;
 		}
 
-		// Token: 0x02003436 RID: 13366
+		// Token: 0x02000E79 RID: 3705
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017415 RID: 95253
+			// Token: 0x04006224 RID: 25124
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

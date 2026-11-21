@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 {
-	// Token: 0x0200482B RID: 18475
+	// Token: 0x0200375C RID: 14172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CustomMarkPanel : WorldMapSecondaryUiLayoutB
 	{
-		// Token: 0x060305B4 RID: 198068 RVA: 0x00B39BDD File Offset: 0x00B37DDD
+		// Token: 0x06024D84 RID: 150916 RVA: 0x00A69CA9 File Offset: 0x00A67EA9
 		public override string GetResourceId()
 		{
 			return "UiItem_CustomMarkPanel_Prefab";
 		}
 
-		// Token: 0x060305B5 RID: 198069 RVA: 0x00B39BE4 File Offset: 0x00B37DE4
+		// Token: 0x06024D85 RID: 150917 RVA: 0x00A69CB0 File Offset: 0x00A67EB0
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			this.CreateMarkIconOptions();
 		}
 
-		// Token: 0x060305B6 RID: 198070 RVA: 0x00B39C00 File Offset: 0x00B37E00
+		// Token: 0x06024D86 RID: 150918 RVA: 0x00A69CCC File Offset: 0x00A67ECC
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length >= 2)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			}
 		}
 
-		// Token: 0x060305B7 RID: 198071 RVA: 0x00B39D9C File Offset: 0x00B37F9C
+		// Token: 0x06024D87 RID: 150919 RVA: 0x00A69E68 File Offset: 0x00A68068
 		public void SelectOptionChecked(CustomMarkItem selectedMarkItem)
 		{
 			if (this.MarkIconOptions == null || this.MarkIconOptions.Count == 0)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			this.MarkIconOptions[0].SetToggleChecked();
 		}
 
-		// Token: 0x060305B8 RID: 198072 RVA: 0x00B39E50 File Offset: 0x00B38050
+		// Token: 0x06024D88 RID: 150920 RVA: 0x00A69F1C File Offset: 0x00A6811C
 		private void UpdatePanel()
 		{
 			ECustomMarkPanelMode customMarkMode = this.CustomMarkMode;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			this.UpdateTrackButton(selectedMarkItem != null && selectedMarkItem.IsTracked);
 		}
 
-		// Token: 0x060305B9 RID: 198073 RVA: 0x00B39F40 File Offset: 0x00B38140
+		// Token: 0x06024D89 RID: 150921 RVA: 0x00A6A00C File Offset: 0x00A6820C
 		protected override void OnRightConfirmBtnClick(int index)
 		{
 			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			}
 		}
 
-		// Token: 0x060305BA RID: 198074 RVA: 0x00B39FD4 File Offset: 0x00B381D4
+		// Token: 0x06024D8A RID: 150922 RVA: 0x00A6A0A0 File Offset: 0x00A682A0
 		protected override void OnLeftConfirmBtnClick(int index)
 		{
 			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			base.Close();
 		}
 
-		// Token: 0x060305BB RID: 198075 RVA: 0x00B3A070 File Offset: 0x00B38270
+		// Token: 0x06024D8B RID: 150923 RVA: 0x00A6A13C File Offset: 0x00A6833C
 		protected override void OnDelBtnClick()
 		{
 			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			base.Close();
 		}
 
-		// Token: 0x060305BC RID: 198076 RVA: 0x00B3A0D0 File Offset: 0x00B382D0
+		// Token: 0x06024D8C RID: 150924 RVA: 0x00A6A19C File Offset: 0x00A6839C
 		private void UpdateTrackButton(bool isTracked)
 		{
 			this.TrackState = isTracked;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			leftConfirmBtn.SetText(text);
 		}
 
-		// Token: 0x060305BD RID: 198077 RVA: 0x00B3A11C File Offset: 0x00B3831C
+		// Token: 0x06024D8D RID: 150925 RVA: 0x00A6A1E8 File Offset: 0x00A683E8
 		private void SetConfigId(int configId, EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			this.SetSpriteByPath(this.SelectedMarkItem.IconPath, base.GetSprite(0), false, null, null);
 		}
 
-		// Token: 0x060305BE RID: 198078 RVA: 0x00B3A180 File Offset: 0x00B38380
+		// Token: 0x06024D8E RID: 150926 RVA: 0x00A6A24C File Offset: 0x00A6844C
 		private void CreateMarkIconOptions()
 		{
 			WorldMapConfig instance = WorldMapConfig.Instance;
@@ -313,14 +313,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x060305BF RID: 198079 RVA: 0x00B3A2A8 File Offset: 0x00B384A8
+		// Token: 0x06024D8F RID: 150927 RVA: 0x00A6A374 File Offset: 0x00A68574
 		protected override void OnAfterShowWorldMapSecondaryUi()
 		{
 			base.OnAfterShowWorldMapSecondaryUi();
 			EventSystem.Instance.Emit(EEventName.OnMapCustomMarkPanelShow);
 		}
 
-		// Token: 0x060305C0 RID: 198080 RVA: 0x00B3A2C0 File Offset: 0x00B384C0
+		// Token: 0x06024D90 RID: 150928 RVA: 0x00A6A38C File Offset: 0x00A6858C
 		[NullableContext(2)]
 		protected override void OnRefreshPanel(MarkItem param)
 		{
@@ -338,16 +338,16 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			}
 		}
 
-		// Token: 0x0401A023 RID: 106531
+		// Token: 0x040146D7 RID: 83671
 		private const int CUSTOM_MARK_PANEL_WIDTH = 778;
 
-		// Token: 0x0401A024 RID: 106532
+		// Token: 0x040146D8 RID: 83672
 		private const int CUSTOM_MARK_PANEL_HEIGHT = 592;
 
-		// Token: 0x0401A025 RID: 106533
+		// Token: 0x040146D9 RID: 83673
 		public static readonly FVector2D PanelSize = new FVector2D(778f, 592f);
 
-		// Token: 0x0401A026 RID: 106534
+		// Token: 0x040146DA RID: 83674
 		[Nullable(new byte[]
 		{
 			2,
@@ -355,21 +355,21 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 		})]
 		private List<MarkIconOption> MarkIconOptions;
 
-		// Token: 0x0401A027 RID: 106535
+		// Token: 0x040146DB RID: 83675
 		[Nullable(2)]
 		private CustomMarkItem SelectedMarkItem;
 
-		// Token: 0x0401A028 RID: 106536
+		// Token: 0x040146DC RID: 83676
 		private bool TrackState;
 
-		// Token: 0x0401A029 RID: 106537
+		// Token: 0x040146DD RID: 83677
 		private ECustomMarkPanelMode CustomMarkMode;
 
-		// Token: 0x0200AB03 RID: 43779
+		// Token: 0x020094B2 RID: 38066
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033FB1 RID: 212913
+			// Token: 0x0402E731 RID: 190257
 			public const int CustomMarkPanel = 0;
 		}
 	}

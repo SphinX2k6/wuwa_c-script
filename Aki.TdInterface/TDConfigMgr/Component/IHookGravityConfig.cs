@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200043A RID: 1082
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000493 RID: 1171
 	public class IHookGravityConfig
 	{
-		// Token: 0x060015D7 RID: 5591 RVA: 0x00043FA4 File Offset: 0x000421A4
+		// Token: 0x06001771 RID: 6001 RVA: 0x00047CEC File Offset: 0x00045EEC
 		private IHookGravityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060015D8 RID: 5592 RVA: 0x00043FDC File Offset: 0x000421DC
+		// Token: 0x06001772 RID: 6002 RVA: 0x00047D24 File Offset: 0x00045F24
 		public static IHookGravityConfig Create([Nullable(2)] IHookGravityConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015D9 RID: 5593 RVA: 0x00043FEF File Offset: 0x000421EF
+		// Token: 0x06001773 RID: 6003 RVA: 0x00047D37 File Offset: 0x00045F37
 		public static IHookGravityConfig CreateFromSetValue([Nullable(2)] IHookGravityConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015DA RID: 5594 RVA: 0x00044002 File Offset: 0x00042202
+		// Token: 0x06001774 RID: 6004 RVA: 0x00047D4A File Offset: 0x00045F4A
 		public IHookGravityConfig_SetValue ToSetValue()
 		{
 			return new IHookGravityConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005F2 RID: 1522
-		// (get) Token: 0x060015DB RID: 5595 RVA: 0x0004402D File Offset: 0x0004222D
-		// (set) Token: 0x060015DC RID: 5596 RVA: 0x00044054 File Offset: 0x00042254
+		// Token: 0x17000659 RID: 1625
+		// (get) Token: 0x06001775 RID: 6005 RVA: 0x00047D75 File Offset: 0x00045F75
+		// (set) Token: 0x06001776 RID: 6006 RVA: 0x00047D9C File Offset: 0x00045F9C
 		public virtual IGravityDirectionType GravityDirection
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005F3 RID: 1523
-		// (get) Token: 0x060015DD RID: 5597 RVA: 0x00044062 File Offset: 0x00042262
-		// (set) Token: 0x060015DE RID: 5598 RVA: 0x0004408D File Offset: 0x0004228D
+		// Token: 0x1700065A RID: 1626
+		// (get) Token: 0x06001777 RID: 6007 RVA: 0x00047DAA File Offset: 0x00045FAA
+		// (set) Token: 0x06001778 RID: 6008 RVA: 0x00047DD5 File Offset: 0x00045FD5
 		public virtual int SafePointId
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005F4 RID: 1524
-		// (get) Token: 0x060015DF RID: 5599 RVA: 0x0004409C File Offset: 0x0004229C
-		// (set) Token: 0x060015E0 RID: 5600 RVA: 0x000440D6 File Offset: 0x000422D6
+		// Token: 0x1700065B RID: 1627
+		// (get) Token: 0x06001779 RID: 6009 RVA: 0x00047DE4 File Offset: 0x00045FE4
+		// (set) Token: 0x0600177A RID: 6010 RVA: 0x00047E1E File Offset: 0x0004601E
 		public virtual int? CameraLookAtPointId
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010C9 RID: 4297
+		// Token: 0x040011EB RID: 4587
 		[Nullable(2)]
 		protected IHookGravityConfig FbInstance;
 
-		// Token: 0x040010CA RID: 4298
+		// Token: 0x040011EC RID: 4588
 		[Nullable(2)]
 		protected IHookGravityConfig_SetValue PocoInterface;
 	}

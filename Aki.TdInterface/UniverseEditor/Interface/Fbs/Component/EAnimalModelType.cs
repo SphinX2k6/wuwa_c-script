@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D69 RID: 19817
+	// Token: 0x02005268 RID: 21096
 	public enum EAnimalModelType : byte
 	{
-		// Token: 0x0400D7D1 RID: 55249
+		// Token: 0x0400E30A RID: 58122
 		Mesh
 	}
 }

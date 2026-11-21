@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C2 RID: 20674
+	// Token: 0x02004092 RID: 16530
 	public class FlowActionLockTodTime : FlowActionBase
 	{
-		// Token: 0x06034EF3 RID: 216819 RVA: 0x00C89AF4 File Offset: 0x00C87CF4
+		// Token: 0x06029DEC RID: 171500 RVA: 0x00BD6DDC File Offset: 0x00BD4FDC
 		protected override void OnExecute()
 		{
 			SetTimeLockState setTimeLockState = this.ActionInfo.Params as SetTimeLockState;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			PlotModel.Instance.PlotTimeOfDay.ResumeTime();
 		}
 
-		// Token: 0x06034EF4 RID: 216820 RVA: 0x00C89B4C File Offset: 0x00C87D4C
+		// Token: 0x06029DED RID: 171501 RVA: 0x00BD6E34 File Offset: 0x00BD5034
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

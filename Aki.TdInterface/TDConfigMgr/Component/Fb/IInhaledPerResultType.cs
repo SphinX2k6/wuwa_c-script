@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D64 RID: 3428
+	// Token: 0x02000E5E RID: 3678
 	public class IInhaledPerResultType
 	{
-		// Token: 0x06004E0D RID: 19981 RVA: 0x000C1E21 File Offset: 0x000C0021
-		[NullableContext(1)]
+		// Token: 0x06005329 RID: 21289 RVA: 0x000CD565 File Offset: 0x000CB765
 		public static IInhaledPerResultType Create(IInhaledPerResultType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001902 RID: 6402
-		// (get) Token: 0x06004E0E RID: 19982 RVA: 0x000C1E40 File Offset: 0x000C0040
+		// Token: 0x17001A68 RID: 6760
+		// (get) Token: 0x0600532A RID: 21290 RVA: 0x000CD584 File Offset: 0x000CB784
 		public virtual EInhaledPerResultType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CBF RID: 11455
+		// Token: 0x04002F7F RID: 12159
 		private IInhaledPerResultType Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200037B RID: 891
+	// Token: 0x02000390 RID: 912
 	public class ConfigGamepadKeyByKeyName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014E8 RID: 5352 RVA: 0x000CFD40 File Offset: 0x000CDF40
+		// Token: 0x06001566 RID: 5478 RVA: 0x000D624C File Offset: 0x000D444C
 		static ConfigGamepadKeyByKeyName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGamepadKeyByKeyName.CreateStaticDefaultValue), new Action(ConfigGamepadKeyByKeyName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014E9 RID: 5353 RVA: 0x000CFD60 File Offset: 0x000CDF60
+		// Token: 0x06001567 RID: 5479 RVA: 0x000D626C File Offset: 0x000D446C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGamepadKeyByKeyName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014EA RID: 5354 RVA: 0x000CFDDF File Offset: 0x000CDFDF
+		// Token: 0x06001568 RID: 5480 RVA: 0x000D62EB File Offset: 0x000D44EB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGamepadKeyByKeyName.LogPair = null;
 			ConfigGamepadKeyByKeyName.HandleId = 0;
 		}
 
-		// Token: 0x060014EB RID: 5355 RVA: 0x000CFDED File Offset: 0x000CDFED
+		// Token: 0x06001569 RID: 5481 RVA: 0x000D62F9 File Offset: 0x000D44F9
 		public static void Init()
 		{
 			ConfigGamepadKeyByKeyName.HandleId = ConfigCommon.InitDataStatement(ConfigGamepadKeyByKeyName.HandleId, "db_key.db", "select BinData from `GamepadKey` where KeyName=?");
 		}
 
-		// Token: 0x060014EC RID: 5356 RVA: 0x000CFE08 File Offset: 0x000CE008
+		// Token: 0x0600156A RID: 5482 RVA: 0x000D6314 File Offset: 0x000D4514
 		public static GamepadKey? GetConfig(string p0KeyName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGamepadKeyByKeyName.HandleId, ConfigGamepadKeyByKeyName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new GamepadKey?(rootAsGamepadKey);
 		}
 
-		// Token: 0x04001841 RID: 6209
+		// Token: 0x040018D4 RID: 6356
 		private const string DB = "db_key.db";
 
-		// Token: 0x04001842 RID: 6210
+		// Token: 0x040018D5 RID: 6357
 		private const string FILE = "a.按键.xlsx";
 
-		// Token: 0x04001843 RID: 6211
+		// Token: 0x040018D6 RID: 6358
 		private const string TABLE = "GamepadKey";
 
-		// Token: 0x04001844 RID: 6212
+		// Token: 0x040018D7 RID: 6359
 		private const string COMMAND = "select BinData from `GamepadKey` where KeyName=?";
 
-		// Token: 0x04001845 RID: 6213
+		// Token: 0x040018D8 RID: 6360
 		private const string KEY_PREFIX = "GamepadKeyByKeyName";
 
-		// Token: 0x04001846 RID: 6214
+		// Token: 0x040018D9 RID: 6361
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001847 RID: 6215
+		// Token: 0x040018DA RID: 6362
 		private static int HandleId;
 	}
 }

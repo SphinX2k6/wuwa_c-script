@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001399 RID: 5017
+// Token: 0x0200084D RID: 2125
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 {
-	// Token: 0x06008CB6 RID: 36022 RVA: 0x001E2B90 File Offset: 0x001E0D90
+	// Token: 0x0600604F RID: 24655 RVA: 0x001EB940 File Offset: 0x001E9B40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -38,13 +38,13 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06008CB7 RID: 36023 RVA: 0x001E2C9E File Offset: 0x001E0E9E
+	// Token: 0x06006050 RID: 24656 RVA: 0x001EBA4E File Offset: 0x001E9C4E
 	protected override void OnSetData()
 	{
 		this.ActivityData = (this.ActivityBaseData as ActivityNewbieCourseV2Data);
 	}
 
-	// Token: 0x06008CB8 RID: 36024 RVA: 0x001E2CB4 File Offset: 0x001E0EB4
+	// Token: 0x06006051 RID: 24657 RVA: 0x001EBA64 File Offset: 0x001E9C64
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewNewbieCourseV2.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -55,13 +55,13 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008CB9 RID: 36025 RVA: 0x001E2CF7 File Offset: 0x001E0EF7
+	// Token: 0x06006052 RID: 24658 RVA: 0x001EBAA7 File Offset: 0x001E9CA7
 	protected override void OnRefreshView()
 	{
 		this.RefreshViewStateAndScrollToFocus();
 	}
 
-	// Token: 0x06008CBA RID: 36026 RVA: 0x001E2D00 File Offset: 0x001E0F00
+	// Token: 0x06006053 RID: 24659 RVA: 0x001EBAB0 File Offset: 0x001E9CB0
 	protected override void OnTimer(float gap)
 	{
 		if (this.ActivityBaseData == null)
@@ -80,7 +80,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		text.SetText(item2, true);
 	}
 
-	// Token: 0x06008CBB RID: 36027 RVA: 0x001E2D44 File Offset: 0x001E0F44
+	// Token: 0x06006054 RID: 24660 RVA: 0x001EBAF4 File Offset: 0x001E9CF4
 	protected override void OnSequenceStart(string sequenceName)
 	{
 		if (sequenceName != "Start")
@@ -95,21 +95,21 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		rewardListScrollView.PlayTurnAnimation();
 	}
 
-	// Token: 0x06008CBC RID: 36028 RVA: 0x001E2D64 File Offset: 0x001E0F64
+	// Token: 0x06006055 RID: 24661 RVA: 0x001EBB14 File Offset: 0x001E9D14
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		EventSystem.Instance.Add(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
 	}
 
-	// Token: 0x06008CBD RID: 36029 RVA: 0x001E2D9E File Offset: 0x001E0F9E
+	// Token: 0x06006056 RID: 24662 RVA: 0x001EBB4E File Offset: 0x001E9D4E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		EventSystem.Instance.Remove(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
 	}
 
-	// Token: 0x06008CBE RID: 36030 RVA: 0x001E2DD8 File Offset: 0x001E0FD8
+	// Token: 0x06006057 RID: 24663 RVA: 0x001EBB88 File Offset: 0x001E9D88
 	protected override void OnBeforeDestroy()
 	{
 		NewbieCourseV2RewardBannerPanel rewardBannerPanel = this.RewardBannerPanel;
@@ -125,7 +125,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008CBF RID: 36031 RVA: 0x001E2E5C File Offset: 0x001E105C
+	// Token: 0x06006058 RID: 24664 RVA: 0x001EBC0C File Offset: 0x001E9E0C
 	private NewbieCourseV2Item InitItem()
 	{
 		NewbieCourseV2Item newbieCourseV2Item = new NewbieCourseV2Item();
@@ -136,7 +136,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		return newbieCourseV2Item;
 	}
 
-	// Token: 0x06008CC0 RID: 36032 RVA: 0x001E2E84 File Offset: 0x001E1084
+	// Token: 0x06006059 RID: 24665 RVA: 0x001EBC34 File Offset: 0x001E9E34
 	private void OnRefreshCommonActivityRedDot(int activityId)
 	{
 		if (this.ActivityData == null || this.ActivityData.Id != activityId)
@@ -146,7 +146,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		this.RefreshViewState();
 	}
 
-	// Token: 0x06008CC1 RID: 36033 RVA: 0x001E2EA3 File Offset: 0x001E10A3
+	// Token: 0x0600605A RID: 24666 RVA: 0x001EBC53 File Offset: 0x001E9E53
 	private void OnPlayerLevelChanged(int lastLevel, int currentLevel, int currentExp, int lastExp, int addExp, int currentMaxExp, int lastMaxExp)
 	{
 		if (this.ActivityData == null)
@@ -156,7 +156,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		this.RefreshViewStateAndScrollToFocus();
 	}
 
-	// Token: 0x06008CC2 RID: 36034 RVA: 0x001E2EB4 File Offset: 0x001E10B4
+	// Token: 0x0600605B RID: 24667 RVA: 0x001EBC64 File Offset: 0x001E9E64
 	private int GetFocusRewardRowIndex(IReadOnlyList<NewbieCourseV2> configList)
 	{
 		if (this.ActivityData == null || configList.Count == 0)
@@ -180,7 +180,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		return Math.Max(configList.Count - 1, 0);
 	}
 
-	// Token: 0x06008CC3 RID: 36035 RVA: 0x001E2F41 File Offset: 0x001E1141
+	// Token: 0x0600605C RID: 24668 RVA: 0x001EBCF1 File Offset: 0x001E9EF1
 	private void RefreshViewStateAndScrollToFocus()
 	{
 		this.RefreshViewState();
@@ -190,7 +190,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		}, null, null);
 	}
 
-	// Token: 0x06008CC4 RID: 36036 RVA: 0x001E2F64 File Offset: 0x001E1164
+	// Token: 0x0600605D RID: 24669 RVA: 0x001EBD14 File Offset: 0x001E9F14
 	private void ApplyRewardListContentPadding()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(2);
@@ -209,7 +209,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		uuiverticalLayout.SetPadding(padding);
 	}
 
-	// Token: 0x06008CC5 RID: 36037 RVA: 0x001E2FC0 File Offset: 0x001E11C0
+	// Token: 0x0600605E RID: 24670 RVA: 0x001EBD70 File Offset: 0x001E9F70
 	private void TryScrollRewardListToFocusRow()
 	{
 		if (this.ActivityData == null || this.RewardListScrollView == null)
@@ -243,7 +243,7 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		uuiitem.SetAnchorOffsetY(uuiitem.GetAnchorOffsetY() - 16f);
 	}
 
-	// Token: 0x06008CC6 RID: 36038 RVA: 0x001E3078 File Offset: 0x001E1278
+	// Token: 0x0600605F RID: 24671 RVA: 0x001EBE28 File Offset: 0x001EA028
 	private void RefreshViewState()
 	{
 		int? playerLevel = PlayerInfoModel.Instance.GetPlayerLevel();
@@ -282,13 +282,13 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x04003E67 RID: 15975
+	// Token: 0x04003EFF RID: 16127
 	private const string NewcomerLogoMaleResourceId = "T_NewcomerLogoMale";
 
-	// Token: 0x04003E68 RID: 15976
+	// Token: 0x04003F00 RID: 16128
 	private const string NewcomerLogoFemaleResourceId = "T_NewcomerLogoFemale";
 
-	// Token: 0x04003E69 RID: 15977
+	// Token: 0x04003F01 RID: 16129
 	[Nullable(new byte[]
 	{
 		2,
@@ -296,37 +296,37 @@ public class ActivitySubViewNewbieCourseV2 : ActivitySubViewBase
 	})]
 	private GenericScrollViewNew<NewbieCourseV2Item, NewbieCourseV2> RewardListScrollView;
 
-	// Token: 0x04003E6A RID: 15978
+	// Token: 0x04003F02 RID: 16130
 	[Nullable(2)]
 	private ActivityNewbieCourseV2Data ActivityData;
 
-	// Token: 0x04003E6B RID: 15979
+	// Token: 0x04003F03 RID: 16131
 	[Nullable(2)]
 	private NewbieCourseV2RewardBannerPanel RewardBannerPanel;
 
-	// Token: 0x02007A08 RID: 31240
+	// Token: 0x02006B90 RID: 27536
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040282A4 RID: 164516
+		// Token: 0x040235C7 RID: 144839
 		public const int BtnReward = 0;
 
-		// Token: 0x040282A5 RID: 164517
+		// Token: 0x040235C8 RID: 144840
 		public const int TxtTipNum = 1;
 
-		// Token: 0x040282A6 RID: 164518
+		// Token: 0x040235C9 RID: 144841
 		public const int SvList = 2;
 
-		// Token: 0x040282A7 RID: 164519
+		// Token: 0x040235CA RID: 144842
 		public const int QuestItem = 3;
 
-		// Token: 0x040282A8 RID: 164520
+		// Token: 0x040235CB RID: 144843
 		public const int TexLogo = 4;
 
-		// Token: 0x040282A9 RID: 164521
+		// Token: 0x040235CC RID: 144844
 		public const int TxtTopInfo = 5;
 
-		// Token: 0x040282AA RID: 164522
+		// Token: 0x040235CD RID: 144845
 		public const int TxtTopTime = 6;
 	}
 }

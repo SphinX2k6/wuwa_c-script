@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063BE RID: 25534
+	// Token: 0x02006A38 RID: 27192
 	public struct IClientFollowShooterLeisureInteract : IFlatbufferObject
 	{
-		// Token: 0x1700BE46 RID: 48710
-		// (get) Token: 0x0602C2AF RID: 180911 RVA: 0x006108C4 File Offset: 0x0060EAC4
+		// Token: 0x1700C7D2 RID: 51154
+		// (get) Token: 0x0602EA41 RID: 191041 RVA: 0x0065BD6A File Offset: 0x00659F6A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C2B0 RID: 180912 RVA: 0x006108D1 File Offset: 0x0060EAD1
+		// Token: 0x0602EA42 RID: 191042 RVA: 0x0065BD77 File Offset: 0x00659F77
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C2B1 RID: 180913 RVA: 0x006108D8 File Offset: 0x0060EAD8
+		// Token: 0x0602EA43 RID: 191043 RVA: 0x0065BD80 File Offset: 0x00659F80
 		public static IClientFollowShooterLeisureInteract GetRootAsIClientFollowShooterLeisureInteract(ByteBuffer _bb)
 		{
 			return IClientFollowShooterLeisureInteract.GetRootAsIClientFollowShooterLeisureInteract(_bb, default(IClientFollowShooterLeisureInteract));
 		}
 
-		// Token: 0x0602C2B2 RID: 180914 RVA: 0x006108F4 File Offset: 0x0060EAF4
+		// Token: 0x0602EA44 RID: 191044 RVA: 0x0065BD9C File Offset: 0x00659F9C
 		public static IClientFollowShooterLeisureInteract GetRootAsIClientFollowShooterLeisureInteract(ByteBuffer _bb, IClientFollowShooterLeisureInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C2B3 RID: 180915 RVA: 0x00610911 File Offset: 0x0060EB11
+		// Token: 0x0602EA45 RID: 191045 RVA: 0x0065BDB9 File Offset: 0x00659FB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C2B4 RID: 180916 RVA: 0x00610920 File Offset: 0x0060EB20
+		// Token: 0x0602EA46 RID: 191046 RVA: 0x0065BDC8 File Offset: 0x00659FC8
 		public IClientFollowShooterLeisureInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE47 RID: 48711
-		// (get) Token: 0x0602C2B5 RID: 180917 RVA: 0x00610930 File Offset: 0x0060EB30
+		// Token: 0x1700C7D3 RID: 51155
+		// (get) Token: 0x0602EA47 RID: 191047 RVA: 0x0065BDD8 File Offset: 0x00659FD8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE48 RID: 48712
-		// (get) Token: 0x0602C2B6 RID: 180918 RVA: 0x0061096C File Offset: 0x0060EB6C
+		// Token: 0x1700C7D4 RID: 51156
+		// (get) Token: 0x0602EA48 RID: 191048 RVA: 0x0065BE14 File Offset: 0x0065A014
 		public TClientFollowShooterLeisureType InteractTypeType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C2B7 RID: 180919 RVA: 0x006109A8 File Offset: 0x0060EBA8
+		// Token: 0x0602EA49 RID: 191049 RVA: 0x0065BE50 File Offset: 0x0065A050
 		public TTable? InteractType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,19 +88,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602C2B8 RID: 180920 RVA: 0x006109EC File Offset: 0x0060EBEC
+		// Token: 0x0602EA4A RID: 191050 RVA: 0x0065BE94 File Offset: 0x0065A094
 		public IClientFollowShooterPlayAnimation InteractTypeAsIClientFollowShooterPlayAnimation()
 		{
 			return this.InteractType<IClientFollowShooterPlayAnimation>().Value;
 		}
 
-		// Token: 0x0602C2B9 RID: 180921 RVA: 0x00610A08 File Offset: 0x0060EC08
+		// Token: 0x0602EA4B RID: 191051 RVA: 0x0065BEB0 File Offset: 0x0065A0B0
+		public IClientFollowShooterPlaySkill InteractTypeAsIClientFollowShooterPlaySkill()
+		{
+			return this.InteractType<IClientFollowShooterPlaySkill>().Value;
+		}
+
+		// Token: 0x0602EA4C RID: 191052 RVA: 0x0065BECC File Offset: 0x0065A0CC
 		public IClientFollowShooterResetToPlayer InteractTypeAsIClientFollowShooterResetToPlayer()
 		{
 			return this.InteractType<IClientFollowShooterResetToPlayer>().Value;
 		}
 
-		// Token: 0x0602C2BA RID: 180922 RVA: 0x00610A23 File Offset: 0x0060EC23
+		// Token: 0x0602EA4D RID: 191053 RVA: 0x0065BEE7 File Offset: 0x0065A0E7
 		public static Offset<IClientFollowShooterLeisureInteract> CreateIClientFollowShooterLeisureInteract(FlatBufferBuilder builder, int Id = 0, TClientFollowShooterLeisureType InteractType_type = TClientFollowShooterLeisureType.NONE, int InteractTypeOffset = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +116,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientFollowShooterLeisureInteract.EndIClientFollowShooterLeisureInteract(builder);
 		}
 
-		// Token: 0x0602C2BB RID: 180923 RVA: 0x00610A47 File Offset: 0x0060EC47
+		// Token: 0x0602EA4E RID: 191054 RVA: 0x0065BF0B File Offset: 0x0065A10B
 		public static void StartIClientFollowShooterLeisureInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602C2BC RID: 180924 RVA: 0x00610A50 File Offset: 0x0060EC50
+		// Token: 0x0602EA4F RID: 191055 RVA: 0x0065BF14 File Offset: 0x0065A114
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0602C2BD RID: 180925 RVA: 0x00610A5B File Offset: 0x0060EC5B
+		// Token: 0x0602EA50 RID: 191056 RVA: 0x0065BF1F File Offset: 0x0065A11F
 		public static void AddInteractTypeType(FlatBufferBuilder builder, TClientFollowShooterLeisureType interactTypeType)
 		{
 			builder.AddByte(1, (byte)interactTypeType, 0);
 		}
 
-		// Token: 0x0602C2BE RID: 180926 RVA: 0x00610A66 File Offset: 0x0060EC66
+		// Token: 0x0602EA51 RID: 191057 RVA: 0x0065BF2A File Offset: 0x0065A12A
 		public static void AddInteractType(FlatBufferBuilder builder, int interactTypeOffset)
 		{
 			builder.AddOffset(2, interactTypeOffset, 0);
 		}
 
-		// Token: 0x0602C2BF RID: 180927 RVA: 0x00610A71 File Offset: 0x0060EC71
+		// Token: 0x0602EA52 RID: 191058 RVA: 0x0065BF35 File Offset: 0x0065A135
 		public static Offset<IClientFollowShooterLeisureInteract> EndIClientFollowShooterLeisureInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientFollowShooterLeisureInteract>(builder.EndTable());
 		}
 
-		// Token: 0x0602C2C0 RID: 180928 RVA: 0x00610A80 File Offset: 0x0060EC80
+		// Token: 0x0602EA53 RID: 191059 RVA: 0x0065BF44 File Offset: 0x0065A144
 		public IClientFollowShooterLeisureInteractT UnPack()
 		{
 			IClientFollowShooterLeisureInteractT clientFollowShooterLeisureInteractT = new IClientFollowShooterLeisureInteractT();
@@ -148,26 +154,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientFollowShooterLeisureInteractT;
 		}
 
-		// Token: 0x0602C2C1 RID: 180929 RVA: 0x00610A9C File Offset: 0x0060EC9C
+		// Token: 0x0602EA54 RID: 191060 RVA: 0x0065BF60 File Offset: 0x0065A160
 		public void UnPackTo(IClientFollowShooterLeisureInteractT _o)
 		{
 			_o.Id = this.Id;
 			_o.InteractType = new TClientFollowShooterLeisureTypeUnion();
 			_o.InteractType.Type = this.InteractTypeType;
-			TClientFollowShooterLeisureType interactTypeType = this.InteractTypeType;
-			if (interactTypeType == TClientFollowShooterLeisureType.IClientFollowShooterPlayAnimation)
+			switch (this.InteractTypeType)
 			{
+			case TClientFollowShooterLeisureType.IClientFollowShooterPlayAnimation:
 				_o.InteractType.Value = ((this.InteractType<IClientFollowShooterPlayAnimation>() != null) ? this.InteractType<IClientFollowShooterPlayAnimation>().Value.UnPack() : null);
 				return;
-			}
-			if (interactTypeType != TClientFollowShooterLeisureType.IClientFollowShooterResetToPlayer)
-			{
+			case TClientFollowShooterLeisureType.IClientFollowShooterPlaySkill:
+				_o.InteractType.Value = ((this.InteractType<IClientFollowShooterPlaySkill>() != null) ? this.InteractType<IClientFollowShooterPlaySkill>().Value.UnPack() : null);
+				return;
+			case TClientFollowShooterLeisureType.IClientFollowShooterResetToPlayer:
+				_o.InteractType.Value = ((this.InteractType<IClientFollowShooterResetToPlayer>() != null) ? this.InteractType<IClientFollowShooterResetToPlayer>().Value.UnPack() : null);
+				return;
+			default:
 				return;
 			}
-			_o.InteractType.Value = ((this.InteractType<IClientFollowShooterResetToPlayer>() != null) ? this.InteractType<IClientFollowShooterResetToPlayer>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602C2C2 RID: 180930 RVA: 0x00610B4C File Offset: 0x0060ED4C
+		// Token: 0x0602EA55 RID: 191061 RVA: 0x0065C054 File Offset: 0x0065A254
 		public static Offset<IClientFollowShooterLeisureInteract> Pack(FlatBufferBuilder builder, IClientFollowShooterLeisureInteractT _o)
 		{
 			if (_o == null)
@@ -179,7 +188,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientFollowShooterLeisureInteract.CreateIClientFollowShooterLeisureInteract(builder, _o.Id, interactType_type, interactTypeOffset);
 		}
 
-		// Token: 0x04010998 RID: 67992
+		// Token: 0x040117B5 RID: 71605
 		private Table __p;
 	}
 }

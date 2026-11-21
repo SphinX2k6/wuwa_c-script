@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200100C RID: 4108
+	// Token: 0x020010F4 RID: 4340
 	public struct RogueResMoodRule : IFlatbufferObject
 	{
-		// Token: 0x17003099 RID: 12441
-		// (get) Token: 0x0600C36B RID: 50027 RVA: 0x002EEB46 File Offset: 0x002ECD46
+		// Token: 0x17003114 RID: 12564
+		// (get) Token: 0x0600C9B5 RID: 51637 RVA: 0x0030AC22 File Offset: 0x00308E22
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C36C RID: 50028 RVA: 0x002EEB53 File Offset: 0x002ECD53
+		// Token: 0x0600C9B6 RID: 51638 RVA: 0x0030AC2F File Offset: 0x00308E2F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C36D RID: 50029 RVA: 0x002EEB5C File Offset: 0x002ECD5C
+		// Token: 0x0600C9B7 RID: 51639 RVA: 0x0030AC38 File Offset: 0x00308E38
 		public static RogueResMoodRule GetRootAsRogueResMoodRule(ByteBuffer _bb)
 		{
 			return RogueResMoodRule.GetRootAsRogueResMoodRule(_bb, default(RogueResMoodRule));
 		}
 
-		// Token: 0x0600C36E RID: 50030 RVA: 0x002EEB78 File Offset: 0x002ECD78
+		// Token: 0x0600C9B8 RID: 51640 RVA: 0x0030AC54 File Offset: 0x00308E54
 		public static RogueResMoodRule GetRootAsRogueResMoodRule(ByteBuffer _bb, RogueResMoodRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C36F RID: 50031 RVA: 0x002EEB95 File Offset: 0x002ECD95
+		// Token: 0x0600C9B9 RID: 51641 RVA: 0x0030AC71 File Offset: 0x00308E71
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C370 RID: 50032 RVA: 0x002EEBA4 File Offset: 0x002ECDA4
+		// Token: 0x0600C9BA RID: 51642 RVA: 0x0030AC80 File Offset: 0x00308E80
 		public RogueResMoodRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700309A RID: 12442
-		// (get) Token: 0x0600C371 RID: 50033 RVA: 0x002EEBB4 File Offset: 0x002ECDB4
+		// Token: 0x17003115 RID: 12565
+		// (get) Token: 0x0600C9BB RID: 51643 RVA: 0x0030AC90 File Offset: 0x00308E90
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700309B RID: 12443
-		// (get) Token: 0x0600C372 RID: 50034 RVA: 0x002EEBF0 File Offset: 0x002ECDF0
+		// Token: 0x17003116 RID: 12566
+		// (get) Token: 0x0600C9BC RID: 51644 RVA: 0x0030ACCC File Offset: 0x00308ECC
 		public int Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700309C RID: 12444
-		// (get) Token: 0x0600C373 RID: 50035 RVA: 0x002EEC2C File Offset: 0x002ECE2C
+		// Token: 0x17003117 RID: 12567
+		// (get) Token: 0x0600C9BD RID: 51645 RVA: 0x0030AD08 File Offset: 0x00308F08
 		public string FloatTips
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C374 RID: 50036 RVA: 0x002EEC63 File Offset: 0x002ECE63
+		// Token: 0x0600C9BE RID: 51646 RVA: 0x0030AD3F File Offset: 0x00308F3F
 		public Span<byte> GetFloatTipsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600C375 RID: 50037 RVA: 0x002EEC72 File Offset: 0x002ECE72
+		// Token: 0x0600C9BF RID: 51647 RVA: 0x0030AD4E File Offset: 0x00308F4E
 		public byte[] GetFloatTipsArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700309D RID: 12445
-		// (get) Token: 0x0600C376 RID: 50038 RVA: 0x002EEC8C File Offset: 0x002ECE8C
+		// Token: 0x17003118 RID: 12568
+		// (get) Token: 0x0600C9C0 RID: 51648 RVA: 0x0030AD68 File Offset: 0x00308F68
 		public string MapMusicStateSwitch
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C377 RID: 50039 RVA: 0x002EECC4 File Offset: 0x002ECEC4
+		// Token: 0x0600C9C1 RID: 51649 RVA: 0x0030ADA0 File Offset: 0x00308FA0
 		public Span<byte> GetMapMusicStateSwitchBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C378 RID: 50040 RVA: 0x002EECD4 File Offset: 0x002ECED4
+		// Token: 0x0600C9C2 RID: 51650 RVA: 0x0030ADB0 File Offset: 0x00308FB0
 		public byte[] GetMapMusicStateSwitchArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040050F9 RID: 20729
+		// Token: 0x040056E1 RID: 22241
 		private Table __p;
 	}
 }

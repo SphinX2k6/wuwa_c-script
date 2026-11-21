@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002848 RID: 10312
+// Token: 0x02001DC3 RID: 7619
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorPreciousItemContentData : RoleFavorContentDataBase
 {
-	// Token: 0x06015436 RID: 87094 RVA: 0x0055F350 File Offset: 0x0055D550
+	// Token: 0x06012E34 RID: 77364 RVA: 0x0058A0AC File Offset: 0x005882AC
 	public RoleFavorPreciousItemContentData(int roleId, FavorGoods configData) : base(roleId)
 	{
 		this.ConfigData = configData;
 	}
 
-	// Token: 0x17001C61 RID: 7265
-	// (get) Token: 0x06015437 RID: 87095 RVA: 0x0055F360 File Offset: 0x0055D560
+	// Token: 0x17001CB9 RID: 7353
+	// (get) Token: 0x06012E35 RID: 77365 RVA: 0x0058A0BC File Offset: 0x005882BC
 	public override int ConfigId
 	{
 		get
@@ -23,8 +23,8 @@ public class RoleFavorPreciousItemContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x17001C62 RID: 7266
-	// (get) Token: 0x06015438 RID: 87096 RVA: 0x0055F36D File Offset: 0x0055D56D
+	// Token: 0x17001CBA RID: 7354
+	// (get) Token: 0x06012E36 RID: 77366 RVA: 0x0058A0C9 File Offset: 0x005882C9
 	public override int ConfigConGroupId
 	{
 		get
@@ -33,8 +33,8 @@ public class RoleFavorPreciousItemContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x17001C63 RID: 7267
-	// (get) Token: 0x06015439 RID: 87097 RVA: 0x0055F37A File Offset: 0x0055D57A
+	// Token: 0x17001CBB RID: 7355
+	// (get) Token: 0x06012E37 RID: 77367 RVA: 0x0058A0D6 File Offset: 0x005882D6
 	public override string TitleTextId
 	{
 		get
@@ -43,8 +43,8 @@ public class RoleFavorPreciousItemContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x17001C64 RID: 7268
-	// (get) Token: 0x0601543A RID: 87098 RVA: 0x0055F387 File Offset: 0x0055D587
+	// Token: 0x17001CBC RID: 7356
+	// (get) Token: 0x06012E38 RID: 77368 RVA: 0x0058A0E3 File Offset: 0x005882E3
 	public override string ContentTextId
 	{
 		get
@@ -53,12 +53,12 @@ public class RoleFavorPreciousItemContentData : RoleFavorContentDataBase
 		}
 	}
 
-	// Token: 0x0601543B RID: 87099 RVA: 0x0055F394 File Offset: 0x0055D594
+	// Token: 0x06012E39 RID: 77369 RVA: 0x0058A0F0 File Offset: 0x005882F0
 	protected override EFavorContentType GetFavorContentType()
 	{
 		return EFavorContentType.PreciousItem;
 	}
 
-	// Token: 0x04009ECE RID: 40654
+	// Token: 0x0400A2B7 RID: 41655
 	public FavorGoods ConfigData;
 }

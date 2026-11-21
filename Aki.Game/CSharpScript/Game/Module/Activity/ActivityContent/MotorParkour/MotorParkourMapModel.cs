@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063EF RID: 25583
+	// Token: 0x0200536D RID: 21357
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class MotorParkourMapModel : ModelBase
 	{
-		// Token: 0x06040595 RID: 263573 RVA: 0x00F905D4 File Offset: 0x00F8E7D4
+		// Token: 0x06035256 RID: 217686 RVA: 0x00ED75BC File Offset: 0x00ED57BC
 		public void InitSplinePoints(int splineId, float scale, Vector2D centerOffset, int startIndex, int endIndex)
 		{
 			this.Scale = scale;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.EndPointRotator.Yaw = -(float)(Math.Atan2(fvectorDouble.Y, fvectorDouble.X) * 57.295780181884766 + 90.0);
 		}
 
-		// Token: 0x06040596 RID: 263574 RVA: 0x00F90728 File Offset: 0x00F8E928
+		// Token: 0x06035257 RID: 217687 RVA: 0x00ED7710 File Offset: 0x00ED5910
 		public TArray<FVector2D> GetPathTakenSplinePoints()
 		{
 			if (this.SplineComponent == null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return this.PathTakenSplinePoints;
 		}
 
-		// Token: 0x06040597 RID: 263575 RVA: 0x00F90790 File Offset: 0x00F8E990
+		// Token: 0x06035258 RID: 217688 RVA: 0x00ED7778 File Offset: 0x00ED5978
 		public void GetSplinePoints(float endDistance, TArray<FVector2D> array, bool forcePassSplineStartPoint = false)
 		{
 			if (this.SplineComponent == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.AddPoints(this.StartDist, endDistance, array);
 		}
 
-		// Token: 0x06040598 RID: 263576 RVA: 0x00F90814 File Offset: 0x00F8EA14
+		// Token: 0x06035259 RID: 217689 RVA: 0x00ED77FC File Offset: 0x00ED59FC
 		public void AddPoints(float startDist, float endDist, TArray<FVector2D> array)
 		{
 			if (this.SplineComponent == null)
@@ -100,8 +100,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x1700942F RID: 37935
-		// (get) Token: 0x06040599 RID: 263577 RVA: 0x00F908C6 File Offset: 0x00F8EAC6
+		// Token: 0x17006791 RID: 26513
+		// (get) Token: 0x0603525A RID: 217690 RVA: 0x00ED78AE File Offset: 0x00ED5AAE
 		public static MotorParkourMapModel Instance
 		{
 			get
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x0604059A RID: 263578 RVA: 0x00F908CD File Offset: 0x00F8EACD
+		// Token: 0x0603525B RID: 217691 RVA: 0x00ED78B5 File Offset: 0x00ED5AB5
 		public static MotorParkourMapModel GetOrCreateInstance()
 		{
 			if (MotorParkourMapModel._Instance == null)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return MotorParkourMapModel._Instance;
 		}
 
-		// Token: 0x0604059B RID: 263579 RVA: 0x00F908E1 File Offset: 0x00F8EAE1
+		// Token: 0x0603525C RID: 217692 RVA: 0x00ED78C9 File Offset: 0x00ED5AC9
 		public static bool CreateInstance()
 		{
 			if (MotorParkourMapModel._Instance != null)
@@ -131,55 +131,55 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return true;
 		}
 
-		// Token: 0x0604059C RID: 263580 RVA: 0x00F908F7 File Offset: 0x00F8EAF7
+		// Token: 0x0603525D RID: 217693 RVA: 0x00ED78DF File Offset: 0x00ED5ADF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604059D RID: 263581 RVA: 0x00F908F9 File Offset: 0x00F8EAF9
+		// Token: 0x0603525E RID: 217694 RVA: 0x00ED78E1 File Offset: 0x00ED5AE1
 		public static void ResetStaticDefaultValue()
 		{
 			MotorParkourMapModel._Instance = null;
 		}
 
-		// Token: 0x0604059E RID: 263582 RVA: 0x00F90901 File Offset: 0x00F8EB01
+		// Token: 0x0603525F RID: 217695 RVA: 0x00ED78E9 File Offset: 0x00ED5AE9
 		static MotorParkourMapModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorParkourMapModel.CreateStaticDefaultValue), new Action(MotorParkourMapModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021789 RID: 137097
+		// Token: 0x0401C0B8 RID: 114872
 		[Nullable(2)]
 		private USplineComponent SplineComponent;
 
-		// Token: 0x0402178A RID: 137098
+		// Token: 0x0401C0B9 RID: 114873
 		private float Scale = 1f;
 
-		// Token: 0x0402178B RID: 137099
+		// Token: 0x0401C0BA RID: 114874
 		private Vector2D CenterOffset = Vector2D.Create();
 
-		// Token: 0x0402178C RID: 137100
+		// Token: 0x0401C0BB RID: 114875
 		private float StartDist;
 
-		// Token: 0x0402178D RID: 137101
+		// Token: 0x0401C0BC RID: 114876
 		private readonly Vector2D SplinePoint2D = Vector2D.Create();
 
-		// Token: 0x0402178E RID: 137102
+		// Token: 0x0401C0BD RID: 114877
 		private readonly Vector2D TmpVector2D = Vector2D.Create();
 
-		// Token: 0x0402178F RID: 137103
+		// Token: 0x0401C0BE RID: 114878
 		public readonly Vector2D EndPointOffset = Vector2D.Create();
 
-		// Token: 0x04021790 RID: 137104
+		// Token: 0x0401C0BF RID: 114879
 		public FRotator EndPointRotator = new FRotator();
 
-		// Token: 0x04021791 RID: 137105
+		// Token: 0x0401C0C0 RID: 114880
 		public readonly TArray<FVector2D> SplinePoints = new TArray<FVector2D>();
 
-		// Token: 0x04021792 RID: 137106
+		// Token: 0x0401C0C1 RID: 114881
 		public readonly TArray<FVector2D> PathTakenSplinePoints = new TArray<FVector2D>();
 
-		// Token: 0x04021793 RID: 137107
+		// Token: 0x0401C0C2 RID: 114882
 		[Nullable(2)]
 		private static MotorParkourMapModel _Instance;
 	}

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001F17 RID: 7959
+// Token: 0x020013D9 RID: 5081
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class HonamiStorySettleItem : GridProxyAbstract<IHonamiStorySettleItemParams>
 {
-	// Token: 0x0600F538 RID: 62776 RVA: 0x003B2AD4 File Offset: 0x003B0CD4
+	// Token: 0x0600C957 RID: 51543 RVA: 0x003BE5C0 File Offset: 0x003BC7C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -27,7 +27,7 @@ public class HonamiStorySettleItem : GridProxyAbstract<IHonamiStorySettleItemPar
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F539 RID: 62777 RVA: 0x003B2B3D File Offset: 0x003B0D3D
+	// Token: 0x0600C958 RID: 51544 RVA: 0x003BE629 File Offset: 0x003BC829
 	[NullableContext(1)]
 	public override void Refresh(IHonamiStorySettleItemParams data, bool isSelected, int gridIndex)
 	{
@@ -35,12 +35,12 @@ public class HonamiStorySettleItem : GridProxyAbstract<IHonamiStorySettleItemPar
 		base.GetText(1).SetText(data.Value, true);
 	}
 
-	// Token: 0x02008524 RID: 34084
+	// Token: 0x020076A9 RID: 30377
 	private enum EComponentType
 	{
-		// Token: 0x0402B55A RID: 177498
+		// Token: 0x0402687E RID: 157822
 		NameText,
-		// Token: 0x0402B55B RID: 177499
+		// Token: 0x0402687F RID: 157823
 		ValueText
 	}
 }

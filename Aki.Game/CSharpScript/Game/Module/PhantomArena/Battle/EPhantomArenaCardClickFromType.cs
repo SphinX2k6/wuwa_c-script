@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x0200522C RID: 21036
+	// Token: 0x020041FC RID: 16892
 	public enum EPhantomArenaCardClickFromType
 	{
-		// Token: 0x0401C7E4 RID: 116708
+		// Token: 0x04017219 RID: 94745
 		None,
-		// Token: 0x0401C7E5 RID: 116709
+		// Token: 0x0401721A RID: 94746
 		OwnHand,
-		// Token: 0x0401C7E6 RID: 116710
+		// Token: 0x0401721B RID: 94747
 		OwnFunctional,
-		// Token: 0x0401C7E7 RID: 116711
+		// Token: 0x0401721C RID: 94748
 		OpponentFunctional
 	}
 }

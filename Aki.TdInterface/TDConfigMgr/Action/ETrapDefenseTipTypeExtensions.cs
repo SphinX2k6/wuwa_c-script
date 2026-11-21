@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002487 RID: 9351
+	// Token: 0x0200272A RID: 10026
 	public static class ETrapDefenseTipTypeExtensions
 	{
-		// Token: 0x0600CADE RID: 51934 RVA: 0x001DDC04 File Offset: 0x001DBE04
+		// Token: 0x0600D797 RID: 55191 RVA: 0x001F7DCC File Offset: 0x001F5FCC
 		public static string ToEnumString(this ETrapDefenseTipType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CADF RID: 51935 RVA: 0x001DDC2C File Offset: 0x001DBE2C
+		// Token: 0x0600D798 RID: 55192 RVA: 0x001F7DF4 File Offset: 0x001F5FF4
 		public static ETrapDefenseTipType FromString(string name)
 		{
 			ETrapDefenseTipType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAE0 RID: 51936 RVA: 0x001DDC55 File Offset: 0x001DBE55
+		// Token: 0x0600D799 RID: 55193 RVA: 0x001F7E1D File Offset: 0x001F601D
 		public static bool TryFromString(string name, out ETrapDefenseTipType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CAE1 RID: 51937 RVA: 0x001DDC7A File Offset: 0x001DBE7A
+		// Token: 0x0600D79A RID: 55194 RVA: 0x001F7E42 File Offset: 0x001F6042
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAE2 RID: 51938 RVA: 0x001DDC8A File Offset: 0x001DBE8A
+		// Token: 0x0600D79B RID: 55195 RVA: 0x001F7E52 File Offset: 0x001F6052
 		public static ETrapDefenseTipType[] GetValues()
 		{
 			return new ETrapDefenseTipType[1];
 		}
 
-		// Token: 0x0600CAE3 RID: 51939 RVA: 0x001DDC92 File Offset: 0x001DBE92
+		// Token: 0x0600D79C RID: 55196 RVA: 0x001F7E5A File Offset: 0x001F605A
 		public static string[] GetNames()
 		{
 			return new string[]

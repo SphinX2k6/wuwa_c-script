@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005787 RID: 22407
+	// Token: 0x02005D8E RID: 23950
 	public struct IProceduralMaterialComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A722 RID: 42786
-		// (get) Token: 0x06025907 RID: 153863 RVA: 0x0052E813 File Offset: 0x0052CA13
+		// Token: 0x1700B046 RID: 45126
+		// (get) Token: 0x06027E27 RID: 163367 RVA: 0x0057499F File Offset: 0x00572B9F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025908 RID: 153864 RVA: 0x0052E820 File Offset: 0x0052CA20
+		// Token: 0x06027E28 RID: 163368 RVA: 0x005749AC File Offset: 0x00572BAC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025909 RID: 153865 RVA: 0x0052E828 File Offset: 0x0052CA28
+		// Token: 0x06027E29 RID: 163369 RVA: 0x005749B4 File Offset: 0x00572BB4
 		public static IProceduralMaterialComponent GetRootAsIProceduralMaterialComponent(ByteBuffer _bb)
 		{
 			return IProceduralMaterialComponent.GetRootAsIProceduralMaterialComponent(_bb, default(IProceduralMaterialComponent));
 		}
 
-		// Token: 0x0602590A RID: 153866 RVA: 0x0052E844 File Offset: 0x0052CA44
+		// Token: 0x06027E2A RID: 163370 RVA: 0x005749D0 File Offset: 0x00572BD0
 		public static IProceduralMaterialComponent GetRootAsIProceduralMaterialComponent(ByteBuffer _bb, IProceduralMaterialComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602590B RID: 153867 RVA: 0x0052E861 File Offset: 0x0052CA61
+		// Token: 0x06027E2B RID: 163371 RVA: 0x005749ED File Offset: 0x00572BED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602590C RID: 153868 RVA: 0x0052E870 File Offset: 0x0052CA70
+		// Token: 0x06027E2C RID: 163372 RVA: 0x005749FC File Offset: 0x00572BFC
 		public IProceduralMaterialComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A723 RID: 42787
-		// (get) Token: 0x0602590D RID: 153869 RVA: 0x0052E880 File Offset: 0x0052CA80
+		// Token: 0x1700B047 RID: 45127
+		// (get) Token: 0x06027E2D RID: 163373 RVA: 0x00574A0C File Offset: 0x00572C0C
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602590E RID: 153870 RVA: 0x0052E8C0 File Offset: 0x0052CAC0
+		// Token: 0x06027E2E RID: 163374 RVA: 0x00574A4C File Offset: 0x00572C4C
 		public ICustomPrimitiveDataConfig? ProceduralMaterialConfigs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ICustomPrimitiveDataConfig?(default(ICustomPrimitiveDataConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A724 RID: 42788
-		// (get) Token: 0x0602590F RID: 153871 RVA: 0x0052E920 File Offset: 0x0052CB20
+		// Token: 0x1700B048 RID: 45128
+		// (get) Token: 0x06027E2F RID: 163375 RVA: 0x00574AAC File Offset: 0x00572CAC
 		public int ProceduralMaterialConfigsLength
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A725 RID: 42789
-		// (get) Token: 0x06025910 RID: 153872 RVA: 0x0052E94C File Offset: 0x0052CB4C
+		// Token: 0x1700B049 RID: 45129
+		// (get) Token: 0x06027E30 RID: 163376 RVA: 0x00574AD8 File Offset: 0x00572CD8
 		public byte NullMask
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025911 RID: 153873 RVA: 0x0052E988 File Offset: 0x0052CB88
+		// Token: 0x06027E31 RID: 163377 RVA: 0x00574B14 File Offset: 0x00572D14
 		public static Offset<IProceduralMaterialComponent> CreateIProceduralMaterialComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset ProceduralMaterialConfigsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProceduralMaterialComponent.EndIProceduralMaterialComponent(builder);
 		}
 
-		// Token: 0x06025912 RID: 153874 RVA: 0x0052E9AC File Offset: 0x0052CBAC
+		// Token: 0x06027E32 RID: 163378 RVA: 0x00574B38 File Offset: 0x00572D38
 		public static void StartIProceduralMaterialComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06025913 RID: 153875 RVA: 0x0052E9B5 File Offset: 0x0052CBB5
+		// Token: 0x06027E33 RID: 163379 RVA: 0x00574B41 File Offset: 0x00572D41
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06025914 RID: 153876 RVA: 0x0052E9C0 File Offset: 0x0052CBC0
+		// Token: 0x06027E34 RID: 163380 RVA: 0x00574B4C File Offset: 0x00572D4C
 		public static void AddProceduralMaterialConfigs(FlatBufferBuilder builder, VectorOffset proceduralMaterialConfigsOffset)
 		{
 			builder.AddOffset(1, proceduralMaterialConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06025915 RID: 153877 RVA: 0x0052E9D0 File Offset: 0x0052CBD0
+		// Token: 0x06027E35 RID: 163381 RVA: 0x00574B5C File Offset: 0x00572D5C
 		public static VectorOffset CreateProceduralMaterialConfigsVector(FlatBufferBuilder builder, Offset<ICustomPrimitiveDataConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025916 RID: 153878 RVA: 0x0052EA10 File Offset: 0x0052CC10
+		// Token: 0x06027E36 RID: 163382 RVA: 0x00574B9C File Offset: 0x00572D9C
 		public static VectorOffset CreateProceduralMaterialConfigsVectorBlock(FlatBufferBuilder builder, Offset<ICustomPrimitiveDataConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025917 RID: 153879 RVA: 0x0052EA2A File Offset: 0x0052CC2A
+		// Token: 0x06027E37 RID: 163383 RVA: 0x00574BB6 File Offset: 0x00572DB6
 		public static VectorOffset CreateProceduralMaterialConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICustomPrimitiveDataConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025918 RID: 153880 RVA: 0x0052EA48 File Offset: 0x0052CC48
+		// Token: 0x06027E38 RID: 163384 RVA: 0x00574BD4 File Offset: 0x00572DD4
 		public static VectorOffset CreateProceduralMaterialConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,25 +163,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025919 RID: 153881 RVA: 0x0052EA61 File Offset: 0x0052CC61
+		// Token: 0x06027E39 RID: 163385 RVA: 0x00574BED File Offset: 0x00572DED
 		public static void StartProceduralMaterialConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602591A RID: 153882 RVA: 0x0052EA6C File Offset: 0x0052CC6C
+		// Token: 0x06027E3A RID: 163386 RVA: 0x00574BF8 File Offset: 0x00572DF8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602591B RID: 153883 RVA: 0x0052EA77 File Offset: 0x0052CC77
+		// Token: 0x06027E3B RID: 163387 RVA: 0x00574C03 File Offset: 0x00572E03
 		public static Offset<IProceduralMaterialComponent> EndIProceduralMaterialComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IProceduralMaterialComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602591C RID: 153884 RVA: 0x0052EA84 File Offset: 0x0052CC84
+		// Token: 0x06027E3C RID: 163388 RVA: 0x00574C10 File Offset: 0x00572E10
 		public IProceduralMaterialComponentT UnPack()
 		{
 			IProceduralMaterialComponentT proceduralMaterialComponentT = new IProceduralMaterialComponentT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return proceduralMaterialComponentT;
 		}
 
-		// Token: 0x0602591D RID: 153885 RVA: 0x0052EAA0 File Offset: 0x0052CCA0
+		// Token: 0x06027E3D RID: 163389 RVA: 0x00574C2C File Offset: 0x00572E2C
 		public void UnPackTo(IProceduralMaterialComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602591E RID: 153886 RVA: 0x0052EB18 File Offset: 0x0052CD18
+		// Token: 0x06027E3E RID: 163390 RVA: 0x00574CA4 File Offset: 0x00572EA4
 		public static Offset<IProceduralMaterialComponent> Pack(FlatBufferBuilder builder, IProceduralMaterialComponentT _o)
 		{
 			if (_o == null)
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProceduralMaterialComponent.CreateIProceduralMaterialComponent(builder, _o.Disabled, proceduralMaterialConfigsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EC35 RID: 60469
+		// Token: 0x0400F920 RID: 63776
 		private Table __p;
 	}
 }

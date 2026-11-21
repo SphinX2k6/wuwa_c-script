@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033FF RID: 13311
+// Token: 0x02002971 RID: 10609
 public class RedDotPreDownload : RedDotBase
 {
-	// Token: 0x0601CCE4 RID: 117988 RVA: 0x0080AD4C File Offset: 0x00808F4C
+	// Token: 0x0601A9DC RID: 109020 RVA: 0x00831310 File Offset: 0x0082F510
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.PreDownloadStateUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CCE5 RID: 117989 RVA: 0x0080AD6A File Offset: 0x00808F6A
+	// Token: 0x0601A9DD RID: 109021 RVA: 0x0083132E File Offset: 0x0082F52E
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.PreDownloadStateUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CCE6 RID: 117990 RVA: 0x0080AD88 File Offset: 0x00808F88
+	// Token: 0x0601A9DE RID: 109022 RVA: 0x0083134C File Offset: 0x0082F54C
 	protected override bool OnCheck(int uId = 0)
 	{
 		return PreDownloadModel.Instance.HasClickBtnCheck() && !PreDownloadModel.Instance.IsComplete();

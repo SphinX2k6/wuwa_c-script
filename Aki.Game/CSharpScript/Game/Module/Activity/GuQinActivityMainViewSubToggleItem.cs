@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EFA RID: 24314
+	// Token: 0x02004EE1 RID: 20193
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GuQinActivityMainViewSubToggleItem : UiPanelBase
 	{
-		// Token: 0x0603DC74 RID: 253044 RVA: 0x00EEF488 File Offset: 0x00EED688
+		// Token: 0x06032C0F RID: 207887 RVA: 0x00E4114C File Offset: 0x00E3F34C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DC75 RID: 253045 RVA: 0x00EEF5D3 File Offset: 0x00EED7D3
+		// Token: 0x06032C10 RID: 207888 RVA: 0x00E41297 File Offset: 0x00E3F497
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).bLockStateOnSelect = true;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.SetToggleState(EToggleState.ETT_UnChecked, true);
 		}
 
-		// Token: 0x0603DC76 RID: 253046 RVA: 0x00EEF607 File Offset: 0x00EED807
+		// Token: 0x06032C11 RID: 207889 RVA: 0x00E412CB File Offset: 0x00E3F4CB
 		private bool CanExecuteCallback()
 		{
 			if (this.Data.GetStatus() == EGuQinActivityTaskStatus.Lock)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity
 			return true;
 		}
 
-		// Token: 0x0603DC77 RID: 253047 RVA: 0x00EEF62E File Offset: 0x00EED82E
+		// Token: 0x06032C12 RID: 207890 RVA: 0x00E412F2 File Offset: 0x00E3F4F2
 		private void OnToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_UnChecked)
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity
 			this.SelectCallback(this, this.Data);
 		}
 
-		// Token: 0x0603DC78 RID: 253048 RVA: 0x00EEF646 File Offset: 0x00EED846
+		// Token: 0x06032C13 RID: 207891 RVA: 0x00E4130A File Offset: 0x00E3F50A
 		public void SetToggleState(EToggleState state, bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(state, fireEvent, false, false);
 		}
 
-		// Token: 0x0603DC79 RID: 253049 RVA: 0x00EEF658 File Offset: 0x00EED858
+		// Token: 0x06032C14 RID: 207892 RVA: 0x00E4131C File Offset: 0x00E3F51C
 		public void Refresh(GuQinActivityTaskData data)
 		{
 			this.Data = data;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity
 			item3.SetUIActive(data.GetIsRedDot());
 		}
 
-		// Token: 0x0603DC7A RID: 253050 RVA: 0x00EEF754 File Offset: 0x00EED954
+		// Token: 0x06032C15 RID: 207893 RVA: 0x00E41418 File Offset: 0x00E3F618
 		public void RefreshRedDot()
 		{
 			if (this.Data == null)
@@ -131,35 +131,35 @@ namespace CSharpScript.Game.Module.Activity
 			item.SetUIActive(this.Data.GetIsRedDot());
 		}
 
-		// Token: 0x04020478 RID: 132216
+		// Token: 0x0401AF4A RID: 110410
 		public GuQinActivityTaskData Data;
 
-		// Token: 0x04020479 RID: 132217
+		// Token: 0x0401AF4B RID: 110411
 		public Action<GuQinActivityMainViewSubToggleItem, GuQinActivityTaskData> SelectCallback;
 
-		// Token: 0x0200C22C RID: 49708
+		// Token: 0x0200AC3A RID: 44090
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403AAAD RID: 240301
+			// Token: 0x040354A1 RID: 218273
 			public const int Toggle = 0;
 
-			// Token: 0x0403AAAE RID: 240302
+			// Token: 0x040354A2 RID: 218274
 			public const int TexIcon = 1;
 
-			// Token: 0x0403AAAF RID: 240303
+			// Token: 0x040354A3 RID: 218275
 			public const int TexNum = 2;
 
-			// Token: 0x0403AAB0 RID: 240304
+			// Token: 0x040354A4 RID: 218276
 			public const int TextDay = 3;
 
-			// Token: 0x0403AAB1 RID: 240305
+			// Token: 0x040354A5 RID: 218277
 			public const int PnlLock = 4;
 
-			// Token: 0x0403AAB2 RID: 240306
+			// Token: 0x040354A6 RID: 218278
 			public const int RedDot = 5;
 
-			// Token: 0x0403AAB3 RID: 240307
+			// Token: 0x040354A7 RID: 218279
 			public const int PnlDone = 6;
 		}
 	}

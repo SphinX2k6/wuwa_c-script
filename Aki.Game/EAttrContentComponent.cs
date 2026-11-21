@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020024B9 RID: 9401
+// Token: 0x020019A0 RID: 6560
 internal enum EAttrContentComponent
 {
-	// Token: 0x04008E1A RID: 36378
+	// Token: 0x04008F64 RID: 36708
 	TogOption,
-	// Token: 0x04008E1B RID: 36379
+	// Token: 0x04008F65 RID: 36709
 	TextureIcon,
-	// Token: 0x04008E1C RID: 36380
+	// Token: 0x04008F66 RID: 36710
 	DescText,
-	// Token: 0x04008E1D RID: 36381
+	// Token: 0x04008F67 RID: 36711
 	NumText
 }

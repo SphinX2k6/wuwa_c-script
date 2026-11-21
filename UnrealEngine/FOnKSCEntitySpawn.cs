@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E67 RID: 7783
+	// Token: 0x0200059A RID: 1434
 	public sealed class FOnKSCEntitySpawn : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DA86 RID: 121478 RVA: 0x002BCAF3 File Offset: 0x002BACF3
+		// Token: 0x060081F0 RID: 33264 RVA: 0x000BFDCF File Offset: 0x000BDFCF
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnKSCEntitySpawn.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DA87 RID: 121479 RVA: 0x002BCAFF File Offset: 0x002BACFF
+		// Token: 0x060081F1 RID: 33265 RVA: 0x000BFDDB File Offset: 0x000BDFDB
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnKSCEntitySpawn._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnKSCEntitySpawn._FunctionPtr;
 		}
 
-		// Token: 0x0601DA88 RID: 121480 RVA: 0x002BCB22 File Offset: 0x002BAD22
+		// Token: 0x060081F2 RID: 33266 RVA: 0x000BFDFE File Offset: 0x000BDFFE
 		public FOnKSCEntitySpawn()
 		{
 		}
 
-		// Token: 0x0601DA89 RID: 121481 RVA: 0x002BCB2A File Offset: 0x002BAD2A
+		// Token: 0x060081F3 RID: 33267 RVA: 0x000BFE06 File Offset: 0x000BE006
 		[NullableContext(2)]
 		public FOnKSCEntitySpawn(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DA8A RID: 121482 RVA: 0x002BCB34 File Offset: 0x002BAD34
+		// Token: 0x060081F4 RID: 33268 RVA: 0x000BFE10 File Offset: 0x000BE010
 		public FOnKSCEntitySpawn(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DA8B RID: 121483 RVA: 0x002BCB3F File Offset: 0x002BAD3F
+		// Token: 0x060081F5 RID: 33269 RVA: 0x000BFE1B File Offset: 0x000BE01B
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FOnKSCEntitySpawn.FOnKSCEntitySpawn_ScriptDelegate) ?? ((FOnKSCEntitySpawn.FOnKSCEntitySpawn_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnKSCEntitySpawn.FOnKSCEntitySpawn_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DA8C RID: 121484 RVA: 0x002BCB71 File Offset: 0x002BAD71
+		// Token: 0x060081F6 RID: 33270 RVA: 0x000BFE4D File Offset: 0x000BE04D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FOnKSCEntitySpawn.FOnKSCEntitySpawn_ScriptDelegate Callback)
 		{
 			if (FOnKSCEntitySpawn.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnKSCEntitySpawn.RegisterId);
 		}
 
-		// Token: 0x0601DA8D RID: 121485 RVA: 0x002BCBAC File Offset: 0x002BADAC
+		// Token: 0x060081F7 RID: 33271 RVA: 0x000BFE88 File Offset: 0x000BE088
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FTransformDouble OwnerTransform, [Nullable(new byte[]
 		{
 			2,
@@ -91,10 +89,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnKSCEntitySpawn._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601DA8E RID: 121486 RVA: 0x002BCC24 File Offset: 0x002BAE24
+		// Token: 0x060081F8 RID: 33272 RVA: 0x000BFF00 File Offset: 0x000BE100
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnKSCEntitySpawn.FOnKSCEntitySpawn_ScriptDelegate fonKSCEntitySpawn_ScriptDelegate = target as FOnKSCEntitySpawn.FOnKSCEntitySpawn_ScriptDelegate;
@@ -110,43 +107,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04010118 RID: 65816
+		// Token: 0x040038AD RID: 14509
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010119 RID: 65817
+		// Token: 0x040038AE RID: 14510
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.OnKSCEntitySpawn__DelegateSignature";
 
-		// Token: 0x0401011A RID: 65818
+		// Token: 0x040038AF RID: 14511
 		private static int RegisterId;
 
-		// Token: 0x020032B5 RID: 12981
-		// (Invoke) Token: 0x06028596 RID: 165270
+		// Token: 0x02000D14 RID: 3348
+		// (Invoke) Token: 0x0600BF07 RID: 48903
 		public delegate void FOnKSCEntitySpawn_ScriptDelegate(FTransformDouble OwnerTransform, [Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<FKSC_SpawnEntity> SpawnEntities);
 
-		// Token: 0x020032B6 RID: 12982
+		// Token: 0x02000D15 RID: 3349
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
-		protected ref struct __FOnKSCEntitySpawn_DelegateParams
+		private ref struct __FOnKSCEntitySpawn_DelegateParams
 		{
-			// Token: 0x04017159 RID: 94553
+			// Token: 0x04005FA5 RID: 24485
 			[FieldOffset(0)]
 			public FTransformDouble OwnerTransform;
 
-			// Token: 0x0401715A RID: 94554
+			// Token: 0x04005FA6 RID: 24486
 			[FieldOffset(64)]
 			public byte SpawnEntities;
 		}
 
-		// Token: 0x020032B7 RID: 12983
+		// Token: 0x02000D16 RID: 3350
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401715B RID: 94555
+			// Token: 0x04005FA7 RID: 24487
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020011B4 RID: 4532
+// Token: 0x02000668 RID: 1640
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class BlackCoastTaskItem : GridProxyAbstract<BlackCoastTaskData>
 {
-	// Token: 0x06007847 RID: 30791 RVA: 0x001934D0 File Offset: 0x001916D0
+	// Token: 0x06004BDE RID: 19422 RVA: 0x0019C09C File Offset: 0x0019A29C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -48,19 +48,19 @@ public class BlackCoastTaskItem : GridProxyAbstract<BlackCoastTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007848 RID: 30792 RVA: 0x0019363E File Offset: 0x0019183E
+	// Token: 0x06004BDF RID: 19423 RVA: 0x0019C20A File Offset: 0x0019A40A
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 	}
 
-	// Token: 0x06007849 RID: 30793 RVA: 0x00193661 File Offset: 0x00191861
+	// Token: 0x06004BE0 RID: 19424 RVA: 0x0019C22D File Offset: 0x0019A42D
 	private CommonItemSmallItemGrid CreatePropItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600784A RID: 30794 RVA: 0x00193668 File Offset: 0x00191868
+	// Token: 0x06004BE1 RID: 19425 RVA: 0x0019C234 File Offset: 0x0019A434
 	public override void Refresh(BlackCoastTaskData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -80,13 +80,13 @@ public class BlackCoastTaskItem : GridProxyAbstract<BlackCoastTaskData>
 		}));
 	}
 
-	// Token: 0x0600784B RID: 30795 RVA: 0x00193770 File Offset: 0x00191970
+	// Token: 0x06004BE2 RID: 19426 RVA: 0x0019C33C File Offset: 0x0019A53C
 	private void OnClickJump()
 	{
 		SkipTaskManager.RunByConfigId(this.Data.JumpId, null);
 	}
 
-	// Token: 0x0600784C RID: 30796 RVA: 0x00193783 File Offset: 0x00191983
+	// Token: 0x06004BE3 RID: 19427 RVA: 0x0019C34F File Offset: 0x0019A54F
 	private void OnClickGetButton()
 	{
 		Action<int> receiveDelegate = this.Data.ReceiveDelegate;
@@ -97,35 +97,35 @@ public class BlackCoastTaskItem : GridProxyAbstract<BlackCoastTaskData>
 		receiveDelegate(this.Data.TaskId);
 	}
 
-	// Token: 0x04003760 RID: 14176
+	// Token: 0x040037F9 RID: 14329
 	private BlackCoastTaskData Data;
 
-	// Token: 0x04003761 RID: 14177
+	// Token: 0x040037FA RID: 14330
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x0200779B RID: 30619
+	// Token: 0x02006927 RID: 26919
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027712 RID: 161554
+		// Token: 0x04022A48 RID: 141896
 		public const int JumpBtn = 0;
 
-		// Token: 0x04027713 RID: 161555
+		// Token: 0x04022A49 RID: 141897
 		public const int GetBtn = 1;
 
-		// Token: 0x04027714 RID: 161556
+		// Token: 0x04022A4A RID: 141898
 		public const int DoingText = 2;
 
-		// Token: 0x04027715 RID: 161557
+		// Token: 0x04022A4B RID: 141899
 		public const int FinishItem = 3;
 
-		// Token: 0x04027716 RID: 161558
+		// Token: 0x04022A4C RID: 141900
 		public const int TxtName = 4;
 
-		// Token: 0x04027717 RID: 161559
+		// Token: 0x04022A4D RID: 141901
 		public const int ProgressText = 5;
 
-		// Token: 0x04027718 RID: 161560
+		// Token: 0x04022A4E RID: 141902
 		public const int RewardScroll = 6;
 	}
 }

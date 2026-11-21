@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005054 RID: 20564
+	// Token: 0x020055B6 RID: 21942
 	public struct ICustomBulletLogic : IFlatbufferObject
 	{
-		// Token: 0x17009535 RID: 38197
-		// (get) Token: 0x06020F41 RID: 134977 RVA: 0x00494988 File Offset: 0x00492B88
+		// Token: 0x17009D1B RID: 40219
+		// (get) Token: 0x06022E7B RID: 142971 RVA: 0x004CE63C File Offset: 0x004CC83C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020F42 RID: 134978 RVA: 0x00494995 File Offset: 0x00492B95
+		// Token: 0x06022E7C RID: 142972 RVA: 0x004CE649 File Offset: 0x004CC849
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020F43 RID: 134979 RVA: 0x0049499C File Offset: 0x00492B9C
+		// Token: 0x06022E7D RID: 142973 RVA: 0x004CE650 File Offset: 0x004CC850
 		public static ICustomBulletLogic GetRootAsICustomBulletLogic(ByteBuffer _bb)
 		{
 			return ICustomBulletLogic.GetRootAsICustomBulletLogic(_bb, default(ICustomBulletLogic));
 		}
 
-		// Token: 0x06020F44 RID: 134980 RVA: 0x004949B8 File Offset: 0x00492BB8
+		// Token: 0x06022E7E RID: 142974 RVA: 0x004CE66C File Offset: 0x004CC86C
 		public static ICustomBulletLogic GetRootAsICustomBulletLogic(ByteBuffer _bb, ICustomBulletLogic obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020F45 RID: 134981 RVA: 0x004949D5 File Offset: 0x00492BD5
+		// Token: 0x06022E7F RID: 142975 RVA: 0x004CE689 File Offset: 0x004CC889
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020F46 RID: 134982 RVA: 0x004949E4 File Offset: 0x00492BE4
+		// Token: 0x06022E80 RID: 142976 RVA: 0x004CE698 File Offset: 0x004CC898
 		public ICustomBulletLogic __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009536 RID: 38198
-		// (get) Token: 0x06020F47 RID: 134983 RVA: 0x004949F4 File Offset: 0x00492BF4
+		// Token: 0x17009D1C RID: 40220
+		// (get) Token: 0x06022E81 RID: 142977 RVA: 0x004CE6A8 File Offset: 0x004CC8A8
 		public ECustomBulletLogic Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020F48 RID: 134984 RVA: 0x00494A30 File Offset: 0x00492C30
+		// Token: 0x06022E82 RID: 142978 RVA: 0x004CE6E4 File Offset: 0x004CC8E4
 		public static Offset<ICustomBulletLogic> CreateICustomBulletLogic(FlatBufferBuilder builder, ECustomBulletLogic Type = ECustomBulletLogic.TrafficBullet)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICustomBulletLogic.EndICustomBulletLogic(builder);
 		}
 
-		// Token: 0x06020F49 RID: 134985 RVA: 0x00494A46 File Offset: 0x00492C46
+		// Token: 0x06022E83 RID: 142979 RVA: 0x004CE6FA File Offset: 0x004CC8FA
 		public static void StartICustomBulletLogic(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06020F4A RID: 134986 RVA: 0x00494A4F File Offset: 0x00492C4F
+		// Token: 0x06022E84 RID: 142980 RVA: 0x004CE703 File Offset: 0x004CC903
 		public static void AddType(FlatBufferBuilder builder, ECustomBulletLogic type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06020F4B RID: 134987 RVA: 0x00494A5A File Offset: 0x00492C5A
+		// Token: 0x06022E85 RID: 142981 RVA: 0x004CE70E File Offset: 0x004CC90E
 		public static Offset<ICustomBulletLogic> EndICustomBulletLogic(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomBulletLogic>(builder.EndTable());
 		}
 
-		// Token: 0x06020F4C RID: 134988 RVA: 0x00494A68 File Offset: 0x00492C68
+		// Token: 0x06022E86 RID: 142982 RVA: 0x004CE71C File Offset: 0x004CC91C
 		public ICustomBulletLogicT UnPack()
 		{
 			ICustomBulletLogicT customBulletLogicT = new ICustomBulletLogicT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return customBulletLogicT;
 		}
 
-		// Token: 0x06020F4D RID: 134989 RVA: 0x00494A83 File Offset: 0x00492C83
+		// Token: 0x06022E87 RID: 142983 RVA: 0x004CE737 File Offset: 0x004CC937
 		public void UnPackTo(ICustomBulletLogicT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06020F4E RID: 134990 RVA: 0x00494A94 File Offset: 0x00492C94
+		// Token: 0x06022E88 RID: 142984 RVA: 0x004CE748 File Offset: 0x004CC948
 		public static Offset<ICustomBulletLogic> Pack(FlatBufferBuilder builder, ICustomBulletLogicT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICustomBulletLogic.CreateICustomBulletLogic(builder, _o.Type);
 		}
 
-		// Token: 0x0400E04C RID: 57420
+		// Token: 0x0400EC45 RID: 60485
 		private Table __p;
 	}
 }

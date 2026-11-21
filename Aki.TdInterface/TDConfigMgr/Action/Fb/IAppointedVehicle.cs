@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029C5 RID: 10693
+	// Token: 0x02002CB2 RID: 11442
 	public class IAppointedVehicle : ITargetVehicle
 	{
-		// Token: 0x0600EC64 RID: 60516 RVA: 0x00228590 File Offset: 0x00226790
-		[NullableContext(1)]
+		// Token: 0x0600FAFB RID: 64251 RVA: 0x00245F14 File Offset: 0x00244114
 		public static IAppointedVehicle Create(IAppointedVehicle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A9C RID: 19100
-		// (get) Token: 0x0600EC65 RID: 60517 RVA: 0x002285AF File Offset: 0x002267AF
+		// Token: 0x17004E45 RID: 20037
+		// (get) Token: 0x0600FAFC RID: 64252 RVA: 0x00245F33 File Offset: 0x00244133
 		public override ETargetVehicle Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A9D RID: 19101
-		// (get) Token: 0x0600EC66 RID: 60518 RVA: 0x002285BC File Offset: 0x002267BC
+		// Token: 0x17004E46 RID: 20038
+		// (get) Token: 0x0600FAFD RID: 64253 RVA: 0x00245F40 File Offset: 0x00244140
 		public virtual int VehicleId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008225 RID: 33317
+		// Token: 0x04008916 RID: 35094
 		private IAppointedVehicle Instance;
 	}
 }

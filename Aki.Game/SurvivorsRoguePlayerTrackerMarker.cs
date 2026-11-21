@@ -5,13 +5,13 @@ using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D1E RID: 7454
+// Token: 0x020011E0 RID: 4576
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRoguePlayerTrackerMarker : UiPanelBase
 {
-	// Token: 0x17001219 RID: 4633
-	// (get) Token: 0x0600E189 RID: 57737 RVA: 0x0034F464 File Offset: 0x0034D664
+	// Token: 0x17001243 RID: 4675
+	// (get) Token: 0x0600B5A6 RID: 46502 RVA: 0x0035AE94 File Offset: 0x00359094
 	private FVector? TrackingPosition
 	{
 		get
@@ -90,25 +90,25 @@ public class SurvivorsRoguePlayerTrackerMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E18B RID: 57739 RVA: 0x0034F696 File Offset: 0x0034D896
+	// Token: 0x0600B5A8 RID: 46504 RVA: 0x0035B0C6 File Offset: 0x003592C6
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600E18C RID: 57740 RVA: 0x0034F6A9 File Offset: 0x0034D8A9
+	// Token: 0x0600B5A9 RID: 46505 RVA: 0x0035B0D9 File Offset: 0x003592D9
 	protected override void OnBeforeShow()
 	{
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600E18D RID: 57741 RVA: 0x0034F6B2 File Offset: 0x0034D8B2
+	// Token: 0x0600B5AA RID: 46506 RVA: 0x0035B0E2 File Offset: 0x003592E2
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600E18E RID: 57742 RVA: 0x0034F6BC File Offset: 0x0034D8BC
+	// Token: 0x0600B5AB RID: 46507 RVA: 0x0035B0EC File Offset: 0x003592EC
 	public void ShowTips()
 	{
 		base.Show(null);
@@ -119,7 +119,7 @@ public class SurvivorsRoguePlayerTrackerMarker : UiPanelBase
 		this.SequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600E18F RID: 57743 RVA: 0x0034F710 File Offset: 0x0034D910
+	// Token: 0x0600B5AC RID: 46508 RVA: 0x0035B140 File Offset: 0x00359340
 	public void HideTips()
 	{
 		if (!base.IsShowOrShowing)
@@ -137,7 +137,7 @@ public class SurvivorsRoguePlayerTrackerMarker : UiPanelBase
 		this.SequencePlayer.PlayOrReplaySequenceByName("Close", false, null);
 	}
 
-	// Token: 0x0600E190 RID: 57744 RVA: 0x0034F77C File Offset: 0x0034D97C
+	// Token: 0x0600B5AD RID: 46509 RVA: 0x0035B1AC File Offset: 0x003593AC
 	public void OnTick(float delta)
 	{
 		if (!this.TickEnabled)
@@ -167,32 +167,32 @@ public class SurvivorsRoguePlayerTrackerMarker : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006845 RID: 26693
+	// Token: 0x04006924 RID: 26916
 	private static readonly FName MARKER_TRACE_SOCKET = new FName("Root");
 
-	// Token: 0x04006846 RID: 26694
+	// Token: 0x04006925 RID: 26917
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04006847 RID: 26695
+	// Token: 0x04006926 RID: 26918
 	protected FVector2D ScreenPositionRef;
 
-	// Token: 0x04006848 RID: 26696
+	// Token: 0x04006927 RID: 26919
 	protected readonly Vector2D ScreenPosition = Vector2D.Create();
 
-	// Token: 0x04006849 RID: 26697
+	// Token: 0x04006928 RID: 26920
 	protected readonly Vector2D LastScreenPosition = Vector2D.Create();
 
-	// Token: 0x0400684A RID: 26698
+	// Token: 0x04006929 RID: 26921
 	protected Vector2D PointTransport = new Vector2D(1.0, -1.0);
 
-	// Token: 0x0400684B RID: 26699
+	// Token: 0x0400692A RID: 26922
 	[Nullable(2)]
 	protected Vector Offset;
 
-	// Token: 0x0400684C RID: 26700
+	// Token: 0x0400692B RID: 26923
 	[Nullable(2)]
 	protected CharacterActorComponent CharacterActorComponent;
 
-	// Token: 0x0400684D RID: 26701
+	// Token: 0x0400692C RID: 26924
 	protected bool TickEnabled;
 }

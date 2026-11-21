@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 {
-	// Token: 0x02005028 RID: 20520
+	// Token: 0x02003FF2 RID: 16370
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AssistedWalkSeqStateHandler : SeqNpcPerformStateHandler
 	{
-		// Token: 0x17008020 RID: 32800
-		// (get) Token: 0x0603484C RID: 215116 RVA: 0x00C5FC61 File Offset: 0x00C5DE61
+		// Token: 0x170053D5 RID: 21461
+		// (get) Token: 0x060296EF RID: 169711 RVA: 0x00BAB1D9 File Offset: 0x00BA93D9
 		public override ENpcGroupPerformType PerformType
 		{
 			get
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x17008021 RID: 32801
-		// (get) Token: 0x0603484D RID: 215117 RVA: 0x00C5FC64 File Offset: 0x00C5DE64
+		// Token: 0x170053D6 RID: 21462
+		// (get) Token: 0x060296F0 RID: 169712 RVA: 0x00BAB1DC File Offset: 0x00BA93DC
 		public override ENpcRelationType RelationType
 		{
 			get
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			}
 		}
 
-		// Token: 0x0603484E RID: 215118 RVA: 0x00C5FC68 File Offset: 0x00C5DE68
+		// Token: 0x060296F1 RID: 169713 RVA: 0x00BAB1E0 File Offset: 0x00BA93E0
 		[return: Nullable(2)]
 		public override NpcRelation Capture(string key)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			};
 		}
 
-		// Token: 0x0603484F RID: 215119 RVA: 0x00C5FCAC File Offset: 0x00C5DEAC
+		// Token: 0x060296F2 RID: 169714 RVA: 0x00BAB224 File Offset: 0x00BA9424
 		public unsafe override void Restore(NpcRelation relation, string reason)
 		{
 			AssistedWalkSeqRelation assistedWalkSeqRelation = relation as AssistedWalkSeqRelation;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			this.StartAssistedWalkImmediate(assistedWalkSeqRelation.Key, characterActorComponent, baseActorComponent, baseMoveComponent, reason);
 		}
 
-		// Token: 0x06034850 RID: 215120 RVA: 0x00C5FE58 File Offset: 0x00C5E058
+		// Token: 0x060296F3 RID: 169715 RVA: 0x00BAB3D0 File Offset: 0x00BA95D0
 		private unsafe void StartAssistedWalkImmediate(string key, CharacterActorComponent leader, BaseActorComponent followerActor, BaseMoveComponent followerMoveComp, string reason)
 		{
 			global::Log instance = global::Log.Instance;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			});
 		}
 
-		// Token: 0x06034851 RID: 215121 RVA: 0x00C60098 File Offset: 0x00C5E298
+		// Token: 0x060296F4 RID: 169716 RVA: 0x00BAB610 File Offset: 0x00BA9810
 		private unsafe void TeleportFollowerToAttachPose(CharacterActorComponent leader, BaseActorComponent followerActor, string socket, global::Transform attachTransform)
 		{
 			TsBaseCharacter actor = leader.Actor;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.NpcPerformState
 			this.SyncNpcLocationToServer(followerActor);
 		}
 
-		// Token: 0x06034852 RID: 215122 RVA: 0x00C601B8 File Offset: 0x00C5E3B8
+		// Token: 0x060296F5 RID: 169717 RVA: 0x00BAB730 File Offset: 0x00BA9930
 		private unsafe void SyncNpcLocationToServer(BaseActorComponent followerActor)
 		{
 			Entity entity = followerActor.Entity;

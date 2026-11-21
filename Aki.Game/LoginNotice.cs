@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200209A RID: 8346
+// Token: 0x02001571 RID: 5489
 [NullableContext(1)]
 [Nullable(0)]
 public class LoginNotice
 {
-	// Token: 0x060106FD RID: 67325 RVA: 0x00403F10 File Offset: 0x00402110
-	public void Phrase(LoginNoticeEx ex)
+	// Token: 0x0600DB6B RID: 56171 RVA: 0x004104E0 File Offset: 0x0040E6E0
+	public void Phrase(global::LoginNoticeEx ex)
 	{
 		this.WhiteLists = ex.whiteList;
 		this.BeginTime = ex.startTimeMs / 1000.0;
@@ -16,10 +16,10 @@ public class LoginNotice
 		this.content = ex.content;
 	}
 
-	// Token: 0x0400797A RID: 31098
+	// Token: 0x04007A78 RID: 31352
 	public string Id = string.Empty;
 
-	// Token: 0x0400797B RID: 31099
+	// Token: 0x04007A79 RID: 31353
 	[Nullable(new byte[]
 	{
 		2,
@@ -27,18 +27,18 @@ public class LoginNotice
 	})]
 	public string[] WhiteLists;
 
-	// Token: 0x0400797C RID: 31100
+	// Token: 0x04007A7A RID: 31354
 	public double ModifyTime;
 
-	// Token: 0x0400797D RID: 31101
+	// Token: 0x04007A7B RID: 31355
 	public double BeginTime;
 
-	// Token: 0x0400797E RID: 31102
+	// Token: 0x04007A7C RID: 31356
 	public double EndTime;
 
-	// Token: 0x0400797F RID: 31103
+	// Token: 0x04007A7D RID: 31357
 	public string Title = string.Empty;
 
-	// Token: 0x04007980 RID: 31104
+	// Token: 0x04007A7E RID: 31358
 	public string content = string.Empty;
 }

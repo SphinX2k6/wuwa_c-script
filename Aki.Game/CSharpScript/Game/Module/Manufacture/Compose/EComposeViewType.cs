@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Compose
 {
-	// Token: 0x02005657 RID: 22103
+	// Token: 0x0200462D RID: 17965
 	public enum EComposeViewType
 	{
-		// Token: 0x0401D900 RID: 121088
+		// Token: 0x0401838B RID: 99211
 		ComposeMainType,
-		// Token: 0x0401D901 RID: 121089
+		// Token: 0x0401838C RID: 99212
 		ComposeRoleType,
-		// Token: 0x0401D902 RID: 121090
+		// Token: 0x0401838D RID: 99213
 		ComposeLevelType,
-		// Token: 0x0401D903 RID: 121091
+		// Token: 0x0401838E RID: 99214
 		ComposeType
 	}
 }

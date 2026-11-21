@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001062 RID: 4194
+	// Token: 0x02001052 RID: 4178
 	public sealed class RoleCoopActivityData : IMessage<RoleCoopActivityData>, IMessage, IEquatable<RoleCoopActivityData>, IDeepCloneable<RoleCoopActivityData>, IBufferMessage
 	{
-		// Token: 0x06016682 RID: 91778 RVA: 0x003416D5 File Offset: 0x0033F8D5
+		// Token: 0x0601659D RID: 91549 RVA: 0x00340001 File Offset: 0x0033E201
 		[NullableContext(1)]
 		public static RoleCoopActivityData Create()
 		{
 			return new RoleCoopActivityData();
 		}
 
-		// Token: 0x17004AF5 RID: 19189
-		// (get) Token: 0x06016683 RID: 91779 RVA: 0x003416DC File Offset: 0x0033F8DC
+		// Token: 0x17004ACB RID: 19147
+		// (get) Token: 0x0601659E RID: 91550 RVA: 0x00340008 File Offset: 0x0033E208
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004AF6 RID: 19190
-		// (get) Token: 0x06016684 RID: 91780 RVA: 0x003416DF File Offset: 0x0033F8DF
+		// Token: 0x17004ACC RID: 19148
+		// (get) Token: 0x0601659F RID: 91551 RVA: 0x0034000B File Offset: 0x0033E20B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016685 RID: 91781 RVA: 0x003416E6 File Offset: 0x0033F8E6
+		// Token: 0x060165A0 RID: 91552 RVA: 0x00340012 File Offset: 0x0033E212
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleCoopActivityData()
 		{
 		}
 
-		// Token: 0x06016686 RID: 91782 RVA: 0x0034171C File Offset: 0x0033F91C
+		// Token: 0x060165A1 RID: 91553 RVA: 0x00340048 File Offset: 0x0033E248
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleCoopActivityData(RoleCoopActivityData other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016687 RID: 91783 RVA: 0x00341784 File Offset: 0x0033F984
+		// Token: 0x060165A2 RID: 91554 RVA: 0x003400B0 File Offset: 0x0033E2B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleCoopActivityData Clone()
@@ -69,8 +69,8 @@ namespace Aki.Protocol
 			return new RoleCoopActivityData(this);
 		}
 
-		// Token: 0x17004AF7 RID: 19191
-		// (get) Token: 0x06016688 RID: 91784 RVA: 0x0034178C File Offset: 0x0033F98C
+		// Token: 0x17004ACD RID: 19149
+		// (get) Token: 0x060165A3 RID: 91555 RVA: 0x003400B8 File Offset: 0x0033E2B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CoopRoleInfo> CoopRoleInfos
@@ -81,8 +81,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004AF8 RID: 19192
-		// (get) Token: 0x06016689 RID: 91785 RVA: 0x00341794 File Offset: 0x0033F994
+		// Token: 0x17004ACE RID: 19150
+		// (get) Token: 0x060165A4 RID: 91556 RVA: 0x003400C0 File Offset: 0x0033E2C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RewardGetList
@@ -93,8 +93,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004AF9 RID: 19193
-		// (get) Token: 0x0601668A RID: 91786 RVA: 0x0034179C File Offset: 0x0033F99C
+		// Token: 0x17004ACF RID: 19151
+		// (get) Token: 0x060165A5 RID: 91557 RVA: 0x003400C8 File Offset: 0x0033E2C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CoopTaskCompleteInfo> CoopTaskCompleteInfos
@@ -105,8 +105,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004AFA RID: 19194
-		// (get) Token: 0x0601668B RID: 91787 RVA: 0x003417A4 File Offset: 0x0033F9A4
+		// Token: 0x17004AD0 RID: 19152
+		// (get) Token: 0x060165A6 RID: 91558 RVA: 0x003400D0 File Offset: 0x0033E2D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> PreCompleteIds
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601668C RID: 91788 RVA: 0x003417AC File Offset: 0x0033F9AC
+		// Token: 0x060165A7 RID: 91559 RVA: 0x003400D8 File Offset: 0x0033E2D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoleCoopActivityData);
 		}
 
-		// Token: 0x0601668D RID: 91789 RVA: 0x003417BC File Offset: 0x0033F9BC
+		// Token: 0x060165A8 RID: 91560 RVA: 0x003400E8 File Offset: 0x0033E2E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoleCoopActivityData other)
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.coopRoleInfos_.Equals(other.coopRoleInfos_) && this.rewardGetList_.Equals(other.rewardGetList_) && this.coopTaskCompleteInfos_.Equals(other.coopTaskCompleteInfos_) && this.preCompleteIds_.Equals(other.preCompleteIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601668E RID: 91790 RVA: 0x0034183C File Offset: 0x0033FA3C
+		// Token: 0x060165A9 RID: 91561 RVA: 0x00340168 File Offset: 0x0033E368
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601668F RID: 91791 RVA: 0x0034189A File Offset: 0x0033FA9A
+		// Token: 0x060165AA RID: 91562 RVA: 0x003401C6 File Offset: 0x0033E3C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016690 RID: 91792 RVA: 0x003418A7 File Offset: 0x0033FAA7
+		// Token: 0x060165AB RID: 91563 RVA: 0x003401D3 File Offset: 0x0033E3D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016691 RID: 91793 RVA: 0x003418B0 File Offset: 0x0033FAB0
+		// Token: 0x060165AC RID: 91564 RVA: 0x003401DC File Offset: 0x0033E3DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016692 RID: 91794 RVA: 0x00341918 File Offset: 0x0033FB18
+		// Token: 0x060165AD RID: 91565 RVA: 0x00340244 File Offset: 0x0033E444
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016693 RID: 91795 RVA: 0x0034198C File Offset: 0x0033FB8C
+		// Token: 0x060165AE RID: 91566 RVA: 0x003402B8 File Offset: 0x0033E4B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoleCoopActivityData other)
@@ -214,7 +214,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016694 RID: 91796 RVA: 0x003419F8 File Offset: 0x0033FBF8
+		// Token: 0x060165AF RID: 91567 RVA: 0x00340324 File Offset: 0x0033E524
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -222,7 +222,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016695 RID: 91797 RVA: 0x00341A04 File Offset: 0x0033FC04
+		// Token: 0x060165B0 RID: 91568 RVA: 0x00340330 File Offset: 0x0033E530
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -264,43 +264,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040085F5 RID: 34293
+		// Token: 0x0400861F RID: 34335
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040085F6 RID: 34294
+		// Token: 0x04008620 RID: 34336
 		public const int CoopRoleInfosFieldNumber = 2;
 
-		// Token: 0x040085F7 RID: 34295
+		// Token: 0x04008621 RID: 34337
 		private static readonly FieldCodec<CoopRoleInfo> _repeated_coopRoleInfos_codec = FieldCodec.ForMessage<CoopRoleInfo>(18U, CoopRoleInfo.Parser);
 
-		// Token: 0x040085F8 RID: 34296
+		// Token: 0x04008622 RID: 34338
 		private readonly RepeatedField<CoopRoleInfo> coopRoleInfos_ = new RepeatedField<CoopRoleInfo>();
 
-		// Token: 0x040085F9 RID: 34297
+		// Token: 0x04008623 RID: 34339
 		public const int RewardGetListFieldNumber = 3;
 
-		// Token: 0x040085FA RID: 34298
+		// Token: 0x04008624 RID: 34340
 		private static readonly FieldCodec<int> _repeated_rewardGetList_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x040085FB RID: 34299
+		// Token: 0x04008625 RID: 34341
 		private readonly RepeatedField<int> rewardGetList_ = new RepeatedField<int>();
 
-		// Token: 0x040085FC RID: 34300
+		// Token: 0x04008626 RID: 34342
 		public const int CoopTaskCompleteInfosFieldNumber = 4;
 
-		// Token: 0x040085FD RID: 34301
+		// Token: 0x04008627 RID: 34343
 		private static readonly FieldCodec<CoopTaskCompleteInfo> _repeated_coopTaskCompleteInfos_codec = FieldCodec.ForMessage<CoopTaskCompleteInfo>(34U, CoopTaskCompleteInfo.Parser);
 
-		// Token: 0x040085FE RID: 34302
+		// Token: 0x04008628 RID: 34344
 		private readonly RepeatedField<CoopTaskCompleteInfo> coopTaskCompleteInfos_ = new RepeatedField<CoopTaskCompleteInfo>();
 
-		// Token: 0x040085FF RID: 34303
+		// Token: 0x04008629 RID: 34345
 		public const int PreCompleteIdsFieldNumber = 5;
 
-		// Token: 0x04008600 RID: 34304
+		// Token: 0x0400862A RID: 34346
 		private static readonly FieldCodec<int> _repeated_preCompleteIds_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x04008601 RID: 34305
+		// Token: 0x0400862B RID: 34347
 		private readonly RepeatedField<int> preCompleteIds_ = new RepeatedField<int>();
 	}
 }

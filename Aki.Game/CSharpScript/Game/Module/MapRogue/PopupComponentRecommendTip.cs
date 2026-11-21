@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005636 RID: 22070
+	// Token: 0x0200460C RID: 17932
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupComponentRecommendTip : UiPanelBase
 	{
-		// Token: 0x060381EE RID: 229870 RVA: 0x00D4B3CE File Offset: 0x00D495CE
+		// Token: 0x0602D0EC RID: 184556 RVA: 0x00C99116 File Offset: 0x00C97316
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381EF RID: 229871 RVA: 0x00D4B408 File Offset: 0x00D49608
+		// Token: 0x0602D0ED RID: 184557 RVA: 0x00C99150 File Offset: 0x00C97350
 		public void SetTextChangeColor(bool bUseChange)
 		{
 			UUIItem sprite = base.GetSprite(1);
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			sprite.SetChangeColor(bUseChange, fcolor);
 		}
 
-		// Token: 0x060381F0 RID: 229872 RVA: 0x00D4B436 File Offset: 0x00D49636
+		// Token: 0x0602D0EE RID: 184558 RVA: 0x00C9917E File Offset: 0x00C9737E
 		public void SetDescriptionByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x060381F1 RID: 229873 RVA: 0x00D4B44B File Offset: 0x00D4964B
+		// Token: 0x0602D0EF RID: 184559 RVA: 0x00C99193 File Offset: 0x00C97393
 		public void SetDescriptionByText(string text)
 		{
 			base.GetText(0).SetText(text, true);

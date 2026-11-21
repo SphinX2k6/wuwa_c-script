@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001565 RID: 5477
+// Token: 0x02000A1D RID: 2589
 public class VersionPreheatActivityBottomData
 {
-	// Token: 0x040044B2 RID: 17586
+	// Token: 0x04004558 RID: 17752
 	public bool Test;
 }

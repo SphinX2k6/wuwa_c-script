@@ -4,24 +4,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006966 RID: 26982
+	// Token: 0x02005AC2 RID: 23234
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EntityPositionData
 	{
-		// Token: 0x06043313 RID: 275219 RVA: 0x01062307 File Offset: 0x01060507
+		// Token: 0x0603934B RID: 234315 RVA: 0x0100656F File Offset: 0x0100476F
 		public EntityPositionData(int entityId, PosA pos)
 		{
 			this.EntityId = entityId;
 			this.Pos = pos;
 		}
 
-		// Token: 0x1700980A RID: 38922
-		// (get) Token: 0x06043314 RID: 275220 RVA: 0x0106231D File Offset: 0x0106051D
+		// Token: 0x17006CEA RID: 27882
+		// (get) Token: 0x0603934C RID: 234316 RVA: 0x01006585 File Offset: 0x01004785
 		public int EntityId { get; }
 
-		// Token: 0x1700980B RID: 38923
-		// (get) Token: 0x06043315 RID: 275221 RVA: 0x01062325 File Offset: 0x01060525
+		// Token: 0x17006CEB RID: 27883
+		// (get) Token: 0x0603934D RID: 234317 RVA: 0x0100658D File Offset: 0x0100478D
 		public PosA Pos { get; }
 	}
 }

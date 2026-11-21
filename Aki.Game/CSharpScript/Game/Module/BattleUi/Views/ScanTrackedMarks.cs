@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB2 RID: 23986
+	// Token: 0x02004D96 RID: 19862
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ScanTrackedMarks : UiPanelBase, IStaticVariableResetter
 	{
-		// Token: 0x17008E6B RID: 36459
-		// (get) Token: 0x0603CECD RID: 249549 RVA: 0x00EA2D84 File Offset: 0x00EA0F84
+		// Token: 0x1700623D RID: 25149
+		// (get) Token: 0x06031E44 RID: 204356 RVA: 0x00DF3C58 File Offset: 0x00DF1E58
 		private FVectorDouble? TrackingPosition
 		{
 			get
@@ -66,24 +66,24 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CECE RID: 249550 RVA: 0x00EA2E74 File Offset: 0x00EA1074
+		// Token: 0x06031E45 RID: 204357 RVA: 0x00DF3D48 File Offset: 0x00DF1F48
 		static ScanTrackedMarks()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ScanTrackedMarks.CreateStaticDefaultValue), new Action(ScanTrackedMarks.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603CECF RID: 249551 RVA: 0x00EA2F1C File Offset: 0x00EA111C
+		// Token: 0x06031E46 RID: 204358 RVA: 0x00DF3DF0 File Offset: 0x00DF1FF0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603CED0 RID: 249552 RVA: 0x00EA2F1E File Offset: 0x00EA111E
+		// Token: 0x06031E47 RID: 204359 RVA: 0x00DF3DF2 File Offset: 0x00DF1FF2
 		public static void ResetStaticDefaultValue()
 		{
 			ScanTrackedMarks.LineTrace = null;
 		}
 
-		// Token: 0x0603CED1 RID: 249553 RVA: 0x00EA2F26 File Offset: 0x00EA1126
+		// Token: 0x06031E48 RID: 204360 RVA: 0x00DF3DFA File Offset: 0x00DF1FFA
 		private static void InitLineTrace()
 		{
 			UTraceLineElement utraceLineElement = new UTraceLineElement();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			ScanTrackedMarks.LineTrace = utraceLineElement;
 		}
 
-		// Token: 0x0603CED2 RID: 249554 RVA: 0x00EA2F50 File Offset: 0x00EA1150
+		// Token: 0x06031E49 RID: 204361 RVA: 0x00DF3E24 File Offset: 0x00DF2024
 		private void OnSequenceFinish(string name)
 		{
 			if (name == "Start")
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CED3 RID: 249555 RVA: 0x00EA2F9C File Offset: 0x00EA119C
+		// Token: 0x06031E4A RID: 204362 RVA: 0x00DF3E70 File Offset: 0x00DF2070
 		[NullableContext(2)]
 		public ScanTrackedMarks(UUIItem parent, [Nullable(1)] ULGUISpriteData_BaseObject iconSprite, float markHideDis, [Nullable(1)] string effectPath, FVectorDouble? originPosition = null, AActor trackActor = null, Vector offset = null, int? level = null, bool? showDistance = null, bool? needClampToEllipse = null)
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 		}
 
-		// Token: 0x0603CED4 RID: 249556 RVA: 0x00EA312C File Offset: 0x00EA132C
+		// Token: 0x06031E4B RID: 204363 RVA: 0x00DF4000 File Offset: 0x00DF2200
 		private void SetSprite(ULGUISpriteData_BaseObject iconSprite)
 		{
 			UUIItem sprite = base.GetSprite(0);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite4.SetUIActive(false);
 		}
 
-		// Token: 0x0603CED5 RID: 249557 RVA: 0x00EA31A4 File Offset: 0x00EA13A4
+		// Token: 0x06031E4C RID: 204364 RVA: 0x00DF4078 File Offset: 0x00DF2278
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CED6 RID: 249558 RVA: 0x00EA3270 File Offset: 0x00EA1470
+		// Token: 0x06031E4D RID: 204365 RVA: 0x00DF4144 File Offset: 0x00DF2344
 		protected override void OnStart()
 		{
 			UUIText text = base.GetText(3);
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetTrackedEffectHidden(true);
 		}
 
-		// Token: 0x0603CED7 RID: 249559 RVA: 0x00EA3360 File Offset: 0x00EA1560
+		// Token: 0x06031E4E RID: 204366 RVA: 0x00DF4234 File Offset: 0x00DF2434
 		public void Update()
 		{
 			if (GlobalData.World == null)
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetTrackedEffectHidden(false);
 		}
 
-		// Token: 0x0603CED8 RID: 249560 RVA: 0x00EA3678 File Offset: 0x00EA1878
+		// Token: 0x06031E4F RID: 204367 RVA: 0x00DF454C File Offset: 0x00DF274C
 		[NullableContext(0)]
 		private ValueTuple<FVector2D, bool> ClampToEllipse(FVector2D vector, bool inFront, bool needClamp)
 		{
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<FVector2D, bool>(new FVector2D(x * num8, y * num8), false);
 		}
 
-		// Token: 0x0603CED9 RID: 249561 RVA: 0x00EA3818 File Offset: 0x00EA1A18
+		// Token: 0x06031E50 RID: 204368 RVA: 0x00DF46EC File Offset: 0x00DF28EC
 		private int CreateTrackEffect(string effectPath)
 		{
 			UTraceLineElement lineTrace = ScanTrackedMarks.LineTrace;
@@ -370,13 +370,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return num;
 		}
 
-		// Token: 0x0603CEDA RID: 249562 RVA: 0x00EA393E File Offset: 0x00EA1B3E
+		// Token: 0x06031E51 RID: 204369 RVA: 0x00DF4812 File Offset: 0x00DF2A12
 		private void SetTrackedEffectHidden(bool bHidden)
 		{
 			EffectSystem.Instance.SetEffectHidden(this.TrackedEffect, bHidden, null, false);
 		}
 
-		// Token: 0x0603CEDB RID: 249563 RVA: 0x00EA3954 File Offset: 0x00EA1B54
+		// Token: 0x06031E52 RID: 204370 RVA: 0x00DF4828 File Offset: 0x00DF2A28
 		public void ToClose()
 		{
 			if (this.RootItem == null)
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x0603CEDC RID: 249564 RVA: 0x00EA39C4 File Offset: 0x00EA1BC4
+		// Token: 0x06031E53 RID: 204371 RVA: 0x00DF4898 File Offset: 0x00DF2A98
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TrackedEffect != 0)
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0603CEDD RID: 249565 RVA: 0x00EA3A10 File Offset: 0x00EA1C10
+		// Token: 0x06031E54 RID: 204372 RVA: 0x00DF48E4 File Offset: 0x00DF2AE4
 		protected override void OnBeforeShow()
 		{
 			if (this.TrackingActor == null || !this.TrackingActor.IsValid())
@@ -419,20 +419,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FBA4 RID: 129956
+		// Token: 0x0401A661 RID: 108129
 		private const string PROFILE_KEY = "ScanTrackedMarks_CreateTrackEffect";
 
-		// Token: 0x0401FBA5 RID: 129957
+		// Token: 0x0401A662 RID: 108130
 		private const float OFFSET_Z = 1000f;
 
-		// Token: 0x0401FBA6 RID: 129958
+		// Token: 0x0401A663 RID: 108131
 		private const float MIN_SHOW_DISTANCE = 3f;
 
-		// Token: 0x0401FBA7 RID: 129959
+		// Token: 0x0401A664 RID: 108132
 		[StaticVariableRuleIgnore]
 		private static readonly FName MARK_CASE_NAME = new FName("MarkCase");
 
-		// Token: 0x0401FBA8 RID: 129960
+		// Token: 0x0401A665 RID: 108133
 		[StaticVariableRuleIgnore]
 		private static readonly string[] SpriteColors = new string[]
 		{
@@ -450,84 +450,84 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"D1D1D1FF"
 		};
 
-		// Token: 0x0401FBA9 RID: 129961
+		// Token: 0x0401A666 RID: 108134
 		private readonly FVectorDouble? OriginalPosition;
 
-		// Token: 0x0401FBAA RID: 129962
+		// Token: 0x0401A667 RID: 108135
 		[Nullable(2)]
 		private readonly AActor TrackingActor;
 
-		// Token: 0x0401FBAB RID: 129963
+		// Token: 0x0401A668 RID: 108136
 		private FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x0401FBAC RID: 129964
+		// Token: 0x0401A669 RID: 108137
 		private readonly Vector2D ViewportSize = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401FBAD RID: 129965
+		// Token: 0x0401A66A RID: 108138
 		private readonly Vector2D PointTransport = new Vector2D(1.0, -1.0);
 
-		// Token: 0x0401FBAE RID: 129966
+		// Token: 0x0401A66B RID: 108139
 		private readonly float MarkHideDis;
 
-		// Token: 0x0401FBAF RID: 129967
+		// Token: 0x0401A66C RID: 108140
 		private int TrackedEffect;
 
-		// Token: 0x0401FBB0 RID: 129968
+		// Token: 0x0401A66D RID: 108141
 		[Nullable(2)]
 		private readonly Vector Offset;
 
-		// Token: 0x0401FBB1 RID: 129969
+		// Token: 0x0401A66E RID: 108142
 		private readonly int? Level = new int?(0);
 
-		// Token: 0x0401FBB2 RID: 129970
+		// Token: 0x0401A66F RID: 108143
 		private readonly bool ShowDistance;
 
-		// Token: 0x0401FBB3 RID: 129971
+		// Token: 0x0401A670 RID: 108144
 		private readonly bool NeedClampToEllipse;
 
-		// Token: 0x0401FBB4 RID: 129972
+		// Token: 0x0401A671 RID: 108145
 		private float? MaxWidth = new float?(0f);
 
-		// Token: 0x0401FBB5 RID: 129973
+		// Token: 0x0401A672 RID: 108146
 		private float? MaxHeight = new float?(0f);
 
-		// Token: 0x0401FBB6 RID: 129974
+		// Token: 0x0401A673 RID: 108147
 		[Nullable(2)]
 		private readonly ULGUISpriteData_BaseObject IconSprite;
 
-		// Token: 0x0401FBB7 RID: 129975
+		// Token: 0x0401A674 RID: 108148
 		private readonly string EffectPath = string.Empty;
 
-		// Token: 0x0401FBB8 RID: 129976
+		// Token: 0x0401A675 RID: 108149
 		private readonly Vector HitLocation = Vector.Create();
 
-		// Token: 0x0401FBB9 RID: 129977
+		// Token: 0x0401A676 RID: 108150
 		[Nullable(2)]
 		private static UTraceLineElement LineTrace;
 
-		// Token: 0x0401FBBA RID: 129978
+		// Token: 0x0401A677 RID: 108151
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FBBB RID: 129979
+		// Token: 0x0401A678 RID: 108152
 		private readonly float LimitA;
 
-		// Token: 0x0401FBBC RID: 129980
+		// Token: 0x0401A679 RID: 108153
 		private readonly float LimitB;
 
-		// Token: 0x0200C092 RID: 49298
+		// Token: 0x0200AA9B RID: 43675
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403A1CB RID: 238027
+			// Token: 0x04034B9D RID: 215965
 			UISpriteActor1,
-			// Token: 0x0403A1CC RID: 238028
+			// Token: 0x04034B9E RID: 215966
 			UISpriteActor2,
-			// Token: 0x0403A1CD RID: 238029
+			// Token: 0x04034B9F RID: 215967
 			UISpriteActor3,
-			// Token: 0x0403A1CE RID: 238030
+			// Token: 0x04034BA0 RID: 215968
 			DistanceText,
-			// Token: 0x0403A1CF RID: 238031
+			// Token: 0x04034BA1 RID: 215969
 			ArrowSprite
 		}
 	}

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200196E RID: 6510
+// Token: 0x02000E2B RID: 3627
 public class SmallItemGridCoolDownComponentParams : ISmallItemGridCoolDownComponentParams
 {
-	// Token: 0x17000FEC RID: 4076
-	// (get) Token: 0x0600BEB3 RID: 48819 RVA: 0x002B26A0 File Offset: 0x002B08A0
-	// (set) Token: 0x0600BEB4 RID: 48820 RVA: 0x002B26A8 File Offset: 0x002B08A8
+	// Token: 0x17001010 RID: 4112
+	// (get) Token: 0x060092BB RID: 37563 RVA: 0x002BD624 File Offset: 0x002BB824
+	// (set) Token: 0x060092BC RID: 37564 RVA: 0x002BD62C File Offset: 0x002BB82C
 	public float? CoolDown { get; set; }
 
-	// Token: 0x17000FED RID: 4077
-	// (get) Token: 0x0600BEB5 RID: 48821 RVA: 0x002B26B1 File Offset: 0x002B08B1
-	// (set) Token: 0x0600BEB6 RID: 48822 RVA: 0x002B26B9 File Offset: 0x002B08B9
+	// Token: 0x17001011 RID: 4113
+	// (get) Token: 0x060092BD RID: 37565 RVA: 0x002BD635 File Offset: 0x002BB835
+	// (set) Token: 0x060092BE RID: 37566 RVA: 0x002BD63D File Offset: 0x002BB83D
 	public float? TotalCdTime { get; set; }
 }

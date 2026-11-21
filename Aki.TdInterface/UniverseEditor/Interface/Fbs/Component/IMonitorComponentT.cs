@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005567 RID: 21863
+	// Token: 0x02005AF9 RID: 23289
 	public class IMonitorComponentT
 	{
-		// Token: 0x1700A184 RID: 41348
-		// (get) Token: 0x060242AF RID: 148143 RVA: 0x004FEE82 File Offset: 0x004FD082
-		// (set) Token: 0x060242B0 RID: 148144 RVA: 0x004FEE8A File Offset: 0x004FD08A
+		// Token: 0x1700A9FA RID: 43514
+		// (get) Token: 0x06026454 RID: 156756 RVA: 0x0053E746 File Offset: 0x0053C946
+		// (set) Token: 0x06026455 RID: 156757 RVA: 0x0053E74E File Offset: 0x0053C94E
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A185 RID: 41349
-		// (get) Token: 0x060242B1 RID: 148145 RVA: 0x004FEE93 File Offset: 0x004FD093
-		// (set) Token: 0x060242B2 RID: 148146 RVA: 0x004FEE9B File Offset: 0x004FD09B
+		// Token: 0x1700A9FB RID: 43515
+		// (get) Token: 0x06026456 RID: 156758 RVA: 0x0053E757 File Offset: 0x0053C957
+		// (set) Token: 0x06026457 RID: 156759 RVA: 0x0053E75F File Offset: 0x0053C95F
 		public IConeTriggerShapeT Range { get; set; }
 
-		// Token: 0x1700A186 RID: 41350
-		// (get) Token: 0x060242B3 RID: 148147 RVA: 0x004FEEA4 File Offset: 0x004FD0A4
-		// (set) Token: 0x060242B4 RID: 148148 RVA: 0x004FEEAC File Offset: 0x004FD0AC
+		// Token: 0x1700A9FC RID: 43516
+		// (get) Token: 0x06026458 RID: 156760 RVA: 0x0053E768 File Offset: 0x0053C968
+		// (set) Token: 0x06026459 RID: 156761 RVA: 0x0053E770 File Offset: 0x0053C970
 		public string AttachPoint { get; set; }
 
-		// Token: 0x1700A187 RID: 41351
-		// (get) Token: 0x060242B5 RID: 148149 RVA: 0x004FEEB5 File Offset: 0x004FD0B5
-		// (set) Token: 0x060242B6 RID: 148150 RVA: 0x004FEEBD File Offset: 0x004FD0BD
+		// Token: 0x1700A9FD RID: 43517
+		// (get) Token: 0x0602645A RID: 156762 RVA: 0x0053E779 File Offset: 0x0053C979
+		// (set) Token: 0x0602645B RID: 156763 RVA: 0x0053E781 File Offset: 0x0053C981
 		public List<string> AvailableStates { get; set; }
 
-		// Token: 0x1700A188 RID: 41352
-		// (get) Token: 0x060242B7 RID: 148151 RVA: 0x004FEEC6 File Offset: 0x004FD0C6
-		// (set) Token: 0x060242B8 RID: 148152 RVA: 0x004FEECE File Offset: 0x004FD0CE
+		// Token: 0x1700A9FE RID: 43518
+		// (get) Token: 0x0602645C RID: 156764 RVA: 0x0053E78A File Offset: 0x0053C98A
+		// (set) Token: 0x0602645D RID: 156765 RVA: 0x0053E792 File Offset: 0x0053C992
 		public string StateAfterTriggered { get; set; }
 
-		// Token: 0x1700A189 RID: 41353
-		// (get) Token: 0x060242B9 RID: 148153 RVA: 0x004FEED7 File Offset: 0x004FD0D7
-		// (set) Token: 0x060242BA RID: 148154 RVA: 0x004FEEDF File Offset: 0x004FD0DF
+		// Token: 0x1700A9FF RID: 43519
+		// (get) Token: 0x0602645E RID: 156766 RVA: 0x0053E79B File Offset: 0x0053C99B
+		// (set) Token: 0x0602645F RID: 156767 RVA: 0x0053E7A3 File Offset: 0x0053C9A3
 		public string StateAfterLeaved { get; set; }
 
-		// Token: 0x1700A18A RID: 41354
-		// (get) Token: 0x060242BB RID: 148155 RVA: 0x004FEEE8 File Offset: 0x004FD0E8
-		// (set) Token: 0x060242BC RID: 148156 RVA: 0x004FEEF0 File Offset: 0x004FD0F0
+		// Token: 0x1700AA00 RID: 43520
+		// (get) Token: 0x06026460 RID: 156768 RVA: 0x0053E7AC File Offset: 0x0053C9AC
+		// (set) Token: 0x06026461 RID: 156769 RVA: 0x0053E7B4 File Offset: 0x0053C9B4
 		public byte NullMask { get; set; }
 
-		// Token: 0x060242BD RID: 148157 RVA: 0x004FEEF9 File Offset: 0x004FD0F9
+		// Token: 0x06026462 RID: 156770 RVA: 0x0053E7BD File Offset: 0x0053C9BD
 		public IMonitorComponentT()
 		{
 			this.Disabled = false;

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A99 RID: 2713
+	// Token: 0x02000B63 RID: 2915
 	public class IWorldLevelTable : IWorldLevelBonusType
 	{
-		// Token: 0x06003E62 RID: 15970 RVA: 0x0009FA77 File Offset: 0x0009DC77
-		[NullableContext(1)]
+		// Token: 0x0600428B RID: 17035 RVA: 0x000A902F File Offset: 0x000A722F
 		public static IWorldLevelTable Create(IWorldLevelTable? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EED RID: 3821
-		// (get) Token: 0x06003E63 RID: 15971 RVA: 0x0009FA96 File Offset: 0x0009DC96
+		// Token: 0x17000FC0 RID: 4032
+		// (get) Token: 0x0600428C RID: 17036 RVA: 0x000A904E File Offset: 0x000A724E
 		public override EWorldLevelBonus Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EEE RID: 3822
-		// (get) Token: 0x06003E64 RID: 15972 RVA: 0x0009FAA4 File Offset: 0x0009DCA4
+		// Token: 0x17000FC1 RID: 4033
+		// (get) Token: 0x0600428D RID: 17037 RVA: 0x000A905C File Offset: 0x000A725C
 		public virtual int? WorldLevelBonusId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022C0 RID: 8896
+		// Token: 0x040024DC RID: 9436
 		private IWorldLevelTable Instance;
 	}
 }

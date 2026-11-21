@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FA1 RID: 24481
+	// Token: 0x02004F88 RID: 20360
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPickRoleRewardItem : UiPanelBase
 	{
-		// Token: 0x0603E173 RID: 254323 RVA: 0x00EFE39D File Offset: 0x00EFC59D
+		// Token: 0x0603310D RID: 209165 RVA: 0x00E50056 File Offset: 0x00E4E256
 		public TotalTopUpPickRoleRewardItem(ITotalTopUpPickRoleRewardItemData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x0603E174 RID: 254324 RVA: 0x00EFE3AC File Offset: 0x00EFC5AC
+		// Token: 0x0603310E RID: 209166 RVA: 0x00E50068 File Offset: 0x00E4E268
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E175 RID: 254325 RVA: 0x00EFE4AD File Offset: 0x00EFC6AD
+		// Token: 0x0603310F RID: 209167 RVA: 0x00E50169 File Offset: 0x00E4E369
 		protected override void OnStart()
 		{
 			this.RefreshView();
 			this.ExtendToggle = base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0603E176 RID: 254326 RVA: 0x00EFE4C4 File Offset: 0x00EFC6C4
+		// Token: 0x06033110 RID: 209168 RVA: 0x00E50180 File Offset: 0x00E4E380
 		private void RefreshView()
 		{
 			if (this.Data == null)
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			item5.SetUIActive(!this.Data.CanClaim);
 		}
 
-		// Token: 0x0603E177 RID: 254327 RVA: 0x00EFE64D File Offset: 0x00EFC84D
+		// Token: 0x06033111 RID: 209169 RVA: 0x00E50309 File Offset: 0x00E4E509
 		public void SetSelectCallback(Action<ITotalTopUpPickRoleRewardItemData> callback)
 		{
 			this.OnSelectCallback = callback;
 		}
 
-		// Token: 0x0603E178 RID: 254328 RVA: 0x00EFE658 File Offset: 0x00EFC858
+		// Token: 0x06033112 RID: 209170 RVA: 0x00E50314 File Offset: 0x00E4E514
 		public void SetSelected(bool selected)
 		{
 			EToggleState state = selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			extendToggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603E179 RID: 254329 RVA: 0x00EFE682 File Offset: 0x00EFC882
+		// Token: 0x06033113 RID: 209171 RVA: 0x00E5033E File Offset: 0x00E4E53E
 		public void SelectItem()
 		{
 			this.OnSelectItem(EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0603E17A RID: 254330 RVA: 0x00EFE68B File Offset: 0x00EFC88B
+		// Token: 0x06033114 RID: 209172 RVA: 0x00E50347 File Offset: 0x00E4E547
 		private void OnSelectItem(EToggleState state)
 		{
 			if (this.OnSelectCallback != null)
@@ -153,10 +153,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x040206E8 RID: 132840
+		// Token: 0x0401B1BA RID: 111034
 		private readonly ITotalTopUpPickRoleRewardItemData Data;
 
-		// Token: 0x040206E9 RID: 132841
+		// Token: 0x0401B1BB RID: 111035
 		[Nullable(new byte[]
 		{
 			2,
@@ -164,39 +164,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 		})]
 		private Action<ITotalTopUpPickRoleRewardItemData> OnSelectCallback;
 
-		// Token: 0x040206EA RID: 132842
+		// Token: 0x0401B1BC RID: 111036
 		[Nullable(2)]
 		private UUIExtendToggle ExtendToggle;
 
-		// Token: 0x0200C280 RID: 49792
+		// Token: 0x0200AC8B RID: 44171
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x0403AC0D RID: 240653
+			// Token: 0x040355E9 RID: 218601
 			public const int RoleItem = 0;
 
-			// Token: 0x0403AC0E RID: 240654
+			// Token: 0x040355EA RID: 218602
 			public const int RoleBg = 1;
 
-			// Token: 0x0403AC0F RID: 240655
+			// Token: 0x040355EB RID: 218603
 			public const int RoleLockBg = 2;
 
-			// Token: 0x0403AC10 RID: 240656
+			// Token: 0x040355EC RID: 218604
 			public const int RoleTex = 3;
 
-			// Token: 0x0403AC11 RID: 240657
+			// Token: 0x040355ED RID: 218605
 			public const int NormalItem = 4;
 
-			// Token: 0x0403AC12 RID: 240658
+			// Token: 0x040355EE RID: 218606
 			public const int LockItem = 5;
 
-			// Token: 0x0403AC13 RID: 240659
+			// Token: 0x040355EF RID: 218607
 			public const int RedDotItem = 6;
 
-			// Token: 0x0403AC14 RID: 240660
+			// Token: 0x040355F0 RID: 218608
 			public const int TextCount = 7;
 
-			// Token: 0x0403AC15 RID: 240661
+			// Token: 0x040355F1 RID: 218609
 			public const int TextureProps = 8;
 		}
 	}

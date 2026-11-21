@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008BE RID: 2238
+	// Token: 0x020008DA RID: 2266
 	public class ConfigRoleQuestByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003487 RID: 13447 RVA: 0x00182258 File Offset: 0x00180458
+		// Token: 0x0600352F RID: 13615 RVA: 0x00189540 File Offset: 0x00187740
 		static ConfigRoleQuestByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleQuestByRoleId.CreateStaticDefaultValue), new Action(ConfigRoleQuestByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003488 RID: 13448 RVA: 0x00182278 File Offset: 0x00180478
+		// Token: 0x06003530 RID: 13616 RVA: 0x00189560 File Offset: 0x00187760
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleQuestByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003489 RID: 13449 RVA: 0x001822F7 File Offset: 0x001804F7
+		// Token: 0x06003531 RID: 13617 RVA: 0x001895DF File Offset: 0x001877DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleQuestByRoleId.LogPair = null;
 			ConfigRoleQuestByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x0600348A RID: 13450 RVA: 0x00182305 File Offset: 0x00180505
+		// Token: 0x06003532 RID: 13618 RVA: 0x001895ED File Offset: 0x001877ED
 		public static void Init()
 		{
 			ConfigRoleQuestByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleQuestByRoleId.HandleId, "db_rolequest.db", "select BinData from `RoleQuest` where RoleId =?");
 		}
 
-		// Token: 0x0600348B RID: 13451 RVA: 0x00182320 File Offset: 0x00180520
+		// Token: 0x06003533 RID: 13619 RVA: 0x00189608 File Offset: 0x00187808
 		public static RoleQuest? GetConfig(int p0RoleId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleQuestByRoleId.HandleId, ConfigRoleQuestByRoleId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleQuest?(rootAsRoleQuest);
 		}
 
-		// Token: 0x04003D18 RID: 15640
+		// Token: 0x04003DDC RID: 15836
 		private const string DB = "db_rolequest.db";
 
-		// Token: 0x04003D19 RID: 15641
+		// Token: 0x04003DDD RID: 15837
 		private const string FILE = "j.角色任务.xlsx";
 
-		// Token: 0x04003D1A RID: 15642
+		// Token: 0x04003DDE RID: 15838
 		private const string TABLE = "RoleQuest";
 
-		// Token: 0x04003D1B RID: 15643
+		// Token: 0x04003DDF RID: 15839
 		private const string COMMAND = "select BinData from `RoleQuest` where RoleId =?";
 
-		// Token: 0x04003D1C RID: 15644
+		// Token: 0x04003DE0 RID: 15840
 		private const string KEY_PREFIX = "RoleQuestByRoleId";
 
-		// Token: 0x04003D1D RID: 15645
+		// Token: 0x04003DE1 RID: 15841
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D1E RID: 15646
+		// Token: 0x04003DE2 RID: 15842
 		private static int HandleId;
 	}
 }

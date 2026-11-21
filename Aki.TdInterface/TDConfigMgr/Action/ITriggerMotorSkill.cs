@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002002 RID: 8194
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002249 RID: 8777
 	public class ITriggerMotorSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600B430 RID: 46128 RVA: 0x001A3154 File Offset: 0x001A1354
+		// Token: 0x0600BF48 RID: 48968 RVA: 0x001B9718 File Offset: 0x001B7918
 		private ITriggerMotorSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B431 RID: 46129 RVA: 0x001A318C File Offset: 0x001A138C
+		// Token: 0x0600BF49 RID: 48969 RVA: 0x001B9750 File Offset: 0x001B7950
 		public static ITriggerMotorSkill Create([Nullable(2)] ITriggerMotorSkill instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B432 RID: 46130 RVA: 0x001A319F File Offset: 0x001A139F
+		// Token: 0x0600BF4A RID: 48970 RVA: 0x001B9763 File Offset: 0x001B7963
 		public static ITriggerMotorSkill CreateFromSetValue([Nullable(2)] ITriggerMotorSkill_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B433 RID: 46131 RVA: 0x001A31B2 File Offset: 0x001A13B2
+		// Token: 0x0600BF4B RID: 48971 RVA: 0x001B9776 File Offset: 0x001B7976
 		public new ITriggerMotorSkill_SetValue ToSetValue()
 		{
 			return new ITriggerMotorSkill_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700376D RID: 14189
-		// (get) Token: 0x0600B434 RID: 46132 RVA: 0x001A31D1 File Offset: 0x001A13D1
-		// (set) Token: 0x0600B435 RID: 46133 RVA: 0x001A31FC File Offset: 0x001A13FC
+		// Token: 0x17003A46 RID: 14918
+		// (get) Token: 0x0600BF4C RID: 48972 RVA: 0x001B9795 File Offset: 0x001B7995
+		// (set) Token: 0x0600BF4D RID: 48973 RVA: 0x001B97C0 File Offset: 0x001B79C0
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700376E RID: 14190
-		// (get) Token: 0x0600B436 RID: 46134 RVA: 0x001A320A File Offset: 0x001A140A
-		// (set) Token: 0x0600B437 RID: 46135 RVA: 0x001A3235 File Offset: 0x001A1435
+		// Token: 0x17003A47 RID: 14919
+		// (get) Token: 0x0600BF4E RID: 48974 RVA: 0x001B97CE File Offset: 0x001B79CE
+		// (set) Token: 0x0600BF4F RID: 48975 RVA: 0x001B97F9 File Offset: 0x001B79F9
 		public virtual int MotorSkillId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C9C RID: 27804
+		// Token: 0x0400729F RID: 29343
 		[Nullable(2)]
 		protected new ITriggerMotorSkill FbInstance;
 
-		// Token: 0x04006C9D RID: 27805
+		// Token: 0x040072A0 RID: 29344
 		[Nullable(2)]
 		protected new ITriggerMotorSkill_SetValue PocoInterface;
 	}

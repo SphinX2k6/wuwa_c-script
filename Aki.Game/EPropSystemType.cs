@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002F7A RID: 12154
+// Token: 0x020024CE RID: 9422
 public enum EPropSystemType
 {
-	// Token: 0x0400C2F7 RID: 49911
+	// Token: 0x0400C6A0 RID: 50848
 	Squad,
-	// Token: 0x0400C2F8 RID: 49912
+	// Token: 0x0400C6A1 RID: 50849
 	Character = -1
 }

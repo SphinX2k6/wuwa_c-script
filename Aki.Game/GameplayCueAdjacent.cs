@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02002FAF RID: 12207
+// Token: 0x02002503 RID: 9475
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueAdjacent : GameplayCueBase
 {
-	// Token: 0x06019E17 RID: 106007 RVA: 0x006C3F3C File Offset: 0x006C213C
+	// Token: 0x06017729 RID: 96041 RVA: 0x006EA7D8 File Offset: 0x006E89D8
 	protected unsafe override void OnInit()
 	{
 		this.CueIds.Clear();
@@ -62,7 +62,7 @@ public class GameplayCueAdjacent : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E18 RID: 106008 RVA: 0x006C4138 File Offset: 0x006C2338
+	// Token: 0x0601772A RID: 96042 RVA: 0x006EA9D4 File Offset: 0x006E8BD4
 	protected override void OnCreate()
 	{
 		if (this.CueIds.Count == 0)
@@ -85,7 +85,7 @@ public class GameplayCueAdjacent : GameplayCueBase
 		this.SetupSpreadApplication(entitiesToAdd);
 	}
 
-	// Token: 0x06019E19 RID: 106009 RVA: 0x006C41B0 File Offset: 0x006C23B0
+	// Token: 0x0601772B RID: 96043 RVA: 0x006EAA4C File Offset: 0x006E8C4C
 	protected override void OnTick(float delta)
 	{
 		if (this.PendingEntities.Count == 0)
@@ -101,7 +101,7 @@ public class GameplayCueAdjacent : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E1A RID: 106010 RVA: 0x006C4228 File Offset: 0x006C2428
+	// Token: 0x0601772C RID: 96044 RVA: 0x006EAAC4 File Offset: 0x006E8CC4
 	protected override void OnDestroy()
 	{
 		this.PendingEntities.Clear();
@@ -128,7 +128,7 @@ public class GameplayCueAdjacent : GameplayCueBase
 		this.AdjacentCandidates.Clear();
 	}
 
-	// Token: 0x06019E1B RID: 106011 RVA: 0x006C4300 File Offset: 0x006C2500
+	// Token: 0x0601772D RID: 96045 RVA: 0x006EAB9C File Offset: 0x006E8D9C
 	private void ApplyCueToEntity(EntityHandle entityHandle)
 	{
 		if (!entityHandle.Valid)
@@ -156,7 +156,7 @@ public class GameplayCueAdjacent : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E1C RID: 106012 RVA: 0x006C43A8 File Offset: 0x006C25A8
+	// Token: 0x0601772E RID: 96046 RVA: 0x006EAC44 File Offset: 0x006E8E44
 	private void SetupSpreadApplication(List<EntityHandle> candidates)
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -202,7 +202,7 @@ public class GameplayCueAdjacent : GameplayCueBase
 		this.ElapsedTime = 0f;
 	}
 
-	// Token: 0x06019E1D RID: 106013 RVA: 0x006C450C File Offset: 0x006C270C
+	// Token: 0x0601772F RID: 96047 RVA: 0x006EADA8 File Offset: 0x006E8FA8
 	private List<EntityHandle> GetEntitiesToAdd()
 	{
 		List<EntityHandle> list = new List<EntityHandle>();
@@ -239,16 +239,16 @@ public class GameplayCueAdjacent : GameplayCueBase
 		return list2;
 	}
 
-	// Token: 0x0400C3BC RID: 50108
+	// Token: 0x0400C765 RID: 51045
 	private readonly Dictionary<EntityHandle, List<int>> AdjacentCandidates = new Dictionary<EntityHandle, List<int>>();
 
-	// Token: 0x0400C3BD RID: 50109
+	// Token: 0x0400C766 RID: 51046
 	private readonly List<int> CueIds = new List<int>();
 
-	// Token: 0x0400C3BE RID: 50110
+	// Token: 0x0400C767 RID: 51047
 	private readonly List<int> TargetEntityTypes = new List<int>();
 
-	// Token: 0x0400C3BF RID: 50111
+	// Token: 0x0400C768 RID: 51048
 	[TupleElementNames(new string[]
 	{
 		"Handle",
@@ -262,15 +262,15 @@ public class GameplayCueAdjacent : GameplayCueBase
 	})]
 	private readonly List<ValueTuple<EntityHandle, float>> PendingEntities = new List<ValueTuple<EntityHandle, float>>();
 
-	// Token: 0x0400C3C0 RID: 50112
+	// Token: 0x0400C769 RID: 51049
 	private float Distance;
 
-	// Token: 0x0400C3C1 RID: 50113
+	// Token: 0x0400C76A RID: 51050
 	private ERelation TargetRelation;
 
-	// Token: 0x0400C3C2 RID: 50114
+	// Token: 0x0400C76B RID: 51051
 	private float SpreadDuration;
 
-	// Token: 0x0400C3C3 RID: 50115
+	// Token: 0x0400C76C RID: 51052
 	private float ElapsedTime;
 }

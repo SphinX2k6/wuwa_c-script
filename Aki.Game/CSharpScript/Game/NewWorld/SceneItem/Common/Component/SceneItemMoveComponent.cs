@@ -11,25 +11,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200721F RID: 29215
+	// Token: 0x020062D4 RID: 25300
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemMoveComponent : EntityComponent
 	{
-		// Token: 0x17009E28 RID: 40488
-		// (get) Token: 0x06047866 RID: 292966 RVA: 0x0123D667 File Offset: 0x0123B867
-		[Nullable(new byte[]
+		// Token: 0x170073B1 RID: 29617
+		// (get) Token: 0x0603D199 RID: 250265 RVA: 0x01196C05 File Offset: 0x01194E05
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -40,8 +30,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E29 RID: 40489
-		// (get) Token: 0x06047867 RID: 292967 RVA: 0x0123D689 File Offset: 0x0123B889
+		// Token: 0x170073B2 RID: 29618
+		// (get) Token: 0x0603D19A RID: 250266 RVA: 0x01196C27 File Offset: 0x01194E27
 		public bool IsMovingPrepareCompleted
 		{
 			get
@@ -50,8 +40,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E2A RID: 40490
-		// (get) Token: 0x06047868 RID: 292968 RVA: 0x0123D694 File Offset: 0x0123B894
+		// Token: 0x170073B3 RID: 29619
+		// (get) Token: 0x0603D19B RID: 250267 RVA: 0x01196C30 File Offset: 0x01194E30
 		public bool IsMoving
 		{
 			get
@@ -68,9 +58,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E2B RID: 40491
-		// (get) Token: 0x06047869 RID: 292969 RVA: 0x0123D6EA File Offset: 0x0123B8EA
-		// (set) Token: 0x0604786A RID: 292970 RVA: 0x0123D6F2 File Offset: 0x0123B8F2
+		// Token: 0x170073B4 RID: 29620
+		// (get) Token: 0x0603D19C RID: 250268 RVA: 0x01196C86 File Offset: 0x01194E86
+		// (set) Token: 0x0603D19D RID: 250269 RVA: 0x01196C8E File Offset: 0x01194E8E
 		public bool ForceSyncing
 		{
 			get
@@ -92,7 +82,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604786B RID: 292971 RVA: 0x0123D719 File Offset: 0x0123B919
+		// Token: 0x0603D19E RID: 250270 RVA: 0x01196CB5 File Offset: 0x01194EB5
 		public bool IsSplineMoving()
 		{
 			if (!this.IsMovingPrepareCompleted)
@@ -103,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return moveComponent != null && moveComponent.IsValid() && this.MoveComponent.GetSplineRunState() > ESplineRunState.None;
 		}
 
-		// Token: 0x0604786C RID: 292972 RVA: 0x0123D749 File Offset: 0x0123B949
+		// Token: 0x0603D19F RID: 250271 RVA: 0x01196CE5 File Offset: 0x01194EE5
 		public float GetDistanceAloneSpline()
 		{
 			if (!this.IsMovingPrepareCompleted)
@@ -113,7 +103,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.MoveComponent.GetDistanceAlongSpline();
 		}
 
-		// Token: 0x0604786D RID: 292973 RVA: 0x0123D764 File Offset: 0x0123B964
+		// Token: 0x0603D1A0 RID: 250272 RVA: 0x01196D00 File Offset: 0x01194F00
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -121,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604786E RID: 292974 RVA: 0x0123D778 File Offset: 0x0123B978
+		// Token: 0x0603D1A1 RID: 250273 RVA: 0x01196D14 File Offset: 0x01194F14
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -186,7 +176,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604786F RID: 292975 RVA: 0x0123D9E0 File Offset: 0x0123BBE0
+		// Token: 0x0603D1A2 RID: 250274 RVA: 0x01196F7C File Offset: 0x0119517C
 		protected override bool OnEnd()
 		{
 			UKuroSceneItemMoveComponent moveComponent = this.MoveComponent;
@@ -200,7 +190,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047870 RID: 292976 RVA: 0x0123DA38 File Offset: 0x0123BC38
+		// Token: 0x0603D1A3 RID: 250275 RVA: 0x01196FD4 File Offset: 0x011951D4
 		protected override void OnActivate()
 		{
 			if (!Info.Instance.EnableForceTick && this.MoveTargetList.Count > 0)
@@ -223,13 +213,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047871 RID: 292977 RVA: 0x0123DB78 File Offset: 0x0123BD78
+		// Token: 0x0603D1A4 RID: 250276 RVA: 0x01197114 File Offset: 0x01195314
 		private bool CheckReachTarget()
 		{
 			return global::Vector.DistSquared(this.StartLocation, this.CurLocation) >= (double)this.MaxDist;
 		}
 
-		// Token: 0x06047872 RID: 292978 RVA: 0x0123DB98 File Offset: 0x0123BD98
+		// Token: 0x0603D1A5 RID: 250277 RVA: 0x01197134 File Offset: 0x01195334
 		protected override void OnTick(float delta)
 		{
 			if (this.NeedTickOutside)
@@ -271,7 +261,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047873 RID: 292979 RVA: 0x0123DC6C File Offset: 0x0123BE6C
+		// Token: 0x0603D1A6 RID: 250278 RVA: 0x01197208 File Offset: 0x01195408
 		protected override void OnForceTick(float delta)
 		{
 			base.OnTick(delta);
@@ -312,7 +302,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047874 RID: 292980 RVA: 0x0123DDF0 File Offset: 0x0123BFF0
+		// Token: 0x0603D1A7 RID: 250279 RVA: 0x0119738C File Offset: 0x0119558C
 		private unsafe void OnRemoveSelfEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			UKuroSceneItemMoveComponent moveComponent = this.MoveComponent;
@@ -333,7 +323,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047875 RID: 292981 RVA: 0x0123DEB4 File Offset: 0x0123C0B4
+		// Token: 0x0603D1A8 RID: 250280 RVA: 0x01197450 File Offset: 0x01195650
 		public void AddSimpleRotation(AActor actor, global::Rotator beginRotator, global::Rotator endRotator, float time)
 		{
 			this.MoveComponent.InitRotationData(actor, false);
@@ -344,7 +334,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.MoveComponent.StartRotate();
 		}
 
-		// Token: 0x06047876 RID: 292982 RVA: 0x0123DF04 File Offset: 0x0123C104
+		// Token: 0x0603D1A9 RID: 250281 RVA: 0x011974A0 File Offset: 0x011956A0
 		private unsafe void AddMoveTargetInternal(SceneItemMoveComponent.MoveTarget target)
 		{
 			if (Info.Instance.EnableForceTick)
@@ -379,7 +369,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x06047877 RID: 292983 RVA: 0x0123E09C File Offset: 0x0123C29C
+		// Token: 0x0603D1AA RID: 250282 RVA: 0x01197638 File Offset: 0x01195838
 		public void AddMoveTarget(object targetData)
 		{
 			if (this.InPotral)
@@ -424,7 +414,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047878 RID: 292984 RVA: 0x0123E18C File Offset: 0x0123C38C
+		// Token: 0x0603D1AB RID: 250283 RVA: 0x01197728 File Offset: 0x01195928
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -455,7 +445,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return new ValueTuple<bool, FVectorDouble, FVectorDouble>(this.MoveComponent.GetNextMoveTarget(ref item2, ref item3), item2, item3);
 		}
 
-		// Token: 0x06047879 RID: 292985 RVA: 0x0123E270 File Offset: 0x0123C470
+		// Token: 0x0603D1AC RID: 250284 RVA: 0x0119780C File Offset: 0x01195A0C
 		public void RequestMoveToTarget(SceneItemMoveComponent.MoveTarget target)
 		{
 			SceneItemMoveTargetRequest sceneItemMoveTargetRequest = SceneItemMoveTargetRequest.Create();
@@ -474,7 +464,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Net.Instance.Call(ERequestMessageId.SceneItemMoveTargetRequest, sceneItemMoveTargetRequest, null, 0);
 		}
 
-		// Token: 0x0604787A RID: 292986 RVA: 0x0123E348 File Offset: 0x0123C548
+		// Token: 0x0603D1AD RID: 250285 RVA: 0x011978E4 File Offset: 0x01195AE4
 		public void HandleMoveToTarget(SceneItemMoveTargetNotify notify)
 		{
 			SceneItemMoveComponent.MoveTarget target = new SceneItemMoveComponent.MoveTarget(new global::Vector
@@ -486,7 +476,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AddMoveTargetInternal(target);
 		}
 
-		// Token: 0x0604787B RID: 292987 RVA: 0x0123E3D8 File Offset: 0x0123C5D8
+		// Token: 0x0603D1AE RID: 250286 RVA: 0x01197974 File Offset: 0x01195B74
 		public unsafe bool StartTrackPlayer(float moveSpeed, FRotator initRotatorOffset, float angleSpeed)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -523,7 +513,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604787C RID: 292988 RVA: 0x0123E4F8 File Offset: 0x0123C6F8
+		// Token: 0x0603D1AF RID: 250287 RVA: 0x01197A94 File Offset: 0x01195C94
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			if (this.TrackMode == SceneItemMoveComponent.ETrackMode.Player)
@@ -537,7 +527,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604787D RID: 292989 RVA: 0x0123E531 File Offset: 0x0123C731
+		// Token: 0x0603D1B0 RID: 250288 RVA: 0x01197ACD File Offset: 0x01195CCD
 		private void ResetTrackMode()
 		{
 			if (this.TrackMode == SceneItemMoveComponent.ETrackMode.Player)
@@ -547,7 +537,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604787E RID: 292990 RVA: 0x0123E560 File Offset: 0x0123C760
+		// Token: 0x0603D1B1 RID: 250289 RVA: 0x01197AFC File Offset: 0x01195CFC
 		private unsafe bool StartTrackMoveInternal(AActor targetActor, float moveSpeed, FRotator initRotatorOffset, float angleSpeed)
 		{
 			UKuroSceneItemMoveComponent moveComponent = this.MoveComponent;
@@ -601,7 +591,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604787F RID: 292991 RVA: 0x0123E750 File Offset: 0x0123C950
+		// Token: 0x0603D1B2 RID: 250290 RVA: 0x01197CEC File Offset: 0x01195EEC
 		private unsafe bool SwitchTrackTargetInternal(AActor newTargetActor)
 		{
 			UKuroSceneItemMoveComponent moveComponent = this.MoveComponent;
@@ -627,7 +617,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.MoveComponent.SwitchTrackTarget(newTargetActor);
 		}
 
-		// Token: 0x06047880 RID: 292992 RVA: 0x0123E820 File Offset: 0x0123CA20
+		// Token: 0x0603D1B3 RID: 250291 RVA: 0x01197DBC File Offset: 0x01195FBC
 		public void StartSplineMoveTask(ISceneItemSplineMoveTaskParam param)
 		{
 			if (this.GetCurSplineMoveTask() != null)
@@ -643,7 +633,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			SceneItemSplineMoveTask.Create(CreatureModel.Instance.GetEntityById(base.Entity.Id), param).StartTask();
 		}
 
-		// Token: 0x06047881 RID: 292993 RVA: 0x0123E8A4 File Offset: 0x0123CAA4
+		// Token: 0x0603D1B4 RID: 250292 RVA: 0x01197E40 File Offset: 0x01196040
 		public void SwitchSplineMoveTask(ISceneItemSplineMoveTaskParam newParam)
 		{
 			SceneItemSplineMoveTask curSplineMoveTask = this.GetCurSplineMoveTask();
@@ -697,7 +687,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			});
 		}
 
-		// Token: 0x06047882 RID: 292994 RVA: 0x0123EA4C File Offset: 0x0123CC4C
+		// Token: 0x0603D1B5 RID: 250293 RVA: 0x01197FE8 File Offset: 0x011961E8
 		[NullableContext(2)]
 		public SceneItemSplineMoveTask GetCurSplineMoveTask()
 		{
@@ -709,7 +699,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return entityCurSplineMoveTask as SceneItemSplineMoveTask;
 		}
 
-		// Token: 0x06047883 RID: 292995 RVA: 0x0123EA7C File Offset: 0x0123CC7C
+		// Token: 0x0603D1B6 RID: 250294 RVA: 0x01198018 File Offset: 0x01196218
 		public unsafe bool StartSplineMoveAtConstantTimeImplement(SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam param, [Nullable(2)] Action potralEndCallback = null, bool enableMovementSync = true)
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -778,7 +768,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047884 RID: 292996 RVA: 0x0123ED14 File Offset: 0x0123CF14
+		// Token: 0x0603D1B7 RID: 250295 RVA: 0x011982B0 File Offset: 0x011964B0
 		public unsafe bool StartSplineMoveAtDynamicSpeedImplement(SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedParam param, [Nullable(2)] Action potralEndCallback = null, bool enableMovementSync = true)
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -847,7 +837,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047885 RID: 292997 RVA: 0x0123EFAC File Offset: 0x0123D1AC
+		// Token: 0x0603D1B8 RID: 250296 RVA: 0x01198548 File Offset: 0x01196748
 		public unsafe bool UpdatePatrolAtDynamicSpeedEditableParam(SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedEditableParam param)
 		{
 			if (!this.IsSplineMoving() || this.MoveComponent == null)
@@ -878,19 +868,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return flag;
 		}
 
-		// Token: 0x06047886 RID: 292998 RVA: 0x0123F0F0 File Offset: 0x0123D2F0
+		// Token: 0x0603D1B9 RID: 250297 RVA: 0x0119868C File Offset: 0x0119688C
 		public bool UpdateSplineMoveDistance(float newDisAlongPath)
 		{
 			return this.IsSplineMoving() && this.MoveComponent != null && this.MoveComponent.UpdateSplineMoveDistance(newDisAlongPath);
 		}
 
-		// Token: 0x06047887 RID: 292999 RVA: 0x0123F110 File Offset: 0x0123D310
+		// Token: 0x0603D1BA RID: 250298 RVA: 0x011986AC File Offset: 0x011968AC
 		public bool UpdateSplineMoveDistanceByPos(global::Vector newPos)
 		{
 			return this.IsSplineMoving() && this.MoveComponent != null && this.MoveComponent.UpdateSplineMoveDistanceByPosition(newPos.ToUeVector(false));
 		}
 
-		// Token: 0x06047888 RID: 293000 RVA: 0x0123F138 File Offset: 0x0123D338
+		// Token: 0x0603D1BB RID: 250299 RVA: 0x011986D4 File Offset: 0x011968D4
 		public unsafe bool UpdateSplineMoveDistanceByRuntimeData(SceneItemSplineMoveRuntimeData splineMoveRuntimeData, float tolerance = 100f)
 		{
 			if (!this.IsSplineMoving() || this.MoveComponent == null)
@@ -974,7 +964,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return false;
 		}
 
-		// Token: 0x06047889 RID: 293001 RVA: 0x0123F538 File Offset: 0x0123D738
+		// Token: 0x0603D1BC RID: 250300 RVA: 0x01198AD4 File Offset: 0x01196CD4
 		public unsafe bool UpdateSplineMoveRotationByRuntimeData(SceneItemSplineMoveRuntimeData splineMoveRuntimeData, float tolerance = 0.017453292f)
 		{
 			if (!this.IsSplineMoving() || this.MoveComponent == null)
@@ -1023,7 +1013,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return false;
 		}
 
-		// Token: 0x0604788A RID: 293002 RVA: 0x0123F74C File Offset: 0x0123D94C
+		// Token: 0x0603D1BD RID: 250301 RVA: 0x01198CE8 File Offset: 0x01196EE8
 		public FSplineMoveDynamicSpeedData? GetSplineMoveDynamicSpeedData()
 		{
 			UKuroSceneItemMoveComponent moveComponent = this.MoveComponent;
@@ -1034,7 +1024,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return new FSplineMoveDynamicSpeedData?(this.MoveComponent.SplineMoveData.DynamicSpeedData);
 		}
 
-		// Token: 0x0604788B RID: 293003 RVA: 0x0123F790 File Offset: 0x0123D990
+		// Token: 0x0603D1BE RID: 250302 RVA: 0x01198D2C File Offset: 0x01196F2C
 		[NullableContext(2)]
 		public unsafe void OnRecvSyncSplineMoving(int protoSplineId, MoveSplineConfig protoMoveSplineConfig = null, SceneItemSplineRuntimeData protoRuntimeData = null)
 		{
@@ -1100,12 +1090,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				});
 				return;
 			}
-			if (!curSplineMoveTask.CheckSplineMoveConfigEqual(sceneItemSplineMoveConfig))
+			if (curSplineMoveTask.SplineEntityId != protoSplineId || !curSplineMoveTask.CheckSplineMoveConfigEqual(sceneItemSplineMoveConfig))
 			{
 				global::Log instance4 = global::Log.Instance;
 				ELogModule module4 = ELogModule.SceneItem;
 				ELogAuthor author4 = ELogAuthor.ZYL;
-				string message4 = "[SceneItemMoveComponent.OnRecvSyncSplineMoving] 当前样条移动task参数与同步信息不同，中断并开始新的样条移动task";
+				string message4 = "[SceneItemMoveComponent.OnRecvSyncSplineMoving] 当前样条ID或移动task参数与同步信息不同，中断并开始新的样条移动task";
 				<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray5<ValueTuple<string, object>>);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("EntityId", base.Entity.Id);
 				ref ValueTuple<string, object> ptr4 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1);
@@ -1166,7 +1156,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604788C RID: 293004 RVA: 0x0123FC54 File Offset: 0x0123DE54
+		// Token: 0x0603D1BF RID: 250303 RVA: 0x011991FC File Offset: 0x011973FC
 		[NullableContext(2)]
 		public unsafe void OnRecvSyncSplineStop(int protoSplineId, MoveSplineConfig protoMoveSplineConfig = null, SceneItemSplineRuntimeData protoRuntimeData = null)
 		{
@@ -1235,12 +1225,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				instance4.Info(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 5));
 				return;
 			}
-			if (!curSplineMoveTask.CheckSplineMoveConfigEqual(sceneItemSplineMoveConfig))
+			if (curSplineMoveTask.SplineEntityId != protoSplineId || !curSplineMoveTask.CheckSplineMoveConfigEqual(sceneItemSplineMoveConfig))
 			{
 				global::Log instance5 = global::Log.Instance;
 				ELogModule module5 = ELogModule.SceneItem;
 				ELogAuthor author5 = ELogAuthor.ZYL;
-				string message5 = "[SceneItemMoveComponent.OnRecvSyncSplineStop] 当前样条移动task参数与同步信息不同，不处理停止";
+				string message5 = "[SceneItemMoveComponent.OnRecvSyncSplineStop] 当前样条ID或移动task参数与同步信息不同，不处理停止";
 				<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray5 = default(<>y__InlineArray5<ValueTuple<string, object>>);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray5, 0) = new ValueTuple<string, object>("EntityId", base.Entity.Id);
 				ref ValueTuple<string, object> ptr5 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray5, 1);
@@ -1270,7 +1260,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			curSplineMoveTask.EndTask(true);
 		}
 
-		// Token: 0x0604788D RID: 293005 RVA: 0x0124008C File Offset: 0x0123E28C
+		// Token: 0x0603D1C0 RID: 250304 RVA: 0x0119963C File Offset: 0x0119783C
 		[NullableContext(2)]
 		public unsafe void OnRecvSyncSplineInterrupt(int protoSplineId, MoveSplineConfig protoMoveSplineConfig = null, SceneItemSplineRuntimeData protoRuntimeData = null)
 		{
@@ -1339,12 +1329,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				instance4.Info(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 5));
 				return;
 			}
-			if (!curSplineMoveTask.CheckSplineMoveConfigEqual(sceneItemSplineMoveConfig))
+			if (curSplineMoveTask.SplineEntityId != protoSplineId || !curSplineMoveTask.CheckSplineMoveConfigEqual(sceneItemSplineMoveConfig))
 			{
 				global::Log instance5 = global::Log.Instance;
 				ELogModule module5 = ELogModule.SceneItem;
 				ELogAuthor author5 = ELogAuthor.ZYL;
-				string message5 = "[SceneItemMoveComponent.OnRecvSyncSplineInterrupt] 当前样条移动task参数与同步信息不同，不处理中断";
+				string message5 = "[SceneItemMoveComponent.OnRecvSyncSplineInterrupt] 当前样条ID或移动task参数与同步信息不同，不处理中断";
 				<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray5 = default(<>y__InlineArray5<ValueTuple<string, object>>);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray5, 0) = new ValueTuple<string, object>("EntityId", base.Entity.Id);
 				ref ValueTuple<string, object> ptr5 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray5, 1);
@@ -1377,7 +1367,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604788E RID: 293006 RVA: 0x012404C4 File Offset: 0x0123E6C4
+		// Token: 0x0603D1C1 RID: 250305 RVA: 0x01199A80 File Offset: 0x01197C80
 		[NullableContext(2)]
 		public unsafe void OnRecvSyncSplineSwitch(int protoSplineId, MoveSplineConfig protoMoveSplineConfig = null, SceneItemSplineRuntimeData protoRuntimeData = null)
 		{
@@ -1438,7 +1428,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			});
 		}
 
-		// Token: 0x0604788F RID: 293007 RVA: 0x01240718 File Offset: 0x0123E918
+		// Token: 0x0603D1C2 RID: 250306 RVA: 0x01199CD4 File Offset: 0x01197ED4
 		public unsafe void StopMove(bool broadcastStopCallback = true, bool boardcastIndexCallback = true)
 		{
 			if (Info.Instance.EnableForceTick)
@@ -1502,25 +1492,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.MoveComponent.StopAllMove(broadcastStopCallback, boardcastIndexCallback);
 		}
 
-		// Token: 0x06047890 RID: 293008 RVA: 0x01240902 File Offset: 0x0123EB02
+		// Token: 0x0603D1C3 RID: 250307 RVA: 0x01199EBE File Offset: 0x011980BE
 		private void AddUeArrivePointCallback(Action<int> callback)
 		{
 			this.MoveComponent.OnArrivePointCallback.Add(callback);
 		}
 
-		// Token: 0x06047891 RID: 293009 RVA: 0x01240915 File Offset: 0x0123EB15
+		// Token: 0x0603D1C4 RID: 250308 RVA: 0x01199ED1 File Offset: 0x011980D1
 		private void RemoveUeArrivePointCallback(Action<int> callback)
 		{
 			this.MoveComponent.OnArrivePointCallback.Remove(callback);
 		}
 
-		// Token: 0x06047892 RID: 293010 RVA: 0x01240928 File Offset: 0x0123EB28
+		// Token: 0x0603D1C5 RID: 250309 RVA: 0x01199EE4 File Offset: 0x011980E4
 		private void OnUeArrivePointCallback(int index)
 		{
 			this.CallOnArrivePointCallbacks(index);
 		}
 
-		// Token: 0x06047893 RID: 293011 RVA: 0x01240931 File Offset: 0x0123EB31
+		// Token: 0x0603D1C6 RID: 250310 RVA: 0x01199EED File Offset: 0x011980ED
 		public void AddOnArrivePointCallback(Action<int> callback)
 		{
 			if (!this.OnArrivePointCallbacks.Contains(callback))
@@ -1529,7 +1519,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047894 RID: 293012 RVA: 0x01240950 File Offset: 0x0123EB50
+		// Token: 0x0603D1C7 RID: 250311 RVA: 0x01199F0C File Offset: 0x0119810C
 		public void RemoveOnArrivePointCallback(Action<int> callback)
 		{
 			int num = this.OnArrivePointCallbacks.IndexOf(callback);
@@ -1539,13 +1529,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047895 RID: 293013 RVA: 0x0124097A File Offset: 0x0123EB7A
+		// Token: 0x0603D1C8 RID: 250312 RVA: 0x01199F36 File Offset: 0x01198136
 		public void ClearOnArrivePointCallbacks()
 		{
 			this.OnArrivePointCallbacks.Clear();
 		}
 
-		// Token: 0x06047896 RID: 293014 RVA: 0x01240988 File Offset: 0x0123EB88
+		// Token: 0x0603D1C9 RID: 250313 RVA: 0x01199F44 File Offset: 0x01198144
 		private void CallOnArrivePointCallbacks(int index)
 		{
 			foreach (Action<int> action in new List<Action<int>>(this.OnArrivePointCallbacks))
@@ -1554,19 +1544,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047897 RID: 293015 RVA: 0x012409E0 File Offset: 0x0123EBE0
+		// Token: 0x0603D1CA RID: 250314 RVA: 0x01199F9C File Offset: 0x0119819C
 		private void AddUeMoveStopCallback(Action callback)
 		{
 			this.MoveComponent.OnMoveStopCallback.Add(callback);
 		}
 
-		// Token: 0x06047898 RID: 293016 RVA: 0x012409F3 File Offset: 0x0123EBF3
+		// Token: 0x0603D1CB RID: 250315 RVA: 0x01199FAF File Offset: 0x011981AF
 		private void RemoveUeMoveStopCallback(Action callback)
 		{
 			this.MoveComponent.OnMoveStopCallback.Remove(callback);
 		}
 
-		// Token: 0x06047899 RID: 293017 RVA: 0x01240A08 File Offset: 0x0123EC08
+		// Token: 0x0603D1CC RID: 250316 RVA: 0x01199FC4 File Offset: 0x011981C4
 		private void OnUeMoveStopCallback()
 		{
 			SceneItemMoveComponent.EMoveMode moveMode = this.MoveMode;
@@ -1592,7 +1582,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604789A RID: 293018 RVA: 0x01240A69 File Offset: 0x0123EC69
+		// Token: 0x0603D1CD RID: 250317 RVA: 0x0119A025 File Offset: 0x01198225
 		private void OnUeMoveStopCallbackForSimpleMove()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -1605,7 +1595,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.EmitWithTarget<Entity>(base.Entity, EEventName.OnSceneItemMoveStopped, base.Entity);
 		}
 
-		// Token: 0x0604789B RID: 293019 RVA: 0x01240AA4 File Offset: 0x0123ECA4
+		// Token: 0x0603D1CE RID: 250318 RVA: 0x0119A060 File Offset: 0x01198260
 		private void OnUeMoveStopCallbackForSplineMove()
 		{
 			global::Log instance = global::Log.Instance;
@@ -1626,7 +1616,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.EmitWithTarget<Entity>(base.Entity, EEventName.OnSceneItemSplineMoveStopped, base.Entity);
 		}
 
-		// Token: 0x0604789C RID: 293020 RVA: 0x01240B44 File Offset: 0x0123ED44
+		// Token: 0x0603D1CF RID: 250319 RVA: 0x0119A100 File Offset: 0x01198300
 		private void OnUeMoveStopCallbackForTrackMove()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -1640,7 +1630,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.EmitWithTarget<Entity>(base.Entity, EEventName.OnSceneItemMoveStopped, base.Entity);
 		}
 
-		// Token: 0x0604789D RID: 293021 RVA: 0x01240B90 File Offset: 0x0123ED90
+		// Token: 0x0603D1D0 RID: 250320 RVA: 0x0119A14C File Offset: 0x0119834C
 		public void AddStopMoveCallback(Action callback)
 		{
 			if (!this.MoveStopCallbacks.Contains(callback))
@@ -1649,7 +1639,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604789E RID: 293022 RVA: 0x01240BAC File Offset: 0x0123EDAC
+		// Token: 0x0603D1D1 RID: 250321 RVA: 0x0119A168 File Offset: 0x01198368
 		public void RemoveStopMoveCallback(Action callback)
 		{
 			int num = this.MoveStopCallbacks.IndexOf(callback);
@@ -1659,13 +1649,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604789F RID: 293023 RVA: 0x01240BD6 File Offset: 0x0123EDD6
+		// Token: 0x0603D1D2 RID: 250322 RVA: 0x0119A192 File Offset: 0x01198392
 		public void ClearStopMoveCallback()
 		{
 			this.MoveStopCallbacks.Clear();
 		}
 
-		// Token: 0x060478A0 RID: 293024 RVA: 0x01240BE4 File Offset: 0x0123EDE4
+		// Token: 0x0603D1D3 RID: 250323 RVA: 0x0119A1A0 File Offset: 0x011983A0
 		private void CallOnMoveStopCallbacks()
 		{
 			foreach (Action action in new List<Action>(this.MoveStopCallbacks))
@@ -1674,7 +1664,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478A1 RID: 293025 RVA: 0x01240C3C File Offset: 0x0123EE3C
+		// Token: 0x0603D1D4 RID: 250324 RVA: 0x0119A1F8 File Offset: 0x011983F8
 		public void AddStopMoveCallbackWithEntity(Action<Entity> callback)
 		{
 			if (!this.MoveStopCallbacksWithEntity.Contains(callback))
@@ -1683,7 +1673,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478A2 RID: 293026 RVA: 0x01240C58 File Offset: 0x0123EE58
+		// Token: 0x0603D1D5 RID: 250325 RVA: 0x0119A214 File Offset: 0x01198414
 		public void RemoveStopMoveCallbackWithEntity(Action<Entity> callback)
 		{
 			int num = this.MoveStopCallbacksWithEntity.IndexOf(callback);
@@ -1693,13 +1683,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478A3 RID: 293027 RVA: 0x01240C82 File Offset: 0x0123EE82
+		// Token: 0x0603D1D6 RID: 250326 RVA: 0x0119A23E File Offset: 0x0119843E
 		public void ClearStopMoveCallbacksWithEntity()
 		{
 			this.MoveStopCallbacksWithEntity.Clear();
 		}
 
-		// Token: 0x060478A4 RID: 293028 RVA: 0x01240C90 File Offset: 0x0123EE90
+		// Token: 0x0603D1D7 RID: 250327 RVA: 0x0119A24C File Offset: 0x0119844C
 		private void CallOnMoveStopCallbacksWithEntity()
 		{
 			foreach (Action<Entity> action in new List<Action<Entity>>(this.MoveStopCallbacksWithEntity))
@@ -1708,7 +1698,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478A5 RID: 293029 RVA: 0x01240CEC File Offset: 0x0123EEEC
+		// Token: 0x0603D1D8 RID: 250328 RVA: 0x0119A2A8 File Offset: 0x011984A8
 		public string GetDebugString()
 		{
 			string text = "";
@@ -1783,7 +1773,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return text;
 		}
 
-		// Token: 0x060478A6 RID: 293030 RVA: 0x01240F84 File Offset: 0x0123F184
+		// Token: 0x0603D1D9 RID: 250329 RVA: 0x0119A540 File Offset: 0x01198740
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1791,287 +1781,280 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemMoveComponent sceneItemMoveComponent = (SceneItemMoveComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemMoveComponent.ActorComp == null)
 			{
-				if (sceneItemMoveComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("MoveComponent"))
-			{
-				if (sceneItemMoveComponent.MoveComponent == null)
-				{
-					this.MoveComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroSceneItemMoveComponent>(this.MoveComponent), "MoveComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SyncComp"))
-			{
-				if (sceneItemMoveComponent.SyncComp == null)
-				{
-					this.SyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMovementSyncComponent>(this.SyncComp), "SyncComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PropertyComp"))
-			{
-				if (sceneItemMoveComponent.PropertyComp == null)
-				{
-					this.PropertyComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropertyComp), "PropertyComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemMoveComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemMoveComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("UeTickComponent"))
-			{
-				if (sceneItemMoveComponent.UeTickComponent == null)
-				{
-					this.UeTickComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UeSceneItemMoveTickManagerComponent>(this.UeTickComponent), "UeTickComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveMode"))
-			{
-				this.MoveMode = sceneItemMoveComponent.MoveMode;
-			}
-			if (base.CanResetComponentProperty("TrackMode"))
-			{
-				this.TrackMode = sceneItemMoveComponent.TrackMode;
-			}
-			if (base.CanResetComponentProperty("IsSyncing"))
-			{
-				this.IsSyncing = sceneItemMoveComponent.IsSyncing;
-			}
-			if (base.CanResetComponentProperty("ForceSyncingInternal"))
-			{
-				this.ForceSyncingInternal = sceneItemMoveComponent.ForceSyncingInternal;
-			}
-			if (base.CanResetComponentProperty("Velocity"))
-			{
-				if (sceneItemMoveComponent.Velocity == null)
-				{
-					this.Velocity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.Velocity), "Velocity"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveTargetList"))
-			{
-				if (sceneItemMoveComponent.MoveTargetList == null)
-				{
-					this.MoveTargetList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<SceneItemMoveComponent.MoveTarget>>(this.MoveTargetList), "MoveTargetList"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurState"))
-			{
-				this.CurState = sceneItemMoveComponent.CurState;
-			}
-			if (base.CanResetComponentProperty("StartLocation") && sceneItemMoveComponent.StartLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.StartLocation), "StartLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TargetLocation"))
+			if (sceneItemMoveComponent.MoveComponent == null)
 			{
-				if (sceneItemMoveComponent.TargetLocation == null)
-				{
-					this.TargetLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TargetLocation), "TargetLocation"))
-				{
-					return false;
-				}
+				this.MoveComponent = null;
 			}
-			if (base.CanResetComponentProperty("CurLocation") && sceneItemMoveComponent.CurLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CurLocation), "CurLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComponent), "MoveComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MaxDist"))
+			if (sceneItemMoveComponent.SyncComp == null)
 			{
-				this.MaxDist = sceneItemMoveComponent.MaxDist;
+				this.SyncComp = null;
 			}
-			if (base.CanResetComponentProperty("InPotral"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SyncComp), "SyncComp"))
 			{
-				this.InPotral = sceneItemMoveComponent.InPotral;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsMovingPrepareCompletedInternal"))
+			if (sceneItemMoveComponent.PropertyComp == null)
 			{
-				this.IsMovingPrepareCompletedInternal = sceneItemMoveComponent.IsMovingPrepareCompletedInternal;
+				this.PropertyComp = null;
 			}
-			if (base.CanResetComponentProperty("NeedTickOutside"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropertyComp), "PropertyComp"))
 			{
-				this.NeedTickOutside = sceneItemMoveComponent.NeedTickOutside;
+				return false;
 			}
-			return (!base.CanResetComponentProperty("OnArrivePointCallbacks") || sceneItemMoveComponent.OnArrivePointCallbacks == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<Action<int>>>(this.OnArrivePointCallbacks), "OnArrivePointCallbacks")) && (!base.CanResetComponentProperty("MoveStopCallbacks") || sceneItemMoveComponent.MoveStopCallbacks == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<Action>>(this.MoveStopCallbacks), "MoveStopCallbacks")) && (!base.CanResetComponentProperty("MoveStopCallbacksWithEntity") || sceneItemMoveComponent.MoveStopCallbacksWithEntity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<Action<Entity>>>(this.MoveStopCallbacksWithEntity), "MoveStopCallbacksWithEntity"));
+			if (sceneItemMoveComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+			{
+				return false;
+			}
+			if (sceneItemMoveComponent.TagComp == null)
+			{
+				this.TagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			if (sceneItemMoveComponent.UeTickComponent == null)
+			{
+				this.UeTickComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeTickComponent), "UeTickComponent"))
+			{
+				return false;
+			}
+			this.MoveMode = sceneItemMoveComponent.MoveMode;
+			this.TrackMode = sceneItemMoveComponent.TrackMode;
+			this.IsSyncing = sceneItemMoveComponent.IsSyncing;
+			this.ForceSyncingInternal = sceneItemMoveComponent.ForceSyncingInternal;
+			if (sceneItemMoveComponent.Velocity == null)
+			{
+				this.Velocity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Velocity), "Velocity"))
+			{
+				return false;
+			}
+			if (sceneItemMoveComponent.MoveTargetList == null)
+			{
+				this.MoveTargetList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveTargetList), "MoveTargetList"))
+			{
+				return false;
+			}
+			this.CurState = sceneItemMoveComponent.CurState;
+			if (sceneItemMoveComponent.StartLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartLocation), "StartLocation"))
+			{
+				return false;
+			}
+			if (sceneItemMoveComponent.TargetLocation == null)
+			{
+				this.TargetLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetLocation), "TargetLocation"))
+			{
+				return false;
+			}
+			if (sceneItemMoveComponent.CurLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurLocation), "CurLocation"))
+			{
+				return false;
+			}
+			this.MaxDist = sceneItemMoveComponent.MaxDist;
+			this.InPotral = sceneItemMoveComponent.InPotral;
+			this.IsMovingPrepareCompletedInternal = sceneItemMoveComponent.IsMovingPrepareCompletedInternal;
+			this.NeedTickOutside = sceneItemMoveComponent.NeedTickOutside;
+			return (sceneItemMoveComponent.OnArrivePointCallbacks == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnArrivePointCallbacks), "OnArrivePointCallbacks")) && (sceneItemMoveComponent.MoveStopCallbacks == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveStopCallbacks), "MoveStopCallbacks")) && (sceneItemMoveComponent.MoveStopCallbacksWithEntity == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveStopCallbacksWithEntity), "MoveStopCallbacksWithEntity"));
 		}
 
-		// Token: 0x04025A11 RID: 154129
+		// Token: 0x170073B5 RID: 29621
+		// (get) Token: 0x0603D1DA RID: 250330 RVA: 0x0119A824 File Offset: 0x01198A24
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073B6 RID: 29622
+		// (get) Token: 0x0603D1DB RID: 250331 RVA: 0x0119A827 File Offset: 0x01198A27
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073B7 RID: 29623
+		// (get) Token: 0x0603D1DC RID: 250332 RVA: 0x0119A82A File Offset: 0x01198A2A
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073B8 RID: 29624
+		// (get) Token: 0x0603D1DD RID: 250333 RVA: 0x0119A82D File Offset: 0x01198A2D
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073B9 RID: 29625
+		// (get) Token: 0x0603D1DE RID: 250334 RVA: 0x0119A830 File Offset: 0x01198A30
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020680 RID: 132736
 		private const string SCENEITEM_MOVE_DEBUG_KEY = "SCENEITEM_MOVE_DEBUG";
 
-		// Token: 0x04025A12 RID: 154130
+		// Token: 0x04020681 RID: 132737
 		private const float OFFSET = 100f;
 
-		// Token: 0x04025A13 RID: 154131
+		// Token: 0x04020682 RID: 132738
 		[Nullable(2)]
 		public SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025A14 RID: 154132
+		// Token: 0x04020683 RID: 132739
 		[Nullable(2)]
 		private UKuroSceneItemMoveComponent MoveComponent;
 
-		// Token: 0x04025A15 RID: 154133
+		// Token: 0x04020684 RID: 132740
 		[Nullable(2)]
 		private SceneItemMovementSyncComponent SyncComp;
 
-		// Token: 0x04025A16 RID: 154134
+		// Token: 0x04020685 RID: 132741
 		[Nullable(2)]
 		private SceneItemPropertyComponent PropertyComp;
 
-		// Token: 0x04025A17 RID: 154135
+		// Token: 0x04020686 RID: 132742
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025A18 RID: 154136
+		// Token: 0x04020687 RID: 132743
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04025A19 RID: 154137
+		// Token: 0x04020688 RID: 132744
 		[Nullable(2)]
 		private UeSceneItemMoveTickManagerComponent UeTickComponent;
 
-		// Token: 0x04025A1A RID: 154138
+		// Token: 0x04020689 RID: 132745
 		private SceneItemMoveComponent.EMoveMode MoveMode;
 
-		// Token: 0x04025A1B RID: 154139
+		// Token: 0x0402068A RID: 132746
 		private SceneItemMoveComponent.ETrackMode TrackMode;
 
-		// Token: 0x04025A1C RID: 154140
+		// Token: 0x0402068B RID: 132747
 		private bool IsSyncing;
 
-		// Token: 0x04025A1D RID: 154141
+		// Token: 0x0402068C RID: 132748
 		private bool ForceSyncingInternal;
 
-		// Token: 0x04025A1E RID: 154142
+		// Token: 0x0402068D RID: 132749
 		private global::Vector Velocity = global::Vector.Create();
 
-		// Token: 0x04025A1F RID: 154143
+		// Token: 0x0402068E RID: 132750
 		private List<SceneItemMoveComponent.MoveTarget> MoveTargetList = new List<SceneItemMoveComponent.MoveTarget>();
 
-		// Token: 0x04025A20 RID: 154144
+		// Token: 0x0402068F RID: 132751
 		private SceneItemMoveComponent.ERunningState CurState = SceneItemMoveComponent.ERunningState.STOP;
 
-		// Token: 0x04025A21 RID: 154145
+		// Token: 0x04020690 RID: 132752
 		private readonly global::Vector StartLocation = global::Vector.Create();
 
-		// Token: 0x04025A22 RID: 154146
+		// Token: 0x04020691 RID: 132753
 		private global::Vector TargetLocation = global::Vector.Create();
 
-		// Token: 0x04025A23 RID: 154147
+		// Token: 0x04020692 RID: 132754
 		private readonly global::Vector CurLocation = global::Vector.Create();
 
-		// Token: 0x04025A24 RID: 154148
+		// Token: 0x04020693 RID: 132755
 		private float MaxDist;
 
-		// Token: 0x04025A25 RID: 154149
+		// Token: 0x04020694 RID: 132756
 		private bool InPotral;
 
-		// Token: 0x04025A26 RID: 154150
+		// Token: 0x04020695 RID: 132757
 		private bool IsMovingPrepareCompletedInternal;
 
-		// Token: 0x04025A27 RID: 154151
+		// Token: 0x04020696 RID: 132758
 		private bool NeedTickOutside;
 
-		// Token: 0x04025A28 RID: 154152
+		// Token: 0x04020697 RID: 132759
 		private readonly List<Action<int>> OnArrivePointCallbacks = new List<Action<int>>();
 
-		// Token: 0x04025A29 RID: 154153
+		// Token: 0x04020698 RID: 132760
 		private readonly List<Action> MoveStopCallbacks = new List<Action>();
 
-		// Token: 0x04025A2A RID: 154154
+		// Token: 0x04020699 RID: 132761
 		private readonly List<Action<Entity>> MoveStopCallbacksWithEntity = new List<Action<Entity>>();
 
-		// Token: 0x0200CF54 RID: 53076
+		// Token: 0x0200BAE9 RID: 47849
 		[NullableContext(0)]
 		private enum ERunningState
 		{
-			// Token: 0x0403E534 RID: 255284
+			// Token: 0x0403985A RID: 235610
 			RUN,
-			// Token: 0x0403E535 RID: 255285
+			// Token: 0x0403985B RID: 235611
 			STOP
 		}
 
-		// Token: 0x0200CF55 RID: 53077
+		// Token: 0x0200BAEA RID: 47850
 		[NullableContext(0)]
 		private enum EMoveMode
 		{
-			// Token: 0x0403E537 RID: 255287
+			// Token: 0x0403985D RID: 235613
 			None,
-			// Token: 0x0403E538 RID: 255288
+			// Token: 0x0403985E RID: 235614
 			Simple,
-			// Token: 0x0403E539 RID: 255289
+			// Token: 0x0403985F RID: 235615
 			Spline,
-			// Token: 0x0403E53A RID: 255290
+			// Token: 0x04039860 RID: 235616
 			Track
 		}
 
-		// Token: 0x0200CF56 RID: 53078
+		// Token: 0x0200BAEB RID: 47851
 		[NullableContext(0)]
 		private enum ETrackMode
 		{
-			// Token: 0x0403E53C RID: 255292
+			// Token: 0x04039862 RID: 235618
 			None,
-			// Token: 0x0403E53D RID: 255293
+			// Token: 0x04039863 RID: 235619
 			Player
 		}
 
-		// Token: 0x0200CF57 RID: 53079
+		// Token: 0x0200BAEC RID: 47852
 		[Nullable(0)]
 		public class MoveTarget
 		{
-			// Token: 0x060520AD RID: 336045 RVA: 0x0164C0D9 File Offset: 0x0164A2D9
+			// Token: 0x06048858 RID: 297048 RVA: 0x0161E1F1 File Offset: 0x0161C3F1
 			public MoveTarget(IVector targetPosData, float moveTime, float stayTime = 0f, float maxSpeed = -1f, float acceleration = -1f)
 			{
 				this.TargetPosData.DeepCopy(targetPosData);
@@ -2081,99 +2064,99 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				this.Acceleration = acceleration;
 			}
 
-			// Token: 0x0403E53E RID: 255294
+			// Token: 0x04039864 RID: 235620
 			public global::Vector TargetPosData = global::Vector.Create();
 
-			// Token: 0x0403E53F RID: 255295
+			// Token: 0x04039865 RID: 235621
 			public float MoveTime;
 
-			// Token: 0x0403E540 RID: 255296
+			// Token: 0x04039866 RID: 235622
 			public float StayTime;
 
-			// Token: 0x0403E541 RID: 255297
+			// Token: 0x04039867 RID: 235623
 			public float MaxSpeed;
 
-			// Token: 0x0403E542 RID: 255298
+			// Token: 0x04039868 RID: 235624
 			public float Acceleration;
 		}
 
-		// Token: 0x0200CF58 RID: 53080
+		// Token: 0x0200BAED RID: 47853
 		[Nullable(0)]
 		public abstract class SceneItemSplineMoveBaseParam
 		{
-			// Token: 0x060520AE RID: 336046 RVA: 0x0164C116 File Offset: 0x0164A316
+			// Token: 0x06048859 RID: 297049 RVA: 0x0161E22E File Offset: 0x0161C42E
 			protected SceneItemSplineMoveBaseParam(USplineComponent spline)
 			{
 			}
 
-			// Token: 0x0403E543 RID: 255299
+			// Token: 0x04039869 RID: 235625
 			public bool IsCycle;
 
-			// Token: 0x0403E544 RID: 255300
+			// Token: 0x0403986A RID: 235626
 			public bool IsKeepLookAt;
 
-			// Token: 0x0403E545 RID: 255301
+			// Token: 0x0403986B RID: 235627
 			public float StartDis = -1f;
 
-			// Token: 0x0403E546 RID: 255302
+			// Token: 0x0403986C RID: 235628
 			public float EndDis = -1f;
 
-			// Token: 0x0403E547 RID: 255303
+			// Token: 0x0403986D RID: 235629
 			public USplineComponent Spline = spline;
 		}
 
-		// Token: 0x0200CF59 RID: 53081
+		// Token: 0x0200BAEE RID: 47854
 		[NullableContext(0)]
 		public class SceneItemSplineMoveAtConstantTimeParam : SceneItemMoveComponent.SceneItemSplineMoveBaseParam
 		{
-			// Token: 0x060520AF RID: 336047 RVA: 0x0164C13B File Offset: 0x0164A33B
+			// Token: 0x0604885A RID: 297050 RVA: 0x0161E253 File Offset: 0x0161C453
 			[NullableContext(1)]
 			public SceneItemSplineMoveAtConstantTimeParam(USplineComponent spline) : base(spline)
 			{
 			}
 
-			// Token: 0x0403E548 RID: 255304
+			// Token: 0x0403986E RID: 235630
 			public bool IsRepeat;
 
-			// Token: 0x0403E549 RID: 255305
+			// Token: 0x0403986F RID: 235631
 			public float TimeSec;
 
-			// Token: 0x0403E54A RID: 255306
+			// Token: 0x04039870 RID: 235632
 			[Nullable(2)]
 			public UCurveFloat TimeDisCurve;
 
-			// Token: 0x0403E54B RID: 255307
+			// Token: 0x04039871 RID: 235633
 			public float StartTimeOffset;
 		}
 
-		// Token: 0x0200CF5A RID: 53082
+		// Token: 0x0200BAEF RID: 47855
 		[NullableContext(0)]
 		public class SceneItemSplineMoveAtDynamicSpeedParam : SceneItemMoveComponent.SceneItemSplineMoveBaseParam
 		{
-			// Token: 0x060520B0 RID: 336048 RVA: 0x0164C144 File Offset: 0x0164A344
+			// Token: 0x0604885B RID: 297051 RVA: 0x0161E25C File Offset: 0x0161C45C
 			[NullableContext(1)]
 			public SceneItemSplineMoveAtDynamicSpeedParam(USplineComponent spline) : base(spline)
 			{
 			}
 
-			// Token: 0x0403E54C RID: 255308
+			// Token: 0x04039872 RID: 235634
 			public int MaxMoveTimes = -1;
 
-			// Token: 0x0403E54D RID: 255309
+			// Token: 0x04039873 RID: 235635
 			public float InitSpeed;
 
-			// Token: 0x0403E54E RID: 255310
+			// Token: 0x04039874 RID: 235636
 			public float TargetSpeed;
 
-			// Token: 0x0403E54F RID: 255311
+			// Token: 0x04039875 RID: 235637
 			public float Acceleration;
 		}
 
-		// Token: 0x0200CF5B RID: 53083
+		// Token: 0x0200BAF0 RID: 47856
 		[NullableContext(0)]
 		public class SceneItemSplineMoveAtDynamicSpeedEditableParam
 		{
-			// Token: 0x060520B1 RID: 336049 RVA: 0x0164C154 File Offset: 0x0164A354
+			// Token: 0x0604885C RID: 297052 RVA: 0x0161E26C File Offset: 0x0161C46C
 			public void Clear()
 			{
 				this.CurrentSpeed = null;
@@ -2181,7 +2164,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				this.Acceleration = null;
 			}
 
-			// Token: 0x060520B2 RID: 336050 RVA: 0x0164C17C File Offset: 0x0164A37C
+			// Token: 0x0604885D RID: 297053 RVA: 0x0161E294 File Offset: 0x0161C494
 			[NullableContext(2)]
 			public bool Equals(SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedEditableParam other)
 			{
@@ -2204,13 +2187,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 
-			// Token: 0x0403E550 RID: 255312
+			// Token: 0x04039876 RID: 235638
 			public float? CurrentSpeed;
 
-			// Token: 0x0403E551 RID: 255313
+			// Token: 0x04039877 RID: 235639
 			public float? TargetSpeed;
 
-			// Token: 0x0403E552 RID: 255314
+			// Token: 0x04039878 RID: 235640
 			public float? Acceleration;
 		}
 	}

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200625E RID: 25182
+	// Token: 0x020051DC RID: 20956
 	internal class RhythmShipTaskTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F6AA RID: 259754 RVA: 0x00F54DC8 File Offset: 0x00F52FC8
+		// Token: 0x0603436B RID: 213867 RVA: 0x00E9BD24 File Offset: 0x00E99F24
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F6AB RID: 259755 RVA: 0x00F54E48 File Offset: 0x00F53048
+		// Token: 0x0603436C RID: 213868 RVA: 0x00E9BDA4 File Offset: 0x00E99FA4
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			if (this.TabId > 0)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			RedDotController.Instance.BindRedDot(ERedDotName.RhythmShipTaskTab, base.GetItem(2), null, this.TabId);
 		}
 
-		// Token: 0x0603F6AC RID: 259756 RVA: 0x00F54EDE File Offset: 0x00F530DE
+		// Token: 0x0603436D RID: 213869 RVA: 0x00E9BE3A File Offset: 0x00E9A03A
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<int, UUIExtendToggle> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -53,22 +53,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			onClickToggleCallBack(this.TabId, base.GetExtendToggle(0));
 		}
 
-		// Token: 0x0603F6AD RID: 259757 RVA: 0x00F54EFD File Offset: 0x00F530FD
+		// Token: 0x0603436E RID: 213870 RVA: 0x00E9BE59 File Offset: 0x00E9A059
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 		}
 
-		// Token: 0x0603F6AE RID: 259758 RVA: 0x00F54F10 File Offset: 0x00F53110
+		// Token: 0x0603436F RID: 213871 RVA: 0x00E9BE6C File Offset: 0x00E9A06C
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RhythmShipTaskTab, base.GetItem(2), this.TabId);
 		}
 
-		// Token: 0x04021212 RID: 135698
+		// Token: 0x0401BB41 RID: 113473
 		public int TabId;
 
-		// Token: 0x04021213 RID: 135699
+		// Token: 0x0401BB42 RID: 113474
 		[Nullable(new byte[]
 		{
 			2,

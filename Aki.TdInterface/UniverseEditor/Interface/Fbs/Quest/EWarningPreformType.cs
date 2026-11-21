@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CE9 RID: 15593
+	// Token: 0x02004100 RID: 16640
 	public enum EWarningPreformType : byte
 	{
-		// Token: 0x0400B57A RID: 46458
+		// Token: 0x0400BF27 RID: 48935
 		FadeInScreen,
-		// Token: 0x0400B57B RID: 46459
+		// Token: 0x0400BF28 RID: 48936
 		ActivateStateRecordEntity
 	}
 }

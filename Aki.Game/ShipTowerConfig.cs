@@ -3,92 +3,92 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002979 RID: 10617
+// Token: 0x02001EF4 RID: 7924
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class ShipTowerConfig : ConfigBase
 {
-	// Token: 0x06016002 RID: 90114 RVA: 0x0058E76C File Offset: 0x0058C96C
+	// Token: 0x06013A08 RID: 80392 RVA: 0x005B9730 File Offset: 0x005B7930
 	public SlashAndTowerCfg? GetStageCfgById(int id)
 	{
 		return new SlashAndTowerCfg?(ConfigSlashAndTowerCfgById.GetConfig(id, true).Value);
 	}
 
-	// Token: 0x06016003 RID: 90115 RVA: 0x0058E78D File Offset: 0x0058C98D
+	// Token: 0x06013A09 RID: 80393 RVA: 0x005B9751 File Offset: 0x005B7951
 	public IReadOnlyList<SlashTowerShowStage> GetAllShowStageCfg()
 	{
 		return ConfigSlashTowerShowStageAll.GetConfigList(true);
 	}
 
-	// Token: 0x06016004 RID: 90116 RVA: 0x0058E798 File Offset: 0x0058C998
+	// Token: 0x06013A0A RID: 80394 RVA: 0x005B975C File Offset: 0x005B795C
 	public SlashTowerStageInfo? GetStageInfoCfgByInstId(int instId)
 	{
 		return new SlashTowerStageInfo?(ConfigSlashTowerStageInfoByInstId.GetConfig(instId, true).Value);
 	}
 
-	// Token: 0x06016005 RID: 90117 RVA: 0x0058E7B9 File Offset: 0x0058C9B9
+	// Token: 0x06013A0B RID: 80395 RVA: 0x005B977D File Offset: 0x005B797D
 	public IReadOnlyList<SlashAndTowerCfg> GetStageCfgBySeason(int season)
 	{
 		return ConfigSlashAndTowerCfgBySeason.GetConfigList(season, true);
 	}
 
-	// Token: 0x06016006 RID: 90118 RVA: 0x0058E7C2 File Offset: 0x0058C9C2
+	// Token: 0x06013A0C RID: 80396 RVA: 0x005B9786 File Offset: 0x005B7986
 	public IReadOnlyList<SlashAndTowerReward> GetChallengeRewardCfgBySeason(int season)
 	{
 		return ConfigSlashAndTowerRewardByBelongToSeason.GetConfigList(season, true);
 	}
 
-	// Token: 0x06016007 RID: 90119 RVA: 0x0058E7CB File Offset: 0x0058C9CB
+	// Token: 0x06013A0D RID: 80397 RVA: 0x005B978F File Offset: 0x005B798F
 	public IReadOnlyList<SlashBuffToItem> GetAllBuffCfg()
 	{
 		return ConfigSlashBuffToItemAll.GetConfigList(true);
 	}
 
-	// Token: 0x06016008 RID: 90120 RVA: 0x0058E7D4 File Offset: 0x0058C9D4
+	// Token: 0x06013A0E RID: 80398 RVA: 0x005B9798 File Offset: 0x005B7998
 	public SlashBuffToItem? GetBuffCfgById(int id)
 	{
 		return new SlashBuffToItem?(ConfigSlashBuffToItemById.GetConfig(id, true).Value);
 	}
 
-	// Token: 0x06016009 RID: 90121 RVA: 0x0058E7F8 File Offset: 0x0058C9F8
+	// Token: 0x06013A0F RID: 80399 RVA: 0x005B97BC File Offset: 0x005B79BC
 	public SlashBuffToItem? GetBuffCfgByItemId(int itemId)
 	{
 		return new SlashBuffToItem?(ConfigSlashBuffToItemByItemId.GetConfig(itemId, true).Value);
 	}
 
-	// Token: 0x0601600A RID: 90122 RVA: 0x0058E819 File Offset: 0x0058CA19
+	// Token: 0x06013A10 RID: 80400 RVA: 0x005B97DD File Offset: 0x005B79DD
 	public IReadOnlyList<SlashBuffToItem> GetBuffCfgBySeason(int season)
 	{
 		return ConfigSlashBuffToItemBySeason.GetConfigList(season, true);
 	}
 
-	// Token: 0x0601600B RID: 90123 RVA: 0x0058E824 File Offset: 0x0058CA24
+	// Token: 0x06013A11 RID: 80401 RVA: 0x005B97E8 File Offset: 0x005B79E8
 	public SlashBuffToItem? GetBuffCfgByItemIdAndSeason(int itemId, int season)
 	{
 		return new SlashBuffToItem?(ConfigSlashBuffToItemByItemIdAndSeason.GetConfig(itemId, season, true).Value);
 	}
 
-	// Token: 0x0601600C RID: 90124 RVA: 0x0058E846 File Offset: 0x0058CA46
+	// Token: 0x06013A12 RID: 80402 RVA: 0x005B980A File Offset: 0x005B7A0A
 	public IReadOnlyList<SlashBuffToItem> GetBuffCfgByItemIdList(int itemId)
 	{
 		return ConfigSlashBuffToItemByItemIdList.GetConfigList(itemId, true);
 	}
 
-	// Token: 0x0601600D RID: 90125 RVA: 0x0058E850 File Offset: 0x0058CA50
+	// Token: 0x06013A13 RID: 80403 RVA: 0x005B9814 File Offset: 0x005B7A14
 	public SlashTowerTagInfo? GetWordInfoCfgById(int id)
 	{
 		return new SlashTowerTagInfo?(ConfigSlashTowerTagInfoById.GetConfig(id, true).Value);
 	}
 
-	// Token: 0x0601600E RID: 90126 RVA: 0x0058E874 File Offset: 0x0058CA74
+	// Token: 0x06013A14 RID: 80404 RVA: 0x005B9838 File Offset: 0x005B7A38
 	public SlashAndTowerSeason? GetSeasonCfgById(int id)
 	{
 		return new SlashAndTowerSeason?(ConfigSlashAndTowerSeasonById.GetConfig(id, true).Value);
 	}
 
-	// Token: 0x17001D90 RID: 7568
-	// (get) Token: 0x0601600F RID: 90127 RVA: 0x0058E895 File Offset: 0x0058CA95
+	// Token: 0x17001DE9 RID: 7657
+	// (get) Token: 0x06013A15 RID: 80405 RVA: 0x005B9859 File Offset: 0x005B7A59
 	[Nullable(1)]
 	public static ShipTowerConfig Instance
 	{
@@ -99,7 +99,7 @@ public class ShipTowerConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06016010 RID: 90128 RVA: 0x0058E89C File Offset: 0x0058CA9C
+	// Token: 0x06013A16 RID: 80406 RVA: 0x005B9860 File Offset: 0x005B7A60
 	[NullableContext(1)]
 	public static ShipTowerConfig GetOrCreateInstance()
 	{
@@ -110,7 +110,7 @@ public class ShipTowerConfig : ConfigBase
 		return ShipTowerConfig._Instance;
 	}
 
-	// Token: 0x06016011 RID: 90129 RVA: 0x0058E8B0 File Offset: 0x0058CAB0
+	// Token: 0x06013A17 RID: 80407 RVA: 0x005B9874 File Offset: 0x005B7A74
 	public static bool CreateInstance()
 	{
 		if (ShipTowerConfig._Instance != null)
@@ -121,23 +121,23 @@ public class ShipTowerConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06016012 RID: 90130 RVA: 0x0058E8C6 File Offset: 0x0058CAC6
+	// Token: 0x06013A18 RID: 80408 RVA: 0x005B988A File Offset: 0x005B7A8A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016013 RID: 90131 RVA: 0x0058E8C8 File Offset: 0x0058CAC8
+	// Token: 0x06013A19 RID: 80409 RVA: 0x005B988C File Offset: 0x005B7A8C
 	public static void ResetStaticDefaultValue()
 	{
 		ShipTowerConfig._Instance = null;
 	}
 
-	// Token: 0x06016014 RID: 90132 RVA: 0x0058E8D0 File Offset: 0x0058CAD0
+	// Token: 0x06013A1A RID: 80410 RVA: 0x005B9894 File Offset: 0x005B7A94
 	static ShipTowerConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ShipTowerConfig.CreateStaticDefaultValue), new Action(ShipTowerConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A3A2 RID: 41890
+	// Token: 0x0400A78C RID: 42892
 	private static ShipTowerConfig _Instance;
 }

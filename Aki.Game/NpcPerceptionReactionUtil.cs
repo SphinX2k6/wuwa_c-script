@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Action;
 using CSharpScript.Game;
 using CSharpScript.Game.Module.Plot.Flow;
 
-// Token: 0x0200321C RID: 12828
+// Token: 0x0200278B RID: 10123
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcPerceptionReactionUtil
 {
-	// Token: 0x0601BA95 RID: 113301 RVA: 0x0079A1F8 File Offset: 0x007983F8
+	// Token: 0x0601961A RID: 103962 RVA: 0x007C2994 File Offset: 0x007C0B94
 	public static void TurnToPlayer(Entity entity)
 	{
 		BaseCharacterComponent component = entity.GetComponent<BaseCharacterComponent>();
@@ -31,7 +31,7 @@ public class NpcPerceptionReactionUtil
 		component.SetActorRotation(rotator.ToUeRotator(), "NpcPerformUnderAttackState.TurnToPlayer", true);
 	}
 
-	// Token: 0x0601BA96 RID: 113302 RVA: 0x0079A29C File Offset: 0x0079849C
+	// Token: 0x0601961B RID: 103963 RVA: 0x007C2A38 File Offset: 0x007C0C38
 	public static void ShowHeadDialog(Entity entity, float bubbleRate, IBubbleIndex flow)
 	{
 		if (MathUtils.Instance.GetRandomFloatNumber(0f, 100f) > bubbleRate)
@@ -67,12 +67,12 @@ public class NpcPerceptionReactionUtil
 		component.SetDialogueText(localTextNew, 3f, false);
 	}
 
-	// Token: 0x0400D9A1 RID: 55713
+	// Token: 0x0400DE40 RID: 56896
 	private const int BUBBLE_RANDOM_MAX = 100;
 
-	// Token: 0x0400D9A2 RID: 55714
+	// Token: 0x0400DE41 RID: 56897
 	private const int TURN_SPEED = 20000;
 
-	// Token: 0x0400D9A3 RID: 55715
+	// Token: 0x0400DE42 RID: 56898
 	private const int BUBBLE_TIME = 3;
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006763 RID: 26467
+	// Token: 0x02006DE3 RID: 28131
 	public class IFadeBackgroundFadeInEffectScreenEffectT
 	{
-		// Token: 0x1700C47D RID: 50301
-		// (get) Token: 0x0602E0BD RID: 188605 RVA: 0x0064ABC3 File Offset: 0x00648DC3
-		// (set) Token: 0x0602E0BE RID: 188606 RVA: 0x0064ABCB File Offset: 0x00648DCB
+		// Token: 0x1700CE33 RID: 52787
+		// (get) Token: 0x06030903 RID: 198915 RVA: 0x00698307 File Offset: 0x00696507
+		// (set) Token: 0x06030904 RID: 198916 RVA: 0x0069830F File Offset: 0x0069650F
 		public EFadeBackgroundFadeInEffectType Type { get; set; }
 
-		// Token: 0x1700C47E RID: 50302
-		// (get) Token: 0x0602E0BF RID: 188607 RVA: 0x0064ABD4 File Offset: 0x00648DD4
-		// (set) Token: 0x0602E0C0 RID: 188608 RVA: 0x0064ABDC File Offset: 0x00648DDC
+		// Token: 0x1700CE34 RID: 52788
+		// (get) Token: 0x06030905 RID: 198917 RVA: 0x00698318 File Offset: 0x00696518
+		// (set) Token: 0x06030906 RID: 198918 RVA: 0x00698320 File Offset: 0x00696520
 		public string ScreenEffect { get; set; }
 
-		// Token: 0x0602E0C1 RID: 188609 RVA: 0x0064ABE5 File Offset: 0x00648DE5
+		// Token: 0x06030907 RID: 198919 RVA: 0x00698329 File Offset: 0x00696529
 		public IFadeBackgroundFadeInEffectScreenEffectT()
 		{
 			this.Type = EFadeBackgroundFadeInEffectType.Black;

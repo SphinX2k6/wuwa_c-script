@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200597A RID: 22906
+	// Token: 0x02004953 RID: 18771
 	[RequiredMember]
 	public class GiantCollectedCoinData : IGiantCollectedCoinData
 	{
-		// Token: 0x17008B3F RID: 35647
-		// (get) Token: 0x0603A22A RID: 238122 RVA: 0x00DD2E23 File Offset: 0x00DD1023
-		// (set) Token: 0x0603A22B RID: 238123 RVA: 0x00DD2E2B File Offset: 0x00DD102B
+		// Token: 0x17005F0C RID: 24332
+		// (get) Token: 0x0602F150 RID: 192848 RVA: 0x00D222B3 File Offset: 0x00D204B3
+		// (set) Token: 0x0602F151 RID: 192849 RVA: 0x00D222BB File Offset: 0x00D204BB
 		[RequiredMember]
 		public int ItemId { get; set; }
 
-		// Token: 0x17008B40 RID: 35648
-		// (get) Token: 0x0603A22C RID: 238124 RVA: 0x00DD2E34 File Offset: 0x00DD1034
-		// (set) Token: 0x0603A22D RID: 238125 RVA: 0x00DD2E3C File Offset: 0x00DD103C
+		// Token: 0x17005F0D RID: 24333
+		// (get) Token: 0x0602F152 RID: 192850 RVA: 0x00D222C4 File Offset: 0x00D204C4
+		// (set) Token: 0x0602F153 RID: 192851 RVA: 0x00D222CC File Offset: 0x00D204CC
 		[RequiredMember]
 		public int Count { get; set; }
 
-		// Token: 0x0603A22E RID: 238126 RVA: 0x00DD2E45 File Offset: 0x00DD1045
+		// Token: 0x0602F154 RID: 192852 RVA: 0x00D222D5 File Offset: 0x00D204D5
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public GiantCollectedCoinData()

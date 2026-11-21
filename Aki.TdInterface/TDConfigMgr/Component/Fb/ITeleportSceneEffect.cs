@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D07 RID: 3335
+	// Token: 0x02000DFF RID: 3583
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportSceneEffect
 	{
-		// Token: 0x06004C20 RID: 19488 RVA: 0x000BDC63 File Offset: 0x000BBE63
-		[NullableContext(1)]
+		// Token: 0x0600512E RID: 20782 RVA: 0x000C9193 File Offset: 0x000C7393
+		[NullableContext(0)]
 		public static ITeleportSceneEffect Create(ITeleportSceneEffect? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017CF RID: 6095
-		// (get) Token: 0x06004C21 RID: 19489 RVA: 0x000BDC82 File Offset: 0x000BBE82
+		// Token: 0x1700192B RID: 6443
+		// (get) Token: 0x0600512F RID: 20783 RVA: 0x000C91B2 File Offset: 0x000C73B2
 		public virtual string WorldEffectPath
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017D0 RID: 6096
-		// (get) Token: 0x06004C22 RID: 19490 RVA: 0x000BDC8F File Offset: 0x000BBE8F
+		// Token: 0x1700192C RID: 6444
+		// (get) Token: 0x06005130 RID: 20784 RVA: 0x000C91BF File Offset: 0x000C73BF
 		public virtual string ScreenEffectPath
 		{
 			get
@@ -43,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B8A RID: 11146
+		// Token: 0x04002E44 RID: 11844
 		private ITeleportSceneEffect Instance;
 	}
 }

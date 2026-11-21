@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025C8 RID: 9672
+// Token: 0x02001AB3 RID: 6835
 [NullableContext(1)]
 public interface IInfoData
 {
-	// Token: 0x1700192E RID: 6446
-	// (get) Token: 0x060139F1 RID: 80369
-	// (set) Token: 0x060139F2 RID: 80370
+	// Token: 0x17001966 RID: 6502
+	// (get) Token: 0x06010ED1 RID: 69329
+	// (set) Token: 0x06010ED2 RID: 69330
 	string Text { get; set; }
 
-	// Token: 0x1700192F RID: 6447
-	// (get) Token: 0x060139F3 RID: 80371
-	// (set) Token: 0x060139F4 RID: 80372
+	// Token: 0x17001967 RID: 6503
+	// (get) Token: 0x06010ED3 RID: 69331
+	// (set) Token: 0x06010ED4 RID: 69332
 	bool IsFinish { get; set; }
 
-	// Token: 0x17001930 RID: 6448
-	// (get) Token: 0x060139F5 RID: 80373
-	// (set) Token: 0x060139F6 RID: 80374
+	// Token: 0x17001968 RID: 6504
+	// (get) Token: 0x06010ED5 RID: 69333
+	// (set) Token: 0x06010ED6 RID: 69334
 	bool IsOptionFinished { get; set; }
 }

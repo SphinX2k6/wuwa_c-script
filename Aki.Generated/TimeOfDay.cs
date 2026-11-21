@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200112C RID: 4396
+	// Token: 0x02001262 RID: 4706
 	public struct TimeOfDay : IFlatbufferObject
 	{
-		// Token: 0x17003A66 RID: 14950
-		// (get) Token: 0x0600DEB2 RID: 57010 RVA: 0x0032D7E1 File Offset: 0x0032B9E1
+		// Token: 0x17003DCA RID: 15818
+		// (get) Token: 0x0600EC20 RID: 60448 RVA: 0x00358DB5 File Offset: 0x00356FB5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEB3 RID: 57011 RVA: 0x0032D7EE File Offset: 0x0032B9EE
+		// Token: 0x0600EC21 RID: 60449 RVA: 0x00358DC2 File Offset: 0x00356FC2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DEB4 RID: 57012 RVA: 0x0032D7F8 File Offset: 0x0032B9F8
+		// Token: 0x0600EC22 RID: 60450 RVA: 0x00358DCC File Offset: 0x00356FCC
 		public static TimeOfDay GetRootAsTimeOfDay(ByteBuffer _bb)
 		{
 			return TimeOfDay.GetRootAsTimeOfDay(_bb, default(TimeOfDay));
 		}
 
-		// Token: 0x0600DEB5 RID: 57013 RVA: 0x0032D814 File Offset: 0x0032BA14
+		// Token: 0x0600EC23 RID: 60451 RVA: 0x00358DE8 File Offset: 0x00356FE8
 		public static TimeOfDay GetRootAsTimeOfDay(ByteBuffer _bb, TimeOfDay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DEB6 RID: 57014 RVA: 0x0032D831 File Offset: 0x0032BA31
+		// Token: 0x0600EC24 RID: 60452 RVA: 0x00358E05 File Offset: 0x00357005
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DEB7 RID: 57015 RVA: 0x0032D840 File Offset: 0x0032BA40
+		// Token: 0x0600EC25 RID: 60453 RVA: 0x00358E14 File Offset: 0x00357014
 		public TimeOfDay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003A67 RID: 14951
-		// (get) Token: 0x0600DEB8 RID: 57016 RVA: 0x0032D850 File Offset: 0x0032BA50
+		// Token: 0x17003DCB RID: 15819
+		// (get) Token: 0x0600EC26 RID: 60454 RVA: 0x00358E24 File Offset: 0x00357024
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A68 RID: 14952
-		// (get) Token: 0x0600DEB9 RID: 57017 RVA: 0x0032D88C File Offset: 0x0032BA8C
+		// Token: 0x17003DCC RID: 15820
+		// (get) Token: 0x0600EC27 RID: 60455 RVA: 0x00358E60 File Offset: 0x00357060
 		public int InitTime
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A69 RID: 14953
-		// (get) Token: 0x0600DEBA RID: 57018 RVA: 0x0032D8C8 File Offset: 0x0032BAC8
+		// Token: 0x17003DCD RID: 15821
+		// (get) Token: 0x0600EC28 RID: 60456 RVA: 0x00358E9C File Offset: 0x0035709C
 		public int Rate
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEBB RID: 57019 RVA: 0x0032D904 File Offset: 0x0032BB04
+		// Token: 0x0600EC29 RID: 60457 RVA: 0x00358ED8 File Offset: 0x003570D8
 		public DicIntInt? StateSpan(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003A6A RID: 14954
-		// (get) Token: 0x0600DEBC RID: 57020 RVA: 0x0032D968 File Offset: 0x0032BB68
+		// Token: 0x17003DCE RID: 15822
+		// (get) Token: 0x0600EC2A RID: 60458 RVA: 0x00358F3C File Offset: 0x0035713C
 		public int StateSpanLength
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A6B RID: 14955
-		// (get) Token: 0x0600DEBD RID: 57021 RVA: 0x0032D994 File Offset: 0x0032BB94
+		// Token: 0x17003DCF RID: 15823
+		// (get) Token: 0x0600EC2B RID: 60459 RVA: 0x00358F68 File Offset: 0x00357168
 		public int A
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A6C RID: 14956
-		// (get) Token: 0x0600DEBE RID: 57022 RVA: 0x0032D9D4 File Offset: 0x0032BBD4
+		// Token: 0x17003DD0 RID: 15824
+		// (get) Token: 0x0600EC2C RID: 60460 RVA: 0x00358FA8 File Offset: 0x003571A8
 		public int V
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEBF RID: 57023 RVA: 0x0032DA14 File Offset: 0x0032BC14
+		// Token: 0x0600EC2D RID: 60461 RVA: 0x00358FE8 File Offset: 0x003571E8
 		public string BanTag(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -163,8 +163,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003A6D RID: 14957
-		// (get) Token: 0x0600DEC0 RID: 57024 RVA: 0x0032DA50 File Offset: 0x0032BC50
+		// Token: 0x17003DD1 RID: 15825
+		// (get) Token: 0x0600EC2E RID: 60462 RVA: 0x00359024 File Offset: 0x00357224
 		public int BanTagLength
 		{
 			get
@@ -178,7 +178,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEC1 RID: 57025 RVA: 0x0032DA7C File Offset: 0x0032BC7C
+		// Token: 0x0600EC2F RID: 60463 RVA: 0x00359050 File Offset: 0x00357250
 		public DicIntString? TimePreset(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -189,8 +189,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003A6E RID: 14958
-		// (get) Token: 0x0600DEC2 RID: 57026 RVA: 0x0032DAE0 File Offset: 0x0032BCE0
+		// Token: 0x17003DD2 RID: 15826
+		// (get) Token: 0x0600EC30 RID: 60464 RVA: 0x003590B4 File Offset: 0x003572B4
 		public int TimePresetLength
 		{
 			get
@@ -204,58 +204,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEC3 RID: 57027 RVA: 0x0032DB0C File Offset: 0x0032BD0C
+		// Token: 0x0600EC31 RID: 60465 RVA: 0x003590E0 File Offset: 0x003572E0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BanTagIter()或GetBanTagBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] BanTag()
+		public string[] BanTag()
 		{
 			return this.BanTagIter().ToArray<string>();
 		}
 
-		// Token: 0x0600DEC4 RID: 57028 RVA: 0x0032DB19 File Offset: 0x0032BD19
+		// Token: 0x0600EC32 RID: 60466 RVA: 0x003590ED File Offset: 0x003572ED
 		[NullableContext(1)]
-		public readonly IEnumerable<string> BanTagIter()
+		public IEnumerable<string> BanTagIter()
 		{
 			TimeOfDay.<BanTagIter>d__28 <BanTagIter>d__ = new TimeOfDay.<BanTagIter>d__28(-2);
 			<BanTagIter>d__.<>3__<>4__this = this;
 			return <BanTagIter>d__;
 		}
 
-		// Token: 0x0600DEC5 RID: 57029 RVA: 0x0032DB30 File Offset: 0x0032BD30
+		// Token: 0x0600EC33 RID: 60467 RVA: 0x00359104 File Offset: 0x00357304
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用StateSpanFrozenDict()缓存字典，遍历请使用StateSpanIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> StateSpan()
+		public Dictionary<int, int> StateSpan()
 		{
 			return this.StateSpanIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600DEC6 RID: 57030 RVA: 0x0032DB86 File Offset: 0x0032BD86
+		// Token: 0x0600EC34 RID: 60468 RVA: 0x0035915A File Offset: 0x0035735A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> StateSpanIter()
+		public IEnumerable<DicIntInt> StateSpanIter()
 		{
 			TimeOfDay.<StateSpanIter>d__30 <StateSpanIter>d__ = new TimeOfDay.<StateSpanIter>d__30(-2);
 			<StateSpanIter>d__.<>3__<>4__this = this;
 			return <StateSpanIter>d__;
 		}
 
-		// Token: 0x0600DEC7 RID: 57031 RVA: 0x0032DB9C File Offset: 0x0032BD9C
+		// Token: 0x0600EC35 RID: 60469 RVA: 0x00359170 File Offset: 0x00357370
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TimePresetFrozenDict()缓存字典，遍历请使用TimePresetIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> TimePreset()
+		public Dictionary<int, string> TimePreset()
 		{
 			return this.TimePresetIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x0600DEC8 RID: 57032 RVA: 0x0032DBF2 File Offset: 0x0032BDF2
+		// Token: 0x0600EC36 RID: 60470 RVA: 0x003591C6 File Offset: 0x003573C6
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> TimePresetIter()
+		public IEnumerable<DicIntString> TimePresetIter()
 		{
 			TimeOfDay.<TimePresetIter>d__32 <TimePresetIter>d__ = new TimeOfDay.<TimePresetIter>d__32(-2);
 			<TimePresetIter>d__.<>3__<>4__this = this;
 			return <TimePresetIter>d__;
 		}
 
-		// Token: 0x0600DEC9 RID: 57033 RVA: 0x0032DC08 File Offset: 0x0032BE08
+		// Token: 0x0600EC37 RID: 60471 RVA: 0x003591DC File Offset: 0x003573DC
 		public int? GetStateSpan(int key)
 		{
 			this.EnsureStateSpanCacheIfNeeded();
@@ -267,7 +264,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600DECA RID: 57034 RVA: 0x0032DC3C File Offset: 0x0032BE3C
+		// Token: 0x0600EC38 RID: 60472 RVA: 0x00359210 File Offset: 0x00357410
 		[NullableContext(2)]
 		public string GetTimePreset(int key)
 		{
@@ -280,7 +277,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600DECB RID: 57035 RVA: 0x0032DC64 File Offset: 0x0032BE64
+		// Token: 0x0600EC39 RID: 60473 RVA: 0x00359238 File Offset: 0x00357438
 		private void EnsureStateSpanCacheIfNeeded()
 		{
 			if (this.StateSpanCache != null)
@@ -290,7 +287,7 @@ namespace Aki.Config
 			this.StateSpanCache = this.StateSpanIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600DECC RID: 57036 RVA: 0x0032DCCC File Offset: 0x0032BECC
+		// Token: 0x0600EC3A RID: 60474 RVA: 0x003592A0 File Offset: 0x003574A0
 		private void EnsureTimePresetCacheIfNeeded()
 		{
 			if (this.TimePresetCache != null)
@@ -300,34 +297,30 @@ namespace Aki.Config
 			this.TimePresetCache = this.TimePresetIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600DECD RID: 57037 RVA: 0x0032DD32 File Offset: 0x0032BF32
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetStateSpanFrozenDict(int key)
+		// Token: 0x0600EC3B RID: 60475 RVA: 0x00359306 File Offset: 0x00357506
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetStateSpanFrozenDict()
 		{
 			this.EnsureStateSpanCacheIfNeeded();
 			return this.StateSpanCache;
 		}
 
-		// Token: 0x0600DECE RID: 57038 RVA: 0x0032DD40 File Offset: 0x0032BF40
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetTimePresetFrozenDict(int key)
+		// Token: 0x0600EC3C RID: 60476 RVA: 0x00359314 File Offset: 0x00357514
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetTimePresetFrozenDict()
 		{
 			this.EnsureTimePresetCacheIfNeeded();
 			return this.TimePresetCache;
 		}
 
-		// Token: 0x0400526A RID: 21098
+		// Token: 0x040058AD RID: 22701
 		private Table __p;
 
-		// Token: 0x0400526B RID: 21099
+		// Token: 0x040058AE RID: 22702
 		[Nullable(2)]
 		private FrozenDictionary<int, int> StateSpanCache;
 
-		// Token: 0x0400526C RID: 21100
+		// Token: 0x040058AF RID: 22703
 		[Nullable(new byte[]
 		{
 			2,

@@ -2,37 +2,37 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006184 RID: 24964
+	// Token: 0x02005102 RID: 20738
 	public interface IRoverlikeBlessingItemData
 	{
-		// Token: 0x170091C2 RID: 37314
-		// (get) Token: 0x0603F168 RID: 258408
-		// (set) Token: 0x0603F169 RID: 258409
+		// Token: 0x17006524 RID: 25892
+		// (get) Token: 0x06033E28 RID: 212520
+		// (set) Token: 0x06033E29 RID: 212521
 		int BlessId { get; set; }
 
-		// Token: 0x170091C3 RID: 37315
-		// (get) Token: 0x0603F16A RID: 258410
-		// (set) Token: 0x0603F16B RID: 258411
+		// Token: 0x17006525 RID: 25893
+		// (get) Token: 0x06033E2A RID: 212522
+		// (set) Token: 0x06033E2B RID: 212523
 		int? IncId { get; set; }
 
-		// Token: 0x170091C4 RID: 37316
-		// (get) Token: 0x0603F16C RID: 258412
-		// (set) Token: 0x0603F16D RID: 258413
+		// Token: 0x17006526 RID: 25894
+		// (get) Token: 0x06033E2C RID: 212524
+		// (set) Token: 0x06033E2D RID: 212525
 		bool? AllowToggleInteract { get; set; }
 
-		// Token: 0x170091C5 RID: 37317
-		// (get) Token: 0x0603F16E RID: 258414
-		// (set) Token: 0x0603F16F RID: 258415
+		// Token: 0x17006527 RID: 25895
+		// (get) Token: 0x06033E2E RID: 212526
+		// (set) Token: 0x06033E2F RID: 212527
 		bool? IsUp { get; set; }
 
-		// Token: 0x170091C6 RID: 37318
-		// (get) Token: 0x0603F170 RID: 258416
-		// (set) Token: 0x0603F171 RID: 258417
+		// Token: 0x17006528 RID: 25896
+		// (get) Token: 0x06033E30 RID: 212528
+		// (set) Token: 0x06033E31 RID: 212529
 		bool? CheckSameSlot { get; set; }
 
-		// Token: 0x170091C7 RID: 37319
-		// (get) Token: 0x0603F172 RID: 258418
-		// (set) Token: 0x0603F173 RID: 258419
+		// Token: 0x17006529 RID: 25897
+		// (get) Token: 0x06033E32 RID: 212530
+		// (set) Token: 0x06033E33 RID: 212531
 		bool? ShowRecommend { get; set; }
 	}
 }

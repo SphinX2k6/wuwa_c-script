@@ -9,15 +9,15 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E33 RID: 11827
+// Token: 0x0200238F RID: 9103
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 [TickController(0)]
 public class CharacterShadowController : ControllerBase
 {
-	// Token: 0x17002289 RID: 8841
-	// (get) Token: 0x06018ED2 RID: 102098 RVA: 0x0066CE9D File Offset: 0x0066B09D
+	// Token: 0x170022FC RID: 8956
+	// (get) Token: 0x0601679F RID: 92063 RVA: 0x00692D95 File Offset: 0x00690F95
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -26,7 +26,7 @@ public class CharacterShadowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018ED3 RID: 102099 RVA: 0x0066CEA0 File Offset: 0x0066B0A0
+	// Token: 0x060167A0 RID: 92064 RVA: 0x00692D98 File Offset: 0x00690F98
 	protected override bool OnInit()
 	{
 		this.GetConfigByGameSetting();
@@ -35,14 +35,14 @@ public class CharacterShadowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018ED4 RID: 102100 RVA: 0x0066CEBF File Offset: 0x0066B0BF
+	// Token: 0x060167A1 RID: 92065 RVA: 0x00692DB7 File Offset: 0x00690FB7
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
 		return true;
 	}
 
-	// Token: 0x06018ED5 RID: 102101 RVA: 0x0066CEC8 File Offset: 0x0066B0C8
+	// Token: 0x060167A2 RID: 92066 RVA: 0x00692DC0 File Offset: 0x00690FC0
 	private void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.SetImageQuality, new Action(this.OnSetImageQuality));
@@ -52,7 +52,7 @@ public class CharacterShadowController : ControllerBase
 		UKuroCharRenderingComponent.BindCharacterShadowConfigChangedCallback(this.CharacterShadowConfigChangedDelegate);
 	}
 
-	// Token: 0x06018ED6 RID: 102102 RVA: 0x0066CF4C File Offset: 0x0066B14C
+	// Token: 0x060167A3 RID: 92067 RVA: 0x00692E44 File Offset: 0x00691044
 	private void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.SetImageQuality, new Action(this.OnSetImageQuality));
@@ -66,19 +66,19 @@ public class CharacterShadowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018ED7 RID: 102103 RVA: 0x0066CFD2 File Offset: 0x0066B1D2
+	// Token: 0x060167A4 RID: 92068 RVA: 0x00692ECA File Offset: 0x006910CA
 	private void OnCharacterShadowConfigChanged(FName cVarName)
 	{
 		this.GetConfigByGameSetting();
 	}
 
-	// Token: 0x06018ED8 RID: 102104 RVA: 0x0066CFDA File Offset: 0x0066B1DA
+	// Token: 0x060167A5 RID: 92069 RVA: 0x00692ED2 File Offset: 0x006910D2
 	private void OnSetImageQuality()
 	{
 		this.GetConfigByGameSetting();
 	}
 
-	// Token: 0x06018ED9 RID: 102105 RVA: 0x0066CFE4 File Offset: 0x0066B1E4
+	// Token: 0x060167A6 RID: 92070 RVA: 0x00692EDC File Offset: 0x006910DC
 	private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 	{
 		WorldEntity entity = handle.Entity;
@@ -103,13 +103,13 @@ public class CharacterShadowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018EDA RID: 102106 RVA: 0x0066D083 File Offset: 0x0066B283
+	// Token: 0x060167A7 RID: 92071 RVA: 0x00692F7B File Offset: 0x0069117B
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		this.RoleEntityHandles.Remove(handle);
 	}
 
-	// Token: 0x06018EDB RID: 102107 RVA: 0x0066D094 File Offset: 0x0066B294
+	// Token: 0x060167A8 RID: 92072 RVA: 0x00692F8C File Offset: 0x0069118C
 	private void GetConfigByGameSetting()
 	{
 		float consoleVariableFloatValue = UKismetSystemLibrary.GetConsoleVariableFloatValue("r.Kuro.CharacterShadow.RealShadowDistanceOverride");
@@ -121,7 +121,7 @@ public class CharacterShadowController : ControllerBase
 		this.IsMainPlayerUseRealRoleShadow = (GameSettingsDeviceRender.Instance.IsMainPlayerUseRealRoleShadow() != 0);
 	}
 
-	// Token: 0x06018EDC RID: 102108 RVA: 0x0066D124 File Offset: 0x0066B324
+	// Token: 0x060167A9 RID: 92073 RVA: 0x0069301C File Offset: 0x0069121C
 	private UniTask TrySendMessage()
 	{
 		CharacterShadowController.<TrySendMessage>d__24 <TrySendMessage>d__;
@@ -132,7 +132,7 @@ public class CharacterShadowController : ControllerBase
 		return <TrySendMessage>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018EDD RID: 102109 RVA: 0x0066D168 File Offset: 0x0066B368
+	// Token: 0x060167AA RID: 92074 RVA: 0x00693060 File Offset: 0x00691260
 	protected override void OnTick(float deltaTime)
 	{
 		if (Net.Instance.IsFinishLogin())
@@ -273,8 +273,8 @@ public class CharacterShadowController : ControllerBase
 		}
 	}
 
-	// Token: 0x1700228A RID: 8842
-	// (get) Token: 0x06018EDE RID: 102110 RVA: 0x0066D548 File Offset: 0x0066B748
+	// Token: 0x170022FD RID: 8957
+	// (get) Token: 0x060167AB RID: 92075 RVA: 0x00693440 File Offset: 0x00691640
 	public static CharacterShadowController Instance
 	{
 		get
@@ -283,7 +283,7 @@ public class CharacterShadowController : ControllerBase
 		}
 	}
 
-	// Token: 0x06018EDF RID: 102111 RVA: 0x0066D54F File Offset: 0x0066B74F
+	// Token: 0x060167AC RID: 92076 RVA: 0x00693447 File Offset: 0x00691647
 	public static CharacterShadowController GetOrCreateInstance()
 	{
 		if (CharacterShadowController._Instance == null)
@@ -293,7 +293,7 @@ public class CharacterShadowController : ControllerBase
 		return CharacterShadowController._Instance;
 	}
 
-	// Token: 0x06018EE0 RID: 102112 RVA: 0x0066D563 File Offset: 0x0066B763
+	// Token: 0x060167AD RID: 92077 RVA: 0x0069345B File Offset: 0x0069165B
 	public static bool CreateInstance()
 	{
 		if (CharacterShadowController._Instance != null)
@@ -304,64 +304,64 @@ public class CharacterShadowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06018EE1 RID: 102113 RVA: 0x0066D579 File Offset: 0x0066B779
+	// Token: 0x060167AE RID: 92078 RVA: 0x00693471 File Offset: 0x00691671
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018EE2 RID: 102114 RVA: 0x0066D57B File Offset: 0x0066B77B
+	// Token: 0x060167AF RID: 92079 RVA: 0x00693473 File Offset: 0x00691673
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterShadowController._Instance = null;
 	}
 
-	// Token: 0x06018EE3 RID: 102115 RVA: 0x0066D583 File Offset: 0x0066B783
+	// Token: 0x060167B0 RID: 92080 RVA: 0x0069347B File Offset: 0x0069167B
 	static CharacterShadowController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterShadowController.CreateStaticDefaultValue), new Action(CharacterShadowController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400BAFA RID: 47866
+	// Token: 0x0400BE88 RID: 48776
 	private int EnableRealShadowDistance;
 
-	// Token: 0x0400BAFB RID: 47867
+	// Token: 0x0400BE89 RID: 48777
 	private int EnableRealShadowNum;
 
-	// Token: 0x0400BAFC RID: 47868
+	// Token: 0x0400BE8A RID: 48778
 	private int MaxDecalShadowDistance;
 
-	// Token: 0x0400BAFD RID: 47869
+	// Token: 0x0400BE8B RID: 48779
 	private int LastUpdateFrame;
 
-	// Token: 0x0400BAFE RID: 47870
+	// Token: 0x0400BE8C RID: 48780
 	private bool IsMainPlayerUseRealRoleShadow;
 
-	// Token: 0x0400BAFF RID: 47871
+	// Token: 0x0400BE8D RID: 48781
 	private readonly HashSet<EntityHandle> RoleEntityHandles = new HashSet<EntityHandle>();
 
-	// Token: 0x0400BB00 RID: 47872
+	// Token: 0x0400BE8E RID: 48782
 	private readonly List<EntityHandle> QueryEntityResultCache = new List<EntityHandle>();
 
-	// Token: 0x0400BB01 RID: 47873
+	// Token: 0x0400BE8F RID: 48783
 	private readonly HashSet<EntityHandle> DecalShadowEntitiesSet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400BB02 RID: 47874
+	// Token: 0x0400BE90 RID: 48784
 	private readonly HashSet<EntityHandle> RealShadowEntitiesSet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400BB03 RID: 47875
+	// Token: 0x0400BE91 RID: 48785
 	private HashSet<EntityHandle> LastFrameDecalShadowEntitiesSet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400BB04 RID: 47876
+	// Token: 0x0400BE92 RID: 48786
 	private readonly bool DebugLogEnabled;
 
-	// Token: 0x0400BB05 RID: 47877
+	// Token: 0x0400BE93 RID: 48787
 	[Nullable(2)]
 	private FOnCharacterShadowConfigChanged CharacterShadowConfigChangedDelegate;
 
-	// Token: 0x0400BB06 RID: 47878
+	// Token: 0x0400BE94 RID: 48788
 	private DateTime? LastDate;
 
-	// Token: 0x0400BB07 RID: 47879
+	// Token: 0x0400BE95 RID: 48789
 	[Nullable(2)]
 	private static CharacterShadowController _Instance;
 }

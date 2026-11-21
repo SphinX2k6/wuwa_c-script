@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CD1 RID: 7377
+// Token: 0x02001193 RID: 4499
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleArrowBattleMain : BattleChildViewPanel
 {
-	// Token: 0x0600DF5A RID: 57178 RVA: 0x00344FA0 File Offset: 0x003431A0
+	// Token: 0x0600B377 RID: 45943 RVA: 0x003509C8 File Offset: 0x0034EBC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600DF5B RID: 57179 RVA: 0x003450B8 File Offset: 0x003432B8
+	// Token: 0x0600B378 RID: 45944 RVA: 0x00350AE0 File Offset: 0x0034ECE0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleArrowBattleMain.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DF5C RID: 57180 RVA: 0x003450FC File Offset: 0x003432FC
+	// Token: 0x0600B379 RID: 45945 RVA: 0x00350B24 File Offset: 0x0034ED24
 	protected override void OnBeforeDestroy()
 	{
 		this.OnRemoveEventListener();
@@ -61,7 +61,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600DF5D RID: 57181 RVA: 0x0034514C File Offset: 0x0034334C
+	// Token: 0x0600B37A RID: 45946 RVA: 0x00350B74 File Offset: 0x0034ED74
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.MotorArrowBossHpChange, new Action<FKSC_HeadHpContext>(this.OnMotorArrowBossHpChange));
@@ -70,7 +70,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		EventSystem.Instance.Add(EEventName.MotorArrowSave, new Action(this.OnSave));
 	}
 
-	// Token: 0x0600DF5E RID: 57182 RVA: 0x003451CC File Offset: 0x003433CC
+	// Token: 0x0600B37B RID: 45947 RVA: 0x00350BF4 File Offset: 0x0034EDF4
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorArrowBossHpChange, new Action<FKSC_HeadHpContext>(this.OnMotorArrowBossHpChange));
@@ -79,7 +79,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		EventSystem.Instance.Remove(EEventName.MotorArrowSave, new Action(this.OnSave));
 	}
 
-	// Token: 0x0600DF5F RID: 57183 RVA: 0x0034524C File Offset: 0x0034344C
+	// Token: 0x0600B37C RID: 45948 RVA: 0x00350C74 File Offset: 0x0034EE74
 	private void OnCountDownEnd()
 	{
 		this.ButtonStop.RootUIComp.Get().SetUIActive(true);
@@ -94,7 +94,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		motorcycleControlPanel.ShowBattleVisibleChildView(false);
 	}
 
-	// Token: 0x0600DF60 RID: 57184 RVA: 0x003452B4 File Offset: 0x003434B4
+	// Token: 0x0600B37D RID: 45949 RVA: 0x00350CDC File Offset: 0x0034EEDC
 	[NullableContext(1)]
 	private void OnMotorArrowBossHpChange(FKSC_HeadHpContext headInfo)
 	{
@@ -154,7 +154,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600DF61 RID: 57185 RVA: 0x00345372 File Offset: 0x00343572
+	// Token: 0x0600B37E RID: 45950 RVA: 0x00350D9A File Offset: 0x0034EF9A
 	[NullableContext(1)]
 	private void OnMotorArrowBossCreate(string bossName)
 	{
@@ -166,7 +166,7 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		bossHpItem.SetBossName(bossName);
 	}
 
-	// Token: 0x0600DF62 RID: 57186 RVA: 0x00345388 File Offset: 0x00343588
+	// Token: 0x0600B37F RID: 45951 RVA: 0x00350DB0 File Offset: 0x0034EFB0
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		MotorcycleArrowBattleProgressItem battleProgressItem = this.BattleProgressItem;
@@ -206,18 +206,18 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600DF63 RID: 57187 RVA: 0x00345414 File Offset: 0x00343614
+	// Token: 0x0600B380 RID: 45952 RVA: 0x00350E3C File Offset: 0x0034F03C
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600DF64 RID: 57188 RVA: 0x00345416 File Offset: 0x00343616
+	// Token: 0x0600B381 RID: 45953 RVA: 0x00350E3E File Offset: 0x0034F03E
 	private void OnButtonStopClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MotorFightPauseView, null, null);
 	}
 
-	// Token: 0x0600DF65 RID: 57189 RVA: 0x0034542C File Offset: 0x0034362C
+	// Token: 0x0600B382 RID: 45954 RVA: 0x00350E54 File Offset: 0x0034F054
 	private void OnSave()
 	{
 		if (this.HideSaveTimer != null && TimerSystem.GameplayTimeInstance.Has(this.HideSaveTimer))
@@ -241,74 +241,74 @@ public class MotorcycleArrowBattleMain : BattleChildViewPanel
 		}, (float)this.ShowSaveDuration / 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x040066BA RID: 26298
+	// Token: 0x04006799 RID: 26521
 	protected MotorcycleArrowHpPlayerItem HpPlayerItem;
 
-	// Token: 0x040066BB RID: 26299
+	// Token: 0x0400679A RID: 26522
 	protected MotorcycleArrowBattleProgressItem BattleProgressItem;
 
-	// Token: 0x040066BC RID: 26300
+	// Token: 0x0400679B RID: 26523
 	protected MotorcycleArrowScore ScoreItem;
 
-	// Token: 0x040066BD RID: 26301
+	// Token: 0x0400679C RID: 26524
 	protected MotorcycleArrowBossHpItem BossHpItem;
 
-	// Token: 0x040066BE RID: 26302
+	// Token: 0x0400679D RID: 26525
 	protected SimpleBossStateItem BossHpItem2;
 
-	// Token: 0x040066BF RID: 26303
+	// Token: 0x0400679E RID: 26526
 	protected UUIItem SaveItem;
 
-	// Token: 0x040066C0 RID: 26304
+	// Token: 0x0400679F RID: 26527
 	private TimerHandle HideSaveTimer;
 
-	// Token: 0x040066C1 RID: 26305
+	// Token: 0x040067A0 RID: 26528
 	protected UUIButtonComponent ButtonControlL;
 
-	// Token: 0x040066C2 RID: 26306
+	// Token: 0x040067A1 RID: 26529
 	protected UUIButtonComponent ButtonControlR;
 
-	// Token: 0x040066C3 RID: 26307
+	// Token: 0x040067A2 RID: 26530
 	protected UUIButtonComponent ButtonStop;
 
-	// Token: 0x040066C4 RID: 26308
+	// Token: 0x040067A3 RID: 26531
 	private MotorcycleControlPanelBase MotorcycleControlPanel;
 
-	// Token: 0x040066C5 RID: 26309
+	// Token: 0x040067A4 RID: 26532
 	private int ShowSaveDuration;
 
-	// Token: 0x020082D3 RID: 33491
+	// Token: 0x0200745C RID: 29788
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AAEE RID: 174830
+		// Token: 0x04025E16 RID: 155158
 		public const int BattleProgress = 0;
 
-		// Token: 0x0402AAEF RID: 174831
+		// Token: 0x04025E17 RID: 155159
 		public const int BattleHpPlayer = 1;
 
-		// Token: 0x0402AAF0 RID: 174832
+		// Token: 0x04025E18 RID: 155160
 		public const int Score = 2;
 
-		// Token: 0x0402AAF1 RID: 174833
+		// Token: 0x04025E19 RID: 155161
 		public const int Save = 3;
 
-		// Token: 0x0402AAF2 RID: 174834
+		// Token: 0x04025E1A RID: 155162
 		public const int Skill = 4;
 
-		// Token: 0x0402AAF3 RID: 174835
+		// Token: 0x04025E1B RID: 155163
 		public const int ButtonControlL = 5;
 
-		// Token: 0x0402AAF4 RID: 174836
+		// Token: 0x04025E1C RID: 155164
 		public const int ButtonControlR = 6;
 
-		// Token: 0x0402AAF5 RID: 174837
+		// Token: 0x04025E1D RID: 155165
 		public const int BossHp = 7;
 
-		// Token: 0x0402AAF6 RID: 174838
+		// Token: 0x04025E1E RID: 155166
 		public const int ButtonStop = 8;
 
-		// Token: 0x0402AAF7 RID: 174839
+		// Token: 0x04025E1F RID: 155167
 		public const int ButtonControlRoot = 9;
 	}
 }

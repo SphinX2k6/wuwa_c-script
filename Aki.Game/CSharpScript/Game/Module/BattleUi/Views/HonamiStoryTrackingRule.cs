@@ -6,13 +6,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC4 RID: 23748
+	// Token: 0x02004CA6 RID: 19622
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class HonamiStoryTrackingRule : TrackingDisplayRuleBase
 	{
-		// Token: 0x17008DF8 RID: 36344
-		// (get) Token: 0x0603C0CB RID: 245963 RVA: 0x00E5C96C File Offset: 0x00E5AB6C
+		// Token: 0x170061CA RID: 25034
+		// (get) Token: 0x06031020 RID: 200736 RVA: 0x00DAD080 File Offset: 0x00DAB280
 		public override EMissionRuleId Id
 		{
 			get
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008DF9 RID: 36345
-		// (get) Token: 0x0603C0CC RID: 245964 RVA: 0x00E5C96F File Offset: 0x00E5AB6F
+		// Token: 0x170061CB RID: 25035
+		// (get) Token: 0x06031021 RID: 200737 RVA: 0x00DAD083 File Offset: 0x00DAB283
 		public override bool Enabled
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008DFA RID: 36346
-		// (get) Token: 0x0603C0CD RID: 245965 RVA: 0x00E5C976 File Offset: 0x00E5AB76
+		// Token: 0x170061CC RID: 25036
+		// (get) Token: 0x06031022 RID: 200738 RVA: 0x00DAD08A File Offset: 0x00DAB28A
 		public override int Priority
 		{
 			get
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0CE RID: 245966 RVA: 0x00E5C97C File Offset: 0x00E5AB7C
+		// Token: 0x06031023 RID: 200739 RVA: 0x00DAD090 File Offset: 0x00DAB290
 		public override EMissionItemView? CustomTypeCheck(IMissionItemViewShowData showData, ETreeTextExpressReason? reason = null)
 		{
 			BehaviorTreeViewShowData behaviorTreeViewShowData = showData as BehaviorTreeViewShowData;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new EMissionItemView?(EMissionItemView.ThirdRow);
 		}
 
-		// Token: 0x0603C0CF RID: 245967 RVA: 0x00E5CA24 File Offset: 0x00E5AC24
+		// Token: 0x06031024 RID: 200740 RVA: 0x00DAD138 File Offset: 0x00DAB338
 		public override void SortShowData(List<IMissionItemViewShowData> showData)
 		{
 			HonamiStoryQuestDataBase curTrackTaskData = HonamiStoryModel.Instance.CurTrackTaskData;

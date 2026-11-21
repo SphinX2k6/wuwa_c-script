@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200404D RID: 16461
+	// Token: 0x0200448E RID: 17550
 	public class IQuestStatisticsT
 	{
-		// Token: 0x170073DE RID: 29662
-		// (get) Token: 0x06017D95 RID: 97685 RVA: 0x00370F0E File Offset: 0x0036F10E
-		// (set) Token: 0x06017D96 RID: 97686 RVA: 0x00370F16 File Offset: 0x0036F116
+		// Token: 0x170079E0 RID: 31200
+		// (get) Token: 0x0601942E RID: 103470 RVA: 0x0039AD02 File Offset: 0x00398F02
+		// (set) Token: 0x0601942F RID: 103471 RVA: 0x0039AD0A File Offset: 0x00398F0A
 		public List<TQuestStatisticsUnion> StatisticsConfig { get; set; }
 
-		// Token: 0x170073DF RID: 29663
-		// (get) Token: 0x06017D97 RID: 97687 RVA: 0x00370F1F File Offset: 0x0036F11F
-		// (set) Token: 0x06017D98 RID: 97688 RVA: 0x00370F27 File Offset: 0x0036F127
+		// Token: 0x170079E1 RID: 31201
+		// (get) Token: 0x06019430 RID: 103472 RVA: 0x0039AD13 File Offset: 0x00398F13
+		// (set) Token: 0x06019431 RID: 103473 RVA: 0x0039AD1B File Offset: 0x00398F1B
 		public List<ICommonCalculateVarT> CalculationOnTriggeringStatistics { get; set; }
 
-		// Token: 0x170073E0 RID: 29664
-		// (get) Token: 0x06017D99 RID: 97689 RVA: 0x00370F30 File Offset: 0x0036F130
-		// (set) Token: 0x06017D9A RID: 97690 RVA: 0x00370F38 File Offset: 0x0036F138
+		// Token: 0x170079E2 RID: 31202
+		// (get) Token: 0x06019432 RID: 103474 RVA: 0x0039AD24 File Offset: 0x00398F24
+		// (set) Token: 0x06019433 RID: 103475 RVA: 0x0039AD2C File Offset: 0x00398F2C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017D9B RID: 97691 RVA: 0x00370F41 File Offset: 0x0036F141
+		// Token: 0x06019434 RID: 103476 RVA: 0x0039AD35 File Offset: 0x00398F35
 		public IQuestStatisticsT()
 		{
 			this.StatisticsConfig = null;

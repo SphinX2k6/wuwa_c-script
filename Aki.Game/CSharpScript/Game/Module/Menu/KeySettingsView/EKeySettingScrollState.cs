@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005462 RID: 21602
+	// Token: 0x02004445 RID: 17477
 	public class EKeySettingScrollState
 	{
-		// Token: 0x0401D16C RID: 119148
+		// Token: 0x04017C05 RID: 97285
 		public const int Idle = 0;
 
-		// Token: 0x0401D16D RID: 119149
+		// Token: 0x04017C06 RID: 97286
 		public const int Scrolling = 1;
 
-		// Token: 0x0401D16E RID: 119150
+		// Token: 0x04017C07 RID: 97287
 		public const int Done = 2;
 	}
 }

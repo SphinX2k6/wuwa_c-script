@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 {
-	// Token: 0x020054A0 RID: 21664
+	// Token: 0x02004483 RID: 17539
 	public enum EMapLifeEventListenerType
 	{
-		// Token: 0x0401D2AE RID: 119470
+		// Token: 0x04017D4A RID: 97610
 		SceneGameplayUnlock
 	}
 }

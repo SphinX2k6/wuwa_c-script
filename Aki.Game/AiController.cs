@@ -16,8 +16,8 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiController : IScoreUpdateObject
 {
-	// Token: 0x17000258 RID: 600
-	// (get) Token: 0x06000CFB RID: 3323 RVA: 0x00045A74 File Offset: 0x00043C74
+	// Token: 0x1700025B RID: 603
+	// (get) Token: 0x06000D01 RID: 3329 RVA: 0x00046610 File Offset: 0x00044810
 	public long? HatredGroupId
 	{
 		get
@@ -26,7 +26,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000CFC RID: 3324 RVA: 0x00045A7C File Offset: 0x00043C7C
+	// Token: 0x06000D02 RID: 3330 RVA: 0x00046618 File Offset: 0x00044818
 	public AiController()
 	{
 		this.AiTaunt = new AiTaunt(this);
@@ -38,7 +38,7 @@ public class AiController : IScoreUpdateObject
 		this.AiPatrol = new AiPatrolController();
 	}
 
-	// Token: 0x06000CFD RID: 3325 RVA: 0x00045AF8 File Offset: 0x00043CF8
+	// Token: 0x06000D03 RID: 3331 RVA: 0x00046694 File Offset: 0x00044894
 	public void Tick(float delta)
 	{
 		this.UpdateCooldownTrigger();
@@ -62,7 +62,7 @@ public class AiController : IScoreUpdateObject
 		AiModel.Instance.AddAiScore(this);
 	}
 
-	// Token: 0x06000CFE RID: 3326 RVA: 0x00045BAC File Offset: 0x00043DAC
+	// Token: 0x06000D04 RID: 3332 RVA: 0x00046748 File Offset: 0x00044948
 	public void ScoreUpdate()
 	{
 		if (!this.CharAiDesignComp.Active)
@@ -97,7 +97,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000CFF RID: 3327 RVA: 0x00045CB4 File Offset: 0x00043EB4
+	// Token: 0x06000D05 RID: 3333 RVA: 0x00046850 File Offset: 0x00044A50
 	public void SetAiDesignComp(CharacterAiComponent aiDesign)
 	{
 		if (this.CharAiDesignComp == aiDesign)
@@ -126,7 +126,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D00 RID: 3328 RVA: 0x00045D60 File Offset: 0x00043F60
+	// Token: 0x06000D06 RID: 3334 RVA: 0x000468FC File Offset: 0x00044AFC
 	private void InitBaseInfo()
 	{
 		CharacterAiComponent charAiDesignComp = this.CharAiDesignComp;
@@ -254,7 +254,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D01 RID: 3329 RVA: 0x0004601C File Offset: 0x0004421C
+	// Token: 0x06000D07 RID: 3335 RVA: 0x00046BB8 File Offset: 0x00044DB8
 	public int GetTeamLevelId()
 	{
 		CharacterAiComponent charAiDesignComp = this.CharAiDesignComp;
@@ -284,7 +284,7 @@ public class AiController : IScoreUpdateObject
 		return this.AiTeamId;
 	}
 
-	// Token: 0x06000D02 RID: 3330 RVA: 0x000460E0 File Offset: 0x000442E0
+	// Token: 0x06000D08 RID: 3336 RVA: 0x00046C7C File Offset: 0x00044E7C
 	public void LoadAiConfigs(int aiBaseId, bool isNpc = false)
 	{
 		CharacterActorComponent charActorComp = this.CharActorComp;
@@ -302,7 +302,7 @@ public class AiController : IScoreUpdateObject
 		this.AiTaunt.Reset(this.AiHateList);
 	}
 
-	// Token: 0x06000D03 RID: 3331 RVA: 0x0004615C File Offset: 0x0004435C
+	// Token: 0x06000D09 RID: 3337 RVA: 0x00046CF8 File Offset: 0x00044EF8
 	public void Clear()
 	{
 		AiModelController.Instance.RemoveAiFromTeam(this);
@@ -339,7 +339,7 @@ public class AiController : IScoreUpdateObject
 		this.Enabled = false;
 	}
 
-	// Token: 0x06000D04 RID: 3332 RVA: 0x0004626C File Offset: 0x0004446C
+	// Token: 0x06000D0A RID: 3338 RVA: 0x00046E08 File Offset: 0x00045008
 	public void SetEnable(bool value)
 	{
 		if (this.Enabled == value)
@@ -368,7 +368,7 @@ public class AiController : IScoreUpdateObject
 		this.DeltaTime = 0f;
 	}
 
-	// Token: 0x06000D05 RID: 3333 RVA: 0x00046308 File Offset: 0x00044508
+	// Token: 0x06000D0B RID: 3339 RVA: 0x00046EA4 File Offset: 0x000450A4
 	public void OnSwitchControl(bool control, int playerId)
 	{
 		this.SetControllerPlayerId(playerId);
@@ -380,13 +380,13 @@ public class AiController : IScoreUpdateObject
 		this.UpdateCooldownTrigger();
 	}
 
-	// Token: 0x06000D06 RID: 3334 RVA: 0x0004632B File Offset: 0x0004452B
+	// Token: 0x06000D0C RID: 3340 RVA: 0x00046EC7 File Offset: 0x000450C7
 	public void SetControllerPlayerId(int playerId)
 	{
 		this.ControllerPlayerId = playerId;
 	}
 
-	// Token: 0x06000D07 RID: 3335 RVA: 0x00046334 File Offset: 0x00044534
+	// Token: 0x06000D0D RID: 3341 RVA: 0x00046ED0 File Offset: 0x000450D0
 	public void PreSwitchControl()
 	{
 		if (this.CharActorComp.IsAutonomousProxy)
@@ -401,7 +401,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D08 RID: 3336 RVA: 0x00046371 File Offset: 0x00044571
+	// Token: 0x06000D0E RID: 3342 RVA: 0x00046F0D File Offset: 0x0004510D
 	public void OnSkillEnd()
 	{
 		if (this.CharActorComp.IsAutonomousProxy && this.SwitchControlState == ESwitchControlState.WaitEndSkill)
@@ -411,7 +411,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D09 RID: 3337 RVA: 0x000463A4 File Offset: 0x000445A4
+	// Token: 0x06000D0F RID: 3343 RVA: 0x00046F40 File Offset: 0x00045140
 	public void OnChangeMode()
 	{
 		double num = GameModeModel.Instance.IsMulti ? (TimeUtil.Instance.GetServerTimeStamp() - Time.Instance.WorldTime) : (Time.Instance.WorldTime - TimeUtil.Instance.GetServerTimeStamp());
@@ -423,7 +423,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D0A RID: 3338 RVA: 0x00046458 File Offset: 0x00044658
+	// Token: 0x06000D10 RID: 3344 RVA: 0x00046FF4 File Offset: 0x000451F4
 	public void OnEntityCampModified(Entity entity, ECamp oldCamp, ECamp newCamp)
 	{
 		int id = entity.Id;
@@ -442,25 +442,25 @@ public class AiController : IScoreUpdateObject
 		this.AiHateList.OnEntityCampModified(entity, oldCamp, newCamp);
 	}
 
-	// Token: 0x06000D0B RID: 3339 RVA: 0x000464DB File Offset: 0x000446DB
+	// Token: 0x06000D11 RID: 3345 RVA: 0x00047077 File Offset: 0x00045277
 	public bool IsWaitingSwitchControl()
 	{
 		return this.SwitchControlState == ESwitchControlState.WaitEndSkill || this.SwitchControlState == ESwitchControlState.WaitSwitchControl;
 	}
 
-	// Token: 0x06000D0C RID: 3340 RVA: 0x000464F1 File Offset: 0x000446F1
+	// Token: 0x06000D12 RID: 3346 RVA: 0x0004708D File Offset: 0x0004528D
 	public bool IsWaitingReceiveControl()
 	{
 		return this.SwitchControlState == ESwitchControlState.WaitReceiveControl;
 	}
 
-	// Token: 0x06000D0D RID: 3341 RVA: 0x000464FC File Offset: 0x000446FC
+	// Token: 0x06000D13 RID: 3347 RVA: 0x00047098 File Offset: 0x00045298
 	public void ResetSwitchControlState()
 	{
 		this.SwitchControlState = ESwitchControlState.None;
 	}
 
-	// Token: 0x06000D0E RID: 3342 RVA: 0x00046508 File Offset: 0x00044708
+	// Token: 0x06000D14 RID: 3348 RVA: 0x000470A4 File Offset: 0x000452A4
 	public double GetCoolDownTime(int id)
 	{
 		ValueTuple<double, bool> valueTuple;
@@ -471,7 +471,7 @@ public class AiController : IScoreUpdateObject
 		return valueTuple.Item1;
 	}
 
-	// Token: 0x06000D0F RID: 3343 RVA: 0x00046538 File Offset: 0x00044738
+	// Token: 0x06000D15 RID: 3349 RVA: 0x000470D4 File Offset: 0x000452D4
 	public double GetCoolDownRemainTime(int id)
 	{
 		double coolDownTime = this.GetCoolDownTime(id);
@@ -483,14 +483,14 @@ public class AiController : IScoreUpdateObject
 		return 0.0;
 	}
 
-	// Token: 0x06000D10 RID: 3344 RVA: 0x00046584 File Offset: 0x00044784
+	// Token: 0x06000D16 RID: 3350 RVA: 0x00047120 File Offset: 0x00045320
 	public bool IsCoolDownTriggered(int id)
 	{
 		ValueTuple<double, bool> valueTuple;
 		return !this.AiCoolDownList.TryGetValue(id, out valueTuple) || valueTuple.Item2;
 	}
 
-	// Token: 0x06000D11 RID: 3345 RVA: 0x000465AC File Offset: 0x000447AC
+	// Token: 0x06000D17 RID: 3351 RVA: 0x00047148 File Offset: 0x00045348
 	public void UpdateCooldownTrigger()
 	{
 		CharacterActorComponent charActorComp = this.CharActorComp;
@@ -511,7 +511,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D12 RID: 3346 RVA: 0x00046660 File Offset: 0x00044860
+	// Token: 0x06000D18 RID: 3352 RVA: 0x000471FC File Offset: 0x000453FC
 	public void ActivateCooldownTrigger(int id)
 	{
 		ValueTuple<double, bool> valueTuple;
@@ -538,13 +538,13 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D13 RID: 3347 RVA: 0x00046739 File Offset: 0x00044939
+	// Token: 0x06000D19 RID: 3353 RVA: 0x000472D5 File Offset: 0x000454D5
 	public bool GetCoolDownReady(int id)
 	{
 		return this.GetCoolDownRemainTime(id) <= 0.0;
 	}
 
-	// Token: 0x06000D14 RID: 3348 RVA: 0x00046750 File Offset: 0x00044950
+	// Token: 0x06000D1A RID: 3354 RVA: 0x000472EC File Offset: 0x000454EC
 	public void AddCoolDownTime(int id, double cdAdd)
 	{
 		double num = this.GetCoolDownTime(id);
@@ -556,7 +556,7 @@ public class AiController : IScoreUpdateObject
 		this.SetCoolDownTime(id, num + cdAdd, true, "使用技能");
 	}
 
-	// Token: 0x06000D15 RID: 3349 RVA: 0x000467AC File Offset: 0x000449AC
+	// Token: 0x06000D1B RID: 3355 RVA: 0x00047348 File Offset: 0x00045548
 	public unsafe void SetCoolDownTime(int id, double nextTime, bool sync, string reason = "")
 	{
 		double coolDownTime = this.GetCoolDownTime(id);
@@ -597,7 +597,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D16 RID: 3350 RVA: 0x0004697C File Offset: 0x00044B7C
+	// Token: 0x06000D1C RID: 3356 RVA: 0x00047518 File Offset: 0x00045718
 	public unsafe void InitCooldownTimer(int id, UKuroBooleanEventBinder eventBinder)
 	{
 		double nextTime = GameModeModel.Instance.IsMulti ? Time.Instance.ServerTimeStamp : Time.Instance.WorldTime;
@@ -620,7 +620,7 @@ public class AiController : IScoreUpdateObject
 		this.SetCoolDownTime(id, nextTime, true, "初始化AIC延迟节点");
 	}
 
-	// Token: 0x06000D17 RID: 3351 RVA: 0x00046A48 File Offset: 0x00044C48
+	// Token: 0x06000D1D RID: 3357 RVA: 0x000475E4 File Offset: 0x000457E4
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.AiInformationNotify, true, false)]
 	public static void AiInformationNotify(Entity entity, [Nullable(1)] AiInformationNotify data, CombatCommon combatCommon = null)
@@ -633,7 +633,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D18 RID: 3352 RVA: 0x00046ABC File Offset: 0x00044CBC
+	// Token: 0x06000D1E RID: 3358 RVA: 0x00047658 File Offset: 0x00045858
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.AiBlackboardCdNotify, true, false)]
 	public static void AiInformationS(Entity entity, [Nullable(1)] AiBlackboardCdNotify data, CombatCommon combatCommon = null)
@@ -667,7 +667,7 @@ public class AiController : IScoreUpdateObject
 		}
 	}
 
-	// Token: 0x06000D19 RID: 3353 RVA: 0x00046C30 File Offset: 0x00044E30
+	// Token: 0x06000D1F RID: 3359 RVA: 0x000477CC File Offset: 0x000459CC
 	public unsafe void AiControlSwitchRequest(Entity entity, AiController aiController)
 	{
 		AiControlSwitchRequest aiControlSwitchRequest = Aki.Protocol.Ai.AiControlSwitchRequest.Create();
@@ -691,29 +691,29 @@ public class AiController : IScoreUpdateObject
 		}, 0);
 	}
 
-	// Token: 0x04000A5D RID: 2653
+	// Token: 0x04000A65 RID: 2661
 	[Nullable(2)]
 	public CharacterAiComponent CharAiDesignComp;
 
-	// Token: 0x04000A5E RID: 2654
+	// Token: 0x04000A66 RID: 2662
 	[Nullable(2)]
 	public CharacterActorComponent CharActorComp;
 
-	// Token: 0x04000A5F RID: 2655
+	// Token: 0x04000A67 RID: 2663
 	[Nullable(2)]
 	public CharacterSkillComponent CharSkillComp;
 
-	// Token: 0x04000A60 RID: 2656
+	// Token: 0x04000A68 RID: 2664
 	[Nullable(2)]
 	public AiTeam AiTeam;
 
-	// Token: 0x04000A61 RID: 2657
+	// Token: 0x04000A69 RID: 2665
 	public AiTaunt AiTaunt;
 
-	// Token: 0x04000A62 RID: 2658
+	// Token: 0x04000A6A RID: 2666
 	public AiHateList AiHateList;
 
-	// Token: 0x04000A63 RID: 2659
+	// Token: 0x04000A6B RID: 2667
 	[TupleElementNames(new string[]
 	{
 		"CdId",
@@ -726,76 +726,76 @@ public class AiController : IScoreUpdateObject
 	})]
 	public Dictionary<int, ValueTuple<double, bool>> AiCoolDownList = new Dictionary<int, ValueTuple<double, bool>>();
 
-	// Token: 0x04000A64 RID: 2660
+	// Token: 0x04000A6C RID: 2668
 	[Nullable(2)]
 	public AiSkill AiSkill;
 
-	// Token: 0x04000A65 RID: 2661
+	// Token: 0x04000A6D RID: 2669
 	public AiConditionEvents AiConditionEvents;
 
-	// Token: 0x04000A66 RID: 2662
+	// Token: 0x04000A6E RID: 2670
 	public AiPerceptionEvents AiPerceptionEvents;
 
-	// Token: 0x04000A67 RID: 2663
+	// Token: 0x04000A6F RID: 2671
 	public AiLevelVarEvent AiLevelVarEvents;
 
-	// Token: 0x04000A68 RID: 2664
+	// Token: 0x04000A70 RID: 2672
 	[Nullable(2)]
 	public AiWanderInfos AiWanderInfos;
 
-	// Token: 0x04000A69 RID: 2665
+	// Token: 0x04000A71 RID: 2673
 	public AiWanderRadiusConfig? AiWanderRadiusConfig;
 
-	// Token: 0x04000A6A RID: 2666
+	// Token: 0x04000A72 RID: 2674
 	[Nullable(2)]
 	public IAiPerception AiPerception;
 
-	// Token: 0x04000A6B RID: 2667
+	// Token: 0x04000A73 RID: 2675
 	public AiAlertClass AiAlert;
 
-	// Token: 0x04000A6C RID: 2668
+	// Token: 0x04000A74 RID: 2676
 	public AiPatrolController AiPatrol;
 
-	// Token: 0x04000A6D RID: 2669
+	// Token: 0x04000A75 RID: 2677
 	[Nullable(2)]
 	public NpcDecisionController NpcDecision;
 
-	// Token: 0x04000A6E RID: 2670
+	// Token: 0x04000A76 RID: 2678
 	private bool Enabled;
 
-	// Token: 0x04000A6F RID: 2671
+	// Token: 0x04000A77 RID: 2679
 	private float DeltaTime;
 
-	// Token: 0x04000A70 RID: 2672
+	// Token: 0x04000A78 RID: 2680
 	private ESwitchControlState SwitchControlState;
 
-	// Token: 0x04000A71 RID: 2673
+	// Token: 0x04000A79 RID: 2681
 	public int ControllerPlayerId;
 
-	// Token: 0x04000A72 RID: 2674
+	// Token: 0x04000A7A RID: 2682
 	public AiBase? AiBase;
 
-	// Token: 0x04000A73 RID: 2675
+	// Token: 0x04000A7B RID: 2683
 	public AiStateMachineConfig? StateMachineConfig;
 
-	// Token: 0x04000A74 RID: 2676
+	// Token: 0x04000A7C RID: 2684
 	public AiFlee? AiFlee;
 
-	// Token: 0x04000A75 RID: 2677
+	// Token: 0x04000A7D RID: 2685
 	private long? HatredGroupIdInternal;
 
-	// Token: 0x04000A76 RID: 2678
+	// Token: 0x04000A7E RID: 2686
 	private int AiTeamId;
 
-	// Token: 0x04000A77 RID: 2679
+	// Token: 0x04000A7F RID: 2687
 	public long? AiCombatMessageId;
 
-	// Token: 0x04000A78 RID: 2680
+	// Token: 0x04000A80 RID: 2688
 	private EEntityType EntityType;
 
-	// Token: 0x04000A79 RID: 2681
+	// Token: 0x04000A81 RID: 2689
 	private bool IsAutoRole;
 
-	// Token: 0x04000A7A RID: 2682
+	// Token: 0x04000A82 RID: 2690
 	public Dictionary<int, UKuroBooleanEventBinder> AiCoolDownEvents = new Dictionary<int, UKuroBooleanEventBinder>();
 }

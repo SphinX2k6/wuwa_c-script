@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F5C RID: 16220
+	// Token: 0x0200439A RID: 17306
 	public struct INightmareSettlementSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x170070CA RID: 28874
-		// (get) Token: 0x06017112 RID: 94482 RVA: 0x0035340C File Offset: 0x0035160C
+		// Token: 0x170076BB RID: 30395
+		// (get) Token: 0x06018774 RID: 100212 RVA: 0x0037C880 File Offset: 0x0037AA80
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017113 RID: 94483 RVA: 0x00353419 File Offset: 0x00351619
+		// Token: 0x06018775 RID: 100213 RVA: 0x0037C88D File Offset: 0x0037AA8D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017114 RID: 94484 RVA: 0x00353420 File Offset: 0x00351620
+		// Token: 0x06018776 RID: 100214 RVA: 0x0037C894 File Offset: 0x0037AA94
 		public static INightmareSettlementSystemConfig GetRootAsINightmareSettlementSystemConfig(ByteBuffer _bb)
 		{
 			return INightmareSettlementSystemConfig.GetRootAsINightmareSettlementSystemConfig(_bb, default(INightmareSettlementSystemConfig));
 		}
 
-		// Token: 0x06017115 RID: 94485 RVA: 0x0035343C File Offset: 0x0035163C
+		// Token: 0x06018777 RID: 100215 RVA: 0x0037C8B0 File Offset: 0x0037AAB0
 		public static INightmareSettlementSystemConfig GetRootAsINightmareSettlementSystemConfig(ByteBuffer _bb, INightmareSettlementSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017116 RID: 94486 RVA: 0x00353459 File Offset: 0x00351659
+		// Token: 0x06018778 RID: 100216 RVA: 0x0037C8CD File Offset: 0x0037AACD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017117 RID: 94487 RVA: 0x00353468 File Offset: 0x00351668
+		// Token: 0x06018779 RID: 100217 RVA: 0x0037C8DC File Offset: 0x0037AADC
 		public INightmareSettlementSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170070CB RID: 28875
-		// (get) Token: 0x06017118 RID: 94488 RVA: 0x00353478 File Offset: 0x00351678
+		// Token: 0x170076BC RID: 30396
+		// (get) Token: 0x0601877A RID: 100218 RVA: 0x0037C8EC File Offset: 0x0037AAEC
 		public EEnableSystemType Type
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017119 RID: 94489 RVA: 0x003534B4 File Offset: 0x003516B4
+		// Token: 0x0601877B RID: 100219 RVA: 0x0037C928 File Offset: 0x0037AB28
 		public INightmareSettlementSystemVar? SystemVars(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new INightmareSettlementSystemVar?(default(INightmareSettlementSystemVar).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170070CC RID: 28876
-		// (get) Token: 0x0601711A RID: 94490 RVA: 0x00353514 File Offset: 0x00351714
+		// Token: 0x170076BD RID: 30397
+		// (get) Token: 0x0601877C RID: 100220 RVA: 0x0037C988 File Offset: 0x0037AB88
 		public int SystemVarsLength
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601711B RID: 94491 RVA: 0x0035353F File Offset: 0x0035173F
+		// Token: 0x0601877D RID: 100221 RVA: 0x0037C9B3 File Offset: 0x0037ABB3
 		public static Offset<INightmareSettlementSystemConfig> CreateINightmareSettlementSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem, VectorOffset SystemVarsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -99,25 +99,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return INightmareSettlementSystemConfig.EndINightmareSettlementSystemConfig(builder);
 		}
 
-		// Token: 0x0601711C RID: 94492 RVA: 0x0035355C File Offset: 0x0035175C
+		// Token: 0x0601877E RID: 100222 RVA: 0x0037C9D0 File Offset: 0x0037ABD0
 		public static void StartINightmareSettlementSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601711D RID: 94493 RVA: 0x00353565 File Offset: 0x00351765
+		// Token: 0x0601877F RID: 100223 RVA: 0x0037C9D9 File Offset: 0x0037ABD9
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601711E RID: 94494 RVA: 0x00353570 File Offset: 0x00351770
+		// Token: 0x06018780 RID: 100224 RVA: 0x0037C9E4 File Offset: 0x0037ABE4
 		public static void AddSystemVars(FlatBufferBuilder builder, VectorOffset systemVarsOffset)
 		{
 			builder.AddOffset(1, systemVarsOffset.Value, 0);
 		}
 
-		// Token: 0x0601711F RID: 94495 RVA: 0x00353580 File Offset: 0x00351780
+		// Token: 0x06018781 RID: 100225 RVA: 0x0037C9F4 File Offset: 0x0037ABF4
 		public static VectorOffset CreateSystemVarsVector(FlatBufferBuilder builder, Offset<INightmareSettlementSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017120 RID: 94496 RVA: 0x003535C0 File Offset: 0x003517C0
+		// Token: 0x06018782 RID: 100226 RVA: 0x0037CA34 File Offset: 0x0037AC34
 		public static VectorOffset CreateSystemVarsVectorBlock(FlatBufferBuilder builder, Offset<INightmareSettlementSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017121 RID: 94497 RVA: 0x003535DA File Offset: 0x003517DA
+		// Token: 0x06018783 RID: 100227 RVA: 0x0037CA4E File Offset: 0x0037AC4E
 		public static VectorOffset CreateSystemVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<INightmareSettlementSystemVar>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017122 RID: 94498 RVA: 0x003535F8 File Offset: 0x003517F8
+		// Token: 0x06018784 RID: 100228 RVA: 0x0037CA6C File Offset: 0x0037AC6C
 		public static VectorOffset CreateSystemVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -152,19 +152,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017123 RID: 94499 RVA: 0x00353611 File Offset: 0x00351811
+		// Token: 0x06018785 RID: 100229 RVA: 0x0037CA85 File Offset: 0x0037AC85
 		public static void StartSystemVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017124 RID: 94500 RVA: 0x0035361C File Offset: 0x0035181C
+		// Token: 0x06018786 RID: 100230 RVA: 0x0037CA90 File Offset: 0x0037AC90
 		public static Offset<INightmareSettlementSystemConfig> EndINightmareSettlementSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<INightmareSettlementSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06017125 RID: 94501 RVA: 0x0035362C File Offset: 0x0035182C
+		// Token: 0x06018787 RID: 100231 RVA: 0x0037CAA0 File Offset: 0x0037ACA0
 		public INightmareSettlementSystemConfigT UnPack()
 		{
 			INightmareSettlementSystemConfigT nightmareSettlementSystemConfigT = new INightmareSettlementSystemConfigT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return nightmareSettlementSystemConfigT;
 		}
 
-		// Token: 0x06017126 RID: 94502 RVA: 0x00353648 File Offset: 0x00351848
+		// Token: 0x06018788 RID: 100232 RVA: 0x0037CABC File Offset: 0x0037ACBC
 		public void UnPackTo(INightmareSettlementSystemConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017127 RID: 94503 RVA: 0x003536B4 File Offset: 0x003518B4
+		// Token: 0x06018789 RID: 100233 RVA: 0x0037CB28 File Offset: 0x0037AD28
 		public static Offset<INightmareSettlementSystemConfig> Pack(FlatBufferBuilder builder, INightmareSettlementSystemConfigT _o)
 		{
 			if (_o == null)
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return INightmareSettlementSystemConfig.CreateINightmareSettlementSystemConfig(builder, _o.Type, systemVarsOffset);
 		}
 
-		// Token: 0x0400B971 RID: 47473
+		// Token: 0x0400C34F RID: 49999
 		private Table __p;
 	}
 }

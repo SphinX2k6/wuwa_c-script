@@ -10,6 +10,7 @@ using CSharpScript.Game.Module.FilterSort.Sort.SortEntrance;
 using CSharpScript.Game.Module.Interaction;
 using CSharpScript.Game.Module.Manufacture.Common;
 using CSharpScript.Game.Module.Manufacture.Compose.Item;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -18,17 +19,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005674 RID: 22132
+	// Token: 0x0200464A RID: 17994
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposeRootView : UiViewBase
 	{
-		// Token: 0x06038505 RID: 230661 RVA: 0x00D5BBB7 File Offset: 0x00D59DB7
+		// Token: 0x0602D402 RID: 185346 RVA: 0x00CA9CB7 File Offset: 0x00CA7EB7
 		public ComposeRootView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038506 RID: 230662 RVA: 0x00D5BBE4 File Offset: 0x00D59DE4
+		// Token: 0x0602D403 RID: 185347 RVA: 0x00CA9CE4 File Offset: 0x00CA7EE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -73,7 +74,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038507 RID: 230663 RVA: 0x00D5BE1C File Offset: 0x00D5A01C
+		// Token: 0x0602D404 RID: 185348 RVA: 0x00CA9F1C File Offset: 0x00CA811C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComposeRootView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -84,7 +85,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038508 RID: 230664 RVA: 0x00D5BE60 File Offset: 0x00D5A060
+		// Token: 0x0602D405 RID: 185349 RVA: 0x00CA9F60 File Offset: 0x00CA8160
 		protected override void OnStart()
 		{
 			this.FilterComponent = new FilterEntrance<IBaseItemData>(base.GetItem(3), new TUpdateDataListFunction<IBaseItemData>(this.OnFilterSortRefresh));
@@ -106,7 +107,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038509 RID: 230665 RVA: 0x00D5BFAB File Offset: 0x00D5A1AB
+		// Token: 0x0602D406 RID: 185350 RVA: 0x00CAA0AB File Offset: 0x00CA82AB
 		protected override void OnBeforeShow()
 		{
 			this.ShowComposeMainView();
@@ -118,7 +119,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			childPopView.PopItem.SetMaskResponsibleState(false);
 		}
 
-		// Token: 0x0603850A RID: 230666 RVA: 0x00D5BFCC File Offset: 0x00D5A1CC
+		// Token: 0x0602D407 RID: 185351 RVA: 0x00CAA0CC File Offset: 0x00CA82CC
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			ComposeRootView.<OnBeforeShowAsyncImplement>d__23 <OnBeforeShowAsyncImplement>d__;
@@ -129,14 +130,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603850B RID: 230667 RVA: 0x00D5C00F File Offset: 0x00D5A20F
+		// Token: 0x0602D408 RID: 185352 RVA: 0x00CAA10F File Offset: 0x00CA830F
 		protected override void OnAfterShow()
 		{
 			this.RefreshPopItemVisible();
 			this.WaitUiBlendInCameraSequenceFinished = null;
 		}
 
-		// Token: 0x0603850C RID: 230668 RVA: 0x00D5C020 File Offset: 0x00D5A220
+		// Token: 0x0602D409 RID: 185353 RVA: 0x00CAA120 File Offset: 0x00CA8320
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnExecuteUiCameraSequenceEvent, new Action<string>(this.OnExecuteUiCameraSequenceEvent));
@@ -154,7 +155,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.WaitUiBlendInCameraSequenceFinished = null;
 		}
 
-		// Token: 0x0603850D RID: 230669 RVA: 0x00D5C0B8 File Offset: 0x00D5A2B8
+		// Token: 0x0602D40A RID: 185354 RVA: 0x00CAA1B8 File Offset: 0x00CA83B8
 		private void RefreshPopItemVisible()
 		{
 			CommonPopViewBase popItem = this.ChildPopView.PopItem;
@@ -166,7 +167,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			{
 				return;
 			}
-			bool flag = !UiCameraAnimationManager.Instance.IsPlayingBlendInSequence();
+			bool flag = !UiCameraModel.Instance.IsPlayingBlendInSequence();
 			if (popItem.GetActive() == flag)
 			{
 				return;
@@ -174,7 +175,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			popItem.SetActive(flag);
 		}
 
-		// Token: 0x0603850E RID: 230670 RVA: 0x00D5C100 File Offset: 0x00D5A300
+		// Token: 0x0602D40B RID: 185355 RVA: 0x00CAA200 File Offset: 0x00CA8400
 		private void CheckShowTab()
 		{
 			ComposeModel.Instance.CurrentComposeViewType = EComposeViewType.ComposeMainType;
@@ -201,7 +202,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603850F RID: 230671 RVA: 0x00D5C1A0 File Offset: 0x00D5A3A0
+		// Token: 0x0602D40C RID: 185356 RVA: 0x00CAA2A0 File Offset: 0x00CA84A0
 		private void ShowComposeMainView()
 		{
 			this.CheckShowTab();
@@ -224,7 +225,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshLimitTime();
 		}
 
-		// Token: 0x06038510 RID: 230672 RVA: 0x00D5C28C File Offset: 0x00D5A48C
+		// Token: 0x0602D40D RID: 185357 RVA: 0x00CAA38C File Offset: 0x00CA858C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.GetComposeData, new Action(this.ShowComposeMainView));
@@ -236,7 +237,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshTimer = TimerSystem.Instance.Forever(new TTimerAction(this.OnSecondTimerRefresh), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06038511 RID: 230673 RVA: 0x00D5C368 File Offset: 0x00D5A568
+		// Token: 0x0602D40E RID: 185358 RVA: 0x00CAA468 File Offset: 0x00CA8668
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.GetComposeData, new Action(this.ShowComposeMainView));
@@ -252,7 +253,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038512 RID: 230674 RVA: 0x00D5C44C File Offset: 0x00D5A64C
+		// Token: 0x0602D40F RID: 185359 RVA: 0x00CAA54C File Offset: 0x00CA874C
 		private void OnSecondTimerRefresh(float delta)
 		{
 			this.RefreshLimitTime();
@@ -268,7 +269,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038513 RID: 230675 RVA: 0x00D5C488 File Offset: 0x00D5A688
+		// Token: 0x0602D410 RID: 185360 RVA: 0x00CAA588 File Offset: 0x00CA8788
 		private void RefreshLimitTime()
 		{
 			string refreshLimitTime = ComposeModel.Instance.GetRefreshLimitTime();
@@ -281,13 +282,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetItem(12).SetUIActive(false);
 		}
 
-		// Token: 0x06038514 RID: 230676 RVA: 0x00D5C4DD File Offset: 0x00D5A6DD
+		// Token: 0x0602D411 RID: 185361 RVA: 0x00CAA5DD File Offset: 0x00CA87DD
 		private bool CheckIsLimitCountRefresh()
 		{
 			return ComposeModel.Instance.GetRefreshLimitTimeValue() <= 0.0;
 		}
 
-		// Token: 0x06038515 RID: 230677 RVA: 0x00D5C4F8 File Offset: 0x00D5A6F8
+		// Token: 0x0602D412 RID: 185362 RVA: 0x00CAA5F8 File Offset: 0x00CA87F8
 		private bool CheckHasItemTimeOut()
 		{
 			List<IBaseItemData> itemList = this.GetItemList();
@@ -305,14 +306,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return false;
 		}
 
-		// Token: 0x06038516 RID: 230678 RVA: 0x00D5C57C File Offset: 0x00D5A77C
+		// Token: 0x0602D413 RID: 185363 RVA: 0x00CAA67C File Offset: 0x00CA887C
 		private void OnBeginPlayCompositeWorkingDisplay()
 		{
 			this.<OnBeginPlayCompositeWorkingDisplay>g__Temp|35_0().Forget();
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, true);
 		}
 
-		// Token: 0x06038517 RID: 230679 RVA: 0x00D5C59C File Offset: 0x00D5A79C
+		// Token: 0x0602D414 RID: 185364 RVA: 0x00CAA69C File Offset: 0x00CA889C
 		private void OnExecuteUiCameraSequenceEvent(string sequenceEventName)
 		{
 			if (sequenceEventName != "OnBlackScreen")
@@ -332,7 +333,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.IsEnterSequenceCompleted = true;
 		}
 
-		// Token: 0x06038518 RID: 230680 RVA: 0x00D5C60B File Offset: 0x00D5A80B
+		// Token: 0x0602D415 RID: 185365 RVA: 0x00CAA70B File Offset: 0x00CA890B
 		private void OnPlayEnterDisplayFinished()
 		{
 			if (!UiManager.Instance.IsViewShow(EUiViewName.ComposeCarryOnView))
@@ -342,7 +343,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			ComposeController.Instance.PlayCompositeLoopDisplay();
 		}
 
-		// Token: 0x06038519 RID: 230681 RVA: 0x00D5C62C File Offset: 0x00D5A82C
+		// Token: 0x0602D416 RID: 185366 RVA: 0x00CAA72C File Offset: 0x00CA892C
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.CompositeRewardView)
@@ -364,7 +365,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			ComposeController.Instance.PlayCompositeFlow(composeSuccessFlow);
 		}
 
-		// Token: 0x0603851A RID: 230682 RVA: 0x00D5C69C File Offset: 0x00D5A89C
+		// Token: 0x0602D417 RID: 185367 RVA: 0x00CAA79C File Offset: 0x00CA899C
 		private void SetSelectedComposeItem(bool isNeedScroll = false)
 		{
 			int num = 0;
@@ -391,7 +392,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.ComposeItemScrollView.SelectGridProxy(num, false);
 		}
 
-		// Token: 0x0603851B RID: 230683 RVA: 0x00D5C753 File Offset: 0x00D5A953
+		// Token: 0x0602D418 RID: 185368 RVA: 0x00CAA853 File Offset: 0x00CA8A53
 		private ComposeMediumItemGrid OnGridProxyCreate()
 		{
 			ComposeMediumItemGrid composeMediumItemGrid = new ComposeMediumItemGrid();
@@ -399,7 +400,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return composeMediumItemGrid;
 		}
 
-		// Token: 0x0603851C RID: 230684 RVA: 0x00D5C76C File Offset: 0x00D5A96C
+		// Token: 0x0602D419 RID: 185369 RVA: 0x00CAA86C File Offset: 0x00CA8A6C
 		private void OnComposeItemClick(MediumItemGridExtendCallback callbackParameter)
 		{
 			IBaseItemData baseItemData = callbackParameter.Data as IBaseItemData;
@@ -443,7 +444,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.ComposeDetailsInfoView.RefreshTips(baseItemData);
 		}
 
-		// Token: 0x0603851D RID: 230685 RVA: 0x00D5C86E File Offset: 0x00D5AA6E
+		// Token: 0x0602D41A RID: 185370 RVA: 0x00CAA96E File Offset: 0x00CA8B6E
 		private MainTypeItem InitMainTypeItem()
 		{
 			MainTypeItem mainTypeItem = new MainTypeItem();
@@ -451,7 +452,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return mainTypeItem;
 		}
 
-		// Token: 0x0603851E RID: 230686 RVA: 0x00D5C888 File Offset: 0x00D5AA88
+		// Token: 0x0602D41B RID: 185371 RVA: 0x00CAA988 File Offset: 0x00CA8B88
 		private void OnSwitchCallback(int mainType)
 		{
 			if (ComposeModel.Instance.CurrentComposeListType == (EComposeListType)mainType)
@@ -486,14 +487,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603851F RID: 230687 RVA: 0x00D5C941 File Offset: 0x00D5AB41
+		// Token: 0x0602D41C RID: 185372 RVA: 0x00CAAA41 File Offset: 0x00CA8C41
 		private void SwitchComposeLevelShow()
 		{
 			(base.GetButton(5).GetOwner() as AUIBaseActor).GetUIItem().SetUIActive(ComposeModel.Instance.CurrentComposeListType == EComposeListType.ReagentProduction);
 			this.SetComposeLevelSprite();
 		}
 
-		// Token: 0x06038520 RID: 230688 RVA: 0x00D5C974 File Offset: 0x00D5AB74
+		// Token: 0x0602D41D RID: 185373 RVA: 0x00CAAA74 File Offset: 0x00CA8C74
 		private void SetComposeLevelSprite()
 		{
 			if (ComposeModel.Instance.CurrentComposeListType == EComposeListType.ReagentProduction)
@@ -503,7 +504,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038521 RID: 230689 RVA: 0x00D5C9B8 File Offset: 0x00D5ABB8
+		// Token: 0x0602D41E RID: 185374 RVA: 0x00CAAAB8 File Offset: 0x00CA8CB8
 		private void SwitchComposeItemScroll()
 		{
 			switch (ComposeModel.Instance.CurrentComposeListType)
@@ -539,7 +540,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038522 RID: 230690 RVA: 0x00D5CAEC File Offset: 0x00D5ACEC
+		// Token: 0x0602D41F RID: 185375 RVA: 0x00CAABEC File Offset: 0x00CA8DEC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -601,7 +602,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return result;
 		}
 
-		// Token: 0x06038523 RID: 230691 RVA: 0x00D5CBBF File Offset: 0x00D5ADBF
+		// Token: 0x0602D420 RID: 185376 RVA: 0x00CAACBF File Offset: 0x00CA8EBF
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -612,7 +613,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return this.GetItemListByType(ComposeModel.Instance.CurrentComposeListType);
 		}
 
-		// Token: 0x06038524 RID: 230692 RVA: 0x00D5CBD4 File Offset: 0x00D5ADD4
+		// Token: 0x0602D421 RID: 185377 RVA: 0x00CAACD4 File Offset: 0x00CA8ED4
 		private void OnFilterSortRefresh(List<IBaseItemData> list, bool arg1, EFilterSortType arg2)
 		{
 			List<IBaseItemData> list2 = list.ConvertAll<IBaseItemData>(([Nullable(1)] IBaseItemData v) => v).FindAll((IBaseItemData value) => value.ExistStartTime <= 0.0 || TimeUtil.Instance.IsInTimeSpan(value.ExistStartTime, value.ExistEndTime));
@@ -644,7 +645,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetSelectedComposeItem(!this.KeepSelectOnSort);
 		}
 
-		// Token: 0x06038525 RID: 230693 RVA: 0x00D5CD78 File Offset: 0x00D5AF78
+		// Token: 0x0602D422 RID: 185378 RVA: 0x00CAAE78 File Offset: 0x00CA9078
 		private void OnCookResponse()
 		{
 			this.KeepSelectOnSort = true;
@@ -652,7 +653,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.KeepSelectOnSort = false;
 		}
 
-		// Token: 0x06038526 RID: 230694 RVA: 0x00D5CD90 File Offset: 0x00D5AF90
+		// Token: 0x0602D423 RID: 185379 RVA: 0x00CAAE90 File Offset: 0x00CA9090
 		private void RefreshItemScrollView()
 		{
 			switch (ComposeModel.Instance.CurrentComposeListType)
@@ -671,27 +672,27 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038527 RID: 230695 RVA: 0x00D5CE67 File Offset: 0x00D5B067
+		// Token: 0x0602D424 RID: 185380 RVA: 0x00CAAF67 File Offset: 0x00CA9167
 		private void OnShowRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.ComposeReagentProduction, base.GetItem(7), null, 0);
 		}
 
-		// Token: 0x06038528 RID: 230696 RVA: 0x00D5CE7E File Offset: 0x00D5B07E
+		// Token: 0x0602D425 RID: 185381 RVA: 0x00CAAF7E File Offset: 0x00CA917E
 		private void ShowComposeLevelView()
 		{
 			ComposeModel.Instance.CurrentComposeViewType = EComposeViewType.ComposeLevelType;
 			UiManager.Instance.OpenView(EUiViewName.ComposeLevelView, null, null);
 		}
 
-		// Token: 0x06038529 RID: 230697 RVA: 0x00D5CE9C File Offset: 0x00D5B09C
+		// Token: 0x0602D426 RID: 185382 RVA: 0x00CAAF9C File Offset: 0x00CA919C
 		private void ShowComposeRoleView(int id)
 		{
 			ComposeModel.Instance.CurrentComposeViewType = EComposeViewType.ComposeRoleType;
 			UiManager.Instance.OpenView(EUiViewName.ManufactureHelpRoleView, id, null);
 		}
 
-		// Token: 0x0603852A RID: 230698 RVA: 0x00D5CEC0 File Offset: 0x00D5B0C0
+		// Token: 0x0602D427 RID: 185383 RVA: 0x00CAAFC0 File Offset: 0x00CA91C0
 		private void SwitchMainTitleByListType()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -736,7 +737,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603852B RID: 230699 RVA: 0x00D5CF90 File Offset: 0x00D5B190
+		// Token: 0x0602D428 RID: 185384 RVA: 0x00CAB090 File Offset: 0x00CA9290
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -768,7 +769,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return null;
 		}
 
-		// Token: 0x0603852C RID: 230700 RVA: 0x00D5D008 File Offset: 0x00D5B208
+		// Token: 0x0602D429 RID: 185385 RVA: 0x00CAB108 File Offset: 0x00CA9308
 		[CompilerGenerated]
 		private UniTask <OnSecondTimerRefresh>g__Temp|31_0()
 		{
@@ -780,7 +781,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnSecondTimerRefresh>g__Temp|31_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0603852D RID: 230701 RVA: 0x00D5D04C File Offset: 0x00D5B24C
+		// Token: 0x0602D42A RID: 185386 RVA: 0x00CAB14C File Offset: 0x00CA934C
 		[CompilerGenerated]
 		private UniTask <OnSecondTimerRefresh>g__Temp|31_1()
 		{
@@ -792,7 +793,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnSecondTimerRefresh>g__Temp|31_1>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0603852E RID: 230702 RVA: 0x00D5D090 File Offset: 0x00D5B290
+		// Token: 0x0602D42B RID: 185387 RVA: 0x00CAB190 File Offset: 0x00CA9390
 		[CompilerGenerated]
 		private UniTask <OnBeginPlayCompositeWorkingDisplay>g__Temp|35_0()
 		{
@@ -804,23 +805,23 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnBeginPlayCompositeWorkingDisplay>g__Temp|35_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D99D RID: 121245
+		// Token: 0x04018428 RID: 99368
 		private const int TIMERGAP = 1000;
 
-		// Token: 0x0401D99E RID: 121246
+		// Token: 0x04018429 RID: 99369
 		private int SelectedReagentProductionIndex;
 
-		// Token: 0x0401D99F RID: 121247
+		// Token: 0x0401842A RID: 99370
 		private int SelectedStructureIndex;
 
-		// Token: 0x0401D9A0 RID: 121248
+		// Token: 0x0401842B RID: 99371
 		private int SelectedPurificationIndex;
 
-		// Token: 0x0401D9A1 RID: 121249
+		// Token: 0x0401842C RID: 99372
 		[Nullable(2)]
 		private ComposeIngredientsView ComposeDetailsInfoView;
 
-		// Token: 0x0401D9A2 RID: 121250
+		// Token: 0x0401842D RID: 99373
 		[Nullable(new byte[]
 		{
 			2,
@@ -828,7 +829,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private GenericLayout<MainTypeItem, EComposeListType> MainTypeHorizontal;
 
-		// Token: 0x0401D9A3 RID: 121251
+		// Token: 0x0401842E RID: 99374
 		[Nullable(new byte[]
 		{
 			2,
@@ -837,7 +838,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private LoopScrollView<ComposeMediumItemGrid, IBaseItemData> ComposeItemScrollView;
 
-		// Token: 0x0401D9A4 RID: 121252
+		// Token: 0x0401842F RID: 99375
 		[Nullable(new byte[]
 		{
 			2,
@@ -845,7 +846,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private FilterEntrance<IBaseItemData> FilterComponent;
 
-		// Token: 0x0401D9A5 RID: 121253
+		// Token: 0x04018430 RID: 99376
 		[Nullable(new byte[]
 		{
 			2,
@@ -853,77 +854,77 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private SortEntrance<IBaseItemData> SortComponent;
 
-		// Token: 0x0401D9A6 RID: 121254
+		// Token: 0x04018431 RID: 99377
 		private List<IReagentProductionData> ReagentProductionDataList = new List<IReagentProductionData>();
 
-		// Token: 0x0401D9A7 RID: 121255
+		// Token: 0x04018432 RID: 99378
 		private List<IStructureData> StructureDataList = new List<IStructureData>();
 
-		// Token: 0x0401D9A8 RID: 121256
+		// Token: 0x04018433 RID: 99379
 		private List<IPurificationData> PurificationDataList = new List<IPurificationData>();
 
-		// Token: 0x0401D9A9 RID: 121257
+		// Token: 0x04018434 RID: 99380
 		[Nullable(2)]
 		private StarLevelComponent StartLevelComponent;
 
-		// Token: 0x0401D9AA RID: 121258
+		// Token: 0x04018435 RID: 99381
 		private bool KeepSelectOnSort;
 
-		// Token: 0x0401D9AB RID: 121259
+		// Token: 0x04018436 RID: 99382
 		private bool IsEnterSequenceCompleted;
 
-		// Token: 0x0401D9AC RID: 121260
+		// Token: 0x04018437 RID: 99383
 		[Nullable(2)]
 		private CustomPromise WaitUiBlendInCameraSequenceFinished;
 
-		// Token: 0x0401D9AD RID: 121261
+		// Token: 0x04018438 RID: 99384
 		[Nullable(2)]
 		private TimerHandle RefreshTimer;
 
-		// Token: 0x0200B838 RID: 47160
+		// Token: 0x0200A260 RID: 41568
 		[NullableContext(0)]
 		private class EComposeRootDefine
 		{
-			// Token: 0x04037C13 RID: 228371
+			// Token: 0x04032631 RID: 206385
 			public const int ComposeListTypeHorizontalLayout = 0;
 
-			// Token: 0x04037C14 RID: 228372
+			// Token: 0x04032632 RID: 206386
 			public const int ComposeListTypeHorizontalLayoutItem = 1;
 
-			// Token: 0x04037C15 RID: 228373
+			// Token: 0x04032633 RID: 206387
 			public const int ItemLoopScroll = 2;
 
-			// Token: 0x04037C16 RID: 228374
+			// Token: 0x04032634 RID: 206388
 			public const int FilterItem = 3;
 
-			// Token: 0x04037C17 RID: 228375
+			// Token: 0x04032635 RID: 206389
 			public const int IngredientDetail = 4;
 
-			// Token: 0x04037C18 RID: 228376
+			// Token: 0x04032636 RID: 206390
 			public const int ComposeLevelButton = 5;
 
-			// Token: 0x04037C19 RID: 228377
+			// Token: 0x04032637 RID: 206391
 			public const int ComposeLevelSprite = 6;
 
-			// Token: 0x04037C1A RID: 228378
+			// Token: 0x04032638 RID: 206392
 			public const int RedDotItem = 7;
 
-			// Token: 0x04037C1B RID: 228379
+			// Token: 0x04032639 RID: 206393
 			public const int NoItem = 8;
 
-			// Token: 0x04037C1C RID: 228380
+			// Token: 0x0403263A RID: 206394
 			public const int TxtConfirm = 9;
 
-			// Token: 0x04037C1D RID: 228381
+			// Token: 0x0403263B RID: 206395
 			public const int SortItem = 10;
 
-			// Token: 0x04037C1E RID: 228382
+			// Token: 0x0403263C RID: 206396
 			public const int PnlStar = 11;
 
-			// Token: 0x04037C1F RID: 228383
+			// Token: 0x0403263D RID: 206397
 			public const int PnlTime = 12;
 
-			// Token: 0x04037C20 RID: 228384
+			// Token: 0x0403263E RID: 206398
 			public const int TxtTime = 13;
 		}
 	}

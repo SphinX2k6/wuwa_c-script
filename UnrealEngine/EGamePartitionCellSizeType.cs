@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001870 RID: 6256
+	// Token: 0x0200039D RID: 925
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroGamePartition.EGamePartitionCellSizeType")]
 	public enum EGamePartitionCellSizeType : byte
 	{
-		// Token: 0x0400C815 RID: 51221
+		// Token: 0x04002635 RID: 9781
 		Default,
-		// Token: 0x0400C816 RID: 51222
+		// Token: 0x04002636 RID: 9782
 		Medium,
-		// Token: 0x0400C817 RID: 51223
+		// Token: 0x04002637 RID: 9783
 		MaxType,
-		// Token: 0x0400C818 RID: 51224
+		// Token: 0x04002638 RID: 9784
 		EGamePartitionCellSizeType_MAX
 	}
 }

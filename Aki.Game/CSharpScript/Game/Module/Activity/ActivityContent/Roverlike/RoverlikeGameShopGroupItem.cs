@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006158 RID: 24920
+	// Token: 0x020050D6 RID: 20694
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,19 +16,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeGameShopGroupItem : GridProxyAbstract<IRoverlikeGameShopGroupData>
 	{
-		// Token: 0x0603EFCB RID: 257995 RVA: 0x00F373CB File Offset: 0x00F355CB
+		// Token: 0x06033C8B RID: 212107 RVA: 0x00E7E29F File Offset: 0x00E7C49F
 		public void BindOnGridSelect(Action<IRoverlikeGameShopGridData> cb)
 		{
 			this.OnGridSelect = cb;
 		}
 
-		// Token: 0x0603EFCC RID: 257996 RVA: 0x00F373D4 File Offset: 0x00F355D4
+		// Token: 0x06033C8C RID: 212108 RVA: 0x00E7E2A8 File Offset: 0x00E7C4A8
 		public void BindOnGridsRefreshed(Action<ERoverlikeGameShopItemType> cb)
 		{
 			this.OnGridsRefreshed = cb;
 		}
 
-		// Token: 0x0603EFCD RID: 257997 RVA: 0x00F373E0 File Offset: 0x00F355E0
+		// Token: 0x06033C8D RID: 212109 RVA: 0x00E7E2B4 File Offset: 0x00E7C4B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EFCE RID: 257998 RVA: 0x00F3746A File Offset: 0x00F3566A
+		// Token: 0x06033C8E RID: 212110 RVA: 0x00E7E33E File Offset: 0x00E7C53E
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<RoverlikeGameShopGrid, IRoverlikeGameShopGridData>(base.GetGridLayout(1), new Func<RoverlikeGameShopGrid>(this.CreateShopGrid), null, false, true);
 		}
 
-		// Token: 0x0603EFCF RID: 257999 RVA: 0x00F37490 File Offset: 0x00F35690
+		// Token: 0x06033C8F RID: 212111 RVA: 0x00E7E364 File Offset: 0x00E7C564
 		public override void Refresh(IRoverlikeGameShopGroupData data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.TitleTextKey, Array.Empty<object>());
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}, false);
 		}
 
-		// Token: 0x0603EFD0 RID: 258000 RVA: 0x00F374F0 File Offset: 0x00F356F0
+		// Token: 0x06033C90 RID: 212112 RVA: 0x00E7E3C4 File Offset: 0x00E7C5C4
 		public override object GetKey(IRoverlikeGameShopGroupData data, int displayIndex)
 		{
 			return data.GroupType;
 		}
 
-		// Token: 0x0603EFD1 RID: 258001 RVA: 0x00F374FD File Offset: 0x00F356FD
+		// Token: 0x06033C91 RID: 212113 RVA: 0x00E7E3D1 File Offset: 0x00E7C5D1
 		public void SetGridSelected(int incId, bool selected)
 		{
 			if (this.ItemLayout == null)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			layoutItemByKey.SetSelected(selected, false);
 		}
 
-		// Token: 0x0603EFD2 RID: 258002 RVA: 0x00F37528 File Offset: 0x00F35728
+		// Token: 0x06033C92 RID: 212114 RVA: 0x00E7E3FC File Offset: 0x00E7C5FC
 		[NullableContext(2)]
 		public UUIItem GetGridNavigationItem(int incId)
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return tweakObjectPtr2.GetValueOrDefault();
 		}
 
-		// Token: 0x0603EFD3 RID: 258003 RVA: 0x00F3759A File Offset: 0x00F3579A
+		// Token: 0x06033C93 RID: 212115 RVA: 0x00E7E46E File Offset: 0x00E7C66E
 		private RoverlikeGameShopGrid CreateShopGrid()
 		{
 			RoverlikeGameShopGrid roverlikeGameShopGrid = new RoverlikeGameShopGrid();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeGameShopGrid;
 		}
 
-		// Token: 0x0603EFD4 RID: 258004 RVA: 0x00F375B3 File Offset: 0x00F357B3
+		// Token: 0x06033C94 RID: 212116 RVA: 0x00E7E487 File Offset: 0x00E7C687
 		private void OnGridSelectFromLayout(IRoverlikeGameShopGridData data)
 		{
 			Action<IRoverlikeGameShopGridData> onGridSelect = this.OnGridSelect;
@@ -137,14 +137,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onGridSelect(data);
 		}
 
-		// Token: 0x0603EFD5 RID: 258005 RVA: 0x00F375C6 File Offset: 0x00F357C6
+		// Token: 0x06033C95 RID: 212117 RVA: 0x00E7E49A File Offset: 0x00E7C69A
 		protected override void OnBeforeDestroy()
 		{
 			this.OnGridSelect = null;
 			this.OnGridsRefreshed = null;
 		}
 
-		// Token: 0x04020DE0 RID: 134624
+		// Token: 0x0401B70D RID: 112397
 		[Nullable(new byte[]
 		{
 			2,
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeGameShopGrid, IRoverlikeGameShopGridData> ItemLayout;
 
-		// Token: 0x04020DE1 RID: 134625
+		// Token: 0x0401B70E RID: 112398
 		[Nullable(new byte[]
 		{
 			2,
@@ -161,21 +161,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private Action<IRoverlikeGameShopGridData> OnGridSelect;
 
-		// Token: 0x04020DE2 RID: 134626
+		// Token: 0x0401B70F RID: 112399
 		[Nullable(2)]
 		private Action<ERoverlikeGameShopItemType> OnGridsRefreshed;
 
-		// Token: 0x0200C3B5 RID: 50101
+		// Token: 0x0200AD9C RID: 44444
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B0E6 RID: 241894
+			// Token: 0x04035A47 RID: 219719
 			public const int TxtTitle = 0;
 
-			// Token: 0x0403B0E7 RID: 241895
+			// Token: 0x04035A48 RID: 219720
 			public const int ItemLayout = 1;
 
-			// Token: 0x0403B0E8 RID: 241896
+			// Token: 0x04035A49 RID: 219721
 			public const int ItemShopGrid = 2;
 		}
 	}

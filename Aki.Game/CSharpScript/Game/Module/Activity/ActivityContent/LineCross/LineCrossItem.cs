@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006565 RID: 25957
+	// Token: 0x020054E3 RID: 21731
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 	})]
 	public class LineCrossItem : GridProxyAbstract<ItemData>
 	{
-		// Token: 0x060410C0 RID: 266432 RVA: 0x00FC3B40 File Offset: 0x00FC1D40
+		// Token: 0x06035D85 RID: 220549 RVA: 0x00F0AB24 File Offset: 0x00F08D24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060410C1 RID: 266433 RVA: 0x00FC3CF0 File Offset: 0x00FC1EF0
+		// Token: 0x06035D86 RID: 220550 RVA: 0x00F0ACD4 File Offset: 0x00F08ED4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LineCrossItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060410C2 RID: 266434 RVA: 0x00FC3D34 File Offset: 0x00FC1F34
+		// Token: 0x06035D87 RID: 220551 RVA: 0x00F0AD18 File Offset: 0x00F08F18
 		private void OnClickBtn()
 		{
 			int id = this.CurrentData.Data.Id;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			UiManager.Instance.OpenView(EUiViewName.LineCrossDetailView, lineCrossDetailViewModel, null);
 		}
 
-		// Token: 0x060410C3 RID: 266435 RVA: 0x00FC3DBC File Offset: 0x00FC1FBC
+		// Token: 0x06035D88 RID: 220552 RVA: 0x00F0ADA0 File Offset: 0x00F08FA0
 		public override void Refresh(ItemData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.RefreshClawItem(ifHiddenGroup, groupState);
 		}
 
-		// Token: 0x060410C4 RID: 266436 RVA: 0x00FC3E73 File Offset: 0x00FC2073
+		// Token: 0x06035D89 RID: 220553 RVA: 0x00F0AE57 File Offset: 0x00F09057
 		private void RefreshClawItem(bool ifHidden, ELineCrossGroupState state)
 		{
 			LineCrossClawItem clawItem = this.ClawItem;
@@ -125,26 +125,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			clawItem.Refresh(ifHidden, state);
 		}
 
-		// Token: 0x060410C5 RID: 266437 RVA: 0x00FC3E87 File Offset: 0x00FC2087
+		// Token: 0x06035D8A RID: 220554 RVA: 0x00F0AE6B File Offset: 0x00F0906B
 		private void RefreshRedDot(int groupId)
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.LineCrossGroupRedDot, base.GetItem(9), groupId);
 			RedDotController.Instance.BindRedDot(ERedDotName.LineCrossGroupRedDot, base.GetItem(9), null, groupId);
 		}
 
-		// Token: 0x060410C6 RID: 266438 RVA: 0x00FC3EBC File Offset: 0x00FC20BC
+		// Token: 0x06035D8B RID: 220555 RVA: 0x00F0AEA0 File Offset: 0x00F090A0
 		private void RefreshLevelIndexText(int gridIndex)
 		{
 			base.GetText(6).SetText((gridIndex + 1).ToString(), true);
 		}
 
-		// Token: 0x060410C7 RID: 266439 RVA: 0x00FC3EE1 File Offset: 0x00FC20E1
+		// Token: 0x06035D8C RID: 220556 RVA: 0x00F0AEC5 File Offset: 0x00F090C5
 		private void RefreshLockSprite(bool isLock)
 		{
 			base.GetSprite(7).SetUIActive(isLock);
 		}
 
-		// Token: 0x060410C8 RID: 266440 RVA: 0x00FC3EF0 File Offset: 0x00FC20F0
+		// Token: 0x06035D8D RID: 220557 RVA: 0x00F0AED4 File Offset: 0x00F090D4
 		private void RefreshProgressText(ELineCrossGroupState state, ItemData data)
 		{
 			string newText;
@@ -166,14 +166,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetText(5).SetText(newText, true);
 		}
 
-		// Token: 0x060410C9 RID: 266441 RVA: 0x00FC3F90 File Offset: 0x00FC2190
+		// Token: 0x06035D8E RID: 220558 RVA: 0x00F0AF74 File Offset: 0x00F09174
 		private void RefreshNameText(int groupId)
 		{
 			string name = LineCrossConfig.Instance.GetLineCrossGroupByGroupId(groupId).Value.Name;
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), name, Array.Empty<object>());
 		}
 
-		// Token: 0x060410CA RID: 266442 RVA: 0x00FC3FD0 File Offset: 0x00FC21D0
+		// Token: 0x06035D8F RID: 220559 RVA: 0x00F0AFB4 File Offset: 0x00F091B4
 		private void RefreshNormal()
 		{
 			base.GetTexture(1).SetColor(FColor.FromHex("3c187d"));
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetSprite(8).SetColor(FColor.FromHex("ffffff"));
 		}
 
-		// Token: 0x060410CB RID: 266443 RVA: 0x00FC4038 File Offset: 0x00FC2238
+		// Token: 0x06035D90 RID: 220560 RVA: 0x00F0B01C File Offset: 0x00F0921C
 		private void RefreshClear()
 		{
 			base.GetTexture(1).SetColor(FColor.FromHex("1a5e45"));
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetSprite(8).SetColor(FColor.FromHex("00ffc4"));
 		}
 
-		// Token: 0x060410CC RID: 266444 RVA: 0x00FC40A0 File Offset: 0x00FC22A0
+		// Token: 0x06035D91 RID: 220561 RVA: 0x00F0B084 File Offset: 0x00F09284
 		private void RefreshLock()
 		{
 			base.GetTexture(1).SetColor(FColor.FromHex("881e32"));
@@ -200,46 +200,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetSprite(8).SetColor(FColor.FromHex("ff4e4e"));
 		}
 
-		// Token: 0x04021E7F RID: 138879
+		// Token: 0x0401C7B0 RID: 116656
 		[Nullable(2)]
 		protected ItemData CurrentData;
 
-		// Token: 0x04021E80 RID: 138880
+		// Token: 0x0401C7B1 RID: 116657
 		[Nullable(2)]
 		private LineCrossClawItem ClawItem;
 
-		// Token: 0x0200C75D RID: 51037
+		// Token: 0x0200B142 RID: 45378
 		[NullableContext(0)]
 		private class EItemComponent
 		{
-			// Token: 0x0403C3B6 RID: 246710
+			// Token: 0x04036D08 RID: 224520
 			public const int Button = 0;
 
-			// Token: 0x0403C3B7 RID: 246711
+			// Token: 0x04036D09 RID: 224521
 			public const int CircleTexture = 1;
 
-			// Token: 0x0403C3B8 RID: 246712
+			// Token: 0x04036D0A RID: 224522
 			public const int ClawItem = 2;
 
-			// Token: 0x0403C3B9 RID: 246713
+			// Token: 0x04036D0B RID: 224523
 			public const int SpriteLevelDesc = 3;
 
-			// Token: 0x0403C3BA RID: 246714
+			// Token: 0x04036D0C RID: 224524
 			public const int NameText = 4;
 
-			// Token: 0x0403C3BB RID: 246715
+			// Token: 0x04036D0D RID: 224525
 			public const int ProgressText = 5;
 
-			// Token: 0x0403C3BC RID: 246716
+			// Token: 0x04036D0E RID: 224526
 			public const int LevelIndexText = 6;
 
-			// Token: 0x0403C3BD RID: 246717
+			// Token: 0x04036D0F RID: 224527
 			public const int LockSprite = 7;
 
-			// Token: 0x0403C3BE RID: 246718
+			// Token: 0x04036D10 RID: 224528
 			public const int ProgressDescSprite = 8;
 
-			// Token: 0x0403C3BF RID: 246719
+			// Token: 0x04036D11 RID: 224529
 			public const int RedDot = 9;
 		}
 	}

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x020060A5 RID: 24741
+	// Token: 0x02005023 RID: 20515
 	internal class ItemInMain : UiPanelBase
 	{
-		// Token: 0x0603E8B5 RID: 256181 RVA: 0x00F1DF96 File Offset: 0x00F1C196
+		// Token: 0x06033579 RID: 210297 RVA: 0x00E64D5A File Offset: 0x00E62F5A
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			};
 		}
 
-		// Token: 0x0603E8B6 RID: 256182 RVA: 0x00F1DFD0 File Offset: 0x00F1C1D0
+		// Token: 0x0603357A RID: 210298 RVA: 0x00E64D94 File Offset: 0x00E62F94
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ItemInMain.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E8B7 RID: 256183 RVA: 0x00F1E014 File Offset: 0x00F1C214
+		// Token: 0x0603357B RID: 210299 RVA: 0x00E64DD8 File Offset: 0x00E62FD8
 		public UniTask RefreshByInvitedAsync(bool isInvited, bool isNew = false)
 		{
 			ItemInMain.<RefreshByInvitedAsync>d__5 <RefreshByInvitedAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <RefreshByInvitedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E8B8 RID: 256184 RVA: 0x00F1E068 File Offset: 0x00F1C268
+		// Token: 0x0603357C RID: 210300 RVA: 0x00E64E2C File Offset: 0x00E6302C
 		private UniTask PlayUnlockAnimAsync()
 		{
 			ItemInMain.<PlayUnlockAnimAsync>d__6 <PlayUnlockAnimAsync>d__;
@@ -56,17 +56,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <PlayUnlockAnimAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04020B85 RID: 134021
+		// Token: 0x0401B4B2 RID: 111794
 		[Nullable(1)]
 		private UiSequencePlayer Player;
 
-		// Token: 0x0200C306 RID: 49926
+		// Token: 0x0200ACF1 RID: 44273
 		private static class EItemComponent
 		{
-			// Token: 0x0403AE4A RID: 241226
+			// Token: 0x040357B2 RID: 219058
 			public const int LockTexture = 0;
 
-			// Token: 0x0403AE4B RID: 241227
+			// Token: 0x040357B3 RID: 219059
 			public const int SelfTexture = 1;
 		}
 	}

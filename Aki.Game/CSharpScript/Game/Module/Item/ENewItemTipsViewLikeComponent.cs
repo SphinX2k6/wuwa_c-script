@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x0200582A RID: 22570
+	// Token: 0x02004801 RID: 18433
 	public enum ENewItemTipsViewLikeComponent
 	{
-		// Token: 0x0401DFCE RID: 122830
+		// Token: 0x04018A66 RID: 100966
 		MainTypeIconTexture,
-		// Token: 0x0401DFCF RID: 122831
+		// Token: 0x04018A67 RID: 100967
 		ItemNameText,
-		// Token: 0x0401DFD0 RID: 122832
+		// Token: 0x04018A68 RID: 100968
 		ItemIconTexture,
-		// Token: 0x0401DFD1 RID: 122833
+		// Token: 0x04018A69 RID: 100969
 		ItemDescribeText,
-		// Token: 0x0401DFD2 RID: 122834
+		// Token: 0x04018A6A RID: 100970
 		QualityTexture,
-		// Token: 0x0401DFD3 RID: 122835
+		// Token: 0x04018A6B RID: 100971
 		QualityNiagara,
-		// Token: 0x0401DFD4 RID: 122836
+		// Token: 0x04018A6C RID: 100972
 		FlowTexture = 7
 	}
 }

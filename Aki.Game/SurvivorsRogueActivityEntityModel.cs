@@ -3,60 +3,60 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000EC8 RID: 3784
+// Token: 0x0200037D RID: 893
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISurvivorsRogueActivityEntityInfo, ISurvivorsRogueCombatInfo, ISurvivorsRogueConfigInfo
 {
-	// Token: 0x17000738 RID: 1848
-	// (get) Token: 0x06005DFB RID: 24059 RVA: 0x00114EE5 File Offset: 0x001130E5
-	// (set) Token: 0x06005DFC RID: 24060 RVA: 0x00114EED File Offset: 0x001130ED
+	// Token: 0x1700075C RID: 1884
+	// (get) Token: 0x06003192 RID: 12690 RVA: 0x0011CBC5 File Offset: 0x0011ADC5
+	// (set) Token: 0x06003193 RID: 12691 RVA: 0x0011CBCD File Offset: 0x0011ADCD
 	public int ConfigId { get; set; }
 
-	// Token: 0x17000739 RID: 1849
-	// (get) Token: 0x06005DFD RID: 24061 RVA: 0x00114EF6 File Offset: 0x001130F6
-	// (set) Token: 0x06005DFE RID: 24062 RVA: 0x00114EFE File Offset: 0x001130FE
+	// Token: 0x1700075D RID: 1885
+	// (get) Token: 0x06003194 RID: 12692 RVA: 0x0011CBD6 File Offset: 0x0011ADD6
+	// (set) Token: 0x06003195 RID: 12693 RVA: 0x0011CBDE File Offset: 0x0011ADDE
 	public ESurvivorsRogueMonsterDeathType DeathType { get; set; }
 
-	// Token: 0x1700073A RID: 1850
-	// (get) Token: 0x06005DFF RID: 24063 RVA: 0x00114F07 File Offset: 0x00113107
-	// (set) Token: 0x06005E00 RID: 24064 RVA: 0x00114F0F File Offset: 0x0011310F
+	// Token: 0x1700075E RID: 1886
+	// (get) Token: 0x06003196 RID: 12694 RVA: 0x0011CBE7 File Offset: 0x0011ADE7
+	// (set) Token: 0x06003197 RID: 12695 RVA: 0x0011CBEF File Offset: 0x0011ADEF
 	public int BuffRadius { get; set; }
 
-	// Token: 0x1700073B RID: 1851
-	// (get) Token: 0x06005E01 RID: 24065 RVA: 0x00114F18 File Offset: 0x00113118
-	// (set) Token: 0x06005E02 RID: 24066 RVA: 0x00114F20 File Offset: 0x00113120
+	// Token: 0x1700075F RID: 1887
+	// (get) Token: 0x06003198 RID: 12696 RVA: 0x0011CBF8 File Offset: 0x0011ADF8
+	// (set) Token: 0x06003199 RID: 12697 RVA: 0x0011CC00 File Offset: 0x0011AE00
 	public int[] BuffIds { get; set; }
 
-	// Token: 0x1700073C RID: 1852
-	// (get) Token: 0x06005E03 RID: 24067 RVA: 0x00114F29 File Offset: 0x00113129
-	// (set) Token: 0x06005E04 RID: 24068 RVA: 0x00114F31 File Offset: 0x00113131
+	// Token: 0x17000760 RID: 1888
+	// (get) Token: 0x0600319A RID: 12698 RVA: 0x0011CC09 File Offset: 0x0011AE09
+	// (set) Token: 0x0600319B RID: 12699 RVA: 0x0011CC11 File Offset: 0x0011AE11
 	public int[] SpawnIds { get; set; }
 
-	// Token: 0x1700073D RID: 1853
-	// (get) Token: 0x06005E05 RID: 24069 RVA: 0x00114F3A File Offset: 0x0011313A
-	// (set) Token: 0x06005E06 RID: 24070 RVA: 0x00114F42 File Offset: 0x00113142
+	// Token: 0x17000761 RID: 1889
+	// (get) Token: 0x0600319C RID: 12700 RVA: 0x0011CC1A File Offset: 0x0011AE1A
+	// (set) Token: 0x0600319D RID: 12701 RVA: 0x0011CC22 File Offset: 0x0011AE22
 	public int PolluteRadius { get; set; }
 
-	// Token: 0x06005E07 RID: 24071 RVA: 0x00114F4B File Offset: 0x0011314B
+	// Token: 0x0600319E RID: 12702 RVA: 0x0011CC2B File Offset: 0x0011AE2B
 	static SurvivorsRogueActivityEntityModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SurvivorsRogueActivityEntityModel.CreateStaticDefaultValue), new Action(SurvivorsRogueActivityEntityModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005E08 RID: 24072 RVA: 0x00114F6A File Offset: 0x0011316A
+	// Token: 0x0600319F RID: 12703 RVA: 0x0011CC4A File Offset: 0x0011AE4A
 	public new static void CreateStaticDefaultValue()
 	{
 		SurvivorsRogueActivityEntityModel.ActivityEntityPool = new Pool<SurvivorsRogueActivityEntityModel>(100, () => new SurvivorsRogueActivityEntityModel(), null);
 	}
 
-	// Token: 0x06005E09 RID: 24073 RVA: 0x00114F98 File Offset: 0x00113198
+	// Token: 0x060031A0 RID: 12704 RVA: 0x0011CC78 File Offset: 0x0011AE78
 	public new static void ResetStaticDefaultValue()
 	{
 		SurvivorsRogueActivityEntityModel.ActivityEntityPool = null;
 	}
 
-	// Token: 0x06005E0A RID: 24074 RVA: 0x00114FA0 File Offset: 0x001131A0
+	// Token: 0x060031A1 RID: 12705 RVA: 0x0011CC80 File Offset: 0x0011AE80
 	[NullableContext(1)]
 	public static SurvivorsRogueActivityEntityModel InitFromConfigId(int configId)
 	{
@@ -72,7 +72,7 @@ public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISur
 		return survivorsRogueActivityEntityModel;
 	}
 
-	// Token: 0x06005E0B RID: 24075 RVA: 0x00114FD4 File Offset: 0x001131D4
+	// Token: 0x060031A2 RID: 12706 RVA: 0x0011CCB4 File Offset: 0x0011AEB4
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public new static ISurvivorsRogueCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -98,13 +98,13 @@ public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISur
 		return survivorsRogueActivityEntityModel;
 	}
 
-	// Token: 0x06005E0C RID: 24076 RVA: 0x00115041 File Offset: 0x00113241
+	// Token: 0x060031A3 RID: 12707 RVA: 0x0011CD21 File Offset: 0x0011AF21
 	public new static void Clear()
 	{
 		SurvivorsRogueActivityEntityModel.ActivityEntityPool.Clear();
 	}
 
-	// Token: 0x06005E0D RID: 24077 RVA: 0x00115050 File Offset: 0x00113250
+	// Token: 0x060031A4 RID: 12708 RVA: 0x0011CD30 File Offset: 0x0011AF30
 	[NullableContext(1)]
 	protected override void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
@@ -137,7 +137,7 @@ public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISur
 		}
 	}
 
-	// Token: 0x06005E0E RID: 24078 RVA: 0x001150E4 File Offset: 0x001132E4
+	// Token: 0x060031A5 RID: 12709 RVA: 0x0011CDC4 File Offset: 0x0011AFC4
 	[NullableContext(1)]
 	public override void Update(ISurvivorsRogueCombatInfo other)
 	{
@@ -151,7 +151,7 @@ public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISur
 		this.PolluteRadius = survivorsRogueActivityEntityInfo.PolluteRadius;
 	}
 
-	// Token: 0x06005E0F RID: 24079 RVA: 0x00115147 File Offset: 0x00113347
+	// Token: 0x060031A6 RID: 12710 RVA: 0x0011CE27 File Offset: 0x0011B027
 	public new virtual void Reset()
 	{
 		base.Reset();
@@ -163,14 +163,14 @@ public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISur
 		this.PolluteRadius = 0;
 	}
 
-	// Token: 0x06005E10 RID: 24080 RVA: 0x00115179 File Offset: 0x00113379
+	// Token: 0x060031A7 RID: 12711 RVA: 0x0011CE59 File Offset: 0x0011B059
 	public new virtual void Release()
 	{
 		this.Reset();
 		SurvivorsRogueActivityEntityModel.ActivityEntityPool.Put(this);
 	}
 
-	// Token: 0x06005E11 RID: 24081 RVA: 0x00115190 File Offset: 0x00113390
+	// Token: 0x060031A8 RID: 12712 RVA: 0x0011CE70 File Offset: 0x0011B070
 	[NullableContext(1)]
 	public new ISurvivorsRogueCombatInfo Clone()
 	{
@@ -186,7 +186,7 @@ public class SurvivorsRogueActivityEntityModel : SurvivorsRogueEntityModel, ISur
 		return survivorsRogueActivityEntityModel;
 	}
 
-	// Token: 0x04002AC6 RID: 10950
+	// Token: 0x04002B61 RID: 11105
 	[Nullable(new byte[]
 	{
 		2,

@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x0200649F RID: 25759
+	// Token: 0x0200541D RID: 21533
 	public class MatchThreePopupInfoView : UiViewBase
 	{
-		// Token: 0x06040AF5 RID: 264949 RVA: 0x00FA87DE File Offset: 0x00FA69DE
+		// Token: 0x060357B9 RID: 219065 RVA: 0x00EEF826 File Offset: 0x00EEDA26
 		[NullableContext(1)]
 		public MatchThreePopupInfoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06040AF6 RID: 264950 RVA: 0x00FA87E8 File Offset: 0x00FA69E8
+		// Token: 0x060357BA RID: 219066 RVA: 0x00EEF830 File Offset: 0x00EEDA30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040AF7 RID: 264951 RVA: 0x00FA89E0 File Offset: 0x00FA6BE0
+		// Token: 0x060357BB RID: 219067 RVA: 0x00EEFA28 File Offset: 0x00EEDC28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreePopupInfoView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040AF8 RID: 264952 RVA: 0x00FA8A23 File Offset: 0x00FA6C23
+		// Token: 0x060357BC RID: 219068 RVA: 0x00EEFA6B File Offset: 0x00EEDC6B
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.NeedPlayItemStartOnAfterShow = true;
 		}
 
-		// Token: 0x06040AF9 RID: 264953 RVA: 0x00FA8A4D File Offset: 0x00FA6C4D
+		// Token: 0x060357BD RID: 219069 RVA: 0x00EEFA95 File Offset: 0x00EEDC95
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			this.PlayCurrentTabItemsStart();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x06040AFA RID: 264954 RVA: 0x00FA8A61 File Offset: 0x00FA6C61
+		// Token: 0x060357BE RID: 219070 RVA: 0x00EEFAA9 File Offset: 0x00EEDCA9
 		protected override void OnAfterPlayStartSequence()
 		{
 			if (!base.IsDestroyOrDestroying)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040AFB RID: 264955 RVA: 0x00FA8A96 File Offset: 0x00FA6C96
+		// Token: 0x060357BF RID: 219071 RVA: 0x00EEFADE File Offset: 0x00EEDCDE
 		protected override void OnAfterShow()
 		{
 			if (!this.NeedPlayItemStartOnAfterShow || base.IsDestroyOrDestroying)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.PlayCurrentTabItemsStart();
 		}
 
-		// Token: 0x06040AFC RID: 264956 RVA: 0x00FA8AB8 File Offset: 0x00FA6CB8
+		// Token: 0x060357C0 RID: 219072 RVA: 0x00EEFB00 File Offset: 0x00EEDD00
 		private void PlayCurrentTabItemsStart()
 		{
 			if (this.CurrentTab == MatchThreePopupInfoView.EPopupInfoTab.Tile)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040AFD RID: 264957 RVA: 0x00FA8B6C File Offset: 0x00FA6D6C
+		// Token: 0x060357C1 RID: 219073 RVA: 0x00EEFBB4 File Offset: 0x00EEDDB4
 		private void RefreshView()
 		{
 			if (this.Params == null)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.SwitchTab(this.ResolveDefaultTab(), false);
 		}
 
-		// Token: 0x06040AFE RID: 264958 RVA: 0x00FA8BF4 File Offset: 0x00FA6DF4
+		// Token: 0x060357C2 RID: 219074 RVA: 0x00EEFC3C File Offset: 0x00EEDE3C
 		private MatchThreePopupInfoView.EPopupInfoTab ResolveDefaultTab()
 		{
 			if (this.Params == null)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return MatchThreePopupInfoView.EPopupInfoTab.Tile;
 		}
 
-		// Token: 0x06040AFF RID: 264959 RVA: 0x00FA8C55 File Offset: 0x00FA6E55
+		// Token: 0x060357C3 RID: 219075 RVA: 0x00EEFC9D File Offset: 0x00EEDE9D
 		private void ApplyFocusScroll(bool useLateScroll)
 		{
 			if (this.Params == null)
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ScrollToEnv(this.Params.FocusEnvIndex, useLateScroll);
 		}
 
-		// Token: 0x06040B00 RID: 264960 RVA: 0x00FA8C90 File Offset: 0x00FA6E90
+		// Token: 0x060357C4 RID: 219076 RVA: 0x00EEFCD8 File Offset: 0x00EEDED8
 		private void ScrollToTile(int focusIndex, bool useLateScroll)
 		{
 			if (this.TileScroll == null || this.Params == null || focusIndex < 0 || focusIndex >= this.Params.TileList.Count)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.TileScroll.ScrollTo(uuiitem, false);
 		}
 
-		// Token: 0x06040B01 RID: 264961 RVA: 0x00FA8D04 File Offset: 0x00FA6F04
+		// Token: 0x060357C5 RID: 219077 RVA: 0x00EEFD4C File Offset: 0x00EEDF4C
 		private void ScrollToEnv(int focusIndex, bool useLateScroll)
 		{
 			if (this.EnvScroll == null || this.Params == null || focusIndex < 0 || focusIndex >= this.Params.EnvList.Count)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.EnvScroll.ScrollTo(uuiitem, false);
 		}
 
-		// Token: 0x06040B02 RID: 264962 RVA: 0x00FA8D75 File Offset: 0x00FA6F75
+		// Token: 0x060357C6 RID: 219078 RVA: 0x00EEFDBD File Offset: 0x00EEDFBD
 		private void PlayFocusHighlight()
 		{
 			if (this.Params == null || base.IsDestroyOrDestroying)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.PlaySingleEnvHighlight(this.Params.FocusEnvIndex);
 		}
 
-		// Token: 0x06040B03 RID: 264963 RVA: 0x00FA8DB4 File Offset: 0x00FA6FB4
+		// Token: 0x060357C7 RID: 219079 RVA: 0x00EEFDFC File Offset: 0x00EEDFFC
 		private void ApplyNavigationFocus()
 		{
 			if (this.Params == null || base.IsDestroyOrDestroying)
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			UiNavigationNewController.Instance.SetNavigationFocusForView(uuiitem, true, false, false);
 		}
 
-		// Token: 0x06040B04 RID: 264964 RVA: 0x00FA8EA8 File Offset: 0x00FA70A8
+		// Token: 0x060357C8 RID: 219080 RVA: 0x00EEFEF0 File Offset: 0x00EEE0F0
 		private void PlaySingleTileHighlight(int focusIndex)
 		{
 			if (this.TileScroll == null || this.Params == null || base.IsDestroyOrDestroying)
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			scrollItemByIndex.PlayHighlight();
 		}
 
-		// Token: 0x06040B05 RID: 264965 RVA: 0x00FA8EFC File Offset: 0x00FA70FC
+		// Token: 0x060357C9 RID: 219081 RVA: 0x00EEFF44 File Offset: 0x00EEE144
 		private void PlaySingleEnvHighlight(int focusIndex)
 		{
 			if (this.EnvScroll == null || this.Params == null || base.IsDestroyOrDestroying)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			scrollItemByIndex.PlayHighlight();
 		}
 
-		// Token: 0x06040B06 RID: 264966 RVA: 0x00FA8F50 File Offset: 0x00FA7150
+		// Token: 0x060357CA RID: 219082 RVA: 0x00EEFF98 File Offset: 0x00EEE198
 		private void SwitchTab(MatchThreePopupInfoView.EPopupInfoTab tab, bool fireEvent)
 		{
 			MatchThreePopupInfoViewParams @params = this.Params;
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			uuiitem2.SetUIActive(!flag3 && flag2);
 		}
 
-		// Token: 0x06040B07 RID: 264967 RVA: 0x00FA9033 File Offset: 0x00FA7233
+		// Token: 0x060357CB RID: 219083 RVA: 0x00EF007B File Offset: 0x00EEE27B
 		private void OnClickTabTile(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.PlayCurrentTabItemsStart();
 		}
 
-		// Token: 0x06040B08 RID: 264968 RVA: 0x00FA9066 File Offset: 0x00FA7266
+		// Token: 0x060357CC RID: 219084 RVA: 0x00EF00AE File Offset: 0x00EEE2AE
 		private void OnClickTabEnv(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -424,17 +424,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.PlayCurrentTabItemsStart();
 		}
 
-		// Token: 0x06040B09 RID: 264969 RVA: 0x00FA9099 File Offset: 0x00FA7299
+		// Token: 0x060357CD RID: 219085 RVA: 0x00EF00E1 File Offset: 0x00EEE2E1
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021A8A RID: 137866
+		// Token: 0x0401C3BB RID: 115643
 		[Nullable(2)]
 		private MatchThreePopupInfoViewParams Params;
 
-		// Token: 0x04021A8B RID: 137867
+		// Token: 0x0401C3BC RID: 115644
 		[Nullable(new byte[]
 		{
 			2,
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 		})]
 		private GenericScrollViewNew<MatchThreePopupTileInfoItem, MatchThreeInfoItemData> TileScroll;
 
-		// Token: 0x04021A8C RID: 137868
+		// Token: 0x0401C3BD RID: 115645
 		[Nullable(new byte[]
 		{
 			2,
@@ -452,18 +452,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 		})]
 		private GenericScrollViewNew<MatchThreePopupEnvInfoItem, MatchThreeInfoItemData> EnvScroll;
 
-		// Token: 0x04021A8D RID: 137869
+		// Token: 0x0401C3BE RID: 115646
 		private MatchThreePopupInfoView.EPopupInfoTab CurrentTab;
 
-		// Token: 0x04021A8E RID: 137870
+		// Token: 0x0401C3BF RID: 115647
 		private bool NeedPlayItemStartOnAfterShow;
 
-		// Token: 0x0200C6A6 RID: 50854
+		// Token: 0x0200B08C RID: 45196
 		private enum EPopupInfoTab
 		{
-			// Token: 0x0403BF9F RID: 245663
+			// Token: 0x040368FA RID: 223482
 			Tile,
-			// Token: 0x0403BFA0 RID: 245664
+			// Token: 0x040368FB RID: 223483
 			Env
 		}
 	}

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ADE RID: 10974
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DD2 RID: 11730
 	public class SendSceneActorEvent : ActionParams
 	{
-		// Token: 0x0600F099 RID: 61593 RVA: 0x0022EE0E File Offset: 0x0022D00E
+		// Token: 0x0600FF4F RID: 65359 RVA: 0x0024CB1A File Offset: 0x0024AD1A
 		public static SendSceneActorEvent Create(ISendSceneActorEvent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C9F RID: 19615
-		// (get) Token: 0x0600F09A RID: 61594 RVA: 0x0022EE2D File Offset: 0x0022D02D
+		// Token: 0x17005059 RID: 20569
+		// (get) Token: 0x0600FF50 RID: 65360 RVA: 0x0024CB39 File Offset: 0x0024AD39
 		public virtual ISceneActorEvent ActorEvent
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400845C RID: 33884
+		// Token: 0x04008B60 RID: 35680
 		private ISendSceneActorEvent Instance;
 
-		// Token: 0x0400845D RID: 33885
+		// Token: 0x04008B61 RID: 35681
 		private ISceneActorEvent _ActorEventCache;
 
-		// Token: 0x0400845E RID: 33886
+		// Token: 0x04008B62 RID: 35682
 		private bool _ActorEventInited;
 	}
 }

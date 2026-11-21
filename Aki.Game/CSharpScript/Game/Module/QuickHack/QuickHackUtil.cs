@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F77 RID: 20343
+	// Token: 0x02003F40 RID: 16192
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuickHackUtil
 	{
-		// Token: 0x0603419F RID: 213407 RVA: 0x00C3A16C File Offset: 0x00C3836C
+		// Token: 0x0602900D RID: 167949 RVA: 0x00B83918 File Offset: 0x00B81B18
 		[NullableContext(1)]
 		public static string GetFailTextIdByCondition(EQuickHackSkillCondition? condition)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return result;
 		}
 
-		// Token: 0x060341A0 RID: 213408 RVA: 0x00C3A1DA File Offset: 0x00C383DA
+		// Token: 0x0602900E RID: 167950 RVA: 0x00B83986 File Offset: 0x00B81B86
 		public static QuickHackRamManager CreateRamManager(EQuickHackRamManagerType type)
 		{
 			if (type == EQuickHackRamManagerType.Fix)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return new QuickHackFormationAttributeRamManager();
 		}
 
-		// Token: 0x060341A1 RID: 213409 RVA: 0x00C3A1F2 File Offset: 0x00C383F2
+		// Token: 0x0602900F RID: 167951 RVA: 0x00B8399E File Offset: 0x00B81B9E
 		public static QuickHackTargetSelector CreateTargetSelector(EQuickHackTargetSelectorType type)
 		{
 			switch (type)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x060341A2 RID: 213410 RVA: 0x00C3A21B File Offset: 0x00C3841B
+		// Token: 0x06029010 RID: 167952 RVA: 0x00B839C7 File Offset: 0x00B81BC7
 		public static IQuickHackTimeScaleManager CreateTimeScaleManager(EQuickHackTimeScaleMode type)
 		{
 			if (type == EQuickHackTimeScaleMode.WorldTimeDilation)

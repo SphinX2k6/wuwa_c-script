@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002708 RID: 9992
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029CF RID: 10703
 	public class IDetectBattleTag : IDetectBattleStateType
 	{
-		// Token: 0x0600DEFA RID: 57082 RVA: 0x00210E6A File Offset: 0x0020F06A
+		// Token: 0x0600ECE6 RID: 60646 RVA: 0x0022D813 File Offset: 0x0022BA13
 		public static IDetectBattleTag Create(IDetectBattleTag? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042AC RID: 17068
-		// (get) Token: 0x0600DEFB RID: 57083 RVA: 0x00210E89 File Offset: 0x0020F089
+		// Token: 0x170045F6 RID: 17910
+		// (get) Token: 0x0600ECE7 RID: 60647 RVA: 0x0022D832 File Offset: 0x0022BA32
 		public override EDetectBattleConditionType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042AD RID: 17069
-		// (get) Token: 0x0600DEFC RID: 57084 RVA: 0x00210E96 File Offset: 0x0020F096
+		// Token: 0x170045F7 RID: 17911
+		// (get) Token: 0x0600ECE8 RID: 60648 RVA: 0x0022D83F File Offset: 0x0022BA3F
 		public virtual int EntityId
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042AE RID: 17070
-		// (get) Token: 0x0600DEFD RID: 57085 RVA: 0x00210EA3 File Offset: 0x0020F0A3
+		// Token: 0x170045F8 RID: 17912
+		// (get) Token: 0x0600ECE9 RID: 60649 RVA: 0x0022D84C File Offset: 0x0022BA4C
 		public virtual IDetectBattleMonsterOnGround TagOption
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042AF RID: 17071
-		// (get) Token: 0x0600DEFE RID: 57086 RVA: 0x00210ED7 File Offset: 0x0020F0D7
+		// Token: 0x170045F9 RID: 17913
+		// (get) Token: 0x0600ECEA RID: 60650 RVA: 0x0022D880 File Offset: 0x0022BA80
 		public virtual float MaxWaitTime
 		{
 			get
@@ -68,14 +66,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BBE RID: 31678
+		// Token: 0x04008263 RID: 33379
 		private IDetectBattleTag Instance;
 
-		// Token: 0x04007BBF RID: 31679
+		// Token: 0x04008264 RID: 33380
 		[Nullable(2)]
 		private IDetectBattleMonsterOnGround _TagOptionCache;
 
-		// Token: 0x04007BC0 RID: 31680
+		// Token: 0x04008265 RID: 33381
 		private bool _TagOptionInited;
 	}
 }

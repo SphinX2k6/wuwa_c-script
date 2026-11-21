@@ -8,22 +8,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui
 {
-	// Token: 0x020000C2 RID: 194
+	// Token: 0x020000C5 RID: 197
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LaunchComponentsAction
 	{
-		// Token: 0x06000650 RID: 1616 RVA: 0x00037217 File Offset: 0x00035417
+		// Token: 0x0600066B RID: 1643 RVA: 0x00038D17 File Offset: 0x00036F17
 		protected virtual void OnStart()
 		{
 		}
 
-		// Token: 0x06000651 RID: 1617 RVA: 0x00037219 File Offset: 0x00035419
+		// Token: 0x0600066C RID: 1644 RVA: 0x00038D19 File Offset: 0x00036F19
 		protected virtual void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06000652 RID: 1618 RVA: 0x0003721B File Offset: 0x0003541B
+		// Token: 0x0600066D RID: 1645 RVA: 0x00038D1B File Offset: 0x00036F1B
 		[NullableContext(1)]
 		public void SetRootActorLaunchComponentsAction(AActor actor)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Ui
 			this.OnStart();
 		}
 
-		// Token: 0x06000653 RID: 1619 RVA: 0x00037236 File Offset: 0x00035436
+		// Token: 0x0600066E RID: 1646 RVA: 0x00038D36 File Offset: 0x00036F36
 		[NullableContext(1)]
 		private void InitRootActor(AActor actor)
 		{
@@ -41,13 +41,13 @@ namespace CSharpScript.Launcher.Ui
 			this.RootItem = (actor.GetComponentByClass(UUIItem.StaticClass()) as UUIItem);
 		}
 
-		// Token: 0x06000654 RID: 1620 RVA: 0x0003725A File Offset: 0x0003545A
+		// Token: 0x0600066F RID: 1647 RVA: 0x00038D5A File Offset: 0x00036F5A
 		private void InitSequencePlayer()
 		{
 			this.SequencePlayer = new HotFixSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06000655 RID: 1621 RVA: 0x0003726D File Offset: 0x0003546D
+		// Token: 0x06000670 RID: 1648 RVA: 0x00038D6D File Offset: 0x00036F6D
 		private void CheckHasRegistry()
 		{
 			this.ComponentsRegistry = (this.RootActor.GetComponentByClass(ULGUIComponentsRegistry.StaticClass()) as ULGUIComponentsRegistry);
@@ -57,14 +57,14 @@ namespace CSharpScript.Launcher.Ui
 			}
 		}
 
-		// Token: 0x06000656 RID: 1622 RVA: 0x000372AD File Offset: 0x000354AD
+		// Token: 0x06000671 RID: 1649 RVA: 0x00038DAD File Offset: 0x00036FAD
 		[NullableContext(1)]
 		public TChildComponentAction GetElement<[Nullable(0)] TChildComponentAction>(int index) where TChildComponentAction : LaunchComponentsAction
 		{
 			return (TChildComponentAction)((object)this.ElementMap[index]);
 		}
 
-		// Token: 0x06000657 RID: 1623 RVA: 0x000372C0 File Offset: 0x000354C0
+		// Token: 0x06000672 RID: 1650 RVA: 0x00038DC0 File Offset: 0x00036FC0
 		protected UUIItem GetItem(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -75,7 +75,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x06000658 RID: 1624 RVA: 0x000372F0 File Offset: 0x000354F0
+		// Token: 0x06000673 RID: 1651 RVA: 0x00038DF0 File Offset: 0x00036FF0
 		protected UUITexture GetTexture(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -86,7 +86,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x06000659 RID: 1625 RVA: 0x00037320 File Offset: 0x00035520
+		// Token: 0x06000674 RID: 1652 RVA: 0x00038E20 File Offset: 0x00037020
 		protected UUIText GetText(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -97,7 +97,18 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x0600065A RID: 1626 RVA: 0x00037350 File Offset: 0x00035550
+		// Token: 0x06000675 RID: 1653 RVA: 0x00038E50 File Offset: 0x00037050
+		protected UUISprite GetSprite(int index)
+		{
+			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
+			if (actorFromRegistryComponent != null)
+			{
+				return actorFromRegistryComponent.GetComponentByClass(UUISprite.StaticClass()) as UUISprite;
+			}
+			return null;
+		}
+
+		// Token: 0x06000676 RID: 1654 RVA: 0x00038E80 File Offset: 0x00037080
 		protected UUIButtonComponent GetButton(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -108,7 +119,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x0600065B RID: 1627 RVA: 0x00037380 File Offset: 0x00035580
+		// Token: 0x06000677 RID: 1655 RVA: 0x00038EB0 File Offset: 0x000370B0
 		protected UUIExtendToggle GetExtendToggle(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -119,7 +130,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x0600065C RID: 1628 RVA: 0x000373B0 File Offset: 0x000355B0
+		// Token: 0x06000678 RID: 1656 RVA: 0x00038EE0 File Offset: 0x000370E0
 		protected UUILayoutBase GetLayout(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -130,7 +141,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x0600065D RID: 1629 RVA: 0x000373E0 File Offset: 0x000355E0
+		// Token: 0x06000679 RID: 1657 RVA: 0x00038F10 File Offset: 0x00037110
 		protected UUIDynScrollViewComponent GetUIDynScrollViewComponent(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -141,7 +152,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x0600065E RID: 1630 RVA: 0x00037410 File Offset: 0x00035610
+		// Token: 0x0600067A RID: 1658 RVA: 0x00038F40 File Offset: 0x00037140
 		protected UUIScrollViewWithScrollbarComponent GetUiScrollViewWithScrollBar(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -152,7 +163,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x0600065F RID: 1631 RVA: 0x00037440 File Offset: 0x00035640
+		// Token: 0x0600067B RID: 1659 RVA: 0x00038F70 File Offset: 0x00037170
 		protected UUIScrollbarComponent GetUiScrollbarComponent(int index)
 		{
 			AActor actorFromRegistryComponent = this.GetActorFromRegistryComponent(index);
@@ -163,7 +174,7 @@ namespace CSharpScript.Launcher.Ui
 			return null;
 		}
 
-		// Token: 0x06000660 RID: 1632 RVA: 0x0003746F File Offset: 0x0003566F
+		// Token: 0x0600067C RID: 1660 RVA: 0x00038F9F File Offset: 0x0003719F
 		private AActor GetActorFromRegistryComponent(int index)
 		{
 			if (this.ComponentsRegistry == null || index >= this.ComponentsRegistry.Components.Num())
@@ -173,7 +184,7 @@ namespace CSharpScript.Launcher.Ui
 			return this.ComponentsRegistry.Components.Get(index);
 		}
 
-		// Token: 0x06000661 RID: 1633 RVA: 0x000374A0 File Offset: 0x000356A0
+		// Token: 0x0600067D RID: 1661 RVA: 0x00038FD0 File Offset: 0x000371D0
 		public void SetActive(bool visibility)
 		{
 			if (this.RootItem == null || !this.RootItem.IsValid())
@@ -193,24 +204,24 @@ namespace CSharpScript.Launcher.Ui
 			}
 		}
 
-		// Token: 0x06000662 RID: 1634 RVA: 0x000374ED File Offset: 0x000356ED
+		// Token: 0x0600067E RID: 1662 RVA: 0x0003901D File Offset: 0x0003721D
 		protected virtual void OnShow()
 		{
 		}
 
-		// Token: 0x06000663 RID: 1635 RVA: 0x000374EF File Offset: 0x000356EF
+		// Token: 0x0600067F RID: 1663 RVA: 0x0003901F File Offset: 0x0003721F
 		protected virtual void OnHide()
 		{
 		}
 
-		// Token: 0x06000664 RID: 1636 RVA: 0x000374F1 File Offset: 0x000356F1
+		// Token: 0x06000680 RID: 1664 RVA: 0x00039021 File Offset: 0x00037221
 		public UUIItem GetRootItem()
 		{
 			return this.RootItem;
 		}
 
-		// Token: 0x170000D1 RID: 209
-		// (get) Token: 0x06000665 RID: 1637 RVA: 0x000374F9 File Offset: 0x000356F9
+		// Token: 0x170000D3 RID: 211
+		// (get) Token: 0x06000681 RID: 1665 RVA: 0x00039029 File Offset: 0x00037229
 		protected bool IsClear
 		{
 			get
@@ -219,7 +230,7 @@ namespace CSharpScript.Launcher.Ui
 			}
 		}
 
-		// Token: 0x06000666 RID: 1638 RVA: 0x00037504 File Offset: 0x00035704
+		// Token: 0x06000682 RID: 1666 RVA: 0x00039034 File Offset: 0x00037234
 		[NullableContext(0)]
 		[return: Nullable(2)]
 		public TChildComponentAction AttachElement<TChildComponentAction>(int index) where TChildComponentAction : LaunchComponentsAction, new()
@@ -235,7 +246,7 @@ namespace CSharpScript.Launcher.Ui
 			return tchildComponentAction;
 		}
 
-		// Token: 0x06000667 RID: 1639 RVA: 0x0003754C File Offset: 0x0003574C
+		// Token: 0x06000683 RID: 1667 RVA: 0x0003907C File Offset: 0x0003727C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -244,17 +255,17 @@ namespace CSharpScript.Launcher.Ui
 		})]
 		public UniTask<TChildComponentAction> AttachElementAsyncFromPath<[Nullable(0)] TChildComponentAction>(int index, string path) where TChildComponentAction : LaunchComponentsAction, new()
 		{
-			LaunchComponentsAction.<AttachElementAsyncFromPath>d__30<TChildComponentAction> <AttachElementAsyncFromPath>d__;
+			LaunchComponentsAction.<AttachElementAsyncFromPath>d__31<TChildComponentAction> <AttachElementAsyncFromPath>d__;
 			<AttachElementAsyncFromPath>d__.<>t__builder = AsyncUniTaskMethodBuilder<TChildComponentAction>.Create();
 			<AttachElementAsyncFromPath>d__.<>4__this = this;
 			<AttachElementAsyncFromPath>d__.index = index;
 			<AttachElementAsyncFromPath>d__.path = path;
 			<AttachElementAsyncFromPath>d__.<>1__state = -1;
-			<AttachElementAsyncFromPath>d__.<>t__builder.Start<LaunchComponentsAction.<AttachElementAsyncFromPath>d__30<TChildComponentAction>>(ref <AttachElementAsyncFromPath>d__);
+			<AttachElementAsyncFromPath>d__.<>t__builder.Start<LaunchComponentsAction.<AttachElementAsyncFromPath>d__31<TChildComponentAction>>(ref <AttachElementAsyncFromPath>d__);
 			return <AttachElementAsyncFromPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000668 RID: 1640 RVA: 0x0003759F File Offset: 0x0003579F
+		// Token: 0x06000684 RID: 1668 RVA: 0x000390CF File Offset: 0x000372CF
 		public bool DestroyTemp()
 		{
 			if (this.IsClearData)
@@ -268,7 +279,7 @@ namespace CSharpScript.Launcher.Ui
 			return true;
 		}
 
-		// Token: 0x06000669 RID: 1641 RVA: 0x000375C8 File Offset: 0x000357C8
+		// Token: 0x06000685 RID: 1669 RVA: 0x000390F8 File Offset: 0x000372F8
 		private void ClearElementMap()
 		{
 			foreach (KeyValuePair<int, LaunchComponentsAction> keyValuePair in this.ElementMap)
@@ -278,7 +289,7 @@ namespace CSharpScript.Launcher.Ui
 			this.ElementMap.Clear();
 		}
 
-		// Token: 0x0600066A RID: 1642 RVA: 0x0003762C File Offset: 0x0003582C
+		// Token: 0x06000686 RID: 1670 RVA: 0x0003915C File Offset: 0x0003735C
 		private void ClearSequencePlayer()
 		{
 			HotFixSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -289,7 +300,7 @@ namespace CSharpScript.Launcher.Ui
 			sequencePlayer.ClearSequence();
 		}
 
-		// Token: 0x0600066B RID: 1643 RVA: 0x0003763E File Offset: 0x0003583E
+		// Token: 0x06000687 RID: 1671 RVA: 0x0003916E File Offset: 0x0003736E
 		public virtual void Destroy()
 		{
 			this.DestroyTemp();
@@ -301,23 +312,23 @@ namespace CSharpScript.Launcher.Ui
 			this.RootItem = null;
 		}
 
-		// Token: 0x040003DB RID: 987
+		// Token: 0x0400040A RID: 1034
 		private bool IsClearData;
 
-		// Token: 0x040003DC RID: 988
+		// Token: 0x0400040B RID: 1035
 		protected UUIItem RootItem;
 
-		// Token: 0x040003DD RID: 989
+		// Token: 0x0400040C RID: 1036
 		protected AActor RootActor;
 
-		// Token: 0x040003DE RID: 990
+		// Token: 0x0400040D RID: 1037
 		private ULGUIComponentsRegistry ComponentsRegistry;
 
-		// Token: 0x040003DF RID: 991
+		// Token: 0x0400040E RID: 1038
 		[Nullable(1)]
 		protected Dictionary<int, LaunchComponentsAction> ElementMap = new Dictionary<int, LaunchComponentsAction>();
 
-		// Token: 0x040003E0 RID: 992
+		// Token: 0x0400040F RID: 1039
 		protected HotFixSequencePlayer SequencePlayer;
 	}
 }

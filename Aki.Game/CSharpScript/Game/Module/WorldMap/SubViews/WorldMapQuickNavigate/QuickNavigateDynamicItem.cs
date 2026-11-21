@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D1 RID: 18385
+	// Token: 0x02003702 RID: 14082
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickNavigateDynamicItem : UiPanelBase, IDynamicScrollBaseItem<QuickNavigateDynamicData>
 	{
-		// Token: 0x060302CC RID: 197324 RVA: 0x00B29C58 File Offset: 0x00B27E58
+		// Token: 0x06024A9C RID: 150172 RVA: 0x00A59AF4 File Offset: 0x00A57CF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060302CD RID: 197325 RVA: 0x00B29CC4 File Offset: 0x00B27EC4
+		// Token: 0x06024A9D RID: 150173 RVA: 0x00A59B60 File Offset: 0x00A57D60
 		public UniTask Init(UUIItem actor)
 		{
 			QuickNavigateDynamicItem.<Init>d__1 <Init>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060302CE RID: 197326 RVA: 0x00B29D10 File Offset: 0x00B27F10
+		// Token: 0x06024A9E RID: 150174 RVA: 0x00A59BAC File Offset: 0x00A57DAC
 		public FVector2D GetItemSize(QuickNavigateDynamicData data)
 		{
 			if (data.ItemType == EQuickNavigateItemType.Country)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return new FVector2D(item2.GetWidth(), item2.GetHeight());
 		}
 
-		// Token: 0x060302CF RID: 197327 RVA: 0x00B29D58 File Offset: 0x00B27F58
+		// Token: 0x06024A9F RID: 150175 RVA: 0x00A59BF4 File Offset: 0x00A57DF4
 		public virtual void ClearItem()
 		{
 		}

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E3B RID: 3643
+// Token: 0x020002F0 RID: 752
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkReportLevel : SdkReportData, IStaticVariableResetter
 {
-	// Token: 0x0600579E RID: 22430 RVA: 0x000FC78B File Offset: 0x000FA98B
+	// Token: 0x06002B2E RID: 11054 RVA: 0x00103FDF File Offset: 0x001021DF
 	public SdkReportLevel([Nullable(new byte[]
 	{
 		2,
@@ -19,14 +18,14 @@ public class SdkReportLevel : SdkReportData, IStaticVariableResetter
 	{
 	}
 
-	// Token: 0x0600579F RID: 22431 RVA: 0x000FC794 File Offset: 0x000FA994
+	// Token: 0x06002B2F RID: 11055 RVA: 0x00103FE8 File Offset: 0x001021E8
 	static SdkReportLevel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SdkReportLevel.CreateStaticDefaultValue), new Action(SdkReportLevel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17000657 RID: 1623
-	// (get) Token: 0x060057A0 RID: 22432 RVA: 0x000FC7B3 File Offset: 0x000FA9B3
+	// Token: 0x1700067B RID: 1659
+	// (get) Token: 0x06002B30 RID: 11056 RVA: 0x00104007 File Offset: 0x00102207
 	private static IReadOnlyList<int> NeedReportLevel
 	{
 		get
@@ -35,8 +34,8 @@ public class SdkReportLevel : SdkReportData, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000658 RID: 1624
-	// (get) Token: 0x060057A1 RID: 22433 RVA: 0x000FC7BA File Offset: 0x000FA9BA
+	// Token: 0x1700067C RID: 1660
+	// (get) Token: 0x06002B31 RID: 11057 RVA: 0x0010400E File Offset: 0x0010220E
 	private static IReadOnlyDictionary<int, string> ChinaReportMap
 	{
 		get
@@ -45,13 +44,21 @@ public class SdkReportLevel : SdkReportData, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060057A2 RID: 22434 RVA: 0x000FC7C1 File Offset: 0x000FA9C1
+	// Token: 0x06002B32 RID: 11058 RVA: 0x00104018 File Offset: 0x00102218
 	public static bool IfNeedReport(int level)
 	{
-		return SdkReportLevel.NeedReportLevel.Contains(level);
+		IReadOnlyList<int> needReportLevel = SdkReportLevel.NeedReportLevel;
+		for (int i = 0; i < needReportLevel.Count; i++)
+		{
+			if (needReportLevel[i] == level)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
-	// Token: 0x060057A3 RID: 22435 RVA: 0x000FC7CE File Offset: 0x000FA9CE
+	// Token: 0x06002B33 RID: 11059 RVA: 0x00104049 File Offset: 0x00102249
 	public override string GetEventName()
 	{
 		if (this.IfGlobalSdk)
@@ -64,7 +71,7 @@ public class SdkReportLevel : SdkReportData, IStaticVariableResetter
 		return SdkReportLevel.ChinaReportMap.GetValueOrDefault(this.Level, "");
 	}
 
-	// Token: 0x060057A4 RID: 22436 RVA: 0x000FC80C File Offset: 0x000FAA0C
+	// Token: 0x06002B34 RID: 11060 RVA: 0x00104088 File Offset: 0x00102288
 	public static void CreateStaticDefaultValue()
 	{
 		SdkReportLevel._needReportLevel = new <>z__ReadOnlyArray<int>(new int[]
@@ -125,21 +132,21 @@ public class SdkReportLevel : SdkReportData, IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x060057A5 RID: 22437 RVA: 0x000FC8C0 File Offset: 0x000FAAC0
+	// Token: 0x06002B35 RID: 11061 RVA: 0x0010413C File Offset: 0x0010233C
 	public static void ResetStaticDefaultValue()
 	{
 		SdkReportLevel._needReportLevel = null;
 		SdkReportLevel._chinaReportMap = null;
 	}
 
-	// Token: 0x04002870 RID: 10352
+	// Token: 0x04002909 RID: 10505
 	public int Level;
 
-	// Token: 0x04002871 RID: 10353
+	// Token: 0x0400290A RID: 10506
 	[Nullable(2)]
 	private static IReadOnlyList<int> _needReportLevel;
 
-	// Token: 0x04002872 RID: 10354
+	// Token: 0x0400290B RID: 10507
 	[Nullable(new byte[]
 	{
 		2,

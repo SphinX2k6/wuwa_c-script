@@ -4,40 +4,40 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002BAB RID: 11179
+// Token: 0x02002127 RID: 8487
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class TimeOfDayConfig : ConfigBase
 {
-	// Token: 0x06017282 RID: 94850 RVA: 0x005DEAA5 File Offset: 0x005DCCA5
+	// Token: 0x06014CB3 RID: 85171 RVA: 0x0060B679 File Offset: 0x00609879
 	public TimeOfDay? GetConfig()
 	{
 		return ConfigTimeOfDayById.GetConfig(1, true);
 	}
 
-	// Token: 0x06017283 RID: 94851 RVA: 0x005DEAB0 File Offset: 0x005DCCB0
+	// Token: 0x06014CB4 RID: 85172 RVA: 0x0060B684 File Offset: 0x00609884
 	public double GetInitTimeSecond()
 	{
 		TimeOfDay? timeOfDay;
 		return (double)(((this.GetConfig() != null) ? timeOfDay.GetValueOrDefault().InitTime : 0) * 60);
 	}
 
-	// Token: 0x06017284 RID: 94852 RVA: 0x005DEAE4 File Offset: 0x005DCCE4
+	// Token: 0x06014CB5 RID: 85173 RVA: 0x0060B6B8 File Offset: 0x006098B8
 	public double GetMaxV()
 	{
 		TimeOfDay? timeOfDay;
 		return (double)(60 * ((this.GetConfig() != null) ? timeOfDay.GetValueOrDefault().V : 0));
 	}
 
-	// Token: 0x06017285 RID: 94853 RVA: 0x005DEB18 File Offset: 0x005DCD18
+	// Token: 0x06014CB6 RID: 85174 RVA: 0x0060B6EC File Offset: 0x006098EC
 	public double GetA()
 	{
 		TimeOfDay? timeOfDay;
 		return (double)(60 * ((this.GetConfig() != null) ? timeOfDay.GetValueOrDefault().A : 0));
 	}
 
-	// Token: 0x06017286 RID: 94854 RVA: 0x005DEB4C File Offset: 0x005DCD4C
+	// Token: 0x06014CB7 RID: 85175 RVA: 0x0060B720 File Offset: 0x00609920
 	public double GetRate()
 	{
 		if (this.GetConfig() == null)
@@ -48,7 +48,7 @@ public class TimeOfDayConfig : ConfigBase
 		return (double)this.GetConfig().Value.Rate;
 	}
 
-	// Token: 0x06017287 RID: 94855 RVA: 0x005DEBA8 File Offset: 0x005DCDA8
+	// Token: 0x06014CB8 RID: 85176 RVA: 0x0060B77C File Offset: 0x0060997C
 	public bool InitDayStateTimeSpanList()
 	{
 		if (this.GetConfig() == null)
@@ -72,7 +72,7 @@ public class TimeOfDayConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06017288 RID: 94856 RVA: 0x005DEC88 File Offset: 0x005DCE88
+	// Token: 0x06014CB9 RID: 85177 RVA: 0x0060B85C File Offset: 0x00609A5C
 	public ETodDayState GetDayStateByGameTimeMinute(double minute)
 	{
 		if (this.DayStateMinuteSpanList.Count == 0 && !this.InitDayStateTimeSpanList())
@@ -97,7 +97,7 @@ public class TimeOfDayConfig : ConfigBase
 		return etodDayState;
 	}
 
-	// Token: 0x06017289 RID: 94857 RVA: 0x005DED44 File Offset: 0x005DCF44
+	// Token: 0x06014CBA RID: 85178 RVA: 0x0060B918 File Offset: 0x00609B18
 	public List<FGameplayTag> GetBanGameplayTags()
 	{
 		if (this.BanGameplayTagList.Count > 0)
@@ -121,14 +121,14 @@ public class TimeOfDayConfig : ConfigBase
 		return this.BanGameplayTagList;
 	}
 
-	// Token: 0x0601728A RID: 94858 RVA: 0x005DEDD1 File Offset: 0x005DCFD1
+	// Token: 0x06014CBB RID: 85179 RVA: 0x0060B9A5 File Offset: 0x00609BA5
 	[NullableContext(2)]
 	public IReadOnlyList<DaySelectPreset> GetDayTimeChangePresets()
 	{
 		return ConfigDaySelectPresetAll.GetConfigList(true);
 	}
 
-	// Token: 0x0601728B RID: 94859 RVA: 0x005DEDDC File Offset: 0x005DCFDC
+	// Token: 0x06014CBC RID: 85180 RVA: 0x0060B9B0 File Offset: 0x00609BB0
 	public DaySelectPreset? GetDayTimeChangeConfig(int id)
 	{
 		DaySelectPreset? config = ConfigDaySelectPresetById.GetConfig(id, true);
@@ -139,14 +139,14 @@ public class TimeOfDayConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0601728C RID: 94860 RVA: 0x005DEE08 File Offset: 0x005DD008
+	// Token: 0x06014CBD RID: 85181 RVA: 0x0060B9DC File Offset: 0x00609BDC
 	public string GetTimeChangeText(int id)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetDayTimeChangeConfig(id).Value.Title, null) ?? "";
 	}
 
-	// Token: 0x17001F46 RID: 8006
-	// (get) Token: 0x0601728D RID: 94861 RVA: 0x005DEE3B File Offset: 0x005DD03B
+	// Token: 0x17001F9E RID: 8094
+	// (get) Token: 0x06014CBE RID: 85182 RVA: 0x0060BA0F File Offset: 0x00609C0F
 	public static TimeOfDayConfig Instance
 	{
 		get
@@ -155,7 +155,7 @@ public class TimeOfDayConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601728E RID: 94862 RVA: 0x005DEE42 File Offset: 0x005DD042
+	// Token: 0x06014CBF RID: 85183 RVA: 0x0060BA16 File Offset: 0x00609C16
 	public static TimeOfDayConfig GetOrCreateInstance()
 	{
 		if (TimeOfDayConfig._Instance == null)
@@ -165,7 +165,7 @@ public class TimeOfDayConfig : ConfigBase
 		return TimeOfDayConfig._Instance;
 	}
 
-	// Token: 0x0601728F RID: 94863 RVA: 0x005DEE56 File Offset: 0x005DD056
+	// Token: 0x06014CC0 RID: 85184 RVA: 0x0060BA2A File Offset: 0x00609C2A
 	public static bool CreateInstance()
 	{
 		if (TimeOfDayConfig._Instance != null)
@@ -176,30 +176,30 @@ public class TimeOfDayConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06017290 RID: 94864 RVA: 0x005DEE6C File Offset: 0x005DD06C
+	// Token: 0x06014CC1 RID: 85185 RVA: 0x0060BA40 File Offset: 0x00609C40
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017291 RID: 94865 RVA: 0x005DEE6E File Offset: 0x005DD06E
+	// Token: 0x06014CC2 RID: 85186 RVA: 0x0060BA42 File Offset: 0x00609C42
 	public static void ResetStaticDefaultValue()
 	{
 		TimeOfDayConfig._Instance = null;
 	}
 
-	// Token: 0x06017292 RID: 94866 RVA: 0x005DEE76 File Offset: 0x005DD076
+	// Token: 0x06014CC3 RID: 85187 RVA: 0x0060BA4A File Offset: 0x00609C4A
 	static TimeOfDayConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimeOfDayConfig.CreateStaticDefaultValue), new Action(TimeOfDayConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AD4E RID: 44366
+	// Token: 0x0400B155 RID: 45397
 	private List<TTodTimeSpan> DayStateMinuteSpanList = new List<TTodTimeSpan>();
 
-	// Token: 0x0400AD4F RID: 44367
+	// Token: 0x0400B156 RID: 45398
 	private readonly List<FGameplayTag> BanGameplayTagList = new List<FGameplayTag>();
 
-	// Token: 0x0400AD50 RID: 44368
+	// Token: 0x0400B157 RID: 45399
 	[Nullable(2)]
 	private static TimeOfDayConfig _Instance;
 }

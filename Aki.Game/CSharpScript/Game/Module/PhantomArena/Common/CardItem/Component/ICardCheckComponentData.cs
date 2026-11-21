@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051E0 RID: 20960
+	// Token: 0x020041B0 RID: 16816
 	[NullableContext(1)]
 	public interface ICardCheckComponentData
 	{
-		// Token: 0x170081BE RID: 33214
-		// (get) Token: 0x06035A1B RID: 219675
-		// (set) Token: 0x06035A1C RID: 219676
+		// Token: 0x1700557E RID: 21886
+		// (get) Token: 0x0602A916 RID: 174358
+		// (set) Token: 0x0602A917 RID: 174359
 		int LeftCount { get; set; }
 
-		// Token: 0x170081BF RID: 33215
-		// (get) Token: 0x06035A1D RID: 219677
-		// (set) Token: 0x06035A1E RID: 219678
+		// Token: 0x1700557F RID: 21887
+		// (get) Token: 0x0602A918 RID: 174360
+		// (set) Token: 0x0602A919 RID: 174361
 		int MaxCount { get; set; }
 
-		// Token: 0x170081C0 RID: 33216
-		// (get) Token: 0x06035A1F RID: 219679
-		// (set) Token: 0x06035A20 RID: 219680
+		// Token: 0x17005580 RID: 21888
+		// (get) Token: 0x0602A91A RID: 174362
+		// (set) Token: 0x0602A91B RID: 174363
 		Action OnCheckBtnClick { get; set; }
 	}
 }

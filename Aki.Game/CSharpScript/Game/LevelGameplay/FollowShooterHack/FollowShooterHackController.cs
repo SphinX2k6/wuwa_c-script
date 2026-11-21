@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.FollowShooterHack
 {
-	// Token: 0x02006E23 RID: 28195
+	// Token: 0x02005FA3 RID: 24483
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class FollowShooterHackController : ControllerBase
 	{
-		// Token: 0x06044BC5 RID: 281541 RVA: 0x010F7288 File Offset: 0x010F5488
+		// Token: 0x0603AD2E RID: 240942 RVA: 0x010A17C4 File Offset: 0x0109F9C4
 		public void AddRelationship(long followerId, long hackTargetId)
 		{
 			if (!this.HackRelationshipMap.ContainsKey(followerId))
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.FollowShooterHack
 			}
 		}
 
-		// Token: 0x06044BC6 RID: 281542 RVA: 0x010F7338 File Offset: 0x010F5538
+		// Token: 0x0603AD2F RID: 240943 RVA: 0x010A1874 File Offset: 0x0109FA74
 		public void RemoveRelationship(long followerId, long hackTargetId)
 		{
 			if (!this.HackRelationshipMap.ContainsKey(followerId))
@@ -76,8 +76,8 @@ namespace CSharpScript.Game.LevelGamePlay.FollowShooterHack
 			this.HackRelationshipMap[followerId].Remove(hackTargetId);
 		}
 
-		// Token: 0x170099FF RID: 39423
-		// (get) Token: 0x06044BC7 RID: 281543 RVA: 0x010F73E2 File Offset: 0x010F55E2
+		// Token: 0x17006F02 RID: 28418
+		// (get) Token: 0x0603AD30 RID: 240944 RVA: 0x010A191E File Offset: 0x0109FB1E
 		public static FollowShooterHackController Instance
 		{
 			get
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.FollowShooterHack
 			}
 		}
 
-		// Token: 0x06044BC8 RID: 281544 RVA: 0x010F73E9 File Offset: 0x010F55E9
+		// Token: 0x0603AD31 RID: 240945 RVA: 0x010A1925 File Offset: 0x0109FB25
 		public static FollowShooterHackController GetOrCreateInstance()
 		{
 			if (FollowShooterHackController._Instance == null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.FollowShooterHack
 			return FollowShooterHackController._Instance;
 		}
 
-		// Token: 0x06044BC9 RID: 281545 RVA: 0x010F73FD File Offset: 0x010F55FD
+		// Token: 0x0603AD32 RID: 240946 RVA: 0x010A1939 File Offset: 0x0109FB39
 		public static bool CreateInstance()
 		{
 			if (FollowShooterHackController._Instance != null)
@@ -107,33 +107,33 @@ namespace CSharpScript.Game.LevelGamePlay.FollowShooterHack
 			return true;
 		}
 
-		// Token: 0x06044BCA RID: 281546 RVA: 0x010F7413 File Offset: 0x010F5613
+		// Token: 0x0603AD33 RID: 240947 RVA: 0x010A194F File Offset: 0x0109FB4F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044BCB RID: 281547 RVA: 0x010F7415 File Offset: 0x010F5615
+		// Token: 0x0603AD34 RID: 240948 RVA: 0x010A1951 File Offset: 0x0109FB51
 		public static void ResetStaticDefaultValue()
 		{
 			FollowShooterHackController._Instance = null;
 		}
 
-		// Token: 0x06044BCC RID: 281548 RVA: 0x010F741D File Offset: 0x010F561D
+		// Token: 0x0603AD35 RID: 240949 RVA: 0x010A1959 File Offset: 0x0109FB59
 		static FollowShooterHackController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FollowShooterHackController.CreateStaticDefaultValue), new Action(FollowShooterHackController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023C1A RID: 146458
+		// Token: 0x0401EEBD RID: 126653
 		private const int GAMEPLAY_CUE_ID = 640015002;
 
-		// Token: 0x04023C1B RID: 146459
+		// Token: 0x0401EEBE RID: 126654
 		private readonly Dictionary<long, HashSet<long>> HackRelationshipMap = new Dictionary<long, HashSet<long>>();
 
-		// Token: 0x04023C1C RID: 146460
+		// Token: 0x0401EEBF RID: 126655
 		private readonly Dictionary<long, long> HackedTargetGameplayCueMap = new Dictionary<long, long>();
 
-		// Token: 0x04023C1D RID: 146461
+		// Token: 0x0401EEC0 RID: 126656
 		[Nullable(2)]
 		private static FollowShooterHackController _Instance;
 	}

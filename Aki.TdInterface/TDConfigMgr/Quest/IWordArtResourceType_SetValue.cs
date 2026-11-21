@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001219 RID: 4633
+	// Token: 0x02001355 RID: 4949
 	public class IWordArtResourceType_SetValue
 	{
-		// Token: 0x04003ED5 RID: 16085
+		// Token: 0x04004243 RID: 16963
 		public EWordArtResourceType Type;
 	}
 }

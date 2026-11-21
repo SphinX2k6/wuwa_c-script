@@ -6,37 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002185 RID: 8581
+	// Token: 0x02000711 RID: 1809
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UILayoutWithAnimation")]
 	[UnrealStructLayout(416, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 416)]
 	public abstract class UUILayoutWithAnimation : UUILayoutBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060207DA RID: 133082 RVA: 0x0030245C File Offset: 0x0030065C
+		// Token: 0x06009B50 RID: 39760 RVA: 0x000E85BD File Offset: 0x000E67BD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUILayoutWithAnimation._ClassPtr;
 		}
 
-		// Token: 0x17007F20 RID: 32544
-		// (get) Token: 0x060207DB RID: 133083 RVA: 0x00302468 File Offset: 0x00300668
-		// (set) Token: 0x060207DC RID: 133084 RVA: 0x00302478 File Offset: 0x00300678
-		public unsafe EUILayoutChangePositionAnimationType AnimationType
-		{
-			get
-			{
-				return (EUILayoutChangePositionAnimationType)(*(base.NativePtr + (IntPtr)UUILayoutWithAnimation.__PropertyOffset_AnimationType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUILayoutWithAnimation.__PropertyOffset_AnimationType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007F21 RID: 32545
-		// (get) Token: 0x060207DD RID: 133085 RVA: 0x00302489 File Offset: 0x00300689
-		// (set) Token: 0x060207DE RID: 133086 RVA: 0x00302499 File Offset: 0x00300699
+		// Token: 0x17001CC9 RID: 7369
+		// (get) Token: 0x06009B51 RID: 39761 RVA: 0x000E85C9 File Offset: 0x000E67C9
+		// (set) Token: 0x06009B52 RID: 39762 RVA: 0x000E85D9 File Offset: 0x000E67D9
 		public unsafe float AnimationDuration
 		{
 			get
@@ -49,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F22 RID: 32546
-		// (get) Token: 0x060207DF RID: 133087 RVA: 0x003024AC File Offset: 0x003006AC
-		// (set) Token: 0x060207E0 RID: 133088 RVA: 0x003024E5 File Offset: 0x003006E5
+		// Token: 0x17001CCA RID: 7370
+		// (get) Token: 0x06009B53 RID: 39763 RVA: 0x000E85EC File Offset: 0x000E67EC
+		// (set) Token: 0x06009B54 RID: 39764 RVA: 0x000E8625 File Offset: 0x000E6825
 		public TArray<ULTweener> TweenerArray
 		{
 			get
@@ -70,91 +55,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060207E1 RID: 133089 RVA: 0x003024F3 File Offset: 0x003006F3
-		public void SetAnimationType(EUILayoutChangePositionAnimationType value)
-		{
-			UUILayoutWithAnimation.__SetAnimationType_Internal(base.NativePtr, value);
-		}
-
-		// Token: 0x060207E2 RID: 133090 RVA: 0x00302501 File Offset: 0x00300701
+		// Token: 0x06009B55 RID: 39765 RVA: 0x000E8633 File Offset: 0x000E6833
 		public void SetAnimationDuration(float value)
 		{
 			UUILayoutWithAnimation.__SetAnimationDuration_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x060207E3 RID: 133091 RVA: 0x0030250F File Offset: 0x0030070F
-		public EUILayoutChangePositionAnimationType GetAnimationType()
-		{
-			return UUILayoutWithAnimation.__GetAnimationType_Internal(base.NativePtr);
-		}
-
-		// Token: 0x060207E4 RID: 133092 RVA: 0x0030251C File Offset: 0x0030071C
+		// Token: 0x06009B56 RID: 39766 RVA: 0x000E8641 File Offset: 0x000E6841
 		public float GetAnimationDuration()
 		{
 			return UUILayoutWithAnimation.__GetAnimationDuration_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060207E5 RID: 133093 RVA: 0x00302529 File Offset: 0x00300729
+		// Token: 0x06009B57 RID: 39767 RVA: 0x000E864E File Offset: 0x000E684E
 		public void CancelAnimation(bool callComplete = false)
 		{
 			UUILayoutWithAnimation.__CancelAnimation_Internal(base.NativePtr, callComplete);
 		}
 
-		// Token: 0x060207E6 RID: 133094
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetAnimationType_Internal(IntPtr @this, EUILayoutChangePositionAnimationType value);
-
-		// Token: 0x060207E7 RID: 133095
+		// Token: 0x06009B58 RID: 39768
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAnimationDuration_Internal(IntPtr @this, float value);
 
-		// Token: 0x060207E8 RID: 133096
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern EUILayoutChangePositionAnimationType __GetAnimationType_Internal(IntPtr @this);
-
-		// Token: 0x060207E9 RID: 133097
+		// Token: 0x06009B59 RID: 39769
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAnimationDuration_Internal(IntPtr @this);
 
-		// Token: 0x060207EA RID: 133098
+		// Token: 0x06009B5A RID: 39770
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CancelAnimation_Internal(IntPtr @this, bool callComplete);
 
-		// Token: 0x060207EB RID: 133099 RVA: 0x00302537 File Offset: 0x00300737
+		// Token: 0x06009B5B RID: 39771 RVA: 0x000E865C File Offset: 0x000E685C
 		static UUILayoutWithAnimation()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UILayoutWithAnimation");
 		}
 
-		// Token: 0x060207EC RID: 133100 RVA: 0x00302548 File Offset: 0x00300748
+		// Token: 0x06009B5C RID: 39772 RVA: 0x000E866C File Offset: 0x000E686C
 		protected UUILayoutWithAnimation() : this(BuiltinUtils.AllocNativeUObject(UUILayoutWithAnimation.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060207ED RID: 133101 RVA: 0x00302570 File Offset: 0x00300770
+		// Token: 0x06009B5D RID: 39773 RVA: 0x000E8694 File Offset: 0x000E6894
 		protected UUILayoutWithAnimation(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401168C RID: 71308
+		// Token: 0x0400430C RID: 17164
 		public new const string __ObjectPath = "/Script/LGUI.UILayoutWithAnimation";
 
-		// Token: 0x0401168D RID: 71309
+		// Token: 0x0400430D RID: 17165
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401168E RID: 71310
+		// Token: 0x0400430E RID: 17166
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401168F RID: 71311
-		internal static int __PropertyOffset_AnimationType;
-
-		// Token: 0x04011690 RID: 71312
+		// Token: 0x0400430F RID: 17167
 		internal static int __PropertyOffset_AnimationDuration;
 
-		// Token: 0x04011691 RID: 71313
+		// Token: 0x04004310 RID: 17168
 		internal static int __PropertyOffset_TweenerArray;
 
-		// Token: 0x04011692 RID: 71314
+		// Token: 0x04004311 RID: 17169
 		[Nullable(new byte[]
 		{
 			2,

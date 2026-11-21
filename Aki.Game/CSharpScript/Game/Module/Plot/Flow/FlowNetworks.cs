@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x0200509E RID: 20638
+	// Token: 0x0200406E RID: 16494
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FlowNetworks
 	{
-		// Token: 0x06034E38 RID: 216632 RVA: 0x00C850E8 File Offset: 0x00C832E8
+		// Token: 0x06029D31 RID: 171313 RVA: 0x00BD2370 File Offset: 0x00BD0570
 		public static void Register()
 		{
 			Net instance = Net.Instance;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			instance3.Register(id3, callback3);
 		}
 
-		// Token: 0x06034E39 RID: 216633 RVA: 0x00C85176 File Offset: 0x00C83376
+		// Token: 0x06029D32 RID: 171314 RVA: 0x00BD23FE File Offset: 0x00BD05FE
 		public static void UnRegister()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FlowStartNotify);
@@ -49,28 +49,28 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			Net.Instance.UnRegister(ENotifyMessageId.FlowServerSkipNotify);
 		}
 
-		// Token: 0x06034E3A RID: 216634 RVA: 0x00C851A8 File Offset: 0x00C833A8
+		// Token: 0x06029D33 RID: 171315 RVA: 0x00BD2430 File Offset: 0x00BD0630
 		private static void HandleFlowStartNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			FlowStartNotify notify = (FlowStartNotify)msg;
 			FlowController.Instance.StartNotify(notify);
 		}
 
-		// Token: 0x06034E3B RID: 216635 RVA: 0x00C851C8 File Offset: 0x00C833C8
+		// Token: 0x06029D34 RID: 171316 RVA: 0x00BD2450 File Offset: 0x00BD0650
 		private static void HandleFlowEndNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			FlowEndNotify notify = (FlowEndNotify)msg;
 			FlowController.Instance.EndNotify(notify);
 		}
 
-		// Token: 0x06034E3C RID: 216636 RVA: 0x00C851E8 File Offset: 0x00C833E8
+		// Token: 0x06029D35 RID: 171317 RVA: 0x00BD2470 File Offset: 0x00BD0670
 		private static void HandleFlowSkipBlackScreenNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			FlowServerSkipNotify notify = (FlowServerSkipNotify)msg;
 			FlowController.Instance.SkipBlackScreenNotify(notify);
 		}
 
-		// Token: 0x06034E3D RID: 216637 RVA: 0x00C85208 File Offset: 0x00C83408
+		// Token: 0x06029D36 RID: 171318 RVA: 0x00BD2490 File Offset: 0x00BD0690
 		public static void RequestGmFinish()
 		{
 			ChatRequest chatRequest = ChatRequest.Create();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, 0);
 		}
 
-		// Token: 0x06034E3E RID: 216638 RVA: 0x00C85260 File Offset: 0x00C83460
+		// Token: 0x06029D37 RID: 171319 RVA: 0x00BD24E8 File Offset: 0x00BD06E8
 		public static void RequestAction(long flowIncId, int actionId, Action<ErrorCode> callback)
 		{
 			FlowActionRequest flowActionRequest = FlowActionRequest.Create();
@@ -94,11 +94,11 @@ namespace CSharpScript.Game.Module.Plot.Flow
 				{
 					callback(flowActionResponse.Code);
 				}
-				FlowNetworks.HandleErrorCode(flowActionResponse.Code, 24390);
+				FlowNetworks.HandleErrorCode(flowActionResponse.Code, 29872);
 			}, 0);
 		}
 
-		// Token: 0x06034E3F RID: 216639 RVA: 0x00C852AC File Offset: 0x00C834AC
+		// Token: 0x06029D38 RID: 171320 RVA: 0x00BD2534 File Offset: 0x00BD0734
 		public static void RequestFlowEnd(long flowIncId, bool isSkip, [Nullable(new byte[]
 		{
 			1,
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 				}
 				else
 				{
-					FlowNetworks.HandleErrorCode(flowEndResponse.Code, 24390);
+					FlowNetworks.HandleErrorCode(flowEndResponse.Code, 29872);
 					Action<long, ErrorCode?> callback3 = callback;
 					if (callback3 == null)
 					{
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, 0);
 		}
 
-		// Token: 0x06034E40 RID: 216640 RVA: 0x00C853D8 File Offset: 0x00C835D8
+		// Token: 0x06029D39 RID: 171321 RVA: 0x00BD2660 File Offset: 0x00BD0860
 		public static void RequestFlowRestart(long flowIncId)
 		{
 			FlowRestartRequest flowRestartRequest = FlowRestartRequest.Create();
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, 0);
 		}
 
-		// Token: 0x06034E41 RID: 216641 RVA: 0x00C85424 File Offset: 0x00C83624
+		// Token: 0x06029D3A RID: 171322 RVA: 0x00BD26AC File Offset: 0x00BD08AC
 		[NullableContext(1)]
 		public static void RequestSeqEndPosition(FlowContext context, IVector location, IRotator rotation)
 		{
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, 0);
 		}
 
-		// Token: 0x06034E42 RID: 216642 RVA: 0x00C854C8 File Offset: 0x00C836C8
+		// Token: 0x06029D3B RID: 171323 RVA: 0x00BD2750 File Offset: 0x00BD0950
 		private static void HandleErrorCode(ErrorCode code, int messageId)
 		{
 			if (code == ErrorCode.ErrFinishFlowFail)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E43 RID: 216643 RVA: 0x00C85528 File Offset: 0x00C83728
+		// Token: 0x06029D3C RID: 171324 RVA: 0x00BD27B0 File Offset: 0x00BD09B0
 		[NullableContext(1)]
 		public static void RequestSafeTeleport(long flowIncId, Action<bool> callback)
 		{
@@ -254,11 +254,11 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, 0);
 		}
 
-		// Token: 0x0200B229 RID: 45609
+		// Token: 0x02009C62 RID: 40034
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04036071 RID: 221297
+			// Token: 0x04030AC5 RID: 199365
 			[Nullable(new byte[]
 			{
 				0,
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__HandleFlowStartNotify;
 
-			// Token: 0x04036072 RID: 221298
+			// Token: 0x04030AC6 RID: 199366
 			[Nullable(new byte[]
 			{
 				0,
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <1>__HandleFlowEndNotify;
 
-			// Token: 0x04036073 RID: 221299
+			// Token: 0x04030AC7 RID: 199367
 			[Nullable(new byte[]
 			{
 				0,

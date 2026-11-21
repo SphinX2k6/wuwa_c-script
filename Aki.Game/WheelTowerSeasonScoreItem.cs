@@ -9,7 +9,7 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015D8 RID: 5592
+// Token: 0x02000A90 RID: 2704
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScoreData>
 {
-	// Token: 0x06009E3B RID: 40507 RVA: 0x002277CC File Offset: 0x002259CC
+	// Token: 0x06007219 RID: 29209 RVA: 0x0023157C File Offset: 0x0022F77C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,7 +34,7 @@ public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScor
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E3C RID: 40508 RVA: 0x00227858 File Offset: 0x00225A58
+	// Token: 0x0600721A RID: 29210 RVA: 0x00231608 File Offset: 0x0022F808
 	protected override void OnStart()
 	{
 		this.RewardItemGrid = new SmallItemGrid();
@@ -46,7 +46,7 @@ public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScor
 		});
 	}
 
-	// Token: 0x06009E3D RID: 40509 RVA: 0x002278C8 File Offset: 0x00225AC8
+	// Token: 0x0600721B RID: 29211 RVA: 0x00231678 File Offset: 0x0022F878
 	[NullableContext(1)]
 	public override void Refresh(IWheelTowerSeasonScoreData data, bool isSelected, int gridIndex)
 	{
@@ -66,7 +66,7 @@ public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScor
 		this.RefreshProgress();
 	}
 
-	// Token: 0x06009E3E RID: 40510 RVA: 0x00227938 File Offset: 0x00225B38
+	// Token: 0x0600721C RID: 29212 RVA: 0x002316E8 File Offset: 0x0022F8E8
 	private void RefreshProgress()
 	{
 		if (this.DataInternal == null)
@@ -97,7 +97,7 @@ public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScor
 		}
 	}
 
-	// Token: 0x06009E3F RID: 40511 RVA: 0x002279E4 File Offset: 0x00225BE4
+	// Token: 0x0600721D RID: 29213 RVA: 0x00231794 File Offset: 0x0022F994
 	private void RefreshGrid()
 	{
 		if (this.DataInternal == null || this.RewardItem == null || this.RewardItemGrid == null)
@@ -119,7 +119,7 @@ public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScor
 		this.RewardItemGrid.SetLockBlackBigVisible(lockBlackBigVisible);
 	}
 
-	// Token: 0x06009E40 RID: 40512 RVA: 0x00227AEC File Offset: 0x00225CEC
+	// Token: 0x0600721E RID: 29214 RVA: 0x0023189C File Offset: 0x0022FA9C
 	private void OnClickedGrid()
 	{
 		if (this.DataInternal == null || this.RewardItem == null)
@@ -148,18 +148,18 @@ public class WheelTowerSeasonScoreItem : GridProxyAbstract<IWheelTowerSeasonScor
 			MotorcycleDiyController.Instance.OpenMotorGeneralPreviewView(motorPreviewId);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null, false);
 	}
 
-	// Token: 0x04004667 RID: 18023
+	// Token: 0x0400470D RID: 18189
 	private IWheelTowerSeasonScoreData DataInternal;
 
-	// Token: 0x04004668 RID: 18024
+	// Token: 0x0400470E RID: 18190
 	private SmallItemGrid RewardItemGrid;
 
-	// Token: 0x04004669 RID: 18025
+	// Token: 0x0400470F RID: 18191
 	private TItem? RewardItem;
 
-	// Token: 0x0400466A RID: 18026
+	// Token: 0x04004710 RID: 18192
 	public Action OnClickToGet;
 }

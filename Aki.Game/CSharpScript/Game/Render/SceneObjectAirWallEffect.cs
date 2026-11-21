@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045E6 RID: 17894
+	// Token: 0x0200350F RID: 13583
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneObjectAirWallEffect
 	{
-		// Token: 0x0602E265 RID: 189029 RVA: 0x00AA9584 File Offset: 0x00AA7784
+		// Token: 0x0602295A RID: 141658 RVA: 0x009D5D1C File Offset: 0x009D3F1C
 		private void InitTraceInfo()
 		{
 			UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Render
 			this.SphereTrace = utraceSphereElement;
 		}
 
-		// Token: 0x0602E266 RID: 189030 RVA: 0x00AA9630 File Offset: 0x00AA7830
+		// Token: 0x0602295B RID: 141659 RVA: 0x009D5DC8 File Offset: 0x009D3FC8
 		protected void GetActorLocation()
 		{
 			Vector curPosition = this.CurPosition;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Render
 			curPosition.FromUeVector(fvectorDouble);
 		}
 
-		// Token: 0x0602E267 RID: 189031 RVA: 0x00AA9656 File Offset: 0x00AA7856
+		// Token: 0x0602295C RID: 141660 RVA: 0x009D5DEE File Offset: 0x009D3FEE
 		[NullableContext(2)]
 		public void Start(USceneComponent actorToAttach)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Render
 			this.InitTraceInfo();
 		}
 
-		// Token: 0x0602E268 RID: 189032 RVA: 0x00AA9670 File Offset: 0x00AA7870
+		// Token: 0x0602295D RID: 141661 RVA: 0x009D5E08 File Offset: 0x009D4008
 		public void AfterRegistered()
 		{
 			if (!this.IsReady)
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Render
 			this.IsEnabled = true;
 		}
 
-		// Token: 0x0602E269 RID: 189033 RVA: 0x00AA9699 File Offset: 0x00AA7899
+		// Token: 0x0602295E RID: 141662 RVA: 0x009D5E31 File Offset: 0x009D4031
 		public void BeforeUnregistered()
 		{
 			this.IsEnabled = false;
 		}
 
-		// Token: 0x0602E26A RID: 189034 RVA: 0x00AA96A4 File Offset: 0x00AA78A4
+		// Token: 0x0602295F RID: 141663 RVA: 0x009D5E3C File Offset: 0x009D403C
 		public void Update(double deltaTime)
 		{
 			if (this.IsEnabled)
@@ -109,29 +109,29 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018C29 RID: 101417
+		// Token: 0x04013268 RID: 78440
 		private const string PROFILE_KEY = "SceneObjectAirWallEffect_Update";
 
-		// Token: 0x04018C2A RID: 101418
+		// Token: 0x04013269 RID: 78441
 		private const int RADIUS = 1;
 
-		// Token: 0x04018C2B RID: 101419
+		// Token: 0x0401326A RID: 78442
 		[Nullable(2)]
 		public USceneComponent ActorToAttach;
 
-		// Token: 0x04018C2C RID: 101420
+		// Token: 0x0401326B RID: 78443
 		public bool IsReady;
 
-		// Token: 0x04018C2D RID: 101421
+		// Token: 0x0401326C RID: 78444
 		public bool IsEnabled;
 
-		// Token: 0x04018C2E RID: 101422
+		// Token: 0x0401326D RID: 78445
 		private readonly Vector LastPosition = Vector.Create();
 
-		// Token: 0x04018C2F RID: 101423
+		// Token: 0x0401326E RID: 78446
 		private readonly Vector CurPosition = Vector.Create();
 
-		// Token: 0x04018C30 RID: 101424
+		// Token: 0x0401326F RID: 78447
 		[Nullable(2)]
 		private UTraceSphereElement SphereTrace;
 	}

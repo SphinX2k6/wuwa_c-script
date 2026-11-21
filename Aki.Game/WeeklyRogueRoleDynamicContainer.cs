@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D39 RID: 11577
+// Token: 0x02002293 RID: 8851
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<IWeeklyRogueRoleGroupInfo>
 {
-	// Token: 0x0601855F RID: 99679 RVA: 0x00631C18 File Offset: 0x0062FE18
+	// Token: 0x06015E01 RID: 89601 RVA: 0x00657C28 File Offset: 0x00655E28
 	public UniTask Init(UUIItem actor)
 	{
 		WeeklyRogueRoleDynamicContainer.<Init>d__4 <Init>d__;
@@ -25,12 +25,12 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018560 RID: 99680 RVA: 0x00631C63 File Offset: 0x0062FE63
+	// Token: 0x06015E02 RID: 89602 RVA: 0x00657C73 File Offset: 0x00655E73
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x06018561 RID: 99681 RVA: 0x00631C65 File Offset: 0x0062FE65
+	// Token: 0x06015E03 RID: 89603 RVA: 0x00657C75 File Offset: 0x00655E75
 	public AUIBaseActor GetUsingItem(IWeeklyRogueRoleGroupInfo data)
 	{
 		if (data.IsTitleType)
@@ -40,7 +40,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		return (AUIBaseActor)base.GetGridLayout(0).GetOwner();
 	}
 
-	// Token: 0x06018562 RID: 99682 RVA: 0x00631C92 File Offset: 0x0062FE92
+	// Token: 0x06015E04 RID: 89604 RVA: 0x00657CA2 File Offset: 0x00655EA2
 	public void Update(IWeeklyRogueRoleGroupInfo data, int index)
 	{
 		this.Data = data;
@@ -52,13 +52,13 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		this.RefreshRoleList(this.Data);
 	}
 
-	// Token: 0x06018563 RID: 99683 RVA: 0x00631CBC File Offset: 0x0062FEBC
+	// Token: 0x06015E05 RID: 89605 RVA: 0x00657CCC File Offset: 0x00655ECC
 	public void InitData(IWeeklyRogueRoleGroupInfo data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06018564 RID: 99684 RVA: 0x00631CC5 File Offset: 0x0062FEC5
+	// Token: 0x06015E06 RID: 89606 RVA: 0x00657CD5 File Offset: 0x00655ED5
 	public void Refresh()
 	{
 		if (this.Data.IsTitleType)
@@ -74,7 +74,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		roleLayout.RefreshWithoutDataSync();
 	}
 
-	// Token: 0x06018565 RID: 99685 RVA: 0x00631CF4 File Offset: 0x0062FEF4
+	// Token: 0x06015E07 RID: 89607 RVA: 0x00657D04 File Offset: 0x00655F04
 	public void RefreshRoleByRoleId(int roleId)
 	{
 		if (this.Data.IsTitleType || this.RoleLayout == null)
@@ -97,7 +97,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		layoutItemByKey.Refresh(roleDataBase, isSelected, gridIndex);
 	}
 
-	// Token: 0x06018566 RID: 99686 RVA: 0x00631D9C File Offset: 0x0062FF9C
+	// Token: 0x06015E08 RID: 89608 RVA: 0x00657DAC File Offset: 0x00655FAC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -112,14 +112,14 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		};
 	}
 
-	// Token: 0x06018567 RID: 99687 RVA: 0x00631E50 File Offset: 0x00630050
+	// Token: 0x06015E09 RID: 89609 RVA: 0x00657E60 File Offset: 0x00656060
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(false);
 		base.GetGridLayout(0).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06018568 RID: 99688 RVA: 0x00631E84 File Offset: 0x00630084
+	// Token: 0x06015E0A RID: 89610 RVA: 0x00657E94 File Offset: 0x00656094
 	private void RefreshTitle(IWeeklyRogueRoleGroupInfo info)
 	{
 		base.GetGridLayout(0).RootUIComp.Get().SetUIActive(false);
@@ -134,7 +134,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		base.GetItem(2).SetUIActive(true);
 	}
 
-	// Token: 0x06018569 RID: 99689 RVA: 0x00631F30 File Offset: 0x00630130
+	// Token: 0x06015E0B RID: 89611 RVA: 0x00657F40 File Offset: 0x00656140
 	private void RefreshRoleList(IWeeklyRogueRoleGroupInfo info)
 	{
 		WeeklyRogueRoleDynamicContainer.<>c__DisplayClass14_0 CS$<>8__locals1 = new WeeklyRogueRoleDynamicContainer.<>c__DisplayClass14_0();
@@ -153,7 +153,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		}
 	}
 
-	// Token: 0x0601856A RID: 99690 RVA: 0x00631FCD File Offset: 0x006301CD
+	// Token: 0x06015E0C RID: 89612 RVA: 0x00657FDD File Offset: 0x006561DD
 	private WeeklyRogueRoleGridItem OnCreateRole()
 	{
 		WeeklyRogueRoleGridItem weeklyRogueRoleGridItem = new WeeklyRogueRoleGridItem();
@@ -162,7 +162,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		return weeklyRogueRoleGridItem;
 	}
 
-	// Token: 0x0601856B RID: 99691 RVA: 0x00631FF8 File Offset: 0x006301F8
+	// Token: 0x06015E0D RID: 89613 RVA: 0x00658008 File Offset: 0x00656208
 	protected void ToggleFunction(MediumItemGridExtendCallback @params)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -211,7 +211,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		refreshRole(roleDataBase);
 	}
 
-	// Token: 0x0601856C RID: 99692 RVA: 0x006320F0 File Offset: 0x006302F0
+	// Token: 0x06015E0E RID: 89614 RVA: 0x00658100 File Offset: 0x00656300
 	protected bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 	{
 		if (((RoleDataBase)data).IsTrialRole())
@@ -230,7 +230,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 		return true;
 	}
 
-	// Token: 0x0400B4B4 RID: 46260
+	// Token: 0x0400B829 RID: 47145
 	[Nullable(new byte[]
 	{
 		2,
@@ -238,7 +238,7 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 	})]
 	public Action<RoleDataBase> RefreshRole;
 
-	// Token: 0x0400B4B5 RID: 46261
+	// Token: 0x0400B82A RID: 47146
 	[Nullable(new byte[]
 	{
 		2,
@@ -247,9 +247,9 @@ public class WeeklyRogueRoleDynamicContainer : UiPanelBase, IDynamicScrollItem<I
 	})]
 	private GenericLayout<WeeklyRogueRoleGridItem, RoleDataBase> RoleLayout;
 
-	// Token: 0x0400B4B6 RID: 46262
+	// Token: 0x0400B82B RID: 47147
 	private IWeeklyRogueRoleGroupInfo Data;
 
-	// Token: 0x0400B4B7 RID: 46263
+	// Token: 0x0400B82C RID: 47148
 	private List<RoleDataBase> RoleDataList = new List<RoleDataBase>();
 }

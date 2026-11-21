@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200017C RID: 380
+	// Token: 0x0200017F RID: 383
 	[NetMessage(EMessageId.BattleScoreNotify)]
 	public sealed class BattleScoreNotify : IMessage<BattleScoreNotify>, IMessage, IEquatable<BattleScoreNotify>, IDeepCloneable<BattleScoreNotify>, IBufferMessage
 	{
-		// Token: 0x06002E35 RID: 11829 RVA: 0x00077174 File Offset: 0x00075374
+		// Token: 0x06002EAC RID: 11948 RVA: 0x000785A0 File Offset: 0x000767A0
 		[NullableContext(1)]
 		public static BattleScoreNotify Create()
 		{
 			return new BattleScoreNotify();
 		}
 
-		// Token: 0x17000708 RID: 1800
-		// (get) Token: 0x06002E36 RID: 11830 RVA: 0x0007717B File Offset: 0x0007537B
+		// Token: 0x1700071C RID: 1820
+		// (get) Token: 0x06002EAD RID: 11949 RVA: 0x000785A7 File Offset: 0x000767A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000709 RID: 1801
-		// (get) Token: 0x06002E37 RID: 11831 RVA: 0x0007717E File Offset: 0x0007537E
+		// Token: 0x1700071D RID: 1821
+		// (get) Token: 0x06002EAE RID: 11950 RVA: 0x000785AA File Offset: 0x000767AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002E38 RID: 11832 RVA: 0x00077185 File Offset: 0x00075385
+		// Token: 0x06002EAF RID: 11951 RVA: 0x000785B1 File Offset: 0x000767B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleScoreNotify()
 		{
 		}
 
-		// Token: 0x06002E39 RID: 11833 RVA: 0x0007718D File Offset: 0x0007538D
+		// Token: 0x06002EB0 RID: 11952 RVA: 0x000785B9 File Offset: 0x000767B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleScoreNotify(BattleScoreNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002E3A RID: 11834 RVA: 0x000771BE File Offset: 0x000753BE
+		// Token: 0x06002EB1 RID: 11953 RVA: 0x000785EA File Offset: 0x000767EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleScoreNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new BattleScoreNotify(this);
 		}
 
-		// Token: 0x1700070A RID: 1802
-		// (get) Token: 0x06002E3B RID: 11835 RVA: 0x000771C6 File Offset: 0x000753C6
-		// (set) Token: 0x06002E3C RID: 11836 RVA: 0x000771CE File Offset: 0x000753CE
+		// Token: 0x1700071E RID: 1822
+		// (get) Token: 0x06002EB2 RID: 11954 RVA: 0x000785F2 File Offset: 0x000767F2
+		// (set) Token: 0x06002EB3 RID: 11955 RVA: 0x000785FA File Offset: 0x000767FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int BattleScoreConfId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700070B RID: 1803
-		// (get) Token: 0x06002E3D RID: 11837 RVA: 0x000771D7 File Offset: 0x000753D7
-		// (set) Token: 0x06002E3E RID: 11838 RVA: 0x000771DF File Offset: 0x000753DF
+		// Token: 0x1700071F RID: 1823
+		// (get) Token: 0x06002EB4 RID: 11956 RVA: 0x00078603 File Offset: 0x00076803
+		// (set) Token: 0x06002EB5 RID: 11957 RVA: 0x0007860B File Offset: 0x0007680B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ScoreTotal
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002E3F RID: 11839 RVA: 0x000771E8 File Offset: 0x000753E8
+		// Token: 0x06002EB6 RID: 11958 RVA: 0x00078614 File Offset: 0x00076814
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BattleScoreNotify);
 		}
 
-		// Token: 0x06002E40 RID: 11840 RVA: 0x000771F6 File Offset: 0x000753F6
+		// Token: 0x06002EB7 RID: 11959 RVA: 0x00078622 File Offset: 0x00076822
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BattleScoreNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.BattleScoreConfId == other.BattleScoreConfId && this.ScoreTotal == other.ScoreTotal && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002E41 RID: 11841 RVA: 0x00077234 File Offset: 0x00075434
+		// Token: 0x06002EB8 RID: 11960 RVA: 0x00078660 File Offset: 0x00076860
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002E42 RID: 11842 RVA: 0x0007728C File Offset: 0x0007548C
+		// Token: 0x06002EB9 RID: 11961 RVA: 0x000786B8 File Offset: 0x000768B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002E43 RID: 11843 RVA: 0x00077299 File Offset: 0x00075499
+		// Token: 0x06002EBA RID: 11962 RVA: 0x000786C5 File Offset: 0x000768C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002E44 RID: 11844 RVA: 0x000772A4 File Offset: 0x000754A4
+		// Token: 0x06002EBB RID: 11963 RVA: 0x000786D0 File Offset: 0x000768D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ScoreTotal != 0)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.ScoreTotal);
 			}
 			if (this.BattleScoreConfId != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(72);
 				output.WriteInt32(this.BattleScoreConfId);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002E45 RID: 11845 RVA: 0x00077300 File Offset: 0x00075500
+		// Token: 0x06002EBC RID: 11964 RVA: 0x0007872C File Offset: 0x0007692C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002E46 RID: 11846 RVA: 0x00077358 File Offset: 0x00075558
+		// Token: 0x06002EBD RID: 11965 RVA: 0x00078784 File Offset: 0x00076984
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BattleScoreNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002E47 RID: 11847 RVA: 0x000773A8 File Offset: 0x000755A8
+		// Token: 0x06002EBE RID: 11966 RVA: 0x000787D4 File Offset: 0x000769D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002E48 RID: 11848 RVA: 0x000773B4 File Offset: 0x000755B4
+		// Token: 0x06002EBF RID: 11967 RVA: 0x000787E0 File Offset: 0x000769E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 40U)
+				if (num != 16U)
 				{
-					if (num != 120U)
+					if (num != 72U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002866 RID: 10342
+		// Token: 0x040028DA RID: 10458
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002867 RID: 10343
-		public const int BattleScoreConfIdFieldNumber = 15;
+		// Token: 0x040028DB RID: 10459
+		public const int BattleScoreConfIdFieldNumber = 9;
 
-		// Token: 0x04002868 RID: 10344
+		// Token: 0x040028DC RID: 10460
 		private int battleScoreConfId_;
 
-		// Token: 0x04002869 RID: 10345
-		public const int ScoreTotalFieldNumber = 5;
+		// Token: 0x040028DD RID: 10461
+		public const int ScoreTotalFieldNumber = 2;
 
-		// Token: 0x0400286A RID: 10346
+		// Token: 0x040028DE RID: 10462
 		private int scoreTotal_;
 	}
 }

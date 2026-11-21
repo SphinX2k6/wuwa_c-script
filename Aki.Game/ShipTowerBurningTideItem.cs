@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029A2 RID: 10658
+// Token: 0x02001F1D RID: 7965
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerBurningTideItem : UiPanelBase
 {
-	// Token: 0x06016184 RID: 90500 RVA: 0x005962A4 File Offset: 0x005944A4
+	// Token: 0x06013B8A RID: 80778 RVA: 0x005C1264 File Offset: 0x005BF464
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class ShipTowerBurningTideItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016185 RID: 90501 RVA: 0x0059632C File Offset: 0x0059452C
+	// Token: 0x06013B8B RID: 80779 RVA: 0x005C12EC File Offset: 0x005BF4EC
 	protected override void OnStart()
 	{
 		this.PointRotator = new FRotator(0f, 0f, 0f);
@@ -32,7 +32,7 @@ public class ShipTowerBurningTideItem : UiPanelBase
 		this.ProgressText.SetText("0%", true);
 	}
 
-	// Token: 0x06016186 RID: 90502 RVA: 0x0059639C File Offset: 0x0059459C
+	// Token: 0x06013B8C RID: 80780 RVA: 0x005C135C File Offset: 0x005BF55C
 	public void UpdateValue(int curScore, int maxScore)
 	{
 		float num = (float)curScore / (float)maxScore;
@@ -61,7 +61,7 @@ public class ShipTowerBurningTideItem : UiPanelBase
 		this.PlayLevelSequence("Start2");
 	}
 
-	// Token: 0x06016187 RID: 90503 RVA: 0x00596458 File Offset: 0x00594658
+	// Token: 0x06013B8D RID: 80781 RVA: 0x005C1418 File Offset: 0x005BF618
 	private void PlayLevelSequence(string sequenceName)
 	{
 		Log instance = Log.Instance;
@@ -83,7 +83,7 @@ public class ShipTowerBurningTideItem : UiPanelBase
 		levelSequencePlayer2.PlaySequencePurely(sequenceName, false, false, null, null, false);
 	}
 
-	// Token: 0x06016188 RID: 90504 RVA: 0x005964C0 File Offset: 0x005946C0
+	// Token: 0x06013B8E RID: 80782 RVA: 0x005C1480 File Offset: 0x005BF680
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -97,7 +97,7 @@ public class ShipTowerBurningTideItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016189 RID: 90505 RVA: 0x005964F3 File Offset: 0x005946F3
+	// Token: 0x06013B8F RID: 80783 RVA: 0x005C14B3 File Offset: 0x005BF6B3
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -108,33 +108,33 @@ public class ShipTowerBurningTideItem : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0400A4B2 RID: 42162
+	// Token: 0x0400A89C RID: 43164
 	private FRotator PointRotator;
 
-	// Token: 0x0400A4B3 RID: 42163
+	// Token: 0x0400A89D RID: 43165
 	private UUIText ProgressText;
 
-	// Token: 0x0400A4B4 RID: 42164
+	// Token: 0x0400A89E RID: 43166
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008FAB RID: 36779
+	// Token: 0x020081F4 RID: 33268
 	[NullableContext(0)]
 	private static class EComponent
 	{
-		// Token: 0x0402E884 RID: 190596
+		// Token: 0x04029F83 RID: 171907
 		public const int ProgressSprite = 0;
 
-		// Token: 0x0402E885 RID: 190597
+		// Token: 0x04029F84 RID: 171908
 		public const int BuffIconTexture = 1;
 
-		// Token: 0x0402E886 RID: 190598
+		// Token: 0x04029F85 RID: 171909
 		public const int ProgressText = 2;
 
-		// Token: 0x0402E887 RID: 190599
+		// Token: 0x04029F86 RID: 171910
 		public const int Button = 3;
 
-		// Token: 0x0402E888 RID: 190600
+		// Token: 0x04029F87 RID: 171911
 		public const int PointItem = 4;
 	}
 }

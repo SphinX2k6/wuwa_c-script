@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EB9 RID: 7865
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020F2 RID: 8434
 	public class IStateProgramSpecialProcessBase
 	{
-		// Token: 0x0600A868 RID: 43112 RVA: 0x0017C4E8 File Offset: 0x0017A6E8
+		// Token: 0x0600B33A RID: 45882 RVA: 0x001924E0 File Offset: 0x001906E0
 		private IStateProgramSpecialProcessBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A869 RID: 43113 RVA: 0x0017C520 File Offset: 0x0017A720
+		// Token: 0x0600B33B RID: 45883 RVA: 0x00192518 File Offset: 0x00190718
 		public static IStateProgramSpecialProcessBase Create([Nullable(2)] IStateProgramSpecialProcessBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A86A RID: 43114 RVA: 0x0017C533 File Offset: 0x0017A733
+		// Token: 0x0600B33C RID: 45884 RVA: 0x0019252B File Offset: 0x0019072B
 		public static IStateProgramSpecialProcessBase CreateFromSetValue([Nullable(2)] IStateProgramSpecialProcessBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A86B RID: 43115 RVA: 0x0017C546 File Offset: 0x0017A746
+		// Token: 0x0600B33D RID: 45885 RVA: 0x0019253E File Offset: 0x0019073E
 		public IStateProgramSpecialProcessBase_SetValue ToSetValue()
 		{
 			return new IStateProgramSpecialProcessBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003376 RID: 13174
-		// (get) Token: 0x0600A86C RID: 43116 RVA: 0x0017C559 File Offset: 0x0017A759
-		// (set) Token: 0x0600A86D RID: 43117 RVA: 0x0017C584 File Offset: 0x0017A784
+		// Token: 0x17003641 RID: 13889
+		// (get) Token: 0x0600B33E RID: 45886 RVA: 0x00192551 File Offset: 0x00190751
+		// (set) Token: 0x0600B33F RID: 45887 RVA: 0x0019257C File Offset: 0x0019077C
 		public virtual ELogicProgramSpecialProcess Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006459 RID: 25689
+		// Token: 0x04006A48 RID: 27208
 		[Nullable(2)]
 		protected IStateProgramSpecialProcessBase FbInstance;
 
-		// Token: 0x0400645A RID: 25690
+		// Token: 0x04006A49 RID: 27209
 		[Nullable(2)]
 		protected IStateProgramSpecialProcessBase_SetValue PocoInterface;
 	}

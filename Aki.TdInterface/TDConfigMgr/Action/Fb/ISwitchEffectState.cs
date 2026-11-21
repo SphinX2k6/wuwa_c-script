@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025EB RID: 9707
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028AA RID: 10410
 	public class ISwitchEffectState : PlayEffect2
 	{
-		// Token: 0x0600DA22 RID: 55842 RVA: 0x00208364 File Offset: 0x00206564
+		// Token: 0x0600E7EB RID: 59371 RVA: 0x00224A50 File Offset: 0x00222C50
 		public static ISwitchEffectState Create(ISwitchEffectState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700400E RID: 16398
-		// (get) Token: 0x0600DA23 RID: 55843 RVA: 0x00208383 File Offset: 0x00206583
+		// Token: 0x17004345 RID: 17221
+		// (get) Token: 0x0600E7EC RID: 59372 RVA: 0x00224A6F File Offset: 0x00222C6F
 		public override EEffectType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700400F RID: 16399
-		// (get) Token: 0x0600DA24 RID: 55844 RVA: 0x00208390 File Offset: 0x00206590
+		// Token: 0x17004346 RID: 17222
+		// (get) Token: 0x0600E7ED RID: 59373 RVA: 0x00224A7C File Offset: 0x00222C7C
 		public override string Path
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004010 RID: 16400
-		// (get) Token: 0x0600DA25 RID: 55845 RVA: 0x0020839D File Offset: 0x0020659D
+		// Token: 0x17004347 RID: 17223
+		// (get) Token: 0x0600E7EE RID: 59374 RVA: 0x00224A89 File Offset: 0x00222C89
 		public virtual ISwitchEffectStateEffectBase EffectType
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004011 RID: 16401
-		// (get) Token: 0x0600DA26 RID: 55846 RVA: 0x002083CC File Offset: 0x002065CC
+		// Token: 0x17004348 RID: 17224
+		// (get) Token: 0x0600E7EF RID: 59375 RVA: 0x00224AB8 File Offset: 0x00222CB8
 		public virtual int TargetStateIndex
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007921 RID: 31009
+		// Token: 0x04007FB8 RID: 32696
 		private ISwitchEffectState Instance;
 
-		// Token: 0x04007922 RID: 31010
+		// Token: 0x04007FB9 RID: 32697
 		private ISwitchEffectStateEffectBase _EffectTypeCache;
 
-		// Token: 0x04007923 RID: 31011
+		// Token: 0x04007FBA RID: 32698
 		private bool _EffectTypeInited;
 	}
 }

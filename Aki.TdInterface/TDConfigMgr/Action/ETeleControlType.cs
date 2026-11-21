@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016D0 RID: 5840
+	// Token: 0x0200184B RID: 6219
 	public enum ETeleControlType
 	{
-		// Token: 0x04004EEF RID: 20207
+		// Token: 0x04005319 RID: 21273
 		BigWorld,
-		// Token: 0x04004EF0 RID: 20208
+		// Token: 0x0400531A RID: 21274
 		Boss
 	}
 }

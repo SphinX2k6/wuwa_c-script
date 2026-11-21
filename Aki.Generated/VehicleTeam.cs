@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200118C RID: 4492
+	// Token: 0x020012C2 RID: 4802
 	public struct VehicleTeam : IFlatbufferObject
 	{
-		// Token: 0x17003D87 RID: 15751
-		// (get) Token: 0x0600E705 RID: 59141 RVA: 0x003406F4 File Offset: 0x0033E8F4
+		// Token: 0x170040EB RID: 16619
+		// (get) Token: 0x0600F473 RID: 62579 RVA: 0x0036B4CC File Offset: 0x003696CC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E706 RID: 59142 RVA: 0x00340701 File Offset: 0x0033E901
+		// Token: 0x0600F474 RID: 62580 RVA: 0x0036B4D9 File Offset: 0x003696D9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E707 RID: 59143 RVA: 0x00340708 File Offset: 0x0033E908
+		// Token: 0x0600F475 RID: 62581 RVA: 0x0036B4E0 File Offset: 0x003696E0
 		public static VehicleTeam GetRootAsVehicleTeam(ByteBuffer _bb)
 		{
 			return VehicleTeam.GetRootAsVehicleTeam(_bb, default(VehicleTeam));
 		}
 
-		// Token: 0x0600E708 RID: 59144 RVA: 0x00340724 File Offset: 0x0033E924
+		// Token: 0x0600F476 RID: 62582 RVA: 0x0036B4FC File Offset: 0x003696FC
 		public static VehicleTeam GetRootAsVehicleTeam(ByteBuffer _bb, VehicleTeam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E709 RID: 59145 RVA: 0x00340741 File Offset: 0x0033E941
+		// Token: 0x0600F477 RID: 62583 RVA: 0x0036B519 File Offset: 0x00369719
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E70A RID: 59146 RVA: 0x00340750 File Offset: 0x0033E950
+		// Token: 0x0600F478 RID: 62584 RVA: 0x0036B528 File Offset: 0x00369728
 		public VehicleTeam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003D88 RID: 15752
-		// (get) Token: 0x0600E70B RID: 59147 RVA: 0x00340760 File Offset: 0x0033E960
+		// Token: 0x170040EC RID: 16620
+		// (get) Token: 0x0600F479 RID: 62585 RVA: 0x0036B538 File Offset: 0x00369738
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E70C RID: 59148 RVA: 0x0034079C File Offset: 0x0033E99C
+		// Token: 0x0600F47A RID: 62586 RVA: 0x0036B574 File Offset: 0x00369774
 		public int TemplateList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003D89 RID: 15753
-		// (get) Token: 0x0600E70D RID: 59149 RVA: 0x003407DC File Offset: 0x0033E9DC
+		// Token: 0x170040ED RID: 16621
+		// (get) Token: 0x0600F47B RID: 62587 RVA: 0x0036B5B4 File Offset: 0x003697B4
 		public int TemplateListLength
 		{
 			get
@@ -91,19 +91,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E70E RID: 59150 RVA: 0x00340807 File Offset: 0x0033EA07
+		// Token: 0x0600F47C RID: 62588 RVA: 0x0036B5DF File Offset: 0x003697DF
 		public Span<int> GetTemplateListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600E70F RID: 59151 RVA: 0x00340816 File Offset: 0x0033EA16
+		// Token: 0x0600F47D RID: 62589 RVA: 0x0036B5EE File Offset: 0x003697EE
 		public int[] GetTemplateListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E710 RID: 59152 RVA: 0x00340830 File Offset: 0x0033EA30
+		// Token: 0x0600F47E RID: 62590 RVA: 0x0036B608 File Offset: 0x00369808
 		public Vector? PositionList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -114,8 +114,8 @@ namespace Aki.Config
 			return new Vector?(default(Vector).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003D8A RID: 15754
-		// (get) Token: 0x0600E711 RID: 59153 RVA: 0x00340890 File Offset: 0x0033EA90
+		// Token: 0x170040EE RID: 16622
+		// (get) Token: 0x0600F47F RID: 62591 RVA: 0x0036B668 File Offset: 0x00369868
 		public int PositionListLength
 		{
 			get
@@ -129,42 +129,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E712 RID: 59154 RVA: 0x003408BB File Offset: 0x0033EABB
+		// Token: 0x0600F480 RID: 62592 RVA: 0x0036B693 File Offset: 0x00369893
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PositionListIter()或GetPositionListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Vector[] PositionList()
+		public Vector[] PositionList()
 		{
 			return this.PositionListIter().ToArray<Vector>();
 		}
 
-		// Token: 0x0600E713 RID: 59155 RVA: 0x003408C8 File Offset: 0x0033EAC8
+		// Token: 0x0600F481 RID: 62593 RVA: 0x0036B6A0 File Offset: 0x003698A0
 		[NullableContext(1)]
-		public readonly IEnumerable<Vector> PositionListIter()
+		public IEnumerable<Vector> PositionListIter()
 		{
 			VehicleTeam.<PositionListIter>d__19 <PositionListIter>d__ = new VehicleTeam.<PositionListIter>d__19(-2);
 			<PositionListIter>d__.<>3__<>4__this = this;
 			return <PositionListIter>d__;
 		}
 
-		// Token: 0x0600E714 RID: 59156 RVA: 0x003408E0 File Offset: 0x0033EAE0
+		// Token: 0x0600F482 RID: 62594 RVA: 0x0036B6B5 File Offset: 0x003698B5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TemplateListIter()或GetTemplateListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] TemplateList()
+		public int[] TemplateList()
 		{
-			VehicleTeam vehicleTeam = this;
-			return vehicleTeam.GetTemplateListArray() ?? Array.Empty<int>();
+			return this.GetTemplateListArray();
 		}
 
-		// Token: 0x0600E715 RID: 59157 RVA: 0x00340904 File Offset: 0x0033EB04
+		// Token: 0x0600F483 RID: 62595 RVA: 0x0036B6BD File Offset: 0x003698BD
 		[NullableContext(1)]
-		public readonly IEnumerable<int> TemplateListIter()
+		public IEnumerable<int> TemplateListIter()
 		{
 			VehicleTeam.<TemplateListIter>d__21 <TemplateListIter>d__ = new VehicleTeam.<TemplateListIter>d__21(-2);
 			<TemplateListIter>d__.<>3__<>4__this = this;
 			return <TemplateListIter>d__;
 		}
 
-		// Token: 0x040052D6 RID: 21206
+		// Token: 0x04005919 RID: 22809
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FB3 RID: 4019
+	// Token: 0x0200109B RID: 4251
 	public struct RegressRewards : IFlatbufferObject
 	{
-		// Token: 0x17002DCA RID: 11722
-		// (get) Token: 0x0600BB3D RID: 47933 RVA: 0x002DC8A9 File Offset: 0x002DAAA9
+		// Token: 0x17002E45 RID: 11845
+		// (get) Token: 0x0600C187 RID: 49543 RVA: 0x002F9039 File Offset: 0x002F7239
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BB3E RID: 47934 RVA: 0x002DC8B6 File Offset: 0x002DAAB6
+		// Token: 0x0600C188 RID: 49544 RVA: 0x002F9046 File Offset: 0x002F7246
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BB3F RID: 47935 RVA: 0x002DC8C0 File Offset: 0x002DAAC0
+		// Token: 0x0600C189 RID: 49545 RVA: 0x002F9050 File Offset: 0x002F7250
 		public static RegressRewards GetRootAsRegressRewards(ByteBuffer _bb)
 		{
 			return RegressRewards.GetRootAsRegressRewards(_bb, default(RegressRewards));
 		}
 
-		// Token: 0x0600BB40 RID: 47936 RVA: 0x002DC8DC File Offset: 0x002DAADC
+		// Token: 0x0600C18A RID: 49546 RVA: 0x002F906C File Offset: 0x002F726C
 		public static RegressRewards GetRootAsRegressRewards(ByteBuffer _bb, RegressRewards obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BB41 RID: 47937 RVA: 0x002DC8F9 File Offset: 0x002DAAF9
+		// Token: 0x0600C18B RID: 49547 RVA: 0x002F9089 File Offset: 0x002F7289
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BB42 RID: 47938 RVA: 0x002DC908 File Offset: 0x002DAB08
+		// Token: 0x0600C18C RID: 49548 RVA: 0x002F9098 File Offset: 0x002F7298
 		public RegressRewards __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002DCB RID: 11723
-		// (get) Token: 0x0600BB43 RID: 47939 RVA: 0x002DC918 File Offset: 0x002DAB18
+		// Token: 0x17002E46 RID: 11846
+		// (get) Token: 0x0600C18D RID: 49549 RVA: 0x002F90A8 File Offset: 0x002F72A8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DCC RID: 11724
-		// (get) Token: 0x0600BB44 RID: 47940 RVA: 0x002DC954 File Offset: 0x002DAB54
+		// Token: 0x17002E47 RID: 11847
+		// (get) Token: 0x0600C18E RID: 49550 RVA: 0x002F90E4 File Offset: 0x002F72E4
 		public int RewardGroup
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400508C RID: 20620
+		// Token: 0x04005674 RID: 22132
 		private Table __p;
 	}
 }

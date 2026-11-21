@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity;
@@ -12,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 {
-	// Token: 0x02006743 RID: 26435
+	// Token: 0x02005693 RID: 22163
 	public class ActivityDirectTrainProView : UiViewBase
 	{
-		// Token: 0x06041FB2 RID: 270258 RVA: 0x010014E8 File Offset: 0x00FFF6E8
+		// Token: 0x06036AFE RID: 223998 RVA: 0x00F42898 File Offset: 0x00F40A98
 		[NullableContext(1)]
 		public ActivityDirectTrainProView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041FB3 RID: 270259 RVA: 0x010014F4 File Offset: 0x00FFF6F4
+		// Token: 0x06036AFF RID: 223999 RVA: 0x00F428A4 File Offset: 0x00F40AA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041FB4 RID: 270260 RVA: 0x01001580 File Offset: 0x00FFF780
+		// Token: 0x06036B00 RID: 224000 RVA: 0x00F42930 File Offset: 0x00F40B30
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityDirectTrainProView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041FB5 RID: 270261 RVA: 0x010015C3 File Offset: 0x00FFF7C3
+		// Token: 0x06036B01 RID: 224001 RVA: 0x00F42973 File Offset: 0x00F40B73
 		protected override void OnStart()
 		{
 			this.RefreshList();
@@ -60,13 +59,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			animController.Play("Start", -1, false);
 		}
 
-		// Token: 0x06041FB6 RID: 270262 RVA: 0x010015E2 File Offset: 0x00FFF7E2
+		// Token: 0x06036B02 RID: 224002 RVA: 0x00F42992 File Offset: 0x00F40B92
 		protected override void OnBeforeShow()
 		{
 			this.RefreshList();
 		}
 
-		// Token: 0x06041FB7 RID: 270263 RVA: 0x010015EC File Offset: 0x00FFF7EC
+		// Token: 0x06036B03 RID: 224003 RVA: 0x00F4299C File Offset: 0x00F40B9C
 		private void RefreshList()
 		{
 			if (this.ItemLayout == null)
@@ -79,18 +78,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 				return;
 			}
 			IReadOnlyDictionary<int, IDirectTrainSubActivityCache> allProSubActivityCaches = instance.GetAllProSubActivityCaches();
-			IReadOnlyList<DirectTrainSubActivityViewModel> source = instance.BuildSubActivityViewModels(instance.GetProSubActivityIds(), allProSubActivityCaches, instance.GetProMainActivityId());
-			this.ItemLayout.RefreshByData(source.ToList<DirectTrainSubActivityViewModel>(), null, false);
+			IReadOnlyList<DirectTrainSubActivityViewModel> data = instance.BuildSubActivityViewModels(instance.GetProSubActivityIds(), allProSubActivityCaches, instance.GetProMainActivityId());
+			this.ItemLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06041FB8 RID: 270264 RVA: 0x0100163A File Offset: 0x00FFF83A
+		// Token: 0x06036B04 RID: 224004 RVA: 0x00F429E5 File Offset: 0x00F40BE5
 		[NullableContext(1)]
 		private DirectTrainSubActivityItem CreateSubActivityItem()
 		{
 			return new DirectTrainSubActivityItem();
 		}
 
-		// Token: 0x06041FB9 RID: 270265 RVA: 0x01001644 File Offset: 0x00FFF844
+		// Token: 0x06036B05 RID: 224005 RVA: 0x00F429EC File Offset: 0x00F40BEC
 		private void OnClickHelp()
 		{
 			int proMainActivityHelpId = DirectTrainModel.Instance.GetProMainActivityHelpId();
@@ -101,17 +100,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			HelpController.Instance.OpenHelpById(proMainActivityHelpId);
 		}
 
-		// Token: 0x06041FBA RID: 270266 RVA: 0x0100166C File Offset: 0x00FFF86C
+		// Token: 0x06036B06 RID: 224006 RVA: 0x00F42A14 File Offset: 0x00F40C14
 		private void OnCloseView()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040225F4 RID: 140788
+		// Token: 0x0401CE4D RID: 118349
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040225F5 RID: 140789
+		// Token: 0x0401CE4E RID: 118350
 		[Nullable(new byte[]
 		{
 			2,
@@ -120,18 +119,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 		})]
 		private GenericLayout<DirectTrainSubActivityItem, DirectTrainSubActivityViewModel> ItemLayout;
 
-		// Token: 0x040225F6 RID: 140790
+		// Token: 0x0401CE4F RID: 118351
 		[Nullable(2)]
 		private UUIInturnAnimController AnimController;
 
-		// Token: 0x0200C8BA RID: 51386
+		// Token: 0x0200B289 RID: 45705
 		private enum EProComponents
 		{
-			// Token: 0x0403C9A7 RID: 248231
+			// Token: 0x040372A1 RID: 225953
 			ItemCaption,
-			// Token: 0x0403C9A8 RID: 248232
+			// Token: 0x040372A2 RID: 225954
 			Content,
-			// Token: 0x0403C9A9 RID: 248233
+			// Token: 0x040372A3 RID: 225955
 			SubItemPrefab
 		}
 	}

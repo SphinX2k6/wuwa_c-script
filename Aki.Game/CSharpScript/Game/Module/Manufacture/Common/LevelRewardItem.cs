@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005695 RID: 22165
+	// Token: 0x0200466B RID: 18027
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 	})]
 	public class LevelRewardItem : LoopScrollSmallItemGrid<IRewardData>
 	{
-		// Token: 0x0603865A RID: 231002 RVA: 0x00D63188 File Offset: 0x00D61388
+		// Token: 0x0602D557 RID: 185687 RVA: 0x00CB12D8 File Offset: 0x00CAF4D8
 		protected override void OnRefresh(IRewardData data, bool isSelected, int gridIndex)
 		{
 			PropSmallItemGrid propSmallItemGrid = new PropSmallItemGrid();
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.Apply<PropSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x0603865B RID: 231003 RVA: 0x00D631FE File Offset: 0x00D613FE
+		// Token: 0x0602D558 RID: 185688 RVA: 0x00CB134E File Offset: 0x00CAF54E
 		protected override bool OnCanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x0603865C RID: 231004 RVA: 0x00D63204 File Offset: 0x00D61404
+		// Token: 0x0602D559 RID: 185689 RVA: 0x00CB1354 File Offset: 0x00CAF554
 		protected override void OnExtendToggleClicked()
 		{
 			IRewardData rewardData = this.Data as IRewardData;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(rewardData.RewardId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(rewardData.RewardId, true, null, false);
 		}
 	}
 }

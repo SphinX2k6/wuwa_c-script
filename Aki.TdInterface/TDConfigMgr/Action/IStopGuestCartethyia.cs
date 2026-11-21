@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EBD RID: 7869
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020F6 RID: 8438
 	public class IStopGuestCartethyia : IStopGuestUiAnimationType
 	{
-		// Token: 0x0600A87A RID: 43130 RVA: 0x0017C6B4 File Offset: 0x0017A8B4
+		// Token: 0x0600B34C RID: 45900 RVA: 0x001926AC File Offset: 0x001908AC
 		private IStopGuestCartethyia_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A87B RID: 43131 RVA: 0x0017C6EC File Offset: 0x0017A8EC
+		// Token: 0x0600B34D RID: 45901 RVA: 0x001926E4 File Offset: 0x001908E4
 		public static IStopGuestCartethyia Create([Nullable(2)] IStopGuestCartethyia instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A87C RID: 43132 RVA: 0x0017C6FF File Offset: 0x0017A8FF
+		// Token: 0x0600B34E RID: 45902 RVA: 0x001926F7 File Offset: 0x001908F7
 		public static IStopGuestCartethyia CreateFromSetValue([Nullable(2)] IStopGuestCartethyia_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A87D RID: 43133 RVA: 0x0017C712 File Offset: 0x0017A912
+		// Token: 0x0600B34F RID: 45903 RVA: 0x0019270A File Offset: 0x0019090A
 		public new IStopGuestCartethyia_SetValue ToSetValue()
 		{
 			return new IStopGuestCartethyia_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003379 RID: 13177
-		// (get) Token: 0x0600A87E RID: 43134 RVA: 0x0017C725 File Offset: 0x0017A925
-		// (set) Token: 0x0600A87F RID: 43135 RVA: 0x0017C750 File Offset: 0x0017A950
+		// Token: 0x17003644 RID: 13892
+		// (get) Token: 0x0600B350 RID: 45904 RVA: 0x0019271D File Offset: 0x0019091D
+		// (set) Token: 0x0600B351 RID: 45905 RVA: 0x00192748 File Offset: 0x00190948
 		public override EGuestUiAnimationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006460 RID: 25696
+		// Token: 0x04006A4F RID: 27215
 		[Nullable(2)]
 		protected new IStopGuestCartethyia FbInstance;
 
-		// Token: 0x04006461 RID: 25697
+		// Token: 0x04006A50 RID: 27216
 		[Nullable(2)]
 		protected new IStopGuestCartethyia_SetValue PocoInterface;
 	}

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061FE RID: 25086
+	// Token: 0x0200517C RID: 20860
 	public class ERoadBookAnimJsonConverter : JsonConverter<ERoadBookAnim>
 	{
-		// Token: 0x0603F4AF RID: 259247 RVA: 0x00F4B678 File Offset: 0x00F49878
+		// Token: 0x06034170 RID: 213360 RVA: 0x00E925D0 File Offset: 0x00E907D0
 		public override ERoadBookAnim Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return ERoadBookAnimExtensions.FromString(@string);
 		}
 
-		// Token: 0x0603F4B0 RID: 259248 RVA: 0x00F4B69C File Offset: 0x00F4989C
+		// Token: 0x06034171 RID: 213361 RVA: 0x00E925F4 File Offset: 0x00E907F4
 		public override void Write(Utf8JsonWriter writer, ERoadBookAnim value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

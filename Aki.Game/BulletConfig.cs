@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DA7 RID: 11687
+// Token: 0x02002301 RID: 8961
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletConfig : ConfigBase
 {
-	// Token: 0x060188D6 RID: 100566 RVA: 0x00646018 File Offset: 0x00644218
+	// Token: 0x0601617B RID: 90491 RVA: 0x0066BE60 File Offset: 0x0066A060
 	public unsafe void RemoveCacheBulletDataByEntityId(int entityId)
 	{
 		this.ExtraBulletCacheMap.Remove(entityId);
@@ -40,7 +40,7 @@ public class BulletConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060188D7 RID: 100567 RVA: 0x006460E4 File Offset: 0x006442E4
+	// Token: 0x0601617C RID: 90492 RVA: 0x0066BF2C File Offset: 0x0066A12C
 	[NullableContext(2)]
 	public void RemoveEntityExtraBulletCacheByTable(int entityId, UDataTable table)
 	{
@@ -57,7 +57,11 @@ public class BulletConfig : ConfigBase
 		DataTableUtil.GetDataTableAllRowNamesFromTable(table, list);
 		foreach (string key in list)
 		{
-			bulletDataCacheInfo.BulletDataMap.Remove(key);
+			if (bulletDataCacheInfo.BulletDataSourceMap.GetValueOrDefault(key) == table)
+			{
+				bulletDataCacheInfo.BulletDataMap.Remove(key);
+				bulletDataCacheInfo.BulletDataSourceMap.Remove(key);
+			}
 		}
 		if (bulletDataCacheInfo.BulletDataMap.Count <= 0)
 		{
@@ -65,94 +69,129 @@ public class BulletConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060188D8 RID: 100568 RVA: 0x00646178 File Offset: 0x00644378
+	// Token: 0x0601617D RID: 90493 RVA: 0x0066BFDC File Offset: 0x0066A1DC
 	public void ClearBulletDataCache()
 	{
 		this.SelfBulletCacheMap.Clear();
 		this.ExtraBulletCacheMap.Clear();
-		this.CommonBulletCacheMap.Clear();
+		BulletConfig.ClearCache(this.GameplayCommonBulletCache);
+		BulletConfig.ClearCache(this.GlobalCommonBulletCache);
 		this.EntityMap.Clear();
 	}
 
-	// Token: 0x060188D9 RID: 100569 RVA: 0x006461A8 File Offset: 0x006443A8
+	// Token: 0x0601617E RID: 90494 RVA: 0x0066C018 File Offset: 0x0066A218
 	[return: Nullable(2)]
 	public BulletDataMain GetBulletData(Entity owner, string bulletDataName, bool errorEnable = true)
 	{
-		int id = owner.Id;
-		ValueTuple<int?, bool> valueTuple = this.ResolveModelIdWithSource(id, owner);
-		int? item = valueTuple.Item1;
-		bool item2 = valueTuple.Item2;
-		if (item == null)
+		BulletDataMain result;
+		try
 		{
-			BulletConfig.LogBulletNotFound(owner, bulletDataName, errorEnable, "子弹数据未找到!");
-			return null;
-		}
-		BaseSkillComponent component = owner.GetComponent<BaseSkillComponent>();
-		if (component == null)
-		{
-			BulletDataMain result;
-			if (this.CommonBulletCacheMap.TryGetValue(bulletDataName, out result))
+			int id = owner.Id;
+			BaseSkillComponent component = owner.GetComponent<BaseSkillComponent>();
+			if (component == null)
 			{
-				return result;
+				result = this.ResolveCommonOnlyBulletData(owner, bulletDataName, errorEnable);
 			}
-			UDataTable commonBulletDataTable = BulletDataTableRepository.GetCommonBulletDataTable();
-			object obj = (commonBulletDataTable == null) ? null : this.TryResolveFromCommonTables(new List<UDataTable>
+			else
 			{
-				commonBulletDataTable
-			}, bulletDataName, item.Value);
-			if (obj == null)
-			{
-				BulletConfig.LogBulletNotFound(owner, bulletDataName, errorEnable, "子弹数据未找到!");
-			}
-			return obj;
-		}
-		else
-		{
-			BulletDataCacheInfo bulletDataCacheInfo;
-			BulletDataMain result2;
-			if (this.ExtraBulletCacheMap.TryGetValue(id, out bulletDataCacheInfo) && bulletDataCacheInfo.BulletDataMap.TryGetValue(bulletDataName, out result2))
-			{
-				return result2;
-			}
-			FightDataTableSnapshot fightDataTableSnapshot = component.GetFightDataTableSnapshot(EFightDataTableKind.Bullet);
-			BulletDataMain bulletDataMain = this.TryResolveFromExtraTables(fightDataTableSnapshot.ExtraTables, bulletDataName, item.Value, id);
-			if (bulletDataMain != null)
-			{
-				return bulletDataMain;
-			}
-			BulletDataCacheInfo bulletDataCacheInfo2;
-			this.SelfBulletCacheMap.TryGetValue(item.Value, out bulletDataCacheInfo2);
-			BulletDataMain result3;
-			if (bulletDataCacheInfo2 != null && bulletDataCacheInfo2.BulletDataMap.TryGetValue(bulletDataName, out result3))
-			{
-				if (!item2)
+				ValueTuple<int?, bool> valueTuple = this.ResolveModelIdWithSource(id, owner);
+				int? item = valueTuple.Item1;
+				bool item2 = valueTuple.Item2;
+				if (item == null)
 				{
-					this.EntityMap[id] = item.Value;
-					bulletDataCacheInfo2.EntityCount++;
+					BulletConfig.LogBulletNotFound(owner, bulletDataName, errorEnable, "子弹数据未找到!");
+					result = null;
 				}
-				return result3;
+				else
+				{
+					ResolvedBulletDataMain resolvedBulletDataMain = null;
+					try
+					{
+						resolvedBulletDataMain = component.FindBulletDataMain(bulletDataName);
+					}
+					finally
+					{
+					}
+					if (resolvedBulletDataMain == null)
+					{
+						BulletConfig.LogBulletNotFound(owner, bulletDataName, errorEnable, "子弹数据未找到!");
+						result = null;
+					}
+					else if (GlobalData.IsPlayInEditor)
+					{
+						result = BulletConfig.CreateBulletData(resolvedBulletDataMain.Info, bulletDataName, BulletConfig.IsCommonSource(resolvedBulletDataMain.SourceType) ? 0 : item.Value);
+					}
+					else
+					{
+						BulletDataCacheInfo orCreateResolvedCache = this.GetOrCreateResolvedCache(resolvedBulletDataMain.SourceType, id, item.Value);
+						BulletDataMain cachedBulletData = BulletConfig.GetCachedBulletData(orCreateResolvedCache, bulletDataName, resolvedBulletDataMain.SourceTable);
+						if (cachedBulletData != null)
+						{
+							if (resolvedBulletDataMain.SourceType == EResolvedDataSourceType.Self && !item2)
+							{
+								this.RegisterSelfCacheEntity(orCreateResolvedCache, id, item.Value);
+							}
+							result = cachedBulletData;
+						}
+						else
+						{
+							BulletDataMain bulletDataMain = BulletConfig.CreateBulletData(resolvedBulletDataMain.Info, bulletDataName, BulletConfig.IsCommonSource(resolvedBulletDataMain.SourceType) ? 0 : item.Value);
+							if (bulletDataMain == null)
+							{
+								result = null;
+							}
+							else
+							{
+								orCreateResolvedCache.BulletDataMap[bulletDataName] = bulletDataMain;
+								orCreateResolvedCache.BulletDataSourceMap[bulletDataName] = resolvedBulletDataMain.SourceTable;
+								if (resolvedBulletDataMain.SourceType == EResolvedDataSourceType.Self && !item2)
+								{
+									this.RegisterSelfCacheEntity(orCreateResolvedCache, id, item.Value);
+								}
+								result = bulletDataMain;
+							}
+						}
+					}
+				}
 			}
-			BulletDataMain bulletDataMain2 = this.TryResolveFromSelfTable(fightDataTableSnapshot.SelfTable, bulletDataName, item.Value, id, item2, bulletDataCacheInfo2);
-			if (bulletDataMain2 != null)
-			{
-				return bulletDataMain2;
-			}
-			BulletDataMain result4;
-			if (this.CommonBulletCacheMap.TryGetValue(bulletDataName, out result4))
-			{
-				return result4;
-			}
-			BulletDataMain bulletDataMain3 = this.TryResolveFromCommonTables(fightDataTableSnapshot.CommonTables, bulletDataName, item.Value);
-			if (bulletDataMain3 != null)
-			{
-				return bulletDataMain3;
-			}
-			BulletConfig.LogBulletNotFound(owner, bulletDataName, errorEnable, "子弹数据未找到!");
-			return null;
 		}
+		finally
+		{
+		}
+		return result;
 	}
 
-	// Token: 0x060188DA RID: 100570 RVA: 0x00646340 File Offset: 0x00644540
+	// Token: 0x0601617F RID: 90495 RVA: 0x0066C1D0 File Offset: 0x0066A3D0
+	[return: Nullable(2)]
+	private BulletDataMain ResolveCommonOnlyBulletData(Entity owner, string bulletDataName, bool errorEnable)
+	{
+		ResolvedBulletDataMain resolvedBulletDataMain = BulletDataTableRepository.FindCommonBulletDataMain(bulletDataName);
+		if (resolvedBulletDataMain == null)
+		{
+			BulletConfig.LogBulletNotFound(owner, bulletDataName, errorEnable, "子弹数据未找到!");
+			return null;
+		}
+		if (GlobalData.IsPlayInEditor)
+		{
+			return BulletConfig.CreateBulletData(resolvedBulletDataMain.Info, bulletDataName, 0);
+		}
+		BulletDataCacheInfo orCreateResolvedCache = this.GetOrCreateResolvedCache(resolvedBulletDataMain.SourceType, 0, 0);
+		BulletDataMain cachedBulletData = BulletConfig.GetCachedBulletData(orCreateResolvedCache, bulletDataName, resolvedBulletDataMain.SourceTable);
+		if (cachedBulletData != null)
+		{
+			return cachedBulletData;
+		}
+		BulletDataMain bulletDataMain = BulletConfig.CreateBulletData(resolvedBulletDataMain.Info, bulletDataName, 0);
+		if (bulletDataMain == null)
+		{
+			return null;
+		}
+		orCreateResolvedCache.BulletDataMap[bulletDataName] = bulletDataMain;
+		orCreateResolvedCache.BulletDataSourceMap[bulletDataName] = resolvedBulletDataMain.SourceTable;
+		return bulletDataMain;
+	}
+
+	// Token: 0x06016180 RID: 90496 RVA: 0x0066C260 File Offset: 0x0066A460
 	private unsafe static void LogBulletNotFound(Entity owner, string bulletDataName, bool errorEnable, string message)
 	{
 		if (!errorEnable)
@@ -170,130 +209,74 @@ public class BulletConfig : ConfigBase
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x060188DB RID: 100571 RVA: 0x006463C0 File Offset: 0x006445C0
-	[NullableContext(2)]
-	private BulletDataMain TryResolveFromSelfTable(UDataTable selfTable, [Nullable(1)] string bulletDataName, int modelId, int entityId, bool isEntityMark, BulletDataCacheInfo existingSelfCache)
+	// Token: 0x06016181 RID: 90497 RVA: 0x0066C2E0 File Offset: 0x0066A4E0
+	private BulletDataCacheInfo GetOrCreateResolvedCache(EResolvedDataSourceType sourceType, int entityId, int modelId)
 	{
-		SReBulletDataMain dataTableRow = DataTableUtil.GetDataTableRow<SReBulletDataMain>(selfTable, bulletDataName);
-		if (dataTableRow == null)
+		switch (sourceType)
 		{
-			return null;
-		}
-		BulletDataMain bulletDataMain = BulletConfig.CreateBulletData(dataTableRow, bulletDataName, modelId);
-		if (bulletDataMain == null)
+		case EResolvedDataSourceType.Extra:
+			return BulletConfig.GetOrCreateCache(this.ExtraBulletCacheMap, entityId);
+		case EResolvedDataSourceType.Self:
+			return BulletConfig.GetOrCreateCache(this.SelfBulletCacheMap, modelId);
+		case EResolvedDataSourceType.GameplayCommon:
+			return this.GameplayCommonBulletCache;
+		case EResolvedDataSourceType.GlobalCommon:
+			return this.GlobalCommonBulletCache;
+		default:
 		{
-			return null;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 1);
+			defaultInterpolatedStringHandler.AppendLiteral("未知的子弹配置来源: ");
+			defaultInterpolatedStringHandler.AppendFormatted<EResolvedDataSourceType>(sourceType);
+			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
-		if (GlobalData.IsPlayInEditor)
-		{
-			return bulletDataMain;
 		}
-		BulletDataCacheInfo bulletDataCacheInfo = existingSelfCache;
-		if (bulletDataCacheInfo == null)
-		{
-			bulletDataCacheInfo = new BulletDataCacheInfo();
-			bulletDataCacheInfo.DataTable = selfTable;
-			this.SelfBulletCacheMap[modelId] = bulletDataCacheInfo;
-		}
-		bulletDataCacheInfo.BulletDataMap[bulletDataName] = bulletDataMain;
-		if (!isEntityMark)
-		{
-			this.EntityMap[entityId] = modelId;
-			bulletDataCacheInfo.EntityCount++;
-		}
-		return bulletDataMain;
 	}
 
-	// Token: 0x060188DC RID: 100572 RVA: 0x00646448 File Offset: 0x00644648
-	[return: Nullable(2)]
-	private BulletDataMain TryResolveFromExtraTables([Nullable(new byte[]
-	{
-		2,
-		1
-	})] IReadOnlyList<UDataTable> extraTables, string bulletDataName, int modelId, int entityId)
-	{
-		if (extraTables == null || extraTables.Count <= 0)
-		{
-			return null;
-		}
-		SReBulletDataMain sreBulletDataMain = BulletConfig.FindBulletRowInExtraTables(extraTables, bulletDataName);
-		if (sreBulletDataMain == null)
-		{
-			return null;
-		}
-		BulletDataMain bulletDataMain = BulletConfig.CreateBulletData(sreBulletDataMain, bulletDataName, modelId);
-		if (bulletDataMain == null)
-		{
-			return null;
-		}
-		if (GlobalData.IsPlayInEditor)
-		{
-			return bulletDataMain;
-		}
-		this.SetExtraBulletCache(entityId, bulletDataName, bulletDataMain);
-		return bulletDataMain;
-	}
-
-	// Token: 0x060188DD RID: 100573 RVA: 0x00646498 File Offset: 0x00644698
-	[return: Nullable(2)]
-	private BulletDataMain TryResolveFromCommonTables([Nullable(new byte[]
-	{
-		2,
-		1
-	})] IReadOnlyList<UDataTable> commonTables, string bulletDataName, int modelId)
-	{
-		if (commonTables == null || commonTables.Count <= 0)
-		{
-			return null;
-		}
-		foreach (UDataTable table in commonTables)
-		{
-			SReBulletDataMain dataTableRow = DataTableUtil.GetDataTableRow<SReBulletDataMain>(table, bulletDataName);
-			if (!(dataTableRow == null))
-			{
-				BulletDataMain bulletDataMain = BulletConfig.CreateBulletData(dataTableRow, bulletDataName, modelId);
-				if (bulletDataMain != null)
-				{
-					if (GlobalData.IsPlayInEditor)
-					{
-						return bulletDataMain;
-					}
-					this.CommonBulletCacheMap[bulletDataName] = bulletDataMain;
-					return bulletDataMain;
-				}
-			}
-		}
-		return null;
-	}
-
-	// Token: 0x060188DE RID: 100574 RVA: 0x00646524 File Offset: 0x00644724
-	[return: Nullable(2)]
-	private static SReBulletDataMain FindBulletRowInExtraTables(IReadOnlyList<UDataTable> extraTables, string rowName)
-	{
-		foreach (UDataTable table in extraTables)
-		{
-			SReBulletDataMain dataTableRow = DataTableUtil.GetDataTableRow<SReBulletDataMain>(table, rowName);
-			if (dataTableRow != null)
-			{
-				return dataTableRow;
-			}
-		}
-		return null;
-	}
-
-	// Token: 0x060188DF RID: 100575 RVA: 0x0064657C File Offset: 0x0064477C
-	private void SetExtraBulletCache(int entityId, string rowName, BulletDataMain bulletData)
+	// Token: 0x06016182 RID: 90498 RVA: 0x0066C358 File Offset: 0x0066A558
+	private static BulletDataCacheInfo GetOrCreateCache(Dictionary<int, BulletDataCacheInfo> cacheMap, int cacheKey)
 	{
 		BulletDataCacheInfo bulletDataCacheInfo;
-		if (!this.ExtraBulletCacheMap.TryGetValue(entityId, out bulletDataCacheInfo))
+		if (!cacheMap.TryGetValue(cacheKey, out bulletDataCacheInfo))
 		{
 			bulletDataCacheInfo = new BulletDataCacheInfo();
-			this.ExtraBulletCacheMap[entityId] = bulletDataCacheInfo;
+			cacheMap[cacheKey] = bulletDataCacheInfo;
 		}
-		bulletDataCacheInfo.BulletDataMap[rowName] = bulletData;
+		return bulletDataCacheInfo;
 	}
 
-	// Token: 0x060188E0 RID: 100576 RVA: 0x006465BC File Offset: 0x006447BC
+	// Token: 0x06016183 RID: 90499 RVA: 0x0066C37F File Offset: 0x0066A57F
+	private static void ClearCache(BulletDataCacheInfo cacheInfo)
+	{
+		cacheInfo.BulletDataMap.Clear();
+		cacheInfo.BulletDataSourceMap.Clear();
+		cacheInfo.EntityCount = 0;
+	}
+
+	// Token: 0x06016184 RID: 90500 RVA: 0x0066C39E File Offset: 0x0066A59E
+	private static bool IsCommonSource(EResolvedDataSourceType sourceType)
+	{
+		return sourceType == EResolvedDataSourceType.GameplayCommon || sourceType == EResolvedDataSourceType.GlobalCommon;
+	}
+
+	// Token: 0x06016185 RID: 90501 RVA: 0x0066C3AA File Offset: 0x0066A5AA
+	[return: Nullable(2)]
+	private static BulletDataMain GetCachedBulletData(BulletDataCacheInfo cacheInfo, string rowName, UDataTable sourceTable)
+	{
+		if (cacheInfo.BulletDataSourceMap.GetValueOrDefault(rowName) != sourceTable)
+		{
+			return null;
+		}
+		return cacheInfo.BulletDataMap.GetValueOrDefault(rowName);
+	}
+
+	// Token: 0x06016186 RID: 90502 RVA: 0x0066C3C9 File Offset: 0x0066A5C9
+	private void RegisterSelfCacheEntity(BulletDataCacheInfo cacheInfo, int entityId, int modelId)
+	{
+		this.EntityMap[entityId] = modelId;
+		cacheInfo.EntityCount++;
+	}
+
+	// Token: 0x06016187 RID: 90503 RVA: 0x0066C3E8 File Offset: 0x0066A5E8
 	[return: Nullable(2)]
 	private static BulletDataMain CreateBulletData(SReBulletDataMain data, string bulletDataName, int modelId)
 	{
@@ -311,7 +294,7 @@ public class BulletConfig : ConfigBase
 		return bulletDataMain;
 	}
 
-	// Token: 0x060188E1 RID: 100577 RVA: 0x0064660C File Offset: 0x0064480C
+	// Token: 0x06016188 RID: 90504 RVA: 0x0066C438 File Offset: 0x0066A638
 	[NullableContext(2)]
 	public SHitEffect GetBulletHitData(Entity owner, FName dataName)
 	{
@@ -328,7 +311,7 @@ public class BulletConfig : ConfigBase
 		return baseSkillComponent.GetHitEffectInfo(rowName);
 	}
 
-	// Token: 0x060188E2 RID: 100578 RVA: 0x00646654 File Offset: 0x00644854
+	// Token: 0x06016189 RID: 90505 RVA: 0x0066C480 File Offset: 0x0066A680
 	[NullableContext(2)]
 	[return: TupleElementNames(new string[]
 	{
@@ -346,7 +329,7 @@ public class BulletConfig : ConfigBase
 		return new ValueTuple<CreatureDataComponent, int?>(creatureDataComponent, (creatureDataComponent != null) ? new int?(creatureDataComponent.GetModelId()) : null);
 	}
 
-	// Token: 0x060188E3 RID: 100579 RVA: 0x0064669C File Offset: 0x0064489C
+	// Token: 0x0601618A RID: 90506 RVA: 0x0066C4C8 File Offset: 0x0066A6C8
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -363,7 +346,7 @@ public class BulletConfig : ConfigBase
 		return new ValueTuple<int?, bool>(BulletConfig.GetCreatureDataAndModelId(entityId, owner).Item2, false);
 	}
 
-	// Token: 0x060188E4 RID: 100580 RVA: 0x006466D8 File Offset: 0x006448D8
+	// Token: 0x0601618B RID: 90507 RVA: 0x0066C504 File Offset: 0x0066A704
 	[NullableContext(2)]
 	public void EnqueueSelfPreload(int entityId, UDataTable table)
 	{
@@ -389,7 +372,6 @@ public class BulletConfig : ConfigBase
 			return;
 		}
 		BulletDataCacheInfo bulletDataCacheInfo = new BulletDataCacheInfo();
-		bulletDataCacheInfo.DataTable = table;
 		if (CharacterModel.Instance.IsValid(entityId))
 		{
 			bulletDataCacheInfo.EntityCount = 1;
@@ -407,7 +389,7 @@ public class BulletConfig : ConfigBase
 		});
 	}
 
-	// Token: 0x060188E5 RID: 100581 RVA: 0x006467DC File Offset: 0x006449DC
+	// Token: 0x0601618C RID: 90508 RVA: 0x0066C604 File Offset: 0x0066A804
 	[NullableContext(2)]
 	public void EnqueueExtraPreload(int entityId, UDataTable table)
 	{
@@ -434,9 +416,8 @@ public class BulletConfig : ConfigBase
 		}
 		if (!this.ExtraBulletCacheMap.ContainsKey(entityId))
 		{
-			BulletDataCacheInfo bulletDataCacheInfo = new BulletDataCacheInfo();
-			bulletDataCacheInfo.DataTable = table;
-			this.ExtraBulletCacheMap[entityId] = bulletDataCacheInfo;
+			BulletDataCacheInfo value = new BulletDataCacheInfo();
+			this.ExtraBulletCacheMap[entityId] = value;
 		}
 		this.AddPreloadBulletConfig(new PreloadBulletConfig
 		{
@@ -449,11 +430,11 @@ public class BulletConfig : ConfigBase
 		});
 	}
 
-	// Token: 0x060188E6 RID: 100582 RVA: 0x006468B0 File Offset: 0x00644AB0
+	// Token: 0x0601618D RID: 90509 RVA: 0x0066C6D0 File Offset: 0x0066A8D0
 	[NullableContext(2)]
 	public void CancelExtraPreload(int entityId, UDataTable table)
 	{
-		BulletConfig.<>c__DisplayClass25_0 CS$<>8__locals1;
+		BulletConfig.<>c__DisplayClass30_0 CS$<>8__locals1;
 		CS$<>8__locals1.entityId = entityId;
 		CS$<>8__locals1.table = table;
 		if (CS$<>8__locals1.table == null)
@@ -462,18 +443,18 @@ public class BulletConfig : ConfigBase
 		}
 		for (int i = this.PreloadBulletConfigs.Count - 1; i >= 0; i--)
 		{
-			if (BulletConfig.<CancelExtraPreload>g__IsTarget|25_0(this.PreloadBulletConfigs[i], ref CS$<>8__locals1))
+			if (BulletConfig.<CancelExtraPreload>g__IsTarget|30_0(this.PreloadBulletConfigs[i], ref CS$<>8__locals1))
 			{
 				this.PreloadBulletConfigs.RemoveAt(i);
 			}
 		}
-		if (BulletConfig.<CancelExtraPreload>g__IsTarget|25_0(this.CurPreloadBulletConfig, ref CS$<>8__locals1))
+		if (BulletConfig.<CancelExtraPreload>g__IsTarget|30_0(this.CurPreloadBulletConfig, ref CS$<>8__locals1))
 		{
 			this.CurPreloadBulletConfig.CurIndex = this.CurPreloadBulletConfig.RowNames.Length;
 		}
 	}
 
-	// Token: 0x060188E7 RID: 100583 RVA: 0x00646936 File Offset: 0x00644B36
+	// Token: 0x0601618E RID: 90510 RVA: 0x0066C756 File Offset: 0x0066A956
 	private void AddPreloadBulletConfig(PreloadBulletConfig preloadBulletConfig)
 	{
 		if (this.CurPreloadBulletConfig != null)
@@ -484,7 +465,7 @@ public class BulletConfig : ConfigBase
 		this.CurPreloadBulletConfig = preloadBulletConfig;
 	}
 
-	// Token: 0x060188E8 RID: 100584 RVA: 0x00646954 File Offset: 0x00644B54
+	// Token: 0x0601618F RID: 90511 RVA: 0x0066C774 File Offset: 0x0066A974
 	public void TickPreload()
 	{
 		if (this.CurPreloadBulletConfig == null)
@@ -508,7 +489,7 @@ public class BulletConfig : ConfigBase
 		this.TickPreloadOne(this.CurPreloadBulletConfig);
 	}
 
-	// Token: 0x060188E9 RID: 100585 RVA: 0x006469F8 File Offset: 0x00644BF8
+	// Token: 0x06016190 RID: 90512 RVA: 0x0066C818 File Offset: 0x0066AA18
 	private unsafe void TickPreloadOne(PreloadBulletConfig config)
 	{
 		string text = config.RowNames[config.CurIndex];
@@ -542,10 +523,11 @@ public class BulletConfig : ConfigBase
 		}
 		bulletDataMain.Preload();
 		preloadTargetCache.BulletDataMap[text] = bulletDataMain;
+		preloadTargetCache.BulletDataSourceMap[text] = config.DataTable;
 		config.CurIndex++;
 	}
 
-	// Token: 0x060188EA RID: 100586 RVA: 0x00646B34 File Offset: 0x00644D34
+	// Token: 0x06016191 RID: 90513 RVA: 0x0066C968 File Offset: 0x0066AB68
 	[return: Nullable(2)]
 	private BulletDataCacheInfo GetPreloadTargetCache(PreloadBulletConfig config)
 	{
@@ -565,21 +547,21 @@ public class BulletConfig : ConfigBase
 		return result2;
 	}
 
-	// Token: 0x060188EB RID: 100587 RVA: 0x00646B7E File Offset: 0x00644D7E
+	// Token: 0x06016192 RID: 90514 RVA: 0x0066C9B2 File Offset: 0x0066ABB2
 	[return: Nullable(2)]
 	private SReBulletDataMain GetPreloadRowData(PreloadBulletConfig config, string rowName)
 	{
 		return DataTableUtil.GetDataTableRow<SReBulletDataMain>(config.DataTable, rowName);
 	}
 
-	// Token: 0x060188EC RID: 100588 RVA: 0x00646B8C File Offset: 0x00644D8C
+	// Token: 0x06016193 RID: 90515 RVA: 0x0066C9C0 File Offset: 0x0066ABC0
 	public void ClearPreload()
 	{
 		this.CurPreloadBulletConfig = null;
 		this.PreloadBulletConfigs.Clear();
 	}
 
-	// Token: 0x060188ED RID: 100589 RVA: 0x00646BA0 File Offset: 0x00644DA0
+	// Token: 0x06016194 RID: 90516 RVA: 0x0066C9D4 File Offset: 0x0066ABD4
 	public void PreloadCommonWhitelist()
 	{
 		if (GlobalData.IsPlayInEditor)
@@ -593,7 +575,7 @@ public class BulletConfig : ConfigBase
 		}
 		foreach (string text in BulletConfig.CommonPreloadWhitelist)
 		{
-			if (!this.CommonBulletCacheMap.ContainsKey(text))
+			if (!this.GlobalCommonBulletCache.BulletDataMap.ContainsKey(text) || this.GlobalCommonBulletCache.BulletDataSourceMap.GetValueOrDefault(text) != commonBulletDataTable)
 			{
 				SReBulletDataMain dataTableRow = DataTableUtil.GetDataTableRow<SReBulletDataMain>(commonBulletDataTable, text);
 				if (dataTableRow == null)
@@ -611,15 +593,16 @@ public class BulletConfig : ConfigBase
 					if (bulletDataMain != null)
 					{
 						bulletDataMain.Preload();
-						this.CommonBulletCacheMap[text] = bulletDataMain;
+						this.GlobalCommonBulletCache.BulletDataMap[text] = bulletDataMain;
+						this.GlobalCommonBulletCache.BulletDataSourceMap[text] = commonBulletDataTable;
 					}
 				}
 			}
 		}
 	}
 
-	// Token: 0x17002122 RID: 8482
-	// (get) Token: 0x060188EE RID: 100590 RVA: 0x00646C4E File Offset: 0x00644E4E
+	// Token: 0x1700217D RID: 8573
+	// (get) Token: 0x06016195 RID: 90517 RVA: 0x0066CAB7 File Offset: 0x0066ACB7
 	public static BulletConfig Instance
 	{
 		get
@@ -628,7 +611,7 @@ public class BulletConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060188EF RID: 100591 RVA: 0x00646C55 File Offset: 0x00644E55
+	// Token: 0x06016196 RID: 90518 RVA: 0x0066CABE File Offset: 0x0066ACBE
 	public static BulletConfig GetOrCreateInstance()
 	{
 		if (BulletConfig._Instance == null)
@@ -638,7 +621,7 @@ public class BulletConfig : ConfigBase
 		return BulletConfig._Instance;
 	}
 
-	// Token: 0x060188F0 RID: 100592 RVA: 0x00646C69 File Offset: 0x00644E69
+	// Token: 0x06016197 RID: 90519 RVA: 0x0066CAD2 File Offset: 0x0066ACD2
 	public static bool CreateInstance()
 	{
 		if (BulletConfig._Instance != null)
@@ -649,57 +632,66 @@ public class BulletConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060188F1 RID: 100593 RVA: 0x00646C7F File Offset: 0x00644E7F
+	// Token: 0x06016198 RID: 90520 RVA: 0x0066CAE8 File Offset: 0x0066ACE8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060188F2 RID: 100594 RVA: 0x00646C81 File Offset: 0x00644E81
+	// Token: 0x06016199 RID: 90521 RVA: 0x0066CAEA File Offset: 0x0066ACEA
 	public static void ResetStaticDefaultValue()
 	{
 		BulletConfig._Instance = null;
 	}
 
-	// Token: 0x060188F3 RID: 100595 RVA: 0x00646C89 File Offset: 0x00644E89
+	// Token: 0x0601619A RID: 90522 RVA: 0x0066CAF2 File Offset: 0x0066ACF2
 	static BulletConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletConfig.CreateStaticDefaultValue), new Action(BulletConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060188F5 RID: 100597 RVA: 0x00646D42 File Offset: 0x00644F42
+	// Token: 0x0601619C RID: 90524 RVA: 0x0066CBE9 File Offset: 0x0066ADE9
 	[NullableContext(2)]
 	[CompilerGenerated]
-	internal static bool <CancelExtraPreload>g__IsTarget|25_0(PreloadBulletConfig config, ref BulletConfig.<>c__DisplayClass25_0 A_1)
+	internal static bool <CancelExtraPreload>g__IsTarget|30_0(PreloadBulletConfig config, ref BulletConfig.<>c__DisplayClass30_0 A_1)
 	{
 		return config != null && config.Source == EBulletPreloadSource.Extra && config.EntityId == A_1.entityId && config.DataTable == A_1.table;
 	}
 
-	// Token: 0x0400B5FF RID: 46591
-	private readonly Stat PreloadStat = Stat.Create("BulletConfigPreload", "", "");
+	// Token: 0x0400B975 RID: 47477
+	private readonly Stat PreloadStat = Stat.Create("BulletConfig.Preload", "", "");
 
-	// Token: 0x0400B600 RID: 46592
-	private readonly Stat TickPreloadStat = Stat.Create("BulletConfigTickPreload", "", "");
+	// Token: 0x0400B976 RID: 47478
+	private readonly Stat TickPreloadStat = Stat.Create("BulletConfig.TickPreload", "", "");
 
-	// Token: 0x0400B601 RID: 46593
+	// Token: 0x0400B977 RID: 47479
+	private readonly Stat GetBulletDataStat = Stat.Create("BulletConfig.GetBulletData", "", "");
+
+	// Token: 0x0400B978 RID: 47480
+	private readonly Stat ResolveBulletDataSourceStat = Stat.Create("BulletConfig.ResolveBulletDataSource", "", "");
+
+	// Token: 0x0400B979 RID: 47481
 	private readonly Dictionary<int, BulletDataCacheInfo> SelfBulletCacheMap = new Dictionary<int, BulletDataCacheInfo>();
 
-	// Token: 0x0400B602 RID: 46594
+	// Token: 0x0400B97A RID: 47482
 	private readonly Dictionary<int, BulletDataCacheInfo> ExtraBulletCacheMap = new Dictionary<int, BulletDataCacheInfo>();
 
-	// Token: 0x0400B603 RID: 46595
-	private readonly Dictionary<string, BulletDataMain> CommonBulletCacheMap = new Dictionary<string, BulletDataMain>();
+	// Token: 0x0400B97B RID: 47483
+	private readonly BulletDataCacheInfo GameplayCommonBulletCache = new BulletDataCacheInfo();
 
-	// Token: 0x0400B604 RID: 46596
+	// Token: 0x0400B97C RID: 47484
+	private readonly BulletDataCacheInfo GlobalCommonBulletCache = new BulletDataCacheInfo();
+
+	// Token: 0x0400B97D RID: 47485
 	private readonly Dictionary<int, int> EntityMap = new Dictionary<int, int>();
 
-	// Token: 0x0400B605 RID: 46597
+	// Token: 0x0400B97E RID: 47486
 	private readonly List<PreloadBulletConfig> PreloadBulletConfigs = new List<PreloadBulletConfig>();
 
-	// Token: 0x0400B606 RID: 46598
+	// Token: 0x0400B97F RID: 47487
 	[Nullable(2)]
 	private PreloadBulletConfig CurPreloadBulletConfig;
 
-	// Token: 0x0400B607 RID: 46599
+	// Token: 0x0400B980 RID: 47488
 	[StaticVariableRuleIgnore]
 	private static readonly string[] CommonPreloadWhitelist = new string[]
 	{
@@ -707,7 +699,7 @@ public class BulletConfig : ConfigBase
 		"100122"
 	};
 
-	// Token: 0x0400B608 RID: 46600
+	// Token: 0x0400B981 RID: 47489
 	[Nullable(2)]
 	private static BulletConfig _Instance;
 }

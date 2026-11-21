@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat
 {
-	// Token: 0x02006FB9 RID: 28601
+	// Token: 0x0200613A RID: 24890
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class KscEnv : Singleton
 	{
-		// Token: 0x17009B7D RID: 39805
-		// (get) Token: 0x0604580E RID: 284686 RVA: 0x0113E1DC File Offset: 0x0113C3DC
+		// Token: 0x170070BD RID: 28861
+		// (get) Token: 0x0603B9BE RID: 244158 RVA: 0x010E8008 File Offset: 0x010E6208
 		public UKSC_World KscWorld
 		{
 			get
@@ -21,8 +20,8 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x17009B7E RID: 39806
-		// (get) Token: 0x0604580F RID: 284687 RVA: 0x0113E1E4 File Offset: 0x0113C3E4
+		// Token: 0x170070BE RID: 28862
+		// (get) Token: 0x0603B9BF RID: 244159 RVA: 0x010E8010 File Offset: 0x010E6210
 		public int KscWorldHandle
 		{
 			get
@@ -31,8 +30,8 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x17009B7F RID: 39807
-		// (get) Token: 0x06045810 RID: 284688 RVA: 0x0113E1EC File Offset: 0x0113C3EC
+		// Token: 0x170070BF RID: 28863
+		// (get) Token: 0x0603B9C0 RID: 244160 RVA: 0x010E8018 File Offset: 0x010E6218
 		public UKuroSimpleCombatSubsystem KscSubsystem
 		{
 			get
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x06045811 RID: 284689 RVA: 0x0113E208 File Offset: 0x0113C408
+		// Token: 0x0603B9C1 RID: 244161 RVA: 0x010E8034 File Offset: 0x010E6234
 		public void Start(UClass worldClass = null)
 		{
 			if (this.Started)
@@ -70,14 +69,6 @@ namespace CSharpScript.Game.KuroSimpleCombat
 				UKuroSimpleCombatSubsystem kscSubsystem4 = this.KscSubsystem;
 				this.KscWorldInternal = ((kscSubsystem4 != null) ? kscSubsystem4.GetKSCWorld() : null);
 			}
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.log.Buff 1", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.log.Damage 1", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.log.Attr 1", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.log.Skill 1", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.log.Move 0", null);
-			}
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "bullet.kfc.enable 1", null);
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.entity.kfc.enable 1", null);
 			this.OnStart();
@@ -101,7 +92,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x06045812 RID: 284690 RVA: 0x0113E39C File Offset: 0x0113C59C
+		// Token: 0x0603B9C2 RID: 244162 RVA: 0x010E816C File Offset: 0x010E636C
 		private unsafe void SetupBounds()
 		{
 			if (this.KscWorldInternal == null)
@@ -161,7 +152,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			this.KscWorldInternal.SetWorldBounds(uksc_DA_WorldBounds);
 		}
 
-		// Token: 0x06045813 RID: 284691 RVA: 0x0113E568 File Offset: 0x0113C768
+		// Token: 0x0603B9C3 RID: 244163 RVA: 0x010E8338 File Offset: 0x010E6538
 		private void OnStart()
 		{
 			UKSC_World kscWorld = this.KscWorld;
@@ -179,7 +170,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			kscWorld2.AssignLandFireSpawnDelegate(fonKSCLandFireSpawn);
 		}
 
-		// Token: 0x06045814 RID: 284692 RVA: 0x0113E5BE File Offset: 0x0113C7BE
+		// Token: 0x0603B9C4 RID: 244164 RVA: 0x010E838E File Offset: 0x010E658E
 		[NullableContext(1)]
 		public void BatchRemove(in TArray<FKSC_RemoveContext> contexts)
 		{
@@ -190,7 +181,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			KuroSimpleCombatController.Instance.BatchRemove(contexts);
 		}
 
-		// Token: 0x06045815 RID: 284693 RVA: 0x0113E5D5 File Offset: 0x0113C7D5
+		// Token: 0x0603B9C5 RID: 244165 RVA: 0x010E83A5 File Offset: 0x010E65A5
 		[NullableContext(1)]
 		public void LandFireSpawn(in TArray<FKSC_LandFireContext> contexts)
 		{
@@ -201,7 +192,7 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			KuroSimpleCombatController.Instance.LandFireSpawn(contexts);
 		}
 
-		// Token: 0x06045816 RID: 284694 RVA: 0x0113E5EC File Offset: 0x0113C7EC
+		// Token: 0x0603B9C6 RID: 244166 RVA: 0x010E83BC File Offset: 0x010E65BC
 		public void Stop()
 		{
 			if (!this.Started)
@@ -222,28 +213,28 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			this.KscWorldInternal = null;
 		}
 
-		// Token: 0x06045817 RID: 284695 RVA: 0x0113E659 File Offset: 0x0113C859
+		// Token: 0x0603B9C7 RID: 244167 RVA: 0x010E8429 File Offset: 0x010E6629
 		private void OnStop()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new <>A{00000003}<TArray<FKSC_RemoveContext>>(this.BatchRemove));
 			DelegateUtils.ReleaseManualReleaseDelegate(new <>A{00000003}<TArray<FKSC_LandFireContext>>(this.LandFireSpawn));
 		}
 
-		// Token: 0x06045818 RID: 284696 RVA: 0x0113E67D File Offset: 0x0113C87D
+		// Token: 0x0603B9C8 RID: 244168 RVA: 0x010E844D File Offset: 0x010E664D
 		public void CacheWorldKillZ(float killZ)
 		{
 			this.WorldKillZ = new float?(killZ);
 		}
 
-		// Token: 0x06045819 RID: 284697 RVA: 0x0113E68B File Offset: 0x0113C88B
+		// Token: 0x0603B9C9 RID: 244169 RVA: 0x010E845B File Offset: 0x010E665B
 		[NullableContext(1)]
 		public void CacheObstacleSegments(TArray<FKSC_Segment> inObstacleSegments)
 		{
 			this.ObstacleSegments = inObstacleSegments;
 		}
 
-		// Token: 0x17009B80 RID: 39808
-		// (get) Token: 0x0604581A RID: 284698 RVA: 0x0113E694 File Offset: 0x0113C894
+		// Token: 0x170070C0 RID: 28864
+		// (get) Token: 0x0603B9CA RID: 244170 RVA: 0x010E8464 File Offset: 0x010E6664
 		[Nullable(1)]
 		public static KscEnv Instance
 		{
@@ -259,12 +250,12 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			}
 		}
 
-		// Token: 0x0604581B RID: 284699 RVA: 0x0113E6B7 File Offset: 0x0113C8B7
+		// Token: 0x0603B9CB RID: 244171 RVA: 0x010E8487 File Offset: 0x010E6687
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604581C RID: 284700 RVA: 0x0113E6B9 File Offset: 0x0113C8B9
+		// Token: 0x0603B9CC RID: 244172 RVA: 0x010E8489 File Offset: 0x010E6689
 		public static void ResetStaticDefaultValue()
 		{
 			KscEnv instance = KscEnv._instance;
@@ -275,19 +266,19 @@ namespace CSharpScript.Game.KuroSimpleCombat
 			KscEnv._instance = null;
 		}
 
-		// Token: 0x0604581D RID: 284701 RVA: 0x0113E6D2 File Offset: 0x0113C8D2
+		// Token: 0x0603B9CD RID: 244173 RVA: 0x010E84A2 File Offset: 0x010E66A2
 		static KscEnv()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(KscEnv.CreateStaticDefaultValue), new Action(KscEnv.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024444 RID: 148548
+		// Token: 0x0401F6F9 RID: 128761
 		public bool Started;
 
-		// Token: 0x04024445 RID: 148549
+		// Token: 0x0401F6FA RID: 128762
 		private float? WorldKillZ;
 
-		// Token: 0x04024446 RID: 148550
+		// Token: 0x0401F6FB RID: 128763
 		[Nullable(new byte[]
 		{
 			2,
@@ -295,13 +286,13 @@ namespace CSharpScript.Game.KuroSimpleCombat
 		})]
 		private TArray<FKSC_Segment> ObstacleSegments;
 
-		// Token: 0x04024447 RID: 148551
+		// Token: 0x0401F6FC RID: 128764
 		private UKSC_World KscWorldInternal;
 
-		// Token: 0x04024448 RID: 148552
+		// Token: 0x0401F6FD RID: 128765
 		private int KscWorldHandleInternal;
 
-		// Token: 0x04024449 RID: 148553
+		// Token: 0x0401F6FE RID: 128766
 		private static KscEnv _instance;
 	}
 }

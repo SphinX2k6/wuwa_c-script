@@ -2,17 +2,17 @@
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020021B8 RID: 8632
+// Token: 0x0200169C RID: 5788
 public class LordGymThirdLevelItem : LordGymDifficultyItem
 {
-	// Token: 0x06010CCE RID: 68814 RVA: 0x00414B50 File Offset: 0x00412D50
+	// Token: 0x0600E15F RID: 57695 RVA: 0x00421430 File Offset: 0x0041F630
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
 		this.ComponentRegisterInfos[1] = new ValueTuple<int, Type>(1, typeof(UUISprite));
 	}
 
-	// Token: 0x06010CCF RID: 68815 RVA: 0x00414B74 File Offset: 0x00412D74
+	// Token: 0x0600E160 RID: 57696 RVA: 0x00421454 File Offset: 0x0041F654
 	protected override void SetLevelText(LordGym config)
 	{
 		string text = config.Difficulty.ToString();
@@ -23,10 +23,10 @@ public class LordGymThirdLevelItem : LordGymDifficultyItem
 		}), base.GetSprite(1), true, null, null);
 	}
 
-	// Token: 0x02008702 RID: 34562
+	// Token: 0x0200788D RID: 30861
 	private class EComponent
 	{
-		// Token: 0x0402BEA1 RID: 179873
+		// Token: 0x040271C2 RID: 160194
 		public const int NumSprite = 1;
 	}
 }

@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CDA RID: 3290
+	// Token: 0x02000DBE RID: 3518
 	public struct FurniturePresetConfig : IFlatbufferObject
 	{
-		// Token: 0x17001486 RID: 5254
-		// (get) Token: 0x060077C5 RID: 30661 RVA: 0x002451CD File Offset: 0x002433CD
+		// Token: 0x170014E3 RID: 5347
+		// (get) Token: 0x06007DD0 RID: 32208 RVA: 0x00263D4A File Offset: 0x00261F4A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077C6 RID: 30662 RVA: 0x002451DA File Offset: 0x002433DA
+		// Token: 0x06007DD1 RID: 32209 RVA: 0x00263D57 File Offset: 0x00261F57
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060077C7 RID: 30663 RVA: 0x002451E4 File Offset: 0x002433E4
+		// Token: 0x06007DD2 RID: 32210 RVA: 0x00263D60 File Offset: 0x00261F60
 		public static FurniturePresetConfig GetRootAsFurniturePresetConfig(ByteBuffer _bb)
 		{
 			return FurniturePresetConfig.GetRootAsFurniturePresetConfig(_bb, default(FurniturePresetConfig));
 		}
 
-		// Token: 0x060077C8 RID: 30664 RVA: 0x00245200 File Offset: 0x00243400
+		// Token: 0x06007DD3 RID: 32211 RVA: 0x00263D7C File Offset: 0x00261F7C
 		public static FurniturePresetConfig GetRootAsFurniturePresetConfig(ByteBuffer _bb, FurniturePresetConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060077C9 RID: 30665 RVA: 0x0024521D File Offset: 0x0024341D
+		// Token: 0x06007DD4 RID: 32212 RVA: 0x00263D99 File Offset: 0x00261F99
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060077CA RID: 30666 RVA: 0x0024522C File Offset: 0x0024342C
+		// Token: 0x06007DD5 RID: 32213 RVA: 0x00263DA8 File Offset: 0x00261FA8
 		public FurniturePresetConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001487 RID: 5255
-		// (get) Token: 0x060077CB RID: 30667 RVA: 0x0024523C File Offset: 0x0024343C
+		// Token: 0x170014E4 RID: 5348
+		// (get) Token: 0x06007DD6 RID: 32214 RVA: 0x00263DB8 File Offset: 0x00261FB8
 		public int AreaId
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001488 RID: 5256
-		// (get) Token: 0x060077CC RID: 30668 RVA: 0x00245278 File Offset: 0x00243478
+		// Token: 0x170014E5 RID: 5349
+		// (get) Token: 0x06007DD7 RID: 32215 RVA: 0x00263DF4 File Offset: 0x00261FF4
 		public string Name
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077CD RID: 30669 RVA: 0x002452AF File Offset: 0x002434AF
+		// Token: 0x06007DD8 RID: 32216 RVA: 0x00263E2B File Offset: 0x0026202B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060077CE RID: 30670 RVA: 0x002452BE File Offset: 0x002434BE
+		// Token: 0x06007DD9 RID: 32217 RVA: 0x00263E3A File Offset: 0x0026203A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001489 RID: 5257
-		// (get) Token: 0x060077CF RID: 30671 RVA: 0x002452D8 File Offset: 0x002434D8
+		// Token: 0x170014E6 RID: 5350
+		// (get) Token: 0x06007DDA RID: 32218 RVA: 0x00263E54 File Offset: 0x00262054
 		public string Icon
 		{
 			get
@@ -108,19 +108,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077D0 RID: 30672 RVA: 0x0024530F File Offset: 0x0024350F
+		// Token: 0x06007DDB RID: 32219 RVA: 0x00263E8B File Offset: 0x0026208B
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060077D1 RID: 30673 RVA: 0x0024531E File Offset: 0x0024351E
+		// Token: 0x06007DDC RID: 32220 RVA: 0x00263E9A File Offset: 0x0026209A
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060077D2 RID: 30674 RVA: 0x00245338 File Offset: 0x00243538
+		// Token: 0x06007DDD RID: 32221 RVA: 0x00263EB4 File Offset: 0x002620B4
 		public DicIntIntArray? FurniturePlaceInfo(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -131,8 +131,8 @@ namespace Aki.Config
 			return new DicIntIntArray?(default(DicIntIntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700148A RID: 5258
-		// (get) Token: 0x060077D3 RID: 30675 RVA: 0x0024539C File Offset: 0x0024359C
+		// Token: 0x170014E7 RID: 5351
+		// (get) Token: 0x06007DDE RID: 32222 RVA: 0x00263F18 File Offset: 0x00262118
 		public int FurniturePlaceInfoLength
 		{
 			get
@@ -146,24 +146,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077D4 RID: 30676 RVA: 0x002453C8 File Offset: 0x002435C8
+		// Token: 0x06007DDF RID: 32223 RVA: 0x00263F44 File Offset: 0x00262144
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用FurniturePlaceInfoFrozenDict()缓存字典，遍历请使用FurniturePlaceInfoIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, IntArray> FurniturePlaceInfo()
+		public Dictionary<int, IntArray> FurniturePlaceInfo()
 		{
 			return this.FurniturePlaceInfoIter().ToDictionary((DicIntIntArray element) => element.Key, (DicIntIntArray element) => element.Value.Value);
 		}
 
-		// Token: 0x060077D5 RID: 30677 RVA: 0x0024541E File Offset: 0x0024361E
+		// Token: 0x06007DE0 RID: 32224 RVA: 0x00263F9A File Offset: 0x0026219A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntIntArray> FurniturePlaceInfoIter()
+		public IEnumerable<DicIntIntArray> FurniturePlaceInfoIter()
 		{
 			FurniturePresetConfig.<FurniturePlaceInfoIter>d__22 <FurniturePlaceInfoIter>d__ = new FurniturePresetConfig.<FurniturePlaceInfoIter>d__22(-2);
 			<FurniturePlaceInfoIter>d__.<>3__<>4__this = this;
 			return <FurniturePlaceInfoIter>d__;
 		}
 
-		// Token: 0x060077D6 RID: 30678 RVA: 0x00245434 File Offset: 0x00243634
+		// Token: 0x06007DE1 RID: 32225 RVA: 0x00263FB0 File Offset: 0x002621B0
 		public IntArray? GetFurniturePlaceInfo(int key)
 		{
 			this.EnsureFurniturePlaceInfoCacheIfNeeded();
@@ -175,7 +174,7 @@ namespace Aki.Config
 			return new IntArray?(value);
 		}
 
-		// Token: 0x060077D7 RID: 30679 RVA: 0x00245468 File Offset: 0x00243668
+		// Token: 0x06007DE2 RID: 32226 RVA: 0x00263FE4 File Offset: 0x002621E4
 		private void EnsureFurniturePlaceInfoCacheIfNeeded()
 		{
 			if (this.FurniturePlaceInfoCache != null)
@@ -185,18 +184,18 @@ namespace Aki.Config
 			this.FurniturePlaceInfoCache = this.FurniturePlaceInfoIter().ToFrozenDictionary((DicIntIntArray kvp) => kvp.Key, (DicIntIntArray kvp) => kvp.Value.Value, null);
 		}
 
-		// Token: 0x060077D8 RID: 30680 RVA: 0x002454CE File Offset: 0x002436CE
-		[NullableContext(2)]
-		public FrozenDictionary<int, IntArray> GetFurniturePlaceInfoFrozenDict(int key)
+		// Token: 0x06007DE3 RID: 32227 RVA: 0x0026404A File Offset: 0x0026224A
+		[NullableContext(1)]
+		public FrozenDictionary<int, IntArray> GetFurniturePlaceInfoFrozenDict()
 		{
 			this.EnsureFurniturePlaceInfoCacheIfNeeded();
 			return this.FurniturePlaceInfoCache;
 		}
 
-		// Token: 0x04004D4A RID: 19786
+		// Token: 0x0400532E RID: 21294
 		private Table __p;
 
-		// Token: 0x04004D4B RID: 19787
+		// Token: 0x0400532F RID: 21295
 		[Nullable(2)]
 		private FrozenDictionary<int, IntArray> FurniturePlaceInfoCache;
 	}

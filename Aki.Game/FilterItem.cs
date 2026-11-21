@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001859 RID: 6233
+// Token: 0x02000D12 RID: 3346
 [NullableContext(1)]
 [Nullable(0)]
 public class FilterItem : UiPanelBase
 {
-	// Token: 0x0600B69C RID: 46748 RVA: 0x002945A2 File Offset: 0x002927A2
+	// Token: 0x06008A85 RID: 35461 RVA: 0x0029ECCE File Offset: 0x0029CECE
 	public FilterItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B69D RID: 46749 RVA: 0x002945B8 File Offset: 0x002927B8
+	// Token: 0x06008A86 RID: 35462 RVA: 0x0029ECE4 File Offset: 0x0029CEE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,7 +43,7 @@ public class FilterItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B69E RID: 46750 RVA: 0x002946C1 File Offset: 0x002928C1
+	// Token: 0x06008A87 RID: 35463 RVA: 0x0029EDED File Offset: 0x0029CFED
 	private void ToggleEvent(EToggleState state)
 	{
 		TFilterItemToggleEvent toggleFunction = this.ToggleFunction;
@@ -54,14 +54,14 @@ public class FilterItem : UiPanelBase
 		toggleFunction(state, this.Data.FilterId, this.Data.Content);
 	}
 
-	// Token: 0x0600B69F RID: 46751 RVA: 0x002946EC File Offset: 0x002928EC
+	// Token: 0x06008A88 RID: 35464 RVA: 0x0029EE18 File Offset: 0x0029D018
 	private void SetContent()
 	{
 		string content = this.Data.Content;
 		base.GetText(4).SetText(content, true);
 	}
 
-	// Token: 0x0600B6A0 RID: 46752 RVA: 0x00294714 File Offset: 0x00292914
+	// Token: 0x06008A89 RID: 35465 RVA: 0x0029EE40 File Offset: 0x0029D040
 	private void SetIcon()
 	{
 		string iconPath = this.Data.GetIconPath();
@@ -94,20 +94,20 @@ public class FilterItem : UiPanelBase
 		uuiitem2.SetChangeColor(needChangeColor2, fcolor);
 	}
 
-	// Token: 0x0600B6A1 RID: 46753 RVA: 0x002947E9 File Offset: 0x002929E9
+	// Token: 0x06008A8A RID: 35466 RVA: 0x0029EF15 File Offset: 0x0029D115
 	public void SetToggleFunction(TFilterItemToggleEvent toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x0600B6A2 RID: 46754 RVA: 0x002947F4 File Offset: 0x002929F4
+	// Token: 0x06008A8B RID: 35467 RVA: 0x0029EF20 File Offset: 0x0029D120
 	public void SetToggleState(bool bSelected)
 	{
 		EToggleState state = bSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600B6A3 RID: 46755 RVA: 0x0029481A File Offset: 0x00292A1A
+	// Token: 0x06008A8C RID: 35468 RVA: 0x0029EF46 File Offset: 0x0029D146
 	public void ShowTemp(FilterItemData data, bool bSelected)
 	{
 		this.Data = data;
@@ -116,27 +116,27 @@ public class FilterItem : UiPanelBase
 		this.SetToggleState(bSelected);
 	}
 
-	// Token: 0x04005283 RID: 21123
+	// Token: 0x0400532E RID: 21294
 	[Nullable(2)]
 	private FilterItemData Data;
 
-	// Token: 0x04005284 RID: 21124
+	// Token: 0x0400532F RID: 21295
 	[Nullable(2)]
 	private TFilterItemToggleEvent ToggleFunction;
 
-	// Token: 0x02007E1A RID: 32282
+	// Token: 0x02006FA1 RID: 28577
 	[NullableContext(0)]
 	private enum EFilterItemDefine
 	{
-		// Token: 0x04029461 RID: 169057
+		// Token: 0x0402478E RID: 149390
 		Toggle,
-		// Token: 0x04029462 RID: 169058
+		// Token: 0x0402478F RID: 149391
 		IconRoot,
-		// Token: 0x04029463 RID: 169059
+		// Token: 0x04024790 RID: 149392
 		Icon,
-		// Token: 0x04029464 RID: 169060
+		// Token: 0x04024791 RID: 149393
 		Sprite,
-		// Token: 0x04029465 RID: 169061
+		// Token: 0x04024792 RID: 149394
 		Content
 	}
 }

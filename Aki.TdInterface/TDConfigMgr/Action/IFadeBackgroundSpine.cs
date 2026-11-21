@@ -5,14 +5,14 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A51 RID: 6737
+	// Token: 0x02001BE6 RID: 7142
 	[NullableContext(2)]
 	[Nullable(0)]
 	[JsonConverter(typeof(IFadeBackgroundSpineConverter))]
 	public class IFadeBackgroundSpine : IFadeBackgroundType
 	{
-		// Token: 0x06009038 RID: 36920 RVA: 0x0015046C File Offset: 0x0014E66C
-		[NullableContext(1)]
+		// Token: 0x060097A2 RID: 38818 RVA: 0x00160398 File Offset: 0x0015E598
+		[NullableContext(0)]
 		private IFadeBackgroundSpine_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009039 RID: 36921 RVA: 0x001504A4 File Offset: 0x0014E6A4
-		[NullableContext(1)]
+		// Token: 0x060097A3 RID: 38819 RVA: 0x001603D0 File Offset: 0x0015E5D0
+		[NullableContext(0)]
 		public static IFadeBackgroundSpine Create([Nullable(2)] IFadeBackgroundSpine instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600903A RID: 36922 RVA: 0x001504B7 File Offset: 0x0014E6B7
-		[NullableContext(1)]
+		// Token: 0x060097A4 RID: 38820 RVA: 0x001603E3 File Offset: 0x0015E5E3
+		[NullableContext(0)]
 		public static IFadeBackgroundSpine CreateFromSetValue([Nullable(2)] IFadeBackgroundSpine_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600903B RID: 36923 RVA: 0x001504CA File Offset: 0x0014E6CA
-		[NullableContext(1)]
+		// Token: 0x060097A5 RID: 38821 RVA: 0x001603F6 File Offset: 0x0015E5F6
+		[NullableContext(0)]
 		public new IFadeBackgroundSpine_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundSpine_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DF8 RID: 11768
-		// (get) Token: 0x0600903C RID: 36924 RVA: 0x00150501 File Offset: 0x0014E701
-		// (set) Token: 0x0600903D RID: 36925 RVA: 0x0015052C File Offset: 0x0014E72C
+		// Token: 0x17003005 RID: 12293
+		// (get) Token: 0x060097A6 RID: 38822 RVA: 0x0016042D File Offset: 0x0015E62D
+		// (set) Token: 0x060097A7 RID: 38823 RVA: 0x00160458 File Offset: 0x0015E658
 		public override EFadeBackgroundType Type
 		{
 			get
@@ -91,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DF9 RID: 11769
-		// (get) Token: 0x0600903E RID: 36926 RVA: 0x0015053A File Offset: 0x0014E73A
-		// (set) Token: 0x0600903F RID: 36927 RVA: 0x00150565 File Offset: 0x0014E765
+		// Token: 0x17003006 RID: 12294
+		// (get) Token: 0x060097A8 RID: 38824 RVA: 0x00160466 File Offset: 0x0015E666
+		// (set) Token: 0x060097A9 RID: 38825 RVA: 0x00160491 File Offset: 0x0015E691
 		public virtual int SpineId
 		{
 			get
@@ -114,9 +114,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DFA RID: 11770
-		// (get) Token: 0x06009040 RID: 36928 RVA: 0x00150574 File Offset: 0x0014E774
-		// (set) Token: 0x06009041 RID: 36929 RVA: 0x001505D5 File Offset: 0x0014E7D5
+		// Token: 0x17003007 RID: 12295
+		// (get) Token: 0x060097AA RID: 38826 RVA: 0x001604A0 File Offset: 0x0015E6A0
+		// (set) Token: 0x060097AB RID: 38827 RVA: 0x00160501 File Offset: 0x0015E701
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
 			get
@@ -144,9 +144,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DFB RID: 11771
-		// (get) Token: 0x06009042 RID: 36930 RVA: 0x001505EC File Offset: 0x0014E7EC
-		// (set) Token: 0x06009043 RID: 36931 RVA: 0x0015064D File Offset: 0x0014E84D
+		// Token: 0x17003008 RID: 12296
+		// (get) Token: 0x060097AC RID: 38828 RVA: 0x00160518 File Offset: 0x0015E718
+		// (set) Token: 0x060097AD RID: 38829 RVA: 0x00160579 File Offset: 0x0015E779
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
 			get
@@ -174,24 +174,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005915 RID: 22805
+		// Token: 0x04005D7A RID: 23930
 		protected new IFadeBackgroundSpine FbInstance;
 
-		// Token: 0x04005916 RID: 22806
+		// Token: 0x04005D7B RID: 23931
 		protected new IFadeBackgroundSpine_SetValue PocoInterface;
 
-		// Token: 0x04005917 RID: 22807
-		[Nullable(1)]
+		// Token: 0x04005D7C RID: 23932
+		[Nullable(0)]
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x04005918 RID: 22808
+		// Token: 0x04005D7D RID: 23933
 		private bool _FadeInEffectInited;
 
-		// Token: 0x04005919 RID: 22809
-		[Nullable(1)]
+		// Token: 0x04005D7E RID: 23934
+		[Nullable(0)]
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x0400591A RID: 22810
+		// Token: 0x04005D7F RID: 23935
 		private bool _FadeOutEffectInited;
 	}
 }

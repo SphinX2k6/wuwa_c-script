@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002A9 RID: 681
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002EE RID: 750
 	public class IDaNpcModel : INpcModelConfig
 	{
-		// Token: 0x06000CBB RID: 3259 RVA: 0x00030B38 File Offset: 0x0002ED38
+		// Token: 0x06000DDF RID: 3551 RVA: 0x00033928 File Offset: 0x00031B28
 		private IDaNpcModel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CBC RID: 3260 RVA: 0x00030B70 File Offset: 0x0002ED70
+		// Token: 0x06000DE0 RID: 3552 RVA: 0x00033960 File Offset: 0x00031B60
 		public static IDaNpcModel Create([Nullable(2)] IDaNpcModel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CBD RID: 3261 RVA: 0x00030B83 File Offset: 0x0002ED83
+		// Token: 0x06000DE1 RID: 3553 RVA: 0x00033973 File Offset: 0x00031B73
 		public static IDaNpcModel CreateFromSetValue([Nullable(2)] IDaNpcModel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CBE RID: 3262 RVA: 0x00030B96 File Offset: 0x0002ED96
+		// Token: 0x06000DE2 RID: 3554 RVA: 0x00033986 File Offset: 0x00031B86
 		public new IDaNpcModel_SetValue ToSetValue()
 		{
 			return new IDaNpcModel_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003BD RID: 957
-		// (get) Token: 0x06000CBF RID: 3263 RVA: 0x00030BB5 File Offset: 0x0002EDB5
-		// (set) Token: 0x06000CC0 RID: 3264 RVA: 0x00030BE0 File Offset: 0x0002EDE0
+		// Token: 0x17000407 RID: 1031
+		// (get) Token: 0x06000DE3 RID: 3555 RVA: 0x000339A5 File Offset: 0x00031BA5
+		// (set) Token: 0x06000DE4 RID: 3556 RVA: 0x000339D0 File Offset: 0x00031BD0
 		public override ENpcModelType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003BE RID: 958
-		// (get) Token: 0x06000CC1 RID: 3265 RVA: 0x00030BEE File Offset: 0x0002EDEE
-		// (set) Token: 0x06000CC2 RID: 3266 RVA: 0x00030C19 File Offset: 0x0002EE19
+		// Token: 0x17000408 RID: 1032
+		// (get) Token: 0x06000DE5 RID: 3557 RVA: 0x000339DE File Offset: 0x00031BDE
+		// (set) Token: 0x06000DE6 RID: 3558 RVA: 0x00033A09 File Offset: 0x00031C09
 		public virtual string Da
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BCE RID: 3022
+		// Token: 0x04000CB3 RID: 3251
 		[Nullable(2)]
 		protected new IDaNpcModel FbInstance;
 
-		// Token: 0x04000BCF RID: 3023
+		// Token: 0x04000CB4 RID: 3252
 		[Nullable(2)]
 		protected new IDaNpcModel_SetValue PocoInterface;
 	}

@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001B26 RID: 6950
+// Token: 0x02000FE5 RID: 4069
 public enum EFloroRanchEntityType
 {
-	// Token: 0x04005E7A RID: 24186
+	// Token: 0x04005F49 RID: 24393
 	Terrain,
-	// Token: 0x04005E7B RID: 24187
+	// Token: 0x04005F4A RID: 24394
 	Card,
-	// Token: 0x04005E7C RID: 24188
+	// Token: 0x04005F4B RID: 24395
 	Toy,
-	// Token: 0x04005E7D RID: 24189
+	// Token: 0x04005F4C RID: 24396
 	Dungeon,
-	// Token: 0x04005E7E RID: 24190
+	// Token: 0x04005F4D RID: 24397
 	Role
 }

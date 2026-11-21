@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x0200635A RID: 25434
+	// Token: 0x020052D8 RID: 21208
 	internal class ClassComponent : UiPanelBase
 	{
-		// Token: 0x06040003 RID: 262147 RVA: 0x00F7B984 File Offset: 0x00F79B84
+		// Token: 0x06034CC4 RID: 216260 RVA: 0x00EC28E4 File Offset: 0x00EC0AE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040004 RID: 262148 RVA: 0x00F7B9F0 File Offset: 0x00F79BF0
+		// Token: 0x06034CC5 RID: 216261 RVA: 0x00EC2950 File Offset: 0x00EC0B50
 		public void RefreshItem(int classId)
 		{
 			PinballClassConfig? pinballClassConfigById = PinballConfig.Instance.GetPinballClassConfigById(classId);
@@ -36,12 +36,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			base.GetItem(0).SetColor(FColor.FromHex(pinballClassConfigById.Value.BgColor));
 		}
 
-		// Token: 0x0200C57C RID: 50556
+		// Token: 0x0200AF63 RID: 44899
 		private enum EClassComponent
 		{
-			// Token: 0x0403B9B3 RID: 244147
+			// Token: 0x04036315 RID: 221973
 			BgItem,
-			// Token: 0x0403B9B4 RID: 244148
+			// Token: 0x04036316 RID: 221974
 			Texture
 		}
 	}

@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020011B3 RID: 4531
+// Token: 0x02000667 RID: 1639
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 {
-	// Token: 0x06007840 RID: 30784 RVA: 0x0019307C File Offset: 0x0019127C
+	// Token: 0x06004BD7 RID: 19415 RVA: 0x0019BC48 File Offset: 0x00199E48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -58,7 +58,7 @@ public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007841 RID: 30785 RVA: 0x00193294 File Offset: 0x00191494
+	// Token: 0x06004BD8 RID: 19416 RVA: 0x0019BE60 File Offset: 0x0019A060
 	[NullableContext(1)]
 	public override void Refresh(BlackCoastStageInfo stageInfo, bool isSelected, int gridIndex)
 	{
@@ -69,7 +69,7 @@ public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06007842 RID: 30786 RVA: 0x001932E8 File Offset: 0x001914E8
+	// Token: 0x06004BD9 RID: 19417 RVA: 0x0019BEB4 File Offset: 0x0019A0B4
 	private void RefreshState(EStageState state, BlackCoastThemeStageRe config)
 	{
 		bool flag = state == EStageState.Lock;
@@ -97,7 +97,7 @@ public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 		}
 	}
 
-	// Token: 0x06007843 RID: 30787 RVA: 0x001933AC File Offset: 0x001915AC
+	// Token: 0x06004BDA RID: 19418 RVA: 0x0019BF78 File Offset: 0x0019A178
 	private void RefreshText(EStageState state, BlackCoastThemeStageRe config)
 	{
 		if (state == EStageState.Active)
@@ -112,7 +112,7 @@ public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), config.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x06007844 RID: 30788 RVA: 0x00193428 File Offset: 0x00191628
+	// Token: 0x06004BDB RID: 19419 RVA: 0x0019BFF4 File Offset: 0x0019A1F4
 	private void RefreshRedDot()
 	{
 		Func<int, bool> newFlagRedDot = this.NewFlagRedDot;
@@ -120,7 +120,7 @@ public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 		base.GetItem(8).SetUIActive(this.Data.GetRewardState() || flag);
 	}
 
-	// Token: 0x06007845 RID: 30789 RVA: 0x0019346C File Offset: 0x0019166C
+	// Token: 0x06004BDC RID: 19420 RVA: 0x0019C038 File Offset: 0x0019A238
 	private void OnClick()
 	{
 		if (this.Data == null)
@@ -140,56 +140,56 @@ public class BlackCoastStageItem : GridProxyAbstract<BlackCoastStageInfo>
 		openTaskView(this.Data.StageId);
 	}
 
-	// Token: 0x0400375D RID: 14173
+	// Token: 0x040037F6 RID: 14326
 	private BlackCoastStageInfo Data;
 
-	// Token: 0x0400375E RID: 14174
+	// Token: 0x040037F7 RID: 14327
 	public Func<int, bool> NewFlagRedDot;
 
-	// Token: 0x0400375F RID: 14175
+	// Token: 0x040037F8 RID: 14328
 	public Action<int> OpenTaskView;
 
-	// Token: 0x0200779A RID: 30618
+	// Token: 0x02006926 RID: 26918
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027705 RID: 161541
+		// Token: 0x04022A3B RID: 141883
 		public const int Button = 0;
 
-		// Token: 0x04027706 RID: 161542
+		// Token: 0x04022A3C RID: 141884
 		public const int PanelNormal = 1;
 
-		// Token: 0x04027707 RID: 161543
+		// Token: 0x04022A3D RID: 141885
 		public const int TextProgress = 2;
 
-		// Token: 0x04027708 RID: 161544
+		// Token: 0x04022A3E RID: 141886
 		public const int FinishedTick = 3;
 
-		// Token: 0x04027709 RID: 161545
+		// Token: 0x04022A3F RID: 141887
 		public const int PanelLock = 4;
 
-		// Token: 0x0402770A RID: 161546
+		// Token: 0x04022A40 RID: 141888
 		public const int TextLockProgress = 5;
 
-		// Token: 0x0402770B RID: 161547
+		// Token: 0x04022A41 RID: 141889
 		public const int TextLock = 6;
 
-		// Token: 0x0402770C RID: 161548
+		// Token: 0x04022A42 RID: 141890
 		public const int Name = 7;
 
-		// Token: 0x0402770D RID: 161549
+		// Token: 0x04022A43 RID: 141891
 		public const int RedDot = 8;
 
-		// Token: 0x0402770E RID: 161550
+		// Token: 0x04022A44 RID: 141892
 		public const int UnlockStage1 = 9;
 
-		// Token: 0x0402770F RID: 161551
+		// Token: 0x04022A45 RID: 141893
 		public const int UnlockStage2 = 10;
 
-		// Token: 0x04027710 RID: 161552
+		// Token: 0x04022A46 RID: 141894
 		public const int UnlockStage3 = 11;
 
-		// Token: 0x04027711 RID: 161553
+		// Token: 0x04022A47 RID: 141895
 		public const int TextureLock = 12;
 	}
 }

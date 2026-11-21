@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001036 RID: 4150
+// Token: 0x020004EA RID: 1258
 public class GuessJokerPlayerDrawCardTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A8B RID: 27275 RVA: 0x00156AD6 File Offset: 0x00154CD6
+	// Token: 0x06003E20 RID: 15904 RVA: 0x0015F3FE File Offset: 0x0015D5FE
 	public GuessJokerPlayerDrawCardTask()
 	{
 		this.TaskType = EGuessJokerTaskType.Interactive;
 	}
 
-	// Token: 0x06006A8C RID: 27276 RVA: 0x00156AE8 File Offset: 0x00154CE8
+	// Token: 0x06003E21 RID: 15905 RVA: 0x0015F410 File Offset: 0x0015D610
 	protected override void OnExecute()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -65,7 +65,7 @@ public class GuessJokerPlayerDrawCardTask : GuessJokerTaskBase
 		}
 	}
 
-	// Token: 0x06006A8D RID: 27277 RVA: 0x00156BF0 File Offset: 0x00154DF0
+	// Token: 0x06003E22 RID: 15906 RVA: 0x0015F518 File Offset: 0x0015D718
 	private void OnPlayerChooseCard(int cardId, int prevSelectedCardId)
 	{
 		if (this.HasPlayerDrawn)
@@ -115,7 +115,7 @@ public class GuessJokerPlayerDrawCardTask : GuessJokerTaskBase
 		}
 	}
 
-	// Token: 0x06006A8E RID: 27278 RVA: 0x00156D2C File Offset: 0x00154F2C
+	// Token: 0x06003E23 RID: 15907 RVA: 0x0015F654 File Offset: 0x0015D854
 	private void OnPlayerDrawCard(int cardId)
 	{
 		if (this.HasPlayerDrawn)
@@ -297,12 +297,12 @@ public class GuessJokerPlayerDrawCardTask : GuessJokerTaskBase
 		});
 	}
 
-	// Token: 0x06006A8F RID: 27279 RVA: 0x00156E18 File Offset: 0x00155018
+	// Token: 0x06003E24 RID: 15908 RVA: 0x0015F740 File Offset: 0x0015D940
 	protected override void OnComplete()
 	{
 		GuessJokerGamePlayModel.Instance.SetNpcEnterInteractiveStage(false);
 	}
 
-	// Token: 0x0400311A RID: 12570
+	// Token: 0x040031B3 RID: 12723
 	private bool HasPlayerDrawn;
 }

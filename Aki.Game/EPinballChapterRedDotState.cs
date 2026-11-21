@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020013EF RID: 5103
+// Token: 0x020008A3 RID: 2211
 public enum EPinballChapterRedDotState
 {
-	// Token: 0x04003FC4 RID: 16324
+	// Token: 0x0400405C RID: 16476
 	None,
-	// Token: 0x04003FC5 RID: 16325
+	// Token: 0x0400405D RID: 16477
 	Unread,
-	// Token: 0x04003FC6 RID: 16326
+	// Token: 0x0400405E RID: 16478
 	Read
 }

@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000133 RID: 307
-	// (Invoke) Token: 0x060009D1 RID: 2513
+	// Token: 0x02000137 RID: 311
+	// (Invoke) Token: 0x06000A05 RID: 2565
 	public delegate void TSDKConnectCallback(string msg, bool needReLogin, bool success);
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class PlayerVarEventPair : LevelVarEventPair
 {
-	// Token: 0x06000D8F RID: 3471 RVA: 0x0004B0BC File Offset: 0x000492BC
+	// Token: 0x06000D95 RID: 3477 RVA: 0x0004BC58 File Offset: 0x00049E58
 	public unsafe override bool Init(SAiLevelVar levelVar, UKuroBooleanEventBinder boolEventBinder)
 	{
 		base.Init(levelVar, boolEventBinder);
@@ -37,7 +37,7 @@ public class PlayerVarEventPair : LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D90 RID: 3472 RVA: 0x0004B198 File Offset: 0x00049398
+	// Token: 0x06000D96 RID: 3478 RVA: 0x0004BD34 File Offset: 0x00049F34
 	public unsafe override bool Init(SAiLevelVar levelVar, UKuroIntEventBinder intEventBinder)
 	{
 		base.Init(levelVar, intEventBinder);
@@ -66,7 +66,7 @@ public class PlayerVarEventPair : LevelVarEventPair
 		return true;
 	}
 
-	// Token: 0x06000D91 RID: 3473 RVA: 0x0004B274 File Offset: 0x00049474
+	// Token: 0x06000D97 RID: 3479 RVA: 0x0004BE10 File Offset: 0x0004A010
 	public void OnReceivePlayerVar()
 	{
 		if (!this.IsInit)

@@ -18,13 +18,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005848 RID: 22600
+	// Token: 0x02004820 RID: 18464
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LongPressInteractionProcessor : InteractionProcessor
 	{
-		// Token: 0x17008A48 RID: 35400
-		// (get) Token: 0x0603971B RID: 235291 RVA: 0x00DA2111 File Offset: 0x00DA0311
+		// Token: 0x17005E11 RID: 24081
+		// (get) Token: 0x0602E632 RID: 190002 RVA: 0x00CF0DE9 File Offset: 0x00CEEFE9
 		public ELongPressInteractStyle? StyleType
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x17008A49 RID: 35401
-		// (get) Token: 0x0603971C RID: 235292 RVA: 0x00DA2119 File Offset: 0x00DA0319
+		// Token: 0x17005E12 RID: 24082
+		// (get) Token: 0x0602E633 RID: 190003 RVA: 0x00CF0DF1 File Offset: 0x00CEEFF1
 		public string TidContent
 		{
 			get
@@ -43,8 +43,8 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x17008A4A RID: 35402
-		// (get) Token: 0x0603971D RID: 235293 RVA: 0x00DA2121 File Offset: 0x00DA0321
+		// Token: 0x17005E13 RID: 24083
+		// (get) Token: 0x0602E634 RID: 190004 RVA: 0x00CF0DF9 File Offset: 0x00CEEFF9
 		public float? StartProgress
 		{
 			get
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603971E RID: 235294 RVA: 0x00DA212C File Offset: 0x00DA032C
+		// Token: 0x0602E635 RID: 190005 RVA: 0x00CF0E04 File Offset: 0x00CEF004
 		[NullableContext(1)]
 		public void ActivateRestriction(EInputAction? triggerAction, ILongPressInteractRestriction restriction)
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Interaction
 			restriction.Enter(triggerAction);
 		}
 
-		// Token: 0x0603971F RID: 235295 RVA: 0x00DA219C File Offset: 0x00DA039C
+		// Token: 0x0602E636 RID: 190006 RVA: 0x00CF0E74 File Offset: 0x00CEF074
 		public void ExitRestriction()
 		{
 			if (this.Restriction == null)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Interaction
 			restriction.Exit(restrictionTriggerAction);
 		}
 
-		// Token: 0x06039720 RID: 235296 RVA: 0x00DA21D8 File Offset: 0x00DA03D8
+		// Token: 0x0602E637 RID: 190007 RVA: 0x00CF0EB0 File Offset: 0x00CEF0B0
 		[NullableContext(1)]
 		public LongPressInteractionProcessor([Nullable(2)] Entity entity, int index, ILongPressInteractConfig config, int optionIndex) : base(entity, index, EInteractionType.LongPress)
 		{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ProgressActions = config.LongPressProgressActions;
 		}
 
-		// Token: 0x06039721 RID: 235297 RVA: 0x00DA22F4 File Offset: 0x00DA04F4
+		// Token: 0x0602E638 RID: 190008 RVA: 0x00CF0FCC File Offset: 0x00CEF1CC
 		public override void OnPress()
 		{
 			if (!this.LongPressingEffectsReady || base.IsPressing || base.IsCompleteInternal)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.PlayLongPressingEffects();
 		}
 
-		// Token: 0x06039722 RID: 235298 RVA: 0x00DA2439 File Offset: 0x00DA0639
+		// Token: 0x0602E639 RID: 190009 RVA: 0x00CF1111 File Offset: 0x00CEF311
 		public override void OnRelease()
 		{
 			if (this.IsSuccessPending)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.OnReset();
 		}
 
-		// Token: 0x06039723 RID: 235299 RVA: 0x00DA245C File Offset: 0x00DA065C
+		// Token: 0x0602E63A RID: 190010 RVA: 0x00CF1134 File Offset: 0x00CEF334
 		private void StartReverse()
 		{
 			this.TryTriggerInterrupt();
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ReverseTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnReverseTick), 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x06039724 RID: 235300 RVA: 0x00DA2528 File Offset: 0x00DA0728
+		// Token: 0x0602E63B RID: 190011 RVA: 0x00CF1200 File Offset: 0x00CEF400
 		private void OnReverseTick(float deltaTime)
 		{
 			this.AccumulatedTime = Math.Max(0f, this.AccumulatedTime - 20f);
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039725 RID: 235301 RVA: 0x00DA25AF File Offset: 0x00DA07AF
+		// Token: 0x0602E63C RID: 190012 RVA: 0x00CF1287 File Offset: 0x00CEF487
 		private void StopReverseTick()
 		{
 			if (this.ReverseTimerId != null && TimerSystem.GameplayTimeInstance.Has(this.ReverseTimerId))
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039726 RID: 235302 RVA: 0x00DA25E4 File Offset: 0x00DA07E4
+		// Token: 0x0602E63D RID: 190013 RVA: 0x00CF12BC File Offset: 0x00CEF4BC
 		public override void OnReset()
 		{
 			this.IsSuccessPending = false;
@@ -229,14 +229,14 @@ namespace CSharpScript.Game.Module.Interaction
 			this.StopLongPressingEffects();
 		}
 
-		// Token: 0x06039727 RID: 235303 RVA: 0x00DA2698 File Offset: 0x00DA0898
+		// Token: 0x0602E63E RID: 190014 RVA: 0x00CF1370 File Offset: 0x00CEF570
 		private bool IsTargetStillInInteractionList()
 		{
 			Entity entity = base.Entity;
 			return entity != null && InteractionModel.Instance.GetInteractEntityIds().Contains(entity.Id);
 		}
 
-		// Token: 0x06039728 RID: 235304 RVA: 0x00DA26C8 File Offset: 0x00DA08C8
+		// Token: 0x0602E63F RID: 190015 RVA: 0x00CF13A0 File Offset: 0x00CEF5A0
 		private void OnLongPressTick(float deltaTime)
 		{
 			if (!base.IsPressing)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039729 RID: 235305 RVA: 0x00DA2784 File Offset: 0x00DA0984
+		// Token: 0x0602E640 RID: 190016 RVA: 0x00CF145C File Offset: 0x00CEF65C
 		public void ResolvePendingSuccessAfterEntityUpdate()
 		{
 			if (!this.IsSuccessPending)
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.Interaction
 			global::Log.Instance.Info(ELogModule.Interaction, ELogAuthor.WRY, "[LongPress] 阶段=完成校验通过", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603972A RID: 235306 RVA: 0x00DA2848 File Offset: 0x00DA0A48
+		// Token: 0x0602E641 RID: 190017 RVA: 0x00CF1520 File Offset: 0x00CEF720
 		private void TryTriggerProgressActions(float previousProgress, float currentProgress)
 		{
 			if (this.ProgressActions == null || this.ProgressActions.Count == 0)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603972B RID: 235307 RVA: 0x00DA28CC File Offset: 0x00DA0ACC
+		// Token: 0x0602E642 RID: 190018 RVA: 0x00CF15A4 File Offset: 0x00CEF7A4
 		private void RunPhaseActions([Nullable(new byte[]
 		{
 			2,
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Interaction
 			LevelGeneralController.Instance.ExecuteActionsNew(actions, entityContext, null);
 		}
 
-		// Token: 0x0603972C RID: 235308 RVA: 0x00DA2924 File Offset: 0x00DA0B24
+		// Token: 0x0602E643 RID: 190019 RVA: 0x00CF15FC File Offset: 0x00CEF7FC
 		private void TryTriggerInterrupt()
 		{
 			if (!this.IsInterruptPending)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.RunPhaseActions(this.InterruptedActions);
 		}
 
-		// Token: 0x0603972D RID: 235309 RVA: 0x00DA296C File Offset: 0x00DA0B6C
+		// Token: 0x0602E644 RID: 190020 RVA: 0x00CF1644 File Offset: 0x00CEF844
 		private void ReleaseRestriction()
 		{
 			if (!base.IsPressing)
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.Module.Interaction
 			restriction.Release(this.RestrictionTriggerAction);
 		}
 
-		// Token: 0x0603972E RID: 235310 RVA: 0x00DA2994 File Offset: 0x00DA0B94
+		// Token: 0x0602E645 RID: 190021 RVA: 0x00CF166C File Offset: 0x00CEF86C
 		private void StopLongPressTick()
 		{
 			if (this.LongPressTimerId != null && TimerSystem.GameplayTimeInstance.Has(this.LongPressTimerId))
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603972F RID: 235311 RVA: 0x00DA29C8 File Offset: 0x00DA0BC8
+		// Token: 0x0602E646 RID: 190022 RVA: 0x00CF16A0 File Offset: 0x00CEF8A0
 		[NullableContext(0)]
 		public override UniTask<bool> LoadAsset()
 		{
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <LoadAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039730 RID: 235312 RVA: 0x00DA2A0C File Offset: 0x00DA0C0C
+		// Token: 0x0602E647 RID: 190023 RVA: 0x00CF16E4 File Offset: 0x00CEF8E4
 		[NullableContext(0)]
 		private UniTask<bool> LoadLongPressCameraShake([Nullable(1)] string bpPath)
 		{
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <LoadLongPressCameraShake>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039731 RID: 235313 RVA: 0x00DA2A58 File Offset: 0x00DA0C58
+		// Token: 0x0602E648 RID: 190024 RVA: 0x00CF1730 File Offset: 0x00CEF930
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		private UniTask<bool> LoadForceFeedbackEffect(string effectPath, Action<UKuroForceFeedbackEffect> onLoaded, string errorMsg)
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <LoadForceFeedbackEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039732 RID: 235314 RVA: 0x00DA2AAC File Offset: 0x00DA0CAC
+		// Token: 0x0602E649 RID: 190025 RVA: 0x00CF1784 File Offset: 0x00CEF984
 		private void PlayLongPressingSound()
 		{
 			ILongPressEffectConfig pressEffect = this.PressEffect;
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039733 RID: 235315 RVA: 0x00DA2B00 File Offset: 0x00DA0D00
+		// Token: 0x0602E64A RID: 190026 RVA: 0x00CF17D8 File Offset: 0x00CEF9D8
 		private void StopLongPressingSound()
 		{
 			if (this.LongPressingSoundHandle != null)
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039734 RID: 235316 RVA: 0x00DA2B48 File Offset: 0x00DA0D48
+		// Token: 0x0602E64B RID: 190027 RVA: 0x00CF1820 File Offset: 0x00CEFA20
 		private void PlayLongPressingForceFeedback()
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039735 RID: 235317 RVA: 0x00DA2B98 File Offset: 0x00DA0D98
+		// Token: 0x0602E64C RID: 190028 RVA: 0x00CF1870 File Offset: 0x00CEFA70
 		private void StopLongPressingForceFeedback()
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039736 RID: 235318 RVA: 0x00DA2BCC File Offset: 0x00DA0DCC
+		// Token: 0x0602E64D RID: 190029 RVA: 0x00CF18A4 File Offset: 0x00CEFAA4
 		[NullableContext(0)]
 		private UniTask<bool> PreloadLongPressingEffects()
 		{
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <PreloadLongPressingEffects>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039737 RID: 235319 RVA: 0x00DA2C10 File Offset: 0x00DA0E10
+		// Token: 0x0602E64E RID: 190030 RVA: 0x00CF18E8 File Offset: 0x00CEFAE8
 		[NullableContext(1)]
 		private UniTask PreloadOneEffect(string path)
 		{
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return promise.Promise;
 		}
 
-		// Token: 0x06039738 RID: 235320 RVA: 0x00DA2C6C File Offset: 0x00DA0E6C
+		// Token: 0x0602E64F RID: 190031 RVA: 0x00CF1944 File Offset: 0x00CEFB44
 		[NullableContext(0)]
 		private UniTask<bool> PreloadLongPressingScreenEffect([Nullable(1)] string path)
 		{
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <PreloadLongPressingScreenEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039739 RID: 235321 RVA: 0x00DA2CB8 File Offset: 0x00DA0EB8
+		// Token: 0x0602E650 RID: 190032 RVA: 0x00CF1990 File Offset: 0x00CEFB90
 		private void PlayLongPressingScreenEffect()
 		{
 			ILongPressEffectConfig pressEffect = this.PressEffect;
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.LongPressingScreenEffectHandle = new int?(instance2.PlayScreenEffect(text, null, null));
 		}
 
-		// Token: 0x0603973A RID: 235322 RVA: 0x00DA2D74 File Offset: 0x00DA0F74
+		// Token: 0x0602E651 RID: 190033 RVA: 0x00CF1A4C File Offset: 0x00CEFC4C
 		private void StopLongPressingScreenEffect()
 		{
 			if (this.LongPressingScreenEffectHandle == null)
@@ -555,7 +555,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.LongPressingScreenEffectHandle = null;
 		}
 
-		// Token: 0x0603973B RID: 235323 RVA: 0x00DA2DC4 File Offset: 0x00DA0FC4
+		// Token: 0x0602E652 RID: 190034 RVA: 0x00CF1A9C File Offset: 0x00CEFC9C
 		private void PlayLongPressingEffects()
 		{
 			ILongPressEffectConfig pressEffect = this.PressEffect;
@@ -592,7 +592,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603973C RID: 235324 RVA: 0x00DA2F20 File Offset: 0x00DA1120
+		// Token: 0x0602E653 RID: 190035 RVA: 0x00CF1BF8 File Offset: 0x00CEFDF8
 		private void StopLongPressingEffects()
 		{
 			if (this.LongPressingEffectIds.Count == 0)
@@ -609,7 +609,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.LongPressingEffectIds.Clear();
 		}
 
-		// Token: 0x0603973D RID: 235325 RVA: 0x00DA2FB0 File Offset: 0x00DA11B0
+		// Token: 0x0602E654 RID: 190036 RVA: 0x00CF1C88 File Offset: 0x00CEFE88
 		private void PlayLongPressFinishedForceFeedback()
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -622,72 +622,72 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0401E0A7 RID: 123047
+		// Token: 0x04018B43 RID: 101187
 		private float AccumulatedTime;
 
-		// Token: 0x0401E0A8 RID: 123048
+		// Token: 0x04018B44 RID: 101188
 		private float Progress;
 
-		// Token: 0x0401E0A9 RID: 123049
+		// Token: 0x04018B45 RID: 101189
 		private readonly int OptionIndex;
 
-		// Token: 0x0401E0AA RID: 123050
+		// Token: 0x04018B46 RID: 101190
 		private readonly float Duration;
 
-		// Token: 0x0401E0AB RID: 123051
+		// Token: 0x04018B47 RID: 101191
 		private readonly ILongPressEffectConfig PressEffect;
 
-		// Token: 0x0401E0AC RID: 123052
+		// Token: 0x04018B48 RID: 101192
 		private readonly ELongPressInteractStyle? StyleTypeInternal;
 
-		// Token: 0x0401E0AD RID: 123053
+		// Token: 0x04018B49 RID: 101193
 		private readonly string TidContentInternal;
 
-		// Token: 0x0401E0AE RID: 123054
+		// Token: 0x04018B4A RID: 101194
 		private readonly float? StartProgressInternal;
 
-		// Token: 0x0401E0AF RID: 123055
+		// Token: 0x04018B4B RID: 101195
 		private readonly bool ResetFromCurrentProgress;
 
-		// Token: 0x0401E0B0 RID: 123056
+		// Token: 0x04018B4C RID: 101196
 		private UClass CameraShakeAsset;
 
-		// Token: 0x0401E0B1 RID: 123057
+		// Token: 0x04018B4D RID: 101197
 		private int? CameraShakeInstanceId;
 
-		// Token: 0x0401E0B2 RID: 123058
+		// Token: 0x04018B4E RID: 101198
 		private TimerHandle LongPressTimerId;
 
-		// Token: 0x0401E0B3 RID: 123059
+		// Token: 0x04018B4F RID: 101199
 		private TimerHandle ReverseTimerId;
 
-		// Token: 0x0401E0B4 RID: 123060
+		// Token: 0x04018B50 RID: 101200
 		private int? LongPressingSoundHandle;
 
-		// Token: 0x0401E0B5 RID: 123061
+		// Token: 0x04018B51 RID: 101201
 		private UKuroForceFeedbackEffect LongPressingFeedbackAsset;
 
-		// Token: 0x0401E0B6 RID: 123062
+		// Token: 0x04018B52 RID: 101202
 		private UKuroForceFeedbackEffect LongPressFinishedFeedbackAsset;
 
-		// Token: 0x0401E0B7 RID: 123063
+		// Token: 0x04018B53 RID: 101203
 		[Nullable(1)]
 		private readonly List<int> LongPressingEffectIds = new List<int>();
 
-		// Token: 0x0401E0B8 RID: 123064
+		// Token: 0x04018B54 RID: 101204
 		private int? LongPressingScreenEffectHandle;
 
-		// Token: 0x0401E0B9 RID: 123065
+		// Token: 0x04018B55 RID: 101205
 		private bool LongPressingEffectsReady;
 
-		// Token: 0x0401E0BA RID: 123066
+		// Token: 0x04018B56 RID: 101206
 		[Nullable(1)]
 		private readonly List<UEffectModelBase> PreloadedEffectAssets = new List<UEffectModelBase>();
 
-		// Token: 0x0401E0BB RID: 123067
+		// Token: 0x04018B57 RID: 101207
 		private EffectScreenPlayData_C PreloadedScreenEffectAsset;
 
-		// Token: 0x0401E0BC RID: 123068
+		// Token: 0x04018B58 RID: 101208
 		[Nullable(new byte[]
 		{
 			2,
@@ -695,7 +695,7 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private readonly List<ActionInfo> StartActions;
 
-		// Token: 0x0401E0BD RID: 123069
+		// Token: 0x04018B59 RID: 101209
 		[Nullable(new byte[]
 		{
 			2,
@@ -703,7 +703,7 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private readonly List<ActionInfo> InterruptedActions;
 
-		// Token: 0x0401E0BE RID: 123070
+		// Token: 0x04018B5A RID: 101210
 		[Nullable(new byte[]
 		{
 			2,
@@ -711,7 +711,7 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private readonly List<ActionInfo> SuccessActions;
 
-		// Token: 0x0401E0BF RID: 123071
+		// Token: 0x04018B5B RID: 101211
 		[Nullable(new byte[]
 		{
 			2,
@@ -719,16 +719,16 @@ namespace CSharpScript.Game.Module.Interaction
 		})]
 		private readonly List<ILongPressProgressAction> ProgressActions;
 
-		// Token: 0x0401E0C0 RID: 123072
+		// Token: 0x04018B5C RID: 101212
 		private bool IsInterruptPending;
 
-		// Token: 0x0401E0C1 RID: 123073
+		// Token: 0x04018B5D RID: 101213
 		private bool IsSuccessPending;
 
-		// Token: 0x0401E0C2 RID: 123074
+		// Token: 0x04018B5E RID: 101214
 		private EInputAction? RestrictionTriggerAction;
 
-		// Token: 0x0401E0C3 RID: 123075
+		// Token: 0x04018B5F RID: 101215
 		private ILongPressInteractRestriction Restriction;
 	}
 }

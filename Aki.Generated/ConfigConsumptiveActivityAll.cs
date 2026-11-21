@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000196 RID: 406
+	// Token: 0x020001A8 RID: 424
 	public class ConfigConsumptiveActivityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000987 RID: 2439 RVA: 0x0008F5F7 File Offset: 0x0008D7F7
+		// Token: 0x060009F3 RID: 2547 RVA: 0x0009552F File Offset: 0x0009372F
 		static ConfigConsumptiveActivityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigConsumptiveActivityAll.CreateStaticDefaultValue), new Action(ConfigConsumptiveActivityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000988 RID: 2440 RVA: 0x0008F618 File Offset: 0x0008D818
+		// Token: 0x060009F4 RID: 2548 RVA: 0x00095550 File Offset: 0x00093750
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigConsumptiveActivityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000989 RID: 2441 RVA: 0x0008F697 File Offset: 0x0008D897
+		// Token: 0x060009F5 RID: 2549 RVA: 0x000955CF File Offset: 0x000937CF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigConsumptiveActivityAll.LogPair = null;
 			ConfigConsumptiveActivityAll.HandleId = 0;
 		}
 
-		// Token: 0x0600098A RID: 2442 RVA: 0x0008F6A5 File Offset: 0x0008D8A5
+		// Token: 0x060009F6 RID: 2550 RVA: 0x000955DD File Offset: 0x000937DD
 		public static void Init()
 		{
 			ConfigConsumptiveActivityAll.HandleId = ConfigCommon.InitDataStatement(ConfigConsumptiveActivityAll.HandleId, "db_consumptiveactivity.db", "select BinData from `ConsumptiveActivity`");
 		}
 
-		// Token: 0x0600098B RID: 2443 RVA: 0x0008F6C0 File Offset: 0x0008D8C0
+		// Token: 0x060009F7 RID: 2551 RVA: 0x000955F8 File Offset: 0x000937F8
 		[NullableContext(2)]
 		public static IReadOnlyList<ConsumptiveActivity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000AFE RID: 2814
+		// Token: 0x04000B7C RID: 2940
 		private const string DB = "db_consumptiveactivity.db";
 
-		// Token: 0x04000AFF RID: 2815
+		// Token: 0x04000B7D RID: 2941
 		private const string FILE = "l.累消活动.xlsx";
 
-		// Token: 0x04000B00 RID: 2816
+		// Token: 0x04000B7E RID: 2942
 		private const string TABLE = "ConsumptiveActivity";
 
-		// Token: 0x04000B01 RID: 2817
+		// Token: 0x04000B7F RID: 2943
 		private const string COMMAND = "select BinData from `ConsumptiveActivity`";
 
-		// Token: 0x04000B02 RID: 2818
+		// Token: 0x04000B80 RID: 2944
 		private const string KEY_PREFIX = "ConsumptiveActivityAll";
 
-		// Token: 0x04000B03 RID: 2819
+		// Token: 0x04000B81 RID: 2945
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000B04 RID: 2820
+		// Token: 0x04000B82 RID: 2946
 		private static int HandleId;
 	}
 }

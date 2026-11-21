@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AC0 RID: 6848
+	// Token: 0x02001C5F RID: 7263
 	public class IFoxReversePush_SetValue
 	{
-		// Token: 0x04005A5A RID: 23130
+		// Token: 0x04005ED3 RID: 24275
 		public ELeisureInteract Type;
 
-		// Token: 0x04005A5B RID: 23131
+		// Token: 0x04005ED4 RID: 24276
 		public int SplineEntityId;
 
-		// Token: 0x04005A5C RID: 23132
+		// Token: 0x04005ED5 RID: 24277
 		public int SeqEntityId;
 
-		// Token: 0x04005A5D RID: 23133
-		[Nullable(1)]
+		// Token: 0x04005ED6 RID: 24278
 		public string SliderTag;
 
-		// Token: 0x04005A5E RID: 23134
+		// Token: 0x04005ED7 RID: 24279
 		public float Radius;
 	}
 }

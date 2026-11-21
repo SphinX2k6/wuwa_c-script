@@ -5,66 +5,66 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 {
-	// Token: 0x02004CF4 RID: 19700
+	// Token: 0x02003CA6 RID: 15526
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleVisionSubItem : RoleVisionCommonItem
 	{
-		// Token: 0x06032E6E RID: 208494 RVA: 0x00BDD09E File Offset: 0x00BDB29E
+		// Token: 0x06027C49 RID: 162889 RVA: 0x00B229A6 File Offset: 0x00B20BA6
 		[NullableContext(1)]
 		public RoleVisionSubItem(UUIItem uiItem, EPhantomItemIndex index, [Nullable(2)] RoleDataBase roleData, bool needRedDot = false) : base(uiItem, index, roleData, needRedDot, false, ERoleViewSource.Normal)
 		{
 		}
 
-		// Token: 0x06032E6F RID: 208495 RVA: 0x00BDD0AD File Offset: 0x00BDB2AD
+		// Token: 0x06027C4A RID: 162890 RVA: 0x00B229B5 File Offset: 0x00B20BB5
 		protected override UUIItem GetPlusItem()
 		{
 			return base.GetItem(8);
 		}
 
-		// Token: 0x06032E70 RID: 208496 RVA: 0x00BDD0B6 File Offset: 0x00BDB2B6
+		// Token: 0x06027C4B RID: 162891 RVA: 0x00B229BE File Offset: 0x00B20BBE
 		protected override UUITexture GetVisionTextureComponent()
 		{
 			return base.GetTexture(3);
 		}
 
-		// Token: 0x06032E71 RID: 208497 RVA: 0x00BDD0BF File Offset: 0x00BDB2BF
+		// Token: 0x06027C4C RID: 162892 RVA: 0x00B229C7 File Offset: 0x00B20BC7
 		protected override UUISprite GetVisionQualitySprite()
 		{
 			return base.GetSprite(5);
 		}
 
-		// Token: 0x06032E72 RID: 208498 RVA: 0x00BDD0C8 File Offset: 0x00BDB2C8
+		// Token: 0x06027C4D RID: 162893 RVA: 0x00B229D0 File Offset: 0x00B20BD0
 		protected UUIText GetVisionLevelText()
 		{
 			return base.GetText(4);
 		}
 
-		// Token: 0x06032E73 RID: 208499 RVA: 0x00BDD0D1 File Offset: 0x00BDB2D1
+		// Token: 0x06027C4E RID: 162894 RVA: 0x00B229D9 File Offset: 0x00B20BD9
 		protected override UUIText GetVisionCostText()
 		{
 			return base.GetText(7);
 		}
 
-		// Token: 0x06032E74 RID: 208500 RVA: 0x00BDD0DA File Offset: 0x00BDB2DA
+		// Token: 0x06027C4F RID: 162895 RVA: 0x00B229E2 File Offset: 0x00B20BE2
 		protected override UUIItem GetVisionCostItem()
 		{
 			return base.GetItem(6);
 		}
 
-		// Token: 0x06032E75 RID: 208501 RVA: 0x00BDD0E3 File Offset: 0x00BDB2E3
+		// Token: 0x06027C50 RID: 162896 RVA: 0x00B229EB File Offset: 0x00B20BEB
 		public override UUIDraggableComponent GetDragComponent()
 		{
 			return base.GetDraggable(2);
 		}
 
-		// Token: 0x06032E76 RID: 208502 RVA: 0x00BDD0EC File Offset: 0x00BDB2EC
+		// Token: 0x06027C51 RID: 162897 RVA: 0x00B229F4 File Offset: 0x00B20BF4
 		protected override UUIExtendToggle GetSelectToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06032E77 RID: 208503 RVA: 0x00BDD0F8 File Offset: 0x00BDB2F8
+		// Token: 0x06027C52 RID: 162898 RVA: 0x00B22A00 File Offset: 0x00B20C00
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -85,39 +85,39 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			};
 		}
 
-		// Token: 0x06032E78 RID: 208504 RVA: 0x00BDD1F3 File Offset: 0x00BDB3F3
+		// Token: 0x06027C53 RID: 162899 RVA: 0x00B22AFB File Offset: 0x00B20CFB
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x06032E79 RID: 208505 RVA: 0x00BDD212 File Offset: 0x00BDB412
+		// Token: 0x06027C54 RID: 162900 RVA: 0x00B22B1A File Offset: 0x00B20D1A
 		private bool CanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x0200AE85 RID: 44677
+		// Token: 0x020098A3 RID: 39075
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034FDA RID: 217050
+			// Token: 0x0402F982 RID: 194946
 			ToggleItem,
-			// Token: 0x04034FDB RID: 217051
+			// Token: 0x0402F983 RID: 194947
 			BackSprite,
-			// Token: 0x04034FDC RID: 217052
+			// Token: 0x0402F984 RID: 194948
 			CircleItem,
-			// Token: 0x04034FDD RID: 217053
+			// Token: 0x0402F985 RID: 194949
 			CircleItemTexture,
-			// Token: 0x04034FDE RID: 217054
+			// Token: 0x0402F986 RID: 194950
 			TextNum,
-			// Token: 0x04034FDF RID: 217055
+			// Token: 0x0402F987 RID: 194951
 			QualitySprite,
-			// Token: 0x04034FE0 RID: 217056
+			// Token: 0x0402F988 RID: 194952
 			CostItem,
-			// Token: 0x04034FE1 RID: 217057
+			// Token: 0x0402F989 RID: 194953
 			CostNumText,
-			// Token: 0x04034FE2 RID: 217058
+			// Token: 0x0402F98A RID: 194954
 			PlusItem
 		}
 	}

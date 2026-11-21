@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DE1 RID: 24033
+	// Token: 0x02004DC5 RID: 19909
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBarKanTeLeiLa : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D17A RID: 250234 RVA: 0x00EB35D4 File Offset: 0x00EB17D4
+		// Token: 0x060320F1 RID: 205041 RVA: 0x00E044D4 File Offset: 0x00E026D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 25;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D17B RID: 250235 RVA: 0x00EB3948 File Offset: 0x00EB1B48
+		// Token: 0x060320F2 RID: 205042 RVA: 0x00E04848 File Offset: 0x00E02A48
 		protected override void OnInitData()
 		{
 			this.NormalConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(160701);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ColorfulConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(160703);
 		}
 
-		// Token: 0x0603D17C RID: 250236 RVA: 0x00EB39A4 File Offset: 0x00EB1BA4
+		// Token: 0x060320F3 RID: 205043 RVA: 0x00E048A4 File Offset: 0x00E02AA4
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForTagAddOrRemoveChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1KanteleilaMd10011.状态标识.普通状态"], new BaseTagComponent.TTagSwitchedCallback(this.OnFinisherTagChange));
 		}
 
-		// Token: 0x0603D17D RID: 250237 RVA: 0x00EB39F9 File Offset: 0x00EB1BF9
+		// Token: 0x060320F4 RID: 205044 RVA: 0x00E048F9 File Offset: 0x00E02AF9
 		private void OnDrownTagChange(int tagId, bool tagExist)
 		{
 			this.NeedRefreshState = true;
 		}
 
-		// Token: 0x0603D17E RID: 250238 RVA: 0x00EB3A02 File Offset: 0x00EB1C02
+		// Token: 0x060320F5 RID: 205045 RVA: 0x00E04902 File Offset: 0x00E02B02
 		private void OnFinisherTagChange(int tagId, bool tagExist)
 		{
 			this.NeedRefreshState = true;
 		}
 
-		// Token: 0x0603D17F RID: 250239 RVA: 0x00EB3A0C File Offset: 0x00EB1C0C
+		// Token: 0x060320F6 RID: 205046 RVA: 0x00E0490C File Offset: 0x00E02B0C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarKanTeLeiLa.<OnBeforeStartAsync>d__26 <OnBeforeStartAsync>d__;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D180 RID: 250240 RVA: 0x00EB3A50 File Offset: 0x00EB1C50
+		// Token: 0x060320F7 RID: 205047 RVA: 0x00E04950 File Offset: 0x00E02B50
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarKanTeLeiLa.<InitBarItem>d__27 <InitBarItem>d__;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D181 RID: 250241 RVA: 0x00EB3A94 File Offset: 0x00EB1C94
+		// Token: 0x060320F8 RID: 205048 RVA: 0x00E04994 File Offset: 0x00E02B94
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(13);
@@ -152,25 +152,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshPointItems(true);
 		}
 
-		// Token: 0x0603D182 RID: 250242 RVA: 0x00EB3B8A File Offset: 0x00EB1D8A
+		// Token: 0x060320F9 RID: 205049 RVA: 0x00E04A8A File Offset: 0x00E02C8A
 		protected override void ClearAllTweenAnim()
 		{
 			base.StopTweenAnim(18);
 			base.ClearAllTweenAnim();
 		}
 
-		// Token: 0x0603D183 RID: 250243 RVA: 0x00EB3B9A File Offset: 0x00EB1D9A
+		// Token: 0x060320FA RID: 205050 RVA: 0x00E04A9A File Offset: 0x00E02C9A
 		protected override void OnAttributeChanged()
 		{
 			this.RefreshPointItems(false);
 		}
 
-		// Token: 0x0603D184 RID: 250244 RVA: 0x00EB3BA3 File Offset: 0x00EB1DA3
+		// Token: 0x060320FB RID: 205051 RVA: 0x00E04AA3 File Offset: 0x00E02CA3
 		protected override void OnMaxAttributeChanged()
 		{
 		}
 
-		// Token: 0x0603D185 RID: 250245 RVA: 0x00EB3BA8 File Offset: 0x00EB1DA8
+		// Token: 0x060320FC RID: 205052 RVA: 0x00E04AA8 File Offset: 0x00E02CA8
 		private void RefreshState(bool isStart = false)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D186 RID: 250246 RVA: 0x00EB3C38 File Offset: 0x00EB1E38
+		// Token: 0x060320FD RID: 205053 RVA: 0x00E04B38 File Offset: 0x00E02D38
 		private void RefreshNormalEffect(bool isStart = false)
 		{
 			bool flag = !this.IsInCd;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item2.SetAlpha(flag > false);
 		}
 
-		// Token: 0x0603D187 RID: 250247 RVA: 0x00EB3C94 File Offset: 0x00EB1E94
+		// Token: 0x060320FE RID: 205054 RVA: 0x00E04B94 File Offset: 0x00E02D94
 		private void SetState(SpecialEnergyBarKanTeLeiLa.EState state, bool isStart = false)
 		{
 			if (state == this.CurState && !isStart)
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D188 RID: 250248 RVA: 0x00EB3EC4 File Offset: 0x00EB20C4
+		// Token: 0x060320FF RID: 205055 RVA: 0x00E04DC4 File Offset: 0x00E02FC4
 		private void RefreshPointItems(bool bForce = false)
 		{
 			float currentValue = this.AttributeComponent.GetCurrentValue(this.AttributeId);
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastPointCount = currentValue;
 		}
 
-		// Token: 0x0603D189 RID: 250249 RVA: 0x00EB3F78 File Offset: 0x00EB2178
+		// Token: 0x06032100 RID: 205056 RVA: 0x00E04E78 File Offset: 0x00E03078
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D18A RID: 250250 RVA: 0x00EB403C File Offset: 0x00EB223C
+		// Token: 0x06032101 RID: 205057 RVA: 0x00E04F3C File Offset: 0x00E0313C
 		private void RefreshBuff()
 		{
 			SpecialEnergyBarInfo config = this.Config;
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D18B RID: 250251 RVA: 0x00EB40A9 File Offset: 0x00EB22A9
+		// Token: 0x06032102 RID: 205058 RVA: 0x00E04FA9 File Offset: 0x00E031A9
 		private void PlayWarnAnim(bool bPlay)
 		{
 			if (this.IsPlayWarnAnim == bPlay)
@@ -489,130 +489,130 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetAlpha(1f);
 		}
 
-		// Token: 0x0401FD5D RID: 130397
+		// Token: 0x0401A81A RID: 108570
 		private const int NORMAL_CONFIG_ID = 160701;
 
-		// Token: 0x0401FD5E RID: 130398
+		// Token: 0x0401A81B RID: 108571
 		private const int PINK_CONFIG_ID = 160702;
 
-		// Token: 0x0401FD5F RID: 130399
+		// Token: 0x0401A81C RID: 108572
 		private const int COLORFUL_CONFIG_ID = 160703;
 
-		// Token: 0x0401FD60 RID: 130400
+		// Token: 0x0401A81D RID: 108573
 		private const int POINT_NUM = 3;
 
-		// Token: 0x0401FD61 RID: 130401
+		// Token: 0x0401A81E RID: 108574
 		private SpecialEnergyBarInfo NormalConfig;
 
-		// Token: 0x0401FD62 RID: 130402
+		// Token: 0x0401A81F RID: 108575
 		private SpecialEnergyBarInfo PinkConfig;
 
-		// Token: 0x0401FD63 RID: 130403
+		// Token: 0x0401A820 RID: 108576
 		private SpecialEnergyBarInfo ColorfulConfig;
 
-		// Token: 0x0401FD64 RID: 130404
+		// Token: 0x0401A821 RID: 108577
 		private SpecialEnergyBarKanTeLeiLaSlot BarItemNormal;
 
-		// Token: 0x0401FD65 RID: 130405
+		// Token: 0x0401A822 RID: 108578
 		private SpecialEnergyBarKanTeLeiLaSlot BarItemPink;
 
-		// Token: 0x0401FD66 RID: 130406
+		// Token: 0x0401A823 RID: 108579
 		private SpecialEnergyBarKanTeLeiLaSlot BarItemColorful;
 
-		// Token: 0x0401FD67 RID: 130407
+		// Token: 0x0401A824 RID: 108580
 		[Nullable(1)]
 		private readonly List<UUIItem> PointItemsA = new List<UUIItem>();
 
-		// Token: 0x0401FD68 RID: 130408
+		// Token: 0x0401A825 RID: 108581
 		[Nullable(1)]
 		private readonly List<UUIItem> PointItemsB = new List<UUIItem>();
 
-		// Token: 0x0401FD69 RID: 130409
+		// Token: 0x0401A826 RID: 108582
 		private float LastPointCount;
 
-		// Token: 0x0401FD6A RID: 130410
+		// Token: 0x0401A827 RID: 108583
 		private SpecialEnergyBarKanTeLeiLa.EState CurState;
 
-		// Token: 0x0401FD6B RID: 130411
+		// Token: 0x0401A828 RID: 108584
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FD6C RID: 130412
+		// Token: 0x0401A829 RID: 108585
 		private int BuffHandle;
 
-		// Token: 0x0401FD6D RID: 130413
+		// Token: 0x0401A82A RID: 108586
 		private bool IsPlayWarnAnim;
 
-		// Token: 0x0401FD6E RID: 130414
+		// Token: 0x0401A82B RID: 108587
 		private bool IsInCd;
 
-		// Token: 0x0401FD6F RID: 130415
+		// Token: 0x0401A82C RID: 108588
 		private bool NeedRefreshState;
 
-		// Token: 0x0200C107 RID: 49415
+		// Token: 0x0200AB10 RID: 43792
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A44B RID: 238667
+			// Token: 0x04034E1D RID: 216605
 			PointA1Item,
-			// Token: 0x0403A44C RID: 238668
+			// Token: 0x04034E1E RID: 216606
 			PointA2Item,
-			// Token: 0x0403A44D RID: 238669
+			// Token: 0x04034E1F RID: 216607
 			PointA3Item,
-			// Token: 0x0403A44E RID: 238670
+			// Token: 0x04034E20 RID: 216608
 			PointB1Item,
-			// Token: 0x0403A44F RID: 238671
+			// Token: 0x04034E21 RID: 216609
 			PointB2Item,
-			// Token: 0x0403A450 RID: 238672
+			// Token: 0x04034E22 RID: 216610
 			PointB3Item,
-			// Token: 0x0403A451 RID: 238673
+			// Token: 0x04034E23 RID: 216611
 			NormalItem,
-			// Token: 0x0403A452 RID: 238674
+			// Token: 0x04034E24 RID: 216612
 			DrownItem,
-			// Token: 0x0403A453 RID: 238675
+			// Token: 0x04034E25 RID: 216613
 			PinkItem,
-			// Token: 0x0403A454 RID: 238676
+			// Token: 0x04034E26 RID: 216614
 			ColorfulItem,
-			// Token: 0x0403A455 RID: 238677
+			// Token: 0x04034E27 RID: 216615
 			SlotBarItemNormal,
-			// Token: 0x0403A456 RID: 238678
+			// Token: 0x04034E28 RID: 216616
 			SlotBarItemPink,
-			// Token: 0x0403A457 RID: 238679
+			// Token: 0x04034E29 RID: 216617
 			SlotBarItemColorful,
-			// Token: 0x0403A458 RID: 238680
+			// Token: 0x04034E2A RID: 216618
 			AnimDrownIn,
-			// Token: 0x0403A459 RID: 238681
+			// Token: 0x04034E2B RID: 216619
 			AnimDrownOut,
-			// Token: 0x0403A45A RID: 238682
+			// Token: 0x04034E2C RID: 216620
 			AnimColorfulIn,
-			// Token: 0x0403A45B RID: 238683
+			// Token: 0x04034E2D RID: 216621
 			AnimColorfulOut,
-			// Token: 0x0403A45C RID: 238684
+			// Token: 0x04034E2E RID: 216622
 			AnimBurst,
-			// Token: 0x0403A45D RID: 238685
+			// Token: 0x04034E2F RID: 216623
 			AnimWarning,
-			// Token: 0x0403A45E RID: 238686
+			// Token: 0x04034E30 RID: 216624
 			AnimCoreIn,
-			// Token: 0x0403A45F RID: 238687
+			// Token: 0x04034E31 RID: 216625
 			AnimPoint1,
-			// Token: 0x0403A460 RID: 238688
+			// Token: 0x04034E32 RID: 216626
 			AnimPoint2,
-			// Token: 0x0403A461 RID: 238689
+			// Token: 0x04034E33 RID: 216627
 			AnimPoint3,
-			// Token: 0x0403A462 RID: 238690
+			// Token: 0x04034E34 RID: 216628
 			ExtraItem,
-			// Token: 0x0403A463 RID: 238691
+			// Token: 0x04034E35 RID: 216629
 			AnimPreColorful
 		}
 
-		// Token: 0x0200C108 RID: 49416
+		// Token: 0x0200AB11 RID: 43793
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403A465 RID: 238693
+			// Token: 0x04034E37 RID: 216631
 			Normal,
-			// Token: 0x0403A466 RID: 238694
+			// Token: 0x04034E38 RID: 216632
 			Pink,
-			// Token: 0x0403A467 RID: 238695
+			// Token: 0x04034E39 RID: 216633
 			Colorful
 		}
 	}

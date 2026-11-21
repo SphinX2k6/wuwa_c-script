@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000153 RID: 339
+	// Token: 0x020000B6 RID: 182
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/AIModule.BTTaskNode")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public abstract class UBTTaskNode : UBTNode, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06001768 RID: 5992 RVA: 0x000226F5 File Offset: 0x000208F5
+		// Token: 0x06000DB7 RID: 3511 RVA: 0x000159CD File Offset: 0x00013BCD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBTTaskNode._ClassPtr;
 		}
 
-		// Token: 0x17000604 RID: 1540
-		// (get) Token: 0x06001769 RID: 5993 RVA: 0x00022704 File Offset: 0x00020904
-		// (set) Token: 0x0600176A RID: 5994 RVA: 0x0002273D File Offset: 0x0002093D
+		// Token: 0x1700011E RID: 286
+		// (get) Token: 0x06000DB8 RID: 3512 RVA: 0x000159DC File Offset: 0x00013BDC
+		// (set) Token: 0x06000DB9 RID: 3513 RVA: 0x00015A15 File Offset: 0x00013C15
 		public TArray<UBTService> Services
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000605 RID: 1541
-		// (get) Token: 0x0600176B RID: 5995 RVA: 0x0002274B File Offset: 0x0002094B
-		// (set) Token: 0x0600176C RID: 5996 RVA: 0x00022764 File Offset: 0x00020964
+		// Token: 0x1700011F RID: 287
+		// (get) Token: 0x06000DBA RID: 3514 RVA: 0x00015A23 File Offset: 0x00013C23
+		// (set) Token: 0x06000DBB RID: 3515 RVA: 0x00015A3C File Offset: 0x00013C3C
 		public unsafe bool bIgnoreRestartSelf
 		{
 			get
@@ -55,35 +55,35 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600176D RID: 5997 RVA: 0x00022794 File Offset: 0x00020994
+		// Token: 0x06000DBC RID: 3516 RVA: 0x00015A6C File Offset: 0x00013C6C
 		static UBTTaskNode()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AIModule.BTTaskNode");
 		}
 
-		// Token: 0x0600176E RID: 5998 RVA: 0x000227A4 File Offset: 0x000209A4
+		// Token: 0x06000DBD RID: 3517 RVA: 0x00015A7C File Offset: 0x00013C7C
 		protected UBTTaskNode() : this(BuiltinUtils.AllocNativeUObject(UBTTaskNode.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600176F RID: 5999 RVA: 0x000227CC File Offset: 0x000209CC
+		// Token: 0x06000DBE RID: 3518 RVA: 0x00015AA4 File Offset: 0x00013CA4
 		protected UBTTaskNode(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400058A RID: 1418
+		// Token: 0x04000286 RID: 646
 		public new const string __ObjectPath = "/Script/AIModule.BTTaskNode";
 
-		// Token: 0x0400058B RID: 1419
+		// Token: 0x04000287 RID: 647
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400058C RID: 1420
+		// Token: 0x04000288 RID: 648
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400058D RID: 1421
+		// Token: 0x04000289 RID: 649
 		internal static int __PropertyOffset_Services;
 
-		// Token: 0x0400058E RID: 1422
+		// Token: 0x0400028A RID: 650
 		[Nullable(new byte[]
 		{
 			2,
@@ -91,10 +91,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UBTService> _Services;
 
-		// Token: 0x0400058F RID: 1423
+		// Token: 0x0400028B RID: 651
 		internal static int __PropertyOffset_bIgnoreRestartSelf;
 
-		// Token: 0x04000590 RID: 1424
+		// Token: 0x0400028C RID: 652
 		internal static byte __PropertyMask_bIgnoreRestartSelf;
 	}
 }

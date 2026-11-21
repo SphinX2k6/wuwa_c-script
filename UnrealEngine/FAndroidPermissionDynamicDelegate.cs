@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020002A8 RID: 680
+	// Token: 0x020000DB RID: 219
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FAndroidPermissionDynamicDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06002588 RID: 9608 RVA: 0x00038AD5 File Offset: 0x00036CD5
+		// Token: 0x06000F70 RID: 3952 RVA: 0x00017E85 File Offset: 0x00016085
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FAndroidPermissionDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06002589 RID: 9609 RVA: 0x00038AE1 File Offset: 0x00036CE1
+		// Token: 0x06000F71 RID: 3953 RVA: 0x00017E91 File Offset: 0x00016091
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FAndroidPermissionDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FAndroidPermissionDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0600258A RID: 9610 RVA: 0x00038B04 File Offset: 0x00036D04
+		// Token: 0x06000F72 RID: 3954 RVA: 0x00017EB4 File Offset: 0x000160B4
 		public FAndroidPermissionDynamicDelegate()
 		{
 		}
 
-		// Token: 0x0600258B RID: 9611 RVA: 0x00038B0C File Offset: 0x00036D0C
+		// Token: 0x06000F73 RID: 3955 RVA: 0x00017EBC File Offset: 0x000160BC
 		[NullableContext(2)]
 		public FAndroidPermissionDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600258C RID: 9612 RVA: 0x00038B16 File Offset: 0x00036D16
+		// Token: 0x06000F74 RID: 3956 RVA: 0x00017EC6 File Offset: 0x000160C6
 		public FAndroidPermissionDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600258D RID: 9613 RVA: 0x00038B21 File Offset: 0x00036D21
+		// Token: 0x06000F75 RID: 3957 RVA: 0x00017ED1 File Offset: 0x000160D1
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate) ?? ((FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate)Delegate.CreateDelegate(typeof(FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600258E RID: 9614 RVA: 0x00038B53 File Offset: 0x00036D53
+		// Token: 0x06000F76 RID: 3958 RVA: 0x00017F03 File Offset: 0x00016103
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate Callback)
 		{
 			if (FAndroidPermissionDynamicDelegate.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FAndroidPermissionDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0600258F RID: 9615 RVA: 0x00038B8D File Offset: 0x00036D8D
+		// Token: 0x06000F77 RID: 3959 RVA: 0x00017F3D File Offset: 0x0001613D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06002590 RID: 9616 RVA: 0x00038B98 File Offset: 0x00036D98
+		// Token: 0x06000F78 RID: 3960 RVA: 0x00017F48 File Offset: 0x00016148
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast([Nullable(new byte[]
 		{
 			2,
@@ -111,10 +108,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FAndroidPermissionDynamicDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06002591 RID: 9617 RVA: 0x00038C30 File Offset: 0x00036E30
+		// Token: 0x06000F79 RID: 3961 RVA: 0x00017FE0 File Offset: 0x000161E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate fandroidPermissionDynamicDelegate_ScriptDelegate = target as FAndroidPermissionDynamicDelegate.FAndroidPermissionDynamicDelegate_ScriptDelegate;
@@ -135,43 +131,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04000E72 RID: 3698
+		// Token: 0x04000372 RID: 882
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04000E73 RID: 3699
+		// Token: 0x04000373 RID: 883
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/AndroidPermission.AndroidPermissionDynamicDelegate__DelegateSignature";
 
-		// Token: 0x04000E74 RID: 3700
+		// Token: 0x04000374 RID: 884
 		private static int RegisterId;
 
-		// Token: 0x02002BC6 RID: 11206
-		// (Invoke) Token: 0x06028526 RID: 165158
+		// Token: 0x02000909 RID: 2313
+		// (Invoke) Token: 0x0600BEDF RID: 48863
 		public delegate void FAndroidPermissionDynamicDelegate_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<string> Permissions, in TArray<bool> GrantResults);
 
-		// Token: 0x02002BC7 RID: 11207
+		// Token: 0x0200090A RID: 2314
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FAndroidPermissionDynamicDelegate_DelegateParams
+		private ref struct __FAndroidPermissionDynamicDelegate_DelegateParams
 		{
-			// Token: 0x04016478 RID: 91256
+			// Token: 0x040057E3 RID: 22499
 			[FieldOffset(0)]
 			public byte Permissions;
 
-			// Token: 0x04016479 RID: 91257
+			// Token: 0x040057E4 RID: 22500
 			[FieldOffset(16)]
 			public byte GrantResults;
 		}
 
-		// Token: 0x02002BC8 RID: 11208
+		// Token: 0x0200090B RID: 2315
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401647A RID: 91258
+			// Token: 0x040057E5 RID: 22501
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

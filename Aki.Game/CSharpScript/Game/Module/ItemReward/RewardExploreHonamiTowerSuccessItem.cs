@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
@@ -11,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005800 RID: 22528
+	// Token: 0x020047D7 RID: 18391
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreHonamiTowerSuccessItem : UiPanelBase
 	{
-		// Token: 0x0603945F RID: 234591 RVA: 0x00D95018 File Offset: 0x00D93218
+		// Token: 0x0602E373 RID: 189299 RVA: 0x00CE3E64 File Offset: 0x00CE2064
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,31 +33,31 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039460 RID: 234592 RVA: 0x00D950C4 File Offset: 0x00D932C4
+		// Token: 0x0602E374 RID: 189300 RVA: 0x00CE3F10 File Offset: 0x00CE2110
 		protected override void OnStart()
 		{
 			this.RecordLayout = new GenericLayout<HonamiTowerRecordItem, IHonamiTowerRecordData>(base.GetVerticalLayout(0), new Func<HonamiTowerRecordItem>(this.OnCreateRecordItem), null, false, true);
 			this.RewardLayout = new GenericLayout<RewardSmallItemGrid, RewardItemData>(base.GetHorizontalLayout(3), new Func<RewardSmallItemGrid>(this.OnCreateRewardItem), null, false, true);
 		}
 
-		// Token: 0x06039461 RID: 234593 RVA: 0x00D95113 File Offset: 0x00D93313
+		// Token: 0x0602E375 RID: 189301 RVA: 0x00CE3F5F File Offset: 0x00CE215F
 		public void Refresh(IHonamiTowerSuccessData data)
 		{
 			GenericLayout<HonamiTowerRecordItem, IHonamiTowerRecordData> recordLayout = this.RecordLayout;
 			if (recordLayout != null)
 			{
-				recordLayout.RefreshByData(data.RecordItemList.ToList<IHonamiTowerRecordData>(), null, false);
+				recordLayout.RefreshByData(data.RecordItemList, null, false);
 			}
-			this.RefreshRewardList(data.RewardItemList.ToList<RewardItemData>());
+			this.RefreshRewardList(new List<RewardItemData>(data.RewardItemList));
 		}
 
-		// Token: 0x06039462 RID: 234594 RVA: 0x00D95144 File Offset: 0x00D93344
+		// Token: 0x0602E376 RID: 189302 RVA: 0x00CE3F8B File Offset: 0x00CE218B
 		private HonamiTowerRecordItem OnCreateRecordItem()
 		{
 			return new HonamiTowerRecordItem();
 		}
 
-		// Token: 0x06039463 RID: 234595 RVA: 0x00D9514C File Offset: 0x00D9334C
+		// Token: 0x0602E377 RID: 189303 RVA: 0x00CE3F94 File Offset: 0x00CE2194
 		private void RefreshRewardList(List<RewardItemData> rewardList)
 		{
 			bool flag = rewardList.Count > 0;
@@ -106,7 +105,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			rewardLayout.RefreshByData(rewardList, null, false);
 		}
 
-		// Token: 0x06039464 RID: 234596 RVA: 0x00D951C5 File Offset: 0x00D933C5
+		// Token: 0x0602E378 RID: 189304 RVA: 0x00CE400D File Offset: 0x00CE220D
 		private RewardSmallItemGrid OnCreateRewardItem()
 		{
 			RewardSmallItemGrid rewardSmallItemGrid = new RewardSmallItemGrid();
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return rewardSmallItemGrid;
 		}
 
-		// Token: 0x06039465 RID: 234597 RVA: 0x00D95204 File Offset: 0x00D93404
+		// Token: 0x0602E379 RID: 189305 RVA: 0x00CE404C File Offset: 0x00CE224C
 		private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 		{
 			ItemGridBase selectedItemGrid = this.SelectedItemGrid;
@@ -132,32 +131,32 @@ namespace CSharpScript.Game.Module.ItemReward
 				ItemController.Instance.OpenItemTipsByItemUid(uniqueId, configId, true, null);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(configId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(configId, true, null, false);
 		}
 
-		// Token: 0x0401DF3D RID: 122685
+		// Token: 0x040189D4 RID: 100820
 		private ItemGridBase SelectedItemGrid;
 
-		// Token: 0x0401DF3E RID: 122686
+		// Token: 0x040189D5 RID: 100821
 		private GenericLayout<HonamiTowerRecordItem, IHonamiTowerRecordData> RecordLayout;
 
-		// Token: 0x0401DF3F RID: 122687
+		// Token: 0x040189D6 RID: 100822
 		private GenericLayout<RewardSmallItemGrid, RewardItemData> RewardLayout;
 
-		// Token: 0x0200B9F6 RID: 47606
+		// Token: 0x0200A40C RID: 41996
 		[NullableContext(0)]
 		private class ESuccessItemType
 		{
-			// Token: 0x0403837F RID: 230271
+			// Token: 0x04032D6C RID: 208236
 			public const int RecordLayout = 0;
 
-			// Token: 0x04038380 RID: 230272
+			// Token: 0x04032D6D RID: 208237
 			public const int RewardTitleText = 1;
 
-			// Token: 0x04038381 RID: 230273
+			// Token: 0x04032D6E RID: 208238
 			public const int RewardItem = 2;
 
-			// Token: 0x04038382 RID: 230274
+			// Token: 0x04032D6F RID: 208239
 			public const int RewardLayout = 3;
 		}
 	}

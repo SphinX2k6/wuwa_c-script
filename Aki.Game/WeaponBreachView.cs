@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,12 +12,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CF6 RID: 11510
+// Token: 0x02002250 RID: 8784
 [NullableContext(2)]
 [Nullable(0)]
 public class WeaponBreachView : UiTabViewBase
 {
-	// Token: 0x060182BC RID: 99004 RVA: 0x00625BF4 File Offset: 0x00623DF4
+	// Token: 0x06015B5D RID: 88925 RVA: 0x0064BBC0 File Offset: 0x00649DC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -42,19 +41,19 @@ public class WeaponBreachView : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060182BD RID: 99005 RVA: 0x00625D02 File Offset: 0x00623F02
+	// Token: 0x06015B5E RID: 88926 RVA: 0x0064BCCE File Offset: 0x00649ECE
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x060182BE RID: 99006 RVA: 0x00625D20 File Offset: 0x00623F20
+	// Token: 0x06015B5F RID: 88927 RVA: 0x0064BCEC File Offset: 0x00649EEC
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x060182BF RID: 99007 RVA: 0x00625D40 File Offset: 0x00623F40
+	// Token: 0x06015B60 RID: 88928 RVA: 0x0064BD0C File Offset: 0x00649F0C
 	protected override void OnStart()
 	{
 		this.StarLayout = new GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData>(base.GetHorizontalLayout(2), new Func<CSharpScript.Game.Module.RoleUi.StarItem>(this.InitStarItem), null, false, true);
@@ -64,7 +63,7 @@ public class WeaponBreachView : UiTabViewBase
 		this.AttributeLayout = new GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData>(base.GetVerticalLayout(3), new Func<AttributeItem>(this.InitAttributeItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x060182C0 RID: 99008 RVA: 0x00625DF0 File Offset: 0x00623FF0
+	// Token: 0x06015B61 RID: 88929 RVA: 0x0064BDBC File Offset: 0x00649FBC
 	private void BreachClick(int _)
 	{
 		if (this.WeaponBreachState == EWeaponBreachState.NoEnoughMaterial || this.WeaponBreachState == EWeaponBreachState.NoEnoughMoney)
@@ -93,7 +92,7 @@ public class WeaponBreachView : UiTabViewBase
 		this.BreachRequest();
 	}
 
-	// Token: 0x060182C1 RID: 99009 RVA: 0x00625E7C File Offset: 0x0062407C
+	// Token: 0x06015B62 RID: 88930 RVA: 0x0064BE48 File Offset: 0x0064A048
 	private void BreachRequest()
 	{
 		this.WeaponObserver = UiSceneManager.Instance.GetWeaponObserver();
@@ -144,14 +143,14 @@ public class WeaponBreachView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x060182C2 RID: 99010 RVA: 0x00625EF1 File Offset: 0x006240F1
+	// Token: 0x06015B63 RID: 88931 RVA: 0x0064BEBD File Offset: 0x0064A0BD
 	[NullableContext(1)]
 	private List<ISelectedData> GetSelectedDataList()
 	{
 		return this.CachedConsumeList ?? new List<ISelectedData>();
 	}
 
-	// Token: 0x060182C3 RID: 99011 RVA: 0x00625F04 File Offset: 0x00624104
+	// Token: 0x06015B64 RID: 88932 RVA: 0x0064BED0 File Offset: 0x0064A0D0
 	protected void LevelUpLockTipClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleBreakUpTip);
@@ -171,7 +170,7 @@ public class WeaponBreachView : UiTabViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060182C4 RID: 99012 RVA: 0x00625F7B File Offset: 0x0062417B
+	// Token: 0x06015B65 RID: 88933 RVA: 0x0064BF47 File Offset: 0x0064A147
 	protected override void OnBeforeShow()
 	{
 		this.WeaponIncId = (int)this.ExtraParams;
@@ -179,13 +178,13 @@ public class WeaponBreachView : UiTabViewBase
 		this.RefreshName();
 	}
 
-	// Token: 0x060182C5 RID: 99013 RVA: 0x00625F9A File Offset: 0x0062419A
+	// Token: 0x06015B66 RID: 88934 RVA: 0x0064BF66 File Offset: 0x0064A166
 	private void OnCommonItemCountAnyChange(int i, int i1)
 	{
 		this.UpdateView();
 	}
 
-	// Token: 0x060182C6 RID: 99014 RVA: 0x00625FA4 File Offset: 0x006241A4
+	// Token: 0x06015B67 RID: 88935 RVA: 0x0064BF70 File Offset: 0x0064A170
 	private void UpdateView()
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId);
@@ -259,7 +258,7 @@ public class WeaponBreachView : UiTabViewBase
 		this.RefreshCostItemButton();
 	}
 
-	// Token: 0x060182C7 RID: 99015 RVA: 0x00626284 File Offset: 0x00624484
+	// Token: 0x06015B68 RID: 88936 RVA: 0x0064C250 File Offset: 0x0064A450
 	private void RefreshCostItemButton()
 	{
 		if (this.WeaponBreachState != EWeaponBreachState.CanBreach)
@@ -293,7 +292,7 @@ public class WeaponBreachView : UiTabViewBase
 		costItemGridComponent2.SetButtonItemInteractive(true);
 	}
 
-	// Token: 0x060182C8 RID: 99016 RVA: 0x00626314 File Offset: 0x00624514
+	// Token: 0x06015B69 RID: 88937 RVA: 0x0064C2E0 File Offset: 0x0064A4E0
 	private void UpdateStar(int breachLevel, int maxLevel)
 	{
 		if (this.StarLayout == null)
@@ -314,22 +313,22 @@ public class WeaponBreachView : UiTabViewBase
 			};
 			array[i] = starItemData;
 		}
-		this.StarLayout.RefreshByData(array.ToList<IStarItemData>(), null, false);
+		this.StarLayout.RefreshByData(array, null, false);
 	}
 
-	// Token: 0x060182C9 RID: 99017 RVA: 0x006263B3 File Offset: 0x006245B3
+	// Token: 0x06015B6A RID: 88938 RVA: 0x0064C37A File Offset: 0x0064A57A
 	[NullableContext(1)]
 	private CSharpScript.Game.Module.RoleUi.StarItem InitStarItem()
 	{
 		return new CSharpScript.Game.Module.RoleUi.StarItem();
 	}
 
-	// Token: 0x060182CA RID: 99018 RVA: 0x006263BC File Offset: 0x006245BC
+	// Token: 0x06015B6B RID: 88939 RVA: 0x0064C384 File Offset: 0x0064A584
 	private void UpdateAttribute()
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId);
 		WeaponConf value = weaponDataByIncId.GetWeaponConfig().Value;
-		this.AttributeParamList = WeaponModel.Instance.GetWeaponAttributeParamList(value).ToList<IWeaponAttributeParam>();
+		this.AttributeParamList = new List<IWeaponAttributeParam>(WeaponModel.Instance.GetWeaponAttributeParamList(value));
 		int breachLevel = weaponDataByIncId.GetBreachLevel();
 		int num = breachLevel + 1;
 		int level = weaponDataByIncId.GetLevel();
@@ -359,7 +358,7 @@ public class WeaponBreachView : UiTabViewBase
 		this.AttributeLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060182CB RID: 99019 RVA: 0x00626510 File Offset: 0x00624710
+	// Token: 0x06015B6C RID: 88940 RVA: 0x0064C4D8 File Offset: 0x0064A6D8
 	private void RefreshName()
 	{
 		WeaponConf value = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId).GetWeaponConfig().Value;
@@ -369,20 +368,20 @@ public class WeaponBreachView : UiTabViewBase
 		base.GetText(6).ShowTextNew(weaponName);
 	}
 
-	// Token: 0x060182CC RID: 99020 RVA: 0x00626586 File Offset: 0x00624786
+	// Token: 0x06015B6D RID: 88941 RVA: 0x0064C54E File Offset: 0x0064A74E
 	[NullableContext(1)]
 	private AttributeItem InitAttributeItem()
 	{
 		return new AttributeItem();
 	}
 
-	// Token: 0x060182CD RID: 99021 RVA: 0x0062658D File Offset: 0x0062478D
+	// Token: 0x06015B6E RID: 88942 RVA: 0x0064C555 File Offset: 0x0064A755
 	protected override void OnBeforeDestroy()
 	{
 		this.CostItemGridComponent.Destroy(null);
 	}
 
-	// Token: 0x0400B3C8 RID: 46024
+	// Token: 0x0400B73D RID: 46909
 	[Nullable(new byte[]
 	{
 		2,
@@ -391,10 +390,10 @@ public class WeaponBreachView : UiTabViewBase
 	})]
 	protected GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-	// Token: 0x0400B3C9 RID: 46025
+	// Token: 0x0400B73E RID: 46910
 	private CostItemGridComponent CostItemGridComponent;
 
-	// Token: 0x0400B3CA RID: 46026
+	// Token: 0x0400B73F RID: 46911
 	[Nullable(new byte[]
 	{
 		2,
@@ -403,10 +402,10 @@ public class WeaponBreachView : UiTabViewBase
 	})]
 	protected GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData> StarLayout;
 
-	// Token: 0x0400B3CB RID: 46027
+	// Token: 0x0400B740 RID: 46912
 	private EWeaponBreachState WeaponBreachState;
 
-	// Token: 0x0400B3CC RID: 46028
+	// Token: 0x0400B741 RID: 46913
 	[Nullable(new byte[]
 	{
 		2,
@@ -414,19 +413,19 @@ public class WeaponBreachView : UiTabViewBase
 	})]
 	private List<IWeaponAttributeParam> AttributeParamList;
 
-	// Token: 0x0400B3CD RID: 46029
+	// Token: 0x0400B742 RID: 46914
 	private int WeaponIncId;
 
-	// Token: 0x0400B3CE RID: 46030
+	// Token: 0x0400B743 RID: 46915
 	private SkeletalObserverHandle WeaponObserver;
 
-	// Token: 0x0400B3CF RID: 46031
+	// Token: 0x0400B744 RID: 46916
 	private SkeletalObserverHandle WeaponScabbardObserver;
 
-	// Token: 0x0400B3D0 RID: 46032
+	// Token: 0x0400B745 RID: 46917
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400B3D1 RID: 46033
+	// Token: 0x0400B746 RID: 46918
 	[Nullable(new byte[]
 	{
 		2,
@@ -434,23 +433,23 @@ public class WeaponBreachView : UiTabViewBase
 	})]
 	private List<ISelectedData> CachedConsumeList;
 
-	// Token: 0x02009289 RID: 37513
+	// Token: 0x020084B1 RID: 33969
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402F61A RID: 194074
+		// Token: 0x0402ACA4 RID: 175268
 		NewLevelLimitText,
-		// Token: 0x0402F61B RID: 194075
+		// Token: 0x0402ACA5 RID: 175269
 		LevelText,
-		// Token: 0x0402F61C RID: 194076
+		// Token: 0x0402ACA6 RID: 175270
 		StarHorizontalLayout,
-		// Token: 0x0402F61D RID: 194077
+		// Token: 0x0402ACA7 RID: 175271
 		AttributeLayout,
-		// Token: 0x0402F61E RID: 194078
+		// Token: 0x0402ACA8 RID: 175272
 		ConsumeItem,
-		// Token: 0x0402F61F RID: 194079
+		// Token: 0x0402ACA9 RID: 175273
 		AttributeItem,
-		// Token: 0x0402F620 RID: 194080
+		// Token: 0x0402ACAA RID: 175274
 		WeaponNameText
 	}
 }

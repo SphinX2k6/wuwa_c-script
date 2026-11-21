@@ -20,23 +20,24 @@ using CSharpScript.Game.Module.Skin.Role.View;
 using CSharpScript.Game.Module.Skin.Tab.Motor;
 using CSharpScript.Game.Module.Skin.Tab.Role;
 using CSharpScript.Game.Module.Skin.Tab.Weapon;
+using CSharpScript.Game.Module.SolarSchool;
 using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006949 RID: 26953
+	// Token: 0x02005AA4 RID: 23204
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiTabViewManager : Singleton
 	{
-		// Token: 0x06043291 RID: 275089 RVA: 0x0105E8E3 File Offset: 0x0105CAE3
+		// Token: 0x060392C8 RID: 234184 RVA: 0x01002A9F File Offset: 0x01000C9F
 		public void Init()
 		{
 			UiTabViewStorage.Instance.AddUiTabViewBase(this.Cache);
 		}
 
-		// Token: 0x170097FD RID: 38909
-		// (get) Token: 0x06043292 RID: 275090 RVA: 0x0105E8F5 File Offset: 0x0105CAF5
+		// Token: 0x17006CDD RID: 27869
+		// (get) Token: 0x060392C9 RID: 234185 RVA: 0x01002AB1 File Offset: 0x01000CB1
 		public static UiTabViewManager Instance
 		{
 			get
@@ -50,12 +51,12 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x06043293 RID: 275091 RVA: 0x0105E918 File Offset: 0x0105CB18
+		// Token: 0x060392CA RID: 234186 RVA: 0x01002AD4 File Offset: 0x01000CD4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043294 RID: 275092 RVA: 0x0105E91A File Offset: 0x0105CB1A
+		// Token: 0x060392CB RID: 234187 RVA: 0x01002AD6 File Offset: 0x01000CD6
 		public static void ResetStaticDefaultValue()
 		{
 			UiTabViewManager instance = UiTabViewManager._instance;
@@ -66,13 +67,13 @@ namespace CSharpScript.Game.Manager
 			UiTabViewManager._instance = null;
 		}
 
-		// Token: 0x06043295 RID: 275093 RVA: 0x0105E933 File Offset: 0x0105CB33
+		// Token: 0x060392CC RID: 234188 RVA: 0x01002AEF File Offset: 0x01000CEF
 		static UiTabViewManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiTabViewManager.CreateStaticDefaultValue), new Action(UiTabViewManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022F9F RID: 143263
+		// Token: 0x0401E189 RID: 123273
 		[Nullable(new byte[]
 		{
 			1,
@@ -203,10 +204,15 @@ namespace CSharpScript.Game.Manager
 			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.RoverlikeOutsideEnhanceTabView, typeof(RoverlikeOutsideEnhanceTabView), "UiItem_RugueOutSideCollect1"),
 			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.RoverlikeOutsidePropTabView, typeof(RoverlikeOutsidePropTabView), "UiItem_RugueOutSideCollect1"),
 			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.DangoBrawlHandBookItemTabView, typeof(DangoBrawlHandBookItemTabView), "UiItem_DangoBrawlItemHandBook"),
-			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.DangoBrawlOccupationTabView, typeof(DangoBrawlOccupationTabView), "UiItem_DangoBrawlOccupation")
+			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.DangoBrawlOccupationTabView, typeof(DangoBrawlOccupationTabView), "UiItem_DangoBrawlOccupation"),
+			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.SolarSchoolInfoPlayerTabView, typeof(SolarSchoolInfoPlayerTabView), "UiItem_SolarSchoolInfoStudentID"),
+			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.SolarSchoolInfoFriendTabView, typeof(SolarSchoolInfoFriendTabView), "UiItem_SolarSchoolInfoFriend"),
+			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.SolarSchoolGalleryEndingTabView, typeof(SolarSchoolGalleryEndingTabView), "UiItem_SolarSchoolTujianA"),
+			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.SolarSchoolGalleryCgTabView, typeof(SolarSchoolGalleryCgTabView), "UiItem_SolarSchoolTujianB"),
+			new ValueTuple<EUiTabViewName, Type, string>(EUiTabViewName.SolarSchoolGalleryOpTabView, typeof(SolarSchoolGalleryOpTabView), "UiItem_SolarSchoolTujianC")
 		};
 
-		// Token: 0x04022FA0 RID: 143264
+		// Token: 0x0401E18A RID: 123274
 		[Nullable(2)]
 		private static UiTabViewManager _instance;
 	}

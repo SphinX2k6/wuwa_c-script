@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002885 RID: 10373
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B5A RID: 11098
 	public class IMontageParam
 	{
-		// Token: 0x0600E5BF RID: 58815 RVA: 0x0021C43E File Offset: 0x0021A63E
+		// Token: 0x0600F3EE RID: 62446 RVA: 0x002393BE File Offset: 0x002375BE
 		public static IMontageParam Create(IMontageParam? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004677 RID: 18039
-		// (get) Token: 0x0600E5C0 RID: 58816 RVA: 0x0021C45D File Offset: 0x0021A65D
+		// Token: 0x170049E8 RID: 18920
+		// (get) Token: 0x0600F3EF RID: 62447 RVA: 0x002393DD File Offset: 0x002375DD
 		public virtual IMontageId MontageId
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004678 RID: 18040
-		// (get) Token: 0x0600E5C1 RID: 58817 RVA: 0x0021C494 File Offset: 0x0021A694
+		// Token: 0x170049E9 RID: 18921
+		// (get) Token: 0x0600F3F0 RID: 62448 RVA: 0x00239414 File Offset: 0x00237614
 		public virtual bool? IsLoop
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004679 RID: 18041
-		// (get) Token: 0x0600E5C2 RID: 58818 RVA: 0x0021C4CC File Offset: 0x0021A6CC
+		// Token: 0x170049EA RID: 18922
+		// (get) Token: 0x0600F3F1 RID: 62449 RVA: 0x0023944C File Offset: 0x0023764C
 		public virtual bool? KeepPose
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700467A RID: 18042
-		// (get) Token: 0x0600E5C3 RID: 58819 RVA: 0x0021C504 File Offset: 0x0021A704
+		// Token: 0x170049EB RID: 18923
+		// (get) Token: 0x0600F3F2 RID: 62450 RVA: 0x00239484 File Offset: 0x00237684
 		public virtual float? DelayTime
 		{
 			get
@@ -80,14 +78,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F09 RID: 32521
+		// Token: 0x040085C8 RID: 34248
 		private IMontageParam Instance;
 
-		// Token: 0x04007F0A RID: 32522
+		// Token: 0x040085C9 RID: 34249
 		[Nullable(2)]
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x04007F0B RID: 32523
+		// Token: 0x040085CA RID: 34250
 		private bool _MontageIdInited;
 	}
 }

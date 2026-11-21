@@ -11,13 +11,13 @@ using CSharpScript.Game.Utils;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070D3 RID: 28883
+	// Token: 0x02006337 RID: 25399
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharacterSelfCenterComponent : EntityComponent
 	{
-		// Token: 0x17009CB0 RID: 40112
-		// (get) Token: 0x0604679E RID: 288670 RVA: 0x011B2BDB File Offset: 0x011B0DDB
+		// Token: 0x170074CD RID: 29901
+		// (get) Token: 0x0603D89E RID: 252062 RVA: 0x011D1D44 File Offset: 0x011CFF44
 		public float SelfCenterTimeDilation
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604679F RID: 288671 RVA: 0x011B2BE4 File Offset: 0x011B0DE4
+		// Token: 0x0603D89F RID: 252063 RVA: 0x011D1D4C File Offset: 0x011CFF4C
 		private void OnCharacterSetMaster(int masterId)
 		{
 			CharacterSelfCenterComponent component = EntitySystem.Instance.GetComponent<CharacterSelfCenterComponent>(masterId);
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060467A0 RID: 288672 RVA: 0x011B2C2D File Offset: 0x011B0E2D
+		// Token: 0x0603D8A0 RID: 252064 RVA: 0x011D1D95 File Offset: 0x011CFF95
 		private void OnRoleGoDownFinish()
 		{
 			this.ClearEffect();
 		}
 
-		// Token: 0x060467A1 RID: 288673 RVA: 0x011B2C38 File Offset: 0x011B0E38
+		// Token: 0x0603D8A1 RID: 252065 RVA: 0x011D1DA0 File Offset: 0x011CFFA0
 		protected override bool OnStart()
 		{
 			this.Inited = true;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060467A2 RID: 288674 RVA: 0x011B2D64 File Offset: 0x011B0F64
+		// Token: 0x0603D8A2 RID: 252066 RVA: 0x011D1ECC File Offset: 0x011D00CC
 		protected override bool OnEnd()
 		{
 			this.ClearEffect();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060467A3 RID: 288675 RVA: 0x011B2DD8 File Offset: 0x011B0FD8
+		// Token: 0x0603D8A3 RID: 252067 RVA: 0x011D1F40 File Offset: 0x011D0140
 		protected void InitEntityBornDilation(ESelfCenteredMode selfCenteredMode, float globalTimeDilation)
 		{
 			if (this.ActorComp.CreatureData.GetEntityType() == EEntityType.Monster)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060467A4 RID: 288676 RVA: 0x011B2E50 File Offset: 0x011B1050
+		// Token: 0x0603D8A4 RID: 252068 RVA: 0x011D1FB8 File Offset: 0x011D01B8
 		public void SetSelfCenterTimeDilation(float timeDilation, bool withFollow = true)
 		{
 			this.SelfCenterTimeDilationInternal = timeDilation;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.WithFollow = (!MathUtils.Instance.IsNearlyEqual((double)timeDilation, 1.0, null) && withFollow);
 		}
 
-		// Token: 0x060467A5 RID: 288677 RVA: 0x011B2FA8 File Offset: 0x011B11A8
+		// Token: 0x0603D8A5 RID: 252069 RVA: 0x011D2110 File Offset: 0x011D0310
 		public void SetSelfBeHitTimeDilation(float timeDilation)
 		{
 			if (this.SelfBeHitTimeScaleId > 0)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.SelfBeHitTimeScaleId = ((timeScaleComp2 != null) ? timeScaleComp2.SetForeverTimeScale(ETimeScaleSourceType.SelfBeHit, timeDilation, 0, false) : 0);
 		}
 
-		// Token: 0x060467A6 RID: 288678 RVA: 0x011B2FE8 File Offset: 0x011B11E8
+		// Token: 0x0603D8A6 RID: 252070 RVA: 0x011D2150 File Offset: 0x011D0350
 		public void RemoveSelfBeHitTimeDilation()
 		{
 			CharacterTimeScaleComponent timeScaleComp = this.TimeScaleComp;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.SelfBeHitTimeScaleId = 0;
 		}
 
-		// Token: 0x060467A7 RID: 288679 RVA: 0x011B300C File Offset: 0x011B120C
+		// Token: 0x0603D8A7 RID: 252071 RVA: 0x011D2174 File Offset: 0x011D0374
 		public void SetBeHitTimeDilation(float timeDilation, float duration = 200f)
 		{
 			if (!MathUtils.Instance.IsNearlyEqual((double)this.SelfCenterTimeDilationInternal, 1.0, null))
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}, duration, null, null, true, CharacterModel.Instance.InverseSelfCenteredTimeDilation);
 		}
 
-		// Token: 0x060467A8 RID: 288680 RVA: 0x011B309C File Offset: 0x011B129C
+		// Token: 0x0603D8A8 RID: 252072 RVA: 0x011D2204 File Offset: 0x011D0404
 		public void AddEffect(int handleId)
 		{
 			if (!this.CheckValid() || !base.Active)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060467A9 RID: 288681 RVA: 0x011B3101 File Offset: 0x011B1301
+		// Token: 0x0603D8A9 RID: 252073 RVA: 0x011D2269 File Offset: 0x011D0469
 		public void RemoveEffect(int effectHandle)
 		{
 			if (!this.CheckValid())
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.ToRemoveEffectHandleSet.Add(effectHandle);
 		}
 
-		// Token: 0x060467AA RID: 288682 RVA: 0x011B311C File Offset: 0x011B131C
+		// Token: 0x0603D8AA RID: 252074 RVA: 0x011D2284 File Offset: 0x011D0484
 		private void ClearEffect()
 		{
 			if (!this.CheckValid())
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.ToRemoveEffectHandleSet.Clear();
 		}
 
-		// Token: 0x060467AB RID: 288683 RVA: 0x011B31B4 File Offset: 0x011B13B4
+		// Token: 0x0603D8AB RID: 252075 RVA: 0x011D231C File Offset: 0x011D051C
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			if (!this.CheckValid())
@@ -275,13 +275,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.ToRemoveEffectHandleSet.Clear();
 		}
 
-		// Token: 0x060467AC RID: 288684 RVA: 0x011B32C8 File Offset: 0x011B14C8
+		// Token: 0x0603D8AC RID: 252076 RVA: 0x011D2430 File Offset: 0x011D0630
 		private bool CheckValid()
 		{
 			return this.Inited;
 		}
 
-		// Token: 0x060467AD RID: 288685 RVA: 0x011B32D0 File Offset: 0x011B14D0
+		// Token: 0x0603D8AD RID: 252077 RVA: 0x011D2438 File Offset: 0x011D0638
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -290,171 +290,159 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterSelfCenterComponent characterSelfCenterComponent = (CharacterSelfCenterComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (characterSelfCenterComponent.CreatureDataComp == null)
 			{
-				if (characterSelfCenterComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (characterSelfCenterComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TimeScaleComp"))
+			if (characterSelfCenterComponent.ActorComp == null)
 			{
-				if (characterSelfCenterComponent.TimeScaleComp == null)
-				{
-					this.TimeScaleComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterTimeScaleComponent>(this.TimeScaleComp), "TimeScaleComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("FrozenComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (characterSelfCenterComponent.FrozenComp == null)
-				{
-					this.FrozenComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseFrozenComponent>(this.FrozenComp), "FrozenComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FollowComp"))
+			if (characterSelfCenterComponent.TimeScaleComp == null)
 			{
-				if (characterSelfCenterComponent.FollowComp == null)
-				{
-					this.FollowComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFollowComponent>(this.FollowComp), "FollowComp"))
-				{
-					return false;
-				}
+				this.TimeScaleComp = null;
 			}
-			if (base.CanResetComponentProperty("PawnTimeScaleComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComp), "TimeScaleComp"))
 			{
-				if (characterSelfCenterComponent.PawnTimeScaleComp == null)
-				{
-					this.PawnTimeScaleComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.PawnTimeScaleComp), "PawnTimeScaleComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("EffectHandleSet"))
+			if (characterSelfCenterComponent.FrozenComp == null)
 			{
-				if (characterSelfCenterComponent.EffectHandleSet == null)
-				{
-					this.EffectHandleSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.EffectHandleSet), "EffectHandleSet"))
-				{
-					return false;
-				}
+				this.FrozenComp = null;
 			}
-			if (base.CanResetComponentProperty("ToRemoveEffectHandleSet"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FrozenComp), "FrozenComp"))
 			{
-				if (characterSelfCenterComponent.ToRemoveEffectHandleSet == null)
-				{
-					this.ToRemoveEffectHandleSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ToRemoveEffectHandleSet), "ToRemoveEffectHandleSet"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SelfCenterTimeDilationInternal"))
+			if (characterSelfCenterComponent.FollowComp == null)
 			{
-				this.SelfCenterTimeDilationInternal = characterSelfCenterComponent.SelfCenterTimeDilationInternal;
+				this.FollowComp = null;
 			}
-			if (base.CanResetComponentProperty("WithFollow"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowComp), "FollowComp"))
 			{
-				this.WithFollow = characterSelfCenterComponent.WithFollow;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TimerHandle"))
+			if (characterSelfCenterComponent.PawnTimeScaleComp == null)
 			{
-				if (characterSelfCenterComponent.TimerHandle == null)
-				{
-					this.TimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TimerHandle), "TimerHandle"))
-				{
-					return false;
-				}
+				this.PawnTimeScaleComp = null;
 			}
-			if (base.CanResetComponentProperty("SelfCenteredTimeScaleId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnTimeScaleComp), "PawnTimeScaleComp"))
 			{
-				this.SelfCenteredTimeScaleId = characterSelfCenterComponent.SelfCenteredTimeScaleId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SelfBeHitTimeScaleId"))
+			if (characterSelfCenterComponent.EffectHandleSet == null)
 			{
-				this.SelfBeHitTimeScaleId = characterSelfCenterComponent.SelfBeHitTimeScaleId;
+				this.EffectHandleSet = null;
 			}
-			if (base.CanResetComponentProperty("Inited"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.EffectHandleSet), "EffectHandleSet"))
 			{
-				this.Inited = characterSelfCenterComponent.Inited;
+				return false;
 			}
+			if (characterSelfCenterComponent.ToRemoveEffectHandleSet == null)
+			{
+				this.ToRemoveEffectHandleSet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ToRemoveEffectHandleSet), "ToRemoveEffectHandleSet"))
+			{
+				return false;
+			}
+			this.SelfCenterTimeDilationInternal = characterSelfCenterComponent.SelfCenterTimeDilationInternal;
+			this.WithFollow = characterSelfCenterComponent.WithFollow;
+			if (characterSelfCenterComponent.TimerHandle == null)
+			{
+				this.TimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimerHandle), "TimerHandle"))
+			{
+				return false;
+			}
+			this.SelfCenteredTimeScaleId = characterSelfCenterComponent.SelfCenteredTimeScaleId;
+			this.SelfBeHitTimeScaleId = characterSelfCenterComponent.SelfBeHitTimeScaleId;
+			this.Inited = characterSelfCenterComponent.Inited;
 			return true;
 		}
 
-		// Token: 0x04024F0C RID: 151308
+		// Token: 0x170074CE RID: 29902
+		// (get) Token: 0x0603D8AE RID: 252078 RVA: 0x011D2617 File Offset: 0x011D0817
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074CF RID: 29903
+		// (get) Token: 0x0603D8AF RID: 252079 RVA: 0x011D261A File Offset: 0x011D081A
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074D0 RID: 29904
+		// (get) Token: 0x0603D8B0 RID: 252080 RVA: 0x011D261D File Offset: 0x011D081D
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020A4B RID: 133707
 		private const int DEFAULT_BE_HIT_SELF_CENTER_DURATION = 200;
 
-		// Token: 0x04024F0D RID: 151309
+		// Token: 0x04020A4C RID: 133708
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024F0E RID: 151310
+		// Token: 0x04020A4D RID: 133709
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024F0F RID: 151311
+		// Token: 0x04020A4E RID: 133710
 		private CharacterTimeScaleComponent TimeScaleComp;
 
-		// Token: 0x04024F10 RID: 151312
+		// Token: 0x04020A4F RID: 133711
 		private BaseFrozenComponent FrozenComp;
 
-		// Token: 0x04024F11 RID: 151313
+		// Token: 0x04020A50 RID: 133712
 		private CharacterFollowComponent FollowComp;
 
-		// Token: 0x04024F12 RID: 151314
+		// Token: 0x04020A51 RID: 133713
 		private PawnTimeScaleComponent PawnTimeScaleComp;
 
-		// Token: 0x04024F13 RID: 151315
+		// Token: 0x04020A52 RID: 133714
 		private HashSet<int> EffectHandleSet;
 
-		// Token: 0x04024F14 RID: 151316
+		// Token: 0x04020A53 RID: 133715
 		private HashSet<int> ToRemoveEffectHandleSet;
 
-		// Token: 0x04024F15 RID: 151317
+		// Token: 0x04020A54 RID: 133716
 		private float SelfCenterTimeDilationInternal = 1f;
 
-		// Token: 0x04024F16 RID: 151318
+		// Token: 0x04020A55 RID: 133717
 		private bool WithFollow;
 
-		// Token: 0x04024F17 RID: 151319
+		// Token: 0x04020A56 RID: 133718
 		private TimerHandle TimerHandle;
 
-		// Token: 0x04024F18 RID: 151320
+		// Token: 0x04020A57 RID: 133719
 		private int SelfCenteredTimeScaleId;
 
-		// Token: 0x04024F19 RID: 151321
+		// Token: 0x04020A58 RID: 133720
 		private int SelfBeHitTimeScaleId;
 
-		// Token: 0x04024F1A RID: 151322
+		// Token: 0x04020A59 RID: 133721
 		private bool Inited;
 	}
 }

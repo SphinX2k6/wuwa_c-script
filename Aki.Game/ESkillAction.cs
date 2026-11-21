@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02002ECD RID: 11981
+// Token: 0x02002420 RID: 9248
 public enum ESkillAction
 {
-	// Token: 0x0400BF97 RID: 49047
+	// Token: 0x0400C332 RID: 49970
 	AddBullet = 1,
-	// Token: 0x0400BF98 RID: 49048
+	// Token: 0x0400C333 RID: 49971
 	RemoveBullet,
-	// Token: 0x0400BF99 RID: 49049
+	// Token: 0x0400C334 RID: 49972
 	AddBuff,
-	// Token: 0x0400BF9A RID: 49050
+	// Token: 0x0400C335 RID: 49973
 	RemoveBuff,
-	// Token: 0x0400BF9B RID: 49051
+	// Token: 0x0400C336 RID: 49974
 	StartSkill,
-	// Token: 0x0400BF9C RID: 49052
+	// Token: 0x0400C337 RID: 49975
 	LockOn,
-	// Token: 0x0400BF9D RID: 49053
+	// Token: 0x0400C338 RID: 49976
 	Customize,
-	// Token: 0x0400BF9E RID: 49054
+	// Token: 0x0400C339 RID: 49977
 	ReduceSkillCd
 }

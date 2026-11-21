@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EF0 RID: 16112
+	// Token: 0x0200432E RID: 17198
 	public struct IKurotatoSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x17006FC4 RID: 28612
-		// (get) Token: 0x06016CAB RID: 93355 RVA: 0x00349A19 File Offset: 0x00347C19
+		// Token: 0x170075B3 RID: 30131
+		// (get) Token: 0x06018302 RID: 99074 RVA: 0x00372BE5 File Offset: 0x00370DE5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016CAC RID: 93356 RVA: 0x00349A26 File Offset: 0x00347C26
+		// Token: 0x06018303 RID: 99075 RVA: 0x00372BF2 File Offset: 0x00370DF2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016CAD RID: 93357 RVA: 0x00349A30 File Offset: 0x00347C30
+		// Token: 0x06018304 RID: 99076 RVA: 0x00372BFC File Offset: 0x00370DFC
 		public static IKurotatoSystemConfig GetRootAsIKurotatoSystemConfig(ByteBuffer _bb)
 		{
 			return IKurotatoSystemConfig.GetRootAsIKurotatoSystemConfig(_bb, default(IKurotatoSystemConfig));
 		}
 
-		// Token: 0x06016CAE RID: 93358 RVA: 0x00349A4C File Offset: 0x00347C4C
+		// Token: 0x06018305 RID: 99077 RVA: 0x00372C18 File Offset: 0x00370E18
 		public static IKurotatoSystemConfig GetRootAsIKurotatoSystemConfig(ByteBuffer _bb, IKurotatoSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016CAF RID: 93359 RVA: 0x00349A69 File Offset: 0x00347C69
+		// Token: 0x06018306 RID: 99078 RVA: 0x00372C35 File Offset: 0x00370E35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016CB0 RID: 93360 RVA: 0x00349A78 File Offset: 0x00347C78
+		// Token: 0x06018307 RID: 99079 RVA: 0x00372C44 File Offset: 0x00370E44
 		public IKurotatoSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FC5 RID: 28613
-		// (get) Token: 0x06016CB1 RID: 93361 RVA: 0x00349A88 File Offset: 0x00347C88
+		// Token: 0x170075B4 RID: 30132
+		// (get) Token: 0x06018308 RID: 99080 RVA: 0x00372C54 File Offset: 0x00370E54
 		public EEnableSystemType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016CB2 RID: 93362 RVA: 0x00349AC4 File Offset: 0x00347CC4
+		// Token: 0x06018309 RID: 99081 RVA: 0x00372C90 File Offset: 0x00370E90
 		public IKurotatoSystemVar? Vars(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IKurotatoSystemVar?(default(IKurotatoSystemVar).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17006FC6 RID: 28614
-		// (get) Token: 0x06016CB3 RID: 93363 RVA: 0x00349B24 File Offset: 0x00347D24
+		// Token: 0x170075B5 RID: 30133
+		// (get) Token: 0x0601830A RID: 99082 RVA: 0x00372CF0 File Offset: 0x00370EF0
 		public int VarsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016CB4 RID: 93364 RVA: 0x00349B4F File Offset: 0x00347D4F
+		// Token: 0x0601830B RID: 99083 RVA: 0x00372D1B File Offset: 0x00370F1B
 		public static Offset<IKurotatoSystemConfig> CreateIKurotatoSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem, VectorOffset VarsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKurotatoSystemConfig.EndIKurotatoSystemConfig(builder);
 		}
 
-		// Token: 0x06016CB5 RID: 93365 RVA: 0x00349B6C File Offset: 0x00347D6C
+		// Token: 0x0601830C RID: 99084 RVA: 0x00372D38 File Offset: 0x00370F38
 		public static void StartIKurotatoSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06016CB6 RID: 93366 RVA: 0x00349B75 File Offset: 0x00347D75
+		// Token: 0x0601830D RID: 99085 RVA: 0x00372D41 File Offset: 0x00370F41
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016CB7 RID: 93367 RVA: 0x00349B80 File Offset: 0x00347D80
+		// Token: 0x0601830E RID: 99086 RVA: 0x00372D4C File Offset: 0x00370F4C
 		public static void AddVars(FlatBufferBuilder builder, VectorOffset varsOffset)
 		{
 			builder.AddOffset(1, varsOffset.Value, 0);
 		}
 
-		// Token: 0x06016CB8 RID: 93368 RVA: 0x00349B90 File Offset: 0x00347D90
+		// Token: 0x0601830F RID: 99087 RVA: 0x00372D5C File Offset: 0x00370F5C
 		public static VectorOffset CreateVarsVector(FlatBufferBuilder builder, Offset<IKurotatoSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016CB9 RID: 93369 RVA: 0x00349BD0 File Offset: 0x00347DD0
+		// Token: 0x06018310 RID: 99088 RVA: 0x00372D9C File Offset: 0x00370F9C
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, Offset<IKurotatoSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016CBA RID: 93370 RVA: 0x00349BEA File Offset: 0x00347DEA
+		// Token: 0x06018311 RID: 99089 RVA: 0x00372DB6 File Offset: 0x00370FB6
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IKurotatoSystemVar>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016CBB RID: 93371 RVA: 0x00349C08 File Offset: 0x00347E08
+		// Token: 0x06018312 RID: 99090 RVA: 0x00372DD4 File Offset: 0x00370FD4
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016CBC RID: 93372 RVA: 0x00349C21 File Offset: 0x00347E21
+		// Token: 0x06018313 RID: 99091 RVA: 0x00372DED File Offset: 0x00370FED
 		public static void StartVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06016CBD RID: 93373 RVA: 0x00349C2C File Offset: 0x00347E2C
+		// Token: 0x06018314 RID: 99092 RVA: 0x00372DF8 File Offset: 0x00370FF8
 		public static Offset<IKurotatoSystemConfig> EndIKurotatoSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IKurotatoSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06016CBE RID: 93374 RVA: 0x00349C3C File Offset: 0x00347E3C
+		// Token: 0x06018315 RID: 99093 RVA: 0x00372E08 File Offset: 0x00371008
 		public IKurotatoSystemConfigT UnPack()
 		{
 			IKurotatoSystemConfigT kurotatoSystemConfigT = new IKurotatoSystemConfigT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return kurotatoSystemConfigT;
 		}
 
-		// Token: 0x06016CBF RID: 93375 RVA: 0x00349C58 File Offset: 0x00347E58
+		// Token: 0x06018316 RID: 99094 RVA: 0x00372E24 File Offset: 0x00371024
 		public void UnPackTo(IKurotatoSystemConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016CC0 RID: 93376 RVA: 0x00349CC4 File Offset: 0x00347EC4
+		// Token: 0x06018317 RID: 99095 RVA: 0x00372E90 File Offset: 0x00371090
 		public static Offset<IKurotatoSystemConfig> Pack(FlatBufferBuilder builder, IKurotatoSystemConfigT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKurotatoSystemConfig.CreateIKurotatoSystemConfig(builder, _o.Type, varsOffset);
 		}
 
-		// Token: 0x0400B8CD RID: 47309
+		// Token: 0x0400C2AA RID: 49834
 		private Table __p;
 	}
 }

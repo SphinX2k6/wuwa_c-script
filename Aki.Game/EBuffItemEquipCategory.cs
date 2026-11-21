@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001717 RID: 5911
+// Token: 0x02000BCF RID: 3023
 public enum EBuffItemEquipCategory
 {
-	// Token: 0x04004D57 RID: 19799
+	// Token: 0x04004DFF RID: 19967
 	Any,
-	// Token: 0x04004D58 RID: 19800
+	// Token: 0x04004E00 RID: 19968
 	Head,
-	// Token: 0x04004D59 RID: 19801
+	// Token: 0x04004E01 RID: 19969
 	Face,
-	// Token: 0x04004D5A RID: 19802
+	// Token: 0x04004E02 RID: 19970
 	Back,
-	// Token: 0x04004D5B RID: 19803
+	// Token: 0x04004E03 RID: 19971
 	Other
 }

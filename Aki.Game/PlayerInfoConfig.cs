@@ -2,50 +2,50 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020025EC RID: 9708
+// Token: 0x02001AD7 RID: 6871
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class PlayerInfoConfig : ConfigBase
 {
-	// Token: 0x06013BCF RID: 80847 RVA: 0x004F341C File Offset: 0x004F161C
+	// Token: 0x060110B1 RID: 69809 RVA: 0x00502194 File Offset: 0x00500394
 	public bool GetIsUseAccountName()
 	{
 		return ConfigCommonParamById.GetBoolConfig("player_use_accountname").GetValueOrDefault(true);
 	}
 
-	// Token: 0x06013BD0 RID: 80848 RVA: 0x004F343C File Offset: 0x004F163C
+	// Token: 0x060110B2 RID: 69810 RVA: 0x005021B4 File Offset: 0x005003B4
 	public string GetMaleIconPath()
 	{
 		return ConfigCommonParamById.GetStringConfig("player_male_headicon");
 	}
 
-	// Token: 0x06013BD1 RID: 80849 RVA: 0x004F3448 File Offset: 0x004F1648
+	// Token: 0x060110B3 RID: 69811 RVA: 0x005021C0 File Offset: 0x005003C0
 	public string GetFemaleIconPath()
 	{
 		return ConfigCommonParamById.GetStringConfig("player_female_headicon");
 	}
 
-	// Token: 0x06013BD2 RID: 80850 RVA: 0x004F3454 File Offset: 0x004F1654
+	// Token: 0x060110B4 RID: 69812 RVA: 0x005021CC File Offset: 0x005003CC
 	public string GetMaleStandPath()
 	{
 		return ConfigCommonParamById.GetStringConfig("player_male_stand");
 	}
 
-	// Token: 0x06013BD3 RID: 80851 RVA: 0x004F3460 File Offset: 0x004F1660
+	// Token: 0x060110B5 RID: 69813 RVA: 0x005021D8 File Offset: 0x005003D8
 	public string GetFemaleStandPath()
 	{
 		return ConfigCommonParamById.GetStringConfig("player_female_stand");
 	}
 
-	// Token: 0x06013BD4 RID: 80852 RVA: 0x004F346C File Offset: 0x004F166C
+	// Token: 0x060110B6 RID: 69814 RVA: 0x005021E4 File Offset: 0x005003E4
 	[NullableContext(1)]
 	public string GetPlayerBigIconPath(int iconId)
 	{
 		return ConfigHeadIconById.GetConfig(iconId, true).Value.BigIconPath;
 	}
 
-	// Token: 0x06013BD5 RID: 80853 RVA: 0x004F3490 File Offset: 0x004F1690
+	// Token: 0x060110B7 RID: 69815 RVA: 0x00502208 File Offset: 0x00500408
 	public string GetPlayerIconPath(int iconId)
 	{
 		HeadIcon? config = ConfigHeadIconById.GetConfig(iconId, true);
@@ -56,8 +56,8 @@ public class PlayerInfoConfig : ConfigBase
 		return config.GetValueOrDefault().IconPath;
 	}
 
-	// Token: 0x1700194E RID: 6478
-	// (get) Token: 0x06013BD6 RID: 80854 RVA: 0x004F34BF File Offset: 0x004F16BF
+	// Token: 0x17001986 RID: 6534
+	// (get) Token: 0x060110B8 RID: 69816 RVA: 0x00502237 File Offset: 0x00500437
 	[Nullable(1)]
 	public static PlayerInfoConfig Instance
 	{
@@ -68,7 +68,7 @@ public class PlayerInfoConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06013BD7 RID: 80855 RVA: 0x004F34C6 File Offset: 0x004F16C6
+	// Token: 0x060110B9 RID: 69817 RVA: 0x0050223E File Offset: 0x0050043E
 	[NullableContext(1)]
 	public static PlayerInfoConfig GetOrCreateInstance()
 	{
@@ -79,7 +79,7 @@ public class PlayerInfoConfig : ConfigBase
 		return PlayerInfoConfig._Instance;
 	}
 
-	// Token: 0x06013BD8 RID: 80856 RVA: 0x004F34DA File Offset: 0x004F16DA
+	// Token: 0x060110BA RID: 69818 RVA: 0x00502252 File Offset: 0x00500452
 	public static bool CreateInstance()
 	{
 		if (PlayerInfoConfig._Instance != null)
@@ -90,23 +90,23 @@ public class PlayerInfoConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06013BD9 RID: 80857 RVA: 0x004F34F0 File Offset: 0x004F16F0
+	// Token: 0x060110BB RID: 69819 RVA: 0x00502268 File Offset: 0x00500468
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013BDA RID: 80858 RVA: 0x004F34F2 File Offset: 0x004F16F2
+	// Token: 0x060110BC RID: 69820 RVA: 0x0050226A File Offset: 0x0050046A
 	public static void ResetStaticDefaultValue()
 	{
 		PlayerInfoConfig._Instance = null;
 	}
 
-	// Token: 0x06013BDB RID: 80859 RVA: 0x004F34FA File Offset: 0x004F16FA
+	// Token: 0x060110BD RID: 69821 RVA: 0x00502272 File Offset: 0x00500472
 	static PlayerInfoConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PlayerInfoConfig.CreateStaticDefaultValue), new Action(PlayerInfoConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040094CD RID: 38093
+	// Token: 0x04009624 RID: 38436
 	private static PlayerInfoConfig _Instance;
 }

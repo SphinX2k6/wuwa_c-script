@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 {
-	// Token: 0x02005292 RID: 21138
+	// Token: 0x02004262 RID: 16994
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpponentHandCardItem : UiPanelBase
 	{
-		// Token: 0x060360D8 RID: 221400 RVA: 0x00CCACC6 File Offset: 0x00CC8EC6
+		// Token: 0x0602AFD3 RID: 176083 RVA: 0x00C183CA File Offset: 0x00C165CA
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			};
 		}
 
-		// Token: 0x060360D9 RID: 221401 RVA: 0x00CCACEC File Offset: 0x00CC8EEC
+		// Token: 0x0602AFD4 RID: 176084 RVA: 0x00C183F0 File Offset: 0x00C165F0
 		protected override void OnStart()
 		{
 			this.CardSequence = new UiSequencePlayer(this.RootItem);
@@ -32,20 +32,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			base.GetItem(0).SetAlpha(0f);
 		}
 
-		// Token: 0x060360DA RID: 221402 RVA: 0x00CCAD38 File Offset: 0x00CC8F38
+		// Token: 0x0602AFD5 RID: 176085 RVA: 0x00C1843C File Offset: 0x00C1663C
 		protected override void OnBeforeDestroy()
 		{
 			this.TweenLogic.Destroy();
 			this.CardSequence.Clear();
 		}
 
-		// Token: 0x060360DB RID: 221403 RVA: 0x00CCAD50 File Offset: 0x00CC8F50
+		// Token: 0x0602AFD6 RID: 176086 RVA: 0x00C18454 File Offset: 0x00C16654
 		public void SetAreaItem(OpponentArea areaItem)
 		{
 			this.AreaItem = areaItem;
 		}
 
-		// Token: 0x060360DC RID: 221404 RVA: 0x00CCAD5C File Offset: 0x00CC8F5C
+		// Token: 0x0602AFD7 RID: 176087 RVA: 0x00C18460 File Offset: 0x00C16660
 		public UniTask PlayStartTimeLocationTween(UUIItem fromItem, int delayTime)
 		{
 			OpponentHandCardItem.<PlayStartTimeLocationTween>d__8 <PlayStartTimeLocationTween>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayStartTimeLocationTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360DD RID: 221405 RVA: 0x00CCADB0 File Offset: 0x00CC8FB0
+		// Token: 0x0602AFD8 RID: 176088 RVA: 0x00C184B4 File Offset: 0x00C166B4
 		public UniTask PlayEndTimeLocationTween(UUIItem toItem, int delayTime)
 		{
 			OpponentHandCardItem.<PlayEndTimeLocationTween>d__9 <PlayEndTimeLocationTween>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayEndTimeLocationTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360DE RID: 221406 RVA: 0x00CCAE04 File Offset: 0x00CC9004
+		// Token: 0x0602AFD9 RID: 176089 RVA: 0x00C18508 File Offset: 0x00C16708
 		public UniTask PlayAddCardTween(UUIItem fromItem)
 		{
 			OpponentHandCardItem.<PlayAddCardTween>d__10 <PlayAddCardTween>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayAddCardTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360DF RID: 221407 RVA: 0x00CCAE50 File Offset: 0x00CC9050
+		// Token: 0x0602AFDA RID: 176090 RVA: 0x00C18554 File Offset: 0x00C16754
 		public UniTask PlayBackToLibraryTween(UUIItem toItem)
 		{
 			OpponentHandCardItem.<PlayBackToLibraryTween>d__11 <PlayBackToLibraryTween>d__;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayBackToLibraryTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360E0 RID: 221408 RVA: 0x00CCAE9C File Offset: 0x00CC909C
+		// Token: 0x0602AFDB RID: 176091 RVA: 0x00C185A0 File Offset: 0x00C167A0
 		public UniTask PlayBackToRecycleTween(UUIItem toItem)
 		{
 			OpponentHandCardItem.<PlayBackToRecycleTween>d__12 <PlayBackToRecycleTween>d__;
@@ -107,14 +107,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayBackToRecycleTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360E1 RID: 221409 RVA: 0x00CCAEE7 File Offset: 0x00CC90E7
+		// Token: 0x0602AFDC RID: 176092 RVA: 0x00C185EB File Offset: 0x00C167EB
 		public void PlaySequence(string sequenceName, bool isReverse = false)
 		{
 			this.CardSequence.StopPrevSequence(false, true);
 			this.CardSequence.PlaySequencePurely(sequenceName, false, isReverse);
 		}
 
-		// Token: 0x060360E2 RID: 221410 RVA: 0x00CCAF04 File Offset: 0x00CC9104
+		// Token: 0x0602AFDD RID: 176093 RVA: 0x00C18608 File Offset: 0x00C16808
 		public UniTask DissolveByLibrary()
 		{
 			OpponentHandCardItem.<DissolveByLibrary>d__14 <DissolveByLibrary>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <DissolveByLibrary>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360E3 RID: 221411 RVA: 0x00CCAF48 File Offset: 0x00CC9148
+		// Token: 0x0602AFDE RID: 176094 RVA: 0x00C1864C File Offset: 0x00C1684C
 		public UniTask PlayRemoveSequence()
 		{
 			OpponentHandCardItem.<PlayRemoveSequence>d__15 <PlayRemoveSequence>d__;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayRemoveSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360E4 RID: 221412 RVA: 0x00CCAF8C File Offset: 0x00CC918C
+		// Token: 0x0602AFDF RID: 176095 RVA: 0x00C18690 File Offset: 0x00C16890
 		public UniTask PlayMoveInSequence()
 		{
 			OpponentHandCardItem.<PlayMoveInSequence>d__16 <PlayMoveInSequence>d__;
@@ -147,20 +147,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <PlayMoveInSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C9EF RID: 117231
+		// Token: 0x04017424 RID: 95268
 		protected PhantomArenaCardTweenLogic TweenLogic;
 
-		// Token: 0x0401C9F0 RID: 117232
+		// Token: 0x04017425 RID: 95269
 		protected UiSequencePlayer CardSequence;
 
-		// Token: 0x0401C9F1 RID: 117233
+		// Token: 0x04017426 RID: 95270
 		protected OpponentArea AreaItem;
 
-		// Token: 0x0200B4D7 RID: 46295
+		// Token: 0x02009F0F RID: 40719
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036CA8 RID: 224424
+			// Token: 0x040316FB RID: 202491
 			public const int CardItem = 0;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200150D RID: 5389
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001668 RID: 5736
 	public class CloseFlowTemplate : ActionParams
 	{
-		// Token: 0x06007A78 RID: 31352 RVA: 0x00124664 File Offset: 0x00122864
+		// Token: 0x0600814B RID: 33099 RVA: 0x00133344 File Offset: 0x00131544
 		private CloseFlowTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A79 RID: 31353 RVA: 0x0012469C File Offset: 0x0012289C
+		// Token: 0x0600814C RID: 33100 RVA: 0x0013337C File Offset: 0x0013157C
 		public static CloseFlowTemplate Create([Nullable(2)] CloseFlowTemplate instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A7A RID: 31354 RVA: 0x001246AF File Offset: 0x001228AF
+		// Token: 0x0600814D RID: 33101 RVA: 0x0013338F File Offset: 0x0013158F
 		public static CloseFlowTemplate CreateFromSetValue([Nullable(2)] CloseFlowTemplate_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A7B RID: 31355 RVA: 0x001246C2 File Offset: 0x001228C2
+		// Token: 0x0600814E RID: 33102 RVA: 0x001333A2 File Offset: 0x001315A2
 		public CloseFlowTemplate_SetValue ToSetValue()
 		{
 			return new CloseFlowTemplate_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028E0 RID: 10464
-		// (get) Token: 0x06007A7C RID: 31356 RVA: 0x001246ED File Offset: 0x001228ED
-		// (set) Token: 0x06007A7D RID: 31357 RVA: 0x00124718 File Offset: 0x00122918
+		// Token: 0x17002ACA RID: 10954
+		// (get) Token: 0x0600814F RID: 33103 RVA: 0x001333CD File Offset: 0x001315CD
+		// (set) Token: 0x06008150 RID: 33104 RVA: 0x001333F8 File Offset: 0x001315F8
 		public virtual bool IsResetPosition
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028E1 RID: 10465
-		// (get) Token: 0x06007A7E RID: 31358 RVA: 0x00124728 File Offset: 0x00122928
-		// (set) Token: 0x06007A7F RID: 31359 RVA: 0x00124789 File Offset: 0x00122989
+		// Token: 0x17002ACB RID: 10955
+		// (get) Token: 0x06008151 RID: 33105 RVA: 0x00133408 File Offset: 0x00131608
+		// (set) Token: 0x06008152 RID: 33106 RVA: 0x00133469 File Offset: 0x00131669
 		[Nullable(2)]
 		public virtual IEndState EndState
 		{
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028E2 RID: 10466
-		// (get) Token: 0x06007A80 RID: 31360 RVA: 0x001247A0 File Offset: 0x001229A0
-		// (set) Token: 0x06007A81 RID: 31361 RVA: 0x001247DA File Offset: 0x001229DA
+		// Token: 0x17002ACC RID: 10956
+		// (get) Token: 0x06008153 RID: 33107 RVA: 0x00133480 File Offset: 0x00131680
+		// (set) Token: 0x06008154 RID: 33108 RVA: 0x001334BA File Offset: 0x001316BA
 		public virtual bool? ExitFilmAspectRatio
 		{
 			get
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046F0 RID: 18160
+		// Token: 0x04004A8F RID: 19087
 		[Nullable(2)]
 		protected new CloseFlowTemplate FbInstance;
 
-		// Token: 0x040046F1 RID: 18161
+		// Token: 0x04004A90 RID: 19088
 		[Nullable(2)]
 		protected CloseFlowTemplate_SetValue PocoInterface;
 
-		// Token: 0x040046F2 RID: 18162
+		// Token: 0x04004A91 RID: 19089
 		private IEndState _EndStateCache;
 
-		// Token: 0x040046F3 RID: 18163
+		// Token: 0x04004A92 RID: 19090
 		private bool _EndStateInited;
 	}
 }

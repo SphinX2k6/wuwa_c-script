@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200061F RID: 1567
+	// Token: 0x02000637 RID: 1591
 	public class ConfigObservatoryAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060024CA RID: 9418 RVA: 0x00129B25 File Offset: 0x00127D25
+		// Token: 0x0600255A RID: 9562 RVA: 0x001305A1 File Offset: 0x0012E7A1
 		static ConfigObservatoryAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigObservatoryAll.CreateStaticDefaultValue), new Action(ConfigObservatoryAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060024CB RID: 9419 RVA: 0x00129B44 File Offset: 0x00127D44
+		// Token: 0x0600255B RID: 9563 RVA: 0x001305C0 File Offset: 0x0012E7C0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigObservatoryAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060024CC RID: 9420 RVA: 0x00129BC3 File Offset: 0x00127DC3
+		// Token: 0x0600255C RID: 9564 RVA: 0x0013063F File Offset: 0x0012E83F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigObservatoryAll.LogPair = null;
 			ConfigObservatoryAll.HandleId = 0;
 		}
 
-		// Token: 0x060024CD RID: 9421 RVA: 0x00129BD1 File Offset: 0x00127DD1
+		// Token: 0x0600255D RID: 9565 RVA: 0x0013064D File Offset: 0x0012E84D
 		public static void Init()
 		{
 			ConfigObservatoryAll.HandleId = ConfigCommon.InitDataStatement(ConfigObservatoryAll.HandleId, "db_weather.db", "select BinData from `Observatory`");
 		}
 
-		// Token: 0x060024CE RID: 9422 RVA: 0x00129BEC File Offset: 0x00127DEC
+		// Token: 0x0600255E RID: 9566 RVA: 0x00130668 File Offset: 0x0012E868
 		[NullableContext(2)]
 		public static IReadOnlyList<Observatory> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002ABF RID: 10943
+		// Token: 0x04002B67 RID: 11111
 		private const string DB = "db_weather.db";
 
-		// Token: 0x04002AC0 RID: 10944
+		// Token: 0x04002B68 RID: 11112
 		private const string FILE = "t.天气系统.xlsx";
 
-		// Token: 0x04002AC1 RID: 10945
+		// Token: 0x04002B69 RID: 11113
 		private const string TABLE = "Observatory";
 
-		// Token: 0x04002AC2 RID: 10946
+		// Token: 0x04002B6A RID: 11114
 		private const string COMMAND = "select BinData from `Observatory`";
 
-		// Token: 0x04002AC3 RID: 10947
+		// Token: 0x04002B6B RID: 11115
 		private const string KEY_PREFIX = "ObservatoryAll";
 
-		// Token: 0x04002AC4 RID: 10948
+		// Token: 0x04002B6C RID: 11116
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002AC5 RID: 10949
+		// Token: 0x04002B6D RID: 11117
 		private static int HandleId;
 	}
 }

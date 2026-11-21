@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044FC RID: 17660
+	// Token: 0x0200341E RID: 13342
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Parser
 	{
-		// Token: 0x0602D78A RID: 186250 RVA: 0x00A433CB File Offset: 0x00A415CB
+		// Token: 0x06021E5A RID: 138842 RVA: 0x0096F1DB File Offset: 0x0096D3DB
 		public Parser(List<IToken> tokens)
 		{
 			this.Tokens = tokens;
 		}
 
-		// Token: 0x0602D78B RID: 186251 RVA: 0x00A433E5 File Offset: 0x00A415E5
+		// Token: 0x06021E5B RID: 138843 RVA: 0x0096F1F5 File Offset: 0x0096D3F5
 		public IAstNode Parse(string formula)
 		{
 			this.Formula = formula;
@@ -27,13 +27,13 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D78C RID: 186252 RVA: 0x00A4341A File Offset: 0x00A4161A
+		// Token: 0x06021E5C RID: 138844 RVA: 0x0096F22A File Offset: 0x0096D42A
 		private IAstNode ParseExpression()
 		{
 			return this.ParseLogicalOr();
 		}
 
-		// Token: 0x0602D78D RID: 186253 RVA: 0x00A43424 File Offset: 0x00A41624
+		// Token: 0x06021E5D RID: 138845 RVA: 0x0096F234 File Offset: 0x0096D434
 		private IAstNode ParseLogicalOr()
 		{
 			IAstNode astNode = this.ParseLogicalAnd();
@@ -58,7 +58,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D78E RID: 186254 RVA: 0x00A43490 File Offset: 0x00A41690
+		// Token: 0x06021E5E RID: 138846 RVA: 0x0096F2A0 File Offset: 0x0096D4A0
 		private IAstNode ParseLogicalAnd()
 		{
 			IAstNode astNode = this.ParseEquality();
@@ -83,7 +83,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D78F RID: 186255 RVA: 0x00A434FC File Offset: 0x00A416FC
+		// Token: 0x06021E5F RID: 138847 RVA: 0x0096F30C File Offset: 0x0096D50C
 		private IAstNode ParseEquality()
 		{
 			IAstNode astNode = this.ParseComparison();
@@ -109,7 +109,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D790 RID: 186256 RVA: 0x00A43570 File Offset: 0x00A41770
+		// Token: 0x06021E60 RID: 138848 RVA: 0x0096F380 File Offset: 0x0096D580
 		private IAstNode ParseComparison()
 		{
 			IAstNode astNode = this.ParseAddition();
@@ -137,7 +137,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D791 RID: 186257 RVA: 0x00A435F4 File Offset: 0x00A417F4
+		// Token: 0x06021E61 RID: 138849 RVA: 0x0096F404 File Offset: 0x0096D604
 		private IAstNode ParseAddition()
 		{
 			IAstNode astNode = this.ParseMultiplication();
@@ -163,7 +163,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D792 RID: 186258 RVA: 0x00A43668 File Offset: 0x00A41868
+		// Token: 0x06021E62 RID: 138850 RVA: 0x0096F478 File Offset: 0x0096D678
 		private IAstNode ParseMultiplication()
 		{
 			IAstNode astNode = this.ParseUnary();
@@ -190,7 +190,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D793 RID: 186259 RVA: 0x00A436E4 File Offset: 0x00A418E4
+		// Token: 0x06021E63 RID: 138851 RVA: 0x0096F4F4 File Offset: 0x0096D6F4
 		private IAstNode ParseUnary()
 		{
 			if (this.MatchOperator(new string[]
@@ -215,7 +215,7 @@ namespace CSharpScript.Utils
 			return this.ParsePrimary();
 		}
 
-		// Token: 0x0602D794 RID: 186260 RVA: 0x00A43758 File Offset: 0x00A41958
+		// Token: 0x06021E64 RID: 138852 RVA: 0x0096F568 File Offset: 0x0096D768
 		private IAstNode ParsePrimary()
 		{
 			IToken token = this.CurrentToken();
@@ -304,7 +304,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D795 RID: 186261 RVA: 0x00A43910 File Offset: 0x00A41B10
+		// Token: 0x06021E65 RID: 138853 RVA: 0x0096F720 File Offset: 0x0096D920
 		private IAstNode ParseFunctionCall(string name)
 		{
 			List<IAstNode> list = new List<IAstNode>();
@@ -328,7 +328,7 @@ namespace CSharpScript.Utils
 			};
 		}
 
-		// Token: 0x0602D796 RID: 186262 RVA: 0x00A43980 File Offset: 0x00A41B80
+		// Token: 0x06021E66 RID: 138854 RVA: 0x0096F790 File Offset: 0x0096D990
 		private IAstNode ParseArray()
 		{
 			List<IAstNode> list = new List<IAstNode>();
@@ -366,7 +366,7 @@ namespace CSharpScript.Utils
 			return astNode;
 		}
 
-		// Token: 0x0602D797 RID: 186263 RVA: 0x00A43A3C File Offset: 0x00A41C3C
+		// Token: 0x06021E67 RID: 138855 RVA: 0x0096F84C File Offset: 0x0096DA4C
 		private bool Match(params ETokenType[] types)
 		{
 			foreach (ETokenType type in types)
@@ -380,7 +380,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D798 RID: 186264 RVA: 0x00A43A70 File Offset: 0x00A41C70
+		// Token: 0x06021E68 RID: 138856 RVA: 0x0096F880 File Offset: 0x0096DA80
 		private bool MatchOperator(params string[] operators)
 		{
 			foreach (string b in operators)
@@ -394,7 +394,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D799 RID: 186265 RVA: 0x00A43AB7 File Offset: 0x00A41CB7
+		// Token: 0x06021E69 RID: 138857 RVA: 0x0096F8C7 File Offset: 0x0096DAC7
 		private void Consume(ETokenType type, string message)
 		{
 			if (this.Check(type))
@@ -405,13 +405,13 @@ namespace CSharpScript.Utils
 			throw new Exception(message);
 		}
 
-		// Token: 0x0602D79A RID: 186266 RVA: 0x00A43AD0 File Offset: 0x00A41CD0
+		// Token: 0x06021E6A RID: 138858 RVA: 0x0096F8E0 File Offset: 0x0096DAE0
 		private bool Check(ETokenType type)
 		{
 			return !this.IsAtEnd() && this.CurrentToken().TokenType == type;
 		}
 
-		// Token: 0x0602D79B RID: 186267 RVA: 0x00A43AEA File Offset: 0x00A41CEA
+		// Token: 0x06021E6B RID: 138859 RVA: 0x0096F8FA File Offset: 0x0096DAFA
 		private IToken Advance()
 		{
 			if (!this.IsAtEnd())
@@ -421,31 +421,31 @@ namespace CSharpScript.Utils
 			return this.PreviousToken();
 		}
 
-		// Token: 0x0602D79C RID: 186268 RVA: 0x00A43B08 File Offset: 0x00A41D08
+		// Token: 0x06021E6C RID: 138860 RVA: 0x0096F918 File Offset: 0x0096DB18
 		private bool IsAtEnd()
 		{
 			return this.CurrentToken().TokenType == ETokenType.EndOfInput;
 		}
 
-		// Token: 0x0602D79D RID: 186269 RVA: 0x00A43B19 File Offset: 0x00A41D19
+		// Token: 0x06021E6D RID: 138861 RVA: 0x0096F929 File Offset: 0x0096DB29
 		private IToken CurrentToken()
 		{
 			return this.Tokens[this.Position];
 		}
 
-		// Token: 0x0602D79E RID: 186270 RVA: 0x00A43B2C File Offset: 0x00A41D2C
+		// Token: 0x06021E6E RID: 138862 RVA: 0x0096F93C File Offset: 0x0096DB3C
 		private IToken PreviousToken()
 		{
 			return this.Tokens[this.Position - 1];
 		}
 
-		// Token: 0x040184EF RID: 99567
+		// Token: 0x04012B17 RID: 76567
 		private string Formula = "";
 
-		// Token: 0x040184F0 RID: 99568
+		// Token: 0x04012B18 RID: 76568
 		private int Position;
 
-		// Token: 0x040184F1 RID: 99569
+		// Token: 0x04012B19 RID: 76569
 		private readonly List<IToken> Tokens;
 	}
 }

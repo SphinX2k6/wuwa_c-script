@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001269 RID: 4713
+// Token: 0x0200071D RID: 1821
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoActivityData : ActivityBaseData
 {
-	// Token: 0x0600804F RID: 32847 RVA: 0x001B27D4 File Offset: 0x001B09D4
+	// Token: 0x060053E6 RID: 21478 RVA: 0x001BB4A4 File Offset: 0x001B96A4
 	private unsafe void InitLevelGroupData()
 	{
 		IReadOnlyList<PhotoFightActivityGroup> configList = ConfigPhotoFightActivityGroupByActivityId.GetConfigList(base.Id, true);
@@ -50,7 +49,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		this.LevelGroupDataList.Sort((FightPhotoLevelGroupData a, FightPhotoLevelGroupData b) => a.SortId - b.SortId);
 	}
 
-	// Token: 0x06008050 RID: 32848 RVA: 0x001B2924 File Offset: 0x001B0B24
+	// Token: 0x060053E7 RID: 21479 RVA: 0x001BB5F4 File Offset: 0x001B97F4
 	[NullableContext(2)]
 	private FightPhotoLevelGroupData GetLevelGroupData(int levelGroupId)
 	{
@@ -68,7 +67,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008051 RID: 32849 RVA: 0x001B2974 File Offset: 0x001B0B74
+	// Token: 0x060053E8 RID: 21480 RVA: 0x001BB644 File Offset: 0x001B9844
 	[NullableContext(2)]
 	public FightPhotoLevelData GetLevelData(int levelId)
 	{
@@ -86,7 +85,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008052 RID: 32850 RVA: 0x001B29C4 File Offset: 0x001B0BC4
+	// Token: 0x060053E9 RID: 21481 RVA: 0x001BB694 File Offset: 0x001B9894
 	[NullableContext(2)]
 	public FightPhotoLevelData GetLevelDataById(int levelId)
 	{
@@ -95,7 +94,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008053 RID: 32851 RVA: 0x001B29E4 File Offset: 0x001B0BE4
+	// Token: 0x060053EA RID: 21482 RVA: 0x001BB6B4 File Offset: 0x001B98B4
 	[NullableContext(2)]
 	public FightPhotoLevelData GetNextLevelData(int currentLevelId)
 	{
@@ -123,7 +122,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return levelDataList2[0];
 	}
 
-	// Token: 0x06008054 RID: 32852 RVA: 0x001B2AB0 File Offset: 0x001B0CB0
+	// Token: 0x060053EB RID: 21483 RVA: 0x001BB780 File Offset: 0x001B9980
 	public void UpdateLevelGroupData(IReadOnlyList<PhotoFightLevelGroupPb> levelGroupInfoList)
 	{
 		foreach (PhotoFightLevelGroupPb photoFightLevelGroupPb in levelGroupInfoList)
@@ -137,7 +136,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008055 RID: 32853 RVA: 0x001B2B24 File Offset: 0x001B0D24
+	// Token: 0x060053EC RID: 21484 RVA: 0x001BB7F4 File Offset: 0x001B99F4
 	public void UpdateLevelData(IReadOnlyList<PhotoFightLevelPb> levelInfoList, bool isInit = true)
 	{
 		foreach (PhotoFightLevelPb photoFightLevelPb in levelInfoList)
@@ -151,12 +150,12 @@ public class FightPhotoActivityData : ActivityBaseData
 				}
 				levelData.IsUnLock = photoFightLevelPb.IsOpen;
 				levelData.IsFinished = (photoFightLevelPb.ClearTimes > 0);
-				levelData.SetRoleIdList(photoFightLevelPb.Roles.ToList<int>());
+				levelData.SetRoleIdList(new List<int>(photoFightLevelPb.Roles));
 			}
 		}
 	}
 
-	// Token: 0x06008056 RID: 32854 RVA: 0x001B2BC4 File Offset: 0x001B0DC4
+	// Token: 0x060053ED RID: 21485 RVA: 0x001BB894 File Offset: 0x001B9A94
 	public int GetSelectLevelGroupDataIndex()
 	{
 		FightPhotoLevelData currentLevel = this.GetCurrentLevelData(false);
@@ -167,7 +166,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return this.GetFirstUnFinishedLevelGroupDataIndex();
 	}
 
-	// Token: 0x06008057 RID: 32855 RVA: 0x001B2C0C File Offset: 0x001B0E0C
+	// Token: 0x060053EE RID: 21486 RVA: 0x001BB8DC File Offset: 0x001B9ADC
 	public int GetFirstUnFinishedLevelGroupDataIndex()
 	{
 		int count = this.LevelGroupDataList.Count;
@@ -191,7 +190,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return count - 1;
 	}
 
-	// Token: 0x06008058 RID: 32856 RVA: 0x001B2C6C File Offset: 0x001B0E6C
+	// Token: 0x060053EF RID: 21487 RVA: 0x001BB93C File Offset: 0x001B9B3C
 	public bool IsLevelHasRedDot()
 	{
 		using (Dictionary<int, FightPhotoLevelData>.ValueCollection.Enumerator enumerator = this.LevelDataMap.Values.GetEnumerator())
@@ -207,19 +206,19 @@ public class FightPhotoActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008059 RID: 32857 RVA: 0x001B2CCC File Offset: 0x001B0ECC
+	// Token: 0x060053F0 RID: 21488 RVA: 0x001BB99C File Offset: 0x001B9B9C
 	public List<FightPhotoLevelGroupData> GetLevelGroupDataList()
 	{
 		return this.LevelGroupDataList;
 	}
 
-	// Token: 0x0600805A RID: 32858 RVA: 0x001B2CD4 File Offset: 0x001B0ED4
+	// Token: 0x060053F1 RID: 21489 RVA: 0x001BB9A4 File Offset: 0x001B9BA4
 	public int GetTotalLevelNum()
 	{
 		return this.LevelGroupDataMap.Count;
 	}
 
-	// Token: 0x0600805B RID: 32859 RVA: 0x001B2CE4 File Offset: 0x001B0EE4
+	// Token: 0x060053F2 RID: 21490 RVA: 0x001BB9B4 File Offset: 0x001B9BB4
 	public int GetFinishedLevelNum()
 	{
 		int num = 0;
@@ -236,7 +235,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x0600805C RID: 32860 RVA: 0x001B2D44 File Offset: 0x001B0F44
+	// Token: 0x060053F3 RID: 21491 RVA: 0x001BBA14 File Offset: 0x001B9C14
 	private void InitTaskData()
 	{
 		IReadOnlyList<PhotoFightReward> configList = ConfigPhotoFightRewardByActivityId.GetConfigList(base.Id, true);
@@ -258,7 +257,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600805D RID: 32861 RVA: 0x001B2DE8 File Offset: 0x001B0FE8
+	// Token: 0x060053F4 RID: 21492 RVA: 0x001BBAB8 File Offset: 0x001B9CB8
 	[NullableContext(2)]
 	private FightPhotoTaskData GetFightPhotoTaskData(int taskId)
 	{
@@ -276,7 +275,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x0600805E RID: 32862 RVA: 0x001B2E38 File Offset: 0x001B1038
+	// Token: 0x060053F5 RID: 21493 RVA: 0x001BBB08 File Offset: 0x001B9D08
 	public void UpdateTaskData(IReadOnlyList<PhotoFightTargetPb> targetInfoList)
 	{
 		foreach (PhotoFightTargetPb photoFightTargetPb in targetInfoList)
@@ -289,7 +288,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600805F RID: 32863 RVA: 0x001B2EA0 File Offset: 0x001B10A0
+	// Token: 0x060053F6 RID: 21494 RVA: 0x001BBB70 File Offset: 0x001B9D70
 	public void RequestTaskReward(int tabId)
 	{
 		List<FightPhotoTaskData> taskDataList = this.GetTaskDataList(tabId);
@@ -304,7 +303,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		FightPhotoController.Instance.RequestTaskReward(list.ToArray());
 	}
 
-	// Token: 0x06008060 RID: 32864 RVA: 0x001B2F18 File Offset: 0x001B1118
+	// Token: 0x060053F7 RID: 21495 RVA: 0x001BBBE8 File Offset: 0x001B9DE8
 	public void UpdateTaskRewardStatus(IReadOnlyList<PhotoFightTargetPb> taskInfoList)
 	{
 		foreach (PhotoFightTargetPb photoFightTargetPb in taskInfoList)
@@ -318,7 +317,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06008061 RID: 32865 RVA: 0x001B2F98 File Offset: 0x001B1198
+	// Token: 0x060053F8 RID: 21496 RVA: 0x001BBC68 File Offset: 0x001B9E68
 	public bool IsTaskHasRedDot()
 	{
 		using (Dictionary<int, FightPhotoTaskData>.ValueCollection.Enumerator enumerator = this.TaskDataMap.Values.GetEnumerator())
@@ -334,7 +333,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008062 RID: 32866 RVA: 0x001B2FF8 File Offset: 0x001B11F8
+	// Token: 0x060053F9 RID: 21497 RVA: 0x001BBCC8 File Offset: 0x001B9EC8
 	public bool IsTaskHasRedDotByTab(int tabId)
 	{
 		List<FightPhotoTaskData> list;
@@ -355,7 +354,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008063 RID: 32867 RVA: 0x001B3064 File Offset: 0x001B1264
+	// Token: 0x060053FA RID: 21498 RVA: 0x001BBD34 File Offset: 0x001B9F34
 	public List<FightPhotoTaskData> GetTaskDataList(int tabId)
 	{
 		List<FightPhotoTaskData> list;
@@ -367,7 +366,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06008064 RID: 32868 RVA: 0x001B309A File Offset: 0x001B129A
+	// Token: 0x060053FB RID: 21499 RVA: 0x001BBD6A File Offset: 0x001B9F6A
 	private int SortTaskData(FightPhotoTaskData a, FightPhotoTaskData b)
 	{
 		if (a.Status != b.Status)
@@ -377,13 +376,13 @@ public class FightPhotoActivityData : ActivityBaseData
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x06008065 RID: 32869 RVA: 0x001B30C5 File Offset: 0x001B12C5
+	// Token: 0x060053FC RID: 21500 RVA: 0x001BBD95 File Offset: 0x001B9F95
 	public int GetTotalTaskNum()
 	{
 		return this.TaskDataMap.Count;
 	}
 
-	// Token: 0x06008066 RID: 32870 RVA: 0x001B30D4 File Offset: 0x001B12D4
+	// Token: 0x060053FD RID: 21501 RVA: 0x001BBDA4 File Offset: 0x001B9FA4
 	public int GetFinishedTaskNum()
 	{
 		int num = 0;
@@ -400,7 +399,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008067 RID: 32871 RVA: 0x001B3134 File Offset: 0x001B1334
+	// Token: 0x060053FE RID: 21502 RVA: 0x001BBE04 File Offset: 0x001BA004
 	public List<PhotoFightRewardTab> GetFightPhotoTaskTabList()
 	{
 		if (this.FightPhotoTaskTabList.Count == 0)
@@ -414,7 +413,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		return this.FightPhotoTaskTabList;
 	}
 
-	// Token: 0x06008068 RID: 32872 RVA: 0x001B3170 File Offset: 0x001B1370
+	// Token: 0x060053FF RID: 21503 RVA: 0x001BBE40 File Offset: 0x001BA040
 	[NullableContext(2)]
 	public FightPhotoLevelData GetCurrentLevelData(bool isNeedLog = true)
 	{
@@ -441,21 +440,21 @@ public class FightPhotoActivityData : ActivityBaseData
 		return this.GetLevelData(this.CurrentLevelId);
 	}
 
-	// Token: 0x06008069 RID: 32873 RVA: 0x001B3205 File Offset: 0x001B1405
+	// Token: 0x06005400 RID: 21504 RVA: 0x001BBED5 File Offset: 0x001BA0D5
 	public int GetCurrentLevelId()
 	{
 		return this.CurrentLevelId;
 	}
 
-	// Token: 0x0600806A RID: 32874 RVA: 0x001B320D File Offset: 0x001B140D
+	// Token: 0x06005401 RID: 21505 RVA: 0x001BBEDD File Offset: 0x001BA0DD
 	public void SetCurrentLevelId(int id)
 	{
 		this.CurrentLevelId = id;
 	}
 
-	// Token: 0x17000AEA RID: 2794
-	// (get) Token: 0x0600806B RID: 32875 RVA: 0x001B3216 File Offset: 0x001B1416
-	// (set) Token: 0x0600806C RID: 32876 RVA: 0x001B321E File Offset: 0x001B141E
+	// Token: 0x17000B0A RID: 2826
+	// (get) Token: 0x06005402 RID: 21506 RVA: 0x001BBEE6 File Offset: 0x001BA0E6
+	// (set) Token: 0x06005403 RID: 21507 RVA: 0x001BBEEE File Offset: 0x001BA0EE
 	public bool IsNeedShowFightPhotoMainView
 	{
 		get
@@ -468,7 +467,7 @@ public class FightPhotoActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600806D RID: 32877 RVA: 0x001B3228 File Offset: 0x001B1428
+	// Token: 0x06005404 RID: 21508 RVA: 0x001BBEF8 File Offset: 0x001BA0F8
 	protected override void OnInit(ActivityData data)
 	{
 		PhotoFightActivityPb photoFightActivityData = data.PhotoFightActivityData;
@@ -483,19 +482,19 @@ public class FightPhotoActivityData : ActivityBaseData
 		this.UpdateTaskData(photoFightActivityData.Targets);
 	}
 
-	// Token: 0x0600806E RID: 32878 RVA: 0x001B3283 File Offset: 0x001B1483
+	// Token: 0x06005405 RID: 21509 RVA: 0x001BBF53 File Offset: 0x001BA153
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.CheckRedDot();
 	}
 
-	// Token: 0x0600806F RID: 32879 RVA: 0x001B328B File Offset: 0x001B148B
+	// Token: 0x06005406 RID: 21510 RVA: 0x001BBF5B File Offset: 0x001BA15B
 	public bool CheckRedDot()
 	{
 		return base.IsUnLock() && base.GetPreGuideQuestFinishState() && (this.IsTaskHasRedDot() || this.IsLevelHasRedDot());
 	}
 
-	// Token: 0x06008070 RID: 32880 RVA: 0x001B32B4 File Offset: 0x001B14B4
+	// Token: 0x06005407 RID: 21511 RVA: 0x001BBF84 File Offset: 0x001BA184
 	protected override bool GetExDataFinishShowState()
 	{
 		using (List<FightPhotoLevelGroupData>.Enumerator enumerator = this.LevelGroupDataList.GetEnumerator())
@@ -521,30 +520,30 @@ public class FightPhotoActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x04003A3E RID: 14910
+	// Token: 0x04003AD6 RID: 15062
 	private readonly Dictionary<int, FightPhotoLevelGroupData> LevelGroupDataMap = new Dictionary<int, FightPhotoLevelGroupData>();
 
-	// Token: 0x04003A3F RID: 14911
+	// Token: 0x04003AD7 RID: 15063
 	private readonly Dictionary<int, FightPhotoLevelData> LevelDataMap = new Dictionary<int, FightPhotoLevelData>();
 
-	// Token: 0x04003A40 RID: 14912
+	// Token: 0x04003AD8 RID: 15064
 	private readonly List<FightPhotoLevelGroupData> LevelGroupDataList = new List<FightPhotoLevelGroupData>();
 
-	// Token: 0x04003A41 RID: 14913
+	// Token: 0x04003AD9 RID: 15065
 	public bool IsNeedShowTip;
 
-	// Token: 0x04003A42 RID: 14914
+	// Token: 0x04003ADA RID: 15066
 	private readonly Dictionary<int, FightPhotoTaskData> TaskDataMap = new Dictionary<int, FightPhotoTaskData>();
 
-	// Token: 0x04003A43 RID: 14915
+	// Token: 0x04003ADB RID: 15067
 	private readonly Dictionary<int, List<FightPhotoTaskData>> TabToTaskDataListMap = new Dictionary<int, List<FightPhotoTaskData>>();
 
-	// Token: 0x04003A44 RID: 14916
+	// Token: 0x04003ADC RID: 15068
 	private List<PhotoFightRewardTab> FightPhotoTaskTabList = new List<PhotoFightRewardTab>();
 
-	// Token: 0x04003A45 RID: 14917
+	// Token: 0x04003ADD RID: 15069
 	private int CurrentLevelId;
 
-	// Token: 0x04003A46 RID: 14918
+	// Token: 0x04003ADE RID: 15070
 	private bool NeedShowFightPhotoMainView;
 }

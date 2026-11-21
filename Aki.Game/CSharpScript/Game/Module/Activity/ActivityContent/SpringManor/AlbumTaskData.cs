@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200605C RID: 24668
+	// Token: 0x02004FDA RID: 20442
 	public class AlbumTaskData
 	{
-		// Token: 0x040209CD RID: 133581
+		// Token: 0x0401B2FA RID: 111354
 		public int ConfigId;
 
-		// Token: 0x040209CE RID: 133582
+		// Token: 0x0401B2FB RID: 111355
 		public EBrochureState State;
 
-		// Token: 0x040209CF RID: 133583
+		// Token: 0x0401B2FC RID: 111356
 		public bool IsFollowing;
 
-		// Token: 0x040209D0 RID: 133584
+		// Token: 0x0401B2FD RID: 111357
 		public bool IsMainQuest;
 
-		// Token: 0x040209D1 RID: 133585
+		// Token: 0x0401B2FE RID: 111358
 		public EBrochureType Type = EBrochureType.Brochure;
 	}
 }

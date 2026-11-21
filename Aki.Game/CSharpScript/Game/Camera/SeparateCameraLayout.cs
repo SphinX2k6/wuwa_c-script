@@ -4,21 +4,21 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B7 RID: 29367
+	// Token: 0x02006439 RID: 25657
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeparateCameraLayout
 	{
-		// Token: 0x060480A4 RID: 295076 RVA: 0x0127809C File Offset: 0x0127629C
+		// Token: 0x0603E496 RID: 255126 RVA: 0x0121A3CC File Offset: 0x012185CC
 		public SeparateCameraLayout(CameraModelInstance cameraModeInstance)
 		{
 		}
 
-		// Token: 0x17009F0F RID: 40719
-		// (get) Token: 0x060480A5 RID: 295077 RVA: 0x01278103 File Offset: 0x01276303
+		// Token: 0x17007676 RID: 30326
+		// (get) Token: 0x0603E497 RID: 255127 RVA: 0x0121A433 File Offset: 0x01218633
 		public CameraModelInstance CameraModeInstance { get; } = cameraModeInstance;
 
-		// Token: 0x060480A6 RID: 295078 RVA: 0x0127810C File Offset: 0x0127630C
+		// Token: 0x0603E498 RID: 255128 RVA: 0x0121A43C File Offset: 0x0121863C
 		public unsafe void SetViewInfo(Vector2D viewLocation, Vector2D viewSize, bool enableScissorOffset)
 		{
 			this.CurrentBlendState = ESeparateBlendState.Stay;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480A7 RID: 295079 RVA: 0x012781CC File Offset: 0x012763CC
+		// Token: 0x0603E499 RID: 255129 RVA: 0x0121A4FC File Offset: 0x012186FC
 		public unsafe void SetTargetViewInfo(float blendTime, Vector2D targetViewLocation, Vector2D targetViewSize, bool enableScissorOffset, [Nullable(2)] UCurveFloat curveFloat, [Nullable(2)] Action callback = null)
 		{
 			this.BlendTime = blendTime;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480A8 RID: 295080 RVA: 0x01278344 File Offset: 0x01276544
+		// Token: 0x0603E49A RID: 255130 RVA: 0x0121A674 File Offset: 0x01218874
 		public unsafe void BlendToTarget(float deltaTime)
 		{
 			if (this.CurrentBlendState != ESeparateBlendState.Blend)
@@ -129,21 +129,21 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480A9 RID: 295081 RVA: 0x01278655 File Offset: 0x01276855
+		// Token: 0x0603E49B RID: 255131 RVA: 0x0121A985 File Offset: 0x01218B85
 		private void UpdateViewLocation(Vector2D viewLocation)
 		{
 			this.CurrentViewLocation.DeepCopy(viewLocation);
 			this.CameraModeInstance.PlayerCameraManager.ViewPointOverride = viewLocation.ToUeVector2D(false);
 		}
 
-		// Token: 0x060480AA RID: 295082 RVA: 0x0127867A File Offset: 0x0127687A
+		// Token: 0x0603E49C RID: 255132 RVA: 0x0121A9AA File Offset: 0x01218BAA
 		private void UpdateViewSize(Vector2D viewSize)
 		{
 			this.CurrentViewSize.DeepCopy(viewSize);
 			this.CameraModeInstance.PlayerCameraManager.ViewSizeOverride = viewSize.ToUeVector2D(false);
 		}
 
-		// Token: 0x060480AB RID: 295083 RVA: 0x0127869F File Offset: 0x0127689F
+		// Token: 0x0603E49D RID: 255133 RVA: 0x0121A9CF File Offset: 0x01218BCF
 		private void UpdateScissorOffset(bool enableScissorOffset)
 		{
 			this.EnableScissorOffset = enableScissorOffset;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480AC RID: 295084 RVA: 0x012786D8 File Offset: 0x012768D8
+		// Token: 0x0603E49E RID: 255134 RVA: 0x0121AA08 File Offset: 0x01218C08
 		private string GetFormatVector2D(Vector2D vector)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -163,49 +163,49 @@ namespace CSharpScript.Game.Camera
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x04025FDD RID: 155613
+		// Token: 0x040212BD RID: 135869
 		[StaticVariableRuleIgnore]
 		public static bool Debug;
 
-		// Token: 0x04025FDE RID: 155614
+		// Token: 0x040212BE RID: 135870
 		public Vector2D TargetViewLocation = Vector2D.Create();
 
-		// Token: 0x04025FDF RID: 155615
+		// Token: 0x040212BF RID: 135871
 		public Vector2D TargetViewSize = Vector2D.Create();
 
-		// Token: 0x04025FE0 RID: 155616
+		// Token: 0x040212C0 RID: 135872
 		public float BlendTime;
 
-		// Token: 0x04025FE1 RID: 155617
+		// Token: 0x040212C1 RID: 135873
 		[Nullable(2)]
 		public UCurveFloat BlendCurve;
 
-		// Token: 0x04025FE2 RID: 155618
+		// Token: 0x040212C2 RID: 135874
 		[Nullable(2)]
 		public Action FinishCallback;
 
-		// Token: 0x04025FE3 RID: 155619
+		// Token: 0x040212C3 RID: 135875
 		public Vector2D StartViewLocation = Vector2D.Create();
 
-		// Token: 0x04025FE4 RID: 155620
+		// Token: 0x040212C4 RID: 135876
 		public Vector2D StartViewSize = Vector2D.Create();
 
-		// Token: 0x04025FE5 RID: 155621
+		// Token: 0x040212C5 RID: 135877
 		public Vector2D CurrentViewLocation = Vector2D.Create();
 
-		// Token: 0x04025FE6 RID: 155622
+		// Token: 0x040212C6 RID: 135878
 		public Vector2D CurrentViewSize = Vector2D.Create();
 
-		// Token: 0x04025FE7 RID: 155623
+		// Token: 0x040212C7 RID: 135879
 		public float CurrentBlendTime;
 
-		// Token: 0x04025FE8 RID: 155624
+		// Token: 0x040212C8 RID: 135880
 		public ESeparateBlendState CurrentBlendState;
 
-		// Token: 0x04025FE9 RID: 155625
+		// Token: 0x040212C9 RID: 135881
 		public bool EnableScissorOffset;
 
-		// Token: 0x04025FEA RID: 155626
+		// Token: 0x040212CA RID: 135882
 		private readonly Vector2D TmpVector2D = Vector2D.Create();
 	}
 }

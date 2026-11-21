@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005442 RID: 21570
+	// Token: 0x020059C8 RID: 22984
 	public static class IInteractComponentVerify
 	{
-		// Token: 0x0602379C RID: 145308 RVA: 0x004E89EC File Offset: 0x004E6BEC
+		// Token: 0x06025854 RID: 153684 RVA: 0x00525A60 File Offset: 0x00523C60
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyVectorOfData(tablePos, 6, 4UL, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false))
@@ -129,44 +129,44 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007B6B RID: 31595
+		// Token: 0x020083CA RID: 33738
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040135CF RID: 79311
+			// Token: 0x04014655 RID: 83541
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040135D0 RID: 79312
+			// Token: 0x04014656 RID: 83542
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040135D1 RID: 79313
+			// Token: 0x04014657 RID: 83543
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040135D2 RID: 79314
+			// Token: 0x04014658 RID: 83544
 			public static VerifyUnionAction <3>__Verify;
 
-			// Token: 0x040135D3 RID: 79315
+			// Token: 0x04014659 RID: 83545
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x040135D4 RID: 79316
+			// Token: 0x0401465A RID: 83546
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x040135D5 RID: 79317
+			// Token: 0x0401465B RID: 83547
 			public static VerifyTableAction <6>__Verify;
 
-			// Token: 0x040135D6 RID: 79318
+			// Token: 0x0401465C RID: 83548
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x040135D7 RID: 79319
+			// Token: 0x0401465D RID: 83549
 			public static VerifyTableAction <8>__Verify;
 
-			// Token: 0x040135D8 RID: 79320
+			// Token: 0x0401465E RID: 83550
 			public static VerifyTableAction <9>__Verify;
 
-			// Token: 0x040135D9 RID: 79321
+			// Token: 0x0401465F RID: 83551
 			public static VerifyTableAction <10>__Verify;
 
-			// Token: 0x040135DA RID: 79322
+			// Token: 0x04014660 RID: 83552
 			public static VerifyUnionAction <11>__Verify;
 		}
 	}

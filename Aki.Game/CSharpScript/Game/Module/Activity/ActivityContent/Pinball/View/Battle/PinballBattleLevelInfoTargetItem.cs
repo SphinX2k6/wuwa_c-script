@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x02006374 RID: 25460
+	// Token: 0x020052F2 RID: 21234
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 	})]
 	public class PinballBattleLevelInfoTargetItem : GridProxyAbstract<PinballBattleLevelInfoTargetData>
 	{
-		// Token: 0x060400A7 RID: 262311 RVA: 0x00F7E274 File Offset: 0x00F7C474
+		// Token: 0x06034D68 RID: 216424 RVA: 0x00EC51D4 File Offset: 0x00EC33D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060400A8 RID: 262312 RVA: 0x00F7E340 File Offset: 0x00F7C540
+		// Token: 0x06034D69 RID: 216425 RVA: 0x00EC52A0 File Offset: 0x00EC34A0
 		[NullableContext(1)]
 		public override void Refresh(PinballBattleLevelInfoTargetData data, bool isSelected, int gridIndex)
 		{
@@ -78,18 +78,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), data.Desc, new <>z__ReadOnlySingleElementList<object>(data.Value));
 		}
 
-		// Token: 0x0200C58D RID: 50573
+		// Token: 0x0200AF74 RID: 44916
 		private enum ETargetItemComponent
 		{
-			// Token: 0x0403BA1A RID: 244250
+			// Token: 0x0403637C RID: 222076
 			PnlPointNormal,
-			// Token: 0x0403BA1B RID: 244251
+			// Token: 0x0403637D RID: 222077
 			SprNormalTargetFinish,
-			// Token: 0x0403BA1C RID: 244252
+			// Token: 0x0403637E RID: 222078
 			PnlPointSpecial,
-			// Token: 0x0403BA1D RID: 244253
+			// Token: 0x0403637F RID: 222079
 			SprSpecialTargetFinish,
-			// Token: 0x0403BA1E RID: 244254
+			// Token: 0x04036380 RID: 222080
 			TextTargetDesc
 		}
 	}

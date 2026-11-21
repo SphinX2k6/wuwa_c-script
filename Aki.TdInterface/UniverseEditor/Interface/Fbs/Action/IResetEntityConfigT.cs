@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E80 RID: 28288
+	// Token: 0x02007604 RID: 30212
 	public class IResetEntityConfigT
 	{
-		// Token: 0x1700D2AE RID: 53934
-		// (get) Token: 0x06031FF7 RID: 204791 RVA: 0x006C3676 File Offset: 0x006C1876
-		// (set) Token: 0x06031FF8 RID: 204792 RVA: 0x006C367E File Offset: 0x006C187E
+		// Token: 0x1700DE05 RID: 56837
+		// (get) Token: 0x06035037 RID: 217143 RVA: 0x0071F3AA File Offset: 0x0071D5AA
+		// (set) Token: 0x06035038 RID: 217144 RVA: 0x0071F3B2 File Offset: 0x0071D5B2
 		public EResetEntityType Type { get; set; }
 
-		// Token: 0x06031FF9 RID: 204793 RVA: 0x006C3687 File Offset: 0x006C1887
+		// Token: 0x06035039 RID: 217145 RVA: 0x0071F3BB File Offset: 0x0071D5BB
 		public IResetEntityConfigT()
 		{
 			this.Type = EResetEntityType.TeleControl;

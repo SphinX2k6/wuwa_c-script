@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029D1 RID: 10705
+// Token: 0x02001F4C RID: 8012
 public class ShipTowerSharePanel : UiPanelBase
 {
-	// Token: 0x060162FB RID: 90875 RVA: 0x0059C7F0 File Offset: 0x0059A9F0
+	// Token: 0x06013D01 RID: 81153 RVA: 0x005C77A8 File Offset: 0x005C59A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class ShipTowerSharePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060162FC RID: 90876 RVA: 0x0059C8B8 File Offset: 0x0059AAB8
+	// Token: 0x06013D02 RID: 81154 RVA: 0x005C7870 File Offset: 0x005C5A70
 	protected override void OnStart()
 	{
 		ShipTowerRecordShareData shipTowerRecordShareData = this.OpenParam as ShipTowerRecordShareData;
@@ -64,7 +64,7 @@ public class ShipTowerSharePanel : UiPanelBase
 		this.LineupLayout.RefreshByData(shipTowerRecordShareData.RecordList, null, false);
 	}
 
-	// Token: 0x060162FD RID: 90877 RVA: 0x0059C9CF File Offset: 0x0059ABCF
+	// Token: 0x06013D03 RID: 81155 RVA: 0x005C7987 File Offset: 0x005C5B87
 	[NullableContext(2)]
 	public AActor GetBlurOverrideActor()
 	{
@@ -77,7 +77,7 @@ public class ShipTowerSharePanel : UiPanelBase
 		return tsUiBlur.OverrideItem;
 	}
 
-	// Token: 0x0400A52D RID: 42285
+	// Token: 0x0400A917 RID: 43287
 	[Nullable(new byte[]
 	{
 		2,
@@ -86,24 +86,24 @@ public class ShipTowerSharePanel : UiPanelBase
 	})]
 	private GenericLayout<ShipTowerShareLineupItem, ShipTowerRecordItemData> LineupLayout;
 
-	// Token: 0x02008FF9 RID: 36857
+	// Token: 0x02008240 RID: 33344
 	private enum EShipTowerSharePanelComp
 	{
-		// Token: 0x0402E9EC RID: 190956
+		// Token: 0x0402A0E4 RID: 172260
 		TxtJifenNum,
-		// Token: 0x0402E9ED RID: 190957
+		// Token: 0x0402A0E5 RID: 172261
 		TxtLunciNum,
-		// Token: 0x0402E9EE RID: 190958
+		// Token: 0x0402A0E6 RID: 172262
 		TexScore,
-		// Token: 0x0402E9EF RID: 190959
+		// Token: 0x0402A0E7 RID: 172263
 		PnlLineup,
-		// Token: 0x0402E9F0 RID: 190960
+		// Token: 0x0402A0E8 RID: 172264
 		LineupItem,
-		// Token: 0x0402E9F1 RID: 190961
+		// Token: 0x0402A0E9 RID: 172265
 		TxtDate,
-		// Token: 0x0402E9F2 RID: 190962
+		// Token: 0x0402A0EA RID: 172266
 		PnlTips,
-		// Token: 0x0402E9F3 RID: 190963
+		// Token: 0x0402A0EB RID: 172267
 		TxtTips
 	}
 }

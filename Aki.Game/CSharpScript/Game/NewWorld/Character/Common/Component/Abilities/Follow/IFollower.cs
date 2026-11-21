@@ -4,20 +4,20 @@ using AkiClient.Game.Aki.Data.Fight.Enum;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007134 RID: 28980
+	// Token: 0x02006362 RID: 25442
 	[NullableContext(1)]
 	public interface IFollower
 	{
-		// Token: 0x06046C4B RID: 289867
+		// Token: 0x0603DA9C RID: 252572
 		void Possessed();
 
-		// Token: 0x06046C4C RID: 289868
+		// Token: 0x0603DA9D RID: 252573
 		void UnPossessed();
 
-		// Token: 0x06046C4D RID: 289869
+		// Token: 0x0603DA9E RID: 252574
 		bool SetEnable(bool enable, BPEEnableFollowShooter enableType, string reason);
 
-		// Token: 0x06046C4E RID: 289870
+		// Token: 0x0603DA9F RID: 252575
 		bool GetEnable();
 	}
 }

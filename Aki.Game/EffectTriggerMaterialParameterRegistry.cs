@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Effect.AnimNotifyInteraction.BP;
 using UnrealEngine;
 
-// Token: 0x0200346A RID: 13418
+// Token: 0x020029DE RID: 10718
 [NullableContext(1)]
 [Nullable(0)]
 public class EffectTriggerMaterialParameterRegistry
 {
-	// Token: 0x0601D19E RID: 119198 RVA: 0x0081D510 File Offset: 0x0081B710
+	// Token: 0x0601AEA6 RID: 110246 RVA: 0x00844810 File Offset: 0x00842A10
 	private static FName CreateName(string name)
 	{
 		return FNameUtil.GetDynamicFName(name).Value;
 	}
 
-	// Token: 0x0601D19F RID: 119199 RVA: 0x0081D52C File Offset: 0x0081B72C
+	// Token: 0x0601AEA7 RID: 110247 RVA: 0x0084482C File Offset: 0x00842A2C
 	private static int? ResolveSlot(int index)
 	{
 		if (index < 0 || index > 4)
@@ -32,13 +32,13 @@ public class EffectTriggerMaterialParameterRegistry
 		return new int?(index);
 	}
 
-	// Token: 0x0601D1A0 RID: 119200 RVA: 0x0081D58D File Offset: 0x0081B78D
+	// Token: 0x0601AEA8 RID: 110248 RVA: 0x0084488D File Offset: 0x00842A8D
 	private static bool IsValidAction(EEffectAction action)
 	{
 		return action >= EEffectAction.GroundPound && action < EEffectAction.EEffectAction_MAX;
 	}
 
-	// Token: 0x0601D1A1 RID: 119201 RVA: 0x0081D599 File Offset: 0x0081B799
+	// Token: 0x0601AEA9 RID: 110249 RVA: 0x00844899 File Offset: 0x00842A99
 	[NullableContext(2)]
 	private static EffectTriggerActionParameterNames GetActionParameterNames(EEffectAction action)
 	{
@@ -49,13 +49,13 @@ public class EffectTriggerMaterialParameterRegistry
 		return EffectTriggerMaterialParameterRegistry.ActionParameterNames[(int)action];
 	}
 
-	// Token: 0x0601D1A2 RID: 119202 RVA: 0x0081D5B0 File Offset: 0x0081B7B0
+	// Token: 0x0601AEAA RID: 110250 RVA: 0x008448B0 File Offset: 0x00842AB0
 	public static bool IsValidActionAndIndex(EEffectAction action, int index)
 	{
 		return EffectTriggerMaterialParameterRegistry.IsValidAction(action) && EffectTriggerMaterialParameterRegistry.ResolveSlot(index) != null;
 	}
 
-	// Token: 0x0601D1A3 RID: 119203 RVA: 0x0081D5D8 File Offset: 0x0081B7D8
+	// Token: 0x0601AEAB RID: 110251 RVA: 0x008448D8 File Offset: 0x00842AD8
 	public static FName GetTriggerParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -71,7 +71,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.Trigger[num.Value];
 	}
 
-	// Token: 0x0601D1A4 RID: 119204 RVA: 0x0081D61C File Offset: 0x0081B81C
+	// Token: 0x0601AEAC RID: 110252 RVA: 0x0084491C File Offset: 0x00842B1C
 	public static FName GetDurationParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -87,7 +87,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.Duration[num.Value];
 	}
 
-	// Token: 0x0601D1A5 RID: 119205 RVA: 0x0081D660 File Offset: 0x0081B860
+	// Token: 0x0601AEAD RID: 110253 RVA: 0x00844960 File Offset: 0x00842B60
 	public static FName GetAttackRadiusParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -103,7 +103,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.AttackRadius[num.Value];
 	}
 
-	// Token: 0x0601D1A6 RID: 119206 RVA: 0x0081D6A4 File Offset: 0x0081B8A4
+	// Token: 0x0601AEAE RID: 110254 RVA: 0x008449A4 File Offset: 0x00842BA4
 	public static FName GetAttackMagnitudeParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -119,7 +119,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.AttackMagnitude[num.Value];
 	}
 
-	// Token: 0x0601D1A7 RID: 119207 RVA: 0x0081D6E8 File Offset: 0x0081B8E8
+	// Token: 0x0601AEAF RID: 110255 RVA: 0x008449E8 File Offset: 0x00842BE8
 	public static FName GetActorLocationParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -135,7 +135,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.ActorLocation[num.Value];
 	}
 
-	// Token: 0x0601D1A8 RID: 119208 RVA: 0x0081D72C File Offset: 0x0081B92C
+	// Token: 0x0601AEB0 RID: 110256 RVA: 0x00844A2C File Offset: 0x00842C2C
 	public static FName GetCurveFloatParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -151,7 +151,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.CurveFloat[num.Value];
 	}
 
-	// Token: 0x0601D1A9 RID: 119209 RVA: 0x0081D770 File Offset: 0x0081B970
+	// Token: 0x0601AEB1 RID: 110257 RVA: 0x00844A70 File Offset: 0x00842C70
 	public static FName GetElapsedTimeParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -167,7 +167,7 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.ElapsedTime[num.Value];
 	}
 
-	// Token: 0x0601D1AA RID: 119210 RVA: 0x0081D7B4 File Offset: 0x0081B9B4
+	// Token: 0x0601AEB2 RID: 110258 RVA: 0x00844AB4 File Offset: 0x00842CB4
 	public static FName GetTextureHeightParameterName(EEffectAction action, int index)
 	{
 		int? num = EffectTriggerMaterialParameterRegistry.ResolveSlot(index);
@@ -183,10 +183,10 @@ public class EffectTriggerMaterialParameterRegistry
 		return actionParameterNames.TextureHeight[num.Value];
 	}
 
-	// Token: 0x0400E51F RID: 58655
+	// Token: 0x0400E9D7 RID: 59863
 	public const int MaxSlotIndex = 4;
 
-	// Token: 0x0400E520 RID: 58656
+	// Token: 0x0400E9D8 RID: 59864
 	private static readonly IReadOnlyList<EffectTriggerActionParameterNames> ActionParameterNames = new EffectTriggerActionParameterNames[]
 	{
 		new EffectTriggerActionParameterNames(new FName[]

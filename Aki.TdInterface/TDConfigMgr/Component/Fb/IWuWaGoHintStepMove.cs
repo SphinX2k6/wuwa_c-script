@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E0F RID: 3599
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F0B RID: 3851
 	public class IWuWaGoHintStepMove : IWuWaGoHintStepBase
 	{
-		// Token: 0x0600516E RID: 20846 RVA: 0x000C8DFC File Offset: 0x000C6FFC
+		// Token: 0x06005695 RID: 22165 RVA: 0x000D46C4 File Offset: 0x000D28C4
 		public static IWuWaGoHintStepMove Create(IWuWaGoHintStepMove? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B0D RID: 6925
-		// (get) Token: 0x0600516F RID: 20847 RVA: 0x000C8E1B File Offset: 0x000C701B
+		// Token: 0x17001C7A RID: 7290
+		// (get) Token: 0x06005696 RID: 22166 RVA: 0x000D46E3 File Offset: 0x000D28E3
 		public override EWuWaGoHintStepType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B0E RID: 6926
-		// (get) Token: 0x06005170 RID: 20848 RVA: 0x000C8E28 File Offset: 0x000C7028
+		// Token: 0x17001C7B RID: 7291
+		// (get) Token: 0x06005697 RID: 22167 RVA: 0x000D46F0 File Offset: 0x000D28F0
 		public virtual VectorInfo Position
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EE4 RID: 12004
+		// Token: 0x040031AC RID: 12716
 		private IWuWaGoHintStepMove Instance;
 
-		// Token: 0x04002EE5 RID: 12005
+		// Token: 0x040031AD RID: 12717
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002EE6 RID: 12006
+		// Token: 0x040031AE RID: 12718
 		private bool _PositionInited;
 	}
 }

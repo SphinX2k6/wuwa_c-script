@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001632 RID: 5682
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200179F RID: 6047
 	public class EnableAI : ActionParams
 	{
-		// Token: 0x06007C19 RID: 31769 RVA: 0x0012AA00 File Offset: 0x00128C00
+		// Token: 0x060082F7 RID: 33527 RVA: 0x00139AAC File Offset: 0x00137CAC
 		private EnableAI_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C1A RID: 31770 RVA: 0x0012AA38 File Offset: 0x00128C38
+		// Token: 0x060082F8 RID: 33528 RVA: 0x00139AE4 File Offset: 0x00137CE4
 		public static EnableAI Create([Nullable(2)] EnableAI instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C1B RID: 31771 RVA: 0x0012AA4B File Offset: 0x00128C4B
+		// Token: 0x060082F9 RID: 33529 RVA: 0x00139AF7 File Offset: 0x00137CF7
 		public static EnableAI CreateFromSetValue([Nullable(2)] EnableAI_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C1C RID: 31772 RVA: 0x0012AA5E File Offset: 0x00128C5E
+		// Token: 0x060082FA RID: 33530 RVA: 0x00139B0A File Offset: 0x00137D0A
 		public EnableAI_SetValue ToSetValue()
 		{
 			return new EnableAI_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002914 RID: 10516
-		// (get) Token: 0x06007C1D RID: 31773 RVA: 0x0012AA7D File Offset: 0x00128C7D
-		// (set) Token: 0x06007C1E RID: 31774 RVA: 0x0012AAA4 File Offset: 0x00128CA4
+		// Token: 0x17002AFF RID: 11007
+		// (get) Token: 0x060082FB RID: 33531 RVA: 0x00139B29 File Offset: 0x00137D29
+		// (set) Token: 0x060082FC RID: 33532 RVA: 0x00139B50 File Offset: 0x00137D50
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002915 RID: 10517
-		// (get) Token: 0x06007C1F RID: 31775 RVA: 0x0012AAB2 File Offset: 0x00128CB2
-		// (set) Token: 0x06007C20 RID: 31776 RVA: 0x0012AADD File Offset: 0x00128CDD
+		// Token: 0x17002B00 RID: 11008
+		// (get) Token: 0x060082FD RID: 33533 RVA: 0x00139B5E File Offset: 0x00137D5E
+		// (set) Token: 0x060082FE RID: 33534 RVA: 0x00139B89 File Offset: 0x00137D89
 		public virtual bool IsEnable
 		{
 			get
@@ -104,11 +102,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C46 RID: 19526
+		// Token: 0x0400503A RID: 20538
 		[Nullable(2)]
 		protected new EnableAI FbInstance;
 
-		// Token: 0x04004C47 RID: 19527
+		// Token: 0x0400503B RID: 20539
 		[Nullable(2)]
 		protected EnableAI_SetValue PocoInterface;
 	}

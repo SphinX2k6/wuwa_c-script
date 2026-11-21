@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 {
-	// Token: 0x020047F9 RID: 18425
+	// Token: 0x0200372A RID: 14122
 	public class RewardItem : LoopScrollSmallItemGrid<TPreviewItem>
 	{
-		// Token: 0x06030416 RID: 197654 RVA: 0x00B311B2 File Offset: 0x00B2F3B2
+		// Token: 0x06024BE6 RID: 150502 RVA: 0x00A61152 File Offset: 0x00A5F352
 		protected override bool OnCanExecuteChange()
 		{
 			return false;
 		}
 
-		// Token: 0x06030417 RID: 197655 RVA: 0x00B311B5 File Offset: 0x00B2F3B5
+		// Token: 0x06024BE7 RID: 150503 RVA: 0x00A61155 File Offset: 0x00A5F355
 		protected override void OnExtendToggleClicked()
 		{
 			ItemController instance = ItemController.Instance;
@@ -23,10 +23,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 			{
 				return;
 			}
-			instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+			instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 		}
 
-		// Token: 0x06030418 RID: 197656 RVA: 0x00B311D0 File Offset: 0x00B2F3D0
+		// Token: 0x06024BE8 RID: 150504 RVA: 0x00A61170 File Offset: 0x00A5F370
 		protected override void OnRefresh(TPreviewItem data, bool isSelected, int gridIndex)
 		{
 			this.ConfigId = data.ItemId;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 			base.Apply<PropSmallItemGrid>(parameters2);
 		}
 
-		// Token: 0x04019F99 RID: 106393
+		// Token: 0x0401464D RID: 83533
 		public int ConfigId;
 	}
 }

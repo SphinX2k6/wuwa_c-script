@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019EA RID: 6634
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B7D RID: 7037
 	[JsonConverter(typeof(IEnableSceneInteractionOperationConverter))]
 	public class IEnableSceneInteractionOperation : ISceneInteractionOperationType
 	{
-		// Token: 0x06008E0D RID: 36365 RVA: 0x0014C6E4 File Offset: 0x0014A8E4
+		// Token: 0x0600956F RID: 38255 RVA: 0x0015C554 File Offset: 0x0015A754
 		private IEnableSceneInteractionOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E0E RID: 36366 RVA: 0x0014C71C File Offset: 0x0014A91C
+		// Token: 0x06009570 RID: 38256 RVA: 0x0015C58C File Offset: 0x0015A78C
 		public static IEnableSceneInteractionOperation Create([Nullable(2)] IEnableSceneInteractionOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E0F RID: 36367 RVA: 0x0014C72F File Offset: 0x0014A92F
+		// Token: 0x06009571 RID: 38257 RVA: 0x0015C59F File Offset: 0x0015A79F
 		public static IEnableSceneInteractionOperation CreateFromSetValue([Nullable(2)] IEnableSceneInteractionOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E10 RID: 36368 RVA: 0x0014C742 File Offset: 0x0014A942
+		// Token: 0x06009572 RID: 38258 RVA: 0x0015C5B2 File Offset: 0x0015A7B2
 		public new IEnableSceneInteractionOperation_SetValue ToSetValue()
 		{
 			return new IEnableSceneInteractionOperation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D7C RID: 11644
-		// (get) Token: 0x06008E11 RID: 36369 RVA: 0x0014C755 File Offset: 0x0014A955
-		// (set) Token: 0x06008E12 RID: 36370 RVA: 0x0014C780 File Offset: 0x0014A980
+		// Token: 0x17002F88 RID: 12168
+		// (get) Token: 0x06009573 RID: 38259 RVA: 0x0015C5C5 File Offset: 0x0015A7C5
+		// (set) Token: 0x06009574 RID: 38260 RVA: 0x0015C5F0 File Offset: 0x0015A7F0
 		public override ESceneInteractionOperationType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005821 RID: 22561
+		// Token: 0x04005C83 RID: 23683
 		[Nullable(2)]
 		protected new IEnableSceneInteractionOperation FbInstance;
 
-		// Token: 0x04005822 RID: 22562
+		// Token: 0x04005C84 RID: 23684
 		[Nullable(2)]
 		protected new IEnableSceneInteractionOperation_SetValue PocoInterface;
 	}

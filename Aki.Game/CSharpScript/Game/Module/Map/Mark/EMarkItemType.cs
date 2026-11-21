@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054B6 RID: 21686
+	// Token: 0x02004499 RID: 17561
 	public enum EMarkItemType
 	{
-		// Token: 0x0401D2E9 RID: 119529
+		// Token: 0x04017D85 RID: 97669
 		Common,
-		// Token: 0x0401D2EA RID: 119530
+		// Token: 0x04017D86 RID: 97670
 		Config
 	}
 }

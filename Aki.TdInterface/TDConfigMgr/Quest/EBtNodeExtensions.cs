@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200122A RID: 4650
+	// Token: 0x02001366 RID: 4966
 	public static class EBtNodeExtensions
 	{
-		// Token: 0x06006964 RID: 26980 RVA: 0x000FB10C File Offset: 0x000F930C
+		// Token: 0x06006FA5 RID: 28581 RVA: 0x00108A18 File Offset: 0x00106C18
 		public static string ToEnumString(this EBtNode value)
 		{
 			string result;
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006965 RID: 26981 RVA: 0x000FB1D8 File Offset: 0x000F93D8
+		// Token: 0x06006FA6 RID: 28582 RVA: 0x00108AE4 File Offset: 0x00106CE4
 		public static EBtNode FromString(string name)
 		{
 			EBtNode result;
@@ -71,7 +71,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006966 RID: 26982 RVA: 0x000FB204 File Offset: 0x000F9404
+		// Token: 0x06006FA7 RID: 28583 RVA: 0x00108B10 File Offset: 0x00106D10
 		public static bool TryFromString(string name, out EBtNode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -215,7 +215,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006967 RID: 26983 RVA: 0x000FB43C File Offset: 0x000F963C
+		// Token: 0x06006FA8 RID: 28584 RVA: 0x00108D48 File Offset: 0x00106F48
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -237,7 +237,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006968 RID: 26984 RVA: 0x000FB4C5 File Offset: 0x000F96C5
+		// Token: 0x06006FA9 RID: 28585 RVA: 0x00108DD1 File Offset: 0x00106FD1
 		public static EBtNode[] GetValues()
 		{
 			return new EBtNode[]
@@ -259,7 +259,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006969 RID: 26985 RVA: 0x000FB4DC File Offset: 0x000F96DC
+		// Token: 0x06006FAA RID: 28586 RVA: 0x00108DE8 File Offset: 0x00106FE8
 		public static string[] GetNames()
 		{
 			return new string[]

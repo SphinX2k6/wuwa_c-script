@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041E1 RID: 16865
+	// Token: 0x0200463A RID: 17978
 	public struct ITimeScaledPhotograph : IFlatbufferObject
 	{
-		// Token: 0x170077A0 RID: 30624
-		// (get) Token: 0x06018DC0 RID: 101824 RVA: 0x00393B35 File Offset: 0x00391D35
+		// Token: 0x17007DCC RID: 32204
+		// (get) Token: 0x0601A516 RID: 107798 RVA: 0x003BEF89 File Offset: 0x003BD189
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018DC1 RID: 101825 RVA: 0x00393B42 File Offset: 0x00391D42
+		// Token: 0x0601A517 RID: 107799 RVA: 0x003BEF96 File Offset: 0x003BD196
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018DC2 RID: 101826 RVA: 0x00393B4C File Offset: 0x00391D4C
+		// Token: 0x0601A518 RID: 107800 RVA: 0x003BEFA0 File Offset: 0x003BD1A0
 		public static ITimeScaledPhotograph GetRootAsITimeScaledPhotograph(ByteBuffer _bb)
 		{
 			return ITimeScaledPhotograph.GetRootAsITimeScaledPhotograph(_bb, default(ITimeScaledPhotograph));
 		}
 
-		// Token: 0x06018DC3 RID: 101827 RVA: 0x00393B68 File Offset: 0x00391D68
+		// Token: 0x0601A519 RID: 107801 RVA: 0x003BEFBC File Offset: 0x003BD1BC
 		public static ITimeScaledPhotograph GetRootAsITimeScaledPhotograph(ByteBuffer _bb, ITimeScaledPhotograph obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018DC4 RID: 101828 RVA: 0x00393B85 File Offset: 0x00391D85
+		// Token: 0x0601A51A RID: 107802 RVA: 0x003BEFD9 File Offset: 0x003BD1D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018DC5 RID: 101829 RVA: 0x00393B94 File Offset: 0x00391D94
+		// Token: 0x0601A51B RID: 107803 RVA: 0x003BEFE8 File Offset: 0x003BD1E8
 		public ITimeScaledPhotograph __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170077A1 RID: 30625
-		// (get) Token: 0x06018DC6 RID: 101830 RVA: 0x00393BA4 File Offset: 0x00391DA4
+		// Token: 0x17007DCD RID: 32205
+		// (get) Token: 0x0601A51C RID: 107804 RVA: 0x003BEFF8 File Offset: 0x003BD1F8
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077A2 RID: 30626
-		// (get) Token: 0x06018DC7 RID: 101831 RVA: 0x00393BE0 File Offset: 0x00391DE0
+		// Token: 0x17007DCE RID: 32206
+		// (get) Token: 0x0601A51D RID: 107805 RVA: 0x003BF034 File Offset: 0x003BD234
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077A3 RID: 30627
-		// (get) Token: 0x06018DC8 RID: 101832 RVA: 0x00393C40 File Offset: 0x00391E40
+		// Token: 0x17007DCF RID: 32207
+		// (get) Token: 0x0601A51E RID: 107806 RVA: 0x003BF094 File Offset: 0x003BD294
 		public ETimeScaledPhotographTip ViewFinderTip
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077A4 RID: 30628
-		// (get) Token: 0x06018DC9 RID: 101833 RVA: 0x00393C7C File Offset: 0x00391E7C
+		// Token: 0x17007DD0 RID: 32208
+		// (get) Token: 0x0601A51F RID: 107807 RVA: 0x003BF0D0 File Offset: 0x003BD2D0
 		public IPhotographCondition? PhotographCondition
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077A5 RID: 30629
-		// (get) Token: 0x06018DCA RID: 101834 RVA: 0x00393CDC File Offset: 0x00391EDC
+		// Token: 0x17007DD1 RID: 32209
+		// (get) Token: 0x0601A520 RID: 107808 RVA: 0x003BF130 File Offset: 0x003BD330
 		public ICameraCondition? CameraCondition
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018DCB RID: 101835 RVA: 0x00393D3A File Offset: 0x00391F3A
+		// Token: 0x0601A521 RID: 107809 RVA: 0x003BF18E File Offset: 0x003BD38E
 		public static Offset<ITimeScaledPhotograph> CreateITimeScaledPhotograph(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), ETimeScaledPhotographTip ViewFinderTip = ETimeScaledPhotographTip.NoTip, Offset<IPhotographCondition> PhotographConditionOffset = default(Offset<IPhotographCondition>), Offset<ICameraCondition> CameraConditionOffset = default(Offset<ICameraCondition>))
 		{
 			builder.StartTable(5);
@@ -135,49 +135,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITimeScaledPhotograph.EndITimeScaledPhotograph(builder);
 		}
 
-		// Token: 0x06018DCC RID: 101836 RVA: 0x00393D6E File Offset: 0x00391F6E
+		// Token: 0x0601A522 RID: 107810 RVA: 0x003BF1C2 File Offset: 0x003BD3C2
 		public static void StartITimeScaledPhotograph(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06018DCD RID: 101837 RVA: 0x00393D77 File Offset: 0x00391F77
+		// Token: 0x0601A523 RID: 107811 RVA: 0x003BF1CB File Offset: 0x003BD3CB
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018DCE RID: 101838 RVA: 0x00393D82 File Offset: 0x00391F82
+		// Token: 0x0601A524 RID: 107812 RVA: 0x003BF1D6 File Offset: 0x003BD3D6
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06018DCF RID: 101839 RVA: 0x00393D92 File Offset: 0x00391F92
+		// Token: 0x0601A525 RID: 107813 RVA: 0x003BF1E6 File Offset: 0x003BD3E6
 		public static void AddViewFinderTip(FlatBufferBuilder builder, ETimeScaledPhotographTip viewFinderTip)
 		{
 			builder.AddByte(2, (byte)viewFinderTip, 0);
 		}
 
-		// Token: 0x06018DD0 RID: 101840 RVA: 0x00393D9D File Offset: 0x00391F9D
+		// Token: 0x0601A526 RID: 107814 RVA: 0x003BF1F1 File Offset: 0x003BD3F1
 		public static void AddPhotographCondition(FlatBufferBuilder builder, Offset<IPhotographCondition> photographConditionOffset)
 		{
 			builder.AddOffset(3, photographConditionOffset.Value, 0);
 		}
 
-		// Token: 0x06018DD1 RID: 101841 RVA: 0x00393DAD File Offset: 0x00391FAD
+		// Token: 0x0601A527 RID: 107815 RVA: 0x003BF201 File Offset: 0x003BD401
 		public static void AddCameraCondition(FlatBufferBuilder builder, Offset<ICameraCondition> cameraConditionOffset)
 		{
 			builder.AddOffset(4, cameraConditionOffset.Value, 0);
 		}
 
-		// Token: 0x06018DD2 RID: 101842 RVA: 0x00393DBD File Offset: 0x00391FBD
+		// Token: 0x0601A528 RID: 107816 RVA: 0x003BF211 File Offset: 0x003BD411
 		public static Offset<ITimeScaledPhotograph> EndITimeScaledPhotograph(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeScaledPhotograph>(builder.EndTable());
 		}
 
-		// Token: 0x06018DD3 RID: 101843 RVA: 0x00393DCC File Offset: 0x00391FCC
+		// Token: 0x0601A529 RID: 107817 RVA: 0x003BF220 File Offset: 0x003BD420
 		public ITimeScaledPhotographT UnPack()
 		{
 			ITimeScaledPhotographT timeScaledPhotographT = new ITimeScaledPhotographT();
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return timeScaledPhotographT;
 		}
 
-		// Token: 0x06018DD4 RID: 101844 RVA: 0x00393DE8 File Offset: 0x00391FE8
+		// Token: 0x0601A52A RID: 107818 RVA: 0x003BF23C File Offset: 0x003BD43C
 		public void UnPackTo(ITimeScaledPhotographT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.CameraCondition = ((this.CameraCondition != null) ? this.CameraCondition.Value.UnPack() : null);
 		}
 
-		// Token: 0x06018DD5 RID: 101845 RVA: 0x00393EA0 File Offset: 0x003920A0
+		// Token: 0x0601A52B RID: 107819 RVA: 0x003BF2F4 File Offset: 0x003BD4F4
 		public static Offset<ITimeScaledPhotograph> Pack(FlatBufferBuilder builder, ITimeScaledPhotographT _o)
 		{
 			if (_o == null)
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITimeScaledPhotograph.CreateITimeScaledPhotograph(builder, _o.Type, preConditionsOffset, _o.ViewFinderTip, photographConditionOffset, cameraConditionOffset);
 		}
 
-		// Token: 0x0400BE33 RID: 48691
+		// Token: 0x0400C83D RID: 51261
 		private Table __p;
 	}
 }

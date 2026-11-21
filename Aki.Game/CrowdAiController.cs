@@ -10,14 +10,14 @@ using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020031EB RID: 12779
+// Token: 0x0200275A RID: 10074
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class CrowdAiController : ControllerBase
 {
-	// Token: 0x1700261B RID: 9755
-	// (get) Token: 0x0601B912 RID: 112914 RVA: 0x00790F15 File Offset: 0x0078F115
+	// Token: 0x1700285C RID: 10332
+	// (get) Token: 0x06019497 RID: 103575 RVA: 0x007B9641 File Offset: 0x007B7841
 	public bool IsCrowdAiEnable
 	{
 		get
@@ -27,13 +27,13 @@ public class CrowdAiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B913 RID: 112915 RVA: 0x00790F33 File Offset: 0x0078F133
+	// Token: 0x06019498 RID: 103576 RVA: 0x007B965F File Offset: 0x007B785F
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601B914 RID: 112916 RVA: 0x00790F38 File Offset: 0x0078F138
+	// Token: 0x06019499 RID: 103577 RVA: 0x007B9664 File Offset: 0x007B7864
 	protected override void OnTick(float delta)
 	{
 		float num = delta * 0.001f;
@@ -55,14 +55,14 @@ public class CrowdAiController : ControllerBase
 		proxyActor.KuroTickActorOutside(num);
 	}
 
-	// Token: 0x0601B915 RID: 112917 RVA: 0x00790FBC File Offset: 0x0078F1BC
+	// Token: 0x0601949A RID: 103578 RVA: 0x007B96E8 File Offset: 0x007B78E8
 	protected override bool OnClear()
 	{
 		this.DisableCrowdAiSystem(true);
 		return true;
 	}
 
-	// Token: 0x0601B916 RID: 112918 RVA: 0x00790FC6 File Offset: 0x0078F1C6
+	// Token: 0x0601949B RID: 103579 RVA: 0x007B96F2 File Offset: 0x007B78F2
 	protected void InitCrowdAiConfigByPath(string path)
 	{
 		if (path == "" || path == "None")
@@ -79,7 +79,7 @@ public class CrowdAiController : ControllerBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601B917 RID: 112919 RVA: 0x00791004 File Offset: 0x0078F204
+	// Token: 0x0601949C RID: 103580 RVA: 0x007B9730 File Offset: 0x007B7930
 	protected void InitCrowdAiConfigByAsset(BP_CrowdAiConfig_C asset)
 	{
 		if (asset == null || !asset.IsValid())
@@ -105,7 +105,7 @@ public class CrowdAiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B918 RID: 112920 RVA: 0x007910B0 File Offset: 0x0078F2B0
+	// Token: 0x0601949D RID: 103581 RVA: 0x007B97DC File Offset: 0x007B79DC
 	protected bool CreateBoidActorSystemFromConfig(BP_Struct_CrowdAiBoidConfig config)
 	{
 		UKuroCrowdAiSubsystem crowdAiSubsystem = this.CrowdAiSubsystem;
@@ -143,7 +143,7 @@ public class CrowdAiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B919 RID: 112921 RVA: 0x007911B0 File Offset: 0x0078F3B0
+	// Token: 0x0601949E RID: 103582 RVA: 0x007B98DC File Offset: 0x007B7ADC
 	protected void InitCrowdAiSubsystem(BP_CrowdAiConfig_C asset)
 	{
 		UKuroCrowdAiSubsystem crowdAiSubsystem = this.CrowdAiSubsystem;
@@ -178,7 +178,7 @@ public class CrowdAiController : ControllerBase
 		this.ProxyActor.SetEnableParallelUpdate(this.UseParallelUpdate);
 	}
 
-	// Token: 0x0601B91A RID: 112922 RVA: 0x00791374 File Offset: 0x0078F574
+	// Token: 0x0601949F RID: 103583 RVA: 0x007B9AA0 File Offset: 0x007B7CA0
 	protected void InitRoleBoidParams(BP_CrowdAiConfig_C asset)
 	{
 		this.RoleParams = new RoleBoidParams();
@@ -187,7 +187,7 @@ public class CrowdAiController : ControllerBase
 		this.RoleParams.MaxRadiusChangeTime = asset.玩家半径变化时间;
 	}
 
-	// Token: 0x0601B91B RID: 112923 RVA: 0x007913B4 File Offset: 0x0078F5B4
+	// Token: 0x060194A0 RID: 103584 RVA: 0x007B9AE0 File Offset: 0x007B7CE0
 	protected bool InitBoidActorSystem(BP_CrowdAiBoidActorSystemBase_C actorSystem, BP_Struct_CrowdAiBoidConfig config)
 	{
 		actorSystem.Radius = config.半径;
@@ -215,7 +215,7 @@ public class CrowdAiController : ControllerBase
 		return actorSystem.InitGpuNpc();
 	}
 
-	// Token: 0x0601B91C RID: 112924 RVA: 0x007914D0 File Offset: 0x0078F6D0
+	// Token: 0x060194A1 RID: 103585 RVA: 0x007B9BFC File Offset: 0x007B7DFC
 	[NullableContext(2)]
 	public void EnableCrowdAiSystemByConfigPath(string path = null)
 	{
@@ -243,7 +243,7 @@ public class CrowdAiController : ControllerBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnEnableCrowdAiSystem, true);
 	}
 
-	// Token: 0x0601B91D RID: 112925 RVA: 0x007915C8 File Offset: 0x0078F7C8
+	// Token: 0x060194A2 RID: 103586 RVA: 0x007B9CF4 File Offset: 0x007B7EF4
 	public void EnableCrowdAiSystemByConfigAsset(BP_CrowdAiConfig_C config)
 	{
 		if (this.CrowdAiSwitch)
@@ -266,7 +266,7 @@ public class CrowdAiController : ControllerBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnEnableCrowdAiSystem, true);
 	}
 
-	// Token: 0x0601B91E RID: 112926 RVA: 0x007916B4 File Offset: 0x0078F8B4
+	// Token: 0x060194A3 RID: 103587 RVA: 0x007B9DE0 File Offset: 0x007B7FE0
 	public void DisableCrowdAiSystem(bool bForce = false)
 	{
 		if (!this.CrowdAiSwitch)
@@ -315,7 +315,7 @@ public class CrowdAiController : ControllerBase
 		this.BoidActorSystemPool.Clear();
 	}
 
-	// Token: 0x0601B91F RID: 112927 RVA: 0x00791908 File Offset: 0x0078FB08
+	// Token: 0x060194A4 RID: 103588 RVA: 0x007BA034 File Offset: 0x007B8234
 	public int SpawnCrowdAiBoid(int actorSystemIndex, global::Transform transform, bool force = true)
 	{
 		if (!this.IsCrowdAiEnable)
@@ -354,7 +354,7 @@ public class CrowdAiController : ControllerBase
 		return num;
 	}
 
-	// Token: 0x0601B920 RID: 112928 RVA: 0x007919D0 File Offset: 0x0078FBD0
+	// Token: 0x060194A5 RID: 103589 RVA: 0x007BA0FC File Offset: 0x007B82FC
 	public int GetRandomExistBoidId()
 	{
 		UKuroCrowdAiSubsystem crowdAiSubsystem = this.CrowdAiSubsystem;
@@ -366,7 +366,7 @@ public class CrowdAiController : ControllerBase
 		return MathUtils.Instance.GetRandomItem<int>(array);
 	}
 
-	// Token: 0x0601B921 RID: 112929 RVA: 0x00791A10 File Offset: 0x0078FC10
+	// Token: 0x060194A6 RID: 103590 RVA: 0x007BA13C File Offset: 0x007B833C
 	public bool DestroyCrowdAiBoid(int boidId, bool bForce = false)
 	{
 		UKuroCrowdAiSubsystem crowdAiSubsystem = this.CrowdAiSubsystem;
@@ -383,14 +383,14 @@ public class CrowdAiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B922 RID: 112930 RVA: 0x00791A62 File Offset: 0x0078FC62
+	// Token: 0x060194A7 RID: 103591 RVA: 0x007BA18E File Offset: 0x007B838E
 	public bool HasCrowdAiBoid(int boidId)
 	{
 		UKuroCrowdAiSubsystem crowdAiSubsystem = this.CrowdAiSubsystem;
 		return crowdAiSubsystem != null && crowdAiSubsystem.IsValid() && this.CrowdAiBoidIdSet.Contains(boidId);
 	}
 
-	// Token: 0x0601B923 RID: 112931 RVA: 0x00791A89 File Offset: 0x0078FC89
+	// Token: 0x060194A8 RID: 103592 RVA: 0x007BA1B5 File Offset: 0x007B83B5
 	public void NotifyBoidsAround()
 	{
 		if (this.CrowdAiSubsystem == null)
@@ -400,7 +400,7 @@ public class CrowdAiController : ControllerBase
 		this.CrowdAiSubsystem.NotifyBoidsAround();
 	}
 
-	// Token: 0x0601B924 RID: 112932 RVA: 0x00791AA0 File Offset: 0x0078FCA0
+	// Token: 0x060194A9 RID: 103593 RVA: 0x007BA1CC File Offset: 0x007B83CC
 	public void NotifyBoidsMoveTo(global::Vector targetLoc)
 	{
 		if (this.CrowdAiSubsystem == null)
@@ -412,7 +412,7 @@ public class CrowdAiController : ControllerBase
 		crowdAiSubsystem.NotifyBoidsMoveTo(fvector);
 	}
 
-	// Token: 0x0601B925 RID: 112933 RVA: 0x00791ACA File Offset: 0x0078FCCA
+	// Token: 0x060194AA RID: 103594 RVA: 0x007BA1F6 File Offset: 0x007B83F6
 	public void EnableParallelUpdateCrowdAi(bool enable)
 	{
 		if (this.UseParallelUpdate == enable)
@@ -428,7 +428,7 @@ public class CrowdAiController : ControllerBase
 		proxyActor.SetEnableParallelUpdate(enable);
 	}
 
-	// Token: 0x0601B926 RID: 112934 RVA: 0x00791AEE File Offset: 0x0078FCEE
+	// Token: 0x060194AB RID: 103595 RVA: 0x007BA21A File Offset: 0x007B841A
 	public void EnableCrowdAiDebugMode(bool enable)
 	{
 		UKuroCrowdAiSubsystem crowdAiSubsystem = this.CrowdAiSubsystem;
@@ -439,7 +439,7 @@ public class CrowdAiController : ControllerBase
 		crowdAiSubsystem.EnableDebugMode(enable);
 	}
 
-	// Token: 0x0601B927 RID: 112935 RVA: 0x00791B04 File Offset: 0x0078FD04
+	// Token: 0x060194AC RID: 103596 RVA: 0x007BA230 File Offset: 0x007B8430
 	public void UpdateDebugNavMeshEdges(double rangeDist)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -466,7 +466,7 @@ public class CrowdAiController : ControllerBase
 		crowdAiSubsystem.UpdateDebugNavMeshEdges(fbox);
 	}
 
-	// Token: 0x0601B928 RID: 112936 RVA: 0x00791B98 File Offset: 0x0078FD98
+	// Token: 0x060194AD RID: 103597 RVA: 0x007BA2C4 File Offset: 0x007B84C4
 	protected void ToWorldRelativeLocation(global::Vector inOut)
 	{
 		FIntVector worldOriginLocation = UGameplayStatics.GetWorldOriginLocation(GlobalData.World.GetWorld());
@@ -475,7 +475,7 @@ public class CrowdAiController : ControllerBase
 		inOut.Z -= (double)worldOriginLocation.Z;
 	}
 
-	// Token: 0x0601B929 RID: 112937 RVA: 0x00791BF4 File Offset: 0x0078FDF4
+	// Token: 0x060194AE RID: 103598 RVA: 0x007BA320 File Offset: 0x007B8520
 	protected void TryUpdateBoidActorSystemBounds(double deltaSeconds)
 	{
 		if (this.BoidActorSystemPool.Count == 0)
@@ -509,7 +509,7 @@ public class CrowdAiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B92A RID: 112938 RVA: 0x00791D24 File Offset: 0x0078FF24
+	// Token: 0x060194AF RID: 103599 RVA: 0x007BA450 File Offset: 0x007B8650
 	protected AKuroCrowdAiManagerProxyActor GetNewProxyActor()
 	{
 		DelayRemoveInfo delayRemovedProxyActorInfo = this.DelayRemovedProxyActorInfo;
@@ -533,7 +533,7 @@ public class CrowdAiController : ControllerBase
 		return ActorSystem.Instance.Get(AKuroCrowdAiManagerProxyActor.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true) as AKuroCrowdAiManagerProxyActor;
 	}
 
-	// Token: 0x0601B92B RID: 112939 RVA: 0x00791DB0 File Offset: 0x0078FFB0
+	// Token: 0x060194B0 RID: 103600 RVA: 0x007BA4DC File Offset: 0x007B86DC
 	protected BP_CrowdAiBoidActorSystemBase_C GetNewActorSystem()
 	{
 		int num = (this.DelayRemovedProxyActorInfo != null) ? 2 : 1;
@@ -559,7 +559,7 @@ public class CrowdAiController : ControllerBase
 		return ActorSystem.Instance.Get(BP_CrowdAiBoidActorSystemBase_C.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true) as BP_CrowdAiBoidActorSystemBase_C;
 	}
 
-	// Token: 0x0601B92C RID: 112940 RVA: 0x00791E7C File Offset: 0x0079007C
+	// Token: 0x060194B1 RID: 103601 RVA: 0x007BA5A8 File Offset: 0x007B87A8
 	protected void HandleDelayRemoveActors(float deltaSeconds)
 	{
 		if (this.DelayRemovedItemSet.Count == 0)
@@ -610,7 +610,7 @@ public class CrowdAiController : ControllerBase
 		actor2.KuroTickActorOutside(deltaSeconds);
 	}
 
-	// Token: 0x0601B92D RID: 112941 RVA: 0x00791FD4 File Offset: 0x007901D4
+	// Token: 0x060194B2 RID: 103602 RVA: 0x007BA700 File Offset: 0x007B8900
 	protected unsafe void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		if (!this.IsCrowdAiEnable || this.CrowdAiBoidIdSet.Count == 0)
@@ -654,7 +654,7 @@ public class CrowdAiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B92E RID: 112942 RVA: 0x00792150 File Offset: 0x00790350
+	// Token: 0x060194B3 RID: 103603 RVA: 0x007BA87C File Offset: 0x007B8A7C
 	protected void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if (!this.IsCrowdAiEnable || this.CrowdAiBoidIdSet.Count == 0)
@@ -684,7 +684,7 @@ public class CrowdAiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B92F RID: 112943 RVA: 0x007921F8 File Offset: 0x007903F8
+	// Token: 0x060194B4 RID: 103604 RVA: 0x007BA924 File Offset: 0x007B8B24
 	protected void OnClearWorld()
 	{
 		Log.Instance.Info(ELogModule.NPC, ELogAuthor.YJX, "[KuroCrowdAi] 切换地图清空数据", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -697,8 +697,8 @@ public class CrowdAiController : ControllerBase
 		this.DelayRemovedProxyActorInfo = null;
 	}
 
-	// Token: 0x1700261C RID: 9756
-	// (get) Token: 0x0601B930 RID: 112944 RVA: 0x00792275 File Offset: 0x00790475
+	// Token: 0x1700285D RID: 10333
+	// (get) Token: 0x060194B5 RID: 103605 RVA: 0x007BA9A1 File Offset: 0x007B8BA1
 	public static CrowdAiController Instance
 	{
 		get
@@ -707,7 +707,7 @@ public class CrowdAiController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B931 RID: 112945 RVA: 0x0079227C File Offset: 0x0079047C
+	// Token: 0x060194B6 RID: 103606 RVA: 0x007BA9A8 File Offset: 0x007B8BA8
 	public static CrowdAiController GetOrCreateInstance()
 	{
 		if (CrowdAiController._Instance == null)
@@ -717,7 +717,7 @@ public class CrowdAiController : ControllerBase
 		return CrowdAiController._Instance;
 	}
 
-	// Token: 0x0601B932 RID: 112946 RVA: 0x00792290 File Offset: 0x00790490
+	// Token: 0x060194B7 RID: 103607 RVA: 0x007BA9BC File Offset: 0x007B8BBC
 	public static bool CreateInstance()
 	{
 		if (CrowdAiController._Instance != null)
@@ -728,79 +728,79 @@ public class CrowdAiController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B933 RID: 112947 RVA: 0x007922A6 File Offset: 0x007904A6
+	// Token: 0x060194B8 RID: 103608 RVA: 0x007BA9D2 File Offset: 0x007B8BD2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B934 RID: 112948 RVA: 0x007922A8 File Offset: 0x007904A8
+	// Token: 0x060194B9 RID: 103609 RVA: 0x007BA9D4 File Offset: 0x007B8BD4
 	public static void ResetStaticDefaultValue()
 	{
 		CrowdAiController._Instance = null;
 	}
 
-	// Token: 0x0601B935 RID: 112949 RVA: 0x007922B0 File Offset: 0x007904B0
+	// Token: 0x060194BA RID: 103610 RVA: 0x007BA9DC File Offset: 0x007B8BDC
 	static CrowdAiController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CrowdAiController.CreateStaticDefaultValue), new Action(CrowdAiController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D8B7 RID: 55479
+	// Token: 0x0400DD55 RID: 56661
 	private readonly float DEFAULT_ACTOR_SYSTEM_BOUNDS = 100000f;
 
-	// Token: 0x0400D8B8 RID: 55480
+	// Token: 0x0400DD56 RID: 56662
 	private readonly double BOUNDS_UPDATE_INTERVAL = 3.0;
 
-	// Token: 0x0400D8B9 RID: 55481
+	// Token: 0x0400DD57 RID: 56663
 	private readonly double DEFAULT_DELAY_REMOVE_TIME = 10.0;
 
-	// Token: 0x0400D8BA RID: 55482
+	// Token: 0x0400DD58 RID: 56664
 	private readonly string SUN_SPIRIT_CONFIG_PATH = "/Game/Aki/Character/NPC/GPUNPC/BP/CrowdAi/DA_SunSpiritConfig.DA_SunSpiritConfig";
 
-	// Token: 0x0400D8BB RID: 55483
+	// Token: 0x0400DD59 RID: 56665
 	[Nullable(2)]
 	public UKuroCrowdAiSubsystem CrowdAiSubsystem;
 
-	// Token: 0x0400D8BC RID: 55484
+	// Token: 0x0400DD5A RID: 56666
 	public bool UseParallelUpdate;
 
-	// Token: 0x0400D8BD RID: 55485
+	// Token: 0x0400DD5B RID: 56667
 	[Nullable(2)]
 	protected AKuroCrowdAiManagerProxyActor ProxyActor;
 
-	// Token: 0x0400D8BE RID: 55486
+	// Token: 0x0400DD5C RID: 56668
 	protected List<BP_CrowdAiBoidActorSystemBase_C> BoidActorSystemPool = new List<BP_CrowdAiBoidActorSystemBase_C>();
 
-	// Token: 0x0400D8BF RID: 55487
+	// Token: 0x0400DD5D RID: 56669
 	protected HashSet<int> CrowdAiBoidIdSet = new HashSet<int>();
 
-	// Token: 0x0400D8C0 RID: 55488
+	// Token: 0x0400DD5E RID: 56670
 	protected bool CrowdAiSwitch;
 
-	// Token: 0x0400D8C1 RID: 55489
+	// Token: 0x0400DD5F RID: 56671
 	[Nullable(2)]
 	public RoleBoidParams RoleParams;
 
-	// Token: 0x0400D8C2 RID: 55490
+	// Token: 0x0400DD60 RID: 56672
 	protected int CurPlayerEntityId;
 
-	// Token: 0x0400D8C3 RID: 55491
+	// Token: 0x0400DD61 RID: 56673
 	protected double BoundsUpdateCounter;
 
-	// Token: 0x0400D8C4 RID: 55492
+	// Token: 0x0400DD62 RID: 56674
 	protected global::Vector BoundsOrigin = global::Vector.Create();
 
-	// Token: 0x0400D8C5 RID: 55493
+	// Token: 0x0400DD63 RID: 56675
 	[Nullable(2)]
 	protected DelayRemoveInfo DelayRemovedProxyActorInfo;
 
-	// Token: 0x0400D8C6 RID: 55494
+	// Token: 0x0400DD64 RID: 56676
 	protected HashSet<DelayRemoveInfo> DelayRemovedItemSet = new HashSet<DelayRemoveInfo>();
 
-	// Token: 0x0400D8C7 RID: 55495
+	// Token: 0x0400DD65 RID: 56677
 	protected global::Vector TmpVector1 = global::Vector.Create();
 
-	// Token: 0x0400D8C8 RID: 55496
+	// Token: 0x0400DD66 RID: 56678
 	[Nullable(2)]
 	private static CrowdAiController _Instance;
 }

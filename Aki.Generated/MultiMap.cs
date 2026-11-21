@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E74 RID: 3700
+	// Token: 0x02000F59 RID: 3929
 	public struct MultiMap : IFlatbufferObject
 	{
-		// Token: 0x170022A0 RID: 8864
-		// (get) Token: 0x06009D57 RID: 40279 RVA: 0x00299F1C File Offset: 0x0029811C
+		// Token: 0x17002305 RID: 8965
+		// (get) Token: 0x0600A377 RID: 41847 RVA: 0x002B7700 File Offset: 0x002B5900
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D58 RID: 40280 RVA: 0x00299F29 File Offset: 0x00298129
+		// Token: 0x0600A378 RID: 41848 RVA: 0x002B770D File Offset: 0x002B590D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009D59 RID: 40281 RVA: 0x00299F30 File Offset: 0x00298130
+		// Token: 0x0600A379 RID: 41849 RVA: 0x002B7714 File Offset: 0x002B5914
 		public static MultiMap GetRootAsMultiMap(ByteBuffer _bb)
 		{
 			return MultiMap.GetRootAsMultiMap(_bb, default(MultiMap));
 		}
 
-		// Token: 0x06009D5A RID: 40282 RVA: 0x00299F4C File Offset: 0x0029814C
+		// Token: 0x0600A37A RID: 41850 RVA: 0x002B7730 File Offset: 0x002B5930
 		public static MultiMap GetRootAsMultiMap(ByteBuffer _bb, MultiMap obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009D5B RID: 40283 RVA: 0x00299F69 File Offset: 0x00298169
+		// Token: 0x0600A37B RID: 41851 RVA: 0x002B774D File Offset: 0x002B594D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009D5C RID: 40284 RVA: 0x00299F78 File Offset: 0x00298178
+		// Token: 0x0600A37C RID: 41852 RVA: 0x002B775C File Offset: 0x002B595C
 		public MultiMap __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170022A1 RID: 8865
-		// (get) Token: 0x06009D5D RID: 40285 RVA: 0x00299F88 File Offset: 0x00298188
+		// Token: 0x17002306 RID: 8966
+		// (get) Token: 0x0600A37D RID: 41853 RVA: 0x002B776C File Offset: 0x002B596C
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022A2 RID: 8866
-		// (get) Token: 0x06009D5E RID: 40286 RVA: 0x00299FC4 File Offset: 0x002981C4
+		// Token: 0x17002307 RID: 8967
+		// (get) Token: 0x0600A37E RID: 41854 RVA: 0x002B77A8 File Offset: 0x002B59A8
 		public int GroupId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022A3 RID: 8867
-		// (get) Token: 0x06009D5F RID: 40287 RVA: 0x0029A000 File Offset: 0x00298200
+		// Token: 0x17002308 RID: 8968
+		// (get) Token: 0x0600A37F RID: 41855 RVA: 0x002B77E4 File Offset: 0x002B59E4
 		public int MapId
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022A4 RID: 8868
-		// (get) Token: 0x06009D60 RID: 40288 RVA: 0x0029A03C File Offset: 0x0029823C
+		// Token: 0x17002309 RID: 8969
+		// (get) Token: 0x0600A380 RID: 41856 RVA: 0x002B7820 File Offset: 0x002B5A20
 		public int GravityFlip
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022A5 RID: 8869
-		// (get) Token: 0x06009D61 RID: 40289 RVA: 0x0029A07C File Offset: 0x0029827C
+		// Token: 0x1700230A RID: 8970
+		// (get) Token: 0x0600A381 RID: 41857 RVA: 0x002B7860 File Offset: 0x002B5A60
 		public int Floor
 		{
 			get
@@ -125,7 +125,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D62 RID: 40290 RVA: 0x0029A0BC File Offset: 0x002982BC
+		// Token: 0x0600A382 RID: 41858 RVA: 0x002B78A0 File Offset: 0x002B5AA0
 		public string MapTilePath(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -136,8 +136,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170022A6 RID: 8870
-		// (get) Token: 0x06009D63 RID: 40291 RVA: 0x0029A0F8 File Offset: 0x002982F8
+		// Token: 0x1700230B RID: 8971
+		// (get) Token: 0x0600A383 RID: 41859 RVA: 0x002B78DC File Offset: 0x002B5ADC
 		public int MapTilePathLength
 		{
 			get
@@ -151,7 +151,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D64 RID: 40292 RVA: 0x0029A124 File Offset: 0x00298324
+		// Token: 0x0600A384 RID: 41860 RVA: 0x002B7908 File Offset: 0x002B5B08
 		public string MiniMapTilePath(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -162,8 +162,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170022A7 RID: 8871
-		// (get) Token: 0x06009D65 RID: 40293 RVA: 0x0029A160 File Offset: 0x00298360
+		// Token: 0x1700230C RID: 8972
+		// (get) Token: 0x0600A385 RID: 41861 RVA: 0x002B7944 File Offset: 0x002B5B44
 		public int MiniMapTilePathLength
 		{
 			get
@@ -177,7 +177,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D66 RID: 40294 RVA: 0x0029A18C File Offset: 0x0029838C
+		// Token: 0x0600A386 RID: 41862 RVA: 0x002B7970 File Offset: 0x002B5B70
 		public int Area(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -188,8 +188,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170022A8 RID: 8872
-		// (get) Token: 0x06009D67 RID: 40295 RVA: 0x0029A1CC File Offset: 0x002983CC
+		// Token: 0x1700230D RID: 8973
+		// (get) Token: 0x0600A387 RID: 41863 RVA: 0x002B79B0 File Offset: 0x002B5BB0
 		public int AreaLength
 		{
 			get
@@ -203,19 +203,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D68 RID: 40296 RVA: 0x0029A1F8 File Offset: 0x002983F8
+		// Token: 0x0600A388 RID: 41864 RVA: 0x002B79DC File Offset: 0x002B5BDC
 		public Span<int> GetAreaBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06009D69 RID: 40297 RVA: 0x0029A208 File Offset: 0x00298408
+		// Token: 0x0600A389 RID: 41865 RVA: 0x002B79EC File Offset: 0x002B5BEC
 		public int[] GetAreaArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009D6A RID: 40298 RVA: 0x0029A220 File Offset: 0x00298420
+		// Token: 0x0600A38A RID: 41866 RVA: 0x002B7A04 File Offset: 0x002B5C04
 		public int Mark(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -226,8 +226,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170022A9 RID: 8873
-		// (get) Token: 0x06009D6B RID: 40299 RVA: 0x0029A260 File Offset: 0x00298460
+		// Token: 0x1700230E RID: 8974
+		// (get) Token: 0x0600A38B RID: 41867 RVA: 0x002B7A44 File Offset: 0x002B5C44
 		public int MarkLength
 		{
 			get
@@ -241,20 +241,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D6C RID: 40300 RVA: 0x0029A28C File Offset: 0x0029848C
+		// Token: 0x0600A38C RID: 41868 RVA: 0x002B7A70 File Offset: 0x002B5C70
 		public Span<int> GetMarkBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x06009D6D RID: 40301 RVA: 0x0029A29C File Offset: 0x0029849C
+		// Token: 0x0600A38D RID: 41869 RVA: 0x002B7A80 File Offset: 0x002B5C80
 		public int[] GetMarkArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170022AA RID: 8874
-		// (get) Token: 0x06009D6E RID: 40302 RVA: 0x0029A2B4 File Offset: 0x002984B4
+		// Token: 0x1700230F RID: 8975
+		// (get) Token: 0x0600A38E RID: 41870 RVA: 0x002B7A98 File Offset: 0x002B5C98
 		public int ConditionId
 		{
 			get
@@ -268,8 +268,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022AB RID: 8875
-		// (get) Token: 0x06009D6F RID: 40303 RVA: 0x0029A2F4 File Offset: 0x002984F4
+		// Token: 0x17002310 RID: 8976
+		// (get) Token: 0x0600A38F RID: 41871 RVA: 0x002B7AD8 File Offset: 0x002B5CD8
 		public string FloorName
 		{
 			get
@@ -283,20 +283,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D70 RID: 40304 RVA: 0x0029A32C File Offset: 0x0029852C
+		// Token: 0x0600A390 RID: 41872 RVA: 0x002B7B10 File Offset: 0x002B5D10
 		public Span<byte> GetFloorNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x06009D71 RID: 40305 RVA: 0x0029A33C File Offset: 0x0029853C
+		// Token: 0x0600A391 RID: 41873 RVA: 0x002B7B20 File Offset: 0x002B5D20
 		public byte[] GetFloorNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170022AC RID: 8876
-		// (get) Token: 0x06009D72 RID: 40306 RVA: 0x0029A354 File Offset: 0x00298554
+		// Token: 0x17002311 RID: 8977
+		// (get) Token: 0x0600A392 RID: 41874 RVA: 0x002B7B38 File Offset: 0x002B5D38
 		public string FloorIcon
 		{
 			get
@@ -310,89 +310,83 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D73 RID: 40307 RVA: 0x0029A38C File Offset: 0x0029858C
+		// Token: 0x0600A393 RID: 41875 RVA: 0x002B7B70 File Offset: 0x002B5D70
 		public Span<byte> GetFloorIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(26, 1);
 		}
 
-		// Token: 0x06009D74 RID: 40308 RVA: 0x0029A39C File Offset: 0x0029859C
+		// Token: 0x0600A394 RID: 41876 RVA: 0x002B7B80 File Offset: 0x002B5D80
 		public byte[] GetFloorIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(26) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009D75 RID: 40309 RVA: 0x0029A3B4 File Offset: 0x002985B4
+		// Token: 0x0600A395 RID: 41877 RVA: 0x002B7B98 File Offset: 0x002B5D98
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用AreaIter()或GetAreaBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Area()
+		public int[] Area()
 		{
-			MultiMap multiMap = this;
-			return multiMap.GetAreaArray() ?? Array.Empty<int>();
+			return this.GetAreaArray();
 		}
 
-		// Token: 0x06009D76 RID: 40310 RVA: 0x0029A3D8 File Offset: 0x002985D8
+		// Token: 0x0600A396 RID: 41878 RVA: 0x002B7BA0 File Offset: 0x002B5DA0
 		[NullableContext(1)]
-		public readonly IEnumerable<int> AreaIter()
+		public IEnumerable<int> AreaIter()
 		{
 			MultiMap.<AreaIter>d__45 <AreaIter>d__ = new MultiMap.<AreaIter>d__45(-2);
 			<AreaIter>d__.<>3__<>4__this = this;
 			return <AreaIter>d__;
 		}
 
-		// Token: 0x06009D77 RID: 40311 RVA: 0x0029A3ED File Offset: 0x002985ED
+		// Token: 0x0600A397 RID: 41879 RVA: 0x002B7BB5 File Offset: 0x002B5DB5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MapTilePathIter()或GetMapTilePathBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] MapTilePath()
+		public string[] MapTilePath()
 		{
 			return this.MapTilePathIter().ToArray<string>();
 		}
 
-		// Token: 0x06009D78 RID: 40312 RVA: 0x0029A3FA File Offset: 0x002985FA
+		// Token: 0x0600A398 RID: 41880 RVA: 0x002B7BC2 File Offset: 0x002B5DC2
 		[NullableContext(1)]
-		public readonly IEnumerable<string> MapTilePathIter()
+		public IEnumerable<string> MapTilePathIter()
 		{
 			MultiMap.<MapTilePathIter>d__47 <MapTilePathIter>d__ = new MultiMap.<MapTilePathIter>d__47(-2);
 			<MapTilePathIter>d__.<>3__<>4__this = this;
 			return <MapTilePathIter>d__;
 		}
 
-		// Token: 0x06009D79 RID: 40313 RVA: 0x0029A410 File Offset: 0x00298610
+		// Token: 0x0600A399 RID: 41881 RVA: 0x002B7BD7 File Offset: 0x002B5DD7
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MarkIter()或GetMarkBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Mark()
+		public int[] Mark()
 		{
-			MultiMap multiMap = this;
-			return multiMap.GetMarkArray() ?? Array.Empty<int>();
+			return this.GetMarkArray();
 		}
 
-		// Token: 0x06009D7A RID: 40314 RVA: 0x0029A434 File Offset: 0x00298634
+		// Token: 0x0600A39A RID: 41882 RVA: 0x002B7BDF File Offset: 0x002B5DDF
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MarkIter()
+		public IEnumerable<int> MarkIter()
 		{
 			MultiMap.<MarkIter>d__49 <MarkIter>d__ = new MultiMap.<MarkIter>d__49(-2);
 			<MarkIter>d__.<>3__<>4__this = this;
 			return <MarkIter>d__;
 		}
 
-		// Token: 0x06009D7B RID: 40315 RVA: 0x0029A449 File Offset: 0x00298649
+		// Token: 0x0600A39B RID: 41883 RVA: 0x002B7BF4 File Offset: 0x002B5DF4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MiniMapTilePathIter()或GetMiniMapTilePathBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] MiniMapTilePath()
+		public string[] MiniMapTilePath()
 		{
 			return this.MiniMapTilePathIter().ToArray<string>();
 		}
 
-		// Token: 0x06009D7C RID: 40316 RVA: 0x0029A456 File Offset: 0x00298656
+		// Token: 0x0600A39C RID: 41884 RVA: 0x002B7C01 File Offset: 0x002B5E01
 		[NullableContext(1)]
-		public readonly IEnumerable<string> MiniMapTilePathIter()
+		public IEnumerable<string> MiniMapTilePathIter()
 		{
 			MultiMap.<MiniMapTilePathIter>d__51 <MiniMapTilePathIter>d__ = new MultiMap.<MiniMapTilePathIter>d__51(-2);
 			<MiniMapTilePathIter>d__.<>3__<>4__this = this;
 			return <MiniMapTilePathIter>d__;
 		}
 
-		// Token: 0x04004F22 RID: 20258
+		// Token: 0x04005507 RID: 21767
 		private Table __p;
 	}
 }

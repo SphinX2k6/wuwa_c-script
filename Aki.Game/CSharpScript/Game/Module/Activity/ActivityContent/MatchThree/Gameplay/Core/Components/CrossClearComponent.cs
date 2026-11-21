@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x02006531 RID: 25905
+	// Token: 0x020054AF RID: 21679
 	public sealed class CrossClearComponent : IPieceComponent, IClearBehavior
 	{
-		// Token: 0x06040F16 RID: 266006 RVA: 0x00FBCB88 File Offset: 0x00FBAD88
+		// Token: 0x06035BDB RID: 220123 RVA: 0x00F03BCC File Offset: 0x00F01DCC
 		[NullableContext(1)]
 		public void OnCleared(IDispatchContext sink, Piece self, GridPosition pos, EPieceType? source)
 		{

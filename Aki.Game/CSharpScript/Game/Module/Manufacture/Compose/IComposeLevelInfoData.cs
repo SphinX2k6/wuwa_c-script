@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Compose
 {
-	// Token: 0x0200565E RID: 22110
+	// Token: 0x02004634 RID: 17972
 	public class IComposeLevelInfoData
 	{
-		// Token: 0x17008749 RID: 34633
-		// (get) Token: 0x060383E7 RID: 230375 RVA: 0x00D5551F File Offset: 0x00D5371F
-		// (set) Token: 0x060383E8 RID: 230376 RVA: 0x00D55527 File Offset: 0x00D53727
+		// Token: 0x17005B10 RID: 23312
+		// (get) Token: 0x0602D2E5 RID: 185061 RVA: 0x00CA349F File Offset: 0x00CA169F
+		// (set) Token: 0x0602D2E6 RID: 185062 RVA: 0x00CA34A7 File Offset: 0x00CA16A7
 		public int ComposeLevel { get; set; }
 
-		// Token: 0x1700874A RID: 34634
-		// (get) Token: 0x060383E9 RID: 230377 RVA: 0x00D55530 File Offset: 0x00D53730
-		// (set) Token: 0x060383EA RID: 230378 RVA: 0x00D55538 File Offset: 0x00D53738
+		// Token: 0x17005B11 RID: 23313
+		// (get) Token: 0x0602D2E7 RID: 185063 RVA: 0x00CA34B0 File Offset: 0x00CA16B0
+		// (set) Token: 0x0602D2E8 RID: 185064 RVA: 0x00CA34B8 File Offset: 0x00CA16B8
 		public int TotalProficiency { get; set; }
 
-		// Token: 0x1700874B RID: 34635
-		// (get) Token: 0x060383EB RID: 230379 RVA: 0x00D55541 File Offset: 0x00D53741
-		// (set) Token: 0x060383EC RID: 230380 RVA: 0x00D55549 File Offset: 0x00D53749
+		// Token: 0x17005B12 RID: 23314
+		// (get) Token: 0x0602D2E9 RID: 185065 RVA: 0x00CA34C1 File Offset: 0x00CA16C1
+		// (set) Token: 0x0602D2EA RID: 185066 RVA: 0x00CA34C9 File Offset: 0x00CA16C9
 		public int AddExp { get; set; }
 	}
 }

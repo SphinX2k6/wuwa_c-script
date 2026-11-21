@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200197E RID: 6526
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B09 RID: 6921
 	public class IDelayRemoveType
 	{
-		// Token: 0x06008BC1 RID: 35777 RVA: 0x0014859C File Offset: 0x0014679C
+		// Token: 0x060092F9 RID: 37625 RVA: 0x0015802C File Offset: 0x0015622C
 		private IDelayRemoveType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BC2 RID: 35778 RVA: 0x001485D4 File Offset: 0x001467D4
+		// Token: 0x060092FA RID: 37626 RVA: 0x00158064 File Offset: 0x00156264
 		public static IDelayRemoveType Create([Nullable(2)] IDelayRemoveType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BC3 RID: 35779 RVA: 0x001485E7 File Offset: 0x001467E7
+		// Token: 0x060092FB RID: 37627 RVA: 0x00158077 File Offset: 0x00156277
 		public static IDelayRemoveType CreateFromSetValue([Nullable(2)] IDelayRemoveType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BC4 RID: 35780 RVA: 0x001485FA File Offset: 0x001467FA
+		// Token: 0x060092FC RID: 37628 RVA: 0x0015808A File Offset: 0x0015628A
 		public IDelayRemoveType_SetValue ToSetValue()
 		{
 			return new IDelayRemoveType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CF8 RID: 11512
-		// (get) Token: 0x06008BC5 RID: 35781 RVA: 0x0014860D File Offset: 0x0014680D
-		// (set) Token: 0x06008BC6 RID: 35782 RVA: 0x00148638 File Offset: 0x00146838
+		// Token: 0x17002EFB RID: 12027
+		// (get) Token: 0x060092FD RID: 37629 RVA: 0x0015809D File Offset: 0x0015629D
+		// (set) Token: 0x060092FE RID: 37630 RVA: 0x001580C8 File Offset: 0x001562C8
 		public virtual EDelayRemoveType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400571D RID: 22301
+		// Token: 0x04005B72 RID: 23410
 		[Nullable(2)]
 		protected IDelayRemoveType FbInstance;
 
-		// Token: 0x0400571E RID: 22302
+		// Token: 0x04005B73 RID: 23411
 		[Nullable(2)]
 		protected IDelayRemoveType_SetValue PocoInterface;
 	}

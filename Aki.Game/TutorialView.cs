@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -12,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C30 RID: 11312
+// Token: 0x020021AB RID: 8619
 [NullableContext(1)]
 [Nullable(0)]
 public class TutorialView : UiViewBase
 {
-	// Token: 0x06017910 RID: 96528 RVA: 0x005FDE5F File Offset: 0x005FC05F
+	// Token: 0x06015342 RID: 86850 RVA: 0x0062A8EB File Offset: 0x00628AEB
 	public TutorialView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017911 RID: 96529 RVA: 0x005FDE7C File Offset: 0x005FC07C
+	// Token: 0x06015343 RID: 86851 RVA: 0x0062A908 File Offset: 0x00628B08
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,21 +50,21 @@ public class TutorialView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017912 RID: 96530 RVA: 0x005FE038 File Offset: 0x005FC238
+	// Token: 0x06015344 RID: 86852 RVA: 0x0062AAC4 File Offset: 0x00628CC4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RedDotNewTutorial, new Action<int>(this.OnTutortialRedUpdate));
 		EventSystem.Instance.Add(EEventName.OnTutorialUpdate, new Action(this.OnTutorialUpdate));
 	}
 
-	// Token: 0x06017913 RID: 96531 RVA: 0x005FE072 File Offset: 0x005FC272
+	// Token: 0x06015345 RID: 86853 RVA: 0x0062AAFE File Offset: 0x00628CFE
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RedDotNewTutorial, new Action<int>(this.OnTutortialRedUpdate));
 		EventSystem.Instance.Remove(EEventName.OnTutorialUpdate, new Action(this.OnTutorialUpdate));
 	}
 
-	// Token: 0x06017914 RID: 96532 RVA: 0x005FE0AC File Offset: 0x005FC2AC
+	// Token: 0x06015346 RID: 86854 RVA: 0x0062AB38 File Offset: 0x00628D38
 	private void SearchResult(string content)
 	{
 		ValueTuple<List<TutorialItemData>, bool> valueTuple = TutorialModel.Instance.MakeSearchList(content, this.CurrentSelectType, this.ExclusiveType);
@@ -87,14 +86,14 @@ public class TutorialView : UiViewBase
 		this.ItemScrollView.RefreshByData(item.ToArray(), false, false);
 	}
 
-	// Token: 0x06017915 RID: 96533 RVA: 0x005FE137 File Offset: 0x005FC337
+	// Token: 0x06015347 RID: 86855 RVA: 0x0062ABC3 File Offset: 0x00628DC3
 	private void ResetSearch()
 	{
 		this.OnTypeToggleSelected((int)this.CurrentSelectType.Value);
 		base.GetItem(4).SetUIActive(true);
 	}
 
-	// Token: 0x06017916 RID: 96534 RVA: 0x005FE158 File Offset: 0x005FC358
+	// Token: 0x06015348 RID: 86856 RVA: 0x0062ABE4 File Offset: 0x00628DE4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TutorialView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -105,7 +104,7 @@ public class TutorialView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017917 RID: 96535 RVA: 0x005FE19C File Offset: 0x005FC39C
+	// Token: 0x06015349 RID: 86857 RVA: 0x0062AC28 File Offset: 0x00628E28
 	protected override void OnStart()
 	{
 		ITutorialViewParam tutorialViewParam = this.OpenParam as ITutorialViewParam;
@@ -133,7 +132,7 @@ public class TutorialView : UiViewBase
 		this.HideDetaildView();
 	}
 
-	// Token: 0x06017918 RID: 96536 RVA: 0x005FE334 File Offset: 0x005FC534
+	// Token: 0x0601534A RID: 86858 RVA: 0x0062ADC0 File Offset: 0x00628FC0
 	private ILayoutItem<TutorialPageItem> InitDetail(object data, UUIItem UUIItem, int index)
 	{
 		TutorialPageItem tutorialPageItem = new TutorialPageItem(UUIItem);
@@ -146,13 +145,13 @@ public class TutorialView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017919 RID: 96537 RVA: 0x005FE36F File Offset: 0x005FC56F
+	// Token: 0x0601534B RID: 86859 RVA: 0x0062ADFB File Offset: 0x00628FFB
 	private CommonTabItem ProxyCreate([Nullable(2)] UUIItem UUIItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x0601791A RID: 96538 RVA: 0x005FE378 File Offset: 0x005FC578
+	// Token: 0x0601534C RID: 86860 RVA: 0x0062AE04 File Offset: 0x00629004
 	private void OnTypeToggleSelected(int index)
 	{
 		int num = this.TypeList[index];
@@ -206,7 +205,7 @@ public class TutorialView : UiViewBase
 		base.GetUIDynScrollViewComponent(2).RootUIComp.Get().SetUIActive(unlockedTutorialDataByType.Count > 0);
 	}
 
-	// Token: 0x0601791B RID: 96539 RVA: 0x005FE4F4 File Offset: 0x005FC6F4
+	// Token: 0x0601534D RID: 86861 RVA: 0x0062AF80 File Offset: 0x00629180
 	public UniTask RefreshItemDetailWhenNeed(int selectItemIndex)
 	{
 		TutorialView.<RefreshItemDetailWhenNeed>d__24 <RefreshItemDetailWhenNeed>d__;
@@ -218,14 +217,14 @@ public class TutorialView : UiViewBase
 		return <RefreshItemDetailWhenNeed>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601791C RID: 96540 RVA: 0x005FE53F File Offset: 0x005FC73F
+	// Token: 0x0601534E RID: 86862 RVA: 0x0062AFCB File Offset: 0x006291CB
 	private void HideDetaildView()
 	{
 		base.GetItem(4).SetUIActive(false);
 		this.ItemData = null;
 	}
 
-	// Token: 0x0601791D RID: 96541 RVA: 0x005FE558 File Offset: 0x005FC758
+	// Token: 0x0601534F RID: 86863 RVA: 0x0062AFE4 File Offset: 0x006291E4
 	private CommonTabData GetCommonData(int index)
 	{
 		string tutorialTypeIconPath = TutorialUtils.GetTutorialTypeIconPath((ETutorialType)this.TypeList[index]);
@@ -233,7 +232,7 @@ public class TutorialView : UiViewBase
 		return new CommonTabData(tutorialTypeIconPath, new CommonTabTitleData(tutorialTypeTxt, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0601791E RID: 96542 RVA: 0x005FE59C File Offset: 0x005FC79C
+	// Token: 0x06015350 RID: 86864 RVA: 0x0062B028 File Offset: 0x00629228
 	protected override void OnBeforeShow()
 	{
 		int count = this.TypeList.Count;
@@ -250,7 +249,7 @@ public class TutorialView : UiViewBase
 		this.TabComponent.RefreshTabItem(list, new Action(this.AfterRefreshTabItem));
 	}
 
-	// Token: 0x0601791F RID: 96543 RVA: 0x005FE61C File Offset: 0x005FC81C
+	// Token: 0x06015351 RID: 86865 RVA: 0x0062B0A8 File Offset: 0x006292A8
 	private void AfterRefreshTabItem()
 	{
 		if (this.OpenParam == null)
@@ -272,7 +271,7 @@ public class TutorialView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(0, false);
 	}
 
-	// Token: 0x06017920 RID: 96544 RVA: 0x005FE6D4 File Offset: 0x005FC8D4
+	// Token: 0x06015352 RID: 86866 RVA: 0x0062B160 File Offset: 0x00629360
 	protected override void OnAfterHide()
 	{
 		this.ItemScrollView.ClearChildren();
@@ -280,7 +279,7 @@ public class TutorialView : UiViewBase
 		this.NowSelectedToggle = null;
 	}
 
-	// Token: 0x06017921 RID: 96545 RVA: 0x005FE6F0 File Offset: 0x005FC8F0
+	// Token: 0x06015353 RID: 86867 RVA: 0x0062B17C File Offset: 0x0062937C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TabComponent != null)
@@ -328,7 +327,7 @@ public class TutorialView : UiViewBase
 		TutorialModel.Instance.CurrentExclusiveType = EExclusiveTutorialType.None;
 	}
 
-	// Token: 0x06017922 RID: 96546 RVA: 0x005FE7BB File Offset: 0x005FC9BB
+	// Token: 0x06015354 RID: 86868 RVA: 0x0062B247 File Offset: 0x00629447
 	private TutorialDataItem OnCreateTutorialItemView(TutorialItemData data, UUIItem UUIItem, int index)
 	{
 		TutorialDataItem tutorialDataItem = new TutorialDataItem();
@@ -337,7 +336,7 @@ public class TutorialView : UiViewBase
 		return tutorialDataItem;
 	}
 
-	// Token: 0x06017923 RID: 96547 RVA: 0x005FE7DC File Offset: 0x005FC9DC
+	// Token: 0x06015355 RID: 86869 RVA: 0x0062B268 File Offset: 0x00629468
 	private void OnTutorialUpdate()
 	{
 		List<TutorialItemData> unlockedTutorialDataByType = TutorialModel.Instance.GetUnlockedTutorialDataByType(this.CurrentSelectType.Value, this.ExclusiveType);
@@ -348,7 +347,7 @@ public class TutorialView : UiViewBase
 		this.ItemScrollView.RefreshByData(unlockedTutorialDataByType.ToArray(), false, false);
 	}
 
-	// Token: 0x06017924 RID: 96548 RVA: 0x005FE840 File Offset: 0x005FCA40
+	// Token: 0x06015356 RID: 86870 RVA: 0x0062B2CC File Offset: 0x006294CC
 	private void OnTutortialRedUpdate(int i)
 	{
 		TutorialDataItem[] scrollItemItems = this.ItemScrollView.GetScrollItemItems();
@@ -358,7 +357,7 @@ public class TutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017925 RID: 96549 RVA: 0x005FE86F File Offset: 0x005FCA6F
+	// Token: 0x06015357 RID: 86871 RVA: 0x0062B2FB File Offset: 0x006294FB
 	private void OnItemToggleSelected(TutorialItemData itemData, UUIExtendToggle toggle)
 	{
 		if (this.NowSelectedToggle != toggle)
@@ -374,7 +373,7 @@ public class TutorialView : UiViewBase
 		this.UpdateView(itemData);
 	}
 
-	// Token: 0x06017926 RID: 96550 RVA: 0x005FE8AC File Offset: 0x005FCAAC
+	// Token: 0x06015358 RID: 86872 RVA: 0x0062B338 File Offset: 0x00629538
 	private void UpdateView(TutorialItemData itemData)
 	{
 		base.GetItem(4).SetUIActive(true);
@@ -394,7 +393,7 @@ public class TutorialView : UiViewBase
 			TutorialController.Instance.RemoveRedDotTutorialId(this.ItemData.SavedData.TutorialId);
 		}
 		int[] guideTutorialPageIds = GuideConfig.Instance.GetGuideTutorialPageIds(this.ItemData.SavedData.TutorialId);
-		this.PageIds = guideTutorialPageIds.ToList<int>();
+		this.PageIds = new List<int>(guideTutorialPageIds);
 		if (guideTutorialPageIds.Length <= 1)
 		{
 			base.GetButton(14).RootUIComp.Get().SetUIActive(false);
@@ -411,7 +410,7 @@ public class TutorialView : UiViewBase
 		this.RefreshPageView(this.CurrDisplayIndex);
 	}
 
-	// Token: 0x06017927 RID: 96551 RVA: 0x005FEA2C File Offset: 0x005FCC2C
+	// Token: 0x06015359 RID: 86873 RVA: 0x0062B4B8 File Offset: 0x006296B8
 	private void RefreshPageView(int index)
 	{
 		if (this.PageIds.Count > 1)
@@ -446,7 +445,7 @@ public class TutorialView : UiViewBase
 		base.GetText(10).SetText(text, true);
 	}
 
-	// Token: 0x06017928 RID: 96552 RVA: 0x005FEBC8 File Offset: 0x005FCDC8
+	// Token: 0x0601535A RID: 86874 RVA: 0x0062B654 File Offset: 0x00629854
 	private void OnClickBtnLast()
 	{
 		if (this.CurrDisplayIndex > 0)
@@ -456,7 +455,7 @@ public class TutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017929 RID: 96553 RVA: 0x005FEC08 File Offset: 0x005FCE08
+	// Token: 0x0601535B RID: 86875 RVA: 0x0062B694 File Offset: 0x00629894
 	private void OnClickBtnNext()
 	{
 		if (this.CurrDisplayIndex < this.PageIds.Count - 1)
@@ -466,16 +465,16 @@ public class TutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601792A RID: 96554 RVA: 0x005FEC52 File Offset: 0x005FCE52
+	// Token: 0x0601535C RID: 86876 RVA: 0x0062B6DE File Offset: 0x006298DE
 	private void OnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400AFCB RID: 45003
+	// Token: 0x0400B3D0 RID: 46032
 	public bool IsOpenedByGuide;
 
-	// Token: 0x0400AFCC RID: 45004
+	// Token: 0x0400B3D1 RID: 46033
 	[Nullable(new byte[]
 	{
 		2,
@@ -483,7 +482,7 @@ public class TutorialView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x0400AFCD RID: 45005
+	// Token: 0x0400B3D2 RID: 46034
 	[Nullable(new byte[]
 	{
 		2,
@@ -493,7 +492,7 @@ public class TutorialView : UiViewBase
 	})]
 	private DynamicScrollView<TutorialDataItem, TutorialDynItem, TutorialItemData> ItemScrollView;
 
-	// Token: 0x0400AFCE RID: 45006
+	// Token: 0x0400B3D3 RID: 46035
 	[Nullable(new byte[]
 	{
 		2,
@@ -501,72 +500,72 @@ public class TutorialView : UiViewBase
 	})]
 	private GenericLayoutNew<TutorialPageItem> PageDotLayout;
 
-	// Token: 0x0400AFCF RID: 45007
+	// Token: 0x0400B3D4 RID: 46036
 	[Nullable(2)]
 	private CommonSearchComponent SearchComponent;
 
-	// Token: 0x0400AFD0 RID: 45008
+	// Token: 0x0400B3D5 RID: 46037
 	private ETutorialType? CurrentSelectType;
 
-	// Token: 0x0400AFD1 RID: 45009
+	// Token: 0x0400B3D6 RID: 46038
 	[Nullable(2)]
 	private UUIExtendToggle NowSelectedToggle;
 
-	// Token: 0x0400AFD2 RID: 45010
+	// Token: 0x0400B3D7 RID: 46039
 	private List<int> TypeList = new List<int>();
 
-	// Token: 0x0400AFD3 RID: 45011
+	// Token: 0x0400B3D8 RID: 46040
 	private int CurrDisplayIndex;
 
-	// Token: 0x0400AFD4 RID: 45012
+	// Token: 0x0400B3D9 RID: 46041
 	[Nullable(2)]
 	private TutorialItemData ItemData;
 
-	// Token: 0x0400AFD5 RID: 45013
+	// Token: 0x0400B3DA RID: 46042
 	[Nullable(2)]
 	private List<int> PageIds;
 
-	// Token: 0x0400AFD6 RID: 45014
+	// Token: 0x0400B3DB RID: 46043
 	private EExclusiveTutorialType ExclusiveType;
 
-	// Token: 0x0400AFD7 RID: 45015
+	// Token: 0x0400B3DC RID: 46044
 	private int RefreshTargetTutorialId = -1;
 
-	// Token: 0x0200921F RID: 37407
+	// Token: 0x02008461 RID: 33889
 	[NullableContext(0)]
 	public enum ETutorialsComponents
 	{
-		// Token: 0x0402F431 RID: 193585
+		// Token: 0x0402AB31 RID: 174897
 		UUIItemCaptionList,
-		// Token: 0x0402F432 RID: 193586
+		// Token: 0x0402AB32 RID: 174898
 		UUIItemInputBox,
-		// Token: 0x0402F433 RID: 193587
+		// Token: 0x0402AB33 RID: 174899
 		DynScrollView,
-		// Token: 0x0402F434 RID: 193588
+		// Token: 0x0402AB34 RID: 174900
 		PnlList,
-		// Token: 0x0402F435 RID: 193589
+		// Token: 0x0402AB35 RID: 174901
 		PnlRight,
-		// Token: 0x0402F436 RID: 193590
+		// Token: 0x0402AB36 RID: 174902
 		UUIItemEmpty,
-		// Token: 0x0402F437 RID: 193591
+		// Token: 0x0402AB37 RID: 174903
 		TexPicture,
-		// Token: 0x0402F438 RID: 193592
+		// Token: 0x0402AB38 RID: 174904
 		TxtArea,
-		// Token: 0x0402F439 RID: 193593
+		// Token: 0x0402AB39 RID: 174905
 		PnlOffset,
-		// Token: 0x0402F43A RID: 193594
+		// Token: 0x0402AB3A RID: 174906
 		TxtSubTitle,
-		// Token: 0x0402F43B RID: 193595
+		// Token: 0x0402AB3B RID: 174907
 		TxtTutorials,
-		// Token: 0x0402F43C RID: 193596
+		// Token: 0x0402AB3C RID: 174908
 		PnlBottom,
-		// Token: 0x0402F43D RID: 193597
+		// Token: 0x0402AB3D RID: 174909
 		PnlPages,
-		// Token: 0x0402F43E RID: 193598
+		// Token: 0x0402AB3E RID: 174910
 		UUIItemPagesDot,
-		// Token: 0x0402F43F RID: 193599
+		// Token: 0x0402AB3F RID: 174911
 		BtnArrowL,
-		// Token: 0x0402F440 RID: 193600
+		// Token: 0x0402AB40 RID: 174912
 		BtnArrowR
 	}
 }

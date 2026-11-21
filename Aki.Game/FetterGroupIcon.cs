@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024A8 RID: 9384
+// Token: 0x0200198F RID: 6543
 public class FetterGroupIcon : GridProxyAbstract<int>
 {
-	// Token: 0x06012D58 RID: 77144 RVA: 0x004A6338 File Offset: 0x004A4538
+	// Token: 0x06010219 RID: 66073 RVA: 0x004B3E30 File Offset: 0x004B2030
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class FetterGroupIcon : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06012D59 RID: 77145 RVA: 0x004A6394 File Offset: 0x004A4594
+	// Token: 0x0601021A RID: 66074 RVA: 0x004B3E8C File Offset: 0x004B208C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		base.TrySetTextureByPath(PhantomBattleConfig.Instance.GetFetterGroupById(data).FetterElementPath, base.GetTexture(2), null, null);

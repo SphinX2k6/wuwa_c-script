@@ -6,12 +6,12 @@ using CSharpScript.Game.LevelGamePlay.BinTest;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E68 RID: 24168
+	// Token: 0x02004E4D RID: 20045
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AutoPilotAreaCheck
 	{
-		// Token: 0x0603D726 RID: 251686 RVA: 0x00ED2F7C File Offset: 0x00ED117C
+		// Token: 0x060326B6 RID: 206518 RVA: 0x00E244EC File Offset: 0x00E226EC
 		public void Init()
 		{
 			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("AutoPilotAreas");
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D727 RID: 251687 RVA: 0x00ED30B8 File Offset: 0x00ED12B8
+		// Token: 0x060326B7 RID: 206519 RVA: 0x00E24628 File Offset: 0x00E22828
 		public int BinTest(global::Vector inputP, int mapId)
 		{
 			Dictionary<int, BinItem> dictionary2;
@@ -88,13 +88,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return 0;
 		}
 
-		// Token: 0x0603D728 RID: 251688 RVA: 0x00ED313C File Offset: 0x00ED133C
+		// Token: 0x060326B8 RID: 206520 RVA: 0x00E246AC File Offset: 0x00E228AC
 		public void Clear()
 		{
 			this.BinMap.Clear();
 		}
 
-		// Token: 0x04020106 RID: 131334
+		// Token: 0x0401ABCD RID: 109517
 		private readonly Dictionary<int, Dictionary<int, BinItem>> BinMap = new Dictionary<int, Dictionary<int, BinItem>>();
 	}
 }

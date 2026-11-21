@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052DB RID: 21211
+	// Token: 0x020042AB RID: 17067
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EvolveCardOperation : NpcAiOperation
 	{
-		// Token: 0x17008300 RID: 33536
-		// (get) Token: 0x06036472 RID: 222322 RVA: 0x00CD71FF File Offset: 0x00CD53FF
-		// (set) Token: 0x06036473 RID: 222323 RVA: 0x00CD7207 File Offset: 0x00CD5407
+		// Token: 0x170056C0 RID: 22208
+		// (get) Token: 0x0602B36D RID: 177005 RVA: 0x00C24927 File Offset: 0x00C22B27
+		// (set) Token: 0x0602B36E RID: 177006 RVA: 0x00C2492F File Offset: 0x00C22B2F
 		public NpcPhantomBattleEvolveInfo Info { get; private set; }
 
-		// Token: 0x06036474 RID: 222324 RVA: 0x00CD7210 File Offset: 0x00CD5410
+		// Token: 0x0602B36F RID: 177007 RVA: 0x00C24938 File Offset: 0x00C22B38
 		public EvolveCardOperation(NpcPhantomBattleEvolveInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x06036475 RID: 222325 RVA: 0x00CD7220 File Offset: 0x00CD5420
+		// Token: 0x0602B370 RID: 177008 RVA: 0x00C24948 File Offset: 0x00C22B48
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			EvolveCardOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046D3 RID: 18131
+	// Token: 0x02004B3B RID: 19259
 	public class IUnlockQuestT
 	{
-		// Token: 0x170080D2 RID: 32978
-		// (get) Token: 0x0601B91B RID: 112923 RVA: 0x003E91F4 File Offset: 0x003E73F4
-		// (set) Token: 0x0601B91C RID: 112924 RVA: 0x003E91FC File Offset: 0x003E73FC
+		// Token: 0x17008713 RID: 34579
+		// (get) Token: 0x0601D0F0 RID: 119024 RVA: 0x00415490 File Offset: 0x00413690
+		// (set) Token: 0x0601D0F1 RID: 119025 RVA: 0x00415498 File Offset: 0x00413698
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x170080D3 RID: 32979
-		// (get) Token: 0x0601B91D RID: 112925 RVA: 0x003E9205 File Offset: 0x003E7405
-		// (set) Token: 0x0601B91E RID: 112926 RVA: 0x003E920D File Offset: 0x003E740D
+		// Token: 0x17008714 RID: 34580
+		// (get) Token: 0x0601D0F2 RID: 119026 RVA: 0x004154A1 File Offset: 0x004136A1
+		// (set) Token: 0x0601D0F3 RID: 119027 RVA: 0x004154A9 File Offset: 0x004136A9
 		public int QuestId { get; set; }
 
-		// Token: 0x0601B91F RID: 112927 RVA: 0x003E9216 File Offset: 0x003E7416
+		// Token: 0x0601D0F4 RID: 119028 RVA: 0x004154B2 File Offset: 0x004136B2
 		public IUnlockQuestT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE2 RID: 7650
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FFB RID: 8187
 	public class ISceneItemMoveMotionType
 	{
-		// Token: 0x0600A3C3 RID: 41923 RVA: 0x00173BA0 File Offset: 0x00171DA0
+		// Token: 0x0600ADD9 RID: 44505 RVA: 0x001883F8 File Offset: 0x001865F8
 		private ISceneItemMoveMotionType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3C4 RID: 41924 RVA: 0x00173BD8 File Offset: 0x00171DD8
+		// Token: 0x0600ADDA RID: 44506 RVA: 0x00188430 File Offset: 0x00186630
 		public static ISceneItemMoveMotionType Create([Nullable(2)] ISceneItemMoveMotionType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3C5 RID: 41925 RVA: 0x00173BEB File Offset: 0x00171DEB
+		// Token: 0x0600ADDB RID: 44507 RVA: 0x00188443 File Offset: 0x00186643
 		public static ISceneItemMoveMotionType CreateFromSetValue([Nullable(2)] ISceneItemMoveMotionType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3C6 RID: 41926 RVA: 0x00173BFE File Offset: 0x00171DFE
+		// Token: 0x0600ADDC RID: 44508 RVA: 0x00188456 File Offset: 0x00186656
 		public ISceneItemMoveMotionType_SetValue ToSetValue()
 		{
 			return new ISceneItemMoveMotionType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003265 RID: 12901
-		// (get) Token: 0x0600A3C7 RID: 41927 RVA: 0x00173C11 File Offset: 0x00171E11
-		// (set) Token: 0x0600A3C8 RID: 41928 RVA: 0x00173C3C File Offset: 0x00171E3C
+		// Token: 0x17003502 RID: 13570
+		// (get) Token: 0x0600ADDD RID: 44509 RVA: 0x00188469 File Offset: 0x00186669
+		// (set) Token: 0x0600ADDE RID: 44510 RVA: 0x00188494 File Offset: 0x00186694
 		public virtual EMoveMotion Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006228 RID: 25128
+		// Token: 0x040067B5 RID: 26549
 		[Nullable(2)]
 		protected ISceneItemMoveMotionType FbInstance;
 
-		// Token: 0x04006229 RID: 25129
+		// Token: 0x040067B6 RID: 26550
 		[Nullable(2)]
 		protected ISceneItemMoveMotionType_SetValue PocoInterface;
 	}

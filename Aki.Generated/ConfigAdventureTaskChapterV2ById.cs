@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200005F RID: 95
+	// Token: 0x02000067 RID: 103
 	public class ConfigAdventureTaskChapterV2ById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600023A RID: 570 RVA: 0x00066468 File Offset: 0x00064668
+		// Token: 0x0600026A RID: 618 RVA: 0x0006AD1C File Offset: 0x00068F1C
 		static ConfigAdventureTaskChapterV2ById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAdventureTaskChapterV2ById.CreateStaticDefaultValue), new Action(ConfigAdventureTaskChapterV2ById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600023B RID: 571 RVA: 0x00066488 File Offset: 0x00064688
+		// Token: 0x0600026B RID: 619 RVA: 0x0006AD3C File Offset: 0x00068F3C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAdventureTaskChapterV2ById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600023C RID: 572 RVA: 0x00066507 File Offset: 0x00064707
+		// Token: 0x0600026C RID: 620 RVA: 0x0006ADBB File Offset: 0x00068FBB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAdventureTaskChapterV2ById.LogPair = null;
 			ConfigAdventureTaskChapterV2ById.HandleId = 0;
 		}
 
-		// Token: 0x0600023D RID: 573 RVA: 0x00066515 File Offset: 0x00064715
+		// Token: 0x0600026D RID: 621 RVA: 0x0006ADC9 File Offset: 0x00068FC9
 		public static void Init()
 		{
 			ConfigAdventureTaskChapterV2ById.HandleId = ConfigCommon.InitDataStatement(ConfigAdventureTaskChapterV2ById.HandleId, "db_newplayersupportactivityv2.db", "select BinData from `AdventureTaskChapterV2` where Id=?");
 		}
 
-		// Token: 0x0600023E RID: 574 RVA: 0x00066530 File Offset: 0x00064730
+		// Token: 0x0600026E RID: 622 RVA: 0x0006ADE4 File Offset: 0x00068FE4
 		public static AdventureTaskChapterV2? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAdventureTaskChapterV2ById.HandleId, ConfigAdventureTaskChapterV2ById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AdventureTaskChapterV2?(rootAsAdventureTaskChapterV);
 		}
 
-		// Token: 0x0400027D RID: 637
+		// Token: 0x040002B5 RID: 693
 		private const string DB = "db_newplayersupportactivityv2.db";
 
-		// Token: 0x0400027E RID: 638
+		// Token: 0x040002B6 RID: 694
 		private const string FILE = "x.新手开拓任务活动.xlsx";
 
-		// Token: 0x0400027F RID: 639
+		// Token: 0x040002B7 RID: 695
 		private const string TABLE = "AdventureTaskChapterV2";
 
-		// Token: 0x04000280 RID: 640
+		// Token: 0x040002B8 RID: 696
 		private const string COMMAND = "select BinData from `AdventureTaskChapterV2` where Id=?";
 
-		// Token: 0x04000281 RID: 641
+		// Token: 0x040002B9 RID: 697
 		private const string KEY_PREFIX = "AdventureTaskChapterV2ById";
 
-		// Token: 0x04000282 RID: 642
+		// Token: 0x040002BA RID: 698
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000283 RID: 643
+		// Token: 0x040002BB RID: 699
 		private static int HandleId;
 	}
 }

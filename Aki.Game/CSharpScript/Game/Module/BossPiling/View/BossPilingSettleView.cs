@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C14 RID: 23572
+	// Token: 0x02004BF4 RID: 19444
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingSettleView : UiViewBase
 	{
-		// Token: 0x0603B909 RID: 243977 RVA: 0x00E34472 File Offset: 0x00E32672
+		// Token: 0x06030854 RID: 198740 RVA: 0x00D847BA File Offset: 0x00D829BA
 		public BossPilingSettleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B90A RID: 243978 RVA: 0x00E3449C File Offset: 0x00E3269C
+		// Token: 0x06030855 RID: 198741 RVA: 0x00D847E4 File Offset: 0x00D829E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -48,7 +47,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B90B RID: 243979 RVA: 0x00E345AC File Offset: 0x00E327AC
+		// Token: 0x06030856 RID: 198742 RVA: 0x00D848F4 File Offset: 0x00D82AF4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossPilingSettleView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B90C RID: 243980 RVA: 0x00E345EF File Offset: 0x00E327EF
+		// Token: 0x06030857 RID: 198743 RVA: 0x00D84937 File Offset: 0x00D82B37
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTitle();
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.CurTag = BossPilingController.Instance.CurTeamTag;
 		}
 
-		// Token: 0x0603B90D RID: 243981 RVA: 0x00E34618 File Offset: 0x00E32818
+		// Token: 0x06030858 RID: 198744 RVA: 0x00D84960 File Offset: 0x00D82B60
 		private UniTask NewStateToggle()
 		{
 			BossPilingSettleView.<NewStateToggle>d__17 <NewStateToggle>d__;
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <NewStateToggle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B90E RID: 243982 RVA: 0x00E3465C File Offset: 0x00E3285C
+		// Token: 0x06030859 RID: 198745 RVA: 0x00D849A4 File Offset: 0x00D82BA4
 		private UniTask InitButtonAsync()
 		{
 			BossPilingSettleView.<InitButtonAsync>d__18 <InitButtonAsync>d__;
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <InitButtonAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B90F RID: 243983 RVA: 0x00E346A0 File Offset: 0x00E328A0
+		// Token: 0x0603085A RID: 198746 RVA: 0x00D849E8 File Offset: 0x00D82BE8
 		private UniTask CreateButton(int buttonIndex, Action clickFunction)
 		{
 			BossPilingSettleView.<CreateButton>d__19 <CreateButton>d__;
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B910 RID: 243984 RVA: 0x00E346F4 File Offset: 0x00E328F4
+		// Token: 0x0603085B RID: 198747 RVA: 0x00D84A3C File Offset: 0x00D82C3C
 		private UniTask InitLevelPanelAsync()
 		{
 			BossPilingSettleView.<InitLevelPanelAsync>d__20 <InitLevelPanelAsync>d__;
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <InitLevelPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B911 RID: 243985 RVA: 0x00E34738 File Offset: 0x00E32938
+		// Token: 0x0603085C RID: 198748 RVA: 0x00D84A80 File Offset: 0x00D82C80
 		private void RefreshTitle()
 		{
 			UUIText text = base.GetText(1);
@@ -132,7 +131,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			base.PlaySequence(sequenceName, null, false);
 		}
 
-		// Token: 0x0603B912 RID: 243986 RVA: 0x00E34828 File Offset: 0x00E32A28
+		// Token: 0x0603085D RID: 198749 RVA: 0x00D84B70 File Offset: 0x00D82D70
 		private MultiTeamRoleSelectData GetSelectViewData()
 		{
 			RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -144,7 +143,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			{
 				if (roleInstance.GetRoleId() != 0)
 				{
-					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, value2.RecommendFormation().Contains(roleInstance.GetRoleId()), false, false);
+					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, Array.IndexOf<int>(value2.RecommendFormation(), roleInstance.GetRoleId()) >= 0, false, false, null, false, false, false);
 					list.Add(item);
 				}
 			}
@@ -164,7 +163,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 					RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(value3.Id, true);
 					if (roleDataById != null)
 					{
-						list3.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false));
+						list3.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false, null, false, false, false));
 					}
 				}
 			}
@@ -184,7 +183,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 					this.CurTeam[j] = value4;
 					this.CurTag[j] = tagConfigId[j];
 				}
-				BossPilingController.Instance.RequestChallenge(this.LevelId, idList.ToList<int>(), tagConfigId.ToList<int>(), false);
+				BossPilingController.Instance.RequestChallenge(this.LevelId, new List<int>(idList), new List<int>(tagConfigId), false);
 			}, null, list4, null, "", "");
 			multiTeamRoleSelectData.IfCanSelectCheck = new Func<int, int[], bool>(this.IfCanSelectCheck);
 			MultiTeamTagDataItem multiTeamTagData = MultiTeamTagDataItem.Phrase(this.CurTag.ToArray(), ESkillBranchCacheType.BossPiling);
@@ -192,7 +191,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return multiTeamRoleSelectData;
 		}
 
-		// Token: 0x0603B913 RID: 243987 RVA: 0x00E34A98 File Offset: 0x00E32C98
+		// Token: 0x0603085E RID: 198750 RVA: 0x00D84DF0 File Offset: 0x00D82FF0
 		private bool IfCanSelectCheck(int roleConfigId, int[] selectedRoleList)
 		{
 			RoleConfig instance = RoleConfig.Instance;
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return true;
 		}
 
-		// Token: 0x0603B914 RID: 243988 RVA: 0x00E34B41 File Offset: 0x00E32D41
+		// Token: 0x0603085F RID: 198751 RVA: 0x00D84E99 File Offset: 0x00D83099
 		private void OnClickedLeft()
 		{
 			if (!this.IsSuccess)
@@ -222,10 +221,10 @@ namespace CSharpScript.Game.Module.BossPiling.View
 				UiManager.Instance.OpenView(EUiViewName.BossPilingMainView, null, null);
 				return;
 			}
-			InstanceDungeonController.Instance.SingleInstReChallengeRequest();
+			InstanceDungeonController.Instance.SingleInstReChallengeRequest(false);
 		}
 
-		// Token: 0x0603B915 RID: 243989 RVA: 0x00E34B68 File Offset: 0x00E32D68
+		// Token: 0x06030860 RID: 198752 RVA: 0x00D84EC4 File Offset: 0x00D830C4
 		private void OnClickedRight()
 		{
 			if (this.IsSuccess)
@@ -243,67 +242,67 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			BossPilingController.Instance.RequestChallenge(this.LevelId, this.CurTeam, this.CurTag, false);
 		}
 
-		// Token: 0x0401F03F RID: 127039
+		// Token: 0x04019AF0 RID: 105200
 		private const string SUCCESS_OUTLINE_COLOR = "C48B29FF";
 
-		// Token: 0x0401F040 RID: 127040
+		// Token: 0x04019AF1 RID: 105201
 		private const string SUCCESS_TEXT_COLOR = "f2efd5";
 
-		// Token: 0x0401F041 RID: 127041
+		// Token: 0x04019AF2 RID: 105202
 		private const string FAIL_OUTLINE_COLOR = "B33100FF";
 
-		// Token: 0x0401F042 RID: 127042
+		// Token: 0x04019AF3 RID: 105203
 		private const string FAIL_TEXT_COLOR = "F08086FF";
 
-		// Token: 0x0401F043 RID: 127043
+		// Token: 0x04019AF4 RID: 105204
 		protected Dictionary<int, BossPilingSettleButton> ButtonMap = new Dictionary<int, BossPilingSettleButton>();
 
-		// Token: 0x0401F044 RID: 127044
+		// Token: 0x04019AF5 RID: 105205
 		[Nullable(2)]
 		protected BossPilingSettlePanel LevelPanel;
 
-		// Token: 0x0401F045 RID: 127045
+		// Token: 0x04019AF6 RID: 105206
 		protected bool IsSuccess;
 
-		// Token: 0x0401F046 RID: 127046
+		// Token: 0x04019AF7 RID: 105207
 		protected int LevelId;
 
-		// Token: 0x0401F047 RID: 127047
+		// Token: 0x04019AF8 RID: 105208
 		protected List<int> CurTeam = new List<int>();
 
-		// Token: 0x0401F048 RID: 127048
+		// Token: 0x04019AF9 RID: 105209
 		protected List<int> CurTag = new List<int>();
 
-		// Token: 0x0401F049 RID: 127049
+		// Token: 0x04019AFA RID: 105210
 		private RewardExploreToggle RewardExploreToggle;
 
-		// Token: 0x0200BDF8 RID: 48632
+		// Token: 0x0200A800 RID: 43008
 		[NullableContext(0)]
 		private enum EButtons
 		{
-			// Token: 0x0403947B RID: 234619
+			// Token: 0x04033E3E RID: 212542
 			LeftButton,
-			// Token: 0x0403947C RID: 234620
+			// Token: 0x04033E3F RID: 212543
 			RightButton
 		}
 
-		// Token: 0x0200BDF9 RID: 48633
+		// Token: 0x0200A801 RID: 43009
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x0403947E RID: 234622
+			// Token: 0x04033E41 RID: 212545
 			TitleItem,
-			// Token: 0x0403947F RID: 234623
+			// Token: 0x04033E42 RID: 212546
 			TitleText,
-			// Token: 0x04039480 RID: 234624
+			// Token: 0x04033E43 RID: 212547
 			TitleTexture,
-			// Token: 0x04039481 RID: 234625
+			// Token: 0x04033E44 RID: 212548
 			ButtonHorizontalItem = 4,
-			// Token: 0x04039482 RID: 234626
+			// Token: 0x04033E45 RID: 212549
 			ButtonItem,
-			// Token: 0x04039483 RID: 234627
+			// Token: 0x04033E46 RID: 212550
 			ToggleItem,
-			// Token: 0x04039484 RID: 234628
+			// Token: 0x04033E47 RID: 212551
 			ContentItem = 20
 		}
 	}

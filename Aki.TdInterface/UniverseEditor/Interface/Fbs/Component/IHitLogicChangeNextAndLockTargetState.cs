@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005398 RID: 21400
+	// Token: 0x0200591E RID: 22814
 	public struct IHitLogicChangeNextAndLockTargetState : IFlatbufferObject
 	{
-		// Token: 0x17009D3E RID: 40254
-		// (get) Token: 0x060230BA RID: 143546 RVA: 0x004DA3AD File Offset: 0x004D85AD
+		// Token: 0x1700A576 RID: 42358
+		// (get) Token: 0x0602516E RID: 151918 RVA: 0x00517281 File Offset: 0x00515481
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060230BB RID: 143547 RVA: 0x004DA3BA File Offset: 0x004D85BA
+		// Token: 0x0602516F RID: 151919 RVA: 0x0051728E File Offset: 0x0051548E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060230BC RID: 143548 RVA: 0x004DA3C4 File Offset: 0x004D85C4
+		// Token: 0x06025170 RID: 151920 RVA: 0x00517298 File Offset: 0x00515498
 		public static IHitLogicChangeNextAndLockTargetState GetRootAsIHitLogicChangeNextAndLockTargetState(ByteBuffer _bb)
 		{
 			return IHitLogicChangeNextAndLockTargetState.GetRootAsIHitLogicChangeNextAndLockTargetState(_bb, default(IHitLogicChangeNextAndLockTargetState));
 		}
 
-		// Token: 0x060230BD RID: 143549 RVA: 0x004DA3E0 File Offset: 0x004D85E0
+		// Token: 0x06025171 RID: 151921 RVA: 0x005172B4 File Offset: 0x005154B4
 		public static IHitLogicChangeNextAndLockTargetState GetRootAsIHitLogicChangeNextAndLockTargetState(ByteBuffer _bb, IHitLogicChangeNextAndLockTargetState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060230BE RID: 143550 RVA: 0x004DA3FD File Offset: 0x004D85FD
+		// Token: 0x06025172 RID: 151922 RVA: 0x005172D1 File Offset: 0x005154D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060230BF RID: 143551 RVA: 0x004DA40C File Offset: 0x004D860C
+		// Token: 0x06025173 RID: 151923 RVA: 0x005172E0 File Offset: 0x005154E0
 		public IHitLogicChangeNextAndLockTargetState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009D3F RID: 40255
-		// (get) Token: 0x060230C0 RID: 143552 RVA: 0x004DA41C File Offset: 0x004D861C
+		// Token: 0x1700A577 RID: 42359
+		// (get) Token: 0x06025174 RID: 151924 RVA: 0x005172F0 File Offset: 0x005154F0
 		public EHitLogicType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D40 RID: 40256
-		// (get) Token: 0x060230C1 RID: 143553 RVA: 0x004DA458 File Offset: 0x004D8658
+		// Token: 0x1700A578 RID: 42360
+		// (get) Token: 0x06025175 RID: 151925 RVA: 0x0051732C File Offset: 0x0051552C
 		public string TargetState
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060230C2 RID: 143554 RVA: 0x004DA48F File Offset: 0x004D868F
+		// Token: 0x06025176 RID: 151926 RVA: 0x00517363 File Offset: 0x00515563
 		public Span<byte> GetTargetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060230C3 RID: 143555 RVA: 0x004DA49E File Offset: 0x004D869E
+		// Token: 0x06025177 RID: 151927 RVA: 0x00517372 File Offset: 0x00515572
 		public byte[] GetTargetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060230C4 RID: 143556 RVA: 0x004DA4AC File Offset: 0x004D86AC
+		// Token: 0x06025178 RID: 151928 RVA: 0x00517380 File Offset: 0x00515580
 		public static Offset<IHitLogicChangeNextAndLockTargetState> CreateIHitLogicChangeNextAndLockTargetState(FlatBufferBuilder builder, EHitLogicType Type = EHitLogicType.ChangeNextState, StringOffset TargetStateOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitLogicChangeNextAndLockTargetState.EndIHitLogicChangeNextAndLockTargetState(builder);
 		}
 
-		// Token: 0x060230C5 RID: 143557 RVA: 0x004DA4C9 File Offset: 0x004D86C9
+		// Token: 0x06025179 RID: 151929 RVA: 0x0051739D File Offset: 0x0051559D
 		public static void StartIHitLogicChangeNextAndLockTargetState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060230C6 RID: 143558 RVA: 0x004DA4D2 File Offset: 0x004D86D2
+		// Token: 0x0602517A RID: 151930 RVA: 0x005173A6 File Offset: 0x005155A6
 		public static void AddType(FlatBufferBuilder builder, EHitLogicType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060230C7 RID: 143559 RVA: 0x004DA4DD File Offset: 0x004D86DD
+		// Token: 0x0602517B RID: 151931 RVA: 0x005173B1 File Offset: 0x005155B1
 		public static void AddTargetState(FlatBufferBuilder builder, StringOffset targetStateOffset)
 		{
 			builder.AddOffset(1, targetStateOffset.Value, 0);
 		}
 
-		// Token: 0x060230C8 RID: 143560 RVA: 0x004DA4ED File Offset: 0x004D86ED
+		// Token: 0x0602517C RID: 151932 RVA: 0x005173C1 File Offset: 0x005155C1
 		public static Offset<IHitLogicChangeNextAndLockTargetState> EndIHitLogicChangeNextAndLockTargetState(FlatBufferBuilder builder)
 		{
 			return new Offset<IHitLogicChangeNextAndLockTargetState>(builder.EndTable());
 		}
 
-		// Token: 0x060230C9 RID: 143561 RVA: 0x004DA4FC File Offset: 0x004D86FC
+		// Token: 0x0602517D RID: 151933 RVA: 0x005173D0 File Offset: 0x005155D0
 		public IHitLogicChangeNextAndLockTargetStateT UnPack()
 		{
 			IHitLogicChangeNextAndLockTargetStateT hitLogicChangeNextAndLockTargetStateT = new IHitLogicChangeNextAndLockTargetStateT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return hitLogicChangeNextAndLockTargetStateT;
 		}
 
-		// Token: 0x060230CA RID: 143562 RVA: 0x004DA517 File Offset: 0x004D8717
+		// Token: 0x0602517E RID: 151934 RVA: 0x005173EB File Offset: 0x005155EB
 		public void UnPackTo(IHitLogicChangeNextAndLockTargetStateT _o)
 		{
 			_o.Type = this.Type;
 			_o.TargetState = this.TargetState;
 		}
 
-		// Token: 0x060230CB RID: 143563 RVA: 0x004DA534 File Offset: 0x004D8734
+		// Token: 0x0602517F RID: 151935 RVA: 0x00517408 File Offset: 0x00515608
 		public static Offset<IHitLogicChangeNextAndLockTargetState> Pack(FlatBufferBuilder builder, IHitLogicChangeNextAndLockTargetStateT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHitLogicChangeNextAndLockTargetState.CreateIHitLogicChangeNextAndLockTargetState(builder, _o.Type, targetStateOffset);
 		}
 
-		// Token: 0x0400E582 RID: 58754
+		// Token: 0x0400F1B2 RID: 61874
 		private Table __p;
 	}
 }

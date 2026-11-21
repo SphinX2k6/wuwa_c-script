@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200286C RID: 10348
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B42 RID: 11074
 	public class IQteHourglassConfig
 	{
-		// Token: 0x0600E54E RID: 58702 RVA: 0x0021B819 File Offset: 0x00219A19
+		// Token: 0x0600F37E RID: 62334 RVA: 0x00238733 File Offset: 0x00236933
 		public static IQteHourglassConfig Create(IQteHourglassConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004638 RID: 17976
-		// (get) Token: 0x0600E54F RID: 58703 RVA: 0x0021B838 File Offset: 0x00219A38
+		// Token: 0x170049A8 RID: 18856
+		// (get) Token: 0x0600F37F RID: 62335 RVA: 0x00238752 File Offset: 0x00236952
 		public virtual int QteId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004639 RID: 17977
-		// (get) Token: 0x0600E550 RID: 58704 RVA: 0x0021B845 File Offset: 0x00219A45
+		// Token: 0x170049A9 RID: 18857
+		// (get) Token: 0x0600F380 RID: 62336 RVA: 0x0023875F File Offset: 0x0023695F
 		public virtual float TrailTime
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700463A RID: 17978
-		// (get) Token: 0x0600E551 RID: 58705 RVA: 0x0021B852 File Offset: 0x00219A52
+		// Token: 0x170049AA RID: 18858
+		// (get) Token: 0x0600F381 RID: 62337 RVA: 0x0023876C File Offset: 0x0023696C
 		public virtual string TrailCurveX
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700463B RID: 17979
-		// (get) Token: 0x0600E552 RID: 58706 RVA: 0x0021B85F File Offset: 0x00219A5F
+		// Token: 0x170049AB RID: 18859
+		// (get) Token: 0x0600F382 RID: 62338 RVA: 0x00238779 File Offset: 0x00236979
 		public virtual string TrailCurveY
 		{
 			get
@@ -62,7 +59,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ECE RID: 32462
+		// Token: 0x0400858E RID: 34190
 		private IQteHourglassConfig Instance;
 	}
 }

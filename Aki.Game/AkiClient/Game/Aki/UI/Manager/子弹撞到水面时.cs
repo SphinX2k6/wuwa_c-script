@@ -9,17 +9,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039ED RID: 14829
+	// Token: 0x02003044 RID: 12356
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 子弹撞到水面时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F0F2 RID: 127218 RVA: 0x008A9320 File Offset: 0x008A7520
+		// Token: 0x0601D553 RID: 120147 RVA: 0x008F1980 File Offset: 0x008EFB80
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 子弹撞到水面时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F0F3 RID: 127219 RVA: 0x008A932C File Offset: 0x008A752C
+		// Token: 0x0601D554 RID: 120148 RVA: 0x008F198C File Offset: 0x008EFB8C
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__子弹撞到水面时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -29,31 +29,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__子弹撞到水面时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F0F4 RID: 127220 RVA: 0x008A934F File Offset: 0x008A754F
+		// Token: 0x0601D555 RID: 120149 RVA: 0x008F19AF File Offset: 0x008EFBAF
 		public 子弹撞到水面时()
 		{
 		}
 
-		// Token: 0x0601F0F5 RID: 127221 RVA: 0x008A9357 File Offset: 0x008A7557
+		// Token: 0x0601D556 RID: 120150 RVA: 0x008F19B7 File Offset: 0x008EFBB7
 		[NullableContext(2)]
 		public 子弹撞到水面时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F0F6 RID: 127222 RVA: 0x008A9361 File Offset: 0x008A7561
+		// Token: 0x0601D557 RID: 120151 RVA: 0x008F19C1 File Offset: 0x008EFBC1
 		public 子弹撞到水面时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F0F7 RID: 127223 RVA: 0x008A936C File Offset: 0x008A756C
+		// Token: 0x0601D558 RID: 120152 RVA: 0x008F19CC File Offset: 0x008EFBCC
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FVectorDouble, BP_SceneBattleInteract_C, FVectorDouble, int>) ?? ((Action<FVectorDouble, BP_SceneBattleInteract_C, FVectorDouble, int>)Delegate.CreateDelegate(typeof(Action<FVectorDouble, BP_SceneBattleInteract_C, FVectorDouble, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F0F8 RID: 127224 RVA: 0x008A939E File Offset: 0x008A759E
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D559 RID: 120153 RVA: 0x008F19FE File Offset: 0x008EFBFE
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -72,8 +71,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 子弹撞到水面时.RegisterId);
 		}
 
-		// Token: 0x0601F0F9 RID: 127225 RVA: 0x008A93D8 File Offset: 0x008A75D8
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D55A RID: 120154 RVA: 0x008F1A38 File Offset: 0x008EFC38
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F0FA RID: 127226 RVA: 0x008A93E4 File Offset: 0x008A75E4
+		// Token: 0x0601D55B RID: 120155 RVA: 0x008F1A44 File Offset: 0x008EFC44
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FVectorDouble ImpactPoint, BP_SceneBattleInteract_C Config, FVectorDouble OriginPoint, int Id)
 		{
 			子弹撞到水面时.__子弹撞到水面时_DelegateParams* ptr = stackalloc 子弹撞到水面时.__子弹撞到水面时_DelegateParams[(UIntPtr)79] + 15L / (long)sizeof(子弹撞到水面时.__子弹撞到水面时_DelegateParams) & -16L;
@@ -98,10 +95,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F0FB RID: 127227 RVA: 0x008A9448 File Offset: 0x008A7648
+		// Token: 0x0601D55C RID: 120156 RVA: 0x008F1AA8 File Offset: 0x008EFCA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FVectorDouble, BP_SceneBattleInteract_C, FVectorDouble, int> action = target as Action<FVectorDouble, BP_SceneBattleInteract_C, FVectorDouble, int>;
@@ -113,40 +109,40 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((子弹撞到水面时.__子弹撞到水面时_DelegateParams*)__Parameters)->ImpactPoint, orCreateUObjectByNativePointer, ((子弹撞到水面时.__子弹撞到水面时_DelegateParams*)__Parameters)->OriginPoint, ((子弹撞到水面时.__子弹撞到水面时_DelegateParams*)__Parameters)->Id);
 		}
 
-		// Token: 0x0400EE1C RID: 60956
+		// Token: 0x0400F744 RID: 63300
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:子弹撞到水面时__DelegateSignature";
 
-		// Token: 0x0400EE1D RID: 60957
+		// Token: 0x0400F745 RID: 63301
 		private static int RegisterId;
 
-		// Token: 0x020099E9 RID: 39401
+		// Token: 0x02008C9D RID: 35997
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
-		protected ref struct __子弹撞到水面时_DelegateParams
+		private ref struct __子弹撞到水面时_DelegateParams
 		{
-			// Token: 0x04030EBE RID: 200382
+			// Token: 0x0402C79E RID: 182174
 			[FieldOffset(0)]
 			public FVectorDouble ImpactPoint;
 
-			// Token: 0x04030EBF RID: 200383
+			// Token: 0x0402C79F RID: 182175
 			[FieldOffset(24)]
 			public IntPtr Config;
 
-			// Token: 0x04030EC0 RID: 200384
+			// Token: 0x0402C7A0 RID: 182176
 			[FieldOffset(32)]
 			public FVectorDouble OriginPoint;
 
-			// Token: 0x04030EC1 RID: 200385
+			// Token: 0x0402C7A1 RID: 182177
 			[FieldOffset(56)]
 			public int Id;
 		}
 
-		// Token: 0x020099EA RID: 39402
+		// Token: 0x02008C9E RID: 35998
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EC2 RID: 200386
+			// Token: 0x0402C7A2 RID: 182178
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

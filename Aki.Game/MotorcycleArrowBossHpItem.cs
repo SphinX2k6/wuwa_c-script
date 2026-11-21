@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CC6 RID: 7366
+// Token: 0x02001188 RID: 4488
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleArrowBossHpItem : UiPanelBase
 {
-	// Token: 0x0600DF08 RID: 57096 RVA: 0x00343924 File Offset: 0x00341B24
+	// Token: 0x0600B325 RID: 45861 RVA: 0x0034F34C File Offset: 0x0034D54C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class MotorcycleArrowBossHpItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DF09 RID: 57097 RVA: 0x003439C0 File Offset: 0x00341BC0
+	// Token: 0x0600B326 RID: 45862 RVA: 0x0034F3E8 File Offset: 0x0034D5E8
 	protected override void OnStart()
 	{
 		this.HpArtText = base.GetArtText(1);
@@ -35,7 +35,7 @@ public class MotorcycleArrowBossHpItem : UiPanelBase
 		this.ShieldDigitScroll.Init(0f, 0f, 500f);
 	}
 
-	// Token: 0x0600DF0A RID: 57098 RVA: 0x00343A4C File Offset: 0x00341C4C
+	// Token: 0x0600B327 RID: 45863 RVA: 0x0034F474 File Offset: 0x0034D674
 	[NullableContext(1)]
 	public void UpdateHeadStateInfo(FKSC_HeadHpContext headInfo, bool isScroll = true)
 	{
@@ -79,7 +79,7 @@ public class MotorcycleArrowBossHpItem : UiPanelBase
 		shieldArtText.SetText(MotorcycleUtil.CompactNumberFormat(this.ShieldDigitScroll.Current));
 	}
 
-	// Token: 0x0600DF0B RID: 57099 RVA: 0x00343B4C File Offset: 0x00341D4C
+	// Token: 0x0600B328 RID: 45864 RVA: 0x0034F574 File Offset: 0x0034D774
 	public void OnTick(float delta)
 	{
 		MotorcycleArrowSubModel motorcycleArrowSubModel = (MotorcycleArrowSubModel)KuroSimpleCombatController.Instance.CurSubModel;
@@ -110,52 +110,52 @@ public class MotorcycleArrowBossHpItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006685 RID: 26245
+	// Token: 0x04006764 RID: 26468
 	private const int SCROLL_DURATION = 500;
 
-	// Token: 0x04006686 RID: 26246
+	// Token: 0x04006765 RID: 26469
 	protected UUIArtText HpArtText;
 
-	// Token: 0x04006687 RID: 26247
+	// Token: 0x04006766 RID: 26470
 	protected UUIArtText ShieldArtText;
 
-	// Token: 0x04006688 RID: 26248
+	// Token: 0x04006767 RID: 26471
 	protected UUIText TimeText;
 
-	// Token: 0x04006689 RID: 26249
+	// Token: 0x04006768 RID: 26472
 	[Nullable(1)]
 	private readonly DigitScroll HpDigitScroll = new DigitScroll();
 
-	// Token: 0x0400668A RID: 26250
+	// Token: 0x04006769 RID: 26473
 	[Nullable(1)]
 	private readonly DigitScroll ShieldDigitScroll = new DigitScroll();
 
-	// Token: 0x0400668B RID: 26251
+	// Token: 0x0400676A RID: 26474
 	private LevelSequencePlayer HpSequencePlayer;
 
-	// Token: 0x0400668C RID: 26252
+	// Token: 0x0400676B RID: 26475
 	private LevelSequencePlayer ShieldSequencePlayer;
 
-	// Token: 0x020082C4 RID: 33476
+	// Token: 0x0200744D RID: 29773
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AA88 RID: 174728
+		// Token: 0x04025DB0 RID: 155056
 		public const int ItemHp = 0;
 
-		// Token: 0x0402AA89 RID: 174729
+		// Token: 0x04025DB1 RID: 155057
 		public const int ArtTextMonsterHp = 1;
 
-		// Token: 0x0402AA8A RID: 174730
+		// Token: 0x04025DB2 RID: 155058
 		public const int ItemShield = 2;
 
-		// Token: 0x0402AA8B RID: 174731
+		// Token: 0x04025DB3 RID: 155059
 		public const int ArtTextShield = 3;
 
-		// Token: 0x0402AA8C RID: 174732
+		// Token: 0x04025DB4 RID: 155060
 		public const int ItemTime = 4;
 
-		// Token: 0x0402AA8D RID: 174733
+		// Token: 0x04025DB5 RID: 155061
 		public const int TextTime = 5;
 	}
 }

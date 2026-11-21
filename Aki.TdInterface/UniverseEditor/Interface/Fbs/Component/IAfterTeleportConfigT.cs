@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E6F RID: 20079
+	// Token: 0x02005380 RID: 21376
 	public class IAfterTeleportConfigT
 	{
-		// Token: 0x17008FC0 RID: 36800
-		// (get) Token: 0x0601F8A0 RID: 129184 RVA: 0x004647DA File Offset: 0x004629DA
-		// (set) Token: 0x0601F8A1 RID: 129185 RVA: 0x004647E2 File Offset: 0x004629E2
+		// Token: 0x170096F9 RID: 38649
+		// (get) Token: 0x060214EB RID: 136427 RVA: 0x004987F2 File Offset: 0x004969F2
+		// (set) Token: 0x060214EC RID: 136428 RVA: 0x004987FA File Offset: 0x004969FA
 		public IVectorInfoT Direction { get; set; }
 
-		// Token: 0x17008FC1 RID: 36801
-		// (get) Token: 0x0601F8A2 RID: 129186 RVA: 0x004647EB File Offset: 0x004629EB
-		// (set) Token: 0x0601F8A3 RID: 129187 RVA: 0x004647F3 File Offset: 0x004629F3
+		// Token: 0x170096FA RID: 38650
+		// (get) Token: 0x060214ED RID: 136429 RVA: 0x00498803 File Offset: 0x00496A03
+		// (set) Token: 0x060214EE RID: 136430 RVA: 0x0049880B File Offset: 0x00496A0B
 		public List<int> BuffEffectIds { get; set; }
 
-		// Token: 0x17008FC2 RID: 36802
-		// (get) Token: 0x0601F8A4 RID: 129188 RVA: 0x004647FC File Offset: 0x004629FC
-		// (set) Token: 0x0601F8A5 RID: 129189 RVA: 0x00464804 File Offset: 0x00462A04
+		// Token: 0x170096FB RID: 38651
+		// (get) Token: 0x060214EF RID: 136431 RVA: 0x00498814 File Offset: 0x00496A14
+		// (set) Token: 0x060214F0 RID: 136432 RVA: 0x0049881C File Offset: 0x00496A1C
 		public IVectorInfoT TeleportToSelfPos { get; set; }
 
-		// Token: 0x17008FC3 RID: 36803
-		// (get) Token: 0x0601F8A6 RID: 129190 RVA: 0x0046480D File Offset: 0x00462A0D
-		// (set) Token: 0x0601F8A7 RID: 129191 RVA: 0x00464815 File Offset: 0x00462A15
+		// Token: 0x170096FC RID: 38652
+		// (get) Token: 0x060214F1 RID: 136433 RVA: 0x00498825 File Offset: 0x00496A25
+		// (set) Token: 0x060214F2 RID: 136434 RVA: 0x0049882D File Offset: 0x00496A2D
 		public int RailEntityId { get; set; }
 
-		// Token: 0x17008FC4 RID: 36804
-		// (get) Token: 0x0601F8A8 RID: 129192 RVA: 0x0046481E File Offset: 0x00462A1E
-		// (set) Token: 0x0601F8A9 RID: 129193 RVA: 0x00464826 File Offset: 0x00462A26
+		// Token: 0x170096FD RID: 38653
+		// (get) Token: 0x060214F3 RID: 136435 RVA: 0x00498836 File Offset: 0x00496A36
+		// (set) Token: 0x060214F4 RID: 136436 RVA: 0x0049883E File Offset: 0x00496A3E
 		public string SlidePerformDaPath { get; set; }
 
-		// Token: 0x17008FC5 RID: 36805
-		// (get) Token: 0x0601F8AA RID: 129194 RVA: 0x0046482F File Offset: 0x00462A2F
-		// (set) Token: 0x0601F8AB RID: 129195 RVA: 0x00464837 File Offset: 0x00462A37
+		// Token: 0x170096FE RID: 38654
+		// (get) Token: 0x060214F5 RID: 136437 RVA: 0x00498847 File Offset: 0x00496A47
+		// (set) Token: 0x060214F6 RID: 136438 RVA: 0x0049884F File Offset: 0x00496A4F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601F8AC RID: 129196 RVA: 0x00464840 File Offset: 0x00462A40
+		// Token: 0x060214F7 RID: 136439 RVA: 0x00498858 File Offset: 0x00496A58
 		public IAfterTeleportConfigT()
 		{
 			this.Direction = null;

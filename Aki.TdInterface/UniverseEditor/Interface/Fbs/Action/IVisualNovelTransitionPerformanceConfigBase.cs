@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075E9 RID: 30185
+	// Token: 0x02007DF7 RID: 32247
 	public struct IVisualNovelTransitionPerformanceConfigBase : IFlatbufferObject
 	{
-		// Token: 0x1700E54F RID: 58703
-		// (get) Token: 0x06036FBC RID: 225212 RVA: 0x00775FF8 File Offset: 0x007741F8
+		// Token: 0x1700F18D RID: 61837
+		// (get) Token: 0x0603A461 RID: 238689 RVA: 0x007DA0F4 File Offset: 0x007D82F4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036FBD RID: 225213 RVA: 0x00776005 File Offset: 0x00774205
+		// Token: 0x0603A462 RID: 238690 RVA: 0x007DA101 File Offset: 0x007D8301
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036FBE RID: 225214 RVA: 0x0077600C File Offset: 0x0077420C
+		// Token: 0x0603A463 RID: 238691 RVA: 0x007DA108 File Offset: 0x007D8308
 		public static IVisualNovelTransitionPerformanceConfigBase GetRootAsIVisualNovelTransitionPerformanceConfigBase(ByteBuffer _bb)
 		{
 			return IVisualNovelTransitionPerformanceConfigBase.GetRootAsIVisualNovelTransitionPerformanceConfigBase(_bb, default(IVisualNovelTransitionPerformanceConfigBase));
 		}
 
-		// Token: 0x06036FBF RID: 225215 RVA: 0x00776028 File Offset: 0x00774228
+		// Token: 0x0603A464 RID: 238692 RVA: 0x007DA124 File Offset: 0x007D8324
 		public static IVisualNovelTransitionPerformanceConfigBase GetRootAsIVisualNovelTransitionPerformanceConfigBase(ByteBuffer _bb, IVisualNovelTransitionPerformanceConfigBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036FC0 RID: 225216 RVA: 0x00776045 File Offset: 0x00774245
+		// Token: 0x0603A465 RID: 238693 RVA: 0x007DA141 File Offset: 0x007D8341
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036FC1 RID: 225217 RVA: 0x00776054 File Offset: 0x00774254
+		// Token: 0x0603A466 RID: 238694 RVA: 0x007DA150 File Offset: 0x007D8350
 		public IVisualNovelTransitionPerformanceConfigBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E550 RID: 58704
-		// (get) Token: 0x06036FC2 RID: 225218 RVA: 0x00776064 File Offset: 0x00774264
+		// Token: 0x1700F18E RID: 61838
+		// (get) Token: 0x0603A467 RID: 238695 RVA: 0x007DA160 File Offset: 0x007D8360
 		public EVisualNovelSubType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036FC3 RID: 225219 RVA: 0x007760A0 File Offset: 0x007742A0
+		// Token: 0x0603A468 RID: 238696 RVA: 0x007DA19C File Offset: 0x007D839C
 		public static Offset<IVisualNovelTransitionPerformanceConfigBase> CreateIVisualNovelTransitionPerformanceConfigBase(FlatBufferBuilder builder, EVisualNovelSubType Type = EVisualNovelSubType.SolarSchool)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelTransitionPerformanceConfigBase.EndIVisualNovelTransitionPerformanceConfigBase(builder);
 		}
 
-		// Token: 0x06036FC4 RID: 225220 RVA: 0x007760B6 File Offset: 0x007742B6
+		// Token: 0x0603A469 RID: 238697 RVA: 0x007DA1B2 File Offset: 0x007D83B2
 		public static void StartIVisualNovelTransitionPerformanceConfigBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06036FC5 RID: 225221 RVA: 0x007760BF File Offset: 0x007742BF
+		// Token: 0x0603A46A RID: 238698 RVA: 0x007DA1BB File Offset: 0x007D83BB
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelSubType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036FC6 RID: 225222 RVA: 0x007760CA File Offset: 0x007742CA
+		// Token: 0x0603A46B RID: 238699 RVA: 0x007DA1C6 File Offset: 0x007D83C6
 		public static Offset<IVisualNovelTransitionPerformanceConfigBase> EndIVisualNovelTransitionPerformanceConfigBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelTransitionPerformanceConfigBase>(builder.EndTable());
 		}
 
-		// Token: 0x06036FC7 RID: 225223 RVA: 0x007760D8 File Offset: 0x007742D8
+		// Token: 0x0603A46C RID: 238700 RVA: 0x007DA1D4 File Offset: 0x007D83D4
 		public IVisualNovelTransitionPerformanceConfigBaseT UnPack()
 		{
 			IVisualNovelTransitionPerformanceConfigBaseT visualNovelTransitionPerformanceConfigBaseT = new IVisualNovelTransitionPerformanceConfigBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelTransitionPerformanceConfigBaseT;
 		}
 
-		// Token: 0x06036FC8 RID: 225224 RVA: 0x007760F3 File Offset: 0x007742F3
+		// Token: 0x0603A46D RID: 238701 RVA: 0x007DA1EF File Offset: 0x007D83EF
 		public void UnPackTo(IVisualNovelTransitionPerformanceConfigBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06036FC9 RID: 225225 RVA: 0x00776104 File Offset: 0x00774304
+		// Token: 0x0603A46E RID: 238702 RVA: 0x007DA200 File Offset: 0x007D8400
 		public static Offset<IVisualNovelTransitionPerformanceConfigBase> Pack(FlatBufferBuilder builder, IVisualNovelTransitionPerformanceConfigBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelTransitionPerformanceConfigBase.CreateIVisualNovelTransitionPerformanceConfigBase(builder, _o.Type);
 		}
 
-		// Token: 0x04012555 RID: 75093
+		// Token: 0x0401359F RID: 79263
 		private Table __p;
 	}
 }

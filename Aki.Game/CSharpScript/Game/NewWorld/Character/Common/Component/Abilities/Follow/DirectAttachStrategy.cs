@@ -5,25 +5,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x0200712B RID: 28971
+	// Token: 0x02006359 RID: 25433
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class DirectAttachStrategy : IFollowShooterAttachStrategy
 	{
-		// Token: 0x06046BD0 RID: 289744 RVA: 0x011D24E0 File Offset: 0x011D06E0
+		// Token: 0x0603DA1E RID: 252446 RVA: 0x011DB040 File Offset: 0x011D9240
 		public void OnAttach(USceneComponent sceneComponent, SLockOnFollowShooterAttachmentRule attachmentRule, USceneComponent targetComponent)
 		{
 			sceneComponent.K2_AttachToComponent(targetComponent, attachmentRule.Socket, (EAttachmentRule)attachmentRule.AttachLocationRule, (EAttachmentRule)attachmentRule.AttachRotationRule, (EAttachmentRule)attachmentRule.AttachScaleRule, false, true);
 			sceneComponent.SetAbsolute(attachmentRule.AbsoluteLocation, attachmentRule.AbsoluteRotation, attachmentRule.AbsoluteScale);
 		}
 
-		// Token: 0x06046BD1 RID: 289745 RVA: 0x011D2536 File Offset: 0x011D0736
+		// Token: 0x0603DA1F RID: 252447 RVA: 0x011DB096 File Offset: 0x011D9296
 		public void OnDetach(USceneComponent sceneComponent, SLockOnFollowShooterAttachmentRule attachmentRule)
 		{
 			sceneComponent.K2_DetachFromComponent((EDetachmentRule)attachmentRule.DetachLocationRule, (EDetachmentRule)attachmentRule.DetachRotationRule, (EDetachmentRule)attachmentRule.DetachScaleRule, false);
 		}
 
-		// Token: 0x06046BD2 RID: 289746 RVA: 0x011D2560 File Offset: 0x011D0760
+		// Token: 0x0603DA20 RID: 252448 RVA: 0x011DB0C0 File Offset: 0x011D92C0
 		public float? UpdateTransform(USceneComponent sceneComponent, IUpdateRotationParams @params)
 		{
 			sceneComponent.SetAbsolute(false, true, false);

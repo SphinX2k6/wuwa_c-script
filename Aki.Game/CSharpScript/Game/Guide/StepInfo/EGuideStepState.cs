@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Guide.StepInfo
 {
-	// Token: 0x02004604 RID: 17924
+	// Token: 0x0200352D RID: 13613
 	public enum EGuideStepState
 	{
-		// Token: 0x04018CF8 RID: 101624
+		// Token: 0x04013337 RID: 78647
 		Init,
-		// Token: 0x04018CF9 RID: 101625
+		// Token: 0x04013338 RID: 78648
 		Executing,
-		// Token: 0x04018CFA RID: 101626
+		// Token: 0x04013339 RID: 78649
 		Pending,
-		// Token: 0x04018CFB RID: 101627
+		// Token: 0x0401333A RID: 78650
 		Break,
-		// Token: 0x04018CFC RID: 101628
+		// Token: 0x0401333B RID: 78651
 		Finish,
-		// Token: 0x04018CFD RID: 101629
+		// Token: 0x0401333C RID: 78652
 		End
 	}
 }

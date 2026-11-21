@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006610 RID: 26128
+	// Token: 0x0200558E RID: 21902
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ShipSkinView : UiViewBase
 	{
-		// Token: 0x060417AB RID: 268203 RVA: 0x00FDBEE6 File Offset: 0x00FDA0E6
+		// Token: 0x06036470 RID: 222320 RVA: 0x00F22F66 File Offset: 0x00F21166
 		public ShipSkinView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060417AC RID: 268204 RVA: 0x00FDBEF0 File Offset: 0x00FDA0F0
+		// Token: 0x06036471 RID: 222321 RVA: 0x00F22F70 File Offset: 0x00F21170
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060417AD RID: 268205 RVA: 0x00FDC080 File Offset: 0x00FDA280
+		// Token: 0x06036472 RID: 222322 RVA: 0x00F23100 File Offset: 0x00F21300
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollViewNew<ShipSkinItem, int>(base.GetScrollViewWithScrollbar(2), new Func<ShipSkinItem>(this.OnCreateGrid), null, false, null);
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 						return;
 					}
 				}
-				ShipSkinItem shipSkinItem2 = scrollItemList.ElementAtOrDefault(0);
+				ShipSkinItem shipSkinItem2 = (scrollItemList.Count > 0) ? scrollItemList[0] : null;
 				if (shipSkinItem2 == null)
 				{
 					return;
@@ -88,25 +87,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, false);
 		}
 
-		// Token: 0x060417AE RID: 268206 RVA: 0x00FDC118 File Offset: 0x00FDA318
+		// Token: 0x06036473 RID: 222323 RVA: 0x00F23198 File Offset: 0x00F21398
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FishingShipSkinChangeSuccess, new Action(this.FishingShipSkinChangeSuccess));
 		}
 
-		// Token: 0x060417AF RID: 268207 RVA: 0x00FDC136 File Offset: 0x00FDA336
+		// Token: 0x06036474 RID: 222324 RVA: 0x00F231B6 File Offset: 0x00F213B6
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingShipSkinChangeSuccess, new Action(this.FishingShipSkinChangeSuccess));
 		}
 
-		// Token: 0x060417B0 RID: 268208 RVA: 0x00FDC154 File Offset: 0x00FDA354
+		// Token: 0x06036475 RID: 222325 RVA: 0x00F231D4 File Offset: 0x00F213D4
 		private void FishingShipSkinChangeSuccess()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060417B1 RID: 268209 RVA: 0x00FDC160 File Offset: 0x00FDA360
+		// Token: 0x06036476 RID: 222326 RVA: 0x00F231E0 File Offset: 0x00F213E0
 		private void RefreshView(int skinId)
 		{
 			this.SelectShipSkinId = skinId;
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ReadItemNewFlag();
 		}
 
-		// Token: 0x060417B2 RID: 268210 RVA: 0x00FDC244 File Offset: 0x00FDA444
+		// Token: 0x06036477 RID: 222327 RVA: 0x00F232C4 File Offset: 0x00F214C4
 		private ShipSkinItem OnCreateGrid()
 		{
 			return new ShipSkinItem
@@ -136,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x060417B3 RID: 268211 RVA: 0x00FDC25D File Offset: 0x00FDA45D
+		// Token: 0x06036478 RID: 222328 RVA: 0x00F232DD File Offset: 0x00F214DD
 		private void OnClickShipSkinItem(UUIExtendToggle toggle, int skinId)
 		{
 			UUIExtendToggle currentSelectToggle = this.CurrentSelectToggle;
@@ -148,13 +147,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshView(skinId);
 		}
 
-		// Token: 0x060417B4 RID: 268212 RVA: 0x00FDC283 File Offset: 0x00FDA483
+		// Token: 0x06036479 RID: 222329 RVA: 0x00F23303 File Offset: 0x00F21503
 		private void OnClickConfirmBtn()
 		{
 			FishingController.Instance.RequestFishingShipSkinChange(this.SelectShipSkinId);
 		}
 
-		// Token: 0x060417B5 RID: 268213 RVA: 0x00FDC298 File Offset: 0x00FDA498
+		// Token: 0x0603647A RID: 222330 RVA: 0x00F23318 File Offset: 0x00F21518
 		private void ReadItemNewFlag()
 		{
 			if (!FishingModel.Instance.UnlockShipSkin.Contains(this.SelectShipSkinId))
@@ -166,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit(EEventName.FishingShipSkinClick);
 		}
 
-		// Token: 0x04022138 RID: 139576
+		// Token: 0x0401CA69 RID: 117353
 		[Nullable(new byte[]
 		{
 			2,
@@ -174,42 +173,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericScrollViewNew<ShipSkinItem, int> ScrollView;
 
-		// Token: 0x04022139 RID: 139577
+		// Token: 0x0401CA6A RID: 117354
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x0402213A RID: 139578
+		// Token: 0x0401CA6B RID: 117355
 		private int SelectShipSkinId;
 
-		// Token: 0x0200C81F RID: 51231
+		// Token: 0x0200B202 RID: 45570
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C703 RID: 247555
+			// Token: 0x0403704B RID: 225355
 			public const int TitleText = 0;
 
-			// Token: 0x0403C704 RID: 247556
+			// Token: 0x0403704C RID: 225356
 			public const int DesText = 1;
 
-			// Token: 0x0403C705 RID: 247557
+			// Token: 0x0403704D RID: 225357
 			public const int ShipSkinScrollView = 2;
 
-			// Token: 0x0403C706 RID: 247558
+			// Token: 0x0403704E RID: 225358
 			public const int ShipSkinLoopScrollItem = 3;
 
-			// Token: 0x0403C707 RID: 247559
+			// Token: 0x0403704F RID: 225359
 			public const int ShipSkinNameText = 4;
 
-			// Token: 0x0403C708 RID: 247560
+			// Token: 0x04037050 RID: 225360
 			public const int EffectText = 5;
 
-			// Token: 0x0403C709 RID: 247561
+			// Token: 0x04037051 RID: 225361
 			public const int ConfirmBtn = 6;
 
-			// Token: 0x0403C70A RID: 247562
+			// Token: 0x04037052 RID: 225362
 			public const int LockItem = 7;
 
-			// Token: 0x0403C70B RID: 247563
+			// Token: 0x04037053 RID: 225363
 			public const int LockText = 8;
 		}
 	}

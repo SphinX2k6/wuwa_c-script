@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020035DD RID: 13789
+// Token: 0x02002B52 RID: 11090
 public class __TsDecoratorSelectSkill_SubClassMissingExportProxy : __TsDecoratorSelectSkill_InheritProxy
 {
-	// Token: 0x0601E115 RID: 123157 RVA: 0x0087FA40 File Offset: 0x0087DC40
+	// Token: 0x0601BE3D RID: 114237 RVA: 0x008A7AD4 File Offset: 0x008A5CD4
 	[NullableContext(1)]
 	protected __TsDecoratorSelectSkill_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorSelectSkill.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E116 RID: 123158 RVA: 0x0087FA73 File Offset: 0x0087DC73
+	// Token: 0x0601BE3E RID: 114238 RVA: 0x008A7B07 File Offset: 0x008A5D07
 	protected __TsDecoratorSelectSkill_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

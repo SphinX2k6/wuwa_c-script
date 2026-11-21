@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000191 RID: 401
+	// Token: 0x020001A3 RID: 419
 	public class ConfigCompositeRewardDisplayByIsDragonPool : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000968 RID: 2408 RVA: 0x0008EB10 File Offset: 0x0008CD10
+		// Token: 0x060009D4 RID: 2516 RVA: 0x00094A48 File Offset: 0x00092C48
 		static ConfigCompositeRewardDisplayByIsDragonPool()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCompositeRewardDisplayByIsDragonPool.CreateStaticDefaultValue), new Action(ConfigCompositeRewardDisplayByIsDragonPool.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000969 RID: 2409 RVA: 0x0008EB30 File Offset: 0x0008CD30
+		// Token: 0x060009D5 RID: 2517 RVA: 0x00094A68 File Offset: 0x00092C68
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCompositeRewardDisplayByIsDragonPool.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600096A RID: 2410 RVA: 0x0008EBAF File Offset: 0x0008CDAF
+		// Token: 0x060009D6 RID: 2518 RVA: 0x00094AE7 File Offset: 0x00092CE7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCompositeRewardDisplayByIsDragonPool.LogPair = null;
 			ConfigCompositeRewardDisplayByIsDragonPool.HandleId = 0;
 		}
 
-		// Token: 0x0600096B RID: 2411 RVA: 0x0008EBBD File Offset: 0x0008CDBD
+		// Token: 0x060009D7 RID: 2519 RVA: 0x00094AF5 File Offset: 0x00092CF5
 		public static void Init()
 		{
 			ConfigCompositeRewardDisplayByIsDragonPool.HandleId = ConfigCommon.InitDataStatement(ConfigCompositeRewardDisplayByIsDragonPool.HandleId, "db_rewardui.db", "select BinData from `CompositeRewardDisplay` where IsDragonPool=TRUE");
 		}
 
-		// Token: 0x0600096C RID: 2412 RVA: 0x0008EBD8 File Offset: 0x0008CDD8
+		// Token: 0x060009D8 RID: 2520 RVA: 0x00094B10 File Offset: 0x00092D10
 		public static CompositeRewardDisplay? GetConfig(bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCompositeRewardDisplayByIsDragonPool.HandleId, ConfigCompositeRewardDisplayByIsDragonPool.LogPair))
@@ -79,7 +79,7 @@ namespace Aki.Config
 			return new CompositeRewardDisplay?(rootAsCompositeRewardDisplay);
 		}
 
-		// Token: 0x0600096D RID: 2413 RVA: 0x0008ECC0 File Offset: 0x0008CEC0
+		// Token: 0x060009D9 RID: 2521 RVA: 0x00094BF8 File Offset: 0x00092DF8
 		[NullableContext(2)]
 		public static IReadOnlyList<CompositeRewardDisplay> GetConfigList(bool useCache = true)
 		{
@@ -117,22 +117,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000ADB RID: 2779
+		// Token: 0x04000B59 RID: 2905
 		private const string DB = "db_rewardui.db";
 
-		// Token: 0x04000ADC RID: 2780
+		// Token: 0x04000B5A RID: 2906
 		private const string FILE = "j.奖励界面表现.xlsx";
 
-		// Token: 0x04000ADD RID: 2781
+		// Token: 0x04000B5B RID: 2907
 		private const string TABLE = "CompositeRewardDisplay";
 
-		// Token: 0x04000ADE RID: 2782
+		// Token: 0x04000B5C RID: 2908
 		private const string COMMAND = "select BinData from `CompositeRewardDisplay` where IsDragonPool=TRUE";
 
-		// Token: 0x04000ADF RID: 2783
+		// Token: 0x04000B5D RID: 2909
 		private const string KEY_PREFIX = "CompositeRewardDisplayByIsDragonPool";
 
-		// Token: 0x04000AE0 RID: 2784
+		// Token: 0x04000B5E RID: 2910
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,7 +142,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000AE1 RID: 2785
+		// Token: 0x04000B5F RID: 2911
 		private static int HandleId;
 	}
 }

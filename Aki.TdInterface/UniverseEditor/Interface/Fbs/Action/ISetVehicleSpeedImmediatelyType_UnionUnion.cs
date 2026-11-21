@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070AA RID: 28842
+	// Token: 0x02007876 RID: 30838
 	public class ISetVehicleSpeedImmediatelyType_UnionUnion
 	{
-		// Token: 0x1700D641 RID: 54849
-		// (get) Token: 0x06033121 RID: 209185 RVA: 0x006E36CD File Offset: 0x006E18CD
-		// (set) Token: 0x06033122 RID: 209186 RVA: 0x006E36D5 File Offset: 0x006E18D5
+		// Token: 0x1700E224 RID: 57892
+		// (get) Token: 0x060363C3 RID: 222147 RVA: 0x00743CD9 File Offset: 0x00741ED9
+		// (set) Token: 0x060363C4 RID: 222148 RVA: 0x00743CE1 File Offset: 0x00741EE1
 		public ISetVehicleSpeedImmediatelyType_Union Type { get; set; }
 
-		// Token: 0x1700D642 RID: 54850
-		// (get) Token: 0x06033123 RID: 209187 RVA: 0x006E36DE File Offset: 0x006E18DE
-		// (set) Token: 0x06033124 RID: 209188 RVA: 0x006E36E6 File Offset: 0x006E18E6
+		// Token: 0x1700E225 RID: 57893
+		// (get) Token: 0x060363C5 RID: 222149 RVA: 0x00743CEA File Offset: 0x00741EEA
+		// (set) Token: 0x060363C6 RID: 222150 RVA: 0x00743CF2 File Offset: 0x00741EF2
 		public object Value { get; set; }
 
-		// Token: 0x06033125 RID: 209189 RVA: 0x006E36EF File Offset: 0x006E18EF
+		// Token: 0x060363C7 RID: 222151 RVA: 0x00743CFB File Offset: 0x00741EFB
 		public ISetVehicleSpeedImmediatelyType_UnionUnion()
 		{
 			this.Type = ISetVehicleSpeedImmediatelyType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06033126 RID: 209190 RVA: 0x006E3705 File Offset: 0x006E1905
+		// Token: 0x060363C8 RID: 222152 RVA: 0x00743D11 File Offset: 0x00741F11
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06033127 RID: 209191 RVA: 0x006E3717 File Offset: 0x006E1917
+		// Token: 0x060363C9 RID: 222153 RVA: 0x00743D23 File Offset: 0x00741F23
 		public ISetVehicleSpeedImmediatelyTypeT AsISetVehicleSpeedImmediatelyType()
 		{
 			return this.As<ISetVehicleSpeedImmediatelyTypeT>();
 		}
 
-		// Token: 0x06033128 RID: 209192 RVA: 0x006E371F File Offset: 0x006E191F
+		// Token: 0x060363CA RID: 222154 RVA: 0x00743D2B File Offset: 0x00741F2B
 		public static ISetVehicleSpeedImmediatelyType_UnionUnion FromISetVehicleSpeedImmediatelyType(ISetVehicleSpeedImmediatelyTypeT _isetvehiclespeedimmediatelytype)
 		{
 			return new ISetVehicleSpeedImmediatelyType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033129 RID: 209193 RVA: 0x006E3734 File Offset: 0x006E1934
+		// Token: 0x060363CB RID: 222155 RVA: 0x00743D40 File Offset: 0x00741F40
 		public ISetTotalVehicleSpeedImmediatelyT AsISetTotalVehicleSpeedImmediately()
 		{
 			return this.As<ISetTotalVehicleSpeedImmediatelyT>();
 		}
 
-		// Token: 0x0603312A RID: 209194 RVA: 0x006E373C File Offset: 0x006E193C
+		// Token: 0x060363CC RID: 222156 RVA: 0x00743D48 File Offset: 0x00741F48
 		public static ISetVehicleSpeedImmediatelyType_UnionUnion FromISetTotalVehicleSpeedImmediately(ISetTotalVehicleSpeedImmediatelyT _isettotalvehiclespeedimmediately)
 		{
 			return new ISetVehicleSpeedImmediatelyType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603312B RID: 209195 RVA: 0x006E3751 File Offset: 0x006E1951
+		// Token: 0x060363CD RID: 222157 RVA: 0x00743D5D File Offset: 0x00741F5D
 		public ISetHorizontalVerticalSpeedImmediatelyT AsISetHorizontalVerticalSpeedImmediately()
 		{
 			return this.As<ISetHorizontalVerticalSpeedImmediatelyT>();
 		}
 
-		// Token: 0x0603312C RID: 209196 RVA: 0x006E3759 File Offset: 0x006E1959
+		// Token: 0x060363CE RID: 222158 RVA: 0x00743D65 File Offset: 0x00741F65
 		public static ISetVehicleSpeedImmediatelyType_UnionUnion FromISetHorizontalVerticalSpeedImmediately(ISetHorizontalVerticalSpeedImmediatelyT _isethorizontalverticalspeedimmediately)
 		{
 			return new ISetVehicleSpeedImmediatelyType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603312D RID: 209197 RVA: 0x006E3770 File Offset: 0x006E1970
+		// Token: 0x060363CF RID: 222159 RVA: 0x00743D7C File Offset: 0x00741F7C
 		public static int Pack(FlatBufferBuilder builder, ISetVehicleSpeedImmediatelyType_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F20 RID: 3872
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001036 RID: 4150
 	public class ICompareVarInChildQuest
 	{
-		// Token: 0x060055A2 RID: 21922 RVA: 0x000D1D68 File Offset: 0x000CFF68
+		// Token: 0x06005B1E RID: 23326 RVA: 0x000DDF10 File Offset: 0x000DC110
 		private ICompareVarInChildQuest_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060055A3 RID: 21923 RVA: 0x000D1DA0 File Offset: 0x000CFFA0
+		// Token: 0x06005B1F RID: 23327 RVA: 0x000DDF48 File Offset: 0x000DC148
 		public static ICompareVarInChildQuest Create([Nullable(2)] ICompareVarInChildQuest instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060055A4 RID: 21924 RVA: 0x000D1DB3 File Offset: 0x000CFFB3
+		// Token: 0x06005B20 RID: 23328 RVA: 0x000DDF5B File Offset: 0x000DC15B
 		public static ICompareVarInChildQuest CreateFromSetValue([Nullable(2)] ICompareVarInChildQuest_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060055A5 RID: 21925 RVA: 0x000D1DC6 File Offset: 0x000CFFC6
+		// Token: 0x06005B21 RID: 23329 RVA: 0x000DDF6E File Offset: 0x000DC16E
 		public ICompareVarInChildQuest_SetValue ToSetValue()
 		{
 			return new ICompareVarInChildQuest_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CA2 RID: 7330
-		// (get) Token: 0x060055A6 RID: 21926 RVA: 0x000D1DF1 File Offset: 0x000CFFF1
-		// (set) Token: 0x060055A7 RID: 21927 RVA: 0x000D1E18 File Offset: 0x000D0018
+		// Token: 0x17001E3A RID: 7738
+		// (get) Token: 0x06005B22 RID: 23330 RVA: 0x000DDF99 File Offset: 0x000DC199
+		// (set) Token: 0x06005B23 RID: 23331 RVA: 0x000DDFC0 File Offset: 0x000DC1C0
 		public virtual VarRef Var1
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CA3 RID: 7331
-		// (get) Token: 0x060055A8 RID: 21928 RVA: 0x000D1E26 File Offset: 0x000D0026
-		// (set) Token: 0x060055A9 RID: 21929 RVA: 0x000D1E51 File Offset: 0x000D0051
+		// Token: 0x17001E3B RID: 7739
+		// (get) Token: 0x06005B24 RID: 23332 RVA: 0x000DDFCE File Offset: 0x000DC1CE
+		// (set) Token: 0x06005B25 RID: 23333 RVA: 0x000DDFF9 File Offset: 0x000DC1F9
 		public virtual ECompare Compare
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CA4 RID: 7332
-		// (get) Token: 0x060055AA RID: 21930 RVA: 0x000D1E5F File Offset: 0x000D005F
-		// (set) Token: 0x060055AB RID: 21931 RVA: 0x000D1E86 File Offset: 0x000D0086
+		// Token: 0x17001E3C RID: 7740
+		// (get) Token: 0x06005B26 RID: 23334 RVA: 0x000DE007 File Offset: 0x000DC207
+		// (set) Token: 0x06005B27 RID: 23335 RVA: 0x000DE02E File Offset: 0x000DC22E
 		public virtual VarRef Var2
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033D1 RID: 13265
+		// Token: 0x040036DE RID: 14046
 		[Nullable(2)]
 		protected ICompareVarInChildQuest FbInstance;
 
-		// Token: 0x040033D2 RID: 13266
+		// Token: 0x040036DF RID: 14047
 		[Nullable(2)]
 		protected ICompareVarInChildQuest_SetValue PocoInterface;
 	}

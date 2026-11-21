@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D5E RID: 7518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F6F RID: 8047
 	public class IPromptStyleBase
 	{
-		// Token: 0x0600A143 RID: 41283 RVA: 0x0016F790 File Offset: 0x0016D990
+		// Token: 0x0600AB2F RID: 43823 RVA: 0x00183BB4 File Offset: 0x00181DB4
 		private IPromptStyleBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A144 RID: 41284 RVA: 0x0016F7C8 File Offset: 0x0016D9C8
+		// Token: 0x0600AB30 RID: 43824 RVA: 0x00183BEC File Offset: 0x00181DEC
 		public static IPromptStyleBase Create([Nullable(2)] IPromptStyleBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A145 RID: 41285 RVA: 0x0016F7DB File Offset: 0x0016D9DB
+		// Token: 0x0600AB31 RID: 43825 RVA: 0x00183BFF File Offset: 0x00181DFF
 		public static IPromptStyleBase CreateFromSetValue([Nullable(2)] IPromptStyleBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A146 RID: 41286 RVA: 0x0016F7EE File Offset: 0x0016D9EE
+		// Token: 0x0600AB32 RID: 43826 RVA: 0x00183C12 File Offset: 0x00181E12
 		public IPromptStyleBase_SetValue ToSetValue()
 		{
 			return new IPromptStyleBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031EB RID: 12779
-		// (get) Token: 0x0600A147 RID: 41287 RVA: 0x0016F801 File Offset: 0x0016DA01
-		// (set) Token: 0x0600A148 RID: 41288 RVA: 0x0016F82C File Offset: 0x0016DA2C
+		// Token: 0x1700347F RID: 13439
+		// (get) Token: 0x0600AB33 RID: 43827 RVA: 0x00183C25 File Offset: 0x00181E25
+		// (set) Token: 0x0600AB34 RID: 43828 RVA: 0x00183C50 File Offset: 0x00181E50
 		public virtual EPromptStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006112 RID: 24850
+		// Token: 0x0400668E RID: 26254
 		[Nullable(2)]
 		protected IPromptStyleBase FbInstance;
 
-		// Token: 0x04006113 RID: 24851
+		// Token: 0x0400668F RID: 26255
 		[Nullable(2)]
 		protected IPromptStyleBase_SetValue PocoInterface;
 	}

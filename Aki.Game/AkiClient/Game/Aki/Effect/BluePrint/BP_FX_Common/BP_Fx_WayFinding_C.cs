@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common
 {
-	// Token: 0x02003E81 RID: 16001
+	// Token: 0x0200340A RID: 13322
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Effect/BluePrint/BP_FX_Common/BP_Fx_WayFinding.BP_Fx_WayFinding_C")]
 	[UnrealStructLayout(1488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1484)]
 	public class BP_Fx_WayFinding_C : AKuroBPActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602864B RID: 165451 RVA: 0x009AB5BD File Offset: 0x009A97BD
+		// Token: 0x06021DAB RID: 138667 RVA: 0x0096D34F File Offset: 0x0096B54F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_Fx_WayFinding_C._ClassPtr == IntPtr.Zero)
@@ -25,157 +25,152 @@ namespace AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common
 			return BP_Fx_WayFinding_C._ClassPtr;
 		}
 
-		// Token: 0x0602864C RID: 165452 RVA: 0x009AB5E4 File Offset: 0x009A97E4
+		// Token: 0x06021DAC RID: 138668 RVA: 0x0096D374 File Offset: 0x0096B574
 		public BP_Fx_WayFinding_C() : this(BuiltinUtils.AllocNativeUObject(BP_Fx_WayFinding_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602864D RID: 165453 RVA: 0x009AB60C File Offset: 0x009A980C
+		// Token: 0x06021DAD RID: 138669 RVA: 0x0096D39C File Offset: 0x0096B59C
 		[NullableContext(1)]
 		public BP_Fx_WayFinding_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_Fx_WayFinding_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D8A RID: 23946
-		// (get) Token: 0x0602864E RID: 165454 RVA: 0x009AB63F File Offset: 0x009A983F
-		// (set) Token: 0x0602864F RID: 165455 RVA: 0x009AB653 File Offset: 0x009A9853
+		// Token: 0x1700465D RID: 18013
+		// (get) Token: 0x06021DAE RID: 138670 RVA: 0x0096D3CF File Offset: 0x0096B5CF
+		// (set) Token: 0x06021DAF RID: 138671 RVA: 0x0096D3E3 File Offset: 0x0096B5E3
 		public unsafe UNiagaraComponent NS_Fx_WayFinding
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_NS_Fx_WayFinding);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_NS_Fx_WayFinding, value);
 			}
 		}
 
-		// Token: 0x17005D8B RID: 23947
-		// (get) Token: 0x06028650 RID: 165456 RVA: 0x009AB668 File Offset: 0x009A9868
-		// (set) Token: 0x06028651 RID: 165457 RVA: 0x009AB67C File Offset: 0x009A987C
+		// Token: 0x1700465E RID: 18014
+		// (get) Token: 0x06021DB0 RID: 138672 RVA: 0x0096D3F8 File Offset: 0x0096B5F8
+		// (set) Token: 0x06021DB1 RID: 138673 RVA: 0x0096D40C File Offset: 0x0096B60C
 		public unsafe USplineComponent Spline
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USplineComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USplineComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_Spline);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_WayFinding_C.__PropertyOffset_Spline, value);
 			}
 		}
 
-		// Token: 0x17005D8C RID: 23948
-		// (get) Token: 0x06028652 RID: 165458 RVA: 0x009AB691 File Offset: 0x009A9891
-		// (set) Token: 0x06028653 RID: 165459 RVA: 0x009AB6A1 File Offset: 0x009A98A1
+		// Token: 0x1700465F RID: 18015
+		// (get) Token: 0x06021DB2 RID: 138674 RVA: 0x0096D421 File Offset: 0x0096B621
+		// (set) Token: 0x06021DB3 RID: 138675 RVA: 0x0096D431 File Offset: 0x0096B631
 		public unsafe float Distance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_Distance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_Distance) = value;
 			}
 		}
 
-		// Token: 0x17005D8D RID: 23949
-		// (get) Token: 0x06028654 RID: 165460 RVA: 0x009AB6B2 File Offset: 0x009A98B2
-		// (set) Token: 0x06028655 RID: 165461 RVA: 0x009AB6C2 File Offset: 0x009A98C2
+		// Token: 0x17004660 RID: 18016
+		// (get) Token: 0x06021DB4 RID: 138676 RVA: 0x0096D442 File Offset: 0x0096B642
+		// (set) Token: 0x06021DB5 RID: 138677 RVA: 0x0096D452 File Offset: 0x0096B652
 		public unsafe int MinFragmentsNum
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_MinFragmentsNum);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_MinFragmentsNum) = value;
 			}
 		}
 
-		// Token: 0x17005D8E RID: 23950
-		// (get) Token: 0x06028656 RID: 165462 RVA: 0x009AB6D3 File Offset: 0x009A98D3
-		// (set) Token: 0x06028657 RID: 165463 RVA: 0x009AB6E3 File Offset: 0x009A98E3
+		// Token: 0x17004661 RID: 18017
+		// (get) Token: 0x06021DB6 RID: 138678 RVA: 0x0096D463 File Offset: 0x0096B663
+		// (set) Token: 0x06021DB7 RID: 138679 RVA: 0x0096D473 File Offset: 0x0096B673
 		public unsafe bool Deactivating
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_Deactivating) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_Deactivating) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005D8F RID: 23951
-		// (get) Token: 0x06028658 RID: 165464 RVA: 0x009AB6F4 File Offset: 0x009A98F4
-		// (set) Token: 0x06028659 RID: 165465 RVA: 0x009AB704 File Offset: 0x009A9904
+		// Token: 0x17004662 RID: 18018
+		// (get) Token: 0x06021DB8 RID: 138680 RVA: 0x0096D484 File Offset: 0x0096B684
+		// (set) Token: 0x06021DB9 RID: 138681 RVA: 0x0096D494 File Offset: 0x0096B694
 		public unsafe float DeactiveAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_DeactiveAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_DeactiveAlpha) = value;
 			}
 		}
 
-		// Token: 0x17005D90 RID: 23952
-		// (get) Token: 0x0602865A RID: 165466 RVA: 0x009AB715 File Offset: 0x009A9915
-		// (set) Token: 0x0602865B RID: 165467 RVA: 0x009AB725 File Offset: 0x009A9925
+		// Token: 0x17004663 RID: 18019
+		// (get) Token: 0x06021DBA RID: 138682 RVA: 0x0096D4A5 File Offset: 0x0096B6A5
+		// (set) Token: 0x06021DBB RID: 138683 RVA: 0x0096D4B5 File Offset: 0x0096B6B5
 		public unsafe float DeactiveAlphaSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_DeactiveAlphaSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_Fx_WayFinding_C.__PropertyOffset_DeactiveAlphaSpeed) = value;
 			}
 		}
 
-		// Token: 0x0602865C RID: 165468 RVA: 0x009AB736 File Offset: 0x009A9936
+		// Token: 0x06021DBC RID: 138684 RVA: 0x0096D4C6 File Offset: 0x0096B6C6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void StopEffect()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Fx_WayFinding_C.__StopEffect_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602865D RID: 165469 RVA: 0x009AB74A File Offset: 0x009A994A
+		// Token: 0x06021DBD RID: 138685 RVA: 0x0096D4DA File Offset: 0x0096B6DA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void EnsureEffect()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Fx_WayFinding_C.__EnsureEffect_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602865E RID: 165470 RVA: 0x009AB75E File Offset: 0x009A995E
+		// Token: 0x06021DBE RID: 138686 RVA: 0x0096D4EE File Offset: 0x0096B6EE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Fx_WayFinding_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602865F RID: 165471 RVA: 0x009AB772 File Offset: 0x009A9972
+		// Token: 0x06021DBF RID: 138687 RVA: 0x0096D502 File Offset: 0x0096B702
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Fx_WayFinding_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Fx_WayFinding_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06028660 RID: 165472 RVA: 0x009AB788 File Offset: 0x009A9988
+		// Token: 0x06021DC0 RID: 138688 RVA: 0x0096D518 File Offset: 0x0096B718
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_Fx_WayFinding_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Fx_WayFinding_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Fx_WayFinding_C.__ReceiveTick_FunctionParams) & -16L;
@@ -184,72 +179,71 @@ namespace AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Fx_WayFinding_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06028661 RID: 165473 RVA: 0x009AB7D0 File Offset: 0x009A99D0
+		// Token: 0x06021DC1 RID: 138689 RVA: 0x0096D560 File Offset: 0x0096B760
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_Fx_WayFinding_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Fx_WayFinding_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Fx_WayFinding_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Fx_WayFinding_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Fx_WayFinding_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Fx_WayFinding_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06028662 RID: 165474 RVA: 0x009AB817 File Offset: 0x009A9A17
+		// Token: 0x06021DC2 RID: 138690 RVA: 0x0096D5A6 File Offset: 0x0096B7A6
 		protected BP_Fx_WayFinding_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401496C RID: 84332
+		// Token: 0x04012AD3 RID: 76499
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Effect/BluePrint/BP_FX_Common/BP_Fx_WayFinding.BP_Fx_WayFinding_C";
 
-		// Token: 0x0401496D RID: 84333
+		// Token: 0x04012AD4 RID: 76500
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401496E RID: 84334
+		// Token: 0x04012AD5 RID: 76501
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401496F RID: 84335
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012AD6 RID: 76502
+		internal static int __PropertyOffset_NS_Fx_WayFinding;
 
-		// Token: 0x04014970 RID: 84336
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012AD7 RID: 76503
+		internal static int __PropertyOffset_Spline;
 
-		// Token: 0x04014971 RID: 84337
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012AD8 RID: 76504
+		internal static int __PropertyOffset_Distance;
 
-		// Token: 0x04014972 RID: 84338
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012AD9 RID: 76505
+		internal static int __PropertyOffset_MinFragmentsNum;
 
-		// Token: 0x04014973 RID: 84339
-		internal static int __PropertyOffset_5;
+		// Token: 0x04012ADA RID: 76506
+		internal static int __PropertyOffset_Deactivating;
 
-		// Token: 0x04014974 RID: 84340
-		internal static int __PropertyOffset_6;
+		// Token: 0x04012ADB RID: 76507
+		internal static int __PropertyOffset_DeactiveAlpha;
 
-		// Token: 0x04014975 RID: 84341
-		internal static int __PropertyOffset_7;
+		// Token: 0x04012ADC RID: 76508
+		internal static int __PropertyOffset_DeactiveAlphaSpeed;
 
-		// Token: 0x04014976 RID: 84342
+		// Token: 0x04012ADD RID: 76509
 		private static IntPtr __StopEffect_NativeFunctionPtr;
 
-		// Token: 0x04014977 RID: 84343
+		// Token: 0x04012ADE RID: 76510
 		private static IntPtr __EnsureEffect_NativeFunctionPtr;
 
-		// Token: 0x04014978 RID: 84344
+		// Token: 0x04012ADF RID: 76511
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04014979 RID: 84345
+		// Token: 0x04012AE0 RID: 76512
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0200A2D7 RID: 41687
+		// Token: 0x020090FC RID: 37116
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403201A RID: 204826
+			// Token: 0x0402CFDA RID: 184282
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

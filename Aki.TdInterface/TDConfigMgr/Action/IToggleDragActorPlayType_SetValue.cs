@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD1 RID: 8145
+	// Token: 0x02002216 RID: 8726
 	public class IToggleDragActorPlayType_SetValue
 	{
-		// Token: 0x04006C24 RID: 27684
+		// Token: 0x04007223 RID: 29219
 		public EToggleDragActorPlayType Type;
 	}
 }

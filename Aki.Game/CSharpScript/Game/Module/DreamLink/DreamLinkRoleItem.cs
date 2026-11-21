@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,11 +9,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AAC RID: 23212
+	// Token: 0x02004A88 RID: 19080
 	public class DreamLinkRoleItem : UiPanelBase
 	{
-		// Token: 0x17008C15 RID: 35861
-		// (get) Token: 0x0603ACCC RID: 240844 RVA: 0x00E026A7 File Offset: 0x00E008A7
+		// Token: 0x17005FE3 RID: 24547
+		// (get) Token: 0x0602FC18 RID: 195608 RVA: 0x00D52C53 File Offset: 0x00D50E53
 		protected int RoleId
 		{
 			get
@@ -23,14 +22,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ACCD RID: 240845 RVA: 0x00E026C0 File Offset: 0x00E008C0
+		// Token: 0x0602FC19 RID: 195609 RVA: 0x00D52C6C File Offset: 0x00D50E6C
 		[NullableContext(1)]
 		public DreamLinkRoleItem(DreamLinkData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603ACCE RID: 240846 RVA: 0x00E026D0 File Offset: 0x00E008D0
+		// Token: 0x0602FC1A RID: 195610 RVA: 0x00D52C7C File Offset: 0x00D50E7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ACCF RID: 240847 RVA: 0x00E027B8 File Offset: 0x00E009B8
+		// Token: 0x0602FC1B RID: 195611 RVA: 0x00D52D64 File Offset: 0x00D50F64
 		private void OnClickRole()
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(this.InstId);
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			RoleController.Instance.OpenTeamRoleSelectView(teamRoleSelectViewData);
 		}
 
-		// Token: 0x0603ACD0 RID: 240848 RVA: 0x00E029F4 File Offset: 0x00E00BF4
+		// Token: 0x0602FC1C RID: 195612 RVA: 0x00D52FA0 File Offset: 0x00D511A0
 		private void OnSelectBack()
 		{
 			List<int> allBossRoleId = this.ActivityBaseData.GetAllBossRoleId(this.InstId);
@@ -158,27 +157,36 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603ACD1 RID: 240849 RVA: 0x00E02A7C File Offset: 0x00E00C7C
+		// Token: 0x0602FC1D RID: 195613 RVA: 0x00D53028 File Offset: 0x00D51228
 		private bool IsNeedRevive(int roleConfigId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleConfigId, true);
 			return !((roleDataById != null) ? new bool?(roleDataById.IsTrialRole()) : null).GetValueOrDefault() && FormationModel.Instance.IsRoleDead(roleConfigId);
 		}
 
-		// Token: 0x0603ACD2 RID: 240850 RVA: 0x00E02AC8 File Offset: 0x00E00CC8
+		// Token: 0x0602FC1E RID: 195614 RVA: 0x00D53074 File Offset: 0x00D51274
 		private bool CanJoinTeam(int roleId)
 		{
 			if (roleId == this.RoleId)
 			{
 				return true;
 			}
-			IReadOnlyList<BattleLinkCharacter> source = DreamLinkConfig.Instance.GetRoleConfigList() ?? Array.Empty<BattleLinkCharacter>();
+			IReadOnlyList<BattleLinkCharacter> readOnlyList = DreamLinkConfig.Instance.GetRoleConfigList() ?? Array.Empty<BattleLinkCharacter>();
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
 			if (FormationModel.Instance.IsRoleDead(roleId) && (roleDataById == null || !roleDataById.IsTrialRole()))
 			{
 				return false;
 			}
-			if (!source.Any((BattleLinkCharacter roleConfig) => roleConfig.Id == roleId && roleConfig.IsShowInTeamView) && (roleDataById == null || !roleDataById.IsTrialRole()))
+			bool flag = false;
+			foreach (BattleLinkCharacter battleLinkCharacter in readOnlyList)
+			{
+				if (battleLinkCharacter.Id == roleId && battleLinkCharacter.IsShowInTeamView)
+				{
+					flag = true;
+					break;
+				}
+			}
+			if (!flag && (roleDataById == null || !roleDataById.IsTrialRole()))
 			{
 				return false;
 			}
@@ -206,7 +214,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return true;
 		}
 
-		// Token: 0x0603ACD3 RID: 240851 RVA: 0x00E02C0D File Offset: 0x00E00E0D
+		// Token: 0x0602FC1F RID: 195615 RVA: 0x00D531D8 File Offset: 0x00D513D8
 		[NullableContext(2)]
 		private string GetConfirmButtonTextFunction(int roleConfigId)
 		{
@@ -225,14 +233,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			return "ChangeText";
 		}
 
-		// Token: 0x0603ACD4 RID: 240852 RVA: 0x00E02C36 File Offset: 0x00E00E36
+		// Token: 0x0602FC20 RID: 195616 RVA: 0x00D53201 File Offset: 0x00D51401
 		public void RefreshInstId(int instId)
 		{
 			this.InstId = instId;
 			this.Refresh();
 		}
 
-		// Token: 0x0603ACD5 RID: 240853 RVA: 0x00E02C48 File Offset: 0x00E00E48
+		// Token: 0x0602FC21 RID: 195617 RVA: 0x00D53210 File Offset: 0x00D51410
 		public void Refresh()
 		{
 			int roleId = this.RoleId;
@@ -276,33 +284,33 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0401EB01 RID: 125697
+		// Token: 0x040195A8 RID: 103848
 		public int Index;
 
-		// Token: 0x0401EB02 RID: 125698
+		// Token: 0x040195A9 RID: 103849
 		protected int InstId;
 
-		// Token: 0x0401EB03 RID: 125699
+		// Token: 0x040195AA RID: 103850
 		[Nullable(2)]
 		public Action RefreshHandle;
 
-		// Token: 0x0401EB04 RID: 125700
+		// Token: 0x040195AB RID: 103851
 		[Nullable(1)]
 		protected DreamLinkData ActivityBaseData;
 
-		// Token: 0x0200BCF7 RID: 48375
+		// Token: 0x0200A700 RID: 42752
 		private class EItemDefine
 		{
-			// Token: 0x04038FDA RID: 233434
+			// Token: 0x040339A5 RID: 211365
 			public const int ButtonRole = 0;
 
-			// Token: 0x04038FDB RID: 233435
+			// Token: 0x040339A6 RID: 211366
 			public const int TextureRole = 1;
 
-			// Token: 0x04038FDC RID: 233436
+			// Token: 0x040339A7 RID: 211367
 			public const int PanelEmpty = 2;
 
-			// Token: 0x04038FDD RID: 233437
+			// Token: 0x040339A8 RID: 211368
 			public const int PanelRole = 3;
 		}
 	}

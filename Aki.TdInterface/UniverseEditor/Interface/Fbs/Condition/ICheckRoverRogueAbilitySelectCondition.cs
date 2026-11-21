@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B20 RID: 19232
+	// Token: 0x02005007 RID: 20487
 	public struct ICheckRoverRogueAbilitySelectCondition : IFlatbufferObject
 	{
-		// Token: 0x17008B7D RID: 35709
-		// (get) Token: 0x0601E3FC RID: 123900 RVA: 0x0043D762 File Offset: 0x0043B962
+		// Token: 0x1700928D RID: 37517
+		// (get) Token: 0x0601FF87 RID: 130951 RVA: 0x0046FF0E File Offset: 0x0046E10E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E3FD RID: 123901 RVA: 0x0043D76F File Offset: 0x0043B96F
+		// Token: 0x0601FF88 RID: 130952 RVA: 0x0046FF1B File Offset: 0x0046E11B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E3FE RID: 123902 RVA: 0x0043D778 File Offset: 0x0043B978
+		// Token: 0x0601FF89 RID: 130953 RVA: 0x0046FF24 File Offset: 0x0046E124
 		public static ICheckRoverRogueAbilitySelectCondition GetRootAsICheckRoverRogueAbilitySelectCondition(ByteBuffer _bb)
 		{
 			return ICheckRoverRogueAbilitySelectCondition.GetRootAsICheckRoverRogueAbilitySelectCondition(_bb, default(ICheckRoverRogueAbilitySelectCondition));
 		}
 
-		// Token: 0x0601E3FF RID: 123903 RVA: 0x0043D794 File Offset: 0x0043B994
+		// Token: 0x0601FF8A RID: 130954 RVA: 0x0046FF40 File Offset: 0x0046E140
 		public static ICheckRoverRogueAbilitySelectCondition GetRootAsICheckRoverRogueAbilitySelectCondition(ByteBuffer _bb, ICheckRoverRogueAbilitySelectCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E400 RID: 123904 RVA: 0x0043D7B1 File Offset: 0x0043B9B1
+		// Token: 0x0601FF8B RID: 130955 RVA: 0x0046FF5D File Offset: 0x0046E15D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E401 RID: 123905 RVA: 0x0043D7C0 File Offset: 0x0043B9C0
+		// Token: 0x0601FF8C RID: 130956 RVA: 0x0046FF6C File Offset: 0x0046E16C
 		public ICheckRoverRogueAbilitySelectCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B7E RID: 35710
-		// (get) Token: 0x0601E402 RID: 123906 RVA: 0x0043D7D0 File Offset: 0x0043B9D0
+		// Token: 0x1700928E RID: 37518
+		// (get) Token: 0x0601FF8D RID: 130957 RVA: 0x0046FF7C File Offset: 0x0046E17C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B7F RID: 35711
-		// (get) Token: 0x0601E403 RID: 123907 RVA: 0x0043D80C File Offset: 0x0043BA0C
+		// Token: 0x1700928F RID: 37519
+		// (get) Token: 0x0601FF8E RID: 130958 RVA: 0x0046FFB8 File Offset: 0x0046E1B8
 		public ERoverRogueAbilitySelectType SelectType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B80 RID: 35712
-		// (get) Token: 0x0601E404 RID: 123908 RVA: 0x0043D848 File Offset: 0x0043BA48
+		// Token: 0x17009290 RID: 37520
+		// (get) Token: 0x0601FF8F RID: 130959 RVA: 0x0046FFF4 File Offset: 0x0046E1F4
 		public bool IsReceived
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E405 RID: 123909 RVA: 0x0043D887 File Offset: 0x0043BA87
+		// Token: 0x0601FF90 RID: 130960 RVA: 0x00470033 File Offset: 0x0046E233
 		public static Offset<ICheckRoverRogueAbilitySelectCondition> CreateICheckRoverRogueAbilitySelectCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ERoverRogueAbilitySelectType SelectType = ERoverRogueAbilitySelectType.Shop, bool IsReceived = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckRoverRogueAbilitySelectCondition.EndICheckRoverRogueAbilitySelectCondition(builder);
 		}
 
-		// Token: 0x0601E406 RID: 123910 RVA: 0x0043D8AB File Offset: 0x0043BAAB
+		// Token: 0x0601FF91 RID: 130961 RVA: 0x00470057 File Offset: 0x0046E257
 		public static void StartICheckRoverRogueAbilitySelectCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E407 RID: 123911 RVA: 0x0043D8B4 File Offset: 0x0043BAB4
+		// Token: 0x0601FF92 RID: 130962 RVA: 0x00470060 File Offset: 0x0046E260
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E408 RID: 123912 RVA: 0x0043D8BF File Offset: 0x0043BABF
+		// Token: 0x0601FF93 RID: 130963 RVA: 0x0047006B File Offset: 0x0046E26B
 		public static void AddSelectType(FlatBufferBuilder builder, ERoverRogueAbilitySelectType selectType)
 		{
 			builder.AddByte(1, (byte)selectType, 0);
 		}
 
-		// Token: 0x0601E409 RID: 123913 RVA: 0x0043D8CA File Offset: 0x0043BACA
+		// Token: 0x0601FF94 RID: 130964 RVA: 0x00470076 File Offset: 0x0046E276
 		public static void AddIsReceived(FlatBufferBuilder builder, bool isReceived)
 		{
 			builder.AddBool(2, isReceived, false);
 		}
 
-		// Token: 0x0601E40A RID: 123914 RVA: 0x0043D8D5 File Offset: 0x0043BAD5
+		// Token: 0x0601FF95 RID: 130965 RVA: 0x00470081 File Offset: 0x0046E281
 		public static Offset<ICheckRoverRogueAbilitySelectCondition> EndICheckRoverRogueAbilitySelectCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckRoverRogueAbilitySelectCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E40B RID: 123915 RVA: 0x0043D8E4 File Offset: 0x0043BAE4
+		// Token: 0x0601FF96 RID: 130966 RVA: 0x00470090 File Offset: 0x0046E290
 		public ICheckRoverRogueAbilitySelectConditionT UnPack()
 		{
 			ICheckRoverRogueAbilitySelectConditionT checkRoverRogueAbilitySelectConditionT = new ICheckRoverRogueAbilitySelectConditionT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkRoverRogueAbilitySelectConditionT;
 		}
 
-		// Token: 0x0601E40C RID: 123916 RVA: 0x0043D8FF File Offset: 0x0043BAFF
+		// Token: 0x0601FF97 RID: 130967 RVA: 0x004700AB File Offset: 0x0046E2AB
 		public void UnPackTo(ICheckRoverRogueAbilitySelectConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsReceived = this.IsReceived;
 		}
 
-		// Token: 0x0601E40D RID: 123917 RVA: 0x0043D928 File Offset: 0x0043BB28
+		// Token: 0x0601FF98 RID: 130968 RVA: 0x004700D4 File Offset: 0x0046E2D4
 		public static Offset<ICheckRoverRogueAbilitySelectCondition> Pack(FlatBufferBuilder builder, ICheckRoverRogueAbilitySelectConditionT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckRoverRogueAbilitySelectCondition.CreateICheckRoverRogueAbilitySelectCondition(builder, _o.Type, _o.SelectType, _o.IsReceived);
 		}
 
-		// Token: 0x0400D3C0 RID: 54208
+		// Token: 0x0400DEBF RID: 57023
 		private Table __p;
 	}
 }

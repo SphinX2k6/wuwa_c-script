@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EE6 RID: 20198
+	// Token: 0x02003EAF RID: 16047
 	public class RogueBattleFallbackView : UiViewBase
 	{
-		// Token: 0x06033D5D RID: 212317 RVA: 0x00C23EFF File Offset: 0x00C220FF
+		// Token: 0x06028BC8 RID: 166856 RVA: 0x00B6D4A7 File Offset: 0x00B6B6A7
 		[NullableContext(1)]
 		public RogueBattleFallbackView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033D5E RID: 212318 RVA: 0x00C23F08 File Offset: 0x00C22108
+		// Token: 0x06028BC9 RID: 166857 RVA: 0x00B6D4B0 File Offset: 0x00B6B6B0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D5F RID: 212319 RVA: 0x00C23FE1 File Offset: 0x00C221E1
+		// Token: 0x06028BCA RID: 166858 RVA: 0x00B6D589 File Offset: 0x00B6B789
 		private void OnBtnHelp()
 		{
 		}
 
-		// Token: 0x06033D60 RID: 212320 RVA: 0x00C23FE3 File Offset: 0x00C221E3
+		// Token: 0x06028BCB RID: 166859 RVA: 0x00B6D58B File Offset: 0x00B6B78B
 		private void OnBtnExit()
 		{
 			((MapRogueOpFallback)MapRogueModel.Instance.GetOpData((int)this.OpenParam)).OpExecuteClientId = 0;
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06033D61 RID: 212321 RVA: 0x00C24022 File Offset: 0x00C22222
+		// Token: 0x06028BCC RID: 166860 RVA: 0x00B6D5CA File Offset: 0x00B6B7CA
 		private void OnBtnBackToMap()
 		{
 			((MapRogueOpFallback)MapRogueModel.Instance.GetOpData((int)this.OpenParam)).OpExecuteClientId = 1;
 			MapRogueModel.Instance.ExecuteOpData((int)this.OpenParam, null);
 		}
 
-		// Token: 0x06033D62 RID: 212322 RVA: 0x00C2405C File Offset: 0x00C2225C
+		// Token: 0x06028BCD RID: 166861 RVA: 0x00B6D604 File Offset: 0x00B6B804
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleFallbackView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;

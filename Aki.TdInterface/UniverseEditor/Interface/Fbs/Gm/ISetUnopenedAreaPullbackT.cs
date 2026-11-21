@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004694 RID: 18068
+	// Token: 0x02004AFC RID: 19196
 	public class ISetUnopenedAreaPullbackT
 	{
-		// Token: 0x17008045 RID: 32837
-		// (get) Token: 0x0601B6F5 RID: 112373 RVA: 0x003E5A30 File Offset: 0x003E3C30
-		// (set) Token: 0x0601B6F6 RID: 112374 RVA: 0x003E5A38 File Offset: 0x003E3C38
+		// Token: 0x17008686 RID: 34438
+		// (get) Token: 0x0601CECA RID: 118474 RVA: 0x00411CCC File Offset: 0x0040FECC
+		// (set) Token: 0x0601CECB RID: 118475 RVA: 0x00411CD4 File Offset: 0x0040FED4
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17008046 RID: 32838
-		// (get) Token: 0x0601B6F7 RID: 112375 RVA: 0x003E5A41 File Offset: 0x003E3C41
-		// (set) Token: 0x0601B6F8 RID: 112376 RVA: 0x003E5A49 File Offset: 0x003E3C49
+		// Token: 0x17008687 RID: 34439
+		// (get) Token: 0x0601CECC RID: 118476 RVA: 0x00411CDD File Offset: 0x0040FEDD
+		// (set) Token: 0x0601CECD RID: 118477 RVA: 0x00411CE5 File Offset: 0x0040FEE5
 		public bool IsOpen { get; set; }
 
-		// Token: 0x0601B6F9 RID: 112377 RVA: 0x003E5A52 File Offset: 0x003E3C52
+		// Token: 0x0601CECE RID: 118478 RVA: 0x00411CEE File Offset: 0x0040FEEE
 		public ISetUnopenedAreaPullbackT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

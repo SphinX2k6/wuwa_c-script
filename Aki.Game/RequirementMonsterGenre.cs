@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F16 RID: 12054
+// Token: 0x02002469 RID: 9321
 [RequiredMember]
 public class RequirementMonsterGenre : IRequirement
 {
-	// Token: 0x170023A6 RID: 9126
-	// (get) Token: 0x06019B5D RID: 105309 RVA: 0x006B1B63 File Offset: 0x006AFD63
+	// Token: 0x17002468 RID: 9320
+	// (get) Token: 0x06017468 RID: 95336 RVA: 0x006D7E7B File Offset: 0x006D607B
 	public EExtraEffectRequire Type
 	{
 		get
@@ -15,18 +15,18 @@ public class RequirementMonsterGenre : IRequirement
 		}
 	}
 
-	// Token: 0x06019B5E RID: 105310 RVA: 0x006B1B67 File Offset: 0x006AFD67
+	// Token: 0x06017469 RID: 95337 RVA: 0x006D7E7F File Offset: 0x006D607F
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public RequirementMonsterGenre()
 	{
 	}
 
-	// Token: 0x0400C17E RID: 49534
+	// Token: 0x0400C520 RID: 50464
 	[RequiredMember]
 	public ERequirementTargetType RequireTargetType;
 
-	// Token: 0x0400C17F RID: 49535
+	// Token: 0x0400C521 RID: 50465
 	[Nullable(1)]
 	[RequiredMember]
 	public int[] MonsterGenres;

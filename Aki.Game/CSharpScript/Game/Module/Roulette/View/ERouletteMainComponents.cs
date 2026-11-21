@@ -2,25 +2,25 @@
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C9F RID: 19615
+	// Token: 0x02003C50 RID: 15440
 	public class ERouletteMainComponents
 	{
-		// Token: 0x0401AFD6 RID: 110550
+		// Token: 0x04015937 RID: 88375
 		public const int RouletteItem = 0;
 
-		// Token: 0x0401AFD7 RID: 110551
+		// Token: 0x04015938 RID: 88376
 		public const int PanelSwitch = 1;
 
-		// Token: 0x0401AFD8 RID: 110552
+		// Token: 0x04015939 RID: 88377
 		public const int ToggleExplore = 2;
 
-		// Token: 0x0401AFD9 RID: 110553
+		// Token: 0x0401593A RID: 88378
 		public const int ToggleFunction = 3;
 
-		// Token: 0x0401AFDA RID: 110554
+		// Token: 0x0401593B RID: 88379
 		public const int TxtTips = 4;
 
-		// Token: 0x0401AFDB RID: 110555
+		// Token: 0x0401593C RID: 88380
 		public const int PanelKey = 5;
 	}
 }

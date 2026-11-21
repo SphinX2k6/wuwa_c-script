@@ -10,30 +10,30 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006911 RID: 26897
+	// Token: 0x02005861 RID: 22625
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class AnniversaryActivityController : ActivityControllerBase
 	{
-		// Token: 0x0604312A RID: 274730 RVA: 0x010576CA File Offset: 0x010558CA
+		// Token: 0x06037C82 RID: 228482 RVA: 0x00F98CF6 File Offset: 0x00F96EF6
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0604312B RID: 274731 RVA: 0x010576CC File Offset: 0x010558CC
+		// Token: 0x06037C83 RID: 228483 RVA: 0x00F98CF8 File Offset: 0x00F96EF8
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiView_AnniversaryCelebrationMain";
 		}
 
-		// Token: 0x0604312C RID: 274732 RVA: 0x010576D3 File Offset: 0x010558D3
+		// Token: 0x06037C84 RID: 228484 RVA: 0x00F98CFF File Offset: 0x00F96EFF
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new AnniversaryActivitySubView();
 		}
 
-		// Token: 0x0604312D RID: 274733 RVA: 0x010576DA File Offset: 0x010558DA
+		// Token: 0x06037C85 RID: 228485 RVA: 0x00F98D06 File Offset: 0x00F96F06
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.ActivityId = data.Id;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return new AnniversaryActivityData();
 		}
 
-		// Token: 0x0604312E RID: 274734 RVA: 0x010576F4 File Offset: 0x010558F4
+		// Token: 0x06037C86 RID: 228486 RVA: 0x00F98D20 File Offset: 0x00F96F20
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0604312F RID: 274735 RVA: 0x010576F8 File Offset: 0x010558F8
+		// Token: 0x06037C87 RID: 228487 RVA: 0x00F98D24 File Offset: 0x00F96F24
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.WorldDone));
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06043130 RID: 274736 RVA: 0x0105775C File Offset: 0x0105595C
+		// Token: 0x06037C88 RID: 228488 RVA: 0x00F98D88 File Offset: 0x00F96F88
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.WorldDone));
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06043131 RID: 274737 RVA: 0x010577C0 File Offset: 0x010559C0
+		// Token: 0x06037C89 RID: 228489 RVA: 0x00F98DEC File Offset: 0x00F96FEC
 		public void RequestThemePersonalScore(AnniversaryActivityData data)
 		{
 			List<int> rewardIds = data.GetPersonalCanReceiveRewardIds();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}, 0);
 		}
 
-		// Token: 0x06043132 RID: 274738 RVA: 0x01057870 File Offset: 0x01055A70
+		// Token: 0x06037C8A RID: 228490 RVA: 0x00F98E9C File Offset: 0x00F9709C
 		public void RequestThemeWorldScore(AnniversaryActivityData data)
 		{
 			List<int> rewardIds = data.GetWorldCanReceiveRewardIds();
@@ -125,14 +125,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}, 0);
 		}
 
-		// Token: 0x06043133 RID: 274739 RVA: 0x01057920 File Offset: 0x01055B20
+		// Token: 0x06037C8B RID: 228491 RVA: 0x00F98F4C File Offset: 0x00F9714C
 		private void WorldDone()
 		{
 			this.WorldDoneOnce = true;
 			this.CheckOpenActivity(false);
 		}
 
-		// Token: 0x06043134 RID: 274740 RVA: 0x01057930 File Offset: 0x01055B30
+		// Token: 0x06037C8C RID: 228492 RVA: 0x00F98F5C File Offset: 0x00F9715C
 		private void CacheSubActivityIds()
 		{
 			this.SubActivityIds.Clear();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043135 RID: 274741 RVA: 0x010579A0 File Offset: 0x01055BA0
+		// Token: 0x06037C8D RID: 228493 RVA: 0x00F98FCC File Offset: 0x00F971CC
 		private void OnActivityOpenEvent(IReadOnlySet<int> openActivities)
 		{
 			if (this.ActivityId == 0)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043136 RID: 274742 RVA: 0x01057A14 File Offset: 0x01055C14
+		// Token: 0x06037C8E RID: 228494 RVA: 0x00F99040 File Offset: 0x00F97240
 		private void OnRefreshCommonActivityRedDot(int uid)
 		{
 			if (this.ActivityId == 0 || uid == this.ActivityId)
@@ -186,13 +186,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}, 20f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043137 RID: 274743 RVA: 0x01057A7A File Offset: 0x01055C7A
+		// Token: 0x06037C8F RID: 228495 RVA: 0x00F990A6 File Offset: 0x00F972A6
 		public void SetCheckedOpenActivity(bool value)
 		{
 			this.HadCheckedOpenActivity = value;
 		}
 
-		// Token: 0x06043138 RID: 274744 RVA: 0x01057A84 File Offset: 0x01055C84
+		// Token: 0x06037C90 RID: 228496 RVA: 0x00F990B0 File Offset: 0x00F972B0
 		public void CheckOpenActivity(bool isInstantly = false)
 		{
 			if (PublicUtil.Instance.GetIsSilentLogin())
@@ -238,8 +238,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, isInstantly);
 		}
 
-		// Token: 0x170097E8 RID: 38888
-		// (get) Token: 0x06043139 RID: 274745 RVA: 0x01057B78 File Offset: 0x01055D78
+		// Token: 0x17006B28 RID: 27432
+		// (get) Token: 0x06037C91 RID: 228497 RVA: 0x00F991A4 File Offset: 0x00F973A4
 		public static AnniversaryActivityController Instance
 		{
 			get
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604313A RID: 274746 RVA: 0x01057B7F File Offset: 0x01055D7F
+		// Token: 0x06037C92 RID: 228498 RVA: 0x00F991AB File Offset: 0x00F973AB
 		public static AnniversaryActivityController GetOrCreateInstance()
 		{
 			if (AnniversaryActivityController._Instance == null)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return AnniversaryActivityController._Instance;
 		}
 
-		// Token: 0x0604313B RID: 274747 RVA: 0x01057B93 File Offset: 0x01055D93
+		// Token: 0x06037C93 RID: 228499 RVA: 0x00F991BF File Offset: 0x00F973BF
 		public static bool CreateInstance()
 		{
 			if (AnniversaryActivityController._Instance != null)
@@ -269,36 +269,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return true;
 		}
 
-		// Token: 0x0604313C RID: 274748 RVA: 0x01057BA9 File Offset: 0x01055DA9
+		// Token: 0x06037C94 RID: 228500 RVA: 0x00F991D5 File Offset: 0x00F973D5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604313D RID: 274749 RVA: 0x01057BAB File Offset: 0x01055DAB
+		// Token: 0x06037C95 RID: 228501 RVA: 0x00F991D7 File Offset: 0x00F973D7
 		public static void ResetStaticDefaultValue()
 		{
 			AnniversaryActivityController._Instance = null;
 		}
 
-		// Token: 0x0604313E RID: 274750 RVA: 0x01057BB3 File Offset: 0x01055DB3
+		// Token: 0x06037C96 RID: 228502 RVA: 0x00F991DF File Offset: 0x00F973DF
 		static AnniversaryActivityController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AnniversaryActivityController.CreateStaticDefaultValue), new Action(AnniversaryActivityController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022E92 RID: 142994
+		// Token: 0x0401D6EE RID: 120558
 		private int ActivityId;
 
-		// Token: 0x04022E93 RID: 142995
+		// Token: 0x0401D6EF RID: 120559
 		private bool WorldDoneOnce;
 
-		// Token: 0x04022E94 RID: 142996
+		// Token: 0x0401D6F0 RID: 120560
 		private readonly HashSet<int> SubActivityIds = new HashSet<int>();
 
-		// Token: 0x04022E95 RID: 142997
+		// Token: 0x0401D6F1 RID: 120561
 		private bool HadCheckedOpenActivity;
 
-		// Token: 0x04022E96 RID: 142998
+		// Token: 0x0401D6F2 RID: 120562
 		[Nullable(2)]
 		private static AnniversaryActivityController _Instance;
 	}

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FF2 RID: 4082
+// Token: 0x020004A7 RID: 1191
 public class GolemHackingOpenViewInfo
 {
-	// Token: 0x04003006 RID: 12294
+	// Token: 0x0400309F RID: 12447
 	public int ConfigId;
 
-	// Token: 0x04003007 RID: 12295
+	// Token: 0x040030A0 RID: 12448
 	[Nullable(1)]
 	public Action<bool> CloseCb;
 
-	// Token: 0x04003008 RID: 12296
+	// Token: 0x040030A1 RID: 12449
 	public bool IsMainLevel;
 }

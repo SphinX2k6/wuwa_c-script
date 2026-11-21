@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000920 RID: 2336
+	// Token: 0x020009CD RID: 2509
 	public static class EDetectionFrequencyExtensions
 	{
-		// Token: 0x060034C1 RID: 13505 RVA: 0x00089F8C File Offset: 0x0008818C
+		// Token: 0x0600382D RID: 14381 RVA: 0x00091B0C File Offset: 0x0008FD0C
 		public static string ToEnumString(this EDetectionFrequency value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034C2 RID: 13506 RVA: 0x00089FE0 File Offset: 0x000881E0
+		// Token: 0x0600382E RID: 14382 RVA: 0x00091B60 File Offset: 0x0008FD60
 		public static EDetectionFrequency FromString(string name)
 		{
 			EDetectionFrequency result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034C3 RID: 13507 RVA: 0x0008A00C File Offset: 0x0008820C
+		// Token: 0x0600382F RID: 14383 RVA: 0x00091B8C File Offset: 0x0008FD8C
 		public static bool TryFromString(string name, out EDetectionFrequency value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060034C4 RID: 13508 RVA: 0x0008A074 File Offset: 0x00088274
+		// Token: 0x06003830 RID: 14384 RVA: 0x00091BF4 File Offset: 0x0008FDF4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034C5 RID: 13509 RVA: 0x0008A09C File Offset: 0x0008829C
+		// Token: 0x06003831 RID: 14385 RVA: 0x00091C1C File Offset: 0x0008FE1C
 		public static EDetectionFrequency[] GetValues()
 		{
 			return new EDetectionFrequency[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034C6 RID: 13510 RVA: 0x0008A0AF File Offset: 0x000882AF
+		// Token: 0x06003832 RID: 14386 RVA: 0x00091C2F File Offset: 0x0008FE2F
 		public static string[] GetNames()
 		{
 			return new string[]

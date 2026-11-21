@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025AB RID: 9643
+// Token: 0x02001A96 RID: 6806
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PhotoSnapshotController : ControllerBase
 {
-	// Token: 0x06013859 RID: 79961 RVA: 0x004E0A3C File Offset: 0x004DEC3C
+	// Token: 0x06010D3B RID: 68923 RVA: 0x004EF570 File Offset: 0x004ED770
 	[NullableContext(2)]
 	public PhotoCameraSnapshot GetSessionSnapshot(int modeId)
 	{
@@ -20,13 +20,13 @@ public class PhotoSnapshotController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601385A RID: 79962 RVA: 0x004E0A5C File Offset: 0x004DEC5C
+	// Token: 0x06010D3C RID: 68924 RVA: 0x004EF590 File Offset: 0x004ED790
 	public void SetSessionSnapshot(int modeId, PhotoCameraSnapshot snapshot)
 	{
 		this.ModeSnapShot[modeId] = snapshot;
 	}
 
-	// Token: 0x0601385B RID: 79963 RVA: 0x004E0A6C File Offset: 0x004DEC6C
+	// Token: 0x06010D3D RID: 68925 RVA: 0x004EF5A0 File Offset: 0x004ED7A0
 	public PhotoCameraSnapshot GetOrCreateSessionSnapshot(int modeId)
 	{
 		PhotoCameraSnapshot photoCameraSnapshot = this.GetSessionSnapshot(modeId);
@@ -39,22 +39,22 @@ public class PhotoSnapshotController : ControllerBase
 		return photoCameraSnapshot;
 	}
 
-	// Token: 0x0601385C RID: 79964 RVA: 0x004E0A98 File Offset: 0x004DEC98
+	// Token: 0x06010D3E RID: 68926 RVA: 0x004EF5CC File Offset: 0x004ED7CC
 	public void ClearSession()
 	{
 		this.ModeSnapShot.Clear();
 		Log.Instance.Info(ELogModule.PhotoCamera, ELogAuthor.CXJ, "相机快照:拍照界面缓存已清空", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601385D RID: 79965 RVA: 0x004E0ACF File Offset: 0x004DECCF
+	// Token: 0x06010D3F RID: 68927 RVA: 0x004EF603 File Offset: 0x004ED803
 	protected override bool OnClear()
 	{
 		this.ModeSnapShot.Clear();
 		return true;
 	}
 
-	// Token: 0x17001919 RID: 6425
-	// (get) Token: 0x0601385E RID: 79966 RVA: 0x004E0ADD File Offset: 0x004DECDD
+	// Token: 0x17001953 RID: 6483
+	// (get) Token: 0x06010D40 RID: 68928 RVA: 0x004EF611 File Offset: 0x004ED811
 	public static PhotoSnapshotController Instance
 	{
 		get
@@ -63,7 +63,7 @@ public class PhotoSnapshotController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601385F RID: 79967 RVA: 0x004E0AE4 File Offset: 0x004DECE4
+	// Token: 0x06010D41 RID: 68929 RVA: 0x004EF618 File Offset: 0x004ED818
 	public static PhotoSnapshotController GetOrCreateInstance()
 	{
 		if (PhotoSnapshotController._Instance == null)
@@ -73,7 +73,7 @@ public class PhotoSnapshotController : ControllerBase
 		return PhotoSnapshotController._Instance;
 	}
 
-	// Token: 0x06013860 RID: 79968 RVA: 0x004E0AF8 File Offset: 0x004DECF8
+	// Token: 0x06010D42 RID: 68930 RVA: 0x004EF62C File Offset: 0x004ED82C
 	public static bool CreateInstance()
 	{
 		if (PhotoSnapshotController._Instance != null)
@@ -84,27 +84,27 @@ public class PhotoSnapshotController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013861 RID: 79969 RVA: 0x004E0B0E File Offset: 0x004DED0E
+	// Token: 0x06010D43 RID: 68931 RVA: 0x004EF642 File Offset: 0x004ED842
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013862 RID: 79970 RVA: 0x004E0B10 File Offset: 0x004DED10
+	// Token: 0x06010D44 RID: 68932 RVA: 0x004EF644 File Offset: 0x004ED844
 	public static void ResetStaticDefaultValue()
 	{
 		PhotoSnapshotController._Instance = null;
 	}
 
-	// Token: 0x06013863 RID: 79971 RVA: 0x004E0B18 File Offset: 0x004DED18
+	// Token: 0x06010D45 RID: 68933 RVA: 0x004EF64C File Offset: 0x004ED84C
 	static PhotoSnapshotController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhotoSnapshotController.CreateStaticDefaultValue), new Action(PhotoSnapshotController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009367 RID: 37735
+	// Token: 0x040094BF RID: 38079
 	private readonly Dictionary<int, PhotoCameraSnapshot> ModeSnapShot = new Dictionary<int, PhotoCameraSnapshot>();
 
-	// Token: 0x04009368 RID: 37736
+	// Token: 0x040094C0 RID: 38080
 	[Nullable(2)]
 	private static PhotoSnapshotController _Instance;
 }

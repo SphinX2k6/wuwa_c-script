@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200134E RID: 4942
+	// Token: 0x0200149E RID: 5278
 	public class IQuestPlayerBeDamage : IQuestPlayerHitStatisticsType
 	{
-		// Token: 0x0600713C RID: 28988 RVA: 0x001110C4 File Offset: 0x0010F2C4
-		[NullableContext(1)]
+		// Token: 0x060077DC RID: 30684 RVA: 0x0011F630 File Offset: 0x0011D830
 		public static IQuestPlayerBeDamage Create(IQuestPlayerBeDamage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002473 RID: 9331
-		// (get) Token: 0x0600713D RID: 28989 RVA: 0x001110E3 File Offset: 0x0010F2E3
+		// Token: 0x17002642 RID: 9794
+		// (get) Token: 0x060077DD RID: 30685 RVA: 0x0011F64F File Offset: 0x0011D84F
 		public override EPlayerHitStatisticsType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002474 RID: 9332
-		// (get) Token: 0x0600713E RID: 28990 RVA: 0x001110F0 File Offset: 0x0010F2F0
+		// Token: 0x17002643 RID: 9795
+		// (get) Token: 0x060077DE RID: 30686 RVA: 0x0011F65C File Offset: 0x0011D85C
 		public virtual EPlayerDamageInfoType StatisticsType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004164 RID: 16740
+		// Token: 0x040044E0 RID: 17632
 		private IQuestPlayerBeDamage Instance;
 	}
 }

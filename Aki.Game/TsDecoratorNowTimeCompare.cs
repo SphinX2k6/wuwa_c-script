@@ -14,8 +14,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x1700006A RID: 106
-	// (get) Token: 0x060002C9 RID: 713 RVA: 0x0000D0A7 File Offset: 0x0000B2A7
-	// (set) Token: 0x060002CA RID: 714 RVA: 0x0000D0BB File Offset: 0x0000B2BB
+	// (get) Token: 0x060002C9 RID: 713 RVA: 0x0000D697 File Offset: 0x0000B897
+	// (set) Token: 0x060002CA RID: 714 RVA: 0x0000D6AB File Offset: 0x0000B8AB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKey
 	{
@@ -30,8 +30,8 @@ public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObj
 	}
 
 	// Token: 0x1700006B RID: 107
-	// (get) Token: 0x060002CB RID: 715 RVA: 0x0000D0D0 File Offset: 0x0000B2D0
-	// (set) Token: 0x060002CC RID: 716 RVA: 0x0000D0E0 File Offset: 0x0000B2E0
+	// (get) Token: 0x060002CB RID: 715 RVA: 0x0000D6C0 File Offset: 0x0000B8C0
+	// (set) Token: 0x060002CC RID: 716 RVA: 0x0000D6D0 File Offset: 0x0000B8D0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsGreaterThan
 	{
@@ -46,8 +46,8 @@ public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObj
 	}
 
 	// Token: 0x1700006C RID: 108
-	// (get) Token: 0x060002CD RID: 717 RVA: 0x0000D0F1 File Offset: 0x0000B2F1
-	// (set) Token: 0x060002CE RID: 718 RVA: 0x0000D101 File Offset: 0x0000B301
+	// (get) Token: 0x060002CD RID: 717 RVA: 0x0000D6E1 File Offset: 0x0000B8E1
+	// (set) Token: 0x060002CE RID: 718 RVA: 0x0000D6F1 File Offset: 0x0000B8F1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int CompareValue
 	{
@@ -61,7 +61,7 @@ public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x060002CF RID: 719 RVA: 0x0000D112 File Offset: 0x0000B312
+	// Token: 0x060002CF RID: 719 RVA: 0x0000D702 File Offset: 0x0000B902
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -73,32 +73,28 @@ public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x060002D0 RID: 720 RVA: 0x0000D150 File Offset: 0x0000B350
+	// Token: 0x060002D0 RID: 720 RVA: 0x0000D740 File Offset: 0x0000B940
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorNowTimeCompare) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorNowTimeCompare.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060002D1 RID: 721 RVA: 0x0000D1F0 File Offset: 0x0000B3F0
+	// Token: 0x060002D1 RID: 721 RVA: 0x0000D7F8 File Offset: 0x0000B9F8
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -140,7 +136,7 @@ public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObj
 		return num5.GetValueOrDefault() > num & num5 != null;
 	}
 
-	// Token: 0x060002D2 RID: 722 RVA: 0x0000D32A File Offset: 0x0000B52A
+	// Token: 0x060002D2 RID: 722 RVA: 0x0000D932 File Offset: 0x0000BB32
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorNowTimeCompare._ClassPtr == IntPtr.Zero)
@@ -150,22 +146,22 @@ public class TsDecoratorNowTimeCompare : UBTDecorator_BlueprintBase, IUnrealUObj
 		return TsDecoratorNowTimeCompare._ClassPtr;
 	}
 
-	// Token: 0x060002D3 RID: 723 RVA: 0x0000D350 File Offset: 0x0000B550
+	// Token: 0x060002D3 RID: 723 RVA: 0x0000D958 File Offset: 0x0000BB58
 	public TsDecoratorNowTimeCompare() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorNowTimeCompare.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060002D4 RID: 724 RVA: 0x0000D378 File Offset: 0x0000B578
+	// Token: 0x060002D4 RID: 724 RVA: 0x0000D980 File Offset: 0x0000BB80
 	public TsDecoratorNowTimeCompare(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorNowTimeCompare.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060002D5 RID: 725 RVA: 0x0000D3AB File Offset: 0x0000B5AB
+	// Token: 0x060002D5 RID: 725 RVA: 0x0000D9B3 File Offset: 0x0000BBB3
 	protected TsDecoratorNowTimeCompare(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060002D6 RID: 726 RVA: 0x0000D3C0 File Offset: 0x0000B5C0
+	// Token: 0x060002D6 RID: 726 RVA: 0x0000D9C8 File Offset: 0x0000BBC8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{

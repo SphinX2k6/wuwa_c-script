@@ -4,12 +4,12 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070BE RID: 28862
+	// Token: 0x02006322 RID: 25378
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HookPointInfo
 	{
-		// Token: 0x0604661D RID: 288285 RVA: 0x011A5B94 File Offset: 0x011A3D94
+		// Token: 0x0603D6FB RID: 251643 RVA: 0x011C5324 File Offset: 0x011C3524
 		public HookPointInfo(GrapplingHookPointComponent point, long portalPairId = 0L, bool portalA2B = true)
 		{
 			this.Point = point;
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.PortalA2B = portalA2B;
 		}
 
-		// Token: 0x04024E23 RID: 151075
+		// Token: 0x04020961 RID: 133473
 		public GrapplingHookPointComponent Point;
 
-		// Token: 0x04024E24 RID: 151076
+		// Token: 0x04020962 RID: 133474
 		public long PortalPairId;
 
-		// Token: 0x04024E25 RID: 151077
+		// Token: 0x04020963 RID: 133475
 		public bool PortalA2B = true;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071D3 RID: 29139
+	// Token: 0x020079A8 RID: 31144
 	public class IStopGuestUiAnimationTypeT
 	{
-		// Token: 0x1700D87C RID: 55420
-		// (get) Token: 0x06033B0F RID: 211727 RVA: 0x006F5C66 File Offset: 0x006F3E66
-		// (set) Token: 0x06033B10 RID: 211728 RVA: 0x006F5C6E File Offset: 0x006F3E6E
+		// Token: 0x1700E475 RID: 58485
+		// (get) Token: 0x06036E11 RID: 224785 RVA: 0x00756FC6 File Offset: 0x007551C6
+		// (set) Token: 0x06036E12 RID: 224786 RVA: 0x00756FCE File Offset: 0x007551CE
 		public EGuestUiAnimationType Type { get; set; }
 
-		// Token: 0x06033B11 RID: 211729 RVA: 0x006F5C77 File Offset: 0x006F3E77
+		// Token: 0x06036E13 RID: 224787 RVA: 0x00756FD7 File Offset: 0x007551D7
 		public IStopGuestUiAnimationTypeT()
 		{
 			this.Type = EGuestUiAnimationType.GuestCartethyia;

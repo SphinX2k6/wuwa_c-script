@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x0200268E RID: 9870
+// Token: 0x02001B79 RID: 7033
 public enum EQuestTreeNodeType
 {
-	// Token: 0x04009831 RID: 38961
+	// Token: 0x04009989 RID: 39305
 	Picture = 1,
-	// Token: 0x04009832 RID: 38962
+	// Token: 0x0400998A RID: 39306
 	Text,
-	// Token: 0x04009833 RID: 38963
+	// Token: 0x0400998B RID: 39307
 	Series,
-	// Token: 0x04009834 RID: 38964
+	// Token: 0x0400998C RID: 39308
 	Container,
-	// Token: 0x04009835 RID: 38965
+	// Token: 0x0400998D RID: 39309
 	Length
 }

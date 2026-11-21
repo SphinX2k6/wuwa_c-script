@@ -2,12 +2,12 @@
 
 namespace Aki.Config
 {
-	// Token: 0x02000117 RID: 279
+	// Token: 0x02000118 RID: 280
 	public enum ERuntimeType
 	{
-		// Token: 0x040006A0 RID: 1696
+		// Token: 0x040006AE RID: 1710
 		aki,
-		// Token: 0x040006A1 RID: 1697
+		// Token: 0x040006AF RID: 1711
 		ue5
 	}
 }

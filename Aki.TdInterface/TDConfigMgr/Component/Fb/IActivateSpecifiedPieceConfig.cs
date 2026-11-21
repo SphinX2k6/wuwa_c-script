@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C92 RID: 3218
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D74 RID: 3444
 	public class IActivateSpecifiedPieceConfig
 	{
-		// Token: 0x06004998 RID: 18840 RVA: 0x000B8686 File Offset: 0x000B6886
+		// Token: 0x06004E46 RID: 20038 RVA: 0x000C3096 File Offset: 0x000C1296
 		public static IActivateSpecifiedPieceConfig Create(IActivateSpecifiedPieceConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001631 RID: 5681
-		// (get) Token: 0x06004999 RID: 18841 RVA: 0x000B86A5 File Offset: 0x000B68A5
+		// Token: 0x17001759 RID: 5977
+		// (get) Token: 0x06004E47 RID: 20039 RVA: 0x000C30B5 File Offset: 0x000C12B5
 		public virtual IJigsawConfig Jigsaw
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001632 RID: 5682
-		// (get) Token: 0x0600499A RID: 18842 RVA: 0x000B86D9 File Offset: 0x000B68D9
+		// Token: 0x1700175A RID: 5978
+		// (get) Token: 0x06004E48 RID: 20040 RVA: 0x000C30E9 File Offset: 0x000C12E9
 		public virtual string SelfState
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029FB RID: 10747
+		// Token: 0x04002C75 RID: 11381
 		private IActivateSpecifiedPieceConfig Instance;
 
-		// Token: 0x040029FC RID: 10748
+		// Token: 0x04002C76 RID: 11382
 		[Nullable(2)]
 		private IJigsawConfig _JigsawCache;
 
-		// Token: 0x040029FD RID: 10749
+		// Token: 0x04002C77 RID: 11383
 		private bool _JigsawInited;
 	}
 }

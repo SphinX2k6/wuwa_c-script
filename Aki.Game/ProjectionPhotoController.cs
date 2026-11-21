@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02000EE6 RID: 3814
+// Token: 0x0200039B RID: 923
 [NullableContext(1)]
 [Nullable(0)]
 public class ProjectionPhotoController : ControllerBase
 {
-	// Token: 0x06005F8E RID: 24462 RVA: 0x0011E234 File Offset: 0x0011C434
+	// Token: 0x06003324 RID: 13092 RVA: 0x0012608C File Offset: 0x0012428C
 	public void StartProjectionPhotoGameplay(long entityId, int pbDataId, IProjectionMachine config, Action<bool> finishCallback)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ProjectionPhotoView, new ProjectionPhotoViewParams
@@ -20,8 +20,8 @@ public class ProjectionPhotoController : ControllerBase
 		}, null);
 	}
 
-	// Token: 0x17000758 RID: 1880
-	// (get) Token: 0x06005F8F RID: 24463 RVA: 0x0011E268 File Offset: 0x0011C468
+	// Token: 0x1700077A RID: 1914
+	// (get) Token: 0x06003325 RID: 13093 RVA: 0x001260C0 File Offset: 0x001242C0
 	public static ProjectionPhotoController Instance
 	{
 		get
@@ -30,7 +30,7 @@ public class ProjectionPhotoController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005F90 RID: 24464 RVA: 0x0011E26F File Offset: 0x0011C46F
+	// Token: 0x06003326 RID: 13094 RVA: 0x001260C7 File Offset: 0x001242C7
 	public static ProjectionPhotoController GetOrCreateInstance()
 	{
 		if (ProjectionPhotoController._Instance == null)
@@ -40,7 +40,7 @@ public class ProjectionPhotoController : ControllerBase
 		return ProjectionPhotoController._Instance;
 	}
 
-	// Token: 0x06005F91 RID: 24465 RVA: 0x0011E283 File Offset: 0x0011C483
+	// Token: 0x06003327 RID: 13095 RVA: 0x001260DB File Offset: 0x001242DB
 	public static bool CreateInstance()
 	{
 		if (ProjectionPhotoController._Instance != null)
@@ -51,24 +51,24 @@ public class ProjectionPhotoController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005F92 RID: 24466 RVA: 0x0011E299 File Offset: 0x0011C499
+	// Token: 0x06003328 RID: 13096 RVA: 0x001260F1 File Offset: 0x001242F1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005F93 RID: 24467 RVA: 0x0011E29B File Offset: 0x0011C49B
+	// Token: 0x06003329 RID: 13097 RVA: 0x001260F3 File Offset: 0x001242F3
 	public static void ResetStaticDefaultValue()
 	{
 		ProjectionPhotoController._Instance = null;
 	}
 
-	// Token: 0x06005F94 RID: 24468 RVA: 0x0011E2A3 File Offset: 0x0011C4A3
+	// Token: 0x0600332A RID: 13098 RVA: 0x001260FB File Offset: 0x001242FB
 	static ProjectionPhotoController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ProjectionPhotoController.CreateStaticDefaultValue), new Action(ProjectionPhotoController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002B4B RID: 11083
+	// Token: 0x04002BE4 RID: 11236
 	[Nullable(2)]
 	private static ProjectionPhotoController _Instance;
 }

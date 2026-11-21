@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003F1 RID: 1009
+	// Token: 0x0200044A RID: 1098
 	public class IGroupAiMode_SetValue
 	{
-		// Token: 0x04001001 RID: 4097
+		// Token: 0x04001123 RID: 4387
 		public EGroupAiMode Type;
 	}
 }

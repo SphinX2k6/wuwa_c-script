@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200163A RID: 5690
+	// Token: 0x020016B1 RID: 5809
 	public enum RoverRogueGainDataType
 	{
-		// Token: 0x0400C083 RID: 49283
+		// Token: 0x0400C58E RID: 50574
 		[OriginalName("RoverRogueGainUnknown")]
 		RoverRogueGainUnknown,
-		// Token: 0x0400C084 RID: 49284
+		// Token: 0x0400C58F RID: 50575
 		[OriginalName("RoverRogueGainBless")]
 		RoverRogueGainBless,
-		// Token: 0x0400C085 RID: 49285
+		// Token: 0x0400C590 RID: 50576
 		[OriginalName("RoverRogueGainRoleEnhance")]
 		RoverRogueGainRoleEnhance,
-		// Token: 0x0400C086 RID: 49286
+		// Token: 0x0400C591 RID: 50577
 		[OriginalName("RoverRogueGainLootItem")]
 		RoverRogueGainLootItem,
-		// Token: 0x0400C087 RID: 49287
+		// Token: 0x0400C592 RID: 50578
 		[OriginalName("RoverRogueGainItem")]
 		RoverRogueGainItem
 	}

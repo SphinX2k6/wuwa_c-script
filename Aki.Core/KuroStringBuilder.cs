@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 // Token: 0x020000F2 RID: 242
@@ -9,8 +8,8 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class KuroStringBuilder
 {
-	// Token: 0x170000E9 RID: 233
-	// (get) Token: 0x0600076C RID: 1900 RVA: 0x000286E6 File Offset: 0x000268E6
+	// Token: 0x170000FB RID: 251
+	// (get) Token: 0x060007A6 RID: 1958 RVA: 0x00028A1A File Offset: 0x00026C1A
 	public List<object> Store
 	{
 		get
@@ -19,7 +18,7 @@ public class KuroStringBuilder
 		}
 	}
 
-	// Token: 0x0600076D RID: 1901 RVA: 0x000286EE File Offset: 0x000268EE
+	// Token: 0x060007A7 RID: 1959 RVA: 0x00028A22 File Offset: 0x00026C22
 	public KuroStringBuilder(params object[] parameters)
 	{
 		this.StoreInternal = new List<object>(16);
@@ -29,7 +28,7 @@ public class KuroStringBuilder
 		}
 	}
 
-	// Token: 0x0600076E RID: 1902 RVA: 0x00028710 File Offset: 0x00026910
+	// Token: 0x060007A8 RID: 1960 RVA: 0x00028A44 File Offset: 0x00026C44
 	public void Append(params object[] parameters)
 	{
 		foreach (object obj in parameters)
@@ -47,10 +46,10 @@ public class KuroStringBuilder
 					{
 						while (enumerator.MoveNext())
 						{
-							object element = enumerator.Current;
-							this.StoreInternal.Append(element);
+							object item = enumerator.Current;
+							this.StoreInternal.Add(item);
 						}
-						goto IL_9A;
+						goto IL_99;
 					}
 				}
 				if (obj is KuroStringBuilder)
@@ -62,11 +61,11 @@ public class KuroStringBuilder
 					this.StoreInternal.Add(obj);
 				}
 			}
-			IL_9A:;
+			IL_99:;
 		}
 	}
 
-	// Token: 0x0600076F RID: 1903 RVA: 0x000287D4 File Offset: 0x000269D4
+	// Token: 0x060007A9 RID: 1961 RVA: 0x00028B08 File Offset: 0x00026D08
 	public void RemoveLast(int removeNum)
 	{
 		for (int i = 0; i < removeNum; i++)
@@ -78,21 +77,21 @@ public class KuroStringBuilder
 		}
 	}
 
-	// Token: 0x06000770 RID: 1904 RVA: 0x00028813 File Offset: 0x00026A13
+	// Token: 0x060007AA RID: 1962 RVA: 0x00028B47 File Offset: 0x00026D47
 	public override string ToString()
 	{
 		return string.Join<object>("", this.StoreInternal);
 	}
 
-	// Token: 0x06000771 RID: 1905 RVA: 0x00028825 File Offset: 0x00026A25
+	// Token: 0x060007AB RID: 1963 RVA: 0x00028B59 File Offset: 0x00026D59
 	public void Clear()
 	{
 		this.StoreInternal.Clear();
 	}
 
-	// Token: 0x040005CF RID: 1487
+	// Token: 0x040005DA RID: 1498
 	private const int DEFAULT_SIZE = 16;
 
-	// Token: 0x040005D0 RID: 1488
+	// Token: 0x040005DB RID: 1499
 	private List<object> StoreInternal;
 }

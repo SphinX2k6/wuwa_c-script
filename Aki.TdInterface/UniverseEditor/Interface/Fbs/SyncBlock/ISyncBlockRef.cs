@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 {
-	// Token: 0x02003B87 RID: 15239
+	// Token: 0x02003F8F RID: 16271
 	public struct ISyncBlockRef : IFlatbufferObject
 	{
-		// Token: 0x1700687E RID: 26750
-		// (get) Token: 0x06014E15 RID: 85525 RVA: 0x00307D88 File Offset: 0x00305F88
+		// Token: 0x17006E1D RID: 28189
+		// (get) Token: 0x060162DF RID: 90847 RVA: 0x0032E320 File Offset: 0x0032C520
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 			}
 		}
 
-		// Token: 0x06014E16 RID: 85526 RVA: 0x00307D95 File Offset: 0x00305F95
+		// Token: 0x060162E0 RID: 90848 RVA: 0x0032E32D File Offset: 0x0032C52D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014E17 RID: 85527 RVA: 0x00307D9C File Offset: 0x00305F9C
+		// Token: 0x060162E1 RID: 90849 RVA: 0x0032E334 File Offset: 0x0032C534
 		public static ISyncBlockRef GetRootAsISyncBlockRef(ByteBuffer _bb)
 		{
 			return ISyncBlockRef.GetRootAsISyncBlockRef(_bb, default(ISyncBlockRef));
 		}
 
-		// Token: 0x06014E18 RID: 85528 RVA: 0x00307DB8 File Offset: 0x00305FB8
+		// Token: 0x060162E2 RID: 90850 RVA: 0x0032E350 File Offset: 0x0032C550
 		public static ISyncBlockRef GetRootAsISyncBlockRef(ByteBuffer _bb, ISyncBlockRef obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014E19 RID: 85529 RVA: 0x00307DD5 File Offset: 0x00305FD5
+		// Token: 0x060162E3 RID: 90851 RVA: 0x0032E36D File Offset: 0x0032C56D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014E1A RID: 85530 RVA: 0x00307DE4 File Offset: 0x00305FE4
+		// Token: 0x060162E4 RID: 90852 RVA: 0x0032E37C File Offset: 0x0032C57C
 		public ISyncBlockRef __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06014E1B RID: 85531 RVA: 0x00307DF4 File Offset: 0x00305FF4
+		// Token: 0x060162E5 RID: 90853 RVA: 0x0032E38C File Offset: 0x0032C58C
 		public static void StartISyncBlockRef(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x06014E1C RID: 85532 RVA: 0x00307DFD File Offset: 0x00305FFD
+		// Token: 0x060162E6 RID: 90854 RVA: 0x0032E395 File Offset: 0x0032C595
 		public static Offset<ISyncBlockRef> EndISyncBlockRef(FlatBufferBuilder builder)
 		{
 			return new Offset<ISyncBlockRef>(builder.EndTable());
 		}
 
-		// Token: 0x06014E1D RID: 85533 RVA: 0x00307E0C File Offset: 0x0030600C
+		// Token: 0x060162E7 RID: 90855 RVA: 0x0032E3A4 File Offset: 0x0032C5A4
 		public ISyncBlockRefT UnPack()
 		{
 			ISyncBlockRefT syncBlockRefT = new ISyncBlockRefT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 			return syncBlockRefT;
 		}
 
-		// Token: 0x06014E1E RID: 85534 RVA: 0x00307E27 File Offset: 0x00306027
+		// Token: 0x060162E8 RID: 90856 RVA: 0x0032E3BF File Offset: 0x0032C5BF
 		public void UnPackTo(ISyncBlockRefT _o)
 		{
 		}
 
-		// Token: 0x06014E1F RID: 85535 RVA: 0x00307E2C File Offset: 0x0030602C
+		// Token: 0x060162E9 RID: 90857 RVA: 0x0032E3C4 File Offset: 0x0032C5C4
 		public static Offset<ISyncBlockRef> Pack(FlatBufferBuilder builder, ISyncBlockRefT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 			return ISyncBlockRef.EndISyncBlockRef(builder);
 		}
 
-		// Token: 0x0400B0D7 RID: 45271
+		// Token: 0x0400BA54 RID: 47700
 		private Table __p;
 	}
 }

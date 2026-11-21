@@ -1,97 +1,97 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200217B RID: 8571
+// Token: 0x02001653 RID: 5715
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotographTakePhotoLogData : PlayerCommonLogData
 {
-	// Token: 0x1700151A RID: 5402
-	// (get) Token: 0x06010A9F RID: 68255 RVA: 0x0040C669 File Offset: 0x0040A869
-	// (set) Token: 0x06010AA0 RID: 68256 RVA: 0x0040C671 File Offset: 0x0040A871
+	// Token: 0x17001548 RID: 5448
+	// (get) Token: 0x0600DF12 RID: 57106 RVA: 0x00418DB1 File Offset: 0x00416FB1
+	// (set) Token: 0x0600DF13 RID: 57107 RVA: 0x00418DB9 File Offset: 0x00416FB9
 	public override string event_id { get; set; } = "1941";
 
-	// Token: 0x04007E9E RID: 32414
+	// Token: 0x04007FAE RID: 32686
 	public int i_area_id;
 
-	// Token: 0x04007E9F RID: 32415
+	// Token: 0x04007FAF RID: 32687
 	public int i_father_area_id;
 
-	// Token: 0x04007EA0 RID: 32416
+	// Token: 0x04007FB0 RID: 32688
 	public float f_pos_x;
 
-	// Token: 0x04007EA1 RID: 32417
+	// Token: 0x04007FB1 RID: 32689
 	public float f_pos_y;
 
-	// Token: 0x04007EA2 RID: 32418
+	// Token: 0x04007FB2 RID: 32690
 	public float f_pos_z;
 
-	// Token: 0x04007EA3 RID: 32419
+	// Token: 0x04007FB3 RID: 32691
 	public int i_role_id;
 
-	// Token: 0x04007EA4 RID: 32420
+	// Token: 0x04007FB4 RID: 32692
 	public int i_mode;
 
-	// Token: 0x04007EA5 RID: 32421
+	// Token: 0x04007FB5 RID: 32693
 	public int i_rotate;
 
-	// Token: 0x04007EA6 RID: 32422
+	// Token: 0x04007FB6 RID: 32694
 	public int i_zoom;
 
-	// Token: 0x04007EA7 RID: 32423
+	// Token: 0x04007FB7 RID: 32695
 	public float f_radius;
 
-	// Token: 0x04007EA8 RID: 32424
+	// Token: 0x04007FB8 RID: 32696
 	public float f_focus_distance;
 
-	// Token: 0x04007EA9 RID: 32425
+	// Token: 0x04007FB9 RID: 32697
 	public int i_line;
 
-	// Token: 0x04007EAA RID: 32426
+	// Token: 0x04007FBA RID: 32698
 	public int i_hide;
 
-	// Token: 0x04007EAB RID: 32427
+	// Token: 0x04007FBB RID: 32699
 	public int i_face;
 
-	// Token: 0x04007EAC RID: 32428
+	// Token: 0x04007FBC RID: 32700
 	public int i_camera;
 
-	// Token: 0x04007EAD RID: 32429
+	// Token: 0x04007FBD RID: 32701
 	public int i_action;
 
-	// Token: 0x04007EAE RID: 32430
+	// Token: 0x04007FBE RID: 32702
 	public int i_expression;
 
-	// Token: 0x04007EAF RID: 32431
+	// Token: 0x04007FBF RID: 32703
 	public int i_filter;
 
-	// Token: 0x04007EB0 RID: 32432
+	// Token: 0x04007FC0 RID: 32704
 	public int i_filter_intensity;
 
-	// Token: 0x04007EB1 RID: 32433
+	// Token: 0x04007FC1 RID: 32705
 	public int i_light;
 
-	// Token: 0x04007EB2 RID: 32434
+	// Token: 0x04007FC2 RID: 32706
 	public int i_light_direction;
 
-	// Token: 0x04007EB3 RID: 32435
+	// Token: 0x04007FC3 RID: 32707
 	public string s_time = "";
 
-	// Token: 0x04007EB4 RID: 32436
+	// Token: 0x04007FC4 RID: 32708
 	public int i_weather;
 
-	// Token: 0x04007EB5 RID: 32437
+	// Token: 0x04007FC5 RID: 32709
 	public int i_wind;
 
-	// Token: 0x04007EB6 RID: 32438
+	// Token: 0x04007FC6 RID: 32710
 	public int i_wind_intensity;
 
-	// Token: 0x04007EB7 RID: 32439
+	// Token: 0x04007FC7 RID: 32711
 	public int i_vibe;
 
-	// Token: 0x04007EB8 RID: 32440
+	// Token: 0x04007FC8 RID: 32712
 	public int i_frame;
 
-	// Token: 0x04007EB9 RID: 32441
+	// Token: 0x04007FC9 RID: 32713
 	public int i_watermark;
 }

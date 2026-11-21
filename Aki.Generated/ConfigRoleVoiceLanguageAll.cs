@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008D5 RID: 2261
+	// Token: 0x02000920 RID: 2336
 	public class ConfigRoleVoiceLanguageAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003511 RID: 13585 RVA: 0x0018557C File Offset: 0x0018377C
+		// Token: 0x060036D3 RID: 14035 RVA: 0x0019279C File Offset: 0x0019099C
 		static ConfigRoleVoiceLanguageAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleVoiceLanguageAll.CreateStaticDefaultValue), new Action(ConfigRoleVoiceLanguageAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003512 RID: 13586 RVA: 0x0018559C File Offset: 0x0018379C
+		// Token: 0x060036D4 RID: 14036 RVA: 0x001927BC File Offset: 0x001909BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleVoiceLanguageAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003513 RID: 13587 RVA: 0x0018561B File Offset: 0x0018381B
+		// Token: 0x060036D5 RID: 14037 RVA: 0x0019283B File Offset: 0x00190A3B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleVoiceLanguageAll.LogPair = null;
 			ConfigRoleVoiceLanguageAll.HandleId = 0;
 		}
 
-		// Token: 0x06003514 RID: 13588 RVA: 0x00185629 File Offset: 0x00183829
+		// Token: 0x060036D6 RID: 14038 RVA: 0x00192849 File Offset: 0x00190A49
 		public static void Init()
 		{
 			ConfigRoleVoiceLanguageAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleVoiceLanguageAll.HandleId, "db_menu.db", "select BinData from `RoleVoiceLanguage`");
 		}
 
-		// Token: 0x06003515 RID: 13589 RVA: 0x00185644 File Offset: 0x00183844
+		// Token: 0x060036D7 RID: 14039 RVA: 0x00192864 File Offset: 0x00190A64
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleVoiceLanguage> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003DB9 RID: 15801
+		// Token: 0x04003FC6 RID: 16326
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04003DBA RID: 15802
+		// Token: 0x04003FC7 RID: 16327
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04003DBB RID: 15803
+		// Token: 0x04003FC8 RID: 16328
 		private const string TABLE = "RoleVoiceLanguage";
 
-		// Token: 0x04003DBC RID: 15804
+		// Token: 0x04003FC9 RID: 16329
 		private const string COMMAND = "select BinData from `RoleVoiceLanguage`";
 
-		// Token: 0x04003DBD RID: 15805
+		// Token: 0x04003FCA RID: 16330
 		private const string KEY_PREFIX = "RoleVoiceLanguageAll";
 
-		// Token: 0x04003DBE RID: 15806
+		// Token: 0x04003FCB RID: 16331
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003DBF RID: 15807
+		// Token: 0x04003FCC RID: 16332
 		private static int HandleId;
 	}
 }

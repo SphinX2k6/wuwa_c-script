@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020005B4 RID: 1460
+	// Token: 0x0200059F RID: 1439
 	public sealed class FloroRanchGacha : IMessage<FloroRanchGacha>, IMessage, IEquatable<FloroRanchGacha>, IDeepCloneable<FloroRanchGacha>, IBufferMessage
 	{
-		// Token: 0x060086DE RID: 34526 RVA: 0x001440F9 File Offset: 0x001422F9
+		// Token: 0x06008576 RID: 34166 RVA: 0x001414E9 File Offset: 0x0013F6E9
 		[NullableContext(1)]
 		public static FloroRanchGacha Create()
 		{
 			return new FloroRanchGacha();
 		}
 
-		// Token: 0x17001A52 RID: 6738
-		// (get) Token: 0x060086DF RID: 34527 RVA: 0x00144100 File Offset: 0x00142300
+		// Token: 0x17001A05 RID: 6661
+		// (get) Token: 0x06008577 RID: 34167 RVA: 0x001414F0 File Offset: 0x0013F6F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A53 RID: 6739
-		// (get) Token: 0x060086E0 RID: 34528 RVA: 0x00144103 File Offset: 0x00142303
+		// Token: 0x17001A06 RID: 6662
+		// (get) Token: 0x06008578 RID: 34168 RVA: 0x001414F3 File Offset: 0x0013F6F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060086E1 RID: 34529 RVA: 0x0014410A File Offset: 0x0014230A
+		// Token: 0x06008579 RID: 34169 RVA: 0x001414FA File Offset: 0x0013F6FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchGacha()
 		{
 		}
 
-		// Token: 0x060086E2 RID: 34530 RVA: 0x00144128 File Offset: 0x00142328
+		// Token: 0x0600857A RID: 34170 RVA: 0x00141518 File Offset: 0x0013F718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchGacha(FloroRanchGacha other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060086E3 RID: 34531 RVA: 0x00144192 File Offset: 0x00142392
+		// Token: 0x0600857B RID: 34171 RVA: 0x00141582 File Offset: 0x0013F782
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchGacha Clone()
@@ -70,8 +70,8 @@ namespace Aki.Protocol
 			return new FloroRanchGacha(this);
 		}
 
-		// Token: 0x17001A54 RID: 6740
-		// (get) Token: 0x060086E4 RID: 34532 RVA: 0x0014419A File Offset: 0x0014239A
+		// Token: 0x17001A07 RID: 6663
+		// (get) Token: 0x0600857C RID: 34172 RVA: 0x0014158A File Offset: 0x0013F78A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> CardIds
@@ -82,9 +82,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A55 RID: 6741
-		// (get) Token: 0x060086E5 RID: 34533 RVA: 0x001441A2 File Offset: 0x001423A2
-		// (set) Token: 0x060086E6 RID: 34534 RVA: 0x001441AA File Offset: 0x001423AA
+		// Token: 0x17001A08 RID: 6664
+		// (get) Token: 0x0600857D RID: 34173 RVA: 0x00141592 File Offset: 0x0013F792
+		// (set) Token: 0x0600857E RID: 34174 RVA: 0x0014159A File Offset: 0x0013F79A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool AllowedRefresh
@@ -99,8 +99,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A56 RID: 6742
-		// (get) Token: 0x060086E7 RID: 34535 RVA: 0x001441B3 File Offset: 0x001423B3
+		// Token: 0x17001A09 RID: 6665
+		// (get) Token: 0x0600857F RID: 34175 RVA: 0x001415A3 File Offset: 0x0013F7A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FloroRanchRefreshCost> Cost
@@ -111,9 +111,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A57 RID: 6743
-		// (get) Token: 0x060086E8 RID: 34536 RVA: 0x001441BB File Offset: 0x001423BB
-		// (set) Token: 0x060086E9 RID: 34537 RVA: 0x001441C3 File Offset: 0x001423C3
+		// Token: 0x17001A0A RID: 6666
+		// (get) Token: 0x06008580 RID: 34176 RVA: 0x001415AB File Offset: 0x0013F7AB
+		// (set) Token: 0x06008581 RID: 34177 RVA: 0x001415B3 File Offset: 0x0013F7B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int IncId
@@ -128,9 +128,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A58 RID: 6744
-		// (get) Token: 0x060086EA RID: 34538 RVA: 0x001441CC File Offset: 0x001423CC
-		// (set) Token: 0x060086EB RID: 34539 RVA: 0x001441D4 File Offset: 0x001423D4
+		// Token: 0x17001A0B RID: 6667
+		// (get) Token: 0x06008582 RID: 34178 RVA: 0x001415BC File Offset: 0x0013F7BC
+		// (set) Token: 0x06008583 RID: 34179 RVA: 0x001415C4 File Offset: 0x0013F7C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FreeTimes
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060086EC RID: 34540 RVA: 0x001441DD File Offset: 0x001423DD
+		// Token: 0x06008584 RID: 34180 RVA: 0x001415CD File Offset: 0x0013F7CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FloroRanchGacha);
 		}
 
-		// Token: 0x060086ED RID: 34541 RVA: 0x001441EC File Offset: 0x001423EC
+		// Token: 0x06008585 RID: 34181 RVA: 0x001415DC File Offset: 0x0013F7DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FloroRanchGacha other)
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.cardIds_.Equals(other.cardIds_) && this.AllowedRefresh == other.AllowedRefresh && this.cost_.Equals(other.cost_) && this.IncId == other.IncId && this.FreeTimes == other.FreeTimes && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060086EE RID: 34542 RVA: 0x00144270 File Offset: 0x00142470
+		// Token: 0x06008586 RID: 34182 RVA: 0x00141660 File Offset: 0x0013F860
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060086EF RID: 34543 RVA: 0x001442FD File Offset: 0x001424FD
+		// Token: 0x06008587 RID: 34183 RVA: 0x001416ED File Offset: 0x0013F8ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060086F0 RID: 34544 RVA: 0x0014430A File Offset: 0x0014250A
+		// Token: 0x06008588 RID: 34184 RVA: 0x001416FA File Offset: 0x0013F8FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060086F1 RID: 34545 RVA: 0x00144314 File Offset: 0x00142514
+		// Token: 0x06008589 RID: 34185 RVA: 0x00141704 File Offset: 0x0013F904
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -232,7 +232,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060086F2 RID: 34546 RVA: 0x001443AC File Offset: 0x001425AC
+		// Token: 0x0600858A RID: 34186 RVA: 0x0014179C File Offset: 0x0013F99C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060086F3 RID: 34547 RVA: 0x00144434 File Offset: 0x00142634
+		// Token: 0x0600858B RID: 34187 RVA: 0x00141824 File Offset: 0x0013FA24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FloroRanchGacha other)
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060086F4 RID: 34548 RVA: 0x001444BA File Offset: 0x001426BA
+		// Token: 0x0600858C RID: 34188 RVA: 0x001418AA File Offset: 0x0013FAAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060086F5 RID: 34549 RVA: 0x001444C4 File Offset: 0x001426C4
+		// Token: 0x0600858D RID: 34189 RVA: 0x001418B4 File Offset: 0x0013FAB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -340,43 +340,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400426F RID: 17007
+		// Token: 0x04004265 RID: 16997
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004270 RID: 17008
+		// Token: 0x04004266 RID: 16998
 		public const int CardIdsFieldNumber = 1;
 
-		// Token: 0x04004271 RID: 17009
+		// Token: 0x04004267 RID: 16999
 		private static readonly FieldCodec<int> _repeated_cardIds_codec = FieldCodec.ForInt32(10U);
 
-		// Token: 0x04004272 RID: 17010
+		// Token: 0x04004268 RID: 17000
 		private readonly RepeatedField<int> cardIds_ = new RepeatedField<int>();
 
-		// Token: 0x04004273 RID: 17011
+		// Token: 0x04004269 RID: 17001
 		public const int AllowedRefreshFieldNumber = 2;
 
-		// Token: 0x04004274 RID: 17012
+		// Token: 0x0400426A RID: 17002
 		private bool allowedRefresh_;
 
-		// Token: 0x04004275 RID: 17013
+		// Token: 0x0400426B RID: 17003
 		public const int CostFieldNumber = 3;
 
-		// Token: 0x04004276 RID: 17014
+		// Token: 0x0400426C RID: 17004
 		private static readonly FieldCodec<FloroRanchRefreshCost> _repeated_cost_codec = FieldCodec.ForMessage<FloroRanchRefreshCost>(26U, FloroRanchRefreshCost.Parser);
 
-		// Token: 0x04004277 RID: 17015
+		// Token: 0x0400426D RID: 17005
 		private readonly RepeatedField<FloroRanchRefreshCost> cost_ = new RepeatedField<FloroRanchRefreshCost>();
 
-		// Token: 0x04004278 RID: 17016
+		// Token: 0x0400426E RID: 17006
 		public const int IncIdFieldNumber = 4;
 
-		// Token: 0x04004279 RID: 17017
+		// Token: 0x0400426F RID: 17007
 		private int incId_;
 
-		// Token: 0x0400427A RID: 17018
+		// Token: 0x04004270 RID: 17008
 		public const int FreeTimesFieldNumber = 5;
 
-		// Token: 0x0400427B RID: 17019
+		// Token: 0x04004271 RID: 17009
 		private int freeTimes_;
 	}
 }

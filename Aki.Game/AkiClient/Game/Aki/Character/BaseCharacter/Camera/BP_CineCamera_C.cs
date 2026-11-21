@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x0200439E RID: 17310
+	// Token: 0x020033BD RID: 13245
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/BP_CineCamera.BP_CineCamera_C")]
-	[UnrealStructLayout(4016, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 4004)]
-	public class BP_CineCamera_C : ACineCameraActor, IUnrealUObject, IUnrealObject, ISeqAutoTransformInterface, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(4064, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 4052)]
+	public class BP_CineCamera_C : ACineCameraActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CD4A RID: 183626 RVA: 0x00A29BFC File Offset: 0x00A27DFC
+		// Token: 0x0602195A RID: 137562 RVA: 0x00964895 File Offset: 0x00962A95
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_CineCamera_C._ClassPtr == IntPtr.Zero)
@@ -25,106 +25,79 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			return BP_CineCamera_C._ClassPtr;
 		}
 
-		// Token: 0x0602CD4B RID: 183627 RVA: 0x00A29C20 File Offset: 0x00A27E20
-		int ISeqAutoTransformInterface.InterfaceOffset()
-		{
-			return BP_CineCamera_C.__InterfaceOffset_ISeqAutoTransformInterface;
-		}
-
-		// Token: 0x0602CD4C RID: 183628 RVA: 0x00A29C28 File Offset: 0x00A27E28
+		// Token: 0x0602195B RID: 137563 RVA: 0x009648BC File Offset: 0x00962ABC
 		public BP_CineCamera_C() : this(BuiltinUtils.AllocNativeUObject(BP_CineCamera_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CD4D RID: 183629 RVA: 0x00A29C50 File Offset: 0x00A27E50
+		// Token: 0x0602195C RID: 137564 RVA: 0x009648E4 File Offset: 0x00962AE4
 		public BP_CineCamera_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_CineCamera_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070FF RID: 28927
-		// (get) Token: 0x0602CD4E RID: 183630 RVA: 0x00A29C83 File Offset: 0x00A27E83
-		// (set) Token: 0x0602CD4F RID: 183631 RVA: 0x00A29C93 File Offset: 0x00A27E93
+		// Token: 0x17004500 RID: 17664
+		// (get) Token: 0x0602195D RID: 137565 RVA: 0x00964917 File Offset: 0x00962B17
+		// (set) Token: 0x0602195E RID: 137566 RVA: 0x00964927 File Offset: 0x00962B27
 		public unsafe float ResolutionAdaptFactor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_ResolutionAdaptFactor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_ResolutionAdaptFactor) = value;
 			}
 		}
 
-		// Token: 0x17007100 RID: 28928
-		// (get) Token: 0x0602CD50 RID: 183632 RVA: 0x00A29CA4 File Offset: 0x00A27EA4
-		// (set) Token: 0x0602CD51 RID: 183633 RVA: 0x00A29CDD File Offset: 0x00A27EDD
-		public FDataTableRowHandle UiCameraAnimationRow
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FDataTableRowHandle result;
-				if ((result = this._UiCameraAnimationRow) == null)
-				{
-					result = (this._UiCameraAnimationRow = new FDataTableRowHandle(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_2, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FDataTableRowHandle.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_2, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17007101 RID: 28929
-		// (get) Token: 0x0602CD52 RID: 183634 RVA: 0x00A29CFE File Offset: 0x00A27EFE
-		// (set) Token: 0x0602CD53 RID: 183635 RVA: 0x00A29D0E File Offset: 0x00A27F0E
+		// Token: 0x17004501 RID: 17665
+		// (get) Token: 0x0602195F RID: 137567 RVA: 0x00964938 File Offset: 0x00962B38
+		// (set) Token: 0x06021960 RID: 137568 RVA: 0x00964948 File Offset: 0x00962B48
 		public unsafe bool IsAutoTransform
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_IsAutoTransform) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_IsAutoTransform) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007102 RID: 28930
-		// (get) Token: 0x0602CD54 RID: 183636 RVA: 0x00A29D1F File Offset: 0x00A27F1F
-		// (set) Token: 0x0602CD55 RID: 183637 RVA: 0x00A29D2F File Offset: 0x00A27F2F
+		// Token: 0x17004502 RID: 17666
+		// (get) Token: 0x06021961 RID: 137569 RVA: 0x00964959 File Offset: 0x00962B59
+		// (set) Token: 0x06021962 RID: 137570 RVA: 0x00964969 File Offset: 0x00962B69
 		public unsafe float OffsetTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_OffsetTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_OffsetTime) = value;
 			}
 		}
 
-		// Token: 0x17007103 RID: 28931
-		// (get) Token: 0x0602CD56 RID: 183638 RVA: 0x00A29D40 File Offset: 0x00A27F40
-		// (set) Token: 0x0602CD57 RID: 183639 RVA: 0x00A29D50 File Offset: 0x00A27F50
+		// Token: 0x17004503 RID: 17667
+		// (get) Token: 0x06021963 RID: 137571 RVA: 0x0096497A File Offset: 0x00962B7A
+		// (set) Token: 0x06021964 RID: 137572 RVA: 0x0096498A File Offset: 0x00962B8A
 		public unsafe float MaxOffsetTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_MaxOffsetTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_MaxOffsetTime) = value;
 			}
 		}
 
-		// Token: 0x17007104 RID: 28932
-		// (get) Token: 0x0602CD58 RID: 183640 RVA: 0x00A29D64 File Offset: 0x00A27F64
-		// (set) Token: 0x0602CD59 RID: 183641 RVA: 0x00A29D9D File Offset: 0x00A27F9D
+		// Token: 0x17004504 RID: 17668
+		// (get) Token: 0x06021965 RID: 137573 RVA: 0x0096499C File Offset: 0x00962B9C
+		// (set) Token: 0x06021966 RID: 137574 RVA: 0x009649D5 File Offset: 0x00962BD5
 		public FCameraFilmbackSettings Filmback
 		{
 			get
@@ -133,64 +106,64 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 				FCameraFilmbackSettings result;
 				if ((result = this._Filmback) == null)
 				{
-					result = (this._Filmback = new FCameraFilmbackSettings(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_6, this));
+					result = (this._Filmback = new FCameraFilmbackSettings(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Filmback, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraFilmbackSettings.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_6, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FCameraFilmbackSettings.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Filmback, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17007105 RID: 28933
-		// (get) Token: 0x0602CD5A RID: 183642 RVA: 0x00A29DBE File Offset: 0x00A27FBE
-		// (set) Token: 0x0602CD5B RID: 183643 RVA: 0x00A29DCE File Offset: 0x00A27FCE
+		// Token: 0x17004505 RID: 17669
+		// (get) Token: 0x06021967 RID: 137575 RVA: 0x009649F6 File Offset: 0x00962BF6
+		// (set) Token: 0x06021968 RID: 137576 RVA: 0x00964A06 File Offset: 0x00962C06
 		public unsafe bool Constrain_Aspect_Ratio
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Constrain_Aspect_Ratio) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Constrain_Aspect_Ratio) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007106 RID: 28934
-		// (get) Token: 0x0602CD5C RID: 183644 RVA: 0x00A29DDF File Offset: 0x00A27FDF
-		// (set) Token: 0x0602CD5D RID: 183645 RVA: 0x00A29DEF File Offset: 0x00A27FEF
+		// Token: 0x17004506 RID: 17670
+		// (get) Token: 0x06021969 RID: 137577 RVA: 0x00964A17 File Offset: 0x00962C17
+		// (set) Token: 0x0602196A RID: 137578 RVA: 0x00964A27 File Offset: 0x00962C27
 		public unsafe float Current_Focal_Length
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Current_Focal_Length);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Current_Focal_Length) = value;
 			}
 		}
 
-		// Token: 0x17007107 RID: 28935
-		// (get) Token: 0x0602CD5E RID: 183646 RVA: 0x00A29E00 File Offset: 0x00A28000
-		// (set) Token: 0x0602CD5F RID: 183647 RVA: 0x00A29E10 File Offset: 0x00A28010
+		// Token: 0x17004507 RID: 17671
+		// (get) Token: 0x0602196B RID: 137579 RVA: 0x00964A38 File Offset: 0x00962C38
+		// (set) Token: 0x0602196C RID: 137580 RVA: 0x00964A48 File Offset: 0x00962C48
 		public unsafe float Current_Aperture
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Current_Aperture);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Current_Aperture) = value;
 			}
 		}
 
-		// Token: 0x17007108 RID: 28936
-		// (get) Token: 0x0602CD60 RID: 183648 RVA: 0x00A29E24 File Offset: 0x00A28024
-		// (set) Token: 0x0602CD61 RID: 183649 RVA: 0x00A29E5D File Offset: 0x00A2805D
+		// Token: 0x17004508 RID: 17672
+		// (get) Token: 0x0602196D RID: 137581 RVA: 0x00964A5C File Offset: 0x00962C5C
+		// (set) Token: 0x0602196E RID: 137582 RVA: 0x00964A95 File Offset: 0x00962C95
 		public FCameraFocusSettings Focus_Settings
 		{
 			get
@@ -199,19 +172,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 				FCameraFocusSettings result;
 				if ((result = this._Focus_Settings) == null)
 				{
-					result = (this._Focus_Settings = new FCameraFocusSettings(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_10, this));
+					result = (this._Focus_Settings = new FCameraFocusSettings(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Focus_Settings, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraFocusSettings.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_10, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FCameraFocusSettings.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Focus_Settings, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17007109 RID: 28937
-		// (get) Token: 0x0602CD62 RID: 183650 RVA: 0x00A29E80 File Offset: 0x00A28080
-		// (set) Token: 0x0602CD63 RID: 183651 RVA: 0x00A29EB9 File Offset: 0x00A280B9
+		// Token: 0x17004509 RID: 17673
+		// (get) Token: 0x0602196F RID: 137583 RVA: 0x00964AB8 File Offset: 0x00962CB8
+		// (set) Token: 0x06021970 RID: 137584 RVA: 0x00964AF1 File Offset: 0x00962CF1
 		public FCameraLensSettings Lens_Settings
 		{
 			get
@@ -220,50 +193,47 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 				FCameraLensSettings result;
 				if ((result = this._Lens_Settings) == null)
 				{
-					result = (this._Lens_Settings = new FCameraLensSettings(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_11, this));
+					result = (this._Lens_Settings = new FCameraLensSettings(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Lens_Settings, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraLensSettings.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_11, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FCameraLensSettings.StaticStruct(), base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_Lens_Settings, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700710A RID: 28938
-		// (get) Token: 0x0602CD64 RID: 183652 RVA: 0x00A29EDA File Offset: 0x00A280DA
-		// (set) Token: 0x0602CD65 RID: 183653 RVA: 0x00A29EEA File Offset: 0x00A280EA
+		// Token: 0x1700450A RID: 17674
+		// (get) Token: 0x06021971 RID: 137585 RVA: 0x00964B12 File Offset: 0x00962D12
+		// (set) Token: 0x06021972 RID: 137586 RVA: 0x00964B22 File Offset: 0x00962D22
 		public unsafe float FocalRegion
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_FocalRegion);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_CineCamera_C.__PropertyOffset_FocalRegion) = value;
 			}
 		}
 
-		// Token: 0x0602CD66 RID: 183654 RVA: 0x00A29EFB File Offset: 0x00A280FB
+		// Token: 0x06021973 RID: 137587 RVA: 0x00964B33 File Offset: 0x00962D33
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ResetSeqCineCamSetting()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CineCamera_C.__ResetSeqCineCamSetting_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602CD67 RID: 183655 RVA: 0x00A29F0F File Offset: 0x00A2810F
+		// Token: 0x06021974 RID: 137588 RVA: 0x00964B47 File Offset: 0x00962D47
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ApplyUiCameraSettings()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CineCamera_C.__ApplyUiCameraSettings_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602CD68 RID: 183656 RVA: 0x00A29F24 File Offset: 0x00A28124
+		// Token: 0x06021975 RID: 137589 RVA: 0x00964B5C File Offset: 0x00962D5C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void BeginAutoTransform(float TimeLength)
 		{
 			BP_CineCamera_C.__BeginAutoTransform_FunctionParams* ptr = stackalloc BP_CineCamera_C.__BeginAutoTransform_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CineCamera_C.__BeginAutoTransform_FunctionParams) & -16L;
@@ -272,36 +242,32 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CineCamera_C.__BeginAutoTransform_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602CD69 RID: 183657 RVA: 0x00A29F6C File Offset: 0x00A2816C
+		// Token: 0x06021976 RID: 137590 RVA: 0x00964BA4 File Offset: 0x00962DA4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BeginAutoTransform_Implementation(float TimeLength)
 		{
 			BP_CineCamera_C.__BeginAutoTransform_FunctionParams* ptr = stackalloc BP_CineCamera_C.__BeginAutoTransform_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CineCamera_C.__BeginAutoTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_CineCamera_C.__BeginAutoTransform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->TimeLength = TimeLength;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CineCamera_C.__BeginAutoTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CineCamera_C.__BeginAutoTransform_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602CD6A RID: 183658 RVA: 0x00A29FB3 File Offset: 0x00A281B3
+		// Token: 0x06021977 RID: 137591 RVA: 0x00964BEA File Offset: 0x00962DEA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void EndAutoTransform()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CineCamera_C.__EndAutoTransform_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602CD6B RID: 183659 RVA: 0x00A29FC7 File Offset: 0x00A281C7
+		// Token: 0x06021978 RID: 137592 RVA: 0x00964BFE File Offset: 0x00962DFE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void EndAutoTransform_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CineCamera_C.__EndAutoTransform_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CineCamera_C.__EndAutoTransform_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602CD6C RID: 183660 RVA: 0x00A29FDC File Offset: 0x00A281DC
+		// Token: 0x06021979 RID: 137593 RVA: 0x00964C14 File Offset: 0x00962E14
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_CineCamera_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_CineCamera_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CineCamera_C.__ReceiveTick_FunctionParams) & -16L;
@@ -310,119 +276,108 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CineCamera_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602CD6D RID: 183661 RVA: 0x00A2A024 File Offset: 0x00A28224
+		// Token: 0x0602197A RID: 137594 RVA: 0x00964C5C File Offset: 0x00962E5C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_CineCamera_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_CineCamera_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CineCamera_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_CineCamera_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CineCamera_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CineCamera_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602CD6E RID: 183662 RVA: 0x00A2A06B File Offset: 0x00A2826B
+		// Token: 0x0602197B RID: 137595 RVA: 0x00964CA2 File Offset: 0x00962EA2
 		protected BP_CineCamera_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017A7C RID: 96892
-		internal static int __InterfaceOffset_ISeqAutoTransformInterface;
-
-		// Token: 0x04017A7D RID: 96893
+		// Token: 0x040125F4 RID: 75252
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/BP_CineCamera.BP_CineCamera_C";
 
-		// Token: 0x04017A7E RID: 96894
+		// Token: 0x040125F5 RID: 75253
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017A7F RID: 96895
+		// Token: 0x040125F6 RID: 75254
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017A80 RID: 96896
-		internal static int __PropertyOffset_1;
+		// Token: 0x040125F7 RID: 75255
+		internal static int __PropertyOffset_ResolutionAdaptFactor;
 
-		// Token: 0x04017A81 RID: 96897
-		internal static int __PropertyOffset_2;
+		// Token: 0x040125F8 RID: 75256
+		internal static int __PropertyOffset_IsAutoTransform;
 
-		// Token: 0x04017A82 RID: 96898
-		[Nullable(2)]
-		private FDataTableRowHandle _UiCameraAnimationRow;
+		// Token: 0x040125F9 RID: 75257
+		internal static int __PropertyOffset_OffsetTime;
 
-		// Token: 0x04017A83 RID: 96899
-		internal static int __PropertyOffset_3;
+		// Token: 0x040125FA RID: 75258
+		internal static int __PropertyOffset_MaxOffsetTime;
 
-		// Token: 0x04017A84 RID: 96900
-		internal static int __PropertyOffset_4;
+		// Token: 0x040125FB RID: 75259
+		internal static int __PropertyOffset_Filmback;
 
-		// Token: 0x04017A85 RID: 96901
-		internal static int __PropertyOffset_5;
-
-		// Token: 0x04017A86 RID: 96902
-		internal static int __PropertyOffset_6;
-
-		// Token: 0x04017A87 RID: 96903
+		// Token: 0x040125FC RID: 75260
 		[Nullable(2)]
 		private FCameraFilmbackSettings _Filmback;
 
-		// Token: 0x04017A88 RID: 96904
-		internal static int __PropertyOffset_7;
+		// Token: 0x040125FD RID: 75261
+		internal static int __PropertyOffset_Constrain_Aspect_Ratio;
 
-		// Token: 0x04017A89 RID: 96905
-		internal static int __PropertyOffset_8;
+		// Token: 0x040125FE RID: 75262
+		internal static int __PropertyOffset_Current_Focal_Length;
 
-		// Token: 0x04017A8A RID: 96906
-		internal static int __PropertyOffset_9;
+		// Token: 0x040125FF RID: 75263
+		internal static int __PropertyOffset_Current_Aperture;
 
-		// Token: 0x04017A8B RID: 96907
-		internal static int __PropertyOffset_10;
+		// Token: 0x04012600 RID: 75264
+		internal static int __PropertyOffset_Focus_Settings;
 
-		// Token: 0x04017A8C RID: 96908
+		// Token: 0x04012601 RID: 75265
 		[Nullable(2)]
 		private FCameraFocusSettings _Focus_Settings;
 
-		// Token: 0x04017A8D RID: 96909
-		internal static int __PropertyOffset_11;
+		// Token: 0x04012602 RID: 75266
+		internal static int __PropertyOffset_Lens_Settings;
 
-		// Token: 0x04017A8E RID: 96910
+		// Token: 0x04012603 RID: 75267
 		[Nullable(2)]
 		private FCameraLensSettings _Lens_Settings;
 
-		// Token: 0x04017A8F RID: 96911
-		internal static int __PropertyOffset_12;
+		// Token: 0x04012604 RID: 75268
+		internal static int __PropertyOffset_FocalRegion;
 
-		// Token: 0x04017A90 RID: 96912
+		// Token: 0x04012605 RID: 75269
 		private static IntPtr __ResetSeqCineCamSetting_NativeFunctionPtr;
 
-		// Token: 0x04017A91 RID: 96913
+		// Token: 0x04012606 RID: 75270
 		private static IntPtr __ApplyUiCameraSettings_NativeFunctionPtr;
 
-		// Token: 0x04017A92 RID: 96914
+		// Token: 0x04012607 RID: 75271
 		private static IntPtr __BeginAutoTransform_NativeFunctionPtr;
 
-		// Token: 0x04017A93 RID: 96915
+		// Token: 0x04012608 RID: 75272
 		private static IntPtr __EndAutoTransform_NativeFunctionPtr;
 
-		// Token: 0x04017A94 RID: 96916
+		// Token: 0x04012609 RID: 75273
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0200A675 RID: 42613
+		// Token: 0x02009088 RID: 37000
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __BeginAutoTransform_FunctionParams
 		{
-			// Token: 0x040325B9 RID: 206265
+			// Token: 0x0402CEA5 RID: 183973
 			[FieldOffset(0)]
 			public float TimeLength;
 		}
 
-		// Token: 0x0200A676 RID: 42614
+		// Token: 0x02009089 RID: 37001
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x040325BA RID: 206266
+			// Token: 0x0402CEA6 RID: 183974
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

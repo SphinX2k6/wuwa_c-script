@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A9 RID: 17833
+	// Token: 0x020034D1 RID: 13521
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharPropertyModifier : CharRenderBase
 	{
-		// Token: 0x0602DFB6 RID: 188342 RVA: 0x00A93AD0 File Offset: 0x00A91CD0
+		// Token: 0x060226A0 RID: 140960 RVA: 0x009BFCF0 File Offset: 0x009BDEF0
 		public override void Start()
 		{
 			this.IndexCount = 0;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DFB7 RID: 188343 RVA: 0x00A93B90 File Offset: 0x00A91D90
+		// Token: 0x060226A1 RID: 140961 RVA: 0x009BFDB0 File Offset: 0x009BDFB0
 		public void UpdateCurveData(float delta, PropertyTimeCounter data)
 		{
 			data.Factor = data.Counter / data.WholeTime;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Render
 			data.Counter += delta;
 		}
 
-		// Token: 0x0602DFB8 RID: 188344 RVA: 0x00A93C2C File Offset: 0x00A91E2C
+		// Token: 0x060226A2 RID: 140962 RVA: 0x009BFE4C File Offset: 0x009BE04C
 		public override void Update()
 		{
 			float deltaTime = base.GetDeltaTime();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFB9 RID: 188345 RVA: 0x00A93D50 File Offset: 0x00A91F50
+		// Token: 0x060226A3 RID: 140963 RVA: 0x009BFF70 File Offset: 0x009BE170
 		public bool SetPropertyFloat(ECharacterBodySpecifiedType bodyType, int sectionIndex, ECharacterSlotSpecifiedType slotType, FName? propertyName, float value)
 		{
 			if (propertyName == null)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602DFBA RID: 188346 RVA: 0x00A93DD0 File Offset: 0x00A91FD0
+		// Token: 0x060226A4 RID: 140964 RVA: 0x009BFFF0 File Offset: 0x009BE1F0
 		public bool SetPropertyColor(ECharacterBodySpecifiedType bodyType, int sectionIndex, ECharacterSlotSpecifiedType slotType, FName? propertyName, FLinearColor value)
 		{
 			if (propertyName == null)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602DFBB RID: 188347 RVA: 0x00A93E50 File Offset: 0x00A92050
+		// Token: 0x060226A5 RID: 140965 RVA: 0x009C0070 File Offset: 0x009BE270
 		public bool SetPropertyLinearFloat(ECharacterBodySpecifiedType bodyType, int sectionIndex, ECharacterSlotSpecifiedType slotType, FName propertyName, PD_CurveFloatData_C value, float factor = -1f)
 		{
 			if (this.MaterialContainer != null || this.MaterialContainerV2 != null)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602DFBC RID: 188348 RVA: 0x00A93F38 File Offset: 0x00A92138
+		// Token: 0x060226A6 RID: 140966 RVA: 0x009C0158 File Offset: 0x009BE358
 		public bool SetPropertyLinearColor(ECharacterBodySpecifiedType bodyType, int sectionIndex, ECharacterSlotSpecifiedType slotType, FName propertyName, PD_CurveLinearColorData_C value, float factor = -1f)
 		{
 			if (this.MaterialContainer != null || this.MaterialContainerV2 != null)
@@ -201,27 +201,27 @@ namespace CSharpScript.Game.Render
 			return false;
 		}
 
-		// Token: 0x0602DFBD RID: 188349 RVA: 0x00A9401E File Offset: 0x00A9221E
+		// Token: 0x060226A7 RID: 140967 RVA: 0x009C023E File Offset: 0x009BE43E
 		public override int GetComponentId()
 		{
 			return 6;
 		}
 
-		// Token: 0x0602DFBE RID: 188350 RVA: 0x00A94021 File Offset: 0x00A92221
+		// Token: 0x060226A8 RID: 140968 RVA: 0x009C0241 File Offset: 0x009BE441
 		public override string GetStatName()
 		{
 			return "CharPropertyModifier";
 		}
 
-		// Token: 0x040188C7 RID: 100551
+		// Token: 0x04012F02 RID: 77570
 		[Nullable(2)]
 		private CharMaterialContainer MaterialContainer;
 
-		// Token: 0x040188C8 RID: 100552
+		// Token: 0x04012F03 RID: 77571
 		[Nullable(2)]
 		private CharMaterialContainerV2 MaterialContainerV2;
 
-		// Token: 0x040188C9 RID: 100553
+		// Token: 0x04012F04 RID: 77572
 		[Nullable(new byte[]
 		{
 			2,
@@ -229,10 +229,10 @@ namespace CSharpScript.Game.Render
 		})]
 		private Dictionary<int, PropertyTimeCounter> AllCurveData;
 
-		// Token: 0x040188CA RID: 100554
+		// Token: 0x04012F05 RID: 77573
 		private int IndexCount;
 
-		// Token: 0x040188CB RID: 100555
+		// Token: 0x04012F06 RID: 77574
 		[Nullable(2)]
 		private List<int> TempRemoveList;
 	}

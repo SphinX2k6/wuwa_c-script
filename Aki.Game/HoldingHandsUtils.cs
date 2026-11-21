@@ -6,12 +6,12 @@ using CSharpScript.Game.Utils;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02001E68 RID: 7784
+// Token: 0x0200132A RID: 4906
 [NullableContext(1)]
 [Nullable(0)]
 public class HoldingHandsUtils : Singleton
 {
-	// Token: 0x0600EC9C RID: 60572 RVA: 0x00384178 File Offset: 0x00382378
+	// Token: 0x0600C0BB RID: 49339 RVA: 0x0038FE34 File Offset: 0x0038E034
 	public HoldingHandsUtils()
 	{
 		this.Debug = false;
@@ -36,7 +36,7 @@ public class HoldingHandsUtils : Singleton
 		this.RingFingerNamesMs[EHandType.Right] = (FNameUtil.GetDynamicFName("Bip001RFinger31") ?? FNameUtil.EMPTY);
 	}
 
-	// Token: 0x0600EC9D RID: 60573 RVA: 0x003843E8 File Offset: 0x003825E8
+	// Token: 0x0600C0BC RID: 49340 RVA: 0x003900A4 File Offset: 0x0038E2A4
 	[NullableContext(2)]
 	public void UpdateBinding(Binding binding, double deltaTime)
 	{
@@ -145,7 +145,7 @@ public class HoldingHandsUtils : Singleton
 		binding.UnReachableTime += deltaTime;
 	}
 
-	// Token: 0x0600EC9E RID: 60574 RVA: 0x00384A70 File Offset: 0x00382C70
+	// Token: 0x0600C0BD RID: 49341 RVA: 0x0039072C File Offset: 0x0038E92C
 	private bool PrepareBindingRuntimeData(Binding binding)
 	{
 		HandRuntime leaderRuntime = binding.LeaderRuntime;
@@ -169,7 +169,7 @@ public class HoldingHandsUtils : Singleton
 		return true;
 	}
 
-	// Token: 0x0600EC9F RID: 60575 RVA: 0x00384BAC File Offset: 0x00382DAC
+	// Token: 0x0600C0BE RID: 49342 RVA: 0x00390868 File Offset: 0x0038EA68
 	private bool PrepareRuntimeData(HandRuntime runtime, UKuroAnimInstanceChar animInstance, USkeletalMeshComponent skelMesh, HoldingHandsParams @params, bool isLeader, bool isMsBody)
 	{
 		EHandType handType = runtime.HandType;
@@ -236,7 +236,7 @@ public class HoldingHandsUtils : Singleton
 		return true;
 	}
 
-	// Token: 0x0600ECA0 RID: 60576 RVA: 0x00384F38 File Offset: 0x00383138
+	// Token: 0x0600C0BF RID: 49343 RVA: 0x00390BF4 File Offset: 0x0038EDF4
 	private void UpdateBindingReachable(Binding binding, double deltaTime)
 	{
 		HandRuntime leaderRuntime = binding.LeaderRuntime;
@@ -257,7 +257,7 @@ public class HoldingHandsUtils : Singleton
 		this.ModifyBindingBendLength(binding, num3, deltaTime);
 	}
 
-	// Token: 0x0600ECA1 RID: 60577 RVA: 0x00384FF4 File Offset: 0x003831F4
+	// Token: 0x0600C0C0 RID: 49344 RVA: 0x00390CB0 File Offset: 0x0038EEB0
 	private void ModifyBindingBendLength(Binding binding, double requiredLength, double deltaTime)
 	{
 		HandRuntime leaderRuntime = binding.LeaderRuntime;
@@ -317,7 +317,7 @@ public class HoldingHandsUtils : Singleton
 		followerRuntime.BendLength = bendLength;
 	}
 
-	// Token: 0x0600ECA2 RID: 60578 RVA: 0x003851E4 File Offset: 0x003833E4
+	// Token: 0x0600C0C1 RID: 49345 RVA: 0x00390EA0 File Offset: 0x0038F0A0
 	private bool SolveTriangle(Vector abUnit, double abSize, double acSize, double bcSize, Vector vert, Vector @out)
 	{
 		if (abSize > acSize + bcSize)
@@ -335,7 +335,7 @@ public class HoldingHandsUtils : Singleton
 		return true;
 	}
 
-	// Token: 0x0600ECA3 RID: 60579 RVA: 0x003852B8 File Offset: 0x003834B8
+	// Token: 0x0600C0C2 RID: 49346 RVA: 0x00390F74 File Offset: 0x0038F174
 	private void SmoothBindDir(Vector inBindDir, Vector bindDirTarget, double damping, double deltaTime)
 	{
 		if (inBindDir.IsZero() || damping == 0.0)
@@ -349,7 +349,7 @@ public class HoldingHandsUtils : Singleton
 		inBindDir.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0600ECA4 RID: 60580 RVA: 0x0038536C File Offset: 0x0038356C
+	// Token: 0x0600C0C3 RID: 49347 RVA: 0x00391028 File Offset: 0x0038F228
 	private bool ClampBindDir(HandRuntime runtime, HoldingHandsRange pitchRange, HoldingHandsRange yawRange, bool lastReachable, float reachableExtra)
 	{
 		float num = pitchRange.Min;
@@ -381,7 +381,7 @@ public class HoldingHandsUtils : Singleton
 		return num5 == 0;
 	}
 
-	// Token: 0x0600ECA5 RID: 60581 RVA: 0x003854C0 File Offset: 0x003836C0
+	// Token: 0x0600C0C4 RID: 49348 RVA: 0x0039117C File Offset: 0x0038F37C
 	private bool ClampShoulderDirection(HandRuntime runtime, HoldingHandsRange pitchRange, HoldingHandsRange yawRange, bool lastReachable, float reachableExtra)
 	{
 		float num = pitchRange.Min;
@@ -418,7 +418,7 @@ public class HoldingHandsUtils : Singleton
 		return num7 == 0;
 	}
 
-	// Token: 0x0600ECA6 RID: 60582 RVA: 0x00385678 File Offset: 0x00383878
+	// Token: 0x0600C0C5 RID: 49349 RVA: 0x00391334 File Offset: 0x0038F534
 	private void GetLeaderHandNormal(Vector targetDir, Vector right, Vector down, Vector animNormal, Vector @out)
 	{
 		Vector.CrossProduct(targetDir, down, @out);
@@ -442,7 +442,7 @@ public class HoldingHandsUtils : Singleton
 		Vector.Lerp(animNormal, @out, 0.5, @out);
 	}
 
-	// Token: 0x0600ECA7 RID: 60583 RVA: 0x00385780 File Offset: 0x00383980
+	// Token: 0x0600C0C6 RID: 49350 RVA: 0x0039143C File Offset: 0x0038F63C
 	private void CalLeaderHandTarget(HandRuntime runtime, Vector gravity, bool useLeaderAnim)
 	{
 		if (useLeaderAnim)
@@ -462,7 +462,7 @@ public class HoldingHandsUtils : Singleton
 		MathUtils.Instance.LookRotationForwardFirst(this.TempVector, this.TempVector2, runtime.HandRotTarget);
 	}
 
-	// Token: 0x0600ECA8 RID: 60584 RVA: 0x0038586C File Offset: 0x00383A6C
+	// Token: 0x0600C0C7 RID: 49351 RVA: 0x00391528 File Offset: 0x0038F728
 	private void CalFollowerHandTarget(HandRuntime foRuntime, HandRuntime leRuntime, double bindPosDistance, double minAngle)
 	{
 		leRuntime.FingerNormal.Multiply(-1.0, foRuntime.FingerNormal);
@@ -500,7 +500,7 @@ public class HoldingHandsUtils : Singleton
 		MathUtils.Instance.LookRotationForwardFirst(this.TempVector, this.TempVector2, foRuntime.HandRotTarget);
 	}
 
-	// Token: 0x0600ECA9 RID: 60585 RVA: 0x00385AA4 File Offset: 0x00383CA4
+	// Token: 0x0600C0C8 RID: 49352 RVA: 0x00391760 File Offset: 0x0038F960
 	private bool CheckBindingObstacle(Binding binding)
 	{
 		CharacterHoldingHandsComponent leader = binding.Leader;
@@ -539,7 +539,7 @@ public class HoldingHandsUtils : Singleton
 		return flag2;
 	}
 
-	// Token: 0x0600ECAA RID: 60586 RVA: 0x00385C68 File Offset: 0x00383E68
+	// Token: 0x0600C0C9 RID: 49353 RVA: 0x00391924 File Offset: 0x0038FB24
 	private bool CheckHeightReachable(Binding binding)
 	{
 		CharacterActorComponent actorComp = binding.Leader.ActorComp;
@@ -558,8 +558,8 @@ public class HoldingHandsUtils : Singleton
 		return num < num2 && num3 < num4;
 	}
 
-	// Token: 0x1700128E RID: 4750
-	// (get) Token: 0x0600ECAB RID: 60587 RVA: 0x00385D4F File Offset: 0x00383F4F
+	// Token: 0x170012B8 RID: 4792
+	// (get) Token: 0x0600C0CA RID: 49354 RVA: 0x00391A0B File Offset: 0x0038FC0B
 	public static HoldingHandsUtils Instance
 	{
 		get
@@ -573,12 +573,12 @@ public class HoldingHandsUtils : Singleton
 		}
 	}
 
-	// Token: 0x0600ECAC RID: 60588 RVA: 0x00385D72 File Offset: 0x00383F72
+	// Token: 0x0600C0CB RID: 49355 RVA: 0x00391A2E File Offset: 0x0038FC2E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600ECAD RID: 60589 RVA: 0x00385D74 File Offset: 0x00383F74
+	// Token: 0x0600C0CC RID: 49356 RVA: 0x00391A30 File Offset: 0x0038FC30
 	public static void ResetStaticDefaultValue()
 	{
 		HoldingHandsUtils instance = HoldingHandsUtils._instance;
@@ -589,43 +589,43 @@ public class HoldingHandsUtils : Singleton
 		HoldingHandsUtils._instance = null;
 	}
 
-	// Token: 0x0600ECAE RID: 60590 RVA: 0x00385D8D File Offset: 0x00383F8D
+	// Token: 0x0600C0CD RID: 49357 RVA: 0x00391A49 File Offset: 0x0038FC49
 	static HoldingHandsUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HoldingHandsUtils.CreateStaticDefaultValue), new Action(HoldingHandsUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006DF0 RID: 28144
+	// Token: 0x04006ED1 RID: 28369
 	public readonly bool Debug;
 
-	// Token: 0x04006DF1 RID: 28145
+	// Token: 0x04006ED2 RID: 28370
 	public Vector TempVector;
 
-	// Token: 0x04006DF2 RID: 28146
+	// Token: 0x04006ED3 RID: 28371
 	public Vector TempVector2;
 
-	// Token: 0x04006DF3 RID: 28147
+	// Token: 0x04006ED4 RID: 28372
 	public Quat TempQuat;
 
-	// Token: 0x04006DF4 RID: 28148
+	// Token: 0x04006ED5 RID: 28373
 	public FIntVector WorldOrigin;
 
-	// Token: 0x04006DF5 RID: 28149
+	// Token: 0x04006ED6 RID: 28374
 	private Dictionary<EHandType, FName> ClavicleNames;
 
-	// Token: 0x04006DF6 RID: 28150
+	// Token: 0x04006ED7 RID: 28375
 	private Dictionary<EHandType, FName> ShoulderNames;
 
-	// Token: 0x04006DF7 RID: 28151
+	// Token: 0x04006ED8 RID: 28376
 	private Dictionary<EHandType, FName> HandNames;
 
-	// Token: 0x04006DF8 RID: 28152
+	// Token: 0x04006ED9 RID: 28377
 	private Dictionary<EHandType, FName> RingFingerNames;
 
-	// Token: 0x04006DF9 RID: 28153
+	// Token: 0x04006EDA RID: 28378
 	private Dictionary<EHandType, FName> RingFingerNamesMs;
 
-	// Token: 0x04006DFA RID: 28154
+	// Token: 0x04006EDB RID: 28379
 	[Nullable(2)]
 	private static HoldingHandsUtils _instance;
 }

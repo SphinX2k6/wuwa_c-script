@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200368A RID: 13962
+// Token: 0x02002BFF RID: 11263
 public class __TsTaskLookForSceneItem_InheritProxy : TsTaskLookForSceneItem
 {
-	// Token: 0x0601E300 RID: 123648 RVA: 0x00884050 File Offset: 0x00882250
+	// Token: 0x0601C019 RID: 114713 RVA: 0x008ABA28 File Offset: 0x008A9C28
 	[NullableContext(1)]
 	public __TsTaskLookForSceneItem_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskLookForSceneItem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E301 RID: 123649 RVA: 0x00884083 File Offset: 0x00882283
+	// Token: 0x0601C01A RID: 114714 RVA: 0x008ABA5B File Offset: 0x008A9C5B
 	protected __TsTaskLookForSceneItem_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E302 RID: 123650 RVA: 0x0088408C File Offset: 0x0088228C
+	// Token: 0x0601C01B RID: 114715 RVA: 0x008ABA64 File Offset: 0x008A9C64
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

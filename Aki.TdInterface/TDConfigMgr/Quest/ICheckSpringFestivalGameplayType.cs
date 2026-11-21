@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EFA RID: 3834
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001010 RID: 4112
 	public class ICheckSpringFestivalGameplayType
 	{
-		// Token: 0x06005496 RID: 21654 RVA: 0x000CF99C File Offset: 0x000CDB9C
+		// Token: 0x06005A12 RID: 23058 RVA: 0x000DBB44 File Offset: 0x000D9D44
 		private ICheckSpringFestivalGameplayType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005497 RID: 21655 RVA: 0x000CF9D4 File Offset: 0x000CDBD4
+		// Token: 0x06005A13 RID: 23059 RVA: 0x000DBB7C File Offset: 0x000D9D7C
 		public static ICheckSpringFestivalGameplayType Create([Nullable(2)] ICheckSpringFestivalGameplayType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005498 RID: 21656 RVA: 0x000CF9E7 File Offset: 0x000CDBE7
+		// Token: 0x06005A14 RID: 23060 RVA: 0x000DBB8F File Offset: 0x000D9D8F
 		public static ICheckSpringFestivalGameplayType CreateFromSetValue([Nullable(2)] ICheckSpringFestivalGameplayType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005499 RID: 21657 RVA: 0x000CF9FA File Offset: 0x000CDBFA
+		// Token: 0x06005A15 RID: 23061 RVA: 0x000DBBA2 File Offset: 0x000D9DA2
 		public ICheckSpringFestivalGameplayType_SetValue ToSetValue()
 		{
 			return new ICheckSpringFestivalGameplayType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C55 RID: 7253
-		// (get) Token: 0x0600549A RID: 21658 RVA: 0x000CFA0D File Offset: 0x000CDC0D
-		// (set) Token: 0x0600549B RID: 21659 RVA: 0x000CFA38 File Offset: 0x000CDC38
+		// Token: 0x17001DED RID: 7661
+		// (get) Token: 0x06005A16 RID: 23062 RVA: 0x000DBBB5 File Offset: 0x000D9DB5
+		// (set) Token: 0x06005A17 RID: 23063 RVA: 0x000DBBE0 File Offset: 0x000D9DE0
 		public virtual ESpringFestivalGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400333C RID: 13116
+		// Token: 0x04003649 RID: 13897
 		[Nullable(2)]
 		protected ICheckSpringFestivalGameplayType FbInstance;
 
-		// Token: 0x0400333D RID: 13117
+		// Token: 0x0400364A RID: 13898
 		[Nullable(2)]
 		protected ICheckSpringFestivalGameplayType_SetValue PocoInterface;
 	}

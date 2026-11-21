@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A45 RID: 19013
+	// Token: 0x020039ED RID: 14829
 	[NullableContext(1)]
 	public interface ITrapDefenseTab<[Nullable(2)] T>
 	{
-		// Token: 0x17007A4C RID: 31308
-		// (get) Token: 0x0603158E RID: 202126
-		// (set) Token: 0x0603158F RID: 202127
+		// Token: 0x17004DF9 RID: 19961
+		// (get) Token: 0x0602631E RID: 156446
+		// (set) Token: 0x0602631F RID: 156447
 		T TabType { get; set; }
 
-		// Token: 0x17007A4D RID: 31309
-		// (get) Token: 0x06031590 RID: 202128
-		// (set) Token: 0x06031591 RID: 202129
+		// Token: 0x17004DFA RID: 19962
+		// (get) Token: 0x06026320 RID: 156448
+		// (set) Token: 0x06026321 RID: 156449
 		string TabNameKey { get; set; }
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013A9 RID: 5033
+	// Token: 0x020014FA RID: 5370
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPhotoTarget
 	{
-		// Token: 0x060072FC RID: 29436 RVA: 0x0011443A File Offset: 0x0011263A
-		[NullableContext(1)]
+		// Token: 0x060079A3 RID: 31139 RVA: 0x00122AF6 File Offset: 0x00120CF6
+		[NullableContext(0)]
 		public static IPhotoTarget Create(IPhotoTarget? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700257D RID: 9597
-		// (get) Token: 0x060072FD RID: 29437 RVA: 0x00114459 File Offset: 0x00112659
+		// Token: 0x17002751 RID: 10065
+		// (get) Token: 0x060079A4 RID: 31140 RVA: 0x00122B15 File Offset: 0x00120D15
 		public virtual int EntityId
 		{
 			get
@@ -34,20 +34,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700257E RID: 9598
-		// (get) Token: 0x060072FE RID: 29438 RVA: 0x00114466 File Offset: 0x00112666
-		[Nullable(1)]
+		// Token: 0x17002752 RID: 10066
+		// (get) Token: 0x060079A5 RID: 31141 RVA: 0x00122B22 File Offset: 0x00120D22
+		[Nullable(0)]
 		public virtual string TidDescription
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.TidDescription;
 			}
 		}
 
-		// Token: 0x1700257F RID: 9599
-		// (get) Token: 0x060072FF RID: 29439 RVA: 0x00114474 File Offset: 0x00112674
+		// Token: 0x17002753 RID: 10067
+		// (get) Token: 0x060079A6 RID: 31142 RVA: 0x00122B30 File Offset: 0x00120D30
 		public virtual bool? IsOptionalTarget
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002580 RID: 9600
-		// (get) Token: 0x06007300 RID: 29440 RVA: 0x001144AA File Offset: 0x001126AA
+		// Token: 0x17002754 RID: 10068
+		// (get) Token: 0x060079A7 RID: 31143 RVA: 0x00122B66 File Offset: 0x00120D66
 		public virtual SetVar SetVar
 		{
 			get
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002581 RID: 9601
-		// (get) Token: 0x06007301 RID: 29441 RVA: 0x001144DE File Offset: 0x001126DE
+		// Token: 0x17002755 RID: 10069
+		// (get) Token: 0x060079A8 RID: 31144 RVA: 0x00122B9A File Offset: 0x00120D9A
 		public virtual string EdTidDescription
 		{
 			get
@@ -86,13 +86,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400427D RID: 17021
+		// Token: 0x040045FE RID: 17918
 		private IPhotoTarget Instance;
 
-		// Token: 0x0400427E RID: 17022
+		// Token: 0x040045FF RID: 17919
 		private SetVar _SetVarCache;
 
-		// Token: 0x0400427F RID: 17023
+		// Token: 0x04004600 RID: 17920
 		private bool _SetVarInited;
 	}
 }

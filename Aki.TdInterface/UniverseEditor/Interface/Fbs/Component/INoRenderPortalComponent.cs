@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200560E RID: 22030
+	// Token: 0x02005BAC RID: 23468
 	public struct INoRenderPortalComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A305 RID: 41733
-		// (get) Token: 0x060248F7 RID: 149751 RVA: 0x0050B8C2 File Offset: 0x00509AC2
+		// Token: 0x1700AB8D RID: 43917
+		// (get) Token: 0x06026B07 RID: 158471 RVA: 0x0054BEDA File Offset: 0x0054A0DA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060248F8 RID: 149752 RVA: 0x0050B8CF File Offset: 0x00509ACF
+		// Token: 0x06026B08 RID: 158472 RVA: 0x0054BEE7 File Offset: 0x0054A0E7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060248F9 RID: 149753 RVA: 0x0050B8D8 File Offset: 0x00509AD8
+		// Token: 0x06026B09 RID: 158473 RVA: 0x0054BEF0 File Offset: 0x0054A0F0
 		public static INoRenderPortalComponent GetRootAsINoRenderPortalComponent(ByteBuffer _bb)
 		{
 			return INoRenderPortalComponent.GetRootAsINoRenderPortalComponent(_bb, default(INoRenderPortalComponent));
 		}
 
-		// Token: 0x060248FA RID: 149754 RVA: 0x0050B8F4 File Offset: 0x00509AF4
+		// Token: 0x06026B0A RID: 158474 RVA: 0x0054BF0C File Offset: 0x0054A10C
 		public static INoRenderPortalComponent GetRootAsINoRenderPortalComponent(ByteBuffer _bb, INoRenderPortalComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060248FB RID: 149755 RVA: 0x0050B911 File Offset: 0x00509B11
+		// Token: 0x06026B0B RID: 158475 RVA: 0x0054BF29 File Offset: 0x0054A129
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060248FC RID: 149756 RVA: 0x0050B920 File Offset: 0x00509B20
+		// Token: 0x06026B0C RID: 158476 RVA: 0x0054BF38 File Offset: 0x0054A138
 		public INoRenderPortalComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A306 RID: 41734
-		// (get) Token: 0x060248FD RID: 149757 RVA: 0x0050B930 File Offset: 0x00509B30
+		// Token: 0x1700AB8E RID: 43918
+		// (get) Token: 0x06026B0D RID: 158477 RVA: 0x0054BF48 File Offset: 0x0054A148
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A307 RID: 41735
-		// (get) Token: 0x060248FE RID: 149758 RVA: 0x0050B970 File Offset: 0x00509B70
+		// Token: 0x1700AB8F RID: 43919
+		// (get) Token: 0x06026B0E RID: 158478 RVA: 0x0054BF88 File Offset: 0x0054A188
 		public IStaticNoRenderPortal? Config
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A308 RID: 41736
-		// (get) Token: 0x060248FF RID: 149759 RVA: 0x0050B9D0 File Offset: 0x00509BD0
+		// Token: 0x1700AB90 RID: 43920
+		// (get) Token: 0x06026B0F RID: 158479 RVA: 0x0054BFE8 File Offset: 0x0054A1E8
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024900 RID: 149760 RVA: 0x0050BA0C File Offset: 0x00509C0C
+		// Token: 0x06026B10 RID: 158480 RVA: 0x0054C024 File Offset: 0x0054A224
 		public static Offset<INoRenderPortalComponent> CreateINoRenderPortalComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IStaticNoRenderPortal> ConfigOffset = default(Offset<IStaticNoRenderPortal>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INoRenderPortalComponent.EndINoRenderPortalComponent(builder);
 		}
 
-		// Token: 0x06024901 RID: 149761 RVA: 0x0050BA30 File Offset: 0x00509C30
+		// Token: 0x06026B11 RID: 158481 RVA: 0x0054C048 File Offset: 0x0054A248
 		public static void StartINoRenderPortalComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06024902 RID: 149762 RVA: 0x0050BA39 File Offset: 0x00509C39
+		// Token: 0x06026B12 RID: 158482 RVA: 0x0054C051 File Offset: 0x0054A251
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06024903 RID: 149763 RVA: 0x0050BA44 File Offset: 0x00509C44
+		// Token: 0x06026B13 RID: 158483 RVA: 0x0054C05C File Offset: 0x0054A25C
 		public static void AddConfig(FlatBufferBuilder builder, Offset<IStaticNoRenderPortal> configOffset)
 		{
 			builder.AddOffset(1, configOffset.Value, 0);
 		}
 
-		// Token: 0x06024904 RID: 149764 RVA: 0x0050BA54 File Offset: 0x00509C54
+		// Token: 0x06026B14 RID: 158484 RVA: 0x0054C06C File Offset: 0x0054A26C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06024905 RID: 149765 RVA: 0x0050BA5F File Offset: 0x00509C5F
+		// Token: 0x06026B15 RID: 158485 RVA: 0x0054C077 File Offset: 0x0054A277
 		public static Offset<INoRenderPortalComponent> EndINoRenderPortalComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<INoRenderPortalComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06024906 RID: 149766 RVA: 0x0050BA6C File Offset: 0x00509C6C
+		// Token: 0x06026B16 RID: 158486 RVA: 0x0054C084 File Offset: 0x0054A284
 		public INoRenderPortalComponentT UnPack()
 		{
 			INoRenderPortalComponentT noRenderPortalComponentT = new INoRenderPortalComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return noRenderPortalComponentT;
 		}
 
-		// Token: 0x06024907 RID: 149767 RVA: 0x0050BA88 File Offset: 0x00509C88
+		// Token: 0x06026B17 RID: 158487 RVA: 0x0054C0A0 File Offset: 0x0054A2A0
 		public void UnPackTo(INoRenderPortalComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06024908 RID: 149768 RVA: 0x0050BADC File Offset: 0x00509CDC
+		// Token: 0x06026B18 RID: 158488 RVA: 0x0054C0F4 File Offset: 0x0054A2F4
 		public static Offset<INoRenderPortalComponent> Pack(FlatBufferBuilder builder, INoRenderPortalComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INoRenderPortalComponent.CreateINoRenderPortalComponent(builder, _o.Disabled, configOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E98E RID: 59790
+		// Token: 0x0400F5F1 RID: 62961
 		private Table __p;
 	}
 }

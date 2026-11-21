@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200780F RID: 30735
+	// Token: 0x0200804D RID: 32845
 	public static class TVisualNovelCgVerify
 	{
-		// Token: 0x06037BAD RID: 228269 RVA: 0x007889D4 File Offset: 0x00786BD4
+		// Token: 0x0603B152 RID: 242002 RVA: 0x007EE34C File Offset: 0x007EC54C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -19,7 +19,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IVisualNovelCgLoadImageVerify.Verify(verifier, tablePos);
 				break;
 			case 3:
-				result = IVisualNovelCgLoadSpineVerify.Verify(verifier, tablePos);
+				result = IVisualNovelCgLoadPrefabVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

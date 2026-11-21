@@ -5,15 +5,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B0F RID: 27407
+	// Token: 0x02005C87 RID: 23687
 	public class LevelEventDestroyDynamicEntities : LevelEventBase
 	{
-		// Token: 0x06044086 RID: 278662 RVA: 0x010B895D File Offset: 0x010B6B5D
+		// Token: 0x0603A1D8 RID: 238040 RVA: 0x010621E9 File Offset: 0x010603E9
 		public LevelEventDestroyDynamicEntities(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044087 RID: 278663 RVA: 0x010B8968 File Offset: 0x010B6B68
+		// Token: 0x0603A1D9 RID: 238041 RVA: 0x010621F4 File Offset: 0x010603F4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044088 RID: 278664 RVA: 0x010B8A34 File Offset: 0x010B6C34
+		// Token: 0x0603A1DA RID: 238042 RVA: 0x010622C0 File Offset: 0x010604C0
 		private void CheckVisionDestroyFinish()
 		{
 			if (this.IsCheckingVisionDestroy)
@@ -53,10 +53,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x040238D6 RID: 145622
+		// Token: 0x0401EB78 RID: 125816
 		private int CurVisionEntityCount;
 
-		// Token: 0x040238D7 RID: 145623
+		// Token: 0x0401EB79 RID: 125817
 		private bool IsCheckingVisionDestroy;
 	}
 }

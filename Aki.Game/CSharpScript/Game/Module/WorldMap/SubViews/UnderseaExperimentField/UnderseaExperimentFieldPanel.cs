@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 {
-	// Token: 0x020047E3 RID: 18403
+	// Token: 0x02003714 RID: 14100
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UnderseaExperimentFieldPanel : UiPanelBase
 	{
-		// Token: 0x0603034A RID: 197450 RVA: 0x00B2C454 File Offset: 0x00B2A654
+		// Token: 0x06024B1A RID: 150298 RVA: 0x00A5C398 File Offset: 0x00A5A598
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603034B RID: 197451 RVA: 0x00B2C5EC File Offset: 0x00B2A7EC
+		// Token: 0x06024B1B RID: 150299 RVA: 0x00A5C530 File Offset: 0x00A5A730
 		public UniTask Initialize(UUIItem uiRoot, Action<int> checkedCallback)
 		{
 			UnderseaExperimentFieldPanel.<Initialize>d__6 <Initialize>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603034C RID: 197452 RVA: 0x00B2C640 File Offset: 0x00B2A840
+		// Token: 0x06024B1C RID: 150300 RVA: 0x00A5C584 File Offset: 0x00A5A784
 		private UniTask InitializeToggleItem(EDeepSeaMapId mapId, UUIExtendToggle uiRoot)
 		{
 			UnderseaExperimentFieldPanel.<InitializeToggleItem>d__7 <InitializeToggleItem>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			return <InitializeToggleItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603034D RID: 197453 RVA: 0x00B2C694 File Offset: 0x00B2A894
+		// Token: 0x06024B1D RID: 150301 RVA: 0x00A5C5D8 File Offset: 0x00A5A7D8
 		private void RefreshToggleItem(EDeepSeaMapId deepSeaMapId)
 		{
 			this.CurrentMapId = deepSeaMapId;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			this.RefreshToggleState();
 		}
 
-		// Token: 0x0603034E RID: 197454 RVA: 0x00B2C6F8 File Offset: 0x00B2A8F8
+		// Token: 0x06024B1E RID: 150302 RVA: 0x00A5C63C File Offset: 0x00A5A83C
 		private void RefreshToggleState()
 		{
 			foreach (KeyValuePair<EDeepSeaMapId, int> keyValuePair in this.SeaMapIdToComponent)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			}
 		}
 
-		// Token: 0x0603034F RID: 197455 RVA: 0x00B2C77C File Offset: 0x00B2A97C
+		// Token: 0x06024B1F RID: 150303 RVA: 0x00A5C6C0 File Offset: 0x00A5A8C0
 		public UnderseaExperimentFieldPanel()
 		{
 			Dictionary<EDeepSeaMapId, int> dictionary = new Dictionary<EDeepSeaMapId, int>();
@@ -138,36 +138,36 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			base..ctor();
 		}
 
-		// Token: 0x04019F58 RID: 106328
+		// Token: 0x0401460C RID: 83468
 		private EDeepSeaMapId CurrentMapId;
 
-		// Token: 0x04019F59 RID: 106329
+		// Token: 0x0401460D RID: 83469
 		private readonly Dictionary<EDeepSeaMapId, int> SeaMapIdToComponent;
 
-		// Token: 0x04019F5A RID: 106330
+		// Token: 0x0401460E RID: 83470
 		private readonly Dictionary<EDeepSeaMapId, UnderseaExperimentToggleItem> Toggles;
 
-		// Token: 0x04019F5B RID: 106331
+		// Token: 0x0401460F RID: 83471
 		[Nullable(2)]
 		private Action<int> CheckedCallback;
 
-		// Token: 0x0200AAA0 RID: 43680
+		// Token: 0x02009452 RID: 37970
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033E86 RID: 212614
+			// Token: 0x0402E60C RID: 189964
 			public const int TogGraveyard = 0;
 
-			// Token: 0x04033E87 RID: 212615
+			// Token: 0x0402E60D RID: 189965
 			public const int TogCultivationField = 1;
 
-			// Token: 0x04033E88 RID: 212616
+			// Token: 0x0402E60E RID: 189966
 			public const int TogEnergyField = 2;
 
-			// Token: 0x04033E89 RID: 212617
+			// Token: 0x0402E60F RID: 189967
 			public const int TogSanctuary = 3;
 
-			// Token: 0x04033E8A RID: 212618
+			// Token: 0x0402E610 RID: 189968
 			public const int TogMainTower = 4;
 		}
 	}

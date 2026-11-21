@@ -19,25 +19,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 {
-	// Token: 0x020047F0 RID: 18416
+	// Token: 0x02003721 RID: 14113
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffQuestPanel : WorldMapSecondaryUi
 	{
-		// Token: 0x060303B8 RID: 197560 RVA: 0x00B2E0CF File Offset: 0x00B2C2CF
+		// Token: 0x06024B88 RID: 150408 RVA: 0x00A5E013 File Offset: 0x00A5C213
 		public override string GetResourceId()
 		{
 			return "UiItem_SkeEyeRecordPopup";
 		}
 
-		// Token: 0x060303B9 RID: 197561 RVA: 0x00B2E0D6 File Offset: 0x00B2C2D6
+		// Token: 0x06024B89 RID: 150409 RVA: 0x00A5E01A File Offset: 0x00A5C21A
 		[PreserveBaseOverrides]
 		protected new virtual SheriffPopupRightItem GetPopupRightItem()
 		{
 			return new SheriffPopupRightItem();
 		}
 
-		// Token: 0x060303BA RID: 197562 RVA: 0x00B2E0E0 File Offset: 0x00B2C2E0
+		// Token: 0x06024B8A RID: 150410 RVA: 0x00A5E024 File Offset: 0x00A5C224
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060303BB RID: 197563 RVA: 0x00B2E22C File Offset: 0x00B2C42C
+		// Token: 0x06024B8B RID: 150411 RVA: 0x00A5E170 File Offset: 0x00A5C370
 		private void OnClickBtnGo()
 		{
 			if (this.MarkItem == null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			});
 		}
 
-		// Token: 0x060303BC RID: 197564 RVA: 0x00B2E334 File Offset: 0x00B2C534
+		// Token: 0x06024B8C RID: 150412 RVA: 0x00A5E278 File Offset: 0x00A5C478
 		[NullableContext(2)]
 		private global::Vector GetQuestTrackPosition()
 		{
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			return quest.GetNodeTrackPosition(currentActiveChildQuestNode.NodeId);
 		}
 
-		// Token: 0x060303BD RID: 197565 RVA: 0x00B2E380 File Offset: 0x00B2C580
+		// Token: 0x06024B8D RID: 150413 RVA: 0x00A5E2C4 File Offset: 0x00A5C4C4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffQuestPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060303BE RID: 197566 RVA: 0x00B2E3C4 File Offset: 0x00B2C5C4
+		// Token: 0x06024B8E RID: 150414 RVA: 0x00A5E308 File Offset: 0x00A5C508
 		private void OnClickBtnLock()
 		{
 			SheriffQuest? questConfigByQuestId = SheriffConfig.Instance.GetQuestConfigByQuestId(this.QuestId);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x060303BF RID: 197567 RVA: 0x00B2E538 File Offset: 0x00B2C738
+		// Token: 0x06024B8F RID: 150415 RVA: 0x00A5E47C File Offset: 0x00A5C67C
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			};
 		}
 
-		// Token: 0x060303C0 RID: 197568 RVA: 0x00B2E554 File Offset: 0x00B2C754
+		// Token: 0x06024B90 RID: 150416 RVA: 0x00A5E498 File Offset: 0x00A5C698
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -301,10 +301,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			}
 		}
 
-		// Token: 0x04019F6D RID: 106349
+		// Token: 0x04014621 RID: 83489
 		private int QuestId;
 
-		// Token: 0x04019F6E RID: 106350
+		// Token: 0x04014622 RID: 83490
 		[Nullable(new byte[]
 		{
 			2,
@@ -312,41 +312,41 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x04019F6F RID: 106351
+		// Token: 0x04014623 RID: 83491
 		[Nullable(2)]
 		public FunctionalPanelConditionLock PanelLock;
 
-		// Token: 0x04019F70 RID: 106352
+		// Token: 0x04014624 RID: 83492
 		[Nullable(2)]
 		public FunctionalPanelConditionActivate PanelActivate;
 
-		// Token: 0x04019F71 RID: 106353
+		// Token: 0x04014625 RID: 83493
 		[Nullable(2)]
 		private SheriffQuestMarkItem MarkItem;
 
-		// Token: 0x0200AAB5 RID: 43701
+		// Token: 0x02009467 RID: 37991
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04033ED9 RID: 212697
+			// Token: 0x0402E65F RID: 190047
 			public const int Texture = 0;
 
-			// Token: 0x04033EDA RID: 212698
+			// Token: 0x0402E660 RID: 190048
 			public const int Desc = 1;
 
-			// Token: 0x04033EDB RID: 212699
+			// Token: 0x0402E661 RID: 190049
 			public const int ScrollView = 2;
 
-			// Token: 0x04033EDC RID: 212700
+			// Token: 0x0402E662 RID: 190050
 			public const int ScrollViewItem = 3;
 
-			// Token: 0x04033EDD RID: 212701
+			// Token: 0x0402E663 RID: 190051
 			public const int BtnGo = 4;
 
-			// Token: 0x04033EDE RID: 212702
+			// Token: 0x0402E664 RID: 190052
 			public const int PnlLock = 5;
 
-			// Token: 0x04033EDF RID: 212703
+			// Token: 0x0402E665 RID: 190053
 			public const int PnlFinished = 6;
 		}
 	}

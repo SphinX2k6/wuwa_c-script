@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -8,13 +7,13 @@ using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001C59 RID: 7257
+// Token: 0x02001118 RID: 4376
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class GachaAccumulateModel : ModelBase
 {
-	// Token: 0x0600DAD6 RID: 56022 RVA: 0x0032D4CA File Offset: 0x0032B6CA
+	// Token: 0x0600AEEC RID: 44780 RVA: 0x003388F6 File Offset: 0x00336AF6
 	protected override bool OnInit()
 	{
 		this.AccumulateDataMap.Clear();
@@ -22,7 +21,7 @@ public class GachaAccumulateModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DAD7 RID: 56023 RVA: 0x0032D4E3 File Offset: 0x0032B6E3
+	// Token: 0x0600AEED RID: 44781 RVA: 0x0033890F File Offset: 0x00336B0F
 	protected override bool OnClear()
 	{
 		this.AccumulateDataMap.Clear();
@@ -30,13 +29,13 @@ public class GachaAccumulateModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DAD8 RID: 56024 RVA: 0x0032D4FC File Offset: 0x0032B6FC
+	// Token: 0x0600AEEE RID: 44782 RVA: 0x00338928 File Offset: 0x00336B28
 	public bool CheckAccumulateIfNeedRequest(int accumulateId)
 	{
 		return !this.AccumulateDataMap.ContainsKey(accumulateId);
 	}
 
-	// Token: 0x0600DAD9 RID: 56025 RVA: 0x0032D510 File Offset: 0x0032B710
+	// Token: 0x0600AEEF RID: 44783 RVA: 0x0033893C File Offset: 0x00336B3C
 	[NullableContext(2)]
 	public GachaAccumulateData GetAccumulateData(int accumulateId)
 	{
@@ -48,7 +47,7 @@ public class GachaAccumulateModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600DADA RID: 56026 RVA: 0x0032D530 File Offset: 0x0032B730
+	// Token: 0x0600AEF0 RID: 44784 RVA: 0x0033895C File Offset: 0x00336B5C
 	public GachaAccumulateData[] GetAccumulateDataByGroupId(int groupId)
 	{
 		List<GachaAccumulateData> list;
@@ -59,13 +58,16 @@ public class GachaAccumulateModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600DADB RID: 56027 RVA: 0x0032D559 File Offset: 0x0032B759
+	// Token: 0x0600AEF1 RID: 44785 RVA: 0x00338988 File Offset: 0x00336B88
 	public GachaAccumulateData[] GetAllAccumulateData()
 	{
-		return this.AccumulateDataMap.Values.ToArray<GachaAccumulateData>();
+		Dictionary<int, GachaAccumulateData>.ValueCollection values = this.AccumulateDataMap.Values;
+		GachaAccumulateData[] array = new GachaAccumulateData[values.Count];
+		values.CopyTo(array, 0);
+		return array;
 	}
 
-	// Token: 0x0600DADC RID: 56028 RVA: 0x0032D56C File Offset: 0x0032B76C
+	// Token: 0x0600AEF2 RID: 44786 RVA: 0x003389B4 File Offset: 0x00336BB4
 	public bool HasAnyClaimable()
 	{
 		using (Dictionary<int, GachaAccumulateData>.ValueCollection.Enumerator enumerator = this.AccumulateDataMap.Values.GetEnumerator())
@@ -81,13 +83,13 @@ public class GachaAccumulateModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600DADD RID: 56029 RVA: 0x0032D5CC File Offset: 0x0032B7CC
+	// Token: 0x0600AEF3 RID: 44787 RVA: 0x00338A14 File Offset: 0x00336C14
 	public void NotifyDataUpdate(int accumulateId)
 	{
 		EventSystem.Instance.Emit<int>(EEventName.GachaAccumulateDataUpdate, accumulateId);
 	}
 
-	// Token: 0x0600DADE RID: 56030 RVA: 0x0032D5E0 File Offset: 0x0032B7E0
+	// Token: 0x0600AEF4 RID: 44788 RVA: 0x00338A28 File Offset: 0x00336C28
 	public void UpdateAccumulateInfo(GachaAccumulateInfo protoInfo)
 	{
 		int gachaAccumulateId = protoInfo.GachaAccumulateId;
@@ -121,7 +123,7 @@ public class GachaAccumulateModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DADF RID: 56031 RVA: 0x0032D694 File Offset: 0x0032B894
+	// Token: 0x0600AEF5 RID: 44789 RVA: 0x00338ADC File Offset: 0x00336CDC
 	private void RemoveFromGroupIdMap(int accumulateId)
 	{
 		GachaAccumulateData gachaAccumulateData;
@@ -145,7 +147,7 @@ public class GachaAccumulateModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DAE0 RID: 56032 RVA: 0x0032D700 File Offset: 0x0032B900
+	// Token: 0x0600AEF6 RID: 44790 RVA: 0x00338B48 File Offset: 0x00336D48
 	private GachaAccumulateGroupData ConvertGroupInfo(GachaAccumulateGroupInfo protoGroup)
 	{
 		GachaAccumulateGroupData gachaAccumulateGroupData = new GachaAccumulateGroupData
@@ -161,7 +163,7 @@ public class GachaAccumulateModel : ModelBase
 		return gachaAccumulateGroupData;
 	}
 
-	// Token: 0x0600DAE1 RID: 56033 RVA: 0x0032D7A4 File Offset: 0x0032B9A4
+	// Token: 0x0600AEF7 RID: 44791 RVA: 0x00338BEC File Offset: 0x00336DEC
 	private GachaAccumulateRewardData ConvertRewardInfo(GachaAccumulateRewardInfo protoReward)
 	{
 		GachaAccumulateRewardData gachaAccumulateRewardData = new GachaAccumulateRewardData
@@ -186,7 +188,7 @@ public class GachaAccumulateModel : ModelBase
 		return gachaAccumulateRewardData;
 	}
 
-	// Token: 0x0600DAE2 RID: 56034 RVA: 0x0032D870 File Offset: 0x0032BA70
+	// Token: 0x0600AEF8 RID: 44792 RVA: 0x00338CB8 File Offset: 0x00336EB8
 	public bool IfGachaAccumulateNeedAutoOpenTips(int accumulateId)
 	{
 		if (accumulateId == 0)
@@ -204,7 +206,7 @@ public class GachaAccumulateModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600DAE3 RID: 56035 RVA: 0x0032D8CC File Offset: 0x0032BACC
+	// Token: 0x0600AEF9 RID: 44793 RVA: 0x00338D14 File Offset: 0x00336F14
 	public void SaveGachaAccumulateAutoOpenTips(int accumulateId)
 	{
 		ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.GachaAccumulateFirstOpen) as ServerStorageSet;
@@ -217,8 +219,8 @@ public class GachaAccumulateModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011DF RID: 4575
-	// (get) Token: 0x0600DAE4 RID: 56036 RVA: 0x0032D92B File Offset: 0x0032BB2B
+	// Token: 0x17001205 RID: 4613
+	// (get) Token: 0x0600AEFA RID: 44794 RVA: 0x00338D73 File Offset: 0x00336F73
 	public static GachaAccumulateModel Instance
 	{
 		get
@@ -227,7 +229,7 @@ public class GachaAccumulateModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DAE5 RID: 56037 RVA: 0x0032D932 File Offset: 0x0032BB32
+	// Token: 0x0600AEFB RID: 44795 RVA: 0x00338D7A File Offset: 0x00336F7A
 	public static GachaAccumulateModel GetOrCreateInstance()
 	{
 		if (GachaAccumulateModel._Instance == null)
@@ -237,7 +239,7 @@ public class GachaAccumulateModel : ModelBase
 		return GachaAccumulateModel._Instance;
 	}
 
-	// Token: 0x0600DAE6 RID: 56038 RVA: 0x0032D946 File Offset: 0x0032BB46
+	// Token: 0x0600AEFC RID: 44796 RVA: 0x00338D8E File Offset: 0x00336F8E
 	public static bool CreateInstance()
 	{
 		if (GachaAccumulateModel._Instance != null)
@@ -248,30 +250,30 @@ public class GachaAccumulateModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DAE7 RID: 56039 RVA: 0x0032D95C File Offset: 0x0032BB5C
+	// Token: 0x0600AEFD RID: 44797 RVA: 0x00338DA4 File Offset: 0x00336FA4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DAE8 RID: 56040 RVA: 0x0032D95E File Offset: 0x0032BB5E
+	// Token: 0x0600AEFE RID: 44798 RVA: 0x00338DA6 File Offset: 0x00336FA6
 	public static void ResetStaticDefaultValue()
 	{
 		GachaAccumulateModel._Instance = null;
 	}
 
-	// Token: 0x0600DAE9 RID: 56041 RVA: 0x0032D966 File Offset: 0x0032BB66
+	// Token: 0x0600AEFF RID: 44799 RVA: 0x00338DAE File Offset: 0x00336FAE
 	static GachaAccumulateModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GachaAccumulateModel.CreateStaticDefaultValue), new Action(GachaAccumulateModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006420 RID: 25632
+	// Token: 0x040064F2 RID: 25842
 	private readonly Dictionary<int, GachaAccumulateData> AccumulateDataMap = new Dictionary<int, GachaAccumulateData>();
 
-	// Token: 0x04006421 RID: 25633
+	// Token: 0x040064F3 RID: 25843
 	private readonly Dictionary<int, List<GachaAccumulateData>> GroupIdDataMap = new Dictionary<int, List<GachaAccumulateData>>();
 
-	// Token: 0x04006422 RID: 25634
+	// Token: 0x040064F4 RID: 25844
 	[Nullable(2)]
 	private static GachaAccumulateModel _Instance;
 }

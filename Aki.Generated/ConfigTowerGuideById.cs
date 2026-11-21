@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A02 RID: 2562
+	// Token: 0x02000AD7 RID: 2775
 	public class ConfigTowerGuideById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C20 RID: 15392 RVA: 0x001ADB94 File Offset: 0x001ABD94
+		// Token: 0x0600411E RID: 16670 RVA: 0x001CCF28 File Offset: 0x001CB128
 		static ConfigTowerGuideById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTowerGuideById.CreateStaticDefaultValue), new Action(ConfigTowerGuideById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C21 RID: 15393 RVA: 0x001ADBB4 File Offset: 0x001ABDB4
+		// Token: 0x0600411F RID: 16671 RVA: 0x001CCF48 File Offset: 0x001CB148
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTowerGuideById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C22 RID: 15394 RVA: 0x001ADC33 File Offset: 0x001ABE33
+		// Token: 0x06004120 RID: 16672 RVA: 0x001CCFC7 File Offset: 0x001CB1C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTowerGuideById.LogPair = null;
 			ConfigTowerGuideById.HandleId = 0;
 		}
 
-		// Token: 0x06003C23 RID: 15395 RVA: 0x001ADC41 File Offset: 0x001ABE41
+		// Token: 0x06004121 RID: 16673 RVA: 0x001CCFD5 File Offset: 0x001CB1D5
 		public static void Init()
 		{
 			ConfigTowerGuideById.HandleId = ConfigCommon.InitDataStatement(ConfigTowerGuideById.HandleId, "db_towerguide.db", "select BinData from `TowerGuide` where Id = ?");
 		}
 
-		// Token: 0x06003C24 RID: 15396 RVA: 0x001ADC5C File Offset: 0x001ABE5C
+		// Token: 0x06004122 RID: 16674 RVA: 0x001CCFF0 File Offset: 0x001CB1F0
 		public static TowerGuide? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTowerGuideById.HandleId, ConfigTowerGuideById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TowerGuide?(rootAsTowerGuide);
 		}
 
-		// Token: 0x040045F4 RID: 17908
+		// Token: 0x04004BC7 RID: 19399
 		private const string DB = "db_towerguide.db";
 
-		// Token: 0x040045F5 RID: 17909
+		// Token: 0x04004BC8 RID: 19400
 		private const string FILE = "p.爬塔引导活动.xlsx";
 
-		// Token: 0x040045F6 RID: 17910
+		// Token: 0x04004BC9 RID: 19401
 		private const string TABLE = "TowerGuide";
 
-		// Token: 0x040045F7 RID: 17911
+		// Token: 0x04004BCA RID: 19402
 		private const string COMMAND = "select BinData from `TowerGuide` where Id = ?";
 
-		// Token: 0x040045F8 RID: 17912
+		// Token: 0x04004BCB RID: 19403
 		private const string KEY_PREFIX = "TowerGuideById";
 
-		// Token: 0x040045F9 RID: 17913
+		// Token: 0x04004BCC RID: 19404
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040045FA RID: 17914
+		// Token: 0x04004BCD RID: 19405
 		private static int HandleId;
 	}
 }

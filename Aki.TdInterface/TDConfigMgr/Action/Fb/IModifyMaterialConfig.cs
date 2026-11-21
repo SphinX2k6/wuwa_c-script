@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028FB RID: 10491
+	// Token: 0x02002BD4 RID: 11220
 	public class IModifyMaterialConfig
 	{
-		// Token: 0x0600E8FB RID: 59643 RVA: 0x00222C76 File Offset: 0x00220E76
-		[NullableContext(1)]
+		// Token: 0x0600F73F RID: 63295 RVA: 0x0023FE62 File Offset: 0x0023E062
 		public static IModifyMaterialConfig Create(IModifyMaterialConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048C7 RID: 18631
-		// (get) Token: 0x0600E8FC RID: 59644 RVA: 0x00222C95 File Offset: 0x00220E95
+		// Token: 0x17004C45 RID: 19525
+		// (get) Token: 0x0600F740 RID: 63296 RVA: 0x0023FE81 File Offset: 0x0023E081
 		public virtual EModifyActorMaterialType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400809D RID: 32925
+		// Token: 0x04008762 RID: 34658
 		private IModifyMaterialConfig Instance;
 	}
 }

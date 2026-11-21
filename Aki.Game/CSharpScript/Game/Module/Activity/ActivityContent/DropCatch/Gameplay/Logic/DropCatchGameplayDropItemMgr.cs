@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006730 RID: 26416
+	// Token: 0x02005680 RID: 22144
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayDropItemMgr : DropCatchGameplayBaseMgr
 	{
-		// Token: 0x06041ED9 RID: 270041 RVA: 0x00FFDD14 File Offset: 0x00FFBF14
+		// Token: 0x06036A25 RID: 223781 RVA: 0x00F3F0E0 File Offset: 0x00F3D2E0
 		public DropCatchGameplayDropItemMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041EDA RID: 270042 RVA: 0x00FFDD7C File Offset: 0x00FFBF7C
+		// Token: 0x06036A26 RID: 223782 RVA: 0x00F3F148 File Offset: 0x00F3D348
 		public override void Init()
 		{
 			DropCatchGameplay? gameplayConfig = this.Context.GetProxy().GetGameplayConfig();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EDB RID: 270043 RVA: 0x00FFDFC8 File Offset: 0x00FFC1C8
+		// Token: 0x06036A27 RID: 223783 RVA: 0x00F3F394 File Offset: 0x00F3D594
 		public override void OnTick(float deltaTime)
 		{
 			this.UpdateConvertRules(deltaTime);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.UpdateDropItems(deltaTime);
 		}
 
-		// Token: 0x06041EDC RID: 270044 RVA: 0x00FFDFE0 File Offset: 0x00FFC1E0
+		// Token: 0x06036A28 RID: 223784 RVA: 0x00F3F3AC File Offset: 0x00F3D5AC
 		private void UpdateDropPools()
 		{
 			this.ExpiredPoolIds.Clear();
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EDD RID: 270045 RVA: 0x00FFE14C File Offset: 0x00FFC34C
+		// Token: 0x06036A29 RID: 223785 RVA: 0x00F3F518 File Offset: 0x00F3D718
 		private void SpawnFromPool(IDropPoolRuntime pool, bool isFirstTime)
 		{
 			int num = DropCatchGameplayHelper.SampleFromAliasTable(pool.AliasTable);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			pool.LastSpawnPosX = num3;
 		}
 
-		// Token: 0x06041EDE RID: 270046 RVA: 0x00FFE22C File Offset: 0x00FFC42C
+		// Token: 0x06036A2A RID: 223786 RVA: 0x00F3F5F8 File Offset: 0x00F3D7F8
 		private double GetInitSpawnPosX(IDropPoolRuntime pool, double itemHalfWidth)
 		{
 			DropCatchDropPool? dropCatchDropPoolById = DropCatchConfig.Instance.GetDropCatchDropPoolById(pool.PoolId);
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return (double)dropCatchDropPoolById.Value.DropInitPosX;
 		}
 
-		// Token: 0x06041EDF RID: 270047 RVA: 0x00FFE2AC File Offset: 0x00FFC4AC
+		// Token: 0x06036A2B RID: 223787 RVA: 0x00F3F678 File Offset: 0x00F3D878
 		private double GetRandomSpawnPosX(double posInterval, double lastPosX, double itemHalfWidth)
 		{
 			double num = this.Context.GetGameplayArea().MinX + itemHalfWidth;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return ((lastPosX + randomRange - num) % num2 + num2) % num2 + num;
 		}
 
-		// Token: 0x06041EE0 RID: 270048 RVA: 0x00FFE2FC File Offset: 0x00FFC4FC
+		// Token: 0x06036A2C RID: 223788 RVA: 0x00F3F6C8 File Offset: 0x00F3D8C8
 		public UniTask SpawnDropItem(int itemId, double posX, double? posY = null)
 		{
 			DropCatchGameplayDropItemMgr.<SpawnDropItem>d__16 <SpawnDropItem>d__;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return <SpawnDropItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041EE1 RID: 270049 RVA: 0x00FFE358 File Offset: 0x00FFC558
+		// Token: 0x06036A2D RID: 223789 RVA: 0x00F3F724 File Offset: 0x00F3D924
 		private void UpdateDropItems(float deltaTime)
 		{
 			foreach (IDropItemInstance dropItemInstance in this.ActiveDropItems.Values)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EE2 RID: 270050 RVA: 0x00FFE3B0 File Offset: 0x00FFC5B0
+		// Token: 0x06036A2E RID: 223790 RVA: 0x00F3F77C File Offset: 0x00F3D97C
 		public void RecycleDropItem(int instanceId)
 		{
 			this.Context.GetGameplayCollisionMgr().RemoveCheckCollisionDropItemInstanceId(instanceId);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.ActiveDropItems.Remove(instanceId);
 		}
 
-		// Token: 0x06041EE3 RID: 270051 RVA: 0x00FFE400 File Offset: 0x00FFC600
+		// Token: 0x06036A2F RID: 223791 RVA: 0x00F3F7CC File Offset: 0x00F3D9CC
 		[NullableContext(2)]
 		public IDropItemInstance GetDropItem(int instanceId)
 		{
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return result;
 		}
 
-		// Token: 0x06041EE4 RID: 270052 RVA: 0x00FFE420 File Offset: 0x00FFC620
+		// Token: 0x06036A30 RID: 223792 RVA: 0x00F3F7EC File Offset: 0x00F3D9EC
 		[NullableContext(2)]
 		public DropCatchGameplayAttribute GetSpawnTimeIntervalAttrByPoolId(int poolId)
 		{
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return dropPoolRuntime.SpawnTimeInterval;
 		}
 
-		// Token: 0x06041EE5 RID: 270053 RVA: 0x00FFE448 File Offset: 0x00FFC648
+		// Token: 0x06036A31 RID: 223793 RVA: 0x00F3F814 File Offset: 0x00F3DA14
 		public void ConvertDropItem(int[] sourceItemId, int targetItemId, float duration = 0f)
 		{
 			Dictionary<int, IConvertRule> convertRules = this.ConvertRules;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			});
 		}
 
-		// Token: 0x06041EE6 RID: 270054 RVA: 0x00FFE4A0 File Offset: 0x00FFC6A0
+		// Token: 0x06036A32 RID: 223794 RVA: 0x00F3F86C File Offset: 0x00F3DA6C
 		private void UpdateConvertRules(float deltaTime)
 		{
 			if (this.ConvertRules.Count == 0)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041EE7 RID: 270055 RVA: 0x00FFE5A0 File Offset: 0x00FFC7A0
+		// Token: 0x06036A33 RID: 223795 RVA: 0x00F3F96C File Offset: 0x00F3DB6C
 		private int ConvertItem(int itemId)
 		{
 			if (this.ConvertRules.Count == 0)
@@ -266,13 +266,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return itemId;
 		}
 
-		// Token: 0x06041EE8 RID: 270056 RVA: 0x00FFE61C File Offset: 0x00FFC81C
+		// Token: 0x06036A34 RID: 223796 RVA: 0x00F3F9E8 File Offset: 0x00F3DBE8
 		public Dictionary<int, IDropPoolRuntime> GetDropPools()
 		{
 			return this.DropPools;
 		}
 
-		// Token: 0x06041EE9 RID: 270057 RVA: 0x00FFE624 File Offset: 0x00FFC824
+		// Token: 0x06036A35 RID: 223797 RVA: 0x00F3F9F0 File Offset: 0x00F3DBF0
 		public override void Destroy()
 		{
 			foreach (IDropItemInstance dropItemInstance in this.ActiveDropItems.Values)
@@ -288,31 +288,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.ConvertRules.Clear();
 		}
 
-		// Token: 0x0402259D RID: 140701
+		// Token: 0x0401CDF6 RID: 118262
 		private readonly float INVALID_SPAWN_POS_X = 9999f;
 
-		// Token: 0x0402259E RID: 140702
+		// Token: 0x0401CDF7 RID: 118263
 		private readonly Dictionary<int, IDropPoolRuntime> DropPools = new Dictionary<int, IDropPoolRuntime>();
 
-		// Token: 0x0402259F RID: 140703
+		// Token: 0x0401CDF8 RID: 118264
 		private int NextInstanceId = 1;
 
-		// Token: 0x040225A0 RID: 140704
+		// Token: 0x0401CDF9 RID: 118265
 		private readonly Dictionary<int, IDropItemInstance> ActiveDropItems = new Dictionary<int, IDropItemInstance>();
 
-		// Token: 0x040225A1 RID: 140705
+		// Token: 0x0401CDFA RID: 118266
 		private readonly List<IDropItemInstance> DropItemPool = new List<IDropItemInstance>();
 
-		// Token: 0x040225A2 RID: 140706
+		// Token: 0x0401CDFB RID: 118267
 		private int ConvertRuleId;
 
-		// Token: 0x040225A3 RID: 140707
+		// Token: 0x0401CDFC RID: 118268
 		private readonly List<int> RuleIdToRemove = new List<int>();
 
-		// Token: 0x040225A4 RID: 140708
+		// Token: 0x0401CDFD RID: 118269
 		private readonly Dictionary<int, IConvertRule> ConvertRules = new Dictionary<int, IConvertRule>();
 
-		// Token: 0x040225A5 RID: 140709
+		// Token: 0x0401CDFE RID: 118270
 		private readonly List<int> ExpiredPoolIds = new List<int>();
 	}
 }

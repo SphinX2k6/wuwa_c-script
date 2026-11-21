@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A02 RID: 2562
+	// Token: 0x02000AC7 RID: 2759
 	public static class ESceneItemSeqEventCbTypeExtensions
 	{
-		// Token: 0x060038BA RID: 14522 RVA: 0x00092B80 File Offset: 0x00090D80
+		// Token: 0x06003C92 RID: 15506 RVA: 0x0009B470 File Offset: 0x00099670
 		public static string ToEnumString(this ESceneItemSeqEventCbType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038BB RID: 14523 RVA: 0x00092BB8 File Offset: 0x00090DB8
+		// Token: 0x06003C93 RID: 15507 RVA: 0x0009B4A8 File Offset: 0x000996A8
 		public static ESceneItemSeqEventCbType FromString(string name)
 		{
 			ESceneItemSeqEventCbType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038BC RID: 14524 RVA: 0x00092BE1 File Offset: 0x00090DE1
+		// Token: 0x06003C94 RID: 15508 RVA: 0x0009B4D1 File Offset: 0x000996D1
 		public static bool TryFromString(string name, out ESceneItemSeqEventCbType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060038BD RID: 14525 RVA: 0x00092C1A File Offset: 0x00090E1A
+		// Token: 0x06003C95 RID: 15509 RVA: 0x0009B50A File Offset: 0x0009970A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038BE RID: 14526 RVA: 0x00092C32 File Offset: 0x00090E32
+		// Token: 0x06003C96 RID: 15510 RVA: 0x0009B522 File Offset: 0x00099722
 		public static ESceneItemSeqEventCbType[] GetValues()
 		{
 			return new ESceneItemSeqEventCbType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038BF RID: 14527 RVA: 0x00092C3E File Offset: 0x00090E3E
+		// Token: 0x06003C97 RID: 15511 RVA: 0x0009B52E File Offset: 0x0009972E
 		public static string[] GetNames()
 		{
 			return new string[]

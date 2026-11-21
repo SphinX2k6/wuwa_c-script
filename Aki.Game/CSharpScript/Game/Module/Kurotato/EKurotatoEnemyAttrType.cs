@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005706 RID: 22278
+	// Token: 0x020046DD RID: 18141
 	public enum EKurotatoEnemyAttrType
 	{
-		// Token: 0x0401DBC1 RID: 121793
+		// Token: 0x04018657 RID: 99927
 		LifeMax = 1,
-		// Token: 0x0401DBC2 RID: 121794
+		// Token: 0x04018658 RID: 99928
 		MoveSpeed,
-		// Token: 0x0401DBC3 RID: 121795
+		// Token: 0x04018659 RID: 99929
 		Attack
 	}
 }

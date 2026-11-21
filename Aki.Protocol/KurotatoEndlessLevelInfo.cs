@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000891 RID: 2193
+	// Token: 0x02000880 RID: 2176
 	public sealed class KurotatoEndlessLevelInfo : IMessage<KurotatoEndlessLevelInfo>, IMessage, IEquatable<KurotatoEndlessLevelInfo>, IDeepCloneable<KurotatoEndlessLevelInfo>, IBufferMessage
 	{
-		// Token: 0x0600C2FF RID: 49919 RVA: 0x001CEC7E File Offset: 0x001CCE7E
+		// Token: 0x0600C1E3 RID: 49635 RVA: 0x001CC996 File Offset: 0x001CAB96
 		[NullableContext(1)]
 		public static KurotatoEndlessLevelInfo Create()
 		{
 			return new KurotatoEndlessLevelInfo();
 		}
 
-		// Token: 0x1700276A RID: 10090
-		// (get) Token: 0x0600C300 RID: 49920 RVA: 0x001CEC85 File Offset: 0x001CCE85
+		// Token: 0x1700272B RID: 10027
+		// (get) Token: 0x0600C1E4 RID: 49636 RVA: 0x001CC99D File Offset: 0x001CAB9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700276B RID: 10091
-		// (get) Token: 0x0600C301 RID: 49921 RVA: 0x001CEC88 File Offset: 0x001CCE88
+		// Token: 0x1700272C RID: 10028
+		// (get) Token: 0x0600C1E5 RID: 49637 RVA: 0x001CC9A0 File Offset: 0x001CABA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C302 RID: 49922 RVA: 0x001CEC8F File Offset: 0x001CCE8F
+		// Token: 0x0600C1E6 RID: 49638 RVA: 0x001CC9A7 File Offset: 0x001CABA7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoEndlessLevelInfo()
 		{
 		}
 
-		// Token: 0x0600C303 RID: 49923 RVA: 0x001CECA4 File Offset: 0x001CCEA4
+		// Token: 0x0600C1E7 RID: 49639 RVA: 0x001CC9BC File Offset: 0x001CABBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoEndlessLevelInfo(KurotatoEndlessLevelInfo other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C304 RID: 49924 RVA: 0x001CECF1 File Offset: 0x001CCEF1
+		// Token: 0x0600C1E8 RID: 49640 RVA: 0x001CCA09 File Offset: 0x001CAC09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoEndlessLevelInfo Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new KurotatoEndlessLevelInfo(this);
 		}
 
-		// Token: 0x1700276C RID: 10092
-		// (get) Token: 0x0600C305 RID: 49925 RVA: 0x001CECF9 File Offset: 0x001CCEF9
-		// (set) Token: 0x0600C306 RID: 49926 RVA: 0x001CED01 File Offset: 0x001CCF01
+		// Token: 0x1700272D RID: 10029
+		// (get) Token: 0x0600C1E9 RID: 49641 RVA: 0x001CCA11 File Offset: 0x001CAC11
+		// (set) Token: 0x0600C1EA RID: 49642 RVA: 0x001CCA19 File Offset: 0x001CAC19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FinishWave
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700276D RID: 10093
-		// (get) Token: 0x0600C307 RID: 49927 RVA: 0x001CED0A File Offset: 0x001CCF0A
-		// (set) Token: 0x0600C308 RID: 49928 RVA: 0x001CED12 File Offset: 0x001CCF12
+		// Token: 0x1700272E RID: 10030
+		// (get) Token: 0x0600C1EB RID: 49643 RVA: 0x001CCA22 File Offset: 0x001CAC22
+		// (set) Token: 0x0600C1EC RID: 49644 RVA: 0x001CCA2A File Offset: 0x001CAC2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalKillCount
@@ -102,8 +102,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700276E RID: 10094
-		// (get) Token: 0x0600C309 RID: 49929 RVA: 0x001CED1B File Offset: 0x001CCF1B
+		// Token: 0x1700272F RID: 10031
+		// (get) Token: 0x0600C1ED RID: 49645 RVA: 0x001CCA33 File Offset: 0x001CAC33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> PassRoleIds
@@ -114,7 +114,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C30A RID: 49930 RVA: 0x001CED23 File Offset: 0x001CCF23
+		// Token: 0x0600C1EE RID: 49646 RVA: 0x001CCA3B File Offset: 0x001CAC3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -122,7 +122,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoEndlessLevelInfo);
 		}
 
-		// Token: 0x0600C30B RID: 49931 RVA: 0x001CED34 File Offset: 0x001CCF34
+		// Token: 0x0600C1EF RID: 49647 RVA: 0x001CCA4C File Offset: 0x001CAC4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoEndlessLevelInfo other)
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FinishWave == other.FinishWave && this.TotalKillCount == other.TotalKillCount && this.passRoleIds_.Equals(other.passRoleIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C30C RID: 49932 RVA: 0x001CED94 File Offset: 0x001CCF94
+		// Token: 0x0600C1F0 RID: 49648 RVA: 0x001CCAAC File Offset: 0x001CACAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C30D RID: 49933 RVA: 0x001CEDFA File Offset: 0x001CCFFA
+		// Token: 0x0600C1F1 RID: 49649 RVA: 0x001CCB12 File Offset: 0x001CAD12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C30E RID: 49934 RVA: 0x001CEE07 File Offset: 0x001CD007
+		// Token: 0x0600C1F2 RID: 49650 RVA: 0x001CCB1F File Offset: 0x001CAD1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -168,7 +168,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C30F RID: 49935 RVA: 0x001CEE10 File Offset: 0x001CD010
+		// Token: 0x0600C1F3 RID: 49651 RVA: 0x001CCB28 File Offset: 0x001CAD28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C310 RID: 49936 RVA: 0x001CEE7C File Offset: 0x001CD07C
+		// Token: 0x0600C1F4 RID: 49652 RVA: 0x001CCB94 File Offset: 0x001CAD94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C311 RID: 49937 RVA: 0x001CEEE8 File Offset: 0x001CD0E8
+		// Token: 0x0600C1F5 RID: 49653 RVA: 0x001CCC00 File Offset: 0x001CAE00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoEndlessLevelInfo other)
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C312 RID: 49938 RVA: 0x001CEF49 File Offset: 0x001CD149
+		// Token: 0x0600C1F6 RID: 49654 RVA: 0x001CCC61 File Offset: 0x001CAE61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C313 RID: 49939 RVA: 0x001CEF54 File Offset: 0x001CD154
+		// Token: 0x0600C1F7 RID: 49655 RVA: 0x001CCC6C File Offset: 0x001CAE6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -275,28 +275,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005454 RID: 21588
+		// Token: 0x0400545B RID: 21595
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005455 RID: 21589
+		// Token: 0x0400545C RID: 21596
 		public const int FinishWaveFieldNumber = 1;
 
-		// Token: 0x04005456 RID: 21590
+		// Token: 0x0400545D RID: 21597
 		private int finishWave_;
 
-		// Token: 0x04005457 RID: 21591
+		// Token: 0x0400545E RID: 21598
 		public const int TotalKillCountFieldNumber = 2;
 
-		// Token: 0x04005458 RID: 21592
+		// Token: 0x0400545F RID: 21599
 		private int totalKillCount_;
 
-		// Token: 0x04005459 RID: 21593
+		// Token: 0x04005460 RID: 21600
 		public const int PassRoleIdsFieldNumber = 3;
 
-		// Token: 0x0400545A RID: 21594
+		// Token: 0x04005461 RID: 21601
 		private static readonly FieldCodec<int> _repeated_passRoleIds_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x0400545B RID: 21595
+		// Token: 0x04005462 RID: 21602
 		private readonly RepeatedField<int> passRoleIds_ = new RepeatedField<int>();
 	}
 }

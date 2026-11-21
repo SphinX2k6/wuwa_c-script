@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002474 RID: 9332
+// Token: 0x02001959 RID: 6489
 public class PhantomInteractDropDownTitleItem : TitleItemBase<int>
 {
-	// Token: 0x06012BB0 RID: 76720 RVA: 0x0049EC82 File Offset: 0x0049CE82
+	// Token: 0x06010068 RID: 65640 RVA: 0x004AC3EE File Offset: 0x004AA5EE
 	[NullableContext(1)]
 	public PhantomInteractDropDownTitleItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06012BB1 RID: 76721 RVA: 0x0049EC8B File Offset: 0x0049CE8B
+	// Token: 0x06010069 RID: 65641 RVA: 0x004AC3F7 File Offset: 0x004AA5F7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class PhantomInteractDropDownTitleItem : TitleItemBase<int>
 		};
 	}
 
-	// Token: 0x06012BB2 RID: 76722 RVA: 0x0049ECB0 File Offset: 0x0049CEB0
+	// Token: 0x0601006A RID: 65642 RVA: 0x004AC41C File Offset: 0x004AA61C
 	[NullableContext(1)]
 	public override void ShowTemp(int data, DropDownItemBase<int> selectedItemObj)
 	{
@@ -30,10 +30,10 @@ public class PhantomInteractDropDownTitleItem : TitleItemBase<int>
 		LguiUtil.Instance.SetLocalTextNew(text, textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x020089EE RID: 35310
+	// Token: 0x02007B75 RID: 31605
 	private enum EComponent
 	{
-		// Token: 0x0402CCB1 RID: 183473
+		// Token: 0x04027FC7 RID: 163783
 		TxtOption
 	}
 }

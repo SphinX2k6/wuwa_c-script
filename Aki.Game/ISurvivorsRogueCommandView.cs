@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002B84 RID: 11140
+// Token: 0x02002100 RID: 8448
 [NullableContext(1)]
 public interface ISurvivorsRogueCommandView
 {
-	// Token: 0x17001ED5 RID: 7893
-	// (get) Token: 0x06017178 RID: 94584
+	// Token: 0x17001F2D RID: 7981
+	// (get) Token: 0x06014BA9 RID: 84905
 	SurvivorsRogueCommandBase Command { get; }
 
-	// Token: 0x17001ED6 RID: 7894
-	// (get) Token: 0x06017179 RID: 94585
+	// Token: 0x17001F2E RID: 7982
+	// (get) Token: 0x06014BAA RID: 84906
 	int CommandIncId { get; }
 
-	// Token: 0x0601717A RID: 94586
+	// Token: 0x06014BAB RID: 84907
 	void Refresh();
 
-	// Token: 0x0601717B RID: 94587
+	// Token: 0x06014BAC RID: 84908
 	void CloseView();
 }

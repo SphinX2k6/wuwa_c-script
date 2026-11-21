@@ -3,44 +3,44 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x0200519C RID: 20892
+	// Token: 0x0200416C RID: 16748
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardTabItemData : ICardTabItemData
 	{
-		// Token: 0x17008196 RID: 33174
-		// (get) Token: 0x0603574A RID: 218954 RVA: 0x00CA7B6F File Offset: 0x00CA5D6F
-		// (set) Token: 0x0603574B RID: 218955 RVA: 0x00CA7B77 File Offset: 0x00CA5D77
+		// Token: 0x17005556 RID: 21846
+		// (get) Token: 0x0602A645 RID: 173637 RVA: 0x00BF5143 File Offset: 0x00BF3343
+		// (set) Token: 0x0602A646 RID: 173638 RVA: 0x00BF514B File Offset: 0x00BF334B
 		public ECardTabType TabType { get; set; }
 
-		// Token: 0x17008197 RID: 33175
-		// (get) Token: 0x0603574C RID: 218956 RVA: 0x00CA7B80 File Offset: 0x00CA5D80
-		// (set) Token: 0x0603574D RID: 218957 RVA: 0x00CA7B88 File Offset: 0x00CA5D88
+		// Token: 0x17005557 RID: 21847
+		// (get) Token: 0x0602A647 RID: 173639 RVA: 0x00BF5154 File Offset: 0x00BF3354
+		// (set) Token: 0x0602A648 RID: 173640 RVA: 0x00BF515C File Offset: 0x00BF335C
 		public ECardElement? ElementConfigId { get; set; }
 
-		// Token: 0x17008198 RID: 33176
-		// (get) Token: 0x0603574E RID: 218958 RVA: 0x00CA7B91 File Offset: 0x00CA5D91
-		// (set) Token: 0x0603574F RID: 218959 RVA: 0x00CA7B99 File Offset: 0x00CA5D99
+		// Token: 0x17005558 RID: 21848
+		// (get) Token: 0x0602A649 RID: 173641 RVA: 0x00BF5165 File Offset: 0x00BF3365
+		// (set) Token: 0x0602A64A RID: 173642 RVA: 0x00BF516D File Offset: 0x00BF336D
 		public string TabTexturePath { get; set; }
 
-		// Token: 0x17008199 RID: 33177
-		// (get) Token: 0x06035750 RID: 218960 RVA: 0x00CA7BA2 File Offset: 0x00CA5DA2
-		// (set) Token: 0x06035751 RID: 218961 RVA: 0x00CA7BAA File Offset: 0x00CA5DAA
+		// Token: 0x17005559 RID: 21849
+		// (get) Token: 0x0602A64B RID: 173643 RVA: 0x00BF5176 File Offset: 0x00BF3376
+		// (set) Token: 0x0602A64C RID: 173644 RVA: 0x00BF517E File Offset: 0x00BF337E
 		public string TabElementColor { get; set; }
 
-		// Token: 0x1700819A RID: 33178
-		// (get) Token: 0x06035752 RID: 218962 RVA: 0x00CA7BB3 File Offset: 0x00CA5DB3
-		// (set) Token: 0x06035753 RID: 218963 RVA: 0x00CA7BBB File Offset: 0x00CA5DBB
+		// Token: 0x1700555A RID: 21850
+		// (get) Token: 0x0602A64D RID: 173645 RVA: 0x00BF5187 File Offset: 0x00BF3387
+		// (set) Token: 0x0602A64E RID: 173646 RVA: 0x00BF518F File Offset: 0x00BF338F
 		public bool ShowRedDot { get; set; }
 
-		// Token: 0x1700819B RID: 33179
-		// (get) Token: 0x06035754 RID: 218964 RVA: 0x00CA7BC4 File Offset: 0x00CA5DC4
-		// (set) Token: 0x06035755 RID: 218965 RVA: 0x00CA7BCC File Offset: 0x00CA5DCC
+		// Token: 0x1700555B RID: 21851
+		// (get) Token: 0x0602A64F RID: 173647 RVA: 0x00BF5198 File Offset: 0x00BF3398
+		// (set) Token: 0x0602A650 RID: 173648 RVA: 0x00BF51A0 File Offset: 0x00BF33A0
 		public bool IsDisable { get; set; }
 
-		// Token: 0x1700819C RID: 33180
-		// (get) Token: 0x06035756 RID: 218966 RVA: 0x00CA7BD5 File Offset: 0x00CA5DD5
-		// (set) Token: 0x06035757 RID: 218967 RVA: 0x00CA7BDD File Offset: 0x00CA5DDD
+		// Token: 0x1700555C RID: 21852
+		// (get) Token: 0x0602A651 RID: 173649 RVA: 0x00BF51A9 File Offset: 0x00BF33A9
+		// (set) Token: 0x0602A652 RID: 173650 RVA: 0x00BF51B1 File Offset: 0x00BF33B1
 		public bool IsArrivedMax { get; set; }
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F16 RID: 24342
+	// Token: 0x02004EFD RID: 20221
 	public class ActivityInstanceEntranceScoreItem : UiPanelBase
 	{
-		// Token: 0x0603DD7D RID: 253309 RVA: 0x00EF267C File Offset: 0x00EF087C
+		// Token: 0x06032D18 RID: 208152 RVA: 0x00E44384 File Offset: 0x00E42584
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DD7E RID: 253310 RVA: 0x00EF2744 File Offset: 0x00EF0944
+		// Token: 0x06032D19 RID: 208153 RVA: 0x00E4444C File Offset: 0x00E4264C
 		[NullableContext(2)]
 		public void RefreshView(ActivityEntrancePointData data)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.RefreshScore();
 		}
 
-		// Token: 0x0603DD7F RID: 253311 RVA: 0x00EF2824 File Offset: 0x00EF0A24
+		// Token: 0x06032D1A RID: 208154 RVA: 0x00E4452C File Offset: 0x00E4272C
 		private void RefreshScore()
 		{
 			string scoreDesc = this.ViewData.GetScoreDesc();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			text.SetText(scoreDesc, true);
 		}
 
-		// Token: 0x0603DD80 RID: 253312 RVA: 0x00EF2850 File Offset: 0x00EF0A50
+		// Token: 0x06032D1B RID: 208155 RVA: 0x00E44558 File Offset: 0x00E42758
 		private void OnClickBtnScoreReward()
 		{
 			Action pointRewardBtnClickCallBack = this.ViewData.GetPointRewardBtnClickCallBack();
@@ -77,18 +77,18 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x040204D2 RID: 132306
+		// Token: 0x0401AFA4 RID: 110500
 		[Nullable(2)]
 		private ActivityEntrancePointData ViewData;
 
-		// Token: 0x0200C24B RID: 49739
+		// Token: 0x0200AC58 RID: 44120
 		private enum EComponent
 		{
-			// Token: 0x0403AB21 RID: 240417
+			// Token: 0x04035513 RID: 218387
 			BtnScoreReward,
-			// Token: 0x0403AB22 RID: 240418
+			// Token: 0x04035514 RID: 218388
 			TxtScore,
-			// Token: 0x0403AB23 RID: 240419
+			// Token: 0x04035515 RID: 218389
 			ScoreRedDot
 		}
 	}

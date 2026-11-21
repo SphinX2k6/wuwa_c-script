@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 {
-	// Token: 0x020069FD RID: 27133
+	// Token: 0x02005B5A RID: 23386
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SunSpiritFlyingToPlayerState : SunSpiritFlyingEffectState
 	{
-		// Token: 0x060437F4 RID: 276468 RVA: 0x010815F3 File Offset: 0x0107F7F3
+		// Token: 0x0603983F RID: 235583 RVA: 0x01025C17 File Offset: 0x01023E17
 		[NullableContext(1)]
 		public SunSpiritFlyingToPlayerState(SunSpiritData sunSpiritData, float waitBeforeFlyDuration, float flyingDuration, int gearConfigId, int gearSocketIndex, [Nullable(2)] Action flyingEndCallback) : base(ESunSpiritStateType.FlyingToPlayer, sunSpiritData, waitBeforeFlyDuration, flyingDuration)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			};
 		}
 
-		// Token: 0x060437F5 RID: 276469 RVA: 0x01081634 File Offset: 0x0107F834
+		// Token: 0x06039840 RID: 235584 RVA: 0x01025C58 File Offset: 0x01023E58
 		private bool CheckFlyingTargetCacheNotExpired()
 		{
 			if (this.FlyingTargetPosCache == null || this.FlyingTargetRotCache == null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return true;
 		}
 
-		// Token: 0x060437F6 RID: 276470 RVA: 0x010816F8 File Offset: 0x0107F8F8
+		// Token: 0x06039841 RID: 235585 RVA: 0x01025D1C File Offset: 0x01023F1C
 		private unsafe void UpdateFlyingTargetCache()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -139,14 +139,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			this.FlyingTargetRotCache = null;
 		}
 
-		// Token: 0x060437F7 RID: 276471 RVA: 0x010818EC File Offset: 0x0107FAEC
+		// Token: 0x06039842 RID: 235586 RVA: 0x01025F10 File Offset: 0x01024110
 		protected override void OnSunSpiritFlyToTargetEnd(bool bKeepEffect = false, bool bIsInterrupt = false)
 		{
 			base.OnSunSpiritFlyToTargetEnd(bKeepEffect, bIsInterrupt);
 			this.SunSpiritData.StopAllAndSetNextSunSpiritState(new SunSpiritOccupiedByPlayerState(this.SunSpiritData), false);
 		}
 
-		// Token: 0x060437F8 RID: 276472 RVA: 0x01081910 File Offset: 0x0107FB10
+		// Token: 0x06039843 RID: 235587 RVA: 0x01025F34 File Offset: 0x01024134
 		protected override bool OnEnter()
 		{
 			base.OnEnter();
@@ -202,19 +202,29 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritState
 			return true;
 		}
 
-		// Token: 0x040233C8 RID: 144328
+		// Token: 0x17006D71 RID: 28017
+		// (get) Token: 0x06039844 RID: 235588 RVA: 0x01026095 File Offset: 0x01024295
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E5BA RID: 124346
 		private float MaxOffsetSquaredForReQueryTargetLoc;
 
-		// Token: 0x040233C9 RID: 144329
+		// Token: 0x0401E5BB RID: 124347
 		public readonly int GearConfigId;
 
-		// Token: 0x040233CA RID: 144330
+		// Token: 0x0401E5BC RID: 124348
 		public readonly int GearSocketIndex;
 
-		// Token: 0x040233CB RID: 144331
+		// Token: 0x0401E5BD RID: 124349
 		private Vector FlyingTargetPosCache;
 
-		// Token: 0x040233CC RID: 144332
+		// Token: 0x0401E5BE RID: 124350
 		private Quat FlyingTargetRotCache;
 	}
 }

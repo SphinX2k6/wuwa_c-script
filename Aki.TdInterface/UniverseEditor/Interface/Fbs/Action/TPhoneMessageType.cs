@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200774C RID: 30540
+	// Token: 0x02007F75 RID: 32629
 	public enum TPhoneMessageType : byte
 	{
-		// Token: 0x040128A1 RID: 75937
+		// Token: 0x04013937 RID: 80183
 		NONE,
-		// Token: 0x040128A2 RID: 75938
+		// Token: 0x04013938 RID: 80184
 		ITalkItemPhoneMessageAttachment,
-		// Token: 0x040128A3 RID: 75939
+		// Token: 0x04013939 RID: 80185
 		ITalkItemPhoneMessageEmoji,
-		// Token: 0x040128A4 RID: 75940
+		// Token: 0x0401393A RID: 80186
 		ITalkItemPhoneMessageSystemTip,
-		// Token: 0x040128A5 RID: 75941
+		// Token: 0x0401393B RID: 80187
 		ITalkItemPhoneMessageVoice
 	}
 }

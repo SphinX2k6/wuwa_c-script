@@ -7,16 +7,16 @@ using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F8 RID: 22776
+	// Token: 0x020048D0 RID: 18640
 	public class RoguelikeExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D32 RID: 236850 RVA: 0x00DBC1DC File Offset: 0x00DBA3DC
+		// Token: 0x0602EC55 RID: 191573 RVA: 0x00D0B140 File Offset: 0x00D09340
 		public override bool Checker()
 		{
 			return RoguelikeModel.Instance.CheckInRoguelike() || WeeklyRogueModel.Instance.CheckIsInWeeklyRogue();
 		}
 
-		// Token: 0x06039D33 RID: 236851 RVA: 0x00DBC1F8 File Offset: 0x00DBA3F8
+		// Token: 0x0602EC56 RID: 191574 RVA: 0x00D0B15C File Offset: 0x00D0935C
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			}
 		}
 
-		// Token: 0x06039D34 RID: 236852 RVA: 0x00DBC25D File Offset: 0x00DBA45D
+		// Token: 0x0602EC57 RID: 191575 RVA: 0x00D0B1C1 File Offset: 0x00D093C1
 		private void RoguelikeNormalExit()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeExitTips, null, null);
 		}
 
-		// Token: 0x06039D35 RID: 236853 RVA: 0x00DBC270 File Offset: 0x00DBA470
+		// Token: 0x0602EC58 RID: 191576 RVA: 0x00D0B1D4 File Offset: 0x00D093D4
 		private void RoguelikeTowerTrialExit()
 		{
 			int instId = InstanceDungeonEntranceModel.Instance.InstanceId;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06039D36 RID: 236854 RVA: 0x00DBC2FB File Offset: 0x00DBA4FB
+		// Token: 0x0602EC59 RID: 191577 RVA: 0x00D0B25F File Offset: 0x00D0945F
 		private void WeeklyRogueExit()
 		{
 			UiManager.Instance.OpenView(EUiViewName.WeeklyRogueExitTips, null, null);

@@ -7,30 +7,30 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Camera.FightCameraController.SpecialGameplay;
 using UnrealEngine;
 
-// Token: 0x02000220 RID: 544
-[GeneratePropertyAccessMethod(true)]
+// Token: 0x02000224 RID: 548
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraSpecialGameplayController : CameraControllerBase
 {
-	// Token: 0x06002152 RID: 8530 RVA: 0x000BFF1B File Offset: 0x000BE11B
+	// Token: 0x06002200 RID: 8704 RVA: 0x000C723B File Offset: 0x000C543B
 	[NullableContext(1)]
 	public CameraSpecialGameplayController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06002153 RID: 8531 RVA: 0x000BFF24 File Offset: 0x000BE124
+	// Token: 0x06002201 RID: 8705 RVA: 0x000C7244 File Offset: 0x000C5444
 	[NullableContext(1)]
 	public override string Name()
 	{
 		return "SpecialGameplayController";
 	}
 
-	// Token: 0x06002154 RID: 8532 RVA: 0x000BFF2B File Offset: 0x000BE12B
+	// Token: 0x06002202 RID: 8706 RVA: 0x000C724B File Offset: 0x000C544B
 	protected override void OnInit()
 	{
 		base.Lock(this);
 	}
 
-	// Token: 0x06002155 RID: 8533 RVA: 0x000BFF34 File Offset: 0x000BE134
+	// Token: 0x06002203 RID: 8707 RVA: 0x000C7254 File Offset: 0x000C5454
 	protected override void UpdateInternal(float deltaTime)
 	{
 		ISpecialGameplayCamera currentGameplay = this.CurrentGameplay;
@@ -41,7 +41,7 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		currentGameplay.Update(deltaTime);
 	}
 
-	// Token: 0x06002156 RID: 8534 RVA: 0x000BFF48 File Offset: 0x000BE148
+	// Token: 0x06002204 RID: 8708 RVA: 0x000C7268 File Offset: 0x000C5468
 	[NullableContext(2)]
 	public void EnterSpecialGameplayController(int gameplayId, float blendInTime = 0f, EViewTargetBlendFunction blendFunction = EViewTargetBlendFunction.VTBlend_Linear, TsBaseCharacter character = null, PhotoCameraType? defaultPhotoMode = null, PhotoCameraLensState pendingPhotoLens = null)
 	{
@@ -72,7 +72,7 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		base.Unlock(this);
 	}
 
-	// Token: 0x06002157 RID: 8535 RVA: 0x000C0030 File Offset: 0x000BE230
+	// Token: 0x06002205 RID: 8709 RVA: 0x000C7350 File Offset: 0x000C5550
 	public void ExitSpecialGameplayController(float blendOutTime = 0f)
 	{
 		if (this.Camera.CameraActor.IsValid())
@@ -94,14 +94,14 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		base.Lock(this);
 	}
 
-	// Token: 0x06002158 RID: 8536 RVA: 0x000C00E0 File Offset: 0x000BE2E0
+	// Token: 0x06002206 RID: 8710 RVA: 0x000C7400 File Offset: 0x000C5600
 	public bool CheckIsInSpecialGameplay(int gameplayId)
 	{
 		int? currentGameplayId = this.CurrentGameplayId;
 		return currentGameplayId.GetValueOrDefault() == gameplayId & currentGameplayId != null;
 	}
 
-	// Token: 0x06002159 RID: 8537 RVA: 0x000C0108 File Offset: 0x000BE308
+	// Token: 0x06002207 RID: 8711 RVA: 0x000C7428 File Offset: 0x000C5628
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public T GetCurrentGameplay<T>() where T : class, ISpecialGameplayCamera
@@ -109,14 +109,14 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		return this.CurrentGameplay as T;
 	}
 
-	// Token: 0x0600215A RID: 8538 RVA: 0x000C011A File Offset: 0x000BE31A
+	// Token: 0x06002208 RID: 8712 RVA: 0x000C743A File Offset: 0x000C563A
 	[NullableContext(1)]
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x0600215B RID: 8539 RVA: 0x000C0124 File Offset: 0x000BE324
+	// Token: 0x06002209 RID: 8713 RVA: 0x000C7444 File Offset: 0x000C5644
 	public override bool TryGetMember(string key, out object value)
 	{
 		if (key == "CameraActor")
@@ -137,7 +137,7 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		return true;
 	}
 
-	// Token: 0x0600215C RID: 8540 RVA: 0x000C0188 File Offset: 0x000BE388
+	// Token: 0x0600220A RID: 8714 RVA: 0x000C74A8 File Offset: 0x000C56A8
 	public override void SetMember(string key, object value)
 	{
 		if (key == "CameraActor")
@@ -158,7 +158,7 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		this.CurrentGameplayId = (int?)value;
 	}
 
-	// Token: 0x0600215D RID: 8541 RVA: 0x000C01ED File Offset: 0x000BE3ED
+	// Token: 0x0600220B RID: 8715 RVA: 0x000C750D File Offset: 0x000C570D
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
 		CameraSpecialGameplayController.<MemberIter>d__14 <MemberIter>d__ = new CameraSpecialGameplayController.<MemberIter>d__14(-2);
@@ -166,14 +166,14 @@ public class CameraSpecialGameplayController : CameraControllerBase
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040015F5 RID: 5621
+	// Token: 0x04001637 RID: 5687
 	[Nullable(2)]
 	public ACameraActor CameraActor;
 
-	// Token: 0x040015F6 RID: 5622
+	// Token: 0x04001638 RID: 5688
 	[Nullable(2)]
 	private ISpecialGameplayCamera CurrentGameplay;
 
-	// Token: 0x040015F7 RID: 5623
+	// Token: 0x04001639 RID: 5689
 	private int? CurrentGameplayId;
 }

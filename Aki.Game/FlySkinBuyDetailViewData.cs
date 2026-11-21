@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x02002A1B RID: 10779
+// Token: 0x02001F96 RID: 8086
 [NullableContext(1)]
 [Nullable(0)]
 public class FlySkinBuyDetailViewData
 {
-	// Token: 0x060165FC RID: 91644 RVA: 0x005A98DA File Offset: 0x005A7ADA
+	// Token: 0x06014002 RID: 81922 RVA: 0x005D48B6 File Offset: 0x005D2AB6
 	public static FlySkinBuyDetailViewData Create(List<ShopFlySkinData> goodsData)
 	{
 		FlySkinBuyDetailViewData flySkinBuyDetailViewData = new FlySkinBuyDetailViewData();
@@ -16,25 +16,25 @@ public class FlySkinBuyDetailViewData
 		return flySkinBuyDetailViewData;
 	}
 
-	// Token: 0x060165FD RID: 91645 RVA: 0x005A98E8 File Offset: 0x005A7AE8
+	// Token: 0x06014003 RID: 81923 RVA: 0x005D48C4 File Offset: 0x005D2AC4
 	public void SetPreviewTitle(string title)
 	{
 		this.PreviewTitle = title;
 	}
 
-	// Token: 0x060165FE RID: 91646 RVA: 0x005A98F1 File Offset: 0x005A7AF1
+	// Token: 0x06014004 RID: 81924 RVA: 0x005D48CD File Offset: 0x005D2ACD
 	public string GetPreviewTitle()
 	{
 		return this.PreviewTitle;
 	}
 
-	// Token: 0x060165FF RID: 91647 RVA: 0x005A98F9 File Offset: 0x005A7AF9
+	// Token: 0x06014005 RID: 81925 RVA: 0x005D48D5 File Offset: 0x005D2AD5
 	public void SetIndex(int index)
 	{
 		this.CurrentIndex = index;
 	}
 
-	// Token: 0x06016600 RID: 91648 RVA: 0x005A9904 File Offset: 0x005A7B04
+	// Token: 0x06014006 RID: 81926 RVA: 0x005D48E0 File Offset: 0x005D2AE0
 	public void InitData(List<ShopFlySkinData> goodsData)
 	{
 		this.AllGoodsData = goodsData;
@@ -49,13 +49,13 @@ public class FlySkinBuyDetailViewData
 		}
 	}
 
-	// Token: 0x06016601 RID: 91649 RVA: 0x005A99A4 File Offset: 0x005A7BA4
+	// Token: 0x06014007 RID: 81927 RVA: 0x005D4980 File Offset: 0x005D2B80
 	public bool CheckIfHaveMutiGood()
 	{
 		return this.AllGoodsData.Count > 1;
 	}
 
-	// Token: 0x06016602 RID: 91650 RVA: 0x005A99B4 File Offset: 0x005A7BB4
+	// Token: 0x06014008 RID: 81928 RVA: 0x005D4990 File Offset: 0x005D2B90
 	[NullableContext(2)]
 	public ShopFlySkinData GetCurrentGoodsData()
 	{
@@ -66,7 +66,7 @@ public class FlySkinBuyDetailViewData
 		return this.AllGoodsData[this.CurrentIndex];
 	}
 
-	// Token: 0x06016603 RID: 91651 RVA: 0x005A99D6 File Offset: 0x005A7BD6
+	// Token: 0x06014009 RID: 81929 RVA: 0x005D49B2 File Offset: 0x005D2BB2
 	public void SwitchToNextGoods()
 	{
 		this.CurrentIndex++;
@@ -76,7 +76,7 @@ public class FlySkinBuyDetailViewData
 		}
 	}
 
-	// Token: 0x06016604 RID: 91652 RVA: 0x005A9A02 File Offset: 0x005A7C02
+	// Token: 0x0601400A RID: 81930 RVA: 0x005D49DE File Offset: 0x005D2BDE
 	public void SwitchToPreGoods()
 	{
 		this.CurrentIndex--;
@@ -86,7 +86,7 @@ public class FlySkinBuyDetailViewData
 		}
 	}
 
-	// Token: 0x06016605 RID: 91653 RVA: 0x005A9A2E File Offset: 0x005A7C2E
+	// Token: 0x0601400B RID: 81931 RVA: 0x005D4A0A File Offset: 0x005D2C0A
 	public FlySkinData GetCurrentSkinData(EFlySkinType flySkinType)
 	{
 		if (flySkinType == EFlySkinType.SoarWing)
@@ -96,7 +96,7 @@ public class FlySkinBuyDetailViewData
 		return this.AllParaglidingSkinData[this.CurrentIndex];
 	}
 
-	// Token: 0x06016606 RID: 91654 RVA: 0x005A9A56 File Offset: 0x005A7C56
+	// Token: 0x0601400C RID: 81932 RVA: 0x005D4A32 File Offset: 0x005D2C32
 	public string GetDiscountText()
 	{
 		if (this.GetCurrentGoodsData() == null)
@@ -106,7 +106,7 @@ public class FlySkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetDiscountText();
 	}
 
-	// Token: 0x06016607 RID: 91655 RVA: 0x005A9A71 File Offset: 0x005A7C71
+	// Token: 0x0601400D RID: 81933 RVA: 0x005D4A4D File Offset: 0x005D2C4D
 	[NullableContext(2)]
 	public object GetDiscountTimeData()
 	{
@@ -117,13 +117,13 @@ public class FlySkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetDiscountTimeData();
 	}
 
-	// Token: 0x06016608 RID: 91656 RVA: 0x005A9A88 File Offset: 0x005A7C88
+	// Token: 0x0601400E RID: 81934 RVA: 0x005D4A64 File Offset: 0x005D2C64
 	public bool GetIfDirect()
 	{
 		return this.GetCurrentGoodsData() != null && this.GetCurrentGoodsData().GetIfDirect();
 	}
 
-	// Token: 0x06016609 RID: 91657 RVA: 0x005A9A9F File Offset: 0x005A7C9F
+	// Token: 0x0601400F RID: 81935 RVA: 0x005D4A7B File Offset: 0x005D2C7B
 	[NullableContext(2)]
 	public IPriceData GetPriceData()
 	{
@@ -134,7 +134,7 @@ public class FlySkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetPriceData();
 	}
 
-	// Token: 0x0601660A RID: 91658 RVA: 0x005A9AB6 File Offset: 0x005A7CB6
+	// Token: 0x06014010 RID: 81936 RVA: 0x005D4A92 File Offset: 0x005D2C92
 	public string GetDirectPriceText()
 	{
 		if (this.GetCurrentGoodsData() == null)
@@ -144,18 +144,18 @@ public class FlySkinBuyDetailViewData
 		return this.GetCurrentGoodsData().GetDirectPriceText();
 	}
 
-	// Token: 0x0400A685 RID: 42629
+	// Token: 0x0400AA6E RID: 43630
 	private List<FlySkinData> AllSoarWingSkinData = new List<FlySkinData>();
 
-	// Token: 0x0400A686 RID: 42630
+	// Token: 0x0400AA6F RID: 43631
 	private List<FlySkinData> AllParaglidingSkinData = new List<FlySkinData>();
 
-	// Token: 0x0400A687 RID: 42631
+	// Token: 0x0400AA70 RID: 43632
 	private List<ShopFlySkinData> AllGoodsData = new List<ShopFlySkinData>();
 
-	// Token: 0x0400A688 RID: 42632
+	// Token: 0x0400AA71 RID: 43633
 	private int CurrentIndex;
 
-	// Token: 0x0400A689 RID: 42633
+	// Token: 0x0400AA72 RID: 43634
 	private string PreviewTitle = "";
 }

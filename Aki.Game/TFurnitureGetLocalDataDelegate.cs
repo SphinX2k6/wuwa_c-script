@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02000F7C RID: 3964
-// (Invoke) Token: 0x060065C4 RID: 26052
+// Token: 0x02000431 RID: 1073
+// (Invoke) Token: 0x0600395C RID: 14684
 public delegate int TFurnitureGetLocalDataDelegate(int handleId, int defaultValue, int key1, int key2, int key3);

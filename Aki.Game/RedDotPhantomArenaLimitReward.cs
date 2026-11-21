@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020033F2 RID: 13298
+// Token: 0x02002964 RID: 10596
 public class RedDotPhantomArenaLimitReward : RedDotBase
 {
 }

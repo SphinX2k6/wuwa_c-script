@@ -4,14 +4,14 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 {
-	// Token: 0x020069BC RID: 27068
+	// Token: 0x02005B18 RID: 23320
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TurntableControlModel : ModelBase
 	{
-		// Token: 0x17009861 RID: 39009
-		// (get) Token: 0x060435BF RID: 275903 RVA: 0x01075A41 File Offset: 0x01073C41
+		// Token: 0x17006D41 RID: 27969
+		// (get) Token: 0x060395FB RID: 235003 RVA: 0x01019ED5 File Offset: 0x010180D5
 		public Entity CurControllerEntity
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x17009862 RID: 39010
-		// (get) Token: 0x060435C0 RID: 275904 RVA: 0x01075A49 File Offset: 0x01073C49
+		// Token: 0x17006D42 RID: 27970
+		// (get) Token: 0x060395FC RID: 235004 RVA: 0x01019EDD File Offset: 0x010180DD
 		public SceneItemTurntableControllerComponent CurControllerEntityComp
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435C1 RID: 275905 RVA: 0x01075A54 File Offset: 0x01073C54
+		// Token: 0x060395FD RID: 235005 RVA: 0x01019EE8 File Offset: 0x010180E8
 		public void SetCurControllerEntity(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get<Entity>(entityId);
@@ -43,22 +43,22 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			this.CurControllerEntityCompInternal = sceneItemTurntableControllerComponent;
 		}
 
-		// Token: 0x060435C2 RID: 275906 RVA: 0x01075A91 File Offset: 0x01073C91
+		// Token: 0x060395FE RID: 235006 RVA: 0x01019F25 File Offset: 0x01018125
 		public void ClearCurControllerEntity()
 		{
 			this.CurControllerEntityInternal = null;
 			this.CurControllerEntityCompInternal = null;
 		}
 
-		// Token: 0x060435C3 RID: 275907 RVA: 0x01075AA1 File Offset: 0x01073CA1
+		// Token: 0x060395FF RID: 235007 RVA: 0x01019F35 File Offset: 0x01018135
 		protected override bool OnClear()
 		{
 			this.ClearCurControllerEntity();
 			return true;
 		}
 
-		// Token: 0x17009863 RID: 39011
-		// (get) Token: 0x060435C4 RID: 275908 RVA: 0x01075AAA File Offset: 0x01073CAA
+		// Token: 0x17006D43 RID: 27971
+		// (get) Token: 0x06039600 RID: 235008 RVA: 0x01019F3E File Offset: 0x0101813E
 		[Nullable(1)]
 		public static TurntableControlModel Instance
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435C5 RID: 275909 RVA: 0x01075AB1 File Offset: 0x01073CB1
+		// Token: 0x06039601 RID: 235009 RVA: 0x01019F45 File Offset: 0x01018145
 		[NullableContext(1)]
 		public static TurntableControlModel GetOrCreateInstance()
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return TurntableControlModel._Instance;
 		}
 
-		// Token: 0x060435C6 RID: 275910 RVA: 0x01075AC5 File Offset: 0x01073CC5
+		// Token: 0x06039602 RID: 235010 RVA: 0x01019F59 File Offset: 0x01018159
 		public static bool CreateInstance()
 		{
 			if (TurntableControlModel._Instance != null)
@@ -91,30 +91,30 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return true;
 		}
 
-		// Token: 0x060435C7 RID: 275911 RVA: 0x01075ADB File Offset: 0x01073CDB
+		// Token: 0x06039603 RID: 235011 RVA: 0x01019F6F File Offset: 0x0101816F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060435C8 RID: 275912 RVA: 0x01075ADD File Offset: 0x01073CDD
+		// Token: 0x06039604 RID: 235012 RVA: 0x01019F71 File Offset: 0x01018171
 		public static void ResetStaticDefaultValue()
 		{
 			TurntableControlModel._Instance = null;
 		}
 
-		// Token: 0x060435C9 RID: 275913 RVA: 0x01075AE5 File Offset: 0x01073CE5
+		// Token: 0x06039605 RID: 235013 RVA: 0x01019F79 File Offset: 0x01018179
 		static TurntableControlModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TurntableControlModel.CreateStaticDefaultValue), new Action(TurntableControlModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023228 RID: 143912
+		// Token: 0x0401E418 RID: 123928
 		private Entity CurControllerEntityInternal;
 
-		// Token: 0x04023229 RID: 143913
+		// Token: 0x0401E419 RID: 123929
 		private SceneItemTurntableControllerComponent CurControllerEntityCompInternal;
 
-		// Token: 0x0402322A RID: 143914
+		// Token: 0x0401E41A RID: 123930
 		private static TurntableControlModel _Instance;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200166C RID: 5740
+// Token: 0x02000B24 RID: 2852
 internal enum <WuWuLogisticsRewardPreviewPanel>F520C93D01DE771801B74EFC0AACA807A02688C19319D8B62251A6F6FD6B516F6__EComponents
 {
-	// Token: 0x040049B3 RID: 18867
+	// Token: 0x04004A59 RID: 19033
 	PnlRewardLayout,
-	// Token: 0x040049B4 RID: 18868
+	// Token: 0x04004A5A RID: 19034
 	UiltemItemBaseB,
-	// Token: 0x040049B5 RID: 18869
+	// Token: 0x04004A5B RID: 19035
 	PnlLock,
-	// Token: 0x040049B6 RID: 18870
+	// Token: 0x04004A5C RID: 19036
 	PnlRewardGet,
-	// Token: 0x040049B7 RID: 18871
+	// Token: 0x04004A5D RID: 19037
 	BtnConfirmC,
-	// Token: 0x040049B8 RID: 18872
+	// Token: 0x04004A5E RID: 19038
 	PnlFinished,
-	// Token: 0x040049B9 RID: 18873
+	// Token: 0x04004A5F RID: 19039
 	SprPopBgFinished
 }

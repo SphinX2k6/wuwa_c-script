@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002703 RID: 9987
+	// Token: 0x020029C9 RID: 10697
 	public class IAssistCharacterStopMoveToPoint : IExecClientBattleActionType
 	{
-		// Token: 0x0600DEEA RID: 57066 RVA: 0x00210D37 File Offset: 0x0020EF37
-		[NullableContext(1)]
+		// Token: 0x0600ECD2 RID: 60626 RVA: 0x0022D69F File Offset: 0x0022B89F
 		public static IAssistCharacterStopMoveToPoint Create(IAssistCharacterStopMoveToPoint? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042A6 RID: 17062
-		// (get) Token: 0x0600DEEB RID: 57067 RVA: 0x00210D56 File Offset: 0x0020EF56
+		// Token: 0x170045EE RID: 17902
+		// (get) Token: 0x0600ECD3 RID: 60627 RVA: 0x0022D6BE File Offset: 0x0022B8BE
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042A7 RID: 17063
-		// (get) Token: 0x0600DEEC RID: 57068 RVA: 0x00210D63 File Offset: 0x0020EF63
+		// Token: 0x170045EF RID: 17903
+		// (get) Token: 0x0600ECD4 RID: 60628 RVA: 0x0022D6CB File Offset: 0x0022B8CB
 		public virtual int AssistCharacterId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BB7 RID: 31671
+		// Token: 0x0400825B RID: 33371
 		private IAssistCharacterStopMoveToPoint Instance;
 	}
 }

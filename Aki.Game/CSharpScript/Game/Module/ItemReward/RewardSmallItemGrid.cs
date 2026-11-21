@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x0200580F RID: 22543
+	// Token: 0x020047E6 RID: 18406
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,33 +16,33 @@ namespace CSharpScript.Game.Module.ItemReward
 	})]
 	public class RewardSmallItemGrid : LoopScrollSmallItemGrid<RewardItemData>
 	{
-		// Token: 0x060394CA RID: 234698 RVA: 0x00D96DED File Offset: 0x00D94FED
+		// Token: 0x0602E3DE RID: 189406 RVA: 0x00CE5C7D File Offset: 0x00CE3E7D
 		protected override void OnStart()
 		{
 			base.SetUseFixedAsync(true);
 		}
 
-		// Token: 0x060394CB RID: 234699 RVA: 0x00D96DF6 File Offset: 0x00D94FF6
+		// Token: 0x0602E3DF RID: 189407 RVA: 0x00CE5C86 File Offset: 0x00CE3E86
 		protected override void OnAddEvents()
 		{
 			base.OnAddEvents();
 			EventSystem.Instance.Add<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.OnFuncValueChange));
 		}
 
-		// Token: 0x060394CC RID: 234700 RVA: 0x00D96E1A File Offset: 0x00D9501A
+		// Token: 0x0602E3E0 RID: 189408 RVA: 0x00CE5CAA File Offset: 0x00CE3EAA
 		protected override void OnRemoveEvents()
 		{
 			base.OnRemoveEvents();
 			EventSystem.Instance.Remove(EEventName.OnItemFuncValueChange, new Action<int>(this.OnFuncValueChange));
 		}
 
-		// Token: 0x060394CD RID: 234701 RVA: 0x00D96E3E File Offset: 0x00D9503E
+		// Token: 0x0602E3E1 RID: 189409 RVA: 0x00CE5CCE File Offset: 0x00CE3ECE
 		protected override void OnRefresh(RewardItemData data, bool isSelected, int gridIndex)
 		{
 			this.RefreshByData(data);
 		}
 
-		// Token: 0x060394CE RID: 234702 RVA: 0x00D96E48 File Offset: 0x00D95048
+		// Token: 0x0602E3E2 RID: 189410 RVA: 0x00CE5CD8 File Offset: 0x00CE3ED8
 		private void RefreshByData(RewardItemData data)
 		{
 			this.ItemData = data;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			base.Apply<PropSmallItemGrid>(parameters3);
 		}
 
-		// Token: 0x060394CF RID: 234703 RVA: 0x00D9713F File Offset: 0x00D9533F
+		// Token: 0x0602E3E3 RID: 189411 RVA: 0x00CE5FCF File Offset: 0x00CE41CF
 		private void OnFuncValueChange(int uniqueId)
 		{
 			if (this.ItemData == null || this.ItemData.UniqueId != uniqueId)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RefreshByData(this.ItemData);
 		}
 
-		// Token: 0x0401DF69 RID: 122729
+		// Token: 0x04018A00 RID: 100864
 		[Nullable(2)]
 		private RewardItemData ItemData;
 	}

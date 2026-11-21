@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063EF RID: 25583
+	// Token: 0x02006A6F RID: 27247
 	public class IClientSetSeasonStateT
 	{
-		// Token: 0x1700BE8C RID: 48780
-		// (get) Token: 0x0602C42F RID: 181295 RVA: 0x0061348B File Offset: 0x0061168B
-		// (set) Token: 0x0602C430 RID: 181296 RVA: 0x00613493 File Offset: 0x00611693
+		// Token: 0x1700C826 RID: 51238
+		// (get) Token: 0x0602EC05 RID: 191493 RVA: 0x0065F317 File Offset: 0x0065D517
+		// (set) Token: 0x0602EC06 RID: 191494 RVA: 0x0065F31F File Offset: 0x0065D51F
 		public int VolumeId { get; set; }
 
-		// Token: 0x1700BE8D RID: 48781
-		// (get) Token: 0x0602C431 RID: 181297 RVA: 0x0061349C File Offset: 0x0061169C
-		// (set) Token: 0x0602C432 RID: 181298 RVA: 0x006134A4 File Offset: 0x006116A4
+		// Token: 0x1700C827 RID: 51239
+		// (get) Token: 0x0602EC07 RID: 191495 RVA: 0x0065F328 File Offset: 0x0065D528
+		// (set) Token: 0x0602EC08 RID: 191496 RVA: 0x0065F330 File Offset: 0x0065D530
 		public TClientSetSeasonStateUnion Config { get; set; }
 
-		// Token: 0x0602C433 RID: 181299 RVA: 0x006134AD File Offset: 0x006116AD
+		// Token: 0x0602EC09 RID: 191497 RVA: 0x0065F339 File Offset: 0x0065D539
 		public IClientSetSeasonStateT()
 		{
 			this.VolumeId = 0;

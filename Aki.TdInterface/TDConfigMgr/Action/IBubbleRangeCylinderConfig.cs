@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001820 RID: 6176
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019AB RID: 6571
 	public class IBubbleRangeCylinderConfig
 	{
-		// Token: 0x0600848B RID: 33931 RVA: 0x0013BB08 File Offset: 0x00139D08
+		// Token: 0x06008BB1 RID: 35761 RVA: 0x0014B2FC File Offset: 0x001494FC
 		private IBubbleRangeCylinderConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600848C RID: 33932 RVA: 0x0013BB40 File Offset: 0x00139D40
+		// Token: 0x06008BB2 RID: 35762 RVA: 0x0014B334 File Offset: 0x00149534
 		public static IBubbleRangeCylinderConfig Create([Nullable(2)] IBubbleRangeCylinderConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600848D RID: 33933 RVA: 0x0013BB53 File Offset: 0x00139D53
+		// Token: 0x06008BB3 RID: 35763 RVA: 0x0014B347 File Offset: 0x00149547
 		public static IBubbleRangeCylinderConfig CreateFromSetValue([Nullable(2)] IBubbleRangeCylinderConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600848E RID: 33934 RVA: 0x0013BB66 File Offset: 0x00139D66
+		// Token: 0x06008BB4 RID: 35764 RVA: 0x0014B35A File Offset: 0x0014955A
 		public IBubbleRangeCylinderConfig_SetValue ToSetValue()
 		{
 			return new IBubbleRangeCylinderConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B6A RID: 11114
-		// (get) Token: 0x0600848F RID: 33935 RVA: 0x0013BB88 File Offset: 0x00139D88
-		// (set) Token: 0x06008490 RID: 33936 RVA: 0x0013BBE9 File Offset: 0x00139DE9
+		// Token: 0x17002D64 RID: 11620
+		// (get) Token: 0x06008BB5 RID: 35765 RVA: 0x0014B37C File Offset: 0x0014957C
+		// (set) Token: 0x06008BB6 RID: 35766 RVA: 0x0014B3DD File Offset: 0x001495DD
 		public virtual IBubbleCylinderConfig InnerConfig
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B6B RID: 11115
-		// (get) Token: 0x06008491 RID: 33937 RVA: 0x0013BC00 File Offset: 0x00139E00
-		// (set) Token: 0x06008492 RID: 33938 RVA: 0x0013BC61 File Offset: 0x00139E61
+		// Token: 0x17002D65 RID: 11621
+		// (get) Token: 0x06008BB7 RID: 35767 RVA: 0x0014B3F4 File Offset: 0x001495F4
+		// (set) Token: 0x06008BB8 RID: 35768 RVA: 0x0014B455 File Offset: 0x00149655
 		public virtual IBubbleCylinderConfig OuterConfig
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053DD RID: 21469
+		// Token: 0x04005829 RID: 22569
 		[Nullable(2)]
 		protected IBubbleRangeCylinderConfig FbInstance;
 
-		// Token: 0x040053DE RID: 21470
+		// Token: 0x0400582A RID: 22570
 		[Nullable(2)]
 		protected IBubbleRangeCylinderConfig_SetValue PocoInterface;
 
-		// Token: 0x040053DF RID: 21471
+		// Token: 0x0400582B RID: 22571
 		private IBubbleCylinderConfig _InnerConfigCache;
 
-		// Token: 0x040053E0 RID: 21472
+		// Token: 0x0400582C RID: 22572
 		private bool _InnerConfigInited;
 
-		// Token: 0x040053E1 RID: 21473
+		// Token: 0x0400582D RID: 22573
 		private IBubbleCylinderConfig _OuterConfigCache;
 
-		// Token: 0x040053E2 RID: 21474
+		// Token: 0x0400582E RID: 22574
 		private bool _OuterConfigInited;
 	}
 }

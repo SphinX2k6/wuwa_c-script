@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Game.Module.Activity.ActivityContent.Tetris;
+using Aki.Game.Module.Activity.ActivityContent.Tetris.View;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CF6 RID: 27894
+	// Token: 0x02005E73 RID: 24179
 	public class LevelConditionCheckTetrisScore : LevelConditionBase
 	{
-		// Token: 0x0604468F RID: 280207 RVA: 0x010DF9DC File Offset: 0x010DDBDC
+		// Token: 0x0603A7EF RID: 239599 RVA: 0x01089BA0 File Offset: 0x01087DA0
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -30,23 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 				return false;
 			}
 			TetrisPlayView tetrisPlayView = UiManager.Instance.GetViewByName(EUiViewName.TetrisPlayView) as TetrisPlayView;
-			if (tetrisPlayView == null)
-			{
-				return false;
-			}
-			int? num2;
-			if (tetrisPlayView == null)
-			{
-				num2 = null;
-			}
-			else
-			{
-				TetrisPlayController tetrisPlayController = tetrisPlayView.GetTetrisPlayController();
-				num2 = ((tetrisPlayController != null) ? new int?(tetrisPlayController.GetCurrentScore()) : null);
-			}
-			int? num3 = num2;
-			int num4 = num;
-			return num3.GetValueOrDefault() >= num4 & num3 != null;
+			return tetrisPlayView != null && tetrisPlayView.GetTetrisPlayController().GetCurrentScore() >= num;
 		}
 	}
 }

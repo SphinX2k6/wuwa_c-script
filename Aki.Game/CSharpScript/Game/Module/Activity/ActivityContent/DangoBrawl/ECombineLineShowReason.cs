@@ -2,21 +2,21 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006787 RID: 26503
+	// Token: 0x020056D7 RID: 22231
 	[Flags]
 	public enum ECombineLineShowReason
 	{
-		// Token: 0x040227EF RID: 141295
+		// Token: 0x0401D04C RID: 118860
 		None = 0,
-		// Token: 0x040227F0 RID: 141296
+		// Token: 0x0401D04D RID: 118861
 		Hover = 1,
-		// Token: 0x040227F1 RID: 141297
+		// Token: 0x0401D04E RID: 118862
 		Drag = 2,
-		// Token: 0x040227F2 RID: 141298
+		// Token: 0x0401D04F RID: 118863
 		Holding = 4,
-		// Token: 0x040227F3 RID: 141299
+		// Token: 0x0401D050 RID: 118864
 		Partner = 8,
-		// Token: 0x040227F4 RID: 141300
+		// Token: 0x0401D051 RID: 118865
 		Always = 16
 	}
 }

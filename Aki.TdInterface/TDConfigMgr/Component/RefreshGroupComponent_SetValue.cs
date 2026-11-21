@@ -4,27 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200086C RID: 2156
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200090F RID: 2319
 	public class RefreshGroupComponent_SetValue
 	{
-		// Token: 0x04001F7C RID: 8060
+		// Token: 0x0400218E RID: 8590
 		public bool? Disabled;
 
-		// Token: 0x04001F7D RID: 8061
+		// Token: 0x0400218F RID: 8591
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F7E RID: 8062
+		// Token: 0x04002190 RID: 8592
 		public List<int> EntityIds;
 
-		// Token: 0x04001F7F RID: 8063
+		// Token: 0x04002191 RID: 8593
 		public IRefreshContent RefreshContent;
 
-		// Token: 0x04001F80 RID: 8064
+		// Token: 0x04002192 RID: 8594
 		public IRefreshRule RefreshRule;
 
-		// Token: 0x04001F81 RID: 8065
+		// Token: 0x04002193 RID: 8595
 		[Nullable(2)]
 		public IStateChangeConfig StateChangeConfig;
 	}

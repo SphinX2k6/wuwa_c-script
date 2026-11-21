@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200069E RID: 1694
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200073F RID: 1855
 	public class ISceneItemAiPatrolType
 	{
-		// Token: 0x0600244E RID: 9294 RVA: 0x00062768 File Offset: 0x00060968
+		// Token: 0x0600276A RID: 10090 RVA: 0x00069730 File Offset: 0x00067930
 		private ISceneItemAiPatrolType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600244F RID: 9295 RVA: 0x000627A0 File Offset: 0x000609A0
+		// Token: 0x0600276B RID: 10091 RVA: 0x00069768 File Offset: 0x00067968
 		public static ISceneItemAiPatrolType Create([Nullable(2)] ISceneItemAiPatrolType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002450 RID: 9296 RVA: 0x000627B3 File Offset: 0x000609B3
+		// Token: 0x0600276C RID: 10092 RVA: 0x0006977B File Offset: 0x0006797B
 		public static ISceneItemAiPatrolType CreateFromSetValue([Nullable(2)] ISceneItemAiPatrolType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002451 RID: 9297 RVA: 0x000627C6 File Offset: 0x000609C6
+		// Token: 0x0600276D RID: 10093 RVA: 0x0006978E File Offset: 0x0006798E
 		public ISceneItemAiPatrolType_SetValue ToSetValue()
 		{
 			return new ISceneItemAiPatrolType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000999 RID: 2457
-		// (get) Token: 0x06002452 RID: 9298 RVA: 0x000627D9 File Offset: 0x000609D9
-		// (set) Token: 0x06002453 RID: 9299 RVA: 0x00062804 File Offset: 0x00060A04
+		// Token: 0x17000A55 RID: 2645
+		// (get) Token: 0x0600276E RID: 10094 RVA: 0x000697A1 File Offset: 0x000679A1
+		// (set) Token: 0x0600276F RID: 10095 RVA: 0x000697CC File Offset: 0x000679CC
 		public virtual ESceneItemAiPatrolType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018EF RID: 6383
+		// Token: 0x04001AEC RID: 6892
 		[Nullable(2)]
 		protected ISceneItemAiPatrolType FbInstance;
 
-		// Token: 0x040018F0 RID: 6384
+		// Token: 0x04001AED RID: 6893
 		[Nullable(2)]
 		protected ISceneItemAiPatrolType_SetValue PocoInterface;
 	}

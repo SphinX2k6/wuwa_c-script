@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007589 RID: 30089
+	// Token: 0x02007D7F RID: 32127
 	public struct IVisualNovelMainRoleActionConfigBase : IFlatbufferObject
 	{
-		// Token: 0x1700E42B RID: 58411
-		// (get) Token: 0x06036BC4 RID: 224196 RVA: 0x0076E4D6 File Offset: 0x0076C6D6
+		// Token: 0x1700F05B RID: 61531
+		// (get) Token: 0x06039FEC RID: 237548 RVA: 0x007D1A7A File Offset: 0x007CFC7A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036BC5 RID: 224197 RVA: 0x0076E4E3 File Offset: 0x0076C6E3
+		// Token: 0x06039FED RID: 237549 RVA: 0x007D1A87 File Offset: 0x007CFC87
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036BC6 RID: 224198 RVA: 0x0076E4EC File Offset: 0x0076C6EC
+		// Token: 0x06039FEE RID: 237550 RVA: 0x007D1A90 File Offset: 0x007CFC90
 		public static IVisualNovelMainRoleActionConfigBase GetRootAsIVisualNovelMainRoleActionConfigBase(ByteBuffer _bb)
 		{
 			return IVisualNovelMainRoleActionConfigBase.GetRootAsIVisualNovelMainRoleActionConfigBase(_bb, default(IVisualNovelMainRoleActionConfigBase));
 		}
 
-		// Token: 0x06036BC7 RID: 224199 RVA: 0x0076E508 File Offset: 0x0076C708
+		// Token: 0x06039FEF RID: 237551 RVA: 0x007D1AAC File Offset: 0x007CFCAC
 		public static IVisualNovelMainRoleActionConfigBase GetRootAsIVisualNovelMainRoleActionConfigBase(ByteBuffer _bb, IVisualNovelMainRoleActionConfigBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036BC8 RID: 224200 RVA: 0x0076E525 File Offset: 0x0076C725
+		// Token: 0x06039FF0 RID: 237552 RVA: 0x007D1AC9 File Offset: 0x007CFCC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036BC9 RID: 224201 RVA: 0x0076E534 File Offset: 0x0076C734
+		// Token: 0x06039FF1 RID: 237553 RVA: 0x007D1AD8 File Offset: 0x007CFCD8
 		public IVisualNovelMainRoleActionConfigBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E42C RID: 58412
-		// (get) Token: 0x06036BCA RID: 224202 RVA: 0x0076E544 File Offset: 0x0076C744
+		// Token: 0x1700F05C RID: 61532
+		// (get) Token: 0x06039FF2 RID: 237554 RVA: 0x007D1AE8 File Offset: 0x007CFCE8
 		public EVisualNovelSubType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036BCB RID: 224203 RVA: 0x0076E580 File Offset: 0x0076C780
+		// Token: 0x06039FF3 RID: 237555 RVA: 0x007D1B24 File Offset: 0x007CFD24
 		public static Offset<IVisualNovelMainRoleActionConfigBase> CreateIVisualNovelMainRoleActionConfigBase(FlatBufferBuilder builder, EVisualNovelSubType Type = EVisualNovelSubType.SolarSchool)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelMainRoleActionConfigBase.EndIVisualNovelMainRoleActionConfigBase(builder);
 		}
 
-		// Token: 0x06036BCC RID: 224204 RVA: 0x0076E596 File Offset: 0x0076C796
+		// Token: 0x06039FF4 RID: 237556 RVA: 0x007D1B3A File Offset: 0x007CFD3A
 		public static void StartIVisualNovelMainRoleActionConfigBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06036BCD RID: 224205 RVA: 0x0076E59F File Offset: 0x0076C79F
+		// Token: 0x06039FF5 RID: 237557 RVA: 0x007D1B43 File Offset: 0x007CFD43
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelSubType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036BCE RID: 224206 RVA: 0x0076E5AA File Offset: 0x0076C7AA
+		// Token: 0x06039FF6 RID: 237558 RVA: 0x007D1B4E File Offset: 0x007CFD4E
 		public static Offset<IVisualNovelMainRoleActionConfigBase> EndIVisualNovelMainRoleActionConfigBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelMainRoleActionConfigBase>(builder.EndTable());
 		}
 
-		// Token: 0x06036BCF RID: 224207 RVA: 0x0076E5B8 File Offset: 0x0076C7B8
+		// Token: 0x06039FF7 RID: 237559 RVA: 0x007D1B5C File Offset: 0x007CFD5C
 		public IVisualNovelMainRoleActionConfigBaseT UnPack()
 		{
 			IVisualNovelMainRoleActionConfigBaseT visualNovelMainRoleActionConfigBaseT = new IVisualNovelMainRoleActionConfigBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelMainRoleActionConfigBaseT;
 		}
 
-		// Token: 0x06036BD0 RID: 224208 RVA: 0x0076E5D3 File Offset: 0x0076C7D3
+		// Token: 0x06039FF8 RID: 237560 RVA: 0x007D1B77 File Offset: 0x007CFD77
 		public void UnPackTo(IVisualNovelMainRoleActionConfigBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06036BD1 RID: 224209 RVA: 0x0076E5E4 File Offset: 0x0076C7E4
+		// Token: 0x06039FF9 RID: 237561 RVA: 0x007D1B88 File Offset: 0x007CFD88
 		public static Offset<IVisualNovelMainRoleActionConfigBase> Pack(FlatBufferBuilder builder, IVisualNovelMainRoleActionConfigBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelMainRoleActionConfigBase.CreateIVisualNovelMainRoleActionConfigBase(builder, _o.Type);
 		}
 
-		// Token: 0x04012490 RID: 74896
+		// Token: 0x040134C4 RID: 79044
 		private Table __p;
 	}
 }

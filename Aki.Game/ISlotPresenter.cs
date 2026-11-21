@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C10 RID: 7184
+// Token: 0x020010CF RID: 4303
 [NullableContext(1)]
 public interface ISlotPresenter
 {
-	// Token: 0x0600D76C RID: 55148
+	// Token: 0x0600AB80 RID: 43904
 	void Refresh(int position, IRoleSlotDisplayData data);
 
-	// Token: 0x0600D76D RID: 55149
+	// Token: 0x0600AB81 RID: 43905
 	void Reset(int position);
 
-	// Token: 0x0600D76E RID: 55150
+	// Token: 0x0600AB82 RID: 43906
 	void ResetAll();
 
-	// Token: 0x0600D76F RID: 55151
+	// Token: 0x0600AB83 RID: 43907
 	void ActivateDragData();
 
-	// Token: 0x0600D770 RID: 55152
+	// Token: 0x0600AB84 RID: 43908
 	void DestroyAll();
 
-	// Token: 0x0600D771 RID: 55153
+	// Token: 0x0600AB85 RID: 43909
 	void OnTick(float delta);
 
-	// Token: 0x0600D772 RID: 55154
+	// Token: 0x0600AB86 RID: 43910
 	void OnHandleLoadScene();
 
-	// Token: 0x0600D773 RID: 55155
+	// Token: 0x0600AB87 RID: 43911
 	void OnHandleReleaseScene();
 }

@@ -2,640 +2,654 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x02004771 RID: 18289
+	// Token: 0x02004BD9 RID: 19417
 	public enum EEntity : ushort
 	{
-		// Token: 0x0400CA7A RID: 51834
+		// Token: 0x0400D4A9 RID: 54441
 		CharacterEntity,
-		// Token: 0x0400CA7B RID: 51835
+		// Token: 0x0400D4AA RID: 54442
 		Npc,
-		// Token: 0x0400CA7C RID: 51836
+		// Token: 0x0400D4AB RID: 54443
 		Npc2,
-		// Token: 0x0400CA7D RID: 51837
+		// Token: 0x0400D4AC RID: 54444
 		Trample,
-		// Token: 0x0400CA7E RID: 51838
+		// Token: 0x0400D4AD RID: 54445
 		Trample2,
-		// Token: 0x0400CA7F RID: 51839
+		// Token: 0x0400D4AE RID: 54446
 		Trample3,
-		// Token: 0x0400CA80 RID: 51840
+		// Token: 0x0400D4AF RID: 54447
 		TrampleWithSceneItemAttribute,
-		// Token: 0x0400CA81 RID: 51841
+		// Token: 0x0400D4B0 RID: 54448
 		EntityPackage,
-		// Token: 0x0400CA82 RID: 51842
+		// Token: 0x0400D4B1 RID: 54449
 		EntityList,
-		// Token: 0x0400CA83 RID: 51843
+		// Token: 0x0400D4B2 RID: 54450
 		Player,
-		// Token: 0x0400CA84 RID: 51844
+		// Token: 0x0400D4B3 RID: 54451
 		AiNpc,
-		// Token: 0x0400CA85 RID: 51845
+		// Token: 0x0400D4B4 RID: 54452
 		Entity,
-		// Token: 0x0400CA86 RID: 51846
+		// Token: 0x0400D4B5 RID: 54453
 		Lamp,
-		// Token: 0x0400CA87 RID: 51847
+		// Token: 0x0400D4B6 RID: 54454
 		RefreshSingle,
-		// Token: 0x0400CA88 RID: 51848
+		// Token: 0x0400D4B7 RID: 54455
 		RefreshEntity,
-		// Token: 0x0400CA89 RID: 51849
+		// Token: 0x0400D4B8 RID: 54456
 		Rotator,
-		// Token: 0x0400CA8A RID: 51850
+		// Token: 0x0400D4B9 RID: 54457
 		SphereActor,
-		// Token: 0x0400CA8B RID: 51851
+		// Token: 0x0400D4BA RID: 54458
 		SphereFactory,
-		// Token: 0x0400CA8C RID: 51852
+		// Token: 0x0400D4BB RID: 54459
 		Spring,
-		// Token: 0x0400CA8D RID: 51853
+		// Token: 0x0400D4BC RID: 54460
 		SpringBoard,
-		// Token: 0x0400CA8E RID: 51854
+		// Token: 0x0400D4BD RID: 54461
 		StateEntity,
-		// Token: 0x0400CA8F RID: 51855
+		// Token: 0x0400D4BE RID: 54462
 		Switcher,
-		// Token: 0x0400CA90 RID: 51856
+		// Token: 0x0400D4BF RID: 54463
 		TriggerUe5,
-		// Token: 0x0400CA91 RID: 51857
+		// Token: 0x0400D4C0 RID: 54464
 		Underground,
-		// Token: 0x0400CA92 RID: 51858
+		// Token: 0x0400D4C1 RID: 54465
 		UndergroundComponent,
-		// Token: 0x0400CA93 RID: 51859
+		// Token: 0x0400D4C2 RID: 54466
 		RefreshComponent,
-		// Token: 0x0400CA94 RID: 51860
+		// Token: 0x0400D4C3 RID: 54467
 		Item,
-		// Token: 0x0400CA95 RID: 51861
+		// Token: 0x0400D4C4 RID: 54468
 		Gear,
-		// Token: 0x0400CA96 RID: 51862
+		// Token: 0x0400D4C5 RID: 54469
 		FollowTrack,
-		// Token: 0x0400CA97 RID: 51863
+		// Token: 0x0400D4C6 RID: 54470
 		FollowTrackFoundation,
-		// Token: 0x0400CA98 RID: 51864
+		// Token: 0x0400D4C7 RID: 54471
 		Animal,
-		// Token: 0x0400CA99 RID: 51865
+		// Token: 0x0400D4C8 RID: 54472
 		Animal2,
-		// Token: 0x0400CA9A RID: 51866
+		// Token: 0x0400D4C9 RID: 54473
 		CombatAnimal,
-		// Token: 0x0400CA9B RID: 51867
+		// Token: 0x0400D4CA RID: 54474
 		CombatAnimal2,
-		// Token: 0x0400CA9C RID: 51868
+		// Token: 0x0400D4CB RID: 54475
 		CombatAnimal3,
-		// Token: 0x0400CA9D RID: 51869
+		// Token: 0x0400D4CC RID: 54476
 		CollectAnimal,
-		// Token: 0x0400CA9E RID: 51870
+		// Token: 0x0400D4CD RID: 54477
 		Monster,
-		// Token: 0x0400CA9F RID: 51871
+		// Token: 0x0400D4CE RID: 54478
 		NpcMonster,
-		// Token: 0x0400CAA0 RID: 51872
+		// Token: 0x0400D4CF RID: 54479
 		MonsterWithInhalation,
-		// Token: 0x0400CAA1 RID: 51873
+		// Token: 0x0400D4D0 RID: 54480
 		GroupAi,
-		// Token: 0x0400CAA2 RID: 51874
+		// Token: 0x0400D4D1 RID: 54481
 		FollowShooter,
-		// Token: 0x0400CAA3 RID: 51875
+		// Token: 0x0400D4D2 RID: 54482
 		FollowShooter2,
-		// Token: 0x0400CAA4 RID: 51876
+		// Token: 0x0400D4D3 RID: 54483
 		HackingTypeFollowShooter,
-		// Token: 0x0400CAA5 RID: 51877
+		// Token: 0x0400D4D4 RID: 54484
 		SimpleInteract,
-		// Token: 0x0400CAA6 RID: 51878
+		// Token: 0x0400D4D5 RID: 54485
 		Collect,
-		// Token: 0x0400CAA7 RID: 51879
+		// Token: 0x0400D4D6 RID: 54486
 		Collect2,
-		// Token: 0x0400CAA8 RID: 51880
+		// Token: 0x0400D4D7 RID: 54487
 		Collect3,
-		// Token: 0x0400CAA9 RID: 51881
+		// Token: 0x0400D4D8 RID: 54488
 		CollectWithListener,
-		// Token: 0x0400CAAA RID: 51882
+		// Token: 0x0400D4D9 RID: 54489
 		CollectWithHook,
-		// Token: 0x0400CAAB RID: 51883
+		// Token: 0x0400D4DA RID: 54490
 		TreasureBox,
-		// Token: 0x0400CAAC RID: 51884
+		// Token: 0x0400D4DB RID: 54491
 		VisionTreasureBox,
-		// Token: 0x0400CAAD RID: 51885
+		// Token: 0x0400D4DC RID: 54492
 		HookTreasureBox,
-		// Token: 0x0400CAAE RID: 51886
+		// Token: 0x0400D4DD RID: 54493
 		Trigger,
-		// Token: 0x0400CAAF RID: 51887
+		// Token: 0x0400D4DE RID: 54494
 		ClientTrigger,
-		// Token: 0x0400CAB0 RID: 51888
+		// Token: 0x0400D4DF RID: 54495
 		VisibleTrigger,
-		// Token: 0x0400CAB1 RID: 51889
+		// Token: 0x0400D4E0 RID: 54496
 		LevelQteTrigger,
-		// Token: 0x0400CAB2 RID: 51890
+		// Token: 0x0400D4E1 RID: 54497
 		LevelSeqTrigger,
-		// Token: 0x0400CAB3 RID: 51891
+		// Token: 0x0400D4E2 RID: 54498
 		HookLockPoint,
-		// Token: 0x0400CAB4 RID: 51892
+		// Token: 0x0400D4E3 RID: 54499
 		RoleMotionInteractPoint,
-		// Token: 0x0400CAB5 RID: 51893
+		// Token: 0x0400D4E4 RID: 54500
 		KiteHook,
-		// Token: 0x0400CAB6 RID: 51894
+		// Token: 0x0400D4E5 RID: 54501
 		SuiGuangHook,
-		// Token: 0x0400CAB7 RID: 51895
+		// Token: 0x0400D4E6 RID: 54502
 		HookWithRange,
-		// Token: 0x0400CAB8 RID: 51896
+		// Token: 0x0400D4E7 RID: 54503
 		TimeScaledHook,
-		// Token: 0x0400CAB9 RID: 51897
+		// Token: 0x0400D4E8 RID: 54504
 		CableWayHook,
-		// Token: 0x0400CABA RID: 51898
+		// Token: 0x0400D4E9 RID: 54505
 		HookPullSoundBox,
-		// Token: 0x0400CABB RID: 51899
+		// Token: 0x0400D4EA RID: 54506
 		HookPullSoundBoxWithSplineMove,
-		// Token: 0x0400CABC RID: 51900
+		// Token: 0x0400D4EB RID: 54507
 		ItemFoundation,
-		// Token: 0x0400CABD RID: 51901
+		// Token: 0x0400D4EC RID: 54508
 		StatueFoundation,
-		// Token: 0x0400CABE RID: 51902
+		// Token: 0x0400D4ED RID: 54509
 		AdsorptionFoundation,
-		// Token: 0x0400CABF RID: 51903
+		// Token: 0x0400D4EE RID: 54510
 		InteractFoundation,
-		// Token: 0x0400CAC0 RID: 51904
+		// Token: 0x0400D4EF RID: 54511
 		InteractFoundationWithSceneItemAttribute,
-		// Token: 0x0400CAC1 RID: 51905
+		// Token: 0x0400D4F0 RID: 54512
 		MatchGear,
-		// Token: 0x0400CAC2 RID: 51906
+		// Token: 0x0400D4F1 RID: 54513
 		MatchGroup,
-		// Token: 0x0400CAC3 RID: 51907
+		// Token: 0x0400D4F2 RID: 54514
 		InteractGearGroup,
-		// Token: 0x0400CAC4 RID: 51908
+		// Token: 0x0400D4F3 RID: 54515
 		RefreshGroup,
-		// Token: 0x0400CAC5 RID: 51909
+		// Token: 0x0400D4F4 RID: 54516
 		EntityBatchRefresh,
-		// Token: 0x0400CAC6 RID: 51910
+		// Token: 0x0400D4F5 RID: 54517
 		TeleControl,
-		// Token: 0x0400CAC7 RID: 51911
+		// Token: 0x0400D4F6 RID: 54518
 		TeleControl2,
-		// Token: 0x0400CAC8 RID: 51912
+		// Token: 0x0400D4F7 RID: 54519
 		TeleControl3,
-		// Token: 0x0400CAC9 RID: 51913
+		// Token: 0x0400D4F8 RID: 54520
 		TeleControl4,
-		// Token: 0x0400CACA RID: 51914
+		// Token: 0x0400D4F9 RID: 54521
 		TeleControlGroup,
-		// Token: 0x0400CACB RID: 51915
+		// Token: 0x0400D4FA RID: 54522
 		TargetGear,
-		// Token: 0x0400CACC RID: 51916
+		// Token: 0x0400D4FB RID: 54523
 		TargetGear2,
-		// Token: 0x0400CACD RID: 51917
+		// Token: 0x0400D4FC RID: 54524
 		TargetGearPro,
-		// Token: 0x0400CACE RID: 51918
+		// Token: 0x0400D4FD RID: 54525
 		RangeTriggerTargetGear,
-		// Token: 0x0400CACF RID: 51919
+		// Token: 0x0400D4FE RID: 54526
 		TargetGearWithVariable,
-		// Token: 0x0400CAD0 RID: 51920
+		// Token: 0x0400D4FF RID: 54527
 		TargetGearWithLevelPrefabPerform,
-		// Token: 0x0400CAD1 RID: 51921
+		// Token: 0x0400D500 RID: 54528
 		TargetGearWithConditionListener,
-		// Token: 0x0400CAD2 RID: 51922
+		// Token: 0x0400D501 RID: 54529
 		TargetGearGroup,
-		// Token: 0x0400CAD3 RID: 51923
+		// Token: 0x0400D502 RID: 54530
 		TargetGearGroup2,
-		// Token: 0x0400CAD4 RID: 51924
+		// Token: 0x0400D503 RID: 54531
 		Destructible,
-		// Token: 0x0400CAD5 RID: 51925
+		// Token: 0x0400D504 RID: 54532
 		DestructibleWithSceneItemAttribute,
-		// Token: 0x0400CAD6 RID: 51926
+		// Token: 0x0400D505 RID: 54533
 		DestructibleControl,
-		// Token: 0x0400CAD7 RID: 51927
+		// Token: 0x0400D506 RID: 54534
 		DestructibleTrigger,
-		// Token: 0x0400CAD8 RID: 51928
+		// Token: 0x0400D507 RID: 54535
 		DestructibleSceneBullet,
-		// Token: 0x0400CAD9 RID: 51929
+		// Token: 0x0400D508 RID: 54536
 		DestructibleExploreInteractor,
-		// Token: 0x0400CADA RID: 51930
+		// Token: 0x0400D509 RID: 54537
 		TargetGearExploreInteractor,
-		// Token: 0x0400CADB RID: 51931
+		// Token: 0x0400D50A RID: 54538
 		CurveControlDestructible,
-		// Token: 0x0400CADC RID: 51932
+		// Token: 0x0400D50B RID: 54539
 		LevelPlay,
-		// Token: 0x0400CADD RID: 51933
+		// Token: 0x0400D50C RID: 54540
 		LevelPlay2,
-		// Token: 0x0400CADE RID: 51934
+		// Token: 0x0400D50D RID: 54541
+		DynamicLevelPlay,
+		// Token: 0x0400D50E RID: 54542
 		LevelPlayReward,
-		// Token: 0x0400CADF RID: 51935
+		// Token: 0x0400D50F RID: 54543
 		Teleporter,
-		// Token: 0x0400CAE0 RID: 51936
+		// Token: 0x0400D510 RID: 54544
 		TriggerTeleporter,
-		// Token: 0x0400CAE1 RID: 51937
+		// Token: 0x0400D511 RID: 54545
 		DungeonTeleporter,
-		// Token: 0x0400CAE2 RID: 51938
+		// Token: 0x0400D512 RID: 54546
 		InteractGear,
-		// Token: 0x0400CAE3 RID: 51939
+		// Token: 0x0400D513 RID: 54547
 		InteractGear2,
-		// Token: 0x0400CAE4 RID: 51940
+		// Token: 0x0400D514 RID: 54548
 		InteractGearCanHit,
-		// Token: 0x0400CAE5 RID: 51941
+		// Token: 0x0400D515 RID: 54549
 		InteractGearTrigger,
-		// Token: 0x0400CAE6 RID: 51942
+		// Token: 0x0400D516 RID: 54550
 		GameplayInteractGear,
-		// Token: 0x0400CAE7 RID: 51943
+		// Token: 0x0400D517 RID: 54551
 		SpawnMonster,
-		// Token: 0x0400CAE8 RID: 51944
+		// Token: 0x0400D518 RID: 54552
 		BondageTrap,
-		// Token: 0x0400CAE9 RID: 51945
+		// Token: 0x0400D519 RID: 54553
 		RollingFireball,
-		// Token: 0x0400CAEA RID: 51946
+		// Token: 0x0400D51A RID: 54554
 		Lift,
-		// Token: 0x0400CAEB RID: 51947
+		// Token: 0x0400D51B RID: 54555
 		Lift2,
-		// Token: 0x0400CAEC RID: 51948
+		// Token: 0x0400D51C RID: 54556
 		SequenceLift,
-		// Token: 0x0400CAED RID: 51949
+		// Token: 0x0400D51D RID: 54557
+		SequenceLiftWithSceneItemAttribute,
+		// Token: 0x0400D51E RID: 54558
 		BurstCrystalFoundation,
-		// Token: 0x0400CAEE RID: 51950
+		// Token: 0x0400D51F RID: 54559
 		BurstCrystalFoundation2,
-		// Token: 0x0400CAEF RID: 51951
+		// Token: 0x0400D520 RID: 54560
 		GuardTarget,
-		// Token: 0x0400CAF0 RID: 51952
+		// Token: 0x0400D521 RID: 54561
 		ChallengeInteract,
-		// Token: 0x0400CAF1 RID: 51953
+		// Token: 0x0400D522 RID: 54562
 		SkyboxTrigger,
-		// Token: 0x0400CAF2 RID: 51954
+		// Token: 0x0400D523 RID: 54563
 		SceneItemStateHint,
-		// Token: 0x0400CAF3 RID: 51955
+		// Token: 0x0400D524 RID: 54564
 		SceneAura,
-		// Token: 0x0400CAF4 RID: 51956
+		// Token: 0x0400D525 RID: 54565
 		StateSceneItem,
-		// Token: 0x0400CAF5 RID: 51957
+		// Token: 0x0400D526 RID: 54566
 		BubbleSceneItem,
-		// Token: 0x0400CAF6 RID: 51958
+		// Token: 0x0400D527 RID: 54567
 		Weapon,
-		// Token: 0x0400CAF7 RID: 51959
+		// Token: 0x0400D528 RID: 54568
 		CookTool,
-		// Token: 0x0400CAF8 RID: 51960
+		// Token: 0x0400D529 RID: 54569
 		DungeonEntry,
-		// Token: 0x0400CAF9 RID: 51961
+		// Token: 0x0400D52A RID: 54570
 		DungeonEntryWithTrigger,
-		// Token: 0x0400CAFA RID: 51962
+		// Token: 0x0400D52B RID: 54571
 		Resurrection,
-		// Token: 0x0400CAFB RID: 51963
+		// Token: 0x0400D52C RID: 54572
 		BuffProducer,
-		// Token: 0x0400CAFC RID: 51964
+		// Token: 0x0400D52D RID: 54573
 		BuffConsumer,
-		// Token: 0x0400CAFD RID: 51965
+		// Token: 0x0400D52E RID: 54574
 		StateTrigger,
-		// Token: 0x0400CAFE RID: 51966
+		// Token: 0x0400D52F RID: 54575
 		GuideLineCreator,
-		// Token: 0x0400CAFF RID: 51967
+		// Token: 0x0400D530 RID: 54576
 		Vision,
-		// Token: 0x0400CB00 RID: 51968
+		// Token: 0x0400D531 RID: 54577
 		Drop,
-		// Token: 0x0400CB01 RID: 51969
+		// Token: 0x0400D532 RID: 54578
 		DropItem,
-		// Token: 0x0400CB02 RID: 51970
+		// Token: 0x0400D533 RID: 54579
 		VisionItem,
-		// Token: 0x0400CB03 RID: 51971
+		// Token: 0x0400D534 RID: 54580
 		AdviseItem,
-		// Token: 0x0400CB04 RID: 51972
+		// Token: 0x0400D535 RID: 54581
 		SoundBox,
-		// Token: 0x0400CB05 RID: 51973
+		// Token: 0x0400D536 RID: 54582
 		HookSoundBox,
-		// Token: 0x0400CB06 RID: 51974
+		// Token: 0x0400D537 RID: 54583
 		AnnunciatorCenter,
-		// Token: 0x0400CB07 RID: 51975
+		// Token: 0x0400D538 RID: 54584
 		AnnunciatorWire,
-		// Token: 0x0400CB08 RID: 51976
+		// Token: 0x0400D539 RID: 54585
 		LifePointCenter,
-		// Token: 0x0400CB09 RID: 51977
+		// Token: 0x0400D53A RID: 54586
 		DaemonHack,
-		// Token: 0x0400CB0A RID: 51978
+		// Token: 0x0400D53B RID: 54587
 		Chair,
-		// Token: 0x0400CB0B RID: 51979
+		// Token: 0x0400D53C RID: 54588
 		Chair2,
-		// Token: 0x0400CB0C RID: 51980
+		// Token: 0x0400D53D RID: 54589
 		FollowDecorationChair,
-		// Token: 0x0400CB0D RID: 51981
+		// Token: 0x0400D53E RID: 54590
 		Audio,
-		// Token: 0x0400CB0E RID: 51982
+		// Token: 0x0400D53F RID: 54591
 		AudioBox,
-		// Token: 0x0400CB0F RID: 51983
+		// Token: 0x0400D540 RID: 54592
 		Gramophone,
-		// Token: 0x0400CB10 RID: 51984
+		// Token: 0x0400D541 RID: 54593
 		Disc,
-		// Token: 0x0400CB11 RID: 51985
+		// Token: 0x0400D542 RID: 54594
 		AreaOccupation,
-		// Token: 0x0400CB12 RID: 51986
+		// Token: 0x0400D543 RID: 54595
 		Position,
-		// Token: 0x0400CB13 RID: 51987
+		// Token: 0x0400D544 RID: 54596
 		Range,
-		// Token: 0x0400CB14 RID: 51988
+		// Token: 0x0400D545 RID: 54597
 		TimelineTrackController,
-		// Token: 0x0400CB15 RID: 51989
+		// Token: 0x0400D546 RID: 54598
 		Spline,
-		// Token: 0x0400CB16 RID: 51990
+		// Token: 0x0400D547 RID: 54599
 		MoveableTrigger,
-		// Token: 0x0400CB17 RID: 51991
+		// Token: 0x0400D548 RID: 54600
 		CustomAoiEditor,
-		// Token: 0x0400CB18 RID: 51992
+		// Token: 0x0400D549 RID: 54601
 		CombinedVisibleGroup,
-		// Token: 0x0400CB19 RID: 51993
+		// Token: 0x0400D54A RID: 54602
 		SceneBullet,
-		// Token: 0x0400CB1A RID: 51994
+		// Token: 0x0400D54B RID: 54603
 		SceneBulletWithMovement,
-		// Token: 0x0400CB1B RID: 51995
+		// Token: 0x0400D54C RID: 54604
 		SceneBulletCanHit,
-		// Token: 0x0400CB1C RID: 51996
+		// Token: 0x0400D54D RID: 54605
 		SceneBulletTrigger,
-		// Token: 0x0400CB1D RID: 51997
+		// Token: 0x0400D54E RID: 54606
 		DestructibleListenerSceneBullet,
-		// Token: 0x0400CB1E RID: 51998
+		// Token: 0x0400D54F RID: 54607
 		TurntableController,
-		// Token: 0x0400CB1F RID: 51999
+		// Token: 0x0400D550 RID: 54608
 		InteractiveConditionListener,
-		// Token: 0x0400CB20 RID: 52000
+		// Token: 0x0400D551 RID: 54609
 		TriggerConditionListener,
-		// Token: 0x0400CB21 RID: 52001
+		// Token: 0x0400D552 RID: 54610
 		HitConditionListener,
-		// Token: 0x0400CB22 RID: 52002
+		// Token: 0x0400D553 RID: 54611
 		ReboundPlateGear,
-		// Token: 0x0400CB23 RID: 52003
+		// Token: 0x0400D554 RID: 54612
 		JigsawItem,
-		// Token: 0x0400CB24 RID: 52004
+		// Token: 0x0400D555 RID: 54613
 		JigsawFoundation,
-		// Token: 0x0400CB25 RID: 52005
+		// Token: 0x0400D556 RID: 54614
 		LevitateMagnet,
-		// Token: 0x0400CB26 RID: 52006
+		// Token: 0x0400D557 RID: 54615
 		SoundTransmitter,
-		// Token: 0x0400CB27 RID: 52007
+		// Token: 0x0400D558 RID: 54616
 		PhotoTarget,
-		// Token: 0x0400CB28 RID: 52008
+		// Token: 0x0400D559 RID: 54617
 		AiAlertNotifier,
-		// Token: 0x0400CB29 RID: 52009
+		// Token: 0x0400D55A RID: 54618
 		MonsterGachaItem,
-		// Token: 0x0400CB2A RID: 52010
+		// Token: 0x0400D55B RID: 54619
 		MonsterGachaBase,
-		// Token: 0x0400CB2B RID: 52011
+		// Token: 0x0400D55C RID: 54620
 		SimpleNpc,
-		// Token: 0x0400CB2C RID: 52012
+		// Token: 0x0400D55D RID: 54621
 		ProgressBarController,
-		// Token: 0x0400CB2D RID: 52013
+		// Token: 0x0400D55E RID: 54622
 		ProgressBarControllerWithAttribute,
-		// Token: 0x0400CB2E RID: 52014
+		// Token: 0x0400D55F RID: 54623
 		ConveyorBelt,
-		// Token: 0x0400CB2F RID: 52015
+		// Token: 0x0400D560 RID: 54624
 		TemporaryTeleporter,
-		// Token: 0x0400CB30 RID: 52016
+		// Token: 0x0400D561 RID: 54625
 		ExploreSkillInteractor,
-		// Token: 0x0400CB31 RID: 52017
+		// Token: 0x0400D562 RID: 54626
 		ExploreSkillGroupInteractor,
-		// Token: 0x0400CB32 RID: 52018
+		// Token: 0x0400D563 RID: 54627
 		PullingObject,
-		// Token: 0x0400CB33 RID: 52019
+		// Token: 0x0400D564 RID: 54628
 		WaterSpout,
-		// Token: 0x0400CB34 RID: 52020
+		// Token: 0x0400D565 RID: 54629
 		PasserbyNpc,
-		// Token: 0x0400CB35 RID: 52021
+		// Token: 0x0400D566 RID: 54630
 		ElementalNpc,
-		// Token: 0x0400CB36 RID: 52022
+		// Token: 0x0400D567 RID: 54631
 		SpawnPasserbyNpc,
-		// Token: 0x0400CB37 RID: 52023
+		// Token: 0x0400D568 RID: 54632
+		SpawnLiftPasserbyNpc,
+		// Token: 0x0400D569 RID: 54633
 		LightDeliver,
-		// Token: 0x0400CB38 RID: 52024
+		// Token: 0x0400D56A RID: 54634
 		BeamCaster,
-		// Token: 0x0400CB39 RID: 52025
+		// Token: 0x0400D56B RID: 54635
 		BeamReceiver,
-		// Token: 0x0400CB3A RID: 52026
+		// Token: 0x0400D56C RID: 54636
 		BeamDeliver,
-		// Token: 0x0400CB3B RID: 52027
+		// Token: 0x0400D56D RID: 54637
 		BeamCrystal,
-		// Token: 0x0400CB3C RID: 52028
+		// Token: 0x0400D56E RID: 54638
 		BeamCastBullet,
-		// Token: 0x0400CB3D RID: 52029
+		// Token: 0x0400D56F RID: 54639
 		Mirror,
-		// Token: 0x0400CB3E RID: 52030
+		// Token: 0x0400D570 RID: 54640
 		TimeStop,
-		// Token: 0x0400CB3F RID: 52031
+		// Token: 0x0400D571 RID: 54641
 		Portal,
-		// Token: 0x0400CB40 RID: 52032
+		// Token: 0x0400D572 RID: 54642
 		NoRenderPortal,
-		// Token: 0x0400CB41 RID: 52033
+		// Token: 0x0400D573 RID: 54643
 		MoveNoRenderPortal,
-		// Token: 0x0400CB42 RID: 52034
+		// Token: 0x0400D574 RID: 54644
 		NoRenderPortalWithInteract,
-		// Token: 0x0400CB43 RID: 52035
+		// Token: 0x0400D575 RID: 54645
 		DynamicPortalCreater,
-		// Token: 0x0400CB44 RID: 52036
+		// Token: 0x0400D576 RID: 54646
 		EffectArea,
-		// Token: 0x0400CB45 RID: 52037
+		// Token: 0x0400D577 RID: 54647
 		EffectTrampleArea,
-		// Token: 0x0400CB46 RID: 52038
+		// Token: 0x0400D578 RID: 54648
 		ActorRefVolumeTrigger,
-		// Token: 0x0400CB47 RID: 52039
+		// Token: 0x0400D579 RID: 54649
 		PhysicsSwing,
-		// Token: 0x0400CB48 RID: 52040
+		// Token: 0x0400D57A RID: 54650
 		VarManager,
-		// Token: 0x0400CB49 RID: 52041
+		// Token: 0x0400D57B RID: 54651
 		ControlConnector,
-		// Token: 0x0400CB4A RID: 52042
+		// Token: 0x0400D57C RID: 54652
 		RangeTriggerRotator,
-		// Token: 0x0400CB4B RID: 52043
+		// Token: 0x0400D57D RID: 54653
 		EntityBundle,
-		// Token: 0x0400CB4C RID: 52044
+		// Token: 0x0400D57E RID: 54654
 		Chessboard,
-		// Token: 0x0400CB4D RID: 52045
+		// Token: 0x0400D57F RID: 54655
 		Chessman,
-		// Token: 0x0400CB4E RID: 52046
+		// Token: 0x0400D580 RID: 54656
 		AiMovementGear,
-		// Token: 0x0400CB4F RID: 52047
+		// Token: 0x0400D581 RID: 54657
 		AiGearController,
-		// Token: 0x0400CB50 RID: 52048
+		// Token: 0x0400D582 RID: 54658
 		DestructibleAiMovementGear,
-		// Token: 0x0400CB51 RID: 52049
+		// Token: 0x0400D583 RID: 54659
 		LocationSafety,
-		// Token: 0x0400CB52 RID: 52050
+		// Token: 0x0400D584 RID: 54660
 		BatchBulletCaster,
-		// Token: 0x0400CB53 RID: 52051
+		// Token: 0x0400D585 RID: 54661
 		Vehicle,
-		// Token: 0x0400CB54 RID: 52052
+		// Token: 0x0400D586 RID: 54662
 		Vehicle2,
-		// Token: 0x0400CB55 RID: 52053
+		// Token: 0x0400D587 RID: 54663
 		VehicleNpc,
-		// Token: 0x0400CB56 RID: 52054
+		// Token: 0x0400D588 RID: 54664
 		VehicleSceneItem,
-		// Token: 0x0400CB57 RID: 52055
+		// Token: 0x0400D589 RID: 54665
 		FishingBoat,
-		// Token: 0x0400CB58 RID: 52056
+		// Token: 0x0400D58A RID: 54666
 		BattleVehicle,
-		// Token: 0x0400CB59 RID: 52057
+		// Token: 0x0400D58B RID: 54667
 		EnrichmentArea,
-		// Token: 0x0400CB5A RID: 52058
+		// Token: 0x0400D58C RID: 54668
 		AirPassage,
-		// Token: 0x0400CB5B RID: 52059
+		// Token: 0x0400D58D RID: 54669
 		TimedStrikeDevice,
-		// Token: 0x0400CB5C RID: 52060
+		// Token: 0x0400D58E RID: 54670
 		Monitor,
-		// Token: 0x0400CB5D RID: 52061
+		// Token: 0x0400D58F RID: 54671
 		WaterCollection,
-		// Token: 0x0400CB5E RID: 52062
+		// Token: 0x0400D590 RID: 54672
 		InhaledItem,
-		// Token: 0x0400CB5F RID: 52063
+		// Token: 0x0400D591 RID: 54673
 		VacuumCleaner,
-		// Token: 0x0400CB60 RID: 52064
+		// Token: 0x0400D592 RID: 54674
 		AiSceneItem,
-		// Token: 0x0400CB61 RID: 52065
+		// Token: 0x0400D593 RID: 54675
 		GravityFlip,
-		// Token: 0x0400CB62 RID: 52066
+		// Token: 0x0400D594 RID: 54676
 		CollectAnimalPart,
-		// Token: 0x0400CB63 RID: 52067
+		// Token: 0x0400D595 RID: 54677
 		RenderSpecifiedRange,
-		// Token: 0x0400CB64 RID: 52068
+		// Token: 0x0400D596 RID: 54678
 		RenderSpecifiedRange2,
-		// Token: 0x0400CB65 RID: 52069
+		// Token: 0x0400D597 RID: 54679
 		WalkingPatternController,
-		// Token: 0x0400CB66 RID: 52070
+		// Token: 0x0400D598 RID: 54680
 		SummonGongduolaPoint,
-		// Token: 0x0400CB67 RID: 52071
+		// Token: 0x0400D599 RID: 54681
 		SummonGondolaSpline,
-		// Token: 0x0400CB68 RID: 52072
+		// Token: 0x0400D59A RID: 54682
 		HorseBettingTuanzi,
-		// Token: 0x0400CB69 RID: 52073
+		// Token: 0x0400D59B RID: 54683
 		WindSource,
-		// Token: 0x0400CB6A RID: 52074
+		// Token: 0x0400D59C RID: 54684
 		TemplateEntitySpawner,
-		// Token: 0x0400CB6B RID: 52075
+		// Token: 0x0400D59D RID: 54685
 		RewardNpc,
-		// Token: 0x0400CB6C RID: 52076
+		// Token: 0x0400D59E RID: 54686
 		SlideRail,
-		// Token: 0x0400CB6D RID: 52077
+		// Token: 0x0400D59F RID: 54687
 		SlidePerformRail,
-		// Token: 0x0400CB6E RID: 52078
+		// Token: 0x0400D5A0 RID: 54688
 		TuanziNpc,
-		// Token: 0x0400CB6F RID: 52079
+		// Token: 0x0400D5A1 RID: 54689
 		SplineRange,
-		// Token: 0x0400CB70 RID: 52080
+		// Token: 0x0400D5A2 RID: 54690
 		Slots,
-		// Token: 0x0400CB71 RID: 52081
+		// Token: 0x0400D5A3 RID: 54691
 		TuningStand,
-		// Token: 0x0400CB72 RID: 52082
+		// Token: 0x0400D5A4 RID: 54692
 		MusicStand,
-		// Token: 0x0400CB73 RID: 52083
+		// Token: 0x0400D5A5 RID: 54693
 		TowerDefenseTrap,
-		// Token: 0x0400CB74 RID: 52084
+		// Token: 0x0400D5A6 RID: 54694
 		TowerDefenseMonster,
-		// Token: 0x0400CB75 RID: 52085
+		// Token: 0x0400D5A7 RID: 54695
 		TowerDefenseFollowShooter,
-		// Token: 0x0400CB76 RID: 52086
+		// Token: 0x0400D5A8 RID: 54696
 		RenderSpecifiedFollowShooter,
-		// Token: 0x0400CB77 RID: 52087
+		// Token: 0x0400D5A9 RID: 54697
 		GodKingFrequencyController,
-		// Token: 0x0400CB78 RID: 52088
+		// Token: 0x0400D5AA RID: 54698
 		PerformanceOptimizer,
-		// Token: 0x0400CB79 RID: 52089
+		// Token: 0x0400D5AB RID: 54699
 		DynamicSpawnMonsterPoint,
-		// Token: 0x0400CB7A RID: 52090
+		// Token: 0x0400D5AC RID: 54700
 		DynamicSpawnMonster,
-		// Token: 0x0400CB7B RID: 52091
+		// Token: 0x0400D5AD RID: 54701
 		TraceTrackingFootPrint,
-		// Token: 0x0400CB7C RID: 52092
+		// Token: 0x0400D5AE RID: 54702
 		MusicListener,
-		// Token: 0x0400CB7D RID: 52093
+		// Token: 0x0400D5AF RID: 54703
 		MusicTriggerListener,
-		// Token: 0x0400CB7E RID: 52094
+		// Token: 0x0400D5B0 RID: 54704
 		ClientTriggerGear,
-		// Token: 0x0400CB7F RID: 52095
+		// Token: 0x0400D5B1 RID: 54705
 		RollBlock,
-		// Token: 0x0400CB80 RID: 52096
+		// Token: 0x0400D5B2 RID: 54706
 		RollBlockFloor,
-		// Token: 0x0400CB81 RID: 52097
+		// Token: 0x0400D5B3 RID: 54707
 		RollBlockItem,
-		// Token: 0x0400CB82 RID: 52098
+		// Token: 0x0400D5B4 RID: 54708
 		SunSpiritCollectUnit,
-		// Token: 0x0400CB83 RID: 52099
+		// Token: 0x0400D5B5 RID: 54709
 		SunSpiritGearLauncher,
-		// Token: 0x0400CB84 RID: 52100
+		// Token: 0x0400D5B6 RID: 54710
 		SunSpiritGear,
-		// Token: 0x0400CB85 RID: 52101
+		// Token: 0x0400D5B7 RID: 54711
 		SunSpiritPlatform,
-		// Token: 0x0400CB86 RID: 52102
+		// Token: 0x0400D5B8 RID: 54712
 		SunSpiritCombiner,
-		// Token: 0x0400CB87 RID: 52103
+		// Token: 0x0400D5B9 RID: 54713
 		DeadeyeHookTrigger,
-		// Token: 0x0400CB88 RID: 52104
+		// Token: 0x0400D5BA RID: 54714
 		MotorSlide,
-		// Token: 0x0400CB89 RID: 52105
+		// Token: 0x0400D5BB RID: 54715
 		HonamiStoryCorruptedArea,
-		// Token: 0x0400CB8A RID: 52106
+		// Token: 0x0400D5BC RID: 54716
 		SplineFX,
-		// Token: 0x0400CB8B RID: 52107
+		// Token: 0x0400D5BD RID: 54717
 		TrafficSceneItem,
-		// Token: 0x0400CB8C RID: 52108
+		// Token: 0x0400D5BE RID: 54718
 		QuantumPolluted,
-		// Token: 0x0400CB8D RID: 52109
+		// Token: 0x0400D5BF RID: 54719
 		FurnitureSlot,
-		// Token: 0x0400CB8E RID: 52110
+		// Token: 0x0400D5C0 RID: 54720
 		Furniture,
-		// Token: 0x0400CB8F RID: 52111
+		// Token: 0x0400D5C1 RID: 54721
 		VisionDisplayItem,
-		// Token: 0x0400CB90 RID: 52112
+		// Token: 0x0400D5C2 RID: 54722
 		AirWallEffectTrigger,
-		// Token: 0x0400CB91 RID: 52113
+		// Token: 0x0400D5C3 RID: 54723
 		HitTargetMonster,
-		// Token: 0x0400CB92 RID: 52114
+		// Token: 0x0400D5C4 RID: 54724
 		SystemModuleVarSynchronizer,
-		// Token: 0x0400CB93 RID: 52115
+		// Token: 0x0400D5C5 RID: 54725
 		Paver,
-		// Token: 0x0400CB94 RID: 52116
+		// Token: 0x0400D5C6 RID: 54726
 		DestructibleWithHook,
-		// Token: 0x0400CB95 RID: 52117
+		// Token: 0x0400D5C7 RID: 54727
+		AttachableDestructible,
+		// Token: 0x0400D5C8 RID: 54728
 		PilotThrowTitan,
-		// Token: 0x0400CB96 RID: 52118
+		// Token: 0x0400D5C9 RID: 54729
 		ExhibitBase,
-		// Token: 0x0400CB97 RID: 52119
+		// Token: 0x0400D5CA RID: 54730
 		TimeScheduleManagerEntity,
-		// Token: 0x0400CB98 RID: 52120
+		// Token: 0x0400D5CB RID: 54731
 		Projector,
-		// Token: 0x0400CB99 RID: 52121
+		// Token: 0x0400D5CC RID: 54732
 		OrientationUnlockStatue,
-		// Token: 0x0400CB9A RID: 52122
+		// Token: 0x0400D5CD RID: 54733
 		FlowerPollutionManager,
-		// Token: 0x0400CB9B RID: 52123
+		// Token: 0x0400D5CE RID: 54734
 		QuickHack,
-		// Token: 0x0400CB9C RID: 52124
+		// Token: 0x0400D5CF RID: 54735
 		DollGrabMachine,
-		// Token: 0x0400CB9D RID: 52125
+		// Token: 0x0400D5D0 RID: 54736
 		DollGrabShowcase,
-		// Token: 0x0400CB9E RID: 52126
+		// Token: 0x0400D5D1 RID: 54737
 		WuWaGoEntity,
-		// Token: 0x0400CB9F RID: 52127
+		// Token: 0x0400D5D2 RID: 54738
 		DragActorPlayEntity,
-		// Token: 0x0400CBA0 RID: 52128
+		// Token: 0x0400D5D3 RID: 54739
 		PathDrivenActorSpawner,
-		// Token: 0x0400CBA1 RID: 52129
+		// Token: 0x0400D5D4 RID: 54740
 		SwordRiderRail,
-		// Token: 0x0400CBA2 RID: 52130
+		// Token: 0x0400D5D5 RID: 54741
 		SequenceDrivenHook,
-		// Token: 0x0400CBA3 RID: 52131
+		// Token: 0x0400D5D6 RID: 54742
 		LivingCharMeteor,
-		// Token: 0x0400CBA4 RID: 52132
+		// Token: 0x0400D5D7 RID: 54743
 		ElementalHolder,
-		// Token: 0x0400CBA5 RID: 52133
+		// Token: 0x0400D5D8 RID: 54744
 		ElementalResponse,
-		// Token: 0x0400CBA6 RID: 52134
+		// Token: 0x0400D5D9 RID: 54745
 		ElementalResponseComposite,
-		// Token: 0x0400CBA7 RID: 52135
+		// Token: 0x0400D5DA RID: 54746
 		ElementalResponseActorEntity,
-		// Token: 0x0400CBA8 RID: 52136
+		// Token: 0x0400D5DB RID: 54747
 		FireBoxLamp,
-		// Token: 0x0400CBA9 RID: 52137
+		// Token: 0x0400D5DC RID: 54748
 		FireBoxSearchlight,
-		// Token: 0x0400CBAA RID: 52138
+		// Token: 0x0400D5DD RID: 54749
 		WoodenBoxJadeTree,
-		// Token: 0x0400CBAB RID: 52139
+		// Token: 0x0400D5DE RID: 54750
 		WoodenBoxVase,
-		// Token: 0x0400CBAC RID: 52140
+		// Token: 0x0400D5DF RID: 54751
 		WoodenBoxRegenerativeJade,
-		// Token: 0x0400CBAD RID: 52141
+		// Token: 0x0400D5E0 RID: 54752
 		ElementalResponseHook,
-		// Token: 0x0400CBAE RID: 52142
+		// Token: 0x0400D5E1 RID: 54753
 		Graph3d,
-		// Token: 0x0400CBAF RID: 52143
+		// Token: 0x0400D5E2 RID: 54754
 		ElementalBoxFoundation,
-		// Token: 0x0400CBB0 RID: 52144
+		// Token: 0x0400D5E3 RID: 54755
 		ElementalWell,
-		// Token: 0x0400CBB1 RID: 52145
+		// Token: 0x0400D5E4 RID: 54756
 		AttributeConditionListenerTrigger,
-		// Token: 0x0400CBB2 RID: 52146
+		// Token: 0x0400D5E5 RID: 54757
 		FoxPushBox,
-		// Token: 0x0400CBB3 RID: 52147
+		// Token: 0x0400D5E6 RID: 54758
 		NoiseRemoval,
-		// Token: 0x0400CBB4 RID: 52148
+		// Token: 0x0400D5E7 RID: 54759
 		SceneText,
-		// Token: 0x0400CBB5 RID: 52149
-		SceneBuilding
+		// Token: 0x0400D5E8 RID: 54760
+		SceneBuilding,
+		// Token: 0x0400D5E9 RID: 54761
+		Electricity,
+		// Token: 0x0400D5EA RID: 54762
+		FrequencyPaint,
+		// Token: 0x0400D5EB RID: 54763
+		TurntableConnectorGear
 	}
 }

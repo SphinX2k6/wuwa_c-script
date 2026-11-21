@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045F3 RID: 17907
+	// Token: 0x02004A5B RID: 19035
 	public struct TCsvTrapDefenseMonsterGroupData : IFlatbufferObject
 	{
-		// Token: 0x17007F51 RID: 32593
-		// (get) Token: 0x0601B1FB RID: 111099 RVA: 0x003DD8CC File Offset: 0x003DBACC
+		// Token: 0x17008592 RID: 34194
+		// (get) Token: 0x0601C9D0 RID: 117200 RVA: 0x00409B68 File Offset: 0x00407D68
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B1FC RID: 111100 RVA: 0x003DD8D9 File Offset: 0x003DBAD9
+		// Token: 0x0601C9D1 RID: 117201 RVA: 0x00409B75 File Offset: 0x00407D75
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B1FD RID: 111101 RVA: 0x003DD8E0 File Offset: 0x003DBAE0
+		// Token: 0x0601C9D2 RID: 117202 RVA: 0x00409B7C File Offset: 0x00407D7C
 		public static TCsvTrapDefenseMonsterGroupData GetRootAsTCsvTrapDefenseMonsterGroupData(ByteBuffer _bb)
 		{
 			return TCsvTrapDefenseMonsterGroupData.GetRootAsTCsvTrapDefenseMonsterGroupData(_bb, default(TCsvTrapDefenseMonsterGroupData));
 		}
 
-		// Token: 0x0601B1FE RID: 111102 RVA: 0x003DD8FC File Offset: 0x003DBAFC
+		// Token: 0x0601C9D3 RID: 117203 RVA: 0x00409B98 File Offset: 0x00407D98
 		public static TCsvTrapDefenseMonsterGroupData GetRootAsTCsvTrapDefenseMonsterGroupData(ByteBuffer _bb, TCsvTrapDefenseMonsterGroupData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B1FF RID: 111103 RVA: 0x003DD919 File Offset: 0x003DBB19
+		// Token: 0x0601C9D4 RID: 117204 RVA: 0x00409BB5 File Offset: 0x00407DB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B200 RID: 111104 RVA: 0x003DD928 File Offset: 0x003DBB28
+		// Token: 0x0601C9D5 RID: 117205 RVA: 0x00409BC4 File Offset: 0x00407DC4
 		public TCsvTrapDefenseMonsterGroupData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F52 RID: 32594
-		// (get) Token: 0x0601B201 RID: 111105 RVA: 0x003DD938 File Offset: 0x003DBB38
+		// Token: 0x17008593 RID: 34195
+		// (get) Token: 0x0601C9D6 RID: 117206 RVA: 0x00409BD4 File Offset: 0x00407DD4
 		public int Id
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B202 RID: 111106 RVA: 0x003DD974 File Offset: 0x003DBB74
+		// Token: 0x0601C9D7 RID: 117207 RVA: 0x00409C10 File Offset: 0x00407E10
 		public ITrapDefenseMonsterGroup? Monsters(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new ITrapDefenseMonsterGroup?(default(ITrapDefenseMonsterGroup).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007F53 RID: 32595
-		// (get) Token: 0x0601B203 RID: 111107 RVA: 0x003DD9D4 File Offset: 0x003DBBD4
+		// Token: 0x17008594 RID: 34196
+		// (get) Token: 0x0601C9D8 RID: 117208 RVA: 0x00409C70 File Offset: 0x00407E70
 		public int MonstersLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B204 RID: 111108 RVA: 0x003DD9FF File Offset: 0x003DBBFF
+		// Token: 0x0601C9D9 RID: 117209 RVA: 0x00409C9B File Offset: 0x00407E9B
 		public static Offset<TCsvTrapDefenseMonsterGroupData> CreateTCsvTrapDefenseMonsterGroupData(FlatBufferBuilder builder, int Id = 0, VectorOffset MonstersOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return TCsvTrapDefenseMonsterGroupData.EndTCsvTrapDefenseMonsterGroupData(builder);
 		}
 
-		// Token: 0x0601B205 RID: 111109 RVA: 0x003DDA1C File Offset: 0x003DBC1C
+		// Token: 0x0601C9DA RID: 117210 RVA: 0x00409CB8 File Offset: 0x00407EB8
 		public static void StartTCsvTrapDefenseMonsterGroupData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B206 RID: 111110 RVA: 0x003DDA25 File Offset: 0x003DBC25
+		// Token: 0x0601C9DB RID: 117211 RVA: 0x00409CC1 File Offset: 0x00407EC1
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601B207 RID: 111111 RVA: 0x003DDA30 File Offset: 0x003DBC30
+		// Token: 0x0601C9DC RID: 117212 RVA: 0x00409CCC File Offset: 0x00407ECC
 		public static void AddMonsters(FlatBufferBuilder builder, VectorOffset monstersOffset)
 		{
 			builder.AddOffset(1, monstersOffset.Value, 0);
 		}
 
-		// Token: 0x0601B208 RID: 111112 RVA: 0x003DDA40 File Offset: 0x003DBC40
+		// Token: 0x0601C9DD RID: 117213 RVA: 0x00409CDC File Offset: 0x00407EDC
 		public static VectorOffset CreateMonstersVector(FlatBufferBuilder builder, Offset<ITrapDefenseMonsterGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B209 RID: 111113 RVA: 0x003DDA80 File Offset: 0x003DBC80
+		// Token: 0x0601C9DE RID: 117214 RVA: 0x00409D1C File Offset: 0x00407F1C
 		public static VectorOffset CreateMonstersVectorBlock(FlatBufferBuilder builder, Offset<ITrapDefenseMonsterGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B20A RID: 111114 RVA: 0x003DDA9A File Offset: 0x003DBC9A
+		// Token: 0x0601C9DF RID: 117215 RVA: 0x00409D36 File Offset: 0x00407F36
 		public static VectorOffset CreateMonstersVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ITrapDefenseMonsterGroup>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B20B RID: 111115 RVA: 0x003DDAB8 File Offset: 0x003DBCB8
+		// Token: 0x0601C9E0 RID: 117216 RVA: 0x00409D54 File Offset: 0x00407F54
 		public static VectorOffset CreateMonstersVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601B20C RID: 111116 RVA: 0x003DDAD1 File Offset: 0x003DBCD1
+		// Token: 0x0601C9E1 RID: 117217 RVA: 0x00409D6D File Offset: 0x00407F6D
 		public static void StartMonstersVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601B20D RID: 111117 RVA: 0x003DDADC File Offset: 0x003DBCDC
+		// Token: 0x0601C9E2 RID: 117218 RVA: 0x00409D78 File Offset: 0x00407F78
 		public static Offset<TCsvTrapDefenseMonsterGroupData> EndTCsvTrapDefenseMonsterGroupData(FlatBufferBuilder builder)
 		{
 			return new Offset<TCsvTrapDefenseMonsterGroupData>(builder.EndTable());
 		}
 
-		// Token: 0x0601B20E RID: 111118 RVA: 0x003DDAEC File Offset: 0x003DBCEC
+		// Token: 0x0601C9E3 RID: 117219 RVA: 0x00409D88 File Offset: 0x00407F88
 		public TCsvTrapDefenseMonsterGroupDataT UnPack()
 		{
 			TCsvTrapDefenseMonsterGroupDataT tcsvTrapDefenseMonsterGroupDataT = new TCsvTrapDefenseMonsterGroupDataT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return tcsvTrapDefenseMonsterGroupDataT;
 		}
 
-		// Token: 0x0601B20F RID: 111119 RVA: 0x003DDB08 File Offset: 0x003DBD08
+		// Token: 0x0601C9E4 RID: 117220 RVA: 0x00409DA4 File Offset: 0x00407FA4
 		public void UnPackTo(TCsvTrapDefenseMonsterGroupDataT _o)
 		{
 			_o.Id = this.Id;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B210 RID: 111120 RVA: 0x003DDB74 File Offset: 0x003DBD74
+		// Token: 0x0601C9E5 RID: 117221 RVA: 0x00409E10 File Offset: 0x00408010
 		public static Offset<TCsvTrapDefenseMonsterGroupData> Pack(FlatBufferBuilder builder, TCsvTrapDefenseMonsterGroupDataT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return TCsvTrapDefenseMonsterGroupData.CreateTCsvTrapDefenseMonsterGroupData(builder, _o.Id, monstersOffset);
 		}
 
-		// Token: 0x0400C6D5 RID: 50901
+		// Token: 0x0400D104 RID: 53508
 		private Table __p;
 	}
 }

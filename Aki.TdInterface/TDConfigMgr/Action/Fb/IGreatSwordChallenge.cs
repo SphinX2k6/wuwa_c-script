@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002757 RID: 10071
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A23 RID: 10787
 	public class IGreatSwordChallenge : ICommonTipType
 	{
-		// Token: 0x0600E062 RID: 57442 RVA: 0x00212FBC File Offset: 0x002111BC
+		// Token: 0x0600EE62 RID: 61026 RVA: 0x0022FAF4 File Offset: 0x0022DCF4
 		public static IGreatSwordChallenge Create(IGreatSwordChallenge? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004376 RID: 17270
-		// (get) Token: 0x0600E063 RID: 57443 RVA: 0x00212FDB File Offset: 0x002111DB
+		// Token: 0x170046CA RID: 18122
+		// (get) Token: 0x0600EE63 RID: 61027 RVA: 0x0022FB13 File Offset: 0x0022DD13
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004377 RID: 17271
-		// (get) Token: 0x0600E064 RID: 57444 RVA: 0x00212FE8 File Offset: 0x002111E8
+		// Token: 0x170046CB RID: 18123
+		// (get) Token: 0x0600EE64 RID: 61028 RVA: 0x0022FB20 File Offset: 0x0022DD20
 		public virtual string MainText
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004378 RID: 17272
-		// (get) Token: 0x0600E065 RID: 57445 RVA: 0x00212FF5 File Offset: 0x002111F5
+		// Token: 0x170046CC RID: 18124
+		// (get) Token: 0x0600EE65 RID: 61029 RVA: 0x0022FB2D File Offset: 0x0022DD2D
 		public virtual string SubText
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C55 RID: 31829
+		// Token: 0x04008303 RID: 33539
 		private IGreatSwordChallenge Instance;
 	}
 }

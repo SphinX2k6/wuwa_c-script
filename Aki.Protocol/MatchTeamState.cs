@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015FB RID: 5627
+	// Token: 0x0200166E RID: 5742
 	public enum MatchTeamState
 	{
-		// Token: 0x0400BF31 RID: 48945
+		// Token: 0x0400C42B RID: 50219
 		[OriginalName("WaiteConfirm")]
 		WaiteConfirm,
-		// Token: 0x0400BF32 RID: 48946
+		// Token: 0x0400C42C RID: 50220
 		[OriginalName("ReadyConfirm")]
 		ReadyConfirm,
-		// Token: 0x0400BF33 RID: 48947
+		// Token: 0x0400C42D RID: 50221
 		[OriginalName("EnterInst")]
 		EnterInst,
-		// Token: 0x0400BF34 RID: 48948
+		// Token: 0x0400C42E RID: 50222
 		[OriginalName("EnterInstStart")]
 		EnterInstStart
 	}

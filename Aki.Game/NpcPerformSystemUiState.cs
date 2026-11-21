@@ -14,12 +14,12 @@ using CSharpScript.Game.Module.Plot.PlotView;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200322F RID: 12847
+// Token: 0x0200279E RID: 10142
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcPerformSystemUiState : NpcPerformBaseState
 {
-	// Token: 0x0601BB2A RID: 113450 RVA: 0x0079DC08 File Offset: 0x0079BE08
+	// Token: 0x060196AF RID: 104111 RVA: 0x007C63A4 File Offset: 0x007C45A4
 	[NullableContext(1)]
 	public NpcPerformSystemUiState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
@@ -29,9 +29,9 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 	{
 	}
 
-	// Token: 0x1700263F RID: 9791
-	// (get) Token: 0x0601BB2B RID: 113451 RVA: 0x0079DC59 File Offset: 0x0079BE59
-	// (set) Token: 0x0601BB2C RID: 113452 RVA: 0x0079DC61 File Offset: 0x0079BE61
+	// Token: 0x17002880 RID: 10368
+	// (get) Token: 0x060196B0 RID: 104112 RVA: 0x007C63F5 File Offset: 0x007C45F5
+	// (set) Token: 0x060196B1 RID: 104113 RVA: 0x007C63FD File Offset: 0x007C45FD
 	public EUiViewName? SystemUiViewName
 	{
 		get
@@ -44,9 +44,9 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x17002640 RID: 9792
-	// (get) Token: 0x0601BB2D RID: 113453 RVA: 0x0079DC6A File Offset: 0x0079BE6A
-	// (set) Token: 0x0601BB2E RID: 113454 RVA: 0x0079DC72 File Offset: 0x0079BE72
+	// Token: 0x17002881 RID: 10369
+	// (get) Token: 0x060196B2 RID: 104114 RVA: 0x007C6406 File Offset: 0x007C4606
+	// (set) Token: 0x060196B3 RID: 104115 RVA: 0x007C640E File Offset: 0x007C460E
 	public int BoardId
 	{
 		get
@@ -59,7 +59,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BB2F RID: 113455 RVA: 0x0079DC7C File Offset: 0x0079BE7C
+	// Token: 0x060196B4 RID: 104116 RVA: 0x007C6418 File Offset: 0x007C4618
 	protected override void OnCreate(IEntityArgs args)
 	{
 		base.OnCreate(args);
@@ -72,7 +72,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlotPositionMap[EUiViewName.MingSuView] = EPlotLowLevelPosition.Right;
 	}
 
-	// Token: 0x0601BB30 RID: 113456 RVA: 0x0079DCC4 File Offset: 0x0079BEC4
+	// Token: 0x060196B5 RID: 104117 RVA: 0x007C6460 File Offset: 0x007C4660
 	protected override void OnEnter(ENpcPerformState? lastState)
 	{
 		CommonNpcPerformComponent performComp = this.PerformComp;
@@ -109,7 +109,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.InitCoolDown();
 	}
 
-	// Token: 0x0601BB31 RID: 113457 RVA: 0x0079DDAC File Offset: 0x0079BFAC
+	// Token: 0x060196B6 RID: 104118 RVA: 0x007C6548 File Offset: 0x007C4748
 	protected override void OnUpdate(float delta)
 	{
 		if (this.NpcUiInteractType == ENpcUiInteractType.AntiqueShop || this.NpcUiInteractType == ENpcUiInteractType.ChengXiaoShanShop)
@@ -119,7 +119,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlayStandByMontage();
 	}
 
-	// Token: 0x0601BB32 RID: 113458 RVA: 0x0079DDC8 File Offset: 0x0079BFC8
+	// Token: 0x060196B7 RID: 104119 RVA: 0x007C6564 File Offset: 0x007C4764
 	protected override void OnExit(ENpcPerformState nextState)
 	{
 		this.SetForcedLod(false);
@@ -132,9 +132,10 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		performComp.SightTarget(null, EStareActionType.SystemUI);
 	}
 
-	// Token: 0x0601BB33 RID: 113459 RVA: 0x0079DDFC File Offset: 0x0079BFFC
+	// Token: 0x060196B8 RID: 104120 RVA: 0x007C6598 File Offset: 0x007C4798
 	protected override void OnDestroy()
 	{
+		this.RemoveEvents();
 		if (this.NpcPerformSequence != null)
 		{
 			this.NpcPerformSequence.Destroy();
@@ -143,13 +144,13 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.DisableEntities.Clear();
 	}
 
-	// Token: 0x0601BB34 RID: 113460 RVA: 0x0079DE23 File Offset: 0x0079C023
+	// Token: 0x060196B9 RID: 104121 RVA: 0x007C65C5 File Offset: 0x007C47C5
 	public override bool CanChangeFrom(ENpcPerformState fromState)
 	{
 		return fromState != ENpcPerformState.Destroy;
 	}
 
-	// Token: 0x0601BB35 RID: 113461 RVA: 0x0079DE30 File Offset: 0x0079C030
+	// Token: 0x060196BA RID: 104122 RVA: 0x007C65D0 File Offset: 0x007C47D0
 	[NullableContext(1)]
 	private void InitShopPerformParams(INpcUiInteractType config)
 	{
@@ -317,7 +318,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.ShopParams.ShopFailedFlow = npcUiInteractOnGramophone.FailedFlow;
 	}
 
-	// Token: 0x0601BB36 RID: 113462 RVA: 0x0079E61C File Offset: 0x0079C81C
+	// Token: 0x060196BB RID: 104123 RVA: 0x007C6DBC File Offset: 0x007C4FBC
 	private unsafe void TryPlayEnterMontage()
 	{
 		NpcShopPerformParams shopParams = this.ShopParams;
@@ -393,7 +394,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BB37 RID: 113463 RVA: 0x0079E748 File Offset: 0x0079C948
+	// Token: 0x060196BC RID: 104124 RVA: 0x007C6EE8 File Offset: 0x007C50E8
 	private unsafe void TryPlayEnterFlow()
 	{
 		NpcShopPerformParams shopParams = this.ShopParams;
@@ -413,7 +414,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.StartFlow(this.ShopParams.EnterFlow, this.UiViewName.Value, false);
 	}
 
-	// Token: 0x0601BB38 RID: 113464 RVA: 0x0079E830 File Offset: 0x0079CA30
+	// Token: 0x060196BD RID: 104125 RVA: 0x007C6FD0 File Offset: 0x007C51D0
 	private void InitCoolDown()
 	{
 		this.BuySuccessNpcDialogueTimeInterval = (double)ConfigCommonParamById.GetIntConfig("BuySuccessNpcDialogueTimeInterval").GetValueOrDefault();
@@ -423,7 +424,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.ShopSuccessCd = 0.0;
 	}
 
-	// Token: 0x0601BB39 RID: 113465 RVA: 0x0079E8BC File Offset: 0x0079CABC
+	// Token: 0x060196BE RID: 104126 RVA: 0x007C705C File Offset: 0x007C525C
 	private void ResetCoolDown()
 	{
 		this.LastPlaySwitchMontageTime = 0.0;
@@ -433,9 +434,10 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.ShopSuccessStartTimeStamp = 0.0;
 	}
 
-	// Token: 0x0601BB3A RID: 113466 RVA: 0x0079E914 File Offset: 0x0079CB14
+	// Token: 0x060196BF RID: 104127 RVA: 0x007C70B4 File Offset: 0x007C52B4
 	private void FinishUiOpenPerformance()
 	{
+		this.RemoveEvents();
 		if (this.NpcUiInteractType == ENpcUiInteractType.AntiqueShop || this.NpcUiInteractType == ENpcUiInteractType.ChengXiaoShanShop)
 		{
 			NpcShopPerformParams shopParams = this.ShopParams;
@@ -474,10 +476,9 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.IsViewOpening = false;
 		this.UiViewName = null;
 		this.ResetCoolDown();
-		this.RemoveEvents();
 	}
 
-	// Token: 0x0601BB3B RID: 113467 RVA: 0x0079E9F0 File Offset: 0x0079CBF0
+	// Token: 0x060196C0 RID: 104128 RVA: 0x007C7190 File Offset: 0x007C5390
 	private void AddEvents()
 	{
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
@@ -493,23 +494,60 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		EventSystem.Instance.Add<bool, bool>(EEventName.OnDollGrabMachineDelivery, new Action<bool, bool>(this.OnDollGrabMachineDelivery));
 	}
 
-	// Token: 0x0601BB3C RID: 113468 RVA: 0x0079EB30 File Offset: 0x0079CD30
+	// Token: 0x060196C1 RID: 104129 RVA: 0x007C72D0 File Offset: 0x007C54D0
 	private void RemoveEvents()
 	{
-		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
-		EventSystem.Instance.Remove<int, int>(EEventName.BoughtItem, new Action<int, int>(this.OnBuySuccess));
-		EventSystem.Instance.Remove(EEventName.OnSubmitItemSuccess, new Action(this.OnSubmitItemSuccess));
-		EventSystem.Instance.Remove(EEventName.OnSubmitItemFail, new Action(this.OnSubmitItemFail));
-		EventSystem.Instance.Remove(EEventName.OnSubmitItemLevelUp, new Action(this.OnSubmitItemLevelUp));
-		EventSystem.Instance.Remove(EEventName.OnSubmitItemLevelMax, new Action(this.OnSubmitItemLevelMax));
-		EventSystem.Instance.Remove(EEventName.OnPhonographSwitchMusic, new Action(this.OnPhonographSwitchMusic));
-		EventSystem.Instance.Remove(EEventName.OnExitNpcInteract, new Action(this.OnExitNpcInteract));
-		EventSystem.Instance.Remove(EEventName.VillageDeliverySuccess, new Action(this.OnVillageDeliverySuccess));
-		EventSystem.Instance.Remove(EEventName.VillageCompleteDelivery, new Action(this.OnVillageCompleteDelivery));
-		EventSystem.Instance.Remove<bool, bool>(EEventName.OnDollGrabMachineDelivery, new Action<bool, bool>(this.OnDollGrabMachineDelivery));
+		if (EventSystem.Instance.Has<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView)))
+		{
+			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.OpenView, new Action<EUiViewName, int>(this.OnOpenView));
+		}
+		if (EventSystem.Instance.Has<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView)))
+		{
+			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
+		}
+		if (EventSystem.Instance.Has<int, int>(EEventName.BoughtItem, new Action<int, int>(this.OnBuySuccess)))
+		{
+			EventSystem.Instance.Remove<int, int>(EEventName.BoughtItem, new Action<int, int>(this.OnBuySuccess));
+		}
+		if (EventSystem.Instance.Has(EEventName.OnSubmitItemSuccess, new Action(this.OnSubmitItemSuccess)))
+		{
+			EventSystem.Instance.Remove(EEventName.OnSubmitItemSuccess, new Action(this.OnSubmitItemSuccess));
+		}
+		if (EventSystem.Instance.Has(EEventName.OnSubmitItemFail, new Action(this.OnSubmitItemFail)))
+		{
+			EventSystem.Instance.Remove(EEventName.OnSubmitItemFail, new Action(this.OnSubmitItemFail));
+		}
+		if (EventSystem.Instance.Has(EEventName.OnSubmitItemLevelUp, new Action(this.OnSubmitItemLevelUp)))
+		{
+			EventSystem.Instance.Remove(EEventName.OnSubmitItemLevelUp, new Action(this.OnSubmitItemLevelUp));
+		}
+		if (EventSystem.Instance.Has(EEventName.OnSubmitItemLevelMax, new Action(this.OnSubmitItemLevelMax)))
+		{
+			EventSystem.Instance.Remove(EEventName.OnSubmitItemLevelMax, new Action(this.OnSubmitItemLevelMax));
+		}
+		if (EventSystem.Instance.Has(EEventName.OnPhonographSwitchMusic, new Action(this.OnPhonographSwitchMusic)))
+		{
+			EventSystem.Instance.Remove(EEventName.OnPhonographSwitchMusic, new Action(this.OnPhonographSwitchMusic));
+		}
+		if (EventSystem.Instance.Has(EEventName.OnExitNpcInteract, new Action(this.OnExitNpcInteract)))
+		{
+			EventSystem.Instance.Remove(EEventName.OnExitNpcInteract, new Action(this.OnExitNpcInteract));
+		}
+		if (EventSystem.Instance.Has(EEventName.VillageDeliverySuccess, new Action(this.OnVillageDeliverySuccess)))
+		{
+			EventSystem.Instance.Remove(EEventName.VillageDeliverySuccess, new Action(this.OnVillageDeliverySuccess));
+		}
+		if (EventSystem.Instance.Has(EEventName.VillageCompleteDelivery, new Action(this.OnVillageCompleteDelivery)))
+		{
+			EventSystem.Instance.Remove(EEventName.VillageCompleteDelivery, new Action(this.OnVillageCompleteDelivery));
+		}
+		if (EventSystem.Instance.Has<bool, bool>(EEventName.OnDollGrabMachineDelivery, new Action<bool, bool>(this.OnDollGrabMachineDelivery)))
+		{
+			EventSystem.Instance.Remove<bool, bool>(EEventName.OnDollGrabMachineDelivery, new Action<bool, bool>(this.OnDollGrabMachineDelivery));
+		}
 	}
 
-	// Token: 0x0601BB3D RID: 113469 RVA: 0x0079EC70 File Offset: 0x0079CE70
+	// Token: 0x060196C2 RID: 104130 RVA: 0x007C757C File Offset: 0x007C577C
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (this.UiViewName == null)
@@ -526,7 +564,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.TryPlayEnterMontage();
 	}
 
-	// Token: 0x0601BB3E RID: 113470 RVA: 0x0079ECF0 File Offset: 0x0079CEF0
+	// Token: 0x060196C3 RID: 104131 RVA: 0x007C75FC File Offset: 0x007C57FC
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (this.UiViewName == null)
@@ -542,7 +580,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.StateMachine.Switch(ENpcPerformState.Idle);
 	}
 
-	// Token: 0x0601BB3F RID: 113471 RVA: 0x0079ED4C File Offset: 0x0079CF4C
+	// Token: 0x060196C4 RID: 104132 RVA: 0x007C7658 File Offset: 0x007C5858
 	private unsafe void OnBuySuccess(int shopId, int id)
 	{
 		if (this.UiViewName == null)
@@ -594,7 +632,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlayBuySuccessMontage();
 	}
 
-	// Token: 0x0601BB40 RID: 113472 RVA: 0x0079EF54 File Offset: 0x0079D154
+	// Token: 0x060196C5 RID: 104133 RVA: 0x007C7860 File Offset: 0x007C5A60
 	private void OnPhonographSwitchMusic()
 	{
 		if (this.NpcUiInteractType != ENpcUiInteractType.Gramophone)
@@ -642,7 +680,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BB41 RID: 113473 RVA: 0x0079F05C File Offset: 0x0079D25C
+	// Token: 0x060196C6 RID: 104134 RVA: 0x007C7968 File Offset: 0x007C5B68
 	private void OnExitNpcInteract()
 	{
 		if (this.NpcUiInteractType != ENpcUiInteractType.Gramophone && this.NpcUiInteractType != ENpcUiInteractType.SoundBox3 && this.NpcUiInteractType != ENpcUiInteractType.SunSpirit && this.NpcUiInteractType != ENpcUiInteractType.SoundBox35)
@@ -683,7 +721,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BB42 RID: 113474 RVA: 0x0079F120 File Offset: 0x0079D320
+	// Token: 0x060196C7 RID: 104135 RVA: 0x007C7A2C File Offset: 0x007C5C2C
 	private unsafe void OnVillageDeliverySuccess()
 	{
 		if (this.UiViewName == null)
@@ -720,7 +758,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlayVillageDeliverySuccessMontage();
 	}
 
-	// Token: 0x0601BB43 RID: 113475 RVA: 0x0079F244 File Offset: 0x0079D444
+	// Token: 0x060196C8 RID: 104136 RVA: 0x007C7B50 File Offset: 0x007C5D50
 	private void PlayVillageDeliverySuccessMontage()
 	{
 		if (this.NpcUiInteractType != ENpcUiInteractType.VillageInfr)
@@ -761,7 +799,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BB44 RID: 113476 RVA: 0x0079F2EC File Offset: 0x0079D4EC
+	// Token: 0x060196C9 RID: 104137 RVA: 0x007C7BF8 File Offset: 0x007C5DF8
 	private unsafe void OnVillageCompleteDelivery()
 	{
 		if (this.UiViewName == null)
@@ -798,7 +836,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlayVillageCompleteMontage();
 	}
 
-	// Token: 0x0601BB45 RID: 113477 RVA: 0x0079F410 File Offset: 0x0079D610
+	// Token: 0x060196CA RID: 104138 RVA: 0x007C7D1C File Offset: 0x007C5F1C
 	private void PlayVillageCompleteMontage()
 	{
 		if (this.NpcUiInteractType != ENpcUiInteractType.VillageInfr)
@@ -839,7 +877,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BB46 RID: 113478 RVA: 0x0079F4B8 File Offset: 0x0079D6B8
+	// Token: 0x060196CB RID: 104139 RVA: 0x007C7DC4 File Offset: 0x007C5FC4
 	private unsafe void OnSubmitItemSuccess()
 	{
 		if (this.UiViewName == null)
@@ -872,7 +910,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlayBuySuccessMontage();
 	}
 
-	// Token: 0x0601BB47 RID: 113479 RVA: 0x0079F59C File Offset: 0x0079D79C
+	// Token: 0x060196CC RID: 104140 RVA: 0x007C7EA8 File Offset: 0x007C60A8
 	private unsafe void OnSubmitItemFail()
 	{
 		if (this.UiViewName == null)
@@ -904,7 +942,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.StartFlow((shopParams2 != null) ? shopParams2.ShopFailedFlow : null, this.UiViewName.Value, true);
 	}
 
-	// Token: 0x0601BB48 RID: 113480 RVA: 0x0079F678 File Offset: 0x0079D878
+	// Token: 0x060196CD RID: 104141 RVA: 0x007C7F84 File Offset: 0x007C6184
 	private unsafe void OnSubmitItemLevelUp()
 	{
 		if (this.NpcUiInteractType != ENpcUiInteractType.AntiqueShop && this.NpcUiInteractType != ENpcUiInteractType.ChengXiaoShanShop && this.NpcUiInteractType != ENpcUiInteractType.SoundBox3 && this.NpcUiInteractType != ENpcUiInteractType.SunSpirit && this.NpcUiInteractType != ENpcUiInteractType.SoundBox35)
@@ -958,7 +996,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		EventSystem.Instance.Emit(EEventName.OnAntiqueShopUpgradeSequencePlayFail);
 	}
 
-	// Token: 0x0601BB49 RID: 113481 RVA: 0x0079F878 File Offset: 0x0079DA78
+	// Token: 0x060196CE RID: 104142 RVA: 0x007C8184 File Offset: 0x007C6384
 	private unsafe void OnLevelUpSequenceLoadCompelete()
 	{
 		EntityHandle owner = this.Owner;
@@ -996,7 +1034,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.NpcPerformSequence.Play(new Action(this.OnLevelUpSequencePlayFinished));
 	}
 
-	// Token: 0x0601BB4A RID: 113482 RVA: 0x0079F9F0 File Offset: 0x0079DBF0
+	// Token: 0x060196CF RID: 104143 RVA: 0x007C82FC File Offset: 0x007C64FC
 	private unsafe void OnLevelUpSequencePlayFinished()
 	{
 		EntityHandle owner = this.Owner;
@@ -1037,7 +1075,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		EventSystem.Instance.Emit(EEventName.OnAntiqueShopUpgradeSequenceFinished);
 	}
 
-	// Token: 0x0601BB4B RID: 113483 RVA: 0x0079FB88 File Offset: 0x0079DD88
+	// Token: 0x060196D0 RID: 104144 RVA: 0x007C8494 File Offset: 0x007C6694
 	private unsafe void OnSubmitItemLevelMax()
 	{
 		if (this.NpcUiInteractType != ENpcUiInteractType.AntiqueShop && this.NpcUiInteractType != ENpcUiInteractType.ChengXiaoShanShop && this.NpcUiInteractType != ENpcUiInteractType.SoundBox3 && this.NpcUiInteractType != ENpcUiInteractType.SunSpirit && this.NpcUiInteractType != ENpcUiInteractType.SoundBox35)
@@ -1099,7 +1137,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		EventSystem.Instance.Emit(EEventName.OnAntiqueShopUpgradeSequencePlayFail);
 	}
 
-	// Token: 0x0601BB4C RID: 113484 RVA: 0x0079FE10 File Offset: 0x0079E010
+	// Token: 0x060196D1 RID: 104145 RVA: 0x007C871C File Offset: 0x007C691C
 	private unsafe void OnLevelMaxSequenceLoadCompelete()
 	{
 		EntityHandle owner = this.Owner;
@@ -1137,7 +1175,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.NpcPerformSequence.Play(new Action(this.OnLevelMaxSequencePlayFinished));
 	}
 
-	// Token: 0x0601BB4D RID: 113485 RVA: 0x0079FF70 File Offset: 0x0079E170
+	// Token: 0x060196D2 RID: 104146 RVA: 0x007C887C File Offset: 0x007C6A7C
 	private unsafe void OnLevelMaxSequencePlayFinished()
 	{
 		EntityHandle owner = this.Owner;
@@ -1179,7 +1217,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		EventSystem.Instance.Emit(EEventName.OnAntiqueShopUpgradeSequenceFinished);
 	}
 
-	// Token: 0x0601BB4E RID: 113486 RVA: 0x007A0120 File Offset: 0x0079E320
+	// Token: 0x060196D3 RID: 104147 RVA: 0x007C8A2C File Offset: 0x007C6C2C
 	private void SetNpcAndChildDisable()
 	{
 		if (this.NpcPerformSequence == null)
@@ -1223,7 +1261,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BB4F RID: 113487 RVA: 0x007A0250 File Offset: 0x0079E450
+	// Token: 0x060196D4 RID: 104148 RVA: 0x007C8B5C File Offset: 0x007C6D5C
 	private void SetForcedLod(bool forcedLod)
 	{
 		EntityHandle owner = this.Owner;
@@ -1248,7 +1286,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BB50 RID: 113488 RVA: 0x007A02B8 File Offset: 0x0079E4B8
+	// Token: 0x060196D5 RID: 104149 RVA: 0x007C8BC4 File Offset: 0x007C6DC4
 	public void SetNpcAndChildEnable()
 	{
 		for (int i = 0; i < this.DisableEntities.Count; i++)
@@ -1259,7 +1297,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.DisableEntities.Clear();
 	}
 
-	// Token: 0x0601BB51 RID: 113489 RVA: 0x007A0310 File Offset: 0x0079E510
+	// Token: 0x060196D6 RID: 104150 RVA: 0x007C8C1C File Offset: 0x007C6E1C
 	private void StartFlow(PlayFlow playFlow, EUiViewName uiViewName, bool canBeAbandoned)
 	{
 		if (playFlow == null)
@@ -1276,7 +1314,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		FlowController.Instance.StartFlowForView(playFlow.FlowListName, playFlow.FlowId, playFlow.StateId, uiParam, canBeAbandoned);
 	}
 
-	// Token: 0x0601BB52 RID: 113490 RVA: 0x007A0384 File Offset: 0x0079E584
+	// Token: 0x060196D7 RID: 104151 RVA: 0x007C8C90 File Offset: 0x007C6E90
 	private void PlayStandByMontage()
 	{
 		NpcShopPerformParams shopParams = this.ShopParams;
@@ -1336,7 +1374,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BB53 RID: 113491 RVA: 0x007A051C File Offset: 0x0079E71C
+	// Token: 0x060196D8 RID: 104152 RVA: 0x007C8E28 File Offset: 0x007C7028
 	private void PlayBuySuccessMontage()
 	{
 		NpcShopPerformParams shopParams = this.ShopParams;
@@ -1411,7 +1449,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BB54 RID: 113492 RVA: 0x007A0680 File Offset: 0x0079E880
+	// Token: 0x060196D9 RID: 104153 RVA: 0x007C8F8C File Offset: 0x007C718C
 	private unsafe void OnDollGrabMachineDelivery(bool isAlreadyFirst, bool isComplete)
 	{
 		global::Log instance = global::Log.Instance;
@@ -1455,7 +1493,7 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		this.PlayDollFlowAndMontage(playFlow, playMontage);
 	}
 
-	// Token: 0x0601BB55 RID: 113493 RVA: 0x007A07B4 File Offset: 0x0079E9B4
+	// Token: 0x060196DA RID: 104154 RVA: 0x007C90C0 File Offset: 0x007C72C0
 	private void PlayDollFlowAndMontage(PlayFlow playFlow, NpcSystemUiMontageInfo playMontage)
 	{
 		if (playFlow != null && this.UiViewName != null)
@@ -1505,56 +1543,56 @@ public class NpcPerformSystemUiState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0400DA2F RID: 55855
+	// Token: 0x0400DECE RID: 57038
 	private const int STAND_BY_MONTAGE_CD = 20;
 
-	// Token: 0x0400DA30 RID: 55856
+	// Token: 0x0400DECF RID: 57039
 	private const int SWITCH_MONATGE_CD = 2000;
 
-	// Token: 0x0400DA31 RID: 55857
+	// Token: 0x0400DED0 RID: 57040
 	private NpcShopPerformParams ShopParams;
 
-	// Token: 0x0400DA32 RID: 55858
+	// Token: 0x0400DED1 RID: 57041
 	private ENpcUiInteractType NpcUiInteractType = ENpcUiInteractType.AntiqueShop;
 
-	// Token: 0x0400DA33 RID: 55859
+	// Token: 0x0400DED2 RID: 57042
 	private EUiViewName? UiViewName;
 
-	// Token: 0x0400DA34 RID: 55860
+	// Token: 0x0400DED3 RID: 57043
 	private bool IsViewOpening;
 
-	// Token: 0x0400DA35 RID: 55861
+	// Token: 0x0400DED4 RID: 57044
 	private int ShopId;
 
-	// Token: 0x0400DA36 RID: 55862
+	// Token: 0x0400DED5 RID: 57045
 	private NpcPerformSequence NpcPerformSequence;
 
-	// Token: 0x0400DA37 RID: 55863
+	// Token: 0x0400DED6 RID: 57046
 	[Nullable(1)]
 	private readonly List<DisableEntityInfo> DisableEntities = new List<DisableEntityInfo>();
 
-	// Token: 0x0400DA38 RID: 55864
+	// Token: 0x0400DED7 RID: 57047
 	private double StandByMontageCd;
 
-	// Token: 0x0400DA39 RID: 55865
+	// Token: 0x0400DED8 RID: 57048
 	private double StandByMontageStartTimeStamp;
 
-	// Token: 0x0400DA3A RID: 55866
+	// Token: 0x0400DED9 RID: 57049
 	private double ShopSuccessCd = --0.0;
 
-	// Token: 0x0400DA3B RID: 55867
+	// Token: 0x0400DEDA RID: 57050
 	private double ShopSuccessStartTimeStamp = --0.0;
 
-	// Token: 0x0400DA3C RID: 55868
+	// Token: 0x0400DEDB RID: 57051
 	private double BuySuccessNpcDialogueTimeInterval;
 
-	// Token: 0x0400DA3D RID: 55869
+	// Token: 0x0400DEDC RID: 57052
 	private double CanPlayBuySuccessTimeStamp;
 
-	// Token: 0x0400DA3E RID: 55870
+	// Token: 0x0400DEDD RID: 57053
 	private double LastPlaySwitchMontageTime;
 
-	// Token: 0x0400DA3F RID: 55871
+	// Token: 0x0400DEDE RID: 57054
 	[Nullable(1)]
 	private readonly Dictionary<EUiViewName, EPlotLowLevelPosition> PlotPositionMap = new Dictionary<EUiViewName, EPlotLowLevelPosition>();
 }

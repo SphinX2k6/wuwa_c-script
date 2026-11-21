@@ -7,18 +7,18 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059C9 RID: 22985
+	// Token: 0x020049A2 RID: 18850
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CheckEntityStateNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A442 RID: 238658 RVA: 0x00DDAF4C File Offset: 0x00DD914C
+		// Token: 0x0602F369 RID: 193385 RVA: 0x00D2A7D4 File Offset: 0x00D289D4
 		public CheckEntityStateNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B91 RID: 35729
-		// (get) Token: 0x0603A443 RID: 238659 RVA: 0x00DDAF60 File Offset: 0x00DD9160
+		// Token: 0x17005F5E RID: 24414
+		// (get) Token: 0x0602F36A RID: 193386 RVA: 0x00D2A7E8 File Offset: 0x00D289E8
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A444 RID: 238660 RVA: 0x00DDAF68 File Offset: 0x00DD9168
+		// Token: 0x0602F36B RID: 193387 RVA: 0x00D2A7F0 File Offset: 0x00D289F0
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A445 RID: 238661 RVA: 0x00DDB020 File Offset: 0x00DD9220
+		// Token: 0x0602F36C RID: 193388 RVA: 0x00D2A8A8 File Offset: 0x00D28AA8
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			if (progress.EntityStateList == null)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A446 RID: 238662 RVA: 0x00DDB03C File Offset: 0x00DD923C
+		// Token: 0x0602F36D RID: 193389 RVA: 0x00D2A8C4 File Offset: 0x00D28AC4
 		public override string GetProgress()
 		{
 			EntityStateProgress progress = this.Progress;
@@ -85,17 +85,17 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return text ?? "0";
 		}
 
-		// Token: 0x0603A447 RID: 238663 RVA: 0x00DDB078 File Offset: 0x00DD9278
+		// Token: 0x0602F36E RID: 193390 RVA: 0x00D2A900 File Offset: 0x00D28B00
 		public override string GetProgressMax()
 		{
 			return this.InnerCorrelativeEntities.Count.ToString();
 		}
 
-		// Token: 0x0401E616 RID: 124438
+		// Token: 0x040190B5 RID: 102581
 		[Nullable(2)]
 		private EntityStateProgress Progress;
 
-		// Token: 0x0401E617 RID: 124439
+		// Token: 0x040190B6 RID: 102582
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 	}
 }

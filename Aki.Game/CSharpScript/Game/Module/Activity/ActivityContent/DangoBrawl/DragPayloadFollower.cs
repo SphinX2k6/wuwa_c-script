@@ -4,14 +4,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200679C RID: 26524
+	// Token: 0x020056EC RID: 22252
 	public class DragPayloadFollower
 	{
-		// Token: 0x0402282A RID: 141354
+		// Token: 0x0401D087 RID: 118919
 		[Nullable(1)]
 		public IDangoBrawlDraggableView View;
 
-		// Token: 0x0402282B RID: 141355
+		// Token: 0x0401D088 RID: 118920
 		public FVector2D OffsetToPrimary;
 	}
 }

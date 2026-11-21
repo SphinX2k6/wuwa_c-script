@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002620 RID: 9760
+// Token: 0x02001B0B RID: 6923
 public enum EQteState
 {
-	// Token: 0x04009662 RID: 38498
+	// Token: 0x040097B9 RID: 38841
 	Pending,
-	// Token: 0x04009663 RID: 38499
+	// Token: 0x040097BA RID: 38842
 	PendingSuccess,
-	// Token: 0x04009664 RID: 38500
+	// Token: 0x040097BB RID: 38843
 	Success,
-	// Token: 0x04009665 RID: 38501
+	// Token: 0x040097BC RID: 38844
 	Fail,
-	// Token: 0x04009666 RID: 38502
+	// Token: 0x040097BD RID: 38845
 	Invalid
 }

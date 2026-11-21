@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200558D RID: 21901
+	// Token: 0x02004563 RID: 17763
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TTrackTarget_Int : TTrackTarget
 	{
-		// Token: 0x06037CFB RID: 228603 RVA: 0x00D39804 File Offset: 0x00D37A04
+		// Token: 0x0602CBF9 RID: 183289 RVA: 0x00C874DC File Offset: 0x00C856DC
 		public TTrackTarget_Int(int Value)
 		{
 		}
 
-		// Token: 0x06037CFC RID: 228604 RVA: 0x00D39813 File Offset: 0x00D37A13
+		// Token: 0x0602CBFA RID: 183290 RVA: 0x00C874EB File Offset: 0x00C856EB
 		public static implicit operator int(TTrackTarget_Int target)
 		{
 			return target.Value;
 		}
 
-		// Token: 0x06037CFD RID: 228605 RVA: 0x00D3981B File Offset: 0x00D37A1B
+		// Token: 0x0602CBFB RID: 183291 RVA: 0x00C874F3 File Offset: 0x00C856F3
 		public new static implicit operator TTrackTarget_Int(int value)
 		{
 			return new TTrackTarget_Int(value);
 		}
 
-		// Token: 0x06037CFE RID: 228606 RVA: 0x00D39824 File Offset: 0x00D37A24
+		// Token: 0x0602CBFC RID: 183292 RVA: 0x00C874FC File Offset: 0x00C856FC
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			return ttrackTarget_Int != null && this.Value == ttrackTarget_Int.Value;
 		}
 
-		// Token: 0x06037CFF RID: 228607 RVA: 0x00D3984B File Offset: 0x00D37A4B
+		// Token: 0x0602CBFD RID: 183293 RVA: 0x00C87523 File Offset: 0x00C85723
 		public override int GetHashCode()
 		{
 			return this.Value.GetHashCode();
 		}
 
-		// Token: 0x0401D563 RID: 120163
+		// Token: 0x04017FEE RID: 98286
 		public int Value = Value;
 	}
 }

@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200109E RID: 4254
+	// Token: 0x02000275 RID: 629
 	[UnrealObjectPath("/Script/Engine.RootMotionMovementParams")]
 	[UnrealStructLayout(64, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class FRootMotionMovementParams : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600F316 RID: 62230 RVA: 0x0016881A File Offset: 0x00166A1A
+		// Token: 0x0600404A RID: 16458 RVA: 0x0005C4FD File Offset: 0x0005A6FD
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FRootMotionMovementParams._ScriptStructPtr != 0) ? FRootMotionMovementParams._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.RootMotionMovementParams", ref FRootMotionMovementParams._ScriptStructPtr);
 		}
 
-		// Token: 0x17003B31 RID: 15153
-		// (get) Token: 0x0600F317 RID: 62231 RVA: 0x0016883E File Offset: 0x00166A3E
-		// (set) Token: 0x0600F318 RID: 62232 RVA: 0x0016884E File Offset: 0x00166A4E
+		// Token: 0x17000BC2 RID: 3010
+		// (get) Token: 0x0600404B RID: 16459 RVA: 0x0005C521 File Offset: 0x0005A721
+		// (set) Token: 0x0600404C RID: 16460 RVA: 0x0005C531 File Offset: 0x0005A731
 		public unsafe bool bHasRootMotion
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003B32 RID: 15154
-		// (get) Token: 0x0600F319 RID: 62233 RVA: 0x0016885F File Offset: 0x00166A5F
-		// (set) Token: 0x0600F31A RID: 62234 RVA: 0x0016886F File Offset: 0x00166A6F
+		// Token: 0x17000BC3 RID: 3011
+		// (get) Token: 0x0600404D RID: 16461 RVA: 0x0005C542 File Offset: 0x0005A742
+		// (set) Token: 0x0600404E RID: 16462 RVA: 0x0005C552 File Offset: 0x0005A752
 		public unsafe float BlendWeight
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003B33 RID: 15155
-		// (get) Token: 0x0600F31B RID: 62235 RVA: 0x00168880 File Offset: 0x00166A80
-		// (set) Token: 0x0600F31C RID: 62236 RVA: 0x00168890 File Offset: 0x00166A90
+		// Token: 0x17000BC4 RID: 3012
+		// (get) Token: 0x0600404F RID: 16463 RVA: 0x0005C563 File Offset: 0x0005A763
+		// (set) Token: 0x06004050 RID: 16464 RVA: 0x0005C573 File Offset: 0x0005A773
 		public unsafe float AccumulatedTime
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003B34 RID: 15156
-		// (get) Token: 0x0600F31D RID: 62237 RVA: 0x001688A1 File Offset: 0x00166AA1
-		// (set) Token: 0x0600F31E RID: 62238 RVA: 0x001688B5 File Offset: 0x00166AB5
+		// Token: 0x17000BC5 RID: 3013
+		// (get) Token: 0x06004051 RID: 16465 RVA: 0x0005C584 File Offset: 0x0005A784
+		// (set) Token: 0x06004052 RID: 16466 RVA: 0x0005C598 File Offset: 0x0005A798
 		public unsafe FTransform RootMotionTransform
 		{
 			get
@@ -76,68 +76,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600F31F RID: 62239 RVA: 0x001688CA File Offset: 0x00166ACA
+		// Token: 0x06004053 RID: 16467 RVA: 0x0005C5AD File Offset: 0x0005A7AD
 		public FRootMotionMovementParams()
 		{
 		}
 
-		// Token: 0x0600F320 RID: 62240 RVA: 0x001688D2 File Offset: 0x00166AD2
-		public FRootMotionMovementParams(bool bHasRootMotion, float BlendWeight, float AccumulatedTime, FTransform RootMotionTransform)
-		{
-			this.bHasRootMotion = bHasRootMotion;
-			this.BlendWeight = BlendWeight;
-			this.AccumulatedTime = AccumulatedTime;
-			this.RootMotionTransform = RootMotionTransform;
-		}
-
-		// Token: 0x0600F321 RID: 62241 RVA: 0x001688F7 File Offset: 0x00166AF7
+		// Token: 0x06004054 RID: 16468 RVA: 0x0005C5B5 File Offset: 0x0005A7B5
 		protected override IntPtr GetUStructPtr()
 		{
 			return FRootMotionMovementParams.StaticStruct();
 		}
 
-		// Token: 0x0600F322 RID: 62242 RVA: 0x00168903 File Offset: 0x00166B03
+		// Token: 0x06004055 RID: 16469 RVA: 0x0005C5C1 File Offset: 0x0005A7C1
 		[NullableContext(2)]
 		public FRootMotionMovementParams(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600F323 RID: 62243 RVA: 0x0016890D File Offset: 0x00166B0D
+		// Token: 0x06004056 RID: 16470 RVA: 0x0005C5CB File Offset: 0x0005A7CB
 		public FRootMotionMovementParams(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600F324 RID: 62244 RVA: 0x00168918 File Offset: 0x00166B18
+		// Token: 0x06004057 RID: 16471 RVA: 0x0005C5D6 File Offset: 0x0005A7D6
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FRootMotionMovementParams(Pointer, false, true);
 		}
 
-		// Token: 0x0600F325 RID: 62245 RVA: 0x00168922 File Offset: 0x00166B22
+		// Token: 0x06004058 RID: 16472 RVA: 0x0005C5E0 File Offset: 0x0005A7E0
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FRootMotionMovementParams(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040083D4 RID: 33748
+		// Token: 0x04001931 RID: 6449
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.RootMotionMovementParams";
 
-		// Token: 0x040083D5 RID: 33749
+		// Token: 0x04001932 RID: 6450
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040083D6 RID: 33750
+		// Token: 0x04001933 RID: 6451
 		internal static int __PropertyOffset_bHasRootMotion;
 
-		// Token: 0x040083D7 RID: 33751
+		// Token: 0x04001934 RID: 6452
 		internal static int __PropertyOffset_BlendWeight;
 
-		// Token: 0x040083D8 RID: 33752
+		// Token: 0x04001935 RID: 6453
 		internal static int __PropertyOffset_AccumulatedTime;
 
-		// Token: 0x040083D9 RID: 33753
+		// Token: 0x04001936 RID: 6454
 		internal static int __PropertyOffset_RootMotionTransform;
 	}
 }

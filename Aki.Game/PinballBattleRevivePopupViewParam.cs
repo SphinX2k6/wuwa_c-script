@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200141F RID: 5151
+// Token: 0x020008D3 RID: 2259
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballBattleRevivePopupViewParam : IPinballBattleRevivePopupViewParam
 {
-	// Token: 0x17000C7B RID: 3195
-	// (get) Token: 0x06009138 RID: 37176 RVA: 0x001F2C3E File Offset: 0x001F0E3E
-	// (set) Token: 0x06009139 RID: 37177 RVA: 0x001F2C46 File Offset: 0x001F0E46
+	// Token: 0x17000C9B RID: 3227
+	// (get) Token: 0x060064CD RID: 25805 RVA: 0x001FB77A File Offset: 0x001F997A
+	// (set) Token: 0x060064CE RID: 25806 RVA: 0x001FB782 File Offset: 0x001F9982
 	public Action ConfirmCallback { get; set; }
 
-	// Token: 0x17000C7C RID: 3196
-	// (get) Token: 0x0600913A RID: 37178 RVA: 0x001F2C4F File Offset: 0x001F0E4F
-	// (set) Token: 0x0600913B RID: 37179 RVA: 0x001F2C57 File Offset: 0x001F0E57
+	// Token: 0x17000C9C RID: 3228
+	// (get) Token: 0x060064CF RID: 25807 RVA: 0x001FB78B File Offset: 0x001F998B
+	// (set) Token: 0x060064D0 RID: 25808 RVA: 0x001FB793 File Offset: 0x001F9993
 	public Action CancelCallback { get; set; }
 }

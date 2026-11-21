@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017D1 RID: 6097
+	// Token: 0x02001958 RID: 6488
 	public class IAkEventMapType_SetValue
 	{
-		// Token: 0x04005330 RID: 21296
+		// Token: 0x04005774 RID: 22388
 		public EAkEventMap Type;
 	}
 }

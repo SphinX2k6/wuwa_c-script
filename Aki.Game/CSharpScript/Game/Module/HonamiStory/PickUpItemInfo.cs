@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200594E RID: 22862
+	// Token: 0x02004927 RID: 18727
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PickUpItemInfo : IPickUpItemInfo
 	{
-		// Token: 0x17008B1C RID: 35612
-		// (get) Token: 0x0603A04D RID: 237645 RVA: 0x00DCA6A0 File Offset: 0x00DC88A0
-		// (set) Token: 0x0603A04E RID: 237646 RVA: 0x00DCA6A8 File Offset: 0x00DC88A8
+		// Token: 0x17005EE8 RID: 24296
+		// (get) Token: 0x0602EF70 RID: 192368 RVA: 0x00D19954 File Offset: 0x00D17B54
+		// (set) Token: 0x0602EF71 RID: 192369 RVA: 0x00D1995C File Offset: 0x00D17B5C
 		public HonamiStoryItemDataBase ItemData { get; set; }
 
-		// Token: 0x17008B1D RID: 35613
-		// (get) Token: 0x0603A04F RID: 237647 RVA: 0x00DCA6B1 File Offset: 0x00DC88B1
-		// (set) Token: 0x0603A050 RID: 237648 RVA: 0x00DCA6B9 File Offset: 0x00DC88B9
+		// Token: 0x17005EE9 RID: 24297
+		// (get) Token: 0x0602EF72 RID: 192370 RVA: 0x00D19965 File Offset: 0x00D17B65
+		// (set) Token: 0x0602EF73 RID: 192371 RVA: 0x00D1996D File Offset: 0x00D17B6D
 		public Entity EntitySelf { get; set; }
 	}
 }

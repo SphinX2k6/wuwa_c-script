@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016C6 RID: 5830
+// Token: 0x02000B7E RID: 2942
 [NullableContext(2)]
 [Nullable(0)]
 public class AdviceMotionActor
 {
-	// Token: 0x0600A6A6 RID: 42662 RVA: 0x00254E1C File Offset: 0x0025301C
+	// Token: 0x06007A86 RID: 31366 RVA: 0x0025F22C File Offset: 0x0025D42C
 	public void PlayMotion(int entityId)
 	{
 		this.CurrentEntity = entityId;
@@ -24,7 +24,7 @@ public class AdviceMotionActor
 		});
 	}
 
-	// Token: 0x0600A6A7 RID: 42663 RVA: 0x00254E64 File Offset: 0x00253064
+	// Token: 0x06007A87 RID: 31367 RVA: 0x0025F274 File Offset: 0x0025D474
 	[NullableContext(1)]
 	private void InitInternalActor(int entityId, Action loadMeshCompleteCall)
 	{
@@ -113,7 +113,7 @@ public class AdviceMotionActor
 		}
 	}
 
-	// Token: 0x0600A6A8 RID: 42664 RVA: 0x002550AC File Offset: 0x002532AC
+	// Token: 0x06007A88 RID: 31368 RVA: 0x0025F4BC File Offset: 0x0025D6BC
 	private void PlayInteractAnimation(int entityId)
 	{
 		this.ClearTimer();
@@ -183,7 +183,7 @@ public class AdviceMotionActor
 		AdviceModel.Instance.AddPlayingMotionEntity(this.CurrentEntity, this);
 	}
 
-	// Token: 0x0600A6A9 RID: 42665 RVA: 0x00255200 File Offset: 0x00253400
+	// Token: 0x06007A89 RID: 31369 RVA: 0x0025F610 File Offset: 0x0025D810
 	private void OnLoadCompleteCheckForShow()
 	{
 		USkeletalMeshComponent meshComponent = this.SkeletalMeshInternal;
@@ -200,7 +200,7 @@ public class AdviceMotionActor
 		}
 	}
 
-	// Token: 0x0600A6AA RID: 42666 RVA: 0x00255264 File Offset: 0x00253464
+	// Token: 0x06007A8A RID: 31370 RVA: 0x0025F674 File Offset: 0x0025D874
 	private void RevertToNormalModel(float deltaTime)
 	{
 		this.RemoveMat();
@@ -214,7 +214,7 @@ public class AdviceMotionActor
 		AdviceModel.Instance.RemovePlayingMotionEntity(this.CurrentEntity);
 	}
 
-	// Token: 0x0600A6AB RID: 42667 RVA: 0x002552AB File Offset: 0x002534AB
+	// Token: 0x06007A8B RID: 31371 RVA: 0x0025F6BB File Offset: 0x0025D8BB
 	private void ClearTimer()
 	{
 		this.PlayState = false;
@@ -225,7 +225,7 @@ public class AdviceMotionActor
 		}
 	}
 
-	// Token: 0x0600A6AC RID: 42668 RVA: 0x002552D4 File Offset: 0x002534D4
+	// Token: 0x06007A8C RID: 31372 RVA: 0x0025F6E4 File Offset: 0x0025D8E4
 	private void RemoveMat()
 	{
 		if (this.CharRenderingComponent != null && this.MaterialEffectHandle > 0)
@@ -235,7 +235,7 @@ public class AdviceMotionActor
 		}
 	}
 
-	// Token: 0x0600A6AD RID: 42669 RVA: 0x00255300 File Offset: 0x00253500
+	// Token: 0x06007A8D RID: 31373 RVA: 0x0025F710 File Offset: 0x0025D910
 	public void OnActorDestroy(AActor actor)
 	{
 		this.ClearTimer();
@@ -249,27 +249,27 @@ public class AdviceMotionActor
 		AdviceModel.Instance.RemoveMotionActor(this);
 	}
 
-	// Token: 0x04004B4D RID: 19277
+	// Token: 0x04004BF4 RID: 19444
 	private TimerHandle RevertTimer;
 
-	// Token: 0x04004B4E RID: 19278
+	// Token: 0x04004BF5 RID: 19445
 	protected AActor ActorInternal;
 
-	// Token: 0x04004B4F RID: 19279
+	// Token: 0x04004BF6 RID: 19446
 	protected USkeletalMeshComponent SkeletalMeshInternal;
 
-	// Token: 0x04004B50 RID: 19280
+	// Token: 0x04004BF7 RID: 19447
 	private CharRenderingComponent CharRenderingComponent;
 
-	// Token: 0x04004B51 RID: 19281
+	// Token: 0x04004BF8 RID: 19448
 	private int MaterialEffectHandle;
 
-	// Token: 0x04004B52 RID: 19282
+	// Token: 0x04004BF9 RID: 19449
 	private int CurrentEntity;
 
-	// Token: 0x04004B53 RID: 19283
+	// Token: 0x04004BFA RID: 19450
 	private bool PlayState;
 
-	// Token: 0x04004B54 RID: 19284
+	// Token: 0x04004BFB RID: 19451
 	private const int REVERTIME = 3000;
 }

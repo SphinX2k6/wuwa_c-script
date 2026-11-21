@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020A0 RID: 8352
+	// Token: 0x020022F1 RID: 8945
 	public class IVisualNovelPortraitTransform_SetValue
 	{
-		// Token: 0x04006E3E RID: 28222
+		// Token: 0x04007454 RID: 29780
 		public int? PosX;
 
-		// Token: 0x04006E3F RID: 28223
+		// Token: 0x04007455 RID: 29781
 		public int? PosY;
 
-		// Token: 0x04006E40 RID: 28224
+		// Token: 0x04007456 RID: 29782
 		public float? Scale;
 	}
 }

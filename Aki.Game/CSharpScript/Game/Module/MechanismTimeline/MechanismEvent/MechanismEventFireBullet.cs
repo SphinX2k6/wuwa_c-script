@@ -5,17 +5,17 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 {
-	// Token: 0x02005483 RID: 21635
+	// Token: 0x02004466 RID: 17510
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MechanismEventFireBullet : MechanismEventBase
 	{
-		// Token: 0x0603733A RID: 226106 RVA: 0x00D16B46 File Offset: 0x00D14D46
+		// Token: 0x0602C283 RID: 180867 RVA: 0x00C65F9E File Offset: 0x00C6419E
 		public MechanismEventFireBullet(IMechanismEventInfo eventInfo, MechanismEventContext context, SceneItemEventListenerComponent eventListenerComponent, bool isServerAction) : base(eventInfo, context, eventListenerComponent, isServerAction)
 		{
 		}
 
-		// Token: 0x0603733B RID: 226107 RVA: 0x00D16B54 File Offset: 0x00D14D54
+		// Token: 0x0602C284 RID: 180868 RVA: 0x00C65FAC File Offset: 0x00C641AC
 		protected unsafe override void OnTrigger(ActionParams @params)
 		{
 			SeqEventFireBullet seqEventFireBullet = @params as SeqEventFireBullet;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			this.BulletEntityId = this.EventListenerComponent.CreateBullet(seqEventFireBullet, base.EventName);
 		}
 
-		// Token: 0x0603733C RID: 226108 RVA: 0x00D16BE4 File Offset: 0x00D14DE4
+		// Token: 0x0602C285 RID: 180869 RVA: 0x00C6603C File Offset: 0x00C6423C
 		protected unsafe override void OnStart(ActionParams @params)
 		{
 			SeqEventFireBullet seqEventFireBullet = @params as SeqEventFireBullet;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.MechanismTimeline.MechanismEvent
 			this.BulletEntityId = this.EventListenerComponent.CreateBullet(seqEventFireBullet, base.EventName);
 		}
 
-		// Token: 0x0603733D RID: 226109 RVA: 0x00D16C71 File Offset: 0x00D14E71
+		// Token: 0x0602C286 RID: 180870 RVA: 0x00C660C9 File Offset: 0x00C642C9
 		protected override void OnEnd(ActionParams @params)
 		{
 			this.EventListenerComponent.DestroyBullet(this.BulletEntityId);
 		}
 
-		// Token: 0x0401D1C5 RID: 119237
+		// Token: 0x04017C5E RID: 97374
 		public int BulletEntityId;
 	}
 }

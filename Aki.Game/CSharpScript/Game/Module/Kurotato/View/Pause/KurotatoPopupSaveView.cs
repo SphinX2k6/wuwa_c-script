@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Pause
 {
-	// Token: 0x0200573F RID: 22335
+	// Token: 0x02004716 RID: 18198
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoPopupSaveView : UiViewBase, IExtraUiPopFrameType
 	{
-		// Token: 0x06038C77 RID: 232567 RVA: 0x00D7B195 File Offset: 0x00D79395
+		// Token: 0x0602DB87 RID: 187271 RVA: 0x00CC9845 File Offset: 0x00CC7A45
 		public KurotatoPopupSaveView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038C78 RID: 232568 RVA: 0x00D7B1D4 File Offset: 0x00D793D4
+		// Token: 0x0602DB88 RID: 187272 RVA: 0x00CC9884 File Offset: 0x00CC7A84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038C79 RID: 232569 RVA: 0x00D7B364 File Offset: 0x00D79564
+		// Token: 0x0602DB89 RID: 187273 RVA: 0x00CC9A14 File Offset: 0x00CC7C14
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoPopupSaveView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -67,14 +67,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C7A RID: 232570 RVA: 0x00D7B3A7 File Offset: 0x00D795A7
+		// Token: 0x0602DB8A RID: 187274 RVA: 0x00CC9A57 File Offset: 0x00CC7C57
 		protected override void OnStart()
 		{
 			this.RefreshSaveState();
 			this.RefreshOverwriteConfirmPanel();
 		}
 
-		// Token: 0x06038C7B RID: 232571 RVA: 0x00D7B3B8 File Offset: 0x00D795B8
+		// Token: 0x0602DB8B RID: 187275 RVA: 0x00CC9A68 File Offset: 0x00CC7C68
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			childPopView3.PopItem.OverrideBackBtnCallBack(new Action(this.OnClose));
 		}
 
-		// Token: 0x06038C7C RID: 232572 RVA: 0x00D7B433 File Offset: 0x00D79633
+		// Token: 0x0602DB8C RID: 187276 RVA: 0x00CC9AE3 File Offset: 0x00CC7CE3
 		protected override void OnAfterShow()
 		{
 			Action afterShowFunction = this.ConfirmBoxData.GetAfterShowFunction();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			afterShowFunction();
 		}
 
-		// Token: 0x06038C7D RID: 232573 RVA: 0x00D7B44A File Offset: 0x00D7964A
+		// Token: 0x0602DB8D RID: 187277 RVA: 0x00CC9AFA File Offset: 0x00CC7CFA
 		protected override void OnBeforeHide()
 		{
 			if (this.LastHide)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			}
 		}
 
-		// Token: 0x06038C7E RID: 232574 RVA: 0x00D7B470 File Offset: 0x00D79670
+		// Token: 0x0602DB8E RID: 187278 RVA: 0x00CC9B20 File Offset: 0x00CC7D20
 		protected override void OnBeforeDestroy()
 		{
 			this.ResetButtonList();
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			destroyFunction();
 		}
 
-		// Token: 0x06038C7F RID: 232575 RVA: 0x00D7B4CC File Offset: 0x00D796CC
+		// Token: 0x0602DB8F RID: 187279 RVA: 0x00CC9B7C File Offset: 0x00CC7D7C
 		private void RefreshSaveState()
 		{
 			List<KurotatoInstInfo> roleSaveInstInfos = KurotatoModel.Instance.GetRoleSaveInstInfos();
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			oldSavePanel.RefreshSaveInfo(saveData2, 1);
 		}
 
-		// Token: 0x06038C80 RID: 232576 RVA: 0x00D7B58C File Offset: 0x00D7978C
+		// Token: 0x0602DB90 RID: 187280 RVA: 0x00CC9C3C File Offset: 0x00CC7E3C
 		private void RefreshOverwriteConfirmPanel()
 		{
 			base.GetItem(5).SetUIActive(this.HasOldSave);
@@ -199,13 +199,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			uuiitem.SetUIActive(this.HasOldSave);
 		}
 
-		// Token: 0x06038C81 RID: 232577 RVA: 0x00D7B5CF File Offset: 0x00D797CF
+		// Token: 0x0602DB91 RID: 187281 RVA: 0x00CC9C7F File Offset: 0x00CC7E7F
 		private bool IsOverwriteConfirmChecked()
 		{
 			return base.GetExtendToggle(6).ToggleState == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x06038C82 RID: 232578 RVA: 0x00D7B5E0 File Offset: 0x00D797E0
+		// Token: 0x0602DB92 RID: 187282 RVA: 0x00CC9C90 File Offset: 0x00CC7E90
 		private void OnClose()
 		{
 			this.SelectedIndex = -1;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			});
 		}
 
-		// Token: 0x06038C83 RID: 232579 RVA: 0x00D7B5FB File Offset: 0x00D797FB
+		// Token: 0x0602DB93 RID: 187283 RVA: 0x00CC9CAB File Offset: 0x00CC7EAB
 		private void HandleSelectedIndexWhenClose()
 		{
 			if (this.SelectedIndex == -1)
@@ -229,14 +229,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			}
 		}
 
-		// Token: 0x06038C84 RID: 232580 RVA: 0x00D7B610 File Offset: 0x00D79810
+		// Token: 0x0602DB94 RID: 187284 RVA: 0x00CC9CC0 File Offset: 0x00CC7EC0
 		private void OnClickBtnHelp()
 		{
 			int valueOrDefault = ConfigCommonParamById.GetIntConfig("KurotatoSavePopupHelpId").GetValueOrDefault();
 			HelpController.Instance.OpenHelpById(valueOrDefault);
 		}
 
-		// Token: 0x06038C85 RID: 232581 RVA: 0x00D7B63C File Offset: 0x00D7983C
+		// Token: 0x0602DB95 RID: 187285 RVA: 0x00CC9CEC File Offset: 0x00CC7EEC
 		private UniTask InitButton()
 		{
 			KurotatoPopupSaveView.<InitButton>d__23 <InitButton>d__;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			return <InitButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C86 RID: 232582 RVA: 0x00D7B680 File Offset: 0x00D79880
+		// Token: 0x0602DB96 RID: 187286 RVA: 0x00CC9D30 File Offset: 0x00CC7F30
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C87 RID: 232583 RVA: 0x00D7B6DC File Offset: 0x00D798DC
+		// Token: 0x0602DB97 RID: 187287 RVA: 0x00CC9D8C File Offset: 0x00CC7F8C
 		private void ResetButtonList()
 		{
 			int i = 0;
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			this.ButtonList.Clear();
 		}
 
-		// Token: 0x06038C88 RID: 232584 RVA: 0x00D7B720 File Offset: 0x00D79920
+		// Token: 0x0602DB98 RID: 187288 RVA: 0x00CC9DD0 File Offset: 0x00CC7FD0
 		private void OnConfirmBoxButtonClick(int buttonIndex)
 		{
 			if (buttonIndex == 1)
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			}
 		}
 
-		// Token: 0x06038C89 RID: 232585 RVA: 0x00D7B798 File Offset: 0x00D79998
+		// Token: 0x0602DB99 RID: 187289 RVA: 0x00CC9E48 File Offset: 0x00CC8048
 		private void HandleSaveAction()
 		{
 			if (!this.HasOldSave)
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06038C8A RID: 232586 RVA: 0x00D7B808 File Offset: 0x00D79A08
+		// Token: 0x0602DB9A RID: 187290 RVA: 0x00CC9EB8 File Offset: 0x00CC80B8
 		private UniTask DoSaveRecord()
 		{
 			KurotatoPopupSaveView.<DoSaveRecord>d__28 <DoSaveRecord>d__;
@@ -344,59 +344,59 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			return <DoSaveRecord>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C8B RID: 232587 RVA: 0x00D7B84B File Offset: 0x00D79A4B
+		// Token: 0x0602DB9B RID: 187291 RVA: 0x00CC9EFB File Offset: 0x00CC80FB
 		[NullableContext(2)]
 		public EUiBehaviourPopType? GetExtraPopFrameType(object param = null)
 		{
 			return new EUiBehaviourPopType?(EUiBehaviourPopType.Middle);
 		}
 
-		// Token: 0x0401DC89 RID: 121993
+		// Token: 0x0401871F RID: 100127
 		private readonly KurotatoSaveArchivePanel OldSavePanel = new KurotatoSaveArchivePanel();
 
-		// Token: 0x0401DC8A RID: 121994
+		// Token: 0x04018720 RID: 100128
 		private readonly KurotatoSaveArchivePanel NewSavePanel = new KurotatoSaveArchivePanel();
 
-		// Token: 0x0401DC8B RID: 121995
+		// Token: 0x04018721 RID: 100129
 		private bool HasOldSave;
 
-		// Token: 0x0401DC8C RID: 121996
+		// Token: 0x04018722 RID: 100130
 		[Nullable(2)]
 		private ConfirmBoxDataNew ConfirmBoxData;
 
-		// Token: 0x0401DC8D RID: 121997
+		// Token: 0x04018723 RID: 100131
 		private ConfirmBox? Config;
 
-		// Token: 0x0401DC8E RID: 121998
+		// Token: 0x04018724 RID: 100132
 		private int SelectedIndex = -1;
 
-		// Token: 0x0401DC8F RID: 121999
+		// Token: 0x04018725 RID: 100133
 		private readonly List<ConfirmBoxButton> ButtonList = new List<ConfirmBoxButton>();
 
-		// Token: 0x0401DC90 RID: 122000
+		// Token: 0x04018726 RID: 100134
 		private readonly List<UUIButtonComponent> ButtonComponentList = new List<UUIButtonComponent>();
 
-		// Token: 0x0200B923 RID: 47395
+		// Token: 0x0200A344 RID: 41796
 		[NullableContext(0)]
 		private enum EComps
 		{
-			// Token: 0x04037FE5 RID: 229349
+			// Token: 0x040329F5 RID: 207349
 			BtnHelp,
-			// Token: 0x04037FE6 RID: 229350
+			// Token: 0x040329F6 RID: 207350
 			TextSaveExpireTime,
-			// Token: 0x04037FE7 RID: 229351
+			// Token: 0x040329F7 RID: 207351
 			TextSaveTip,
-			// Token: 0x04037FE8 RID: 229352
+			// Token: 0x040329F8 RID: 207352
 			OldSavePanel,
-			// Token: 0x04037FE9 RID: 229353
+			// Token: 0x040329F9 RID: 207353
 			NewSavePanel,
-			// Token: 0x04037FEA RID: 229354
+			// Token: 0x040329FA RID: 207354
 			PanelOverwriteConfirm,
-			// Token: 0x04037FEB RID: 229355
+			// Token: 0x040329FB RID: 207355
 			ToggleOverwriteConfirm,
-			// Token: 0x04037FEC RID: 229356
+			// Token: 0x040329FC RID: 207356
 			BtnLeft,
-			// Token: 0x04037FED RID: 229357
+			// Token: 0x040329FD RID: 207357
 			BtnRight
 		}
 	}

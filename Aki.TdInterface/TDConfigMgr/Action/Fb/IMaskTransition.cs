@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002909 RID: 10505
+	// Token: 0x02002BE5 RID: 11237
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMaskTransition : ILevelSequenceTransitionType
 	{
-		// Token: 0x0600E932 RID: 59698 RVA: 0x00223256 File Offset: 0x00221456
-		[NullableContext(1)]
+		// Token: 0x0600F783 RID: 63363 RVA: 0x00240576 File Offset: 0x0023E776
+		[NullableContext(0)]
 		public static IMaskTransition Create(IMaskTransition? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048E2 RID: 18658
-		// (get) Token: 0x0600E933 RID: 59699 RVA: 0x00223275 File Offset: 0x00221475
+		// Token: 0x17004C67 RID: 19559
+		// (get) Token: 0x0600F784 RID: 63364 RVA: 0x00240595 File Offset: 0x0023E795
 		public override ELevelSequenceTransition Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048E3 RID: 18659
-		// (get) Token: 0x0600E934 RID: 59700 RVA: 0x00223284 File Offset: 0x00221484
+		// Token: 0x17004C68 RID: 19560
+		// (get) Token: 0x0600F785 RID: 63365 RVA: 0x002405A4 File Offset: 0x0023E7A4
 		public override float? Duration
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048E4 RID: 18660
-		// (get) Token: 0x0600E935 RID: 59701 RVA: 0x002232BA File Offset: 0x002214BA
+		// Token: 0x17004C69 RID: 19561
+		// (get) Token: 0x0600F786 RID: 63366 RVA: 0x002405DA File Offset: 0x0023E7DA
 		public virtual ETransitionMask Mask
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048E5 RID: 18661
-		// (get) Token: 0x0600E936 RID: 59702 RVA: 0x002232C7 File Offset: 0x002214C7
+		// Token: 0x17004C6A RID: 19562
+		// (get) Token: 0x0600F787 RID: 63367 RVA: 0x002405E7 File Offset: 0x0023E7E7
 		public virtual IEaseData FadeIn
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048E6 RID: 18662
-		// (get) Token: 0x0600E937 RID: 59703 RVA: 0x002232FB File Offset: 0x002214FB
+		// Token: 0x17004C6B RID: 19563
+		// (get) Token: 0x0600F788 RID: 63368 RVA: 0x0024061B File Offset: 0x0023E81B
 		public virtual IEaseData FadeOut
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080BB RID: 32955
+		// Token: 0x04008789 RID: 34697
 		private IMaskTransition Instance;
 
-		// Token: 0x040080BC RID: 32956
+		// Token: 0x0400878A RID: 34698
 		private IEaseData _FadeInCache;
 
-		// Token: 0x040080BD RID: 32957
+		// Token: 0x0400878B RID: 34699
 		private bool _FadeInInited;
 
-		// Token: 0x040080BE RID: 32958
+		// Token: 0x0400878C RID: 34700
 		private IEaseData _FadeOutCache;
 
-		// Token: 0x040080BF RID: 32959
+		// Token: 0x0400878D RID: 34701
 		private bool _FadeOutInited;
 	}
 }

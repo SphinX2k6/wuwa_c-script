@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B78 RID: 27512
+	// Token: 0x020072BE RID: 29374
 	public class IMowingTowerGotoNextFloorT
 	{
 	}

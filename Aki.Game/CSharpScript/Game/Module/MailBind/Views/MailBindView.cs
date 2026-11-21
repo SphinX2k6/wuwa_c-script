@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MailBind.Views
 {
-	// Token: 0x020056A5 RID: 22181
+	// Token: 0x0200467B RID: 18043
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MailBindView : UiViewBase
 	{
-		// Token: 0x06038713 RID: 231187 RVA: 0x00D666AB File Offset: 0x00D648AB
+		// Token: 0x0602D610 RID: 185872 RVA: 0x00CB47FC File Offset: 0x00CB29FC
 		[NullableContext(1)]
 		public MailBindView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038714 RID: 231188 RVA: 0x00D666B4 File Offset: 0x00D648B4
+		// Token: 0x0602D611 RID: 185873 RVA: 0x00CB4808 File Offset: 0x00CB2A08
 		protected override UniTask OnCreateAsync()
 		{
 			MailBindView.<OnCreateAsync>d__8 <OnCreateAsync>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038715 RID: 231189 RVA: 0x00D666F0 File Offset: 0x00D648F0
+		// Token: 0x0602D612 RID: 185874 RVA: 0x00CB4844 File Offset: 0x00CB2A44
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			};
 		}
 
-		// Token: 0x06038716 RID: 231190 RVA: 0x00D667DC File Offset: 0x00D649DC
+		// Token: 0x0602D613 RID: 185875 RVA: 0x00CB4930 File Offset: 0x00CB2B30
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MailBindView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038717 RID: 231191 RVA: 0x00D66820 File Offset: 0x00D64A20
+		// Token: 0x0602D614 RID: 185876 RVA: 0x00CB4974 File Offset: 0x00CB2B74
 		protected override void OnStart()
 		{
 			string textId = this.IsGlobalSdk ? "Mail_Activity_Function_Entry02" : "Mail_Activity_Function_Entry01";
@@ -97,25 +97,25 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			MailBindController.Instance.RecordMailBindNextShowRedDotTime();
 		}
 
-		// Token: 0x06038718 RID: 231192 RVA: 0x00D669CF File Offset: 0x00D64BCF
+		// Token: 0x0602D615 RID: 185877 RVA: 0x00CB4B23 File Offset: 0x00CB2D23
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnMailBindInfoNotify, new Action(this.OnMailBindInfoNotify));
 		}
 
-		// Token: 0x06038719 RID: 231193 RVA: 0x00D669ED File Offset: 0x00D64BED
+		// Token: 0x0602D616 RID: 185878 RVA: 0x00CB4B41 File Offset: 0x00CB2D41
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMailBindInfoNotify, new Action(this.OnMailBindInfoNotify));
 		}
 
-		// Token: 0x0603871A RID: 231194 RVA: 0x00D66A0B File Offset: 0x00D64C0B
+		// Token: 0x0602D617 RID: 185879 RVA: 0x00CB4B5F File Offset: 0x00CB2D5F
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603871B RID: 231195 RVA: 0x00D66A13 File Offset: 0x00D64C13
+		// Token: 0x0602D618 RID: 185880 RVA: 0x00CB4B67 File Offset: 0x00CB2D67
 		private void OnGotoMailBindBtnClick()
 		{
 			MailBindController.Instance.MailBindRequest();
@@ -130,19 +130,19 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			MailBindController.Instance.RecordMailBindJumpToWebView();
 		}
 
-		// Token: 0x0603871C RID: 231196 RVA: 0x00D66A49 File Offset: 0x00D64C49
+		// Token: 0x0602D619 RID: 185881 RVA: 0x00CB4B9D File Offset: 0x00CB2D9D
 		private void OnBackBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603871D RID: 231197 RVA: 0x00D66A52 File Offset: 0x00D64C52
+		// Token: 0x0602D61A RID: 185882 RVA: 0x00CB4BA6 File Offset: 0x00CB2DA6
 		private void OnRewardButtonClick()
 		{
 			MailBindController.Instance.MailBindRewardRequest();
 		}
 
-		// Token: 0x0603871E RID: 231198 RVA: 0x00D66A60 File Offset: 0x00D64C60
+		// Token: 0x0602D61B RID: 185883 RVA: 0x00CB4BB4 File Offset: 0x00CB2DB4
 		private void OnHelpButtonClick()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig(this.IsGlobalSdk ? "Mail_Activity_HelpId02" : "Mail_Activity_HelpId01");
@@ -153,20 +153,20 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			HelpController.Instance.OpenHelpById(intConfig.Value);
 		}
 
-		// Token: 0x0603871F RID: 231199 RVA: 0x00D66AA2 File Offset: 0x00D64CA2
+		// Token: 0x0602D61C RID: 185884 RVA: 0x00CB4BF6 File Offset: 0x00CB2DF6
 		private void OnMailBindInfoNotify()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06038720 RID: 231200 RVA: 0x00D66AAA File Offset: 0x00D64CAA
+		// Token: 0x0602D61D RID: 185885 RVA: 0x00CB4BFE File Offset: 0x00CB2DFE
 		public void Refresh()
 		{
 			this.RefreshTimerText();
 			this.RefreshState();
 		}
 
-		// Token: 0x06038721 RID: 231201 RVA: 0x00D66AB8 File Offset: 0x00D64CB8
+		// Token: 0x0602D61E RID: 185886 RVA: 0x00CB4C0C File Offset: 0x00CB2E0C
 		private void RefreshTimerText()
 		{
 			MailBindModel instance = MailBindModel.Instance;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			}
 		}
 
-		// Token: 0x06038722 RID: 231202 RVA: 0x00D66B10 File Offset: 0x00D64D10
+		// Token: 0x0602D61F RID: 185887 RVA: 0x00CB4C64 File Offset: 0x00CB2E64
 		private void RefreshState()
 		{
 			EMailBindState state = MailBindModel.Instance.GetState();
@@ -208,13 +208,13 @@ namespace CSharpScript.Game.Module.MailBind.Views
 			functionButton.SetUiActive(state == EMailBindState.NotBind);
 		}
 
-		// Token: 0x0401DA39 RID: 121401
+		// Token: 0x040184C4 RID: 99524
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x0401DA3A RID: 121402
+		// Token: 0x040184C5 RID: 99525
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x0401DA3B RID: 121403
+		// Token: 0x040184C6 RID: 99526
 		[Nullable(new byte[]
 		{
 			2,
@@ -222,34 +222,34 @@ namespace CSharpScript.Game.Module.MailBind.Views
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x0401DA3C RID: 121404
+		// Token: 0x040184C7 RID: 99527
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x0401DA3D RID: 121405
+		// Token: 0x040184C8 RID: 99528
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DA3E RID: 121406
+		// Token: 0x040184C9 RID: 99529
 		private bool IsGlobalSdk;
 
-		// Token: 0x0200B866 RID: 47206
+		// Token: 0x0200A28E RID: 41614
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04037D01 RID: 228609
+			// Token: 0x0403271E RID: 206622
 			TitleItem,
-			// Token: 0x04037D02 RID: 228610
+			// Token: 0x0403271F RID: 206623
 			DescriptionItem,
-			// Token: 0x04037D03 RID: 228611
+			// Token: 0x04032720 RID: 206624
 			RewardListItem,
-			// Token: 0x04037D04 RID: 228612
+			// Token: 0x04032721 RID: 206625
 			FunctionAreaItem,
-			// Token: 0x04037D05 RID: 228613
+			// Token: 0x04032722 RID: 206626
 			CaptionItem,
-			// Token: 0x04037D06 RID: 228614
+			// Token: 0x04032723 RID: 206627
 			HasRewardItem,
-			// Token: 0x04037D07 RID: 228615
+			// Token: 0x04032724 RID: 206628
 			UnDoneItem,
-			// Token: 0x04037D08 RID: 228616
+			// Token: 0x04032725 RID: 206629
 			ReceiveButton
 		}
 	}

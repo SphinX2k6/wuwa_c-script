@@ -9,6 +9,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Effect;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
@@ -17,12 +18,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02003256 RID: 12886
+// Token: 0x020027C5 RID: 10181
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleTeamComponent : EntityComponent
 {
-	// Token: 0x0601BCCB RID: 113867 RVA: 0x007ACE70 File Offset: 0x007AB070
+	// Token: 0x0601988E RID: 104590 RVA: 0x007D5328 File Offset: 0x007D3528
 	protected override bool OnInit()
 	{
 		this.BuffComponent = base.Entity.GetComponent<CharacterBuffComponent>();
@@ -45,7 +46,7 @@ public class RoleTeamComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BCCC RID: 113868 RVA: 0x007ACFA0 File Offset: 0x007AB1A0
+	// Token: 0x0601988F RID: 104591 RVA: 0x007D5458 File Offset: 0x007D3658
 	protected override bool OnStart()
 	{
 		string effectPath = EffectUtil.GetEffectPath("GoBattleMaterial");
@@ -69,7 +70,7 @@ public class RoleTeamComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BCCD RID: 113869 RVA: 0x007AD002 File Offset: 0x007AB202
+	// Token: 0x06019890 RID: 104592 RVA: 0x007D54BA File Offset: 0x007D36BA
 	protected override void OnPostActivate()
 	{
 		this.RefreshTeamTag();
@@ -80,14 +81,14 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCCE RID: 113870 RVA: 0x007AD01F File Offset: 0x007AB21F
+	// Token: 0x06019891 RID: 104593 RVA: 0x007D54D7 File Offset: 0x007D36D7
 	protected override bool OnEnd()
 	{
 		this.ClearWaiters();
 		return true;
 	}
 
-	// Token: 0x0601BCCF RID: 113871 RVA: 0x007AD028 File Offset: 0x007AB228
+	// Token: 0x06019892 RID: 104594 RVA: 0x007D54E0 File Offset: 0x007D36E0
 	private void ClearWaiters()
 	{
 		ITagTask notHideTagTask = this.NotHideTagTask;
@@ -109,13 +110,13 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCD0 RID: 113872 RVA: 0x007AD085 File Offset: 0x007AB285
+	// Token: 0x06019893 RID: 104595 RVA: 0x007D553D File Offset: 0x007D373D
 	public bool NeedSyncTransform()
 	{
 		return !this.InheritedTransform;
 	}
 
-	// Token: 0x0601BCD1 RID: 113873 RVA: 0x007AD090 File Offset: 0x007AB290
+	// Token: 0x06019894 RID: 104596 RVA: 0x007D5548 File Offset: 0x007D3748
 	[NullableContext(1)]
 	public unsafe static void OnChangeRole([Nullable(2)] EntityHandle lastRole, EntityHandle newRole, bool useGoBattleSkill, double coolDownTime, bool goDownWaitSkillEnd, bool allowRefreshTransform, bool forceInheritTransform)
 	{
@@ -245,7 +246,7 @@ public class RoleTeamComponent : EntityComponent
 		component.GoBattle(!flag2 && useGoBattleSkill);
 	}
 
-	// Token: 0x0601BCD2 RID: 113874 RVA: 0x007AD504 File Offset: 0x007AB704
+	// Token: 0x06019895 RID: 104597 RVA: 0x007D59BC File Offset: 0x007D3BBC
 	private unsafe void PerformPossess()
 	{
 		AController characterController = Global.CharacterController;
@@ -276,7 +277,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCD3 RID: 113875 RVA: 0x007AD5D8 File Offset: 0x007AB7D8
+	// Token: 0x06019896 RID: 104598 RVA: 0x007D5A90 File Offset: 0x007D3C90
 	private void RefreshPosition(EntityHandle lastRole, bool specialRollInAir, bool allowRefresh, bool forceInherit)
 	{
 		this.InheritedTransform = false;
@@ -354,7 +355,7 @@ public class RoleTeamComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601BCD4 RID: 113876 RVA: 0x007AD83C File Offset: 0x007ABA3C
+	// Token: 0x06019897 RID: 104599 RVA: 0x007D5CF4 File Offset: 0x007D3EF4
 	public bool InheritTransform(bool clearInputFacing = false, EntityHandle lastRole = null)
 	{
 		this.InheritedTransform = true;
@@ -421,7 +422,7 @@ public class RoleTeamComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BCD5 RID: 113877 RVA: 0x007ADA7C File Offset: 0x007ABC7C
+	// Token: 0x06019898 RID: 104600 RVA: 0x007D5F34 File Offset: 0x007D4134
 	[NullableContext(1)]
 	private void FixSwitchLocation(string context, [Nullable(2)] EntityHandle lastRole = null)
 	{
@@ -439,7 +440,7 @@ public class RoleTeamComponent : EntityComponent
 		this.ActorComp.FixSwitchLocation(context, true, true, num);
 	}
 
-	// Token: 0x0601BCD6 RID: 113878 RVA: 0x007ADB00 File Offset: 0x007ABD00
+	// Token: 0x06019899 RID: 104601 RVA: 0x007D5FB8 File Offset: 0x007D41B8
 	private void GoBattle(bool useGoBattleSkill)
 	{
 		if (this.QteComp.IsInQte)
@@ -471,7 +472,7 @@ public class RoleTeamComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnRoleGoUpEnable);
 		TickProcessSystem.Instance.RegisterOnceTickProcess(ETickingGroup.TG_PostUpdateWork, true, new Action<float>(this.NextSpawnGoBattleMaterial));
 		this.ActorComp.KuroMoveAlongFloor(Vector.ZeroVector, 0f, "GoBattle");
-		if (!UiCameraAnimationManager.Instance.IsActivate())
+		if (!UiCameraModel.Instance.IsActivate())
 		{
 			CameraController.Instance.ExitCameraMode(ECustomCameraMode.Widget, 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, "MainCamera", null);
 		}
@@ -494,7 +495,7 @@ public class RoleTeamComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnRoleGoUp);
 	}
 
-	// Token: 0x0601BCD7 RID: 113879 RVA: 0x007ADCD5 File Offset: 0x007ABED5
+	// Token: 0x0601989A RID: 104602 RVA: 0x007D618D File Offset: 0x007D438D
 	private void NextSpawnGoBattleMaterial(float delta)
 	{
 		TimerSystem.Instance.Next(delegate(float _)
@@ -503,7 +504,7 @@ public class RoleTeamComponent : EntityComponent
 		}, null, null);
 	}
 
-	// Token: 0x0601BCD8 RID: 113880 RVA: 0x007ADCF0 File Offset: 0x007ABEF0
+	// Token: 0x0601989B RID: 104603 RVA: 0x007D61A8 File Offset: 0x007D43A8
 	private void SpawnGoBattleMaterial()
 	{
 		if (!base.Entity.Active)
@@ -536,7 +537,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCD9 RID: 113881 RVA: 0x007ADE2C File Offset: 0x007AC02C
+	// Token: 0x0601989C RID: 104604 RVA: 0x007D62E4 File Offset: 0x007D44E4
 	private void GoDown(bool forceGoDown)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -600,7 +601,7 @@ public class RoleTeamComponent : EntityComponent
 		moveComp2.StopAllAddMove();
 	}
 
-	// Token: 0x0601BCDA RID: 113882 RVA: 0x007ADFAC File Offset: 0x007AC1AC
+	// Token: 0x0601989D RID: 104605 RVA: 0x007D6464 File Offset: 0x007D4664
 	private void TryGoDown()
 	{
 		bool flag = this.NotHideTagTask == null && this.IsStiffTagTask == null;
@@ -623,7 +624,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCDB RID: 113883 RVA: 0x007AE04C File Offset: 0x007AC24C
+	// Token: 0x0601989E RID: 104606 RVA: 0x007D6504 File Offset: 0x007D4704
 	public void InterruptDisableWithEffect()
 	{
 		if (this.WaitQuitEffectTimer != null)
@@ -639,7 +640,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCDC RID: 113884 RVA: 0x007AE0A0 File Offset: 0x007AC2A0
+	// Token: 0x0601989F RID: 104607 RVA: 0x007D6558 File Offset: 0x007D4758
 	public void DisableRoleWithEffect()
 	{
 		if (this.WaitQuitEffectTimer != null)
@@ -663,7 +664,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCDD RID: 113885 RVA: 0x007AE164 File Offset: 0x007AC364
+	// Token: 0x060198A0 RID: 104608 RVA: 0x007D661C File Offset: 0x007D481C
 	public void DisableRoleWithoutEffect()
 	{
 		Log.Instance.Info(ELogModule.SceneTeam, ELogAuthor.LYY, "角色下场，立刻隐藏", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -679,7 +680,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCDE RID: 113886 RVA: 0x007AE1D0 File Offset: 0x007AC3D0
+	// Token: 0x060198A1 RID: 104609 RVA: 0x007D6688 File Offset: 0x007D4888
 	private void DisableRole()
 	{
 		int quitEffectHandle = this.QuitEffectHandle;
@@ -704,7 +705,7 @@ public class RoleTeamComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnRoleGoDownFinish);
 	}
 
-	// Token: 0x0601BCDF RID: 113887 RVA: 0x007AE264 File Offset: 0x007AC464
+	// Token: 0x060198A2 RID: 104610 RVA: 0x007D671C File Offset: 0x007D491C
 	private void CommitChangeRoleCoolDown(double coolDown)
 	{
 		double num = coolDown * 1000.0;
@@ -712,7 +713,7 @@ public class RoleTeamComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<double>(base.Entity, EEventName.OnChangeRoleCoolDownChanged, coolDown);
 	}
 
-	// Token: 0x0601BCE0 RID: 113888 RVA: 0x007AE2A6 File Offset: 0x007AC4A6
+	// Token: 0x060198A3 RID: 104611 RVA: 0x007D675E File Offset: 0x007D495E
 	public bool IsChangeRoleCoolDown()
 	{
 		if (this.GetChangeRoleCoolDown() > 0.0)
@@ -723,7 +724,7 @@ public class RoleTeamComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601BCE1 RID: 113889 RVA: 0x007AE2CB File Offset: 0x007AC4CB
+	// Token: 0x060198A4 RID: 104612 RVA: 0x007D6783 File Offset: 0x007D4983
 	public double GetChangeRoleCoolDown()
 	{
 		if (this.ChangeRoleCdEndTime <= 0.0)
@@ -733,7 +734,7 @@ public class RoleTeamComponent : EntityComponent
 		return this.ChangeRoleCdEndTime - Time.Instance.PlayerWorldTime;
 	}
 
-	// Token: 0x0601BCE2 RID: 113890 RVA: 0x007AE2F9 File Offset: 0x007AC4F9
+	// Token: 0x060198A5 RID: 104613 RVA: 0x007D67B1 File Offset: 0x007D49B1
 	public void SetTeamTag(ETeamState state)
 	{
 		this.TeamState = new ETeamState?(state);
@@ -743,7 +744,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCE3 RID: 113891 RVA: 0x007AE31C File Offset: 0x007AC51C
+	// Token: 0x060198A6 RID: 104614 RVA: 0x007D67D4 File Offset: 0x007D49D4
 	private void RefreshTeamTag()
 	{
 		if (this.TeamState == null)
@@ -801,13 +802,13 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCE4 RID: 113892 RVA: 0x007AE54D File Offset: 0x007AC74D
+	// Token: 0x060198A7 RID: 104615 RVA: 0x007D6A05 File Offset: 0x007D4C05
 	public ETeamState? GetTeamState()
 	{
 		return this.TeamState;
 	}
 
-	// Token: 0x0601BCE5 RID: 113893 RVA: 0x007AE558 File Offset: 0x007AC758
+	// Token: 0x060198A8 RID: 104616 RVA: 0x007D6A10 File Offset: 0x007D4C10
 	private void UpdateStealthTag(bool onStageWithoutControl)
 	{
 		if (onStageWithoutControl)
@@ -832,7 +833,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCE6 RID: 113894 RVA: 0x007AE5B2 File Offset: 0x007AC7B2
+	// Token: 0x060198A9 RID: 104617 RVA: 0x007D6A6A File Offset: 0x007D4C6A
 	public void OutOfControl()
 	{
 		this.SetTeamTag(ETeamState.OnStageWithoutControl);
@@ -844,7 +845,7 @@ public class RoleTeamComponent : EntityComponent
 		this.ExecuteOutOfControl();
 	}
 
-	// Token: 0x0601BCE7 RID: 113895 RVA: 0x007AE5D8 File Offset: 0x007AC7D8
+	// Token: 0x060198AA RID: 104618 RVA: 0x007D6A90 File Offset: 0x007D4C90
 	private void ExecuteOutOfControl()
 	{
 		this.SkillComp.StopAllSkills("RoleTeamComponent.OutOfControl");
@@ -873,7 +874,7 @@ public class RoleTeamComponent : EntityComponent
 		moveComp2.StopAllAddMove();
 	}
 
-	// Token: 0x0601BCE8 RID: 113896 RVA: 0x007AE658 File Offset: 0x007AC858
+	// Token: 0x060198AB RID: 104619 RVA: 0x007D6B10 File Offset: 0x007D4D10
 	[NullableContext(1)]
 	public static void OnSimulateChangeRole(EntityHandle lastEntityHandle, EntityHandle newEntityHandle, bool onStageWithoutControl, [Nullable(2)] Vector location = null, [Nullable(2)] Rotator rotation = null)
 	{
@@ -920,7 +921,7 @@ public class RoleTeamComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BCE9 RID: 113897 RVA: 0x007AE7A3 File Offset: 0x007AC9A3
+	// Token: 0x060198AC RID: 104620 RVA: 0x007D6C5B File Offset: 0x007D4E5B
 	public void SimulateGoBattle()
 	{
 		this.InterruptDisableWithEffect();
@@ -928,7 +929,7 @@ public class RoleTeamComponent : EntityComponent
 		base.Entity.EnableByKey(EEntityDisableKey.GoDown, true);
 	}
 
-	// Token: 0x0601BCEA RID: 113898 RVA: 0x007AE7CC File Offset: 0x007AC9CC
+	// Token: 0x060198AD RID: 104621 RVA: 0x007D6C84 File Offset: 0x007D4E84
 	public void SimulateGoDown(bool onStageWithoutControl)
 	{
 		if (!onStageWithoutControl)
@@ -973,7 +974,7 @@ public class RoleTeamComponent : EntityComponent
 		}, 300f, null, null, true, CharacterModel.Instance.InverseSelfCenteredTimeDilation);
 	}
 
-	// Token: 0x0601BCEB RID: 113899 RVA: 0x007AE8B8 File Offset: 0x007ACAB8
+	// Token: 0x060198AE RID: 104622 RVA: 0x007D6D70 File Offset: 0x007D4F70
 	private void SimulateDisableRole()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -985,7 +986,7 @@ public class RoleTeamComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnOtherRoleGoDownFinish);
 	}
 
-	// Token: 0x0601BCEC RID: 113900 RVA: 0x007AE8F4 File Offset: 0x007ACAF4
+	// Token: 0x060198AF RID: 104623 RVA: 0x007D6DAC File Offset: 0x007D4FAC
 	public void ClearMovePlatformAttach()
 	{
 		this.DriveVehicleComp.IsAttachToMoveSceneItem = false;
@@ -1008,7 +1009,7 @@ public class RoleTeamComponent : EntityComponent
 		movementSyncComp.ClearBasePlatform();
 	}
 
-	// Token: 0x0601BCED RID: 113901 RVA: 0x007AE95C File Offset: 0x007ACB5C
+	// Token: 0x060198B0 RID: 104624 RVA: 0x007D6E14 File Offset: 0x007D5014
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -1017,368 +1018,324 @@ public class RoleTeamComponent : EntityComponent
 			return false;
 		}
 		RoleTeamComponent roleTeamComponent = (RoleTeamComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (roleTeamComponent.ActorComp == null)
 		{
-			if (roleTeamComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("BuffComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (roleTeamComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (roleTeamComponent.BuffComponent == null)
 		{
-			if (roleTeamComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.BuffComponent = null;
 		}
-		if (base.CanResetComponentProperty("StateComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
 		{
-			if (roleTeamComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("FloatingComp"))
+		if (roleTeamComponent.TagComponent == null)
 		{
-			if (roleTeamComponent.FloatingComp == null)
-			{
-				this.FloatingComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFloatingComponent>(this.FloatingComp), "FloatingComp"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("InheritComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (roleTeamComponent.InheritComp == null)
-			{
-				this.InheritComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleInheritComponent>(this.InheritComp), "InheritComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SkillComp"))
+		if (roleTeamComponent.StateComp == null)
 		{
-			if (roleTeamComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
+			this.StateComp = null;
 		}
-		if (base.CanResetComponentProperty("QteComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 		{
-			if (roleTeamComponent.QteComp == null)
-			{
-				this.QteComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleQteComponent>(this.QteComp), "QteComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (roleTeamComponent.FloatingComp == null)
 		{
-			if (roleTeamComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.FloatingComp = null;
 		}
-		if (base.CanResetComponentProperty("InputComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FloatingComp), "FloatingComp"))
 		{
-			if (roleTeamComponent.InputComp == null)
-			{
-				this.InputComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.InputComp), "InputComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LockOnComp"))
+		if (roleTeamComponent.InheritComp == null)
 		{
-			if (roleTeamComponent.LockOnComp == null)
-			{
-				this.LockOnComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterLockOnComponent>(this.LockOnComp), "LockOnComp"))
-			{
-				return false;
-			}
+			this.InheritComp = null;
 		}
-		if (base.CanResetComponentProperty("ManipulateComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InheritComp), "InheritComp"))
 		{
-			if (roleTeamComponent.ManipulateComp == null)
-			{
-				this.ManipulateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterManipulateComponent>(this.ManipulateComp), "ManipulateComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ManipulateInteractComp"))
+		if (roleTeamComponent.SkillComp == null)
 		{
-			if (roleTeamComponent.ManipulateInteractComp == null)
-			{
-				this.ManipulateInteractComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterManipulateInteractComponent>(this.ManipulateInteractComp), "ManipulateInteractComp"))
-			{
-				return false;
-			}
+			this.SkillComp = null;
 		}
-		if (base.CanResetComponentProperty("CharacterExploreComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
-			if (roleTeamComponent.CharacterExploreComp == null)
-			{
-				this.CharacterExploreComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterExploreComponent>(this.CharacterExploreComp), "CharacterExploreComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("RoleSceneInteractComp"))
+		if (roleTeamComponent.QteComp == null)
 		{
-			if (roleTeamComponent.RoleSceneInteractComp == null)
-			{
-				this.RoleSceneInteractComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleSceneInteractComponent>(this.RoleSceneInteractComp), "RoleSceneInteractComp"))
-			{
-				return false;
-			}
+			this.QteComp = null;
 		}
-		if (base.CanResetComponentProperty("MovementSyncComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.QteComp), "QteComp"))
 		{
-			if (roleTeamComponent.MovementSyncComp == null)
-			{
-				this.MovementSyncComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMovementSyncComponent>(this.MovementSyncComp), "MovementSyncComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DriveVehicleComp"))
+		if (roleTeamComponent.MoveComp == null)
 		{
-			if (roleTeamComponent.DriveVehicleComp == null)
-			{
-				this.DriveVehicleComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterDriveVehicleComponent>(this.DriveVehicleComp), "DriveVehicleComp"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("GoBattleMaterial"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (roleTeamComponent.GoBattleMaterial == null)
-			{
-				this.GoBattleMaterial = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PD_CharacterControllerDataGroup_C>(this.GoBattleMaterial), "GoBattleMaterial"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("GoDownMaterial"))
+		if (roleTeamComponent.InputComp == null)
 		{
-			if (roleTeamComponent.GoDownMaterial == null)
-			{
-				this.GoDownMaterial = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PD_CharacterControllerData_C>(this.GoDownMaterial), "GoDownMaterial"))
-			{
-				return false;
-			}
+			this.InputComp = null;
 		}
-		if (base.CanResetComponentProperty("ChangeRoleCdEndTime"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
 		{
-			this.ChangeRoleCdEndTime = roleTeamComponent.ChangeRoleCdEndTime;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TeamState"))
+		if (roleTeamComponent.LockOnComp == null)
 		{
-			this.TeamState = roleTeamComponent.TeamState;
+			this.LockOnComp = null;
 		}
-		if (base.CanResetComponentProperty("GoBattleSkill"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LockOnComp), "LockOnComp"))
 		{
-			this.GoBattleSkill = roleTeamComponent.GoBattleSkill;
+			return false;
 		}
-		if (base.CanResetComponentProperty("NotHideTagTask"))
+		if (roleTeamComponent.ManipulateComp == null)
 		{
-			if (roleTeamComponent.NotHideTagTask == null)
-			{
-				this.NotHideTagTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.NotHideTagTask), "NotHideTagTask"))
-			{
-				return false;
-			}
+			this.ManipulateComp = null;
 		}
-		if (base.CanResetComponentProperty("IsStiffTagTask"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateComp), "ManipulateComp"))
 		{
-			if (roleTeamComponent.IsStiffTagTask == null)
-			{
-				this.IsStiffTagTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.IsStiffTagTask), "IsStiffTagTask"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("QuitEffectHandle"))
+		if (roleTeamComponent.ManipulateInteractComp == null)
 		{
-			this.QuitEffectHandle = roleTeamComponent.QuitEffectHandle;
+			this.ManipulateInteractComp = null;
 		}
-		if (base.CanResetComponentProperty("WaitQuitEffectTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ManipulateInteractComp), "ManipulateInteractComp"))
 		{
-			if (roleTeamComponent.WaitQuitEffectTimer == null)
-			{
-				this.WaitQuitEffectTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.WaitQuitEffectTimer), "WaitQuitEffectTimer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("InheritedTransform"))
+		if (roleTeamComponent.CharacterExploreComp == null)
 		{
-			this.InheritedTransform = roleTeamComponent.InheritedTransform;
+			this.CharacterExploreComp = null;
 		}
-		if (base.CanResetComponentProperty("DelayOutOfControl"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterExploreComp), "CharacterExploreComp"))
 		{
-			this.DelayOutOfControl = roleTeamComponent.DelayOutOfControl;
+			return false;
 		}
-		return (!base.CanResetComponentProperty("TempVector") || roleTeamComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector")) && (!base.CanResetComponentProperty("TempRotator") || roleTeamComponent.TempRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator")) && (!base.CanResetComponentProperty("TempQuat") || roleTeamComponent.TempQuat == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat), "TempQuat"));
+		if (roleTeamComponent.RoleSceneInteractComp == null)
+		{
+			this.RoleSceneInteractComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleSceneInteractComp), "RoleSceneInteractComp"))
+		{
+			return false;
+		}
+		if (roleTeamComponent.MovementSyncComp == null)
+		{
+			this.MovementSyncComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementSyncComp), "MovementSyncComp"))
+		{
+			return false;
+		}
+		if (roleTeamComponent.DriveVehicleComp == null)
+		{
+			this.DriveVehicleComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DriveVehicleComp), "DriveVehicleComp"))
+		{
+			return false;
+		}
+		if (roleTeamComponent.GoBattleMaterial == null)
+		{
+			this.GoBattleMaterial = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GoBattleMaterial), "GoBattleMaterial"))
+		{
+			return false;
+		}
+		if (roleTeamComponent.GoDownMaterial == null)
+		{
+			this.GoDownMaterial = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GoDownMaterial), "GoDownMaterial"))
+		{
+			return false;
+		}
+		this.ChangeRoleCdEndTime = roleTeamComponent.ChangeRoleCdEndTime;
+		this.TeamState = roleTeamComponent.TeamState;
+		this.GoBattleSkill = roleTeamComponent.GoBattleSkill;
+		if (roleTeamComponent.NotHideTagTask == null)
+		{
+			this.NotHideTagTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.NotHideTagTask), "NotHideTagTask"))
+		{
+			return false;
+		}
+		if (roleTeamComponent.IsStiffTagTask == null)
+		{
+			this.IsStiffTagTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IsStiffTagTask), "IsStiffTagTask"))
+		{
+			return false;
+		}
+		this.QuitEffectHandle = roleTeamComponent.QuitEffectHandle;
+		if (roleTeamComponent.WaitQuitEffectTimer == null)
+		{
+			this.WaitQuitEffectTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitQuitEffectTimer), "WaitQuitEffectTimer"))
+		{
+			return false;
+		}
+		this.InheritedTransform = roleTeamComponent.InheritedTransform;
+		this.DelayOutOfControl = roleTeamComponent.DelayOutOfControl;
+		return (roleTeamComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector")) && (roleTeamComponent.TempRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator")) && (roleTeamComponent.TempQuat == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat), "TempQuat"));
 	}
 
-	// Token: 0x0400DB34 RID: 56116
+	// Token: 0x170028C5 RID: 10437
+	// (get) Token: 0x060198B1 RID: 104625 RVA: 0x007D7294 File Offset: 0x007D5494
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028C6 RID: 10438
+	// (get) Token: 0x060198B2 RID: 104626 RVA: 0x007D7297 File Offset: 0x007D5497
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028C7 RID: 10439
+	// (get) Token: 0x060198B3 RID: 104627 RVA: 0x007D729A File Offset: 0x007D549A
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028C8 RID: 10440
+	// (get) Token: 0x060198B4 RID: 104628 RVA: 0x007D729D File Offset: 0x007D549D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DFD3 RID: 57299
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400DB35 RID: 56117
+	// Token: 0x0400DFD4 RID: 57300
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400DB36 RID: 56118
+	// Token: 0x0400DFD5 RID: 57301
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DB37 RID: 56119
+	// Token: 0x0400DFD6 RID: 57302
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400DB38 RID: 56120
+	// Token: 0x0400DFD7 RID: 57303
 	private CharacterFloatingComponent FloatingComp;
 
-	// Token: 0x0400DB39 RID: 56121
+	// Token: 0x0400DFD8 RID: 57304
 	private RoleInheritComponent InheritComp;
 
-	// Token: 0x0400DB3A RID: 56122
+	// Token: 0x0400DFD9 RID: 57305
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400DB3B RID: 56123
+	// Token: 0x0400DFDA RID: 57306
 	private RoleQteComponent QteComp;
 
-	// Token: 0x0400DB3C RID: 56124
+	// Token: 0x0400DFDB RID: 57307
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400DB3D RID: 56125
+	// Token: 0x0400DFDC RID: 57308
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400DB3E RID: 56126
+	// Token: 0x0400DFDD RID: 57309
 	private CharacterLockOnComponent LockOnComp;
 
-	// Token: 0x0400DB3F RID: 56127
+	// Token: 0x0400DFDE RID: 57310
 	private CharacterManipulateComponent ManipulateComp;
 
-	// Token: 0x0400DB40 RID: 56128
+	// Token: 0x0400DFDF RID: 57311
 	private CharacterManipulateInteractComponent ManipulateInteractComp;
 
-	// Token: 0x0400DB41 RID: 56129
+	// Token: 0x0400DFE0 RID: 57312
 	private CharacterExploreComponent CharacterExploreComp;
 
-	// Token: 0x0400DB42 RID: 56130
+	// Token: 0x0400DFE1 RID: 57313
 	private RoleSceneInteractComponent RoleSceneInteractComp;
 
-	// Token: 0x0400DB43 RID: 56131
+	// Token: 0x0400DFE2 RID: 57314
 	private CharacterMovementSyncComponent MovementSyncComp;
 
-	// Token: 0x0400DB44 RID: 56132
+	// Token: 0x0400DFE3 RID: 57315
 	private CharacterDriveVehicleComponent DriveVehicleComp;
 
-	// Token: 0x0400DB45 RID: 56133
+	// Token: 0x0400DFE4 RID: 57316
 	private PD_CharacterControllerDataGroup_C GoBattleMaterial;
 
-	// Token: 0x0400DB46 RID: 56134
+	// Token: 0x0400DFE5 RID: 57317
 	private PD_CharacterControllerData_C GoDownMaterial;
 
-	// Token: 0x0400DB47 RID: 56135
+	// Token: 0x0400DFE6 RID: 57318
 	private double ChangeRoleCdEndTime = -1.0;
 
-	// Token: 0x0400DB48 RID: 56136
+	// Token: 0x0400DFE7 RID: 57319
 	private ETeamState? TeamState;
 
-	// Token: 0x0400DB49 RID: 56137
+	// Token: 0x0400DFE8 RID: 57320
 	public bool GoBattleSkill;
 
-	// Token: 0x0400DB4A RID: 56138
+	// Token: 0x0400DFE9 RID: 57321
 	private ITagTask NotHideTagTask;
 
-	// Token: 0x0400DB4B RID: 56139
+	// Token: 0x0400DFEA RID: 57322
 	private ITagTask IsStiffTagTask;
 
-	// Token: 0x0400DB4C RID: 56140
+	// Token: 0x0400DFEB RID: 57323
 	private int QuitEffectHandle;
 
-	// Token: 0x0400DB4D RID: 56141
+	// Token: 0x0400DFEC RID: 57324
 	private TimerHandle WaitQuitEffectTimer;
 
-	// Token: 0x0400DB4E RID: 56142
+	// Token: 0x0400DFED RID: 57325
 	private bool InheritedTransform;
 
-	// Token: 0x0400DB4F RID: 56143
+	// Token: 0x0400DFEE RID: 57326
 	private bool DelayOutOfControl;
 
-	// Token: 0x0400DB50 RID: 56144
+	// Token: 0x0400DFEF RID: 57327
 	[Nullable(1)]
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x0400DB51 RID: 56145
+	// Token: 0x0400DFF0 RID: 57328
 	[Nullable(1)]
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x0400DB52 RID: 56146
+	// Token: 0x0400DFF1 RID: 57329
 	[Nullable(1)]
 	private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 }

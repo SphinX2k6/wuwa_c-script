@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001971 RID: 6513
+	// Token: 0x02000436 RID: 1078
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnMontagePlayCallback : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018340 RID: 99136 RVA: 0x0023AF2A File Offset: 0x0023912A
+		// Token: 0x060068B1 RID: 26801 RVA: 0x00098BFA File Offset: 0x00096DFA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnMontagePlayCallback.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018341 RID: 99137 RVA: 0x0023AF36 File Offset: 0x00239136
+		// Token: 0x060068B2 RID: 26802 RVA: 0x00098C06 File Offset: 0x00096E06
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnMontagePlayCallback._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnMontagePlayCallback._FunctionPtr;
 		}
 
-		// Token: 0x06018342 RID: 99138 RVA: 0x0023AF59 File Offset: 0x00239159
+		// Token: 0x060068B3 RID: 26803 RVA: 0x00098C29 File Offset: 0x00096E29
 		public FOnMontagePlayCallback()
 		{
 		}
 
-		// Token: 0x06018343 RID: 99139 RVA: 0x0023AF61 File Offset: 0x00239161
+		// Token: 0x060068B4 RID: 26804 RVA: 0x00098C31 File Offset: 0x00096E31
 		[NullableContext(2)]
 		public FOnMontagePlayCallback(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018344 RID: 99140 RVA: 0x0023AF6B File Offset: 0x0023916B
+		// Token: 0x060068B5 RID: 26805 RVA: 0x00098C3B File Offset: 0x00096E3B
 		public FOnMontagePlayCallback(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018345 RID: 99141 RVA: 0x0023AF76 File Offset: 0x00239176
+		// Token: 0x060068B6 RID: 26806 RVA: 0x00098C46 File Offset: 0x00096E46
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018346 RID: 99142 RVA: 0x0023AFA8 File Offset: 0x002391A8
+		// Token: 0x060068B7 RID: 26807 RVA: 0x00098C78 File Offset: 0x00096E78
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool> Callback)
 		{
 			if (FOnMontagePlayCallback.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnMontagePlayCallback.RegisterId);
 		}
 
-		// Token: 0x06018347 RID: 99143 RVA: 0x0023AFE2 File Offset: 0x002391E2
+		// Token: 0x060068B8 RID: 26808 RVA: 0x00098CB2 File Offset: 0x00096EB2
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018348 RID: 99144 RVA: 0x0023AFEC File Offset: 0x002391EC
+		// Token: 0x060068B9 RID: 26809 RVA: 0x00098CBC File Offset: 0x00096EBC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bInterrupted)
 		{
 			FOnMontagePlayCallback.__FOnMontagePlayCallback_DelegateParams* ptr = stackalloc FOnMontagePlayCallback.__FOnMontagePlayCallback_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnMontagePlayCallback.__FOnMontagePlayCallback_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06018349 RID: 99145 RVA: 0x0023B028 File Offset: 0x00239228
+		// Token: 0x060068BA RID: 26810 RVA: 0x00098CF8 File Offset: 0x00096EF8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FOnMontagePlayCallback.__FOnMontagePlayCallback_DelegateParams*)__Parameters)->bInterrupted);
 		}
 
-		// Token: 0x0400D1C9 RID: 53705
+		// Token: 0x04002CA1 RID: 11425
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D1CA RID: 53706
+		// Token: 0x04002CA2 RID: 11426
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGAS.OnMontagePlayCallback__DelegateSignature";
 
-		// Token: 0x0400D1CB RID: 53707
+		// Token: 0x04002CA3 RID: 11427
 		private static int RegisterId;
 
-		// Token: 0x02003064 RID: 12388
+		// Token: 0x02000B54 RID: 2900
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnMontagePlayCallback_DelegateParams
+		private ref struct __FOnMontagePlayCallback_DelegateParams
 		{
-			// Token: 0x04016D32 RID: 93490
+			// Token: 0x04005C67 RID: 23655
 			[FieldOffset(0)]
 			public bool bInterrupted;
 		}
 
-		// Token: 0x02003065 RID: 12389
+		// Token: 0x02000B55 RID: 2901
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D33 RID: 93491
+			// Token: 0x04005C68 RID: 23656
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -6,24 +6,24 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200229B RID: 8859
+	// Token: 0x02000751 RID: 1873
 	[UnrealObjectPath("/Script/MediaAssets.MediaSource")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public abstract class UMediaSource : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021B39 RID: 138041 RVA: 0x0031D47C File Offset: 0x0031B67C
+		// Token: 0x0600A3B2 RID: 41906 RVA: 0x000F1AF8 File Offset: 0x000EFCF8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMediaSource._ClassPtr;
 		}
 
-		// Token: 0x06021B3A RID: 138042 RVA: 0x0031D488 File Offset: 0x0031B688
+		// Token: 0x0600A3B3 RID: 41907 RVA: 0x000F1B04 File Offset: 0x000EFD04
 		public bool Validate()
 		{
 			return UMediaSource.__Validate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06021B3B RID: 138043 RVA: 0x0031D498 File Offset: 0x0031B698
+		// Token: 0x0600A3B4 RID: 41908 RVA: 0x000F1B14 File Offset: 0x000EFD14
 		[NullableContext(1)]
 		public unsafe void SetMediaOptionString(in FName Key, string Value)
 		{
@@ -36,7 +36,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021B3C RID: 138044 RVA: 0x0031D4CC File Offset: 0x0031B6CC
+		// Token: 0x0600A3B5 RID: 41909 RVA: 0x000F1B48 File Offset: 0x000EFD48
 		public unsafe void SetMediaOptionInt64(in FName Key, long Value)
 		{
 			fixed (FName* ptr = &Key)
@@ -46,7 +46,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021B3D RID: 138045 RVA: 0x0031D4F0 File Offset: 0x0031B6F0
+		// Token: 0x0600A3B6 RID: 41910 RVA: 0x000F1B6C File Offset: 0x000EFD6C
 		public unsafe void SetMediaOptionFloat(in FName Key, float Value)
 		{
 			fixed (FName* ptr = &Key)
@@ -56,7 +56,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021B3E RID: 138046 RVA: 0x0031D514 File Offset: 0x0031B714
+		// Token: 0x0600A3B7 RID: 41911 RVA: 0x000F1B90 File Offset: 0x000EFD90
 		public unsafe void SetMediaOptionBool(in FName Key, bool Value)
 		{
 			fixed (FName* ptr = &Key)
@@ -66,61 +66,61 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06021B3F RID: 138047 RVA: 0x0031D536 File Offset: 0x0031B736
+		// Token: 0x0600A3B8 RID: 41912 RVA: 0x000F1BB2 File Offset: 0x000EFDB2
 		[NullableContext(1)]
 		public string GetUrl()
 		{
 			return FString.ToStringAndDeleteNativePtr(UMediaSource.__GetUrl_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06021B40 RID: 138048
+		// Token: 0x0600A3B9 RID: 41913
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Validate_Internal(IntPtr @this);
 
-		// Token: 0x06021B41 RID: 138049
+		// Token: 0x0600A3BA RID: 41914
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMediaOptionString_Internal(IntPtr @this, in FName Key, in FString Value);
 
-		// Token: 0x06021B42 RID: 138050
+		// Token: 0x0600A3BB RID: 41915
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMediaOptionInt64_Internal(IntPtr @this, in FName Key, long Value);
 
-		// Token: 0x06021B43 RID: 138051
+		// Token: 0x0600A3BC RID: 41916
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMediaOptionFloat_Internal(IntPtr @this, in FName Key, float Value);
 
-		// Token: 0x06021B44 RID: 138052
+		// Token: 0x0600A3BD RID: 41917
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMediaOptionBool_Internal(IntPtr @this, in FName Key, bool Value);
 
-		// Token: 0x06021B45 RID: 138053
+		// Token: 0x0600A3BE RID: 41918
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetUrl_Internal(IntPtr @this);
 
-		// Token: 0x06021B46 RID: 138054 RVA: 0x0031D548 File Offset: 0x0031B748
+		// Token: 0x0600A3BF RID: 41919 RVA: 0x000F1BC4 File Offset: 0x000EFDC4
 		static UMediaSource()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MediaAssets.MediaSource");
 		}
 
-		// Token: 0x06021B47 RID: 138055 RVA: 0x0031D558 File Offset: 0x0031B758
+		// Token: 0x0600A3C0 RID: 41920 RVA: 0x000F1BD4 File Offset: 0x000EFDD4
 		protected UMediaSource() : this(BuiltinUtils.AllocNativeUObject(UMediaSource.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021B48 RID: 138056 RVA: 0x0031D580 File Offset: 0x0031B780
+		// Token: 0x0600A3C1 RID: 41921 RVA: 0x000F1BFC File Offset: 0x000EFDFC
 		protected UMediaSource(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011FAD RID: 73645
+		// Token: 0x040045DB RID: 17883
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/MediaAssets.MediaSource";
 
-		// Token: 0x04011FAE RID: 73646
+		// Token: 0x040045DC RID: 17884
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011FAF RID: 73647
+		// Token: 0x040045DD RID: 17885
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

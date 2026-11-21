@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A0C RID: 27148
+	// Token: 0x020070BC RID: 28860
 	public class ILiftMoveTypeTeleportT
 	{
-		// Token: 0x1700C96D RID: 51565
-		// (get) Token: 0x0602F81F RID: 194591 RVA: 0x00678172 File Offset: 0x00676372
-		// (set) Token: 0x0602F820 RID: 194592 RVA: 0x0067817A File Offset: 0x0067637A
+		// Token: 0x1700D36D RID: 54125
+		// (get) Token: 0x060321DF RID: 205279 RVA: 0x006C84CA File Offset: 0x006C66CA
+		// (set) Token: 0x060321E0 RID: 205280 RVA: 0x006C84D2 File Offset: 0x006C66D2
 		public ELiftMoveType Type { get; set; }
 
-		// Token: 0x1700C96E RID: 51566
-		// (get) Token: 0x0602F821 RID: 194593 RVA: 0x00678183 File Offset: 0x00676383
-		// (set) Token: 0x0602F822 RID: 194594 RVA: 0x0067818B File Offset: 0x0067638B
+		// Token: 0x1700D36E RID: 54126
+		// (get) Token: 0x060321E1 RID: 205281 RVA: 0x006C84DB File Offset: 0x006C66DB
+		// (set) Token: 0x060321E2 RID: 205282 RVA: 0x006C84E3 File Offset: 0x006C66E3
 		public float StartTeleportOffsetDistance { get; set; }
 
-		// Token: 0x1700C96F RID: 51567
-		// (get) Token: 0x0602F823 RID: 194595 RVA: 0x00678194 File Offset: 0x00676394
-		// (set) Token: 0x0602F824 RID: 194596 RVA: 0x0067819C File Offset: 0x0067639C
+		// Token: 0x1700D36F RID: 54127
+		// (get) Token: 0x060321E3 RID: 205283 RVA: 0x006C84EC File Offset: 0x006C66EC
+		// (set) Token: 0x060321E4 RID: 205284 RVA: 0x006C84F4 File Offset: 0x006C66F4
 		public float EndTeleportOffsetDistance { get; set; }
 
-		// Token: 0x1700C970 RID: 51568
-		// (get) Token: 0x0602F825 RID: 194597 RVA: 0x006781A5 File Offset: 0x006763A5
-		// (set) Token: 0x0602F826 RID: 194598 RVA: 0x006781AD File Offset: 0x006763AD
+		// Token: 0x1700D370 RID: 54128
+		// (get) Token: 0x060321E5 RID: 205285 RVA: 0x006C84FD File Offset: 0x006C66FD
+		// (set) Token: 0x060321E6 RID: 205286 RVA: 0x006C8505 File Offset: 0x006C6705
 		public bool SendTeleportEvent { get; set; }
 
-		// Token: 0x1700C971 RID: 51569
-		// (get) Token: 0x0602F827 RID: 194599 RVA: 0x006781B6 File Offset: 0x006763B6
-		// (set) Token: 0x0602F828 RID: 194600 RVA: 0x006781BE File Offset: 0x006763BE
+		// Token: 0x1700D371 RID: 54129
+		// (get) Token: 0x060321E7 RID: 205287 RVA: 0x006C850E File Offset: 0x006C670E
+		// (set) Token: 0x060321E8 RID: 205288 RVA: 0x006C8516 File Offset: 0x006C6716
 		public float TeleportStartEventOffsetDistance { get; set; }
 
-		// Token: 0x0602F829 RID: 194601 RVA: 0x006781C7 File Offset: 0x006763C7
+		// Token: 0x060321E9 RID: 205289 RVA: 0x006C851F File Offset: 0x006C671F
 		public ILiftMoveTypeTeleportT()
 		{
 			this.Type = ELiftMoveType.Default;

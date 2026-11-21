@@ -5,7 +5,7 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using UnrealEngine;
 
-// Token: 0x02002DD8 RID: 11736
+// Token: 0x02002332 RID: 9010
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,13 +15,13 @@ using UnrealEngine;
 })]
 public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, object>
 {
-	// Token: 0x06018A3E RID: 100926 RVA: 0x0064E782 File Offset: 0x0064C982
+	// Token: 0x060162E6 RID: 90854 RVA: 0x0067456E File Offset: 0x0067276E
 	public BulletLogicShowMesh(LogicDataShowMesh bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A3F RID: 100927 RVA: 0x0064E7A0 File Offset: 0x0064C9A0
+	// Token: 0x060162E7 RID: 90855 RVA: 0x0067458C File Offset: 0x0067278C
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -42,7 +42,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		this.InitMaterialEffect();
 	}
 
-	// Token: 0x06018A40 RID: 100928 RVA: 0x0064E824 File Offset: 0x0064CA24
+	// Token: 0x060162E8 RID: 90856 RVA: 0x00674610 File Offset: 0x00672810
 	public override void OnBulletDestroy()
 	{
 		BulletInfo bulletInfo = this.Bullet.GetBulletInfo();
@@ -65,7 +65,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		this.WeaponPoseComponent.Clear();
 	}
 
-	// Token: 0x06018A41 RID: 100929 RVA: 0x0064E8D0 File Offset: 0x0064CAD0
+	// Token: 0x060162E9 RID: 90857 RVA: 0x006746BC File Offset: 0x006728BC
 	private bool SpawnGhostMesh()
 	{
 		if (this.BulletInfo.Target == null)
@@ -90,7 +90,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		return false;
 	}
 
-	// Token: 0x06018A42 RID: 100930 RVA: 0x0064E9BB File Offset: 0x0064CBBB
+	// Token: 0x060162EA RID: 90858 RVA: 0x006747A7 File Offset: 0x006729A7
 	[return: Nullable(2)]
 	private UPoseableMeshComponent GetPoseComponent(USkeletalMeshComponent mesh)
 	{
@@ -103,7 +103,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		return uposeableMeshComponent;
 	}
 
-	// Token: 0x06018A43 RID: 100931 RVA: 0x0064E9EC File Offset: 0x0064CBEC
+	// Token: 0x060162EB RID: 90859 RVA: 0x006747D8 File Offset: 0x006729D8
 	private void InitRenderingComponent()
 	{
 		if (this.CharRenderingComponent == null)
@@ -119,7 +119,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		this.CharRenderingComponent.AddComponentByCase(ECharacterControllerCaseType.BodyCase0, this.PoseComponent);
 	}
 
-	// Token: 0x06018A44 RID: 100932 RVA: 0x0064EA80 File Offset: 0x0064CC80
+	// Token: 0x060162EC RID: 90860 RVA: 0x0067486C File Offset: 0x00672A6C
 	private void SetupWeapon()
 	{
 		Entity target = this.Bullet.GetBulletInfo().Target;
@@ -165,7 +165,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		}
 	}
 
-	// Token: 0x06018A45 RID: 100933 RVA: 0x0064EBD8 File Offset: 0x0064CDD8
+	// Token: 0x060162ED RID: 90861 RVA: 0x006749C4 File Offset: 0x00672BC4
 	private void InitMaterialEffect()
 	{
 		BulletLogicShowMesh.<>c__DisplayClass13_0 CS$<>8__locals1 = new BulletLogicShowMesh.<>c__DisplayClass13_0();
@@ -192,7 +192,7 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		}
 	}
 
-	// Token: 0x06018A46 RID: 100934 RVA: 0x0064EC50 File Offset: 0x0064CE50
+	// Token: 0x060162EE RID: 90862 RVA: 0x00674A3C File Offset: 0x00672C3C
 	private void HangSingleWeapon(UMeshComponent mesh, FName socketName, FVectorDouble scale)
 	{
 		FTransformDouble ftransformDouble = new FTransformDouble();
@@ -202,24 +202,24 @@ public class BulletLogicShowMesh : BulletLogicController<LogicDataShowMesh, obje
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref fhitResult, true);
 	}
 
-	// Token: 0x0400B78A RID: 46986
+	// Token: 0x0400BB05 RID: 47877
 	private const int MIN_LOD = 99;
 
-	// Token: 0x0400B78B RID: 46987
+	// Token: 0x0400BB06 RID: 47878
 	private readonly LogicDataShowMesh Parameter;
 
-	// Token: 0x0400B78C RID: 46988
+	// Token: 0x0400BB07 RID: 47879
 	[Nullable(2)]
 	private CharRenderingComponent CharRenderingComponent;
 
-	// Token: 0x0400B78D RID: 46989
+	// Token: 0x0400BB08 RID: 47880
 	[Nullable(2)]
 	private UPoseableMeshComponent PoseComponent;
 
-	// Token: 0x0400B78E RID: 46990
+	// Token: 0x0400BB09 RID: 47881
 	[Nullable(2)]
 	private BulletInfo BulletInfo;
 
-	// Token: 0x0400B78F RID: 46991
+	// Token: 0x0400BB0A RID: 47882
 	private readonly List<UPoseableMeshComponent> WeaponPoseComponent = new List<UPoseableMeshComponent>();
 }

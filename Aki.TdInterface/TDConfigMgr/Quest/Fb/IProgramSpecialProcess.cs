@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013D0 RID: 5072
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001527 RID: 5415
 	public class IProgramSpecialProcess : IQuestCondition
 	{
-		// Token: 0x060073C7 RID: 29639 RVA: 0x00115A25 File Offset: 0x00113C25
-		[NullableContext(1)]
+		// Token: 0x06007A88 RID: 31368 RVA: 0x00124409 File Offset: 0x00122609
 		public static IProgramSpecialProcess Create(IProgramSpecialProcess? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025FA RID: 9722
-		// (get) Token: 0x060073C8 RID: 29640 RVA: 0x00115A44 File Offset: 0x00113C44
+		// Token: 0x170027DC RID: 10204
+		// (get) Token: 0x06007A89 RID: 31369 RVA: 0x00124428 File Offset: 0x00122628
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025FB RID: 9723
-		// (get) Token: 0x060073C9 RID: 29641 RVA: 0x00115A51 File Offset: 0x00113C51
+		// Token: 0x170027DD RID: 10205
+		// (get) Token: 0x06007A8A RID: 31370 RVA: 0x00124435 File Offset: 0x00122635
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025FC RID: 9724
-		// (get) Token: 0x060073CA RID: 29642 RVA: 0x00115A85 File Offset: 0x00113C85
-		[Nullable(1)]
+		// Token: 0x170027DE RID: 10206
+		// (get) Token: 0x06007A8B RID: 31371 RVA: 0x00124469 File Offset: 0x00122669
 		public virtual ILowMemorySceneSwitch SpecialProcess
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._SpecialProcessInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004306 RID: 17158
+		// Token: 0x04004697 RID: 18071
 		private IProgramSpecialProcess Instance;
 
-		// Token: 0x04004307 RID: 17159
+		// Token: 0x04004698 RID: 18072
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004308 RID: 17160
+		// Token: 0x04004699 RID: 18073
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004309 RID: 17161
+		// Token: 0x0400469A RID: 18074
+		[Nullable(2)]
 		private ILowMemorySceneSwitch _SpecialProcessCache;
 
-		// Token: 0x0400430A RID: 17162
+		// Token: 0x0400469B RID: 18075
 		private bool _SpecialProcessInited;
 	}
 }

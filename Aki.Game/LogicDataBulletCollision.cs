@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF3 RID: 11763
+// Token: 0x0200234E RID: 9038
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataBulletCollision.LogicDataBulletCollision_C")]
 public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021C7 RID: 8647
-	// (get) Token: 0x06018B33 RID: 101171 RVA: 0x00657CF8 File Offset: 0x00655EF8
-	// (set) Token: 0x06018B34 RID: 101172 RVA: 0x00657D08 File Offset: 0x00655F08
+	// Token: 0x1700222B RID: 8747
+	// (get) Token: 0x060163E8 RID: 91112 RVA: 0x0067DD7C File Offset: 0x0067BF7C
+	// (set) Token: 0x060163E9 RID: 91113 RVA: 0x0067DD8C File Offset: 0x0067BF8C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int DestroyType
 	{
@@ -30,9 +30,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021C8 RID: 8648
-	// (get) Token: 0x06018B35 RID: 101173 RVA: 0x00657D19 File Offset: 0x00655F19
-	// (set) Token: 0x06018B36 RID: 101174 RVA: 0x00657D29 File Offset: 0x00655F29
+	// Token: 0x1700222C RID: 8748
+	// (get) Token: 0x060163EA RID: 91114 RVA: 0x0067DD9D File Offset: 0x0067BF9D
+	// (set) Token: 0x060163EB RID: 91115 RVA: 0x0067DDAD File Offset: 0x0067BFAD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int BulletPosition
 	{
@@ -46,9 +46,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021C9 RID: 8649
-	// (get) Token: 0x06018B37 RID: 101175 RVA: 0x00657D3C File Offset: 0x00655F3C
-	// (set) Token: 0x06018B38 RID: 101176 RVA: 0x00657D75 File Offset: 0x00655F75
+	// Token: 0x1700222D RID: 8749
+	// (get) Token: 0x060163EC RID: 91116 RVA: 0x0067DDC0 File Offset: 0x0067BFC0
+	// (set) Token: 0x060163ED RID: 91117 RVA: 0x0067DDF9 File Offset: 0x0067BFF9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> BulletRowName
 	{
@@ -68,9 +68,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021CA RID: 8650
-	// (get) Token: 0x06018B39 RID: 101177 RVA: 0x00657D84 File Offset: 0x00655F84
-	// (set) Token: 0x06018B3A RID: 101178 RVA: 0x00657DBD File Offset: 0x00655FBD
+	// Token: 0x1700222E RID: 8750
+	// (get) Token: 0x060163EE RID: 91118 RVA: 0x0067DE08 File Offset: 0x0067C008
+	// (set) Token: 0x060163EF RID: 91119 RVA: 0x0067DE41 File Offset: 0x0067C041
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> EffectCollision
 	{
@@ -90,9 +90,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021CB RID: 8651
-	// (get) Token: 0x06018B3B RID: 101179 RVA: 0x00657DE2 File Offset: 0x00655FE2
-	// (set) Token: 0x06018B3C RID: 101180 RVA: 0x00657DF6 File Offset: 0x00655FF6
+	// Token: 0x1700222F RID: 8751
+	// (get) Token: 0x060163F0 RID: 91120 RVA: 0x0067DE66 File Offset: 0x0067C066
+	// (set) Token: 0x060163F1 RID: 91121 RVA: 0x0067DE7A File Offset: 0x0067C07A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector PositionOffset
 	{
@@ -106,9 +106,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021CC RID: 8652
-	// (get) Token: 0x06018B3D RID: 101181 RVA: 0x00657E0B File Offset: 0x0065600B
-	// (set) Token: 0x06018B3E RID: 101182 RVA: 0x00657E1F File Offset: 0x0065601F
+	// Token: 0x17002230 RID: 8752
+	// (get) Token: 0x060163F2 RID: 91122 RVA: 0x0067DE8F File Offset: 0x0067C08F
+	// (set) Token: 0x060163F3 RID: 91123 RVA: 0x0067DEA3 File Offset: 0x0067C0A3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FRotator RotationOffset
 	{
@@ -122,9 +122,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021CD RID: 8653
-	// (get) Token: 0x06018B3F RID: 101183 RVA: 0x00657E34 File Offset: 0x00656034
-	// (set) Token: 0x06018B40 RID: 101184 RVA: 0x00657E6D File Offset: 0x0065606D
+	// Token: 0x17002231 RID: 8753
+	// (get) Token: 0x060163F4 RID: 91124 RVA: 0x0067DEB8 File Offset: 0x0067C0B8
+	// (set) Token: 0x060163F5 RID: 91125 RVA: 0x0067DEF1 File Offset: 0x0067C0F1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftClassPtr<UCameraShakeBase> ScreenShake
 	{
@@ -144,9 +144,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021CE RID: 8654
-	// (get) Token: 0x06018B41 RID: 101185 RVA: 0x00657E94 File Offset: 0x00656094
-	// (set) Token: 0x06018B42 RID: 101186 RVA: 0x00657ECD File Offset: 0x006560CD
+	// Token: 0x17002232 RID: 8754
+	// (get) Token: 0x060163F6 RID: 91126 RVA: 0x0067DF18 File Offset: 0x0067C118
+	// (set) Token: 0x060163F7 RID: 91127 RVA: 0x0067DF51 File Offset: 0x0067C151
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SCounterAttackCamera CameraModified
 	{
@@ -166,9 +166,9 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x170021CF RID: 8655
-	// (get) Token: 0x06018B43 RID: 101187 RVA: 0x00657EF8 File Offset: 0x006560F8
-	// (set) Token: 0x06018B44 RID: 101188 RVA: 0x00657F31 File Offset: 0x00656131
+	// Token: 0x17002233 RID: 8755
+	// (get) Token: 0x060163F8 RID: 91128 RVA: 0x0067DF7C File Offset: 0x0067C17C
+	// (set) Token: 0x060163F9 RID: 91129 RVA: 0x0067DFB5 File Offset: 0x0067C1B5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> TriggerBulletIds
 	{
@@ -188,7 +188,7 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x06018B45 RID: 101189 RVA: 0x00657F3F File Offset: 0x0065613F
+	// Token: 0x060163FA RID: 91130 RVA: 0x0067DFC3 File Offset: 0x0067C1C3
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataBulletCollision._ClassPtr == IntPtr.Zero)
@@ -198,40 +198,40 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 		return LogicDataBulletCollision._ClassPtr;
 	}
 
-	// Token: 0x06018B46 RID: 101190 RVA: 0x00657F64 File Offset: 0x00656164
+	// Token: 0x060163FB RID: 91131 RVA: 0x0067DFE8 File Offset: 0x0067C1E8
 	public LogicDataBulletCollision() : this(BuiltinUtils.AllocNativeUObject(LogicDataBulletCollision.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018B47 RID: 101191 RVA: 0x00657F8C File Offset: 0x0065618C
+	// Token: 0x060163FC RID: 91132 RVA: 0x0067E010 File Offset: 0x0067C210
 	public LogicDataBulletCollision(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataBulletCollision.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018B48 RID: 101192 RVA: 0x00657FBF File Offset: 0x006561BF
+	// Token: 0x060163FD RID: 91133 RVA: 0x0067E043 File Offset: 0x0067C243
 	protected LogicDataBulletCollision(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B830 RID: 47152
+	// Token: 0x0400BBB6 RID: 48054
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataBulletCollision.LogicDataBulletCollision_C";
 
-	// Token: 0x0400B831 RID: 47153
+	// Token: 0x0400BBB7 RID: 48055
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B832 RID: 47154
+	// Token: 0x0400BBB8 RID: 48056
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B833 RID: 47155
+	// Token: 0x0400BBB9 RID: 48057
 	private static int __PropertyOffset_DestroyType;
 
-	// Token: 0x0400B834 RID: 47156
+	// Token: 0x0400BBBA RID: 48058
 	private static int __PropertyOffset_BulletPosition;
 
-	// Token: 0x0400B835 RID: 47157
+	// Token: 0x0400BBBB RID: 48059
 	private static int __PropertyOffset_BulletRowName;
 
-	// Token: 0x0400B836 RID: 47158
+	// Token: 0x0400BBBC RID: 48060
 	[Nullable(new byte[]
 	{
 		2,
@@ -239,10 +239,10 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 	})]
 	private TArray<string> _BulletRowName;
 
-	// Token: 0x0400B837 RID: 47159
+	// Token: 0x0400BBBD RID: 48061
 	private static int __PropertyOffset_EffectCollision;
 
-	// Token: 0x0400B838 RID: 47160
+	// Token: 0x0400BBBE RID: 48062
 	[Nullable(new byte[]
 	{
 		2,
@@ -250,16 +250,16 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _EffectCollision;
 
-	// Token: 0x0400B839 RID: 47161
+	// Token: 0x0400BBBF RID: 48063
 	private static int __PropertyOffset_PositionOffset;
 
-	// Token: 0x0400B83A RID: 47162
+	// Token: 0x0400BBC0 RID: 48064
 	private static int __PropertyOffset_RotationOffset;
 
-	// Token: 0x0400B83B RID: 47163
+	// Token: 0x0400BBC1 RID: 48065
 	private static int __PropertyOffset_ScreenShake;
 
-	// Token: 0x0400B83C RID: 47164
+	// Token: 0x0400BBC2 RID: 48066
 	[Nullable(new byte[]
 	{
 		2,
@@ -267,17 +267,17 @@ public class LogicDataBulletCollision : LogicDataBase, IUnrealUObject, IUnrealOb
 	})]
 	private TSoftClassPtr<UCameraShakeBase> _ScreenShake;
 
-	// Token: 0x0400B83D RID: 47165
+	// Token: 0x0400BBC3 RID: 48067
 	private static int __PropertyOffset_CameraModified;
 
-	// Token: 0x0400B83E RID: 47166
+	// Token: 0x0400BBC4 RID: 48068
 	[Nullable(2)]
 	private SCounterAttackCamera _CameraModified;
 
-	// Token: 0x0400B83F RID: 47167
+	// Token: 0x0400BBC5 RID: 48069
 	private static int __PropertyOffset_TriggerBulletIds;
 
-	// Token: 0x0400B840 RID: 47168
+	// Token: 0x0400BBC6 RID: 48070
 	[Nullable(new byte[]
 	{
 		2,

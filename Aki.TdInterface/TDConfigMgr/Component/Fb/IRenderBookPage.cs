@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D6B RID: 3435
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E65 RID: 3685
 	public class IRenderBookPage : IRenderSpecifiedRangeType
 	{
-		// Token: 0x06004E2C RID: 20012 RVA: 0x000C210F File Offset: 0x000C030F
+		// Token: 0x06005348 RID: 21320 RVA: 0x000CD853 File Offset: 0x000CBA53
 		public static IRenderBookPage Create(IRenderBookPage? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001913 RID: 6419
-		// (get) Token: 0x06004E2D RID: 20013 RVA: 0x000C212E File Offset: 0x000C032E
+		// Token: 0x17001A79 RID: 6777
+		// (get) Token: 0x06005349 RID: 21321 RVA: 0x000CD872 File Offset: 0x000CBA72
 		public override ERenderSpecifiedRangeType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001914 RID: 6420
-		// (get) Token: 0x06004E2E RID: 20014 RVA: 0x000C213B File Offset: 0x000C033B
+		// Token: 0x17001A7A RID: 6778
+		// (get) Token: 0x0600534A RID: 21322 RVA: 0x000CD87F File Offset: 0x000CBA7F
 		public virtual int Radius
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001915 RID: 6421
-		// (get) Token: 0x06004E2F RID: 20015 RVA: 0x000C2148 File Offset: 0x000C0348
+		// Token: 0x17001A7B RID: 6779
+		// (get) Token: 0x0600534B RID: 21323 RVA: 0x000CD88C File Offset: 0x000CBA8C
 		public virtual ITargetEntityType CenterTarget
 		{
 			get
@@ -59,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001916 RID: 6422
-		// (get) Token: 0x06004E30 RID: 20016 RVA: 0x000C2177 File Offset: 0x000C0377
+		// Token: 0x17001A7C RID: 6780
+		// (get) Token: 0x0600534C RID: 21324 RVA: 0x000CD8BB File Offset: 0x000CBABB
 		public virtual string AkEvent
 		{
 			get
@@ -69,13 +66,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CCC RID: 11468
+		// Token: 0x04002F8C RID: 12172
 		private IRenderBookPage Instance;
 
-		// Token: 0x04002CCD RID: 11469
+		// Token: 0x04002F8D RID: 12173
 		private ITargetEntityType _CenterTargetCache;
 
-		// Token: 0x04002CCE RID: 11470
+		// Token: 0x04002F8E RID: 12174
 		private bool _CenterTargetInited;
 	}
 }

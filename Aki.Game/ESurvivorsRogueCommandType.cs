@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002AE2 RID: 10978
+// Token: 0x0200205E RID: 8286
 public enum ESurvivorsRogueCommandType
 {
-	// Token: 0x0400A9B3 RID: 43443
+	// Token: 0x0400ADB9 RID: 44473
 	RewardGot,
-	// Token: 0x0400A9B4 RID: 43444
+	// Token: 0x0400ADBA RID: 44474
 	RewardSelect,
-	// Token: 0x0400A9B5 RID: 43445
+	// Token: 0x0400ADBB RID: 44475
 	WeaponSelect,
-	// Token: 0x0400A9B6 RID: 43446
+	// Token: 0x0400ADBC RID: 44476
 	Shop,
-	// Token: 0x0400A9B7 RID: 43447
+	// Token: 0x0400ADBD RID: 44477
 	Evolve,
-	// Token: 0x0400A9B8 RID: 43448
+	// Token: 0x0400ADBE RID: 44478
 	ResultSettle,
-	// Token: 0x0400A9B9 RID: 43449
+	// Token: 0x0400ADBF RID: 44479
 	AdditionRewardGot
 }

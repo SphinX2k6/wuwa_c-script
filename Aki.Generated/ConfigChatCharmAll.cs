@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000149 RID: 329
+	// Token: 0x02000158 RID: 344
 	public class ConfigChatCharmAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060007B7 RID: 1975 RVA: 0x000854E0 File Offset: 0x000836E0
+		// Token: 0x06000811 RID: 2065 RVA: 0x0008AE44 File Offset: 0x00089044
 		static ConfigChatCharmAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChatCharmAll.CreateStaticDefaultValue), new Action(ConfigChatCharmAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060007B8 RID: 1976 RVA: 0x00085500 File Offset: 0x00083700
+		// Token: 0x06000812 RID: 2066 RVA: 0x0008AE64 File Offset: 0x00089064
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChatCharmAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060007B9 RID: 1977 RVA: 0x0008557F File Offset: 0x0008377F
+		// Token: 0x06000813 RID: 2067 RVA: 0x0008AEE3 File Offset: 0x000890E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChatCharmAll.LogPair = null;
 			ConfigChatCharmAll.HandleId = 0;
 		}
 
-		// Token: 0x060007BA RID: 1978 RVA: 0x0008558D File Offset: 0x0008378D
+		// Token: 0x06000814 RID: 2068 RVA: 0x0008AEF1 File Offset: 0x000890F1
 		public static void Init()
 		{
 			ConfigChatCharmAll.HandleId = ConfigCommon.InitDataStatement(ConfigChatCharmAll.HandleId, "db_phonemsg.db", "select BinData from `ChatCharm`");
 		}
 
-		// Token: 0x060007BB RID: 1979 RVA: 0x000855A8 File Offset: 0x000837A8
+		// Token: 0x06000815 RID: 2069 RVA: 0x0008AF0C File Offset: 0x0008910C
 		[NullableContext(2)]
 		public static IReadOnlyList<ChatCharm> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040008E3 RID: 2275
+		// Token: 0x0400094C RID: 2380
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x040008E4 RID: 2276
+		// Token: 0x0400094D RID: 2381
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x040008E5 RID: 2277
+		// Token: 0x0400094E RID: 2382
 		private const string TABLE = "ChatCharm";
 
-		// Token: 0x040008E6 RID: 2278
+		// Token: 0x0400094F RID: 2383
 		private const string COMMAND = "select BinData from `ChatCharm`";
 
-		// Token: 0x040008E7 RID: 2279
+		// Token: 0x04000950 RID: 2384
 		private const string KEY_PREFIX = "ChatCharmAll";
 
-		// Token: 0x040008E8 RID: 2280
+		// Token: 0x04000951 RID: 2385
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040008E9 RID: 2281
+		// Token: 0x04000952 RID: 2386
 		private static int HandleId;
 	}
 }

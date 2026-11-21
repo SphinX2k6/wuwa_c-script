@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076B3 RID: 30387
+	// Token: 0x02007EBE RID: 32446
 	public enum TEnableFunctionRestriction : byte
 	{
-		// Token: 0x040126F8 RID: 75512
+		// Token: 0x04013741 RID: 79681
 		NONE,
-		// Token: 0x040126F9 RID: 75513
+		// Token: 0x04013742 RID: 79682
 		IInteractiveItemsFunction,
-		// Token: 0x040126FA RID: 75514
+		// Token: 0x04013743 RID: 79683
 		IMotorRadioUiFunction,
-		// Token: 0x040126FB RID: 75515
+		// Token: 0x04013744 RID: 79684
 		ITeleportDungeonFunction
 	}
 }

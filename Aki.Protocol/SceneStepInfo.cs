@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200118B RID: 4491
+	// Token: 0x020011C5 RID: 4549
 	public sealed class SceneStepInfo : IMessage<SceneStepInfo>, IMessage, IEquatable<SceneStepInfo>, IDeepCloneable<SceneStepInfo>, IBufferMessage
 	{
-		// Token: 0x06017EFF RID: 98047 RVA: 0x00379F35 File Offset: 0x00378135
+		// Token: 0x060184A0 RID: 99488 RVA: 0x00389279 File Offset: 0x00387479
 		[NullableContext(1)]
 		public static SceneStepInfo Create()
 		{
 			return new SceneStepInfo();
 		}
 
-		// Token: 0x1700506D RID: 20589
-		// (get) Token: 0x06017F00 RID: 98048 RVA: 0x00379F3C File Offset: 0x0037813C
+		// Token: 0x170051D9 RID: 20953
+		// (get) Token: 0x060184A1 RID: 99489 RVA: 0x00389280 File Offset: 0x00387480
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SceneStepInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700506E RID: 20590
-		// (get) Token: 0x06017F01 RID: 98049 RVA: 0x00379F43 File Offset: 0x00378143
+		// Token: 0x170051DA RID: 20954
+		// (get) Token: 0x060184A2 RID: 99490 RVA: 0x00389287 File Offset: 0x00387487
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700506F RID: 20591
-		// (get) Token: 0x06017F02 RID: 98050 RVA: 0x00379F46 File Offset: 0x00378146
+		// Token: 0x170051DB RID: 20955
+		// (get) Token: 0x060184A3 RID: 99491 RVA: 0x0038928A File Offset: 0x0038748A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017F03 RID: 98051 RVA: 0x00379F4D File Offset: 0x0037814D
+		// Token: 0x060184A4 RID: 99492 RVA: 0x00389291 File Offset: 0x00387491
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepInfo()
 		{
 		}
 
-		// Token: 0x06017F04 RID: 98052 RVA: 0x00379F6C File Offset: 0x0037816C
+		// Token: 0x060184A5 RID: 99493 RVA: 0x003892B0 File Offset: 0x003874B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepInfo(SceneStepInfo other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017F05 RID: 98053 RVA: 0x00379FCA File Offset: 0x003781CA
+		// Token: 0x060184A6 RID: 99494 RVA: 0x0038930E File Offset: 0x0038750E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepInfo Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new SceneStepInfo(this);
 		}
 
-		// Token: 0x17005070 RID: 20592
-		// (get) Token: 0x06017F06 RID: 98054 RVA: 0x00379FD2 File Offset: 0x003781D2
-		// (set) Token: 0x06017F07 RID: 98055 RVA: 0x00379FDA File Offset: 0x003781DA
+		// Token: 0x170051DC RID: 20956
+		// (get) Token: 0x060184A7 RID: 99495 RVA: 0x00389316 File Offset: 0x00387516
+		// (set) Token: 0x060184A8 RID: 99496 RVA: 0x0038931E File Offset: 0x0038751E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int StepId
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005071 RID: 20593
-		// (get) Token: 0x06017F08 RID: 98056 RVA: 0x00379FE3 File Offset: 0x003781E3
-		// (set) Token: 0x06017F09 RID: 98057 RVA: 0x00379FEB File Offset: 0x003781EB
+		// Token: 0x170051DD RID: 20957
+		// (get) Token: 0x060184A9 RID: 99497 RVA: 0x00389327 File Offset: 0x00387527
+		// (set) Token: 0x060184AA RID: 99498 RVA: 0x0038932F File Offset: 0x0038752F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneStepStatus Status
@@ -115,8 +115,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005072 RID: 20594
-		// (get) Token: 0x06017F0A RID: 98058 RVA: 0x00379FF4 File Offset: 0x003781F4
+		// Token: 0x170051DE RID: 20958
+		// (get) Token: 0x060184AB RID: 99499 RVA: 0x00389338 File Offset: 0x00387538
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SceneStepConditionProgress> Progress
@@ -127,8 +127,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005073 RID: 20595
-		// (get) Token: 0x06017F0B RID: 98059 RVA: 0x00379FFC File Offset: 0x003781FC
+		// Token: 0x170051DF RID: 20959
+		// (get) Token: 0x060184AC RID: 99500 RVA: 0x00389340 File Offset: 0x00387540
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SceneStepPlayerProgress> MultiPlayerProgress
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017F0C RID: 98060 RVA: 0x0037A004 File Offset: 0x00378204
+		// Token: 0x060184AD RID: 99501 RVA: 0x00389348 File Offset: 0x00387548
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneStepInfo);
 		}
 
-		// Token: 0x06017F0D RID: 98061 RVA: 0x0037A014 File Offset: 0x00378214
+		// Token: 0x060184AE RID: 99502 RVA: 0x00389358 File Offset: 0x00387558
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneStepInfo other)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.StepId == other.StepId && this.Status == other.Status && this.progress_.Equals(other.progress_) && this.multiPlayerProgress_.Equals(other.multiPlayerProgress_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06017F0E RID: 98062 RVA: 0x0037A088 File Offset: 0x00378288
+		// Token: 0x060184AF RID: 99503 RVA: 0x003893CC File Offset: 0x003875CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017F0F RID: 98063 RVA: 0x0037A102 File Offset: 0x00378302
+		// Token: 0x060184B0 RID: 99504 RVA: 0x00389446 File Offset: 0x00387646
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017F10 RID: 98064 RVA: 0x0037A10F File Offset: 0x0037830F
+		// Token: 0x060184B1 RID: 99505 RVA: 0x00389453 File Offset: 0x00387653
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017F11 RID: 98065 RVA: 0x0037A118 File Offset: 0x00378318
+		// Token: 0x060184B2 RID: 99506 RVA: 0x0038945C File Offset: 0x0038765C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -217,7 +217,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017F12 RID: 98066 RVA: 0x0037A194 File Offset: 0x00378394
+		// Token: 0x060184B3 RID: 99507 RVA: 0x003894D8 File Offset: 0x003876D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017F13 RID: 98067 RVA: 0x0037A210 File Offset: 0x00378410
+		// Token: 0x060184B4 RID: 99508 RVA: 0x00389554 File Offset: 0x00387754
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneStepInfo other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017F14 RID: 98068 RVA: 0x0037A282 File Offset: 0x00378482
+		// Token: 0x060184B5 RID: 99509 RVA: 0x003895C6 File Offset: 0x003877C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017F15 RID: 98069 RVA: 0x0037A28C File Offset: 0x0037848C
+		// Token: 0x060184B6 RID: 99510 RVA: 0x003895D0 File Offset: 0x003877D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -312,40 +312,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008DCD RID: 36301
+		// Token: 0x04009060 RID: 36960
 		private static readonly MessageParser<SceneStepInfo> _parser = new MessageParser<SceneStepInfo>(() => new SceneStepInfo());
 
-		// Token: 0x04008DCE RID: 36302
+		// Token: 0x04009061 RID: 36961
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008DCF RID: 36303
+		// Token: 0x04009062 RID: 36962
 		public const int StepIdFieldNumber = 1;
 
-		// Token: 0x04008DD0 RID: 36304
+		// Token: 0x04009063 RID: 36963
 		private int stepId_;
 
-		// Token: 0x04008DD1 RID: 36305
+		// Token: 0x04009064 RID: 36964
 		public const int StatusFieldNumber = 2;
 
-		// Token: 0x04008DD2 RID: 36306
+		// Token: 0x04009065 RID: 36965
 		private SceneStepStatus status_;
 
-		// Token: 0x04008DD3 RID: 36307
+		// Token: 0x04009066 RID: 36966
 		public const int ProgressFieldNumber = 3;
 
-		// Token: 0x04008DD4 RID: 36308
+		// Token: 0x04009067 RID: 36967
 		private static readonly FieldCodec<SceneStepConditionProgress> _repeated_progress_codec = FieldCodec.ForMessage<SceneStepConditionProgress>(26U, SceneStepConditionProgress.Parser);
 
-		// Token: 0x04008DD5 RID: 36309
+		// Token: 0x04009068 RID: 36968
 		private readonly RepeatedField<SceneStepConditionProgress> progress_ = new RepeatedField<SceneStepConditionProgress>();
 
-		// Token: 0x04008DD6 RID: 36310
+		// Token: 0x04009069 RID: 36969
 		public const int MultiPlayerProgressFieldNumber = 4;
 
-		// Token: 0x04008DD7 RID: 36311
+		// Token: 0x0400906A RID: 36970
 		private static readonly FieldCodec<SceneStepPlayerProgress> _repeated_multiPlayerProgress_codec = FieldCodec.ForMessage<SceneStepPlayerProgress>(34U, SceneStepPlayerProgress.Parser);
 
-		// Token: 0x04008DD8 RID: 36312
+		// Token: 0x0400906B RID: 36971
 		private readonly RepeatedField<SceneStepPlayerProgress> multiPlayerProgress_ = new RepeatedField<SceneStepPlayerProgress>();
 	}
 }

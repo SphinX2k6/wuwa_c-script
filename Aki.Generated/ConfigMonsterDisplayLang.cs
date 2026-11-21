@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x0200054D RID: 1357
+	// Token: 0x02000563 RID: 1379
 	public class ConfigMonsterDisplayLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001FDB RID: 8155 RVA: 0x0010D6A8 File Offset: 0x0010B8A8
+		// Token: 0x0600205F RID: 8287 RVA: 0x00113DFC File Offset: 0x00111FFC
 		static ConfigMonsterDisplayLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterDisplayLang.CreateStaticDefaultValue), new Action(ConfigMonsterDisplayLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001FDC RID: 8156 RVA: 0x0010D6C8 File Offset: 0x0010B8C8
+		// Token: 0x06002060 RID: 8288 RVA: 0x00113E1C File Offset: 0x0011201C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterDisplayLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigMonsterDisplayLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x06001FDD RID: 8157 RVA: 0x0010D73B File Offset: 0x0010B93B
+		// Token: 0x06002061 RID: 8289 RVA: 0x00113E8F File Offset: 0x0011208F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterDisplayLang.LogPair = null;
@@ -35,13 +35,13 @@ namespace Aki.Config
 			ConfigMonsterDisplayLang.HandleId = 0;
 		}
 
-		// Token: 0x06001FDE RID: 8158 RVA: 0x0010D74F File Offset: 0x0010B94F
+		// Token: 0x06002062 RID: 8290 RVA: 0x00113EA3 File Offset: 0x001120A3
 		public static void Init()
 		{
 			ConfigMonsterDisplayLang.HandleId = ConfigCommon.GetLangStatementId("MonsterDisplay", "lang_monsterdisplay.db", "select content from `MonsterDisplay` where id = ?", "");
 		}
 
-		// Token: 0x06001FDF RID: 8159 RVA: 0x0010D770 File Offset: 0x0010B970
+		// Token: 0x06002063 RID: 8291 RVA: 0x00113EC4 File Offset: 0x001120C4
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
@@ -107,19 +107,19 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x040024FF RID: 9471
+		// Token: 0x04002599 RID: 9625
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x04002500 RID: 9472
+		// Token: 0x0400259A RID: 9626
 		private const string DB = "lang_monsterdisplay.db";
 
-		// Token: 0x04002501 RID: 9473
+		// Token: 0x0400259B RID: 9627
 		private const string TABLE = "MonsterDisplay";
 
-		// Token: 0x04002502 RID: 9474
+		// Token: 0x0400259C RID: 9628
 		private const string COMMAND = "select content from `MonsterDisplay` where id = ?";
 
-		// Token: 0x04002503 RID: 9475
+		// Token: 0x0400259D RID: 9629
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002504 RID: 9476
+		// Token: 0x0400259E RID: 9630
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<int, Dictionary<string, string>> LangCache;
 
-		// Token: 0x04002505 RID: 9477
+		// Token: 0x0400259F RID: 9631
 		private static int HandleId;
 	}
 }

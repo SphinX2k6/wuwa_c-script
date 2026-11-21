@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026F8 RID: 9976
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029BE RID: 10686
 	public class IClientGroupAiCommunicate : IExecClientBattleActionType
 	{
-		// Token: 0x0600DEBA RID: 57018 RVA: 0x00210928 File Offset: 0x0020EB28
+		// Token: 0x0600ECA2 RID: 60578 RVA: 0x0022D290 File Offset: 0x0022B490
 		public static IClientGroupAiCommunicate Create(IClientGroupAiCommunicate? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700428C RID: 17036
-		// (get) Token: 0x0600DEBB RID: 57019 RVA: 0x00210947 File Offset: 0x0020EB47
+		// Token: 0x170045D4 RID: 17876
+		// (get) Token: 0x0600ECA3 RID: 60579 RVA: 0x0022D2AF File Offset: 0x0022B4AF
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700428D RID: 17037
-		// (get) Token: 0x0600DEBC RID: 57020 RVA: 0x00210954 File Offset: 0x0020EB54
+		// Token: 0x170045D5 RID: 17877
+		// (get) Token: 0x0600ECA4 RID: 60580 RVA: 0x0022D2BC File Offset: 0x0022B4BC
 		public virtual int GroupEntityId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700428E RID: 17038
-		// (get) Token: 0x0600DEBD RID: 57021 RVA: 0x00210961 File Offset: 0x0020EB61
+		// Token: 0x170045D6 RID: 17878
+		// (get) Token: 0x0600ECA5 RID: 60581 RVA: 0x0022D2C9 File Offset: 0x0022B4C9
 		public virtual IGroupAiCommunicateMode Option
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BA0 RID: 31648
+		// Token: 0x04008244 RID: 33348
 		private IClientGroupAiCommunicate Instance;
 
-		// Token: 0x04007BA1 RID: 31649
+		// Token: 0x04008245 RID: 33349
 		private IGroupAiCommunicateMode _OptionCache;
 
-		// Token: 0x04007BA2 RID: 31650
+		// Token: 0x04008246 RID: 33350
 		private bool _OptionInited;
 	}
 }

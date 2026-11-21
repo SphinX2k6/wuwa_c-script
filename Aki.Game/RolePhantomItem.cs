@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028DC RID: 10460
+// Token: 0x02001E57 RID: 7767
 public class RolePhantomItem : UiPanelBase
 {
-	// Token: 0x06015971 RID: 88433 RVA: 0x00572CB5 File Offset: 0x00570EB5
+	// Token: 0x06013375 RID: 78709 RVA: 0x0059DB7D File Offset: 0x0059BD7D
 	[NullableContext(1)]
 	public RolePhantomItem(UUIItem uiItem, Action<int> onFunction, EPhantomItemIndex index)
 	{
@@ -19,7 +19,7 @@ public class RolePhantomItem : UiPanelBase
 		this.Index = index;
 	}
 
-	// Token: 0x06015972 RID: 88434 RVA: 0x00572CD8 File Offset: 0x00570ED8
+	// Token: 0x06013376 RID: 78710 RVA: 0x0059DBA0 File Offset: 0x0059BDA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class RolePhantomItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015973 RID: 88435 RVA: 0x00572D81 File Offset: 0x00570F81
+	// Token: 0x06013377 RID: 78711 RVA: 0x0059DC49 File Offset: 0x0059BE49
 	public virtual void UpdateItem(int id)
 	{
 		this.Id = id;
@@ -45,7 +45,7 @@ public class RolePhantomItem : UiPanelBase
 		this.RefreshLevel();
 	}
 
-	// Token: 0x06015974 RID: 88436 RVA: 0x00572D9C File Offset: 0x00570F9C
+	// Token: 0x06013378 RID: 78712 RVA: 0x0059DC64 File Offset: 0x0059BE64
 	public void UpdateTrialItem(int itemId)
 	{
 		base.GetSprite(2).SetUIActive(itemId != 0);
@@ -65,7 +65,7 @@ public class RolePhantomItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015975 RID: 88437 RVA: 0x00572E48 File Offset: 0x00571048
+	// Token: 0x06013379 RID: 78713 RVA: 0x0059DD10 File Offset: 0x0059BF10
 	private void RefreshIcon()
 	{
 		base.GetTexture(1).SetUIActive(this.Id != 0);
@@ -81,7 +81,7 @@ public class RolePhantomItem : UiPanelBase
 		base.SetItemIcon(base.GetTexture(1), phantomItemDataByUniqueId.GetConfigId(false), null, null);
 	}
 
-	// Token: 0x06015976 RID: 88438 RVA: 0x00572EA8 File Offset: 0x005710A8
+	// Token: 0x0601337A RID: 78714 RVA: 0x0059DD70 File Offset: 0x0059BF70
 	private void RefreshQuality()
 	{
 		base.GetSprite(2).SetUIActive(this.Id != 0);
@@ -102,7 +102,7 @@ public class RolePhantomItem : UiPanelBase
 		this.SetSpriteByPath(qualityConfig.Value.BackgroundSprite, base.GetSprite(2), false, null, null);
 	}
 
-	// Token: 0x06015977 RID: 88439 RVA: 0x00572F2A File Offset: 0x0057112A
+	// Token: 0x0601337B RID: 78715 RVA: 0x0059DDF2 File Offset: 0x0059BFF2
 	private void RefreshLevel()
 	{
 		base.GetItem(4).SetUIActive(this.Id != 0);
@@ -113,7 +113,7 @@ public class RolePhantomItem : UiPanelBase
 		this.SetLevelText();
 	}
 
-	// Token: 0x06015978 RID: 88440 RVA: 0x00572F50 File Offset: 0x00571150
+	// Token: 0x0601337C RID: 78716 RVA: 0x0059DE18 File Offset: 0x0059C018
 	private void SetLevelText()
 	{
 		RoleInstance curSelectMainRoleInstance = RoleModel.Instance.GetCurSelectMainRoleInstance();
@@ -130,7 +130,7 @@ public class RolePhantomItem : UiPanelBase
 		base.GetText(5).SetText(dataByIndex.GetPhantomLevel().ToString(), true);
 	}
 
-	// Token: 0x06015979 RID: 88441 RVA: 0x00572FAA File Offset: 0x005711AA
+	// Token: 0x0601337D RID: 78717 RVA: 0x0059DE72 File Offset: 0x0059C072
 	protected void OnClick()
 	{
 		if (this.ClickFunction != null)
@@ -139,7 +139,7 @@ public class RolePhantomItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601597A RID: 88442 RVA: 0x00572FC8 File Offset: 0x005711C8
+	// Token: 0x0601337E RID: 78718 RVA: 0x0059DE90 File Offset: 0x0059C090
 	protected void OnClickSkillButton()
 	{
 		RoleInstance curSelectMainRoleInstance = RoleModel.Instance.GetCurSelectMainRoleInstance();
@@ -170,30 +170,30 @@ public class RolePhantomItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomBattleSkillInfoView, param, null);
 	}
 
-	// Token: 0x0400A0B3 RID: 41139
+	// Token: 0x0400A49D RID: 42141
 	[Nullable(1)]
 	protected readonly Action<int> ClickFunction;
 
-	// Token: 0x0400A0B4 RID: 41140
+	// Token: 0x0400A49E RID: 42142
 	protected int Id;
 
-	// Token: 0x0400A0B5 RID: 41141
+	// Token: 0x0400A49F RID: 42143
 	protected readonly EPhantomItemIndex Index;
 
-	// Token: 0x02008EEA RID: 36586
+	// Token: 0x02008132 RID: 33074
 	private enum EPhantomItemDefine
 	{
-		// Token: 0x0402E577 RID: 189815
+		// Token: 0x04029C72 RID: 171122
 		ItemButton,
-		// Token: 0x0402E578 RID: 189816
+		// Token: 0x04029C73 RID: 171123
 		PhantomIconTexture,
-		// Token: 0x0402E579 RID: 189817
+		// Token: 0x04029C74 RID: 171124
 		QualitySprite,
-		// Token: 0x0402E57A RID: 189818
+		// Token: 0x04029C75 RID: 171125
 		EquipSkillItem,
-		// Token: 0x0402E57B RID: 189819
+		// Token: 0x04029C76 RID: 171126
 		LevelItem,
-		// Token: 0x0402E57C RID: 189820
+		// Token: 0x04029C77 RID: 171127
 		LevelText
 	}
 }

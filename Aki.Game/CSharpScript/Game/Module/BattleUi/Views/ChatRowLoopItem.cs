@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D16 RID: 23830
+	// Token: 0x02004CF8 RID: 19704
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 	})]
 	public class ChatRowLoopItem : GridProxyAbstract<ChatRowData>
 	{
-		// Token: 0x0603C66A RID: 247402 RVA: 0x00E7AAA0 File Offset: 0x00E78CA0
+		// Token: 0x060315C3 RID: 202179 RVA: 0x00DCB120 File Offset: 0x00DC9320
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C66B RID: 247403 RVA: 0x00E7AB6C File Offset: 0x00E78D6C
+		// Token: 0x060315C4 RID: 202180 RVA: 0x00DCB1EC File Offset: 0x00DC93EC
 		[NullableContext(1)]
 		public override void Refresh(ChatRowData chatRowData, bool isSelected, int gridIndex)
 		{
@@ -192,28 +192,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C66C RID: 247404 RVA: 0x00E7AEBF File Offset: 0x00E790BF
+		// Token: 0x060315C5 RID: 202181 RVA: 0x00DCB53F File Offset: 0x00DC973F
 		public ChatRowData GetChatRowData()
 		{
 			return this.ChatRowData;
 		}
 
-		// Token: 0x0401F78E RID: 128910
+		// Token: 0x0401A247 RID: 107079
 		private ChatRowData ChatRowData;
 
-		// Token: 0x0200BF8B RID: 49035
+		// Token: 0x0200A991 RID: 43409
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039CA1 RID: 236705
+			// Token: 0x04034663 RID: 214627
 			HorizontalLayout,
-			// Token: 0x04039CA2 RID: 236706
+			// Token: 0x04034664 RID: 214628
 			PrivateTagBg,
-			// Token: 0x04039CA3 RID: 236707
+			// Token: 0x04034665 RID: 214629
 			TeamTagBg,
-			// Token: 0x04039CA4 RID: 236708
+			// Token: 0x04034666 RID: 214630
 			TagText,
-			// Token: 0x04039CA5 RID: 236709
+			// Token: 0x04034667 RID: 214631
 			ChatText
 		}
 	}

@@ -9,17 +9,17 @@ using CSharpScript.Game.Module.Inventory;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001E9E RID: 7838
+// Token: 0x02001360 RID: 4960
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 {
-	// Token: 0x0600F0A7 RID: 61607 RVA: 0x0039C5A4 File Offset: 0x0039A7A4
+	// Token: 0x0600C4C6 RID: 50374 RVA: 0x003A8160 File Offset: 0x003A6360
 	public HonamiStoryEquipGridItem(bool needItem, HonamiStoryBackpackPanelBase panel = null, HonamiStoryItemDataBase itemData = null) : base(needItem, panel, itemData)
 	{
 	}
 
-	// Token: 0x0600F0A8 RID: 61608 RVA: 0x0039C5AF File Offset: 0x0039A7AF
+	// Token: 0x0600C4C7 RID: 50375 RVA: 0x003A816B File Offset: 0x003A636B
 	public int GetPosition()
 	{
 		if (this.Data != null)
@@ -29,7 +29,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		return this.Position;
 	}
 
-	// Token: 0x0600F0A9 RID: 61609 RVA: 0x0039C5CC File Offset: 0x0039A7CC
+	// Token: 0x0600C4C8 RID: 50376 RVA: 0x003A8188 File Offset: 0x003A6388
 	public bool GetIsUnlock()
 	{
 		HonamiStoryRoleEquipData roleItemDataByPosition = HonamiStoryModel.Instance.GetRoleItemDataByPosition(this.GetPosition());
@@ -38,7 +38,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		return slotList[honamiStoryPluginIndex].GetIsUnlock();
 	}
 
-	// Token: 0x0600F0AA RID: 61610 RVA: 0x0039C608 File Offset: 0x0039A808
+	// Token: 0x0600C4C9 RID: 50377 RVA: 0x003A81C4 File Offset: 0x003A63C4
 	[NullableContext(0)]
 	public ValueTuple<bool, bool> GetSlotUnlockConfig()
 	{
@@ -54,13 +54,13 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		return new ValueTuple<bool, bool>(honamiStoryRoleEquipSlotData.GetIsUnlock(), item);
 	}
 
-	// Token: 0x0600F0AB RID: 61611 RVA: 0x0039C69C File Offset: 0x0039A89C
+	// Token: 0x0600C4CA RID: 50378 RVA: 0x003A8258 File Offset: 0x003A6458
 	public void SetPosition(int position)
 	{
 		this.Position = position;
 	}
 
-	// Token: 0x0600F0AC RID: 61612 RVA: 0x0039C6A8 File Offset: 0x0039A8A8
+	// Token: 0x0600C4CB RID: 50379 RVA: 0x003A8264 File Offset: 0x003A6464
 	public unsafe override void Refresh(HonamiStoryItemDataBase data, int position)
 	{
 		this.Data = data;
@@ -119,7 +119,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		this.UpdateActivateSequence(isActive);
 	}
 
-	// Token: 0x0600F0AD RID: 61613 RVA: 0x0039C8C7 File Offset: 0x0039AAC7
+	// Token: 0x0600C4CC RID: 50380 RVA: 0x003A8483 File Offset: 0x003A6683
 	private void UpdateActivateSequence(bool isActive)
 	{
 		if (isActive)
@@ -130,14 +130,14 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		base.ClearSequence();
 	}
 
-	// Token: 0x0600F0AE RID: 61614 RVA: 0x0039C8DF File Offset: 0x0039AADF
+	// Token: 0x0600C4CD RID: 50381 RVA: 0x003A849B File Offset: 0x003A669B
 	[NullableContext(1)]
 	protected override HonamiStoryItemGridItem CreateGridItem([Nullable(2)] HonamiStoryItemDataBase data)
 	{
 		return new HonamiStoryEquipItemGridItem(data);
 	}
 
-	// Token: 0x0600F0AF RID: 61615 RVA: 0x0039C8E8 File Offset: 0x0039AAE8
+	// Token: 0x0600C4CE RID: 50382 RVA: 0x003A84A4 File Offset: 0x003A66A4
 	protected void SetLockEnable(bool isEnable, bool isFirstLock)
 	{
 		if (!isEnable && this.LockStateItem == null)
@@ -156,7 +156,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		}
 	}
 
-	// Token: 0x0600F0B0 RID: 61616 RVA: 0x0039C954 File Offset: 0x0039AB54
+	// Token: 0x0600C4CF RID: 50383 RVA: 0x003A8510 File Offset: 0x003A6710
 	public void RefreshLockState()
 	{
 		if (this.LockStateItem == null)
@@ -178,7 +178,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		this.LockStateItem.RefreshState(!item, item2, itemCountByConfigId >= num);
 	}
 
-	// Token: 0x0600F0B1 RID: 61617 RVA: 0x0039CA2C File Offset: 0x0039AC2C
+	// Token: 0x0600C4D0 RID: 50384 RVA: 0x003A85E8 File Offset: 0x003A67E8
 	protected void SetCanPlaceEnable(bool isEnable)
 	{
 		HonamiStoryItemGridPlacementItem placeStateItem = this.PlaceStateItem;
@@ -210,7 +210,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		}
 	}
 
-	// Token: 0x0600F0B2 RID: 61618 RVA: 0x0039CAA0 File Offset: 0x0039ACA0
+	// Token: 0x0600C4D1 RID: 50385 RVA: 0x003A865C File Offset: 0x003A685C
 	protected override void DoClickedGridButton()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -254,7 +254,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		}
 	}
 
-	// Token: 0x0600F0B3 RID: 61619 RVA: 0x0039CB76 File Offset: 0x0039AD76
+	// Token: 0x0600C4D2 RID: 50386 RVA: 0x003A8732 File Offset: 0x003A6932
 	public void SetIsEnable(bool value)
 	{
 		HonamiStoryItemGridItem itemGridItem = this.ItemGridItem;
@@ -265,7 +265,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		itemGridItem.SetIsEnable(value);
 	}
 
-	// Token: 0x0600F0B4 RID: 61620 RVA: 0x0039CB8C File Offset: 0x0039AD8C
+	// Token: 0x0600C4D3 RID: 50387 RVA: 0x003A8748 File Offset: 0x003A6948
 	private void UnlockSlot()
 	{
 		HonamiStoryEquipGridItem.<>c__DisplayClass17_0 CS$<>8__locals1 = new HonamiStoryEquipGridItem.<>c__DisplayClass17_0();
@@ -303,7 +303,7 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600F0B5 RID: 61621 RVA: 0x0039CD3C File Offset: 0x0039AF3C
+	// Token: 0x0600C4D4 RID: 50388 RVA: 0x003A88F8 File Offset: 0x003A6AF8
 	public void RefreshState()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -329,12 +329,12 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		}
 	}
 
-	// Token: 0x0600F0B6 RID: 61622 RVA: 0x0039CDAE File Offset: 0x0039AFAE
+	// Token: 0x0600C4D5 RID: 50389 RVA: 0x003A896A File Offset: 0x003A6B6A
 	protected override void OnBtnPointDown()
 	{
 	}
 
-	// Token: 0x0600F0B7 RID: 61623 RVA: 0x0039CDB0 File Offset: 0x0039AFB0
+	// Token: 0x0600C4D6 RID: 50390 RVA: 0x003A896C File Offset: 0x003A6B6C
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -363,15 +363,15 @@ public class HonamiStoryEquipGridItem : HonamiStoryGridItemBase
 		};
 	}
 
-	// Token: 0x04006F54 RID: 28500
+	// Token: 0x04007035 RID: 28725
 	private int Position;
 
-	// Token: 0x04006F55 RID: 28501
+	// Token: 0x04007036 RID: 28726
 	private bool IsFirstLock;
 
-	// Token: 0x04006F56 RID: 28502
+	// Token: 0x04007037 RID: 28727
 	private HonamiStorySlotLockStateItem LockStateItem;
 
-	// Token: 0x04006F57 RID: 28503
+	// Token: 0x04007038 RID: 28728
 	private HonamiStoryItemGridPlacementItem PlaceStateItem;
 }

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001779 RID: 6009
+	// Token: 0x020018FA RID: 6394
 	public class IActorInitialMontage_SetValue
 	{
-		// Token: 0x040050E6 RID: 20710
-		[Nullable(1)]
+		// Token: 0x0400551C RID: 21788
 		public IMontageId MontageId;
 	}
 }

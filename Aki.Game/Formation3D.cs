@@ -7,40 +7,40 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BFD RID: 7165
+// Token: 0x020010BC RID: 4284
 [NullableContext(1)]
 [Nullable(0)]
 public class Formation3D : FormationFlavorViewBase
 {
-	// Token: 0x0600D5CB RID: 54731 RVA: 0x00315BD4 File Offset: 0x00313DD4
+	// Token: 0x0600A9DE RID: 43486 RVA: 0x00320ED0 File Offset: 0x0031F0D0
 	public Formation3D(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x170011A2 RID: 4514
-	// (get) Token: 0x0600D5CC RID: 54732 RVA: 0x00315C5A File Offset: 0x00313E5A
+	// Token: 0x170011C7 RID: 4551
+	// (get) Token: 0x0600A9DF RID: 43487 RVA: 0x00320F56 File Offset: 0x0031F156
 	protected virtual SlotPresenter3D Presenter { [PreserveBaseOverrides] get; } = new SlotPresenter3D();
 
-	// Token: 0x170011A3 RID: 4515
-	// (get) Token: 0x0600D5CD RID: 54733 RVA: 0x00315C62 File Offset: 0x00313E62
+	// Token: 0x170011C8 RID: 4552
+	// (get) Token: 0x0600A9E0 RID: 43488 RVA: 0x00320F5E File Offset: 0x0031F15E
 	protected override EUiViewName RoleSelectViewName { get; } = EUiViewName.TeamSceneRoleSelectView;
 
-	// Token: 0x170011A4 RID: 4516
-	// (get) Token: 0x0600D5CE RID: 54734 RVA: 0x00315C6A File Offset: 0x00313E6A
+	// Token: 0x170011C9 RID: 4553
+	// (get) Token: 0x0600A9E1 RID: 43489 RVA: 0x00320F66 File Offset: 0x0031F166
 	protected override FormationActionKeys FormationActionKeys { get; } = new FormationActionKeys
 	{
 		PresetForm = 11,
 		EditFormName = 12
 	};
 
-	// Token: 0x170011A5 RID: 4517
-	// (get) Token: 0x0600D5CF RID: 54735 RVA: 0x00315C72 File Offset: 0x00313E72
+	// Token: 0x170011CA RID: 4554
+	// (get) Token: 0x0600A9E2 RID: 43490 RVA: 0x00320F6E File Offset: 0x0031F16E
 	protected override FormationViewKeys Keys { get; } = new FormationViewKeys
 	{
 		Close = 3,
@@ -52,7 +52,7 @@ public class Formation3D : FormationFlavorViewBase
 		DescToggleItem = new int?(6)
 	};
 
-	// Token: 0x0600D5D0 RID: 54736 RVA: 0x00315C7C File Offset: 0x00313E7C
+	// Token: 0x0600A9E3 RID: 43491 RVA: 0x00320F78 File Offset: 0x0031F178
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -107,19 +107,19 @@ public class Formation3D : FormationFlavorViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D5D1 RID: 54737 RVA: 0x00315F67 File Offset: 0x00314167
+	// Token: 0x0600A9E4 RID: 43492 RVA: 0x00321263 File Offset: 0x0031F463
 	protected override IFormationTabComponent CreateFormationTabComponent(UUIItem uiItem, CommonTabComponentData<EditFormationTabItem> data)
 	{
 		return new Formation3DTabComponent(uiItem, data, new Func<int, bool>(this.IsCurrentTab));
 	}
 
-	// Token: 0x0600D5D2 RID: 54738 RVA: 0x00315F7D File Offset: 0x0031417D
+	// Token: 0x0600A9E5 RID: 43493 RVA: 0x00321279 File Offset: 0x0031F479
 	public override string GetBlackScreenStyleOnOpen()
 	{
 		return "Formation3D";
 	}
 
-	// Token: 0x0600D5D3 RID: 54739 RVA: 0x00315F84 File Offset: 0x00314184
+	// Token: 0x0600A9E6 RID: 43494 RVA: 0x00321280 File Offset: 0x0031F480
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -131,14 +131,14 @@ public class Formation3D : FormationFlavorViewBase
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.RoleWeaponTabView);
 	}
 
-	// Token: 0x0600D5D4 RID: 54740 RVA: 0x00315FBE File Offset: 0x003141BE
+	// Token: 0x0600A9E7 RID: 43495 RVA: 0x003212BA File Offset: 0x0031F4BA
 	protected override void OnBeforeHide()
 	{
 		this.FinishCameraResetForRoleItems();
 		base.OnBeforeHide();
 	}
 
-	// Token: 0x0600D5D5 RID: 54741 RVA: 0x00315FCC File Offset: 0x003141CC
+	// Token: 0x0600A9E8 RID: 43496 RVA: 0x003212C8 File Offset: 0x0031F4C8
 	protected override void OnFormationEditViewOpenChanged(bool isOpen)
 	{
 		UUIItem item = base.GetItem(10);
@@ -157,37 +157,37 @@ public class Formation3D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x0600D5D6 RID: 54742 RVA: 0x00316044 File Offset: 0x00314244
+	// Token: 0x0600A9E9 RID: 43497 RVA: 0x00321340 File Offset: 0x0031F540
 	protected override void OnAddEventListener()
 	{
-		EventSystem.Instance.Add(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraAnimationDefine.IFinishData>(this.OnPlayCameraAnimationFinish));
+		EventSystem.Instance.Add(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraDefine.IFinishData>(this.OnPlayCameraAnimationFinish));
 		if (GameModeModel.Instance.IsMulti)
 		{
 			EventSystem.Instance.Add<int, ENetPingState>(EEventName.OnRefreshPlayerPing, new Action<int, ENetPingState>(this.OnRefreshPlayerPing));
 		}
 	}
 
-	// Token: 0x0600D5D7 RID: 54743 RVA: 0x00316098 File Offset: 0x00314298
+	// Token: 0x0600A9EA RID: 43498 RVA: 0x00321394 File Offset: 0x0031F594
 	protected override void OnRemoveEventListener()
 	{
-		EventSystem.Instance.Remove(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraAnimationDefine.IFinishData>(this.OnPlayCameraAnimationFinish));
+		EventSystem.Instance.Remove(EEventName.OnPlayCameraAnimationFinish, new Action<UiCameraDefine.IFinishData>(this.OnPlayCameraAnimationFinish));
 		if (EventSystem.Instance.Has(EEventName.OnRefreshPlayerPing, new Action<int, ENetPingState>(this.OnRefreshPlayerPing)))
 		{
 			EventSystem.Instance.Remove<int, ENetPingState>(EEventName.OnRefreshPlayerPing, new Action<int, ENetPingState>(this.OnRefreshPlayerPing));
 		}
 	}
 
-	// Token: 0x0600D5D8 RID: 54744 RVA: 0x003160FC File Offset: 0x003142FC
-	private void OnPlayCameraAnimationFinish(UiCameraAnimationDefine.IFinishData finishData)
+	// Token: 0x0600A9EB RID: 43499 RVA: 0x003213F8 File Offset: 0x0031F5F8
+	private void OnPlayCameraAnimationFinish(UiCameraDefine.IFinishData finishData)
 	{
-		if (!this.IsWaitingCameraResetForRoleItems || finishData.FinishType != UiCameraAnimationDefine.ECameraAnimationFinishType.Finished || finishData.ToHandleData.ViewName != this.ViewInfo.Name || UiSceneManager.Instance.SelectFormationPosition != -1)
+		if (!this.IsWaitingCameraResetForRoleItems || finishData.FinishType != ECameraAnimationFinishType.Finished || finishData.ToHandleData.GetViewName() != this.ViewInfo.Name || UiSceneManager.Instance.SelectFormationPosition != -1)
 		{
 			return;
 		}
 		this.FinishCameraResetForRoleItems();
 	}
 
-	// Token: 0x0600D5D9 RID: 54745 RVA: 0x00316150 File Offset: 0x00314350
+	// Token: 0x0600A9EC RID: 43500 RVA: 0x0032144C File Offset: 0x0031F64C
 	private void OnRefreshPlayerPing(int playerId, ENetPingState ping)
 	{
 		foreach (FormationRoleItem formationRoleItem in this.Presenter.RoleItems)
@@ -203,7 +203,7 @@ public class Formation3D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x0600D5DA RID: 54746 RVA: 0x003161D8 File Offset: 0x003143D8
+	// Token: 0x0600A9ED RID: 43501 RVA: 0x003214D4 File Offset: 0x0031F6D4
 	private void ExchangeRoleCallBack(int dropPosition, int fromPosition, int fromRoleId, int dropRoleId)
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -216,7 +216,7 @@ public class Formation3D : FormationFlavorViewBase
 		});
 	}
 
-	// Token: 0x0600D5DB RID: 54747 RVA: 0x00316214 File Offset: 0x00314414
+	// Token: 0x0600A9EE RID: 43502 RVA: 0x00321510 File Offset: 0x0031F710
 	protected override UniTask CreateAllSlotsAsync()
 	{
 		Formation3D.<CreateAllSlotsAsync>d__29 <CreateAllSlotsAsync>d__;
@@ -227,7 +227,7 @@ public class Formation3D : FormationFlavorViewBase
 		return <CreateAllSlotsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D5DC RID: 54748 RVA: 0x00316258 File Offset: 0x00314458
+	// Token: 0x0600A9EF RID: 43503 RVA: 0x00321554 File Offset: 0x0031F754
 	[NullableContext(2)]
 	protected override void RefreshAllRoleView(int formationId, int[] needRefreshPosition = null)
 	{
@@ -241,7 +241,7 @@ public class Formation3D : FormationFlavorViewBase
 		base.RefreshAllRoleView(formationId, needRefreshPosition);
 	}
 
-	// Token: 0x0600D5DD RID: 54749 RVA: 0x003162C0 File Offset: 0x003144C0
+	// Token: 0x0600A9F0 RID: 43504 RVA: 0x003215BC File Offset: 0x0031F7BC
 	[NullableContext(0)]
 	protected override UniTask<long?> RefreshAllRoleViewAsync(int formationId, [Nullable(2)] int[] needRefreshPosition = null)
 	{
@@ -255,7 +255,7 @@ public class Formation3D : FormationFlavorViewBase
 		return <RefreshAllRoleViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D5DE RID: 54750 RVA: 0x00316314 File Offset: 0x00314514
+	// Token: 0x0600A9F1 RID: 43505 RVA: 0x00321610 File Offset: 0x0031F810
 	protected override TeamRoleSelectViewData GetRoleSelectViewData()
 	{
 		TeamRoleSelectViewData roleSelectViewData = base.GetRoleSelectViewData();
@@ -288,7 +288,7 @@ public class Formation3D : FormationFlavorViewBase
 		return roleSelectViewData;
 	}
 
-	// Token: 0x0600D5DF RID: 54751 RVA: 0x003163CC File Offset: 0x003145CC
+	// Token: 0x0600A9F2 RID: 43506 RVA: 0x003216C8 File Offset: 0x0031F8C8
 	private void OnRoleSelectHideFinished()
 	{
 		int roleSelectDeployEffectPosition = this.RoleSelectDeployEffectPosition;
@@ -305,7 +305,7 @@ public class Formation3D : FormationFlavorViewBase
 		this.SetRoleSelectPreviewMode(false);
 	}
 
-	// Token: 0x0600D5E0 RID: 54752 RVA: 0x00316410 File Offset: 0x00314610
+	// Token: 0x0600A9F3 RID: 43507 RVA: 0x0032170C File Offset: 0x0031F90C
 	private void SetRoleSelectPreviewMode(bool isPreview)
 	{
 		foreach (FormationRoleItem formationRoleItem in this.Presenter.RoleItems)
@@ -314,7 +314,7 @@ public class Formation3D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x0600D5E1 RID: 54753 RVA: 0x00316468 File Offset: 0x00314668
+	// Token: 0x0600A9F4 RID: 43508 RVA: 0x00321764 File Offset: 0x0031F964
 	[NullableContext(2)]
 	private void OnModelLoadingAnchorChanged(UUIItem anchor)
 	{
@@ -326,13 +326,13 @@ public class Formation3D : FormationFlavorViewBase
 		byPosition.SetModelLoadingAnchor(anchor);
 	}
 
-	// Token: 0x0600D5E2 RID: 54754 RVA: 0x00316486 File Offset: 0x00314686
+	// Token: 0x0600A9F5 RID: 43509 RVA: 0x00321782 File Offset: 0x0031F982
 	private void OnRoleDetailOpen()
 	{
 		UiSceneManager.Instance.SetRoleFormationActorsVisibleExcept(-1, false);
 	}
 
-	// Token: 0x0600D5E3 RID: 54755 RVA: 0x00316494 File Offset: 0x00314694
+	// Token: 0x0600A9F6 RID: 43510 RVA: 0x00321790 File Offset: 0x0031F990
 	private void OnRoleDetailClose()
 	{
 		UiSceneManager.Instance.SetRoleFormationActorsVisibleExcept(this.EditPosition, false);
@@ -344,7 +344,7 @@ public class Formation3D : FormationFlavorViewBase
 		byPosition.RefreshRoleOrnaments();
 	}
 
-	// Token: 0x0600D5E4 RID: 54756 RVA: 0x003164C4 File Offset: 0x003146C4
+	// Token: 0x0600A9F7 RID: 43511 RVA: 0x003217C0 File Offset: 0x0031F9C0
 	private void OnRoleSelect(int roleId)
 	{
 		FormationRoleItem byPosition = this.Presenter.GetByPosition(this.EditPosition);
@@ -388,7 +388,7 @@ public class Formation3D : FormationFlavorViewBase
 		this.AdaptRoleSelectCameraToPreview(editPosition, roleId, roleSkinId);
 	}
 
-	// Token: 0x0600D5E5 RID: 54757 RVA: 0x003165F0 File Offset: 0x003147F0
+	// Token: 0x0600A9F8 RID: 43512 RVA: 0x003218EC File Offset: 0x0031FAEC
 	private void AdaptRoleSelectCameraToPreview(int position, int roleId, int skinId)
 	{
 		if (UiSceneManager.Instance.SelectFormationPosition != position)
@@ -405,10 +405,10 @@ public class Formation3D : FormationFlavorViewBase
 		{
 			return;
 		}
-		UiCameraAnimationManager.Instance.RefreshCurrentCameraExternalTransform(ftransformDouble.Value, false);
+		UiCameraModel.Instance.RefreshCurrentTransformHandle(ftransformDouble.Value, false);
 	}
 
-	// Token: 0x0600D5E6 RID: 54758 RVA: 0x00316644 File Offset: 0x00314844
+	// Token: 0x0600A9F9 RID: 43513 RVA: 0x00321940 File Offset: 0x0031FB40
 	protected override void OnEnterRoleSelectScene(int position)
 	{
 		this.RoleSelectDeployEffectPosition = 0;
@@ -419,12 +419,12 @@ public class Formation3D : FormationFlavorViewBase
 		bool flag = roleSlotDisplayData.ConfigId > 0;
 		UiSceneManager.Instance.SetRoleFormationActorsVisibleExcept(flag ? position : -1, false);
 		string viewName = FormationDefine.FormationPositionToCameraRecord[position];
-		FTransformDouble? externalTransform = (roleSlotDisplayData.ConfigId != 0) ? this.BuildRoleFocusTransform(position, roleSlotDisplayData.ConfigId, roleSlotDisplayData.SkinId) : null;
-		this.SkipNextCameraAdapt = (externalTransform != null);
-		UiCameraAnimationManager.Instance.PushCameraHandleByOpenView(viewName, null, true, externalTransform, this.ViewInfo.Name);
+		FTransformDouble? transform = (roleSlotDisplayData.ConfigId != 0) ? this.BuildRoleFocusTransform(position, roleSlotDisplayData.ConfigId, roleSlotDisplayData.SkinId) : null;
+		this.SkipNextCameraAdapt = (transform != null);
+		UiCameraModel.Instance.PushTransformCameraHandleByViewName(viewName, transform, true);
 	}
 
-	// Token: 0x0600D5E7 RID: 54759 RVA: 0x00316708 File Offset: 0x00314908
+	// Token: 0x0600A9FA RID: 43514 RVA: 0x003219EC File Offset: 0x0031FBEC
 	private FTransformDouble? BuildRoleFocusTransform(int position, int roleId, int skinId)
 	{
 		int? num;
@@ -477,15 +477,15 @@ public class Formation3D : FormationFlavorViewBase
 		return new FTransformDouble?(new FTransformDouble(ref frotator2, ref fvectorDouble3, ref fvector));
 	}
 
-	// Token: 0x0600D5E8 RID: 54760 RVA: 0x00316A9C File Offset: 0x00314C9C
+	// Token: 0x0600A9FB RID: 43515 RVA: 0x00321D80 File Offset: 0x0031FF80
 	private void CacheRoleSelectInitialCameraLocation()
 	{
 		if (this.InitialCameraLocation != null)
 		{
 			return;
 		}
-		UiCameraHandleData lastHandleData = UiCameraAnimationManager.Instance.GetLastHandleData();
-		FVectorDouble? fvectorDouble = (lastHandleData != null) ? lastHandleData.GetTargetLocation() : null;
+		UiCameraHandleData lastHandleData = UiCameraModel.Instance.GetLastHandleData();
+		FVectorDouble? fvectorDouble = (lastHandleData != null) ? new FVectorDouble?(lastHandleData.GetTargetLocation()) : null;
 		if (fvectorDouble == null)
 		{
 			return;
@@ -493,7 +493,7 @@ public class Formation3D : FormationFlavorViewBase
 		this.InitialCameraLocation = new FVectorDouble?(new FVectorDouble(fvectorDouble.Value.X, fvectorDouble.Value.Y, fvectorDouble.Value.Z));
 	}
 
-	// Token: 0x0600D5E9 RID: 54761 RVA: 0x00316B14 File Offset: 0x00314D14
+	// Token: 0x0600A9FC RID: 43516 RVA: 0x00321E00 File Offset: 0x00320000
 	[NullableContext(2)]
 	private FVectorDouble BuildRoleFocusCameraLocation(FVectorDouble focusWorldLocation, IReadOnlyList<int> commonOffset, FRotator baseRotation)
 	{
@@ -502,7 +502,7 @@ public class Formation3D : FormationFlavorViewBase
 		return new FVectorDouble(focusWorldLocation.X + fvectorDouble.X * (double)Formation3D.GetListValue(commonOffset, 0) + (double)(rightVector.X * (float)Formation3D.GetListValue(commonOffset, 1)), focusWorldLocation.Y + fvectorDouble.Y * (double)Formation3D.GetListValue(commonOffset, 0) + (double)(rightVector.Y * (float)Formation3D.GetListValue(commonOffset, 1)), focusWorldLocation.Z + fvectorDouble.Z * (double)Formation3D.GetListValue(commonOffset, 0) + (double)(rightVector.Z * (float)Formation3D.GetListValue(commonOffset, 1)) + (double)Formation3D.GetListValue(commonOffset, 2));
 	}
 
-	// Token: 0x0600D5EA RID: 54762 RVA: 0x00316BB3 File Offset: 0x00314DB3
+	// Token: 0x0600A9FD RID: 43517 RVA: 0x00321E9F File Offset: 0x0032009F
 	[NullableContext(2)]
 	private static int GetListValue(IReadOnlyList<int> values, int index)
 	{
@@ -513,7 +513,7 @@ public class Formation3D : FormationFlavorViewBase
 		return values[index];
 	}
 
-	// Token: 0x0600D5EB RID: 54763 RVA: 0x00316BCC File Offset: 0x00314DCC
+	// Token: 0x0600A9FE RID: 43518 RVA: 0x00321EB8 File Offset: 0x003200B8
 	protected override void OnExitRoleSelectScene()
 	{
 		UiSceneManager.Instance.SelectFormationPosition = -1;
@@ -521,14 +521,14 @@ public class Formation3D : FormationFlavorViewBase
 		this.IsWaitingCameraResetForRoleItems = true;
 		this.SetRoleItemsVisible(false);
 		base.PlayTabStartSequence();
-		UiCameraAnimationManager.Instance.PushCameraHandleByOpenView(this.ViewInfo.Name, null, true, null, null);
-		if (!UiCameraAnimationManager.Instance.IsPlayingAnimation())
+		UiCameraModel.Instance.PushCameraHandleByViewName(this.ViewInfo.Name, true);
+		if (!UiCameraModel.Instance.IsPlayingAnimation())
 		{
 			this.FinishCameraResetForRoleItems();
 		}
 	}
 
-	// Token: 0x0600D5EC RID: 54764 RVA: 0x00316C44 File Offset: 0x00314E44
+	// Token: 0x0600A9FF RID: 43519 RVA: 0x00321F1E File Offset: 0x0032011E
 	private void FinishCameraResetForRoleItems()
 	{
 		if (!this.IsWaitingCameraResetForRoleItems)
@@ -539,7 +539,7 @@ public class Formation3D : FormationFlavorViewBase
 		this.SetRoleItemsVisible(true);
 	}
 
-	// Token: 0x0600D5ED RID: 54765 RVA: 0x00316C60 File Offset: 0x00314E60
+	// Token: 0x0600AA00 RID: 43520 RVA: 0x00321F38 File Offset: 0x00320138
 	private void SetRoleItemsVisible(bool visible)
 	{
 		foreach (FormationRoleItem formationRoleItem in this.Presenter.RoleItems)
@@ -548,51 +548,51 @@ public class Formation3D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x040061D4 RID: 25044
+	// Token: 0x040062A6 RID: 25254
 	private bool SkipNextCameraAdapt;
 
-	// Token: 0x040061D5 RID: 25045
+	// Token: 0x040062A7 RID: 25255
 	private FVectorDouble? InitialCameraLocation;
 
-	// Token: 0x040061D6 RID: 25046
+	// Token: 0x040062A8 RID: 25256
 	private bool IsWaitingCameraResetForRoleItems;
 
-	// Token: 0x040061D7 RID: 25047
+	// Token: 0x040062A9 RID: 25257
 	private int RoleSelectDeployEffectPosition;
 
-	// Token: 0x0200819F RID: 33183
+	// Token: 0x0200732B RID: 29483
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402A4C0 RID: 173248
+		// Token: 0x040257EE RID: 153582
 		TabComponent,
-		// Token: 0x0402A4C1 RID: 173249
+		// Token: 0x040257EF RID: 153583
 		ConfirmButton,
-		// Token: 0x0402A4C2 RID: 173250
+		// Token: 0x040257F0 RID: 153584
 		ConfirmText,
-		// Token: 0x0402A4C3 RID: 173251
+		// Token: 0x040257F1 RID: 153585
 		CloseButton,
-		// Token: 0x0402A4C4 RID: 173252
+		// Token: 0x040257F2 RID: 153586
 		QuickSelectButton,
-		// Token: 0x0402A4C5 RID: 173253
+		// Token: 0x040257F3 RID: 153587
 		LoadingItem,
-		// Token: 0x0402A4C6 RID: 173254
+		// Token: 0x040257F4 RID: 153588
 		DescToggleItem,
-		// Token: 0x0402A4C7 RID: 173255
+		// Token: 0x040257F5 RID: 153589
 		TeamRoleSlot1,
-		// Token: 0x0402A4C8 RID: 173256
+		// Token: 0x040257F6 RID: 153590
 		TeamRoleSlot2,
-		// Token: 0x0402A4C9 RID: 173257
+		// Token: 0x040257F7 RID: 153591
 		TeamRoleSlot3,
-		// Token: 0x0402A4CA RID: 173258
+		// Token: 0x040257F8 RID: 153592
 		PanelPresetForm,
-		// Token: 0x0402A4CB RID: 173259
+		// Token: 0x040257F9 RID: 153593
 		BtnPresetForm,
-		// Token: 0x0402A4CC RID: 173260
+		// Token: 0x040257FA RID: 153594
 		BtnEditFormName,
-		// Token: 0x0402A4CD RID: 173261
+		// Token: 0x040257FB RID: 153595
 		PanelRoleItemAll,
-		// Token: 0x0402A4CE RID: 173262
+		// Token: 0x040257FC RID: 153596
 		DragRoleItem
 	}
 }

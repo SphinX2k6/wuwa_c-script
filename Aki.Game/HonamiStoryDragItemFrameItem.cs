@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001EA5 RID: 7845
+// Token: 0x02001367 RID: 4967
 public class HonamiStoryDragItemFrameItem : UiPanelBase
 {
-	// Token: 0x0600F0D5 RID: 61653 RVA: 0x0039D5B0 File Offset: 0x0039B7B0
+	// Token: 0x0600C4F4 RID: 50420 RVA: 0x003A916C File Offset: 0x003A736C
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F0D6 RID: 61654 RVA: 0x0039D5C4 File Offset: 0x0039B7C4
+	// Token: 0x0600C4F5 RID: 50421 RVA: 0x003A9180 File Offset: 0x003A7380
 	protected override void OnBeforeShow()
 	{
 		if (!this.LevelSequencePlayer.IsPlayingSequence("Loop"))
@@ -20,7 +20,7 @@ public class HonamiStoryDragItemFrameItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006F5E RID: 28510
+	// Token: 0x0400703F RID: 28735
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 }

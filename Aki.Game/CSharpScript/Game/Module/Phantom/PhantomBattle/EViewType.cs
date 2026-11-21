@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Phantom.PhantomBattle
 {
-	// Token: 0x02005101 RID: 20737
+	// Token: 0x020040D1 RID: 16593
 	public enum EViewType
 	{
-		// Token: 0x0401C38D RID: 115597
+		// Token: 0x04016DC0 RID: 93632
 		PhantomEquip,
-		// Token: 0x0401C38E RID: 115598
+		// Token: 0x04016DC1 RID: 93633
 		PhantomIntensify,
-		// Token: 0x0401C38F RID: 115599
+		// Token: 0x04016DC2 RID: 93634
 		PhantomBreach
 	}
 }

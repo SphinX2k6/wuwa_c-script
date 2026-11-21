@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B90 RID: 19344
+	// Token: 0x02005077 RID: 20599
 	public class IComparedAlertValueType_UnionUnion
 	{
-		// Token: 0x17008C5F RID: 35935
-		// (get) Token: 0x0601E7D2 RID: 124882 RVA: 0x004448E1 File Offset: 0x00442AE1
-		// (set) Token: 0x0601E7D3 RID: 124883 RVA: 0x004448E9 File Offset: 0x00442AE9
+		// Token: 0x1700936F RID: 37743
+		// (get) Token: 0x06020360 RID: 131936 RVA: 0x0047712D File Offset: 0x0047532D
+		// (set) Token: 0x06020361 RID: 131937 RVA: 0x00477135 File Offset: 0x00475335
 		public IComparedAlertValueType_Union Type { get; set; }
 
-		// Token: 0x17008C60 RID: 35936
-		// (get) Token: 0x0601E7D4 RID: 124884 RVA: 0x004448F2 File Offset: 0x00442AF2
-		// (set) Token: 0x0601E7D5 RID: 124885 RVA: 0x004448FA File Offset: 0x00442AFA
+		// Token: 0x17009370 RID: 37744
+		// (get) Token: 0x06020362 RID: 131938 RVA: 0x0047713E File Offset: 0x0047533E
+		// (set) Token: 0x06020363 RID: 131939 RVA: 0x00477146 File Offset: 0x00475346
 		public object Value { get; set; }
 
-		// Token: 0x0601E7D6 RID: 124886 RVA: 0x00444903 File Offset: 0x00442B03
+		// Token: 0x06020364 RID: 131940 RVA: 0x0047714F File Offset: 0x0047534F
 		public IComparedAlertValueType_UnionUnion()
 		{
 			this.Type = IComparedAlertValueType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601E7D7 RID: 124887 RVA: 0x00444919 File Offset: 0x00442B19
+		// Token: 0x06020365 RID: 131941 RVA: 0x00477165 File Offset: 0x00475365
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601E7D8 RID: 124888 RVA: 0x0044492B File Offset: 0x00442B2B
+		// Token: 0x06020366 RID: 131942 RVA: 0x00477177 File Offset: 0x00475377
 		public IComparedAlertValueTypeT AsIComparedAlertValueType()
 		{
 			return this.As<IComparedAlertValueTypeT>();
 		}
 
-		// Token: 0x0601E7D9 RID: 124889 RVA: 0x00444933 File Offset: 0x00442B33
+		// Token: 0x06020367 RID: 131943 RVA: 0x0047717F File Offset: 0x0047537F
 		public static IComparedAlertValueType_UnionUnion FromIComparedAlertValueType(IComparedAlertValueTypeT _icomparedalertvaluetype)
 		{
 			return new IComparedAlertValueType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E7DA RID: 124890 RVA: 0x00444948 File Offset: 0x00442B48
+		// Token: 0x06020368 RID: 131944 RVA: 0x00477194 File Offset: 0x00475394
 		public ICompareMinAlertValueT AsICompareMinAlertValue()
 		{
 			return this.As<ICompareMinAlertValueT>();
 		}
 
-		// Token: 0x0601E7DB RID: 124891 RVA: 0x00444950 File Offset: 0x00442B50
+		// Token: 0x06020369 RID: 131945 RVA: 0x0047719C File Offset: 0x0047539C
 		public static IComparedAlertValueType_UnionUnion FromICompareMinAlertValue(ICompareMinAlertValueT _icompareminalertvalue)
 		{
 			return new IComparedAlertValueType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E7DC RID: 124892 RVA: 0x00444965 File Offset: 0x00442B65
+		// Token: 0x0602036A RID: 131946 RVA: 0x004771B1 File Offset: 0x004753B1
 		public ICompareMaxAlertValueT AsICompareMaxAlertValue()
 		{
 			return this.As<ICompareMaxAlertValueT>();
 		}
 
-		// Token: 0x0601E7DD RID: 124893 RVA: 0x0044496D File Offset: 0x00442B6D
+		// Token: 0x0602036B RID: 131947 RVA: 0x004771B9 File Offset: 0x004753B9
 		public static IComparedAlertValueType_UnionUnion FromICompareMaxAlertValue(ICompareMaxAlertValueT _icomparemaxalertvalue)
 		{
 			return new IComparedAlertValueType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E7DE RID: 124894 RVA: 0x00444982 File Offset: 0x00442B82
+		// Token: 0x0602036C RID: 131948 RVA: 0x004771CE File Offset: 0x004753CE
 		public ICompareCustomAlertValueT AsICompareCustomAlertValue()
 		{
 			return this.As<ICompareCustomAlertValueT>();
 		}
 
-		// Token: 0x0601E7DF RID: 124895 RVA: 0x0044498A File Offset: 0x00442B8A
+		// Token: 0x0602036D RID: 131949 RVA: 0x004771D6 File Offset: 0x004753D6
 		public static IComparedAlertValueType_UnionUnion FromICompareCustomAlertValue(ICompareCustomAlertValueT _icomparecustomalertvalue)
 		{
 			return new IComparedAlertValueType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E7E0 RID: 124896 RVA: 0x004449A0 File Offset: 0x00442BA0
+		// Token: 0x0602036E RID: 131950 RVA: 0x004771EC File Offset: 0x004753EC
 		public static int Pack(FlatBufferBuilder builder, IComparedAlertValueType_UnionUnion _o)
 		{
 			switch (_o.Type)

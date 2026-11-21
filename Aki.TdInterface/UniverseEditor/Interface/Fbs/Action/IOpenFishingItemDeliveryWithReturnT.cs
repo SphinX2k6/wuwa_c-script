@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BFB RID: 27643
+	// Token: 0x0200735F RID: 29535
 	public class IOpenFishingItemDeliveryWithReturnT
 	{
-		// Token: 0x1700CD8E RID: 52622
-		// (get) Token: 0x06030983 RID: 199043 RVA: 0x00698B79 File Offset: 0x00696D79
-		// (set) Token: 0x06030984 RID: 199044 RVA: 0x00698B81 File Offset: 0x00696D81
+		// Token: 0x1700D89C RID: 55452
+		// (get) Token: 0x060338A3 RID: 211107 RVA: 0x006F250D File Offset: 0x006F070D
+		// (set) Token: 0x060338A4 RID: 211108 RVA: 0x006F2515 File Offset: 0x006F0715
 		public ESystemType Type { get; set; }
 
-		// Token: 0x1700CD8F RID: 52623
-		// (get) Token: 0x06030985 RID: 199045 RVA: 0x00698B8A File Offset: 0x00696D8A
-		// (set) Token: 0x06030986 RID: 199046 RVA: 0x00698B92 File Offset: 0x00696D92
+		// Token: 0x1700D89D RID: 55453
+		// (get) Token: 0x060338A5 RID: 211109 RVA: 0x006F251E File Offset: 0x006F071E
+		// (set) Token: 0x060338A6 RID: 211110 RVA: 0x006F2526 File Offset: 0x006F0726
 		public int PresetId { get; set; }
 
-		// Token: 0x1700CD90 RID: 52624
-		// (get) Token: 0x06030987 RID: 199047 RVA: 0x00698B9B File Offset: 0x00696D9B
-		// (set) Token: 0x06030988 RID: 199048 RVA: 0x00698BA3 File Offset: 0x00696DA3
+		// Token: 0x1700D89E RID: 55454
+		// (get) Token: 0x060338A7 RID: 211111 RVA: 0x006F252F File Offset: 0x006F072F
+		// (set) Token: 0x060338A8 RID: 211112 RVA: 0x006F2537 File Offset: 0x006F0737
 		public TVarRefUnion ReturnVar { get; set; }
 
-		// Token: 0x06030989 RID: 199049 RVA: 0x00698BAC File Offset: 0x00696DAC
+		// Token: 0x060338A9 RID: 211113 RVA: 0x006F2540 File Offset: 0x006F0740
 		public IOpenFishingItemDeliveryWithReturnT()
 		{
 			this.Type = ESystemType.Shop;

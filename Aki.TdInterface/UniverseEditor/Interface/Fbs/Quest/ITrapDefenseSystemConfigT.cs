@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004239 RID: 16953
+	// Token: 0x02004695 RID: 18069
 	public class ITrapDefenseSystemConfigT
 	{
-		// Token: 0x1700785F RID: 30815
-		// (get) Token: 0x06019116 RID: 102678 RVA: 0x0039B02D File Offset: 0x0039922D
-		// (set) Token: 0x06019117 RID: 102679 RVA: 0x0039B035 File Offset: 0x00399235
+		// Token: 0x17007E90 RID: 32400
+		// (get) Token: 0x0601A882 RID: 108674 RVA: 0x003C6705 File Offset: 0x003C4905
+		// (set) Token: 0x0601A883 RID: 108675 RVA: 0x003C670D File Offset: 0x003C490D
 		public EEnableSystemType Type { get; set; }
 
-		// Token: 0x17007860 RID: 30816
-		// (get) Token: 0x06019118 RID: 102680 RVA: 0x0039B03E File Offset: 0x0039923E
-		// (set) Token: 0x06019119 RID: 102681 RVA: 0x0039B046 File Offset: 0x00399246
+		// Token: 0x17007E91 RID: 32401
+		// (get) Token: 0x0601A884 RID: 108676 RVA: 0x003C6716 File Offset: 0x003C4916
+		// (set) Token: 0x0601A885 RID: 108677 RVA: 0x003C671E File Offset: 0x003C491E
 		public int TrapDefenseId { get; set; }
 
-		// Token: 0x17007861 RID: 30817
-		// (get) Token: 0x0601911A RID: 102682 RVA: 0x0039B04F File Offset: 0x0039924F
-		// (set) Token: 0x0601911B RID: 102683 RVA: 0x0039B057 File Offset: 0x00399257
+		// Token: 0x17007E92 RID: 32402
+		// (get) Token: 0x0601A886 RID: 108678 RVA: 0x003C6727 File Offset: 0x003C4927
+		// (set) Token: 0x0601A887 RID: 108679 RVA: 0x003C672F File Offset: 0x003C492F
 		public List<ITrapDefenseSystemVarT> Vars { get; set; }
 
-		// Token: 0x0601911C RID: 102684 RVA: 0x0039B060 File Offset: 0x00399260
+		// Token: 0x0601A888 RID: 108680 RVA: 0x003C6738 File Offset: 0x003C4938
 		public ITrapDefenseSystemConfigT()
 		{
 			this.Type = EEnableSystemType.GradingSystem;

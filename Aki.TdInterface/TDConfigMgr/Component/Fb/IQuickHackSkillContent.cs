@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DEF RID: 3567
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EEB RID: 3819
 	public class IQuickHackSkillContent
 	{
-		// Token: 0x060050D1 RID: 20689 RVA: 0x000C78D7 File Offset: 0x000C5AD7
+		// Token: 0x060055F8 RID: 22008 RVA: 0x000D319F File Offset: 0x000D139F
 		public static IQuickHackSkillContent Create(IQuickHackSkillContent? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AB0 RID: 6832
-		// (get) Token: 0x060050D2 RID: 20690 RVA: 0x000C78F6 File Offset: 0x000C5AF6
+		// Token: 0x17001C1D RID: 7197
+		// (get) Token: 0x060055F9 RID: 22009 RVA: 0x000D31BE File Offset: 0x000D13BE
 		public virtual string EntityState
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AB1 RID: 6833
-		// (get) Token: 0x060050D3 RID: 20691 RVA: 0x000C7904 File Offset: 0x000C5B04
+		// Token: 0x17001C1E RID: 7198
+		// (get) Token: 0x060055FA RID: 22010 RVA: 0x000D31CC File Offset: 0x000D13CC
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -55,13 +52,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E72 RID: 11890
+		// Token: 0x0400313A RID: 12602
 		private IQuickHackSkillContent Instance;
 
-		// Token: 0x04002E73 RID: 11891
+		// Token: 0x0400313B RID: 12603
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002E74 RID: 11892
+		// Token: 0x0400313C RID: 12604
 		private bool _ActionsInited;
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006062 RID: 24674
+	// Token: 0x02004FE0 RID: 20448
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 	})]
 	public class SpringManorBrochureItem : GridProxyAbstract<BrochureItemData>
 	{
-		// Token: 0x0603E6A2 RID: 255650 RVA: 0x00F137B8 File Offset: 0x00F119B8
+		// Token: 0x06033366 RID: 209766 RVA: 0x00E5A57C File Offset: 0x00E5877C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E6A3 RID: 255651 RVA: 0x00F1388F File Offset: 0x00F11A8F
+		// Token: 0x06033367 RID: 209767 RVA: 0x00E5A653 File Offset: 0x00E58853
 		protected override void OnStart()
 		{
 			AUIBaseActor rootActor = this.RootActor;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603E6A4 RID: 255652 RVA: 0x00F138C4 File Offset: 0x00F11AC4
+		// Token: 0x06033368 RID: 209768 RVA: 0x00E5A688 File Offset: 0x00E58888
 		[NullableContext(1)]
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6A5 RID: 255653 RVA: 0x00F138E9 File Offset: 0x00F11AE9
+		// Token: 0x06033369 RID: 209769 RVA: 0x00E5A6AD File Offset: 0x00E588AD
 		private void OnClick()
 		{
 			if (this.OnToggleCallBack != null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6A6 RID: 255654 RVA: 0x00F13904 File Offset: 0x00F11B04
+		// Token: 0x0603336A RID: 209770 RVA: 0x00E5A6C8 File Offset: 0x00E588C8
 		private void OnClickGetButton()
 		{
 			if (this.OnClickGetButtonCallBack != null)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6A7 RID: 255655 RVA: 0x00F1391F File Offset: 0x00F11B1F
+		// Token: 0x0603336B RID: 209771 RVA: 0x00E5A6E3 File Offset: 0x00E588E3
 		public void SetToggleCallBack([Nullable(new byte[]
 		{
 			1,
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.OnToggleCallBack = callBack;
 		}
 
-		// Token: 0x0603E6A8 RID: 255656 RVA: 0x00F13928 File Offset: 0x00F11B28
+		// Token: 0x0603336C RID: 209772 RVA: 0x00E5A6EC File Offset: 0x00E588EC
 		public void SetClickGetButtonCallBack([Nullable(new byte[]
 		{
 			1,
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.OnClickGetButtonCallBack = callBack;
 		}
 
-		// Token: 0x0603E6A9 RID: 255657 RVA: 0x00F13934 File Offset: 0x00F11B34
+		// Token: 0x0603336D RID: 209773 RVA: 0x00E5A6F8 File Offset: 0x00E588F8
 		[NullableContext(1)]
 		public override void Refresh(BrochureItemData data, bool isSelected, int gridIndex)
 		{
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.PlayRewardSequence(ebrochureState == EBrochureState.Unlock);
 		}
 
-		// Token: 0x0603E6AA RID: 255658 RVA: 0x00F13B28 File Offset: 0x00F11D28
+		// Token: 0x0603336E RID: 209774 RVA: 0x00E5A8EC File Offset: 0x00E58AEC
 		private void PlayRewardSequence(bool isPlay)
 		{
 			if (isPlay)
@@ -184,14 +184,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6AB RID: 255659 RVA: 0x00F13B70 File Offset: 0x00F11D70
+		// Token: 0x0603336F RID: 209775 RVA: 0x00E5A934 File Offset: 0x00E58B34
 		private bool IsNeedPlayUnlockSequence(int configId)
 		{
 			HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.SpringManorBrochureUnlockSequencePlayed, null);
 			return player == null || !player.Contains(configId);
 		}
 
-		// Token: 0x0603E6AC RID: 255660 RVA: 0x00F13B98 File Offset: 0x00F11D98
+		// Token: 0x06033370 RID: 209776 RVA: 0x00E5A95C File Offset: 0x00E58B5C
 		public void CheckPlayUnlockSequence()
 		{
 			if (this.Data == null)
@@ -215,19 +215,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x040209E3 RID: 133603
+		// Token: 0x0401B310 RID: 111376
 		private Action<BrochureItemData> OnToggleCallBack;
 
-		// Token: 0x040209E4 RID: 133604
+		// Token: 0x0401B311 RID: 111377
 		private Action<BrochureItemData> OnClickGetButtonCallBack;
 
-		// Token: 0x040209E5 RID: 133605
+		// Token: 0x0401B312 RID: 111378
 		private BrochureItemData Data;
 
-		// Token: 0x040209E6 RID: 133606
+		// Token: 0x0401B313 RID: 111379
 		private UUITextureTransitionComponent TextureTransitionComp;
 
-		// Token: 0x040209E7 RID: 133607
+		// Token: 0x0401B314 RID: 111380
 		private LevelSequencePlayer SequencePlayer;
 	}
 }

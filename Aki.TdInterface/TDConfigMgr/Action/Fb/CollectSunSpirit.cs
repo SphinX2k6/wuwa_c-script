@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB4 RID: 10932
+	// Token: 0x02002DA8 RID: 11688
 	public class CollectSunSpirit : ActionParams
 	{
-		// Token: 0x0600EFF6 RID: 61430 RVA: 0x0022DD25 File Offset: 0x0022BF25
-		[NullableContext(1)]
+		// Token: 0x0600FEAC RID: 65196 RVA: 0x0024BA31 File Offset: 0x00249C31
 		public static CollectSunSpirit Create(ICollectSunSpirit? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04008402 RID: 33794
+		// Token: 0x04008B06 RID: 35590
 		private ICollectSunSpirit Instance;
 	}
 }

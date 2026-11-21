@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02001340 RID: 4928
+// Token: 0x020007F4 RID: 2036
 public enum EMemoryContentId
 {
-	// Token: 0x04003D2B RID: 15659
+	// Token: 0x04003DC3 RID: 15811
 	AccumulatePopularity = 1,
-	// Token: 0x04003D2C RID: 15660
+	// Token: 0x04003DC4 RID: 15812
 	AccumulateCoin,
-	// Token: 0x04003D2D RID: 15661
+	// Token: 0x04003DC5 RID: 15813
 	AccumulateWish,
-	// Token: 0x04003D2E RID: 15662
+	// Token: 0x04003DC6 RID: 15814
 	UnlockBuildingCount,
-	// Token: 0x04003D2F RID: 15663
+	// Token: 0x04003DC7 RID: 15815
 	AccumulateDelegate,
-	// Token: 0x04003D30 RID: 15664
+	// Token: 0x04003DC8 RID: 15816
 	UnlockRoleCount,
-	// Token: 0x04003D31 RID: 15665
+	// Token: 0x04003DC9 RID: 15817
 	MostOfDelegate,
-	// Token: 0x04003D32 RID: 15666
+	// Token: 0x04003DCA RID: 15818
 	HighestLevelRole,
-	// Token: 0x04003D33 RID: 15667
+	// Token: 0x04003DCB RID: 15819
 	MostOfRole
 }

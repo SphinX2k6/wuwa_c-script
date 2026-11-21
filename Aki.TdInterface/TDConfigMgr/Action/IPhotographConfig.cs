@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CEC RID: 7404
+	// Token: 0x02001EFB RID: 7931
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPhotographConfig
 	{
-		// Token: 0x06009EE5 RID: 40677 RVA: 0x0016B340 File Offset: 0x00169540
-		[NullableContext(1)]
+		// Token: 0x0600A8C5 RID: 43205 RVA: 0x0017F5A0 File Offset: 0x0017D7A0
+		[NullableContext(0)]
 		private IPhotographConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009EE6 RID: 40678 RVA: 0x0016B378 File Offset: 0x00169578
-		[NullableContext(1)]
+		// Token: 0x0600A8C6 RID: 43206 RVA: 0x0017F5D8 File Offset: 0x0017D7D8
+		[NullableContext(0)]
 		public static IPhotographConfig Create([Nullable(2)] IPhotographConfig instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EE7 RID: 40679 RVA: 0x0016B38B File Offset: 0x0016958B
-		[NullableContext(1)]
+		// Token: 0x0600A8C7 RID: 43207 RVA: 0x0017F5EB File Offset: 0x0017D7EB
+		[NullableContext(0)]
 		public static IPhotographConfig CreateFromSetValue([Nullable(2)] IPhotographConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EE8 RID: 40680 RVA: 0x0016B39E File Offset: 0x0016959E
-		[NullableContext(1)]
+		// Token: 0x0600A8C8 RID: 43208 RVA: 0x0017F5FE File Offset: 0x0017D7FE
+		[NullableContext(0)]
 		public IPhotographConfig_SetValue ToSetValue()
 		{
 			return new IPhotographConfig_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003167 RID: 12647
-		// (get) Token: 0x06009EE9 RID: 40681 RVA: 0x0016B3C9 File Offset: 0x001695C9
-		// (set) Token: 0x06009EEA RID: 40682 RVA: 0x0016B3F0 File Offset: 0x001695F0
+		// Token: 0x170033F8 RID: 13304
+		// (get) Token: 0x0600A8C9 RID: 43209 RVA: 0x0017F629 File Offset: 0x0017D829
+		// (set) Token: 0x0600A8CA RID: 43210 RVA: 0x0017F650 File Offset: 0x0017D850
 		public virtual List<int> PhotoTargets
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003168 RID: 12648
-		// (get) Token: 0x06009EEB RID: 40683 RVA: 0x0016B400 File Offset: 0x00169600
-		// (set) Token: 0x06009EEC RID: 40684 RVA: 0x0016B461 File Offset: 0x00169661
+		// Token: 0x170033F9 RID: 13305
+		// (get) Token: 0x0600A8CB RID: 43211 RVA: 0x0017F660 File Offset: 0x0017D860
+		// (set) Token: 0x0600A8CC RID: 43212 RVA: 0x0017F6C1 File Offset: 0x0017D8C1
 		public virtual IPhotographPlayerPerform PlayerPerform
 		{
 			get
@@ -120,9 +120,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003169 RID: 12649
-		// (get) Token: 0x06009EED RID: 40685 RVA: 0x0016B478 File Offset: 0x00169678
-		// (set) Token: 0x06009EEE RID: 40686 RVA: 0x0016B4D9 File Offset: 0x001696D9
+		// Token: 0x170033FA RID: 13306
+		// (get) Token: 0x0600A8CD RID: 43213 RVA: 0x0017F6D8 File Offset: 0x0017D8D8
+		// (set) Token: 0x0600A8CE RID: 43214 RVA: 0x0017F739 File Offset: 0x0017D939
 		public virtual IPhotographCameraParams CameraParams
 		{
 			get
@@ -150,24 +150,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FF8 RID: 24568
+		// Token: 0x0400656B RID: 25963
 		protected IPhotographConfig FbInstance;
 
-		// Token: 0x04005FF9 RID: 24569
+		// Token: 0x0400656C RID: 25964
 		protected IPhotographConfig_SetValue PocoInterface;
 
-		// Token: 0x04005FFA RID: 24570
-		[Nullable(1)]
+		// Token: 0x0400656D RID: 25965
+		[Nullable(0)]
 		private IPhotographPlayerPerform _PlayerPerformCache;
 
-		// Token: 0x04005FFB RID: 24571
+		// Token: 0x0400656E RID: 25966
 		private bool _PlayerPerformInited;
 
-		// Token: 0x04005FFC RID: 24572
-		[Nullable(1)]
+		// Token: 0x0400656F RID: 25967
+		[Nullable(0)]
 		private IPhotographCameraParams _CameraParamsCache;
 
-		// Token: 0x04005FFD RID: 24573
+		// Token: 0x04006570 RID: 25968
 		private bool _CameraParamsInited;
 	}
 }

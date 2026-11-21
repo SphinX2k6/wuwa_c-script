@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010E7 RID: 4327
+	// Token: 0x02001215 RID: 4629
 	public class IRecallEntityList_SetValue
 	{
-		// Token: 0x04003AD9 RID: 15065
+		// Token: 0x04003E26 RID: 15910
 		public int LevelId;
 
-		// Token: 0x04003ADA RID: 15066
-		[Nullable(1)]
+		// Token: 0x04003E27 RID: 15911
 		public List<int> EntityList;
 	}
 }

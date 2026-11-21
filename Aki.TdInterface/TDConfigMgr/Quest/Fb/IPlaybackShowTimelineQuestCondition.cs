@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013D1 RID: 5073
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001528 RID: 5416
 	public class IPlaybackShowTimelineQuestCondition : IQuestCondition
 	{
-		// Token: 0x060073CC RID: 29644 RVA: 0x00115AC1 File Offset: 0x00113CC1
+		// Token: 0x06007A8D RID: 31373 RVA: 0x001244A5 File Offset: 0x001226A5
 		public static IPlaybackShowTimelineQuestCondition Create(IPlaybackShowTimelineQuestCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025FD RID: 9725
-		// (get) Token: 0x060073CD RID: 29645 RVA: 0x00115AE0 File Offset: 0x00113CE0
+		// Token: 0x170027DF RID: 10207
+		// (get) Token: 0x06007A8E RID: 31374 RVA: 0x001244C4 File Offset: 0x001226C4
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025FE RID: 9726
-		// (get) Token: 0x060073CE RID: 29646 RVA: 0x00115AED File Offset: 0x00113CED
+		// Token: 0x170027E0 RID: 10208
+		// (get) Token: 0x06007A8F RID: 31375 RVA: 0x001244D1 File Offset: 0x001226D1
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025FF RID: 9727
-		// (get) Token: 0x060073CF RID: 29647 RVA: 0x00115B21 File Offset: 0x00113D21
+		// Token: 0x170027E1 RID: 10209
+		// (get) Token: 0x06007A90 RID: 31376 RVA: 0x00124505 File Offset: 0x00122705
 		public virtual string ShowTimelineFileName
 		{
 			get
@@ -61,14 +59,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400430B RID: 17163
+		// Token: 0x0400469C RID: 18076
 		private IPlaybackShowTimelineQuestCondition Instance;
 
-		// Token: 0x0400430C RID: 17164
+		// Token: 0x0400469D RID: 18077
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400430D RID: 17165
+		// Token: 0x0400469E RID: 18078
 		private bool _PreConditionsInited;
 	}
 }

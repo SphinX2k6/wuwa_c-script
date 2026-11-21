@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002424 RID: 9252
+	// Token: 0x020026C3 RID: 9923
 	public class ESpecialCustomLoadingTypeJsonConverter : JsonConverter<ESpecialCustomLoadingType>
 	{
-		// Token: 0x0600C922 RID: 51490 RVA: 0x001D73DC File Offset: 0x001D55DC
+		// Token: 0x0600D5C9 RID: 54729 RVA: 0x001F10B0 File Offset: 0x001EF2B0
 		public override ESpecialCustomLoadingType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESpecialCustomLoadingTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C923 RID: 51491 RVA: 0x001D7400 File Offset: 0x001D5600
+		// Token: 0x0600D5CA RID: 54730 RVA: 0x001F10D4 File Offset: 0x001EF2D4
 		public override void Write(Utf8JsonWriter writer, ESpecialCustomLoadingType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

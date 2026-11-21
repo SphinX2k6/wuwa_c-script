@@ -4,21 +4,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000186 RID: 390
+	// Token: 0x0200018A RID: 394
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IQueryGoodsResponse
 	{
-		// Token: 0x040006BA RID: 1722
+		// Token: 0x040006F5 RID: 1781
 		public List<IQueryGoodsResponseData> data;
 
-		// Token: 0x040006BB RID: 1723
+		// Token: 0x040006F6 RID: 1782
 		public int code;
 
-		// Token: 0x040006BC RID: 1724
+		// Token: 0x040006F7 RID: 1783
 		public string msg;
 
-		// Token: 0x040006BD RID: 1725
+		// Token: 0x040006F8 RID: 1784
 		public long timestamp;
 	}
 }

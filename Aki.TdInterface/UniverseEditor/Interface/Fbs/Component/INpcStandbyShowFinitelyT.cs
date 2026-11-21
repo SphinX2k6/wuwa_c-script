@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200565A RID: 22106
+	// Token: 0x02005BFB RID: 23547
 	public class INpcStandbyShowFinitelyT
 	{
-		// Token: 0x1700A3B8 RID: 41912
-		// (get) Token: 0x06024C0B RID: 150539 RVA: 0x00512328 File Offset: 0x00510528
-		// (set) Token: 0x06024C0C RID: 150540 RVA: 0x00512330 File Offset: 0x00510530
+		// Token: 0x1700AC47 RID: 44103
+		// (get) Token: 0x06026E44 RID: 159300 RVA: 0x00552EC4 File Offset: 0x005510C4
+		// (set) Token: 0x06026E45 RID: 159301 RVA: 0x00552ECC File Offset: 0x005510CC
 		public ENpcStandbyShowMode Type { get; set; }
 
-		// Token: 0x1700A3B9 RID: 41913
-		// (get) Token: 0x06024C0D RID: 150541 RVA: 0x00512339 File Offset: 0x00510539
-		// (set) Token: 0x06024C0E RID: 150542 RVA: 0x00512341 File Offset: 0x00510541
+		// Token: 0x1700AC48 RID: 44104
+		// (get) Token: 0x06026E46 RID: 159302 RVA: 0x00552ED5 File Offset: 0x005510D5
+		// (set) Token: 0x06026E47 RID: 159303 RVA: 0x00552EDD File Offset: 0x005510DD
 		public List<INpcLookAtConfigT> LookAtConfigs { get; set; }
 
-		// Token: 0x1700A3BA RID: 41914
-		// (get) Token: 0x06024C0F RID: 150543 RVA: 0x0051234A File Offset: 0x0051054A
-		// (set) Token: 0x06024C10 RID: 150544 RVA: 0x00512352 File Offset: 0x00510552
+		// Token: 0x1700AC49 RID: 44105
+		// (get) Token: 0x06026E48 RID: 159304 RVA: 0x00552EE6 File Offset: 0x005510E6
+		// (set) Token: 0x06026E49 RID: 159305 RVA: 0x00552EEE File Offset: 0x005510EE
 		public ENpcStandbyShowFinitelyPlayMode PlayMode { get; set; }
 
-		// Token: 0x1700A3BB RID: 41915
-		// (get) Token: 0x06024C11 RID: 150545 RVA: 0x0051235B File Offset: 0x0051055B
-		// (set) Token: 0x06024C12 RID: 150546 RVA: 0x00512363 File Offset: 0x00510563
+		// Token: 0x1700AC4A RID: 44106
+		// (get) Token: 0x06026E4A RID: 159306 RVA: 0x00552EF7 File Offset: 0x005510F7
+		// (set) Token: 0x06026E4B RID: 159307 RVA: 0x00552EFF File Offset: 0x005510FF
 		public List<INpcStandbyShowFinitelyInfoT> Montages { get; set; }
 
-		// Token: 0x1700A3BC RID: 41916
-		// (get) Token: 0x06024C13 RID: 150547 RVA: 0x0051236C File Offset: 0x0051056C
-		// (set) Token: 0x06024C14 RID: 150548 RVA: 0x00512374 File Offset: 0x00510574
+		// Token: 0x1700AC4B RID: 44107
+		// (get) Token: 0x06026E4C RID: 159308 RVA: 0x00552F08 File Offset: 0x00551108
+		// (set) Token: 0x06026E4D RID: 159309 RVA: 0x00552F10 File Offset: 0x00551110
 		public byte NullMask { get; set; }
 
-		// Token: 0x06024C15 RID: 150549 RVA: 0x0051237D File Offset: 0x0051057D
+		// Token: 0x06026E4E RID: 159310 RVA: 0x00552F19 File Offset: 0x00551119
 		public INpcStandbyShowFinitelyT()
 		{
 			this.Type = ENpcStandbyShowMode.Finite;

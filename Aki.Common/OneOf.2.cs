@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEquatable<OneOf<T1, T2, T3>>, IOneOfObject
 {
 	// Token: 0x17000006 RID: 6
-	// (get) Token: 0x06000021 RID: 33 RVA: 0x00002E9C File Offset: 0x0000109C
+	// (get) Token: 0x06000021 RID: 33 RVA: 0x00002ED4 File Offset: 0x000010D4
 	public readonly bool HasValue
 	{
 		get
@@ -20,7 +20,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 	}
 
 	// Token: 0x17000007 RID: 7
-	// (get) Token: 0x06000022 RID: 34 RVA: 0x00002EA7 File Offset: 0x000010A7
+	// (get) Token: 0x06000022 RID: 34 RVA: 0x00002EDF File Offset: 0x000010DF
 	public readonly bool IsT1
 	{
 		get
@@ -30,7 +30,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 	}
 
 	// Token: 0x17000008 RID: 8
-	// (get) Token: 0x06000023 RID: 35 RVA: 0x00002EB2 File Offset: 0x000010B2
+	// (get) Token: 0x06000023 RID: 35 RVA: 0x00002EEA File Offset: 0x000010EA
 	public readonly bool IsT2
 	{
 		get
@@ -40,7 +40,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 	}
 
 	// Token: 0x17000009 RID: 9
-	// (get) Token: 0x06000024 RID: 36 RVA: 0x00002EBD File Offset: 0x000010BD
+	// (get) Token: 0x06000024 RID: 36 RVA: 0x00002EF5 File Offset: 0x000010F5
 	public readonly bool IsT3
 	{
 		get
@@ -49,7 +49,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		}
 	}
 
-	// Token: 0x06000025 RID: 37 RVA: 0x00002EC8 File Offset: 0x000010C8
+	// Token: 0x06000025 RID: 37 RVA: 0x00002F00 File Offset: 0x00001100
 	public void Clear()
 	{
 		this._typeIndex = 0;
@@ -68,7 +68,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 	}
 
 	// Token: 0x1700000A RID: 10
-	// (get) Token: 0x06000026 RID: 38 RVA: 0x00002F18 File Offset: 0x00001118
+	// (get) Token: 0x06000026 RID: 38 RVA: 0x00002F50 File Offset: 0x00001150
 	public readonly T1 AsT1
 	{
 		get
@@ -85,7 +85,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 	}
 
 	// Token: 0x1700000B RID: 11
-	// (get) Token: 0x06000027 RID: 39 RVA: 0x00002F68 File Offset: 0x00001168
+	// (get) Token: 0x06000027 RID: 39 RVA: 0x00002FA0 File Offset: 0x000011A0
 	public readonly T2 AsT2
 	{
 		get
@@ -102,7 +102,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 	}
 
 	// Token: 0x1700000C RID: 12
-	// (get) Token: 0x06000028 RID: 40 RVA: 0x00002FB8 File Offset: 0x000011B8
+	// (get) Token: 0x06000028 RID: 40 RVA: 0x00002FF0 File Offset: 0x000011F0
 	public readonly T3 AsT3
 	{
 		get
@@ -118,7 +118,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		}
 	}
 
-	// Token: 0x06000029 RID: 41 RVA: 0x00003007 File Offset: 0x00001207
+	// Token: 0x06000029 RID: 41 RVA: 0x0000303F File Offset: 0x0000123F
 	public OneOf(T1 value)
 	{
 		this._typeIndex = ((value != null) ? 1 : 0);
@@ -127,7 +127,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		this._value3 = default(T3);
 	}
 
-	// Token: 0x0600002A RID: 42 RVA: 0x00003038 File Offset: 0x00001238
+	// Token: 0x0600002A RID: 42 RVA: 0x00003070 File Offset: 0x00001270
 	public OneOf(T2 value)
 	{
 		this._typeIndex = ((value == null) ? 0 : 2);
@@ -136,7 +136,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		this._value3 = default(T3);
 	}
 
-	// Token: 0x0600002B RID: 43 RVA: 0x0000306B File Offset: 0x0000126B
+	// Token: 0x0600002B RID: 43 RVA: 0x000030A3 File Offset: 0x000012A3
 	public OneOf(T3 value)
 	{
 		this._typeIndex = ((value == null) ? 0 : 3);
@@ -145,7 +145,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		this._value2 = default(T2);
 	}
 
-	// Token: 0x0600002C RID: 44 RVA: 0x0000309E File Offset: 0x0000129E
+	// Token: 0x0600002C RID: 44 RVA: 0x000030D6 File Offset: 0x000012D6
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -158,7 +158,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>(value);
 	}
 
-	// Token: 0x0600002D RID: 45 RVA: 0x000030A6 File Offset: 0x000012A6
+	// Token: 0x0600002D RID: 45 RVA: 0x000030DE File Offset: 0x000012DE
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -171,7 +171,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>(value);
 	}
 
-	// Token: 0x0600002E RID: 46 RVA: 0x000030AE File Offset: 0x000012AE
+	// Token: 0x0600002E RID: 46 RVA: 0x000030E6 File Offset: 0x000012E6
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -184,7 +184,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>(value);
 	}
 
-	// Token: 0x0600002F RID: 47 RVA: 0x000030B6 File Offset: 0x000012B6
+	// Token: 0x0600002F RID: 47 RVA: 0x000030EE File Offset: 0x000012EE
 	public static explicit operator T1([Nullable(new byte[]
 	{
 		0,
@@ -196,7 +196,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return oneOf.AsT1;
 	}
 
-	// Token: 0x06000030 RID: 48 RVA: 0x000030BF File Offset: 0x000012BF
+	// Token: 0x06000030 RID: 48 RVA: 0x000030F7 File Offset: 0x000012F7
 	public static explicit operator T2([Nullable(new byte[]
 	{
 		0,
@@ -208,7 +208,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return oneOf.AsT2;
 	}
 
-	// Token: 0x06000031 RID: 49 RVA: 0x000030C8 File Offset: 0x000012C8
+	// Token: 0x06000031 RID: 49 RVA: 0x00003100 File Offset: 0x00001300
 	public static explicit operator T3([Nullable(new byte[]
 	{
 		0,
@@ -220,7 +220,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return oneOf.AsT3;
 	}
 
-	// Token: 0x06000032 RID: 50 RVA: 0x000030D1 File Offset: 0x000012D1
+	// Token: 0x06000032 RID: 50 RVA: 0x00003109 File Offset: 0x00001309
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -234,7 +234,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>((T1)((object)t1));
 	}
 
-	// Token: 0x06000033 RID: 51 RVA: 0x000030E3 File Offset: 0x000012E3
+	// Token: 0x06000033 RID: 51 RVA: 0x0000311B File Offset: 0x0000131B
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -248,7 +248,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>((T2)((object)t2));
 	}
 
-	// Token: 0x06000034 RID: 52 RVA: 0x000030F5 File Offset: 0x000012F5
+	// Token: 0x06000034 RID: 52 RVA: 0x0000312D File Offset: 0x0000132D
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -262,7 +262,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>((T3)((object)t3));
 	}
 
-	// Token: 0x06000035 RID: 53 RVA: 0x00003108 File Offset: 0x00001308
+	// Token: 0x06000035 RID: 53 RVA: 0x00003140 File Offset: 0x00001340
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -280,7 +280,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>((T1)((object)t1.Value));
 	}
 
-	// Token: 0x06000036 RID: 54 RVA: 0x00003140 File Offset: 0x00001340
+	// Token: 0x06000036 RID: 54 RVA: 0x00003178 File Offset: 0x00001378
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -298,7 +298,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>((T2)((object)t2.Value));
 	}
 
-	// Token: 0x06000037 RID: 55 RVA: 0x00003178 File Offset: 0x00001378
+	// Token: 0x06000037 RID: 55 RVA: 0x000031B0 File Offset: 0x000013B0
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -316,7 +316,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return new OneOf<T1, T2, T3>((T3)((object)t3.Value));
 	}
 
-	// Token: 0x06000038 RID: 56 RVA: 0x000031B0 File Offset: 0x000013B0
+	// Token: 0x06000038 RID: 56 RVA: 0x000031E8 File Offset: 0x000013E8
 	public readonly TResult Match<[Nullable(2)] TResult>(Func<T1, TResult> t1, Func<T2, TResult> t2, Func<T3, TResult> t3)
 	{
 		switch (this._typeIndex)
@@ -332,7 +332,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		}
 	}
 
-	// Token: 0x06000039 RID: 57 RVA: 0x0000320C File Offset: 0x0000140C
+	// Token: 0x06000039 RID: 57 RVA: 0x00003244 File Offset: 0x00001444
 	[NullableContext(2)]
 	public readonly object GetValue()
 	{
@@ -349,7 +349,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		}
 	}
 
-	// Token: 0x0600003A RID: 58 RVA: 0x00003264 File Offset: 0x00001464
+	// Token: 0x0600003A RID: 58 RVA: 0x0000329C File Offset: 0x0000149C
 	public readonly void Switch(Action<T1> t1, Action<T2> t2, Action<T3> t3)
 	{
 		switch (this._typeIndex)
@@ -368,7 +368,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		}
 	}
 
-	// Token: 0x0600003B RID: 59 RVA: 0x000032C0 File Offset: 0x000014C0
+	// Token: 0x0600003B RID: 59 RVA: 0x000032F8 File Offset: 0x000014F8
 	public override readonly string ToString()
 	{
 		switch (this._typeIndex)
@@ -393,7 +393,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		}
 	}
 
-	// Token: 0x0600003C RID: 60 RVA: 0x00003380 File Offset: 0x00001580
+	// Token: 0x0600003C RID: 60 RVA: 0x000033B8 File Offset: 0x000015B8
 	public readonly bool Equals([Nullable(new byte[]
 	{
 		0,
@@ -425,7 +425,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return result;
 	}
 
-	// Token: 0x0600003D RID: 61 RVA: 0x00003408 File Offset: 0x00001608
+	// Token: 0x0600003D RID: 61 RVA: 0x00003440 File Offset: 0x00001640
 	public override readonly int GetHashCode()
 	{
 		int result;
@@ -447,7 +447,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return result;
 	}
 
-	// Token: 0x0600003E RID: 62 RVA: 0x00003470 File Offset: 0x00001670
+	// Token: 0x0600003E RID: 62 RVA: 0x000034A8 File Offset: 0x000016A8
 	[NullableContext(2)]
 	public override readonly bool Equals(object obj)
 	{
@@ -459,7 +459,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return false;
 	}
 
-	// Token: 0x0600003F RID: 63 RVA: 0x00003495 File Offset: 0x00001695
+	// Token: 0x0600003F RID: 63 RVA: 0x000034CD File Offset: 0x000016CD
 	public static bool operator ==([Nullable(new byte[]
 	{
 		0,
@@ -477,7 +477,7 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return left.Equals(right);
 	}
 
-	// Token: 0x06000040 RID: 64 RVA: 0x0000349F File Offset: 0x0000169F
+	// Token: 0x06000040 RID: 64 RVA: 0x000034D7 File Offset: 0x000016D7
 	public static bool operator !=([Nullable(new byte[]
 	{
 		0,
@@ -495,15 +495,15 @@ public struct OneOf<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3> : IEqu
 		return !left.Equals(right);
 	}
 
-	// Token: 0x04000210 RID: 528
+	// Token: 0x04000215 RID: 533
 	private byte _typeIndex;
 
-	// Token: 0x04000211 RID: 529
+	// Token: 0x04000216 RID: 534
 	private T1 _value1;
 
-	// Token: 0x04000212 RID: 530
+	// Token: 0x04000217 RID: 535
 	private T2 _value2;
 
-	// Token: 0x04000213 RID: 531
+	// Token: 0x04000218 RID: 536
 	private T3 _value3;
 }

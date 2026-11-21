@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014B1 RID: 5297
+	// Token: 0x0200160A RID: 5642
 	public class BvbPlayDialog_SetValue
 	{
-		// Token: 0x04004613 RID: 17939
+		// Token: 0x040049AE RID: 18862
 		public EBvbPlayDialogType DialogType;
 	}
 }

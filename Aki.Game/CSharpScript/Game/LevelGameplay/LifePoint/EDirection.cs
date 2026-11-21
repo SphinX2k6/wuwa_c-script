@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LifePoint
 {
-	// Token: 0x02006AC9 RID: 27337
+	// Token: 0x02005C41 RID: 23617
 	public enum EDirection
 	{
-		// Token: 0x040237EC RID: 145388
+		// Token: 0x0401EA8C RID: 125580
 		Up,
-		// Token: 0x040237ED RID: 145389
+		// Token: 0x0401EA8D RID: 125581
 		Down,
-		// Token: 0x040237EE RID: 145390
+		// Token: 0x0401EA8E RID: 125582
 		Left,
-		// Token: 0x040237EF RID: 145391
+		// Token: 0x0401EA8F RID: 125583
 		Right,
-		// Token: 0x040237F0 RID: 145392
+		// Token: 0x0401EA90 RID: 125584
 		Center
 	}
 }

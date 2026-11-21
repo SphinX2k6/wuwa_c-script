@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005422 RID: 21538
+	// Token: 0x02004405 RID: 17413
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LogUploadView : UiViewBase
 	{
-		// Token: 0x06037082 RID: 225410 RVA: 0x00D0A2BB File Offset: 0x00D084BB
+		// Token: 0x0602BFCB RID: 180171 RVA: 0x00C596DB File Offset: 0x00C578DB
 		[NullableContext(1)]
 		public LogUploadView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06037083 RID: 225411 RVA: 0x00D0A2CC File Offset: 0x00D084CC
+		// Token: 0x0602BFCC RID: 180172 RVA: 0x00C596EC File Offset: 0x00C578EC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,19 +42,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x06037084 RID: 225412 RVA: 0x00D0A3A1 File Offset: 0x00D085A1
+		// Token: 0x0602BFCD RID: 180173 RVA: 0x00C597C1 File Offset: 0x00C579C1
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.SdkCustomerRedPointRefresh, new Action(this.RefreshRedDot));
 		}
 
-		// Token: 0x06037085 RID: 225413 RVA: 0x00D0A3BF File Offset: 0x00D085BF
+		// Token: 0x0602BFCE RID: 180174 RVA: 0x00C597DF File Offset: 0x00C579DF
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.SdkCustomerRedPointRefresh, new Action(this.RefreshRedDot));
 		}
 
-		// Token: 0x06037086 RID: 225414 RVA: 0x00D0A3E0 File Offset: 0x00D085E0
+		// Token: 0x0602BFCF RID: 180175 RVA: 0x00C59800 File Offset: 0x00C57A00
 		protected void RefreshRedDot()
 		{
 			bool customerServiceRedPointState = global::KuroSdkController.Instance.GetCustomerServiceRedPointState();
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			contactButton.SetRedDotVisible(customerServiceRedPointState);
 		}
 
-		// Token: 0x06037087 RID: 225415 RVA: 0x00D0A40C File Offset: 0x00D0860C
+		// Token: 0x0602BFD0 RID: 180176 RVA: 0x00C5982C File Offset: 0x00C57A2C
 		protected override void OnStart()
 		{
 			if (this.OpenParam != null)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.UploadState = EUploadState.Wait;
 		}
 
-		// Token: 0x06037088 RID: 225416 RVA: 0x00D0A549 File Offset: 0x00D08749
+		// Token: 0x0602BFD1 RID: 180177 RVA: 0x00C59969 File Offset: 0x00C57B69
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearDelegate();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			contactButton.Destroy(null);
 		}
 
-		// Token: 0x06037089 RID: 225417 RVA: 0x00D0A570 File Offset: 0x00D08770
+		// Token: 0x0602BFD2 RID: 180178 RVA: 0x00C59990 File Offset: 0x00C57B90
 		private void OnUploadConfirmToggleClick(EToggleState state)
 		{
 			if (this.AutoStartUpload)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.IsConfirmUpload = (state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0603708A RID: 225418 RVA: 0x00D0A585 File Offset: 0x00D08785
+		// Token: 0x0602BFD3 RID: 180179 RVA: 0x00C599A5 File Offset: 0x00C57BA5
 		private void OnOpenCustomerService(int _)
 		{
 			if (this.OpenSourceType == EKuroSdkOpenCustomerServerType.Setting)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			global::KuroSdkController.Instance.OpenCustomerService(this.OpenSourceType);
 		}
 
-		// Token: 0x0603708B RID: 225419 RVA: 0x00D0A5AC File Offset: 0x00D087AC
+		// Token: 0x0602BFD4 RID: 180180 RVA: 0x00C599CC File Offset: 0x00C57BCC
 		private void OnConfirm(int _)
 		{
 			switch (this.UploadState)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x0603708C RID: 225420 RVA: 0x00D0A643 File Offset: 0x00D08843
+		// Token: 0x0602BFD5 RID: 180181 RVA: 0x00C59A63 File Offset: 0x00C57C63
 		private void OnClose()
 		{
 			if (this.UploadState == EUploadState.Uploading && !this.InterruptUploadLog())
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603708D RID: 225421 RVA: 0x00D0A65E File Offset: 0x00D0885E
+		// Token: 0x0602BFD6 RID: 180182 RVA: 0x00C59A7E File Offset: 0x00C57C7E
 		private void TrySetContactButtonVisible(bool bVisible)
 		{
 			if (!bVisible)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.ContactButton.SetActive(true);
 		}
 
-		// Token: 0x0603708E RID: 225422 RVA: 0x00D0A695 File Offset: 0x00D08895
+		// Token: 0x0602BFD7 RID: 180183 RVA: 0x00C59AB5 File Offset: 0x00C57CB5
 		private void ClearDelegate()
 		{
 			UKuroTencentCOSLibrary.ClearAllProgressCallback();
@@ -217,9 +217,9 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x1700843C RID: 33852
-		// (get) Token: 0x0603708F RID: 225423 RVA: 0x00D0A6BC File Offset: 0x00D088BC
-		// (set) Token: 0x06037090 RID: 225424 RVA: 0x00D0A6C4 File Offset: 0x00D088C4
+		// Token: 0x17005808 RID: 22536
+		// (get) Token: 0x0602BFD8 RID: 180184 RVA: 0x00C59ADC File Offset: 0x00C57CDC
+		// (set) Token: 0x0602BFD9 RID: 180185 RVA: 0x00C59AE4 File Offset: 0x00C57CE4
 		private EUploadState UploadState
 		{
 			get
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x06037091 RID: 225425 RVA: 0x00D0A904 File Offset: 0x00D08B04
+		// Token: 0x0602BFDA RID: 180186 RVA: 0x00C59D24 File Offset: 0x00C57F24
 		private unsafe bool CheckTimeIntervalLegal()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("LogUploadTimeInterval");
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return false;
 		}
 
-		// Token: 0x06037092 RID: 225426 RVA: 0x00D0AA24 File Offset: 0x00D08C24
+		// Token: 0x0602BFDB RID: 180187 RVA: 0x00C59E44 File Offset: 0x00C58044
 		private void StartUploadLog()
 		{
 			this.Rate = 0f;
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			});
 		}
 
-		// Token: 0x06037093 RID: 225427 RVA: 0x00D0AB08 File Offset: 0x00D08D08
+		// Token: 0x0602BFDC RID: 180188 RVA: 0x00C59F28 File Offset: 0x00C58128
 		private bool InterruptUploadLog()
 		{
 			if (this.UploadSendState.GetValueOrDefault() == ESendState.ESS_Compressing)
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return false;
 		}
 
-		// Token: 0x06037094 RID: 225428 RVA: 0x00D0AB5C File Offset: 0x00D08D5C
+		// Token: 0x0602BFDD RID: 180189 RVA: 0x00C59F7C File Offset: 0x00C5817C
 		private unsafe void FinishUploadLog()
 		{
 			this.ClearDelegate();
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06037095 RID: 225429 RVA: 0x00D0AC34 File Offset: 0x00D08E34
+		// Token: 0x0602BFDE RID: 180190 RVA: 0x00C5A054 File Offset: 0x00C58254
 		protected void UploadEventCallBack(ESendState state, float rate)
 		{
 			if (this.UploadState != EUploadState.Uploading)
@@ -440,40 +440,40 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.Rate = rate;
 		}
 
-		// Token: 0x0401D08E RID: 118926
+		// Token: 0x04017B27 RID: 97063
 		private bool IsConfirmUpload;
 
-		// Token: 0x0401D08F RID: 118927
+		// Token: 0x04017B28 RID: 97064
 		private EUploadState InnerUploadState;
 
-		// Token: 0x0401D090 RID: 118928
+		// Token: 0x04017B29 RID: 97065
 		private float Rate;
 
-		// Token: 0x0401D091 RID: 118929
+		// Token: 0x04017B2A RID: 97066
 		private UUIText TextDescription;
 
-		// Token: 0x0401D092 RID: 118930
+		// Token: 0x04017B2B RID: 97067
 		private UUISprite SpriteProgress;
 
-		// Token: 0x0401D093 RID: 118931
+		// Token: 0x04017B2C RID: 97068
 		private ButtonItem ContactButton;
 
-		// Token: 0x0401D094 RID: 118932
+		// Token: 0x04017B2D RID: 97069
 		private ButtonItem ConfirmButton;
 
-		// Token: 0x0401D095 RID: 118933
+		// Token: 0x04017B2E RID: 97070
 		protected FOnProgress UploadDelegate;
 
-		// Token: 0x0401D096 RID: 118934
+		// Token: 0x04017B2F RID: 97071
 		private ESendState? UploadSendState;
 
-		// Token: 0x0401D097 RID: 118935
+		// Token: 0x04017B30 RID: 97072
 		private EKuroSdkOpenCustomerServerType OpenSourceType = EKuroSdkOpenCustomerServerType.Login;
 
-		// Token: 0x0401D098 RID: 118936
+		// Token: 0x04017B31 RID: 97073
 		private bool AutoStartUpload;
 
-		// Token: 0x0401D099 RID: 118937
+		// Token: 0x04017B32 RID: 97074
 		private int? ErrorCode;
 	}
 }

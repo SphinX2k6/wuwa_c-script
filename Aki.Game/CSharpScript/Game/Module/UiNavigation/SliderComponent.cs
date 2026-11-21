@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049D4 RID: 18900
+	// Token: 0x0200394E RID: 14670
 	public class SliderComponent : HotKeyComponent
 	{
-		// Token: 0x06031208 RID: 201224 RVA: 0x00B65480 File Offset: 0x00B63680
+		// Token: 0x06025D3E RID: 154942 RVA: 0x00AA03D0 File Offset: 0x00A9E5D0
 		public SliderComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031209 RID: 201225 RVA: 0x00B65489 File Offset: 0x00B63689
+		// Token: 0x06025D3F RID: 154943 RVA: 0x00AA03D9 File Offset: 0x00A9E5D9
 		protected virtual void SetValue(float value)
 		{
 			UiNavigationNewController.Instance.SliderComponentSetValue(base.GetBindButtonTag(), value);
 		}
 
-		// Token: 0x0401A4CB RID: 107723
+		// Token: 0x04014D3D RID: 85309
 		private const float INTERVAL = 0.05f;
 
-		// Token: 0x0401A4CC RID: 107724
+		// Token: 0x04014D3E RID: 85310
 		private const float DEAD_AREA = 0.4f;
 	}
 }

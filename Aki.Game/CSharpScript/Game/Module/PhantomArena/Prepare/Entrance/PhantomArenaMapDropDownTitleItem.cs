@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005177 RID: 20855
+	// Token: 0x02004147 RID: 16711
 	public class PhantomArenaMapDropDownTitleItem : TitleItemBase<int>
 	{
-		// Token: 0x06035547 RID: 218439 RVA: 0x00CA1D76 File Offset: 0x00C9FF76
+		// Token: 0x0602A443 RID: 173123 RVA: 0x00BEF2F2 File Offset: 0x00BED4F2
 		[NullableContext(1)]
 		public PhantomArenaMapDropDownTitleItem(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06035548 RID: 218440 RVA: 0x00CA1D7F File Offset: 0x00C9FF7F
+		// Token: 0x0602A444 RID: 173124 RVA: 0x00BEF2FB File Offset: 0x00BED4FB
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035549 RID: 218441 RVA: 0x00CA1DA4 File Offset: 0x00C9FFA4
+		// Token: 0x0602A445 RID: 173125 RVA: 0x00BEF320 File Offset: 0x00BED520
 		[NullableContext(1)]
 		public override void ShowTemp(int mapId, DropDownItemBase<int> selectedItemObj)
 		{
@@ -52,10 +52,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}));
 		}
 
-		// Token: 0x0200B2E7 RID: 45799
+		// Token: 0x02009D21 RID: 40225
 		private class EPhantomArenaMapDropDownTitleItemComp
 		{
-			// Token: 0x0403635D RID: 222045
+			// Token: 0x04030DB4 RID: 200116
 			public const int Title = 0;
 		}
 	}

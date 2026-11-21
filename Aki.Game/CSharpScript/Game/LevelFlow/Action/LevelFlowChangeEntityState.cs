@@ -6,12 +6,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F80 RID: 28544
+	// Token: 0x02006101 RID: 24833
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelFlowChangeEntityState : LevelFlowActionBase
 	{
-		// Token: 0x060456D3 RID: 284371 RVA: 0x01137183 File Offset: 0x01135383
+		// Token: 0x0603B881 RID: 243841 RVA: 0x010E0F87 File Offset: 0x010DF187
 		[NullableContext(1)]
 		public LevelFlowChangeEntityState Init(ChangeEntityState param)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456D4 RID: 284372 RVA: 0x01137190 File Offset: 0x01135390
+		// Token: 0x0603B882 RID: 243842 RVA: 0x010E0F94 File Offset: 0x010DF194
 		protected unsafe override void OnExecute()
 		{
 			ChangeEntityState @params = this.Params;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x060456D5 RID: 284373 RVA: 0x011372A8 File Offset: 0x011354A8
+		// Token: 0x0603B883 RID: 243843 RVA: 0x010E10AC File Offset: 0x010DF2AC
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			foreach (int pbDataId in this.EntityIds)
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243AD RID: 148397
+		// Token: 0x0401F662 RID: 128610
 		private ChangeEntityState Params;
 
-		// Token: 0x040243AE RID: 148398
+		// Token: 0x0401F663 RID: 128611
 		private int StateId;
 
-		// Token: 0x040243AF RID: 148399
+		// Token: 0x0401F664 RID: 128612
 		private List<int> EntityIds;
 	}
 }

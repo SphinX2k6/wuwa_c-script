@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002971 RID: 10609
+	// Token: 0x0200085D RID: 2141
 	public sealed class FGetSlateVisibility : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060273C9 RID: 160713 RVA: 0x003BD55F File Offset: 0x003BB75F
+		// Token: 0x0600BA33 RID: 47667 RVA: 0x0012A38F File Offset: 0x0012858F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FGetSlateVisibility.StaticFunctionPtr();
 		}
 
-		// Token: 0x060273CA RID: 160714 RVA: 0x003BD56B File Offset: 0x003BB76B
+		// Token: 0x0600BA34 RID: 47668 RVA: 0x0012A39B File Offset: 0x0012859B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (UWidget.__GetSlateVisibility__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return UWidget.__GetSlateVisibility__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x060273CB RID: 160715 RVA: 0x003BD58E File Offset: 0x003BB78E
+		// Token: 0x0600BA35 RID: 47669 RVA: 0x0012A3BE File Offset: 0x001285BE
 		public FGetSlateVisibility()
 		{
 		}
 
-		// Token: 0x060273CC RID: 160716 RVA: 0x003BD596 File Offset: 0x003BB796
+		// Token: 0x0600BA36 RID: 47670 RVA: 0x0012A3C6 File Offset: 0x001285C6
 		[NullableContext(2)]
 		public FGetSlateVisibility(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060273CD RID: 160717 RVA: 0x003BD5A0 File Offset: 0x003BB7A0
+		// Token: 0x0600BA37 RID: 47671 RVA: 0x0012A3D0 File Offset: 0x001285D0
 		public FGetSlateVisibility(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060273CE RID: 160718 RVA: 0x003BD5AB File Offset: 0x003BB7AB
+		// Token: 0x0600BA38 RID: 47672 RVA: 0x0012A3DB File Offset: 0x001285DB
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<ESlateVisibility>) ?? ((Func<ESlateVisibility>)Delegate.CreateDelegate(typeof(Func<ESlateVisibility>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060273CF RID: 160719 RVA: 0x003BD5DD File Offset: 0x003BB7DD
+		// Token: 0x0600BA39 RID: 47673 RVA: 0x0012A40D File Offset: 0x0012860D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<ESlateVisibility> Callback)
 		{
 			if (FGetSlateVisibility.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FGetSlateVisibility.RegisterId);
 		}
 
-		// Token: 0x060273D0 RID: 160720 RVA: 0x003BD618 File Offset: 0x003BB818
+		// Token: 0x0600BA3A RID: 47674 RVA: 0x0012A448 File Offset: 0x00128648
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe ESlateVisibility Execute()
 		{
 			FGetSlateVisibility.__FGetSlateVisibility_DelegateParams* ptr = stackalloc FGetSlateVisibility.__FGetSlateVisibility_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FGetSlateVisibility.__FGetSlateVisibility_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x060273D1 RID: 160721 RVA: 0x003BD654 File Offset: 0x003BB854
+		// Token: 0x0600BA3B RID: 47675 RVA: 0x0012A484 File Offset: 0x00128684
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<ESlateVisibility> func = target as Func<ESlateVisibility>;
@@ -91,28 +88,28 @@ namespace UnrealEngine
 			((FGetSlateVisibility.__FGetSlateVisibility_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x040158FD RID: 88317
+		// Token: 0x04005486 RID: 21638
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.Widget:GetSlateVisibility__DelegateSignature";
 
-		// Token: 0x040158FE RID: 88318
+		// Token: 0x04005487 RID: 21639
 		private static int RegisterId;
 
-		// Token: 0x02003B7D RID: 15229
+		// Token: 0x020013F7 RID: 5111
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FGetSlateVisibility_DelegateParams
+		private ref struct __FGetSlateVisibility_DelegateParams
 		{
-			// Token: 0x04017D57 RID: 97623
+			// Token: 0x040068A1 RID: 26785
 			[FieldOffset(0)]
 			public ESlateVisibility __Result;
 		}
 
-		// Token: 0x02003B7E RID: 15230
+		// Token: 0x020013F8 RID: 5112
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D58 RID: 97624
+			// Token: 0x040068A2 RID: 26786
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

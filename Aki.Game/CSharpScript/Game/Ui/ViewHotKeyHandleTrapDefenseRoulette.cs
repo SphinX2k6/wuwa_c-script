@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A2 RID: 18082
+	// Token: 0x020035D3 RID: 13779
 	public class ViewHotKeyHandleTrapDefenseRoulette : ViewHotKeyHandleRoulette
 	{
-		// Token: 0x0602E9EF RID: 190959 RVA: 0x00ACB38A File Offset: 0x00AC958A
+		// Token: 0x0602313B RID: 143675 RVA: 0x009F9C5E File Offset: 0x009F7E5E
 		[NullableContext(1)]
 		public ViewHotKeyHandleTrapDefenseRoulette(IOpenAndCloseViewHotKey parameters) : base(parameters)
 		{
 		}
 
-		// Token: 0x0602E9F0 RID: 190960 RVA: 0x00ACB394 File Offset: 0x00AC9594
+		// Token: 0x0602313C RID: 143676 RVA: 0x009F9C68 File Offset: 0x009F7E68
 		protected override void OnOpenViewImplement()
 		{
 			TrapDefenseRouletteMainViewProxy trapDefenseRouletteMainViewProxy = new TrapDefenseRouletteMainViewProxy();

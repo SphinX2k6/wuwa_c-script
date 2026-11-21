@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020025EF RID: 9711
+// Token: 0x02001ADA RID: 6874
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class PowerConfig : ConfigBase
 {
-	// Token: 0x06013C17 RID: 80919 RVA: 0x004F42A4 File Offset: 0x004F24A4
+	// Token: 0x060110F9 RID: 69881 RVA: 0x00503030 File Offset: 0x00501230
 	public Dictionary<int, int> GetConfSortRule()
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -24,49 +24,49 @@ public class PowerConfig : ConfigBase
 		return dictionary;
 	}
 
-	// Token: 0x06013C18 RID: 80920 RVA: 0x004F4300 File Offset: 0x004F2500
+	// Token: 0x060110FA RID: 69882 RVA: 0x0050308C File Offset: 0x0050128C
 	public int GetPowerNaturalLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("renew_energy_limit").GetValueOrDefault();
 	}
 
-	// Token: 0x06013C19 RID: 80921 RVA: 0x004F4320 File Offset: 0x004F2520
+	// Token: 0x060110FB RID: 69883 RVA: 0x005030AC File Offset: 0x005012AC
 	public int GetPowerChargeLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("charge_energy_limit").GetValueOrDefault();
 	}
 
-	// Token: 0x06013C1A RID: 80922 RVA: 0x004F4340 File Offset: 0x004F2540
+	// Token: 0x060110FC RID: 69884 RVA: 0x005030CC File Offset: 0x005012CC
 	public int GetPowerIncreaseSpan()
 	{
 		return ConfigCommonParamById.GetIntConfig("renew_energy_timespan").GetValueOrDefault();
 	}
 
-	// Token: 0x06013C1B RID: 80923 RVA: 0x004F4360 File Offset: 0x004F2560
+	// Token: 0x060110FD RID: 69885 RVA: 0x005030EC File Offset: 0x005012EC
 	public int GetOverPowerLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("store_energy_limit").GetValueOrDefault();
 	}
 
-	// Token: 0x06013C1C RID: 80924 RVA: 0x004F4380 File Offset: 0x004F2580
+	// Token: 0x060110FE RID: 69886 RVA: 0x0050310C File Offset: 0x0050130C
 	public int GetOverPowerRecoverTimeSpan()
 	{
 		return ConfigCommonParamById.GetIntConfig("store_energy_timespan").GetValueOrDefault();
 	}
 
-	// Token: 0x06013C1D RID: 80925 RVA: 0x004F43A0 File Offset: 0x004F25A0
+	// Token: 0x060110FF RID: 69887 RVA: 0x0050312C File Offset: 0x0050132C
 	public int GetSingleTimeExchangePowerLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("single_time_get_max").GetValueOrDefault();
 	}
 
-	// Token: 0x06013C1E RID: 80926 RVA: 0x004F43BF File Offset: 0x004F25BF
+	// Token: 0x06011100 RID: 69888 RVA: 0x0050314B File Offset: 0x0050134B
 	public IReadOnlyList<int> GetPowerCurrencyIds()
 	{
 		return ConfigCommonParamById.GetIntArrayConfig("PowerTipsIdArray") ?? new <>z__ReadOnlySingleElementList<int>(0);
 	}
 
-	// Token: 0x06013C1F RID: 80927 RVA: 0x004F43D8 File Offset: 0x004F25D8
+	// Token: 0x06011101 RID: 69889 RVA: 0x00503164 File Offset: 0x00501364
 	public HashSet<int> GetPowerShopIds()
 	{
 		if (this.PowerShopIds.Count != 0)
@@ -81,8 +81,8 @@ public class PowerConfig : ConfigBase
 		return this.PowerShopIds;
 	}
 
-	// Token: 0x17001951 RID: 6481
-	// (get) Token: 0x06013C20 RID: 80928 RVA: 0x004F445C File Offset: 0x004F265C
+	// Token: 0x17001989 RID: 6537
+	// (get) Token: 0x06011102 RID: 69890 RVA: 0x005031E8 File Offset: 0x005013E8
 	public static PowerConfig Instance
 	{
 		get
@@ -91,7 +91,7 @@ public class PowerConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06013C21 RID: 80929 RVA: 0x004F4463 File Offset: 0x004F2663
+	// Token: 0x06011103 RID: 69891 RVA: 0x005031EF File Offset: 0x005013EF
 	public static PowerConfig GetOrCreateInstance()
 	{
 		if (PowerConfig._Instance == null)
@@ -101,7 +101,7 @@ public class PowerConfig : ConfigBase
 		return PowerConfig._Instance;
 	}
 
-	// Token: 0x06013C22 RID: 80930 RVA: 0x004F4477 File Offset: 0x004F2677
+	// Token: 0x06011104 RID: 69892 RVA: 0x00503203 File Offset: 0x00501403
 	public static bool CreateInstance()
 	{
 		if (PowerConfig._Instance != null)
@@ -112,27 +112,27 @@ public class PowerConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06013C23 RID: 80931 RVA: 0x004F448D File Offset: 0x004F268D
+	// Token: 0x06011105 RID: 69893 RVA: 0x00503219 File Offset: 0x00501419
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013C24 RID: 80932 RVA: 0x004F448F File Offset: 0x004F268F
+	// Token: 0x06011106 RID: 69894 RVA: 0x0050321B File Offset: 0x0050141B
 	public static void ResetStaticDefaultValue()
 	{
 		PowerConfig._Instance = null;
 	}
 
-	// Token: 0x06013C25 RID: 80933 RVA: 0x004F4497 File Offset: 0x004F2697
+	// Token: 0x06011107 RID: 69895 RVA: 0x00503223 File Offset: 0x00501423
 	static PowerConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PowerConfig.CreateStaticDefaultValue), new Action(PowerConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040094DA RID: 38106
+	// Token: 0x04009631 RID: 38449
 	private readonly HashSet<int> PowerShopIds = new HashSet<int>();
 
-	// Token: 0x040094DB RID: 38107
+	// Token: 0x04009632 RID: 38450
 	[Nullable(2)]
 	private static PowerConfig _Instance;
 }

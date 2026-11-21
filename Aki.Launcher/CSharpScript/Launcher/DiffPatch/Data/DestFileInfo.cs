@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x0200022A RID: 554
+	// Token: 0x0200022F RID: 559
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DestFileInfo : LocalFileInfo
 	{
-		// Token: 0x06000E1C RID: 3612 RVA: 0x00054EB6 File Offset: 0x000530B6
+		// Token: 0x06000E5D RID: 3677 RVA: 0x000579BE File Offset: 0x00055BBE
 		public DestFileInfo(string keyName, string filePath, long expectSize, string remoteRoute, string expectHash) : base(keyName, filePath, expectSize)
 		{
 			this.RemoteRoute = remoteRoute;
@@ -20,7 +20,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x06000E1D RID: 3613 RVA: 0x00054EE8 File Offset: 0x000530E8
+		// Token: 0x06000E5E RID: 3678 RVA: 0x000579F0 File Offset: 0x00055BF0
 		[NullableContext(0)]
 		private ValueTuple<long, long> GetBothSize()
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return new ValueTuple<long, long>(num, num2);
 		}
 
-		// Token: 0x06000E1E RID: 3614 RVA: 0x00054FD8 File Offset: 0x000531D8
+		// Token: 0x06000E5F RID: 3679 RVA: 0x00057AE0 File Offset: 0x00055CE0
 		public override long GetSelfSize()
 		{
 			long item = this.GetBothSize().Item1;
@@ -74,7 +74,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return item;
 		}
 
-		// Token: 0x06000E1F RID: 3615 RVA: 0x00054FFC File Offset: 0x000531FC
+		// Token: 0x06000E60 RID: 3680 RVA: 0x00057B04 File Offset: 0x00055D04
 		public override long GetLocalSize()
 		{
 			ValueTuple<long, long> bothSize = this.GetBothSize();
@@ -91,7 +91,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return item2;
 		}
 
-		// Token: 0x06000E20 RID: 3616 RVA: 0x0005502C File Offset: 0x0005322C
+		// Token: 0x06000E61 RID: 3681 RVA: 0x00057B34 File Offset: 0x00055D34
 		public unsafe override bool IsCompleteFile()
 		{
 			long item = this.GetBothSize().Item1;
@@ -105,28 +105,28 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return flag;
 		}
 
-		// Token: 0x06000E21 RID: 3617 RVA: 0x000550A9 File Offset: 0x000532A9
+		// Token: 0x06000E62 RID: 3682 RVA: 0x00057BB1 File Offset: 0x00055DB1
 		public override void DeleteAll()
 		{
 			LauncherFileLib.RemoveDownloadFile(this.FilePath);
 		}
 
-		// Token: 0x06000E22 RID: 3618 RVA: 0x000550B6 File Offset: 0x000532B6
+		// Token: 0x06000E63 RID: 3683 RVA: 0x00057BBE File Offset: 0x00055DBE
 		public override string GetHash()
 		{
 			return this.ExpectHash;
 		}
 
-		// Token: 0x06000E23 RID: 3619 RVA: 0x000550BE File Offset: 0x000532BE
+		// Token: 0x06000E64 RID: 3684 RVA: 0x00057BC6 File Offset: 0x00055DC6
 		public override RequireFileInfo GetRequireInfo()
 		{
 			return new RequireFileInfo(this.RemoteRoute, this.FilePath, this.ExpectSize, this.ExpectHash);
 		}
 
-		// Token: 0x040008EB RID: 2283
+		// Token: 0x0400092D RID: 2349
 		public readonly string RemoteRoute;
 
-		// Token: 0x040008EC RID: 2284
+		// Token: 0x0400092E RID: 2350
 		public readonly string ExpectHash;
 	}
 }

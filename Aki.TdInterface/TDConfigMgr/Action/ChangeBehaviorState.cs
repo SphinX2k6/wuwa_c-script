@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014C8 RID: 5320
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001621 RID: 5665
 	public class ChangeBehaviorState : ActionParams
 	{
-		// Token: 0x06007928 RID: 31016 RVA: 0x001222EC File Offset: 0x001204EC
+		// Token: 0x06007FF5 RID: 32757 RVA: 0x00130F38 File Offset: 0x0012F138
 		private ChangeBehaviorState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007929 RID: 31017 RVA: 0x00122324 File Offset: 0x00120524
+		// Token: 0x06007FF6 RID: 32758 RVA: 0x00130F70 File Offset: 0x0012F170
 		public static ChangeBehaviorState Create([Nullable(2)] ChangeBehaviorState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600792A RID: 31018 RVA: 0x00122337 File Offset: 0x00120537
+		// Token: 0x06007FF7 RID: 32759 RVA: 0x00130F83 File Offset: 0x0012F183
 		public static ChangeBehaviorState CreateFromSetValue([Nullable(2)] ChangeBehaviorState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600792B RID: 31019 RVA: 0x0012234A File Offset: 0x0012054A
+		// Token: 0x06007FF8 RID: 32760 RVA: 0x00130F96 File Offset: 0x0012F196
 		public ChangeBehaviorState_SetValue ToSetValue()
 		{
 			return new ChangeBehaviorState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700289E RID: 10398
-		// (get) Token: 0x0600792C RID: 31020 RVA: 0x00122369 File Offset: 0x00120569
-		// (set) Token: 0x0600792D RID: 31021 RVA: 0x00122394 File Offset: 0x00120594
+		// Token: 0x17002A88 RID: 10888
+		// (get) Token: 0x06007FF9 RID: 32761 RVA: 0x00130FB5 File Offset: 0x0012F1B5
+		// (set) Token: 0x06007FFA RID: 32762 RVA: 0x00130FE0 File Offset: 0x0012F1E0
 		public virtual int StateId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700289F RID: 10399
-		// (get) Token: 0x0600792E RID: 31022 RVA: 0x001223A2 File Offset: 0x001205A2
-		// (set) Token: 0x0600792F RID: 31023 RVA: 0x001223CD File Offset: 0x001205CD
+		// Token: 0x17002A89 RID: 10889
+		// (get) Token: 0x06007FFB RID: 32763 RVA: 0x00130FEE File Offset: 0x0012F1EE
+		// (set) Token: 0x06007FFC RID: 32764 RVA: 0x00131019 File Offset: 0x0012F219
 		public virtual bool IsInstant
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004659 RID: 18009
+		// Token: 0x040049F4 RID: 18932
 		[Nullable(2)]
 		protected new ChangeBehaviorState FbInstance;
 
-		// Token: 0x0400465A RID: 18010
+		// Token: 0x040049F5 RID: 18933
 		[Nullable(2)]
 		protected ChangeBehaviorState_SetValue PocoInterface;
 	}

@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A2F RID: 2607
+	// Token: 0x020001D8 RID: 472
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EComponentCreationMethod")]
 	public enum EComponentCreationMethod : byte
 	{
-		// Token: 0x040045C6 RID: 17862
+		// Token: 0x04000B98 RID: 2968
 		Native,
-		// Token: 0x040045C7 RID: 17863
+		// Token: 0x04000B99 RID: 2969
 		SimpleConstructionScript,
-		// Token: 0x040045C8 RID: 17864
+		// Token: 0x04000B9A RID: 2970
 		UserConstructionScript,
-		// Token: 0x040045C9 RID: 17865
+		// Token: 0x04000B9B RID: 2971
 		Instance,
-		// Token: 0x040045CA RID: 17866
+		// Token: 0x04000B9C RID: 2972
 		EComponentCreationMethod_MAX
 	}
 }

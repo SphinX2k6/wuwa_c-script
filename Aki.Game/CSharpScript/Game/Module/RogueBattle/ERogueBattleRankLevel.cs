@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EDC RID: 20188
+	// Token: 0x02003EA5 RID: 16037
 	public enum ERogueBattleRankLevel
 	{
-		// Token: 0x0401B851 RID: 112721
+		// Token: 0x04016224 RID: 90660
 		C = 1,
-		// Token: 0x0401B852 RID: 112722
+		// Token: 0x04016225 RID: 90661
 		B,
-		// Token: 0x0401B853 RID: 112723
+		// Token: 0x04016226 RID: 90662
 		A,
-		// Token: 0x0401B854 RID: 112724
+		// Token: 0x04016227 RID: 90663
 		S
 	}
 }

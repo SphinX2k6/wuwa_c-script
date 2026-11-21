@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200122D RID: 4653
+// Token: 0x020006E1 RID: 1761
 public enum EDangoMonopolyTaskState
 {
-	// Token: 0x04003948 RID: 14664
+	// Token: 0x040039E0 RID: 14816
 	NotFinished,
-	// Token: 0x04003949 RID: 14665
+	// Token: 0x040039E1 RID: 14817
 	Finished,
-	// Token: 0x0400394A RID: 14666
+	// Token: 0x040039E2 RID: 14818
 	Received
 }

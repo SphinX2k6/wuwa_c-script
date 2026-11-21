@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001428 RID: 5160
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001580 RID: 5504
 	public class ITimerConfig
 	{
-		// Token: 0x06007563 RID: 30051 RVA: 0x001186BA File Offset: 0x001168BA
+		// Token: 0x06007C28 RID: 31784 RVA: 0x00127106 File Offset: 0x00125306
 		public static ITimerConfig Create(ITimerConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026E6 RID: 9958
-		// (get) Token: 0x06007564 RID: 30052 RVA: 0x001186DC File Offset: 0x001168DC
+		// Token: 0x170028CA RID: 10442
+		// (get) Token: 0x06007C29 RID: 31785 RVA: 0x00127128 File Offset: 0x00125328
 		public virtual int? Time
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E7 RID: 9959
-		// (get) Token: 0x06007565 RID: 30053 RVA: 0x00118712 File Offset: 0x00116912
+		// Token: 0x170028CB RID: 10443
+		// (get) Token: 0x06007C2A RID: 31786 RVA: 0x0012715E File Offset: 0x0012535E
 		public virtual VarRef VarForTime
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E8 RID: 9960
-		// (get) Token: 0x06007566 RID: 30054 RVA: 0x00118741 File Offset: 0x00116941
+		// Token: 0x170028CC RID: 10444
+		// (get) Token: 0x06007C2B RID: 31787 RVA: 0x0012718D File Offset: 0x0012538D
 		public virtual ETimerType TimerType
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026E9 RID: 9961
-		// (get) Token: 0x06007567 RID: 30055 RVA: 0x0011874E File Offset: 0x0011694E
+		// Token: 0x170028CD RID: 10445
+		// (get) Token: 0x06007C2C RID: 31788 RVA: 0x0012719A File Offset: 0x0012539A
 		[Nullable(2)]
 		public virtual ITimerUiConfig UiConfig
 		{
@@ -82,20 +80,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043FE RID: 17406
+		// Token: 0x04004792 RID: 18322
 		private ITimerConfig Instance;
 
-		// Token: 0x040043FF RID: 17407
+		// Token: 0x04004793 RID: 18323
 		private VarRef _VarForTimeCache;
 
-		// Token: 0x04004400 RID: 17408
+		// Token: 0x04004794 RID: 18324
 		private bool _VarForTimeInited;
 
-		// Token: 0x04004401 RID: 17409
+		// Token: 0x04004795 RID: 18325
 		[Nullable(2)]
 		private ITimerUiConfig _UiConfigCache;
 
-		// Token: 0x04004402 RID: 17410
+		// Token: 0x04004796 RID: 18326
 		private bool _UiConfigInited;
 	}
 }

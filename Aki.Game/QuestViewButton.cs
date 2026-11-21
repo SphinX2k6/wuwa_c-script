@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002666 RID: 9830
+// Token: 0x02001B51 RID: 6993
 public class QuestViewButton : UiPanelBase
 {
-	// Token: 0x06014204 RID: 82436 RVA: 0x00515B8C File Offset: 0x00513D8C
+	// Token: 0x060116E6 RID: 71398 RVA: 0x00524844 File Offset: 0x00522A44
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,13 +30,13 @@ public class QuestViewButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014205 RID: 82437 RVA: 0x00515C32 File Offset: 0x00513E32
+	// Token: 0x060116E7 RID: 71399 RVA: 0x005248EA File Offset: 0x00522AEA
 	protected override void OnStart()
 	{
 		this.ButtonClickFunction = (this.OpenParam as Action);
 	}
 
-	// Token: 0x06014206 RID: 82438 RVA: 0x00515C48 File Offset: 0x00513E48
+	// Token: 0x060116E8 RID: 71400 RVA: 0x00524900 File Offset: 0x00522B00
 	[NullableContext(1)]
 	public void SetButtonText(string textTableId, bool bCommonTextTable)
 	{
@@ -54,7 +54,7 @@ public class QuestViewButton : UiPanelBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x06014207 RID: 82439 RVA: 0x00515C90 File Offset: 0x00513E90
+	// Token: 0x060116E9 RID: 71401 RVA: 0x00524948 File Offset: 0x00522B48
 	private void OnButtonClick()
 	{
 		Action buttonClickFunction = this.ButtonClickFunction;
@@ -65,17 +65,17 @@ public class QuestViewButton : UiPanelBase
 		buttonClickFunction();
 	}
 
-	// Token: 0x040097AD RID: 38829
+	// Token: 0x04009905 RID: 39173
 	[Nullable(2)]
 	private Action ButtonClickFunction;
 
-	// Token: 0x02008CAA RID: 36010
+	// Token: 0x02007E33 RID: 32307
 	private class EChildComponent
 	{
-		// Token: 0x0402DA83 RID: 187011
+		// Token: 0x04028D9A RID: 167322
 		public const int Button = 0;
 
-		// Token: 0x0402DA84 RID: 187012
+		// Token: 0x04028D9B RID: 167323
 		public const int ButtonText = 1;
 	}
 }

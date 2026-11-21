@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200096F RID: 2415
+	// Token: 0x02000A44 RID: 2628
 	public class ConfigSpineBackgroundById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038AE RID: 14510 RVA: 0x0019A0FC File Offset: 0x001982FC
+		// Token: 0x06003DAC RID: 15788 RVA: 0x001B9490 File Offset: 0x001B7690
 		static ConfigSpineBackgroundById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpineBackgroundById.CreateStaticDefaultValue), new Action(ConfigSpineBackgroundById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038AF RID: 14511 RVA: 0x0019A11C File Offset: 0x0019831C
+		// Token: 0x06003DAD RID: 15789 RVA: 0x001B94B0 File Offset: 0x001B76B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpineBackgroundById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038B0 RID: 14512 RVA: 0x0019A19B File Offset: 0x0019839B
+		// Token: 0x06003DAE RID: 15790 RVA: 0x001B952F File Offset: 0x001B772F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpineBackgroundById.LogPair = null;
 			ConfigSpineBackgroundById.HandleId = 0;
 		}
 
-		// Token: 0x060038B1 RID: 14513 RVA: 0x0019A1A9 File Offset: 0x001983A9
+		// Token: 0x06003DAF RID: 15791 RVA: 0x001B953D File Offset: 0x001B773D
 		public static void Init()
 		{
 			ConfigSpineBackgroundById.HandleId = ConfigCommon.InitDataStatement(ConfigSpineBackgroundById.HandleId, "db_spinebackground.db", "select BinData from `SpineBackground` where Id=?");
 		}
 
-		// Token: 0x060038B2 RID: 14514 RVA: 0x0019A1C4 File Offset: 0x001983C4
+		// Token: 0x06003DB0 RID: 15792 RVA: 0x001B9558 File Offset: 0x001B7758
 		public static SpineBackground? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpineBackgroundById.HandleId, ConfigSpineBackgroundById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpineBackground?(rootAsSpineBackground);
 		}
 
-		// Token: 0x040041EF RID: 16879
+		// Token: 0x040047C2 RID: 18370
 		private const string DB = "db_spinebackground.db";
 
-		// Token: 0x040041F0 RID: 16880
+		// Token: 0x040047C3 RID: 18371
 		private const string FILE = "k.可视化编辑/c.Csv/s.Spine动态背景图表/*.csv*";
 
-		// Token: 0x040041F1 RID: 16881
+		// Token: 0x040047C4 RID: 18372
 		private const string TABLE = "SpineBackground";
 
-		// Token: 0x040041F2 RID: 16882
+		// Token: 0x040047C5 RID: 18373
 		private const string COMMAND = "select BinData from `SpineBackground` where Id=?";
 
-		// Token: 0x040041F3 RID: 16883
+		// Token: 0x040047C6 RID: 18374
 		private const string KEY_PREFIX = "SpineBackgroundById";
 
-		// Token: 0x040041F4 RID: 16884
+		// Token: 0x040047C7 RID: 18375
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041F5 RID: 16885
+		// Token: 0x040047C8 RID: 18376
 		private static int HandleId;
 	}
 }

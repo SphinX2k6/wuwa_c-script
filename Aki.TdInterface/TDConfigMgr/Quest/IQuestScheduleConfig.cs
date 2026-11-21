@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200109F RID: 4255
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011CD RID: 4557
 	public class IQuestScheduleConfig
 	{
-		// Token: 0x06005FFC RID: 24572 RVA: 0x000E8444 File Offset: 0x000E6644
+		// Token: 0x060065F5 RID: 26101 RVA: 0x000F5564 File Offset: 0x000F3764
 		private IQuestScheduleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005FFD RID: 24573 RVA: 0x000E847C File Offset: 0x000E667C
+		// Token: 0x060065F6 RID: 26102 RVA: 0x000F559C File Offset: 0x000F379C
 		public static IQuestScheduleConfig Create([Nullable(2)] IQuestScheduleConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FFE RID: 24574 RVA: 0x000E848F File Offset: 0x000E668F
+		// Token: 0x060065F7 RID: 26103 RVA: 0x000F55AF File Offset: 0x000F37AF
 		public static IQuestScheduleConfig CreateFromSetValue([Nullable(2)] IQuestScheduleConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FFF RID: 24575 RVA: 0x000E84A4 File Offset: 0x000E66A4
+		// Token: 0x060065F8 RID: 26104 RVA: 0x000F55C4 File Offset: 0x000F37C4
 		public IQuestScheduleConfig_SetValue ToSetValue()
 		{
 			return new IQuestScheduleConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F93 RID: 8083
-		// (get) Token: 0x06006000 RID: 24576 RVA: 0x000E84F2 File Offset: 0x000E66F2
-		// (set) Token: 0x06006001 RID: 24577 RVA: 0x000E851D File Offset: 0x000E671D
+		// Token: 0x17002145 RID: 8517
+		// (get) Token: 0x060065F9 RID: 26105 RVA: 0x000F5612 File Offset: 0x000F3812
+		// (set) Token: 0x060065FA RID: 26106 RVA: 0x000F563D File Offset: 0x000F383D
 		public virtual EQuestScheduleUiType UiType
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F94 RID: 8084
-		// (get) Token: 0x06006002 RID: 24578 RVA: 0x000E852C File Offset: 0x000E672C
-		// (set) Token: 0x06006003 RID: 24579 RVA: 0x000E858D File Offset: 0x000E678D
+		// Token: 0x17002146 RID: 8518
+		// (get) Token: 0x060065FB RID: 26107 RVA: 0x000F564C File Offset: 0x000F384C
+		// (set) Token: 0x060065FC RID: 26108 RVA: 0x000F56AD File Offset: 0x000F38AD
 		public virtual IQuestScheduleMainTitle MainTitle
 		{
 			get
@@ -117,9 +115,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F95 RID: 8085
-		// (get) Token: 0x06006004 RID: 24580 RVA: 0x000E85A4 File Offset: 0x000E67A4
-		// (set) Token: 0x06006005 RID: 24581 RVA: 0x000E8637 File Offset: 0x000E6837
+		// Token: 0x17002147 RID: 8519
+		// (get) Token: 0x060065FD RID: 26109 RVA: 0x000F56C4 File Offset: 0x000F38C4
+		// (set) Token: 0x060065FE RID: 26110 RVA: 0x000F5757 File Offset: 0x000F3957
 		public virtual List<IQuestScheduleSubTitle> SubTitles
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F96 RID: 8086
-		// (get) Token: 0x06006006 RID: 24582 RVA: 0x000E864C File Offset: 0x000E684C
-		// (set) Token: 0x06006007 RID: 24583 RVA: 0x000E86AD File Offset: 0x000E68AD
+		// Token: 0x17002148 RID: 8520
+		// (get) Token: 0x060065FF RID: 26111 RVA: 0x000F576C File Offset: 0x000F396C
+		// (set) Token: 0x06006600 RID: 26112 RVA: 0x000F57CD File Offset: 0x000F39CD
 		[Nullable(2)]
 		public virtual ITrackTarget TrackTarget
 		{
@@ -188,9 +186,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F97 RID: 8087
-		// (get) Token: 0x06006008 RID: 24584 RVA: 0x000E86C4 File Offset: 0x000E68C4
-		// (set) Token: 0x06006009 RID: 24585 RVA: 0x000E8725 File Offset: 0x000E6925
+		// Token: 0x17002149 RID: 8521
+		// (get) Token: 0x06006601 RID: 26113 RVA: 0x000F57E4 File Offset: 0x000F39E4
+		// (set) Token: 0x06006602 RID: 26114 RVA: 0x000F5845 File Offset: 0x000F3A45
 		[Nullable(2)]
 		public virtual ILevelPlayTrackRadius TrackRadius
 		{
@@ -221,36 +219,36 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039DE RID: 14814
+		// Token: 0x04003D2B RID: 15659
 		[Nullable(2)]
 		protected IQuestScheduleConfig FbInstance;
 
-		// Token: 0x040039DF RID: 14815
+		// Token: 0x04003D2C RID: 15660
 		[Nullable(2)]
 		protected IQuestScheduleConfig_SetValue PocoInterface;
 
-		// Token: 0x040039E0 RID: 14816
+		// Token: 0x04003D2D RID: 15661
 		private IQuestScheduleMainTitle _MainTitleCache;
 
-		// Token: 0x040039E1 RID: 14817
+		// Token: 0x04003D2E RID: 15662
 		private bool _MainTitleInited;
 
-		// Token: 0x040039E2 RID: 14818
+		// Token: 0x04003D2F RID: 15663
 		private List<IQuestScheduleSubTitle> _SubTitlesCache;
 
-		// Token: 0x040039E3 RID: 14819
+		// Token: 0x04003D30 RID: 15664
 		private bool _SubTitlesInited;
 
-		// Token: 0x040039E4 RID: 14820
+		// Token: 0x04003D31 RID: 15665
 		private ITrackTarget _TrackTargetCache;
 
-		// Token: 0x040039E5 RID: 14821
+		// Token: 0x04003D32 RID: 15666
 		private bool _TrackTargetInited;
 
-		// Token: 0x040039E6 RID: 14822
+		// Token: 0x04003D33 RID: 15667
 		private ILevelPlayTrackRadius _TrackRadiusCache;
 
-		// Token: 0x040039E7 RID: 14823
+		// Token: 0x04003D34 RID: 15668
 		private bool _TrackRadiusInited;
 	}
 }

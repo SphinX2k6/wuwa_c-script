@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x020001FE RID: 510
+	// Token: 0x02000203 RID: 515
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UrlPrefixDownload
 	{
-		// Token: 0x06000D20 RID: 3360 RVA: 0x0004FBAA File Offset: 0x0004DDAA
+		// Token: 0x06000D61 RID: 3425 RVA: 0x00052696 File Offset: 0x00050896
 		public void CancelDownload()
 		{
 			if (this.IsComplete)
@@ -26,7 +26,7 @@ namespace CSharpScript.Launcher.Download
 			this.DownloadCanceled = true;
 		}
 
-		// Token: 0x06000D21 RID: 3361 RVA: 0x0004FBD0 File Offset: 0x0004DDD0
+		// Token: 0x06000D62 RID: 3426 RVA: 0x000526BC File Offset: 0x000508BC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -45,7 +45,7 @@ namespace CSharpScript.Launcher.Download
 			return <StartEvaluatePrefix>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D22 RID: 3362 RVA: 0x0004FC2C File Offset: 0x0004DE2C
+		// Token: 0x06000D63 RID: 3427 RVA: 0x00052718 File Offset: 0x00050918
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -66,7 +66,7 @@ namespace CSharpScript.Launcher.Download
 			return <RequestFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D23 RID: 3363 RVA: 0x0004FC9C File Offset: 0x0004DE9C
+		// Token: 0x06000D64 RID: 3428 RVA: 0x00052788 File Offset: 0x00050988
 		[return: Nullable(0)]
 		public UniTask<bool> RequestFilesWithPrefix(List<RequestFileInfo> infos, List<string> prefixList, int tryCount, [Nullable(2)] TProgressType progress = null)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Launcher.Download
 			return <RequestFilesWithPrefix>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D24 RID: 3364 RVA: 0x0004FD00 File Offset: 0x0004DF00
+		// Token: 0x06000D65 RID: 3429 RVA: 0x000527EC File Offset: 0x000509EC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -102,7 +102,7 @@ namespace CSharpScript.Launcher.Download
 			return <EvaluatePrefixList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D25 RID: 3365 RVA: 0x0004FD64 File Offset: 0x0004DF64
+		// Token: 0x06000D66 RID: 3430 RVA: 0x00052850 File Offset: 0x00050A50
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -123,7 +123,7 @@ namespace CSharpScript.Launcher.Download
 			return <UsePrefixListToDownloadFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D26 RID: 3366 RVA: 0x0004FDD4 File Offset: 0x0004DFD4
+		// Token: 0x06000D67 RID: 3431 RVA: 0x000528C0 File Offset: 0x00050AC0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -147,7 +147,7 @@ namespace CSharpScript.Launcher.Download
 			return <UsePrefixToDownloadFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D27 RID: 3367 RVA: 0x0004FE5C File Offset: 0x0004E05C
+		// Token: 0x06000D68 RID: 3432 RVA: 0x00052948 File Offset: 0x00050B48
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -170,7 +170,7 @@ namespace CSharpScript.Launcher.Download
 			return <UsePrefixToDownloadFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D28 RID: 3368 RVA: 0x0004FEDC File Offset: 0x0004E0DC
+		// Token: 0x06000D69 RID: 3433 RVA: 0x000529C8 File Offset: 0x00050BC8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -191,63 +191,63 @@ namespace CSharpScript.Launcher.Download
 			return <DownloadFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0400083D RID: 2109
+		// Token: 0x0400087D RID: 2173
 		public const string DOWNLOAD_SUFFIX = ".download";
 
-		// Token: 0x0400083E RID: 2110
+		// Token: 0x0400087E RID: 2174
 		private const float TIME_OUT = 3f;
 
-		// Token: 0x0400083F RID: 2111
+		// Token: 0x0400087F RID: 2175
 		private const long BigIntZero = 0L;
 
-		// Token: 0x04000840 RID: 2112
+		// Token: 0x04000880 RID: 2176
 		private const long BigIntKb = 1024L;
 
-		// Token: 0x04000841 RID: 2113
+		// Token: 0x04000881 RID: 2177
 		private const long KB_PER_MB = 1024L;
 
-		// Token: 0x04000842 RID: 2114
+		// Token: 0x04000882 RID: 2178
 		[Nullable(2)]
 		private UDownloaderProxy Proxy;
 
-		// Token: 0x04000843 RID: 2115
+		// Token: 0x04000883 RID: 2179
 		private bool DownloadCanceled;
 
-		// Token: 0x04000844 RID: 2116
+		// Token: 0x04000884 RID: 2180
 		private bool IsComplete;
 
-		// Token: 0x04000845 RID: 2117
+		// Token: 0x04000885 RID: 2181
 		[Nullable(2)]
 		private TProgressType ProgressCb;
 
-		// Token: 0x02000442 RID: 1090
+		// Token: 0x02000450 RID: 1104
 		[NullableContext(0)]
 		private class EvaluatePrefixListPayload
 		{
-			// Token: 0x04001572 RID: 5490
+			// Token: 0x040015FD RID: 5629
 			public bool IsComplete;
 
-			// Token: 0x04001573 RID: 5491
+			// Token: 0x040015FE RID: 5630
 			public int Point;
 
-			// Token: 0x04001574 RID: 5492
+			// Token: 0x040015FF RID: 5631
 			public long DownloadSize;
 
-			// Token: 0x04001575 RID: 5493
+			// Token: 0x04001600 RID: 5632
 			public int Speed;
 		}
 
-		// Token: 0x02000443 RID: 1091
+		// Token: 0x02000451 RID: 1105
 		[NullableContext(0)]
 		private class EvaluatePrefixListPayload2
 		{
-			// Token: 0x04001576 RID: 5494
+			// Token: 0x04001601 RID: 5633
 			public bool IsComplete;
 
-			// Token: 0x04001577 RID: 5495
+			// Token: 0x04001602 RID: 5634
 			public float RemainTime;
 
-			// Token: 0x04001578 RID: 5496
+			// Token: 0x04001603 RID: 5635
 			public long DownloadSize;
 		}
 	}

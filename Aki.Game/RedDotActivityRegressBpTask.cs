@@ -1,28 +1,28 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003345 RID: 13125
+// Token: 0x020028B7 RID: 10423
 public class RedDotActivityRegressBpTask : RedDotBase
 {
-	// Token: 0x0601C987 RID: 117127 RVA: 0x0080474F File Offset: 0x0080294F
+	// Token: 0x0601A67F RID: 108159 RVA: 0x0082AD13 File Offset: 0x00828F13
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.ActivityRegressBp);
 	}
 
-	// Token: 0x0601C988 RID: 117128 RVA: 0x0080475B File Offset: 0x0080295B
+	// Token: 0x0601A680 RID: 108160 RVA: 0x0082AD1F File Offset: 0x00828F1F
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C989 RID: 117129 RVA: 0x00804779 File Offset: 0x00802979
+	// Token: 0x0601A681 RID: 108161 RVA: 0x0082AD3D File Offset: 0x00828F3D
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C98A RID: 117130 RVA: 0x00804797 File Offset: 0x00802997
+	// Token: 0x0601A682 RID: 108162 RVA: 0x0082AD5B File Offset: 0x00828F5B
 	protected override bool OnCheck(int uId = 0)
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;

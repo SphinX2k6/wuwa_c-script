@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006580 RID: 25984
+	// Token: 0x02006BE8 RID: 27624
 	public class IDestroyAllChildT
 	{
 	}

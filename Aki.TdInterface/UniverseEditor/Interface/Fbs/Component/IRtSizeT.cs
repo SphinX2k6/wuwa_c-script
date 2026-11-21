@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005895 RID: 22677
+	// Token: 0x02005EA2 RID: 24226
 	public class IRtSizeT
 	{
-		// Token: 0x1700A9B7 RID: 43447
-		// (get) Token: 0x060263B8 RID: 156600 RVA: 0x00545290 File Offset: 0x00543490
-		// (set) Token: 0x060263B9 RID: 156601 RVA: 0x00545298 File Offset: 0x00543498
+		// Token: 0x1700B2E7 RID: 45799
+		// (get) Token: 0x0602891A RID: 166170 RVA: 0x0058BDDC File Offset: 0x00589FDC
+		// (set) Token: 0x0602891B RID: 166171 RVA: 0x0058BDE4 File Offset: 0x00589FE4
 		public int Length { get; set; }
 
-		// Token: 0x1700A9B8 RID: 43448
-		// (get) Token: 0x060263BA RID: 156602 RVA: 0x005452A1 File Offset: 0x005434A1
-		// (set) Token: 0x060263BB RID: 156603 RVA: 0x005452A9 File Offset: 0x005434A9
+		// Token: 0x1700B2E8 RID: 45800
+		// (get) Token: 0x0602891C RID: 166172 RVA: 0x0058BDED File Offset: 0x00589FED
+		// (set) Token: 0x0602891D RID: 166173 RVA: 0x0058BDF5 File Offset: 0x00589FF5
 		public int Width { get; set; }
 
-		// Token: 0x060263BC RID: 156604 RVA: 0x005452B2 File Offset: 0x005434B2
+		// Token: 0x0602891E RID: 166174 RVA: 0x0058BDFE File Offset: 0x00589FFE
 		public IRtSizeT()
 		{
 			this.Length = 0;

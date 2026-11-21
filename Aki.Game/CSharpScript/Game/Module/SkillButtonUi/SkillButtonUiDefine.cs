@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C0F RID: 19471
+	// Token: 0x02003BC0 RID: 15296
 	public static class SkillButtonUiDefine
 	{
-		// Token: 0x0401AD1A RID: 109850
+		// Token: 0x04015676 RID: 87670
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly int[] skillButtonActionList = new int[]

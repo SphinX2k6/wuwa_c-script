@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EEE RID: 7918
+	// Token: 0x02002127 RID: 8487
 	public class ISummonVehicle_SetValue
 	{
-		// Token: 0x040064C4 RID: 25796
+		// Token: 0x04006AB3 RID: 27315
 		public ESummonEntityType Type;
 
-		// Token: 0x040064C5 RID: 25797
-		[Nullable(1)]
+		// Token: 0x04006AB4 RID: 27316
 		public string TemplateId;
 
-		// Token: 0x040064C6 RID: 25798
+		// Token: 0x04006AB5 RID: 27317
 		public int PositionEntityId;
 	}
 }

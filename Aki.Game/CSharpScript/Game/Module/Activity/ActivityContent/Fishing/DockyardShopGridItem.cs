@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.PayShop;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065BD RID: 26045
+	// Token: 0x0200553B RID: 21819
 	public class DockyardShopGridItem : PayShopItem
 	{
-		// Token: 0x0604154D RID: 267597 RVA: 0x00FD4F09 File Offset: 0x00FD3109
+		// Token: 0x06036212 RID: 221714 RVA: 0x00F1BF45 File Offset: 0x00F1A145
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.SetRedDotState(false);
 		}
 
-		// Token: 0x0604154E RID: 267598 RVA: 0x00FD4F2C File Offset: 0x00FD312C
+		// Token: 0x06036213 RID: 221715 RVA: 0x00F1BF68 File Offset: 0x00F1A168
 		[NullableContext(2)]
 		public override void Refresh(IPayShopUnionData data, bool isSelected, int gridIndex)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.SetNewFlagState(payShopGoods.GetIfNeedRemind());
 		}
 
-		// Token: 0x0604154F RID: 267599 RVA: 0x00FD4F59 File Offset: 0x00FD3159
+		// Token: 0x06036214 RID: 221716 RVA: 0x00F1BF95 File Offset: 0x00F1A195
 		[NullableContext(1)]
 		private void ClearNewFlagState(PayShopItem item, PayShopGoods data)
 		{

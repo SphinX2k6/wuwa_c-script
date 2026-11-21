@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB6 RID: 10934
+	// Token: 0x02002DAA RID: 11690
 	public class IDeadeyeCameraConfig
 	{
-		// Token: 0x0600EFFC RID: 61436 RVA: 0x0022DD8D File Offset: 0x0022BF8D
-		[NullableContext(1)]
+		// Token: 0x0600FEB2 RID: 65202 RVA: 0x0024BA99 File Offset: 0x00249C99
 		public static IDeadeyeCameraConfig Create(IDeadeyeCameraConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C52 RID: 19538
-		// (get) Token: 0x0600EFFD RID: 61437 RVA: 0x0022DDAC File Offset: 0x0022BFAC
+		// Token: 0x1700500C RID: 20492
+		// (get) Token: 0x0600FEB3 RID: 65203 RVA: 0x0024BAB8 File Offset: 0x00249CB8
 		public virtual int LookAtPointId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C53 RID: 19539
-		// (get) Token: 0x0600EFFE RID: 61438 RVA: 0x0022DDBC File Offset: 0x0022BFBC
+		// Token: 0x1700500D RID: 20493
+		// (get) Token: 0x0600FEB4 RID: 65204 RVA: 0x0024BAC8 File Offset: 0x00249CC8
 		public virtual int? SubLensTag
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C54 RID: 19540
-		// (get) Token: 0x0600EFFF RID: 61439 RVA: 0x0022DDF2 File Offset: 0x0022BFF2
+		// Token: 0x1700500E RID: 20494
+		// (get) Token: 0x0600FEB5 RID: 65205 RVA: 0x0024BAFE File Offset: 0x00249CFE
 		public virtual float TransitionTime
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008404 RID: 33796
+		// Token: 0x04008B08 RID: 35592
 		private IDeadeyeCameraConfig Instance;
 	}
 }

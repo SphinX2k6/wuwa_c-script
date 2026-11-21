@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x0200545B RID: 21595
+	// Token: 0x0200443E RID: 17470
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeKeyModeData
 	{
-		// Token: 0x06037201 RID: 225793 RVA: 0x00D110EC File Offset: 0x00D0F2EC
+		// Token: 0x0602C14A RID: 180554 RVA: 0x00C60504 File Offset: 0x00C5E704
 		public ChangeKeyModeData(IChangeKeyMode changeKeyMode)
 		{
 			this.TitleName = changeKeyMode.TitleName;
@@ -22,26 +22,26 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x06037202 RID: 225794 RVA: 0x00D1114C File Offset: 0x00D0F34C
+		// Token: 0x0602C14B RID: 180555 RVA: 0x00C60564 File Offset: 0x00C5E764
 		public IReadOnlyList<ChangeKeyModeGroupData> GetChangeKeyModeGroupDataList()
 		{
 			return this.ChangeKeyModeGroupDataList;
 		}
 
-		// Token: 0x06037203 RID: 225795 RVA: 0x00D11154 File Offset: 0x00D0F354
+		// Token: 0x0602C14C RID: 180556 RVA: 0x00C6056C File Offset: 0x00C5E76C
 		public int GetMaxGroupIndex()
 		{
 			return this.GetChangeKeyModeGroupDataList().Count - 1;
 		}
 
-		// Token: 0x0401D155 RID: 119125
+		// Token: 0x04017BEE RID: 97262
 		[Nullable(2)]
 		public readonly string TitleName;
 
-		// Token: 0x0401D156 RID: 119126
+		// Token: 0x04017BEF RID: 97263
 		public int DefaultGroupIndex;
 
-		// Token: 0x0401D157 RID: 119127
+		// Token: 0x04017BF0 RID: 97264
 		private readonly List<ChangeKeyModeGroupData> ChangeKeyModeGroupDataList = new List<ChangeKeyModeGroupData>();
 	}
 }

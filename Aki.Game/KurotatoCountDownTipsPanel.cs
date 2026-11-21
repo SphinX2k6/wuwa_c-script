@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CB8 RID: 7352
+// Token: 0x0200117A RID: 4474
 public class KurotatoCountDownTipsPanel : UiPanelBase
 {
-	// Token: 0x0600DE25 RID: 56869 RVA: 0x0033F088 File Offset: 0x0033D288
+	// Token: 0x0600B242 RID: 45634 RVA: 0x0034AAC4 File Offset: 0x00348CC4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class KurotatoCountDownTipsPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE26 RID: 56870 RVA: 0x0033F0F8 File Offset: 0x0033D2F8
+	// Token: 0x0600B243 RID: 45635 RVA: 0x0034AB34 File Offset: 0x00348D34
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -33,26 +33,26 @@ public class KurotatoCountDownTipsPanel : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600DE27 RID: 56871 RVA: 0x0033F123 File Offset: 0x0033D323
+	// Token: 0x0600B244 RID: 45636 RVA: 0x0034AB5F File Offset: 0x00348D5F
 	protected override void OnBeforeShow()
 	{
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600DE28 RID: 56872 RVA: 0x0033F12C File Offset: 0x0033D32C
+	// Token: 0x0600B245 RID: 45637 RVA: 0x0034AB68 File Offset: 0x00348D68
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600DE29 RID: 56873 RVA: 0x0033F138 File Offset: 0x0033D338
+	// Token: 0x0600B246 RID: 45638 RVA: 0x0034AB74 File Offset: 0x00348D74
 	public void ShowTips()
 	{
 		base.Show(null);
 		this.SeqPlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600DE2A RID: 56874 RVA: 0x0033F168 File Offset: 0x0033D368
+	// Token: 0x0600B247 RID: 45639 RVA: 0x0034ABA4 File Offset: 0x00348DA4
 	public void HideTips()
 	{
 		UUIItem rootItem = this.RootItem;
@@ -63,7 +63,7 @@ public class KurotatoCountDownTipsPanel : UiPanelBase
 		this.SeqPlayer.PlayOrReplaySequenceByName("Close", false, null);
 	}
 
-	// Token: 0x0600DE2B RID: 56875 RVA: 0x0033F1A8 File Offset: 0x0033D3A8
+	// Token: 0x0600B248 RID: 45640 RVA: 0x0034ABE4 File Offset: 0x00348DE4
 	public void InitCountDown(float remainTime)
 	{
 		this.TotalTime = remainTime;
@@ -73,7 +73,7 @@ public class KurotatoCountDownTipsPanel : UiPanelBase
 		base.GetText(3).SetText(Math.Ceiling((double)this.RemainTime).ToString(), true);
 	}
 
-	// Token: 0x0600DE2C RID: 56876 RVA: 0x0033F1F4 File Offset: 0x0033D3F4
+	// Token: 0x0600B249 RID: 45641 RVA: 0x0034AC30 File Offset: 0x00348E30
 	public void OnTick(float delta)
 	{
 		if (!this.TickEnabled || !this.NeedTick)
@@ -99,41 +99,41 @@ public class KurotatoCountDownTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x040065F3 RID: 26099
+	// Token: 0x040066D2 RID: 26322
 	private const float LOW_TIME_RATIO = 0.1f;
 
-	// Token: 0x040065F4 RID: 26100
+	// Token: 0x040066D3 RID: 26323
 	private float TotalTime;
 
-	// Token: 0x040065F5 RID: 26101
+	// Token: 0x040066D4 RID: 26324
 	private float RemainTime;
 
-	// Token: 0x040065F6 RID: 26102
+	// Token: 0x040066D5 RID: 26325
 	private bool NeedTick;
 
-	// Token: 0x040065F7 RID: 26103
+	// Token: 0x040066D6 RID: 26326
 	private bool TickEnabled;
 
-	// Token: 0x040065F8 RID: 26104
+	// Token: 0x040066D7 RID: 26327
 	private bool IsLowTime;
 
-	// Token: 0x040065F9 RID: 26105
+	// Token: 0x040066D8 RID: 26328
 	[Nullable(1)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x020082A1 RID: 33441
+	// Token: 0x0200742B RID: 29739
 	private static class EComponentDefine
 	{
-		// Token: 0x0402A9C8 RID: 174536
+		// Token: 0x04025CF3 RID: 154867
 		public const int PanelRed = 0;
 
-		// Token: 0x0402A9C9 RID: 174537
+		// Token: 0x04025CF4 RID: 154868
 		public const int TextureLight1 = 1;
 
-		// Token: 0x0402A9CA RID: 174538
+		// Token: 0x04025CF5 RID: 154869
 		public const int TextureLight2 = 2;
 
-		// Token: 0x0402A9CB RID: 174539
+		// Token: 0x04025CF6 RID: 154870
 		public const int TextNum = 3;
 	}
 }

@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043B2 RID: 17330
+	// Token: 0x02004814 RID: 18452
 	public static class IOccupationDataVerify
 	{
-		// Token: 0x06019D45 RID: 105797 RVA: 0x003B2A68 File Offset: 0x003B0C68
+		// Token: 0x0601B4DE RID: 111838 RVA: 0x003DE6B0 File Offset: 0x003DC8B0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyVectorOfStrings(tablePos, 4, false))
@@ -34,7 +34,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 						{
 							verifyAction3 = (IOccupationDataVerify.<>O.<2>__Verify = new VerifyTableAction(ISilentAreaExportDataVerify.Verify));
 						}
-						if (verifier.VerifyVectorOfTables(tablePos, offsetId3, verifyAction3, false) && verifier.VerifyString(tablePos, 14, false) && verifier.VerifyString(tablePos, 16, false) && verifier.VerifyString(tablePos, 18, false) && verifier.VerifyVectorOfStrings(tablePos, 20, false))
+						if (verifier.VerifyVectorOfTables(tablePos, offsetId3, verifyAction3, false) && verifier.VerifyString(tablePos, 14, false) && verifier.VerifyString(tablePos, 16, false) && verifier.VerifyString(tablePos, 18, false) && verifier.VerifyVectorOfStrings(tablePos, 20, false) && verifier.VerifyVectorOfStrings(tablePos, 22, false))
 						{
 							return verifier.VerifyTableEnd(tablePos);
 						}
@@ -44,17 +44,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return false;
 		}
 
-		// Token: 0x02007990 RID: 31120
+		// Token: 0x020081D9 RID: 33241
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013310 RID: 78608
+			// Token: 0x04014377 RID: 82807
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013311 RID: 78609
+			// Token: 0x04014378 RID: 82808
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013312 RID: 78610
+			// Token: 0x04014379 RID: 82809
 			public static VerifyTableAction <2>__Verify;
 		}
 	}

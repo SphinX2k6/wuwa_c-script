@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020029B5 RID: 10677
+// Token: 0x02001F30 RID: 7984
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using CSharpScript.Game.Module.RoleUi;
 })]
 public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemData>
 {
-	// Token: 0x06016239 RID: 90681 RVA: 0x0059960E File Offset: 0x0059780E
+	// Token: 0x06013C3F RID: 80959 RVA: 0x005C459A File Offset: 0x005C279A
 	protected override void OnStart()
 	{
 		base.SetToggleInteractive(false);
 	}
 
-	// Token: 0x0601623A RID: 90682 RVA: 0x00599617 File Offset: 0x00597817
+	// Token: 0x06013C40 RID: 80960 RVA: 0x005C45A3 File Offset: 0x005C27A3
 	protected override void OnRefresh(ShipTowerMediumItemData data, bool isSelected, int gridIndex)
 	{
 		Action<ShipTowerMediumItemData> refreshCallBack = this.RefreshCallBack;
@@ -31,13 +31,13 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		refreshCallBack(data);
 	}
 
-	// Token: 0x0601623B RID: 90683 RVA: 0x0059962A File Offset: 0x0059782A
+	// Token: 0x06013C41 RID: 80961 RVA: 0x005C45B6 File Offset: 0x005C27B6
 	private bool IsRoleItem(ShipTowerMediumItemData data)
 	{
 		return !data.IsBuff.GetValueOrDefault();
 	}
 
-	// Token: 0x0601623C RID: 90684 RVA: 0x0059963A File Offset: 0x0059783A
+	// Token: 0x06013C42 RID: 80962 RVA: 0x005C45C6 File Offset: 0x005C27C6
 	public void RefreshRecommend(ShipTowerMediumItemData data)
 	{
 		if (this.IsRoleItem(data))
@@ -48,7 +48,7 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		this.RefreshRecommendBuff(data);
 	}
 
-	// Token: 0x0601623D RID: 90685 RVA: 0x00599654 File Offset: 0x00597854
+	// Token: 0x06013C43 RID: 80963 RVA: 0x005C45E0 File Offset: 0x005C27E0
 	public void RefreshRecommendRole(ShipTowerMediumItemData data)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(data.Id);
@@ -67,7 +67,7 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		base.Apply<CharacterMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x0601623E RID: 90686 RVA: 0x00599730 File Offset: 0x00597930
+	// Token: 0x06013C44 RID: 80964 RVA: 0x005C46BC File Offset: 0x005C28BC
 	public void RefreshRecommendBuff(ShipTowerMediumItemData data)
 	{
 		ShipTowerModel instance = ShipTowerModel.Instance;
@@ -85,7 +85,7 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x0601623F RID: 90687 RVA: 0x00599807 File Offset: 0x00597A07
+	// Token: 0x06013C45 RID: 80965 RVA: 0x005C4793 File Offset: 0x005C2993
 	public void RefreshRecord(ShipTowerMediumItemData data)
 	{
 		if (this.IsRoleItem(data))
@@ -96,7 +96,7 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		this.RefreshRecordBuff(data);
 	}
 
-	// Token: 0x06016240 RID: 90688 RVA: 0x00599824 File Offset: 0x00597A24
+	// Token: 0x06013C46 RID: 80966 RVA: 0x005C47B0 File Offset: 0x005C29B0
 	public void RefreshRecordRole(ShipTowerMediumItemData data)
 	{
 		RoleInfo value = RoleConfig.Instance.GetRoleConfig(data.Id).Value;
@@ -116,7 +116,7 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		base.Apply<CharacterMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x06016241 RID: 90689 RVA: 0x005998EC File Offset: 0x00597AEC
+	// Token: 0x06013C47 RID: 80967 RVA: 0x005C4878 File Offset: 0x005C2A78
 	public void RefreshRecordBuff(ShipTowerMediumItemData data)
 	{
 		ShipTowerConfig instance = ShipTowerConfig.Instance;
@@ -131,25 +131,25 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x06016242 RID: 90690 RVA: 0x00599985 File Offset: 0x00597B85
+	// Token: 0x06013C48 RID: 80968 RVA: 0x005C4911 File Offset: 0x005C2B11
 	public void OnForceSelected()
 	{
 		this.SetSelected(true, true);
 	}
 
-	// Token: 0x06016243 RID: 90691 RVA: 0x0059998F File Offset: 0x00597B8F
+	// Token: 0x06013C49 RID: 80969 RVA: 0x005C491B File Offset: 0x005C2B1B
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x06016244 RID: 90692 RVA: 0x00599999 File Offset: 0x00597B99
+	// Token: 0x06013C4A RID: 80970 RVA: 0x005C4925 File Offset: 0x005C2B25
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x0400A4F0 RID: 42224
+	// Token: 0x0400A8DA RID: 43226
 	[Nullable(new byte[]
 	{
 		2,
@@ -157,7 +157,7 @@ public class ShipTowerMediumItem : LoopScrollMediumItemGrid<ShipTowerMediumItemD
 	})]
 	public Action<ShipTowerMediumItemData> RefreshCallBack;
 
-	// Token: 0x0400A4F1 RID: 42225
+	// Token: 0x0400A8DB RID: 43227
 	[Nullable(2)]
 	public Func<int?> GetStageIdCallback;
 }

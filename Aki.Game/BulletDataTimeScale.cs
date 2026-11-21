@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
 
-// Token: 0x02002DB4 RID: 11700
+// Token: 0x0200230E RID: 8974
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataTimeScale
 {
-	// Token: 0x170021AD RID: 8621
-	// (get) Token: 0x060189A0 RID: 100768 RVA: 0x00649715 File Offset: 0x00647915
+	// Token: 0x17002209 RID: 8713
+	// (get) Token: 0x06016248 RID: 90696 RVA: 0x0066F51D File Offset: 0x0066D71D
 	public bool AreaTimeScale
 	{
 		get
@@ -22,8 +22,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021AE RID: 8622
-	// (get) Token: 0x060189A1 RID: 100769 RVA: 0x00649745 File Offset: 0x00647945
+	// Token: 0x1700220A RID: 8714
+	// (get) Token: 0x06016249 RID: 90697 RVA: 0x0066F54D File Offset: 0x0066D74D
 	public STimeScale TimeScaleOnHit
 	{
 		get
@@ -36,8 +36,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021AF RID: 8623
-	// (get) Token: 0x060189A2 RID: 100770 RVA: 0x0064976C File Offset: 0x0064796C
+	// Token: 0x1700220B RID: 8715
+	// (get) Token: 0x0601624A RID: 90698 RVA: 0x0066F574 File Offset: 0x0066D774
 	public bool ForceBulletTimeScaleInArea
 	{
 		get
@@ -50,8 +50,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B0 RID: 8624
-	// (get) Token: 0x060189A3 RID: 100771 RVA: 0x0064979C File Offset: 0x0064799C
+	// Token: 0x1700220C RID: 8716
+	// (get) Token: 0x0601624B RID: 90699 RVA: 0x0066F5A4 File Offset: 0x0066D7A4
 	public STimeScale TimeScaleOnAttack
 	{
 		get
@@ -64,8 +64,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B1 RID: 8625
-	// (get) Token: 0x060189A4 RID: 100772 RVA: 0x006497C3 File Offset: 0x006479C3
+	// Token: 0x1700220D RID: 8717
+	// (get) Token: 0x0601624C RID: 90700 RVA: 0x0066F5CB File Offset: 0x0066D7CB
 	public bool TimeScaleOnAttackIgnoreAttacker
 	{
 		get
@@ -78,8 +78,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B2 RID: 8626
-	// (get) Token: 0x060189A5 RID: 100773 RVA: 0x006497F3 File Offset: 0x006479F3
+	// Token: 0x1700220E RID: 8718
+	// (get) Token: 0x0601624D RID: 90701 RVA: 0x0066F5FB File Offset: 0x0066D7FB
 	public float TimeScaleEffectImmune
 	{
 		get
@@ -92,8 +92,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B3 RID: 8627
-	// (get) Token: 0x060189A6 RID: 100774 RVA: 0x00649823 File Offset: 0x00647A23
+	// Token: 0x1700220F RID: 8719
+	// (get) Token: 0x0601624E RID: 90702 RVA: 0x0066F62B File Offset: 0x0066D82B
 	public bool TimeScaleWithAttacker
 	{
 		get
@@ -106,8 +106,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B4 RID: 8628
-	// (get) Token: 0x060189A7 RID: 100775 RVA: 0x00649854 File Offset: 0x00647A54
+	// Token: 0x17002210 RID: 8720
+	// (get) Token: 0x0601624F RID: 90703 RVA: 0x0066F65C File Offset: 0x0066D85C
 	[Nullable(new byte[]
 	{
 		2,
@@ -139,8 +139,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B5 RID: 8629
-	// (get) Token: 0x060189A8 RID: 100776 RVA: 0x0064989F File Offset: 0x00647A9F
+	// Token: 0x17002211 RID: 8721
+	// (get) Token: 0x06016250 RID: 90704 RVA: 0x0066F6A7 File Offset: 0x0066D8A7
 	public STimeScale AttackerTimeScaleOnHitWeakPoint
 	{
 		get
@@ -153,8 +153,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B6 RID: 8630
-	// (get) Token: 0x060189A9 RID: 100777 RVA: 0x006498C6 File Offset: 0x00647AC6
+	// Token: 0x17002212 RID: 8722
+	// (get) Token: 0x06016251 RID: 90705 RVA: 0x0066F6CE File Offset: 0x0066D8CE
 	public STimeScale VictimTimeScaleOnHitWeakPoint
 	{
 		get
@@ -167,8 +167,8 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x170021B7 RID: 8631
-	// (get) Token: 0x060189AA RID: 100778 RVA: 0x006498ED File Offset: 0x00647AED
+	// Token: 0x17002213 RID: 8723
+	// (get) Token: 0x06016252 RID: 90706 RVA: 0x0066F6F5 File Offset: 0x0066D8F5
 	public bool RemoveHitTimeScaleOnDestroy
 	{
 		get
@@ -181,42 +181,42 @@ public class BulletDataTimeScale
 		}
 	}
 
-	// Token: 0x060189AB RID: 100779 RVA: 0x0064991D File Offset: 0x00647B1D
+	// Token: 0x06016253 RID: 90707 RVA: 0x0066F725 File Offset: 0x0066D925
 	public BulletDataTimeScale(SReBulletDataTime data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0400B6CB RID: 46795
+	// Token: 0x0400BA45 RID: 47685
 	private readonly SReBulletDataTime Data;
 
-	// Token: 0x0400B6CC RID: 46796
+	// Token: 0x0400BA46 RID: 47686
 	private bool? AreaTimeScaleInternal;
 
-	// Token: 0x0400B6CD RID: 46797
+	// Token: 0x0400BA47 RID: 47687
 	[Nullable(2)]
 	private STimeScale TimeScaleOnHitInternal;
 
-	// Token: 0x0400B6CE RID: 46798
+	// Token: 0x0400BA48 RID: 47688
 	private bool? ForceBulletTimeScaleInAreaInternal;
 
-	// Token: 0x0400B6CF RID: 46799
+	// Token: 0x0400BA49 RID: 47689
 	[Nullable(2)]
 	private STimeScale TimeScaleOnAttackInternal;
 
-	// Token: 0x0400B6D0 RID: 46800
+	// Token: 0x0400BA4A RID: 47690
 	private bool? TimeScaleOnAttackIgnoreAttackerInternal;
 
-	// Token: 0x0400B6D1 RID: 46801
+	// Token: 0x0400BA4B RID: 47691
 	private float? TimeScaleEffectImmuneInternal;
 
-	// Token: 0x0400B6D2 RID: 46802
+	// Token: 0x0400BA4C RID: 47692
 	private bool? TimeScaleWithAttackerInternal;
 
-	// Token: 0x0400B6D3 RID: 46803
+	// Token: 0x0400BA4D RID: 47693
 	private bool CharacterCustomKeyTimeScaleInit;
 
-	// Token: 0x0400B6D4 RID: 46804
+	// Token: 0x0400BA4E RID: 47694
 	[Nullable(new byte[]
 	{
 		2,
@@ -224,14 +224,14 @@ public class BulletDataTimeScale
 	})]
 	private string[] CharacterCustomKeyTimeScaleInternal;
 
-	// Token: 0x0400B6D5 RID: 46805
+	// Token: 0x0400BA4F RID: 47695
 	[Nullable(2)]
 	private STimeScale AttackerTimeScaleOnHitWeakPointInternal;
 
-	// Token: 0x0400B6D6 RID: 46806
+	// Token: 0x0400BA50 RID: 47696
 	[Nullable(2)]
 	private STimeScale VictimTimeScaleOnHitWeakPointInternal;
 
-	// Token: 0x0400B6D7 RID: 46807
+	// Token: 0x0400BA51 RID: 47697
 	private bool? RemoveTimeScaleOnDestroyInternal;
 }

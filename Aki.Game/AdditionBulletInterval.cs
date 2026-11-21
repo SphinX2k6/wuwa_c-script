@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F4F RID: 12111
+// Token: 0x020024A2 RID: 9378
 [NullableContext(1)]
 [Nullable(0)]
 public class AdditionBulletInterval : BuffEffect
 {
-	// Token: 0x06019C73 RID: 105587 RVA: 0x006B8B88 File Offset: 0x006B6D88
+	// Token: 0x0601757E RID: 95614 RVA: 0x006DEEA4 File Offset: 0x006DD0A4
 	public AdditionBulletInterval(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C74 RID: 105588 RVA: 0x006B8BA2 File Offset: 0x006B6DA2
+	// Token: 0x0601757F RID: 95615 RVA: 0x006DEEBE File Offset: 0x006DD0BE
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C75 RID: 105589 RVA: 0x006B8BA8 File Offset: 0x006B6DA8
+	// Token: 0x06017580 RID: 95616 RVA: 0x006DEEC4 File Offset: 0x006DD0C4
 	protected unsafe override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -50,7 +50,7 @@ public class AdditionBulletInterval : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C76 RID: 105590 RVA: 0x006B8CB0 File Offset: 0x006B6EB0
+	// Token: 0x06017581 RID: 95617 RVA: 0x006DEFCC File Offset: 0x006DD1CC
 	public float GetBulletInterval(string bulletRowName)
 	{
 		float valueOrDefault = this.BulletIntervalMap.GetValueOrDefault(bulletRowName, 0f);
@@ -58,15 +58,15 @@ public class AdditionBulletInterval : BuffEffect
 		return valueOrDefault * (float)stackCount;
 	}
 
-	// Token: 0x0400C255 RID: 49749
+	// Token: 0x0400C5F7 RID: 50679
 	private const int INTERVAL_SCALE_PARAMS_LEN = 2;
 
-	// Token: 0x0400C256 RID: 49750
+	// Token: 0x0400C5F8 RID: 50680
 	private const int INTERVAL_SCALE_INDEX_BULLETROWNAME = 0;
 
-	// Token: 0x0400C257 RID: 49751
+	// Token: 0x0400C5F9 RID: 50681
 	private const int INTERVAL_SCALE_INDEX_INTERVAL = 1;
 
-	// Token: 0x0400C258 RID: 49752
+	// Token: 0x0400C5FA RID: 50682
 	private readonly Dictionary<string, float> BulletIntervalMap = new Dictionary<string, float>();
 }

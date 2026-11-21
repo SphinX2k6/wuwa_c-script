@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000927 RID: 2343
+	// Token: 0x02000972 RID: 2418
 	public class ConfigShortMessageByAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060036FD RID: 14077 RVA: 0x001904B0 File Offset: 0x0018E6B0
+		// Token: 0x060038BF RID: 14527 RVA: 0x0019D6D0 File Offset: 0x0019B8D0
 		static ConfigShortMessageByAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigShortMessageByAll.CreateStaticDefaultValue), new Action(ConfigShortMessageByAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060036FE RID: 14078 RVA: 0x001904D0 File Offset: 0x0018E6D0
+		// Token: 0x060038C0 RID: 14528 RVA: 0x0019D6F0 File Offset: 0x0019B8F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigShortMessageByAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060036FF RID: 14079 RVA: 0x0019054F File Offset: 0x0018E74F
+		// Token: 0x060038C1 RID: 14529 RVA: 0x0019D76F File Offset: 0x0019B96F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigShortMessageByAll.LogPair = null;
 			ConfigShortMessageByAll.HandleId = 0;
 		}
 
-		// Token: 0x06003700 RID: 14080 RVA: 0x0019055D File Offset: 0x0018E75D
+		// Token: 0x060038C2 RID: 14530 RVA: 0x0019D77D File Offset: 0x0019B97D
 		public static void Init()
 		{
 			ConfigShortMessageByAll.HandleId = ConfigCommon.InitDataStatement(ConfigShortMessageByAll.HandleId, "db_phonemsg.db", "select BinData from `ShortMessage`");
 		}
 
-		// Token: 0x06003701 RID: 14081 RVA: 0x00190578 File Offset: 0x0018E778
+		// Token: 0x060038C3 RID: 14531 RVA: 0x0019D798 File Offset: 0x0019B998
 		[NullableContext(2)]
 		public static IReadOnlyList<ShortMessage> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003FF7 RID: 16375
+		// Token: 0x04004204 RID: 16900
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x04003FF8 RID: 16376
+		// Token: 0x04004205 RID: 16901
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x04003FF9 RID: 16377
+		// Token: 0x04004206 RID: 16902
 		private const string TABLE = "ShortMessage";
 
-		// Token: 0x04003FFA RID: 16378
+		// Token: 0x04004207 RID: 16903
 		private const string COMMAND = "select BinData from `ShortMessage`";
 
-		// Token: 0x04003FFB RID: 16379
+		// Token: 0x04004208 RID: 16904
 		private const string KEY_PREFIX = "ShortMessageByAll";
 
-		// Token: 0x04003FFC RID: 16380
+		// Token: 0x04004209 RID: 16905
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003FFD RID: 16381
+		// Token: 0x0400420A RID: 16906
 		private static int HandleId;
 	}
 }

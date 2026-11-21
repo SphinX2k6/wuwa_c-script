@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp;
 
-// Token: 0x02001718 RID: 5912
+// Token: 0x02000BD0 RID: 3024
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BuffItemModel : ModelBase
 {
-	// Token: 0x0600AA60 RID: 43616 RVA: 0x00264750 File Offset: 0x00262950
+	// Token: 0x06007E43 RID: 32323 RVA: 0x0026ECA0 File Offset: 0x0026CEA0
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600AA61 RID: 43617 RVA: 0x00264753 File Offset: 0x00262953
+	// Token: 0x06007E44 RID: 32324 RVA: 0x0026ECA3 File Offset: 0x0026CEA3
 	protected override bool OnClear()
 	{
 		this.ClearAllUseBuffItemRoleData();
@@ -24,21 +24,21 @@ public class BuffItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AA62 RID: 43618 RVA: 0x00264762 File Offset: 0x00262962
+	// Token: 0x06007E45 RID: 32325 RVA: 0x0026ECB2 File Offset: 0x0026CEB2
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearAllUseBuffItemRoleData();
 		return true;
 	}
 
-	// Token: 0x0600AA63 RID: 43619 RVA: 0x0026476C File Offset: 0x0026296C
+	// Token: 0x06007E46 RID: 32326 RVA: 0x0026ECBC File Offset: 0x0026CEBC
 	public void NewBuffItemData(int itemConfigId, long endCdTimeStamp, int totalCdTime)
 	{
 		BuffItemData value = new BuffItemData(itemConfigId, (double)endCdTimeStamp, (double)totalCdTime);
 		this.BuffItemMap[itemConfigId] = value;
 	}
 
-	// Token: 0x0600AA64 RID: 43620 RVA: 0x00264791 File Offset: 0x00262991
+	// Token: 0x06007E47 RID: 32327 RVA: 0x0026ECE1 File Offset: 0x0026CEE1
 	[NullableContext(2)]
 	public BuffItemData GetBuffItemData(int itemConfigId)
 	{
@@ -49,13 +49,13 @@ public class BuffItemModel : ModelBase
 		return this.BuffItemMap[itemConfigId];
 	}
 
-	// Token: 0x0600AA65 RID: 43621 RVA: 0x002647AF File Offset: 0x002629AF
+	// Token: 0x06007E48 RID: 32328 RVA: 0x0026ECFF File Offset: 0x0026CEFF
 	public IReadOnlyDictionary<int, BuffItemData> GetBuffItemMap()
 	{
 		return this.BuffItemMap;
 	}
 
-	// Token: 0x0600AA66 RID: 43622 RVA: 0x002647B8 File Offset: 0x002629B8
+	// Token: 0x06007E49 RID: 32329 RVA: 0x0026ED08 File Offset: 0x0026CF08
 	public void GetInCdBuffItemMap(Dictionary<int, BuffItemData> buffItemDataMap)
 	{
 		foreach (BuffItemData buffItemData in this.BuffItemMap.Values)
@@ -68,39 +68,39 @@ public class BuffItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AA67 RID: 43623 RVA: 0x0026482C File Offset: 0x00262A2C
+	// Token: 0x06007E4A RID: 32330 RVA: 0x0026ED7C File Offset: 0x0026CF7C
 	public void ClearAllBuffItemData()
 	{
 		this.UseBuffItemRoleMap.Clear();
 		this.BuffItemMap.Clear();
 	}
 
-	// Token: 0x0600AA68 RID: 43624 RVA: 0x00264844 File Offset: 0x00262A44
+	// Token: 0x06007E4B RID: 32331 RVA: 0x0026ED94 File Offset: 0x0026CF94
 	public void NewUseBuffItemRoleData(string roleName, int position, int roleConfigId, int roleLevel, int currentAttribute, int maxAttribute, int useItemConfigId, Entity entity)
 	{
 		UseBuffItemRoleData value = new UseBuffItemRoleData(roleName, position, roleConfigId, roleLevel, (float)currentAttribute, (float)maxAttribute, useItemConfigId, entity);
 		this.UseBuffItemRoleMap[position] = value;
 	}
 
-	// Token: 0x0600AA69 RID: 43625 RVA: 0x00264873 File Offset: 0x00262A73
+	// Token: 0x06007E4C RID: 32332 RVA: 0x0026EDC3 File Offset: 0x0026CFC3
 	public void SetCurrentUseBuffItemId(int itemConfigId)
 	{
 		this.CurrentUseBuffItemId = itemConfigId;
 	}
 
-	// Token: 0x0600AA6A RID: 43626 RVA: 0x0026487C File Offset: 0x00262A7C
+	// Token: 0x06007E4D RID: 32333 RVA: 0x0026EDCC File Offset: 0x0026CFCC
 	public int GetCurrentUseBuffItemId()
 	{
 		return this.CurrentUseBuffItemId;
 	}
 
-	// Token: 0x0600AA6B RID: 43627 RVA: 0x00264884 File Offset: 0x00262A84
+	// Token: 0x06007E4E RID: 32334 RVA: 0x0026EDD4 File Offset: 0x0026CFD4
 	public IReadOnlyDictionary<int, UseBuffItemRoleData> GetAllUseBuffItemRole()
 	{
 		return this.UseBuffItemRoleMap;
 	}
 
-	// Token: 0x0600AA6C RID: 43628 RVA: 0x0026488C File Offset: 0x00262A8C
+	// Token: 0x06007E4F RID: 32335 RVA: 0x0026EDDC File Offset: 0x0026CFDC
 	[NullableContext(2)]
 	public UseBuffItemRoleData GetUseBuffItemRole(int position)
 	{
@@ -111,7 +111,7 @@ public class BuffItemModel : ModelBase
 		return this.UseBuffItemRoleMap[position];
 	}
 
-	// Token: 0x0600AA6D RID: 43629 RVA: 0x002648AC File Offset: 0x00262AAC
+	// Token: 0x06007E50 RID: 32336 RVA: 0x0026EDFC File Offset: 0x0026CFFC
 	[NullableContext(2)]
 	public UseBuffItemRoleData GetUseItemRoleByRoleConfigId(int roleConfigId)
 	{
@@ -125,13 +125,13 @@ public class BuffItemModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600AA6E RID: 43630 RVA: 0x00264910 File Offset: 0x00262B10
+	// Token: 0x06007E51 RID: 32337 RVA: 0x0026EE60 File Offset: 0x0026D060
 	public void ClearAllUseBuffItemRoleData()
 	{
 		this.UseBuffItemRoleMap.Clear();
 	}
 
-	// Token: 0x0600AA6F RID: 43631 RVA: 0x00264920 File Offset: 0x00262B20
+	// Token: 0x06007E52 RID: 32338 RVA: 0x0026EE70 File Offset: 0x0026D070
 	public double GetBuffItemRemainCdTime(int itemConfigId)
 	{
 		BuffItemData buffItemData = this.GetBuffItemData(itemConfigId);
@@ -142,7 +142,7 @@ public class BuffItemModel : ModelBase
 		return buffItemData.GetBuffItemRemainCdTime();
 	}
 
-	// Token: 0x0600AA70 RID: 43632 RVA: 0x00264948 File Offset: 0x00262B48
+	// Token: 0x06007E53 RID: 32339 RVA: 0x0026EE98 File Offset: 0x0026D098
 	public double GetBuffItemTotalCdTime(int itemConfigId)
 	{
 		BuffItemData buffItemData = this.GetBuffItemData(itemConfigId);
@@ -153,7 +153,7 @@ public class BuffItemModel : ModelBase
 		return buffItemData.GetBuffItemTotalCdTime();
 	}
 
-	// Token: 0x0600AA71 RID: 43633 RVA: 0x00264970 File Offset: 0x00262B70
+	// Token: 0x06007E54 RID: 32340 RVA: 0x0026EEC0 File Offset: 0x0026D0C0
 	public void SetBuffItemCdTimeStamp(int itemConfigId, long endCdTimeStamp, int totalCdTime)
 	{
 		BuffItemData buffItemData = this.GetBuffItemData(itemConfigId);
@@ -166,7 +166,7 @@ public class BuffItemModel : ModelBase
 		this.NewBuffItemData(itemConfigId, endCdTimeStamp, totalCdTime);
 	}
 
-	// Token: 0x0600AA72 RID: 43634 RVA: 0x002649A4 File Offset: 0x00262BA4
+	// Token: 0x06007E55 RID: 32341 RVA: 0x0026EEF4 File Offset: 0x0026D0F4
 	public void SetBuffItemCdEndCallback(int itemConfigId, Action callback)
 	{
 		if (this.GetBuffItemData(itemConfigId) == null)
@@ -178,7 +178,7 @@ public class BuffItemModel : ModelBase
 		this.BuffCdRefreshTimerId = TimerSystem.Instance.Forever(new TTimerAction(this.OnBuffCdRefresh), (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 	}
 
-	// Token: 0x0600AA73 RID: 43635 RVA: 0x002649F8 File Offset: 0x00262BF8
+	// Token: 0x06007E56 RID: 32342 RVA: 0x0026EF48 File Offset: 0x0026D148
 	private void OnBuffCdRefresh(float delta)
 	{
 		if (this.GetBuffItemRemainCdTime(this.BuffCdRefreshItemId) <= 0.0)
@@ -192,7 +192,7 @@ public class BuffItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AA74 RID: 43636 RVA: 0x00264A28 File Offset: 0x00262C28
+	// Token: 0x06007E57 RID: 32343 RVA: 0x0026EF78 File Offset: 0x0026D178
 	private void ResetBuffCdTimer()
 	{
 		if (this.BuffCdRefreshTimerId != null && TimerSystem.Instance.Has(this.BuffCdRefreshTimerId))
@@ -204,7 +204,7 @@ public class BuffItemModel : ModelBase
 		this.BuffCdRefreshTimerId = null;
 	}
 
-	// Token: 0x0600AA75 RID: 43637 RVA: 0x00264A78 File Offset: 0x00262C78
+	// Token: 0x06007E58 RID: 32344 RVA: 0x0026EFC8 File Offset: 0x0026D1C8
 	public void SetBuffEquipItem(int itemConfigId, bool isEquipped)
 	{
 		this.BuffEquipItemMap[itemConfigId] = isEquipped;
@@ -220,13 +220,13 @@ public class BuffItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AA76 RID: 43638 RVA: 0x00264AC0 File Offset: 0x00262CC0
+	// Token: 0x06007E59 RID: 32345 RVA: 0x0026F010 File Offset: 0x0026D210
 	public bool IsEquippedBuffCategory(EBuffItemEquipCategory equipCategory)
 	{
 		return this.BuffEquipCategoryMap.ContainsKey(equipCategory);
 	}
 
-	// Token: 0x0600AA77 RID: 43639 RVA: 0x00264AD0 File Offset: 0x00262CD0
+	// Token: 0x06007E5A RID: 32346 RVA: 0x0026F020 File Offset: 0x0026D220
 	public int? GetEquippedBuffItemId(EBuffItemEquipCategory equipCategory)
 	{
 		int value;
@@ -237,13 +237,13 @@ public class BuffItemModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600AA78 RID: 43640 RVA: 0x00264AFD File Offset: 0x00262CFD
+	// Token: 0x06007E5B RID: 32347 RVA: 0x0026F04D File Offset: 0x0026D24D
 	public bool IsEquippedBuffItem(int itemConfigId)
 	{
 		return this.BuffEquipItemMap.ContainsKey(itemConfigId) && this.BuffEquipItemMap[itemConfigId];
 	}
 
-	// Token: 0x0600AA79 RID: 43641 RVA: 0x00264B1C File Offset: 0x00262D1C
+	// Token: 0x06007E5C RID: 32348 RVA: 0x0026F06C File Offset: 0x0026D26C
 	public List<long> GetEquippedBuffsByRoleId(int roleId, bool checkEnableInUi = false)
 	{
 		List<long> list = new List<long>();
@@ -262,7 +262,7 @@ public class BuffItemModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600AA7A RID: 43642 RVA: 0x00264BB8 File Offset: 0x00262DB8
+	// Token: 0x06007E5D RID: 32349 RVA: 0x0026F108 File Offset: 0x0026D308
 	public BuffEquipItem[] GetEquippedBuffItemConfigByRoleId(int roleId)
 	{
 		List<BuffEquipItem> list = new List<BuffEquipItem>();
@@ -276,7 +276,7 @@ public class BuffItemModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600AA7B RID: 43643 RVA: 0x00264C28 File Offset: 0x00262E28
+	// Token: 0x06007E5E RID: 32350 RVA: 0x0026F178 File Offset: 0x0026D378
 	public unsafe void SetCurrentPreviewItemData(int itemId, int roleId)
 	{
 		this.PreviewBuffIdList = new List<long>();
@@ -304,14 +304,14 @@ public class BuffItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AA7C RID: 43644 RVA: 0x00264D34 File Offset: 0x00262F34
+	// Token: 0x06007E5F RID: 32351 RVA: 0x0026F284 File Offset: 0x0026D484
 	public List<long> GetCurrentPreviewItemBuffList()
 	{
 		return this.PreviewBuffIdList;
 	}
 
-	// Token: 0x17000E08 RID: 3592
-	// (get) Token: 0x0600AA7D RID: 43645 RVA: 0x00264D3C File Offset: 0x00262F3C
+	// Token: 0x17000E29 RID: 3625
+	// (get) Token: 0x06007E60 RID: 32352 RVA: 0x0026F28C File Offset: 0x0026D48C
 	public static BuffItemModel Instance
 	{
 		get
@@ -320,7 +320,7 @@ public class BuffItemModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AA7E RID: 43646 RVA: 0x00264D43 File Offset: 0x00262F43
+	// Token: 0x06007E61 RID: 32353 RVA: 0x0026F293 File Offset: 0x0026D493
 	public static BuffItemModel GetOrCreateInstance()
 	{
 		if (BuffItemModel._Instance == null)
@@ -330,7 +330,7 @@ public class BuffItemModel : ModelBase
 		return BuffItemModel._Instance;
 	}
 
-	// Token: 0x0600AA7F RID: 43647 RVA: 0x00264D57 File Offset: 0x00262F57
+	// Token: 0x06007E62 RID: 32354 RVA: 0x0026F2A7 File Offset: 0x0026D4A7
 	public static bool CreateInstance()
 	{
 		if (BuffItemModel._Instance != null)
@@ -341,53 +341,53 @@ public class BuffItemModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AA80 RID: 43648 RVA: 0x00264D6D File Offset: 0x00262F6D
+	// Token: 0x06007E63 RID: 32355 RVA: 0x0026F2BD File Offset: 0x0026D4BD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AA81 RID: 43649 RVA: 0x00264D6F File Offset: 0x00262F6F
+	// Token: 0x06007E64 RID: 32356 RVA: 0x0026F2BF File Offset: 0x0026D4BF
 	public static void ResetStaticDefaultValue()
 	{
 		BuffItemModel._Instance = null;
 	}
 
-	// Token: 0x0600AA82 RID: 43650 RVA: 0x00264D77 File Offset: 0x00262F77
+	// Token: 0x06007E65 RID: 32357 RVA: 0x0026F2C7 File Offset: 0x0026D4C7
 	static BuffItemModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BuffItemModel.CreateStaticDefaultValue), new Action(BuffItemModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D5C RID: 19804
+	// Token: 0x04004E04 RID: 19972
 	private readonly Dictionary<int, UseBuffItemRoleData> UseBuffItemRoleMap = new Dictionary<int, UseBuffItemRoleData>();
 
-	// Token: 0x04004D5D RID: 19805
+	// Token: 0x04004E05 RID: 19973
 	private readonly Dictionary<int, BuffItemData> BuffItemMap = new Dictionary<int, BuffItemData>();
 
-	// Token: 0x04004D5E RID: 19806
+	// Token: 0x04004E06 RID: 19974
 	private readonly Dictionary<int, bool> BuffEquipItemMap = new Dictionary<int, bool>();
 
-	// Token: 0x04004D5F RID: 19807
+	// Token: 0x04004E07 RID: 19975
 	private readonly Dictionary<EBuffItemEquipCategory, int> BuffEquipCategoryMap = new Dictionary<EBuffItemEquipCategory, int>();
 
-	// Token: 0x04004D60 RID: 19808
+	// Token: 0x04004E08 RID: 19976
 	private int CurrentUseBuffItemId;
 
-	// Token: 0x04004D61 RID: 19809
+	// Token: 0x04004E09 RID: 19977
 	[Nullable(2)]
 	private TimerHandle BuffCdRefreshTimerId;
 
-	// Token: 0x04004D62 RID: 19810
+	// Token: 0x04004E0A RID: 19978
 	[Nullable(2)]
 	private Action BuffCdRefreshEndCallback;
 
-	// Token: 0x04004D63 RID: 19811
+	// Token: 0x04004E0B RID: 19979
 	private int BuffCdRefreshItemId;
 
-	// Token: 0x04004D64 RID: 19812
+	// Token: 0x04004E0C RID: 19980
 	private List<long> PreviewBuffIdList = new List<long>();
 
-	// Token: 0x04004D65 RID: 19813
+	// Token: 0x04004E0D RID: 19981
 	[Nullable(2)]
 	private static BuffItemModel _Instance;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02001625 RID: 5669
+// Token: 0x02000ADD RID: 2781
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerPrepareView : UiViewBase
 {
-	// Token: 0x06009F88 RID: 40840 RVA: 0x00230239 File Offset: 0x0022E439
+	// Token: 0x06007366 RID: 29542 RVA: 0x0023A085 File Offset: 0x00238285
 	public WheelTowerPrepareView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F89 RID: 40841 RVA: 0x00230244 File Offset: 0x0022E444
+	// Token: 0x06007367 RID: 29543 RVA: 0x0023A090 File Offset: 0x00238290
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 30;
@@ -103,19 +102,19 @@ public class WheelTowerPrepareView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009F8A RID: 40842 RVA: 0x002306C1 File Offset: 0x0022E8C1
+	// Token: 0x06007368 RID: 29544 RVA: 0x0023A50D File Offset: 0x0023870D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x06009F8B RID: 40843 RVA: 0x002306DC File Offset: 0x0022E8DC
+	// Token: 0x06007369 RID: 29545 RVA: 0x0023A528 File Offset: 0x00238728
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x06009F8C RID: 40844 RVA: 0x002306F8 File Offset: 0x0022E8F8
+	// Token: 0x0600736A RID: 29546 RVA: 0x0023A544 File Offset: 0x00238744
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerPrepareView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -126,7 +125,7 @@ public class WheelTowerPrepareView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F8D RID: 40845 RVA: 0x0023073B File Offset: 0x0022E93B
+	// Token: 0x0600736B RID: 29547 RVA: 0x0023A587 File Offset: 0x00238787
 	protected override void OnBeforeShow()
 	{
 		WheelTowerBossHandBookButtonItem bossHandBookButtonItem = this.BossHandBookButtonItem;
@@ -143,7 +142,7 @@ public class WheelTowerPrepareView : UiViewBase
 		});
 	}
 
-	// Token: 0x06009F8E RID: 40846 RVA: 0x0023076C File Offset: 0x0022E96C
+	// Token: 0x0600736C RID: 29548 RVA: 0x0023A5B8 File Offset: 0x002387B8
 	private void InitSkillBranch()
 	{
 		RoleModel.Instance.StartGamePlayRoleEdit(ESkillBranchCacheType.WheelTower);
@@ -163,7 +162,7 @@ public class WheelTowerPrepareView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009F8F RID: 40847 RVA: 0x00230818 File Offset: 0x0022EA18
+	// Token: 0x0600736D RID: 29549 RVA: 0x0023A664 File Offset: 0x00238864
 	private void RefreshView()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -195,7 +194,7 @@ public class WheelTowerPrepareView : UiViewBase
 		this.RefreshBossList();
 	}
 
-	// Token: 0x06009F90 RID: 40848 RVA: 0x00230914 File Offset: 0x0022EB14
+	// Token: 0x0600736E RID: 29550 RVA: 0x0023A760 File Offset: 0x00238960
 	private void RefreshScoreLevel(int scoreLevel)
 	{
 		NewTowerScoreLevel? scoreLevelConfigById = WheelTowerConfig.Instance.GetScoreLevelConfigById(scoreLevel);
@@ -243,7 +242,7 @@ public class WheelTowerPrepareView : UiViewBase
 		text.SetColor(FColor.FromHex(scoreLevelConfigById.Value.TextColor));
 	}
 
-	// Token: 0x06009F91 RID: 40849 RVA: 0x00230A50 File Offset: 0x0022EC50
+	// Token: 0x0600736F RID: 29551 RVA: 0x0023A89C File Offset: 0x00238A9C
 	private void RefreshSelectData()
 	{
 		List<int> selectedRoleList = WheelTowerModel.Instance.SelectedRoleList;
@@ -285,7 +284,7 @@ public class WheelTowerPrepareView : UiViewBase
 		text.SetText(num.ToString(), true);
 	}
 
-	// Token: 0x06009F92 RID: 40850 RVA: 0x00230B84 File Offset: 0x0022ED84
+	// Token: 0x06007370 RID: 29552 RVA: 0x0023A9D0 File Offset: 0x00238BD0
 	private void RefreshBossList()
 	{
 		int selectedRound = WheelTowerModel.Instance.SelectedRound;
@@ -324,7 +323,7 @@ public class WheelTowerPrepareView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06009F93 RID: 40851 RVA: 0x00230CA4 File Offset: 0x0022EEA4
+	// Token: 0x06007371 RID: 29553 RVA: 0x0023AAF0 File Offset: 0x00238CF0
 	private void RefreshBossInfo(int bossId)
 	{
 		WheelTowerModel.Instance.SelectedBossId = bossId;
@@ -342,23 +341,23 @@ public class WheelTowerPrepareView : UiViewBase
 				AttrName = waveConfigById.Value.Name,
 				AttrLevel = waveConfigById.Value.MonsterLevel,
 				ElementId = waveConfigById.Value.ElementId,
-				TagIdList = (waveConfigById.Value.GetTagIdListArray() ?? Array.Empty<int>()).ToList<int>()
+				TagIdList = new List<int>(waveConfigById.Value.GetTagIdListArray() ?? Array.Empty<int>())
 			});
 		}
 		GenericLayout<WheelTowerBossBuffSmallItem, int> bossBuffLayout = this.BossBuffLayout;
 		if (bossBuffLayout != null)
 		{
-			bossBuffLayout.RefreshByData((waveConfigById.Value.GetShowBuffIdsArray() ?? Array.Empty<int>()).ToList<int>(), null, false);
+			bossBuffLayout.RefreshByData(new List<int>(waveConfigById.Value.GetShowBuffIdsArray() ?? Array.Empty<int>()), null, false);
 		}
 		GenericLayout<WheelTowerTeamFeatureItem, int> teamFeatureLayout = this.TeamFeatureLayout;
 		if (teamFeatureLayout != null)
 		{
-			teamFeatureLayout.RefreshByData((waveConfigById.Value.GetRecommendTeamFeatureArray() ?? Array.Empty<int>()).ToList<int>(), null, false);
+			teamFeatureLayout.RefreshByData(new List<int>(waveConfigById.Value.GetRecommendTeamFeatureArray() ?? Array.Empty<int>()), null, false);
 		}
 		this.UpdateMultiDesc();
 	}
 
-	// Token: 0x06009F94 RID: 40852 RVA: 0x00230DD8 File Offset: 0x0022EFD8
+	// Token: 0x06007372 RID: 29554 RVA: 0x0023AC24 File Offset: 0x00238E24
 	private void UpdateMultiDesc()
 	{
 		int selectedBossId = WheelTowerModel.Instance.SelectedBossId;
@@ -400,7 +399,7 @@ public class WheelTowerPrepareView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009F95 RID: 40853 RVA: 0x00230E8C File Offset: 0x0022F08C
+	// Token: 0x06007373 RID: 29555 RVA: 0x0023ACD8 File Offset: 0x00238ED8
 	private void OnCloseBtnClick()
 	{
 		if (GameModeController.Instance.IsInInstance() && !UiManager.Instance.IsViewHide(EUiViewName.WheelTowerModeDetailView))
@@ -411,7 +410,7 @@ public class WheelTowerPrepareView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009F96 RID: 40854 RVA: 0x00230EDC File Offset: 0x0022F0DC
+	// Token: 0x06007374 RID: 29556 RVA: 0x0023AD28 File Offset: 0x00238F28
 	private void OnStartBtnClick()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;
@@ -435,7 +434,7 @@ public class WheelTowerPrepareView : UiViewBase
 		this.RequestChallenge();
 	}
 
-	// Token: 0x06009F97 RID: 40855 RVA: 0x00230F68 File Offset: 0x0022F168
+	// Token: 0x06007375 RID: 29557 RVA: 0x0023ADB4 File Offset: 0x00238FB4
 	private void RequestChallenge()
 	{
 		RoleModel.Instance.ClearGamePlayRoleEdit(ESkillBranchCacheType.WheeTowerLoading);
@@ -447,7 +446,7 @@ public class WheelTowerPrepareView : UiViewBase
 		WheelTowerController.Instance.RequestSelectedRoundChallenge();
 	}
 
-	// Token: 0x06009F98 RID: 40856 RVA: 0x00230FE8 File Offset: 0x0022F1E8
+	// Token: 0x06007376 RID: 29558 RVA: 0x0023AE34 File Offset: 0x00239034
 	private void BossToggleClick(int index, int bossId)
 	{
 		GenericScrollViewNew<WheelTowerSmallBossItem, IBossItemData> bossScrollView = this.BossScrollView;
@@ -465,7 +464,7 @@ public class WheelTowerPrepareView : UiViewBase
 		bossHandBookButtonItem.SetJumpInfo(bossId, instance.SelectedRound, instance.EndlessMode);
 	}
 
-	// Token: 0x06009F99 RID: 40857 RVA: 0x00231032 File Offset: 0x0022F232
+	// Token: 0x06007377 RID: 29559 RVA: 0x0023AE7E File Offset: 0x0023907E
 	private void OnClickTeamItem()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerTeamSelectView, null, delegate(bool isSuccess, int viewId)
@@ -477,7 +476,7 @@ public class WheelTowerPrepareView : UiViewBase
 		});
 	}
 
-	// Token: 0x06009F9A RID: 40858 RVA: 0x00231050 File Offset: 0x0022F250
+	// Token: 0x06007378 RID: 29560 RVA: 0x0023AE9C File Offset: 0x0023909C
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.WheelTowerTeamSelectView || viewName == EUiViewName.WheelTowerRecommendView || viewName == EUiViewName.RoleSkillBranchPopView)
@@ -486,7 +485,7 @@ public class WheelTowerPrepareView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009F9B RID: 40859 RVA: 0x0023107F File Offset: 0x0022F27F
+	// Token: 0x06007379 RID: 29561 RVA: 0x0023AECB File Offset: 0x002390CB
 	private WheelTowerSmallBossItem CreateBossItem()
 	{
 		WheelTowerSmallBossItem wheelTowerSmallBossItem = new WheelTowerSmallBossItem();
@@ -494,7 +493,7 @@ public class WheelTowerPrepareView : UiViewBase
 		return wheelTowerSmallBossItem;
 	}
 
-	// Token: 0x06009F9C RID: 40860 RVA: 0x00231098 File Offset: 0x0022F298
+	// Token: 0x0600737A RID: 29562 RVA: 0x0023AEE4 File Offset: 0x002390E4
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -512,14 +511,14 @@ public class WheelTowerPrepareView : UiViewBase
 		});
 	}
 
-	// Token: 0x06009F9D RID: 40861 RVA: 0x002310CC File Offset: 0x0022F2CC
+	// Token: 0x0600737B RID: 29563 RVA: 0x0023AF18 File Offset: 0x00239118
 	private void OnBtnSkillBranchPopClick()
 	{
 		RoleSkillBranchPopViewParams param = this.BuildSkillBranchPopViewParams();
 		UiManager.Instance.OpenView(EUiViewName.RoleSkillBranchPopView, param, null);
 	}
 
-	// Token: 0x06009F9E RID: 40862 RVA: 0x002310F4 File Offset: 0x0022F2F4
+	// Token: 0x0600737C RID: 29564 RVA: 0x0023AF40 File Offset: 0x00239140
 	private RoleSkillBranchPopViewParams BuildSkillBranchPopViewParams()
 	{
 		RoleSkillBranchPopViewParams roleSkillBranchPopViewParams = new RoleSkillBranchPopViewParams();
@@ -530,13 +529,13 @@ public class WheelTowerPrepareView : UiViewBase
 		return roleSkillBranchPopViewParams;
 	}
 
-	// Token: 0x06009F9F RID: 40863 RVA: 0x00231126 File Offset: 0x0022F326
+	// Token: 0x0600737D RID: 29565 RVA: 0x0023AF72 File Offset: 0x00239172
 	private bool CheckHasSkillBranchInRoleEdit()
 	{
-		return WheelTowerModel.Instance.SelectedRoleList.Any((int roleId) => RoleModel.Instance.GetRoleSkillBranchIndexInCurrentGamePlay(roleId) > -1);
+		return WheelTowerModel.Instance.SelectedRoleList.Exists((int roleId) => RoleModel.Instance.GetRoleSkillBranchIndexInCurrentGamePlay(roleId) > -1);
 	}
 
-	// Token: 0x06009FA0 RID: 40864 RVA: 0x00231158 File Offset: 0x0022F358
+	// Token: 0x0600737E RID: 29566 RVA: 0x0023AFA4 File Offset: 0x002391A4
 	private void UpdateSkillBranchBtn()
 	{
 		UUIItem uuiitem = base.GetButton(23).RootUIComp.Get();
@@ -547,28 +546,28 @@ public class WheelTowerPrepareView : UiViewBase
 		uuiitem.SetUIActive(this.CheckHasSkillBranchInRoleEdit());
 	}
 
-	// Token: 0x04004833 RID: 18483
+	// Token: 0x040048D9 RID: 18649
 	private const string NormalTeamBgLightPath = "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/LevelMode/Normal/T_LevelModeNormalTeamBgLight.T_LevelModeNormalTeamBgLight";
 
-	// Token: 0x04004834 RID: 18484
+	// Token: 0x040048DA RID: 18650
 	private const string EndlessTeamBgLightPath = "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/LevelMode/Endless/T_LevelModeEndlessTeamBgLight.T_LevelModeEndlessTeamBgLight";
 
-	// Token: 0x04004835 RID: 18485
+	// Token: 0x040048DB RID: 18651
 	private const string TEXT_SCORE_MULTI_DESC = "NewTower_Scorept";
 
-	// Token: 0x04004836 RID: 18486
+	// Token: 0x040048DC RID: 18652
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004837 RID: 18487
+	// Token: 0x040048DD RID: 18653
 	[Nullable(2)]
 	private WheelTowerBossAttrItem AttrItem;
 
-	// Token: 0x04004838 RID: 18488
+	// Token: 0x040048DE RID: 18654
 	[Nullable(2)]
 	private WheelTowerTeamInfoPanel TeamInfoPanel;
 
-	// Token: 0x04004839 RID: 18489
+	// Token: 0x040048DF RID: 18655
 	[Nullable(new byte[]
 	{
 		2,
@@ -577,11 +576,11 @@ public class WheelTowerPrepareView : UiViewBase
 	})]
 	private GenericScrollViewNew<WheelTowerSmallBossItem, IBossItemData> BossScrollView;
 
-	// Token: 0x0400483A RID: 18490
+	// Token: 0x040048E0 RID: 18656
 	[Nullable(2)]
 	private WheelTowerBossHandBookButtonItem BossHandBookButtonItem;
 
-	// Token: 0x0400483B RID: 18491
+	// Token: 0x040048E1 RID: 18657
 	[Nullable(new byte[]
 	{
 		2,
@@ -589,7 +588,7 @@ public class WheelTowerPrepareView : UiViewBase
 	})]
 	private GenericLayout<WheelTowerBossBuffSmallItem, int> BossBuffLayout;
 
-	// Token: 0x0400483C RID: 18492
+	// Token: 0x040048E2 RID: 18658
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 {
-	// Token: 0x020051BD RID: 20925
+	// Token: 0x0200418D RID: 16781
 	public interface IPhantomArenaRoleOverviewItemData
 	{
-		// Token: 0x170081B0 RID: 33200
-		// (get) Token: 0x06035957 RID: 219479
-		// (set) Token: 0x06035958 RID: 219480
+		// Token: 0x17005570 RID: 21872
+		// (get) Token: 0x0602A852 RID: 174162
+		// (set) Token: 0x0602A853 RID: 174163
 		int CardRoleId { get; set; }
 	}
 }

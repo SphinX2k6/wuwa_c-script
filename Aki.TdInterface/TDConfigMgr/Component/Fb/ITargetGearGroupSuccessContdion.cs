@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B9C RID: 2972
+	// Token: 0x02000C6A RID: 3178
 	public class ITargetGearGroupSuccessContdion
 	{
-		// Token: 0x0600444D RID: 17485 RVA: 0x000AD9D6 File Offset: 0x000ABBD6
-		[NullableContext(1)]
+		// Token: 0x060048A6 RID: 18598 RVA: 0x000B7A9A File Offset: 0x000B5C9A
 		public static ITargetGearGroupSuccessContdion Create(ITargetGearGroupSuccessContdion? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012D2 RID: 4818
-		// (get) Token: 0x0600444E RID: 17486 RVA: 0x000AD9F5 File Offset: 0x000ABBF5
+		// Token: 0x170013CD RID: 5069
+		// (get) Token: 0x060048A7 RID: 18599 RVA: 0x000B7AB9 File Offset: 0x000B5CB9
 		public virtual ETargetGearGroupSuccessCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002693 RID: 9875
+		// Token: 0x040028DB RID: 10459
 		private ITargetGearGroupSuccessContdion Instance;
 	}
 }

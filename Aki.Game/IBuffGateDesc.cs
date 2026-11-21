@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E99 RID: 3737
+// Token: 0x0200034E RID: 846
 public interface IBuffGateDesc
 {
-	// Token: 0x170006BC RID: 1724
-	// (get) Token: 0x06005BAE RID: 23470
-	// (set) Token: 0x06005BAF RID: 23471
+	// Token: 0x170006E0 RID: 1760
+	// (get) Token: 0x06002F45 RID: 12101
+	// (set) Token: 0x06002F46 RID: 12102
 	[Nullable(new byte[]
 	{
 		0,
@@ -29,13 +29,13 @@ public interface IBuffGateDesc
 		1
 	})] set; }
 
-	// Token: 0x170006BD RID: 1725
-	// (get) Token: 0x06005BB0 RID: 23472
-	// (set) Token: 0x06005BB1 RID: 23473
+	// Token: 0x170006E1 RID: 1761
+	// (get) Token: 0x06002F47 RID: 12103
+	// (set) Token: 0x06002F48 RID: 12104
 	int BuffGateId { get; set; }
 
-	// Token: 0x170006BE RID: 1726
-	// (get) Token: 0x06005BB2 RID: 23474
-	// (set) Token: 0x06005BB3 RID: 23475
+	// Token: 0x170006E2 RID: 1762
+	// (get) Token: 0x06002F49 RID: 12105
+	// (set) Token: 0x06002F4A RID: 12106
 	bool IsDropBuffGate { get; set; }
 }

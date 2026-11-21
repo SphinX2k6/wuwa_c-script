@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BFC RID: 15356
+	// Token: 0x02004008 RID: 16392
 	public class ICircleRangeT
 	{
-		// Token: 0x17006975 RID: 26997
-		// (get) Token: 0x06015231 RID: 86577 RVA: 0x0030FFF1 File Offset: 0x0030E1F1
-		// (set) Token: 0x06015232 RID: 86578 RVA: 0x0030FFF9 File Offset: 0x0030E1F9
+		// Token: 0x17006F1D RID: 28445
+		// (get) Token: 0x06016727 RID: 91943 RVA: 0x00336B79 File Offset: 0x00334D79
+		// (set) Token: 0x06016728 RID: 91944 RVA: 0x00336B81 File Offset: 0x00334D81
 		public ERangeType Type { get; set; }
 
-		// Token: 0x17006976 RID: 26998
-		// (get) Token: 0x06015233 RID: 86579 RVA: 0x00310002 File Offset: 0x0030E202
-		// (set) Token: 0x06015234 RID: 86580 RVA: 0x0031000A File Offset: 0x0030E20A
+		// Token: 0x17006F1E RID: 28446
+		// (get) Token: 0x06016729 RID: 91945 RVA: 0x00336B8A File Offset: 0x00334D8A
+		// (set) Token: 0x0601672A RID: 91946 RVA: 0x00336B92 File Offset: 0x00334D92
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x17006977 RID: 26999
-		// (get) Token: 0x06015235 RID: 86581 RVA: 0x00310013 File Offset: 0x0030E213
-		// (set) Token: 0x06015236 RID: 86582 RVA: 0x0031001B File Offset: 0x0030E21B
+		// Token: 0x17006F1F RID: 28447
+		// (get) Token: 0x0601672B RID: 91947 RVA: 0x00336B9B File Offset: 0x00334D9B
+		// (set) Token: 0x0601672C RID: 91948 RVA: 0x00336BA3 File Offset: 0x00334DA3
 		public int Radius { get; set; }
 
-		// Token: 0x06015237 RID: 86583 RVA: 0x00310024 File Offset: 0x0030E224
+		// Token: 0x0601672D RID: 91949 RVA: 0x00336BAC File Offset: 0x00334DAC
 		public ICircleRangeT()
 		{
 			this.Type = ERangeType.CircleRange;

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074CF RID: 29903
+	// Token: 0x02007CC5 RID: 31941
 	public enum IUnlockCookSystemType_Union : byte
 	{
-		// Token: 0x04012397 RID: 74647
+		// Token: 0x040133C8 RID: 78792
 		NONE,
-		// Token: 0x04012398 RID: 74648
+		// Token: 0x040133C9 RID: 78793
 		IUnlockCookSystemType,
-		// Token: 0x04012399 RID: 74649
+		// Token: 0x040133CA RID: 78794
 		IUnlockCookSystemCookBook
 	}
 }

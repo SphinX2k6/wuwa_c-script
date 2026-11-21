@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C8C RID: 3212
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D6E RID: 3438
 	public class IJigsawPieceMatch
 	{
-		// Token: 0x0600497E RID: 18814 RVA: 0x000B82CD File Offset: 0x000B64CD
+		// Token: 0x06004E2C RID: 20012 RVA: 0x000C2CDD File Offset: 0x000C0EDD
 		public static IJigsawPieceMatch Create(IJigsawPieceMatch? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001623 RID: 5667
-		// (get) Token: 0x0600497F RID: 18815 RVA: 0x000B82EC File Offset: 0x000B64EC
+		// Token: 0x1700174B RID: 5963
+		// (get) Token: 0x06004E2D RID: 20013 RVA: 0x000C2CFC File Offset: 0x000C0EFC
 		public virtual int EntityId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001624 RID: 5668
-		// (get) Token: 0x06004980 RID: 18816 RVA: 0x000B82F9 File Offset: 0x000B64F9
+		// Token: 0x1700174C RID: 5964
+		// (get) Token: 0x06004E2E RID: 20014 RVA: 0x000C2D09 File Offset: 0x000C0F09
 		public virtual IPieceIndex Index
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029E9 RID: 10729
+		// Token: 0x04002C63 RID: 11363
 		private IJigsawPieceMatch Instance;
 
-		// Token: 0x040029EA RID: 10730
+		// Token: 0x04002C64 RID: 11364
 		[Nullable(2)]
 		private IPieceIndex _IndexCache;
 
-		// Token: 0x040029EB RID: 10731
+		// Token: 0x04002C65 RID: 11365
 		private bool _IndexInited;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042D0 RID: 17104
+	// Token: 0x0200472F RID: 18223
 	public class TEnterDungeonUnion
 	{
-		// Token: 0x17007942 RID: 31042
-		// (get) Token: 0x060195F1 RID: 103921 RVA: 0x003A3E50 File Offset: 0x003A2050
-		// (set) Token: 0x060195F2 RID: 103922 RVA: 0x003A3E58 File Offset: 0x003A2058
+		// Token: 0x17007F75 RID: 32629
+		// (get) Token: 0x0601AD73 RID: 109939 RVA: 0x003CF77D File Offset: 0x003CD97D
+		// (set) Token: 0x0601AD74 RID: 109940 RVA: 0x003CF785 File Offset: 0x003CD985
 		public TEnterDungeon Type { get; set; }
 
-		// Token: 0x17007943 RID: 31043
-		// (get) Token: 0x060195F3 RID: 103923 RVA: 0x003A3E61 File Offset: 0x003A2061
-		// (set) Token: 0x060195F4 RID: 103924 RVA: 0x003A3E69 File Offset: 0x003A2069
+		// Token: 0x17007F76 RID: 32630
+		// (get) Token: 0x0601AD75 RID: 109941 RVA: 0x003CF78E File Offset: 0x003CD98E
+		// (set) Token: 0x0601AD76 RID: 109942 RVA: 0x003CF796 File Offset: 0x003CD996
 		public object Value { get; set; }
 
-		// Token: 0x060195F5 RID: 103925 RVA: 0x003A3E72 File Offset: 0x003A2072
+		// Token: 0x0601AD77 RID: 109943 RVA: 0x003CF79F File Offset: 0x003CD99F
 		public TEnterDungeonUnion()
 		{
 			this.Type = TEnterDungeon.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060195F6 RID: 103926 RVA: 0x003A3E88 File Offset: 0x003A2088
+		// Token: 0x0601AD78 RID: 109944 RVA: 0x003CF7B5 File Offset: 0x003CD9B5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060195F7 RID: 103927 RVA: 0x003A3E9A File Offset: 0x003A209A
+		// Token: 0x0601AD79 RID: 109945 RVA: 0x003CF7C7 File Offset: 0x003CD9C7
 		public IEnterDungeonIdConditionT AsIEnterDungeonIdCondition()
 		{
 			return this.As<IEnterDungeonIdConditionT>();
 		}
 
-		// Token: 0x060195F8 RID: 103928 RVA: 0x003A3EA2 File Offset: 0x003A20A2
+		// Token: 0x0601AD7A RID: 109946 RVA: 0x003CF7CF File Offset: 0x003CD9CF
 		public static TEnterDungeonUnion FromIEnterDungeonIdCondition(IEnterDungeonIdConditionT _ienterdungeonidcondition)
 		{
 			return new TEnterDungeonUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060195F9 RID: 103929 RVA: 0x003A3EB7 File Offset: 0x003A20B7
+		// Token: 0x0601AD7B RID: 109947 RVA: 0x003CF7E4 File Offset: 0x003CD9E4
 		public IEnterDungeonSubTypeConditionT AsIEnterDungeonSubTypeCondition()
 		{
 			return this.As<IEnterDungeonSubTypeConditionT>();
 		}
 
-		// Token: 0x060195FA RID: 103930 RVA: 0x003A3EBF File Offset: 0x003A20BF
+		// Token: 0x0601AD7C RID: 109948 RVA: 0x003CF7EC File Offset: 0x003CD9EC
 		public static TEnterDungeonUnion FromIEnterDungeonSubTypeCondition(IEnterDungeonSubTypeConditionT _ienterdungeonsubtypecondition)
 		{
 			return new TEnterDungeonUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060195FB RID: 103931 RVA: 0x003A3ED4 File Offset: 0x003A20D4
+		// Token: 0x0601AD7D RID: 109949 RVA: 0x003CF804 File Offset: 0x003CDA04
 		public static int Pack(FlatBufferBuilder builder, TEnterDungeonUnion _o)
 		{
 			TEnterDungeon type = _o.Type;

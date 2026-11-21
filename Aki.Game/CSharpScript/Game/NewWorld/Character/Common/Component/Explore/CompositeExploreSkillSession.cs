@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007123 RID: 28963
+	// Token: 0x02006351 RID: 25425
 	public class CompositeExploreSkillSession : IStaticVariableResetter
 	{
-		// Token: 0x06046B78 RID: 289656 RVA: 0x011CF6A6 File Offset: 0x011CD8A6
+		// Token: 0x0603D9C3 RID: 252355 RVA: 0x011D82F6 File Offset: 0x011D64F6
 		static CompositeExploreSkillSession()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CompositeExploreSkillSession.CreateStaticDefaultValue), new Action(CompositeExploreSkillSession.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046B79 RID: 289657 RVA: 0x011CF6C5 File Offset: 0x011CD8C5
+		// Token: 0x0603D9C4 RID: 252356 RVA: 0x011D8315 File Offset: 0x011D6515
 		public static void CreateStaticDefaultValue()
 		{
 			CompositeExploreSkillSession.CompositeExploreSkillConfigs = new Dictionary<int, ICompositeExploreSkillConfig>
@@ -30,19 +30,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			};
 		}
 
-		// Token: 0x06046B7A RID: 289658 RVA: 0x011CF702 File Offset: 0x011CD902
+		// Token: 0x0603D9C5 RID: 252357 RVA: 0x011D8352 File Offset: 0x011D6552
 		public static void ResetStaticDefaultValue()
 		{
 			CompositeExploreSkillSession.CompositeExploreSkillConfigs = null;
 		}
 
-		// Token: 0x06046B7B RID: 289659 RVA: 0x011CF70A File Offset: 0x011CD90A
+		// Token: 0x0603D9C6 RID: 252358 RVA: 0x011D835A File Offset: 0x011D655A
 		public bool IsCompositeSessionExpired()
 		{
 			return this.ActiveCompositeSession != null && Time.Instance.Now - this.ActiveCompositeSession.CreatedTime >= 5000.0;
 		}
 
-		// Token: 0x06046B7C RID: 289660 RVA: 0x011CF73C File Offset: 0x011CD93C
+		// Token: 0x0603D9C7 RID: 252359 RVA: 0x011D838C File Offset: 0x011D658C
 		[NullableContext(1)]
 		public unsafe bool TryCleanStaleCompositeSession(int skillId, ELogModule logModule, string reason)
 		{
@@ -71,10 +71,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return false;
 		}
 
-		// Token: 0x04025204 RID: 152068
+		// Token: 0x04020AE4 RID: 133860
 		private const int COMPOSITE_SESSION_TIMEOUT_MS = 5000;
 
-		// Token: 0x04025205 RID: 152069
+		// Token: 0x04020AE5 RID: 133861
 		[Nullable(new byte[]
 		{
 			2,
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 		})]
 		public static Dictionary<int, ICompositeExploreSkillConfig> CompositeExploreSkillConfigs;
 
-		// Token: 0x04025206 RID: 152070
+		// Token: 0x04020AE6 RID: 133862
 		[Nullable(2)]
 		public ICompositeSkillSession ActiveCompositeSession;
 	}

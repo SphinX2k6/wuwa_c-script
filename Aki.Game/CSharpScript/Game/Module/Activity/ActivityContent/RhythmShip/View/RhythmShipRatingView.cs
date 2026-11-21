@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006240 RID: 25152
+	// Token: 0x020051BE RID: 20926
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipRatingView : UiViewBase
 	{
-		// Token: 0x0603F626 RID: 259622 RVA: 0x00F52969 File Offset: 0x00F50B69
+		// Token: 0x060342E7 RID: 213735 RVA: 0x00E998C5 File Offset: 0x00E97AC5
 		public RhythmShipRatingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F627 RID: 259623 RVA: 0x00F52988 File Offset: 0x00F50B88
+		// Token: 0x060342E8 RID: 213736 RVA: 0x00E998E4 File Offset: 0x00E97AE4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F628 RID: 259624 RVA: 0x00F52AD0 File Offset: 0x00F50CD0
+		// Token: 0x060342E9 RID: 213737 RVA: 0x00E99A2C File Offset: 0x00E97C2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipRatingView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F629 RID: 259625 RVA: 0x00F52B14 File Offset: 0x00F50D14
+		// Token: 0x060342EA RID: 213738 RVA: 0x00E99A70 File Offset: 0x00E97C70
 		protected override void OnStart()
 		{
 			IRhythmShipRatingViewData rhythmShipRatingViewData = this.OpenParam as IRhythmShipRatingViewData;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshView();
 		}
 
-		// Token: 0x0603F62A RID: 259626 RVA: 0x00F52C10 File Offset: 0x00F50E10
+		// Token: 0x060342EB RID: 213739 RVA: 0x00E99B6C File Offset: 0x00E97D6C
 		private void OnClickLeftBtn()
 		{
 			if (this.CurrentShowSubLevelId <= 0)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshView();
 		}
 
-		// Token: 0x0603F62B RID: 259627 RVA: 0x00F52C30 File Offset: 0x00F50E30
+		// Token: 0x060342EC RID: 213740 RVA: 0x00E99B8C File Offset: 0x00E97D8C
 		private void OnClickRightBtn()
 		{
 			if (this.CurrentShowSubLevelId >= this.SubLevelIdList.Count - 1)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshView();
 		}
 
-		// Token: 0x0603F62C RID: 259628 RVA: 0x00F52C5C File Offset: 0x00F50E5C
+		// Token: 0x060342ED RID: 213741 RVA: 0x00E99BB8 File Offset: 0x00E97DB8
 		private void RefreshView()
 		{
 			int num = this.SubLevelIdList[this.CurrentShowSubLevelId];
@@ -157,18 +157,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshBtnActivity();
 		}
 
-		// Token: 0x0603F62D RID: 259629 RVA: 0x00F52E20 File Offset: 0x00F51020
+		// Token: 0x060342EE RID: 213742 RVA: 0x00E99D7C File Offset: 0x00E97F7C
 		private void RefreshBtnActivity()
 		{
 			base.GetButton(9).RootUIComp.Get().SetUIActive(false);
 			base.GetButton(8).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x040211A1 RID: 135585
+		// Token: 0x0401BAD0 RID: 113360
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040211A2 RID: 135586
+		// Token: 0x0401BAD1 RID: 113361
 		[Nullable(new byte[]
 		{
 			2,
@@ -177,17 +177,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private LoopScrollView<RhythmShipRatingItem, IRhythmShipSubLevelRatingData> PlayerScroll;
 
-		// Token: 0x040211A3 RID: 135587
+		// Token: 0x0401BAD2 RID: 113362
 		[Nullable(2)]
 		private RhythmShipRatingItem SelfItem;
 
-		// Token: 0x040211A4 RID: 135588
+		// Token: 0x0401BAD3 RID: 113363
 		private readonly List<int> SubLevelIdList = new List<int>();
 
-		// Token: 0x040211A5 RID: 135589
+		// Token: 0x0401BAD4 RID: 113364
 		private int CurrentShowSubLevelId;
 
-		// Token: 0x040211A6 RID: 135590
+		// Token: 0x0401BAD5 RID: 113365
 		private readonly Dictionary<int, List<IRhythmShipSubLevelRatingData>> LevelRatingInfoMap = new Dictionary<int, List<IRhythmShipSubLevelRatingData>>();
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006033 RID: 24627
+	// Token: 0x02004FB1 RID: 20401
 	public class SpringManorDrinkHandle : SpringManorGameHandleBase
 	{
-		// Token: 0x0603E51C RID: 255260 RVA: 0x00F0D0BF File Offset: 0x00F0B2BF
+		// Token: 0x060331E0 RID: 209376 RVA: 0x00E53E83 File Offset: 0x00E52083
 		public override int GetCurrentProgress()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return instance.ActivityData.GetDrinksCurrentProgress();
 		}
 
-		// Token: 0x0603E51D RID: 255261 RVA: 0x00F0D0D6 File Offset: 0x00F0B2D6
+		// Token: 0x060331E1 RID: 209377 RVA: 0x00E53E9A File Offset: 0x00E5209A
 		public override int GetTotalProgress()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return instance.ActivityData.GetDrinksTotalProgress();
 		}
 
-		// Token: 0x0603E51E RID: 255262 RVA: 0x00F0D0ED File Offset: 0x00F0B2ED
+		// Token: 0x060331E2 RID: 209378 RVA: 0x00E53EB1 File Offset: 0x00E520B1
 		public override void EnterGame()
 		{
 			DrinksController.Instance.OpenMainView(EDrinksGameplayOpenWay.FromView);
 		}
 
-		// Token: 0x0603E51F RID: 255263 RVA: 0x00F0D0FA File Offset: 0x00F0B2FA
+		// Token: 0x060331E3 RID: 209379 RVA: 0x00E53EBE File Offset: 0x00E520BE
 		public override ERedDotName? GetRedDotName()
 		{
 			return new ERedDotName?(ERedDotName.DrinksUnlockLevel);

@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200100D RID: 4109
+// Token: 0x020004C1 RID: 1217
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingLevelMainView : UiTickViewBase
 {
-	// Token: 0x0600695C RID: 26972 RVA: 0x0015032C File Offset: 0x0014E52C
+	// Token: 0x06003CF1 RID: 15601 RVA: 0x00158C54 File Offset: 0x00156E54
 	public GolemHackingLevelMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600695D RID: 26973 RVA: 0x0015033C File Offset: 0x0014E53C
+	// Token: 0x06003CF2 RID: 15602 RVA: 0x00158C64 File Offset: 0x00156E64
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,19 +38,19 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600695E RID: 26974 RVA: 0x00150408 File Offset: 0x0014E608
+	// Token: 0x06003CF3 RID: 15603 RVA: 0x00158D30 File Offset: 0x00156F30
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x0600695F RID: 26975 RVA: 0x00150426 File Offset: 0x0014E626
+	// Token: 0x06003CF4 RID: 15604 RVA: 0x00158D4E File Offset: 0x00156F4E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x06006960 RID: 26976 RVA: 0x00150444 File Offset: 0x0014E644
+	// Token: 0x06003CF5 RID: 15605 RVA: 0x00158D6C File Offset: 0x00156F6C
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -64,7 +64,7 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		this.RefreshCurSelected();
 	}
 
-	// Token: 0x06006961 RID: 26977 RVA: 0x001504DC File Offset: 0x0014E6DC
+	// Token: 0x06003CF6 RID: 15606 RVA: 0x00158E04 File Offset: 0x00157004
 	protected void RefreshCurSelected()
 	{
 		List<GolemHackingLevelGroupInfo> levelGroupList = this.ActivityData.GetLevelGroupList();
@@ -83,7 +83,7 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06006962 RID: 26978 RVA: 0x0015054C File Offset: 0x0014E74C
+	// Token: 0x06003CF7 RID: 15607 RVA: 0x00158E74 File Offset: 0x00157074
 	protected override void OnBeforeShow()
 	{
 		ValueTuple<int, int> groupProgressState = this.ActivityData.GetGroupProgressState();
@@ -120,7 +120,7 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		}, true);
 	}
 
-	// Token: 0x06006963 RID: 26979 RVA: 0x00150604 File Offset: 0x0014E804
+	// Token: 0x06003CF8 RID: 15608 RVA: 0x00158F2C File Offset: 0x0015712C
 	protected override void OnTick(float delta)
 	{
 		foreach (GolemHackingLevelGroupTab golemHackingLevelGroupTab in this.LevelLayout.GetScrollItemList())
@@ -129,7 +129,7 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06006964 RID: 26980 RVA: 0x0015065C File Offset: 0x0014E85C
+	// Token: 0x06003CF9 RID: 15609 RVA: 0x00158F84 File Offset: 0x00157184
 	protected void OnLateUpdate()
 	{
 		base.GetScrollViewWithScrollbar(3).OnLateUpdate.Bind(delegate(float _)
@@ -155,13 +155,13 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06006965 RID: 26981 RVA: 0x0015067B File Offset: 0x0014E87B
+	// Token: 0x06003CFA RID: 15610 RVA: 0x00158FA3 File Offset: 0x001571A3
 	private void OnClickedClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06006966 RID: 26982 RVA: 0x00150684 File Offset: 0x0014E884
+	// Token: 0x06003CFB RID: 15611 RVA: 0x00158FAC File Offset: 0x001571AC
 	private void OnClickedCallback(GolemHackingLevelGroupInfo data, int gridIndex)
 	{
 		if (this.ActivityData.GetGroupState(data.Group).Item1 == EGolemHackingGroupState.Locked)
@@ -173,7 +173,7 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		UiManager.Instance.OpenView(EUiViewName.GolemHackingLevelDetailView, data, null);
 	}
 
-	// Token: 0x06006967 RID: 26983 RVA: 0x001506D3 File Offset: 0x0014E8D3
+	// Token: 0x06003CFC RID: 15612 RVA: 0x00158FFB File Offset: 0x001571FB
 	private GolemHackingLevelGroupTab CreateLevel()
 	{
 		return new GolemHackingLevelGroupTab
@@ -182,40 +182,40 @@ public class GolemHackingLevelMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06006968 RID: 26984 RVA: 0x001506EC File Offset: 0x0014E8EC
+	// Token: 0x06003CFD RID: 15613 RVA: 0x00159014 File Offset: 0x00157214
 	private void OnActivityClose(IReadOnlySet<int> closeActivities)
 	{
 		GolemHackingController.Instance.CloseActivityView(closeActivities, false);
 	}
 
-	// Token: 0x04003093 RID: 12435
+	// Token: 0x0400312C RID: 12588
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003094 RID: 12436
+	// Token: 0x0400312D RID: 12589
 	protected GenericScrollViewNew<GolemHackingLevelGroupTab, GolemHackingLevelGroupInfo> LevelLayout;
 
-	// Token: 0x04003095 RID: 12437
+	// Token: 0x0400312E RID: 12590
 	protected GolemHackingActivityData ActivityData;
 
-	// Token: 0x04003096 RID: 12438
+	// Token: 0x0400312F RID: 12591
 	protected int CurSelected = -1;
 
-	// Token: 0x04003097 RID: 12439
+	// Token: 0x04003130 RID: 12592
 	protected bool HasFirstInit;
 
-	// Token: 0x02007606 RID: 30214
+	// Token: 0x0200679A RID: 26522
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x04026FE0 RID: 159712
+		// Token: 0x0402232B RID: 140075
 		CaptionItem,
-		// Token: 0x04026FE1 RID: 159713
+		// Token: 0x0402232C RID: 140076
 		PanelProgress,
-		// Token: 0x04026FE2 RID: 159714
+		// Token: 0x0402232D RID: 140077
 		TxtProgress,
-		// Token: 0x04026FE3 RID: 159715
+		// Token: 0x0402232E RID: 140078
 		SvList,
-		// Token: 0x04026FE4 RID: 159716
+		// Token: 0x0402232F RID: 140079
 		Item
 	}
 }

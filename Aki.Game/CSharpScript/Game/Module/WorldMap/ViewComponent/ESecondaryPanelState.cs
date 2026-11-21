@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B5 RID: 18357
+	// Token: 0x020036E6 RID: 14054
 	public enum ESecondaryPanelState
 	{
-		// Token: 0x04019EB8 RID: 106168
+		// Token: 0x04014568 RID: 83304
 		Open,
-		// Token: 0x04019EB9 RID: 106169
+		// Token: 0x04014569 RID: 83305
 		Close,
-		// Token: 0x04019EBA RID: 106170
+		// Token: 0x0401456A RID: 83306
 		CloseComplete
 	}
 }

@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000454 RID: 1108
+	// Token: 0x0200043D RID: 1085
 	public sealed class EnterInstContext : IMessage<EnterInstContext>, IMessage, IEquatable<EnterInstContext>, IDeepCloneable<EnterInstContext>, IBufferMessage
 	{
-		// Token: 0x060069BF RID: 27071 RVA: 0x000FD9DC File Offset: 0x000FBBDC
+		// Token: 0x0600682F RID: 26671 RVA: 0x000FA850 File Offset: 0x000F8A50
 		[NullableContext(1)]
 		public static EnterInstContext Create()
 		{
 			return new EnterInstContext();
 		}
 
-		// Token: 0x170013EE RID: 5102
-		// (get) Token: 0x060069C0 RID: 27072 RVA: 0x000FD9E3 File Offset: 0x000FBBE3
+		// Token: 0x17001399 RID: 5017
+		// (get) Token: 0x06006830 RID: 26672 RVA: 0x000FA857 File Offset: 0x000F8A57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013EF RID: 5103
-		// (get) Token: 0x060069C1 RID: 27073 RVA: 0x000FD9E6 File Offset: 0x000FBBE6
+		// Token: 0x1700139A RID: 5018
+		// (get) Token: 0x06006831 RID: 26673 RVA: 0x000FA85A File Offset: 0x000F8A5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060069C2 RID: 27074 RVA: 0x000FD9ED File Offset: 0x000FBBED
+		// Token: 0x06006832 RID: 26674 RVA: 0x000FA861 File Offset: 0x000F8A61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnterInstContext()
 		{
 		}
 
-		// Token: 0x060069C3 RID: 27075 RVA: 0x000FD9F8 File Offset: 0x000FBBF8
+		// Token: 0x06006833 RID: 26675 RVA: 0x000FA86C File Offset: 0x000F8A6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnterInstContext(EnterInstContext other) : this()
@@ -160,11 +160,14 @@ namespace Aki.Protocol
 			case EnterInstContext.EnterCtxOneofCase.FarmGoldCtx:
 				this.FarmGoldCtx = other.FarmGoldCtx.Clone();
 				break;
+			case EnterInstContext.EnterCtxOneofCase.RoleTowerCtx:
+				this.RoleTowerCtx = other.RoleTowerCtx.Clone();
+				break;
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060069C4 RID: 27076 RVA: 0x000FDDA7 File Offset: 0x000FBFA7
+		// Token: 0x06006834 RID: 26676 RVA: 0x000FAC35 File Offset: 0x000F8E35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnterInstContext Clone()
@@ -172,9 +175,9 @@ namespace Aki.Protocol
 			return new EnterInstContext(this);
 		}
 
-		// Token: 0x170013F0 RID: 5104
-		// (get) Token: 0x060069C5 RID: 27077 RVA: 0x000FDDAF File Offset: 0x000FBFAF
-		// (set) Token: 0x060069C6 RID: 27078 RVA: 0x000FDDC7 File Offset: 0x000FBFC7
+		// Token: 0x1700139B RID: 5019
+		// (get) Token: 0x06006835 RID: 26677 RVA: 0x000FAC3D File Offset: 0x000F8E3D
+		// (set) Token: 0x06006836 RID: 26678 RVA: 0x000FAC55 File Offset: 0x000F8E55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleTrialEnterCtx RoleTrialCtx
@@ -194,9 +197,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F1 RID: 5105
-		// (get) Token: 0x060069C7 RID: 27079 RVA: 0x000FDDDD File Offset: 0x000FBFDD
-		// (set) Token: 0x060069C8 RID: 27080 RVA: 0x000FDDF5 File Offset: 0x000FBFF5
+		// Token: 0x1700139C RID: 5020
+		// (get) Token: 0x06006837 RID: 26679 RVA: 0x000FAC6B File Offset: 0x000F8E6B
+		// (set) Token: 0x06006838 RID: 26680 RVA: 0x000FAC83 File Offset: 0x000F8E83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleTeachEnterCtx RoleTeachCtx
@@ -216,9 +219,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F2 RID: 5106
-		// (get) Token: 0x060069C9 RID: 27081 RVA: 0x000FDE0B File Offset: 0x000FC00B
-		// (set) Token: 0x060069CA RID: 27082 RVA: 0x000FDE23 File Offset: 0x000FC023
+		// Token: 0x1700139D RID: 5021
+		// (get) Token: 0x06006839 RID: 26681 RVA: 0x000FAC99 File Offset: 0x000F8E99
+		// (set) Token: 0x0600683A RID: 26682 RVA: 0x000FACB1 File Offset: 0x000F8EB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdventureGuideCtx AdventureGuideCtx
@@ -238,9 +241,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F3 RID: 5107
-		// (get) Token: 0x060069CB RID: 27083 RVA: 0x000FDE39 File Offset: 0x000FC039
-		// (set) Token: 0x060069CC RID: 27084 RVA: 0x000FDE51 File Offset: 0x000FC051
+		// Token: 0x1700139E RID: 5022
+		// (get) Token: 0x0600683B RID: 26683 RVA: 0x000FACC7 File Offset: 0x000F8EC7
+		// (set) Token: 0x0600683C RID: 26684 RVA: 0x000FACDF File Offset: 0x000F8EDF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWhiteCatCtx RogueWhiteCatCtx
@@ -260,9 +263,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F4 RID: 5108
-		// (get) Token: 0x060069CD RID: 27085 RVA: 0x000FDE67 File Offset: 0x000FC067
-		// (set) Token: 0x060069CE RID: 27086 RVA: 0x000FDE7F File Offset: 0x000FC07F
+		// Token: 0x1700139F RID: 5023
+		// (get) Token: 0x0600683D RID: 26685 RVA: 0x000FACF5 File Offset: 0x000F8EF5
+		// (set) Token: 0x0600683E RID: 26686 RVA: 0x000FAD0D File Offset: 0x000F8F0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossRushCtx BossRushCtx
@@ -282,9 +285,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F5 RID: 5109
-		// (get) Token: 0x060069CF RID: 27087 RVA: 0x000FDE95 File Offset: 0x000FC095
-		// (set) Token: 0x060069D0 RID: 27088 RVA: 0x000FDEAD File Offset: 0x000FC0AD
+		// Token: 0x170013A0 RID: 5024
+		// (get) Token: 0x0600683F RID: 26687 RVA: 0x000FAD23 File Offset: 0x000F8F23
+		// (set) Token: 0x06006840 RID: 26688 RVA: 0x000FAD3B File Offset: 0x000F8F3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MowTowerCtx MowTowerCtx
@@ -304,9 +307,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F6 RID: 5110
-		// (get) Token: 0x060069D1 RID: 27089 RVA: 0x000FDEC3 File Offset: 0x000FC0C3
-		// (set) Token: 0x060069D2 RID: 27090 RVA: 0x000FDEDB File Offset: 0x000FC0DB
+		// Token: 0x170013A1 RID: 5025
+		// (get) Token: 0x06006841 RID: 26689 RVA: 0x000FAD51 File Offset: 0x000F8F51
+		// (set) Token: 0x06006842 RID: 26690 RVA: 0x000FAD69 File Offset: 0x000F8F69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkinTrialEnterCtx RoleSkinTrialEnterCtx
@@ -326,9 +329,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F7 RID: 5111
-		// (get) Token: 0x060069D3 RID: 27091 RVA: 0x000FDEF1 File Offset: 0x000FC0F1
-		// (set) Token: 0x060069D4 RID: 27092 RVA: 0x000FDF09 File Offset: 0x000FC109
+		// Token: 0x170013A2 RID: 5026
+		// (get) Token: 0x06006843 RID: 26691 RVA: 0x000FAD7F File Offset: 0x000F8F7F
+		// (set) Token: 0x06006844 RID: 26692 RVA: 0x000FAD97 File Offset: 0x000F8F97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SlashAndTowerCtx SlashAndTowerCtx
@@ -348,9 +351,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F8 RID: 5112
-		// (get) Token: 0x060069D5 RID: 27093 RVA: 0x000FDF1F File Offset: 0x000FC11F
-		// (set) Token: 0x060069D6 RID: 27094 RVA: 0x000FDF38 File Offset: 0x000FC138
+		// Token: 0x170013A3 RID: 5027
+		// (get) Token: 0x06006845 RID: 26693 RVA: 0x000FADAD File Offset: 0x000F8FAD
+		// (set) Token: 0x06006846 RID: 26694 RVA: 0x000FADC6 File Offset: 0x000F8FC6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerCtx BabelTowerCtx
@@ -370,9 +373,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013F9 RID: 5113
-		// (get) Token: 0x060069D7 RID: 27095 RVA: 0x000FDF4F File Offset: 0x000FC14F
-		// (set) Token: 0x060069D8 RID: 27096 RVA: 0x000FDF68 File Offset: 0x000FC168
+		// Token: 0x170013A4 RID: 5028
+		// (get) Token: 0x06006847 RID: 26695 RVA: 0x000FADDD File Offset: 0x000F8FDD
+		// (set) Token: 0x06006848 RID: 26696 RVA: 0x000FADF6 File Offset: 0x000F8FF6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PreOpenDetectionCtx PreOpenDetectionCtx
@@ -392,9 +395,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013FA RID: 5114
-		// (get) Token: 0x060069D9 RID: 27097 RVA: 0x000FDF7F File Offset: 0x000FC17F
-		// (set) Token: 0x060069DA RID: 27098 RVA: 0x000FDF98 File Offset: 0x000FC198
+		// Token: 0x170013A5 RID: 5029
+		// (get) Token: 0x06006849 RID: 26697 RVA: 0x000FAE0D File Offset: 0x000F900D
+		// (set) Token: 0x0600684A RID: 26698 RVA: 0x000FAE26 File Offset: 0x000F9026
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssInstCtx AbyssInstCtx
@@ -414,9 +417,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013FB RID: 5115
-		// (get) Token: 0x060069DB RID: 27099 RVA: 0x000FDFAF File Offset: 0x000FC1AF
-		// (set) Token: 0x060069DC RID: 27100 RVA: 0x000FDFC8 File Offset: 0x000FC1C8
+		// Token: 0x170013A6 RID: 5030
+		// (get) Token: 0x0600684B RID: 26699 RVA: 0x000FAE3D File Offset: 0x000F903D
+		// (set) Token: 0x0600684C RID: 26700 RVA: 0x000FAE56 File Offset: 0x000F9056
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyCtx DangoMonopolyCtx
@@ -436,9 +439,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013FC RID: 5116
-		// (get) Token: 0x060069DD RID: 27101 RVA: 0x000FDFDF File Offset: 0x000FC1DF
-		// (set) Token: 0x060069DE RID: 27102 RVA: 0x000FDFF8 File Offset: 0x000FC1F8
+		// Token: 0x170013A7 RID: 5031
+		// (get) Token: 0x0600684D RID: 26701 RVA: 0x000FAE6D File Offset: 0x000F906D
+		// (set) Token: 0x0600684E RID: 26702 RVA: 0x000FAE86 File Offset: 0x000F9086
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleEnterCtx PhantomBattleEnterCtx
@@ -458,9 +461,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013FD RID: 5117
-		// (get) Token: 0x060069DF RID: 27103 RVA: 0x000FE00F File Offset: 0x000FC20F
-		// (set) Token: 0x060069E0 RID: 27104 RVA: 0x000FE028 File Offset: 0x000FC228
+		// Token: 0x170013A8 RID: 5032
+		// (get) Token: 0x0600684F RID: 26703 RVA: 0x000FAE9D File Offset: 0x000F909D
+		// (set) Token: 0x06006850 RID: 26704 RVA: 0x000FAEB6 File Offset: 0x000F90B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseCtx TrapDefenseCtx
@@ -480,9 +483,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013FE RID: 5118
-		// (get) Token: 0x060069E1 RID: 27105 RVA: 0x000FE03F File Offset: 0x000FC23F
-		// (set) Token: 0x060069E2 RID: 27106 RVA: 0x000FE058 File Offset: 0x000FC258
+		// Token: 0x170013A9 RID: 5033
+		// (get) Token: 0x06006851 RID: 26705 RVA: 0x000FAECD File Offset: 0x000F90CD
+		// (set) Token: 0x06006852 RID: 26706 RVA: 0x000FAEE6 File Offset: 0x000F90E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FunPlayCtx FunPlayCtx
@@ -502,9 +505,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013FF RID: 5119
-		// (get) Token: 0x060069E3 RID: 27107 RVA: 0x000FE06F File Offset: 0x000FC26F
-		// (set) Token: 0x060069E4 RID: 27108 RVA: 0x000FE088 File Offset: 0x000FC288
+		// Token: 0x170013AA RID: 5034
+		// (get) Token: 0x06006853 RID: 26707 RVA: 0x000FAEFD File Offset: 0x000F90FD
+		// (set) Token: 0x06006854 RID: 26708 RVA: 0x000FAF16 File Offset: 0x000F9116
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryEnterCtx HonamiStoryEnterCtx
@@ -524,9 +527,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001400 RID: 5120
-		// (get) Token: 0x060069E5 RID: 27109 RVA: 0x000FE09F File Offset: 0x000FC29F
-		// (set) Token: 0x060069E6 RID: 27110 RVA: 0x000FE0B8 File Offset: 0x000FC2B8
+		// Token: 0x170013AB RID: 5035
+		// (get) Token: 0x06006855 RID: 26709 RVA: 0x000FAF2D File Offset: 0x000F912D
+		// (set) Token: 0x06006856 RID: 26710 RVA: 0x000FAF46 File Offset: 0x000F9146
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SurvivorsCtx SurvivorsCtx
@@ -546,9 +549,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001401 RID: 5121
-		// (get) Token: 0x060069E7 RID: 27111 RVA: 0x000FE0CF File Offset: 0x000FC2CF
-		// (set) Token: 0x060069E8 RID: 27112 RVA: 0x000FE0E8 File Offset: 0x000FC2E8
+		// Token: 0x170013AC RID: 5036
+		// (get) Token: 0x06006857 RID: 26711 RVA: 0x000FAF5D File Offset: 0x000F915D
+		// (set) Token: 0x06006858 RID: 26712 RVA: 0x000FAF76 File Offset: 0x000F9176
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhotoFightCtx PhotoFightCtx
@@ -568,9 +571,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001402 RID: 5122
-		// (get) Token: 0x060069E9 RID: 27113 RVA: 0x000FE0FF File Offset: 0x000FC2FF
-		// (set) Token: 0x060069EA RID: 27114 RVA: 0x000FE118 File Offset: 0x000FC318
+		// Token: 0x170013AD RID: 5037
+		// (get) Token: 0x06006859 RID: 26713 RVA: 0x000FAF8D File Offset: 0x000F918D
+		// (set) Token: 0x0600685A RID: 26714 RVA: 0x000FAFA6 File Offset: 0x000F91A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerClimbingCtx NewTowerClimbingCtx
@@ -590,9 +593,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001403 RID: 5123
-		// (get) Token: 0x060069EB RID: 27115 RVA: 0x000FE12F File Offset: 0x000FC32F
-		// (set) Token: 0x060069EC RID: 27116 RVA: 0x000FE148 File Offset: 0x000FC348
+		// Token: 0x170013AE RID: 5038
+		// (get) Token: 0x0600685B RID: 26715 RVA: 0x000FAFBD File Offset: 0x000F91BD
+		// (set) Token: 0x0600685C RID: 26716 RVA: 0x000FAFD6 File Offset: 0x000F91D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorParkourCtx MotorParkourCtx
@@ -612,9 +615,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001404 RID: 5124
-		// (get) Token: 0x060069ED RID: 27117 RVA: 0x000FE15F File Offset: 0x000FC35F
-		// (set) Token: 0x060069EE RID: 27118 RVA: 0x000FE178 File Offset: 0x000FC378
+		// Token: 0x170013AF RID: 5039
+		// (get) Token: 0x0600685D RID: 26717 RVA: 0x000FAFED File Offset: 0x000F91ED
+		// (set) Token: 0x0600685E RID: 26718 RVA: 0x000FB006 File Offset: 0x000F9206
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaRoleDevelopInsCtx GachaRoleDevelopInsCtx
@@ -634,9 +637,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001405 RID: 5125
-		// (get) Token: 0x060069EF RID: 27119 RVA: 0x000FE18F File Offset: 0x000FC38F
-		// (set) Token: 0x060069F0 RID: 27120 RVA: 0x000FE1A8 File Offset: 0x000FC3A8
+		// Token: 0x170013B0 RID: 5040
+		// (get) Token: 0x0600685F RID: 26719 RVA: 0x000FB01D File Offset: 0x000F921D
+		// (set) Token: 0x06006860 RID: 26720 RVA: 0x000FB036 File Offset: 0x000F9236
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightCtx MotorFightCtx
@@ -656,9 +659,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001406 RID: 5126
-		// (get) Token: 0x060069F1 RID: 27121 RVA: 0x000FE1BF File Offset: 0x000FC3BF
-		// (set) Token: 0x060069F2 RID: 27122 RVA: 0x000FE1D8 File Offset: 0x000FC3D8
+		// Token: 0x170013B1 RID: 5041
+		// (get) Token: 0x06006861 RID: 26721 RVA: 0x000FB04D File Offset: 0x000F924D
+		// (set) Token: 0x06006862 RID: 26722 RVA: 0x000FB066 File Offset: 0x000F9266
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagChallengeCtx FlagChallengeCtx
@@ -678,9 +681,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001407 RID: 5127
-		// (get) Token: 0x060069F3 RID: 27123 RVA: 0x000FE1EF File Offset: 0x000FC3EF
-		// (set) Token: 0x060069F4 RID: 27124 RVA: 0x000FE208 File Offset: 0x000FC408
+		// Token: 0x170013B2 RID: 5042
+		// (get) Token: 0x06006863 RID: 26723 RVA: 0x000FB07D File Offset: 0x000F927D
+		// (set) Token: 0x06006864 RID: 26724 RVA: 0x000FB096 File Offset: 0x000F9296
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmCtx RhythmCtx
@@ -700,9 +703,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001408 RID: 5128
-		// (get) Token: 0x060069F5 RID: 27125 RVA: 0x000FE21F File Offset: 0x000FC41F
-		// (set) Token: 0x060069F6 RID: 27126 RVA: 0x000FE238 File Offset: 0x000FC438
+		// Token: 0x170013B3 RID: 5043
+		// (get) Token: 0x06006865 RID: 26725 RVA: 0x000FB0AD File Offset: 0x000F92AD
+		// (set) Token: 0x06006866 RID: 26726 RVA: 0x000FB0C6 File Offset: 0x000F92C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballCtx PinballCtx
@@ -722,9 +725,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001409 RID: 5129
-		// (get) Token: 0x060069F7 RID: 27127 RVA: 0x000FE24F File Offset: 0x000FC44F
-		// (set) Token: 0x060069F8 RID: 27128 RVA: 0x000FE268 File Offset: 0x000FC468
+		// Token: 0x170013B4 RID: 5044
+		// (get) Token: 0x06006867 RID: 26727 RVA: 0x000FB0DD File Offset: 0x000F92DD
+		// (set) Token: 0x06006868 RID: 26728 RVA: 0x000FB0F6 File Offset: 0x000F92F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossPilingCtx BossPilingCtx
@@ -744,9 +747,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700140A RID: 5130
-		// (get) Token: 0x060069F9 RID: 27129 RVA: 0x000FE27F File Offset: 0x000FC47F
-		// (set) Token: 0x060069FA RID: 27130 RVA: 0x000FE298 File Offset: 0x000FC498
+		// Token: 0x170013B5 RID: 5045
+		// (get) Token: 0x06006869 RID: 26729 RVA: 0x000FB10D File Offset: 0x000F930D
+		// (set) Token: 0x0600686A RID: 26730 RVA: 0x000FB126 File Offset: 0x000F9326
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoCtx KurotatoCtx
@@ -766,9 +769,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700140B RID: 5131
-		// (get) Token: 0x060069FB RID: 27131 RVA: 0x000FE2AF File Offset: 0x000FC4AF
-		// (set) Token: 0x060069FC RID: 27132 RVA: 0x000FE2C8 File Offset: 0x000FC4C8
+		// Token: 0x170013B6 RID: 5046
+		// (get) Token: 0x0600686B RID: 26731 RVA: 0x000FB13D File Offset: 0x000F933D
+		// (set) Token: 0x0600686C RID: 26732 RVA: 0x000FB156 File Offset: 0x000F9356
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymCtx EdgeRunnerLordGymCtx
@@ -788,9 +791,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700140C RID: 5132
-		// (get) Token: 0x060069FD RID: 27133 RVA: 0x000FE2DF File Offset: 0x000FC4DF
-		// (set) Token: 0x060069FE RID: 27134 RVA: 0x000FE2F8 File Offset: 0x000FC4F8
+		// Token: 0x170013B7 RID: 5047
+		// (get) Token: 0x0600686D RID: 26733 RVA: 0x000FB16D File Offset: 0x000F936D
+		// (set) Token: 0x0600686E RID: 26734 RVA: 0x000FB186 File Offset: 0x000F9386
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestRecallInstCtx QuestRecallInstCtx
@@ -810,9 +813,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700140D RID: 5133
-		// (get) Token: 0x060069FF RID: 27135 RVA: 0x000FE30F File Offset: 0x000FC50F
-		// (set) Token: 0x06006A00 RID: 27136 RVA: 0x000FE328 File Offset: 0x000FC528
+		// Token: 0x170013B8 RID: 5048
+		// (get) Token: 0x0600686F RID: 26735 RVA: 0x000FB19D File Offset: 0x000F939D
+		// (set) Token: 0x06006870 RID: 26736 RVA: 0x000FB1B6 File Offset: 0x000F93B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdventureSilentCtx AdventureSilentCtx
@@ -832,9 +835,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700140E RID: 5134
-		// (get) Token: 0x06006A01 RID: 27137 RVA: 0x000FE33F File Offset: 0x000FC53F
-		// (set) Token: 0x06006A02 RID: 27138 RVA: 0x000FE358 File Offset: 0x000FC558
+		// Token: 0x170013B9 RID: 5049
+		// (get) Token: 0x06006871 RID: 26737 RVA: 0x000FB1CD File Offset: 0x000F93CD
+		// (set) Token: 0x06006872 RID: 26738 RVA: 0x000FB1E6 File Offset: 0x000F93E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueInsCtx RoverRogueInsCtx
@@ -854,9 +857,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700140F RID: 5135
-		// (get) Token: 0x06006A03 RID: 27139 RVA: 0x000FE36F File Offset: 0x000FC56F
-		// (set) Token: 0x06006A04 RID: 27140 RVA: 0x000FE388 File Offset: 0x000FC588
+		// Token: 0x170013BA RID: 5050
+		// (get) Token: 0x06006873 RID: 26739 RVA: 0x000FB1FD File Offset: 0x000F93FD
+		// (set) Token: 0x06006874 RID: 26740 RVA: 0x000FB216 File Offset: 0x000F9416
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEnterCtx DangoBrawlEnterCtx
@@ -876,9 +879,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001410 RID: 5136
-		// (get) Token: 0x06006A05 RID: 27141 RVA: 0x000FE39F File Offset: 0x000FC59F
-		// (set) Token: 0x06006A06 RID: 27142 RVA: 0x000FE3B8 File Offset: 0x000FC5B8
+		// Token: 0x170013BB RID: 5051
+		// (get) Token: 0x06006875 RID: 26741 RVA: 0x000FB22D File Offset: 0x000F942D
+		// (set) Token: 0x06006876 RID: 26742 RVA: 0x000FB246 File Offset: 0x000F9446
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DarkTideEnterCtx DarkTideCtx
@@ -898,9 +901,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001411 RID: 5137
-		// (get) Token: 0x06006A07 RID: 27143 RVA: 0x000FE3CF File Offset: 0x000FC5CF
-		// (set) Token: 0x06006A08 RID: 27144 RVA: 0x000FE3E8 File Offset: 0x000FC5E8
+		// Token: 0x170013BC RID: 5052
+		// (get) Token: 0x06006877 RID: 26743 RVA: 0x000FB25D File Offset: 0x000F945D
+		// (set) Token: 0x06006878 RID: 26744 RVA: 0x000FB276 File Offset: 0x000F9476
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestRecallInstMarkCtx RecallInstMarkCtx
@@ -920,9 +923,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001412 RID: 5138
-		// (get) Token: 0x06006A09 RID: 27145 RVA: 0x000FE3FF File Offset: 0x000FC5FF
-		// (set) Token: 0x06006A0A RID: 27146 RVA: 0x000FE418 File Offset: 0x000FC618
+		// Token: 0x170013BD RID: 5053
+		// (get) Token: 0x06006879 RID: 26745 RVA: 0x000FB28D File Offset: 0x000F948D
+		// (set) Token: 0x0600687A RID: 26746 RVA: 0x000FB2A6 File Offset: 0x000F94A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FarmGoldCtx FarmGoldCtx
@@ -942,8 +945,30 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001413 RID: 5139
-		// (get) Token: 0x06006A0B RID: 27147 RVA: 0x000FE42F File Offset: 0x000FC62F
+		// Token: 0x170013BE RID: 5054
+		// (get) Token: 0x0600687B RID: 26747 RVA: 0x000FB2BD File Offset: 0x000F94BD
+		// (set) Token: 0x0600687C RID: 26748 RVA: 0x000FB2D6 File Offset: 0x000F94D6
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public RoleTowerCtx RoleTowerCtx
+		{
+			get
+			{
+				if (this.enterCtxCase_ != EnterInstContext.EnterCtxOneofCase.RoleTowerCtx)
+				{
+					return null;
+				}
+				return (RoleTowerCtx)this.enterCtx_;
+			}
+			set
+			{
+				this.enterCtx_ = value;
+				this.enterCtxCase_ = ((value == null) ? EnterInstContext.EnterCtxOneofCase.None : EnterInstContext.EnterCtxOneofCase.RoleTowerCtx);
+			}
+		}
+
+		// Token: 0x170013BF RID: 5055
+		// (get) Token: 0x0600687D RID: 26749 RVA: 0x000FB2ED File Offset: 0x000F94ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnterInstContext.EnterCtxOneofCase EnterCtxCase
@@ -954,7 +979,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006A0C RID: 27148 RVA: 0x000FE437 File Offset: 0x000FC637
+		// Token: 0x0600687E RID: 26750 RVA: 0x000FB2F5 File Offset: 0x000F94F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearEnterCtx()
@@ -963,7 +988,7 @@ namespace Aki.Protocol
 			this.enterCtx_ = null;
 		}
 
-		// Token: 0x06006A0D RID: 27149 RVA: 0x000FE447 File Offset: 0x000FC647
+		// Token: 0x0600687F RID: 26751 RVA: 0x000FB305 File Offset: 0x000F9505
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -971,15 +996,15 @@ namespace Aki.Protocol
 			return this.Equals(other as EnterInstContext);
 		}
 
-		// Token: 0x06006A0E RID: 27150 RVA: 0x000FE458 File Offset: 0x000FC658
+		// Token: 0x06006880 RID: 26752 RVA: 0x000FB314 File Offset: 0x000F9514
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EnterInstContext other)
 		{
-			return other != null && (other == this || (object.Equals(this.RoleTrialCtx, other.RoleTrialCtx) && object.Equals(this.RoleTeachCtx, other.RoleTeachCtx) && object.Equals(this.AdventureGuideCtx, other.AdventureGuideCtx) && object.Equals(this.RogueWhiteCatCtx, other.RogueWhiteCatCtx) && object.Equals(this.BossRushCtx, other.BossRushCtx) && object.Equals(this.MowTowerCtx, other.MowTowerCtx) && object.Equals(this.RoleSkinTrialEnterCtx, other.RoleSkinTrialEnterCtx) && object.Equals(this.SlashAndTowerCtx, other.SlashAndTowerCtx) && object.Equals(this.BabelTowerCtx, other.BabelTowerCtx) && object.Equals(this.PreOpenDetectionCtx, other.PreOpenDetectionCtx) && object.Equals(this.AbyssInstCtx, other.AbyssInstCtx) && object.Equals(this.DangoMonopolyCtx, other.DangoMonopolyCtx) && object.Equals(this.PhantomBattleEnterCtx, other.PhantomBattleEnterCtx) && object.Equals(this.TrapDefenseCtx, other.TrapDefenseCtx) && object.Equals(this.FunPlayCtx, other.FunPlayCtx) && object.Equals(this.HonamiStoryEnterCtx, other.HonamiStoryEnterCtx) && object.Equals(this.SurvivorsCtx, other.SurvivorsCtx) && object.Equals(this.PhotoFightCtx, other.PhotoFightCtx) && object.Equals(this.NewTowerClimbingCtx, other.NewTowerClimbingCtx) && object.Equals(this.MotorParkourCtx, other.MotorParkourCtx) && object.Equals(this.GachaRoleDevelopInsCtx, other.GachaRoleDevelopInsCtx) && object.Equals(this.MotorFightCtx, other.MotorFightCtx) && object.Equals(this.FlagChallengeCtx, other.FlagChallengeCtx) && object.Equals(this.RhythmCtx, other.RhythmCtx) && object.Equals(this.PinballCtx, other.PinballCtx) && object.Equals(this.BossPilingCtx, other.BossPilingCtx) && object.Equals(this.KurotatoCtx, other.KurotatoCtx) && object.Equals(this.EdgeRunnerLordGymCtx, other.EdgeRunnerLordGymCtx) && object.Equals(this.QuestRecallInstCtx, other.QuestRecallInstCtx) && object.Equals(this.AdventureSilentCtx, other.AdventureSilentCtx) && object.Equals(this.RoverRogueInsCtx, other.RoverRogueInsCtx) && object.Equals(this.DangoBrawlEnterCtx, other.DangoBrawlEnterCtx) && object.Equals(this.DarkTideCtx, other.DarkTideCtx) && object.Equals(this.RecallInstMarkCtx, other.RecallInstMarkCtx) && object.Equals(this.FarmGoldCtx, other.FarmGoldCtx) && this.EnterCtxCase == other.EnterCtxCase && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (object.Equals(this.RoleTrialCtx, other.RoleTrialCtx) && object.Equals(this.RoleTeachCtx, other.RoleTeachCtx) && object.Equals(this.AdventureGuideCtx, other.AdventureGuideCtx) && object.Equals(this.RogueWhiteCatCtx, other.RogueWhiteCatCtx) && object.Equals(this.BossRushCtx, other.BossRushCtx) && object.Equals(this.MowTowerCtx, other.MowTowerCtx) && object.Equals(this.RoleSkinTrialEnterCtx, other.RoleSkinTrialEnterCtx) && object.Equals(this.SlashAndTowerCtx, other.SlashAndTowerCtx) && object.Equals(this.BabelTowerCtx, other.BabelTowerCtx) && object.Equals(this.PreOpenDetectionCtx, other.PreOpenDetectionCtx) && object.Equals(this.AbyssInstCtx, other.AbyssInstCtx) && object.Equals(this.DangoMonopolyCtx, other.DangoMonopolyCtx) && object.Equals(this.PhantomBattleEnterCtx, other.PhantomBattleEnterCtx) && object.Equals(this.TrapDefenseCtx, other.TrapDefenseCtx) && object.Equals(this.FunPlayCtx, other.FunPlayCtx) && object.Equals(this.HonamiStoryEnterCtx, other.HonamiStoryEnterCtx) && object.Equals(this.SurvivorsCtx, other.SurvivorsCtx) && object.Equals(this.PhotoFightCtx, other.PhotoFightCtx) && object.Equals(this.NewTowerClimbingCtx, other.NewTowerClimbingCtx) && object.Equals(this.MotorParkourCtx, other.MotorParkourCtx) && object.Equals(this.GachaRoleDevelopInsCtx, other.GachaRoleDevelopInsCtx) && object.Equals(this.MotorFightCtx, other.MotorFightCtx) && object.Equals(this.FlagChallengeCtx, other.FlagChallengeCtx) && object.Equals(this.RhythmCtx, other.RhythmCtx) && object.Equals(this.PinballCtx, other.PinballCtx) && object.Equals(this.BossPilingCtx, other.BossPilingCtx) && object.Equals(this.KurotatoCtx, other.KurotatoCtx) && object.Equals(this.EdgeRunnerLordGymCtx, other.EdgeRunnerLordGymCtx) && object.Equals(this.QuestRecallInstCtx, other.QuestRecallInstCtx) && object.Equals(this.AdventureSilentCtx, other.AdventureSilentCtx) && object.Equals(this.RoverRogueInsCtx, other.RoverRogueInsCtx) && object.Equals(this.DangoBrawlEnterCtx, other.DangoBrawlEnterCtx) && object.Equals(this.DarkTideCtx, other.DarkTideCtx) && object.Equals(this.RecallInstMarkCtx, other.RecallInstMarkCtx) && object.Equals(this.FarmGoldCtx, other.FarmGoldCtx) && object.Equals(this.RoleTowerCtx, other.RoleTowerCtx) && this.EnterCtxCase == other.EnterCtxCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006A0F RID: 27151 RVA: 0x000FE770 File Offset: 0x000FC970
+		// Token: 0x06006881 RID: 26753 RVA: 0x000FB644 File Offset: 0x000F9844
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -1125,6 +1150,10 @@ namespace Aki.Protocol
 			{
 				num ^= this.FarmGoldCtx.GetHashCode();
 			}
+			if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.RoleTowerCtx)
+			{
+				num ^= this.RoleTowerCtx.GetHashCode();
+			}
 			num ^= (int)this.enterCtxCase_;
 			if (this._unknownFields != null)
 			{
@@ -1133,7 +1162,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006A10 RID: 27152 RVA: 0x000FEADF File Offset: 0x000FCCDF
+		// Token: 0x06006882 RID: 26754 RVA: 0x000FB9CB File Offset: 0x000F9BCB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -1141,7 +1170,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06006A11 RID: 27153 RVA: 0x000FEAEC File Offset: 0x000FCCEC
+		// Token: 0x06006883 RID: 26755 RVA: 0x000FB9D8 File Offset: 0x000F9BD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -1149,7 +1178,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06006A12 RID: 27154 RVA: 0x000FEAF8 File Offset: 0x000FCCF8
+		// Token: 0x06006884 RID: 26756 RVA: 0x000FB9E4 File Offset: 0x000F9BE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -1329,13 +1358,18 @@ namespace Aki.Protocol
 				output.WriteRawTag(154, 2);
 				output.WriteMessage(this.FarmGoldCtx);
 			}
+			if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.RoleTowerCtx)
+			{
+				output.WriteRawTag(162, 2);
+				output.WriteMessage(this.RoleTowerCtx);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06006A13 RID: 27155 RVA: 0x000FEF7C File Offset: 0x000FD17C
+		// Token: 0x06006885 RID: 26757 RVA: 0x000FBE8C File Offset: 0x000FA08C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -1481,6 +1515,10 @@ namespace Aki.Protocol
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.FarmGoldCtx);
 			}
+			if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.RoleTowerCtx)
+			{
+				num += 2 + CodedOutputStream.ComputeMessageSize(this.RoleTowerCtx);
+			}
 			if (this._unknownFields != null)
 			{
 				num += this._unknownFields.CalculateSize();
@@ -1488,7 +1526,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006A14 RID: 27156 RVA: 0x000FF328 File Offset: 0x000FD528
+		// Token: 0x06006886 RID: 26758 RVA: 0x000FC254 File Offset: 0x000FA454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EnterInstContext other)
@@ -1744,11 +1782,18 @@ namespace Aki.Protocol
 				}
 				this.FarmGoldCtx.MergeFrom(other.FarmGoldCtx);
 				break;
+			case EnterInstContext.EnterCtxOneofCase.RoleTowerCtx:
+				if (this.RoleTowerCtx == null)
+				{
+					this.RoleTowerCtx = new RoleTowerCtx();
+				}
+				this.RoleTowerCtx.MergeFrom(other.RoleTowerCtx);
+				break;
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06006A15 RID: 27157 RVA: 0x000FF97D File Offset: 0x000FDB7D
+		// Token: 0x06006887 RID: 26759 RVA: 0x000FC8D6 File Offset: 0x000FAAD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -1756,7 +1801,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06006A16 RID: 27158 RVA: 0x000FF988 File Offset: 0x000FDB88
+		// Token: 0x06006888 RID: 26760 RVA: 0x000FC8E0 File Offset: 0x000FAAE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -1768,9 +1813,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 138U)
+				if (num <= 146U)
 				{
-					if (num <= 66U)
+					if (num <= 74U)
 					{
 						if (num <= 34U)
 						{
@@ -1874,12 +1919,6 @@ namespace Aki.Protocol
 								this.SlashAndTowerCtx = slashAndTowerCtx;
 								continue;
 							}
-						}
-					}
-					else if (num <= 98U)
-					{
-						if (num <= 82U)
-						{
 							if (num == 74U)
 							{
 								BabelTowerCtx babelTowerCtx = new BabelTowerCtx();
@@ -1891,6 +1930,12 @@ namespace Aki.Protocol
 								this.BabelTowerCtx = babelTowerCtx;
 								continue;
 							}
+						}
+					}
+					else if (num <= 106U)
+					{
+						if (num <= 90U)
+						{
 							if (num == 82U)
 							{
 								PreOpenDetectionCtx preOpenDetectionCtx = new PreOpenDetectionCtx();
@@ -1902,9 +1947,6 @@ namespace Aki.Protocol
 								this.PreOpenDetectionCtx = preOpenDetectionCtx;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 90U)
 							{
 								AbyssInstCtx abyssInstCtx = new AbyssInstCtx();
@@ -1916,6 +1958,9 @@ namespace Aki.Protocol
 								this.AbyssInstCtx = abyssInstCtx;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 98U)
 							{
 								DangoMonopolyCtx dangoMonopolyCtx = new DangoMonopolyCtx();
@@ -1927,21 +1972,21 @@ namespace Aki.Protocol
 								this.DangoMonopolyCtx = dangoMonopolyCtx;
 								continue;
 							}
+							if (num == 106U)
+							{
+								PhantomBattleEnterCtx phantomBattleEnterCtx = new PhantomBattleEnterCtx();
+								if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.PhantomBattleEnterCtx)
+								{
+									phantomBattleEnterCtx.MergeFrom(this.PhantomBattleEnterCtx);
+								}
+								input.ReadMessage(phantomBattleEnterCtx);
+								this.PhantomBattleEnterCtx = phantomBattleEnterCtx;
+								continue;
+							}
 						}
 					}
-					else if (num <= 114U)
+					else if (num <= 122U)
 					{
-						if (num == 106U)
-						{
-							PhantomBattleEnterCtx phantomBattleEnterCtx = new PhantomBattleEnterCtx();
-							if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.PhantomBattleEnterCtx)
-							{
-								phantomBattleEnterCtx.MergeFrom(this.PhantomBattleEnterCtx);
-							}
-							input.ReadMessage(phantomBattleEnterCtx);
-							this.PhantomBattleEnterCtx = phantomBattleEnterCtx;
-							continue;
-						}
 						if (num == 114U)
 						{
 							TrapDefenseCtx trapDefenseCtx = new TrapDefenseCtx();
@@ -1953,9 +1998,6 @@ namespace Aki.Protocol
 							this.TrapDefenseCtx = trapDefenseCtx;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 122U)
 						{
 							FunPlayCtx funPlayCtx = new FunPlayCtx();
@@ -1967,6 +2009,9 @@ namespace Aki.Protocol
 							this.FunPlayCtx = funPlayCtx;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 130U)
 						{
 							HonamiStoryEnterCtx honamiStoryEnterCtx = new HonamiStoryEnterCtx();
@@ -1989,25 +2034,25 @@ namespace Aki.Protocol
 							this.SurvivorsCtx = survivorsCtx;
 							continue;
 						}
+						if (num == 146U)
+						{
+							PhotoFightCtx photoFightCtx = new PhotoFightCtx();
+							if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.PhotoFightCtx)
+							{
+								photoFightCtx.MergeFrom(this.PhotoFightCtx);
+							}
+							input.ReadMessage(photoFightCtx);
+							this.PhotoFightCtx = photoFightCtx;
+							continue;
+						}
 					}
 				}
-				else if (num <= 210U)
+				else if (num <= 218U)
 				{
-					if (num <= 170U)
+					if (num <= 178U)
 					{
-						if (num <= 154U)
+						if (num <= 162U)
 						{
-							if (num == 146U)
-							{
-								PhotoFightCtx photoFightCtx = new PhotoFightCtx();
-								if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.PhotoFightCtx)
-								{
-									photoFightCtx.MergeFrom(this.PhotoFightCtx);
-								}
-								input.ReadMessage(photoFightCtx);
-								this.PhotoFightCtx = photoFightCtx;
-								continue;
-							}
 							if (num == 154U)
 							{
 								NewTowerClimbingCtx newTowerClimbingCtx = new NewTowerClimbingCtx();
@@ -2019,9 +2064,6 @@ namespace Aki.Protocol
 								this.NewTowerClimbingCtx = newTowerClimbingCtx;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 162U)
 							{
 								MotorParkourCtx motorParkourCtx = new MotorParkourCtx();
@@ -2033,6 +2075,9 @@ namespace Aki.Protocol
 								this.MotorParkourCtx = motorParkourCtx;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 170U)
 							{
 								GachaRoleDevelopInsCtx gachaRoleDevelopInsCtx = new GachaRoleDevelopInsCtx();
@@ -2044,21 +2089,21 @@ namespace Aki.Protocol
 								this.GachaRoleDevelopInsCtx = gachaRoleDevelopInsCtx;
 								continue;
 							}
+							if (num == 178U)
+							{
+								MotorFightCtx motorFightCtx = new MotorFightCtx();
+								if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.MotorFightCtx)
+								{
+									motorFightCtx.MergeFrom(this.MotorFightCtx);
+								}
+								input.ReadMessage(motorFightCtx);
+								this.MotorFightCtx = motorFightCtx;
+								continue;
+							}
 						}
 					}
-					else if (num <= 186U)
+					else if (num <= 194U)
 					{
-						if (num == 178U)
-						{
-							MotorFightCtx motorFightCtx = new MotorFightCtx();
-							if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.MotorFightCtx)
-							{
-								motorFightCtx.MergeFrom(this.MotorFightCtx);
-							}
-							input.ReadMessage(motorFightCtx);
-							this.MotorFightCtx = motorFightCtx;
-							continue;
-						}
 						if (num == 186U)
 						{
 							FlagChallengeCtx flagChallengeCtx = new FlagChallengeCtx();
@@ -2070,9 +2115,6 @@ namespace Aki.Protocol
 							this.FlagChallengeCtx = flagChallengeCtx;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 194U)
 						{
 							RhythmCtx rhythmCtx = new RhythmCtx();
@@ -2084,6 +2126,9 @@ namespace Aki.Protocol
 							this.RhythmCtx = rhythmCtx;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 202U)
 						{
 							PinballCtx pinballCtx = new PinballCtx();
@@ -2106,12 +2151,6 @@ namespace Aki.Protocol
 							this.BossPilingCtx = bossPilingCtx;
 							continue;
 						}
-					}
-				}
-				else if (num <= 242U)
-				{
-					if (num <= 226U)
-					{
 						if (num == 218U)
 						{
 							KurotatoCtx kurotatoCtx = new KurotatoCtx();
@@ -2123,6 +2162,12 @@ namespace Aki.Protocol
 							this.KurotatoCtx = kurotatoCtx;
 							continue;
 						}
+					}
+				}
+				else if (num <= 250U)
+				{
+					if (num <= 234U)
+					{
 						if (num == 226U)
 						{
 							EdgeRunnerLordGymCtx edgeRunnerLordGymCtx = new EdgeRunnerLordGymCtx();
@@ -2134,9 +2179,6 @@ namespace Aki.Protocol
 							this.EdgeRunnerLordGymCtx = edgeRunnerLordGymCtx;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 234U)
 						{
 							QuestRecallInstCtx questRecallInstCtx = new QuestRecallInstCtx();
@@ -2148,6 +2190,9 @@ namespace Aki.Protocol
 							this.QuestRecallInstCtx = questRecallInstCtx;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 242U)
 						{
 							AdventureSilentCtx adventureSilentCtx = new AdventureSilentCtx();
@@ -2159,21 +2204,21 @@ namespace Aki.Protocol
 							this.AdventureSilentCtx = adventureSilentCtx;
 							continue;
 						}
+						if (num == 250U)
+						{
+							RoverRogueInsCtx roverRogueInsCtx = new RoverRogueInsCtx();
+							if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.RoverRogueInsCtx)
+							{
+								roverRogueInsCtx.MergeFrom(this.RoverRogueInsCtx);
+							}
+							input.ReadMessage(roverRogueInsCtx);
+							this.RoverRogueInsCtx = roverRogueInsCtx;
+							continue;
+						}
 					}
 				}
-				else if (num <= 258U)
+				else if (num <= 266U)
 				{
-					if (num == 250U)
-					{
-						RoverRogueInsCtx roverRogueInsCtx = new RoverRogueInsCtx();
-						if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.RoverRogueInsCtx)
-						{
-							roverRogueInsCtx.MergeFrom(this.RoverRogueInsCtx);
-						}
-						input.ReadMessage(roverRogueInsCtx);
-						this.RoverRogueInsCtx = roverRogueInsCtx;
-						continue;
-					}
 					if (num == 258U)
 					{
 						DangoBrawlEnterCtx dangoBrawlEnterCtx = new DangoBrawlEnterCtx();
@@ -2185,9 +2230,6 @@ namespace Aki.Protocol
 						this.DangoBrawlEnterCtx = dangoBrawlEnterCtx;
 						continue;
 					}
-				}
-				else
-				{
 					if (num == 266U)
 					{
 						DarkTideEnterCtx darkTideEnterCtx = new DarkTideEnterCtx();
@@ -2199,6 +2241,9 @@ namespace Aki.Protocol
 						this.DarkTideCtx = darkTideEnterCtx;
 						continue;
 					}
+				}
+				else
+				{
 					if (num == 274U)
 					{
 						QuestRecallInstMarkCtx questRecallInstMarkCtx = new QuestRecallInstMarkCtx();
@@ -2221,200 +2266,216 @@ namespace Aki.Protocol
 						this.FarmGoldCtx = farmGoldCtx;
 						continue;
 					}
+					if (num == 290U)
+					{
+						RoleTowerCtx roleTowerCtx = new RoleTowerCtx();
+						if (this.enterCtxCase_ == EnterInstContext.EnterCtxOneofCase.RoleTowerCtx)
+						{
+							roleTowerCtx.MergeFrom(this.RoleTowerCtx);
+						}
+						input.ReadMessage(roleTowerCtx);
+						this.RoleTowerCtx = roleTowerCtx;
+						continue;
+					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04003A0B RID: 14859
+		// Token: 0x040039F8 RID: 14840
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003A0C RID: 14860
+		// Token: 0x040039F9 RID: 14841
 		public const int RoleTrialCtxFieldNumber = 1;
 
-		// Token: 0x04003A0D RID: 14861
+		// Token: 0x040039FA RID: 14842
 		public const int RoleTeachCtxFieldNumber = 2;
 
-		// Token: 0x04003A0E RID: 14862
+		// Token: 0x040039FB RID: 14843
 		public const int AdventureGuideCtxFieldNumber = 3;
 
-		// Token: 0x04003A0F RID: 14863
+		// Token: 0x040039FC RID: 14844
 		public const int RogueWhiteCatCtxFieldNumber = 4;
 
-		// Token: 0x04003A10 RID: 14864
+		// Token: 0x040039FD RID: 14845
 		public const int BossRushCtxFieldNumber = 5;
 
-		// Token: 0x04003A11 RID: 14865
+		// Token: 0x040039FE RID: 14846
 		public const int MowTowerCtxFieldNumber = 6;
 
-		// Token: 0x04003A12 RID: 14866
+		// Token: 0x040039FF RID: 14847
 		public const int RoleSkinTrialEnterCtxFieldNumber = 7;
 
-		// Token: 0x04003A13 RID: 14867
+		// Token: 0x04003A00 RID: 14848
 		public const int SlashAndTowerCtxFieldNumber = 8;
 
-		// Token: 0x04003A14 RID: 14868
+		// Token: 0x04003A01 RID: 14849
 		public const int BabelTowerCtxFieldNumber = 9;
 
-		// Token: 0x04003A15 RID: 14869
+		// Token: 0x04003A02 RID: 14850
 		public const int PreOpenDetectionCtxFieldNumber = 10;
 
-		// Token: 0x04003A16 RID: 14870
+		// Token: 0x04003A03 RID: 14851
 		public const int AbyssInstCtxFieldNumber = 11;
 
-		// Token: 0x04003A17 RID: 14871
+		// Token: 0x04003A04 RID: 14852
 		public const int DangoMonopolyCtxFieldNumber = 12;
 
-		// Token: 0x04003A18 RID: 14872
+		// Token: 0x04003A05 RID: 14853
 		public const int PhantomBattleEnterCtxFieldNumber = 13;
 
-		// Token: 0x04003A19 RID: 14873
+		// Token: 0x04003A06 RID: 14854
 		public const int TrapDefenseCtxFieldNumber = 14;
 
-		// Token: 0x04003A1A RID: 14874
+		// Token: 0x04003A07 RID: 14855
 		public const int FunPlayCtxFieldNumber = 15;
 
-		// Token: 0x04003A1B RID: 14875
+		// Token: 0x04003A08 RID: 14856
 		public const int HonamiStoryEnterCtxFieldNumber = 16;
 
-		// Token: 0x04003A1C RID: 14876
+		// Token: 0x04003A09 RID: 14857
 		public const int SurvivorsCtxFieldNumber = 17;
 
-		// Token: 0x04003A1D RID: 14877
+		// Token: 0x04003A0A RID: 14858
 		public const int PhotoFightCtxFieldNumber = 18;
 
-		// Token: 0x04003A1E RID: 14878
+		// Token: 0x04003A0B RID: 14859
 		public const int NewTowerClimbingCtxFieldNumber = 19;
 
-		// Token: 0x04003A1F RID: 14879
+		// Token: 0x04003A0C RID: 14860
 		public const int MotorParkourCtxFieldNumber = 20;
 
-		// Token: 0x04003A20 RID: 14880
+		// Token: 0x04003A0D RID: 14861
 		public const int GachaRoleDevelopInsCtxFieldNumber = 21;
 
-		// Token: 0x04003A21 RID: 14881
+		// Token: 0x04003A0E RID: 14862
 		public const int MotorFightCtxFieldNumber = 22;
 
-		// Token: 0x04003A22 RID: 14882
+		// Token: 0x04003A0F RID: 14863
 		public const int FlagChallengeCtxFieldNumber = 23;
 
-		// Token: 0x04003A23 RID: 14883
+		// Token: 0x04003A10 RID: 14864
 		public const int RhythmCtxFieldNumber = 24;
 
-		// Token: 0x04003A24 RID: 14884
+		// Token: 0x04003A11 RID: 14865
 		public const int PinballCtxFieldNumber = 25;
 
-		// Token: 0x04003A25 RID: 14885
+		// Token: 0x04003A12 RID: 14866
 		public const int BossPilingCtxFieldNumber = 26;
 
-		// Token: 0x04003A26 RID: 14886
+		// Token: 0x04003A13 RID: 14867
 		public const int KurotatoCtxFieldNumber = 27;
 
-		// Token: 0x04003A27 RID: 14887
+		// Token: 0x04003A14 RID: 14868
 		public const int EdgeRunnerLordGymCtxFieldNumber = 28;
 
-		// Token: 0x04003A28 RID: 14888
+		// Token: 0x04003A15 RID: 14869
 		public const int QuestRecallInstCtxFieldNumber = 29;
 
-		// Token: 0x04003A29 RID: 14889
+		// Token: 0x04003A16 RID: 14870
 		public const int AdventureSilentCtxFieldNumber = 30;
 
-		// Token: 0x04003A2A RID: 14890
+		// Token: 0x04003A17 RID: 14871
 		public const int RoverRogueInsCtxFieldNumber = 31;
 
-		// Token: 0x04003A2B RID: 14891
+		// Token: 0x04003A18 RID: 14872
 		public const int DangoBrawlEnterCtxFieldNumber = 32;
 
-		// Token: 0x04003A2C RID: 14892
+		// Token: 0x04003A19 RID: 14873
 		public const int DarkTideCtxFieldNumber = 33;
 
-		// Token: 0x04003A2D RID: 14893
+		// Token: 0x04003A1A RID: 14874
 		public const int RecallInstMarkCtxFieldNumber = 34;
 
-		// Token: 0x04003A2E RID: 14894
+		// Token: 0x04003A1B RID: 14875
 		public const int FarmGoldCtxFieldNumber = 35;
 
-		// Token: 0x04003A2F RID: 14895
+		// Token: 0x04003A1C RID: 14876
+		public const int RoleTowerCtxFieldNumber = 36;
+
+		// Token: 0x04003A1D RID: 14877
 		private object enterCtx_;
 
-		// Token: 0x04003A30 RID: 14896
+		// Token: 0x04003A1E RID: 14878
 		private EnterInstContext.EnterCtxOneofCase enterCtxCase_;
 
-		// Token: 0x0200176A RID: 5994
+		// Token: 0x020017E2 RID: 6114
 		public enum EnterCtxOneofCase
 		{
-			// Token: 0x0400C5F0 RID: 50672
+			// Token: 0x0400CB1A RID: 51994
 			None,
-			// Token: 0x0400C5F1 RID: 50673
+			// Token: 0x0400CB1B RID: 51995
 			RoleTrialCtx,
-			// Token: 0x0400C5F2 RID: 50674
+			// Token: 0x0400CB1C RID: 51996
 			RoleTeachCtx,
-			// Token: 0x0400C5F3 RID: 50675
+			// Token: 0x0400CB1D RID: 51997
 			AdventureGuideCtx,
-			// Token: 0x0400C5F4 RID: 50676
+			// Token: 0x0400CB1E RID: 51998
 			RogueWhiteCatCtx,
-			// Token: 0x0400C5F5 RID: 50677
+			// Token: 0x0400CB1F RID: 51999
 			BossRushCtx,
-			// Token: 0x0400C5F6 RID: 50678
+			// Token: 0x0400CB20 RID: 52000
 			MowTowerCtx,
-			// Token: 0x0400C5F7 RID: 50679
+			// Token: 0x0400CB21 RID: 52001
 			RoleSkinTrialEnterCtx,
-			// Token: 0x0400C5F8 RID: 50680
+			// Token: 0x0400CB22 RID: 52002
 			SlashAndTowerCtx,
-			// Token: 0x0400C5F9 RID: 50681
+			// Token: 0x0400CB23 RID: 52003
 			BabelTowerCtx,
-			// Token: 0x0400C5FA RID: 50682
+			// Token: 0x0400CB24 RID: 52004
 			PreOpenDetectionCtx,
-			// Token: 0x0400C5FB RID: 50683
+			// Token: 0x0400CB25 RID: 52005
 			AbyssInstCtx,
-			// Token: 0x0400C5FC RID: 50684
+			// Token: 0x0400CB26 RID: 52006
 			DangoMonopolyCtx,
-			// Token: 0x0400C5FD RID: 50685
+			// Token: 0x0400CB27 RID: 52007
 			PhantomBattleEnterCtx,
-			// Token: 0x0400C5FE RID: 50686
+			// Token: 0x0400CB28 RID: 52008
 			TrapDefenseCtx,
-			// Token: 0x0400C5FF RID: 50687
+			// Token: 0x0400CB29 RID: 52009
 			FunPlayCtx,
-			// Token: 0x0400C600 RID: 50688
+			// Token: 0x0400CB2A RID: 52010
 			HonamiStoryEnterCtx,
-			// Token: 0x0400C601 RID: 50689
+			// Token: 0x0400CB2B RID: 52011
 			SurvivorsCtx,
-			// Token: 0x0400C602 RID: 50690
+			// Token: 0x0400CB2C RID: 52012
 			PhotoFightCtx,
-			// Token: 0x0400C603 RID: 50691
+			// Token: 0x0400CB2D RID: 52013
 			NewTowerClimbingCtx,
-			// Token: 0x0400C604 RID: 50692
+			// Token: 0x0400CB2E RID: 52014
 			MotorParkourCtx,
-			// Token: 0x0400C605 RID: 50693
+			// Token: 0x0400CB2F RID: 52015
 			GachaRoleDevelopInsCtx,
-			// Token: 0x0400C606 RID: 50694
+			// Token: 0x0400CB30 RID: 52016
 			MotorFightCtx,
-			// Token: 0x0400C607 RID: 50695
+			// Token: 0x0400CB31 RID: 52017
 			FlagChallengeCtx,
-			// Token: 0x0400C608 RID: 50696
+			// Token: 0x0400CB32 RID: 52018
 			RhythmCtx,
-			// Token: 0x0400C609 RID: 50697
+			// Token: 0x0400CB33 RID: 52019
 			PinballCtx,
-			// Token: 0x0400C60A RID: 50698
+			// Token: 0x0400CB34 RID: 52020
 			BossPilingCtx,
-			// Token: 0x0400C60B RID: 50699
+			// Token: 0x0400CB35 RID: 52021
 			KurotatoCtx,
-			// Token: 0x0400C60C RID: 50700
+			// Token: 0x0400CB36 RID: 52022
 			EdgeRunnerLordGymCtx,
-			// Token: 0x0400C60D RID: 50701
+			// Token: 0x0400CB37 RID: 52023
 			QuestRecallInstCtx,
-			// Token: 0x0400C60E RID: 50702
+			// Token: 0x0400CB38 RID: 52024
 			AdventureSilentCtx,
-			// Token: 0x0400C60F RID: 50703
+			// Token: 0x0400CB39 RID: 52025
 			RoverRogueInsCtx,
-			// Token: 0x0400C610 RID: 50704
+			// Token: 0x0400CB3A RID: 52026
 			DangoBrawlEnterCtx,
-			// Token: 0x0400C611 RID: 50705
+			// Token: 0x0400CB3B RID: 52027
 			DarkTideCtx,
-			// Token: 0x0400C612 RID: 50706
+			// Token: 0x0400CB3C RID: 52028
 			RecallInstMarkCtx,
-			// Token: 0x0400C613 RID: 50707
-			FarmGoldCtx
+			// Token: 0x0400CB3D RID: 52029
+			FarmGoldCtx,
+			// Token: 0x0400CB3E RID: 52030
+			RoleTowerCtx
 		}
 	}
 }

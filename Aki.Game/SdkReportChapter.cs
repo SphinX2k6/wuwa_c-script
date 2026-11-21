@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E3A RID: 3642
+// Token: 0x020002EF RID: 751
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 {
-	// Token: 0x06005796 RID: 22422 RVA: 0x000FC59E File Offset: 0x000FA79E
+	// Token: 0x06002B26 RID: 11046 RVA: 0x00103DF2 File Offset: 0x00101FF2
 	public SdkReportChapter([Nullable(new byte[]
 	{
 		2,
@@ -18,14 +18,14 @@ public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 	{
 	}
 
-	// Token: 0x06005797 RID: 22423 RVA: 0x000FC5A7 File Offset: 0x000FA7A7
+	// Token: 0x06002B27 RID: 11047 RVA: 0x00103DFB File Offset: 0x00101FFB
 	static SdkReportChapter()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SdkReportChapter.CreateStaticDefaultValue), new Action(SdkReportChapter.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17000655 RID: 1621
-	// (get) Token: 0x06005798 RID: 22424 RVA: 0x000FC5C6 File Offset: 0x000FA7C6
+	// Token: 0x17000679 RID: 1657
+	// (get) Token: 0x06002B28 RID: 11048 RVA: 0x00103E1A File Offset: 0x0010201A
 	private static IReadOnlyDictionary<int, string> GlobalReportMap
 	{
 		get
@@ -34,8 +34,8 @@ public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000656 RID: 1622
-	// (get) Token: 0x06005799 RID: 22425 RVA: 0x000FC5CD File Offset: 0x000FA7CD
+	// Token: 0x1700067A RID: 1658
+	// (get) Token: 0x06002B29 RID: 11049 RVA: 0x00103E21 File Offset: 0x00102021
 	private static IReadOnlyDictionary<int, string> ChinaReportMap
 	{
 		get
@@ -44,13 +44,13 @@ public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600579A RID: 22426 RVA: 0x000FC5D4 File Offset: 0x000FA7D4
+	// Token: 0x06002B2A RID: 11050 RVA: 0x00103E28 File Offset: 0x00102028
 	public static bool IfNeedReport(int treeId, int nodeId)
 	{
 		return treeId == 139000025 || treeId == 139000026 || treeId == 139000027 || treeId == 139000029 || treeId == 139000030 || treeId == 139000031 || treeId == 114000020 || treeId == 140000004;
 	}
 
-	// Token: 0x0600579B RID: 22427 RVA: 0x000FC624 File Offset: 0x000FA824
+	// Token: 0x06002B2B RID: 11051 RVA: 0x00103E78 File Offset: 0x00102078
 	public override string GetEventName()
 	{
 		if (this.IfGlobalSdk)
@@ -60,7 +60,7 @@ public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 		return SdkReportChapter.ChinaReportMap.GetValueOrDefault(this.TreeConfigId, "");
 	}
 
-	// Token: 0x0600579C RID: 22428 RVA: 0x000FC65C File Offset: 0x000FA85C
+	// Token: 0x06002B2C RID: 11052 RVA: 0x00103EB0 File Offset: 0x001020B0
 	public static void CreateStaticDefaultValue()
 	{
 		SdkReportChapter._globalReportMap = new Dictionary<int, string>
@@ -135,17 +135,17 @@ public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600579D RID: 22429 RVA: 0x000FC77D File Offset: 0x000FA97D
+	// Token: 0x06002B2D RID: 11053 RVA: 0x00103FD1 File Offset: 0x001021D1
 	public static void ResetStaticDefaultValue()
 	{
 		SdkReportChapter._globalReportMap = null;
 		SdkReportChapter._chinaReportMap = null;
 	}
 
-	// Token: 0x0400286D RID: 10349
+	// Token: 0x04002906 RID: 10502
 	public int TreeConfigId;
 
-	// Token: 0x0400286E RID: 10350
+	// Token: 0x04002907 RID: 10503
 	[Nullable(new byte[]
 	{
 		2,
@@ -153,7 +153,7 @@ public class SdkReportChapter : SdkReportData, IStaticVariableResetter
 	})]
 	private static IReadOnlyDictionary<int, string> _globalReportMap;
 
-	// Token: 0x0400286F RID: 10351
+	// Token: 0x04002908 RID: 10504
 	[Nullable(new byte[]
 	{
 		2,

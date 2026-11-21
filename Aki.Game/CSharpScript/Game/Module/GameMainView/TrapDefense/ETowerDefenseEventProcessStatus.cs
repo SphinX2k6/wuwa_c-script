@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.GameMainView.TrapDefense
 {
-	// Token: 0x020059F6 RID: 23030
+	// Token: 0x020049D2 RID: 18898
 	public enum ETowerDefenseEventProcessStatus
 	{
-		// Token: 0x0401E6E1 RID: 124641
+		// Token: 0x04019188 RID: 102792
 		None,
-		// Token: 0x0401E6E2 RID: 124642
+		// Token: 0x04019189 RID: 102793
 		Ready,
-		// Token: 0x0401E6E3 RID: 124643
+		// Token: 0x0401918A RID: 102794
 		Fighting,
-		// Token: 0x0401E6E4 RID: 124644
+		// Token: 0x0401918B RID: 102795
 		Reward
 	}
 }

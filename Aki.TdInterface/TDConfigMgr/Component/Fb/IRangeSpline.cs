@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C57 RID: 3159
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D30 RID: 3376
 	public class IRangeSpline : ISplineType
 	{
-		// Token: 0x06004863 RID: 18531 RVA: 0x000B5F35 File Offset: 0x000B4135
+		// Token: 0x06004CE8 RID: 19688 RVA: 0x000C0529 File Offset: 0x000BE729
 		public static IRangeSpline Create(IRangeSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001572 RID: 5490
-		// (get) Token: 0x06004864 RID: 18532 RVA: 0x000B5F54 File Offset: 0x000B4154
+		// Token: 0x17001683 RID: 5763
+		// (get) Token: 0x06004CE9 RID: 19689 RVA: 0x000C0548 File Offset: 0x000BE748
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001573 RID: 5491
-		// (get) Token: 0x06004865 RID: 18533 RVA: 0x000B5F61 File Offset: 0x000B4161
+		// Token: 0x17001684 RID: 5764
+		// (get) Token: 0x06004CEA RID: 19690 RVA: 0x000C0555 File Offset: 0x000BE755
 		public virtual float Height
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001574 RID: 5492
-		// (get) Token: 0x06004866 RID: 18534 RVA: 0x000B5F70 File Offset: 0x000B4170
+		// Token: 0x17001685 RID: 5765
+		// (get) Token: 0x06004CEB RID: 19691 RVA: 0x000C0564 File Offset: 0x000BE764
 		public virtual List<ICommonSplinePoint> Points
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002940 RID: 10560
+		// Token: 0x04002BA1 RID: 11169
 		private IRangeSpline Instance;
 
-		// Token: 0x04002941 RID: 10561
+		// Token: 0x04002BA2 RID: 11170
 		private List<ICommonSplinePoint> _PointsCache;
 
-		// Token: 0x04002942 RID: 10562
+		// Token: 0x04002BA3 RID: 11171
 		private bool _PointsInited;
 	}
 }

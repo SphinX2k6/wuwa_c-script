@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200311C RID: 12572
+// Token: 0x02002677 RID: 9847
 [NullableContext(2)]
 [Nullable(0)]
 public class PerformPlayMontage : PerformActionBase
 {
-	// Token: 0x0601B04A RID: 110666 RVA: 0x00755053 File Offset: 0x00753253
+	// Token: 0x06018AA5 RID: 101029 RVA: 0x0077B0BF File Offset: 0x007792BF
 	public PerformPlayMontage() : base(EPerformAction.PlayMontage)
 	{
 	}
 
-	// Token: 0x0601B04B RID: 110667 RVA: 0x0075505C File Offset: 0x0075325C
+	// Token: 0x06018AA6 RID: 101030 RVA: 0x0077B0C8 File Offset: 0x007792C8
 	protected override void OnExecute()
 	{
 		BaseAnimationComponent component = this.PerformComp.Entity.GetComponent<BaseAnimationComponent>();
@@ -44,7 +44,7 @@ public class PerformPlayMontage : PerformActionBase
 		}
 	}
 
-	// Token: 0x0601B04C RID: 110668 RVA: 0x00755130 File Offset: 0x00753330
+	// Token: 0x06018AA7 RID: 101031 RVA: 0x0077B19C File Offset: 0x0077939C
 	private void OnBlendOutForFinish(UAnimMontage montage, bool bInterrupted)
 	{
 		Action<UAnimMontage, bool> originOnBlendOut = this.OriginOnBlendOut;
@@ -61,7 +61,7 @@ public class PerformPlayMontage : PerformActionBase
 		baseAnimationComponent.GetMontageManager(base.Group).DetachWithoutStop(bInterrupted);
 	}
 
-	// Token: 0x0601B04D RID: 110669 RVA: 0x00755180 File Offset: 0x00753380
+	// Token: 0x06018AA8 RID: 101032 RVA: 0x0077B1EC File Offset: 0x007793EC
 	private void OnMontageStop(int id)
 	{
 		if (this.EntityHandle != null && EventSystem.Instance.HasWithTarget(this.EntityHandle, EEventName.PerformMontageStop, new Action<int>(this.OnMontageStop)))
@@ -74,7 +74,7 @@ public class PerformPlayMontage : PerformActionBase
 		}
 	}
 
-	// Token: 0x0601B04E RID: 110670 RVA: 0x007551EC File Offset: 0x007533EC
+	// Token: 0x06018AA9 RID: 101033 RVA: 0x0077B258 File Offset: 0x00779458
 	protected override void OnInterrupt()
 	{
 		float remainDuration = this.PerformComp.Entity.GetComponent<BaseAnimationComponent>().GetMontageManager(base.Group).GetRemainDuration(this.MontageId);
@@ -86,7 +86,7 @@ public class PerformPlayMontage : PerformActionBase
 		}
 	}
 
-	// Token: 0x0601B04F RID: 110671 RVA: 0x00755284 File Offset: 0x00753484
+	// Token: 0x06018AAA RID: 101034 RVA: 0x0077B2F0 File Offset: 0x007794F0
 	protected override void OnReset()
 	{
 		if (this.EntityHandle != null && EventSystem.Instance.HasWithTarget(this.EntityHandle, EEventName.PerformMontageStop, new Action<int>(this.OnMontageStop)))
@@ -98,12 +98,12 @@ public class PerformPlayMontage : PerformActionBase
 		this.OriginOnBlendOut = null;
 	}
 
-	// Token: 0x0400D218 RID: 53784
+	// Token: 0x0400D63A RID: 54842
 	private int MontageId;
 
-	// Token: 0x0400D219 RID: 53785
+	// Token: 0x0400D63B RID: 54843
 	private EntityHandle EntityHandle;
 
-	// Token: 0x0400D21A RID: 53786
+	// Token: 0x0400D63C RID: 54844
 	private Action<UAnimMontage, bool> OriginOnBlendOut;
 }

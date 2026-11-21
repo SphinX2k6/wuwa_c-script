@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001795 RID: 6037
+	// Token: 0x02001916 RID: 6422
 	public class IActorTurnTo_SetValue
 	{
-		// Token: 0x0400512E RID: 20782
+		// Token: 0x04005564 RID: 21860
 		public int ActorIndex;
 
-		// Token: 0x0400512F RID: 20783
-		[Nullable(1)]
+		// Token: 0x04005565 RID: 21861
 		public IActorTurnToData Target;
 
-		// Token: 0x04005130 RID: 20784
+		// Token: 0x04005566 RID: 21862
 		public float? DelayTime;
 
-		// Token: 0x04005131 RID: 20785
+		// Token: 0x04005567 RID: 21863
 		public bool? UseLookAtForSmallAngle;
 
-		// Token: 0x04005132 RID: 20786
+		// Token: 0x04005568 RID: 21864
 		public bool? UpdatePosCache;
 	}
 }

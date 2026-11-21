@@ -4,20 +4,20 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.SkipInterface
 {
-	// Token: 0x02004BA0 RID: 19360
+	// Token: 0x02003B4A RID: 15178
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class SkipInterfaceConfig : ConfigBase
 	{
-		// Token: 0x06032298 RID: 205464 RVA: 0x00BA7C52 File Offset: 0x00BA5E52
+		// Token: 0x06027028 RID: 159784 RVA: 0x00AEBD9E File Offset: 0x00AE9F9E
 		public AccessPath? GetAccessPathConfig(int id)
 		{
 			return ConfigAccessPathById.GetConfig(id, true);
 		}
 
-		// Token: 0x17007C4B RID: 31819
-		// (get) Token: 0x06032299 RID: 205465 RVA: 0x00BA7C5B File Offset: 0x00BA5E5B
+		// Token: 0x17004FF5 RID: 20469
+		// (get) Token: 0x06027029 RID: 159785 RVA: 0x00AEBDA7 File Offset: 0x00AE9FA7
 		public static SkipInterfaceConfig Instance
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 		}
 
-		// Token: 0x0603229A RID: 205466 RVA: 0x00BA7C62 File Offset: 0x00BA5E62
+		// Token: 0x0602702A RID: 159786 RVA: 0x00AEBDAE File Offset: 0x00AE9FAE
 		public static SkipInterfaceConfig GetOrCreateInstance()
 		{
 			if (SkipInterfaceConfig._Instance == null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return SkipInterfaceConfig._Instance;
 		}
 
-		// Token: 0x0603229B RID: 205467 RVA: 0x00BA7C76 File Offset: 0x00BA5E76
+		// Token: 0x0602702B RID: 159787 RVA: 0x00AEBDC2 File Offset: 0x00AE9FC2
 		public static bool CreateInstance()
 		{
 			if (SkipInterfaceConfig._Instance != null)
@@ -47,24 +47,24 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return true;
 		}
 
-		// Token: 0x0603229C RID: 205468 RVA: 0x00BA7C8C File Offset: 0x00BA5E8C
+		// Token: 0x0602702C RID: 159788 RVA: 0x00AEBDD8 File Offset: 0x00AE9FD8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603229D RID: 205469 RVA: 0x00BA7C8E File Offset: 0x00BA5E8E
+		// Token: 0x0602702D RID: 159789 RVA: 0x00AEBDDA File Offset: 0x00AE9FDA
 		public static void ResetStaticDefaultValue()
 		{
 			SkipInterfaceConfig._Instance = null;
 		}
 
-		// Token: 0x0603229E RID: 205470 RVA: 0x00BA7C96 File Offset: 0x00BA5E96
+		// Token: 0x0602702E RID: 159790 RVA: 0x00AEBDE2 File Offset: 0x00AE9FE2
 		static SkipInterfaceConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkipInterfaceConfig.CreateStaticDefaultValue), new Action(SkipInterfaceConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AB79 RID: 109433
+		// Token: 0x040154CD RID: 87245
 		[Nullable(2)]
 		private static SkipInterfaceConfig _Instance;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002111 RID: 8465
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002372 RID: 9074
 	public class PlayerLookTowards : ActionParams
 	{
-		// Token: 0x0600BA34 RID: 47668 RVA: 0x001AE450 File Offset: 0x001AC650
+		// Token: 0x0600C5C0 RID: 50624 RVA: 0x001C55B0 File Offset: 0x001C37B0
 		private PlayerLookTowards_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BA35 RID: 47669 RVA: 0x001AE488 File Offset: 0x001AC688
+		// Token: 0x0600C5C1 RID: 50625 RVA: 0x001C55E8 File Offset: 0x001C37E8
 		public static PlayerLookTowards Create([Nullable(2)] PlayerLookTowards instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA36 RID: 47670 RVA: 0x001AE49B File Offset: 0x001AC69B
+		// Token: 0x0600C5C2 RID: 50626 RVA: 0x001C55FB File Offset: 0x001C37FB
 		public static PlayerLookTowards CreateFromSetValue([Nullable(2)] PlayerLookTowards_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BA37 RID: 47671 RVA: 0x001AE4AE File Offset: 0x001AC6AE
+		// Token: 0x0600C5C3 RID: 50627 RVA: 0x001C560E File Offset: 0x001C380E
 		public PlayerLookTowards_SetValue ToSetValue()
 		{
 			return new PlayerLookTowards_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038DA RID: 14554
-		// (get) Token: 0x0600BA38 RID: 47672 RVA: 0x001AE4C1 File Offset: 0x001AC6C1
-		// (set) Token: 0x0600BA39 RID: 47673 RVA: 0x001AE4E8 File Offset: 0x001AC6E8
+		// Token: 0x17003BC6 RID: 15302
+		// (get) Token: 0x0600C5C4 RID: 50628 RVA: 0x001C5621 File Offset: 0x001C3821
+		// (set) Token: 0x0600C5C5 RID: 50629 RVA: 0x001C5648 File Offset: 0x001C3848
 		public virtual ICharacterLookAtData Target
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F75 RID: 28533
+		// Token: 0x040075A9 RID: 30121
 		[Nullable(2)]
 		protected new PlayerLookTowards FbInstance;
 
-		// Token: 0x04006F76 RID: 28534
+		// Token: 0x040075AA RID: 30122
 		[Nullable(2)]
 		protected PlayerLookTowards_SetValue PocoInterface;
 	}

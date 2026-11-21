@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Weather
 {
-	// Token: 0x02004865 RID: 18533
+	// Token: 0x02003796 RID: 14230
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class WeatherModuleConfig : ConfigBase
 	{
-		// Token: 0x06030836 RID: 198710 RVA: 0x00B43BFC File Offset: 0x00B41DFC
+		// Token: 0x06025006 RID: 151558 RVA: 0x00A73E10 File Offset: 0x00A72010
 		public Weather? GetWeatherConfig(int id)
 		{
 			Weather? config = ConfigWeatherById.GetConfig(id, true);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Weather
 			return null;
 		}
 
-		// Token: 0x06030837 RID: 198711 RVA: 0x00B43C30 File Offset: 0x00B41E30
+		// Token: 0x06025007 RID: 151559 RVA: 0x00A73E44 File Offset: 0x00A72044
 		public WeatherDefines.EWeatherType GetWeatherType(int id)
 		{
 			Weather? config = ConfigWeatherById.GetConfig(id, true);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Weather
 			return WeatherDefines.EWeatherType.None;
 		}
 
-		// Token: 0x06030838 RID: 198712 RVA: 0x00B43C60 File Offset: 0x00B41E60
+		// Token: 0x06025008 RID: 151560 RVA: 0x00A73E74 File Offset: 0x00A72074
 		public WeatherSwitch? GetWeatherSwitchConfig(int id)
 		{
 			WeatherSwitch? config = ConfigWeatherSwitchById.GetConfig(id, true);
@@ -44,15 +44,15 @@ namespace CSharpScript.Game.Module.Weather
 			return null;
 		}
 
-		// Token: 0x06030839 RID: 198713 RVA: 0x00B43C94 File Offset: 0x00B41E94
+		// Token: 0x06025009 RID: 151561 RVA: 0x00A73EA8 File Offset: 0x00A720A8
 		[NullableContext(2)]
 		public IReadOnlyList<WeatherSwitch> GetWeatherSwitchConfigAll()
 		{
 			return ConfigWeatherSwitchAll.GetConfigList(true);
 		}
 
-		// Token: 0x17007929 RID: 31017
-		// (get) Token: 0x0603083A RID: 198714 RVA: 0x00B43C9C File Offset: 0x00B41E9C
+		// Token: 0x17004BE5 RID: 19429
+		// (get) Token: 0x0602500A RID: 151562 RVA: 0x00A73EB0 File Offset: 0x00A720B0
 		public static WeatherModuleConfig Instance
 		{
 			get
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x0603083B RID: 198715 RVA: 0x00B43CA3 File Offset: 0x00B41EA3
+		// Token: 0x0602500B RID: 151563 RVA: 0x00A73EB7 File Offset: 0x00A720B7
 		public static WeatherModuleConfig GetOrCreateInstance()
 		{
 			if (WeatherModuleConfig._Instance == null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Weather
 			return WeatherModuleConfig._Instance;
 		}
 
-		// Token: 0x0603083C RID: 198716 RVA: 0x00B43CB7 File Offset: 0x00B41EB7
+		// Token: 0x0602500C RID: 151564 RVA: 0x00A73ECB File Offset: 0x00A720CB
 		public static bool CreateInstance()
 		{
 			if (WeatherModuleConfig._Instance != null)
@@ -82,24 +82,24 @@ namespace CSharpScript.Game.Module.Weather
 			return true;
 		}
 
-		// Token: 0x0603083D RID: 198717 RVA: 0x00B43CCD File Offset: 0x00B41ECD
+		// Token: 0x0602500D RID: 151565 RVA: 0x00A73EE1 File Offset: 0x00A720E1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603083E RID: 198718 RVA: 0x00B43CCF File Offset: 0x00B41ECF
+		// Token: 0x0602500E RID: 151566 RVA: 0x00A73EE3 File Offset: 0x00A720E3
 		public static void ResetStaticDefaultValue()
 		{
 			WeatherModuleConfig._Instance = null;
 		}
 
-		// Token: 0x0603083F RID: 198719 RVA: 0x00B43CD7 File Offset: 0x00B41ED7
+		// Token: 0x0602500F RID: 151567 RVA: 0x00A73EEB File Offset: 0x00A720EB
 		static WeatherModuleConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WeatherModuleConfig.CreateStaticDefaultValue), new Action(WeatherModuleConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A0EA RID: 106730
+		// Token: 0x0401479D RID: 83869
 		[Nullable(2)]
 		private static WeatherModuleConfig _Instance;
 	}

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel
 {
-	// Token: 0x020044D0 RID: 17616
+	// Token: 0x02002F5D RID: 12125
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SoarTabDynamicItem : UiPanelBase, IDynamicScrollBaseItem<SoarChallengePlayData>
 	{
-		// Token: 0x0602D647 RID: 185927 RVA: 0x00A3E5A4 File Offset: 0x00A3C7A4
+		// Token: 0x0601CB85 RID: 117637 RVA: 0x008C4204 File Offset: 0x008C2404
 		public UniTask Init(UUIItem actor)
 		{
 			SoarTabDynamicItem.<Init>d__1 <Init>d__;
@@ -27,7 +27,7 @@ namespace ActivityNamespace.MapTravel
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D648 RID: 185928 RVA: 0x00A3E5F0 File Offset: 0x00A3C7F0
+		// Token: 0x0601CB86 RID: 117638 RVA: 0x008C4250 File Offset: 0x008C2450
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -41,7 +41,7 @@ namespace ActivityNamespace.MapTravel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602D649 RID: 185929 RVA: 0x00A3E65C File Offset: 0x00A3C85C
+		// Token: 0x0601CB87 RID: 117639 RVA: 0x008C42BC File Offset: 0x008C24BC
 		public FVector2D GetItemSize(SoarChallengePlayData itemData)
 		{
 			UUIItem rootItem = base.GetRootItem();
@@ -49,22 +49,22 @@ namespace ActivityNamespace.MapTravel
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x0602D64A RID: 185930 RVA: 0x00A3E695 File Offset: 0x00A3C895
+		// Token: 0x0601CB88 RID: 117640 RVA: 0x008C42F5 File Offset: 0x008C24F5
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x04018473 RID: 99443
+		// Token: 0x0400F21B RID: 61979
 		private Vector2D VectorValue;
 
-		// Token: 0x0200A713 RID: 42771
+		// Token: 0x02008BE9 RID: 35817
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04032758 RID: 206680
+			// Token: 0x0402C526 RID: 181542
 			public const int NormalItem = 0;
 
-			// Token: 0x04032759 RID: 206681
+			// Token: 0x0402C527 RID: 181543
 			public const int LockItem = 1;
 		}
 	}

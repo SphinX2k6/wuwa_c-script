@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F7 RID: 22775
+	// Token: 0x020048CF RID: 18639
 	public class RhythmShipExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D2F RID: 236847 RVA: 0x00DBC170 File Offset: 0x00DBA370
+		// Token: 0x0602EC52 RID: 191570 RVA: 0x00D0B0D4 File Offset: 0x00D092D4
 		public override bool Checker()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return config != null && config.Value.InstSubType == 53;
 		}
 
-		// Token: 0x06039D30 RID: 236848 RVA: 0x00DBC1C1 File Offset: 0x00DBA3C1
+		// Token: 0x0602EC53 RID: 191571 RVA: 0x00D0B125 File Offset: 0x00D09325
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

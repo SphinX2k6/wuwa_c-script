@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000807 RID: 2055
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008AA RID: 2218
 	public class IWuWaGoInteractStateAction
 	{
-		// Token: 0x06002C99 RID: 11417 RVA: 0x00073B18 File Offset: 0x00071D18
+		// Token: 0x06002FC9 RID: 12233 RVA: 0x0007AE7C File Offset: 0x0007907C
 		private IWuWaGoInteractStateAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C9A RID: 11418 RVA: 0x00073B50 File Offset: 0x00071D50
+		// Token: 0x06002FCA RID: 12234 RVA: 0x0007AEB4 File Offset: 0x000790B4
 		public static IWuWaGoInteractStateAction Create([Nullable(2)] IWuWaGoInteractStateAction instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C9B RID: 11419 RVA: 0x00073B63 File Offset: 0x00071D63
+		// Token: 0x06002FCB RID: 12235 RVA: 0x0007AEC7 File Offset: 0x000790C7
 		public static IWuWaGoInteractStateAction CreateFromSetValue([Nullable(2)] IWuWaGoInteractStateAction_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C9C RID: 11420 RVA: 0x00073B76 File Offset: 0x00071D76
+		// Token: 0x06002FCC RID: 12236 RVA: 0x0007AEDA File Offset: 0x000790DA
 		public IWuWaGoInteractStateAction_SetValue ToSetValue()
 		{
 			return new IWuWaGoInteractStateAction_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BA5 RID: 2981
-		// (get) Token: 0x06002C9D RID: 11421 RVA: 0x00073B95 File Offset: 0x00071D95
-		// (set) Token: 0x06002C9E RID: 11422 RVA: 0x00073BC0 File Offset: 0x00071DC0
+		// Token: 0x17000C68 RID: 3176
+		// (get) Token: 0x06002FCD RID: 12237 RVA: 0x0007AEF9 File Offset: 0x000790F9
+		// (set) Token: 0x06002FCE RID: 12238 RVA: 0x0007AF24 File Offset: 0x00079124
 		public virtual string EntityState
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BA6 RID: 2982
-		// (get) Token: 0x06002C9F RID: 11423 RVA: 0x00073BD0 File Offset: 0x00071DD0
-		// (set) Token: 0x06002CA0 RID: 11424 RVA: 0x00073C63 File Offset: 0x00071E63
+		// Token: 0x17000C69 RID: 3177
+		// (get) Token: 0x06002FCF RID: 12239 RVA: 0x0007AF34 File Offset: 0x00079134
+		// (set) Token: 0x06002FD0 RID: 12240 RVA: 0x0007AFC7 File Offset: 0x000791C7
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ActionList
 		{
 			get
@@ -124,18 +122,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D83 RID: 7555
+		// Token: 0x04001F8F RID: 8079
 		[Nullable(2)]
 		protected IWuWaGoInteractStateAction FbInstance;
 
-		// Token: 0x04001D84 RID: 7556
+		// Token: 0x04001F90 RID: 8080
 		[Nullable(2)]
 		protected IWuWaGoInteractStateAction_SetValue PocoInterface;
 
-		// Token: 0x04001D85 RID: 7557
+		// Token: 0x04001F91 RID: 8081
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionListCache;
 
-		// Token: 0x04001D86 RID: 7558
+		// Token: 0x04001F92 RID: 8082
 		private bool _ActionListInited;
 	}
 }

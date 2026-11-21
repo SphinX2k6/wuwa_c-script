@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000458 RID: 1112
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004B1 RID: 1201
 	public class IInhalationMatching
 	{
-		// Token: 0x0600167B RID: 5755 RVA: 0x00045564 File Offset: 0x00043764
+		// Token: 0x06001815 RID: 6165 RVA: 0x000492AC File Offset: 0x000474AC
 		private IInhalationMatching_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600167C RID: 5756 RVA: 0x0004559C File Offset: 0x0004379C
+		// Token: 0x06001816 RID: 6166 RVA: 0x000492E4 File Offset: 0x000474E4
 		public static IInhalationMatching Create([Nullable(2)] IInhalationMatching instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600167D RID: 5757 RVA: 0x000455AF File Offset: 0x000437AF
+		// Token: 0x06001817 RID: 6167 RVA: 0x000492F7 File Offset: 0x000474F7
 		public static IInhalationMatching CreateFromSetValue([Nullable(2)] IInhalationMatching_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600167E RID: 5758 RVA: 0x000455C2 File Offset: 0x000437C2
+		// Token: 0x06001818 RID: 6168 RVA: 0x0004930A File Offset: 0x0004750A
 		public IInhalationMatching_SetValue ToSetValue()
 		{
 			return new IInhalationMatching_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000617 RID: 1559
-		// (get) Token: 0x0600167F RID: 5759 RVA: 0x000455E1 File Offset: 0x000437E1
-		// (set) Token: 0x06001680 RID: 5760 RVA: 0x0004560C File Offset: 0x0004380C
+		// Token: 0x1700067E RID: 1662
+		// (get) Token: 0x06001819 RID: 6169 RVA: 0x00049329 File Offset: 0x00047529
+		// (set) Token: 0x0600181A RID: 6170 RVA: 0x00049354 File Offset: 0x00047554
 		public virtual int InhalationStrength
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000618 RID: 1560
-		// (get) Token: 0x06001681 RID: 5761 RVA: 0x0004561C File Offset: 0x0004381C
-		// (set) Token: 0x06001682 RID: 5762 RVA: 0x0004567D File Offset: 0x0004387D
+		// Token: 0x1700067F RID: 1663
+		// (get) Token: 0x0600181B RID: 6171 RVA: 0x00049364 File Offset: 0x00047564
+		// (set) Token: 0x0600181C RID: 6172 RVA: 0x000493C5 File Offset: 0x000475C5
 		public virtual ICategoryMatchingCondition EntityMatch
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001124 RID: 4388
+		// Token: 0x04001246 RID: 4678
 		[Nullable(2)]
 		protected IInhalationMatching FbInstance;
 
-		// Token: 0x04001125 RID: 4389
+		// Token: 0x04001247 RID: 4679
 		[Nullable(2)]
 		protected IInhalationMatching_SetValue PocoInterface;
 
-		// Token: 0x04001126 RID: 4390
+		// Token: 0x04001248 RID: 4680
 		private ICategoryMatchingCondition _EntityMatchCache;
 
-		// Token: 0x04001127 RID: 4391
+		// Token: 0x04001249 RID: 4681
 		private bool _EntityMatchInited;
 	}
 }

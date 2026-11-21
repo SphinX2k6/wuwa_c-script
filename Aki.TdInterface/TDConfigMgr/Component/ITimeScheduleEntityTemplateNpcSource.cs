@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000785 RID: 1925
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000824 RID: 2084
 	public class ITimeScheduleEntityTemplateNpcSource : ITimeScheduleNpcSource
 	{
-		// Token: 0x060029C0 RID: 10688 RVA: 0x0006E044 File Offset: 0x0006C244
+		// Token: 0x06002CDC RID: 11484 RVA: 0x00075130 File Offset: 0x00073330
 		private ITimeScheduleEntityTemplateNpcSource_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060029C1 RID: 10689 RVA: 0x0006E07C File Offset: 0x0006C27C
+		// Token: 0x06002CDD RID: 11485 RVA: 0x00075168 File Offset: 0x00073368
 		public static ITimeScheduleEntityTemplateNpcSource Create([Nullable(2)] ITimeScheduleEntityTemplateNpcSource instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029C2 RID: 10690 RVA: 0x0006E08F File Offset: 0x0006C28F
+		// Token: 0x06002CDE RID: 11486 RVA: 0x0007517B File Offset: 0x0007337B
 		public static ITimeScheduleEntityTemplateNpcSource CreateFromSetValue([Nullable(2)] ITimeScheduleEntityTemplateNpcSource_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029C3 RID: 10691 RVA: 0x0006E0A2 File Offset: 0x0006C2A2
+		// Token: 0x06002CDF RID: 11487 RVA: 0x0007518E File Offset: 0x0007338E
 		public new ITimeScheduleEntityTemplateNpcSource_SetValue ToSetValue()
 		{
 			return new ITimeScheduleEntityTemplateNpcSource_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AFA RID: 2810
-		// (get) Token: 0x060029C4 RID: 10692 RVA: 0x0006E0C1 File Offset: 0x0006C2C1
-		// (set) Token: 0x060029C5 RID: 10693 RVA: 0x0006E0EC File Offset: 0x0006C2EC
+		// Token: 0x17000BB9 RID: 3001
+		// (get) Token: 0x06002CE0 RID: 11488 RVA: 0x000751AD File Offset: 0x000733AD
+		// (set) Token: 0x06002CE1 RID: 11489 RVA: 0x000751D8 File Offset: 0x000733D8
 		public override ETimeScheduleNpcSourceType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AFB RID: 2811
-		// (get) Token: 0x060029C6 RID: 10694 RVA: 0x0006E0FA File Offset: 0x0006C2FA
-		// (set) Token: 0x060029C7 RID: 10695 RVA: 0x0006E121 File Offset: 0x0006C321
+		// Token: 0x17000BBA RID: 3002
+		// (get) Token: 0x06002CE2 RID: 11490 RVA: 0x000751E6 File Offset: 0x000733E6
+		// (set) Token: 0x06002CE3 RID: 11491 RVA: 0x0007520D File Offset: 0x0007340D
 		public virtual List<string> TemplateIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BFB RID: 7163
+		// Token: 0x04001DFD RID: 7677
 		[Nullable(2)]
 		protected new ITimeScheduleEntityTemplateNpcSource FbInstance;
 
-		// Token: 0x04001BFC RID: 7164
+		// Token: 0x04001DFE RID: 7678
 		[Nullable(2)]
 		protected new ITimeScheduleEntityTemplateNpcSource_SetValue PocoInterface;
 	}

@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200336A RID: 13162
+// Token: 0x020028DC RID: 10460
 public class BeginnerCarnivalTaskTabRedDot : RedDotBase
 {
-	// Token: 0x0601CA30 RID: 117296 RVA: 0x00805B2E File Offset: 0x00803D2E
+	// Token: 0x0601A728 RID: 108328 RVA: 0x0082C0F2 File Offset: 0x0082A2F2
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshBeginnerCarnivalTask, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CA31 RID: 117297 RVA: 0x00805B4C File Offset: 0x00803D4C
+	// Token: 0x0601A729 RID: 108329 RVA: 0x0082C110 File Offset: 0x0082A310
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshBeginnerCarnivalTask, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CA32 RID: 117298 RVA: 0x00805B6C File Offset: 0x00803D6C
+	// Token: 0x0601A72A RID: 108330 RVA: 0x0082C130 File Offset: 0x0082A330
 	protected override bool OnCheck(int uId = 0)
 	{
 		BeginnerCarnivalData beginnerCarnivalData = BeginnerCarnivalController.Instance.GetBeginnerCarnivalData();

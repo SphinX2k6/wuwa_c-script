@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02000F91 RID: 3985
+// Token: 0x02000446 RID: 1094
 public class FurnitureAtmosphereLevelData : IFurnitureAtmosphereLevelData
 {
-	// Token: 0x170007FB RID: 2043
-	// (get) Token: 0x06006620 RID: 26144 RVA: 0x00143F55 File Offset: 0x00142155
-	// (set) Token: 0x06006621 RID: 26145 RVA: 0x00143F5D File Offset: 0x0014215D
+	// Token: 0x1700081D RID: 2077
+	// (get) Token: 0x060039B8 RID: 14776 RVA: 0x0014C7E9 File Offset: 0x0014A9E9
+	// (set) Token: 0x060039B9 RID: 14777 RVA: 0x0014C7F1 File Offset: 0x0014A9F1
 	public int Level { get; set; }
 
-	// Token: 0x170007FC RID: 2044
-	// (get) Token: 0x06006622 RID: 26146 RVA: 0x00143F66 File Offset: 0x00142166
-	// (set) Token: 0x06006623 RID: 26147 RVA: 0x00143F6E File Offset: 0x0014216E
+	// Token: 0x1700081E RID: 2078
+	// (get) Token: 0x060039BA RID: 14778 RVA: 0x0014C7FA File Offset: 0x0014A9FA
+	// (set) Token: 0x060039BB RID: 14779 RVA: 0x0014C802 File Offset: 0x0014AA02
 	public int CurLevelAtmosphere { get; set; }
 
-	// Token: 0x170007FD RID: 2045
-	// (get) Token: 0x06006624 RID: 26148 RVA: 0x00143F77 File Offset: 0x00142177
-	// (set) Token: 0x06006625 RID: 26149 RVA: 0x00143F7F File Offset: 0x0014217F
+	// Token: 0x1700081F RID: 2079
+	// (get) Token: 0x060039BC RID: 14780 RVA: 0x0014C80B File Offset: 0x0014AA0B
+	// (set) Token: 0x060039BD RID: 14781 RVA: 0x0014C813 File Offset: 0x0014AA13
 	public int CurLevelMaxAtmosphere { get; set; }
 }

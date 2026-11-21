@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004906 RID: 18694
+	// Token: 0x0200387D RID: 14461
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VisionChooseMainPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DFB RID: 200187 RVA: 0x00B59799 File Offset: 0x00B57999
+		// Token: 0x06025928 RID: 153896 RVA: 0x00A94609 File Offset: 0x00A92809
 		public VisionChooseMainPanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x170079C5 RID: 31173
-		// (get) Token: 0x06030DFC RID: 200188 RVA: 0x00B597A4 File Offset: 0x00B579A4
+		// Token: 0x17004D2D RID: 19757
+		// (get) Token: 0x06025929 RID: 153897 RVA: 0x00A94614 File Offset: 0x00A92814
 		public List<TsUiNavigationBehaviorListener> ChangeListenerList
 		{
 			get
 			{
 				if (this.ChangeListenerListInternal == null)
 				{
-					this.ChangeListenerListInternal = this.DefaultNavigationListener.ToList<TsUiNavigationBehaviorListener>();
+					this.ChangeListenerListInternal = new List<TsUiNavigationBehaviorListener>(this.DefaultNavigationListener);
 					if (this.ChangeListenerListInternal.Count >= 2)
 					{
 						List<TsUiNavigationBehaviorListener> changeListenerListInternal = this.ChangeListenerListInternal;
@@ -38,7 +37,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DFD RID: 200189 RVA: 0x00B59814 File Offset: 0x00B57A14
+		// Token: 0x0602592A RID: 153898 RVA: 0x00A94684 File Offset: 0x00A92884
 		protected override List<TsUiNavigationBehaviorListener> OnGetSuitableNavigationListenerList(bool isDefault)
 		{
 			if (this.IsFindChangeListenerList)
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.DefaultNavigationListener;
 		}
 
-		// Token: 0x06030DFE RID: 200190 RVA: 0x00B59871 File Offset: 0x00B57A71
+		// Token: 0x0602592B RID: 153899 RVA: 0x00A946E1 File Offset: 0x00A928E1
 		protected override void OnNotifyFindResult(FindNavigationResult result)
 		{
 			if (result.IsInLoopingProcess())
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.IsFindChangeListenerList = false;
 		}
 
-		// Token: 0x06030DFF RID: 200191 RVA: 0x00B5988C File Offset: 0x00B57A8C
+		// Token: 0x0602592C RID: 153900 RVA: 0x00A946FC File Offset: 0x00A928FC
 		[return: Nullable(2)]
 		private TsUiNavigationBehaviorListener FindVisionTabItemListener(TsUiNavigationBehaviorListener listener)
 		{
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return tsUiNavigationBehaviorListener;
 		}
 
-		// Token: 0x0401A3CC RID: 107468
+		// Token: 0x04014C3F RID: 85055
 		[Nullable(new byte[]
 		{
 			2,
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private List<TsUiNavigationBehaviorListener> ChangeListenerListInternal;
 
-		// Token: 0x0401A3CD RID: 107469
+		// Token: 0x04014C40 RID: 85056
 		public bool IsFindChangeListenerList;
 	}
 }

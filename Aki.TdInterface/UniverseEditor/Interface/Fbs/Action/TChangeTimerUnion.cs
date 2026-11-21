@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007666 RID: 30310
+	// Token: 0x02007E74 RID: 32372
 	public class TChangeTimerUnion
 	{
-		// Token: 0x1700E5D7 RID: 58839
-		// (get) Token: 0x060372BE RID: 225982 RVA: 0x0077ABA4 File Offset: 0x00778DA4
-		// (set) Token: 0x060372BF RID: 225983 RVA: 0x0077ABAC File Offset: 0x00778DAC
+		// Token: 0x1700F215 RID: 61973
+		// (get) Token: 0x0603A763 RID: 239459 RVA: 0x007DECA0 File Offset: 0x007DCEA0
+		// (set) Token: 0x0603A764 RID: 239460 RVA: 0x007DECA8 File Offset: 0x007DCEA8
 		public TChangeTimer Type { get; set; }
 
-		// Token: 0x1700E5D8 RID: 58840
-		// (get) Token: 0x060372C0 RID: 225984 RVA: 0x0077ABB5 File Offset: 0x00778DB5
-		// (set) Token: 0x060372C1 RID: 225985 RVA: 0x0077ABBD File Offset: 0x00778DBD
+		// Token: 0x1700F216 RID: 61974
+		// (get) Token: 0x0603A765 RID: 239461 RVA: 0x007DECB1 File Offset: 0x007DCEB1
+		// (set) Token: 0x0603A766 RID: 239462 RVA: 0x007DECB9 File Offset: 0x007DCEB9
 		public object Value { get; set; }
 
-		// Token: 0x060372C2 RID: 225986 RVA: 0x0077ABC6 File Offset: 0x00778DC6
+		// Token: 0x0603A767 RID: 239463 RVA: 0x007DECC2 File Offset: 0x007DCEC2
 		public TChangeTimerUnion()
 		{
 			this.Type = TChangeTimer.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060372C3 RID: 225987 RVA: 0x0077ABDC File Offset: 0x00778DDC
+		// Token: 0x0603A768 RID: 239464 RVA: 0x007DECD8 File Offset: 0x007DCED8
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060372C4 RID: 225988 RVA: 0x0077ABEE File Offset: 0x00778DEE
+		// Token: 0x0603A769 RID: 239465 RVA: 0x007DECEA File Offset: 0x007DCEEA
 		public IAddTimeT AsIAddTime()
 		{
 			return this.As<IAddTimeT>();
 		}
 
-		// Token: 0x060372C5 RID: 225989 RVA: 0x0077ABF6 File Offset: 0x00778DF6
+		// Token: 0x0603A76A RID: 239466 RVA: 0x007DECF2 File Offset: 0x007DCEF2
 		public static TChangeTimerUnion FromIAddTime(IAddTimeT _iaddtime)
 		{
 			return new TChangeTimerUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060372C6 RID: 225990 RVA: 0x0077AC0B File Offset: 0x00778E0B
+		// Token: 0x0603A76B RID: 239467 RVA: 0x007DED07 File Offset: 0x007DCF07
 		public IReduceTimeT AsIReduceTime()
 		{
 			return this.As<IReduceTimeT>();
 		}
 
-		// Token: 0x060372C7 RID: 225991 RVA: 0x0077AC13 File Offset: 0x00778E13
+		// Token: 0x0603A76C RID: 239468 RVA: 0x007DED0F File Offset: 0x007DCF0F
 		public static TChangeTimerUnion FromIReduceTime(IReduceTimeT _ireducetime)
 		{
 			return new TChangeTimerUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060372C8 RID: 225992 RVA: 0x0077AC28 File Offset: 0x00778E28
+		// Token: 0x0603A76D RID: 239469 RVA: 0x007DED24 File Offset: 0x007DCF24
 		public ISetTimeT AsISetTime()
 		{
 			return this.As<ISetTimeT>();
 		}
 
-		// Token: 0x060372C9 RID: 225993 RVA: 0x0077AC30 File Offset: 0x00778E30
+		// Token: 0x0603A76E RID: 239470 RVA: 0x007DED2C File Offset: 0x007DCF2C
 		public static TChangeTimerUnion FromISetTime(ISetTimeT _isettime)
 		{
 			return new TChangeTimerUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060372CA RID: 225994 RVA: 0x0077AC48 File Offset: 0x00778E48
+		// Token: 0x0603A76F RID: 239471 RVA: 0x007DED44 File Offset: 0x007DCF44
 		public static int Pack(FlatBufferBuilder builder, TChangeTimerUnion _o)
 		{
 			switch (_o.Type)

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200657F RID: 25983
+	// Token: 0x02006BE7 RID: 27623
 	public struct IDestroyAllChild : IFlatbufferObject
 	{
-		// Token: 0x1700C106 RID: 49414
-		// (get) Token: 0x0602D12A RID: 184618 RVA: 0x0062F0EE File Offset: 0x0062D2EE
+		// Token: 0x1700CA95 RID: 51861
+		// (get) Token: 0x0602F8AE RID: 194734 RVA: 0x0067B2B2 File Offset: 0x006794B2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D12B RID: 184619 RVA: 0x0062F0FB File Offset: 0x0062D2FB
+		// Token: 0x0602F8AF RID: 194735 RVA: 0x0067B2BF File Offset: 0x006794BF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D12C RID: 184620 RVA: 0x0062F104 File Offset: 0x0062D304
+		// Token: 0x0602F8B0 RID: 194736 RVA: 0x0067B2C8 File Offset: 0x006794C8
 		public static IDestroyAllChild GetRootAsIDestroyAllChild(ByteBuffer _bb)
 		{
 			return IDestroyAllChild.GetRootAsIDestroyAllChild(_bb, default(IDestroyAllChild));
 		}
 
-		// Token: 0x0602D12D RID: 184621 RVA: 0x0062F120 File Offset: 0x0062D320
+		// Token: 0x0602F8B1 RID: 194737 RVA: 0x0067B2E4 File Offset: 0x006794E4
 		public static IDestroyAllChild GetRootAsIDestroyAllChild(ByteBuffer _bb, IDestroyAllChild obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D12E RID: 184622 RVA: 0x0062F13D File Offset: 0x0062D33D
+		// Token: 0x0602F8B2 RID: 194738 RVA: 0x0067B301 File Offset: 0x00679501
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D12F RID: 184623 RVA: 0x0062F14C File Offset: 0x0062D34C
+		// Token: 0x0602F8B3 RID: 194739 RVA: 0x0067B310 File Offset: 0x00679510
 		public IDestroyAllChild __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602D130 RID: 184624 RVA: 0x0062F15C File Offset: 0x0062D35C
+		// Token: 0x0602F8B4 RID: 194740 RVA: 0x0067B320 File Offset: 0x00679520
 		public static void StartIDestroyAllChild(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0602D131 RID: 184625 RVA: 0x0062F165 File Offset: 0x0062D365
+		// Token: 0x0602F8B5 RID: 194741 RVA: 0x0067B329 File Offset: 0x00679529
 		public static Offset<IDestroyAllChild> EndIDestroyAllChild(FlatBufferBuilder builder)
 		{
 			return new Offset<IDestroyAllChild>(builder.EndTable());
 		}
 
-		// Token: 0x0602D132 RID: 184626 RVA: 0x0062F174 File Offset: 0x0062D374
+		// Token: 0x0602F8B6 RID: 194742 RVA: 0x0067B338 File Offset: 0x00679538
 		public IDestroyAllChildT UnPack()
 		{
 			IDestroyAllChildT destroyAllChildT = new IDestroyAllChildT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return destroyAllChildT;
 		}
 
-		// Token: 0x0602D133 RID: 184627 RVA: 0x0062F18F File Offset: 0x0062D38F
+		// Token: 0x0602F8B7 RID: 194743 RVA: 0x0067B353 File Offset: 0x00679553
 		public void UnPackTo(IDestroyAllChildT _o)
 		{
 		}
 
-		// Token: 0x0602D134 RID: 184628 RVA: 0x0062F194 File Offset: 0x0062D394
+		// Token: 0x0602F8B8 RID: 194744 RVA: 0x0067B358 File Offset: 0x00679558
 		public static Offset<IDestroyAllChild> Pack(FlatBufferBuilder builder, IDestroyAllChildT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDestroyAllChild.EndIDestroyAllChild(builder);
 		}
 
-		// Token: 0x04010BD9 RID: 68569
+		// Token: 0x040119EB RID: 72171
 		private Table __p;
 	}
 }

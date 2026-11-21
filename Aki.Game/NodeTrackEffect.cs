@@ -5,18 +5,18 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express;
 using UnrealEngine;
 
-// Token: 0x02001D59 RID: 7513
+// Token: 0x0200121B RID: 4635
 [NullableContext(2)]
 [Nullable(0)]
 public class NodeTrackEffect : IStaticVariableResetter
 {
-	// Token: 0x0600E46E RID: 58478 RVA: 0x0035AE80 File Offset: 0x00359080
+	// Token: 0x0600B88B RID: 47243 RVA: 0x00366A30 File Offset: 0x00364C30
 	static NodeTrackEffect()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NodeTrackEffect.CreateStaticDefaultValue), new Action(NodeTrackEffect.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E46F RID: 58479 RVA: 0x0035AEA0 File Offset: 0x003590A0
+	// Token: 0x0600B88C RID: 47244 RVA: 0x00366A50 File Offset: 0x00364C50
 	[NullableContext(1)]
 	public NodeTrackEffect(BehaviorTreeExpressionComponent owner, int nodeId, ITrackEffectAutoChange effectOption)
 	{
@@ -31,14 +31,14 @@ public class NodeTrackEffect : IStaticVariableResetter
 		this.HitLocation = Vector.Create();
 	}
 
-	// Token: 0x0600E470 RID: 58480 RVA: 0x0035AEF2 File Offset: 0x003590F2
+	// Token: 0x0600B88D RID: 47245 RVA: 0x00366AA2 File Offset: 0x00364CA2
 	public void Destroy()
 	{
 		this.End();
 		this.Owner = null;
 	}
 
-	// Token: 0x0600E471 RID: 58481 RVA: 0x0035AF01 File Offset: 0x00359101
+	// Token: 0x0600B88E RID: 47246 RVA: 0x00366AB1 File Offset: 0x00364CB1
 	private static void InitLineTrace()
 	{
 		UTraceLineElement utraceLineElement = new UTraceLineElement();
@@ -48,7 +48,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		NodeTrackEffect.LineTrace = utraceLineElement;
 	}
 
-	// Token: 0x0600E472 RID: 58482 RVA: 0x0035AF2C File Offset: 0x0035912C
+	// Token: 0x0600B88F RID: 47247 RVA: 0x00366ADC File Offset: 0x00364CDC
 	public void OnBattleViewActive()
 	{
 		double trackDistance = this.Owner.GetTrackDistance(this.NodeId);
@@ -62,7 +62,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		this.Timer.Resume();
 	}
 
-	// Token: 0x0600E473 RID: 58483 RVA: 0x0035AFA1 File Offset: 0x003591A1
+	// Token: 0x0600B890 RID: 47248 RVA: 0x00366B51 File Offset: 0x00364D51
 	public void OnBattleViewHide()
 	{
 		this.SetTrackedEffectHidden();
@@ -73,7 +73,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		this.Timer.Pause();
 	}
 
-	// Token: 0x0600E474 RID: 58484 RVA: 0x0035AFCC File Offset: 0x003591CC
+	// Token: 0x0600B891 RID: 47249 RVA: 0x00366B7C File Offset: 0x00364D7C
 	public unsafe void Start()
 	{
 		this.IsInEnterRange = false;
@@ -117,7 +117,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		this.ShortLightBeam = this.CreateTrackEffect(ETrackEffect.ShortLightBeam, trackEffectPath2, nodeTrackPosition);
 	}
 
-	// Token: 0x0600E475 RID: 58485 RVA: 0x0035B114 File Offset: 0x00359314
+	// Token: 0x0600B892 RID: 47250 RVA: 0x00366CC4 File Offset: 0x00364EC4
 	public void End()
 	{
 		if (this.Timer != null && TimerSystem.Instance.Has(this.Timer))
@@ -138,7 +138,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		this.ShortLightBeam = 0;
 	}
 
-	// Token: 0x0600E476 RID: 58486 RVA: 0x0035B1CC File Offset: 0x003593CC
+	// Token: 0x0600B893 RID: 47251 RVA: 0x00366D7C File Offset: 0x00364F7C
 	[NullableContext(1)]
 	private int CreateTrackEffect(ETrackEffect effectType, string effectPath, IVector trackPosition)
 	{
@@ -167,7 +167,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		}, null, false, false);
 	}
 
-	// Token: 0x0600E477 RID: 58487 RVA: 0x0035B2D0 File Offset: 0x003594D0
+	// Token: 0x0600B894 RID: 47252 RVA: 0x00366E80 File Offset: 0x00365080
 	private void OnEffectLoadComplete(ETrackEffect effectType, int handle)
 	{
 		EffectSystem.Instance.RegisterCustomCheckOwnerFunc(handle, (int _) => this.Owner != null);
@@ -183,7 +183,7 @@ public class NodeTrackEffect : IStaticVariableResetter
 		this.Timer = TimerSystem.Instance.Forever(new TTimerAction(this.UpdateTrackEffect), 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600E478 RID: 58488 RVA: 0x0035B374 File Offset: 0x00359574
+	// Token: 0x0600B895 RID: 47253 RVA: 0x00366F24 File Offset: 0x00365124
 	private void UpdateTrackEffect(float _)
 	{
 		if (this.IsOccupied)
@@ -211,83 +211,83 @@ public class NodeTrackEffect : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E479 RID: 58489 RVA: 0x0035B415 File Offset: 0x00359615
+	// Token: 0x0600B896 RID: 47254 RVA: 0x00366FC5 File Offset: 0x003651C5
 	private void SetTrackedEffectHidden()
 	{
 		NodeTrackEffect.SetTrackEffectActive(this.LongLightBeam, false);
 		NodeTrackEffect.SetTrackEffectActive(this.ShortLightBeam, false);
 	}
 
-	// Token: 0x0600E47A RID: 58490 RVA: 0x0035B42F File Offset: 0x0035962F
+	// Token: 0x0600B897 RID: 47255 RVA: 0x00366FDF File Offset: 0x003651DF
 	private static void SetTrackEffectActive(int handle, bool bActive)
 	{
 		EffectSystem.Instance.SetEffectHidden(handle, !bActive, null, false);
 	}
 
-	// Token: 0x0600E47B RID: 58491 RVA: 0x0035B442 File Offset: 0x00359642
+	// Token: 0x0600B898 RID: 47256 RVA: 0x00366FF2 File Offset: 0x003651F2
 	public void OnExpressOccupied()
 	{
 		this.IsOccupied = true;
 	}
 
-	// Token: 0x0600E47C RID: 58492 RVA: 0x0035B44B File Offset: 0x0035964B
+	// Token: 0x0600B899 RID: 47257 RVA: 0x00366FFB File Offset: 0x003651FB
 	public void OnExpressOccupationRelease()
 	{
 		this.IsOccupied = false;
 	}
 
-	// Token: 0x0600E47D RID: 58493 RVA: 0x0035B454 File Offset: 0x00359654
+	// Token: 0x0600B89A RID: 47258 RVA: 0x00367004 File Offset: 0x00365204
 	public static void CreateStaticDefaultValue()
 	{
 		NodeTrackEffect.LineTrace = null;
 	}
 
-	// Token: 0x0600E47E RID: 58494 RVA: 0x0035B45C File Offset: 0x0035965C
+	// Token: 0x0600B89B RID: 47259 RVA: 0x0036700C File Offset: 0x0036520C
 	public static void ResetStaticDefaultValue()
 	{
 		NodeTrackEffect.LineTrace = null;
 	}
 
-	// Token: 0x0400694D RID: 26957
+	// Token: 0x04006A2D RID: 27181
 	[Nullable(1)]
 	private const string PROFILE_KEY = "TrackedMark_CreateTrackEffect";
 
-	// Token: 0x0400694E RID: 26958
+	// Token: 0x04006A2E RID: 27182
 	private const int OFFSET_Z = 1000;
 
-	// Token: 0x0400694F RID: 26959
+	// Token: 0x04006A2F RID: 27183
 	private static UTraceLineElement LineTrace;
 
-	// Token: 0x04006950 RID: 26960
+	// Token: 0x04006A30 RID: 27184
 	private BehaviorTreeExpressionComponent Owner;
 
-	// Token: 0x04006951 RID: 26961
+	// Token: 0x04006A31 RID: 27185
 	private readonly int NodeId;
 
-	// Token: 0x04006952 RID: 26962
+	// Token: 0x04006A32 RID: 27186
 	private int LongLightBeam;
 
-	// Token: 0x04006953 RID: 26963
+	// Token: 0x04006A33 RID: 27187
 	private int ShortLightBeam;
 
-	// Token: 0x04006954 RID: 26964
+	// Token: 0x04006A34 RID: 27188
 	private readonly double TrackEffectEnterRange;
 
-	// Token: 0x04006955 RID: 26965
+	// Token: 0x04006A35 RID: 27189
 	private readonly double TrackEffectLeaveRange;
 
-	// Token: 0x04006956 RID: 26966
+	// Token: 0x04006A36 RID: 27190
 	private readonly Vector HitLocation;
 
-	// Token: 0x04006957 RID: 26967
+	// Token: 0x04006A37 RID: 27191
 	private TimerHandle Timer;
 
-	// Token: 0x04006958 RID: 26968
+	// Token: 0x04006A38 RID: 27192
 	private int LoadedCompleteCount;
 
-	// Token: 0x04006959 RID: 26969
+	// Token: 0x04006A39 RID: 27193
 	private bool IsInEnterRange;
 
-	// Token: 0x0400695A RID: 26970
+	// Token: 0x04006A3A RID: 27194
 	private bool IsOccupied;
 }

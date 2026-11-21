@@ -7,21 +7,21 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020001F9 RID: 505
+// Token: 0x020001FD RID: 509
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public abstract class CameraControllerBase : ICameraControllerBase
 {
-	// Token: 0x06001FC5 RID: 8133 RVA: 0x000A3754 File Offset: 0x000A1954
+	// Token: 0x06002073 RID: 8307 RVA: 0x000AAAA0 File Offset: 0x000A8CA0
 	protected CameraControllerBase(FightCameraLogicComponent camera)
 	{
 		this.Camera = camera;
 		this.OnInit();
 	}
 
-	// Token: 0x170004FE RID: 1278
-	// (get) Token: 0x06001FC6 RID: 8134 RVA: 0x000A37DE File Offset: 0x000A19DE
+	// Token: 0x1700051F RID: 1311
+	// (get) Token: 0x06002074 RID: 8308 RVA: 0x000AAB2A File Offset: 0x000A8D2A
 	[Nullable(2)]
 	protected CameraModelInstance CameraModel
 	{
@@ -32,7 +32,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FC7 RID: 8135 RVA: 0x000A37EC File Offset: 0x000A19EC
+	// Token: 0x06002075 RID: 8309 RVA: 0x000AAB38 File Offset: 0x000A8D38
 	protected void SetConfigMap(Enum key, string value)
 	{
 		int key2 = Convert.ToInt32(key);
@@ -58,7 +58,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		this.DebugValueSet.Add(value);
 	}
 
-	// Token: 0x06001FC8 RID: 8136 RVA: 0x000A3884 File Offset: 0x000A1A84
+	// Token: 0x06002076 RID: 8310 RVA: 0x000AABD0 File Offset: 0x000A8DD0
 	protected void SetCurveConfigMap(Enum key, string value)
 	{
 		int key2 = Convert.ToInt32(key);
@@ -84,19 +84,19 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		this.DebugValueSet.Add(value);
 	}
 
-	// Token: 0x06001FC9 RID: 8137 RVA: 0x000A391A File Offset: 0x000A1B1A
+	// Token: 0x06002077 RID: 8311 RVA: 0x000AAC66 File Offset: 0x000A8E66
 	private void SetConfigValue(string k, double value)
 	{
 		this.SetMember(k, value);
 	}
 
-	// Token: 0x06001FCA RID: 8138 RVA: 0x000A3929 File Offset: 0x000A1B29
+	// Token: 0x06002078 RID: 8312 RVA: 0x000AAC75 File Offset: 0x000A8E75
 	private void SetCurveConfigValue(string k, CurveBase value)
 	{
 		this.SetMember(k, value);
 	}
 
-	// Token: 0x06001FCB RID: 8139 RVA: 0x000A3934 File Offset: 0x000A1B34
+	// Token: 0x06002079 RID: 8313 RVA: 0x000AAC80 File Offset: 0x000A8E80
 	[NullableContext(0)]
 	public void SetDefaultConfigs<TEnum>([Nullable(new byte[]
 	{
@@ -131,7 +131,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FCC RID: 8140 RVA: 0x000A3A10 File Offset: 0x000A1C10
+	// Token: 0x0600207A RID: 8314 RVA: 0x000AAD64 File Offset: 0x000A8F64
 	public unsafe virtual void SetConfigsCore(Dictionary<int, float> config, Dictionary<int, CurveBase> curveConfig)
 	{
 		foreach (KeyValuePair<int, float> keyValuePair in config)
@@ -207,64 +207,64 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		this.PostProcessConfig(config, curveConfig);
 	}
 
-	// Token: 0x06001FCD RID: 8141 RVA: 0x000A3CD8 File Offset: 0x000A1ED8
+	// Token: 0x0600207B RID: 8315 RVA: 0x000AB02C File Offset: 0x000A922C
 	public void ResetDefaultConfig()
 	{
 		this.SetConfigsCore(this.DefaultConfigs, this.DefaultCurveConfigs);
 	}
 
-	// Token: 0x06001FCE RID: 8142 RVA: 0x000A3CEC File Offset: 0x000A1EEC
+	// Token: 0x0600207C RID: 8316 RVA: 0x000AB040 File Offset: 0x000A9240
 	public virtual void OnStart()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x06001FCF RID: 8143 RVA: 0x000A3D0B File Offset: 0x000A1F0B
+	// Token: 0x0600207D RID: 8317 RVA: 0x000AB05F File Offset: 0x000A925F
 	public virtual void OnEnd()
 	{
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x06001FD0 RID: 8144 RVA: 0x000A3D2A File Offset: 0x000A1F2A
+	// Token: 0x0600207E RID: 8318 RVA: 0x000AB07E File Offset: 0x000A927E
 	protected virtual void OnInit()
 	{
 	}
 
-	// Token: 0x06001FD1 RID: 8145 RVA: 0x000A3D2C File Offset: 0x000A1F2C
+	// Token: 0x0600207F RID: 8319 RVA: 0x000AB080 File Offset: 0x000A9280
 	protected virtual void OnEnable()
 	{
 	}
 
-	// Token: 0x06001FD2 RID: 8146 RVA: 0x000A3D2E File Offset: 0x000A1F2E
+	// Token: 0x06002080 RID: 8320 RVA: 0x000AB082 File Offset: 0x000A9282
 	protected virtual void OnDisable()
 	{
 	}
 
-	// Token: 0x06001FD3 RID: 8147 RVA: 0x000A3D30 File Offset: 0x000A1F30
+	// Token: 0x06002081 RID: 8321 RVA: 0x000AB084 File Offset: 0x000A9284
 	protected virtual bool UpdateCustomEnableCondition()
 	{
 		return true;
 	}
 
-	// Token: 0x06001FD4 RID: 8148 RVA: 0x000A3D33 File Offset: 0x000A1F33
+	// Token: 0x06002082 RID: 8322 RVA: 0x000AB087 File Offset: 0x000A9287
 	protected virtual void UpdateInternal(float deltaTime)
 	{
 	}
 
-	// Token: 0x06001FD5 RID: 8149 RVA: 0x000A3D35 File Offset: 0x000A1F35
+	// Token: 0x06002083 RID: 8323 RVA: 0x000AB089 File Offset: 0x000A9289
 	protected virtual void UpdateDeactivateInternal(float deltaTime)
 	{
 	}
 
-	// Token: 0x06001FD6 RID: 8150 RVA: 0x000A3D37 File Offset: 0x000A1F37
+	// Token: 0x06002084 RID: 8324 RVA: 0x000AB08B File Offset: 0x000A928B
 	protected virtual void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 	}
 
-	// Token: 0x06001FD7 RID: 8151
+	// Token: 0x06002085 RID: 8325
 	public abstract string Name();
 
-	// Token: 0x06001FD8 RID: 8152 RVA: 0x000A3D3C File Offset: 0x000A1F3C
+	// Token: 0x06002086 RID: 8326 RVA: 0x000AB090 File Offset: 0x000A9290
 	public void Lock(object control)
 	{
 		bool isActivate = this.IsActivate;
@@ -275,7 +275,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FD9 RID: 8153 RVA: 0x000A3D70 File Offset: 0x000A1F70
+	// Token: 0x06002087 RID: 8327 RVA: 0x000AB0C4 File Offset: 0x000A92C4
 	public void Unlock(object control)
 	{
 		bool isActivate = this.IsActivate;
@@ -286,7 +286,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FDA RID: 8154 RVA: 0x000A3DA4 File Offset: 0x000A1FA4
+	// Token: 0x06002088 RID: 8328 RVA: 0x000AB0F8 File Offset: 0x000A92F8
 	public void Update(float deltaTime)
 	{
 		bool isActivate = this.IsActivate;
@@ -310,8 +310,8 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		this.UpdateDeactivateInternal(deltaTime);
 	}
 
-	// Token: 0x170004FF RID: 1279
-	// (get) Token: 0x06001FDB RID: 8155 RVA: 0x000A3DFA File Offset: 0x000A1FFA
+	// Token: 0x17000520 RID: 1312
+	// (get) Token: 0x06002089 RID: 8329 RVA: 0x000AB14E File Offset: 0x000A934E
 	public virtual bool IsActivate
 	{
 		get
@@ -320,7 +320,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FDC RID: 8156 RVA: 0x000A3E14 File Offset: 0x000A2014
+	// Token: 0x0600208A RID: 8330 RVA: 0x000AB168 File Offset: 0x000A9368
 	public unsafe void ShowBlockSetInfo(string controllerName)
 	{
 		Log instance = Log.Instance;
@@ -342,19 +342,19 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FDD RID: 8157 RVA: 0x000A3EE4 File Offset: 0x000A20E4
+	// Token: 0x0600208B RID: 8331 RVA: 0x000AB238 File Offset: 0x000A9438
 	public virtual string GetConfigMapValue(Enum key)
 	{
 		return this.GetConfigMapValue(Convert.ToInt32(key));
 	}
 
-	// Token: 0x06001FDE RID: 8158 RVA: 0x000A3EF2 File Offset: 0x000A20F2
+	// Token: 0x0600208C RID: 8332 RVA: 0x000AB246 File Offset: 0x000A9446
 	public virtual string GetConfigMapValue(int key)
 	{
 		return this.ConfigMap.GetValueOrDefault(key, "");
 	}
 
-	// Token: 0x06001FDF RID: 8159 RVA: 0x000A3F08 File Offset: 0x000A2108
+	// Token: 0x0600208D RID: 8333 RVA: 0x000AB25C File Offset: 0x000A945C
 	public bool GetPairConfigKey<[Nullable(0)] TKey>(TKey key, out TKey pairKey) where TKey : Enum
 	{
 		int value;
@@ -367,7 +367,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		return false;
 	}
 
-	// Token: 0x06001FE0 RID: 8160 RVA: 0x000A3F54 File Offset: 0x000A2154
+	// Token: 0x0600208E RID: 8334 RVA: 0x000AB2A8 File Offset: 0x000A94A8
 	public bool GetPairConfigKey(int key, out int pairKey)
 	{
 		int num;
@@ -380,7 +380,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		return false;
 	}
 
-	// Token: 0x06001FE1 RID: 8161 RVA: 0x000A3F7C File Offset: 0x000A217C
+	// Token: 0x0600208F RID: 8335 RVA: 0x000AB2D0 File Offset: 0x000A94D0
 	public virtual float GetConfigValue(string key)
 	{
 		object obj;
@@ -425,7 +425,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		return result;
 	}
 
-	// Token: 0x06001FE2 RID: 8162 RVA: 0x000A4028 File Offset: 0x000A2228
+	// Token: 0x06002090 RID: 8336 RVA: 0x000AB37C File Offset: 0x000A957C
 	public unsafe virtual void PostProcessConfig(Dictionary<int, float> config, Dictionary<int, CurveBase> curveConfig)
 	{
 		foreach (ValueTuple<int, int> valueTuple in this.PairKeyArray)
@@ -482,7 +482,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FE3 RID: 8163 RVA: 0x000A42F8 File Offset: 0x000A24F8
+	// Token: 0x06002091 RID: 8337 RVA: 0x000AB64C File Offset: 0x000A984C
 	public void RegisterPairConfigKey(Enum key1, Enum key2, bool needCheckValue = true)
 	{
 		int num = Convert.ToInt32(key1);
@@ -499,13 +499,13 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FE4 RID: 8164 RVA: 0x000A436D File Offset: 0x000A256D
+	// Token: 0x06002092 RID: 8338 RVA: 0x000AB6C1 File Offset: 0x000A98C1
 	public void SetValueFromDefaultConfig(Enum key)
 	{
 		this.SetValueFromDefaultConfig(Convert.ToInt32(key));
 	}
 
-	// Token: 0x06001FE5 RID: 8165 RVA: 0x000A437C File Offset: 0x000A257C
+	// Token: 0x06002093 RID: 8339 RVA: 0x000AB6D0 File Offset: 0x000A98D0
 	public void SetValueFromDefaultConfig(int intKey)
 	{
 		float num;
@@ -520,7 +520,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FE6 RID: 8166 RVA: 0x000A43BC File Offset: 0x000A25BC
+	// Token: 0x06002094 RID: 8340 RVA: 0x000AB710 File Offset: 0x000A9910
 	[NullableContext(0)]
 	public virtual bool TryGetMember(string key, out object value)
 	{
@@ -632,7 +632,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		return false;
 	}
 
-	// Token: 0x06001FE7 RID: 8167 RVA: 0x000A45E7 File Offset: 0x000A27E7
+	// Token: 0x06002095 RID: 8341 RVA: 0x000AB93B File Offset: 0x000A9B3B
 	[NullableContext(0)]
 	public virtual void SetMember(string key, object value)
 	{
@@ -644,7 +644,7 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		throw new KeyNotFoundException("设置CameraControllerBase成员属性失败" + key + ")");
 	}
 
-	// Token: 0x06001FE8 RID: 8168 RVA: 0x000A4618 File Offset: 0x000A2818
+	// Token: 0x06002096 RID: 8342 RVA: 0x000AB96C File Offset: 0x000A9B6C
 	[NullableContext(0)]
 	public virtual IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -653,54 +653,54 @@ public abstract class CameraControllerBase : ICameraControllerBase
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040013A9 RID: 5033
+	// Token: 0x040013EB RID: 5099
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateCustomEnableConditionStat = Stat.Create("UpdateCustomEnableConditionStat", "", "");
 
-	// Token: 0x040013AA RID: 5034
+	// Token: 0x040013EC RID: 5100
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnEnableStat = Stat.Create("OnEnableStat", "", "");
 
-	// Token: 0x040013AB RID: 5035
+	// Token: 0x040013ED RID: 5101
 	[StaticVariableRuleIgnore]
 	private static readonly Stat OnDisableStat = Stat.Create("OnDisableStat", "", "");
 
-	// Token: 0x040013AC RID: 5036
+	// Token: 0x040013EE RID: 5102
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateInternalStat = Stat.Create("UpdateInternalStat", "", "");
 
-	// Token: 0x040013AD RID: 5037
+	// Token: 0x040013EF RID: 5103
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateDeactivateInternalStat = Stat.Create("UpdateDeactivateInternalStat", "", "");
 
-	// Token: 0x040013AE RID: 5038
+	// Token: 0x040013F0 RID: 5104
 	public readonly FightCameraLogicComponent Camera;
 
-	// Token: 0x040013AF RID: 5039
+	// Token: 0x040013F1 RID: 5105
 	private bool IsActivateInternal = true;
 
-	// Token: 0x040013B0 RID: 5040
+	// Token: 0x040013F2 RID: 5106
 	private readonly HashSet<object> BlockSet = new HashSet<object>();
 
-	// Token: 0x040013B1 RID: 5041
+	// Token: 0x040013F3 RID: 5107
 	private readonly Dictionary<int, float> DefaultConfigs = new Dictionary<int, float>();
 
-	// Token: 0x040013B2 RID: 5042
+	// Token: 0x040013F4 RID: 5108
 	private readonly Dictionary<int, string> ConfigMap = new Dictionary<int, string>();
 
-	// Token: 0x040013B3 RID: 5043
+	// Token: 0x040013F5 RID: 5109
 	private readonly Dictionary<int, CurveBase> DefaultCurveConfigs = new Dictionary<int, CurveBase>();
 
-	// Token: 0x040013B4 RID: 5044
+	// Token: 0x040013F6 RID: 5110
 	private readonly Dictionary<int, string> CurveConfigMap = new Dictionary<int, string>();
 
-	// Token: 0x040013B5 RID: 5045
+	// Token: 0x040013F7 RID: 5111
 	private readonly HashSet<string> DebugValueSet = new HashSet<string>();
 
-	// Token: 0x040013B6 RID: 5046
+	// Token: 0x040013F8 RID: 5112
 	private readonly Dictionary<int, int> PairConfigKeySet = new Dictionary<int, int>();
 
-	// Token: 0x040013B7 RID: 5047
+	// Token: 0x040013F9 RID: 5113
 	[Nullable(new byte[]
 	{
 		1,
@@ -708,6 +708,6 @@ public abstract class CameraControllerBase : ICameraControllerBase
 	})]
 	private readonly List<ValueTuple<int, int>> PairKeyArray = new List<ValueTuple<int, int>>();
 
-	// Token: 0x040013B8 RID: 5048
+	// Token: 0x040013FA RID: 5114
 	private readonly HashSet<int> NeedValueCheckPairKeySet = new HashSet<int>();
 }

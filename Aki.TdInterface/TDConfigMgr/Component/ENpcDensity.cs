@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000EE RID: 238
+	// Token: 0x020000F7 RID: 247
 	public enum ENpcDensity
 	{
-		// Token: 0x04000506 RID: 1286
+		// Token: 0x0400052F RID: 1327
 		Middle,
-		// Token: 0x04000507 RID: 1287
+		// Token: 0x04000530 RID: 1328
 		Low,
-		// Token: 0x04000508 RID: 1288
+		// Token: 0x04000531 RID: 1329
 		High
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021F9 RID: 8697
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002464 RID: 9316
 	public class SheriffUnlockClue : ActionParams
 	{
-		// Token: 0x0600BEFF RID: 48895 RVA: 0x001B7594 File Offset: 0x001B5794
+		// Token: 0x0600CABB RID: 51899 RVA: 0x001CEC20 File Offset: 0x001CCE20
 		private SheriffUnlockClue_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF00 RID: 48896 RVA: 0x001B75CC File Offset: 0x001B57CC
+		// Token: 0x0600CABC RID: 51900 RVA: 0x001CEC58 File Offset: 0x001CCE58
 		public static SheriffUnlockClue Create([Nullable(2)] SheriffUnlockClue instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF01 RID: 48897 RVA: 0x001B75DF File Offset: 0x001B57DF
+		// Token: 0x0600CABD RID: 51901 RVA: 0x001CEC6B File Offset: 0x001CCE6B
 		public static SheriffUnlockClue CreateFromSetValue([Nullable(2)] SheriffUnlockClue_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF02 RID: 48898 RVA: 0x001B75F2 File Offset: 0x001B57F2
+		// Token: 0x0600CABE RID: 51902 RVA: 0x001CEC7E File Offset: 0x001CCE7E
 		public SheriffUnlockClue_SetValue ToSetValue()
 		{
 			return new SheriffUnlockClue_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039EC RID: 14828
-		// (get) Token: 0x0600BF03 RID: 48899 RVA: 0x001B7605 File Offset: 0x001B5805
-		// (set) Token: 0x0600BF04 RID: 48900 RVA: 0x001B7630 File Offset: 0x001B5830
+		// Token: 0x17003CE1 RID: 15585
+		// (get) Token: 0x0600CABF RID: 51903 RVA: 0x001CEC91 File Offset: 0x001CCE91
+		// (set) Token: 0x0600CAC0 RID: 51904 RVA: 0x001CECBC File Offset: 0x001CCEBC
 		public virtual int ClueId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071E3 RID: 29155
+		// Token: 0x0400782C RID: 30764
 		[Nullable(2)]
 		protected new SheriffUnlockClue FbInstance;
 
-		// Token: 0x040071E4 RID: 29156
+		// Token: 0x0400782D RID: 30765
 		[Nullable(2)]
 		protected SheriffUnlockClue_SetValue PocoInterface;
 	}

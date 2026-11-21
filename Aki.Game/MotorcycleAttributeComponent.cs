@@ -4,14 +4,14 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020032F7 RID: 13047
+// Token: 0x02002869 RID: 10345
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleAttributeComponent : CharacterAttributeComponent
 {
-	// Token: 0x17002748 RID: 10056
-	// (get) Token: 0x0601C654 RID: 116308 RVA: 0x007F3D5B File Offset: 0x007F1F5B
-	// (set) Token: 0x0601C655 RID: 116309 RVA: 0x007F3D63 File Offset: 0x007F1F63
+	// Token: 0x17002AC2 RID: 10946
+	// (get) Token: 0x0601A322 RID: 107298 RVA: 0x0081A287 File Offset: 0x00818487
+	// (set) Token: 0x0601A323 RID: 107299 RVA: 0x0081A28F File Offset: 0x0081848F
 	protected bool BeRidden
 	{
 		get
@@ -29,9 +29,9 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		}
 	}
 
-	// Token: 0x17002749 RID: 10057
-	// (get) Token: 0x0601C656 RID: 116310 RVA: 0x007F3D7C File Offset: 0x007F1F7C
-	// (set) Token: 0x0601C657 RID: 116311 RVA: 0x007F3D84 File Offset: 0x007F1F84
+	// Token: 0x17002AC3 RID: 10947
+	// (get) Token: 0x0601A324 RID: 107300 RVA: 0x0081A2A8 File Offset: 0x008184A8
+	// (set) Token: 0x0601A325 RID: 107301 RVA: 0x0081A2B0 File Offset: 0x008184B0
 	protected bool TwoWheelOnGround
 	{
 		get
@@ -64,9 +64,9 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		}
 	}
 
-	// Token: 0x1700274A RID: 10058
-	// (get) Token: 0x0601C658 RID: 116312 RVA: 0x007F3DEF File Offset: 0x007F1FEF
-	// (set) Token: 0x0601C659 RID: 116313 RVA: 0x007F3DF7 File Offset: 0x007F1FF7
+	// Token: 0x17002AC4 RID: 10948
+	// (get) Token: 0x0601A326 RID: 107302 RVA: 0x0081A31B File Offset: 0x0081851B
+	// (set) Token: 0x0601A327 RID: 107303 RVA: 0x0081A323 File Offset: 0x00818523
 	protected bool NeedRecoverSpEn
 	{
 		get
@@ -84,9 +84,9 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		}
 	}
 
-	// Token: 0x1700274B RID: 10059
-	// (get) Token: 0x0601C65A RID: 116314 RVA: 0x007F3E10 File Offset: 0x007F2010
-	// (set) Token: 0x0601C65B RID: 116315 RVA: 0x007F3E18 File Offset: 0x007F2018
+	// Token: 0x17002AC5 RID: 10949
+	// (get) Token: 0x0601A328 RID: 107304 RVA: 0x0081A33C File Offset: 0x0081853C
+	// (set) Token: 0x0601A329 RID: 107305 RVA: 0x0081A344 File Offset: 0x00818544
 	protected bool BuffForRecoverSpEn
 	{
 		get
@@ -126,9 +126,9 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		}
 	}
 
-	// Token: 0x1700274C RID: 10060
-	// (get) Token: 0x0601C65C RID: 116316 RVA: 0x007F3F18 File Offset: 0x007F2118
-	// (set) Token: 0x0601C65D RID: 116317 RVA: 0x007F3F20 File Offset: 0x007F2120
+	// Token: 0x17002AC6 RID: 10950
+	// (get) Token: 0x0601A32A RID: 107306 RVA: 0x0081A444 File Offset: 0x00818644
+	// (set) Token: 0x0601A32B RID: 107307 RVA: 0x0081A44C File Offset: 0x0081864C
 	protected bool SpEnEmpty
 	{
 		get
@@ -165,7 +165,7 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		}
 	}
 
-	// Token: 0x0601C65E RID: 116318 RVA: 0x007F3F8C File Offset: 0x007F218C
+	// Token: 0x0601A32C RID: 107308 RVA: 0x0081A4B8 File Offset: 0x008186B8
 	protected override bool OnStart()
 	{
 		bool flag = base.OnStart();
@@ -178,7 +178,7 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		return true;
 	}
 
-	// Token: 0x0601C65F RID: 116319 RVA: 0x007F3FBD File Offset: 0x007F21BD
+	// Token: 0x0601A32D RID: 107309 RVA: 0x0081A4E9 File Offset: 0x008186E9
 	protected override bool OnEnd()
 	{
 		this.RemoveMotorListen();
@@ -190,7 +190,7 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601C660 RID: 116320 RVA: 0x007F3FE8 File Offset: 0x007F21E8
+	// Token: 0x0601A32E RID: 107310 RVA: 0x0081A514 File Offset: 0x00818714
 	private void AddMotorListen()
 	{
 		VehiclePerformComponent component = base.Entity.GetComponent<VehiclePerformComponent>();
@@ -223,7 +223,7 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		this.RefreshRecoverSpEnBuff();
 	}
 
-	// Token: 0x0601C661 RID: 116321 RVA: 0x007F4118 File Offset: 0x007F2318
+	// Token: 0x0601A32F RID: 107311 RVA: 0x0081A644 File Offset: 0x00818844
 	private void RemoveMotorListen()
 	{
 		EventSystem.Instance.RemoveWithTarget<Entity, Entity>(base.Entity, EEventName.OnVehicleDriverChange, new Action<Entity, Entity>(this.OnVehicleDriverChange));
@@ -237,39 +237,39 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		tagComp.RemoveTagAddOrRemoveListener(GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.禁止蓄力能量恢复"], new BaseTagComponent.TTagSwitchedCallback(this.OnBanSpEnRecoverTagChanged));
 	}
 
-	// Token: 0x0601C662 RID: 116322 RVA: 0x007F41AC File Offset: 0x007F23AC
+	// Token: 0x0601A330 RID: 107312 RVA: 0x0081A6D8 File Offset: 0x008188D8
 	private void RefreshRecoverSpEnBuff()
 	{
 		this.BuffForRecoverSpEn = ((this.TagComp == null || !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.禁止蓄力能量恢复"])) && this.BeRidden && this.NeedRecoverSpEn && this.TwoWheelOnGround);
 	}
 
-	// Token: 0x0601C663 RID: 116323 RVA: 0x007F41FC File Offset: 0x007F23FC
+	// Token: 0x0601A331 RID: 107313 RVA: 0x0081A728 File Offset: 0x00818928
 	[NullableContext(2)]
 	private void OnVehicleDriverChange(Entity oldDriver, Entity newDriver)
 	{
 		this.BeRidden = (newDriver != null);
 	}
 
-	// Token: 0x0601C664 RID: 116324 RVA: 0x007F4208 File Offset: 0x007F2408
+	// Token: 0x0601A332 RID: 107314 RVA: 0x0081A734 File Offset: 0x00818934
 	private void MotorSubStateModeChanged(EMotorSubState newState, EMotorSubState oldState)
 	{
 		this.TwoWheelOnGround = (newState == EMotorSubState.TwoWheelMoving || newState == EMotorSubState.Stop);
 	}
 
-	// Token: 0x0601C665 RID: 116325 RVA: 0x007F421B File Offset: 0x007F241B
+	// Token: 0x0601A333 RID: 107315 RVA: 0x0081A747 File Offset: 0x00818947
 	private void OnAttr62Changed(EAttributeType attrId, float newValue, float oldValue)
 	{
 		this.NeedRecoverSpEn = (newValue < base.GetCurrentValue(EAttributeType.SpecialEnergy1Max));
 		this.SpEnEmpty = (newValue < 100f);
 	}
 
-	// Token: 0x0601C666 RID: 116326 RVA: 0x007F423C File Offset: 0x007F243C
+	// Token: 0x0601A334 RID: 107316 RVA: 0x0081A768 File Offset: 0x00818968
 	private void OnBanSpEnRecoverTagChanged(int tagId, bool tagExist)
 	{
 		this.RefreshRecoverSpEnBuff();
 	}
 
-	// Token: 0x0601C667 RID: 116327 RVA: 0x007F4244 File Offset: 0x007F2444
+	// Token: 0x0601A335 RID: 107317 RVA: 0x0081A770 File Offset: 0x00818970
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -277,52 +277,101 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 			return false;
 		}
 		MotorcycleAttributeComponent motorcycleAttributeComponent = (MotorcycleAttributeComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TagComp"))
+		if (motorcycleAttributeComponent.TagComp == null)
 		{
-			if (motorcycleAttributeComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("BeRiddenInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			this.BeRiddenInternal = motorcycleAttributeComponent.BeRiddenInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TwoWheelOnGroundTimer"))
+		this.BeRiddenInternal = motorcycleAttributeComponent.BeRiddenInternal;
+		if (motorcycleAttributeComponent.TwoWheelOnGroundTimer == null)
 		{
-			if (motorcycleAttributeComponent.TwoWheelOnGroundTimer == null)
-			{
-				this.TwoWheelOnGroundTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TwoWheelOnGroundTimer), "TwoWheelOnGroundTimer"))
-			{
-				return false;
-			}
+			this.TwoWheelOnGroundTimer = null;
 		}
-		if (base.CanResetComponentProperty("TwoWheelOnGroundInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TwoWheelOnGroundTimer), "TwoWheelOnGroundTimer"))
 		{
-			this.TwoWheelOnGroundInternal = motorcycleAttributeComponent.TwoWheelOnGroundInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("NeedRecoverSpEnInternal"))
-		{
-			this.NeedRecoverSpEnInternal = motorcycleAttributeComponent.NeedRecoverSpEnInternal;
-		}
-		if (base.CanResetComponentProperty("BuffForRecoverSpEnInternal"))
-		{
-			this.BuffForRecoverSpEnInternal = motorcycleAttributeComponent.BuffForRecoverSpEnInternal;
-		}
-		if (base.CanResetComponentProperty("SpEnEmptyInternal"))
-		{
-			this.SpEnEmptyInternal = motorcycleAttributeComponent.SpEnEmptyInternal;
-		}
+		this.TwoWheelOnGroundInternal = motorcycleAttributeComponent.TwoWheelOnGroundInternal;
+		this.NeedRecoverSpEnInternal = motorcycleAttributeComponent.NeedRecoverSpEnInternal;
+		this.BuffForRecoverSpEnInternal = motorcycleAttributeComponent.BuffForRecoverSpEnInternal;
+		this.SpEnEmptyInternal = motorcycleAttributeComponent.SpEnEmptyInternal;
 		return true;
 	}
 
-	// Token: 0x0400E149 RID: 57673
+	// Token: 0x17002AC7 RID: 10951
+	// (get) Token: 0x0601A336 RID: 107318 RVA: 0x0081A822 File Offset: 0x00818A22
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AC8 RID: 10952
+	// (get) Token: 0x0601A337 RID: 107319 RVA: 0x0081A825 File Offset: 0x00818A25
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AC9 RID: 10953
+	// (get) Token: 0x0601A338 RID: 107320 RVA: 0x0081A828 File Offset: 0x00818A28
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ACA RID: 10954
+	// (get) Token: 0x0601A339 RID: 107321 RVA: 0x0081A82B File Offset: 0x00818A2B
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ACB RID: 10955
+	// (get) Token: 0x0601A33A RID: 107322 RVA: 0x0081A82E File Offset: 0x00818A2E
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ACC RID: 10956
+	// (get) Token: 0x0601A33B RID: 107323 RVA: 0x0081A831 File Offset: 0x00818A31
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002ACD RID: 10957
+	// (get) Token: 0x0601A33C RID: 107324 RVA: 0x0081A834 File Offset: 0x00818A34
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E5F4 RID: 58868
 	[StaticVariableRuleIgnore]
 	private static readonly long[] SpecialEnergyBuffIds = new long[]
 	{
@@ -331,7 +380,7 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		7100000058L
 	};
 
-	// Token: 0x0400E14A RID: 57674
+	// Token: 0x0400E5F5 RID: 58869
 	[StaticVariableRuleIgnore]
 	private static readonly long[] SpecialEnergyBuffIdsUpgraded = new long[]
 	{
@@ -340,30 +389,30 @@ public class MotorcycleAttributeComponent : CharacterAttributeComponent
 		7100000061L
 	};
 
-	// Token: 0x0400E14B RID: 57675
+	// Token: 0x0400E5F6 RID: 58870
 	[StaticVariableRuleIgnore]
 	private static float CANNOT_RECOVER_SP_EN_TIMER = 500f;
 
-	// Token: 0x0400E14C RID: 57676
+	// Token: 0x0400E5F7 RID: 58871
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400E14D RID: 57677
+	// Token: 0x0400E5F8 RID: 58872
 	private bool BeRiddenInternal;
 
-	// Token: 0x0400E14E RID: 57678
+	// Token: 0x0400E5F9 RID: 58873
 	[Nullable(2)]
 	private TimerHandle TwoWheelOnGroundTimer;
 
-	// Token: 0x0400E14F RID: 57679
+	// Token: 0x0400E5FA RID: 58874
 	private bool TwoWheelOnGroundInternal;
 
-	// Token: 0x0400E150 RID: 57680
+	// Token: 0x0400E5FB RID: 58875
 	private bool NeedRecoverSpEnInternal;
 
-	// Token: 0x0400E151 RID: 57681
+	// Token: 0x0400E5FC RID: 58876
 	private bool BuffForRecoverSpEnInternal;
 
-	// Token: 0x0400E152 RID: 57682
+	// Token: 0x0400E5FD RID: 58877
 	private bool SpEnEmptyInternal;
 }

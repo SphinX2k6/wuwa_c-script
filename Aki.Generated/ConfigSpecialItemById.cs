@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200096E RID: 2414
+	// Token: 0x02000A43 RID: 2627
 	public class ConfigSpecialItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038A8 RID: 14504 RVA: 0x00199EB4 File Offset: 0x001980B4
+		// Token: 0x06003DA6 RID: 15782 RVA: 0x001B9248 File Offset: 0x001B7448
 		static ConfigSpecialItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpecialItemById.CreateStaticDefaultValue), new Action(ConfigSpecialItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038A9 RID: 14505 RVA: 0x00199ED4 File Offset: 0x001980D4
+		// Token: 0x06003DA7 RID: 15783 RVA: 0x001B9268 File Offset: 0x001B7468
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpecialItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038AA RID: 14506 RVA: 0x00199F53 File Offset: 0x00198153
+		// Token: 0x06003DA8 RID: 15784 RVA: 0x001B92E7 File Offset: 0x001B74E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpecialItemById.LogPair = null;
 			ConfigSpecialItemById.HandleId = 0;
 		}
 
-		// Token: 0x060038AB RID: 14507 RVA: 0x00199F61 File Offset: 0x00198161
+		// Token: 0x06003DA9 RID: 15785 RVA: 0x001B92F5 File Offset: 0x001B74F5
 		public static void Init()
 		{
 			ConfigSpecialItemById.HandleId = ConfigCommon.InitDataStatement(ConfigSpecialItemById.HandleId, "db_special_item.db", "select BinData from `SpecialItem` where Id = ?");
 		}
 
-		// Token: 0x060038AC RID: 14508 RVA: 0x00199F7C File Offset: 0x0019817C
+		// Token: 0x06003DAA RID: 15786 RVA: 0x001B9310 File Offset: 0x001B7510
 		public static SpecialItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpecialItemById.HandleId, ConfigSpecialItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpecialItem?(rootAsSpecialItem);
 		}
 
-		// Token: 0x040041E8 RID: 16872
+		// Token: 0x040047BB RID: 18363
 		private const string DB = "db_special_item.db";
 
-		// Token: 0x040041E9 RID: 16873
+		// Token: 0x040047BC RID: 18364
 		private const string FILE = "t.特殊道具.xlsx";
 
-		// Token: 0x040041EA RID: 16874
+		// Token: 0x040047BD RID: 18365
 		private const string TABLE = "SpecialItem";
 
-		// Token: 0x040041EB RID: 16875
+		// Token: 0x040047BE RID: 18366
 		private const string COMMAND = "select BinData from `SpecialItem` where Id = ?";
 
-		// Token: 0x040041EC RID: 16876
+		// Token: 0x040047BF RID: 18367
 		private const string KEY_PREFIX = "SpecialItemById";
 
-		// Token: 0x040041ED RID: 16877
+		// Token: 0x040047C0 RID: 18368
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041EE RID: 16878
+		// Token: 0x040047C1 RID: 18369
 		private static int HandleId;
 	}
 }

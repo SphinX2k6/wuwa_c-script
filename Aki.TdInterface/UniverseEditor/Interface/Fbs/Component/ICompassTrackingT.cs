@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FD7 RID: 20439
+	// Token: 0x02005536 RID: 21814
 	public class ICompassTrackingT
 	{
-		// Token: 0x17009416 RID: 37910
-		// (get) Token: 0x060208F5 RID: 133365 RVA: 0x00487380 File Offset: 0x00485580
-		// (set) Token: 0x060208F6 RID: 133366 RVA: 0x00487388 File Offset: 0x00485588
+		// Token: 0x17009BF7 RID: 39927
+		// (get) Token: 0x06022811 RID: 141329 RVA: 0x004C0D40 File Offset: 0x004BEF40
+		// (set) Token: 0x06022812 RID: 141330 RVA: 0x004C0D48 File Offset: 0x004BEF48
 		public ENearbyTrackingType Type { get; set; }
 
-		// Token: 0x17009417 RID: 37911
-		// (get) Token: 0x060208F7 RID: 133367 RVA: 0x00487391 File Offset: 0x00485591
-		// (set) Token: 0x060208F8 RID: 133368 RVA: 0x00487399 File Offset: 0x00485599
+		// Token: 0x17009BF8 RID: 39928
+		// (get) Token: 0x06022813 RID: 141331 RVA: 0x004C0D51 File Offset: 0x004BEF51
+		// (set) Token: 0x06022814 RID: 141332 RVA: 0x004C0D59 File Offset: 0x004BEF59
 		public int ShowRange { get; set; }
 
-		// Token: 0x17009418 RID: 37912
-		// (get) Token: 0x060208F9 RID: 133369 RVA: 0x004873A2 File Offset: 0x004855A2
-		// (set) Token: 0x060208FA RID: 133370 RVA: 0x004873AA File Offset: 0x004855AA
+		// Token: 0x17009BF9 RID: 39929
+		// (get) Token: 0x06022815 RID: 141333 RVA: 0x004C0D62 File Offset: 0x004BEF62
+		// (set) Token: 0x06022816 RID: 141334 RVA: 0x004C0D6A File Offset: 0x004BEF6A
 		public int HideRange { get; set; }
 
-		// Token: 0x17009419 RID: 37913
-		// (get) Token: 0x060208FB RID: 133371 RVA: 0x004873B3 File Offset: 0x004855B3
-		// (set) Token: 0x060208FC RID: 133372 RVA: 0x004873BB File Offset: 0x004855BB
+		// Token: 0x17009BFA RID: 39930
+		// (get) Token: 0x06022817 RID: 141335 RVA: 0x004C0D73 File Offset: 0x004BEF73
+		// (set) Token: 0x06022818 RID: 141336 RVA: 0x004C0D7B File Offset: 0x004BEF7B
 		public IIconNearByTrackingConfigT IconTrackingConfig { get; set; }
 
-		// Token: 0x1700941A RID: 37914
-		// (get) Token: 0x060208FD RID: 133373 RVA: 0x004873C4 File Offset: 0x004855C4
-		// (set) Token: 0x060208FE RID: 133374 RVA: 0x004873CC File Offset: 0x004855CC
+		// Token: 0x17009BFB RID: 39931
+		// (get) Token: 0x06022819 RID: 141337 RVA: 0x004C0D84 File Offset: 0x004BEF84
+		// (set) Token: 0x0602281A RID: 141338 RVA: 0x004C0D8C File Offset: 0x004BEF8C
 		public List<EVehicleType> VehicleTypes { get; set; }
 
-		// Token: 0x1700941B RID: 37915
-		// (get) Token: 0x060208FF RID: 133375 RVA: 0x004873D5 File Offset: 0x004855D5
-		// (set) Token: 0x06020900 RID: 133376 RVA: 0x004873DD File Offset: 0x004855DD
+		// Token: 0x17009BFC RID: 39932
+		// (get) Token: 0x0602281B RID: 141339 RVA: 0x004C0D95 File Offset: 0x004BEF95
+		// (set) Token: 0x0602281C RID: 141340 RVA: 0x004C0D9D File Offset: 0x004BEF9D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020901 RID: 133377 RVA: 0x004873E6 File Offset: 0x004855E6
+		// Token: 0x0602281D RID: 141341 RVA: 0x004C0DA6 File Offset: 0x004BEFA6
 		public ICompassTrackingT()
 		{
 			this.Type = ENearbyTrackingType.Icon;

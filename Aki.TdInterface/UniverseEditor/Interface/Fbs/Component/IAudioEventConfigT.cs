@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004ED2 RID: 20178
+	// Token: 0x02005401 RID: 21505
 	public class IAudioEventConfigT
 	{
-		// Token: 0x170090D7 RID: 37079
-		// (get) Token: 0x0601FCD3 RID: 130259 RVA: 0x0046D175 File Offset: 0x0046B375
-		// (set) Token: 0x0601FCD4 RID: 130260 RVA: 0x0046D17D File Offset: 0x0046B37D
+		// Token: 0x1700984A RID: 38986
+		// (get) Token: 0x06021A17 RID: 137751 RVA: 0x004A2F45 File Offset: 0x004A1145
+		// (set) Token: 0x06021A18 RID: 137752 RVA: 0x004A2F4D File Offset: 0x004A114D
 		public string CollectAkEvent { get; set; }
 
-		// Token: 0x0601FCD5 RID: 130261 RVA: 0x0046D186 File Offset: 0x0046B386
+		// Token: 0x06021A19 RID: 137753 RVA: 0x004A2F56 File Offset: 0x004A1156
 		public IAudioEventConfigT()
 		{
 			this.CollectAkEvent = null;

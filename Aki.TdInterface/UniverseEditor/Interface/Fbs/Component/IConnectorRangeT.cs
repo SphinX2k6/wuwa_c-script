@@ -3,60 +3,60 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200501F RID: 20511
+	// Token: 0x0200557E RID: 21886
 	public class IConnectorRangeT
 	{
-		// Token: 0x170094BD RID: 38077
-		// (get) Token: 0x06020D55 RID: 134485 RVA: 0x00490A7F File Offset: 0x0048EC7F
-		// (set) Token: 0x06020D56 RID: 134486 RVA: 0x00490A87 File Offset: 0x0048EC87
+		// Token: 0x17009C9E RID: 40094
+		// (get) Token: 0x06022C75 RID: 142453 RVA: 0x004CA4CF File Offset: 0x004C86CF
+		// (set) Token: 0x06022C76 RID: 142454 RVA: 0x004CA4D7 File Offset: 0x004C86D7
 		public EConnectorLogicType Type { get; set; }
 
-		// Token: 0x170094BE RID: 38078
-		// (get) Token: 0x06020D57 RID: 134487 RVA: 0x00490A90 File Offset: 0x0048EC90
-		// (set) Token: 0x06020D58 RID: 134488 RVA: 0x00490A98 File Offset: 0x0048EC98
+		// Token: 0x17009C9F RID: 40095
+		// (get) Token: 0x06022C77 RID: 142455 RVA: 0x004CA4E0 File Offset: 0x004C86E0
+		// (set) Token: 0x06022C78 RID: 142456 RVA: 0x004CA4E8 File Offset: 0x004C86E8
 		public IConnectorEffectConfigT EffectConfig { get; set; }
 
-		// Token: 0x170094BF RID: 38079
-		// (get) Token: 0x06020D59 RID: 134489 RVA: 0x00490AA1 File Offset: 0x0048ECA1
-		// (set) Token: 0x06020D5A RID: 134490 RVA: 0x00490AA9 File Offset: 0x0048ECA9
+		// Token: 0x17009CA0 RID: 40096
+		// (get) Token: 0x06022C79 RID: 142457 RVA: 0x004CA4F1 File Offset: 0x004C86F1
+		// (set) Token: 0x06022C7A RID: 142458 RVA: 0x004CA4F9 File Offset: 0x004C86F9
 		public string ActiveState { get; set; }
 
-		// Token: 0x170094C0 RID: 38080
-		// (get) Token: 0x06020D5B RID: 134491 RVA: 0x00490AB2 File Offset: 0x0048ECB2
-		// (set) Token: 0x06020D5C RID: 134492 RVA: 0x00490ABA File Offset: 0x0048ECBA
+		// Token: 0x17009CA1 RID: 40097
+		// (get) Token: 0x06022C7B RID: 142459 RVA: 0x004CA502 File Offset: 0x004C8702
+		// (set) Token: 0x06022C7C RID: 142460 RVA: 0x004CA50A File Offset: 0x004C870A
 		public int EnterRange { get; set; }
 
-		// Token: 0x170094C1 RID: 38081
-		// (get) Token: 0x06020D5D RID: 134493 RVA: 0x00490AC3 File Offset: 0x0048ECC3
-		// (set) Token: 0x06020D5E RID: 134494 RVA: 0x00490ACB File Offset: 0x0048ECCB
+		// Token: 0x17009CA2 RID: 40098
+		// (get) Token: 0x06022C7D RID: 142461 RVA: 0x004CA513 File Offset: 0x004C8713
+		// (set) Token: 0x06022C7E RID: 142462 RVA: 0x004CA51B File Offset: 0x004C871B
 		public int LeaveRange { get; set; }
 
-		// Token: 0x170094C2 RID: 38082
-		// (get) Token: 0x06020D5F RID: 134495 RVA: 0x00490AD4 File Offset: 0x0048ECD4
-		// (set) Token: 0x06020D60 RID: 134496 RVA: 0x00490ADC File Offset: 0x0048ECDC
+		// Token: 0x17009CA3 RID: 40099
+		// (get) Token: 0x06022C7F RID: 142463 RVA: 0x004CA524 File Offset: 0x004C8724
+		// (set) Token: 0x06022C80 RID: 142464 RVA: 0x004CA52C File Offset: 0x004C872C
 		public List<IDynamicEntityMatchT> MatchConditions { get; set; }
 
-		// Token: 0x170094C3 RID: 38083
-		// (get) Token: 0x06020D61 RID: 134497 RVA: 0x00490AE5 File Offset: 0x0048ECE5
-		// (set) Token: 0x06020D62 RID: 134498 RVA: 0x00490AED File Offset: 0x0048ECED
+		// Token: 0x17009CA4 RID: 40100
+		// (get) Token: 0x06022C81 RID: 142465 RVA: 0x004CA535 File Offset: 0x004C8735
+		// (set) Token: 0x06022C82 RID: 142466 RVA: 0x004CA53D File Offset: 0x004C873D
 		public List<IDynamicEntityMatchT> KeepConditions { get; set; }
 
-		// Token: 0x170094C4 RID: 38084
-		// (get) Token: 0x06020D63 RID: 134499 RVA: 0x00490AF6 File Offset: 0x0048ECF6
-		// (set) Token: 0x06020D64 RID: 134500 RVA: 0x00490AFE File Offset: 0x0048ECFE
+		// Token: 0x17009CA5 RID: 40101
+		// (get) Token: 0x06022C83 RID: 142467 RVA: 0x004CA546 File Offset: 0x004C8746
+		// (set) Token: 0x06022C84 RID: 142468 RVA: 0x004CA54E File Offset: 0x004C874E
 		public string ConnectedState { get; set; }
 
-		// Token: 0x170094C5 RID: 38085
-		// (get) Token: 0x06020D65 RID: 134501 RVA: 0x00490B07 File Offset: 0x0048ED07
-		// (set) Token: 0x06020D66 RID: 134502 RVA: 0x00490B0F File Offset: 0x0048ED0F
+		// Token: 0x17009CA6 RID: 40102
+		// (get) Token: 0x06022C85 RID: 142469 RVA: 0x004CA557 File Offset: 0x004C8757
+		// (set) Token: 0x06022C86 RID: 142470 RVA: 0x004CA55F File Offset: 0x004C875F
 		public string DisconnectedState { get; set; }
 
-		// Token: 0x170094C6 RID: 38086
-		// (get) Token: 0x06020D67 RID: 134503 RVA: 0x00490B18 File Offset: 0x0048ED18
-		// (set) Token: 0x06020D68 RID: 134504 RVA: 0x00490B20 File Offset: 0x0048ED20
+		// Token: 0x17009CA7 RID: 40103
+		// (get) Token: 0x06022C87 RID: 142471 RVA: 0x004CA568 File Offset: 0x004C8768
+		// (set) Token: 0x06022C88 RID: 142472 RVA: 0x004CA570 File Offset: 0x004C8770
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020D69 RID: 134505 RVA: 0x00490B2C File Offset: 0x0048ED2C
+		// Token: 0x06022C89 RID: 142473 RVA: 0x004CA57C File Offset: 0x004C877C
 		public IConnectorRangeT()
 		{
 			this.Type = EConnectorLogicType.Range;

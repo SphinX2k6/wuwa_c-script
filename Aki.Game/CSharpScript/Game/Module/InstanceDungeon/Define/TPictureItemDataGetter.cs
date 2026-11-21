@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058C6 RID: 22726
-	// (Invoke) Token: 0x06039C4E RID: 236622
+	// Token: 0x0200489E RID: 18590
+	// (Invoke) Token: 0x0602EB71 RID: 191345
 	public delegate string TPictureItemDataGetter();
 }

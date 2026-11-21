@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.MusicalInstrument;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004689 RID: 18057
+	// Token: 0x020035BA RID: 13754
 	public class MusicalInstrumentInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E99C RID: 190876 RVA: 0x00ACA414 File Offset: 0x00AC8614
+		// Token: 0x060230E6 RID: 143590 RVA: 0x009F8148 File Offset: 0x009F6348
 		public override bool OnRefresh()
 		{
 			MusicalInstrumentModel instance = MusicalInstrumentModel.Instance;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x04019542 RID: 103746
+		// Token: 0x04013BE9 RID: 80873
 		[Nullable(1)]
 		private readonly List<string> TagNames = new List<string>();
 	}

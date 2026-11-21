@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002977 RID: 10615
+	// Token: 0x02002C5D RID: 11357
 	public class IToggleAndHighlightItem : ToggleHighlightExploreUi
 	{
-		// Token: 0x0600EB34 RID: 60212 RVA: 0x00226A0E File Offset: 0x00224C0E
-		[NullableContext(1)]
+		// Token: 0x0600F9AF RID: 63919 RVA: 0x00244166 File Offset: 0x00242366
 		public static IToggleAndHighlightItem Create(IToggleAndHighlightItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A08 RID: 18952
-		// (get) Token: 0x0600EB35 RID: 60213 RVA: 0x00226A2D File Offset: 0x00224C2D
+		// Token: 0x17004DA3 RID: 19875
+		// (get) Token: 0x0600F9B0 RID: 63920 RVA: 0x00244185 File Offset: 0x00242385
 		public override EHighlightExploreSkillIconType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A09 RID: 18953
-		// (get) Token: 0x0600EB36 RID: 60214 RVA: 0x00226A3C File Offset: 0x00224C3C
+		// Token: 0x17004DA4 RID: 19876
+		// (get) Token: 0x0600F9B1 RID: 63921 RVA: 0x00244194 File Offset: 0x00242394
 		public override EHighlightType? HighlightType
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A0A RID: 18954
-		// (get) Token: 0x0600EB37 RID: 60215 RVA: 0x00226A72 File Offset: 0x00224C72
+		// Token: 0x17004DA5 RID: 19877
+		// (get) Token: 0x0600F9B2 RID: 63922 RVA: 0x002441CA File Offset: 0x002423CA
 		public virtual int ItemId
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A0B RID: 18955
-		// (get) Token: 0x0600EB38 RID: 60216 RVA: 0x00226A7F File Offset: 0x00224C7F
+		// Token: 0x17004DA6 RID: 19878
+		// (get) Token: 0x0600F9B3 RID: 63923 RVA: 0x002441D7 File Offset: 0x002423D7
 		public virtual int SkillType
 		{
 			get
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A0C RID: 18956
-		// (get) Token: 0x0600EB39 RID: 60217 RVA: 0x00226A8C File Offset: 0x00224C8C
+		// Token: 0x17004DA7 RID: 19879
+		// (get) Token: 0x0600F9B4 RID: 63924 RVA: 0x002441E4 File Offset: 0x002423E4
 		public virtual bool? IsShowTips
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A0D RID: 18957
-		// (get) Token: 0x0600EB3A RID: 60218 RVA: 0x00226AC4 File Offset: 0x00224CC4
+		// Token: 0x17004DA8 RID: 19880
+		// (get) Token: 0x0600F9B5 RID: 63925 RVA: 0x0024421C File Offset: 0x0024241C
 		public virtual bool? IsSwitchBack
 		{
 			get
@@ -93,7 +91,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400818F RID: 33167
+		// Token: 0x04008873 RID: 34931
 		private IToggleAndHighlightItem Instance;
 	}
 }

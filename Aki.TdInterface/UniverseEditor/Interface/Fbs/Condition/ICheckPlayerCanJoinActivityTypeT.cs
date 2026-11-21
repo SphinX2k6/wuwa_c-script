@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ADC RID: 19164
+	// Token: 0x02004FB1 RID: 20401
 	public class ICheckPlayerCanJoinActivityTypeT
 	{
-		// Token: 0x17008AF4 RID: 35572
-		// (get) Token: 0x0601E1AE RID: 123310 RVA: 0x00439200 File Offset: 0x00437400
-		// (set) Token: 0x0601E1AF RID: 123311 RVA: 0x00439208 File Offset: 0x00437408
+		// Token: 0x170091EB RID: 37355
+		// (get) Token: 0x0601FCC3 RID: 130243 RVA: 0x0046AEAC File Offset: 0x004690AC
+		// (set) Token: 0x0601FCC4 RID: 130244 RVA: 0x0046AEB4 File Offset: 0x004690B4
 		public ECheckPlayerCanJoinActivityType Type { get; set; }
 
-		// Token: 0x17008AF5 RID: 35573
-		// (get) Token: 0x0601E1B0 RID: 123312 RVA: 0x00439211 File Offset: 0x00437411
-		// (set) Token: 0x0601E1B1 RID: 123313 RVA: 0x00439219 File Offset: 0x00437419
+		// Token: 0x170091EC RID: 37356
+		// (get) Token: 0x0601FCC5 RID: 130245 RVA: 0x0046AEBD File Offset: 0x004690BD
+		// (set) Token: 0x0601FCC6 RID: 130246 RVA: 0x0046AEC5 File Offset: 0x004690C5
 		public bool CanJoin { get; set; }
 
-		// Token: 0x0601E1B2 RID: 123314 RVA: 0x00439222 File Offset: 0x00437422
+		// Token: 0x0601FCC7 RID: 130247 RVA: 0x0046AECE File Offset: 0x004690CE
 		public ICheckPlayerCanJoinActivityTypeT()
 		{
 			this.Type = ECheckPlayerCanJoinActivityType.Rogue;

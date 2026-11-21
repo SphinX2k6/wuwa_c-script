@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200452D RID: 17709
+	// Token: 0x02004995 RID: 18837
 	public struct INoBustResult : IFlatbufferObject
 	{
-		// Token: 0x17007D9E RID: 32158
-		// (get) Token: 0x0601AA15 RID: 109077 RVA: 0x003CD0B0 File Offset: 0x003CB2B0
+		// Token: 0x170083DF RID: 33759
+		// (get) Token: 0x0601C1EA RID: 115178 RVA: 0x003F934C File Offset: 0x003F754C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AA16 RID: 109078 RVA: 0x003CD0BD File Offset: 0x003CB2BD
+		// Token: 0x0601C1EB RID: 115179 RVA: 0x003F9359 File Offset: 0x003F7559
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AA17 RID: 109079 RVA: 0x003CD0C4 File Offset: 0x003CB2C4
+		// Token: 0x0601C1EC RID: 115180 RVA: 0x003F9360 File Offset: 0x003F7560
 		public static INoBustResult GetRootAsINoBustResult(ByteBuffer _bb)
 		{
 			return INoBustResult.GetRootAsINoBustResult(_bb, default(INoBustResult));
 		}
 
-		// Token: 0x0601AA18 RID: 109080 RVA: 0x003CD0E0 File Offset: 0x003CB2E0
+		// Token: 0x0601C1ED RID: 115181 RVA: 0x003F937C File Offset: 0x003F757C
 		public static INoBustResult GetRootAsINoBustResult(ByteBuffer _bb, INoBustResult obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AA19 RID: 109081 RVA: 0x003CD0FD File Offset: 0x003CB2FD
+		// Token: 0x0601C1EE RID: 115182 RVA: 0x003F9399 File Offset: 0x003F7599
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AA1A RID: 109082 RVA: 0x003CD10C File Offset: 0x003CB30C
+		// Token: 0x0601C1EF RID: 115183 RVA: 0x003F93A8 File Offset: 0x003F75A8
 		public INoBustResult __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007D9F RID: 32159
-		// (get) Token: 0x0601AA1B RID: 109083 RVA: 0x003CD11C File Offset: 0x003CB31C
+		// Token: 0x170083E0 RID: 33760
+		// (get) Token: 0x0601C1F0 RID: 115184 RVA: 0x003F93B8 File Offset: 0x003F75B8
 		public EDartSkillResultType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007DA0 RID: 32160
-		// (get) Token: 0x0601AA1C RID: 109084 RVA: 0x003CD158 File Offset: 0x003CB358
+		// Token: 0x170083E1 RID: 33761
+		// (get) Token: 0x0601C1F1 RID: 115185 RVA: 0x003F93F4 File Offset: 0x003F75F4
 		public int Probability
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AA1D RID: 109085 RVA: 0x003CD194 File Offset: 0x003CB394
+		// Token: 0x0601C1F2 RID: 115186 RVA: 0x003F9430 File Offset: 0x003F7630
 		public static Offset<INoBustResult> CreateINoBustResult(FlatBufferBuilder builder, EDartSkillResultType Type = EDartSkillResultType.NoBust, int Probability = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return INoBustResult.EndINoBustResult(builder);
 		}
 
-		// Token: 0x0601AA1E RID: 109086 RVA: 0x003CD1B1 File Offset: 0x003CB3B1
+		// Token: 0x0601C1F3 RID: 115187 RVA: 0x003F944D File Offset: 0x003F764D
 		public static void StartINoBustResult(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601AA1F RID: 109087 RVA: 0x003CD1BA File Offset: 0x003CB3BA
+		// Token: 0x0601C1F4 RID: 115188 RVA: 0x003F9456 File Offset: 0x003F7656
 		public static void AddType(FlatBufferBuilder builder, EDartSkillResultType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601AA20 RID: 109088 RVA: 0x003CD1C5 File Offset: 0x003CB3C5
+		// Token: 0x0601C1F5 RID: 115189 RVA: 0x003F9461 File Offset: 0x003F7661
 		public static void AddProbability(FlatBufferBuilder builder, int probability)
 		{
 			builder.AddInt(1, probability, 0);
 		}
 
-		// Token: 0x0601AA21 RID: 109089 RVA: 0x003CD1D0 File Offset: 0x003CB3D0
+		// Token: 0x0601C1F6 RID: 115190 RVA: 0x003F946C File Offset: 0x003F766C
 		public static Offset<INoBustResult> EndINoBustResult(FlatBufferBuilder builder)
 		{
 			return new Offset<INoBustResult>(builder.EndTable());
 		}
 
-		// Token: 0x0601AA22 RID: 109090 RVA: 0x003CD1E0 File Offset: 0x003CB3E0
+		// Token: 0x0601C1F7 RID: 115191 RVA: 0x003F947C File Offset: 0x003F767C
 		public INoBustResultT UnPack()
 		{
 			INoBustResultT noBustResultT = new INoBustResultT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return noBustResultT;
 		}
 
-		// Token: 0x0601AA23 RID: 109091 RVA: 0x003CD1FB File Offset: 0x003CB3FB
+		// Token: 0x0601C1F8 RID: 115192 RVA: 0x003F9497 File Offset: 0x003F7697
 		public void UnPackTo(INoBustResultT _o)
 		{
 			_o.Type = this.Type;
 			_o.Probability = this.Probability;
 		}
 
-		// Token: 0x0601AA24 RID: 109092 RVA: 0x003CD218 File Offset: 0x003CB418
+		// Token: 0x0601C1F9 RID: 115193 RVA: 0x003F94B4 File Offset: 0x003F76B4
 		public static Offset<INoBustResult> Pack(FlatBufferBuilder builder, INoBustResultT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return INoBustResult.CreateINoBustResult(builder, _o.Type, _o.Probability);
 		}
 
-		// Token: 0x0400C5B3 RID: 50611
+		// Token: 0x0400CFE2 RID: 53218
 		private Table __p;
 	}
 }

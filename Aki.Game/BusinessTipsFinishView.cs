@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200132B RID: 4907
+// Token: 0x020007DF RID: 2015
 [NullableContext(2)]
 [Nullable(0)]
 public class BusinessTipsFinishView : UiViewBase
 {
-	// Token: 0x06008842 RID: 34882 RVA: 0x001D124B File Offset: 0x001CF44B
+	// Token: 0x06005BDD RID: 23517 RVA: 0x001DA0B7 File Offset: 0x001D82B7
 	[NullableContext(1)]
 	public BusinessTipsFinishView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008843 RID: 34883 RVA: 0x001D1254 File Offset: 0x001CF454
+	// Token: 0x06005BDE RID: 23518 RVA: 0x001DA0C0 File Offset: 0x001D82C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class BusinessTipsFinishView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008844 RID: 34884 RVA: 0x001D1340 File Offset: 0x001CF540
+	// Token: 0x06005BDF RID: 23519 RVA: 0x001DA1AC File Offset: 0x001D83AC
 	private UniTask InitCaptionItem()
 	{
 		BusinessTipsFinishView.<InitCaptionItem>d__9 <InitCaptionItem>d__;
@@ -48,7 +48,7 @@ public class BusinessTipsFinishView : UiViewBase
 		return <InitCaptionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008845 RID: 34885 RVA: 0x001D1384 File Offset: 0x001CF584
+	// Token: 0x06005BE0 RID: 23520 RVA: 0x001DA1F0 File Offset: 0x001D83F0
 	private void InitSequenceData()
 	{
 		if (MoonChasingBusinessModel.Instance.GetResultData().EvaluationLevel < 7)
@@ -64,7 +64,7 @@ public class BusinessTipsFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008846 RID: 34886 RVA: 0x001D13C8 File Offset: 0x001CF5C8
+	// Token: 0x06005BE1 RID: 23521 RVA: 0x001DA234 File Offset: 0x001D8434
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessTipsFinishView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ public class BusinessTipsFinishView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008847 RID: 34887 RVA: 0x001D140C File Offset: 0x001CF60C
+	// Token: 0x06005BE2 RID: 23522 RVA: 0x001DA278 File Offset: 0x001D8478
 	protected override void OnAfterPlayStartSequence()
 	{
 		AudioSystem.Instance.PostEvent("play_ui_figure_up_end");
@@ -109,7 +109,7 @@ public class BusinessTipsFinishView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06008848 RID: 34888 RVA: 0x001D1465 File Offset: 0x001CF665
+	// Token: 0x06005BE3 RID: 23523 RVA: 0x001DA2D1 File Offset: 0x001D84D1
 	protected override void OnBeforeDestroy()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -120,7 +120,7 @@ public class BusinessTipsFinishView : UiViewBase
 		this.RemoveTimerHandle();
 	}
 
-	// Token: 0x06008849 RID: 34889 RVA: 0x001D1483 File Offset: 0x001CF683
+	// Token: 0x06005BE4 RID: 23524 RVA: 0x001DA2EF File Offset: 0x001D84EF
 	private void RemoveTimerHandle()
 	{
 		if (this.TimerHandle != null)
@@ -130,14 +130,14 @@ public class BusinessTipsFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600884A RID: 34890 RVA: 0x001D14A5 File Offset: 0x001CF6A5
+	// Token: 0x06005BE5 RID: 23525 RVA: 0x001DA311 File Offset: 0x001D8511
 	[NullableContext(1)]
 	private CharacterItemWithLine InitCharacterItem()
 	{
 		return new CharacterItemWithLine();
 	}
 
-	// Token: 0x0600884B RID: 34891 RVA: 0x001D14AC File Offset: 0x001CF6AC
+	// Token: 0x06005BE6 RID: 23526 RVA: 0x001DA318 File Offset: 0x001D8518
 	private void OnConfirm()
 	{
 		DelegationResultData resultData = MoonChasingBusinessModel.Instance.GetResultData();
@@ -148,7 +148,7 @@ public class BusinessTipsFinishView : UiViewBase
 		MoonChasingController.Instance.OpenTipsPopularityUpView(popularityUpData);
 	}
 
-	// Token: 0x0600884C RID: 34892 RVA: 0x001D150E File Offset: 0x001CF70E
+	// Token: 0x06005BE7 RID: 23527 RVA: 0x001DA37A File Offset: 0x001D857A
 	[NullableContext(1)]
 	private void PlayNewAudio(string sequenceName, string eventName)
 	{
@@ -158,7 +158,7 @@ public class BusinessTipsFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003CC0 RID: 15552
+	// Token: 0x04003D58 RID: 15704
 	[Nullable(new byte[]
 	{
 		2,
@@ -166,47 +166,47 @@ public class BusinessTipsFinishView : UiViewBase
 	})]
 	protected CharacterListModule<CharacterItemWithLine> CharacterListModule;
 
-	// Token: 0x04003CC1 RID: 15553
+	// Token: 0x04003D59 RID: 15705
 	protected RewardItem FirstReward;
 
-	// Token: 0x04003CC2 RID: 15554
+	// Token: 0x04003D5A RID: 15706
 	protected RewardItem SecondReward;
 
-	// Token: 0x04003CC3 RID: 15555
+	// Token: 0x04003D5B RID: 15707
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003CC4 RID: 15556
+	// Token: 0x04003D5C RID: 15708
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04003CC5 RID: 15557
+	// Token: 0x04003D5D RID: 15709
 	private const int TWEEN_TIME = 1;
 
-	// Token: 0x0200797F RID: 31103
+	// Token: 0x02006B09 RID: 27401
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402801D RID: 163869
+		// Token: 0x0402334A RID: 144202
 		public const int Texture = 0;
 
-		// Token: 0x0402801E RID: 163870
+		// Token: 0x0402334B RID: 144203
 		public const int UnChangeItem = 1;
 
-		// Token: 0x0402801F RID: 163871
+		// Token: 0x0402334C RID: 144204
 		public const int NewRecordItem = 2;
 
-		// Token: 0x04028020 RID: 163872
+		// Token: 0x0402334D RID: 144205
 		public const int FirstReward = 3;
 
-		// Token: 0x04028021 RID: 163873
+		// Token: 0x0402334E RID: 144206
 		public const int SecondReward = 4;
 
-		// Token: 0x04028022 RID: 163874
+		// Token: 0x0402334F RID: 144207
 		public const int CharacterListItem = 5;
 
-		// Token: 0x04028023 RID: 163875
+		// Token: 0x04023350 RID: 144208
 		public const int ConfirmBtn = 6;
 
-		// Token: 0x04028024 RID: 163876
+		// Token: 0x04023351 RID: 144209
 		public const int CaptionItem = 7;
 	}
 }

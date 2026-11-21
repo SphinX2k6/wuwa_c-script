@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002651 RID: 9809
+	// Token: 0x02002915 RID: 10517
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPhotographCameraParams
 	{
-		// Token: 0x0600DBF6 RID: 56310 RVA: 0x0020BD16 File Offset: 0x00209F16
-		[NullableContext(1)]
+		// Token: 0x0600E9D2 RID: 59858 RVA: 0x002285EE File Offset: 0x002267EE
+		[NullableContext(0)]
 		public static IPhotographCameraParams Create(IPhotographCameraParams? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004116 RID: 16662
-		// (get) Token: 0x0600DBF7 RID: 56311 RVA: 0x0020BD35 File Offset: 0x00209F35
+		// Token: 0x17004456 RID: 17494
+		// (get) Token: 0x0600E9D3 RID: 59859 RVA: 0x0022860D File Offset: 0x0022680D
 		public virtual IPhotographCameraTransformAbsolute CameraTransform
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004117 RID: 16663
-		// (get) Token: 0x0600DBF8 RID: 56312 RVA: 0x0020BD6C File Offset: 0x00209F6C
+		// Token: 0x17004457 RID: 17495
+		// (get) Token: 0x0600E9D4 RID: 59860 RVA: 0x00228644 File Offset: 0x00226844
 		public virtual float? Fov
 		{
 			get
@@ -53,13 +53,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A45 RID: 31301
+		// Token: 0x040080E7 RID: 32999
 		private IPhotographCameraParams Instance;
 
-		// Token: 0x04007A46 RID: 31302
+		// Token: 0x040080E8 RID: 33000
 		private IPhotographCameraTransformAbsolute _CameraTransformCache;
 
-		// Token: 0x04007A47 RID: 31303
+		// Token: 0x040080E9 RID: 33001
 		private bool _CameraTransformInited;
 	}
 }

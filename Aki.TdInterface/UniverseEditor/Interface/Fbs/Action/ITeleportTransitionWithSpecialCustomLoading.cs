@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073C1 RID: 29633
+	// Token: 0x02007BA8 RID: 31656
 	public struct ITeleportTransitionWithSpecialCustomLoading : IFlatbufferObject
 	{
-		// Token: 0x1700E108 RID: 57608
-		// (get) Token: 0x06035CF8 RID: 220408 RVA: 0x00752F54 File Offset: 0x00751154
+		// Token: 0x1700ED18 RID: 60696
+		// (get) Token: 0x06039093 RID: 233619 RVA: 0x007B5494 File Offset: 0x007B3694
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035CF9 RID: 220409 RVA: 0x00752F61 File Offset: 0x00751161
+		// Token: 0x06039094 RID: 233620 RVA: 0x007B54A1 File Offset: 0x007B36A1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035CFA RID: 220410 RVA: 0x00752F68 File Offset: 0x00751168
+		// Token: 0x06039095 RID: 233621 RVA: 0x007B54A8 File Offset: 0x007B36A8
 		public static ITeleportTransitionWithSpecialCustomLoading GetRootAsITeleportTransitionWithSpecialCustomLoading(ByteBuffer _bb)
 		{
 			return ITeleportTransitionWithSpecialCustomLoading.GetRootAsITeleportTransitionWithSpecialCustomLoading(_bb, default(ITeleportTransitionWithSpecialCustomLoading));
 		}
 
-		// Token: 0x06035CFB RID: 220411 RVA: 0x00752F84 File Offset: 0x00751184
+		// Token: 0x06039096 RID: 233622 RVA: 0x007B54C4 File Offset: 0x007B36C4
 		public static ITeleportTransitionWithSpecialCustomLoading GetRootAsITeleportTransitionWithSpecialCustomLoading(ByteBuffer _bb, ITeleportTransitionWithSpecialCustomLoading obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035CFC RID: 220412 RVA: 0x00752FA1 File Offset: 0x007511A1
+		// Token: 0x06039097 RID: 233623 RVA: 0x007B54E1 File Offset: 0x007B36E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035CFD RID: 220413 RVA: 0x00752FB0 File Offset: 0x007511B0
+		// Token: 0x06039098 RID: 233624 RVA: 0x007B54F0 File Offset: 0x007B36F0
 		public ITeleportTransitionWithSpecialCustomLoading __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E109 RID: 57609
-		// (get) Token: 0x06035CFE RID: 220414 RVA: 0x00752FC0 File Offset: 0x007511C0
+		// Token: 0x1700ED19 RID: 60697
+		// (get) Token: 0x06039099 RID: 233625 RVA: 0x007B5500 File Offset: 0x007B3700
 		public ETeleportTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E10A RID: 57610
-		// (get) Token: 0x06035CFF RID: 220415 RVA: 0x00752FFC File Offset: 0x007511FC
+		// Token: 0x1700ED1A RID: 60698
+		// (get) Token: 0x0603909A RID: 233626 RVA: 0x007B553C File Offset: 0x007B373C
 		public IHonamiStoryCustomLoading? LoadingType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035D00 RID: 220416 RVA: 0x00753059 File Offset: 0x00751259
+		// Token: 0x0603909B RID: 233627 RVA: 0x007B5599 File Offset: 0x007B3799
 		public static Offset<ITeleportTransitionWithSpecialCustomLoading> CreateITeleportTransitionWithSpecialCustomLoading(FlatBufferBuilder builder, ETeleportTransitionType Type = ETeleportTransitionType.PlayMp4, Offset<IHonamiStoryCustomLoading> LoadingTypeOffset = default(Offset<IHonamiStoryCustomLoading>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithSpecialCustomLoading.EndITeleportTransitionWithSpecialCustomLoading(builder);
 		}
 
-		// Token: 0x06035D01 RID: 220417 RVA: 0x00753076 File Offset: 0x00751276
+		// Token: 0x0603909C RID: 233628 RVA: 0x007B55B6 File Offset: 0x007B37B6
 		public static void StartITeleportTransitionWithSpecialCustomLoading(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06035D02 RID: 220418 RVA: 0x0075307F File Offset: 0x0075127F
+		// Token: 0x0603909D RID: 233629 RVA: 0x007B55BF File Offset: 0x007B37BF
 		public static void AddType(FlatBufferBuilder builder, ETeleportTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035D03 RID: 220419 RVA: 0x0075308A File Offset: 0x0075128A
+		// Token: 0x0603909E RID: 233630 RVA: 0x007B55CA File Offset: 0x007B37CA
 		public static void AddLoadingType(FlatBufferBuilder builder, Offset<IHonamiStoryCustomLoading> loadingTypeOffset)
 		{
 			builder.AddOffset(1, loadingTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06035D04 RID: 220420 RVA: 0x0075309A File Offset: 0x0075129A
+		// Token: 0x0603909F RID: 233631 RVA: 0x007B55DA File Offset: 0x007B37DA
 		public static Offset<ITeleportTransitionWithSpecialCustomLoading> EndITeleportTransitionWithSpecialCustomLoading(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportTransitionWithSpecialCustomLoading>(builder.EndTable());
 		}
 
-		// Token: 0x06035D05 RID: 220421 RVA: 0x007530A8 File Offset: 0x007512A8
+		// Token: 0x060390A0 RID: 233632 RVA: 0x007B55E8 File Offset: 0x007B37E8
 		public ITeleportTransitionWithSpecialCustomLoadingT UnPack()
 		{
 			ITeleportTransitionWithSpecialCustomLoadingT teleportTransitionWithSpecialCustomLoadingT = new ITeleportTransitionWithSpecialCustomLoadingT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportTransitionWithSpecialCustomLoadingT;
 		}
 
-		// Token: 0x06035D06 RID: 220422 RVA: 0x007530C4 File Offset: 0x007512C4
+		// Token: 0x060390A1 RID: 233633 RVA: 0x007B5604 File Offset: 0x007B3804
 		public void UnPackTo(ITeleportTransitionWithSpecialCustomLoadingT _o)
 		{
 			_o.Type = this.Type;
 			_o.LoadingType = ((this.LoadingType != null) ? this.LoadingType.Value.UnPack() : null);
 		}
 
-		// Token: 0x06035D07 RID: 220423 RVA: 0x0075310C File Offset: 0x0075130C
+		// Token: 0x060390A2 RID: 233634 RVA: 0x007B564C File Offset: 0x007B384C
 		public static Offset<ITeleportTransitionWithSpecialCustomLoading> Pack(FlatBufferBuilder builder, ITeleportTransitionWithSpecialCustomLoadingT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithSpecialCustomLoading.CreateITeleportTransitionWithSpecialCustomLoading(builder, _o.Type, loadingTypeOffset);
 		}
 
-		// Token: 0x04012203 RID: 74243
+		// Token: 0x0401321C RID: 78364
 		private Table __p;
 	}
 }

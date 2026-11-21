@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B67 RID: 2919
+	// Token: 0x02000C47 RID: 3143
 	public struct Chat : IFlatbufferObject
 	{
-		// Token: 0x17000735 RID: 1845
-		// (get) Token: 0x06005300 RID: 21248 RVA: 0x001F0B84 File Offset: 0x001EED84
+		// Token: 0x17000775 RID: 1909
+		// (get) Token: 0x060058C2 RID: 22722 RVA: 0x00210914 File Offset: 0x0020EB14
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005301 RID: 21249 RVA: 0x001F0B91 File Offset: 0x001EED91
+		// Token: 0x060058C3 RID: 22723 RVA: 0x00210921 File Offset: 0x0020EB21
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005302 RID: 21250 RVA: 0x001F0B98 File Offset: 0x001EED98
+		// Token: 0x060058C4 RID: 22724 RVA: 0x00210928 File Offset: 0x0020EB28
 		public static Chat GetRootAsChat(ByteBuffer _bb)
 		{
 			return Chat.GetRootAsChat(_bb, default(Chat));
 		}
 
-		// Token: 0x06005303 RID: 21251 RVA: 0x001F0BB4 File Offset: 0x001EEDB4
+		// Token: 0x060058C5 RID: 22725 RVA: 0x00210944 File Offset: 0x0020EB44
 		public static Chat GetRootAsChat(ByteBuffer _bb, Chat obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005304 RID: 21252 RVA: 0x001F0BD1 File Offset: 0x001EEDD1
+		// Token: 0x060058C6 RID: 22726 RVA: 0x00210961 File Offset: 0x0020EB61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005305 RID: 21253 RVA: 0x001F0BE0 File Offset: 0x001EEDE0
+		// Token: 0x060058C7 RID: 22727 RVA: 0x00210970 File Offset: 0x0020EB70
 		public Chat __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000736 RID: 1846
-		// (get) Token: 0x06005306 RID: 21254 RVA: 0x001F0BF0 File Offset: 0x001EEDF0
+		// Token: 0x17000776 RID: 1910
+		// (get) Token: 0x060058C8 RID: 22728 RVA: 0x00210980 File Offset: 0x0020EB80
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000737 RID: 1847
-		// (get) Token: 0x06005307 RID: 21255 RVA: 0x001F0C2C File Offset: 0x001EEE2C
+		// Token: 0x17000777 RID: 1911
+		// (get) Token: 0x060058C9 RID: 22729 RVA: 0x002109BC File Offset: 0x0020EBBC
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005308 RID: 21256 RVA: 0x001F0C63 File Offset: 0x001EEE63
+		// Token: 0x060058CA RID: 22730 RVA: 0x002109F3 File Offset: 0x0020EBF3
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06005309 RID: 21257 RVA: 0x001F0C72 File Offset: 0x001EEE72
+		// Token: 0x060058CB RID: 22731 RVA: 0x00210A02 File Offset: 0x0020EC02
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000738 RID: 1848
-		// (get) Token: 0x0600530A RID: 21258 RVA: 0x001F0C8C File Offset: 0x001EEE8C
+		// Token: 0x17000778 RID: 1912
+		// (get) Token: 0x060058CC RID: 22732 RVA: 0x00210A1C File Offset: 0x0020EC1C
 		public int BuildLimit
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000739 RID: 1849
-		// (get) Token: 0x0600530B RID: 21259 RVA: 0x001F0CC8 File Offset: 0x001EEEC8
+		// Token: 0x17000779 RID: 1913
+		// (get) Token: 0x060058CD RID: 22733 RVA: 0x00210A58 File Offset: 0x0020EC58
 		public int SaveMsgLimit
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700073A RID: 1850
-		// (get) Token: 0x0600530C RID: 21260 RVA: 0x001F0D08 File Offset: 0x001EEF08
+		// Token: 0x1700077A RID: 1914
+		// (get) Token: 0x060058CE RID: 22734 RVA: 0x00210A98 File Offset: 0x0020EC98
 		public int LocalSaveMsgLimit
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700073B RID: 1851
-		// (get) Token: 0x0600530D RID: 21261 RVA: 0x001F0D48 File Offset: 0x001EEF48
+		// Token: 0x1700077B RID: 1915
+		// (get) Token: 0x060058CF RID: 22735 RVA: 0x00210AD8 File Offset: 0x0020ECD8
 		public int SaveMsgTime
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700073C RID: 1852
-		// (get) Token: 0x0600530E RID: 21262 RVA: 0x001F0D88 File Offset: 0x001EEF88
+		// Token: 0x1700077C RID: 1916
+		// (get) Token: 0x060058D0 RID: 22736 RVA: 0x00210B18 File Offset: 0x0020ED18
 		public int ChatCd
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B69 RID: 19305
+		// Token: 0x04005149 RID: 20809
 		private Table __p;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009CE RID: 2510
+	// Token: 0x02000A93 RID: 2707
 	public static class EPhantomExhibitSizeTypeExtensions
 	{
-		// Token: 0x060037D0 RID: 14288 RVA: 0x00090F64 File Offset: 0x0008F164
+		// Token: 0x06003BA8 RID: 15272 RVA: 0x00099824 File Offset: 0x00097A24
 		public static string ToEnumString(this EPhantomExhibitSizeType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037D1 RID: 14289 RVA: 0x00090FAC File Offset: 0x0008F1AC
+		// Token: 0x06003BA9 RID: 15273 RVA: 0x0009986C File Offset: 0x00097A6C
 		public static EPhantomExhibitSizeType FromString(string name)
 		{
 			EPhantomExhibitSizeType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037D2 RID: 14290 RVA: 0x00090FD8 File Offset: 0x0008F1D8
+		// Token: 0x06003BAA RID: 15274 RVA: 0x00099898 File Offset: 0x00097A98
 		public static bool TryFromString(string name, out EPhantomExhibitSizeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060037D3 RID: 14291 RVA: 0x0009102E File Offset: 0x0008F22E
+		// Token: 0x06003BAB RID: 15275 RVA: 0x000998EE File Offset: 0x00097AEE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037D4 RID: 14292 RVA: 0x0009104E File Offset: 0x0008F24E
+		// Token: 0x06003BAC RID: 15276 RVA: 0x0009990E File Offset: 0x00097B0E
 		public static EPhantomExhibitSizeType[] GetValues()
 		{
 			return new EPhantomExhibitSizeType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037D5 RID: 14293 RVA: 0x0009105E File Offset: 0x0008F25E
+		// Token: 0x06003BAD RID: 15277 RVA: 0x0009991E File Offset: 0x00097B1E
 		public static string[] GetNames()
 		{
 			return new string[]

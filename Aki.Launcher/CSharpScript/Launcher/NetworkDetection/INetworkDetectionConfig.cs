@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001AD RID: 429
+	// Token: 0x020001B1 RID: 433
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INetworkDetectionConfig
 	{
-		// Token: 0x1700011E RID: 286
-		// (get) Token: 0x06000BD3 RID: 3027 RVA: 0x0004A262 File Offset: 0x00048462
-		// (set) Token: 0x06000BD4 RID: 3028 RVA: 0x0004A26A File Offset: 0x0004846A
+		// Token: 0x17000124 RID: 292
+		// (get) Token: 0x06000C0A RID: 3082 RVA: 0x0004CA52 File Offset: 0x0004AC52
+		// (set) Token: 0x06000C0B RID: 3083 RVA: 0x0004CA5A File Offset: 0x0004AC5A
 		public string ip { get; set; }
 
-		// Token: 0x1700011F RID: 287
-		// (get) Token: 0x06000BD5 RID: 3029 RVA: 0x0004A273 File Offset: 0x00048473
-		// (set) Token: 0x06000BD6 RID: 3030 RVA: 0x0004A27B File Offset: 0x0004847B
+		// Token: 0x17000125 RID: 293
+		// (get) Token: 0x06000C0C RID: 3084 RVA: 0x0004CA63 File Offset: 0x0004AC63
+		// (set) Token: 0x06000C0D RID: 3085 RVA: 0x0004CA6B File Offset: 0x0004AC6B
 		public string PingUrl { get; set; }
 
-		// Token: 0x17000120 RID: 288
-		// (get) Token: 0x06000BD7 RID: 3031 RVA: 0x0004A284 File Offset: 0x00048484
-		// (set) Token: 0x06000BD8 RID: 3032 RVA: 0x0004A28C File Offset: 0x0004848C
+		// Token: 0x17000126 RID: 294
+		// (get) Token: 0x06000C0E RID: 3086 RVA: 0x0004CA74 File Offset: 0x0004AC74
+		// (set) Token: 0x06000C0F RID: 3087 RVA: 0x0004CA7C File Offset: 0x0004AC7C
 		public int[] UdpPort { get; set; }
 
-		// Token: 0x17000121 RID: 289
-		// (get) Token: 0x06000BD9 RID: 3033 RVA: 0x0004A295 File Offset: 0x00048495
-		// (set) Token: 0x06000BDA RID: 3034 RVA: 0x0004A29D File Offset: 0x0004849D
+		// Token: 0x17000127 RID: 295
+		// (get) Token: 0x06000C10 RID: 3088 RVA: 0x0004CA85 File Offset: 0x0004AC85
+		// (set) Token: 0x06000C11 RID: 3089 RVA: 0x0004CA8D File Offset: 0x0004AC8D
 		[Nullable(new byte[]
 		{
 			2,

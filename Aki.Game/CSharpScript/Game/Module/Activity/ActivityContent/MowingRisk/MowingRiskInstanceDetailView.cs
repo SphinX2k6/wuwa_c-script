@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063E2 RID: 25570
+	// Token: 0x02005360 RID: 21344
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskInstanceDetailView : UiPanelBase
 	{
-		// Token: 0x0604050D RID: 263437 RVA: 0x00F8E63C File Offset: 0x00F8C83C
+		// Token: 0x060351CE RID: 217550 RVA: 0x00ED55D4 File Offset: 0x00ED37D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604050E RID: 263438 RVA: 0x00F8E830 File Offset: 0x00F8CA30
+		// Token: 0x060351CF RID: 217551 RVA: 0x00ED57C8 File Offset: 0x00ED39C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MowingRiskInstanceDetailView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604050F RID: 263439 RVA: 0x00F8E873 File Offset: 0x00F8CA73
+		// Token: 0x060351D0 RID: 217552 RVA: 0x00ED580B File Offset: 0x00ED3A0B
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
@@ -85,30 +85,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06040510 RID: 263440 RVA: 0x00F8E89A File Offset: 0x00F8CA9A
+		// Token: 0x060351D1 RID: 217553 RVA: 0x00ED5832 File Offset: 0x00ED3A32
 		private void ClickHelper()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InstanceDungeonMonsterPreView, InstanceDungeonEntranceModel.Instance.SelectInstanceId, null);
 		}
 
-		// Token: 0x06040511 RID: 263441 RVA: 0x00F8E8BB File Offset: 0x00F8CABB
+		// Token: 0x060351D2 RID: 217554 RVA: 0x00ED5853 File Offset: 0x00ED3A53
 		private MowingRiskInstanceDetailAttributeGridItem CreateAttributeItem()
 		{
 			return new MowingRiskInstanceDetailAttributeGridItem();
 		}
 
-		// Token: 0x06040512 RID: 263442 RVA: 0x00F8E8C2 File Offset: 0x00F8CAC2
+		// Token: 0x060351D3 RID: 217555 RVA: 0x00ED585A File Offset: 0x00ED3A5A
 		private void OnClickLeft(int _)
 		{
 		}
 
-		// Token: 0x06040513 RID: 263443 RVA: 0x00F8E8C4 File Offset: 0x00F8CAC4
+		// Token: 0x060351D4 RID: 217556 RVA: 0x00ED585C File Offset: 0x00ED3A5C
 		private void OnClickRight(int _)
 		{
 			EventSystem.Instance.Emit(EEventName.OnClickEnterInstanceSingle);
 		}
 
-		// Token: 0x06040514 RID: 263444 RVA: 0x00F8E8D8 File Offset: 0x00F8CAD8
+		// Token: 0x060351D5 RID: 217557 RVA: 0x00ED5870 File Offset: 0x00ED3A70
 		private void RefreshLockItem(IMowingRiskInstanceDetailLockItemData data)
 		{
 			if (data != null)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.LockItem.SetUiActive(false);
 		}
 
-		// Token: 0x06040515 RID: 263445 RVA: 0x00F8E928 File Offset: 0x00F8CB28
+		// Token: 0x060351D6 RID: 217558 RVA: 0x00ED58C0 File Offset: 0x00ED3AC0
 		public UniTask RefreshExternalByDataAsync(IMowingRiskInstanceDetailData data)
 		{
 			MowingRiskInstanceDetailView.<RefreshExternalByDataAsync>d__13 <RefreshExternalByDataAsync>d__;
@@ -134,62 +134,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RefreshExternalByDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040516 RID: 263446 RVA: 0x00F8E973 File Offset: 0x00F8CB73
+		// Token: 0x060351D7 RID: 217559 RVA: 0x00ED590B File Offset: 0x00ED3B0B
 		public void RefreshLockItemExternalByData(IMowingRiskInstanceDetailLockItemData data)
 		{
 			this.RefreshLockItem(data);
 		}
 
-		// Token: 0x04021763 RID: 137059
+		// Token: 0x0401C092 RID: 114834
 		private GenericLayout<MowingRiskInstanceDetailAttributeGridItem, IMowingRiskInstanceDetailAttributeItemData> AttributeLayout;
 
-		// Token: 0x04021764 RID: 137060
+		// Token: 0x0401C093 RID: 114835
 		private ButtonItem LeftButton;
 
-		// Token: 0x04021765 RID: 137061
+		// Token: 0x0401C094 RID: 114836
 		private ButtonItem RightButton;
 
-		// Token: 0x04021766 RID: 137062
+		// Token: 0x0401C095 RID: 114837
 		private MowingRiskInstanceDetailLockItem LockItem;
 
-		// Token: 0x0200C5FB RID: 50683
+		// Token: 0x0200AFE2 RID: 45026
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x0403BC63 RID: 244835
+			// Token: 0x040365C2 RID: 222658
 			public const int TitleText = 0;
 
-			// Token: 0x0403BC64 RID: 244836
+			// Token: 0x040365C3 RID: 222659
 			public const int RecommendElementItem = 1;
 
-			// Token: 0x0403BC65 RID: 244837
+			// Token: 0x040365C4 RID: 222660
 			public const int RecommendElementIconItem = 2;
 
-			// Token: 0x0403BC66 RID: 244838
+			// Token: 0x040365C5 RID: 222661
 			public const int ContentText = 3;
 
-			// Token: 0x0403BC67 RID: 244839
+			// Token: 0x040365C6 RID: 222662
 			public const int HelperButton = 4;
 
-			// Token: 0x0403BC68 RID: 244840
+			// Token: 0x040365C7 RID: 222663
 			public const int AttributeLayout = 5;
 
-			// Token: 0x0403BC69 RID: 244841
+			// Token: 0x040365C8 RID: 222664
 			public const int AttributeGridItem = 6;
 
-			// Token: 0x0403BC6A RID: 244842
+			// Token: 0x040365C9 RID: 222665
 			public const int LeftButtonItem = 7;
 
-			// Token: 0x0403BC6B RID: 244843
+			// Token: 0x040365CA RID: 222666
 			public const int RightButtonItem = 8;
 
-			// Token: 0x0403BC6C RID: 244844
+			// Token: 0x040365CB RID: 222667
 			public const int LockItem = 9;
 
-			// Token: 0x0403BC6D RID: 244845
+			// Token: 0x040365CC RID: 222668
 			public const int AddRootItem = 10;
 
-			// Token: 0x0403BC6E RID: 244846
+			// Token: 0x040365CD RID: 222669
 			public const int RecommendTitleText = 11;
 		}
 	}

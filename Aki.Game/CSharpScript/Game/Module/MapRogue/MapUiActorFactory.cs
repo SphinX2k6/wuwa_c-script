@@ -8,19 +8,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055CB RID: 21963
+	// Token: 0x020045A1 RID: 17825
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapUiActorFactory
 	{
-		// Token: 0x06037F9B RID: 229275 RVA: 0x00D4297F File Offset: 0x00D40B7F
+		// Token: 0x0602CE99 RID: 183961 RVA: 0x00C906C7 File Offset: 0x00C8E8C7
 		public MapUiActorFactory(string path, UUIItem poolRoot)
 		{
 			this.PathInternal = path;
 			this.PoolRootInternal = poolRoot;
 		}
 
-		// Token: 0x06037F9C RID: 229276 RVA: 0x00D429B8 File Offset: 0x00D40BB8
+		// Token: 0x0602CE9A RID: 183962 RVA: 0x00C90700 File Offset: 0x00C8E900
 		public void Clear()
 		{
 			this.CancelLoad();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.List.Clear();
 		}
 
-		// Token: 0x06037F9D RID: 229277 RVA: 0x00D42A1C File Offset: 0x00D40C1C
+		// Token: 0x0602CE9B RID: 183963 RVA: 0x00C90764 File Offset: 0x00C8E964
 		public void CancelLoad()
 		{
 			foreach (int id in this.ResourceIdSet)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.ResourceIdSet.Clear();
 		}
 
-		// Token: 0x06037F9E RID: 229278 RVA: 0x00D42A80 File Offset: 0x00D40C80
+		// Token: 0x0602CE9C RID: 183964 RVA: 0x00C907C8 File Offset: 0x00C8E9C8
 		public bool Release(UiPoolActor uiPoolActor)
 		{
 			if (uiPoolActor == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return false;
 		}
 
-		// Token: 0x06037F9F RID: 229279 RVA: 0x00D42AD4 File Offset: 0x00D40CD4
+		// Token: 0x0602CE9D RID: 183965 RVA: 0x00C9081C File Offset: 0x00C8EA1C
 		public int GarbageCollect(int allowGarbageCount)
 		{
 			if (this.List.Count <= 0)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return num;
 		}
 
-		// Token: 0x06037FA0 RID: 229280 RVA: 0x00D42B48 File Offset: 0x00D40D48
+		// Token: 0x0602CE9E RID: 183966 RVA: 0x00C90890 File Offset: 0x00C8EA90
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <LoadActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037FA1 RID: 229281 RVA: 0x00D42B8C File Offset: 0x00D40D8C
+		// Token: 0x0602CE9F RID: 183967 RVA: 0x00C908D4 File Offset: 0x00C8EAD4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -120,19 +120,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <GetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D667 RID: 120423
+		// Token: 0x040180F2 RID: 98546
 		private readonly string PathInternal = "";
 
-		// Token: 0x0401D668 RID: 120424
+		// Token: 0x040180F3 RID: 98547
 		private readonly UUIItem PoolRootInternal;
 
-		// Token: 0x0401D669 RID: 120425
+		// Token: 0x040180F4 RID: 98548
 		private readonly List<UiPoolActor> List = new List<UiPoolActor>();
 
-		// Token: 0x0401D66A RID: 120426
+		// Token: 0x040180F5 RID: 98549
 		private readonly HashSet<int> ResourceIdSet = new HashSet<int>();
 
-		// Token: 0x0401D66B RID: 120427
+		// Token: 0x040180F6 RID: 98550
 		private const int ACTOR_MAX_CACHE_COUNT = 0;
 	}
 }

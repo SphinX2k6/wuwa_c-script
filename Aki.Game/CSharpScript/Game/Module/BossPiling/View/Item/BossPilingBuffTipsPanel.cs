@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C24 RID: 23588
+	// Token: 0x02004C04 RID: 19460
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingBuffTipsPanel : UiPanelBase
 	{
-		// Token: 0x0603B972 RID: 244082 RVA: 0x00E36910 File Offset: 0x00E34B10
+		// Token: 0x060308BD RID: 198845 RVA: 0x00D86C6C File Offset: 0x00D84E6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B973 RID: 244083 RVA: 0x00E36A84 File Offset: 0x00E34C84
+		// Token: 0x060308BE RID: 198846 RVA: 0x00D86DE0 File Offset: 0x00D84FE0
 		public void Refresh(BossPilingBuffCountInfo buffInfo)
 		{
 			UUISprite sprite = base.GetSprite(4);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), value.Desc, value.DescArgs());
 		}
 
-		// Token: 0x0401F063 RID: 127075
+		// Token: 0x04019B14 RID: 105236
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, string> QualityTexMap = new Dictionary<int, string>
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		};
 
-		// Token: 0x0401F064 RID: 127076
+		// Token: 0x04019B15 RID: 105237
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, string> QualitySpriteMap = new Dictionary<int, string>
 		{
@@ -134,29 +134,29 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		};
 
-		// Token: 0x0200BE0E RID: 48654
+		// Token: 0x0200A816 RID: 43030
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x040394F7 RID: 234743
+			// Token: 0x04033EBA RID: 212666
 			TexBg,
-			// Token: 0x040394F8 RID: 234744
+			// Token: 0x04033EBB RID: 212667
 			TxtName,
-			// Token: 0x040394F9 RID: 234745
+			// Token: 0x04033EBC RID: 212668
 			TxtTips,
-			// Token: 0x040394FA RID: 234746
+			// Token: 0x04033EBD RID: 212669
 			TexIcon,
-			// Token: 0x040394FB RID: 234747
+			// Token: 0x04033EBE RID: 212670
 			SpriteQuality,
-			// Token: 0x040394FC RID: 234748
+			// Token: 0x04033EBF RID: 212671
 			NiagaraPurple,
-			// Token: 0x040394FD RID: 234749
+			// Token: 0x04033EC0 RID: 212672
 			NiagaraGold,
-			// Token: 0x040394FE RID: 234750
+			// Token: 0x04033EC1 RID: 212673
 			CountItem,
-			// Token: 0x040394FF RID: 234751
+			// Token: 0x04033EC2 RID: 212674
 			TxtCount,
-			// Token: 0x04039500 RID: 234752
+			// Token: 0x04033EC3 RID: 212675
 			NiagaraBlue
 		}
 	}

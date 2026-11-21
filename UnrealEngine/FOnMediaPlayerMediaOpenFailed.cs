@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020022A2 RID: 8866
+	// Token: 0x02000755 RID: 1877
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnMediaPlayerMediaOpenFailed : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06021B8B RID: 138123 RVA: 0x0031DB6E File Offset: 0x0031BD6E
+		// Token: 0x0600A3F3 RID: 41971 RVA: 0x000F204A File Offset: 0x000F024A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnMediaPlayerMediaOpenFailed.StaticFunctionPtr();
 		}
 
-		// Token: 0x06021B8C RID: 138124 RVA: 0x0031DB7A File Offset: 0x0031BD7A
+		// Token: 0x0600A3F4 RID: 41972 RVA: 0x000F2056 File Offset: 0x000F0256
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnMediaPlayerMediaOpenFailed._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnMediaPlayerMediaOpenFailed._FunctionPtr;
 		}
 
-		// Token: 0x06021B8D RID: 138125 RVA: 0x0031DB9D File Offset: 0x0031BD9D
+		// Token: 0x0600A3F5 RID: 41973 RVA: 0x000F2079 File Offset: 0x000F0279
 		public FOnMediaPlayerMediaOpenFailed()
 		{
 		}
 
-		// Token: 0x06021B8E RID: 138126 RVA: 0x0031DBA5 File Offset: 0x0031BDA5
+		// Token: 0x0600A3F6 RID: 41974 RVA: 0x000F2081 File Offset: 0x000F0281
 		[NullableContext(2)]
 		public FOnMediaPlayerMediaOpenFailed(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021B8F RID: 138127 RVA: 0x0031DBAF File Offset: 0x0031BDAF
+		// Token: 0x0600A3F7 RID: 41975 RVA: 0x000F208B File Offset: 0x000F028B
 		public FOnMediaPlayerMediaOpenFailed(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06021B90 RID: 138128 RVA: 0x0031DBBA File Offset: 0x0031BDBA
+		// Token: 0x0600A3F8 RID: 41976 RVA: 0x000F2096 File Offset: 0x000F0296
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06021B91 RID: 138129 RVA: 0x0031DBEC File Offset: 0x0031BDEC
+		// Token: 0x0600A3F9 RID: 41977 RVA: 0x000F20C8 File Offset: 0x000F02C8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<string> Callback)
 		{
 			if (FOnMediaPlayerMediaOpenFailed.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnMediaPlayerMediaOpenFailed.RegisterId);
 		}
 
-		// Token: 0x06021B92 RID: 138130 RVA: 0x0031DC26 File Offset: 0x0031BE26
+		// Token: 0x0600A3FA RID: 41978 RVA: 0x000F2102 File Offset: 0x000F0302
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<string> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06021B93 RID: 138131 RVA: 0x0031DC30 File Offset: 0x0031BE30
+		// Token: 0x0600A3FB RID: 41979 RVA: 0x000F210C File Offset: 0x000F030C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(string FailedUrl)
 		{
 			FOnMediaPlayerMediaOpenFailed.__FOnMediaPlayerMediaOpenFailed_DelegateParams* ptr = stackalloc FOnMediaPlayerMediaOpenFailed.__FOnMediaPlayerMediaOpenFailed_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnMediaPlayerMediaOpenFailed.__FOnMediaPlayerMediaOpenFailed_DelegateParams) & -16L;
@@ -88,10 +85,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnMediaPlayerMediaOpenFailed._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06021B94 RID: 138132 RVA: 0x0031DC84 File Offset: 0x0031BE84
+		// Token: 0x0600A3FC RID: 41980 RVA: 0x000F2160 File Offset: 0x000F0360
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -103,31 +99,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x04011FD4 RID: 73684
+		// Token: 0x040045EE RID: 17902
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011FD5 RID: 73685
+		// Token: 0x040045EF RID: 17903
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MediaAssets.OnMediaPlayerMediaOpenFailed__DelegateSignature";
 
-		// Token: 0x04011FD6 RID: 73686
+		// Token: 0x040045F0 RID: 17904
 		private static int RegisterId;
 
-		// Token: 0x02003614 RID: 13844
+		// Token: 0x02000F42 RID: 3906
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnMediaPlayerMediaOpenFailed_DelegateParams
+		private ref struct __FOnMediaPlayerMediaOpenFailed_DelegateParams
 		{
-			// Token: 0x040176A4 RID: 95908
+			// Token: 0x04006316 RID: 25366
 			[FieldOffset(0)]
 			public FString FailedUrl;
 		}
 
-		// Token: 0x02003615 RID: 13845
+		// Token: 0x02000F43 RID: 3907
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040176A5 RID: 95909
+			// Token: 0x04006317 RID: 25367
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

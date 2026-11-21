@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006804 RID: 26628
+	// Token: 0x02005754 RID: 22356
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlHandBookItem : SyncGridProxyAbstract<DangoBrawlHandBookItemData>
 	{
-		// Token: 0x0604269B RID: 272027 RVA: 0x01020A98 File Offset: 0x0101EC98
+		// Token: 0x060371F0 RID: 225776 RVA: 0x00F61FDC File Offset: 0x00F601DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604269C RID: 272028 RVA: 0x01020C27 File Offset: 0x0101EE27
+		// Token: 0x060371F1 RID: 225777 RVA: 0x00F6216B File Offset: 0x00F6036B
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x0604269D RID: 272029 RVA: 0x01020C4C File Offset: 0x0101EE4C
+		// Token: 0x060371F2 RID: 225778 RVA: 0x00F62190 File Offset: 0x00F60390
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BlurGridPool.Clear();
 		}
 
-		// Token: 0x0604269E RID: 272030 RVA: 0x01020C74 File Offset: 0x0101EE74
+		// Token: 0x060371F3 RID: 225779 RVA: 0x00F621B8 File Offset: 0x00F603B8
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlHandBookItemData data)
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshBlurGrids(posList);
 		}
 
-		// Token: 0x0604269F RID: 272031 RVA: 0x01020EA4 File Offset: 0x0101F0A4
+		// Token: 0x060371F4 RID: 225780 RVA: 0x00F623E8 File Offset: 0x00F605E8
 		[NullableContext(1)]
 		private void RefreshBlurGrids(PanelPos[] posList)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060426A0 RID: 272032 RVA: 0x01020FE2 File Offset: 0x0101F1E2
+		// Token: 0x060371F5 RID: 225781 RVA: 0x00F62526 File Offset: 0x00F60726
 		private void OnToggleClick(EToggleState state)
 		{
 			if (this.ItemData != null)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060426A1 RID: 272033 RVA: 0x01021004 File Offset: 0x0101F204
+		// Token: 0x060371F6 RID: 225782 RVA: 0x00F62548 File Offset: 0x00F60748
 		public UUIItem GetNavigationItem()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(7);
@@ -211,20 +211,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return extendToggle.RootUIComp.Get();
 		}
 
-		// Token: 0x040229D3 RID: 141779
+		// Token: 0x0401D230 RID: 119344
 		private DangoBrawlHandBookItemData ItemData;
 
-		// Token: 0x040229D4 RID: 141780
+		// Token: 0x0401D231 RID: 119345
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x040229D5 RID: 141781
+		// Token: 0x0401D232 RID: 119346
 		private bool? SeqIsLocked;
 
-		// Token: 0x040229D6 RID: 141782
+		// Token: 0x0401D233 RID: 119347
 		[Nullable(1)]
 		private readonly List<UUIItem> BlurGridPool = new List<UUIItem>();
 
-		// Token: 0x040229D7 RID: 141783
+		// Token: 0x0401D234 RID: 119348
 		[Nullable(new byte[]
 		{
 			2,
@@ -232,37 +232,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<DangoBrawlHandBookItemData> OnClickCb;
 
-		// Token: 0x040229D8 RID: 141784
+		// Token: 0x0401D235 RID: 119349
 		public Action<int> OnUnlockAnimPlayed;
 
-		// Token: 0x040229D9 RID: 141785
+		// Token: 0x0401D236 RID: 119350
 		public Func<int, bool> IsSelected = (int _) => false;
 
-		// Token: 0x0200C976 RID: 51574
+		// Token: 0x0200B343 RID: 45891
 		[NullableContext(0)]
 		private enum EHandBookItemComponent
 		{
-			// Token: 0x0403CD60 RID: 249184
+			// Token: 0x0403764D RID: 226893
 			SprFrameSelect,
-			// Token: 0x0403CD61 RID: 249185
+			// Token: 0x0403764E RID: 226894
 			TexQuality,
-			// Token: 0x0403CD62 RID: 249186
+			// Token: 0x0403764F RID: 226895
 			TexIcon,
-			// Token: 0x0403CD63 RID: 249187
+			// Token: 0x04037650 RID: 226896
 			TxtName,
-			// Token: 0x0403CD64 RID: 249188
+			// Token: 0x04037651 RID: 226897
 			GridContent,
-			// Token: 0x0403CD65 RID: 249189
+			// Token: 0x04037652 RID: 226898
 			SprGrid,
-			// Token: 0x0403CD66 RID: 249190
+			// Token: 0x04037653 RID: 226899
 			UnlockItem,
-			// Token: 0x0403CD67 RID: 249191
+			// Token: 0x04037654 RID: 226900
 			TogItem,
-			// Token: 0x0403CD68 RID: 249192
+			// Token: 0x04037655 RID: 226901
 			NewItem,
-			// Token: 0x0403CD69 RID: 249193
+			// Token: 0x04037656 RID: 226902
 			CostItem,
-			// Token: 0x0403CD6A RID: 249194
+			// Token: 0x04037657 RID: 226903
 			UniqueWeaponItem
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044DC RID: 17628
+	// Token: 0x02004944 RID: 18756
 	public struct IHoldBreathResult : IFlatbufferObject
 	{
-		// Token: 0x17007C6B RID: 31851
-		// (get) Token: 0x0601A5AA RID: 107946 RVA: 0x003C304C File Offset: 0x003C124C
+		// Token: 0x170082AA RID: 33450
+		// (get) Token: 0x0601BD7B RID: 114043 RVA: 0x003EF258 File Offset: 0x003ED458
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A5AB RID: 107947 RVA: 0x003C3059 File Offset: 0x003C1259
+		// Token: 0x0601BD7C RID: 114044 RVA: 0x003EF265 File Offset: 0x003ED465
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A5AC RID: 107948 RVA: 0x003C3060 File Offset: 0x003C1260
+		// Token: 0x0601BD7D RID: 114045 RVA: 0x003EF26C File Offset: 0x003ED46C
 		public static IHoldBreathResult GetRootAsIHoldBreathResult(ByteBuffer _bb)
 		{
 			return IHoldBreathResult.GetRootAsIHoldBreathResult(_bb, default(IHoldBreathResult));
 		}
 
-		// Token: 0x0601A5AD RID: 107949 RVA: 0x003C307C File Offset: 0x003C127C
+		// Token: 0x0601BD7E RID: 114046 RVA: 0x003EF288 File Offset: 0x003ED488
 		public static IHoldBreathResult GetRootAsIHoldBreathResult(ByteBuffer _bb, IHoldBreathResult obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A5AE RID: 107950 RVA: 0x003C3099 File Offset: 0x003C1299
+		// Token: 0x0601BD7F RID: 114047 RVA: 0x003EF2A5 File Offset: 0x003ED4A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A5AF RID: 107951 RVA: 0x003C30A8 File Offset: 0x003C12A8
+		// Token: 0x0601BD80 RID: 114048 RVA: 0x003EF2B4 File Offset: 0x003ED4B4
 		public IHoldBreathResult __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007C6C RID: 31852
-		// (get) Token: 0x0601A5B0 RID: 107952 RVA: 0x003C30B8 File Offset: 0x003C12B8
+		// Token: 0x170082AB RID: 33451
+		// (get) Token: 0x0601BD81 RID: 114049 RVA: 0x003EF2C4 File Offset: 0x003ED4C4
 		public EDartSkillResultType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C6D RID: 31853
-		// (get) Token: 0x0601A5B1 RID: 107953 RVA: 0x003C30F4 File Offset: 0x003C12F4
+		// Token: 0x170082AC RID: 33452
+		// (get) Token: 0x0601BD82 RID: 114050 RVA: 0x003EF300 File Offset: 0x003ED500
 		public int Probability
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C6E RID: 31854
-		// (get) Token: 0x0601A5B2 RID: 107954 RVA: 0x003C3130 File Offset: 0x003C1330
+		// Token: 0x170082AD RID: 33453
+		// (get) Token: 0x0601BD83 RID: 114051 RVA: 0x003EF33C File Offset: 0x003ED53C
 		public int SpeedReducePercent
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A5B3 RID: 107955 RVA: 0x003C316C File Offset: 0x003C136C
+		// Token: 0x0601BD84 RID: 114052 RVA: 0x003EF378 File Offset: 0x003ED578
 		public static Offset<IHoldBreathResult> CreateIHoldBreathResult(FlatBufferBuilder builder, EDartSkillResultType Type = EDartSkillResultType.NoBust, int Probability = 0, int SpeedReducePercent = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IHoldBreathResult.EndIHoldBreathResult(builder);
 		}
 
-		// Token: 0x0601A5B4 RID: 107956 RVA: 0x003C3190 File Offset: 0x003C1390
+		// Token: 0x0601BD85 RID: 114053 RVA: 0x003EF39C File Offset: 0x003ED59C
 		public static void StartIHoldBreathResult(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601A5B5 RID: 107957 RVA: 0x003C3199 File Offset: 0x003C1399
+		// Token: 0x0601BD86 RID: 114054 RVA: 0x003EF3A5 File Offset: 0x003ED5A5
 		public static void AddType(FlatBufferBuilder builder, EDartSkillResultType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601A5B6 RID: 107958 RVA: 0x003C31A4 File Offset: 0x003C13A4
+		// Token: 0x0601BD87 RID: 114055 RVA: 0x003EF3B0 File Offset: 0x003ED5B0
 		public static void AddProbability(FlatBufferBuilder builder, int probability)
 		{
 			builder.AddInt(1, probability, 0);
 		}
 
-		// Token: 0x0601A5B7 RID: 107959 RVA: 0x003C31AF File Offset: 0x003C13AF
+		// Token: 0x0601BD88 RID: 114056 RVA: 0x003EF3BB File Offset: 0x003ED5BB
 		public static void AddSpeedReducePercent(FlatBufferBuilder builder, int speedReducePercent)
 		{
 			builder.AddInt(2, speedReducePercent, 0);
 		}
 
-		// Token: 0x0601A5B8 RID: 107960 RVA: 0x003C31BA File Offset: 0x003C13BA
+		// Token: 0x0601BD89 RID: 114057 RVA: 0x003EF3C6 File Offset: 0x003ED5C6
 		public static Offset<IHoldBreathResult> EndIHoldBreathResult(FlatBufferBuilder builder)
 		{
 			return new Offset<IHoldBreathResult>(builder.EndTable());
 		}
 
-		// Token: 0x0601A5B9 RID: 107961 RVA: 0x003C31C8 File Offset: 0x003C13C8
+		// Token: 0x0601BD8A RID: 114058 RVA: 0x003EF3D4 File Offset: 0x003ED5D4
 		public IHoldBreathResultT UnPack()
 		{
 			IHoldBreathResultT holdBreathResultT = new IHoldBreathResultT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return holdBreathResultT;
 		}
 
-		// Token: 0x0601A5BA RID: 107962 RVA: 0x003C31E3 File Offset: 0x003C13E3
+		// Token: 0x0601BD8B RID: 114059 RVA: 0x003EF3EF File Offset: 0x003ED5EF
 		public void UnPackTo(IHoldBreathResultT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.SpeedReducePercent = this.SpeedReducePercent;
 		}
 
-		// Token: 0x0601A5BB RID: 107963 RVA: 0x003C320C File Offset: 0x003C140C
+		// Token: 0x0601BD8C RID: 114060 RVA: 0x003EF418 File Offset: 0x003ED618
 		public static Offset<IHoldBreathResult> Pack(FlatBufferBuilder builder, IHoldBreathResultT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IHoldBreathResult.CreateIHoldBreathResult(builder, _o.Type, _o.Probability, _o.SpeedReducePercent);
 		}
 
-		// Token: 0x0400C4F4 RID: 50420
+		// Token: 0x0400CF22 RID: 53026
 		private Table __p;
 	}
 }

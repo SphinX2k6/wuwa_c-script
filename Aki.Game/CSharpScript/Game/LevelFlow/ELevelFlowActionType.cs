@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F6C RID: 28524
+	// Token: 0x020060ED RID: 24813
 	public enum ELevelFlowActionType
 	{
-		// Token: 0x0402433D RID: 148285
+		// Token: 0x0401F5F2 RID: 128498
 		OperationRestriction
 	}
 }

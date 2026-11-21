@@ -4,69 +4,69 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005567 RID: 21863
+	// Token: 0x02004539 RID: 17721
 	[NullableContext(1)]
 	public interface IDynamicMarkCreateParams
 	{
-		// Token: 0x170085F7 RID: 34295
-		// (get) Token: 0x06037BEA RID: 228330
-		// (set) Token: 0x06037BEB RID: 228331
+		// Token: 0x17005997 RID: 22935
+		// (get) Token: 0x0602CABA RID: 182970
+		// (set) Token: 0x0602CABB RID: 182971
 		TTrackTarget TrackTarget { get; set; }
 
-		// Token: 0x170085F8 RID: 34296
-		// (get) Token: 0x06037BEC RID: 228332
-		// (set) Token: 0x06037BED RID: 228333
+		// Token: 0x17005998 RID: 22936
+		// (get) Token: 0x0602CABC RID: 182972
+		// (set) Token: 0x0602CABD RID: 182973
 		int MarkConfigId { get; set; }
 
-		// Token: 0x170085F9 RID: 34297
-		// (get) Token: 0x06037BEE RID: 228334
-		// (set) Token: 0x06037BEF RID: 228335
+		// Token: 0x17005999 RID: 22937
+		// (get) Token: 0x0602CABE RID: 182974
+		// (set) Token: 0x0602CABF RID: 182975
 		EMarkType MarkType { get; set; }
 
-		// Token: 0x170085FA RID: 34298
-		// (get) Token: 0x06037BF0 RID: 228336
-		// (set) Token: 0x06037BF1 RID: 228337
+		// Token: 0x1700599A RID: 22938
+		// (get) Token: 0x0602CAC0 RID: 182976
+		// (set) Token: 0x0602CAC1 RID: 182977
 		int? MarkId { get; set; }
 
-		// Token: 0x170085FB RID: 34299
-		// (get) Token: 0x06037BF2 RID: 228338
-		// (set) Token: 0x06037BF3 RID: 228339
+		// Token: 0x1700599B RID: 22939
+		// (get) Token: 0x0602CAC2 RID: 182978
+		// (set) Token: 0x0602CAC3 RID: 182979
 		ETrackSource? TrackSource { get; set; }
 
-		// Token: 0x170085FC RID: 34300
-		// (get) Token: 0x06037BF4 RID: 228340
-		// (set) Token: 0x06037BF5 RID: 228341
+		// Token: 0x1700599C RID: 22940
+		// (get) Token: 0x0602CAC4 RID: 182980
+		// (set) Token: 0x0602CAC5 RID: 182981
 		bool? DestroyOnUnTrack { get; set; }
 
-		// Token: 0x170085FD RID: 34301
-		// (get) Token: 0x06037BF6 RID: 228342
-		// (set) Token: 0x06037BF7 RID: 228343
+		// Token: 0x1700599D RID: 22941
+		// (get) Token: 0x0602CAC6 RID: 182982
+		// (set) Token: 0x0602CAC7 RID: 182983
 		int? TeleportId { get; set; }
 
-		// Token: 0x170085FE RID: 34302
-		// (get) Token: 0x06037BF8 RID: 228344
-		// (set) Token: 0x06037BF9 RID: 228345
+		// Token: 0x1700599E RID: 22942
+		// (get) Token: 0x0602CAC8 RID: 182984
+		// (set) Token: 0x0602CAC9 RID: 182985
 		int? EntityConfigId { get; set; }
 
-		// Token: 0x170085FF RID: 34303
-		// (get) Token: 0x06037BFA RID: 228346
-		// (set) Token: 0x06037BFB RID: 228347
+		// Token: 0x1700599F RID: 22943
+		// (get) Token: 0x0602CACA RID: 182986
+		// (set) Token: 0x0602CACB RID: 182987
 		MarkState? ServerMarkState { get; set; }
 
-		// Token: 0x17008600 RID: 34304
-		// (get) Token: 0x06037BFC RID: 228348
-		// (set) Token: 0x06037BFD RID: 228349
+		// Token: 0x170059A0 RID: 22944
+		// (get) Token: 0x0602CACC RID: 182988
+		// (set) Token: 0x0602CACD RID: 182989
 		[Nullable(2)]
 		MapAndDungeonInfo MapAndDungeonInfo { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008601 RID: 34305
-		// (get) Token: 0x06037BFE RID: 228350
-		// (set) Token: 0x06037BFF RID: 228351
+		// Token: 0x170059A1 RID: 22945
+		// (get) Token: 0x0602CACE RID: 182990
+		// (set) Token: 0x0602CACF RID: 182991
 		EMapGravityDirection? Gravity { get; set; }
 
-		// Token: 0x17008602 RID: 34306
-		// (get) Token: 0x06037C00 RID: 228352
-		// (set) Token: 0x06037C01 RID: 228353
+		// Token: 0x170059A2 RID: 22946
+		// (get) Token: 0x0602CAD0 RID: 182992
+		// (set) Token: 0x0602CAD1 RID: 182993
 		int? AreaId { get; set; }
 	}
 }

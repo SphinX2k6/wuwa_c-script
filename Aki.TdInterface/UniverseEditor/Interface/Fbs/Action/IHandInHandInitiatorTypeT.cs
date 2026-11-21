@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068C2 RID: 26818
+	// Token: 0x02006F72 RID: 28530
 	public class IHandInHandInitiatorTypeT
 	{
-		// Token: 0x1700C709 RID: 50953
-		// (get) Token: 0x0602EC7A RID: 191610 RVA: 0x006627AE File Offset: 0x006609AE
-		// (set) Token: 0x0602EC7B RID: 191611 RVA: 0x006627B6 File Offset: 0x006609B6
+		// Token: 0x1700D101 RID: 53505
+		// (get) Token: 0x06031626 RID: 202278 RVA: 0x006B283A File Offset: 0x006B0A3A
+		// (set) Token: 0x06031627 RID: 202279 RVA: 0x006B2842 File Offset: 0x006B0A42
 		public EHandInHandInitiatorType Type { get; set; }
 
-		// Token: 0x0602EC7C RID: 191612 RVA: 0x006627BF File Offset: 0x006609BF
+		// Token: 0x06031628 RID: 202280 RVA: 0x006B284B File Offset: 0x006B0A4B
 		public IHandInHandInitiatorTypeT()
 		{
 			this.Type = EHandInHandInitiatorType.Player;

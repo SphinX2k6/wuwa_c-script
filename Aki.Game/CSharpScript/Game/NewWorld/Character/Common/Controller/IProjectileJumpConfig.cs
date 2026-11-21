@@ -2,47 +2,47 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B5 RID: 28853
+	// Token: 0x02006314 RID: 25364
 	public interface IProjectileJumpConfig
 	{
-		// Token: 0x17009C64 RID: 40036
-		// (get) Token: 0x06046580 RID: 288128
-		// (set) Token: 0x06046581 RID: 288129
+		// Token: 0x17007458 RID: 29784
+		// (get) Token: 0x0603D62A RID: 251434
+		// (set) Token: 0x0603D62B RID: 251435
 		float BaseJumpHeight { get; set; }
 
-		// Token: 0x17009C65 RID: 40037
-		// (get) Token: 0x06046582 RID: 288130
-		// (set) Token: 0x06046583 RID: 288131
+		// Token: 0x17007459 RID: 29785
+		// (get) Token: 0x0603D62C RID: 251436
+		// (set) Token: 0x0603D62D RID: 251437
 		float BaseJumpDistanceRate { get; set; }
 
-		// Token: 0x17009C66 RID: 40038
-		// (get) Token: 0x06046584 RID: 288132
-		// (set) Token: 0x06046585 RID: 288133
+		// Token: 0x1700745A RID: 29786
+		// (get) Token: 0x0603D62E RID: 251438
+		// (set) Token: 0x0603D62F RID: 251439
 		float MaxJumpDistance { get; set; }
 
-		// Token: 0x17009C67 RID: 40039
-		// (get) Token: 0x06046586 RID: 288134
-		// (set) Token: 0x06046587 RID: 288135
+		// Token: 0x1700745B RID: 29787
+		// (get) Token: 0x0603D630 RID: 251440
+		// (set) Token: 0x0603D631 RID: 251441
 		float MaxJumpHeight { get; set; }
 
-		// Token: 0x17009C68 RID: 40040
-		// (get) Token: 0x06046588 RID: 288136
-		// (set) Token: 0x06046589 RID: 288137
+		// Token: 0x1700745C RID: 29788
+		// (get) Token: 0x0603D632 RID: 251442
+		// (set) Token: 0x0603D633 RID: 251443
 		float JumpAcceleration { get; set; }
 
-		// Token: 0x17009C69 RID: 40041
-		// (get) Token: 0x0604658A RID: 288138
-		// (set) Token: 0x0604658B RID: 288139
+		// Token: 0x1700745D RID: 29789
+		// (get) Token: 0x0603D634 RID: 251444
+		// (set) Token: 0x0603D635 RID: 251445
 		float TargetSpeedForJump { get; set; }
 
-		// Token: 0x17009C6A RID: 40042
-		// (get) Token: 0x0604658C RID: 288140
-		// (set) Token: 0x0604658D RID: 288141
+		// Token: 0x1700745E RID: 29790
+		// (get) Token: 0x0603D636 RID: 251446
+		// (set) Token: 0x0603D637 RID: 251447
 		float AllTimeForJump { get; set; }
 
-		// Token: 0x17009C6B RID: 40043
-		// (get) Token: 0x0604658E RID: 288142
-		// (set) Token: 0x0604658F RID: 288143
+		// Token: 0x1700745F RID: 29791
+		// (get) Token: 0x0603D638 RID: 251448
+		// (set) Token: 0x0603D639 RID: 251449
 		float JumpBlendTime { get; set; }
 	}
 }

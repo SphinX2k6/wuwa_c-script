@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200727B RID: 29307
+	// Token: 0x02007A50 RID: 31312
 	public class ISyncVarToActorStateT
 	{
-		// Token: 0x1700D972 RID: 55666
-		// (get) Token: 0x06034001 RID: 212993 RVA: 0x006FE17E File Offset: 0x006FC37E
-		// (set) Token: 0x06034002 RID: 212994 RVA: 0x006FE186 File Offset: 0x006FC386
+		// Token: 0x1700E56B RID: 58731
+		// (get) Token: 0x06037303 RID: 226051 RVA: 0x0075F4DE File Offset: 0x0075D6DE
+		// (set) Token: 0x06037304 RID: 226052 RVA: 0x0075F4E6 File Offset: 0x0075D6E6
 		public string VarName { get; set; }
 
-		// Token: 0x1700D973 RID: 55667
-		// (get) Token: 0x06034003 RID: 212995 RVA: 0x006FE18F File Offset: 0x006FC38F
-		// (set) Token: 0x06034004 RID: 212996 RVA: 0x006FE197 File Offset: 0x006FC397
+		// Token: 0x1700E56C RID: 58732
+		// (get) Token: 0x06037305 RID: 226053 RVA: 0x0075F4EF File Offset: 0x0075D6EF
+		// (set) Token: 0x06037306 RID: 226054 RVA: 0x0075F4F7 File Offset: 0x0075D6F7
 		public string StateKey { get; set; }
 
-		// Token: 0x06034005 RID: 212997 RVA: 0x006FE1A0 File Offset: 0x006FC3A0
+		// Token: 0x06037307 RID: 226055 RVA: 0x0075F500 File Offset: 0x0075D700
 		public ISyncVarToActorStateT()
 		{
 			this.VarName = null;

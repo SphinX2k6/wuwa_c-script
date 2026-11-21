@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072EB RID: 29419
+	// Token: 0x0200646E RID: 25710
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiShengGuYangCamera : ISpecialGameplayCamera
 	{
-		// Token: 0x17009F4B RID: 40779
-		// (get) Token: 0x0604833B RID: 295739 RVA: 0x0128B01E File Offset: 0x0128921E
+		// Token: 0x170076E9 RID: 30441
+		// (get) Token: 0x0603E787 RID: 255879 RVA: 0x0122D9D2 File Offset: 0x0122BBD2
 		[Nullable(2)]
 		private UCameraComponent Camera
 		{
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604833C RID: 295740 RVA: 0x0128B041 File Offset: 0x01289241
+		// Token: 0x0603E788 RID: 255880 RVA: 0x0122D9F5 File Offset: 0x0122BBF5
 		public void OnInit(ACameraActor camera, CameraModelInstance cameraModel)
 		{
 			this.CameraActor = camera;
 			this.OnInitInternal();
 		}
 
-		// Token: 0x0604833D RID: 295741 RVA: 0x0128B050 File Offset: 0x01289250
+		// Token: 0x0603E789 RID: 255881 RVA: 0x0122DA04 File Offset: 0x0122BC04
 		public void Update(float deltaTime)
 		{
 			TsBaseCharacter flyActor = this.FlyActor;
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604833E RID: 295742 RVA: 0x0128C300 File Offset: 0x0128A500
+		// Token: 0x0603E78A RID: 255882 RVA: 0x0122ECB4 File Offset: 0x0122CEB4
 		public void OnDestroy()
 		{
 			if (this.FlySplineActor != null)
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.InputComp = null;
 		}
 
-		// Token: 0x0604833F RID: 295743 RVA: 0x0128C38C File Offset: 0x0128A58C
+		// Token: 0x0603E78B RID: 255883 RVA: 0x0122ED40 File Offset: 0x0122CF40
 		private void OnInitInternal()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048340 RID: 295744 RVA: 0x0128C5B0 File Offset: 0x0128A7B0
+		// Token: 0x0603E78C RID: 255884 RVA: 0x0122EF64 File Offset: 0x0122D164
 		private bool AtOriginLeft(Vector origin, Vector target, Vector originDirection)
 		{
 			FVectorDouble fvectorDouble = origin.ToUeVector(false);
@@ -485,142 +485,142 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return Math.Acos(MathUtils.Instance.Clamp(vector.DotProduct(vector2), -1.0, 1.0)) * 57.295780181884766 > 90.0;
 		}
 
-		// Token: 0x0402621B RID: 156187
+		// Token: 0x04021506 RID: 136454
 		[Nullable(2)]
 		private ACameraActor CameraActor;
 
-		// Token: 0x0402621C RID: 156188
+		// Token: 0x04021507 RID: 136455
 		[Nullable(2)]
 		private TsBaseCharacter FlyActor;
 
-		// Token: 0x0402621D RID: 156189
+		// Token: 0x04021508 RID: 136456
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x0402621E RID: 156190
+		// Token: 0x04021509 RID: 136457
 		[Nullable(2)]
 		private BaseMoveComponent MoveComp;
 
-		// Token: 0x0402621F RID: 156191
+		// Token: 0x0402150A RID: 136458
 		[Nullable(2)]
 		private CharacterInputComponent InputComp;
 
-		// Token: 0x04026220 RID: 156192
+		// Token: 0x0402150B RID: 136459
 		[Nullable(2)]
 		private TsGameSplineActor FlySplineActor;
 
-		// Token: 0x04026221 RID: 156193
+		// Token: 0x0402150C RID: 136460
 		[Nullable(2)]
 		private USplineComponent MoveSplineComp;
 
-		// Token: 0x04026222 RID: 156194
+		// Token: 0x0402150D RID: 136461
 		[Nullable(2)]
 		private CommonEffectMoveSpline2_C CameraMoveSplineActor;
 
-		// Token: 0x04026223 RID: 156195
+		// Token: 0x0402150E RID: 136462
 		[Nullable(2)]
 		private UKuroMoveSplineComponent CameraMoveSpline;
 
-		// Token: 0x04026224 RID: 156196
+		// Token: 0x0402150F RID: 136463
 		private float SplineDistance;
 
-		// Token: 0x04026225 RID: 156197
+		// Token: 0x04021510 RID: 136464
 		private readonly Vector InputValue = Vector.Create();
 
-		// Token: 0x04026226 RID: 156198
+		// Token: 0x04021511 RID: 136465
 		private readonly Vector InputOffset = Vector.Create();
 
-		// Token: 0x04026227 RID: 156199
+		// Token: 0x04021512 RID: 136466
 		private readonly Vector MaxInputOffset = Vector.Create();
 
-		// Token: 0x04026228 RID: 156200
+		// Token: 0x04021513 RID: 136467
 		private int CurrentInputSplineIndex = 1;
 
-		// Token: 0x04026229 RID: 156201
+		// Token: 0x04021514 RID: 136468
 		private bool IsSprint;
 
-		// Token: 0x0402622A RID: 156202
+		// Token: 0x04021515 RID: 136469
 		private float SplineSpeed;
 
-		// Token: 0x0402622B RID: 156203
+		// Token: 0x04021516 RID: 136470
 		private float CameraDistance;
 
-		// Token: 0x0402622C RID: 156204
+		// Token: 0x04021517 RID: 136471
 		private float CameraMoveSpeed;
 
-		// Token: 0x0402622D RID: 156205
+		// Token: 0x04021518 RID: 136472
 		private readonly Vector MoveSplineLocation = Vector.Create();
 
-		// Token: 0x0402622E RID: 156206
+		// Token: 0x04021519 RID: 136473
 		private readonly Vector MoveSplineUpVector = Vector.Create();
 
-		// Token: 0x0402622F RID: 156207
+		// Token: 0x0402151A RID: 136474
 		private readonly Vector MoveSplineRightVector = Vector.Create();
 
-		// Token: 0x04026230 RID: 156208
+		// Token: 0x0402151B RID: 136475
 		private readonly Vector MoveSplineForwardVector = Vector.Create();
 
-		// Token: 0x04026231 RID: 156209
+		// Token: 0x0402151C RID: 136476
 		private readonly Vector MoveTowardOffset = Vector.Create();
 
-		// Token: 0x04026232 RID: 156210
+		// Token: 0x0402151D RID: 136477
 		private float SplineTempDistance;
 
-		// Token: 0x04026233 RID: 156211
+		// Token: 0x0402151E RID: 136478
 		private readonly Vector JoystickOffsetLocationX = Vector.Create();
 
-		// Token: 0x04026234 RID: 156212
+		// Token: 0x0402151F RID: 136479
 		private double JoystickPursueDistance;
 
-		// Token: 0x04026235 RID: 156213
+		// Token: 0x04021520 RID: 136480
 		private readonly Vector CameraAimPointLocation = Vector.Create();
 
-		// Token: 0x04026236 RID: 156214
+		// Token: 0x04021521 RID: 136481
 		private int JoystickPursueType;
 
-		// Token: 0x04026237 RID: 156215
+		// Token: 0x04021522 RID: 136482
 		private int CameraPursueType;
 
-		// Token: 0x04026238 RID: 156216
+		// Token: 0x04021523 RID: 136483
 		private bool IsPlayerOperation = true;
 
-		// Token: 0x04026239 RID: 156217
+		// Token: 0x04021524 RID: 136484
 		private double LastPlayerOperationTime;
 
-		// Token: 0x0402623A RID: 156218
+		// Token: 0x04021525 RID: 136485
 		private float PlayerCameraAngle;
 
-		// Token: 0x0402623B RID: 156219
+		// Token: 0x04021526 RID: 136486
 		private float OperateCameraOffsetDistance;
 
-		// Token: 0x0402623C RID: 156220
+		// Token: 0x04021527 RID: 136487
 		private float CurrentLimitPointDistance;
 
-		// Token: 0x0402623D RID: 156221
+		// Token: 0x04021528 RID: 136488
 		private float CameraInterpDistanceY;
 
-		// Token: 0x0402623E RID: 156222
+		// Token: 0x04021529 RID: 136489
 		private bool First = true;
 
-		// Token: 0x0402623F RID: 156223
+		// Token: 0x0402152A RID: 136490
 		private readonly Vector TempVector1 = Vector.Create();
 
-		// Token: 0x04026240 RID: 156224
+		// Token: 0x0402152B RID: 136491
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x04026241 RID: 156225
+		// Token: 0x0402152C RID: 136492
 		private readonly Vector TempVector3 = Vector.Create();
 
-		// Token: 0x04026242 RID: 156226
+		// Token: 0x0402152D RID: 136493
 		private readonly Rotator TempRotator1 = Rotator.Create();
 
-		// Token: 0x04026243 RID: 156227
+		// Token: 0x0402152E RID: 136494
 		private readonly Rotator TempRotator2 = Rotator.Create();
 
-		// Token: 0x04026244 RID: 156228
+		// Token: 0x0402152F RID: 136495
 		private readonly Rotator TempRotator3 = Rotator.Create();
 
-		// Token: 0x04026245 RID: 156229
+		// Token: 0x04021530 RID: 136496
 		private readonly Transform TempTransform = Transform.Create(Quat.Create(0.0, 0.0, 0.0, 1.0), Vector.ZeroVectorProxy, Vector.OneVectorProxy);
 	}
 }

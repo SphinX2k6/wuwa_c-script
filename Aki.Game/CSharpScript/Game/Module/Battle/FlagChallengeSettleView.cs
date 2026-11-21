@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C40 RID: 23616
+	// Token: 0x02004C20 RID: 19488
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeSettleView : UiViewBase
 	{
-		// Token: 0x0603BA88 RID: 244360 RVA: 0x00E3CD8E File Offset: 0x00E3AF8E
+		// Token: 0x060309D3 RID: 199123 RVA: 0x00D8D0FE File Offset: 0x00D8B2FE
 		public FlagChallengeSettleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603BA89 RID: 244361 RVA: 0x00E3CD98 File Offset: 0x00E3AF98
+		// Token: 0x060309D4 RID: 199124 RVA: 0x00D8D108 File Offset: 0x00D8B308
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA8A RID: 244362 RVA: 0x00E3CE88 File Offset: 0x00E3B088
+		// Token: 0x060309D5 RID: 199125 RVA: 0x00D8D1F8 File Offset: 0x00D8B3F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeSettleView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -53,27 +53,27 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA8B RID: 244363 RVA: 0x00E3CECB File Offset: 0x00E3B0CB
+		// Token: 0x060309D6 RID: 199126 RVA: 0x00D8D23B File Offset: 0x00D8B43B
 		protected override void OnBeforeShow()
 		{
 			this.StartAutoLeaveTimer();
 			this.TryPlaySequence();
 		}
 
-		// Token: 0x0603BA8C RID: 244364 RVA: 0x00E3CED9 File Offset: 0x00E3B0D9
+		// Token: 0x060309D7 RID: 199127 RVA: 0x00D8D249 File Offset: 0x00D8B449
 		protected override void OnBeforeHide()
 		{
 			this.ClearAutoLeaveTimer();
 		}
 
-		// Token: 0x0603BA8D RID: 244365 RVA: 0x00E3CEE1 File Offset: 0x00E3B0E1
+		// Token: 0x060309D8 RID: 199128 RVA: 0x00D8D251 File Offset: 0x00D8B451
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearAutoLeaveTimer();
 			this.IsPlayed = false;
 		}
 
-		// Token: 0x0603BA8E RID: 244366 RVA: 0x00E3CEF0 File Offset: 0x00E3B0F0
+		// Token: 0x060309D9 RID: 199129 RVA: 0x00D8D260 File Offset: 0x00D8B460
 		private void RefreshTitle()
 		{
 			UUIText text = base.GetText(1);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Battle
 			text.SetColor(FColor.FromHex("f2efd5"));
 		}
 
-		// Token: 0x0603BA8F RID: 244367 RVA: 0x00E3CF84 File Offset: 0x00E3B184
+		// Token: 0x060309DA RID: 199130 RVA: 0x00D8D2F4 File Offset: 0x00D8B4F4
 		private void StartAutoLeaveTimer()
 		{
 			int leftSecondToAutoLeave = 31;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603BA90 RID: 244368 RVA: 0x00E3CFCF File Offset: 0x00E3B1CF
+		// Token: 0x060309DB RID: 199131 RVA: 0x00D8D33F File Offset: 0x00D8B53F
 		private void TryPlaySequence()
 		{
 			if (this.IsPlayed)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.IsPlayed = true;
 		}
 
-		// Token: 0x0603BA91 RID: 244369 RVA: 0x00E3CFF0 File Offset: 0x00E3B1F0
+		// Token: 0x060309DC RID: 199132 RVA: 0x00D8D360 File Offset: 0x00D8B560
 		private void RefreshLevelPanel()
 		{
 			FlagChallengeSettleInfo settleInfo = FlagChallengeBattleModel.Instance.SettleInfo;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.LevelPanel.SetLevelText(level.ToString(), num.ToString(), boxLevel.ToString());
 		}
 
-		// Token: 0x0603BA92 RID: 244370 RVA: 0x00E3D04B File Offset: 0x00E3B24B
+		// Token: 0x060309DD RID: 199133 RVA: 0x00D8D3BB File Offset: 0x00D8B5BB
 		private void ClearAutoLeaveTimer()
 		{
 			if (this.AutoLeaveTimerId != null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AutoLeaveTimerId = null;
 		}
 
-		// Token: 0x0603BA93 RID: 244371 RVA: 0x00E3D070 File Offset: 0x00E3B270
+		// Token: 0x060309DE RID: 199134 RVA: 0x00D8D3E0 File Offset: 0x00D8B5E0
 		private UniTask InitButtonAsync()
 		{
 			FlagChallengeSettleView.<InitButtonAsync>d__19 <InitButtonAsync>d__;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <InitButtonAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA94 RID: 244372 RVA: 0x00E3D0B4 File Offset: 0x00E3B2B4
+		// Token: 0x060309DF RID: 199135 RVA: 0x00D8D424 File Offset: 0x00D8B624
 		private UniTask InitLevelPanelAsync()
 		{
 			FlagChallengeSettleView.<InitLevelPanelAsync>d__20 <InitLevelPanelAsync>d__;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <InitLevelPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA95 RID: 244373 RVA: 0x00E3D0F8 File Offset: 0x00E3B2F8
+		// Token: 0x060309E0 RID: 199136 RVA: 0x00D8D468 File Offset: 0x00D8B668
 		private UniTask CreateButton(UUIItem uiItem, int buttonIndex, Action clickFunction)
 		{
 			FlagChallengeSettleView.<CreateButton>d__21 <CreateButton>d__;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA96 RID: 244374 RVA: 0x00E3D14C File Offset: 0x00E3B34C
+		// Token: 0x060309E1 RID: 199137 RVA: 0x00D8D4BC File Offset: 0x00D8B6BC
 		private void OnNextLevelBtnClick()
 		{
 			int activityId = FlagChallengeBattleModel.Instance.ActivityId;
@@ -191,19 +191,19 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA97 RID: 244375 RVA: 0x00E3D18F File Offset: 0x00E3B38F
+		// Token: 0x060309E2 RID: 199138 RVA: 0x00D8D4FF File Offset: 0x00D8B6FF
 		private void OnExitBtnClick()
 		{
 			FlagChallengeBattleController.Instance.LeaveFlagChallengeInstance().Forget();
 		}
 
-		// Token: 0x0401F0EE RID: 127214
+		// Token: 0x04019B9F RID: 105375
 		private const string SUCCESS_OUTLINE_COLOR = "C48B29FF";
 
-		// Token: 0x0401F0EF RID: 127215
+		// Token: 0x04019BA0 RID: 105376
 		private const string SUCCESS_TEXT_COLOR = "f2efd5";
 
-		// Token: 0x0401F0F0 RID: 127216
+		// Token: 0x04019BA1 RID: 105377
 		[Nullable(new byte[]
 		{
 			2,
@@ -211,42 +211,42 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		protected Dictionary<int, FlagChallengeSettleButton> ButtonMap;
 
-		// Token: 0x0401F0F1 RID: 127217
+		// Token: 0x04019BA2 RID: 105378
 		[Nullable(2)]
 		protected FlagChallengeResultLevelPanel LevelPanel;
 
-		// Token: 0x0401F0F2 RID: 127218
+		// Token: 0x04019BA3 RID: 105379
 		[Nullable(2)]
 		private TimerHandle AutoLeaveTimerId;
 
-		// Token: 0x0401F0F3 RID: 127219
+		// Token: 0x04019BA4 RID: 105380
 		private bool IsPlayed;
 
-		// Token: 0x0200BE35 RID: 48693
+		// Token: 0x0200A83D RID: 43069
 		[NullableContext(0)]
 		private enum EButtons
 		{
-			// Token: 0x040395C3 RID: 234947
+			// Token: 0x04033F86 RID: 212870
 			LeftButton,
-			// Token: 0x040395C4 RID: 234948
+			// Token: 0x04033F87 RID: 212871
 			RightButton
 		}
 
-		// Token: 0x0200BE36 RID: 48694
+		// Token: 0x0200A83E RID: 43070
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x040395C6 RID: 234950
+			// Token: 0x04033F89 RID: 212873
 			TitleItem,
-			// Token: 0x040395C7 RID: 234951
+			// Token: 0x04033F8A RID: 212874
 			TitleText,
-			// Token: 0x040395C8 RID: 234952
+			// Token: 0x04033F8B RID: 212875
 			TitleTexture,
-			// Token: 0x040395C9 RID: 234953
+			// Token: 0x04033F8C RID: 212876
 			ButtonHorizontalItem = 4,
-			// Token: 0x040395CA RID: 234954
+			// Token: 0x04033F8D RID: 212877
 			ButtonItem,
-			// Token: 0x040395CB RID: 234955
+			// Token: 0x04033F8E RID: 212878
 			ContentItem = 20
 		}
 	}

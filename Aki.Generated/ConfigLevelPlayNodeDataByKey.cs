@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004D1 RID: 1233
+	// Token: 0x020004E7 RID: 1255
 	public class ConfigLevelPlayNodeDataByKey : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CF1 RID: 7409 RVA: 0x000FCB58 File Offset: 0x000FAD58
+		// Token: 0x06001D75 RID: 7541 RVA: 0x001032AC File Offset: 0x001014AC
 		static ConfigLevelPlayNodeDataByKey()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLevelPlayNodeDataByKey.CreateStaticDefaultValue), new Action(ConfigLevelPlayNodeDataByKey.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CF2 RID: 7410 RVA: 0x000FCB78 File Offset: 0x000FAD78
+		// Token: 0x06001D76 RID: 7542 RVA: 0x001032CC File Offset: 0x001014CC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLevelPlayNodeDataByKey.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CF3 RID: 7411 RVA: 0x000FCBF7 File Offset: 0x000FADF7
+		// Token: 0x06001D77 RID: 7543 RVA: 0x0010334B File Offset: 0x0010154B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLevelPlayNodeDataByKey.LogPair = null;
 			ConfigLevelPlayNodeDataByKey.HandleId = 0;
 		}
 
-		// Token: 0x06001CF4 RID: 7412 RVA: 0x000FCC05 File Offset: 0x000FAE05
+		// Token: 0x06001D78 RID: 7544 RVA: 0x00103359 File Offset: 0x00101559
 		public static void Init()
 		{
 			ConfigLevelPlayNodeDataByKey.HandleId = ConfigCommon.InitDataStatement(ConfigLevelPlayNodeDataByKey.HandleId, "db_levelplaynodedata.db", "select BinData from `LevelPlayNodeData` where Key=?");
 		}
 
-		// Token: 0x06001CF5 RID: 7413 RVA: 0x000FCC20 File Offset: 0x000FAE20
+		// Token: 0x06001D79 RID: 7545 RVA: 0x00103374 File Offset: 0x00101574
 		public static LevelPlayNodeData? GetConfig(string p0Key, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLevelPlayNodeDataByKey.HandleId, ConfigLevelPlayNodeDataByKey.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new LevelPlayNodeData?(rootAsLevelPlayNodeData);
 		}
 
-		// Token: 0x0400219B RID: 8603
+		// Token: 0x04002235 RID: 8757
 		private const string DB = "db_levelplaynodedata.db";
 
-		// Token: 0x0400219C RID: 8604
+		// Token: 0x04002236 RID: 8758
 		private const string FILE = "UniverseEditor/LevelPlay/节点_*";
 
-		// Token: 0x0400219D RID: 8605
+		// Token: 0x04002237 RID: 8759
 		private const string TABLE = "LevelPlayNodeData";
 
-		// Token: 0x0400219E RID: 8606
+		// Token: 0x04002238 RID: 8760
 		private const string COMMAND = "select BinData from `LevelPlayNodeData` where Key=?";
 
-		// Token: 0x0400219F RID: 8607
+		// Token: 0x04002239 RID: 8761
 		private const string KEY_PREFIX = "LevelPlayNodeDataByKey";
 
-		// Token: 0x040021A0 RID: 8608
+		// Token: 0x0400223A RID: 8762
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040021A1 RID: 8609
+		// Token: 0x0400223B RID: 8763
 		private static int HandleId;
 	}
 }

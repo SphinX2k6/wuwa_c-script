@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006836 RID: 26678
+	// Token: 0x02005786 RID: 22406
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlRoundAddProgressItem : GridProxyAbstract<DangoBrawlProgressItemData>
 	{
-		// Token: 0x0604296F RID: 272751 RVA: 0x0102FD78 File Offset: 0x0102DF78
+		// Token: 0x060374C3 RID: 226499 RVA: 0x00F71284 File Offset: 0x00F6F484
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042970 RID: 272752 RVA: 0x0102FDE1 File Offset: 0x0102DFE1
+		// Token: 0x060374C4 RID: 226500 RVA: 0x00F712ED File Offset: 0x00F6F4ED
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06042971 RID: 272753 RVA: 0x0102FDF4 File Offset: 0x0102DFF4
+		// Token: 0x060374C5 RID: 226501 RVA: 0x00F71300 File Offset: 0x00F6F500
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlProgressItemData data, bool isSelected, int gridIndex)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.GetItem(1).SetUIActive(data.IsWin && !data.NeedAnim);
 		}
 
-		// Token: 0x06042972 RID: 272754 RVA: 0x0102FE34 File Offset: 0x0102E034
+		// Token: 0x060374C6 RID: 226502 RVA: 0x00F71340 File Offset: 0x00F6F540
 		public void PlayAnim()
 		{
 			if (this.Data == null || !this.Data.NeedAnim)
@@ -66,19 +66,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			seqPlayer2.PlayLevelSequenceByName("TrophyStart", false, null, false);
 		}
 
-		// Token: 0x04022B05 RID: 142085
+		// Token: 0x0401D362 RID: 119650
 		public DangoBrawlProgressItemData Data;
 
-		// Token: 0x04022B06 RID: 142086
+		// Token: 0x0401D363 RID: 119651
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200C9F6 RID: 51702
+		// Token: 0x0200B3C2 RID: 46018
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D057 RID: 249943
+			// Token: 0x04037940 RID: 227648
 			PnlAddOff,
-			// Token: 0x0403D058 RID: 249944
+			// Token: 0x04037941 RID: 227649
 			PnlAddOn
 		}
 	}

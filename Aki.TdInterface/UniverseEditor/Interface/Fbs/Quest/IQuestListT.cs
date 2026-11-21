@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.SyncBlock;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FED RID: 16365
+	// Token: 0x0200442E RID: 17454
 	public class IQuestListT
 	{
-		// Token: 0x170072D9 RID: 29401
-		// (get) Token: 0x06017901 RID: 96513 RVA: 0x00365E10 File Offset: 0x00364010
-		// (set) Token: 0x06017902 RID: 96514 RVA: 0x00365E18 File Offset: 0x00364018
+		// Token: 0x170078DB RID: 30939
+		// (get) Token: 0x06018F9A RID: 102298 RVA: 0x0038FC04 File Offset: 0x0038DE04
+		// (set) Token: 0x06018F9B RID: 102299 RVA: 0x0038FC0C File Offset: 0x0038DE0C
 		public List<IQuestT> Quests { get; set; }
 
-		// Token: 0x170072DA RID: 29402
-		// (get) Token: 0x06017903 RID: 96515 RVA: 0x00365E21 File Offset: 0x00364021
-		// (set) Token: 0x06017904 RID: 96516 RVA: 0x00365E29 File Offset: 0x00364029
+		// Token: 0x170078DC RID: 30940
+		// (get) Token: 0x06018F9C RID: 102300 RVA: 0x0038FC15 File Offset: 0x0038DE15
+		// (set) Token: 0x06018F9D RID: 102301 RVA: 0x0038FC1D File Offset: 0x0038DE1D
 		public int _Selected { get; set; }
 
-		// Token: 0x170072DB RID: 29403
-		// (get) Token: 0x06017905 RID: 96517 RVA: 0x00365E32 File Offset: 0x00364032
-		// (set) Token: 0x06017906 RID: 96518 RVA: 0x00365E3A File Offset: 0x0036403A
+		// Token: 0x170078DD RID: 30941
+		// (get) Token: 0x06018F9E RID: 102302 RVA: 0x0038FC26 File Offset: 0x0038DE26
+		// (set) Token: 0x06018F9F RID: 102303 RVA: 0x0038FC2E File Offset: 0x0038DE2E
 		public bool _IsSelectBt { get; set; }
 
-		// Token: 0x170072DC RID: 29404
-		// (get) Token: 0x06017907 RID: 96519 RVA: 0x00365E43 File Offset: 0x00364043
-		// (set) Token: 0x06017908 RID: 96520 RVA: 0x00365E4B File Offset: 0x0036404B
+		// Token: 0x170078DE RID: 30942
+		// (get) Token: 0x06018FA0 RID: 102304 RVA: 0x0038FC37 File Offset: 0x0038DE37
+		// (set) Token: 0x06018FA1 RID: 102305 RVA: 0x0038FC3F File Offset: 0x0038DE3F
 		public List<ISyncBlockGroupT> _SyncBlockGroups { get; set; }
 
-		// Token: 0x170072DD RID: 29405
-		// (get) Token: 0x06017909 RID: 96521 RVA: 0x00365E54 File Offset: 0x00364054
-		// (set) Token: 0x0601790A RID: 96522 RVA: 0x00365E5C File Offset: 0x0036405C
+		// Token: 0x170078DF RID: 30943
+		// (get) Token: 0x06018FA2 RID: 102306 RVA: 0x0038FC48 File Offset: 0x0038DE48
+		// (set) Token: 0x06018FA3 RID: 102307 RVA: 0x0038FC50 File Offset: 0x0038DE50
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601790B RID: 96523 RVA: 0x00365E65 File Offset: 0x00364065
+		// Token: 0x06018FA4 RID: 102308 RVA: 0x0038FC59 File Offset: 0x0038DE59
 		public IQuestListT()
 		{
 			this.Quests = null;

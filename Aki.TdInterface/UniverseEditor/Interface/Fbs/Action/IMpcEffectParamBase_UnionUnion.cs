@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B8F RID: 27535
+	// Token: 0x020072D5 RID: 29397
 	public class IMpcEffectParamBase_UnionUnion
 	{
-		// Token: 0x1700CCAC RID: 52396
-		// (get) Token: 0x060305B3 RID: 198067 RVA: 0x00691B09 File Offset: 0x0068FD09
-		// (set) Token: 0x060305B4 RID: 198068 RVA: 0x00691B11 File Offset: 0x0068FD11
+		// Token: 0x1700D791 RID: 55185
+		// (get) Token: 0x0603340B RID: 209931 RVA: 0x006EA129 File Offset: 0x006E8329
+		// (set) Token: 0x0603340C RID: 209932 RVA: 0x006EA131 File Offset: 0x006E8331
 		public IMpcEffectParamBase_Union Type { get; set; }
 
-		// Token: 0x1700CCAD RID: 52397
-		// (get) Token: 0x060305B5 RID: 198069 RVA: 0x00691B1A File Offset: 0x0068FD1A
-		// (set) Token: 0x060305B6 RID: 198070 RVA: 0x00691B22 File Offset: 0x0068FD22
+		// Token: 0x1700D792 RID: 55186
+		// (get) Token: 0x0603340D RID: 209933 RVA: 0x006EA13A File Offset: 0x006E833A
+		// (set) Token: 0x0603340E RID: 209934 RVA: 0x006EA142 File Offset: 0x006E8342
 		public object Value { get; set; }
 
-		// Token: 0x060305B7 RID: 198071 RVA: 0x00691B2B File Offset: 0x0068FD2B
+		// Token: 0x0603340F RID: 209935 RVA: 0x006EA14B File Offset: 0x006E834B
 		public IMpcEffectParamBase_UnionUnion()
 		{
 			this.Type = IMpcEffectParamBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060305B8 RID: 198072 RVA: 0x00691B41 File Offset: 0x0068FD41
+		// Token: 0x06033410 RID: 209936 RVA: 0x006EA161 File Offset: 0x006E8361
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060305B9 RID: 198073 RVA: 0x00691B53 File Offset: 0x0068FD53
+		// Token: 0x06033411 RID: 209937 RVA: 0x006EA173 File Offset: 0x006E8373
 		public IMpcEffectParamBaseT AsIMpcEffectParamBase()
 		{
 			return this.As<IMpcEffectParamBaseT>();
 		}
 
-		// Token: 0x060305BA RID: 198074 RVA: 0x00691B5B File Offset: 0x0068FD5B
+		// Token: 0x06033412 RID: 209938 RVA: 0x006EA17B File Offset: 0x006E837B
 		public static IMpcEffectParamBase_UnionUnion FromIMpcEffectParamBase(IMpcEffectParamBaseT _impceffectparambase)
 		{
 			return new IMpcEffectParamBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060305BB RID: 198075 RVA: 0x00691B70 File Offset: 0x0068FD70
+		// Token: 0x06033413 RID: 209939 RVA: 0x006EA190 File Offset: 0x006E8390
 		public IPostProcessVolumeCenterPositionT AsIPostProcessVolumeCenterPosition()
 		{
 			return this.As<IPostProcessVolumeCenterPositionT>();
 		}
 
-		// Token: 0x060305BC RID: 198076 RVA: 0x00691B78 File Offset: 0x0068FD78
+		// Token: 0x06033414 RID: 209940 RVA: 0x006EA198 File Offset: 0x006E8398
 		public static IMpcEffectParamBase_UnionUnion FromIPostProcessVolumeCenterPosition(IPostProcessVolumeCenterPositionT _ipostprocessvolumecenterposition)
 		{
 			return new IMpcEffectParamBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060305BD RID: 198077 RVA: 0x00691B90 File Offset: 0x0068FD90
+		// Token: 0x06033415 RID: 209941 RVA: 0x006EA1B0 File Offset: 0x006E83B0
 		public static int Pack(FlatBufferBuilder builder, IMpcEffectParamBase_UnionUnion _o)
 		{
 			IMpcEffectParamBase_Union type = _o.Type;

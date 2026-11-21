@@ -4,20 +4,20 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004976 RID: 18806
+	// Token: 0x020038EE RID: 14574
 	public class HonamiStoryPickUpDownComponent : HonamiStoryComponentBase
 	{
-		// Token: 0x06031071 RID: 200817 RVA: 0x00B61B4C File Offset: 0x00B5FD4C
+		// Token: 0x06025BA1 RID: 154529 RVA: 0x00A9CA2C File Offset: 0x00A9AC2C
 		public HonamiStoryPickUpDownComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031072 RID: 200818 RVA: 0x00B61B55 File Offset: 0x00B5FD55
+		// Token: 0x06025BA2 RID: 154530 RVA: 0x00A9CA35 File Offset: 0x00A9AC35
 		protected override void OnPress(HotKeyMap config)
 		{
 		}
 
-		// Token: 0x06031073 RID: 200819 RVA: 0x00B61B57 File Offset: 0x00B5FD57
+		// Token: 0x06025BA3 RID: 154531 RVA: 0x00A9CA37 File Offset: 0x00A9AC37
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

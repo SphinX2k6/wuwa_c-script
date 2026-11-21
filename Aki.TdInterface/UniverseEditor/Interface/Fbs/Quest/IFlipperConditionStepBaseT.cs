@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E5E RID: 15966
+	// Token: 0x02004299 RID: 17049
 	public class IFlipperConditionStepBaseT
 	{
-		// Token: 0x17006EB7 RID: 28343
-		// (get) Token: 0x060167A8 RID: 92072 RVA: 0x0033FEEA File Offset: 0x0033E0EA
-		// (set) Token: 0x060167A9 RID: 92073 RVA: 0x0033FEF2 File Offset: 0x0033E0F2
+		// Token: 0x1700749B RID: 29851
+		// (get) Token: 0x06017DCF RID: 97743 RVA: 0x00368A1A File Offset: 0x00366C1A
+		// (set) Token: 0x06017DD0 RID: 97744 RVA: 0x00368A22 File Offset: 0x00366C22
 		public EFlipperConditionStep Type { get; set; }
 
-		// Token: 0x060167AA RID: 92074 RVA: 0x0033FEFB File Offset: 0x0033E0FB
+		// Token: 0x06017DD1 RID: 97745 RVA: 0x00368A2B File Offset: 0x00366C2B
 		public IFlipperConditionStepBaseT()
 		{
 			this.Type = EFlipperConditionStep.Fight;

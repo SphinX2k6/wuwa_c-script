@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068D6 RID: 26838
+	// Token: 0x02005826 RID: 22566
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CoopEntryRoleItem : UiPanelBase
 	{
-		// Token: 0x06042F6A RID: 274282 RVA: 0x0104ECFD File Offset: 0x0104CEFD
+		// Token: 0x06037AC2 RID: 228034 RVA: 0x00F90325 File Offset: 0x00F8E525
 		[NullableContext(1)]
 		public CoopEntryRoleItem(CoopActivityData activityData)
 		{
 			this.ActivityData = activityData;
 		}
 
-		// Token: 0x06042F6B RID: 274283 RVA: 0x0104ED0C File Offset: 0x0104CF0C
+		// Token: 0x06037AC3 RID: 228035 RVA: 0x00F90334 File Offset: 0x00F8E534
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042F6C RID: 274284 RVA: 0x0104EE24 File Offset: 0x0104D024
+		// Token: 0x06037AC4 RID: 228036 RVA: 0x00F9044C File Offset: 0x00F8E64C
 		protected override void OnStart()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			button.OnPointExitCallBack.Bind(new Action(this.OnPointerExit));
 		}
 
-		// Token: 0x06042F6D RID: 274285 RVA: 0x0104EE5A File Offset: 0x0104D05A
+		// Token: 0x06037AC5 RID: 228037 RVA: 0x00F90482 File Offset: 0x00F8E682
 		protected override void OnBeforeDestroy()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			button.OnPointExitCallBack.Unbind();
 		}
 
-		// Token: 0x06042F6E RID: 274286 RVA: 0x0104EE78 File Offset: 0x0104D078
+		// Token: 0x06037AC6 RID: 228038 RVA: 0x00F904A0 File Offset: 0x00F8E6A0
 		[NullableContext(1)]
 		public void Refresh(CoopRoleData data, bool isSelected, int gridIndex)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.GetItem(9).SetUIActive(flag);
 		}
 
-		// Token: 0x06042F6F RID: 274287 RVA: 0x0104EFBF File Offset: 0x0104D1BF
+		// Token: 0x06037AC7 RID: 228039 RVA: 0x00F905E7 File Offset: 0x00F8E7E7
 		private void OnClickBtn()
 		{
 			Action<CoopRoleData> selectCallback = this.SelectCallback;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			selectCallback(this.Data);
 		}
 
-		// Token: 0x06042F70 RID: 274288 RVA: 0x0104EFD7 File Offset: 0x0104D1D7
+		// Token: 0x06037AC8 RID: 228040 RVA: 0x00F905FF File Offset: 0x00F8E7FF
 		private void OnPointerEnter()
 		{
 			CoopRoleData data = this.Data;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			pointerEnterCallback(this.Data);
 		}
 
-		// Token: 0x06042F71 RID: 274289 RVA: 0x0104F007 File Offset: 0x0104D207
+		// Token: 0x06037AC9 RID: 228041 RVA: 0x00F9062F File Offset: 0x00F8E82F
 		private void OnPointerExit()
 		{
 			Action pointerExitCallback = this.PointerExitCallback;
@@ -120,10 +120,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			pointerExitCallback();
 		}
 
-		// Token: 0x04022D81 RID: 142721
+		// Token: 0x0401D5DD RID: 120285
 		private CoopRoleData Data;
 
-		// Token: 0x04022D82 RID: 142722
+		// Token: 0x0401D5DE RID: 120286
 		[Nullable(new byte[]
 		{
 			2,
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		public Action<CoopRoleData> SelectCallback;
 
-		// Token: 0x04022D83 RID: 142723
+		// Token: 0x0401D5DF RID: 120287
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,10 +139,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 		})]
 		public Action<CoopRoleData> PointerEnterCallback;
 
-		// Token: 0x04022D84 RID: 142724
+		// Token: 0x0401D5E0 RID: 120288
 		public Action PointerExitCallback;
 
-		// Token: 0x04022D85 RID: 142725
+		// Token: 0x0401D5E1 RID: 120289
 		private readonly CoopActivityData ActivityData;
 	}
 }

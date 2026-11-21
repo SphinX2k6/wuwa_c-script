@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200031B RID: 795
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000362 RID: 866
 	public class IEntityGroupFailureArbitraryState : IEntityGroupFailureCondition
 	{
-		// Token: 0x06000FA0 RID: 4000 RVA: 0x000372B0 File Offset: 0x000354B0
+		// Token: 0x060010D2 RID: 4306 RVA: 0x0003A27C File Offset: 0x0003847C
 		private IEntityGroupFailureArbitraryState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FA1 RID: 4001 RVA: 0x000372E8 File Offset: 0x000354E8
+		// Token: 0x060010D3 RID: 4307 RVA: 0x0003A2B4 File Offset: 0x000384B4
 		public static IEntityGroupFailureArbitraryState Create([Nullable(2)] IEntityGroupFailureArbitraryState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FA2 RID: 4002 RVA: 0x000372FB File Offset: 0x000354FB
+		// Token: 0x060010D4 RID: 4308 RVA: 0x0003A2C7 File Offset: 0x000384C7
 		public static IEntityGroupFailureArbitraryState CreateFromSetValue([Nullable(2)] IEntityGroupFailureArbitraryState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FA3 RID: 4003 RVA: 0x0003730E File Offset: 0x0003550E
+		// Token: 0x060010D5 RID: 4309 RVA: 0x0003A2DA File Offset: 0x000384DA
 		public new IEntityGroupFailureArbitraryState_SetValue ToSetValue()
 		{
 			return new IEntityGroupFailureArbitraryState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000484 RID: 1156
-		// (get) Token: 0x06000FA4 RID: 4004 RVA: 0x0003732D File Offset: 0x0003552D
-		// (set) Token: 0x06000FA5 RID: 4005 RVA: 0x00037358 File Offset: 0x00035558
+		// Token: 0x170004D2 RID: 1234
+		// (get) Token: 0x060010D6 RID: 4310 RVA: 0x0003A2F9 File Offset: 0x000384F9
+		// (set) Token: 0x060010D7 RID: 4311 RVA: 0x0003A324 File Offset: 0x00038524
 		public override EEntityGroupFailureCondition Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000485 RID: 1157
-		// (get) Token: 0x06000FA6 RID: 4006 RVA: 0x00037366 File Offset: 0x00035566
-		// (set) Token: 0x06000FA7 RID: 4007 RVA: 0x00037391 File Offset: 0x00035591
+		// Token: 0x170004D3 RID: 1235
+		// (get) Token: 0x060010D8 RID: 4312 RVA: 0x0003A332 File Offset: 0x00038532
+		// (set) Token: 0x060010D9 RID: 4313 RVA: 0x0003A35D File Offset: 0x0003855D
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D5B RID: 3419
+		// Token: 0x04000E46 RID: 3654
 		[Nullable(2)]
 		protected new IEntityGroupFailureArbitraryState FbInstance;
 
-		// Token: 0x04000D5C RID: 3420
+		// Token: 0x04000E47 RID: 3655
 		[Nullable(2)]
 		protected new IEntityGroupFailureArbitraryState_SetValue PocoInterface;
 	}

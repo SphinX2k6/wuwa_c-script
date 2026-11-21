@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200118D RID: 4493
+	// Token: 0x020012C7 RID: 4807
 	public class ITargetBattleAttribute_SetValue
 	{
-		// Token: 0x04003D41 RID: 15681
+		// Token: 0x040040A9 RID: 16553
 		public ETargetBattleAttribute Type;
 	}
 }

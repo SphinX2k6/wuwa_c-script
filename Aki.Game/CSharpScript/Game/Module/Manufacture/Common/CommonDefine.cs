@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200568A RID: 22154
+	// Token: 0x02004660 RID: 18016
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonDefine
 	{
-		// Token: 0x0401D9F9 RID: 121337
+		// Token: 0x04018484 RID: 99460
 		public const string MANUFACTURE_MATERIAL_ITEM_CONTENT_PATH = "UiItem_ItemNumB5/UiItem_ItemNumB1/UiItem_ItemNumB";
 
-		// Token: 0x0401D9FA RID: 121338
+		// Token: 0x04018485 RID: 99461
 		public const string MANUFACTURE_MATERIAL_ITEM_ADD_BUTTON_PATH = "UiItem_ItemNumB5/BtnAppend";
 	}
 }

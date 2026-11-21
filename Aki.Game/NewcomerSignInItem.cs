@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013AE RID: 5038
+// Token: 0x02000862 RID: 2146
 [NullableContext(1)]
 [Nullable(0)]
 public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 {
-	// Token: 0x06008D8F RID: 36239 RVA: 0x001E812C File Offset: 0x001E632C
+	// Token: 0x06006125 RID: 24869 RVA: 0x001F0D7C File Offset: 0x001EEF7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -54,7 +53,7 @@ public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D90 RID: 36240 RVA: 0x001E82DC File Offset: 0x001E64DC
+	// Token: 0x06006126 RID: 24870 RVA: 0x001F0F2C File Offset: 0x001EF12C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NewcomerSignInItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -65,7 +64,7 @@ public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008D91 RID: 36241 RVA: 0x001E8320 File Offset: 0x001E6520
+	// Token: 0x06006127 RID: 24871 RVA: 0x001F0F70 File Offset: 0x001EF170
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		ActivitySevenDaySignData activityData = this.ActivityData;
@@ -75,7 +74,7 @@ public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 		}
 	}
 
-	// Token: 0x06008D92 RID: 36242 RVA: 0x001E8374 File Offset: 0x001E6574
+	// Token: 0x06006128 RID: 24872 RVA: 0x001F0FC4 File Offset: 0x001EF1C4
 	private void OnClickGrid()
 	{
 		ActivitySevenDaySignData activityData = this.ActivityData;
@@ -88,13 +87,13 @@ public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 		this.GrandRewardConfigMap.TryGetValue(base.GridIndex + 1, out activitySignGrandReward);
 		if (activitySignGrandReward != null && activitySignGrandReward.Value.PreviewType == 1)
 		{
-			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, activitySignGrandReward.Value.GetPreviewListArray().ToList<int>(), null, null);
+			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, new List<int>(activitySignGrandReward.Value.GetPreviewListArray()), null, null);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 	}
 
-	// Token: 0x06008D93 RID: 36243 RVA: 0x001E8437 File Offset: 0x001E6637
+	// Token: 0x06006129 RID: 24873 RVA: 0x001F1088 File Offset: 0x001EF288
 	private string GetRewardStateTextId(SignState state)
 	{
 		switch (state)
@@ -110,21 +109,21 @@ public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 		}
 	}
 
-	// Token: 0x06008D94 RID: 36244 RVA: 0x001E8464 File Offset: 0x001E6664
+	// Token: 0x0600612A RID: 24874 RVA: 0x001F10B8 File Offset: 0x001EF2B8
 	public void SetDayText(int day)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "DayNum", new <>z__ReadOnlySingleElementList<object>(day));
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), "DayNum", new <>z__ReadOnlySingleElementList<object>(day));
 	}
 
-	// Token: 0x06008D95 RID: 36245 RVA: 0x001E84B3 File Offset: 0x001E66B3
+	// Token: 0x0600612B RID: 24875 RVA: 0x001F1107 File Offset: 0x001EF307
 	public void SetStateText(string textId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textId, Array.Empty<object>());
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06008D96 RID: 36246 RVA: 0x001E84E4 File Offset: 0x001E66E4
+	// Token: 0x0600612C RID: 24876 RVA: 0x001F1138 File Offset: 0x001EF338
 	public override void Refresh(OneItemConfig data, bool isSelected, int gridIndex)
 	{
 		if (this.ActivityData == null)
@@ -163,65 +162,65 @@ public class NewcomerSignInItem : GridProxyAbstract<OneItemConfig>
 		grid3.SetReceivedVisible(flag);
 	}
 
-	// Token: 0x06008D97 RID: 36247 RVA: 0x001E85E3 File Offset: 0x001E67E3
+	// Token: 0x0600612D RID: 24877 RVA: 0x001F1237 File Offset: 0x001EF437
 	public void SetActivityData(ActivitySevenDaySignData data)
 	{
 		this.ActivityData = data;
 	}
 
-	// Token: 0x06008D98 RID: 36248 RVA: 0x001E85EC File Offset: 0x001E67EC
+	// Token: 0x0600612E RID: 24878 RVA: 0x001F1240 File Offset: 0x001EF440
 	public void SetGrandRewardConfigMap(Dictionary<int, ActivitySignGrandReward?> grandRewardConfigMap)
 	{
 		this.GrandRewardConfigMap = grandRewardConfigMap;
 	}
 
-	// Token: 0x04003ED9 RID: 16089
+	// Token: 0x04003F71 RID: 16241
 	private CommonItemSmallItemGrid Grid;
 
-	// Token: 0x04003EDA RID: 16090
+	// Token: 0x04003F72 RID: 16242
 	private ActivitySevenDaySignData ActivityData;
 
-	// Token: 0x04003EDB RID: 16091
+	// Token: 0x04003F73 RID: 16243
 	protected bool CanGetReward;
 
-	// Token: 0x04003EDC RID: 16092
+	// Token: 0x04003F74 RID: 16244
 	private int ItemId;
 
-	// Token: 0x04003EDD RID: 16093
+	// Token: 0x04003F75 RID: 16245
 	private Dictionary<int, ActivitySignGrandReward?> GrandRewardConfigMap;
 
-	// Token: 0x02007A21 RID: 31265
+	// Token: 0x02006BA7 RID: 27559
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402833F RID: 164671
+		// Token: 0x0402365C RID: 144988
 		public const int Toggle = 0;
 
-		// Token: 0x04028340 RID: 164672
+		// Token: 0x0402365D RID: 144989
 		public const int StateNormalRoot = 1;
 
-		// Token: 0x04028341 RID: 164673
+		// Token: 0x0402365E RID: 144990
 		public const int NormalDayText = 2;
 
-		// Token: 0x04028342 RID: 164674
+		// Token: 0x0402365F RID: 144991
 		public const int StateText = 3;
 
-		// Token: 0x04028343 RID: 164675
+		// Token: 0x04023660 RID: 144992
 		public const int StateGetItem = 4;
 
-		// Token: 0x04028344 RID: 164676
+		// Token: 0x04023661 RID: 144993
 		public const int GetDayText = 5;
 
-		// Token: 0x04028345 RID: 164677
+		// Token: 0x04023662 RID: 144994
 		public const int GetStateText = 6;
 
-		// Token: 0x04028346 RID: 164678
+		// Token: 0x04023663 RID: 144995
 		public const int PropItem = 7;
 
-		// Token: 0x04028347 RID: 164679
+		// Token: 0x04023664 RID: 144996
 		public const int FinishMask = 8;
 
-		// Token: 0x04028348 RID: 164680
+		// Token: 0x04023665 RID: 144997
 		public const int RedDotItem = 9;
 	}
 }

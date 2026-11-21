@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000796 RID: 1942
+	// Token: 0x02000837 RID: 2103
 	public class ITowardEntityConfig_SetValue
 	{
-		// Token: 0x04001C28 RID: 7208
-		[Nullable(1)]
+		// Token: 0x04001E31 RID: 7729
 		public string ReferenceActorKey;
 
-		// Token: 0x04001C29 RID: 7209
+		// Token: 0x04001E32 RID: 7730
 		public int TargetEntityId;
 	}
 }

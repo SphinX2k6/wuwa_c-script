@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006C8 RID: 1736
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000769 RID: 1897
 	public class ISharingVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x0600254E RID: 9550 RVA: 0x000648E4 File Offset: 0x00062AE4
+		// Token: 0x0600286E RID: 10350 RVA: 0x0006B954 File Offset: 0x00069B54
 		private ISharingVehicleFeature_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600254F RID: 9551 RVA: 0x0006491C File Offset: 0x00062B1C
+		// Token: 0x0600286F RID: 10351 RVA: 0x0006B98C File Offset: 0x00069B8C
 		public static ISharingVehicleFeature Create([Nullable(2)] ISharingVehicleFeature instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002550 RID: 9552 RVA: 0x0006492F File Offset: 0x00062B2F
+		// Token: 0x06002870 RID: 10352 RVA: 0x0006B99F File Offset: 0x00069B9F
 		public static ISharingVehicleFeature CreateFromSetValue([Nullable(2)] ISharingVehicleFeature_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002551 RID: 9553 RVA: 0x00064942 File Offset: 0x00062B42
+		// Token: 0x06002871 RID: 10353 RVA: 0x0006B9B2 File Offset: 0x00069BB2
 		public new ISharingVehicleFeature_SetValue ToSetValue()
 		{
 			return new ISharingVehicleFeature_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009DA RID: 2522
-		// (get) Token: 0x06002552 RID: 9554 RVA: 0x00064961 File Offset: 0x00062B61
-		// (set) Token: 0x06002553 RID: 9555 RVA: 0x0006498C File Offset: 0x00062B8C
+		// Token: 0x17000A98 RID: 2712
+		// (get) Token: 0x06002872 RID: 10354 RVA: 0x0006B9D1 File Offset: 0x00069BD1
+		// (set) Token: 0x06002873 RID: 10355 RVA: 0x0006B9FC File Offset: 0x00069BFC
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009DB RID: 2523
-		// (get) Token: 0x06002554 RID: 9556 RVA: 0x0006499C File Offset: 0x00062B9C
-		// (set) Token: 0x06002555 RID: 9557 RVA: 0x000649D6 File Offset: 0x00062BD6
+		// Token: 0x17000A99 RID: 2713
+		// (get) Token: 0x06002874 RID: 10356 RVA: 0x0006BA0C File Offset: 0x00069C0C
+		// (set) Token: 0x06002875 RID: 10357 RVA: 0x0006BA46 File Offset: 0x00069C46
 		public virtual EAffectionDegreeSourceType? AffectionDegreeSourceType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400197E RID: 6526
+		// Token: 0x04001B7D RID: 7037
 		[Nullable(2)]
 		protected new ISharingVehicleFeature FbInstance;
 
-		// Token: 0x0400197F RID: 6527
+		// Token: 0x04001B7E RID: 7038
 		[Nullable(2)]
 		protected new ISharingVehicleFeature_SetValue PocoInterface;
 	}

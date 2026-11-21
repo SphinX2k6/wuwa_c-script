@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046E2 RID: 18146
+	// Token: 0x02003612 RID: 13842
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiTabViewTsInfo : IUiTabViewTsInfo
 	{
-		// Token: 0x17007682 RID: 30338
-		// (get) Token: 0x0602ECB6 RID: 191670 RVA: 0x00AD57B1 File Offset: 0x00AD39B1
-		// (set) Token: 0x0602ECB7 RID: 191671 RVA: 0x00AD57B9 File Offset: 0x00AD39B9
+		// Token: 0x1700493E RID: 18750
+		// (get) Token: 0x060233F1 RID: 144369 RVA: 0x00A03289 File Offset: 0x00A01489
+		// (set) Token: 0x060233F2 RID: 144370 RVA: 0x00A03291 File Offset: 0x00A01491
 		public TCreateUiTabViewBase CreateUiTabView { get; set; }
 
-		// Token: 0x17007683 RID: 30339
-		// (get) Token: 0x0602ECB8 RID: 191672 RVA: 0x00AD57C2 File Offset: 0x00AD39C2
-		// (set) Token: 0x0602ECB9 RID: 191673 RVA: 0x00AD57CA File Offset: 0x00AD39CA
+		// Token: 0x1700493F RID: 18751
+		// (get) Token: 0x060233F3 RID: 144371 RVA: 0x00A0329A File Offset: 0x00A0149A
+		// (set) Token: 0x060233F4 RID: 144372 RVA: 0x00A032A2 File Offset: 0x00A014A2
 		public string ResourceId { get; set; }
 
-		// Token: 0x0602ECBA RID: 191674 RVA: 0x00AD57D3 File Offset: 0x00AD39D3
+		// Token: 0x060233F5 RID: 144373 RVA: 0x00A032AB File Offset: 0x00A014AB
 		public UiTabViewTsInfo(TCreateUiTabViewBase createUiTabView, string resourceId)
 		{
 			this.CreateUiTabView = createUiTabView;

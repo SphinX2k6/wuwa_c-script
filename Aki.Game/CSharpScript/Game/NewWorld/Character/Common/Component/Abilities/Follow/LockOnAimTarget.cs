@@ -3,22 +3,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x0200712A RID: 28970
+	// Token: 0x02006358 RID: 25432
 	public class LockOnAimTarget : FollowShooterAimTarget
 	{
-		// Token: 0x06046BCE RID: 289742 RVA: 0x011D24C2 File Offset: 0x011D06C2
+		// Token: 0x0603DA1C RID: 252444 RVA: 0x011DB022 File Offset: 0x011D9222
 		public LockOnAimTarget(FVectorDouble targetLocationDouble)
 		{
 			this.TargetLocationDouble = targetLocationDouble;
 		}
 
-		// Token: 0x06046BCF RID: 289743 RVA: 0x011D24D1 File Offset: 0x011D06D1
+		// Token: 0x0603DA1D RID: 252445 RVA: 0x011DB031 File Offset: 0x011D9231
 		protected override FRotator ComputeBaseRotator(FVectorDouble fromLocationDouble)
 		{
 			return UKismetMathLibrary.D_FindLookAtRotation(fromLocationDouble, this.TargetLocationDouble);
 		}
 
-		// Token: 0x04025243 RID: 152131
+		// Token: 0x04020B23 RID: 133923
 		public readonly FVectorDouble TargetLocationDouble;
 	}
 }

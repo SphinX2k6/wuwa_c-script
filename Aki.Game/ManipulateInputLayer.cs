@@ -6,12 +6,12 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Input;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 
-// Token: 0x020030C8 RID: 12488
+// Token: 0x02002620 RID: 9760
 [NullableContext(2)]
 [Nullable(0)]
 public class ManipulateInputLayer : InputLayer
 {
-	// Token: 0x0601ABE3 RID: 109539 RVA: 0x0073567C File Offset: 0x0073387C
+	// Token: 0x060185F7 RID: 99831 RVA: 0x0075B2D8 File Offset: 0x007594D8
 	[NullableContext(1)]
 	public void Init(EntityHandle entityHandle)
 	{
@@ -21,7 +21,7 @@ public class ManipulateInputLayer : InputLayer
 		this.CreatureDataComp = entity.GetComponent<CreatureDataComponent>();
 	}
 
-	// Token: 0x0601ABE4 RID: 109540 RVA: 0x007356B4 File Offset: 0x007338B4
+	// Token: 0x060185F8 RID: 99832 RVA: 0x0075B310 File Offset: 0x00759510
 	public override void Clear()
 	{
 		this.TagComp = null;
@@ -29,13 +29,13 @@ public class ManipulateInputLayer : InputLayer
 		this.CreatureDataComp = null;
 	}
 
-	// Token: 0x0601ABE5 RID: 109541 RVA: 0x007356CB File Offset: 0x007338CB
+	// Token: 0x060185F9 RID: 99833 RVA: 0x0075B327 File Offset: 0x00759527
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.Manipulate;
 	}
 
-	// Token: 0x0601ABE6 RID: 109542 RVA: 0x007356D0 File Offset: 0x007338D0
+	// Token: 0x060185FA RID: 99834 RVA: 0x0075B32C File Offset: 0x0075952C
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		ManipulateSkillConfigData manipulateSkillConfig = this.GetManipulateSkillConfig();
@@ -43,7 +43,7 @@ public class ManipulateInputLayer : InputLayer
 		switch (b)
 		{
 		case 4:
-			if (manipulateSkillConfig.CastSkillId != 0 && !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.新版控物.输入.控物投掷禁止"]))
+			if (manipulateSkillConfig.CastSkillId != 0 && !this.TagComp.HasAnyTag(this.ThrowForbidTags))
 			{
 				this.SkillComp.BeginSkill(manipulateSkillConfig.CastSkillId, new SkillParam
 				{
@@ -94,7 +94,7 @@ public class ManipulateInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABE7 RID: 109543 RVA: 0x00735840 File Offset: 0x00733A40
+	// Token: 0x060185FB RID: 99835 RVA: 0x0075B490 File Offset: 0x00759690
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		if (action == 7 && Info.Instance.IsInTouch())
@@ -116,7 +116,7 @@ public class ManipulateInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABE8 RID: 109544 RVA: 0x007358BF File Offset: 0x00733ABF
+	// Token: 0x060185FC RID: 99836 RVA: 0x0075B50F File Offset: 0x0075970F
 	public override SInputCommand HandleHold(EInputAction action, float time)
 	{
 		if (this.IsManipulating())
@@ -126,7 +126,7 @@ public class ManipulateInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABE9 RID: 109545 RVA: 0x007358D0 File Offset: 0x00733AD0
+	// Token: 0x060185FD RID: 99837 RVA: 0x0075B520 File Offset: 0x00759720
 	[NullableContext(1)]
 	private ManipulateSkillConfigData GetManipulateSkillConfig()
 	{
@@ -134,24 +134,19 @@ public class ManipulateInputLayer : InputLayer
 		return ManipulateSkillConfig.GetSkillConfig((creatureDataComp != null) ? creatureDataComp.GetRoleId() : 0);
 	}
 
-	// Token: 0x0601ABEA RID: 109546 RVA: 0x007358EC File Offset: 0x00733AEC
+	// Token: 0x060185FE RID: 99838 RVA: 0x0075B539 File Offset: 0x00759739
 	private bool IsManipulating()
 	{
-		return this.TagComp.HasAnyTag(new int[]
-		{
-			GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.控物中"],
-			GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.控物选取"],
-			GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.进入投掷"]
-		}) && !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.可释放技能"]);
+		return this.TagComp.HasAnyTag(this.ManipulatingTags) && !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.可释放技能"]);
 	}
 
-	// Token: 0x0400CE7B RID: 52859
+	// Token: 0x0400D269 RID: 53865
 	private const int MANIPULATE_ROTATE_SKILL = 210009;
 
-	// Token: 0x0400CE7C RID: 52860
+	// Token: 0x0400D26A RID: 53866
 	private const int MANIPULATE_PARABOLA_SKILL = 240001;
 
-	// Token: 0x0400CE7D RID: 52861
+	// Token: 0x0400D26B RID: 53867
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly List<EInputAction> actionsForbid = new List<EInputAction>
@@ -164,12 +159,30 @@ public class ManipulateInputLayer : InputLayer
 		EInputAction.大招
 	};
 
-	// Token: 0x0400CE7E RID: 52862
+	// Token: 0x0400D26C RID: 53868
 	private RoleTagComponent TagComp;
 
-	// Token: 0x0400CE7F RID: 52863
+	// Token: 0x0400D26D RID: 53869
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400CE80 RID: 52864
+	// Token: 0x0400D26E RID: 53870
 	private CreatureDataComponent CreatureDataComp;
+
+	// Token: 0x0400D26F RID: 53871
+	[Nullable(1)]
+	private readonly int[] ThrowForbidTags = new int[]
+	{
+		GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.新版控物.输入.控物投掷禁止"],
+		GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.控物投掷不可用"],
+		GameplayTagDefine.EGameplayTagId["行为状态.位置状态.空中"]
+	};
+
+	// Token: 0x0400D270 RID: 53872
+	[Nullable(1)]
+	private readonly int[] ManipulatingTags = new int[]
+	{
+		GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.控物中"],
+		GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.控物选取"],
+		GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.进入投掷"]
+	};
 }

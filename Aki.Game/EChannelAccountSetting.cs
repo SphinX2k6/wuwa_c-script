@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02001785 RID: 6021
+// Token: 0x02000C3E RID: 3134
 public enum EChannelAccountSetting
 {
-	// Token: 0x04004F8A RID: 20362
+	// Token: 0x04005034 RID: 20532
 	UserCenter = 1,
-	// Token: 0x04004F8B RID: 20363
+	// Token: 0x04005035 RID: 20533
 	UserAgreement,
-	// Token: 0x04004F8C RID: 20364
+	// Token: 0x04005036 RID: 20534
 	Privacy,
-	// Token: 0x04004F8D RID: 20365
+	// Token: 0x04005037 RID: 20535
 	ChildPrivacy,
-	// Token: 0x04004F8E RID: 20366
+	// Token: 0x04005038 RID: 20536
 	ThirdParty,
-	// Token: 0x04004F8F RID: 20367
+	// Token: 0x04005039 RID: 20537
 	UserAgreementGlobal,
-	// Token: 0x04004F90 RID: 20368
+	// Token: 0x0400503A RID: 20538
 	PrivacyGlobal,
-	// Token: 0x04004F91 RID: 20369
+	// Token: 0x0400503B RID: 20539
 	SDKPrivacy,
-	// Token: 0x04004F92 RID: 20370
+	// Token: 0x0400503C RID: 20540
 	UserCenterGlobal,
-	// Token: 0x04004F93 RID: 20371
+	// Token: 0x0400503D RID: 20541
 	ICPUrl
 }

@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E0B RID: 19979
+	// Token: 0x02003DD4 RID: 15828
 	public class RoguelikeBlackFlowerPreviewView : UiViewBase
 	{
-		// Token: 0x060338BB RID: 211131 RVA: 0x00C0C3A7 File Offset: 0x00C0A5A7
+		// Token: 0x06028726 RID: 165670 RVA: 0x00B558B3 File Offset: 0x00B53AB3
 		[NullableContext(1)]
 		public RoguelikeBlackFlowerPreviewView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060338BC RID: 211132 RVA: 0x00C0C3B0 File Offset: 0x00C0A5B0
+		// Token: 0x06028727 RID: 165671 RVA: 0x00B558BC File Offset: 0x00B53ABC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x060338BD RID: 211133 RVA: 0x00C0C424 File Offset: 0x00C0A624
+		// Token: 0x06028728 RID: 165672 RVA: 0x00B55930 File Offset: 0x00B53B30
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<BlackFlowerRewardPreviewListItem, TLevelDropReward>(base.GetScrollViewWithScrollbar(2), new Func<BlackFlowerRewardPreviewListItem>(this.RewardPreviewItemCreateFunc), null, false, null);
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "BlackFlower_RewardInfo", Array.Empty<object>());
 		}
 
-		// Token: 0x060338BE RID: 211134 RVA: 0x00C0C483 File Offset: 0x00C0A683
+		// Token: 0x06028729 RID: 165673 RVA: 0x00B5598F File Offset: 0x00B53B8F
 		protected override void OnBeforeShow()
 		{
 			this.ShowReward();
 		}
 
-		// Token: 0x060338BF RID: 211135 RVA: 0x00C0C48C File Offset: 0x00C0A68C
+		// Token: 0x0602872A RID: 165674 RVA: 0x00B55998 File Offset: 0x00B53B98
 		private void ShowReward()
 		{
 			ExchangeReward? config = ConfigExchangeRewardById.GetConfig(this.ExchangeRewardId, true);
@@ -100,17 +100,17 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x060338C0 RID: 211136 RVA: 0x00C0C60C File Offset: 0x00C0A80C
+		// Token: 0x0602872B RID: 165675 RVA: 0x00B55B18 File Offset: 0x00B53D18
 		[NullableContext(1)]
 		private BlackFlowerRewardPreviewListItem RewardPreviewItemCreateFunc()
 		{
 			return new BlackFlowerRewardPreviewListItem();
 		}
 
-		// Token: 0x0401B57A RID: 111994
+		// Token: 0x04015F4D RID: 89933
 		private int ExchangeRewardId;
 
-		// Token: 0x0401B57B RID: 111995
+		// Token: 0x04015F4E RID: 89934
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericScrollViewNew<BlackFlowerRewardPreviewListItem, TLevelDropReward> RewardScroll;
 
-		// Token: 0x0200AF9E RID: 44958
+		// Token: 0x020099D3 RID: 39379
 		private class ERewardPreviewComponents
 		{
-			// Token: 0x0403551B RID: 218395
+			// Token: 0x0402FF4E RID: 196430
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403551C RID: 218396
+			// Token: 0x0402FF4F RID: 196431
 			public const int RewardScrollList = 2;
 		}
 	}

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020014BF RID: 5311
+// Token: 0x02000973 RID: 2419
 public class ActivityRoleGiveData : ActivityBaseData
 {
-	// Token: 0x06009695 RID: 38549 RVA: 0x002084B4 File Offset: 0x002066B4
+	// Token: 0x06006A2A RID: 27178 RVA: 0x00211420 File Offset: 0x0020F620
 	[NullableContext(1)]
 	protected unsafe override void PhraseEx(ActivityData data)
 	{
@@ -28,13 +28,13 @@ public class ActivityRoleGiveData : ActivityBaseData
 		this.IsGetReward = traceMoonPhaseData.Reward;
 	}
 
-	// Token: 0x06009696 RID: 38550 RVA: 0x00208571 File Offset: 0x00206771
+	// Token: 0x06006A2B RID: 27179 RVA: 0x002114DD File Offset: 0x0020F6DD
 	public TrackMoonPhaseActivity? GetExtraConfig()
 	{
 		return ConfigTrackMoonPhaseActivityById.GetConfig(ActivityRoleGiveController.Instance.CurrentActivityId, true);
 	}
 
-	// Token: 0x06009697 RID: 38551 RVA: 0x00208584 File Offset: 0x00206784
+	// Token: 0x06006A2C RID: 27180 RVA: 0x002114F0 File Offset: 0x0020F6F0
 	public override bool GetExDataRedPointShowState()
 	{
 		TrackMoonPhaseActivity? extraConfig = this.GetExtraConfig();
@@ -43,6 +43,6 @@ public class ActivityRoleGiveData : ActivityBaseData
 		return num != null && extraConfig != null && !this.IsGetReward && num.Value >= extraConfig.Value.PopularityNeed;
 	}
 
-	// Token: 0x0400426F RID: 17007
+	// Token: 0x04004307 RID: 17159
 	public bool IsGetReward;
 }

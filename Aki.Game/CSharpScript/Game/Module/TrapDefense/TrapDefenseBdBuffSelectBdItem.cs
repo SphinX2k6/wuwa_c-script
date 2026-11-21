@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ADC RID: 19164
+	// Token: 0x02003A84 RID: 14980
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBdBuffSelectBdItem : GridProxyAbstract<TrapDefenseBdData>
 	{
-		// Token: 0x06031A2D RID: 203309 RVA: 0x00B83EC4 File Offset: 0x00B820C4
+		// Token: 0x060267BD RID: 157629 RVA: 0x00AC7E78 File Offset: 0x00AC6078
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031A2E RID: 203310 RVA: 0x00B84140 File Offset: 0x00B82340
+		// Token: 0x060267BE RID: 157630 RVA: 0x00AC80F4 File Offset: 0x00AC62F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBdBuffSelectBdItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -78,18 +78,18 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A2F RID: 203311 RVA: 0x00B84183 File Offset: 0x00B82383
+		// Token: 0x060267BF RID: 157631 RVA: 0x00AC8137 File Offset: 0x00AC6337
 		protected override void OnStart()
 		{
 			this.SequenceItem = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06031A30 RID: 203312 RVA: 0x00B84196 File Offset: 0x00B82396
+		// Token: 0x060267C0 RID: 157632 RVA: 0x00AC814A File Offset: 0x00AC634A
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06031A31 RID: 203313 RVA: 0x00B84198 File Offset: 0x00B82398
+		// Token: 0x060267C1 RID: 157633 RVA: 0x00AC814C File Offset: 0x00AC634C
 		public void UpdateDataBase(TrapDefenseBdData data)
 		{
 			this.ItemData = data;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			text.ShowTextNew(data.Config.Name);
 		}
 
-		// Token: 0x06031A32 RID: 203314 RVA: 0x00B841EC File Offset: 0x00B823EC
+		// Token: 0x060267C2 RID: 157634 RVA: 0x00AC81A0 File Offset: 0x00AC63A0
 		public override void Refresh(TrapDefenseBdData data, bool isSelected, int gridIndex)
 		{
 			this.UpdateDataBase(data);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.CheckBdActiveNewQuality(true);
 		}
 
-		// Token: 0x06031A33 RID: 203315 RVA: 0x00B84230 File Offset: 0x00B82430
+		// Token: 0x060267C3 RID: 157635 RVA: 0x00AC81E4 File Offset: 0x00AC63E4
 		public void RefreshItem(TrapDefenseBdData data)
 		{
 			this.UpdateDataBase(data);
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.CheckBdActiveNewQuality(false);
 		}
 
-		// Token: 0x06031A34 RID: 203316 RVA: 0x00B84274 File Offset: 0x00B82474
+		// Token: 0x060267C4 RID: 157636 RVA: 0x00AC8228 File Offset: 0x00AC6428
 		public void RefreshCheckProgress(TrapDefenseBdData data)
 		{
 			this.UpdateDataBase(data);
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateQualityShow();
 		}
 
-		// Token: 0x06031A35 RID: 203317 RVA: 0x00B842F4 File Offset: 0x00B824F4
+		// Token: 0x060267C5 RID: 157637 RVA: 0x00AC82A8 File Offset: 0x00AC64A8
 		public void UpdateProgressValue(int? curNum = null, int? addNum = null, int? addSum = null)
 		{
 			UUIText text = base.GetText(5);
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A36 RID: 203318 RVA: 0x00B844B8 File Offset: 0x00B826B8
+		// Token: 0x060267C6 RID: 157638 RVA: 0x00AC846C File Offset: 0x00AC666C
 		private void UpdateQualityShow()
 		{
 			ValueTuple<bool, ETrapDefenseBdBuffQuality> valueTuple = this.ItemData.PreAddedBuffIsActiveNewQuality(-1);
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetProgressShowStatePurple(true, false, true);
 		}
 
-		// Token: 0x06031A37 RID: 203319 RVA: 0x00B84538 File Offset: 0x00B82738
+		// Token: 0x060267C7 RID: 157639 RVA: 0x00AC84EC File Offset: 0x00AC66EC
 		public void SetProgressShowStatePurple(bool show, bool showBg = false, bool useColor = false)
 		{
 			UUISprite sprite = base.GetSprite(8);
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item2.SetUIActive(show);
 		}
 
-		// Token: 0x06031A38 RID: 203320 RVA: 0x00B845A8 File Offset: 0x00B827A8
+		// Token: 0x060267C8 RID: 157640 RVA: 0x00AC855C File Offset: 0x00AC675C
 		public void SetProgressShowStateGold(bool show, bool showBg = false, bool useColor = false)
 		{
 			UUISprite sprite = base.GetSprite(10);
@@ -303,13 +303,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item2.SetUIActive(show);
 		}
 
-		// Token: 0x06031A39 RID: 203321 RVA: 0x00B8461A File Offset: 0x00B8281A
+		// Token: 0x060267C9 RID: 157641 RVA: 0x00AC85CE File Offset: 0x00AC67CE
 		public UUIExtendToggle GetSelfToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06031A3A RID: 203322 RVA: 0x00B84623 File Offset: 0x00B82823
+		// Token: 0x060267CA RID: 157642 RVA: 0x00AC85D7 File Offset: 0x00AC67D7
 		private void OnClickToggleSelf(EToggleState state)
 		{
 			Action<TrapDefenseBdData> clickCallBack = this.ClickCallBack;
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.GetSelfToggle().SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06031A3B RID: 203323 RVA: 0x00B8464C File Offset: 0x00B8284C
+		// Token: 0x060267CB RID: 157643 RVA: 0x00AC8600 File Offset: 0x00AC6800
 		public UniTask CheckPlayUpStageEffect()
 		{
 			TrapDefenseBdBuffSelectBdItem.<CheckPlayUpStageEffect>d__21 <CheckPlayUpStageEffect>d__;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <CheckPlayUpStageEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A3C RID: 203324 RVA: 0x00B84690 File Offset: 0x00B82890
+		// Token: 0x060267CC RID: 157644 RVA: 0x00AC8644 File Offset: 0x00AC6844
 		public void CheckBdActiveNewQuality(bool isCheckPre = false)
 		{
 			if (isCheckPre && this.ItemData.PreAddedBdBuffData == null)
@@ -350,74 +350,74 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A82E RID: 108590
+		// Token: 0x04015180 RID: 86400
 		public TrapDefenseBdData ItemData;
 
-		// Token: 0x0401A82F RID: 108591
+		// Token: 0x04015181 RID: 86401
 		public Action<TrapDefenseBdData> ClickCallBack;
 
-		// Token: 0x0401A830 RID: 108592
+		// Token: 0x04015182 RID: 86402
 		public LevelSequencePlayer SequenceItem;
 
-		// Token: 0x0401A831 RID: 108593
+		// Token: 0x04015183 RID: 86403
 		public bool IsUpStage;
 
-		// Token: 0x0401A832 RID: 108594
+		// Token: 0x04015184 RID: 86404
 		public ETrapDefenseBdBuffQuality Quality = ETrapDefenseBdBuffQuality.Purple;
 
-		// Token: 0x0401A833 RID: 108595
+		// Token: 0x04015185 RID: 86405
 		public TrapDefenseBtnTagTips BtnTagTips;
 
-		// Token: 0x0200AC5E RID: 44126
+		// Token: 0x0200967E RID: 38526
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403461A RID: 214554
+			// Token: 0x0402EFCB RID: 192459
 			public const int ToggleSelf = 0;
 
-			// Token: 0x0403461B RID: 214555
+			// Token: 0x0402EFCC RID: 192460
 			public const int ItemBgGold = 1;
 
-			// Token: 0x0403461C RID: 214556
+			// Token: 0x0402EFCD RID: 192461
 			public const int ItemBgPurple = 2;
 
-			// Token: 0x0403461D RID: 214557
+			// Token: 0x0402EFCE RID: 192462
 			public const int TextureIcon = 3;
 
-			// Token: 0x0403461E RID: 214558
+			// Token: 0x0402EFCF RID: 192463
 			public const int TextName = 4;
 
-			// Token: 0x0403461F RID: 214559
+			// Token: 0x0402EFD0 RID: 192464
 			public const int TextProgress = 5;
 
-			// Token: 0x04034620 RID: 214560
+			// Token: 0x0402EFD1 RID: 192465
 			public const int TextSumProgress = 6;
 
-			// Token: 0x04034621 RID: 214561
+			// Token: 0x0402EFD2 RID: 192466
 			public const int SpriteProgressAddPurple = 7;
 
-			// Token: 0x04034622 RID: 214562
+			// Token: 0x0402EFD3 RID: 192467
 			public const int SpriteProgressPurple = 8;
 
-			// Token: 0x04034623 RID: 214563
+			// Token: 0x0402EFD4 RID: 192468
 			public const int SpriteProgressAddGold = 9;
 
-			// Token: 0x04034624 RID: 214564
+			// Token: 0x0402EFD5 RID: 192469
 			public const int SpriteProgressGold = 10;
 
-			// Token: 0x04034625 RID: 214565
+			// Token: 0x0402EFD6 RID: 192470
 			public const int ItemProgressBgPurple = 11;
 
-			// Token: 0x04034626 RID: 214566
+			// Token: 0x0402EFD7 RID: 192471
 			public const int ItemProgressBgGold = 12;
 
-			// Token: 0x04034627 RID: 214567
+			// Token: 0x0402EFD8 RID: 192472
 			public const int ItemUpStageEffectGold = 13;
 
-			// Token: 0x04034628 RID: 214568
+			// Token: 0x0402EFD9 RID: 192473
 			public const int ItemUpStageEffectPurple = 14;
 
-			// Token: 0x04034629 RID: 214569
+			// Token: 0x0402EFDA RID: 192474
 			public const int ItemTagTip = 15;
 		}
 	}

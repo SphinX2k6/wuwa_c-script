@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C3B RID: 3131
+	// Token: 0x02000D0E RID: 3342
 	public class IParkourPointLayerConfig
 	{
-		// Token: 0x060047AC RID: 18348 RVA: 0x000B4715 File Offset: 0x000B2915
-		[NullableContext(1)]
+		// Token: 0x06004C1C RID: 19484 RVA: 0x000BEAC5 File Offset: 0x000BCCC5
 		public static IParkourPointLayerConfig Create(IParkourPointLayerConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014F3 RID: 5363
-		// (get) Token: 0x060047AD RID: 18349 RVA: 0x000B4734 File Offset: 0x000B2934
+		// Token: 0x170015FB RID: 5627
+		// (get) Token: 0x06004C1D RID: 19485 RVA: 0x000BEAE4 File Offset: 0x000BCCE4
 		public virtual int Width
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014F4 RID: 5364
-		// (get) Token: 0x060047AE RID: 18350 RVA: 0x000B4741 File Offset: 0x000B2941
+		// Token: 0x170015FC RID: 5628
+		// (get) Token: 0x06004C1E RID: 19486 RVA: 0x000BEAF1 File Offset: 0x000BCCF1
 		public virtual int Length
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028C2 RID: 10434
+		// Token: 0x04002B17 RID: 11031
 		private IParkourPointLayerConfig Instance;
 	}
 }

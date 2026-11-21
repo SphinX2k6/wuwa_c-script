@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004922 RID: 18722
+	// Token: 0x02003899 RID: 14489
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationPhantomArenaOpponentFunctionalToggle : NavigationButton
 	{
-		// Token: 0x06030E99 RID: 200345 RVA: 0x00B5B316 File Offset: 0x00B59516
+		// Token: 0x060259C6 RID: 154054 RVA: 0x00A96186 File Offset: 0x00A94386
 		public NavigationPhantomArenaOpponentFunctionalToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x170079CB RID: 31179
-		// (get) Token: 0x06030E9A RID: 200346 RVA: 0x00B5B324 File Offset: 0x00B59524
+		// Token: 0x17004D33 RID: 19763
+		// (get) Token: 0x060259C7 RID: 154055 RVA: 0x00A96194 File Offset: 0x00A94394
 		protected PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -32,12 +32,12 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E9B RID: 200347 RVA: 0x00B5B366 File Offset: 0x00B59566
+		// Token: 0x060259C8 RID: 154056 RVA: 0x00A961D6 File Offset: 0x00A943D6
 		protected override void OnButtonClick()
 		{
 		}
 
-		// Token: 0x06030E9C RID: 200348 RVA: 0x00B5B368 File Offset: 0x00B59568
+		// Token: 0x060259C9 RID: 154057 RVA: 0x00A961D8 File Offset: 0x00A943D8
 		protected override void OnNotifyFocusListener(bool isSameListener)
 		{
 			if (this.Proxy != null && !isSameListener)
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E9D RID: 200349 RVA: 0x00B5B385 File Offset: 0x00B59585
+		// Token: 0x060259CA RID: 154058 RVA: 0x00A961F5 File Offset: 0x00A943F5
 		protected override bool OnCheckFindOpposite()
 		{
 			return this.Proxy == null || !this.Proxy.GamepadLogic.IsInCardSelectState;
 		}
 
-		// Token: 0x0401A3DD RID: 107485
+		// Token: 0x04014C50 RID: 85072
 		protected PhantomArenaBattleProxy ProxyInternal;
 	}
 }

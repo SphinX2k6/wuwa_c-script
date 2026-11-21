@@ -7,12 +7,12 @@ using UnrealEngine.Interface;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x0200006F RID: 111
+	// Token: 0x02000072 RID: 114
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherResourceLib : Singleton
 	{
-		// Token: 0x060002F5 RID: 757 RVA: 0x0000F790 File Offset: 0x0000D990
+		// Token: 0x06000305 RID: 773 RVA: 0x00010610 File Offset: 0x0000E810
 		public FName GetDynamicFName(string key)
 		{
 			FName fname;
@@ -24,7 +24,7 @@ namespace CSharpScript.Launcher.Util
 			return fname;
 		}
 
-		// Token: 0x060002F6 RID: 758 RVA: 0x0000F7C4 File Offset: 0x0000D9C4
+		// Token: 0x06000306 RID: 774 RVA: 0x00010644 File Offset: 0x0000E844
 		public void Initialize()
 		{
 			if (this.IsInit)
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Util
 			this.ResourceManager.LoadResourceDelegate.Bind(new Action<int>(this.OnLoadComplete));
 		}
 
-		// Token: 0x060002F7 RID: 759 RVA: 0x0000F824 File Offset: 0x0000DA24
+		// Token: 0x06000307 RID: 775 RVA: 0x000106A4 File Offset: 0x0000E8A4
 		[return: Nullable(2)]
 		public T Load<[Nullable(0)] T>(string path, int priority = 0, string memoryTag = "js_call_launch") where T : UObject, IUnrealUObject
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Launcher.Util
 			return this.GetAsset<T>(path, num);
 		}
 
-		// Token: 0x060002F8 RID: 760 RVA: 0x0000F990 File Offset: 0x0000DB90
+		// Token: 0x06000308 RID: 776 RVA: 0x00010810 File Offset: 0x0000EA10
 		public int LoadAsync<[Nullable(0)] T>([Nullable(2)] string path, [Nullable(new byte[]
 		{
 			1,
@@ -146,7 +146,7 @@ namespace CSharpScript.Launcher.Util
 			return CS$<>8__locals1.id;
 		}
 
-		// Token: 0x060002F9 RID: 761 RVA: 0x0000FA98 File Offset: 0x0000DC98
+		// Token: 0x06000309 RID: 777 RVA: 0x00010918 File Offset: 0x0000EB18
 		[return: Nullable(2)]
 		private unsafe T GetAsset<[Nullable(0)] T>(string path, int handleId) where T : UObject, IUnrealUObject
 		{
@@ -191,7 +191,7 @@ namespace CSharpScript.Launcher.Util
 			return asset as T;
 		}
 
-		// Token: 0x060002FA RID: 762 RVA: 0x0000FC04 File Offset: 0x0000DE04
+		// Token: 0x0600030A RID: 778 RVA: 0x00010A84 File Offset: 0x0000EC84
 		[NullableContext(2)]
 		private bool CheckPath(string path)
 		{
@@ -219,7 +219,7 @@ namespace CSharpScript.Launcher.Util
 			return true;
 		}
 
-		// Token: 0x060002FB RID: 763 RVA: 0x0000FC90 File Offset: 0x0000DE90
+		// Token: 0x0600030B RID: 779 RVA: 0x00010B10 File Offset: 0x0000ED10
 		private void OnLoadComplete(int handleId)
 		{
 			Action action;
@@ -231,7 +231,7 @@ namespace CSharpScript.Launcher.Util
 		}
 
 		// Token: 0x17000046 RID: 70
-		// (get) Token: 0x060002FC RID: 764 RVA: 0x0000FCC8 File Offset: 0x0000DEC8
+		// (get) Token: 0x0600030C RID: 780 RVA: 0x00010B48 File Offset: 0x0000ED48
 		public static LauncherResourceLib Instance
 		{
 			get
@@ -245,12 +245,12 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002FD RID: 765 RVA: 0x0000FCEB File Offset: 0x0000DEEB
+		// Token: 0x0600030D RID: 781 RVA: 0x00010B6B File Offset: 0x0000ED6B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060002FE RID: 766 RVA: 0x0000FCED File Offset: 0x0000DEED
+		// Token: 0x0600030E RID: 782 RVA: 0x00010B6D File Offset: 0x0000ED6D
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherResourceLib instance = LauncherResourceLib._instance;
@@ -261,20 +261,20 @@ namespace CSharpScript.Launcher.Util
 			LauncherResourceLib._instance = null;
 		}
 
-		// Token: 0x060002FF RID: 767 RVA: 0x0000FD06 File Offset: 0x0000DF06
+		// Token: 0x0600030F RID: 783 RVA: 0x00010B86 File Offset: 0x0000ED86
 		static LauncherResourceLib()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherResourceLib.CreateStaticDefaultValue), new Action(LauncherResourceLib.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040001ED RID: 493
+		// Token: 0x04000218 RID: 536
 		private int GlobalId;
 
-		// Token: 0x040001EE RID: 494
+		// Token: 0x04000219 RID: 537
 		[Nullable(2)]
 		private UKuroResourceManager ResourceManager;
 
-		// Token: 0x040001EF RID: 495
+		// Token: 0x0400021A RID: 538
 		[Nullable(new byte[]
 		{
 			2,
@@ -282,16 +282,16 @@ namespace CSharpScript.Launcher.Util
 		})]
 		private Dictionary<int, Action> CallbackMap;
 
-		// Token: 0x040001F0 RID: 496
+		// Token: 0x0400021B RID: 539
 		private bool IsInit;
 
-		// Token: 0x040001F1 RID: 497
+		// Token: 0x0400021C RID: 540
 		private bool IsOpenMemoryTag = true;
 
-		// Token: 0x040001F2 RID: 498
+		// Token: 0x0400021D RID: 541
 		private readonly Dictionary<string, FName> CacheNameMap = new Dictionary<string, FName>();
 
-		// Token: 0x040001F3 RID: 499
+		// Token: 0x0400021E RID: 542
 		[Nullable(2)]
 		private static LauncherResourceLib _instance;
 	}

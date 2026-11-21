@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A60 RID: 19040
+	// Token: 0x02003A08 RID: 14856
 	[NullableContext(1)]
 	public interface ITrapDefenseBdProgressInfo
 	{
-		// Token: 0x17007A8A RID: 31370
-		// (get) Token: 0x06031615 RID: 202261
+		// Token: 0x17004E37 RID: 20023
+		// (get) Token: 0x060263A5 RID: 156581
 		TrapDefenseBdData BdData { get; }
 
-		// Token: 0x17007A8B RID: 31371
-		// (get) Token: 0x06031616 RID: 202262
+		// Token: 0x17004E38 RID: 20024
+		// (get) Token: 0x060263A6 RID: 156582
 		bool IsActive { get; }
 
-		// Token: 0x17007A8C RID: 31372
-		// (get) Token: 0x06031617 RID: 202263
+		// Token: 0x17004E39 RID: 20025
+		// (get) Token: 0x060263A7 RID: 156583
 		bool IsShowQualityArrow { get; }
 
-		// Token: 0x17007A8D RID: 31373
-		// (get) Token: 0x06031618 RID: 202264
+		// Token: 0x17004E3A RID: 20026
+		// (get) Token: 0x060263A8 RID: 156584
 		ETrapDefenseResKey QualityArrowRes { get; }
 	}
 }

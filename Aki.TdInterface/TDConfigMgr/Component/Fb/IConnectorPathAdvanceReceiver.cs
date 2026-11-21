@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D1C RID: 3356
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E16 RID: 3606
 	public class IConnectorPathAdvanceReceiver
 	{
-		// Token: 0x06004C9B RID: 19611 RVA: 0x000BED4A File Offset: 0x000BCF4A
+		// Token: 0x060051B5 RID: 20917 RVA: 0x000CA41E File Offset: 0x000C861E
 		public static IConnectorPathAdvanceReceiver Create(IConnectorPathAdvanceReceiver? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001820 RID: 6176
-		// (get) Token: 0x06004C9C RID: 19612 RVA: 0x000BED69 File Offset: 0x000BCF69
+		// Token: 0x17001984 RID: 6532
+		// (get) Token: 0x060051B6 RID: 20918 RVA: 0x000CA43D File Offset: 0x000C863D
 		public virtual string ConnectedState
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001821 RID: 6177
-		// (get) Token: 0x06004C9D RID: 19613 RVA: 0x000BED76 File Offset: 0x000BCF76
+		// Token: 0x17001985 RID: 6533
+		// (get) Token: 0x060051B7 RID: 20919 RVA: 0x000CA44A File Offset: 0x000C864A
 		public virtual string DisconnectedState
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BD9 RID: 11225
+		// Token: 0x04002E99 RID: 11929
 		private IConnectorPathAdvanceReceiver Instance;
 	}
 }

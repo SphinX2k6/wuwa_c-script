@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002410 RID: 9232
+	// Token: 0x020026AF RID: 9903
 	public class ESetTeleControlTypeJsonConverter : JsonConverter<ESetTeleControlType>
 	{
-		// Token: 0x0600C8C8 RID: 51400 RVA: 0x001D6060 File Offset: 0x001D4260
+		// Token: 0x0600D56F RID: 54639 RVA: 0x001EFC5C File Offset: 0x001EDE5C
 		public override ESetTeleControlType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESetTeleControlTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C8C9 RID: 51401 RVA: 0x001D6084 File Offset: 0x001D4284
+		// Token: 0x0600D570 RID: 54640 RVA: 0x001EFC80 File Offset: 0x001EDE80
 		public override void Write(Utf8JsonWriter writer, ESetTeleControlType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056BE RID: 22206
+	// Token: 0x02004695 RID: 18069
 	public class PendingProcessDefine : IStaticVariableResetter
 	{
-		// Token: 0x060387D2 RID: 231378 RVA: 0x00D6B1A5 File Offset: 0x00D693A5
+		// Token: 0x0602D6D9 RID: 186073 RVA: 0x00CB92ED File Offset: 0x00CB74ED
 		static PendingProcessDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PendingProcessDefine.CreateStaticDefaultValue), new Action(PendingProcessDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060387D3 RID: 231379 RVA: 0x00D6B1C4 File Offset: 0x00D693C4
+		// Token: 0x0602D6DA RID: 186074 RVA: 0x00CB930C File Offset: 0x00CB750C
 		public static void CreateStaticDefaultValue()
 		{
 			PendingProcessDefine.Id = 0;
 		}
 
-		// Token: 0x060387D4 RID: 231380 RVA: 0x00D6B1CC File Offset: 0x00D693CC
+		// Token: 0x0602D6DB RID: 186075 RVA: 0x00CB9314 File Offset: 0x00CB7514
 		public static void ResetStaticDefaultValue()
 		{
 			PendingProcessDefine.Id = 0;
 		}
 
-		// Token: 0x0401DAAD RID: 121517
+		// Token: 0x0401853A RID: 99642
 		public static int Id;
 	}
 }

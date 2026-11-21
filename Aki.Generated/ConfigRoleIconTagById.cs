@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008AB RID: 2219
+	// Token: 0x020008C7 RID: 2247
 	public class ConfigRoleIconTagById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003415 RID: 13333 RVA: 0x0017FB00 File Offset: 0x0017DD00
+		// Token: 0x060034BD RID: 13501 RVA: 0x00186DE8 File Offset: 0x00184FE8
 		static ConfigRoleIconTagById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleIconTagById.CreateStaticDefaultValue), new Action(ConfigRoleIconTagById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003416 RID: 13334 RVA: 0x0017FB20 File Offset: 0x0017DD20
+		// Token: 0x060034BE RID: 13502 RVA: 0x00186E08 File Offset: 0x00185008
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleIconTagById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003417 RID: 13335 RVA: 0x0017FB9F File Offset: 0x0017DD9F
+		// Token: 0x060034BF RID: 13503 RVA: 0x00186E87 File Offset: 0x00185087
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleIconTagById.LogPair = null;
 			ConfigRoleIconTagById.HandleId = 0;
 		}
 
-		// Token: 0x06003418 RID: 13336 RVA: 0x0017FBAD File Offset: 0x0017DDAD
+		// Token: 0x060034C0 RID: 13504 RVA: 0x00186E95 File Offset: 0x00185095
 		public static void Init()
 		{
 			ConfigRoleIconTagById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleIconTagById.HandleId, "db_component_config.db", "select BinData from `RoleIconTag` where Id=?");
 		}
 
-		// Token: 0x06003419 RID: 13337 RVA: 0x0017FBC8 File Offset: 0x0017DDC8
+		// Token: 0x060034C1 RID: 13505 RVA: 0x00186EB0 File Offset: 0x001850B0
 		public static RoleIconTag? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleIconTagById.HandleId, ConfigRoleIconTagById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new RoleIconTag?(rootAsRoleIconTag);
 		}
 
-		// Token: 0x04003C93 RID: 15507
+		// Token: 0x04003D57 RID: 15703
 		private const string DB = "db_component_config.db";
 
-		// Token: 0x04003C94 RID: 15508
+		// Token: 0x04003D58 RID: 15704
 		private const string FILE = "t.通用组件配置.xlsx";
 
-		// Token: 0x04003C95 RID: 15509
+		// Token: 0x04003D59 RID: 15705
 		private const string TABLE = "RoleIconTag";
 
-		// Token: 0x04003C96 RID: 15510
+		// Token: 0x04003D5A RID: 15706
 		private const string COMMAND = "select BinData from `RoleIconTag` where Id=?";
 
-		// Token: 0x04003C97 RID: 15511
+		// Token: 0x04003D5B RID: 15707
 		private const string KEY_PREFIX = "RoleIconTagById";
 
-		// Token: 0x04003C98 RID: 15512
+		// Token: 0x04003D5C RID: 15708
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C99 RID: 15513
+		// Token: 0x04003D5D RID: 15709
 		private static int HandleId;
 	}
 }

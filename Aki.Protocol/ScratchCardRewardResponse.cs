@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011A1 RID: 4513
+	// Token: 0x020011DB RID: 4571
 	[NetMessage(EMessageId.ScratchCardRewardResponse)]
 	public sealed class ScratchCardRewardResponse : IMessage<ScratchCardRewardResponse>, IMessage, IEquatable<ScratchCardRewardResponse>, IDeepCloneable<ScratchCardRewardResponse>, IBufferMessage
 	{
-		// Token: 0x060180BA RID: 98490 RVA: 0x0037DB27 File Offset: 0x0037BD27
+		// Token: 0x0601865B RID: 99931 RVA: 0x0038CE6C File Offset: 0x0038B06C
 		[NullableContext(1)]
 		public static ScratchCardRewardResponse Create()
 		{
 			return new ScratchCardRewardResponse();
 		}
 
-		// Token: 0x170050CB RID: 20683
-		// (get) Token: 0x060180BB RID: 98491 RVA: 0x0037DB2E File Offset: 0x0037BD2E
+		// Token: 0x17005237 RID: 21047
+		// (get) Token: 0x0601865C RID: 99932 RVA: 0x0038CE73 File Offset: 0x0038B073
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050CC RID: 20684
-		// (get) Token: 0x060180BC RID: 98492 RVA: 0x0037DB31 File Offset: 0x0037BD31
+		// Token: 0x17005238 RID: 21048
+		// (get) Token: 0x0601865D RID: 99933 RVA: 0x0038CE76 File Offset: 0x0038B076
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060180BD RID: 98493 RVA: 0x0037DB38 File Offset: 0x0037BD38
+		// Token: 0x0601865E RID: 99934 RVA: 0x0038CE7D File Offset: 0x0038B07D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardRewardResponse()
 		{
 		}
 
-		// Token: 0x060180BE RID: 98494 RVA: 0x0037DB64 File Offset: 0x0037BD64
+		// Token: 0x0601865F RID: 99935 RVA: 0x0038CEA8 File Offset: 0x0038B0A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardRewardResponse(ScratchCardRewardResponse other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060180BF RID: 98495 RVA: 0x0037DBD3 File Offset: 0x0037BDD3
+		// Token: 0x06018660 RID: 99936 RVA: 0x0038CF17 File Offset: 0x0038B117
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScratchCardRewardResponse Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new ScratchCardRewardResponse(this);
 		}
 
-		// Token: 0x170050CD RID: 20685
-		// (get) Token: 0x060180C0 RID: 98496 RVA: 0x0037DBDB File Offset: 0x0037BDDB
-		// (set) Token: 0x060180C1 RID: 98497 RVA: 0x0037DBE3 File Offset: 0x0037BDE3
+		// Token: 0x17005239 RID: 21049
+		// (get) Token: 0x06018661 RID: 99937 RVA: 0x0038CF1F File Offset: 0x0038B11F
+		// (set) Token: 0x06018662 RID: 99938 RVA: 0x0038CF27 File Offset: 0x0038B127
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int OpenType
@@ -88,8 +88,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050CE RID: 20686
-		// (get) Token: 0x060180C2 RID: 98498 RVA: 0x0037DBEC File Offset: 0x0037BDEC
+		// Token: 0x1700523A RID: 21050
+		// (get) Token: 0x06018663 RID: 99939 RVA: 0x0038CF30 File Offset: 0x0038B130
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, ScratchCardRewardData> OpenIndex
@@ -100,8 +100,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050CF RID: 20687
-		// (get) Token: 0x060180C3 RID: 98499 RVA: 0x0037DBF4 File Offset: 0x0037BDF4
+		// Token: 0x1700523B RID: 21051
+		// (get) Token: 0x06018664 RID: 99940 RVA: 0x0038CF38 File Offset: 0x0038B138
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> ItemMap
@@ -112,8 +112,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D0 RID: 20688
-		// (get) Token: 0x060180C4 RID: 98500 RVA: 0x0037DBFC File Offset: 0x0037BDFC
+		// Token: 0x1700523C RID: 21052
+		// (get) Token: 0x06018665 RID: 99941 RVA: 0x0038CF40 File Offset: 0x0038B140
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> LeftRewardItem
@@ -124,9 +124,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050D1 RID: 20689
-		// (get) Token: 0x060180C5 RID: 98501 RVA: 0x0037DC04 File Offset: 0x0037BE04
-		// (set) Token: 0x060180C6 RID: 98502 RVA: 0x0037DC0C File Offset: 0x0037BE0C
+		// Token: 0x1700523D RID: 21053
+		// (get) Token: 0x06018666 RID: 99942 RVA: 0x0038CF48 File Offset: 0x0038B148
+		// (set) Token: 0x06018667 RID: 99943 RVA: 0x0038CF50 File Offset: 0x0038B150
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Error
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060180C7 RID: 98503 RVA: 0x0037DC15 File Offset: 0x0037BE15
+		// Token: 0x06018668 RID: 99944 RVA: 0x0038CF59 File Offset: 0x0038B159
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ScratchCardRewardResponse);
 		}
 
-		// Token: 0x060180C8 RID: 98504 RVA: 0x0037DC24 File Offset: 0x0037BE24
+		// Token: 0x06018669 RID: 99945 RVA: 0x0038CF68 File Offset: 0x0038B168
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ScratchCardRewardResponse other)
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.OpenType == other.OpenType && this.OpenIndex.Equals(other.OpenIndex) && this.ItemMap.Equals(other.ItemMap) && this.LeftRewardItem.Equals(other.LeftRewardItem) && this.Error == other.Error && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060180C9 RID: 98505 RVA: 0x0037DCAC File Offset: 0x0037BEAC
+		// Token: 0x0601866A RID: 99946 RVA: 0x0038CFF0 File Offset: 0x0038B1F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060180CA RID: 98506 RVA: 0x0037DD34 File Offset: 0x0037BF34
+		// Token: 0x0601866B RID: 99947 RVA: 0x0038D078 File Offset: 0x0038B278
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060180CB RID: 98507 RVA: 0x0037DD41 File Offset: 0x0037BF41
+		// Token: 0x0601866C RID: 99948 RVA: 0x0038D085 File Offset: 0x0038B285
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -197,31 +197,31 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060180CC RID: 98508 RVA: 0x0037DD4C File Offset: 0x0037BF4C
+		// Token: 0x0601866D RID: 99949 RVA: 0x0038D090 File Offset: 0x0038B290
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.itemMap_.WriteTo(ref output, ScratchCardRewardResponse._map_itemMap_codec);
 			if (this.OpenType != 0)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.OpenType);
 			}
-			this.itemMap_.WriteTo(ref output, ScratchCardRewardResponse._map_itemMap_codec);
-			this.leftRewardItem_.WriteTo(ref output, ScratchCardRewardResponse._map_leftRewardItem_codec);
 			this.openIndex_.WriteTo(ref output, ScratchCardRewardResponse._map_openIndex_codec);
 			if (this.Error != ErrorCode.Success)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(96);
 				output.WriteEnum((int)this.Error);
 			}
+			this.leftRewardItem_.WriteTo(ref output, ScratchCardRewardResponse._map_leftRewardItem_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060180CD RID: 98509 RVA: 0x0037DDD8 File Offset: 0x0037BFD8
+		// Token: 0x0601866E RID: 99950 RVA: 0x0038D11C File Offset: 0x0038B31C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060180CE RID: 98510 RVA: 0x0037DE68 File Offset: 0x0037C068
+		// Token: 0x0601866F RID: 99951 RVA: 0x0038D1AC File Offset: 0x0038B3AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ScratchCardRewardResponse other)
@@ -268,7 +268,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060180CF RID: 98511 RVA: 0x0037DEEB File Offset: 0x0037C0EB
+		// Token: 0x06018670 RID: 99952 RVA: 0x0038D22F File Offset: 0x0038B42F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -276,7 +276,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060180D0 RID: 98512 RVA: 0x0037DEF4 File Offset: 0x0037C0F4
+		// Token: 0x06018671 RID: 99953 RVA: 0x0038D238 File Offset: 0x0038B438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -288,34 +288,34 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 42U)
+				if (num <= 56U)
 				{
-					if (num == 24U)
-					{
-						this.OpenType = input.ReadInt32();
-						continue;
-					}
-					if (num == 42U)
+					if (num == 18U)
 					{
 						this.itemMap_.AddEntriesFrom(ref input, ScratchCardRewardResponse._map_itemMap_codec);
+						continue;
+					}
+					if (num == 56U)
+					{
+						this.OpenType = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 74U)
-					{
-						this.leftRewardItem_.AddEntriesFrom(ref input, ScratchCardRewardResponse._map_leftRewardItem_codec);
-						continue;
-					}
-					if (num == 114U)
+					if (num == 82U)
 					{
 						this.openIndex_.AddEntriesFrom(ref input, ScratchCardRewardResponse._map_openIndex_codec);
 						continue;
 					}
-					if (num == 120U)
+					if (num == 96U)
 					{
 						this.Error = (ErrorCode)input.ReadEnum();
+						continue;
+					}
+					if (num == 106U)
+					{
+						this.leftRewardItem_.AddEntriesFrom(ref input, ScratchCardRewardResponse._map_leftRewardItem_codec);
 						continue;
 					}
 				}
@@ -323,46 +323,46 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008E52 RID: 36434
+		// Token: 0x040090E5 RID: 37093
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008E53 RID: 36435
-		public const int OpenTypeFieldNumber = 3;
+		// Token: 0x040090E6 RID: 37094
+		public const int OpenTypeFieldNumber = 7;
 
-		// Token: 0x04008E54 RID: 36436
+		// Token: 0x040090E7 RID: 37095
 		private int openType_;
 
-		// Token: 0x04008E55 RID: 36437
-		public const int OpenIndexFieldNumber = 14;
+		// Token: 0x040090E8 RID: 37096
+		public const int OpenIndexFieldNumber = 10;
 
-		// Token: 0x04008E56 RID: 36438
-		private static readonly MapField<int, ScratchCardRewardData>.Codec _map_openIndex_codec = new MapField<int, ScratchCardRewardData>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForMessage<ScratchCardRewardData>(18U, ScratchCardRewardData.Parser), 114U);
+		// Token: 0x040090E9 RID: 37097
+		private static readonly MapField<int, ScratchCardRewardData>.Codec _map_openIndex_codec = new MapField<int, ScratchCardRewardData>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForMessage<ScratchCardRewardData>(18U, ScratchCardRewardData.Parser), 82U);
 
-		// Token: 0x04008E57 RID: 36439
+		// Token: 0x040090EA RID: 37098
 		private readonly MapField<int, ScratchCardRewardData> openIndex_ = new MapField<int, ScratchCardRewardData>();
 
-		// Token: 0x04008E58 RID: 36440
-		public const int ItemMapFieldNumber = 5;
+		// Token: 0x040090EB RID: 37099
+		public const int ItemMapFieldNumber = 2;
 
-		// Token: 0x04008E59 RID: 36441
-		private static readonly MapField<int, int>.Codec _map_itemMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 42U);
+		// Token: 0x040090EC RID: 37100
+		private static readonly MapField<int, int>.Codec _map_itemMap_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 18U);
 
-		// Token: 0x04008E5A RID: 36442
+		// Token: 0x040090ED RID: 37101
 		private readonly MapField<int, int> itemMap_ = new MapField<int, int>();
 
-		// Token: 0x04008E5B RID: 36443
-		public const int LeftRewardItemFieldNumber = 9;
+		// Token: 0x040090EE RID: 37102
+		public const int LeftRewardItemFieldNumber = 13;
 
-		// Token: 0x04008E5C RID: 36444
-		private static readonly MapField<int, int>.Codec _map_leftRewardItem_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 74U);
+		// Token: 0x040090EF RID: 37103
+		private static readonly MapField<int, int>.Codec _map_leftRewardItem_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 106U);
 
-		// Token: 0x04008E5D RID: 36445
+		// Token: 0x040090F0 RID: 37104
 		private readonly MapField<int, int> leftRewardItem_ = new MapField<int, int>();
 
-		// Token: 0x04008E5E RID: 36446
-		public const int ErrorFieldNumber = 15;
+		// Token: 0x040090F1 RID: 37105
+		public const int ErrorFieldNumber = 12;
 
-		// Token: 0x04008E5F RID: 36447
+		// Token: 0x040090F2 RID: 37106
 		private ErrorCode error_;
 	}
 }

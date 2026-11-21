@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F06 RID: 3846
+	// Token: 0x02000FEB RID: 4075
 	public struct PhotoDropDown : IFlatbufferObject
 	{
-		// Token: 0x170027B1 RID: 10161
-		// (get) Token: 0x0600AB46 RID: 43846 RVA: 0x002B9315 File Offset: 0x002B7515
+		// Token: 0x17002817 RID: 10263
+		// (get) Token: 0x0600B167 RID: 45415 RVA: 0x002D603B File Offset: 0x002D423B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB47 RID: 43847 RVA: 0x002B9322 File Offset: 0x002B7522
+		// Token: 0x0600B168 RID: 45416 RVA: 0x002D6048 File Offset: 0x002D4248
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AB48 RID: 43848 RVA: 0x002B932C File Offset: 0x002B752C
+		// Token: 0x0600B169 RID: 45417 RVA: 0x002D6050 File Offset: 0x002D4250
 		public static PhotoDropDown GetRootAsPhotoDropDown(ByteBuffer _bb)
 		{
 			return PhotoDropDown.GetRootAsPhotoDropDown(_bb, default(PhotoDropDown));
 		}
 
-		// Token: 0x0600AB49 RID: 43849 RVA: 0x002B9348 File Offset: 0x002B7548
+		// Token: 0x0600B16A RID: 45418 RVA: 0x002D606C File Offset: 0x002D426C
 		public static PhotoDropDown GetRootAsPhotoDropDown(ByteBuffer _bb, PhotoDropDown obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AB4A RID: 43850 RVA: 0x002B9365 File Offset: 0x002B7565
+		// Token: 0x0600B16B RID: 45419 RVA: 0x002D6089 File Offset: 0x002D4289
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AB4B RID: 43851 RVA: 0x002B9374 File Offset: 0x002B7574
+		// Token: 0x0600B16C RID: 45420 RVA: 0x002D6098 File Offset: 0x002D4298
 		public PhotoDropDown __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170027B2 RID: 10162
-		// (get) Token: 0x0600AB4C RID: 43852 RVA: 0x002B9384 File Offset: 0x002B7584
+		// Token: 0x17002818 RID: 10264
+		// (get) Token: 0x0600B16D RID: 45421 RVA: 0x002D60A8 File Offset: 0x002D42A8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170027B3 RID: 10163
-		// (get) Token: 0x0600AB4D RID: 43853 RVA: 0x002B93C0 File Offset: 0x002B75C0
+		// Token: 0x17002819 RID: 10265
+		// (get) Token: 0x0600B16E RID: 45422 RVA: 0x002D60E4 File Offset: 0x002D42E4
 		public int SetupType
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170027B4 RID: 10164
-		// (get) Token: 0x0600AB4E RID: 43854 RVA: 0x002B93FC File Offset: 0x002B75FC
+		// Token: 0x1700281A RID: 10266
+		// (get) Token: 0x0600B16F RID: 45423 RVA: 0x002D6120 File Offset: 0x002D4320
 		public string TextId
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB4F RID: 43855 RVA: 0x002B9433 File Offset: 0x002B7633
+		// Token: 0x0600B170 RID: 45424 RVA: 0x002D6157 File Offset: 0x002D4357
 		public Span<byte> GetTextIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600AB50 RID: 43856 RVA: 0x002B9442 File Offset: 0x002B7642
+		// Token: 0x0600B171 RID: 45425 RVA: 0x002D6166 File Offset: 0x002D4366
 		public byte[] GetTextIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170027B5 RID: 10165
-		// (get) Token: 0x0600AB51 RID: 43857 RVA: 0x002B945C File Offset: 0x002B765C
+		// Token: 0x1700281B RID: 10267
+		// (get) Token: 0x0600B172 RID: 45426 RVA: 0x002D6180 File Offset: 0x002D4380
 		public bool IsShowInLowDevice
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB52 RID: 43858 RVA: 0x002B949C File Offset: 0x002B769C
+		// Token: 0x0600B173 RID: 45427 RVA: 0x002D61C0 File Offset: 0x002D43C0
 		public string Param(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -129,8 +129,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170027B6 RID: 10166
-		// (get) Token: 0x0600AB53 RID: 43859 RVA: 0x002B94D8 File Offset: 0x002B76D8
+		// Token: 0x1700281C RID: 10268
+		// (get) Token: 0x0600B174 RID: 45428 RVA: 0x002D61FC File Offset: 0x002D43FC
 		public int ParamLength
 		{
 			get
@@ -144,24 +144,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB54 RID: 43860 RVA: 0x002B9504 File Offset: 0x002B7704
+		// Token: 0x0600B175 RID: 45429 RVA: 0x002D6228 File Offset: 0x002D4428
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamIter()或GetParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Param()
+		public string[] Param()
 		{
 			return this.ParamIter().ToArray<string>();
 		}
 
-		// Token: 0x0600AB55 RID: 43861 RVA: 0x002B9511 File Offset: 0x002B7711
+		// Token: 0x0600B176 RID: 45430 RVA: 0x002D6235 File Offset: 0x002D4435
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ParamIter()
+		public IEnumerable<string> ParamIter()
 		{
 			PhotoDropDown.<ParamIter>d__22 <ParamIter>d__ = new PhotoDropDown.<ParamIter>d__22(-2);
 			<ParamIter>d__.<>3__<>4__this = this;
 			return <ParamIter>d__;
 		}
 
-		// Token: 0x04004FCE RID: 20430
+		// Token: 0x040055B3 RID: 21939
 		private Table __p;
 	}
 }

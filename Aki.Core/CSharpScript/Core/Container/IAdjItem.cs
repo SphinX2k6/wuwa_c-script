@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x02000157 RID: 343
+	// Token: 0x0200015C RID: 348
 	public interface IAdjItem
 	{
-		// Token: 0x17000123 RID: 291
-		// (get) Token: 0x06000BDB RID: 3035
-		// (set) Token: 0x06000BDC RID: 3036
+		// Token: 0x17000136 RID: 310
+		// (get) Token: 0x06000C3A RID: 3130
+		// (set) Token: 0x06000C3B RID: 3131
 		int To { get; set; }
 
-		// Token: 0x17000124 RID: 292
-		// (get) Token: 0x06000BDD RID: 3037
-		// (set) Token: 0x06000BDE RID: 3038
+		// Token: 0x17000137 RID: 311
+		// (get) Token: 0x06000C3C RID: 3132
+		// (set) Token: 0x06000C3D RID: 3133
 		int EdgeId { get; set; }
 	}
 }

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using UnrealEngine;
 
-// Token: 0x02003329 RID: 13097
+// Token: 0x0200289B RID: 10395
 [NullableContext(2)]
 [Nullable(0)]
 public class RedDotBase
 {
-	// Token: 0x1700279E RID: 10142
-	// (get) Token: 0x0601C8C7 RID: 116935 RVA: 0x00801359 File Offset: 0x007FF559
+	// Token: 0x17002B3A RID: 11066
+	// (get) Token: 0x0601A5BF RID: 107967 RVA: 0x008278FD File Offset: 0x00825AFD
 	[Nullable(new byte[]
 	{
 		2,
@@ -29,13 +29,13 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8C8 RID: 116936 RVA: 0x00801370 File Offset: 0x007FF570
+	// Token: 0x0601A5C0 RID: 107968 RVA: 0x00827914 File Offset: 0x00825B14
 	public void SetRedDotActiveByGm(bool bShow)
 	{
 		this.SetRedDotActive(bShow);
 	}
 
-	// Token: 0x0601C8C9 RID: 116937 RVA: 0x0080137C File Offset: 0x007FF57C
+	// Token: 0x0601A5C1 RID: 107969 RVA: 0x00827920 File Offset: 0x00825B20
 	private void SetSelfAndChildActive(bool value)
 	{
 		this.IsActive = value;
@@ -63,14 +63,14 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8CA RID: 116938 RVA: 0x0080143C File Offset: 0x007FF63C
+	// Token: 0x0601A5C2 RID: 107970 RVA: 0x008279E0 File Offset: 0x00825BE0
 	private bool CheckParentState(bool newState)
 	{
 		Tree<RedDotBase> tree = this.Tree;
 		return ((tree != null) ? tree.Parent : null) == null || (this.Tree.Parent.Element.IsActive || !newState);
 	}
 
-	// Token: 0x0601C8CB RID: 116939 RVA: 0x00801474 File Offset: 0x007FF674
+	// Token: 0x0601A5C3 RID: 107971 RVA: 0x00827A18 File Offset: 0x00825C18
 	private void SetRedDotActive(bool value)
 	{
 		if (value == this.IsActive)
@@ -93,7 +93,7 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8CC RID: 116940 RVA: 0x008014D0 File Offset: 0x007FF6D0
+	// Token: 0x0601A5C4 RID: 107972 RVA: 0x00827A74 File Offset: 0x00825C74
 	public void Init(ERedDotName name)
 	{
 		this.Name = new ERedDotName?(name);
@@ -102,19 +102,19 @@ public class RedDotBase
 		this.AddDisActiveEvents();
 	}
 
-	// Token: 0x0601C8CD RID: 116941 RVA: 0x008014F0 File Offset: 0x007FF6F0
+	// Token: 0x0601A5C5 RID: 107973 RVA: 0x00827A94 File Offset: 0x00825C94
 	protected void OnActiveEvent()
 	{
 		this.SetRedDotActive(true);
 	}
 
-	// Token: 0x0601C8CE RID: 116942 RVA: 0x008014F9 File Offset: 0x007FF6F9
+	// Token: 0x0601A5C6 RID: 107974 RVA: 0x00827A9D File Offset: 0x00825C9D
 	protected void OnDisActiveEvent()
 	{
 		this.SetRedDotActive(false);
 	}
 
-	// Token: 0x0601C8CF RID: 116943 RVA: 0x00801504 File Offset: 0x007FF704
+	// Token: 0x0601A5C7 RID: 107975 RVA: 0x00827AA8 File Offset: 0x00825CA8
 	protected void EventCheck()
 	{
 		int uId = 0;
@@ -130,7 +130,7 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8D0 RID: 116944 RVA: 0x00801578 File Offset: 0x007FF778
+	// Token: 0x0601A5C8 RID: 107976 RVA: 0x00827B1C File Offset: 0x00825D1C
 	protected void EventCheckWithUid(int uId)
 	{
 		if (this.IsAllEventParamAsUId())
@@ -142,13 +142,13 @@ public class RedDotBase
 		this.EventCheck();
 	}
 
-	// Token: 0x0601C8D1 RID: 116945 RVA: 0x00801598 File Offset: 0x007FF798
+	// Token: 0x0601A5C9 RID: 107977 RVA: 0x00827B3C File Offset: 0x00825D3C
 	private void PushToEventQueue(int uId = 0)
 	{
 		RedDotSystem.Instance.PushToEventQueue(new TRedDotCheckEvent(this.CheckSelf), uId, this.Name.Value);
 	}
 
-	// Token: 0x0601C8D2 RID: 116946 RVA: 0x008015BC File Offset: 0x007FF7BC
+	// Token: 0x0601A5CA RID: 107978 RVA: 0x00827B60 File Offset: 0x00825D60
 	private unsafe void CheckSelf(int uId = 0)
 	{
 		bool flag = this.OnCheck(uId);
@@ -176,7 +176,7 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8D3 RID: 116947 RVA: 0x00801668 File Offset: 0x007FF868
+	// Token: 0x0601A5CB RID: 107979 RVA: 0x00827C0C File Offset: 0x00825E0C
 	[NullableContext(1)]
 	private void OnChildActiveChange(RedDotBase child, bool newActiveState)
 	{
@@ -205,7 +205,7 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8D4 RID: 116948 RVA: 0x00801734 File Offset: 0x007FF934
+	// Token: 0x0601A5CC RID: 107980 RVA: 0x00827CD8 File Offset: 0x00825ED8
 	private void CalculateStateCount()
 	{
 		foreach (KeyValuePair<int, RedDotData> keyValuePair in this.DataMap)
@@ -229,7 +229,7 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8D5 RID: 116949 RVA: 0x0080180C File Offset: 0x007FFA0C
+	// Token: 0x0601A5CD RID: 107981 RVA: 0x00827DB0 File Offset: 0x00825FB0
 	private void NotifyParentStateChange(bool result, int rawUniqueId = 0)
 	{
 		Tree<RedDotBase> tree = this.Tree;
@@ -271,7 +271,7 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0601C8D6 RID: 116950 RVA: 0x00801898 File Offset: 0x007FFA98
+	// Token: 0x0601A5CE RID: 107982 RVA: 0x00827E3C File Offset: 0x0082603C
 	private RedDotData GetData(int uId)
 	{
 		RedDotData result;
@@ -279,7 +279,7 @@ public class RedDotBase
 		return result;
 	}
 
-	// Token: 0x0601C8D7 RID: 116951 RVA: 0x008018B8 File Offset: 0x007FFAB8
+	// Token: 0x0601A5CF RID: 107983 RVA: 0x00827E5C File Offset: 0x0082605C
 	[NullableContext(1)]
 	private RedDotData TryGenerateData(int uId = 0)
 	{
@@ -293,7 +293,7 @@ public class RedDotBase
 		return redDotData;
 	}
 
-	// Token: 0x0601C8D8 RID: 116952 RVA: 0x008018F0 File Offset: 0x007FFAF0
+	// Token: 0x0601A5D0 RID: 107984 RVA: 0x00827E94 File Offset: 0x00826094
 	public void BindUi(int uId = 0, UUIItem uiItem = null, Action<bool, int> stateChangeCallback = null)
 	{
 		this.TryGenerateData(uId);
@@ -306,7 +306,7 @@ public class RedDotBase
 		this.UpdateState(uId);
 	}
 
-	// Token: 0x0601C8D9 RID: 116953 RVA: 0x0080191B File Offset: 0x007FFB1B
+	// Token: 0x0601A5D1 RID: 107985 RVA: 0x00827EBF File Offset: 0x008260BF
 	public void UnBindGivenUi(int uId = 0, UUIItem uiItem = null)
 	{
 		RedDotData data = this.GetData(uId);
@@ -317,7 +317,7 @@ public class RedDotBase
 		data.DeleteUiItem(uiItem);
 	}
 
-	// Token: 0x0601C8DA RID: 116954 RVA: 0x00801930 File Offset: 0x007FFB30
+	// Token: 0x0601A5D2 RID: 107986 RVA: 0x00827ED4 File Offset: 0x008260D4
 	public void UnBindUi()
 	{
 		foreach (RedDotData redDotData in this.DataMap.Values)
@@ -327,7 +327,7 @@ public class RedDotBase
 		this.StateChangeCallback = null;
 	}
 
-	// Token: 0x0601C8DB RID: 116955 RVA: 0x0080198C File Offset: 0x007FFB8C
+	// Token: 0x0601A5D3 RID: 107987 RVA: 0x00827F30 File Offset: 0x00826130
 	public void UnBindGivenUiAndDeleteData(int uId = 0, UUIItem uiItem = null)
 	{
 		RedDotData data = this.GetData(uId);
@@ -344,7 +344,7 @@ public class RedDotBase
 		this.DataMap.Remove(uId);
 	}
 
-	// Token: 0x0601C8DC RID: 116956 RVA: 0x008019E0 File Offset: 0x007FFBE0
+	// Token: 0x0601A5D4 RID: 107988 RVA: 0x00827F84 File Offset: 0x00826184
 	public void UnBindUiAndClearData()
 	{
 		this.UnBindUi();
@@ -355,7 +355,7 @@ public class RedDotBase
 		this.DataMap.Clear();
 	}
 
-	// Token: 0x0601C8DD RID: 116957 RVA: 0x00801A58 File Offset: 0x007FFC58
+	// Token: 0x0601A5D5 RID: 107989 RVA: 0x00827FFC File Offset: 0x008261FC
 	public void UpdateState(int uId = 0)
 	{
 		RedDotData data = this.GetData(uId);
@@ -371,7 +371,7 @@ public class RedDotBase
 		stateChangeCallback(data != null && data.State, uId);
 	}
 
-	// Token: 0x0601C8DE RID: 116958 RVA: 0x00801A94 File Offset: 0x007FFC94
+	// Token: 0x0601A5D6 RID: 107990 RVA: 0x00828038 File Offset: 0x00826238
 	public bool IsRedDotActive()
 	{
 		using (Dictionary<int, RedDotData>.ValueCollection.Enumerator enumerator = this.DataMap.Values.GetEnumerator())
@@ -387,63 +387,63 @@ public class RedDotBase
 		return false;
 	}
 
-	// Token: 0x0601C8DF RID: 116959 RVA: 0x00801AF4 File Offset: 0x007FFCF4
+	// Token: 0x0601A5D7 RID: 107991 RVA: 0x00828098 File Offset: 0x00826298
 	public ERedDotName? GetParentName()
 	{
 		return this.OnGetParentName();
 	}
 
-	// Token: 0x0601C8E0 RID: 116960 RVA: 0x00801AFC File Offset: 0x007FFCFC
+	// Token: 0x0601A5D8 RID: 107992 RVA: 0x008280A0 File Offset: 0x008262A0
 	protected virtual void AddCheckEvent()
 	{
 	}
 
-	// Token: 0x0601C8E1 RID: 116961 RVA: 0x00801AFE File Offset: 0x007FFCFE
+	// Token: 0x0601A5D9 RID: 107993 RVA: 0x008280A2 File Offset: 0x008262A2
 	protected virtual void RemoveCheckEvent()
 	{
 	}
 
-	// Token: 0x0601C8E2 RID: 116962 RVA: 0x00801B00 File Offset: 0x007FFD00
+	// Token: 0x0601A5DA RID: 107994 RVA: 0x008280A4 File Offset: 0x008262A4
 	protected virtual void AddActiveEvents()
 	{
 	}
 
-	// Token: 0x0601C8E3 RID: 116963 RVA: 0x00801B02 File Offset: 0x007FFD02
+	// Token: 0x0601A5DB RID: 107995 RVA: 0x008280A6 File Offset: 0x008262A6
 	protected virtual void AddDisActiveEvents()
 	{
 	}
 
-	// Token: 0x0601C8E4 RID: 116964 RVA: 0x00801B04 File Offset: 0x007FFD04
+	// Token: 0x0601A5DC RID: 107996 RVA: 0x008280A8 File Offset: 0x008262A8
 	protected virtual bool OnCheck(int uId = 0)
 	{
 		return false;
 	}
 
-	// Token: 0x0601C8E5 RID: 116965 RVA: 0x00801B07 File Offset: 0x007FFD07
+	// Token: 0x0601A5DD RID: 107997 RVA: 0x008280AB File Offset: 0x008262AB
 	protected virtual bool IsMultiple()
 	{
 		return false;
 	}
 
-	// Token: 0x0601C8E6 RID: 116966 RVA: 0x00801B0C File Offset: 0x007FFD0C
+	// Token: 0x0601A5DE RID: 107998 RVA: 0x008280B0 File Offset: 0x008262B0
 	protected virtual ERedDotName? OnGetParentName()
 	{
 		return null;
 	}
 
-	// Token: 0x0601C8E7 RID: 116967 RVA: 0x00801B22 File Offset: 0x007FFD22
+	// Token: 0x0601A5DF RID: 107999 RVA: 0x008280C6 File Offset: 0x008262C6
 	protected virtual int GetParentCheckUid(int uId)
 	{
 		return uId;
 	}
 
-	// Token: 0x0601C8E8 RID: 116968 RVA: 0x00801B25 File Offset: 0x007FFD25
+	// Token: 0x0601A5E0 RID: 108000 RVA: 0x008280C9 File Offset: 0x008262C9
 	protected virtual bool IsAllEventParamAsUId()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C8E9 RID: 116969 RVA: 0x00801B28 File Offset: 0x007FFD28
+	// Token: 0x0601A5E1 RID: 108001 RVA: 0x008280CC File Offset: 0x008262CC
 	[NullableContext(1)]
 	public string ToRedDotString()
 	{
@@ -518,7 +518,7 @@ public class RedDotBase
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x0601C8EA RID: 116970 RVA: 0x00801DF0 File Offset: 0x007FFFF0
+	// Token: 0x0601A5E2 RID: 108002 RVA: 0x00828394 File Offset: 0x00826594
 	public unsafe void PrintStateDebugString()
 	{
 		Log instance = Log.Instance;
@@ -560,7 +560,7 @@ public class RedDotBase
 		instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
 	}
 
-	// Token: 0x0601C8EB RID: 116971 RVA: 0x00801FE8 File Offset: 0x008001E8
+	// Token: 0x0601A5E3 RID: 108003 RVA: 0x0082858C File Offset: 0x0082678C
 	public void UpdateAllRedDotData()
 	{
 		foreach (int uId in this.DataMap.Keys)
@@ -569,22 +569,22 @@ public class RedDotBase
 		}
 	}
 
-	// Token: 0x0400E2B8 RID: 58040
+	// Token: 0x0400E768 RID: 59240
 	public ERedDotName? Name;
 
-	// Token: 0x0400E2B9 RID: 58041
+	// Token: 0x0400E769 RID: 59241
 	private bool IsActive = true;
 
-	// Token: 0x0400E2BA RID: 58042
+	// Token: 0x0400E76A RID: 59242
 	[Nullable(1)]
 	private readonly Dictionary<int, RedDotData> DataMap = new Dictionary<int, RedDotData>();
 
-	// Token: 0x0400E2BB RID: 58043
+	// Token: 0x0400E76B RID: 59243
 	private Action<bool, int> StateChangeCallback;
 
-	// Token: 0x0400E2BC RID: 58044
+	// Token: 0x0400E76C RID: 59244
 	private Stat StatsObject;
 
-	// Token: 0x0400E2BD RID: 58045
+	// Token: 0x0400E76D RID: 59245
 	private Action EventCheckAction0;
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007194 RID: 29076
+	// Token: 0x02007969 RID: 31081
 	public class ISplineMoveTargetType_UnionUnion
 	{
-		// Token: 0x1700D7F5 RID: 55285
-		// (get) Token: 0x060338CA RID: 211146 RVA: 0x006F16C9 File Offset: 0x006EF8C9
-		// (set) Token: 0x060338CB RID: 211147 RVA: 0x006F16D1 File Offset: 0x006EF8D1
+		// Token: 0x1700E3EC RID: 58348
+		// (get) Token: 0x06036BC4 RID: 224196 RVA: 0x00752915 File Offset: 0x00750B15
+		// (set) Token: 0x06036BC5 RID: 224197 RVA: 0x0075291D File Offset: 0x00750B1D
 		public ISplineMoveTargetType_Union Type { get; set; }
 
-		// Token: 0x1700D7F6 RID: 55286
-		// (get) Token: 0x060338CC RID: 211148 RVA: 0x006F16DA File Offset: 0x006EF8DA
-		// (set) Token: 0x060338CD RID: 211149 RVA: 0x006F16E2 File Offset: 0x006EF8E2
+		// Token: 0x1700E3ED RID: 58349
+		// (get) Token: 0x06036BC6 RID: 224198 RVA: 0x00752926 File Offset: 0x00750B26
+		// (set) Token: 0x06036BC7 RID: 224199 RVA: 0x0075292E File Offset: 0x00750B2E
 		public object Value { get; set; }
 
-		// Token: 0x060338CE RID: 211150 RVA: 0x006F16EB File Offset: 0x006EF8EB
+		// Token: 0x06036BC8 RID: 224200 RVA: 0x00752937 File Offset: 0x00750B37
 		public ISplineMoveTargetType_UnionUnion()
 		{
 			this.Type = ISplineMoveTargetType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060338CF RID: 211151 RVA: 0x006F1701 File Offset: 0x006EF901
+		// Token: 0x06036BC9 RID: 224201 RVA: 0x0075294D File Offset: 0x00750B4D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060338D0 RID: 211152 RVA: 0x006F1713 File Offset: 0x006EF913
+		// Token: 0x06036BCA RID: 224202 RVA: 0x0075295F File Offset: 0x00750B5F
 		public ISplineMoveTargetTypeT AsISplineMoveTargetType()
 		{
 			return this.As<ISplineMoveTargetTypeT>();
 		}
 
-		// Token: 0x060338D1 RID: 211153 RVA: 0x006F171B File Offset: 0x006EF91B
+		// Token: 0x06036BCB RID: 224203 RVA: 0x00752967 File Offset: 0x00750B67
 		public static ISplineMoveTargetType_UnionUnion FromISplineMoveTargetType(ISplineMoveTargetTypeT _isplinemovetargettype)
 		{
 			return new ISplineMoveTargetType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060338D2 RID: 211154 RVA: 0x006F1730 File Offset: 0x006EF930
+		// Token: 0x06036BCC RID: 224204 RVA: 0x0075297C File Offset: 0x00750B7C
 		public IEntitySplineMoveTargetT AsIEntitySplineMoveTarget()
 		{
 			return this.As<IEntitySplineMoveTargetT>();
 		}
 
-		// Token: 0x060338D3 RID: 211155 RVA: 0x006F1738 File Offset: 0x006EF938
+		// Token: 0x06036BCD RID: 224205 RVA: 0x00752984 File Offset: 0x00750B84
 		public static ISplineMoveTargetType_UnionUnion FromIEntitySplineMoveTarget(IEntitySplineMoveTargetT _ientitysplinemovetarget)
 		{
 			return new ISplineMoveTargetType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060338D4 RID: 211156 RVA: 0x006F174D File Offset: 0x006EF94D
+		// Token: 0x06036BCE RID: 224206 RVA: 0x00752999 File Offset: 0x00750B99
 		public IPlayerSplineMoveTargetT AsIPlayerSplineMoveTarget()
 		{
 			return this.As<IPlayerSplineMoveTargetT>();
 		}
 
-		// Token: 0x060338D5 RID: 211157 RVA: 0x006F1755 File Offset: 0x006EF955
+		// Token: 0x06036BCF RID: 224207 RVA: 0x007529A1 File Offset: 0x00750BA1
 		public static ISplineMoveTargetType_UnionUnion FromIPlayerSplineMoveTarget(IPlayerSplineMoveTargetT _iplayersplinemovetarget)
 		{
 			return new ISplineMoveTargetType_UnionUnion
@@ -77,7 +77,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060338D6 RID: 211158 RVA: 0x006F176C File Offset: 0x006EF96C
+		// Token: 0x06036BD0 RID: 224208 RVA: 0x007529B6 File Offset: 0x00750BB6
+		public IAssistCharacterSplineMoveTargetT AsIAssistCharacterSplineMoveTarget()
+		{
+			return this.As<IAssistCharacterSplineMoveTargetT>();
+		}
+
+		// Token: 0x06036BD1 RID: 224209 RVA: 0x007529BE File Offset: 0x00750BBE
+		public static ISplineMoveTargetType_UnionUnion FromIAssistCharacterSplineMoveTarget(IAssistCharacterSplineMoveTargetT _iassistcharactersplinemovetarget)
+		{
+			return new ISplineMoveTargetType_UnionUnion
+			{
+				Type = ISplineMoveTargetType_Union.IAssistCharacterSplineMoveTarget,
+				Value = _iassistcharactersplinemovetarget
+			};
+		}
+
+		// Token: 0x06036BD2 RID: 224210 RVA: 0x007529D4 File Offset: 0x00750BD4
 		public static int Pack(FlatBufferBuilder builder, ISplineMoveTargetType_UnionUnion _o)
 		{
 			switch (_o.Type)
@@ -88,6 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				return IEntitySplineMoveTarget.Pack(builder, _o.AsIEntitySplineMoveTarget()).Value;
 			case ISplineMoveTargetType_Union.IPlayerSplineMoveTarget:
 				return IPlayerSplineMoveTarget.Pack(builder, _o.AsIPlayerSplineMoveTarget()).Value;
+			case ISplineMoveTargetType_Union.IAssistCharacterSplineMoveTarget:
+				return IAssistCharacterSplineMoveTarget.Pack(builder, _o.AsIAssistCharacterSplineMoveTarget()).Value;
 			default:
 				return 0;
 			}

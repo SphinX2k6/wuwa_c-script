@@ -5,23 +5,23 @@ using Aki.Config;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.ActivityGamePlay.Drinks;
-using CSharpScript.Game.Module.UiCameraAnimation;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F4C RID: 3916
+// Token: 0x02000401 RID: 1025
 [NullableContext(1)]
 [Nullable(0)]
-public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
+public class DrinksGamePlayMainView : UiTickViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x06006405 RID: 25605 RVA: 0x0013B957 File Offset: 0x00139B57
+	// Token: 0x0600379D RID: 14237 RVA: 0x00144223 File Offset: 0x00142423
 	public DrinksGamePlayMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006406 RID: 25606 RVA: 0x0013B96C File Offset: 0x00139B6C
+	// Token: 0x0600379E RID: 14238 RVA: 0x00144238 File Offset: 0x00142438
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06006407 RID: 25607 RVA: 0x0013BA9C File Offset: 0x00139C9C
+	// Token: 0x0600379F RID: 14239 RVA: 0x00144368 File Offset: 0x00142568
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrinksGamePlayMainView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -55,19 +55,19 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006408 RID: 25608 RVA: 0x0013BADF File Offset: 0x00139CDF
+	// Token: 0x060037A0 RID: 14240 RVA: 0x001443AB File Offset: 0x001425AB
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseHelp));
 	}
 
-	// Token: 0x06006409 RID: 25609 RVA: 0x0013BAFA File Offset: 0x00139CFA
+	// Token: 0x060037A1 RID: 14241 RVA: 0x001443C6 File Offset: 0x001425C6
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseHelp));
 	}
 
-	// Token: 0x0600640A RID: 25610 RVA: 0x0013BB15 File Offset: 0x00139D15
+	// Token: 0x060037A2 RID: 14242 RVA: 0x001443E1 File Offset: 0x001425E1
 	protected override void OnStart()
 	{
 		this.QTELevelSequence = new LevelSequencePlayer(this.RootItem);
@@ -75,70 +75,70 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		this.OnGameCurrentStepStart();
 	}
 
-	// Token: 0x0600640B RID: 25611 RVA: 0x0013BB46 File Offset: 0x00139D46
+	// Token: 0x060037A3 RID: 14243 RVA: 0x00144412 File Offset: 0x00142612
 	protected override void OnBeforeShow()
 	{
 		this.PauseTimeDilation();
-		UiCameraAnimationManager.Instance.DisablePlayerActor();
+		UiCameraModel.Instance.DisablePlayerActor();
 	}
 
-	// Token: 0x0600640C RID: 25612 RVA: 0x0013BB58 File Offset: 0x00139D58
+	// Token: 0x060037A4 RID: 14244 RVA: 0x00144424 File Offset: 0x00142624
 	protected override void OnBeforeHide()
 	{
 		this.ResumeTimeDilation();
 	}
 
-	// Token: 0x0600640D RID: 25613 RVA: 0x0013BB60 File Offset: 0x00139D60
+	// Token: 0x060037A5 RID: 14245 RVA: 0x0014442C File Offset: 0x0014262C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.NeedShowPlayer && DrinksModel.Instance.GameplayOpenWay == EDrinksGameplayOpenWay.FromEntityNPC)
 		{
-			UiCameraAnimationManager.Instance.EnablePlayerActor();
+			UiCameraModel.Instance.EnablePlayerActor();
 		}
 		DrinksModel.Instance.RegisterProxy(false);
 	}
 
-	// Token: 0x0600640E RID: 25614 RVA: 0x0013BB8C File Offset: 0x00139D8C
+	// Token: 0x060037A6 RID: 14246 RVA: 0x00144458 File Offset: 0x00142658
 	protected void PauseTimeDilation()
 	{
 		UiTimeDilation.Instance.AddWaitSetTimeDilationTag("DrinksGamePlayMainView");
 	}
 
-	// Token: 0x0600640F RID: 25615 RVA: 0x0013BB9D File Offset: 0x00139D9D
+	// Token: 0x060037A7 RID: 14247 RVA: 0x00144469 File Offset: 0x00142669
 	protected void ResumeTimeDilation()
 	{
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("DrinksGamePlayMainView");
 	}
 
-	// Token: 0x06006410 RID: 25616 RVA: 0x0013BBAE File Offset: 0x00139DAE
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x060037A8 RID: 14248 RVA: 0x0014447A File Offset: 0x0014267A
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 		if (!this.HasInitCamera)
 		{
 			this.CurCameraName = viewName.ToString();
 			this.HasInitCamera = true;
-			UiCameraAnimationController.Instance.PushCameraHandle(viewName, new int?(viewId), isBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView(viewName, viewId, operationType);
 		}
 	}
 
-	// Token: 0x06006411 RID: 25617 RVA: 0x0013BBE4 File Offset: 0x00139DE4
+	// Token: 0x060037A9 RID: 14249 RVA: 0x001444AC File Offset: 0x001426AC
 	public void PushCamera(string cameraName)
 	{
 		if (cameraName != this.CurCameraName && this.HasInitCamera)
 		{
 			this.CurCameraName = cameraName;
-			UiCameraMapping? uiCameraMappingConfig = UiCameraAnimationConfig.Instance.GetUiCameraMappingConfig(cameraName);
-			UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(uiCameraMappingConfig.Value.DefaultUiCameraSettingsName, true, true, "1001", false, null, null);
+			UiCameraMapping? uiCameraMappingConfig = UiCameraConfig.Instance.GetUiCameraMappingConfig(cameraName);
+			UiCameraModel.Instance.PushCameraHandleByHandleName(uiCameraMappingConfig.Value.DefaultUiCameraSettingsName, true, true, "1001", false, null);
 		}
 	}
 
-	// Token: 0x06006412 RID: 25618 RVA: 0x0013BC46 File Offset: 0x00139E46
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x060037AA RID: 14250 RVA: 0x00144505 File Offset: 0x00142705
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PopCameraHandle(viewName, stackTopInfo, closeViewId, popOrDelete);
+		UiCameraController.Instance.PopCameraHandleByCloseView(viewName, nextViewName, closeViewId, operationType);
 	}
 
-	// Token: 0x06006413 RID: 25619 RVA: 0x0013BC57 File Offset: 0x00139E57
+	// Token: 0x060037AB RID: 14251 RVA: 0x00144516 File Offset: 0x00142716
 	protected override void OnTick(float delta)
 	{
 		if (this.NeedTickQTE && !this.StopTickOnClickClose)
@@ -147,7 +147,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006414 RID: 25620 RVA: 0x0013BC75 File Offset: 0x00139E75
+	// Token: 0x060037AC RID: 14252 RVA: 0x00144534 File Offset: 0x00142734
 	protected void RegisterProxy()
 	{
 		DrinksModel instance = DrinksModel.Instance;
@@ -155,7 +155,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		instance.GetProxy().RegisterMainView(this);
 	}
 
-	// Token: 0x06006415 RID: 25621 RVA: 0x0013BC90 File Offset: 0x00139E90
+	// Token: 0x060037AD RID: 14253 RVA: 0x00144550 File Offset: 0x00142750
 	public void OnGameCurrentStepStart()
 	{
 		PopupCaptionItem captionItem = this.CaptionItem;
@@ -190,7 +190,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		this.PushCamera(DrinksConfig.Instance.GetInviteConfigByRole(roleId).Value.OrnamentCamera);
 	}
 
-	// Token: 0x06006416 RID: 25622 RVA: 0x0013BD79 File Offset: 0x00139F79
+	// Token: 0x060037AE RID: 14254 RVA: 0x00144639 File Offset: 0x00142839
 	public void OnGameCurrentStepEnd()
 	{
 		this.RefreshButtonState(true);
@@ -198,7 +198,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		this.BubblePanel.HideBubble();
 	}
 
-	// Token: 0x06006417 RID: 25623 RVA: 0x0013BD98 File Offset: 0x00139F98
+	// Token: 0x060037AF RID: 14255 RVA: 0x00144658 File Offset: 0x00142858
 	public void OnDrinkBaseSelected(int drinkId, bool isEnd)
 	{
 		DrinksTopStepPanel topPanel = this.TopPanel;
@@ -215,7 +215,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		curValuePanel.OnDrinkSelected(drinkId);
 	}
 
-	// Token: 0x06006418 RID: 25624 RVA: 0x0013BDC8 File Offset: 0x00139FC8
+	// Token: 0x060037B0 RID: 14256 RVA: 0x00144688 File Offset: 0x00142888
 	public void OnBatchingSelected(HashSet<int> batchingSet, bool isEnd)
 	{
 		DrinksTopStepPanel topPanel = this.TopPanel;
@@ -240,7 +240,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		curValuePanel.OnBatchingSelected(batchingSet);
 	}
 
-	// Token: 0x06006419 RID: 25625 RVA: 0x0013BE20 File Offset: 0x0013A020
+	// Token: 0x060037B1 RID: 14257 RVA: 0x001446E0 File Offset: 0x001428E0
 	public void OnNoBatchingConfirm()
 	{
 		DrinksMenuPanel menuPanel = this.MenuPanel;
@@ -251,7 +251,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		menuPanel.SetRaycastOnStepEnd();
 	}
 
-	// Token: 0x0600641A RID: 25626 RVA: 0x0013BE32 File Offset: 0x0013A032
+	// Token: 0x060037B2 RID: 14258 RVA: 0x001446F2 File Offset: 0x001428F2
 	public void OnOrnamentSelected(bool isEnd)
 	{
 		if (isEnd)
@@ -275,7 +275,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		topPanel.UpdateStepItem();
 	}
 
-	// Token: 0x0600641B RID: 25627 RVA: 0x0013BE6C File Offset: 0x0013A06C
+	// Token: 0x060037B3 RID: 14259 RVA: 0x0014472C File Offset: 0x0014292C
 	public void OnEnterDrinkBaseQTE()
 	{
 		this.RefreshButtonState(true);
@@ -294,7 +294,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		this.BubblePanel.HideBubble();
 	}
 
-	// Token: 0x0600641C RID: 25628 RVA: 0x0013BED4 File Offset: 0x0013A0D4
+	// Token: 0x060037B4 RID: 14260 RVA: 0x00144794 File Offset: 0x00142994
 	public void UpdateRoleRequire()
 	{
 		DrinksRoleStateItem roleStatePanel = this.RoleStatePanel;
@@ -305,7 +305,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		roleStatePanel.RefreshCurState();
 	}
 
-	// Token: 0x0600641D RID: 25629 RVA: 0x0013BEE8 File Offset: 0x0013A0E8
+	// Token: 0x060037B5 RID: 14261 RVA: 0x001447A8 File Offset: 0x001429A8
 	public void UpdateFlavorBubble()
 	{
 		this.RefreshButtonState(true);
@@ -328,25 +328,25 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		this.BubbleFlavorPanel.Refresh();
 	}
 
-	// Token: 0x0600641E RID: 25630 RVA: 0x0013BF68 File Offset: 0x0013A168
+	// Token: 0x060037B6 RID: 14262 RVA: 0x00144828 File Offset: 0x00142A28
 	public void ActivateDialogBubble(string config, bool isLike)
 	{
 		this.DialogBubble.ActivateBubble(config, isLike);
 	}
 
-	// Token: 0x0600641F RID: 25631 RVA: 0x0013BF77 File Offset: 0x0013A177
+	// Token: 0x060037B7 RID: 14263 RVA: 0x00144837 File Offset: 0x00142A37
 	public void DeactivateDialogBubble()
 	{
 		this.DialogBubble.DeactivateBubble(true);
 	}
 
-	// Token: 0x06006420 RID: 25632 RVA: 0x0013BF85 File Offset: 0x0013A185
+	// Token: 0x060037B8 RID: 14264 RVA: 0x00144845 File Offset: 0x00142A45
 	public int ShowBackMask(EDrinksPlayStep curStep)
 	{
 		return this.MaskPanel.ShowBackMask(curStep);
 	}
 
-	// Token: 0x06006421 RID: 25633 RVA: 0x0013BF94 File Offset: 0x0013A194
+	// Token: 0x060037B9 RID: 14265 RVA: 0x00144854 File Offset: 0x00142A54
 	protected void RefreshButtonState(bool isEnd = false)
 	{
 		bool flag = DrinksModel.Instance.GetCurStep() > EDrinksPlayStep.Drink1;
@@ -363,7 +363,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		uuiitem.SetUIActive(flag && !isEnd);
 	}
 
-	// Token: 0x06006422 RID: 25634 RVA: 0x0013BFDC File Offset: 0x0013A1DC
+	// Token: 0x060037BA RID: 14266 RVA: 0x0014489C File Offset: 0x00142A9C
 	public void SetNeedTickQTE(bool value)
 	{
 		this.NeedTickQTE = value;
@@ -397,16 +397,16 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		qtelevelSequence3.PlayLevelSequenceByName("Qtein", false, null, false);
 	}
 
-	// Token: 0x06006423 RID: 25635 RVA: 0x0013C064 File Offset: 0x0013A264
+	// Token: 0x060037BB RID: 14267 RVA: 0x00144924 File Offset: 0x00142B24
 	public void SetShakeCamera(ACameraActor camera)
 	{
-		UiCameraAnimationController.Instance.DeepCopyCamera(camera);
+		UiCameraController.Instance.DeepCopyCamera(camera);
 		CameraController instance = CameraController.Instance;
-		UiCamera uiCamera = UiCameraAnimationManager.Instance.UiCamera;
+		UiCamera uiCamera = UiCameraModel.Instance.UiCamera;
 		instance.SetViewTarget((uiCamera != null) ? uiCamera.GetCameraActor() : null, "DrinksGameplayView", 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, null, "MainCamera", null, null);
 	}
 
-	// Token: 0x06006424 RID: 25636 RVA: 0x0013C0C5 File Offset: 0x0013A2C5
+	// Token: 0x060037BC RID: 14268 RVA: 0x00144985 File Offset: 0x00142B85
 	public void HideCaptionClose()
 	{
 		PopupCaptionItem captionItem = this.CaptionItem;
@@ -422,7 +422,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		captionItem2.SetHelpBtnActive(false);
 	}
 
-	// Token: 0x06006425 RID: 25637 RVA: 0x0013C0EC File Offset: 0x0013A2EC
+	// Token: 0x060037BD RID: 14269 RVA: 0x001449AC File Offset: 0x00142BAC
 	private void OnClickCloseButton()
 	{
 		this.StopTickOnClickClose = true;
@@ -456,7 +456,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06006426 RID: 25638 RVA: 0x0013C168 File Offset: 0x0013A368
+	// Token: 0x060037BE RID: 14270 RVA: 0x00144A28 File Offset: 0x00142C28
 	private void OnClickedBack()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DrinkPrevConfirm);
@@ -468,7 +468,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		EventSystem.Instance.Emit(EEventName.NotifyGuideBreakFocus);
 	}
 
-	// Token: 0x06006427 RID: 25639 RVA: 0x0013C1C7 File Offset: 0x0013A3C7
+	// Token: 0x060037BF RID: 14271 RVA: 0x00144A87 File Offset: 0x00142C87
 	private void OnQTESequenceEnd(string seqName)
 	{
 		if (seqName == "RigthUIout")
@@ -482,14 +482,14 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006428 RID: 25640 RVA: 0x0013C204 File Offset: 0x0013A404
+	// Token: 0x060037C0 RID: 14272 RVA: 0x00144AC4 File Offset: 0x00142CC4
 	public void OnFinishMixing()
 	{
 		this.DeactivateDialogBubble();
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x06006429 RID: 25641 RVA: 0x0013C214 File Offset: 0x0013A414
+	// Token: 0x060037C1 RID: 14273 RVA: 0x00144AD4 File Offset: 0x00142CD4
 	public void OnFinishMixingEnd()
 	{
 		DrinksResultInfo currentPlayData = DrinksModel.Instance.GetCurrentPlayData();
@@ -506,7 +506,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x0600642A RID: 25642 RVA: 0x0013C26C File Offset: 0x0013A46C
+	// Token: 0x060037C2 RID: 14274 RVA: 0x00144B2C File Offset: 0x00142D2C
 	private void OnCloseHelp(EUiViewName viewName, int viewId)
 	{
 		if (viewName.ToString() != EUiViewName.HelpView.ToString())
@@ -516,7 +516,7 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		this.StopTickOnClickClose = false;
 	}
 
-	// Token: 0x0600642B RID: 25643 RVA: 0x0013C29C File Offset: 0x0013A49C
+	// Token: 0x060037C3 RID: 14275 RVA: 0x00144B5C File Offset: 0x00142D5C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -545,90 +545,90 @@ public class DrinksGamePlayMainView : UiTickViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x04002D55 RID: 11605
+	// Token: 0x04002DEE RID: 11758
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04002D56 RID: 11606
+	// Token: 0x04002DEF RID: 11759
 	protected DrinksRoleStateItem RoleStatePanel;
 
-	// Token: 0x04002D57 RID: 11607
+	// Token: 0x04002DF0 RID: 11760
 	protected DrinksTopStepPanel TopPanel;
 
-	// Token: 0x04002D58 RID: 11608
+	// Token: 0x04002DF1 RID: 11761
 	protected DrinksMenuPanel MenuPanel;
 
-	// Token: 0x04002D59 RID: 11609
+	// Token: 0x04002DF2 RID: 11762
 	protected DrinksCurrentStatePanel CurValuePanel;
 
-	// Token: 0x04002D5A RID: 11610
+	// Token: 0x04002DF3 RID: 11763
 	protected DrinksQTEPanel QTEPanel;
 
-	// Token: 0x04002D5B RID: 11611
+	// Token: 0x04002DF4 RID: 11764
 	protected DrinksBubblePanel BubblePanel;
 
-	// Token: 0x04002D5C RID: 11612
+	// Token: 0x04002DF5 RID: 11765
 	protected DrinksFlavorBubblePanel BubbleFlavorPanel;
 
-	// Token: 0x04002D5D RID: 11613
+	// Token: 0x04002DF6 RID: 11766
 	protected DrinksDialogBubble DialogBubble;
 
-	// Token: 0x04002D5E RID: 11614
+	// Token: 0x04002DF7 RID: 11767
 	protected DrinksBlackMask MaskPanel;
 
-	// Token: 0x04002D5F RID: 11615
+	// Token: 0x04002DF8 RID: 11768
 	public bool NeedTickQTE;
 
-	// Token: 0x04002D60 RID: 11616
+	// Token: 0x04002DF9 RID: 11769
 	protected bool StopTickOnClickClose;
 
-	// Token: 0x04002D61 RID: 11617
+	// Token: 0x04002DFA RID: 11770
 	[Nullable(2)]
 	protected LevelSequencePlayer QTELevelSequence;
 
-	// Token: 0x04002D62 RID: 11618
+	// Token: 0x04002DFB RID: 11771
 	protected bool NeedShowPlayer;
 
-	// Token: 0x04002D63 RID: 11619
+	// Token: 0x04002DFC RID: 11772
 	protected string CurCameraName = "";
 
-	// Token: 0x04002D64 RID: 11620
+	// Token: 0x04002DFD RID: 11773
 	protected bool HasInitCamera;
 
-	// Token: 0x02007598 RID: 30104
+	// Token: 0x0200672C RID: 26412
 	[NullableContext(0)]
 	private static class EDefine
 	{
-		// Token: 0x04026E08 RID: 159240
+		// Token: 0x04022153 RID: 139603
 		public const int CaptionItem = 0;
 
-		// Token: 0x04026E09 RID: 159241
+		// Token: 0x04022154 RID: 139604
 		public const int PanelRoleState = 1;
 
-		// Token: 0x04026E0A RID: 159242
+		// Token: 0x04022155 RID: 139605
 		public const int PanelTopStep = 2;
 
-		// Token: 0x04026E0B RID: 159243
+		// Token: 0x04022156 RID: 139606
 		public const int PanelMenu = 3;
 
-		// Token: 0x04026E0C RID: 159244
+		// Token: 0x04022157 RID: 139607
 		public const int BtnPrevious = 4;
 
-		// Token: 0x04026E0D RID: 159245
+		// Token: 0x04022158 RID: 139608
 		public const int PanelTasteState = 5;
 
-		// Token: 0x04026E0E RID: 159246
+		// Token: 0x04022159 RID: 139609
 		public const int PanelQTE = 6;
 
-		// Token: 0x04026E0F RID: 159247
+		// Token: 0x0402215A RID: 139610
 		public const int PanelAddType1 = 7;
 
-		// Token: 0x04026E10 RID: 159248
+		// Token: 0x0402215B RID: 139611
 		public const int PanelAddType2 = 8;
 
-		// Token: 0x04026E11 RID: 159249
+		// Token: 0x0402215C RID: 139612
 		public const int PanelBlackScreen = 9;
 
-		// Token: 0x04026E12 RID: 159250
+		// Token: 0x0402215D RID: 139613
 		public const int ItemBubble = 10;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AAA RID: 2730
+	// Token: 0x02000B7F RID: 2943
 	public struct AbpState : IFlatbufferObject
 	{
 		// Token: 0x17000020 RID: 32
-		// (get) Token: 0x0600402B RID: 16427 RVA: 0x001C4964 File Offset: 0x001C2B64
+		// (get) Token: 0x06004529 RID: 17705 RVA: 0x001E3CF8 File Offset: 0x001E1EF8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,31 +16,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600402C RID: 16428 RVA: 0x001C4971 File Offset: 0x001C2B71
+		// Token: 0x0600452A RID: 17706 RVA: 0x001E3D05 File Offset: 0x001E1F05
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600402D RID: 16429 RVA: 0x001C4978 File Offset: 0x001C2B78
+		// Token: 0x0600452B RID: 17707 RVA: 0x001E3D0C File Offset: 0x001E1F0C
 		public static AbpState GetRootAsAbpState(ByteBuffer _bb)
 		{
 			return AbpState.GetRootAsAbpState(_bb, default(AbpState));
 		}
 
-		// Token: 0x0600402E RID: 16430 RVA: 0x001C4994 File Offset: 0x001C2B94
+		// Token: 0x0600452C RID: 17708 RVA: 0x001E3D28 File Offset: 0x001E1F28
 		public static AbpState GetRootAsAbpState(ByteBuffer _bb, AbpState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600402F RID: 16431 RVA: 0x001C49B1 File Offset: 0x001C2BB1
+		// Token: 0x0600452D RID: 17709 RVA: 0x001E3D45 File Offset: 0x001E1F45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004030 RID: 16432 RVA: 0x001C49C0 File Offset: 0x001C2BC0
+		// Token: 0x0600452E RID: 17710 RVA: 0x001E3D54 File Offset: 0x001E1F54
 		public AbpState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -48,7 +48,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000021 RID: 33
-		// (get) Token: 0x06004031 RID: 16433 RVA: 0x001C49D0 File Offset: 0x001C2BD0
+		// (get) Token: 0x0600452F RID: 17711 RVA: 0x001E3D64 File Offset: 0x001E1F64
 		public string Abp
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004032 RID: 16434 RVA: 0x001C4A07 File Offset: 0x001C2C07
+		// Token: 0x06004530 RID: 17712 RVA: 0x001E3D9B File Offset: 0x001E1F9B
 		public Span<byte> GetAbpBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06004033 RID: 16435 RVA: 0x001C4A16 File Offset: 0x001C2C16
+		// Token: 0x06004531 RID: 17713 RVA: 0x001E3DAA File Offset: 0x001E1FAA
 		public byte[] GetAbpArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x17000022 RID: 34
-		// (get) Token: 0x06004034 RID: 16436 RVA: 0x001C4A30 File Offset: 0x001C2C30
+		// (get) Token: 0x06004532 RID: 17714 RVA: 0x001E3DC4 File Offset: 0x001E1FC4
 		public string State1
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004035 RID: 16437 RVA: 0x001C4A67 File Offset: 0x001C2C67
+		// Token: 0x06004533 RID: 17715 RVA: 0x001E3DFB File Offset: 0x001E1FFB
 		public Span<byte> GetState1Bytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06004036 RID: 16438 RVA: 0x001C4A76 File Offset: 0x001C2C76
+		// Token: 0x06004534 RID: 17716 RVA: 0x001E3E0A File Offset: 0x001E200A
 		public byte[] GetState1Array()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x17000023 RID: 35
-		// (get) Token: 0x06004037 RID: 16439 RVA: 0x001C4A90 File Offset: 0x001C2C90
+		// (get) Token: 0x06004535 RID: 17717 RVA: 0x001E3E24 File Offset: 0x001E2024
 		public string State2
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004038 RID: 16440 RVA: 0x001C4AC7 File Offset: 0x001C2CC7
+		// Token: 0x06004536 RID: 17718 RVA: 0x001E3E5B File Offset: 0x001E205B
 		public Span<byte> GetState2Bytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06004039 RID: 16441 RVA: 0x001C4AD6 File Offset: 0x001C2CD6
+		// Token: 0x06004537 RID: 17719 RVA: 0x001E3E6A File Offset: 0x001E206A
 		public byte[] GetState2Array()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004A7A RID: 19066
+		// Token: 0x0400504D RID: 20557
 		private Table __p;
 	}
 }

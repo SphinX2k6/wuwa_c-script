@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200011E RID: 286
+	// Token: 0x0200012F RID: 303
 	[EnumExtensions]
 	public enum EProceduralVisualType
 	{
-		// Token: 0x040005C7 RID: 1479
+		// Token: 0x04000604 RID: 1540
 		LookAt,
-		// Token: 0x040005C8 RID: 1480
+		// Token: 0x04000605 RID: 1541
 		SearchlightRotate
 	}
 }

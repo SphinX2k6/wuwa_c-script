@@ -18,13 +18,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200708B RID: 28811
+	// Token: 0x0200620C RID: 25100
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoadNetworkNavigationComponent : EntityComponent
 	{
-		// Token: 0x17009C20 RID: 39968
-		// (get) Token: 0x06046301 RID: 287489 RVA: 0x0118A9B8 File Offset: 0x01188BB8
+		// Token: 0x170071E0 RID: 29152
+		// (get) Token: 0x0603C536 RID: 247094 RVA: 0x01133C7C File Offset: 0x01131E7C
 		public FTransformDouble? SkeletalMeshComponentToWorld
 		{
 			get
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046302 RID: 287490 RVA: 0x0118AA1C File Offset: 0x01188C1C
+		// Token: 0x0603C537 RID: 247095 RVA: 0x01133CE0 File Offset: 0x01131EE0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreateEntityData p = args.GetP1<CreateEntityData>();
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046303 RID: 287491 RVA: 0x0118ABB0 File Offset: 0x01188DB0
+		// Token: 0x0603C538 RID: 247096 RVA: 0x01133E74 File Offset: 0x01132074
 		protected override void OnActivate()
 		{
 			if (!this.CheckCanLaunch())
@@ -111,20 +111,20 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			EventSystem.Instance.Add<bool, float>(EEventName.OnAbsoluteTimeStop, new Action<bool, float>(this.OnAbsoluteTimeStop));
 		}
 
-		// Token: 0x06046304 RID: 287492 RVA: 0x0118AC99 File Offset: 0x01188E99
+		// Token: 0x0603C539 RID: 247097 RVA: 0x01133F5D File Offset: 0x0113215D
 		protected override void OnEnable()
 		{
 			ComponentForceTickController.Instance.RegisterPreMoveTick(this, new Action<float>(this.OnPreMoveTick));
 		}
 
-		// Token: 0x06046305 RID: 287493 RVA: 0x0118ACB2 File Offset: 0x01188EB2
+		// Token: 0x0603C53A RID: 247098 RVA: 0x01133F76 File Offset: 0x01132176
 		[NullableContext(1)]
 		protected override void OnDisable(string reason)
 		{
 			ComponentForceTickController.Instance.UnregisterPreMoveTick(this);
 		}
 
-		// Token: 0x06046306 RID: 287494 RVA: 0x0118ACC0 File Offset: 0x01188EC0
+		// Token: 0x0603C53B RID: 247099 RVA: 0x01133F84 File Offset: 0x01132184
 		protected override bool OnEnd()
 		{
 			if (this.IsInRange)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046307 RID: 287495 RVA: 0x0118AD28 File Offset: 0x01188F28
+		// Token: 0x0603C53C RID: 247100 RVA: 0x01133FEC File Offset: 0x011321EC
 		protected override bool OnClear()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneInteractionLoadCompletedNew, new Action(this.OnOnSceneInteractionLoadCompleted)))
@@ -183,13 +183,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return VehicleStreamController.Instance.UnRegisterVehicleTeamMember(this.CreatureDataId);
 		}
 
-		// Token: 0x06046308 RID: 287496 RVA: 0x0118AEFA File Offset: 0x011890FA
+		// Token: 0x0603C53D RID: 247101 RVA: 0x011341BE File Offset: 0x011323BE
 		private void OnAbsoluteTimeStop(bool open, float duration)
 		{
 			this.IsAbsoluteTimeStop = open;
 		}
 
-		// Token: 0x06046309 RID: 287497 RVA: 0x0118AF04 File Offset: 0x01189104
+		// Token: 0x0603C53E RID: 247102 RVA: 0x011341C8 File Offset: 0x011323C8
 		private void OnPreMoveTick(float delta)
 		{
 			if (this.IsAbsoluteTimeStop)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.JustLeaveScreenMoveTickDelta = 0f;
 		}
 
-		// Token: 0x0604630A RID: 287498 RVA: 0x0118AF98 File Offset: 0x01189198
+		// Token: 0x0603C53F RID: 247103 RVA: 0x0113425C File Offset: 0x0113245C
 		protected override void OnTick(float delta)
 		{
 			if (this.IsAbsoluteTimeStop)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.LastTickInterval = base.Entity.GetTickInterval();
 		}
 
-		// Token: 0x0604630B RID: 287499 RVA: 0x0118B065 File Offset: 0x01189265
+		// Token: 0x0603C540 RID: 247104 RVA: 0x01134329 File Offset: 0x01132529
 		private void OnOnSceneInteractionLoadCompleted()
 		{
 			if (this.CheckPlayerNotInInitLocation())
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.WaitPlayerOutInitRangeTimerHandle = TimerSystem.Instance.Forever(new TTimerAction(this.ListenToPlayerLeaveInitRange), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0604630C RID: 287500 RVA: 0x0118B09F File Offset: 0x0118929F
+		// Token: 0x0603C541 RID: 247105 RVA: 0x01134363 File Offset: 0x01132563
 		private void ListenToPlayerLeaveInitRange(float deltaTime)
 		{
 			if (!this.CheckPlayerNotInInitLocation())
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ShowInteractionActor();
 		}
 
-		// Token: 0x0604630D RID: 287501 RVA: 0x0118B0D4 File Offset: 0x011892D4
+		// Token: 0x0603C542 RID: 247106 RVA: 0x01134398 File Offset: 0x01132598
 		private bool CheckPlayerNotInInitLocation()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return characterActorComponent != null && this.ActorComponent != null && global::Vector.Distance(characterActorComponent.ActorLocationProxy, this.ActorComponent.ActorLocationProxy) > 1000.0;
 		}
 
-		// Token: 0x0604630E RID: 287502 RVA: 0x0118B124 File Offset: 0x01189324
+		// Token: 0x0603C543 RID: 247107 RVA: 0x011343E8 File Offset: 0x011325E8
 		private void ShowInteractionActor()
 		{
 			CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			CreatureController.Instance.SetEntityEnable(base.Entity, true, "RoadNetworkNavigationComponent", false);
 		}
 
-		// Token: 0x0604630F RID: 287503 RVA: 0x0118B17C File Offset: 0x0118937C
+		// Token: 0x0603C544 RID: 247108 RVA: 0x01134440 File Offset: 0x01132640
 		private void OnSceneInteractionShowCompleted()
 		{
 			AActor showActor = this.GetShowActor();
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			syncComp.SetEnableMovementSync(true, "RoadNetworkNavigationComponent Enable");
 		}
 
-		// Token: 0x06046310 RID: 287504 RVA: 0x0118B20B File Offset: 0x0118940B
+		// Token: 0x0603C545 RID: 247109 RVA: 0x011344CF File Offset: 0x011326CF
 		private void OnVehicleMemberBlockByTraceTarget(bool bEnter)
 		{
 			if (this.ModelBufferComponent == null)
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetModelBufferComponentTickable(false, RoadNetworkNavigationComponent.EModelBufferLockType.BlockByTraceTarget);
 		}
 
-		// Token: 0x06046311 RID: 287505 RVA: 0x0118B234 File Offset: 0x01189434
+		// Token: 0x0603C546 RID: 247110 RVA: 0x011344F8 File Offset: 0x011326F8
 		[NullableContext(1)]
 		private void OnMotorcycleBaseMovementChanged(IReadOnlySet<UPrimitiveComponent> newBaseMovementSet)
 		{
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.IsMotorStandOn = false;
 		}
 
-		// Token: 0x06046312 RID: 287506 RVA: 0x0118B29C File Offset: 0x0118949C
+		// Token: 0x0603C547 RID: 247111 RVA: 0x01134560 File Offset: 0x01132760
 		public bool LaunchVehicle()
 		{
 			if (this.SkeletalMeshComponent == null)
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046313 RID: 287507 RVA: 0x0118B394 File Offset: 0x01189594
+		// Token: 0x0603C548 RID: 247112 RVA: 0x01134658 File Offset: 0x01132858
 		private void CheckAndAddVehicleBaseMovementChangeEvent()
 		{
 			Entity motorEntity = this.GetMotorEntity();
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			EventSystem.Instance.Add<VehiclePassengerInfo, bool>(EEventName.OnLeaveVehicle, new Action<VehiclePassengerInfo, bool>(this.OnLeaveVehicle));
 		}
 
-		// Token: 0x06046314 RID: 287508 RVA: 0x0118B400 File Offset: 0x01189600
+		// Token: 0x0603C549 RID: 247113 RVA: 0x011346C4 File Offset: 0x011328C4
 		[NullableContext(1)]
 		private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			EventSystem.Instance.AddWithTarget<IReadOnlySet<UPrimitiveComponent>>(info.VehicleEntity, EEventName.MotorcycleBaseMovementChanged, new Action<IReadOnlySet<UPrimitiveComponent>>(this.OnMotorcycleBaseMovementChanged));
 		}
 
-		// Token: 0x06046315 RID: 287509 RVA: 0x0118B440 File Offset: 0x01189640
+		// Token: 0x0603C54A RID: 247114 RVA: 0x01134704 File Offset: 0x01132904
 		[NullableContext(1)]
 		private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			EventSystem.Instance.RemoveWithTarget<IReadOnlySet<UPrimitiveComponent>>(info.VehicleEntity, EEventName.MotorcycleBaseMovementChanged, new Action<IReadOnlySet<UPrimitiveComponent>>(this.OnMotorcycleBaseMovementChanged));
 		}
 
-		// Token: 0x06046316 RID: 287510 RVA: 0x0118B480 File Offset: 0x01189680
+		// Token: 0x0603C54B RID: 247115 RVA: 0x01134744 File Offset: 0x01132944
 		private void OnRangeEnter()
 		{
 			this.IsInRange = true;
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046317 RID: 287511 RVA: 0x0118B4D8 File Offset: 0x011896D8
+		// Token: 0x0603C54C RID: 247116 RVA: 0x0113479C File Offset: 0x0113299C
 		private void OnRangeLeave()
 		{
 			this.IsInRange = false;
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046318 RID: 287512 RVA: 0x0118B530 File Offset: 0x01189730
+		// Token: 0x0603C54D RID: 247117 RVA: 0x011347F4 File Offset: 0x011329F4
 		public void OnCharacterStandOn(int entityId)
 		{
 			if (Global.BaseCharacter == null)
@@ -517,7 +517,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.IsPlayerStandOn = true;
 		}
 
-		// Token: 0x06046319 RID: 287513 RVA: 0x0118B54F File Offset: 0x0118974F
+		// Token: 0x0603C54E RID: 247118 RVA: 0x01134813 File Offset: 0x01132A13
 		public void OnCharacterLeave(int entityId)
 		{
 			if (Global.BaseCharacter == null)
@@ -531,7 +531,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.IsPlayerStandOn = false;
 		}
 
-		// Token: 0x0604631A RID: 287514 RVA: 0x0118B570 File Offset: 0x01189770
+		// Token: 0x0603C54F RID: 247119 RVA: 0x01134834 File Offset: 0x01132A34
 		protected void OnComponentHit(UPrimitiveComponent hitComp, AActor otherActor, UPrimitiveComponent otherComp, FVector normalImpulse, [Nullable(1)] FHitResult hitResult)
 		{
 			AActor motorActor = this.GetMotorActor();
@@ -574,7 +574,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604631B RID: 287515 RVA: 0x0118B6A6 File Offset: 0x011898A6
+		// Token: 0x0603C550 RID: 247120 RVA: 0x0113496A File Offset: 0x01132B6A
 		private Entity GetMotorEntity()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return characterDriveVehicleComponent.VehicleEntity;
 		}
 
-		// Token: 0x0604631C RID: 287516 RVA: 0x0118B6DC File Offset: 0x011898DC
+		// Token: 0x0603C551 RID: 247121 RVA: 0x011349A0 File Offset: 0x01132BA0
 		private AActor GetMotorActor()
 		{
 			Entity motorEntity = this.GetMotorEntity();
@@ -613,7 +613,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return component.Owner;
 		}
 
-		// Token: 0x0604631D RID: 287517 RVA: 0x0118B708 File Offset: 0x01189908
+		// Token: 0x0603C552 RID: 247122 RVA: 0x011349CC File Offset: 0x01132BCC
 		[NullableContext(1)]
 		private int PlayHitEffect(string effectPath, FTransformDouble hitTransform, string reason)
 		{
@@ -623,19 +623,19 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return instance.SpawnUnloopedEffect(world, ftransformDouble, effectPath, reason, this.EffectContext, EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x0604631E RID: 287518 RVA: 0x0118B73B File Offset: 0x0118993B
+		// Token: 0x0603C553 RID: 247123 RVA: 0x011349FF File Offset: 0x01132BFF
 		public RoadNetworkNavigationComponent GetConfig()
 		{
 			return this.Config;
 		}
 
-		// Token: 0x0604631F RID: 287519 RVA: 0x0118B743 File Offset: 0x01189943
+		// Token: 0x0603C554 RID: 247124 RVA: 0x01134A07 File Offset: 0x01132C07
 		public SceneItemActorComponent GetActorComponent()
 		{
 			return this.ActorComponent;
 		}
 
-		// Token: 0x06046320 RID: 287520 RVA: 0x0118B74B File Offset: 0x0118994B
+		// Token: 0x0603C555 RID: 247125 RVA: 0x01134A0F File Offset: 0x01132C0F
 		public AActor GetActor()
 		{
 			SceneItemActorComponent actorComponent = this.ActorComponent;
@@ -646,19 +646,19 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return actorComponent.Owner;
 		}
 
-		// Token: 0x06046321 RID: 287521 RVA: 0x0118B75E File Offset: 0x0118995E
+		// Token: 0x0603C556 RID: 247126 RVA: 0x01134A22 File Offset: 0x01132C22
 		public USkeletalMeshComponent GetSkeletalMeshComponent()
 		{
 			return this.SkeletalMeshComponent;
 		}
 
-		// Token: 0x06046322 RID: 287522 RVA: 0x0118B766 File Offset: 0x01189966
+		// Token: 0x0603C557 RID: 247127 RVA: 0x01134A2A File Offset: 0x01132C2A
 		public SceneItemMovementSyncComponent GetMoveSyncComponent()
 		{
 			return this.SyncComp;
 		}
 
-		// Token: 0x06046323 RID: 287523 RVA: 0x0118B770 File Offset: 0x01189970
+		// Token: 0x0603C558 RID: 247128 RVA: 0x01134A34 File Offset: 0x01132C34
 		public void SetLocationAndRotation(FVectorDouble location, FRotator rotation, ETickType tickType, float deltaTime, int tickInterval)
 		{
 			if (this.SkeletalMeshComponent != null && tickInterval > 1)
@@ -674,7 +674,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			actorComponent.SetActorLocationAndRotation(location, rotation, "RoadNetworkNavigationComponent", false, null);
 		}
 
-		// Token: 0x06046324 RID: 287524 RVA: 0x0118B7BD File Offset: 0x011899BD
+		// Token: 0x0603C559 RID: 247129 RVA: 0x01134A81 File Offset: 0x01132C81
 		public AActor GetShowActor()
 		{
 			SceneItemActorComponent actorComponent = this.ActorComponent;
@@ -685,37 +685,37 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return actorComponent.CurLevelPrefabShowActor;
 		}
 
-		// Token: 0x06046325 RID: 287525 RVA: 0x0118B7D0 File Offset: 0x011899D0
+		// Token: 0x0603C55A RID: 247130 RVA: 0x01134A94 File Offset: 0x01132C94
 		public bool WasRecentlyRenderedOnScreen()
 		{
 			return this.RecentlyRenderedOnScreen;
 		}
 
-		// Token: 0x06046326 RID: 287526 RVA: 0x0118B7D8 File Offset: 0x011899D8
+		// Token: 0x0603C55B RID: 247131 RVA: 0x01134A9C File Offset: 0x01132C9C
 		public VehicleTeamMember GetVehicleTeamMember()
 		{
 			return VehicleStreamModel.Instance.GetVehicleTeamMember(this.CreatureDataId);
 		}
 
-		// Token: 0x06046327 RID: 287527 RVA: 0x0118B7EA File Offset: 0x011899EA
+		// Token: 0x0603C55C RID: 247132 RVA: 0x01134AAE File Offset: 0x01132CAE
 		public bool IsInPerceptionRange()
 		{
 			return this.IsInRange;
 		}
 
-		// Token: 0x06046328 RID: 287528 RVA: 0x0118B7F2 File Offset: 0x011899F2
+		// Token: 0x0603C55D RID: 247133 RVA: 0x01134AB6 File Offset: 0x01132CB6
 		public IBoxTriggerShape GetExtraBoxTrigger()
 		{
 			return this.ExtraBoxTrigger;
 		}
 
-		// Token: 0x06046329 RID: 287529 RVA: 0x0118B7FA File Offset: 0x011899FA
+		// Token: 0x0603C55E RID: 247134 RVA: 0x01134ABE File Offset: 0x01132CBE
 		public bool IsTickOnPreMove()
 		{
 			return this.IsPlayerStandOn || this.IsMotorStandOn || this.JustLeaveScreenMove;
 		}
 
-		// Token: 0x0604632A RID: 287530 RVA: 0x0118B814 File Offset: 0x01189A14
+		// Token: 0x0603C55F RID: 247135 RVA: 0x01134AD8 File Offset: 0x01132CD8
 		public ITrafficMatchTarget GetObstacleDetectionType()
 		{
 			RoadNetworkNavigationComponent config = this.Config;
@@ -731,13 +731,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return obstacleConfig.ObstacleDetectionType;
 		}
 
-		// Token: 0x0604632B RID: 287531 RVA: 0x0118B832 File Offset: 0x01189A32
+		// Token: 0x0603C560 RID: 247136 RVA: 0x01134AF6 File Offset: 0x01132CF6
 		public bool CheckCanLaunch()
 		{
 			return this.SkeletalMeshComponent != null;
 		}
 
-		// Token: 0x0604632C RID: 287532 RVA: 0x0118B83D File Offset: 0x01189A3D
+		// Token: 0x0603C561 RID: 247137 RVA: 0x01134B01 File Offset: 0x01132D01
 		public override void OnEntityWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 		{
 			this.RecentlyRenderedOnScreen = wasRecentlyRenderedOnScreen;
@@ -748,7 +748,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604632D RID: 287533 RVA: 0x0118B85C File Offset: 0x01189A5C
+		// Token: 0x0603C562 RID: 247138 RVA: 0x01134B20 File Offset: 0x01132D20
 		[NullableContext(1)]
 		public unsafe void SetLocationAndRotatorWithKeepingModelBuffer(FVectorDouble newLocation, FRotator newRotator, float timeLength, string context, bool bSweep = true)
 		{
@@ -806,7 +806,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ModelBufferComponent.D_GetTransformOffsetInWorld(child, this.ActorComponent.ActorTransform, ref this.OutTransformOffsetRef);
 		}
 
-		// Token: 0x0604632E RID: 287534 RVA: 0x0118BA94 File Offset: 0x01189C94
+		// Token: 0x0603C563 RID: 247139 RVA: 0x01134D58 File Offset: 0x01132F58
 		public void StopModelBuffer()
 		{
 			UKuroSceneItemModelBufferComponent modelBufferComponent = this.ModelBufferComponent;
@@ -818,19 +818,19 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			bool enableDebug = VehicleStreamModel.Instance.EnableDebug;
 		}
 
-		// Token: 0x0604632F RID: 287535 RVA: 0x0118BABA File Offset: 0x01189CBA
+		// Token: 0x0603C564 RID: 247140 RVA: 0x01134D7E File Offset: 0x01132F7E
 		public bool HasModelBuffer()
 		{
 			return this.GetModelBufferTime() > 0f;
 		}
 
-		// Token: 0x06046330 RID: 287536 RVA: 0x0118BAC9 File Offset: 0x01189CC9
+		// Token: 0x0603C565 RID: 247141 RVA: 0x01134D8D File Offset: 0x01132F8D
 		public bool IsModelBufferCompTickEnabled()
 		{
 			return this.ModelBufferComponent != null && this.ModelBufferComponent.IsComponentTickEnabled();
 		}
 
-		// Token: 0x06046331 RID: 287537 RVA: 0x0118BAE0 File Offset: 0x01189CE0
+		// Token: 0x0603C566 RID: 247142 RVA: 0x01134DA4 File Offset: 0x01132FA4
 		public float GetModelBufferTime()
 		{
 			if (this.ModelBufferComponent == null)
@@ -840,7 +840,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.ModelBufferComponent.BufferTimeLength;
 		}
 
-		// Token: 0x06046332 RID: 287538 RVA: 0x0118BAFC File Offset: 0x01189CFC
+		// Token: 0x0603C567 RID: 247143 RVA: 0x01134DC0 File Offset: 0x01132FC0
 		private void SetModelBufferComponentTickable(bool enable, RoadNetworkNavigationComponent.EModelBufferLockType source)
 		{
 			if (this.ModelBufferComponent == null)
@@ -868,7 +868,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.ModelBufferComponent.SetComponentTickEnabled(false);
 		}
 
-		// Token: 0x06046333 RID: 287539 RVA: 0x0118BB74 File Offset: 0x01189D74
+		// Token: 0x0603C568 RID: 247144 RVA: 0x01134E38 File Offset: 0x01133038
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -877,330 +877,313 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			RoadNetworkNavigationComponent roadNetworkNavigationComponent = (RoadNetworkNavigationComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
+			if (roadNetworkNavigationComponent.CreatureDataComponent == null)
 			{
-				if (roadNetworkNavigationComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
+				this.CreatureDataComponent = null;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
-			{
-				if (roadNetworkNavigationComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SyncComp"))
-			{
-				if (roadNetworkNavigationComponent.SyncComp == null)
-				{
-					this.SyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMovementSyncComponent>(this.SyncComp), "SyncComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SkeletalMeshComponent"))
-			{
-				if (roadNetworkNavigationComponent.SkeletalMeshComponent == null)
-				{
-					this.SkeletalMeshComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.SkeletalMeshComponent), "SkeletalMeshComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PawnSensoryInfoComponent"))
-			{
-				if (roadNetworkNavigationComponent.PawnSensoryInfoComponent == null)
-				{
-					this.PawnSensoryInfoComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.PawnSensoryInfoComponent), "PawnSensoryInfoComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CollisionEnablePerceptionEvent"))
-			{
-				if (roadNetworkNavigationComponent.CollisionEnablePerceptionEvent == null)
-				{
-					this.CollisionEnablePerceptionEvent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.CollisionEnablePerceptionEvent), "CollisionEnablePerceptionEvent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsAbsoluteTimeStop"))
-			{
-				this.IsAbsoluteTimeStop = roadNetworkNavigationComponent.IsAbsoluteTimeStop;
-			}
-			if (base.CanResetComponentProperty("PbDataId"))
-			{
-				this.PbDataId = roadNetworkNavigationComponent.PbDataId;
-			}
-			if (base.CanResetComponentProperty("CreatureDataId"))
-			{
-				this.CreatureDataId = roadNetworkNavigationComponent.CreatureDataId;
-			}
-			if (base.CanResetComponentProperty("IsInitRangeEvent"))
-			{
-				this.IsInitRangeEvent = roadNetworkNavigationComponent.IsInitRangeEvent;
-			}
-			if (base.CanResetComponentProperty("IsInRange"))
-			{
-				this.IsInRange = roadNetworkNavigationComponent.IsInRange;
-			}
-			if (base.CanResetComponentProperty("IsPlayerStandOn"))
-			{
-				this.IsPlayerStandOn = roadNetworkNavigationComponent.IsPlayerStandOn;
-			}
-			if (base.CanResetComponentProperty("IsMotorStandOn"))
-			{
-				this.IsMotorStandOn = roadNetworkNavigationComponent.IsMotorStandOn;
-			}
-			if (base.CanResetComponentProperty("RecentlyRenderedOnScreen"))
-			{
-				this.RecentlyRenderedOnScreen = roadNetworkNavigationComponent.RecentlyRenderedOnScreen;
-			}
-			if (base.CanResetComponentProperty("JustLeaveScreenMove"))
-			{
-				this.JustLeaveScreenMove = roadNetworkNavigationComponent.JustLeaveScreenMove;
-			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (roadNetworkNavigationComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoadNetworkNavigationComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ExtraBoxTrigger"))
-			{
-				if (roadNetworkNavigationComponent.ExtraBoxTrigger == null)
-				{
-					this.ExtraBoxTrigger = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IBoxTriggerShape>(this.ExtraBoxTrigger), "ExtraBoxTrigger"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HitEffectPath"))
-			{
-				this.HitEffectPath = roadNetworkNavigationComponent.HitEffectPath;
-			}
-			if (base.CanResetComponentProperty("HitEffectHandle"))
-			{
-				this.HitEffectHandle = roadNetworkNavigationComponent.HitEffectHandle;
-			}
-			if (base.CanResetComponentProperty("LastHitTime"))
-			{
-				this.LastHitTime = roadNetworkNavigationComponent.LastHitTime;
-			}
-			if (base.CanResetComponentProperty("FrameCount"))
-			{
-				this.FrameCount = roadNetworkNavigationComponent.FrameCount;
-			}
-			if (base.CanResetComponentProperty("LastTickInterval"))
-			{
-				this.LastTickInterval = roadNetworkNavigationComponent.LastTickInterval;
-			}
-			if (base.CanResetComponentProperty("JustLeaveScreenMoveTickDelta"))
-			{
-				this.JustLeaveScreenMoveTickDelta = roadNetworkNavigationComponent.JustLeaveScreenMoveTickDelta;
-			}
-			if (base.CanResetComponentProperty("HitTransform") && roadNetworkNavigationComponent.HitTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.HitTransform), "HitTransform"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EffectContext"))
+			if (roadNetworkNavigationComponent.ActorComponent == null)
 			{
-				if (roadNetworkNavigationComponent.EffectContext == null)
-				{
-					this.EffectContext = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EffectContext>(this.EffectContext), "EffectContext"))
-				{
-					return false;
-				}
+				this.ActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("CachedTransformTime"))
-			{
-				this.CachedTransformTime = roadNetworkNavigationComponent.CachedTransformTime;
-			}
-			if (base.CanResetComponentProperty("CachedSkeletalMeshTransform"))
-			{
-				this.CachedSkeletalMeshTransform = roadNetworkNavigationComponent.CachedSkeletalMeshTransform;
-			}
-			if (base.CanResetComponentProperty("WaitPlayerOutInitRangeTimerHandle"))
-			{
-				if (roadNetworkNavigationComponent.WaitPlayerOutInitRangeTimerHandle == null)
-				{
-					this.WaitPlayerOutInitRangeTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.WaitPlayerOutInitRangeTimerHandle), "WaitPlayerOutInitRangeTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ModelBufferLockMap") && roadNetworkNavigationComponent.ModelBufferLockMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<RoadNetworkNavigationComponent.EModelBufferLockType, bool>>(this.ModelBufferLockMap), "ModelBufferLockMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ModelBufferComponent"))
+			if (roadNetworkNavigationComponent.SyncComp == null)
 			{
-				if (roadNetworkNavigationComponent.ModelBufferComponent == null)
-				{
-					this.ModelBufferComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroSceneItemModelBufferComponent>(this.ModelBufferComponent), "ModelBufferComponent"))
-				{
-					return false;
-				}
+				this.SyncComp = null;
 			}
-			if (base.CanResetComponentProperty("OutTransformOffsetRef"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SyncComp), "SyncComp"))
 			{
-				this.OutTransformOffsetRef = roadNetworkNavigationComponent.OutTransformOffsetRef;
+				return false;
 			}
+			if (roadNetworkNavigationComponent.SkeletalMeshComponent == null)
+			{
+				this.SkeletalMeshComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkeletalMeshComponent), "SkeletalMeshComponent"))
+			{
+				return false;
+			}
+			if (roadNetworkNavigationComponent.PawnSensoryInfoComponent == null)
+			{
+				this.PawnSensoryInfoComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnSensoryInfoComponent), "PawnSensoryInfoComponent"))
+			{
+				return false;
+			}
+			if (roadNetworkNavigationComponent.CollisionEnablePerceptionEvent == null)
+			{
+				this.CollisionEnablePerceptionEvent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CollisionEnablePerceptionEvent), "CollisionEnablePerceptionEvent"))
+			{
+				return false;
+			}
+			this.IsAbsoluteTimeStop = roadNetworkNavigationComponent.IsAbsoluteTimeStop;
+			this.PbDataId = roadNetworkNavigationComponent.PbDataId;
+			this.CreatureDataId = roadNetworkNavigationComponent.CreatureDataId;
+			this.IsInitRangeEvent = roadNetworkNavigationComponent.IsInitRangeEvent;
+			this.IsInRange = roadNetworkNavigationComponent.IsInRange;
+			this.IsPlayerStandOn = roadNetworkNavigationComponent.IsPlayerStandOn;
+			this.IsMotorStandOn = roadNetworkNavigationComponent.IsMotorStandOn;
+			this.RecentlyRenderedOnScreen = roadNetworkNavigationComponent.RecentlyRenderedOnScreen;
+			this.JustLeaveScreenMove = roadNetworkNavigationComponent.JustLeaveScreenMove;
+			if (roadNetworkNavigationComponent.Config == null)
+			{
+				this.Config = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
+			{
+				return false;
+			}
+			if (roadNetworkNavigationComponent.ExtraBoxTrigger == null)
+			{
+				this.ExtraBoxTrigger = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExtraBoxTrigger), "ExtraBoxTrigger"))
+			{
+				return false;
+			}
+			this.HitEffectPath = roadNetworkNavigationComponent.HitEffectPath;
+			this.HitEffectHandle = roadNetworkNavigationComponent.HitEffectHandle;
+			this.LastHitTime = roadNetworkNavigationComponent.LastHitTime;
+			this.FrameCount = roadNetworkNavigationComponent.FrameCount;
+			this.LastTickInterval = roadNetworkNavigationComponent.LastTickInterval;
+			this.JustLeaveScreenMoveTickDelta = roadNetworkNavigationComponent.JustLeaveScreenMoveTickDelta;
+			if (roadNetworkNavigationComponent.HitTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitTransform), "HitTransform"))
+			{
+				return false;
+			}
+			if (roadNetworkNavigationComponent.EffectContext == null)
+			{
+				this.EffectContext = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectContext), "EffectContext"))
+			{
+				return false;
+			}
+			this.CachedTransformTime = roadNetworkNavigationComponent.CachedTransformTime;
+			this.CachedSkeletalMeshTransform = roadNetworkNavigationComponent.CachedSkeletalMeshTransform;
+			if (roadNetworkNavigationComponent.WaitPlayerOutInitRangeTimerHandle == null)
+			{
+				this.WaitPlayerOutInitRangeTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitPlayerOutInitRangeTimerHandle), "WaitPlayerOutInitRangeTimerHandle"))
+			{
+				return false;
+			}
+			if (roadNetworkNavigationComponent.ModelBufferLockMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ModelBufferLockMap), "ModelBufferLockMap"))
+			{
+				return false;
+			}
+			if (roadNetworkNavigationComponent.ModelBufferComponent == null)
+			{
+				this.ModelBufferComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ModelBufferComponent), "ModelBufferComponent"))
+			{
+				return false;
+			}
+			this.OutTransformOffsetRef = roadNetworkNavigationComponent.OutTransformOffsetRef;
 			return true;
 		}
 
-		// Token: 0x04024C44 RID: 150596
+		// Token: 0x170071E1 RID: 29153
+		// (get) Token: 0x0603C569 RID: 247145 RVA: 0x0113514D File Offset: 0x0113334D
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E2 RID: 29154
+		// (get) Token: 0x0603C56A RID: 247146 RVA: 0x01135150 File Offset: 0x01133350
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E3 RID: 29155
+		// (get) Token: 0x0603C56B RID: 247147 RVA: 0x01135153 File Offset: 0x01133353
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E4 RID: 29156
+		// (get) Token: 0x0603C56C RID: 247148 RVA: 0x01135156 File Offset: 0x01133356
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E5 RID: 29157
+		// (get) Token: 0x0603C56D RID: 247149 RVA: 0x01135159 File Offset: 0x01133359
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E6 RID: 29158
+		// (get) Token: 0x0603C56E RID: 247150 RVA: 0x0113515C File Offset: 0x0113335C
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071E7 RID: 29159
+		// (get) Token: 0x0603C56F RID: 247151 RVA: 0x0113515F File Offset: 0x0113335F
+		public override bool NeedEntityWasRecentlyRenderedOnScreenChangeInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEFF RID: 130815
 		private const float MIN_BUFFER_TIME_LENGTH = 0.02f;
 
-		// Token: 0x04024C45 RID: 150597
+		// Token: 0x0401FF00 RID: 130816
 		private const float BLINK_MOVE_MIN_TIME = 4f;
 
-		// Token: 0x04024C46 RID: 150598
+		// Token: 0x0401FF01 RID: 130817
 		private const int HIT_INTERVAL = 3000;
 
-		// Token: 0x04024C47 RID: 150599
+		// Token: 0x0401FF02 RID: 130818
 		[Nullable(1)]
 		private const string COMMON_CONTEXT = "RoadNetworkNavigationComponent";
 
-		// Token: 0x04024C48 RID: 150600
+		// Token: 0x0401FF03 RID: 130819
 		private const float INIT_VISIBLE_DISTANCE = 1000f;
 
-		// Token: 0x04024C49 RID: 150601
+		// Token: 0x0401FF04 RID: 130820
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x04024C4A RID: 150602
+		// Token: 0x0401FF05 RID: 130821
 		private SceneItemActorComponent ActorComponent;
 
-		// Token: 0x04024C4B RID: 150603
+		// Token: 0x0401FF06 RID: 130822
 		private SceneItemMovementSyncComponent SyncComp;
 
-		// Token: 0x04024C4C RID: 150604
+		// Token: 0x0401FF07 RID: 130823
 		private USkeletalMeshComponent SkeletalMeshComponent;
 
-		// Token: 0x04024C4D RID: 150605
+		// Token: 0x0401FF08 RID: 130824
 		private PawnSensoryInfoComponent PawnSensoryInfoComponent;
 
-		// Token: 0x04024C4E RID: 150606
+		// Token: 0x0401FF09 RID: 130825
 		private PlayerPerceptionEvent CollisionEnablePerceptionEvent;
 
-		// Token: 0x04024C4F RID: 150607
+		// Token: 0x0401FF0A RID: 130826
 		private bool IsAbsoluteTimeStop;
 
-		// Token: 0x04024C50 RID: 150608
+		// Token: 0x0401FF0B RID: 130827
 		private int PbDataId;
 
-		// Token: 0x04024C51 RID: 150609
+		// Token: 0x0401FF0C RID: 130828
 		private long CreatureDataId;
 
-		// Token: 0x04024C52 RID: 150610
+		// Token: 0x0401FF0D RID: 130829
 		private bool IsInitRangeEvent;
 
-		// Token: 0x04024C53 RID: 150611
+		// Token: 0x0401FF0E RID: 130830
 		private bool IsInRange;
 
-		// Token: 0x04024C54 RID: 150612
+		// Token: 0x0401FF0F RID: 130831
 		private bool IsPlayerStandOn;
 
-		// Token: 0x04024C55 RID: 150613
+		// Token: 0x0401FF10 RID: 130832
 		private bool IsMotorStandOn;
 
-		// Token: 0x04024C56 RID: 150614
+		// Token: 0x0401FF11 RID: 130833
 		private bool RecentlyRenderedOnScreen;
 
-		// Token: 0x04024C57 RID: 150615
+		// Token: 0x0401FF12 RID: 130834
 		private bool JustLeaveScreenMove;
 
-		// Token: 0x04024C58 RID: 150616
+		// Token: 0x0401FF13 RID: 130835
 		private RoadNetworkNavigationComponent Config;
 
-		// Token: 0x04024C59 RID: 150617
+		// Token: 0x0401FF14 RID: 130836
 		private IBoxTriggerShape ExtraBoxTrigger;
 
-		// Token: 0x04024C5A RID: 150618
+		// Token: 0x0401FF15 RID: 130837
 		private string HitEffectPath;
 
-		// Token: 0x04024C5B RID: 150619
+		// Token: 0x0401FF16 RID: 130838
 		private int HitEffectHandle;
 
-		// Token: 0x04024C5C RID: 150620
+		// Token: 0x0401FF17 RID: 130839
 		private double LastHitTime;
 
-		// Token: 0x04024C5D RID: 150621
+		// Token: 0x0401FF18 RID: 130840
 		private int FrameCount;
 
-		// Token: 0x04024C5E RID: 150622
+		// Token: 0x0401FF19 RID: 130841
 		private int LastTickInterval = 1;
 
-		// Token: 0x04024C5F RID: 150623
+		// Token: 0x0401FF1A RID: 130842
 		private float JustLeaveScreenMoveTickDelta;
 
-		// Token: 0x04024C60 RID: 150624
+		// Token: 0x0401FF1B RID: 130843
 		[Nullable(1)]
 		private readonly global::Transform HitTransform = global::Transform.Create();
 
-		// Token: 0x04024C61 RID: 150625
+		// Token: 0x0401FF1C RID: 130844
 		private EffectContext EffectContext;
 
-		// Token: 0x04024C62 RID: 150626
+		// Token: 0x0401FF1D RID: 130845
 		private long CachedTransformTime = -1L;
 
-		// Token: 0x04024C63 RID: 150627
+		// Token: 0x0401FF1E RID: 130846
 		private FTransformDouble? CachedSkeletalMeshTransform;
 
-		// Token: 0x04024C64 RID: 150628
+		// Token: 0x0401FF1F RID: 130847
 		private TimerHandle WaitPlayerOutInitRangeTimerHandle;
 
-		// Token: 0x04024C65 RID: 150629
+		// Token: 0x0401FF20 RID: 130848
 		[Nullable(1)]
 		private readonly Dictionary<RoadNetworkNavigationComponent.EModelBufferLockType, bool> ModelBufferLockMap = new Dictionary<RoadNetworkNavigationComponent.EModelBufferLockType, bool>();
 
-		// Token: 0x04024C66 RID: 150630
+		// Token: 0x0401FF21 RID: 130849
 		private UKuroSceneItemModelBufferComponent ModelBufferComponent;
 
-		// Token: 0x04024C67 RID: 150631
+		// Token: 0x0401FF22 RID: 130850
 		protected FTransformDouble OutTransformOffsetRef = new FTransformDouble();
 
-		// Token: 0x0200CE40 RID: 52800
+		// Token: 0x0200BA31 RID: 47665
 		[NullableContext(0)]
 		private enum EModelBufferLockType
 		{
-			// Token: 0x0403E1C8 RID: 254408
+			// Token: 0x040395F3 RID: 234995
 			Launch,
-			// Token: 0x0403E1C9 RID: 254409
+			// Token: 0x040395F4 RID: 234996
 			UseModelBuffer,
-			// Token: 0x0403E1CA RID: 254410
+			// Token: 0x040395F5 RID: 234997
 			BlockByTraceTarget
 		}
 	}

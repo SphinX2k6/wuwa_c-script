@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005008 RID: 20488
+	// Token: 0x02003FD2 RID: 16338
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotWeatherActorInfo
 	{
-		// Token: 0x060346EB RID: 214763 RVA: 0x00C58C14 File Offset: 0x00C56E14
+		// Token: 0x0602958E RID: 169358 RVA: 0x00BA4114 File Offset: 0x00BA2314
 		public void Disable()
 		{
 			if (this.WeatherConfig == null)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsLoadCompleted = false;
 		}
 
-		// Token: 0x060346EC RID: 214764 RVA: 0x00C58C74 File Offset: 0x00C56E74
+		// Token: 0x0602958F RID: 169359 RVA: 0x00BA4174 File Offset: 0x00BA2374
 		public void Destroy()
 		{
 			this.WeatherConfig = null;
@@ -41,28 +41,28 @@ namespace CSharpScript.Game.Module.Plot
 			this.KuroPostProcessComponent = null;
 		}
 
-		// Token: 0x0401BEDE RID: 114398
+		// Token: 0x040168C7 RID: 92359
 		public Weather? WeatherConfig;
 
-		// Token: 0x0401BEDF RID: 114399
+		// Token: 0x040168C8 RID: 92360
 		public AActor Actor;
 
-		// Token: 0x0401BEE0 RID: 114400
+		// Token: 0x040168C9 RID: 92361
 		public UKuroPostProcessComponent KuroPostProcessComponent;
 
-		// Token: 0x0401BEE1 RID: 114401
+		// Token: 0x040168CA RID: 92362
 		public float TargetBlendWeight;
 
-		// Token: 0x0401BEE2 RID: 114402
+		// Token: 0x040168CB RID: 92363
 		public float CurBlendWeight;
 
-		// Token: 0x0401BEE3 RID: 114403
+		// Token: 0x040168CC RID: 92364
 		public float ChangeSpeed;
 
-		// Token: 0x0401BEE4 RID: 114404
+		// Token: 0x040168CD RID: 92365
 		public int Priority;
 
-		// Token: 0x0401BEE5 RID: 114405
+		// Token: 0x040168CE RID: 92366
 		public bool IsLoadCompleted;
 	}
 }

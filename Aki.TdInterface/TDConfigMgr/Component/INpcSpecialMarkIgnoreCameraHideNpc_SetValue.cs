@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000577 RID: 1399
+	// Token: 0x020005DE RID: 1502
 	public class INpcSpecialMarkIgnoreCameraHideNpc_SetValue
 	{
-		// Token: 0x04001463 RID: 5219
+		// Token: 0x040015CD RID: 5581
 		public ESpecialNpcMarkType Type;
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001E15 RID: 7701
+// Token: 0x020012D7 RID: 4823
 public class EHandBookQuestItemChildType
 {
-	// Token: 0x04006CA9 RID: 27817
+	// Token: 0x04006D8A RID: 28042
 	public const int Title = 0;
 
-	// Token: 0x04006CAA RID: 27818
+	// Token: 0x04006D8B RID: 28043
 	public const int Toggle = 1;
 }

@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020034A7 RID: 13479
+// Token: 0x02002A1B RID: 10779
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModel : Singleton
 {
-	// Token: 0x0601D586 RID: 120198 RVA: 0x0082DECC File Offset: 0x0082C0CC
+	// Token: 0x0601B283 RID: 111235 RVA: 0x00855078 File Offset: 0x00853278
 	[NullableContext(2)]
 	public UiViewBase GetTopView(ELayerType layer)
 	{
@@ -19,11 +18,20 @@ public class UiModel : Singleton
 			switch (layer)
 			{
 			case ELayerType.HUD:
-				if (this.HudMap.Count <= 0)
+			{
+				UiViewBase result = null;
+				if (this.HudMap.Count > 0)
 				{
-					return null;
+					using (Dictionary<EUiViewName, UiViewBase>.ValueCollection.Enumerator enumerator = this.HudMap.Values.GetEnumerator())
+					{
+						while (enumerator.MoveNext())
+						{
+							result = enumerator.Current;
+						}
+					}
 				}
-				return this.HudMap.Values.Last<UiViewBase>();
+				return result;
+			}
 			case ELayerType.Normal:
 				return this.NormalStack.Peek();
 			case ELayerType.HUD | ELayerType.Normal:
@@ -44,24 +52,28 @@ public class UiModel : Singleton
 		}
 		else if (layer != ELayerType.Guide)
 		{
-			if (layer != ELayerType.Loading)
+			if (layer == ELayerType.Loading)
 			{
-				if (layer == ELayerType.NetWork)
+				UiViewBase result2 = null;
+				if (this.LoadingMap.Count > 0)
 				{
-					if (this.NetWorkList.Count <= 0)
+					using (Dictionary<EUiViewName, UiViewBase>.ValueCollection.Enumerator enumerator = this.LoadingMap.Values.GetEnumerator())
 					{
-						return null;
+						while (enumerator.MoveNext())
+						{
+							result2 = enumerator.Current;
+						}
 					}
-					return this.NetWorkList[this.NetWorkList.Count - 1];
 				}
+				return result2;
 			}
-			else
+			if (layer == ELayerType.NetWork)
 			{
-				if (this.LoadingMap.Count <= 0)
+				if (this.NetWorkList.Count <= 0)
 				{
 					return null;
 				}
-				return this.LoadingMap.Values.ToArray<UiViewBase>()[this.LoadingMap.Count - 1];
+				return this.NetWorkList[this.NetWorkList.Count - 1];
 			}
 		}
 		else
@@ -75,7 +87,7 @@ public class UiModel : Singleton
 		return null;
 	}
 
-	// Token: 0x0601D587 RID: 120199 RVA: 0x0082E007 File Offset: 0x0082C207
+	// Token: 0x0601B284 RID: 111236 RVA: 0x00855210 File Offset: 0x00853410
 	public void AddNpcIconViewUnit(UiPanelBase npcIconView)
 	{
 		if (this.NpcIconViewUnitList.Contains(npcIconView))
@@ -85,7 +97,7 @@ public class UiModel : Singleton
 		this.NpcIconViewUnitList.Add(npcIconView);
 	}
 
-	// Token: 0x0601D588 RID: 120200 RVA: 0x0082E025 File Offset: 0x0082C225
+	// Token: 0x0601B285 RID: 111237 RVA: 0x0085522E File Offset: 0x0085342E
 	public void RemoveNpcIconViewUnit(UiPanelBase npcIconView)
 	{
 		if (!this.NpcIconViewUnitList.Contains(npcIconView))
@@ -95,7 +107,7 @@ public class UiModel : Singleton
 		this.NpcIconViewUnitList.Remove(npcIconView);
 	}
 
-	// Token: 0x0601D589 RID: 120201 RVA: 0x0082E044 File Offset: 0x0082C244
+	// Token: 0x0601B286 RID: 111238 RVA: 0x0085524C File Offset: 0x0085344C
 	public void SetNpcIconViewListShowState(bool visible)
 	{
 		foreach (UiPanelBase uiPanelBase in this.NpcIconViewUnitList)
@@ -104,7 +116,7 @@ public class UiModel : Singleton
 		}
 	}
 
-	// Token: 0x0601D58A RID: 120202 RVA: 0x0082E09C File Offset: 0x0082C29C
+	// Token: 0x0601B287 RID: 111239 RVA: 0x008552A4 File Offset: 0x008534A4
 	[NullableContext(2)]
 	public UiViewBase GetFloatView(EUiViewName name)
 	{
@@ -117,7 +129,7 @@ public class UiModel : Singleton
 		return this.ShowViewMap.GetValueOrDefault(key);
 	}
 
-	// Token: 0x0601D58B RID: 120203 RVA: 0x0082E0FC File Offset: 0x0082C2FC
+	// Token: 0x0601B288 RID: 111240 RVA: 0x00855304 File Offset: 0x00853504
 	[NullableContext(2)]
 	public UiViewBase PeekNormalView(int offsetFromTop = 0)
 	{
@@ -138,8 +150,8 @@ public class UiModel : Singleton
 		return null;
 	}
 
-	// Token: 0x170028B9 RID: 10425
-	// (get) Token: 0x0601D58C RID: 120204 RVA: 0x0082E178 File Offset: 0x0082C378
+	// Token: 0x17002C51 RID: 11345
+	// (get) Token: 0x0601B289 RID: 111241 RVA: 0x00855380 File Offset: 0x00853580
 	public static UiModel Instance
 	{
 		get
@@ -153,12 +165,12 @@ public class UiModel : Singleton
 		}
 	}
 
-	// Token: 0x0601D58D RID: 120205 RVA: 0x0082E19B File Offset: 0x0082C39B
+	// Token: 0x0601B28A RID: 111242 RVA: 0x008553A3 File Offset: 0x008535A3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D58E RID: 120206 RVA: 0x0082E19D File Offset: 0x0082C39D
+	// Token: 0x0601B28B RID: 111243 RVA: 0x008553A5 File Offset: 0x008535A5
 	public static void ResetStaticDefaultValue()
 	{
 		UiModel instance = UiModel._instance;
@@ -169,70 +181,70 @@ public class UiModel : Singleton
 		UiModel._instance = null;
 	}
 
-	// Token: 0x0601D58F RID: 120207 RVA: 0x0082E1B6 File Offset: 0x0082C3B6
+	// Token: 0x0601B28C RID: 111244 RVA: 0x008553BE File Offset: 0x008535BE
 	static UiModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiModel.CreateStaticDefaultValue), new Action(UiModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E738 RID: 59192
+	// Token: 0x0400EBEC RID: 60396
 	public readonly Dictionary<EUiViewName, UiViewBase> HudMap = new Dictionary<EUiViewName, UiViewBase>();
 
-	// Token: 0x0400E739 RID: 59193
+	// Token: 0x0400EBED RID: 60397
 	public readonly global::Stack<UiViewBase> NormalStack = new global::Stack<UiViewBase>();
 
-	// Token: 0x0400E73A RID: 59194
+	// Token: 0x0400EBEE RID: 60398
 	public readonly global::Stack<UiViewBase> PlotNormalStack = new global::Stack<UiViewBase>();
 
-	// Token: 0x0400E73B RID: 59195
+	// Token: 0x0400EBEF RID: 60399
 	public readonly List<UiViewBase> PopList = new List<UiViewBase>();
 
-	// Token: 0x0400E73C RID: 59196
+	// Token: 0x0400EBF0 RID: 60400
 	public readonly Dictionary<string, FloatViewQueue> FloatQueueMap = new Dictionary<string, FloatViewQueue>();
 
-	// Token: 0x0400E73D RID: 59197
+	// Token: 0x0400EBF1 RID: 60401
 	public readonly Dictionary<string, UiViewBase> ShowViewMap = new Dictionary<string, UiViewBase>();
 
-	// Token: 0x0400E73E RID: 59198
+	// Token: 0x0400EBF2 RID: 60402
 	public readonly Dictionary<string, UiViewBase> HideViewMap = new Dictionary<string, UiViewBase>();
 
-	// Token: 0x0400E73F RID: 59199
+	// Token: 0x0400EBF3 RID: 60403
 	public readonly List<UiViewBase> GuideList = new List<UiViewBase>();
 
-	// Token: 0x0400E740 RID: 59200
+	// Token: 0x0400EBF4 RID: 60404
 	public readonly Dictionary<EUiViewName, UiViewBase> LoadingMap = new Dictionary<EUiViewName, UiViewBase>();
 
-	// Token: 0x0400E741 RID: 59201
+	// Token: 0x0400EBF5 RID: 60405
 	public readonly Dictionary<EUiViewName, UiViewBase> DebugMap = new Dictionary<EUiViewName, UiViewBase>();
 
-	// Token: 0x0400E742 RID: 59202
+	// Token: 0x0400EBF6 RID: 60406
 	public readonly List<UiViewBase> NetWorkList = new List<UiViewBase>();
 
-	// Token: 0x0400E743 RID: 59203
+	// Token: 0x0400EBF7 RID: 60407
 	private readonly HashSet<UiPanelBase> NpcIconViewUnitList = new HashSet<UiPanelBase>();
 
-	// Token: 0x0400E744 RID: 59204
+	// Token: 0x0400EBF8 RID: 60408
 	public readonly HashSet<EUiViewName> ResetToViewWhiteSet = new HashSet<EUiViewName>
 	{
 		EUiViewName.ReviveView
 	};
 
-	// Token: 0x0400E745 RID: 59205
+	// Token: 0x0400EBF9 RID: 60409
 	public bool IsInMainView;
 
-	// Token: 0x0400E746 RID: 59206
+	// Token: 0x0400EBFA RID: 60410
 	public bool InNormalQueue;
 
-	// Token: 0x0400E747 RID: 59207
+	// Token: 0x0400EBFB RID: 60411
 	public readonly HashSet<EUiViewName> SeamlessStackWhileList = new HashSet<EUiViewName>
 	{
 		EUiViewName.BattleView
 	};
 
-	// Token: 0x0400E748 RID: 59208
+	// Token: 0x0400EBFC RID: 60412
 	public EUiViewName MainViewName = EUiViewName.BattleView;
 
-	// Token: 0x0400E749 RID: 59209
+	// Token: 0x0400EBFD RID: 60413
 	public readonly HashSet<EUiViewName> CanShowPlotViewWhiteList = new HashSet<EUiViewName>
 	{
 		EUiViewName.BattleView,
@@ -251,7 +263,7 @@ public class UiModel : Singleton
 		EUiViewName.VillageInfrWorldBuildView
 	};
 
-	// Token: 0x0400E74A RID: 59210
+	// Token: 0x0400EBFE RID: 60414
 	public HashSet<EUiViewName> NormalStackBottomWhiteSet = new HashSet<EUiViewName>
 	{
 		EUiViewName.LoginView,
@@ -260,7 +272,7 @@ public class UiModel : Singleton
 		EUiViewName.MobileSwitchInputView
 	};
 
-	// Token: 0x0400E74B RID: 59211
+	// Token: 0x0400EBFF RID: 60415
 	[Nullable(2)]
 	private static UiModel _instance;
 }

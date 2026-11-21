@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000357 RID: 855
+	// Token: 0x020003A0 RID: 928
 	public class IExploreSkillPullGiant_SetValue
 	{
-		// Token: 0x04000E1F RID: 3615
+		// Token: 0x04000F16 RID: 3862
 		public EExploreSkillInteractType Type;
 
-		// Token: 0x04000E20 RID: 3616
+		// Token: 0x04000F17 RID: 3863
 		public float PullTime;
 
-		// Token: 0x04000E21 RID: 3617
-		[Nullable(1)]
+		// Token: 0x04000F18 RID: 3864
 		public List<ActionInfo> Actions;
 	}
 }

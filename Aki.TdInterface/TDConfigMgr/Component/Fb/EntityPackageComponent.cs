@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF7 RID: 3063
+	// Token: 0x02000CC7 RID: 3271
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EntityPackageComponent : IComponentBase
 	{
-		// Token: 0x0600465C RID: 18012 RVA: 0x000B1C62 File Offset: 0x000AFE62
-		[NullableContext(1)]
+		// Token: 0x06004ABF RID: 19135 RVA: 0x000BBE2E File Offset: 0x000BA02E
+		[NullableContext(0)]
 		public static EntityPackageComponent Create(IEntityPackageComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700142B RID: 5163
-		// (get) Token: 0x0600465D RID: 18013 RVA: 0x000B1C84 File Offset: 0x000AFE84
+		// Token: 0x1700152C RID: 5420
+		// (get) Token: 0x06004AC0 RID: 19136 RVA: 0x000BBE50 File Offset: 0x000BA050
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700142C RID: 5164
-		// (get) Token: 0x0600465E RID: 18014 RVA: 0x000B1CBC File Offset: 0x000AFEBC
+		// Token: 0x1700152D RID: 5421
+		// (get) Token: 0x06004AC1 RID: 19137 RVA: 0x000BBE88 File Offset: 0x000BA088
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700142D RID: 5165
-		// (get) Token: 0x0600465F RID: 18015 RVA: 0x000B1CD2 File Offset: 0x000AFED2
+		// Token: 0x1700152E RID: 5422
+		// (get) Token: 0x06004AC2 RID: 19138 RVA: 0x000BBE9E File Offset: 0x000BA09E
 		public virtual bool BindTemplate
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700142E RID: 5166
-		// (get) Token: 0x06004660 RID: 18016 RVA: 0x000B1CDF File Offset: 0x000AFEDF
+		// Token: 0x1700152F RID: 5423
+		// (get) Token: 0x06004AC3 RID: 19139 RVA: 0x000BBEAB File Offset: 0x000BA0AB
 		public virtual IEntityPackageData PackageData
 		{
 			get
@@ -73,13 +73,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400280E RID: 10254
+		// Token: 0x04002A5A RID: 10842
 		private IEntityPackageComponent Instance;
 
-		// Token: 0x0400280F RID: 10255
+		// Token: 0x04002A5B RID: 10843
 		private IEntityPackageData _PackageDataCache;
 
-		// Token: 0x04002810 RID: 10256
+		// Token: 0x04002A5C RID: 10844
 		private bool _PackageDataInited;
 	}
 }

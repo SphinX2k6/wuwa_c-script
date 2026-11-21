@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CE0 RID: 19680
+	// Token: 0x02003C92 RID: 15506
 	public enum ERoleRootViewDefine
 	{
-		// Token: 0x0401B0AC RID: 110764
+		// Token: 0x04015A30 RID: 88624
 		CloseButton,
-		// Token: 0x0401B0AD RID: 110765
+		// Token: 0x04015A31 RID: 88625
 		RoleListButton,
-		// Token: 0x0401B0AE RID: 110766
+		// Token: 0x04015A32 RID: 88626
 		TabComponent,
-		// Token: 0x0401B0AF RID: 110767
+		// Token: 0x04015A33 RID: 88627
 		RoleListItem,
-		// Token: 0x0401B0B0 RID: 110768
+		// Token: 0x04015A34 RID: 88628
 		TabRootItem,
-		// Token: 0x0401B0B1 RID: 110769
+		// Token: 0x04015A35 RID: 88629
 		DragItem = 6,
-		// Token: 0x0401B0B2 RID: 110770
+		// Token: 0x04015A36 RID: 88630
 		RoleListButtonRedDot = 8,
-		// Token: 0x0401B0B3 RID: 110771
+		// Token: 0x04015A37 RID: 88631
 		RoleBGMSwitchItem,
-		// Token: 0x0401B0B4 RID: 110772
+		// Token: 0x04015A38 RID: 88632
 		RoleDevelopEntranceItem,
-		// Token: 0x0401B0B5 RID: 110773
+		// Token: 0x04015A39 RID: 88633
 		SkillShowTagRoot = 12,
-		// Token: 0x0401B0B6 RID: 110774
+		// Token: 0x04015A3A RID: 88634
 		SkillShowTagToggle,
-		// Token: 0x0401B0B7 RID: 110775
+		// Token: 0x04015A3B RID: 88635
 		SkillShowTagHelpButton,
-		// Token: 0x0401B0B8 RID: 110776
+		// Token: 0x04015A3C RID: 88636
 		SkillShowTagTipsItem
 	}
 }

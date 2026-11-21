@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EC5 RID: 28357
+	// Token: 0x02006045 RID: 24645
 	[RequiredMember]
 	public class DollGrabInfiniteShowCaseRewardData : IDollGrabInfiniteShowCaseRewardData
 	{
-		// Token: 0x17009AB5 RID: 39605
-		// (get) Token: 0x060450CC RID: 282828 RVA: 0x0110EFBB File Offset: 0x0110D1BB
-		// (set) Token: 0x060450CD RID: 282829 RVA: 0x0110EFC3 File Offset: 0x0110D1C3
+		// Token: 0x17006FEC RID: 28652
+		// (get) Token: 0x0603B26D RID: 242285 RVA: 0x010B9097 File Offset: 0x010B7297
+		// (set) Token: 0x0603B26E RID: 242286 RVA: 0x010B909F File Offset: 0x010B729F
 		[RequiredMember]
 		public int DropId { get; set; }
 
-		// Token: 0x17009AB6 RID: 39606
-		// (get) Token: 0x060450CE RID: 282830 RVA: 0x0110EFCC File Offset: 0x0110D1CC
-		// (set) Token: 0x060450CF RID: 282831 RVA: 0x0110EFD4 File Offset: 0x0110D1D4
+		// Token: 0x17006FED RID: 28653
+		// (get) Token: 0x0603B26F RID: 242287 RVA: 0x010B90A8 File Offset: 0x010B72A8
+		// (set) Token: 0x0603B270 RID: 242288 RVA: 0x010B90B0 File Offset: 0x010B72B0
 		[RequiredMember]
 		public int GetRewardIndex { get; set; }
 
-		// Token: 0x17009AB7 RID: 39607
-		// (get) Token: 0x060450D0 RID: 282832 RVA: 0x0110EFDD File Offset: 0x0110D1DD
-		// (set) Token: 0x060450D1 RID: 282833 RVA: 0x0110EFE5 File Offset: 0x0110D1E5
+		// Token: 0x17006FEE RID: 28654
+		// (get) Token: 0x0603B271 RID: 242289 RVA: 0x010B90B9 File Offset: 0x010B72B9
+		// (set) Token: 0x0603B272 RID: 242290 RVA: 0x010B90C1 File Offset: 0x010B72C1
 		[RequiredMember]
 		public int NextRewardIndex { get; set; }
 
-		// Token: 0x060450D2 RID: 282834 RVA: 0x0110EFEE File Offset: 0x0110D1EE
+		// Token: 0x0603B273 RID: 242291 RVA: 0x010B90CA File Offset: 0x010B72CA
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public DollGrabInfiniteShowCaseRewardData()

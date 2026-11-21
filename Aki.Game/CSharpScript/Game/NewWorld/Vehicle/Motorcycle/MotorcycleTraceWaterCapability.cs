@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x0200702C RID: 28716
+	// Token: 0x020061AD RID: 25005
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleTraceWaterCapability : GameCapability
 	{
-		// Token: 0x06045E85 RID: 286341 RVA: 0x011655AA File Offset: 0x011637AA
+		// Token: 0x0603C05E RID: 245854 RVA: 0x0110F509 File Offset: 0x0110D709
 		public MotorcycleTraceWaterCapability(VehicleActorComponent ActorComp)
 		{
 			this.ActorComp = ActorComp;
 		}
 
-		// Token: 0x06045E86 RID: 286342 RVA: 0x011655D0 File Offset: 0x011637D0
+		// Token: 0x0603C05F RID: 245855 RVA: 0x0110F530 File Offset: 0x0110D730
 		public override void Activate()
 		{
 			this.WaterTrace = new UTraceSphereElement();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			TraceElementCommon.Instance.SetTraceHitColor(this.WaterTrace, CharacterSwimUtils.DebugColor4);
 		}
 
-		// Token: 0x06045E87 RID: 286343 RVA: 0x01165670 File Offset: 0x01163870
+		// Token: 0x0603C060 RID: 245856 RVA: 0x0110F5D0 File Offset: 0x0110D7D0
 		public override void Deactivate()
 		{
 			UTraceSphereElement waterTrace = this.WaterTrace;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.WaterTrace = null;
 		}
 
-		// Token: 0x06045E88 RID: 286344 RVA: 0x0116568C File Offset: 0x0116388C
+		// Token: 0x0603C061 RID: 245857 RVA: 0x0110F5EC File Offset: 0x0110D7EC
 		public TraceWaterResult TraceWater(double relativeStartHeight, double relativeEndHeight)
 		{
 			VehicleActorComponent actorComp = this.ActorComp;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			};
 		}
 
-		// Token: 0x06045E89 RID: 286345 RVA: 0x01165860 File Offset: 0x01163A60
+		// Token: 0x0603C062 RID: 245858 RVA: 0x0110F7C0 File Offset: 0x0110D9C0
 		public bool CeilingCheck(double relativeHeight)
 		{
 			UTraceSphereElement actorTrace = TraceElementModel.Instance.GetActorTrace();
@@ -120,33 +120,33 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return false;
 		}
 
-		// Token: 0x040248D4 RID: 149716
+		// Token: 0x0401FB8A RID: 129930
 		private const string PROFILE_DETECT_WATER_DEPTH = "MotorWaterTrace";
 
-		// Token: 0x040248D5 RID: 149717
+		// Token: 0x0401FB8B RID: 129931
 		[StaticVariableRuleIgnore]
 		public static FName waterCollisionProfileName = new FName("水体");
 
-		// Token: 0x040248D6 RID: 149718
+		// Token: 0x0401FB8C RID: 129932
 		public const int ONE_HUNDRED = 100;
 
-		// Token: 0x040248D7 RID: 149719
+		// Token: 0x0401FB8D RID: 129933
 		public const int FIVE_HUNDRED = 500;
 
-		// Token: 0x040248D8 RID: 149720
+		// Token: 0x0401FB8E RID: 129934
 		public const string MOTORCYCLE_WATER_DEBUG_KEY = "MotorWater";
 
-		// Token: 0x040248D9 RID: 149721
+		// Token: 0x0401FB8F RID: 129935
 		[Nullable(2)]
 		private UTraceSphereElement WaterTrace;
 
-		// Token: 0x040248DA RID: 149722
+		// Token: 0x0401FB90 RID: 129936
 		public readonly Vector ImpactPoint = Vector.Create();
 
-		// Token: 0x040248DB RID: 149723
+		// Token: 0x0401FB91 RID: 129937
 		public readonly Vector ImpactNormal = Vector.Create();
 
-		// Token: 0x040248DC RID: 149724
+		// Token: 0x0401FB92 RID: 129938
 		private readonly VehicleActorComponent ActorComp;
 	}
 }

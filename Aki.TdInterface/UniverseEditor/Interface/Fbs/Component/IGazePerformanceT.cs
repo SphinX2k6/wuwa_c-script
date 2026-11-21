@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052F5 RID: 21237
+	// Token: 0x02005878 RID: 22648
 	public class IGazePerformanceT
 	{
-		// Token: 0x17009BE1 RID: 39905
-		// (get) Token: 0x06022ACE RID: 142030 RVA: 0x004CE562 File Offset: 0x004CC762
-		// (set) Token: 0x06022ACF RID: 142031 RVA: 0x004CE56A File Offset: 0x004CC76A
+		// Token: 0x1700A412 RID: 42002
+		// (get) Token: 0x06024B68 RID: 150376 RVA: 0x0050B08E File Offset: 0x0050928E
+		// (set) Token: 0x06024B69 RID: 150377 RVA: 0x0050B096 File Offset: 0x00509296
 		public float FadeInTime { get; set; }
 
-		// Token: 0x17009BE2 RID: 39906
-		// (get) Token: 0x06022AD0 RID: 142032 RVA: 0x004CE573 File Offset: 0x004CC773
-		// (set) Token: 0x06022AD1 RID: 142033 RVA: 0x004CE57B File Offset: 0x004CC77B
+		// Token: 0x1700A413 RID: 42003
+		// (get) Token: 0x06024B6A RID: 150378 RVA: 0x0050B09F File Offset: 0x0050929F
+		// (set) Token: 0x06024B6B RID: 150379 RVA: 0x0050B0A7 File Offset: 0x005092A7
 		public float StayTime { get; set; }
 
-		// Token: 0x17009BE3 RID: 39907
-		// (get) Token: 0x06022AD2 RID: 142034 RVA: 0x004CE584 File Offset: 0x004CC784
-		// (set) Token: 0x06022AD3 RID: 142035 RVA: 0x004CE58C File Offset: 0x004CC78C
+		// Token: 0x1700A414 RID: 42004
+		// (get) Token: 0x06024B6C RID: 150380 RVA: 0x0050B0B0 File Offset: 0x005092B0
+		// (set) Token: 0x06024B6D RID: 150381 RVA: 0x0050B0B8 File Offset: 0x005092B8
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x17009BE4 RID: 39908
-		// (get) Token: 0x06022AD4 RID: 142036 RVA: 0x004CE595 File Offset: 0x004CC795
-		// (set) Token: 0x06022AD5 RID: 142037 RVA: 0x004CE59D File Offset: 0x004CC79D
+		// Token: 0x1700A415 RID: 42005
+		// (get) Token: 0x06024B6E RID: 150382 RVA: 0x0050B0C1 File Offset: 0x005092C1
+		// (set) Token: 0x06024B6F RID: 150383 RVA: 0x0050B0C9 File Offset: 0x005092C9
 		public bool LockCamera { get; set; }
 
-		// Token: 0x17009BE5 RID: 39909
-		// (get) Token: 0x06022AD6 RID: 142038 RVA: 0x004CE5A6 File Offset: 0x004CC7A6
-		// (set) Token: 0x06022AD7 RID: 142039 RVA: 0x004CE5AE File Offset: 0x004CC7AE
+		// Token: 0x1700A416 RID: 42006
+		// (get) Token: 0x06024B70 RID: 150384 RVA: 0x0050B0D2 File Offset: 0x005092D2
+		// (set) Token: 0x06024B71 RID: 150385 RVA: 0x0050B0DA File Offset: 0x005092DA
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022AD8 RID: 142040 RVA: 0x004CE5B7 File Offset: 0x004CC7B7
+		// Token: 0x06024B72 RID: 150386 RVA: 0x0050B0E3 File Offset: 0x005092E3
 		public IGazePerformanceT()
 		{
 			this.FadeInTime = 0f;

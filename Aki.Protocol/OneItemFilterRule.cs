@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B8C RID: 2956
+	// Token: 0x02000B7C RID: 2940
 	public sealed class OneItemFilterRule : IMessage<OneItemFilterRule>, IMessage, IEquatable<OneItemFilterRule>, IDeepCloneable<OneItemFilterRule>, IBufferMessage
 	{
-		// Token: 0x0601005C RID: 65628 RVA: 0x0025688E File Offset: 0x00254A8E
+		// Token: 0x0600FF58 RID: 65368 RVA: 0x002549BE File Offset: 0x00252BBE
 		[NullableContext(1)]
 		public static OneItemFilterRule Create()
 		{
 			return new OneItemFilterRule();
 		}
 
-		// Token: 0x1700346E RID: 13422
-		// (get) Token: 0x0601005D RID: 65629 RVA: 0x00256895 File Offset: 0x00254A95
+		// Token: 0x17003435 RID: 13365
+		// (get) Token: 0x0600FF59 RID: 65369 RVA: 0x002549C5 File Offset: 0x00252BC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<OneItemFilterRule> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700346F RID: 13423
-		// (get) Token: 0x0601005E RID: 65630 RVA: 0x0025689C File Offset: 0x00254A9C
+		// Token: 0x17003436 RID: 13366
+		// (get) Token: 0x0600FF5A RID: 65370 RVA: 0x002549CC File Offset: 0x00252BCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003470 RID: 13424
-		// (get) Token: 0x0601005F RID: 65631 RVA: 0x0025689F File Offset: 0x00254A9F
+		// Token: 0x17003437 RID: 13367
+		// (get) Token: 0x0600FF5B RID: 65371 RVA: 0x002549CF File Offset: 0x00252BCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010060 RID: 65632 RVA: 0x002568A6 File Offset: 0x00254AA6
+		// Token: 0x0600FF5C RID: 65372 RVA: 0x002549D6 File Offset: 0x00252BD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneItemFilterRule()
 		{
 		}
 
-		// Token: 0x06010061 RID: 65633 RVA: 0x002568B9 File Offset: 0x00254AB9
+		// Token: 0x0600FF5D RID: 65373 RVA: 0x002549E9 File Offset: 0x00252BE9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneItemFilterRule(OneItemFilterRule other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010062 RID: 65634 RVA: 0x002568EF File Offset: 0x00254AEF
+		// Token: 0x0600FF5E RID: 65374 RVA: 0x00254A1F File Offset: 0x00252C1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneItemFilterRule Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new OneItemFilterRule(this);
 		}
 
-		// Token: 0x17003471 RID: 13425
-		// (get) Token: 0x06010063 RID: 65635 RVA: 0x002568F7 File Offset: 0x00254AF7
-		// (set) Token: 0x06010064 RID: 65636 RVA: 0x002568FF File Offset: 0x00254AFF
+		// Token: 0x17003438 RID: 13368
+		// (get) Token: 0x0600FF5F RID: 65375 RVA: 0x00254A27 File Offset: 0x00252C27
+		// (set) Token: 0x0600FF60 RID: 65376 RVA: 0x00254A2F File Offset: 0x00252C2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FilterRuleId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003472 RID: 13426
-		// (get) Token: 0x06010065 RID: 65637 RVA: 0x00256908 File Offset: 0x00254B08
+		// Token: 0x17003439 RID: 13369
+		// (get) Token: 0x0600FF61 RID: 65377 RVA: 0x00254A38 File Offset: 0x00252C38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> IdList
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010066 RID: 65638 RVA: 0x00256910 File Offset: 0x00254B10
+		// Token: 0x0600FF62 RID: 65378 RVA: 0x00254A40 File Offset: 0x00252C40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as OneItemFilterRule);
 		}
 
-		// Token: 0x06010067 RID: 65639 RVA: 0x00256920 File Offset: 0x00254B20
+		// Token: 0x0600FF63 RID: 65379 RVA: 0x00254A50 File Offset: 0x00252C50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(OneItemFilterRule other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FilterRuleId == other.FilterRuleId && this.idList_.Equals(other.idList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010068 RID: 65640 RVA: 0x00256970 File Offset: 0x00254B70
+		// Token: 0x0600FF64 RID: 65380 RVA: 0x00254AA0 File Offset: 0x00252CA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010069 RID: 65641 RVA: 0x002569BD File Offset: 0x00254BBD
+		// Token: 0x0600FF65 RID: 65381 RVA: 0x00254AED File Offset: 0x00252CED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601006A RID: 65642 RVA: 0x002569CA File Offset: 0x00254BCA
+		// Token: 0x0600FF66 RID: 65382 RVA: 0x00254AFA File Offset: 0x00252CFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601006B RID: 65643 RVA: 0x002569D4 File Offset: 0x00254BD4
+		// Token: 0x0600FF67 RID: 65383 RVA: 0x00254B04 File Offset: 0x00252D04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601006C RID: 65644 RVA: 0x00256A24 File Offset: 0x00254C24
+		// Token: 0x0600FF68 RID: 65384 RVA: 0x00254B54 File Offset: 0x00252D54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601006D RID: 65645 RVA: 0x00256A78 File Offset: 0x00254C78
+		// Token: 0x0600FF69 RID: 65385 RVA: 0x00254BA8 File Offset: 0x00252DA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(OneItemFilterRule other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601006E RID: 65646 RVA: 0x00256AC5 File Offset: 0x00254CC5
+		// Token: 0x0600FF6A RID: 65386 RVA: 0x00254BF5 File Offset: 0x00252DF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601006F RID: 65647 RVA: 0x00256AD0 File Offset: 0x00254CD0
+		// Token: 0x0600FF6B RID: 65387 RVA: 0x00254C00 File Offset: 0x00252E00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006626 RID: 26150
+		// Token: 0x04006636 RID: 26166
 		private static readonly MessageParser<OneItemFilterRule> _parser = new MessageParser<OneItemFilterRule>(() => new OneItemFilterRule());
 
-		// Token: 0x04006627 RID: 26151
+		// Token: 0x04006637 RID: 26167
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006628 RID: 26152
+		// Token: 0x04006638 RID: 26168
 		public const int FilterRuleIdFieldNumber = 1;
 
-		// Token: 0x04006629 RID: 26153
+		// Token: 0x04006639 RID: 26169
 		private int filterRuleId_;
 
-		// Token: 0x0400662A RID: 26154
+		// Token: 0x0400663A RID: 26170
 		public const int IdListFieldNumber = 2;
 
-		// Token: 0x0400662B RID: 26155
+		// Token: 0x0400663B RID: 26171
 		private static readonly FieldCodec<int> _repeated_idList_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x0400662C RID: 26156
+		// Token: 0x0400663C RID: 26172
 		private readonly RepeatedField<int> idList_ = new RepeatedField<int>();
 	}
 }

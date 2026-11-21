@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006D2 RID: 1746
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000773 RID: 1907
 	public class ISkyboxDistanceTrigger : ISkyboxTrigger
 	{
-		// Token: 0x06002594 RID: 9620 RVA: 0x000651FC File Offset: 0x000633FC
+		// Token: 0x060028B4 RID: 10420 RVA: 0x0006C26C File Offset: 0x0006A46C
 		private ISkyboxDistanceTrigger_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002595 RID: 9621 RVA: 0x00065234 File Offset: 0x00063434
+		// Token: 0x060028B5 RID: 10421 RVA: 0x0006C2A4 File Offset: 0x0006A4A4
 		public static ISkyboxDistanceTrigger Create([Nullable(2)] ISkyboxDistanceTrigger instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002596 RID: 9622 RVA: 0x00065247 File Offset: 0x00063447
+		// Token: 0x060028B6 RID: 10422 RVA: 0x0006C2B7 File Offset: 0x0006A4B7
 		public static ISkyboxDistanceTrigger CreateFromSetValue([Nullable(2)] ISkyboxDistanceTrigger_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002597 RID: 9623 RVA: 0x0006525A File Offset: 0x0006345A
+		// Token: 0x060028B7 RID: 10423 RVA: 0x0006C2CA File Offset: 0x0006A4CA
 		public new ISkyboxDistanceTrigger_SetValue ToSetValue()
 		{
 			return new ISkyboxDistanceTrigger_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009EE RID: 2542
-		// (get) Token: 0x06002598 RID: 9624 RVA: 0x00065279 File Offset: 0x00063479
-		// (set) Token: 0x06002599 RID: 9625 RVA: 0x000652A4 File Offset: 0x000634A4
+		// Token: 0x17000AAC RID: 2732
+		// (get) Token: 0x060028B8 RID: 10424 RVA: 0x0006C2E9 File Offset: 0x0006A4E9
+		// (set) Token: 0x060028B9 RID: 10425 RVA: 0x0006C314 File Offset: 0x0006A514
 		public override ETriggerMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009EF RID: 2543
-		// (get) Token: 0x0600259A RID: 9626 RVA: 0x000652B2 File Offset: 0x000634B2
-		// (set) Token: 0x0600259B RID: 9627 RVA: 0x000652E1 File Offset: 0x000634E1
+		// Token: 0x17000AAD RID: 2733
+		// (get) Token: 0x060028BA RID: 10426 RVA: 0x0006C322 File Offset: 0x0006A522
+		// (set) Token: 0x060028BB RID: 10427 RVA: 0x0006C351 File Offset: 0x0006A551
 		public virtual float Distance
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019A2 RID: 6562
+		// Token: 0x04001BA1 RID: 7073
 		[Nullable(2)]
 		protected new ISkyboxDistanceTrigger FbInstance;
 
-		// Token: 0x040019A3 RID: 6563
+		// Token: 0x04001BA2 RID: 7074
 		[Nullable(2)]
 		protected new ISkyboxDistanceTrigger_SetValue PocoInterface;
 	}

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007EF RID: 2031
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000892 RID: 2194
 	public class IWoodenOxenAndFlowingHorsesPerformConfig
 	{
-		// Token: 0x06002C23 RID: 11299 RVA: 0x00072D44 File Offset: 0x00070F44
+		// Token: 0x06002F53 RID: 12115 RVA: 0x0007A0A8 File Offset: 0x000782A8
 		private IWoodenOxenAndFlowingHorsesPerformConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C24 RID: 11300 RVA: 0x00072D7C File Offset: 0x00070F7C
+		// Token: 0x06002F54 RID: 12116 RVA: 0x0007A0E0 File Offset: 0x000782E0
 		public static IWoodenOxenAndFlowingHorsesPerformConfig Create([Nullable(2)] IWoodenOxenAndFlowingHorsesPerformConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C25 RID: 11301 RVA: 0x00072D8F File Offset: 0x00070F8F
+		// Token: 0x06002F55 RID: 12117 RVA: 0x0007A0F3 File Offset: 0x000782F3
 		public static IWoodenOxenAndFlowingHorsesPerformConfig CreateFromSetValue([Nullable(2)] IWoodenOxenAndFlowingHorsesPerformConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C26 RID: 11302 RVA: 0x00072DA2 File Offset: 0x00070FA2
+		// Token: 0x06002F56 RID: 12118 RVA: 0x0007A106 File Offset: 0x00078306
 		public IWoodenOxenAndFlowingHorsesPerformConfig_SetValue ToSetValue()
 		{
 			return new IWoodenOxenAndFlowingHorsesPerformConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B8E RID: 2958
-		// (get) Token: 0x06002C27 RID: 11303 RVA: 0x00072DD0 File Offset: 0x00070FD0
-		// (set) Token: 0x06002C28 RID: 11304 RVA: 0x00072E31 File Offset: 0x00071031
+		// Token: 0x17000C51 RID: 3153
+		// (get) Token: 0x06002F57 RID: 12119 RVA: 0x0007A134 File Offset: 0x00078334
+		// (set) Token: 0x06002F58 RID: 12120 RVA: 0x0007A195 File Offset: 0x00078395
 		[Nullable(2)]
 		public virtual VectorInfo Offset
 		{
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B8F RID: 2959
-		// (get) Token: 0x06002C29 RID: 11305 RVA: 0x00072E46 File Offset: 0x00071046
-		// (set) Token: 0x06002C2A RID: 11306 RVA: 0x00072E71 File Offset: 0x00071071
+		// Token: 0x17000C52 RID: 3154
+		// (get) Token: 0x06002F59 RID: 12121 RVA: 0x0007A1AA File Offset: 0x000783AA
+		// (set) Token: 0x06002F5A RID: 12122 RVA: 0x0007A1D5 File Offset: 0x000783D5
 		public virtual string Montage
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B90 RID: 2960
-		// (get) Token: 0x06002C2B RID: 11307 RVA: 0x00072E80 File Offset: 0x00071080
-		// (set) Token: 0x06002C2C RID: 11308 RVA: 0x00072EE1 File Offset: 0x000710E1
+		// Token: 0x17000C53 RID: 3155
+		// (get) Token: 0x06002F5B RID: 12123 RVA: 0x0007A1E4 File Offset: 0x000783E4
+		// (set) Token: 0x06002F5C RID: 12124 RVA: 0x0007A245 File Offset: 0x00078445
 		[Nullable(2)]
 		public virtual VectorInfo RelativeRot
 		{
@@ -151,24 +149,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D44 RID: 7492
+		// Token: 0x04001F50 RID: 8016
 		[Nullable(2)]
 		protected IWoodenOxenAndFlowingHorsesPerformConfig FbInstance;
 
-		// Token: 0x04001D45 RID: 7493
+		// Token: 0x04001F51 RID: 8017
 		[Nullable(2)]
 		protected IWoodenOxenAndFlowingHorsesPerformConfig_SetValue PocoInterface;
 
-		// Token: 0x04001D46 RID: 7494
+		// Token: 0x04001F52 RID: 8018
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04001D47 RID: 7495
+		// Token: 0x04001F53 RID: 8019
 		private bool _OffsetInited;
 
-		// Token: 0x04001D48 RID: 7496
+		// Token: 0x04001F54 RID: 8020
 		private VectorInfo _RelativeRotCache;
 
-		// Token: 0x04001D49 RID: 7497
+		// Token: 0x04001F55 RID: 8021
 		private bool _RelativeRotInited;
 	}
 }

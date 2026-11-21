@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051DD RID: 20957
+	// Token: 0x020041AD RID: 16813
 	public interface ICardAllInDeckComponentData
 	{
-		// Token: 0x170081BA RID: 33210
-		// (get) Token: 0x06035A10 RID: 219664
-		// (set) Token: 0x06035A11 RID: 219665
+		// Token: 0x1700557A RID: 21882
+		// (get) Token: 0x0602A90B RID: 174347
+		// (set) Token: 0x0602A90C RID: 174348
 		bool IsAllInDeck { get; set; }
 
-		// Token: 0x170081BB RID: 33211
-		// (get) Token: 0x06035A12 RID: 219666
-		// (set) Token: 0x06035A13 RID: 219667
+		// Token: 0x1700557B RID: 21883
+		// (get) Token: 0x0602A90D RID: 174349
+		// (set) Token: 0x0602A90E RID: 174350
 		bool ShowComponent { get; set; }
 	}
 }

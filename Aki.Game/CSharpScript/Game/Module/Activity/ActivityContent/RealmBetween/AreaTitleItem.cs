@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006291 RID: 25233
+	// Token: 0x0200520F RID: 21007
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,13 +16,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 	})]
 	public class AreaTitleItem : SyncGridProxyAbstract<RealmBetweenAreaData>
 	{
-		// Token: 0x0603F7DC RID: 260060 RVA: 0x00F59A94 File Offset: 0x00F57C94
+		// Token: 0x0603449D RID: 214173 RVA: 0x00EA09F0 File Offset: 0x00E9EBF0
 		public AreaTitleItem(ActivityRealmBetweenData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F7DD RID: 260061 RVA: 0x00F59AA4 File Offset: 0x00F57CA4
+		// Token: 0x0603449E RID: 214174 RVA: 0x00EA0A00 File Offset: 0x00E9EC00
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F7DE RID: 260062 RVA: 0x00F59B14 File Offset: 0x00F57D14
+		// Token: 0x0603449F RID: 214175 RVA: 0x00EA0A70 File Offset: 0x00E9EC70
 		protected override void OnStart()
 		{
 			this.TitleSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603F7DF RID: 260063 RVA: 0x00F59B28 File Offset: 0x00F57D28
+		// Token: 0x060344A0 RID: 214176 RVA: 0x00EA0A84 File Offset: 0x00E9EC84
 		public override void Refresh(RealmBetweenAreaData areaData)
 		{
 			Area value = AreaConfig.Instance.GetAreaInfo(areaData.AreaId).Value;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.GetItem(3).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603F7E0 RID: 260064 RVA: 0x00F59C44 File Offset: 0x00F57E44
+		// Token: 0x060344A1 RID: 214177 RVA: 0x00EA0BA0 File Offset: 0x00E9EDA0
 		public void PlayUnlockAnim()
 		{
 			LevelSequencePlayer titleSequencePlayer = this.TitleSequencePlayer;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			titleSequencePlayer.PlayLevelSequenceByName("Unlock", true, null, false);
 		}
 
-		// Token: 0x0603F7E1 RID: 260065 RVA: 0x00F59C71 File Offset: 0x00F57E71
+		// Token: 0x060344A2 RID: 214178 RVA: 0x00EA0BCD File Offset: 0x00E9EDCD
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer titleSequencePlayer = this.TitleSequencePlayer;
@@ -91,11 +91,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.TitleSequencePlayer = null;
 		}
 
-		// Token: 0x04021307 RID: 135943
+		// Token: 0x0401BC36 RID: 113718
 		[Nullable(2)]
 		private LevelSequencePlayer TitleSequencePlayer;
 
-		// Token: 0x04021308 RID: 135944
+		// Token: 0x0401BC37 RID: 113719
 		protected ActivityRealmBetweenData ActivityBaseData;
 	}
 }

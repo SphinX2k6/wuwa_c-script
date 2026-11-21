@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006D6 RID: 1750
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000777 RID: 1911
 	public class ISkyboxTrigger
 	{
-		// Token: 0x060025A6 RID: 9638 RVA: 0x000653BC File Offset: 0x000635BC
+		// Token: 0x060028C6 RID: 10438 RVA: 0x0006C42C File Offset: 0x0006A62C
 		private ISkyboxTrigger_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025A7 RID: 9639 RVA: 0x000653F4 File Offset: 0x000635F4
+		// Token: 0x060028C7 RID: 10439 RVA: 0x0006C464 File Offset: 0x0006A664
 		public static ISkyboxTrigger Create([Nullable(2)] ISkyboxTrigger instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025A8 RID: 9640 RVA: 0x00065407 File Offset: 0x00063607
+		// Token: 0x060028C8 RID: 10440 RVA: 0x0006C477 File Offset: 0x0006A677
 		public static ISkyboxTrigger CreateFromSetValue([Nullable(2)] ISkyboxTrigger_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025A9 RID: 9641 RVA: 0x0006541A File Offset: 0x0006361A
+		// Token: 0x060028C9 RID: 10441 RVA: 0x0006C48A File Offset: 0x0006A68A
 		public ISkyboxTrigger_SetValue ToSetValue()
 		{
 			return new ISkyboxTrigger_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009F1 RID: 2545
-		// (get) Token: 0x060025AA RID: 9642 RVA: 0x0006542D File Offset: 0x0006362D
-		// (set) Token: 0x060025AB RID: 9643 RVA: 0x00065458 File Offset: 0x00063658
+		// Token: 0x17000AAF RID: 2735
+		// (get) Token: 0x060028CA RID: 10442 RVA: 0x0006C49D File Offset: 0x0006A69D
+		// (set) Token: 0x060028CB RID: 10443 RVA: 0x0006C4C8 File Offset: 0x0006A6C8
 		public virtual ETriggerMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019A9 RID: 6569
+		// Token: 0x04001BA8 RID: 7080
 		[Nullable(2)]
 		protected ISkyboxTrigger FbInstance;
 
-		// Token: 0x040019AA RID: 6570
+		// Token: 0x04001BA9 RID: 7081
 		[Nullable(2)]
 		protected ISkyboxTrigger_SetValue PocoInterface;
 	}

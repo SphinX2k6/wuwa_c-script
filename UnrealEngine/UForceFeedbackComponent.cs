@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BED RID: 3053
+	// Token: 0x0200020F RID: 527
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.ForceFeedbackComponent")]
 	[UnrealStructLayout(800, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 800)]
 	public class UForceFeedbackComponent : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06009682 RID: 38530 RVA: 0x000D6B35 File Offset: 0x000D4D35
+		// Token: 0x060021CA RID: 8650 RVA: 0x0003186E File Offset: 0x0002FA6E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UForceFeedbackComponent._ClassPtr;
 		}
 
-		// Token: 0x06009683 RID: 38531 RVA: 0x000D6B44 File Offset: 0x000D4D44
+		// Token: 0x060021CB RID: 8651 RVA: 0x0003187C File Offset: 0x0002FA7C
 		public UForceFeedbackComponent() : this(BuiltinUtils.AllocNativeUObject(UForceFeedbackComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06009684 RID: 38532 RVA: 0x000D6B6C File Offset: 0x000D4D6C
+		// Token: 0x060021CC RID: 8652 RVA: 0x000318A4 File Offset: 0x0002FAA4
 		[NullableContext(1)]
 		public UForceFeedbackComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UForceFeedbackComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002419 RID: 9241
-		// (get) Token: 0x06009685 RID: 38533 RVA: 0x000D6B9F File Offset: 0x000D4D9F
-		// (set) Token: 0x06009686 RID: 38534 RVA: 0x000D6BB3 File Offset: 0x000D4DB3
+		// Token: 0x170004C3 RID: 1219
+		// (get) Token: 0x060021CD RID: 8653 RVA: 0x000318D7 File Offset: 0x0002FAD7
+		// (set) Token: 0x060021CE RID: 8654 RVA: 0x000318EB File Offset: 0x0002FAEB
 		public unsafe UForceFeedbackEffect ForceFeedbackEffect
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700241A RID: 9242
-		// (get) Token: 0x06009687 RID: 38535 RVA: 0x000D6BC8 File Offset: 0x000D4DC8
-		// (set) Token: 0x06009688 RID: 38536 RVA: 0x000D6BE1 File Offset: 0x000D4DE1
+		// Token: 0x170004C4 RID: 1220
+		// (get) Token: 0x060021CF RID: 8655 RVA: 0x00031900 File Offset: 0x0002FB00
+		// (set) Token: 0x060021D0 RID: 8656 RVA: 0x00031919 File Offset: 0x0002FB19
 		public unsafe bool bAutoDestroy
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700241B RID: 9243
-		// (get) Token: 0x06009689 RID: 38537 RVA: 0x000D6C11 File Offset: 0x000D4E11
-		// (set) Token: 0x0600968A RID: 38538 RVA: 0x000D6C2A File Offset: 0x000D4E2A
+		// Token: 0x170004C5 RID: 1221
+		// (get) Token: 0x060021D1 RID: 8657 RVA: 0x00031949 File Offset: 0x0002FB49
+		// (set) Token: 0x060021D2 RID: 8658 RVA: 0x00031962 File Offset: 0x0002FB62
 		public unsafe bool bStopWhenOwnerDestroyed
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700241C RID: 9244
-		// (get) Token: 0x0600968B RID: 38539 RVA: 0x000D6C5A File Offset: 0x000D4E5A
-		// (set) Token: 0x0600968C RID: 38540 RVA: 0x000D6C73 File Offset: 0x000D4E73
+		// Token: 0x170004C6 RID: 1222
+		// (get) Token: 0x060021D3 RID: 8659 RVA: 0x00031992 File Offset: 0x0002FB92
+		// (set) Token: 0x060021D4 RID: 8660 RVA: 0x000319AB File Offset: 0x0002FBAB
 		public unsafe bool bLooping
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700241D RID: 9245
-		// (get) Token: 0x0600968D RID: 38541 RVA: 0x000D6CA3 File Offset: 0x000D4EA3
-		// (set) Token: 0x0600968E RID: 38542 RVA: 0x000D6CBC File Offset: 0x000D4EBC
+		// Token: 0x170004C7 RID: 1223
+		// (get) Token: 0x060021D5 RID: 8661 RVA: 0x000319DB File Offset: 0x0002FBDB
+		// (set) Token: 0x060021D6 RID: 8662 RVA: 0x000319F4 File Offset: 0x0002FBF4
 		public unsafe bool bIgnoreTimeDilation
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700241E RID: 9246
-		// (get) Token: 0x0600968F RID: 38543 RVA: 0x000D6CEC File Offset: 0x000D4EEC
-		// (set) Token: 0x06009690 RID: 38544 RVA: 0x000D6D05 File Offset: 0x000D4F05
+		// Token: 0x170004C8 RID: 1224
+		// (get) Token: 0x060021D7 RID: 8663 RVA: 0x00031A24 File Offset: 0x0002FC24
+		// (set) Token: 0x060021D8 RID: 8664 RVA: 0x00031A3D File Offset: 0x0002FC3D
 		public unsafe bool bOverrideAttenuation
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700241F RID: 9247
-		// (get) Token: 0x06009691 RID: 38545 RVA: 0x000D6D35 File Offset: 0x000D4F35
-		// (set) Token: 0x06009692 RID: 38546 RVA: 0x000D6D45 File Offset: 0x000D4F45
+		// Token: 0x170004C9 RID: 1225
+		// (get) Token: 0x060021D9 RID: 8665 RVA: 0x00031A6D File Offset: 0x0002FC6D
+		// (set) Token: 0x060021DA RID: 8666 RVA: 0x00031A7D File Offset: 0x0002FC7D
 		public unsafe float IntensityMultiplier
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002420 RID: 9248
-		// (get) Token: 0x06009693 RID: 38547 RVA: 0x000D6D56 File Offset: 0x000D4F56
-		// (set) Token: 0x06009694 RID: 38548 RVA: 0x000D6D6A File Offset: 0x000D4F6A
+		// Token: 0x170004CA RID: 1226
+		// (get) Token: 0x060021DB RID: 8667 RVA: 0x00031A8E File Offset: 0x0002FC8E
+		// (set) Token: 0x060021DC RID: 8668 RVA: 0x00031AA2 File Offset: 0x0002FCA2
 		public unsafe UForceFeedbackAttenuation AttenuationSettings
 		{
 			get
@@ -150,33 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002421 RID: 9249
-		// (get) Token: 0x06009695 RID: 38549 RVA: 0x000D6D80 File Offset: 0x000D4F80
-		// (set) Token: 0x06009696 RID: 38550 RVA: 0x000D6DB9 File Offset: 0x000D4FB9
-		[Nullable(1)]
-		public FForceFeedbackAttenuationSettings AttenuationOverrides
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FForceFeedbackAttenuationSettings result;
-				if ((result = this._AttenuationOverrides) == null)
-				{
-					result = (this._AttenuationOverrides = new FForceFeedbackAttenuationSettings(base.NativePtr + (IntPtr)UForceFeedbackComponent.__PropertyOffset_AttenuationOverrides, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FForceFeedbackAttenuationSettings.StaticStruct(), base.NativePtr + (IntPtr)UForceFeedbackComponent.__PropertyOffset_AttenuationOverrides, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002422 RID: 9250
-		// (get) Token: 0x06009697 RID: 38551 RVA: 0x000D6DDC File Offset: 0x000D4FDC
-		// (set) Token: 0x06009698 RID: 38552 RVA: 0x000D6E15 File Offset: 0x000D5015
+		// Token: 0x170004CB RID: 1227
+		// (get) Token: 0x060021DD RID: 8669 RVA: 0x00031AB8 File Offset: 0x0002FCB8
+		// (set) Token: 0x060021DE RID: 8670 RVA: 0x00031AF1 File Offset: 0x0002FCF1
 		[Nullable(1)]
 		public FOnForceFeedbackFinished OnForceFeedbackFinished
 		{
@@ -198,136 +174,110 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06009699 RID: 38553 RVA: 0x000D6E36 File Offset: 0x000D5036
+		// Token: 0x060021DF RID: 8671 RVA: 0x00031B12 File Offset: 0x0002FD12
 		public void Stop()
 		{
 			UForceFeedbackComponent.__Stop_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600969A RID: 38554 RVA: 0x000D6E43 File Offset: 0x000D5043
+		// Token: 0x060021E0 RID: 8672 RVA: 0x00031B1F File Offset: 0x0002FD1F
 		public void SetIntensityMultiplier(float NewIntensityMultiplier)
 		{
 			UForceFeedbackComponent.__SetIntensityMultiplier_Internal(base.NativePtr, NewIntensityMultiplier);
 		}
 
-		// Token: 0x0600969B RID: 38555 RVA: 0x000D6E51 File Offset: 0x000D5051
+		// Token: 0x060021E1 RID: 8673 RVA: 0x00031B2D File Offset: 0x0002FD2D
 		public void SetForceFeedbackEffect(UForceFeedbackEffect NewForceFeedbackEffect)
 		{
 			UForceFeedbackComponent.__SetForceFeedbackEffect_Internal(base.NativePtr, (NewForceFeedbackEffect != null) ? NewForceFeedbackEffect.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600969C RID: 38556 RVA: 0x000D6E6E File Offset: 0x000D506E
+		// Token: 0x060021E2 RID: 8674 RVA: 0x00031B4A File Offset: 0x0002FD4A
 		public void Play(float StartTime = 0f)
 		{
 			UForceFeedbackComponent.__Play_Internal(base.NativePtr, StartTime);
 		}
 
-		// Token: 0x0600969D RID: 38557 RVA: 0x000D6E7C File Offset: 0x000D507C
-		public bool BP_GetAttenuationSettingsToApply(ref FForceFeedbackAttenuationSettings OutAttenuationSettings)
-		{
-			return UForceFeedbackComponent.__BP_GetAttenuationSettingsToApply_Internal(base.NativePtr, (OutAttenuationSettings ?? new FForceFeedbackAttenuationSettings()).NativePtr);
-		}
-
-		// Token: 0x0600969E RID: 38558 RVA: 0x000D6E99 File Offset: 0x000D5099
-		public void AdjustAttenuation(in FForceFeedbackAttenuationSettings InAttenuationSettings)
-		{
-			UForceFeedbackComponent.__AdjustAttenuation_Internal(base.NativePtr, (InAttenuationSettings ?? new FForceFeedbackAttenuationSettings()).NativePtr);
-		}
-
-		// Token: 0x0600969F RID: 38559
+		// Token: 0x060021E3 RID: 8675
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Stop_Internal(IntPtr @this);
 
-		// Token: 0x060096A0 RID: 38560
+		// Token: 0x060021E4 RID: 8676
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIntensityMultiplier_Internal(IntPtr @this, float NewIntensityMultiplier);
 
-		// Token: 0x060096A1 RID: 38561
+		// Token: 0x060021E5 RID: 8677
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetForceFeedbackEffect_Internal(IntPtr @this, IntPtr NewForceFeedbackEffect);
 
-		// Token: 0x060096A2 RID: 38562
+		// Token: 0x060021E6 RID: 8678
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Play_Internal(IntPtr @this, float StartTime);
 
-		// Token: 0x060096A3 RID: 38563
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __BP_GetAttenuationSettingsToApply_Internal(IntPtr @this, IntPtr OutAttenuationSettings);
-
-		// Token: 0x060096A4 RID: 38564
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __AdjustAttenuation_Internal(IntPtr @this, IntPtr InAttenuationSettings);
-
-		// Token: 0x060096A5 RID: 38565 RVA: 0x000D6EB6 File Offset: 0x000D50B6
+		// Token: 0x060021E7 RID: 8679 RVA: 0x00031B58 File Offset: 0x0002FD58
 		static UForceFeedbackComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.ForceFeedbackComponent");
 		}
 
-		// Token: 0x060096A6 RID: 38566 RVA: 0x000D6EC4 File Offset: 0x000D50C4
+		// Token: 0x060021E8 RID: 8680 RVA: 0x00031B66 File Offset: 0x0002FD66
 		protected UForceFeedbackComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005471 RID: 21617
+		// Token: 0x04000D36 RID: 3382
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.ForceFeedbackComponent";
 
-		// Token: 0x04005472 RID: 21618
+		// Token: 0x04000D37 RID: 3383
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005473 RID: 21619
+		// Token: 0x04000D38 RID: 3384
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005474 RID: 21620
+		// Token: 0x04000D39 RID: 3385
 		internal static int __PropertyOffset_ForceFeedbackEffect;
 
-		// Token: 0x04005475 RID: 21621
+		// Token: 0x04000D3A RID: 3386
 		internal static int __PropertyOffset_bAutoDestroy;
 
-		// Token: 0x04005476 RID: 21622
+		// Token: 0x04000D3B RID: 3387
 		internal static byte __PropertyMask_bAutoDestroy;
 
-		// Token: 0x04005477 RID: 21623
+		// Token: 0x04000D3C RID: 3388
 		internal static int __PropertyOffset_bStopWhenOwnerDestroyed;
 
-		// Token: 0x04005478 RID: 21624
+		// Token: 0x04000D3D RID: 3389
 		internal static byte __PropertyMask_bStopWhenOwnerDestroyed;
 
-		// Token: 0x04005479 RID: 21625
+		// Token: 0x04000D3E RID: 3390
 		internal static int __PropertyOffset_bLooping;
 
-		// Token: 0x0400547A RID: 21626
+		// Token: 0x04000D3F RID: 3391
 		internal static byte __PropertyMask_bLooping;
 
-		// Token: 0x0400547B RID: 21627
+		// Token: 0x04000D40 RID: 3392
 		internal static int __PropertyOffset_bIgnoreTimeDilation;
 
-		// Token: 0x0400547C RID: 21628
+		// Token: 0x04000D41 RID: 3393
 		internal static byte __PropertyMask_bIgnoreTimeDilation;
 
-		// Token: 0x0400547D RID: 21629
+		// Token: 0x04000D42 RID: 3394
 		internal static int __PropertyOffset_bOverrideAttenuation;
 
-		// Token: 0x0400547E RID: 21630
+		// Token: 0x04000D43 RID: 3395
 		internal static byte __PropertyMask_bOverrideAttenuation;
 
-		// Token: 0x0400547F RID: 21631
+		// Token: 0x04000D44 RID: 3396
 		internal static int __PropertyOffset_IntensityMultiplier;
 
-		// Token: 0x04005480 RID: 21632
+		// Token: 0x04000D45 RID: 3397
 		internal static int __PropertyOffset_AttenuationSettings;
 
-		// Token: 0x04005481 RID: 21633
-		internal static int __PropertyOffset_AttenuationOverrides;
-
-		// Token: 0x04005482 RID: 21634
-		private FForceFeedbackAttenuationSettings _AttenuationOverrides;
-
-		// Token: 0x04005483 RID: 21635
+		// Token: 0x04000D46 RID: 3398
 		internal static int __PropertyOffset_OnForceFeedbackFinished;
 
-		// Token: 0x04005484 RID: 21636
+		// Token: 0x04000D47 RID: 3399
 		private FOnForceFeedbackFinished _OnForceFeedbackFinished;
 	}
 }

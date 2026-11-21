@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000159 RID: 345
+	// Token: 0x0200016C RID: 364
 	[EnumExtensions]
 	public enum ETriggerKey
 	{
-		// Token: 0x04000690 RID: 1680
+		// Token: 0x040006D6 RID: 1750
 		Left,
-		// Token: 0x04000691 RID: 1681
+		// Token: 0x040006D7 RID: 1751
 		Right,
-		// Token: 0x04000692 RID: 1682
+		// Token: 0x040006D8 RID: 1752
 		Jump
 	}
 }

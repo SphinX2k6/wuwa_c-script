@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056D2 RID: 22226
+	// Token: 0x02005CB8 RID: 23736
 	public class IPasserbyNpcSource_UnionUnion
 	{
-		// Token: 0x1700A565 RID: 42341
-		// (get) Token: 0x06025204 RID: 152068 RVA: 0x00520065 File Offset: 0x0051E265
-		// (set) Token: 0x06025205 RID: 152069 RVA: 0x0052006D File Offset: 0x0051E26D
+		// Token: 0x1700AE5A RID: 44634
+		// (get) Token: 0x06027625 RID: 161317 RVA: 0x00564131 File Offset: 0x00562331
+		// (set) Token: 0x06027626 RID: 161318 RVA: 0x00564139 File Offset: 0x00562339
 		public IPasserbyNpcSource_Union Type { get; set; }
 
-		// Token: 0x1700A566 RID: 42342
-		// (get) Token: 0x06025206 RID: 152070 RVA: 0x00520076 File Offset: 0x0051E276
-		// (set) Token: 0x06025207 RID: 152071 RVA: 0x0052007E File Offset: 0x0051E27E
+		// Token: 0x1700AE5B RID: 44635
+		// (get) Token: 0x06027627 RID: 161319 RVA: 0x00564142 File Offset: 0x00562342
+		// (set) Token: 0x06027628 RID: 161320 RVA: 0x0056414A File Offset: 0x0056234A
 		public object Value { get; set; }
 
-		// Token: 0x06025208 RID: 152072 RVA: 0x00520087 File Offset: 0x0051E287
+		// Token: 0x06027629 RID: 161321 RVA: 0x00564153 File Offset: 0x00562353
 		public IPasserbyNpcSource_UnionUnion()
 		{
 			this.Type = IPasserbyNpcSource_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025209 RID: 152073 RVA: 0x0052009D File Offset: 0x0051E29D
+		// Token: 0x0602762A RID: 161322 RVA: 0x00564169 File Offset: 0x00562369
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602520A RID: 152074 RVA: 0x005200AF File Offset: 0x0051E2AF
+		// Token: 0x0602762B RID: 161323 RVA: 0x0056417B File Offset: 0x0056237B
 		public IPasserbyNpcSourceT AsIPasserbyNpcSource()
 		{
 			return this.As<IPasserbyNpcSourceT>();
 		}
 
-		// Token: 0x0602520B RID: 152075 RVA: 0x005200B7 File Offset: 0x0051E2B7
+		// Token: 0x0602762C RID: 161324 RVA: 0x00564183 File Offset: 0x00562383
 		public static IPasserbyNpcSource_UnionUnion FromIPasserbyNpcSource(IPasserbyNpcSourceT _ipasserbynpcsource)
 		{
 			return new IPasserbyNpcSource_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602520C RID: 152076 RVA: 0x005200CC File Offset: 0x0051E2CC
+		// Token: 0x0602762D RID: 161325 RVA: 0x00564198 File Offset: 0x00562398
 		public IPasserbyNpcTemplateSourceT AsIPasserbyNpcTemplateSource()
 		{
 			return this.As<IPasserbyNpcTemplateSourceT>();
 		}
 
-		// Token: 0x0602520D RID: 152077 RVA: 0x005200D4 File Offset: 0x0051E2D4
+		// Token: 0x0602762E RID: 161326 RVA: 0x005641A0 File Offset: 0x005623A0
 		public static IPasserbyNpcSource_UnionUnion FromIPasserbyNpcTemplateSource(IPasserbyNpcTemplateSourceT _ipasserbynpctemplatesource)
 		{
 			return new IPasserbyNpcSource_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602520E RID: 152078 RVA: 0x005200EC File Offset: 0x0051E2EC
+		// Token: 0x0602762F RID: 161327 RVA: 0x005641B8 File Offset: 0x005623B8
 		public static int Pack(FlatBufferBuilder builder, IPasserbyNpcSource_UnionUnion _o)
 		{
 			IPasserbyNpcSource_Union type = _o.Type;

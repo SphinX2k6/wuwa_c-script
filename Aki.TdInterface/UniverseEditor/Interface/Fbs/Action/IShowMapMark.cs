@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070E2 RID: 28898
+	// Token: 0x020078AE RID: 30894
 	public struct IShowMapMark : IFlatbufferObject
 	{
-		// Token: 0x1700D6BD RID: 54973
-		// (get) Token: 0x06033329 RID: 209705 RVA: 0x006E6E30 File Offset: 0x006E5030
+		// Token: 0x1700E2A0 RID: 58016
+		// (get) Token: 0x060365CB RID: 222667 RVA: 0x0074743C File Offset: 0x0074563C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603332A RID: 209706 RVA: 0x006E6E3D File Offset: 0x006E503D
+		// Token: 0x060365CC RID: 222668 RVA: 0x00747449 File Offset: 0x00745649
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603332B RID: 209707 RVA: 0x006E6E44 File Offset: 0x006E5044
+		// Token: 0x060365CD RID: 222669 RVA: 0x00747450 File Offset: 0x00745650
 		public static IShowMapMark GetRootAsIShowMapMark(ByteBuffer _bb)
 		{
 			return IShowMapMark.GetRootAsIShowMapMark(_bb, default(IShowMapMark));
 		}
 
-		// Token: 0x0603332C RID: 209708 RVA: 0x006E6E60 File Offset: 0x006E5060
+		// Token: 0x060365CE RID: 222670 RVA: 0x0074746C File Offset: 0x0074566C
 		public static IShowMapMark GetRootAsIShowMapMark(ByteBuffer _bb, IShowMapMark obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603332D RID: 209709 RVA: 0x006E6E7D File Offset: 0x006E507D
+		// Token: 0x060365CF RID: 222671 RVA: 0x00747489 File Offset: 0x00745689
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603332E RID: 209710 RVA: 0x006E6E8C File Offset: 0x006E508C
+		// Token: 0x060365D0 RID: 222672 RVA: 0x00747498 File Offset: 0x00745698
 		public IShowMapMark __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D6BE RID: 54974
-		// (get) Token: 0x0603332F RID: 209711 RVA: 0x006E6E9C File Offset: 0x006E509C
+		// Token: 0x1700E2A1 RID: 58017
+		// (get) Token: 0x060365D1 RID: 222673 RVA: 0x007474A8 File Offset: 0x007456A8
 		public EMapMarkState Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D6BF RID: 54975
-		// (get) Token: 0x06033330 RID: 209712 RVA: 0x006E6ED8 File Offset: 0x006E50D8
+		// Token: 0x1700E2A2 RID: 58018
+		// (get) Token: 0x060365D2 RID: 222674 RVA: 0x007474E4 File Offset: 0x007456E4
 		public int MarkId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D6C0 RID: 54976
-		// (get) Token: 0x06033331 RID: 209713 RVA: 0x006E6F14 File Offset: 0x006E5114
+		// Token: 0x1700E2A3 RID: 58019
+		// (get) Token: 0x060365D3 RID: 222675 RVA: 0x00747520 File Offset: 0x00745720
 		public bool IsFocusOnFirstShow
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D6C1 RID: 54977
-		// (get) Token: 0x06033332 RID: 209714 RVA: 0x006E6F54 File Offset: 0x006E5154
+		// Token: 0x1700E2A4 RID: 58020
+		// (get) Token: 0x060365D4 RID: 222676 RVA: 0x00747560 File Offset: 0x00745760
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033333 RID: 209715 RVA: 0x006E6F91 File Offset: 0x006E5191
+		// Token: 0x060365D5 RID: 222677 RVA: 0x0074759D File Offset: 0x0074579D
 		public static Offset<IShowMapMark> CreateIShowMapMark(FlatBufferBuilder builder, EMapMarkState Type = EMapMarkState.Show, int MarkId = 0, bool IsFocusOnFirstShow = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowMapMark.EndIShowMapMark(builder);
 		}
 
-		// Token: 0x06033334 RID: 209716 RVA: 0x006E6FBD File Offset: 0x006E51BD
+		// Token: 0x060365D6 RID: 222678 RVA: 0x007475C9 File Offset: 0x007457C9
 		public static void StartIShowMapMark(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06033335 RID: 209717 RVA: 0x006E6FC6 File Offset: 0x006E51C6
+		// Token: 0x060365D7 RID: 222679 RVA: 0x007475D2 File Offset: 0x007457D2
 		public static void AddType(FlatBufferBuilder builder, EMapMarkState type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033336 RID: 209718 RVA: 0x006E6FD1 File Offset: 0x006E51D1
+		// Token: 0x060365D8 RID: 222680 RVA: 0x007475DD File Offset: 0x007457DD
 		public static void AddMarkId(FlatBufferBuilder builder, int markId)
 		{
 			builder.AddInt(1, markId, 0);
 		}
 
-		// Token: 0x06033337 RID: 209719 RVA: 0x006E6FDC File Offset: 0x006E51DC
+		// Token: 0x060365D9 RID: 222681 RVA: 0x007475E8 File Offset: 0x007457E8
 		public static void AddIsFocusOnFirstShow(FlatBufferBuilder builder, bool isFocusOnFirstShow)
 		{
 			builder.AddBool(2, isFocusOnFirstShow, false);
 		}
 
-		// Token: 0x06033338 RID: 209720 RVA: 0x006E6FE7 File Offset: 0x006E51E7
+		// Token: 0x060365DA RID: 222682 RVA: 0x007475F3 File Offset: 0x007457F3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06033339 RID: 209721 RVA: 0x006E6FF2 File Offset: 0x006E51F2
+		// Token: 0x060365DB RID: 222683 RVA: 0x007475FE File Offset: 0x007457FE
 		public static Offset<IShowMapMark> EndIShowMapMark(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowMapMark>(builder.EndTable());
 		}
 
-		// Token: 0x0603333A RID: 209722 RVA: 0x006E7000 File Offset: 0x006E5200
+		// Token: 0x060365DC RID: 222684 RVA: 0x0074760C File Offset: 0x0074580C
 		public IShowMapMarkT UnPack()
 		{
 			IShowMapMarkT showMapMarkT = new IShowMapMarkT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return showMapMarkT;
 		}
 
-		// Token: 0x0603333B RID: 209723 RVA: 0x006E701B File Offset: 0x006E521B
+		// Token: 0x060365DD RID: 222685 RVA: 0x00747627 File Offset: 0x00745827
 		public void UnPackTo(IShowMapMarkT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603333C RID: 209724 RVA: 0x006E7050 File Offset: 0x006E5250
+		// Token: 0x060365DE RID: 222686 RVA: 0x0074765C File Offset: 0x0074585C
 		public static Offset<IShowMapMark> Pack(FlatBufferBuilder builder, IShowMapMarkT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowMapMark.CreateIShowMapMark(builder, _o.Type, _o.MarkId, _o.IsFocusOnFirstShow, _o.NullMask);
 		}
 
-		// Token: 0x04011B5D RID: 72541
+		// Token: 0x04012B4B RID: 76619
 		private Table __p;
 	}
 }

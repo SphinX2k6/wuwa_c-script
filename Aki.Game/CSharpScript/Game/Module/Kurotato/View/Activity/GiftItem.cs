@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x02005787 RID: 22407
+	// Token: 0x0200475E RID: 18270
 	internal class GiftItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06038EAA RID: 233130 RVA: 0x00D86F98 File Offset: 0x00D85198
+		// Token: 0x0602DDBA RID: 187834 RVA: 0x00CD5CF0 File Offset: 0x00CD3EF0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038EAB RID: 233131 RVA: 0x00D87024 File Offset: 0x00D85224
+		// Token: 0x0602DDBB RID: 187835 RVA: 0x00CD5D7C File Offset: 0x00CD3F7C
 		protected override void OnStart()
 		{
 			this.ItemGridGrid = new SmallItemGrid();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ItemGridGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickedGrid));
 		}
 
-		// Token: 0x06038EAC RID: 233132 RVA: 0x00D87094 File Offset: 0x00D85294
+		// Token: 0x0602DDBC RID: 187836 RVA: 0x00CD5DEC File Offset: 0x00CD3FEC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ConfigId = data;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.RefreshGrid(value);
 		}
 
-		// Token: 0x06038EAD RID: 233133 RVA: 0x00D87130 File Offset: 0x00D85330
+		// Token: 0x0602DDBD RID: 187837 RVA: 0x00CD5E88 File Offset: 0x00CD4088
 		private void RefreshGrid(KurotatoScoreAward config)
 		{
 			KurotatoActivityData activityData = KurotatoActivityController.Instance.GetActivityData();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ItemGridGrid.SetLockBlackVisible(lockBlackVisible);
 		}
 
-		// Token: 0x06038EAE RID: 233134 RVA: 0x00D871FC File Offset: 0x00D853FC
+		// Token: 0x0602DDBE RID: 187838 RVA: 0x00CD5F54 File Offset: 0x00CD4154
 		[NullableContext(1)]
 		private void OnClickedGrid(MediumItemGridExtendCallback cb)
 		{
@@ -83,31 +83,31 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 				KurotatoActivityController.Instance.RequestScoreRewardReceive(this.ReceiveCallback);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemGrid.Value.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemGrid.Value.ItemData.ItemId, true, null, false);
 		}
 
-		// Token: 0x0401DD66 RID: 122214
+		// Token: 0x040187FC RID: 100348
 		private int ConfigId;
 
-		// Token: 0x0401DD67 RID: 122215
+		// Token: 0x040187FD RID: 100349
 		[Nullable(2)]
 		private SmallItemGrid ItemGridGrid;
 
-		// Token: 0x0401DD68 RID: 122216
+		// Token: 0x040187FE RID: 100350
 		private TItem? ItemGrid;
 
-		// Token: 0x0401DD69 RID: 122217
+		// Token: 0x040187FF RID: 100351
 		[Nullable(2)]
 		public Action ReceiveCallback;
 
-		// Token: 0x0200B9AA RID: 47530
+		// Token: 0x0200A3C0 RID: 41920
 		private enum EGift
 		{
-			// Token: 0x04038230 RID: 229936
+			// Token: 0x04032C20 RID: 207904
 			SpriteBackground,
-			// Token: 0x04038231 RID: 229937
+			// Token: 0x04032C21 RID: 207905
 			TextNum,
-			// Token: 0x04038232 RID: 229938
+			// Token: 0x04032C22 RID: 207906
 			ItemGrid
 		}
 	}

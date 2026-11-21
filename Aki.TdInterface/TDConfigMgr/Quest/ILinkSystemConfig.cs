@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FF9 RID: 4089
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001125 RID: 4389
 	public class ILinkSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06005AF6 RID: 23286 RVA: 0x000DCB0C File Offset: 0x000DAD0C
+		// Token: 0x060060D6 RID: 24790 RVA: 0x000E974C File Offset: 0x000E794C
 		private ILinkSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AF7 RID: 23287 RVA: 0x000DCB44 File Offset: 0x000DAD44
+		// Token: 0x060060D7 RID: 24791 RVA: 0x000E9784 File Offset: 0x000E7984
 		public static ILinkSystemConfig Create([Nullable(2)] ILinkSystemConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AF8 RID: 23288 RVA: 0x000DCB57 File Offset: 0x000DAD57
+		// Token: 0x060060D8 RID: 24792 RVA: 0x000E9797 File Offset: 0x000E7997
 		public static ILinkSystemConfig CreateFromSetValue([Nullable(2)] ILinkSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AF9 RID: 23289 RVA: 0x000DCB6A File Offset: 0x000DAD6A
+		// Token: 0x060060D9 RID: 24793 RVA: 0x000E97AA File Offset: 0x000E79AA
 		public new ILinkSystemConfig_SetValue ToSetValue()
 		{
 			return new ILinkSystemConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E07 RID: 7687
-		// (get) Token: 0x06005AFA RID: 23290 RVA: 0x000DCB89 File Offset: 0x000DAD89
-		// (set) Token: 0x06005AFB RID: 23291 RVA: 0x000DCBB4 File Offset: 0x000DADB4
+		// Token: 0x17001FB0 RID: 8112
+		// (get) Token: 0x060060DA RID: 24794 RVA: 0x000E97C9 File Offset: 0x000E79C9
+		// (set) Token: 0x060060DB RID: 24795 RVA: 0x000E97F4 File Offset: 0x000E79F4
 		public override EEnableSystemType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E08 RID: 7688
-		// (get) Token: 0x06005AFC RID: 23292 RVA: 0x000DCBC2 File Offset: 0x000DADC2
-		// (set) Token: 0x06005AFD RID: 23293 RVA: 0x000DCBED File Offset: 0x000DADED
+		// Token: 0x17001FB1 RID: 8113
+		// (get) Token: 0x060060DC RID: 24796 RVA: 0x000E9802 File Offset: 0x000E7A02
+		// (set) Token: 0x060060DD RID: 24797 RVA: 0x000E982D File Offset: 0x000E7A2D
 		public virtual int LinkDataId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040036BA RID: 14010
+		// Token: 0x040039F2 RID: 14834
 		[Nullable(2)]
 		protected new ILinkSystemConfig FbInstance;
 
-		// Token: 0x040036BB RID: 14011
+		// Token: 0x040039F3 RID: 14835
 		[Nullable(2)]
 		protected new ILinkSystemConfig_SetValue PocoInterface;
 	}

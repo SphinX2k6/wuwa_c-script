@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200555D RID: 21853
+	// Token: 0x0200452F RID: 17711
 	public enum EMarkRelativeSubType
 	{
-		// Token: 0x0401D48B RID: 119947
+		// Token: 0x04017F14 RID: 98068
 		None,
-		// Token: 0x0401D48C RID: 119948
+		// Token: 0x04017F15 RID: 98069
 		SilentArea,
-		// Token: 0x0401D48D RID: 119949
+		// Token: 0x04017F16 RID: 98070
 		BossSilentArea,
-		// Token: 0x0401D48E RID: 119950
+		// Token: 0x04017F17 RID: 98071
 		LordGym,
-		// Token: 0x0401D48F RID: 119951
+		// Token: 0x04017F18 RID: 98072
 		Dungeon,
-		// Token: 0x0401D490 RID: 119952
+		// Token: 0x04017F19 RID: 98073
 		DarkCoastDelivery,
-		// Token: 0x0401D491 RID: 119953
+		// Token: 0x04017F1A RID: 98074
 		MoraleFlag,
-		// Token: 0x0401D492 RID: 119954
+		// Token: 0x04017F1B RID: 98075
 		FlagChallengeFlag,
-		// Token: 0x0401D493 RID: 119955
+		// Token: 0x04017F1C RID: 98076
 		NewLordGym,
-		// Token: 0x0401D494 RID: 119956
+		// Token: 0x04017F1D RID: 98077
 		NightMare,
-		// Token: 0x0401D495 RID: 119957
+		// Token: 0x04017F1E RID: 98078
 		VisionSettlement,
-		// Token: 0x0401D496 RID: 119958
+		// Token: 0x04017F1F RID: 98079
 		NPCMain,
-		// Token: 0x0401D497 RID: 119959
+		// Token: 0x04017F20 RID: 98080
 		NPCWithSeq,
-		// Token: 0x0401D498 RID: 119960
+		// Token: 0x04017F21 RID: 98081
 		RedNameProCount
 	}
 }

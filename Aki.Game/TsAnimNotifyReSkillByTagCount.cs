@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001CE RID: 462
+// Token: 0x020001D2 RID: 466
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyReSkillByTagCount.TsAnimNotifyReSkillByTagCount_C")]
 public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700049A RID: 1178
-	// (get) Token: 0x06001CD0 RID: 7376 RVA: 0x000922AB File Offset: 0x000904AB
-	// (set) Token: 0x06001CD1 RID: 7377 RVA: 0x000922BF File Offset: 0x000904BF
+	// Token: 0x170004BC RID: 1212
+	// (get) Token: 0x06001D6D RID: 7533 RVA: 0x00098FD3 File Offset: 0x000971D3
+	// (set) Token: 0x06001D6E RID: 7534 RVA: 0x00098FE7 File Offset: 0x000971E7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag 层数Tag
 	{
@@ -29,8 +29,8 @@ public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUO
 		}
 	}
 
-	// Token: 0x1700049B RID: 1179
-	// (get) Token: 0x06001CD2 RID: 7378 RVA: 0x000922D4 File Offset: 0x000904D4
+	// Token: 0x170004BD RID: 1213
+	// (get) Token: 0x06001D6F RID: 7535 RVA: 0x00098FFC File Offset: 0x000971FC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> 子弹数组Tag条件
 	{
@@ -46,9 +46,9 @@ public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUO
 		}
 	}
 
-	// Token: 0x1700049C RID: 1180
-	// (get) Token: 0x06001CD3 RID: 7379 RVA: 0x0009230D File Offset: 0x0009050D
-	// (set) Token: 0x06001CD4 RID: 7380 RVA: 0x00092321 File Offset: 0x00090521
+	// Token: 0x170004BE RID: 1214
+	// (get) Token: 0x06001D70 RID: 7536 RVA: 0x00099035 File Offset: 0x00097235
+	// (set) Token: 0x06001D71 RID: 7537 RVA: 0x00099049 File Offset: 0x00097249
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string 子弹数据名Tag条件
@@ -65,35 +65,31 @@ public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUO
 		}
 	}
 
-	// Token: 0x06001CD5 RID: 7381 RVA: 0x00092338 File Offset: 0x00090538
+	// Token: 0x06001D72 RID: 7538 RVA: 0x00099060 File Offset: 0x00097260
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyReSkillByTagCount) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyReSkillByTagCount.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001CD6 RID: 7382 RVA: 0x000923B3 File Offset: 0x000905B3
+	// Token: 0x06001D73 RID: 7539 RVA: 0x000990F0 File Offset: 0x000972F0
 	protected override string GetNotifyName_Implementation()
 	{
 		return "根据Tag层数添加子弹";
 	}
 
-	// Token: 0x06001CD7 RID: 7383 RVA: 0x000923BC File Offset: 0x000905BC
+	// Token: 0x06001D74 RID: 7540 RVA: 0x000990F8 File Offset: 0x000972F8
 	protected override bool CanCreateBullet(AActor owner, UAnimSequenceBase animation, int index)
 	{
 		FGameplayTag 层数Tag = this.层数Tag;
@@ -129,7 +125,7 @@ public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUO
 		return true;
 	}
 
-	// Token: 0x06001CD8 RID: 7384 RVA: 0x000924A0 File Offset: 0x000906A0
+	// Token: 0x06001D75 RID: 7541 RVA: 0x000991DC File Offset: 0x000973DC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyReSkillByTagCount._ClassPtr == IntPtr.Zero)
@@ -139,44 +135,44 @@ public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUO
 		return TsAnimNotifyReSkillByTagCount._ClassPtr;
 	}
 
-	// Token: 0x06001CD9 RID: 7385 RVA: 0x000924C4 File Offset: 0x000906C4
+	// Token: 0x06001D76 RID: 7542 RVA: 0x00099200 File Offset: 0x00097400
 	public TsAnimNotifyReSkillByTagCount() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyReSkillByTagCount.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001CDA RID: 7386 RVA: 0x000924EC File Offset: 0x000906EC
+	// Token: 0x06001D77 RID: 7543 RVA: 0x00099228 File Offset: 0x00097428
 	public TsAnimNotifyReSkillByTagCount(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyReSkillByTagCount.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001CDB RID: 7387 RVA: 0x0009251F File Offset: 0x0009071F
+	// Token: 0x06001D78 RID: 7544 RVA: 0x0009925B File Offset: 0x0009745B
 	protected TsAnimNotifyReSkillByTagCount(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001CDC RID: 7388 RVA: 0x00092528 File Offset: 0x00090728
+	// Token: 0x06001D79 RID: 7545 RVA: 0x00099264 File Offset: 0x00097464
 	[NullableContext(0)]
 	protected unsafe override void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0400120B RID: 4619
+	// Token: 0x0400124E RID: 4686
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyReSkillByTagCount.TsAnimNotifyReSkillByTagCount_C";
 
-	// Token: 0x0400120C RID: 4620
+	// Token: 0x0400124F RID: 4687
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400120D RID: 4621
+	// Token: 0x04001250 RID: 4688
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400120E RID: 4622
+	// Token: 0x04001251 RID: 4689
 	private static int __PropertyOffset_层数Tag;
 
-	// Token: 0x0400120F RID: 4623
+	// Token: 0x04001252 RID: 4690
 	private static int __PropertyOffset_子弹数组Tag条件;
 
-	// Token: 0x04001210 RID: 4624
+	// Token: 0x04001253 RID: 4691
 	[Nullable(new byte[]
 	{
 		2,
@@ -184,6 +180,6 @@ public class TsAnimNotifyReSkillByTagCount : TsAnimNotifyReSkillEvent, IUnrealUO
 	})]
 	private TArray<string> _子弹数组Tag条件;
 
-	// Token: 0x04001211 RID: 4625
+	// Token: 0x04001254 RID: 4692
 	private static int __PropertyOffset_子弹数据名Tag条件;
 }

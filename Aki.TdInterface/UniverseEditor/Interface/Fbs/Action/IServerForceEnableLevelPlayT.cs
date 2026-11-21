@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F8B RID: 28555
+	// Token: 0x02007751 RID: 30545
 	public class IServerForceEnableLevelPlayT
 	{
-		// Token: 0x1700D419 RID: 54297
-		// (get) Token: 0x0603276C RID: 206700 RVA: 0x006CFDB9 File Offset: 0x006CDFB9
-		// (set) Token: 0x0603276D RID: 206701 RVA: 0x006CFDC1 File Offset: 0x006CDFC1
+		// Token: 0x1700DFE8 RID: 57320
+		// (get) Token: 0x060359BC RID: 219580 RVA: 0x0072F771 File Offset: 0x0072D971
+		// (set) Token: 0x060359BD RID: 219581 RVA: 0x0072F779 File Offset: 0x0072D979
 		public List<IEnableLevelPlayConfigT> Configs { get; set; }
 
-		// Token: 0x0603276E RID: 206702 RVA: 0x006CFDCA File Offset: 0x006CDFCA
+		// Token: 0x060359BE RID: 219582 RVA: 0x0072F782 File Offset: 0x0072D982
 		public IServerForceEnableLevelPlayT()
 		{
 			this.Configs = null;

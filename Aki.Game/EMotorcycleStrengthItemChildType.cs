@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x02001F60 RID: 8032
+// Token: 0x02001422 RID: 5154
 public enum EMotorcycleStrengthItemChildType
 {
-	// Token: 0x040073D3 RID: 29651
+	// Token: 0x040074B4 RID: 29876
 	BarTailSprite,
-	// Token: 0x040073D4 RID: 29652
+	// Token: 0x040074B5 RID: 29877
 	BarSprite,
-	// Token: 0x040073D5 RID: 29653
+	// Token: 0x040074B6 RID: 29878
 	BgSprite,
-	// Token: 0x040073D6 RID: 29654
+	// Token: 0x040074B7 RID: 29879
 	StrengthLineItem,
-	// Token: 0x040073D7 RID: 29655
+	// Token: 0x040074B8 RID: 29880
 	StrengthSingleLineItem,
-	// Token: 0x040073D8 RID: 29656
+	// Token: 0x040074B9 RID: 29881
 	LightItem,
-	// Token: 0x040073D9 RID: 29657
+	// Token: 0x040074BA RID: 29882
 	LockItem,
-	// Token: 0x040073DA RID: 29658
+	// Token: 0x040074BB RID: 29883
 	AnimStart,
-	// Token: 0x040073DB RID: 29659
+	// Token: 0x040074BC RID: 29884
 	AnimClose,
-	// Token: 0x040073DC RID: 29660
+	// Token: 0x040074BD RID: 29885
 	BarNode,
-	// Token: 0x040073DD RID: 29661
+	// Token: 0x040074BE RID: 29886
 	AutoMovingItem
 }

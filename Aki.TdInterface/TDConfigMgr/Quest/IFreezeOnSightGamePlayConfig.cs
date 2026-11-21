@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F9D RID: 3997
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010C7 RID: 4295
 	public class IFreezeOnSightGamePlayConfig : ISpecialGamePlayConfig
 	{
-		// Token: 0x06005910 RID: 22800 RVA: 0x000D9270 File Offset: 0x000D7470
+		// Token: 0x06005EE6 RID: 24294 RVA: 0x000E5D30 File Offset: 0x000E3F30
 		private IFreezeOnSightGamePlayConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005911 RID: 22801 RVA: 0x000D92A8 File Offset: 0x000D74A8
+		// Token: 0x06005EE7 RID: 24295 RVA: 0x000E5D68 File Offset: 0x000E3F68
 		public static IFreezeOnSightGamePlayConfig Create([Nullable(2)] IFreezeOnSightGamePlayConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005912 RID: 22802 RVA: 0x000D92BB File Offset: 0x000D74BB
+		// Token: 0x06005EE8 RID: 24296 RVA: 0x000E5D7B File Offset: 0x000E3F7B
 		public static IFreezeOnSightGamePlayConfig CreateFromSetValue([Nullable(2)] IFreezeOnSightGamePlayConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005913 RID: 22803 RVA: 0x000D92CE File Offset: 0x000D74CE
+		// Token: 0x06005EE9 RID: 24297 RVA: 0x000E5D8E File Offset: 0x000E3F8E
 		public new IFreezeOnSightGamePlayConfig_SetValue ToSetValue()
 		{
 			return new IFreezeOnSightGamePlayConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D9E RID: 7582
-		// (get) Token: 0x06005914 RID: 22804 RVA: 0x000D92E1 File Offset: 0x000D74E1
-		// (set) Token: 0x06005915 RID: 22805 RVA: 0x000D930C File Offset: 0x000D750C
+		// Token: 0x17001F45 RID: 8005
+		// (get) Token: 0x06005EEA RID: 24298 RVA: 0x000E5DA1 File Offset: 0x000E3FA1
+		// (set) Token: 0x06005EEB RID: 24299 RVA: 0x000E5DCC File Offset: 0x000E3FCC
 		public override ESpecialGamePlayConfigType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035C7 RID: 13767
+		// Token: 0x040038F9 RID: 14585
 		[Nullable(2)]
 		protected new IFreezeOnSightGamePlayConfig FbInstance;
 
-		// Token: 0x040035C8 RID: 13768
+		// Token: 0x040038FA RID: 14586
 		[Nullable(2)]
 		protected new IFreezeOnSightGamePlayConfig_SetValue PocoInterface;
 	}

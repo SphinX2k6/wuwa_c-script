@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Core.Fight.Bullet
 {
-	// Token: 0x02004024 RID: 16420
+	// Token: 0x02003284 RID: 12932
 	[UnrealObjectPath("/Game/Aki/Core/Fight/Bullet/BulletCommonDataAsset.BulletCommonDataAsset_C")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 236)]
 	public class BulletCommonDataAsset_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602A1C6 RID: 172486 RVA: 0x009D65A6 File Offset: 0x009D47A6
+		// Token: 0x06020566 RID: 132454 RVA: 0x00943A06 File Offset: 0x00941C06
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BulletCommonDataAsset_C._ClassPtr == IntPtr.Zero)
@@ -22,20 +22,20 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			return BulletCommonDataAsset_C._ClassPtr;
 		}
 
-		// Token: 0x0602A1C7 RID: 172487 RVA: 0x009D65CC File Offset: 0x009D47CC
+		// Token: 0x06020567 RID: 132455 RVA: 0x00943A2C File Offset: 0x00941C2C
 		public BulletCommonDataAsset_C() : this(BuiltinUtils.AllocNativeUObject(BulletCommonDataAsset_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602A1C8 RID: 172488 RVA: 0x009D65F4 File Offset: 0x009D47F4
+		// Token: 0x06020568 RID: 132456 RVA: 0x00943A54 File Offset: 0x00941C54
 		[NullableContext(1)]
 		public BulletCommonDataAsset_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BulletCommonDataAsset_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170066BA RID: 26298
-		// (get) Token: 0x0602A1C9 RID: 172489 RVA: 0x009D6628 File Offset: 0x009D4828
-		// (set) Token: 0x0602A1CA RID: 172490 RVA: 0x009D6661 File Offset: 0x009D4861
+		// Token: 0x17003E7F RID: 15999
+		// (get) Token: 0x06020569 RID: 132457 RVA: 0x00943A88 File Offset: 0x00941C88
+		// (set) Token: 0x0602056A RID: 132458 RVA: 0x00943AC1 File Offset: 0x00941CC1
 		[Nullable(new byte[]
 		{
 			1,
@@ -54,7 +54,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._TakeAim) == null)
 				{
-					result = (this._TakeAim = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_0, this));
+					result = (this._TakeAim = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_TakeAim, this));
 				}
 				return result;
 			}
@@ -69,9 +69,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066BB RID: 26299
-		// (get) Token: 0x0602A1CB RID: 172491 RVA: 0x009D6670 File Offset: 0x009D4870
-		// (set) Token: 0x0602A1CC RID: 172492 RVA: 0x009D66A9 File Offset: 0x009D48A9
+		// Token: 0x17003E80 RID: 16000
+		// (get) Token: 0x0602056B RID: 132459 RVA: 0x00943AD0 File Offset: 0x00941CD0
+		// (set) Token: 0x0602056C RID: 132460 RVA: 0x00943B09 File Offset: 0x00941D09
 		[Nullable(new byte[]
 		{
 			1,
@@ -90,7 +90,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._Obstacles) == null)
 				{
-					result = (this._Obstacles = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_1, this));
+					result = (this._Obstacles = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_Obstacles, this));
 				}
 				return result;
 			}
@@ -105,9 +105,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066BC RID: 26300
-		// (get) Token: 0x0602A1CD RID: 172493 RVA: 0x009D66B8 File Offset: 0x009D48B8
-		// (set) Token: 0x0602A1CE RID: 172494 RVA: 0x009D66F1 File Offset: 0x009D48F1
+		// Token: 0x17003E81 RID: 16001
+		// (get) Token: 0x0602056D RID: 132461 RVA: 0x00943B18 File Offset: 0x00941D18
+		// (set) Token: 0x0602056E RID: 132462 RVA: 0x00943B51 File Offset: 0x00941D51
 		[Nullable(new byte[]
 		{
 			1,
@@ -126,7 +126,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._HitPoint) == null)
 				{
-					result = (this._HitPoint = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_2, this));
+					result = (this._HitPoint = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_HitPoint, this));
 				}
 				return result;
 			}
@@ -141,9 +141,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066BD RID: 26301
-		// (get) Token: 0x0602A1CF RID: 172495 RVA: 0x009D6700 File Offset: 0x009D4900
-		// (set) Token: 0x0602A1D0 RID: 172496 RVA: 0x009D6739 File Offset: 0x009D4939
+		// Token: 0x17003E82 RID: 16002
+		// (get) Token: 0x0602056F RID: 132463 RVA: 0x00943B60 File Offset: 0x00941D60
+		// (set) Token: 0x06020570 RID: 132464 RVA: 0x00943B99 File Offset: 0x00941D99
 		[Nullable(new byte[]
 		{
 			1,
@@ -162,7 +162,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._FastMoveTraceBullet_Type1) == null)
 				{
-					result = (this._FastMoveTraceBullet_Type1 = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_3, this));
+					result = (this._FastMoveTraceBullet_Type1 = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_FastMoveTraceBullet_Type1, this));
 				}
 				return result;
 			}
@@ -177,9 +177,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066BE RID: 26302
-		// (get) Token: 0x0602A1D1 RID: 172497 RVA: 0x009D6748 File Offset: 0x009D4948
-		// (set) Token: 0x0602A1D2 RID: 172498 RVA: 0x009D6781 File Offset: 0x009D4981
+		// Token: 0x17003E83 RID: 16003
+		// (get) Token: 0x06020571 RID: 132465 RVA: 0x00943BA8 File Offset: 0x00941DA8
+		// (set) Token: 0x06020572 RID: 132466 RVA: 0x00943BE1 File Offset: 0x00941DE1
 		[Nullable(new byte[]
 		{
 			1,
@@ -198,7 +198,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._FastMoveTraceBullet_Type2) == null)
 				{
-					result = (this._FastMoveTraceBullet_Type2 = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_4, this));
+					result = (this._FastMoveTraceBullet_Type2 = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_FastMoveTraceBullet_Type2, this));
 				}
 				return result;
 			}
@@ -213,9 +213,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066BF RID: 26303
-		// (get) Token: 0x0602A1D3 RID: 172499 RVA: 0x009D6790 File Offset: 0x009D4990
-		// (set) Token: 0x0602A1D4 RID: 172500 RVA: 0x009D67C9 File Offset: 0x009D49C9
+		// Token: 0x17003E84 RID: 16004
+		// (get) Token: 0x06020573 RID: 132467 RVA: 0x00943BF0 File Offset: 0x00941DF0
+		// (set) Token: 0x06020574 RID: 132468 RVA: 0x00943C29 File Offset: 0x00941E29
 		[Nullable(new byte[]
 		{
 			1,
@@ -234,7 +234,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._FastMoveTraceBullet_Type3) == null)
 				{
-					result = (this._FastMoveTraceBullet_Type3 = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_5, this));
+					result = (this._FastMoveTraceBullet_Type3 = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_FastMoveTraceBullet_Type3, this));
 				}
 				return result;
 			}
@@ -249,9 +249,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066C0 RID: 26304
-		// (get) Token: 0x0602A1D5 RID: 172501 RVA: 0x009D67D8 File Offset: 0x009D49D8
-		// (set) Token: 0x0602A1D6 RID: 172502 RVA: 0x009D6811 File Offset: 0x009D4A11
+		// Token: 0x17003E85 RID: 16005
+		// (get) Token: 0x06020575 RID: 132469 RVA: 0x00943C38 File Offset: 0x00941E38
+		// (set) Token: 0x06020576 RID: 132470 RVA: 0x00943C71 File Offset: 0x00941E71
 		[Nullable(new byte[]
 		{
 			1,
@@ -270,7 +270,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._FastMoveTraceBullet_Type1_Special) == null)
 				{
-					result = (this._FastMoveTraceBullet_Type1_Special = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_6, this));
+					result = (this._FastMoveTraceBullet_Type1_Special = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_FastMoveTraceBullet_Type1_Special, this));
 				}
 				return result;
 			}
@@ -285,9 +285,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066C1 RID: 26305
-		// (get) Token: 0x0602A1D7 RID: 172503 RVA: 0x009D6820 File Offset: 0x009D4A20
-		// (set) Token: 0x0602A1D8 RID: 172504 RVA: 0x009D6859 File Offset: 0x009D4A59
+		// Token: 0x17003E86 RID: 16006
+		// (get) Token: 0x06020577 RID: 132471 RVA: 0x00943C80 File Offset: 0x00941E80
+		// (set) Token: 0x06020578 RID: 132472 RVA: 0x00943CB9 File Offset: 0x00941EB9
 		[Nullable(new byte[]
 		{
 			1,
@@ -306,7 +306,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._FastMoveTraceBullet_Type2_Special) == null)
 				{
-					result = (this._FastMoveTraceBullet_Type2_Special = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_7, this));
+					result = (this._FastMoveTraceBullet_Type2_Special = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_FastMoveTraceBullet_Type2_Special, this));
 				}
 				return result;
 			}
@@ -321,9 +321,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066C2 RID: 26306
-		// (get) Token: 0x0602A1D9 RID: 172505 RVA: 0x009D6868 File Offset: 0x009D4A68
-		// (set) Token: 0x0602A1DA RID: 172506 RVA: 0x009D68A1 File Offset: 0x009D4AA1
+		// Token: 0x17003E87 RID: 16007
+		// (get) Token: 0x06020579 RID: 132473 RVA: 0x00943CC8 File Offset: 0x00941EC8
+		// (set) Token: 0x0602057A RID: 132474 RVA: 0x00943D01 File Offset: 0x00941F01
 		[Nullable(new byte[]
 		{
 			1,
@@ -342,7 +342,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 				TArray<TEnumAsByte<EObjectTypeQuery>> result;
 				if ((result = this._FastMoveTraceBullet_Only_Bullet) == null)
 				{
-					result = (this._FastMoveTraceBullet_Only_Bullet = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_8, this));
+					result = (this._FastMoveTraceBullet_Only_Bullet = new TArray<TEnumAsByte<EObjectTypeQuery>>(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_FastMoveTraceBullet_Only_Bullet, this));
 				}
 				return result;
 			}
@@ -357,70 +357,70 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 			}
 		}
 
-		// Token: 0x170066C3 RID: 26307
-		// (get) Token: 0x0602A1DB RID: 172507 RVA: 0x009D68AF File Offset: 0x009D4AAF
-		// (set) Token: 0x0602A1DC RID: 172508 RVA: 0x009D68BF File Offset: 0x009D4ABF
+		// Token: 0x17003E88 RID: 16008
+		// (get) Token: 0x0602057B RID: 132475 RVA: 0x00943D0F File Offset: 0x00941F0F
+		// (set) Token: 0x0602057C RID: 132476 RVA: 0x00943D1F File Offset: 0x00941F1F
 		public unsafe float OnHitMaterialDelay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_OnHitMaterialDelay);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_OnHitMaterialDelay) = value;
 			}
 		}
 
-		// Token: 0x170066C4 RID: 26308
-		// (get) Token: 0x0602A1DD RID: 172509 RVA: 0x009D68D0 File Offset: 0x009D4AD0
-		// (set) Token: 0x0602A1DE RID: 172510 RVA: 0x009D68E0 File Offset: 0x009D4AE0
+		// Token: 0x17003E89 RID: 16009
+		// (get) Token: 0x0602057D RID: 132477 RVA: 0x00943D30 File Offset: 0x00941F30
+		// (set) Token: 0x0602057E RID: 132478 RVA: 0x00943D40 File Offset: 0x00941F40
 		public unsafe float OnHitMaterialDuration
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_OnHitMaterialDuration);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_OnHitMaterialDuration) = value;
 			}
 		}
 
-		// Token: 0x170066C5 RID: 26309
-		// (get) Token: 0x0602A1DF RID: 172511 RVA: 0x009D68F1 File Offset: 0x009D4AF1
-		// (set) Token: 0x0602A1E0 RID: 172512 RVA: 0x009D6901 File Offset: 0x009D4B01
+		// Token: 0x17003E8A RID: 16010
+		// (get) Token: 0x0602057F RID: 132479 RVA: 0x00943D51 File Offset: 0x00941F51
+		// (set) Token: 0x06020580 RID: 132480 RVA: 0x00943D61 File Offset: 0x00941F61
 		public unsafe float OnHitMaterialCd
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_OnHitMaterialCd);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BulletCommonDataAsset_C.__PropertyOffset_OnHitMaterialCd) = value;
 			}
 		}
 
-		// Token: 0x0602A1E1 RID: 172513 RVA: 0x009D6912 File Offset: 0x009D4B12
+		// Token: 0x06020581 RID: 132481 RVA: 0x00943D72 File Offset: 0x00941F72
 		protected BulletCommonDataAsset_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015B04 RID: 88836
+		// Token: 0x04011751 RID: 71505
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Core/Fight/Bullet/BulletCommonDataAsset.BulletCommonDataAsset_C";
 
-		// Token: 0x04015B05 RID: 88837
+		// Token: 0x04011752 RID: 71506
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015B06 RID: 88838
+		// Token: 0x04011753 RID: 71507
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015B07 RID: 88839
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011754 RID: 71508
+		internal static int __PropertyOffset_TakeAim;
 
-		// Token: 0x04015B08 RID: 88840
+		// Token: 0x04011755 RID: 71509
 		[Nullable(new byte[]
 		{
 			2,
@@ -428,10 +428,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _TakeAim;
 
-		// Token: 0x04015B09 RID: 88841
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011756 RID: 71510
+		internal static int __PropertyOffset_Obstacles;
 
-		// Token: 0x04015B0A RID: 88842
+		// Token: 0x04011757 RID: 71511
 		[Nullable(new byte[]
 		{
 			2,
@@ -439,10 +439,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _Obstacles;
 
-		// Token: 0x04015B0B RID: 88843
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011758 RID: 71512
+		internal static int __PropertyOffset_HitPoint;
 
-		// Token: 0x04015B0C RID: 88844
+		// Token: 0x04011759 RID: 71513
 		[Nullable(new byte[]
 		{
 			2,
@@ -450,10 +450,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _HitPoint;
 
-		// Token: 0x04015B0D RID: 88845
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401175A RID: 71514
+		internal static int __PropertyOffset_FastMoveTraceBullet_Type1;
 
-		// Token: 0x04015B0E RID: 88846
+		// Token: 0x0401175B RID: 71515
 		[Nullable(new byte[]
 		{
 			2,
@@ -461,10 +461,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _FastMoveTraceBullet_Type1;
 
-		// Token: 0x04015B0F RID: 88847
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401175C RID: 71516
+		internal static int __PropertyOffset_FastMoveTraceBullet_Type2;
 
-		// Token: 0x04015B10 RID: 88848
+		// Token: 0x0401175D RID: 71517
 		[Nullable(new byte[]
 		{
 			2,
@@ -472,10 +472,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _FastMoveTraceBullet_Type2;
 
-		// Token: 0x04015B11 RID: 88849
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401175E RID: 71518
+		internal static int __PropertyOffset_FastMoveTraceBullet_Type3;
 
-		// Token: 0x04015B12 RID: 88850
+		// Token: 0x0401175F RID: 71519
 		[Nullable(new byte[]
 		{
 			2,
@@ -483,10 +483,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _FastMoveTraceBullet_Type3;
 
-		// Token: 0x04015B13 RID: 88851
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011760 RID: 71520
+		internal static int __PropertyOffset_FastMoveTraceBullet_Type1_Special;
 
-		// Token: 0x04015B14 RID: 88852
+		// Token: 0x04011761 RID: 71521
 		[Nullable(new byte[]
 		{
 			2,
@@ -494,10 +494,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _FastMoveTraceBullet_Type1_Special;
 
-		// Token: 0x04015B15 RID: 88853
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011762 RID: 71522
+		internal static int __PropertyOffset_FastMoveTraceBullet_Type2_Special;
 
-		// Token: 0x04015B16 RID: 88854
+		// Token: 0x04011763 RID: 71523
 		[Nullable(new byte[]
 		{
 			2,
@@ -505,10 +505,10 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _FastMoveTraceBullet_Type2_Special;
 
-		// Token: 0x04015B17 RID: 88855
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011764 RID: 71524
+		internal static int __PropertyOffset_FastMoveTraceBullet_Only_Bullet;
 
-		// Token: 0x04015B18 RID: 88856
+		// Token: 0x04011765 RID: 71525
 		[Nullable(new byte[]
 		{
 			2,
@@ -516,13 +516,13 @@ namespace AkiClient.Game.Aki.Core.Fight.Bullet
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _FastMoveTraceBullet_Only_Bullet;
 
-		// Token: 0x04015B19 RID: 88857
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011766 RID: 71526
+		internal static int __PropertyOffset_OnHitMaterialDelay;
 
-		// Token: 0x04015B1A RID: 88858
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011767 RID: 71527
+		internal static int __PropertyOffset_OnHitMaterialDuration;
 
-		// Token: 0x04015B1B RID: 88859
-		internal static int __PropertyOffset_11;
+		// Token: 0x04011768 RID: 71528
+		internal static int __PropertyOffset_OnHitMaterialCd;
 	}
 }

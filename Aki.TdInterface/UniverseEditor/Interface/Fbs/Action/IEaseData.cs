@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006624 RID: 26148
+	// Token: 0x02006C95 RID: 27797
 	public struct IEaseData : IFlatbufferObject
 	{
-		// Token: 0x1700C242 RID: 49730
-		// (get) Token: 0x0602D677 RID: 185975 RVA: 0x0063887C File Offset: 0x00636A7C
+		// Token: 0x1700CBE0 RID: 52192
+		// (get) Token: 0x0602FE48 RID: 196168 RVA: 0x006853E4 File Offset: 0x006835E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D678 RID: 185976 RVA: 0x00638889 File Offset: 0x00636A89
+		// Token: 0x0602FE49 RID: 196169 RVA: 0x006853F1 File Offset: 0x006835F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D679 RID: 185977 RVA: 0x00638890 File Offset: 0x00636A90
+		// Token: 0x0602FE4A RID: 196170 RVA: 0x006853F8 File Offset: 0x006835F8
 		public static IEaseData GetRootAsIEaseData(ByteBuffer _bb)
 		{
 			return IEaseData.GetRootAsIEaseData(_bb, default(IEaseData));
 		}
 
-		// Token: 0x0602D67A RID: 185978 RVA: 0x006388AC File Offset: 0x00636AAC
+		// Token: 0x0602FE4B RID: 196171 RVA: 0x00685414 File Offset: 0x00683614
 		public static IEaseData GetRootAsIEaseData(ByteBuffer _bb, IEaseData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D67B RID: 185979 RVA: 0x006388C9 File Offset: 0x00636AC9
+		// Token: 0x0602FE4C RID: 196172 RVA: 0x00685431 File Offset: 0x00683631
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D67C RID: 185980 RVA: 0x006388D8 File Offset: 0x00636AD8
+		// Token: 0x0602FE4D RID: 196173 RVA: 0x00685440 File Offset: 0x00683640
 		public IEaseData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C243 RID: 49731
-		// (get) Token: 0x0602D67D RID: 185981 RVA: 0x006388E8 File Offset: 0x00636AE8
+		// Token: 0x1700CBE1 RID: 52193
+		// (get) Token: 0x0602FE4E RID: 196174 RVA: 0x00685450 File Offset: 0x00683650
 		public EEaseType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C244 RID: 49732
-		// (get) Token: 0x0602D67E RID: 185982 RVA: 0x00638924 File Offset: 0x00636B24
+		// Token: 0x1700CBE2 RID: 52194
+		// (get) Token: 0x0602FE4F RID: 196175 RVA: 0x0068548C File Offset: 0x0068368C
 		public float Duration
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D67F RID: 185983 RVA: 0x00638964 File Offset: 0x00636B64
+		// Token: 0x0602FE50 RID: 196176 RVA: 0x006854CC File Offset: 0x006836CC
 		public static Offset<IEaseData> CreateIEaseData(FlatBufferBuilder builder, EEaseType Type = EEaseType.Linear, float Duration = 0f)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEaseData.EndIEaseData(builder);
 		}
 
-		// Token: 0x0602D680 RID: 185984 RVA: 0x00638981 File Offset: 0x00636B81
+		// Token: 0x0602FE51 RID: 196177 RVA: 0x006854E9 File Offset: 0x006836E9
 		public static void StartIEaseData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602D681 RID: 185985 RVA: 0x0063898A File Offset: 0x00636B8A
+		// Token: 0x0602FE52 RID: 196178 RVA: 0x006854F2 File Offset: 0x006836F2
 		public static void AddType(FlatBufferBuilder builder, EEaseType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D682 RID: 185986 RVA: 0x00638995 File Offset: 0x00636B95
+		// Token: 0x0602FE53 RID: 196179 RVA: 0x006854FD File Offset: 0x006836FD
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(1, duration, 0.0);
 		}
 
-		// Token: 0x0602D683 RID: 185987 RVA: 0x006389A8 File Offset: 0x00636BA8
+		// Token: 0x0602FE54 RID: 196180 RVA: 0x00685510 File Offset: 0x00683710
 		public static Offset<IEaseData> EndIEaseData(FlatBufferBuilder builder)
 		{
 			return new Offset<IEaseData>(builder.EndTable());
 		}
 
-		// Token: 0x0602D684 RID: 185988 RVA: 0x006389B8 File Offset: 0x00636BB8
+		// Token: 0x0602FE55 RID: 196181 RVA: 0x00685520 File Offset: 0x00683720
 		public IEaseDataT UnPack()
 		{
 			IEaseDataT easeDataT = new IEaseDataT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return easeDataT;
 		}
 
-		// Token: 0x0602D685 RID: 185989 RVA: 0x006389D3 File Offset: 0x00636BD3
+		// Token: 0x0602FE56 RID: 196182 RVA: 0x0068553B File Offset: 0x0068373B
 		public void UnPackTo(IEaseDataT _o)
 		{
 			_o.Type = this.Type;
 			_o.Duration = this.Duration;
 		}
 
-		// Token: 0x0602D686 RID: 185990 RVA: 0x006389F0 File Offset: 0x00636BF0
+		// Token: 0x0602FE57 RID: 196183 RVA: 0x00685558 File Offset: 0x00683758
 		public static Offset<IEaseData> Pack(FlatBufferBuilder builder, IEaseDataT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEaseData.CreateIEaseData(builder, _o.Type, _o.Duration);
 		}
 
-		// Token: 0x04010CB4 RID: 68788
+		// Token: 0x04011ACF RID: 72399
 		private Table __p;
 	}
 }

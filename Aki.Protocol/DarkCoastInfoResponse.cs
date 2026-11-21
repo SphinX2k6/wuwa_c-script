@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000396 RID: 918
+	// Token: 0x0200039E RID: 926
 	[NetMessage(EMessageId.DarkCoastInfoResponse)]
 	public sealed class DarkCoastInfoResponse : IMessage<DarkCoastInfoResponse>, IMessage, IEquatable<DarkCoastInfoResponse>, IDeepCloneable<DarkCoastInfoResponse>, IBufferMessage
 	{
-		// Token: 0x06005A8F RID: 23183 RVA: 0x000DC43D File Offset: 0x000DA63D
+		// Token: 0x06005B7C RID: 23420 RVA: 0x000DEAC5 File Offset: 0x000DCCC5
 		[NullableContext(1)]
 		public static DarkCoastInfoResponse Create()
 		{
 			return new DarkCoastInfoResponse();
 		}
 
-		// Token: 0x170010BC RID: 4284
-		// (get) Token: 0x06005A90 RID: 23184 RVA: 0x000DC444 File Offset: 0x000DA644
+		// Token: 0x170010ED RID: 4333
+		// (get) Token: 0x06005B7D RID: 23421 RVA: 0x000DEACC File Offset: 0x000DCCCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010BD RID: 4285
-		// (get) Token: 0x06005A91 RID: 23185 RVA: 0x000DC447 File Offset: 0x000DA647
+		// Token: 0x170010EE RID: 4334
+		// (get) Token: 0x06005B7E RID: 23422 RVA: 0x000DEACF File Offset: 0x000DCCCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005A92 RID: 23186 RVA: 0x000DC44E File Offset: 0x000DA64E
+		// Token: 0x06005B7F RID: 23423 RVA: 0x000DEAD6 File Offset: 0x000DCCD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DarkCoastInfoResponse()
 		{
 		}
 
-		// Token: 0x06005A93 RID: 23187 RVA: 0x000DC46C File Offset: 0x000DA66C
+		// Token: 0x06005B80 RID: 23424 RVA: 0x000DEAF4 File Offset: 0x000DCCF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DarkCoastInfoResponse(DarkCoastInfoResponse other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005A94 RID: 23188 RVA: 0x000DC4E6 File Offset: 0x000DA6E6
+		// Token: 0x06005B81 RID: 23425 RVA: 0x000DEB6E File Offset: 0x000DCD6E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DarkCoastInfoResponse Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new DarkCoastInfoResponse(this);
 		}
 
-		// Token: 0x170010BE RID: 4286
-		// (get) Token: 0x06005A95 RID: 23189 RVA: 0x000DC4EE File Offset: 0x000DA6EE
-		// (set) Token: 0x06005A96 RID: 23190 RVA: 0x000DC4F6 File Offset: 0x000DA6F6
+		// Token: 0x170010EF RID: 4335
+		// (get) Token: 0x06005B82 RID: 23426 RVA: 0x000DEB76 File Offset: 0x000DCD76
+		// (set) Token: 0x06005B83 RID: 23427 RVA: 0x000DEB7E File Offset: 0x000DCD7E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010BF RID: 4287
-		// (get) Token: 0x06005A97 RID: 23191 RVA: 0x000DC4FF File Offset: 0x000DA6FF
-		// (set) Token: 0x06005A98 RID: 23192 RVA: 0x000DC507 File Offset: 0x000DA707
+		// Token: 0x170010F0 RID: 4336
+		// (get) Token: 0x06005B84 RID: 23428 RVA: 0x000DEB87 File Offset: 0x000DCD87
+		// (set) Token: 0x06005B85 RID: 23429 RVA: 0x000DEB8F File Offset: 0x000DCD8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DragonPoolConf DragonPoolConf
@@ -105,8 +105,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010C0 RID: 4288
-		// (get) Token: 0x06005A99 RID: 23193 RVA: 0x000DC510 File Offset: 0x000DA710
+		// Token: 0x170010F1 RID: 4337
+		// (get) Token: 0x06005B86 RID: 23430 RVA: 0x000DEB98 File Offset: 0x000DCD98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> GuardIds
@@ -117,8 +117,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010C1 RID: 4289
-		// (get) Token: 0x06005A9A RID: 23194 RVA: 0x000DC518 File Offset: 0x000DA718
+		// Token: 0x170010F2 RID: 4338
+		// (get) Token: 0x06005B87 RID: 23431 RVA: 0x000DEBA0 File Offset: 0x000DCDA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> TreasureBoxDone
@@ -129,9 +129,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010C2 RID: 4290
-		// (get) Token: 0x06005A9B RID: 23195 RVA: 0x000DC520 File Offset: 0x000DA720
-		// (set) Token: 0x06005A9C RID: 23196 RVA: 0x000DC528 File Offset: 0x000DA728
+		// Token: 0x170010F3 RID: 4339
+		// (get) Token: 0x06005B88 RID: 23432 RVA: 0x000DEBA8 File Offset: 0x000DCDA8
+		// (set) Token: 0x06005B89 RID: 23433 RVA: 0x000DEBB0 File Offset: 0x000DCDB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelGains
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005A9D RID: 23197 RVA: 0x000DC531 File Offset: 0x000DA731
+		// Token: 0x06005B8A RID: 23434 RVA: 0x000DEBB9 File Offset: 0x000DCDB9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DarkCoastInfoResponse);
 		}
 
-		// Token: 0x06005A9E RID: 23198 RVA: 0x000DC540 File Offset: 0x000DA740
+		// Token: 0x06005B8B RID: 23435 RVA: 0x000DEBC8 File Offset: 0x000DCDC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DarkCoastInfoResponse other)
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && object.Equals(this.DragonPoolConf, other.DragonPoolConf) && this.guardIds_.Equals(other.guardIds_) && this.treasureBoxDone_.Equals(other.treasureBoxDone_) && this.LevelGains == other.LevelGains && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005A9F RID: 23199 RVA: 0x000DC5C8 File Offset: 0x000DA7C8
+		// Token: 0x06005B8C RID: 23436 RVA: 0x000DEC50 File Offset: 0x000DCE50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005AA0 RID: 23200 RVA: 0x000DC658 File Offset: 0x000DA858
+		// Token: 0x06005B8D RID: 23437 RVA: 0x000DECE0 File Offset: 0x000DCEE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005AA1 RID: 23201 RVA: 0x000DC665 File Offset: 0x000DA865
+		// Token: 0x06005B8E RID: 23438 RVA: 0x000DECED File Offset: 0x000DCEED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -205,27 +205,27 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005AA2 RID: 23202 RVA: 0x000DC670 File Offset: 0x000DA870
+		// Token: 0x06005B8F RID: 23439 RVA: 0x000DECF8 File Offset: 0x000DCEF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.guardIds_.WriteTo(ref output, DarkCoastInfoResponse._repeated_guardIds_codec);
+			if (this.LevelGains != 0)
+			{
+				output.WriteRawTag(16);
+				output.WriteInt32(this.LevelGains);
+			}
 			if (this.dragonPoolConf_ != null)
 			{
 				output.WriteRawTag(26);
 				output.WriteMessage(this.DragonPoolConf);
 			}
+			this.guardIds_.WriteTo(ref output, DarkCoastInfoResponse._repeated_guardIds_codec);
+			this.treasureBoxDone_.WriteTo(ref output, DarkCoastInfoResponse._repeated_treasureBoxDone_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(120);
 				output.WriteEnum((int)this.ErrorCode);
-			}
-			this.treasureBoxDone_.WriteTo(ref output, DarkCoastInfoResponse._repeated_treasureBoxDone_codec);
-			if (this.LevelGains != 0)
-			{
-				output.WriteRawTag(104);
-				output.WriteInt32(this.LevelGains);
 			}
 			if (this._unknownFields != null)
 			{
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005AA3 RID: 23203 RVA: 0x000DC708 File Offset: 0x000DA908
+		// Token: 0x06005B90 RID: 23440 RVA: 0x000DED90 File Offset: 0x000DCF90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005AA4 RID: 23204 RVA: 0x000DC79C File Offset: 0x000DA99C
+		// Token: 0x06005B91 RID: 23441 RVA: 0x000DEE24 File Offset: 0x000DD024
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DarkCoastInfoResponse other)
@@ -290,7 +290,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005AA5 RID: 23205 RVA: 0x000DC83A File Offset: 0x000DAA3A
+		// Token: 0x06005B92 RID: 23442 RVA: 0x000DEEC2 File Offset: 0x000DD0C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -298,7 +298,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005AA6 RID: 23206 RVA: 0x000DC844 File Offset: 0x000DAA44
+		// Token: 0x06005B93 RID: 23443 RVA: 0x000DEECC File Offset: 0x000DD0CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -310,35 +310,34 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num > 26U)
+				if (num > 32U)
 				{
-					if (num <= 96U)
+					if (num <= 112U)
 					{
-						if (num == 40U)
+						if (num == 34U)
 						{
-							this.ErrorCode = (ErrorCode)input.ReadEnum();
-							continue;
+							goto IL_80;
 						}
-						if (num != 96U)
+						if (num != 112U)
 						{
-							goto IL_3C;
+							goto IL_3D;
 						}
 					}
-					else if (num != 98U)
+					else if (num != 114U)
 					{
-						if (num != 104U)
+						if (num != 120U)
 						{
-							goto IL_3C;
+							goto IL_3D;
 						}
-						this.LevelGains = input.ReadInt32();
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
 					this.treasureBoxDone_.AddEntriesFrom(ref input, DarkCoastInfoResponse._repeated_treasureBoxDone_codec);
 					continue;
 				}
-				if (num == 8U || num == 10U)
+				if (num == 16U)
 				{
-					this.guardIds_.AddEntriesFrom(ref input, DarkCoastInfoResponse._repeated_guardIds_codec);
+					this.LevelGains = input.ReadInt32();
 					continue;
 				}
 				if (num == 26U)
@@ -350,48 +349,55 @@ namespace Aki.Protocol
 					input.ReadMessage(this.DragonPoolConf);
 					continue;
 				}
-				IL_3C:
+				if (num == 32U)
+				{
+					goto IL_80;
+				}
+				IL_3D:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_80:
+				this.guardIds_.AddEntriesFrom(ref input, DarkCoastInfoResponse._repeated_guardIds_codec);
 			}
 		}
 
-		// Token: 0x040035BA RID: 13754
+		// Token: 0x04003656 RID: 13910
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040035BB RID: 13755
-		public const int ErrorCodeFieldNumber = 5;
+		// Token: 0x04003657 RID: 13911
+		public const int ErrorCodeFieldNumber = 15;
 
-		// Token: 0x040035BC RID: 13756
+		// Token: 0x04003658 RID: 13912
 		private ErrorCode errorCode_;
 
-		// Token: 0x040035BD RID: 13757
+		// Token: 0x04003659 RID: 13913
 		public const int DragonPoolConfFieldNumber = 3;
 
-		// Token: 0x040035BE RID: 13758
+		// Token: 0x0400365A RID: 13914
 		private DragonPoolConf dragonPoolConf_;
 
-		// Token: 0x040035BF RID: 13759
-		public const int GuardIdsFieldNumber = 1;
+		// Token: 0x0400365B RID: 13915
+		public const int GuardIdsFieldNumber = 4;
 
-		// Token: 0x040035C0 RID: 13760
-		private static readonly FieldCodec<int> _repeated_guardIds_codec = FieldCodec.ForInt32(10U);
+		// Token: 0x0400365C RID: 13916
+		private static readonly FieldCodec<int> _repeated_guardIds_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x040035C1 RID: 13761
+		// Token: 0x0400365D RID: 13917
 		private readonly RepeatedField<int> guardIds_ = new RepeatedField<int>();
 
-		// Token: 0x040035C2 RID: 13762
-		public const int TreasureBoxDoneFieldNumber = 12;
+		// Token: 0x0400365E RID: 13918
+		public const int TreasureBoxDoneFieldNumber = 14;
 
-		// Token: 0x040035C3 RID: 13763
-		private static readonly FieldCodec<int> _repeated_treasureBoxDone_codec = FieldCodec.ForInt32(98U);
+		// Token: 0x0400365F RID: 13919
+		private static readonly FieldCodec<int> _repeated_treasureBoxDone_codec = FieldCodec.ForInt32(114U);
 
-		// Token: 0x040035C4 RID: 13764
+		// Token: 0x04003660 RID: 13920
 		private readonly RepeatedField<int> treasureBoxDone_ = new RepeatedField<int>();
 
-		// Token: 0x040035C5 RID: 13765
-		public const int LevelGainsFieldNumber = 13;
+		// Token: 0x04003661 RID: 13921
+		public const int LevelGainsFieldNumber = 2;
 
-		// Token: 0x040035C6 RID: 13766
+		// Token: 0x04003662 RID: 13922
 		private int levelGains_;
 	}
 }

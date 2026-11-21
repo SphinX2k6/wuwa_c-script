@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE3 RID: 24291
+	// Token: 0x02004ECA RID: 20170
 	public class TowerItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603DBCE RID: 252878 RVA: 0x00EEB894 File Offset: 0x00EE9A94
+		// Token: 0x06032B69 RID: 207721 RVA: 0x00E3D540 File Offset: 0x00E3B740
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DBCF RID: 252879 RVA: 0x00EEB940 File Offset: 0x00EE9B40
+		// Token: 0x06032B6A RID: 207722 RVA: 0x00E3D5EC File Offset: 0x00E3B7EC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			TowerConfig? towerInfo = TowerClimbConfig.Instance.GetTowerInfo(data);

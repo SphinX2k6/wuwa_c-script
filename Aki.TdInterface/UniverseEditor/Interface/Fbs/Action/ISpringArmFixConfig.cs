@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071A2 RID: 29090
+	// Token: 0x02007977 RID: 31095
 	public struct ISpringArmFixConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D806 RID: 55302
-		// (get) Token: 0x0603392E RID: 211246 RVA: 0x006F2102 File Offset: 0x006F0302
+		// Token: 0x1700E3FD RID: 58365
+		// (get) Token: 0x06036C2C RID: 224300 RVA: 0x007533D0 File Offset: 0x007515D0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603392F RID: 211247 RVA: 0x006F210F File Offset: 0x006F030F
+		// Token: 0x06036C2D RID: 224301 RVA: 0x007533DD File Offset: 0x007515DD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033930 RID: 211248 RVA: 0x006F2118 File Offset: 0x006F0318
+		// Token: 0x06036C2E RID: 224302 RVA: 0x007533E4 File Offset: 0x007515E4
 		public static ISpringArmFixConfig GetRootAsISpringArmFixConfig(ByteBuffer _bb)
 		{
 			return ISpringArmFixConfig.GetRootAsISpringArmFixConfig(_bb, default(ISpringArmFixConfig));
 		}
 
-		// Token: 0x06033931 RID: 211249 RVA: 0x006F2134 File Offset: 0x006F0334
+		// Token: 0x06036C2F RID: 224303 RVA: 0x00753400 File Offset: 0x00751600
 		public static ISpringArmFixConfig GetRootAsISpringArmFixConfig(ByteBuffer _bb, ISpringArmFixConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033932 RID: 211250 RVA: 0x006F2151 File Offset: 0x006F0351
+		// Token: 0x06036C30 RID: 224304 RVA: 0x0075341D File Offset: 0x0075161D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033933 RID: 211251 RVA: 0x006F2160 File Offset: 0x006F0360
+		// Token: 0x06036C31 RID: 224305 RVA: 0x0075342C File Offset: 0x0075162C
 		public ISpringArmFixConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D807 RID: 55303
-		// (get) Token: 0x06033934 RID: 211252 RVA: 0x006F2170 File Offset: 0x006F0370
+		// Token: 0x1700E3FE RID: 58366
+		// (get) Token: 0x06036C32 RID: 224306 RVA: 0x0075343C File Offset: 0x0075163C
 		public bool LeftRightFix
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D808 RID: 55304
-		// (get) Token: 0x06033935 RID: 211253 RVA: 0x006F21B0 File Offset: 0x006F03B0
+		// Token: 0x1700E3FF RID: 58367
+		// (get) Token: 0x06036C33 RID: 224307 RVA: 0x0075347C File Offset: 0x0075167C
 		public bool ForwardBackFix
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D809 RID: 55305
-		// (get) Token: 0x06033936 RID: 211254 RVA: 0x006F21F0 File Offset: 0x006F03F0
+		// Token: 0x1700E400 RID: 58368
+		// (get) Token: 0x06036C34 RID: 224308 RVA: 0x007534BC File Offset: 0x007516BC
 		public bool UpDownFix
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D80A RID: 55306
-		// (get) Token: 0x06033937 RID: 211255 RVA: 0x006F2230 File Offset: 0x006F0430
+		// Token: 0x1700E401 RID: 58369
+		// (get) Token: 0x06036C35 RID: 224309 RVA: 0x007534FC File Offset: 0x007516FC
 		public byte NullMask
 		{
 			get
@@ -95,7 +95,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033938 RID: 211256 RVA: 0x006F226D File Offset: 0x006F046D
+		// Token: 0x06036C36 RID: 224310 RVA: 0x00753539 File Offset: 0x00751739
 		public static Offset<ISpringArmFixConfig> CreateISpringArmFixConfig(FlatBufferBuilder builder, bool LeftRightFix = false, bool ForwardBackFix = false, bool UpDownFix = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -106,43 +106,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISpringArmFixConfig.EndISpringArmFixConfig(builder);
 		}
 
-		// Token: 0x06033939 RID: 211257 RVA: 0x006F2299 File Offset: 0x006F0499
+		// Token: 0x06036C37 RID: 224311 RVA: 0x00753565 File Offset: 0x00751765
 		public static void StartISpringArmFixConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0603393A RID: 211258 RVA: 0x006F22A2 File Offset: 0x006F04A2
+		// Token: 0x06036C38 RID: 224312 RVA: 0x0075356E File Offset: 0x0075176E
 		public static void AddLeftRightFix(FlatBufferBuilder builder, bool leftRightFix)
 		{
 			builder.AddBool(0, leftRightFix, false);
 		}
 
-		// Token: 0x0603393B RID: 211259 RVA: 0x006F22AD File Offset: 0x006F04AD
+		// Token: 0x06036C39 RID: 224313 RVA: 0x00753579 File Offset: 0x00751779
 		public static void AddForwardBackFix(FlatBufferBuilder builder, bool forwardBackFix)
 		{
 			builder.AddBool(1, forwardBackFix, false);
 		}
 
-		// Token: 0x0603393C RID: 211260 RVA: 0x006F22B8 File Offset: 0x006F04B8
+		// Token: 0x06036C3A RID: 224314 RVA: 0x00753584 File Offset: 0x00751784
 		public static void AddUpDownFix(FlatBufferBuilder builder, bool upDownFix)
 		{
 			builder.AddBool(2, upDownFix, false);
 		}
 
-		// Token: 0x0603393D RID: 211261 RVA: 0x006F22C3 File Offset: 0x006F04C3
+		// Token: 0x06036C3B RID: 224315 RVA: 0x0075358F File Offset: 0x0075178F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0603393E RID: 211262 RVA: 0x006F22CE File Offset: 0x006F04CE
+		// Token: 0x06036C3C RID: 224316 RVA: 0x0075359A File Offset: 0x0075179A
 		public static Offset<ISpringArmFixConfig> EndISpringArmFixConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpringArmFixConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603393F RID: 211263 RVA: 0x006F22DC File Offset: 0x006F04DC
+		// Token: 0x06036C3D RID: 224317 RVA: 0x007535A8 File Offset: 0x007517A8
 		public ISpringArmFixConfigT UnPack()
 		{
 			ISpringArmFixConfigT springArmFixConfigT = new ISpringArmFixConfigT();
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return springArmFixConfigT;
 		}
 
-		// Token: 0x06033940 RID: 211264 RVA: 0x006F22F7 File Offset: 0x006F04F7
+		// Token: 0x06036C3E RID: 224318 RVA: 0x007535C3 File Offset: 0x007517C3
 		public void UnPackTo(ISpringArmFixConfigT _o)
 		{
 			_o.LeftRightFix = this.LeftRightFix;
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06033941 RID: 211265 RVA: 0x006F232C File Offset: 0x006F052C
+		// Token: 0x06036C3F RID: 224319 RVA: 0x007535F8 File Offset: 0x007517F8
 		public static Offset<ISpringArmFixConfig> Pack(FlatBufferBuilder builder, ISpringArmFixConfigT _o)
 		{
 			if (_o == null)
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISpringArmFixConfig.CreateISpringArmFixConfig(builder, _o.LeftRightFix, _o.ForwardBackFix, _o.UpDownFix, _o.NullMask);
 		}
 
-		// Token: 0x04011C68 RID: 72808
+		// Token: 0x04012C69 RID: 76905
 		private Table __p;
 	}
 }

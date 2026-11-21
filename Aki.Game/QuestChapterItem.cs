@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200265D RID: 9821
+// Token: 0x02001B48 RID: 6984
 public class QuestChapterItem : UiPanelBase
 {
-	// Token: 0x06014182 RID: 82306 RVA: 0x00510CE5 File Offset: 0x0050EEE5
+	// Token: 0x06011664 RID: 71268 RVA: 0x0051F99D File Offset: 0x0051DB9D
 	[NullableContext(1)]
 	public void Init(UUIItem uiItem, int inChapterId, int inQuestType, List<int> inQuestList, [Nullable(2)] TQuestItemSelectHandle toggleSelectHandle)
 	{
@@ -21,7 +21,7 @@ public class QuestChapterItem : UiPanelBase
 		this.UpdateToggle();
 	}
 
-	// Token: 0x06014183 RID: 82307 RVA: 0x00510D20 File Offset: 0x0050EF20
+	// Token: 0x06011665 RID: 71269 RVA: 0x0051F9D8 File Offset: 0x0051DBD8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -48,7 +48,7 @@ public class QuestChapterItem : UiPanelBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06014184 RID: 82308 RVA: 0x00510E5A File Offset: 0x0050F05A
+	// Token: 0x06011666 RID: 71270 RVA: 0x0051FB12 File Offset: 0x0051DD12
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -59,7 +59,7 @@ public class QuestChapterItem : UiPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06014185 RID: 82309 RVA: 0x00510E70 File Offset: 0x0050F070
+	// Token: 0x06011667 RID: 71271 RVA: 0x0051FB28 File Offset: 0x0051DD28
 	public void OnTick(float delta)
 	{
 		if (this.QuestList != null)
@@ -71,7 +71,7 @@ public class QuestChapterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014186 RID: 82310 RVA: 0x00510ECC File Offset: 0x0050F0CC
+	// Token: 0x06011668 RID: 71272 RVA: 0x0051FB84 File Offset: 0x0051DD84
 	[NullableContext(1)]
 	public void UpdateItem(int inChapterId, int inQuestType, List<int> inQuestList)
 	{
@@ -111,7 +111,7 @@ public class QuestChapterItem : UiPanelBase
 		this.RefreshChapterItem();
 	}
 
-	// Token: 0x06014187 RID: 82311 RVA: 0x00511068 File Offset: 0x0050F268
+	// Token: 0x06011669 RID: 71273 RVA: 0x0051FD20 File Offset: 0x0051DF20
 	[NullableContext(2)]
 	public QuestItem FindByQuestId(int questId)
 	{
@@ -129,7 +129,7 @@ public class QuestChapterItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x06014188 RID: 82312 RVA: 0x005110D0 File Offset: 0x0050F2D0
+	// Token: 0x0601166A RID: 71274 RVA: 0x0051FD88 File Offset: 0x0051DF88
 	private void RefreshChapterItem()
 	{
 		QuestChapter value = QuestNewConfig.Instance.GetChapterConfig(this.ChapterId).Value;
@@ -144,7 +144,7 @@ public class QuestChapterItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x06014189 RID: 82313 RVA: 0x00511161 File Offset: 0x0050F361
+	// Token: 0x0601166B RID: 71275 RVA: 0x0051FE19 File Offset: 0x0051E019
 	private void UpdateToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -152,7 +152,7 @@ public class QuestChapterItem : UiPanelBase
 		extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x0601418A RID: 82314 RVA: 0x0051118B File Offset: 0x0050F38B
+	// Token: 0x0601166C RID: 71276 RVA: 0x0051FE43 File Offset: 0x0051E043
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -163,7 +163,7 @@ public class QuestChapterItem : UiPanelBase
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x0601418B RID: 82315 RVA: 0x005111AC File Offset: 0x0050F3AC
+	// Token: 0x0601166D RID: 71277 RVA: 0x0051FE64 File Offset: 0x0051E064
 	public void SetSelected(bool isSelected)
 	{
 		if (isSelected)
@@ -178,7 +178,7 @@ public class QuestChapterItem : UiPanelBase
 		sprite.SetUIActive(isSelected);
 	}
 
-	// Token: 0x0400977F RID: 38783
+	// Token: 0x040098D7 RID: 39127
 	[Nullable(new byte[]
 	{
 		2,
@@ -186,38 +186,38 @@ public class QuestChapterItem : UiPanelBase
 	})]
 	public List<QuestItem> QuestList;
 
-	// Token: 0x04009780 RID: 38784
+	// Token: 0x040098D8 RID: 39128
 	private int ChapterId;
 
-	// Token: 0x04009781 RID: 38785
+	// Token: 0x040098D9 RID: 39129
 	[Nullable(2)]
 	private TQuestItemSelectHandle ToggleSelectHandle;
 
-	// Token: 0x02008C98 RID: 35992
+	// Token: 0x02007E21 RID: 32289
 	private class EComponents
 	{
-		// Token: 0x0402DA18 RID: 186904
+		// Token: 0x04028D2F RID: 167215
 		public const int TxtTitle = 0;
 
-		// Token: 0x0402DA19 RID: 186905
+		// Token: 0x04028D30 RID: 167216
 		public const int TxtChapter = 1;
 
-		// Token: 0x0402DA1A RID: 186906
+		// Token: 0x04028D31 RID: 167217
 		public const int UiItemQuestPrefab = 2;
 
-		// Token: 0x0402DA1B RID: 186907
+		// Token: 0x04028D32 RID: 167218
 		public const int UiQuestParent = 3;
 
-		// Token: 0x0402DA1C RID: 186908
+		// Token: 0x04028D33 RID: 167219
 		public const int ToggleItem = 4;
 
-		// Token: 0x0402DA1D RID: 186909
+		// Token: 0x04028D34 RID: 167220
 		public const int TitleBg = 5;
 
-		// Token: 0x0402DA1E RID: 186910
+		// Token: 0x04028D35 RID: 167221
 		public const int SelectOutline = 6;
 
-		// Token: 0x0402DA1F RID: 186911
+		// Token: 0x04028D36 RID: 167222
 		public const int TextureLine = 7;
 	}
 }

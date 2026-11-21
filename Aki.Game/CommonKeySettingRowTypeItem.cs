@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200202F RID: 8239
+// Token: 0x02001502 RID: 5378
 public class CommonKeySettingRowTypeItem : UiPanelBase
 {
-	// Token: 0x060102C4 RID: 66244 RVA: 0x003F0730 File Offset: 0x003EE930
+	// Token: 0x0600D72C RID: 55084 RVA: 0x003FCD28 File Offset: 0x003FAF28
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class CommonKeySettingRowTypeItem : UiPanelBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x060102C5 RID: 66245 RVA: 0x003F07C8 File Offset: 0x003EE9C8
+	// Token: 0x0600D72D RID: 55085 RVA: 0x003FCDC0 File Offset: 0x003FAFC0
 	[NullableContext(1)]
 	public void Refresh(KeySettingRowData keySettingRowData)
 	{
@@ -66,7 +66,7 @@ public class CommonKeySettingRowTypeItem : UiPanelBase
 		base.GetButton(2).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x060102C6 RID: 66246 RVA: 0x003F089F File Offset: 0x003EEA9F
+	// Token: 0x0600D72E RID: 55086 RVA: 0x003FCE97 File Offset: 0x003FB097
 	private void OnClickHelpBtn()
 	{
 		Action helpBtnCallBack = this.HelpBtnCallBack;
@@ -77,20 +77,20 @@ public class CommonKeySettingRowTypeItem : UiPanelBase
 		helpBtnCallBack();
 	}
 
-	// Token: 0x04007788 RID: 30600
+	// Token: 0x04007871 RID: 30833
 	[Nullable(2)]
 	private Action HelpBtnCallBack;
 
-	// Token: 0x0200862C RID: 34348
+	// Token: 0x020077B3 RID: 30643
 	private static class EChildType
 	{
-		// Token: 0x0402BA94 RID: 178836
+		// Token: 0x04026DA3 RID: 159139
 		public const int TypeSprite = 0;
 
-		// Token: 0x0402BA95 RID: 178837
+		// Token: 0x04026DA4 RID: 159140
 		public const int TypeNameText = 1;
 
-		// Token: 0x0402BA96 RID: 178838
+		// Token: 0x04026DA5 RID: 159141
 		public const int HelpBtn = 2;
 	}
 }

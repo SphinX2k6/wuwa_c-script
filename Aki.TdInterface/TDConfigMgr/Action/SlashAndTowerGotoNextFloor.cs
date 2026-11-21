@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200220D RID: 8717
+	// Token: 0x02002478 RID: 9336
 	public class SlashAndTowerGotoNextFloor : ActionParams
 	{
-		// Token: 0x0600BF64 RID: 48996 RVA: 0x001B8086 File Offset: 0x001B6286
-		[NullableContext(1)]
+		// Token: 0x0600CB20 RID: 52000 RVA: 0x001CF712 File Offset: 0x001CD912
 		public static SlashAndTowerGotoNextFloor Create([Nullable(2)] SlashAndTowerGotoNextFloor instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400721D RID: 29213
+		// Token: 0x04007866 RID: 30822
 		[Nullable(2)]
 		protected new SlashAndTowerGotoNextFloor FbInstance;
 	}

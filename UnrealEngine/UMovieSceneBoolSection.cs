@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020023DA RID: 9178
+	// Token: 0x0200077C RID: 1916
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneBoolSection")]
-	[UnrealStructLayout(464, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 464)]
+	[UnrealStructLayout(480, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 480)]
 	public class UMovieSceneBoolSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022787 RID: 141191 RVA: 0x0032FAA2 File Offset: 0x0032DCA2
+		// Token: 0x0600A599 RID: 42393 RVA: 0x000F4985 File Offset: 0x000F2B85
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneBoolSection._ClassPtr;
 		}
 
-		// Token: 0x06022788 RID: 141192 RVA: 0x0032FAB0 File Offset: 0x0032DCB0
+		// Token: 0x0600A59A RID: 42394 RVA: 0x000F4994 File Offset: 0x000F2B94
 		public UMovieSceneBoolSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneBoolSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022789 RID: 141193 RVA: 0x0032FAD8 File Offset: 0x0032DCD8
+		// Token: 0x0600A59B RID: 42395 RVA: 0x000F49BC File Offset: 0x000F2BBC
 		public UMovieSceneBoolSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneBoolSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170084C6 RID: 33990
-		// (get) Token: 0x0602278A RID: 141194 RVA: 0x0032FB0B File Offset: 0x0032DD0B
-		// (set) Token: 0x0602278B RID: 141195 RVA: 0x0032FB1B File Offset: 0x0032DD1B
+		// Token: 0x17001EB9 RID: 7865
+		// (get) Token: 0x0600A59C RID: 42396 RVA: 0x000F49EF File Offset: 0x000F2BEF
+		// (set) Token: 0x0600A59D RID: 42397 RVA: 0x000F49FF File Offset: 0x000F2BFF
 		public unsafe bool DefaultValue_DEPRECATED
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170084C7 RID: 33991
-		// (get) Token: 0x0602278C RID: 141196 RVA: 0x0032FB2C File Offset: 0x0032DD2C
-		// (set) Token: 0x0602278D RID: 141197 RVA: 0x0032FB65 File Offset: 0x0032DD65
+		// Token: 0x17001EBA RID: 7866
+		// (get) Token: 0x0600A59E RID: 42398 RVA: 0x000F4A10 File Offset: 0x000F2C10
+		// (set) Token: 0x0600A59F RID: 42399 RVA: 0x000F4A49 File Offset: 0x000F2C49
 		public FMovieSceneBoolChannel BoolCurve
 		{
 			get
@@ -65,33 +65,33 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602278E RID: 141198 RVA: 0x0032FB86 File Offset: 0x0032DD86
+		// Token: 0x0600A5A0 RID: 42400 RVA: 0x000F4A6A File Offset: 0x000F2C6A
 		static UMovieSceneBoolSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneBoolSection");
 		}
 
-		// Token: 0x0602278F RID: 141199 RVA: 0x0032FB94 File Offset: 0x0032DD94
+		// Token: 0x0600A5A1 RID: 42401 RVA: 0x000F4A78 File Offset: 0x000F2C78
 		protected UMovieSceneBoolSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040126C9 RID: 75465
+		// Token: 0x040046E1 RID: 18145
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneBoolSection";
 
-		// Token: 0x040126CA RID: 75466
+		// Token: 0x040046E2 RID: 18146
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040126CB RID: 75467
+		// Token: 0x040046E3 RID: 18147
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040126CC RID: 75468
+		// Token: 0x040046E4 RID: 18148
 		internal static int __PropertyOffset_DefaultValue_DEPRECATED;
 
-		// Token: 0x040126CD RID: 75469
+		// Token: 0x040046E5 RID: 18149
 		internal static int __PropertyOffset_BoolCurve;
 
-		// Token: 0x040126CE RID: 75470
+		// Token: 0x040046E6 RID: 18150
 		[Nullable(2)]
 		private FMovieSceneBoolChannel _BoolCurve;
 	}

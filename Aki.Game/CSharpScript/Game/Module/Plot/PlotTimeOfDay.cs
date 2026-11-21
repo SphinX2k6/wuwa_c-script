@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005007 RID: 20487
+	// Token: 0x02003FD1 RID: 16337
 	public class PlotTimeOfDay
 	{
-		// Token: 0x060346E1 RID: 214753 RVA: 0x00C58874 File Offset: 0x00C56A74
+		// Token: 0x06029584 RID: 169348 RVA: 0x00BA3D74 File Offset: 0x00BA1F74
 		public void OnPlotStart(bool pauseTime)
 		{
 			if (this.IsPauseConfig)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.CachePrePlotTime = (int)TimeOfDayModel.Instance.GameTime.Second;
 		}
 
-		// Token: 0x060346E2 RID: 214754 RVA: 0x00C588E5 File Offset: 0x00C56AE5
+		// Token: 0x06029585 RID: 169349 RVA: 0x00BA3DE5 File Offset: 0x00BA1FE5
 		public void OnSeqStart()
 		{
 			this.StopTween();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsInherit = false;
 		}
 
-		// Token: 0x060346E3 RID: 214755 RVA: 0x00C5890C File Offset: 0x00C56B0C
+		// Token: 0x06029586 RID: 169350 RVA: 0x00BA3E0C File Offset: 0x00BA200C
 		public void OnSeqEnd()
 		{
 			this.StopTween();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.CachePreSeqTime = 0;
 		}
 
-		// Token: 0x060346E4 RID: 214756 RVA: 0x00C5898C File Offset: 0x00C56B8C
+		// Token: 0x06029587 RID: 169351 RVA: 0x00BA3E8C File Offset: 0x00BA208C
 		public void OnPlotEnd()
 		{
 			if (!this.IsPauseConfig)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsPauseInPlot = false;
 		}
 
-		// Token: 0x060346E5 RID: 214757 RVA: 0x00C58A20 File Offset: 0x00C56C20
+		// Token: 0x06029588 RID: 169352 RVA: 0x00BA3F20 File Offset: 0x00BA2120
 		public void PauseTime()
 		{
 			if (this.IsPauseInPlot)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Plot
 			Log.Instance.Info(ELogModule.TimeOfDay, ELogAuthor.FZX, "[TimeRunLockState] 剧情行为锁定时间", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060346E6 RID: 214758 RVA: 0x00C58A68 File Offset: 0x00C56C68
+		// Token: 0x06029589 RID: 169353 RVA: 0x00BA3F68 File Offset: 0x00BA2168
 		public void ResumeTime()
 		{
 			if (!this.IsPauseInPlot)
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.Plot
 			this.IsPauseInPlot = false;
 		}
 
-		// Token: 0x060346E7 RID: 214759 RVA: 0x00C58AAD File Offset: 0x00C56CAD
+		// Token: 0x0602958A RID: 169354 RVA: 0x00BA3FAD File Offset: 0x00BA21AD
 		public void SetTime(int second)
 		{
 			TimeOfDayController.Instance.AdjustTime((double)second, SceneDateUpdateReason.LevelPlayAuto, 0U, true);
 		}
 
-		// Token: 0x060346E8 RID: 214760 RVA: 0x00C58AC0 File Offset: 0x00C56CC0
+		// Token: 0x0602958B RID: 169355 RVA: 0x00BA3FC0 File Offset: 0x00BA21C0
 		public void SetTimeDuration(bool isInherit, int startSecond, int endSecond, int tweenSecond)
 		{
 			this.StopTween();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot
 			}, (float)(tweenSecond * TimeUtil.Instance.InverseMillisecond), null, null, true, 1f);
 		}
 
-		// Token: 0x060346E9 RID: 214761 RVA: 0x00C58BCB File Offset: 0x00C56DCB
+		// Token: 0x0602958C RID: 169356 RVA: 0x00BA40CB File Offset: 0x00BA22CB
 		private void StopTween()
 		{
 			if (this.TimerId != null)
@@ -160,25 +160,25 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BED7 RID: 114391
+		// Token: 0x040168C0 RID: 92352
 		private bool IsPauseInPlot;
 
-		// Token: 0x0401BED8 RID: 114392
+		// Token: 0x040168C1 RID: 92353
 		private bool IsPauseConfig;
 
-		// Token: 0x0401BED9 RID: 114393
+		// Token: 0x040168C2 RID: 92354
 		private bool IsInherit;
 
-		// Token: 0x0401BEDA RID: 114394
+		// Token: 0x040168C3 RID: 92355
 		private int CachePrePlotTime;
 
-		// Token: 0x0401BEDB RID: 114395
+		// Token: 0x040168C4 RID: 92356
 		private int CachePreSeqTime;
 
-		// Token: 0x0401BEDC RID: 114396
+		// Token: 0x040168C5 RID: 92357
 		private bool NeedResetTime;
 
-		// Token: 0x0401BEDD RID: 114397
+		// Token: 0x040168C6 RID: 92358
 		[Nullable(2)]
 		private TimerHandle TimerId;
 	}

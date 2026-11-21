@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005897 RID: 22679
+	// Token: 0x02005EA4 RID: 24228
 	public struct IScaleUpSpiritPerformConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A9B9 RID: 43449
-		// (get) Token: 0x060263BE RID: 156606 RVA: 0x005452FA File Offset: 0x005434FA
+		// Token: 0x1700B2E9 RID: 45801
+		// (get) Token: 0x06028920 RID: 166176 RVA: 0x0058BE46 File Offset: 0x0058A046
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060263BF RID: 156607 RVA: 0x00545307 File Offset: 0x00543507
+		// Token: 0x06028921 RID: 166177 RVA: 0x0058BE53 File Offset: 0x0058A053
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060263C0 RID: 156608 RVA: 0x00545310 File Offset: 0x00543510
+		// Token: 0x06028922 RID: 166178 RVA: 0x0058BE5C File Offset: 0x0058A05C
 		public static IScaleUpSpiritPerformConfig GetRootAsIScaleUpSpiritPerformConfig(ByteBuffer _bb)
 		{
 			return IScaleUpSpiritPerformConfig.GetRootAsIScaleUpSpiritPerformConfig(_bb, default(IScaleUpSpiritPerformConfig));
 		}
 
-		// Token: 0x060263C1 RID: 156609 RVA: 0x0054532C File Offset: 0x0054352C
+		// Token: 0x06028923 RID: 166179 RVA: 0x0058BE78 File Offset: 0x0058A078
 		public static IScaleUpSpiritPerformConfig GetRootAsIScaleUpSpiritPerformConfig(ByteBuffer _bb, IScaleUpSpiritPerformConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060263C2 RID: 156610 RVA: 0x00545349 File Offset: 0x00543549
+		// Token: 0x06028924 RID: 166180 RVA: 0x0058BE95 File Offset: 0x0058A095
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060263C3 RID: 156611 RVA: 0x00545358 File Offset: 0x00543558
+		// Token: 0x06028925 RID: 166181 RVA: 0x0058BEA4 File Offset: 0x0058A0A4
 		public IScaleUpSpiritPerformConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A9BA RID: 43450
-		// (get) Token: 0x060263C4 RID: 156612 RVA: 0x00545368 File Offset: 0x00543568
+		// Token: 0x1700B2EA RID: 45802
+		// (get) Token: 0x06028926 RID: 166182 RVA: 0x0058BEB4 File Offset: 0x0058A0B4
 		public bool IsInitHide
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A9BB RID: 43451
-		// (get) Token: 0x060263C5 RID: 156613 RVA: 0x005453A8 File Offset: 0x005435A8
+		// Token: 0x1700B2EB RID: 45803
+		// (get) Token: 0x06028927 RID: 166183 RVA: 0x0058BEF4 File Offset: 0x0058A0F4
 		public string AppearEffectDa
 		{
 			get
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060263C6 RID: 156614 RVA: 0x005453DF File Offset: 0x005435DF
+		// Token: 0x06028928 RID: 166184 RVA: 0x0058BF2B File Offset: 0x0058A12B
 		public Span<byte> GetAppearEffectDaBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060263C7 RID: 156615 RVA: 0x005453EE File Offset: 0x005435EE
+		// Token: 0x06028929 RID: 166185 RVA: 0x0058BF3A File Offset: 0x0058A13A
 		public byte[] GetAppearEffectDaArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700A9BC RID: 43452
-		// (get) Token: 0x060263C8 RID: 156616 RVA: 0x005453FC File Offset: 0x005435FC
+		// Token: 0x1700B2EC RID: 45804
+		// (get) Token: 0x0602892A RID: 166186 RVA: 0x0058BF48 File Offset: 0x0058A148
 		public string ScaleUpEffectDa
 		{
 			get
@@ -100,20 +100,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060263C9 RID: 156617 RVA: 0x00545433 File Offset: 0x00543633
+		// Token: 0x0602892B RID: 166187 RVA: 0x0058BF7F File Offset: 0x0058A17F
 		public Span<byte> GetScaleUpEffectDaBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060263CA RID: 156618 RVA: 0x00545442 File Offset: 0x00543642
+		// Token: 0x0602892C RID: 166188 RVA: 0x0058BF8E File Offset: 0x0058A18E
 		public byte[] GetScaleUpEffectDaArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700A9BD RID: 43453
-		// (get) Token: 0x060263CB RID: 156619 RVA: 0x00545450 File Offset: 0x00543650
+		// Token: 0x1700B2ED RID: 45805
+		// (get) Token: 0x0602892D RID: 166189 RVA: 0x0058BF9C File Offset: 0x0058A19C
 		public int ScaleUpPerformTag
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A9BE RID: 43454
-		// (get) Token: 0x060263CC RID: 156620 RVA: 0x00545490 File Offset: 0x00543690
+		// Token: 0x1700B2EE RID: 45806
+		// (get) Token: 0x0602892E RID: 166190 RVA: 0x0058BFDC File Offset: 0x0058A1DC
 		public byte NullMask
 		{
 			get
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060263CD RID: 156621 RVA: 0x005454CD File Offset: 0x005436CD
+		// Token: 0x0602892F RID: 166191 RVA: 0x0058C019 File Offset: 0x0058A219
 		public static Offset<IScaleUpSpiritPerformConfig> CreateIScaleUpSpiritPerformConfig(FlatBufferBuilder builder, bool IsInitHide = false, StringOffset AppearEffectDaOffset = default(StringOffset), StringOffset ScaleUpEffectDaOffset = default(StringOffset), int ScaleUpPerformTag = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -154,49 +154,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IScaleUpSpiritPerformConfig.EndIScaleUpSpiritPerformConfig(builder);
 		}
 
-		// Token: 0x060263CE RID: 156622 RVA: 0x00545501 File Offset: 0x00543701
+		// Token: 0x06028930 RID: 166192 RVA: 0x0058C04D File Offset: 0x0058A24D
 		public static void StartIScaleUpSpiritPerformConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060263CF RID: 156623 RVA: 0x0054550A File Offset: 0x0054370A
+		// Token: 0x06028931 RID: 166193 RVA: 0x0058C056 File Offset: 0x0058A256
 		public static void AddIsInitHide(FlatBufferBuilder builder, bool isInitHide)
 		{
 			builder.AddBool(0, isInitHide, false);
 		}
 
-		// Token: 0x060263D0 RID: 156624 RVA: 0x00545515 File Offset: 0x00543715
+		// Token: 0x06028932 RID: 166194 RVA: 0x0058C061 File Offset: 0x0058A261
 		public static void AddAppearEffectDa(FlatBufferBuilder builder, StringOffset appearEffectDaOffset)
 		{
 			builder.AddOffset(1, appearEffectDaOffset.Value, 0);
 		}
 
-		// Token: 0x060263D1 RID: 156625 RVA: 0x00545525 File Offset: 0x00543725
+		// Token: 0x06028933 RID: 166195 RVA: 0x0058C071 File Offset: 0x0058A271
 		public static void AddScaleUpEffectDa(FlatBufferBuilder builder, StringOffset scaleUpEffectDaOffset)
 		{
 			builder.AddOffset(2, scaleUpEffectDaOffset.Value, 0);
 		}
 
-		// Token: 0x060263D2 RID: 156626 RVA: 0x00545535 File Offset: 0x00543735
+		// Token: 0x06028934 RID: 166196 RVA: 0x0058C081 File Offset: 0x0058A281
 		public static void AddScaleUpPerformTag(FlatBufferBuilder builder, int scaleUpPerformTag)
 		{
 			builder.AddInt(3, scaleUpPerformTag, 0);
 		}
 
-		// Token: 0x060263D3 RID: 156627 RVA: 0x00545540 File Offset: 0x00543740
+		// Token: 0x06028935 RID: 166197 RVA: 0x0058C08C File Offset: 0x0058A28C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x060263D4 RID: 156628 RVA: 0x0054554B File Offset: 0x0054374B
+		// Token: 0x06028936 RID: 166198 RVA: 0x0058C097 File Offset: 0x0058A297
 		public static Offset<IScaleUpSpiritPerformConfig> EndIScaleUpSpiritPerformConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IScaleUpSpiritPerformConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060263D5 RID: 156629 RVA: 0x00545558 File Offset: 0x00543758
+		// Token: 0x06028937 RID: 166199 RVA: 0x0058C0A4 File Offset: 0x0058A2A4
 		public IScaleUpSpiritPerformConfigT UnPack()
 		{
 			IScaleUpSpiritPerformConfigT scaleUpSpiritPerformConfigT = new IScaleUpSpiritPerformConfigT();
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return scaleUpSpiritPerformConfigT;
 		}
 
-		// Token: 0x060263D6 RID: 156630 RVA: 0x00545573 File Offset: 0x00543773
+		// Token: 0x06028938 RID: 166200 RVA: 0x0058C0BF File Offset: 0x0058A2BF
 		public void UnPackTo(IScaleUpSpiritPerformConfigT _o)
 		{
 			_o.IsInitHide = this.IsInitHide;
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060263D7 RID: 156631 RVA: 0x005455B4 File Offset: 0x005437B4
+		// Token: 0x06028939 RID: 166201 RVA: 0x0058C100 File Offset: 0x0058A300
 		public static Offset<IScaleUpSpiritPerformConfig> Pack(FlatBufferBuilder builder, IScaleUpSpiritPerformConfigT _o)
 		{
 			if (_o == null)
@@ -226,7 +226,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IScaleUpSpiritPerformConfig.CreateIScaleUpSpiritPerformConfig(builder, _o.IsInitHide, appearEffectDaOffset, scaleUpEffectDaOffset, _o.ScaleUpPerformTag, _o.NullMask);
 		}
 
-		// Token: 0x0400EDF4 RID: 60916
+		// Token: 0x0400FAE7 RID: 64231
 		private Table __p;
 	}
 }

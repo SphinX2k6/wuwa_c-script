@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 {
-	// Token: 0x02004F29 RID: 20265
+	// Token: 0x02003EF2 RID: 16114
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RacingBetsMatchItem : RacingBetsMatchItemBase
 	{
-		// Token: 0x06033FAE RID: 212910 RVA: 0x00C2F654 File Offset: 0x00C2D854
+		// Token: 0x06028E1C RID: 167452 RVA: 0x00B78DFC File Offset: 0x00B76FFC
 		static RacingBetsMatchItem()
 		{
 			Dictionary<ERacingBetsMatchType, string> dictionary = new Dictionary<ERacingBetsMatchType, string>();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			RacingBetsMatchItem.TypeToEmojiPath = dictionary2;
 		}
 
-		// Token: 0x06033FAF RID: 212911 RVA: 0x00C2F6C0 File Offset: 0x00C2D8C0
+		// Token: 0x06028E1D RID: 167453 RVA: 0x00B78E68 File Offset: 0x00B77068
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			};
 		}
 
-		// Token: 0x06033FB0 RID: 212912 RVA: 0x00C2F8C4 File Offset: 0x00C2DAC4
+		// Token: 0x06028E1E RID: 167454 RVA: 0x00B7906C File Offset: 0x00B7726C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RacingBetsMatchItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033FB1 RID: 212913 RVA: 0x00C2F908 File Offset: 0x00C2DB08
+		// Token: 0x06028E1F RID: 167455 RVA: 0x00B790B0 File Offset: 0x00B772B0
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			this.RefreshStatus();
 		}
 
-		// Token: 0x06033FB2 RID: 212914 RVA: 0x00C2FAC0 File Offset: 0x00C2DCC0
+		// Token: 0x06028E20 RID: 167456 RVA: 0x00B79268 File Offset: 0x00B77468
 		public void RefreshStatus()
 		{
 			List<RacingBetsLegMatchData> legMatchList = this.MatchData.GetLegMatchList();
@@ -166,14 +166,14 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			button3.RootUIComp.Get().SetUIActive(racingBetsLegMatchData2 != null && racingBetsLegMatchData2.IsLegMatchFinished());
 		}
 
-		// Token: 0x06033FB3 RID: 212915 RVA: 0x00C2FBE9 File Offset: 0x00C2DDE9
+		// Token: 0x06028E21 RID: 167457 RVA: 0x00B79391 File Offset: 0x00B77591
 		public void SetMatchId(int matchId)
 		{
 			this.GroupMatchId = matchId;
 			this.MatchData = RacingBetsModel.Instance.GetRacingBetsGroupMatchData(this.GroupMatchId);
 		}
 
-		// Token: 0x06033FB4 RID: 212916 RVA: 0x00C2FC08 File Offset: 0x00C2DE08
+		// Token: 0x06028E22 RID: 167458 RVA: 0x00B793B0 File Offset: 0x00B775B0
 		private void OnFirstHalfMatchReplayClick()
 		{
 			RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			RacingBetsController.Instance.RacingBetMatchActionRequest(racingBetsSeasonData.Id, racingBetsLegMatchData.Id);
 		}
 
-		// Token: 0x06033FB5 RID: 212917 RVA: 0x00C2FC48 File Offset: 0x00C2DE48
+		// Token: 0x06028E23 RID: 167459 RVA: 0x00B793F0 File Offset: 0x00B775F0
 		private void OnSecondHalfMatchReplayClick()
 		{
 			RacingBetsSeasonData racingBetsSeasonData = RacingBetsModel.Instance.GetRacingBetsSeasonData();
@@ -193,80 +193,80 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			}
 		}
 
-		// Token: 0x0401B9BC RID: 113084
+		// Token: 0x04016391 RID: 91025
 		private static readonly Dictionary<ERacingBetsMatchType, string> TypeToBgPath;
 
-		// Token: 0x0401B9BD RID: 113085
+		// Token: 0x04016392 RID: 91026
 		private static readonly Dictionary<ERacingBetsMatchType, string> TypeToEmojiPath;
 
-		// Token: 0x0401B9BE RID: 113086
+		// Token: 0x04016393 RID: 91027
 		public int GroupMatchId;
 
-		// Token: 0x0401B9BF RID: 113087
+		// Token: 0x04016394 RID: 91028
 		public ERacingBetsMatchType MatchType;
 
-		// Token: 0x0401B9C0 RID: 113088
+		// Token: 0x04016395 RID: 91029
 		private RacingBetsGroupMatchData MatchData;
 
-		// Token: 0x0200B07F RID: 45183
+		// Token: 0x02009AAF RID: 39599
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403590F RID: 219407
+			// Token: 0x0403033A RID: 197434
 			public const int TextureBg = 0;
 
-			// Token: 0x04035910 RID: 219408
+			// Token: 0x0403033B RID: 197435
 			public const int SpriteEmoji = 1;
 
-			// Token: 0x04035911 RID: 219409
+			// Token: 0x0403033C RID: 197436
 			public const int TextName = 2;
 
-			// Token: 0x04035912 RID: 219410
+			// Token: 0x0403033D RID: 197437
 			public const int LayoutDango = 3;
 
-			// Token: 0x04035913 RID: 219411
+			// Token: 0x0403033E RID: 197438
 			public const int ItemRole = 4;
 
-			// Token: 0x04035914 RID: 219412
+			// Token: 0x0403033F RID: 197439
 			public const int ItemOneLegMatchPanel = 5;
 
-			// Token: 0x04035915 RID: 219413
+			// Token: 0x04030340 RID: 197440
 			public const int ItemOneLegMatchRacing = 6;
 
-			// Token: 0x04035916 RID: 219414
+			// Token: 0x04030341 RID: 197441
 			public const int BtnOneLegMatchReplay = 7;
 
-			// Token: 0x04035917 RID: 219415
+			// Token: 0x04030342 RID: 197442
 			public const int TextLegMatchName = 8;
 
-			// Token: 0x04035918 RID: 219416
+			// Token: 0x04030343 RID: 197443
 			public const int TextDate = 9;
 
-			// Token: 0x04035919 RID: 219417
+			// Token: 0x04030344 RID: 197444
 			public const int ItemTwoLegMatchPanel = 10;
 
-			// Token: 0x0403591A RID: 219418
+			// Token: 0x04030345 RID: 197445
 			public const int ItemFirstHaltMatchRacing = 11;
 
-			// Token: 0x0403591B RID: 219419
+			// Token: 0x04030346 RID: 197446
 			public const int ItemSecondHaltMatchRacing = 12;
 
-			// Token: 0x0403591C RID: 219420
+			// Token: 0x04030347 RID: 197447
 			public const int BtnFirstHaltMatchReplay = 13;
 
-			// Token: 0x0403591D RID: 219421
+			// Token: 0x04030348 RID: 197448
 			public const int TextFirstHaltName = 14;
 
-			// Token: 0x0403591E RID: 219422
+			// Token: 0x04030349 RID: 197449
 			public const int TextFirstHaltDate = 15;
 
-			// Token: 0x0403591F RID: 219423
+			// Token: 0x0403034A RID: 197450
 			public const int BtnSecondHaltMatchReplay = 16;
 
-			// Token: 0x04035920 RID: 219424
+			// Token: 0x0403034B RID: 197451
 			public const int TextSecondHaltName = 17;
 
-			// Token: 0x04035921 RID: 219425
+			// Token: 0x0403034C RID: 197452
 			public const int TextSecondHaltDate = 18;
 		}
 	}

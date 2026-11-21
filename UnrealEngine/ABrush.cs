@@ -6,46 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020008F5 RID: 2293
+	// Token: 0x02000196 RID: 406
 	[UnrealObjectPath("/Script/Engine.Brush")]
 	[UnrealStructLayout(1104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1104)]
 	public class ABrush : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007DCB RID: 32203 RVA: 0x000B43E2 File Offset: 0x000B25E2
+		// Token: 0x06001B3E RID: 6974 RVA: 0x000288D4 File Offset: 0x00026AD4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ABrush._ClassPtr;
 		}
 
-		// Token: 0x06007DCC RID: 32204 RVA: 0x000B43F0 File Offset: 0x000B25F0
+		// Token: 0x06001B3F RID: 6975 RVA: 0x000288E0 File Offset: 0x00026AE0
 		public ABrush() : this(BuiltinUtils.AllocNativeUObject(ABrush.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06007DCD RID: 32205 RVA: 0x000B4418 File Offset: 0x000B2618
+		// Token: 0x06001B40 RID: 6976 RVA: 0x00028908 File Offset: 0x00026B08
 		[NullableContext(1)]
 		public ABrush(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABrush.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001D8A RID: 7562
-		// (get) Token: 0x06007DCE RID: 32206 RVA: 0x000B444B File Offset: 0x000B264B
-		// (set) Token: 0x06007DCF RID: 32207 RVA: 0x000B445F File Offset: 0x000B265F
-		public unsafe TEnumAsByte<EBrushType> BrushType
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)ABrush.__PropertyOffset_BrushType);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ABrush.__PropertyOffset_BrushType) = value;
-			}
-		}
-
-		// Token: 0x17001D8B RID: 7563
-		// (get) Token: 0x06007DD0 RID: 32208 RVA: 0x000B4474 File Offset: 0x000B2674
-		// (set) Token: 0x06007DD1 RID: 32209 RVA: 0x000B4488 File Offset: 0x000B2688
+		// Token: 0x1700033C RID: 828
+		// (get) Token: 0x06001B41 RID: 6977 RVA: 0x0002893B File Offset: 0x00026B3B
+		// (set) Token: 0x06001B42 RID: 6978 RVA: 0x0002894F File Offset: 0x00026B4F
 		public unsafe FColor BrushColor
 		{
 			get
@@ -58,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D8C RID: 7564
-		// (get) Token: 0x06007DD2 RID: 32210 RVA: 0x000B449D File Offset: 0x000B269D
-		// (set) Token: 0x06007DD3 RID: 32211 RVA: 0x000B44AD File Offset: 0x000B26AD
+		// Token: 0x1700033D RID: 829
+		// (get) Token: 0x06001B43 RID: 6979 RVA: 0x00028964 File Offset: 0x00026B64
+		// (set) Token: 0x06001B44 RID: 6980 RVA: 0x00028974 File Offset: 0x00026B74
 		public unsafe int PolyFlags
 		{
 			get
@@ -73,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D8D RID: 7565
-		// (get) Token: 0x06007DD4 RID: 32212 RVA: 0x000B44BE File Offset: 0x000B26BE
-		// (set) Token: 0x06007DD5 RID: 32213 RVA: 0x000B44D7 File Offset: 0x000B26D7
+		// Token: 0x1700033E RID: 830
+		// (get) Token: 0x06001B45 RID: 6981 RVA: 0x00028985 File Offset: 0x00026B85
+		// (set) Token: 0x06001B46 RID: 6982 RVA: 0x0002899E File Offset: 0x00026B9E
 		public unsafe bool bColored
 		{
 			get
@@ -88,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D8E RID: 7566
-		// (get) Token: 0x06007DD6 RID: 32214 RVA: 0x000B4507 File Offset: 0x000B2707
-		// (set) Token: 0x06007DD7 RID: 32215 RVA: 0x000B4520 File Offset: 0x000B2720
+		// Token: 0x1700033F RID: 831
+		// (get) Token: 0x06001B47 RID: 6983 RVA: 0x000289CE File Offset: 0x00026BCE
+		// (set) Token: 0x06001B48 RID: 6984 RVA: 0x000289E7 File Offset: 0x00026BE7
 		public unsafe bool bSolidWhenSelected
 		{
 			get
@@ -103,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D8F RID: 7567
-		// (get) Token: 0x06007DD8 RID: 32216 RVA: 0x000B4550 File Offset: 0x000B2750
-		// (set) Token: 0x06007DD9 RID: 32217 RVA: 0x000B4569 File Offset: 0x000B2769
+		// Token: 0x17000340 RID: 832
+		// (get) Token: 0x06001B49 RID: 6985 RVA: 0x00028A17 File Offset: 0x00026C17
+		// (set) Token: 0x06001B4A RID: 6986 RVA: 0x00028A30 File Offset: 0x00026C30
 		public unsafe bool bPlaceableFromClassBrowser
 		{
 			get
@@ -118,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D90 RID: 7568
-		// (get) Token: 0x06007DDA RID: 32218 RVA: 0x000B4599 File Offset: 0x000B2799
-		// (set) Token: 0x06007DDB RID: 32219 RVA: 0x000B45B2 File Offset: 0x000B27B2
+		// Token: 0x17000341 RID: 833
+		// (get) Token: 0x06001B4B RID: 6987 RVA: 0x00028A60 File Offset: 0x00026C60
+		// (set) Token: 0x06001B4C RID: 6988 RVA: 0x00028A79 File Offset: 0x00026C79
 		public unsafe bool bNotForClientOrServer
 		{
 			get
@@ -133,27 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D91 RID: 7569
-		// (get) Token: 0x06007DDC RID: 32220 RVA: 0x000B45E2 File Offset: 0x000B27E2
-		// (set) Token: 0x06007DDD RID: 32221 RVA: 0x000B45F6 File Offset: 0x000B27F6
-		[Nullable(2)]
-		public unsafe UModel Brush
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UModel>(base.NativePtr / (IntPtr)sizeof(void*) + ABrush.__PropertyOffset_Brush);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABrush.__PropertyOffset_Brush, value);
-			}
-		}
-
-		// Token: 0x17001D92 RID: 7570
-		// (get) Token: 0x06007DDE RID: 32222 RVA: 0x000B460B File Offset: 0x000B280B
-		// (set) Token: 0x06007DDF RID: 32223 RVA: 0x000B461F File Offset: 0x000B281F
+		// Token: 0x17000342 RID: 834
+		// (get) Token: 0x06001B4D RID: 6989 RVA: 0x00028AA9 File Offset: 0x00026CA9
+		// (set) Token: 0x06001B4E RID: 6990 RVA: 0x00028ABD File Offset: 0x00026CBD
 		[Nullable(2)]
 		public unsafe UBrushComponent BrushComponent
 		{
@@ -169,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D93 RID: 7571
-		// (get) Token: 0x06007DE0 RID: 32224 RVA: 0x000B4634 File Offset: 0x000B2834
-		// (set) Token: 0x06007DE1 RID: 32225 RVA: 0x000B464D File Offset: 0x000B284D
+		// Token: 0x17000343 RID: 835
+		// (get) Token: 0x06001B4F RID: 6991 RVA: 0x00028AD2 File Offset: 0x00026CD2
+		// (set) Token: 0x06001B50 RID: 6992 RVA: 0x00028AEB File Offset: 0x00026CEB
 		public unsafe bool bInManipulation
 		{
 			get
@@ -184,105 +151,64 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D94 RID: 7572
-		// (get) Token: 0x06007DE2 RID: 32226 RVA: 0x000B4680 File Offset: 0x000B2880
-		// (set) Token: 0x06007DE3 RID: 32227 RVA: 0x000B46B9 File Offset: 0x000B28B9
-		[Nullable(1)]
-		public TArray<FGeomSelection> SavedSelections
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FGeomSelection> result;
-				if ((result = this._SavedSelections) == null)
-				{
-					result = (this._SavedSelections = new TArray<FGeomSelection>(base.NativePtr + (IntPtr)ABrush.__PropertyOffset_SavedSelections, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.SavedSelections.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x06007DE4 RID: 32228 RVA: 0x000B46C7 File Offset: 0x000B28C7
+		// Token: 0x06001B51 RID: 6993 RVA: 0x00028B1B File Offset: 0x00026D1B
 		static ABrush()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.Brush");
 		}
 
-		// Token: 0x06007DE5 RID: 32229 RVA: 0x000B46D5 File Offset: 0x000B28D5
+		// Token: 0x06001B52 RID: 6994 RVA: 0x00028B29 File Offset: 0x00026D29
 		protected ABrush(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003C43 RID: 15427
+		// Token: 0x040008C5 RID: 2245
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.Brush";
 
-		// Token: 0x04003C44 RID: 15428
+		// Token: 0x040008C6 RID: 2246
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003C45 RID: 15429
+		// Token: 0x040008C7 RID: 2247
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003C46 RID: 15430
-		internal static int __PropertyOffset_BrushType;
-
-		// Token: 0x04003C47 RID: 15431
+		// Token: 0x040008C8 RID: 2248
 		internal static int __PropertyOffset_BrushColor;
 
-		// Token: 0x04003C48 RID: 15432
+		// Token: 0x040008C9 RID: 2249
 		internal static int __PropertyOffset_PolyFlags;
 
-		// Token: 0x04003C49 RID: 15433
+		// Token: 0x040008CA RID: 2250
 		internal static int __PropertyOffset_bColored;
 
-		// Token: 0x04003C4A RID: 15434
+		// Token: 0x040008CB RID: 2251
 		internal static byte __PropertyMask_bColored;
 
-		// Token: 0x04003C4B RID: 15435
+		// Token: 0x040008CC RID: 2252
 		internal static int __PropertyOffset_bSolidWhenSelected;
 
-		// Token: 0x04003C4C RID: 15436
+		// Token: 0x040008CD RID: 2253
 		internal static byte __PropertyMask_bSolidWhenSelected;
 
-		// Token: 0x04003C4D RID: 15437
+		// Token: 0x040008CE RID: 2254
 		internal static int __PropertyOffset_bPlaceableFromClassBrowser;
 
-		// Token: 0x04003C4E RID: 15438
+		// Token: 0x040008CF RID: 2255
 		internal static byte __PropertyMask_bPlaceableFromClassBrowser;
 
-		// Token: 0x04003C4F RID: 15439
+		// Token: 0x040008D0 RID: 2256
 		internal static int __PropertyOffset_bNotForClientOrServer;
 
-		// Token: 0x04003C50 RID: 15440
+		// Token: 0x040008D1 RID: 2257
 		internal static byte __PropertyMask_bNotForClientOrServer;
 
-		// Token: 0x04003C51 RID: 15441
-		internal static int __PropertyOffset_Brush;
-
-		// Token: 0x04003C52 RID: 15442
+		// Token: 0x040008D2 RID: 2258
 		internal static int __PropertyOffset_BrushComponent;
 
-		// Token: 0x04003C53 RID: 15443
+		// Token: 0x040008D3 RID: 2259
 		internal static int __PropertyOffset_bInManipulation;
 
-		// Token: 0x04003C54 RID: 15444
+		// Token: 0x040008D4 RID: 2260
 		internal static byte __PropertyMask_bInManipulation;
-
-		// Token: 0x04003C55 RID: 15445
-		internal static int __PropertyOffset_SavedSelections;
-
-		// Token: 0x04003C56 RID: 15446
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FGeomSelection> _SavedSelections;
 	}
 }

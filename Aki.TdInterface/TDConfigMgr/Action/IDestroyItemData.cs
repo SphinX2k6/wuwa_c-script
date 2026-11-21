@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200198C RID: 6540
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B13 RID: 6931
 	public class IDestroyItemData : IItemData
 	{
-		// Token: 0x06008C01 RID: 35841 RVA: 0x00148CA0 File Offset: 0x00146EA0
+		// Token: 0x06009325 RID: 37669 RVA: 0x001584B0 File Offset: 0x001566B0
 		private IDestroyItemData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C02 RID: 35842 RVA: 0x00148CD8 File Offset: 0x00146ED8
+		// Token: 0x06009326 RID: 37670 RVA: 0x001584E8 File Offset: 0x001566E8
 		public static IDestroyItemData Create([Nullable(2)] IDestroyItemData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C03 RID: 35843 RVA: 0x00148CEB File Offset: 0x00146EEB
+		// Token: 0x06009327 RID: 37671 RVA: 0x001584FB File Offset: 0x001566FB
 		public static IDestroyItemData CreateFromSetValue([Nullable(2)] IDestroyItemData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C04 RID: 35844 RVA: 0x00148CFE File Offset: 0x00146EFE
+		// Token: 0x06009328 RID: 37672 RVA: 0x0015850E File Offset: 0x0015670E
 		public new IDestroyItemData_SetValue ToSetValue()
 		{
 			return new IDestroyItemData_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D03 RID: 11523
-		// (get) Token: 0x06008C05 RID: 35845 RVA: 0x00148D29 File Offset: 0x00146F29
-		// (set) Token: 0x06008C06 RID: 35846 RVA: 0x00148D54 File Offset: 0x00146F54
+		// Token: 0x17002F02 RID: 12034
+		// (get) Token: 0x06009329 RID: 37673 RVA: 0x00158539 File Offset: 0x00156739
+		// (set) Token: 0x0600932A RID: 37674 RVA: 0x00158564 File Offset: 0x00156764
 		public override int ItemId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D04 RID: 11524
-		// (get) Token: 0x06008C07 RID: 35847 RVA: 0x00148D62 File Offset: 0x00146F62
-		// (set) Token: 0x06008C08 RID: 35848 RVA: 0x00148D8D File Offset: 0x00146F8D
+		// Token: 0x17002F03 RID: 12035
+		// (get) Token: 0x0600932B RID: 37675 RVA: 0x00158572 File Offset: 0x00156772
+		// (set) Token: 0x0600932C RID: 37676 RVA: 0x0015859D File Offset: 0x0015679D
 		public override int Count
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D05 RID: 11525
-		// (get) Token: 0x06008C09 RID: 35849 RVA: 0x00148D9B File Offset: 0x00146F9B
-		// (set) Token: 0x06008C0A RID: 35850 RVA: 0x00148DC6 File Offset: 0x00146FC6
+		// Token: 0x17002F04 RID: 12036
+		// (get) Token: 0x0600932D RID: 37677 RVA: 0x001585AB File Offset: 0x001567AB
+		// (set) Token: 0x0600932E RID: 37678 RVA: 0x001585D6 File Offset: 0x001567D6
 		public virtual bool IsAll
 		{
 			get
@@ -126,11 +124,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400573C RID: 22332
+		// Token: 0x04005B85 RID: 23429
 		[Nullable(2)]
 		protected new IDestroyItemData FbInstance;
 
-		// Token: 0x0400573D RID: 22333
+		// Token: 0x04005B86 RID: 23430
 		[Nullable(2)]
 		protected new IDestroyItemData_SetValue PocoInterface;
 	}

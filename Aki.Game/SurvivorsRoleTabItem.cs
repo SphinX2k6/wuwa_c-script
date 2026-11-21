@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02002B2E RID: 11054
+// Token: 0x020020AA RID: 8362
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRoleTabItem : LoopScrollMediumItemGrid<SurvivorsHandbookItemDataBase>
 {
-	// Token: 0x06016F1E RID: 93982 RVA: 0x005D2D5C File Offset: 0x005D0F5C
+	// Token: 0x0601494F RID: 84303 RVA: 0x005FF8D0 File Offset: 0x005FDAD0
 	protected override void OnRefresh(SurvivorsHandbookItemDataBase data, bool isSelected, int gridIndex)
 	{
 		SurvivorsRole value = SurvivorsRogueConfig.Instance.GetSurvivorsRole(data.Id).Value;
@@ -32,7 +32,7 @@ public class SurvivorsRoleTabItem : LoopScrollMediumItemGrid<SurvivorsHandbookIt
 		base.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x06016F1F RID: 93983 RVA: 0x005D2E07 File Offset: 0x005D1007
+	// Token: 0x06014950 RID: 84304 RVA: 0x005FF97B File Offset: 0x005FDB7B
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, true);
@@ -42,13 +42,13 @@ public class SurvivorsRoleTabItem : LoopScrollMediumItemGrid<SurvivorsHandbookIt
 		}
 	}
 
-	// Token: 0x06016F20 RID: 93984 RVA: 0x005D2E25 File Offset: 0x005D1025
+	// Token: 0x06014951 RID: 84305 RVA: 0x005FF999 File Offset: 0x005FDB99
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x06016F21 RID: 93985 RVA: 0x005D2E2F File Offset: 0x005D102F
+	// Token: 0x06014952 RID: 84306 RVA: 0x005FF9A3 File Offset: 0x005FDBA3
 	protected override void OnExtendToggleStateChanged(EToggleState state)
 	{
 		Action<SurvivorsHandbookItemDataBase, SurvivorsRoleTabItem> onClickCallBack = this.OnClickCallBack;
@@ -59,7 +59,7 @@ public class SurvivorsRoleTabItem : LoopScrollMediumItemGrid<SurvivorsHandbookIt
 		onClickCallBack((SurvivorsHandbookItemDataBase)this.Data, this);
 	}
 
-	// Token: 0x0400AAD4 RID: 43732
+	// Token: 0x0400AEDA RID: 44762
 	[Nullable(new byte[]
 	{
 		2,

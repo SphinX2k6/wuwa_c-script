@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021BA RID: 8634
+	// Token: 0x02002425 RID: 9253
 	public class SetForceLock_SetValue
 	{
-		// Token: 0x04007136 RID: 28982
+		// Token: 0x0400777E RID: 30590
 		public int EntityId;
 
-		// Token: 0x04007137 RID: 28983
+		// Token: 0x0400777F RID: 30591
 		public bool IsLocked;
 	}
 }

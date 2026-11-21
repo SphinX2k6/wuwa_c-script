@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020034BF RID: 13503
+// Token: 0x02002A33 RID: 10803
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,12 +13,12 @@ using UnrealEngine;
 })]
 public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 {
-	// Token: 0x170028D2 RID: 10450
-	// (get) Token: 0x0601D684 RID: 120452 RVA: 0x008340E5 File Offset: 0x008322E5
+	// Token: 0x17002C6A RID: 11370
+	// (get) Token: 0x0601B383 RID: 111491 RVA: 0x0085B58D File Offset: 0x0085978D
 	public EntityToLoadParam EntityToLoadParam { get; } = new EntityToLoadParam();
 
-	// Token: 0x170028D3 RID: 10451
-	// (get) Token: 0x0601D685 RID: 120453 RVA: 0x008340ED File Offset: 0x008322ED
+	// Token: 0x17002C6B RID: 11371
+	// (get) Token: 0x0601B384 RID: 111492 RVA: 0x0085B595 File Offset: 0x00859795
 	public PriorityQueue<EntityHandleCallbackPair> QueuedHeap
 	{
 		get
@@ -27,8 +27,8 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x170028D4 RID: 10452
-	// (get) Token: 0x0601D686 RID: 120454 RVA: 0x008340F5 File Offset: 0x008322F5
+	// Token: 0x17002C6C RID: 11372
+	// (get) Token: 0x0601B385 RID: 111493 RVA: 0x0085B59D File Offset: 0x0085979D
 	public IReadOnlyDictionary<EntityHandle, EntityHandleCallbackPair> QueuedEntitiesLookup
 	{
 		get
@@ -37,7 +37,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x0601D687 RID: 120455 RVA: 0x00834100 File Offset: 0x00832300
+	// Token: 0x0601B386 RID: 111494 RVA: 0x0085B5A8 File Offset: 0x008597A8
 	public EntityToLoadFilterChain()
 	{
 		this.QueuedHeapInternal = new PriorityQueue<EntityHandleCallbackPair>(delegate(EntityHandleCallbackPair a, EntityHandleCallbackPair b)
@@ -50,7 +50,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		});
 	}
 
-	// Token: 0x0601D688 RID: 120456 RVA: 0x008341BE File Offset: 0x008323BE
+	// Token: 0x0601B387 RID: 111495 RVA: 0x0085B666 File Offset: 0x00859866
 	public static EntityToLoadFilterChain Create()
 	{
 		EntityToLoadFilterChain entityToLoadFilterChain = new EntityToLoadFilterChain();
@@ -58,14 +58,14 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		return entityToLoadFilterChain;
 	}
 
-	// Token: 0x0601D689 RID: 120457 RVA: 0x008341CB File Offset: 0x008323CB
+	// Token: 0x0601B388 RID: 111496 RVA: 0x0085B673 File Offset: 0x00859873
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<IEntityToLoadParam>(EEventName.EntityToLoadParamUpdated, new Action<IEntityToLoadParam>(this.OnEntityToLoadParamUpdated));
 		return true;
 	}
 
-	// Token: 0x0601D68A RID: 120458 RVA: 0x008341EA File Offset: 0x008323EA
+	// Token: 0x0601B389 RID: 111497 RVA: 0x0085B692 File Offset: 0x00859892
 	protected override bool OnCleanup()
 	{
 		this.QueuedHeapInternal.Clear();
@@ -75,7 +75,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		return true;
 	}
 
-	// Token: 0x0601D68B RID: 120459 RVA: 0x0083422C File Offset: 0x0083242C
+	// Token: 0x0601B38A RID: 111498 RVA: 0x0085B6D4 File Offset: 0x008598D4
 	private unsafe void OnEntityToLoadParamUpdated(object param)
 	{
 		EntityToLoadParam entityToLoadParam = param as EntityToLoadParam;
@@ -117,7 +117,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x0601D68C RID: 120460 RVA: 0x00834390 File Offset: 0x00832590
+	// Token: 0x0601B38B RID: 111499 RVA: 0x0085B838 File Offset: 0x00859A38
 	private void RefreshEntityToLoadParam()
 	{
 		foreach (Filter<EntityHandle> filter in base.GetAllFilters())
@@ -126,7 +126,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x0601D68D RID: 120461 RVA: 0x008343C4 File Offset: 0x008325C4
+	// Token: 0x0601B38C RID: 111500 RVA: 0x0085B86C File Offset: 0x00859A6C
 	private void UpdateOrder(EntityHandleCallbackPair pair)
 	{
 		if (this.QueuedHeapInternal.Size == 0)
@@ -138,7 +138,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		pair.Order = queueOrder;
 	}
 
-	// Token: 0x0601D68E RID: 120462 RVA: 0x008343FC File Offset: 0x008325FC
+	// Token: 0x0601B38D RID: 111501 RVA: 0x0085B8A4 File Offset: 0x00859AA4
 	private void UpdateEntityPriority(EntityHandleCallbackPair pair)
 	{
 		EntityHandle handle = pair.Handle;
@@ -166,7 +166,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		pair.Priority = (float)(num * (double)num2);
 	}
 
-	// Token: 0x0601D68F RID: 120463 RVA: 0x008344D0 File Offset: 0x008326D0
+	// Token: 0x0601B38E RID: 111502 RVA: 0x0085B978 File Offset: 0x00859B78
 	protected override void OnPassedTargetModified(EntityHandle target, bool isAdd)
 	{
 		if (!this.QueuedEntitiesLookupInternal.ContainsKey(target))
@@ -182,21 +182,21 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		this.QueuedHeapInternal.Remove(item);
 	}
 
-	// Token: 0x0601D690 RID: 120464 RVA: 0x00834516 File Offset: 0x00832716
+	// Token: 0x0601B38F RID: 111503 RVA: 0x0085B9BE File Offset: 0x00859BBE
 	public override void AddFilter(Filter<EntityHandle> filter)
 	{
 		base.AddFilter(filter);
 		this.OnEntityToLoadParamUpdated(filter);
 	}
 
-	// Token: 0x0601D691 RID: 120465 RVA: 0x00834526 File Offset: 0x00832726
+	// Token: 0x0601B390 RID: 111504 RVA: 0x0085B9CE File Offset: 0x00859BCE
 	public override bool RemoveFilter(Filter<EntityHandle> filter)
 	{
 		this.RefreshEntityToLoadParam();
 		return base.RemoveFilter(filter);
 	}
 
-	// Token: 0x0601D692 RID: 120466 RVA: 0x00834538 File Offset: 0x00832738
+	// Token: 0x0601B391 RID: 111505 RVA: 0x0085B9E0 File Offset: 0x00859BE0
 	public unsafe void AddPair(EntityHandleCallbackPair pair)
 	{
 		this.UpdateOrder(pair);
@@ -221,7 +221,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x0601D693 RID: 120467 RVA: 0x008346A7 File Offset: 0x008328A7
+	// Token: 0x0601B392 RID: 111506 RVA: 0x0085BB4F File Offset: 0x00859D4F
 	public void RemovePair(EntityHandleCallbackPair pair)
 	{
 		if (this.QueuedEntitiesLookupInternal.Remove(pair.Handle))
@@ -231,7 +231,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x0601D694 RID: 120468 RVA: 0x008346D8 File Offset: 0x008328D8
+	// Token: 0x0601B393 RID: 111507 RVA: 0x0085BB80 File Offset: 0x00859D80
 	[NullableContext(2)]
 	public EntityHandleCallbackPair PopTopPair()
 	{
@@ -247,7 +247,7 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		return null;
 	}
 
-	// Token: 0x0601D695 RID: 120469 RVA: 0x00834724 File Offset: 0x00832924
+	// Token: 0x0601B394 RID: 111508 RVA: 0x0085BBCC File Offset: 0x00859DCC
 	public void UpdatePriority(Vector playerVelocity)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -294,33 +294,33 @@ public class EntityToLoadFilterChain : FilterChain<EntityHandle>
 		}
 	}
 
-	// Token: 0x0400E7B3 RID: 59315
+	// Token: 0x0400EC67 RID: 60519
 	private readonly PriorityQueue<EntityHandleCallbackPair> QueuedHeapInternal;
 
-	// Token: 0x0400E7B4 RID: 59316
+	// Token: 0x0400EC68 RID: 60520
 	private readonly Dictionary<EntityHandle, EntityHandleCallbackPair> QueuedEntitiesLookupInternal = new Dictionary<EntityHandle, EntityHandleCallbackPair>();
 
-	// Token: 0x0400E7B5 RID: 59317
+	// Token: 0x0400EC69 RID: 60521
 	private readonly List<EntityHandle> QueuedEntitiesPriorityDirty = new List<EntityHandle>();
 
-	// Token: 0x0400E7B6 RID: 59318
+	// Token: 0x0400EC6A RID: 60522
 	private readonly Vector CachedCharacterLocation = Vector.Create();
 
-	// Token: 0x0400E7B7 RID: 59319
+	// Token: 0x0400EC6B RID: 60523
 	private readonly Vector CachedCharacterForward = Vector.Create();
 
-	// Token: 0x0400E7B8 RID: 59320
+	// Token: 0x0400EC6C RID: 60524
 	private readonly Vector CharacterVelocityForward = Vector.Create();
 
-	// Token: 0x0400E7B9 RID: 59321
+	// Token: 0x0400EC6D RID: 60525
 	private readonly Vector TempEntityForward = Vector.Create();
 
-	// Token: 0x0400E7BA RID: 59322
+	// Token: 0x0400EC6E RID: 60526
 	private readonly Stat UpdatePriorityStat = Stat.Create("WaitEntityToLoadTask.UpdatePriority", "", "");
 
-	// Token: 0x0400E7BB RID: 59323
+	// Token: 0x0400EC6F RID: 60527
 	private readonly Stat RefreshEntityToLoadParamStat = Stat.Create("EntityToLoadFilterChain.RefreshEntityToLoadParamStat", "", "");
 
-	// Token: 0x0400E7BC RID: 59324
+	// Token: 0x0400EC70 RID: 60528
 	private int QueueOrder;
 }

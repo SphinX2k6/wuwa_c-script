@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A2B RID: 18987
+	// Token: 0x020039D3 RID: 14803
 	public interface ITrapDefenseLevelModeData<out TLevelData> where TLevelData : TrapDefenseLevelModeDataBase
 	{
-		// Token: 0x17007A30 RID: 31280
-		// (get) Token: 0x060314C7 RID: 201927
-		// (set) Token: 0x060314C8 RID: 201928
+		// Token: 0x17004DDD RID: 19933
+		// (get) Token: 0x06026257 RID: 156247
+		// (set) Token: 0x06026258 RID: 156248
 		int ActivityId { get; set; }
 	}
 }

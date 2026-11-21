@@ -9,14 +9,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.Vehicle
 {
-	// Token: 0x02003EFC RID: 16124
+	// Token: 0x020031B9 RID: 12729
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Level/Vehicle/BP_VehicleConfig.BP_VehicleConfig_C")]
 	[UnrealStructLayout(752, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 752)]
 	public class BP_VehicleConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028DD8 RID: 167384 RVA: 0x009B63F6 File Offset: 0x009B45F6
+		// Token: 0x0601F775 RID: 128885 RVA: 0x0092E4BE File Offset: 0x0092C6BE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_VehicleConfig_C._ClassPtr == IntPtr.Zero)
@@ -26,19 +26,19 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			return BP_VehicleConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028DD9 RID: 167385 RVA: 0x009B641C File Offset: 0x009B461C
+		// Token: 0x0601F776 RID: 128886 RVA: 0x0092E4E4 File Offset: 0x0092C6E4
 		public BP_VehicleConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_VehicleConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028DDA RID: 167386 RVA: 0x009B6444 File Offset: 0x009B4644
+		// Token: 0x0601F777 RID: 128887 RVA: 0x0092E50C File Offset: 0x0092C70C
 		public BP_VehicleConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_VehicleConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700600B RID: 24587
-		// (get) Token: 0x06028DDB RID: 167387 RVA: 0x009B6478 File Offset: 0x009B4678
-		// (set) Token: 0x06028DDC RID: 167388 RVA: 0x009B64B1 File Offset: 0x009B46B1
+		// Token: 0x17003978 RID: 14712
+		// (get) Token: 0x0601F778 RID: 128888 RVA: 0x0092E540 File Offset: 0x0092C740
+		// (set) Token: 0x0601F779 RID: 128889 RVA: 0x0092E579 File Offset: 0x0092C779
 		public FGameplayTagContainer 载具出生Tag
 		{
 			get
@@ -47,19 +47,19 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				FGameplayTagContainer result;
 				if ((result = this._载具出生Tag) == null)
 				{
-					result = (this._载具出生Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_0, this));
+					result = (this._载具出生Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_载具出生Tag, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_0, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_载具出生Tag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700600C RID: 24588
-		// (get) Token: 0x06028DDD RID: 167389 RVA: 0x009B64D4 File Offset: 0x009B46D4
-		// (set) Token: 0x06028DDE RID: 167390 RVA: 0x009B650D File Offset: 0x009B470D
+		// Token: 0x17003979 RID: 14713
+		// (get) Token: 0x0601F77A RID: 128890 RVA: 0x0092E59C File Offset: 0x0092C79C
+		// (set) Token: 0x0601F77B RID: 128891 RVA: 0x0092E5D5 File Offset: 0x0092C7D5
 		public FGameplayTagContainer 载具乘坐期间Tag
 		{
 			get
@@ -68,19 +68,19 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				FGameplayTagContainer result;
 				if ((result = this._载具乘坐期间Tag) == null)
 				{
-					result = (this._载具乘坐期间Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_1, this));
+					result = (this._载具乘坐期间Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_载具乘坐期间Tag, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_载具乘坐期间Tag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700600D RID: 24589
-		// (get) Token: 0x06028DDF RID: 167391 RVA: 0x009B6530 File Offset: 0x009B4730
-		// (set) Token: 0x06028DE0 RID: 167392 RVA: 0x009B6569 File Offset: 0x009B4769
+		// Token: 0x1700397A RID: 14714
+		// (get) Token: 0x0601F77C RID: 128892 RVA: 0x0092E5F8 File Offset: 0x0092C7F8
+		// (set) Token: 0x0601F77D RID: 128893 RVA: 0x0092E631 File Offset: 0x0092C831
 		public FGameplayTagContainer 角色乘坐期间Tag
 		{
 			get
@@ -89,139 +89,139 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				FGameplayTagContainer result;
 				if ((result = this._角色乘坐期间Tag) == null)
 				{
-					result = (this._角色乘坐期间Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_2, this));
+					result = (this._角色乘坐期间Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_角色乘坐期间Tag, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_角色乘坐期间Tag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700600E RID: 24590
-		// (get) Token: 0x06028DE1 RID: 167393 RVA: 0x009B658A File Offset: 0x009B478A
-		// (set) Token: 0x06028DE2 RID: 167394 RVA: 0x009B659A File Offset: 0x009B479A
+		// Token: 0x1700397B RID: 14715
+		// (get) Token: 0x0601F77E RID: 128894 RVA: 0x0092E652 File Offset: 0x0092C852
+		// (set) Token: 0x0601F77F RID: 128895 RVA: 0x0092E662 File Offset: 0x0092C862
 		public unsafe float 弹射时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_弹射时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_弹射时间) = value;
 			}
 		}
 
-		// Token: 0x1700600F RID: 24591
-		// (get) Token: 0x06028DE3 RID: 167395 RVA: 0x009B65AB File Offset: 0x009B47AB
-		// (set) Token: 0x06028DE4 RID: 167396 RVA: 0x009B65BB File Offset: 0x009B47BB
+		// Token: 0x1700397C RID: 14716
+		// (get) Token: 0x0601F780 RID: 128896 RVA: 0x0092E673 File Offset: 0x0092C873
+		// (set) Token: 0x0601F781 RID: 128897 RVA: 0x0092E683 File Offset: 0x0092C883
 		public unsafe float 弹射高度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_弹射高度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_弹射高度) = value;
 			}
 		}
 
-		// Token: 0x17006010 RID: 24592
-		// (get) Token: 0x06028DE5 RID: 167397 RVA: 0x009B65CC File Offset: 0x009B47CC
-		// (set) Token: 0x06028DE6 RID: 167398 RVA: 0x009B65DC File Offset: 0x009B47DC
+		// Token: 0x1700397D RID: 14717
+		// (get) Token: 0x0601F782 RID: 128898 RVA: 0x0092E694 File Offset: 0x0092C894
+		// (set) Token: 0x0601F783 RID: 128899 RVA: 0x0092E6A4 File Offset: 0x0092C8A4
 		public unsafe float 打开滑翔伞延迟时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_打开滑翔伞延迟时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_打开滑翔伞延迟时间) = value;
 			}
 		}
 
-		// Token: 0x17006011 RID: 24593
-		// (get) Token: 0x06028DE7 RID: 167399 RVA: 0x009B65ED File Offset: 0x009B47ED
-		// (set) Token: 0x06028DE8 RID: 167400 RVA: 0x009B6602 File Offset: 0x009B4802
+		// Token: 0x1700397E RID: 14718
+		// (get) Token: 0x0601F784 RID: 128900 RVA: 0x0092E6B5 File Offset: 0x0092C8B5
+		// (set) Token: 0x0601F785 RID: 128901 RVA: 0x0092E6CA File Offset: 0x0092C8CA
 		public TSoftObjectPtr<UCurveFloat> 弹射时间路径曲线
 		{
 			get
 			{
-				return new TSoftObjectPtr<UCurveFloat>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_6, this);
+				return new TSoftObjectPtr<UCurveFloat>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_弹射时间路径曲线, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_6, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_弹射时间路径曲线, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006012 RID: 24594
-		// (get) Token: 0x06028DE9 RID: 167401 RVA: 0x009B6627 File Offset: 0x009B4827
-		// (set) Token: 0x06028DEA RID: 167402 RVA: 0x009B663C File Offset: 0x009B483C
+		// Token: 0x1700397F RID: 14719
+		// (get) Token: 0x0601F786 RID: 128902 RVA: 0x0092E6EF File Offset: 0x0092C8EF
+		// (set) Token: 0x0601F787 RID: 128903 RVA: 0x0092E704 File Offset: 0x0092C904
 		public TSoftObjectPtr<UEffectModelGroup> PreEnterEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_7, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PreEnterEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_7, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PreEnterEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006013 RID: 24595
-		// (get) Token: 0x06028DEB RID: 167403 RVA: 0x009B6661 File Offset: 0x009B4861
-		// (set) Token: 0x06028DEC RID: 167404 RVA: 0x009B6676 File Offset: 0x009B4876
+		// Token: 0x17003980 RID: 14720
+		// (get) Token: 0x0601F788 RID: 128904 RVA: 0x0092E729 File Offset: 0x0092C929
+		// (set) Token: 0x0601F789 RID: 128905 RVA: 0x0092E73E File Offset: 0x0092C93E
 		public TSoftObjectPtr<UEffectModelGroup> PostEnterEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_8, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PostEnterEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_8, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PostEnterEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006014 RID: 24596
-		// (get) Token: 0x06028DED RID: 167405 RVA: 0x009B669B File Offset: 0x009B489B
-		// (set) Token: 0x06028DEE RID: 167406 RVA: 0x009B66B0 File Offset: 0x009B48B0
+		// Token: 0x17003981 RID: 14721
+		// (get) Token: 0x0601F78A RID: 128906 RVA: 0x0092E763 File Offset: 0x0092C963
+		// (set) Token: 0x0601F78B RID: 128907 RVA: 0x0092E778 File Offset: 0x0092C978
 		public TSoftObjectPtr<PD_CharacterControllerData_C> PreEnterMatEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_9, this);
+				return new TSoftObjectPtr<PD_CharacterControllerData_C>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PreEnterMatEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_9, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PreEnterMatEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006015 RID: 24597
-		// (get) Token: 0x06028DEF RID: 167407 RVA: 0x009B66D5 File Offset: 0x009B48D5
-		// (set) Token: 0x06028DF0 RID: 167408 RVA: 0x009B66EA File Offset: 0x009B48EA
+		// Token: 0x17003982 RID: 14722
+		// (get) Token: 0x0601F78C RID: 128908 RVA: 0x0092E79D File Offset: 0x0092C99D
+		// (set) Token: 0x0601F78D RID: 128909 RVA: 0x0092E7B2 File Offset: 0x0092C9B2
 		public TSoftObjectPtr<PD_CharacterControllerDataGroup_C> PostEnterMatEffect
 		{
 			get
 			{
-				return new TSoftObjectPtr<PD_CharacterControllerDataGroup_C>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_10, this);
+				return new TSoftObjectPtr<PD_CharacterControllerDataGroup_C>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PostEnterMatEffect, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_10, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_PostEnterMatEffect, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006016 RID: 24598
-		// (get) Token: 0x06028DF1 RID: 167409 RVA: 0x009B6710 File Offset: 0x009B4910
-		// (set) Token: 0x06028DF2 RID: 167410 RVA: 0x009B6749 File Offset: 0x009B4949
+		// Token: 0x17003983 RID: 14723
+		// (get) Token: 0x0601F78E RID: 128910 RVA: 0x0092E7D8 File Offset: 0x0092C9D8
+		// (set) Token: 0x0601F78F RID: 128911 RVA: 0x0092E811 File Offset: 0x0092CA11
 		public TMap<FGameplayTag, SGameplayTagArray> 驾驶员同步Tag
 		{
 			get
@@ -230,7 +230,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TMap<FGameplayTag, SGameplayTagArray> result;
 				if ((result = this._驾驶员同步Tag) == null)
 				{
-					result = (this._驾驶员同步Tag = new TMap<FGameplayTag, SGameplayTagArray>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_11, this));
+					result = (this._驾驶员同步Tag = new TMap<FGameplayTag, SGameplayTagArray>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_驾驶员同步Tag, this));
 				}
 				return result;
 			}
@@ -240,9 +240,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17006017 RID: 24599
-		// (get) Token: 0x06028DF3 RID: 167411 RVA: 0x009B6758 File Offset: 0x009B4958
-		// (set) Token: 0x06028DF4 RID: 167412 RVA: 0x009B6791 File Offset: 0x009B4991
+		// Token: 0x17003984 RID: 14724
+		// (get) Token: 0x0601F790 RID: 128912 RVA: 0x0092E820 File Offset: 0x0092CA20
+		// (set) Token: 0x0601F791 RID: 128913 RVA: 0x0092E859 File Offset: 0x0092CA59
 		public TMap<FGameplayTag, SInt64Array> 驾驶员同步Buff
 		{
 			get
@@ -251,7 +251,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TMap<FGameplayTag, SInt64Array> result;
 				if ((result = this._驾驶员同步Buff) == null)
 				{
-					result = (this._驾驶员同步Buff = new TMap<FGameplayTag, SInt64Array>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_12, this));
+					result = (this._驾驶员同步Buff = new TMap<FGameplayTag, SInt64Array>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_驾驶员同步Buff, this));
 				}
 				return result;
 			}
@@ -261,27 +261,27 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17006018 RID: 24600
-		// (get) Token: 0x06028DF5 RID: 167413 RVA: 0x009B679F File Offset: 0x009B499F
-		// (set) Token: 0x06028DF6 RID: 167414 RVA: 0x009B67B3 File Offset: 0x009B49B3
+		// Token: 0x17003985 RID: 14725
+		// (get) Token: 0x0601F792 RID: 128914 RVA: 0x0092E867 File Offset: 0x0092CA67
+		// (set) Token: 0x0601F793 RID: 128915 RVA: 0x0092E87B File Offset: 0x0092CA7B
 		[Nullable(2)]
 		public unsafe UCurveFloat 前后输入映射曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_VehicleConfig_C.__PropertyOffset_13);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_VehicleConfig_C.__PropertyOffset_前后输入映射曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_VehicleConfig_C.__PropertyOffset_13, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_VehicleConfig_C.__PropertyOffset_前后输入映射曲线, value);
 			}
 		}
 
-		// Token: 0x17006019 RID: 24601
-		// (get) Token: 0x06028DF7 RID: 167415 RVA: 0x009B67C8 File Offset: 0x009B49C8
-		// (set) Token: 0x06028DF8 RID: 167416 RVA: 0x009B6801 File Offset: 0x009B4A01
+		// Token: 0x17003986 RID: 14726
+		// (get) Token: 0x0601F794 RID: 128916 RVA: 0x0092E890 File Offset: 0x0092CA90
+		// (set) Token: 0x0601F795 RID: 128917 RVA: 0x0092E8C9 File Offset: 0x0092CAC9
 		public TMap<FGameplayTag, SGameplayTagArray> 载具同步驾驶员Tag
 		{
 			get
@@ -290,7 +290,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TMap<FGameplayTag, SGameplayTagArray> result;
 				if ((result = this._载具同步驾驶员Tag) == null)
 				{
-					result = (this._载具同步驾驶员Tag = new TMap<FGameplayTag, SGameplayTagArray>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_14, this));
+					result = (this._载具同步驾驶员Tag = new TMap<FGameplayTag, SGameplayTagArray>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_载具同步驾驶员Tag, this));
 				}
 				return result;
 			}
@@ -300,9 +300,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x1700601A RID: 24602
-		// (get) Token: 0x06028DF9 RID: 167417 RVA: 0x009B6810 File Offset: 0x009B4A10
-		// (set) Token: 0x06028DFA RID: 167418 RVA: 0x009B6849 File Offset: 0x009B4A49
+		// Token: 0x17003987 RID: 14727
+		// (get) Token: 0x0601F796 RID: 128918 RVA: 0x0092E8D8 File Offset: 0x0092CAD8
+		// (set) Token: 0x0601F797 RID: 128919 RVA: 0x0092E911 File Offset: 0x0092CB11
 		public TArray<SFloatThresholdAndCameraShake> 撞击震屏
 		{
 			get
@@ -311,7 +311,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndCameraShake> result;
 				if ((result = this._撞击震屏) == null)
 				{
-					result = (this._撞击震屏 = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_15, this));
+					result = (this._撞击震屏 = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_撞击震屏, this));
 				}
 				return result;
 			}
@@ -321,9 +321,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x1700601B RID: 24603
-		// (get) Token: 0x06028DFB RID: 167419 RVA: 0x009B6858 File Offset: 0x009B4A58
-		// (set) Token: 0x06028DFC RID: 167420 RVA: 0x009B6891 File Offset: 0x009B4A91
+		// Token: 0x17003988 RID: 14728
+		// (get) Token: 0x0601F798 RID: 128920 RVA: 0x0092E920 File Offset: 0x0092CB20
+		// (set) Token: 0x0601F799 RID: 128921 RVA: 0x0092E959 File Offset: 0x0092CB59
 		public TArray<SFloatThresholdAndCameraShake> 撞击震屏Z
 		{
 			get
@@ -332,7 +332,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndCameraShake> result;
 				if ((result = this._撞击震屏Z) == null)
 				{
-					result = (this._撞击震屏Z = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_16, this));
+					result = (this._撞击震屏Z = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_撞击震屏Z, this));
 				}
 				return result;
 			}
@@ -342,24 +342,24 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x1700601C RID: 24604
-		// (get) Token: 0x06028DFD RID: 167421 RVA: 0x009B689F File Offset: 0x009B4A9F
-		// (set) Token: 0x06028DFE RID: 167422 RVA: 0x009B68AF File Offset: 0x009B4AAF
+		// Token: 0x17003989 RID: 14729
+		// (get) Token: 0x0601F79A RID: 128922 RVA: 0x0092E967 File Offset: 0x0092CB67
+		// (set) Token: 0x0601F79B RID: 128923 RVA: 0x0092E977 File Offset: 0x0092CB77
 		public unsafe float 震屏CD
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_震屏CD);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_震屏CD) = value;
 			}
 		}
 
-		// Token: 0x1700601D RID: 24605
-		// (get) Token: 0x06028DFF RID: 167423 RVA: 0x009B68C0 File Offset: 0x009B4AC0
-		// (set) Token: 0x06028E00 RID: 167424 RVA: 0x009B68F9 File Offset: 0x009B4AF9
+		// Token: 0x1700398A RID: 14730
+		// (get) Token: 0x0601F79C RID: 128924 RVA: 0x0092E988 File Offset: 0x0092CB88
+		// (set) Token: 0x0601F79D RID: 128925 RVA: 0x0092E9C1 File Offset: 0x0092CBC1
 		public TArray<SFloatThresholdAndCameraShake> 撞击震屏_第一人称
 		{
 			get
@@ -368,7 +368,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndCameraShake> result;
 				if ((result = this._撞击震屏_第一人称) == null)
 				{
-					result = (this._撞击震屏_第一人称 = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_18, this));
+					result = (this._撞击震屏_第一人称 = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_撞击震屏_第一人称, this));
 				}
 				return result;
 			}
@@ -378,9 +378,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x1700601E RID: 24606
-		// (get) Token: 0x06028E01 RID: 167425 RVA: 0x009B6908 File Offset: 0x009B4B08
-		// (set) Token: 0x06028E02 RID: 167426 RVA: 0x009B6941 File Offset: 0x009B4B41
+		// Token: 0x1700398B RID: 14731
+		// (get) Token: 0x0601F79E RID: 128926 RVA: 0x0092E9D0 File Offset: 0x0092CBD0
+		// (set) Token: 0x0601F79F RID: 128927 RVA: 0x0092EA09 File Offset: 0x0092CC09
 		public TArray<SFloatThresholdAndCameraShake> 撞击震屏Z_第一人称
 		{
 			get
@@ -389,7 +389,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndCameraShake> result;
 				if ((result = this._撞击震屏Z_第一人称) == null)
 				{
-					result = (this._撞击震屏Z_第一人称 = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_19, this));
+					result = (this._撞击震屏Z_第一人称 = new TArray<SFloatThresholdAndCameraShake>(base.NativePtr + (IntPtr)BP_VehicleConfig_C.__PropertyOffset_撞击震屏Z_第一人称, this));
 				}
 				return result;
 			}
@@ -399,69 +399,69 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x06028E03 RID: 167427 RVA: 0x009B694F File Offset: 0x009B4B4F
+		// Token: 0x0601F7A0 RID: 128928 RVA: 0x0092EA17 File Offset: 0x0092CC17
 		protected BP_VehicleConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014E58 RID: 85592
+		// Token: 0x04010DFD RID: 69117
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/Vehicle/BP_VehicleConfig.BP_VehicleConfig_C";
 
-		// Token: 0x04014E59 RID: 85593
+		// Token: 0x04010DFE RID: 69118
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014E5A RID: 85594
+		// Token: 0x04010DFF RID: 69119
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014E5B RID: 85595
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010E00 RID: 69120
+		internal static int __PropertyOffset_载具出生Tag;
 
-		// Token: 0x04014E5C RID: 85596
+		// Token: 0x04010E01 RID: 69121
 		[Nullable(2)]
 		private FGameplayTagContainer _载具出生Tag;
 
-		// Token: 0x04014E5D RID: 85597
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010E02 RID: 69122
+		internal static int __PropertyOffset_载具乘坐期间Tag;
 
-		// Token: 0x04014E5E RID: 85598
+		// Token: 0x04010E03 RID: 69123
 		[Nullable(2)]
 		private FGameplayTagContainer _载具乘坐期间Tag;
 
-		// Token: 0x04014E5F RID: 85599
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010E04 RID: 69124
+		internal static int __PropertyOffset_角色乘坐期间Tag;
 
-		// Token: 0x04014E60 RID: 85600
+		// Token: 0x04010E05 RID: 69125
 		[Nullable(2)]
 		private FGameplayTagContainer _角色乘坐期间Tag;
 
-		// Token: 0x04014E61 RID: 85601
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010E06 RID: 69126
+		internal static int __PropertyOffset_弹射时间;
 
-		// Token: 0x04014E62 RID: 85602
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010E07 RID: 69127
+		internal static int __PropertyOffset_弹射高度;
 
-		// Token: 0x04014E63 RID: 85603
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010E08 RID: 69128
+		internal static int __PropertyOffset_打开滑翔伞延迟时间;
 
-		// Token: 0x04014E64 RID: 85604
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010E09 RID: 69129
+		internal static int __PropertyOffset_弹射时间路径曲线;
 
-		// Token: 0x04014E65 RID: 85605
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010E0A RID: 69130
+		internal static int __PropertyOffset_PreEnterEffect;
 
-		// Token: 0x04014E66 RID: 85606
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010E0B RID: 69131
+		internal static int __PropertyOffset_PostEnterEffect;
 
-		// Token: 0x04014E67 RID: 85607
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010E0C RID: 69132
+		internal static int __PropertyOffset_PreEnterMatEffect;
 
-		// Token: 0x04014E68 RID: 85608
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010E0D RID: 69133
+		internal static int __PropertyOffset_PostEnterMatEffect;
 
-		// Token: 0x04014E69 RID: 85609
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010E0E RID: 69134
+		internal static int __PropertyOffset_驾驶员同步Tag;
 
-		// Token: 0x04014E6A RID: 85610
+		// Token: 0x04010E0F RID: 69135
 		[Nullable(new byte[]
 		{
 			2,
@@ -469,10 +469,10 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 		})]
 		private TMap<FGameplayTag, SGameplayTagArray> _驾驶员同步Tag;
 
-		// Token: 0x04014E6B RID: 85611
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010E10 RID: 69136
+		internal static int __PropertyOffset_驾驶员同步Buff;
 
-		// Token: 0x04014E6C RID: 85612
+		// Token: 0x04010E11 RID: 69137
 		[Nullable(new byte[]
 		{
 			2,
@@ -480,13 +480,13 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 		})]
 		private TMap<FGameplayTag, SInt64Array> _驾驶员同步Buff;
 
-		// Token: 0x04014E6D RID: 85613
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010E12 RID: 69138
+		internal static int __PropertyOffset_前后输入映射曲线;
 
-		// Token: 0x04014E6E RID: 85614
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010E13 RID: 69139
+		internal static int __PropertyOffset_载具同步驾驶员Tag;
 
-		// Token: 0x04014E6F RID: 85615
+		// Token: 0x04010E14 RID: 69140
 		[Nullable(new byte[]
 		{
 			2,
@@ -494,10 +494,10 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 		})]
 		private TMap<FGameplayTag, SGameplayTagArray> _载具同步驾驶员Tag;
 
-		// Token: 0x04014E70 RID: 85616
-		internal static int __PropertyOffset_15;
+		// Token: 0x04010E15 RID: 69141
+		internal static int __PropertyOffset_撞击震屏;
 
-		// Token: 0x04014E71 RID: 85617
+		// Token: 0x04010E16 RID: 69142
 		[Nullable(new byte[]
 		{
 			2,
@@ -505,10 +505,10 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 		})]
 		private TArray<SFloatThresholdAndCameraShake> _撞击震屏;
 
-		// Token: 0x04014E72 RID: 85618
-		internal static int __PropertyOffset_16;
+		// Token: 0x04010E17 RID: 69143
+		internal static int __PropertyOffset_撞击震屏Z;
 
-		// Token: 0x04014E73 RID: 85619
+		// Token: 0x04010E18 RID: 69144
 		[Nullable(new byte[]
 		{
 			2,
@@ -516,13 +516,13 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 		})]
 		private TArray<SFloatThresholdAndCameraShake> _撞击震屏Z;
 
-		// Token: 0x04014E74 RID: 85620
-		internal static int __PropertyOffset_17;
+		// Token: 0x04010E19 RID: 69145
+		internal static int __PropertyOffset_震屏CD;
 
-		// Token: 0x04014E75 RID: 85621
-		internal static int __PropertyOffset_18;
+		// Token: 0x04010E1A RID: 69146
+		internal static int __PropertyOffset_撞击震屏_第一人称;
 
-		// Token: 0x04014E76 RID: 85622
+		// Token: 0x04010E1B RID: 69147
 		[Nullable(new byte[]
 		{
 			2,
@@ -530,10 +530,10 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 		})]
 		private TArray<SFloatThresholdAndCameraShake> _撞击震屏_第一人称;
 
-		// Token: 0x04014E77 RID: 85623
-		internal static int __PropertyOffset_19;
+		// Token: 0x04010E1C RID: 69148
+		internal static int __PropertyOffset_撞击震屏Z_第一人称;
 
-		// Token: 0x04014E78 RID: 85624
+		// Token: 0x04010E1D RID: 69149
 		[Nullable(new byte[]
 		{
 			2,

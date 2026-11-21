@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026D0 RID: 9936
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002994 RID: 10644
 	public class ITextStyle
 	{
-		// Token: 0x0600DE1D RID: 56861 RVA: 0x0020F65D File Offset: 0x0020D85D
+		// Token: 0x0600EBF9 RID: 60409 RVA: 0x0022BE9D File Offset: 0x0022A09D
 		public static ITextStyle Create(ITextStyle? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700423F RID: 16959
-		// (get) Token: 0x0600DE1E RID: 56862 RVA: 0x0020F67C File Offset: 0x0020D87C
+		// Token: 0x1700457F RID: 17791
+		// (get) Token: 0x0600EBFA RID: 60410 RVA: 0x0022BEBC File Offset: 0x0022A0BC
 		public virtual ICenterTextShowType ShowAnim
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004240 RID: 16960
-		// (get) Token: 0x0600DE1F RID: 56863 RVA: 0x0020F6AC File Offset: 0x0020D8AC
+		// Token: 0x17004580 RID: 17792
+		// (get) Token: 0x0600EBFB RID: 60411 RVA: 0x0022BEEC File Offset: 0x0022A0EC
 		public virtual EFontSize? FontSize
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004241 RID: 16961
-		// (get) Token: 0x0600DE20 RID: 56864 RVA: 0x0020F6E4 File Offset: 0x0020D8E4
+		// Token: 0x17004581 RID: 17793
+		// (get) Token: 0x0600EBFC RID: 60412 RVA: 0x0022BF24 File Offset: 0x0022A124
 		public virtual ETextAlign? TextAlign
 		{
 			get
@@ -66,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004242 RID: 16962
-		// (get) Token: 0x0600DE21 RID: 56865 RVA: 0x0020F71C File Offset: 0x0020D91C
+		// Token: 0x17004582 RID: 17794
+		// (get) Token: 0x0600EBFD RID: 60413 RVA: 0x0022BF5C File Offset: 0x0022A15C
 		public virtual ETextHorizontal? TextHorizontal
 		{
 			get
@@ -80,13 +77,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B4E RID: 31566
+		// Token: 0x040081EE RID: 33262
 		private ITextStyle Instance;
 
-		// Token: 0x04007B4F RID: 31567
+		// Token: 0x040081EF RID: 33263
 		private ICenterTextShowType _ShowAnimCache;
 
-		// Token: 0x04007B50 RID: 31568
+		// Token: 0x040081F0 RID: 33264
 		private bool _ShowAnimInited;
 	}
 }

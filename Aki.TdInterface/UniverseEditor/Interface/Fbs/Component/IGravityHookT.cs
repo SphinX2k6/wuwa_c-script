@@ -5,55 +5,55 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200532B RID: 21291
+	// Token: 0x020058B1 RID: 22705
 	public class IGravityHookT
 	{
-		// Token: 0x17009C5F RID: 40031
-		// (get) Token: 0x06022CE0 RID: 142560 RVA: 0x004D2A39 File Offset: 0x004D0C39
-		// (set) Token: 0x06022CE1 RID: 142561 RVA: 0x004D2A41 File Offset: 0x004D0C41
+		// Token: 0x1700A497 RID: 42135
+		// (get) Token: 0x06024D94 RID: 150932 RVA: 0x0050F90D File Offset: 0x0050DB0D
+		// (set) Token: 0x06024D95 RID: 150933 RVA: 0x0050F915 File Offset: 0x0050DB15
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x17009C60 RID: 40032
-		// (get) Token: 0x06022CE2 RID: 142562 RVA: 0x004D2A4A File Offset: 0x004D0C4A
-		// (set) Token: 0x06022CE3 RID: 142563 RVA: 0x004D2A52 File Offset: 0x004D0C52
+		// Token: 0x1700A498 RID: 42136
+		// (get) Token: 0x06024D96 RID: 150934 RVA: 0x0050F91E File Offset: 0x0050DB1E
+		// (set) Token: 0x06024D97 RID: 150935 RVA: 0x0050F926 File Offset: 0x0050DB26
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x17009C61 RID: 40033
-		// (get) Token: 0x06022CE4 RID: 142564 RVA: 0x004D2A5B File Offset: 0x004D0C5B
-		// (set) Token: 0x06022CE5 RID: 142565 RVA: 0x004D2A63 File Offset: 0x004D0C63
+		// Token: 0x1700A499 RID: 42137
+		// (get) Token: 0x06024D98 RID: 150936 RVA: 0x0050F92F File Offset: 0x0050DB2F
+		// (set) Token: 0x06024D99 RID: 150937 RVA: 0x0050F937 File Offset: 0x0050DB37
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x17009C62 RID: 40034
-		// (get) Token: 0x06022CE6 RID: 142566 RVA: 0x004D2A6C File Offset: 0x004D0C6C
-		// (set) Token: 0x06022CE7 RID: 142567 RVA: 0x004D2A74 File Offset: 0x004D0C74
+		// Token: 0x1700A49A RID: 42138
+		// (get) Token: 0x06024D9A RID: 150938 RVA: 0x0050F940 File Offset: 0x0050DB40
+		// (set) Token: 0x06024D9B RID: 150939 RVA: 0x0050F948 File Offset: 0x0050DB48
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x17009C63 RID: 40035
-		// (get) Token: 0x06022CE8 RID: 142568 RVA: 0x004D2A7D File Offset: 0x004D0C7D
-		// (set) Token: 0x06022CE9 RID: 142569 RVA: 0x004D2A85 File Offset: 0x004D0C85
+		// Token: 0x1700A49B RID: 42139
+		// (get) Token: 0x06024D9C RID: 150940 RVA: 0x0050F951 File Offset: 0x0050DB51
+		// (set) Token: 0x06024D9D RID: 150941 RVA: 0x0050F959 File Offset: 0x0050DB59
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x17009C64 RID: 40036
-		// (get) Token: 0x06022CEA RID: 142570 RVA: 0x004D2A8E File Offset: 0x004D0C8E
-		// (set) Token: 0x06022CEB RID: 142571 RVA: 0x004D2A96 File Offset: 0x004D0C96
+		// Token: 0x1700A49C RID: 42140
+		// (get) Token: 0x06024D9E RID: 150942 RVA: 0x0050F962 File Offset: 0x0050DB62
+		// (set) Token: 0x06024D9F RID: 150943 RVA: 0x0050F96A File Offset: 0x0050DB6A
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x17009C65 RID: 40037
-		// (get) Token: 0x06022CEC RID: 142572 RVA: 0x004D2A9F File Offset: 0x004D0C9F
-		// (set) Token: 0x06022CED RID: 142573 RVA: 0x004D2AA7 File Offset: 0x004D0CA7
+		// Token: 0x1700A49D RID: 42141
+		// (get) Token: 0x06024DA0 RID: 150944 RVA: 0x0050F973 File Offset: 0x0050DB73
+		// (set) Token: 0x06024DA1 RID: 150945 RVA: 0x0050F97B File Offset: 0x0050DB7B
 		public int SafePointId { get; set; }
 
-		// Token: 0x17009C66 RID: 40038
-		// (get) Token: 0x06022CEE RID: 142574 RVA: 0x004D2AB0 File Offset: 0x004D0CB0
-		// (set) Token: 0x06022CEF RID: 142575 RVA: 0x004D2AB8 File Offset: 0x004D0CB8
+		// Token: 0x1700A49E RID: 42142
+		// (get) Token: 0x06024DA2 RID: 150946 RVA: 0x0050F984 File Offset: 0x0050DB84
+		// (set) Token: 0x06024DA3 RID: 150947 RVA: 0x0050F98C File Offset: 0x0050DB8C
 		public int CameraLookAtPointId { get; set; }
 
-		// Token: 0x17009C67 RID: 40039
-		// (get) Token: 0x06022CF0 RID: 142576 RVA: 0x004D2AC1 File Offset: 0x004D0CC1
-		// (set) Token: 0x06022CF1 RID: 142577 RVA: 0x004D2AC9 File Offset: 0x004D0CC9
+		// Token: 0x1700A49F RID: 42143
+		// (get) Token: 0x06024DA4 RID: 150948 RVA: 0x0050F995 File Offset: 0x0050DB95
+		// (set) Token: 0x06024DA5 RID: 150949 RVA: 0x0050F99D File Offset: 0x0050DB9D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022CF2 RID: 142578 RVA: 0x004D2AD4 File Offset: 0x004D0CD4
+		// Token: 0x06024DA6 RID: 150950 RVA: 0x0050F9A8 File Offset: 0x0050DBA8
 		public IGravityHookT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

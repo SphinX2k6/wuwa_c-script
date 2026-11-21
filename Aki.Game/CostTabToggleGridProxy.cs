@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001869 RID: 6249
+// Token: 0x02000D22 RID: 3362
 public class CostTabToggleGridProxy : GridProxyAbstract<int>
 {
-	// Token: 0x0600B754 RID: 46932 RVA: 0x00297170 File Offset: 0x00295370
+	// Token: 0x06008B3D RID: 35645 RVA: 0x002A1894 File Offset: 0x0029FA94
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,7 +31,7 @@ public class CostTabToggleGridProxy : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B755 RID: 46933 RVA: 0x00297237 File Offset: 0x00295437
+	// Token: 0x06008B3E RID: 35646 RVA: 0x002A195B File Offset: 0x0029FB5B
 	private void OnToggleChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && this.ToggleFunction != null)
@@ -40,7 +40,7 @@ public class CostTabToggleGridProxy : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600B756 RID: 46934 RVA: 0x00297258 File Offset: 0x00295458
+	// Token: 0x06008B3F RID: 35647 RVA: 0x002A197C File Offset: 0x0029FB7C
 	public override void Refresh(int cost, bool isSelected, int gridIndex)
 	{
 		this.Cost = cost;
@@ -57,14 +57,14 @@ public class CostTabToggleGridProxy : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600B757 RID: 46935 RVA: 0x002972AA File Offset: 0x002954AA
+	// Token: 0x06008B40 RID: 35648 RVA: 0x002A19CE File Offset: 0x0029FBCE
 	[NullableContext(1)]
 	public void SetToggleFunction(TCostTabToggleFunction func)
 	{
 		this.ToggleFunction = func;
 	}
 
-	// Token: 0x0600B758 RID: 46936 RVA: 0x002972B4 File Offset: 0x002954B4
+	// Token: 0x06008B41 RID: 35649 RVA: 0x002A19D8 File Offset: 0x0029FBD8
 	public void SetSelectedState(bool isSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -74,7 +74,7 @@ public class CostTabToggleGridProxy : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600B759 RID: 46937 RVA: 0x002972E0 File Offset: 0x002954E0
+	// Token: 0x06008B42 RID: 35650 RVA: 0x002A1A04 File Offset: 0x0029FC04
 	public void SetMarkVisible(bool visible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -84,7 +84,7 @@ public class CostTabToggleGridProxy : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x040052B9 RID: 21177
+	// Token: 0x04005364 RID: 21348
 	[Nullable(1)]
 	public Dictionary<int, string> visionRefineCostTextIdRecord = new Dictionary<int, string>
 	{
@@ -102,23 +102,23 @@ public class CostTabToggleGridProxy : GridProxyAbstract<int>
 		}
 	};
 
-	// Token: 0x040052BA RID: 21178
+	// Token: 0x04005365 RID: 21349
 	[Nullable(2)]
 	private TCostTabToggleFunction ToggleFunction;
 
-	// Token: 0x040052BB RID: 21179
+	// Token: 0x04005366 RID: 21350
 	public int Cost;
 
-	// Token: 0x02007E2C RID: 32300
+	// Token: 0x02006FB3 RID: 28595
 	private class ECostTabToggleDefine
 	{
-		// Token: 0x040294B4 RID: 169140
+		// Token: 0x040247E1 RID: 149473
 		public const int Toggle = 0;
 
-		// Token: 0x040294B5 RID: 169141
+		// Token: 0x040247E2 RID: 149474
 		public const int TabText = 1;
 
-		// Token: 0x040294B6 RID: 169142
+		// Token: 0x040247E3 RID: 149475
 		public const int ItemChecked = 2;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067A8 RID: 26536
+	// Token: 0x020056F8 RID: 22264
 	public class DangoBrawlLevelViewOpenData
 	{
-		// Token: 0x04022846 RID: 141382
+		// Token: 0x0401D0A3 RID: 118947
 		public int? LevelId;
 
-		// Token: 0x04022847 RID: 141383
+		// Token: 0x0401D0A4 RID: 118948
 		public bool? IsNormalMode;
 
-		// Token: 0x04022848 RID: 141384
+		// Token: 0x0401D0A5 RID: 118949
 		public bool IfReturnToMainView;
 	}
 }

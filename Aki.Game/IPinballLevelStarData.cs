@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020013F2 RID: 5106
+// Token: 0x020008A6 RID: 2214
 [NullableContext(2)]
 public interface IPinballLevelStarData
 {
-	// Token: 0x17000C17 RID: 3095
-	// (get) Token: 0x0600904B RID: 36939
-	// (set) Token: 0x0600904C RID: 36940
+	// Token: 0x17000C37 RID: 3127
+	// (get) Token: 0x060063E0 RID: 25568
+	// (set) Token: 0x060063E1 RID: 25569
 	int ConditionId { get; set; }
 
-	// Token: 0x17000C18 RID: 3096
-	// (get) Token: 0x0600904D RID: 36941
-	// (set) Token: 0x0600904E RID: 36942
+	// Token: 0x17000C38 RID: 3128
+	// (get) Token: 0x060063E2 RID: 25570
+	// (set) Token: 0x060063E3 RID: 25571
 	bool Passed { get; set; }
 
-	// Token: 0x17000C19 RID: 3097
-	// (get) Token: 0x0600904F RID: 36943
-	// (set) Token: 0x06009050 RID: 36944
+	// Token: 0x17000C39 RID: 3129
+	// (get) Token: 0x060063E4 RID: 25572
+	// (set) Token: 0x060063E5 RID: 25573
 	string ConfigConditionDesc { get; set; }
 
-	// Token: 0x17000C1A RID: 3098
-	// (get) Token: 0x06009051 RID: 36945
-	// (set) Token: 0x06009052 RID: 36946
+	// Token: 0x17000C3A RID: 3130
+	// (get) Token: 0x060063E6 RID: 25574
+	// (set) Token: 0x060063E7 RID: 25575
 	int? ConfigTargetValue { get; set; }
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x02005779 RID: 22393
+	// Token: 0x02004750 RID: 18256
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 	})]
 	internal class WeaponAttrInfoItem : SyncGridProxyAbstract<IKurotatoAttrDisplay>
 	{
-		// Token: 0x06038E48 RID: 233032 RVA: 0x00D85A98 File Offset: 0x00D83C98
+		// Token: 0x0602DD58 RID: 187736 RVA: 0x00CD4758 File Offset: 0x00CD2958
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038E49 RID: 233033 RVA: 0x00D85B04 File Offset: 0x00D83D04
+		// Token: 0x0602DD59 RID: 187737 RVA: 0x00CD47C4 File Offset: 0x00CD29C4
 		[NullableContext(1)]
 		public override void Refresh(IKurotatoAttrDisplay data)
 		{
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			base.GetText(1).SetText(data.Text, true);
 		}
 
-		// Token: 0x0200B996 RID: 47510
+		// Token: 0x0200A3AE RID: 41902
 		private class EWeaponAttrInfoComp
 		{
-			// Token: 0x040381E9 RID: 229865
+			// Token: 0x04032BDE RID: 207838
 			public const int TextTitle = 0;
 
-			// Token: 0x040381EA RID: 229866
+			// Token: 0x04032BDF RID: 207839
 			public const int ItemAttrInfo = 1;
 		}
 	}

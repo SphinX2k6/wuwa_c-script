@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD8 RID: 19928
+	// Token: 0x02003DA1 RID: 15777
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikePopularEntriesDescPanel : UiPanelBase
 	{
-		// Token: 0x0603370D RID: 210701 RVA: 0x00C044F0 File Offset: 0x00C026F0
+		// Token: 0x06028578 RID: 165240 RVA: 0x00B4DA00 File Offset: 0x00B4BC00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603370E RID: 210702 RVA: 0x00C0461C File Offset: 0x00C0281C
+		// Token: 0x06028579 RID: 165241 RVA: 0x00B4DB2C File Offset: 0x00B4BD2C
 		protected override void OnStart()
 		{
 			this.DescLayout = new GenericScrollViewNew<RoguelikePopularEntryDesc, int>(base.GetScrollViewWithScrollbar(0), new Func<RoguelikePopularEntryDesc>(this.CreateDescItem), null, false, null);
 		}
 
-		// Token: 0x0603370F RID: 210703 RVA: 0x00C04640 File Offset: 0x00C02840
+		// Token: 0x0602857A RID: 165242 RVA: 0x00B4DB50 File Offset: 0x00B4BD50
 		public UniTask Init(RoguelikeEntranceViewModel vm)
 		{
 			RoguelikePopularEntriesDescPanel.<Init>d__5 <Init>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033710 RID: 210704 RVA: 0x00C0468C File Offset: 0x00C0288C
+		// Token: 0x0602857B RID: 165243 RVA: 0x00B4DB9C File Offset: 0x00B4BD9C
 		public void Refresh(RoguelikeEntranceViewModel vm)
 		{
 			GenericScrollViewNew<RoguelikePopularEntryDesc, int> descLayout = this.DescLayout;
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetButton(4).SetSelfInteractive(vm.IsAddMultiplierAvailable);
 		}
 
-		// Token: 0x06033711 RID: 210705 RVA: 0x00C047EC File Offset: 0x00C029EC
+		// Token: 0x0602857C RID: 165244 RVA: 0x00B4DCFC File Offset: 0x00B4BEFC
 		private RoguelikePopularEntryDesc CreateDescItem()
 		{
 			return new RoguelikePopularEntryDesc();
 		}
 
-		// Token: 0x06033712 RID: 210706 RVA: 0x00C047F3 File Offset: 0x00C029F3
+		// Token: 0x0602857D RID: 165245 RVA: 0x00B4DD03 File Offset: 0x00B4BF03
 		private void OnClickReduce()
 		{
 			Action<bool> onMultiplierChange = this.OnMultiplierChange;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onMultiplierChange(false);
 		}
 
-		// Token: 0x06033713 RID: 210707 RVA: 0x00C04806 File Offset: 0x00C02A06
+		// Token: 0x0602857E RID: 165246 RVA: 0x00B4DD16 File Offset: 0x00B4BF16
 		private void OnClickAdd()
 		{
 			Action<bool> onMultiplierChange = this.OnMultiplierChange;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onMultiplierChange(true);
 		}
 
-		// Token: 0x0401B4EC RID: 111852
+		// Token: 0x04015EBF RID: 89791
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,27 +140,27 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericScrollViewNew<RoguelikePopularEntryDesc, int> DescLayout;
 
-		// Token: 0x0401B4ED RID: 111853
+		// Token: 0x04015EC0 RID: 89792
 		[Nullable(2)]
 		public Action<bool> OnMultiplierChange;
 
-		// Token: 0x0200AF5A RID: 44890
+		// Token: 0x0200998F RID: 39311
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x040353E1 RID: 218081
+			// Token: 0x0402FE14 RID: 196116
 			public const int ScrollViewEntryDesc = 0;
 
-			// Token: 0x040353E2 RID: 218082
+			// Token: 0x0402FE15 RID: 196117
 			public const int EntryDesc = 1;
 
-			// Token: 0x040353E3 RID: 218083
+			// Token: 0x0402FE16 RID: 196118
 			public const int TxtMultiplier = 2;
 
-			// Token: 0x040353E4 RID: 218084
+			// Token: 0x0402FE17 RID: 196119
 			public const int BtnReduce = 3;
 
-			// Token: 0x040353E5 RID: 218085
+			// Token: 0x0402FE18 RID: 196120
 			public const int BtnAdd = 4;
 		}
 	}

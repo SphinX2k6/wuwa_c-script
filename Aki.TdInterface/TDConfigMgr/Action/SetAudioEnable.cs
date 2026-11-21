@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200219B RID: 8603
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002406 RID: 9222
 	public class SetAudioEnable : ActionParams
 	{
-		// Token: 0x0600BCF4 RID: 48372 RVA: 0x001B3558 File Offset: 0x001B1758
+		// Token: 0x0600C8AE RID: 51374 RVA: 0x001CAB90 File Offset: 0x001C8D90
 		private SetAudioEnable_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCF5 RID: 48373 RVA: 0x001B3590 File Offset: 0x001B1790
+		// Token: 0x0600C8AF RID: 51375 RVA: 0x001CABC8 File Offset: 0x001C8DC8
 		public static SetAudioEnable Create([Nullable(2)] SetAudioEnable instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCF6 RID: 48374 RVA: 0x001B35A3 File Offset: 0x001B17A3
+		// Token: 0x0600C8B0 RID: 51376 RVA: 0x001CABDB File Offset: 0x001C8DDB
 		public static SetAudioEnable CreateFromSetValue([Nullable(2)] SetAudioEnable_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCF7 RID: 48375 RVA: 0x001B35B6 File Offset: 0x001B17B6
+		// Token: 0x0600C8B1 RID: 51377 RVA: 0x001CABEE File Offset: 0x001C8DEE
 		public SetAudioEnable_SetValue ToSetValue()
 		{
 			return new SetAudioEnable_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003972 RID: 14706
-		// (get) Token: 0x0600BCF8 RID: 48376 RVA: 0x001B35D5 File Offset: 0x001B17D5
-		// (set) Token: 0x0600BCF9 RID: 48377 RVA: 0x001B3600 File Offset: 0x001B1800
+		// Token: 0x17003C66 RID: 15462
+		// (get) Token: 0x0600C8B2 RID: 51378 RVA: 0x001CAC0D File Offset: 0x001C8E0D
+		// (set) Token: 0x0600C8B3 RID: 51379 RVA: 0x001CAC38 File Offset: 0x001C8E38
 		public virtual EAudioEnableType SetAudioEnableType
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003973 RID: 14707
-		// (get) Token: 0x0600BCFA RID: 48378 RVA: 0x001B3610 File Offset: 0x001B1810
-		// (set) Token: 0x0600BCFB RID: 48379 RVA: 0x001B3671 File Offset: 0x001B1871
+		// Token: 0x17003C67 RID: 15463
+		// (get) Token: 0x0600C8B4 RID: 51380 RVA: 0x001CAC48 File Offset: 0x001C8E48
+		// (set) Token: 0x0600C8B5 RID: 51381 RVA: 0x001CACA9 File Offset: 0x001C8EA9
 		public virtual IRoleSceneVoice AudioType
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070C7 RID: 28871
+		// Token: 0x0400770F RID: 30479
 		[Nullable(2)]
 		protected new SetAudioEnable FbInstance;
 
-		// Token: 0x040070C8 RID: 28872
+		// Token: 0x04007710 RID: 30480
 		[Nullable(2)]
 		protected SetAudioEnable_SetValue PocoInterface;
 
-		// Token: 0x040070C9 RID: 28873
+		// Token: 0x04007711 RID: 30481
 		private IRoleSceneVoice _AudioTypeCache;
 
-		// Token: 0x040070CA RID: 28874
+		// Token: 0x04007712 RID: 30482
 		private bool _AudioTypeInited;
 	}
 }

@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B17 RID: 23319
+	// Token: 0x02004AF8 RID: 19192
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CookLevelView : UiViewBase
 	{
-		// Token: 0x0603B078 RID: 241784 RVA: 0x00E1274F File Offset: 0x00E1094F
+		// Token: 0x0602FFEA RID: 196586 RVA: 0x00D63468 File Offset: 0x00D61668
 		public CookLevelView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B079 RID: 241785 RVA: 0x00E12780 File Offset: 0x00E10980
+		// Token: 0x0602FFEB RID: 196587 RVA: 0x00D63498 File Offset: 0x00D61698
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B07A RID: 241786 RVA: 0x00E129B9 File Offset: 0x00E10BB9
+		// Token: 0x0602FFEC RID: 196588 RVA: 0x00D636D1 File Offset: 0x00D618D1
 		protected override void OnBeforeDestroy()
 		{
 			this.DisableRedDot();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.StarLayout.ClearChildren();
 		}
 
-		// Token: 0x0603B07B RID: 241787 RVA: 0x00E129E8 File Offset: 0x00E10BE8
+		// Token: 0x0602FFED RID: 196589 RVA: 0x00D63700 File Offset: 0x00D61900
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CookLevelView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B07C RID: 241788 RVA: 0x00E12A2C File Offset: 0x00E10C2C
+		// Token: 0x0602FFEE RID: 196590 RVA: 0x00D63744 File Offset: 0x00D61944
 		protected override void OnStart()
 		{
 			this.RewardItemLayout = new GenericLayout<LevelRewardItem, IRewardData>(base.GetHorizontalLayout(7), this.InitReward, null, false, true);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.OnShowRedDot();
 		}
 
-		// Token: 0x0603B07D RID: 241789 RVA: 0x00E12ACB File Offset: 0x00E10CCB
+		// Token: 0x0602FFEF RID: 196591 RVA: 0x00D637E3 File Offset: 0x00D619E3
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshConfirmButton();
 		}
 
-		// Token: 0x0603B07E RID: 241790 RVA: 0x00E12AF0 File Offset: 0x00E10CF0
+		// Token: 0x0602FFF0 RID: 196592 RVA: 0x00D63808 File Offset: 0x00D61A08
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -149,44 +149,44 @@ namespace CSharpScript.Game.Module.Cook.View
 			return null;
 		}
 
-		// Token: 0x0603B07F RID: 241791 RVA: 0x00E12B42 File Offset: 0x00E10D42
+		// Token: 0x0602FFF1 RID: 196593 RVA: 0x00D6385A File Offset: 0x00D61A5A
 		private void OnShowRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.CookerLevelMain, this.ConfirmItem.GetRedDot(), null, 0);
 		}
 
-		// Token: 0x0603B080 RID: 241792 RVA: 0x00E12B5D File Offset: 0x00E10D5D
+		// Token: 0x0602FFF2 RID: 196594 RVA: 0x00D63875 File Offset: 0x00D61A75
 		public void DisableRedDot()
 		{
 			RedDotController.Instance.UnBindRedDot(ERedDotName.CookerLevelMain);
 		}
 
-		// Token: 0x0603B081 RID: 241793 RVA: 0x00E12B6B File Offset: 0x00E10D6B
+		// Token: 0x0602FFF3 RID: 196595 RVA: 0x00D63883 File Offset: 0x00D61A83
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.UpgradeCookerLevel, new Action(this.ShowRewardView));
 		}
 
-		// Token: 0x0603B082 RID: 241794 RVA: 0x00E12B89 File Offset: 0x00E10D89
+		// Token: 0x0602FFF4 RID: 196596 RVA: 0x00D638A1 File Offset: 0x00D61AA1
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.UpgradeCookerLevel, new Action(this.ShowRewardView));
 		}
 
-		// Token: 0x0603B083 RID: 241795 RVA: 0x00E12BA7 File Offset: 0x00E10DA7
+		// Token: 0x0602FFF5 RID: 196597 RVA: 0x00D638BF File Offset: 0x00D61ABF
 		public void ShowView()
 		{
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603B084 RID: 241796 RVA: 0x00E12BB0 File Offset: 0x00E10DB0
+		// Token: 0x0602FFF6 RID: 196598 RVA: 0x00D638C8 File Offset: 0x00D61AC8
 		private void Update()
 		{
 			CookModel.Instance.SelectedCookerLevel = CookModel.Instance.GetCookerInfo().CookingLevel;
 			this.Refresh();
 		}
 
-		// Token: 0x0603B085 RID: 241797 RVA: 0x00E12BD1 File Offset: 0x00E10DD1
+		// Token: 0x0602FFF7 RID: 196599 RVA: 0x00D638E9 File Offset: 0x00D61AE9
 		private void ShowRewardView()
 		{
 			if (this.TmpRewardItem.Count == 0)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.Update();
 		}
 
-		// Token: 0x0603B086 RID: 241798 RVA: 0x00E12BE7 File Offset: 0x00E10DE7
+		// Token: 0x0602FFF8 RID: 196600 RVA: 0x00D638FF File Offset: 0x00D61AFF
 		private void Refresh()
 		{
 			this.RefreshTypeIconTexture();
@@ -211,14 +211,14 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshRewardItem();
 		}
 
-		// Token: 0x0603B087 RID: 241799 RVA: 0x00E12C28 File Offset: 0x00E10E28
+		// Token: 0x0602FFF9 RID: 196601 RVA: 0x00D63940 File Offset: 0x00D61B40
 		private void RefreshTypeIconTexture()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_CookingType");
 			base.SetTextureByPath(resourcePath, base.GetTexture(9), null, null);
 		}
 
-		// Token: 0x0603B088 RID: 241800 RVA: 0x00E12C60 File Offset: 0x00E10E60
+		// Token: 0x0602FFFA RID: 196602 RVA: 0x00D63978 File Offset: 0x00D61B78
 		private void RefreshName()
 		{
 			CookLevel cookLevelByLevel = CookModel.Instance.GetCookLevelByLevel(CookModel.Instance.SelectedCookerLevel);
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(0).SetText(localText, true);
 		}
 
-		// Token: 0x0603B089 RID: 241801 RVA: 0x00E12CA4 File Offset: 0x00E10EA4
+		// Token: 0x0602FFFB RID: 196603 RVA: 0x00D639BC File Offset: 0x00D61BBC
 		private void RefreshInfo()
 		{
 			CookLevel cookLevelByLevel = CookModel.Instance.GetCookLevelByLevel(CookModel.Instance.SelectedCookerLevel);
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(1).SetText(localText, true);
 		}
 
-		// Token: 0x0603B08A RID: 241802 RVA: 0x00E12CE8 File Offset: 0x00E10EE8
+		// Token: 0x0602FFFC RID: 196604 RVA: 0x00D63A00 File Offset: 0x00D61C00
 		private void RefreshLevel()
 		{
 			int cookerMaxLevel = CookModel.Instance.GetCookerMaxLevel();
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.StarLayout.RebuildLayoutByDataNew<bool>(list, null);
 		}
 
-		// Token: 0x0603B08B RID: 241803 RVA: 0x00E12D58 File Offset: 0x00E10F58
+		// Token: 0x0602FFFD RID: 196605 RVA: 0x00D63A70 File Offset: 0x00D61C70
 		private void RefreshSumExp()
 		{
 			int totalProficiencys = CookModel.Instance.GetCookerInfo().TotalProficiencys;
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(2).SetText(newText, true);
 		}
 
-		// Token: 0x0603B08C RID: 241804 RVA: 0x00E12DEC File Offset: 0x00E10FEC
+		// Token: 0x0602FFFE RID: 196606 RVA: 0x00D63B04 File Offset: 0x00D61D04
 		private void RefreshExpBarSprite()
 		{
 			int totalProficiencys = CookModel.Instance.GetCookerInfo().TotalProficiencys;
@@ -281,13 +281,13 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetSprite(3).SetFillAmount((float)num);
 		}
 
-		// Token: 0x0603B08D RID: 241805 RVA: 0x00E12E56 File Offset: 0x00E11056
+		// Token: 0x0602FFFF RID: 196607 RVA: 0x00D63B6E File Offset: 0x00D61D6E
 		private void RefreshConfirmButton()
 		{
 			this.ConfirmItem.SetEnable();
 		}
 
-		// Token: 0x0603B08E RID: 241806 RVA: 0x00E12E64 File Offset: 0x00E11064
+		// Token: 0x06030000 RID: 196608 RVA: 0x00D63B7C File Offset: 0x00D61D7C
 		private void RefreshRewardList()
 		{
 			this.TmpRewardItem.Clear();
@@ -320,40 +320,40 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RewardItemLayout.RefreshByData(this.TmpRewardItem, null, false);
 		}
 
-		// Token: 0x0603B08F RID: 241807 RVA: 0x00E12F7C File Offset: 0x00E1117C
+		// Token: 0x06030001 RID: 196609 RVA: 0x00D63C94 File Offset: 0x00D61E94
 		private void RefreshLeftAndRightButtonEnable()
 		{
 			((base.GetButton(5).GetOwner() as AUIBaseActor).GetComponentByClass(UUIItem.StaticClass()) as UUIItem).SetUIActive(CookModel.Instance.SelectedCookerLevel != 1);
 			((base.GetButton(6).GetOwner() as AUIBaseActor).GetComponentByClass(UUIItem.StaticClass()) as UUIItem).SetUIActive(CookModel.Instance.SelectedCookerLevel != CookModel.Instance.GetCookerMaxLevel());
 		}
 
-		// Token: 0x0603B090 RID: 241808 RVA: 0x00E13006 File Offset: 0x00E11206
+		// Token: 0x06030002 RID: 196610 RVA: 0x00D63D1E File Offset: 0x00D61F1E
 		private void RefreshRewardItem()
 		{
 			base.GetItem(10).SetUIActive(CookModel.Instance.SelectedCookerLevel != CookModel.Instance.GetCookerMaxLevel());
 		}
 
-		// Token: 0x0603B091 RID: 241809 RVA: 0x00E1302E File Offset: 0x00E1122E
+		// Token: 0x06030003 RID: 196611 RVA: 0x00D63D46 File Offset: 0x00D61F46
 		private void OnClick()
 		{
 			CookController.Instance.SendCertificateLevelRewardRequest();
 		}
 
-		// Token: 0x0603B092 RID: 241810 RVA: 0x00E1303A File Offset: 0x00E1123A
+		// Token: 0x06030004 RID: 196612 RVA: 0x00D63D52 File Offset: 0x00D61F52
 		private void OnLeft()
 		{
 			CookModel.Instance.SelectedCookerLevel--;
 			this.Refresh();
 		}
 
-		// Token: 0x0603B093 RID: 241811 RVA: 0x00E13054 File Offset: 0x00E11254
+		// Token: 0x06030005 RID: 196613 RVA: 0x00D63D6C File Offset: 0x00D61F6C
 		private void OnRight()
 		{
 			CookModel.Instance.SelectedCookerLevel++;
 			this.Refresh();
 		}
 
-		// Token: 0x0401ECB0 RID: 126128
+		// Token: 0x0401976C RID: 104300
 		[Nullable(new byte[]
 		{
 			2,
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private GenericLayout<LevelRewardItem, IRewardData> RewardItemLayout;
 
-		// Token: 0x0401ECB1 RID: 126129
+		// Token: 0x0401976D RID: 104301
 		[Nullable(new byte[]
 		{
 			2,
@@ -370,11 +370,11 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private List<IRewardData> TmpRewardItem;
 
-		// Token: 0x0401ECB2 RID: 126130
+		// Token: 0x0401976E RID: 104302
 		[Nullable(2)]
 		private ConfirmItem ConfirmItem;
 
-		// Token: 0x0401ECB3 RID: 126131
+		// Token: 0x0401976F RID: 104303
 		[Nullable(new byte[]
 		{
 			2,
@@ -382,38 +382,38 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private GenericLayoutNew<StarItem> StarLayout;
 
-		// Token: 0x0401ECB4 RID: 126132
+		// Token: 0x04019770 RID: 104304
 		private readonly Func<LevelRewardItem> InitReward = () => new LevelRewardItem();
 
-		// Token: 0x0200BD51 RID: 48465
+		// Token: 0x0200A75A RID: 42842
 		[NullableContext(0)]
 		public enum ECookLevelDefine
 		{
-			// Token: 0x0403918F RID: 233871
+			// Token: 0x04033B5B RID: 211803
 			NameText,
-			// Token: 0x04039190 RID: 233872
+			// Token: 0x04033B5C RID: 211804
 			InfoText,
-			// Token: 0x04039191 RID: 233873
+			// Token: 0x04033B5D RID: 211805
 			SumExpText,
-			// Token: 0x04039192 RID: 233874
+			// Token: 0x04033B5E RID: 211806
 			ExpBarSprite,
-			// Token: 0x04039193 RID: 233875
+			// Token: 0x04033B5F RID: 211807
 			ConfirmItem,
-			// Token: 0x04039194 RID: 233876
+			// Token: 0x04033B60 RID: 211808
 			LeftButton,
-			// Token: 0x04039195 RID: 233877
+			// Token: 0x04033B61 RID: 211809
 			RightButton,
-			// Token: 0x04039196 RID: 233878
+			// Token: 0x04033B62 RID: 211810
 			RewardItemHorizontalLayout,
-			// Token: 0x04039197 RID: 233879
+			// Token: 0x04033B63 RID: 211811
 			RewardLayoutItem,
-			// Token: 0x04039198 RID: 233880
+			// Token: 0x04033B64 RID: 211812
 			TypeIconTexture,
-			// Token: 0x04039199 RID: 233881
+			// Token: 0x04033B65 RID: 211813
 			RewardItem,
-			// Token: 0x0403919A RID: 233882
+			// Token: 0x04033B66 RID: 211814
 			PnlStar,
-			// Token: 0x0403919B RID: 233883
+			// Token: 0x04033B67 RID: 211815
 			TxtConfirm
 		}
 	}

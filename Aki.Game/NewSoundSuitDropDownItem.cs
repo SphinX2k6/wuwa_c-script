@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020016A5 RID: 5797
+// Token: 0x02000B5D RID: 2909
 public class NewSoundSuitDropDownItem : DropDownItemBase<int>
 {
-	// Token: 0x0600A56F RID: 42351 RVA: 0x0024F924 File Offset: 0x0024DB24
+	// Token: 0x0600794F RID: 31055 RVA: 0x00259D38 File Offset: 0x00257F38
 	[NullableContext(1)]
 	public NewSoundSuitDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0600A570 RID: 42352 RVA: 0x0024F930 File Offset: 0x0024DB30
+	// Token: 0x06007950 RID: 31056 RVA: 0x00259D44 File Offset: 0x00257F44
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,7 +35,7 @@ public class NewSoundSuitDropDownItem : DropDownItemBase<int>
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x0600A571 RID: 42353 RVA: 0x0024FA07 File Offset: 0x0024DC07
+	// Token: 0x06007951 RID: 31057 RVA: 0x00259E1B File Offset: 0x0025801B
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(4);
@@ -51,14 +51,14 @@ public class NewSoundSuitDropDownItem : DropDownItemBase<int>
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600A572 RID: 42354 RVA: 0x0024FA2E File Offset: 0x0024DC2E
+	// Token: 0x06007952 RID: 31058 RVA: 0x00259E42 File Offset: 0x00258042
 	[NullableContext(2)]
 	protected override UUIExtendToggle GetDropDownToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600A573 RID: 42355 RVA: 0x0024FA38 File Offset: 0x0024DC38
+	// Token: 0x06007953 RID: 31059 RVA: 0x00259E4C File Offset: 0x0025804C
 	protected override void OnShowDropDownItemBase(int data)
 	{
 		this.VisionFetterSuitItem = new VisionFetterSuitItem(base.GetItem(2));
@@ -82,7 +82,7 @@ public class NewSoundSuitDropDownItem : DropDownItemBase<int>
 		this.VisionFetterSuitItem.SetActive(flag);
 	}
 
-	// Token: 0x0600A574 RID: 42356 RVA: 0x0024FAF7 File Offset: 0x0024DCF7
+	// Token: 0x06007954 RID: 31060 RVA: 0x00259F0B File Offset: 0x0025810B
 	protected override void OnBeforeDestroy()
 	{
 		VisionFetterSuitItem visionFetterSuitItem = this.VisionFetterSuitItem;
@@ -93,22 +93,22 @@ public class NewSoundSuitDropDownItem : DropDownItemBase<int>
 		visionFetterSuitItem.Destroy(null);
 	}
 
-	// Token: 0x04004AD6 RID: 19158
+	// Token: 0x04004B7D RID: 19325
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02007C7C RID: 31868
+	// Token: 0x02006E01 RID: 28161
 	private enum EComponent
 	{
-		// Token: 0x04028D82 RID: 167298
+		// Token: 0x040240AB RID: 147627
 		TogOption,
-		// Token: 0x04028D83 RID: 167299
+		// Token: 0x040240AC RID: 147628
 		TxtOption,
-		// Token: 0x04028D84 RID: 167300
+		// Token: 0x040240AD RID: 147629
 		SuitElementItem,
-		// Token: 0x04028D85 RID: 167301
+		// Token: 0x040240AE RID: 147630
 		CurrentNumText,
-		// Token: 0x04028D86 RID: 167302
+		// Token: 0x040240AF RID: 147631
 		LikeItem
 	}
 }

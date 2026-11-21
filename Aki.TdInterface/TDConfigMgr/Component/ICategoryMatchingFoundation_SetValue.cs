@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000224 RID: 548
+	// Token: 0x0200024B RID: 587
 	public class ICategoryMatchingFoundation_SetValue
 	{
-		// Token: 0x040009CA RID: 2506
+		// Token: 0x04000A54 RID: 2644
 		public EItemFoundation Type;
 
-		// Token: 0x040009CB RID: 2507
+		// Token: 0x04000A55 RID: 2645
 		public int? InitMatchEntity;
 
-		// Token: 0x040009CC RID: 2508
-		[Nullable(1)]
+		// Token: 0x04000A56 RID: 2646
 		public List<ICategoryMatchingConfig> MatchingConfigs;
 	}
 }

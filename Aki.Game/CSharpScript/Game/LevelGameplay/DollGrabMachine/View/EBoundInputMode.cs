@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EDD RID: 28381
+	// Token: 0x0200605D RID: 24669
 	internal enum EBoundInputMode
 	{
-		// Token: 0x0402400D RID: 147469
+		// Token: 0x0401F2C0 RID: 127680
 		None,
-		// Token: 0x0402400E RID: 147470
+		// Token: 0x0401F2C1 RID: 127681
 		MouseKeyboard,
-		// Token: 0x0402400F RID: 147471
+		// Token: 0x0401F2C2 RID: 127682
 		Touch,
-		// Token: 0x04024010 RID: 147472
+		// Token: 0x0401F2C3 RID: 127683
 		Gamepad
 	}
 }

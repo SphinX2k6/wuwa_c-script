@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200656F RID: 25967
+	// Token: 0x02006BDD RID: 27613
 	public static class IDeliverItemProbeCollectiblesConfigVerify
 	{
-		// Token: 0x0602D0D7 RID: 184535 RVA: 0x0062E970 File Offset: 0x0062CB70
+		// Token: 0x0602F879 RID: 194681 RVA: 0x0067ADE8 File Offset: 0x00678FE8
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos))
@@ -18,44 +18,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				{
 					verifyAction = (IDeliverItemProbeCollectiblesConfigVerify.<>O.<0>__Verify = new VerifyTableAction(IHandInItemViewStyleVerify.Verify));
 				}
-				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false))
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false))
 				{
-					short offsetId2 = 6;
-					VerifyTableAction verifyAction2;
-					if ((verifyAction2 = IDeliverItemProbeCollectiblesConfigVerify.<>O.<1>__Verify) == null)
-					{
-						verifyAction2 = (IDeliverItemProbeCollectiblesConfigVerify.<>O.<1>__Verify = new VerifyTableAction(IItemCellIndependentDeliverTypeVerify.Verify));
-					}
-					if (verifier.VerifyTable(tablePos, offsetId2, verifyAction2, false))
-					{
-						short offsetId3 = 8;
-						VerifyTableAction verifyAction3;
-						if ((verifyAction3 = IDeliverItemProbeCollectiblesConfigVerify.<>O.<2>__Verify) == null)
-						{
-							verifyAction3 = (IDeliverItemProbeCollectiblesConfigVerify.<>O.<2>__Verify = new VerifyTableAction(IPlaceholderCollectibleMarkerTypeVerify.Verify));
-						}
-						if (verifier.VerifyTable(tablePos, offsetId3, verifyAction3, false))
-						{
-							return verifier.VerifyTableEnd(tablePos);
-						}
-					}
+					return verifier.VerifyTableEnd(tablePos);
 				}
 			}
 			return false;
 		}
 
-		// Token: 0x02007D3C RID: 32060
+		// Token: 0x020085B2 RID: 34226
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040138AF RID: 80047
+			// Token: 0x0401495B RID: 84315
 			public static VerifyTableAction <0>__Verify;
-
-			// Token: 0x040138B0 RID: 80048
-			public static VerifyTableAction <1>__Verify;
-
-			// Token: 0x040138B1 RID: 80049
-			public static VerifyTableAction <2>__Verify;
 		}
 	}
 }

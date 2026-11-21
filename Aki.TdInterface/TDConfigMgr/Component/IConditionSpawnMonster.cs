@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200026D RID: 621
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002B0 RID: 688
 	public class IConditionSpawnMonster
 	{
-		// Token: 0x06000B4B RID: 2891 RVA: 0x0002D878 File Offset: 0x0002BA78
+		// Token: 0x06000C65 RID: 3173 RVA: 0x00030568 File Offset: 0x0002E768
 		private IConditionSpawnMonster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B4C RID: 2892 RVA: 0x0002D8B0 File Offset: 0x0002BAB0
+		// Token: 0x06000C66 RID: 3174 RVA: 0x000305A0 File Offset: 0x0002E7A0
 		public static IConditionSpawnMonster Create([Nullable(2)] IConditionSpawnMonster instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B4D RID: 2893 RVA: 0x0002D8C3 File Offset: 0x0002BAC3
+		// Token: 0x06000C67 RID: 3175 RVA: 0x000305B3 File Offset: 0x0002E7B3
 		public static IConditionSpawnMonster CreateFromSetValue([Nullable(2)] IConditionSpawnMonster_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B4E RID: 2894 RVA: 0x0002D8D6 File Offset: 0x0002BAD6
+		// Token: 0x06000C68 RID: 3176 RVA: 0x000305C6 File Offset: 0x0002E7C6
 		public IConditionSpawnMonster_SetValue ToSetValue()
 		{
 			return new IConditionSpawnMonster_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700035F RID: 863
-		// (get) Token: 0x06000B4F RID: 2895 RVA: 0x0002D910 File Offset: 0x0002BB10
-		// (set) Token: 0x06000B50 RID: 2896 RVA: 0x0002D971 File Offset: 0x0002BB71
+		// Token: 0x170003A7 RID: 935
+		// (get) Token: 0x06000C69 RID: 3177 RVA: 0x00030600 File Offset: 0x0002E800
+		// (set) Token: 0x06000C6A RID: 3178 RVA: 0x00030661 File Offset: 0x0002E861
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -97,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000360 RID: 864
-		// (get) Token: 0x06000B51 RID: 2897 RVA: 0x0002D988 File Offset: 0x0002BB88
-		// (set) Token: 0x06000B52 RID: 2898 RVA: 0x0002D9E9 File Offset: 0x0002BBE9
+		// Token: 0x170003A8 RID: 936
+		// (get) Token: 0x06000C6B RID: 3179 RVA: 0x00030678 File Offset: 0x0002E878
+		// (set) Token: 0x06000C6C RID: 3180 RVA: 0x000306D9 File Offset: 0x0002E8D9
 		[Nullable(2)]
 		public virtual IConditionGroup EndCondition
 		{
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000361 RID: 865
-		// (get) Token: 0x06000B53 RID: 2899 RVA: 0x0002DA00 File Offset: 0x0002BC00
-		// (set) Token: 0x06000B54 RID: 2900 RVA: 0x0002DA3A File Offset: 0x0002BC3A
+		// Token: 0x170003A9 RID: 937
+		// (get) Token: 0x06000C6D RID: 3181 RVA: 0x000306F0 File Offset: 0x0002E8F0
+		// (set) Token: 0x06000C6E RID: 3182 RVA: 0x0003072A File Offset: 0x0002E92A
 		public virtual bool? Loop
 		{
 			get
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000362 RID: 866
-		// (get) Token: 0x06000B55 RID: 2901 RVA: 0x0002DA48 File Offset: 0x0002BC48
-		// (set) Token: 0x06000B56 RID: 2902 RVA: 0x0002DADB File Offset: 0x0002BCDB
+		// Token: 0x170003AA RID: 938
+		// (get) Token: 0x06000C6F RID: 3183 RVA: 0x00030738 File Offset: 0x0002E938
+		// (set) Token: 0x06000C70 RID: 3184 RVA: 0x000307CB File Offset: 0x0002E9CB
 		public virtual List<IDynamicSpawnMonsterConfig> BatchConfigs
 		{
 			get
@@ -192,30 +190,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000AF4 RID: 2804
+		// Token: 0x04000BD5 RID: 3029
 		[Nullable(2)]
 		protected IConditionSpawnMonster FbInstance;
 
-		// Token: 0x04000AF5 RID: 2805
+		// Token: 0x04000BD6 RID: 3030
 		[Nullable(2)]
 		protected IConditionSpawnMonster_SetValue PocoInterface;
 
-		// Token: 0x04000AF6 RID: 2806
+		// Token: 0x04000BD7 RID: 3031
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04000AF7 RID: 2807
+		// Token: 0x04000BD8 RID: 3032
 		private bool _ConditionInited;
 
-		// Token: 0x04000AF8 RID: 2808
+		// Token: 0x04000BD9 RID: 3033
 		private IConditionGroup _EndConditionCache;
 
-		// Token: 0x04000AF9 RID: 2809
+		// Token: 0x04000BDA RID: 3034
 		private bool _EndConditionInited;
 
-		// Token: 0x04000AFA RID: 2810
+		// Token: 0x04000BDB RID: 3035
 		private List<IDynamicSpawnMonsterConfig> _BatchConfigsCache;
 
-		// Token: 0x04000AFB RID: 2811
+		// Token: 0x04000BDC RID: 3036
 		private bool _BatchConfigsInited;
 	}
 }

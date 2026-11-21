@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004E7 RID: 1255
+	// Token: 0x020004FD RID: 1277
 	public class ConfigLoadingTipsTextById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D75 RID: 7541 RVA: 0x000FFB0B File Offset: 0x000FDD0B
+		// Token: 0x06001DF9 RID: 7673 RVA: 0x0010625F File Offset: 0x0010445F
 		static ConfigLoadingTipsTextById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLoadingTipsTextById.CreateStaticDefaultValue), new Action(ConfigLoadingTipsTextById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D76 RID: 7542 RVA: 0x000FFB2C File Offset: 0x000FDD2C
+		// Token: 0x06001DFA RID: 7674 RVA: 0x00106280 File Offset: 0x00104480
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLoadingTipsTextById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D77 RID: 7543 RVA: 0x000FFBAB File Offset: 0x000FDDAB
+		// Token: 0x06001DFB RID: 7675 RVA: 0x001062FF File Offset: 0x001044FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLoadingTipsTextById.LogPair = null;
 			ConfigLoadingTipsTextById.HandleId = 0;
 		}
 
-		// Token: 0x06001D78 RID: 7544 RVA: 0x000FFBB9 File Offset: 0x000FDDB9
+		// Token: 0x06001DFC RID: 7676 RVA: 0x0010630D File Offset: 0x0010450D
 		public static void Init()
 		{
 			ConfigLoadingTipsTextById.HandleId = ConfigCommon.InitDataStatement(ConfigLoadingTipsTextById.HandleId, "db_loadingtips.db", "select BinData from `LoadingTipsText` where Id=?");
 		}
 
-		// Token: 0x06001D79 RID: 7545 RVA: 0x000FFBD4 File Offset: 0x000FDDD4
+		// Token: 0x06001DFD RID: 7677 RVA: 0x00106328 File Offset: 0x00104528
 		public static LoadingTipsText? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLoadingTipsTextById.HandleId, ConfigLoadingTipsTextById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LoadingTipsText?(rootAsLoadingTipsText);
 		}
 
-		// Token: 0x04002235 RID: 8757
+		// Token: 0x040022CF RID: 8911
 		private const string DB = "db_loadingtips.db";
 
-		// Token: 0x04002236 RID: 8758
+		// Token: 0x040022D0 RID: 8912
 		private const string FILE = "z.载入提示.xlsx";
 
-		// Token: 0x04002237 RID: 8759
+		// Token: 0x040022D1 RID: 8913
 		private const string TABLE = "LoadingTipsText";
 
-		// Token: 0x04002238 RID: 8760
+		// Token: 0x040022D2 RID: 8914
 		private const string COMMAND = "select BinData from `LoadingTipsText` where Id=?";
 
-		// Token: 0x04002239 RID: 8761
+		// Token: 0x040022D3 RID: 8915
 		private const string KEY_PREFIX = "LoadingTipsTextById";
 
-		// Token: 0x0400223A RID: 8762
+		// Token: 0x040022D4 RID: 8916
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400223B RID: 8763
+		// Token: 0x040022D5 RID: 8917
 		private static int HandleId;
 	}
 }

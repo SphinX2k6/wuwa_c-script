@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001022 RID: 4130
+	// Token: 0x0200110A RID: 4362
 	public struct RogueSkillLvRule : IFlatbufferObject
 	{
-		// Token: 0x17003129 RID: 12585
-		// (get) Token: 0x0600C513 RID: 50451 RVA: 0x002F24B0 File Offset: 0x002F06B0
+		// Token: 0x170031A4 RID: 12708
+		// (get) Token: 0x0600CB5D RID: 52061 RVA: 0x0030E4B8 File Offset: 0x0030C6B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C514 RID: 50452 RVA: 0x002F24BD File Offset: 0x002F06BD
+		// Token: 0x0600CB5E RID: 52062 RVA: 0x0030E4C5 File Offset: 0x0030C6C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C515 RID: 50453 RVA: 0x002F24C4 File Offset: 0x002F06C4
+		// Token: 0x0600CB5F RID: 52063 RVA: 0x0030E4CC File Offset: 0x0030C6CC
 		public static RogueSkillLvRule GetRootAsRogueSkillLvRule(ByteBuffer _bb)
 		{
 			return RogueSkillLvRule.GetRootAsRogueSkillLvRule(_bb, default(RogueSkillLvRule));
 		}
 
-		// Token: 0x0600C516 RID: 50454 RVA: 0x002F24E0 File Offset: 0x002F06E0
+		// Token: 0x0600CB60 RID: 52064 RVA: 0x0030E4E8 File Offset: 0x0030C6E8
 		public static RogueSkillLvRule GetRootAsRogueSkillLvRule(ByteBuffer _bb, RogueSkillLvRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C517 RID: 50455 RVA: 0x002F24FD File Offset: 0x002F06FD
+		// Token: 0x0600CB61 RID: 52065 RVA: 0x0030E505 File Offset: 0x0030C705
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C518 RID: 50456 RVA: 0x002F250C File Offset: 0x002F070C
+		// Token: 0x0600CB62 RID: 52066 RVA: 0x0030E514 File Offset: 0x0030C714
 		public RogueSkillLvRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700312A RID: 12586
-		// (get) Token: 0x0600C519 RID: 50457 RVA: 0x002F251C File Offset: 0x002F071C
+		// Token: 0x170031A5 RID: 12709
+		// (get) Token: 0x0600CB63 RID: 52067 RVA: 0x0030E524 File Offset: 0x0030C724
 		public int Level
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C51A RID: 50458 RVA: 0x002F2558 File Offset: 0x002F0758
+		// Token: 0x0600CB64 RID: 52068 RVA: 0x0030E560 File Offset: 0x0030C760
 		public DicIntInt? SkillLevel(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700312B RID: 12587
-		// (get) Token: 0x0600C51B RID: 50459 RVA: 0x002F25B8 File Offset: 0x002F07B8
+		// Token: 0x170031A6 RID: 12710
+		// (get) Token: 0x0600CB65 RID: 52069 RVA: 0x0030E5C0 File Offset: 0x0030C7C0
 		public int SkillLevelLength
 		{
 			get
@@ -92,24 +92,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C51C RID: 50460 RVA: 0x002F25E4 File Offset: 0x002F07E4
+		// Token: 0x0600CB66 RID: 52070 RVA: 0x0030E5EC File Offset: 0x0030C7EC
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用SkillLevelFrozenDict()缓存字典，遍历请使用SkillLevelIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> SkillLevel()
+		public Dictionary<int, int> SkillLevel()
 		{
 			return this.SkillLevelIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600C51D RID: 50461 RVA: 0x002F263A File Offset: 0x002F083A
+		// Token: 0x0600CB67 RID: 52071 RVA: 0x0030E642 File Offset: 0x0030C842
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> SkillLevelIter()
+		public IEnumerable<DicIntInt> SkillLevelIter()
 		{
 			RogueSkillLvRule.<SkillLevelIter>d__14 <SkillLevelIter>d__ = new RogueSkillLvRule.<SkillLevelIter>d__14(-2);
 			<SkillLevelIter>d__.<>3__<>4__this = this;
 			return <SkillLevelIter>d__;
 		}
 
-		// Token: 0x0600C51E RID: 50462 RVA: 0x002F2650 File Offset: 0x002F0850
+		// Token: 0x0600CB68 RID: 52072 RVA: 0x0030E658 File Offset: 0x0030C858
 		public int? GetSkillLevel(int key)
 		{
 			this.EnsureSkillLevelCacheIfNeeded();
@@ -121,7 +120,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600C51F RID: 50463 RVA: 0x002F2684 File Offset: 0x002F0884
+		// Token: 0x0600CB69 RID: 52073 RVA: 0x0030E68C File Offset: 0x0030C88C
 		private void EnsureSkillLevelCacheIfNeeded()
 		{
 			if (this.SkillLevelCache != null)
@@ -131,18 +130,18 @@ namespace Aki.Config
 			this.SkillLevelCache = this.SkillLevelIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600C520 RID: 50464 RVA: 0x002F26EA File Offset: 0x002F08EA
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetSkillLevelFrozenDict(int key)
+		// Token: 0x0600CB6A RID: 52074 RVA: 0x0030E6F2 File Offset: 0x0030C8F2
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetSkillLevelFrozenDict()
 		{
 			this.EnsureSkillLevelCacheIfNeeded();
 			return this.SkillLevelCache;
 		}
 
-		// Token: 0x04005114 RID: 20756
+		// Token: 0x040056FC RID: 22268
 		private Table __p;
 
-		// Token: 0x04005115 RID: 20757
+		// Token: 0x040056FD RID: 22269
 		[Nullable(2)]
 		private FrozenDictionary<int, int> SkillLevelCache;
 	}

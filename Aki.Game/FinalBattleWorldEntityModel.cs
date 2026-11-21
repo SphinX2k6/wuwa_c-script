@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E72 RID: 3698
+// Token: 0x02000327 RID: 807
 [NullableContext(2)]
 [Nullable(0)]
 internal class FinalBattleWorldEntityModel
 {
-	// Token: 0x0400291C RID: 10524
+	// Token: 0x040029B7 RID: 10679
 	public int Uid;
 
-	// Token: 0x0400291D RID: 10525
+	// Token: 0x040029B8 RID: 10680
 	public int CombatId;
 
-	// Token: 0x0400291E RID: 10526
+	// Token: 0x040029B9 RID: 10681
 	public int PropertyId;
 
-	// Token: 0x0400291F RID: 10527
+	// Token: 0x040029BA RID: 10682
 	public string AssetPath;
 
-	// Token: 0x04002920 RID: 10528
+	// Token: 0x040029BB RID: 10683
 	public int? SplineId;
 
-	// Token: 0x04002921 RID: 10529
+	// Token: 0x040029BC RID: 10684
 	public Dictionary<int, int> BuffIdLayers;
 
-	// Token: 0x04002922 RID: 10530
+	// Token: 0x040029BD RID: 10685
 	public Dictionary<int, int> AttributeMap;
 }

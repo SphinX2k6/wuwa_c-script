@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B6D RID: 7021
+	// Token: 0x02001D1A RID: 7450
 	public class IKiteHookInteract_SetValue
 	{
-		// Token: 0x04005BF5 RID: 23541
+		// Token: 0x0400608E RID: 24718
 		public ELeisureInteract Type;
 
-		// Token: 0x04005BF6 RID: 23542
+		// Token: 0x0400608F RID: 24719
 		public int EntityId;
 	}
 }

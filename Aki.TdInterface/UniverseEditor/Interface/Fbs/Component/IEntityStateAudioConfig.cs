@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051B6 RID: 20918
+	// Token: 0x0200571B RID: 22299
 	public struct IEntityStateAudioConfig : IFlatbufferObject
 	{
-		// Token: 0x170098E6 RID: 39142
-		// (get) Token: 0x06021DE4 RID: 138724 RVA: 0x004B2A6D File Offset: 0x004B0C6D
+		// Token: 0x1700A0D5 RID: 41173
+		// (get) Token: 0x06023D3C RID: 146748 RVA: 0x004ECAD5 File Offset: 0x004EACD5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021DE5 RID: 138725 RVA: 0x004B2A7A File Offset: 0x004B0C7A
+		// Token: 0x06023D3D RID: 146749 RVA: 0x004ECAE2 File Offset: 0x004EACE2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021DE6 RID: 138726 RVA: 0x004B2A84 File Offset: 0x004B0C84
+		// Token: 0x06023D3E RID: 146750 RVA: 0x004ECAEC File Offset: 0x004EACEC
 		public static IEntityStateAudioConfig GetRootAsIEntityStateAudioConfig(ByteBuffer _bb)
 		{
 			return IEntityStateAudioConfig.GetRootAsIEntityStateAudioConfig(_bb, default(IEntityStateAudioConfig));
 		}
 
-		// Token: 0x06021DE7 RID: 138727 RVA: 0x004B2AA0 File Offset: 0x004B0CA0
+		// Token: 0x06023D3F RID: 146751 RVA: 0x004ECB08 File Offset: 0x004EAD08
 		public static IEntityStateAudioConfig GetRootAsIEntityStateAudioConfig(ByteBuffer _bb, IEntityStateAudioConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021DE8 RID: 138728 RVA: 0x004B2ABD File Offset: 0x004B0CBD
+		// Token: 0x06023D40 RID: 146752 RVA: 0x004ECB25 File Offset: 0x004EAD25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021DE9 RID: 138729 RVA: 0x004B2ACC File Offset: 0x004B0CCC
+		// Token: 0x06023D41 RID: 146753 RVA: 0x004ECB34 File Offset: 0x004EAD34
 		public IEntityStateAudioConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170098E7 RID: 39143
-		// (get) Token: 0x06021DEA RID: 138730 RVA: 0x004B2ADC File Offset: 0x004B0CDC
+		// Token: 0x1700A0D6 RID: 41174
+		// (get) Token: 0x06023D42 RID: 146754 RVA: 0x004ECB44 File Offset: 0x004EAD44
 		public string State
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021DEB RID: 138731 RVA: 0x004B2B13 File Offset: 0x004B0D13
+		// Token: 0x06023D43 RID: 146755 RVA: 0x004ECB7B File Offset: 0x004EAD7B
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06021DEC RID: 138732 RVA: 0x004B2B22 File Offset: 0x004B0D22
+		// Token: 0x06023D44 RID: 146756 RVA: 0x004ECB8A File Offset: 0x004EAD8A
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x170098E8 RID: 39144
-		// (get) Token: 0x06021DED RID: 138733 RVA: 0x004B2B30 File Offset: 0x004B0D30
+		// Token: 0x1700A0D7 RID: 41175
+		// (get) Token: 0x06023D45 RID: 146757 RVA: 0x004ECB98 File Offset: 0x004EAD98
 		public string AkEvent
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021DEE RID: 138734 RVA: 0x004B2B67 File Offset: 0x004B0D67
+		// Token: 0x06023D46 RID: 146758 RVA: 0x004ECBCF File Offset: 0x004EADCF
 		public Span<byte> GetAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06021DEF RID: 138735 RVA: 0x004B2B76 File Offset: 0x004B0D76
+		// Token: 0x06023D47 RID: 146759 RVA: 0x004ECBDE File Offset: 0x004EADDE
 		public byte[] GetAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x170098E9 RID: 39145
-		// (get) Token: 0x06021DF0 RID: 138736 RVA: 0x004B2B84 File Offset: 0x004B0D84
+		// Token: 0x1700A0D8 RID: 41176
+		// (get) Token: 0x06023D48 RID: 146760 RVA: 0x004ECBEC File Offset: 0x004EADEC
 		public string LeaveAkEvent
 		{
 			get
@@ -116,20 +116,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021DF1 RID: 138737 RVA: 0x004B2BBB File Offset: 0x004B0DBB
+		// Token: 0x06023D49 RID: 146761 RVA: 0x004ECC23 File Offset: 0x004EAE23
 		public Span<byte> GetLeaveAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06021DF2 RID: 138738 RVA: 0x004B2BCA File Offset: 0x004B0DCA
+		// Token: 0x06023D4A RID: 146762 RVA: 0x004ECC32 File Offset: 0x004EAE32
 		public byte[] GetLeaveAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x170098EA RID: 39146
-		// (get) Token: 0x06021DF3 RID: 138739 RVA: 0x004B2BD8 File Offset: 0x004B0DD8
+		// Token: 0x1700A0D9 RID: 41177
+		// (get) Token: 0x06023D4B RID: 146763 RVA: 0x004ECC40 File Offset: 0x004EAE40
 		public IAudioFade? AudioFade
 		{
 			get
@@ -143,8 +143,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170098EB RID: 39147
-		// (get) Token: 0x06021DF4 RID: 138740 RVA: 0x004B2C38 File Offset: 0x004B0E38
+		// Token: 0x1700A0DA RID: 41178
+		// (get) Token: 0x06023D4C RID: 146764 RVA: 0x004ECCA0 File Offset: 0x004EAEA0
 		public bool IsBanVehicleRadio
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170098EC RID: 39148
-		// (get) Token: 0x06021DF5 RID: 138741 RVA: 0x004B2C78 File Offset: 0x004B0E78
+		// Token: 0x1700A0DB RID: 41179
+		// (get) Token: 0x06023D4D RID: 146765 RVA: 0x004ECCE0 File Offset: 0x004EAEE0
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021DF6 RID: 138742 RVA: 0x004B2CB5 File Offset: 0x004B0EB5
+		// Token: 0x06023D4E RID: 146766 RVA: 0x004ECD1D File Offset: 0x004EAF1D
 		public static Offset<IEntityStateAudioConfig> CreateIEntityStateAudioConfig(FlatBufferBuilder builder, StringOffset StateOffset = default(StringOffset), StringOffset AkEventOffset = default(StringOffset), StringOffset LeaveAkEventOffset = default(StringOffset), Offset<IAudioFade> AudioFadeOffset = default(Offset<IAudioFade>), bool IsBanVehicleRadio = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -182,55 +182,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityStateAudioConfig.EndIEntityStateAudioConfig(builder);
 		}
 
-		// Token: 0x06021DF7 RID: 138743 RVA: 0x004B2CF1 File Offset: 0x004B0EF1
+		// Token: 0x06023D4F RID: 146767 RVA: 0x004ECD59 File Offset: 0x004EAF59
 		public static void StartIEntityStateAudioConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06021DF8 RID: 138744 RVA: 0x004B2CFA File Offset: 0x004B0EFA
+		// Token: 0x06023D50 RID: 146768 RVA: 0x004ECD62 File Offset: 0x004EAF62
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(0, stateOffset.Value, 0);
 		}
 
-		// Token: 0x06021DF9 RID: 138745 RVA: 0x004B2D0A File Offset: 0x004B0F0A
+		// Token: 0x06023D51 RID: 146769 RVA: 0x004ECD72 File Offset: 0x004EAF72
 		public static void AddAkEvent(FlatBufferBuilder builder, StringOffset akEventOffset)
 		{
 			builder.AddOffset(1, akEventOffset.Value, 0);
 		}
 
-		// Token: 0x06021DFA RID: 138746 RVA: 0x004B2D1A File Offset: 0x004B0F1A
+		// Token: 0x06023D52 RID: 146770 RVA: 0x004ECD82 File Offset: 0x004EAF82
 		public static void AddLeaveAkEvent(FlatBufferBuilder builder, StringOffset leaveAkEventOffset)
 		{
 			builder.AddOffset(2, leaveAkEventOffset.Value, 0);
 		}
 
-		// Token: 0x06021DFB RID: 138747 RVA: 0x004B2D2A File Offset: 0x004B0F2A
+		// Token: 0x06023D53 RID: 146771 RVA: 0x004ECD92 File Offset: 0x004EAF92
 		public static void AddAudioFade(FlatBufferBuilder builder, Offset<IAudioFade> audioFadeOffset)
 		{
 			builder.AddOffset(3, audioFadeOffset.Value, 0);
 		}
 
-		// Token: 0x06021DFC RID: 138748 RVA: 0x004B2D3A File Offset: 0x004B0F3A
+		// Token: 0x06023D54 RID: 146772 RVA: 0x004ECDA2 File Offset: 0x004EAFA2
 		public static void AddIsBanVehicleRadio(FlatBufferBuilder builder, bool isBanVehicleRadio)
 		{
 			builder.AddBool(4, isBanVehicleRadio, false);
 		}
 
-		// Token: 0x06021DFD RID: 138749 RVA: 0x004B2D45 File Offset: 0x004B0F45
+		// Token: 0x06023D55 RID: 146773 RVA: 0x004ECDAD File Offset: 0x004EAFAD
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06021DFE RID: 138750 RVA: 0x004B2D50 File Offset: 0x004B0F50
+		// Token: 0x06023D56 RID: 146774 RVA: 0x004ECDB8 File Offset: 0x004EAFB8
 		public static Offset<IEntityStateAudioConfig> EndIEntityStateAudioConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityStateAudioConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06021DFF RID: 138751 RVA: 0x004B2D60 File Offset: 0x004B0F60
+		// Token: 0x06023D57 RID: 146775 RVA: 0x004ECDC8 File Offset: 0x004EAFC8
 		public IEntityStateAudioConfigT UnPack()
 		{
 			IEntityStateAudioConfigT entityStateAudioConfigT = new IEntityStateAudioConfigT();
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityStateAudioConfigT;
 		}
 
-		// Token: 0x06021E00 RID: 138752 RVA: 0x004B2D7C File Offset: 0x004B0F7C
+		// Token: 0x06023D58 RID: 146776 RVA: 0x004ECDE4 File Offset: 0x004EAFE4
 		public void UnPackTo(IEntityStateAudioConfigT _o)
 		{
 			_o.State = this.State;
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021E01 RID: 138753 RVA: 0x004B2DF4 File Offset: 0x004B0FF4
+		// Token: 0x06023D59 RID: 146777 RVA: 0x004ECE5C File Offset: 0x004EB05C
 		public static Offset<IEntityStateAudioConfig> Pack(FlatBufferBuilder builder, IEntityStateAudioConfigT _o)
 		{
 			if (_o == null)
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityStateAudioConfig.CreateIEntityStateAudioConfig(builder, stateOffset, akEventOffset, leaveAkEventOffset, audioFadeOffset, _o.IsBanVehicleRadio, _o.NullMask);
 		}
 
-		// Token: 0x0400E29F RID: 58015
+		// Token: 0x0400EE9D RID: 61085
 		private Table __p;
 	}
 }

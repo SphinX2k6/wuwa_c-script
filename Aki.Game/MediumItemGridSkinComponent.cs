@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Skin;
 using UnrealEngine;
 
-// Token: 0x02001933 RID: 6451
+// Token: 0x02000DEF RID: 3567
 public class MediumItemGridSkinComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCB7 RID: 48311 RVA: 0x002AB436 File Offset: 0x002A9636
+	// Token: 0x060090B2 RID: 37042 RVA: 0x002B5F05 File Offset: 0x002B4105
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemASkin";
 	}
 
-	// Token: 0x0600BCB8 RID: 48312 RVA: 0x002AB440 File Offset: 0x002A9640
+	// Token: 0x060090B3 RID: 37043 RVA: 0x002B5F0C File Offset: 0x002B410C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -29,7 +29,7 @@ public class MediumItemGridSkinComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCB9 RID: 48313 RVA: 0x002AB488 File Offset: 0x002A9688
+	// Token: 0x060090B4 RID: 37044 RVA: 0x002B5F54 File Offset: 0x002B4154
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -43,7 +43,7 @@ public class MediumItemGridSkinComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BCBA RID: 48314 RVA: 0x002AB4D8 File Offset: 0x002A96D8
+	// Token: 0x060090B5 RID: 37045 RVA: 0x002B5FA4 File Offset: 0x002B41A4
 	[NullableContext(1)]
 	private string GetTexturePath(int itemConfigId)
 	{
@@ -83,16 +83,16 @@ public class MediumItemGridSkinComponent : MediumItemGridComponent
 		return "T_IconFilterSkin2";
 	}
 
-	// Token: 0x0600BCBB RID: 48315 RVA: 0x002AB579 File Offset: 0x002A9779
+	// Token: 0x060090B6 RID: 37046 RVA: 0x002B6045 File Offset: 0x002B4245
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x02007E98 RID: 32408
+	// Token: 0x02007025 RID: 28709
 	private class EChildType
 	{
-		// Token: 0x04029676 RID: 169590
+		// Token: 0x040249AE RID: 149934
 		public const int WeaponTexture = 0;
 	}
 }

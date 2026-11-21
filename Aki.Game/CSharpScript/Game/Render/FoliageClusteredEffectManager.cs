@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045C2 RID: 17858
+	// Token: 0x020034EA RID: 13546
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FoliageClusteredEffectManager : Singleton
 	{
-		// Token: 0x0602E0D4 RID: 188628 RVA: 0x00A9DA7F File Offset: 0x00A9BC7F
+		// Token: 0x060227BF RID: 141247 RVA: 0x009C9D47 File Offset: 0x009C7F47
 		protected override bool OnInit()
 		{
 			this.Ready = false;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Render
 			return true;
 		}
 
-		// Token: 0x0602E0D5 RID: 188629 RVA: 0x00A9DABC File Offset: 0x00A9BCBC
+		// Token: 0x060227C0 RID: 141248 RVA: 0x009C9D84 File Offset: 0x009C7F84
 		public void CacheFromConfig()
 		{
 			this.FoliageTypes = new List<UFoliageType>();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Render
 			this.TempVector = Vector.Create();
 		}
 
-		// Token: 0x0602E0D6 RID: 188630 RVA: 0x00A9DBBC File Offset: 0x00A9BDBC
+		// Token: 0x060227C1 RID: 141249 RVA: 0x009C9E84 File Offset: 0x009C8084
 		public void Tick(double deltaSeconds)
 		{
 			if (!this.Ready || this.FoliageTypes.Count == 0)
@@ -81,20 +81,20 @@ namespace CSharpScript.Game.Render
 			this.UpdateIndex = (this.UpdateIndex + 1) % this.FoliageTypes.Count;
 		}
 
-		// Token: 0x0602E0D7 RID: 188631 RVA: 0x00A9DD09 File Offset: 0x00A9BF09
+		// Token: 0x060227C2 RID: 141250 RVA: 0x009C9FD1 File Offset: 0x009C81D1
 		public void BeginDebugDraw(FLinearColor color, float width)
 		{
 			this.DebugDrawHandle = DebugDrawManager.AddDebugBox(this.DetectBox, color, width);
 		}
 
-		// Token: 0x0602E0D8 RID: 188632 RVA: 0x00A9DD1E File Offset: 0x00A9BF1E
+		// Token: 0x060227C3 RID: 141251 RVA: 0x009C9FE6 File Offset: 0x009C81E6
 		public void EndDebugDraw()
 		{
 			DebugDrawManager.RemoveDebugDraw(this.DebugDrawHandle);
 		}
 
-		// Token: 0x170075A0 RID: 30112
-		// (get) Token: 0x0602E0D9 RID: 188633 RVA: 0x00A9DD2B File Offset: 0x00A9BF2B
+		// Token: 0x17004857 RID: 18519
+		// (get) Token: 0x060227C4 RID: 141252 RVA: 0x009C9FF3 File Offset: 0x009C81F3
 		[Nullable(1)]
 		public static FoliageClusteredEffectManager Instance
 		{
@@ -110,12 +110,12 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0DA RID: 188634 RVA: 0x00A9DD4E File Offset: 0x00A9BF4E
+		// Token: 0x060227C5 RID: 141253 RVA: 0x009CA016 File Offset: 0x009C8216
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E0DB RID: 188635 RVA: 0x00A9DD50 File Offset: 0x00A9BF50
+		// Token: 0x060227C6 RID: 141254 RVA: 0x009CA018 File Offset: 0x009C8218
 		public static void ResetStaticDefaultValue()
 		{
 			FoliageClusteredEffectManager instance = FoliageClusteredEffectManager._instance;
@@ -126,20 +126,20 @@ namespace CSharpScript.Game.Render
 			FoliageClusteredEffectManager._instance = null;
 		}
 
-		// Token: 0x0602E0DC RID: 188636 RVA: 0x00A9DD69 File Offset: 0x00A9BF69
+		// Token: 0x060227C7 RID: 141255 RVA: 0x009CA031 File Offset: 0x009C8231
 		static FoliageClusteredEffectManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FoliageClusteredEffectManager.CreateStaticDefaultValue), new Action(FoliageClusteredEffectManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018AA4 RID: 101028
+		// Token: 0x040130DF RID: 78047
 		protected PDA_FoliageClusteredEffectConfig_C Config;
 
-		// Token: 0x04018AA5 RID: 101029
+		// Token: 0x040130E0 RID: 78048
 		[Nullable(1)]
 		protected string ConfigPath = "/Game/Aki/Effect/Setting/DA_FoliageClusteredEffectConfig.DA_FoliageClusteredEffectConfig";
 
-		// Token: 0x04018AA6 RID: 101030
+		// Token: 0x040130E1 RID: 78049
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<UFoliageType> FoliageTypes;
 
-		// Token: 0x04018AA7 RID: 101031
+		// Token: 0x040130E2 RID: 78050
 		[Nullable(new byte[]
 		{
 			2,
@@ -155,40 +155,40 @@ namespace CSharpScript.Game.Render
 		})]
 		protected List<EffectClusteredStuffSettings> ClusteredEffects;
 
-		// Token: 0x04018AA8 RID: 101032
+		// Token: 0x040130E3 RID: 78051
 		protected List<int> NumMin;
 
-		// Token: 0x04018AA9 RID: 101033
+		// Token: 0x040130E4 RID: 78052
 		protected List<int> NumMax;
 
-		// Token: 0x04018AAA RID: 101034
+		// Token: 0x040130E5 RID: 78053
 		protected Vector BoxExtend;
 
-		// Token: 0x04018AAB RID: 101035
+		// Token: 0x040130E6 RID: 78054
 		protected bool Ready;
 
-		// Token: 0x04018AAC RID: 101036
+		// Token: 0x040130E7 RID: 78055
 		protected List<double> Densities;
 
-		// Token: 0x04018AAD RID: 101037
+		// Token: 0x040130E8 RID: 78056
 		protected int UpdateInterval = 5;
 
-		// Token: 0x04018AAE RID: 101038
+		// Token: 0x040130E9 RID: 78057
 		protected int UpdateCounter;
 
-		// Token: 0x04018AAF RID: 101039
+		// Token: 0x040130EA RID: 78058
 		protected int UpdateIndex;
 
-		// Token: 0x04018AB0 RID: 101040
+		// Token: 0x040130EB RID: 78059
 		protected FBox DetectBox;
 
-		// Token: 0x04018AB1 RID: 101041
+		// Token: 0x040130EC RID: 78060
 		protected Vector TempVector;
 
-		// Token: 0x04018AB2 RID: 101042
+		// Token: 0x040130ED RID: 78061
 		public int DebugDrawHandle = -1;
 
-		// Token: 0x04018AB3 RID: 101043
+		// Token: 0x040130EE RID: 78062
 		private static FoliageClusteredEffectManager _instance;
 	}
 }

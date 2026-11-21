@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001B08 RID: 6920
+// Token: 0x02000FC7 RID: 4039
 public enum EFloroRanchTipType
 {
-	// Token: 0x04005E3A RID: 24122
+	// Token: 0x04005F09 RID: 24329
 	None,
-	// Token: 0x04005E3B RID: 24123
+	// Token: 0x04005F0A RID: 24330
 	Terrain,
-	// Token: 0x04005E3C RID: 24124
+	// Token: 0x04005F0B RID: 24331
 	Toy
 }

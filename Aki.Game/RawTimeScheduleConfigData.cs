@@ -1,48 +1,48 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003511 RID: 13585
+// Token: 0x02002A86 RID: 10886
 [NullableContext(1)]
 [Nullable(0)]
 public class RawTimeScheduleConfigData
 {
-	// Token: 0x17002905 RID: 10501
-	// (get) Token: 0x0601DC68 RID: 121960 RVA: 0x00857CE1 File Offset: 0x00855EE1
-	// (set) Token: 0x0601DC69 RID: 121961 RVA: 0x00857CE9 File Offset: 0x00855EE9
+	// Token: 0x17002C9E RID: 11422
+	// (get) Token: 0x0601B982 RID: 113026 RVA: 0x008802AD File Offset: 0x0087E4AD
+	// (set) Token: 0x0601B983 RID: 113027 RVA: 0x008802B5 File Offset: 0x0087E4B5
 	public int Id { get; set; }
 
-	// Token: 0x17002906 RID: 10502
-	// (get) Token: 0x0601DC6A RID: 121962 RVA: 0x00857CF2 File Offset: 0x00855EF2
-	// (set) Token: 0x0601DC6B RID: 121963 RVA: 0x00857CFA File Offset: 0x00855EFA
+	// Token: 0x17002C9F RID: 11423
+	// (get) Token: 0x0601B984 RID: 113028 RVA: 0x008802BE File Offset: 0x0087E4BE
+	// (set) Token: 0x0601B985 RID: 113029 RVA: 0x008802C6 File Offset: 0x0087E4C6
 	public string TimeScheduleTag { get; set; } = "";
 
-	// Token: 0x17002907 RID: 10503
-	// (get) Token: 0x0601DC6C RID: 121964 RVA: 0x00857D03 File Offset: 0x00855F03
-	// (set) Token: 0x0601DC6D RID: 121965 RVA: 0x00857D0B File Offset: 0x00855F0B
+	// Token: 0x17002CA0 RID: 11424
+	// (get) Token: 0x0601B986 RID: 113030 RVA: 0x008802CF File Offset: 0x0087E4CF
+	// (set) Token: 0x0601B987 RID: 113031 RVA: 0x008802D7 File Offset: 0x0087E4D7
 	public string StartTime { get; set; } = "";
 
-	// Token: 0x17002908 RID: 10504
-	// (get) Token: 0x0601DC6E RID: 121966 RVA: 0x00857D14 File Offset: 0x00855F14
-	// (set) Token: 0x0601DC6F RID: 121967 RVA: 0x00857D1C File Offset: 0x00855F1C
+	// Token: 0x17002CA1 RID: 11425
+	// (get) Token: 0x0601B988 RID: 113032 RVA: 0x008802E0 File Offset: 0x0087E4E0
+	// (set) Token: 0x0601B989 RID: 113033 RVA: 0x008802E8 File Offset: 0x0087E4E8
 	public float[] Position { get; set; }
 
-	// Token: 0x17002909 RID: 10505
-	// (get) Token: 0x0601DC70 RID: 121968 RVA: 0x00857D25 File Offset: 0x00855F25
-	// (set) Token: 0x0601DC71 RID: 121969 RVA: 0x00857D2D File Offset: 0x00855F2D
+	// Token: 0x17002CA2 RID: 11426
+	// (get) Token: 0x0601B98A RID: 113034 RVA: 0x008802F1 File Offset: 0x0087E4F1
+	// (set) Token: 0x0601B98B RID: 113035 RVA: 0x008802F9 File Offset: 0x0087E4F9
 	public float[] Rotation { get; set; }
 
-	// Token: 0x1700290A RID: 10506
-	// (get) Token: 0x0601DC72 RID: 121970 RVA: 0x00857D36 File Offset: 0x00855F36
-	// (set) Token: 0x0601DC73 RID: 121971 RVA: 0x00857D3E File Offset: 0x00855F3E
+	// Token: 0x17002CA3 RID: 11427
+	// (get) Token: 0x0601B98C RID: 113036 RVA: 0x00880302 File Offset: 0x0087E502
+	// (set) Token: 0x0601B98D RID: 113037 RVA: 0x0088030A File Offset: 0x0087E50A
 	public int BehaviorTree { get; set; }
 
-	// Token: 0x1700290B RID: 10507
-	// (get) Token: 0x0601DC74 RID: 121972 RVA: 0x00857D47 File Offset: 0x00855F47
-	// (set) Token: 0x0601DC75 RID: 121973 RVA: 0x00857D4F File Offset: 0x00855F4F
+	// Token: 0x17002CA4 RID: 11428
+	// (get) Token: 0x0601B98E RID: 113038 RVA: 0x00880313 File Offset: 0x0087E513
+	// (set) Token: 0x0601B98F RID: 113039 RVA: 0x0088031B File Offset: 0x0087E51B
 	public string SplineEntityUid { get; set; } = "";
 
-	// Token: 0x1700290C RID: 10508
-	// (get) Token: 0x0601DC76 RID: 121974 RVA: 0x00857D58 File Offset: 0x00855F58
-	// (set) Token: 0x0601DC77 RID: 121975 RVA: 0x00857D60 File Offset: 0x00855F60
+	// Token: 0x17002CA5 RID: 11429
+	// (get) Token: 0x0601B990 RID: 113040 RVA: 0x00880324 File Offset: 0x0087E524
+	// (set) Token: 0x0601B991 RID: 113041 RVA: 0x0088032C File Offset: 0x0087E52C
 	public string CommonBtOverride { get; set; } = "";
 }

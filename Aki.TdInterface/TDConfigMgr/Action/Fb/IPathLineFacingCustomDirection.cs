@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028D9 RID: 10457
+	// Token: 0x02002BAE RID: 11182
 	public class IPathLineFacingCustomDirection : IPathLineFacingType
 	{
-		// Token: 0x0600E836 RID: 59446 RVA: 0x002214A6 File Offset: 0x0021F6A6
-		[NullableContext(1)]
+		// Token: 0x0600F665 RID: 63077 RVA: 0x0023E426 File Offset: 0x0023C626
 		public static IPathLineFacingCustomDirection Create(IPathLineFacingCustomDirection? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004846 RID: 18502
-		// (get) Token: 0x0600E837 RID: 59447 RVA: 0x002214C5 File Offset: 0x0021F6C5
+		// Token: 0x17004BB7 RID: 19383
+		// (get) Token: 0x0600F666 RID: 63078 RVA: 0x0023E445 File Offset: 0x0023C645
 		public override EPathLineFacingType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004847 RID: 18503
-		// (get) Token: 0x0600E838 RID: 59448 RVA: 0x002214D2 File Offset: 0x0021F6D2
+		// Token: 0x17004BB8 RID: 19384
+		// (get) Token: 0x0600F667 RID: 63079 RVA: 0x0023E452 File Offset: 0x0023C652
 		public virtual float Yaw
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008057 RID: 32855
+		// Token: 0x04008716 RID: 34582
 		private IPathLineFacingCustomDirection Instance;
 	}
 }

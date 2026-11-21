@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AF5 RID: 10997
+	// Token: 0x02002DE9 RID: 11753
 	public class TetrisGameComplete : ActionParams
 	{
-		// Token: 0x0600F0F3 RID: 61683 RVA: 0x0022F68A File Offset: 0x0022D88A
-		[NullableContext(1)]
+		// Token: 0x0600FFA9 RID: 65449 RVA: 0x0024D396 File Offset: 0x0024B596
 		public static TetrisGameComplete Create(ITetrisGameComplete? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04008489 RID: 33929
+		// Token: 0x04008B8D RID: 35725
 		private ITetrisGameComplete Instance;
 	}
 }

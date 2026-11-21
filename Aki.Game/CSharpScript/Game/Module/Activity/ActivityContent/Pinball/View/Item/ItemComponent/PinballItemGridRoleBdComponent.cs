@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x02006357 RID: 25431
+	// Token: 0x020052D5 RID: 21205
 	public class PinballItemGridRoleBdComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x0603FFF6 RID: 262134 RVA: 0x00F7B6F4 File Offset: 0x00F798F4
+		// Token: 0x06034CB7 RID: 216247 RVA: 0x00EC2654 File Offset: 0x00EC0854
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FFF7 RID: 262135 RVA: 0x00F7B73C File Offset: 0x00F7993C
+		// Token: 0x06034CB8 RID: 216248 RVA: 0x00EC269C File Offset: 0x00EC089C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballItemGridRoleBdComponent.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFF8 RID: 262136 RVA: 0x00F7B77F File Offset: 0x00F7997F
+		// Token: 0x06034CB9 RID: 216249 RVA: 0x00EC26DF File Offset: 0x00EC08DF
 		[NullableContext(2)]
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseType";
 		}
 
-		// Token: 0x0603FFF9 RID: 262137 RVA: 0x00F7B788 File Offset: 0x00F79988
+		// Token: 0x06034CBA RID: 216250 RVA: 0x00EC26E8 File Offset: 0x00EC08E8
 		[NullableContext(1)]
 		protected override void OnRefresh(params object[] args)
 		{
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			roleBdComponent.RefreshItem(num);
 		}
 
-		// Token: 0x040215D6 RID: 136662
+		// Token: 0x0401BF05 RID: 114437
 		[Nullable(2)]
 		private BdComponent RoleBdComponent;
 
-		// Token: 0x0200C577 RID: 50551
+		// Token: 0x0200AF5E RID: 44894
 		private enum EComponent
 		{
-			// Token: 0x0403B9A4 RID: 244132
+			// Token: 0x04036306 RID: 221958
 			BdItem
 		}
 	}

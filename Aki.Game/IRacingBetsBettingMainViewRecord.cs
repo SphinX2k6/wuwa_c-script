@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002703 RID: 9987
+// Token: 0x02001BEE RID: 7150
 [NullableContext(1)]
 public interface IRacingBetsBettingMainViewRecord
 {
-	// Token: 0x17001AE4 RID: 6884
-	// (get) Token: 0x060147A7 RID: 83879
-	// (set) Token: 0x060147A8 RID: 83880
+	// Token: 0x17001B1C RID: 6940
+	// (get) Token: 0x06011C89 RID: 72841
+	// (set) Token: 0x06011C8A RID: 72842
 	int SeasonId { get; set; }
 
-	// Token: 0x17001AE5 RID: 6885
-	// (get) Token: 0x060147A9 RID: 83881
-	// (set) Token: 0x060147AA RID: 83882
+	// Token: 0x17001B1D RID: 6941
+	// (get) Token: 0x06011C8B RID: 72843
+	// (set) Token: 0x06011C8C RID: 72844
 	List<int> EnteredLegMatchIds { get; set; }
 }

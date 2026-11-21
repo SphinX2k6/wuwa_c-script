@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002723 RID: 10019
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029ED RID: 10733
 	public class INpcFollowConfig
 	{
-		// Token: 0x0600DF6D RID: 57197 RVA: 0x00211BA9 File Offset: 0x0020FDA9
+		// Token: 0x0600ED65 RID: 60773 RVA: 0x0022E639 File Offset: 0x0022C839
 		public static INpcFollowConfig Create(INpcFollowConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042E9 RID: 17129
-		// (get) Token: 0x0600DF6E RID: 57198 RVA: 0x00211BC8 File Offset: 0x0020FDC8
+		// Token: 0x17004639 RID: 17977
+		// (get) Token: 0x0600ED66 RID: 60774 RVA: 0x0022E658 File Offset: 0x0022C858
 		public virtual IPerformerRangeBoundaryActionTrigger PerformerWhenEnter
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042EA RID: 17130
-		// (get) Token: 0x0600DF6F RID: 57199 RVA: 0x00211BFC File Offset: 0x0020FDFC
+		// Token: 0x1700463A RID: 17978
+		// (get) Token: 0x0600ED67 RID: 60775 RVA: 0x0022E68C File Offset: 0x0022C88C
 		public virtual IPerformerRangeBoundaryActionTrigger PerformerWhenExit
 		{
 			get
@@ -54,21 +52,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BFD RID: 31741
+		// Token: 0x040082A7 RID: 33447
 		private INpcFollowConfig Instance;
 
-		// Token: 0x04007BFE RID: 31742
+		// Token: 0x040082A8 RID: 33448
 		[Nullable(2)]
 		private IPerformerRangeBoundaryActionTrigger _PerformerWhenEnterCache;
 
-		// Token: 0x04007BFF RID: 31743
+		// Token: 0x040082A9 RID: 33449
 		private bool _PerformerWhenEnterInited;
 
-		// Token: 0x04007C00 RID: 31744
+		// Token: 0x040082AA RID: 33450
 		[Nullable(2)]
 		private IPerformerRangeBoundaryActionTrigger _PerformerWhenExitCache;
 
-		// Token: 0x04007C01 RID: 31745
+		// Token: 0x040082AB RID: 33451
 		private bool _PerformerWhenExitInited;
 	}
 }

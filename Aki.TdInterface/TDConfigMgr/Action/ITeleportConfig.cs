@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F96 RID: 8086
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021D9 RID: 8665
 	public class ITeleportConfig
 	{
-		// Token: 0x0600B1D2 RID: 45522 RVA: 0x0019EB30 File Offset: 0x0019CD30
+		// Token: 0x0600BCD6 RID: 48342 RVA: 0x001B4EE0 File Offset: 0x001B30E0
 		private ITeleportConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B1D3 RID: 45523 RVA: 0x0019EB68 File Offset: 0x0019CD68
+		// Token: 0x0600BCD7 RID: 48343 RVA: 0x001B4F18 File Offset: 0x001B3118
 		public static ITeleportConfig Create([Nullable(2)] ITeleportConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1D4 RID: 45524 RVA: 0x0019EB7B File Offset: 0x0019CD7B
+		// Token: 0x0600BCD8 RID: 48344 RVA: 0x001B4F2B File Offset: 0x001B312B
 		public static ITeleportConfig CreateFromSetValue([Nullable(2)] ITeleportConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1D5 RID: 45525 RVA: 0x0019EB8E File Offset: 0x0019CD8E
+		// Token: 0x0600BCD9 RID: 48345 RVA: 0x001B4F3E File Offset: 0x001B313E
 		public ITeleportConfig_SetValue ToSetValue()
 		{
 			return new ITeleportConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036E0 RID: 14048
-		// (get) Token: 0x0600B1D6 RID: 45526 RVA: 0x0019EBA1 File Offset: 0x0019CDA1
-		// (set) Token: 0x0600B1D7 RID: 45527 RVA: 0x0019EBCC File Offset: 0x0019CDCC
+		// Token: 0x170039B5 RID: 14773
+		// (get) Token: 0x0600BCDA RID: 48346 RVA: 0x001B4F51 File Offset: 0x001B3151
+		// (set) Token: 0x0600BCDB RID: 48347 RVA: 0x001B4F7C File Offset: 0x001B317C
 		public virtual ETeleportType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B75 RID: 27509
+		// Token: 0x04007170 RID: 29040
 		[Nullable(2)]
 		protected ITeleportConfig FbInstance;
 
-		// Token: 0x04006B76 RID: 27510
+		// Token: 0x04007171 RID: 29041
 		[Nullable(2)]
 		protected ITeleportConfig_SetValue PocoInterface;
 	}

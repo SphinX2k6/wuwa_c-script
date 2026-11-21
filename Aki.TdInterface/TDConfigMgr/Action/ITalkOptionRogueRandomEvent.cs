@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F82 RID: 8066
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021BD RID: 8637
 	public class ITalkOptionRogueRandomEvent : ITalkOptionParamType
 	{
-		// Token: 0x0600B16A RID: 45418 RVA: 0x0019E01C File Offset: 0x0019C21C
+		// Token: 0x0600BC44 RID: 48196 RVA: 0x001B3F70 File Offset: 0x001B2170
 		private ITalkOptionRogueRandomEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B16B RID: 45419 RVA: 0x0019E054 File Offset: 0x0019C254
+		// Token: 0x0600BC45 RID: 48197 RVA: 0x001B3FA8 File Offset: 0x001B21A8
 		public static ITalkOptionRogueRandomEvent Create([Nullable(2)] ITalkOptionRogueRandomEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B16C RID: 45420 RVA: 0x0019E067 File Offset: 0x0019C267
+		// Token: 0x0600BC46 RID: 48198 RVA: 0x001B3FBB File Offset: 0x001B21BB
 		public static ITalkOptionRogueRandomEvent CreateFromSetValue([Nullable(2)] ITalkOptionRogueRandomEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B16D RID: 45421 RVA: 0x0019E07A File Offset: 0x0019C27A
+		// Token: 0x0600BC47 RID: 48199 RVA: 0x001B3FCE File Offset: 0x001B21CE
 		public new ITalkOptionRogueRandomEvent_SetValue ToSetValue()
 		{
 			return new ITalkOptionRogueRandomEvent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036CA RID: 14026
-		// (get) Token: 0x0600B16E RID: 45422 RVA: 0x0019E099 File Offset: 0x0019C299
-		// (set) Token: 0x0600B16F RID: 45423 RVA: 0x0019E0C4 File Offset: 0x0019C2C4
+		// Token: 0x17003996 RID: 14742
+		// (get) Token: 0x0600BC48 RID: 48200 RVA: 0x001B3FED File Offset: 0x001B21ED
+		// (set) Token: 0x0600BC49 RID: 48201 RVA: 0x001B4018 File Offset: 0x001B2218
 		public override ETalkOptionParamType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036CB RID: 14027
-		// (get) Token: 0x0600B170 RID: 45424 RVA: 0x0019E0D4 File Offset: 0x0019C2D4
-		// (set) Token: 0x0600B171 RID: 45425 RVA: 0x0019E10E File Offset: 0x0019C30E
+		// Token: 0x17003997 RID: 14743
+		// (get) Token: 0x0600BC4A RID: 48202 RVA: 0x001B4028 File Offset: 0x001B2228
+		// (set) Token: 0x0600BC4B RID: 48203 RVA: 0x001B4062 File Offset: 0x001B2262
 		public virtual int? OptionId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B49 RID: 27465
+		// Token: 0x04007131 RID: 28977
 		[Nullable(2)]
 		protected new ITalkOptionRogueRandomEvent FbInstance;
 
-		// Token: 0x04006B4A RID: 27466
+		// Token: 0x04007132 RID: 28978
 		[Nullable(2)]
 		protected new ITalkOptionRogueRandomEvent_SetValue PocoInterface;
 	}

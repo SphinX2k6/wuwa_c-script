@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006118 RID: 24856
+	// Token: 0x02005096 RID: 20630
 	public class RoverlikeBlessingRepresentativeItem : UiPanelBase
 	{
-		// Token: 0x0603ED93 RID: 257427 RVA: 0x00F2E098 File Offset: 0x00F2C298
+		// Token: 0x06033A55 RID: 211541 RVA: 0x00E74EAC File Offset: 0x00E730AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ED94 RID: 257428 RVA: 0x00F2E0E0 File Offset: 0x00F2C2E0
+		// Token: 0x06033A56 RID: 211542 RVA: 0x00E74EF4 File Offset: 0x00E730F4
 		public void Refresh(int roleId)
 		{
 			RoverRogueBlessRole? blessRoleConfig = RoverlikeConfig.Instance.GetBlessRoleConfig(roleId);
@@ -33,10 +33,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.SetTextureShowUntilLoaded(blessRoleConfig.Value.IconPath, base.GetTexture(0), null);
 		}
 
-		// Token: 0x0200C374 RID: 50036
+		// Token: 0x0200AD5C RID: 44380
 		private class EComponents
 		{
-			// Token: 0x0403AFBF RID: 241599
+			// Token: 0x04035924 RID: 219428
 			public const int TextureIcon = 0;
 		}
 	}

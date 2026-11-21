@@ -12,30 +12,30 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 {
-	// Token: 0x0200673C RID: 26428
+	// Token: 0x0200568C RID: 22156
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityDirectTrainController : ActivityControllerBase
 	{
-		// Token: 0x06041F6D RID: 270189 RVA: 0x0100059A File Offset: 0x00FFE79A
+		// Token: 0x06036AB9 RID: 223929 RVA: 0x00F4194A File Offset: 0x00F3FB4A
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06041F6E RID: 270190 RVA: 0x010005A1 File Offset: 0x00FFE7A1
+		// Token: 0x06036ABA RID: 223930 RVA: 0x00F41951 File Offset: 0x00F3FB51
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06041F6F RID: 270191 RVA: 0x010005A4 File Offset: 0x00FFE7A4
+		// Token: 0x06036ABB RID: 223931 RVA: 0x00F41954 File Offset: 0x00F3FB54
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x06041F70 RID: 270192 RVA: 0x010005A8 File Offset: 0x00FFE7A8
+		// Token: 0x06036ABC RID: 223932 RVA: 0x00F41958 File Offset: 0x00F3FB58
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			Net.Instance.Register(ENotifyMessageId.DirectTrainInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnDirectTrainInfoUpdateNotify));
 		}
 
-		// Token: 0x06041F71 RID: 270193 RVA: 0x0100067C File Offset: 0x00FFE87C
+		// Token: 0x06036ABD RID: 223933 RVA: 0x00F41A2C File Offset: 0x00F3FC2C
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -59,31 +59,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			Net.Instance.UnRegister(ENotifyMessageId.DirectTrainInfoUpdateNotify);
 		}
 
-		// Token: 0x06041F72 RID: 270194 RVA: 0x0100071D File Offset: 0x00FFE91D
+		// Token: 0x06036ABE RID: 223934 RVA: 0x00F41ACD File Offset: 0x00F3FCCD
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06041F73 RID: 270195 RVA: 0x0100071F File Offset: 0x00FFE91F
+		// Token: 0x06036ABF RID: 223935 RVA: 0x00F41ACF File Offset: 0x00F3FCCF
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new ActivityDirectTrainData();
 		}
 
-		// Token: 0x06041F74 RID: 270196 RVA: 0x01000726 File Offset: 0x00FFE926
+		// Token: 0x06036AC0 RID: 223936 RVA: 0x00F41AD6 File Offset: 0x00F3FCD6
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivityDirectTrainSubView();
 		}
 
-		// Token: 0x06041F75 RID: 270197 RVA: 0x0100072D File Offset: 0x00FFE92D
+		// Token: 0x06036AC1 RID: 223937 RVA: 0x00F41ADD File Offset: 0x00F3FCDD
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return ActivityDirectTrainModel.Instance.GetPrefabResource(data.Id);
 		}
 
-		// Token: 0x1700965B RID: 38491
-		// (get) Token: 0x06041F76 RID: 270198 RVA: 0x0100073F File Offset: 0x00FFE93F
+		// Token: 0x1700699A RID: 27034
+		// (get) Token: 0x06036AC2 RID: 223938 RVA: 0x00F41AEF File Offset: 0x00F3FCEF
 		private Dictionary<EDirectTrainStartCondition, bool> DirectTrainStartConditionMap
 		{
 			get
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x06041F77 RID: 270199 RVA: 0x01000748 File Offset: 0x00FFE948
+		// Token: 0x06036AC3 RID: 223939 RVA: 0x00F41AF8 File Offset: 0x00F3FCF8
 		private void OnReceiveActivityData(int type, IReadOnlyList<int> activityIds)
 		{
 			if (type != 30)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			EventSystem.Instance.Emit<int>(EEventName.ActivityDirectTrainRedDotUpdate, 0);
 		}
 
-		// Token: 0x06041F78 RID: 270200 RVA: 0x010007AC File Offset: 0x00FFE9AC
+		// Token: 0x06036AC4 RID: 223940 RVA: 0x00F41B5C File Offset: 0x00F3FD5C
 		private void OnWorldDone()
 		{
 			UniTask? uniTask = null;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			this.LoadInitDataIfNeed();
 		}
 
-		// Token: 0x06041F79 RID: 270201 RVA: 0x01000837 File Offset: 0x00FFEA37
+		// Token: 0x06036AC5 RID: 223941 RVA: 0x00F41BE7 File Offset: 0x00F3FDE7
 		private void LoadInitDataIfNeed()
 		{
 			if (ActivityDirectTrainModel.Instance.HasInitData())
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}).Forget();
 		}
 
-		// Token: 0x06041F7A RID: 270202 RVA: 0x01000874 File Offset: 0x00FFEA74
+		// Token: 0x06036AC6 RID: 223942 RVA: 0x00F41C24 File Offset: 0x00F3FE24
 		private void OnActivityUpdate(int activityId)
 		{
 			if (!FunctionModel.Instance.IsOpen(10053))
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x06041F7B RID: 270203 RVA: 0x010008D4 File Offset: 0x00FFEAD4
+		// Token: 0x06036AC7 RID: 223943 RVA: 0x00F41C84 File Offset: 0x00F3FE84
 		[NullableContext(2)]
 		private void OnThroughTrainForceRemindNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			ActivityDirectTrainModel.Instance.SetServerRemindActivityId(throughTrainForceRemindNotify.ActivityId);
 		}
 
-		// Token: 0x06041F7C RID: 270204 RVA: 0x010008F8 File Offset: 0x00FFEAF8
+		// Token: 0x06036AC8 RID: 223944 RVA: 0x00F41CA8 File Offset: 0x00F3FEA8
 		[NullableContext(2)]
 		private void OnDirectTrainPreOpenCloseNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			ActivityDirectTrainHelper.EmitEventsForOther(false);
 		}
 
-		// Token: 0x06041F7D RID: 270205 RVA: 0x01000968 File Offset: 0x00FFEB68
+		// Token: 0x06036AC9 RID: 223945 RVA: 0x00F41D18 File Offset: 0x00F3FF18
 		[NullableContext(2)]
 		private void OnDirectTrainInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			ActivityDirectTrainModel.Instance.UpdateDataFromNotify(proto);
 		}
 
-		// Token: 0x06041F7E RID: 270206 RVA: 0x01000988 File Offset: 0x00FFEB88
+		// Token: 0x06036ACA RID: 223946 RVA: 0x00F41D38 File Offset: 0x00F3FF38
 		[NullableContext(2)]
 		private void OnDirectTrainInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x06041F7F RID: 270207 RVA: 0x010009E4 File Offset: 0x00FFEBE4
+		// Token: 0x06036ACB RID: 223947 RVA: 0x00F41D94 File Offset: 0x00F3FF94
 		private void CheckIsStart(bool isInstantly = false)
 		{
 			if (PublicUtil.Instance.GetIsSilentLogin())
@@ -261,8 +261,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x1700965C RID: 38492
-		// (get) Token: 0x06041F80 RID: 270208 RVA: 0x01000B10 File Offset: 0x00FFED10
+		// Token: 0x1700699B RID: 27035
+		// (get) Token: 0x06036ACC RID: 223948 RVA: 0x00F41EC0 File Offset: 0x00F400C0
 		public static ActivityDirectTrainController Instance
 		{
 			get
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x06041F81 RID: 270209 RVA: 0x01000B17 File Offset: 0x00FFED17
+		// Token: 0x06036ACD RID: 223949 RVA: 0x00F41EC7 File Offset: 0x00F400C7
 		public static ActivityDirectTrainController GetOrCreateInstance()
 		{
 			if (ActivityDirectTrainController._Instance == null)
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return ActivityDirectTrainController._Instance;
 		}
 
-		// Token: 0x06041F82 RID: 270210 RVA: 0x01000B2B File Offset: 0x00FFED2B
+		// Token: 0x06036ACE RID: 223950 RVA: 0x00F41EDB File Offset: 0x00F400DB
 		public static bool CreateInstance()
 		{
 			if (ActivityDirectTrainController._Instance != null)
@@ -292,24 +292,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return true;
 		}
 
-		// Token: 0x06041F83 RID: 270211 RVA: 0x01000B41 File Offset: 0x00FFED41
+		// Token: 0x06036ACF RID: 223951 RVA: 0x00F41EF1 File Offset: 0x00F400F1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041F84 RID: 270212 RVA: 0x01000B43 File Offset: 0x00FFED43
+		// Token: 0x06036AD0 RID: 223952 RVA: 0x00F41EF3 File Offset: 0x00F400F3
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityDirectTrainController._Instance = null;
 		}
 
-		// Token: 0x06041F85 RID: 270213 RVA: 0x01000B4B File Offset: 0x00FFED4B
+		// Token: 0x06036AD1 RID: 223953 RVA: 0x00F41EFB File Offset: 0x00F400FB
 		static ActivityDirectTrainController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityDirectTrainController.CreateStaticDefaultValue), new Action(ActivityDirectTrainController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040225E2 RID: 140770
+		// Token: 0x0401CE3B RID: 118331
 		[Nullable(2)]
 		private static ActivityDirectTrainController _Instance;
 	}

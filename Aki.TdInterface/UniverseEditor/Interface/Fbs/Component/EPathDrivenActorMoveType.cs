@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DE8 RID: 19944
+	// Token: 0x020052F3 RID: 21235
 	public enum EPathDrivenActorMoveType : byte
 	{
-		// Token: 0x0400DA9D RID: 55965
+		// Token: 0x0400E600 RID: 58880
 		Spline
 	}
 }

@@ -10,17 +10,17 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B2A RID: 27434
+	// Token: 0x02005CA2 RID: 23714
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventFadeInScreen : LevelEventBase
 	{
-		// Token: 0x06044107 RID: 278791 RVA: 0x010BC3AC File Offset: 0x010BA5AC
+		// Token: 0x0603A259 RID: 238169 RVA: 0x01065C38 File Offset: 0x01063E38
 		public LevelEventFadeInScreen(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044108 RID: 278792 RVA: 0x010BC3B8 File Offset: 0x010BA5B8
+		// Token: 0x0603A25A RID: 238170 RVA: 0x01065C44 File Offset: 0x01063E44
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -127,19 +127,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<bool, Action>(EEventName.PlotViewBgFadeBlackScreen, true, new Action(this.OnFadeComplete));
 		}
 
-		// Token: 0x06044109 RID: 278793 RVA: 0x010BC62C File Offset: 0x010BA82C
+		// Token: 0x0603A25B RID: 238171 RVA: 0x01065EB8 File Offset: 0x010640B8
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604410A RID: 278794 RVA: 0x010BC637 File Offset: 0x010BA837
+		// Token: 0x0603A25C RID: 238172 RVA: 0x01065EC3 File Offset: 0x010640C3
 		private void OnFadeComplete()
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604410B RID: 278795 RVA: 0x010BC644 File Offset: 0x010BA844
+		// Token: 0x0603A25D RID: 238173 RVA: 0x01065ED0 File Offset: 0x010640D0
 		protected override void OnUpdateGuarantee()
 		{
 			if (!this.KeepFadeAfterTreeEnd)
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.RemGuaranteeAction, this.Type, this.BaseContext, p2, null);
 		}
 
-		// Token: 0x0604410C RID: 278796 RVA: 0x010BC6C0 File Offset: 0x010BA8C0
+		// Token: 0x0603A25E RID: 238174 RVA: 0x01065F4C File Offset: 0x0106414C
 		protected override void OnReset()
 		{
 			this.KeepFadeAfterTreeEnd = false;
 		}
 
-		// Token: 0x040238FB RID: 145659
+		// Token: 0x0401EB9D RID: 125853
 		private bool KeepFadeAfterTreeEnd;
 	}
 }

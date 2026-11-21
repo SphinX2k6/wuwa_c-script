@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002319 RID: 8985
+	// Token: 0x02002588 RID: 9608
 	public static class EEnableClientFunctionTypeExtensions
 	{
-		// Token: 0x0600C46F RID: 50287 RVA: 0x001CACB8 File Offset: 0x001C8EB8
+		// Token: 0x0600D03E RID: 53310 RVA: 0x001E2B80 File Offset: 0x001E0D80
 		public static string ToEnumString(this EEnableClientFunctionType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C470 RID: 50288 RVA: 0x001CACE0 File Offset: 0x001C8EE0
+		// Token: 0x0600D03F RID: 53311 RVA: 0x001E2BA8 File Offset: 0x001E0DA8
 		public static EEnableClientFunctionType FromString(string name)
 		{
 			EEnableClientFunctionType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C471 RID: 50289 RVA: 0x001CAD09 File Offset: 0x001C8F09
+		// Token: 0x0600D040 RID: 53312 RVA: 0x001E2BD1 File Offset: 0x001E0DD1
 		public static bool TryFromString(string name, out EEnableClientFunctionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C472 RID: 50290 RVA: 0x001CAD2E File Offset: 0x001C8F2E
+		// Token: 0x0600D041 RID: 53313 RVA: 0x001E2BF6 File Offset: 0x001E0DF6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C473 RID: 50291 RVA: 0x001CAD3E File Offset: 0x001C8F3E
+		// Token: 0x0600D042 RID: 53314 RVA: 0x001E2C06 File Offset: 0x001E0E06
 		public static EEnableClientFunctionType[] GetValues()
 		{
 			return new EEnableClientFunctionType[1];
 		}
 
-		// Token: 0x0600C474 RID: 50292 RVA: 0x001CAD46 File Offset: 0x001C8F46
+		// Token: 0x0600D043 RID: 53315 RVA: 0x001E2C0E File Offset: 0x001E0E0E
 		public static string[] GetNames()
 		{
 			return new string[]

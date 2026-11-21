@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D23 RID: 23843
+	// Token: 0x02004D05 RID: 19717
 	public class FishingHpItem : UiPanelBase
 	{
-		// Token: 0x0603C71E RID: 247582 RVA: 0x00E7E9E0 File Offset: 0x00E7CBE0
+		// Token: 0x06031677 RID: 202359 RVA: 0x00DCF180 File Offset: 0x00DCD380
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C71F RID: 247583 RVA: 0x00E7EA49 File Offset: 0x00E7CC49
+		// Token: 0x06031678 RID: 202360 RVA: 0x00DCF1E9 File Offset: 0x00DCD3E9
 		public void SetHpVisible(bool bVisible)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -34,12 +34,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0200BFA9 RID: 49065
+		// Token: 0x0200A9AF RID: 43439
 		private enum EChildType
 		{
-			// Token: 0x04039D26 RID: 236838
+			// Token: 0x040346E8 RID: 214760
 			HpSprite,
-			// Token: 0x04039D27 RID: 236839
+			// Token: 0x040346E9 RID: 214761
 			BgItem
 		}
 	}

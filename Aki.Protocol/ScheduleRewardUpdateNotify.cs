@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200119A RID: 4506
+	// Token: 0x020011D4 RID: 4564
 	[NetMessage(EMessageId.ScheduleRewardUpdateNotify)]
 	public sealed class ScheduleRewardUpdateNotify : IMessage<ScheduleRewardUpdateNotify>, IMessage, IEquatable<ScheduleRewardUpdateNotify>, IDeepCloneable<ScheduleRewardUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06018031 RID: 98353 RVA: 0x0037C9F1 File Offset: 0x0037ABF1
+		// Token: 0x060185D2 RID: 99794 RVA: 0x0038BD31 File Offset: 0x00389F31
 		[NullableContext(1)]
 		public static ScheduleRewardUpdateNotify Create()
 		{
 			return new ScheduleRewardUpdateNotify();
 		}
 
-		// Token: 0x170050B0 RID: 20656
-		// (get) Token: 0x06018032 RID: 98354 RVA: 0x0037C9F8 File Offset: 0x0037ABF8
+		// Token: 0x1700521C RID: 21020
+		// (get) Token: 0x060185D3 RID: 99795 RVA: 0x0038BD38 File Offset: 0x00389F38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050B1 RID: 20657
-		// (get) Token: 0x06018033 RID: 98355 RVA: 0x0037C9FB File Offset: 0x0037ABFB
+		// Token: 0x1700521D RID: 21021
+		// (get) Token: 0x060185D4 RID: 99796 RVA: 0x0038BD3B File Offset: 0x00389F3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018034 RID: 98356 RVA: 0x0037CA02 File Offset: 0x0037AC02
+		// Token: 0x060185D5 RID: 99797 RVA: 0x0038BD42 File Offset: 0x00389F42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScheduleRewardUpdateNotify()
 		{
 		}
 
-		// Token: 0x06018035 RID: 98357 RVA: 0x0037CA15 File Offset: 0x0037AC15
+		// Token: 0x060185D6 RID: 99798 RVA: 0x0038BD55 File Offset: 0x00389F55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScheduleRewardUpdateNotify(ScheduleRewardUpdateNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018036 RID: 98358 RVA: 0x0037CA4B File Offset: 0x0037AC4B
+		// Token: 0x060185D7 RID: 99799 RVA: 0x0038BD8B File Offset: 0x00389F8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ScheduleRewardUpdateNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new ScheduleRewardUpdateNotify(this);
 		}
 
-		// Token: 0x170050B2 RID: 20658
-		// (get) Token: 0x06018037 RID: 98359 RVA: 0x0037CA53 File Offset: 0x0037AC53
-		// (set) Token: 0x06018038 RID: 98360 RVA: 0x0037CA5B File Offset: 0x0037AC5B
+		// Token: 0x1700521E RID: 21022
+		// (get) Token: 0x060185D8 RID: 99800 RVA: 0x0038BD93 File Offset: 0x00389F93
+		// (set) Token: 0x060185D9 RID: 99801 RVA: 0x0038BD9B File Offset: 0x00389F9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170050B3 RID: 20659
-		// (get) Token: 0x06018039 RID: 98361 RVA: 0x0037CA64 File Offset: 0x0037AC64
+		// Token: 0x1700521F RID: 21023
+		// (get) Token: 0x060185DA RID: 99802 RVA: 0x0038BDA4 File Offset: 0x00389FA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CiacconaScheduleRewardPbData> ScheduleRewardDatas
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601803A RID: 98362 RVA: 0x0037CA6C File Offset: 0x0037AC6C
+		// Token: 0x060185DB RID: 99803 RVA: 0x0038BDAC File Offset: 0x00389FAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ScheduleRewardUpdateNotify);
 		}
 
-		// Token: 0x0601803B RID: 98363 RVA: 0x0037CA7C File Offset: 0x0037AC7C
+		// Token: 0x060185DC RID: 99804 RVA: 0x0038BDBC File Offset: 0x00389FBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ScheduleRewardUpdateNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.scheduleRewardDatas_.Equals(other.scheduleRewardDatas_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601803C RID: 98364 RVA: 0x0037CACC File Offset: 0x0037ACCC
+		// Token: 0x060185DD RID: 99805 RVA: 0x0038BE0C File Offset: 0x0038A00C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601803D RID: 98365 RVA: 0x0037CB19 File Offset: 0x0037AD19
+		// Token: 0x060185DE RID: 99806 RVA: 0x0038BE59 File Offset: 0x0038A059
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601803E RID: 98366 RVA: 0x0037CB26 File Offset: 0x0037AD26
+		// Token: 0x060185DF RID: 99807 RVA: 0x0038BE66 File Offset: 0x0038A066
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601803F RID: 98367 RVA: 0x0037CB30 File Offset: 0x0037AD30
+		// Token: 0x060185E0 RID: 99808 RVA: 0x0038BE70 File Offset: 0x0038A070
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018040 RID: 98368 RVA: 0x0037CB80 File Offset: 0x0037AD80
+		// Token: 0x060185E1 RID: 99809 RVA: 0x0038BEC0 File Offset: 0x0038A0C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018041 RID: 98369 RVA: 0x0037CBD4 File Offset: 0x0037ADD4
+		// Token: 0x060185E2 RID: 99810 RVA: 0x0038BF14 File Offset: 0x0038A114
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ScheduleRewardUpdateNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018042 RID: 98370 RVA: 0x0037CC21 File Offset: 0x0037AE21
+		// Token: 0x060185E3 RID: 99811 RVA: 0x0038BF61 File Offset: 0x0038A161
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018043 RID: 98371 RVA: 0x0037CC2C File Offset: 0x0037AE2C
+		// Token: 0x060185E4 RID: 99812 RVA: 0x0038BF6C File Offset: 0x0038A16C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -221,7 +221,7 @@ namespace Aki.Protocol
 				}
 				if (num != 8U)
 				{
-					if (num != 114U)
+					if (num != 42U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008E2E RID: 36398
+		// Token: 0x040090C1 RID: 37057
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008E2F RID: 36399
+		// Token: 0x040090C2 RID: 37058
 		public const int ActivityIdFieldNumber = 1;
 
-		// Token: 0x04008E30 RID: 36400
+		// Token: 0x040090C3 RID: 37059
 		private int activityId_;
 
-		// Token: 0x04008E31 RID: 36401
-		public const int ScheduleRewardDatasFieldNumber = 14;
+		// Token: 0x040090C4 RID: 37060
+		public const int ScheduleRewardDatasFieldNumber = 5;
 
-		// Token: 0x04008E32 RID: 36402
-		private static readonly FieldCodec<CiacconaScheduleRewardPbData> _repeated_scheduleRewardDatas_codec = FieldCodec.ForMessage<CiacconaScheduleRewardPbData>(114U, CiacconaScheduleRewardPbData.Parser);
+		// Token: 0x040090C5 RID: 37061
+		private static readonly FieldCodec<CiacconaScheduleRewardPbData> _repeated_scheduleRewardDatas_codec = FieldCodec.ForMessage<CiacconaScheduleRewardPbData>(42U, CiacconaScheduleRewardPbData.Parser);
 
-		// Token: 0x04008E33 RID: 36403
+		// Token: 0x040090C6 RID: 37062
 		private readonly RepeatedField<CiacconaScheduleRewardPbData> scheduleRewardDatas_ = new RepeatedField<CiacconaScheduleRewardPbData>();
 	}
 }

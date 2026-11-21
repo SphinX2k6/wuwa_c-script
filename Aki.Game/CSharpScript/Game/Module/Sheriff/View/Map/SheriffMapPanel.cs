@@ -26,14 +26,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Map
 {
-	// Token: 0x02004C64 RID: 19556
+	// Token: 0x02003C15 RID: 15381
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMapPanel : WorldMapExtraUiPanel
 	{
-		// Token: 0x17007CD1 RID: 31953
-		// (get) Token: 0x060328D1 RID: 207057 RVA: 0x00BC70E4 File Offset: 0x00BC52E4
-		// (set) Token: 0x060328D2 RID: 207058 RVA: 0x00BC70F1 File Offset: 0x00BC52F1
+		// Token: 0x1700507B RID: 20603
+		// (get) Token: 0x06027684 RID: 161412 RVA: 0x00B0BD50 File Offset: 0x00B09F50
+		// (set) Token: 0x06027685 RID: 161413 RVA: 0x00B0BD5D File Offset: 0x00B09F5D
 		[Nullable(2)]
 		public new ISheriffMapPanelParam OpenParam
 		{
@@ -49,12 +49,12 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}
 		}
 
-		// Token: 0x060328D3 RID: 207059 RVA: 0x00BC70FA File Offset: 0x00BC52FA
+		// Token: 0x06027686 RID: 161414 RVA: 0x00B0BD66 File Offset: 0x00B09F66
 		public SheriffMapPanel(EWorldMapExtraUiPanelName panelName, WorldMapExtraUiPanelComponent extraUiPanelComponent) : base(panelName, extraUiPanelComponent)
 		{
 		}
 
-		// Token: 0x060328D4 RID: 207060 RVA: 0x00BC7120 File Offset: 0x00BC5320
+		// Token: 0x06027687 RID: 161415 RVA: 0x00B0BD8C File Offset: 0x00B09F8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060328D5 RID: 207061 RVA: 0x00BC72F2 File Offset: 0x00BC54F2
+		// Token: 0x06027688 RID: 161416 RVA: 0x00B0BF5E File Offset: 0x00B0A15E
 		private void OnClickBtnShop()
 		{
 			SheriffModel.Instance.ClearShopRedDot();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			});
 		}
 
-		// Token: 0x060328D6 RID: 207062 RVA: 0x00BC7330 File Offset: 0x00BC5530
+		// Token: 0x06027689 RID: 161417 RVA: 0x00B0BF9C File Offset: 0x00B0A19C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffMapPanel.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328D7 RID: 207063 RVA: 0x00BC7374 File Offset: 0x00BC5574
+		// Token: 0x0602768A RID: 161418 RVA: 0x00B0BFE0 File Offset: 0x00B0A1E0
 		protected override void OnStart()
 		{
 			this.InitCaptionItem();
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			onPanelOpened();
 		}
 
-		// Token: 0x060328D8 RID: 207064 RVA: 0x00BC7412 File Offset: 0x00BC5612
+		// Token: 0x0602768B RID: 161419 RVA: 0x00B0C07E File Offset: 0x00B0A27E
 		private void OnRefreshGoodsList(int goodsId, PayShopDefine.EPayShopTabType payShopId, int tabId)
 		{
 			this.RefreshShopText();
 		}
 
-		// Token: 0x060328D9 RID: 207065 RVA: 0x00BC741C File Offset: 0x00BC561C
+		// Token: 0x0602768C RID: 161420 RVA: 0x00B0C088 File Offset: 0x00B0A288
 		private void RefreshShopText()
 		{
 			ValueTuple<int, int, int> shopGoodsPriceInfo = SheriffModel.Instance.GetShopGoodsPriceInfo();
@@ -162,13 +162,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}));
 		}
 
-		// Token: 0x060328DA RID: 207066 RVA: 0x00BC7471 File Offset: 0x00BC5671
+		// Token: 0x0602768D RID: 161421 RVA: 0x00B0C0DD File Offset: 0x00B0A2DD
 		private void RefreshShopRedDot()
 		{
 			base.GetItem(6).SetUIActive(SheriffModel.Instance.CheckShopRedDot());
 		}
 
-		// Token: 0x060328DB RID: 207067 RVA: 0x00BC748C File Offset: 0x00BC568C
+		// Token: 0x0602768E RID: 161422 RVA: 0x00B0C0F8 File Offset: 0x00B0A2F8
 		protected override void OnAfterShow()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			sequencePlayer.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x060328DC RID: 207068 RVA: 0x00BC74B8 File Offset: 0x00BC56B8
+		// Token: 0x0602768F RID: 161423 RVA: 0x00B0C124 File Offset: 0x00B0A324
 		private void InitCaptionItem()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -192,13 +192,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			});
 		}
 
-		// Token: 0x060328DD RID: 207069 RVA: 0x00BC753A File Offset: 0x00BC573A
+		// Token: 0x06027690 RID: 161424 RVA: 0x00B0C1A6 File Offset: 0x00B0A3A6
 		private void CloseCallBack()
 		{
 			base.CloseMe();
 		}
 
-		// Token: 0x060328DE RID: 207070 RVA: 0x00BC7544 File Offset: 0x00BC5744
+		// Token: 0x06027691 RID: 161425 RVA: 0x00B0C1B0 File Offset: 0x00B0A3B0
 		private UniTask InitCommonMapItemsView()
 		{
 			SheriffMapPanel.<InitCommonMapItemsView>d__25 <InitCommonMapItemsView>d__;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return <InitCommonMapItemsView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328DF RID: 207071 RVA: 0x00BC7588 File Offset: 0x00BC5788
+		// Token: 0x06027692 RID: 161426 RVA: 0x00B0C1F4 File Offset: 0x00B0A3F4
 		private void OnClickBtnSwitch()
 		{
 			List<IMapMarkToggleItemData> list = new List<IMapMarkToggleItemData>();
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			worldMapUiComponent.SecondaryUiComponent.ShowMapMarkTogglePanel(this.ParentUiItem, list, null);
 		}
 
-		// Token: 0x060328E0 RID: 207072 RVA: 0x00BC75FF File Offset: 0x00BC57FF
+		// Token: 0x06027693 RID: 161427 RVA: 0x00B0C26B File Offset: 0x00B0A46B
 		private EToggleState GetHideCompletedMarkItemToggleState()
 		{
 			if (!LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.SheriffHideCompletedMarkItem, false))
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x060328E1 RID: 207073 RVA: 0x00BC7614 File Offset: 0x00BC5814
+		// Token: 0x06027694 RID: 161428 RVA: 0x00B0C280 File Offset: 0x00B0A480
 		private bool SetHideCompletedMarkItemToggleState(EToggleState state)
 		{
 			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.SheriffHideCompletedMarkItem, state == EToggleState.ETT_Checked);
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return true;
 		}
 
-		// Token: 0x060328E2 RID: 207074 RVA: 0x00BC7650 File Offset: 0x00BC5850
+		// Token: 0x06027695 RID: 161429 RVA: 0x00B0C2BC File Offset: 0x00B0A4BC
 		private UniTask InitMainTabLayout()
 		{
 			SheriffMapPanel.<InitMainTabLayout>d__29 <InitMainTabLayout>d__;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return <InitMainTabLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328E3 RID: 207075 RVA: 0x00BC7694 File Offset: 0x00BC5894
+		// Token: 0x06027696 RID: 161430 RVA: 0x00B0C300 File Offset: 0x00B0A500
 		private UniTask RefreshMainTabLayout()
 		{
 			SheriffMapPanel.<RefreshMainTabLayout>d__30 <RefreshMainTabLayout>d__;
@@ -274,13 +274,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return <RefreshMainTabLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060328E4 RID: 207076 RVA: 0x00BC76D7 File Offset: 0x00BC58D7
+		// Token: 0x06027697 RID: 161431 RVA: 0x00B0C343 File Offset: 0x00B0A543
 		private ESheriffMainTabType GetDefaultMainTabType()
 		{
 			return ESheriffMainTabType.Event;
 		}
 
-		// Token: 0x060328E5 RID: 207077 RVA: 0x00BC76DA File Offset: 0x00BC58DA
+		// Token: 0x06027698 RID: 161432 RVA: 0x00B0C346 File Offset: 0x00B0A546
 		private SheriffMapMainTabItem CreateMainTabItem()
 		{
 			return new SheriffMapMainTabItem
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			};
 		}
 
-		// Token: 0x060328E6 RID: 207078 RVA: 0x00BC76F4 File Offset: 0x00BC58F4
+		// Token: 0x06027699 RID: 161433 RVA: 0x00B0C360 File Offset: 0x00B0A560
 		private void OnSelectMainTab(ISheriffMainTabItemData data)
 		{
 			this.CurrentMainTabType = data.TabType;
@@ -308,13 +308,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}
 		}
 
-		// Token: 0x060328E7 RID: 207079 RVA: 0x00BC7776 File Offset: 0x00BC5976
+		// Token: 0x0602769A RID: 161434 RVA: 0x00B0C3E2 File Offset: 0x00B0A5E2
 		private void InitSubTabLayout()
 		{
 			this.SubTabLayout = new GenericLayout<SheriffMapSubTabItem, ISheriffSubTabItemData>(base.GetLayoutBase(2), new Func<SheriffMapSubTabItem>(this.CreateSubTabItem), null, false, true);
 		}
 
-		// Token: 0x060328E8 RID: 207080 RVA: 0x00BC779C File Offset: 0x00BC599C
+		// Token: 0x0602769B RID: 161435 RVA: 0x00B0C408 File Offset: 0x00B0A608
 		private void RefreshSubTabLayout(ESheriffMainTabType tabType)
 		{
 			this.SubTabItemDataList.Clear();
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			uiNiagara.ActivateSystem(true);
 		}
 
-		// Token: 0x060328E9 RID: 207081 RVA: 0x00BC7910 File Offset: 0x00BC5B10
+		// Token: 0x0602769C RID: 161436 RVA: 0x00B0C57C File Offset: 0x00B0A77C
 		private void PushSubTabItem(ESheriffSubTabType tabType, string iconId, string textId, int current, int total)
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew(textId, null);
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			});
 		}
 
-		// Token: 0x060328EA RID: 207082 RVA: 0x00BC7984 File Offset: 0x00BC5B84
+		// Token: 0x0602769D RID: 161437 RVA: 0x00B0C5F0 File Offset: 0x00B0A7F0
 		private void NavigateToAnomalyMark()
 		{
 			int targetAnomalyMarkId = SheriffModel.Instance.GetTargetAnomalyMarkId();
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			});
 		}
 
-		// Token: 0x060328EB RID: 207083 RVA: 0x00BC79D0 File Offset: 0x00BC5BD0
+		// Token: 0x0602769E RID: 161438 RVA: 0x00B0C63C File Offset: 0x00B0A83C
 		private void NavigateToQuestMark(SheriffQuestState poiState, SheriffQuestState branchState)
 		{
 			int? num = this.FindTrackingQuestMarkId(poiState.UnFinishList);
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}
 		}
 
-		// Token: 0x060328EC RID: 207084 RVA: 0x00BC7AE0 File Offset: 0x00BC5CE0
+		// Token: 0x0602769F RID: 161439 RVA: 0x00B0C74C File Offset: 0x00B0A94C
 		private int? FindTrackingQuestMarkId(List<int> questIds)
 		{
 			foreach (int questId in questIds)
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return null;
 		}
 
-		// Token: 0x060328ED RID: 207085 RVA: 0x00BC7B68 File Offset: 0x00BC5D68
+		// Token: 0x060276A0 RID: 161440 RVA: 0x00B0C7D4 File Offset: 0x00B0A9D4
 		private SheriffMapSubTabItem CreateSubTabItem()
 		{
 			return new SheriffMapSubTabItem
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			};
 		}
 
-		// Token: 0x060328EE RID: 207086 RVA: 0x00BC7B84 File Offset: 0x00BC5D84
+		// Token: 0x060276A1 RID: 161441 RVA: 0x00B0C7F0 File Offset: 0x00B0A9F0
 		private void OnClickSubTab(ISheriffSubTabItemData data)
 		{
 			switch (data.TabType)
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}
 		}
 
-		// Token: 0x060328EF RID: 207087 RVA: 0x00BC7D09 File Offset: 0x00BC5F09
+		// Token: 0x060276A2 RID: 161442 RVA: 0x00B0C975 File Offset: 0x00B0AB75
 		[NullableContext(2)]
 		public override UUISliderComponent GetScaleSlider()
 		{
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return commonMapItemsViewInstance.GetScaleSlider();
 		}
 
-		// Token: 0x060328F0 RID: 207088 RVA: 0x00BC7D1C File Offset: 0x00BC5F1C
+		// Token: 0x060276A3 RID: 161443 RVA: 0x00B0C988 File Offset: 0x00B0AB88
 		public override float GetDefaultMapScale()
 		{
 			int mapId = SheriffConfig.Instance.GetZoneConfigById(this.CurrentZoneId).Value.MapId;
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return (float)((this.CurrentMainTabType == ESheriffMainTabType.Event) ? ((mapConfigById != null) ? mapConfigById.GetValueOrDefault().BigMapDefaultScale : 0) : ((mapConfigById != null) ? mapConfigById.GetValueOrDefault().QuestMapDefaultScale : 0));
 		}
 
-		// Token: 0x060328F1 RID: 207089 RVA: 0x00BC7D9C File Offset: 0x00BC5F9C
+		// Token: 0x060276A4 RID: 161444 RVA: 0x00B0CA08 File Offset: 0x00B0AC08
 		public override float GetMaxMapScale()
 		{
 			int mapId = SheriffConfig.Instance.GetZoneConfigById(this.CurrentZoneId).Value.MapId;
@@ -556,7 +556,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return (float)((this.CurrentMainTabType == ESheriffMainTabType.Event) ? ((mapConfigById != null) ? mapConfigById.GetValueOrDefault().BigMapMaxScale : 0) : ((mapConfigById != null) ? mapConfigById.GetValueOrDefault().QuestMapMaxScale : 0));
 		}
 
-		// Token: 0x060328F2 RID: 207090 RVA: 0x00BC7E1C File Offset: 0x00BC601C
+		// Token: 0x060276A5 RID: 161445 RVA: 0x00B0CA88 File Offset: 0x00B0AC88
 		public override float GetMinMapScale()
 		{
 			int mapId = SheriffConfig.Instance.GetZoneConfigById(this.CurrentZoneId).Value.MapId;
@@ -564,7 +564,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return (float)((this.CurrentMainTabType == ESheriffMainTabType.Event) ? ((mapConfigById != null) ? mapConfigById.GetValueOrDefault().BigMapMinScale : 0) : ((mapConfigById != null) ? mapConfigById.GetValueOrDefault().QuestMapMinScale : 0));
 		}
 
-		// Token: 0x060328F3 RID: 207091 RVA: 0x00BC7E9C File Offset: 0x00BC609C
+		// Token: 0x060276A6 RID: 161446 RVA: 0x00B0CB08 File Offset: 0x00B0AD08
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -581,7 +581,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return mapConfigById.Value.TileRangeIter();
 		}
 
-		// Token: 0x060328F4 RID: 207092 RVA: 0x00BC7EF4 File Offset: 0x00BC60F4
+		// Token: 0x060276A7 RID: 161447 RVA: 0x00B0CB60 File Offset: 0x00B0AD60
 		[NullableContext(2)]
 		public override int[] GetUnlockFogs()
 		{
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return mapConfigById.Value.GetUnlockFogsArray();
 		}
 
-		// Token: 0x060328F5 RID: 207093 RVA: 0x00BC7F5B File Offset: 0x00BC615B
+		// Token: 0x060276A8 RID: 161448 RVA: 0x00B0CBC7 File Offset: 0x00B0ADC7
 		public override EMarkType[] GetExtraMarkTypes()
 		{
 			return new EMarkType[]
@@ -603,7 +603,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			};
 		}
 
-		// Token: 0x060328F6 RID: 207094 RVA: 0x00BC7F74 File Offset: 0x00BC6174
+		// Token: 0x060276A9 RID: 161449 RVA: 0x00B0CBE0 File Offset: 0x00B0ADE0
 		[NullableContext(2)]
 		public override int[] GetExtraMarkIds()
 		{
@@ -616,7 +616,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return mapConfigById.Value.GetExtraMarkIdsArray();
 		}
 
-		// Token: 0x060328F7 RID: 207095 RVA: 0x00BC7FDC File Offset: 0x00BC61DC
+		// Token: 0x060276AA RID: 161450 RVA: 0x00B0CC48 File Offset: 0x00B0AE48
 		[return: TupleElementNames(new string[]
 		{
 			"ResourceId",
@@ -638,13 +638,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return new ValueTuple<string, string>?(new ValueTuple<string, string>("UiItem_SkyEyeMapLoading", "Start"));
 		}
 
-		// Token: 0x060328F8 RID: 207096 RVA: 0x00BC8023 File Offset: 0x00BC6223
+		// Token: 0x060276AB RID: 161451 RVA: 0x00B0CC8F File Offset: 0x00B0AE8F
 		public override string GetBackgroundMusicAudioEvent()
 		{
 			return "play_ui_music_tongji_3_5_layer1";
 		}
 
-		// Token: 0x060328F9 RID: 207097 RVA: 0x00BC802C File Offset: 0x00BC622C
+		// Token: 0x060276AC RID: 161452 RVA: 0x00B0CC98 File Offset: 0x00B0AE98
 		public override int? GetCustomClickRange()
 		{
 			if (this.CurrentMainTabType != ESheriffMainTabType.Event)
@@ -654,7 +654,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return new int?(65);
 		}
 
-		// Token: 0x060328FA RID: 207098 RVA: 0x00BC8054 File Offset: 0x00BC6254
+		// Token: 0x060276AD RID: 161453 RVA: 0x00B0CCC0 File Offset: 0x00B0AEC0
 		public override ClickMarkItemRet OnClickMarkItem(MarkItem markItem)
 		{
 			if (markItem.MarkType == EMarkType.SheriffAnomaly)
@@ -687,20 +687,20 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return this.ClickMarkItemRetData;
 		}
 
-		// Token: 0x060328FB RID: 207099 RVA: 0x00BC814C File Offset: 0x00BC634C
+		// Token: 0x060276AE RID: 161454 RVA: 0x00B0CDB8 File Offset: 0x00B0AFB8
 		public override bool OnClickEmpty(Vector2D clickedPosition)
 		{
 			WorldMapUiEntity worldMapUiComponent = this.ExtraUiPanelComponent.WorldMapUiComponent;
 			return worldMapUiComponent == null || !worldMapUiComponent.SecondaryUiComponent.IsSecondaryUiOpening;
 		}
 
-		// Token: 0x060328FC RID: 207100 RVA: 0x00BC816F File Offset: 0x00BC636F
+		// Token: 0x060276AF RID: 161455 RVA: 0x00B0CDDB File Offset: 0x00B0AFDB
 		private void HandleAnomalyClick(SheriffAnomalyInfo anomalyInfo)
 		{
 			SheriffController.Instance.OpenSheriffReportPop(anomalyInfo.CriminalId, true);
 		}
 
-		// Token: 0x060328FD RID: 207101 RVA: 0x00BC8184 File Offset: 0x00BC6384
+		// Token: 0x060276B0 RID: 161456 RVA: 0x00B0CDF0 File Offset: 0x00B0AFF0
 		private void OnGotoAnomaly(int anomalyId)
 		{
 			int markId = SheriffModel.Instance.GetAnomalyInfo(anomalyId).MarkId;
@@ -796,14 +796,14 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}
 		}
 
-		// Token: 0x060328FE RID: 207102 RVA: 0x00BC8368 File Offset: 0x00BC6568
+		// Token: 0x060276B1 RID: 161457 RVA: 0x00B0CFD4 File Offset: 0x00B0B1D4
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext teleportContext)
 		{
 			ScrollingTipsController.Instance.ShowTipsByTextId("FunctionMap_Content_23", Array.Empty<object>());
 		}
 
-		// Token: 0x060328FF RID: 207103 RVA: 0x00BC8380 File Offset: 0x00BC6580
+		// Token: 0x060276B2 RID: 161458 RVA: 0x00B0CFEC File Offset: 0x00B0B1EC
 		protected override UniTask OnBeforeHideAsync()
 		{
 			SheriffMapPanel.<OnBeforeHideAsync>d__58 <OnBeforeHideAsync>d__;
@@ -814,7 +814,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032900 RID: 207104 RVA: 0x00BC83C4 File Offset: 0x00BC65C4
+		// Token: 0x060276B3 RID: 161459 RVA: 0x00B0D030 File Offset: 0x00B0B230
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnGotoAnomaly, new Action<int>(this.OnGotoAnomaly));
@@ -822,11 +822,11 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoodsList));
 		}
 
-		// Token: 0x0401AE74 RID: 110196
+		// Token: 0x040157D1 RID: 88017
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401AE75 RID: 110197
+		// Token: 0x040157D2 RID: 88018
 		[Nullable(new byte[]
 		{
 			2,
@@ -835,7 +835,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 		})]
 		private GenericLayout<SheriffMapMainTabItem, ISheriffMainTabItemData> MainTabLayout;
 
-		// Token: 0x0401AE76 RID: 110198
+		// Token: 0x040157D3 RID: 88019
 		[Nullable(new byte[]
 		{
 			2,
@@ -844,64 +844,64 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 		})]
 		private GenericLayout<SheriffMapSubTabItem, ISheriffSubTabItemData> SubTabLayout;
 
-		// Token: 0x0401AE77 RID: 110199
+		// Token: 0x040157D4 RID: 88020
 		[Nullable(2)]
 		private CommonMapItemsView CommonMapItemsViewInstance;
 
-		// Token: 0x0401AE78 RID: 110200
+		// Token: 0x040157D5 RID: 88021
 		private ESheriffMainTabType CurrentMainTabType;
 
-		// Token: 0x0401AE79 RID: 110201
+		// Token: 0x040157D6 RID: 88022
 		private const int CUSTOM_CLICK_RANGE = 65;
 
-		// Token: 0x0401AE7A RID: 110202
+		// Token: 0x040157D7 RID: 88023
 		private readonly int CurrentZoneId = 1;
 
-		// Token: 0x0401AE7B RID: 110203
+		// Token: 0x040157D8 RID: 88024
 		private readonly List<ISheriffSubTabItemData> SubTabItemDataList = new List<ISheriffSubTabItemData>();
 
-		// Token: 0x0401AE7C RID: 110204
+		// Token: 0x040157D9 RID: 88025
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401AE7D RID: 110205
+		// Token: 0x040157DA RID: 88026
 		private bool IsInitialTabSelect = true;
 
-		// Token: 0x0200AE0F RID: 44559
+		// Token: 0x0200982D RID: 38957
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04034DCF RID: 216527
+			// Token: 0x0402F774 RID: 194420
 			public const int CaptionItem = 0;
 
-			// Token: 0x04034DD0 RID: 216528
+			// Token: 0x0402F775 RID: 194421
 			public const int PnlInfo = 1;
 
-			// Token: 0x04034DD1 RID: 216529
+			// Token: 0x0402F776 RID: 194422
 			public const int SubTab = 2;
 
-			// Token: 0x04034DD2 RID: 216530
+			// Token: 0x0402F777 RID: 194423
 			public const int SubTabItem = 3;
 
-			// Token: 0x04034DD3 RID: 216531
+			// Token: 0x0402F778 RID: 194424
 			public const int BtnShop = 4;
 
-			// Token: 0x04034DD4 RID: 216532
+			// Token: 0x0402F779 RID: 194425
 			public const int ShopText = 5;
 
-			// Token: 0x04034DD5 RID: 216533
+			// Token: 0x0402F77A RID: 194426
 			public const int RedDotShop = 6;
 
-			// Token: 0x04034DD6 RID: 216534
+			// Token: 0x0402F77B RID: 194427
 			public const int MainTab = 7;
 
-			// Token: 0x04034DD7 RID: 216535
+			// Token: 0x0402F77C RID: 194428
 			public const int MainTabItem = 8;
 
-			// Token: 0x04034DD8 RID: 216536
+			// Token: 0x0402F77D RID: 194429
 			public const int PnlContent = 9;
 
-			// Token: 0x04034DD9 RID: 216537
+			// Token: 0x0402F77E RID: 194430
 			public const int NiaSwitch = 10;
 		}
 	}

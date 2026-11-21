@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 {
-	// Token: 0x02004763 RID: 18275
+	// Token: 0x02003694 RID: 13972
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ClimbCapability : CapabilityBase
 	{
-		// Token: 0x0602FC5B RID: 195675 RVA: 0x00B111E9 File Offset: 0x00B0F3E9
+		// Token: 0x06024425 RID: 148517 RVA: 0x00A411A9 File Offset: 0x00A3F3A9
 		public ClimbCapability(WuWaGoRole role) : base(role)
 		{
 		}
 
-		// Token: 0x0602FC5C RID: 195676 RVA: 0x00B111F4 File Offset: 0x00B0F3F4
+		// Token: 0x06024426 RID: 148518 RVA: 0x00A411B4 File Offset: 0x00A3F3B4
 		public UniTask GroundToWall(WuWaGoGrid targetVerticalGrid)
 		{
 			ClimbCapability.<GroundToWall>d__3 <GroundToWall>d__;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <GroundToWall>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC5D RID: 195677 RVA: 0x00B11240 File Offset: 0x00B0F440
+		// Token: 0x06024427 RID: 148519 RVA: 0x00A41200 File Offset: 0x00A3F400
 		public UniTask WallToGround(WuWaGoGrid targetHorizontalGrid)
 		{
 			ClimbCapability.<WallToGround>d__4 <WallToGround>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <WallToGround>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC5E RID: 195678 RVA: 0x00B1128C File Offset: 0x00B0F48C
+		// Token: 0x06024428 RID: 148520 RVA: 0x00A4124C File Offset: 0x00A3F44C
 		public UniTask MoveOnWall(WuWaGoGrid targetVertical)
 		{
 			ClimbCapability.<MoveOnWall>d__5 <MoveOnWall>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return <MoveOnWall>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC5F RID: 195679 RVA: 0x00B112D8 File Offset: 0x00B0F4D8
+		// Token: 0x06024429 RID: 148521 RVA: 0x00A41298 File Offset: 0x00A3F498
 		public void EnterClimbIdle()
 		{
 			UKuroAnimInstanceMonster ukuroAnimInstanceMonster = WuWaGoUtil.GetActorAnimInstance(this.Role, "EnterClimbIdle") as UKuroAnimInstanceMonster;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			this.Role.SetIsClimbing(true);
 		}
 
-		// Token: 0x0602FC60 RID: 195680 RVA: 0x00B1132C File Offset: 0x00B0F52C
+		// Token: 0x0602442A RID: 148522 RVA: 0x00A412EC File Offset: 0x00A3F4EC
 		public void ExitClimbIdle()
 		{
 			UKuroAnimInstanceMonster ukuroAnimInstanceMonster = WuWaGoUtil.GetActorAnimInstance(this.Role, "EnterClimbIdle") as UKuroAnimInstanceMonster;
@@ -89,14 +89,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			this.Role.SetIsClimbing(false);
 		}
 
-		// Token: 0x0602FC61 RID: 195681 RVA: 0x00B1137D File Offset: 0x00B0F57D
+		// Token: 0x0602442B RID: 148523 RVA: 0x00A4133D File Offset: 0x00A3F53D
 		[NullableContext(2)]
 		private WuWaGoGrid GetStandGrid()
 		{
 			return WuWaGoModel.Instance.GetGridById(this.Role.StandGridId);
 		}
 
-		// Token: 0x0602FC62 RID: 195682 RVA: 0x00B11394 File Offset: 0x00B0F594
+		// Token: 0x0602442C RID: 148524 RVA: 0x00A41354 File Offset: 0x00A3F554
 		private void FaceTowardsWallNormal(WuWaGoGrid vGrid)
 		{
 			FVectorDouble? worldLocation = this.Role.GetWorldLocation();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			this.Role.SetRotator(ClimbCapability.LocalRotationTemp);
 		}
 
-		// Token: 0x0602FC63 RID: 195683 RVA: 0x00B114EC File Offset: 0x00B0F6EC
+		// Token: 0x0602442D RID: 148525 RVA: 0x00A414AC File Offset: 0x00A3F6AC
 		private Vector GetCoordinateWorldPositionForActor(Vector gridCoordinate, bool bAdjustMeshZ)
 		{
 			Vector worldPositionByCoordinate = WuWaGoUtil.GetWorldPositionByCoordinate(WuWaGoModel.Instance.GameData.OriginTransform, gridCoordinate, null);
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return worldPositionByCoordinate;
 		}
 
-		// Token: 0x0602FC64 RID: 195684 RVA: 0x00B11544 File Offset: 0x00B0F744
+		// Token: 0x0602442E RID: 148526 RVA: 0x00A41504 File Offset: 0x00A3F704
 		private EWuWaGoClimbMontage? PickWallMoveAction(WuWaGoGrid fromV, WuWaGoGrid toV)
 		{
 			double num = toV.Coordinate.X - fromV.Coordinate.X;
@@ -169,11 +169,11 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role.Capability
 			return new EWuWaGoClimbMontage?((num7 > 0.0) ? EWuWaGoClimbMontage.Right : EWuWaGoClimbMontage.Left);
 		}
 
-		// Token: 0x04019C5A RID: 105562
+		// Token: 0x0401430A RID: 82698
 		[StaticVariableRuleIgnore]
 		private static readonly Rotator WorldRotationTemp = Rotator.Create();
 
-		// Token: 0x04019C5B RID: 105563
+		// Token: 0x0401430B RID: 82699
 		[StaticVariableRuleIgnore]
 		private static readonly Rotator LocalRotationTemp = Rotator.Create();
 	}

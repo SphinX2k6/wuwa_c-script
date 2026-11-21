@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001105 RID: 4357
+	// Token: 0x0200113F RID: 4415
 	public sealed class RoverRogueHistoryInsInfo : IMessage<RoverRogueHistoryInsInfo>, IMessage, IEquatable<RoverRogueHistoryInsInfo>, IDeepCloneable<RoverRogueHistoryInsInfo>, IBufferMessage
 	{
-		// Token: 0x060173AF RID: 95151 RVA: 0x0035EFE5 File Offset: 0x0035D1E5
+		// Token: 0x06017950 RID: 96592 RVA: 0x0036E335 File Offset: 0x0036C535
 		[NullableContext(1)]
 		public static RoverRogueHistoryInsInfo Create()
 		{
 			return new RoverRogueHistoryInsInfo();
 		}
 
-		// Token: 0x17004DD8 RID: 19928
-		// (get) Token: 0x060173B0 RID: 95152 RVA: 0x0035EFEC File Offset: 0x0035D1EC
+		// Token: 0x17004F44 RID: 20292
+		// (get) Token: 0x06017951 RID: 96593 RVA: 0x0036E33C File Offset: 0x0036C53C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004DD9 RID: 19929
-		// (get) Token: 0x060173B1 RID: 95153 RVA: 0x0035EFEF File Offset: 0x0035D1EF
+		// Token: 0x17004F45 RID: 20293
+		// (get) Token: 0x06017952 RID: 96594 RVA: 0x0036E33F File Offset: 0x0036C53F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060173B2 RID: 95154 RVA: 0x0035EFF6 File Offset: 0x0035D1F6
+		// Token: 0x06017953 RID: 96595 RVA: 0x0036E346 File Offset: 0x0036C546
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueHistoryInsInfo()
 		{
 		}
 
-		// Token: 0x060173B3 RID: 95155 RVA: 0x0035F000 File Offset: 0x0035D200
+		// Token: 0x06017954 RID: 96596 RVA: 0x0036E350 File Offset: 0x0036C550
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueHistoryInsInfo(RoverRogueHistoryInsInfo other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060173B4 RID: 95156 RVA: 0x0035F054 File Offset: 0x0035D254
+		// Token: 0x06017955 RID: 96597 RVA: 0x0036E3A4 File Offset: 0x0036C5A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRogueHistoryInsInfo Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new RoverRogueHistoryInsInfo(this);
 		}
 
-		// Token: 0x17004DDA RID: 19930
-		// (get) Token: 0x060173B5 RID: 95157 RVA: 0x0035F05C File Offset: 0x0035D25C
-		// (set) Token: 0x060173B6 RID: 95158 RVA: 0x0035F064 File Offset: 0x0035D264
+		// Token: 0x17004F46 RID: 20294
+		// (get) Token: 0x06017956 RID: 96598 RVA: 0x0036E3AC File Offset: 0x0036C5AC
+		// (set) Token: 0x06017957 RID: 96599 RVA: 0x0036E3B4 File Offset: 0x0036C5B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurInsId
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004DDB RID: 19931
-		// (get) Token: 0x060173B7 RID: 95159 RVA: 0x0035F06D File Offset: 0x0035D26D
-		// (set) Token: 0x060173B8 RID: 95160 RVA: 0x0035F075 File Offset: 0x0035D275
+		// Token: 0x17004F47 RID: 20295
+		// (get) Token: 0x06017958 RID: 96600 RVA: 0x0036E3BD File Offset: 0x0036C5BD
+		// (set) Token: 0x06017959 RID: 96601 RVA: 0x0036E3C5 File Offset: 0x0036C5C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurLayer
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004DDC RID: 19932
-		// (get) Token: 0x060173B9 RID: 95161 RVA: 0x0035F07E File Offset: 0x0035D27E
-		// (set) Token: 0x060173BA RID: 95162 RVA: 0x0035F086 File Offset: 0x0035D286
+		// Token: 0x17004F48 RID: 20296
+		// (get) Token: 0x0601795A RID: 96602 RVA: 0x0036E3CE File Offset: 0x0036C5CE
+		// (set) Token: 0x0601795B RID: 96603 RVA: 0x0036E3D6 File Offset: 0x0036C5D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalLayer
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004DDD RID: 19933
-		// (get) Token: 0x060173BB RID: 95163 RVA: 0x0035F08F File Offset: 0x0035D28F
-		// (set) Token: 0x060173BC RID: 95164 RVA: 0x0035F097 File Offset: 0x0035D297
+		// Token: 0x17004F49 RID: 20297
+		// (get) Token: 0x0601795C RID: 96604 RVA: 0x0036E3DF File Offset: 0x0036C5DF
+		// (set) Token: 0x0601795D RID: 96605 RVA: 0x0036E3E7 File Offset: 0x0036C5E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LootId
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060173BD RID: 95165 RVA: 0x0035F0A0 File Offset: 0x0035D2A0
+		// Token: 0x0601795E RID: 96606 RVA: 0x0036E3F0 File Offset: 0x0036C5F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoverRogueHistoryInsInfo);
 		}
 
-		// Token: 0x060173BE RID: 95166 RVA: 0x0035F0B0 File Offset: 0x0035D2B0
+		// Token: 0x0601795F RID: 96607 RVA: 0x0036E400 File Offset: 0x0036C600
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoverRogueHistoryInsInfo other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CurInsId == other.CurInsId && this.CurLayer == other.CurLayer && this.TotalLayer == other.TotalLayer && this.LootId == other.LootId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060173BF RID: 95167 RVA: 0x0035F11C File Offset: 0x0035D31C
+		// Token: 0x06017960 RID: 96608 RVA: 0x0036E46C File Offset: 0x0036C66C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060173C0 RID: 95168 RVA: 0x0035F1A6 File Offset: 0x0035D3A6
+		// Token: 0x06017961 RID: 96609 RVA: 0x0036E4F6 File Offset: 0x0036C6F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060173C1 RID: 95169 RVA: 0x0035F1B3 File Offset: 0x0035D3B3
+		// Token: 0x06017962 RID: 96610 RVA: 0x0036E503 File Offset: 0x0036C703
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060173C2 RID: 95170 RVA: 0x0035F1BC File Offset: 0x0035D3BC
+		// Token: 0x06017963 RID: 96611 RVA: 0x0036E50C File Offset: 0x0036C70C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060173C3 RID: 95171 RVA: 0x0035F24C File Offset: 0x0035D44C
+		// Token: 0x06017964 RID: 96612 RVA: 0x0036E59C File Offset: 0x0036C79C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -257,7 +257,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060173C4 RID: 95172 RVA: 0x0035F2D4 File Offset: 0x0035D4D4
+		// Token: 0x06017965 RID: 96613 RVA: 0x0036E624 File Offset: 0x0036C824
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoverRogueHistoryInsInfo other)
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060173C5 RID: 95173 RVA: 0x0035F34C File Offset: 0x0035D54C
+		// Token: 0x06017966 RID: 96614 RVA: 0x0036E69C File Offset: 0x0036C89C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060173C6 RID: 95174 RVA: 0x0035F358 File Offset: 0x0035D558
+		// Token: 0x06017967 RID: 96615 RVA: 0x0036E6A8 File Offset: 0x0036C8A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -335,31 +335,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008A1C RID: 35356
+		// Token: 0x04008CAF RID: 36015
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008A1D RID: 35357
+		// Token: 0x04008CB0 RID: 36016
 		public const int CurInsIdFieldNumber = 1;
 
-		// Token: 0x04008A1E RID: 35358
+		// Token: 0x04008CB1 RID: 36017
 		private int curInsId_;
 
-		// Token: 0x04008A1F RID: 35359
+		// Token: 0x04008CB2 RID: 36018
 		public const int CurLayerFieldNumber = 2;
 
-		// Token: 0x04008A20 RID: 35360
+		// Token: 0x04008CB3 RID: 36019
 		private int curLayer_;
 
-		// Token: 0x04008A21 RID: 35361
+		// Token: 0x04008CB4 RID: 36020
 		public const int TotalLayerFieldNumber = 3;
 
-		// Token: 0x04008A22 RID: 35362
+		// Token: 0x04008CB5 RID: 36021
 		private int totalLayer_;
 
-		// Token: 0x04008A23 RID: 35363
+		// Token: 0x04008CB6 RID: 36022
 		public const int LootIdFieldNumber = 4;
 
-		// Token: 0x04008A24 RID: 35364
+		// Token: 0x04008CB7 RID: 36023
 		private int lootId_;
 	}
 }

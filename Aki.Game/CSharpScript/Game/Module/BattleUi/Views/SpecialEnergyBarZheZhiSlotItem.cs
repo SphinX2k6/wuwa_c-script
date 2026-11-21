@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E19 RID: 24089
+	// Token: 0x02004DFE RID: 19966
 	public class SpecialEnergyBarZheZhiSlotItem : SpecialEnergyBarSlotItem
 	{
-		// Token: 0x0603D423 RID: 250915 RVA: 0x00EC34A4 File Offset: 0x00EC16A4
+		// Token: 0x060323B2 RID: 205746 RVA: 0x00E14A04 File Offset: 0x00E12C04
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarZheZhiSlotItem.<OnBeforeStartAsync>d__1 <OnBeforeStartAsync>d__;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D424 RID: 250916 RVA: 0x00EC34E7 File Offset: 0x00EC16E7
+		// Token: 0x060323B3 RID: 205747 RVA: 0x00E14A47 File Offset: 0x00E12C47
 		public void SetEffectItemVisible(bool value)
 		{
 			SpecialEnergyBarZheZhiEffectItem effectItem = this.EffectItem;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			effectItem.SetVisible(value);
 		}
 
-		// Token: 0x0603D425 RID: 250917 RVA: 0x00EC34FA File Offset: 0x00EC16FA
+		// Token: 0x060323B4 RID: 205748 RVA: 0x00E14A5A File Offset: 0x00E12C5A
 		[NullableContext(1)]
 		public void SetEffectItemNiagaraParam(string varName, float value)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			effectItem.SetNiagaraParam(varName, value);
 		}
 
-		// Token: 0x0401FF1E RID: 130846
+		// Token: 0x0401A9E5 RID: 109029
 		[Nullable(2)]
 		private SpecialEnergyBarZheZhiEffectItem EffectItem;
 	}

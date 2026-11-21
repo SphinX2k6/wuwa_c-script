@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001224 RID: 4644
+	// Token: 0x02001360 RID: 4960
 	public static class EAtomicProcessExtensions
 	{
-		// Token: 0x06006949 RID: 26953 RVA: 0x000FAE78 File Offset: 0x000F9078
+		// Token: 0x06006F8A RID: 28554 RVA: 0x00108784 File Offset: 0x00106984
 		public static string ToEnumString(this EAtomicProcess value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600694A RID: 26954 RVA: 0x000FAEA0 File Offset: 0x000F90A0
+		// Token: 0x06006F8B RID: 28555 RVA: 0x001087AC File Offset: 0x001069AC
 		public static EAtomicProcess FromString(string name)
 		{
 			EAtomicProcess result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600694B RID: 26955 RVA: 0x000FAEC9 File Offset: 0x000F90C9
+		// Token: 0x06006F8C RID: 28556 RVA: 0x001087D5 File Offset: 0x001069D5
 		public static bool TryFromString(string name, out EAtomicProcess value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x0600694C RID: 26956 RVA: 0x000FAEEE File Offset: 0x000F90EE
+		// Token: 0x06006F8D RID: 28557 RVA: 0x001087FA File Offset: 0x001069FA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600694D RID: 26957 RVA: 0x000FAEFE File Offset: 0x000F90FE
+		// Token: 0x06006F8E RID: 28558 RVA: 0x0010880A File Offset: 0x00106A0A
 		public static EAtomicProcess[] GetValues()
 		{
 			return new EAtomicProcess[1];
 		}
 
-		// Token: 0x0600694E RID: 26958 RVA: 0x000FAF06 File Offset: 0x000F9106
+		// Token: 0x06006F8F RID: 28559 RVA: 0x00108812 File Offset: 0x00106A12
 		public static string[] GetNames()
 		{
 			return new string[]

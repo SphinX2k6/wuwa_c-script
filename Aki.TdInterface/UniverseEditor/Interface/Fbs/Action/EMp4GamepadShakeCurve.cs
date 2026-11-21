@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FBB RID: 24507
+	// Token: 0x0200660D RID: 26125
 	public enum EMp4GamepadShakeCurve : byte
 	{
-		// Token: 0x0400FEEE RID: 65262
+		// Token: 0x04010CA6 RID: 68774
 		Linear,
-		// Token: 0x0400FEEF RID: 65263
+		// Token: 0x04010CA7 RID: 68775
 		InSine,
-		// Token: 0x0400FEF0 RID: 65264
+		// Token: 0x04010CA8 RID: 68776
 		OutSine
 	}
 }

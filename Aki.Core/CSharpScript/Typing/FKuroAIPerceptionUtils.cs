@@ -4,16 +4,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Typing
 {
-	// Token: 0x0200011C RID: 284
+	// Token: 0x0200011D RID: 285
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class FKuroAIPerceptionUtils
 	{
-		// Token: 0x06000A34 RID: 2612
+		// Token: 0x06000A8B RID: 2699
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void StartAsyncAiPerception_Internal(IntPtr callback, int dataId, double nowTime, IntPtr lineElement);
 
-		// Token: 0x06000A35 RID: 2613 RVA: 0x00033A10 File Offset: 0x00031C10
+		// Token: 0x06000A8C RID: 2700 RVA: 0x00034484 File Offset: 0x00032684
 		public static void StartAsyncAiPerception(in FAIAsyncPerceptionCallback callback, int dataId, double nowTime, UTraceLineElement lineElement)
 		{
 			if (callback == null || !callback.IsValid())
@@ -29,11 +29,11 @@ namespace CSharpScript.Typing
 			FKuroAIPerceptionUtils.StartAsyncAiPerception_Internal(callback.NativePtr, dataId, nowTime, lineElement.NativePtr);
 		}
 
-		// Token: 0x06000A36 RID: 2614
+		// Token: 0x06000A8D RID: 2701
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Initialize_Internal(IntPtr entityTypeQueryNames, int eEntityTypeQueryCharacter, int eEntityTypeQuerySceneItem, int eEntityTypeQueryMaxIndex, int eCharMoveStateOther, int eCharMoveStateStand, int eCharMoveStateWalk, int eCharMoveStateWalkStop, int eCharMoveStateGlide, int eCharPositionStateGround, int eSenseTargetTypeCharacter);
 
-		// Token: 0x06000A37 RID: 2615 RVA: 0x00033A84 File Offset: 0x00031C84
+		// Token: 0x06000A8E RID: 2702 RVA: 0x000344F8 File Offset: 0x000326F8
 		public static void Initialize(in TArray<FName> entityTypeQueryNames, int eEntityTypeQueryCharacter, int eEntityTypeQuerySceneItem, int eEntityTypeQueryMaxIndex, int eCharMoveStateOther, int eCharMoveStateStand, int eCharMoveStateWalk, int eCharMoveStateWalkStop, int eCharMoveStateGlide, int eCharPositionStateGround, int eSenseTargetTypeCharacter)
 		{
 			if (entityTypeQueryNames == null || !entityTypeQueryNames.IsValid())
@@ -44,11 +44,11 @@ namespace CSharpScript.Typing
 			FKuroAIPerceptionUtils.Initialize_Internal(entityTypeQueryNames.NativePtr, eEntityTypeQueryCharacter, eEntityTypeQuerySceneItem, eEntityTypeQueryMaxIndex, eCharMoveStateOther, eCharMoveStateStand, eCharMoveStateWalk, eCharMoveStateWalkStop, eCharMoveStateGlide, eCharPositionStateGround, eSenseTargetTypeCharacter);
 		}
 
-		// Token: 0x06000A38 RID: 2616
+		// Token: 0x06000A8F RID: 2703
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Clear_Internal();
 
-		// Token: 0x06000A39 RID: 2617 RVA: 0x00033AD7 File Offset: 0x00031CD7
+		// Token: 0x06000A90 RID: 2704 RVA: 0x0003454B File Offset: 0x0003274B
 		public static void Clear()
 		{
 			FKuroAIPerceptionUtils.Clear_Internal();

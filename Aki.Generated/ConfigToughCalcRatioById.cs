@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009EE RID: 2542
+	// Token: 0x02000AC3 RID: 2755
 	public class ConfigToughCalcRatioById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003BA8 RID: 15272 RVA: 0x001AB24C File Offset: 0x001A944C
+		// Token: 0x060040A6 RID: 16550 RVA: 0x001CA5E0 File Offset: 0x001C87E0
 		static ConfigToughCalcRatioById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigToughCalcRatioById.CreateStaticDefaultValue), new Action(ConfigToughCalcRatioById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003BA9 RID: 15273 RVA: 0x001AB26C File Offset: 0x001A946C
+		// Token: 0x060040A7 RID: 16551 RVA: 0x001CA600 File Offset: 0x001C8800
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigToughCalcRatioById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003BAA RID: 15274 RVA: 0x001AB2EB File Offset: 0x001A94EB
+		// Token: 0x060040A8 RID: 16552 RVA: 0x001CA67F File Offset: 0x001C887F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigToughCalcRatioById.LogPair = null;
 			ConfigToughCalcRatioById.HandleId = 0;
 		}
 
-		// Token: 0x06003BAB RID: 15275 RVA: 0x001AB2F9 File Offset: 0x001A94F9
+		// Token: 0x060040A9 RID: 16553 RVA: 0x001CA68D File Offset: 0x001C888D
 		public static void Init()
 		{
 			ConfigToughCalcRatioById.HandleId = ConfigCommon.InitDataStatement(ConfigToughCalcRatioById.HandleId, "db_tough_modifier.db", "select BinData from `ToughCalcRatio` where Id=?");
 		}
 
-		// Token: 0x06003BAC RID: 15276 RVA: 0x001AB314 File Offset: 0x001A9514
+		// Token: 0x060040AA RID: 16554 RVA: 0x001CA6A8 File Offset: 0x001C88A8
 		public static ToughCalcRatio? GetConfig(long p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigToughCalcRatioById.HandleId, ConfigToughCalcRatioById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ToughCalcRatio?(rootAsToughCalcRatio);
 		}
 
-		// Token: 0x04004568 RID: 17768
+		// Token: 0x04004B3B RID: 19259
 		private const string DB = "db_tough_modifier.db";
 
-		// Token: 0x04004569 RID: 17769
+		// Token: 0x04004B3C RID: 19260
 		private const string FILE = "r.韧性计算系数.xlsx";
 
-		// Token: 0x0400456A RID: 17770
+		// Token: 0x04004B3D RID: 19261
 		private const string TABLE = "ToughCalcRatio";
 
-		// Token: 0x0400456B RID: 17771
+		// Token: 0x04004B3E RID: 19262
 		private const string COMMAND = "select BinData from `ToughCalcRatio` where Id=?";
 
-		// Token: 0x0400456C RID: 17772
+		// Token: 0x04004B3F RID: 19263
 		private const string KEY_PREFIX = "ToughCalcRatioById";
 
-		// Token: 0x0400456D RID: 17773
+		// Token: 0x04004B40 RID: 19264
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400456E RID: 17774
+		// Token: 0x04004B41 RID: 19265
 		private static int HandleId;
 	}
 }

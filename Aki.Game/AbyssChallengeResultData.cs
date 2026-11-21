@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A10 RID: 6672
+// Token: 0x02000ECF RID: 3791
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssChallengeResultData
 {
-	// Token: 0x0600C3DE RID: 50142 RVA: 0x002C5B33 File Offset: 0x002C3D33
+	// Token: 0x060097EE RID: 38894 RVA: 0x002D0B8C File Offset: 0x002CED8C
 	public int GetPassTime()
 	{
 		return this.PassTime;
 	}
 
-	// Token: 0x0600C3DF RID: 50143 RVA: 0x002C5B3B File Offset: 0x002C3D3B
+	// Token: 0x060097EF RID: 38895 RVA: 0x002D0B94 File Offset: 0x002CED94
 	public int GetMinPassTime()
 	{
 		return this.MinPassTime;
 	}
 
-	// Token: 0x0600C3E0 RID: 50144 RVA: 0x002C5B43 File Offset: 0x002C3D43
+	// Token: 0x060097F0 RID: 38896 RVA: 0x002D0B9C File Offset: 0x002CED9C
 	public bool GetIfSuccess()
 	{
 		return this.IfSuccess;
 	}
 
-	// Token: 0x0600C3E1 RID: 50145 RVA: 0x002C5B4B File Offset: 0x002C3D4B
+	// Token: 0x060097F1 RID: 38897 RVA: 0x002D0BA4 File Offset: 0x002CEDA4
 	public global::AbyssChallengeResultPlayerInfo[] GetPlayerInfoList()
 	{
 		return this.PlayerInfoList;
 	}
 
-	// Token: 0x0600C3E2 RID: 50146 RVA: 0x002C5B54 File Offset: 0x002C3D54
+	// Token: 0x060097F2 RID: 38898 RVA: 0x002D0BAC File Offset: 0x002CEDAC
 	[NullableContext(2)]
 	public global::AbyssChallengeResultPlayerInfo GetPlayerInfoByPlayerId(int playerId)
 	{
@@ -46,7 +46,7 @@ public class AbyssChallengeResultData
 		return null;
 	}
 
-	// Token: 0x0600C3E3 RID: 50147 RVA: 0x002C5B88 File Offset: 0x002C3D88
+	// Token: 0x060097F3 RID: 38899 RVA: 0x002D0BE0 File Offset: 0x002CEDE0
 	[NullableContext(2)]
 	public void Phrase(AbyssChallengeResultInfo data)
 	{
@@ -69,15 +69,15 @@ public class AbyssChallengeResultData
 		this.PlayerInfoList = list.ToArray();
 	}
 
-	// Token: 0x04005A54 RID: 23124
+	// Token: 0x04005B23 RID: 23331
 	private int PassTime;
 
-	// Token: 0x04005A55 RID: 23125
+	// Token: 0x04005B24 RID: 23332
 	private int MinPassTime;
 
-	// Token: 0x04005A56 RID: 23126
+	// Token: 0x04005B25 RID: 23333
 	private bool IfSuccess;
 
-	// Token: 0x04005A57 RID: 23127
+	// Token: 0x04005B26 RID: 23334
 	private global::AbyssChallengeResultPlayerInfo[] PlayerInfoList = Array.Empty<global::AbyssChallengeResultPlayerInfo>();
 }

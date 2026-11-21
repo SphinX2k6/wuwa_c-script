@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016BF RID: 5823
+	// Token: 0x02001839 RID: 6201
 	public enum ESystem
 	{
-		// Token: 0x04004E23 RID: 20003
+		// Token: 0x04005242 RID: 21058
 		Team = 10007,
-		// Token: 0x04004E24 RID: 20004
+		// Token: 0x04005243 RID: 21059
 		Map = 10015
 	}
 }

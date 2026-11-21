@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BE6 RID: 11238
+// Token: 0x02002161 RID: 8545
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerDetailView : UiViewBase
 {
-	// Token: 0x06017579 RID: 95609 RVA: 0x005EFF37 File Offset: 0x005EE137
+	// Token: 0x06014FAA RID: 85930 RVA: 0x0061CA97 File Offset: 0x0061AC97
 	public TowerDetailView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0601757A RID: 95610 RVA: 0x005EFF40 File Offset: 0x005EE140
+	// Token: 0x06014FAB RID: 85931 RVA: 0x0061CAA0 File Offset: 0x0061ACA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,26 +38,26 @@ public class TowerDetailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601757B RID: 95611 RVA: 0x005F000C File Offset: 0x005EE20C
+	// Token: 0x06014FAC RID: 85932 RVA: 0x0061CB6C File Offset: 0x0061AD6C
 	protected override void OnStart()
 	{
 		this.InformationScroller = new GenericScrollView<TowerDetailInformationItem>(base.GetScrollViewWithScrollbar(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<TowerDetailInformationItem>(this.CreateInformationItem), null);
 		this.SwitchScroller = new GenericLayoutNew<TowerDetailSwitchItem>(base.GetHorizontalLayout(4), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<TowerDetailSwitchItem>(this.CreateSwitchItem), null);
 	}
 
-	// Token: 0x0601757C RID: 95612 RVA: 0x005F004C File Offset: 0x005EE24C
+	// Token: 0x06014FAD RID: 85933 RVA: 0x0061CBAC File Offset: 0x0061ADAC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnClickSingleTimeTowerDetailSwitchBtn, new Action(this.OnClickSwitchItem));
 	}
 
-	// Token: 0x0601757D RID: 95613 RVA: 0x005F006A File Offset: 0x005EE26A
+	// Token: 0x06014FAE RID: 85934 RVA: 0x0061CBCA File Offset: 0x0061ADCA
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnClickSingleTimeTowerDetailSwitchBtn, new Action(this.OnClickSwitchItem));
 	}
 
-	// Token: 0x0601757E RID: 95614 RVA: 0x005F0088 File Offset: 0x005EE288
+	// Token: 0x06014FAF RID: 85935 RVA: 0x0061CBE8 File Offset: 0x0061ADE8
 	private ILayoutItem<TowerDetailInformationItem> CreateInformationItem(object tempData, UUIItem uiItem, int index)
 	{
 		TowerInformationData data = (TowerInformationData)tempData;
@@ -70,7 +70,7 @@ public class TowerDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601757F RID: 95615 RVA: 0x005F00C4 File Offset: 0x005EE2C4
+	// Token: 0x06014FB0 RID: 85936 RVA: 0x0061CC24 File Offset: 0x0061AE24
 	private ILayoutItem<TowerDetailSwitchItem> CreateSwitchItem(object tempData, UUIItem uiItem, int index)
 	{
 		TowerSwitchData data = (TowerSwitchData)tempData;
@@ -83,14 +83,14 @@ public class TowerDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017580 RID: 95616 RVA: 0x005F00FE File Offset: 0x005EE2FE
+	// Token: 0x06014FB1 RID: 85937 RVA: 0x0061CC5E File Offset: 0x0061AE5E
 	protected override void OnAfterShow()
 	{
 		this.CurrentId = TowerDetailModel.Instance.CurrentSelectDetailId;
 		this.RefreshView();
 	}
 
-	// Token: 0x06017581 RID: 95617 RVA: 0x005F0116 File Offset: 0x005EE316
+	// Token: 0x06014FB2 RID: 85938 RVA: 0x0061CC76 File Offset: 0x0061AE76
 	private void RefreshView()
 	{
 		this.RefreshTitleInfo();
@@ -98,14 +98,14 @@ public class TowerDetailView : UiViewBase
 		this.RefreshInformationScroller();
 	}
 
-	// Token: 0x06017582 RID: 95618 RVA: 0x005F012C File Offset: 0x005EE32C
+	// Token: 0x06014FB3 RID: 85939 RVA: 0x0061CC8C File Offset: 0x0061AE8C
 	private void RefreshSwitchScroller()
 	{
 		List<TowerSwitchData> switchData = TowerDetailModel.Instance.SwitchData;
 		this.SwitchScroller.RebuildLayoutByDataNew<TowerSwitchData>(switchData, null);
 	}
 
-	// Token: 0x06017583 RID: 95619 RVA: 0x005F015C File Offset: 0x005EE35C
+	// Token: 0x06014FB4 RID: 85940 RVA: 0x0061CCBC File Offset: 0x0061AEBC
 	private void RefreshInformationScroller()
 	{
 		List<TowerSwitchData> switchData = TowerDetailModel.Instance.SwitchData;
@@ -153,13 +153,13 @@ public class TowerDetailView : UiViewBase
 		this.InformationScroller.RefreshByData<TowerInformationData>(list, null);
 	}
 
-	// Token: 0x06017584 RID: 95620 RVA: 0x005F02AD File Offset: 0x005EE4AD
+	// Token: 0x06014FB5 RID: 85941 RVA: 0x0061CE0D File Offset: 0x0061B00D
 	public int SortFunc(TowerInformationData a, TowerInformationData b)
 	{
 		return a.Priority - b.Priority;
 	}
 
-	// Token: 0x06017585 RID: 95621 RVA: 0x005F02BC File Offset: 0x005EE4BC
+	// Token: 0x06014FB6 RID: 85942 RVA: 0x0061CE1C File Offset: 0x0061B01C
 	private void OnClickSwitchItem()
 	{
 		this.CurrentId = TowerDetailModel.Instance.CurrentSelectDetailId;
@@ -167,21 +167,21 @@ public class TowerDetailView : UiViewBase
 		this.RefreshInformationScroller();
 	}
 
-	// Token: 0x06017586 RID: 95622 RVA: 0x005F02DC File Offset: 0x005EE4DC
+	// Token: 0x06014FB7 RID: 85943 RVA: 0x0061CE3C File Offset: 0x0061B03C
 	private void RefreshTitleInfo()
 	{
 		string towerTitle = TowerDetailModel.Instance.TowerTitle;
 		base.GetText(0).SetText(towerTitle, true);
 	}
 
-	// Token: 0x06017587 RID: 95623 RVA: 0x005F0302 File Offset: 0x005EE502
+	// Token: 0x06014FB8 RID: 85944 RVA: 0x0061CE62 File Offset: 0x0061B062
 	protected override void OnBeforeDestroy()
 	{
 		this.InformationScroller.ClearChildren();
 		this.SwitchScroller.ClearChildren();
 	}
 
-	// Token: 0x0400AEBE RID: 44734
+	// Token: 0x0400B2C3 RID: 45763
 	[Nullable(new byte[]
 	{
 		2,
@@ -189,7 +189,7 @@ public class TowerDetailView : UiViewBase
 	})]
 	private GenericScrollView<TowerDetailInformationItem> InformationScroller;
 
-	// Token: 0x0400AEBF RID: 44735
+	// Token: 0x0400B2C4 RID: 45764
 	[Nullable(new byte[]
 	{
 		2,
@@ -197,29 +197,29 @@ public class TowerDetailView : UiViewBase
 	})]
 	private GenericLayoutNew<TowerDetailSwitchItem> SwitchScroller;
 
-	// Token: 0x0400AEC0 RID: 44736
+	// Token: 0x0400B2C5 RID: 45765
 	private int CurrentId;
 
-	// Token: 0x020091A3 RID: 37283
+	// Token: 0x020083E6 RID: 33766
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402F1FB RID: 193019
+		// Token: 0x0402A8FC RID: 174332
 		public const int CurrentSelectTowerTitle = 0;
 
-		// Token: 0x0402F1FC RID: 193020
+		// Token: 0x0402A8FD RID: 174333
 		public const int InformationItem = 1;
 
-		// Token: 0x0402F1FD RID: 193021
+		// Token: 0x0402A8FE RID: 174334
 		public const int InformationScroller = 2;
 
-		// Token: 0x0402F1FE RID: 193022
+		// Token: 0x0402A8FF RID: 174335
 		public const int SwitchItem = 3;
 
-		// Token: 0x0402F1FF RID: 193023
+		// Token: 0x0402A900 RID: 174336
 		public const int SwitchScroller = 4;
 
-		// Token: 0x0402F200 RID: 193024
+		// Token: 0x0402A901 RID: 174337
 		public const int BackBtn = 5;
 	}
 }

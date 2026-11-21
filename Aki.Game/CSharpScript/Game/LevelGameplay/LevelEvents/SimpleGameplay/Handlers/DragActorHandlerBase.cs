@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay.Handlers
 {
-	// Token: 0x02006BC0 RID: 27584
+	// Token: 0x02005D39 RID: 23865
 	public class DragActorHandlerBase
 	{
-		// Token: 0x06044358 RID: 279384 RVA: 0x010D02FC File Offset: 0x010CE4FC
+		// Token: 0x0603A4B0 RID: 238768 RVA: 0x0107A250 File Offset: 0x01078450
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		protected Entity GetTargetEntity(int targetEntityId, GeneralContext context)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay.Handlers
 			return entityByPbDataId.Entity;
 		}
 
-		// Token: 0x04023986 RID: 145798
+		// Token: 0x0401EC28 RID: 125992
 		private const int SELF_ENTITY_PB_DATA_ID = -10000;
 	}
 }

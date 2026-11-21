@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.BattleUi;
 
-// Token: 0x020022BC RID: 8892
+// Token: 0x020017A0 RID: 6048
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MotorcycleMusicPlayerModel : ModelBase
 {
-	// Token: 0x17001631 RID: 5681
-	// (get) Token: 0x06011702 RID: 71426 RVA: 0x00445806 File Offset: 0x00443A06
+	// Token: 0x17001668 RID: 5736
+	// (get) Token: 0x0600EB9A RID: 60314 RVA: 0x0045245A File Offset: 0x0045065A
 	public bool IsEnable
 	{
 		get
@@ -22,54 +21,55 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011703 RID: 71427 RVA: 0x00445813 File Offset: 0x00443A13
+	// Token: 0x0600EB9B RID: 60315 RVA: 0x00452467 File Offset: 0x00450667
 	public void IncreaseDisableCount()
 	{
 		this.DisableCount++;
 		this.UpdateDisableVisibleState();
 	}
 
-	// Token: 0x06011704 RID: 71428 RVA: 0x00445829 File Offset: 0x00443A29
+	// Token: 0x0600EB9C RID: 60316 RVA: 0x0045247D File Offset: 0x0045067D
 	public void DecreaseDisableCount()
 	{
 		this.DisableCount--;
 		this.UpdateDisableVisibleState();
 	}
 
-	// Token: 0x06011705 RID: 71429 RVA: 0x0044583F File Offset: 0x00443A3F
+	// Token: 0x0600EB9D RID: 60317 RVA: 0x00452493 File Offset: 0x00450693
 	public void SetFunctionEnable(bool isEnable)
 	{
 		this.VisibleState = VisibleStateUtil.SetVisible(this.VisibleState, isEnable, 0);
 	}
 
-	// Token: 0x06011706 RID: 71430 RVA: 0x00445854 File Offset: 0x00443A54
+	// Token: 0x0600EB9E RID: 60318 RVA: 0x004524A8 File Offset: 0x004506A8
 	public void SetFightMusicEnable(bool isEnable)
 	{
 		this.VisibleState = VisibleStateUtil.SetVisible(this.VisibleState, isEnable, 2);
 	}
 
-	// Token: 0x06011707 RID: 71431 RVA: 0x0044586C File Offset: 0x00443A6C
+	// Token: 0x0600EB9F RID: 60319 RVA: 0x004524C0 File Offset: 0x004506C0
 	private void UpdateDisableVisibleState()
 	{
 		bool bVisible = this.DisableCount == 0;
 		this.VisibleState = VisibleStateUtil.SetVisible(this.VisibleState, bVisible, 1);
 	}
 
-	// Token: 0x06011708 RID: 71432 RVA: 0x00445896 File Offset: 0x00443A96
+	// Token: 0x0600EBA0 RID: 60320 RVA: 0x004524EA File Offset: 0x004506EA
 	public bool LoadLocalStorageData()
 	{
 		this.MusicNewSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MotorcycleMusicRedDot, null);
 		this.PlayMode = LocalStorage.GetPlayer<EMotorMusicPlayMode>(ELocalStoragePlayerKey.MotorcyclePlayMode, EMotorMusicPlayMode.Order);
+		this.IsPause = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.MotorcycleMusicIsPause, false);
 		return true;
 	}
 
-	// Token: 0x06011709 RID: 71433 RVA: 0x004458BB File Offset: 0x00443ABB
+	// Token: 0x0600EBA1 RID: 60321 RVA: 0x00452520 File Offset: 0x00450720
 	public bool IsMusicFavorite(int id)
 	{
 		return this.FavoriteMusicList.Contains(id);
 	}
 
-	// Token: 0x0601170A RID: 71434 RVA: 0x004458CC File Offset: 0x00443ACC
+	// Token: 0x0600EBA2 RID: 60322 RVA: 0x00452530 File Offset: 0x00450730
 	public bool ToggleMusicFavorite(int id)
 	{
 		if (this.IsMusicFavorite(id))
@@ -92,37 +92,37 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601170B RID: 71435 RVA: 0x0044593C File Offset: 0x00443B3C
+	// Token: 0x0600EBA3 RID: 60323 RVA: 0x004525A0 File Offset: 0x004507A0
 	public IReadOnlyList<int> GetFavoriteMusicList()
 	{
 		return this.FavoriteMusicList;
 	}
 
-	// Token: 0x0601170C RID: 71436 RVA: 0x00445944 File Offset: 0x00443B44
+	// Token: 0x0600EBA4 RID: 60324 RVA: 0x004525A8 File Offset: 0x004507A8
 	public void SetFavoriteMusicList(IReadOnlyList<int> musicList)
 	{
 		this.FavoriteMusicList = new List<int>(musicList);
 	}
 
-	// Token: 0x0601170D RID: 71437 RVA: 0x00445952 File Offset: 0x00443B52
+	// Token: 0x0600EBA5 RID: 60325 RVA: 0x004525B6 File Offset: 0x004507B6
 	public IReadOnlyList<int> GetCurrentPlayList()
 	{
 		return this.CurrentPlayList;
 	}
 
-	// Token: 0x0601170E RID: 71438 RVA: 0x0044595A File Offset: 0x00443B5A
+	// Token: 0x0600EBA6 RID: 60326 RVA: 0x004525BE File Offset: 0x004507BE
 	public void SetPlayList(List<int> musicList)
 	{
 		this.CurrentPlayList = musicList;
 	}
 
-	// Token: 0x0601170F RID: 71439 RVA: 0x00445963 File Offset: 0x00443B63
+	// Token: 0x0600EBA7 RID: 60327 RVA: 0x004525C7 File Offset: 0x004507C7
 	public bool IsMusicUnlock(int id)
 	{
 		return PhonographModel.Instance.IsUnlockMusic(id);
 	}
 
-	// Token: 0x06011710 RID: 71440 RVA: 0x00445970 File Offset: 0x00443B70
+	// Token: 0x0600EBA8 RID: 60328 RVA: 0x004525D4 File Offset: 0x004507D4
 	public List<PhonographMusic> GetMusicByAlbum(int albumId)
 	{
 		if (albumId == MotorcycleMusicPlayerConfig.Instance.GetFavoriteAlbumId())
@@ -142,20 +142,12 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		{
 			return this.Album2MusicCache[albumId];
 		}
-		IEnumerable<PhonographMusic> enumerable = PhonographConfig.Instance.GetMusicList() ?? new List<PhonographMusic>();
-		List<PhonographMusic> list2 = new List<PhonographMusic>();
-		foreach (PhonographMusic item in enumerable)
-		{
-			if (item.GetAlbumArray().Contains(albumId))
-			{
-				list2.Add(item);
-			}
-		}
+		List<PhonographMusic> list2 = NoLinq.WhereToList<PhonographMusic>(PhonographConfig.Instance.GetMusicList() ?? new List<PhonographMusic>(), (PhonographMusic music) => NoLinq.Contains<int>(music.GetAlbumBytes(), albumId));
 		this.Album2MusicCache[albumId] = list2;
 		return list2;
 	}
 
-	// Token: 0x06011711 RID: 71441 RVA: 0x00445A84 File Offset: 0x00443C84
+	// Token: 0x0600EBA9 RID: 60329 RVA: 0x004526CC File Offset: 0x004508CC
 	public List<PhonographMusic> GetUnlockMusicByAlbum(int albumId)
 	{
 		List<PhonographMusic> musicByAlbum = this.GetMusicByAlbum(albumId);
@@ -175,13 +167,13 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011712 RID: 71442 RVA: 0x00445B24 File Offset: 0x00443D24
+	// Token: 0x0600EBAA RID: 60330 RVA: 0x0045276C File Offset: 0x0045096C
 	public int GetCurPlayMusicId()
 	{
 		return this.CurPlayMusicId;
 	}
 
-	// Token: 0x06011713 RID: 71443 RVA: 0x00445B2C File Offset: 0x00443D2C
+	// Token: 0x0600EBAB RID: 60331 RVA: 0x00452774 File Offset: 0x00450974
 	public void SetCurPlayMusic(int albumId, int id)
 	{
 		if (albumId == this.CurPlayAlbum)
@@ -199,25 +191,25 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.MotorcycleCurPlayMusicId, id);
 	}
 
-	// Token: 0x06011714 RID: 71444 RVA: 0x00445B84 File Offset: 0x00443D84
+	// Token: 0x0600EBAC RID: 60332 RVA: 0x004527CC File Offset: 0x004509CC
 	public int GetPrevMusicId()
 	{
 		return this.PrevMusicId;
 	}
 
-	// Token: 0x06011715 RID: 71445 RVA: 0x00445B8C File Offset: 0x00443D8C
+	// Token: 0x0600EBAD RID: 60333 RVA: 0x004527D4 File Offset: 0x004509D4
 	public void ClearPrevMusicId()
 	{
 		this.PrevMusicId = -1;
 	}
 
-	// Token: 0x06011716 RID: 71446 RVA: 0x00445B95 File Offset: 0x00443D95
+	// Token: 0x0600EBAE RID: 60334 RVA: 0x004527DD File Offset: 0x004509DD
 	public int GetCurPlayAlbum()
 	{
 		return this.CurPlayAlbum;
 	}
 
-	// Token: 0x06011717 RID: 71447 RVA: 0x00445BA0 File Offset: 0x00443DA0
+	// Token: 0x0600EBAF RID: 60335 RVA: 0x004527E8 File Offset: 0x004509E8
 	public int GetDefaultMusicId()
 	{
 		List<PhonographMusic> unlockMusicByAlbum = this.GetUnlockMusicByAlbum(1);
@@ -228,7 +220,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return unlockMusicByAlbum[0].Id;
 	}
 
-	// Token: 0x06011718 RID: 71448 RVA: 0x00445BD0 File Offset: 0x00443DD0
+	// Token: 0x0600EBB0 RID: 60336 RVA: 0x00452818 File Offset: 0x00450A18
 	public void SwitchToDefaultAlbumWithoutPlay()
 	{
 		int defaultMusicId = this.GetDefaultMusicId();
@@ -237,36 +229,40 @@ public class MotorcycleMusicPlayerModel : ModelBase
 			return;
 		}
 		this.SetCurPlayMusic(1, defaultMusicId);
-		this.SetIsPause(true);
+		this.SetIsPause(true, false);
 		this.ClearPrevMusicId();
 	}
 
-	// Token: 0x06011719 RID: 71449 RVA: 0x00445BFE File Offset: 0x00443DFE
+	// Token: 0x0600EBB1 RID: 60337 RVA: 0x00452847 File Offset: 0x00450A47
 	public bool GetIsPause()
 	{
 		return this.IsPause;
 	}
 
-	// Token: 0x0601171A RID: 71450 RVA: 0x00445C06 File Offset: 0x00443E06
-	public void SetIsPause(bool isPause)
+	// Token: 0x0600EBB2 RID: 60338 RVA: 0x0045284F File Offset: 0x00450A4F
+	public void SetIsPause(bool isPause, bool saveToLocalStorage = false)
 	{
 		this.IsPause = isPause;
+		if (saveToLocalStorage)
+		{
+			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.MotorcycleMusicIsPause, isPause);
+		}
 	}
 
-	// Token: 0x0601171B RID: 71451 RVA: 0x00445C0F File Offset: 0x00443E0F
+	// Token: 0x0600EBB3 RID: 60339 RVA: 0x00452867 File Offset: 0x00450A67
 	public EMotorMusicPlayMode GetPlayMode()
 	{
 		return this.PlayMode;
 	}
 
-	// Token: 0x0601171C RID: 71452 RVA: 0x00445C17 File Offset: 0x00443E17
+	// Token: 0x0600EBB4 RID: 60340 RVA: 0x0045286F File Offset: 0x00450A6F
 	public void SetCurPlayMode(EMotorMusicPlayMode mode)
 	{
 		this.PlayMode = mode;
 		LocalStorage.SetPlayer<EMotorMusicPlayMode>(ELocalStoragePlayerKey.MotorcyclePlayMode, mode);
 	}
 
-	// Token: 0x0601171D RID: 71453 RVA: 0x00445C2C File Offset: 0x00443E2C
+	// Token: 0x0600EBB5 RID: 60341 RVA: 0x00452884 File Offset: 0x00450A84
 	public bool IsMusicNew(int id)
 	{
 		if (this.MusicNewSet == null)
@@ -281,7 +277,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601171E RID: 71454 RVA: 0x00445C64 File Offset: 0x00443E64
+	// Token: 0x0600EBB6 RID: 60342 RVA: 0x004528BC File Offset: 0x00450ABC
 	public void AddMusicListToNew(List<int> musicList)
 	{
 		if (this.MusicNewSet == null)
@@ -298,7 +294,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		this.SaveCacheMusicNewData();
 	}
 
-	// Token: 0x0601171F RID: 71455 RVA: 0x00445CE0 File Offset: 0x00443EE0
+	// Token: 0x0600EBB7 RID: 60343 RVA: 0x00452938 File Offset: 0x00450B38
 	public void ClearMusicNew(int id)
 	{
 		if (this.MusicNewSet == null)
@@ -312,7 +308,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011720 RID: 71456 RVA: 0x00445D0C File Offset: 0x00443F0C
+	// Token: 0x0600EBB8 RID: 60344 RVA: 0x00452964 File Offset: 0x00450B64
 	public void SaveCacheMusicNewData()
 	{
 		if (this.MusicNewSet != null)
@@ -321,7 +317,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011721 RID: 71457 RVA: 0x00445D28 File Offset: 0x00443F28
+	// Token: 0x0600EBB9 RID: 60345 RVA: 0x00452980 File Offset: 0x00450B80
 	public bool CheckAlbumHasNewMusic(int albumId)
 	{
 		foreach (PhonographMusic phonographMusic in this.GetMusicByAlbum(albumId))
@@ -334,13 +330,13 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011722 RID: 71458 RVA: 0x00445D8C File Offset: 0x00443F8C
+	// Token: 0x0600EBBA RID: 60346 RVA: 0x004529E4 File Offset: 0x00450BE4
 	public void ClearAlbum2MusicCache()
 	{
 		this.Album2MusicCache.Clear();
 	}
 
-	// Token: 0x06011723 RID: 71459 RVA: 0x00445D9C File Offset: 0x00443F9C
+	// Token: 0x0600EBBB RID: 60347 RVA: 0x004529F4 File Offset: 0x00450BF4
 	public void SetAlbumTimeInfoMaps(IReadOnlyDictionary<int, IAlbumTimeInfo> albumMap, IReadOnlyDictionary<int, IAlbumTimeInfo> musicMap)
 	{
 		this.AlbumTimeInfoMap.Clear();
@@ -355,27 +351,27 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011724 RID: 71460 RVA: 0x00445E58 File Offset: 0x00444058
+	// Token: 0x0600EBBC RID: 60348 RVA: 0x00452AB0 File Offset: 0x00450CB0
 	public void ClearAlbumTimeInfos()
 	{
 		this.AlbumTimeInfoMap.Clear();
 		this.MusicId2TimeInfoMap.Clear();
 	}
 
-	// Token: 0x06011725 RID: 71461 RVA: 0x00445E70 File Offset: 0x00444070
+	// Token: 0x0600EBBD RID: 60349 RVA: 0x00452AC8 File Offset: 0x00450CC8
 	public bool IsTimeLimitAlbum(int albumId)
 	{
 		IAlbumTimeInfo albumTimeInfo;
 		return this.AlbumTimeInfoMap.TryGetValue(albumId, out albumTimeInfo) && albumTimeInfo != null && (albumTimeInfo.BeginTime != 0L || albumTimeInfo.EndTime != 0L);
 	}
 
-	// Token: 0x06011726 RID: 71462 RVA: 0x00445EA3 File Offset: 0x004440A3
+	// Token: 0x0600EBBE RID: 60350 RVA: 0x00452AFB File Offset: 0x00450CFB
 	public bool ShouldFallbackForExpired(int albumId)
 	{
 		return albumId != -1 && this.GetAlbumTimeState(albumId).Item1 == EAlbumTimeState.Expired;
 	}
 
-	// Token: 0x06011727 RID: 71463 RVA: 0x00445EBC File Offset: 0x004440BC
+	// Token: 0x0600EBBF RID: 60351 RVA: 0x00452B14 File Offset: 0x00450D14
 	[return: TupleElementNames(new string[]
 	{
 		"State",
@@ -412,21 +408,21 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return new ValueTuple<EAlbumTimeState, IAlbumTimeInfo, long>(EAlbumTimeState.InRange, albumTimeInfo, num);
 	}
 
-	// Token: 0x06011728 RID: 71464 RVA: 0x00445F50 File Offset: 0x00444150
+	// Token: 0x0600EBC0 RID: 60352 RVA: 0x00452BA8 File Offset: 0x00450DA8
 	public bool IsAlbumInTimeRange(int albumId)
 	{
 		EAlbumTimeState item = this.GetAlbumTimeState(albumId).Item1;
 		return item == EAlbumTimeState.NoLimit || item == EAlbumTimeState.InRange;
 	}
 
-	// Token: 0x06011729 RID: 71465 RVA: 0x00445F78 File Offset: 0x00444178
+	// Token: 0x0600EBC1 RID: 60353 RVA: 0x00452BD0 File Offset: 0x00450DD0
 	public bool IsTimeLimitMusic(int musicId)
 	{
 		IAlbumTimeInfo albumTimeInfo;
 		return this.MusicId2TimeInfoMap.TryGetValue(musicId, out albumTimeInfo) && albumTimeInfo != null && (albumTimeInfo.BeginTime != 0L || albumTimeInfo.EndTime != 0L);
 	}
 
-	// Token: 0x0601172A RID: 71466 RVA: 0x00445FAC File Offset: 0x004441AC
+	// Token: 0x0600EBC2 RID: 60354 RVA: 0x00452C04 File Offset: 0x00450E04
 	[NullableContext(2)]
 	public IAlbumTimeInfo GetAlbumTimeInfo(int albumId)
 	{
@@ -435,7 +431,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601172B RID: 71467 RVA: 0x00445FCC File Offset: 0x004441CC
+	// Token: 0x0600EBC3 RID: 60355 RVA: 0x00452C24 File Offset: 0x00450E24
 	public string GetAlbumTimeLimitRemainText(int albumId)
 	{
 		ValueTuple<EAlbumTimeState, IAlbumTimeInfo, long> albumTimeState = this.GetAlbumTimeState(albumId);
@@ -453,8 +449,8 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return TimeUtil.Instance.GetRemainTimeDataFormat8((double)num).CountDownText;
 	}
 
-	// Token: 0x17001632 RID: 5682
-	// (get) Token: 0x0601172C RID: 71468 RVA: 0x00446021 File Offset: 0x00444221
+	// Token: 0x17001669 RID: 5737
+	// (get) Token: 0x0600EBC4 RID: 60356 RVA: 0x00452C79 File Offset: 0x00450E79
 	public static MotorcycleMusicPlayerModel Instance
 	{
 		get
@@ -463,7 +459,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601172D RID: 71469 RVA: 0x00446028 File Offset: 0x00444228
+	// Token: 0x0600EBC5 RID: 60357 RVA: 0x00452C80 File Offset: 0x00450E80
 	public static MotorcycleMusicPlayerModel GetOrCreateInstance()
 	{
 		if (MotorcycleMusicPlayerModel._Instance == null)
@@ -473,7 +469,7 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return MotorcycleMusicPlayerModel._Instance;
 	}
 
-	// Token: 0x0601172E RID: 71470 RVA: 0x0044603C File Offset: 0x0044423C
+	// Token: 0x0600EBC6 RID: 60358 RVA: 0x00452C94 File Offset: 0x00450E94
 	public static bool CreateInstance()
 	{
 		if (MotorcycleMusicPlayerModel._Instance != null)
@@ -484,70 +480,70 @@ public class MotorcycleMusicPlayerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601172F RID: 71471 RVA: 0x00446052 File Offset: 0x00444252
+	// Token: 0x0600EBC7 RID: 60359 RVA: 0x00452CAA File Offset: 0x00450EAA
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011730 RID: 71472 RVA: 0x00446054 File Offset: 0x00444254
+	// Token: 0x0600EBC8 RID: 60360 RVA: 0x00452CAC File Offset: 0x00450EAC
 	public static void ResetStaticDefaultValue()
 	{
 		MotorcycleMusicPlayerModel._Instance = null;
 	}
 
-	// Token: 0x06011731 RID: 71473 RVA: 0x0044605C File Offset: 0x0044425C
+	// Token: 0x0600EBC9 RID: 60361 RVA: 0x00452CB4 File Offset: 0x00450EB4
 	static MotorcycleMusicPlayerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleMusicPlayerModel.CreateStaticDefaultValue), new Action(MotorcycleMusicPlayerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400846D RID: 33901
+	// Token: 0x040085AB RID: 34219
 	private List<int> FavoriteMusicList = new List<int>();
 
-	// Token: 0x0400846E RID: 33902
+	// Token: 0x040085AC RID: 34220
 	private int CurPlayMusicId = -1;
 
-	// Token: 0x0400846F RID: 33903
+	// Token: 0x040085AD RID: 34221
 	private int CurPlayAlbum = -1;
 
-	// Token: 0x04008470 RID: 33904
+	// Token: 0x040085AE RID: 34222
 	public HashSet<int> UnlockMusicIds = new HashSet<int>();
 
-	// Token: 0x04008471 RID: 33905
+	// Token: 0x040085AF RID: 34223
 	private EMotorMusicPlayMode PlayMode;
 
-	// Token: 0x04008472 RID: 33906
+	// Token: 0x040085B0 RID: 34224
 	private bool IsPause;
 
-	// Token: 0x04008473 RID: 33907
+	// Token: 0x040085B1 RID: 34225
 	private int PrevMusicId = -1;
 
-	// Token: 0x04008474 RID: 33908
+	// Token: 0x040085B2 RID: 34226
 	[Nullable(2)]
 	private HashSet<int> MusicNewSet;
 
-	// Token: 0x04008475 RID: 33909
+	// Token: 0x040085B3 RID: 34227
 	public int CurrentPlayMusicTotalTime;
 
-	// Token: 0x04008476 RID: 33910
+	// Token: 0x040085B4 RID: 34228
 	private List<int> CurrentPlayList = new List<int>();
 
-	// Token: 0x04008477 RID: 33911
+	// Token: 0x040085B5 RID: 34229
 	private readonly Dictionary<int, List<PhonographMusic>> Album2MusicCache = new Dictionary<int, List<PhonographMusic>>();
 
-	// Token: 0x04008478 RID: 33912
+	// Token: 0x040085B6 RID: 34230
 	private readonly Dictionary<int, IAlbumTimeInfo> AlbumTimeInfoMap = new Dictionary<int, IAlbumTimeInfo>();
 
-	// Token: 0x04008479 RID: 33913
+	// Token: 0x040085B7 RID: 34231
 	private readonly Dictionary<int, IAlbumTimeInfo> MusicId2TimeInfoMap = new Dictionary<int, IAlbumTimeInfo>();
 
-	// Token: 0x0400847A RID: 33914
+	// Token: 0x040085B8 RID: 34232
 	private int DisableCount;
 
-	// Token: 0x0400847B RID: 33915
+	// Token: 0x040085B9 RID: 34233
 	private int VisibleState;
 
-	// Token: 0x0400847C RID: 33916
+	// Token: 0x040085BA RID: 34234
 	[Nullable(2)]
 	private static MotorcycleMusicPlayerModel _Instance;
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005808 RID: 22536
+	// Token: 0x020047DF RID: 18399
 	public class RewardExploreScoreSubTitleItem : UiPanelBase
 	{
-		// Token: 0x06039499 RID: 234649 RVA: 0x00D96208 File Offset: 0x00D94408
+		// Token: 0x0602E3AD RID: 189357 RVA: 0x00CE5070 File Offset: 0x00CE3270
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603949A RID: 234650 RVA: 0x00D96271 File Offset: 0x00D94471
+		// Token: 0x0602E3AE RID: 189358 RVA: 0x00CE50D9 File Offset: 0x00CE32D9
 		[NullableContext(1)]
 		public void RefreshText(IRewardExploreScoreBelongHalfAreaItem data)
 		{
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.ItemReward
 			base.GetText(1).SetText(data.Target, true);
 		}
 
-		// Token: 0x0200BA09 RID: 47625
+		// Token: 0x0200A41F RID: 42015
 		private class EChildType
 		{
-			// Token: 0x040383BE RID: 230334
+			// Token: 0x04032DAB RID: 208299
 			public const int DesText = 0;
 
-			// Token: 0x040383BF RID: 230335
+			// Token: 0x04032DAC RID: 208300
 			public const int NumText = 1;
 		}
 	}

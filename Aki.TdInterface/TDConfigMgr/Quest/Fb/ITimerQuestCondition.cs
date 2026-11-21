@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001440 RID: 5184
+	// Token: 0x02001598 RID: 5528
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITimerQuestCondition : IQuestCondition
 	{
-		// Token: 0x060075E0 RID: 30176 RVA: 0x001198FE File Offset: 0x00117AFE
-		[NullableContext(1)]
+		// Token: 0x06007CA7 RID: 31911 RVA: 0x00128356 File Offset: 0x00126556
+		[NullableContext(0)]
 		public static ITimerQuestCondition Create(ITimerQuestCondition? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002733 RID: 10035
-		// (get) Token: 0x060075E1 RID: 30177 RVA: 0x0011991D File Offset: 0x00117B1D
+		// Token: 0x17002919 RID: 10521
+		// (get) Token: 0x06007CA8 RID: 31912 RVA: 0x00128375 File Offset: 0x00126575
 		public override EChildQuest Type
 		{
 			get
@@ -36,8 +36,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002734 RID: 10036
-		// (get) Token: 0x060075E2 RID: 30178 RVA: 0x0011992A File Offset: 0x00117B2A
+		// Token: 0x1700291A RID: 10522
+		// (get) Token: 0x06007CA9 RID: 31913 RVA: 0x00128382 File Offset: 0x00126582
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -52,8 +52,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002735 RID: 10037
-		// (get) Token: 0x060075E3 RID: 30179 RVA: 0x00119960 File Offset: 0x00117B60
+		// Token: 0x1700291B RID: 10523
+		// (get) Token: 0x06007CAA RID: 31914 RVA: 0x001283B8 File Offset: 0x001265B8
 		public virtual int? Time
 		{
 			get
@@ -66,12 +66,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002736 RID: 10038
-		// (get) Token: 0x060075E4 RID: 30180 RVA: 0x00119996 File Offset: 0x00117B96
-		[Nullable(1)]
+		// Token: 0x1700291C RID: 10524
+		// (get) Token: 0x06007CAB RID: 31915 RVA: 0x001283EE File Offset: 0x001265EE
+		[Nullable(0)]
 		public virtual VarRef VarForTime
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._VarForTimeInited)
@@ -84,8 +84,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002737 RID: 10039
-		// (get) Token: 0x060075E5 RID: 30181 RVA: 0x001199C5 File Offset: 0x00117BC5
+		// Token: 0x1700291D RID: 10525
+		// (get) Token: 0x06007CAC RID: 31916 RVA: 0x0012841D File Offset: 0x0012661D
 		public virtual ETimerType TimerType
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002738 RID: 10040
-		// (get) Token: 0x060075E6 RID: 30182 RVA: 0x001199D2 File Offset: 0x00117BD2
+		// Token: 0x1700291E RID: 10526
+		// (get) Token: 0x06007CAD RID: 31917 RVA: 0x0012842A File Offset: 0x0012662A
 		public virtual ITimerUiConfig UiConfig
 		{
 			get
@@ -110,26 +110,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004460 RID: 17504
+		// Token: 0x040047F4 RID: 18420
 		private ITimerQuestCondition Instance;
 
-		// Token: 0x04004461 RID: 17505
+		// Token: 0x040047F5 RID: 18421
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004462 RID: 17506
+		// Token: 0x040047F6 RID: 18422
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004463 RID: 17507
-		[Nullable(1)]
+		// Token: 0x040047F7 RID: 18423
+		[Nullable(0)]
 		private VarRef _VarForTimeCache;
 
-		// Token: 0x04004464 RID: 17508
+		// Token: 0x040047F8 RID: 18424
 		private bool _VarForTimeInited;
 
-		// Token: 0x04004465 RID: 17509
+		// Token: 0x040047F9 RID: 18425
 		private ITimerUiConfig _UiConfigCache;
 
-		// Token: 0x04004466 RID: 17510
+		// Token: 0x040047FA RID: 18426
 		private bool _UiConfigInited;
 	}
 }

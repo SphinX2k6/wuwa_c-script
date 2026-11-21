@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066B1 RID: 26289
+	// Token: 0x02006D2B RID: 27947
 	public enum IEnterMovieCameraType_Union : byte
 	{
-		// Token: 0x04010D6A RID: 68970
+		// Token: 0x04011B90 RID: 72592
 		NONE,
-		// Token: 0x04010D6B RID: 68971
+		// Token: 0x04011B91 RID: 72593
 		IEnterMovieCameraType,
-		// Token: 0x04010D6C RID: 68972
+		// Token: 0x04011B92 RID: 72594
 		IEnterCommonMovieCamera,
-		// Token: 0x04010D6D RID: 68973
+		// Token: 0x04011B93 RID: 72595
 		IEnterSpecMovieCamera,
-		// Token: 0x04010D6E RID: 68974
+		// Token: 0x04011B94 RID: 72596
 		IEnterRandomMovieCamera
 	}
 }

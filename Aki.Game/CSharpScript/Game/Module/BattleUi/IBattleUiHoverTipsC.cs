@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C7E RID: 23678
+	// Token: 0x02004C5E RID: 19550
 	[NullableContext(1)]
 	public interface IBattleUiHoverTipsC
 	{
-		// Token: 0x17008DDB RID: 36315
-		// (get) Token: 0x0603BD44 RID: 245060
-		// (set) Token: 0x0603BD45 RID: 245061
+		// Token: 0x170061AD RID: 25005
+		// (get) Token: 0x06030C92 RID: 199826
+		// (set) Token: 0x06030C93 RID: 199827
 		string TitleKey { get; set; }
 
-		// Token: 0x17008DDC RID: 36316
-		// (get) Token: 0x0603BD46 RID: 245062
-		// (set) Token: 0x0603BD47 RID: 245063
+		// Token: 0x170061AE RID: 25006
+		// (get) Token: 0x06030C94 RID: 199828
+		// (set) Token: 0x06030C95 RID: 199829
 		List<IBattleUiHoverTipsDescInfoC> DescInfoList { get; set; }
 	}
 }

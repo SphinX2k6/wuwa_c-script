@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001521 RID: 5409
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x0200167A RID: 5754
 	public class ICameraOperationTypeConverter : JsonConverter<ICameraOperationType>
 	{
-		// Token: 0x06007AD1 RID: 31441 RVA: 0x001283E0 File Offset: 0x001265E0
+		// Token: 0x0600819C RID: 33180 RVA: 0x00137234 File Offset: 0x00135434
 		[return: Nullable(2)]
 		public override ICameraOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -61,7 +55,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007AD2 RID: 31442 RVA: 0x0012849C File Offset: 0x0012669C
+		// Token: 0x0600819D RID: 33181 RVA: 0x001372F0 File Offset: 0x001354F0
 		public override void Write(Utf8JsonWriter writer, ICameraOperationType value, JsonSerializerOptions options)
 		{
 			IEnableCameraOperation enableCameraOperation = value as IEnableCameraOperation;

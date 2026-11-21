@@ -25,27 +25,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C6E RID: 23662
+	// Token: 0x02004C4E RID: 19534
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BattleUiControl : UiControllerBase
 	{
-		// Token: 0x0603BCC4 RID: 244932 RVA: 0x00E48996 File Offset: 0x00E46B96
+		// Token: 0x06030C0F RID: 199695 RVA: 0x00D98D78 File Offset: 0x00D96F78
 		protected override bool OnClear()
 		{
 			this.Pool.Clear();
+			foreach (BattleUiHandleBase battleUiHandleBase in this.BattleUiHandleMap.Values)
+			{
+				battleUiHandleBase.Clear();
+			}
+			this.BattleUiHandleMap.Clear();
 			return true;
 		}
 
-		// Token: 0x0603BCC5 RID: 244933 RVA: 0x00E489A4 File Offset: 0x00E46BA4
+		// Token: 0x06030C10 RID: 199696 RVA: 0x00D98DE4 File Offset: 0x00D96FE4
 		protected override bool OnLeaveLevel()
 		{
 			this.Pool.Clear();
+			foreach (BattleUiHandleBase battleUiHandleBase in this.BattleUiHandleMap.Values)
+			{
+				battleUiHandleBase.Clear();
+			}
+			this.BattleUiHandleMap.Clear();
 			return true;
 		}
 
-		// Token: 0x0603BCC6 RID: 244934 RVA: 0x00E489B4 File Offset: 0x00E46BB4
+		// Token: 0x06030C11 RID: 199697 RVA: 0x00D98E50 File Offset: 0x00D97050
 		protected override void OnAddEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -269,6 +279,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			formationPanelData.RegisterInputHandler(EFormationInputType.Cooperate, new Action<string>(CooperationController.Instance.FormationInputHandler));
 			formationPanelData.RegisterInputHandler(EFormationInputType.FishActivity, new Action<string>(FishingController.Instance.FishingInputHandler));
 			formationPanelData.RegisterInputHandler(EFormationInputType.SpringManor, new Action<string>(SpringManorController.Instance.SpringManorInputHandler));
+			formationPanelData.RegisterInputHandler(EFormationInputType.RoleTower, new Action<string>(RoleTowerController.Instance.RoleTowerFormationInputHandler));
 			formationPanelData.SetInputType(EFormationInputType.Cooperate);
 			InputDistributeController instance28 = InputDistributeController.Instance;
 			IReadOnlyList<string> actionNames3 = formationPanelData.GetActionNames();
@@ -296,7 +307,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			childViewData2.AddCallback(childType2, callback2);
 		}
 
-		// Token: 0x0603BCC7 RID: 244935 RVA: 0x00E48F2C File Offset: 0x00E4712C
+		// Token: 0x06030C12 RID: 199698 RVA: 0x00D993E0 File Offset: 0x00D975E0
 		protected override void OnRemoveEvents()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -542,7 +553,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			childViewData2.RemoveCallback(childType2, callback2);
 		}
 
-		// Token: 0x0603BCC8 RID: 244936 RVA: 0x00E49458 File Offset: 0x00E47658
+		// Token: 0x06030C13 RID: 199699 RVA: 0x00D9990C File Offset: 0x00D97B0C
 		protected override void OnRegisterNetEvent()
 		{
 			Net instance = Net.Instance;
@@ -571,7 +582,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			instance3.Register(id3, callback3);
 		}
 
-		// Token: 0x0603BCC9 RID: 244937 RVA: 0x00E494E6 File Offset: 0x00E476E6
+		// Token: 0x06030C14 RID: 199700 RVA: 0x00D9999A File Offset: 0x00D97B9A
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.AddGuestNotify);
@@ -579,19 +590,24 @@ namespace CSharpScript.Game.Module.BattleUi
 			Net.Instance.UnRegister(ENotifyMessageId.NewTowerMonsterHpInfoNotify);
 		}
 
-		// Token: 0x0603BCCA RID: 244938 RVA: 0x00E49518 File Offset: 0x00E47718
+		// Token: 0x06030C15 RID: 199701 RVA: 0x00D999CC File Offset: 0x00D97BCC
 		private static void OnWorldDone()
 		{
 			BattleUiModel.Instance.OnWorldDone();
 			BattleUiControl.RefreshWorldFormationInputType();
 		}
 
-		// Token: 0x0603BCCB RID: 244939 RVA: 0x00E4952C File Offset: 0x00E4772C
+		// Token: 0x06030C16 RID: 199702 RVA: 0x00D999E0 File Offset: 0x00D97BE0
 		public static void RefreshWorldFormationInputType()
 		{
 			BattleUiFormationPanelData formationPanelData = BattleUiModel.Instance.FormationPanelData;
 			if (formationPanelData == null)
 			{
+				return;
+			}
+			if (RoleTowerModel.Instance.InBattle)
+			{
+				formationPanelData.SetInputType(EFormationInputType.RoleTower);
 				return;
 			}
 			if (FishingModel.Instance.GetShipData().IsShipDriving())
@@ -607,25 +623,25 @@ namespace CSharpScript.Game.Module.BattleUi
 			formationPanelData.SetInputType(EFormationInputType.Cooperate);
 		}
 
-		// Token: 0x0603BCCC RID: 244940 RVA: 0x00E4957C File Offset: 0x00E4777C
+		// Token: 0x06030C17 RID: 199703 RVA: 0x00D99A44 File Offset: 0x00D97C44
 		private static void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			BattleUiModel.Instance.OnChangeRole(newEntityHandle, oldEntityHandle);
 		}
 
-		// Token: 0x0603BCCD RID: 244941 RVA: 0x00E4958A File Offset: 0x00E4778A
+		// Token: 0x06030C18 RID: 199704 RVA: 0x00D99A52 File Offset: 0x00D97C52
 		private static void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			BattleUiModel.Instance.OnAddEntity(handle);
 		}
 
-		// Token: 0x0603BCCE RID: 244942 RVA: 0x00E49597 File Offset: 0x00E47797
+		// Token: 0x06030C19 RID: 199705 RVA: 0x00D99A5F File Offset: 0x00D97C5F
 		private static void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			BattleUiModel.Instance.OnRemoveEntity(handle);
 		}
 
-		// Token: 0x0603BCCF RID: 244943 RVA: 0x00E495A4 File Offset: 0x00E477A4
+		// Token: 0x06030C1A RID: 199706 RVA: 0x00D99A6C File Offset: 0x00D97C6C
 		private static void OnRevive(Entity entity)
 		{
 			if (!ObjectSystem.Instance.IsValid(entity))
@@ -635,13 +651,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.TryBroadcastRevive(entity.Id);
 		}
 
-		// Token: 0x0603BCD0 RID: 244944 RVA: 0x00E495C4 File Offset: 0x00E477C4
+		// Token: 0x06030C1B RID: 199707 RVA: 0x00D99A8C File Offset: 0x00D97C8C
 		private static void OnRoleLevelUp(int configId, int exp, int level)
 		{
 			BattleUiModel.Instance.TryBroadcastRoleLevelUpData(configId, exp, level);
 		}
 
-		// Token: 0x0603BCD1 RID: 244945 RVA: 0x00E495D4 File Offset: 0x00E477D4
+		// Token: 0x06030C1C RID: 199708 RVA: 0x00D99A9C File Offset: 0x00D97C9C
 		private static void ShowTypeChange(EOperationType last, EOperationType now)
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.BattleView) && !Info.Instance.IsMobilePlatform())
@@ -654,7 +670,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.ShowTypeChange(last, now);
 		}
 
-		// Token: 0x0603BCD2 RID: 244946 RVA: 0x00E49638 File Offset: 0x00E47838
+		// Token: 0x06030C1D RID: 199709 RVA: 0x00D99B00 File Offset: 0x00D97D00
 		private static void OnFunctionOpenSet(EFunctionType functionType, bool isOpen)
 		{
 			if (functionType != EFunctionType.RecruitmentDivision && !isOpen)
@@ -664,7 +680,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.OnFirstOpenShopChanged);
 		}
 
-		// Token: 0x0603BCD3 RID: 244947 RVA: 0x00E49656 File Offset: 0x00E47856
+		// Token: 0x06030C1E RID: 199710 RVA: 0x00D99B1E File Offset: 0x00D97D1E
 		private static void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 		{
 			if (functionType != EFunctionType.RecruitmentDivision && !isOpen)
@@ -675,7 +691,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.OnFirstOpenShopChanged);
 		}
 
-		// Token: 0x0603BCD4 RID: 244948 RVA: 0x00E4967C File Offset: 0x00E4787C
+		// Token: 0x06030C1F RID: 199711 RVA: 0x00D99B44 File Offset: 0x00D97D44
 		private static void OnAddOrRemoveBuff(int entityId, GameplayCue cue, bool isAdd, int handleId)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -699,13 +715,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiControl.Instance.RemoveFullScreenEffectByUniqueId(id);
 		}
 
-		// Token: 0x0603BCD5 RID: 244949 RVA: 0x00E4970A File Offset: 0x00E4790A
+		// Token: 0x06030C20 RID: 199712 RVA: 0x00D99BD2 File Offset: 0x00D97DD2
 		private static void OnFormationLoadCompleted()
 		{
 			BattleUiModel.Instance.OnFormationLoaded();
 		}
 
-		// Token: 0x0603BCD6 RID: 244950 RVA: 0x00E49718 File Offset: 0x00E47918
+		// Token: 0x06030C21 RID: 199713 RVA: 0x00D99BE0 File Offset: 0x00D97DE0
 		private static void OnChangeWalkRun(bool lastIsWalk, bool isWalk, bool showUi)
 		{
 			if (!showUi)
@@ -761,37 +777,37 @@ namespace CSharpScript.Game.Module.BattleUi
 			});
 		}
 
-		// Token: 0x0603BCD7 RID: 244951 RVA: 0x00E497EE File Offset: 0x00E479EE
+		// Token: 0x06030C22 RID: 199714 RVA: 0x00D99CB6 File Offset: 0x00D97EB6
 		private static void OnViewPortSizeChange()
 		{
 			BattleUiModel.Instance.UpdateViewPortSize();
 		}
 
-		// Token: 0x0603BCD8 RID: 244952 RVA: 0x00E497FA File Offset: 0x00E479FA
+		// Token: 0x06030C23 RID: 199715 RVA: 0x00D99CC2 File Offset: 0x00D97EC2
 		private static void OnPlayerFollowerConfigChanged(EntityHandle follower)
 		{
 			BattleUiModel.Instance.FormationData.RefreshFollowerConfig(follower);
 		}
 
-		// Token: 0x0603BCD9 RID: 244953 RVA: 0x00E4980C File Offset: 0x00E47A0C
+		// Token: 0x06030C24 RID: 199716 RVA: 0x00D99CD4 File Offset: 0x00D97ED4
 		private static void OnFollowShooterPossessed(EntityHandle follower)
 		{
 			BattleUiModel.Instance.FormationData.AddFollower(follower);
 		}
 
-		// Token: 0x0603BCDA RID: 244954 RVA: 0x00E4981E File Offset: 0x00E47A1E
+		// Token: 0x06030C25 RID: 199717 RVA: 0x00D99CE6 File Offset: 0x00D97EE6
 		private static void OnFollowShooterUnPossessed()
 		{
 			BattleUiModel.Instance.FormationData.RemoveFollower();
 		}
 
-		// Token: 0x0603BCDB RID: 244955 RVA: 0x00E4982F File Offset: 0x00E47A2F
+		// Token: 0x06030C26 RID: 199718 RVA: 0x00D99CF7 File Offset: 0x00D97EF7
 		private static void OnPlayerFollowerEnableChange(bool isEnable)
 		{
 			BattleUiModel.Instance.FormationData.ChangePlayerFollowerEnable(isEnable);
 		}
 
-		// Token: 0x0603BCDC RID: 244956 RVA: 0x00E49844 File Offset: 0x00E47A44
+		// Token: 0x06030C27 RID: 199719 RVA: 0x00D99D0C File Offset: 0x00D97F0C
 		private static void OnGuideGroupOpening(int groupId, bool b)
 		{
 			BattleUiPureModeData pureModeData = BattleUiModel.Instance.PureModeData;
@@ -803,7 +819,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiControl.Instance.TryClosePureMode();
 		}
 
-		// Token: 0x0603BCDD RID: 244957 RVA: 0x00E49898 File Offset: 0x00E47A98
+		// Token: 0x06030C28 RID: 199720 RVA: 0x00D99D60 File Offset: 0x00D97F60
 		private static void OnDriveFishingShipStateChanged(bool isDriving)
 		{
 			BattleUiFormationPanelData formationPanelData = BattleUiModel.Instance.FormationPanelData;
@@ -819,7 +835,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			formationPanelData.SetInputType(EFormationInputType.Cooperate);
 		}
 
-		// Token: 0x0603BCDE RID: 244958 RVA: 0x00E498C6 File Offset: 0x00E47AC6
+		// Token: 0x06030C29 RID: 199721 RVA: 0x00D99D8E File Offset: 0x00D97F8E
 		private static void OnSpecialSkillEnableChanged(int entityId, int roleId, bool enable)
 		{
 			if (roleId == 1407 && enable)
@@ -828,13 +844,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BCDF RID: 244959 RVA: 0x00E498E9 File Offset: 0x00E47AE9
+		// Token: 0x06030C2A RID: 199722 RVA: 0x00D99DB1 File Offset: 0x00D97FB1
 		private static void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			BattleUiModel.Instance.ExploreModeData.InputAction(actionName, actionType == InputDistributeDefine.EActionType.Press);
 		}
 
-		// Token: 0x0603BCE0 RID: 244960 RVA: 0x00E498FF File Offset: 0x00E47AFF
+		// Token: 0x06030C2B RID: 199723 RVA: 0x00D99DC7 File Offset: 0x00D97FC7
 		private static void OnInputChangeRole(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType == InputDistributeDefine.EActionType.Press)
@@ -853,44 +869,44 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BCE1 RID: 244961 RVA: 0x00E49924 File Offset: 0x00E47B24
+		// Token: 0x06030C2C RID: 199724 RVA: 0x00D99DEC File Offset: 0x00D97FEC
 		[NullableContext(0)]
 		public UniTask<bool> PreloadBattleViewFromLoading(bool isSeamlessTravel)
 		{
-			BattleUiControl.<PreloadBattleViewFromLoading>d__36 <PreloadBattleViewFromLoading>d__;
+			BattleUiControl.<PreloadBattleViewFromLoading>d__38 <PreloadBattleViewFromLoading>d__;
 			<PreloadBattleViewFromLoading>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<PreloadBattleViewFromLoading>d__.<>4__this = this;
 			<PreloadBattleViewFromLoading>d__.isSeamlessTravel = isSeamlessTravel;
 			<PreloadBattleViewFromLoading>d__.<>1__state = -1;
-			<PreloadBattleViewFromLoading>d__.<>t__builder.Start<BattleUiControl.<PreloadBattleViewFromLoading>d__36>(ref <PreloadBattleViewFromLoading>d__);
+			<PreloadBattleViewFromLoading>d__.<>t__builder.Start<BattleUiControl.<PreloadBattleViewFromLoading>d__38>(ref <PreloadBattleViewFromLoading>d__);
 			return <PreloadBattleViewFromLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BCE2 RID: 244962 RVA: 0x00E49970 File Offset: 0x00E47B70
+		// Token: 0x06030C2D RID: 199725 RVA: 0x00D99E38 File Offset: 0x00D98038
 		[NullableContext(0)]
 		public UniTask<bool> OpenBattleViewFromLoading()
 		{
-			BattleUiControl.<OpenBattleViewFromLoading>d__37 <OpenBattleViewFromLoading>d__;
+			BattleUiControl.<OpenBattleViewFromLoading>d__39 <OpenBattleViewFromLoading>d__;
 			<OpenBattleViewFromLoading>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<OpenBattleViewFromLoading>d__.<>4__this = this;
 			<OpenBattleViewFromLoading>d__.<>1__state = -1;
-			<OpenBattleViewFromLoading>d__.<>t__builder.Start<BattleUiControl.<OpenBattleViewFromLoading>d__37>(ref <OpenBattleViewFromLoading>d__);
+			<OpenBattleViewFromLoading>d__.<>t__builder.Start<BattleUiControl.<OpenBattleViewFromLoading>d__39>(ref <OpenBattleViewFromLoading>d__);
 			return <OpenBattleViewFromLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BCE3 RID: 244963 RVA: 0x00E499B4 File Offset: 0x00E47BB4
+		// Token: 0x06030C2E RID: 199726 RVA: 0x00D99E7C File Offset: 0x00D9807C
 		[NullableContext(0)]
 		public UniTask<bool> CheckOpenDungeonMainView()
 		{
-			BattleUiControl.<CheckOpenDungeonMainView>d__38 <CheckOpenDungeonMainView>d__;
+			BattleUiControl.<CheckOpenDungeonMainView>d__40 <CheckOpenDungeonMainView>d__;
 			<CheckOpenDungeonMainView>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CheckOpenDungeonMainView>d__.<>4__this = this;
 			<CheckOpenDungeonMainView>d__.<>1__state = -1;
-			<CheckOpenDungeonMainView>d__.<>t__builder.Start<BattleUiControl.<CheckOpenDungeonMainView>d__38>(ref <CheckOpenDungeonMainView>d__);
+			<CheckOpenDungeonMainView>d__.<>t__builder.Start<BattleUiControl.<CheckOpenDungeonMainView>d__40>(ref <CheckOpenDungeonMainView>d__);
 			return <CheckOpenDungeonMainView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BCE4 RID: 244964 RVA: 0x00E499F8 File Offset: 0x00E47BF8
+		// Token: 0x06030C2F RID: 199727 RVA: 0x00D99EC0 File Offset: 0x00D980C0
 		public EUiViewName? GetDungeonToViewName()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -911,7 +927,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return new EUiViewName?(value);
 		}
 
-		// Token: 0x0603BCE5 RID: 244965 RVA: 0x00E49A88 File Offset: 0x00E47C88
+		// Token: 0x06030C30 RID: 199728 RVA: 0x00D99F50 File Offset: 0x00D98150
 		public EUiViewName GetMainViewName()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -932,7 +948,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return UiModel.Instance.MainViewName;
 		}
 
-		// Token: 0x0603BCE6 RID: 244966 RVA: 0x00E49B44 File Offset: 0x00E47D44
+		// Token: 0x06030C31 RID: 199729 RVA: 0x00D9A00C File Offset: 0x00D9820C
 		[NullableContext(2)]
 		public GameMainViewProxy GetMainViewProxy()
 		{
@@ -955,7 +971,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return (GameMainViewProxy)Activator.CreateInstance(mainViewInfo);
 		}
 
-		// Token: 0x0603BCE7 RID: 244967 RVA: 0x00E49BD0 File Offset: 0x00E47DD0
+		// Token: 0x06030C32 RID: 199730 RVA: 0x00D9A098 File Offset: 0x00D98298
 		public void OpenMainView()
 		{
 			GameMainViewProxy mainViewProxy = this.GetMainViewProxy();
@@ -963,7 +979,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			UiManager.Instance.OpenView(mainViewName, mainViewProxy, null);
 		}
 
-		// Token: 0x0603BCE8 RID: 244968 RVA: 0x00E49BF8 File Offset: 0x00E47DF8
+		// Token: 0x06030C33 RID: 199731 RVA: 0x00D9A0C0 File Offset: 0x00D982C0
 		private static void OnCommonVisibleChanged()
 		{
 			if (BattleUiModel.Instance.ChildViewData.GetChildVisible(EBattleUiChild.Common))
@@ -974,19 +990,19 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiControl.HideHud();
 		}
 
-		// Token: 0x0603BCE9 RID: 244969 RVA: 0x00E49C17 File Offset: 0x00E47E17
+		// Token: 0x06030C34 RID: 199732 RVA: 0x00D9A0DF File Offset: 0x00D982DF
 		private static void ShowHud()
 		{
 			EventSystem.Instance.Emit(EEventName.ShowHUD);
 		}
 
-		// Token: 0x0603BCEA RID: 244970 RVA: 0x00E49C29 File Offset: 0x00E47E29
+		// Token: 0x06030C35 RID: 199733 RVA: 0x00D9A0F1 File Offset: 0x00D982F1
 		private static void HideHud()
 		{
 			EventSystem.Instance.Emit(EEventName.HideHUD);
 		}
 
-		// Token: 0x0603BCEB RID: 244971 RVA: 0x00E49C3C File Offset: 0x00E47E3C
+		// Token: 0x06030C36 RID: 199734 RVA: 0x00D9A104 File Offset: 0x00D98304
 		private static void OnBattleFloatVisibleChanged()
 		{
 			bool childVisible = BattleUiModel.Instance.ChildViewData.GetChildVisible(EBattleUiChild.BattleFloat);
@@ -994,25 +1010,25 @@ namespace CSharpScript.Game.Module.BattleUi
 			UiLayer.Instance.GetFloatUnit(ELayerType.BattleFloat, 1).SetUIActive(childVisible);
 		}
 
-		// Token: 0x0603BCEC RID: 244972 RVA: 0x00E49C81 File Offset: 0x00E47E81
+		// Token: 0x06030C37 RID: 199735 RVA: 0x00D9A149 File Offset: 0x00D98349
 		public FullScreenEffectHandle AddFullScreenEffect(string niagaraPath, long? uniqueId = null)
 		{
 			return BattleUiModel.Instance.AddFullScreenEffect(niagaraPath, uniqueId);
 		}
 
-		// Token: 0x0603BCED RID: 244973 RVA: 0x00E49C8F File Offset: 0x00E47E8F
+		// Token: 0x06030C38 RID: 199736 RVA: 0x00D9A157 File Offset: 0x00D98357
 		public void RemoveFullScreenEffect(FullScreenEffectHandle fullScreenEffectHandle)
 		{
 			BattleUiModel.Instance.RemoveFullScreenEffect(fullScreenEffectHandle);
 		}
 
-		// Token: 0x0603BCEE RID: 244974 RVA: 0x00E49C9C File Offset: 0x00E47E9C
+		// Token: 0x06030C39 RID: 199737 RVA: 0x00D9A164 File Offset: 0x00D98364
 		public void RemoveFullScreenEffectByUniqueId(long uniqueId)
 		{
 			BattleUiModel.Instance.RemoveFullScreenEffectByUniqueId(uniqueId);
 		}
 
-		// Token: 0x0603BCEF RID: 244975 RVA: 0x00E49CA9 File Offset: 0x00E47EA9
+		// Token: 0x06030C3A RID: 199738 RVA: 0x00D9A171 File Offset: 0x00D98371
 		public void SetBattleViewVisible(int disableId)
 		{
 			if (!this.DisableIdSet.Remove(disableId))
@@ -1026,7 +1042,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.ChildViewData.ShowBattleView(EBattleUiVisibleReason.UiControl, 0);
 		}
 
-		// Token: 0x0603BCF0 RID: 244976 RVA: 0x00E49CDB File Offset: 0x00E47EDB
+		// Token: 0x06030C3B RID: 199739 RVA: 0x00D9A1A3 File Offset: 0x00D983A3
 		public int SetBattleViewInvisible()
 		{
 			BattleUiModel.Instance.ChildViewData.HideBattleView(EBattleUiVisibleReason.UiControl, null, 0);
@@ -1035,7 +1051,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.DisableId;
 		}
 
-		// Token: 0x0603BCF1 RID: 244977 RVA: 0x00E49D18 File Offset: 0x00E47F18
+		// Token: 0x06030C3C RID: 199740 RVA: 0x00D9A1E0 File Offset: 0x00D983E0
 		public void FocusToTargetLocation(global::Vector targetLocation)
 		{
 			global::Vector actorLocationProxy = SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<CharacterActorComponent>().ActorLocationProxy;
@@ -1043,7 +1059,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.PlayCameraRotatorWithCurve(actorLocationProxy, targetLocation, instance.CursorCameraRotatorOffset, instance.CursorCameraRotationTime, null, true, 0f, null);
 		}
 
-		// Token: 0x0603BCF2 RID: 244978 RVA: 0x00E49D74 File Offset: 0x00E47F74
+		// Token: 0x06030C3D RID: 199741 RVA: 0x00D9A23C File Offset: 0x00D9843C
 		public void ResetFocus()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -1054,7 +1070,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			getCurrentEntity.Entity.GetComponent<CharacterLockOnComponent>().ResetFocus();
 		}
 
-		// Token: 0x0603BCF3 RID: 244979 RVA: 0x00E49DB0 File Offset: 0x00E47FB0
+		// Token: 0x06030C3E RID: 199742 RVA: 0x00D9A278 File Offset: 0x00D98478
 		public void TryOpenPureMode()
 		{
 			BattleUiPureModeData pureModeData = BattleUiModel.Instance.PureModeData;
@@ -1087,7 +1103,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603BCF4 RID: 244980 RVA: 0x00E49E70 File Offset: 0x00E48070
+		// Token: 0x06030C3F RID: 199743 RVA: 0x00D9A338 File Offset: 0x00D98538
 		public bool TryClosePureMode()
 		{
 			BattleUiPureModeData pureModeData = BattleUiModel.Instance.PureModeData;
@@ -1103,7 +1119,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BCF5 RID: 244981 RVA: 0x00E49EA0 File Offset: 0x00E480A0
+		// Token: 0x06030C40 RID: 199744 RVA: 0x00D9A368 File Offset: 0x00D98568
 		[NullableContext(2)]
 		private static void OnAddGuestNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -1111,7 +1127,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.AddGuest(addGuestNotify.GuestId);
 		}
 
-		// Token: 0x0603BCF6 RID: 244982 RVA: 0x00E49EC4 File Offset: 0x00E480C4
+		// Token: 0x06030C41 RID: 199745 RVA: 0x00D9A38C File Offset: 0x00D9858C
 		[NullableContext(2)]
 		private static void OnRemoveGuestNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -1119,7 +1135,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.RemoveGuest(removeGuestNotify.GuestId);
 		}
 
-		// Token: 0x0603BCF7 RID: 244983 RVA: 0x00E49EE8 File Offset: 0x00E480E8
+		// Token: 0x06030C42 RID: 199746 RVA: 0x00D9A3B0 File Offset: 0x00D985B0
 		[NullableContext(2)]
 		private static void OnNewTowerMonsterHpInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -1132,7 +1148,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			towerMergeHeadStateData.UpdateTowerMonsterHpInfo(notify);
 		}
 
-		// Token: 0x0603BCF8 RID: 244984 RVA: 0x00E49F11 File Offset: 0x00E48111
+		// Token: 0x06030C43 RID: 199747 RVA: 0x00D9A3D9 File Offset: 0x00D985D9
 		public void UpdateTimeDilationSkillButtonState()
 		{
 			BattleView battleView = UiManager.Instance.GetViewByName(EUiViewName.BattleView) as BattleView;
@@ -1143,7 +1159,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			battleView.UpdateTimeDilationButton();
 		}
 
-		// Token: 0x0603BCF9 RID: 244985 RVA: 0x00E49F34 File Offset: 0x00E48134
+		// Token: 0x06030C44 RID: 199748 RVA: 0x00D9A3FC File Offset: 0x00D985FC
 		public static void OffsetMissionAnchor(float y)
 		{
 			BattleView battleView = UiManager.Instance.GetViewByName(EUiViewName.BattleView) as BattleView;
@@ -1153,13 +1169,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BCFA RID: 244986 RVA: 0x00E49F60 File Offset: 0x00E48160
+		// Token: 0x06030C45 RID: 199749 RVA: 0x00D9A428 File Offset: 0x00D98628
 		public void PlayConcertoExtraEffect(ESkillButtonExtraEffect effectType, float duration = 0f)
 		{
 			EventSystem.Instance.Emit<ESkillButtonExtraEffect, float>(EEventName.BattleUiConcertoExtraEffectRefresh, effectType, duration);
 		}
 
-		// Token: 0x0603BCFB RID: 244987 RVA: 0x00E49F74 File Offset: 0x00E48174
+		// Token: 0x06030C46 RID: 199750 RVA: 0x00D9A43C File Offset: 0x00D9863C
 		private static void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsRolePassenger(true))
@@ -1173,7 +1189,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.JoystickData.EnterVehicle(info);
 		}
 
-		// Token: 0x0603BCFC RID: 244988 RVA: 0x00E49FA9 File Offset: 0x00E481A9
+		// Token: 0x06030C47 RID: 199751 RVA: 0x00D9A471 File Offset: 0x00D98671
 		private static void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			if (!info.IsRolePassenger(true))
@@ -1184,8 +1200,48 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.JoystickData.LeaveVehicle(info);
 		}
 
-		// Token: 0x17008DC3 RID: 36291
-		// (get) Token: 0x0603BCFD RID: 244989 RVA: 0x00E49FD5 File Offset: 0x00E481D5
+		// Token: 0x06030C48 RID: 199752 RVA: 0x00D9A4A0 File Offset: 0x00D986A0
+		public void TryCreateBattleUiHandle(EBattleUiHandleType handleType)
+		{
+			if (this.BattleUiHandleMap.ContainsKey(handleType))
+			{
+				return;
+			}
+			Func<BattleUiHandleBase> func;
+			if (BattleUiControl.BattleUiHandleClassMap.TryGetValue(handleType, out func))
+			{
+				BattleUiHandleBase battleUiHandleBase = func();
+				battleUiHandleBase.Init();
+				this.BattleUiHandleMap[handleType] = battleUiHandleBase;
+			}
+		}
+
+		// Token: 0x06030C49 RID: 199753 RVA: 0x00D9A4E8 File Offset: 0x00D986E8
+		public void TryDestroyBattleUiHandle(EBattleUiHandleType handleType)
+		{
+			BattleUiHandleBase battleUiHandleBase;
+			if (!this.BattleUiHandleMap.TryGetValue(handleType, out battleUiHandleBase))
+			{
+				return;
+			}
+			battleUiHandleBase.Clear();
+			this.BattleUiHandleMap.Remove(handleType);
+		}
+
+		// Token: 0x06030C4A RID: 199754 RVA: 0x00D9A51C File Offset: 0x00D9871C
+		[NullableContext(2)]
+		public BattleUiHandleBase GetBattleUiHandle(EBattleUiHandleType handleType)
+		{
+			BattleUiHandleBase result;
+			if (!this.BattleUiHandleMap.TryGetValue(handleType, out result))
+			{
+				return null;
+			}
+			return result;
+		}
+
+		// Token: 0x17006195 RID: 24981
+		// (get) Token: 0x06030C4B RID: 199755 RVA: 0x00D9A53C File Offset: 0x00D9873C
 		public static BattleUiControl Instance
 		{
 			get
@@ -1194,7 +1250,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BCFE RID: 244990 RVA: 0x00E49FDC File Offset: 0x00E481DC
+		// Token: 0x06030C4C RID: 199756 RVA: 0x00D9A543 File Offset: 0x00D98743
 		public static BattleUiControl GetOrCreateInstance()
 		{
 			if (BattleUiControl._Instance == null)
@@ -1204,7 +1260,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return BattleUiControl._Instance;
 		}
 
-		// Token: 0x0603BCFF RID: 244991 RVA: 0x00E49FF0 File Offset: 0x00E481F0
+		// Token: 0x06030C4D RID: 199757 RVA: 0x00D9A557 File Offset: 0x00D98757
 		public static bool CreateInstance()
 		{
 			if (BattleUiControl._Instance != null)
@@ -1215,40 +1271,47 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BD00 RID: 244992 RVA: 0x00E4A006 File Offset: 0x00E48206
+		// Token: 0x06030C4E RID: 199758 RVA: 0x00D9A56D File Offset: 0x00D9876D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BD01 RID: 244993 RVA: 0x00E4A008 File Offset: 0x00E48208
+		// Token: 0x06030C4F RID: 199759 RVA: 0x00D9A56F File Offset: 0x00D9876F
 		public static void ResetStaticDefaultValue()
 		{
 			BattleUiControl._Instance = null;
 		}
 
-		// Token: 0x0603BD02 RID: 244994 RVA: 0x00E4A010 File Offset: 0x00E48210
+		// Token: 0x06030C50 RID: 199760 RVA: 0x00D9A578 File Offset: 0x00D98778
 		static BattleUiControl()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleUiControl.CreateStaticDefaultValue), new Action(BattleUiControl.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F28D RID: 127629
+		// Token: 0x04019D3F RID: 105791
 		[StaticVariableRuleIgnore]
 		private static readonly Stat ChangeRoleStat = Stat.Create("[ChangeRole]BattleUiControl", "", "");
 
-		// Token: 0x0401F28E RID: 127630
+		// Token: 0x04019D40 RID: 105792
 		protected BattleUiModel Model;
 
-		// Token: 0x0401F28F RID: 127631
+		// Token: 0x04019D41 RID: 105793
 		public BattleUiPool Pool = new BattleUiPool();
 
-		// Token: 0x0401F290 RID: 127632
+		// Token: 0x04019D42 RID: 105794
 		private int DisableId;
 
-		// Token: 0x0401F291 RID: 127633
+		// Token: 0x04019D43 RID: 105795
 		private readonly HashSet<int> DisableIdSet = new HashSet<int>();
 
-		// Token: 0x0401F292 RID: 127634
+		// Token: 0x04019D44 RID: 105796
+		[StaticVariableRuleIgnore]
+		private static readonly IReadOnlyDictionary<EBattleUiHandleType, Func<BattleUiHandleBase>> BattleUiHandleClassMap = new Dictionary<EBattleUiHandleType, Func<BattleUiHandleBase>>();
+
+		// Token: 0x04019D45 RID: 105797
+		private readonly Dictionary<EBattleUiHandleType, BattleUiHandleBase> BattleUiHandleMap = new Dictionary<EBattleUiHandleType, BattleUiHandleBase>();
+
+		// Token: 0x04019D46 RID: 105798
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyDictionary<EDungeonSubType, EUiViewName> DungeonToBattleView = new Dictionary<EDungeonSubType, EUiViewName>
 		{
@@ -1270,22 +1333,22 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		};
 
-		// Token: 0x0401F293 RID: 127635
+		// Token: 0x04019D47 RID: 105799
 		private int? PreOpenBattleViewId;
 
-		// Token: 0x0401F294 RID: 127636
+		// Token: 0x04019D48 RID: 105800
 		[Nullable(2)]
 		private static BattleUiControl _Instance;
 
-		// Token: 0x0200BE71 RID: 48753
+		// Token: 0x0200A877 RID: 43127
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040396DC RID: 235228
+			// Token: 0x0403409D RID: 213149
 			[Nullable(0)]
 			public static Action <0>__OnWorldDone;
 
-			// Token: 0x040396DD RID: 235229
+			// Token: 0x0403409E RID: 213150
 			[Nullable(new byte[]
 			{
 				0,
@@ -1294,7 +1357,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<EntityHandle, EntityHandle> <1>__OnChangeRole;
 
-			// Token: 0x040396DE RID: 235230
+			// Token: 0x0403409F RID: 213151
 			[Nullable(new byte[]
 			{
 				0,
@@ -1303,7 +1366,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<EAddEntityType, EntityHandle, AActor> <2>__OnAddEntity;
 
-			// Token: 0x040396DF RID: 235231
+			// Token: 0x040340A0 RID: 213152
 			[Nullable(new byte[]
 			{
 				0,
@@ -1311,23 +1374,23 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<ERemoveEntityType, EntityHandle> <3>__OnRemoveEntity;
 
-			// Token: 0x040396E0 RID: 235232
+			// Token: 0x040340A1 RID: 213153
 			[Nullable(0)]
 			public static Action<int, int, int> <4>__OnRoleLevelUp;
 
-			// Token: 0x040396E1 RID: 235233
+			// Token: 0x040340A2 RID: 213154
 			[Nullable(0)]
 			public static Action<EOperationType, EOperationType> <5>__ShowTypeChange;
 
-			// Token: 0x040396E2 RID: 235234
+			// Token: 0x040340A3 RID: 213155
 			[Nullable(0)]
 			public static Action<EFunctionType, bool> <6>__OnFunctionOpenSet;
 
-			// Token: 0x040396E3 RID: 235235
+			// Token: 0x040340A4 RID: 213156
 			[Nullable(0)]
 			public static Action<EFunctionType, bool> <7>__OnFunctionOpenUpdate;
 
-			// Token: 0x040396E4 RID: 235236
+			// Token: 0x040340A5 RID: 213157
 			[Nullable(new byte[]
 			{
 				0,
@@ -1335,23 +1398,23 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<Entity> <8>__OnRevive;
 
-			// Token: 0x040396E5 RID: 235237
+			// Token: 0x040340A6 RID: 213158
 			[Nullable(0)]
 			public static Action<int, GameplayCue, bool, int> <9>__OnAddOrRemoveBuff;
 
-			// Token: 0x040396E6 RID: 235238
+			// Token: 0x040340A7 RID: 213159
 			[Nullable(0)]
 			public static Action <10>__OnFormationLoadCompleted;
 
-			// Token: 0x040396E7 RID: 235239
+			// Token: 0x040340A8 RID: 213160
 			[Nullable(0)]
 			public static Action<bool, bool, bool> <11>__OnChangeWalkRun;
 
-			// Token: 0x040396E8 RID: 235240
+			// Token: 0x040340A9 RID: 213161
 			[Nullable(0)]
 			public static Action <12>__OnViewPortSizeChange;
 
-			// Token: 0x040396E9 RID: 235241
+			// Token: 0x040340AA RID: 213162
 			[Nullable(new byte[]
 			{
 				0,
@@ -1359,7 +1422,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<EntityHandle> <13>__OnFollowShooterPossessed;
 
-			// Token: 0x040396EA RID: 235242
+			// Token: 0x040340AB RID: 213163
 			[Nullable(new byte[]
 			{
 				0,
@@ -1367,27 +1430,27 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<EntityHandle> <14>__OnPlayerFollowerConfigChanged;
 
-			// Token: 0x040396EB RID: 235243
+			// Token: 0x040340AC RID: 213164
 			[Nullable(0)]
 			public static Action <15>__OnFollowShooterUnPossessed;
 
-			// Token: 0x040396EC RID: 235244
+			// Token: 0x040340AD RID: 213165
 			[Nullable(0)]
 			public static Action<bool> <16>__OnPlayerFollowerEnableChange;
 
-			// Token: 0x040396ED RID: 235245
+			// Token: 0x040340AE RID: 213166
 			[Nullable(0)]
 			public static Action<int, bool> <17>__OnGuideGroupOpening;
 
-			// Token: 0x040396EE RID: 235246
+			// Token: 0x040340AF RID: 213167
 			[Nullable(0)]
 			public static Action<bool> <18>__OnDriveFishingShipStateChanged;
 
-			// Token: 0x040396EF RID: 235247
+			// Token: 0x040340B0 RID: 213168
 			[Nullable(0)]
 			public static Action<int, int, bool> <19>__OnSpecialSkillEnableChanged;
 
-			// Token: 0x040396F0 RID: 235248
+			// Token: 0x040340B1 RID: 213169
 			[Nullable(new byte[]
 			{
 				0,
@@ -1395,7 +1458,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<VehiclePassengerInfo, bool> <20>__OnEnterVehicle;
 
-			// Token: 0x040396F1 RID: 235249
+			// Token: 0x040340B2 RID: 213170
 			[Nullable(new byte[]
 			{
 				0,
@@ -1403,23 +1466,23 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<VehiclePassengerInfo, bool> <21>__OnLeaveVehicle;
 
-			// Token: 0x040396F2 RID: 235250
+			// Token: 0x040340B3 RID: 213171
 			[Nullable(0)]
 			public static TInputHandle<InputDistributeDefine.EActionType> <22>__OnInputAction;
 
-			// Token: 0x040396F3 RID: 235251
+			// Token: 0x040340B4 RID: 213172
 			[Nullable(0)]
 			public static TInputHandle<InputDistributeDefine.EActionType> <23>__OnInputChangeRole;
 
-			// Token: 0x040396F4 RID: 235252
+			// Token: 0x040340B5 RID: 213173
 			[Nullable(0)]
 			public static Action <24>__OnCommonVisibleChanged;
 
-			// Token: 0x040396F5 RID: 235253
+			// Token: 0x040340B6 RID: 213174
 			[Nullable(0)]
 			public static Action <25>__OnBattleFloatVisibleChanged;
 
-			// Token: 0x040396F6 RID: 235254
+			// Token: 0x040340B7 RID: 213175
 			[Nullable(new byte[]
 			{
 				0,
@@ -1428,7 +1491,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <26>__OnAddGuestNotify;
 
-			// Token: 0x040396F7 RID: 235255
+			// Token: 0x040340B8 RID: 213176
 			[Nullable(new byte[]
 			{
 				0,
@@ -1437,7 +1500,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <27>__OnRemoveGuestNotify;
 
-			// Token: 0x040396F8 RID: 235256
+			// Token: 0x040340B9 RID: 213177
 			[Nullable(new byte[]
 			{
 				0,

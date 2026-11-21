@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,15 +14,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006619 RID: 26137
+	// Token: 0x02005597 RID: 21911
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class FishingQuestModel : ModelBase
 	{
-		// Token: 0x17009607 RID: 38407
-		// (get) Token: 0x0604183F RID: 268351 RVA: 0x00FE000A File Offset: 0x00FDE20A
-		// (set) Token: 0x06041840 RID: 268352 RVA: 0x00FE0012 File Offset: 0x00FDE212
+		// Token: 0x17006969 RID: 26985
+		// (get) Token: 0x06036504 RID: 222468 RVA: 0x00F2707E File Offset: 0x00F2527E
+		// (set) Token: 0x06036505 RID: 222469 RVA: 0x00F27086 File Offset: 0x00F25286
 		public int CurrentTraceEntrust
 		{
 			get
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041841 RID: 268353 RVA: 0x00FE0024 File Offset: 0x00FDE224
+		// Token: 0x06036506 RID: 222470 RVA: 0x00F27098 File Offset: 0x00F25298
 		protected override bool OnInit()
 		{
 			foreach (FishingEntrustPool fishingEntrustPool in FishingConfig.Instance.GetAllFishingEntrustPool())
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x06041842 RID: 268354 RVA: 0x00FE017C File Offset: 0x00FDE37C
+		// Token: 0x06036507 RID: 222471 RVA: 0x00F271F0 File Offset: 0x00F253F0
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingRefreshDockId, new Action<int>(this.FishingRefreshDockId));
@@ -68,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x06041843 RID: 268355 RVA: 0x00FE0228 File Offset: 0x00FDE428
+		// Token: 0x06036508 RID: 222472 RVA: 0x00F2729C File Offset: 0x00F2549C
 		private void HandleUnDeliverableItemId()
 		{
 			this.UnDeliverableItemIdSet.Clear();
@@ -96,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit(EEventName.FishingBackpackDeliverableRefresh);
 		}
 
-		// Token: 0x06041844 RID: 268356 RVA: 0x00FE0318 File Offset: 0x00FDE518
+		// Token: 0x06036509 RID: 222473 RVA: 0x00F2738C File Offset: 0x00F2558C
 		public bool IsUnDeliverableByItemId(int itemId)
 		{
 			using (HashSet<int>.Enumerator enumerator = this.UnDeliverableItemIdSet.GetEnumerator())
@@ -112,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x06041845 RID: 268357 RVA: 0x00FE0370 File Offset: 0x00FDE570
+		// Token: 0x0603650A RID: 222474 RVA: 0x00F273E4 File Offset: 0x00F255E4
 		public bool IsAcceptedEntrustItem(int itemId)
 		{
 			foreach (KeyValuePair<int, EFishingEntrustState> keyValuePair in this.CurrentEntrusts)
@@ -140,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x06041846 RID: 268358 RVA: 0x00FE044C File Offset: 0x00FDE64C
+		// Token: 0x0603650B RID: 222475 RVA: 0x00F274C0 File Offset: 0x00F256C0
 		public void UpdateEntrusts(Dictionary<int, FishingEntrustStatus> entrustMap)
 		{
 			this.CurrentEntrusts.Clear();
@@ -172,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.HandleUnDeliverableItemId();
 		}
 
-		// Token: 0x06041847 RID: 268359 RVA: 0x00FE0520 File Offset: 0x00FDE720
+		// Token: 0x0603650C RID: 222476 RVA: 0x00F27594 File Offset: 0x00F25794
 		public bool GetEntrustsDeliverable(int entrustId)
 		{
 			FishingEntrust? fishingEntrust = FishingConfig.Instance.GetFishingEntrust(entrustId);
@@ -187,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return fishingEntrust.Value.EntrustType == 2 && FishingModel.Instance.DockId == fishingEntrust.Value.EntrustDestination;
 		}
 
-		// Token: 0x06041848 RID: 268360 RVA: 0x00FE05D0 File Offset: 0x00FDE7D0
+		// Token: 0x0603650D RID: 222477 RVA: 0x00F27644 File Offset: 0x00F25844
 		public bool GetEntrustsTargetEnough(int entrustId)
 		{
 			FishingEntrust? fishingEntrust = FishingConfig.Instance.GetFishingEntrust(entrustId);
@@ -218,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return fishingEntrust.Value.EntrustType == 2;
 		}
 
-		// Token: 0x06041849 RID: 268361 RVA: 0x00FE06AC File Offset: 0x00FDE8AC
+		// Token: 0x0603650E RID: 222478 RVA: 0x00F27720 File Offset: 0x00F25920
 		public List<int> GetEntrustsByPoolType(int poolId)
 		{
 			List<int> list = new List<int>();
@@ -242,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x0604184A RID: 268362 RVA: 0x00FE076C File Offset: 0x00FDE96C
+		// Token: 0x0603650F RID: 222479 RVA: 0x00F277E0 File Offset: 0x00F259E0
 		public bool GetPoolHasAnyEntrust(int poolId)
 		{
 			bool flag = FishingModel.Instance.DockId > 0;
@@ -265,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x0604184B RID: 268363 RVA: 0x00FE0824 File Offset: 0x00FDEA24
+		// Token: 0x06036510 RID: 222480 RVA: 0x00F27898 File Offset: 0x00F25A98
 		public bool GetPoolHasAnyAcceptedEntrust(int poolId)
 		{
 			foreach (KeyValuePair<int, EFishingEntrustState> keyValuePair in this.CurrentEntrusts)
@@ -283,14 +282,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x0604184C RID: 268364 RVA: 0x00FE08A0 File Offset: 0x00FDEAA0
+		// Token: 0x06036511 RID: 222481 RVA: 0x00F27914 File Offset: 0x00F25B14
 		public bool GetEntrustsLockState(int entrustId)
 		{
 			EFishingEntrustState efishingEntrustState;
 			return this.CurrentEntrusts.TryGetValue(entrustId, out efishingEntrustState) && efishingEntrustState == EFishingEntrustState.UnAcceptable;
 		}
 
-		// Token: 0x0604184D RID: 268365 RVA: 0x00FE08C4 File Offset: 0x00FDEAC4
+		// Token: 0x06036512 RID: 222482 RVA: 0x00F27938 File Offset: 0x00F25B38
 		public double GetEntrustsRefreshCost(int entrustId)
 		{
 			FishingEntrust? fishingEntrust = FishingConfig.Instance.GetFishingEntrust(entrustId);
@@ -306,7 +305,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return (double)fishingManualRefreshByEntrustPoolTypeAndStar[0].RefreshCost * ((double)(100 - this.EntrustRefreshCostRatio) / 100.0);
 		}
 
-		// Token: 0x0604184E RID: 268366 RVA: 0x00FE0954 File Offset: 0x00FDEB54
+		// Token: 0x06036513 RID: 222483 RVA: 0x00F279C8 File Offset: 0x00F25BC8
 		public int GetTraceEntrustItem()
 		{
 			if (this.CurrentTraceEntrust == 0)
@@ -334,7 +333,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return -1;
 		}
 
-		// Token: 0x0604184F RID: 268367 RVA: 0x00FE0A3C File Offset: 0x00FDEC3C
+		// Token: 0x06036514 RID: 222484 RVA: 0x00F27AB0 File Offset: 0x00F25CB0
 		private int GetTraceEntrustDestination()
 		{
 			if (this.CurrentTraceEntrust == 0)
@@ -354,7 +353,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return entrustDestination;
 		}
 
-		// Token: 0x06041850 RID: 268368 RVA: 0x00FE0A90 File Offset: 0x00FDEC90
+		// Token: 0x06036515 RID: 222485 RVA: 0x00F27B04 File Offset: 0x00F25D04
 		private int GetNearestPort()
 		{
 			List<int> unlockPort = FishingModel.Instance.UnlockPort;
@@ -393,7 +392,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return num.Value;
 		}
 
-		// Token: 0x06041851 RID: 268369 RVA: 0x00FE0BC4 File Offset: 0x00FDEDC4
+		// Token: 0x06036516 RID: 222486 RVA: 0x00F27C38 File Offset: 0x00F25E38
 		public void TraceEntrust()
 		{
 			this.HasTraceSuccess = false;
@@ -450,7 +449,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TraceFormClick = false;
 		}
 
-		// Token: 0x06041852 RID: 268370 RVA: 0x00FE0D44 File Offset: 0x00FDEF44
+		// Token: 0x06036517 RID: 222487 RVA: 0x00F27DB8 File Offset: 0x00F25FB8
 		public void StartShowTrackText(int entrustId, ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 		{
 			if (entrustId == 0)
@@ -487,13 +486,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<FishingEntrustViewShowData, ETreeTextExpressReason>(EEventName.FishingEntrustStartShowTrackText, p, reason);
 		}
 
-		// Token: 0x06041853 RID: 268371 RVA: 0x00FE0E28 File Offset: 0x00FDF028
+		// Token: 0x06036518 RID: 222488 RVA: 0x00F27E9C File Offset: 0x00F2609C
 		public void EndShowTrackText(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 		{
 			EventSystem.Instance.Emit<int, ETreeTextExpressReason>(EEventName.FishingEntrustEndShowTrackText, this.CurrentTraceEntrust, reason);
 		}
 
-		// Token: 0x06041854 RID: 268372 RVA: 0x00FE0E44 File Offset: 0x00FDF044
+		// Token: 0x06036519 RID: 222489 RVA: 0x00F27EB8 File Offset: 0x00F260B8
 		public void TraceItem(int item)
 		{
 			this.HasTraceSuccess = false;
@@ -518,7 +517,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041855 RID: 268373 RVA: 0x00FE0EC8 File Offset: 0x00FDF0C8
+		// Token: 0x0603651A RID: 222490 RVA: 0x00F27F3C File Offset: 0x00F2613C
 		private void Trace(int targetItem, EFishPointDetectSourceType detectionType)
 		{
 			global::Vector playPosition = this.GetPlayPosition();
@@ -578,7 +577,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.HasTraceSuccess = true;
 		}
 
-		// Token: 0x06041856 RID: 268374 RVA: 0x00FE10F8 File Offset: 0x00FDF2F8
+		// Token: 0x0603651B RID: 222491 RVA: 0x00F2816C File Offset: 0x00F2636C
 		[NullableContext(2)]
 		private global::Vector GetPlayPosition()
 		{
@@ -595,7 +594,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return component.ActorLocationProxy;
 		}
 
-		// Token: 0x06041857 RID: 268375 RVA: 0x00FE112C File Offset: 0x00FDF32C
+		// Token: 0x0603651C RID: 222492 RVA: 0x00F281A0 File Offset: 0x00F263A0
 		private int? CreateAndTrackMark(int fishPbDataId, EFishPointDetectSourceType detectionType)
 		{
 			this.FishingPointMarkCreateInfo = new FishingPointMarkCreateInfo(new FishingPointMarkCreateParam
@@ -621,7 +620,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.TrackMarkId;
 		}
 
-		// Token: 0x06041858 RID: 268376 RVA: 0x00FE1200 File Offset: 0x00FDF400
+		// Token: 0x0603651D RID: 222493 RVA: 0x00F28274 File Offset: 0x00F26474
 		public void RemoveAndUnTrackMark(bool clearInfo = true)
 		{
 			if (this.TrackMarkId != null)
@@ -645,13 +644,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041859 RID: 268377 RVA: 0x00FE128B File Offset: 0x00FDF48B
+		// Token: 0x0603651E RID: 222494 RVA: 0x00F282FF File Offset: 0x00F264FF
 		private void RemoveAndUnTrackAllFishingPointMarks()
 		{
 			MapModel.Instance.RemoveMapMarkByType(EMarkType.FishingPoint);
 		}
 
-		// Token: 0x0604185A RID: 268378 RVA: 0x00FE129C File Offset: 0x00FDF49C
+		// Token: 0x0603651F RID: 222495 RVA: 0x00F28310 File Offset: 0x00F26510
 		public void ReTraceMapMark()
 		{
 			if (this.FishingPointMarkCreateInfo != null && this.TrackMarkId == null)
@@ -661,10 +660,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604185B RID: 268379 RVA: 0x00FE12FC File Offset: 0x00FDF4FC
+		// Token: 0x06036520 RID: 222496 RVA: 0x00F28370 File Offset: 0x00F26570
 		private void RefreshCurrentEntrustsDeliverable()
 		{
-			foreach (KeyValuePair<int, EFishingEntrustState> keyValuePair in this.CurrentEntrusts.ToList<KeyValuePair<int, EFishingEntrustState>>())
+			foreach (KeyValuePair<int, EFishingEntrustState> keyValuePair in new List<KeyValuePair<int, EFishingEntrustState>>(this.CurrentEntrusts))
 			{
 				int num;
 				EFishingEntrustState efishingEntrustState;
@@ -684,19 +683,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.HandleUnDeliverableItemId();
 		}
 
-		// Token: 0x0604185C RID: 268380 RVA: 0x00FE1398 File Offset: 0x00FDF598
+		// Token: 0x06036521 RID: 222497 RVA: 0x00F2840C File Offset: 0x00F2660C
 		private void FishingRefreshDockId(int dockId)
 		{
 			this.RefreshCurrentEntrustsDeliverable();
 		}
 
-		// Token: 0x0604185D RID: 268381 RVA: 0x00FE13A0 File Offset: 0x00FDF5A0
+		// Token: 0x06036522 RID: 222498 RVA: 0x00F28414 File Offset: 0x00F26614
 		private void FishingRefreshBackpackData()
 		{
 			this.RefreshCurrentEntrustsDeliverable();
 		}
 
-		// Token: 0x0604185E RID: 268382 RVA: 0x00FE13A8 File Offset: 0x00FDF5A8
+		// Token: 0x06036523 RID: 222499 RVA: 0x00F2841C File Offset: 0x00F2661C
 		private void WorldDoneAndCloseLoading()
 		{
 			if (this.TraceHandle)
@@ -716,7 +715,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TraceHandleItemId = 0;
 		}
 
-		// Token: 0x0604185F RID: 268383 RVA: 0x00FE13FC File Offset: 0x00FDF5FC
+		// Token: 0x06036524 RID: 222500 RVA: 0x00F28470 File Offset: 0x00F26670
 		public bool OnFishingItemSell(List<int> itemIdList, bool banSkip, Action callBack)
 		{
 			Action <>9__1;
@@ -769,7 +768,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x06041860 RID: 268384 RVA: 0x00FE15BC File Offset: 0x00FDF7BC
+		// Token: 0x06036525 RID: 222501 RVA: 0x00F28630 File Offset: 0x00F26830
 		private void OnDriveFishingShipStateChanged(bool isDriving)
 		{
 			if (isDriving)
@@ -780,7 +779,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RemoveAndUnTrackMark(false);
 		}
 
-		// Token: 0x06041861 RID: 268385 RVA: 0x00FE15CF File Offset: 0x00FDF7CF
+		// Token: 0x06036526 RID: 222502 RVA: 0x00F28643 File Offset: 0x00F26843
 		private void FishingPointFinish(int pointId)
 		{
 			if (this.CurrentTracePoint == pointId && this.CurrentTraceItem != 0)
@@ -789,7 +788,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041862 RID: 268386 RVA: 0x00FE15F0 File Offset: 0x00FDF7F0
+		// Token: 0x06036527 RID: 222503 RVA: 0x00F28664 File Offset: 0x00F26864
 		public void AutoTraceEntrust()
 		{
 			List<FishingEntrust> list = new List<FishingEntrust>();
@@ -824,7 +823,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			FishingController.Instance.RequestFishingEntrustTrace(fishingEntrust2.Id);
 		}
 
-		// Token: 0x06041863 RID: 268387 RVA: 0x00FE16DC File Offset: 0x00FDF8DC
+		// Token: 0x06036528 RID: 222504 RVA: 0x00F28750 File Offset: 0x00F26950
 		private void RefreshTime(float _)
 		{
 			if (this.CurrentTraceEntrust == 0 || !FishingController.Instance.IsInFishingShip())
@@ -854,15 +853,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041864 RID: 268388 RVA: 0x00FE177C File Offset: 0x00FDF97C
+		// Token: 0x06036529 RID: 222505 RVA: 0x00F287F0 File Offset: 0x00F269F0
 		public bool IsInNight()
 		{
 			double hour = TimeOfDayModel.Instance.GameTime.Hour;
 			return hour >= (double)this.DayEndTime || hour < (double)this.DayStartTime;
 		}
 
-		// Token: 0x17009608 RID: 38408
-		// (get) Token: 0x06041865 RID: 268389 RVA: 0x00FE17B0 File Offset: 0x00FDF9B0
+		// Token: 0x1700696A RID: 26986
+		// (get) Token: 0x0603652A RID: 222506 RVA: 0x00F28824 File Offset: 0x00F26A24
 		public static FishingQuestModel Instance
 		{
 			get
@@ -871,7 +870,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041866 RID: 268390 RVA: 0x00FE17B7 File Offset: 0x00FDF9B7
+		// Token: 0x0603652B RID: 222507 RVA: 0x00F2882B File Offset: 0x00F26A2B
 		public static FishingQuestModel GetOrCreateInstance()
 		{
 			if (FishingQuestModel._Instance == null)
@@ -881,7 +880,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return FishingQuestModel._Instance;
 		}
 
-		// Token: 0x06041867 RID: 268391 RVA: 0x00FE17CB File Offset: 0x00FDF9CB
+		// Token: 0x0603652C RID: 222508 RVA: 0x00F2883F File Offset: 0x00F26A3F
 		public static bool CreateInstance()
 		{
 			if (FishingQuestModel._Instance != null)
@@ -892,86 +891,86 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x06041868 RID: 268392 RVA: 0x00FE17E1 File Offset: 0x00FDF9E1
+		// Token: 0x0603652D RID: 222509 RVA: 0x00F28855 File Offset: 0x00F26A55
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041869 RID: 268393 RVA: 0x00FE17E3 File Offset: 0x00FDF9E3
+		// Token: 0x0603652E RID: 222510 RVA: 0x00F28857 File Offset: 0x00F26A57
 		public static void ResetStaticDefaultValue()
 		{
 			FishingQuestModel._Instance = null;
 		}
 
-		// Token: 0x0604186A RID: 268394 RVA: 0x00FE17EB File Offset: 0x00FDF9EB
+		// Token: 0x0603652F RID: 222511 RVA: 0x00F2885F File Offset: 0x00F26A5F
 		static FishingQuestModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FishingQuestModel.CreateStaticDefaultValue), new Action(FishingQuestModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402216D RID: 139629
+		// Token: 0x0401CA9E RID: 117406
 		public List<int> EntrustPool = new List<int>();
 
-		// Token: 0x0402216E RID: 139630
+		// Token: 0x0401CA9F RID: 117407
 		private int CurrentTraceEntrustInternal;
 
-		// Token: 0x0402216F RID: 139631
+		// Token: 0x0401CAA0 RID: 117408
 		public int CurrentTraceItem;
 
-		// Token: 0x04022170 RID: 139632
+		// Token: 0x0401CAA1 RID: 117409
 		private int? TrackMarkId;
 
-		// Token: 0x04022171 RID: 139633
+		// Token: 0x0401CAA2 RID: 117410
 		private bool TraceHandle;
 
-		// Token: 0x04022172 RID: 139634
+		// Token: 0x0401CAA3 RID: 117411
 		private int TraceHandleItemId;
 
-		// Token: 0x04022173 RID: 139635
+		// Token: 0x0401CAA4 RID: 117412
 		private int TraceHandleEntrustId;
 
-		// Token: 0x04022174 RID: 139636
+		// Token: 0x0401CAA5 RID: 117413
 		[Nullable(2)]
 		private FishingPointMarkCreateInfo FishingPointMarkCreateInfo;
 
-		// Token: 0x04022175 RID: 139637
+		// Token: 0x0401CAA6 RID: 117414
 		private int TracePortMarkId;
 
-		// Token: 0x04022176 RID: 139638
+		// Token: 0x0401CAA7 RID: 117415
 		public int EntrustRefreshCostRatio;
 
-		// Token: 0x04022177 RID: 139639
+		// Token: 0x0401CAA8 RID: 117416
 		[Nullable(2)]
 		private TimerHandle TimeHandle;
 
-		// Token: 0x04022178 RID: 139640
+		// Token: 0x0401CAA9 RID: 117417
 		public int DayStartTime;
 
-		// Token: 0x04022179 RID: 139641
+		// Token: 0x0401CAAA RID: 117418
 		public int DayEndTime;
 
-		// Token: 0x0402217A RID: 139642
+		// Token: 0x0401CAAB RID: 117419
 		private bool CurrentIsNight;
 
-		// Token: 0x0402217B RID: 139643
+		// Token: 0x0401CAAC RID: 117420
 		private bool HasTraceSuccess;
 
-		// Token: 0x0402217C RID: 139644
+		// Token: 0x0401CAAD RID: 117421
 		public bool TraceFormClick;
 
-		// Token: 0x0402217D RID: 139645
+		// Token: 0x0401CAAE RID: 117422
 		private int CurrentTracePoint;
 
-		// Token: 0x0402217E RID: 139646
+		// Token: 0x0401CAAF RID: 117423
 		private bool DelayCheck;
 
-		// Token: 0x0402217F RID: 139647
+		// Token: 0x0401CAB0 RID: 117424
 		public Dictionary<int, EFishingEntrustState> CurrentEntrusts = new Dictionary<int, EFishingEntrustState>();
 
-		// Token: 0x04022180 RID: 139648
+		// Token: 0x0401CAB1 RID: 117425
 		public HashSet<int> UnDeliverableItemIdSet = new HashSet<int>();
 
-		// Token: 0x04022181 RID: 139649
+		// Token: 0x0401CAB2 RID: 117426
 		[Nullable(2)]
 		private static FishingQuestModel _Instance;
 	}

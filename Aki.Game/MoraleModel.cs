@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -24,31 +23,31 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200222B RID: 8747
+// Token: 0x0200170F RID: 5903
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MoraleModel : ModelBase
 {
-	// Token: 0x060110A7 RID: 69799 RVA: 0x00427424 File Offset: 0x00425624
+	// Token: 0x0600E53D RID: 58685 RVA: 0x00433FB4 File Offset: 0x004321B4
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060110A8 RID: 69800 RVA: 0x00427427 File Offset: 0x00425627
+	// Token: 0x0600E53E RID: 58686 RVA: 0x00433FB7 File Offset: 0x004321B7
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060110A9 RID: 69801 RVA: 0x0042742A File Offset: 0x0042562A
+	// Token: 0x0600E53F RID: 58687 RVA: 0x00433FBA File Offset: 0x004321BA
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x060110AA RID: 69802 RVA: 0x0042742D File Offset: 0x0042562D
+	// Token: 0x0600E540 RID: 58688 RVA: 0x00433FBD File Offset: 0x004321BD
 	public void InitData()
 	{
 		if (this.IsInitData)
@@ -63,7 +62,7 @@ public class MoraleModel : ModelBase
 		this.CheckCacheAreaBuffIdList();
 	}
 
-	// Token: 0x060110AB RID: 69803 RVA: 0x00427460 File Offset: 0x00425660
+	// Token: 0x0600E541 RID: 58689 RVA: 0x00433FF0 File Offset: 0x004321F0
 	private void InitLocalData()
 	{
 		HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MoraleAreaUnlockFlagSet, null);
@@ -74,13 +73,13 @@ public class MoraleModel : ModelBase
 		this.TipsAreaBuffSet = (player3 ?? new HashSet<int>());
 	}
 
-	// Token: 0x060110AC RID: 69804 RVA: 0x004274C1 File Offset: 0x004256C1
+	// Token: 0x0600E542 RID: 58690 RVA: 0x00434051 File Offset: 0x00432251
 	public void SaveLocalData()
 	{
 		LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MoraleAreaUnlockFlagSet, this.UnlockFlagSet);
 	}
 
-	// Token: 0x060110AD RID: 69805 RVA: 0x004274D4 File Offset: 0x004256D4
+	// Token: 0x0600E543 RID: 58691 RVA: 0x00434064 File Offset: 0x00432264
 	private void InitAreaData()
 	{
 		IReadOnlyList<MoraleArea> allAreaConfigList = MoraleConfig.Instance.GetAllAreaConfigList();
@@ -103,7 +102,7 @@ public class MoraleModel : ModelBase
 		this.AreaDataList.Sort((MoraleAreaData a, MoraleAreaData b) => a.Id - b.Id);
 	}
 
-	// Token: 0x060110AE RID: 69806 RVA: 0x004275C0 File Offset: 0x004257C0
+	// Token: 0x0600E544 RID: 58692 RVA: 0x00434150 File Offset: 0x00432350
 	private void InitProgressRewardList()
 	{
 		IReadOnlyList<OccupyScore> allScoreConfigList = MoraleConfig.Instance.GetAllScoreConfigList();
@@ -142,7 +141,7 @@ public class MoraleModel : ModelBase
 		this.CheckProgressScoreEnd(currentProgressScore);
 	}
 
-	// Token: 0x060110AF RID: 69807 RVA: 0x00427720 File Offset: 0x00425920
+	// Token: 0x0600E545 RID: 58693 RVA: 0x004342B0 File Offset: 0x004324B0
 	private void InitBuffData()
 	{
 		IReadOnlyList<MoraleLvPower> allMoraleLvPowerConfigList = MoraleConfig.Instance.GetAllMoraleLvPowerConfigList();
@@ -162,7 +161,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110B0 RID: 69808 RVA: 0x004277E8 File Offset: 0x004259E8
+	// Token: 0x0600E546 RID: 58694 RVA: 0x00434378 File Offset: 0x00432578
 	[NullableContext(2)]
 	public MoraleAreaData GetAreaData(int areaId)
 	{
@@ -174,7 +173,7 @@ public class MoraleModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060110B1 RID: 69809 RVA: 0x00427808 File Offset: 0x00425A08
+	// Token: 0x0600E547 RID: 58695 RVA: 0x00434398 File Offset: 0x00432598
 	public UniTask RequestProgressReward(int id, bool isAll = false)
 	{
 		MoraleModel.<RequestProgressReward>d__29 <RequestProgressReward>d__;
@@ -187,7 +186,7 @@ public class MoraleModel : ModelBase
 		return <RequestProgressReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060110B2 RID: 69810 RVA: 0x0042785C File Offset: 0x00425A5C
+	// Token: 0x0600E548 RID: 58696 RVA: 0x004343EC File Offset: 0x004325EC
 	public void ProtoProgressRewardResponse(OccupyRewardResponse response)
 	{
 		RepeatedField<int> ids = response.Ids;
@@ -206,13 +205,13 @@ public class MoraleModel : ModelBase
 		ActivityMoraleController.Instance.RefreshActivityRedDot();
 	}
 
-	// Token: 0x060110B3 RID: 69811 RVA: 0x004278D1 File Offset: 0x00425AD1
+	// Token: 0x0600E549 RID: 58697 RVA: 0x00434461 File Offset: 0x00432661
 	public void ProtoMoralePosResponse(MoralePosResponse response)
 	{
 		this.PlayerMoraleAreaId = ((response != null) ? response.AreaPos : 0);
 	}
 
-	// Token: 0x060110B4 RID: 69812 RVA: 0x004278E8 File Offset: 0x00425AE8
+	// Token: 0x0600E54A RID: 58698 RVA: 0x00434478 File Offset: 0x00432678
 	public int GetProgressTotalScore()
 	{
 		List<MoraleProgressRewardData> progressRewardList = this.ProgressRewardList;
@@ -223,67 +222,67 @@ public class MoraleModel : ModelBase
 		return progressRewardList[progressRewardList.Count - 1].TargetScore;
 	}
 
-	// Token: 0x060110B5 RID: 69813 RVA: 0x0042791A File Offset: 0x00425B1A
+	// Token: 0x0600E54B RID: 58699 RVA: 0x004344AA File Offset: 0x004326AA
 	public bool IsFinishProgress()
 	{
 		return this.GetCurrentProgressScore() >= this.GetProgressTotalScore();
 	}
 
-	// Token: 0x060110B6 RID: 69814 RVA: 0x0042792D File Offset: 0x00425B2D
+	// Token: 0x0600E54C RID: 58700 RVA: 0x004344BD File Offset: 0x004326BD
 	public int GetCurrentProgressScore()
 	{
 		return this.GetProgressScoreFormFlag() + this.GetProgressScoreFormBox();
 	}
 
-	// Token: 0x060110B7 RID: 69815 RVA: 0x0042793C File Offset: 0x00425B3C
+	// Token: 0x0600E54D RID: 58701 RVA: 0x004344CC File Offset: 0x004326CC
 	public int GetProgressScoreFormFlag()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(50, 0);
 	}
 
-	// Token: 0x060110B8 RID: 69816 RVA: 0x0042794B File Offset: 0x00425B4B
+	// Token: 0x0600E54E RID: 58702 RVA: 0x004344DB File Offset: 0x004326DB
 	public int GetProgressScoreFormBox()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(52, 0);
 	}
 
-	// Token: 0x060110B9 RID: 69817 RVA: 0x0042795A File Offset: 0x00425B5A
+	// Token: 0x0600E54F RID: 58703 RVA: 0x004344EA File Offset: 0x004326EA
 	public bool IsProgressScoreId(int id)
 	{
 		return this.IsProgressScoreFlag(id) || this.IsProgressScoreBox(id);
 	}
 
-	// Token: 0x060110BA RID: 69818 RVA: 0x0042796E File Offset: 0x00425B6E
+	// Token: 0x0600E550 RID: 58704 RVA: 0x004344FE File Offset: 0x004326FE
 	public bool IsProgressScoreFlag(int id)
 	{
 		return id == 50;
 	}
 
-	// Token: 0x060110BB RID: 69819 RVA: 0x00427975 File Offset: 0x00425B75
+	// Token: 0x0600E551 RID: 58705 RVA: 0x00434505 File Offset: 0x00432705
 	public bool IsProgressScoreBox(int id)
 	{
 		return id == 52;
 	}
 
-	// Token: 0x060110BC RID: 69820 RVA: 0x0042797C File Offset: 0x00425B7C
+	// Token: 0x0600E552 RID: 58706 RVA: 0x0043450C File Offset: 0x0043270C
 	public float GetProgressRewardPercent()
 	{
 		return Math.Min(1f, (float)this.GetCurrentProgressScore() / (float)this.GetProgressTotalScore());
 	}
 
-	// Token: 0x060110BD RID: 69821 RVA: 0x00427997 File Offset: 0x00425B97
+	// Token: 0x0600E553 RID: 58707 RVA: 0x00434527 File Offset: 0x00432727
 	public int GetUnbreakableLvExp()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(47, 0);
 	}
 
-	// Token: 0x060110BE RID: 69822 RVA: 0x004279A6 File Offset: 0x00425BA6
+	// Token: 0x0600E554 RID: 58708 RVA: 0x00434536 File Offset: 0x00432736
 	public int GetMoraleLvExp()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(48, 0);
 	}
 
-	// Token: 0x060110BF RID: 69823 RVA: 0x004279B8 File Offset: 0x00425BB8
+	// Token: 0x0600E555 RID: 58709 RVA: 0x00434548 File Offset: 0x00432748
 	public bool IsExistScoreBoxRewardCanGet()
 	{
 		for (int i = 0; i < this.ProgressRewardList.Count; i++)
@@ -296,7 +295,7 @@ public class MoraleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060110C0 RID: 69824 RVA: 0x004279F4 File Offset: 0x00425BF4
+	// Token: 0x0600E556 RID: 58710 RVA: 0x00434584 File Offset: 0x00432784
 	public bool IsAllScoreBoxRewardReceived()
 	{
 		for (int i = 0; i < this.ProgressRewardList.Count; i++)
@@ -309,19 +308,19 @@ public class MoraleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060110C1 RID: 69825 RVA: 0x00427A2D File Offset: 0x00425C2D
+	// Token: 0x0600E557 RID: 58711 RVA: 0x004345BD File Offset: 0x004327BD
 	public bool RedDotScoreBox()
 	{
 		return this.IsExistScoreBoxRewardCanGet();
 	}
 
-	// Token: 0x060110C2 RID: 69826 RVA: 0x00427A35 File Offset: 0x00425C35
+	// Token: 0x0600E558 RID: 58712 RVA: 0x004345C5 File Offset: 0x004327C5
 	public bool RedDotAreaBuff()
 	{
 		return this.ActiveAreaBuffSet.Count <= 0 && this.IsExistNewActiveAreaBuff();
 	}
 
-	// Token: 0x060110C3 RID: 69827 RVA: 0x00427A50 File Offset: 0x00425C50
+	// Token: 0x0600E559 RID: 58713 RVA: 0x004345E0 File Offset: 0x004327E0
 	public bool RedDotFlagBox()
 	{
 		for (int i = 0; i < this.AreaDataList.Count; i++)
@@ -338,7 +337,7 @@ public class MoraleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060110C4 RID: 69828 RVA: 0x00427AA8 File Offset: 0x00425CA8
+	// Token: 0x0600E55A RID: 58714 RVA: 0x00434638 File Offset: 0x00432838
 	public bool IsExistNewActiveAreaBuff()
 	{
 		if (this.IsMoraleGameOver())
@@ -355,7 +354,7 @@ public class MoraleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060110C5 RID: 69829 RVA: 0x00427AEC File Offset: 0x00425CEC
+	// Token: 0x0600E55B RID: 58715 RVA: 0x0043467C File Offset: 0x0043287C
 	public void ClearNewActiveAreaBuff()
 	{
 		List<MoraleAreaData> list = new List<MoraleAreaData>();
@@ -381,7 +380,7 @@ public class MoraleModel : ModelBase
 		LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MoraleActiveAreaBuff, this.ActiveAreaBuffSet);
 	}
 
-	// Token: 0x060110C6 RID: 69830 RVA: 0x00427BA4 File Offset: 0x00425DA4
+	// Token: 0x0600E55C RID: 58716 RVA: 0x00434734 File Offset: 0x00432934
 	public void InitActivityData(MoraleActivityData activityData)
 	{
 		this.InitData();
@@ -428,7 +427,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110C7 RID: 69831 RVA: 0x00427D18 File Offset: 0x00425F18
+	// Token: 0x0600E55D RID: 58717 RVA: 0x004348A8 File Offset: 0x00432AA8
 	public void ClearAllFlagNewUnlockState()
 	{
 		foreach (MoraleAreaFlagData moraleAreaFlagData in this.FlagMap.Values)
@@ -437,7 +436,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110C8 RID: 69832 RVA: 0x00427D70 File Offset: 0x00425F70
+	// Token: 0x0600E55E RID: 58718 RVA: 0x00434900 File Offset: 0x00432B00
 	[NullableContext(2)]
 	public MoraleAreaFlagData GetFlagDataByMarkId(int markId)
 	{
@@ -454,7 +453,7 @@ public class MoraleModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060110C9 RID: 69833 RVA: 0x00427DA4 File Offset: 0x00425FA4
+	// Token: 0x0600E55F RID: 58719 RVA: 0x00434934 File Offset: 0x00432B34
 	public void UpdateProgressScore()
 	{
 		int currentProgressScore = this.GetCurrentProgressScore();
@@ -474,7 +473,7 @@ public class MoraleModel : ModelBase
 		ActivityMoraleController.Instance.RefreshActivityRedDot();
 	}
 
-	// Token: 0x060110CA RID: 69834 RVA: 0x00427E50 File Offset: 0x00426050
+	// Token: 0x0600E560 RID: 58720 RVA: 0x004349E0 File Offset: 0x00432BE0
 	private void CheckProgressScoreEnd(int currentScore)
 	{
 		if (this.ProgressRewardList.Count > 0)
@@ -487,19 +486,19 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110CB RID: 69835 RVA: 0x00427E94 File Offset: 0x00426094
+	// Token: 0x0600E561 RID: 58721 RVA: 0x00434A24 File Offset: 0x00432C24
 	public void UpdateProgressScoreByFlag(int add, int? targetNum = null)
 	{
 		this.UpdateProgressScoreByKey("Morale_title_27", add, targetNum);
 	}
 
-	// Token: 0x060110CC RID: 69836 RVA: 0x00427EA3 File Offset: 0x004260A3
+	// Token: 0x0600E562 RID: 58722 RVA: 0x00434A33 File Offset: 0x00432C33
 	public void UpdateProgressScoreByBox(int add, int? targetNum = null)
 	{
 		this.UpdateProgressScoreByKey("Morale_title_28", add, targetNum);
 	}
 
-	// Token: 0x060110CD RID: 69837 RVA: 0x00427EB4 File Offset: 0x004260B4
+	// Token: 0x0600E563 RID: 58723 RVA: 0x00434A44 File Offset: 0x00432C44
 	private void UpdateProgressScoreByKey(string key, int add, int? targetNum = null)
 	{
 		if (this.ProgressRewardList.Count <= 0)
@@ -528,7 +527,7 @@ public class MoraleModel : ModelBase
 		}, null);
 	}
 
-	// Token: 0x060110CE RID: 69838 RVA: 0x00427F7B File Offset: 0x0042617B
+	// Token: 0x0600E564 RID: 58724 RVA: 0x00434B0B File Offset: 0x00432D0B
 	public void CheckProgressScoreChange(int id, int add, int? targetNum = null)
 	{
 		this.UpdateProgressScore();
@@ -543,7 +542,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110CF RID: 69839 RVA: 0x00427FA8 File Offset: 0x004261A8
+	// Token: 0x0600E565 RID: 58725 RVA: 0x00434B38 File Offset: 0x00432D38
 	public float GetStageProgressPercent(MoraleProgressRewardData data)
 	{
 		int currentProgressScore = this.GetCurrentProgressScore();
@@ -555,7 +554,7 @@ public class MoraleModel : ModelBase
 		return (float)(currentProgressScore - lastTargetScore) / (float)(data.TargetScore - lastTargetScore);
 	}
 
-	// Token: 0x060110D0 RID: 69840 RVA: 0x00427FDC File Offset: 0x004261DC
+	// Token: 0x0600E566 RID: 58726 RVA: 0x00434B6C File Offset: 0x00432D6C
 	public bool IsOccupyAllArea()
 	{
 		if (this.AreaDataList.Count <= 0)
@@ -572,13 +571,13 @@ public class MoraleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060110D1 RID: 69841 RVA: 0x00428025 File Offset: 0x00426225
+	// Token: 0x0600E567 RID: 58727 RVA: 0x00434BB5 File Offset: 0x00432DB5
 	public bool IsRichTargetMoraleLv(int targetLv)
 	{
 		return this.GetSumMoraleLv() >= targetLv;
 	}
 
-	// Token: 0x060110D2 RID: 69842 RVA: 0x00428034 File Offset: 0x00426234
+	// Token: 0x0600E568 RID: 58728 RVA: 0x00434BC4 File Offset: 0x00432DC4
 	public unsafe List<IMoraleBuffAddItemData> GetAllRoleAttrAddList()
 	{
 		MoraleBattleModel instance = MoraleBattleModel.Instance;
@@ -632,7 +631,7 @@ public class MoraleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060110D3 RID: 69843 RVA: 0x00428254 File Offset: 0x00426454
+	// Token: 0x0600E569 RID: 58729 RVA: 0x00434DE4 File Offset: 0x00432FE4
 	public MoraleBuffData GetStageBuffDataByLv(int lv)
 	{
 		for (int i = 0; i < this.BuffList.Count; i++)
@@ -646,13 +645,13 @@ public class MoraleModel : ModelBase
 		return this.BuffList[this.BuffList.Count - 1];
 	}
 
-	// Token: 0x060110D4 RID: 69844 RVA: 0x004282B0 File Offset: 0x004264B0
+	// Token: 0x0600E56A RID: 58730 RVA: 0x00434E40 File Offset: 0x00433040
 	public MoraleBuffData GetStageBuffData()
 	{
 		return this.GetStageBuffDataByLv(this.GetSumMoraleLv());
 	}
 
-	// Token: 0x060110D5 RID: 69845 RVA: 0x004282C0 File Offset: 0x004264C0
+	// Token: 0x0600E56B RID: 58731 RVA: 0x00434E50 File Offset: 0x00433050
 	public int GetSumMoraleLv()
 	{
 		MoraleBattleModel instance = MoraleBattleModel.Instance;
@@ -662,7 +661,7 @@ public class MoraleModel : ModelBase
 		return num + num2;
 	}
 
-	// Token: 0x060110D6 RID: 69846 RVA: 0x004282F2 File Offset: 0x004264F2
+	// Token: 0x0600E56C RID: 58732 RVA: 0x00434E82 File Offset: 0x00433082
 	public IBattleUiHoverTipsC GetInTheBattleBuffInfo()
 	{
 		return new BattleUiHoverTipsC
@@ -678,7 +677,7 @@ public class MoraleModel : ModelBase
 		};
 	}
 
-	// Token: 0x060110D7 RID: 69847 RVA: 0x00428325 File Offset: 0x00426525
+	// Token: 0x0600E56D RID: 58733 RVA: 0x00434EB5 File Offset: 0x004330B5
 	public bool GetBattleIsShowBuff()
 	{
 		WorldEntity playerEntity = FormationDataController.Instance.GetPlayerEntity(CreatureModel.Instance.GetPlayerId());
@@ -686,7 +685,7 @@ public class MoraleModel : ModelBase
 		return playerBuffComponent != null && playerBuffComponent.HasBuff((long)this.GamePlayFinishTeamBuffId, false);
 	}
 
-	// Token: 0x060110D8 RID: 69848 RVA: 0x0042835C File Offset: 0x0042655C
+	// Token: 0x0600E56E RID: 58734 RVA: 0x00434EEC File Offset: 0x004330EC
 	public void CheckSumLevelChanged(int oldLevel, int newLevel)
 	{
 		List<MoraleBuffActiveTipsInfo> buffActiveTipsInfoListByLv = this.GetBuffActiveTipsInfoListByLv(oldLevel, newLevel);
@@ -706,7 +705,7 @@ public class MoraleModel : ModelBase
 		UiManager.Instance.OpenView(moraleBuffActiveTips, null, null);
 	}
 
-	// Token: 0x060110D9 RID: 69849 RVA: 0x004283C0 File Offset: 0x004265C0
+	// Token: 0x0600E56F RID: 58735 RVA: 0x00434F50 File Offset: 0x00433150
 	public List<MoraleBuffActiveTipsInfo> GetBuffActiveTipsInfoListByLv(int oldLevel, int newLevel)
 	{
 		if (oldLevel >= newLevel)
@@ -733,7 +732,7 @@ public class MoraleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060110DA RID: 69850 RVA: 0x00428438 File Offset: 0x00426638
+	// Token: 0x0600E570 RID: 58736 RVA: 0x00434FC8 File Offset: 0x004331C8
 	public List<TrainingData> GetMoraleBuffDataList()
 	{
 		TrainingData item = new TrainingData
@@ -759,7 +758,7 @@ public class MoraleModel : ModelBase
 		};
 	}
 
-	// Token: 0x060110DB RID: 69851 RVA: 0x004284B4 File Offset: 0x004266B4
+	// Token: 0x0600E571 RID: 58737 RVA: 0x00435044 File Offset: 0x00433244
 	public bool IsExistAreaFlagRewardCanGet()
 	{
 		for (int i = 0; i < this.AreaDataList.Count; i++)
@@ -772,7 +771,7 @@ public class MoraleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060110DC RID: 69852 RVA: 0x004284F0 File Offset: 0x004266F0
+	// Token: 0x0600E572 RID: 58738 RVA: 0x00435080 File Offset: 0x00433280
 	public bool IsAllAreaFlagRewardReceived()
 	{
 		for (int i = 0; i < this.AreaDataList.Count; i++)
@@ -785,7 +784,7 @@ public class MoraleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060110DD RID: 69853 RVA: 0x0042852C File Offset: 0x0042672C
+	// Token: 0x0600E573 RID: 58739 RVA: 0x004350BC File Offset: 0x004332BC
 	public bool IsAllAreaFlagActive()
 	{
 		for (int i = 0; i < this.AreaDataList.Count; i++)
@@ -798,21 +797,21 @@ public class MoraleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060110DE RID: 69854 RVA: 0x00428568 File Offset: 0x00426768
+	// Token: 0x0600E574 RID: 58740 RVA: 0x004350F8 File Offset: 0x004332F8
 	public bool IsProgressScoreReachTarget()
 	{
 		int scoreProgressRichValue = MoraleConfig.Instance.GetScoreProgressRichValue();
 		return this.GetCurrentProgressScore() >= scoreProgressRichValue && !this.IsMoraleGameOver();
 	}
 
-	// Token: 0x060110DF RID: 69855 RVA: 0x00428594 File Offset: 0x00426794
+	// Token: 0x0600E575 RID: 58741 RVA: 0x00435124 File Offset: 0x00433324
 	public bool IsMoraleGameOver()
 	{
 		int moraleGameOverQuestId = MoraleConfig.Instance.GetMoraleGameOverQuestId();
 		return QuestNewModel.Instance.GetQuestState(moraleGameOverQuestId) >= EQuestState.Finish;
 	}
 
-	// Token: 0x060110E0 RID: 69856 RVA: 0x004285C0 File Offset: 0x004267C0
+	// Token: 0x0600E576 RID: 58742 RVA: 0x00435150 File Offset: 0x00433350
 	public List<MoraleAreaPlotData> GetAllUnlockPlotList()
 	{
 		List<MoraleAreaPlotData> list = new List<MoraleAreaPlotData>();
@@ -827,7 +826,7 @@ public class MoraleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060110E1 RID: 69857 RVA: 0x00428620 File Offset: 0x00426820
+	// Token: 0x0600E577 RID: 58743 RVA: 0x004351B0 File Offset: 0x004333B0
 	public List<MoraleAreaPlotData> GetAllNewUnlockPlotList()
 	{
 		List<MoraleAreaPlotData> list = new List<MoraleAreaPlotData>();
@@ -838,7 +837,7 @@ public class MoraleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060110E2 RID: 69858 RVA: 0x00428664 File Offset: 0x00426864
+	// Token: 0x0600E578 RID: 58744 RVA: 0x004351F4 File Offset: 0x004333F4
 	public void TryAddAreaBuffActiveState(int buffId)
 	{
 		if (!this.IsInitData)
@@ -872,7 +871,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110E3 RID: 69859 RVA: 0x00428724 File Offset: 0x00426924
+	// Token: 0x0600E579 RID: 58745 RVA: 0x004352B4 File Offset: 0x004334B4
 	public void CheckCacheAreaBuffIdList()
 	{
 		if (this.CacheAreaBuffIdList.Count <= 0)
@@ -886,7 +885,7 @@ public class MoraleModel : ModelBase
 		this.CacheAreaBuffIdList.Clear();
 	}
 
-	// Token: 0x060110E4 RID: 69860 RVA: 0x00428774 File Offset: 0x00426974
+	// Token: 0x0600E57A RID: 58746 RVA: 0x00435304 File Offset: 0x00433504
 	public void CheckAreaBuffRedDotState()
 	{
 		bool flag = false;
@@ -904,7 +903,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110E5 RID: 69861 RVA: 0x004287BC File Offset: 0x004269BC
+	// Token: 0x0600E57B RID: 58747 RVA: 0x0043534C File Offset: 0x0043354C
 	public void UpdateAreaBuffActiveByAreaId(int areaId)
 	{
 		if (this.TipsAreaBuffSet.Contains(areaId))
@@ -922,7 +921,7 @@ public class MoraleModel : ModelBase
 		LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MoraleTipsAreaBuff, this.TipsAreaBuffSet);
 	}
 
-	// Token: 0x060110E6 RID: 69862 RVA: 0x0042881F File Offset: 0x00426A1F
+	// Token: 0x0600E57C RID: 58748 RVA: 0x004353AF File Offset: 0x004335AF
 	public void OpenViewAreaBuffActiveTips(string titleKey, string descKey)
 	{
 		UiManager.Instance.OpenView(EUiViewName.MoraleAreaBuffActiveTips, new MoraleAreaBuffActiveTipsParams
@@ -933,7 +932,7 @@ public class MoraleModel : ModelBase
 		}, null);
 	}
 
-	// Token: 0x060110E7 RID: 69863 RVA: 0x0042884C File Offset: 0x00426A4C
+	// Token: 0x0600E57D RID: 58749 RVA: 0x004353DC File Offset: 0x004335DC
 	public void TrackAreaExploreBox(int areaId)
 	{
 		MoraleAreaData moraleAreaData;
@@ -944,10 +943,12 @@ public class MoraleModel : ModelBase
 		MoraleController.Instance.RequestGetExplorerBoxTrackList(areaId).Forget();
 	}
 
-	// Token: 0x060110E8 RID: 69864 RVA: 0x00428884 File Offset: 0x00426A84
+	// Token: 0x0600E57E RID: 58750 RVA: 0x00435414 File Offset: 0x00433614
 	public void ProtoMoraleTreasureBoxTraceResponse(MoraleTreasureBoxTraceResponse response)
 	{
-		this.ExploreBoxEntityIds = response.EntityIds.ToArray<int>();
+		int[] array = new int[response.EntityIds.Count];
+		response.EntityIds.CopyTo(array, 0);
+		this.ExploreBoxEntityIds = array;
 		if (response.EntityIds.Count <= 0)
 		{
 			return;
@@ -956,7 +957,7 @@ public class MoraleModel : ModelBase
 		this.OpenMapTrackExploreBox(null);
 	}
 
-	// Token: 0x060110E9 RID: 69865 RVA: 0x004288C8 File Offset: 0x00426AC8
+	// Token: 0x0600E57F RID: 58751 RVA: 0x0043546C File Offset: 0x0043366C
 	public void OpenMapTrackExploreBox(int? entityId = null)
 	{
 		int? num = entityId;
@@ -982,7 +983,7 @@ public class MoraleModel : ModelBase
 		}, null);
 	}
 
-	// Token: 0x060110EA RID: 69866 RVA: 0x00428990 File Offset: 0x00426B90
+	// Token: 0x0600E580 RID: 58752 RVA: 0x00435534 File Offset: 0x00433734
 	public void CheckExplorerBoxOpen(int entityId)
 	{
 		CreatureModel instance = CreatureModel.Instance;
@@ -1039,7 +1040,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110EB RID: 69867 RVA: 0x00428AF0 File Offset: 0x00426CF0
+	// Token: 0x0600E581 RID: 58753 RVA: 0x00435694 File Offset: 0x00433894
 	public void CalcExploreBoxDistance()
 	{
 		if (this.ExploreBoxEntityIds == null || this.ExploreBoxEntityIds.Length < 2)
@@ -1054,7 +1055,7 @@ public class MoraleModel : ModelBase
 		int num3 = 0;
 		for (int i = 0; i < this.ExploreBoxEntityIds.Length; i++)
 		{
-			global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(this.ExploreBoxEntityIds[i], mapConfigId);
+			global::Vector entityPosition = WorldMapModel.Instance.GetEntityPosition(this.ExploreBoxEntityIds[i], mapConfigId, false);
 			entityPosition.DivisionEqual((double)(num * 100));
 			double num4 = global::Vector.DistSquared(playerPosition, entityPosition);
 			if (num4 < num2)
@@ -1073,7 +1074,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110EC RID: 69868 RVA: 0x00428BC8 File Offset: 0x00426DC8
+	// Token: 0x0600E582 RID: 58754 RVA: 0x0043576C File Offset: 0x0043396C
 	public void TestSetOccupyAllArea()
 	{
 		for (int i = 0; i < this.AreaDataList.Count; i++)
@@ -1087,7 +1088,7 @@ public class MoraleModel : ModelBase
 		this.AreaDataList[0].GetUiFlagList()[0].SetNewUnlockState(true);
 	}
 
-	// Token: 0x060110ED RID: 69869 RVA: 0x00428C38 File Offset: 0x00426E38
+	// Token: 0x0600E583 RID: 58755 RVA: 0x004357DC File Offset: 0x004339DC
 	public int GetAllHighMonsterProgress()
 	{
 		int num = 0;
@@ -1098,7 +1099,7 @@ public class MoraleModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060110EE RID: 69870 RVA: 0x00428C74 File Offset: 0x00426E74
+	// Token: 0x0600E584 RID: 58756 RVA: 0x00435818 File Offset: 0x00433A18
 	public int GetAllHighMonsterProgressExcludeNew()
 	{
 		int num = 0;
@@ -1109,7 +1110,7 @@ public class MoraleModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060110EF RID: 69871 RVA: 0x00428CB0 File Offset: 0x00426EB0
+	// Token: 0x0600E585 RID: 58757 RVA: 0x00435854 File Offset: 0x00433A54
 	public int GetAllHighMonsterTotal()
 	{
 		int num = 0;
@@ -1120,7 +1121,7 @@ public class MoraleModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060110F0 RID: 69872 RVA: 0x00428CEC File Offset: 0x00426EEC
+	// Token: 0x0600E586 RID: 58758 RVA: 0x00435890 File Offset: 0x00433A90
 	[NullableContext(2)]
 	public MoraleAreaData GetRecommendHighFlagUnActiveArea()
 	{
@@ -1134,14 +1135,14 @@ public class MoraleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060110F1 RID: 69873 RVA: 0x00428D30 File Offset: 0x00426F30
+	// Token: 0x0600E587 RID: 58759 RVA: 0x004358D4 File Offset: 0x00433AD4
 	[Conditional("DEBUG")]
 	public void LogInfo()
 	{
 	}
 
-	// Token: 0x170015AA RID: 5546
-	// (get) Token: 0x060110F2 RID: 69874 RVA: 0x00428D32 File Offset: 0x00426F32
+	// Token: 0x170015E1 RID: 5601
+	// (get) Token: 0x0600E588 RID: 58760 RVA: 0x004358D6 File Offset: 0x00433AD6
 	public static MoraleModel Instance
 	{
 		get
@@ -1150,7 +1151,7 @@ public class MoraleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060110F3 RID: 69875 RVA: 0x00428D39 File Offset: 0x00426F39
+	// Token: 0x0600E589 RID: 58761 RVA: 0x004358DD File Offset: 0x00433ADD
 	public static MoraleModel GetOrCreateInstance()
 	{
 		if (MoraleModel._Instance == null)
@@ -1160,7 +1161,7 @@ public class MoraleModel : ModelBase
 		return MoraleModel._Instance;
 	}
 
-	// Token: 0x060110F4 RID: 69876 RVA: 0x00428D4D File Offset: 0x00426F4D
+	// Token: 0x0600E58A RID: 58762 RVA: 0x004358F1 File Offset: 0x00433AF1
 	public static bool CreateInstance()
 	{
 		if (MoraleModel._Instance != null)
@@ -1171,84 +1172,84 @@ public class MoraleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060110F5 RID: 69877 RVA: 0x00428D63 File Offset: 0x00426F63
+	// Token: 0x0600E58B RID: 58763 RVA: 0x00435907 File Offset: 0x00433B07
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060110F6 RID: 69878 RVA: 0x00428D65 File Offset: 0x00426F65
+	// Token: 0x0600E58C RID: 58764 RVA: 0x00435909 File Offset: 0x00433B09
 	public static void ResetStaticDefaultValue()
 	{
 		MoraleModel._Instance = null;
 	}
 
-	// Token: 0x060110F7 RID: 69879 RVA: 0x00428D6D File Offset: 0x00426F6D
+	// Token: 0x0600E58D RID: 58765 RVA: 0x00435911 File Offset: 0x00433B11
 	static MoraleModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoraleModel.CreateStaticDefaultValue), new Action(MoraleModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040081FD RID: 33277
+	// Token: 0x0400833B RID: 33595
 	public readonly Dictionary<int, MoraleAreaData> AreaDataMap = new Dictionary<int, MoraleAreaData>();
 
-	// Token: 0x040081FE RID: 33278
+	// Token: 0x0400833C RID: 33596
 	public readonly List<MoraleAreaData> AreaDataList = new List<MoraleAreaData>();
 
-	// Token: 0x040081FF RID: 33279
+	// Token: 0x0400833D RID: 33597
 	public readonly List<MoraleProgressRewardData> ProgressRewardList = new List<MoraleProgressRewardData>();
 
-	// Token: 0x04008200 RID: 33280
+	// Token: 0x0400833E RID: 33598
 	public readonly Dictionary<int, MoraleProgressRewardData> ProgressRewardMap = new Dictionary<int, MoraleProgressRewardData>();
 
-	// Token: 0x04008201 RID: 33281
+	// Token: 0x0400833F RID: 33599
 	public readonly Dictionary<int, MoraleAreaFlagData> FlagMap = new Dictionary<int, MoraleAreaFlagData>();
 
-	// Token: 0x04008202 RID: 33282
+	// Token: 0x04008340 RID: 33600
 	public readonly Dictionary<int, int> MarkIdToFlagId = new Dictionary<int, int>();
 
-	// Token: 0x04008203 RID: 33283
+	// Token: 0x04008341 RID: 33601
 	public readonly List<MoraleBuffData> BuffList = new List<MoraleBuffData>();
 
-	// Token: 0x04008204 RID: 33284
+	// Token: 0x04008342 RID: 33602
 	public readonly Dictionary<int, MoraleBuffData> BuffMap = new Dictionary<int, MoraleBuffData>();
 
-	// Token: 0x04008205 RID: 33285
+	// Token: 0x04008343 RID: 33603
 	public readonly List<MoraleBuffActiveTipsInfo> BuffActiveTipsList = new List<MoraleBuffActiveTipsInfo>();
 
-	// Token: 0x04008206 RID: 33286
+	// Token: 0x04008344 RID: 33604
 	public bool IsInitData;
 
-	// Token: 0x04008207 RID: 33287
+	// Token: 0x04008345 RID: 33605
 	public HashSet<int> UnlockFlagSet = new HashSet<int>();
 
-	// Token: 0x04008208 RID: 33288
+	// Token: 0x04008346 RID: 33606
 	public int PlayerMoraleAreaId;
 
-	// Token: 0x04008209 RID: 33289
+	// Token: 0x04008347 RID: 33607
 	public HashSet<int> ActiveAreaBuffSet = new HashSet<int>();
 
-	// Token: 0x0400820A RID: 33290
+	// Token: 0x04008348 RID: 33608
 	public HashSet<int> TipsAreaBuffSet = new HashSet<int>();
 
-	// Token: 0x0400820B RID: 33291
+	// Token: 0x04008349 RID: 33609
 	public readonly int GamePlayFinishTeamBuffId = 632400160;
 
-	// Token: 0x0400820C RID: 33292
+	// Token: 0x0400834A RID: 33610
 	[Nullable(2)]
 	public BP_MoraleEffectConfig_C UiEnterConfig;
 
-	// Token: 0x0400820D RID: 33293
+	// Token: 0x0400834B RID: 33611
 	[Nullable(2)]
 	public BP_MoraleEffectConfig_C UiLoopConfig;
 
-	// Token: 0x0400820E RID: 33294
+	// Token: 0x0400834C RID: 33612
 	[Nullable(2)]
 	public int[] ExploreBoxEntityIds;
 
-	// Token: 0x0400820F RID: 33295
+	// Token: 0x0400834D RID: 33613
 	public List<int> CacheAreaBuffIdList = new List<int>();
 
-	// Token: 0x04008210 RID: 33296
+	// Token: 0x0400834E RID: 33614
 	[Nullable(2)]
 	private static MoraleModel _Instance;
 }

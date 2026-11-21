@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002169 RID: 8553
+// Token: 0x02001641 RID: 5697
 [NullableContext(1)]
 [Nullable(0)]
 public class SheriffReasoningCompleteEvent : PlayerCommonLogData
 {
-	// Token: 0x1700150B RID: 5387
-	// (get) Token: 0x06010A6F RID: 68207 RVA: 0x0040C3B4 File Offset: 0x0040A5B4
-	// (set) Token: 0x06010A70 RID: 68208 RVA: 0x0040C3BC File Offset: 0x0040A5BC
+	// Token: 0x17001539 RID: 5433
+	// (get) Token: 0x0600DEE2 RID: 57058 RVA: 0x00418AFC File Offset: 0x00416CFC
+	// (set) Token: 0x0600DEE3 RID: 57059 RVA: 0x00418B04 File Offset: 0x00416D04
 	public override string event_id { get; set; } = "1920";
 
-	// Token: 0x04007E53 RID: 32339
+	// Token: 0x04007F63 RID: 32611
 	public int i_quest_id;
 
-	// Token: 0x04007E54 RID: 32340
+	// Token: 0x04007F64 RID: 32612
 	public int i_question_id;
 
-	// Token: 0x04007E55 RID: 32341
+	// Token: 0x04007F65 RID: 32613
 	public int i_result_id;
 
-	// Token: 0x04007E56 RID: 32342
+	// Token: 0x04007F66 RID: 32614
 	[Nullable(2)]
 	public List<int> o_clue_id;
 }

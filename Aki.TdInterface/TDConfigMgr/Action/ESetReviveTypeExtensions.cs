@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200240B RID: 9227
+	// Token: 0x020026AA RID: 9898
 	public static class ESetReviveTypeExtensions
 	{
-		// Token: 0x0600C8B0 RID: 51376 RVA: 0x001D5D98 File Offset: 0x001D3F98
+		// Token: 0x0600D557 RID: 54615 RVA: 0x001EF994 File Offset: 0x001EDB94
 		public static string ToEnumString(this ESetReviveType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8B1 RID: 51377 RVA: 0x001D5DD0 File Offset: 0x001D3FD0
+		// Token: 0x0600D558 RID: 54616 RVA: 0x001EF9CC File Offset: 0x001EDBCC
 		public static ESetReviveType FromString(string name)
 		{
 			ESetReviveType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8B2 RID: 51378 RVA: 0x001D5DF9 File Offset: 0x001D3FF9
+		// Token: 0x0600D559 RID: 54617 RVA: 0x001EF9F5 File Offset: 0x001EDBF5
 		public static bool TryFromString(string name, out ESetReviveType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C8B3 RID: 51379 RVA: 0x001D5E32 File Offset: 0x001D4032
+		// Token: 0x0600D55A RID: 54618 RVA: 0x001EFA2E File Offset: 0x001EDC2E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8B4 RID: 51380 RVA: 0x001D5E4A File Offset: 0x001D404A
+		// Token: 0x0600D55B RID: 54619 RVA: 0x001EFA46 File Offset: 0x001EDC46
 		public static ESetReviveType[] GetValues()
 		{
 			return new ESetReviveType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8B5 RID: 51381 RVA: 0x001D5E56 File Offset: 0x001D4056
+		// Token: 0x0600D55C RID: 54620 RVA: 0x001EFA52 File Offset: 0x001EDC52
 		public static string[] GetNames()
 		{
 			return new string[]

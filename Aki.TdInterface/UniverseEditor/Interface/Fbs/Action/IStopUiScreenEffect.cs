@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071F3 RID: 29171
+	// Token: 0x020079C8 RID: 31176
 	public struct IStopUiScreenEffect : IFlatbufferObject
 	{
-		// Token: 0x1700D89F RID: 55455
-		// (get) Token: 0x06033BE0 RID: 211936 RVA: 0x006F725C File Offset: 0x006F545C
+		// Token: 0x1700E498 RID: 58520
+		// (get) Token: 0x06036EE2 RID: 224994 RVA: 0x007585BC File Offset: 0x007567BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033BE1 RID: 211937 RVA: 0x006F7269 File Offset: 0x006F5469
+		// Token: 0x06036EE3 RID: 224995 RVA: 0x007585C9 File Offset: 0x007567C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033BE2 RID: 211938 RVA: 0x006F7270 File Offset: 0x006F5470
+		// Token: 0x06036EE4 RID: 224996 RVA: 0x007585D0 File Offset: 0x007567D0
 		public static IStopUiScreenEffect GetRootAsIStopUiScreenEffect(ByteBuffer _bb)
 		{
 			return IStopUiScreenEffect.GetRootAsIStopUiScreenEffect(_bb, default(IStopUiScreenEffect));
 		}
 
-		// Token: 0x06033BE3 RID: 211939 RVA: 0x006F728C File Offset: 0x006F548C
+		// Token: 0x06036EE5 RID: 224997 RVA: 0x007585EC File Offset: 0x007567EC
 		public static IStopUiScreenEffect GetRootAsIStopUiScreenEffect(ByteBuffer _bb, IStopUiScreenEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033BE4 RID: 211940 RVA: 0x006F72A9 File Offset: 0x006F54A9
+		// Token: 0x06036EE6 RID: 224998 RVA: 0x00758609 File Offset: 0x00756809
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033BE5 RID: 211941 RVA: 0x006F72B8 File Offset: 0x006F54B8
+		// Token: 0x06036EE7 RID: 224999 RVA: 0x00758618 File Offset: 0x00756818
 		public IStopUiScreenEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D8A0 RID: 55456
-		// (get) Token: 0x06033BE6 RID: 211942 RVA: 0x006F72C8 File Offset: 0x006F54C8
+		// Token: 0x1700E499 RID: 58521
+		// (get) Token: 0x06036EE8 RID: 225000 RVA: 0x00758628 File Offset: 0x00756828
 		public string EffectDaPath
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033BE7 RID: 211943 RVA: 0x006F72FF File Offset: 0x006F54FF
+		// Token: 0x06036EE9 RID: 225001 RVA: 0x0075865F File Offset: 0x0075685F
 		public Span<byte> GetEffectDaPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06033BE8 RID: 211944 RVA: 0x006F730E File Offset: 0x006F550E
+		// Token: 0x06036EEA RID: 225002 RVA: 0x0075866E File Offset: 0x0075686E
 		public byte[] GetEffectDaPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06033BE9 RID: 211945 RVA: 0x006F731C File Offset: 0x006F551C
+		// Token: 0x06036EEB RID: 225003 RVA: 0x0075867C File Offset: 0x0075687C
 		public static Offset<IStopUiScreenEffect> CreateIStopUiScreenEffect(FlatBufferBuilder builder, StringOffset EffectDaPathOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStopUiScreenEffect.EndIStopUiScreenEffect(builder);
 		}
 
-		// Token: 0x06033BEA RID: 211946 RVA: 0x006F7332 File Offset: 0x006F5532
+		// Token: 0x06036EEC RID: 225004 RVA: 0x00758692 File Offset: 0x00756892
 		public static void StartIStopUiScreenEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033BEB RID: 211947 RVA: 0x006F733B File Offset: 0x006F553B
+		// Token: 0x06036EED RID: 225005 RVA: 0x0075869B File Offset: 0x0075689B
 		public static void AddEffectDaPath(FlatBufferBuilder builder, StringOffset effectDaPathOffset)
 		{
 			builder.AddOffset(0, effectDaPathOffset.Value, 0);
 		}
 
-		// Token: 0x06033BEC RID: 211948 RVA: 0x006F734B File Offset: 0x006F554B
+		// Token: 0x06036EEE RID: 225006 RVA: 0x007586AB File Offset: 0x007568AB
 		public static Offset<IStopUiScreenEffect> EndIStopUiScreenEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IStopUiScreenEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06033BED RID: 211949 RVA: 0x006F7358 File Offset: 0x006F5558
+		// Token: 0x06036EEF RID: 225007 RVA: 0x007586B8 File Offset: 0x007568B8
 		public IStopUiScreenEffectT UnPack()
 		{
 			IStopUiScreenEffectT stopUiScreenEffectT = new IStopUiScreenEffectT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return stopUiScreenEffectT;
 		}
 
-		// Token: 0x06033BEE RID: 211950 RVA: 0x006F7373 File Offset: 0x006F5573
+		// Token: 0x06036EF0 RID: 225008 RVA: 0x007586D3 File Offset: 0x007568D3
 		public void UnPackTo(IStopUiScreenEffectT _o)
 		{
 			_o.EffectDaPath = this.EffectDaPath;
 		}
 
-		// Token: 0x06033BEF RID: 211951 RVA: 0x006F7384 File Offset: 0x006F5584
+		// Token: 0x06036EF1 RID: 225009 RVA: 0x007586E4 File Offset: 0x007568E4
 		public static Offset<IStopUiScreenEffect> Pack(FlatBufferBuilder builder, IStopUiScreenEffectT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStopUiScreenEffect.CreateIStopUiScreenEffect(builder, effectDaPathOffset);
 		}
 
-		// Token: 0x04011CD7 RID: 72919
+		// Token: 0x04012CD9 RID: 77017
 		private Table __p;
 	}
 }

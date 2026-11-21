@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200092A RID: 2346
+	// Token: 0x02000975 RID: 2421
 	public class ConfigSignalDecodeTabColorById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600370F RID: 14095 RVA: 0x00190A85 File Offset: 0x0018EC85
+		// Token: 0x060038D1 RID: 14545 RVA: 0x0019DCA5 File Offset: 0x0019BEA5
 		static ConfigSignalDecodeTabColorById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSignalDecodeTabColorById.CreateStaticDefaultValue), new Action(ConfigSignalDecodeTabColorById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003710 RID: 14096 RVA: 0x00190AA4 File Offset: 0x0018ECA4
+		// Token: 0x060038D2 RID: 14546 RVA: 0x0019DCC4 File Offset: 0x0019BEC4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSignalDecodeTabColorById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003711 RID: 14097 RVA: 0x00190B23 File Offset: 0x0018ED23
+		// Token: 0x060038D3 RID: 14547 RVA: 0x0019DD43 File Offset: 0x0019BF43
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSignalDecodeTabColorById.LogPair = null;
 			ConfigSignalDecodeTabColorById.HandleId = 0;
 		}
 
-		// Token: 0x06003712 RID: 14098 RVA: 0x00190B31 File Offset: 0x0018ED31
+		// Token: 0x060038D4 RID: 14548 RVA: 0x0019DD51 File Offset: 0x0019BF51
 		public static void Init()
 		{
 			ConfigSignalDecodeTabColorById.HandleId = ConfigCommon.InitDataStatement(ConfigSignalDecodeTabColorById.HandleId, "db_signaldecodetabcolor.db", "select BinData from `SignalDecodeTabColor` where Id=?");
 		}
 
-		// Token: 0x06003713 RID: 14099 RVA: 0x00190B4C File Offset: 0x0018ED4C
+		// Token: 0x060038D5 RID: 14549 RVA: 0x0019DD6C File Offset: 0x0019BF6C
 		public static SignalDecodeTabColor? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSignalDecodeTabColorById.HandleId, ConfigSignalDecodeTabColorById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SignalDecodeTabColor?(rootAsSignalDecodeTabColor);
 		}
 
-		// Token: 0x0400400C RID: 16396
+		// Token: 0x04004219 RID: 16921
 		private const string DB = "db_signaldecodetabcolor.db";
 
-		// Token: 0x0400400D RID: 16397
+		// Token: 0x0400421A RID: 16922
 		private const string FILE = "x.信号破译页签颜色.csv";
 
-		// Token: 0x0400400E RID: 16398
+		// Token: 0x0400421B RID: 16923
 		private const string TABLE = "SignalDecodeTabColor";
 
-		// Token: 0x0400400F RID: 16399
+		// Token: 0x0400421C RID: 16924
 		private const string COMMAND = "select BinData from `SignalDecodeTabColor` where Id=?";
 
-		// Token: 0x04004010 RID: 16400
+		// Token: 0x0400421D RID: 16925
 		private const string KEY_PREFIX = "SignalDecodeTabColorById";
 
-		// Token: 0x04004011 RID: 16401
+		// Token: 0x0400421E RID: 16926
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004012 RID: 16402
+		// Token: 0x0400421F RID: 16927
 		private static int HandleId;
 	}
 }

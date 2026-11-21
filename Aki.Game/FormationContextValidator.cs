@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BBF RID: 7103
+// Token: 0x0200107E RID: 4222
 public class FormationContextValidator : IFormationValidator
 {
-	// Token: 0x0600D3B6 RID: 54198 RVA: 0x0030AE3B File Offset: 0x0030903B
+	// Token: 0x0600A7C8 RID: 42952 RVA: 0x00315F4B File Offset: 0x0031414B
 	public bool CanJoinTeam(int roleId, int formationId)
 	{
 		return !FormationModel.Instance.IsInEditingFormation(formationId, roleId);
 	}
 
-	// Token: 0x0600D3B7 RID: 54199 RVA: 0x0030AE4C File Offset: 0x0030904C
+	// Token: 0x0600A7C9 RID: 42953 RVA: 0x00315F5C File Offset: 0x0031415C
 	public bool IsNeedRevive(int roleId, int formationId)
 	{
 		if (!GameModeModel.Instance.IsMulti)
@@ -37,16 +36,21 @@ public class FormationContextValidator : IFormationValidator
 		return !flag3.GetValueOrDefault() && !flag && instance.IsRoleDead(roleId);
 	}
 
-	// Token: 0x0600D3B8 RID: 54200 RVA: 0x0030AEC4 File Offset: 0x003090C4
+	// Token: 0x0600A7CA RID: 42954 RVA: 0x00315FD4 File Offset: 0x003141D4
 	[NullableContext(1)]
 	public bool CanSelectRole(int roleId, IReadOnlyList<int> selectedRoleIds)
 	{
-		if (RoleUtils.HasMultiTrialRole(roleId, selectedRoleIds.ToArray<int>(), null))
+		int[] array = new int[selectedRoleIds.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = selectedRoleIds[i];
+		}
+		if (RoleUtils.HasMultiTrialRole(roleId, array, null))
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamMultiTrialRole", Array.Empty<object>());
 			return false;
 		}
-		if (RoleUtils.HasSameRole(roleId, selectedRoleIds.ToArray<int>(), null))
+		if (RoleUtils.HasSameRole(roleId, array, null))
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamSameRole", Array.Empty<object>());
 			return false;
@@ -54,11 +58,16 @@ public class FormationContextValidator : IFormationValidator
 		return true;
 	}
 
-	// Token: 0x0600D3B9 RID: 54201 RVA: 0x0030AF2C File Offset: 0x0030912C
+	// Token: 0x0600A7CB RID: 42955 RVA: 0x00316058 File Offset: 0x00314258
 	[NullableContext(1)]
-	public bool CanQuickSelectConfirm(IReadOnlyList<int> selectedRoleIds)
+	public bool CanQuickSelectConfirm(IReadOnlyList<int> selectedRoleIds, int formationId)
 	{
 		FormationModel instance = FormationModel.Instance;
+		int? currentFormationId = instance.CurrentFormationId;
+		if (!(formationId == currentFormationId.GetValueOrDefault() & currentFormationId != null))
+		{
+			return true;
+		}
 		if (selectedRoleIds.Count <= 0)
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamRoleEmpty", Array.Empty<object>());
@@ -81,7 +90,7 @@ public class FormationContextValidator : IFormationValidator
 		return true;
 	}
 
-	// Token: 0x0600D3BA RID: 54202 RVA: 0x0030AFBC File Offset: 0x003091BC
+	// Token: 0x0600A7CC RID: 42956 RVA: 0x00316108 File Offset: 0x00314308
 	public bool ConfirmCheck(int roleId, int formationId, int editPosition)
 	{
 		if (this.IsNeedRevive(roleId, formationId))
@@ -114,7 +123,7 @@ public class FormationContextValidator : IFormationValidator
 		return true;
 	}
 
-	// Token: 0x0600D3BB RID: 54203 RVA: 0x0030B08C File Offset: 0x0030928C
+	// Token: 0x0600A7CD RID: 42957 RVA: 0x003161D8 File Offset: 0x003143D8
 	public bool IsConfirmButtonEnable(int roleId, int formationId, int editPosition)
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -122,7 +131,7 @@ public class FormationContextValidator : IFormationValidator
 		return instance.GetEditingRoleIdList(formationId).Length == 0 || instance.GetEditingRoleId(formationId, editPosition) > 0 || !flag;
 	}
 
-	// Token: 0x0600D3BC RID: 54204 RVA: 0x0030B0C8 File Offset: 0x003092C8
+	// Token: 0x0600A7CE RID: 42958 RVA: 0x00316214 File Offset: 0x00314414
 	[NullableContext(2)]
 	public string GetConfirmButtonTextId(int roleId, int formationId, int editPosition)
 	{

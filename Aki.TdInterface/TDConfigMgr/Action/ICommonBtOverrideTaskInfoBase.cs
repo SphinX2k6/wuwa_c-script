@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001904 RID: 6404
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A8B RID: 6795
 	public class ICommonBtOverrideTaskInfoBase
 	{
-		// Token: 0x06008937 RID: 35127 RVA: 0x00144124 File Offset: 0x00142324
+		// Token: 0x06009055 RID: 36949 RVA: 0x001538AC File Offset: 0x00151AAC
 		private ICommonBtOverrideTaskInfoBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008938 RID: 35128 RVA: 0x0014415C File Offset: 0x0014235C
+		// Token: 0x06009056 RID: 36950 RVA: 0x001538E4 File Offset: 0x00151AE4
 		public static ICommonBtOverrideTaskInfoBase Create([Nullable(2)] ICommonBtOverrideTaskInfoBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008939 RID: 35129 RVA: 0x0014416F File Offset: 0x0014236F
+		// Token: 0x06009057 RID: 36951 RVA: 0x001538F7 File Offset: 0x00151AF7
 		public static ICommonBtOverrideTaskInfoBase CreateFromSetValue([Nullable(2)] ICommonBtOverrideTaskInfoBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600893A RID: 35130 RVA: 0x00144182 File Offset: 0x00142382
+		// Token: 0x06009058 RID: 36952 RVA: 0x0015390A File Offset: 0x00151B0A
 		public ICommonBtOverrideTaskInfoBase_SetValue ToSetValue()
 		{
 			return new ICommonBtOverrideTaskInfoBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C6A RID: 11370
-		// (get) Token: 0x0600893B RID: 35131 RVA: 0x00144195 File Offset: 0x00142395
-		// (set) Token: 0x0600893C RID: 35132 RVA: 0x001441C0 File Offset: 0x001423C0
+		// Token: 0x17002E66 RID: 11878
+		// (get) Token: 0x06009059 RID: 36953 RVA: 0x0015391D File Offset: 0x00151B1D
+		// (set) Token: 0x0600905A RID: 36954 RVA: 0x00153948 File Offset: 0x00151B48
 		public virtual ECommonBtPlaceholderTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005605 RID: 22021
+		// Token: 0x04005A4F RID: 23119
 		[Nullable(2)]
 		protected ICommonBtOverrideTaskInfoBase FbInstance;
 
-		// Token: 0x04005606 RID: 22022
+		// Token: 0x04005A50 RID: 23120
 		[Nullable(2)]
 		protected ICommonBtOverrideTaskInfoBase_SetValue PocoInterface;
 	}

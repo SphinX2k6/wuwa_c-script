@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x02000415 RID: 1045
+	// Token: 0x0200042B RID: 1067
 	public class ConfigHotPatchTextLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter, IQueryLocalTextNew
 	{
-		// Token: 0x06001885 RID: 6277 RVA: 0x000E47A4 File Offset: 0x000E29A4
+		// Token: 0x06001909 RID: 6409 RVA: 0x000EAEF8 File Offset: 0x000E90F8
 		static ConfigHotPatchTextLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHotPatchTextLang.CreateStaticDefaultValue), new Action(ConfigHotPatchTextLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001886 RID: 6278 RVA: 0x000E47C4 File Offset: 0x000E29C4
+		// Token: 0x0600190A RID: 6410 RVA: 0x000EAF18 File Offset: 0x000E9118
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHotPatchTextLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigHotPatchTextLang.LangCache = new Dictionary<string, Dictionary<string, string>>();
 		}
 
-		// Token: 0x06001887 RID: 6279 RVA: 0x000E4837 File Offset: 0x000E2A37
+		// Token: 0x0600190B RID: 6411 RVA: 0x000EAF8B File Offset: 0x000E918B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHotPatchTextLang.LogPair = null;
@@ -35,20 +35,20 @@ namespace Aki.Config
 			ConfigHotPatchTextLang.HandleId = 0;
 		}
 
-		// Token: 0x06001888 RID: 6280 RVA: 0x000E484B File Offset: 0x000E2A4B
+		// Token: 0x0600190C RID: 6412 RVA: 0x000EAF9F File Offset: 0x000E919F
 		public static void Init()
 		{
 			ConfigHotPatchTextLang.HandleId = ConfigCommon.GetLangStatementId("HotPatchText", "lang_hot_patch.db", "select content from `HotPatchText` where id = ?", "");
 		}
 
-		// Token: 0x06001889 RID: 6281 RVA: 0x000E486B File Offset: 0x000E2A6B
+		// Token: 0x0600190D RID: 6413 RVA: 0x000EAFBF File Offset: 0x000E91BF
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
 			return null;
 		}
 
-		// Token: 0x0600188A RID: 6282 RVA: 0x000E4870 File Offset: 0x000E2A70
+		// Token: 0x0600190E RID: 6414 RVA: 0x000EAFC4 File Offset: 0x000E91C4
 		[NullableContext(2)]
 		public static string GetLocalTextNew([Nullable(0)] string id, string culture = null)
 		{
@@ -109,7 +109,7 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x0600188B RID: 6283 RVA: 0x000E4A70 File Offset: 0x000E2C70
+		// Token: 0x0600190F RID: 6415 RVA: 0x000EB1C4 File Offset: 0x000E93C4
 		public static void ClearHotPatchTextLangStatementIdsAndCache()
 		{
 			ConfigCommon.ClearLangAllStatementId("HotPatchText", "lang_hot_patch.db");
@@ -121,19 +121,19 @@ namespace Aki.Config
 			langCache.Clear();
 		}
 
-		// Token: 0x04001C77 RID: 7287
+		// Token: 0x04001D11 RID: 7441
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x04001C78 RID: 7288
+		// Token: 0x04001D12 RID: 7442
 		private const string DB = "lang_hot_patch.db";
 
-		// Token: 0x04001C79 RID: 7289
+		// Token: 0x04001D13 RID: 7443
 		private const string TABLE = "HotPatchText";
 
-		// Token: 0x04001C7A RID: 7290
+		// Token: 0x04001D14 RID: 7444
 		private const string COMMAND = "select content from `HotPatchText` where id = ?";
 
-		// Token: 0x04001C7B RID: 7291
+		// Token: 0x04001D15 RID: 7445
 		[Nullable(new byte[]
 		{
 			2,
@@ -143,7 +143,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C7C RID: 7292
+		// Token: 0x04001D16 RID: 7446
 		[Nullable(new byte[]
 		{
 			2,
@@ -154,7 +154,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<string, Dictionary<string, string>> LangCache;
 
-		// Token: 0x04001C7D RID: 7293
+		// Token: 0x04001D17 RID: 7447
 		private static int HandleId;
 	}
 }

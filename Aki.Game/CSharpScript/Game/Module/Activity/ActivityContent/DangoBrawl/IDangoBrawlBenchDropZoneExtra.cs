@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006797 RID: 26519
+	// Token: 0x020056E7 RID: 22247
 	public interface IDangoBrawlBenchDropZoneExtra
 	{
 	}

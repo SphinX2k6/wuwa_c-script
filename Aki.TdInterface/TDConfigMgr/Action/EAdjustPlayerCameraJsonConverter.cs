@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002298 RID: 8856
+	// Token: 0x02002505 RID: 9477
 	public class EAdjustPlayerCameraJsonConverter : JsonConverter<EAdjustPlayerCamera>
 	{
-		// Token: 0x0600C22C RID: 49708 RVA: 0x001C5F9C File Offset: 0x001C419C
+		// Token: 0x0600CDF2 RID: 52722 RVA: 0x001DDC90 File Offset: 0x001DBE90
 		public override EAdjustPlayerCamera Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EAdjustPlayerCameraExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C22D RID: 49709 RVA: 0x001C5FC0 File Offset: 0x001C41C0
+		// Token: 0x0600CDF3 RID: 52723 RVA: 0x001DDCB4 File Offset: 0x001DBEB4
 		public override void Write(Utf8JsonWriter writer, EAdjustPlayerCamera value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

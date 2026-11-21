@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C1 RID: 8385
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002316 RID: 8982
 	public class IWriteLetter : IUiGame
 	{
-		// Token: 0x0600B854 RID: 47188 RVA: 0x001AA9C0 File Offset: 0x001A8BC0
+		// Token: 0x0600C3AC RID: 50092 RVA: 0x001C1608 File Offset: 0x001BF808
 		private IWriteLetter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B855 RID: 47189 RVA: 0x001AA9F8 File Offset: 0x001A8BF8
+		// Token: 0x0600C3AD RID: 50093 RVA: 0x001C1640 File Offset: 0x001BF840
 		public static IWriteLetter Create([Nullable(2)] IWriteLetter instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B856 RID: 47190 RVA: 0x001AAA0B File Offset: 0x001A8C0B
+		// Token: 0x0600C3AE RID: 50094 RVA: 0x001C1653 File Offset: 0x001BF853
 		public static IWriteLetter CreateFromSetValue([Nullable(2)] IWriteLetter_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B857 RID: 47191 RVA: 0x001AAA1E File Offset: 0x001A8C1E
+		// Token: 0x0600C3AF RID: 50095 RVA: 0x001C1666 File Offset: 0x001BF866
 		public new IWriteLetter_SetValue ToSetValue()
 		{
 			return new IWriteLetter_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003861 RID: 14433
-		// (get) Token: 0x0600B858 RID: 47192 RVA: 0x001AAA3D File Offset: 0x001A8C3D
-		// (set) Token: 0x0600B859 RID: 47193 RVA: 0x001AAA68 File Offset: 0x001A8C68
+		// Token: 0x17003B45 RID: 15173
+		// (get) Token: 0x0600C3B0 RID: 50096 RVA: 0x001C1685 File Offset: 0x001BF885
+		// (set) Token: 0x0600C3B1 RID: 50097 RVA: 0x001C16B0 File Offset: 0x001BF8B0
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003862 RID: 14434
-		// (get) Token: 0x0600B85A RID: 47194 RVA: 0x001AAA76 File Offset: 0x001A8C76
-		// (set) Token: 0x0600B85B RID: 47195 RVA: 0x001AAAA1 File Offset: 0x001A8CA1
+		// Token: 0x17003B46 RID: 15174
+		// (get) Token: 0x0600C3B2 RID: 50098 RVA: 0x001C16BE File Offset: 0x001BF8BE
+		// (set) Token: 0x0600C3B3 RID: 50099 RVA: 0x001C16E9 File Offset: 0x001BF8E9
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E80 RID: 28288
+		// Token: 0x0400749E RID: 29854
 		[Nullable(2)]
 		protected new IWriteLetter FbInstance;
 
-		// Token: 0x04006E81 RID: 28289
+		// Token: 0x0400749F RID: 29855
 		[Nullable(2)]
 		protected new IWriteLetter_SetValue PocoInterface;
 	}

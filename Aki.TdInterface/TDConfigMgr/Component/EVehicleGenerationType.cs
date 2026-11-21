@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200015C RID: 348
+	// Token: 0x02000171 RID: 369
 	public enum EVehicleGenerationType
 	{
-		// Token: 0x0400069E RID: 1694
+		// Token: 0x040006EB RID: 1771
 		VehicleEntityTemplate,
-		// Token: 0x0400069F RID: 1695
+		// Token: 0x040006EC RID: 1772
 		VehicleTeamTemplate
 	}
 }

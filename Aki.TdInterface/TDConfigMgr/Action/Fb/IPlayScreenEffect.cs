@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025E7 RID: 9703
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028A6 RID: 10406
 	public class IPlayScreenEffect : PlayEffect2
 	{
-		// Token: 0x0600DA10 RID: 55824 RVA: 0x002081FA File Offset: 0x002063FA
+		// Token: 0x0600E7D9 RID: 59353 RVA: 0x002248E6 File Offset: 0x00222AE6
 		public static IPlayScreenEffect Create(IPlayScreenEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004004 RID: 16388
-		// (get) Token: 0x0600DA11 RID: 55825 RVA: 0x00208219 File Offset: 0x00206419
+		// Token: 0x1700433B RID: 17211
+		// (get) Token: 0x0600E7DA RID: 59354 RVA: 0x00224905 File Offset: 0x00222B05
 		public override EEffectType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004005 RID: 16389
-		// (get) Token: 0x0600DA12 RID: 55826 RVA: 0x00208226 File Offset: 0x00206426
+		// Token: 0x1700433C RID: 17212
+		// (get) Token: 0x0600E7DB RID: 59355 RVA: 0x00224912 File Offset: 0x00222B12
 		public override string Path
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004006 RID: 16390
-		// (get) Token: 0x0600DA13 RID: 55827 RVA: 0x00208234 File Offset: 0x00206434
+		// Token: 0x1700433D RID: 17213
+		// (get) Token: 0x0600E7DC RID: 59356 RVA: 0x00224920 File Offset: 0x00222B20
 		public virtual float? DestroyTime
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004007 RID: 16391
-		// (get) Token: 0x0600DA14 RID: 55828 RVA: 0x0020826A File Offset: 0x0020646A
+		// Token: 0x1700433E RID: 17214
+		// (get) Token: 0x0600E7DD RID: 59357 RVA: 0x00224956 File Offset: 0x00222B56
 		[Nullable(2)]
 		public virtual string BindSubScreenKey
 		{
@@ -68,7 +66,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400791B RID: 31003
+		// Token: 0x04007FB2 RID: 32690
 		private IPlayScreenEffect Instance;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004821 RID: 18465
+	// Token: 0x02004C89 RID: 19593
 	public class IAreaConflictSelector_UnionUnion
 	{
-		// Token: 0x17008474 RID: 33908
-		// (get) Token: 0x0601C845 RID: 116805 RVA: 0x004086F1 File Offset: 0x004068F1
-		// (set) Token: 0x0601C846 RID: 116806 RVA: 0x004086F9 File Offset: 0x004068F9
+		// Token: 0x17008ABF RID: 35519
+		// (get) Token: 0x0601E042 RID: 122946 RVA: 0x00435041 File Offset: 0x00433241
+		// (set) Token: 0x0601E043 RID: 122947 RVA: 0x00435049 File Offset: 0x00433249
 		public IAreaConflictSelector_Union Type { get; set; }
 
-		// Token: 0x17008475 RID: 33909
-		// (get) Token: 0x0601C847 RID: 116807 RVA: 0x00408702 File Offset: 0x00406902
-		// (set) Token: 0x0601C848 RID: 116808 RVA: 0x0040870A File Offset: 0x0040690A
+		// Token: 0x17008AC0 RID: 35520
+		// (get) Token: 0x0601E044 RID: 122948 RVA: 0x00435052 File Offset: 0x00433252
+		// (set) Token: 0x0601E045 RID: 122949 RVA: 0x0043505A File Offset: 0x0043325A
 		public object Value { get; set; }
 
-		// Token: 0x0601C849 RID: 116809 RVA: 0x00408713 File Offset: 0x00406913
+		// Token: 0x0601E046 RID: 122950 RVA: 0x00435063 File Offset: 0x00433263
 		public IAreaConflictSelector_UnionUnion()
 		{
 			this.Type = IAreaConflictSelector_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601C84A RID: 116810 RVA: 0x00408729 File Offset: 0x00406929
+		// Token: 0x0601E047 RID: 122951 RVA: 0x00435079 File Offset: 0x00433279
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601C84B RID: 116811 RVA: 0x0040873B File Offset: 0x0040693B
+		// Token: 0x0601E048 RID: 122952 RVA: 0x0043508B File Offset: 0x0043328B
 		public IAreaConflictSelectorT AsIAreaConflictSelector()
 		{
 			return this.As<IAreaConflictSelectorT>();
 		}
 
-		// Token: 0x0601C84C RID: 116812 RVA: 0x00408743 File Offset: 0x00406943
+		// Token: 0x0601E049 RID: 122953 RVA: 0x00435093 File Offset: 0x00433293
 		public static IAreaConflictSelector_UnionUnion FromIAreaConflictSelector(IAreaConflictSelectorT _iareaconflictselector)
 		{
 			return new IAreaConflictSelector_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C84D RID: 116813 RVA: 0x00408758 File Offset: 0x00406958
+		// Token: 0x0601E04A RID: 122954 RVA: 0x004350A8 File Offset: 0x004332A8
 		public IQuestAreaConflictSelectorT AsIQuestAreaConflictSelector()
 		{
 			return this.As<IQuestAreaConflictSelectorT>();
 		}
 
-		// Token: 0x0601C84E RID: 116814 RVA: 0x00408760 File Offset: 0x00406960
+		// Token: 0x0601E04B RID: 122955 RVA: 0x004350B0 File Offset: 0x004332B0
 		public static IAreaConflictSelector_UnionUnion FromIQuestAreaConflictSelector(IQuestAreaConflictSelectorT _iquestareaconflictselector)
 		{
 			return new IAreaConflictSelector_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C84F RID: 116815 RVA: 0x00408775 File Offset: 0x00406975
+		// Token: 0x0601E04C RID: 122956 RVA: 0x004350C5 File Offset: 0x004332C5
 		public ILevelPlayAreaConflictSelectorT AsILevelPlayAreaConflictSelector()
 		{
 			return this.As<ILevelPlayAreaConflictSelectorT>();
 		}
 
-		// Token: 0x0601C850 RID: 116816 RVA: 0x0040877D File Offset: 0x0040697D
+		// Token: 0x0601E04D RID: 122957 RVA: 0x004350CD File Offset: 0x004332CD
 		public static IAreaConflictSelector_UnionUnion FromILevelPlayAreaConflictSelector(ILevelPlayAreaConflictSelectorT _ilevelplayareaconflictselector)
 		{
 			return new IAreaConflictSelector_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C851 RID: 116817 RVA: 0x00408792 File Offset: 0x00406992
+		// Token: 0x0601E04E RID: 122958 RVA: 0x004350E2 File Offset: 0x004332E2
 		public ICustomShapeAreaConflictSelectorT AsICustomShapeAreaConflictSelector()
 		{
 			return this.As<ICustomShapeAreaConflictSelectorT>();
 		}
 
-		// Token: 0x0601C852 RID: 116818 RVA: 0x0040879A File Offset: 0x0040699A
+		// Token: 0x0601E04F RID: 122959 RVA: 0x004350EA File Offset: 0x004332EA
 		public static IAreaConflictSelector_UnionUnion FromICustomShapeAreaConflictSelector(ICustomShapeAreaConflictSelectorT _icustomshapeareaconflictselector)
 		{
 			return new IAreaConflictSelector_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C853 RID: 116819 RVA: 0x004087B0 File Offset: 0x004069B0
+		// Token: 0x0601E050 RID: 122960 RVA: 0x00435100 File Offset: 0x00433300
 		public static int Pack(FlatBufferBuilder builder, IAreaConflictSelector_UnionUnion _o)
 		{
 			switch (_o.Type)

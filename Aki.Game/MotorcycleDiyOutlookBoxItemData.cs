@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200228A RID: 8842
+// Token: 0x0200176E RID: 5998
 public class MotorcycleDiyOutlookBoxItemData
 {
-	// Token: 0x0601142E RID: 70702 RVA: 0x00436D0B File Offset: 0x00434F0B
+	// Token: 0x0600E8C4 RID: 59588 RVA: 0x00443917 File Offset: 0x00441B17
 	public MotorcycleDiyOutlookBoxItemData(EOutlookType outlookType, int itemId, int index)
 	{
 		this.OutlookType = outlookType;
@@ -11,12 +11,12 @@ public class MotorcycleDiyOutlookBoxItemData
 		this.JumpIndex = index;
 	}
 
-	// Token: 0x0400834F RID: 33615
+	// Token: 0x0400848D RID: 33933
 	public EOutlookType OutlookType;
 
-	// Token: 0x04008350 RID: 33616
+	// Token: 0x0400848E RID: 33934
 	public int ItemId;
 
-	// Token: 0x04008351 RID: 33617
+	// Token: 0x0400848F RID: 33935
 	public int JumpIndex = -1;
 }

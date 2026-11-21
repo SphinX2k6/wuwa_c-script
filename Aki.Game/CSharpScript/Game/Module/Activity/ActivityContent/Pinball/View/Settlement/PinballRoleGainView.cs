@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062EE RID: 25326
+	// Token: 0x0200526C RID: 21100
 	public class PinballRoleGainView : UiViewBase
 	{
-		// Token: 0x0603FBBB RID: 261051 RVA: 0x00F6BB4C File Offset: 0x00F69D4C
+		// Token: 0x0603487C RID: 215164 RVA: 0x00EB2AA8 File Offset: 0x00EB0CA8
 		[NullableContext(1)]
 		public PinballRoleGainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x170092AC RID: 37548
-		// (get) Token: 0x0603FBBC RID: 261052 RVA: 0x00F6BB55 File Offset: 0x00F69D55
+		// Token: 0x1700660E RID: 26126
+		// (get) Token: 0x0603487D RID: 215165 RVA: 0x00EB2AB1 File Offset: 0x00EB0CB1
 		[Nullable(2)]
 		public new PinballRoleGainViewParam OpenParam
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x0603FBBD RID: 261053 RVA: 0x00F6BB64 File Offset: 0x00F69D64
+		// Token: 0x0603487E RID: 215166 RVA: 0x00EB2AC0 File Offset: 0x00EB0CC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FBBE RID: 261054 RVA: 0x00F6BC4C File Offset: 0x00F69E4C
+		// Token: 0x0603487F RID: 215167 RVA: 0x00EB2BA8 File Offset: 0x00EB0DA8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballRoleGainView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FBBF RID: 261055 RVA: 0x00F6BC90 File Offset: 0x00F69E90
+		// Token: 0x06034880 RID: 215168 RVA: 0x00EB2BEC File Offset: 0x00EB0DEC
 		protected override void OnStart()
 		{
 			PinballRoleConfig? pinballRoleConfigById = PinballConfig.Instance.GetPinballRoleConfigById(this.OpenParam.RoleId);
@@ -97,22 +97,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(2), "Pinball_Character_unlock", new <>z__ReadOnlySingleElementList<object>(localTextNew));
 		}
 
-		// Token: 0x0603FBC0 RID: 261056 RVA: 0x00F6BD8C File Offset: 0x00F69F8C
+		// Token: 0x06034881 RID: 215169 RVA: 0x00EB2CE8 File Offset: 0x00EB0EE8
 		private void OnClickBtnMask()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200C4E3 RID: 50403
+		// Token: 0x0200AECA RID: 44746
 		private enum EComponent
 		{
-			// Token: 0x0403B6A7 RID: 243367
+			// Token: 0x04036009 RID: 221193
 			SpineRoleShadow,
-			// Token: 0x0403B6A8 RID: 243368
+			// Token: 0x0403600A RID: 221194
 			SpineRole,
-			// Token: 0x0403B6A9 RID: 243369
+			// Token: 0x0403600B RID: 221195
 			RoleName,
-			// Token: 0x0403B6AA RID: 243370
+			// Token: 0x0403600C RID: 221196
 			BtnMask
 		}
 	}

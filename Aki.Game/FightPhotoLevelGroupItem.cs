@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x0200127F RID: 4735
+// Token: 0x02000733 RID: 1843
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,12 +15,12 @@ using UnrealEngine;
 })]
 public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 {
-	// Token: 0x06008143 RID: 33091 RVA: 0x001B6A35 File Offset: 0x001B4C35
+	// Token: 0x060054DA RID: 21722 RVA: 0x001BF705 File Offset: 0x001BD905
 	public FightPhotoLevelGroupItem(AActor uiItem = null) : base(null)
 	{
 	}
 
-	// Token: 0x06008144 RID: 33092 RVA: 0x001B6A40 File Offset: 0x001B4C40
+	// Token: 0x060054DB RID: 21723 RVA: 0x001BF710 File Offset: 0x001BD910
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06008145 RID: 33093 RVA: 0x001B6B45 File Offset: 0x001B4D45
+	// Token: 0x060054DC RID: 21724 RVA: 0x001BF815 File Offset: 0x001BDA15
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -54,19 +54,19 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CheckCanClick));
 	}
 
-	// Token: 0x06008146 RID: 33094 RVA: 0x001B6B69 File Offset: 0x001B4D69
+	// Token: 0x060054DD RID: 21725 RVA: 0x001BF839 File Offset: 0x001BDA39
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshFightPhotoLevelRedDot, new Action(this.OnRefreshFightPhotoLevelRedDot));
 	}
 
-	// Token: 0x06008147 RID: 33095 RVA: 0x001B6B87 File Offset: 0x001B4D87
+	// Token: 0x060054DE RID: 21726 RVA: 0x001BF857 File Offset: 0x001BDA57
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshFightPhotoLevelRedDot, new Action(this.OnRefreshFightPhotoLevelRedDot));
 	}
 
-	// Token: 0x06008148 RID: 33096 RVA: 0x001B6BA5 File Offset: 0x001B4DA5
+	// Token: 0x060054DF RID: 21727 RVA: 0x001BF875 File Offset: 0x001BDA75
 	public override void OnSelect()
 	{
 		if (this.Data != null && this.OnSelectCallback != null)
@@ -81,7 +81,7 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06008149 RID: 33097 RVA: 0x001B6BE3 File Offset: 0x001B4DE3
+	// Token: 0x060054E0 RID: 21728 RVA: 0x001BF8B3 File Offset: 0x001BDAB3
 	protected override void OnUnSelect()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -92,7 +92,7 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600814A RID: 33098 RVA: 0x001B6BFC File Offset: 0x001B4DFC
+	// Token: 0x060054E1 RID: 21729 RVA: 0x001BF8CC File Offset: 0x001BDACC
 	protected override void OnRefreshItem(FightPhotoLevelGroupData data)
 	{
 		this.Data = data;
@@ -145,7 +145,7 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		this.RemoveTimer();
 	}
 
-	// Token: 0x0600814B RID: 33099 RVA: 0x001B6D81 File Offset: 0x001B4F81
+	// Token: 0x060054E2 RID: 21730 RVA: 0x001BFA51 File Offset: 0x001BDC51
 	private void UpdateUnlock(float delta)
 	{
 		if (this.Data != null && this.Data.IsUnLock)
@@ -154,14 +154,14 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		}
 	}
 
-	// Token: 0x0600814C RID: 33100 RVA: 0x001B6DA4 File Offset: 0x001B4FA4
+	// Token: 0x060054E3 RID: 21731 RVA: 0x001BFA74 File Offset: 0x001BDC74
 	private void AddTimer()
 	{
 		this.RemoveTimer();
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.UpdateUnlock), (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 	}
 
-	// Token: 0x0600814D RID: 33101 RVA: 0x001B6DDB File Offset: 0x001B4FDB
+	// Token: 0x060054E4 RID: 21732 RVA: 0x001BFAAB File Offset: 0x001BDCAB
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -171,14 +171,14 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		}
 	}
 
-	// Token: 0x0600814E RID: 33102 RVA: 0x001B6DFD File Offset: 0x001B4FFD
+	// Token: 0x060054E5 RID: 21733 RVA: 0x001BFACD File Offset: 0x001BDCCD
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
 		this.RemoveTimer();
 	}
 
-	// Token: 0x0600814F RID: 33103 RVA: 0x001B6E0C File Offset: 0x001B500C
+	// Token: 0x060054E6 RID: 21734 RVA: 0x001BFADC File Offset: 0x001BDCDC
 	public void RefreshRedDot()
 	{
 		bool uiactive = this.Data != null && this.Data.HasRedDot;
@@ -190,13 +190,13 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06008150 RID: 33104 RVA: 0x001B6E42 File Offset: 0x001B5042
+	// Token: 0x060054E7 RID: 21735 RVA: 0x001BFB12 File Offset: 0x001BDD12
 	private void OnRefreshFightPhotoLevelRedDot()
 	{
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06008151 RID: 33105 RVA: 0x001B6E4A File Offset: 0x001B504A
+	// Token: 0x060054E8 RID: 21736 RVA: 0x001BFB1A File Offset: 0x001BDD1A
 	protected override void OnMoveItem()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -207,7 +207,7 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06008152 RID: 33106 RVA: 0x001B6E61 File Offset: 0x001B5061
+	// Token: 0x060054E9 RID: 21737 RVA: 0x001BFB31 File Offset: 0x001BDD31
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -223,19 +223,19 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 		onToggleClickCallback(base.GetItemIndex(), this.Data);
 	}
 
-	// Token: 0x06008153 RID: 33107 RVA: 0x001B6E95 File Offset: 0x001B5095
+	// Token: 0x060054EA RID: 21738 RVA: 0x001BFB65 File Offset: 0x001BDD65
 	private bool CheckCanClick()
 	{
 		return this.CheckToggleCanClick == null || this.CheckToggleCanClick();
 	}
 
-	// Token: 0x04003A98 RID: 15000
+	// Token: 0x04003B30 RID: 15152
 	private FightPhotoLevelGroupData Data;
 
-	// Token: 0x04003A99 RID: 15001
+	// Token: 0x04003B31 RID: 15153
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04003A9A RID: 15002
+	// Token: 0x04003B32 RID: 15154
 	[Nullable(new byte[]
 	{
 		2,
@@ -243,7 +243,7 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 	})]
 	public Action<int, FightPhotoLevelGroupData> OnToggleClickCallback;
 
-	// Token: 0x04003A9B RID: 15003
+	// Token: 0x04003B33 RID: 15155
 	[Nullable(new byte[]
 	{
 		2,
@@ -251,28 +251,28 @@ public class FightPhotoLevelGroupItem : AutoAttachItem<FightPhotoLevelGroupData>
 	})]
 	public Action<int, FightPhotoLevelGroupData> OnSelectCallback;
 
-	// Token: 0x04003A9C RID: 15004
+	// Token: 0x04003B34 RID: 15156
 	public Func<bool> CheckToggleCanClick;
 
-	// Token: 0x02007895 RID: 30869
+	// Token: 0x02006A20 RID: 27168
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x04027BB2 RID: 162738
+		// Token: 0x04022EE3 RID: 143075
 		ToggleRoot,
-		// Token: 0x04027BB3 RID: 162739
+		// Token: 0x04022EE4 RID: 143076
 		TextureRole,
-		// Token: 0x04027BB4 RID: 162740
+		// Token: 0x04022EE5 RID: 143077
 		ItemFinished,
-		// Token: 0x04027BB5 RID: 162741
+		// Token: 0x04022EE6 RID: 143078
 		ItemLock,
-		// Token: 0x04027BB6 RID: 162742
+		// Token: 0x04022EE7 RID: 143079
 		TextureNum,
-		// Token: 0x04027BB7 RID: 162743
+		// Token: 0x04022EE8 RID: 143080
 		TextureNum2,
-		// Token: 0x04027BB8 RID: 162744
+		// Token: 0x04022EE9 RID: 143081
 		TextName,
-		// Token: 0x04027BB9 RID: 162745
+		// Token: 0x04022EEA RID: 143082
 		ItemRedDot
 	}
 }

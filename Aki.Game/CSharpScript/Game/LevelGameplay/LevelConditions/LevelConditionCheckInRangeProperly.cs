@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CAB RID: 27819
+	// Token: 0x02005E25 RID: 24101
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckInRangeProperly : LevelConditionBase
 	{
-		// Token: 0x060445E6 RID: 280038 RVA: 0x010DC206 File Offset: 0x010DA406
+		// Token: 0x0603A740 RID: 239424 RVA: 0x010861B2 File Offset: 0x010843B2
 		public override bool ShouldSkip(EConditionCheckMode mode, ICondition2 conditionInfo)
 		{
 			if (mode != EConditionCheckMode.ClientPreCheck)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return onlinePlayerConditionTargetOption == null || onlinePlayerConditionTargetOption.Type != EOnlinePlayerConditionTarget.Host;
 		}
 
-		// Token: 0x060445E7 RID: 280039 RVA: 0x010DC22C File Offset: 0x010DA42C
+		// Token: 0x0603A741 RID: 239425 RVA: 0x010861D8 File Offset: 0x010843D8
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, [Nullable(new byte[]
 		{
 			1,

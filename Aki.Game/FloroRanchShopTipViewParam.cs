@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B74 RID: 7028
+// Token: 0x02001033 RID: 4147
 [NullableContext(1)]
 [Nullable(0)]
 public struct FloroRanchShopTipViewParam
 {
-	// Token: 0x04005FF1 RID: 24561
+	// Token: 0x040060C0 RID: 24768
 	public int ToyPoint;
 
-	// Token: 0x04005FF2 RID: 24562
+	// Token: 0x040060C1 RID: 24769
 	public Action<int> SellCallback;
 
-	// Token: 0x04005FF3 RID: 24563
+	// Token: 0x040060C2 RID: 24770
 	public Action<bool> ShowToyListCallback;
 }

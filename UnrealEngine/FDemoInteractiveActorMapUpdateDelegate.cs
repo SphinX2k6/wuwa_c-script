@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E94 RID: 7828
+	// Token: 0x020005B9 RID: 1465
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FDemoInteractiveActorMapUpdateDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC5A RID: 121946 RVA: 0x002BFEC6 File Offset: 0x002BE0C6
+		// Token: 0x0600835B RID: 33627 RVA: 0x000C2692 File Offset: 0x000C0892
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FDemoInteractiveActorMapUpdateDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC5B RID: 121947 RVA: 0x002BFED2 File Offset: 0x002BE0D2
+		// Token: 0x0600835C RID: 33628 RVA: 0x000C269E File Offset: 0x000C089E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FDemoInteractiveActorMapUpdateDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FDemoInteractiveActorMapUpdateDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601DC5C RID: 121948 RVA: 0x002BFEF5 File Offset: 0x002BE0F5
+		// Token: 0x0600835D RID: 33629 RVA: 0x000C26C1 File Offset: 0x000C08C1
 		public FDemoInteractiveActorMapUpdateDelegate()
 		{
 		}
 
-		// Token: 0x0601DC5D RID: 121949 RVA: 0x002BFEFD File Offset: 0x002BE0FD
+		// Token: 0x0600835E RID: 33630 RVA: 0x000C26C9 File Offset: 0x000C08C9
 		[NullableContext(2)]
 		public FDemoInteractiveActorMapUpdateDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC5E RID: 121950 RVA: 0x002BFF07 File Offset: 0x002BE107
+		// Token: 0x0600835F RID: 33631 RVA: 0x000C26D3 File Offset: 0x000C08D3
 		public FDemoInteractiveActorMapUpdateDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC5F RID: 121951 RVA: 0x002BFF12 File Offset: 0x002BE112
+		// Token: 0x06008360 RID: 33632 RVA: 0x000C26DE File Offset: 0x000C08DE
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FName>) ?? ((Action<FName>)Delegate.CreateDelegate(typeof(Action<FName>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC60 RID: 121952 RVA: 0x002BFF44 File Offset: 0x002BE144
+		// Token: 0x06008361 RID: 33633 RVA: 0x000C2710 File Offset: 0x000C0910
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FName> Callback)
 		{
 			if (FDemoInteractiveActorMapUpdateDelegate.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FDemoInteractiveActorMapUpdateDelegate.RegisterId);
 		}
 
-		// Token: 0x0601DC61 RID: 121953 RVA: 0x002BFF7E File Offset: 0x002BE17E
+		// Token: 0x06008362 RID: 33634 RVA: 0x000C274A File Offset: 0x000C094A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FName> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601DC62 RID: 121954 RVA: 0x002BFF88 File Offset: 0x002BE188
+		// Token: 0x06008363 RID: 33635 RVA: 0x000C2754 File Offset: 0x000C0954
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FName ActorKey)
 		{
 			FDemoInteractiveActorMapUpdateDelegate.__FDemoInteractiveActorMapUpdateDelegate_DelegateParams* ptr = stackalloc FDemoInteractiveActorMapUpdateDelegate.__FDemoInteractiveActorMapUpdateDelegate_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FDemoInteractiveActorMapUpdateDelegate.__FDemoInteractiveActorMapUpdateDelegate_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601DC63 RID: 121955 RVA: 0x002BFFC4 File Offset: 0x002BE1C4
+		// Token: 0x06008364 RID: 33636 RVA: 0x000C2790 File Offset: 0x000C0990
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FName> action = target as Action<FName>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FDemoInteractiveActorMapUpdateDelegate.__FDemoInteractiveActorMapUpdateDelegate_DelegateParams*)__Parameters)->ActorKey);
 		}
 
-		// Token: 0x040101DE RID: 66014
+		// Token: 0x0400391F RID: 14623
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040101DF RID: 66015
+		// Token: 0x04003920 RID: 14624
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.DemoInteractiveActorMapUpdateDelegate__DelegateSignature";
 
-		// Token: 0x040101E0 RID: 66016
+		// Token: 0x04003921 RID: 14625
 		private static int RegisterId;
 
-		// Token: 0x020032E3 RID: 13027
+		// Token: 0x02000D3D RID: 3389
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FDemoInteractiveActorMapUpdateDelegate_DelegateParams
+		private ref struct __FDemoInteractiveActorMapUpdateDelegate_DelegateParams
 		{
-			// Token: 0x04017193 RID: 94611
+			// Token: 0x04005FDA RID: 24538
 			[FieldOffset(0)]
 			public FName ActorKey;
 		}
 
-		// Token: 0x020032E4 RID: 13028
+		// Token: 0x02000D3E RID: 3390
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017194 RID: 94612
+			// Token: 0x04005FDB RID: 24539
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

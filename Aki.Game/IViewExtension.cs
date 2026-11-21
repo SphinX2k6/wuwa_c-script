@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BD4 RID: 7124
+// Token: 0x02001093 RID: 4243
 [NullableContext(2)]
 public interface IViewExtension
 {
-	// Token: 0x0600D468 RID: 54376
+	// Token: 0x0600A87A RID: 43130
 	bool ShouldActivate();
 
-	// Token: 0x0600D469 RID: 54377
+	// Token: 0x0600A87B RID: 43131
 	void OnViewStart();
 
-	// Token: 0x0600D46A RID: 54378
+	// Token: 0x0600A87C RID: 43132
 	void OnViewRefresh();
 
-	// Token: 0x0600D46B RID: 54379
+	// Token: 0x0600A87D RID: 43133
 	void OnDetach();
 
-	// Token: 0x0600D46C RID: 54380 RVA: 0x0030E127 File Offset: 0x0030C327
+	// Token: 0x0600A87E RID: 43134 RVA: 0x0031929B File Offset: 0x0031749B
 	IEnterGateResult ContributeEnterGate()
 	{
 		return null;

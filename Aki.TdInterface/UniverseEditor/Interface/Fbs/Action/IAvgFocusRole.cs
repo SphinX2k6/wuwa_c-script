@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061BE RID: 25022
+	// Token: 0x0200682C RID: 26668
 	public struct IAvgFocusRole : IFlatbufferObject
 	{
-		// Token: 0x1700BA89 RID: 47753
-		// (get) Token: 0x0602B1D0 RID: 176592 RVA: 0x005F1AD5 File Offset: 0x005EFCD5
+		// Token: 0x1700C40C RID: 50188
+		// (get) Token: 0x0602D917 RID: 186647 RVA: 0x0063C549 File Offset: 0x0063A749
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B1D1 RID: 176593 RVA: 0x005F1AE2 File Offset: 0x005EFCE2
+		// Token: 0x0602D918 RID: 186648 RVA: 0x0063C556 File Offset: 0x0063A756
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B1D2 RID: 176594 RVA: 0x005F1AEC File Offset: 0x005EFCEC
+		// Token: 0x0602D919 RID: 186649 RVA: 0x0063C560 File Offset: 0x0063A760
 		public static IAvgFocusRole GetRootAsIAvgFocusRole(ByteBuffer _bb)
 		{
 			return IAvgFocusRole.GetRootAsIAvgFocusRole(_bb, default(IAvgFocusRole));
 		}
 
-		// Token: 0x0602B1D3 RID: 176595 RVA: 0x005F1B08 File Offset: 0x005EFD08
+		// Token: 0x0602D91A RID: 186650 RVA: 0x0063C57C File Offset: 0x0063A77C
 		public static IAvgFocusRole GetRootAsIAvgFocusRole(ByteBuffer _bb, IAvgFocusRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B1D4 RID: 176596 RVA: 0x005F1B25 File Offset: 0x005EFD25
+		// Token: 0x0602D91B RID: 186651 RVA: 0x0063C599 File Offset: 0x0063A799
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B1D5 RID: 176597 RVA: 0x005F1B34 File Offset: 0x005EFD34
+		// Token: 0x0602D91C RID: 186652 RVA: 0x0063C5A8 File Offset: 0x0063A7A8
 		public IAvgFocusRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BA8A RID: 47754
-		// (get) Token: 0x0602B1D6 RID: 176598 RVA: 0x005F1B44 File Offset: 0x005EFD44
+		// Token: 0x1700C40D RID: 50189
+		// (get) Token: 0x0602D91D RID: 186653 RVA: 0x0063C5B8 File Offset: 0x0063A7B8
 		public bool IsFocus
 		{
 			get
@@ -58,7 +58,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B1D7 RID: 176599 RVA: 0x005F1B83 File Offset: 0x005EFD83
+		// Token: 0x0602D91E RID: 186654 RVA: 0x0063C5F7 File Offset: 0x0063A7F7
 		public static Offset<IAvgFocusRole> CreateIAvgFocusRole(FlatBufferBuilder builder, bool IsFocus = false)
 		{
 			builder.StartTable(1);
@@ -66,25 +66,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAvgFocusRole.EndIAvgFocusRole(builder);
 		}
 
-		// Token: 0x0602B1D8 RID: 176600 RVA: 0x005F1B99 File Offset: 0x005EFD99
+		// Token: 0x0602D91F RID: 186655 RVA: 0x0063C60D File Offset: 0x0063A80D
 		public static void StartIAvgFocusRole(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B1D9 RID: 176601 RVA: 0x005F1BA2 File Offset: 0x005EFDA2
+		// Token: 0x0602D920 RID: 186656 RVA: 0x0063C616 File Offset: 0x0063A816
 		public static void AddIsFocus(FlatBufferBuilder builder, bool isFocus)
 		{
 			builder.AddBool(0, isFocus, false);
 		}
 
-		// Token: 0x0602B1DA RID: 176602 RVA: 0x005F1BAD File Offset: 0x005EFDAD
+		// Token: 0x0602D921 RID: 186657 RVA: 0x0063C621 File Offset: 0x0063A821
 		public static Offset<IAvgFocusRole> EndIAvgFocusRole(FlatBufferBuilder builder)
 		{
 			return new Offset<IAvgFocusRole>(builder.EndTable());
 		}
 
-		// Token: 0x0602B1DB RID: 176603 RVA: 0x005F1BBC File Offset: 0x005EFDBC
+		// Token: 0x0602D922 RID: 186658 RVA: 0x0063C630 File Offset: 0x0063A830
 		public IAvgFocusRoleT UnPack()
 		{
 			IAvgFocusRoleT avgFocusRoleT = new IAvgFocusRoleT();
@@ -92,13 +92,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return avgFocusRoleT;
 		}
 
-		// Token: 0x0602B1DC RID: 176604 RVA: 0x005F1BD7 File Offset: 0x005EFDD7
+		// Token: 0x0602D923 RID: 186659 RVA: 0x0063C64B File Offset: 0x0063A84B
 		public void UnPackTo(IAvgFocusRoleT _o)
 		{
 			_o.IsFocus = this.IsFocus;
 		}
 
-		// Token: 0x0602B1DD RID: 176605 RVA: 0x005F1BE8 File Offset: 0x005EFDE8
+		// Token: 0x0602D924 RID: 186660 RVA: 0x0063C65C File Offset: 0x0063A85C
 		public static Offset<IAvgFocusRole> Pack(FlatBufferBuilder builder, IAvgFocusRoleT _o)
 		{
 			if (_o == null)
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAvgFocusRole.CreateIAvgFocusRole(builder, _o.IsFocus);
 		}
 
-		// Token: 0x040106DE RID: 67294
+		// Token: 0x040114F0 RID: 70896
 		private Table __p;
 	}
 }

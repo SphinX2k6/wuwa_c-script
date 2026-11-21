@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200019C RID: 412
+	// Token: 0x020001A0 RID: 416
 	public class PlayStationTrophy
 	{
-		// Token: 0x06000B56 RID: 2902 RVA: 0x00048128 File Offset: 0x00046328
+		// Token: 0x06000B8D RID: 2957 RVA: 0x0004A918 File Offset: 0x00048B18
 		[NullableContext(1)]
 		public UniTask Init(UniversalDataSystemManager uds, PlatformSdkNew sdkSource)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B57 RID: 2903 RVA: 0x0004817C File Offset: 0x0004637C
+		// Token: 0x06000B8E RID: 2958 RVA: 0x0004A96C File Offset: 0x00048B6C
 		private UniTask InitTrophy()
 		{
 			PlayStationTrophy.<InitTrophy>d__12 <InitTrophy>d__;
@@ -35,7 +35,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <InitTrophy>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B58 RID: 2904 RVA: 0x000481C0 File Offset: 0x000463C0
+		// Token: 0x06000B8F RID: 2959 RVA: 0x0004A9B0 File Offset: 0x00048BB0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -54,7 +54,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <GetSdkTrophyInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B59 RID: 2905 RVA: 0x00048214 File Offset: 0x00046414
+		// Token: 0x06000B90 RID: 2960 RVA: 0x0004AA04 File Offset: 0x00048C04
 		public UniTask<bool> UnlockSdkTrophy(int trophyId)
 		{
 			PlayStationTrophy.<UnlockSdkTrophy>d__14 <UnlockSdkTrophy>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <UnlockSdkTrophy>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B5A RID: 2906 RVA: 0x00048260 File Offset: 0x00046460
+		// Token: 0x06000B91 RID: 2961 RVA: 0x0004AA50 File Offset: 0x00048C50
 		private void ProcessUnlockQueue()
 		{
 			PlayStationTrophy.<>c__DisplayClass15_0 CS$<>8__locals1 = new PlayStationTrophy.<>c__DisplayClass15_0();
@@ -86,7 +86,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroStaticPS5Library.UnlockTrophyWithContextIdAndHandleIdAsync(context, handle, item, fplayStationUnlockTrophyCallBack);
 		}
 
-		// Token: 0x06000B5B RID: 2907 RVA: 0x000482F0 File Offset: 0x000464F0
+		// Token: 0x06000B92 RID: 2962 RVA: 0x0004AAE0 File Offset: 0x00048CE0
 		public UniTask<bool> UpdateSdkTrophyProgress(int trophyId, int progress)
 		{
 			PlayStationTrophy.<UpdateSdkTrophyProgress>d__16 <UpdateSdkTrophyProgress>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <UpdateSdkTrophyProgress>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B5C RID: 2908 RVA: 0x00048344 File Offset: 0x00046544
+		// Token: 0x06000B93 RID: 2963 RVA: 0x0004AB34 File Offset: 0x00048D34
 		private UniTask<int> RegistTrophyContextAsync(int contextId, int handleId)
 		{
 			PlayStationTrophy.<RegistTrophyContextAsync>d__17 <RegistTrophyContextAsync>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <RegistTrophyContextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B5D RID: 2909 RVA: 0x00048390 File Offset: 0x00046590
+		// Token: 0x06000B94 RID: 2964 RVA: 0x0004AB80 File Offset: 0x00048D80
 		private UniTask<int> CreateTrophyContextAsync()
 		{
 			PlayStationTrophy.<CreateTrophyContextAsync>d__18 <CreateTrophyContextAsync>d__;
@@ -122,7 +122,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <CreateTrophyContextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B5E RID: 2910 RVA: 0x000483D4 File Offset: 0x000465D4
+		// Token: 0x06000B95 RID: 2965 RVA: 0x0004ABC4 File Offset: 0x00048DC4
 		private UniTask<int> CreateTrophyHandleAsync()
 		{
 			PlayStationTrophy.<CreateTrophyHandleAsync>d__19 <CreateTrophyHandleAsync>d__;
@@ -132,7 +132,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <CreateTrophyHandleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B5F RID: 2911 RVA: 0x00048410 File Offset: 0x00046610
+		// Token: 0x06000B96 RID: 2966 RVA: 0x0004AC00 File Offset: 0x00048E00
 		private UniTask<bool> DestroyTrophyHandleAsync(int handleId)
 		{
 			PlayStationTrophy.<DestroyTrophyHandleAsync>d__20 <DestroyTrophyHandleAsync>d__;
@@ -143,7 +143,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <DestroyTrophyHandleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B60 RID: 2912 RVA: 0x00048454 File Offset: 0x00046654
+		// Token: 0x06000B97 RID: 2967 RVA: 0x0004AC44 File Offset: 0x00048E44
 		private UniTask<bool> DestroyTrophyContextAsync(int contextId)
 		{
 			PlayStationTrophy.<DestroyTrophyContextAsync>d__21 <DestroyTrophyContextAsync>d__;
@@ -154,37 +154,37 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <DestroyTrophyContextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B61 RID: 2913 RVA: 0x00048497 File Offset: 0x00046697
+		// Token: 0x06000B98 RID: 2968 RVA: 0x0004AC87 File Offset: 0x00048E87
 		public void Clear()
 		{
 			this.DestroyTrophyHandleAsync(this.TrophyHandleId).Forget<bool>();
 			this.DestroyTrophyContextAsync(this.TrophyContextId).Forget<bool>();
 		}
 
-		// Token: 0x04000716 RID: 1814
+		// Token: 0x04000752 RID: 1874
 		private const int DEFAULTLABEL = 0;
 
-		// Token: 0x04000717 RID: 1815
+		// Token: 0x04000753 RID: 1875
 		private const int PROGRESSTYPEPROGRESS = 1;
 
-		// Token: 0x04000718 RID: 1816
+		// Token: 0x04000754 RID: 1876
 		private const int PROGRESSTYPEUNLOCK = 0;
 
-		// Token: 0x04000719 RID: 1817
+		// Token: 0x04000755 RID: 1877
 		[Nullable(2)]
 		private UniversalDataSystemManager UniversalDataSystemManager;
 
-		// Token: 0x0400071A RID: 1818
+		// Token: 0x04000756 RID: 1878
 		[Nullable(2)]
 		private PlatformSdkNew PlatformSource;
 
-		// Token: 0x0400071B RID: 1819
+		// Token: 0x04000757 RID: 1879
 		private int TrophyContextId;
 
-		// Token: 0x0400071C RID: 1820
+		// Token: 0x04000758 RID: 1880
 		private int TrophyHandleId;
 
-		// Token: 0x0400071D RID: 1821
+		// Token: 0x04000759 RID: 1881
 		[Nullable(new byte[]
 		{
 			2,
@@ -192,11 +192,11 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 		})]
 		private List<ISdkTrophyInfo> CurrentTrophyInfo;
 
-		// Token: 0x0400071E RID: 1822
+		// Token: 0x0400075A RID: 1882
 		[Nullable(1)]
 		private readonly Dictionary<int, ISdkTrophyInfo> CurrentTrophyMap = new Dictionary<int, ISdkTrophyInfo>();
 
-		// Token: 0x0400071F RID: 1823
+		// Token: 0x0400075B RID: 1883
 		[TupleElementNames(new string[]
 		{
 			"TrophyId",
@@ -210,7 +210,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 		})]
 		private readonly List<ValueTuple<int, Action<bool>>> UnlockQueue = new List<ValueTuple<int, Action<bool>>>();
 
-		// Token: 0x04000720 RID: 1824
+		// Token: 0x0400075C RID: 1884
 		private bool IsUnlocking;
 	}
 }

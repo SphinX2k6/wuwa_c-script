@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light.Performance
 {
-	// Token: 0x02003B31 RID: 15153
+	// Token: 0x020030B5 RID: 12469
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Light/Performance/BP_CustomDepthForToon.BP_CustomDepthForToon_C")]
 	[UnrealStructLayout(1464, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1464)]
 	public class BP_CustomDepthForToon_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060217B8 RID: 137144 RVA: 0x008ED840 File Offset: 0x008EBA40
+		// Token: 0x0601DF57 RID: 122711 RVA: 0x00907147 File Offset: 0x00905347
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_CustomDepthForToon_C._ClassPtr == IntPtr.Zero)
@@ -22,111 +22,105 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light.Performance
 			return BP_CustomDepthForToon_C._ClassPtr;
 		}
 
-		// Token: 0x060217B9 RID: 137145 RVA: 0x008ED864 File Offset: 0x008EBA64
+		// Token: 0x0601DF58 RID: 122712 RVA: 0x0090716C File Offset: 0x0090536C
 		public BP_CustomDepthForToon_C() : this(BuiltinUtils.AllocNativeUObject(BP_CustomDepthForToon_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060217BA RID: 137146 RVA: 0x008ED88C File Offset: 0x008EBA8C
+		// Token: 0x0601DF59 RID: 122713 RVA: 0x00907194 File Offset: 0x00905394
 		[NullableContext(1)]
 		public BP_CustomDepthForToon_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_CustomDepthForToon_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170036D1 RID: 14033
-		// (get) Token: 0x060217BB RID: 137147 RVA: 0x008ED8BF File Offset: 0x008EBABF
-		// (set) Token: 0x060217BC RID: 137148 RVA: 0x008ED8D3 File Offset: 0x008EBAD3
+		// Token: 0x1700314D RID: 12621
+		// (get) Token: 0x0601DF5A RID: 122714 RVA: 0x009071C7 File Offset: 0x009053C7
+		// (set) Token: 0x0601DF5B RID: 122715 RVA: 0x009071DB File Offset: 0x009053DB
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CustomDepthForToon_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CustomDepthForToon_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CustomDepthForToon_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CustomDepthForToon_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x060217BD RID: 137149 RVA: 0x008ED8E8 File Offset: 0x008EBAE8
+		// Token: 0x0601DF5C RID: 122716 RVA: 0x009071F0 File Offset: 0x009053F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void DisableCustomDepthForToon()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CustomDepthForToon_C.__DisableCustomDepthForToon_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060217BE RID: 137150 RVA: 0x008ED8FC File Offset: 0x008EBAFC
+		// Token: 0x0601DF5D RID: 122717 RVA: 0x00907204 File Offset: 0x00905404
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void EnableCustomDepthForToon()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CustomDepthForToon_C.__EnableCustomDepthForToon_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060217BF RID: 137151 RVA: 0x008ED910 File Offset: 0x008EBB10
+		// Token: 0x0601DF5E RID: 122718 RVA: 0x00907218 File Offset: 0x00905418
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveDestroyed()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CustomDepthForToon_C.__ReceiveDestroyed_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060217C0 RID: 137152 RVA: 0x008ED924 File Offset: 0x008EBB24
+		// Token: 0x0601DF5F RID: 122719 RVA: 0x0090722C File Offset: 0x0090542C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveDestroyed_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CustomDepthForToon_C.__ReceiveDestroyed_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CustomDepthForToon_C.__ReceiveDestroyed_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060217C1 RID: 137153 RVA: 0x008ED939 File Offset: 0x008EBB39
+		// Token: 0x0601DF60 RID: 122720 RVA: 0x00907240 File Offset: 0x00905440
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CustomDepthForToon_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060217C2 RID: 137154 RVA: 0x008ED94D File Offset: 0x008EBB4D
+		// Token: 0x0601DF61 RID: 122721 RVA: 0x00907254 File Offset: 0x00905454
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CustomDepthForToon_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CustomDepthForToon_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060217C3 RID: 137155 RVA: 0x008ED962 File Offset: 0x008EBB62
+		// Token: 0x0601DF62 RID: 122722 RVA: 0x00907268 File Offset: 0x00905468
 		protected BP_CustomDepthForToon_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010503 RID: 66819
+		// Token: 0x0400FD3C RID: 64828
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Light/Performance/BP_CustomDepthForToon.BP_CustomDepthForToon_C";
 
-		// Token: 0x04010504 RID: 66820
+		// Token: 0x0400FD3D RID: 64829
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010505 RID: 66821
+		// Token: 0x0400FD3E RID: 64830
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010506 RID: 66822
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FD3F RID: 64831
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04010507 RID: 66823
+		// Token: 0x0400FD40 RID: 64832
 		private static IntPtr __DisableCustomDepthForToon_NativeFunctionPtr;
 
-		// Token: 0x04010508 RID: 66824
+		// Token: 0x0400FD41 RID: 64833
 		private static IntPtr __EnableCustomDepthForToon_NativeFunctionPtr;
 
-		// Token: 0x04010509 RID: 66825
+		// Token: 0x0400FD42 RID: 64834
 		private static IntPtr __ReceiveDestroyed_NativeFunctionPtr;
 
-		// Token: 0x0401050A RID: 66826
+		// Token: 0x0400FD43 RID: 64835
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 	}
 }

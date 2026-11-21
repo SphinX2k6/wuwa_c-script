@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EA0 RID: 28320
+	// Token: 0x02007624 RID: 30244
 	public struct IResetPosByPosEntity : IFlatbufferObject
 	{
-		// Token: 0x1700D2DD RID: 53981
-		// (get) Token: 0x060320DB RID: 205019 RVA: 0x006C4FE2 File Offset: 0x006C31E2
+		// Token: 0x1700DE34 RID: 56884
+		// (get) Token: 0x0603511B RID: 217371 RVA: 0x00720D16 File Offset: 0x0071EF16
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060320DC RID: 205020 RVA: 0x006C4FEF File Offset: 0x006C31EF
+		// Token: 0x0603511C RID: 217372 RVA: 0x00720D23 File Offset: 0x0071EF23
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060320DD RID: 205021 RVA: 0x006C4FF8 File Offset: 0x006C31F8
+		// Token: 0x0603511D RID: 217373 RVA: 0x00720D2C File Offset: 0x0071EF2C
 		public static IResetPosByPosEntity GetRootAsIResetPosByPosEntity(ByteBuffer _bb)
 		{
 			return IResetPosByPosEntity.GetRootAsIResetPosByPosEntity(_bb, default(IResetPosByPosEntity));
 		}
 
-		// Token: 0x060320DE RID: 205022 RVA: 0x006C5014 File Offset: 0x006C3214
+		// Token: 0x0603511E RID: 217374 RVA: 0x00720D48 File Offset: 0x0071EF48
 		public static IResetPosByPosEntity GetRootAsIResetPosByPosEntity(ByteBuffer _bb, IResetPosByPosEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060320DF RID: 205023 RVA: 0x006C5031 File Offset: 0x006C3231
+		// Token: 0x0603511F RID: 217375 RVA: 0x00720D65 File Offset: 0x0071EF65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060320E0 RID: 205024 RVA: 0x006C5040 File Offset: 0x006C3240
+		// Token: 0x06035120 RID: 217376 RVA: 0x00720D74 File Offset: 0x0071EF74
 		public IResetPosByPosEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2DE RID: 53982
-		// (get) Token: 0x060320E1 RID: 205025 RVA: 0x006C5050 File Offset: 0x006C3250
+		// Token: 0x1700DE35 RID: 56885
+		// (get) Token: 0x06035121 RID: 217377 RVA: 0x00720D84 File Offset: 0x0071EF84
 		public EResetPosType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D2DF RID: 53983
-		// (get) Token: 0x060320E2 RID: 205026 RVA: 0x006C508C File Offset: 0x006C328C
+		// Token: 0x1700DE36 RID: 56886
+		// (get) Token: 0x06035122 RID: 217378 RVA: 0x00720DC0 File Offset: 0x0071EFC0
 		public int Entity
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060320E3 RID: 205027 RVA: 0x006C50C8 File Offset: 0x006C32C8
+		// Token: 0x06035123 RID: 217379 RVA: 0x00720DFC File Offset: 0x0071EFFC
 		public static Offset<IResetPosByPosEntity> CreateIResetPosByPosEntity(FlatBufferBuilder builder, EResetPosType Type = EResetPosType.PosEntity, int Entity = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetPosByPosEntity.EndIResetPosByPosEntity(builder);
 		}
 
-		// Token: 0x060320E4 RID: 205028 RVA: 0x006C50E5 File Offset: 0x006C32E5
+		// Token: 0x06035124 RID: 217380 RVA: 0x00720E19 File Offset: 0x0071F019
 		public static void StartIResetPosByPosEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060320E5 RID: 205029 RVA: 0x006C50EE File Offset: 0x006C32EE
+		// Token: 0x06035125 RID: 217381 RVA: 0x00720E22 File Offset: 0x0071F022
 		public static void AddType(FlatBufferBuilder builder, EResetPosType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060320E6 RID: 205030 RVA: 0x006C50F9 File Offset: 0x006C32F9
+		// Token: 0x06035126 RID: 217382 RVA: 0x00720E2D File Offset: 0x0071F02D
 		public static void AddEntity(FlatBufferBuilder builder, int entity)
 		{
 			builder.AddInt(1, entity, 0);
 		}
 
-		// Token: 0x060320E7 RID: 205031 RVA: 0x006C5104 File Offset: 0x006C3304
+		// Token: 0x06035127 RID: 217383 RVA: 0x00720E38 File Offset: 0x0071F038
 		public static Offset<IResetPosByPosEntity> EndIResetPosByPosEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<IResetPosByPosEntity>(builder.EndTable());
 		}
 
-		// Token: 0x060320E8 RID: 205032 RVA: 0x006C5114 File Offset: 0x006C3314
+		// Token: 0x06035128 RID: 217384 RVA: 0x00720E48 File Offset: 0x0071F048
 		public IResetPosByPosEntityT UnPack()
 		{
 			IResetPosByPosEntityT resetPosByPosEntityT = new IResetPosByPosEntityT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return resetPosByPosEntityT;
 		}
 
-		// Token: 0x060320E9 RID: 205033 RVA: 0x006C512F File Offset: 0x006C332F
+		// Token: 0x06035129 RID: 217385 RVA: 0x00720E63 File Offset: 0x0071F063
 		public void UnPackTo(IResetPosByPosEntityT _o)
 		{
 			_o.Type = this.Type;
 			_o.Entity = this.Entity;
 		}
 
-		// Token: 0x060320EA RID: 205034 RVA: 0x006C514C File Offset: 0x006C334C
+		// Token: 0x0603512A RID: 217386 RVA: 0x00720E80 File Offset: 0x0071F080
 		public static Offset<IResetPosByPosEntity> Pack(FlatBufferBuilder builder, IResetPosByPosEntityT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetPosByPosEntity.CreateIResetPosByPosEntity(builder, _o.Type, _o.Entity);
 		}
 
-		// Token: 0x04011893 RID: 71827
+		// Token: 0x04012818 RID: 75800
 		private Table __p;
 	}
 }

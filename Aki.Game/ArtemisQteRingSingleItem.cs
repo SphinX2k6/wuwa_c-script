@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001105 RID: 4357
+// Token: 0x020005B9 RID: 1465
 [NullableContext(2)]
 [Nullable(0)]
 public class ArtemisQteRingSingleItem : UiPanelBase
 {
-	// Token: 0x060071A2 RID: 29090 RVA: 0x00173E64 File Offset: 0x00172064
+	// Token: 0x06004538 RID: 17720 RVA: 0x0017C820 File Offset: 0x0017AA20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060071A3 RID: 29091 RVA: 0x00173ED4 File Offset: 0x001720D4
+	// Token: 0x06004539 RID: 17721 RVA: 0x0017C890 File Offset: 0x0017AA90
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ArtemisQteRingSingleItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060071A4 RID: 29092 RVA: 0x00173F17 File Offset: 0x00172117
+	// Token: 0x0600453A RID: 17722 RVA: 0x0017C8D3 File Offset: 0x0017AAD3
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -45,7 +45,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x060071A5 RID: 29093 RVA: 0x00173F34 File Offset: 0x00172134
+	// Token: 0x0600453B RID: 17723 RVA: 0x0017C8F0 File Offset: 0x0017AAF0
 	public void SetRotation(float angle)
 	{
 		FRotator frotator = Rotator.Create(0f, angle, 0f).ToUeRotator();
@@ -67,7 +67,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		perfectItem.GetRootItem().SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x060071A6 RID: 29094 RVA: 0x00173FA0 File Offset: 0x001721A0
+	// Token: 0x0600453C RID: 17724 RVA: 0x0017C95C File Offset: 0x0017AB5C
 	public void InitItem()
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -89,7 +89,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		rootItem3.SetAlpha(1f);
 	}
 
-	// Token: 0x060071A7 RID: 29095 RVA: 0x00174014 File Offset: 0x00172214
+	// Token: 0x0600453D RID: 17725 RVA: 0x0017C9D0 File Offset: 0x0017ABD0
 	public void SetType(EArtemisAreaType type)
 	{
 		this.SetActive(true);
@@ -121,7 +121,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		item4.SetAlpha(0f);
 	}
 
-	// Token: 0x060071A8 RID: 29096 RVA: 0x00174098 File Offset: 0x00172298
+	// Token: 0x0600453E RID: 17726 RVA: 0x0017CA54 File Offset: 0x0017AC54
 	public void SetFill(float amount)
 	{
 		ArtemisQteRingSingleAreaItem normalItem = this.NormalItem;
@@ -157,7 +157,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		perfectItem2.SetCustomMaterialScalarParameter(amount);
 	}
 
-	// Token: 0x060071A9 RID: 29097 RVA: 0x00174110 File Offset: 0x00172310
+	// Token: 0x0600453F RID: 17727 RVA: 0x0017CACC File Offset: 0x0017ACCC
 	public void SetAlpha(float alpha)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -168,7 +168,7 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		rootItem.SetAlpha(alpha);
 	}
 
-	// Token: 0x060071AA RID: 29098 RVA: 0x00174124 File Offset: 0x00172324
+	// Token: 0x06004540 RID: 17728 RVA: 0x0017CAE0 File Offset: 0x0017ACE0
 	[NullableContext(1)]
 	public void PlayAnim(string sequenceName)
 	{
@@ -181,14 +181,14 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x060071AB RID: 29099 RVA: 0x00174178 File Offset: 0x00172378
+	// Token: 0x06004541 RID: 17729 RVA: 0x0017CB34 File Offset: 0x0017AD34
 	[NullableContext(1)]
 	public void PlayLevelSequenceByName(string sequenceName)
 	{
 		this.SequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x060071AC RID: 29100 RVA: 0x0017419C File Offset: 0x0017239C
+	// Token: 0x06004542 RID: 17730 RVA: 0x0017CB58 File Offset: 0x0017AD58
 	[NullableContext(1)]
 	public void StopPlayingSequence(string sequenceName)
 	{
@@ -198,32 +198,32 @@ public class ArtemisQteRingSingleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040034C5 RID: 13509
+	// Token: 0x0400355E RID: 13662
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040034C6 RID: 13510
+	// Token: 0x0400355F RID: 13663
 	private ArtemisQteRingSingleAreaItem NormalItem;
 
-	// Token: 0x040034C7 RID: 13511
+	// Token: 0x04003560 RID: 13664
 	private ArtemisQteRingSingleAreaItem MissItem;
 
-	// Token: 0x040034C8 RID: 13512
+	// Token: 0x04003561 RID: 13665
 	private ArtemisQteRingSingleAreaItem PerfectItem;
 
-	// Token: 0x020076C7 RID: 30407
+	// Token: 0x0200685B RID: 26715
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027337 RID: 160567
+		// Token: 0x04022680 RID: 140928
 		public const int PanelCircleTop = 0;
 
-		// Token: 0x04027338 RID: 160568
+		// Token: 0x04022681 RID: 140929
 		public const int PanelAreaNormal = 1;
 
-		// Token: 0x04027339 RID: 160569
+		// Token: 0x04022682 RID: 140930
 		public const int PanelAreaMiss = 2;
 
-		// Token: 0x0402733A RID: 160570
+		// Token: 0x04022683 RID: 140931
 		public const int PanelAreaPerfect = 3;
 	}
 }

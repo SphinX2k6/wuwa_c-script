@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 {
-	// Token: 0x020000FA RID: 250
+	// Token: 0x020000FE RID: 254
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixNetworkDetectionView : LaunchComponentsAction
 	{
-		// Token: 0x06000832 RID: 2098 RVA: 0x0003D610 File Offset: 0x0003B810
+		// Token: 0x06000866 RID: 2150 RVA: 0x0003F9B0 File Offset: 0x0003DBB0
 		public UniTask LoadAsync(UObject worldContext)
 		{
 			HotFixNetworkDetectionView.<LoadAsync>d__10 <LoadAsync>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return <LoadAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000833 RID: 2099 RVA: 0x0003D65C File Offset: 0x0003B85C
+		// Token: 0x06000867 RID: 2151 RVA: 0x0003F9FC File Offset: 0x0003DBFC
 		protected override void OnStart()
 		{
 			base.GetButton(1).OnClickCallBack.Bind(new Action(this.OnBackBtnClick));
@@ -47,7 +47,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			HotPatchInputManager.Instance.RegisterInputAxis("手柄右摇杆垂直方向", new TInputAxis(this.InputAxis));
 		}
 
-		// Token: 0x06000834 RID: 2100 RVA: 0x0003D750 File Offset: 0x0003B950
+		// Token: 0x06000868 RID: 2152 RVA: 0x0003FAF0 File Offset: 0x0003DCF0
 		private HotFixNetworkDetectionEntryItem CreateDetectionLayoutEntryItem()
 		{
 			HotFixNetworkDetectionEntryItem hotFixNetworkDetectionEntryItem = new HotFixNetworkDetectionEntryItem();
@@ -55,7 +55,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return hotFixNetworkDetectionEntryItem;
 		}
 
-		// Token: 0x06000835 RID: 2101 RVA: 0x0003D770 File Offset: 0x0003B970
+		// Token: 0x06000869 RID: 2153 RVA: 0x0003FB10 File Offset: 0x0003DD10
 		protected override void OnShow()
 		{
 			this.DetectionViewState = EDetectionViewState.Idle;
@@ -67,13 +67,13 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			this.UpdateSelectServer();
 		}
 
-		// Token: 0x06000836 RID: 2102 RVA: 0x0003D7C9 File Offset: 0x0003B9C9
+		// Token: 0x0600086A RID: 2154 RVA: 0x0003FB69 File Offset: 0x0003DD69
 		protected override void OnHide()
 		{
 			HotFixNetworkDetectionModel.Instance.ResetInterruptDetectionCheckTime();
 		}
 
-		// Token: 0x06000837 RID: 2103 RVA: 0x0003D7D5 File Offset: 0x0003B9D5
+		// Token: 0x0600086B RID: 2155 RVA: 0x0003FB75 File Offset: 0x0003DD75
 		protected override void OnBeforeDestroy()
 		{
 			NetworkDetectionLogUploadHandle networkDetectionLogUploadHandle = this.NetworkDetectionLogUploadHandle;
@@ -84,7 +84,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			HotPatchInputManager.Instance.UnRegisterInputAxis("手柄右摇杆垂直方向", new TInputAxis(this.InputAxis));
 		}
 
-		// Token: 0x06000838 RID: 2104 RVA: 0x0003D804 File Offset: 0x0003BA04
+		// Token: 0x0600086C RID: 2156 RVA: 0x0003FBA4 File Offset: 0x0003DDA4
 		private unsafe void CheckAndInitServerSelection()
 		{
 			bool flag = LauncherNetworkDetectionController.Instance.IsGlobalPlayer();
@@ -112,7 +112,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x06000839 RID: 2105 RVA: 0x0003D8E7 File Offset: 0x0003BAE7
+		// Token: 0x0600086D RID: 2157 RVA: 0x0003FC87 File Offset: 0x0003DE87
 		protected void OnBackBtnClick()
 		{
 			if (this.DetectionViewState == EDetectionViewState.Detecting)
@@ -123,19 +123,19 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			this.CloseMe();
 		}
 
-		// Token: 0x0600083A RID: 2106 RVA: 0x0003D909 File Offset: 0x0003BB09
+		// Token: 0x0600086E RID: 2158 RVA: 0x0003FCA9 File Offset: 0x0003DEA9
 		private void SetServerSelectItemActive(bool value)
 		{
 			base.GetElement<HotFixNetworkDetectSelectView>(101).SetActive(value);
 		}
 
-		// Token: 0x0600083B RID: 2107 RVA: 0x0003D919 File Offset: 0x0003BB19
+		// Token: 0x0600086F RID: 2159 RVA: 0x0003FCB9 File Offset: 0x0003DEB9
 		private void SetUploadLogTipsItemActive(bool value)
 		{
 			base.GetElement<HotFixNetworkDetectionTips>(102).SetActive(value);
 		}
 
-		// Token: 0x0600083C RID: 2108 RVA: 0x0003D929 File Offset: 0x0003BB29
+		// Token: 0x06000870 RID: 2160 RVA: 0x0003FCC9 File Offset: 0x0003DEC9
 		private void OnSelectServerBtnClick()
 		{
 			if (this.DetectionViewState == EDetectionViewState.Detecting || this.DetectionViewState == EDetectionViewState.Uploading)
@@ -146,7 +146,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			this.SetServerSelectItemActive(true);
 		}
 
-		// Token: 0x0600083D RID: 2109 RVA: 0x0003D958 File Offset: 0x0003BB58
+		// Token: 0x06000871 RID: 2161 RVA: 0x0003FCF8 File Offset: 0x0003DEF8
 		private void UpdateSelectServer()
 		{
 			ILoginServersData currentSelectServerData = HotFixNetworkDetectionModel.Instance.CurrentSelectServerData;
@@ -162,7 +162,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			this.UpdateButtonState();
 		}
 
-		// Token: 0x0600083E RID: 2110 RVA: 0x0003D9AC File Offset: 0x0003BBAC
+		// Token: 0x06000872 RID: 2162 RVA: 0x0003FD4C File Offset: 0x0003DF4C
 		private void UpdateButtonState()
 		{
 			ILoginServersData currentSelectServerData = HotFixNetworkDetectionModel.Instance.CurrentSelectServerData;
@@ -197,7 +197,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x0600083F RID: 2111 RVA: 0x0003DAD8 File Offset: 0x0003BCD8
+		// Token: 0x06000873 RID: 2163 RVA: 0x0003FE78 File Offset: 0x0003E078
 		protected void OnLeftBtnClick()
 		{
 			if (this.DetectionViewState == EDetectionViewState.Detecting)
@@ -208,7 +208,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			this.CloseMe();
 		}
 
-		// Token: 0x06000840 RID: 2112 RVA: 0x0003DAFA File Offset: 0x0003BCFA
+		// Token: 0x06000874 RID: 2164 RVA: 0x0003FE9A File Offset: 0x0003E09A
 		private void CloseMe()
 		{
 			base.SetActive(false);
@@ -218,7 +218,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			LauncherNetworkDetectionController.Instance.ForceStopDomainDetect();
 		}
 
-		// Token: 0x06000841 RID: 2113 RVA: 0x0003DB2C File Offset: 0x0003BD2C
+		// Token: 0x06000875 RID: 2165 RVA: 0x0003FECC File Offset: 0x0003E0CC
 		private void OnRightBtnClick()
 		{
 			switch (this.DetectionViewState)
@@ -244,7 +244,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x06000842 RID: 2114 RVA: 0x0003DBB8 File Offset: 0x0003BDB8
+		// Token: 0x06000876 RID: 2166 RVA: 0x0003FF58 File Offset: 0x0003E158
 		private UniTask ProceedDetection()
 		{
 			HotFixNetworkDetectionView.<ProceedDetection>d__26 <ProceedDetection>d__;
@@ -255,7 +255,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			return <ProceedDetection>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000843 RID: 2115 RVA: 0x0003DBFC File Offset: 0x0003BDFC
+		// Token: 0x06000877 RID: 2167 RVA: 0x0003FF9C File Offset: 0x0003E19C
 		private void OnLogUploadFinish()
 		{
 			this.DetectionViewState = EDetectionViewState.UpLoadComplete;
@@ -264,7 +264,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			this.CloseMe();
 		}
 
-		// Token: 0x06000844 RID: 2116 RVA: 0x0003DC38 File Offset: 0x0003BE38
+		// Token: 0x06000878 RID: 2168 RVA: 0x0003FFD8 File Offset: 0x0003E1D8
 		private void OnSelectServerCallBack()
 		{
 			ILoginServersData currentUiSelectSeverData = HotFixNetworkDetectionModel.Instance.CurrentUiSelectSeverData;
@@ -281,7 +281,7 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x06000845 RID: 2117 RVA: 0x0003DC8D File Offset: 0x0003BE8D
+		// Token: 0x06000879 RID: 2169 RVA: 0x0004002D File Offset: 0x0003E22D
 		private void InputAxis(float value, string axisName)
 		{
 			if (value == 0f)
@@ -294,84 +294,84 @@ namespace CSharpScript.Launcher.Ui.HotFix.NetWorkDetection
 			}
 		}
 
-		// Token: 0x040004AA RID: 1194
+		// Token: 0x040004E5 RID: 1253
 		private HotFixLayout<HotFixNetworkDetectionEntryItem, IHotFixNetworkDetectionLayoutItemData> DetectionLayout;
 
-		// Token: 0x040004AB RID: 1195
+		// Token: 0x040004E6 RID: 1254
 		private readonly List<HotFixNetworkDetectionEntryItem> DetectionLayoutItemList = new List<HotFixNetworkDetectionEntryItem>();
 
-		// Token: 0x040004AC RID: 1196
+		// Token: 0x040004E7 RID: 1255
 		[Nullable(2)]
 		private NetworkDetectionLogUploadHandle NetworkDetectionLogUploadHandle;
 
-		// Token: 0x040004AD RID: 1197
+		// Token: 0x040004E8 RID: 1256
 		private EDetectionViewState DetectionViewState;
 
-		// Token: 0x040004AE RID: 1198
+		// Token: 0x040004E9 RID: 1257
 		[Nullable(2)]
 		private HotFixButtonItem RightButtonItem;
 
-		// Token: 0x040004AF RID: 1199
+		// Token: 0x040004EA RID: 1258
 		private string DetectionTraceText = "";
 
-		// Token: 0x040004B0 RID: 1200
+		// Token: 0x040004EB RID: 1259
 		private string TraceId = "";
 
-		// Token: 0x040004B1 RID: 1201
+		// Token: 0x040004EC RID: 1260
 		[Nullable(2)]
 		private HotFixNetworkDetectionTips HotFixNetworkDetectionUploadLogTips;
 
-		// Token: 0x040004B2 RID: 1202
+		// Token: 0x040004ED RID: 1261
 		[Nullable(2)]
 		private HotFixNetworkDetectionTips HotFixNetworkDetectionTips;
 
-		// Token: 0x02000391 RID: 913
+		// Token: 0x0200039E RID: 926
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0400125B RID: 4699
+			// Token: 0x040012D1 RID: 4817
 			public const int BtnMask = 0;
 
-			// Token: 0x0400125C RID: 4700
+			// Token: 0x040012D2 RID: 4818
 			public const int BtnBack = 1;
 
-			// Token: 0x0400125D RID: 4701
+			// Token: 0x040012D3 RID: 4819
 			public const int TxtTitle = 2;
 
-			// Token: 0x0400125E RID: 4702
+			// Token: 0x040012D4 RID: 4820
 			public const int PnlServer = 3;
 
-			// Token: 0x0400125F RID: 4703
+			// Token: 0x040012D5 RID: 4821
 			public const int TxtServer = 4;
 
-			// Token: 0x04001260 RID: 4704
+			// Token: 0x040012D6 RID: 4822
 			public const int BtnFunctionD = 5;
 
-			// Token: 0x04001261 RID: 4705
+			// Token: 0x040012D7 RID: 4823
 			public const int ScrollView = 6;
 
-			// Token: 0x04001262 RID: 4706
+			// Token: 0x040012D8 RID: 4824
 			public const int NetInfoItem = 7;
 
-			// Token: 0x04001263 RID: 4707
+			// Token: 0x040012D9 RID: 4825
 			public const int BtnLeft = 8;
 
-			// Token: 0x04001264 RID: 4708
+			// Token: 0x040012DA RID: 4826
 			public const int BtnRight = 9;
 
-			// Token: 0x04001265 RID: 4709
+			// Token: 0x040012DB RID: 4827
 			public const int NetInfoContent = 10;
 
-			// Token: 0x04001266 RID: 4710
+			// Token: 0x040012DC RID: 4828
 			public const int TextTips = 11;
 
-			// Token: 0x04001267 RID: 4711
+			// Token: 0x040012DD RID: 4829
 			public const int SelServerPop = 101;
 
-			// Token: 0x04001268 RID: 4712
+			// Token: 0x040012DE RID: 4830
 			public const int UploadLogTips = 102;
 
-			// Token: 0x04001269 RID: 4713
+			// Token: 0x040012DF RID: 4831
 			public const int Tips = 103;
 		}
 	}

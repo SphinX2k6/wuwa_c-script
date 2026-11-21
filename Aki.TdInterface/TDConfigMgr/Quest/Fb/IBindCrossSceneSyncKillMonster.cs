@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001347 RID: 4935
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001497 RID: 5271
 	public class IBindCrossSceneSyncKillMonster
 	{
-		// Token: 0x0600711B RID: 28955 RVA: 0x00110C67 File Offset: 0x0010EE67
+		// Token: 0x060077BB RID: 30651 RVA: 0x0011F1D3 File Offset: 0x0011D3D3
 		public static IBindCrossSceneSyncKillMonster Create(IBindCrossSceneSyncKillMonster? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002460 RID: 9312
-		// (get) Token: 0x0600711C RID: 28956 RVA: 0x00110C88 File Offset: 0x0010EE88
+		// Token: 0x1700262F RID: 9775
+		// (get) Token: 0x060077BC RID: 30652 RVA: 0x0011F1F4 File Offset: 0x0011D3F4
 		public virtual List<int> EntityBundleIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400414F RID: 16719
+		// Token: 0x040044CB RID: 17611
 		private IBindCrossSceneSyncKillMonster Instance;
 
-		// Token: 0x04004150 RID: 16720
+		// Token: 0x040044CC RID: 17612
 		private List<int> _EntityBundleIdsCache;
 
-		// Token: 0x04004151 RID: 16721
+		// Token: 0x040044CD RID: 17613
 		private bool _EntityBundleIdsInited;
 	}
 }

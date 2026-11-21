@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CDB RID: 19675
+	// Token: 0x02003C8D RID: 15501
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleLevelUpSuccessAttributeView : UiViewBase
 	{
-		// Token: 0x06032CA0 RID: 208032 RVA: 0x00BD5853 File Offset: 0x00BD3A53
+		// Token: 0x06027A75 RID: 162421 RVA: 0x00B1AF5A File Offset: 0x00B1915A
 		[NullableContext(1)]
 		public RoleLevelUpSuccessAttributeView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032CA1 RID: 208033 RVA: 0x00BD585C File Offset: 0x00BD3A5C
+		// Token: 0x06027A76 RID: 162422 RVA: 0x00B1AF64 File Offset: 0x00B19164
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			};
 		}
 
-		// Token: 0x06032CA2 RID: 208034 RVA: 0x00BD59BC File Offset: 0x00BD3BBC
+		// Token: 0x06027A77 RID: 162423 RVA: 0x00B1B0C4 File Offset: 0x00B192C4
 		protected override void OnBeforeCreate()
 		{
 			if (this.OpenParam == null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.SetAudio();
 		}
 
-		// Token: 0x06032CA3 RID: 208035 RVA: 0x00BD5A08 File Offset: 0x00BD3C08
+		// Token: 0x06027A78 RID: 162424 RVA: 0x00B1B110 File Offset: 0x00B19310
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleLevelUpSuccessAttributeView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CA4 RID: 208036 RVA: 0x00BD5A4C File Offset: 0x00BD3C4C
+		// Token: 0x06027A79 RID: 162425 RVA: 0x00B1B154 File Offset: 0x00B19354
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(5);
@@ -87,13 +87,13 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.AttributeDynScrollView.Init().Forget();
 		}
 
-		// Token: 0x06032CA5 RID: 208037 RVA: 0x00BD5B47 File Offset: 0x00BD3D47
+		// Token: 0x06027A7A RID: 162426 RVA: 0x00B1B24F File Offset: 0x00B1944F
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06032CA6 RID: 208038 RVA: 0x00BD5B4F File Offset: 0x00BD3D4F
+		// Token: 0x06027A7B RID: 162427 RVA: 0x00B1B257 File Offset: 0x00B19457
 		protected override void OnBeforeDestroy()
 		{
 			this.LevelPanel.Destroy(null);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.AttributeDynScrollView = null;
 		}
 
-		// Token: 0x06032CA7 RID: 208039 RVA: 0x00BD5B78 File Offset: 0x00BD3D78
+		// Token: 0x06027A7C RID: 162428 RVA: 0x00B1B280 File Offset: 0x00B19480
 		private void SetAudio()
 		{
 			string audioId = this.Data.AudioId;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CA8 RID: 208040 RVA: 0x00BD5BB8 File Offset: 0x00BD3DB8
+		// Token: 0x06027A7D RID: 162429 RVA: 0x00B1B2C0 File Offset: 0x00B194C0
 		private void OnClickButton()
 		{
 			Action clickFunction = this.Data.ClickFunction;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06032CA9 RID: 208041 RVA: 0x00BD5BE1 File Offset: 0x00BD3DE1
+		// Token: 0x06027A7E RID: 162430 RVA: 0x00B1B2E9 File Offset: 0x00B194E9
 		public void Refresh()
 		{
 			this.SetTitle();
@@ -135,21 +135,21 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshArrowPanel();
 		}
 
-		// Token: 0x06032CAA RID: 208042 RVA: 0x00BD5C08 File Offset: 0x00BD3E08
+		// Token: 0x06027A7F RID: 162431 RVA: 0x00B1B310 File Offset: 0x00B19510
 		private void SetTipsText()
 		{
 			string key = this.Data.ClickText ?? "Text_BackToView_Text";
 			base.GetText(1).ShowTextNew(key);
 		}
 
-		// Token: 0x06032CAB RID: 208043 RVA: 0x00BD5C38 File Offset: 0x00BD3E38
+		// Token: 0x06027A80 RID: 162432 RVA: 0x00B1B340 File Offset: 0x00B19540
 		private void SetTitle()
 		{
 			string key = this.Data.Title ?? "Text_LevelUpSuccessful_Text";
 			base.GetText(0).ShowTextNew(key);
 		}
 
-		// Token: 0x06032CAC RID: 208044 RVA: 0x00BD5C68 File Offset: 0x00BD3E68
+		// Token: 0x06027A81 RID: 162433 RVA: 0x00B1B370 File Offset: 0x00B19570
 		private void RefreshLevelPanel()
 		{
 			ILevelInfo levelInfo = this.Data.LevelInfo;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetItem(5).SetUIActive(levelInfo != null);
 		}
 
-		// Token: 0x06032CAD RID: 208045 RVA: 0x00BD5CB8 File Offset: 0x00BD3EB8
+		// Token: 0x06027A82 RID: 162434 RVA: 0x00B1B3C0 File Offset: 0x00B195C0
 		private void RefreshStrengthInfo()
 		{
 			IStrengthUpgradeData strengthUpgradeData = this.Data.StrengthUpgradeData;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032CAE RID: 208046 RVA: 0x00BD5CE0 File Offset: 0x00BD3EE0
+		// Token: 0x06027A83 RID: 162435 RVA: 0x00B1B3E8 File Offset: 0x00B195E8
 		private void RefreshAttributePanel()
 		{
 			if (this.Data.AttributeInfo == null || this.Data.AttributeInfo.Count == 0)
@@ -181,22 +181,22 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.AttributeDynScrollView.RefreshByData(this.Data.AttributeInfo.ToArray(), false, false);
 		}
 
-		// Token: 0x06032CAF RID: 208047 RVA: 0x00BD5D44 File Offset: 0x00BD3F44
+		// Token: 0x06027A84 RID: 162436 RVA: 0x00B1B44C File Offset: 0x00B1964C
 		private void RefreshArrowPanel()
 		{
 			base.GetItem(4).SetUIActive(this.Data.IsShowArrow.GetValueOrDefault());
 		}
 
-		// Token: 0x0401B0A4 RID: 110756
+		// Token: 0x04015A28 RID: 88616
 		private ILevelUpSuccessAttributeData Data;
 
-		// Token: 0x0401B0A5 RID: 110757
+		// Token: 0x04015A29 RID: 88617
 		private LevelShowItem LevelPanel;
 
-		// Token: 0x0401B0A6 RID: 110758
+		// Token: 0x04015A2A RID: 88618
 		private StrengthUpgradeBarItem StrengthItem;
 
-		// Token: 0x0401B0A7 RID: 110759
+		// Token: 0x04015A2B RID: 88619
 		[Nullable(new byte[]
 		{
 			2,
@@ -206,36 +206,36 @@ namespace CSharpScript.Game.Module.RoleUi
 		})]
 		private DynamicScrollView<AttributeDynScrollItem, AttributeSlotDynItem, IAttributeInfo> AttributeDynScrollView;
 
-		// Token: 0x0401B0A8 RID: 110760
+		// Token: 0x04015A2C RID: 88620
 		private AttributeSlotDynItem AttributeSlotDynItem;
 
-		// Token: 0x0200AE53 RID: 44627
+		// Token: 0x02009872 RID: 39026
 		[NullableContext(0)]
 		private enum ERoleSuccessAttributeNode
 		{
-			// Token: 0x04034EE1 RID: 216801
+			// Token: 0x0402F889 RID: 194697
 			Title,
-			// Token: 0x04034EE2 RID: 216802
+			// Token: 0x0402F88A RID: 194698
 			TipsText,
-			// Token: 0x04034EE3 RID: 216803
+			// Token: 0x0402F88B RID: 194699
 			TipsButton,
-			// Token: 0x04034EE4 RID: 216804
+			// Token: 0x0402F88C RID: 194700
 			AttributeSlot,
-			// Token: 0x04034EE5 RID: 216805
+			// Token: 0x0402F88D RID: 194701
 			PanelArrow,
-			// Token: 0x04034EE6 RID: 216806
+			// Token: 0x0402F88E RID: 194702
 			PanelLevel,
-			// Token: 0x04034EE7 RID: 216807
+			// Token: 0x0402F88F RID: 194703
 			DynScrollView,
-			// Token: 0x04034EE8 RID: 216808
+			// Token: 0x0402F890 RID: 194704
 			ButtonScrollView,
-			// Token: 0x04034EE9 RID: 216809
+			// Token: 0x0402F891 RID: 194705
 			AttributeContent,
-			// Token: 0x04034EEA RID: 216810
+			// Token: 0x0402F892 RID: 194706
 			AttributeSlotWider,
-			// Token: 0x04034EEB RID: 216811
+			// Token: 0x0402F893 RID: 194707
 			StrengthItem,
-			// Token: 0x04034EEC RID: 216812
+			// Token: 0x0402F894 RID: 194708
 			SoarStrengthItem
 		}
 	}

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004626 RID: 17958
+	// Token: 0x02004A8E RID: 19086
 	public enum EGoToNodeTreeType : byte
 	{
-		// Token: 0x0400C79C RID: 51100
+		// Token: 0x0400D1CB RID: 53707
 		None,
-		// Token: 0x0400C79D RID: 51101
+		// Token: 0x0400D1CC RID: 53708
 		Quest,
-		// Token: 0x0400C79E RID: 51102
+		// Token: 0x0400D1CD RID: 53709
 		LevelPlay,
-		// Token: 0x0400C79F RID: 51103
+		// Token: 0x0400D1CE RID: 53710
 		Dungeon
 	}
 }

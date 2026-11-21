@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 {
-	// Token: 0x02006546 RID: 25926
+	// Token: 0x020054C4 RID: 21700
 	public class MatchThreeLevelDetailViewModel
 	{
-		// Token: 0x1700953A RID: 38202
-		// (get) Token: 0x06040FCD RID: 266189 RVA: 0x00FBF960 File Offset: 0x00FBDB60
+		// Token: 0x1700689C RID: 26780
+		// (get) Token: 0x06035C92 RID: 220306 RVA: 0x00F06950 File Offset: 0x00F04B50
 		public int CurrentLevelId
 		{
 			get
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x04021E1D RID: 138781
+		// Token: 0x0401C74E RID: 116558
 		[Nullable(1)]
 		public MatchThreeChapterSelectData ChapterData;
 
-		// Token: 0x04021E1E RID: 138782
+		// Token: 0x0401C74F RID: 116559
 		public int DifficultyIndex;
 
-		// Token: 0x04021E1F RID: 138783
+		// Token: 0x0401C750 RID: 116560
 		public int SelectedRoleId;
 	}
 }

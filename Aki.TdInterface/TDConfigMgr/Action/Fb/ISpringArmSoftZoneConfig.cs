@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A4 RID: 10404
+	// Token: 0x02002B79 RID: 11129
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISpringArmSoftZoneConfig
 	{
-		// Token: 0x0600E651 RID: 58961 RVA: 0x0021D712 File Offset: 0x0021B912
-		[NullableContext(1)]
+		// Token: 0x0600F480 RID: 62592 RVA: 0x0023A692 File Offset: 0x00238892
+		[NullableContext(0)]
 		public static ISpringArmSoftZoneConfig Create(ISpringArmSoftZoneConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046CB RID: 18123
-		// (get) Token: 0x0600E652 RID: 58962 RVA: 0x0021D731 File Offset: 0x0021B931
+		// Token: 0x17004A3C RID: 19004
+		// (get) Token: 0x0600F481 RID: 62593 RVA: 0x0023A6B1 File Offset: 0x002388B1
 		public virtual ISingleAxisSpringArmSoftZoneConfig LeftRightConfig
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046CC RID: 18124
-		// (get) Token: 0x0600E653 RID: 58963 RVA: 0x0021D765 File Offset: 0x0021B965
+		// Token: 0x17004A3D RID: 19005
+		// (get) Token: 0x0600F482 RID: 62594 RVA: 0x0023A6E5 File Offset: 0x002388E5
 		public virtual ISingleAxisSpringArmSoftZoneConfig ForwardBackConfig
 		{
 			get
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046CD RID: 18125
-		// (get) Token: 0x0600E654 RID: 58964 RVA: 0x0021D799 File Offset: 0x0021B999
+		// Token: 0x17004A3E RID: 19006
+		// (get) Token: 0x0600F483 RID: 62595 RVA: 0x0023A719 File Offset: 0x00238919
 		public virtual ISingleAxisSpringArmSoftZoneConfig UpDownConfig
 		{
 			get
@@ -71,25 +71,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F54 RID: 32596
+		// Token: 0x04008613 RID: 34323
 		private ISpringArmSoftZoneConfig Instance;
 
-		// Token: 0x04007F55 RID: 32597
+		// Token: 0x04008614 RID: 34324
 		private ISingleAxisSpringArmSoftZoneConfig _LeftRightConfigCache;
 
-		// Token: 0x04007F56 RID: 32598
+		// Token: 0x04008615 RID: 34325
 		private bool _LeftRightConfigInited;
 
-		// Token: 0x04007F57 RID: 32599
+		// Token: 0x04008616 RID: 34326
 		private ISingleAxisSpringArmSoftZoneConfig _ForwardBackConfigCache;
 
-		// Token: 0x04007F58 RID: 32600
+		// Token: 0x04008617 RID: 34327
 		private bool _ForwardBackConfigInited;
 
-		// Token: 0x04007F59 RID: 32601
+		// Token: 0x04008618 RID: 34328
 		private ISingleAxisSpringArmSoftZoneConfig _UpDownConfigCache;
 
-		// Token: 0x04007F5A RID: 32602
+		// Token: 0x04008619 RID: 34329
 		private bool _UpDownConfigInited;
 	}
 }

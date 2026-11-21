@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020023B6 RID: 9142
+// Token: 0x0200189B RID: 6299
 public class RoleShowEntry
 {
-	// Token: 0x060124AE RID: 74926 RVA: 0x004814E4 File Offset: 0x0047F6E4
+	// Token: 0x0600F960 RID: 63840 RVA: 0x0048E9CC File Offset: 0x0048CBCC
 	public RoleShowEntry(int roleId, int level)
 	{
 		this.Proto_RoleId = roleId;
 		this.Proto_Level = level;
 	}
 
-	// Token: 0x04008A06 RID: 35334
+	// Token: 0x04008B4D RID: 35661
 	public int Proto_RoleId;
 
-	// Token: 0x04008A07 RID: 35335
+	// Token: 0x04008B4E RID: 35662
 	public int Proto_Level;
 }

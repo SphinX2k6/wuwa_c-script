@@ -13,10 +13,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC7 RID: 23751
+	// Token: 0x02004CA9 RID: 19625
 	public class MoveCursorPanel : BattleVisibleChildView, IExtraShowCursor, IBattleUiCenterPanelOtherMovePanel
 	{
-		// Token: 0x0603C0DB RID: 245979 RVA: 0x00E5CBAB File Offset: 0x00E5ADAB
+		// Token: 0x06031030 RID: 200752 RVA: 0x00DAD2BF File Offset: 0x00DAB4BF
 		[NullableContext(1)]
 		public void CreateDynamic(UUIItem parentItem)
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.CreateThenShowByResourceIdAsync("UiItem_SlashTip", parentItem, false).Forget();
 		}
 
-		// Token: 0x0603C0DC RID: 245980 RVA: 0x00E5CBD0 File Offset: 0x00E5ADD0
+		// Token: 0x06031031 RID: 200753 RVA: 0x00DAD2E4 File Offset: 0x00DAB4E4
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0DD RID: 245981 RVA: 0x00E5CC0E File Offset: 0x00E5AE0E
+		// Token: 0x06031032 RID: 200754 RVA: 0x00DAD322 File Offset: 0x00DAB522
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.TxtBtn = base.GetTexture(1);
 		}
 
-		// Token: 0x0603C0DE RID: 245982 RVA: 0x00E5CC30 File Offset: 0x00E5AE30
+		// Token: 0x06031033 RID: 200755 RVA: 0x00DAD344 File Offset: 0x00DAB544
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C0DF RID: 245983 RVA: 0x00E5CC78 File Offset: 0x00E5AE78
+		// Token: 0x06031034 RID: 200756 RVA: 0x00DAD38C File Offset: 0x00DAB58C
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 		}
 
-		// Token: 0x0603C0E0 RID: 245984 RVA: 0x00E5CE1C File Offset: 0x00E5B01C
+		// Token: 0x06031035 RID: 200757 RVA: 0x00DAD530 File Offset: 0x00DAB730
 		private void OnTagAddOrRemove(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0E1 RID: 245985 RVA: 0x00E5CEE0 File Offset: 0x00E5B0E0
+		// Token: 0x06031036 RID: 200758 RVA: 0x00DAD5F4 File Offset: 0x00DAB7F4
 		private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			if (this.TagIdVisible != null)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit(EEventName.RefreshCursor);
 		}
 
-		// Token: 0x0603C0E2 RID: 245986 RVA: 0x00E5CFF0 File Offset: 0x00E5B1F0
+		// Token: 0x06031037 RID: 200759 RVA: 0x00DAD704 File Offset: 0x00DAB904
 		private void SetTexBtnIcon()
 		{
 			if (Info.Instance.IsInKeyBoard())
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetTextureByPath("/Game/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_XboxL2_UI.T_IconPcBtn_XboxL2_UI", this.TxtBtn, null, null);
 		}
 
-		// Token: 0x0603C0E3 RID: 245987 RVA: 0x00E5D040 File Offset: 0x00E5B240
+		// Token: 0x06031038 RID: 200760 RVA: 0x00DAD754 File Offset: 0x00DAB954
 		protected override void OnHideBattleChildView()
 		{
 			if (this.NeedCursor)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0E4 RID: 245988 RVA: 0x00E5D162 File Offset: 0x00E5B362
+		// Token: 0x06031039 RID: 200761 RVA: 0x00DAD876 File Offset: 0x00DABA76
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x0603C0E5 RID: 245989 RVA: 0x00E5D17C File Offset: 0x00E5B37C
+		// Token: 0x0603103A RID: 200762 RVA: 0x00DAD890 File Offset: 0x00DABA90
 		[NullableContext(1)]
 		private static void InputAction(string name, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -283,13 +283,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0E6 RID: 245990 RVA: 0x00E5D1CA File Offset: 0x00E5B3CA
+		// Token: 0x0603103B RID: 200763 RVA: 0x00DAD8DE File Offset: 0x00DABADE
 		public bool IsShowCursor()
 		{
 			return Info.Instance.IsInKeyBoard() && this.NeedCursor;
 		}
 
-		// Token: 0x0603C0E7 RID: 245991 RVA: 0x00E5D1E0 File Offset: 0x00E5B3E0
+		// Token: 0x0603103C RID: 200764 RVA: 0x00DAD8F4 File Offset: 0x00DABAF4
 		public void Tick(float delta)
 		{
 			if (!this.IsShowCursor())
@@ -358,84 +358,84 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F518 RID: 128280
+		// Token: 0x04019FD1 RID: 106449
 		private const float SECTOR_ANGLE_SIZE = 0.022222223f;
 
-		// Token: 0x0401F519 RID: 128281
+		// Token: 0x04019FD2 RID: 106450
 		private const float HALF_SECTOR_ANGLE_SIZE = 22.5f;
 
-		// Token: 0x0401F51A RID: 128282
+		// Token: 0x04019FD3 RID: 106451
 		private const int SECTOR_NUM = 8;
 
-		// Token: 0x0401F51B RID: 128283
+		// Token: 0x04019FD4 RID: 106452
 		[Nullable(1)]
 		private const string MOUSE_SAFE_AREA_KEY = "GuyingxiongkaiSafeArea";
 
-		// Token: 0x0401F51C RID: 128284
+		// Token: 0x04019FD5 RID: 106453
 		[Nullable(1)]
 		private const string THIS_VIEW_NAME = "MoveCursorPanel";
 
-		// Token: 0x0401F51D RID: 128285
+		// Token: 0x04019FD6 RID: 106454
 		private float MouseSafeAreaX;
 
-		// Token: 0x0401F51E RID: 128286
+		// Token: 0x04019FD7 RID: 106455
 		private float MouseSafeAreaY;
 
-		// Token: 0x0401F51F RID: 128287
+		// Token: 0x04019FD8 RID: 106456
 		private MoveCursorPanel.ESectorScreen LastSector;
 
-		// Token: 0x0401F520 RID: 128288
+		// Token: 0x04019FD9 RID: 106457
 		private bool NeedCursor = true;
 
-		// Token: 0x0401F521 RID: 128289
+		// Token: 0x04019FDA RID: 106458
 		[Nullable(2)]
 		private int[] TagIdVisible;
 
-		// Token: 0x0401F522 RID: 128290
+		// Token: 0x04019FDB RID: 106459
 		[Nullable(2)]
 		private UUITexture TxtBtn;
 
-		// Token: 0x0401F523 RID: 128291
+		// Token: 0x04019FDC RID: 106460
 		[Nullable(2)]
 		private BaseTagComponent GameplayTagComp;
 
-		// Token: 0x0401F524 RID: 128292
+		// Token: 0x04019FDD RID: 106461
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BECF RID: 48847
+		// Token: 0x0200A8D5 RID: 43221
 		private enum EChildType
 		{
-			// Token: 0x040398BE RID: 235710
+			// Token: 0x0403427F RID: 213631
 			TexBtn = 1
 		}
 
-		// Token: 0x0200BED0 RID: 48848
+		// Token: 0x0200A8D6 RID: 43222
 		private enum ESectorScreen
 		{
-			// Token: 0x040398C0 RID: 235712
+			// Token: 0x04034281 RID: 213633
 			Right,
-			// Token: 0x040398C1 RID: 235713
+			// Token: 0x04034282 RID: 213634
 			UpRight,
-			// Token: 0x040398C2 RID: 235714
+			// Token: 0x04034283 RID: 213635
 			Up,
-			// Token: 0x040398C3 RID: 235715
+			// Token: 0x04034284 RID: 213636
 			UpLeft,
-			// Token: 0x040398C4 RID: 235716
+			// Token: 0x04034285 RID: 213637
 			Left,
-			// Token: 0x040398C5 RID: 235717
+			// Token: 0x04034286 RID: 213638
 			DowLeft,
-			// Token: 0x040398C6 RID: 235718
+			// Token: 0x04034287 RID: 213639
 			Down,
-			// Token: 0x040398C7 RID: 235719
+			// Token: 0x04034288 RID: 213640
 			DownRight
 		}
 
-		// Token: 0x0200BED1 RID: 48849
+		// Token: 0x0200A8D7 RID: 43223
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040398C8 RID: 235720
+			// Token: 0x04034289 RID: 213641
 			public static TInputHandle<InputDistributeDefine.EActionType> <0>__InputAction;
 		}
 	}

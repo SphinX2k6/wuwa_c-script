@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014BB RID: 5307
+// Token: 0x0200096F RID: 2415
 public class RoleGiftSplashView : UiViewBase
 {
-	// Token: 0x0600966C RID: 38508 RVA: 0x00207B18 File Offset: 0x00205D18
+	// Token: 0x06006A01 RID: 27137 RVA: 0x00210A84 File Offset: 0x0020EC84
 	[NullableContext(1)]
 	public RoleGiftSplashView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600966D RID: 38509 RVA: 0x00207B24 File Offset: 0x00205D24
+	// Token: 0x06006A02 RID: 27138 RVA: 0x00210A90 File Offset: 0x0020EC90
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -38,13 +38,13 @@ public class RoleGiftSplashView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600966E RID: 38510 RVA: 0x00207BCA File Offset: 0x00205DCA
+	// Token: 0x06006A03 RID: 27139 RVA: 0x00210B36 File Offset: 0x0020ED36
 	protected override void OnBeforeShow()
 	{
 		this.FinishRoleGiftSplashScreenTask();
 	}
 
-	// Token: 0x0600966F RID: 38511 RVA: 0x00207BD2 File Offset: 0x00205DD2
+	// Token: 0x06006A04 RID: 27140 RVA: 0x00210B3E File Offset: 0x0020ED3E
 	private void FinishRoleGiftSplashScreenTask()
 	{
 		if (this.SplashScreenTaskFinished)
@@ -55,7 +55,7 @@ public class RoleGiftSplashView : UiViewBase
 		SplashScreenController.Instance.FinishCurTask(ESplashScreenSourceModuleType.RoleGiftActivity);
 	}
 
-	// Token: 0x06009670 RID: 38512 RVA: 0x00207BF0 File Offset: 0x00205DF0
+	// Token: 0x06006A05 RID: 27141 RVA: 0x00210B5C File Offset: 0x0020ED5C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleGiftSplashView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -66,13 +66,13 @@ public class RoleGiftSplashView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009671 RID: 38513 RVA: 0x00207C33 File Offset: 0x00205E33
+	// Token: 0x06006A06 RID: 27142 RVA: 0x00210B9F File Offset: 0x0020ED9F
 	protected override void OnStart()
 	{
 		this.RefreshRoleDesc();
 	}
 
-	// Token: 0x06009672 RID: 38514 RVA: 0x00207C3C File Offset: 0x00205E3C
+	// Token: 0x06006A07 RID: 27143 RVA: 0x00210BA8 File Offset: 0x0020EDA8
 	private unsafe void RefreshRoleDesc()
 	{
 		RoleGiftData roleGiftDataCached = this.RoleGiftDataCached;
@@ -108,7 +108,7 @@ public class RoleGiftSplashView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009673 RID: 38515 RVA: 0x00207CDC File Offset: 0x00205EDC
+	// Token: 0x06006A08 RID: 27144 RVA: 0x00210C48 File Offset: 0x0020EE48
 	private unsafe void OnClickLook()
 	{
 		RoleGiftData roleGiftDataCached = this.RoleGiftDataCached;
@@ -144,7 +144,7 @@ public class RoleGiftSplashView : UiViewBase
 		instance.OpenRoleMainView(agentType, selectRoleId, list, null, null);
 	}
 
-	// Token: 0x06009674 RID: 38516 RVA: 0x00207E10 File Offset: 0x00206010
+	// Token: 0x06006A09 RID: 27145 RVA: 0x00210D7C File Offset: 0x0020EF7C
 	private void OnBtnConfirmClick()
 	{
 		int activityIdCached = this.ActivityIdCached;
@@ -160,26 +160,26 @@ public class RoleGiftSplashView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04004263 RID: 16995
+	// Token: 0x040042FB RID: 17147
 	private int ActivityIdCached;
 
-	// Token: 0x04004264 RID: 16996
+	// Token: 0x040042FC RID: 17148
 	[Nullable(2)]
 	private RoleGiftData RoleGiftDataCached;
 
-	// Token: 0x04004265 RID: 16997
+	// Token: 0x040042FD RID: 17149
 	[Nullable(2)]
 	private RoleDescribeComponent DescComponent;
 
-	// Token: 0x04004266 RID: 16998
+	// Token: 0x040042FE RID: 17150
 	private bool SplashScreenTaskFinished;
 
-	// Token: 0x02007AF3 RID: 31475
+	// Token: 0x02006C77 RID: 27767
 	private enum ENode
 	{
-		// Token: 0x0402871A RID: 165658
+		// Token: 0x04023A34 RID: 145972
 		ItemRoleDesc,
-		// Token: 0x0402871B RID: 165659
+		// Token: 0x04023A35 RID: 145973
 		BtnConfirm
 	}
 }

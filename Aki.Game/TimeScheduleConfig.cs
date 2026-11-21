@@ -5,60 +5,47 @@ using Aki.Config;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x02003512 RID: 13586
+// Token: 0x02002A87 RID: 10887
 [NullableContext(1)]
 [Nullable(0)]
 public class TimeScheduleConfig : ConfigBase
 {
-	// Token: 0x0601DC79 RID: 121977 RVA: 0x00857D9D File Offset: 0x00855F9D
+	// Token: 0x0601B993 RID: 113043 RVA: 0x00880369 File Offset: 0x0087E569
 	protected override bool OnInit()
 	{
 		this.ConfigDataMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0601DC7A RID: 121978 RVA: 0x00857DAB File Offset: 0x00855FAB
+	// Token: 0x0601B994 RID: 113044 RVA: 0x00880377 File Offset: 0x0087E577
 	protected override bool OnClear()
 	{
 		this.ConfigDataMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0601DC7B RID: 121979 RVA: 0x00857DBC File Offset: 0x00855FBC
+	// Token: 0x0601B995 RID: 113045 RVA: 0x00880388 File Offset: 0x0087E588
 	[NullableContext(2)]
 	public RawTimeScheduleConfigData GetTimeScheduleData(int id)
 	{
-		if (PublicUtil.Instance.UseDbConfig())
+		if (!this.ConfigDataMap.ContainsKey(id))
 		{
-			if (!this.ConfigDataMap.ContainsKey(id))
-			{
-				TimeSchedule? config = ConfigTimeScheduleById.GetConfig(id, true);
-				if (config == null)
-				{
-					return null;
-				}
-				this.ConfigDataMap[id] = TimeScheduleConfig.FbToTimeScheduleData(config.Value);
-			}
-			RawTimeScheduleConfigData result;
-			if (!this.ConfigDataMap.TryGetValue(id, out result))
+			TimeSchedule? config = ConfigTimeScheduleById.GetConfig(id, true);
+			if (config == null)
 			{
 				return null;
 			}
-			return result;
+			this.ConfigDataMap[id] = TimeScheduleConfig.FbToTimeScheduleData(config.Value);
 		}
-		else
+		RawTimeScheduleConfigData result;
+		if (!this.ConfigDataMap.TryGetValue(id, out result))
 		{
-			this.ParseConfigFromJsonFile();
-			RawTimeScheduleConfigData result2;
-			if (this.ConfigDataMap.TryGetValue(id, out result2))
-			{
-				return result2;
-			}
 			return null;
 		}
+		return result;
 	}
 
-	// Token: 0x0601DC7C RID: 121980 RVA: 0x00857E3C File Offset: 0x0085603C
+	// Token: 0x0601B996 RID: 113046 RVA: 0x008803E4 File Offset: 0x0087E5E4
 	private static RawTimeScheduleConfigData FbToTimeScheduleData(TimeSchedule fb)
 	{
 		return new RawTimeScheduleConfigData
@@ -74,7 +61,7 @@ public class TimeScheduleConfig : ConfigBase
 		};
 	}
 
-	// Token: 0x0601DC7D RID: 121981 RVA: 0x00857EDC File Offset: 0x008560DC
+	// Token: 0x0601B997 RID: 113047 RVA: 0x00880484 File Offset: 0x0087E684
 	private void ParseConfigFromJsonFile()
 	{
 		string configPath = PublicUtil.Instance.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/TimeSchedule.json");
@@ -105,8 +92,8 @@ public class TimeScheduleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x1700290D RID: 10509
-	// (get) Token: 0x0601DC7E RID: 121982 RVA: 0x00857FB0 File Offset: 0x008561B0
+	// Token: 0x17002CA6 RID: 11430
+	// (get) Token: 0x0601B998 RID: 113048 RVA: 0x00880558 File Offset: 0x0087E758
 	public static TimeScheduleConfig Instance
 	{
 		get
@@ -115,7 +102,7 @@ public class TimeScheduleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601DC7F RID: 121983 RVA: 0x00857FB7 File Offset: 0x008561B7
+	// Token: 0x0601B999 RID: 113049 RVA: 0x0088055F File Offset: 0x0087E75F
 	public static TimeScheduleConfig GetOrCreateInstance()
 	{
 		if (TimeScheduleConfig._Instance == null)
@@ -125,7 +112,7 @@ public class TimeScheduleConfig : ConfigBase
 		return TimeScheduleConfig._Instance;
 	}
 
-	// Token: 0x0601DC80 RID: 121984 RVA: 0x00857FCB File Offset: 0x008561CB
+	// Token: 0x0601B99A RID: 113050 RVA: 0x00880573 File Offset: 0x0087E773
 	public static bool CreateInstance()
 	{
 		if (TimeScheduleConfig._Instance != null)
@@ -136,27 +123,27 @@ public class TimeScheduleConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601DC81 RID: 121985 RVA: 0x00857FE1 File Offset: 0x008561E1
+	// Token: 0x0601B99B RID: 113051 RVA: 0x00880589 File Offset: 0x0087E789
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DC82 RID: 121986 RVA: 0x00857FE3 File Offset: 0x008561E3
+	// Token: 0x0601B99C RID: 113052 RVA: 0x0088058B File Offset: 0x0087E78B
 	public static void ResetStaticDefaultValue()
 	{
 		TimeScheduleConfig._Instance = null;
 	}
 
-	// Token: 0x0601DC83 RID: 121987 RVA: 0x00857FEB File Offset: 0x008561EB
+	// Token: 0x0601B99D RID: 113053 RVA: 0x00880593 File Offset: 0x0087E793
 	static TimeScheduleConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimeScheduleConfig.CreateStaticDefaultValue), new Action(TimeScheduleConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E9BA RID: 59834
+	// Token: 0x0400EE75 RID: 61045
 	private readonly Dictionary<int, RawTimeScheduleConfigData> ConfigDataMap = new Dictionary<int, RawTimeScheduleConfigData>();
 
-	// Token: 0x0400E9BB RID: 59835
+	// Token: 0x0400EE76 RID: 61046
 	[Nullable(2)]
 	private static TimeScheduleConfig _Instance;
 }

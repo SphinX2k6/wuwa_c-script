@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005111 RID: 20753
+	// Token: 0x020040E1 RID: 16609
 	public enum ECollectCardDetailViewTab
 	{
-		// Token: 0x0401C447 RID: 115783
+		// Token: 0x04016E7C RID: 93820
 		Detail,
-		// Token: 0x0401C448 RID: 115784
+		// Token: 0x04016E7D RID: 93821
 		Outlook
 	}
 }

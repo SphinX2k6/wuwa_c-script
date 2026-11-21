@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005328 RID: 21288
+	// Token: 0x020058AE RID: 22702
 	public class IGravityFlipTeleportConfigT
 	{
-		// Token: 0x17009C53 RID: 40019
-		// (get) Token: 0x06022CA4 RID: 142500 RVA: 0x004D1DEF File Offset: 0x004CFFEF
-		// (set) Token: 0x06022CA5 RID: 142501 RVA: 0x004D1DF7 File Offset: 0x004CFFF7
+		// Token: 0x1700A48B RID: 42123
+		// (get) Token: 0x06024D58 RID: 150872 RVA: 0x0050ECC3 File Offset: 0x0050CEC3
+		// (set) Token: 0x06024D59 RID: 150873 RVA: 0x0050ECCB File Offset: 0x0050CECB
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x17009C54 RID: 40020
-		// (get) Token: 0x06022CA6 RID: 142502 RVA: 0x004D1E00 File Offset: 0x004D0000
-		// (set) Token: 0x06022CA7 RID: 142503 RVA: 0x004D1E08 File Offset: 0x004D0008
+		// Token: 0x1700A48C RID: 42124
+		// (get) Token: 0x06024D5A RID: 150874 RVA: 0x0050ECD4 File Offset: 0x0050CED4
+		// (set) Token: 0x06024D5B RID: 150875 RVA: 0x0050ECDC File Offset: 0x0050CEDC
 		public IVectorInfoT SafeLocation { get; set; }
 
-		// Token: 0x06022CA8 RID: 142504 RVA: 0x004D1E11 File Offset: 0x004D0011
+		// Token: 0x06024D5C RID: 150876 RVA: 0x0050ECE5 File Offset: 0x0050CEE5
 		public IGravityFlipTeleportConfigT()
 		{
 			this.GravityDirection = null;

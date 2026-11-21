@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B58 RID: 2904
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C26 RID: 3110
 	public class ICategoryMatchingAnimationBase
 	{
-		// Token: 0x060042DC RID: 17116 RVA: 0x000AA951 File Offset: 0x000A8B51
+		// Token: 0x06004735 RID: 18229 RVA: 0x000B4A15 File Offset: 0x000B2C15
 		public static ICategoryMatchingAnimationBase Create(ICategoryMatchingAnimationBase? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011E9 RID: 4585
-		// (get) Token: 0x060042DD RID: 17117 RVA: 0x000AA970 File Offset: 0x000A8B70
+		// Token: 0x170012E4 RID: 4836
+		// (get) Token: 0x06004736 RID: 18230 RVA: 0x000B4A34 File Offset: 0x000B2C34
 		public virtual VectorInfo MatchPos
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011EA RID: 4586
-		// (get) Token: 0x060042DE RID: 17118 RVA: 0x000AA9A4 File Offset: 0x000A8BA4
+		// Token: 0x170012E5 RID: 4837
+		// (get) Token: 0x06004737 RID: 18231 RVA: 0x000B4A68 File Offset: 0x000B2C68
 		public virtual VectorInfo MatchRot
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011EB RID: 4587
-		// (get) Token: 0x060042DF RID: 17119 RVA: 0x000AA9D8 File Offset: 0x000A8BD8
+		// Token: 0x170012E6 RID: 4838
+		// (get) Token: 0x06004738 RID: 18232 RVA: 0x000B4A9C File Offset: 0x000B2C9C
 		[Nullable(2)]
 		public virtual string MatchReferenceKey
 		{
@@ -67,21 +65,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025AF RID: 9647
+		// Token: 0x040027F7 RID: 10231
 		private ICategoryMatchingAnimationBase Instance;
 
-		// Token: 0x040025B0 RID: 9648
+		// Token: 0x040027F8 RID: 10232
 		[Nullable(2)]
 		private VectorInfo _MatchPosCache;
 
-		// Token: 0x040025B1 RID: 9649
+		// Token: 0x040027F9 RID: 10233
 		private bool _MatchPosInited;
 
-		// Token: 0x040025B2 RID: 9650
+		// Token: 0x040027FA RID: 10234
 		[Nullable(2)]
 		private VectorInfo _MatchRotCache;
 
-		// Token: 0x040025B3 RID: 9651
+		// Token: 0x040027FB RID: 10235
 		private bool _MatchRotInited;
 	}
 }

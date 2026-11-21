@@ -5,10 +5,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B35 RID: 27445
+	// Token: 0x02005CAD RID: 23725
 	internal static class LeaveAreaItemInfoIds
 	{
-		// Token: 0x0604413A RID: 278842 RVA: 0x010BD038 File Offset: 0x010BB238
+		// Token: 0x0603A28C RID: 238220 RVA: 0x010668C4 File Offset: 0x01064AC4
 		[NullableContext(2)]
 		public static ILeaveAreaItem Get(int itemId)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return result;
 		}
 
-		// Token: 0x0604413B RID: 278843 RVA: 0x010BD054 File Offset: 0x010BB254
+		// Token: 0x0603A28D RID: 238221 RVA: 0x010668E0 File Offset: 0x01064AE0
 		// Note: this type is marked as 'beforefieldinit'.
 		static LeaveAreaItemInfoIds()
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LeaveAreaItemInfoIds.leaveAreaItemInfoIds = dictionary;
 		}
 
-		// Token: 0x04023905 RID: 145669
+		// Token: 0x0401EBA7 RID: 125863
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, ILeaveAreaItem> leaveAreaItemInfoIds;

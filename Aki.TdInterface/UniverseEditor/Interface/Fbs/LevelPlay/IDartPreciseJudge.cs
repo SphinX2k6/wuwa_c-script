@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004479 RID: 17529
+	// Token: 0x020048E1 RID: 18657
 	public struct IDartPreciseJudge : IFlatbufferObject
 	{
-		// Token: 0x17007BB8 RID: 31672
-		// (get) Token: 0x0601A21A RID: 107034 RVA: 0x003BB9E6 File Offset: 0x003B9BE6
+		// Token: 0x170081F7 RID: 33271
+		// (get) Token: 0x0601B9EB RID: 113131 RVA: 0x003E7BF2 File Offset: 0x003E5DF2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A21B RID: 107035 RVA: 0x003BB9F3 File Offset: 0x003B9BF3
+		// Token: 0x0601B9EC RID: 113132 RVA: 0x003E7BFF File Offset: 0x003E5DFF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A21C RID: 107036 RVA: 0x003BB9FC File Offset: 0x003B9BFC
+		// Token: 0x0601B9ED RID: 113133 RVA: 0x003E7C08 File Offset: 0x003E5E08
 		public static IDartPreciseJudge GetRootAsIDartPreciseJudge(ByteBuffer _bb)
 		{
 			return IDartPreciseJudge.GetRootAsIDartPreciseJudge(_bb, default(IDartPreciseJudge));
 		}
 
-		// Token: 0x0601A21D RID: 107037 RVA: 0x003BBA18 File Offset: 0x003B9C18
+		// Token: 0x0601B9EE RID: 113134 RVA: 0x003E7C24 File Offset: 0x003E5E24
 		public static IDartPreciseJudge GetRootAsIDartPreciseJudge(ByteBuffer _bb, IDartPreciseJudge obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A21E RID: 107038 RVA: 0x003BBA35 File Offset: 0x003B9C35
+		// Token: 0x0601B9EF RID: 113135 RVA: 0x003E7C41 File Offset: 0x003E5E41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A21F RID: 107039 RVA: 0x003BBA44 File Offset: 0x003B9C44
+		// Token: 0x0601B9F0 RID: 113136 RVA: 0x003E7C50 File Offset: 0x003E5E50
 		public IDartPreciseJudge __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007BB9 RID: 31673
-		// (get) Token: 0x0601A220 RID: 107040 RVA: 0x003BBA54 File Offset: 0x003B9C54
+		// Token: 0x170081F8 RID: 33272
+		// (get) Token: 0x0601B9F1 RID: 113137 RVA: 0x003E7C60 File Offset: 0x003E5E60
 		public int Probability
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A221 RID: 107041 RVA: 0x003BBA90 File Offset: 0x003B9C90
+		// Token: 0x0601B9F2 RID: 113138 RVA: 0x003E7C9C File Offset: 0x003E5E9C
 		public static Offset<IDartPreciseJudge> CreateIDartPreciseJudge(FlatBufferBuilder builder, int Probability = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartPreciseJudge.EndIDartPreciseJudge(builder);
 		}
 
-		// Token: 0x0601A222 RID: 107042 RVA: 0x003BBAA6 File Offset: 0x003B9CA6
+		// Token: 0x0601B9F3 RID: 113139 RVA: 0x003E7CB2 File Offset: 0x003E5EB2
 		public static void StartIDartPreciseJudge(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601A223 RID: 107043 RVA: 0x003BBAAF File Offset: 0x003B9CAF
+		// Token: 0x0601B9F4 RID: 113140 RVA: 0x003E7CBB File Offset: 0x003E5EBB
 		public static void AddProbability(FlatBufferBuilder builder, int probability)
 		{
 			builder.AddInt(0, probability, 0);
 		}
 
-		// Token: 0x0601A224 RID: 107044 RVA: 0x003BBABA File Offset: 0x003B9CBA
+		// Token: 0x0601B9F5 RID: 113141 RVA: 0x003E7CC6 File Offset: 0x003E5EC6
 		public static Offset<IDartPreciseJudge> EndIDartPreciseJudge(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartPreciseJudge>(builder.EndTable());
 		}
 
-		// Token: 0x0601A225 RID: 107045 RVA: 0x003BBAC8 File Offset: 0x003B9CC8
+		// Token: 0x0601B9F6 RID: 113142 RVA: 0x003E7CD4 File Offset: 0x003E5ED4
 		public IDartPreciseJudgeT UnPack()
 		{
 			IDartPreciseJudgeT dartPreciseJudgeT = new IDartPreciseJudgeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dartPreciseJudgeT;
 		}
 
-		// Token: 0x0601A226 RID: 107046 RVA: 0x003BBAE3 File Offset: 0x003B9CE3
+		// Token: 0x0601B9F7 RID: 113143 RVA: 0x003E7CEF File Offset: 0x003E5EEF
 		public void UnPackTo(IDartPreciseJudgeT _o)
 		{
 			_o.Probability = this.Probability;
 		}
 
-		// Token: 0x0601A227 RID: 107047 RVA: 0x003BBAF4 File Offset: 0x003B9CF4
+		// Token: 0x0601B9F8 RID: 113144 RVA: 0x003E7D00 File Offset: 0x003E5F00
 		public static Offset<IDartPreciseJudge> Pack(FlatBufferBuilder builder, IDartPreciseJudgeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartPreciseJudge.CreateIDartPreciseJudge(builder, _o.Probability);
 		}
 
-		// Token: 0x0400C46F RID: 50287
+		// Token: 0x0400CE9D RID: 52893
 		private Table __p;
 	}
 }

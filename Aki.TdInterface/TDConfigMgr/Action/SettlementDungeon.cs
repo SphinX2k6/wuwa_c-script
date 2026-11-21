@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E8 RID: 8680
+	// Token: 0x02002453 RID: 9299
 	public class SettlementDungeon : ActionParams
 	{
-		// Token: 0x0600BEAD RID: 48813 RVA: 0x001B6D8A File Offset: 0x001B4F8A
-		[NullableContext(1)]
+		// Token: 0x0600CA69 RID: 51817 RVA: 0x001CE416 File Offset: 0x001CC616
 		public static SettlementDungeon Create([Nullable(2)] SettlementDungeon instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x040071C2 RID: 29122
+		// Token: 0x0400780B RID: 30731
 		[Nullable(2)]
 		protected new SettlementDungeon FbInstance;
 	}

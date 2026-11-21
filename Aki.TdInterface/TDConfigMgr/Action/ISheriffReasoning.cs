@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E54 RID: 7764
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002089 RID: 8329
 	public class ISheriffReasoning : IUiGame
 	{
-		// Token: 0x0600A621 RID: 42529 RVA: 0x00178078 File Offset: 0x00176278
+		// Token: 0x0600B0D9 RID: 45273 RVA: 0x0018DD78 File Offset: 0x0018BF78
 		private ISheriffReasoning_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A622 RID: 42530 RVA: 0x001780B0 File Offset: 0x001762B0
+		// Token: 0x0600B0DA RID: 45274 RVA: 0x0018DDB0 File Offset: 0x0018BFB0
 		public static ISheriffReasoning Create([Nullable(2)] ISheriffReasoning instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A623 RID: 42531 RVA: 0x001780C3 File Offset: 0x001762C3
+		// Token: 0x0600B0DB RID: 45275 RVA: 0x0018DDC3 File Offset: 0x0018BFC3
 		public static ISheriffReasoning CreateFromSetValue([Nullable(2)] ISheriffReasoning_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A624 RID: 42532 RVA: 0x001780D6 File Offset: 0x001762D6
+		// Token: 0x0600B0DC RID: 45276 RVA: 0x0018DDD6 File Offset: 0x0018BFD6
 		public new ISheriffReasoning_SetValue ToSetValue()
 		{
 			return new ISheriffReasoning_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032E9 RID: 13033
-		// (get) Token: 0x0600A625 RID: 42533 RVA: 0x001780F5 File Offset: 0x001762F5
-		// (set) Token: 0x0600A626 RID: 42534 RVA: 0x00178120 File Offset: 0x00176320
+		// Token: 0x170035AD RID: 13741
+		// (get) Token: 0x0600B0DD RID: 45277 RVA: 0x0018DDF5 File Offset: 0x0018BFF5
+		// (set) Token: 0x0600B0DE RID: 45278 RVA: 0x0018DE20 File Offset: 0x0018C020
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032EA RID: 13034
-		// (get) Token: 0x0600A627 RID: 42535 RVA: 0x0017812E File Offset: 0x0017632E
-		// (set) Token: 0x0600A628 RID: 42536 RVA: 0x00178159 File Offset: 0x00176359
+		// Token: 0x170035AE RID: 13742
+		// (get) Token: 0x0600B0DF RID: 45279 RVA: 0x0018DE2E File Offset: 0x0018C02E
+		// (set) Token: 0x0600B0E0 RID: 45280 RVA: 0x0018DE59 File Offset: 0x0018C059
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006342 RID: 25410
+		// Token: 0x04006926 RID: 26918
 		[Nullable(2)]
 		protected new ISheriffReasoning FbInstance;
 
-		// Token: 0x04006343 RID: 25411
+		// Token: 0x04006927 RID: 26919
 		[Nullable(2)]
 		protected new ISheriffReasoning_SetValue PocoInterface;
 	}

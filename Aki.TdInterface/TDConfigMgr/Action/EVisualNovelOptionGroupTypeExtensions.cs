@@ -2,25 +2,32 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024AD RID: 9389
+	// Token: 0x02002750 RID: 10064
 	public static class EVisualNovelOptionGroupTypeExtensions
 	{
-		// Token: 0x0600CB89 RID: 52105 RVA: 0x001DF588 File Offset: 0x001DD788
+		// Token: 0x0600D842 RID: 55362 RVA: 0x001F9750 File Offset: 0x001F7950
 		public static string ToEnumString(this EVisualNovelOptionGroupType value)
 		{
 			string result;
-			if (value == EVisualNovelOptionGroupType.SolarSchoolExam)
+			if (value != EVisualNovelOptionGroupType.Normal)
 			{
-				result = "SolarSchoolExam";
+				if (value != EVisualNovelOptionGroupType.FullScreen)
+				{
+					result = value.ToString();
+				}
+				else
+				{
+					result = "FullScreen";
+				}
 			}
 			else
 			{
-				result = value.ToString();
+				result = "Normal";
 			}
 			return result;
 		}
 
-		// Token: 0x0600CB8A RID: 52106 RVA: 0x001DF5B0 File Offset: 0x001DD7B0
+		// Token: 0x0600D843 RID: 55363 RVA: 0x001F9788 File Offset: 0x001F7988
 		public static EVisualNovelOptionGroupType FromString(string name)
 		{
 			EVisualNovelOptionGroupType result;
@@ -31,44 +38,55 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB8B RID: 52107 RVA: 0x001DF5D9 File Offset: 0x001DD7D9
+		// Token: 0x0600D844 RID: 55364 RVA: 0x001F97B1 File Offset: 0x001F79B1
 		public static bool TryFromString(string name, out EVisualNovelOptionGroupType value)
 		{
 			if (string.IsNullOrEmpty(name))
 			{
-				value = EVisualNovelOptionGroupType.SolarSchoolExam;
+				value = EVisualNovelOptionGroupType.Normal;
 				return false;
 			}
-			if (name == "SolarSchoolExam")
+			if (name == "Normal")
 			{
-				value = EVisualNovelOptionGroupType.SolarSchoolExam;
+				value = EVisualNovelOptionGroupType.Normal;
 				return true;
 			}
-			value = EVisualNovelOptionGroupType.SolarSchoolExam;
-			return false;
+			if (!(name == "FullScreen"))
+			{
+				value = EVisualNovelOptionGroupType.Normal;
+				return false;
+			}
+			value = EVisualNovelOptionGroupType.FullScreen;
+			return true;
 		}
 
-		// Token: 0x0600CB8C RID: 52108 RVA: 0x001DF5FE File Offset: 0x001DD7FE
+		// Token: 0x0600D845 RID: 55365 RVA: 0x001F97EA File Offset: 0x001F79EA
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
-				"SolarSchoolExam"
+				"Normal",
+				"FullScreen"
 			};
 		}
 
-		// Token: 0x0600CB8D RID: 52109 RVA: 0x001DF60E File Offset: 0x001DD80E
+		// Token: 0x0600D846 RID: 55366 RVA: 0x001F9802 File Offset: 0x001F7A02
 		public static EVisualNovelOptionGroupType[] GetValues()
 		{
-			return new EVisualNovelOptionGroupType[1];
+			return new EVisualNovelOptionGroupType[]
+			{
+				EVisualNovelOptionGroupType.Normal,
+				EVisualNovelOptionGroupType.FullScreen
+			};
 		}
 
-		// Token: 0x0600CB8E RID: 52110 RVA: 0x001DF616 File Offset: 0x001DD816
+		// Token: 0x0600D847 RID: 55367 RVA: 0x001F980E File Offset: 0x001F7A0E
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
-				"SolarSchoolExam"
+				"Normal",
+				"FullScreen"
 			};
 		}
 	}

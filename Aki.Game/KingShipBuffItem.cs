@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002036 RID: 8246
+// Token: 0x02001509 RID: 5385
 public class KingShipBuffItem : UiPanelBase
 {
-	// Token: 0x060102FD RID: 66301 RVA: 0x003F1444 File Offset: 0x003EF644
+	// Token: 0x0600D765 RID: 55141 RVA: 0x003FDA3C File Offset: 0x003FBC3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class KingShipBuffItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060102FE RID: 66302 RVA: 0x003F14ED File Offset: 0x003EF6ED
+	// Token: 0x0600D766 RID: 55142 RVA: 0x003FDAE5 File Offset: 0x003FBCE5
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -36,7 +36,7 @@ public class KingShipBuffItem : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x060102FF RID: 66303 RVA: 0x003F1507 File Offset: 0x003EF707
+	// Token: 0x0600D767 RID: 55143 RVA: 0x003FDAFF File Offset: 0x003FBCFF
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(false);
@@ -50,7 +50,7 @@ public class KingShipBuffItem : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x06010300 RID: 66304 RVA: 0x003F1540 File Offset: 0x003EF740
+	// Token: 0x0600D768 RID: 55144 RVA: 0x003FDB38 File Offset: 0x003FBD38
 	public void RefreshItem()
 	{
 		this.Rounds--;
@@ -70,7 +70,7 @@ public class KingShipBuffItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06010301 RID: 66305 RVA: 0x003F1598 File Offset: 0x003EF798
+	// Token: 0x0600D769 RID: 55145 RVA: 0x003FDB90 File Offset: 0x003FBD90
 	public void ShowBuffItem(int data, int rounds)
 	{
 		this.BuffId = data;
@@ -89,7 +89,7 @@ public class KingShipBuffItem : UiPanelBase
 		this.SetSpriteByPath(KingShipConfig.Instance.GetKingShipBuff(data).Icon, base.GetSprite(1), false, null, null);
 	}
 
-	// Token: 0x06010302 RID: 66306 RVA: 0x003F1618 File Offset: 0x003EF818
+	// Token: 0x0600D76A RID: 55146 RVA: 0x003FDC10 File Offset: 0x003FBE10
 	private void OnClickButton()
 	{
 		if (this.BuffId == 0)
@@ -117,7 +117,7 @@ public class KingShipBuffItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), kingShipBuff.NameText, Array.Empty<object>());
 	}
 
-	// Token: 0x06010303 RID: 66307 RVA: 0x003F16CC File Offset: 0x003EF8CC
+	// Token: 0x0600D76B RID: 55147 RVA: 0x003FDCC4 File Offset: 0x003FBEC4
 	public void CloseTipsItem()
 	{
 		base.GetItem(2).SetUIActive(false);
@@ -139,42 +139,42 @@ public class KingShipBuffItem : UiPanelBase
 		levelSequencePlayer2.PlayOrReplaySequenceByName("InfoOut", false, null);
 	}
 
-	// Token: 0x06010304 RID: 66308 RVA: 0x003F172A File Offset: 0x003EF92A
+	// Token: 0x0600D76C RID: 55148 RVA: 0x003FDD22 File Offset: 0x003FBF22
 	public bool GetIsShowingRoundsBuff()
 	{
 		return this.Rounds > 0;
 	}
 
-	// Token: 0x040077A4 RID: 30628
+	// Token: 0x0400788D RID: 30861
 	private int BuffId;
 
-	// Token: 0x040077A5 RID: 30629
+	// Token: 0x0400788E RID: 30862
 	private int Rounds;
 
-	// Token: 0x040077A6 RID: 30630
+	// Token: 0x0400788F RID: 30863
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040077A7 RID: 30631
+	// Token: 0x04007890 RID: 30864
 	[Nullable(2)]
 	public Action<bool> OnClickTipsCallBack;
 
-	// Token: 0x02008630 RID: 34352
+	// Token: 0x020077B7 RID: 30647
 	private class EComponentDefine
 	{
-		// Token: 0x0402BAAA RID: 178858
+		// Token: 0x04026DB9 RID: 159161
 		public const int Button = 0;
 
-		// Token: 0x0402BAAB RID: 178859
+		// Token: 0x04026DBA RID: 159162
 		public const int IconSprite = 1;
 
-		// Token: 0x0402BAAC RID: 178860
+		// Token: 0x04026DBB RID: 159163
 		public const int TipsItem = 2;
 
-		// Token: 0x0402BAAD RID: 178861
+		// Token: 0x04026DBC RID: 159164
 		public const int TipsTitleText = 3;
 
-		// Token: 0x0402BAAE RID: 178862
+		// Token: 0x04026DBD RID: 159165
 		public const int TipsDesText = 4;
 	}
 }

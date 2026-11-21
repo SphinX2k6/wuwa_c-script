@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200111B RID: 4379
+	// Token: 0x02001251 RID: 4689
 	public struct TeleportIntercept : IFlatbufferObject
 	{
-		// Token: 0x170039E8 RID: 14824
-		// (get) Token: 0x0600DD4D RID: 56653 RVA: 0x0032A820 File Offset: 0x00328A20
+		// Token: 0x17003D3E RID: 15678
+		// (get) Token: 0x0600EA98 RID: 60056 RVA: 0x00355958 File Offset: 0x00353B58
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DD4E RID: 56654 RVA: 0x0032A82D File Offset: 0x00328A2D
+		// Token: 0x0600EA99 RID: 60057 RVA: 0x00355965 File Offset: 0x00353B65
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DD4F RID: 56655 RVA: 0x0032A834 File Offset: 0x00328A34
+		// Token: 0x0600EA9A RID: 60058 RVA: 0x0035596C File Offset: 0x00353B6C
 		public static TeleportIntercept GetRootAsTeleportIntercept(ByteBuffer _bb)
 		{
 			return TeleportIntercept.GetRootAsTeleportIntercept(_bb, default(TeleportIntercept));
 		}
 
-		// Token: 0x0600DD50 RID: 56656 RVA: 0x0032A850 File Offset: 0x00328A50
+		// Token: 0x0600EA9B RID: 60059 RVA: 0x00355988 File Offset: 0x00353B88
 		public static TeleportIntercept GetRootAsTeleportIntercept(ByteBuffer _bb, TeleportIntercept obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DD51 RID: 56657 RVA: 0x0032A86D File Offset: 0x00328A6D
+		// Token: 0x0600EA9C RID: 60060 RVA: 0x003559A5 File Offset: 0x00353BA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DD52 RID: 56658 RVA: 0x0032A87C File Offset: 0x00328A7C
+		// Token: 0x0600EA9D RID: 60061 RVA: 0x003559B4 File Offset: 0x00353BB4
 		public TeleportIntercept __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170039E9 RID: 14825
-		// (get) Token: 0x0600DD53 RID: 56659 RVA: 0x0032A88C File Offset: 0x00328A8C
+		// Token: 0x17003D3F RID: 15679
+		// (get) Token: 0x0600EA9E RID: 60062 RVA: 0x003559C4 File Offset: 0x00353BC4
 		public int InterceptId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039EA RID: 14826
-		// (get) Token: 0x0600DD54 RID: 56660 RVA: 0x0032A8C8 File Offset: 0x00328AC8
+		// Token: 0x17003D40 RID: 15680
+		// (get) Token: 0x0600EA9F RID: 60063 RVA: 0x00355A00 File Offset: 0x00353C00
 		public int EntityConfigId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039EB RID: 14827
-		// (get) Token: 0x0600DD55 RID: 56661 RVA: 0x0032A904 File Offset: 0x00328B04
+		// Token: 0x17003D41 RID: 15681
+		// (get) Token: 0x0600EAA0 RID: 60064 RVA: 0x00355A3C File Offset: 0x00353C3C
 		public int Type
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039EC RID: 14828
-		// (get) Token: 0x0600DD56 RID: 56662 RVA: 0x0032A940 File Offset: 0x00328B40
+		// Token: 0x17003D42 RID: 15682
+		// (get) Token: 0x0600EAA1 RID: 60065 RVA: 0x00355A78 File Offset: 0x00353C78
 		public int OptionIndex
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039ED RID: 14829
-		// (get) Token: 0x0600DD57 RID: 56663 RVA: 0x0032A980 File Offset: 0x00328B80
+		// Token: 0x17003D43 RID: 15683
+		// (get) Token: 0x0600EAA2 RID: 60066 RVA: 0x00355AB8 File Offset: 0x00353CB8
 		public int CurInstConfigId
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170039EE RID: 14830
-		// (get) Token: 0x0600DD58 RID: 56664 RVA: 0x0032A9C0 File Offset: 0x00328BC0
+		// Token: 0x17003D44 RID: 15684
+		// (get) Token: 0x0600EAA3 RID: 60067 RVA: 0x00355AF8 File Offset: 0x00353CF8
 		public int TargetMapConfigId
 		{
 			get
@@ -139,7 +139,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DD59 RID: 56665 RVA: 0x0032AA00 File Offset: 0x00328C00
+		// Token: 0x0600EAA4 RID: 60068 RVA: 0x00355B38 File Offset: 0x00353D38
 		public int TargetPosition(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -150,8 +150,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170039EF RID: 14831
-		// (get) Token: 0x0600DD5A RID: 56666 RVA: 0x0032AA40 File Offset: 0x00328C40
+		// Token: 0x17003D45 RID: 15685
+		// (get) Token: 0x0600EAA5 RID: 60069 RVA: 0x00355B78 File Offset: 0x00353D78
 		public int TargetPositionLength
 		{
 			get
@@ -165,37 +165,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DD5B RID: 56667 RVA: 0x0032AA6C File Offset: 0x00328C6C
+		// Token: 0x0600EAA6 RID: 60070 RVA: 0x00355BA4 File Offset: 0x00353DA4
 		public Span<int> GetTargetPositionBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x0600DD5C RID: 56668 RVA: 0x0032AA7C File Offset: 0x00328C7C
+		// Token: 0x0600EAA7 RID: 60071 RVA: 0x00355BB4 File Offset: 0x00353DB4
 		public int[] GetTargetPositionArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DD5D RID: 56669 RVA: 0x0032AA94 File Offset: 0x00328C94
+		// Token: 0x0600EAA8 RID: 60072 RVA: 0x00355BCC File Offset: 0x00353DCC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TargetPositionIter()或GetTargetPositionBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] TargetPosition()
+		public int[] TargetPosition()
 		{
-			TeleportIntercept teleportIntercept = this;
-			return teleportIntercept.GetTargetPositionArray() ?? Array.Empty<int>();
+			return this.GetTargetPositionArray();
 		}
 
-		// Token: 0x0600DD5E RID: 56670 RVA: 0x0032AAB8 File Offset: 0x00328CB8
+		// Token: 0x0600EAA9 RID: 60073 RVA: 0x00355BD4 File Offset: 0x00353DD4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> TargetPositionIter()
+		public IEnumerable<int> TargetPositionIter()
 		{
 			TeleportIntercept.<TargetPositionIter>d__26 <TargetPositionIter>d__ = new TeleportIntercept.<TargetPositionIter>d__26(-2);
 			<TargetPositionIter>d__.<>3__<>4__this = this;
 			return <TargetPositionIter>d__;
 		}
 
-		// Token: 0x04005258 RID: 21080
+		// Token: 0x0400589B RID: 22683
 		private Table __p;
 	}
 }

@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200202B RID: 8235
+// Token: 0x020014FE RID: 5374
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonKeySettingPanel : KeySettingPanelBase
 {
-	// Token: 0x06010285 RID: 66181 RVA: 0x003EF6DB File Offset: 0x003ED8DB
+	// Token: 0x0600D6ED RID: 55021 RVA: 0x003FBCD3 File Offset: 0x003F9ED3
 	public CommonKeySettingPanel(EKeySettingExclusiveType exclusiveType = EKeySettingExclusiveType.None) : base(exclusiveType)
 	{
 	}
 
-	// Token: 0x06010286 RID: 66182 RVA: 0x003EF6E4 File Offset: 0x003ED8E4
+	// Token: 0x0600D6EE RID: 55022 RVA: 0x003FBCDC File Offset: 0x003F9EDC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,7 +57,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		};
 	}
 
-	// Token: 0x06010287 RID: 66183 RVA: 0x003EF930 File Offset: 0x003EDB30
+	// Token: 0x0600D6EF RID: 55023 RVA: 0x003FBF28 File Offset: 0x003FA128
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonKeySettingPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010288 RID: 66184 RVA: 0x003EF974 File Offset: 0x003EDB74
+	// Token: 0x0600D6F0 RID: 55024 RVA: 0x003FBF6C File Offset: 0x003FA16C
 	protected override void OnStart()
 	{
 		this.Refresh();
@@ -83,18 +83,18 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06010289 RID: 66185 RVA: 0x003EF9C3 File Offset: 0x003EDBC3
+	// Token: 0x0600D6F1 RID: 55025 RVA: 0x003FBFBB File Offset: 0x003FA1BB
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnDeviceLangChange, new Action(this.OnDeviceLangChange));
 	}
 
-	// Token: 0x0601028A RID: 66186 RVA: 0x003EF9E1 File Offset: 0x003EDBE1
+	// Token: 0x0600D6F2 RID: 55026 RVA: 0x003FBFD9 File Offset: 0x003FA1D9
 	protected override void OnWaitKeySetting()
 	{
 	}
 
-	// Token: 0x0601028B RID: 66187 RVA: 0x003EF9E3 File Offset: 0x003EDBE3
+	// Token: 0x0600D6F3 RID: 55027 RVA: 0x003FBFDB File Offset: 0x003FA1DB
 	protected override void OnBeforeBeginEditKey()
 	{
 		CommonKeySettingRowsPanel pcPanel = this.PcPanel;
@@ -110,7 +110,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		gamepadPanel.StopScroll();
 	}
 
-	// Token: 0x0601028C RID: 66188 RVA: 0x003EFA06 File Offset: 0x003EDC06
+	// Token: 0x0600D6F4 RID: 55028 RVA: 0x003FBFFE File Offset: 0x003FA1FE
 	protected override void OnBeginEditKey()
 	{
 		GamepadItemBase gamepadItem = this.GamepadItem;
@@ -121,24 +121,24 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		this.RefreshEditKeyTips("EditKey_Text");
 	}
 
-	// Token: 0x0601028D RID: 66189 RVA: 0x003EFA24 File Offset: 0x003EDC24
+	// Token: 0x0600D6F5 RID: 55029 RVA: 0x003FC01C File Offset: 0x003FA21C
 	protected override void OnFinishEditKey()
 	{
 		this.RefreshEditKeyTips(null);
 	}
 
-	// Token: 0x0601028E RID: 66190 RVA: 0x003EFA2D File Offset: 0x003EDC2D
+	// Token: 0x0600D6F6 RID: 55030 RVA: 0x003FC025 File Offset: 0x003FA225
 	[NullableContext(1)]
 	protected override void OnKeyChange(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType type)
 	{
 	}
 
-	// Token: 0x0601028F RID: 66191 RVA: 0x003EFA2F File Offset: 0x003EDC2F
+	// Token: 0x0600D6F7 RID: 55031 RVA: 0x003FC027 File Offset: 0x003FA227
 	protected override void OnKeySelected(KeySettingRowData data)
 	{
 	}
 
-	// Token: 0x06010290 RID: 66192 RVA: 0x003EFA34 File Offset: 0x003EDC34
+	// Token: 0x0600D6F8 RID: 55032 RVA: 0x003FC02C File Offset: 0x003FA22C
 	protected override void OnKeyHover(KeySettingRowData data)
 	{
 		if (KeySettingViewModel.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard)
@@ -191,7 +191,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		}
 	}
 
-	// Token: 0x06010291 RID: 66193 RVA: 0x003EFAAC File Offset: 0x003EDCAC
+	// Token: 0x0600D6F9 RID: 55033 RVA: 0x003FC0A4 File Offset: 0x003FA2A4
 	protected override void OnKeyUnHover(KeySettingRowData data)
 	{
 		if (KeySettingViewModel.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard)
@@ -231,7 +231,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		}
 	}
 
-	// Token: 0x06010292 RID: 66194 RVA: 0x003EFB33 File Offset: 0x003EDD33
+	// Token: 0x0600D6FA RID: 55034 RVA: 0x003FC12B File Offset: 0x003FA32B
 	private void Refresh()
 	{
 		this.RefreshDeviceSwitcher();
@@ -239,7 +239,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		this.RefreshGamepadPanel();
 	}
 
-	// Token: 0x06010293 RID: 66195 RVA: 0x003EFB48 File Offset: 0x003EDD48
+	// Token: 0x0600D6FB RID: 55035 RVA: 0x003FC140 File Offset: 0x003FA340
 	private void RefreshDeviceSwitcher()
 	{
 		IKeySettingDeviceInfo keySettingDeviceInfo;
@@ -281,7 +281,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		}
 	}
 
-	// Token: 0x06010294 RID: 66196 RVA: 0x003EFBDC File Offset: 0x003EDDDC
+	// Token: 0x0600D6FC RID: 55036 RVA: 0x003FC1D4 File Offset: 0x003FA3D4
 	private void RefreshKeySettingPanel()
 	{
 		CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType = KeySettingViewModel.InputControllerType;
@@ -297,7 +297,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		this.RefreshGamepadTab();
 	}
 
-	// Token: 0x06010295 RID: 66197 RVA: 0x003EFC08 File Offset: 0x003EDE08
+	// Token: 0x0600D6FD RID: 55037 RVA: 0x003FC200 File Offset: 0x003FA400
 	private void RefreshGamepadPanel()
 	{
 		if (KeySettingViewModel.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Gamepad)
@@ -354,7 +354,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		}
 	}
 
-	// Token: 0x06010296 RID: 66198 RVA: 0x003EFCBC File Offset: 0x003EDEBC
+	// Token: 0x0600D6FE RID: 55038 RVA: 0x003FC2B4 File Offset: 0x003FA4B4
 	private void RefreshKeyBoardTab()
 	{
 		CommonKeySettingRowsPanel pcPanel = this.PcPanel;
@@ -417,7 +417,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		item3.SetUIActive(false);
 	}
 
-	// Token: 0x06010297 RID: 66199 RVA: 0x003EFDB8 File Offset: 0x003EDFB8
+	// Token: 0x0600D6FF RID: 55039 RVA: 0x003FC3B0 File Offset: 0x003FA5B0
 	private void RefreshGamepadTab()
 	{
 		CommonKeySettingRowsPanel gamepadPanel = this.GamepadPanel;
@@ -484,7 +484,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		item3.SetUIActive(flag3);
 	}
 
-	// Token: 0x06010298 RID: 66200 RVA: 0x003EFED4 File Offset: 0x003EE0D4
+	// Token: 0x0600D700 RID: 55040 RVA: 0x003FC4CC File Offset: 0x003FA6CC
 	private void RefreshEditKeyTips(string textId = null)
 	{
 		if (StringUtils.IsEmpty(textId))
@@ -516,7 +516,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		this.TipsSequencePlayer.PlayLevelSequenceByName("Start".ToString(), false, null, false);
 	}
 
-	// Token: 0x06010299 RID: 66201 RVA: 0x003EFF7C File Offset: 0x003EE17C
+	// Token: 0x0600D701 RID: 55041 RVA: 0x003FC574 File Offset: 0x003FA774
 	private void InitializePlatformInfo()
 	{
 		bool flag = Info.Instance.IsHomeConsolePlatform();
@@ -550,7 +550,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		item.SetUIActive(!flag4);
 	}
 
-	// Token: 0x0601029A RID: 66202 RVA: 0x003F004B File Offset: 0x003EE24B
+	// Token: 0x0600D702 RID: 55042 RVA: 0x003FC643 File Offset: 0x003FA843
 	private void OnLeftButtonClicked()
 	{
 		if (KeySettingViewModel.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard)
@@ -565,7 +565,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		EventSystem.Instance.Emit<string>(EEventName.FinishGuideStepByEvent, "MenuView");
 	}
 
-	// Token: 0x0601029B RID: 66203 RVA: 0x003F0086 File Offset: 0x003EE286
+	// Token: 0x0600D703 RID: 55043 RVA: 0x003FC67E File Offset: 0x003FA87E
 	private void OnRightButtonClicked()
 	{
 		if (KeySettingViewModel.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard)
@@ -580,7 +580,7 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		EventSystem.Instance.Emit<string>(EEventName.FinishGuideStepByEvent, "MenuView");
 	}
 
-	// Token: 0x0601029C RID: 66204 RVA: 0x003F00C4 File Offset: 0x003EE2C4
+	// Token: 0x0600D704 RID: 55044 RVA: 0x003FC6BC File Offset: 0x003FA8BC
 	private void OnResetButtonClicked()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ResetAllInput);
@@ -593,13 +593,13 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0601029D RID: 66205 RVA: 0x003F0100 File Offset: 0x003EE300
+	// Token: 0x0600D705 RID: 55045 RVA: 0x003FC6F8 File Offset: 0x003FA8F8
 	private void OnGamepadOperationButtonClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.OperationPreferencesView, null, null);
 	}
 
-	// Token: 0x0601029E RID: 66206 RVA: 0x003F0113 File Offset: 0x003EE313
+	// Token: 0x0600D706 RID: 55046 RVA: 0x003FC70B File Offset: 0x003FA90B
 	private void OnDeviceLangChange()
 	{
 		if (KeySettingViewModel.CurrentDeviceType != EKeySettingDeviceType.Keyboard)
@@ -613,83 +613,83 @@ public class CommonKeySettingPanel : KeySettingPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x0400777B RID: 30587
+	// Token: 0x04007864 RID: 30820
 	private GamepadItemBase GamepadItem;
 
-	// Token: 0x0400777C RID: 30588
+	// Token: 0x04007865 RID: 30821
 	private PsGamepadItem PsGamepadItem;
 
-	// Token: 0x0400777D RID: 30589
+	// Token: 0x04007866 RID: 30822
 	private XboxGamepadItem XboxGamepadItem;
 
-	// Token: 0x0400777E RID: 30590
+	// Token: 0x04007867 RID: 30823
 	private KeySettingRowData HoverKeySettingRowData;
 
-	// Token: 0x0400777F RID: 30591
+	// Token: 0x04007868 RID: 30824
 	private CommonKeySettingRowsPanel PcPanel;
 
-	// Token: 0x04007780 RID: 30592
+	// Token: 0x04007869 RID: 30825
 	private CommonKeySettingRowsPanel GamepadPanel;
 
-	// Token: 0x04007781 RID: 30593
+	// Token: 0x0400786A RID: 30826
 	private LevelSequencePlayer TipsSequencePlayer;
 
-	// Token: 0x02008623 RID: 34339
+	// Token: 0x020077AA RID: 30634
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402BA5E RID: 178782
+		// Token: 0x04026D6D RID: 159085
 		public const int LeftButton = 0;
 
-		// Token: 0x0402BA5F RID: 178783
+		// Token: 0x04026D6E RID: 159086
 		public const int RightButton = 1;
 
-		// Token: 0x0402BA60 RID: 178784
+		// Token: 0x04026D6F RID: 159087
 		public const int DeviceNameText = 2;
 
-		// Token: 0x0402BA61 RID: 178785
+		// Token: 0x04026D70 RID: 159088
 		public const int GamepadItem = 3;
 
-		// Token: 0x0402BA62 RID: 178786
+		// Token: 0x04026D71 RID: 159089
 		public const int KeyboardItem = 4;
 
-		// Token: 0x0402BA63 RID: 178787
+		// Token: 0x04026D72 RID: 159090
 		public const int GamepadKeySettingItem = 5;
 
-		// Token: 0x0402BA64 RID: 178788
+		// Token: 0x04026D73 RID: 159091
 		public const int PcKeySettingItem = 6;
 
-		// Token: 0x0402BA65 RID: 178789
+		// Token: 0x04026D74 RID: 159092
 		public const int TipsItem = 7;
 
-		// Token: 0x0402BA66 RID: 178790
+		// Token: 0x04026D75 RID: 159093
 		public const int TipsText = 8;
 
-		// Token: 0x0402BA67 RID: 178791
+		// Token: 0x04026D76 RID: 159094
 		public const int ResetButton = 9;
 
-		// Token: 0x0402BA68 RID: 178792
+		// Token: 0x04026D77 RID: 159095
 		public const int GamepadPanelItem = 10;
 
-		// Token: 0x0402BA69 RID: 178793
+		// Token: 0x04026D78 RID: 159096
 		public const int SwitcherItem = 11;
 
-		// Token: 0x0402BA6A RID: 178794
+		// Token: 0x04026D79 RID: 159097
 		public const int GamepadLogoItem = 12;
 
-		// Token: 0x0402BA6B RID: 178795
+		// Token: 0x04026D7A RID: 159098
 		public const int PsAndBackBoneButtonsItem = 13;
 
-		// Token: 0x0402BA6C RID: 178796
+		// Token: 0x04026D7B RID: 159099
 		public const int PsAndBackBoneResetButton = 14;
 
-		// Token: 0x0402BA6D RID: 178797
+		// Token: 0x04026D7C RID: 159100
 		public const int GamepadOperationButton = 15;
 
-		// Token: 0x0402BA6E RID: 178798
+		// Token: 0x04026D7D RID: 159101
 		public const int PsAndBackBoneGamepadOperationButton = 16;
 
-		// Token: 0x0402BA6F RID: 178799
+		// Token: 0x04026D7E RID: 159102
 		public const int ExclusiveTypeTabRootItem = 17;
 	}
 }

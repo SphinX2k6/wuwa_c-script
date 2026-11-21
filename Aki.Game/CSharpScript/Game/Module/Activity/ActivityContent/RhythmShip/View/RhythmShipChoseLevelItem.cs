@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006219 RID: 25113
+	// Token: 0x02005197 RID: 20887
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class RhythmShipChoseLevelItem : UiPanelBase
 	{
-		// Token: 0x0603F5A5 RID: 259493 RVA: 0x00F4FEAC File Offset: 0x00F4E0AC
+		// Token: 0x06034266 RID: 213606 RVA: 0x00E96E04 File Offset: 0x00E95004
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,19 +40,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5A6 RID: 259494 RVA: 0x00F4FFF2 File Offset: 0x00F4E1F2
+		// Token: 0x06034267 RID: 213607 RVA: 0x00E96F4A File Offset: 0x00E9514A
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F5A7 RID: 259495 RVA: 0x00F50010 File Offset: 0x00F4E210
+		// Token: 0x06034268 RID: 213608 RVA: 0x00E96F68 File Offset: 0x00E95168
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F5A8 RID: 259496 RVA: 0x00F50030 File Offset: 0x00F4E230
+		// Token: 0x06034269 RID: 213609 RVA: 0x00E96F88 File Offset: 0x00E95188
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipChoseLevelItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F5A9 RID: 259497 RVA: 0x00F50074 File Offset: 0x00F4E274
+		// Token: 0x0603426A RID: 213610 RVA: 0x00E96FCC File Offset: 0x00E951CC
 		private void OnToggleUndeterminedClicked()
 		{
 			RhythmShipLevel? rhythmShipLevelById = RhythmShipConfig.Instance.GetRhythmShipLevelById(this.LevelId);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			ScrollingTipsController.Instance.ShowTipsByTextId(RhythmShipModel.Instance.GetLevelLockTips(this.LevelId) ?? "RhythmShipLevelLockTips", Array.Empty<object>());
 		}
 
-		// Token: 0x0603F5AA RID: 259498 RVA: 0x00F5010C File Offset: 0x00F4E30C
+		// Token: 0x0603426B RID: 213611 RVA: 0x00E97064 File Offset: 0x00E95264
 		public void RefreshItem(int levelId, bool playTinyAni)
 		{
 			this.LevelId = levelId;
@@ -137,14 +137,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F5AB RID: 259499 RVA: 0x00F5035B File Offset: 0x00F4E55B
+		// Token: 0x0603426C RID: 213612 RVA: 0x00E972B3 File Offset: 0x00E954B3
 		private void RefreshRedDotItem()
 		{
 			this.HaveRedDotItem = RhythmShipModel.Instance.GetLevelRedDotActive(this.LevelId);
 			base.GetItem(11).SetUIActive(this.HaveRedDotItem);
 		}
 
-		// Token: 0x0603F5AC RID: 259500 RVA: 0x00F50386 File Offset: 0x00F4E586
+		// Token: 0x0603426D RID: 213613 RVA: 0x00E972DE File Offset: 0x00E954DE
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<int> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			onClickToggleCallBack(this.LevelId);
 		}
 
-		// Token: 0x0603F5AD RID: 259501 RVA: 0x00F503A0 File Offset: 0x00F4E5A0
+		// Token: 0x0603426E RID: 213614 RVA: 0x00E972F8 File Offset: 0x00E954F8
 		[NullableContext(2)]
 		private void OnRhythmShipRedDotRefresh(List<int> planet, List<int> subLevel, List<int> role)
 		{
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F5AE RID: 259502 RVA: 0x00F50420 File Offset: 0x00F4E620
+		// Token: 0x0603426F RID: 213615 RVA: 0x00E97378 File Offset: 0x00E95578
 		public void SetToggleSelect(bool isSelect)
 		{
 			base.GetExtendToggle(0).SetToggleState(isSelect ? EToggleState.ETT_Checked : (this.IsLock ? EToggleState.ETT_UnDetermined : EToggleState.ETT_UnChecked), false, false, false);
 		}
 
-		// Token: 0x0603F5AF RID: 259503 RVA: 0x00F50444 File Offset: 0x00F4E644
+		// Token: 0x06034270 RID: 213616 RVA: 0x00E9739C File Offset: 0x00E9559C
 		public void LevelSequencePlayerPlay(string name)
 		{
 			LevelSequencePlayer levelSequencePlayerIns = this.LevelSequencePlayerIns;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			levelSequencePlayerIns.PlayOrReplaySequenceByName(name, false, null);
 		}
 
-		// Token: 0x0603F5B0 RID: 259504 RVA: 0x00F5046C File Offset: 0x00F4E66C
+		// Token: 0x06034271 RID: 213617 RVA: 0x00E973C4 File Offset: 0x00E955C4
 		private void OnLevelSequenceEnd(string name)
 		{
 			if (name == "Big" || name == "Small")
@@ -215,23 +215,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x040210F9 RID: 135417
+		// Token: 0x0401BA28 RID: 113192
 		private int LevelId;
 
-		// Token: 0x040210FA RID: 135418
+		// Token: 0x0401BA29 RID: 113193
 		private bool IsLock;
 
-		// Token: 0x040210FB RID: 135419
+		// Token: 0x0401BA2A RID: 113194
 		private bool HaveRedDotItem;
 
-		// Token: 0x040210FC RID: 135420
+		// Token: 0x0401BA2B RID: 113195
 		private readonly List<RhythmShipChoseStarItem> StarItemList = new List<RhythmShipChoseStarItem>();
 
-		// Token: 0x040210FD RID: 135421
+		// Token: 0x0401BA2C RID: 113196
 		[Nullable(2)]
 		public Action<int> OnClickToggleCallBack;
 
-		// Token: 0x040210FE RID: 135422
+		// Token: 0x0401BA2D RID: 113197
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayerIns;
 	}

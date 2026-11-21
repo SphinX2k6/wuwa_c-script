@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200278C RID: 10124
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A5E RID: 10846
 	public class IHideSpecifyEntity : IHideRangeType
 	{
-		// Token: 0x0600E165 RID: 57701 RVA: 0x00214E3D File Offset: 0x0021303D
+		// Token: 0x0600EF83 RID: 61315 RVA: 0x00231BD1 File Offset: 0x0022FDD1
 		public static IHideSpecifyEntity Create(IHideSpecifyEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700440F RID: 17423
-		// (get) Token: 0x0600E166 RID: 57702 RVA: 0x00214E5C File Offset: 0x0021305C
+		// Token: 0x17004775 RID: 18293
+		// (get) Token: 0x0600EF84 RID: 61316 RVA: 0x00231BF0 File Offset: 0x0022FDF0
 		public override EHideType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004410 RID: 17424
-		// (get) Token: 0x0600E167 RID: 57703 RVA: 0x00214E6C File Offset: 0x0021306C
+		// Token: 0x17004776 RID: 18294
+		// (get) Token: 0x0600EF85 RID: 61317 RVA: 0x00231C00 File Offset: 0x0022FE00
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CF2 RID: 31986
+		// Token: 0x040083A8 RID: 33704
 		private IHideSpecifyEntity Instance;
 
-		// Token: 0x04007CF3 RID: 31987
+		// Token: 0x040083A9 RID: 33705
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007CF4 RID: 31988
+		// Token: 0x040083AA RID: 33706
 		private bool _EntityIdsInited;
 	}
 }

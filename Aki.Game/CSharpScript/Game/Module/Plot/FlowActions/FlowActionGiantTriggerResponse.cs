@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050BC RID: 20668
+	// Token: 0x0200408C RID: 16524
 	public class FlowActionGiantTriggerResponse : FlowActionBase
 	{
-		// Token: 0x06034EDF RID: 216799 RVA: 0x00C897E4 File Offset: 0x00C879E4
+		// Token: 0x06029DD8 RID: 171480 RVA: 0x00BD6ACC File Offset: 0x00BD4CCC
 		protected override void OnExecute()
 		{
 			GiantTriggerResponse giantTriggerResponse = this.ActionInfo.Params as GiantTriggerResponse;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EE0 RID: 216800 RVA: 0x00C89834 File Offset: 0x00C87A34
+		// Token: 0x06029DD9 RID: 171481 RVA: 0x00BD6B1C File Offset: 0x00BD4D1C
 		protected override void OnBackgroundExecute()
 		{
 			GiantTriggerResponse giantTriggerResponse = this.ActionInfo.Params as GiantTriggerResponse;

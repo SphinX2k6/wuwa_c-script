@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B6D RID: 11117
+// Token: 0x020020E9 RID: 8425
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRogueWeaponEvolveItem : GridProxyAbstract<IWeaponEvolveData>
 {
-	// Token: 0x0601707B RID: 94331 RVA: 0x005D8A80 File Offset: 0x005D6C80
+	// Token: 0x06014AAC RID: 84652 RVA: 0x006055E8 File Offset: 0x006037E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,12 +27,12 @@ public class SurvivorsRogueWeaponEvolveItem : GridProxyAbstract<IWeaponEvolveDat
 		};
 	}
 
-	// Token: 0x0601707C RID: 94332 RVA: 0x005D8B06 File Offset: 0x005D6D06
+	// Token: 0x06014AAD RID: 84653 RVA: 0x0060566E File Offset: 0x0060386E
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0601707D RID: 94333 RVA: 0x005D8B08 File Offset: 0x005D6D08
+	// Token: 0x06014AAE RID: 84654 RVA: 0x00605670 File Offset: 0x00603870
 	public override void Refresh(IWeaponEvolveData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -64,6 +64,6 @@ public class SurvivorsRogueWeaponEvolveItem : GridProxyAbstract<IWeaponEvolveDat
 		sprite2.SetUIActive(false);
 	}
 
-	// Token: 0x0400AC35 RID: 44085
+	// Token: 0x0400B03B RID: 45115
 	public IWeaponEvolveData Data;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007265 RID: 29285
+	// Token: 0x02007A3A RID: 31290
 	public struct ISwitchScreenEffectState : IFlatbufferObject
 	{
-		// Token: 0x1700D947 RID: 55623
-		// (get) Token: 0x06033F34 RID: 212788 RVA: 0x006FCA4A File Offset: 0x006FAC4A
+		// Token: 0x1700E540 RID: 58688
+		// (get) Token: 0x06037236 RID: 225846 RVA: 0x0075DDAA File Offset: 0x0075BFAA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F35 RID: 212789 RVA: 0x006FCA57 File Offset: 0x006FAC57
+		// Token: 0x06037237 RID: 225847 RVA: 0x0075DDB7 File Offset: 0x0075BFB7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033F36 RID: 212790 RVA: 0x006FCA60 File Offset: 0x006FAC60
+		// Token: 0x06037238 RID: 225848 RVA: 0x0075DDC0 File Offset: 0x0075BFC0
 		public static ISwitchScreenEffectState GetRootAsISwitchScreenEffectState(ByteBuffer _bb)
 		{
 			return ISwitchScreenEffectState.GetRootAsISwitchScreenEffectState(_bb, default(ISwitchScreenEffectState));
 		}
 
-		// Token: 0x06033F37 RID: 212791 RVA: 0x006FCA7C File Offset: 0x006FAC7C
+		// Token: 0x06037239 RID: 225849 RVA: 0x0075DDDC File Offset: 0x0075BFDC
 		public static ISwitchScreenEffectState GetRootAsISwitchScreenEffectState(ByteBuffer _bb, ISwitchScreenEffectState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033F38 RID: 212792 RVA: 0x006FCA99 File Offset: 0x006FAC99
+		// Token: 0x0603723A RID: 225850 RVA: 0x0075DDF9 File Offset: 0x0075BFF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033F39 RID: 212793 RVA: 0x006FCAA8 File Offset: 0x006FACA8
+		// Token: 0x0603723B RID: 225851 RVA: 0x0075DE08 File Offset: 0x0075C008
 		public ISwitchScreenEffectState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D948 RID: 55624
-		// (get) Token: 0x06033F3A RID: 212794 RVA: 0x006FCAB8 File Offset: 0x006FACB8
+		// Token: 0x1700E541 RID: 58689
+		// (get) Token: 0x0603723C RID: 225852 RVA: 0x0075DE18 File Offset: 0x0075C018
 		public ESwitchEffectStateEffectType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D949 RID: 55625
-		// (get) Token: 0x06033F3B RID: 212795 RVA: 0x006FCAF4 File Offset: 0x006FACF4
+		// Token: 0x1700E542 RID: 58690
+		// (get) Token: 0x0603723D RID: 225853 RVA: 0x0075DE54 File Offset: 0x0075C054
 		public string Path
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F3C RID: 212796 RVA: 0x006FCB2B File Offset: 0x006FAD2B
+		// Token: 0x0603723E RID: 225854 RVA: 0x0075DE8B File Offset: 0x0075C08B
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06033F3D RID: 212797 RVA: 0x006FCB3A File Offset: 0x006FAD3A
+		// Token: 0x0603723F RID: 225855 RVA: 0x0075DE9A File Offset: 0x0075C09A
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06033F3E RID: 212798 RVA: 0x006FCB48 File Offset: 0x006FAD48
+		// Token: 0x06037240 RID: 225856 RVA: 0x0075DEA8 File Offset: 0x0075C0A8
 		public static Offset<ISwitchScreenEffectState> CreateISwitchScreenEffectState(FlatBufferBuilder builder, ESwitchEffectStateEffectType Type = ESwitchEffectStateEffectType.ScreenEffect, StringOffset PathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchScreenEffectState.EndISwitchScreenEffectState(builder);
 		}
 
-		// Token: 0x06033F3F RID: 212799 RVA: 0x006FCB65 File Offset: 0x006FAD65
+		// Token: 0x06037241 RID: 225857 RVA: 0x0075DEC5 File Offset: 0x0075C0C5
 		public static void StartISwitchScreenEffectState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06033F40 RID: 212800 RVA: 0x006FCB6E File Offset: 0x006FAD6E
+		// Token: 0x06037242 RID: 225858 RVA: 0x0075DECE File Offset: 0x0075C0CE
 		public static void AddType(FlatBufferBuilder builder, ESwitchEffectStateEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033F41 RID: 212801 RVA: 0x006FCB79 File Offset: 0x006FAD79
+		// Token: 0x06037243 RID: 225859 RVA: 0x0075DED9 File Offset: 0x0075C0D9
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(1, pathOffset.Value, 0);
 		}
 
-		// Token: 0x06033F42 RID: 212802 RVA: 0x006FCB89 File Offset: 0x006FAD89
+		// Token: 0x06037244 RID: 225860 RVA: 0x0075DEE9 File Offset: 0x0075C0E9
 		public static Offset<ISwitchScreenEffectState> EndISwitchScreenEffectState(FlatBufferBuilder builder)
 		{
 			return new Offset<ISwitchScreenEffectState>(builder.EndTable());
 		}
 
-		// Token: 0x06033F43 RID: 212803 RVA: 0x006FCB98 File Offset: 0x006FAD98
+		// Token: 0x06037245 RID: 225861 RVA: 0x0075DEF8 File Offset: 0x0075C0F8
 		public ISwitchScreenEffectStateT UnPack()
 		{
 			ISwitchScreenEffectStateT switchScreenEffectStateT = new ISwitchScreenEffectStateT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return switchScreenEffectStateT;
 		}
 
-		// Token: 0x06033F44 RID: 212804 RVA: 0x006FCBB3 File Offset: 0x006FADB3
+		// Token: 0x06037246 RID: 225862 RVA: 0x0075DF13 File Offset: 0x0075C113
 		public void UnPackTo(ISwitchScreenEffectStateT _o)
 		{
 			_o.Type = this.Type;
 			_o.Path = this.Path;
 		}
 
-		// Token: 0x06033F45 RID: 212805 RVA: 0x006FCBD0 File Offset: 0x006FADD0
+		// Token: 0x06037247 RID: 225863 RVA: 0x0075DF30 File Offset: 0x0075C130
 		public static Offset<ISwitchScreenEffectState> Pack(FlatBufferBuilder builder, ISwitchScreenEffectStateT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchScreenEffectState.CreateISwitchScreenEffectState(builder, _o.Type, pathOffset);
 		}
 
-		// Token: 0x04011D62 RID: 73058
+		// Token: 0x04012D64 RID: 77156
 		private Table __p;
 	}
 }

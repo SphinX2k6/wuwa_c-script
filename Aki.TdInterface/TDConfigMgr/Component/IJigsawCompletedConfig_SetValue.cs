@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A5 RID: 1189
+	// Token: 0x020004FE RID: 1278
 	public class IJigsawCompletedConfig_SetValue
 	{
-		// Token: 0x040011CF RID: 4559
+		// Token: 0x040012F1 RID: 4849
 		public bool? IsSilentPiece;
 
-		// Token: 0x040011D0 RID: 4560
+		// Token: 0x040012F2 RID: 4850
 		public bool? IsSilentFoundation;
 	}
 }

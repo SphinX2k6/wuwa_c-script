@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200418B RID: 16779
+	// Token: 0x020045E4 RID: 17892
 	public class ITakePhoto2TaggedActorTargetT
 	{
-		// Token: 0x170076F6 RID: 30454
-		// (get) Token: 0x06018AE1 RID: 101089 RVA: 0x0038E0B2 File Offset: 0x0038C2B2
-		// (set) Token: 0x06018AE2 RID: 101090 RVA: 0x0038E0BA File Offset: 0x0038C2BA
+		// Token: 0x17007D22 RID: 32034
+		// (get) Token: 0x0601A237 RID: 107063 RVA: 0x003B9506 File Offset: 0x003B7706
+		// (set) Token: 0x0601A238 RID: 107064 RVA: 0x003B950E File Offset: 0x003B770E
 		public ETakePhoto2TargetType Type { get; set; }
 
-		// Token: 0x170076F7 RID: 30455
-		// (get) Token: 0x06018AE3 RID: 101091 RVA: 0x0038E0C3 File Offset: 0x0038C2C3
-		// (set) Token: 0x06018AE4 RID: 101092 RVA: 0x0038E0CB File Offset: 0x0038C2CB
+		// Token: 0x17007D23 RID: 32035
+		// (get) Token: 0x0601A239 RID: 107065 RVA: 0x003B9517 File Offset: 0x003B7717
+		// (set) Token: 0x0601A23A RID: 107066 RVA: 0x003B951F File Offset: 0x003B771F
 		public bool IsOptionalTarget { get; set; }
 
-		// Token: 0x170076F8 RID: 30456
-		// (get) Token: 0x06018AE5 RID: 101093 RVA: 0x0038E0D4 File Offset: 0x0038C2D4
-		// (set) Token: 0x06018AE6 RID: 101094 RVA: 0x0038E0DC File Offset: 0x0038C2DC
+		// Token: 0x17007D24 RID: 32036
+		// (get) Token: 0x0601A23B RID: 107067 RVA: 0x003B9528 File Offset: 0x003B7728
+		// (set) Token: 0x0601A23C RID: 107068 RVA: 0x003B9530 File Offset: 0x003B7730
 		public ITakePhoto2TargetCameraDistanceConditionT TargetCameraDistanceCondition { get; set; }
 
-		// Token: 0x170076F9 RID: 30457
-		// (get) Token: 0x06018AE7 RID: 101095 RVA: 0x0038E0E5 File Offset: 0x0038C2E5
-		// (set) Token: 0x06018AE8 RID: 101096 RVA: 0x0038E0ED File Offset: 0x0038C2ED
+		// Token: 0x17007D25 RID: 32037
+		// (get) Token: 0x0601A23D RID: 107069 RVA: 0x003B9539 File Offset: 0x003B7739
+		// (set) Token: 0x0601A23E RID: 107070 RVA: 0x003B9541 File Offset: 0x003B7741
 		public string Tag { get; set; }
 
-		// Token: 0x170076FA RID: 30458
-		// (get) Token: 0x06018AE9 RID: 101097 RVA: 0x0038E0F6 File Offset: 0x0038C2F6
-		// (set) Token: 0x06018AEA RID: 101098 RVA: 0x0038E0FE File Offset: 0x0038C2FE
+		// Token: 0x17007D26 RID: 32038
+		// (get) Token: 0x0601A23F RID: 107071 RVA: 0x003B954A File Offset: 0x003B774A
+		// (set) Token: 0x0601A240 RID: 107072 RVA: 0x003B9552 File Offset: 0x003B7752
 		public ITakePhoto2TargetPosByRangeConditionT TargetPosCondition { get; set; }
 
-		// Token: 0x170076FB RID: 30459
-		// (get) Token: 0x06018AEB RID: 101099 RVA: 0x0038E107 File Offset: 0x0038C307
-		// (set) Token: 0x06018AEC RID: 101100 RVA: 0x0038E10F File Offset: 0x0038C30F
+		// Token: 0x17007D27 RID: 32039
+		// (get) Token: 0x0601A241 RID: 107073 RVA: 0x003B955B File Offset: 0x003B775B
+		// (set) Token: 0x0601A242 RID: 107074 RVA: 0x003B9563 File Offset: 0x003B7763
 		public int TargetSatisfiedCount { get; set; }
 
-		// Token: 0x170076FC RID: 30460
-		// (get) Token: 0x06018AED RID: 101101 RVA: 0x0038E118 File Offset: 0x0038C318
-		// (set) Token: 0x06018AEE RID: 101102 RVA: 0x0038E120 File Offset: 0x0038C320
+		// Token: 0x17007D28 RID: 32040
+		// (get) Token: 0x0601A243 RID: 107075 RVA: 0x003B956C File Offset: 0x003B776C
+		// (set) Token: 0x0601A244 RID: 107076 RVA: 0x003B9574 File Offset: 0x003B7774
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018AEF RID: 101103 RVA: 0x0038E129 File Offset: 0x0038C329
+		// Token: 0x0601A245 RID: 107077 RVA: 0x003B957D File Offset: 0x003B777D
 		public ITakePhoto2TaggedActorTargetT()
 		{
 			this.Type = ETakePhoto2TargetType.Entity;

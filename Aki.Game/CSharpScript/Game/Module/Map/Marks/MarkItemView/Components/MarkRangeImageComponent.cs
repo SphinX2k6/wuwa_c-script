@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x0200554A RID: 21834
+	// Token: 0x0200451C RID: 17692
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MarkRangeImageComponent : MarkPanelBase
 	{
-		// Token: 0x06037B74 RID: 228212 RVA: 0x00D38548 File Offset: 0x00D36748
+		// Token: 0x0602CA44 RID: 182852 RVA: 0x00C8601C File Offset: 0x00C8421C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037B75 RID: 228213 RVA: 0x00D385D4 File Offset: 0x00D367D4
+		// Token: 0x0602CA45 RID: 182853 RVA: 0x00C860A8 File Offset: 0x00C842A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MarkRangeImageComponent.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037B76 RID: 228214 RVA: 0x00D38617 File Offset: 0x00D36817
+		// Token: 0x0602CA46 RID: 182854 RVA: 0x00C860EB File Offset: 0x00C842EB
 		protected override void OnStart()
 		{
 			this.RootItem.SetAnchorOffset(Vector2D.ZeroVector);
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.RangeImage.SetUIActive(false);
 		}
 
-		// Token: 0x170085C7 RID: 34247
-		// (get) Token: 0x06037B77 RID: 228215 RVA: 0x00D38651 File Offset: 0x00D36851
+		// Token: 0x17005967 RID: 22887
+		// (get) Token: 0x0602CA47 RID: 182855 RVA: 0x00C86125 File Offset: 0x00C84325
 		public UUITexture RangeImage
 		{
 			get
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x170085C8 RID: 34248
-		// (get) Token: 0x06037B78 RID: 228216 RVA: 0x00D3865A File Offset: 0x00D3685A
+		// Token: 0x17005968 RID: 22888
+		// (get) Token: 0x0602CA48 RID: 182856 RVA: 0x00C8612E File Offset: 0x00C8432E
 		public UUIItem RangeArea
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x170085C9 RID: 34249
-		// (get) Token: 0x06037B79 RID: 228217 RVA: 0x00D38663 File Offset: 0x00D36863
+		// Token: 0x17005969 RID: 22889
+		// (get) Token: 0x0602CA49 RID: 182857 RVA: 0x00C86137 File Offset: 0x00C84337
 		public UUISprite RangeSprite
 		{
 			get
@@ -79,17 +79,17 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x0200B775 RID: 46965
+		// Token: 0x0200A1A0 RID: 41376
 		[NullableContext(0)]
 		public static class EChildComponents
 		{
-			// Token: 0x040378A6 RID: 227494
+			// Token: 0x040322D1 RID: 205521
 			public const int RangeImage = 0;
 
-			// Token: 0x040378A7 RID: 227495
+			// Token: 0x040322D2 RID: 205522
 			public const int RangeArea = 1;
 
-			// Token: 0x040378A8 RID: 227496
+			// Token: 0x040322D3 RID: 205523
 			public const int RangeAreaSprite = 2;
 		}
 	}

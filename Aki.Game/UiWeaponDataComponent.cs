@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002CC0 RID: 11456
+// Token: 0x02002219 RID: 8729
 [NullableContext(2)]
 [Nullable(0)]
 public class UiWeaponDataComponent : UiModelComponentBase
 {
-	// Token: 0x17002041 RID: 8257
-	// (get) Token: 0x06017F12 RID: 98066 RVA: 0x00616ABD File Offset: 0x00614CBD
+	// Token: 0x17002092 RID: 8338
+	// (get) Token: 0x0601578B RID: 87947 RVA: 0x0063C77D File Offset: 0x0063A97D
 	public int WeaponConfigId
 	{
 		get
@@ -21,8 +21,8 @@ public class UiWeaponDataComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x17002042 RID: 8258
-	// (get) Token: 0x06017F13 RID: 98067 RVA: 0x00616AD0 File Offset: 0x00614CD0
+	// Token: 0x17002093 RID: 8339
+	// (get) Token: 0x0601578C RID: 87948 RVA: 0x0063C790 File Offset: 0x0063A990
 	public WeaponDataBase WeaponData
 	{
 		get
@@ -31,13 +31,13 @@ public class UiWeaponDataComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017F14 RID: 98068 RVA: 0x00616AD8 File Offset: 0x00614CD8
+	// Token: 0x0601578D RID: 87949 RVA: 0x0063C798 File Offset: 0x0063A998
 	[NullableContext(1)]
 	public void SetWeaponData(WeaponDataBase weaponData)
 	{
 		this.WeaponDataInternal = weaponData;
 	}
 
-	// Token: 0x0400B273 RID: 45683
+	// Token: 0x0400B5DE RID: 46558
 	private WeaponDataBase WeaponDataInternal;
 }

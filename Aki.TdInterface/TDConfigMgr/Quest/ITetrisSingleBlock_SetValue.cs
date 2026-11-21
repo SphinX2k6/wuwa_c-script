@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200119B RID: 4507
+	// Token: 0x020012D5 RID: 4821
 	public class ITetrisSingleBlock_SetValue
 	{
-		// Token: 0x04003D65 RID: 15717
-		[Nullable(1)]
+		// Token: 0x040040CD RID: 16589
 		public string StyleName;
 	}
 }

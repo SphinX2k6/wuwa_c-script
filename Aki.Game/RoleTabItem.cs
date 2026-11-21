@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020019BE RID: 6590
+// Token: 0x02000E7C RID: 3708
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleTabItem : CommonTabItem, ITabViewRegister
 {
-	// Token: 0x0600C08B RID: 49291 RVA: 0x002B6270 File Offset: 0x002B4470
+	// Token: 0x06009495 RID: 38037 RVA: 0x002C1200 File Offset: 0x002BF400
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleTabItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -20,7 +20,7 @@ public class RoleTabItem : CommonTabItem, ITabViewRegister
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C08C RID: 49292 RVA: 0x002B62B3 File Offset: 0x002B44B3
+	// Token: 0x06009496 RID: 38038 RVA: 0x002C1243 File Offset: 0x002BF443
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		base.OnRefresh(data, isSelected, gridIndex);
@@ -32,14 +32,14 @@ public class RoleTabItem : CommonTabItem, ITabViewRegister
 		warningItem.SetUiActive(this.IsConflict(gridIndex));
 	}
 
-	// Token: 0x0600C08D RID: 49293 RVA: 0x002B62DA File Offset: 0x002B44DA
+	// Token: 0x06009497 RID: 38039 RVA: 0x002C126A File Offset: 0x002BF46A
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{
 		tabView.AddUiTabViewBehavior<UiTabCamera>().SetTabData((EUiTabViewName)tabView.GetViewName());
 		tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 	}
 
-	// Token: 0x0600C08E RID: 49294 RVA: 0x002B62FE File Offset: 0x002B44FE
+	// Token: 0x06009498 RID: 38040 RVA: 0x002C128E File Offset: 0x002BF48E
 	public override void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -49,10 +49,10 @@ public class RoleTabItem : CommonTabItem, ITabViewRegister
 		}
 	}
 
-	// Token: 0x04005674 RID: 22132
+	// Token: 0x04005726 RID: 22310
 	[Nullable(2)]
 	private UiPanelBase WarningItem;
 
-	// Token: 0x04005675 RID: 22133
+	// Token: 0x04005727 RID: 22311
 	public Func<int, bool> IsConflict = (int index) => false;
 }

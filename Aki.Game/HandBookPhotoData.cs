@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DF4 RID: 7668
+// Token: 0x020012B6 RID: 4790
 public class HandBookPhotoData
 {
-	// Token: 0x04006C3B RID: 27707
+	// Token: 0x04006D1C RID: 27932
 	[Nullable(new byte[]
 	{
 		2,
@@ -13,7 +13,7 @@ public class HandBookPhotoData
 	})]
 	public List<string> TextureList;
 
-	// Token: 0x04006C3C RID: 27708
+	// Token: 0x04006D1D RID: 27933
 	[Nullable(new byte[]
 	{
 		2,
@@ -21,7 +21,7 @@ public class HandBookPhotoData
 	})]
 	public List<string> TypeText;
 
-	// Token: 0x04006C3D RID: 27709
+	// Token: 0x04006D1E RID: 27934
 	[Nullable(new byte[]
 	{
 		2,
@@ -29,7 +29,7 @@ public class HandBookPhotoData
 	})]
 	public List<string> NameText;
 
-	// Token: 0x04006C3E RID: 27710
+	// Token: 0x04006D1F RID: 27935
 	[Nullable(new byte[]
 	{
 		2,
@@ -37,7 +37,7 @@ public class HandBookPhotoData
 	})]
 	public List<string> DescrtptionText;
 
-	// Token: 0x04006C3F RID: 27711
+	// Token: 0x04006D20 RID: 27936
 	[Nullable(new byte[]
 	{
 		2,
@@ -45,13 +45,13 @@ public class HandBookPhotoData
 	})]
 	public List<string> DateText;
 
-	// Token: 0x04006C40 RID: 27712
+	// Token: 0x04006D21 RID: 27937
 	public int Index;
 
-	// Token: 0x04006C41 RID: 27713
+	// Token: 0x04006D22 RID: 27938
 	public EHandBookTabType HandBookType;
 
-	// Token: 0x04006C42 RID: 27714
+	// Token: 0x04006D23 RID: 27939
 	[Nullable(2)]
 	public int[] ConfigId;
 }

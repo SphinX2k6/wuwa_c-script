@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060B9 RID: 24761
+	// Token: 0x0200671B RID: 26395
 	public struct IActorFxEmoteStopSockets : IFlatbufferObject
 	{
-		// Token: 0x1700B67E RID: 46718
-		// (get) Token: 0x0602A46C RID: 173164 RVA: 0x005D3DFD File Offset: 0x005D1FFD
+		// Token: 0x1700BFE9 RID: 49129
+		// (get) Token: 0x0602CB4D RID: 183117 RVA: 0x0061DDA5 File Offset: 0x0061BFA5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A46D RID: 173165 RVA: 0x005D3E0A File Offset: 0x005D200A
+		// Token: 0x0602CB4E RID: 183118 RVA: 0x0061DDB2 File Offset: 0x0061BFB2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A46E RID: 173166 RVA: 0x005D3E14 File Offset: 0x005D2014
+		// Token: 0x0602CB4F RID: 183119 RVA: 0x0061DDBC File Offset: 0x0061BFBC
 		public static IActorFxEmoteStopSockets GetRootAsIActorFxEmoteStopSockets(ByteBuffer _bb)
 		{
 			return IActorFxEmoteStopSockets.GetRootAsIActorFxEmoteStopSockets(_bb, default(IActorFxEmoteStopSockets));
 		}
 
-		// Token: 0x0602A46F RID: 173167 RVA: 0x005D3E30 File Offset: 0x005D2030
+		// Token: 0x0602CB50 RID: 183120 RVA: 0x0061DDD8 File Offset: 0x0061BFD8
 		public static IActorFxEmoteStopSockets GetRootAsIActorFxEmoteStopSockets(ByteBuffer _bb, IActorFxEmoteStopSockets obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A470 RID: 173168 RVA: 0x005D3E4D File Offset: 0x005D204D
+		// Token: 0x0602CB51 RID: 183121 RVA: 0x0061DDF5 File Offset: 0x0061BFF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A471 RID: 173169 RVA: 0x005D3E5C File Offset: 0x005D205C
+		// Token: 0x0602CB52 RID: 183122 RVA: 0x0061DE04 File Offset: 0x0061C004
 		public IActorFxEmoteStopSockets __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B67F RID: 46719
-		// (get) Token: 0x0602A472 RID: 173170 RVA: 0x005D3E6C File Offset: 0x005D206C
+		// Token: 0x1700BFEA RID: 49130
+		// (get) Token: 0x0602CB53 RID: 183123 RVA: 0x0061DE14 File Offset: 0x0061C014
 		public EActorFxEmoteStopSubType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A473 RID: 173171 RVA: 0x005D3EA8 File Offset: 0x005D20A8
+		// Token: 0x0602CB54 RID: 183124 RVA: 0x0061DE50 File Offset: 0x0061C050
 		public string Sockets(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700B680 RID: 46720
-		// (get) Token: 0x0602A474 RID: 173172 RVA: 0x005D3EE4 File Offset: 0x005D20E4
+		// Token: 0x1700BFEB RID: 49131
+		// (get) Token: 0x0602CB55 RID: 183125 RVA: 0x0061DE8C File Offset: 0x0061C08C
 		public int SocketsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A475 RID: 173173 RVA: 0x005D3F0F File Offset: 0x005D210F
+		// Token: 0x0602CB56 RID: 183126 RVA: 0x0061DEB7 File Offset: 0x0061C0B7
 		public static Offset<IActorFxEmoteStopSockets> CreateIActorFxEmoteStopSockets(FlatBufferBuilder builder, EActorFxEmoteStopSubType Type = EActorFxEmoteStopSubType.StopAll, VectorOffset SocketsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorFxEmoteStopSockets.EndIActorFxEmoteStopSockets(builder);
 		}
 
-		// Token: 0x0602A476 RID: 173174 RVA: 0x005D3F2C File Offset: 0x005D212C
+		// Token: 0x0602CB57 RID: 183127 RVA: 0x0061DED4 File Offset: 0x0061C0D4
 		public static void StartIActorFxEmoteStopSockets(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602A477 RID: 173175 RVA: 0x005D3F35 File Offset: 0x005D2135
+		// Token: 0x0602CB58 RID: 183128 RVA: 0x0061DEDD File Offset: 0x0061C0DD
 		public static void AddType(FlatBufferBuilder builder, EActorFxEmoteStopSubType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602A478 RID: 173176 RVA: 0x005D3F40 File Offset: 0x005D2140
+		// Token: 0x0602CB59 RID: 183129 RVA: 0x0061DEE8 File Offset: 0x0061C0E8
 		public static void AddSockets(FlatBufferBuilder builder, VectorOffset socketsOffset)
 		{
 			builder.AddOffset(1, socketsOffset.Value, 0);
 		}
 
-		// Token: 0x0602A479 RID: 173177 RVA: 0x005D3F50 File Offset: 0x005D2150
+		// Token: 0x0602CB5A RID: 183130 RVA: 0x0061DEF8 File Offset: 0x0061C0F8
 		public static VectorOffset CreateSocketsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A47A RID: 173178 RVA: 0x005D3F90 File Offset: 0x005D2190
+		// Token: 0x0602CB5B RID: 183131 RVA: 0x0061DF38 File Offset: 0x0061C138
 		public static VectorOffset CreateSocketsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A47B RID: 173179 RVA: 0x005D3FAA File Offset: 0x005D21AA
+		// Token: 0x0602CB5C RID: 183132 RVA: 0x0061DF52 File Offset: 0x0061C152
 		public static VectorOffset CreateSocketsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A47C RID: 173180 RVA: 0x005D3FC8 File Offset: 0x005D21C8
+		// Token: 0x0602CB5D RID: 183133 RVA: 0x0061DF70 File Offset: 0x0061C170
 		public static VectorOffset CreateSocketsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A47D RID: 173181 RVA: 0x005D3FE1 File Offset: 0x005D21E1
+		// Token: 0x0602CB5E RID: 183134 RVA: 0x0061DF89 File Offset: 0x0061C189
 		public static void StartSocketsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602A47E RID: 173182 RVA: 0x005D3FEC File Offset: 0x005D21EC
+		// Token: 0x0602CB5F RID: 183135 RVA: 0x0061DF94 File Offset: 0x0061C194
 		public static Offset<IActorFxEmoteStopSockets> EndIActorFxEmoteStopSockets(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorFxEmoteStopSockets>(builder.EndTable());
 		}
 
-		// Token: 0x0602A47F RID: 173183 RVA: 0x005D3FFC File Offset: 0x005D21FC
+		// Token: 0x0602CB60 RID: 183136 RVA: 0x0061DFA4 File Offset: 0x0061C1A4
 		public IActorFxEmoteStopSocketsT UnPack()
 		{
 			IActorFxEmoteStopSocketsT actorFxEmoteStopSocketsT = new IActorFxEmoteStopSocketsT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actorFxEmoteStopSocketsT;
 		}
 
-		// Token: 0x0602A480 RID: 173184 RVA: 0x005D4018 File Offset: 0x005D2218
+		// Token: 0x0602CB61 RID: 183137 RVA: 0x0061DFC0 File Offset: 0x0061C1C0
 		public void UnPackTo(IActorFxEmoteStopSocketsT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A481 RID: 173185 RVA: 0x005D4060 File Offset: 0x005D2260
+		// Token: 0x0602CB62 RID: 183138 RVA: 0x0061E008 File Offset: 0x0061C208
 		public static Offset<IActorFxEmoteStopSockets> Pack(FlatBufferBuilder builder, IActorFxEmoteStopSocketsT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorFxEmoteStopSockets.CreateIActorFxEmoteStopSockets(builder, _o.Type, socketsOffset);
 		}
 
-		// Token: 0x0401045D RID: 66653
+		// Token: 0x04011261 RID: 70241
 		private Table __p;
 	}
 }

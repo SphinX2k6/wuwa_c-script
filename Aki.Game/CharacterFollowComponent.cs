@@ -11,13 +11,13 @@ using CSharpScript.Game.Common.Event;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200305C RID: 12380
+// Token: 0x020025B2 RID: 9650
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterFollowComponent : EntityComponent
 {
-	// Token: 0x17002441 RID: 9281
-	// (get) Token: 0x0601A54E RID: 107854 RVA: 0x006FCE15 File Offset: 0x006FB015
+	// Token: 0x17002566 RID: 9574
+	// (get) Token: 0x06017EF4 RID: 98036 RVA: 0x00723D7D File Offset: 0x00721F7D
 	public List<int> AttributeSharerIds
 	{
 		get
@@ -26,7 +26,7 @@ public class CharacterFollowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A54F RID: 107855 RVA: 0x006FCE20 File Offset: 0x006FB020
+	// Token: 0x06017EF5 RID: 98037 RVA: 0x00723D88 File Offset: 0x00721F88
 	protected override bool OnStart()
 	{
 		this.CreatureDataComponent = base.Entity.GetComponent<CreatureDataComponent>();
@@ -36,20 +36,20 @@ public class CharacterFollowComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A550 RID: 107856 RVA: 0x006FCE72 File Offset: 0x006FB072
+	// Token: 0x06017EF6 RID: 98038 RVA: 0x00723DDA File Offset: 0x00721FDA
 	protected override void OnActivate()
 	{
 		this.InitFollowData();
 	}
 
-	// Token: 0x0601A551 RID: 107857 RVA: 0x006FCE7A File Offset: 0x006FB07A
+	// Token: 0x06017EF7 RID: 98039 RVA: 0x00723DE2 File Offset: 0x00721FE2
 	protected override bool OnEnd()
 	{
 		this.RemoveFromAttributeHolder();
 		return true;
 	}
 
-	// Token: 0x0601A552 RID: 107858 RVA: 0x006FCE84 File Offset: 0x006FB084
+	// Token: 0x06017EF8 RID: 98040 RVA: 0x00723DEC File Offset: 0x00721FEC
 	private void SetAttributeHolderId(int id)
 	{
 		this.AttributeHolderId = id;
@@ -69,7 +69,7 @@ public class CharacterFollowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A553 RID: 107859 RVA: 0x006FCED8 File Offset: 0x006FB0D8
+	// Token: 0x06017EF9 RID: 98041 RVA: 0x00723E40 File Offset: 0x00722040
 	[NullableContext(2)]
 	public AActor GetRoleActor()
 	{
@@ -81,7 +81,7 @@ public class CharacterFollowComponent : EntityComponent
 		return entity.GetComponent<BaseActorComponent>().Owner;
 	}
 
-	// Token: 0x0601A554 RID: 107860 RVA: 0x006FCF14 File Offset: 0x006FB114
+	// Token: 0x06017EFA RID: 98042 RVA: 0x00723E7C File Offset: 0x0072207C
 	public TArray<AActor> GetAttributeSharerActors()
 	{
 		List<int> attributeSharerIdsInternal = this.AttributeSharerIdsInternal;
@@ -101,13 +101,13 @@ public class CharacterFollowComponent : EntityComponent
 		return tarray;
 	}
 
-	// Token: 0x0601A555 RID: 107861 RVA: 0x006FCFA0 File Offset: 0x006FB1A0
+	// Token: 0x06017EFB RID: 98043 RVA: 0x00723F08 File Offset: 0x00722108
 	public TArray<AActor> GetFollowActor()
 	{
 		return this.GetAttributeSharerActors();
 	}
 
-	// Token: 0x0601A556 RID: 107862 RVA: 0x006FCFA8 File Offset: 0x006FB1A8
+	// Token: 0x06017EFC RID: 98044 RVA: 0x00723F10 File Offset: 0x00722110
 	public void SetAttributeSharerId(int id)
 	{
 		if (this.AttributeSharerIdsInternal.IndexOf(id) == -1)
@@ -116,13 +116,13 @@ public class CharacterFollowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A557 RID: 107863 RVA: 0x006FCFC5 File Offset: 0x006FB1C5
+	// Token: 0x06017EFD RID: 98045 RVA: 0x00723F2D File Offset: 0x0072212D
 	public void SetFollowId(int id)
 	{
 		this.SetAttributeSharerId(id);
 	}
 
-	// Token: 0x0601A558 RID: 107864 RVA: 0x006FCFD0 File Offset: 0x006FB1D0
+	// Token: 0x06017EFE RID: 98046 RVA: 0x00723F38 File Offset: 0x00722138
 	public void RemoveFromAttributeHolder()
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(this.CreatureDataComponent.GetSummonerId());
@@ -138,7 +138,7 @@ public class CharacterFollowComponent : EntityComponent
 		component.DeleteAttributeSharerId(base.Entity.Id);
 	}
 
-	// Token: 0x0601A559 RID: 107865 RVA: 0x006FD028 File Offset: 0x006FB228
+	// Token: 0x06017EFF RID: 98047 RVA: 0x00723F90 File Offset: 0x00722190
 	[NullableContext(2)]
 	public unsafe Entity GetAttributeHolder()
 	{
@@ -164,7 +164,7 @@ public class CharacterFollowComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601A55A RID: 107866 RVA: 0x006FD0DF File Offset: 0x006FB2DF
+	// Token: 0x06017F00 RID: 98048 RVA: 0x00724047 File Offset: 0x00722247
 	[NullableContext(2)]
 	public Entity GetAttributeHolderExceptVisionSummon()
 	{
@@ -175,14 +175,14 @@ public class CharacterFollowComponent : EntityComponent
 		return this.GetAttributeHolder();
 	}
 
-	// Token: 0x0601A55B RID: 107867 RVA: 0x006FD0F1 File Offset: 0x006FB2F1
+	// Token: 0x06017F01 RID: 98049 RVA: 0x00724059 File Offset: 0x00722259
 	public void Reset(int entityId = 0)
 	{
 		this.DeleteAttributeSharerId(entityId);
 		this.AttributeHolderId = 0;
 	}
 
-	// Token: 0x0601A55C RID: 107868 RVA: 0x006FD104 File Offset: 0x006FB304
+	// Token: 0x06017F02 RID: 98050 RVA: 0x0072406C File Offset: 0x0072226C
 	public double GetToRoleDistance()
 	{
 		if (this.AttributeHolderId == 0)
@@ -203,7 +203,7 @@ public class CharacterFollowComponent : EntityComponent
 		return -1.0;
 	}
 
-	// Token: 0x0601A55D RID: 107869 RVA: 0x006FD190 File Offset: 0x006FB390
+	// Token: 0x06017F03 RID: 98051 RVA: 0x007240F8 File Offset: 0x007222F8
 	private void InitFollowData()
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(this.CreatureDataComponent.GetSummonerId());
@@ -257,7 +257,7 @@ public class CharacterFollowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A55E RID: 107870 RVA: 0x006FD350 File Offset: 0x006FB550
+	// Token: 0x06017F04 RID: 98052 RVA: 0x007242B8 File Offset: 0x007224B8
 	private void DeleteAttributeSharerId(int entityId)
 	{
 		if (entityId != 0)
@@ -275,13 +275,13 @@ public class CharacterFollowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A55F RID: 107871 RVA: 0x006FD389 File Offset: 0x006FB589
+	// Token: 0x06017F05 RID: 98053 RVA: 0x007242F1 File Offset: 0x007224F1
 	private void DeleteFollowId(int entityId)
 	{
 		this.DeleteAttributeSharerId(entityId);
 	}
 
-	// Token: 0x0601A560 RID: 107872 RVA: 0x006FD392 File Offset: 0x006FB592
+	// Token: 0x06017F06 RID: 98054 RVA: 0x007242FA File Offset: 0x007224FA
 	public void SetRelationship(EntityHandle summoner)
 	{
 		this.SetAttributeHolderId(summoner.Id);
@@ -289,7 +289,7 @@ public class CharacterFollowComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<int>(this, EEventName.OnCharacterSetMaster, summoner.Id);
 	}
 
-	// Token: 0x0601A561 RID: 107873 RVA: 0x006FD3D4 File Offset: 0x006FB5D4
+	// Token: 0x06017F07 RID: 98055 RVA: 0x0072433C File Offset: 0x0072253C
 	public void ListenConcomitantInherit(IConcomitantInheritContext context)
 	{
 		this.CurrentConcomitantInherit = context;
@@ -297,7 +297,7 @@ public class CharacterFollowComponent : EntityComponent
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.CharBeforeInterruptWithTarget, new Action<int, int>(this.OnCharBeforeInterruptWithTarget));
 	}
 
-	// Token: 0x0601A562 RID: 107874 RVA: 0x006FD428 File Offset: 0x006FB628
+	// Token: 0x06017F08 RID: 98056 RVA: 0x00724390 File Offset: 0x00722590
 	public void RemoveListenConcomitantInherit()
 	{
 		this.CurrentConcomitantInherit = null;
@@ -305,19 +305,19 @@ public class CharacterFollowComponent : EntityComponent
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharBeforeInterruptWithTarget, new Action<int, int>(this.OnCharBeforeInterruptWithTarget));
 	}
 
-	// Token: 0x0601A563 RID: 107875 RVA: 0x006FD47C File Offset: 0x006FB67C
+	// Token: 0x06017F09 RID: 98057 RVA: 0x007243E4 File Offset: 0x007225E4
 	private void OnCharBeforeInterrupt(int entityId, int interruptedSkillId)
 	{
 		this.CheckStartConcomitantInherit(interruptedSkillId, null);
 	}
 
-	// Token: 0x0601A564 RID: 107876 RVA: 0x006FD499 File Offset: 0x006FB699
+	// Token: 0x06017F0A RID: 98058 RVA: 0x00724401 File Offset: 0x00722601
 	private void OnCharBeforeInterruptWithTarget(int newSkillId, int interruptedSkillId)
 	{
 		this.CheckStartConcomitantInherit(interruptedSkillId, new int?(newSkillId));
 	}
 
-	// Token: 0x0601A565 RID: 107877 RVA: 0x006FD4A8 File Offset: 0x006FB6A8
+	// Token: 0x06017F0B RID: 98059 RVA: 0x00724410 File Offset: 0x00722610
 	private void CheckStartConcomitantInherit(int interruptedSkillId, int? newSkillId = null)
 	{
 		if (this.CurrentConcomitantInherit == null)
@@ -374,7 +374,7 @@ public class CharacterFollowComponent : EntityComponent
 		this.StartConcomitantInherit(this.CurrentConcomitantInherit);
 	}
 
-	// Token: 0x0601A566 RID: 107878 RVA: 0x006FD5A4 File Offset: 0x006FB7A4
+	// Token: 0x06017F0C RID: 98060 RVA: 0x0072450C File Offset: 0x0072270C
 	public void StartConcomitantInherit(IConcomitantInheritContext context)
 	{
 		float currentMontagePosition = this.AnimComp.MontageGetPosition();
@@ -527,7 +527,7 @@ public class CharacterFollowComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A567 RID: 107879 RVA: 0x006FD850 File Offset: 0x006FBA50
+	// Token: 0x06017F0D RID: 98061 RVA: 0x007247B8 File Offset: 0x007229B8
 	public void EndConcomitantInherit(int summonIndex)
 	{
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Skill, base.Entity, "[伴生物继承本体技能表现]结束", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -585,7 +585,7 @@ public class CharacterFollowComponent : EntityComponent
 		CreatureController.Instance.SetEntityEnable(summonedEntity.Entity, false, "ConcomitantInherit", true);
 	}
 
-	// Token: 0x0601A568 RID: 107880 RVA: 0x006FD9E0 File Offset: 0x006FBBE0
+	// Token: 0x06017F0E RID: 98062 RVA: 0x00724948 File Offset: 0x00722B48
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -593,123 +593,126 @@ public class CharacterFollowComponent : EntityComponent
 			return false;
 		}
 		CharacterFollowComponent characterFollowComponent = (CharacterFollowComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		if (characterFollowComponent.CreatureDataComponent == null)
 		{
-			if (characterFollowComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			this.CreatureDataComponent = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 		{
-			if (characterFollowComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterFollowComponent.AnimComp == null)
 		{
-			if (characterFollowComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("SkillComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (characterFollowComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AttributeSharerIdsInternal"))
+		if (characterFollowComponent.ActorComp == null)
 		{
-			if (characterFollowComponent.AttributeSharerIdsInternal == null)
-			{
-				this.AttributeSharerIdsInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.AttributeSharerIdsInternal), "AttributeSharerIdsInternal"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("AttributeHolderId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			this.AttributeHolderId = characterFollowComponent.AttributeHolderId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsVisionSummon"))
+		if (characterFollowComponent.SkillComp == null)
 		{
-			this.IsVisionSummon = characterFollowComponent.IsVisionSummon;
+			this.SkillComp = null;
 		}
-		if (base.CanResetComponentProperty("CurrentConcomitantInherit"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
-			if (characterFollowComponent.CurrentConcomitantInherit == null)
-			{
-				this.CurrentConcomitantInherit = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IConcomitantInheritContext>(this.CurrentConcomitantInherit), "CurrentConcomitantInherit"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ConcomitantInheritMap"))
+		if (characterFollowComponent.AttributeSharerIdsInternal == null)
 		{
-			if (characterFollowComponent.ConcomitantInheritMap == null)
-			{
-				this.ConcomitantInheritMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IConcomitantInheritContext>>(this.ConcomitantInheritMap), "ConcomitantInheritMap"))
-			{
-				return false;
-			}
+			this.AttributeSharerIdsInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeSharerIdsInternal), "AttributeSharerIdsInternal"))
+		{
+			return false;
+		}
+		this.AttributeHolderId = characterFollowComponent.AttributeHolderId;
+		this.IsVisionSummon = characterFollowComponent.IsVisionSummon;
+		if (characterFollowComponent.CurrentConcomitantInherit == null)
+		{
+			this.CurrentConcomitantInherit = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentConcomitantInherit), "CurrentConcomitantInherit"))
+		{
+			return false;
+		}
+		if (characterFollowComponent.ConcomitantInheritMap == null)
+		{
+			this.ConcomitantInheritMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConcomitantInheritMap), "ConcomitantInheritMap"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400C8EF RID: 51439
+	// Token: 0x17002567 RID: 9575
+	// (get) Token: 0x06017F0F RID: 98063 RVA: 0x00724AAD File Offset: 0x00722CAD
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002568 RID: 9576
+	// (get) Token: 0x06017F10 RID: 98064 RVA: 0x00724AB0 File Offset: 0x00722CB0
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002569 RID: 9577
+	// (get) Token: 0x06017F11 RID: 98065 RVA: 0x00724AB3 File Offset: 0x00722CB3
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CCC9 RID: 52425
 	[Nullable(2)]
 	private CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400C8F0 RID: 51440
+	// Token: 0x0400CCCA RID: 52426
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400C8F1 RID: 51441
+	// Token: 0x0400CCCB RID: 52427
 	[Nullable(2)]
 	protected CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C8F2 RID: 51442
+	// Token: 0x0400CCCC RID: 52428
 	[Nullable(2)]
 	private BaseSkillComponent SkillComp;
 
-	// Token: 0x0400C8F3 RID: 51443
+	// Token: 0x0400CCCD RID: 52429
 	private List<int> AttributeSharerIdsInternal = new List<int>();
 
-	// Token: 0x0400C8F4 RID: 51444
+	// Token: 0x0400CCCE RID: 52430
 	private int AttributeHolderId;
 
-	// Token: 0x0400C8F5 RID: 51445
+	// Token: 0x0400CCCF RID: 52431
 	private bool IsVisionSummon;
 
-	// Token: 0x0400C8F6 RID: 51446
+	// Token: 0x0400CCD0 RID: 52432
 	[Nullable(2)]
 	public IConcomitantInheritContext CurrentConcomitantInherit;
 
-	// Token: 0x0400C8F7 RID: 51447
+	// Token: 0x0400CCD1 RID: 52433
 	public Dictionary<int, IConcomitantInheritContext> ConcomitantInheritMap = new Dictionary<int, IConcomitantInheritContext>();
 }

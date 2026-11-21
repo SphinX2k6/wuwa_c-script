@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001FE1 RID: 8161
+// Token: 0x020014B4 RID: 5300
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomSmartDiscardViewData : IPhantomSmartDiscardViewData
 {
-	// Token: 0x17001361 RID: 4961
-	// (get) Token: 0x0600FFC7 RID: 65479 RVA: 0x003E4A41 File Offset: 0x003E2C41
-	// (set) Token: 0x0600FFC8 RID: 65480 RVA: 0x003E4A49 File Offset: 0x003E2C49
+	// Token: 0x1700138E RID: 5006
+	// (get) Token: 0x0600D42F RID: 54319 RVA: 0x003F1041 File Offset: 0x003EF241
+	// (set) Token: 0x0600D430 RID: 54320 RVA: 0x003F1049 File Offset: 0x003EF249
 	public Action OnConfirm { get; set; }
 
-	// Token: 0x17001362 RID: 4962
-	// (get) Token: 0x0600FFC9 RID: 65481 RVA: 0x003E4A52 File Offset: 0x003E2C52
-	// (set) Token: 0x0600FFCA RID: 65482 RVA: 0x003E4A5A File Offset: 0x003E2C5A
+	// Token: 0x1700138F RID: 5007
+	// (get) Token: 0x0600D431 RID: 54321 RVA: 0x003F1052 File Offset: 0x003EF252
+	// (set) Token: 0x0600D432 RID: 54322 RVA: 0x003F105A File Offset: 0x003EF25A
 	public Action OnCancel { get; set; }
 }

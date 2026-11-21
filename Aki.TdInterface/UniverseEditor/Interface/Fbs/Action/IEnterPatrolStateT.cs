@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066CD RID: 26317
+	// Token: 0x02006D47 RID: 27975
 	public class IEnterPatrolStateT
 	{
 	}

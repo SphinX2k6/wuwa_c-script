@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009B2 RID: 2482
+	// Token: 0x02000A67 RID: 2663
 	public static class ENoRenderPortalTypeExtensions
 	{
-		// Token: 0x06003752 RID: 14162 RVA: 0x0008FEA8 File Offset: 0x0008E0A8
+		// Token: 0x06003AE2 RID: 15074 RVA: 0x00097F9C File Offset: 0x0009619C
 		public static string ToEnumString(this ENoRenderPortalType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003753 RID: 14163 RVA: 0x0008FED0 File Offset: 0x0008E0D0
+		// Token: 0x06003AE3 RID: 15075 RVA: 0x00097FC4 File Offset: 0x000961C4
 		public static ENoRenderPortalType FromString(string name)
 		{
 			ENoRenderPortalType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003754 RID: 14164 RVA: 0x0008FEF9 File Offset: 0x0008E0F9
+		// Token: 0x06003AE4 RID: 15076 RVA: 0x00097FED File Offset: 0x000961ED
 		public static bool TryFromString(string name, out ENoRenderPortalType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003755 RID: 14165 RVA: 0x0008FF1E File Offset: 0x0008E11E
+		// Token: 0x06003AE5 RID: 15077 RVA: 0x00098012 File Offset: 0x00096212
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003756 RID: 14166 RVA: 0x0008FF2E File Offset: 0x0008E12E
+		// Token: 0x06003AE6 RID: 15078 RVA: 0x00098022 File Offset: 0x00096222
 		public static ENoRenderPortalType[] GetValues()
 		{
 			return new ENoRenderPortalType[1];
 		}
 
-		// Token: 0x06003757 RID: 14167 RVA: 0x0008FF36 File Offset: 0x0008E136
+		// Token: 0x06003AE7 RID: 15079 RVA: 0x0009802A File Offset: 0x0009622A
 		public static string[] GetNames()
 		{
 			return new string[]

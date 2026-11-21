@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003282 RID: 12930
+// Token: 0x020027F2 RID: 10226
 public enum ESkeletalMeshTickType
 {
-	// Token: 0x0400DD25 RID: 56613
+	// Token: 0x0400E1C2 RID: 57794
 	Unknown,
-	// Token: 0x0400DD26 RID: 56614
+	// Token: 0x0400E1C3 RID: 57795
 	AlwaysTick,
-	// Token: 0x0400DD27 RID: 56615
+	// Token: 0x0400E1C4 RID: 57796
 	OnlyMainMeshTick
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF3 RID: 19955
+	// Token: 0x02003DBC RID: 15804
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikePhantomLockItem : UiPanelBase
 	{
-		// Token: 0x060337F1 RID: 210929 RVA: 0x00C08530 File Offset: 0x00C06730
+		// Token: 0x0602865C RID: 165468 RVA: 0x00B51A40 File Offset: 0x00B4FC40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,41 +28,41 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060337F2 RID: 210930 RVA: 0x00C085BA File Offset: 0x00C067BA
+		// Token: 0x0602865D RID: 165469 RVA: 0x00B51ACA File Offset: 0x00B4FCCA
 		public void SetTextByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x060337F3 RID: 210931 RVA: 0x00C085CF File Offset: 0x00C067CF
+		// Token: 0x0602865E RID: 165470 RVA: 0x00B51ADF File Offset: 0x00B4FCDF
 		public void SetTextByText(string text)
 		{
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x060337F4 RID: 210932 RVA: 0x00C085DF File Offset: 0x00C067DF
+		// Token: 0x0602865F RID: 165471 RVA: 0x00B51AEF File Offset: 0x00B4FCEF
 		public UUISprite GetIconSprite()
 		{
 			return base.GetSprite(0);
 		}
 
-		// Token: 0x060337F5 RID: 210933 RVA: 0x00C085E8 File Offset: 0x00C067E8
+		// Token: 0x06028660 RID: 165472 RVA: 0x00B51AF8 File Offset: 0x00B4FCF8
 		public void SetSpriteVisible(bool bVisible)
 		{
 			base.GetSprite(0).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0200AF7A RID: 44922
+		// Token: 0x020099AF RID: 39343
 		[NullableContext(0)]
 		private class ERedComponents
 		{
-			// Token: 0x04035485 RID: 218245
+			// Token: 0x0402FEB8 RID: 196280
 			public const int Sprite = 0;
 
-			// Token: 0x04035486 RID: 218246
+			// Token: 0x0402FEB9 RID: 196281
 			public const int Txt = 1;
 
-			// Token: 0x04035487 RID: 218247
+			// Token: 0x0402FEBA RID: 196282
 			public const int Button = 2;
 		}
 	}

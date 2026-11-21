@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001822 RID: 6178
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019AD RID: 6573
 	public class IBuyGoods : ISystemFunction
 	{
-		// Token: 0x06008495 RID: 33941 RVA: 0x0013BC88 File Offset: 0x00139E88
+		// Token: 0x06008BBB RID: 35771 RVA: 0x0014B47C File Offset: 0x0014967C
 		private IBuyGoods_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008496 RID: 33942 RVA: 0x0013BCC0 File Offset: 0x00139EC0
+		// Token: 0x06008BBC RID: 35772 RVA: 0x0014B4B4 File Offset: 0x001496B4
 		public static IBuyGoods Create([Nullable(2)] IBuyGoods instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008497 RID: 33943 RVA: 0x0013BCD3 File Offset: 0x00139ED3
+		// Token: 0x06008BBD RID: 35773 RVA: 0x0014B4C7 File Offset: 0x001496C7
 		public static IBuyGoods CreateFromSetValue([Nullable(2)] IBuyGoods_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008498 RID: 33944 RVA: 0x0013BCE6 File Offset: 0x00139EE6
+		// Token: 0x06008BBE RID: 35774 RVA: 0x0014B4DA File Offset: 0x001496DA
 		public new IBuyGoods_SetValue ToSetValue()
 		{
 			return new IBuyGoods_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B6C RID: 11116
-		// (get) Token: 0x06008499 RID: 33945 RVA: 0x0013BD05 File Offset: 0x00139F05
-		// (set) Token: 0x0600849A RID: 33946 RVA: 0x0013BD30 File Offset: 0x00139F30
+		// Token: 0x17002D66 RID: 11622
+		// (get) Token: 0x06008BBF RID: 35775 RVA: 0x0014B4F9 File Offset: 0x001496F9
+		// (set) Token: 0x06008BC0 RID: 35776 RVA: 0x0014B524 File Offset: 0x00149724
 		public override ESystemFunction Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B6D RID: 11117
-		// (get) Token: 0x0600849B RID: 33947 RVA: 0x0013BD3E File Offset: 0x00139F3E
-		// (set) Token: 0x0600849C RID: 33948 RVA: 0x0013BD69 File Offset: 0x00139F69
+		// Token: 0x17002D67 RID: 11623
+		// (get) Token: 0x06008BC1 RID: 35777 RVA: 0x0014B532 File Offset: 0x00149732
+		// (set) Token: 0x06008BC2 RID: 35778 RVA: 0x0014B55D File Offset: 0x0014975D
 		public virtual int GoodsId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053E5 RID: 21477
+		// Token: 0x04005831 RID: 22577
 		[Nullable(2)]
 		protected new IBuyGoods FbInstance;
 
-		// Token: 0x040053E6 RID: 21478
+		// Token: 0x04005832 RID: 22578
 		[Nullable(2)]
 		protected new IBuyGoods_SetValue PocoInterface;
 	}

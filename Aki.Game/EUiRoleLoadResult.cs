@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002C5C RID: 11356
+// Token: 0x020021B5 RID: 8629
 public enum EUiRoleLoadResult
 {
-	// Token: 0x0400B0A5 RID: 45221
+	// Token: 0x0400B411 RID: 46097
 	Unknown,
-	// Token: 0x0400B0A6 RID: 45222
+	// Token: 0x0400B412 RID: 46098
 	Fail,
-	// Token: 0x0400B0A7 RID: 45223
+	// Token: 0x0400B413 RID: 46099
 	Success,
-	// Token: 0x0400B0A8 RID: 45224
+	// Token: 0x0400B414 RID: 46100
 	LoadingMissing
 }

@@ -4,70 +4,70 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002208 RID: 8712
+	// Token: 0x02002473 RID: 9331
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ShowTalk_SetValue
 	{
-		// Token: 0x04007205 RID: 29189
+		// Token: 0x0400784E RID: 30798
 		public bool? ResetCamera;
 
-		// Token: 0x04007206 RID: 29190
-		[Nullable(1)]
+		// Token: 0x0400784F RID: 30799
+		[Nullable(0)]
 		public List<ITalkItem> TalkItems;
 
-		// Token: 0x04007207 RID: 29191
+		// Token: 0x04007850 RID: 30800
 		public IShowTalkOutline TalkOutline;
 
-		// Token: 0x04007208 RID: 29192
+		// Token: 0x04007851 RID: 30801
 		public string SequenceDataAsset;
 
-		// Token: 0x04007209 RID: 29193
+		// Token: 0x04007852 RID: 30802
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IShowTalkFrameEvent> TalkFrameEvents;
 
-		// Token: 0x0400720A RID: 29194
+		// Token: 0x04007853 RID: 30803
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<List<int>> TalkSequence;
 
-		// Token: 0x0400720B RID: 29195
+		// Token: 0x04007854 RID: 30804
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> SequenceNames;
 
-		// Token: 0x0400720C RID: 29196
+		// Token: 0x04007855 RID: 30805
 		[Nullable(new byte[]
 		{
 			2,
-			1,
-			1
+			0,
+			0
 		})]
 		public Dictionary<int, List<ITalkSequenceTransition>> SequenceTransitions;
 
-		// Token: 0x0400720D RID: 29197
+		// Token: 0x04007856 RID: 30806
 		public bool? SaveFinalPos;
 
-		// Token: 0x0400720E RID: 29198
+		// Token: 0x04007857 RID: 30807
 		public SetBlendAnim SeqBlendAnim;
 
-		// Token: 0x0400720F RID: 29199
+		// Token: 0x04007858 RID: 30808
 		public string EdSequencePath;
 
-		// Token: 0x04007210 RID: 29200
+		// Token: 0x04007859 RID: 30809
 		public IPlotConfig EdPlotConfig;
 
-		// Token: 0x04007211 RID: 29201
+		// Token: 0x0400785A RID: 30810
 		public string EdPreSeqSavePath;
 	}
 }

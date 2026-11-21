@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020E3 RID: 8419
+	// Token: 0x020006CC RID: 1740
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUI_PointerInputModule")]
 	[UnrealStructLayout(296, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 296)]
 	public abstract class ULGUI_PointerInputModule : ULGUIBaseInputModule, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601FB3C RID: 129852 RVA: 0x002F24E6 File Offset: 0x002F06E6
+		// Token: 0x06009463 RID: 37987 RVA: 0x000DFD5E File Offset: 0x000DDF5E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUI_PointerInputModule._ClassPtr;
 		}
 
-		// Token: 0x17007CE6 RID: 31974
-		// (get) Token: 0x0601FB3D RID: 129853 RVA: 0x002F24F2 File Offset: 0x002F06F2
-		// (set) Token: 0x0601FB3E RID: 129854 RVA: 0x002F2506 File Offset: 0x002F0706
+		// Token: 0x17001B9C RID: 7068
+		// (get) Token: 0x06009464 RID: 37988 RVA: 0x000DFD6A File Offset: 0x000DDF6A
+		// (set) Token: 0x06009465 RID: 37989 RVA: 0x000DFD7E File Offset: 0x000DDF7E
 		public unsafe ULGUIEventSystem eventSystem
 		{
 			get
@@ -34,37 +34,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FB3F RID: 129855 RVA: 0x002F251B File Offset: 0x002F071B
+		// Token: 0x06009466 RID: 37990 RVA: 0x000DFD93 File Offset: 0x000DDF93
 		public void UpdateNavigation(USceneComponent NewSelectable)
 		{
 			ULGUI_PointerInputModule.__UpdateNavigation_Internal(base.NativePtr, (NewSelectable != null) ? NewSelectable.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601FB40 RID: 129856 RVA: 0x002F2538 File Offset: 0x002F0738
+		// Token: 0x06009467 RID: 37991 RVA: 0x000DFDB0 File Offset: 0x000DDFB0
 		public void UnregisterInputChangeEvent(FLGUIDelegateHandleWrapper delegateHandle)
 		{
 			ULGUI_PointerInputModule.__UnregisterInputChangeEvent_Internal(base.NativePtr, (delegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x0601FB41 RID: 129857 RVA: 0x002F2554 File Offset: 0x002F0754
+		// Token: 0x06009468 RID: 37992 RVA: 0x000DFDCC File Offset: 0x000DDFCC
 		public void SwitchToNavigationInputType()
 		{
 			ULGUI_PointerInputModule.__SwitchToNavigationInputType_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FB42 RID: 129858 RVA: 0x002F2561 File Offset: 0x002F0761
+		// Token: 0x06009469 RID: 37993 RVA: 0x000DFDD9 File Offset: 0x000DDFD9
 		public void SetCurrentInputKeyType(EInputKeyType InputKeyType)
 		{
 			ULGUI_PointerInputModule.__SetCurrentInputKeyType_Internal(base.NativePtr, InputKeyType);
 		}
 
-		// Token: 0x0601FB43 RID: 129859 RVA: 0x002F256F File Offset: 0x002F076F
+		// Token: 0x0600946A RID: 37994 RVA: 0x000DFDE7 File Offset: 0x000DDFE7
 		public void SetClickThreshold(float Value)
 		{
 			ULGUI_PointerInputModule.__SetClickThreshold_Internal(base.NativePtr, Value);
 		}
 
-		// Token: 0x0601FB44 RID: 129860 RVA: 0x002F257D File Offset: 0x002F077D
+		// Token: 0x0600946B RID: 37995 RVA: 0x000DFDF5 File Offset: 0x000DDFF5
 		[NullableContext(1)]
 		public FLGUIDelegateHandleWrapper RegisterInputChangeEvent([Nullable(2)] in FLGUIPointerInputChange_DynamicDelegate pointerInputChange)
 		{
@@ -73,117 +73,117 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(ULGUI_PointerInputModule.__RegisterInputChangeEvent_Internal(nativePtr, (flguipointerInputChange_DynamicDelegate != null) ? flguipointerInputChange_DynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x0601FB45 RID: 129861 RVA: 0x002F259F File Offset: 0x002F079F
+		// Token: 0x0600946C RID: 37996 RVA: 0x000DFE17 File Offset: 0x000DE017
 		public bool IsPointerEventDataLineTrace(ULGUIPointerEventData InPointerEventData)
 		{
 			return ULGUI_PointerInputModule.__IsPointerEventDataLineTrace_Internal(base.NativePtr, (InPointerEventData != null) ? InPointerEventData.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601FB46 RID: 129862 RVA: 0x002F25BC File Offset: 0x002F07BC
+		// Token: 0x0600946D RID: 37997 RVA: 0x000DFE34 File Offset: 0x000DE034
 		public void InputTriggerForNavigation(bool triggerPress)
 		{
 			ULGUI_PointerInputModule.__InputTriggerForNavigation_Internal(base.NativePtr, triggerPress);
 		}
 
-		// Token: 0x0601FB47 RID: 129863 RVA: 0x002F25CA File Offset: 0x002F07CA
+		// Token: 0x0600946E RID: 37998 RVA: 0x000DFE42 File Offset: 0x000DE042
 		public void InputNavigation(ELGUINavigationDirection direction, bool pressOrRelease)
 		{
 			ULGUI_PointerInputModule.__InputNavigation_Internal(base.NativePtr, direction, pressOrRelease);
 		}
 
-		// Token: 0x0601FB48 RID: 129864 RVA: 0x002F25D9 File Offset: 0x002F07D9
+		// Token: 0x0600946F RID: 37999 RVA: 0x000DFE51 File Offset: 0x000DE051
 		public ULGUIPointerEventData GetPointerEventData(int PointerId, bool CreateIfNotExist = false)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIPointerEventData>(ULGUI_PointerInputModule.__GetPointerEventData_Internal(base.NativePtr, PointerId, CreateIfNotExist));
 		}
 
-		// Token: 0x0601FB49 RID: 129865 RVA: 0x002F25ED File Offset: 0x002F07ED
+		// Token: 0x06009470 RID: 38000 RVA: 0x000DFE65 File Offset: 0x000DE065
 		public UUIItem GetNowHitComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIItem>(ULGUI_PointerInputModule.__GetNowHitComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601FB4A RID: 129866 RVA: 0x002F25FF File Offset: 0x002F07FF
+		// Token: 0x06009471 RID: 38001 RVA: 0x000DFE77 File Offset: 0x000DE077
 		public EInputKeyType GetCurrentInputKeyType()
 		{
 			return ULGUI_PointerInputModule.__GetCurrentInputKeyType_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FB4B RID: 129867
+		// Token: 0x06009472 RID: 38002
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateNavigation_Internal(IntPtr @this, IntPtr NewSelectable);
 
-		// Token: 0x0601FB4C RID: 129868
+		// Token: 0x06009473 RID: 38003
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterInputChangeEvent_Internal(IntPtr @this, IntPtr delegateHandle);
 
-		// Token: 0x0601FB4D RID: 129869
+		// Token: 0x06009474 RID: 38004
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SwitchToNavigationInputType_Internal(IntPtr @this);
 
-		// Token: 0x0601FB4E RID: 129870
+		// Token: 0x06009475 RID: 38005
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCurrentInputKeyType_Internal(IntPtr @this, EInputKeyType InputKeyType);
 
-		// Token: 0x0601FB4F RID: 129871
+		// Token: 0x06009476 RID: 38006
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetClickThreshold_Internal(IntPtr @this, float Value);
 
-		// Token: 0x0601FB50 RID: 129872
+		// Token: 0x06009477 RID: 38007
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterInputChangeEvent_Internal(IntPtr @this, IntPtr pointerInputChange);
 
-		// Token: 0x0601FB51 RID: 129873
+		// Token: 0x06009478 RID: 38008
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPointerEventDataLineTrace_Internal(IntPtr @this, IntPtr InPointerEventData);
 
-		// Token: 0x0601FB52 RID: 129874
+		// Token: 0x06009479 RID: 38009
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputTriggerForNavigation_Internal(IntPtr @this, bool triggerPress);
 
-		// Token: 0x0601FB53 RID: 129875
+		// Token: 0x0600947A RID: 38010
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InputNavigation_Internal(IntPtr @this, ELGUINavigationDirection direction, bool pressOrRelease);
 
-		// Token: 0x0601FB54 RID: 129876
+		// Token: 0x0600947B RID: 38011
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetPointerEventData_Internal(IntPtr @this, int PointerId, bool CreateIfNotExist);
 
-		// Token: 0x0601FB55 RID: 129877
+		// Token: 0x0600947C RID: 38012
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetNowHitComponent_Internal(IntPtr @this);
 
-		// Token: 0x0601FB56 RID: 129878
+		// Token: 0x0600947D RID: 38013
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern EInputKeyType __GetCurrentInputKeyType_Internal(IntPtr @this);
 
-		// Token: 0x0601FB57 RID: 129879 RVA: 0x002F260C File Offset: 0x002F080C
+		// Token: 0x0600947E RID: 38014 RVA: 0x000DFE84 File Offset: 0x000DE084
 		static ULGUI_PointerInputModule()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUI_PointerInputModule");
 		}
 
-		// Token: 0x0601FB58 RID: 129880 RVA: 0x002F261C File Offset: 0x002F081C
+		// Token: 0x0600947F RID: 38015 RVA: 0x000DFE94 File Offset: 0x000DE094
 		protected ULGUI_PointerInputModule() : this(BuiltinUtils.AllocNativeUObject(ULGUI_PointerInputModule.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601FB59 RID: 129881 RVA: 0x002F2644 File Offset: 0x002F0844
+		// Token: 0x06009480 RID: 38016 RVA: 0x000DFEBC File Offset: 0x000DE0BC
 		protected ULGUI_PointerInputModule(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011196 RID: 70038
+		// Token: 0x0400409F RID: 16543
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.LGUI_PointerInputModule";
 
-		// Token: 0x04011197 RID: 70039
+		// Token: 0x040040A0 RID: 16544
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011198 RID: 70040
+		// Token: 0x040040A1 RID: 16545
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011199 RID: 70041
+		// Token: 0x040040A2 RID: 16546
 		internal static int __PropertyOffset_eventSystem;
 	}
 }

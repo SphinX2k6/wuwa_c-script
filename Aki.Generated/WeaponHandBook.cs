@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001194 RID: 4500
+	// Token: 0x020012CA RID: 4810
 	public struct WeaponHandBook : IFlatbufferObject
 	{
-		// Token: 0x17003DE4 RID: 15844
-		// (get) Token: 0x0600E7D3 RID: 59347 RVA: 0x003426D8 File Offset: 0x003408D8
+		// Token: 0x17004148 RID: 16712
+		// (get) Token: 0x0600F541 RID: 62785 RVA: 0x0036D434 File Offset: 0x0036B634
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E7D4 RID: 59348 RVA: 0x003426E5 File Offset: 0x003408E5
+		// Token: 0x0600F542 RID: 62786 RVA: 0x0036D441 File Offset: 0x0036B641
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E7D5 RID: 59349 RVA: 0x003426EC File Offset: 0x003408EC
+		// Token: 0x0600F543 RID: 62787 RVA: 0x0036D448 File Offset: 0x0036B648
 		public static WeaponHandBook GetRootAsWeaponHandBook(ByteBuffer _bb)
 		{
 			return WeaponHandBook.GetRootAsWeaponHandBook(_bb, default(WeaponHandBook));
 		}
 
-		// Token: 0x0600E7D6 RID: 59350 RVA: 0x00342708 File Offset: 0x00340908
+		// Token: 0x0600F544 RID: 62788 RVA: 0x0036D464 File Offset: 0x0036B664
 		public static WeaponHandBook GetRootAsWeaponHandBook(ByteBuffer _bb, WeaponHandBook obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E7D7 RID: 59351 RVA: 0x00342725 File Offset: 0x00340925
+		// Token: 0x0600F545 RID: 62789 RVA: 0x0036D481 File Offset: 0x0036B681
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E7D8 RID: 59352 RVA: 0x00342734 File Offset: 0x00340934
+		// Token: 0x0600F546 RID: 62790 RVA: 0x0036D490 File Offset: 0x0036B690
 		public WeaponHandBook __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003DE5 RID: 15845
-		// (get) Token: 0x0600E7D9 RID: 59353 RVA: 0x00342744 File Offset: 0x00340944
+		// Token: 0x17004149 RID: 16713
+		// (get) Token: 0x0600F547 RID: 62791 RVA: 0x0036D4A0 File Offset: 0x0036B6A0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DE6 RID: 15846
-		// (get) Token: 0x0600E7DA RID: 59354 RVA: 0x00342780 File Offset: 0x00340980
+		// Token: 0x1700414A RID: 16714
+		// (get) Token: 0x0600F548 RID: 62792 RVA: 0x0036D4DC File Offset: 0x0036B6DC
 		public int Level
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DE7 RID: 15847
-		// (get) Token: 0x0600E7DB RID: 59355 RVA: 0x003427BC File Offset: 0x003409BC
+		// Token: 0x1700414B RID: 16715
+		// (get) Token: 0x0600F549 RID: 62793 RVA: 0x0036D518 File Offset: 0x0036B718
 		public int Breach
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DE8 RID: 15848
-		// (get) Token: 0x0600E7DC RID: 59356 RVA: 0x003427F8 File Offset: 0x003409F8
+		// Token: 0x1700414C RID: 16716
+		// (get) Token: 0x0600F54A RID: 62794 RVA: 0x0036D554 File Offset: 0x0036B754
 		public int Resonance
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052DF RID: 21215
+		// Token: 0x04005922 RID: 22818
 		private Table __p;
 	}
 }

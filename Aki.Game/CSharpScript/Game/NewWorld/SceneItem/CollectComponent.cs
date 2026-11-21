@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200715D RID: 29021
+	// Token: 0x02006211 RID: 25105
 	public class CollectComponent : EntityComponent
 	{
-		// Token: 0x06046D73 RID: 290163 RVA: 0x011DBB24 File Offset: 0x011D9D24
+		// Token: 0x0603C5B3 RID: 247219 RVA: 0x011378C4 File Offset: 0x01135AC4
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -16,13 +16,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046D74 RID: 290164 RVA: 0x011DBB57 File Offset: 0x011D9D57
+		// Token: 0x0603C5B4 RID: 247220 RVA: 0x011378F7 File Offset: 0x01135AF7
 		public bool GetIsDisableOneClickCollection()
 		{
 			return this.IsDisableOneClickCollection;
 		}
 
-		// Token: 0x06046D75 RID: 290165 RVA: 0x011DBB60 File Offset: 0x011D9D60
+		// Token: 0x0603C5B5 RID: 247221 RVA: 0x01137900 File Offset: 0x01135B00
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -31,14 +31,11 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			CollectComponent collectComponent = (CollectComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsDisableOneClickCollection"))
-			{
-				this.IsDisableOneClickCollection = collectComponent.IsDisableOneClickCollection;
-			}
+			this.IsDisableOneClickCollection = collectComponent.IsDisableOneClickCollection;
 			return true;
 		}
 
-		// Token: 0x040252D6 RID: 152278
+		// Token: 0x0401FF3D RID: 130877
 		private bool IsDisableOneClickCollection;
 	}
 }

@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072CF RID: 29391
+	// Token: 0x02006451 RID: 25681
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FreeCameraDisplayComponent : EntityComponent
 	{
-		// Token: 0x17009F36 RID: 40758
-		// (get) Token: 0x060481EC RID: 295404 RVA: 0x0127F9C9 File Offset: 0x0127DBC9
-		// (set) Token: 0x060481ED RID: 295405 RVA: 0x0127F9D1 File Offset: 0x0127DBD1
+		// Token: 0x170076A3 RID: 30371
+		// (get) Token: 0x0603E5F3 RID: 255475 RVA: 0x012224B5 File Offset: 0x012206B5
+		// (set) Token: 0x0603E5F4 RID: 255476 RVA: 0x012224BD File Offset: 0x012206BD
 		public ACameraActor CameraActor { get; private set; }
 
-		// Token: 0x060481EE RID: 295406 RVA: 0x0127F9DA File Offset: 0x0127DBDA
+		// Token: 0x0603E5F5 RID: 255477 RVA: 0x012224C6 File Offset: 0x012206C6
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
 			this.CameraModelInstanceInternal = ((args != null) ? args.GetP1<CameraModelInstance>() : null);
 			return base.OnCreate(args);
 		}
 
-		// Token: 0x060481EF RID: 295407 RVA: 0x0127F9F8 File Offset: 0x0127DBF8
+		// Token: 0x0603E5F6 RID: 255478 RVA: 0x012224E4 File Offset: 0x012206E4
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481F0 RID: 295408 RVA: 0x0127FA50 File Offset: 0x0127DC50
+		// Token: 0x0603E5F7 RID: 255479 RVA: 0x0122253C File Offset: 0x0122073C
 		private void OnWorldDone()
 		{
 			this.SpawnCamera();
 		}
 
-		// Token: 0x060481F1 RID: 295409 RVA: 0x0127FA58 File Offset: 0x0127DC58
+		// Token: 0x0603E5F8 RID: 255480 RVA: 0x01222544 File Offset: 0x01220744
 		private void SpawnCamera()
 		{
 			if (this.CameraActor != null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481F2 RID: 295410 RVA: 0x0127FAEA File Offset: 0x0127DCEA
+		// Token: 0x0603E5F9 RID: 255481 RVA: 0x012225D6 File Offset: 0x012207D6
 		private void OnClearWorld()
 		{
 			if (this.CameraActor != null)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481F3 RID: 295411 RVA: 0x0127FB14 File Offset: 0x0127DD14
+		// Token: 0x0603E5FA RID: 255482 RVA: 0x01222600 File Offset: 0x01220800
 		protected override bool OnClear()
 		{
 			if (this.CameraActor != null)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481F4 RID: 295412 RVA: 0x0127FBC1 File Offset: 0x0127DDC1
+		// Token: 0x0603E5FB RID: 255483 RVA: 0x012226AD File Offset: 0x012208AD
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			ACameraActor cameraActor = this.CameraActor;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481F5 RID: 295413 RVA: 0x0127FBE4 File Offset: 0x0127DDE4
+		// Token: 0x0603E5FC RID: 255484 RVA: 0x012226D0 File Offset: 0x012208D0
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -107,32 +107,66 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			FreeCameraDisplayComponent freeCameraDisplayComponent = (FreeCameraDisplayComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CameraModelInstanceInternal"))
+			if (freeCameraDisplayComponent.CameraModelInstanceInternal == null)
 			{
-				if (freeCameraDisplayComponent.CameraModelInstanceInternal == null)
-				{
-					this.CameraModelInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraModelInstance>(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
-				{
-					return false;
-				}
+				this.CameraModelInstanceInternal = null;
 			}
-			if (base.CanResetComponentProperty("<CameraActor>k__BackingField"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
 			{
-				if (freeCameraDisplayComponent.CameraActor == null)
-				{
-					this.CameraActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ACameraActor>(this.CameraActor), "<CameraActor>k__BackingField"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (freeCameraDisplayComponent.CameraActor == null)
+			{
+				this.CameraActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraActor), "CameraActor"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040260CB RID: 155851
+		// Token: 0x170076A4 RID: 30372
+		// (get) Token: 0x0603E5FD RID: 255485 RVA: 0x01222746 File Offset: 0x01220946
+		public override bool NeedCreateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076A5 RID: 30373
+		// (get) Token: 0x0603E5FE RID: 255486 RVA: 0x01222749 File Offset: 0x01220949
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076A6 RID: 30374
+		// (get) Token: 0x0603E5FF RID: 255487 RVA: 0x0122274C File Offset: 0x0122094C
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076A7 RID: 30375
+		// (get) Token: 0x0603E600 RID: 255488 RVA: 0x0122274F File Offset: 0x0122094F
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040213AE RID: 136110
 		private CameraModelInstance CameraModelInstanceInternal;
 	}
 }

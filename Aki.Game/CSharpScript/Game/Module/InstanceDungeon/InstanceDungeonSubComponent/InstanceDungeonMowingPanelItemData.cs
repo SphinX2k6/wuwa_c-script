@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A0 RID: 22688
+	// Token: 0x02004878 RID: 18552
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonMowingPanelItemData
 	{
-		// Token: 0x17008A94 RID: 35476
-		// (get) Token: 0x06039B96 RID: 236438 RVA: 0x00DB80D8 File Offset: 0x00DB62D8
-		// (set) Token: 0x06039B97 RID: 236439 RVA: 0x00DB80E0 File Offset: 0x00DB62E0
+		// Token: 0x17005E60 RID: 24160
+		// (get) Token: 0x0602EAB9 RID: 191161 RVA: 0x00D06FF0 File Offset: 0x00D051F0
+		// (set) Token: 0x0602EABA RID: 191162 RVA: 0x00D06FF8 File Offset: 0x00D051F8
 		public bool ScoreItemActive { get; set; }
 
-		// Token: 0x17008A95 RID: 35477
-		// (get) Token: 0x06039B98 RID: 236440 RVA: 0x00DB80E9 File Offset: 0x00DB62E9
-		// (set) Token: 0x06039B99 RID: 236441 RVA: 0x00DB80F1 File Offset: 0x00DB62F1
+		// Token: 0x17005E61 RID: 24161
+		// (get) Token: 0x0602EABB RID: 191163 RVA: 0x00D07001 File Offset: 0x00D05201
+		// (set) Token: 0x0602EABC RID: 191164 RVA: 0x00D07009 File Offset: 0x00D05209
 		[Nullable(2)]
 		public string ScoreText { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008A96 RID: 35478
-		// (get) Token: 0x06039B9A RID: 236442 RVA: 0x00DB80FA File Offset: 0x00DB62FA
-		// (set) Token: 0x06039B9B RID: 236443 RVA: 0x00DB8102 File Offset: 0x00DB6302
+		// Token: 0x17005E62 RID: 24162
+		// (get) Token: 0x0602EABD RID: 191165 RVA: 0x00D07012 File Offset: 0x00D05212
+		// (set) Token: 0x0602EABE RID: 191166 RVA: 0x00D0701A File Offset: 0x00D0521A
 		public Action LeftBtnClickCallBack { get; set; }
 
-		// Token: 0x17008A97 RID: 35479
-		// (get) Token: 0x06039B9C RID: 236444 RVA: 0x00DB810B File Offset: 0x00DB630B
-		// (set) Token: 0x06039B9D RID: 236445 RVA: 0x00DB8113 File Offset: 0x00DB6313
+		// Token: 0x17005E63 RID: 24163
+		// (get) Token: 0x0602EABF RID: 191167 RVA: 0x00D07023 File Offset: 0x00D05223
+		// (set) Token: 0x0602EAC0 RID: 191168 RVA: 0x00D0702B File Offset: 0x00D0522B
 		public Action RightBtnClickCallBack { get; set; }
 	}
 }

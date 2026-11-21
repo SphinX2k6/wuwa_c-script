@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x02006453 RID: 25683
+	// Token: 0x020053D1 RID: 21457
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorLinkageButton : UiPanelBase
 	{
-		// Token: 0x060408CD RID: 264397 RVA: 0x00F9FED8 File Offset: 0x00F9E0D8
+		// Token: 0x0603558E RID: 218510 RVA: 0x00EE6E54 File Offset: 0x00EE5054
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			};
 		}
 
-		// Token: 0x060408CE RID: 264398 RVA: 0x00F9FF6C File Offset: 0x00F9E16C
+		// Token: 0x0603558F RID: 218511 RVA: 0x00EE6EE8 File Offset: 0x00EE50E8
 		protected override void OnStart()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x060408CF RID: 264399 RVA: 0x00F9FFB2 File Offset: 0x00F9E1B2
+		// Token: 0x06035590 RID: 218512 RVA: 0x00EE6F2E File Offset: 0x00EE512E
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060408D0 RID: 264400 RVA: 0x00F9FFBC File Offset: 0x00F9E1BC
+		// Token: 0x06035591 RID: 218513 RVA: 0x00EE6F38 File Offset: 0x00EE5138
 		public void Refresh()
 		{
 			MotorLinkageIp ipConfig = ActivityMotorLinkageConfig.Instance.GetIpConfig(this.IpId);
@@ -69,31 +69,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			item3.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060408D1 RID: 264401 RVA: 0x00FA0044 File Offset: 0x00F9E244
+		// Token: 0x06035592 RID: 218514 RVA: 0x00EE6FC0 File Offset: 0x00EE51C0
 		public void SetIpId(int ipId)
 		{
 			this.IpId = ipId;
 		}
 
-		// Token: 0x060408D2 RID: 264402 RVA: 0x00FA004D File Offset: 0x00F9E24D
+		// Token: 0x06035593 RID: 218515 RVA: 0x00EE6FC9 File Offset: 0x00EE51C9
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x060408D3 RID: 264403 RVA: 0x00FA0056 File Offset: 0x00F9E256
+		// Token: 0x06035594 RID: 218516 RVA: 0x00EE6FD2 File Offset: 0x00EE51D2
 		public void SetEnterCallback(Action<int> callback)
 		{
 			this.EnterCallback = callback;
 		}
 
-		// Token: 0x060408D4 RID: 264404 RVA: 0x00FA005F File Offset: 0x00F9E25F
+		// Token: 0x06035595 RID: 218517 RVA: 0x00EE6FDB File Offset: 0x00EE51DB
 		public void SetExitCallback(Action callback)
 		{
 			this.ExitCallback = callback;
 		}
 
-		// Token: 0x060408D5 RID: 264405 RVA: 0x00FA0068 File Offset: 0x00F9E268
+		// Token: 0x06035596 RID: 218518 RVA: 0x00EE6FE4 File Offset: 0x00EE51E4
 		private void OnButtonClick()
 		{
 			Action<int> clickCallback = this.ClickCallback;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			clickCallback(this.IpId);
 		}
 
-		// Token: 0x060408D6 RID: 264406 RVA: 0x00FA0080 File Offset: 0x00F9E280
+		// Token: 0x06035597 RID: 218519 RVA: 0x00EE6FFC File Offset: 0x00EE51FC
 		private void OnButtonEnter()
 		{
 			Action<int> enterCallback = this.EnterCallback;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			enterCallback(this.IpId);
 		}
 
-		// Token: 0x060408D7 RID: 264407 RVA: 0x00FA0098 File Offset: 0x00F9E298
+		// Token: 0x06035598 RID: 218520 RVA: 0x00EE7014 File Offset: 0x00EE5214
 		private void OnButtonExit()
 		{
 			Action exitCallback = this.ExitCallback;
@@ -126,18 +126,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			exitCallback();
 		}
 
-		// Token: 0x0402191C RID: 137500
+		// Token: 0x0401C24B RID: 115275
 		private int IpId;
 
-		// Token: 0x0402191D RID: 137501
+		// Token: 0x0401C24C RID: 115276
 		[Nullable(2)]
 		private Action<int> ClickCallback;
 
-		// Token: 0x0402191E RID: 137502
+		// Token: 0x0401C24D RID: 115277
 		[Nullable(2)]
 		private Action<int> EnterCallback;
 
-		// Token: 0x0402191F RID: 137503
+		// Token: 0x0401C24E RID: 115278
 		[Nullable(2)]
 		private Action ExitCallback;
 	}

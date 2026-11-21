@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051EA RID: 20970
+	// Token: 0x02005752 RID: 22354
 	public class IExploreSkillInteractGroupComponentT
 	{
-		// Token: 0x1700999E RID: 39326
-		// (get) Token: 0x060220DE RID: 139486 RVA: 0x004BA1F9 File Offset: 0x004B83F9
-		// (set) Token: 0x060220DF RID: 139487 RVA: 0x004BA201 File Offset: 0x004B8401
+		// Token: 0x1700A19A RID: 41370
+		// (get) Token: 0x06024072 RID: 147570 RVA: 0x004F4C79 File Offset: 0x004F2E79
+		// (set) Token: 0x06024073 RID: 147571 RVA: 0x004F4C81 File Offset: 0x004F2E81
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700999F RID: 39327
-		// (get) Token: 0x060220E0 RID: 139488 RVA: 0x004BA20A File Offset: 0x004B840A
-		// (set) Token: 0x060220E1 RID: 139489 RVA: 0x004BA212 File Offset: 0x004B8412
+		// Token: 0x1700A19B RID: 41371
+		// (get) Token: 0x06024074 RID: 147572 RVA: 0x004F4C8A File Offset: 0x004F2E8A
+		// (set) Token: 0x06024075 RID: 147573 RVA: 0x004F4C92 File Offset: 0x004F2E92
 		public List<IExploreSkillInteractT> ExploreSkillInteractList { get; set; }
 
-		// Token: 0x170099A0 RID: 39328
-		// (get) Token: 0x060220E2 RID: 139490 RVA: 0x004BA21B File Offset: 0x004B841B
-		// (set) Token: 0x060220E3 RID: 139491 RVA: 0x004BA223 File Offset: 0x004B8423
+		// Token: 0x1700A19C RID: 41372
+		// (get) Token: 0x06024076 RID: 147574 RVA: 0x004F4C9B File Offset: 0x004F2E9B
+		// (set) Token: 0x06024077 RID: 147575 RVA: 0x004F4CA3 File Offset: 0x004F2EA3
 		public byte NullMask { get; set; }
 
-		// Token: 0x060220E4 RID: 139492 RVA: 0x004BA22C File Offset: 0x004B842C
+		// Token: 0x06024078 RID: 147576 RVA: 0x004F4CAC File Offset: 0x004F2EAC
 		public IExploreSkillInteractGroupComponentT()
 		{
 			this.Disabled = false;

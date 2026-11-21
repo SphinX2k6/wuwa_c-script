@@ -7,33 +7,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020007A6 RID: 1958
+	// Token: 0x02000160 RID: 352
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.Actor")]
 	[UnrealStructLayout(1040, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1040)]
 	public class AActor : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06006607 RID: 26119 RVA: 0x00092394 File Offset: 0x00090594
+		// Token: 0x060013A0 RID: 5024 RVA: 0x0001EE7E File Offset: 0x0001D07E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AActor._ClassPtr;
 		}
 
-		// Token: 0x06006608 RID: 26120 RVA: 0x000923A0 File Offset: 0x000905A0
+		// Token: 0x060013A1 RID: 5025 RVA: 0x0001EE8C File Offset: 0x0001D08C
 		public AActor() : this(BuiltinUtils.AllocNativeUObject(AActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06006609 RID: 26121 RVA: 0x000923C8 File Offset: 0x000905C8
+		// Token: 0x060013A2 RID: 5026 RVA: 0x0001EEB4 File Offset: 0x0001D0B4
 		[NullableContext(1)]
 		public AActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001844 RID: 6212
-		// (get) Token: 0x0600660A RID: 26122 RVA: 0x000923FC File Offset: 0x000905FC
-		// (set) Token: 0x0600660B RID: 26123 RVA: 0x00092435 File Offset: 0x00090635
+		// Token: 0x170001ED RID: 493
+		// (get) Token: 0x060013A3 RID: 5027 RVA: 0x0001EEE8 File Offset: 0x0001D0E8
+		// (set) Token: 0x060013A4 RID: 5028 RVA: 0x0001EF21 File Offset: 0x0001D121
 		[Nullable(1)]
 		public FActorTickFunction PrimaryActorTick
 		{
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001845 RID: 6213
-		// (get) Token: 0x0600660C RID: 26124 RVA: 0x00092456 File Offset: 0x00090656
-		// (set) Token: 0x0600660D RID: 26125 RVA: 0x0009246F File Offset: 0x0009066F
+		// Token: 0x170001EE RID: 494
+		// (get) Token: 0x060013A5 RID: 5029 RVA: 0x0001EF42 File Offset: 0x0001D142
+		// (set) Token: 0x060013A6 RID: 5030 RVA: 0x0001EF5B File Offset: 0x0001D15B
 		public unsafe bool bNetTemporary
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001846 RID: 6214
-		// (get) Token: 0x0600660E RID: 26126 RVA: 0x0009249F File Offset: 0x0009069F
-		// (set) Token: 0x0600660F RID: 26127 RVA: 0x000924B8 File Offset: 0x000906B8
+		// Token: 0x170001EF RID: 495
+		// (get) Token: 0x060013A7 RID: 5031 RVA: 0x0001EF8B File Offset: 0x0001D18B
+		// (set) Token: 0x060013A8 RID: 5032 RVA: 0x0001EFA4 File Offset: 0x0001D1A4
 		public unsafe bool bNetStartup
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001847 RID: 6215
-		// (get) Token: 0x06006610 RID: 26128 RVA: 0x000924E8 File Offset: 0x000906E8
-		// (set) Token: 0x06006611 RID: 26129 RVA: 0x00092501 File Offset: 0x00090701
+		// Token: 0x170001F0 RID: 496
+		// (get) Token: 0x060013A9 RID: 5033 RVA: 0x0001EFD4 File Offset: 0x0001D1D4
+		// (set) Token: 0x060013AA RID: 5034 RVA: 0x0001EFED File Offset: 0x0001D1ED
 		public unsafe bool bOnlyRelevantToOwner
 		{
 			get
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001848 RID: 6216
-		// (get) Token: 0x06006612 RID: 26130 RVA: 0x00092531 File Offset: 0x00090731
-		// (set) Token: 0x06006613 RID: 26131 RVA: 0x0009254A File Offset: 0x0009074A
+		// Token: 0x170001F1 RID: 497
+		// (get) Token: 0x060013AB RID: 5035 RVA: 0x0001F01D File Offset: 0x0001D21D
+		// (set) Token: 0x060013AC RID: 5036 RVA: 0x0001F036 File Offset: 0x0001D236
 		public unsafe bool bAlwaysRelevant
 		{
 			get
@@ -115,9 +115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001849 RID: 6217
-		// (get) Token: 0x06006614 RID: 26132 RVA: 0x0009257A File Offset: 0x0009077A
-		// (set) Token: 0x06006615 RID: 26133 RVA: 0x00092593 File Offset: 0x00090793
+		// Token: 0x170001F2 RID: 498
+		// (get) Token: 0x060013AD RID: 5037 RVA: 0x0001F066 File Offset: 0x0001D266
+		// (set) Token: 0x060013AE RID: 5038 RVA: 0x0001F07F File Offset: 0x0001D27F
 		public unsafe bool bReplicateMovement
 		{
 			get
@@ -130,9 +130,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700184A RID: 6218
-		// (get) Token: 0x06006616 RID: 26134 RVA: 0x000925C3 File Offset: 0x000907C3
-		// (set) Token: 0x06006617 RID: 26135 RVA: 0x000925DC File Offset: 0x000907DC
+		// Token: 0x170001F3 RID: 499
+		// (get) Token: 0x060013AF RID: 5039 RVA: 0x0001F0AF File Offset: 0x0001D2AF
+		// (set) Token: 0x060013B0 RID: 5040 RVA: 0x0001F0C8 File Offset: 0x0001D2C8
 		public unsafe bool bHidden
 		{
 			get
@@ -145,9 +145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700184B RID: 6219
-		// (get) Token: 0x06006618 RID: 26136 RVA: 0x0009260C File Offset: 0x0009080C
-		// (set) Token: 0x06006619 RID: 26137 RVA: 0x00092625 File Offset: 0x00090825
+		// Token: 0x170001F4 RID: 500
+		// (get) Token: 0x060013B1 RID: 5041 RVA: 0x0001F0F8 File Offset: 0x0001D2F8
+		// (set) Token: 0x060013B2 RID: 5042 RVA: 0x0001F111 File Offset: 0x0001D311
 		public unsafe bool bViewableInRender
 		{
 			get
@@ -160,9 +160,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700184C RID: 6220
-		// (get) Token: 0x0600661A RID: 26138 RVA: 0x00092655 File Offset: 0x00090855
-		// (set) Token: 0x0600661B RID: 26139 RVA: 0x0009266E File Offset: 0x0009086E
+		// Token: 0x170001F5 RID: 501
+		// (get) Token: 0x060013B3 RID: 5043 RVA: 0x0001F141 File Offset: 0x0001D341
+		// (set) Token: 0x060013B4 RID: 5044 RVA: 0x0001F15A File Offset: 0x0001D35A
 		public unsafe bool bTearOff
 		{
 			get
@@ -175,9 +175,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700184D RID: 6221
-		// (get) Token: 0x0600661C RID: 26140 RVA: 0x0009269E File Offset: 0x0009089E
-		// (set) Token: 0x0600661D RID: 26141 RVA: 0x000926B7 File Offset: 0x000908B7
+		// Token: 0x170001F6 RID: 502
+		// (get) Token: 0x060013B5 RID: 5045 RVA: 0x0001F18A File Offset: 0x0001D38A
+		// (set) Token: 0x060013B6 RID: 5046 RVA: 0x0001F1A3 File Offset: 0x0001D3A3
 		public unsafe bool bForceHidden
 		{
 			get
@@ -190,9 +190,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700184E RID: 6222
-		// (get) Token: 0x0600661E RID: 26142 RVA: 0x000926E7 File Offset: 0x000908E7
-		// (set) Token: 0x0600661F RID: 26143 RVA: 0x000926F7 File Offset: 0x000908F7
+		// Token: 0x170001F7 RID: 503
+		// (get) Token: 0x060013B7 RID: 5047 RVA: 0x0001F1D3 File Offset: 0x0001D3D3
+		// (set) Token: 0x060013B8 RID: 5048 RVA: 0x0001F1E3 File Offset: 0x0001D3E3
 		public unsafe bool bIsAliveSpawnableAfterSequenceClean
 		{
 			get
@@ -205,9 +205,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700184F RID: 6223
-		// (get) Token: 0x06006620 RID: 26144 RVA: 0x00092708 File Offset: 0x00090908
-		// (set) Token: 0x06006621 RID: 26145 RVA: 0x00092721 File Offset: 0x00090921
+		// Token: 0x170001F8 RID: 504
+		// (get) Token: 0x060013B9 RID: 5049 RVA: 0x0001F1F4 File Offset: 0x0001D3F4
+		// (set) Token: 0x060013BA RID: 5050 RVA: 0x0001F20D File Offset: 0x0001D40D
 		public unsafe bool bExchangedRoles
 		{
 			get
@@ -220,9 +220,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001850 RID: 6224
-		// (get) Token: 0x06006622 RID: 26146 RVA: 0x00092751 File Offset: 0x00090951
-		// (set) Token: 0x06006623 RID: 26147 RVA: 0x0009276A File Offset: 0x0009096A
+		// Token: 0x170001F9 RID: 505
+		// (get) Token: 0x060013BB RID: 5051 RVA: 0x0001F23D File Offset: 0x0001D43D
+		// (set) Token: 0x060013BC RID: 5052 RVA: 0x0001F256 File Offset: 0x0001D456
 		public unsafe bool bNetLoadOnClient
 		{
 			get
@@ -235,9 +235,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001851 RID: 6225
-		// (get) Token: 0x06006624 RID: 26148 RVA: 0x0009279A File Offset: 0x0009099A
-		// (set) Token: 0x06006625 RID: 26149 RVA: 0x000927B3 File Offset: 0x000909B3
+		// Token: 0x170001FA RID: 506
+		// (get) Token: 0x060013BD RID: 5053 RVA: 0x0001F286 File Offset: 0x0001D486
+		// (set) Token: 0x060013BE RID: 5054 RVA: 0x0001F29F File Offset: 0x0001D49F
 		public unsafe bool bNetUseOwnerRelevancy
 		{
 			get
@@ -250,9 +250,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001852 RID: 6226
-		// (get) Token: 0x06006626 RID: 26150 RVA: 0x000927E3 File Offset: 0x000909E3
-		// (set) Token: 0x06006627 RID: 26151 RVA: 0x000927FC File Offset: 0x000909FC
+		// Token: 0x170001FB RID: 507
+		// (get) Token: 0x060013BF RID: 5055 RVA: 0x0001F2CF File Offset: 0x0001D4CF
+		// (set) Token: 0x060013C0 RID: 5056 RVA: 0x0001F2E8 File Offset: 0x0001D4E8
 		public unsafe bool bRelevantForNetworkReplays
 		{
 			get
@@ -265,9 +265,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001853 RID: 6227
-		// (get) Token: 0x06006628 RID: 26152 RVA: 0x0009282C File Offset: 0x00090A2C
-		// (set) Token: 0x06006629 RID: 26153 RVA: 0x00092845 File Offset: 0x00090A45
+		// Token: 0x170001FC RID: 508
+		// (get) Token: 0x060013C1 RID: 5057 RVA: 0x0001F318 File Offset: 0x0001D518
+		// (set) Token: 0x060013C2 RID: 5058 RVA: 0x0001F331 File Offset: 0x0001D531
 		public unsafe bool bRelevantForLevelBounds
 		{
 			get
@@ -280,9 +280,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001854 RID: 6228
-		// (get) Token: 0x0600662A RID: 26154 RVA: 0x00092875 File Offset: 0x00090A75
-		// (set) Token: 0x0600662B RID: 26155 RVA: 0x0009288E File Offset: 0x00090A8E
+		// Token: 0x170001FD RID: 509
+		// (get) Token: 0x060013C3 RID: 5059 RVA: 0x0001F361 File Offset: 0x0001D561
+		// (set) Token: 0x060013C4 RID: 5060 RVA: 0x0001F37A File Offset: 0x0001D57A
 		public unsafe bool bReplayRewindable
 		{
 			get
@@ -295,9 +295,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001855 RID: 6229
-		// (get) Token: 0x0600662C RID: 26156 RVA: 0x000928BE File Offset: 0x00090ABE
-		// (set) Token: 0x0600662D RID: 26157 RVA: 0x000928D7 File Offset: 0x00090AD7
+		// Token: 0x170001FE RID: 510
+		// (get) Token: 0x060013C5 RID: 5061 RVA: 0x0001F3AA File Offset: 0x0001D5AA
+		// (set) Token: 0x060013C6 RID: 5062 RVA: 0x0001F3C3 File Offset: 0x0001D5C3
 		public unsafe bool bAllowTickBeforeBeginPlay
 		{
 			get
@@ -310,9 +310,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001856 RID: 6230
-		// (get) Token: 0x0600662E RID: 26158 RVA: 0x00092907 File Offset: 0x00090B07
-		// (set) Token: 0x0600662F RID: 26159 RVA: 0x00092920 File Offset: 0x00090B20
+		// Token: 0x170001FF RID: 511
+		// (get) Token: 0x060013C7 RID: 5063 RVA: 0x0001F3F3 File Offset: 0x0001D5F3
+		// (set) Token: 0x060013C8 RID: 5064 RVA: 0x0001F40C File Offset: 0x0001D60C
 		public unsafe bool bAutoDestroyWhenFinished
 		{
 			get
@@ -325,9 +325,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001857 RID: 6231
-		// (get) Token: 0x06006630 RID: 26160 RVA: 0x00092950 File Offset: 0x00090B50
-		// (set) Token: 0x06006631 RID: 26161 RVA: 0x00092969 File Offset: 0x00090B69
+		// Token: 0x17000200 RID: 512
+		// (get) Token: 0x060013C9 RID: 5065 RVA: 0x0001F43C File Offset: 0x0001D63C
+		// (set) Token: 0x060013CA RID: 5066 RVA: 0x0001F455 File Offset: 0x0001D655
 		public unsafe bool bCanBeDamaged
 		{
 			get
@@ -340,9 +340,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001858 RID: 6232
-		// (get) Token: 0x06006632 RID: 26162 RVA: 0x00092999 File Offset: 0x00090B99
-		// (set) Token: 0x06006633 RID: 26163 RVA: 0x000929B2 File Offset: 0x00090BB2
+		// Token: 0x17000201 RID: 513
+		// (get) Token: 0x060013CB RID: 5067 RVA: 0x0001F485 File Offset: 0x0001D685
+		// (set) Token: 0x060013CC RID: 5068 RVA: 0x0001F49E File Offset: 0x0001D69E
 		public unsafe bool bBlockInput
 		{
 			get
@@ -355,9 +355,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001859 RID: 6233
-		// (get) Token: 0x06006634 RID: 26164 RVA: 0x000929E2 File Offset: 0x00090BE2
-		// (set) Token: 0x06006635 RID: 26165 RVA: 0x000929FB File Offset: 0x00090BFB
+		// Token: 0x17000202 RID: 514
+		// (get) Token: 0x060013CD RID: 5069 RVA: 0x0001F4CE File Offset: 0x0001D6CE
+		// (set) Token: 0x060013CE RID: 5070 RVA: 0x0001F4E7 File Offset: 0x0001D6E7
 		public unsafe bool bCollideWhenPlacing
 		{
 			get
@@ -370,9 +370,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700185A RID: 6234
-		// (get) Token: 0x06006636 RID: 26166 RVA: 0x00092A2B File Offset: 0x00090C2B
-		// (set) Token: 0x06006637 RID: 26167 RVA: 0x00092A44 File Offset: 0x00090C44
+		// Token: 0x17000203 RID: 515
+		// (get) Token: 0x060013CF RID: 5071 RVA: 0x0001F517 File Offset: 0x0001D717
+		// (set) Token: 0x060013D0 RID: 5072 RVA: 0x0001F530 File Offset: 0x0001D730
 		public unsafe bool bFindCameraComponentWhenViewTarget
 		{
 			get
@@ -385,9 +385,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700185B RID: 6235
-		// (get) Token: 0x06006638 RID: 26168 RVA: 0x00092A74 File Offset: 0x00090C74
-		// (set) Token: 0x06006639 RID: 26169 RVA: 0x00092A8D File Offset: 0x00090C8D
+		// Token: 0x17000204 RID: 516
+		// (get) Token: 0x060013D1 RID: 5073 RVA: 0x0001F560 File Offset: 0x0001D760
+		// (set) Token: 0x060013D2 RID: 5074 RVA: 0x0001F579 File Offset: 0x0001D779
 		public unsafe bool bGenerateOverlapEventsDuringLevelStreaming
 		{
 			get
@@ -400,9 +400,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700185C RID: 6236
-		// (get) Token: 0x0600663A RID: 26170 RVA: 0x00092ABD File Offset: 0x00090CBD
-		// (set) Token: 0x0600663B RID: 26171 RVA: 0x00092AD6 File Offset: 0x00090CD6
+		// Token: 0x17000205 RID: 517
+		// (get) Token: 0x060013D3 RID: 5075 RVA: 0x0001F5A9 File Offset: 0x0001D7A9
+		// (set) Token: 0x060013D4 RID: 5076 RVA: 0x0001F5C2 File Offset: 0x0001D7C2
 		public unsafe bool bIgnoresOriginShifting
 		{
 			get
@@ -415,9 +415,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700185D RID: 6237
-		// (get) Token: 0x0600663C RID: 26172 RVA: 0x00092B06 File Offset: 0x00090D06
-		// (set) Token: 0x0600663D RID: 26173 RVA: 0x00092B1F File Offset: 0x00090D1F
+		// Token: 0x17000206 RID: 518
+		// (get) Token: 0x060013D5 RID: 5077 RVA: 0x0001F5F2 File Offset: 0x0001D7F2
+		// (set) Token: 0x060013D6 RID: 5078 RVA: 0x0001F60B File Offset: 0x0001D80B
 		public unsafe bool bEnableAutoLODGeneration
 		{
 			get
@@ -430,9 +430,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700185E RID: 6238
-		// (get) Token: 0x0600663E RID: 26174 RVA: 0x00092B4F File Offset: 0x00090D4F
-		// (set) Token: 0x0600663F RID: 26175 RVA: 0x00092B68 File Offset: 0x00090D68
+		// Token: 0x17000207 RID: 519
+		// (get) Token: 0x060013D7 RID: 5079 RVA: 0x0001F63B File Offset: 0x0001D83B
+		// (set) Token: 0x060013D8 RID: 5080 RVA: 0x0001F654 File Offset: 0x0001D854
 		public unsafe bool bIsEditorOnlyActor
 		{
 			get
@@ -445,9 +445,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700185F RID: 6239
-		// (get) Token: 0x06006640 RID: 26176 RVA: 0x00092B98 File Offset: 0x00090D98
-		// (set) Token: 0x06006641 RID: 26177 RVA: 0x00092BB1 File Offset: 0x00090DB1
+		// Token: 0x17000208 RID: 520
+		// (get) Token: 0x060013D9 RID: 5081 RVA: 0x0001F684 File Offset: 0x0001D884
+		// (set) Token: 0x060013DA RID: 5082 RVA: 0x0001F69D File Offset: 0x0001D89D
 		public unsafe bool bPlatformMobile
 		{
 			get
@@ -460,9 +460,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001860 RID: 6240
-		// (get) Token: 0x06006642 RID: 26178 RVA: 0x00092BE1 File Offset: 0x00090DE1
-		// (set) Token: 0x06006643 RID: 26179 RVA: 0x00092BFA File Offset: 0x00090DFA
+		// Token: 0x17000209 RID: 521
+		// (get) Token: 0x060013DB RID: 5083 RVA: 0x0001F6CD File Offset: 0x0001D8CD
+		// (set) Token: 0x060013DC RID: 5084 RVA: 0x0001F6E6 File Offset: 0x0001D8E6
 		public unsafe bool bPlatformDeskTop
 		{
 			get
@@ -475,9 +475,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001861 RID: 6241
-		// (get) Token: 0x06006644 RID: 26180 RVA: 0x00092C2A File Offset: 0x00090E2A
-		// (set) Token: 0x06006645 RID: 26181 RVA: 0x00092C43 File Offset: 0x00090E43
+		// Token: 0x1700020A RID: 522
+		// (get) Token: 0x060013DD RID: 5085 RVA: 0x0001F716 File Offset: 0x0001D916
+		// (set) Token: 0x060013DE RID: 5086 RVA: 0x0001F72F File Offset: 0x0001D92F
 		public unsafe bool bPlatformMac
 		{
 			get
@@ -490,9 +490,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001862 RID: 6242
-		// (get) Token: 0x06006646 RID: 26182 RVA: 0x00092C73 File Offset: 0x00090E73
-		// (set) Token: 0x06006647 RID: 26183 RVA: 0x00092C8C File Offset: 0x00090E8C
+		// Token: 0x1700020B RID: 523
+		// (get) Token: 0x060013DF RID: 5087 RVA: 0x0001F75F File Offset: 0x0001D95F
+		// (set) Token: 0x060013E0 RID: 5088 RVA: 0x0001F778 File Offset: 0x0001D978
 		public unsafe bool bInvolveCook
 		{
 			get
@@ -505,9 +505,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001863 RID: 6243
-		// (get) Token: 0x06006648 RID: 26184 RVA: 0x00092CBC File Offset: 0x00090EBC
-		// (set) Token: 0x06006649 RID: 26185 RVA: 0x00092CD5 File Offset: 0x00090ED5
+		// Token: 0x1700020C RID: 524
+		// (get) Token: 0x060013E1 RID: 5089 RVA: 0x0001F7A8 File Offset: 0x0001D9A8
+		// (set) Token: 0x060013E2 RID: 5090 RVA: 0x0001F7C1 File Offset: 0x0001D9C1
 		public unsafe bool bActorSeamlessTraveled
 		{
 			get
@@ -520,9 +520,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001864 RID: 6244
-		// (get) Token: 0x0600664A RID: 26186 RVA: 0x00092D05 File Offset: 0x00090F05
-		// (set) Token: 0x0600664B RID: 26187 RVA: 0x00092D1E File Offset: 0x00090F1E
+		// Token: 0x1700020D RID: 525
+		// (get) Token: 0x060013E3 RID: 5091 RVA: 0x0001F7F1 File Offset: 0x0001D9F1
+		// (set) Token: 0x060013E4 RID: 5092 RVA: 0x0001F80A File Offset: 0x0001DA0A
 		public unsafe bool bIsPermanentActor
 		{
 			get
@@ -535,9 +535,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001865 RID: 6245
-		// (get) Token: 0x0600664C RID: 26188 RVA: 0x00092D4E File Offset: 0x00090F4E
-		// (set) Token: 0x0600664D RID: 26189 RVA: 0x00092D67 File Offset: 0x00090F67
+		// Token: 0x1700020E RID: 526
+		// (get) Token: 0x060013E5 RID: 5093 RVA: 0x0001F83A File Offset: 0x0001DA3A
+		// (set) Token: 0x060013E6 RID: 5094 RVA: 0x0001F853 File Offset: 0x0001DA53
 		public unsafe bool bEnableBeginAndEndPlayDebugLog
 		{
 			get
@@ -550,9 +550,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001866 RID: 6246
-		// (get) Token: 0x0600664E RID: 26190 RVA: 0x00092D97 File Offset: 0x00090F97
-		// (set) Token: 0x0600664F RID: 26191 RVA: 0x00092DB0 File Offset: 0x00090FB0
+		// Token: 0x1700020F RID: 527
+		// (get) Token: 0x060013E7 RID: 5095 RVA: 0x0001F883 File Offset: 0x0001DA83
+		// (set) Token: 0x060013E8 RID: 5096 RVA: 0x0001F89C File Offset: 0x0001DA9C
 		public unsafe bool bKuroHiddenDebugLog
 		{
 			get
@@ -565,9 +565,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001867 RID: 6247
-		// (get) Token: 0x06006650 RID: 26192 RVA: 0x00092DE0 File Offset: 0x00090FE0
-		// (set) Token: 0x06006651 RID: 26193 RVA: 0x00092DF9 File Offset: 0x00090FF9
+		// Token: 0x17000210 RID: 528
+		// (get) Token: 0x060013E9 RID: 5097 RVA: 0x0001F8CC File Offset: 0x0001DACC
+		// (set) Token: 0x060013EA RID: 5098 RVA: 0x0001F8E5 File Offset: 0x0001DAE5
 		public unsafe bool bSpawnInUIScene
 		{
 			get
@@ -580,9 +580,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001868 RID: 6248
-		// (get) Token: 0x06006652 RID: 26194 RVA: 0x00092E29 File Offset: 0x00091029
-		// (set) Token: 0x06006653 RID: 26195 RVA: 0x00092E42 File Offset: 0x00091042
+		// Token: 0x17000211 RID: 529
+		// (get) Token: 0x060013EB RID: 5099 RVA: 0x0001F915 File Offset: 0x0001DB15
+		// (set) Token: 0x060013EC RID: 5100 RVA: 0x0001F92E File Offset: 0x0001DB2E
 		public unsafe bool bReplicates
 		{
 			get
@@ -595,9 +595,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001869 RID: 6249
-		// (get) Token: 0x06006654 RID: 26196 RVA: 0x00092E72 File Offset: 0x00091072
-		// (set) Token: 0x06006655 RID: 26197 RVA: 0x00092E8B File Offset: 0x0009108B
+		// Token: 0x17000212 RID: 530
+		// (get) Token: 0x060013ED RID: 5101 RVA: 0x0001F95E File Offset: 0x0001DB5E
+		// (set) Token: 0x060013EE RID: 5102 RVA: 0x0001F977 File Offset: 0x0001DB77
 		public unsafe bool bCanBeInCluster
 		{
 			get
@@ -610,9 +610,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700186A RID: 6250
-		// (get) Token: 0x06006656 RID: 26198 RVA: 0x00092EBB File Offset: 0x000910BB
-		// (set) Token: 0x06006657 RID: 26199 RVA: 0x00092ED4 File Offset: 0x000910D4
+		// Token: 0x17000213 RID: 531
+		// (get) Token: 0x060013EF RID: 5103 RVA: 0x0001F9A7 File Offset: 0x0001DBA7
+		// (set) Token: 0x060013F0 RID: 5104 RVA: 0x0001F9C0 File Offset: 0x0001DBC0
 		public unsafe bool bAllowReceiveTickEventOnDedicatedServer
 		{
 			get
@@ -625,9 +625,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700186B RID: 6251
-		// (get) Token: 0x06006658 RID: 26200 RVA: 0x00092F04 File Offset: 0x00091104
-		// (set) Token: 0x06006659 RID: 26201 RVA: 0x00092F1D File Offset: 0x0009111D
+		// Token: 0x17000214 RID: 532
+		// (get) Token: 0x060013F1 RID: 5105 RVA: 0x0001F9F0 File Offset: 0x0001DBF0
+		// (set) Token: 0x060013F2 RID: 5106 RVA: 0x0001FA09 File Offset: 0x0001DC09
 		public unsafe bool bActorEnableCollision
 		{
 			get
@@ -640,9 +640,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700186C RID: 6252
-		// (get) Token: 0x0600665A RID: 26202 RVA: 0x00092F4D File Offset: 0x0009114D
-		// (set) Token: 0x0600665B RID: 26203 RVA: 0x00092F66 File Offset: 0x00091166
+		// Token: 0x17000215 RID: 533
+		// (get) Token: 0x060013F3 RID: 5107 RVA: 0x0001FA39 File Offset: 0x0001DC39
+		// (set) Token: 0x060013F4 RID: 5108 RVA: 0x0001FA52 File Offset: 0x0001DC52
 		public unsafe bool bActorIsBeingDestroyed
 		{
 			get
@@ -655,105 +655,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700186D RID: 6253
-		// (get) Token: 0x0600665C RID: 26204 RVA: 0x00092F96 File Offset: 0x00091196
-		// (set) Token: 0x0600665D RID: 26205 RVA: 0x00092FA6 File Offset: 0x000911A6
-		public unsafe EActorUpdateOverlapsMethod UpdateOverlapsMethodDuringLevelStreaming
-		{
-			get
-			{
-				return (EActorUpdateOverlapsMethod)(*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_UpdateOverlapsMethodDuringLevelStreaming));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_UpdateOverlapsMethodDuringLevelStreaming) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700186E RID: 6254
-		// (get) Token: 0x0600665E RID: 26206 RVA: 0x00092FB7 File Offset: 0x000911B7
-		// (set) Token: 0x0600665F RID: 26207 RVA: 0x00092FC7 File Offset: 0x000911C7
-		public unsafe EActorUpdateOverlapsMethod DefaultUpdateOverlapsMethodDuringLevelStreaming
-		{
-			get
-			{
-				return (EActorUpdateOverlapsMethod)(*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_DefaultUpdateOverlapsMethodDuringLevelStreaming));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_DefaultUpdateOverlapsMethodDuringLevelStreaming) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700186F RID: 6255
-		// (get) Token: 0x06006660 RID: 26208 RVA: 0x00092FD8 File Offset: 0x000911D8
-		// (set) Token: 0x06006661 RID: 26209 RVA: 0x00092FEC File Offset: 0x000911EC
-		[Nullable(0)]
-		public unsafe TEnumAsByte<ENetRole> RemoteRole
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AActor.__PropertyOffset_RemoteRole);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_RemoteRole) = value;
-			}
-		}
-
-		// Token: 0x17001870 RID: 6256
-		// (get) Token: 0x06006662 RID: 26210 RVA: 0x00093004 File Offset: 0x00091204
-		// (set) Token: 0x06006663 RID: 26211 RVA: 0x0009303D File Offset: 0x0009123D
-		[Nullable(1)]
-		public FRepMovement ReplicatedMovement
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FRepMovement result;
-				if ((result = this._ReplicatedMovement) == null)
-				{
-					result = (this._ReplicatedMovement = new FRepMovement(base.NativePtr + (IntPtr)AActor.__PropertyOffset_ReplicatedMovement, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FRepMovement.StaticStruct(), base.NativePtr + (IntPtr)AActor.__PropertyOffset_ReplicatedMovement, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17001871 RID: 6257
-		// (get) Token: 0x06006664 RID: 26212 RVA: 0x00093060 File Offset: 0x00091260
-		// (set) Token: 0x06006665 RID: 26213 RVA: 0x00093099 File Offset: 0x00091299
-		[Nullable(1)]
-		public FKuroRepMovement Kuro_ReplicatedMovement
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FKuroRepMovement result;
-				if ((result = this._Kuro_ReplicatedMovement) == null)
-				{
-					result = (this._Kuro_ReplicatedMovement = new FKuroRepMovement(base.NativePtr + (IntPtr)AActor.__PropertyOffset_Kuro_ReplicatedMovement, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroRepMovement.StaticStruct(), base.NativePtr + (IntPtr)AActor.__PropertyOffset_Kuro_ReplicatedMovement, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17001872 RID: 6258
-		// (get) Token: 0x06006666 RID: 26214 RVA: 0x000930BA File Offset: 0x000912BA
-		// (set) Token: 0x06006667 RID: 26215 RVA: 0x000930CA File Offset: 0x000912CA
+		// Token: 0x17000216 RID: 534
+		// (get) Token: 0x060013F5 RID: 5109 RVA: 0x0001FA82 File Offset: 0x0001DC82
+		// (set) Token: 0x060013F6 RID: 5110 RVA: 0x0001FA92 File Offset: 0x0001DC92
 		public unsafe float InitialLifeSpan
 		{
 			get
@@ -766,9 +670,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001873 RID: 6259
-		// (get) Token: 0x06006668 RID: 26216 RVA: 0x000930DB File Offset: 0x000912DB
-		// (set) Token: 0x06006669 RID: 26217 RVA: 0x000930EB File Offset: 0x000912EB
+		// Token: 0x17000217 RID: 535
+		// (get) Token: 0x060013F7 RID: 5111 RVA: 0x0001FAA3 File Offset: 0x0001DCA3
+		// (set) Token: 0x060013F8 RID: 5112 RVA: 0x0001FAB3 File Offset: 0x0001DCB3
 		public unsafe float CustomTimeDilation
 		{
 			get
@@ -781,33 +685,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001874 RID: 6260
-		// (get) Token: 0x0600666A RID: 26218 RVA: 0x000930FC File Offset: 0x000912FC
-		// (set) Token: 0x0600666B RID: 26219 RVA: 0x00093135 File Offset: 0x00091335
-		[Nullable(1)]
-		public FRepAttachment AttachmentReplication
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FRepAttachment result;
-				if ((result = this._AttachmentReplication) == null)
-				{
-					result = (this._AttachmentReplication = new FRepAttachment(base.NativePtr + (IntPtr)AActor.__PropertyOffset_AttachmentReplication, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FRepAttachment.StaticStruct(), base.NativePtr + (IntPtr)AActor.__PropertyOffset_AttachmentReplication, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17001875 RID: 6261
-		// (get) Token: 0x0600666C RID: 26220 RVA: 0x00093156 File Offset: 0x00091356
-		// (set) Token: 0x0600666D RID: 26221 RVA: 0x0009316A File Offset: 0x0009136A
+		// Token: 0x17000218 RID: 536
+		// (get) Token: 0x060013F9 RID: 5113 RVA: 0x0001FAC4 File Offset: 0x0001DCC4
+		// (set) Token: 0x060013FA RID: 5114 RVA: 0x0001FAD8 File Offset: 0x0001DCD8
 		public unsafe AActor Owner
 		{
 			get
@@ -820,9 +700,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001876 RID: 6262
-		// (get) Token: 0x0600666E RID: 26222 RVA: 0x0009317F File Offset: 0x0009137F
-		// (set) Token: 0x0600666F RID: 26223 RVA: 0x00093193 File Offset: 0x00091393
+		// Token: 0x17000219 RID: 537
+		// (get) Token: 0x060013FB RID: 5115 RVA: 0x0001FAED File Offset: 0x0001DCED
+		// (set) Token: 0x060013FC RID: 5116 RVA: 0x0001FB01 File Offset: 0x0001DD01
 		public unsafe FName NetDriverName
 		{
 			get
@@ -835,9 +715,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001877 RID: 6263
-		// (get) Token: 0x06006670 RID: 26224 RVA: 0x000931A8 File Offset: 0x000913A8
-		// (set) Token: 0x06006671 RID: 26225 RVA: 0x000931BC File Offset: 0x000913BC
+		// Token: 0x1700021A RID: 538
+		// (get) Token: 0x060013FD RID: 5117 RVA: 0x0001FB16 File Offset: 0x0001DD16
+		// (set) Token: 0x060013FE RID: 5118 RVA: 0x0001FB2A File Offset: 0x0001DD2A
 		public unsafe FName BlueprintTypeName
 		{
 			get
@@ -850,9 +730,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001878 RID: 6264
-		// (get) Token: 0x06006672 RID: 26226 RVA: 0x000931D1 File Offset: 0x000913D1
-		// (set) Token: 0x06006673 RID: 26227 RVA: 0x000931E1 File Offset: 0x000913E1
+		// Token: 0x1700021B RID: 539
+		// (get) Token: 0x060013FF RID: 5119 RVA: 0x0001FB3F File Offset: 0x0001DD3F
+		// (set) Token: 0x06001400 RID: 5120 RVA: 0x0001FB4F File Offset: 0x0001DD4F
 		public unsafe uint KuroEntityType
 		{
 			get
@@ -865,9 +745,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001879 RID: 6265
-		// (get) Token: 0x06006674 RID: 26228 RVA: 0x000931F2 File Offset: 0x000913F2
-		// (set) Token: 0x06006675 RID: 26229 RVA: 0x00093206 File Offset: 0x00091406
+		// Token: 0x1700021C RID: 540
+		// (get) Token: 0x06001401 RID: 5121 RVA: 0x0001FB60 File Offset: 0x0001DD60
+		// (set) Token: 0x06001402 RID: 5122 RVA: 0x0001FB74 File Offset: 0x0001DD74
 		public unsafe FName RuntimeGrid
 		{
 			get
@@ -880,45 +760,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700187A RID: 6266
-		// (get) Token: 0x06006676 RID: 26230 RVA: 0x0009321B File Offset: 0x0009141B
-		// (set) Token: 0x06006677 RID: 26231 RVA: 0x0009322F File Offset: 0x0009142F
-		[Nullable(0)]
-		public unsafe TEnumAsByte<ENetRole> Role
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AActor.__PropertyOffset_Role);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_Role) = value;
-			}
-		}
-
-		// Token: 0x1700187B RID: 6267
-		// (get) Token: 0x06006678 RID: 26232 RVA: 0x00093244 File Offset: 0x00091444
-		// (set) Token: 0x06006679 RID: 26233 RVA: 0x00093258 File Offset: 0x00091458
-		[Nullable(0)]
-		public unsafe TEnumAsByte<ENetDormancy> NetDormancy
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AActor.__PropertyOffset_NetDormancy);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_NetDormancy) = value;
-			}
-		}
-
-		// Token: 0x1700187C RID: 6268
-		// (get) Token: 0x0600667A RID: 26234 RVA: 0x0009326D File Offset: 0x0009146D
-		// (set) Token: 0x0600667B RID: 26235 RVA: 0x0009327D File Offset: 0x0009147D
+		// Token: 0x1700021D RID: 541
+		// (get) Token: 0x06001403 RID: 5123 RVA: 0x0001FB89 File Offset: 0x0001DD89
+		// (set) Token: 0x06001404 RID: 5124 RVA: 0x0001FB99 File Offset: 0x0001DD99
 		public unsafe ESpawnActorCollisionHandlingMethod SpawnCollisionHandlingMethod
 		{
 			get
@@ -931,27 +775,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700187D RID: 6269
-		// (get) Token: 0x0600667C RID: 26236 RVA: 0x0009328E File Offset: 0x0009148E
-		// (set) Token: 0x0600667D RID: 26237 RVA: 0x000932A2 File Offset: 0x000914A2
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EAutoReceiveInput> AutoReceiveInput
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AActor.__PropertyOffset_AutoReceiveInput);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AActor.__PropertyOffset_AutoReceiveInput) = value;
-			}
-		}
-
-		// Token: 0x1700187E RID: 6270
-		// (get) Token: 0x0600667E RID: 26238 RVA: 0x000932B7 File Offset: 0x000914B7
-		// (set) Token: 0x0600667F RID: 26239 RVA: 0x000932C7 File Offset: 0x000914C7
+		// Token: 0x1700021E RID: 542
+		// (get) Token: 0x06001405 RID: 5125 RVA: 0x0001FBAA File Offset: 0x0001DDAA
+		// (set) Token: 0x06001406 RID: 5126 RVA: 0x0001FBBA File Offset: 0x0001DDBA
 		public unsafe int InputPriority
 		{
 			get
@@ -964,24 +790,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700187F RID: 6271
-		// (get) Token: 0x06006680 RID: 26240 RVA: 0x000932D8 File Offset: 0x000914D8
-		// (set) Token: 0x06006681 RID: 26241 RVA: 0x000932EC File Offset: 0x000914EC
-		public unsafe UInputComponent InputComponent
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UInputComponent>(base.NativePtr / (IntPtr)sizeof(void*) + AActor.__PropertyOffset_InputComponent);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AActor.__PropertyOffset_InputComponent, value);
-			}
-		}
-
-		// Token: 0x17001880 RID: 6272
-		// (get) Token: 0x06006682 RID: 26242 RVA: 0x00093301 File Offset: 0x00091501
-		// (set) Token: 0x06006683 RID: 26243 RVA: 0x00093311 File Offset: 0x00091511
+		// Token: 0x1700021F RID: 543
+		// (get) Token: 0x06001407 RID: 5127 RVA: 0x0001FBCB File Offset: 0x0001DDCB
+		// (set) Token: 0x06001408 RID: 5128 RVA: 0x0001FBDB File Offset: 0x0001DDDB
 		public unsafe float NetCullDistanceSquared
 		{
 			get
@@ -994,9 +805,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001881 RID: 6273
-		// (get) Token: 0x06006684 RID: 26244 RVA: 0x00093322 File Offset: 0x00091522
-		// (set) Token: 0x06006685 RID: 26245 RVA: 0x00093332 File Offset: 0x00091532
+		// Token: 0x17000220 RID: 544
+		// (get) Token: 0x06001409 RID: 5129 RVA: 0x0001FBEC File Offset: 0x0001DDEC
+		// (set) Token: 0x0600140A RID: 5130 RVA: 0x0001FBFC File Offset: 0x0001DDFC
 		public unsafe int NetTag
 		{
 			get
@@ -1009,9 +820,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001882 RID: 6274
-		// (get) Token: 0x06006686 RID: 26246 RVA: 0x00093343 File Offset: 0x00091543
-		// (set) Token: 0x06006687 RID: 26247 RVA: 0x00093353 File Offset: 0x00091553
+		// Token: 0x17000221 RID: 545
+		// (get) Token: 0x0600140B RID: 5131 RVA: 0x0001FC0D File Offset: 0x0001DE0D
+		// (set) Token: 0x0600140C RID: 5132 RVA: 0x0001FC1D File Offset: 0x0001DE1D
 		public unsafe float NetUpdateFrequency
 		{
 			get
@@ -1024,9 +835,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001883 RID: 6275
-		// (get) Token: 0x06006688 RID: 26248 RVA: 0x00093364 File Offset: 0x00091564
-		// (set) Token: 0x06006689 RID: 26249 RVA: 0x00093374 File Offset: 0x00091574
+		// Token: 0x17000222 RID: 546
+		// (get) Token: 0x0600140D RID: 5133 RVA: 0x0001FC2E File Offset: 0x0001DE2E
+		// (set) Token: 0x0600140E RID: 5134 RVA: 0x0001FC3E File Offset: 0x0001DE3E
 		public unsafe float MinNetUpdateFrequency
 		{
 			get
@@ -1039,9 +850,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001884 RID: 6276
-		// (get) Token: 0x0600668A RID: 26250 RVA: 0x00093385 File Offset: 0x00091585
-		// (set) Token: 0x0600668B RID: 26251 RVA: 0x00093395 File Offset: 0x00091595
+		// Token: 0x17000223 RID: 547
+		// (get) Token: 0x0600140F RID: 5135 RVA: 0x0001FC4F File Offset: 0x0001DE4F
+		// (set) Token: 0x06001410 RID: 5136 RVA: 0x0001FC5F File Offset: 0x0001DE5F
 		public unsafe float NetPriority
 		{
 			get
@@ -1054,9 +865,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001885 RID: 6277
-		// (get) Token: 0x0600668C RID: 26252 RVA: 0x000933A6 File Offset: 0x000915A6
-		// (set) Token: 0x0600668D RID: 26253 RVA: 0x000933BA File Offset: 0x000915BA
+		// Token: 0x17000224 RID: 548
+		// (get) Token: 0x06001411 RID: 5137 RVA: 0x0001FC70 File Offset: 0x0001DE70
+		// (set) Token: 0x06001412 RID: 5138 RVA: 0x0001FC84 File Offset: 0x0001DE84
 		public unsafe APawn Instigator
 		{
 			get
@@ -1069,9 +880,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001886 RID: 6278
-		// (get) Token: 0x0600668E RID: 26254 RVA: 0x000933D0 File Offset: 0x000915D0
-		// (set) Token: 0x0600668F RID: 26255 RVA: 0x00093409 File Offset: 0x00091609
+		// Token: 0x17000225 RID: 549
+		// (get) Token: 0x06001413 RID: 5139 RVA: 0x0001FC9C File Offset: 0x0001DE9C
+		// (set) Token: 0x06001414 RID: 5140 RVA: 0x0001FCD5 File Offset: 0x0001DED5
 		[Nullable(1)]
 		public TArray<AActor> Children
 		{
@@ -1093,9 +904,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001887 RID: 6279
-		// (get) Token: 0x06006690 RID: 26256 RVA: 0x00093417 File Offset: 0x00091617
-		// (set) Token: 0x06006691 RID: 26257 RVA: 0x0009342B File Offset: 0x0009162B
+		// Token: 0x17000226 RID: 550
+		// (get) Token: 0x06001415 RID: 5141 RVA: 0x0001FCE3 File Offset: 0x0001DEE3
+		// (set) Token: 0x06001416 RID: 5142 RVA: 0x0001FCF7 File Offset: 0x0001DEF7
 		public unsafe USceneComponent RootComponent
 		{
 			get
@@ -1108,33 +919,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001888 RID: 6280
-		// (get) Token: 0x06006692 RID: 26258 RVA: 0x00093440 File Offset: 0x00091640
-		// (set) Token: 0x06006693 RID: 26259 RVA: 0x00093479 File Offset: 0x00091679
-		[Nullable(1)]
-		public TArray<AMatineeActor> ControllingMatineeActors
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<AMatineeActor> result;
-				if ((result = this._ControllingMatineeActors) == null)
-				{
-					result = (this._ControllingMatineeActors = new TArray<AMatineeActor>(base.NativePtr + (IntPtr)AActor.__PropertyOffset_ControllingMatineeActors, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.ControllingMatineeActors.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17001889 RID: 6281
-		// (get) Token: 0x06006694 RID: 26260 RVA: 0x00093488 File Offset: 0x00091688
-		// (set) Token: 0x06006695 RID: 26261 RVA: 0x000934C1 File Offset: 0x000916C1
+		// Token: 0x17000227 RID: 551
+		// (get) Token: 0x06001417 RID: 5143 RVA: 0x0001FD0C File Offset: 0x0001DF0C
+		// (set) Token: 0x06001418 RID: 5144 RVA: 0x0001FD45 File Offset: 0x0001DF45
 		[Nullable(1)]
 		public TArray<FName> Layers
 		{
@@ -1156,9 +943,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700188A RID: 6282
-		// (get) Token: 0x06006696 RID: 26262 RVA: 0x000934CF File Offset: 0x000916CF
-		// (set) Token: 0x06006697 RID: 26263 RVA: 0x000934E3 File Offset: 0x000916E3
+		// Token: 0x17000228 RID: 552
+		// (get) Token: 0x06001419 RID: 5145 RVA: 0x0001FD53 File Offset: 0x0001DF53
+		// (set) Token: 0x0600141A RID: 5146 RVA: 0x0001FD67 File Offset: 0x0001DF67
 		[Nullable(new byte[]
 		{
 			0,
@@ -1186,9 +973,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700188B RID: 6283
-		// (get) Token: 0x06006698 RID: 26264 RVA: 0x000934F8 File Offset: 0x000916F8
-		// (set) Token: 0x06006699 RID: 26265 RVA: 0x00093531 File Offset: 0x00091731
+		// Token: 0x17000229 RID: 553
+		// (get) Token: 0x0600141B RID: 5147 RVA: 0x0001FD7C File Offset: 0x0001DF7C
+		// (set) Token: 0x0600141C RID: 5148 RVA: 0x0001FDB5 File Offset: 0x0001DFB5
 		[Nullable(1)]
 		public TArray<FName> Tags
 		{
@@ -1210,81 +997,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700188C RID: 6284
-		// (get) Token: 0x0600669A RID: 26266 RVA: 0x00093540 File Offset: 0x00091740
-		// (set) Token: 0x0600669B RID: 26267 RVA: 0x00093579 File Offset: 0x00091779
-		[Nullable(1)]
-		public FTakeAnyDamageSignature OnTakeAnyDamage
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FTakeAnyDamageSignature result;
-				if ((result = this._OnTakeAnyDamage) == null)
-				{
-					result = (this._OnTakeAnyDamage = new FTakeAnyDamageSignature(base.NativePtr + (IntPtr)AActor.__PropertyOffset_OnTakeAnyDamage, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)AActor.__PropertyOffset_OnTakeAnyDamage, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x1700188D RID: 6285
-		// (get) Token: 0x0600669C RID: 26268 RVA: 0x0009359C File Offset: 0x0009179C
-		// (set) Token: 0x0600669D RID: 26269 RVA: 0x000935D5 File Offset: 0x000917D5
-		[Nullable(1)]
-		public FTakePointDamageSignature OnTakePointDamage
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FTakePointDamageSignature result;
-				if ((result = this._OnTakePointDamage) == null)
-				{
-					result = (this._OnTakePointDamage = new FTakePointDamageSignature(base.NativePtr + (IntPtr)AActor.__PropertyOffset_OnTakePointDamage, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)AActor.__PropertyOffset_OnTakePointDamage, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x1700188E RID: 6286
-		// (get) Token: 0x0600669E RID: 26270 RVA: 0x000935F8 File Offset: 0x000917F8
-		// (set) Token: 0x0600669F RID: 26271 RVA: 0x00093631 File Offset: 0x00091831
-		[Nullable(1)]
-		public FTakeRadialDamageSignature OnTakeRadialDamage
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FTakeRadialDamageSignature result;
-				if ((result = this._OnTakeRadialDamage) == null)
-				{
-					result = (this._OnTakeRadialDamage = new FTakeRadialDamageSignature(base.NativePtr + (IntPtr)AActor.__PropertyOffset_OnTakeRadialDamage, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)AActor.__PropertyOffset_OnTakeRadialDamage, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x1700188F RID: 6287
-		// (get) Token: 0x060066A0 RID: 26272 RVA: 0x00093654 File Offset: 0x00091854
-		// (set) Token: 0x060066A1 RID: 26273 RVA: 0x0009368D File Offset: 0x0009188D
+		// Token: 0x1700022A RID: 554
+		// (get) Token: 0x0600141D RID: 5149 RVA: 0x0001FDC4 File Offset: 0x0001DFC4
+		// (set) Token: 0x0600141E RID: 5150 RVA: 0x0001FDFD File Offset: 0x0001DFFD
 		[Nullable(1)]
 		public FActorBeginOverlapSignature OnActorBeginOverlap
 		{
@@ -1306,9 +1021,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001890 RID: 6288
-		// (get) Token: 0x060066A2 RID: 26274 RVA: 0x000936B0 File Offset: 0x000918B0
-		// (set) Token: 0x060066A3 RID: 26275 RVA: 0x000936E9 File Offset: 0x000918E9
+		// Token: 0x1700022B RID: 555
+		// (get) Token: 0x0600141F RID: 5151 RVA: 0x0001FE20 File Offset: 0x0001E020
+		// (set) Token: 0x06001420 RID: 5152 RVA: 0x0001FE59 File Offset: 0x0001E059
 		[Nullable(1)]
 		public FActorEndOverlapSignature OnActorEndOverlap
 		{
@@ -1330,9 +1045,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001891 RID: 6289
-		// (get) Token: 0x060066A4 RID: 26276 RVA: 0x0009370C File Offset: 0x0009190C
-		// (set) Token: 0x060066A5 RID: 26277 RVA: 0x00093745 File Offset: 0x00091945
+		// Token: 0x1700022C RID: 556
+		// (get) Token: 0x06001421 RID: 5153 RVA: 0x0001FE7C File Offset: 0x0001E07C
+		// (set) Token: 0x06001422 RID: 5154 RVA: 0x0001FEB5 File Offset: 0x0001E0B5
 		[Nullable(1)]
 		public FActorBeginCursorOverSignature OnBeginCursorOver
 		{
@@ -1354,9 +1069,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001892 RID: 6290
-		// (get) Token: 0x060066A6 RID: 26278 RVA: 0x00093768 File Offset: 0x00091968
-		// (set) Token: 0x060066A7 RID: 26279 RVA: 0x000937A1 File Offset: 0x000919A1
+		// Token: 0x1700022D RID: 557
+		// (get) Token: 0x06001423 RID: 5155 RVA: 0x0001FED8 File Offset: 0x0001E0D8
+		// (set) Token: 0x06001424 RID: 5156 RVA: 0x0001FF11 File Offset: 0x0001E111
 		[Nullable(1)]
 		public FActorEndCursorOverSignature OnEndCursorOver
 		{
@@ -1378,9 +1093,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001893 RID: 6291
-		// (get) Token: 0x060066A8 RID: 26280 RVA: 0x000937C4 File Offset: 0x000919C4
-		// (set) Token: 0x060066A9 RID: 26281 RVA: 0x000937FD File Offset: 0x000919FD
+		// Token: 0x1700022E RID: 558
+		// (get) Token: 0x06001425 RID: 5157 RVA: 0x0001FF34 File Offset: 0x0001E134
+		// (set) Token: 0x06001426 RID: 5158 RVA: 0x0001FF6D File Offset: 0x0001E16D
 		[Nullable(1)]
 		public FActorOnClickedSignature OnClicked
 		{
@@ -1402,9 +1117,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001894 RID: 6292
-		// (get) Token: 0x060066AA RID: 26282 RVA: 0x00093820 File Offset: 0x00091A20
-		// (set) Token: 0x060066AB RID: 26283 RVA: 0x00093859 File Offset: 0x00091A59
+		// Token: 0x1700022F RID: 559
+		// (get) Token: 0x06001427 RID: 5159 RVA: 0x0001FF90 File Offset: 0x0001E190
+		// (set) Token: 0x06001428 RID: 5160 RVA: 0x0001FFC9 File Offset: 0x0001E1C9
 		[Nullable(1)]
 		public FActorOnReleasedSignature OnReleased
 		{
@@ -1426,9 +1141,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001895 RID: 6293
-		// (get) Token: 0x060066AC RID: 26284 RVA: 0x0009387C File Offset: 0x00091A7C
-		// (set) Token: 0x060066AD RID: 26285 RVA: 0x000938B5 File Offset: 0x00091AB5
+		// Token: 0x17000230 RID: 560
+		// (get) Token: 0x06001429 RID: 5161 RVA: 0x0001FFEC File Offset: 0x0001E1EC
+		// (set) Token: 0x0600142A RID: 5162 RVA: 0x00020025 File Offset: 0x0001E225
 		[Nullable(1)]
 		public FActorOnInputTouchBeginSignature OnInputTouchBegin
 		{
@@ -1450,9 +1165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001896 RID: 6294
-		// (get) Token: 0x060066AE RID: 26286 RVA: 0x000938D8 File Offset: 0x00091AD8
-		// (set) Token: 0x060066AF RID: 26287 RVA: 0x00093911 File Offset: 0x00091B11
+		// Token: 0x17000231 RID: 561
+		// (get) Token: 0x0600142B RID: 5163 RVA: 0x00020048 File Offset: 0x0001E248
+		// (set) Token: 0x0600142C RID: 5164 RVA: 0x00020081 File Offset: 0x0001E281
 		[Nullable(1)]
 		public FActorOnInputTouchEndSignature OnInputTouchEnd
 		{
@@ -1474,9 +1189,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001897 RID: 6295
-		// (get) Token: 0x060066B0 RID: 26288 RVA: 0x00093934 File Offset: 0x00091B34
-		// (set) Token: 0x060066B1 RID: 26289 RVA: 0x0009396D File Offset: 0x00091B6D
+		// Token: 0x17000232 RID: 562
+		// (get) Token: 0x0600142D RID: 5165 RVA: 0x000200A4 File Offset: 0x0001E2A4
+		// (set) Token: 0x0600142E RID: 5166 RVA: 0x000200DD File Offset: 0x0001E2DD
 		[Nullable(1)]
 		public FActorBeginTouchOverSignature OnInputTouchEnter
 		{
@@ -1498,9 +1213,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001898 RID: 6296
-		// (get) Token: 0x060066B2 RID: 26290 RVA: 0x00093990 File Offset: 0x00091B90
-		// (set) Token: 0x060066B3 RID: 26291 RVA: 0x000939C9 File Offset: 0x00091BC9
+		// Token: 0x17000233 RID: 563
+		// (get) Token: 0x0600142F RID: 5167 RVA: 0x00020100 File Offset: 0x0001E300
+		// (set) Token: 0x06001430 RID: 5168 RVA: 0x00020139 File Offset: 0x0001E339
 		[Nullable(1)]
 		public FActorEndTouchOverSignature OnInputTouchLeave
 		{
@@ -1522,9 +1237,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001899 RID: 6297
-		// (get) Token: 0x060066B4 RID: 26292 RVA: 0x000939EC File Offset: 0x00091BEC
-		// (set) Token: 0x060066B5 RID: 26293 RVA: 0x00093A25 File Offset: 0x00091C25
+		// Token: 0x17000234 RID: 564
+		// (get) Token: 0x06001431 RID: 5169 RVA: 0x0002015C File Offset: 0x0001E35C
+		// (set) Token: 0x06001432 RID: 5170 RVA: 0x00020195 File Offset: 0x0001E395
 		[Nullable(1)]
 		public FActorHitSignature OnActorHit
 		{
@@ -1546,9 +1261,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700189A RID: 6298
-		// (get) Token: 0x060066B6 RID: 26294 RVA: 0x00093A48 File Offset: 0x00091C48
-		// (set) Token: 0x060066B7 RID: 26295 RVA: 0x00093A81 File Offset: 0x00091C81
+		// Token: 0x17000235 RID: 565
+		// (get) Token: 0x06001433 RID: 5171 RVA: 0x000201B8 File Offset: 0x0001E3B8
+		// (set) Token: 0x06001434 RID: 5172 RVA: 0x000201F1 File Offset: 0x0001E3F1
 		[Nullable(1)]
 		public FActorDestroyedSignature OnDestroyed
 		{
@@ -1570,9 +1285,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700189B RID: 6299
-		// (get) Token: 0x060066B8 RID: 26296 RVA: 0x00093AA4 File Offset: 0x00091CA4
-		// (set) Token: 0x060066B9 RID: 26297 RVA: 0x00093ADD File Offset: 0x00091CDD
+		// Token: 0x17000236 RID: 566
+		// (get) Token: 0x06001435 RID: 5173 RVA: 0x00020214 File Offset: 0x0001E414
+		// (set) Token: 0x06001436 RID: 5174 RVA: 0x0002024D File Offset: 0x0001E44D
 		[Nullable(1)]
 		public FActorEndPlaySignature OnEndPlay
 		{
@@ -1594,9 +1309,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700189C RID: 6300
-		// (get) Token: 0x060066BA RID: 26298 RVA: 0x00093B00 File Offset: 0x00091D00
-		// (set) Token: 0x060066BB RID: 26299 RVA: 0x00093B39 File Offset: 0x00091D39
+		// Token: 0x17000237 RID: 567
+		// (get) Token: 0x06001437 RID: 5175 RVA: 0x00020270 File Offset: 0x0001E470
+		// (set) Token: 0x06001438 RID: 5176 RVA: 0x000202A9 File Offset: 0x0001E4A9
 		[Nullable(1)]
 		public TArray<UActorComponent> InstanceComponents
 		{
@@ -1618,9 +1333,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700189D RID: 6301
-		// (get) Token: 0x060066BC RID: 26300 RVA: 0x00093B48 File Offset: 0x00091D48
-		// (set) Token: 0x060066BD RID: 26301 RVA: 0x00093B81 File Offset: 0x00091D81
+		// Token: 0x17000238 RID: 568
+		// (get) Token: 0x06001439 RID: 5177 RVA: 0x000202B8 File Offset: 0x0001E4B8
+		// (set) Token: 0x0600143A RID: 5178 RVA: 0x000202F1 File Offset: 0x0001E4F1
 		[Nullable(1)]
 		public TArray<UActorComponent> BlueprintCreatedComponents
 		{
@@ -1642,9 +1357,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700189E RID: 6302
-		// (get) Token: 0x060066BE RID: 26302 RVA: 0x00093B90 File Offset: 0x00091D90
-		// (set) Token: 0x060066BF RID: 26303 RVA: 0x00093BC9 File Offset: 0x00091DC9
+		// Token: 0x17000239 RID: 569
+		// (get) Token: 0x0600143B RID: 5179 RVA: 0x00020300 File Offset: 0x0001E500
+		// (set) Token: 0x0600143C RID: 5180 RVA: 0x00020339 File Offset: 0x0001E539
 		[Nullable(1)]
 		public TArray<AActor> MoveIgnoreActors
 		{
@@ -1666,385 +1381,360 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060066C0 RID: 26304 RVA: 0x00093BD7 File Offset: 0x00091DD7
+		// Token: 0x0600143D RID: 5181 RVA: 0x00020347 File Offset: 0x0001E547
 		public bool WasRecentlyRenderedOnScreen(float Tolerance = 0.2f)
 		{
 			return AActor.__WasRecentlyRenderedOnScreen_Internal(base.NativePtr, Tolerance);
 		}
 
-		// Token: 0x060066C1 RID: 26305 RVA: 0x00093BE5 File Offset: 0x00091DE5
+		// Token: 0x0600143E RID: 5182 RVA: 0x00020355 File Offset: 0x0001E555
 		public bool WasRecentlyRendered(float Tolerance = 0.2f)
 		{
 			return AActor.__WasRecentlyRendered_Internal(base.NativePtr, Tolerance);
 		}
 
-		// Token: 0x060066C2 RID: 26306 RVA: 0x00093BF3 File Offset: 0x00091DF3
+		// Token: 0x0600143F RID: 5183 RVA: 0x00020363 File Offset: 0x0001E563
 		public bool WasRecentlyPassVisibilityTest(float Tolerance = 0.2f)
 		{
 			return AActor.__WasRecentlyPassVisibilityTest_Internal(base.NativePtr, Tolerance);
 		}
 
-		// Token: 0x060066C3 RID: 26307 RVA: 0x00093C01 File Offset: 0x00091E01
+		// Token: 0x06001440 RID: 5184 RVA: 0x00020371 File Offset: 0x0001E571
 		public virtual void UserConstructionScript()
 		{
 			AActor.__UserConstructionScript_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066C4 RID: 26308 RVA: 0x00093C0E File Offset: 0x00091E0E
+		// Token: 0x06001441 RID: 5185 RVA: 0x0002037E File Offset: 0x0001E57E
 		public void TearOff()
 		{
 			AActor.__TearOff_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066C5 RID: 26309 RVA: 0x00093C1B File Offset: 0x00091E1B
+		// Token: 0x06001442 RID: 5186 RVA: 0x0002038B File Offset: 0x0001E58B
 		public void SnapRootComponentTo(AActor InParentActor, FName InSocketName)
 		{
 			AActor.__SnapRootComponentTo_Internal(base.NativePtr, (InParentActor != null) ? InParentActor.NativePtr : IntPtr.Zero, InSocketName);
 		}
 
-		// Token: 0x060066C6 RID: 26310 RVA: 0x00093C39 File Offset: 0x00091E39
+		// Token: 0x06001443 RID: 5187 RVA: 0x000203A9 File Offset: 0x0001E5A9
 		public void SetTickGroup(ETickingGroup NewTickGroup)
 		{
 			AActor.__SetTickGroup_Internal(base.NativePtr, NewTickGroup);
 		}
 
-		// Token: 0x060066C7 RID: 26311 RVA: 0x00093C4C File Offset: 0x00091E4C
+		// Token: 0x06001444 RID: 5188 RVA: 0x000203BC File Offset: 0x0001E5BC
 		public void SetTickableWhenPaused(bool bTickableWhenPaused)
 		{
 			AActor.__SetTickableWhenPaused_Internal(base.NativePtr, bTickableWhenPaused);
 		}
 
-		// Token: 0x060066C8 RID: 26312 RVA: 0x00093C5A File Offset: 0x00091E5A
+		// Token: 0x06001445 RID: 5189 RVA: 0x000203CA File Offset: 0x0001E5CA
 		public void SetReplicates(bool bInReplicates)
 		{
 			AActor.__SetReplicates_Internal(base.NativePtr, bInReplicates);
 		}
 
-		// Token: 0x060066C9 RID: 26313 RVA: 0x00093C68 File Offset: 0x00091E68
+		// Token: 0x06001446 RID: 5190 RVA: 0x000203D8 File Offset: 0x0001E5D8
 		public void SetReplicateMovement(bool bInReplicateMovement)
 		{
 			AActor.__SetReplicateMovement_Internal(base.NativePtr, bInReplicateMovement);
 		}
 
-		// Token: 0x060066CA RID: 26314 RVA: 0x00093C76 File Offset: 0x00091E76
+		// Token: 0x06001447 RID: 5191 RVA: 0x000203E6 File Offset: 0x0001E5E6
 		public void SetPrimitiveEntityType(uint type)
 		{
 			AActor.__SetPrimitiveEntityType_Internal(base.NativePtr, type);
 		}
 
-		// Token: 0x060066CB RID: 26315 RVA: 0x00093C84 File Offset: 0x00091E84
+		// Token: 0x06001448 RID: 5192 RVA: 0x000203F4 File Offset: 0x0001E5F4
 		public void SetPrimitiveBlueprintTypeName(FName Name)
 		{
 			AActor.__SetPrimitiveBlueprintTypeName_Internal(base.NativePtr, Name);
 		}
 
-		// Token: 0x060066CC RID: 26316 RVA: 0x00093C92 File Offset: 0x00091E92
+		// Token: 0x06001449 RID: 5193 RVA: 0x00020402 File Offset: 0x0001E602
 		public void SetOwner(AActor NewOwner)
 		{
 			AActor.__SetOwner_Internal(base.NativePtr, (NewOwner != null) ? NewOwner.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060066CD RID: 26317 RVA: 0x00093CAF File Offset: 0x00091EAF
-		public void SetNetDormancy(ENetDormancy NewDormancy)
-		{
-			AActor.__SetNetDormancy_Internal(base.NativePtr, NewDormancy);
-		}
-
-		// Token: 0x060066CE RID: 26318 RVA: 0x00093CC2 File Offset: 0x00091EC2
+		// Token: 0x0600144A RID: 5194 RVA: 0x0002041F File Offset: 0x0001E61F
 		public void SetLifeSpan(float InLifespan)
 		{
 			AActor.__SetLifeSpan_Internal(base.NativePtr, InLifespan);
 		}
 
-		// Token: 0x060066CF RID: 26319 RVA: 0x00093CD0 File Offset: 0x00091ED0
+		// Token: 0x0600144B RID: 5195 RVA: 0x0002042D File Offset: 0x0001E62D
 		public void SetKuroOnlyTickOutside(bool OnlyTickOutside)
 		{
 			AActor.__SetKuroOnlyTickOutside_Internal(base.NativePtr, OnlyTickOutside);
 		}
 
-		// Token: 0x060066D0 RID: 26320
+		// Token: 0x0600144C RID: 5196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetKuroNetMode(EKuroNetMode KNM);
 
-		// Token: 0x060066D1 RID: 26321 RVA: 0x00093CDE File Offset: 0x00091EDE
+		// Token: 0x0600144D RID: 5197 RVA: 0x0002043B File Offset: 0x0001E63B
+		public void SetKuroFadeGroup(int Group)
+		{
+			AActor.__SetKuroFadeGroup_Internal(base.NativePtr, Group);
+		}
+
+		// Token: 0x0600144E RID: 5198 RVA: 0x00020449 File Offset: 0x0001E649
 		public void SetIsIgnoreUpdateOverlap(bool bShouldIgnoreUpdateOverlap)
 		{
 			AActor.__SetIsIgnoreUpdateOverlap_Internal(base.NativePtr, bShouldIgnoreUpdateOverlap);
 		}
 
-		// Token: 0x060066D2 RID: 26322 RVA: 0x00093CEC File Offset: 0x00091EEC
+		// Token: 0x0600144F RID: 5199 RVA: 0x00020457 File Offset: 0x0001E657
 		public void SetForceHidden(bool bForce)
 		{
 			AActor.__SetForceHidden_Internal(base.NativePtr, bForce);
 		}
 
-		// Token: 0x060066D3 RID: 26323 RVA: 0x00093CFA File Offset: 0x00091EFA
+		// Token: 0x06001450 RID: 5200 RVA: 0x00020465 File Offset: 0x0001E665
 		public void SetAutoDestroyWhenFinished(bool bVal)
 		{
 			AActor.__SetAutoDestroyWhenFinished_Internal(base.NativePtr, bVal);
 		}
 
-		// Token: 0x060066D4 RID: 26324 RVA: 0x00093D08 File Offset: 0x00091F08
+		// Token: 0x06001451 RID: 5201 RVA: 0x00020473 File Offset: 0x0001E673
 		public void SetActorViewableInRender(bool bNewViewable)
 		{
 			AActor.__SetActorViewableInRender_Internal(base.NativePtr, bNewViewable);
 		}
 
-		// Token: 0x060066D5 RID: 26325 RVA: 0x00093D16 File Offset: 0x00091F16
+		// Token: 0x06001452 RID: 5202 RVA: 0x00020481 File Offset: 0x0001E681
 		public void SetActorTickInterval(float TickInterval)
 		{
 			AActor.__SetActorTickInterval_Internal(base.NativePtr, TickInterval);
 		}
 
-		// Token: 0x060066D6 RID: 26326 RVA: 0x00093D24 File Offset: 0x00091F24
+		// Token: 0x06001453 RID: 5203 RVA: 0x0002048F File Offset: 0x0001E68F
 		public void SetActorTickEnabled(bool bEnabled)
 		{
 			AActor.__SetActorTickEnabled_Internal(base.NativePtr, bEnabled);
 		}
 
-		// Token: 0x060066D7 RID: 26327 RVA: 0x00093D32 File Offset: 0x00091F32
+		// Token: 0x06001454 RID: 5204 RVA: 0x0002049D File Offset: 0x0001E69D
 		public void SetActorScale3D(FVector NewScale3D)
 		{
 			AActor.__SetActorScale3D_Internal(base.NativePtr, NewScale3D);
 		}
 
-		// Token: 0x060066D8 RID: 26328 RVA: 0x00093D40 File Offset: 0x00091F40
+		// Token: 0x06001455 RID: 5205 RVA: 0x000204AB File Offset: 0x0001E6AB
 		public void SetActorRelativeScale3D(FVector NewRelativeScale)
 		{
 			AActor.__SetActorRelativeScale3D_Internal(base.NativePtr, NewRelativeScale);
 		}
 
-		// Token: 0x060066D9 RID: 26329 RVA: 0x00093D4E File Offset: 0x00091F4E
+		// Token: 0x06001456 RID: 5206 RVA: 0x000204B9 File Offset: 0x0001E6B9
 		public void SetActorHiddenInGame(bool bNewHidden)
 		{
 			AActor.__SetActorHiddenInGame_Internal(base.NativePtr, bNewHidden);
 		}
 
-		// Token: 0x060066DA RID: 26330 RVA: 0x00093D5C File Offset: 0x00091F5C
+		// Token: 0x06001457 RID: 5207 RVA: 0x000204C7 File Offset: 0x0001E6C7
 		public void SetActorEnableCollision(bool bNewActorEnableCollision)
 		{
 			AActor.__SetActorEnableCollision_Internal(base.NativePtr, bNewActorEnableCollision);
 		}
 
-		// Token: 0x060066DB RID: 26331 RVA: 0x00093D6A File Offset: 0x00091F6A
+		// Token: 0x06001458 RID: 5208 RVA: 0x000204D5 File Offset: 0x0001E6D5
 		public void RemoveTickPrerequisiteComponent(UActorComponent PrerequisiteComponent)
 		{
 			AActor.__RemoveTickPrerequisiteComponent_Internal(base.NativePtr, (PrerequisiteComponent != null) ? PrerequisiteComponent.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060066DC RID: 26332 RVA: 0x00093D87 File Offset: 0x00091F87
+		// Token: 0x06001459 RID: 5209 RVA: 0x000204F2 File Offset: 0x0001E6F2
 		public void RemoveTickPrerequisiteActor(AActor PrerequisiteActor)
 		{
 			AActor.__RemoveTickPrerequisiteActor_Internal(base.NativePtr, (PrerequisiteActor != null) ? PrerequisiteActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060066DD RID: 26333 RVA: 0x00093DA4 File Offset: 0x00091FA4
+		// Token: 0x0600145A RID: 5210 RVA: 0x0002050F File Offset: 0x0001E70F
+		public void RefreshKuroFadeGroup()
+		{
+			AActor.__RefreshKuroFadeGroup_Internal(base.NativePtr);
+		}
+
+		// Token: 0x0600145B RID: 5211 RVA: 0x0002051C File Offset: 0x0001E71C
 		public virtual void ReceiveTick(float DeltaSeconds)
 		{
 			AActor.__ReceiveTick_Internal(base.NativePtr, DeltaSeconds);
 		}
 
-		// Token: 0x060066DE RID: 26334 RVA: 0x00093DB4 File Offset: 0x00091FB4
-		public virtual void ReceiveRadialDamage(float DamageReceived, UDamageType DamageType, FVector Origin, in FHitResult HitInfo, AController InstigatedBy, AActor DamageCauser)
-		{
-			AActor.__ReceiveRadialDamage_Internal(base.NativePtr, DamageReceived, (DamageType != null) ? DamageType.NativePtr : IntPtr.Zero, Origin, (HitInfo ?? new FHitResult()).NativePtr, (InstigatedBy != null) ? InstigatedBy.NativePtr : IntPtr.Zero, (DamageCauser != null) ? DamageCauser.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x060066DF RID: 26335 RVA: 0x00093E14 File Offset: 0x00092014
-		public virtual void ReceivePointDamage(float Damage, UDamageType DamageType, FVector HitLocation, FVector HitNormal, UPrimitiveComponent HitComponent, FName BoneName, FVector ShotFromDirection, AController InstigatedBy, AActor DamageCauser, in FHitResult HitInfo)
-		{
-			AActor.__ReceivePointDamage_Internal(base.NativePtr, Damage, (DamageType != null) ? DamageType.NativePtr : IntPtr.Zero, HitLocation, HitNormal, (HitComponent != null) ? HitComponent.NativePtr : IntPtr.Zero, BoneName, ShotFromDirection, (InstigatedBy != null) ? InstigatedBy.NativePtr : IntPtr.Zero, (DamageCauser != null) ? DamageCauser.NativePtr : IntPtr.Zero, (HitInfo ?? new FHitResult()).NativePtr);
-		}
-
-		// Token: 0x060066E0 RID: 26336 RVA: 0x00093E8C File Offset: 0x0009208C
+		// Token: 0x0600145C RID: 5212 RVA: 0x0002052C File Offset: 0x0001E72C
 		public virtual void ReceiveHit(UPrimitiveComponent MyComp, AActor Other, UPrimitiveComponent OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, in FHitResult Hit)
 		{
 			AActor.__ReceiveHit_Internal(base.NativePtr, (MyComp != null) ? MyComp.NativePtr : IntPtr.Zero, (Other != null) ? Other.NativePtr : IntPtr.Zero, (OtherComp != null) ? OtherComp.NativePtr : IntPtr.Zero, bSelfMoved, HitLocation, HitNormal, NormalImpulse, (Hit ?? new FHitResult()).NativePtr);
 		}
 
-		// Token: 0x060066E1 RID: 26337 RVA: 0x00093EED File Offset: 0x000920ED
+		// Token: 0x0600145D RID: 5213 RVA: 0x0002058D File Offset: 0x0001E78D
 		public virtual void ReceiveEndPlay(EEndPlayReason EndPlayReason)
 		{
 			AActor.__ReceiveEndPlay_Internal(base.NativePtr, EndPlayReason);
 		}
 
-		// Token: 0x060066E2 RID: 26338 RVA: 0x00093F00 File Offset: 0x00092100
+		// Token: 0x0600145E RID: 5214 RVA: 0x000205A0 File Offset: 0x0001E7A0
 		public virtual void ReceiveDestroyed()
 		{
 			AActor.__ReceiveDestroyed_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066E3 RID: 26339 RVA: 0x00093F0D File Offset: 0x0009210D
+		// Token: 0x0600145F RID: 5215 RVA: 0x000205AD File Offset: 0x0001E7AD
 		public virtual void ReceiveBeginPlay()
 		{
 			AActor.__ReceiveBeginPlay_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066E4 RID: 26340 RVA: 0x00093F1A File Offset: 0x0009211A
-		public virtual void ReceiveAnyDamage(float Damage, UDamageType DamageType, AController InstigatedBy, AActor DamageCauser)
-		{
-			AActor.__ReceiveAnyDamage_Internal(base.NativePtr, Damage, (DamageType != null) ? DamageType.NativePtr : IntPtr.Zero, (InstigatedBy != null) ? InstigatedBy.NativePtr : IntPtr.Zero, (DamageCauser != null) ? DamageCauser.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x060066E5 RID: 26341 RVA: 0x00093F5A File Offset: 0x0009215A
+		// Token: 0x06001460 RID: 5216 RVA: 0x000205BA File Offset: 0x0001E7BA
 		public virtual void ReceiveActorOnReleased(FKey ButtonReleased)
 		{
 			AActor.__ReceiveActorOnReleased_Internal(base.NativePtr, (ButtonReleased ?? new FKey()).NativePtr);
 		}
 
-		// Token: 0x060066E6 RID: 26342 RVA: 0x00093F76 File Offset: 0x00092176
+		// Token: 0x06001461 RID: 5217 RVA: 0x000205D6 File Offset: 0x0001E7D6
 		public virtual void ReceiveActorOnInputTouchLeave(ETouchIndex FingerIndex)
 		{
 			AActor.__ReceiveActorOnInputTouchLeave_Internal(base.NativePtr, FingerIndex);
 		}
 
-		// Token: 0x060066E7 RID: 26343 RVA: 0x00093F89 File Offset: 0x00092189
+		// Token: 0x06001462 RID: 5218 RVA: 0x000205E9 File Offset: 0x0001E7E9
 		public virtual void ReceiveActorOnInputTouchEnter(ETouchIndex FingerIndex)
 		{
 			AActor.__ReceiveActorOnInputTouchEnter_Internal(base.NativePtr, FingerIndex);
 		}
 
-		// Token: 0x060066E8 RID: 26344 RVA: 0x00093F9C File Offset: 0x0009219C
+		// Token: 0x06001463 RID: 5219 RVA: 0x000205FC File Offset: 0x0001E7FC
 		public virtual void ReceiveActorOnInputTouchEnd(ETouchIndex FingerIndex)
 		{
 			AActor.__ReceiveActorOnInputTouchEnd_Internal(base.NativePtr, FingerIndex);
 		}
 
-		// Token: 0x060066E9 RID: 26345 RVA: 0x00093FAF File Offset: 0x000921AF
+		// Token: 0x06001464 RID: 5220 RVA: 0x0002060F File Offset: 0x0001E80F
 		public virtual void ReceiveActorOnInputTouchBegin(ETouchIndex FingerIndex)
 		{
 			AActor.__ReceiveActorOnInputTouchBegin_Internal(base.NativePtr, FingerIndex);
 		}
 
-		// Token: 0x060066EA RID: 26346 RVA: 0x00093FC2 File Offset: 0x000921C2
+		// Token: 0x06001465 RID: 5221 RVA: 0x00020622 File Offset: 0x0001E822
 		public virtual void ReceiveActorOnClicked(FKey ButtonPressed)
 		{
 			AActor.__ReceiveActorOnClicked_Internal(base.NativePtr, (ButtonPressed ?? new FKey()).NativePtr);
 		}
 
-		// Token: 0x060066EB RID: 26347 RVA: 0x00093FDE File Offset: 0x000921DE
+		// Token: 0x06001466 RID: 5222 RVA: 0x0002063E File Offset: 0x0001E83E
 		public virtual void ReceiveActorEndOverlap(AActor OtherActor)
 		{
 			AActor.__ReceiveActorEndOverlap_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060066EC RID: 26348 RVA: 0x00093FFB File Offset: 0x000921FB
+		// Token: 0x06001467 RID: 5223 RVA: 0x0002065B File Offset: 0x0001E85B
 		public virtual void ReceiveActorEndCursorOver()
 		{
 			AActor.__ReceiveActorEndCursorOver_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066ED RID: 26349 RVA: 0x00094008 File Offset: 0x00092208
+		// Token: 0x06001468 RID: 5224 RVA: 0x00020668 File Offset: 0x0001E868
 		public virtual void ReceiveActorBeginOverlap(AActor OtherActor)
 		{
 			AActor.__ReceiveActorBeginOverlap_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060066EE RID: 26350 RVA: 0x00094025 File Offset: 0x00092225
+		// Token: 0x06001469 RID: 5225 RVA: 0x00020685 File Offset: 0x0001E885
 		public virtual void ReceiveActorBeginCursorOver()
 		{
 			AActor.__ReceiveActorBeginCursorOver_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066EF RID: 26351 RVA: 0x00094032 File Offset: 0x00092232
+		// Token: 0x0600146A RID: 5226 RVA: 0x00020692 File Offset: 0x0001E892
 		public void PrestreamTextures(float Seconds, bool bEnableStreaming, int CinematicTextureGroups = 0)
 		{
 			AActor.__PrestreamTextures_Internal(base.NativePtr, Seconds, bEnableStreaming, CinematicTextureGroups);
 		}
 
-		// Token: 0x060066F0 RID: 26352 RVA: 0x00094042 File Offset: 0x00092242
+		// Token: 0x0600146B RID: 5227 RVA: 0x000206A2 File Offset: 0x0001E8A2
 		public void OnRep_ReplicateMovement()
 		{
 			AActor.__OnRep_ReplicateMovement_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066F1 RID: 26353 RVA: 0x0009404F File Offset: 0x0009224F
+		// Token: 0x0600146C RID: 5228 RVA: 0x000206AF File Offset: 0x0001E8AF
 		public void OnRep_ReplicatedMovement()
 		{
 			AActor.__OnRep_ReplicatedMovement_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066F2 RID: 26354 RVA: 0x0009405C File Offset: 0x0009225C
+		// Token: 0x0600146D RID: 5229 RVA: 0x000206BC File Offset: 0x0001E8BC
 		public void OnRep_Owner()
 		{
 			AActor.__OnRep_Owner_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066F3 RID: 26355 RVA: 0x00094069 File Offset: 0x00092269
+		// Token: 0x0600146E RID: 5230 RVA: 0x000206C9 File Offset: 0x0001E8C9
 		public void OnRep_Instigator()
 		{
 			AActor.__OnRep_Instigator_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066F4 RID: 26356 RVA: 0x00094076 File Offset: 0x00092276
+		// Token: 0x0600146F RID: 5231 RVA: 0x000206D6 File Offset: 0x0001E8D6
 		public void OnRep_AttachmentReplication()
 		{
 			AActor.__OnRep_AttachmentReplication_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066F5 RID: 26357 RVA: 0x00094083 File Offset: 0x00092283
+		// Token: 0x06001470 RID: 5232 RVA: 0x000206E3 File Offset: 0x0001E8E3
 		public void MakeNoise(float Loudness = 1f, APawn NoiseInstigator = null, FVector NoiseLocation = default(FVector), float MaxRange = 0f, FName Tag = default(FName))
 		{
 			AActor.__MakeNoise_Internal(base.NativePtr, Loudness, (NoiseInstigator != null) ? NoiseInstigator.NativePtr : IntPtr.Zero, NoiseLocation, MaxRange, Tag);
 		}
 
-		// Token: 0x060066F6 RID: 26358 RVA: 0x000940A6 File Offset: 0x000922A6
+		// Token: 0x06001471 RID: 5233 RVA: 0x00020706 File Offset: 0x0001E906
 		public UMaterialInstanceDynamic MakeMIDForMaterial(UMaterialInterface Parent)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInstanceDynamic>(AActor.__MakeMIDForMaterial_Internal(base.NativePtr, (Parent != null) ? Parent.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060066F7 RID: 26359 RVA: 0x000940C8 File Offset: 0x000922C8
+		// Token: 0x06001472 RID: 5234 RVA: 0x00020728 File Offset: 0x0001E928
 		public void KuroTickActorOutside(float DeltaSeconds)
 		{
 			AActor.__KuroTickActorOutside_Internal(base.NativePtr, DeltaSeconds);
 		}
 
-		// Token: 0x060066F8 RID: 26360 RVA: 0x000940D6 File Offset: 0x000922D6
+		// Token: 0x06001473 RID: 5235 RVA: 0x00020736 File Offset: 0x0001E936
 		public void Kuro_SetRole(EKuroNetRole InRole)
 		{
 			AActor.__Kuro_SetRole_Internal(base.NativePtr, InRole);
 		}
 
-		// Token: 0x060066F9 RID: 26361 RVA: 0x000940E9 File Offset: 0x000922E9
-		public void Kuro_SetReplicatedMovement(in FKuroRepMovement InReplicatedMovement)
-		{
-			AActor.__Kuro_SetReplicatedMovement_Internal(base.NativePtr, (InReplicatedMovement ?? new FKuroRepMovement()).NativePtr);
-		}
-
-		// Token: 0x060066FA RID: 26362 RVA: 0x00094106 File Offset: 0x00092306
+		// Token: 0x06001474 RID: 5236 RVA: 0x00020749 File Offset: 0x0001E949
 		public void Kuro_OnRep_ReplicatedMovement()
 		{
 			AActor.__Kuro_OnRep_ReplicatedMovement_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066FB RID: 26363 RVA: 0x00094113 File Offset: 0x00092313
-		[NullableContext(1)]
-		public FKuroRepMovement Kuro_GetReplicatedMovement()
-		{
-			return new FKuroRepMovement(AActor.__Kuro_GetReplicatedMovement_Internal(base.NativePtr), null);
-		}
-
-		// Token: 0x060066FC RID: 26364 RVA: 0x00094126 File Offset: 0x00092326
+		// Token: 0x06001475 RID: 5237 RVA: 0x00020756 File Offset: 0x0001E956
 		[NullableContext(0)]
 		public TEnumAsByte<EKuroNetRole> Kuro_GetLocalRole()
 		{
 			return AActor.__Kuro_GetLocalRole_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060066FD RID: 26365 RVA: 0x00094133 File Offset: 0x00092333
+		// Token: 0x06001476 RID: 5238 RVA: 0x00020763 File Offset: 0x0001E963
 		public bool K2_TeleportTo(FVector DestLocation, FRotator DestRotation)
 		{
 			return AActor.__K2_TeleportTo_Internal(base.NativePtr, DestLocation, DestRotation);
 		}
 
-		// Token: 0x060066FE RID: 26366 RVA: 0x00094142 File Offset: 0x00092342
+		// Token: 0x06001477 RID: 5239 RVA: 0x00020772 File Offset: 0x0001E972
 		public void K2_SetDeferedConcurrentUpdateTransform(bool bEnable)
 		{
 			AActor.__K2_SetDeferedConcurrentUpdateTransform_Internal(base.NativePtr, bEnable);
 		}
 
-		// Token: 0x060066FF RID: 26367 RVA: 0x00094150 File Offset: 0x00092350
+		// Token: 0x06001478 RID: 5240 RVA: 0x00020780 File Offset: 0x0001E980
 		public unsafe bool K2_SetActorTransformForce(in FTransform NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2052,7 +1742,7 @@ namespace UnrealEngine
 			return AActor.__K2_SetActorTransformForce_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006700 RID: 26368 RVA: 0x00094198 File Offset: 0x00092398
+		// Token: 0x06001479 RID: 5241 RVA: 0x000207C8 File Offset: 0x0001E9C8
 		public unsafe bool K2_SetActorTransform(in FTransform NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2060,13 +1750,13 @@ namespace UnrealEngine
 			return AActor.__K2_SetActorTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006701 RID: 26369 RVA: 0x000941E0 File Offset: 0x000923E0
+		// Token: 0x0600147A RID: 5242 RVA: 0x00020810 File Offset: 0x0001EA10
 		public bool K2_SetActorRotation(FRotator NewRotation, bool bTeleportPhysics)
 		{
 			return AActor.__K2_SetActorRotation_Internal(base.NativePtr, NewRotation, bTeleportPhysics);
 		}
 
-		// Token: 0x06006702 RID: 26370 RVA: 0x000941F0 File Offset: 0x000923F0
+		// Token: 0x0600147B RID: 5243 RVA: 0x00020820 File Offset: 0x0001EA20
 		public unsafe void K2_SetActorRelativeTransform(in FTransform NewRelativeTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2074,67 +1764,67 @@ namespace UnrealEngine
 			AActor.__K2_SetActorRelativeTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006703 RID: 26371 RVA: 0x00094238 File Offset: 0x00092438
+		// Token: 0x0600147C RID: 5244 RVA: 0x00020868 File Offset: 0x0001EA68
 		public void K2_SetActorRelativeRotation(FRotator NewRelativeRotation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__K2_SetActorRelativeRotation_Internal(base.NativePtr, NewRelativeRotation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006704 RID: 26372 RVA: 0x00094259 File Offset: 0x00092459
+		// Token: 0x0600147D RID: 5245 RVA: 0x00020889 File Offset: 0x0001EA89
 		public void K2_SetActorRelativeLocation(FVector NewRelativeLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__K2_SetActorRelativeLocation_Internal(base.NativePtr, NewRelativeLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006705 RID: 26373 RVA: 0x0009427A File Offset: 0x0009247A
+		// Token: 0x0600147E RID: 5246 RVA: 0x000208AA File Offset: 0x0001EAAA
 		public bool K2_SetActorLocationAndRotation(FVector NewLocation, FRotator NewRotation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			return AActor.__K2_SetActorLocationAndRotation_Internal(base.NativePtr, NewLocation, NewRotation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006706 RID: 26374 RVA: 0x0009429D File Offset: 0x0009249D
+		// Token: 0x0600147F RID: 5247 RVA: 0x000208CD File Offset: 0x0001EACD
 		public bool K2_SetActorLocation(FVector NewLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			return AActor.__K2_SetActorLocation_Internal(base.NativePtr, NewLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006707 RID: 26375 RVA: 0x000942BE File Offset: 0x000924BE
+		// Token: 0x06001480 RID: 5248 RVA: 0x000208EE File Offset: 0x0001EAEE
 		public virtual void K2_OnReset()
 		{
 			AActor.__K2_OnReset_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006708 RID: 26376 RVA: 0x000942CB File Offset: 0x000924CB
+		// Token: 0x06001481 RID: 5249 RVA: 0x000208FB File Offset: 0x0001EAFB
 		public virtual void K2_OnEndViewTarget(APlayerController PC)
 		{
 			AActor.__K2_OnEndViewTarget_Internal(base.NativePtr, (PC != null) ? PC.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006709 RID: 26377 RVA: 0x000942E8 File Offset: 0x000924E8
+		// Token: 0x06001482 RID: 5250 RVA: 0x00020918 File Offset: 0x0001EB18
 		public virtual void K2_OnBecomeViewTarget(APlayerController PC)
 		{
 			AActor.__K2_OnBecomeViewTarget_Internal(base.NativePtr, (PC != null) ? PC.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600670A RID: 26378 RVA: 0x00094305 File Offset: 0x00092505
+		// Token: 0x06001483 RID: 5251 RVA: 0x00020935 File Offset: 0x0001EB35
 		public bool K2_KuroTeleportTo(FVector DestLocation, FRotator DestRotation)
 		{
 			return AActor.__K2_KuroTeleportTo_Internal(base.NativePtr, DestLocation, DestRotation);
 		}
 
-		// Token: 0x0600670B RID: 26379 RVA: 0x00094314 File Offset: 0x00092514
+		// Token: 0x06001484 RID: 5252 RVA: 0x00020944 File Offset: 0x0001EB44
 		public bool K2_KuroSetActorRotation(FRotator NewRotation, bool bSweep, bool bTeleportPhysics, bool bIgnoreOverlap = false)
 		{
 			return AActor.__K2_KuroSetActorRotation_Internal(base.NativePtr, NewRotation, bSweep, bTeleportPhysics, bIgnoreOverlap);
 		}
 
-		// Token: 0x0600670C RID: 26380 RVA: 0x00094326 File Offset: 0x00092526
+		// Token: 0x06001485 RID: 5253 RVA: 0x00020956 File Offset: 0x0001EB56
 		public USceneComponent K2_GetRootComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USceneComponent>(AActor.__K2_GetRootComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600670D RID: 26381 RVA: 0x00094338 File Offset: 0x00092538
+		// Token: 0x06001486 RID: 5254 RVA: 0x00020968 File Offset: 0x0001EB68
 		[NullableContext(1)]
 		public TArray<UActorComponent> K2_GetComponentsByClass([Nullable(new byte[]
 		{
@@ -2145,67 +1835,67 @@ namespace UnrealEngine
 			return new TArray<UActorComponent>(AActor.__K2_GetComponentsByClass_Internal(base.NativePtr, ComponentClass._NativePtr), null);
 		}
 
-		// Token: 0x0600670E RID: 26382 RVA: 0x00094351 File Offset: 0x00092551
+		// Token: 0x06001487 RID: 5255 RVA: 0x00020981 File Offset: 0x0001EB81
 		public FRotator K2_GetActorRotation()
 		{
 			return AActor.__K2_GetActorRotation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600670F RID: 26383 RVA: 0x0009435E File Offset: 0x0009255E
+		// Token: 0x06001488 RID: 5256 RVA: 0x0002098E File Offset: 0x0001EB8E
 		public FQuat K2_GetActorQuaternion()
 		{
 			return AActor.__K2_GetActorQuaternion_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006710 RID: 26384 RVA: 0x0009436B File Offset: 0x0009256B
+		// Token: 0x06001489 RID: 5257 RVA: 0x0002099B File Offset: 0x0001EB9B
 		public FVector K2_GetActorLocation()
 		{
 			return AActor.__K2_GetActorLocation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006711 RID: 26385 RVA: 0x00094378 File Offset: 0x00092578
+		// Token: 0x0600148A RID: 5258 RVA: 0x000209A8 File Offset: 0x0001EBA8
 		public void K2_DetachFromActor(EDetachmentRule LocationRule = EDetachmentRule.KeepRelative, EDetachmentRule RotationRule = EDetachmentRule.KeepRelative, EDetachmentRule ScaleRule = EDetachmentRule.KeepRelative)
 		{
 			AActor.__K2_DetachFromActor_Internal(base.NativePtr, LocationRule, RotationRule, ScaleRule);
 		}
 
-		// Token: 0x06006712 RID: 26386 RVA: 0x00094388 File Offset: 0x00092588
+		// Token: 0x0600148B RID: 5259 RVA: 0x000209B8 File Offset: 0x0001EBB8
 		public void K2_DestroyComponent(UActorComponent Component)
 		{
 			AActor.__K2_DestroyComponent_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006713 RID: 26387 RVA: 0x000943A5 File Offset: 0x000925A5
+		// Token: 0x0600148C RID: 5260 RVA: 0x000209D5 File Offset: 0x0001EBD5
 		public void K2_DestroyActor()
 		{
 			AActor.__K2_DestroyActor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006714 RID: 26388 RVA: 0x000943B2 File Offset: 0x000925B2
+		// Token: 0x0600148D RID: 5261 RVA: 0x000209E2 File Offset: 0x0001EBE2
 		public void K2_AttachToComponent(USceneComponent Parent, FName SocketName, EAttachmentRule LocationRule, EAttachmentRule RotationRule, EAttachmentRule ScaleRule, bool bWeldSimulatedBodies, bool bCalcWorldOrigin = true)
 		{
 			AActor.__K2_AttachToComponent_Internal(base.NativePtr, (Parent != null) ? Parent.NativePtr : IntPtr.Zero, SocketName, LocationRule, RotationRule, ScaleRule, bWeldSimulatedBodies, bCalcWorldOrigin);
 		}
 
-		// Token: 0x06006715 RID: 26389 RVA: 0x000943D9 File Offset: 0x000925D9
+		// Token: 0x0600148E RID: 5262 RVA: 0x00020A09 File Offset: 0x0001EC09
 		public void K2_AttachToActor(AActor ParentActor, FName SocketName, EAttachmentRule LocationRule, EAttachmentRule RotationRule, EAttachmentRule ScaleRule, bool bWeldSimulatedBodies, bool bCalcWorldOrigin = true)
 		{
 			AActor.__K2_AttachToActor_Internal(base.NativePtr, (ParentActor != null) ? ParentActor.NativePtr : IntPtr.Zero, SocketName, LocationRule, RotationRule, ScaleRule, bWeldSimulatedBodies, bCalcWorldOrigin);
 		}
 
-		// Token: 0x06006716 RID: 26390 RVA: 0x00094400 File Offset: 0x00092600
+		// Token: 0x0600148F RID: 5263 RVA: 0x00020A30 File Offset: 0x0001EC30
 		public void K2_AttachRootComponentToActor(AActor InParentActor, FName InSocketName = default(FName), EAttachLocation AttachLocationType = EAttachLocation.KeepRelativeOffset, bool bWeldSimulatedBodies = true)
 		{
 			AActor.__K2_AttachRootComponentToActor_Internal(base.NativePtr, (InParentActor != null) ? InParentActor.NativePtr : IntPtr.Zero, InSocketName, AttachLocationType, bWeldSimulatedBodies);
 		}
 
-		// Token: 0x06006717 RID: 26391 RVA: 0x00094426 File Offset: 0x00092626
+		// Token: 0x06001490 RID: 5264 RVA: 0x00020A56 File Offset: 0x0001EC56
 		public void K2_AttachRootComponentTo(USceneComponent InParent, FName InSocketName = default(FName), EAttachLocation AttachLocationType = EAttachLocation.KeepRelativeOffset, bool bWeldSimulatedBodies = true)
 		{
 			AActor.__K2_AttachRootComponentTo_Internal(base.NativePtr, (InParent != null) ? InParent.NativePtr : IntPtr.Zero, InSocketName, AttachLocationType, bWeldSimulatedBodies);
 		}
 
-		// Token: 0x06006718 RID: 26392 RVA: 0x0009444C File Offset: 0x0009264C
+		// Token: 0x06001491 RID: 5265 RVA: 0x00020A7C File Offset: 0x0001EC7C
 		public unsafe void K2_AddActorWorldTransformKeepScale(in FTransform DeltaTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2213,7 +1903,7 @@ namespace UnrealEngine
 			AActor.__K2_AddActorWorldTransformKeepScale_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006719 RID: 26393 RVA: 0x00094494 File Offset: 0x00092694
+		// Token: 0x06001492 RID: 5266 RVA: 0x00020AC4 File Offset: 0x0001ECC4
 		public unsafe void K2_AddActorWorldTransform(in FTransform DeltaTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2221,19 +1911,19 @@ namespace UnrealEngine
 			AActor.__K2_AddActorWorldTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600671A RID: 26394 RVA: 0x000944DC File Offset: 0x000926DC
+		// Token: 0x06001493 RID: 5267 RVA: 0x00020B0C File Offset: 0x0001ED0C
 		public void K2_AddActorWorldRotation(FRotator DeltaRotation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__K2_AddActorWorldRotation_Internal(base.NativePtr, DeltaRotation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600671B RID: 26395 RVA: 0x000944FD File Offset: 0x000926FD
+		// Token: 0x06001494 RID: 5268 RVA: 0x00020B2D File Offset: 0x0001ED2D
 		public void K2_AddActorWorldOffset(FVector DeltaLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__K2_AddActorWorldOffset_Internal(base.NativePtr, DeltaLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600671C RID: 26396 RVA: 0x00094520 File Offset: 0x00092720
+		// Token: 0x06001495 RID: 5269 RVA: 0x00020B50 File Offset: 0x0001ED50
 		public unsafe void K2_AddActorLocalTransform(in FTransform NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2241,152 +1931,151 @@ namespace UnrealEngine
 			AActor.__K2_AddActorLocalTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600671D RID: 26397 RVA: 0x00094568 File Offset: 0x00092768
+		// Token: 0x06001496 RID: 5270 RVA: 0x00020B98 File Offset: 0x0001ED98
 		public void K2_AddActorLocalRotation(FRotator DeltaRotation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__K2_AddActorLocalRotation_Internal(base.NativePtr, DeltaRotation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600671E RID: 26398 RVA: 0x00094589 File Offset: 0x00092789
+		// Token: 0x06001497 RID: 5271 RVA: 0x00020BB9 File Offset: 0x0001EDB9
 		public void K2_AddActorLocalOffset(FVector DeltaLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__K2_AddActorLocalOffset_Internal(base.NativePtr, DeltaLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600671F RID: 26399 RVA: 0x000945AA File Offset: 0x000927AA
+		// Token: 0x06001498 RID: 5272 RVA: 0x00020BDA File Offset: 0x0001EDDA
 		public bool IsUEOrignal()
 		{
 			return AActor.__IsUEOrignal_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006720 RID: 26400 RVA: 0x000945B7 File Offset: 0x000927B7
+		// Token: 0x06001499 RID: 5273 RVA: 0x00020BE7 File Offset: 0x0001EDE7
 		public bool IsOverlappingActor(AActor Other)
 		{
 			return AActor.__IsOverlappingActor_Internal(base.NativePtr, (Other != null) ? Other.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006721 RID: 26401 RVA: 0x000945D4 File Offset: 0x000927D4
+		// Token: 0x0600149A RID: 5274 RVA: 0x00020C04 File Offset: 0x0001EE04
 		public bool IsIgnoreUpdateOverlap()
 		{
 			return AActor.__IsIgnoreUpdateOverlap_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006722 RID: 26402 RVA: 0x000945E1 File Offset: 0x000927E1
+		// Token: 0x0600149B RID: 5275 RVA: 0x00020C11 File Offset: 0x0001EE11
 		public bool IsChildActor()
 		{
 			return AActor.__IsChildActor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006723 RID: 26403 RVA: 0x000945EE File Offset: 0x000927EE
+		// Token: 0x0600149C RID: 5276 RVA: 0x00020C1E File Offset: 0x0001EE1E
 		public bool IsAutonomousProxy()
 		{
 			return AActor.__IsAutonomousProxy_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006724 RID: 26404 RVA: 0x000945FB File Offset: 0x000927FB
+		// Token: 0x0600149D RID: 5277 RVA: 0x00020C2B File Offset: 0x0001EE2B
 		public bool IsActorTickEnabled()
 		{
 			return AActor.__IsActorTickEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006725 RID: 26405 RVA: 0x00094608 File Offset: 0x00092808
+		// Token: 0x0600149E RID: 5278 RVA: 0x00020C38 File Offset: 0x0001EE38
 		public bool IsActorBeingDestroyed()
 		{
 			return AActor.__IsActorBeingDestroyed_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006726 RID: 26406 RVA: 0x00094615 File Offset: 0x00092815
+		// Token: 0x0600149F RID: 5279 RVA: 0x00020C45 File Offset: 0x0001EE45
 		public void IgnoreActorWhenMoving(AActor Actor, bool bShouldIgnore, bool bBoth)
 		{
 			AActor.__IgnoreActorWhenMoving_Internal(base.NativePtr, (Actor != null) ? Actor.NativePtr : IntPtr.Zero, bShouldIgnore, bBoth);
 		}
 
-		// Token: 0x06006727 RID: 26407 RVA: 0x00094634 File Offset: 0x00092834
+		// Token: 0x060014A0 RID: 5280 RVA: 0x00020C64 File Offset: 0x0001EE64
+		public bool HasKuroFadeGroupOverride()
+		{
+			return AActor.__HasKuroFadeGroupOverride_Internal(base.NativePtr);
+		}
+
+		// Token: 0x060014A1 RID: 5281 RVA: 0x00020C71 File Offset: 0x0001EE71
 		public bool HasAuthority()
 		{
 			return AActor.__HasAuthority_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006728 RID: 26408 RVA: 0x00094641 File Offset: 0x00092841
+		// Token: 0x060014A2 RID: 5282 RVA: 0x00020C7E File Offset: 0x0001EE7E
 		public float GetVerticalDistanceTo(AActor OtherActor)
 		{
 			return AActor.__GetVerticalDistanceTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006729 RID: 26409 RVA: 0x0009465E File Offset: 0x0009285E
+		// Token: 0x060014A3 RID: 5283 RVA: 0x00020C9B File Offset: 0x0001EE9B
 		public FVector GetVelocity()
 		{
 			return AActor.__GetVelocity_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600672A RID: 26410 RVA: 0x0009466B File Offset: 0x0009286B
+		// Token: 0x060014A4 RID: 5284 RVA: 0x00020CA8 File Offset: 0x0001EEA8
 		public FTransform GetTransformWithUpdate()
 		{
 			return AActor.__GetTransformWithUpdate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600672B RID: 26411 RVA: 0x00094678 File Offset: 0x00092878
+		// Token: 0x060014A5 RID: 5285 RVA: 0x00020CB5 File Offset: 0x0001EEB5
 		public FTransform GetTransform()
 		{
 			return AActor.__GetTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600672C RID: 26412 RVA: 0x00094685 File Offset: 0x00092885
+		// Token: 0x060014A6 RID: 5286 RVA: 0x00020CC2 File Offset: 0x0001EEC2
 		public bool GetTickableWhenPaused()
 		{
 			return AActor.__GetTickableWhenPaused_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600672D RID: 26413 RVA: 0x00094692 File Offset: 0x00092892
+		// Token: 0x060014A7 RID: 5287 RVA: 0x00020CCF File Offset: 0x0001EECF
 		public float GetSquaredHorizontalDistanceTo(AActor OtherActor)
 		{
 			return AActor.__GetSquaredHorizontalDistanceTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600672E RID: 26414 RVA: 0x000946AF File Offset: 0x000928AF
+		// Token: 0x060014A8 RID: 5288 RVA: 0x00020CEC File Offset: 0x0001EEEC
 		public float GetSquaredDistanceTo(AActor OtherActor)
 		{
 			return AActor.__GetSquaredDistanceTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600672F RID: 26415 RVA: 0x000946CC File Offset: 0x000928CC
-		[NullableContext(0)]
-		public TEnumAsByte<ENetRole> GetRemoteRole()
-		{
-			return AActor.__GetRemoteRole_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06006730 RID: 26416 RVA: 0x000946D9 File Offset: 0x000928D9
+		// Token: 0x060014A9 RID: 5289 RVA: 0x00020D09 File Offset: 0x0001EF09
 		public uint GetPrimitiveEntityType()
 		{
 			return AActor.__GetPrimitiveEntityType_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006731 RID: 26417 RVA: 0x000946E6 File Offset: 0x000928E6
+		// Token: 0x060014AA RID: 5290 RVA: 0x00020D16 File Offset: 0x0001EF16
 		public FName GetPrimitiveBlueprintTypeName()
 		{
 			return AActor.__GetPrimitiveBlueprintTypeName_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006732 RID: 26418 RVA: 0x000946F3 File Offset: 0x000928F3
+		// Token: 0x060014AB RID: 5291 RVA: 0x00020D23 File Offset: 0x0001EF23
 		public UChildActorComponent GetParentComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UChildActorComponent>(AActor.__GetParentComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06006733 RID: 26419 RVA: 0x00094705 File Offset: 0x00092905
+		// Token: 0x060014AC RID: 5292 RVA: 0x00020D35 File Offset: 0x0001EF35
 		public AActor GetParentActor()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AActor.__GetParentActor_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06006734 RID: 26420 RVA: 0x00094717 File Offset: 0x00092917
+		// Token: 0x060014AD RID: 5293 RVA: 0x00020D47 File Offset: 0x0001EF47
 		public AActor GetOwner()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AActor.__GetOwner_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06006735 RID: 26421 RVA: 0x00094729 File Offset: 0x00092929
+		// Token: 0x060014AE RID: 5294 RVA: 0x00020D59 File Offset: 0x0001EF59
 		public void GetOverlappingComponents([Nullable(new byte[]
 		{
 			2,
@@ -2396,7 +2085,7 @@ namespace UnrealEngine
 			AActor.__GetOverlappingComponents_Internal(base.NativePtr, (OverlappingComponents ?? new TArray<UPrimitiveComponent>()).NativePtr);
 		}
 
-		// Token: 0x06006736 RID: 26422 RVA: 0x00094746 File Offset: 0x00092946
+		// Token: 0x060014AF RID: 5295 RVA: 0x00020D76 File Offset: 0x0001EF76
 		public void GetOverlappingActors([Nullable(new byte[]
 		{
 			2,
@@ -2410,103 +2099,102 @@ namespace UnrealEngine
 			AActor.__GetOverlappingActors_Internal(base.NativePtr, (OverlappingActors ?? new TArray<AActor>()).NativePtr, ClassFilter._NativePtr);
 		}
 
-		// Token: 0x06006737 RID: 26423 RVA: 0x00094769 File Offset: 0x00092969
-		[NullableContext(0)]
-		public TEnumAsByte<ENetRole> GetLocalRole()
-		{
-			return AActor.__GetLocalRole_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06006738 RID: 26424 RVA: 0x00094776 File Offset: 0x00092976
+		// Token: 0x060014B0 RID: 5296 RVA: 0x00020D99 File Offset: 0x0001EF99
 		public float GetLifeSpan()
 		{
 			return AActor.__GetLifeSpan_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006739 RID: 26425 RVA: 0x00094783 File Offset: 0x00092983
+		// Token: 0x060014B1 RID: 5297 RVA: 0x00020DA6 File Offset: 0x0001EFA6
 		public FTransform GetLevelTransform()
 		{
 			return AActor.__GetLevelTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600673A RID: 26426 RVA: 0x00094790 File Offset: 0x00092990
+		// Token: 0x060014B2 RID: 5298 RVA: 0x00020DB3 File Offset: 0x0001EFB3
 		public ULevel GetLevel()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevel>(AActor.__GetLevel_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600673B RID: 26427
+		// Token: 0x060014B3 RID: 5299
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern TEnumAsByte<EKuroNetMode> GetKuroNetMode();
 
-		// Token: 0x0600673C RID: 26428 RVA: 0x000947A2 File Offset: 0x000929A2
+		// Token: 0x060014B4 RID: 5300 RVA: 0x00020DC5 File Offset: 0x0001EFC5
+		public int GetKuroFadeGroup()
+		{
+			return AActor.__GetKuroFadeGroup_Internal(base.NativePtr);
+		}
+
+		// Token: 0x060014B5 RID: 5301 RVA: 0x00020DD2 File Offset: 0x0001EFD2
 		public FTransform GetInverseTransform()
 		{
 			return AActor.__GetInverseTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600673D RID: 26429 RVA: 0x000947AF File Offset: 0x000929AF
+		// Token: 0x060014B6 RID: 5302 RVA: 0x00020DDF File Offset: 0x0001EFDF
 		public AController GetInstigatorController()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AController>(AActor.__GetInstigatorController_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600673E RID: 26430 RVA: 0x000947C1 File Offset: 0x000929C1
+		// Token: 0x060014B7 RID: 5303 RVA: 0x00020DF1 File Offset: 0x0001EFF1
 		public APawn GetInstigator()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<APawn>(AActor.__GetInstigator_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600673F RID: 26431 RVA: 0x000947D3 File Offset: 0x000929D3
+		// Token: 0x060014B8 RID: 5304 RVA: 0x00020E03 File Offset: 0x0001F003
 		public FVector GetInputVectorAxisValue(FKey InputAxisKey)
 		{
 			return AActor.__GetInputVectorAxisValue_Internal(base.NativePtr, (InputAxisKey ?? new FKey()).NativePtr);
 		}
 
-		// Token: 0x06006740 RID: 26432 RVA: 0x000947EF File Offset: 0x000929EF
+		// Token: 0x060014B9 RID: 5305 RVA: 0x00020E1F File Offset: 0x0001F01F
 		public float GetInputAxisValue(FName InputAxisName)
 		{
 			return AActor.__GetInputAxisValue_Internal(base.NativePtr, InputAxisName);
 		}
 
-		// Token: 0x06006741 RID: 26433 RVA: 0x000947FD File Offset: 0x000929FD
+		// Token: 0x060014BA RID: 5306 RVA: 0x00020E2D File Offset: 0x0001F02D
 		public float GetInputAxisKeyValue(FKey InputAxisKey)
 		{
 			return AActor.__GetInputAxisKeyValue_Internal(base.NativePtr, (InputAxisKey ?? new FKey()).NativePtr);
 		}
 
-		// Token: 0x06006742 RID: 26434 RVA: 0x00094819 File Offset: 0x00092A19
+		// Token: 0x060014BB RID: 5307 RVA: 0x00020E49 File Offset: 0x0001F049
 		public float GetHorizontalDotProductTo(AActor OtherActor)
 		{
 			return AActor.__GetHorizontalDotProductTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006743 RID: 26435 RVA: 0x00094836 File Offset: 0x00092A36
+		// Token: 0x060014BC RID: 5308 RVA: 0x00020E66 File Offset: 0x0001F066
 		public float GetHorizontalDistanceTo(AActor OtherActor)
 		{
 			return AActor.__GetHorizontalDistanceTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006744 RID: 26436 RVA: 0x00094853 File Offset: 0x00092A53
+		// Token: 0x060014BD RID: 5309 RVA: 0x00020E83 File Offset: 0x0001F083
 		public float GetGameTimeSinceCreation()
 		{
 			return AActor.__GetGameTimeSinceCreation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006745 RID: 26437 RVA: 0x00094860 File Offset: 0x00092A60
+		// Token: 0x060014BE RID: 5310 RVA: 0x00020E90 File Offset: 0x0001F090
 		public float GetDotProductTo(AActor OtherActor)
 		{
 			return AActor.__GetDotProductTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006746 RID: 26438 RVA: 0x0009487D File Offset: 0x00092A7D
+		// Token: 0x060014BF RID: 5311 RVA: 0x00020EAD File Offset: 0x0001F0AD
 		public float GetDistanceTo(AActor OtherActor)
 		{
 			return AActor.__GetDistanceTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006747 RID: 26439 RVA: 0x0009489A File Offset: 0x00092A9A
+		// Token: 0x060014C0 RID: 5312 RVA: 0x00020ECA File Offset: 0x0001F0CA
 		[NullableContext(1)]
 		public TArray<UActorComponent> GetComponentsByTag([Nullable(new byte[]
 		{
@@ -2517,14 +2205,14 @@ namespace UnrealEngine
 			return new TArray<UActorComponent>(AActor.__GetComponentsByTag_Internal(base.NativePtr, ComponentClass._NativePtr, Tag), null);
 		}
 
-		// Token: 0x06006748 RID: 26440 RVA: 0x000948B4 File Offset: 0x00092AB4
+		// Token: 0x060014C1 RID: 5313 RVA: 0x00020EE4 File Offset: 0x0001F0E4
 		[NullableContext(1)]
 		public TArray<UActorComponent> GetComponentsByInterface(UClassStackOnlyPtr Interface)
 		{
 			return new TArray<UActorComponent>(AActor.__GetComponentsByInterface_Internal(base.NativePtr, Interface._NativePtr), null);
 		}
 
-		// Token: 0x06006749 RID: 26441 RVA: 0x000948CD File Offset: 0x00092ACD
+		// Token: 0x060014C2 RID: 5314 RVA: 0x00020EFD File Offset: 0x0001F0FD
 		public UActorComponent GetComponentByClass([Nullable(new byte[]
 		{
 			0,
@@ -2534,25 +2222,25 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UActorComponent>(AActor.__GetComponentByClass_Internal(base.NativePtr, ComponentClass._NativePtr));
 		}
 
-		// Token: 0x0600674A RID: 26442 RVA: 0x000948E5 File Offset: 0x00092AE5
+		// Token: 0x060014C3 RID: 5315 RVA: 0x00020F15 File Offset: 0x0001F115
 		public AActor GetAttachRootParentActor()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AActor.__GetAttachRootParentActor_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600674B RID: 26443 RVA: 0x000948F7 File Offset: 0x00092AF7
+		// Token: 0x060014C4 RID: 5316 RVA: 0x00020F27 File Offset: 0x0001F127
 		public FName GetAttachParentSocketName()
 		{
 			return AActor.__GetAttachParentSocketName_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600674C RID: 26444 RVA: 0x00094904 File Offset: 0x00092B04
+		// Token: 0x060014C5 RID: 5317 RVA: 0x00020F34 File Offset: 0x0001F134
 		public AActor GetAttachParentActor()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AActor.__GetAttachParentActor_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600674D RID: 26445 RVA: 0x00094916 File Offset: 0x00092B16
+		// Token: 0x060014C6 RID: 5318 RVA: 0x00020F46 File Offset: 0x0001F146
 		public void GetAttachedActors([Nullable(new byte[]
 		{
 			2,
@@ -2562,7 +2250,7 @@ namespace UnrealEngine
 			AActor.__GetAttachedActors_Internal(base.NativePtr, (OutActors ?? new TArray<AActor>()).NativePtr, bResetArray);
 		}
 
-		// Token: 0x0600674E RID: 26446 RVA: 0x00094934 File Offset: 0x00092B34
+		// Token: 0x060014C7 RID: 5319 RVA: 0x00020F64 File Offset: 0x0001F164
 		public void GetAttachedActorDescendants([Nullable(new byte[]
 		{
 			2,
@@ -2572,7 +2260,7 @@ namespace UnrealEngine
 			AActor.__GetAttachedActorDescendants_Internal(base.NativePtr, (OutActors ?? new TArray<AActor>()).NativePtr, bResetArray);
 		}
 
-		// Token: 0x0600674F RID: 26447 RVA: 0x00094952 File Offset: 0x00092B52
+		// Token: 0x060014C8 RID: 5320 RVA: 0x00020F82 File Offset: 0x0001F182
 		public void GetAllChildActors([Nullable(new byte[]
 		{
 			2,
@@ -2582,49 +2270,49 @@ namespace UnrealEngine
 			AActor.__GetAllChildActors_Internal(base.NativePtr, (ChildActors ?? new TArray<AActor>()).NativePtr, bIncludeDescendants);
 		}
 
-		// Token: 0x06006750 RID: 26448 RVA: 0x00094970 File Offset: 0x00092B70
+		// Token: 0x060014C9 RID: 5321 RVA: 0x00020FA0 File Offset: 0x0001F1A0
 		public FVector GetActorUpVector()
 		{
 			return AActor.__GetActorUpVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006751 RID: 26449 RVA: 0x0009497D File Offset: 0x00092B7D
+		// Token: 0x060014CA RID: 5322 RVA: 0x00020FAD File Offset: 0x0001F1AD
 		public float GetActorTimeDilation()
 		{
 			return AActor.__GetActorTimeDilation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006752 RID: 26450 RVA: 0x0009498A File Offset: 0x00092B8A
+		// Token: 0x060014CB RID: 5323 RVA: 0x00020FBA File Offset: 0x0001F1BA
 		public float GetActorTickInterval()
 		{
 			return AActor.__GetActorTickInterval_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006753 RID: 26451 RVA: 0x00094997 File Offset: 0x00092B97
+		// Token: 0x060014CC RID: 5324 RVA: 0x00020FC7 File Offset: 0x0001F1C7
 		public FVector GetActorScale3D()
 		{
 			return AActor.__GetActorScale3D_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006754 RID: 26452 RVA: 0x000949A4 File Offset: 0x00092BA4
+		// Token: 0x060014CD RID: 5325 RVA: 0x00020FD4 File Offset: 0x0001F1D4
 		public FVector GetActorRightVector()
 		{
 			return AActor.__GetActorRightVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006755 RID: 26453 RVA: 0x000949B1 File Offset: 0x00092BB1
+		// Token: 0x060014CE RID: 5326 RVA: 0x00020FE1 File Offset: 0x0001F1E1
 		public FVector GetActorRelativeScale3D()
 		{
 			return AActor.__GetActorRelativeScale3D_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006756 RID: 26454 RVA: 0x000949BE File Offset: 0x00092BBE
+		// Token: 0x060014CF RID: 5327 RVA: 0x00020FEE File Offset: 0x0001F1EE
 		public FVector GetActorForwardVector()
 		{
 			return AActor.__GetActorForwardVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006757 RID: 26455 RVA: 0x000949CC File Offset: 0x00092BCC
+		// Token: 0x060014D0 RID: 5328 RVA: 0x00020FFC File Offset: 0x0001F1FC
 		public unsafe void GetActorEyesViewPoint(ref FVector OutLocation, ref FRotator OutRotation, int CameraIndex = 0)
 		{
 			fixed (FVector* ptr = &OutLocation)
@@ -2639,13 +2327,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006758 RID: 26456 RVA: 0x000949F7 File Offset: 0x00092BF7
+		// Token: 0x060014D1 RID: 5329 RVA: 0x00021027 File Offset: 0x0001F227
 		public bool GetActorEnableCollision()
 		{
 			return AActor.__GetActorEnableCollision_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006759 RID: 26457 RVA: 0x00094A04 File Offset: 0x00092C04
+		// Token: 0x060014D2 RID: 5330 RVA: 0x00021034 File Offset: 0x0001F234
 		public unsafe void GetActorBounds(bool bOnlyCollidingComponents, ref FVector Origin, ref FVector BoxExtent, bool bIncludeFromChildActors = false)
 		{
 			fixed (FVector* ptr = &Origin)
@@ -2660,19 +2348,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600675A RID: 26458 RVA: 0x00094A31 File Offset: 0x00092C31
+		// Token: 0x060014D3 RID: 5331 RVA: 0x00021061 File Offset: 0x0001F261
 		public void ForceNetUpdate()
 		{
 			AActor.__ForceNetUpdate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600675B RID: 26459 RVA: 0x00094A3E File Offset: 0x00092C3E
+		// Token: 0x060014D4 RID: 5332 RVA: 0x0002106E File Offset: 0x0001F26E
 		public void FlushNetDormancy()
 		{
 			AActor.__FlushNetDormancy_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600675C RID: 26460 RVA: 0x00094A4C File Offset: 0x00092C4C
+		// Token: 0x060014D5 RID: 5333 RVA: 0x0002107C File Offset: 0x0001F27C
 		public unsafe void FinishAddComponent(UActorComponent Component, bool bManualAttachment, in FTransform RelativeTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2680,37 +2368,37 @@ namespace UnrealEngine
 			AActor.__FinishAddComponent_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero, bManualAttachment, ptr);
 		}
 
-		// Token: 0x0600675D RID: 26461 RVA: 0x00094A92 File Offset: 0x00092C92
+		// Token: 0x060014D6 RID: 5334 RVA: 0x000210C2 File Offset: 0x0001F2C2
 		public void EnableInput(APlayerController PlayerController)
 		{
 			AActor.__EnableInput_Internal(base.NativePtr, (PlayerController != null) ? PlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600675E RID: 26462 RVA: 0x00094AAF File Offset: 0x00092CAF
+		// Token: 0x060014D7 RID: 5335 RVA: 0x000210DF File Offset: 0x0001F2DF
 		public void DisableInput(APlayerController PlayerController)
 		{
 			AActor.__DisableInput_Internal(base.NativePtr, (PlayerController != null) ? PlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600675F RID: 26463 RVA: 0x00094ACC File Offset: 0x00092CCC
+		// Token: 0x060014D8 RID: 5336 RVA: 0x000210FC File Offset: 0x0001F2FC
 		public void DetachRootComponentFromParent(bool bMaintainWorldPosition = true)
 		{
 			AActor.__DetachRootComponentFromParent_Internal(base.NativePtr, bMaintainWorldPosition);
 		}
 
-		// Token: 0x06006760 RID: 26464 RVA: 0x00094ADA File Offset: 0x00092CDA
+		// Token: 0x060014D9 RID: 5337 RVA: 0x0002110A File Offset: 0x0001F30A
 		public void D_SetActorScale3D(FVectorDouble NewScale3D)
 		{
 			AActor.__D_SetActorScale3D_Internal(base.NativePtr, NewScale3D);
 		}
 
-		// Token: 0x06006761 RID: 26465 RVA: 0x00094AE8 File Offset: 0x00092CE8
+		// Token: 0x060014DA RID: 5338 RVA: 0x00021118 File Offset: 0x0001F318
 		public bool D_K2_TeleportTo(FVectorDouble DestLocation, FRotator DestRotation)
 		{
 			return AActor.__D_K2_TeleportTo_Internal(base.NativePtr, DestLocation, DestRotation);
 		}
 
-		// Token: 0x06006762 RID: 26466 RVA: 0x00094AF8 File Offset: 0x00092CF8
+		// Token: 0x060014DB RID: 5339 RVA: 0x00021128 File Offset: 0x0001F328
 		public unsafe bool D_K2_SetActorTransformForce(in FTransformDouble NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2718,7 +2406,7 @@ namespace UnrealEngine
 			return AActor.__D_K2_SetActorTransformForce_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006763 RID: 26467 RVA: 0x00094B40 File Offset: 0x00092D40
+		// Token: 0x060014DC RID: 5340 RVA: 0x00021170 File Offset: 0x0001F370
 		public unsafe bool D_K2_SetActorTransform(in FTransformDouble NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2726,7 +2414,7 @@ namespace UnrealEngine
 			return AActor.__D_K2_SetActorTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006764 RID: 26468 RVA: 0x00094B88 File Offset: 0x00092D88
+		// Token: 0x060014DD RID: 5341 RVA: 0x000211B8 File Offset: 0x0001F3B8
 		public unsafe void D_K2_SetActorRelativeTransform(in FTransformDouble NewRelativeTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2734,37 +2422,37 @@ namespace UnrealEngine
 			AActor.__D_K2_SetActorRelativeTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006765 RID: 26469 RVA: 0x00094BD0 File Offset: 0x00092DD0
+		// Token: 0x060014DE RID: 5342 RVA: 0x00021200 File Offset: 0x0001F400
 		public void D_K2_SetActorRelativeLocation(FVectorDouble NewRelativeLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__D_K2_SetActorRelativeLocation_Internal(base.NativePtr, NewRelativeLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006766 RID: 26470 RVA: 0x00094BF1 File Offset: 0x00092DF1
+		// Token: 0x060014DF RID: 5343 RVA: 0x00021221 File Offset: 0x0001F421
 		public bool D_K2_SetActorLocationAndRotation(FVectorDouble NewLocation, FRotator NewRotation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			return AActor.__D_K2_SetActorLocationAndRotation_Internal(base.NativePtr, NewLocation, NewRotation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006767 RID: 26471 RVA: 0x00094C14 File Offset: 0x00092E14
+		// Token: 0x060014E0 RID: 5344 RVA: 0x00021244 File Offset: 0x0001F444
 		public bool D_K2_SetActorLocation(FVectorDouble NewLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			return AActor.__D_K2_SetActorLocation_Internal(base.NativePtr, NewLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x06006768 RID: 26472 RVA: 0x00094C35 File Offset: 0x00092E35
+		// Token: 0x060014E1 RID: 5345 RVA: 0x00021265 File Offset: 0x0001F465
 		public bool D_K2_KuroTeleportTo(FVectorDouble DestLocation, FRotator DestRotation)
 		{
 			return AActor.__D_K2_KuroTeleportTo_Internal(base.NativePtr, DestLocation, DestRotation);
 		}
 
-		// Token: 0x06006769 RID: 26473 RVA: 0x00094C44 File Offset: 0x00092E44
+		// Token: 0x060014E2 RID: 5346 RVA: 0x00021274 File Offset: 0x0001F474
 		public FVectorDouble D_K2_GetActorLocation()
 		{
 			return AActor.__D_K2_GetActorLocation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600676A RID: 26474 RVA: 0x00094C54 File Offset: 0x00092E54
+		// Token: 0x060014E3 RID: 5347 RVA: 0x00021284 File Offset: 0x0001F484
 		public unsafe void D_K2_AddActorWorldTransform(in FTransformDouble DeltaTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2772,13 +2460,13 @@ namespace UnrealEngine
 			AActor.__D_K2_AddActorWorldTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600676B RID: 26475 RVA: 0x00094C9C File Offset: 0x00092E9C
+		// Token: 0x060014E4 RID: 5348 RVA: 0x000212CC File Offset: 0x0001F4CC
 		public void D_K2_AddActorWorldOffset(FVectorDouble DeltaLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__D_K2_AddActorWorldOffset_Internal(base.NativePtr, DeltaLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600676C RID: 26476 RVA: 0x00094CC0 File Offset: 0x00092EC0
+		// Token: 0x060014E5 RID: 5349 RVA: 0x000212F0 File Offset: 0x0001F4F0
 		public unsafe void D_K2_AddActorLocalTransform(in FTransformDouble NewTransform, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -2786,73 +2474,73 @@ namespace UnrealEngine
 			AActor.__D_K2_AddActorLocalTransform_Internal(base.NativePtr, ptr, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600676D RID: 26477 RVA: 0x00094D08 File Offset: 0x00092F08
+		// Token: 0x060014E6 RID: 5350 RVA: 0x00021338 File Offset: 0x0001F538
 		public void D_K2_AddActorLocalOffset(FVectorDouble DeltaLocation, bool bSweep, ref FHitResult SweepHitResult, bool bTeleport)
 		{
 			AActor.__D_K2_AddActorLocalOffset_Internal(base.NativePtr, DeltaLocation, bSweep, (SweepHitResult ?? new FHitResult()).NativePtr, bTeleport);
 		}
 
-		// Token: 0x0600676E RID: 26478 RVA: 0x00094D29 File Offset: 0x00092F29
+		// Token: 0x060014E7 RID: 5351 RVA: 0x00021359 File Offset: 0x0001F559
 		public FVectorDouble D_GetVelocity()
 		{
 			return AActor.__D_GetVelocity_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600676F RID: 26479 RVA: 0x00094D36 File Offset: 0x00092F36
+		// Token: 0x060014E8 RID: 5352 RVA: 0x00021366 File Offset: 0x0001F566
 		public FTransformDouble D_GetTransformWithUpdate()
 		{
 			return AActor.__D_GetTransformWithUpdate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006770 RID: 26480 RVA: 0x00094D43 File Offset: 0x00092F43
+		// Token: 0x060014E9 RID: 5353 RVA: 0x00021373 File Offset: 0x0001F573
 		public FTransformDouble D_GetTransform()
 		{
 			return AActor.__D_GetTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006771 RID: 26481 RVA: 0x00094D50 File Offset: 0x00092F50
+		// Token: 0x060014EA RID: 5354 RVA: 0x00021380 File Offset: 0x0001F580
 		public FTransformDouble D_GetInverseTransform()
 		{
 			return AActor.__D_GetInverseTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006772 RID: 26482 RVA: 0x00094D5D File Offset: 0x00092F5D
+		// Token: 0x060014EB RID: 5355 RVA: 0x0002138D File Offset: 0x0001F58D
 		public double D_GetGameTimeSinceCreation()
 		{
 			return AActor.__D_GetGameTimeSinceCreation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006773 RID: 26483 RVA: 0x00094D6A File Offset: 0x00092F6A
+		// Token: 0x060014EC RID: 5356 RVA: 0x0002139A File Offset: 0x0001F59A
 		public double D_GetDistanceTo(AActor OtherActor)
 		{
 			return AActor.__D_GetDistanceTo_Internal(base.NativePtr, (OtherActor != null) ? OtherActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06006774 RID: 26484 RVA: 0x00094D87 File Offset: 0x00092F87
+		// Token: 0x060014ED RID: 5357 RVA: 0x000213B7 File Offset: 0x0001F5B7
 		public FVectorDouble D_GetActorUpVector()
 		{
 			return AActor.__D_GetActorUpVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006775 RID: 26485 RVA: 0x00094D94 File Offset: 0x00092F94
+		// Token: 0x060014EE RID: 5358 RVA: 0x000213C4 File Offset: 0x0001F5C4
 		public FVectorDouble D_GetActorScale3D()
 		{
 			return AActor.__D_GetActorScale3D_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006776 RID: 26486 RVA: 0x00094DA1 File Offset: 0x00092FA1
+		// Token: 0x060014EF RID: 5359 RVA: 0x000213D1 File Offset: 0x0001F5D1
 		public FVectorDouble D_GetActorRightVector()
 		{
 			return AActor.__D_GetActorRightVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006777 RID: 26487 RVA: 0x00094DAE File Offset: 0x00092FAE
+		// Token: 0x060014F0 RID: 5360 RVA: 0x000213DE File Offset: 0x0001F5DE
 		public FVectorDouble D_GetActorForwardVector()
 		{
 			return AActor.__D_GetActorForwardVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06006778 RID: 26488 RVA: 0x00094DBC File Offset: 0x00092FBC
+		// Token: 0x060014F1 RID: 5361 RVA: 0x000213EC File Offset: 0x0001F5EC
 		public unsafe void D_GetActorBounds(bool bOnlyCollidingComponents, ref FVectorDouble Origin, ref FVector BoxExtent, bool bIncludeFromChildActors = false)
 		{
 			fixed (FVectorDouble* ptr = &Origin)
@@ -2867,7 +2555,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006779 RID: 26489 RVA: 0x00094DEC File Offset: 0x00092FEC
+		// Token: 0x060014F2 RID: 5362 RVA: 0x0002141C File Offset: 0x0001F61C
 		public unsafe UActorComponent D_AddComponentByClass([Nullable(new byte[]
 		{
 			0,
@@ -2879,25 +2567,31 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UActorComponent>(AActor.__D_AddComponentByClass_Internal(base.NativePtr, Class._NativePtr, bManualAttachment, ptr, bDeferredFinish, ComponentName));
 		}
 
-		// Token: 0x0600677A RID: 26490 RVA: 0x00094E31 File Offset: 0x00093031
+		// Token: 0x060014F3 RID: 5363 RVA: 0x00021461 File Offset: 0x0001F661
 		public void ClearMoveIgnoreActors(bool bClearBoth)
 		{
 			AActor.__ClearMoveIgnoreActors_Internal(base.NativePtr, bClearBoth);
 		}
 
-		// Token: 0x0600677B RID: 26491 RVA: 0x00094E3F File Offset: 0x0009303F
+		// Token: 0x060014F4 RID: 5364 RVA: 0x0002146F File Offset: 0x0001F66F
+		public void ClearKuroFadeGroupOverride()
+		{
+			AActor.__ClearKuroFadeGroupOverride_Internal(base.NativePtr);
+		}
+
+		// Token: 0x060014F5 RID: 5365 RVA: 0x0002147C File Offset: 0x0001F67C
 		public void AddTickPrerequisiteComponent(UActorComponent PrerequisiteComponent)
 		{
 			AActor.__AddTickPrerequisiteComponent_Internal(base.NativePtr, (PrerequisiteComponent != null) ? PrerequisiteComponent.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600677C RID: 26492 RVA: 0x00094E5C File Offset: 0x0009305C
+		// Token: 0x060014F6 RID: 5366 RVA: 0x00021499 File Offset: 0x0001F699
 		public void AddTickPrerequisiteActor(AActor PrerequisiteActor)
 		{
 			AActor.__AddTickPrerequisiteActor_Internal(base.NativePtr, (PrerequisiteActor != null) ? PrerequisiteActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600677D RID: 26493 RVA: 0x00094E7C File Offset: 0x0009307C
+		// Token: 0x060014F7 RID: 5367 RVA: 0x000214B8 File Offset: 0x0001F6B8
 		public unsafe UActorComponent AddComponentByClass([Nullable(new byte[]
 		{
 			0,
@@ -2909,7 +2603,7 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UActorComponent>(AActor.__AddComponentByClass_Internal(base.NativePtr, Class._NativePtr, bManualAttachment, ptr, bDeferredFinish, ComponentName));
 		}
 
-		// Token: 0x0600677E RID: 26494 RVA: 0x00094EC4 File Offset: 0x000930C4
+		// Token: 0x060014F8 RID: 5368 RVA: 0x00021500 File Offset: 0x0001F700
 		public unsafe UActorComponent AddComponent(FName TemplateName, bool bManualAttachment, in FTransform RelativeTransform, UObject ComponentTemplateContext, bool bDeferredFinish = false)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -2917,1137 +2611,1083 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UActorComponent>(AActor.__AddComponent_Internal(base.NativePtr, TemplateName, bManualAttachment, ptr, (ComponentTemplateContext != null) ? ComponentTemplateContext.NativePtr : IntPtr.Zero, bDeferredFinish));
 		}
 
-		// Token: 0x0600677F RID: 26495 RVA: 0x00094F14 File Offset: 0x00093114
+		// Token: 0x060014F9 RID: 5369 RVA: 0x00021550 File Offset: 0x0001F750
 		public bool ActorHasTag(FName Tag)
 		{
 			return AActor.__ActorHasTag_Internal(base.NativePtr, Tag);
 		}
 
-		// Token: 0x06006780 RID: 26496
+		// Token: 0x060014FA RID: 5370
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __WasRecentlyRenderedOnScreen_Internal(IntPtr @this, float Tolerance);
 
-		// Token: 0x06006781 RID: 26497
+		// Token: 0x060014FB RID: 5371
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __WasRecentlyRendered_Internal(IntPtr @this, float Tolerance);
 
-		// Token: 0x06006782 RID: 26498
+		// Token: 0x060014FC RID: 5372
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __WasRecentlyPassVisibilityTest_Internal(IntPtr @this, float Tolerance);
 
-		// Token: 0x06006783 RID: 26499
+		// Token: 0x060014FD RID: 5373
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UserConstructionScript_Internal(IntPtr @this);
 
-		// Token: 0x06006784 RID: 26500
+		// Token: 0x060014FE RID: 5374
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TearOff_Internal(IntPtr @this);
 
-		// Token: 0x06006785 RID: 26501
+		// Token: 0x060014FF RID: 5375
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SnapRootComponentTo_Internal(IntPtr @this, IntPtr InParentActor, FName InSocketName);
 
-		// Token: 0x06006786 RID: 26502
+		// Token: 0x06001500 RID: 5376
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTickGroup_Internal(IntPtr @this, TEnumAsByte<ETickingGroup> NewTickGroup);
 
-		// Token: 0x06006787 RID: 26503
+		// Token: 0x06001501 RID: 5377
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTickableWhenPaused_Internal(IntPtr @this, bool bTickableWhenPaused);
 
-		// Token: 0x06006788 RID: 26504
+		// Token: 0x06001502 RID: 5378
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetReplicates_Internal(IntPtr @this, bool bInReplicates);
 
-		// Token: 0x06006789 RID: 26505
+		// Token: 0x06001503 RID: 5379
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetReplicateMovement_Internal(IntPtr @this, bool bInReplicateMovement);
 
-		// Token: 0x0600678A RID: 26506
+		// Token: 0x06001504 RID: 5380
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPrimitiveEntityType_Internal(IntPtr @this, uint type);
 
-		// Token: 0x0600678B RID: 26507
+		// Token: 0x06001505 RID: 5381
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPrimitiveBlueprintTypeName_Internal(IntPtr @this, FName Name);
 
-		// Token: 0x0600678C RID: 26508
+		// Token: 0x06001506 RID: 5382
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetOwner_Internal(IntPtr @this, IntPtr NewOwner);
 
-		// Token: 0x0600678D RID: 26509
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetNetDormancy_Internal(IntPtr @this, TEnumAsByte<ENetDormancy> NewDormancy);
-
-		// Token: 0x0600678E RID: 26510
+		// Token: 0x06001507 RID: 5383
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLifeSpan_Internal(IntPtr @this, float InLifespan);
 
-		// Token: 0x0600678F RID: 26511
+		// Token: 0x06001508 RID: 5384
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKuroOnlyTickOutside_Internal(IntPtr @this, bool OnlyTickOutside);
 
-		// Token: 0x06006790 RID: 26512
+		// Token: 0x06001509 RID: 5385
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __SetKuroFadeGroup_Internal(IntPtr @this, int Group);
+
+		// Token: 0x0600150A RID: 5386
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIsIgnoreUpdateOverlap_Internal(IntPtr @this, bool bShouldIgnoreUpdateOverlap);
 
-		// Token: 0x06006791 RID: 26513
+		// Token: 0x0600150B RID: 5387
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetForceHidden_Internal(IntPtr @this, bool bForce);
 
-		// Token: 0x06006792 RID: 26514
+		// Token: 0x0600150C RID: 5388
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAutoDestroyWhenFinished_Internal(IntPtr @this, bool bVal);
 
-		// Token: 0x06006793 RID: 26515
+		// Token: 0x0600150D RID: 5389
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorViewableInRender_Internal(IntPtr @this, bool bNewViewable);
 
-		// Token: 0x06006794 RID: 26516
+		// Token: 0x0600150E RID: 5390
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorTickInterval_Internal(IntPtr @this, float TickInterval);
 
-		// Token: 0x06006795 RID: 26517
+		// Token: 0x0600150F RID: 5391
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorTickEnabled_Internal(IntPtr @this, bool bEnabled);
 
-		// Token: 0x06006796 RID: 26518
+		// Token: 0x06001510 RID: 5392
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorScale3D_Internal(IntPtr @this, FVector NewScale3D);
 
-		// Token: 0x06006797 RID: 26519
+		// Token: 0x06001511 RID: 5393
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorRelativeScale3D_Internal(IntPtr @this, FVector NewRelativeScale);
 
-		// Token: 0x06006798 RID: 26520
+		// Token: 0x06001512 RID: 5394
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorHiddenInGame_Internal(IntPtr @this, bool bNewHidden);
 
-		// Token: 0x06006799 RID: 26521
+		// Token: 0x06001513 RID: 5395
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetActorEnableCollision_Internal(IntPtr @this, bool bNewActorEnableCollision);
 
-		// Token: 0x0600679A RID: 26522
+		// Token: 0x06001514 RID: 5396
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveTickPrerequisiteComponent_Internal(IntPtr @this, IntPtr PrerequisiteComponent);
 
-		// Token: 0x0600679B RID: 26523
+		// Token: 0x06001515 RID: 5397
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveTickPrerequisiteActor_Internal(IntPtr @this, IntPtr PrerequisiteActor);
 
-		// Token: 0x0600679C RID: 26524
+		// Token: 0x06001516 RID: 5398
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __RefreshKuroFadeGroup_Internal(IntPtr @this);
+
+		// Token: 0x06001517 RID: 5399
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveTick_Internal(IntPtr @this, float DeltaSeconds);
 
-		// Token: 0x0600679D RID: 26525
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ReceiveRadialDamage_Internal(IntPtr @this, float DamageReceived, IntPtr DamageType, FVector Origin, IntPtr HitInfo, IntPtr InstigatedBy, IntPtr DamageCauser);
-
-		// Token: 0x0600679E RID: 26526
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ReceivePointDamage_Internal(IntPtr @this, float Damage, IntPtr DamageType, FVector HitLocation, FVector HitNormal, IntPtr HitComponent, FName BoneName, FVector ShotFromDirection, IntPtr InstigatedBy, IntPtr DamageCauser, IntPtr HitInfo);
-
-		// Token: 0x0600679F RID: 26527
+		// Token: 0x06001518 RID: 5400
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveHit_Internal(IntPtr @this, IntPtr MyComp, IntPtr Other, IntPtr OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, IntPtr Hit);
 
-		// Token: 0x060067A0 RID: 26528
+		// Token: 0x06001519 RID: 5401
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveEndPlay_Internal(IntPtr @this, TEnumAsByte<EEndPlayReason> EndPlayReason);
 
-		// Token: 0x060067A1 RID: 26529
+		// Token: 0x0600151A RID: 5402
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveDestroyed_Internal(IntPtr @this);
 
-		// Token: 0x060067A2 RID: 26530
+		// Token: 0x0600151B RID: 5403
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveBeginPlay_Internal(IntPtr @this);
 
-		// Token: 0x060067A3 RID: 26531
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ReceiveAnyDamage_Internal(IntPtr @this, float Damage, IntPtr DamageType, IntPtr InstigatedBy, IntPtr DamageCauser);
-
-		// Token: 0x060067A4 RID: 26532
+		// Token: 0x0600151C RID: 5404
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorOnReleased_Internal(IntPtr @this, IntPtr ButtonReleased);
 
-		// Token: 0x060067A5 RID: 26533
+		// Token: 0x0600151D RID: 5405
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorOnInputTouchLeave_Internal(IntPtr @this, TEnumAsByte<ETouchIndex> FingerIndex);
 
-		// Token: 0x060067A6 RID: 26534
+		// Token: 0x0600151E RID: 5406
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorOnInputTouchEnter_Internal(IntPtr @this, TEnumAsByte<ETouchIndex> FingerIndex);
 
-		// Token: 0x060067A7 RID: 26535
+		// Token: 0x0600151F RID: 5407
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorOnInputTouchEnd_Internal(IntPtr @this, TEnumAsByte<ETouchIndex> FingerIndex);
 
-		// Token: 0x060067A8 RID: 26536
+		// Token: 0x06001520 RID: 5408
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorOnInputTouchBegin_Internal(IntPtr @this, TEnumAsByte<ETouchIndex> FingerIndex);
 
-		// Token: 0x060067A9 RID: 26537
+		// Token: 0x06001521 RID: 5409
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorOnClicked_Internal(IntPtr @this, IntPtr ButtonPressed);
 
-		// Token: 0x060067AA RID: 26538
+		// Token: 0x06001522 RID: 5410
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorEndOverlap_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x060067AB RID: 26539
+		// Token: 0x06001523 RID: 5411
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorEndCursorOver_Internal(IntPtr @this);
 
-		// Token: 0x060067AC RID: 26540
+		// Token: 0x06001524 RID: 5412
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorBeginOverlap_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x060067AD RID: 26541
+		// Token: 0x06001525 RID: 5413
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveActorBeginCursorOver_Internal(IntPtr @this);
 
-		// Token: 0x060067AE RID: 26542
+		// Token: 0x06001526 RID: 5414
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PrestreamTextures_Internal(IntPtr @this, float Seconds, bool bEnableStreaming, int CinematicTextureGroups);
 
-		// Token: 0x060067AF RID: 26543
+		// Token: 0x06001527 RID: 5415
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_ReplicateMovement_Internal(IntPtr @this);
 
-		// Token: 0x060067B0 RID: 26544
+		// Token: 0x06001528 RID: 5416
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_ReplicatedMovement_Internal(IntPtr @this);
 
-		// Token: 0x060067B1 RID: 26545
+		// Token: 0x06001529 RID: 5417
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_Owner_Internal(IntPtr @this);
 
-		// Token: 0x060067B2 RID: 26546
+		// Token: 0x0600152A RID: 5418
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_Instigator_Internal(IntPtr @this);
 
-		// Token: 0x060067B3 RID: 26547
+		// Token: 0x0600152B RID: 5419
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_AttachmentReplication_Internal(IntPtr @this);
 
-		// Token: 0x060067B4 RID: 26548
+		// Token: 0x0600152C RID: 5420
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MakeNoise_Internal(IntPtr @this, float Loudness, IntPtr NoiseInstigator, FVector NoiseLocation, float MaxRange, FName Tag);
 
-		// Token: 0x060067B5 RID: 26549
+		// Token: 0x0600152D RID: 5421
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __MakeMIDForMaterial_Internal(IntPtr @this, IntPtr Parent);
 
-		// Token: 0x060067B6 RID: 26550
+		// Token: 0x0600152E RID: 5422
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __KuroTickActorOutside_Internal(IntPtr @this, float DeltaSeconds);
 
-		// Token: 0x060067B7 RID: 26551
+		// Token: 0x0600152F RID: 5423
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Kuro_SetRole_Internal(IntPtr @this, TEnumAsByte<EKuroNetRole> InRole);
 
-		// Token: 0x060067B8 RID: 26552
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __Kuro_SetReplicatedMovement_Internal(IntPtr @this, IntPtr InReplicatedMovement);
-
-		// Token: 0x060067B9 RID: 26553
+		// Token: 0x06001530 RID: 5424
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Kuro_OnRep_ReplicatedMovement_Internal(IntPtr @this);
 
-		// Token: 0x060067BA RID: 26554
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __Kuro_GetReplicatedMovement_Internal(IntPtr @this);
-
-		// Token: 0x060067BB RID: 26555
+		// Token: 0x06001531 RID: 5425
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern TEnumAsByte<EKuroNetRole> __Kuro_GetLocalRole_Internal(IntPtr @this);
 
-		// Token: 0x060067BC RID: 26556
+		// Token: 0x06001532 RID: 5426
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_TeleportTo_Internal(IntPtr @this, FVector DestLocation, FRotator DestRotation);
 
-		// Token: 0x060067BD RID: 26557
+		// Token: 0x06001533 RID: 5427
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_SetDeferedConcurrentUpdateTransform_Internal(IntPtr @this, bool bEnable);
 
-		// Token: 0x060067BE RID: 26558
+		// Token: 0x06001534 RID: 5428
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_SetActorTransformForce_Internal(IntPtr @this, in FTransform NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067BF RID: 26559
+		// Token: 0x06001535 RID: 5429
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_SetActorTransform_Internal(IntPtr @this, in FTransform NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067C0 RID: 26560
+		// Token: 0x06001536 RID: 5430
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_SetActorRotation_Internal(IntPtr @this, FRotator NewRotation, bool bTeleportPhysics);
 
-		// Token: 0x060067C1 RID: 26561
+		// Token: 0x06001537 RID: 5431
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_SetActorRelativeTransform_Internal(IntPtr @this, in FTransform NewRelativeTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067C2 RID: 26562
+		// Token: 0x06001538 RID: 5432
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_SetActorRelativeRotation_Internal(IntPtr @this, FRotator NewRelativeRotation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067C3 RID: 26563
+		// Token: 0x06001539 RID: 5433
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_SetActorRelativeLocation_Internal(IntPtr @this, FVector NewRelativeLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067C4 RID: 26564
+		// Token: 0x0600153A RID: 5434
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_SetActorLocationAndRotation_Internal(IntPtr @this, FVector NewLocation, FRotator NewRotation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067C5 RID: 26565
+		// Token: 0x0600153B RID: 5435
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_SetActorLocation_Internal(IntPtr @this, FVector NewLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067C6 RID: 26566
+		// Token: 0x0600153C RID: 5436
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnReset_Internal(IntPtr @this);
 
-		// Token: 0x060067C7 RID: 26567
+		// Token: 0x0600153D RID: 5437
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnEndViewTarget_Internal(IntPtr @this, IntPtr PC);
 
-		// Token: 0x060067C8 RID: 26568
+		// Token: 0x0600153E RID: 5438
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnBecomeViewTarget_Internal(IntPtr @this, IntPtr PC);
 
-		// Token: 0x060067C9 RID: 26569
+		// Token: 0x0600153F RID: 5439
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_KuroTeleportTo_Internal(IntPtr @this, FVector DestLocation, FRotator DestRotation);
 
-		// Token: 0x060067CA RID: 26570
+		// Token: 0x06001540 RID: 5440
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __K2_KuroSetActorRotation_Internal(IntPtr @this, FRotator NewRotation, bool bSweep, bool bTeleportPhysics, bool bIgnoreOverlap);
 
-		// Token: 0x060067CB RID: 26571
+		// Token: 0x06001541 RID: 5441
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __K2_GetRootComponent_Internal(IntPtr @this);
 
-		// Token: 0x060067CC RID: 26572
+		// Token: 0x06001542 RID: 5442
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __K2_GetComponentsByClass_Internal(IntPtr @this, IntPtr ComponentClass);
 
-		// Token: 0x060067CD RID: 26573
+		// Token: 0x06001543 RID: 5443
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __K2_GetActorRotation_Internal(IntPtr @this);
 
-		// Token: 0x060067CE RID: 26574
+		// Token: 0x06001544 RID: 5444
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat __K2_GetActorQuaternion_Internal(IntPtr @this);
 
-		// Token: 0x060067CF RID: 26575
+		// Token: 0x06001545 RID: 5445
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __K2_GetActorLocation_Internal(IntPtr @this);
 
-		// Token: 0x060067D0 RID: 26576
+		// Token: 0x06001546 RID: 5446
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_DetachFromActor_Internal(IntPtr @this, EDetachmentRule LocationRule, EDetachmentRule RotationRule, EDetachmentRule ScaleRule);
 
-		// Token: 0x060067D1 RID: 26577
+		// Token: 0x06001547 RID: 5447
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_DestroyComponent_Internal(IntPtr @this, IntPtr Component);
 
-		// Token: 0x060067D2 RID: 26578
+		// Token: 0x06001548 RID: 5448
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_DestroyActor_Internal(IntPtr @this);
 
-		// Token: 0x060067D3 RID: 26579
+		// Token: 0x06001549 RID: 5449
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AttachToComponent_Internal(IntPtr @this, IntPtr Parent, FName SocketName, EAttachmentRule LocationRule, EAttachmentRule RotationRule, EAttachmentRule ScaleRule, bool bWeldSimulatedBodies, bool bCalcWorldOrigin);
 
-		// Token: 0x060067D4 RID: 26580
+		// Token: 0x0600154A RID: 5450
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AttachToActor_Internal(IntPtr @this, IntPtr ParentActor, FName SocketName, EAttachmentRule LocationRule, EAttachmentRule RotationRule, EAttachmentRule ScaleRule, bool bWeldSimulatedBodies, bool bCalcWorldOrigin);
 
-		// Token: 0x060067D5 RID: 26581
+		// Token: 0x0600154B RID: 5451
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AttachRootComponentToActor_Internal(IntPtr @this, IntPtr InParentActor, FName InSocketName, TEnumAsByte<EAttachLocation> AttachLocationType, bool bWeldSimulatedBodies);
 
-		// Token: 0x060067D6 RID: 26582
+		// Token: 0x0600154C RID: 5452
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AttachRootComponentTo_Internal(IntPtr @this, IntPtr InParent, FName InSocketName, TEnumAsByte<EAttachLocation> AttachLocationType, bool bWeldSimulatedBodies);
 
-		// Token: 0x060067D7 RID: 26583
+		// Token: 0x0600154D RID: 5453
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorWorldTransformKeepScale_Internal(IntPtr @this, in FTransform DeltaTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067D8 RID: 26584
+		// Token: 0x0600154E RID: 5454
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorWorldTransform_Internal(IntPtr @this, in FTransform DeltaTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067D9 RID: 26585
+		// Token: 0x0600154F RID: 5455
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorWorldRotation_Internal(IntPtr @this, FRotator DeltaRotation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067DA RID: 26586
+		// Token: 0x06001550 RID: 5456
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorWorldOffset_Internal(IntPtr @this, FVector DeltaLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067DB RID: 26587
+		// Token: 0x06001551 RID: 5457
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorLocalTransform_Internal(IntPtr @this, in FTransform NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067DC RID: 26588
+		// Token: 0x06001552 RID: 5458
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorLocalRotation_Internal(IntPtr @this, FRotator DeltaRotation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067DD RID: 26589
+		// Token: 0x06001553 RID: 5459
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_AddActorLocalOffset_Internal(IntPtr @this, FVector DeltaLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x060067DE RID: 26590
+		// Token: 0x06001554 RID: 5460
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsUEOrignal_Internal(IntPtr @this);
 
-		// Token: 0x060067DF RID: 26591
+		// Token: 0x06001555 RID: 5461
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsOverlappingActor_Internal(IntPtr @this, IntPtr Other);
 
-		// Token: 0x060067E0 RID: 26592
+		// Token: 0x06001556 RID: 5462
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsIgnoreUpdateOverlap_Internal(IntPtr @this);
 
-		// Token: 0x060067E1 RID: 26593
+		// Token: 0x06001557 RID: 5463
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsChildActor_Internal(IntPtr @this);
 
-		// Token: 0x060067E2 RID: 26594
+		// Token: 0x06001558 RID: 5464
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsAutonomousProxy_Internal(IntPtr @this);
 
-		// Token: 0x060067E3 RID: 26595
+		// Token: 0x06001559 RID: 5465
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsActorTickEnabled_Internal(IntPtr @this);
 
-		// Token: 0x060067E4 RID: 26596
+		// Token: 0x0600155A RID: 5466
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsActorBeingDestroyed_Internal(IntPtr @this);
 
-		// Token: 0x060067E5 RID: 26597
+		// Token: 0x0600155B RID: 5467
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __IgnoreActorWhenMoving_Internal(IntPtr @this, IntPtr Actor, bool bShouldIgnore, bool bBoth);
 
-		// Token: 0x060067E6 RID: 26598
+		// Token: 0x0600155C RID: 5468
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern bool __HasKuroFadeGroupOverride_Internal(IntPtr @this);
+
+		// Token: 0x0600155D RID: 5469
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasAuthority_Internal(IntPtr @this);
 
-		// Token: 0x060067E7 RID: 26599
+		// Token: 0x0600155E RID: 5470
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetVerticalDistanceTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x060067E8 RID: 26600
+		// Token: 0x0600155F RID: 5471
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetVelocity_Internal(IntPtr @this);
 
-		// Token: 0x060067E9 RID: 26601
+		// Token: 0x06001560 RID: 5472
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetTransformWithUpdate_Internal(IntPtr @this);
 
-		// Token: 0x060067EA RID: 26602
+		// Token: 0x06001561 RID: 5473
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetTransform_Internal(IntPtr @this);
 
-		// Token: 0x060067EB RID: 26603
+		// Token: 0x06001562 RID: 5474
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetTickableWhenPaused_Internal(IntPtr @this);
 
-		// Token: 0x060067EC RID: 26604
+		// Token: 0x06001563 RID: 5475
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSquaredHorizontalDistanceTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x060067ED RID: 26605
+		// Token: 0x06001564 RID: 5476
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSquaredDistanceTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x060067EE RID: 26606
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern TEnumAsByte<ENetRole> __GetRemoteRole_Internal(IntPtr @this);
-
-		// Token: 0x060067EF RID: 26607
+		// Token: 0x06001565 RID: 5477
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern uint __GetPrimitiveEntityType_Internal(IntPtr @this);
 
-		// Token: 0x060067F0 RID: 26608
+		// Token: 0x06001566 RID: 5478
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetPrimitiveBlueprintTypeName_Internal(IntPtr @this);
 
-		// Token: 0x060067F1 RID: 26609
+		// Token: 0x06001567 RID: 5479
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetParentComponent_Internal(IntPtr @this);
 
-		// Token: 0x060067F2 RID: 26610
+		// Token: 0x06001568 RID: 5480
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetParentActor_Internal(IntPtr @this);
 
-		// Token: 0x060067F3 RID: 26611
+		// Token: 0x06001569 RID: 5481
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetOwner_Internal(IntPtr @this);
 
-		// Token: 0x060067F4 RID: 26612
+		// Token: 0x0600156A RID: 5482
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetOverlappingComponents_Internal(IntPtr @this, IntPtr OverlappingComponents);
 
-		// Token: 0x060067F5 RID: 26613
+		// Token: 0x0600156B RID: 5483
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetOverlappingActors_Internal(IntPtr @this, IntPtr OverlappingActors, IntPtr ClassFilter);
 
-		// Token: 0x060067F6 RID: 26614
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern TEnumAsByte<ENetRole> __GetLocalRole_Internal(IntPtr @this);
-
-		// Token: 0x060067F7 RID: 26615
+		// Token: 0x0600156C RID: 5484
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetLifeSpan_Internal(IntPtr @this);
 
-		// Token: 0x060067F8 RID: 26616
+		// Token: 0x0600156D RID: 5485
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetLevelTransform_Internal(IntPtr @this);
 
-		// Token: 0x060067F9 RID: 26617
+		// Token: 0x0600156E RID: 5486
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetLevel_Internal(IntPtr @this);
 
-		// Token: 0x060067FA RID: 26618
+		// Token: 0x0600156F RID: 5487
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern int __GetKuroFadeGroup_Internal(IntPtr @this);
+
+		// Token: 0x06001570 RID: 5488
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetInverseTransform_Internal(IntPtr @this);
 
-		// Token: 0x060067FB RID: 26619
+		// Token: 0x06001571 RID: 5489
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetInstigatorController_Internal(IntPtr @this);
 
-		// Token: 0x060067FC RID: 26620
+		// Token: 0x06001572 RID: 5490
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetInstigator_Internal(IntPtr @this);
 
-		// Token: 0x060067FD RID: 26621
+		// Token: 0x06001573 RID: 5491
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetInputVectorAxisValue_Internal(IntPtr @this, IntPtr InputAxisKey);
 
-		// Token: 0x060067FE RID: 26622
+		// Token: 0x06001574 RID: 5492
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetInputAxisValue_Internal(IntPtr @this, FName InputAxisName);
 
-		// Token: 0x060067FF RID: 26623
+		// Token: 0x06001575 RID: 5493
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetInputAxisKeyValue_Internal(IntPtr @this, IntPtr InputAxisKey);
 
-		// Token: 0x06006800 RID: 26624
+		// Token: 0x06001576 RID: 5494
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetHorizontalDotProductTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x06006801 RID: 26625
+		// Token: 0x06001577 RID: 5495
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetHorizontalDistanceTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x06006802 RID: 26626
+		// Token: 0x06001578 RID: 5496
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetGameTimeSinceCreation_Internal(IntPtr @this);
 
-		// Token: 0x06006803 RID: 26627
+		// Token: 0x06001579 RID: 5497
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetDotProductTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x06006804 RID: 26628
+		// Token: 0x0600157A RID: 5498
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetDistanceTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x06006805 RID: 26629
+		// Token: 0x0600157B RID: 5499
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetComponentsByTag_Internal(IntPtr @this, IntPtr ComponentClass, FName Tag);
 
-		// Token: 0x06006806 RID: 26630
+		// Token: 0x0600157C RID: 5500
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetComponentsByInterface_Internal(IntPtr @this, IntPtr Interface);
 
-		// Token: 0x06006807 RID: 26631
+		// Token: 0x0600157D RID: 5501
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetComponentByClass_Internal(IntPtr @this, IntPtr ComponentClass);
 
-		// Token: 0x06006808 RID: 26632
+		// Token: 0x0600157E RID: 5502
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetAttachRootParentActor_Internal(IntPtr @this);
 
-		// Token: 0x06006809 RID: 26633
+		// Token: 0x0600157F RID: 5503
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetAttachParentSocketName_Internal(IntPtr @this);
 
-		// Token: 0x0600680A RID: 26634
+		// Token: 0x06001580 RID: 5504
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetAttachParentActor_Internal(IntPtr @this);
 
-		// Token: 0x0600680B RID: 26635
+		// Token: 0x06001581 RID: 5505
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAttachedActors_Internal(IntPtr @this, IntPtr OutActors, bool bResetArray);
 
-		// Token: 0x0600680C RID: 26636
+		// Token: 0x06001582 RID: 5506
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAttachedActorDescendants_Internal(IntPtr @this, IntPtr OutActors, bool bResetArray);
 
-		// Token: 0x0600680D RID: 26637
+		// Token: 0x06001583 RID: 5507
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAllChildActors_Internal(IntPtr @this, IntPtr ChildActors, bool bIncludeDescendants);
 
-		// Token: 0x0600680E RID: 26638
+		// Token: 0x06001584 RID: 5508
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetActorUpVector_Internal(IntPtr @this);
 
-		// Token: 0x0600680F RID: 26639
+		// Token: 0x06001585 RID: 5509
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetActorTimeDilation_Internal(IntPtr @this);
 
-		// Token: 0x06006810 RID: 26640
+		// Token: 0x06001586 RID: 5510
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetActorTickInterval_Internal(IntPtr @this);
 
-		// Token: 0x06006811 RID: 26641
+		// Token: 0x06001587 RID: 5511
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetActorScale3D_Internal(IntPtr @this);
 
-		// Token: 0x06006812 RID: 26642
+		// Token: 0x06001588 RID: 5512
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetActorRightVector_Internal(IntPtr @this);
 
-		// Token: 0x06006813 RID: 26643
+		// Token: 0x06001589 RID: 5513
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetActorRelativeScale3D_Internal(IntPtr @this);
 
-		// Token: 0x06006814 RID: 26644
+		// Token: 0x0600158A RID: 5514
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetActorForwardVector_Internal(IntPtr @this);
 
-		// Token: 0x06006815 RID: 26645
+		// Token: 0x0600158B RID: 5515
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetActorEyesViewPoint_Internal(IntPtr @this, ref FVector OutLocation, ref FRotator OutRotation, int CameraIndex);
 
-		// Token: 0x06006816 RID: 26646
+		// Token: 0x0600158C RID: 5516
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetActorEnableCollision_Internal(IntPtr @this);
 
-		// Token: 0x06006817 RID: 26647
+		// Token: 0x0600158D RID: 5517
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetActorBounds_Internal(IntPtr @this, bool bOnlyCollidingComponents, ref FVector Origin, ref FVector BoxExtent, bool bIncludeFromChildActors);
 
-		// Token: 0x06006818 RID: 26648
+		// Token: 0x0600158E RID: 5518
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ForceNetUpdate_Internal(IntPtr @this);
 
-		// Token: 0x06006819 RID: 26649
+		// Token: 0x0600158F RID: 5519
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __FlushNetDormancy_Internal(IntPtr @this);
 
-		// Token: 0x0600681A RID: 26650
+		// Token: 0x06001590 RID: 5520
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __FinishAddComponent_Internal(IntPtr @this, IntPtr Component, bool bManualAttachment, in FTransform RelativeTransform);
 
-		// Token: 0x0600681B RID: 26651
+		// Token: 0x06001591 RID: 5521
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __EnableInput_Internal(IntPtr @this, IntPtr PlayerController);
 
-		// Token: 0x0600681C RID: 26652
+		// Token: 0x06001592 RID: 5522
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DisableInput_Internal(IntPtr @this, IntPtr PlayerController);
 
-		// Token: 0x0600681D RID: 26653
+		// Token: 0x06001593 RID: 5523
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DetachRootComponentFromParent_Internal(IntPtr @this, bool bMaintainWorldPosition);
 
-		// Token: 0x0600681E RID: 26654
+		// Token: 0x06001594 RID: 5524
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetActorScale3D_Internal(IntPtr @this, FVectorDouble NewScale3D);
 
-		// Token: 0x0600681F RID: 26655
+		// Token: 0x06001595 RID: 5525
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_K2_TeleportTo_Internal(IntPtr @this, FVectorDouble DestLocation, FRotator DestRotation);
 
-		// Token: 0x06006820 RID: 26656
+		// Token: 0x06001596 RID: 5526
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_K2_SetActorTransformForce_Internal(IntPtr @this, in FTransformDouble NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006821 RID: 26657
+		// Token: 0x06001597 RID: 5527
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_K2_SetActorTransform_Internal(IntPtr @this, in FTransformDouble NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006822 RID: 26658
+		// Token: 0x06001598 RID: 5528
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_K2_SetActorRelativeTransform_Internal(IntPtr @this, in FTransformDouble NewRelativeTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006823 RID: 26659
+		// Token: 0x06001599 RID: 5529
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_K2_SetActorRelativeLocation_Internal(IntPtr @this, FVectorDouble NewRelativeLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006824 RID: 26660
+		// Token: 0x0600159A RID: 5530
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_K2_SetActorLocationAndRotation_Internal(IntPtr @this, FVectorDouble NewLocation, FRotator NewRotation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006825 RID: 26661
+		// Token: 0x0600159B RID: 5531
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_K2_SetActorLocation_Internal(IntPtr @this, FVectorDouble NewLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006826 RID: 26662
+		// Token: 0x0600159C RID: 5532
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_K2_KuroTeleportTo_Internal(IntPtr @this, FVectorDouble DestLocation, FRotator DestRotation);
 
-		// Token: 0x06006827 RID: 26663
+		// Token: 0x0600159D RID: 5533
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_K2_GetActorLocation_Internal(IntPtr @this);
 
-		// Token: 0x06006828 RID: 26664
+		// Token: 0x0600159E RID: 5534
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_K2_AddActorWorldTransform_Internal(IntPtr @this, in FTransformDouble DeltaTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x06006829 RID: 26665
+		// Token: 0x0600159F RID: 5535
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_K2_AddActorWorldOffset_Internal(IntPtr @this, FVectorDouble DeltaLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x0600682A RID: 26666
+		// Token: 0x060015A0 RID: 5536
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_K2_AddActorLocalTransform_Internal(IntPtr @this, in FTransformDouble NewTransform, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x0600682B RID: 26667
+		// Token: 0x060015A1 RID: 5537
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_K2_AddActorLocalOffset_Internal(IntPtr @this, FVectorDouble DeltaLocation, bool bSweep, IntPtr SweepHitResult, bool bTeleport);
 
-		// Token: 0x0600682C RID: 26668
+		// Token: 0x060015A2 RID: 5538
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetVelocity_Internal(IntPtr @this);
 
-		// Token: 0x0600682D RID: 26669
+		// Token: 0x060015A3 RID: 5539
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetTransformWithUpdate_Internal(IntPtr @this);
 
-		// Token: 0x0600682E RID: 26670
+		// Token: 0x060015A4 RID: 5540
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetTransform_Internal(IntPtr @this);
 
-		// Token: 0x0600682F RID: 26671
+		// Token: 0x060015A5 RID: 5541
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetInverseTransform_Internal(IntPtr @this);
 
-		// Token: 0x06006830 RID: 26672
+		// Token: 0x060015A6 RID: 5542
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern double __D_GetGameTimeSinceCreation_Internal(IntPtr @this);
 
-		// Token: 0x06006831 RID: 26673
+		// Token: 0x060015A7 RID: 5543
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern double __D_GetDistanceTo_Internal(IntPtr @this, IntPtr OtherActor);
 
-		// Token: 0x06006832 RID: 26674
+		// Token: 0x060015A8 RID: 5544
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetActorUpVector_Internal(IntPtr @this);
 
-		// Token: 0x06006833 RID: 26675
+		// Token: 0x060015A9 RID: 5545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetActorScale3D_Internal(IntPtr @this);
 
-		// Token: 0x06006834 RID: 26676
+		// Token: 0x060015AA RID: 5546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetActorRightVector_Internal(IntPtr @this);
 
-		// Token: 0x06006835 RID: 26677
+		// Token: 0x060015AB RID: 5547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetActorForwardVector_Internal(IntPtr @this);
 
-		// Token: 0x06006836 RID: 26678
+		// Token: 0x060015AC RID: 5548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_GetActorBounds_Internal(IntPtr @this, bool bOnlyCollidingComponents, ref FVectorDouble Origin, ref FVector BoxExtent, bool bIncludeFromChildActors);
 
-		// Token: 0x06006837 RID: 26679
+		// Token: 0x060015AD RID: 5549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __D_AddComponentByClass_Internal(IntPtr @this, IntPtr Class, bool bManualAttachment, in FTransformDouble RelativeTransform, bool bDeferredFinish, FName ComponentName);
 
-		// Token: 0x06006838 RID: 26680
+		// Token: 0x060015AE RID: 5550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearMoveIgnoreActors_Internal(IntPtr @this, bool bClearBoth);
 
-		// Token: 0x06006839 RID: 26681
+		// Token: 0x060015AF RID: 5551
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __ClearKuroFadeGroupOverride_Internal(IntPtr @this);
+
+		// Token: 0x060015B0 RID: 5552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddTickPrerequisiteComponent_Internal(IntPtr @this, IntPtr PrerequisiteComponent);
 
-		// Token: 0x0600683A RID: 26682
+		// Token: 0x060015B1 RID: 5553
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddTickPrerequisiteActor_Internal(IntPtr @this, IntPtr PrerequisiteActor);
 
-		// Token: 0x0600683B RID: 26683
+		// Token: 0x060015B2 RID: 5554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __AddComponentByClass_Internal(IntPtr @this, IntPtr Class, bool bManualAttachment, in FTransform RelativeTransform, bool bDeferredFinish, FName ComponentName);
 
-		// Token: 0x0600683C RID: 26684
+		// Token: 0x060015B3 RID: 5555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __AddComponent_Internal(IntPtr @this, FName TemplateName, bool bManualAttachment, in FTransform RelativeTransform, IntPtr ComponentTemplateContext, bool bDeferredFinish);
 
-		// Token: 0x0600683D RID: 26685
+		// Token: 0x060015B4 RID: 5556
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ActorHasTag_Internal(IntPtr @this, FName Tag);
 
-		// Token: 0x0600683E RID: 26686 RVA: 0x00094F22 File Offset: 0x00093122
+		// Token: 0x060015B5 RID: 5557 RVA: 0x0002155E File Offset: 0x0001F75E
 		static AActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.Actor");
 		}
 
-		// Token: 0x0600683F RID: 26687 RVA: 0x00094F30 File Offset: 0x00093130
+		// Token: 0x060015B6 RID: 5558 RVA: 0x0002156C File Offset: 0x0001F76C
 		protected AActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003183 RID: 12675
+		// Token: 0x0400065B RID: 1627
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.Actor";
 
-		// Token: 0x04003184 RID: 12676
+		// Token: 0x0400065C RID: 1628
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003185 RID: 12677
+		// Token: 0x0400065D RID: 1629
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003186 RID: 12678
+		// Token: 0x0400065E RID: 1630
 		internal static int __PropertyOffset_PrimaryActorTick;
 
-		// Token: 0x04003187 RID: 12679
+		// Token: 0x0400065F RID: 1631
 		private FActorTickFunction _PrimaryActorTick;
 
-		// Token: 0x04003188 RID: 12680
+		// Token: 0x04000660 RID: 1632
 		internal static int __PropertyOffset_bNetTemporary;
 
-		// Token: 0x04003189 RID: 12681
+		// Token: 0x04000661 RID: 1633
 		internal static byte __PropertyMask_bNetTemporary;
 
-		// Token: 0x0400318A RID: 12682
+		// Token: 0x04000662 RID: 1634
 		internal static int __PropertyOffset_bNetStartup;
 
-		// Token: 0x0400318B RID: 12683
+		// Token: 0x04000663 RID: 1635
 		internal static byte __PropertyMask_bNetStartup;
 
-		// Token: 0x0400318C RID: 12684
+		// Token: 0x04000664 RID: 1636
 		internal static int __PropertyOffset_bOnlyRelevantToOwner;
 
-		// Token: 0x0400318D RID: 12685
+		// Token: 0x04000665 RID: 1637
 		internal static byte __PropertyMask_bOnlyRelevantToOwner;
 
-		// Token: 0x0400318E RID: 12686
+		// Token: 0x04000666 RID: 1638
 		internal static int __PropertyOffset_bAlwaysRelevant;
 
-		// Token: 0x0400318F RID: 12687
+		// Token: 0x04000667 RID: 1639
 		internal static byte __PropertyMask_bAlwaysRelevant;
 
-		// Token: 0x04003190 RID: 12688
+		// Token: 0x04000668 RID: 1640
 		internal static int __PropertyOffset_bReplicateMovement;
 
-		// Token: 0x04003191 RID: 12689
+		// Token: 0x04000669 RID: 1641
 		internal static byte __PropertyMask_bReplicateMovement;
 
-		// Token: 0x04003192 RID: 12690
+		// Token: 0x0400066A RID: 1642
 		internal static int __PropertyOffset_bHidden;
 
-		// Token: 0x04003193 RID: 12691
+		// Token: 0x0400066B RID: 1643
 		internal static byte __PropertyMask_bHidden;
 
-		// Token: 0x04003194 RID: 12692
+		// Token: 0x0400066C RID: 1644
 		internal static int __PropertyOffset_bViewableInRender;
 
-		// Token: 0x04003195 RID: 12693
+		// Token: 0x0400066D RID: 1645
 		internal static byte __PropertyMask_bViewableInRender;
 
-		// Token: 0x04003196 RID: 12694
+		// Token: 0x0400066E RID: 1646
 		internal static int __PropertyOffset_bTearOff;
 
-		// Token: 0x04003197 RID: 12695
+		// Token: 0x0400066F RID: 1647
 		internal static byte __PropertyMask_bTearOff;
 
-		// Token: 0x04003198 RID: 12696
+		// Token: 0x04000670 RID: 1648
 		internal static int __PropertyOffset_bForceHidden;
 
-		// Token: 0x04003199 RID: 12697
+		// Token: 0x04000671 RID: 1649
 		internal static byte __PropertyMask_bForceHidden;
 
-		// Token: 0x0400319A RID: 12698
+		// Token: 0x04000672 RID: 1650
 		internal static int __PropertyOffset_bIsAliveSpawnableAfterSequenceClean;
 
-		// Token: 0x0400319B RID: 12699
+		// Token: 0x04000673 RID: 1651
 		internal static int __PropertyOffset_bExchangedRoles;
 
-		// Token: 0x0400319C RID: 12700
+		// Token: 0x04000674 RID: 1652
 		internal static byte __PropertyMask_bExchangedRoles;
 
-		// Token: 0x0400319D RID: 12701
+		// Token: 0x04000675 RID: 1653
 		internal static int __PropertyOffset_bNetLoadOnClient;
 
-		// Token: 0x0400319E RID: 12702
+		// Token: 0x04000676 RID: 1654
 		internal static byte __PropertyMask_bNetLoadOnClient;
 
-		// Token: 0x0400319F RID: 12703
+		// Token: 0x04000677 RID: 1655
 		internal static int __PropertyOffset_bNetUseOwnerRelevancy;
 
-		// Token: 0x040031A0 RID: 12704
+		// Token: 0x04000678 RID: 1656
 		internal static byte __PropertyMask_bNetUseOwnerRelevancy;
 
-		// Token: 0x040031A1 RID: 12705
+		// Token: 0x04000679 RID: 1657
 		internal static int __PropertyOffset_bRelevantForNetworkReplays;
 
-		// Token: 0x040031A2 RID: 12706
+		// Token: 0x0400067A RID: 1658
 		internal static byte __PropertyMask_bRelevantForNetworkReplays;
 
-		// Token: 0x040031A3 RID: 12707
+		// Token: 0x0400067B RID: 1659
 		internal static int __PropertyOffset_bRelevantForLevelBounds;
 
-		// Token: 0x040031A4 RID: 12708
+		// Token: 0x0400067C RID: 1660
 		internal static byte __PropertyMask_bRelevantForLevelBounds;
 
-		// Token: 0x040031A5 RID: 12709
+		// Token: 0x0400067D RID: 1661
 		internal static int __PropertyOffset_bReplayRewindable;
 
-		// Token: 0x040031A6 RID: 12710
+		// Token: 0x0400067E RID: 1662
 		internal static byte __PropertyMask_bReplayRewindable;
 
-		// Token: 0x040031A7 RID: 12711
+		// Token: 0x0400067F RID: 1663
 		internal static int __PropertyOffset_bAllowTickBeforeBeginPlay;
 
-		// Token: 0x040031A8 RID: 12712
+		// Token: 0x04000680 RID: 1664
 		internal static byte __PropertyMask_bAllowTickBeforeBeginPlay;
 
-		// Token: 0x040031A9 RID: 12713
+		// Token: 0x04000681 RID: 1665
 		internal static int __PropertyOffset_bAutoDestroyWhenFinished;
 
-		// Token: 0x040031AA RID: 12714
+		// Token: 0x04000682 RID: 1666
 		internal static byte __PropertyMask_bAutoDestroyWhenFinished;
 
-		// Token: 0x040031AB RID: 12715
+		// Token: 0x04000683 RID: 1667
 		internal static int __PropertyOffset_bCanBeDamaged;
 
-		// Token: 0x040031AC RID: 12716
+		// Token: 0x04000684 RID: 1668
 		internal static byte __PropertyMask_bCanBeDamaged;
 
-		// Token: 0x040031AD RID: 12717
+		// Token: 0x04000685 RID: 1669
 		internal static int __PropertyOffset_bBlockInput;
 
-		// Token: 0x040031AE RID: 12718
+		// Token: 0x04000686 RID: 1670
 		internal static byte __PropertyMask_bBlockInput;
 
-		// Token: 0x040031AF RID: 12719
+		// Token: 0x04000687 RID: 1671
 		internal static int __PropertyOffset_bCollideWhenPlacing;
 
-		// Token: 0x040031B0 RID: 12720
+		// Token: 0x04000688 RID: 1672
 		internal static byte __PropertyMask_bCollideWhenPlacing;
 
-		// Token: 0x040031B1 RID: 12721
+		// Token: 0x04000689 RID: 1673
 		internal static int __PropertyOffset_bFindCameraComponentWhenViewTarget;
 
-		// Token: 0x040031B2 RID: 12722
+		// Token: 0x0400068A RID: 1674
 		internal static byte __PropertyMask_bFindCameraComponentWhenViewTarget;
 
-		// Token: 0x040031B3 RID: 12723
+		// Token: 0x0400068B RID: 1675
 		internal static int __PropertyOffset_bGenerateOverlapEventsDuringLevelStreaming;
 
-		// Token: 0x040031B4 RID: 12724
+		// Token: 0x0400068C RID: 1676
 		internal static byte __PropertyMask_bGenerateOverlapEventsDuringLevelStreaming;
 
-		// Token: 0x040031B5 RID: 12725
+		// Token: 0x0400068D RID: 1677
 		internal static int __PropertyOffset_bIgnoresOriginShifting;
 
-		// Token: 0x040031B6 RID: 12726
+		// Token: 0x0400068E RID: 1678
 		internal static byte __PropertyMask_bIgnoresOriginShifting;
 
-		// Token: 0x040031B7 RID: 12727
+		// Token: 0x0400068F RID: 1679
 		internal static int __PropertyOffset_bEnableAutoLODGeneration;
 
-		// Token: 0x040031B8 RID: 12728
+		// Token: 0x04000690 RID: 1680
 		internal static byte __PropertyMask_bEnableAutoLODGeneration;
 
-		// Token: 0x040031B9 RID: 12729
+		// Token: 0x04000691 RID: 1681
 		internal static int __PropertyOffset_bIsEditorOnlyActor;
 
-		// Token: 0x040031BA RID: 12730
+		// Token: 0x04000692 RID: 1682
 		internal static byte __PropertyMask_bIsEditorOnlyActor;
 
-		// Token: 0x040031BB RID: 12731
+		// Token: 0x04000693 RID: 1683
 		internal static int __PropertyOffset_bPlatformMobile;
 
-		// Token: 0x040031BC RID: 12732
+		// Token: 0x04000694 RID: 1684
 		internal static byte __PropertyMask_bPlatformMobile;
 
-		// Token: 0x040031BD RID: 12733
+		// Token: 0x04000695 RID: 1685
 		internal static int __PropertyOffset_bPlatformDeskTop;
 
-		// Token: 0x040031BE RID: 12734
+		// Token: 0x04000696 RID: 1686
 		internal static byte __PropertyMask_bPlatformDeskTop;
 
-		// Token: 0x040031BF RID: 12735
+		// Token: 0x04000697 RID: 1687
 		internal static int __PropertyOffset_bPlatformMac;
 
-		// Token: 0x040031C0 RID: 12736
+		// Token: 0x04000698 RID: 1688
 		internal static byte __PropertyMask_bPlatformMac;
 
-		// Token: 0x040031C1 RID: 12737
+		// Token: 0x04000699 RID: 1689
 		internal static int __PropertyOffset_bInvolveCook;
 
-		// Token: 0x040031C2 RID: 12738
+		// Token: 0x0400069A RID: 1690
 		internal static byte __PropertyMask_bInvolveCook;
 
-		// Token: 0x040031C3 RID: 12739
+		// Token: 0x0400069B RID: 1691
 		internal static int __PropertyOffset_bActorSeamlessTraveled;
 
-		// Token: 0x040031C4 RID: 12740
+		// Token: 0x0400069C RID: 1692
 		internal static byte __PropertyMask_bActorSeamlessTraveled;
 
-		// Token: 0x040031C5 RID: 12741
+		// Token: 0x0400069D RID: 1693
 		internal static int __PropertyOffset_bIsPermanentActor;
 
-		// Token: 0x040031C6 RID: 12742
+		// Token: 0x0400069E RID: 1694
 		internal static byte __PropertyMask_bIsPermanentActor;
 
-		// Token: 0x040031C7 RID: 12743
+		// Token: 0x0400069F RID: 1695
 		internal static int __PropertyOffset_bEnableBeginAndEndPlayDebugLog;
 
-		// Token: 0x040031C8 RID: 12744
+		// Token: 0x040006A0 RID: 1696
 		internal static byte __PropertyMask_bEnableBeginAndEndPlayDebugLog;
 
-		// Token: 0x040031C9 RID: 12745
+		// Token: 0x040006A1 RID: 1697
 		internal static int __PropertyOffset_bKuroHiddenDebugLog;
 
-		// Token: 0x040031CA RID: 12746
+		// Token: 0x040006A2 RID: 1698
 		internal static byte __PropertyMask_bKuroHiddenDebugLog;
 
-		// Token: 0x040031CB RID: 12747
+		// Token: 0x040006A3 RID: 1699
 		internal static int __PropertyOffset_bSpawnInUIScene;
 
-		// Token: 0x040031CC RID: 12748
+		// Token: 0x040006A4 RID: 1700
 		internal static byte __PropertyMask_bSpawnInUIScene;
 
-		// Token: 0x040031CD RID: 12749
+		// Token: 0x040006A5 RID: 1701
 		internal static int __PropertyOffset_bReplicates;
 
-		// Token: 0x040031CE RID: 12750
+		// Token: 0x040006A6 RID: 1702
 		internal static byte __PropertyMask_bReplicates;
 
-		// Token: 0x040031CF RID: 12751
+		// Token: 0x040006A7 RID: 1703
 		internal static int __PropertyOffset_bCanBeInCluster;
 
-		// Token: 0x040031D0 RID: 12752
+		// Token: 0x040006A8 RID: 1704
 		internal static byte __PropertyMask_bCanBeInCluster;
 
-		// Token: 0x040031D1 RID: 12753
+		// Token: 0x040006A9 RID: 1705
 		internal static int __PropertyOffset_bAllowReceiveTickEventOnDedicatedServer;
 
-		// Token: 0x040031D2 RID: 12754
+		// Token: 0x040006AA RID: 1706
 		internal static byte __PropertyMask_bAllowReceiveTickEventOnDedicatedServer;
 
-		// Token: 0x040031D3 RID: 12755
+		// Token: 0x040006AB RID: 1707
 		internal static int __PropertyOffset_bActorEnableCollision;
 
-		// Token: 0x040031D4 RID: 12756
+		// Token: 0x040006AC RID: 1708
 		internal static byte __PropertyMask_bActorEnableCollision;
 
-		// Token: 0x040031D5 RID: 12757
+		// Token: 0x040006AD RID: 1709
 		internal static int __PropertyOffset_bActorIsBeingDestroyed;
 
-		// Token: 0x040031D6 RID: 12758
+		// Token: 0x040006AE RID: 1710
 		internal static byte __PropertyMask_bActorIsBeingDestroyed;
 
-		// Token: 0x040031D7 RID: 12759
-		internal static int __PropertyOffset_UpdateOverlapsMethodDuringLevelStreaming;
-
-		// Token: 0x040031D8 RID: 12760
-		internal static int __PropertyOffset_DefaultUpdateOverlapsMethodDuringLevelStreaming;
-
-		// Token: 0x040031D9 RID: 12761
-		internal static int __PropertyOffset_RemoteRole;
-
-		// Token: 0x040031DA RID: 12762
-		internal static int __PropertyOffset_ReplicatedMovement;
-
-		// Token: 0x040031DB RID: 12763
-		private FRepMovement _ReplicatedMovement;
-
-		// Token: 0x040031DC RID: 12764
-		internal static int __PropertyOffset_Kuro_ReplicatedMovement;
-
-		// Token: 0x040031DD RID: 12765
-		private FKuroRepMovement _Kuro_ReplicatedMovement;
-
-		// Token: 0x040031DE RID: 12766
+		// Token: 0x040006AF RID: 1711
 		internal static int __PropertyOffset_InitialLifeSpan;
 
-		// Token: 0x040031DF RID: 12767
+		// Token: 0x040006B0 RID: 1712
 		internal static int __PropertyOffset_CustomTimeDilation;
 
-		// Token: 0x040031E0 RID: 12768
-		internal static int __PropertyOffset_AttachmentReplication;
-
-		// Token: 0x040031E1 RID: 12769
-		private FRepAttachment _AttachmentReplication;
-
-		// Token: 0x040031E2 RID: 12770
+		// Token: 0x040006B1 RID: 1713
 		internal static int __PropertyOffset_Owner;
 
-		// Token: 0x040031E3 RID: 12771
+		// Token: 0x040006B2 RID: 1714
 		internal static int __PropertyOffset_NetDriverName;
 
-		// Token: 0x040031E4 RID: 12772
+		// Token: 0x040006B3 RID: 1715
 		internal static int __PropertyOffset_BlueprintTypeName;
 
-		// Token: 0x040031E5 RID: 12773
+		// Token: 0x040006B4 RID: 1716
 		internal static int __PropertyOffset_KuroEntityType;
 
-		// Token: 0x040031E6 RID: 12774
+		// Token: 0x040006B5 RID: 1717
 		internal static int __PropertyOffset_RuntimeGrid;
 
-		// Token: 0x040031E7 RID: 12775
-		internal static int __PropertyOffset_Role;
-
-		// Token: 0x040031E8 RID: 12776
-		internal static int __PropertyOffset_NetDormancy;
-
-		// Token: 0x040031E9 RID: 12777
+		// Token: 0x040006B6 RID: 1718
 		internal static int __PropertyOffset_SpawnCollisionHandlingMethod;
 
-		// Token: 0x040031EA RID: 12778
-		internal static int __PropertyOffset_AutoReceiveInput;
-
-		// Token: 0x040031EB RID: 12779
+		// Token: 0x040006B7 RID: 1719
 		internal static int __PropertyOffset_InputPriority;
 
-		// Token: 0x040031EC RID: 12780
-		internal static int __PropertyOffset_InputComponent;
-
-		// Token: 0x040031ED RID: 12781
+		// Token: 0x040006B8 RID: 1720
 		internal static int __PropertyOffset_NetCullDistanceSquared;
 
-		// Token: 0x040031EE RID: 12782
+		// Token: 0x040006B9 RID: 1721
 		internal static int __PropertyOffset_NetTag;
 
-		// Token: 0x040031EF RID: 12783
+		// Token: 0x040006BA RID: 1722
 		internal static int __PropertyOffset_NetUpdateFrequency;
 
-		// Token: 0x040031F0 RID: 12784
+		// Token: 0x040006BB RID: 1723
 		internal static int __PropertyOffset_MinNetUpdateFrequency;
 
-		// Token: 0x040031F1 RID: 12785
+		// Token: 0x040006BC RID: 1724
 		internal static int __PropertyOffset_NetPriority;
 
-		// Token: 0x040031F2 RID: 12786
+		// Token: 0x040006BD RID: 1725
 		internal static int __PropertyOffset_Instigator;
 
-		// Token: 0x040031F3 RID: 12787
+		// Token: 0x040006BE RID: 1726
 		internal static int __PropertyOffset_Children;
 
-		// Token: 0x040031F4 RID: 12788
+		// Token: 0x040006BF RID: 1727
 		[Nullable(new byte[]
 		{
 			2,
@@ -4055,135 +3695,106 @@ namespace UnrealEngine
 		})]
 		private TArray<AActor> _Children;
 
-		// Token: 0x040031F5 RID: 12789
+		// Token: 0x040006C0 RID: 1728
 		internal static int __PropertyOffset_RootComponent;
 
-		// Token: 0x040031F6 RID: 12790
-		internal static int __PropertyOffset_ControllingMatineeActors;
-
-		// Token: 0x040031F7 RID: 12791
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<AMatineeActor> _ControllingMatineeActors;
-
-		// Token: 0x040031F8 RID: 12792
+		// Token: 0x040006C1 RID: 1729
 		internal static int __PropertyOffset_Layers;
 
-		// Token: 0x040031F9 RID: 12793
+		// Token: 0x040006C2 RID: 1730
 		private TArray<FName> _Layers;
 
-		// Token: 0x040031FA RID: 12794
+		// Token: 0x040006C3 RID: 1731
 		internal static int __PropertyOffset_ParentComponent;
 
-		// Token: 0x040031FB RID: 12795
+		// Token: 0x040006C4 RID: 1732
 		internal static int __PropertyOffset_Tags;
 
-		// Token: 0x040031FC RID: 12796
+		// Token: 0x040006C5 RID: 1733
 		private TArray<FName> _Tags;
 
-		// Token: 0x040031FD RID: 12797
-		internal static int __PropertyOffset_OnTakeAnyDamage;
-
-		// Token: 0x040031FE RID: 12798
-		private FTakeAnyDamageSignature _OnTakeAnyDamage;
-
-		// Token: 0x040031FF RID: 12799
-		internal static int __PropertyOffset_OnTakePointDamage;
-
-		// Token: 0x04003200 RID: 12800
-		private FTakePointDamageSignature _OnTakePointDamage;
-
-		// Token: 0x04003201 RID: 12801
-		internal static int __PropertyOffset_OnTakeRadialDamage;
-
-		// Token: 0x04003202 RID: 12802
-		private FTakeRadialDamageSignature _OnTakeRadialDamage;
-
-		// Token: 0x04003203 RID: 12803
+		// Token: 0x040006C6 RID: 1734
 		internal static int __PropertyOffset_OnActorBeginOverlap;
 
-		// Token: 0x04003204 RID: 12804
+		// Token: 0x040006C7 RID: 1735
 		private FActorBeginOverlapSignature _OnActorBeginOverlap;
 
-		// Token: 0x04003205 RID: 12805
+		// Token: 0x040006C8 RID: 1736
 		internal static int __PropertyOffset_OnActorEndOverlap;
 
-		// Token: 0x04003206 RID: 12806
+		// Token: 0x040006C9 RID: 1737
 		private FActorEndOverlapSignature _OnActorEndOverlap;
 
-		// Token: 0x04003207 RID: 12807
+		// Token: 0x040006CA RID: 1738
 		internal static int __PropertyOffset_OnBeginCursorOver;
 
-		// Token: 0x04003208 RID: 12808
+		// Token: 0x040006CB RID: 1739
 		private FActorBeginCursorOverSignature _OnBeginCursorOver;
 
-		// Token: 0x04003209 RID: 12809
+		// Token: 0x040006CC RID: 1740
 		internal static int __PropertyOffset_OnEndCursorOver;
 
-		// Token: 0x0400320A RID: 12810
+		// Token: 0x040006CD RID: 1741
 		private FActorEndCursorOverSignature _OnEndCursorOver;
 
-		// Token: 0x0400320B RID: 12811
+		// Token: 0x040006CE RID: 1742
 		internal static int __PropertyOffset_OnClicked;
 
-		// Token: 0x0400320C RID: 12812
+		// Token: 0x040006CF RID: 1743
 		private FActorOnClickedSignature _OnClicked;
 
-		// Token: 0x0400320D RID: 12813
+		// Token: 0x040006D0 RID: 1744
 		internal static int __PropertyOffset_OnReleased;
 
-		// Token: 0x0400320E RID: 12814
+		// Token: 0x040006D1 RID: 1745
 		private FActorOnReleasedSignature _OnReleased;
 
-		// Token: 0x0400320F RID: 12815
+		// Token: 0x040006D2 RID: 1746
 		internal static int __PropertyOffset_OnInputTouchBegin;
 
-		// Token: 0x04003210 RID: 12816
+		// Token: 0x040006D3 RID: 1747
 		private FActorOnInputTouchBeginSignature _OnInputTouchBegin;
 
-		// Token: 0x04003211 RID: 12817
+		// Token: 0x040006D4 RID: 1748
 		internal static int __PropertyOffset_OnInputTouchEnd;
 
-		// Token: 0x04003212 RID: 12818
+		// Token: 0x040006D5 RID: 1749
 		private FActorOnInputTouchEndSignature _OnInputTouchEnd;
 
-		// Token: 0x04003213 RID: 12819
+		// Token: 0x040006D6 RID: 1750
 		internal static int __PropertyOffset_OnInputTouchEnter;
 
-		// Token: 0x04003214 RID: 12820
+		// Token: 0x040006D7 RID: 1751
 		private FActorBeginTouchOverSignature _OnInputTouchEnter;
 
-		// Token: 0x04003215 RID: 12821
+		// Token: 0x040006D8 RID: 1752
 		internal static int __PropertyOffset_OnInputTouchLeave;
 
-		// Token: 0x04003216 RID: 12822
+		// Token: 0x040006D9 RID: 1753
 		private FActorEndTouchOverSignature _OnInputTouchLeave;
 
-		// Token: 0x04003217 RID: 12823
+		// Token: 0x040006DA RID: 1754
 		internal static int __PropertyOffset_OnActorHit;
 
-		// Token: 0x04003218 RID: 12824
+		// Token: 0x040006DB RID: 1755
 		private FActorHitSignature _OnActorHit;
 
-		// Token: 0x04003219 RID: 12825
+		// Token: 0x040006DC RID: 1756
 		internal static int __PropertyOffset_OnDestroyed;
 
-		// Token: 0x0400321A RID: 12826
+		// Token: 0x040006DD RID: 1757
 		private FActorDestroyedSignature _OnDestroyed;
 
-		// Token: 0x0400321B RID: 12827
+		// Token: 0x040006DE RID: 1758
 		internal static int __PropertyOffset_OnEndPlay;
 
-		// Token: 0x0400321C RID: 12828
+		// Token: 0x040006DF RID: 1759
 		private FActorEndPlaySignature _OnEndPlay;
 
-		// Token: 0x0400321D RID: 12829
+		// Token: 0x040006E0 RID: 1760
 		internal static int __PropertyOffset_InstanceComponents;
 
-		// Token: 0x0400321E RID: 12830
+		// Token: 0x040006E1 RID: 1761
 		[Nullable(new byte[]
 		{
 			2,
@@ -4191,10 +3802,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UActorComponent> _InstanceComponents;
 
-		// Token: 0x0400321F RID: 12831
+		// Token: 0x040006E2 RID: 1762
 		internal static int __PropertyOffset_BlueprintCreatedComponents;
 
-		// Token: 0x04003220 RID: 12832
+		// Token: 0x040006E3 RID: 1763
 		[Nullable(new byte[]
 		{
 			2,
@@ -4202,10 +3813,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UActorComponent> _BlueprintCreatedComponents;
 
-		// Token: 0x04003221 RID: 12833
+		// Token: 0x040006E4 RID: 1764
 		internal static int __PropertyOffset_MoveIgnoreActors;
 
-		// Token: 0x04003222 RID: 12834
+		// Token: 0x040006E5 RID: 1765
 		[Nullable(new byte[]
 		{
 			2,
@@ -4213,274 +3824,173 @@ namespace UnrealEngine
 		})]
 		private TArray<AActor> _MoveIgnoreActors;
 
-		// Token: 0x02002C51 RID: 11345
+		// Token: 0x02000937 RID: 2359
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04016565 RID: 91493
+			// Token: 0x0400584F RID: 22607
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02002C52 RID: 11346
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 192)]
-		protected ref struct __ReceiveRadialDamage_FunctionParams
-		{
-			// Token: 0x04016566 RID: 91494
-			[FieldOffset(0)]
-			public float DamageReceived;
-
-			// Token: 0x04016567 RID: 91495
-			[FieldOffset(8)]
-			public IntPtr DamageType;
-
-			// Token: 0x04016568 RID: 91496
-			[FieldOffset(16)]
-			public FVector Origin;
-
-			// Token: 0x04016569 RID: 91497
-			[FieldOffset(28)]
-			public byte HitInfo;
-
-			// Token: 0x0401656A RID: 91498
-			[FieldOffset(176)]
-			public IntPtr InstigatedBy;
-
-			// Token: 0x0401656B RID: 91499
-			[FieldOffset(184)]
-			public IntPtr DamageCauser;
-		}
-
-		// Token: 0x02002C53 RID: 11347
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 240)]
-		protected ref struct __ReceivePointDamage_FunctionParams
-		{
-			// Token: 0x0401656C RID: 91500
-			[FieldOffset(0)]
-			public float Damage;
-
-			// Token: 0x0401656D RID: 91501
-			[FieldOffset(8)]
-			public IntPtr DamageType;
-
-			// Token: 0x0401656E RID: 91502
-			[FieldOffset(16)]
-			public FVector HitLocation;
-
-			// Token: 0x0401656F RID: 91503
-			[FieldOffset(28)]
-			public FVector HitNormal;
-
-			// Token: 0x04016570 RID: 91504
-			[FieldOffset(40)]
-			public IntPtr HitComponent;
-
-			// Token: 0x04016571 RID: 91505
-			[FieldOffset(48)]
-			public FName BoneName;
-
-			// Token: 0x04016572 RID: 91506
-			[FieldOffset(60)]
-			public FVector ShotFromDirection;
-
-			// Token: 0x04016573 RID: 91507
-			[FieldOffset(72)]
-			public IntPtr InstigatedBy;
-
-			// Token: 0x04016574 RID: 91508
-			[FieldOffset(80)]
-			public IntPtr DamageCauser;
-
-			// Token: 0x04016575 RID: 91509
-			[FieldOffset(88)]
-			public byte HitInfo;
-		}
-
-		// Token: 0x02002C54 RID: 11348
+		// Token: 0x02000938 RID: 2360
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 216)]
 		protected ref struct __ReceiveHit_FunctionParams
 		{
-			// Token: 0x04016576 RID: 91510
+			// Token: 0x04005850 RID: 22608
 			[FieldOffset(0)]
 			public IntPtr MyComp;
 
-			// Token: 0x04016577 RID: 91511
+			// Token: 0x04005851 RID: 22609
 			[FieldOffset(8)]
 			public IntPtr Other;
 
-			// Token: 0x04016578 RID: 91512
+			// Token: 0x04005852 RID: 22610
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04016579 RID: 91513
+			// Token: 0x04005853 RID: 22611
 			[FieldOffset(24)]
 			public bool bSelfMoved;
 
-			// Token: 0x0401657A RID: 91514
+			// Token: 0x04005854 RID: 22612
 			[FieldOffset(28)]
 			public FVector HitLocation;
 
-			// Token: 0x0401657B RID: 91515
+			// Token: 0x04005855 RID: 22613
 			[FieldOffset(40)]
 			public FVector HitNormal;
 
-			// Token: 0x0401657C RID: 91516
+			// Token: 0x04005856 RID: 22614
 			[FieldOffset(52)]
 			public FVector NormalImpulse;
 
-			// Token: 0x0401657D RID: 91517
+			// Token: 0x04005857 RID: 22615
 			[FieldOffset(64)]
 			public byte Hit;
 		}
 
-		// Token: 0x02002C55 RID: 11349
+		// Token: 0x02000939 RID: 2361
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveEndPlay_FunctionParams
 		{
-			// Token: 0x0401657E RID: 91518
+			// Token: 0x04005858 RID: 22616
 			[FieldOffset(0)]
 			public TEnumAsByte<EEndPlayReason> EndPlayReason;
 		}
 
-		// Token: 0x02002C56 RID: 11350
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __ReceiveAnyDamage_FunctionParams
-		{
-			// Token: 0x0401657F RID: 91519
-			[FieldOffset(0)]
-			public float Damage;
-
-			// Token: 0x04016580 RID: 91520
-			[FieldOffset(8)]
-			public IntPtr DamageType;
-
-			// Token: 0x04016581 RID: 91521
-			[FieldOffset(16)]
-			public IntPtr InstigatedBy;
-
-			// Token: 0x04016582 RID: 91522
-			[FieldOffset(24)]
-			public IntPtr DamageCauser;
-		}
-
-		// Token: 0x02002C57 RID: 11351
+		// Token: 0x0200093A RID: 2362
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __ReceiveActorOnReleased_FunctionParams
 		{
-			// Token: 0x04016583 RID: 91523
+			// Token: 0x04005859 RID: 22617
 			[FieldOffset(0)]
 			public byte ButtonReleased;
 		}
 
-		// Token: 0x02002C58 RID: 11352
+		// Token: 0x0200093B RID: 2363
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveActorOnInputTouchLeave_FunctionParams
 		{
-			// Token: 0x04016584 RID: 91524
+			// Token: 0x0400585A RID: 22618
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 		}
 
-		// Token: 0x02002C59 RID: 11353
+		// Token: 0x0200093C RID: 2364
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveActorOnInputTouchEnter_FunctionParams
 		{
-			// Token: 0x04016585 RID: 91525
+			// Token: 0x0400585B RID: 22619
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 		}
 
-		// Token: 0x02002C5A RID: 11354
+		// Token: 0x0200093D RID: 2365
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveActorOnInputTouchEnd_FunctionParams
 		{
-			// Token: 0x04016586 RID: 91526
+			// Token: 0x0400585C RID: 22620
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 		}
 
-		// Token: 0x02002C5B RID: 11355
+		// Token: 0x0200093E RID: 2366
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveActorOnInputTouchBegin_FunctionParams
 		{
-			// Token: 0x04016587 RID: 91527
+			// Token: 0x0400585D RID: 22621
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 		}
 
-		// Token: 0x02002C5C RID: 11356
+		// Token: 0x0200093F RID: 2367
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __ReceiveActorOnClicked_FunctionParams
 		{
-			// Token: 0x04016588 RID: 91528
+			// Token: 0x0400585E RID: 22622
 			[FieldOffset(0)]
 			public byte ButtonPressed;
 		}
 
-		// Token: 0x02002C5D RID: 11357
+		// Token: 0x02000940 RID: 2368
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __ReceiveActorEndOverlap_FunctionParams
 		{
-			// Token: 0x04016589 RID: 91529
+			// Token: 0x0400585F RID: 22623
 			[FieldOffset(0)]
 			public IntPtr OtherActor;
 		}
 
-		// Token: 0x02002C5E RID: 11358
+		// Token: 0x02000941 RID: 2369
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __ReceiveActorBeginOverlap_FunctionParams
 		{
-			// Token: 0x0401658A RID: 91530
+			// Token: 0x04005860 RID: 22624
 			[FieldOffset(0)]
 			public IntPtr OtherActor;
 		}
 
-		// Token: 0x02002C5F RID: 11359
+		// Token: 0x02000942 RID: 2370
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __K2_OnEndViewTarget_FunctionParams
 		{
-			// Token: 0x0401658B RID: 91531
+			// Token: 0x04005861 RID: 22625
 			[FieldOffset(0)]
 			public IntPtr PC;
 		}
 
-		// Token: 0x02002C60 RID: 11360
+		// Token: 0x02000943 RID: 2371
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __K2_OnBecomeViewTarget_FunctionParams
 		{
-			// Token: 0x0401658C RID: 91532
+			// Token: 0x04005862 RID: 22626
 			[FieldOffset(0)]
 			public IntPtr PC;
 		}

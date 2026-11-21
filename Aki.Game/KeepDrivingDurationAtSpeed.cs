@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032F4 RID: 13044
+// Token: 0x02002866 RID: 10342
 [NullableContext(1)]
 [Nullable(0)]
 public class KeepDrivingDurationAtSpeed : KeepDrivingInfo
 {
-	// Token: 0x0601C63B RID: 116283 RVA: 0x007F2FBC File Offset: 0x007F11BC
+	// Token: 0x0601A300 RID: 107264 RVA: 0x008194E8 File Offset: 0x008176E8
 	[NullableContext(2)]
 	public KeepDrivingDurationAtSpeed([Nullable(1)] double[] speed, float duration, Func<bool> condition = null, Action action = null, float? cd = null)
 	{
@@ -17,7 +17,7 @@ public class KeepDrivingDurationAtSpeed : KeepDrivingInfo
 		this.RunAction = action;
 	}
 
-	// Token: 0x0601C63C RID: 116284 RVA: 0x007F2FFC File Offset: 0x007F11FC
+	// Token: 0x0601A301 RID: 107265 RVA: 0x00819528 File Offset: 0x00817728
 	public override bool UpdateDrivingInfo(float delta, VehicleMoveComponent moveComp)
 	{
 		if (MathUtils.Instance.InRangeArray((double)moveComp.Speed, this.SpeedRange))
@@ -40,7 +40,7 @@ public class KeepDrivingDurationAtSpeed : KeepDrivingInfo
 		return false;
 	}
 
-	// Token: 0x0601C63D RID: 116285 RVA: 0x007F3080 File Offset: 0x007F1280
+	// Token: 0x0601A302 RID: 107266 RVA: 0x008195AC File Offset: 0x008177AC
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(23, 4);
@@ -56,18 +56,18 @@ public class KeepDrivingDurationAtSpeed : KeepDrivingInfo
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400E13A RID: 57658
+	// Token: 0x0400E5E5 RID: 58853
 	protected double[] SpeedRange = new double[2];
 
-	// Token: 0x0400E13B RID: 57659
+	// Token: 0x0400E5E6 RID: 58854
 	protected float Duration;
 
-	// Token: 0x0400E13C RID: 57660
+	// Token: 0x0400E5E7 RID: 58855
 	protected float CurrentDuration;
 
-	// Token: 0x0400E13D RID: 57661
+	// Token: 0x0400E5E8 RID: 58856
 	protected float CoolDown;
 
-	// Token: 0x0400E13E RID: 57662
+	// Token: 0x0400E5E9 RID: 58857
 	protected double LastTime;
 }

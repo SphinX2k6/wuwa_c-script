@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD0 RID: 3536
+	// Token: 0x02000ECC RID: 3788
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VisionDisplayComponent : IComponentBase
 	{
-		// Token: 0x0600503D RID: 20541 RVA: 0x000C654D File Offset: 0x000C474D
-		[NullableContext(1)]
+		// Token: 0x06005562 RID: 21858 RVA: 0x000D1D9D File Offset: 0x000CFF9D
+		[NullableContext(0)]
 		public static VisionDisplayComponent Create(IVisionDisplayComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A5A RID: 6746
-		// (get) Token: 0x0600503E RID: 20542 RVA: 0x000C656C File Offset: 0x000C476C
+		// Token: 0x17001BC5 RID: 7109
+		// (get) Token: 0x06005563 RID: 21859 RVA: 0x000D1DBC File Offset: 0x000CFFBC
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A5B RID: 6747
-		// (get) Token: 0x0600503F RID: 20543 RVA: 0x000C65A4 File Offset: 0x000C47A4
+		// Token: 0x17001BC6 RID: 7110
+		// (get) Token: 0x06005564 RID: 21860 RVA: 0x000D1DF4 File Offset: 0x000CFFF4
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A5C RID: 6748
-		// (get) Token: 0x06005040 RID: 20544 RVA: 0x000C65BA File Offset: 0x000C47BA
+		// Token: 0x17001BC7 RID: 7111
+		// (get) Token: 0x06005565 RID: 21861 RVA: 0x000D1E0A File Offset: 0x000D000A
 		public virtual bool IsNeedInView
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A5D RID: 6749
-		// (get) Token: 0x06005041 RID: 20545 RVA: 0x000C65C8 File Offset: 0x000C47C8
+		// Token: 0x17001BC8 RID: 7112
+		// (get) Token: 0x06005566 RID: 21862 RVA: 0x000D1E18 File Offset: 0x000D0018
 		public virtual bool? IsBanOcclusion
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A5E RID: 6750
-		// (get) Token: 0x06005042 RID: 20546 RVA: 0x000C6600 File Offset: 0x000C4800
+		// Token: 0x17001BC9 RID: 7113
+		// (get) Token: 0x06005567 RID: 21863 RVA: 0x000D1E50 File Offset: 0x000D0050
 		public virtual int? ViewEntityId
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A5F RID: 6751
-		// (get) Token: 0x06005043 RID: 20547 RVA: 0x000C6636 File Offset: 0x000C4836
+		// Token: 0x17001BCA RID: 7114
+		// (get) Token: 0x06005568 RID: 21864 RVA: 0x000D1E86 File Offset: 0x000D0086
 		public virtual bool IsBornInTargetPoint
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A60 RID: 6752
-		// (get) Token: 0x06005044 RID: 20548 RVA: 0x000C6643 File Offset: 0x000C4843
+		// Token: 0x17001BCB RID: 7115
+		// (get) Token: 0x06005569 RID: 21865 RVA: 0x000D1E93 File Offset: 0x000D0093
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -112,13 +112,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E0F RID: 11791
+		// Token: 0x040030D5 RID: 12501
 		private IVisionDisplayComponent Instance;
 
-		// Token: 0x04002E10 RID: 11792
+		// Token: 0x040030D6 RID: 12502
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002E11 RID: 11793
+		// Token: 0x040030D7 RID: 12503
 		private bool _ConditionInited;
 	}
 }

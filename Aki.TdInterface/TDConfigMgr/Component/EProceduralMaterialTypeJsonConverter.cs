@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009DF RID: 2527
+	// Token: 0x02000AA4 RID: 2724
 	public class EProceduralMaterialTypeJsonConverter : JsonConverter<EProceduralMaterialType>
 	{
-		// Token: 0x0600381E RID: 14366 RVA: 0x00091884 File Offset: 0x0008FA84
+		// Token: 0x06003BF6 RID: 15350 RVA: 0x0009A144 File Offset: 0x00098344
 		public override EProceduralMaterialType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EProceduralMaterialTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600381F RID: 14367 RVA: 0x000918A8 File Offset: 0x0008FAA8
+		// Token: 0x06003BF7 RID: 15351 RVA: 0x0009A168 File Offset: 0x00098368
 		public override void Write(Utf8JsonWriter writer, EProceduralMaterialType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

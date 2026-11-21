@@ -5,33 +5,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E6A RID: 28266
+	// Token: 0x02005FEB RID: 24555
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalCoreFollowAbilityBase : LevelEntityAbilityBase
 	{
-		// Token: 0x06044E1B RID: 282139 RVA: 0x01100F4F File Offset: 0x010FF14F
+		// Token: 0x0603AFAA RID: 241578 RVA: 0x010AB4B6 File Offset: 0x010A96B6
 		public PlayerElementalCoreFollowAbilityBase(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E1C RID: 282140 RVA: 0x01100F7D File Offset: 0x010FF17D
+		// Token: 0x0603AFAB RID: 241579 RVA: 0x010AB4E4 File Offset: 0x010A96E4
 		public override bool OnAddAbility(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>() != null;
 		}
 
-		// Token: 0x06044E1D RID: 282141 RVA: 0x01100F88 File Offset: 0x010FF188
+		// Token: 0x0603AFAC RID: 241580 RVA: 0x010AB4EF File Offset: 0x010A96EF
 		public override void OnActivated(Entity entity)
 		{
 		}
 
-		// Token: 0x06044E1E RID: 282142 RVA: 0x01100F8A File Offset: 0x010FF18A
+		// Token: 0x0603AFAD RID: 241581 RVA: 0x010AB4F1 File Offset: 0x010A96F1
 		public override void OnDeactivated(Entity entity)
 		{
 		}
 
-		// Token: 0x06044E1F RID: 282143 RVA: 0x01100F8C File Offset: 0x010FF18C
+		// Token: 0x0603AFAE RID: 241582 RVA: 0x010AB4F4 File Offset: 0x010A96F4
 		protected bool GetTargetLocationAndRotation(ElementalCoreConfig config, Vector outLocation, Rotator outRotation)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -72,16 +72,16 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x04023DBC RID: 146876
+		// Token: 0x0401F071 RID: 127089
 		private static readonly FName RootSocketName = new FName("Root");
 
-		// Token: 0x04023DBD RID: 146877
+		// Token: 0x0401F072 RID: 127090
 		private readonly Vector RoleUpVector = Vector.Create();
 
-		// Token: 0x04023DBE RID: 146878
+		// Token: 0x0401F073 RID: 127091
 		private readonly Vector TempTargetForward = Vector.Create();
 
-		// Token: 0x04023DBF RID: 146879
+		// Token: 0x0401F074 RID: 127092
 		private readonly Vector TempVector = Vector.Create();
 	}
 }

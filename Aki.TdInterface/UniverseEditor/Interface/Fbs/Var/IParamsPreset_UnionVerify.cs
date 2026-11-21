@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AB0 RID: 15024
+	// Token: 0x02003EB2 RID: 16050
 	public static class IParamsPreset_UnionVerify
 	{
-		// Token: 0x060146AB RID: 83627 RVA: 0x002F9E8C File Offset: 0x002F808C
+		// Token: 0x06015B55 RID: 88917 RVA: 0x00320100 File Offset: 0x0031E300
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -35,6 +35,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 				break;
 			case 8:
 				result = IWoodenBoxProliferateParamsVerify.Verify(verifier, tablePos);
+				break;
+			case 9:
+				result = IFishParamsVerify.Verify(verifier, tablePos);
+				break;
+			case 10:
+				result = IEnergyFishParamsVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

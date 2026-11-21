@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D1B RID: 3355
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E15 RID: 3605
 	public class IConnectorPathAdvanceInitiator
 	{
-		// Token: 0x06004C92 RID: 19602 RVA: 0x000BEBDA File Offset: 0x000BCDDA
+		// Token: 0x060051AC RID: 20908 RVA: 0x000CA2AE File Offset: 0x000C84AE
 		public static IConnectorPathAdvanceInitiator Create(IConnectorPathAdvanceInitiator? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001819 RID: 6169
-		// (get) Token: 0x06004C93 RID: 19603 RVA: 0x000BEBF9 File Offset: 0x000BCDF9
+		// Token: 0x1700197D RID: 6525
+		// (get) Token: 0x060051AD RID: 20909 RVA: 0x000CA2CD File Offset: 0x000C84CD
 		public virtual string ActiveState
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700181A RID: 6170
-		// (get) Token: 0x06004C94 RID: 19604 RVA: 0x000BEC08 File Offset: 0x000BCE08
+		// Token: 0x1700197E RID: 6526
+		// (get) Token: 0x060051AE RID: 20910 RVA: 0x000CA2DC File Offset: 0x000C84DC
 		public virtual List<int> Paths
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700181B RID: 6171
-		// (get) Token: 0x06004C95 RID: 19605 RVA: 0x000BEC6C File Offset: 0x000BCE6C
+		// Token: 0x1700197F RID: 6527
+		// (get) Token: 0x060051AF RID: 20911 RVA: 0x000CA340 File Offset: 0x000C8540
 		public virtual int TargetEntity
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700181C RID: 6172
-		// (get) Token: 0x06004C96 RID: 19606 RVA: 0x000BEC79 File Offset: 0x000BCE79
+		// Token: 0x17001980 RID: 6528
+		// (get) Token: 0x060051B0 RID: 20912 RVA: 0x000CA34D File Offset: 0x000C854D
 		public virtual float AdvanceSpeed
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700181D RID: 6173
-		// (get) Token: 0x06004C97 RID: 19607 RVA: 0x000BEC86 File Offset: 0x000BCE86
+		// Token: 0x17001981 RID: 6529
+		// (get) Token: 0x060051B1 RID: 20913 RVA: 0x000CA35A File Offset: 0x000C855A
 		public virtual EConnectorPathAdvanceVisualType VisualType
 		{
 			get
@@ -84,8 +82,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700181E RID: 6174
-		// (get) Token: 0x06004C98 RID: 19608 RVA: 0x000BEC93 File Offset: 0x000BCE93
+		// Token: 0x17001982 RID: 6530
+		// (get) Token: 0x060051B2 RID: 20914 RVA: 0x000CA367 File Offset: 0x000C8567
 		[Nullable(2)]
 		public virtual IConnectorPathAdvanceVasePlantVisual VisualConfig
 		{
@@ -102,19 +100,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700181F RID: 6175
-		// (get) Token: 0x06004C99 RID: 19609 RVA: 0x000BECC8 File Offset: 0x000BCEC8
+		// Token: 0x17001983 RID: 6531
+		// (get) Token: 0x060051B3 RID: 20915 RVA: 0x000CA39C File Offset: 0x000C859C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IDynamicEntityMatch> KeepConditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -137,31 +135,31 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BD2 RID: 11218
+		// Token: 0x04002E92 RID: 11922
 		private IConnectorPathAdvanceInitiator Instance;
 
-		// Token: 0x04002BD3 RID: 11219
+		// Token: 0x04002E93 RID: 11923
 		private List<int> _PathsCache;
 
-		// Token: 0x04002BD4 RID: 11220
+		// Token: 0x04002E94 RID: 11924
 		private bool _PathsInited;
 
-		// Token: 0x04002BD5 RID: 11221
+		// Token: 0x04002E95 RID: 11925
 		[Nullable(2)]
 		private IConnectorPathAdvanceVasePlantVisual _VisualConfigCache;
 
-		// Token: 0x04002BD6 RID: 11222
+		// Token: 0x04002E96 RID: 11926
 		private bool _VisualConfigInited;
 
-		// Token: 0x04002BD7 RID: 11223
+		// Token: 0x04002E97 RID: 11927
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IDynamicEntityMatch> _KeepConditionsCache;
 
-		// Token: 0x04002BD8 RID: 11224
+		// Token: 0x04002E98 RID: 11928
 		private bool _KeepConditionsInited;
 	}
 }

@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FA8 RID: 12200
+// Token: 0x020024FC RID: 9468
 public class LevelBuffSetWalkableFloorAngle : LevelBuffBase
 {
-	// Token: 0x06019DF8 RID: 105976 RVA: 0x006C367E File Offset: 0x006C187E
+	// Token: 0x0601770A RID: 96010 RVA: 0x006E9F1A File Offset: 0x006E811A
 	[NullableContext(1)]
 	public LevelBuffSetWalkableFloorAngle(Entity entity, long buffId, string[] @params, float param1, float param2) : base(entity, buffId, @params, param1, param2)
 	{
 	}
 
-	// Token: 0x06019DF9 RID: 105977 RVA: 0x006C3690 File Offset: 0x006C1890
+	// Token: 0x0601770B RID: 96011 RVA: 0x006E9F2C File Offset: 0x006E812C
 	public override void OnCreated()
 	{
 		UCharacterMovementComponent characterMovement = this.Entity.GetComponent<CharacterMoveComponent>().CharacterMovement;
@@ -30,12 +30,12 @@ public class LevelBuffSetWalkableFloorAngle : LevelBuffBase
 		characterMovement.SetWalkableFloorAngle(walkableFloorAngle);
 	}
 
-	// Token: 0x06019DFA RID: 105978 RVA: 0x006C3704 File Offset: 0x006C1904
+	// Token: 0x0601770C RID: 96012 RVA: 0x006E9FA0 File Offset: 0x006E81A0
 	public override void OnRemoved(bool bPremature)
 	{
 		this.Entity.GetComponent<CharacterMoveComponent>().CharacterMovement.SetWalkableFloorAngle(this.OriginalWalkableFloorAngle);
 	}
 
-	// Token: 0x0400C39C RID: 50076
+	// Token: 0x0400C745 RID: 51013
 	private float OriginalWalkableFloorAngle;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001DD RID: 477
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000204 RID: 516
 	public class IAudioVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x060007AC RID: 1964 RVA: 0x0002550C File Offset: 0x0002370C
+		// Token: 0x0600081A RID: 2074 RVA: 0x00026BEC File Offset: 0x00024DEC
 		private IAudioVehicleFeature_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007AD RID: 1965 RVA: 0x00025544 File Offset: 0x00023744
+		// Token: 0x0600081B RID: 2075 RVA: 0x00026C24 File Offset: 0x00024E24
 		public static IAudioVehicleFeature Create([Nullable(2)] IAudioVehicleFeature instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007AE RID: 1966 RVA: 0x00025557 File Offset: 0x00023757
+		// Token: 0x0600081C RID: 2076 RVA: 0x00026C37 File Offset: 0x00024E37
 		public static IAudioVehicleFeature CreateFromSetValue([Nullable(2)] IAudioVehicleFeature_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007AF RID: 1967 RVA: 0x0002556A File Offset: 0x0002376A
+		// Token: 0x0600081D RID: 2077 RVA: 0x00026C4A File Offset: 0x00024E4A
 		public new IAudioVehicleFeature_SetValue ToSetValue()
 		{
 			return new IAudioVehicleFeature_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000268 RID: 616
-		// (get) Token: 0x060007B0 RID: 1968 RVA: 0x00025589 File Offset: 0x00023789
-		// (set) Token: 0x060007B1 RID: 1969 RVA: 0x000255B4 File Offset: 0x000237B4
+		// Token: 0x17000284 RID: 644
+		// (get) Token: 0x0600081E RID: 2078 RVA: 0x00026C69 File Offset: 0x00024E69
+		// (set) Token: 0x0600081F RID: 2079 RVA: 0x00026C94 File Offset: 0x00024E94
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000269 RID: 617
-		// (get) Token: 0x060007B2 RID: 1970 RVA: 0x000255C4 File Offset: 0x000237C4
-		// (set) Token: 0x060007B3 RID: 1971 RVA: 0x00025625 File Offset: 0x00023825
+		// Token: 0x17000285 RID: 645
+		// (get) Token: 0x06000820 RID: 2080 RVA: 0x00026CA4 File Offset: 0x00024EA4
+		// (set) Token: 0x06000821 RID: 2081 RVA: 0x00026D05 File Offset: 0x00024F05
 		public virtual IVehicleAudioConfig AudioConfigs
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008BA RID: 2234
+		// Token: 0x04000941 RID: 2369
 		[Nullable(2)]
 		protected new IAudioVehicleFeature FbInstance;
 
-		// Token: 0x040008BB RID: 2235
+		// Token: 0x04000942 RID: 2370
 		[Nullable(2)]
 		protected new IAudioVehicleFeature_SetValue PocoInterface;
 
-		// Token: 0x040008BC RID: 2236
+		// Token: 0x04000943 RID: 2371
 		private IVehicleAudioConfig _AudioConfigsCache;
 
-		// Token: 0x040008BD RID: 2237
+		// Token: 0x04000944 RID: 2372
 		private bool _AudioConfigsInited;
 	}
 }

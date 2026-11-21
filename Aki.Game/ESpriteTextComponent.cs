@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001A38 RID: 6712
+// Token: 0x02000EF7 RID: 3831
 internal enum ESpriteTextComponent
 {
-	// Token: 0x04005B02 RID: 23298
+	// Token: 0x04005BD1 RID: 23505
 	Sprite,
-	// Token: 0x04005B03 RID: 23299
+	// Token: 0x04005BD2 RID: 23506
 	TitleText,
-	// Token: 0x04005B04 RID: 23300
+	// Token: 0x04005BD3 RID: 23507
 	DescText
 }

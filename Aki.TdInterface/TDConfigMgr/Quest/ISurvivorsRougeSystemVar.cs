@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001164 RID: 4452
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001294 RID: 4756
 	public class ISurvivorsRougeSystemVar
 	{
-		// Token: 0x0600650C RID: 25868 RVA: 0x000F2908 File Offset: 0x000F0B08
+		// Token: 0x06006B13 RID: 27411 RVA: 0x000FFBCC File Offset: 0x000FDDCC
 		private ISurvivorsRougeSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600650D RID: 25869 RVA: 0x000F2940 File Offset: 0x000F0B40
+		// Token: 0x06006B14 RID: 27412 RVA: 0x000FFC04 File Offset: 0x000FDE04
 		public static ISurvivorsRougeSystemVar Create([Nullable(2)] ISurvivorsRougeSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600650E RID: 25870 RVA: 0x000F2953 File Offset: 0x000F0B53
+		// Token: 0x06006B15 RID: 27413 RVA: 0x000FFC17 File Offset: 0x000FDE17
 		public static ISurvivorsRougeSystemVar CreateFromSetValue([Nullable(2)] ISurvivorsRougeSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600650F RID: 25871 RVA: 0x000F2966 File Offset: 0x000F0B66
+		// Token: 0x06006B16 RID: 27414 RVA: 0x000FFC2A File Offset: 0x000FDE2A
 		public ISurvivorsRougeSystemVar_SetValue ToSetValue()
 		{
 			return new ISurvivorsRougeSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020F5 RID: 8437
-		// (get) Token: 0x06006510 RID: 25872 RVA: 0x000F2985 File Offset: 0x000F0B85
-		// (set) Token: 0x06006511 RID: 25873 RVA: 0x000F29B0 File Offset: 0x000F0BB0
+		// Token: 0x170022AB RID: 8875
+		// (get) Token: 0x06006B17 RID: 27415 RVA: 0x000FFC49 File Offset: 0x000FDE49
+		// (set) Token: 0x06006B18 RID: 27416 RVA: 0x000FFC74 File Offset: 0x000FDE74
 		public virtual ESurvivorsRougeSystemVarType VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020F6 RID: 8438
-		// (get) Token: 0x06006512 RID: 25874 RVA: 0x000F29BE File Offset: 0x000F0BBE
-		// (set) Token: 0x06006513 RID: 25875 RVA: 0x000F29E5 File Offset: 0x000F0BE5
+		// Token: 0x170022AC RID: 8876
+		// (get) Token: 0x06006B19 RID: 27417 RVA: 0x000FFC82 File Offset: 0x000FDE82
+		// (set) Token: 0x06006B1A RID: 27418 RVA: 0x000FFCA9 File Offset: 0x000FDEA9
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CA0 RID: 15520
+		// Token: 0x04003FF3 RID: 16371
 		[Nullable(2)]
 		protected ISurvivorsRougeSystemVar FbInstance;
 
-		// Token: 0x04003CA1 RID: 15521
+		// Token: 0x04003FF4 RID: 16372
 		[Nullable(2)]
 		protected ISurvivorsRougeSystemVar_SetValue PocoInterface;
 	}

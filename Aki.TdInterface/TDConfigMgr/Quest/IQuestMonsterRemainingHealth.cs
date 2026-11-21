@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001089 RID: 4233
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011B7 RID: 4535
 	public class IQuestMonsterRemainingHealth : IQuestStatisticsType
 	{
-		// Token: 0x06005F74 RID: 24436 RVA: 0x000E7408 File Offset: 0x000E5608
+		// Token: 0x0600656D RID: 25965 RVA: 0x000F4528 File Offset: 0x000F2728
 		private IQuestMonsterRemainingHealth_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005F75 RID: 24437 RVA: 0x000E7440 File Offset: 0x000E5640
+		// Token: 0x0600656E RID: 25966 RVA: 0x000F4560 File Offset: 0x000F2760
 		public static IQuestMonsterRemainingHealth Create([Nullable(2)] IQuestMonsterRemainingHealth instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F76 RID: 24438 RVA: 0x000E7453 File Offset: 0x000E5653
+		// Token: 0x0600656F RID: 25967 RVA: 0x000F4573 File Offset: 0x000F2773
 		public static IQuestMonsterRemainingHealth CreateFromSetValue([Nullable(2)] IQuestMonsterRemainingHealth_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F77 RID: 24439 RVA: 0x000E7466 File Offset: 0x000E5666
+		// Token: 0x06006570 RID: 25968 RVA: 0x000F4586 File Offset: 0x000F2786
 		public new IQuestMonsterRemainingHealth_SetValue ToSetValue()
 		{
 			return new IQuestMonsterRemainingHealth_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F70 RID: 8048
-		// (get) Token: 0x06005F78 RID: 24440 RVA: 0x000E749D File Offset: 0x000E569D
-		// (set) Token: 0x06005F79 RID: 24441 RVA: 0x000E74C8 File Offset: 0x000E56C8
+		// Token: 0x17002122 RID: 8482
+		// (get) Token: 0x06006571 RID: 25969 RVA: 0x000F45BD File Offset: 0x000F27BD
+		// (set) Token: 0x06006572 RID: 25970 RVA: 0x000F45E8 File Offset: 0x000F27E8
 		public override EStatisticsEventType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F71 RID: 8049
-		// (get) Token: 0x06005F7A RID: 24442 RVA: 0x000E74D6 File Offset: 0x000E56D6
-		// (set) Token: 0x06005F7B RID: 24443 RVA: 0x000E74FD File Offset: 0x000E56FD
+		// Token: 0x17002123 RID: 8483
+		// (get) Token: 0x06006573 RID: 25971 RVA: 0x000F45F6 File Offset: 0x000F27F6
+		// (set) Token: 0x06006574 RID: 25972 RVA: 0x000F461D File Offset: 0x000F281D
 		public override VarRef Var
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F72 RID: 8050
-		// (get) Token: 0x06005F7C RID: 24444 RVA: 0x000E750B File Offset: 0x000E570B
-		// (set) Token: 0x06005F7D RID: 24445 RVA: 0x000E7536 File Offset: 0x000E5736
+		// Token: 0x17002124 RID: 8484
+		// (get) Token: 0x06006575 RID: 25973 RVA: 0x000F462B File Offset: 0x000F282B
+		// (set) Token: 0x06006576 RID: 25974 RVA: 0x000F4656 File Offset: 0x000F2856
 		public virtual int EntityId
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F73 RID: 8051
-		// (get) Token: 0x06005F7E RID: 24446 RVA: 0x000E7544 File Offset: 0x000E5744
-		// (set) Token: 0x06005F7F RID: 24447 RVA: 0x000E756F File Offset: 0x000E576F
+		// Token: 0x17002125 RID: 8485
+		// (get) Token: 0x06006577 RID: 25975 RVA: 0x000F4664 File Offset: 0x000F2864
+		// (set) Token: 0x06006578 RID: 25976 RVA: 0x000F468F File Offset: 0x000F288F
 		public virtual bool IsStatisticsAdd
 		{
 			get
@@ -152,11 +150,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400399B RID: 14747
+		// Token: 0x04003CE8 RID: 15592
 		[Nullable(2)]
 		protected new IQuestMonsterRemainingHealth FbInstance;
 
-		// Token: 0x0400399C RID: 14748
+		// Token: 0x04003CE9 RID: 15593
 		[Nullable(2)]
 		protected new IQuestMonsterRemainingHealth_SetValue PocoInterface;
 	}

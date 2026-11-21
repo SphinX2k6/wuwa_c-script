@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F12 RID: 3858
+	// Token: 0x02000F02 RID: 3842
 	public sealed class RemoveValidTimeItem : IMessage<RemoveValidTimeItem>, IMessage, IEquatable<RemoveValidTimeItem>, IDeepCloneable<RemoveValidTimeItem>, IBufferMessage
 	{
-		// Token: 0x06014A7A RID: 84602 RVA: 0x002FF891 File Offset: 0x002FDA91
+		// Token: 0x06014995 RID: 84373 RVA: 0x002FE1D5 File Offset: 0x002FC3D5
 		[NullableContext(1)]
 		public static RemoveValidTimeItem Create()
 		{
 			return new RemoveValidTimeItem();
 		}
 
-		// Token: 0x170044A8 RID: 17576
-		// (get) Token: 0x06014A7B RID: 84603 RVA: 0x002FF898 File Offset: 0x002FDA98
+		// Token: 0x1700447E RID: 17534
+		// (get) Token: 0x06014996 RID: 84374 RVA: 0x002FE1DC File Offset: 0x002FC3DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RemoveValidTimeItem> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170044A9 RID: 17577
-		// (get) Token: 0x06014A7C RID: 84604 RVA: 0x002FF89F File Offset: 0x002FDA9F
+		// Token: 0x1700447F RID: 17535
+		// (get) Token: 0x06014997 RID: 84375 RVA: 0x002FE1E3 File Offset: 0x002FC3E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170044AA RID: 17578
-		// (get) Token: 0x06014A7D RID: 84605 RVA: 0x002FF8A2 File Offset: 0x002FDAA2
+		// Token: 0x17004480 RID: 17536
+		// (get) Token: 0x06014998 RID: 84376 RVA: 0x002FE1E6 File Offset: 0x002FC3E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014A7E RID: 84606 RVA: 0x002FF8A9 File Offset: 0x002FDAA9
+		// Token: 0x06014999 RID: 84377 RVA: 0x002FE1ED File Offset: 0x002FC3ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveValidTimeItem()
 		{
 		}
 
-		// Token: 0x06014A7F RID: 84607 RVA: 0x002FF8B1 File Offset: 0x002FDAB1
+		// Token: 0x0601499A RID: 84378 RVA: 0x002FE1F5 File Offset: 0x002FC3F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveValidTimeItem(RemoveValidTimeItem other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014A80 RID: 84608 RVA: 0x002FF8E2 File Offset: 0x002FDAE2
+		// Token: 0x0601499B RID: 84379 RVA: 0x002FE226 File Offset: 0x002FC426
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveValidTimeItem Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new RemoveValidTimeItem(this);
 		}
 
-		// Token: 0x170044AB RID: 17579
-		// (get) Token: 0x06014A81 RID: 84609 RVA: 0x002FF8EA File Offset: 0x002FDAEA
-		// (set) Token: 0x06014A82 RID: 84610 RVA: 0x002FF8F2 File Offset: 0x002FDAF2
+		// Token: 0x17004481 RID: 17537
+		// (get) Token: 0x0601499C RID: 84380 RVA: 0x002FE22E File Offset: 0x002FC42E
+		// (set) Token: 0x0601499D RID: 84381 RVA: 0x002FE236 File Offset: 0x002FC436
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170044AC RID: 17580
-		// (get) Token: 0x06014A83 RID: 84611 RVA: 0x002FF8FB File Offset: 0x002FDAFB
-		// (set) Token: 0x06014A84 RID: 84612 RVA: 0x002FF903 File Offset: 0x002FDB03
+		// Token: 0x17004482 RID: 17538
+		// (get) Token: 0x0601499E RID: 84382 RVA: 0x002FE23F File Offset: 0x002FC43F
+		// (set) Token: 0x0601499F RID: 84383 RVA: 0x002FE247 File Offset: 0x002FC447
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int IncrId
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014A85 RID: 84613 RVA: 0x002FF90C File Offset: 0x002FDB0C
+		// Token: 0x060149A0 RID: 84384 RVA: 0x002FE250 File Offset: 0x002FC450
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RemoveValidTimeItem);
 		}
 
-		// Token: 0x06014A86 RID: 84614 RVA: 0x002FF91A File Offset: 0x002FDB1A
+		// Token: 0x060149A1 RID: 84385 RVA: 0x002FE25E File Offset: 0x002FC45E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RemoveValidTimeItem other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemId == other.ItemId && this.IncrId == other.IncrId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014A87 RID: 84615 RVA: 0x002FF958 File Offset: 0x002FDB58
+		// Token: 0x060149A2 RID: 84386 RVA: 0x002FE29C File Offset: 0x002FC49C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014A88 RID: 84616 RVA: 0x002FF9B0 File Offset: 0x002FDBB0
+		// Token: 0x060149A3 RID: 84387 RVA: 0x002FE2F4 File Offset: 0x002FC4F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014A89 RID: 84617 RVA: 0x002FF9BD File Offset: 0x002FDBBD
+		// Token: 0x060149A4 RID: 84388 RVA: 0x002FE301 File Offset: 0x002FC501
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014A8A RID: 84618 RVA: 0x002FF9C8 File Offset: 0x002FDBC8
+		// Token: 0x060149A5 RID: 84389 RVA: 0x002FE30C File Offset: 0x002FC50C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014A8B RID: 84619 RVA: 0x002FFA20 File Offset: 0x002FDC20
+		// Token: 0x060149A6 RID: 84390 RVA: 0x002FE364 File Offset: 0x002FC564
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014A8C RID: 84620 RVA: 0x002FFA78 File Offset: 0x002FDC78
+		// Token: 0x060149A7 RID: 84391 RVA: 0x002FE3BC File Offset: 0x002FC5BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RemoveValidTimeItem other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014A8D RID: 84621 RVA: 0x002FFAC8 File Offset: 0x002FDCC8
+		// Token: 0x060149A8 RID: 84392 RVA: 0x002FE40C File Offset: 0x002FC60C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014A8E RID: 84622 RVA: 0x002FFAD4 File Offset: 0x002FDCD4
+		// Token: 0x060149A9 RID: 84393 RVA: 0x002FE418 File Offset: 0x002FC618
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007CEC RID: 31980
+		// Token: 0x04007D16 RID: 32022
 		private static readonly MessageParser<RemoveValidTimeItem> _parser = new MessageParser<RemoveValidTimeItem>(() => new RemoveValidTimeItem());
 
-		// Token: 0x04007CED RID: 31981
+		// Token: 0x04007D17 RID: 32023
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007CEE RID: 31982
+		// Token: 0x04007D18 RID: 32024
 		public const int ItemIdFieldNumber = 1;
 
-		// Token: 0x04007CEF RID: 31983
+		// Token: 0x04007D19 RID: 32025
 		private int itemId_;
 
-		// Token: 0x04007CF0 RID: 31984
+		// Token: 0x04007D1A RID: 32026
 		public const int IncrIdFieldNumber = 2;
 
-		// Token: 0x04007CF1 RID: 31985
+		// Token: 0x04007D1B RID: 32027
 		private int incrId_;
 	}
 }

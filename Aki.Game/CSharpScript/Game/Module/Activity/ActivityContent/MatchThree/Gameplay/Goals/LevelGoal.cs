@@ -4,35 +4,35 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logi
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Goals
 {
-	// Token: 0x02006522 RID: 25890
+	// Token: 0x020054A0 RID: 21664
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class LevelGoal : ISolvedSequencesConsumer
 	{
-		// Token: 0x17009520 RID: 38176
-		// (get) Token: 0x06040ED1 RID: 265937 RVA: 0x00FBBBCB File Offset: 0x00FB9DCB
-		// (set) Token: 0x06040ED2 RID: 265938 RVA: 0x00FBBBD3 File Offset: 0x00FB9DD3
+		// Token: 0x17006882 RID: 26754
+		// (get) Token: 0x06035B95 RID: 220053 RVA: 0x00F02BFB File Offset: 0x00F00DFB
+		// (set) Token: 0x06035B96 RID: 220054 RVA: 0x00F02C03 File Offset: 0x00F00E03
 		public bool IsAchieved { get; protected set; }
 
-		// Token: 0x17009521 RID: 38177
-		// (get) Token: 0x06040ED3 RID: 265939 RVA: 0x00FBBBDC File Offset: 0x00FB9DDC
+		// Token: 0x17006883 RID: 26755
+		// (get) Token: 0x06035B97 RID: 220055 RVA: 0x00F02C0C File Offset: 0x00F00E0C
 		public EGoalCondType CondType { get; }
 
-		// Token: 0x06040ED4 RID: 265940
+		// Token: 0x06035B98 RID: 220056
 		public abstract void OnSequencesSolved(SolvedData solved);
 
-		// Token: 0x17009522 RID: 38178
-		// (get) Token: 0x06040ED5 RID: 265941 RVA: 0x00FBBBE4 File Offset: 0x00FB9DE4
-		// (set) Token: 0x06040ED6 RID: 265942 RVA: 0x00FBBBEC File Offset: 0x00FB9DEC
+		// Token: 0x17006884 RID: 26756
+		// (get) Token: 0x06035B99 RID: 220057 RVA: 0x00F02C14 File Offset: 0x00F00E14
+		// (set) Token: 0x06035B9A RID: 220058 RVA: 0x00F02C1C File Offset: 0x00F00E1C
 		public int TierIndex { get; private set; }
 
-		// Token: 0x17009523 RID: 38179
-		// (get) Token: 0x06040ED7 RID: 265943 RVA: 0x00FBBBF5 File Offset: 0x00FB9DF5
-		// (set) Token: 0x06040ED8 RID: 265944 RVA: 0x00FBBBFD File Offset: 0x00FB9DFD
+		// Token: 0x17006885 RID: 26757
+		// (get) Token: 0x06035B9B RID: 220059 RVA: 0x00F02C25 File Offset: 0x00F00E25
+		// (set) Token: 0x06035B9C RID: 220060 RVA: 0x00F02C2D File Offset: 0x00F00E2D
 		public int Current { get; protected set; }
 
-		// Token: 0x17009524 RID: 38180
-		// (get) Token: 0x06040ED9 RID: 265945 RVA: 0x00FBBC06 File Offset: 0x00FB9E06
+		// Token: 0x17006886 RID: 26758
+		// (get) Token: 0x06035B9D RID: 220061 RVA: 0x00F02C36 File Offset: 0x00F00E36
 		public int Target
 		{
 			get
@@ -45,15 +45,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040EDA RID: 265946 RVA: 0x00FBBC20 File Offset: 0x00FB9E20
+		// Token: 0x06035B9E RID: 220062 RVA: 0x00F02C50 File Offset: 0x00F00E50
 		protected LevelGoal(EGoalCondType condType, int[] targetTiers)
 		{
 			this.CondType = condType;
 			this.TargetTiers = targetTiers;
 		}
 
-		// Token: 0x17009525 RID: 38181
-		// (get) Token: 0x06040EDB RID: 265947 RVA: 0x00FBBC36 File Offset: 0x00FB9E36
+		// Token: 0x17006887 RID: 26759
+		// (get) Token: 0x06035B9F RID: 220063 RVA: 0x00F02C66 File Offset: 0x00F00E66
 		public bool CanLowerDifficulty
 		{
 			get
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040EDC RID: 265948 RVA: 0x00FBBC4C File Offset: 0x00FB9E4C
+		// Token: 0x06035BA0 RID: 220064 RVA: 0x00F02C7C File Offset: 0x00F00E7C
 		public void LowerDifficulty()
 		{
 			if (!this.CanLowerDifficulty)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.TierIndex = tierIndex + 1;
 		}
 
-		// Token: 0x06040EDD RID: 265949 RVA: 0x00FBBC72 File Offset: 0x00FB9E72
+		// Token: 0x06035BA1 RID: 220065 RVA: 0x00F02CA2 File Offset: 0x00F00EA2
 		protected void MarkAchieved()
 		{
 			if (this.IsAchieved)
@@ -89,14 +89,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			achieved(this);
 		}
 
-		// Token: 0x06040EDE RID: 265950 RVA: 0x00FBBC95 File Offset: 0x00FB9E95
+		// Token: 0x06035BA2 RID: 220066 RVA: 0x00F02CC5 File Offset: 0x00F00EC5
 		public virtual void Reset()
 		{
 			this.IsAchieved = false;
 			this.Current = 0;
 		}
 
-		// Token: 0x04021DE3 RID: 138723
+		// Token: 0x0401C714 RID: 116500
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		public Action<LevelGoal> Achieved;
 
-		// Token: 0x04021DE5 RID: 138725
+		// Token: 0x0401C716 RID: 116502
 		private readonly int[] TargetTiers;
 	}
 }

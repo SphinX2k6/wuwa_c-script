@@ -7,7 +7,7 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015C0 RID: 5568
+// Token: 0x02000A78 RID: 2680
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,12 +16,12 @@ using UnrealEngine;
 })]
 public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 {
-	// Token: 0x17000D7D RID: 3453
-	// (get) Token: 0x06009DE7 RID: 40423 RVA: 0x00225077 File Offset: 0x00223277
-	// (set) Token: 0x06009DE8 RID: 40424 RVA: 0x0022507F File Offset: 0x0022327F
+	// Token: 0x17000D9E RID: 3486
+	// (get) Token: 0x060071C5 RID: 29125 RVA: 0x0022EE27 File Offset: 0x0022D027
+	// (set) Token: 0x060071C6 RID: 29126 RVA: 0x0022EE2F File Offset: 0x0022D02F
 	public Action<int> OnToggleCallback { get; set; }
 
-	// Token: 0x06009DE9 RID: 40425 RVA: 0x00225088 File Offset: 0x00223288
+	// Token: 0x060071C7 RID: 29127 RVA: 0x0022EE38 File Offset: 0x0022D038
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -66,14 +66,14 @@ public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009DEA RID: 40426 RVA: 0x002252C0 File Offset: 0x002234C0
+	// Token: 0x060071C8 RID: 29128 RVA: 0x0022F070 File Offset: 0x0022D270
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(7).bLockStateOnSelect = true;
 		this.RoleIconLayout = new GenericLayout<WheelTowerRoleItem, RoleDataWithBranch>(base.GetHorizontalLayout(1), new Func<WheelTowerRoleItem>(this.CreateRoleItem), null, false, true);
 	}
 
-	// Token: 0x06009DEB RID: 40427 RVA: 0x002252F0 File Offset: 0x002234F0
+	// Token: 0x060071C9 RID: 29129 RVA: 0x0022F0A0 File Offset: 0x0022D2A0
 	public override void Refresh(TeamChallengeInfo data, bool isSelected, int gridIndex)
 	{
 		this.Round = gridIndex;
@@ -188,14 +188,14 @@ public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		roleIconLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06009DEC RID: 40428 RVA: 0x00225638 File Offset: 0x00223838
+	// Token: 0x060071CA RID: 29130 RVA: 0x0022F3E8 File Offset: 0x0022D5E8
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(7).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x06009DED RID: 40429 RVA: 0x00225660 File Offset: 0x00223860
+	// Token: 0x060071CB RID: 29131 RVA: 0x0022F410 File Offset: 0x0022D610
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
@@ -210,7 +210,7 @@ public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06009DEE RID: 40430 RVA: 0x002256B0 File Offset: 0x002238B0
+	// Token: 0x060071CC RID: 29132 RVA: 0x0022F460 File Offset: 0x0022D660
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
@@ -236,7 +236,7 @@ public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06009DEF RID: 40431 RVA: 0x0022575F File Offset: 0x0022395F
+	// Token: 0x060071CD RID: 29133 RVA: 0x0022F50F File Offset: 0x0022D70F
 	private void OnToggleClick(EToggleState state)
 	{
 		Action<int> onToggleCallback = this.OnToggleCallback;
@@ -247,7 +247,7 @@ public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		onToggleCallback(this.Round);
 	}
 
-	// Token: 0x06009DF0 RID: 40432 RVA: 0x00225777 File Offset: 0x00223977
+	// Token: 0x060071CE RID: 29134 RVA: 0x0022F527 File Offset: 0x0022D727
 	[NullableContext(1)]
 	private WheelTowerRoleItem CreateRoleItem()
 	{
@@ -258,16 +258,16 @@ public class WheelTowerNewTeamItem : GridProxyAbstract<TeamChallengeInfo>
 		};
 	}
 
-	// Token: 0x040045F0 RID: 17904
+	// Token: 0x04004696 RID: 18070
 	private int Round;
 
-	// Token: 0x040045F1 RID: 17905
+	// Token: 0x04004697 RID: 18071
 	private int NumberFirst;
 
-	// Token: 0x040045F2 RID: 17906
+	// Token: 0x04004698 RID: 18072
 	private int NumberSecond;
 
-	// Token: 0x040045F3 RID: 17907
+	// Token: 0x04004699 RID: 18073
 	[Nullable(new byte[]
 	{
 		2,

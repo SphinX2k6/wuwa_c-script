@@ -1,57 +1,57 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AA6 RID: 6822
+// Token: 0x02000F65 RID: 3941
 [NullableContext(2)]
 public interface IExplorePlayProgressItemData
 {
-	// Token: 0x17001092 RID: 4242
-	// (get) Token: 0x0600C9F6 RID: 51702
-	// (set) Token: 0x0600C9F7 RID: 51703
+	// Token: 0x170010B7 RID: 4279
+	// (get) Token: 0x06009E07 RID: 40455
+	// (set) Token: 0x06009E08 RID: 40456
 	EExploreType ExploreType { get; set; }
 
-	// Token: 0x17001093 RID: 4243
-	// (get) Token: 0x0600C9F8 RID: 51704
-	// (set) Token: 0x0600C9F9 RID: 51705
+	// Token: 0x170010B8 RID: 4280
+	// (get) Token: 0x06009E09 RID: 40457
+	// (set) Token: 0x06009E0A RID: 40458
 	EPlayPointType PlayPointType { get; set; }
 
-	// Token: 0x17001094 RID: 4244
-	// (get) Token: 0x0600C9FA RID: 51706
-	// (set) Token: 0x0600C9FB RID: 51707
+	// Token: 0x170010B9 RID: 4281
+	// (get) Token: 0x06009E0B RID: 40459
+	// (set) Token: 0x06009E0C RID: 40460
 	EPlayPointState PlayPointState { get; set; }
 
-	// Token: 0x17001095 RID: 4245
-	// (get) Token: 0x0600C9FC RID: 51708
-	// (set) Token: 0x0600C9FD RID: 51709
+	// Token: 0x170010BA RID: 4282
+	// (get) Token: 0x06009E0D RID: 40461
+	// (set) Token: 0x06009E0E RID: 40462
 	int? PlayPointId { get; set; }
 
-	// Token: 0x17001096 RID: 4246
-	// (get) Token: 0x0600C9FE RID: 51710
-	// (set) Token: 0x0600C9FF RID: 51711
+	// Token: 0x170010BB RID: 4283
+	// (get) Token: 0x06009E0F RID: 40463
+	// (set) Token: 0x06009E10 RID: 40464
 	EPlayPointState? LastPlayPointState { get; set; }
 
-	// Token: 0x17001097 RID: 4247
-	// (get) Token: 0x0600CA00 RID: 51712
-	// (set) Token: 0x0600CA01 RID: 51713
+	// Token: 0x170010BC RID: 4284
+	// (get) Token: 0x06009E11 RID: 40465
+	// (set) Token: 0x06009E12 RID: 40466
 	int? EntityId { get; set; }
 
-	// Token: 0x17001098 RID: 4248
-	// (get) Token: 0x0600CA02 RID: 51714
-	// (set) Token: 0x0600CA03 RID: 51715
+	// Token: 0x170010BD RID: 4285
+	// (get) Token: 0x06009E13 RID: 40467
+	// (set) Token: 0x06009E14 RID: 40468
 	bool? IgnoreHiddenType { get; set; }
 
-	// Token: 0x17001099 RID: 4249
-	// (get) Token: 0x0600CA04 RID: 51716
-	// (set) Token: 0x0600CA05 RID: 51717
+	// Token: 0x170010BE RID: 4286
+	// (get) Token: 0x06009E15 RID: 40469
+	// (set) Token: 0x06009E16 RID: 40470
 	bool? IsClear { get; set; }
 
-	// Token: 0x1700109A RID: 4250
-	// (get) Token: 0x0600CA06 RID: 51718
-	// (set) Token: 0x0600CA07 RID: 51719
+	// Token: 0x170010BF RID: 4287
+	// (get) Token: 0x06009E17 RID: 40471
+	// (set) Token: 0x06009E18 RID: 40472
 	string ClearInfo { get; set; }
 
-	// Token: 0x1700109B RID: 4251
-	// (get) Token: 0x0600CA08 RID: 51720
-	// (set) Token: 0x0600CA09 RID: 51721
+	// Token: 0x170010C0 RID: 4288
+	// (get) Token: 0x06009E19 RID: 40473
+	// (set) Token: 0x06009E1A RID: 40474
 	bool? IsUnlock { get; set; }
 }

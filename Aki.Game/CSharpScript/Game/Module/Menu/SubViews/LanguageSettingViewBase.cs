@@ -4,33 +4,33 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200541B RID: 21531
+	// Token: 0x020043FE RID: 17406
 	public class LanguageSettingViewBase : IStaticVariableResetter
 	{
-		// Token: 0x06037055 RID: 225365 RVA: 0x00D09AE3 File Offset: 0x00D07CE3
+		// Token: 0x0602BF9E RID: 180126 RVA: 0x00C58F03 File Offset: 0x00C57103
 		static LanguageSettingViewBase()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LanguageSettingViewBase.CreateStaticDefaultValue), new Action(LanguageSettingViewBase.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06037056 RID: 225366 RVA: 0x00D09B02 File Offset: 0x00D07D02
+		// Token: 0x0602BF9F RID: 180127 RVA: 0x00C58F22 File Offset: 0x00C57122
 		public static void CreateStaticDefaultValue()
 		{
 			LanguageSettingViewBase.BackToPrevLangSettingViewName = null;
 			LanguageSettingViewBase.ApplyValueFunc = null;
 		}
 
-		// Token: 0x06037057 RID: 225367 RVA: 0x00D09B15 File Offset: 0x00D07D15
+		// Token: 0x0602BFA0 RID: 180128 RVA: 0x00C58F35 File Offset: 0x00C57135
 		public static void ResetStaticDefaultValue()
 		{
 			LanguageSettingViewBase.BackToPrevLangSettingViewName = null;
 			LanguageSettingViewBase.ApplyValueFunc = null;
 		}
 
-		// Token: 0x0401D06D RID: 118893
+		// Token: 0x04017B06 RID: 97030
 		public static EUiViewName? BackToPrevLangSettingViewName;
 
-		// Token: 0x0401D06E RID: 118894
+		// Token: 0x04017B07 RID: 97031
 		[Nullable(2)]
 		public static Action<int, float> ApplyValueFunc;
 	}

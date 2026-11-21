@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020024C1 RID: 9409
+// Token: 0x020019A8 RID: 6568
 internal enum ECostDistributionItemComponent
 {
-	// Token: 0x04008E33 RID: 36403
+	// Token: 0x04008F7D RID: 36733
 	CostText
 }

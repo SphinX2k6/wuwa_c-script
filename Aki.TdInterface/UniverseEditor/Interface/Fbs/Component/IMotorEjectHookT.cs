@@ -4,75 +4,75 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055B2 RID: 21938
+	// Token: 0x02005B50 RID: 23376
 	public class IMotorEjectHookT
 	{
-		// Token: 0x1700A20E RID: 41486
-		// (get) Token: 0x06024545 RID: 148805 RVA: 0x00503F11 File Offset: 0x00502111
-		// (set) Token: 0x06024546 RID: 148806 RVA: 0x00503F19 File Offset: 0x00502119
+		// Token: 0x1700AA96 RID: 43670
+		// (get) Token: 0x06026752 RID: 157522 RVA: 0x00544489 File Offset: 0x00542689
+		// (set) Token: 0x06026753 RID: 157523 RVA: 0x00544491 File Offset: 0x00542691
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x1700A20F RID: 41487
-		// (get) Token: 0x06024547 RID: 148807 RVA: 0x00503F22 File Offset: 0x00502122
-		// (set) Token: 0x06024548 RID: 148808 RVA: 0x00503F2A File Offset: 0x0050212A
+		// Token: 0x1700AA97 RID: 43671
+		// (get) Token: 0x06026754 RID: 157524 RVA: 0x0054449A File Offset: 0x0054269A
+		// (set) Token: 0x06026755 RID: 157525 RVA: 0x005444A2 File Offset: 0x005426A2
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x1700A210 RID: 41488
-		// (get) Token: 0x06024549 RID: 148809 RVA: 0x00503F33 File Offset: 0x00502133
-		// (set) Token: 0x0602454A RID: 148810 RVA: 0x00503F3B File Offset: 0x0050213B
+		// Token: 0x1700AA98 RID: 43672
+		// (get) Token: 0x06026756 RID: 157526 RVA: 0x005444AB File Offset: 0x005426AB
+		// (set) Token: 0x06026757 RID: 157527 RVA: 0x005444B3 File Offset: 0x005426B3
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x1700A211 RID: 41489
-		// (get) Token: 0x0602454B RID: 148811 RVA: 0x00503F44 File Offset: 0x00502144
-		// (set) Token: 0x0602454C RID: 148812 RVA: 0x00503F4C File Offset: 0x0050214C
+		// Token: 0x1700AA99 RID: 43673
+		// (get) Token: 0x06026758 RID: 157528 RVA: 0x005444BC File Offset: 0x005426BC
+		// (set) Token: 0x06026759 RID: 157529 RVA: 0x005444C4 File Offset: 0x005426C4
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x1700A212 RID: 41490
-		// (get) Token: 0x0602454D RID: 148813 RVA: 0x00503F55 File Offset: 0x00502155
-		// (set) Token: 0x0602454E RID: 148814 RVA: 0x00503F5D File Offset: 0x0050215D
+		// Token: 0x1700AA9A RID: 43674
+		// (get) Token: 0x0602675A RID: 157530 RVA: 0x005444CD File Offset: 0x005426CD
+		// (set) Token: 0x0602675B RID: 157531 RVA: 0x005444D5 File Offset: 0x005426D5
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x1700A213 RID: 41491
-		// (get) Token: 0x0602454F RID: 148815 RVA: 0x00503F66 File Offset: 0x00502166
-		// (set) Token: 0x06024550 RID: 148816 RVA: 0x00503F6E File Offset: 0x0050216E
+		// Token: 0x1700AA9B RID: 43675
+		// (get) Token: 0x0602675C RID: 157532 RVA: 0x005444DE File Offset: 0x005426DE
+		// (set) Token: 0x0602675D RID: 157533 RVA: 0x005444E6 File Offset: 0x005426E6
 		public float MinPitchAngle { get; set; }
 
-		// Token: 0x1700A214 RID: 41492
-		// (get) Token: 0x06024551 RID: 148817 RVA: 0x00503F77 File Offset: 0x00502177
-		// (set) Token: 0x06024552 RID: 148818 RVA: 0x00503F7F File Offset: 0x0050217F
+		// Token: 0x1700AA9C RID: 43676
+		// (get) Token: 0x0602675E RID: 157534 RVA: 0x005444EF File Offset: 0x005426EF
+		// (set) Token: 0x0602675F RID: 157535 RVA: 0x005444F7 File Offset: 0x005426F7
 		public float DefaultPitchAngle { get; set; }
 
-		// Token: 0x1700A215 RID: 41493
-		// (get) Token: 0x06024553 RID: 148819 RVA: 0x00503F88 File Offset: 0x00502188
-		// (set) Token: 0x06024554 RID: 148820 RVA: 0x00503F90 File Offset: 0x00502190
+		// Token: 0x1700AA9D RID: 43677
+		// (get) Token: 0x06026760 RID: 157536 RVA: 0x00544500 File Offset: 0x00542700
+		// (set) Token: 0x06026761 RID: 157537 RVA: 0x00544508 File Offset: 0x00542708
 		public float MaxPitchAngle { get; set; }
 
-		// Token: 0x1700A216 RID: 41494
-		// (get) Token: 0x06024555 RID: 148821 RVA: 0x00503F99 File Offset: 0x00502199
-		// (set) Token: 0x06024556 RID: 148822 RVA: 0x00503FA1 File Offset: 0x005021A1
+		// Token: 0x1700AA9E RID: 43678
+		// (get) Token: 0x06026762 RID: 157538 RVA: 0x00544511 File Offset: 0x00542711
+		// (set) Token: 0x06026763 RID: 157539 RVA: 0x00544519 File Offset: 0x00542719
 		public float MaxYawAngleDelta { get; set; }
 
-		// Token: 0x1700A217 RID: 41495
-		// (get) Token: 0x06024557 RID: 148823 RVA: 0x00503FAA File Offset: 0x005021AA
-		// (set) Token: 0x06024558 RID: 148824 RVA: 0x00503FB2 File Offset: 0x005021B2
+		// Token: 0x1700AA9F RID: 43679
+		// (get) Token: 0x06026764 RID: 157540 RVA: 0x00544522 File Offset: 0x00542722
+		// (set) Token: 0x06026765 RID: 157541 RVA: 0x0054452A File Offset: 0x0054272A
 		public float MaxEjectDistance { get; set; }
 
-		// Token: 0x1700A218 RID: 41496
-		// (get) Token: 0x06024559 RID: 148825 RVA: 0x00503FBB File Offset: 0x005021BB
-		// (set) Token: 0x0602455A RID: 148826 RVA: 0x00503FC3 File Offset: 0x005021C3
+		// Token: 0x1700AAA0 RID: 43680
+		// (get) Token: 0x06026766 RID: 157542 RVA: 0x00544533 File Offset: 0x00542733
+		// (set) Token: 0x06026767 RID: 157543 RVA: 0x0054453B File Offset: 0x0054273B
 		public float InterpSpeed { get; set; }
 
-		// Token: 0x1700A219 RID: 41497
-		// (get) Token: 0x0602455B RID: 148827 RVA: 0x00503FCC File Offset: 0x005021CC
-		// (set) Token: 0x0602455C RID: 148828 RVA: 0x00503FD4 File Offset: 0x005021D4
+		// Token: 0x1700AAA1 RID: 43681
+		// (get) Token: 0x06026768 RID: 157544 RVA: 0x00544544 File Offset: 0x00542744
+		// (set) Token: 0x06026769 RID: 157545 RVA: 0x0054454C File Offset: 0x0054274C
 		public TMotorAutoEjectConfigUnion AutoEjectConfig { get; set; }
 
-		// Token: 0x1700A21A RID: 41498
-		// (get) Token: 0x0602455D RID: 148829 RVA: 0x00503FDD File Offset: 0x005021DD
-		// (set) Token: 0x0602455E RID: 148830 RVA: 0x00503FE5 File Offset: 0x005021E5
+		// Token: 0x1700AAA2 RID: 43682
+		// (get) Token: 0x0602676A RID: 157546 RVA: 0x00544555 File Offset: 0x00542755
+		// (set) Token: 0x0602676B RID: 157547 RVA: 0x0054455D File Offset: 0x0054275D
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602455F RID: 148831 RVA: 0x00503FF0 File Offset: 0x005021F0
+		// Token: 0x0602676C RID: 157548 RVA: 0x00544568 File Offset: 0x00542768
 		public IMotorEjectHookT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

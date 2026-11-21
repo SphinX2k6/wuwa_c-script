@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000968 RID: 2408
+	// Token: 0x02000A1B RID: 2587
 	public static class EHookLockScreenDetectTypeExtensions
 	{
-		// Token: 0x06003605 RID: 13829 RVA: 0x0008D108 File Offset: 0x0008B308
+		// Token: 0x0600398C RID: 14732 RVA: 0x00095074 File Offset: 0x00093274
 		public static string ToEnumString(this EHookLockScreenDetectType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003606 RID: 13830 RVA: 0x0008D140 File Offset: 0x0008B340
+		// Token: 0x0600398D RID: 14733 RVA: 0x000950AC File Offset: 0x000932AC
 		public static EHookLockScreenDetectType FromString(string name)
 		{
 			EHookLockScreenDetectType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003607 RID: 13831 RVA: 0x0008D169 File Offset: 0x0008B369
+		// Token: 0x0600398E RID: 14734 RVA: 0x000950D5 File Offset: 0x000932D5
 		public static bool TryFromString(string name, out EHookLockScreenDetectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003608 RID: 13832 RVA: 0x0008D1A2 File Offset: 0x0008B3A2
+		// Token: 0x0600398F RID: 14735 RVA: 0x0009510E File Offset: 0x0009330E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003609 RID: 13833 RVA: 0x0008D1BA File Offset: 0x0008B3BA
+		// Token: 0x06003990 RID: 14736 RVA: 0x00095126 File Offset: 0x00093326
 		public static EHookLockScreenDetectType[] GetValues()
 		{
 			return new EHookLockScreenDetectType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600360A RID: 13834 RVA: 0x0008D1C6 File Offset: 0x0008B3C6
+		// Token: 0x06003991 RID: 14737 RVA: 0x00095132 File Offset: 0x00093332
 		public static string[] GetNames()
 		{
 			return new string[]

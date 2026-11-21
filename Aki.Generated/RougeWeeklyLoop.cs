@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001070 RID: 4208
+	// Token: 0x0200116B RID: 4459
 	public struct RougeWeeklyLoop : IFlatbufferObject
 	{
-		// Token: 0x170033E4 RID: 13284
-		// (get) Token: 0x0600CC9D RID: 52381 RVA: 0x0030346D File Offset: 0x0030166D
+		// Token: 0x170034F1 RID: 13553
+		// (get) Token: 0x0600D470 RID: 54384 RVA: 0x00322CC7 File Offset: 0x00320EC7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CC9E RID: 52382 RVA: 0x0030347A File Offset: 0x0030167A
+		// Token: 0x0600D471 RID: 54385 RVA: 0x00322CD4 File Offset: 0x00320ED4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CC9F RID: 52383 RVA: 0x00303484 File Offset: 0x00301684
+		// Token: 0x0600D472 RID: 54386 RVA: 0x00322CDC File Offset: 0x00320EDC
 		public static RougeWeeklyLoop GetRootAsRougeWeeklyLoop(ByteBuffer _bb)
 		{
 			return RougeWeeklyLoop.GetRootAsRougeWeeklyLoop(_bb, default(RougeWeeklyLoop));
 		}
 
-		// Token: 0x0600CCA0 RID: 52384 RVA: 0x003034A0 File Offset: 0x003016A0
+		// Token: 0x0600D473 RID: 54387 RVA: 0x00322CF8 File Offset: 0x00320EF8
 		public static RougeWeeklyLoop GetRootAsRougeWeeklyLoop(ByteBuffer _bb, RougeWeeklyLoop obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CCA1 RID: 52385 RVA: 0x003034BD File Offset: 0x003016BD
+		// Token: 0x0600D474 RID: 54388 RVA: 0x00322D15 File Offset: 0x00320F15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CCA2 RID: 52386 RVA: 0x003034CC File Offset: 0x003016CC
+		// Token: 0x0600D475 RID: 54389 RVA: 0x00322D24 File Offset: 0x00320F24
 		public RougeWeeklyLoop __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170033E5 RID: 13285
-		// (get) Token: 0x0600CCA3 RID: 52387 RVA: 0x003034DC File Offset: 0x003016DC
+		// Token: 0x170034F2 RID: 13554
+		// (get) Token: 0x0600D476 RID: 54390 RVA: 0x00322D34 File Offset: 0x00320F34
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170033E6 RID: 13286
-		// (get) Token: 0x0600CCA4 RID: 52388 RVA: 0x00303518 File Offset: 0x00301718
+		// Token: 0x170034F3 RID: 13555
+		// (get) Token: 0x0600D477 RID: 54391 RVA: 0x00322D70 File Offset: 0x00320F70
 		public int ActivityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005175 RID: 20853
+		// Token: 0x04005774 RID: 22388
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CCF RID: 3279
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DB3 RID: 3507
 	public class IFanStateEffect
 	{
-		// Token: 0x06004AF4 RID: 19188 RVA: 0x000BB77F File Offset: 0x000B997F
+		// Token: 0x06004FAF RID: 20399 RVA: 0x000C63B7 File Offset: 0x000C45B7
 		public static IFanStateEffect Create(IFanStateEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001713 RID: 5907
-		// (get) Token: 0x06004AF5 RID: 19189 RVA: 0x000BB79E File Offset: 0x000B999E
+		// Token: 0x17001844 RID: 6212
+		// (get) Token: 0x06004FB0 RID: 20400 RVA: 0x000C63D6 File Offset: 0x000C45D6
 		public virtual string EntityState
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001714 RID: 5908
-		// (get) Token: 0x06004AF6 RID: 19190 RVA: 0x000BB7AB File Offset: 0x000B99AB
+		// Token: 0x17001845 RID: 6213
+		// (get) Token: 0x06004FB1 RID: 20401 RVA: 0x000C63E3 File Offset: 0x000C45E3
 		public virtual IFanEffectConfig EffectConfig
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AE4 RID: 10980
+		// Token: 0x04002D6A RID: 11626
 		private IFanStateEffect Instance;
 
-		// Token: 0x04002AE5 RID: 10981
+		// Token: 0x04002D6B RID: 11627
 		[Nullable(2)]
 		private IFanEffectConfig _EffectConfigCache;
 
-		// Token: 0x04002AE6 RID: 10982
+		// Token: 0x04002D6C RID: 11628
 		private bool _EffectConfigInited;
 	}
 }

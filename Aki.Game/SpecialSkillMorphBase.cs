@@ -7,18 +7,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Plot;
 using UnrealEngine;
 
-// Token: 0x02003198 RID: 12696
+// Token: 0x02002706 RID: 9990
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableResetter
 {
-	// Token: 0x0601B55C RID: 111964 RVA: 0x00777089 File Offset: 0x00775289
+	// Token: 0x0601907C RID: 102524 RVA: 0x0079F315 File Offset: 0x0079D515
 	static SpecialSkillMorphBase()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpecialSkillMorphBase.CreateStaticDefaultValue), new Action(SpecialSkillMorphBase.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B55D RID: 111965 RVA: 0x007770A8 File Offset: 0x007752A8
+	// Token: 0x0601907D RID: 102525 RVA: 0x0079F334 File Offset: 0x0079D534
 	public static void CreateStaticDefaultValue()
 	{
 		SpecialSkillMorphBase._morphResetConfigCache = null;
@@ -30,7 +30,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		SpecialSkillMorphBase._tempMeshes = null;
 	}
 
-	// Token: 0x0601B55E RID: 111966 RVA: 0x007770D4 File Offset: 0x007752D4
+	// Token: 0x0601907E RID: 102526 RVA: 0x0079F360 File Offset: 0x0079D560
 	public static void ResetStaticDefaultValue()
 	{
 		SpecialSkillMorphBase._morphResetConfigCache = null;
@@ -42,31 +42,31 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		SpecialSkillMorphBase._tempMeshes = null;
 	}
 
-	// Token: 0x170025CB RID: 9675
-	// (get) Token: 0x0601B55F RID: 111967
+	// Token: 0x170027BC RID: 10172
+	// (get) Token: 0x0601907F RID: 102527
 	protected abstract string MorphBuffsConfigKey { get; }
 
-	// Token: 0x170025CC RID: 9676
-	// (get) Token: 0x0601B560 RID: 111968
+	// Token: 0x170027BD RID: 10173
+	// (get) Token: 0x06019080 RID: 102528
 	protected abstract string MorphCueIdConfigKey { get; }
 
-	// Token: 0x170025CD RID: 9677
-	// (get) Token: 0x0601B561 RID: 111969
+	// Token: 0x170027BE RID: 10174
+	// (get) Token: 0x06019081 RID: 102529
 	protected abstract string ResetMorphSkillsConfigKey { get; }
 
-	// Token: 0x170025CE RID: 9678
-	// (get) Token: 0x0601B562 RID: 111970
+	// Token: 0x170027BF RID: 10175
+	// (get) Token: 0x06019082 RID: 102530
 	protected abstract string NotResetMorphSkillsConfigKey { get; }
 
-	// Token: 0x170025CF RID: 9679
-	// (get) Token: 0x0601B563 RID: 111971
+	// Token: 0x170027C0 RID: 10176
+	// (get) Token: 0x06019083 RID: 102531
 	protected abstract string ChangeRoleResetMorphTagsConfigKey { get; }
 
-	// Token: 0x0601B564 RID: 111972
+	// Token: 0x06019084 RID: 102532
 	protected abstract string GetSubMeshConfigKey(EMorphType morphType);
 
-	// Token: 0x170025D0 RID: 9680
-	// (get) Token: 0x0601B565 RID: 111973 RVA: 0x00777100 File Offset: 0x00775300
+	// Token: 0x170027C1 RID: 10177
+	// (get) Token: 0x06019085 RID: 102533 RVA: 0x0079F38C File Offset: 0x0079D58C
 	protected virtual string LogPrefix
 	{
 		get
@@ -75,12 +75,12 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B566 RID: 111974 RVA: 0x0077710D File Offset: 0x0077530D
+	// Token: 0x06019086 RID: 102534 RVA: 0x0079F399 File Offset: 0x0079D599
 	protected SpecialSkillMorphBase(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B567 RID: 111975 RVA: 0x00777120 File Offset: 0x00775320
+	// Token: 0x06019087 RID: 102535 RVA: 0x0079F3AC File Offset: 0x0079D5AC
 	public override void OnStart()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -96,7 +96,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.RegisterMorphEvents();
 	}
 
-	// Token: 0x0601B568 RID: 111976 RVA: 0x007771AB File Offset: 0x007753AB
+	// Token: 0x06019088 RID: 102536 RVA: 0x0079F437 File Offset: 0x0079D637
 	public override void OnEnd()
 	{
 		this.UnregisterMorphEvents();
@@ -114,7 +114,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.ForceResetTagListener = null;
 	}
 
-	// Token: 0x0601B569 RID: 111977 RVA: 0x007771E4 File Offset: 0x007753E4
+	// Token: 0x06019089 RID: 102537 RVA: 0x0079F470 File Offset: 0x0079D670
 	public override void OnActivate()
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -125,7 +125,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B56A RID: 111978 RVA: 0x00777228 File Offset: 0x00775428
+	// Token: 0x0601908A RID: 102538 RVA: 0x0079F4B4 File Offset: 0x0079D6B4
 	protected void RegisterMorphEvents()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -145,7 +145,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.ForceResetTagListener = ((tagComp2 != null) ? tagComp2.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["角色.Common.角色形态.强制还原形态"]), new BaseTagComponent.TTagSwitchedCallback(this.OnForceResetTagChanged), null) : null);
 	}
 
-	// Token: 0x0601B56B RID: 111979 RVA: 0x007773B4 File Offset: 0x007755B4
+	// Token: 0x0601908B RID: 102539 RVA: 0x0079F640 File Offset: 0x0079D840
 	protected void UnregisterMorphEvents()
 	{
 		Entity entity = this.SpecialSkillComponent.Entity;
@@ -160,7 +160,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		EventSystem.Instance.RemoveWithTarget<int, int, int, float>(entity, EEventName.OnBeforeSkillSimulateMontage, new Action<int, int, int, float>(this.OnBeforeSkillSimulateMontage));
 	}
 
-	// Token: 0x0601B56C RID: 111980 RVA: 0x007774CC File Offset: 0x007756CC
+	// Token: 0x0601908C RID: 102540 RVA: 0x0079F758 File Offset: 0x0079D958
 	protected void ResetMorph(bool needAddCue = true)
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -196,12 +196,12 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B56D RID: 111981 RVA: 0x00777600 File Offset: 0x00775800
+	// Token: 0x0601908D RID: 102541 RVA: 0x0079F88C File Offset: 0x0079DA8C
 	protected virtual void OnBeforeResetMorph()
 	{
 	}
 
-	// Token: 0x0601B56E RID: 111982 RVA: 0x00777604 File Offset: 0x00775804
+	// Token: 0x0601908E RID: 102542 RVA: 0x0079F890 File Offset: 0x0079DA90
 	protected void RefreshNoUpdateMeshes(EMorphType morphType)
 	{
 		if (!this.IsEnableOptimize)
@@ -258,7 +258,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		SpecialSkillMorphBase._tempMeshes.Clear();
 	}
 
-	// Token: 0x0601B56F RID: 111983 RVA: 0x00777798 File Offset: 0x00775998
+	// Token: 0x0601908F RID: 102543 RVA: 0x0079FA24 File Offset: 0x0079DC24
 	protected void LogResetMorph(EResetMorphReason reason, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -279,7 +279,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		CombatLog.Instance.Info(CombatLog.EDebugModule.Skill, this.SpecialSkillComponent.Entity, "还原形态", pairs);
 	}
 
-	// Token: 0x0601B570 RID: 111984 RVA: 0x00777828 File Offset: 0x00775A28
+	// Token: 0x06019090 RID: 102544 RVA: 0x0079FAB4 File Offset: 0x0079DCB4
 	protected void OnBeforeChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		RoleQteComponent roleQteComp = this.RoleQteComp;
@@ -298,7 +298,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.ResetMorph(true);
 	}
 
-	// Token: 0x0601B571 RID: 111985 RVA: 0x0077788C File Offset: 0x00775A8C
+	// Token: 0x06019091 RID: 102545 RVA: 0x0079FB18 File Offset: 0x0079DD18
 	protected void OnCharBeforeSkill(int skillId, bool isAutonomousProxy)
 	{
 		if (!this.ShouldResetMorphBeforeSkill(skillId))
@@ -311,7 +311,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.ResetMorph(true);
 	}
 
-	// Token: 0x0601B572 RID: 111986 RVA: 0x007778CC File Offset: 0x00775ACC
+	// Token: 0x06019092 RID: 102546 RVA: 0x0079FB58 File Offset: 0x0079DD58
 	protected void OnBeforeCharAction(ECharacterActionType actionType)
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -325,7 +325,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.ResetMorph(true);
 	}
 
-	// Token: 0x0601B573 RID: 111987 RVA: 0x00777918 File Offset: 0x00775B18
+	// Token: 0x06019093 RID: 102547 RVA: 0x0079FBA4 File Offset: 0x0079DDA4
 	protected unsafe void OnCharOnUnifiedMoveStateChanged(ECharMoveState oldMoveState, ECharMoveState newMoveState)
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -344,7 +344,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B574 RID: 111988 RVA: 0x0077799C File Offset: 0x00775B9C
+	// Token: 0x06019094 RID: 102548 RVA: 0x0079FC28 File Offset: 0x0079DE28
 	protected void OnRoleDeadEnd()
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -355,7 +355,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B575 RID: 111989 RVA: 0x007779D4 File Offset: 0x00775BD4
+	// Token: 0x06019095 RID: 102549 RVA: 0x0079FC60 File Offset: 0x0079DE60
 	protected void OnRoleRevive()
 	{
 		CharacterMorphComponent morphComp = this.MorphComp;
@@ -366,7 +366,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B576 RID: 111990 RVA: 0x00777A0C File Offset: 0x00775C0C
+	// Token: 0x06019096 RID: 102550 RVA: 0x0079FC98 File Offset: 0x0079DE98
 	protected void OnExecuteAfterSetPlotMode()
 	{
 		if (!this.ShouldResetMorphOnPlotMode())
@@ -377,13 +377,13 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.ResetMorph(true);
 	}
 
-	// Token: 0x0601B577 RID: 111991 RVA: 0x00777A39 File Offset: 0x00775C39
+	// Token: 0x06019097 RID: 102551 RVA: 0x0079FCC5 File Offset: 0x0079DEC5
 	protected virtual void OnCharacterMorphTypeChanged(Entity entity, EMorphType newMorphType, EMorphType oldMorphType)
 	{
 		this.RefreshNoUpdateMeshes(newMorphType);
 	}
 
-	// Token: 0x0601B578 RID: 111992 RVA: 0x00777A42 File Offset: 0x00775C42
+	// Token: 0x06019098 RID: 102552 RVA: 0x0079FCCE File Offset: 0x0079DECE
 	protected void OnBeforeSkillSimulateMontage(int entityId, int skillId, int montageIndex, float startTimeSeconds)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -394,7 +394,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		this.SyncRemoteSkillMontage(skillId);
 	}
 
-	// Token: 0x0601B579 RID: 111993 RVA: 0x00777A60 File Offset: 0x00775C60
+	// Token: 0x06019099 RID: 102553 RVA: 0x0079FCEC File Offset: 0x0079DEEC
 	protected void OnGlideStateChanged(int tagId, bool bTagExists)
 	{
 		if (bTagExists)
@@ -432,7 +432,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B57A RID: 111994 RVA: 0x00777B0C File Offset: 0x00775D0C
+	// Token: 0x0601909A RID: 102554 RVA: 0x0079FD98 File Offset: 0x0079DF98
 	protected void OnForceResetTagChanged(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -442,7 +442,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B57B RID: 111995 RVA: 0x00777B34 File Offset: 0x00775D34
+	// Token: 0x0601909B RID: 102555 RVA: 0x0079FDC0 File Offset: 0x0079DFC0
 	protected bool ShouldResetMorphBeforeSkill(int skillId)
 	{
 		if (this.SkillComp == null)
@@ -526,7 +526,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return flag;
 	}
 
-	// Token: 0x0601B57C RID: 111996 RVA: 0x00777CDC File Offset: 0x00775EDC
+	// Token: 0x0601909C RID: 102556 RVA: 0x0079FF68 File Offset: 0x0079E168
 	protected int? ShouldResetMorphOnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		WorldEntity entity = newEntity.Entity;
@@ -593,7 +593,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return null;
 	}
 
-	// Token: 0x0601B57D RID: 111997 RVA: 0x00777E58 File Offset: 0x00776058
+	// Token: 0x0601909D RID: 102557 RVA: 0x007A00E4 File Offset: 0x0079E2E4
 	protected bool ShouldResetMorphOnPlotMode()
 	{
 		PlotModel instance = PlotModel.Instance;
@@ -630,7 +630,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return morphComp != null && morphComp.IsMorphing();
 	}
 
-	// Token: 0x0601B57E RID: 111998 RVA: 0x00777F30 File Offset: 0x00776130
+	// Token: 0x0601909E RID: 102558 RVA: 0x007A01BC File Offset: 0x0079E3BC
 	protected void SyncRemoteSkillMontage(int skillId)
 	{
 		BaseSkillComponent skillComp = this.SkillComp;
@@ -674,7 +674,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		}
 	}
 
-	// Token: 0x0601B57F RID: 111999 RVA: 0x00778028 File Offset: 0x00776228
+	// Token: 0x0601909F RID: 102559 RVA: 0x007A02B4 File Offset: 0x0079E4B4
 	private static HashSet<long> GetSkillsFromConfig([Nullable(new byte[]
 	{
 		2,
@@ -707,7 +707,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return hashSet;
 	}
 
-	// Token: 0x0601B580 RID: 112000 RVA: 0x007780B4 File Offset: 0x007762B4
+	// Token: 0x060190A0 RID: 102560 RVA: 0x007A0340 File Offset: 0x0079E540
 	[NullableContext(2)]
 	private static bool IsSkillInConfig(int skillId, string configKey, [Nullable(new byte[]
 	{
@@ -719,7 +719,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return !string.IsNullOrEmpty(configKey) && SpecialSkillMorphBase.GetSkillsFromConfig(ref cache, configKey).Contains((long)skillId);
 	}
 
-	// Token: 0x0601B581 RID: 112001 RVA: 0x007780D0 File Offset: 0x007762D0
+	// Token: 0x060190A1 RID: 102561 RVA: 0x007A035C File Offset: 0x0079E55C
 	private static List<int> GetTagsFromConfig([Nullable(new byte[]
 	{
 		2,
@@ -752,7 +752,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return list;
 	}
 
-	// Token: 0x0601B582 RID: 112002 RVA: 0x0077815C File Offset: 0x0077635C
+	// Token: 0x060190A2 RID: 102562 RVA: 0x007A03E8 File Offset: 0x0079E5E8
 	private static List<string> GetSubMeshNamesFromConfig([Nullable(2)] string configKey)
 	{
 		if (string.IsNullOrEmpty(configKey))
@@ -777,7 +777,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return list;
 	}
 
-	// Token: 0x0601B583 RID: 112003 RVA: 0x007781BC File Offset: 0x007763BC
+	// Token: 0x060190A3 RID: 102563 RVA: 0x007A0448 File Offset: 0x0079E648
 	private static List<long> GetMorphBuffsFromConfig([Nullable(2)] string configKey)
 	{
 		if (string.IsNullOrEmpty(configKey))
@@ -802,7 +802,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return list;
 	}
 
-	// Token: 0x0601B584 RID: 112004 RVA: 0x0077821C File Offset: 0x0077641C
+	// Token: 0x060190A4 RID: 102564 RVA: 0x007A04A8 File Offset: 0x0079E6A8
 	private static List<long> GetMorphCueIdsFromConfig([Nullable(2)] string configKey)
 	{
 		if (string.IsNullOrEmpty(configKey))
@@ -827,7 +827,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 		return list;
 	}
 
-	// Token: 0x0400D5D7 RID: 54743
+	// Token: 0x0400DA5A RID: 55898
 	[Nullable(new byte[]
 	{
 		2,
@@ -836,7 +836,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static Dictionary<string, HashSet<long>> _morphResetConfigCache;
 
-	// Token: 0x0400D5D8 RID: 54744
+	// Token: 0x0400DA5B RID: 55899
 	[Nullable(new byte[]
 	{
 		2,
@@ -845,7 +845,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static Dictionary<string, HashSet<long>> _morphKeepConfigCache;
 
-	// Token: 0x0400D5D9 RID: 54745
+	// Token: 0x0400DA5C RID: 55900
 	[Nullable(new byte[]
 	{
 		2,
@@ -854,7 +854,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static Dictionary<string, List<int>> _changeRoleResetMorphTagsCache;
 
-	// Token: 0x0400D5DA RID: 54746
+	// Token: 0x0400DA5D RID: 55901
 	[Nullable(new byte[]
 	{
 		2,
@@ -864,7 +864,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static Dictionary<string, List<string>> _morphSubMeshCache;
 
-	// Token: 0x0400D5DB RID: 54747
+	// Token: 0x0400DA5E RID: 55902
 	[Nullable(new byte[]
 	{
 		2,
@@ -873,7 +873,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static Dictionary<string, List<long>> _morphBuffsCache;
 
-	// Token: 0x0400D5DC RID: 54748
+	// Token: 0x0400DA5F RID: 55903
 	[Nullable(new byte[]
 	{
 		2,
@@ -882,7 +882,7 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static Dictionary<string, List<long>> _morphCueIdsCache;
 
-	// Token: 0x0400D5DD RID: 54749
+	// Token: 0x0400DA60 RID: 55904
 	[Nullable(new byte[]
 	{
 		2,
@@ -890,50 +890,50 @@ public abstract class SpecialSkillMorphBase : SpecialSkillBase, IStaticVariableR
 	})]
 	private static HashSet<USkeletalMeshComponent> _tempMeshes;
 
-	// Token: 0x0400D5DE RID: 54750
+	// Token: 0x0400DA61 RID: 55905
 	[Nullable(2)]
 	protected CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D5DF RID: 54751
+	// Token: 0x0400DA62 RID: 55906
 	[Nullable(2)]
 	protected BaseAnimationComponent AnimComp;
 
-	// Token: 0x0400D5E0 RID: 54752
+	// Token: 0x0400DA63 RID: 55907
 	[Nullable(2)]
 	protected CharacterMorphComponent MorphComp;
 
-	// Token: 0x0400D5E1 RID: 54753
+	// Token: 0x0400DA64 RID: 55908
 	[Nullable(2)]
 	protected BaseSkillComponent SkillComp;
 
-	// Token: 0x0400D5E2 RID: 54754
+	// Token: 0x0400DA65 RID: 55909
 	[Nullable(2)]
 	protected CharacterMontageComponent MontageComp;
 
-	// Token: 0x0400D5E3 RID: 54755
+	// Token: 0x0400DA66 RID: 55910
 	[Nullable(2)]
 	protected BaseBuffComponent BuffComp;
 
-	// Token: 0x0400D5E4 RID: 54756
+	// Token: 0x0400DA67 RID: 55911
 	[Nullable(2)]
 	protected BaseGameplayCueComponent CueComp;
 
-	// Token: 0x0400D5E5 RID: 54757
+	// Token: 0x0400DA68 RID: 55912
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400D5E6 RID: 54758
+	// Token: 0x0400DA69 RID: 55913
 	[Nullable(2)]
 	protected RoleQteComponent RoleQteComp;
 
-	// Token: 0x0400D5E7 RID: 54759
+	// Token: 0x0400DA6A RID: 55914
 	[Nullable(2)]
 	protected ITagTask GlideStateListener;
 
-	// Token: 0x0400D5E8 RID: 54760
+	// Token: 0x0400DA6B RID: 55915
 	[Nullable(2)]
 	protected ITagTask ForceResetTagListener;
 
-	// Token: 0x0400D5E9 RID: 54761
+	// Token: 0x0400DA6C RID: 55916
 	protected readonly bool IsEnableOptimize = true;
 }

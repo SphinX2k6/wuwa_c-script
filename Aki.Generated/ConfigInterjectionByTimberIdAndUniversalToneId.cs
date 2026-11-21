@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000452 RID: 1106
+	// Token: 0x02000468 RID: 1128
 	public class ConfigInterjectionByTimberIdAndUniversalToneId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019F6 RID: 6646 RVA: 0x000EC379 File Offset: 0x000EA579
+		// Token: 0x06001A7A RID: 6778 RVA: 0x000F2ACD File Offset: 0x000F0CCD
 		static ConfigInterjectionByTimberIdAndUniversalToneId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInterjectionByTimberIdAndUniversalToneId.CreateStaticDefaultValue), new Action(ConfigInterjectionByTimberIdAndUniversalToneId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019F7 RID: 6647 RVA: 0x000EC398 File Offset: 0x000EA598
+		// Token: 0x06001A7B RID: 6779 RVA: 0x000F2AEC File Offset: 0x000F0CEC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInterjectionByTimberIdAndUniversalToneId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019F8 RID: 6648 RVA: 0x000EC417 File Offset: 0x000EA617
+		// Token: 0x06001A7C RID: 6780 RVA: 0x000F2B6B File Offset: 0x000F0D6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInterjectionByTimberIdAndUniversalToneId.LogPair = null;
 			ConfigInterjectionByTimberIdAndUniversalToneId.HandleId = 0;
 		}
 
-		// Token: 0x060019F9 RID: 6649 RVA: 0x000EC425 File Offset: 0x000EA625
+		// Token: 0x06001A7D RID: 6781 RVA: 0x000F2B79 File Offset: 0x000F0D79
 		public static void Init()
 		{
 			ConfigInterjectionByTimberIdAndUniversalToneId.HandleId = ConfigCommon.InitDataStatement(ConfigInterjectionByTimberIdAndUniversalToneId.HandleId, "db_audio_interjection.db", "select BinData from `Interjection` where TimberId = ? AND UniversalToneId = ?");
 		}
 
-		// Token: 0x060019FA RID: 6650 RVA: 0x000EC440 File Offset: 0x000EA640
+		// Token: 0x06001A7E RID: 6782 RVA: 0x000F2B94 File Offset: 0x000F0D94
 		public static Interjection? GetConfig(int p0TimberId, int p1UniversalToneId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInterjectionByTimberIdAndUniversalToneId.HandleId, ConfigInterjectionByTimberIdAndUniversalToneId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new Interjection?(rootAsInterjection);
 		}
 
-		// Token: 0x04001E22 RID: 7714
+		// Token: 0x04001EBC RID: 7868
 		private const string DB = "db_audio_interjection.db";
 
-		// Token: 0x04001E23 RID: 7715
+		// Token: 0x04001EBD RID: 7869
 		private const string FILE = "k.可视化编辑/c.Csv/y.音频/y.音色语音事件映射/*.csv*";
 
-		// Token: 0x04001E24 RID: 7716
+		// Token: 0x04001EBE RID: 7870
 		private const string TABLE = "Interjection";
 
-		// Token: 0x04001E25 RID: 7717
+		// Token: 0x04001EBF RID: 7871
 		private const string COMMAND = "select BinData from `Interjection` where TimberId = ? AND UniversalToneId = ?";
 
-		// Token: 0x04001E26 RID: 7718
+		// Token: 0x04001EC0 RID: 7872
 		private const string KEY_PREFIX = "InterjectionByTimberIdAndUniversalToneId";
 
-		// Token: 0x04001E27 RID: 7719
+		// Token: 0x04001EC1 RID: 7873
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001E28 RID: 7720
+		// Token: 0x04001EC2 RID: 7874
 		private static int HandleId;
 	}
 }

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002FFF RID: 12287
+// Token: 0x02002555 RID: 9557
 [NullableContext(1)]
 [Nullable(0)]
 public class TriggerEventHelper : IStaticVariableResetter
 {
-	// Token: 0x0601A082 RID: 106626 RVA: 0x006D132F File Offset: 0x006CF52F
+	// Token: 0x060179BE RID: 96702 RVA: 0x006F94C6 File Offset: 0x006F76C6
 	static TriggerEventHelper()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TriggerEventHelper.CreateStaticDefaultValue), new Action(TriggerEventHelper.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170023C0 RID: 9152
-	// (get) Token: 0x0601A083 RID: 106627 RVA: 0x006D134E File Offset: 0x006CF54E
+	// Token: 0x17002482 RID: 9346
+	// (get) Token: 0x060179BF RID: 96703 RVA: 0x006F94E5 File Offset: 0x006F76E5
 	private static WeakMap<object, Dictionary<EEventName, Dictionary<Delegate, Action<EEventName, IReadOnlyList<object>>>>> ForwardListenerMapAccessor
 	{
 		get
@@ -24,19 +24,19 @@ public class TriggerEventHelper : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A084 RID: 106628 RVA: 0x006D1355 File Offset: 0x006CF555
+	// Token: 0x060179C0 RID: 96704 RVA: 0x006F94EC File Offset: 0x006F76EC
 	public static void CreateStaticDefaultValue()
 	{
 		TriggerEventHelper.ForwardListenerMap = new WeakMap<object, Dictionary<EEventName, Dictionary<Delegate, Action<EEventName, IReadOnlyList<object>>>>>();
 	}
 
-	// Token: 0x0601A085 RID: 106629 RVA: 0x006D1361 File Offset: 0x006CF561
+	// Token: 0x060179C1 RID: 96705 RVA: 0x006F94F8 File Offset: 0x006F76F8
 	public static void ResetStaticDefaultValue()
 	{
 		TriggerEventHelper.ForwardListenerMap = null;
 	}
 
-	// Token: 0x0601A086 RID: 106630 RVA: 0x006D136C File Offset: 0x006CF56C
+	// Token: 0x060179C2 RID: 96706 RVA: 0x006F9500 File Offset: 0x006F7700
 	public static void AddWithTarget(object entity, EEventName eventName, Delegate listener)
 	{
 		EventSystem.Instance.AddWithTarget(entity, eventName, listener);
@@ -66,7 +66,7 @@ public class TriggerEventHelper : IStaticVariableResetter
 		EventSystem.Instance.AddWithTarget<EEventName, IReadOnlyList<object>>(entity, EEventName.FollowShooterForwardEvent, action);
 	}
 
-	// Token: 0x0601A087 RID: 106631 RVA: 0x006D1414 File Offset: 0x006CF614
+	// Token: 0x060179C3 RID: 96707 RVA: 0x006F95A8 File Offset: 0x006F77A8
 	public static void RemoveWithTarget(object entity, EEventName eventName, Delegate listener)
 	{
 		EventSystem.Instance.RemoveWithTarget(entity, eventName, listener);
@@ -97,13 +97,13 @@ public class TriggerEventHelper : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601A088 RID: 106632 RVA: 0x006D1492 File Offset: 0x006CF692
+	// Token: 0x060179C4 RID: 96708 RVA: 0x006F9626 File Offset: 0x006F7826
 	public static bool HasWithTarget(object entity, EEventName eventName, Delegate listener)
 	{
 		return EventSystem.Instance.HasWithTarget(entity, eventName, listener);
 	}
 
-	// Token: 0x0400C4F8 RID: 50424
+	// Token: 0x0400C8C4 RID: 51396
 	[Nullable(new byte[]
 	{
 		2,

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A54 RID: 2644
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B1D RID: 2845
 	public class InteractiveComponent : IComponentBase
 	{
-		// Token: 0x06003CE2 RID: 15586 RVA: 0x0009CA2E File Offset: 0x0009AC2E
+		// Token: 0x06004102 RID: 16642 RVA: 0x000A5EA6 File Offset: 0x000A40A6
 		public static InteractiveComponent Create(IInteractiveComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000DF7 RID: 3575
-		// (get) Token: 0x06003CE3 RID: 15587 RVA: 0x0009CA50 File Offset: 0x0009AC50
+		// Token: 0x17000EC3 RID: 3779
+		// (get) Token: 0x06004103 RID: 16643 RVA: 0x000A5EC8 File Offset: 0x000A40C8
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DF8 RID: 3576
-		// (get) Token: 0x06003CE4 RID: 15588 RVA: 0x0009CA88 File Offset: 0x0009AC88
+		// Token: 0x17000EC4 RID: 3780
+		// (get) Token: 0x06004104 RID: 16644 RVA: 0x000A5F00 File Offset: 0x000A4100
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DF9 RID: 3577
-		// (get) Token: 0x06003CE5 RID: 15589 RVA: 0x0009CA9E File Offset: 0x0009AC9E
+		// Token: 0x17000EC5 RID: 3781
+		// (get) Token: 0x06004105 RID: 16645 RVA: 0x000A5F16 File Offset: 0x000A4116
 		public virtual string Content
 		{
 			get
@@ -56,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DFA RID: 3578
-		// (get) Token: 0x06003CE6 RID: 15590 RVA: 0x0009CAAB File Offset: 0x0009ACAB
+		// Token: 0x17000EC6 RID: 3782
+		// (get) Token: 0x06004106 RID: 16646 RVA: 0x000A5F23 File Offset: 0x000A4123
 		public virtual string Icon
 		{
 			get
@@ -66,7 +63,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040021F1 RID: 8689
+		// Token: 0x04002408 RID: 9224
 		private IInteractiveComponent Instance;
 	}
 }

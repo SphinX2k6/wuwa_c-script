@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017FB RID: 6139
+	// Token: 0x0200036D RID: 877
 	[UnrealObjectPath("/Script/KuroData.TraceBoxElement")]
 	[UnrealStructLayout(256, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 256)]
 	public class UTraceBoxElement : UTraceBaseElement, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016BAD RID: 93101 RVA: 0x00212BFA File Offset: 0x00210DFA
+		// Token: 0x06005983 RID: 22915 RVA: 0x0007E31A File Offset: 0x0007C51A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTraceBoxElement._ClassPtr;
 		}
 
-		// Token: 0x06016BAE RID: 93102 RVA: 0x00212C08 File Offset: 0x00210E08
+		// Token: 0x06005984 RID: 22916 RVA: 0x0007E328 File Offset: 0x0007C528
 		public UTraceBoxElement() : this(BuiltinUtils.AllocNativeUObject(UTraceBoxElement.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016BAF RID: 93103 RVA: 0x00212C30 File Offset: 0x00210E30
+		// Token: 0x06005985 RID: 22917 RVA: 0x0007E350 File Offset: 0x0007C550
 		[NullableContext(1)]
 		public UTraceBoxElement(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTraceBoxElement.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BE6 RID: 23526
-		// (get) Token: 0x06016BB0 RID: 93104 RVA: 0x00212C63 File Offset: 0x00210E63
-		// (set) Token: 0x06016BB1 RID: 93105 RVA: 0x00212C73 File Offset: 0x00210E73
+		// Token: 0x170011BA RID: 4538
+		// (get) Token: 0x06005986 RID: 22918 RVA: 0x0007E383 File Offset: 0x0007C583
+		// (set) Token: 0x06005987 RID: 22919 RVA: 0x0007E393 File Offset: 0x0007C593
 		public unsafe float HalfSizeX
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BE7 RID: 23527
-		// (get) Token: 0x06016BB2 RID: 93106 RVA: 0x00212C84 File Offset: 0x00210E84
-		// (set) Token: 0x06016BB3 RID: 93107 RVA: 0x00212C94 File Offset: 0x00210E94
+		// Token: 0x170011BB RID: 4539
+		// (get) Token: 0x06005988 RID: 22920 RVA: 0x0007E3A4 File Offset: 0x0007C5A4
+		// (set) Token: 0x06005989 RID: 22921 RVA: 0x0007E3B4 File Offset: 0x0007C5B4
 		public unsafe float HalfSizeY
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BE8 RID: 23528
-		// (get) Token: 0x06016BB4 RID: 93108 RVA: 0x00212CA5 File Offset: 0x00210EA5
-		// (set) Token: 0x06016BB5 RID: 93109 RVA: 0x00212CB5 File Offset: 0x00210EB5
+		// Token: 0x170011BC RID: 4540
+		// (get) Token: 0x0600598A RID: 22922 RVA: 0x0007E3C5 File Offset: 0x0007C5C5
+		// (set) Token: 0x0600598B RID: 22923 RVA: 0x0007E3D5 File Offset: 0x0007C5D5
 		public unsafe float HalfSizeZ
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BE9 RID: 23529
-		// (get) Token: 0x06016BB6 RID: 93110 RVA: 0x00212CC6 File Offset: 0x00210EC6
-		// (set) Token: 0x06016BB7 RID: 93111 RVA: 0x00212CD6 File Offset: 0x00210ED6
+		// Token: 0x170011BD RID: 4541
+		// (get) Token: 0x0600598C RID: 22924 RVA: 0x0007E3E6 File Offset: 0x0007C5E6
+		// (set) Token: 0x0600598D RID: 22925 RVA: 0x0007E3F6 File Offset: 0x0007C5F6
 		public unsafe float OrientationPitch
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BEA RID: 23530
-		// (get) Token: 0x06016BB8 RID: 93112 RVA: 0x00212CE7 File Offset: 0x00210EE7
-		// (set) Token: 0x06016BB9 RID: 93113 RVA: 0x00212CF7 File Offset: 0x00210EF7
+		// Token: 0x170011BE RID: 4542
+		// (get) Token: 0x0600598E RID: 22926 RVA: 0x0007E407 File Offset: 0x0007C607
+		// (set) Token: 0x0600598F RID: 22927 RVA: 0x0007E417 File Offset: 0x0007C617
 		public unsafe float OrientationYaw
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BEB RID: 23531
-		// (get) Token: 0x06016BBA RID: 93114 RVA: 0x00212D08 File Offset: 0x00210F08
-		// (set) Token: 0x06016BBB RID: 93115 RVA: 0x00212D18 File Offset: 0x00210F18
+		// Token: 0x170011BF RID: 4543
+		// (get) Token: 0x06005990 RID: 22928 RVA: 0x0007E428 File Offset: 0x0007C628
+		// (set) Token: 0x06005991 RID: 22929 RVA: 0x0007E438 File Offset: 0x0007C638
 		public unsafe float OrientationRoll
 		{
 			get
@@ -118,63 +118,63 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016BBC RID: 93116 RVA: 0x00212D29 File Offset: 0x00210F29
+		// Token: 0x06005992 RID: 22930 RVA: 0x0007E449 File Offset: 0x0007C649
 		public void SetBoxOrientation(float Pitch, float Yaw, float Roll)
 		{
 			UTraceBoxElement.__SetBoxOrientation_Internal(base.NativePtr, Pitch, Yaw, Roll);
 		}
 
-		// Token: 0x06016BBD RID: 93117 RVA: 0x00212D39 File Offset: 0x00210F39
+		// Token: 0x06005993 RID: 22931 RVA: 0x0007E459 File Offset: 0x0007C659
 		public void SetBoxHalfSize(float X, float Y, float Z)
 		{
 			UTraceBoxElement.__SetBoxHalfSize_Internal(base.NativePtr, X, Y, Z);
 		}
 
-		// Token: 0x06016BBE RID: 93118
+		// Token: 0x06005994 RID: 22932
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoxOrientation_Internal(IntPtr @this, float Pitch, float Yaw, float Roll);
 
-		// Token: 0x06016BBF RID: 93119
+		// Token: 0x06005995 RID: 22933
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoxHalfSize_Internal(IntPtr @this, float X, float Y, float Z);
 
-		// Token: 0x06016BC0 RID: 93120 RVA: 0x00212D49 File Offset: 0x00210F49
+		// Token: 0x06005996 RID: 22934 RVA: 0x0007E469 File Offset: 0x0007C669
 		static UTraceBoxElement()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroData.TraceBoxElement");
 		}
 
-		// Token: 0x06016BC1 RID: 93121 RVA: 0x00212D57 File Offset: 0x00210F57
+		// Token: 0x06005997 RID: 22935 RVA: 0x0007E477 File Offset: 0x0007C677
 		protected UTraceBoxElement(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C568 RID: 50536
+		// Token: 0x04002500 RID: 9472
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroData.TraceBoxElement";
 
-		// Token: 0x0400C569 RID: 50537
+		// Token: 0x04002501 RID: 9473
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C56A RID: 50538
+		// Token: 0x04002502 RID: 9474
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C56B RID: 50539
+		// Token: 0x04002503 RID: 9475
 		internal static int __PropertyOffset_HalfSizeX;
 
-		// Token: 0x0400C56C RID: 50540
+		// Token: 0x04002504 RID: 9476
 		internal static int __PropertyOffset_HalfSizeY;
 
-		// Token: 0x0400C56D RID: 50541
+		// Token: 0x04002505 RID: 9477
 		internal static int __PropertyOffset_HalfSizeZ;
 
-		// Token: 0x0400C56E RID: 50542
+		// Token: 0x04002506 RID: 9478
 		internal static int __PropertyOffset_OrientationPitch;
 
-		// Token: 0x0400C56F RID: 50543
+		// Token: 0x04002507 RID: 9479
 		internal static int __PropertyOffset_OrientationYaw;
 
-		// Token: 0x0400C570 RID: 50544
+		// Token: 0x04002508 RID: 9480
 		internal static int __PropertyOffset_OrientationRoll;
 	}
 }

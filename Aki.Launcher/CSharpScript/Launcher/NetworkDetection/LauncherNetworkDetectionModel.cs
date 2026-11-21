@@ -6,12 +6,12 @@ using CSharpScript.Launcher.Platform;
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001B9 RID: 441
+	// Token: 0x020001BD RID: 445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherNetworkDetectionModel
 	{
-		// Token: 0x06000BE3 RID: 3043 RVA: 0x0004A3E4 File Offset: 0x000485E4
+		// Token: 0x06000C1A RID: 3098 RVA: 0x0004CBD4 File Offset: 0x0004ADD4
 		public static string GetGenericErrorCodeTips(ENetworkDetectionType detectionType, int errorCode, INetworkDetectionResult result)
 		{
 			string value = "ERROR CODE:";
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000BE4 RID: 3044 RVA: 0x0004A538 File Offset: 0x00048738
+		// Token: 0x06000C1B RID: 3099 RVA: 0x0004CD28 File Offset: 0x0004AF28
 		public static string GenerateTraceCode()
 		{
 			List<int> list = new List<int>();
@@ -64,7 +64,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return string.Join<int>("", list);
 		}
 
-		// Token: 0x06000BE5 RID: 3045 RVA: 0x0004A578 File Offset: 0x00048778
+		// Token: 0x06000C1C RID: 3100 RVA: 0x0004CD68 File Offset: 0x0004AF68
 		public static List<INetworkDetectionEntry> GetDetectionDataList()
 		{
 			if (Platform.Instance.IsWindowsPlatform())

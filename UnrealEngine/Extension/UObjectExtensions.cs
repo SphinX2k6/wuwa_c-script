@@ -4,20 +4,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE6 RID: 10982
+	// Token: 0x02000895 RID: 2197
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class UObjectExtensions
 	{
-		// Token: 0x06028410 RID: 164880
+		// Token: 0x0600BDC5 RID: 48581
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr Internal_GetWorld(IntPtr UObject);
 
-		// Token: 0x06028411 RID: 164881
+		// Token: 0x0600BDC6 RID: 48582
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr Internal_GetOuter(IntPtr UObject);
 
-		// Token: 0x06028412 RID: 164882 RVA: 0x003D3B0B File Offset: 0x003D1D0B
+		// Token: 0x0600BDC7 RID: 48583 RVA: 0x0012EE1B File Offset: 0x0012D01B
 		public static UWorld GetWorld(this UObject Object)
 		{
 			if (Object != null && Object._NativePtr != 0)
@@ -27,7 +27,7 @@ namespace UnrealEngine.Extension
 			return null;
 		}
 
-		// Token: 0x06028413 RID: 164883 RVA: 0x003D3B2A File Offset: 0x003D1D2A
+		// Token: 0x0600BDC8 RID: 48584 RVA: 0x0012EE3A File Offset: 0x0012D03A
 		public static UObject GetOuter(this UObject Object)
 		{
 			if (Object != null && Object._NativePtr != 0)

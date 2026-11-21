@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017F9 RID: 6137
+	// Token: 0x02001982 RID: 6530
 	public class IBaseCurve_SetValue
 	{
-		// Token: 0x0400538D RID: 21389
+		// Token: 0x040057D5 RID: 22485
 		public EBaseCurveType Type;
 
-		// Token: 0x0400538E RID: 21390
+		// Token: 0x040057D6 RID: 22486
 		public float N;
 
-		// Token: 0x0400538F RID: 21391
+		// Token: 0x040057D7 RID: 22487
 		[Nullable(2)]
 		public string CurveAsset;
 	}

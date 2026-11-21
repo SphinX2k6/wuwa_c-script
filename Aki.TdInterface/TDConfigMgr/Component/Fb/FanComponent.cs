@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CD0 RID: 3280
+	// Token: 0x02000DB4 RID: 3508
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FanComponent : IComponentBase
 	{
-		// Token: 0x06004AF8 RID: 19192 RVA: 0x000BB7E7 File Offset: 0x000B99E7
-		[NullableContext(1)]
+		// Token: 0x06004FB3 RID: 20403 RVA: 0x000C641F File Offset: 0x000C461F
+		[NullableContext(0)]
 		public static FanComponent Create(IFanComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001715 RID: 5909
-		// (get) Token: 0x06004AF9 RID: 19193 RVA: 0x000BB808 File Offset: 0x000B9A08
+		// Token: 0x17001846 RID: 6214
+		// (get) Token: 0x06004FB4 RID: 20404 RVA: 0x000C6440 File Offset: 0x000C4640
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001716 RID: 5910
-		// (get) Token: 0x06004AFA RID: 19194 RVA: 0x000BB840 File Offset: 0x000B9A40
+		// Token: 0x17001847 RID: 6215
+		// (get) Token: 0x06004FB5 RID: 20405 RVA: 0x000C6478 File Offset: 0x000C4678
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001717 RID: 5911
-		// (get) Token: 0x06004AFB RID: 19195 RVA: 0x000BB858 File Offset: 0x000B9A58
+		// Token: 0x17001848 RID: 6216
+		// (get) Token: 0x06004FB6 RID: 20406 RVA: 0x000C6490 File Offset: 0x000C4690
 		public virtual EFanGearType? GearType
 		{
 			get
@@ -63,12 +63,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001718 RID: 5912
-		// (get) Token: 0x06004AFC RID: 19196 RVA: 0x000BB88E File Offset: 0x000B9A8E
-		[Nullable(1)]
+		// Token: 0x17001849 RID: 6217
+		// (get) Token: 0x06004FB7 RID: 20407 RVA: 0x000C64C6 File Offset: 0x000C46C6
+		[Nullable(0)]
 		public virtual IFanInteractType InteractType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._InteractTypeInited)
@@ -81,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001719 RID: 5913
-		// (get) Token: 0x06004AFD RID: 19197 RVA: 0x000BB8BD File Offset: 0x000B9ABD
+		// Token: 0x1700184A RID: 6218
+		// (get) Token: 0x06004FB8 RID: 20408 RVA: 0x000C64F5 File Offset: 0x000C46F5
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -97,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700171A RID: 5914
-		// (get) Token: 0x06004AFE RID: 19198 RVA: 0x000BB8F1 File Offset: 0x000B9AF1
+		// Token: 0x1700184B RID: 6219
+		// (get) Token: 0x06004FB9 RID: 20409 RVA: 0x000C6529 File Offset: 0x000C4729
 		public virtual string RotateActor
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700171B RID: 5915
-		// (get) Token: 0x06004AFF RID: 19199 RVA: 0x000BB8FE File Offset: 0x000B9AFE
+		// Token: 0x1700184C RID: 6220
+		// (get) Token: 0x06004FBA RID: 20410 RVA: 0x000C6536 File Offset: 0x000C4736
 		public virtual string OffsetActor
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700171C RID: 5916
-		// (get) Token: 0x06004B00 RID: 19200 RVA: 0x000BB90B File Offset: 0x000B9B0B
+		// Token: 0x1700184D RID: 6221
+		// (get) Token: 0x06004FBB RID: 20411 RVA: 0x000C6543 File Offset: 0x000C4743
 		public virtual int CirclePerRound
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700171D RID: 5917
-		// (get) Token: 0x06004B01 RID: 19201 RVA: 0x000BB918 File Offset: 0x000B9B18
+		// Token: 0x1700184E RID: 6222
+		// (get) Token: 0x06004FBC RID: 20412 RVA: 0x000C6550 File Offset: 0x000C4750
 		public virtual int InitCircle
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700171E RID: 5918
-		// (get) Token: 0x06004B02 RID: 19202 RVA: 0x000BB928 File Offset: 0x000B9B28
+		// Token: 0x1700184F RID: 6223
+		// (get) Token: 0x06004FBD RID: 20413 RVA: 0x000C6560 File Offset: 0x000C4760
 		public virtual int? TargetEntityId
 		{
 			get
@@ -151,8 +151,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700171F RID: 5919
-		// (get) Token: 0x06004B03 RID: 19203 RVA: 0x000BB95E File Offset: 0x000B9B5E
+		// Token: 0x17001850 RID: 6224
+		// (get) Token: 0x06004FBE RID: 20414 RVA: 0x000C6596 File Offset: 0x000C4796
 		public virtual IFanEffectConfig EffectConfig
 		{
 			get
@@ -167,19 +167,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001720 RID: 5920
-		// (get) Token: 0x06004B04 RID: 19204 RVA: 0x000BB994 File Offset: 0x000B9B94
+		// Token: 0x17001851 RID: 6225
+		// (get) Token: 0x06004FBF RID: 20415 RVA: 0x000C65CC File Offset: 0x000C47CC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IFanStateEffect> EffectByState
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -202,37 +202,37 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AE7 RID: 10983
+		// Token: 0x04002D6D RID: 11629
 		private IFanComponent Instance;
 
-		// Token: 0x04002AE8 RID: 10984
-		[Nullable(1)]
+		// Token: 0x04002D6E RID: 11630
+		[Nullable(0)]
 		private IFanInteractType _InteractTypeCache;
 
-		// Token: 0x04002AE9 RID: 10985
+		// Token: 0x04002D6F RID: 11631
 		private bool _InteractTypeInited;
 
-		// Token: 0x04002AEA RID: 10986
+		// Token: 0x04002D70 RID: 11632
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002AEB RID: 10987
+		// Token: 0x04002D71 RID: 11633
 		private bool _ConditionInited;
 
-		// Token: 0x04002AEC RID: 10988
+		// Token: 0x04002D72 RID: 11634
 		private IFanEffectConfig _EffectConfigCache;
 
-		// Token: 0x04002AED RID: 10989
+		// Token: 0x04002D73 RID: 11635
 		private bool _EffectConfigInited;
 
-		// Token: 0x04002AEE RID: 10990
+		// Token: 0x04002D74 RID: 11636
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IFanStateEffect> _EffectByStateCache;
 
-		// Token: 0x04002AEF RID: 10991
+		// Token: 0x04002D75 RID: 11637
 		private bool _EffectByStateInited;
 	}
 }

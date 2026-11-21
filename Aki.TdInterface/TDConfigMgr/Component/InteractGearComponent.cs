@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005A0 RID: 1440
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000609 RID: 1545
 	public class InteractGearComponent : IComponentBase
 	{
-		// Token: 0x06001E5E RID: 7774 RVA: 0x000561CC File Offset: 0x000543CC
+		// Token: 0x06002064 RID: 8292 RVA: 0x0005B088 File Offset: 0x00059288
 		private InteractGearComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001E5F RID: 7775 RVA: 0x00056204 File Offset: 0x00054404
+		// Token: 0x06002065 RID: 8293 RVA: 0x0005B0C0 File Offset: 0x000592C0
 		public static InteractGearComponent Create([Nullable(2)] InteractGearComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E60 RID: 7776 RVA: 0x00056217 File Offset: 0x00054417
+		// Token: 0x06002066 RID: 8294 RVA: 0x0005B0D3 File Offset: 0x000592D3
 		public static InteractGearComponent CreateFromSetValue([Nullable(2)] InteractGearComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E61 RID: 7777 RVA: 0x0005622A File Offset: 0x0005442A
+		// Token: 0x06002067 RID: 8295 RVA: 0x0005B0E6 File Offset: 0x000592E6
 		public new InteractGearComponent_SetValue ToSetValue()
 		{
 			return new InteractGearComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700081E RID: 2078
-		// (get) Token: 0x06001E62 RID: 7778 RVA: 0x00056264 File Offset: 0x00054464
-		// (set) Token: 0x06001E63 RID: 7779 RVA: 0x0005629E File Offset: 0x0005449E
+		// Token: 0x170008A3 RID: 2211
+		// (get) Token: 0x06002068 RID: 8296 RVA: 0x0005B120 File Offset: 0x00059320
+		// (set) Token: 0x06002069 RID: 8297 RVA: 0x0005B15A File Offset: 0x0005935A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700081F RID: 2079
-		// (get) Token: 0x06001E64 RID: 7780 RVA: 0x000562AC File Offset: 0x000544AC
-		// (set) Token: 0x06001E65 RID: 7781 RVA: 0x000562D6 File Offset: 0x000544D6
+		// Token: 0x170008A4 RID: 2212
+		// (get) Token: 0x0600206A RID: 8298 RVA: 0x0005B168 File Offset: 0x00059368
+		// (set) Token: 0x0600206B RID: 8299 RVA: 0x0005B192 File Offset: 0x00059392
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000820 RID: 2080
-		// (get) Token: 0x06001E66 RID: 7782 RVA: 0x000562E4 File Offset: 0x000544E4
-		// (set) Token: 0x06001E67 RID: 7783 RVA: 0x00056313 File Offset: 0x00054513
+		// Token: 0x170008A5 RID: 2213
+		// (get) Token: 0x0600206C RID: 8300 RVA: 0x0005B1A0 File Offset: 0x000593A0
+		// (set) Token: 0x0600206D RID: 8301 RVA: 0x0005B1CF File Offset: 0x000593CF
 		public virtual float NormalPrepareTime
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000821 RID: 2081
-		// (get) Token: 0x06001E68 RID: 7784 RVA: 0x00056321 File Offset: 0x00054521
-		// (set) Token: 0x06001E69 RID: 7785 RVA: 0x00056350 File Offset: 0x00054550
+		// Token: 0x170008A6 RID: 2214
+		// (get) Token: 0x0600206E RID: 8302 RVA: 0x0005B1DD File Offset: 0x000593DD
+		// (set) Token: 0x0600206F RID: 8303 RVA: 0x0005B20C File Offset: 0x0005940C
 		public virtual float ActivePrepareTime
 		{
 			get
@@ -151,11 +149,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015AC RID: 5548
+		// Token: 0x0400171A RID: 5914
 		[Nullable(2)]
 		protected new InteractGearComponent FbInstance;
 
-		// Token: 0x040015AD RID: 5549
+		// Token: 0x0400171B RID: 5915
 		[Nullable(2)]
 		protected new InteractGearComponent_SetValue PocoInterface;
 	}

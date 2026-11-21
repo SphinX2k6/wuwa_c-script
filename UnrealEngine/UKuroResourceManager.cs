@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001902 RID: 6402
+	// Token: 0x020003FC RID: 1020
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroResourceManager")]
 	[UnrealStructLayout(416, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 416)]
 	public class UKuroResourceManager : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017C1A RID: 97306 RVA: 0x0022CD9D File Offset: 0x0022AF9D
+		// Token: 0x0600640F RID: 25615 RVA: 0x0008EED3 File Offset: 0x0008D0D3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroResourceManager._ClassPtr;
 		}
 
-		// Token: 0x06017C1B RID: 97307 RVA: 0x0022CDAC File Offset: 0x0022AFAC
+		// Token: 0x06006410 RID: 25616 RVA: 0x0008EEE0 File Offset: 0x0008D0E0
 		public UKuroResourceManager() : this(BuiltinUtils.AllocNativeUObject(UKuroResourceManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017C1C RID: 97308 RVA: 0x0022CDD4 File Offset: 0x0022AFD4
+		// Token: 0x06006411 RID: 25617 RVA: 0x0008EF08 File Offset: 0x0008D108
 		public UKuroResourceManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroResourceManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005FA6 RID: 24486
-		// (get) Token: 0x06017C1D RID: 97309 RVA: 0x0022CE08 File Offset: 0x0022B008
-		// (set) Token: 0x06017C1E RID: 97310 RVA: 0x0022CE41 File Offset: 0x0022B041
+		// Token: 0x1700141F RID: 5151
+		// (get) Token: 0x06006412 RID: 25618 RVA: 0x0008EF3C File Offset: 0x0008D13C
+		// (set) Token: 0x06006413 RID: 25619 RVA: 0x0008EF75 File Offset: 0x0008D175
 		public FKuroLoadResourceDelegate LoadResourceDelegate
 		{
 			get
@@ -50,19 +50,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C1F RID: 97311 RVA: 0x0022CE62 File Offset: 0x0022B062
+		// Token: 0x06006414 RID: 25620 RVA: 0x0008EF96 File Offset: 0x0008D196
 		public bool WaitComplete(int HandleId, float Timeout)
 		{
 			return UKuroResourceManager.__WaitComplete_Internal(base.NativePtr, HandleId, Timeout);
 		}
 
-		// Token: 0x06017C20 RID: 97312 RVA: 0x0022CE71 File Offset: 0x0022B071
+		// Token: 0x06006415 RID: 25621 RVA: 0x0008EFA5 File Offset: 0x0008D1A5
 		public void Release(int HandleId)
 		{
 			UKuroResourceManager.__Release_Internal(base.NativePtr, HandleId);
 		}
 
-		// Token: 0x06017C21 RID: 97313 RVA: 0x0022CE80 File Offset: 0x0022B080
+		// Token: 0x06006416 RID: 25622 RVA: 0x0008EFB4 File Offset: 0x0008D1B4
 		public unsafe int LoadWithIdByName(in FName Path, int HandleId)
 		{
 			fixed (FName* ptr = &Path)
@@ -72,7 +72,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C22 RID: 97314 RVA: 0x0022CEA0 File Offset: 0x0022B0A0
+		// Token: 0x06006417 RID: 25623 RVA: 0x0008EFD4 File Offset: 0x0008D1D4
 		public unsafe int LoadWithIdAndTagByName(in FName Path, int HandleId, FName MemTag)
 		{
 			fixed (FName* ptr = &Path)
@@ -82,7 +82,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C23 RID: 97315 RVA: 0x0022CEC0 File Offset: 0x0022B0C0
+		// Token: 0x06006418 RID: 25624 RVA: 0x0008EFF4 File Offset: 0x0008D1F4
 		public unsafe int LoadWithIdAndTag(string Path, int HandleId, FName MemTag)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -91,7 +91,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017C24 RID: 97316 RVA: 0x0022CEEC File Offset: 0x0022B0EC
+		// Token: 0x06006419 RID: 25625 RVA: 0x0008F020 File Offset: 0x0008D220
 		public unsafe int LoadWithId(string Path, int HandleId)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -100,7 +100,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017C25 RID: 97317 RVA: 0x0022CF18 File Offset: 0x0022B118
+		// Token: 0x0600641A RID: 25626 RVA: 0x0008F04C File Offset: 0x0008D24C
 		public unsafe int LoadAsyncWithIdByName(in FName Path, int HandleId, int Priority)
 		{
 			fixed (FName* ptr = &Path)
@@ -110,7 +110,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C26 RID: 97318 RVA: 0x0022CF38 File Offset: 0x0022B138
+		// Token: 0x0600641B RID: 25627 RVA: 0x0008F06C File Offset: 0x0008D26C
 		public unsafe int LoadAsyncWithIdAndTagByName(in FName Path, int HandleId, int Priority, FName MemTag)
 		{
 			fixed (FName* ptr = &Path)
@@ -120,7 +120,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C27 RID: 97319 RVA: 0x0022CF5C File Offset: 0x0022B15C
+		// Token: 0x0600641C RID: 25628 RVA: 0x0008F090 File Offset: 0x0008D290
 		public unsafe int LoadAsyncWithIdAndTag(string Path, int HandleId, int Priority, FName MemTag)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -129,7 +129,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017C28 RID: 97320 RVA: 0x0022CF8C File Offset: 0x0022B18C
+		// Token: 0x0600641D RID: 25629 RVA: 0x0008F0C0 File Offset: 0x0008D2C0
 		public unsafe int LoadAsyncWithId(string Path, int HandleId, int Priority)
 		{
 			FString fstring = FString.AllocTemp(Path);
@@ -138,7 +138,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017C29 RID: 97321 RVA: 0x0022CFB8 File Offset: 0x0022B1B8
+		// Token: 0x0600641E RID: 25630 RVA: 0x0008F0EC File Offset: 0x0008D2EC
 		[NullableContext(2)]
 		public unsafe UObject GetLoadedAssetByName(in FName Path)
 		{
@@ -149,7 +149,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C2A RID: 97322 RVA: 0x0022CFDC File Offset: 0x0022B1DC
+		// Token: 0x0600641F RID: 25631 RVA: 0x0008F110 File Offset: 0x0008D310
 		[return: Nullable(2)]
 		public unsafe UObject GetLoadedAsset(string Path)
 		{
@@ -159,99 +159,99 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x06017C2B RID: 97323 RVA: 0x0022D00B File Offset: 0x0022B20B
+		// Token: 0x06006420 RID: 25632 RVA: 0x0008F13F File Offset: 0x0008D33F
 		[NullableContext(2)]
 		public UObject GetAsset(int HandleId)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(UKuroResourceManager.__GetAsset_Internal(base.NativePtr, HandleId));
 		}
 
-		// Token: 0x06017C2C RID: 97324 RVA: 0x0022D01E File Offset: 0x0022B21E
+		// Token: 0x06006421 RID: 25633 RVA: 0x0008F152 File Offset: 0x0008D352
 		public void DebugDumpLoadingAssets()
 		{
 			UKuroResourceManager.__DebugDumpLoadingAssets_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017C2D RID: 97325
+		// Token: 0x06006422 RID: 25634
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __WaitComplete_Internal(IntPtr @this, int HandleId, float Timeout);
 
-		// Token: 0x06017C2E RID: 97326
+		// Token: 0x06006423 RID: 25635
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Release_Internal(IntPtr @this, int HandleId);
 
-		// Token: 0x06017C2F RID: 97327
+		// Token: 0x06006424 RID: 25636
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadWithIdByName_Internal(IntPtr @this, in FName Path, int HandleId);
 
-		// Token: 0x06017C30 RID: 97328
+		// Token: 0x06006425 RID: 25637
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadWithIdAndTagByName_Internal(IntPtr @this, in FName Path, int HandleId, FName MemTag);
 
-		// Token: 0x06017C31 RID: 97329
+		// Token: 0x06006426 RID: 25638
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadWithIdAndTag_Internal(IntPtr @this, in FString Path, int HandleId, FName MemTag);
 
-		// Token: 0x06017C32 RID: 97330
+		// Token: 0x06006427 RID: 25639
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadWithId_Internal(IntPtr @this, in FString Path, int HandleId);
 
-		// Token: 0x06017C33 RID: 97331
+		// Token: 0x06006428 RID: 25640
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadAsyncWithIdByName_Internal(IntPtr @this, in FName Path, int HandleId, int Priority);
 
-		// Token: 0x06017C34 RID: 97332
+		// Token: 0x06006429 RID: 25641
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadAsyncWithIdAndTagByName_Internal(IntPtr @this, in FName Path, int HandleId, int Priority, FName MemTag);
 
-		// Token: 0x06017C35 RID: 97333
+		// Token: 0x0600642A RID: 25642
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadAsyncWithIdAndTag_Internal(IntPtr @this, in FString Path, int HandleId, int Priority, FName MemTag);
 
-		// Token: 0x06017C36 RID: 97334
+		// Token: 0x0600642B RID: 25643
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __LoadAsyncWithId_Internal(IntPtr @this, in FString Path, int HandleId, int Priority);
 
-		// Token: 0x06017C37 RID: 97335
+		// Token: 0x0600642C RID: 25644
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetLoadedAssetByName_Internal(IntPtr @this, in FName Path);
 
-		// Token: 0x06017C38 RID: 97336
+		// Token: 0x0600642D RID: 25645
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetLoadedAsset_Internal(IntPtr @this, in FString Path);
 
-		// Token: 0x06017C39 RID: 97337
+		// Token: 0x0600642E RID: 25646
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetAsset_Internal(IntPtr @this, int HandleId);
 
-		// Token: 0x06017C3A RID: 97338
+		// Token: 0x0600642F RID: 25647
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DebugDumpLoadingAssets_Internal(IntPtr @this);
 
-		// Token: 0x06017C3B RID: 97339 RVA: 0x0022D02B File Offset: 0x0022B22B
+		// Token: 0x06006430 RID: 25648 RVA: 0x0008F15F File Offset: 0x0008D35F
 		static UKuroResourceManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroResourceManager");
 		}
 
-		// Token: 0x06017C3C RID: 97340 RVA: 0x0022D039 File Offset: 0x0022B239
+		// Token: 0x06006431 RID: 25649 RVA: 0x0008F16D File Offset: 0x0008D36D
 		protected UKuroResourceManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CE3A RID: 52794
+		// Token: 0x04002A40 RID: 10816
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroResourceManager";
 
-		// Token: 0x0400CE3B RID: 52795
+		// Token: 0x04002A41 RID: 10817
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CE3C RID: 52796
+		// Token: 0x04002A42 RID: 10818
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CE3D RID: 52797
+		// Token: 0x04002A43 RID: 10819
 		internal static int __PropertyOffset_LoadResourceDelegate;
 
-		// Token: 0x0400CE3E RID: 52798
+		// Token: 0x04002A44 RID: 10820
 		[Nullable(2)]
 		private FKuroLoadResourceDelegate _LoadResourceDelegate;
 	}

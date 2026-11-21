@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 using CSharpScript.Core.Common;
@@ -11,18 +10,18 @@ using CSharpScript.Game.Module.SkillButtonUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002615 RID: 9749
+// Token: 0x02001B00 RID: 6912
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteItemBase where TContextType : CommonQteContextBase
 {
-	// Token: 0x06013E67 RID: 81511 RVA: 0x004FFD27 File Offset: 0x004FDF27
+	// Token: 0x06011349 RID: 70473 RVA: 0x0050EB9B File Offset: 0x0050CD9B
 	protected override void OnRegisterComponent()
 	{
 		this.IsMobile = Info.Instance.IsInTouch();
 	}
 
-	// Token: 0x06013E68 RID: 81512 RVA: 0x004FFD3C File Offset: 0x004FDF3C
+	// Token: 0x0601134A RID: 70474 RVA: 0x0050EBB0 File Offset: 0x0050CDB0
 	protected override void OnStart()
 	{
 		UUIItem floatUnit = UiLayer.Instance.GetFloatUnit(ELayerType.BattleFloat, 2);
@@ -32,7 +31,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E69 RID: 81513 RVA: 0x004FFD68 File Offset: 0x004FDF68
+	// Token: 0x0601134B RID: 70475 RVA: 0x0050EBDC File Offset: 0x0050CDDC
 	protected override void OnBeforeDestroy()
 	{
 		this.UnbindEvents();
@@ -61,7 +60,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E6A RID: 81514 RVA: 0x004FFE34 File Offset: 0x004FE034
+	// Token: 0x0601134C RID: 70476 RVA: 0x0050ECA8 File Offset: 0x0050CEA8
 	protected void BindAction()
 	{
 		if (this.HasBindAction)
@@ -80,7 +79,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.OnBindAction();
 	}
 
-	// Token: 0x06013E6B RID: 81515 RVA: 0x004FFEC0 File Offset: 0x004FE0C0
+	// Token: 0x0601134D RID: 70477 RVA: 0x0050ED34 File Offset: 0x0050CF34
 	protected void UnbindAction()
 	{
 		if (!this.HasBindAction)
@@ -99,23 +98,23 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.OnUnbindAction();
 	}
 
-	// Token: 0x06013E6C RID: 81516 RVA: 0x004FFF49 File Offset: 0x004FE149
+	// Token: 0x0601134E RID: 70478 RVA: 0x0050EDBD File Offset: 0x0050CFBD
 	protected virtual void OnBindAction()
 	{
 	}
 
-	// Token: 0x06013E6D RID: 81517 RVA: 0x004FFF4B File Offset: 0x004FE14B
+	// Token: 0x0601134F RID: 70479 RVA: 0x0050EDBF File Offset: 0x0050CFBF
 	protected virtual void OnUnbindAction()
 	{
 	}
 
-	// Token: 0x06013E6E RID: 81518 RVA: 0x004FFF4D File Offset: 0x004FE14D
+	// Token: 0x06011350 RID: 70480 RVA: 0x0050EDC1 File Offset: 0x0050CFC1
 	protected virtual bool IsUseBaseAction()
 	{
 		return true;
 	}
 
-	// Token: 0x06013E6F RID: 81519 RVA: 0x004FFF50 File Offset: 0x004FE150
+	// Token: 0x06011351 RID: 70481 RVA: 0x0050EDC4 File Offset: 0x0050CFC4
 	[NullableContext(1)]
 	protected void OnInputCallback(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
@@ -134,7 +133,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E70 RID: 81520 RVA: 0x004FFF70 File Offset: 0x004FE170
+	// Token: 0x06011352 RID: 70482 RVA: 0x0050EDE4 File Offset: 0x0050CFE4
 	[NullableContext(1)]
 	private void OnInputInteract(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
@@ -173,37 +172,37 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E71 RID: 81521 RVA: 0x00500022 File Offset: 0x004FE222
+	// Token: 0x06011353 RID: 70483 RVA: 0x0050EE96 File Offset: 0x0050D096
 	protected virtual void OnInputPress()
 	{
 	}
 
-	// Token: 0x06013E72 RID: 81522 RVA: 0x00500024 File Offset: 0x004FE224
+	// Token: 0x06011354 RID: 70484 RVA: 0x0050EE98 File Offset: 0x0050D098
 	protected virtual void OnInputRelease()
 	{
 	}
 
-	// Token: 0x06013E73 RID: 81523 RVA: 0x00500026 File Offset: 0x004FE226
+	// Token: 0x06011355 RID: 70485 RVA: 0x0050EE9A File Offset: 0x0050D09A
 	public override void OnInputTest()
 	{
 		this.OnInputPress();
 	}
 
-	// Token: 0x06013E74 RID: 81524 RVA: 0x0050002E File Offset: 0x004FE22E
+	// Token: 0x06011356 RID: 70486 RVA: 0x0050EEA2 File Offset: 0x0050D0A2
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
 		this.ResumeQte(false);
 	}
 
-	// Token: 0x06013E75 RID: 81525 RVA: 0x0050003D File Offset: 0x004FE23D
+	// Token: 0x06011357 RID: 70487 RVA: 0x0050EEB1 File Offset: 0x0050D0B1
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
 		this.PauseQte();
 	}
 
-	// Token: 0x06013E76 RID: 81526 RVA: 0x0050004C File Offset: 0x004FE24C
+	// Token: 0x06011358 RID: 70488 RVA: 0x0050EEC0 File Offset: 0x0050D0C0
 	private void BindEvents()
 	{
 		if (this.IsBindEvents)
@@ -217,7 +216,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		EventSystem.Instance.Add<int?>(EEventName.CommonQteEnd, new Action<int?>(this.OnCommonQteEnd));
 	}
 
-	// Token: 0x06013E77 RID: 81527 RVA: 0x005000D8 File Offset: 0x004FE2D8
+	// Token: 0x06011359 RID: 70489 RVA: 0x0050EF4C File Offset: 0x0050D14C
 	private void UnbindEvents()
 	{
 		if (!this.IsBindEvents)
@@ -231,7 +230,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		EventSystem.Instance.Remove<int?>(EEventName.CommonQteEnd, new Action<int?>(this.OnCommonQteEnd));
 	}
 
-	// Token: 0x06013E78 RID: 81528 RVA: 0x00500164 File Offset: 0x004FE364
+	// Token: 0x0601135A RID: 70490 RVA: 0x0050EFD8 File Offset: 0x0050D1D8
 	private void OnCommonQteEnd(int? handleId)
 	{
 		int qteHandle = this.QteHandle;
@@ -243,7 +242,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.HandleQteEnd();
 	}
 
-	// Token: 0x06013E79 RID: 81529 RVA: 0x00500194 File Offset: 0x004FE394
+	// Token: 0x0601135B RID: 70491 RVA: 0x0050F008 File Offset: 0x0050D208
 	private void OnBattleUiVisibleChanged()
 	{
 		if (this.CommonQteContext == null || this.IsAttaching)
@@ -263,7 +262,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E7A RID: 81530 RVA: 0x00500201 File Offset: 0x004FE401
+	// Token: 0x0601135C RID: 70492 RVA: 0x0050F075 File Offset: 0x0050D275
 	private void OnTriggerUiTimeDilation()
 	{
 		if (this.IsQteEnd)
@@ -282,7 +281,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.ResumeQte(true);
 	}
 
-	// Token: 0x06013E7B RID: 81531 RVA: 0x00500238 File Offset: 0x004FE438
+	// Token: 0x0601135D RID: 70493 RVA: 0x0050F0AC File Offset: 0x0050D2AC
 	protected void Tick(float delta)
 	{
 		if (this.IsKeepRelativeToCamera)
@@ -300,7 +299,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.OnTick(delta);
 	}
 
-	// Token: 0x06013E7C RID: 81532 RVA: 0x00500270 File Offset: 0x004FE470
+	// Token: 0x0601135E RID: 70494 RVA: 0x0050F0E4 File Offset: 0x0050D2E4
 	protected virtual void OnTick(float delta)
 	{
 		UUIItem originalItem = this.GetOriginalItem();
@@ -339,12 +338,12 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E7D RID: 81533 RVA: 0x00500352 File Offset: 0x004FE552
+	// Token: 0x0601135F RID: 70495 RVA: 0x0050F1C6 File Offset: 0x0050D3C6
 	protected virtual void OnTickQteItem(float delta)
 	{
 	}
 
-	// Token: 0x06013E7E RID: 81534 RVA: 0x00500354 File Offset: 0x004FE554
+	// Token: 0x06011360 RID: 70496 RVA: 0x0050F1C8 File Offset: 0x0050D3C8
 	protected void PauseQte()
 	{
 		if (this.IsQtePause || this.IsQteEnd)
@@ -363,7 +362,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E7F RID: 81535 RVA: 0x00500390 File Offset: 0x004FE590
+	// Token: 0x06011361 RID: 70497 RVA: 0x0050F204 File Offset: 0x0050D404
 	protected void ResumeQte(bool delay = false)
 	{
 		if (!this.IsQtePause || this.IsQteEnd)
@@ -395,7 +394,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E80 RID: 81536 RVA: 0x005003F2 File Offset: 0x004FE5F2
+	// Token: 0x06011362 RID: 70498 RVA: 0x0050F266 File Offset: 0x0050D466
 	protected virtual void OnQtePause()
 	{
 		if (this.CommonQteContext != null)
@@ -405,7 +404,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.UnbindAction();
 	}
 
-	// Token: 0x06013E81 RID: 81537 RVA: 0x00500424 File Offset: 0x004FE624
+	// Token: 0x06011363 RID: 70499 RVA: 0x0050F298 File Offset: 0x0050D498
 	protected virtual void OnQteResume()
 	{
 		if (this.CommonQteContext != null)
@@ -422,7 +421,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E82 RID: 81538 RVA: 0x00500474 File Offset: 0x004FE674
+	// Token: 0x06011364 RID: 70500 RVA: 0x0050F2E8 File Offset: 0x0050D4E8
 	protected void HandleQteEnd()
 	{
 		if (this.IsQteEnd)
@@ -435,18 +434,18 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.ClearTickTimer();
 	}
 
-	// Token: 0x06013E83 RID: 81539 RVA: 0x00500498 File Offset: 0x004FE698
+	// Token: 0x06011365 RID: 70501 RVA: 0x0050F30C File Offset: 0x0050D50C
 	protected virtual void OnHandleQteEnd()
 	{
 	}
 
-	// Token: 0x06013E84 RID: 81540 RVA: 0x0050049A File Offset: 0x004FE69A
+	// Token: 0x06011366 RID: 70502 RVA: 0x0050F30E File Offset: 0x0050D50E
 	public bool IsValidInput()
 	{
 		return this.IsQteInteractive && !this.IsQteEnd && !this.IsQtePause;
 	}
 
-	// Token: 0x06013E85 RID: 81541 RVA: 0x005004B8 File Offset: 0x004FE6B8
+	// Token: 0x06011367 RID: 70503 RVA: 0x0050F32C File Offset: 0x0050D52C
 	public unsafe override void PlayQteStart()
 	{
 		Log.Instance.Info(ELogModule.CommonQte, ELogAuthor.WWJ, "[CommonQteItemBase] PlayQteStart", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -470,12 +469,12 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		CommonQteController.Instance.SetExpiredTimer(this.CommonQteContext);
 	}
 
-	// Token: 0x06013E86 RID: 81542 RVA: 0x0050060F File Offset: 0x004FE80F
+	// Token: 0x06011368 RID: 70504 RVA: 0x0050F483 File Offset: 0x0050D683
 	protected virtual void OnPlayQteStart()
 	{
 	}
 
-	// Token: 0x06013E87 RID: 81543 RVA: 0x00500614 File Offset: 0x004FE814
+	// Token: 0x06011369 RID: 70505 RVA: 0x0050F488 File Offset: 0x0050D688
 	[NullableContext(1)]
 	public override void SetQteContext(CommonQteContextBase context)
 	{
@@ -504,41 +503,59 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.PlayQteStart();
 	}
 
-	// Token: 0x06013E88 RID: 81544 RVA: 0x005006A4 File Offset: 0x004FE8A4
+	// Token: 0x0601136A RID: 70506 RVA: 0x0050F518 File Offset: 0x0050D718
 	[NullableContext(1)]
 	private void ApplyBaseUiConfig(object uiConfig)
 	{
-		FieldInfo field = uiConfig.GetType().GetField("InteractiveTiming");
-		if (field != null)
+		SCommonQte_SingleClick scommonQte_SingleClick = uiConfig as SCommonQte_SingleClick;
+		bool isQteInteractive;
+		if (scommonQte_SingleClick == null)
 		{
-			object value = field.GetValue(uiConfig);
-			if (value is ECommonQteInteractiveTiming)
+			SCommonQte_ContinuousClick scommonQte_ContinuousClick = uiConfig as SCommonQte_ContinuousClick;
+			if (scommonQte_ContinuousClick == null)
 			{
-				ECommonQteInteractiveTiming ecommonQteInteractiveTiming = (ECommonQteInteractiveTiming)value;
-				this.IsQteInteractive = (ecommonQteInteractiveTiming == ECommonQteInteractiveTiming.始终);
+				SCommonQte_LongPress scommonQte_LongPress = uiConfig as SCommonQte_LongPress;
+				if (scommonQte_LongPress == null)
+				{
+					SCommonQte_Drag scommonQte_Drag = uiConfig as SCommonQte_Drag;
+					isQteInteractive = (scommonQte_Drag != null && scommonQte_Drag.InteractiveTiming == ECommonQteInteractiveTiming.始终);
+				}
+				else
+				{
+					isQteInteractive = (scommonQte_LongPress.InteractiveTiming == ECommonQteInteractiveTiming.始终);
+				}
+			}
+			else
+			{
+				isQteInteractive = (scommonQte_ContinuousClick.InteractiveTiming == ECommonQteInteractiveTiming.始终);
 			}
 		}
+		else
+		{
+			isQteInteractive = (scommonQte_SingleClick.InteractiveTiming == ECommonQteInteractiveTiming.始终);
+		}
+		this.IsQteInteractive = isQteInteractive;
 	}
 
-	// Token: 0x06013E89 RID: 81545 RVA: 0x005006EC File Offset: 0x004FE8EC
+	// Token: 0x0601136B RID: 70507 RVA: 0x0050F5AE File Offset: 0x0050D7AE
 	[NullableContext(1)]
 	protected virtual bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is TContextType;
 	}
 
-	// Token: 0x06013E8A RID: 81546 RVA: 0x005006F7 File Offset: 0x004FE8F7
+	// Token: 0x0601136C RID: 70508 RVA: 0x0050F5B9 File Offset: 0x0050D7B9
 	[NullableContext(1)]
 	protected virtual void OnRefreshActionUi(string action)
 	{
 	}
 
-	// Token: 0x06013E8B RID: 81547 RVA: 0x005006F9 File Offset: 0x004FE8F9
+	// Token: 0x0601136D RID: 70509 RVA: 0x0050F5BB File Offset: 0x0050D7BB
 	protected virtual void TryApplyQteUiConfig(object uiConfig)
 	{
 	}
 
-	// Token: 0x06013E8C RID: 81548 RVA: 0x005006FC File Offset: 0x004FE8FC
+	// Token: 0x0601136E RID: 70510 RVA: 0x0050F5C0 File Offset: 0x0050D7C0
 	[NullableContext(1)]
 	protected virtual void TryApplyQteIcon(CommonQteContextBase context)
 	{
@@ -550,13 +567,13 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E8D RID: 81549 RVA: 0x00500726 File Offset: 0x004FE926
+	// Token: 0x0601136F RID: 70511 RVA: 0x0050F5EA File Offset: 0x0050D7EA
 	[NullableContext(1)]
 	protected virtual void OnRefreshIcon(ULGUITexturePackerSpriteData sprite)
 	{
 	}
 
-	// Token: 0x06013E8E RID: 81550 RVA: 0x00500728 File Offset: 0x004FE928
+	// Token: 0x06011370 RID: 70512 RVA: 0x0050F5EC File Offset: 0x0050D7EC
 	[NullableContext(1)]
 	protected void SetQteActive(CommonQteContextBase context)
 	{
@@ -619,7 +636,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E8F RID: 81551 RVA: 0x005008A8 File Offset: 0x004FEAA8
+	// Token: 0x06011371 RID: 70513 RVA: 0x0050F76C File Offset: 0x0050D96C
 	[NullableContext(1)]
 	protected void AttachToTarget(CommonQteContextBase context)
 	{
@@ -672,7 +689,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E90 RID: 81552 RVA: 0x00500A9C File Offset: 0x004FEC9C
+	// Token: 0x06011372 RID: 70514 RVA: 0x0050F960 File Offset: 0x0050DB60
 	private void UpdateRelativeRotation()
 	{
 		UUIItem attachRootItem = this.GetAttachRootItem();
@@ -701,7 +718,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E91 RID: 81553 RVA: 0x00500BB8 File Offset: 0x004FEDB8
+	// Token: 0x06011373 RID: 70515 RVA: 0x0050FA7C File Offset: 0x0050DC7C
 	[NullableContext(1)]
 	protected void AttachToTargetScreenPos(CommonQteContextBase context)
 	{
@@ -728,7 +745,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		base.SetUiActive(true);
 	}
 
-	// Token: 0x06013E92 RID: 81554 RVA: 0x00500CC8 File Offset: 0x004FEEC8
+	// Token: 0x06011374 RID: 70516 RVA: 0x0050FB8C File Offset: 0x0050DD8C
 	protected void UpdateScreenPosition()
 	{
 		if (this.AttachTarget == null || !this.AttachTarget.IsValid())
@@ -769,7 +786,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E93 RID: 81555 RVA: 0x00500DF0 File Offset: 0x004FEFF0
+	// Token: 0x06011375 RID: 70517 RVA: 0x0050FCB4 File Offset: 0x0050DEB4
 	protected void UpdateScale()
 	{
 		if (this.AttachTarget == null || this.ScaleCurve == null || this.TargetLocation == null || this.ScaleVector == null)
@@ -805,7 +822,7 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E94 RID: 81556 RVA: 0x00500EDB File Offset: 0x004FF0DB
+	// Token: 0x06011376 RID: 70518 RVA: 0x0050FD9F File Offset: 0x0050DF9F
 	protected void ClearTickTimer()
 	{
 		if (this.TickTimer != null)
@@ -815,19 +832,19 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		}
 	}
 
-	// Token: 0x06013E95 RID: 81557 RVA: 0x00500EFD File Offset: 0x004FF0FD
+	// Token: 0x06011377 RID: 70519 RVA: 0x0050FDC1 File Offset: 0x0050DFC1
 	protected UUIItem GetAttachRootItem()
 	{
 		return this.AttachRootItem ?? this.GetOriginalItem();
 	}
 
-	// Token: 0x06013E96 RID: 81558 RVA: 0x00500F0F File Offset: 0x004FF10F
+	// Token: 0x06011378 RID: 70520 RVA: 0x0050FDD3 File Offset: 0x0050DFD3
 	protected void SetAttachRootItem(UUIItem item)
 	{
 		this.AttachRootItem = item;
 	}
 
-	// Token: 0x06013E97 RID: 81559 RVA: 0x00500F18 File Offset: 0x004FF118
+	// Token: 0x06011379 RID: 70521 RVA: 0x0050FDDC File Offset: 0x0050DFDC
 	[NullableContext(1)]
 	public override void Reattach(CommonQteContextBase context)
 	{
@@ -840,108 +857,108 @@ public abstract class CommonQteItemBase<[Nullable(0)] TContextType> : CommonQteI
 		this.AttachToTarget(context);
 	}
 
-	// Token: 0x06013E98 RID: 81560 RVA: 0x00500F38 File Offset: 0x004FF138
+	// Token: 0x0601137A RID: 70522 RVA: 0x0050FDFC File Offset: 0x0050DFFC
 	protected virtual void RefreshUiOffset()
 	{
 	}
 
-	// Token: 0x040095F1 RID: 38385
+	// Token: 0x04009748 RID: 38728
 	private const float SCALE_TOLERATION = 0.01f;
 
-	// Token: 0x040095F2 RID: 38386
+	// Token: 0x04009749 RID: 38729
 	protected bool IsMobile;
 
-	// Token: 0x040095F3 RID: 38387
+	// Token: 0x0400974A RID: 38730
 	protected bool IsQteActive;
 
-	// Token: 0x040095F4 RID: 38388
+	// Token: 0x0400974B RID: 38731
 	protected bool IsQtePlayStart;
 
-	// Token: 0x040095F5 RID: 38389
+	// Token: 0x0400974C RID: 38732
 	protected bool IsQteStart;
 
-	// Token: 0x040095F6 RID: 38390
+	// Token: 0x0400974D RID: 38733
 	protected bool IsQteEnd;
 
-	// Token: 0x040095F7 RID: 38391
+	// Token: 0x0400974E RID: 38734
 	protected bool IsQteInteractive;
 
-	// Token: 0x040095F8 RID: 38392
+	// Token: 0x0400974F RID: 38735
 	protected bool IsQtePause;
 
-	// Token: 0x040095F9 RID: 38393
+	// Token: 0x04009750 RID: 38736
 	protected bool HasBindAction;
 
-	// Token: 0x040095FA RID: 38394
+	// Token: 0x04009751 RID: 38737
 	[Nullable(1)]
 	protected string QteAction = "";
 
-	// Token: 0x040095FB RID: 38395
+	// Token: 0x04009752 RID: 38738
 	protected int QteHandle = -1;
 
-	// Token: 0x040095FC RID: 38396
+	// Token: 0x04009753 RID: 38739
 	protected TContextType CommonQteContext;
 
-	// Token: 0x040095FD RID: 38397
+	// Token: 0x04009754 RID: 38740
 	protected bool IsBindEvents;
 
-	// Token: 0x040095FE RID: 38398
+	// Token: 0x04009755 RID: 38741
 	protected TimerHandle TickTimer;
 
-	// Token: 0x040095FF RID: 38399
+	// Token: 0x04009756 RID: 38742
 	protected Number TickInterval = 20;
 
-	// Token: 0x04009600 RID: 38400
+	// Token: 0x04009757 RID: 38743
 	protected bool IsAttaching;
 
-	// Token: 0x04009601 RID: 38401
+	// Token: 0x04009758 RID: 38744
 	protected bool IsKeepRelativeToCamera;
 
-	// Token: 0x04009602 RID: 38402
+	// Token: 0x04009759 RID: 38745
 	protected bool IsUseTargetScreenPos;
 
-	// Token: 0x04009603 RID: 38403
+	// Token: 0x0400975A RID: 38746
 	protected Rotator OffsetRotator;
 
-	// Token: 0x04009604 RID: 38404
+	// Token: 0x0400975B RID: 38747
 	protected Rotator TempRotator;
 
-	// Token: 0x04009605 RID: 38405
+	// Token: 0x0400975C RID: 38748
 	protected bool IsInitPositionRef;
 
-	// Token: 0x04009606 RID: 38406
+	// Token: 0x0400975D RID: 38749
 	protected FVector2D ScreenPositionRef;
 
-	// Token: 0x04009607 RID: 38407
+	// Token: 0x0400975E RID: 38750
 	protected int ViewportSizeX;
 
-	// Token: 0x04009608 RID: 38408
+	// Token: 0x0400975F RID: 38751
 	protected int ViewportSizeY;
 
-	// Token: 0x04009609 RID: 38409
+	// Token: 0x04009760 RID: 38752
 	protected Vector2D UiRootSize;
 
-	// Token: 0x0400960A RID: 38410
+	// Token: 0x04009761 RID: 38753
 	protected Vector2D PointTransform;
 
-	// Token: 0x0400960B RID: 38411
+	// Token: 0x04009762 RID: 38754
 	protected Vector2D UiPositionOffset;
 
-	// Token: 0x0400960C RID: 38412
+	// Token: 0x04009763 RID: 38755
 	protected AActor AttachTarget;
 
-	// Token: 0x0400960D RID: 38413
+	// Token: 0x04009764 RID: 38756
 	protected UUIItem AttachRootItem;
 
-	// Token: 0x0400960E RID: 38414
+	// Token: 0x04009765 RID: 38757
 	protected UCurveFloat ScaleCurve;
 
-	// Token: 0x0400960F RID: 38415
+	// Token: 0x04009766 RID: 38758
 	protected Vector ScaleVector;
 
-	// Token: 0x04009610 RID: 38416
+	// Token: 0x04009767 RID: 38759
 	protected Vector TargetLocation;
 
-	// Token: 0x04009611 RID: 38417
+	// Token: 0x04009768 RID: 38760
 	private int? WorldUiRootOriginalDepth;
 }

@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Round
 {
-	// Token: 0x02004727 RID: 18215
+	// Token: 0x02003658 RID: 13912
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GearTrapRoundStepExecutor : IRoundStepExecutor
 	{
-		// Token: 0x0602F9A4 RID: 194980 RVA: 0x00B06CC3 File Offset: 0x00B04EC3
+		// Token: 0x0602416E RID: 147822 RVA: 0x00A36B4F File Offset: 0x00A34D4F
 		public GearTrapRoundStepExecutor([Nullable(new byte[]
 		{
 			1,
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		{
 		}
 
-		// Token: 0x0602F9A5 RID: 194981 RVA: 0x00B06CE0 File Offset: 0x00B04EE0
+		// Token: 0x0602416F RID: 147823 RVA: 0x00A36B6C File Offset: 0x00A34D6C
 		public UniTask Execute(ERoundStep step, IReadOnlyList<IExecutableUnit> units, int executionToken)
 		{
 			GearTrapRoundStepExecutor.<Execute>d__4 <Execute>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <Execute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019B41 RID: 105281
+		// Token: 0x040141F1 RID: 82417
 		[Nullable(new byte[]
 		{
 			1,
@@ -50,11 +50,11 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		[CompilerGenerated]
 		private Func<ERoundStep, IReadOnlyList<IExecutableUnit>> <getRegisteredUnits>P = getRegisteredUnits;
 
-		// Token: 0x04019B42 RID: 105282
+		// Token: 0x040141F2 RID: 82418
 		[CompilerGenerated]
 		private Func<int> <getExecutionToken>P = getExecutionToken;
 
-		// Token: 0x04019B43 RID: 105283
+		// Token: 0x040141F3 RID: 82419
 		[Nullable(new byte[]
 		{
 			1,

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055D3 RID: 21971
+	// Token: 0x020045A9 RID: 17833
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.MapRogue
 	})]
 	public class GridEventChoiceToggle : GridProxyAbstract<IToggleItemData>
 	{
-		// Token: 0x06037FE2 RID: 229346 RVA: 0x00D43304 File Offset: 0x00D41504
+		// Token: 0x0602CEE0 RID: 184032 RVA: 0x00C9104C File Offset: 0x00C8F24C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,19 +34,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06037FE3 RID: 229347 RVA: 0x00D433D9 File Offset: 0x00D415D9
+		// Token: 0x0602CEE1 RID: 184033 RVA: 0x00C91121 File Offset: 0x00C8F321
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x06037FE4 RID: 229348 RVA: 0x00D433F8 File Offset: 0x00D415F8
+		// Token: 0x0602CEE2 RID: 184034 RVA: 0x00C91140 File Offset: 0x00C8F340
 		protected override void OnBeforeDestroy()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x06037FE5 RID: 229349 RVA: 0x00D4340B File Offset: 0x00D4160B
+		// Token: 0x0602CEE3 RID: 184035 RVA: 0x00C91153 File Offset: 0x00C8F353
 		private void OnToggleClick(EToggleState state)
 		{
 			Action<EToggleState, int> onExtendToggleStateChanged = this.OnExtendToggleStateChanged;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			onExtendToggleStateChanged(base.GetExtendToggle(0).GetToggleState(), this.OptionId);
 		}
 
-		// Token: 0x06037FE6 RID: 229350 RVA: 0x00D4342F File Offset: 0x00D4162F
+		// Token: 0x0602CEE4 RID: 184036 RVA: 0x00C91177 File Offset: 0x00C8F377
 		private bool CanExecuteChange()
 		{
 			return this.OnCanExecuteChangeFunc == null || this.OnCanExecuteChangeFunc(base.GetExtendToggle(0).GetToggleState(), this.OptionId);
 		}
 
-		// Token: 0x06037FE7 RID: 229351 RVA: 0x00D43458 File Offset: 0x00D41658
+		// Token: 0x0602CEE5 RID: 184037 RVA: 0x00C911A0 File Offset: 0x00C8F3A0
 		[NullableContext(1)]
 		public override void Refresh(IToggleItemData data, bool isSelected, int gridIndex)
 		{
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.GetItem(6).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0401D696 RID: 120470
+		// Token: 0x04018121 RID: 98593
 		private int OptionId;
 
-		// Token: 0x0401D697 RID: 120471
+		// Token: 0x04018122 RID: 98594
 		public Action<EToggleState, int> OnExtendToggleStateChanged;
 
-		// Token: 0x0401D698 RID: 120472
+		// Token: 0x04018123 RID: 98595
 		public Func<EToggleState, int, bool> OnCanExecuteChangeFunc;
 	}
 }

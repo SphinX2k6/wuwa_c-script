@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029B8 RID: 10680
+// Token: 0x02001F33 RID: 7987
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerMonsterInfoItem : GridProxyAbstract<ShipTowerMonsterInfoItemData>
 {
-	// Token: 0x06016251 RID: 90705 RVA: 0x00599C8C File Offset: 0x00597E8C
+	// Token: 0x06013C57 RID: 80983 RVA: 0x005C4C18 File Offset: 0x005C2E18
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class ShipTowerMonsterInfoItem : GridProxyAbstract<ShipTowerMonsterInfoIt
 		};
 	}
 
-	// Token: 0x06016252 RID: 90706 RVA: 0x00599CFC File Offset: 0x00597EFC
+	// Token: 0x06013C58 RID: 80984 RVA: 0x005C4C88 File Offset: 0x005C2E88
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerMonsterInfoItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -38,13 +38,13 @@ public class ShipTowerMonsterInfoItem : GridProxyAbstract<ShipTowerMonsterInfoIt
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016253 RID: 90707 RVA: 0x00599D3F File Offset: 0x00597F3F
+	// Token: 0x06013C59 RID: 80985 RVA: 0x005C4CCB File Offset: 0x005C2ECB
 	public override void Refresh(ShipTowerMonsterInfoItemData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x06016254 RID: 90708 RVA: 0x00599D48 File Offset: 0x00597F48
+	// Token: 0x06013C5A RID: 80986 RVA: 0x005C4CD4 File Offset: 0x005C2ED4
 	public void Refresh(ShipTowerMonsterInfoItemData data)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(1), "LevelText", new <>z__ReadOnlySingleElementList<object>(data.Level));
@@ -58,13 +58,13 @@ public class ShipTowerMonsterInfoItem : GridProxyAbstract<ShipTowerMonsterInfoIt
 		layoutElement.RefreshByData(data.ElementList, null, false);
 	}
 
-	// Token: 0x06016255 RID: 90709 RVA: 0x00599DC2 File Offset: 0x00597FC2
+	// Token: 0x06013C5B RID: 80987 RVA: 0x005C4D4E File Offset: 0x005C2F4E
 	private TowerElementItem CreateItem()
 	{
 		return new TowerElementItem();
 	}
 
-	// Token: 0x0400A4FB RID: 42235
+	// Token: 0x0400A8E5 RID: 43237
 	[Nullable(new byte[]
 	{
 		2,
@@ -72,20 +72,20 @@ public class ShipTowerMonsterInfoItem : GridProxyAbstract<ShipTowerMonsterInfoIt
 	})]
 	private GenericLayout<TowerElementItem, int> LayoutElement;
 
-	// Token: 0x02008FCC RID: 36812
+	// Token: 0x02008214 RID: 33300
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E92C RID: 190764
+		// Token: 0x0402A029 RID: 172073
 		public const int TxtTitle = 0;
 
-		// Token: 0x0402E92D RID: 190765
+		// Token: 0x0402A02A RID: 172074
 		public const int TxtLevel = 1;
 
-		// Token: 0x0402E92E RID: 190766
+		// Token: 0x0402A02B RID: 172075
 		public const int TextureMonsterIcon = 2;
 
-		// Token: 0x0402E92F RID: 190767
+		// Token: 0x0402A02C RID: 172076
 		public const int HLayoutContainer = 3;
 	}
 }

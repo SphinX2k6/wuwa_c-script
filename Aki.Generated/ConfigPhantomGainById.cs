@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000699 RID: 1689
+	// Token: 0x020006B1 RID: 1713
 	public class ConfigPhantomGainById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060027A6 RID: 10150 RVA: 0x00139D17 File Offset: 0x00137F17
+		// Token: 0x06002836 RID: 10294 RVA: 0x00140793 File Offset: 0x0013E993
 		static ConfigPhantomGainById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomGainById.CreateStaticDefaultValue), new Action(ConfigPhantomGainById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060027A7 RID: 10151 RVA: 0x00139D38 File Offset: 0x00137F38
+		// Token: 0x06002837 RID: 10295 RVA: 0x001407B4 File Offset: 0x0013E9B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomGainById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060027A8 RID: 10152 RVA: 0x00139DB7 File Offset: 0x00137FB7
+		// Token: 0x06002838 RID: 10296 RVA: 0x00140833 File Offset: 0x0013EA33
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomGainById.LogPair = null;
 			ConfigPhantomGainById.HandleId = 0;
 		}
 
-		// Token: 0x060027A9 RID: 10153 RVA: 0x00139DC5 File Offset: 0x00137FC5
+		// Token: 0x06002839 RID: 10297 RVA: 0x00140841 File Offset: 0x0013EA41
 		public static void Init()
 		{
 			ConfigPhantomGainById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomGainById.HandleId, "db_activitymaptravel.db", "select BinData from `PhantomGain` where Id=?");
 		}
 
-		// Token: 0x060027AA RID: 10154 RVA: 0x00139DE0 File Offset: 0x00137FE0
+		// Token: 0x0600283A RID: 10298 RVA: 0x0014085C File Offset: 0x0013EA5C
 		public static PhantomGain? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomGainById.HandleId, ConfigPhantomGainById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomGain?(rootAsPhantomGain);
 		}
 
-		// Token: 0x04002E15 RID: 11797
+		// Token: 0x04002EBD RID: 11965
 		private const string DB = "db_activitymaptravel.db";
 
-		// Token: 0x04002E16 RID: 11798
+		// Token: 0x04002EBE RID: 11966
 		private const string FILE = "d.地图主题活动.xlsx";
 
-		// Token: 0x04002E17 RID: 11799
+		// Token: 0x04002EBF RID: 11967
 		private const string TABLE = "PhantomGain";
 
-		// Token: 0x04002E18 RID: 11800
+		// Token: 0x04002EC0 RID: 11968
 		private const string COMMAND = "select BinData from `PhantomGain` where Id=?";
 
-		// Token: 0x04002E19 RID: 11801
+		// Token: 0x04002EC1 RID: 11969
 		private const string KEY_PREFIX = "PhantomGainById";
 
-		// Token: 0x04002E1A RID: 11802
+		// Token: 0x04002EC2 RID: 11970
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002E1B RID: 11803
+		// Token: 0x04002EC3 RID: 11971
 		private static int HandleId;
 	}
 }

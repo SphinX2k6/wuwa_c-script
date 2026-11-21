@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053F3 RID: 21491
+	// Token: 0x02005979 RID: 22905
 	public class IIndependentSystemRewardTypeT
 	{
-		// Token: 0x17009E2B RID: 40491
-		// (get) Token: 0x060234B7 RID: 144567 RVA: 0x004E2F2E File Offset: 0x004E112E
-		// (set) Token: 0x060234B8 RID: 144568 RVA: 0x004E2F36 File Offset: 0x004E1136
+		// Token: 0x1700A665 RID: 42597
+		// (get) Token: 0x0602556F RID: 152943 RVA: 0x0051FF5A File Offset: 0x0051E15A
+		// (set) Token: 0x06025570 RID: 152944 RVA: 0x0051FF62 File Offset: 0x0051E162
 		public EIndependentSystemRewardType Type { get; set; }
 
-		// Token: 0x060234B9 RID: 144569 RVA: 0x004E2F3F File Offset: 0x004E113F
+		// Token: 0x06025571 RID: 152945 RVA: 0x0051FF6B File Offset: 0x0051E16B
 		public IIndependentSystemRewardTypeT()
 		{
 			this.Type = EIndependentSystemRewardType.DarkTide;

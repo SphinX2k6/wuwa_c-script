@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B26 RID: 19238
+	// Token: 0x0200500D RID: 20493
 	public struct ICheckSheriffUnlockEnding : IFlatbufferObject
 	{
-		// Token: 0x17008B8F RID: 35727
-		// (get) Token: 0x0601E440 RID: 123968 RVA: 0x0043E0A5 File Offset: 0x0043C2A5
+		// Token: 0x1700929F RID: 37535
+		// (get) Token: 0x0601FFCB RID: 131019 RVA: 0x00470851 File Offset: 0x0046EA51
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E441 RID: 123969 RVA: 0x0043E0B2 File Offset: 0x0043C2B2
+		// Token: 0x0601FFCC RID: 131020 RVA: 0x0047085E File Offset: 0x0046EA5E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E442 RID: 123970 RVA: 0x0043E0BC File Offset: 0x0043C2BC
+		// Token: 0x0601FFCD RID: 131021 RVA: 0x00470868 File Offset: 0x0046EA68
 		public static ICheckSheriffUnlockEnding GetRootAsICheckSheriffUnlockEnding(ByteBuffer _bb)
 		{
 			return ICheckSheriffUnlockEnding.GetRootAsICheckSheriffUnlockEnding(_bb, default(ICheckSheriffUnlockEnding));
 		}
 
-		// Token: 0x0601E443 RID: 123971 RVA: 0x0043E0D8 File Offset: 0x0043C2D8
+		// Token: 0x0601FFCE RID: 131022 RVA: 0x00470884 File Offset: 0x0046EA84
 		public static ICheckSheriffUnlockEnding GetRootAsICheckSheriffUnlockEnding(ByteBuffer _bb, ICheckSheriffUnlockEnding obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E444 RID: 123972 RVA: 0x0043E0F5 File Offset: 0x0043C2F5
+		// Token: 0x0601FFCF RID: 131023 RVA: 0x004708A1 File Offset: 0x0046EAA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E445 RID: 123973 RVA: 0x0043E104 File Offset: 0x0043C304
+		// Token: 0x0601FFD0 RID: 131024 RVA: 0x004708B0 File Offset: 0x0046EAB0
 		public ICheckSheriffUnlockEnding __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B90 RID: 35728
-		// (get) Token: 0x0601E446 RID: 123974 RVA: 0x0043E114 File Offset: 0x0043C314
+		// Token: 0x170092A0 RID: 37536
+		// (get) Token: 0x0601FFD1 RID: 131025 RVA: 0x004708C0 File Offset: 0x0046EAC0
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B91 RID: 35729
-		// (get) Token: 0x0601E447 RID: 123975 RVA: 0x0043E150 File Offset: 0x0043C350
+		// Token: 0x170092A1 RID: 37537
+		// (get) Token: 0x0601FFD2 RID: 131026 RVA: 0x004708FC File Offset: 0x0046EAFC
 		public int AnomalyId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B92 RID: 35730
-		// (get) Token: 0x0601E448 RID: 123976 RVA: 0x0043E18C File Offset: 0x0043C38C
+		// Token: 0x170092A2 RID: 37538
+		// (get) Token: 0x0601FFD3 RID: 131027 RVA: 0x00470938 File Offset: 0x0046EB38
 		public int EndingId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E449 RID: 123977 RVA: 0x0043E1C8 File Offset: 0x0043C3C8
+		// Token: 0x0601FFD4 RID: 131028 RVA: 0x00470974 File Offset: 0x0046EB74
 		public static Offset<ICheckSheriffUnlockEnding> CreateICheckSheriffUnlockEnding(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int AnomalyId = 0, int EndingId = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSheriffUnlockEnding.EndICheckSheriffUnlockEnding(builder);
 		}
 
-		// Token: 0x0601E44A RID: 123978 RVA: 0x0043E1EC File Offset: 0x0043C3EC
+		// Token: 0x0601FFD5 RID: 131029 RVA: 0x00470998 File Offset: 0x0046EB98
 		public static void StartICheckSheriffUnlockEnding(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E44B RID: 123979 RVA: 0x0043E1F5 File Offset: 0x0043C3F5
+		// Token: 0x0601FFD6 RID: 131030 RVA: 0x004709A1 File Offset: 0x0046EBA1
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E44C RID: 123980 RVA: 0x0043E200 File Offset: 0x0043C400
+		// Token: 0x0601FFD7 RID: 131031 RVA: 0x004709AC File Offset: 0x0046EBAC
 		public static void AddAnomalyId(FlatBufferBuilder builder, int anomalyId)
 		{
 			builder.AddInt(1, anomalyId, 0);
 		}
 
-		// Token: 0x0601E44D RID: 123981 RVA: 0x0043E20B File Offset: 0x0043C40B
+		// Token: 0x0601FFD8 RID: 131032 RVA: 0x004709B7 File Offset: 0x0046EBB7
 		public static void AddEndingId(FlatBufferBuilder builder, int endingId)
 		{
 			builder.AddInt(2, endingId, 0);
 		}
 
-		// Token: 0x0601E44E RID: 123982 RVA: 0x0043E216 File Offset: 0x0043C416
+		// Token: 0x0601FFD9 RID: 131033 RVA: 0x004709C2 File Offset: 0x0046EBC2
 		public static Offset<ICheckSheriffUnlockEnding> EndICheckSheriffUnlockEnding(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSheriffUnlockEnding>(builder.EndTable());
 		}
 
-		// Token: 0x0601E44F RID: 123983 RVA: 0x0043E224 File Offset: 0x0043C424
+		// Token: 0x0601FFDA RID: 131034 RVA: 0x004709D0 File Offset: 0x0046EBD0
 		public ICheckSheriffUnlockEndingT UnPack()
 		{
 			ICheckSheriffUnlockEndingT checkSheriffUnlockEndingT = new ICheckSheriffUnlockEndingT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkSheriffUnlockEndingT;
 		}
 
-		// Token: 0x0601E450 RID: 123984 RVA: 0x0043E23F File Offset: 0x0043C43F
+		// Token: 0x0601FFDB RID: 131035 RVA: 0x004709EB File Offset: 0x0046EBEB
 		public void UnPackTo(ICheckSheriffUnlockEndingT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.EndingId = this.EndingId;
 		}
 
-		// Token: 0x0601E451 RID: 123985 RVA: 0x0043E268 File Offset: 0x0043C468
+		// Token: 0x0601FFDC RID: 131036 RVA: 0x00470A14 File Offset: 0x0046EC14
 		public static Offset<ICheckSheriffUnlockEnding> Pack(FlatBufferBuilder builder, ICheckSheriffUnlockEndingT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSheriffUnlockEnding.CreateICheckSheriffUnlockEnding(builder, _o.Type, _o.AnomalyId, _o.EndingId);
 		}
 
-		// Token: 0x0400D3CA RID: 54218
+		// Token: 0x0400DEC9 RID: 57033
 		private Table __p;
 	}
 }

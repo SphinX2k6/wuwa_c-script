@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E5E RID: 7774
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002093 RID: 8339
 	public class IShowTalkCameraMotion
 	{
-		// Token: 0x0600A663 RID: 42595 RVA: 0x00178864 File Offset: 0x00176A64
+		// Token: 0x0600B11B RID: 45339 RVA: 0x0018E564 File Offset: 0x0018C764
 		private IShowTalkCameraMotion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A664 RID: 42596 RVA: 0x0017889C File Offset: 0x00176A9C
+		// Token: 0x0600B11C RID: 45340 RVA: 0x0018E59C File Offset: 0x0018C79C
 		public static IShowTalkCameraMotion Create([Nullable(2)] IShowTalkCameraMotion instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A665 RID: 42597 RVA: 0x001788AF File Offset: 0x00176AAF
+		// Token: 0x0600B11D RID: 45341 RVA: 0x0018E5AF File Offset: 0x0018C7AF
 		public static IShowTalkCameraMotion CreateFromSetValue([Nullable(2)] IShowTalkCameraMotion_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A666 RID: 42598 RVA: 0x001788C2 File Offset: 0x00176AC2
+		// Token: 0x0600B11E RID: 45342 RVA: 0x0018E5C2 File Offset: 0x0018C7C2
 		public IShowTalkCameraMotion_SetValue ToSetValue()
 		{
 			return new IShowTalkCameraMotion_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032FB RID: 13051
-		// (get) Token: 0x0600A667 RID: 42599 RVA: 0x001788D5 File Offset: 0x00176AD5
-		// (set) Token: 0x0600A668 RID: 42600 RVA: 0x00178900 File Offset: 0x00176B00
+		// Token: 0x170035BF RID: 13759
+		// (get) Token: 0x0600B11F RID: 45343 RVA: 0x0018E5D5 File Offset: 0x0018C7D5
+		// (set) Token: 0x0600B120 RID: 45344 RVA: 0x0018E600 File Offset: 0x0018C800
 		public virtual EShowTalkCameraMotionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006360 RID: 25440
+		// Token: 0x04006944 RID: 26948
 		[Nullable(2)]
 		protected IShowTalkCameraMotion FbInstance;
 
-		// Token: 0x04006361 RID: 25441
+		// Token: 0x04006945 RID: 26949
 		[Nullable(2)]
 		protected IShowTalkCameraMotion_SetValue PocoInterface;
 	}

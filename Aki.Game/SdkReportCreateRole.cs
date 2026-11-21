@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E32 RID: 3634
+// Token: 0x020002E7 RID: 743
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkReportCreateRole : SdkReportData
 {
-	// Token: 0x0600576C RID: 22380 RVA: 0x000FC02E File Offset: 0x000FA22E
+	// Token: 0x06002AFC RID: 11004 RVA: 0x00103882 File Offset: 0x00101A82
 	public SdkReportCreateRole([Nullable(new byte[]
 	{
 		2,
@@ -18,7 +18,7 @@ public class SdkReportCreateRole : SdkReportData
 	{
 	}
 
-	// Token: 0x0600576D RID: 22381 RVA: 0x000FC037 File Offset: 0x000FA237
+	// Token: 0x06002AFD RID: 11005 RVA: 0x0010388B File Offset: 0x00101A8B
 	public override string GetEventName()
 	{
 		if (this.IfGlobalSdk)
@@ -28,7 +28,7 @@ public class SdkReportCreateRole : SdkReportData
 		return "event_1";
 	}
 
-	// Token: 0x0600576E RID: 22382 RVA: 0x000FC04C File Offset: 0x000FA24C
+	// Token: 0x06002AFE RID: 11006 RVA: 0x001038A0 File Offset: 0x00101AA0
 	protected override string GetEventDataJson()
 	{
 		if (this.IfGlobalSdk)

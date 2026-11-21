@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F9B RID: 3995
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010C5 RID: 4293
 	public class IForceClosedRestriction
 	{
-		// Token: 0x06005900 RID: 22784 RVA: 0x000D900C File Offset: 0x000D720C
+		// Token: 0x06005ED2 RID: 24274 RVA: 0x000E5A34 File Offset: 0x000E3C34
 		private IForceClosedRestriction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005901 RID: 22785 RVA: 0x000D9044 File Offset: 0x000D7244
+		// Token: 0x06005ED3 RID: 24275 RVA: 0x000E5A6C File Offset: 0x000E3C6C
 		public static IForceClosedRestriction Create([Nullable(2)] IForceClosedRestriction instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005902 RID: 22786 RVA: 0x000D9057 File Offset: 0x000D7257
+		// Token: 0x06005ED4 RID: 24276 RVA: 0x000E5A7F File Offset: 0x000E3C7F
 		public static IForceClosedRestriction CreateFromSetValue([Nullable(2)] IForceClosedRestriction_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005903 RID: 22787 RVA: 0x000D906C File Offset: 0x000D726C
+		// Token: 0x06005ED5 RID: 24277 RVA: 0x000E5A94 File Offset: 0x000E3C94
 		public IForceClosedRestriction_SetValue ToSetValue()
 		{
 			return new IForceClosedRestriction_SetValue
@@ -62,13 +60,15 @@ namespace Aki.TDConfigMgr.Quest
 				RangeRadius = this.RangeRadius,
 				RangeEntities = this.RangeEntities,
 				FailedReturnPos = this.FailedReturnPos,
-				FailedReturnPosEntityId = this.FailedReturnPosEntityId
+				FailedReturnPosEntityId = this.FailedReturnPosEntityId,
+				AllowDungeonList = this.AllowDungeonList,
+				OnlyFailOnceOutsideDungeon = this.OnlyFailOnceOutsideDungeon
 			};
 		}
 
-		// Token: 0x17001D99 RID: 7577
-		// (get) Token: 0x06005904 RID: 22788 RVA: 0x000D90BC File Offset: 0x000D72BC
-		// (set) Token: 0x06005905 RID: 22789 RVA: 0x000D911D File Offset: 0x000D731D
+		// Token: 0x17001F3E RID: 7998
+		// (get) Token: 0x06005ED6 RID: 24278 RVA: 0x000E5AFC File Offset: 0x000E3CFC
+		// (set) Token: 0x06005ED7 RID: 24279 RVA: 0x000E5B5D File Offset: 0x000E3D5D
 		public virtual VectorInfo RangeCenter
 		{
 			get
@@ -96,9 +96,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D9A RID: 7578
-		// (get) Token: 0x06005906 RID: 22790 RVA: 0x000D9132 File Offset: 0x000D7332
-		// (set) Token: 0x06005907 RID: 22791 RVA: 0x000D915D File Offset: 0x000D735D
+		// Token: 0x17001F3F RID: 7999
+		// (get) Token: 0x06005ED8 RID: 24280 RVA: 0x000E5B72 File Offset: 0x000E3D72
+		// (set) Token: 0x06005ED9 RID: 24281 RVA: 0x000E5B9D File Offset: 0x000E3D9D
 		public virtual int RangeRadius
 		{
 			get
@@ -119,9 +119,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D9B RID: 7579
-		// (get) Token: 0x06005908 RID: 22792 RVA: 0x000D916B File Offset: 0x000D736B
-		// (set) Token: 0x06005909 RID: 22793 RVA: 0x000D9192 File Offset: 0x000D7392
+		// Token: 0x17001F40 RID: 8000
+		// (get) Token: 0x06005EDA RID: 24282 RVA: 0x000E5BAB File Offset: 0x000E3DAB
+		// (set) Token: 0x06005EDB RID: 24283 RVA: 0x000E5BD2 File Offset: 0x000E3DD2
 		[Nullable(2)]
 		public virtual List<int> RangeEntities
 		{
@@ -146,9 +146,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D9C RID: 7580
-		// (get) Token: 0x0600590A RID: 22794 RVA: 0x000D91A0 File Offset: 0x000D73A0
-		// (set) Token: 0x0600590B RID: 22795 RVA: 0x000D9201 File Offset: 0x000D7401
+		// Token: 0x17001F41 RID: 8001
+		// (get) Token: 0x06005EDC RID: 24284 RVA: 0x000E5BE0 File Offset: 0x000E3DE0
+		// (set) Token: 0x06005EDD RID: 24285 RVA: 0x000E5C41 File Offset: 0x000E3E41
 		public virtual Aki.TDConfigMgr.Action.PosA FailedReturnPos
 		{
 			get
@@ -176,9 +176,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D9D RID: 7581
-		// (get) Token: 0x0600590C RID: 22796 RVA: 0x000D9218 File Offset: 0x000D7418
-		// (set) Token: 0x0600590D RID: 22797 RVA: 0x000D9252 File Offset: 0x000D7452
+		// Token: 0x17001F42 RID: 8002
+		// (get) Token: 0x06005EDE RID: 24286 RVA: 0x000E5C58 File Offset: 0x000E3E58
+		// (set) Token: 0x06005EDF RID: 24287 RVA: 0x000E5C92 File Offset: 0x000E3E92
 		public virtual int? FailedReturnPosEntityId
 		{
 			get
@@ -200,24 +200,75 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035BC RID: 13756
+		// Token: 0x17001F43 RID: 8003
+		// (get) Token: 0x06005EE0 RID: 24288 RVA: 0x000E5CA0 File Offset: 0x000E3EA0
+		// (set) Token: 0x06005EE1 RID: 24289 RVA: 0x000E5CC7 File Offset: 0x000E3EC7
+		[Nullable(2)]
+		public virtual List<int> AllowDungeonList
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.AllowDungeonList;
+				}
+				IForceClosedRestriction_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.AllowDungeonList;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco().AllowDungeonList = value;
+			}
+		}
+
+		// Token: 0x17001F44 RID: 8004
+		// (get) Token: 0x06005EE2 RID: 24290 RVA: 0x000E5CD8 File Offset: 0x000E3ED8
+		// (set) Token: 0x06005EE3 RID: 24291 RVA: 0x000E5D12 File Offset: 0x000E3F12
+		public virtual bool? OnlyFailOnceOutsideDungeon
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.OnlyFailOnceOutsideDungeon;
+				}
+				IForceClosedRestriction_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.OnlyFailOnceOutsideDungeon;
+			}
+			set
+			{
+				this.GetOrCreatePoco().OnlyFailOnceOutsideDungeon = value;
+			}
+		}
+
+		// Token: 0x040038EC RID: 14572
 		[Nullable(2)]
 		protected IForceClosedRestriction FbInstance;
 
-		// Token: 0x040035BD RID: 13757
+		// Token: 0x040038ED RID: 14573
 		[Nullable(2)]
 		protected IForceClosedRestriction_SetValue PocoInterface;
 
-		// Token: 0x040035BE RID: 13758
+		// Token: 0x040038EE RID: 14574
 		private VectorInfo _RangeCenterCache;
 
-		// Token: 0x040035BF RID: 13759
+		// Token: 0x040038EF RID: 14575
 		private bool _RangeCenterInited;
 
-		// Token: 0x040035C0 RID: 13760
+		// Token: 0x040038F0 RID: 14576
 		private Aki.TDConfigMgr.Action.PosA _FailedReturnPosCache;
 
-		// Token: 0x040035C1 RID: 13761
+		// Token: 0x040038F1 RID: 14577
 		private bool _FailedReturnPosInited;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C97 RID: 7319
+// Token: 0x02001156 RID: 4438
 [NullableContext(2)]
 [Nullable(0)]
 public class GachaTagInfo
 {
-	// Token: 0x0600DCF3 RID: 56563 RVA: 0x00338FE8 File Offset: 0x003371E8
+	// Token: 0x0600B109 RID: 45321 RVA: 0x00344530 File Offset: 0x00342730
 	public GachaTagInfo(EGachaTagKind kind, string text = null, int? discountPct = null)
 	{
 		this.Kind = kind;
@@ -14,12 +14,12 @@ public class GachaTagInfo
 		this.DiscountPct = discountPct;
 	}
 
-	// Token: 0x04006553 RID: 25939
+	// Token: 0x04006625 RID: 26149
 	public EGachaTagKind Kind;
 
-	// Token: 0x04006554 RID: 25940
+	// Token: 0x04006626 RID: 26150
 	public string Text;
 
-	// Token: 0x04006555 RID: 25941
+	// Token: 0x04006627 RID: 26151
 	public int? DiscountPct;
 }

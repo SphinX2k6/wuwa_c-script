@@ -4,63 +4,63 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005989 RID: 22921
+	// Token: 0x02004962 RID: 18786
 	[NullableContext(1)]
 	public interface IGiantQuestGuideData
 	{
-		// Token: 0x17008B59 RID: 35673
-		// (get) Token: 0x0603A286 RID: 238214
-		// (set) Token: 0x0603A287 RID: 238215
+		// Token: 0x17005F26 RID: 24358
+		// (get) Token: 0x0602F1AC RID: 192940
+		// (set) Token: 0x0602F1AD RID: 192941
 		int AccessId { get; set; }
 
-		// Token: 0x17008B5A RID: 35674
-		// (get) Token: 0x0603A288 RID: 238216
-		// (set) Token: 0x0603A289 RID: 238217
+		// Token: 0x17005F27 RID: 24359
+		// (get) Token: 0x0602F1AE RID: 192942
+		// (set) Token: 0x0602F1AF RID: 192943
 		List<int> GroupAccessIds { get; set; }
 
-		// Token: 0x17008B5B RID: 35675
-		// (get) Token: 0x0603A28A RID: 238218
-		// (set) Token: 0x0603A28B RID: 238219
+		// Token: 0x17005F28 RID: 24360
+		// (get) Token: 0x0602F1B0 RID: 192944
+		// (set) Token: 0x0602F1B1 RID: 192945
 		int SkipConfigId { get; set; }
 
-		// Token: 0x17008B5C RID: 35676
-		// (get) Token: 0x0603A28C RID: 238220
-		// (set) Token: 0x0603A28D RID: 238221
+		// Token: 0x17005F29 RID: 24361
+		// (get) Token: 0x0602F1B2 RID: 192946
+		// (set) Token: 0x0602F1B3 RID: 192947
 		int AnchorItemId { get; set; }
 
-		// Token: 0x17008B5D RID: 35677
-		// (get) Token: 0x0603A28E RID: 238222
-		// (set) Token: 0x0603A28F RID: 238223
+		// Token: 0x17005F2A RID: 24362
+		// (get) Token: 0x0602F1B4 RID: 192948
+		// (set) Token: 0x0602F1B5 RID: 192949
 		string DescText { get; set; }
 
-		// Token: 0x17008B5E RID: 35678
-		// (get) Token: 0x0603A290 RID: 238224
-		// (set) Token: 0x0603A291 RID: 238225
+		// Token: 0x17005F2B RID: 24363
+		// (get) Token: 0x0602F1B6 RID: 192950
+		// (set) Token: 0x0602F1B7 RID: 192951
 		string LockedText { get; set; }
 
-		// Token: 0x17008B5F RID: 35679
-		// (get) Token: 0x0603A292 RID: 238226
-		// (set) Token: 0x0603A293 RID: 238227
+		// Token: 0x17005F2C RID: 24364
+		// (get) Token: 0x0602F1B8 RID: 192952
+		// (set) Token: 0x0602F1B9 RID: 192953
 		EGiantQuestGuideState State { get; set; }
 
-		// Token: 0x17008B60 RID: 35680
-		// (get) Token: 0x0603A294 RID: 238228
-		// (set) Token: 0x0603A295 RID: 238229
+		// Token: 0x17005F2D RID: 24365
+		// (get) Token: 0x0602F1BA RID: 192954
+		// (set) Token: 0x0602F1BB RID: 192955
 		List<IGiantQuestGuideItemInfo> Items { get; set; }
 
-		// Token: 0x17008B61 RID: 35681
-		// (get) Token: 0x0603A296 RID: 238230
-		// (set) Token: 0x0603A297 RID: 238231
+		// Token: 0x17005F2E RID: 24366
+		// (get) Token: 0x0602F1BC RID: 192956
+		// (set) Token: 0x0602F1BD RID: 192957
 		bool HasNew { get; set; }
 
-		// Token: 0x17008B62 RID: 35682
-		// (get) Token: 0x0603A298 RID: 238232
-		// (set) Token: 0x0603A299 RID: 238233
+		// Token: 0x17005F2F RID: 24367
+		// (get) Token: 0x0602F1BE RID: 192958
+		// (set) Token: 0x0602F1BF RID: 192959
 		bool HasSkip { get; set; }
 
-		// Token: 0x17008B63 RID: 35683
-		// (get) Token: 0x0603A29A RID: 238234
-		// (set) Token: 0x0603A29B RID: 238235
+		// Token: 0x17005F30 RID: 24368
+		// (get) Token: 0x0602F1C0 RID: 192960
+		// (set) Token: 0x0602F1C1 RID: 192961
 		Action<IGiantQuestGuideData> OnGoto { get; set; }
 	}
 }

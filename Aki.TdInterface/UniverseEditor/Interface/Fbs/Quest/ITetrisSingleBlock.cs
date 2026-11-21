@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041CC RID: 16844
+	// Token: 0x02004625 RID: 17957
 	public struct ITetrisSingleBlock : IFlatbufferObject
 	{
-		// Token: 0x17007771 RID: 30577
-		// (get) Token: 0x06018CFC RID: 101628 RVA: 0x00392086 File Offset: 0x00390286
+		// Token: 0x17007D9D RID: 32157
+		// (get) Token: 0x0601A452 RID: 107602 RVA: 0x003BD4DA File Offset: 0x003BB6DA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018CFD RID: 101629 RVA: 0x00392093 File Offset: 0x00390293
+		// Token: 0x0601A453 RID: 107603 RVA: 0x003BD4E7 File Offset: 0x003BB6E7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018CFE RID: 101630 RVA: 0x0039209C File Offset: 0x0039029C
+		// Token: 0x0601A454 RID: 107604 RVA: 0x003BD4F0 File Offset: 0x003BB6F0
 		public static ITetrisSingleBlock GetRootAsITetrisSingleBlock(ByteBuffer _bb)
 		{
 			return ITetrisSingleBlock.GetRootAsITetrisSingleBlock(_bb, default(ITetrisSingleBlock));
 		}
 
-		// Token: 0x06018CFF RID: 101631 RVA: 0x003920B8 File Offset: 0x003902B8
+		// Token: 0x0601A455 RID: 107605 RVA: 0x003BD50C File Offset: 0x003BB70C
 		public static ITetrisSingleBlock GetRootAsITetrisSingleBlock(ByteBuffer _bb, ITetrisSingleBlock obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018D00 RID: 101632 RVA: 0x003920D5 File Offset: 0x003902D5
+		// Token: 0x0601A456 RID: 107606 RVA: 0x003BD529 File Offset: 0x003BB729
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018D01 RID: 101633 RVA: 0x003920E4 File Offset: 0x003902E4
+		// Token: 0x0601A457 RID: 107607 RVA: 0x003BD538 File Offset: 0x003BB738
 		public ITetrisSingleBlock __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007772 RID: 30578
-		// (get) Token: 0x06018D02 RID: 101634 RVA: 0x003920F4 File Offset: 0x003902F4
+		// Token: 0x17007D9E RID: 32158
+		// (get) Token: 0x0601A458 RID: 107608 RVA: 0x003BD548 File Offset: 0x003BB748
 		public string StyleName
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018D03 RID: 101635 RVA: 0x0039212B File Offset: 0x0039032B
+		// Token: 0x0601A459 RID: 107609 RVA: 0x003BD57F File Offset: 0x003BB77F
 		public Span<byte> GetStyleNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06018D04 RID: 101636 RVA: 0x0039213A File Offset: 0x0039033A
+		// Token: 0x0601A45A RID: 107610 RVA: 0x003BD58E File Offset: 0x003BB78E
 		public byte[] GetStyleNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06018D05 RID: 101637 RVA: 0x00392148 File Offset: 0x00390348
+		// Token: 0x0601A45B RID: 107611 RVA: 0x003BD59C File Offset: 0x003BB79C
 		public static Offset<ITetrisSingleBlock> CreateITetrisSingleBlock(FlatBufferBuilder builder, StringOffset StyleNameOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITetrisSingleBlock.EndITetrisSingleBlock(builder);
 		}
 
-		// Token: 0x06018D06 RID: 101638 RVA: 0x0039215E File Offset: 0x0039035E
+		// Token: 0x0601A45C RID: 107612 RVA: 0x003BD5B2 File Offset: 0x003BB7B2
 		public static void StartITetrisSingleBlock(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018D07 RID: 101639 RVA: 0x00392167 File Offset: 0x00390367
+		// Token: 0x0601A45D RID: 107613 RVA: 0x003BD5BB File Offset: 0x003BB7BB
 		public static void AddStyleName(FlatBufferBuilder builder, StringOffset styleNameOffset)
 		{
 			builder.AddOffset(0, styleNameOffset.Value, 0);
 		}
 
-		// Token: 0x06018D08 RID: 101640 RVA: 0x00392177 File Offset: 0x00390377
+		// Token: 0x0601A45E RID: 107614 RVA: 0x003BD5CB File Offset: 0x003BB7CB
 		public static Offset<ITetrisSingleBlock> EndITetrisSingleBlock(FlatBufferBuilder builder)
 		{
 			return new Offset<ITetrisSingleBlock>(builder.EndTable());
 		}
 
-		// Token: 0x06018D09 RID: 101641 RVA: 0x00392184 File Offset: 0x00390384
+		// Token: 0x0601A45F RID: 107615 RVA: 0x003BD5D8 File Offset: 0x003BB7D8
 		public ITetrisSingleBlockT UnPack()
 		{
 			ITetrisSingleBlockT tetrisSingleBlockT = new ITetrisSingleBlockT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return tetrisSingleBlockT;
 		}
 
-		// Token: 0x06018D0A RID: 101642 RVA: 0x0039219F File Offset: 0x0039039F
+		// Token: 0x0601A460 RID: 107616 RVA: 0x003BD5F3 File Offset: 0x003BB7F3
 		public void UnPackTo(ITetrisSingleBlockT _o)
 		{
 			_o.StyleName = this.StyleName;
 		}
 
-		// Token: 0x06018D0B RID: 101643 RVA: 0x003921B0 File Offset: 0x003903B0
+		// Token: 0x0601A461 RID: 107617 RVA: 0x003BD604 File Offset: 0x003BB804
 		public static Offset<ITetrisSingleBlock> Pack(FlatBufferBuilder builder, ITetrisSingleBlockT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITetrisSingleBlock.CreateITetrisSingleBlock(builder, styleNameOffset);
 		}
 
-		// Token: 0x0400BE18 RID: 48664
+		// Token: 0x0400C822 RID: 51234
 		private Table __p;
 	}
 }

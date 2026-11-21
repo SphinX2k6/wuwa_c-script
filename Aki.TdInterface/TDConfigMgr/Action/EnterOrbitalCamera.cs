@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200165D RID: 5725
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017CD RID: 6093
 	public class EnterOrbitalCamera : ActionParams
 	{
-		// Token: 0x06007CD3 RID: 31955 RVA: 0x0012BE08 File Offset: 0x0012A008
+		// Token: 0x060083B1 RID: 33713 RVA: 0x0013AEB4 File Offset: 0x001390B4
 		private EnterOrbitalCamera_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CD4 RID: 31956 RVA: 0x0012BE40 File Offset: 0x0012A040
+		// Token: 0x060083B2 RID: 33714 RVA: 0x0013AEEC File Offset: 0x001390EC
 		public static EnterOrbitalCamera Create([Nullable(2)] EnterOrbitalCamera instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CD5 RID: 31957 RVA: 0x0012BE53 File Offset: 0x0012A053
+		// Token: 0x060083B3 RID: 33715 RVA: 0x0013AEFF File Offset: 0x001390FF
 		public static EnterOrbitalCamera CreateFromSetValue([Nullable(2)] EnterOrbitalCamera_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CD6 RID: 31958 RVA: 0x0012BE66 File Offset: 0x0012A066
+		// Token: 0x060083B4 RID: 33716 RVA: 0x0013AF12 File Offset: 0x00139112
 		public EnterOrbitalCamera_SetValue ToSetValue()
 		{
 			return new EnterOrbitalCamera_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002938 RID: 10552
-		// (get) Token: 0x06007CD7 RID: 31959 RVA: 0x0012BE88 File Offset: 0x0012A088
-		// (set) Token: 0x06007CD8 RID: 31960 RVA: 0x0012BEE9 File Offset: 0x0012A0E9
+		// Token: 0x17002B23 RID: 11043
+		// (get) Token: 0x060083B5 RID: 33717 RVA: 0x0013AF34 File Offset: 0x00139134
+		// (set) Token: 0x060083B6 RID: 33718 RVA: 0x0013AF95 File Offset: 0x00139195
 		public virtual IEnterOrbitalCameraControlByMove Option
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002939 RID: 10553
-		// (get) Token: 0x06007CD9 RID: 31961 RVA: 0x0012BF00 File Offset: 0x0012A100
-		// (set) Token: 0x06007CDA RID: 31962 RVA: 0x0012BF3A File Offset: 0x0012A13A
+		// Token: 0x17002B24 RID: 11044
+		// (get) Token: 0x060083B7 RID: 33719 RVA: 0x0013AFAC File Offset: 0x001391AC
+		// (set) Token: 0x060083B8 RID: 33720 RVA: 0x0013AFE6 File Offset: 0x001391E6
 		public virtual bool? IsDisableControlCamera
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004CB3 RID: 19635
+		// Token: 0x040050AE RID: 20654
 		[Nullable(2)]
 		protected new EnterOrbitalCamera FbInstance;
 
-		// Token: 0x04004CB4 RID: 19636
+		// Token: 0x040050AF RID: 20655
 		[Nullable(2)]
 		protected EnterOrbitalCamera_SetValue PocoInterface;
 
-		// Token: 0x04004CB5 RID: 19637
+		// Token: 0x040050B0 RID: 20656
 		private IEnterOrbitalCameraControlByMove _OptionCache;
 
-		// Token: 0x04004CB6 RID: 19638
+		// Token: 0x040050B1 RID: 20657
 		private bool _OptionInited;
 	}
 }

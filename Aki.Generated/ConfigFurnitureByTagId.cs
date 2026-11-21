@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000364 RID: 868
+	// Token: 0x02000379 RID: 889
 	public class ConfigFurnitureByTagId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600145D RID: 5213 RVA: 0x000CC947 File Offset: 0x000CAB47
+		// Token: 0x060014DB RID: 5339 RVA: 0x000D2E53 File Offset: 0x000D1053
 		static ConfigFurnitureByTagId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFurnitureByTagId.CreateStaticDefaultValue), new Action(ConfigFurnitureByTagId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600145E RID: 5214 RVA: 0x000CC968 File Offset: 0x000CAB68
+		// Token: 0x060014DC RID: 5340 RVA: 0x000D2E74 File Offset: 0x000D1074
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFurnitureByTagId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600145F RID: 5215 RVA: 0x000CC9E7 File Offset: 0x000CABE7
+		// Token: 0x060014DD RID: 5341 RVA: 0x000D2EF3 File Offset: 0x000D10F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFurnitureByTagId.LogPair = null;
 			ConfigFurnitureByTagId.HandleId = 0;
 		}
 
-		// Token: 0x06001460 RID: 5216 RVA: 0x000CC9F5 File Offset: 0x000CABF5
+		// Token: 0x060014DE RID: 5342 RVA: 0x000D2F01 File Offset: 0x000D1101
 		public static void Init()
 		{
 			ConfigFurnitureByTagId.HandleId = ConfigCommon.InitDataStatement(ConfigFurnitureByTagId.HandleId, "db_furniture.db", "select BinData from `Furniture` where TagId=?");
 		}
 
-		// Token: 0x06001461 RID: 5217 RVA: 0x000CCA10 File Offset: 0x000CAC10
+		// Token: 0x060014DF RID: 5343 RVA: 0x000D2F1C File Offset: 0x000D111C
 		[NullableContext(2)]
 		public static IReadOnlyList<Furniture> GetConfigList(int p0TagId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040017A0 RID: 6048
+		// Token: 0x04001833 RID: 6195
 		private const string DB = "db_furniture.db";
 
-		// Token: 0x040017A1 RID: 6049
+		// Token: 0x04001834 RID: 6196
 		private const string FILE = "j.家具DIY玩法.xlsx";
 
-		// Token: 0x040017A2 RID: 6050
+		// Token: 0x04001835 RID: 6197
 		private const string TABLE = "Furniture";
 
-		// Token: 0x040017A3 RID: 6051
+		// Token: 0x04001836 RID: 6198
 		private const string COMMAND = "select BinData from `Furniture` where TagId=?";
 
-		// Token: 0x040017A4 RID: 6052
+		// Token: 0x04001837 RID: 6199
 		private const string KEY_PREFIX = "FurnitureByTagId";
 
-		// Token: 0x040017A5 RID: 6053
+		// Token: 0x04001838 RID: 6200
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040017A6 RID: 6054
+		// Token: 0x04001839 RID: 6201
 		private static int HandleId;
 	}
 }

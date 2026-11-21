@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DD1 RID: 19921
+	// Token: 0x020052D5 RID: 21205
 	public enum EMonsterChooseType : byte
 	{
-		// Token: 0x0400DA44 RID: 55876
+		// Token: 0x0400E594 RID: 58772
 		RandomPoolChoose
 	}
 }

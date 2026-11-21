@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001330 RID: 4912
+// Token: 0x020007E4 RID: 2020
 [NullableContext(2)]
 [Nullable(0)]
 public class BusinessTipsShopView : UiViewBase
 {
-	// Token: 0x0600888E RID: 34958 RVA: 0x001D296D File Offset: 0x001D0B6D
+	// Token: 0x06005C29 RID: 23593 RVA: 0x001DB7D9 File Offset: 0x001D99D9
 	[NullableContext(1)]
 	public BusinessTipsShopView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600888F RID: 34959 RVA: 0x001D298C File Offset: 0x001D0B8C
+	// Token: 0x06005C2A RID: 23594 RVA: 0x001DB7F8 File Offset: 0x001D99F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ public class BusinessTipsShopView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008890 RID: 34960 RVA: 0x001D2B04 File Offset: 0x001D0D04
+	// Token: 0x06005C2B RID: 23595 RVA: 0x001DB970 File Offset: 0x001D9B70
 	private UniTask InitCharacterListModule()
 	{
 		BusinessTipsShopView.<InitCharacterListModule>d__16 <InitCharacterListModule>d__;
@@ -56,8 +56,8 @@ public class BusinessTipsShopView : UiViewBase
 		return <InitCharacterListModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17000BA1 RID: 2977
-	// (get) Token: 0x06008891 RID: 34961 RVA: 0x001D2B47 File Offset: 0x001D0D47
+	// Token: 0x17000BC1 RID: 3009
+	// (get) Token: 0x06005C2C RID: 23596 RVA: 0x001DB9B3 File Offset: 0x001D9BB3
 	private bool IsShoppingMoreSuccessful
 	{
 		get
@@ -66,7 +66,7 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008892 RID: 34962 RVA: 0x001D2B5C File Offset: 0x001D0D5C
+	// Token: 0x06005C2D RID: 23597 RVA: 0x001DB9C8 File Offset: 0x001D9BC8
 	private UniTask InitHelperRoleItem()
 	{
 		BusinessTipsShopView.<InitHelperRoleItem>d__19 <InitHelperRoleItem>d__;
@@ -77,7 +77,7 @@ public class BusinessTipsShopView : UiViewBase
 		return <InitHelperRoleItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008893 RID: 34963 RVA: 0x001D2BA0 File Offset: 0x001D0DA0
+	// Token: 0x06005C2E RID: 23598 RVA: 0x001DBA0C File Offset: 0x001D9C0C
 	private UniTask InitPlayerRoleItem()
 	{
 		BusinessTipsShopView.<InitPlayerRoleItem>d__20 <InitPlayerRoleItem>d__;
@@ -88,7 +88,7 @@ public class BusinessTipsShopView : UiViewBase
 		return <InitPlayerRoleItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008894 RID: 34964 RVA: 0x001D2BE4 File Offset: 0x001D0DE4
+	// Token: 0x06005C2F RID: 23599 RVA: 0x001DBA50 File Offset: 0x001D9C50
 	private void InitLevelItem()
 	{
 		IBusinessTipsShopData businessTipsShopData = (IBusinessTipsShopData)this.OpenParam;
@@ -122,7 +122,7 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06008895 RID: 34965 RVA: 0x001D2C98 File Offset: 0x001D0E98
+	// Token: 0x06005C30 RID: 23600 RVA: 0x001DBB04 File Offset: 0x001D9D04
 	private UniTask InitRoleList()
 	{
 		BusinessTipsShopView.<InitRoleList>d__22 <InitRoleList>d__;
@@ -133,7 +133,7 @@ public class BusinessTipsShopView : UiViewBase
 		return <InitRoleList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008896 RID: 34966 RVA: 0x001D2CDC File Offset: 0x001D0EDC
+	// Token: 0x06005C31 RID: 23601 RVA: 0x001DBB48 File Offset: 0x001D9D48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessTipsShopView.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
@@ -144,7 +144,7 @@ public class BusinessTipsShopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008897 RID: 34967 RVA: 0x001D2D20 File Offset: 0x001D0F20
+	// Token: 0x06005C32 RID: 23602 RVA: 0x001DBB8C File Offset: 0x001D9D8C
 	protected override void OnBeforeShow()
 	{
 		UUIItem item = base.GetItem(9);
@@ -160,7 +160,7 @@ public class BusinessTipsShopView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06008898 RID: 34968 RVA: 0x001D2D88 File Offset: 0x001D0F88
+	// Token: 0x06005C33 RID: 23603 RVA: 0x001DBBF4 File Offset: 0x001D9DF4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Delegate != null)
@@ -176,7 +176,7 @@ public class BusinessTipsShopView : UiViewBase
 		this.StopTween();
 	}
 
-	// Token: 0x06008899 RID: 34969 RVA: 0x001D2DDC File Offset: 0x001D0FDC
+	// Token: 0x06005C34 RID: 23604 RVA: 0x001DBC48 File Offset: 0x001D9E48
 	private void PlayFillAmount(float value)
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -190,13 +190,13 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600889A RID: 34970 RVA: 0x001D2E4C File Offset: 0x001D104C
+	// Token: 0x06005C35 RID: 23605 RVA: 0x001DBCB8 File Offset: 0x001D9EB8
 	private void OnConfirm()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600889B RID: 34971 RVA: 0x001D2E55 File Offset: 0x001D1055
+	// Token: 0x06005C36 RID: 23606 RVA: 0x001DBCC1 File Offset: 0x001D9EC1
 	private void OnSkip()
 	{
 		if (this.RemoveTimerHandle())
@@ -205,14 +205,14 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600889C RID: 34972 RVA: 0x001D2E65 File Offset: 0x001D1065
+	// Token: 0x06005C37 RID: 23607 RVA: 0x001DBCD1 File Offset: 0x001D9ED1
 	[NullableContext(1)]
 	private CharacterItemWithAdd InitCharacterItemWithAdd()
 	{
 		return new CharacterItemWithAdd();
 	}
 
-	// Token: 0x0600889D RID: 34973 RVA: 0x001D2E6C File Offset: 0x001D106C
+	// Token: 0x06005C38 RID: 23608 RVA: 0x001DBCD8 File Offset: 0x001D9ED8
 	private void OnShoppingFinish()
 	{
 		if (this.IsShoppingLevelUp)
@@ -281,7 +281,7 @@ public class BusinessTipsShopView : UiViewBase
 		this.PlayCharacterRunFinishAction();
 	}
 
-	// Token: 0x0600889E RID: 34974 RVA: 0x001D2FE1 File Offset: 0x001D11E1
+	// Token: 0x06005C39 RID: 23609 RVA: 0x001DBE4D File Offset: 0x001DA04D
 	protected bool RemoveTimerHandle()
 	{
 		if (this.TimeHandle != null)
@@ -293,7 +293,7 @@ public class BusinessTipsShopView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600889F RID: 34975 RVA: 0x001D3008 File Offset: 0x001D1208
+	// Token: 0x06005C3A RID: 23610 RVA: 0x001DBE74 File Offset: 0x001DA074
 	private void RefreshAddText()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -302,7 +302,7 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088A0 RID: 34976 RVA: 0x001D3060 File Offset: 0x001D1260
+	// Token: 0x06005C3B RID: 23611 RVA: 0x001DBECC File Offset: 0x001DA0CC
 	private void StopTween()
 	{
 		if (this.ExpTweener != null)
@@ -312,7 +312,7 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088A1 RID: 34977 RVA: 0x001D3080 File Offset: 0x001D1280
+	// Token: 0x06005C3C RID: 23612 RVA: 0x001DBEEC File Offset: 0x001DA0EC
 	private void PlayCharacterRunFinishAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -330,7 +330,7 @@ public class BusinessTipsShopView : UiViewBase
 		AudioSystem.Instance.PostEvent("play_ui_zhuiyuejie_favorability");
 	}
 
-	// Token: 0x060088A2 RID: 34978 RVA: 0x001D3140 File Offset: 0x001D1340
+	// Token: 0x06005C3D RID: 23613 RVA: 0x001DBFAC File Offset: 0x001DA1AC
 	private void PlayCharacterEndAction()
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -339,20 +339,20 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x060088A3 RID: 34979 RVA: 0x001D3198 File Offset: 0x001D1398
+	// Token: 0x06005C3E RID: 23614 RVA: 0x001DC004 File Offset: 0x001DA204
 	private void PlayCurrentValueTween()
 	{
 		this.ExpTweener = ULTweenBPLibrary.FloatTo(GlobalData.World, this.ValueDelegate, 0f, 1f, 0.5f, 0f, LTweenEase.OutCubic);
 	}
 
-	// Token: 0x060088A4 RID: 34980 RVA: 0x001D31C5 File Offset: 0x001D13C5
+	// Token: 0x06005C3F RID: 23615 RVA: 0x001DC031 File Offset: 0x001DA231
 	private void OnComplete()
 	{
 		this.PlayCharacterEndAction();
 		this.PlayCurrentValueTween();
 	}
 
-	// Token: 0x060088A5 RID: 34981 RVA: 0x001D31D4 File Offset: 0x001D13D4
+	// Token: 0x06005C40 RID: 23616 RVA: 0x001DC040 File Offset: 0x001DA240
 	private void PlayCurrentValue(float value)
 	{
 		foreach (CharacterItemWithAdd characterItemWithAdd in this.CharacterListModule.GetItemList())
@@ -361,7 +361,7 @@ public class BusinessTipsShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003CDD RID: 15581
+	// Token: 0x04003D75 RID: 15733
 	[Nullable(new byte[]
 	{
 		2,
@@ -369,85 +369,85 @@ public class BusinessTipsShopView : UiViewBase
 	})]
 	protected CharacterListModule<CharacterItemWithAdd> CharacterListModule;
 
-	// Token: 0x04003CDE RID: 15582
+	// Token: 0x04003D76 RID: 15734
 	protected BusinessShopRoleItem HelperRoleItem;
 
-	// Token: 0x04003CDF RID: 15583
+	// Token: 0x04003D77 RID: 15735
 	protected BusinessShopRoleItem PlayerRoleItem;
 
-	// Token: 0x04003CE0 RID: 15584
+	// Token: 0x04003D78 RID: 15736
 	[Nullable(1)]
 	protected List<int> RoleIdList = new List<int>();
 
-	// Token: 0x04003CE1 RID: 15585
+	// Token: 0x04003D79 RID: 15737
 	[Nullable(1)]
 	private List<CharacterData> CharacterList = new List<CharacterData>();
 
-	// Token: 0x04003CE2 RID: 15586
+	// Token: 0x04003D7A RID: 15738
 	protected ULTweener ExpTweener;
 
-	// Token: 0x04003CE3 RID: 15587
+	// Token: 0x04003D7B RID: 15739
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x04003CE4 RID: 15588
+	// Token: 0x04003D7C RID: 15740
 	protected FLTweenFloatSetterDynamic ValueDelegate;
 
-	// Token: 0x04003CE5 RID: 15589
+	// Token: 0x04003D7D RID: 15741
 	protected TimerHandle TimeHandle;
 
-	// Token: 0x04003CE6 RID: 15590
+	// Token: 0x04003D7E RID: 15742
 	private bool IsShoppingLevelUp;
 
-	// Token: 0x04003CE7 RID: 15591
+	// Token: 0x04003D7F RID: 15743
 	private const float SHOP_TWEEN_TIME = 1f;
 
-	// Token: 0x04003CE8 RID: 15592
+	// Token: 0x04003D80 RID: 15744
 	private const float VALUE_TIME = 0.5f;
 
-	// Token: 0x04003CE9 RID: 15593
+	// Token: 0x04003D81 RID: 15745
 	private const int SHOPPING_TIME = 2000;
 
-	// Token: 0x02007992 RID: 31122
+	// Token: 0x02006B1C RID: 27420
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402807D RID: 163965
+		// Token: 0x040233AA RID: 144298
 		public const int Title = 0;
 
-		// Token: 0x0402807E RID: 163966
+		// Token: 0x040233AB RID: 144299
 		public const int CharacterListItem = 1;
 
-		// Token: 0x0402807F RID: 163967
+		// Token: 0x040233AC RID: 144300
 		public const int SingleLevelItem = 2;
 
-		// Token: 0x04028080 RID: 163968
+		// Token: 0x040233AD RID: 144301
 		public const int SingleLevel = 3;
 
-		// Token: 0x04028081 RID: 163969
+		// Token: 0x040233AE RID: 144302
 		public const int MultiLevelItem = 4;
 
-		// Token: 0x04028082 RID: 163970
+		// Token: 0x040233AF RID: 144303
 		public const int MultiLevelBefore = 5;
 
-		// Token: 0x04028083 RID: 163971
+		// Token: 0x040233B0 RID: 144304
 		public const int MultiLevelAfter = 6;
 
-		// Token: 0x04028084 RID: 163972
+		// Token: 0x040233B1 RID: 144305
 		public const int ConfirmBtn = 7;
 
-		// Token: 0x04028085 RID: 163973
+		// Token: 0x040233B2 RID: 144306
 		public const int BestSuccessItem = 8;
 
-		// Token: 0x04028086 RID: 163974
+		// Token: 0x040233B3 RID: 144307
 		public const int ShoppingItem = 9;
 
-		// Token: 0x04028087 RID: 163975
+		// Token: 0x040233B4 RID: 144308
 		public const int PlayerRoleItem = 10;
 
-		// Token: 0x04028088 RID: 163976
+		// Token: 0x040233B5 RID: 144309
 		public const int HelpRoleItem = 11;
 
-		// Token: 0x04028089 RID: 163977
+		// Token: 0x040233B6 RID: 144310
 		public const int SkipBtn = 12;
 	}
 }

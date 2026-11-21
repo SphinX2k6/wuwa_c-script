@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072BA RID: 29370
+	// Token: 0x02007A8F RID: 31375
 	public class ITalkEffectType_UnionUnion
 	{
-		// Token: 0x1700D9DA RID: 55770
-		// (get) Token: 0x060341DD RID: 213469 RVA: 0x007012B9 File Offset: 0x006FF4B9
-		// (set) Token: 0x060341DE RID: 213470 RVA: 0x007012C1 File Offset: 0x006FF4C1
+		// Token: 0x1700E5D3 RID: 58835
+		// (get) Token: 0x060374E1 RID: 226529 RVA: 0x00762655 File Offset: 0x00760855
+		// (set) Token: 0x060374E2 RID: 226530 RVA: 0x0076265D File Offset: 0x0076085D
 		public ITalkEffectType_Union Type { get; set; }
 
-		// Token: 0x1700D9DB RID: 55771
-		// (get) Token: 0x060341DF RID: 213471 RVA: 0x007012CA File Offset: 0x006FF4CA
-		// (set) Token: 0x060341E0 RID: 213472 RVA: 0x007012D2 File Offset: 0x006FF4D2
+		// Token: 0x1700E5D4 RID: 58836
+		// (get) Token: 0x060374E3 RID: 226531 RVA: 0x00762666 File Offset: 0x00760866
+		// (set) Token: 0x060374E4 RID: 226532 RVA: 0x0076266E File Offset: 0x0076086E
 		public object Value { get; set; }
 
-		// Token: 0x060341E1 RID: 213473 RVA: 0x007012DB File Offset: 0x006FF4DB
+		// Token: 0x060374E5 RID: 226533 RVA: 0x00762677 File Offset: 0x00760877
 		public ITalkEffectType_UnionUnion()
 		{
 			this.Type = ITalkEffectType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060341E2 RID: 213474 RVA: 0x007012F1 File Offset: 0x006FF4F1
+		// Token: 0x060374E6 RID: 226534 RVA: 0x0076268D File Offset: 0x0076088D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060341E3 RID: 213475 RVA: 0x00701303 File Offset: 0x006FF503
+		// Token: 0x060374E7 RID: 226535 RVA: 0x0076269F File Offset: 0x0076089F
 		public ITalkEffectTypeT AsITalkEffectType()
 		{
 			return this.As<ITalkEffectTypeT>();
 		}
 
-		// Token: 0x060341E4 RID: 213476 RVA: 0x0070130B File Offset: 0x006FF50B
+		// Token: 0x060374E8 RID: 226536 RVA: 0x007626A7 File Offset: 0x007608A7
 		public static ITalkEffectType_UnionUnion FromITalkEffectType(ITalkEffectTypeT _italkeffecttype)
 		{
 			return new ITalkEffectType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060341E5 RID: 213477 RVA: 0x00701320 File Offset: 0x006FF520
+		// Token: 0x060374E9 RID: 226537 RVA: 0x007626BC File Offset: 0x007608BC
 		public ITalkCommonEffectT AsITalkCommonEffect()
 		{
 			return this.As<ITalkCommonEffectT>();
 		}
 
-		// Token: 0x060341E6 RID: 213478 RVA: 0x00701328 File Offset: 0x006FF528
+		// Token: 0x060374EA RID: 226538 RVA: 0x007626C4 File Offset: 0x007608C4
 		public static ITalkEffectType_UnionUnion FromITalkCommonEffect(ITalkCommonEffectT _italkcommoneffect)
 		{
 			return new ITalkEffectType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060341E7 RID: 213479 RVA: 0x00701340 File Offset: 0x006FF540
+		// Token: 0x060374EB RID: 226539 RVA: 0x007626DC File Offset: 0x007608DC
 		public static int Pack(FlatBufferBuilder builder, ITalkEffectType_UnionUnion _o)
 		{
 			ITalkEffectType_Union type = _o.Type;

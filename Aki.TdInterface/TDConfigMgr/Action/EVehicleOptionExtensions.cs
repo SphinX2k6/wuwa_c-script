@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200249D RID: 9373
+	// Token: 0x02002740 RID: 10048
 	public static class EVehicleOptionExtensions
 	{
-		// Token: 0x0600CB41 RID: 52033 RVA: 0x001DEBD8 File Offset: 0x001DCDD8
+		// Token: 0x0600D7FA RID: 55290 RVA: 0x001F8DA0 File Offset: 0x001F6FA0
 		public static string ToEnumString(this EVehicleOption value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB42 RID: 52034 RVA: 0x001DEC20 File Offset: 0x001DCE20
+		// Token: 0x0600D7FB RID: 55291 RVA: 0x001F8DE8 File Offset: 0x001F6FE8
 		public static EVehicleOption FromString(string name)
 		{
 			EVehicleOption result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB43 RID: 52035 RVA: 0x001DEC4C File Offset: 0x001DCE4C
+		// Token: 0x0600D7FC RID: 55292 RVA: 0x001F8E14 File Offset: 0x001F7014
 		public static bool TryFromString(string name, out EVehicleOption value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CB44 RID: 52036 RVA: 0x001DECA2 File Offset: 0x001DCEA2
+		// Token: 0x0600D7FD RID: 55293 RVA: 0x001F8E6A File Offset: 0x001F706A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB45 RID: 52037 RVA: 0x001DECC2 File Offset: 0x001DCEC2
+		// Token: 0x0600D7FE RID: 55294 RVA: 0x001F8E8A File Offset: 0x001F708A
 		public static EVehicleOption[] GetValues()
 		{
 			return new EVehicleOption[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB46 RID: 52038 RVA: 0x001DECD2 File Offset: 0x001DCED2
+		// Token: 0x0600D7FF RID: 55295 RVA: 0x001F8E9A File Offset: 0x001F709A
 		public static string[] GetNames()
 		{
 			return new string[]

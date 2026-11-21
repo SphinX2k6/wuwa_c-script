@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BB1 RID: 27569
+	// Token: 0x02005D2A RID: 23850
 	public class LevelEventUnlockEntity : LevelEventBase
 	{
-		// Token: 0x0604431D RID: 279325 RVA: 0x010CECD8 File Offset: 0x010CCED8
+		// Token: 0x0603A475 RID: 238709 RVA: 0x01078BEC File Offset: 0x01076DEC
 		public LevelEventUnlockEntity(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604431E RID: 279326 RVA: 0x010CECE4 File Offset: 0x010CCEE4
+		// Token: 0x0603A476 RID: 238710 RVA: 0x01078BF8 File Offset: 0x01076DF8
 		[NullableContext(1)]
 		public override void ExecuteAction(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

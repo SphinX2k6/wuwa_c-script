@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002BC RID: 700
+	// Token: 0x020002D1 RID: 721
 	public class ConfigFeiXuePreheatById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600106D RID: 4205 RVA: 0x000B65DC File Offset: 0x000B47DC
+		// Token: 0x060010EB RID: 4331 RVA: 0x000BCAE8 File Offset: 0x000BACE8
 		static ConfigFeiXuePreheatById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFeiXuePreheatById.CreateStaticDefaultValue), new Action(ConfigFeiXuePreheatById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600106E RID: 4206 RVA: 0x000B65FC File Offset: 0x000B47FC
+		// Token: 0x060010EC RID: 4332 RVA: 0x000BCB08 File Offset: 0x000BAD08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFeiXuePreheatById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600106F RID: 4207 RVA: 0x000B667B File Offset: 0x000B487B
+		// Token: 0x060010ED RID: 4333 RVA: 0x000BCB87 File Offset: 0x000BAD87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFeiXuePreheatById.LogPair = null;
 			ConfigFeiXuePreheatById.HandleId = 0;
 		}
 
-		// Token: 0x06001070 RID: 4208 RVA: 0x000B6689 File Offset: 0x000B4889
+		// Token: 0x060010EE RID: 4334 RVA: 0x000BCB95 File Offset: 0x000BAD95
 		public static void Init()
 		{
 			ConfigFeiXuePreheatById.HandleId = ConfigCommon.InitDataStatement(ConfigFeiXuePreheatById.HandleId, "db_feixuepreheat_db.db", "select BinData from `FeiXuePreheat` where Id=?");
 		}
 
-		// Token: 0x06001071 RID: 4209 RVA: 0x000B66A4 File Offset: 0x000B48A4
+		// Token: 0x060010EF RID: 4335 RVA: 0x000BCBB0 File Offset: 0x000BADB0
 		public static FeiXuePreheat? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFeiXuePreheatById.HandleId, ConfigFeiXuePreheatById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FeiXuePreheat?(rootAsFeiXuePreheat);
 		}
 
-		// Token: 0x04001308 RID: 4872
+		// Token: 0x0400139B RID: 5019
 		private const string DB = "db_feixuepreheat_db.db";
 
-		// Token: 0x04001309 RID: 4873
+		// Token: 0x0400139C RID: 5020
 		private const string FILE = "f.绯雪预热签到活动.xlsx";
 
-		// Token: 0x0400130A RID: 4874
+		// Token: 0x0400139D RID: 5021
 		private const string TABLE = "FeiXuePreheat";
 
-		// Token: 0x0400130B RID: 4875
+		// Token: 0x0400139E RID: 5022
 		private const string COMMAND = "select BinData from `FeiXuePreheat` where Id=?";
 
-		// Token: 0x0400130C RID: 4876
+		// Token: 0x0400139F RID: 5023
 		private const string KEY_PREFIX = "FeiXuePreheatById";
 
-		// Token: 0x0400130D RID: 4877
+		// Token: 0x040013A0 RID: 5024
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400130E RID: 4878
+		// Token: 0x040013A1 RID: 5025
 		private static int HandleId;
 	}
 }

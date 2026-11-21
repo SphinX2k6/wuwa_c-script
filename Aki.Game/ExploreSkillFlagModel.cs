@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x02001C44 RID: 7236
+// Token: 0x02001103 RID: 4355
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ExploreSkillFlagModel : ModelBase
 {
-	// Token: 0x0600DA36 RID: 55862 RVA: 0x0032B1B8 File Offset: 0x003293B8
+	// Token: 0x0600AE4C RID: 44620 RVA: 0x003365C4 File Offset: 0x003347C4
 	protected override bool OnInit()
 	{
 		foreach (KeyValuePair<EExploreSkillType, bool> keyValuePair in ExploreSkillFlagDefine.levelExploreSkillFlagDefaultVal)
@@ -19,21 +19,21 @@ public class ExploreSkillFlagModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DA37 RID: 55863 RVA: 0x0032B220 File Offset: 0x00329420
+	// Token: 0x0600AE4D RID: 44621 RVA: 0x0033662C File Offset: 0x0033482C
 	protected override bool OnClear()
 	{
 		this.SkillFlags.Clear();
 		return true;
 	}
 
-	// Token: 0x0600DA38 RID: 55864 RVA: 0x0032B230 File Offset: 0x00329430
+	// Token: 0x0600AE4E RID: 44622 RVA: 0x0033663C File Offset: 0x0033483C
 	public bool GetExploreSkillFlagEnable(EExploreSkillType skillType)
 	{
 		bool flag;
 		return !this.SkillFlags.TryGetValue(skillType, out flag) || flag;
 	}
 
-	// Token: 0x0600DA39 RID: 55865 RVA: 0x0032B250 File Offset: 0x00329450
+	// Token: 0x0600AE4F RID: 44623 RVA: 0x0033665C File Offset: 0x0033485C
 	public unsafe void SetExploreSkillFlagEnable(EExploreSkillType skillType, bool enable)
 	{
 		bool flag;
@@ -52,7 +52,7 @@ public class ExploreSkillFlagModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DA3A RID: 55866 RVA: 0x0032B2DC File Offset: 0x003294DC
+	// Token: 0x0600AE50 RID: 44624 RVA: 0x003366E8 File Offset: 0x003348E8
 	public void DisableAllExploreSkillFlag()
 	{
 		foreach (KeyValuePair<EExploreSkillType, bool> keyValuePair in this.SkillFlags)
@@ -61,7 +61,7 @@ public class ExploreSkillFlagModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DA3B RID: 55867 RVA: 0x0032B338 File Offset: 0x00329538
+	// Token: 0x0600AE51 RID: 44625 RVA: 0x00336744 File Offset: 0x00334944
 	public void EnableAllExploreSkillFlag()
 	{
 		foreach (KeyValuePair<EExploreSkillType, bool> keyValuePair in this.SkillFlags)
@@ -70,8 +70,8 @@ public class ExploreSkillFlagModel : ModelBase
 		}
 	}
 
-	// Token: 0x170011D6 RID: 4566
-	// (get) Token: 0x0600DA3C RID: 55868 RVA: 0x0032B394 File Offset: 0x00329594
+	// Token: 0x170011FC RID: 4604
+	// (get) Token: 0x0600AE52 RID: 44626 RVA: 0x003367A0 File Offset: 0x003349A0
 	public static ExploreSkillFlagModel Instance
 	{
 		get
@@ -80,7 +80,7 @@ public class ExploreSkillFlagModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600DA3D RID: 55869 RVA: 0x0032B39B File Offset: 0x0032959B
+	// Token: 0x0600AE53 RID: 44627 RVA: 0x003367A7 File Offset: 0x003349A7
 	public static ExploreSkillFlagModel GetOrCreateInstance()
 	{
 		if (ExploreSkillFlagModel._Instance == null)
@@ -90,7 +90,7 @@ public class ExploreSkillFlagModel : ModelBase
 		return ExploreSkillFlagModel._Instance;
 	}
 
-	// Token: 0x0600DA3E RID: 55870 RVA: 0x0032B3AF File Offset: 0x003295AF
+	// Token: 0x0600AE54 RID: 44628 RVA: 0x003367BB File Offset: 0x003349BB
 	public static bool CreateInstance()
 	{
 		if (ExploreSkillFlagModel._Instance != null)
@@ -101,27 +101,27 @@ public class ExploreSkillFlagModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600DA3F RID: 55871 RVA: 0x0032B3C5 File Offset: 0x003295C5
+	// Token: 0x0600AE55 RID: 44629 RVA: 0x003367D1 File Offset: 0x003349D1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600DA40 RID: 55872 RVA: 0x0032B3C7 File Offset: 0x003295C7
+	// Token: 0x0600AE56 RID: 44630 RVA: 0x003367D3 File Offset: 0x003349D3
 	public static void ResetStaticDefaultValue()
 	{
 		ExploreSkillFlagModel._Instance = null;
 	}
 
-	// Token: 0x0600DA41 RID: 55873 RVA: 0x0032B3CF File Offset: 0x003295CF
+	// Token: 0x0600AE57 RID: 44631 RVA: 0x003367DB File Offset: 0x003349DB
 	static ExploreSkillFlagModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExploreSkillFlagModel.CreateStaticDefaultValue), new Action(ExploreSkillFlagModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400635E RID: 25438
+	// Token: 0x04006430 RID: 25648
 	private readonly Dictionary<EExploreSkillType, bool> SkillFlags = new Dictionary<EExploreSkillType, bool>();
 
-	// Token: 0x0400635F RID: 25439
+	// Token: 0x04006431 RID: 25649
 	[Nullable(2)]
 	private static ExploreSkillFlagModel _Instance;
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E40 RID: 3648
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F3C RID: 3900
 	public class IGraph3dNodeNormal : IGraph3dNodeBase
 	{
-		// Token: 0x0600526E RID: 21102 RVA: 0x000CAF69 File Offset: 0x000C9169
+		// Token: 0x06005795 RID: 22421 RVA: 0x000D6831 File Offset: 0x000D4A31
 		public static IGraph3dNodeNormal Create(IGraph3dNodeNormal? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BAB RID: 7083
-		// (get) Token: 0x0600526F RID: 21103 RVA: 0x000CAF88 File Offset: 0x000C9188
+		// Token: 0x17001D18 RID: 7448
+		// (get) Token: 0x06005796 RID: 22422 RVA: 0x000D6850 File Offset: 0x000D4A50
 		public override int Id
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BAC RID: 7084
-		// (get) Token: 0x06005270 RID: 21104 RVA: 0x000CAF95 File Offset: 0x000C9195
+		// Token: 0x17001D19 RID: 7449
+		// (get) Token: 0x06005797 RID: 22423 RVA: 0x000D685D File Offset: 0x000D4A5D
 		public override VectorInfo Position
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F83 RID: 12163
+		// Token: 0x0400324B RID: 12875
 		private IGraph3dNodeNormal Instance;
 
-		// Token: 0x04002F84 RID: 12164
+		// Token: 0x0400324C RID: 12876
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002F85 RID: 12165
+		// Token: 0x0400324D RID: 12877
 		private bool _PositionInited;
 	}
 }

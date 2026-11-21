@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017D9 RID: 6105
+	// Token: 0x02001960 RID: 6496
 	public class IAssistCharacterMoveToPoint_SetValue
 	{
-		// Token: 0x0400533E RID: 21310
+		// Token: 0x04005782 RID: 22402
 		public EExecClientBattleActionType Type;
 
-		// Token: 0x0400533F RID: 21311
+		// Token: 0x04005783 RID: 22403
 		public int AssistCharacterId;
 
-		// Token: 0x04005340 RID: 21312
-		[Nullable(1)]
+		// Token: 0x04005784 RID: 22404
 		public IAssistCharacterMoveType MoveType;
 	}
 }

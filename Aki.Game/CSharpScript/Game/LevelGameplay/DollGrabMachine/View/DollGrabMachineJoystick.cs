@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EFA RID: 28410
+	// Token: 0x0200607A RID: 24698
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabMachineJoystick : UiPanelBase
 	{
-		// Token: 0x060452A5 RID: 283301 RVA: 0x0111B46A File Offset: 0x0111966A
+		// Token: 0x0603B44E RID: 242766 RVA: 0x010C51FA File Offset: 0x010C33FA
 		public void RegisterOnAxisInput(Action<string, float> onAxisInput)
 		{
 			this.OnAxisInput = onAxisInput;
 		}
 
-		// Token: 0x060452A6 RID: 283302 RVA: 0x0111B474 File Offset: 0x01119674
+		// Token: 0x0603B44F RID: 242767 RVA: 0x010C5204 File Offset: 0x010C3404
 		protected override void OnBeforeShow()
 		{
 			UiPanelBase parent = this.Parent;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.PlayerController = Global.CharacterController;
 		}
 
-		// Token: 0x060452A7 RID: 283303 RVA: 0x0111B4E4 File Offset: 0x011196E4
+		// Token: 0x0603B450 RID: 242768 RVA: 0x010C5274 File Offset: 0x010C3474
 		public void ShowBattleVisibleChildView()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x060452A8 RID: 283304 RVA: 0x0111B57D File Offset: 0x0111977D
+		// Token: 0x0603B451 RID: 242769 RVA: 0x010C530D File Offset: 0x010C350D
 		public void HideBattleVisibleChildView()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.SetActive(false);
 		}
 
-		// Token: 0x060452A9 RID: 283305 RVA: 0x0111B598 File Offset: 0x01119798
+		// Token: 0x0603B452 RID: 242770 RVA: 0x010C5328 File Offset: 0x010C3528
 		public void Reset()
 		{
 			this.PlayerController = null;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.RemoveEvents();
 		}
 
-		// Token: 0x060452AA RID: 283306 RVA: 0x0111B5B0 File Offset: 0x011197B0
+		// Token: 0x0603B453 RID: 242771 RVA: 0x010C5340 File Offset: 0x010C3540
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060452AB RID: 283307 RVA: 0x0111B6A0 File Offset: 0x011198A0
+		// Token: 0x0603B454 RID: 242772 RVA: 0x010C5430 File Offset: 0x010C3630
 		private void AddEvents()
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			});
 		}
 
-		// Token: 0x060452AC RID: 283308 RVA: 0x0111B710 File Offset: 0x01119910
+		// Token: 0x0603B455 RID: 242773 RVA: 0x010C54A0 File Offset: 0x010C36A0
 		private void RemoveEvents()
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x060452AD RID: 283309 RVA: 0x0111B754 File Offset: 0x01119954
+		// Token: 0x0603B456 RID: 242774 RVA: 0x010C54E4 File Offset: 0x010C36E4
 		public void Tick(float delta)
 		{
 			if (this.JoystickTouchId < 0)
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.MoveJoysticksHandle(this.CenterPosition, true);
 		}
 
-		// Token: 0x060452AE RID: 283310 RVA: 0x0111B818 File Offset: 0x01119A18
+		// Token: 0x0603B457 RID: 242775 RVA: 0x010C55A8 File Offset: 0x010C37A8
 		private void CheckInTouch()
 		{
 			if (Time.Instance.Now < this.NextCheckInTouchTime)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.IsInTouch = this.PlayerController.IsInTouch((float)this.JoystickTouchId);
 		}
 
-		// Token: 0x060452AF RID: 283311 RVA: 0x0111B86C File Offset: 0x01119A6C
+		// Token: 0x0603B458 RID: 242776 RVA: 0x010C55FC File Offset: 0x010C37FC
 		private unsafe void OnJoystickButtonPressed(ULGUIPointerEventData eventData)
 		{
 			this.JoystickTouchId = eventData.pointerID;
@@ -222,19 +222,19 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.MoveJoysticksHandle(this.PointerPosition, true);
 		}
 
-		// Token: 0x060452B0 RID: 283312 RVA: 0x0111B96A File Offset: 0x01119B6A
+		// Token: 0x0603B459 RID: 242777 RVA: 0x010C56FA File Offset: 0x010C38FA
 		private void OnBgPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
 			this.UpdatePointerPosition(eventData);
 		}
 
-		// Token: 0x060452B1 RID: 283313 RVA: 0x0111B974 File Offset: 0x01119B74
+		// Token: 0x0603B45A RID: 242778 RVA: 0x010C5704 File Offset: 0x010C3904
 		private void OnJoystickButtonReleased()
 		{
 			this.EndDragJoystick();
 		}
 
-		// Token: 0x060452B2 RID: 283314 RVA: 0x0111B97C File Offset: 0x01119B7C
+		// Token: 0x0603B45B RID: 242779 RVA: 0x010C570C File Offset: 0x010C390C
 		private unsafe bool UpdatePointerPosition(ULGUIPointerEventData eventData)
 		{
 			if (!this.IsInTouch)
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return true;
 		}
 
-		// Token: 0x060452B3 RID: 283315 RVA: 0x0111BA88 File Offset: 0x01119C88
+		// Token: 0x0603B45C RID: 242780 RVA: 0x010C5818 File Offset: 0x010C3A18
 		private void MoveJoysticksHandle(Vector touchPosition, bool inTouch = true)
 		{
 			touchPosition.Subtraction(this.CenterPosition, this.TargetVector);
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.SetInputAxis(this.TargetVector, inTouch);
 		}
 
-		// Token: 0x060452B4 RID: 283316 RVA: 0x0111BAE4 File Offset: 0x01119CE4
+		// Token: 0x0603B45D RID: 242781 RVA: 0x010C5874 File Offset: 0x010C3A74
 		private void UpdateMaskItemPosition()
 		{
 			if (!this.EnableMaskArea)
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.MaskArea.SetAnchorOffset(anchorOffset);
 		}
 
-		// Token: 0x060452B5 RID: 283317 RVA: 0x0111BB50 File Offset: 0x01119D50
+		// Token: 0x0603B45E RID: 242782 RVA: 0x010C58E0 File Offset: 0x010C3AE0
 		private void EndDragJoystick()
 		{
 			this.MoveJoysticksHandle(this.CenterPosition, false);
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			maskArea.SetUIActive(false);
 		}
 
-		// Token: 0x060452B6 RID: 283318 RVA: 0x0111BB88 File Offset: 0x01119D88
+		// Token: 0x0603B45F RID: 242783 RVA: 0x010C5918 File Offset: 0x010C3B18
 		protected unsafe FRotator? GetRotatorMoveArrow(Vector targetVector)
 		{
 			double num = targetVector.SizeSquared();
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return new FRotator?(this.BgRotator.ToUeRotator());
 		}
 
-		// Token: 0x060452B7 RID: 283319 RVA: 0x0111BE30 File Offset: 0x0111A030
+		// Token: 0x0603B460 RID: 242784 RVA: 0x010C5BC0 File Offset: 0x010C3DC0
 		protected void SetHandleOffset(Vector targetVector)
 		{
 			FRotator? rotatorMoveArrow = this.GetRotatorMoveArrow(targetVector);
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			runBgItem.SetUIRelativeRotation(value);
 		}
 
-		// Token: 0x060452B8 RID: 283320 RVA: 0x0111BE64 File Offset: 0x0111A064
+		// Token: 0x0603B461 RID: 242785 RVA: 0x010C5BF4 File Offset: 0x010C3DF4
 		protected void SetInputAxis(Vector targetVector, bool inTouch)
 		{
 			if (!inTouch || targetVector.Equality(Vector.ZeroVectorProxy))
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.SetNormalInputAxis(targetVector);
 		}
 
-		// Token: 0x060452B9 RID: 283321 RVA: 0x0111BECC File Offset: 0x0111A0CC
+		// Token: 0x0603B462 RID: 242786 RVA: 0x010C5C5C File Offset: 0x010C3E5C
 		protected unsafe void SetNormalInputAxis(Vector targetVector)
 		{
 			this.TempVector2D.X = targetVector.X / 200.0;
@@ -444,74 +444,74 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			onAxisInput2("UiMoveForward", (float)y);
 		}
 
-		// Token: 0x04024081 RID: 147585
+		// Token: 0x0401F334 RID: 127796
 		private const float JOYSTICK_RADIU = 200f;
 
-		// Token: 0x04024082 RID: 147586
+		// Token: 0x0401F335 RID: 127797
 		private const float JOYSTICK_RADIU_SQUARED = 40000f;
 
-		// Token: 0x04024083 RID: 147587
+		// Token: 0x0401F336 RID: 127798
 		private const double CHECK_IN_TOUCH_INTERVAL = 500.0;
 
-		// Token: 0x04024084 RID: 147588
+		// Token: 0x0401F337 RID: 127799
 		private const float MASK_AREA_MAX_X = 400f;
 
-		// Token: 0x04024085 RID: 147589
+		// Token: 0x0401F338 RID: 127800
 		private const float MASK_AREA_MAX_Y = 400f;
 
-		// Token: 0x04024086 RID: 147590
+		// Token: 0x0401F339 RID: 127801
 		[Nullable(2)]
 		private UUIDraggableComponent DraggableComponent;
 
-		// Token: 0x04024087 RID: 147591
+		// Token: 0x0401F33A RID: 127802
 		[Nullable(2)]
 		protected UUISprite RunBgItem;
 
-		// Token: 0x04024088 RID: 147592
+		// Token: 0x0401F33B RID: 127803
 		[Nullable(2)]
 		private UUIItem MaskArea;
 
-		// Token: 0x04024089 RID: 147593
+		// Token: 0x0401F33C RID: 127804
 		private readonly Vector2D TempVector2D = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x0402408A RID: 147594
+		// Token: 0x0401F33D RID: 127805
 		private readonly Vector NormalTargetVector = Vector.Create();
 
-		// Token: 0x0402408B RID: 147595
+		// Token: 0x0401F33E RID: 127806
 		private readonly Vector PointerPosition = Vector.Create();
 
-		// Token: 0x0402408C RID: 147596
+		// Token: 0x0401F33F RID: 127807
 		private readonly Vector CenterPosition = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0402408D RID: 147597
+		// Token: 0x0401F340 RID: 127808
 		protected readonly Vector TargetVector = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0402408E RID: 147598
+		// Token: 0x0401F341 RID: 127809
 		private readonly Rotator BgRotator = Rotator.Create();
 
-		// Token: 0x0402408F RID: 147599
+		// Token: 0x0401F342 RID: 127810
 		private readonly float MaskAreaEnableRootX;
 
-		// Token: 0x04024090 RID: 147600
+		// Token: 0x0401F343 RID: 127811
 		public int JoystickTouchId = -1;
 
-		// Token: 0x04024091 RID: 147601
+		// Token: 0x0401F344 RID: 127812
 		private bool IsInTouch;
 
-		// Token: 0x04024092 RID: 147602
+		// Token: 0x0401F345 RID: 127813
 		[Nullable(2)]
 		private TsBasePlayerController PlayerController;
 
-		// Token: 0x04024093 RID: 147603
+		// Token: 0x0401F346 RID: 127814
 		private bool IsJoystickPressed;
 
-		// Token: 0x04024094 RID: 147604
+		// Token: 0x0401F347 RID: 127815
 		private double NextCheckInTouchTime;
 
-		// Token: 0x04024095 RID: 147605
+		// Token: 0x0401F348 RID: 127816
 		private bool EnableMaskArea;
 
-		// Token: 0x04024096 RID: 147606
+		// Token: 0x0401F349 RID: 127817
 		[Nullable(new byte[]
 		{
 			2,
@@ -519,21 +519,21 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 		})]
 		private Action<string, float> OnAxisInput;
 
-		// Token: 0x0200CD66 RID: 52582
+		// Token: 0x0200B956 RID: 47446
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403DE72 RID: 253554
+			// Token: 0x04039294 RID: 234132
 			WalkBgItem,
-			// Token: 0x0403DE73 RID: 253555
+			// Token: 0x04039295 RID: 234133
 			RunBgItem,
-			// Token: 0x0403DE74 RID: 253556
+			// Token: 0x04039296 RID: 234134
 			HandleItem,
-			// Token: 0x0403DE75 RID: 253557
+			// Token: 0x04039297 RID: 234135
 			ContextArea,
-			// Token: 0x0403DE76 RID: 253558
+			// Token: 0x04039298 RID: 234136
 			ClickArea,
-			// Token: 0x0403DE77 RID: 253559
+			// Token: 0x04039299 RID: 234137
 			MaskArea
 		}
 	}

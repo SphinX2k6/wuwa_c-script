@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E0E RID: 24078
+	// Token: 0x02004DF3 RID: 19955
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarXinYueHuPillar
 	{
-		// Token: 0x0603D3B9 RID: 250809 RVA: 0x00EC0FFC File Offset: 0x00EBF1FC
+		// Token: 0x06032348 RID: 205640 RVA: 0x00E1255C File Offset: 0x00E1075C
 		public UniTask InitAsync(int pillarNum, UUIItem pillarItem, UUINiagara fullEffect)
 		{
 			SpecialEnergyBarXinYueHuPillar.<InitAsync>d__6 <InitAsync>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D3BA RID: 250810 RVA: 0x00EC1058 File Offset: 0x00EBF258
+		// Token: 0x06032349 RID: 205641 RVA: 0x00E125B8 File Offset: 0x00E107B8
 		public void Destroy()
 		{
 			this.StopTimer();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.FullEffect = null;
 		}
 
-		// Token: 0x0603D3BB RID: 250811 RVA: 0x00EC10CC File Offset: 0x00EBF2CC
+		// Token: 0x0603234A RID: 205642 RVA: 0x00E1262C File Offset: 0x00E1082C
 		public void InitByBarPercent(float percent)
 		{
 			this.StopTimer();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Timer = TimerSystem.Instance.Loop(new TTimerAction(this.OnTimer), 20f, this.PillarItemList.Count - num - 1, 1f, null, null, true);
 		}
 
-		// Token: 0x0603D3BC RID: 250812 RVA: 0x00EC11DC File Offset: 0x00EBF3DC
+		// Token: 0x0603234B RID: 205643 RVA: 0x00E1273C File Offset: 0x00E1093C
 		private void OnTimer(float delta)
 		{
 			if (this.NextAnimIndex >= this.PillarItemList.Count)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NextAnimIndex++;
 		}
 
-		// Token: 0x0603D3BD RID: 250813 RVA: 0x00EC122F File Offset: 0x00EBF42F
+		// Token: 0x0603234C RID: 205644 RVA: 0x00E1278F File Offset: 0x00E1098F
 		private void StopTimer()
 		{
 			if (TimerSystem.Instance.Has(this.Timer))
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Timer = null;
 		}
 
-		// Token: 0x0603D3BE RID: 250814 RVA: 0x00EC125C File Offset: 0x00EBF45C
+		// Token: 0x0603234D RID: 205645 RVA: 0x00E127BC File Offset: 0x00E109BC
 		public void OnBarPercentChanged(float percent)
 		{
 			int num = (int)Math.Floor((double)((1f - percent) * 8f));
@@ -126,23 +126,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			fullEffect.SetUIActive(percent <= 0f);
 		}
 
-		// Token: 0x0401FEDF RID: 130783
+		// Token: 0x0401A9A6 RID: 108966
 		private List<UUIItem> PillarUiItemList = new List<UUIItem>();
 
-		// Token: 0x0401FEE0 RID: 130784
+		// Token: 0x0401A9A7 RID: 108967
 		private List<SpecialEnergyBarXinYueHuPillarItem> PillarItemList = new List<SpecialEnergyBarXinYueHuPillarItem>();
 
-		// Token: 0x0401FEE1 RID: 130785
+		// Token: 0x0401A9A8 RID: 108968
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0401FEE2 RID: 130786
+		// Token: 0x0401A9A9 RID: 108969
 		private int NextAnimIndex;
 
-		// Token: 0x0401FEE3 RID: 130787
+		// Token: 0x0401A9AA RID: 108970
 		private int CurFullCount;
 
-		// Token: 0x0401FEE4 RID: 130788
+		// Token: 0x0401A9AB RID: 108971
 		[Nullable(2)]
 		private UUINiagara FullEffect;
 	}

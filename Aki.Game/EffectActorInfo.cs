@@ -4,48 +4,48 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Audio;
 using UnrealEngine;
 
-// Token: 0x02000263 RID: 611
+// Token: 0x02000267 RID: 615
 [NullableContext(1)]
 [Nullable(0)]
 public class EffectActorInfo : IEffectActorInfo
 {
-	// Token: 0x170005AF RID: 1455
-	// (get) Token: 0x0600256C RID: 9580 RVA: 0x000E1060 File Offset: 0x000DF260
-	// (set) Token: 0x0600256D RID: 9581 RVA: 0x000E1068 File Offset: 0x000DF268
+	// Token: 0x170005D6 RID: 1494
+	// (get) Token: 0x06002623 RID: 9763 RVA: 0x000E73FC File Offset: 0x000E55FC
+	// (set) Token: 0x06002624 RID: 9764 RVA: 0x000E7404 File Offset: 0x000E5604
 	public int ActorUid { get; set; }
 
-	// Token: 0x170005B0 RID: 1456
-	// (get) Token: 0x0600256E RID: 9582 RVA: 0x000E1071 File Offset: 0x000DF271
-	// (set) Token: 0x0600256F RID: 9583 RVA: 0x000E1079 File Offset: 0x000DF279
+	// Token: 0x170005D7 RID: 1495
+	// (get) Token: 0x06002625 RID: 9765 RVA: 0x000E740D File Offset: 0x000E560D
+	// (set) Token: 0x06002626 RID: 9766 RVA: 0x000E7415 File Offset: 0x000E5615
 	public AActor Actor { get; set; }
 
-	// Token: 0x170005B1 RID: 1457
-	// (get) Token: 0x06002570 RID: 9584 RVA: 0x000E1082 File Offset: 0x000DF282
-	// (set) Token: 0x06002571 RID: 9585 RVA: 0x000E108A File Offset: 0x000DF28A
+	// Token: 0x170005D8 RID: 1496
+	// (get) Token: 0x06002627 RID: 9767 RVA: 0x000E741E File Offset: 0x000E561E
+	// (set) Token: 0x06002628 RID: 9768 RVA: 0x000E7426 File Offset: 0x000E5626
 	public UAkComponent AkComponent { get; set; }
 
-	// Token: 0x170005B2 RID: 1458
-	// (get) Token: 0x06002572 RID: 9586 RVA: 0x000E1093 File Offset: 0x000DF293
-	// (set) Token: 0x06002573 RID: 9587 RVA: 0x000E109B File Offset: 0x000DF29B
+	// Token: 0x170005D9 RID: 1497
+	// (get) Token: 0x06002629 RID: 9769 RVA: 0x000E742F File Offset: 0x000E562F
+	// (set) Token: 0x0600262A RID: 9770 RVA: 0x000E7437 File Offset: 0x000E5637
 	public TArray<FVector> Locations { get; set; }
 
-	// Token: 0x170005B3 RID: 1459
-	// (get) Token: 0x06002574 RID: 9588 RVA: 0x000E10A4 File Offset: 0x000DF2A4
-	// (set) Token: 0x06002575 RID: 9589 RVA: 0x000E10AC File Offset: 0x000DF2AC
+	// Token: 0x170005DA RID: 1498
+	// (get) Token: 0x0600262B RID: 9771 RVA: 0x000E7440 File Offset: 0x000E5640
+	// (set) Token: 0x0600262C RID: 9772 RVA: 0x000E7448 File Offset: 0x000E5648
 	public HashSet<int> EffectUidList { get; set; }
 
-	// Token: 0x170005B4 RID: 1460
-	// (get) Token: 0x06002576 RID: 9590 RVA: 0x000E10B5 File Offset: 0x000DF2B5
-	// (set) Token: 0x06002577 RID: 9591 RVA: 0x000E10BD File Offset: 0x000DF2BD
+	// Token: 0x170005DB RID: 1499
+	// (get) Token: 0x0600262D RID: 9773 RVA: 0x000E7451 File Offset: 0x000E5651
+	// (set) Token: 0x0600262E RID: 9774 RVA: 0x000E7459 File Offset: 0x000E5659
 	public int AudioHandle { get; set; }
 
-	// Token: 0x170005B5 RID: 1461
-	// (get) Token: 0x06002578 RID: 9592 RVA: 0x000E10C6 File Offset: 0x000DF2C6
-	// (set) Token: 0x06002579 RID: 9593 RVA: 0x000E10CE File Offset: 0x000DF2CE
+	// Token: 0x170005DC RID: 1500
+	// (get) Token: 0x0600262F RID: 9775 RVA: 0x000E7462 File Offset: 0x000E5662
+	// (set) Token: 0x06002630 RID: 9776 RVA: 0x000E746A File Offset: 0x000E566A
 	public IAudioInfo EffectModel { get; set; }
 
-	// Token: 0x170005B6 RID: 1462
-	// (get) Token: 0x0600257A RID: 9594 RVA: 0x000E10D7 File Offset: 0x000DF2D7
-	// (set) Token: 0x0600257B RID: 9595 RVA: 0x000E10DF File Offset: 0x000DF2DF
+	// Token: 0x170005DD RID: 1501
+	// (get) Token: 0x06002631 RID: 9777 RVA: 0x000E7473 File Offset: 0x000E5673
+	// (set) Token: 0x06002632 RID: 9778 RVA: 0x000E747B File Offset: 0x000E567B
 	public ERoleAudioPriorityType? Priority { get; set; }
 }

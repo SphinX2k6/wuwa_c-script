@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -9,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029C1 RID: 10689
+// Token: 0x02001F3C RID: 7996
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerRecordView : UiViewBase
 {
-	// Token: 0x0601627D RID: 90749 RVA: 0x0059A513 File Offset: 0x00598713
+	// Token: 0x06013C83 RID: 81027 RVA: 0x005C549F File Offset: 0x005C369F
 	public ShipTowerRecordView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601627E RID: 90750 RVA: 0x0059A51C File Offset: 0x0059871C
+	// Token: 0x06013C84 RID: 81028 RVA: 0x005C54A8 File Offset: 0x005C36A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -53,14 +52,14 @@ public class ShipTowerRecordView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601627F RID: 90751 RVA: 0x0059A6D3 File Offset: 0x005988D3
+	// Token: 0x06013C85 RID: 81029 RVA: 0x005C565F File Offset: 0x005C385F
 	private void InitDataParam()
 	{
 		this.AreaList = ShipTowerModel.Instance.RecordList;
 		this.StageData = ShipTowerModel.Instance.GetEndlessStageData();
 	}
 
-	// Token: 0x06016280 RID: 90752 RVA: 0x0059A6F8 File Offset: 0x005988F8
+	// Token: 0x06013C86 RID: 81030 RVA: 0x005C5684 File Offset: 0x005C3884
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerRecordView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -71,7 +70,7 @@ public class ShipTowerRecordView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016281 RID: 90753 RVA: 0x0059A73C File Offset: 0x0059893C
+	// Token: 0x06013C87 RID: 81031 RVA: 0x005C56C8 File Offset: 0x005C38C8
 	protected override void OnStart()
 	{
 		ShipTowerStageData stageData = this.StageData;
@@ -79,7 +78,7 @@ public class ShipTowerRecordView : UiViewBase
 		base.GetText(5).ShowTextNew(key);
 	}
 
-	// Token: 0x06016282 RID: 90754 RVA: 0x0059A772 File Offset: 0x00598972
+	// Token: 0x06013C88 RID: 81032 RVA: 0x005C56FE File Offset: 0x005C38FE
 	private ShipTowerAreaItem CreateAreaItem()
 	{
 		return new ShipTowerAreaItem
@@ -88,34 +87,37 @@ public class ShipTowerRecordView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016283 RID: 90755 RVA: 0x0059A78C File Offset: 0x0059898C
+	// Token: 0x06013C89 RID: 81033 RVA: 0x005C5718 File Offset: 0x005C3918
 	private void OnAreaItemClick(ShipTowerAreaItemData data)
 	{
 		this.SelectData = data;
-		List<ShipTowerRecordItemData> recordList = data.RecordList;
-		bool flag;
-		if (recordList == null)
+		bool flag = false;
+		if (data.RecordList != null)
 		{
-			flag = false;
+			for (int i = 0; i < data.RecordList.Count; i++)
+			{
+				if (data.RecordList[i].TeamList.Count > 0)
+				{
+					flag = true;
+					break;
+				}
+			}
 		}
-		else
+		bool flag2 = false;
+		if (data.RecordList != null)
 		{
-			flag = recordList.Any((ShipTowerRecordItemData value) => value.TeamList.Count > 0);
+			for (int j = 0; j < data.RecordList.Count; j++)
+			{
+				if (data.RecordList[j].BuffId > 0)
+				{
+					flag2 = true;
+					break;
+				}
+			}
 		}
-		List<ShipTowerRecordItemData> recordList2 = data.RecordList;
-		bool flag2;
-		if (recordList2 == null)
-		{
-			flag2 = false;
-		}
-		else
-		{
-			flag2 = recordList2.Any((ShipTowerRecordItemData value) => value.BuffId > 0);
-		}
-		bool flag3 = flag2;
-		bool flag4 = flag && flag3;
-		this.SetEmptyState(!flag4);
-		if (flag4 && data.RecordList != null)
+		bool flag3 = flag && flag2;
+		this.SetEmptyState(!flag3);
+		if (flag3 && data.RecordList != null)
 		{
 			GenericLayout<ShipTowerRecordItem, ShipTowerRecordItemData> layoutInfo = this.LayoutInfo;
 			if (layoutInfo != null)
@@ -123,39 +125,33 @@ public class ShipTowerRecordView : UiViewBase
 				layoutInfo.RefreshByData(data.RecordList, null, true);
 			}
 		}
-		List<ShipTowerRecordItemData> recordList3 = data.RecordList;
-		int num;
-		if (recordList3 == null)
+		int num = 0;
+		if (data.RecordList != null)
 		{
-			num = 0;
+			for (int k = 0; k < data.RecordList.Count; k++)
+			{
+				num += data.RecordList[k].Score;
+			}
 		}
-		else
+		int num2 = 0;
+		if (data.RecordList != null)
 		{
-			num = recordList3.Sum((ShipTowerRecordItemData value) => value.Score);
+			for (int l = 0; l < data.RecordList.Count; l++)
+			{
+				num2 += data.RecordList[l].Wave;
+			}
 		}
-		int score = num;
-		List<ShipTowerRecordItemData> recordList4 = data.RecordList;
-		int num2;
-		if (recordList4 == null)
-		{
-			num2 = 0;
-		}
-		else
-		{
-			num2 = recordList4.Sum((ShipTowerRecordItemData value) => value.Wave);
-		}
-		int num3 = num2;
-		base.GetText(6).SetText(score.ToString(), true);
-		base.GetText(7).SetText(num3.ToString(), true);
+		base.GetText(6).SetText(num.ToString(), true);
+		base.GetText(7).SetText(num2.ToString(), true);
 		UUITexture texture = base.GetTexture(8);
 		ShipTowerStageData stageData = this.StageData;
-		string text = (stageData != null) ? stageData.GetStageGradeResIdByScore(score) : null;
-		bool flag5 = text != null;
+		string text = (stageData != null) ? stageData.GetStageGradeResIdByScore(num) : null;
+		bool flag4 = text != null;
 		if (texture != null)
 		{
-			texture.SetUIActive(flag5);
+			texture.SetUIActive(flag4);
 		}
-		if (flag5 && text != null)
+		if (flag4 && text != null)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(text);
 			base.SetTextureByPath(resourcePath, texture, null, null);
@@ -164,7 +160,7 @@ public class ShipTowerRecordView : UiViewBase
 		this.RefreshShareBtn();
 	}
 
-	// Token: 0x06016284 RID: 90756 RVA: 0x0059A930 File Offset: 0x00598B30
+	// Token: 0x06013C8A RID: 81034 RVA: 0x005C58EA File Offset: 0x005C3AEA
 	private void SetEmptyState(bool isShow)
 	{
 		UUIItem item = base.GetItem(4);
@@ -180,13 +176,13 @@ public class ShipTowerRecordView : UiViewBase
 		item2.SetUIActive(isShow);
 	}
 
-	// Token: 0x06016285 RID: 90757 RVA: 0x0059A95A File Offset: 0x00598B5A
+	// Token: 0x06013C8B RID: 81035 RVA: 0x005C5914 File Offset: 0x005C3B14
 	private int GetSelectAreaIndex()
 	{
 		return 0;
 	}
 
-	// Token: 0x06016286 RID: 90758 RVA: 0x0059A960 File Offset: 0x00598B60
+	// Token: 0x06013C8C RID: 81036 RVA: 0x005C5918 File Offset: 0x005C3B18
 	private void OnShareBtnClicked()
 	{
 		ShipTowerAreaItemData selectData = this.SelectData;
@@ -227,7 +223,7 @@ public class ShipTowerRecordView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhotoSaveView, param, null);
 	}
 
-	// Token: 0x06016287 RID: 90759 RVA: 0x0059AA98 File Offset: 0x00598C98
+	// Token: 0x06013C8D RID: 81037 RVA: 0x005C5A50 File Offset: 0x005C3C50
 	private void RefreshShareBtn()
 	{
 		ShipTowerStageData stageData = this.StageData;
@@ -248,17 +244,17 @@ public class ShipTowerRecordView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016288 RID: 90760 RVA: 0x0059AAF2 File Offset: 0x00598CF2
+	// Token: 0x06013C8E RID: 81038 RVA: 0x005C5AAA File Offset: 0x005C3CAA
 	private ShipTowerRecordItem CreateRecordItem()
 	{
 		return new ShipTowerRecordItem();
 	}
 
-	// Token: 0x0400A505 RID: 42245
+	// Token: 0x0400A8EF RID: 43247
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x0400A506 RID: 42246
+	// Token: 0x0400A8F0 RID: 43248
 	[Nullable(new byte[]
 	{
 		2,
@@ -267,14 +263,14 @@ public class ShipTowerRecordView : UiViewBase
 	})]
 	private LoopScrollView<ShipTowerAreaItem, ShipTowerAreaItemData> AreaLoopView;
 
-	// Token: 0x0400A507 RID: 42247
+	// Token: 0x0400A8F1 RID: 43249
 	private List<ShipTowerAreaItemData> AreaList;
 
-	// Token: 0x0400A508 RID: 42248
+	// Token: 0x0400A8F2 RID: 43250
 	[Nullable(2)]
 	private ShipTowerAreaItemData SelectData;
 
-	// Token: 0x0400A509 RID: 42249
+	// Token: 0x0400A8F3 RID: 43251
 	[Nullable(new byte[]
 	{
 		2,
@@ -283,52 +279,52 @@ public class ShipTowerRecordView : UiViewBase
 	})]
 	private GenericLayout<ShipTowerRecordItem, ShipTowerRecordItemData> LayoutInfo;
 
-	// Token: 0x0400A50A RID: 42250
+	// Token: 0x0400A8F4 RID: 43252
 	[Nullable(2)]
 	private ShipTowerStageData StageData;
 
-	// Token: 0x0400A50B RID: 42251
+	// Token: 0x0400A8F5 RID: 43253
 	[Nullable(2)]
 	private ShareBtnItem ShareBtnItem;
 
-	// Token: 0x02008FDC RID: 36828
+	// Token: 0x02008224 RID: 33316
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E962 RID: 190818
+		// Token: 0x0402A05F RID: 172127
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402E963 RID: 190819
+		// Token: 0x0402A060 RID: 172128
 		public const int ButtonHelp = 1;
 
-		// Token: 0x0402E964 RID: 190820
+		// Token: 0x0402A061 RID: 172129
 		public const int LoopViewPeriod = 2;
 
-		// Token: 0x0402E965 RID: 190821
+		// Token: 0x0402A062 RID: 172130
 		public const int ItemEmpty = 3;
 
-		// Token: 0x0402E966 RID: 190822
+		// Token: 0x0402A063 RID: 172131
 		public const int ItemDescRoot = 4;
 
-		// Token: 0x0402E967 RID: 190823
+		// Token: 0x0402A064 RID: 172132
 		public const int TextDungeonName = 5;
 
-		// Token: 0x0402E968 RID: 190824
+		// Token: 0x0402A065 RID: 172133
 		public const int TextMaxScore = 6;
 
-		// Token: 0x0402E969 RID: 190825
+		// Token: 0x0402A066 RID: 172134
 		public const int TextMaxWave = 7;
 
-		// Token: 0x0402E96A RID: 190826
+		// Token: 0x0402A067 RID: 172135
 		public const int TextureGrade = 8;
 
-		// Token: 0x0402E96B RID: 190827
+		// Token: 0x0402A068 RID: 172136
 		public const int VLayoutTeamRecord = 9;
 
-		// Token: 0x0402E96C RID: 190828
+		// Token: 0x0402A069 RID: 172137
 		public const int ItemPeriod = 10;
 
-		// Token: 0x0402E96D RID: 190829
+		// Token: 0x0402A06A RID: 172138
 		public const int ShareItem = 11;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007EB RID: 2027
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200088E RID: 2190
 	public class IWoodElementalMatch : IElementalMatchBase
 	{
-		// Token: 0x06002C09 RID: 11273 RVA: 0x0007296C File Offset: 0x00070B6C
+		// Token: 0x06002F39 RID: 12089 RVA: 0x00079CD0 File Offset: 0x00077ED0
 		private IWoodElementalMatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C0A RID: 11274 RVA: 0x000729A4 File Offset: 0x00070BA4
+		// Token: 0x06002F3A RID: 12090 RVA: 0x00079D08 File Offset: 0x00077F08
 		public static IWoodElementalMatch Create([Nullable(2)] IWoodElementalMatch instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C0B RID: 11275 RVA: 0x000729B7 File Offset: 0x00070BB7
+		// Token: 0x06002F3B RID: 12091 RVA: 0x00079D1B File Offset: 0x00077F1B
 		public static IWoodElementalMatch CreateFromSetValue([Nullable(2)] IWoodElementalMatch_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C0C RID: 11276 RVA: 0x000729CA File Offset: 0x00070BCA
+		// Token: 0x06002F3C RID: 12092 RVA: 0x00079D2E File Offset: 0x00077F2E
 		public new IWoodElementalMatch_SetValue ToSetValue()
 		{
 			return new IWoodElementalMatch_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B87 RID: 2951
-		// (get) Token: 0x06002C0D RID: 11277 RVA: 0x000729DD File Offset: 0x00070BDD
-		// (set) Token: 0x06002C0E RID: 11278 RVA: 0x00072A08 File Offset: 0x00070C08
+		// Token: 0x17000C4A RID: 3146
+		// (get) Token: 0x06002F3D RID: 12093 RVA: 0x00079D41 File Offset: 0x00077F41
+		// (set) Token: 0x06002F3E RID: 12094 RVA: 0x00079D6C File Offset: 0x00077F6C
 		public override EElementalType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D31 RID: 7473
+		// Token: 0x04001F3D RID: 7997
 		[Nullable(2)]
 		protected new IWoodElementalMatch FbInstance;
 
-		// Token: 0x04001D32 RID: 7474
+		// Token: 0x04001F3E RID: 7998
 		[Nullable(2)]
 		protected new IWoodElementalMatch_SetValue PocoInterface;
 	}

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200291F RID: 10527
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BFB RID: 11259
 	public class IGamepadShakeInTalk
 	{
-		// Token: 0x0600E9A2 RID: 59810 RVA: 0x00223E11 File Offset: 0x00222011
+		// Token: 0x0600F7F4 RID: 63476 RVA: 0x00241169 File Offset: 0x0023F369
 		public static IGamepadShakeInTalk Create(IGamepadShakeInTalk? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004926 RID: 18726
-		// (get) Token: 0x0600E9A3 RID: 59811 RVA: 0x00223E30 File Offset: 0x00222030
+		// Token: 0x17004CAC RID: 19628
+		// (get) Token: 0x0600F7F5 RID: 63477 RVA: 0x00241188 File Offset: 0x0023F388
 		public virtual float DelayTime
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004927 RID: 18727
-		// (get) Token: 0x0600E9A4 RID: 59812 RVA: 0x00223E3D File Offset: 0x0022203D
+		// Token: 0x17004CAD RID: 19629
+		// (get) Token: 0x0600F7F6 RID: 63478 RVA: 0x00241195 File Offset: 0x0023F395
 		public virtual IGamepadShakeOptions Options
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080EB RID: 33003
+		// Token: 0x040087B9 RID: 34745
 		private IGamepadShakeInTalk Instance;
 
-		// Token: 0x040080EC RID: 33004
+		// Token: 0x040087BA RID: 34746
 		[Nullable(2)]
 		private IGamepadShakeOptions _OptionsCache;
 
-		// Token: 0x040080ED RID: 33005
+		// Token: 0x040087BB RID: 34747
 		private bool _OptionsInited;
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 {
-	// Token: 0x0200576B RID: 22379
+	// Token: 0x02004742 RID: 18242
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 	})]
 	public class KurotatoEnemyCharacteristicItem : GridProxyAbstract<KurotatoEnemyCharacteristicData>
 	{
-		// Token: 0x06038D9A RID: 232858 RVA: 0x00D81A38 File Offset: 0x00D7FC38
+		// Token: 0x0602DCAA RID: 187562 RVA: 0x00CD0534 File Offset: 0x00CCE734
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D9B RID: 232859 RVA: 0x00D81AC4 File Offset: 0x00D7FCC4
+		// Token: 0x0602DCAB RID: 187563 RVA: 0x00CD05C0 File Offset: 0x00CCE7C0
 		[NullableContext(1)]
 		public override void Refresh(KurotatoEnemyCharacteristicData data, bool isSelected, int gridIndex)
 		{
@@ -41,16 +41,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), data.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0200B974 RID: 47476
+		// Token: 0x0200A38E RID: 41870
 		private class ECharacteristicComponent
 		{
-			// Token: 0x04038141 RID: 229697
+			// Token: 0x04032B3B RID: 207675
 			public const int SpriteIcon = 0;
 
-			// Token: 0x04038142 RID: 229698
+			// Token: 0x04032B3C RID: 207676
 			public const int TextTitle = 1;
 
-			// Token: 0x04038143 RID: 229699
+			// Token: 0x04032B3D RID: 207677
 			public const int TextDesc = 2;
 		}
 	}

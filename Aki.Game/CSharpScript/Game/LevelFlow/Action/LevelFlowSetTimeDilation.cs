@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F9F RID: 28575
+	// Token: 0x02006120 RID: 24864
 	public class LevelFlowSetTimeDilation : LevelFlowActionBase
 	{
-		// Token: 0x06045776 RID: 284534 RVA: 0x0113B067 File Offset: 0x01139267
+		// Token: 0x0603B924 RID: 244004 RVA: 0x010E4E6B File Offset: 0x010E306B
 		[NullableContext(1)]
 		public LevelFlowSetTimeDilation Init(int entityId, float timeDilation)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045777 RID: 284535 RVA: 0x0113B078 File Offset: 0x01139278
+		// Token: 0x0603B925 RID: 244005 RVA: 0x010E4E7C File Offset: 0x010E307C
 		protected override void OnExecute()
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(this.EntityId);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(false);
 		}
 
-		// Token: 0x06045778 RID: 284536 RVA: 0x0113B114 File Offset: 0x01139314
+		// Token: 0x0603B926 RID: 244006 RVA: 0x010E4F18 File Offset: 0x010E3118
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -53,10 +53,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243F0 RID: 148464
+		// Token: 0x0401F6A5 RID: 128677
 		private int EntityId;
 
-		// Token: 0x040243F1 RID: 148465
+		// Token: 0x0401F6A6 RID: 128678
 		private float TimeDilation = 1f;
 	}
 }

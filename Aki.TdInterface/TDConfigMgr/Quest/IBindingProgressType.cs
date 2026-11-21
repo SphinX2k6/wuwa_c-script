@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EDC RID: 3804
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FF2 RID: 4082
 	public class IBindingProgressType
 	{
-		// Token: 0x060053F6 RID: 21494 RVA: 0x000CE524 File Offset: 0x000CC724
+		// Token: 0x06005972 RID: 22898 RVA: 0x000DA6CC File Offset: 0x000D88CC
 		private IBindingProgressType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060053F7 RID: 21495 RVA: 0x000CE55C File Offset: 0x000CC75C
+		// Token: 0x06005973 RID: 22899 RVA: 0x000DA704 File Offset: 0x000D8904
 		public static IBindingProgressType Create([Nullable(2)] IBindingProgressType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053F8 RID: 21496 RVA: 0x000CE56F File Offset: 0x000CC76F
+		// Token: 0x06005974 RID: 22900 RVA: 0x000DA717 File Offset: 0x000D8917
 		public static IBindingProgressType CreateFromSetValue([Nullable(2)] IBindingProgressType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053F9 RID: 21497 RVA: 0x000CE582 File Offset: 0x000CC782
+		// Token: 0x06005975 RID: 22901 RVA: 0x000DA72A File Offset: 0x000D892A
 		public IBindingProgressType_SetValue ToSetValue()
 		{
 			return new IBindingProgressType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C30 RID: 7216
-		// (get) Token: 0x060053FA RID: 21498 RVA: 0x000CE595 File Offset: 0x000CC795
-		// (set) Token: 0x060053FB RID: 21499 RVA: 0x000CE5C0 File Offset: 0x000CC7C0
+		// Token: 0x17001DC8 RID: 7624
+		// (get) Token: 0x06005976 RID: 22902 RVA: 0x000DA73D File Offset: 0x000D893D
+		// (set) Token: 0x06005977 RID: 22903 RVA: 0x000DA768 File Offset: 0x000D8968
 		public virtual EBindingProgressType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032D4 RID: 13012
+		// Token: 0x040035E1 RID: 13793
 		[Nullable(2)]
 		protected IBindingProgressType FbInstance;
 
-		// Token: 0x040032D5 RID: 13013
+		// Token: 0x040035E2 RID: 13794
 		[Nullable(2)]
 		protected IBindingProgressType_SetValue PocoInterface;
 	}

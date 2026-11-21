@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039F5 RID: 14837
+	// Token: 0x0200304C RID: 12364
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 当有角色死亡时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F142 RID: 127298 RVA: 0x008A9E0D File Offset: 0x008A800D
+		// Token: 0x0601D5A3 RID: 120227 RVA: 0x008F246D File Offset: 0x008F066D
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 当有角色死亡时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F143 RID: 127299 RVA: 0x008A9E19 File Offset: 0x008A8019
+		// Token: 0x0601D5A4 RID: 120228 RVA: 0x008F2479 File Offset: 0x008F0679
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__当有角色死亡时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__当有角色死亡时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F144 RID: 127300 RVA: 0x008A9E3C File Offset: 0x008A803C
+		// Token: 0x0601D5A5 RID: 120229 RVA: 0x008F249C File Offset: 0x008F069C
 		public 当有角色死亡时()
 		{
 		}
 
-		// Token: 0x0601F145 RID: 127301 RVA: 0x008A9E44 File Offset: 0x008A8044
+		// Token: 0x0601D5A6 RID: 120230 RVA: 0x008F24A4 File Offset: 0x008F06A4
 		[NullableContext(2)]
 		public 当有角色死亡时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F146 RID: 127302 RVA: 0x008A9E4E File Offset: 0x008A804E
+		// Token: 0x0601D5A7 RID: 120231 RVA: 0x008F24AE File Offset: 0x008F06AE
 		public 当有角色死亡时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F147 RID: 127303 RVA: 0x008A9E59 File Offset: 0x008A8059
+		// Token: 0x0601D5A8 RID: 120232 RVA: 0x008F24B9 File Offset: 0x008F06B9
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TsBaseCharacter>) ?? ((Action<TsBaseCharacter>)Delegate.CreateDelegate(typeof(Action<TsBaseCharacter>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F148 RID: 127304 RVA: 0x008A9E8B File Offset: 0x008A808B
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D5A9 RID: 120233 RVA: 0x008F24EB File Offset: 0x008F06EB
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 当有角色死亡时.RegisterId);
 		}
 
-		// Token: 0x0601F149 RID: 127305 RVA: 0x008A9EC5 File Offset: 0x008A80C5
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D5AA RID: 120234 RVA: 0x008F2525 File Offset: 0x008F0725
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F14A RID: 127306 RVA: 0x008A9ED0 File Offset: 0x008A80D0
+		// Token: 0x0601D5AB RID: 120235 RVA: 0x008F2530 File Offset: 0x008F0730
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(TsBaseCharacter 角色)
 		{
 			当有角色死亡时.__当有角色死亡时_DelegateParams* ptr = stackalloc 当有角色死亡时.__当有角色死亡时_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(当有角色死亡时.__当有角色死亡时_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F14B RID: 127307 RVA: 0x008A9F1C File Offset: 0x008A811C
+		// Token: 0x0601D5AC RID: 120236 RVA: 0x008F257C File Offset: 0x008F077C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TsBaseCharacter> action = target as Action<TsBaseCharacter>;
@@ -109,28 +105,28 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400EE2C RID: 60972
+		// Token: 0x0400F754 RID: 63316
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:当有角色死亡时__DelegateSignature";
 
-		// Token: 0x0400EE2D RID: 60973
+		// Token: 0x0400F755 RID: 63317
 		private static int RegisterId;
 
-		// Token: 0x020099F8 RID: 39416
+		// Token: 0x02008CAC RID: 36012
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __当有角色死亡时_DelegateParams
+		private ref struct __当有角色死亡时_DelegateParams
 		{
-			// Token: 0x04030ED1 RID: 200401
+			// Token: 0x0402C7B1 RID: 182193
 			[FieldOffset(0)]
 			public IntPtr 角色;
 		}
 
-		// Token: 0x020099F9 RID: 39417
+		// Token: 0x02008CAD RID: 36013
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030ED2 RID: 200402
+			// Token: 0x0402C7B2 RID: 182194
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

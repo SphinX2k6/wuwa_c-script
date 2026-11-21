@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A1C RID: 6684
+	// Token: 0x02000499 RID: 1177
 	public sealed class FGetTickedPerformanceReportAndAdviceDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018BA9 RID: 101289 RVA: 0x00247F16 File Offset: 0x00246116
+		// Token: 0x06006DDB RID: 28123 RVA: 0x000A0F46 File Offset: 0x0009F146
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FGetTickedPerformanceReportAndAdviceDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018BAA RID: 101290 RVA: 0x00247F22 File Offset: 0x00246122
+		// Token: 0x06006DDC RID: 28124 RVA: 0x000A0F52 File Offset: 0x0009F152
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FGetTickedPerformanceReportAndAdviceDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FGetTickedPerformanceReportAndAdviceDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018BAB RID: 101291 RVA: 0x00247F45 File Offset: 0x00246145
+		// Token: 0x06006DDD RID: 28125 RVA: 0x000A0F75 File Offset: 0x0009F175
 		public FGetTickedPerformanceReportAndAdviceDelegate()
 		{
 		}
 
-		// Token: 0x06018BAC RID: 101292 RVA: 0x00247F4D File Offset: 0x0024614D
+		// Token: 0x06006DDE RID: 28126 RVA: 0x000A0F7D File Offset: 0x0009F17D
 		[NullableContext(2)]
 		public FGetTickedPerformanceReportAndAdviceDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018BAD RID: 101293 RVA: 0x00247F57 File Offset: 0x00246157
+		// Token: 0x06006DDF RID: 28127 RVA: 0x000A0F87 File Offset: 0x0009F187
 		public FGetTickedPerformanceReportAndAdviceDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018BAE RID: 101294 RVA: 0x00247F62 File Offset: 0x00246162
+		// Token: 0x06006DE0 RID: 28128 RVA: 0x000A0F92 File Offset: 0x0009F192
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FKuroPerformanceReport>) ?? ((Action<FKuroPerformanceReport>)Delegate.CreateDelegate(typeof(Action<FKuroPerformanceReport>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018BAF RID: 101295 RVA: 0x00247F94 File Offset: 0x00246194
+		// Token: 0x06006DE1 RID: 28129 RVA: 0x000A0FC4 File Offset: 0x0009F1C4
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FKuroPerformanceReport> Callback)
 		{
 			if (FGetTickedPerformanceReportAndAdviceDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FGetTickedPerformanceReportAndAdviceDelegate.RegisterId);
 		}
 
-		// Token: 0x06018BB0 RID: 101296 RVA: 0x00247FD0 File Offset: 0x002461D0
+		// Token: 0x06006DE2 RID: 28130 RVA: 0x000A1000 File Offset: 0x0009F200
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FKuroPerformanceReport PerformanceReport)
 		{
 			FGetTickedPerformanceReportAndAdviceDelegate.__FGetTickedPerformanceReportAndAdviceDelegate_DelegateParams* ptr = stackalloc FGetTickedPerformanceReportAndAdviceDelegate.__FGetTickedPerformanceReportAndAdviceDelegate_DelegateParams[(UIntPtr)67] + 15L / (long)sizeof(FGetTickedPerformanceReportAndAdviceDelegate.__FGetTickedPerformanceReportAndAdviceDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06018BB1 RID: 101297 RVA: 0x00248010 File Offset: 0x00246210
+		// Token: 0x06006DE3 RID: 28131 RVA: 0x000A1040 File Offset: 0x0009F240
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FKuroPerformanceReport> action = target as Action<FKuroPerformanceReport>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FGetTickedPerformanceReportAndAdviceDelegate.__FGetTickedPerformanceReportAndAdviceDelegate_DelegateParams*)__Parameters)->PerformanceReport);
 		}
 
-		// Token: 0x0400D5C9 RID: 54729
+		// Token: 0x04002EEB RID: 12011
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D5CA RID: 54730
+		// Token: 0x04002EEC RID: 12012
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroPerformance.GetTickedPerformanceReportAndAdviceDelegate__DelegateSignature";
 
-		// Token: 0x0400D5CB RID: 54731
+		// Token: 0x04002EED RID: 12013
 		private static int RegisterId;
 
-		// Token: 0x020030CF RID: 12495
+		// Token: 0x02000BAC RID: 2988
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 52)]
-		protected ref struct __FGetTickedPerformanceReportAndAdviceDelegate_DelegateParams
+		private ref struct __FGetTickedPerformanceReportAndAdviceDelegate_DelegateParams
 		{
-			// Token: 0x04016E30 RID: 93744
+			// Token: 0x04005D36 RID: 23862
 			[FieldOffset(0)]
 			public FKuroPerformanceReport PerformanceReport;
 		}
 
-		// Token: 0x020030D0 RID: 12496
+		// Token: 0x02000BAD RID: 2989
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E31 RID: 93745
+			// Token: 0x04005D37 RID: 23863
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

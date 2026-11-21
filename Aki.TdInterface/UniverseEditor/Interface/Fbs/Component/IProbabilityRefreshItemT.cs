@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005785 RID: 22405
+	// Token: 0x02005D8C RID: 23948
 	public class IProbabilityRefreshItemT
 	{
-		// Token: 0x1700A71F RID: 42783
-		// (get) Token: 0x060258FF RID: 153855 RVA: 0x0052E75D File Offset: 0x0052C95D
-		// (set) Token: 0x06025900 RID: 153856 RVA: 0x0052E765 File Offset: 0x0052C965
+		// Token: 0x1700B043 RID: 45123
+		// (get) Token: 0x06027E1F RID: 163359 RVA: 0x005748E9 File Offset: 0x00572AE9
+		// (set) Token: 0x06027E20 RID: 163360 RVA: 0x005748F1 File Offset: 0x00572AF1
 		public int Probability { get; set; }
 
-		// Token: 0x1700A720 RID: 42784
-		// (get) Token: 0x06025901 RID: 153857 RVA: 0x0052E76E File Offset: 0x0052C96E
-		// (set) Token: 0x06025902 RID: 153858 RVA: 0x0052E776 File Offset: 0x0052C976
+		// Token: 0x1700B044 RID: 45124
+		// (get) Token: 0x06027E21 RID: 163361 RVA: 0x005748FA File Offset: 0x00572AFA
+		// (set) Token: 0x06027E22 RID: 163362 RVA: 0x00574902 File Offset: 0x00572B02
 		public int RefreshEntityId { get; set; }
 
-		// Token: 0x1700A721 RID: 42785
-		// (get) Token: 0x06025903 RID: 153859 RVA: 0x0052E77F File Offset: 0x0052C97F
-		// (set) Token: 0x06025904 RID: 153860 RVA: 0x0052E787 File Offset: 0x0052C987
+		// Token: 0x1700B045 RID: 45125
+		// (get) Token: 0x06027E23 RID: 163363 RVA: 0x0057490B File Offset: 0x00572B0B
+		// (set) Token: 0x06027E24 RID: 163364 RVA: 0x00574913 File Offset: 0x00572B13
 		public IConditionGroupT AdditionalCondition { get; set; }
 
-		// Token: 0x06025905 RID: 153861 RVA: 0x0052E790 File Offset: 0x0052C990
+		// Token: 0x06027E25 RID: 163365 RVA: 0x0057491C File Offset: 0x00572B1C
 		public IProbabilityRefreshItemT()
 		{
 			this.Probability = 0;

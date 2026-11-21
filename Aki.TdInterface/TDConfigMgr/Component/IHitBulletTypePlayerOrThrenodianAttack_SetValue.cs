@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200041B RID: 1051
+	// Token: 0x02000474 RID: 1140
 	public class IHitBulletTypePlayerOrThrenodianAttack_SetValue
 	{
-		// Token: 0x0400106F RID: 4207
+		// Token: 0x04001191 RID: 4497
 		public EHitBulletType Type;
 	}
 }

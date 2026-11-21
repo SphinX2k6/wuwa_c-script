@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindPlayerAroundPoint.TsTaskFindPlayerAroundPoint_C")]
 public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700014E RID: 334
-	// (get) Token: 0x06000802 RID: 2050 RVA: 0x00027D19 File Offset: 0x00025F19
-	// (set) Token: 0x06000803 RID: 2051 RVA: 0x00027D29 File Offset: 0x00025F29
+	// Token: 0x17000150 RID: 336
+	// (get) Token: 0x06000806 RID: 2054 RVA: 0x00028B19 File Offset: 0x00026D19
+	// (set) Token: 0x06000807 RID: 2055 RVA: 0x00028B29 File Offset: 0x00026D29
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FallbackSearchRadius
 	{
@@ -31,9 +31,9 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x1700014F RID: 335
-	// (get) Token: 0x06000804 RID: 2052 RVA: 0x00027D3A File Offset: 0x00025F3A
-	// (set) Token: 0x06000805 RID: 2053 RVA: 0x00027D4A File Offset: 0x00025F4A
+	// Token: 0x17000151 RID: 337
+	// (get) Token: 0x06000808 RID: 2056 RVA: 0x00028B3A File Offset: 0x00026D3A
+	// (set) Token: 0x06000809 RID: 2057 RVA: 0x00028B4A File Offset: 0x00026D4A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxHeightDiff
 	{
@@ -47,9 +47,9 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x17000150 RID: 336
-	// (get) Token: 0x06000806 RID: 2054 RVA: 0x00027D5B File Offset: 0x00025F5B
-	// (set) Token: 0x06000807 RID: 2055 RVA: 0x00027D6B File Offset: 0x00025F6B
+	// Token: 0x17000152 RID: 338
+	// (get) Token: 0x0600080A RID: 2058 RVA: 0x00028B5B File Offset: 0x00026D5B
+	// (set) Token: 0x0600080B RID: 2059 RVA: 0x00028B6B File Offset: 0x00026D6B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ObstacleHeight
 	{
@@ -63,9 +63,9 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x17000151 RID: 337
-	// (get) Token: 0x06000808 RID: 2056 RVA: 0x00027D7C File Offset: 0x00025F7C
-	// (set) Token: 0x06000809 RID: 2057 RVA: 0x00027D8C File Offset: 0x00025F8C
+	// Token: 0x17000153 RID: 339
+	// (get) Token: 0x0600080C RID: 2060 RVA: 0x00028B7C File Offset: 0x00026D7C
+	// (set) Token: 0x0600080D RID: 2061 RVA: 0x00028B8C File Offset: 0x00026D8C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FloorDetectRange
 	{
@@ -79,9 +79,9 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x17000152 RID: 338
-	// (get) Token: 0x0600080A RID: 2058 RVA: 0x00027D9D File Offset: 0x00025F9D
-	// (set) Token: 0x0600080B RID: 2059 RVA: 0x00027DAD File Offset: 0x00025FAD
+	// Token: 0x17000154 RID: 340
+	// (get) Token: 0x0600080E RID: 2062 RVA: 0x00028B9D File Offset: 0x00026D9D
+	// (set) Token: 0x0600080F RID: 2063 RVA: 0x00028BAD File Offset: 0x00026DAD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool CheckHeightDiff
 	{
@@ -95,9 +95,9 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x17000153 RID: 339
-	// (get) Token: 0x0600080C RID: 2060 RVA: 0x00027DBE File Offset: 0x00025FBE
-	// (set) Token: 0x0600080D RID: 2061 RVA: 0x00027DD2 File Offset: 0x00025FD2
+	// Token: 0x17000155 RID: 341
+	// (get) Token: 0x06000810 RID: 2064 RVA: 0x00028BBE File Offset: 0x00026DBE
+	// (set) Token: 0x06000811 RID: 2065 RVA: 0x00028BD2 File Offset: 0x00026DD2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string StandPointKey
 	{
@@ -111,9 +111,9 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x17000154 RID: 340
-	// (get) Token: 0x0600080E RID: 2062 RVA: 0x00027DE7 File Offset: 0x00025FE7
-	// (set) Token: 0x0600080F RID: 2063 RVA: 0x00027DF7 File Offset: 0x00025FF7
+	// Token: 0x17000156 RID: 342
+	// (get) Token: 0x06000812 RID: 2066 RVA: 0x00028BE7 File Offset: 0x00026DE7
+	// (set) Token: 0x06000813 RID: 2067 RVA: 0x00028BF7 File Offset: 0x00026DF7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugDraw
 	{
@@ -127,7 +127,7 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x06000810 RID: 2064 RVA: 0x00027E08 File Offset: 0x00026008
+	// Token: 0x06000814 RID: 2068 RVA: 0x00028C08 File Offset: 0x00026E08
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -144,30 +144,27 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x06000811 RID: 2065 RVA: 0x00027E8C File Offset: 0x0002608C
+	// Token: 0x06000815 RID: 2069 RVA: 0x00028C8C File Offset: 0x00026E8C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFindPlayerAroundPoint) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskFindPlayerAroundPoint.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000812 RID: 2066 RVA: 0x00027F28 File Offset: 0x00026128
+	// Token: 0x06000816 RID: 2070 RVA: 0x00028D3C File Offset: 0x00026F3C
 	[NullableContext(2)]
 	protected void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -225,7 +222,7 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		base.Finish(false);
 	}
 
-	// Token: 0x06000813 RID: 2067 RVA: 0x00028163 File Offset: 0x00026363
+	// Token: 0x06000817 RID: 2071 RVA: 0x00028F77 File Offset: 0x00027177
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskFindPlayerAroundPoint._ClassPtr == IntPtr.Zero)
@@ -235,22 +232,22 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		return TsTaskFindPlayerAroundPoint._ClassPtr;
 	}
 
-	// Token: 0x06000814 RID: 2068 RVA: 0x00028188 File Offset: 0x00026388
+	// Token: 0x06000818 RID: 2072 RVA: 0x00028F9C File Offset: 0x0002719C
 	public TsTaskFindPlayerAroundPoint() : this(BuiltinUtils.AllocNativeUObject(TsTaskFindPlayerAroundPoint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000815 RID: 2069 RVA: 0x000281B0 File Offset: 0x000263B0
+	// Token: 0x06000819 RID: 2073 RVA: 0x00028FC4 File Offset: 0x000271C4
 	public TsTaskFindPlayerAroundPoint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFindPlayerAroundPoint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000816 RID: 2070 RVA: 0x000281E4 File Offset: 0x000263E4
+	// Token: 0x0600081A RID: 2074 RVA: 0x00028FF8 File Offset: 0x000271F8
 	protected TsTaskFindPlayerAroundPoint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000817 RID: 2071 RVA: 0x0002825C File Offset: 0x0002645C
+	// Token: 0x0600081B RID: 2075 RVA: 0x00029070 File Offset: 0x00027270
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -259,10 +256,10 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040005F0 RID: 1520
+	// Token: 0x040005F4 RID: 1524
 	private const double CHECK_DIRECTION_ANGLE = 40.0;
 
-	// Token: 0x040005F1 RID: 1521
+	// Token: 0x040005F5 RID: 1525
 	[StaticVariableRuleIgnore]
 	private static readonly int[] CheckDirectionList = new int[]
 	{
@@ -277,88 +274,88 @@ public class TsTaskFindPlayerAroundPoint : TsTaskAbortImmediatelyBase, IUnrealUO
 		-4
 	};
 
-	// Token: 0x040005F2 RID: 1522
+	// Token: 0x040005F6 RID: 1526
 	private const string PROFILE_KEY = "TsTaskFindPlayerAroundPoint";
 
-	// Token: 0x040005F3 RID: 1523
+	// Token: 0x040005F7 RID: 1527
 	private bool IsInitTsVariables;
 
-	// Token: 0x040005F4 RID: 1524
+	// Token: 0x040005F8 RID: 1528
 	private float TsFallbackSearchRadius;
 
-	// Token: 0x040005F5 RID: 1525
+	// Token: 0x040005F9 RID: 1529
 	private float TsMaxHeightDiff;
 
-	// Token: 0x040005F6 RID: 1526
+	// Token: 0x040005FA RID: 1530
 	private float TsObstacleHeight;
 
-	// Token: 0x040005F7 RID: 1527
+	// Token: 0x040005FB RID: 1531
 	private float TsFloorDetectRange;
 
-	// Token: 0x040005F8 RID: 1528
+	// Token: 0x040005FC RID: 1532
 	private bool TsCheckHeightDiff;
 
-	// Token: 0x040005F9 RID: 1529
+	// Token: 0x040005FD RID: 1533
 	private bool TsDebugDraw;
 
-	// Token: 0x040005FA RID: 1530
+	// Token: 0x040005FE RID: 1534
 	private string TsStandPointKey = "";
 
-	// Token: 0x040005FB RID: 1531
+	// Token: 0x040005FF RID: 1535
 	private readonly Transform TransformCache = Transform.Create();
 
-	// Token: 0x040005FC RID: 1532
+	// Token: 0x04000600 RID: 1536
 	private readonly Vector Candidate = Vector.Create();
 
-	// Token: 0x040005FD RID: 1533
+	// Token: 0x04000601 RID: 1537
 	private readonly Vector Offset = Vector.Create();
 
-	// Token: 0x040005FE RID: 1534
+	// Token: 0x04000602 RID: 1538
 	private readonly Vector RotatedOffset = Vector.Create();
 
-	// Token: 0x040005FF RID: 1535
+	// Token: 0x04000603 RID: 1539
 	private readonly Vector TargetPos = Vector.Create();
 
-	// Token: 0x04000600 RID: 1536
+	// Token: 0x04000604 RID: 1540
 	[Nullable(2)]
 	private UTraceSphereElement Element;
 
-	// Token: 0x04000601 RID: 1537
+	// Token: 0x04000605 RID: 1541
 	private readonly Vector FloorHit = Vector.Create();
 
-	// Token: 0x04000602 RID: 1538
+	// Token: 0x04000606 RID: 1542
 	private readonly Vector TmpStart = Vector.Create();
 
-	// Token: 0x04000603 RID: 1539
+	// Token: 0x04000607 RID: 1543
 	private readonly Vector TmpEnd = Vector.Create();
 
-	// Token: 0x04000604 RID: 1540
+	// Token: 0x04000608 RID: 1544
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindPlayerAroundPoint.TsTaskFindPlayerAroundPoint_C";
 
-	// Token: 0x04000605 RID: 1541
+	// Token: 0x04000609 RID: 1545
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000606 RID: 1542
+	// Token: 0x0400060A RID: 1546
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000607 RID: 1543
+	// Token: 0x0400060B RID: 1547
 	private static int __PropertyOffset_FallbackSearchRadius;
 
-	// Token: 0x04000608 RID: 1544
+	// Token: 0x0400060C RID: 1548
 	private static int __PropertyOffset_MaxHeightDiff;
 
-	// Token: 0x04000609 RID: 1545
+	// Token: 0x0400060D RID: 1549
 	private static int __PropertyOffset_ObstacleHeight;
 
-	// Token: 0x0400060A RID: 1546
+	// Token: 0x0400060E RID: 1550
 	private static int __PropertyOffset_FloorDetectRange;
 
-	// Token: 0x0400060B RID: 1547
+	// Token: 0x0400060F RID: 1551
 	private static int __PropertyOffset_CheckHeightDiff;
 
-	// Token: 0x0400060C RID: 1548
+	// Token: 0x04000610 RID: 1552
 	private static int __PropertyOffset_StandPointKey;
 
-	// Token: 0x0400060D RID: 1549
+	// Token: 0x04000611 RID: 1553
 	private static int __PropertyOffset_DebugDraw;
 }

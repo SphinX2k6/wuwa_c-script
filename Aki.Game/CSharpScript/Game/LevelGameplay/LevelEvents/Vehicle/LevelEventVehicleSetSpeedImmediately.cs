@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.Vehicle
 {
-	// Token: 0x02006BB9 RID: 27577
+	// Token: 0x02005D32 RID: 23858
 	public class LevelEventVehicleSetSpeedImmediately : LevelEventBase
 	{
-		// Token: 0x06044341 RID: 279361 RVA: 0x010CFF57 File Offset: 0x010CE157
+		// Token: 0x0603A499 RID: 238745 RVA: 0x01079EAB File Offset: 0x010780AB
 		public LevelEventVehicleSetSpeedImmediately(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044342 RID: 279362 RVA: 0x010CFF60 File Offset: 0x010CE160
+		// Token: 0x0603A49A RID: 238746 RVA: 0x01079EB4 File Offset: 0x010780B4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

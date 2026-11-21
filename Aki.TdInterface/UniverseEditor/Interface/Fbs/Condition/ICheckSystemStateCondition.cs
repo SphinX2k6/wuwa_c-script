@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B41 RID: 19265
+	// Token: 0x02005028 RID: 20520
 	public struct ICheckSystemStateCondition : IFlatbufferObject
 	{
-		// Token: 0x17008BC6 RID: 35782
-		// (get) Token: 0x0601E522 RID: 124194 RVA: 0x0043F74C File Offset: 0x0043D94C
+		// Token: 0x170092D6 RID: 37590
+		// (get) Token: 0x060200AD RID: 131245 RVA: 0x00471EF8 File Offset: 0x004700F8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E523 RID: 124195 RVA: 0x0043F759 File Offset: 0x0043D959
+		// Token: 0x060200AE RID: 131246 RVA: 0x00471F05 File Offset: 0x00470105
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E524 RID: 124196 RVA: 0x0043F760 File Offset: 0x0043D960
+		// Token: 0x060200AF RID: 131247 RVA: 0x00471F0C File Offset: 0x0047010C
 		public static ICheckSystemStateCondition GetRootAsICheckSystemStateCondition(ByteBuffer _bb)
 		{
 			return ICheckSystemStateCondition.GetRootAsICheckSystemStateCondition(_bb, default(ICheckSystemStateCondition));
 		}
 
-		// Token: 0x0601E525 RID: 124197 RVA: 0x0043F77C File Offset: 0x0043D97C
+		// Token: 0x060200B0 RID: 131248 RVA: 0x00471F28 File Offset: 0x00470128
 		public static ICheckSystemStateCondition GetRootAsICheckSystemStateCondition(ByteBuffer _bb, ICheckSystemStateCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E526 RID: 124198 RVA: 0x0043F799 File Offset: 0x0043D999
+		// Token: 0x060200B1 RID: 131249 RVA: 0x00471F45 File Offset: 0x00470145
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E527 RID: 124199 RVA: 0x0043F7A8 File Offset: 0x0043D9A8
+		// Token: 0x060200B2 RID: 131250 RVA: 0x00471F54 File Offset: 0x00470154
 		public ICheckSystemStateCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008BC7 RID: 35783
-		// (get) Token: 0x0601E528 RID: 124200 RVA: 0x0043F7B8 File Offset: 0x0043D9B8
+		// Token: 0x170092D7 RID: 37591
+		// (get) Token: 0x060200B3 RID: 131251 RVA: 0x00471F64 File Offset: 0x00470164
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BC8 RID: 35784
-		// (get) Token: 0x0601E529 RID: 124201 RVA: 0x0043F7F4 File Offset: 0x0043D9F4
+		// Token: 0x170092D8 RID: 37592
+		// (get) Token: 0x060200B4 RID: 131252 RVA: 0x00471FA0 File Offset: 0x004701A0
 		public TCheckSystemState ConfigType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E52A RID: 124202 RVA: 0x0043F830 File Offset: 0x0043DA30
+		// Token: 0x060200B5 RID: 131253 RVA: 0x00471FDC File Offset: 0x004701DC
 		public TTable? Config<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,109 +88,115 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E52B RID: 124203 RVA: 0x0043F874 File Offset: 0x0043DA74
+		// Token: 0x060200B6 RID: 131254 RVA: 0x00472020 File Offset: 0x00470220
 		public ICheckCollectionShopState ConfigAsICheckCollectionShopState()
 		{
 			return this.Config<ICheckCollectionShopState>().Value;
 		}
 
-		// Token: 0x0601E52C RID: 124204 RVA: 0x0043F890 File Offset: 0x0043DA90
+		// Token: 0x060200B7 RID: 131255 RVA: 0x0047203C File Offset: 0x0047023C
 		public ICheckCoopRoleCoopLevel ConfigAsICheckCoopRoleCoopLevel()
 		{
 			return this.Config<ICheckCoopRoleCoopLevel>().Value;
 		}
 
-		// Token: 0x0601E52D RID: 124205 RVA: 0x0043F8AC File Offset: 0x0043DAAC
+		// Token: 0x060200B8 RID: 131256 RVA: 0x00472058 File Offset: 0x00470258
 		public ICheckDangoBrawlChallengeComplete ConfigAsICheckDangoBrawlChallengeComplete()
 		{
 			return this.Config<ICheckDangoBrawlChallengeComplete>().Value;
 		}
 
-		// Token: 0x0601E52E RID: 124206 RVA: 0x0043F8C8 File Offset: 0x0043DAC8
+		// Token: 0x060200B9 RID: 131257 RVA: 0x00472074 File Offset: 0x00470274
 		public ICheckDropCatchGameplayCompleteLevel ConfigAsICheckDropCatchGameplayCompleteLevel()
 		{
 			return this.Config<ICheckDropCatchGameplayCompleteLevel>().Value;
 		}
 
-		// Token: 0x0601E52F RID: 124207 RVA: 0x0043F8E4 File Offset: 0x0043DAE4
+		// Token: 0x060200BA RID: 131258 RVA: 0x00472090 File Offset: 0x00470290
 		public ICheckEncircleLevelComplete ConfigAsICheckEncircleLevelComplete()
 		{
 			return this.Config<ICheckEncircleLevelComplete>().Value;
 		}
 
-		// Token: 0x0601E530 RID: 124208 RVA: 0x0043F900 File Offset: 0x0043DB00
+		// Token: 0x060200BB RID: 131259 RVA: 0x004720AC File Offset: 0x004702AC
+		public ICheckHandBookPageComplete ConfigAsICheckHandBookPageComplete()
+		{
+			return this.Config<ICheckHandBookPageComplete>().Value;
+		}
+
+		// Token: 0x060200BC RID: 131260 RVA: 0x004720C8 File Offset: 0x004702C8
 		public ICheckInfrActivityExp ConfigAsICheckInfrActivityExp()
 		{
 			return this.Config<ICheckInfrActivityExp>().Value;
 		}
 
-		// Token: 0x0601E531 RID: 124209 RVA: 0x0043F91C File Offset: 0x0043DB1C
+		// Token: 0x060200BD RID: 131261 RVA: 0x004720E4 File Offset: 0x004702E4
 		public ICheckInfrastructureStage ConfigAsICheckInfrastructureStage()
 		{
 			return this.Config<ICheckInfrastructureStage>().Value;
 		}
 
-		// Token: 0x0601E532 RID: 124210 RVA: 0x0043F938 File Offset: 0x0043DB38
+		// Token: 0x060200BE RID: 131262 RVA: 0x00472100 File Offset: 0x00470300
 		public ICheckMoonBuildingState ConfigAsICheckMoonBuildingState()
 		{
 			return this.Config<ICheckMoonBuildingState>().Value;
 		}
 
-		// Token: 0x0601E533 RID: 124211 RVA: 0x0043F954 File Offset: 0x0043DB54
+		// Token: 0x060200BF RID: 131263 RVA: 0x0047211C File Offset: 0x0047031C
 		public ICheckRhythmSpaceshipReachLevelRank ConfigAsICheckRhythmSpaceshipReachLevelRank()
 		{
 			return this.Config<ICheckRhythmSpaceshipReachLevelRank>().Value;
 		}
 
-		// Token: 0x0601E534 RID: 124212 RVA: 0x0043F970 File Offset: 0x0043DB70
+		// Token: 0x060200C0 RID: 131264 RVA: 0x00472138 File Offset: 0x00470338
 		public ICheckRoadBuildState ConfigAsICheckRoadBuildState()
 		{
 			return this.Config<ICheckRoadBuildState>().Value;
 		}
 
-		// Token: 0x0601E535 RID: 124213 RVA: 0x0043F98C File Offset: 0x0043DB8C
+		// Token: 0x060200C1 RID: 131265 RVA: 0x00472154 File Offset: 0x00470354
 		public ICheckRogueState ConfigAsICheckRogueState()
 		{
 			return this.Config<ICheckRogueState>().Value;
 		}
 
-		// Token: 0x0601E536 RID: 124214 RVA: 0x0043F9A8 File Offset: 0x0043DBA8
+		// Token: 0x060200C2 RID: 131266 RVA: 0x00472170 File Offset: 0x00470370
 		public ICheckSpringFestivalAtmosphereLevel ConfigAsICheckSpringFestivalAtmosphereLevel()
 		{
 			return this.Config<ICheckSpringFestivalAtmosphereLevel>().Value;
 		}
 
-		// Token: 0x0601E537 RID: 124215 RVA: 0x0043F9C4 File Offset: 0x0043DBC4
+		// Token: 0x060200C3 RID: 131267 RVA: 0x0047218C File Offset: 0x0047038C
 		public ICheckSpringFestivalGuessJokerFirstComplete ConfigAsICheckSpringFestivalGuessJokerFirstComplete()
 		{
 			return this.Config<ICheckSpringFestivalGuessJokerFirstComplete>().Value;
 		}
 
-		// Token: 0x0601E538 RID: 124216 RVA: 0x0043F9E0 File Offset: 0x0043DBE0
+		// Token: 0x060200C4 RID: 131268 RVA: 0x004721A8 File Offset: 0x004703A8
 		public ICheckSunSpiritDeliveryLevel ConfigAsICheckSunSpiritDeliveryLevel()
 		{
 			return this.Config<ICheckSunSpiritDeliveryLevel>().Value;
 		}
 
-		// Token: 0x0601E539 RID: 124217 RVA: 0x0043F9FC File Offset: 0x0043DBFC
+		// Token: 0x060200C5 RID: 131269 RVA: 0x004721C4 File Offset: 0x004703C4
 		public ICheckTrackMoonPopularity ConfigAsICheckTrackMoonPopularity()
 		{
 			return this.Config<ICheckTrackMoonPopularity>().Value;
 		}
 
-		// Token: 0x0601E53A RID: 124218 RVA: 0x0043FA18 File Offset: 0x0043DC18
+		// Token: 0x060200C6 RID: 131270 RVA: 0x004721E0 File Offset: 0x004703E0
 		public ICheckVillageInfrLevel ConfigAsICheckVillageInfrLevel()
 		{
 			return this.Config<ICheckVillageInfrLevel>().Value;
 		}
 
-		// Token: 0x0601E53B RID: 124219 RVA: 0x0043FA34 File Offset: 0x0043DC34
+		// Token: 0x060200C7 RID: 131271 RVA: 0x004721FC File Offset: 0x004703FC
 		public ICheckVillageInfrTreeBuildState ConfigAsICheckVillageInfrTreeBuildState()
 		{
 			return this.Config<ICheckVillageInfrTreeBuildState>().Value;
 		}
 
-		// Token: 0x0601E53C RID: 124220 RVA: 0x0043FA4F File Offset: 0x0043DC4F
+		// Token: 0x060200C8 RID: 131272 RVA: 0x00472217 File Offset: 0x00470417
 		public static Offset<ICheckSystemStateCondition> CreateICheckSystemStateCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TCheckSystemState Config_type = TCheckSystemState.NONE, int ConfigOffset = 0)
 		{
 			builder.StartTable(3);
@@ -200,37 +206,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSystemStateCondition.EndICheckSystemStateCondition(builder);
 		}
 
-		// Token: 0x0601E53D RID: 124221 RVA: 0x0043FA73 File Offset: 0x0043DC73
+		// Token: 0x060200C9 RID: 131273 RVA: 0x0047223B File Offset: 0x0047043B
 		public static void StartICheckSystemStateCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E53E RID: 124222 RVA: 0x0043FA7C File Offset: 0x0043DC7C
+		// Token: 0x060200CA RID: 131274 RVA: 0x00472244 File Offset: 0x00470444
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E53F RID: 124223 RVA: 0x0043FA87 File Offset: 0x0043DC87
+		// Token: 0x060200CB RID: 131275 RVA: 0x0047224F File Offset: 0x0047044F
 		public static void AddConfigType(FlatBufferBuilder builder, TCheckSystemState configType)
 		{
 			builder.AddByte(1, (byte)configType, 0);
 		}
 
-		// Token: 0x0601E540 RID: 124224 RVA: 0x0043FA92 File Offset: 0x0043DC92
+		// Token: 0x060200CC RID: 131276 RVA: 0x0047225A File Offset: 0x0047045A
 		public static void AddConfig(FlatBufferBuilder builder, int configOffset)
 		{
 			builder.AddOffset(2, configOffset, 0);
 		}
 
-		// Token: 0x0601E541 RID: 124225 RVA: 0x0043FA9D File Offset: 0x0043DC9D
+		// Token: 0x060200CD RID: 131277 RVA: 0x00472265 File Offset: 0x00470465
 		public static Offset<ICheckSystemStateCondition> EndICheckSystemStateCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSystemStateCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E542 RID: 124226 RVA: 0x0043FAAC File Offset: 0x0043DCAC
+		// Token: 0x060200CE RID: 131278 RVA: 0x00472274 File Offset: 0x00470474
 		public ICheckSystemStateConditionT UnPack()
 		{
 			ICheckSystemStateConditionT checkSystemStateConditionT = new ICheckSystemStateConditionT();
@@ -238,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkSystemStateConditionT;
 		}
 
-		// Token: 0x0601E543 RID: 124227 RVA: 0x0043FAC8 File Offset: 0x0043DCC8
+		// Token: 0x060200CF RID: 131279 RVA: 0x00472290 File Offset: 0x00470490
 		public void UnPackTo(ICheckSystemStateConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -260,6 +266,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				return;
 			case TCheckSystemState.ICheckEncircleLevelComplete:
 				_o.Config.Value = ((this.Config<ICheckEncircleLevelComplete>() != null) ? this.Config<ICheckEncircleLevelComplete>().Value.UnPack() : null);
+				return;
+			case TCheckSystemState.ICheckHandBookPageComplete:
+				_o.Config.Value = ((this.Config<ICheckHandBookPageComplete>() != null) ? this.Config<ICheckHandBookPageComplete>().Value.UnPack() : null);
 				return;
 			case TCheckSystemState.ICheckInfrActivityExp:
 				_o.Config.Value = ((this.Config<ICheckInfrActivityExp>() != null) ? this.Config<ICheckInfrActivityExp>().Value.UnPack() : null);
@@ -302,7 +311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E544 RID: 124228 RVA: 0x0043FF04 File Offset: 0x0043E104
+		// Token: 0x060200D0 RID: 131280 RVA: 0x00472708 File Offset: 0x00470908
 		public static Offset<ICheckSystemStateCondition> Pack(FlatBufferBuilder builder, ICheckSystemStateConditionT _o)
 		{
 			if (_o == null)
@@ -314,7 +323,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSystemStateCondition.CreateICheckSystemStateCondition(builder, _o.Type, config_type, configOffset);
 		}
 
-		// Token: 0x0400D3EA RID: 54250
+		// Token: 0x0400DEE9 RID: 57065
 		private Table __p;
 	}
 }

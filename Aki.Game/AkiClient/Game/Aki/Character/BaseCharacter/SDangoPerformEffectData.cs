@@ -6,162 +6,152 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200430D RID: 17165
+	// Token: 0x0200334A RID: 13130
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SDangoPerformEffectData.SDangoPerformEffectData")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 80)]
 	public class SDangoPerformEffectData : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C65A RID: 181850 RVA: 0x00A1EEA6 File Offset: 0x00A1D0A6
+		// Token: 0x06021378 RID: 136056 RVA: 0x0095BDDD File Offset: 0x00959FDD
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SDangoPerformEffectData._ScriptStructPtr != 0) ? SDangoPerformEffectData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SDangoPerformEffectData.SDangoPerformEffectData", ref SDangoPerformEffectData._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F13 RID: 28435
-		// (get) Token: 0x0602C65B RID: 181851 RVA: 0x00A1EECA File Offset: 0x00A1D0CA
-		// (set) Token: 0x0602C65C RID: 181852 RVA: 0x00A1EEE9 File Offset: 0x00A1D0E9
+		// Token: 0x17004331 RID: 17201
+		// (get) Token: 0x06021379 RID: 136057 RVA: 0x0095BE01 File Offset: 0x0095A001
+		// (set) Token: 0x0602137A RID: 136058 RVA: 0x0095BE20 File Offset: 0x0095A020
 		[Nullable(1)]
 		public TSoftObjectPtr<UEffectModelBase> 特效路径
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_0, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_特效路径, base.MemoryOwner ?? this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_0, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_特效路径, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006F14 RID: 28436
-		// (get) Token: 0x0602C65D RID: 181853 RVA: 0x00A1EF0E File Offset: 0x00A1D10E
-		// (set) Token: 0x0602C65E RID: 181854 RVA: 0x00A1EF22 File Offset: 0x00A1D122
+		// Token: 0x17004332 RID: 17202
+		// (get) Token: 0x0602137B RID: 136059 RVA: 0x0095BE45 File Offset: 0x0095A045
+		// (set) Token: 0x0602137C RID: 136060 RVA: 0x0095BE59 File Offset: 0x0095A059
 		public unsafe TEnumAsByte<EDangoPerformLocationType> 特效位置类型
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_特效位置类型);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_特效位置类型) = value;
 			}
 		}
 
-		// Token: 0x17006F15 RID: 28437
-		// (get) Token: 0x0602C65F RID: 181855 RVA: 0x00A1EF37 File Offset: 0x00A1D137
-		// (set) Token: 0x0602C660 RID: 181856 RVA: 0x00A1EF4B File Offset: 0x00A1D14B
+		// Token: 0x17004333 RID: 17203
+		// (get) Token: 0x0602137D RID: 136061 RVA: 0x0095BE6E File Offset: 0x0095A06E
+		// (set) Token: 0x0602137E RID: 136062 RVA: 0x0095BE82 File Offset: 0x0095A082
 		public unsafe FVector 位置偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_位置偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_位置偏移) = value;
 			}
 		}
 
-		// Token: 0x17006F16 RID: 28438
-		// (get) Token: 0x0602C661 RID: 181857 RVA: 0x00A1EF60 File Offset: 0x00A1D160
-		// (set) Token: 0x0602C662 RID: 181858 RVA: 0x00A1EF74 File Offset: 0x00A1D174
+		// Token: 0x17004334 RID: 17204
+		// (get) Token: 0x0602137F RID: 136063 RVA: 0x0095BE97 File Offset: 0x0095A097
+		// (set) Token: 0x06021380 RID: 136064 RVA: 0x0095BEAB File Offset: 0x0095A0AB
 		public unsafe FName 骨骼名称
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_骨骼名称);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_骨骼名称) = value;
 			}
 		}
 
-		// Token: 0x17006F17 RID: 28439
-		// (get) Token: 0x0602C663 RID: 181859 RVA: 0x00A1EF89 File Offset: 0x00A1D189
-		// (set) Token: 0x0602C664 RID: 181860 RVA: 0x00A1EF99 File Offset: 0x00A1D199
+		// Token: 0x17004335 RID: 17205
+		// (get) Token: 0x06021381 RID: 136065 RVA: 0x0095BEC0 File Offset: 0x0095A0C0
+		// (set) Token: 0x06021382 RID: 136066 RVA: 0x0095BED0 File Offset: 0x0095A0D0
 		public unsafe int 释放延迟时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_释放延迟时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SDangoPerformEffectData.__PropertyOffset_释放延迟时间) = value;
 			}
 		}
 
-		// Token: 0x0602C665 RID: 181861 RVA: 0x00A1EFAA File Offset: 0x00A1D1AA
+		// Token: 0x06021383 RID: 136067 RVA: 0x0095BEE1 File Offset: 0x0095A0E1
 		public SDangoPerformEffectData()
 		{
 		}
 
-		// Token: 0x0602C666 RID: 181862 RVA: 0x00A1EFB2 File Offset: 0x00A1D1B2
-		public SDangoPerformEffectData([Nullable(1)] TSoftObjectPtr<UEffectModelBase> 特效路径, TEnumAsByte<EDangoPerformLocationType> 特效位置类型, FVector 位置偏移, FName 骨骼名称, int 释放延迟时间)
-		{
-			this.特效路径 = 特效路径;
-			this.特效位置类型 = 特效位置类型;
-			this.位置偏移 = 位置偏移;
-			this.骨骼名称 = 骨骼名称;
-			this.释放延迟时间 = 释放延迟时间;
-		}
-
-		// Token: 0x0602C667 RID: 181863 RVA: 0x00A1EFDF File Offset: 0x00A1D1DF
+		// Token: 0x06021384 RID: 136068 RVA: 0x0095BEE9 File Offset: 0x0095A0E9
 		protected override IntPtr GetUStructPtr()
 		{
 			return SDangoPerformEffectData.StaticStruct();
 		}
 
-		// Token: 0x0602C668 RID: 181864 RVA: 0x00A1EFEB File Offset: 0x00A1D1EB
+		// Token: 0x06021385 RID: 136069 RVA: 0x0095BEF5 File Offset: 0x0095A0F5
 		[NullableContext(2)]
 		public SDangoPerformEffectData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C669 RID: 181865 RVA: 0x00A1EFF5 File Offset: 0x00A1D1F5
+		// Token: 0x06021386 RID: 136070 RVA: 0x0095BEFF File Offset: 0x0095A0FF
 		public SDangoPerformEffectData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C66A RID: 181866 RVA: 0x00A1F000 File Offset: 0x00A1D200
+		// Token: 0x06021387 RID: 136071 RVA: 0x0095BF0A File Offset: 0x0095A10A
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SDangoPerformEffectData(Pointer, false, true);
 		}
 
-		// Token: 0x0602C66B RID: 181867 RVA: 0x00A1F00A File Offset: 0x00A1D20A
+		// Token: 0x06021388 RID: 136072 RVA: 0x0095BF14 File Offset: 0x0095A114
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SDangoPerformEffectData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401768E RID: 95886
+		// Token: 0x04012293 RID: 74387
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SDangoPerformEffectData.SDangoPerformEffectData";
 
-		// Token: 0x0401768F RID: 95887
+		// Token: 0x04012294 RID: 74388
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017690 RID: 95888
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012295 RID: 74389
+		internal static int __PropertyOffset_特效路径;
 
-		// Token: 0x04017691 RID: 95889
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012296 RID: 74390
+		internal static int __PropertyOffset_特效位置类型;
 
-		// Token: 0x04017692 RID: 95890
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012297 RID: 74391
+		internal static int __PropertyOffset_位置偏移;
 
-		// Token: 0x04017693 RID: 95891
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012298 RID: 74392
+		internal static int __PropertyOffset_骨骼名称;
 
-		// Token: 0x04017694 RID: 95892
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012299 RID: 74393
+		internal static int __PropertyOffset_释放延迟时间;
 	}
 }

@@ -8,7 +8,7 @@ namespace CSharpScript.Core.Net
 	// Token: 0x02000040 RID: 64
 	public static class NetHostInfoExtensions
 	{
-		// Token: 0x06000244 RID: 580 RVA: 0x0000B524 File Offset: 0x00009724
+		// Token: 0x06000244 RID: 580 RVA: 0x0000B55C File Offset: 0x0000975C
 		[NullableContext(1)]
 		public static string FormatNetHostInfo([Nullable(new byte[]
 		{

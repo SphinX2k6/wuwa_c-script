@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020019A8 RID: 6568
+// Token: 0x02000E66 RID: 3686
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SmallItemGridModel : ModelBase
 {
-	// Token: 0x0600BF91 RID: 49041 RVA: 0x002B40BC File Offset: 0x002B22BC
+	// Token: 0x0600939B RID: 37787 RVA: 0x002BF04C File Offset: 0x002BD24C
 	protected override bool OnInit()
 	{
 		this.ItemGridNameMaxLength = ConfigCommonParamById.GetIntConfig("ItemGridNameMaxLength").Value;
@@ -17,8 +17,8 @@ public class SmallItemGridModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x1700100B RID: 4107
-	// (get) Token: 0x0600BF92 RID: 49042 RVA: 0x002B410F File Offset: 0x002B230F
+	// Token: 0x17001030 RID: 4144
+	// (get) Token: 0x0600939C RID: 37788 RVA: 0x002BF09F File Offset: 0x002BD29F
 	public static SmallItemGridModel Instance
 	{
 		get
@@ -27,7 +27,7 @@ public class SmallItemGridModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600BF93 RID: 49043 RVA: 0x002B4116 File Offset: 0x002B2316
+	// Token: 0x0600939D RID: 37789 RVA: 0x002BF0A6 File Offset: 0x002BD2A6
 	public static SmallItemGridModel GetOrCreateInstance()
 	{
 		if (SmallItemGridModel._Instance == null)
@@ -37,7 +37,7 @@ public class SmallItemGridModel : ModelBase
 		return SmallItemGridModel._Instance;
 	}
 
-	// Token: 0x0600BF94 RID: 49044 RVA: 0x002B412A File Offset: 0x002B232A
+	// Token: 0x0600939E RID: 37790 RVA: 0x002BF0BA File Offset: 0x002BD2BA
 	public static bool CreateInstance()
 	{
 		if (SmallItemGridModel._Instance != null)
@@ -48,33 +48,33 @@ public class SmallItemGridModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600BF95 RID: 49045 RVA: 0x002B4140 File Offset: 0x002B2340
+	// Token: 0x0600939F RID: 37791 RVA: 0x002BF0D0 File Offset: 0x002BD2D0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600BF96 RID: 49046 RVA: 0x002B4142 File Offset: 0x002B2342
+	// Token: 0x060093A0 RID: 37792 RVA: 0x002BF0D2 File Offset: 0x002BD2D2
 	public static void ResetStaticDefaultValue()
 	{
 		SmallItemGridModel._Instance = null;
 	}
 
-	// Token: 0x0600BF97 RID: 49047 RVA: 0x002B414A File Offset: 0x002B234A
+	// Token: 0x060093A1 RID: 37793 RVA: 0x002BF0DA File Offset: 0x002BD2DA
 	static SmallItemGridModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SmallItemGridModel.CreateStaticDefaultValue), new Action(SmallItemGridModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400562B RID: 22059
+	// Token: 0x040056DD RID: 22237
 	public int ItemGridCoolDownSecond;
 
-	// Token: 0x0400562C RID: 22060
+	// Token: 0x040056DE RID: 22238
 	public int ItemGridNameMaxLength;
 
-	// Token: 0x0400562D RID: 22061
+	// Token: 0x040056DF RID: 22239
 	public string DefaultQualitySpritePath;
 
-	// Token: 0x0400562E RID: 22062
+	// Token: 0x040056E0 RID: 22240
 	[Nullable(2)]
 	private static SmallItemGridModel _Instance;
 }

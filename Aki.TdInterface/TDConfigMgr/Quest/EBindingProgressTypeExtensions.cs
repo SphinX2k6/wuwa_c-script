@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001228 RID: 4648
+	// Token: 0x02001364 RID: 4964
 	public static class EBindingProgressTypeExtensions
 	{
-		// Token: 0x0600695B RID: 26971 RVA: 0x000FB030 File Offset: 0x000F9230
+		// Token: 0x06006F9C RID: 28572 RVA: 0x0010893C File Offset: 0x00106B3C
 		public static string ToEnumString(this EBindingProgressType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600695C RID: 26972 RVA: 0x000FB058 File Offset: 0x000F9258
+		// Token: 0x06006F9D RID: 28573 RVA: 0x00108964 File Offset: 0x00106B64
 		public static EBindingProgressType FromString(string name)
 		{
 			EBindingProgressType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600695D RID: 26973 RVA: 0x000FB081 File Offset: 0x000F9281
+		// Token: 0x06006F9E RID: 28574 RVA: 0x0010898D File Offset: 0x00106B8D
 		public static bool TryFromString(string name, out EBindingProgressType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x0600695E RID: 26974 RVA: 0x000FB0A6 File Offset: 0x000F92A6
+		// Token: 0x06006F9F RID: 28575 RVA: 0x001089B2 File Offset: 0x00106BB2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600695F RID: 26975 RVA: 0x000FB0B6 File Offset: 0x000F92B6
+		// Token: 0x06006FA0 RID: 28576 RVA: 0x001089C2 File Offset: 0x00106BC2
 		public static EBindingProgressType[] GetValues()
 		{
 			return new EBindingProgressType[1];
 		}
 
-		// Token: 0x06006960 RID: 26976 RVA: 0x000FB0BE File Offset: 0x000F92BE
+		// Token: 0x06006FA1 RID: 28577 RVA: 0x001089CA File Offset: 0x00106BCA
 		public static string[] GetNames()
 		{
 			return new string[]

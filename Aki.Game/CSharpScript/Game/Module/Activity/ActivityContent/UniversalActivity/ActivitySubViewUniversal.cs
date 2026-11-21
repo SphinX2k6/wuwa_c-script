@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 {
-	// Token: 0x02005F80 RID: 24448
+	// Token: 0x02004F67 RID: 20327
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewUniversal : ActivitySubViewBase
 	{
-		// Token: 0x17008FDD RID: 36829
-		// (get) Token: 0x0603E0B2 RID: 254130 RVA: 0x00EFAD8E File Offset: 0x00EF8F8E
+		// Token: 0x170063AF RID: 25519
+		// (get) Token: 0x0603304C RID: 208972 RVA: 0x00E4CA6E File Offset: 0x00E4AC6E
 		protected new ActivityUniversalData ActivityBaseData
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			}
 		}
 
-		// Token: 0x0603E0B3 RID: 254131 RVA: 0x00EFAD9C File Offset: 0x00EF8F9C
+		// Token: 0x0603304D RID: 208973 RVA: 0x00E4CA7C File Offset: 0x00E4AC7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,12 +43,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E0B4 RID: 254132 RVA: 0x00EFAE47 File Offset: 0x00EF9047
+		// Token: 0x0603304E RID: 208974 RVA: 0x00E4CB27 File Offset: 0x00E4AD27
 		protected override void OnSetData()
 		{
 		}
 
-		// Token: 0x0603E0B5 RID: 254133 RVA: 0x00EFAE4C File Offset: 0x00EF904C
+		// Token: 0x0603304F RID: 208975 RVA: 0x00E4CB2C File Offset: 0x00E4AD2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewUniversal.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E0B6 RID: 254134 RVA: 0x00EFAE90 File Offset: 0x00EF9090
+		// Token: 0x06033050 RID: 208976 RVA: 0x00E4CB70 File Offset: 0x00E4AD70
 		protected override void OnStart()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -89,14 +89,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603E0B7 RID: 254135 RVA: 0x00EFAFE0 File Offset: 0x00EF91E0
+		// Token: 0x06033051 RID: 208977 RVA: 0x00E4CCC0 File Offset: 0x00E4AEC0
 		protected override void OnRefreshView()
 		{
 			this.RefreshCondition();
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x0603E0B8 RID: 254136 RVA: 0x00EFAFF0 File Offset: 0x00EF91F0
+		// Token: 0x06033052 RID: 208978 RVA: 0x00E4CCD0 File Offset: 0x00E4AED0
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			}
 		}
 
-		// Token: 0x0603E0B9 RID: 254137 RVA: 0x00EFB02D File Offset: 0x00EF922D
+		// Token: 0x06033053 RID: 208979 RVA: 0x00E4CD0D File Offset: 0x00E4AF0D
 		private void FunctionExecute()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			});
 		}
 
-		// Token: 0x0603E0BA RID: 254138 RVA: 0x00EFB04C File Offset: 0x00EF924C
+		// Token: 0x06033054 RID: 208980 RVA: 0x00E4CD2C File Offset: 0x00E4AF2C
 		private void RefreshCondition()
 		{
 			UniversalActivity? extraConfig = this.ActivityBaseData.GetExtraConfig();
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 			}
 		}
 
-		// Token: 0x04020671 RID: 132721
+		// Token: 0x0401B143 RID: 110915
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04020672 RID: 132722
+		// Token: 0x0401B144 RID: 110916
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x04020673 RID: 132723
+		// Token: 0x0401B145 RID: 110917
 		[Nullable(new byte[]
 		{
 			2,
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x04020674 RID: 132724
+		// Token: 0x0401B146 RID: 110918
 		private ActivityFunctionalTypeA FunctionalComponent;
 	}
 }

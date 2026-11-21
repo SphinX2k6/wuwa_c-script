@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001472 RID: 5234
+// Token: 0x02000926 RID: 2342
 public enum ERegressGrade
 {
-	// Token: 0x040041B4 RID: 16820
+	// Token: 0x0400424C RID: 16972
 	None,
-	// Token: 0x040041B5 RID: 16821
+	// Token: 0x0400424D RID: 16973
 	Normal,
-	// Token: 0x040041B6 RID: 16822
+	// Token: 0x0400424E RID: 16974
 	Hyper
 }

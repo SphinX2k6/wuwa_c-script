@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 {
-	// Token: 0x020047E9 RID: 18409
+	// Token: 0x0200371A RID: 14106
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrackMenuPanel : WorldMapSecondaryUi
 	{
-		// Token: 0x06030380 RID: 197504 RVA: 0x00B2CE18 File Offset: 0x00B2B018
+		// Token: 0x06024B50 RID: 150352 RVA: 0x00A5CD5C File Offset: 0x00A5AF5C
 		public override string GetResourceId()
 		{
 			return "UiItem_MapHandleNav";
 		}
 
-		// Token: 0x06030381 RID: 197505 RVA: 0x00B2CE20 File Offset: 0x00B2B020
+		// Token: 0x06024B51 RID: 150353 RVA: 0x00A5CD64 File Offset: 0x00A5AF64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06030382 RID: 197506 RVA: 0x00B2CEE7 File Offset: 0x00B2B0E7
+		// Token: 0x06024B52 RID: 150354 RVA: 0x00A5CE2B File Offset: 0x00A5B02B
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06030383 RID: 197507 RVA: 0x00B2CEFC File Offset: 0x00B2B0FC
+		// Token: 0x06024B53 RID: 150355 RVA: 0x00A5CE40 File Offset: 0x00A5B040
 		private void UpdateMenuUiItems(int count)
 		{
 			int count2 = this.MenuUiItems.Count;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			}
 		}
 
-		// Token: 0x06030384 RID: 197508 RVA: 0x00B2CFA8 File Offset: 0x00B2B1A8
+		// Token: 0x06024B54 RID: 150356 RVA: 0x00A5CEEC File Offset: 0x00A5B0EC
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			}
 		}
 
-		// Token: 0x06030385 RID: 197509 RVA: 0x00B2D024 File Offset: 0x00B2B224
+		// Token: 0x06024B55 RID: 150357 RVA: 0x00A5CF68 File Offset: 0x00A5B168
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			if (this.TrackMenuItems.Length != 0)
@@ -118,35 +118,35 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.TrackMenu
 			this.TrackMenuItems = Array.Empty<TrackMenuItem>();
 		}
 
-		// Token: 0x06030386 RID: 197510 RVA: 0x00B2D08D File Offset: 0x00B2B28D
+		// Token: 0x06024B56 RID: 150358 RVA: 0x00A5CFD1 File Offset: 0x00A5B1D1
 		protected override void OnBeforeDestroy()
 		{
 			this.TrackMenuItems = Array.Empty<TrackMenuItem>();
 		}
 
-		// Token: 0x06030387 RID: 197511 RVA: 0x00B2D09A File Offset: 0x00B2B29A
+		// Token: 0x06024B57 RID: 150359 RVA: 0x00A5CFDE File Offset: 0x00A5B1DE
 		protected override bool GetNeedBgItem()
 		{
 			return false;
 		}
 
-		// Token: 0x04019F66 RID: 106342
+		// Token: 0x0401461A RID: 83482
 		private TrackMenuItem[] TrackMenuItems = Array.Empty<TrackMenuItem>();
 
-		// Token: 0x04019F67 RID: 106343
+		// Token: 0x0401461B RID: 83483
 		private readonly List<UUIItem> MenuUiItems = new List<UUIItem>();
 
-		// Token: 0x0200AAAC RID: 43692
+		// Token: 0x0200945E RID: 37982
 		[NullableContext(0)]
 		public static class EChildType
 		{
-			// Token: 0x04033EBD RID: 212669
+			// Token: 0x0402E643 RID: 190019
 			public const int VerticalLayout = 0;
 
-			// Token: 0x04033EBE RID: 212670
+			// Token: 0x0402E644 RID: 190020
 			public const int ItemRoot = 1;
 
-			// Token: 0x04033EBF RID: 212671
+			// Token: 0x0402E645 RID: 190021
 			public const int BtnMask = 2;
 		}
 	}

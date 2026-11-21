@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005862 RID: 22626
+	// Token: 0x02005E6F RID: 24175
 	public class IResetSelfPosComponentT
 	{
-		// Token: 0x1700A928 RID: 43304
-		// (get) Token: 0x060261AC RID: 156076 RVA: 0x00540ED8 File Offset: 0x0053F0D8
-		// (set) Token: 0x060261AD RID: 156077 RVA: 0x00540EE0 File Offset: 0x0053F0E0
+		// Token: 0x1700B258 RID: 45656
+		// (get) Token: 0x0602870E RID: 165646 RVA: 0x00587A24 File Offset: 0x00585C24
+		// (set) Token: 0x0602870F RID: 165647 RVA: 0x00587A2C File Offset: 0x00585C2C
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A929 RID: 43305
-		// (get) Token: 0x060261AE RID: 156078 RVA: 0x00540EE9 File Offset: 0x0053F0E9
-		// (set) Token: 0x060261AF RID: 156079 RVA: 0x00540EF1 File Offset: 0x0053F0F1
+		// Token: 0x1700B259 RID: 45657
+		// (get) Token: 0x06028710 RID: 165648 RVA: 0x00587A35 File Offset: 0x00585C35
+		// (set) Token: 0x06028711 RID: 165649 RVA: 0x00587A3D File Offset: 0x00585C3D
 		public float ResetRadius { get; set; }
 
-		// Token: 0x1700A92A RID: 43306
-		// (get) Token: 0x060261B0 RID: 156080 RVA: 0x00540EFA File Offset: 0x0053F0FA
-		// (set) Token: 0x060261B1 RID: 156081 RVA: 0x00540F02 File Offset: 0x0053F102
+		// Token: 0x1700B25A RID: 45658
+		// (get) Token: 0x06028712 RID: 165650 RVA: 0x00587A46 File Offset: 0x00585C46
+		// (set) Token: 0x06028713 RID: 165651 RVA: 0x00587A4E File Offset: 0x00585C4E
 		public bool IsDisableResetPosAfterThrow { get; set; }
 
-		// Token: 0x1700A92B RID: 43307
-		// (get) Token: 0x060261B2 RID: 156082 RVA: 0x00540F0B File Offset: 0x0053F10B
-		// (set) Token: 0x060261B3 RID: 156083 RVA: 0x00540F13 File Offset: 0x0053F113
+		// Token: 0x1700B25B RID: 45659
+		// (get) Token: 0x06028714 RID: 165652 RVA: 0x00587A57 File Offset: 0x00585C57
+		// (set) Token: 0x06028715 RID: 165653 RVA: 0x00587A5F File Offset: 0x00585C5F
 		public bool IsResetPosAfterThrow { get; set; }
 
-		// Token: 0x1700A92C RID: 43308
-		// (get) Token: 0x060261B4 RID: 156084 RVA: 0x00540F1C File Offset: 0x0053F11C
-		// (set) Token: 0x060261B5 RID: 156085 RVA: 0x00540F24 File Offset: 0x0053F124
+		// Token: 0x1700B25C RID: 45660
+		// (get) Token: 0x06028716 RID: 165654 RVA: 0x00587A68 File Offset: 0x00585C68
+		// (set) Token: 0x06028717 RID: 165655 RVA: 0x00587A70 File Offset: 0x00585C70
 		public float ResetPosDelayTime { get; set; }
 
-		// Token: 0x1700A92D RID: 43309
-		// (get) Token: 0x060261B6 RID: 156086 RVA: 0x00540F2D File Offset: 0x0053F12D
-		// (set) Token: 0x060261B7 RID: 156087 RVA: 0x00540F35 File Offset: 0x0053F135
+		// Token: 0x1700B25D RID: 45661
+		// (get) Token: 0x06028718 RID: 165656 RVA: 0x00587A79 File Offset: 0x00585C79
+		// (set) Token: 0x06028719 RID: 165657 RVA: 0x00587A81 File Offset: 0x00585C81
 		public byte NullMask { get; set; }
 
-		// Token: 0x060261B8 RID: 156088 RVA: 0x00540F3E File Offset: 0x0053F13E
+		// Token: 0x0602871A RID: 165658 RVA: 0x00587A8A File Offset: 0x00585C8A
 		public IResetSelfPosComponentT()
 		{
 			this.Disabled = false;

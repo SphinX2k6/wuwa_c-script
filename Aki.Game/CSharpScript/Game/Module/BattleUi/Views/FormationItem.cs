@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D26 RID: 23846
+	// Token: 0x02004D08 RID: 19720
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FormationItem : BattleChildView
 	{
-		// Token: 0x0603C72E RID: 247598 RVA: 0x00E7EE14 File Offset: 0x00E7D014
+		// Token: 0x06031687 RID: 202375 RVA: 0x00DCF5B4 File Offset: 0x00DCD7B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 25;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C72F RID: 247599 RVA: 0x00E7F1AD File Offset: 0x00E7D3AD
+		// Token: 0x06031688 RID: 202376 RVA: 0x00DCF94D File Offset: 0x00DCDB4D
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603C730 RID: 247600 RVA: 0x00E7F1E8 File Offset: 0x00E7D3E8
+		// Token: 0x06031689 RID: 202377 RVA: 0x00DCF988 File Offset: 0x00DCDB88
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			FormationItem.<InitializeAsync>d__41 <InitializeAsync>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C731 RID: 247601 RVA: 0x00E7F22C File Offset: 0x00E7D42C
+		// Token: 0x0603168A RID: 202378 RVA: 0x00DCF9CC File Offset: 0x00DCDBCC
 		private UniTask InitTrialComponent()
 		{
 			FormationItem.<InitTrialComponent>d__42 <InitTrialComponent>d__;
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitTrialComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C732 RID: 247602 RVA: 0x00E7F26F File Offset: 0x00E7D46F
+		// Token: 0x0603168B RID: 202379 RVA: 0x00DCFA0F File Offset: 0x00DCDC0F
 		public void ResetItem()
 		{
 			this.ClearData();
 			this.SetActive(false);
 		}
 
-		// Token: 0x0603C733 RID: 247603 RVA: 0x00E7F280 File Offset: 0x00E7D480
+		// Token: 0x0603168C RID: 202380 RVA: 0x00DCFA20 File Offset: 0x00DCDC20
 		public void Refresh(int playerId, int roleConfigId, int roleSkinId, BattleUiRoleData roleData)
 		{
 			this.ClearData();
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603C734 RID: 247604 RVA: 0x00E7F420 File Offset: 0x00E7D620
+		// Token: 0x0603168D RID: 202381 RVA: 0x00DCFBC0 File Offset: 0x00DCDDC0
 		public void ClearData()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RoleConfig = null;
 		}
 
-		// Token: 0x0603C735 RID: 247605 RVA: 0x00E7F4BC File Offset: 0x00E7D6BC
+		// Token: 0x0603168E RID: 202382 RVA: 0x00DCFC5C File Offset: 0x00DCDE5C
 		private void AddEvents()
 		{
 			base.GetExtendToggle(0).OnPointDownCallBack.Bind(new Action<EToggleState>(this.OnFormationTogglePointDown));
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<ELinkStatus>(EEventName.OnBattleLinkStatusChanged, new Action<ELinkStatus>(this.OnBattleLinkStatusChanged));
 		}
 
-		// Token: 0x0603C736 RID: 247606 RVA: 0x00E7F634 File Offset: 0x00E7D834
+		// Token: 0x0603168F RID: 202383 RVA: 0x00DCFDD4 File Offset: 0x00DCDFD4
 		private void RemoveEvents()
 		{
 			base.GetExtendToggle(0).OnPointDownCallBack.Unbind();
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnBattleLinkStatusChanged, new Action<ELinkStatus>(this.OnBattleLinkStatusChanged));
 		}
 
-		// Token: 0x0603C737 RID: 247607 RVA: 0x00E7F7A0 File Offset: 0x00E7D9A0
+		// Token: 0x06031690 RID: 202384 RVA: 0x00DCFF40 File Offset: 0x00DCE140
 		[NullableContext(1)]
 		private void AddEntityEvents(Entity entity)
 		{
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ListenForTagSignificantChanged(component2, GameplayTagDefine.EGameplayTagId["功能.功能制作.QTE.辅战QTE状态"], new BaseTagComponent.TTagSwitchedCallback(this.OnAssistRoleTagChanged));
 		}
 
-		// Token: 0x0603C738 RID: 247608 RVA: 0x00E7F848 File Offset: 0x00E7DA48
+		// Token: 0x06031691 RID: 202385 RVA: 0x00DCFFE8 File Offset: 0x00DCE1E8
 		[NullableContext(1)]
 		private void ListenForTagSignificantChanged(BaseTagComponent gameplayTagComponent, int tagId, BaseTagComponent.TTagSwitchedCallback callback)
 		{
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C739 RID: 247609 RVA: 0x00E7F874 File Offset: 0x00E7DA74
+		// Token: 0x06031692 RID: 202386 RVA: 0x00DD0014 File Offset: 0x00DCE214
 		protected void RemoveEntityEvents(Entity entity)
 		{
 			if (entity != null)
@@ -290,13 +290,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagSignificantChangedTaskList.Clear();
 		}
 
-		// Token: 0x0603C73A RID: 247610 RVA: 0x00E7F8F0 File Offset: 0x00E7DAF0
+		// Token: 0x06031693 RID: 202387 RVA: 0x00DD0090 File Offset: 0x00DCE290
 		protected override void OnShowBattleChildView()
 		{
 			this.SetCoolDownItemVisible(false);
 		}
 
-		// Token: 0x0603C73B RID: 247611 RVA: 0x00E7F8FC File Offset: 0x00E7DAFC
+		// Token: 0x06031694 RID: 202388 RVA: 0x00DD009C File Offset: 0x00DCE29C
 		public override void Reset()
 		{
 			this.KeyItem = null;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C73C RID: 247612 RVA: 0x00E7F9D8 File Offset: 0x00E7DBD8
+		// Token: 0x06031695 RID: 202389 RVA: 0x00DD0178 File Offset: 0x00DCE378
 		public void OnTick(float delta)
 		{
 			if (this.CoolDownTime > 0.0)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C73D RID: 247613 RVA: 0x00E7FA68 File Offset: 0x00E7DC68
+		// Token: 0x06031696 RID: 202390 RVA: 0x00DD0208 File Offset: 0x00DCE408
 		private bool IsCurrentRole()
 		{
 			SceneTeamPlayer teamPlayerData = SceneTeamModel.Instance.GetTeamPlayerData(this.PlayerId);
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return num3.GetValueOrDefault() == roleConfigId & num3 != null;
 		}
 
-		// Token: 0x0603C73E RID: 247614 RVA: 0x00E7FB20 File Offset: 0x00E7DD20
+		// Token: 0x06031697 RID: 202391 RVA: 0x00DD02C0 File Offset: 0x00DCE4C0
 		private void OnEnterChangeCoolDownCallback(double coolDownTime)
 		{
 			if (Info.Instance.OperationType == global::EOperationType.Desktop)
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C73F RID: 247615 RVA: 0x00E7FB50 File Offset: 0x00E7DD50
+		// Token: 0x06031698 RID: 202392 RVA: 0x00DD02F0 File Offset: 0x00DCE4F0
 		private void OnShieldChanged(int entityId)
 		{
 			if (this.RoleData == null)
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshRoleHealthPercent();
 		}
 
-		// Token: 0x0603C740 RID: 247616 RVA: 0x00E7FB64 File Offset: 0x00E7DD64
+		// Token: 0x06031699 RID: 202393 RVA: 0x00DD0304 File Offset: 0x00DCE504
 		private void OnHealthChanged(int entityId)
 		{
 			if (this.RoleData == null)
@@ -419,13 +419,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshRoleHealthPercent();
 		}
 
-		// Token: 0x0603C741 RID: 247617 RVA: 0x00E7FB9E File Offset: 0x00E7DD9E
+		// Token: 0x0603169A RID: 202394 RVA: 0x00DD033E File Offset: 0x00DCE53E
 		private void ResetAllConcertoNiagara()
 		{
 			this.SetCanUseQte(false, true, ERoleQteType.Normal);
 		}
 
-		// Token: 0x0603C742 RID: 247618 RVA: 0x00E7FBA9 File Offset: 0x00E7DDA9
+		// Token: 0x0603169B RID: 202395 RVA: 0x00DD0349 File Offset: 0x00DCE549
 		private void OnQteEnableTagChanged(int entityId, int tagId, bool bTagExists)
 		{
 			if (FormationDataController.Instance.IsBattleMulti())
@@ -435,19 +435,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSingleModeQteEnable();
 		}
 
-		// Token: 0x0603C743 RID: 247619 RVA: 0x00E7FBBE File Offset: 0x00E7DDBE
+		// Token: 0x0603169C RID: 202396 RVA: 0x00DD035E File Offset: 0x00DCE55E
 		private void OnTeammateQteEnableTagChanged(int tagId, bool tagExist)
 		{
 			this.RefreshMultiModeQteEnable();
 		}
 
-		// Token: 0x0603C744 RID: 247620 RVA: 0x00E7FBC6 File Offset: 0x00E7DDC6
+		// Token: 0x0603169D RID: 202397 RVA: 0x00DD0366 File Offset: 0x00DCE566
 		private void OnAssistQteCdTagChanged(int tagId, bool tagExist)
 		{
 			this.RefreshAssistCoolDown();
 		}
 
-		// Token: 0x0603C745 RID: 247621 RVA: 0x00E7FBCE File Offset: 0x00E7DDCE
+		// Token: 0x0603169E RID: 202398 RVA: 0x00DD036E File Offset: 0x00DCE56E
 		private void OnAssistRoleTagChanged(int tagId, bool tagExist)
 		{
 			if (this.IsAssistRole == tagExist)
@@ -458,31 +458,31 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshIsAssist();
 		}
 
-		// Token: 0x0603C746 RID: 247622 RVA: 0x00E7FBE7 File Offset: 0x00E7DDE7
+		// Token: 0x0603169F RID: 202399 RVA: 0x00DD0387 File Offset: 0x00DCE587
 		private void OnBattleUiDeadTagChanged(int entityId, int tagId, bool tagExist)
 		{
 			this.RefreshQteActive();
 		}
 
-		// Token: 0x0603C747 RID: 247623 RVA: 0x00E7FBEF File Offset: 0x00E7DDEF
+		// Token: 0x060316A0 RID: 202400 RVA: 0x00DD038F File Offset: 0x00DCE58F
 		private void OnBattleUiQteCdTagChanged(int entityId, int tagId, bool tagExist)
 		{
 			this.RefreshQteActive();
 		}
 
-		// Token: 0x0603C748 RID: 247624 RVA: 0x00E7FBF7 File Offset: 0x00E7DDF7
+		// Token: 0x060316A1 RID: 202401 RVA: 0x00DD0397 File Offset: 0x00DCE597
 		private void OnCharInQteChanged(int entityId, bool tagExist)
 		{
 			this.RefreshQteActive();
 		}
 
-		// Token: 0x0603C749 RID: 247625 RVA: 0x00E7FBFF File Offset: 0x00E7DDFF
+		// Token: 0x060316A2 RID: 202402 RVA: 0x00DD039F File Offset: 0x00DCE59F
 		private void OnBattleStateChanged(bool isFight)
 		{
 			this.RefreshQteActive();
 		}
 
-		// Token: 0x0603C74A RID: 247626 RVA: 0x00E7FC07 File Offset: 0x00E7DE07
+		// Token: 0x060316A3 RID: 202403 RVA: 0x00DD03A7 File Offset: 0x00DCE5A7
 		public void RefreshQteActive()
 		{
 			if (FormationDataController.Instance.IsBattleMulti())
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSingleModeQteEnable();
 		}
 
-		// Token: 0x0603C74B RID: 247627 RVA: 0x00E7FC24 File Offset: 0x00E7DE24
+		// Token: 0x060316A4 RID: 202404 RVA: 0x00DD03C4 File Offset: 0x00DCE5C4
 		private void RefreshSingleModeQteEnable()
 		{
 			if (this.RoleData == null)
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetCanUseQte(flag, false, qteType);
 		}
 
-		// Token: 0x0603C74C RID: 247628 RVA: 0x00E7FCA4 File Offset: 0x00E7DEA4
+		// Token: 0x060316A5 RID: 202405 RVA: 0x00DD0444 File Offset: 0x00DCE644
 		private void RefreshMultiModeQteEnable()
 		{
 			if (this.RoleData == null || this.IsMyRole)
@@ -545,7 +545,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetCanUseQte(flag, false, qteType);
 		}
 
-		// Token: 0x0603C74D RID: 247629 RVA: 0x00E7FD28 File Offset: 0x00E7DF28
+		// Token: 0x060316A6 RID: 202406 RVA: 0x00DD04C8 File Offset: 0x00DCE6C8
 		private void SetCanUseQte(bool bCanUseQte, bool isInit, ERoleQteType qteType = ERoleQteType.Normal)
 		{
 			if (this.QteNiagaraActive == bCanUseQte && this.CurrentQteNiagaraType == qteType)
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKeyItemGray();
 		}
 
-		// Token: 0x0603C74E RID: 247630 RVA: 0x00E7FE28 File Offset: 0x00E7E028
+		// Token: 0x060316A7 RID: 202407 RVA: 0x00DD05C8 File Offset: 0x00DCE7C8
 		private void RefreshChangeCoolDown()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -621,7 +621,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayChangeRoleCoolDown(changeRoleCoolDown, changeRoleCoolDown);
 		}
 
-		// Token: 0x0603C74F RID: 247631 RVA: 0x00E7FE80 File Offset: 0x00E7E080
+		// Token: 0x060316A8 RID: 202408 RVA: 0x00DD0620 File Offset: 0x00DCE820
 		private void SetSelectedNiagara(bool bSelected)
 		{
 			if (this.SelectedNiagaraActive == bSelected)
@@ -639,14 +639,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTweenAnim(19);
 		}
 
-		// Token: 0x0603C750 RID: 247632 RVA: 0x00E7FEB8 File Offset: 0x00E7E0B8
+		// Token: 0x060316A9 RID: 202409 RVA: 0x00DD0658 File Offset: 0x00DCE858
 		private void ResetChangeCoolDown()
 		{
 			Log.Instance.Info(ELogModule.Battle, ELogAuthor.CFT, "重置换人冷却表现", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.SetCoolDownItemVisible(false);
 		}
 
-		// Token: 0x0603C751 RID: 247633 RVA: 0x00E7FEE8 File Offset: 0x00E7E0E8
+		// Token: 0x060316AA RID: 202410 RVA: 0x00DD0688 File Offset: 0x00DCE888
 		private void OnFormationTogglePointDown(EToggleState state)
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C752 RID: 247634 RVA: 0x00E7FF64 File Offset: 0x00E7E164
+		// Token: 0x060316AB RID: 202411 RVA: 0x00DD0704 File Offset: 0x00DCE904
 		public void LevelUp(int level)
 		{
 			string levelText = level.ToString();
@@ -687,14 +687,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 5000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603C753 RID: 247635 RVA: 0x00E7FFD0 File Offset: 0x00E7E1D0
+		// Token: 0x060316AC RID: 202412 RVA: 0x00DD0770 File Offset: 0x00DCE970
 		public void RefreshConcertoResponseModule(bool isOpen)
 		{
 			this.IsConcertoResponseOpen = isOpen;
 			this.RefreshElementVisible();
 		}
 
-		// Token: 0x0603C754 RID: 247636 RVA: 0x00E7FFE0 File Offset: 0x00E7E1E0
+		// Token: 0x060316AD RID: 202413 RVA: 0x00DD0780 File Offset: 0x00DCE980
 		public void CureRole()
 		{
 			if (!this.IsCurrentRole())
@@ -723,7 +723,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C755 RID: 247637 RVA: 0x00E8006C File Offset: 0x00E7E26C
+		// Token: 0x060316AE RID: 202414 RVA: 0x00DD080C File Offset: 0x00DCEA0C
 		[NullableContext(1)]
 		private void SetRoleHead(string roleTexturePath, int roleConfigId)
 		{
@@ -743,7 +743,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetRoleIcon(roleTexturePath, CS$<>8__locals1.changeRoleCoolDownBarTexture, roleConfigId, null, new Action<bool>(CS$<>8__locals1.<SetRoleHead>g__MaskCallback|1));
 		}
 
-		// Token: 0x0603C756 RID: 247638 RVA: 0x00E80100 File Offset: 0x00E7E300
+		// Token: 0x060316AF RID: 202415 RVA: 0x00DD08A0 File Offset: 0x00DCEAA0
 		[NullableContext(1)]
 		public void SetRoleHeadByPathOnly(string path)
 		{
@@ -763,7 +763,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetTextureByPath(path, CS$<>8__locals1.changeRoleCoolDownBarTexture, null, new Action<bool>(CS$<>8__locals1.<SetRoleHeadByPathOnly>g__MaskCallback|1));
 		}
 
-		// Token: 0x0603C757 RID: 247639 RVA: 0x00E80190 File Offset: 0x00E7E390
+		// Token: 0x060316B0 RID: 202416 RVA: 0x00DD0930 File Offset: 0x00DCEB30
 		[NullableContext(1)]
 		private void SetRoleSkinHead(string roleTexturePath, int roleSkinId)
 		{
@@ -783,7 +783,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetRoleSkinIcon(roleTexturePath, CS$<>8__locals1.changeRoleCoolDownBarTexture, roleSkinId, null, new Action<bool>(CS$<>8__locals1.<SetRoleSkinHead>g__MaskCallback|1));
 		}
 
-		// Token: 0x0603C758 RID: 247640 RVA: 0x00E80224 File Offset: 0x00E7E424
+		// Token: 0x060316B1 RID: 202417 RVA: 0x00DD09C4 File Offset: 0x00DCEBC4
 		private void SetHealthPercent(float healthPercent)
 		{
 			UUISprite sprite;
@@ -805,7 +805,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C759 RID: 247641 RVA: 0x00E80290 File Offset: 0x00E7E490
+		// Token: 0x060316B2 RID: 202418 RVA: 0x00DD0A30 File Offset: 0x00DCEC30
 		public void RefreshRoleName()
 		{
 			int roleConfigId = this.RoleConfigId;
@@ -871,7 +871,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C75A RID: 247642 RVA: 0x00E803AC File Offset: 0x00E7E5AC
+		// Token: 0x060316B3 RID: 202419 RVA: 0x00DD0B4C File Offset: 0x00DCED4C
 		public void SetRoleSelected(bool bSelected)
 		{
 			if (Info.Instance.OperationType == global::EOperationType.Desktop)
@@ -890,7 +890,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSuperSkillVisible();
 		}
 
-		// Token: 0x0603C75B RID: 247643 RVA: 0x00E803ED File Offset: 0x00E7E5ED
+		// Token: 0x060316B4 RID: 202420 RVA: 0x00DD0B8D File Offset: 0x00DCED8D
 		public void RefreshCoolDownOnShow()
 		{
 			if (this.RoleData == null)
@@ -901,7 +901,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAssistCoolDown();
 		}
 
-		// Token: 0x0603C75C RID: 247644 RVA: 0x00E80404 File Offset: 0x00E7E604
+		// Token: 0x060316B5 RID: 202421 RVA: 0x00DD0BA4 File Offset: 0x00DCEDA4
 		private void PlayChangeRoleCoolDown(double coolDownTime, double coolDownTimeRemain)
 		{
 			if (coolDownTime <= 0.0)
@@ -923,7 +923,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetCoolDownItemVisible(true);
 		}
 
-		// Token: 0x0603C75D RID: 247645 RVA: 0x00E80484 File Offset: 0x00E7E684
+		// Token: 0x060316B6 RID: 202422 RVA: 0x00DD0C24 File Offset: 0x00DCEE24
 		private void UpdateChangeRoleCoolDownAnim(double coolDownTimeRemain)
 		{
 			if (this.RefreshCooldownExternalLock)
@@ -938,7 +938,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetTexture(2).SetFillAmount((float)num);
 		}
 
-		// Token: 0x0603C75E RID: 247646 RVA: 0x00E804C0 File Offset: 0x00E7E6C0
+		// Token: 0x060316B7 RID: 202423 RVA: 0x00DD0C60 File Offset: 0x00DCEE60
 		private void RefreshCoolDownText()
 		{
 			if (this.RefreshCooldownExternalLock)
@@ -953,7 +953,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			text.SetText((this.LastRefreshTextCoolDownTime * TimeUtil.Instance.Millisecond).ToString("F1"), true);
 		}
 
-		// Token: 0x0603C75F RID: 247647 RVA: 0x00E80506 File Offset: 0x00E7E706
+		// Token: 0x060316B8 RID: 202424 RVA: 0x00DD0CA6 File Offset: 0x00DCEEA6
 		private void SetCoolDownItemVisible(bool bVisible)
 		{
 			if (this.RefreshCooldownExternalLock)
@@ -968,7 +968,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603C760 RID: 247648 RVA: 0x00E80524 File Offset: 0x00E7E724
+		// Token: 0x060316B9 RID: 202425 RVA: 0x00DD0CC4 File Offset: 0x00DCEEC4
 		public void RefreshCoolDownExternal(float? remainCd = 0f, float? totalCd = 0f)
 		{
 			UUIItem item = base.GetItem(1);
@@ -998,7 +998,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetTexture(2).SetFillAmount(num.Value);
 		}
 
-		// Token: 0x0603C761 RID: 247649 RVA: 0x00E805E8 File Offset: 0x00E7E7E8
+		// Token: 0x060316BA RID: 202426 RVA: 0x00DD0D88 File Offset: 0x00DCEF88
 		private void RefreshRoleHead()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -1023,7 +1023,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHeadWithConfig(this.RoleConfig.Value);
 		}
 
-		// Token: 0x0603C762 RID: 247650 RVA: 0x00E80680 File Offset: 0x00E7E880
+		// Token: 0x060316BB RID: 202427 RVA: 0x00DD0E20 File Offset: 0x00DCF020
 		private void RefreshHeadWithConfig(RoleInfo roleConfig)
 		{
 			string roleHeadIconBig = roleConfig.RoleHeadIconBig;
@@ -1034,7 +1034,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetRoleHead(roleHeadIconBig, roleConfig.Id);
 		}
 
-		// Token: 0x0603C763 RID: 247651 RVA: 0x00E806AC File Offset: 0x00E7E8AC
+		// Token: 0x060316BC RID: 202428 RVA: 0x00DD0E4C File Offset: 0x00DCF04C
 		public void RefreshSelectedRole()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -1058,7 +1058,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshElementVisible();
 		}
 
-		// Token: 0x0603C764 RID: 247652 RVA: 0x00E80718 File Offset: 0x00E7E918
+		// Token: 0x060316BD RID: 202429 RVA: 0x00DD0EB8 File Offset: 0x00DCF0B8
 		public void ActivateConcertoChangeEffect(int elementId1, int elementId2)
 		{
 			base.GetText(8).SetUIActive(false);
@@ -1071,13 +1071,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ConcertoChangeTimerId = TimerSystem.Instance.Delay(new TTimerAction(this.OnConcertoEffectEnded), (float)this.ConcertoChangeEffectDelay, null, null, true, 1f);
 		}
 
-		// Token: 0x0603C765 RID: 247653 RVA: 0x00E80781 File Offset: 0x00E7E981
+		// Token: 0x060316BE RID: 202430 RVA: 0x00DD0F21 File Offset: 0x00DCF121
 		private void OnConcertoEffectEnded(float delta)
 		{
 			this.DeactivateConcertoChangeEffect();
 		}
 
-		// Token: 0x0603C766 RID: 247654 RVA: 0x00E8078C File Offset: 0x00E7E98C
+		// Token: 0x060316BF RID: 202431 RVA: 0x00DD0F2C File Offset: 0x00DCF12C
 		private void DeactivateConcertoChangeEffect()
 		{
 			UUIItem item = base.GetItem(6);
@@ -1093,14 +1093,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C767 RID: 247655 RVA: 0x00E807EE File Offset: 0x00E7E9EE
+		// Token: 0x060316C0 RID: 202432 RVA: 0x00DD0F8E File Offset: 0x00DCF18E
 		private void RefreshIsAssist()
 		{
 			base.GetItem(10).SetUIActive(!this.IsAssistRole);
 			this.RefreshAssistCoolDown();
 		}
 
-		// Token: 0x0603C768 RID: 247656 RVA: 0x00E8080C File Offset: 0x00E7EA0C
+		// Token: 0x060316C1 RID: 202433 RVA: 0x00DD0FAC File Offset: 0x00DCF1AC
 		private void RefreshAssistCoolDown()
 		{
 			if (!this.IsAssistRole)
@@ -1125,14 +1125,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayChangeRoleCoolDown((double)((int)(num2 * (float)TimeUtil.Instance.InverseMillisecond)), (double)((int)(num * (float)TimeUtil.Instance.InverseMillisecond)));
 		}
 
-		// Token: 0x0603C769 RID: 247657 RVA: 0x00E808CF File Offset: 0x00E7EACF
+		// Token: 0x060316C2 RID: 202434 RVA: 0x00DD106F File Offset: 0x00DCF26F
 		[NullableContext(1)]
 		public UUIItem GetExtraContainer()
 		{
 			return base.GetItem(24);
 		}
 
-		// Token: 0x0603C76A RID: 247658 RVA: 0x00E808DC File Offset: 0x00E7EADC
+		// Token: 0x060316C3 RID: 202435 RVA: 0x00DD107C File Offset: 0x00DCF27C
 		public void RefreshRoleHealthPercent()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -1202,7 +1202,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSelectedRole();
 		}
 
-		// Token: 0x0603C76B RID: 247659 RVA: 0x00E80A5C File Offset: 0x00E7EC5C
+		// Token: 0x060316C4 RID: 202436 RVA: 0x00DD11FC File Offset: 0x00DCF3FC
 		private void RefreshSuperSkillVisible()
 		{
 			if (Info.Instance.OperationType != global::EOperationType.Desktop)
@@ -1220,7 +1220,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(17).SetUIActive(uiactive2);
 		}
 
-		// Token: 0x0603C76C RID: 247660 RVA: 0x00E80AC0 File Offset: 0x00E7ECC0
+		// Token: 0x060316C5 RID: 202437 RVA: 0x00DD1260 File Offset: 0x00DCF460
 		private void RefreshUltimateColor()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -1236,7 +1236,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C76D RID: 247661 RVA: 0x00E80B40 File Offset: 0x00E7ED40
+		// Token: 0x060316C6 RID: 202438 RVA: 0x00DD12E0 File Offset: 0x00DCF4E0
 		private void RefreshKeyItem()
 		{
 			if (Info.Instance.OperationType == global::EOperationType.Desktop)
@@ -1272,7 +1272,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C76E RID: 247662 RVA: 0x00E80C20 File Offset: 0x00E7EE20
+		// Token: 0x060316C7 RID: 202439 RVA: 0x00DD13C0 File Offset: 0x00DCF5C0
 		private void RefreshKeyItemGray()
 		{
 			if (this.KeyItem == null)
@@ -1287,14 +1287,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyItem.SetGray(gray);
 		}
 
-		// Token: 0x0603C76F RID: 247663 RVA: 0x00E80C56 File Offset: 0x00E7EE56
+		// Token: 0x060316C8 RID: 202440 RVA: 0x00DD13F6 File Offset: 0x00DCF5F6
 		private bool CanUseSuperSkill()
 		{
 			BattleUiRoleData roleData = this.RoleData;
 			return roleData != null && roleData.CanUseUltraSkill();
 		}
 
-		// Token: 0x0603C770 RID: 247664 RVA: 0x00E80C6C File Offset: 0x00E7EE6C
+		// Token: 0x060316C9 RID: 202441 RVA: 0x00DD140C File Offset: 0x00DCF60C
 		private void RefreshFormationConcertoItem()
 		{
 			if (this.RoleData == null)
@@ -1315,7 +1315,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshElementVisible();
 		}
 
-		// Token: 0x0603C771 RID: 247665 RVA: 0x00E80D14 File Offset: 0x00E7EF14
+		// Token: 0x060316CA RID: 202442 RVA: 0x00DD14B4 File Offset: 0x00DCF6B4
 		private void OnElementEnergyChanged(int entityId)
 		{
 			int? entityId2 = this.EntityId;
@@ -1326,7 +1326,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateElementBar();
 		}
 
-		// Token: 0x0603C772 RID: 247666 RVA: 0x00E80D44 File Offset: 0x00E7EF44
+		// Token: 0x060316CB RID: 202443 RVA: 0x00DD14E4 File Offset: 0x00DCF6E4
 		private void OnEnergyChanged(int entityId)
 		{
 			int? entityId2 = this.EntityId;
@@ -1337,7 +1337,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshSuperSkillVisible();
 		}
 
-		// Token: 0x0603C773 RID: 247667 RVA: 0x00E80D74 File Offset: 0x00E7EF74
+		// Token: 0x060316CC RID: 202444 RVA: 0x00DD1514 File Offset: 0x00DCF714
 		private void OnRoleHeadChanged(int entityId)
 		{
 			int? entityId2 = this.EntityId;
@@ -1348,7 +1348,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshRoleHead();
 		}
 
-		// Token: 0x0603C774 RID: 247668 RVA: 0x00E80DA4 File Offset: 0x00E7EFA4
+		// Token: 0x060316CD RID: 202445 RVA: 0x00DD1544 File Offset: 0x00DCF744
 		private void OnElementHideTagChanged(int entityId, int tagId, bool tagExist)
 		{
 			int? entityId2 = this.EntityId;
@@ -1359,7 +1359,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshElementVisible();
 		}
 
-		// Token: 0x0603C775 RID: 247669 RVA: 0x00E80DD4 File Offset: 0x00E7EFD4
+		// Token: 0x060316CE RID: 202446 RVA: 0x00DD1574 File Offset: 0x00DCF774
 		public void RefreshElementVisible()
 		{
 			if (this.RoleData == null)
@@ -1395,7 +1395,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(true);
 		}
 
-		// Token: 0x0603C776 RID: 247670 RVA: 0x00E80EA0 File Offset: 0x00E7F0A0
+		// Token: 0x060316CF RID: 202447 RVA: 0x00DD1640 File Offset: 0x00DCF840
 		private void SetElementStyle(in ElementInfo elementConfig, EElementType elementType)
 		{
 			ElementInfo elementInfo = elementConfig;
@@ -1407,7 +1407,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetColor(this.RoleData.ElementColor.Value);
 		}
 
-		// Token: 0x0603C777 RID: 247671 RVA: 0x00E80F0C File Offset: 0x00E7F10C
+		// Token: 0x060316D0 RID: 202448 RVA: 0x00DD16AC File Offset: 0x00DCF8AC
 		private void UpdateElementBar()
 		{
 			UUISprite sprite = base.GetSprite(16);
@@ -1416,7 +1416,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0603C778 RID: 247672 RVA: 0x00E80F40 File Offset: 0x00E7F140
+		// Token: 0x060316D1 RID: 202449 RVA: 0x00DD16E0 File Offset: 0x00DCF8E0
 		public void RefreshOnlineItem()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -1452,7 +1452,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RoleHeadOnlineComponent.SetIsGrayByOtherControl(!this.IsCurrentRole());
 		}
 
-		// Token: 0x0603C779 RID: 247673 RVA: 0x00E8108C File Offset: 0x00E7F28C
+		// Token: 0x060316D2 RID: 202450 RVA: 0x00DD182C File Offset: 0x00DCFA2C
 		public void RefreshPlayerPingState(ENetPingState pingState)
 		{
 			if (this.RoleHeadOnlineComponent == null)
@@ -1475,7 +1475,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RoleHeadOnlineComponent.SetNetDisconnect(false);
 		}
 
-		// Token: 0x0603C77A RID: 247674 RVA: 0x00E810F4 File Offset: 0x00E7F2F4
+		// Token: 0x060316D3 RID: 202451 RVA: 0x00DD1894 File Offset: 0x00DCFA94
 		private void InitTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>();
@@ -1492,7 +1492,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[componentType] = list;
 		}
 
-		// Token: 0x0603C77B RID: 247675 RVA: 0x00E81168 File Offset: 0x00E7F368
+		// Token: 0x060316D4 RID: 202452 RVA: 0x00DD1908 File Offset: 0x00DCFB08
 		private void PlayTweenAnim(int componentType)
 		{
 			if (this.TweenAnimMap == null)
@@ -1510,7 +1510,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C77C RID: 247676 RVA: 0x00E811D0 File Offset: 0x00E7F3D0
+		// Token: 0x060316D5 RID: 202453 RVA: 0x00DD1970 File Offset: 0x00DCFB70
 		private void StopTweenAnim(int componentType)
 		{
 			if (this.TweenAnimMap == null)
@@ -1528,7 +1528,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C77D RID: 247677 RVA: 0x00E81238 File Offset: 0x00E7F438
+		// Token: 0x060316D6 RID: 202454 RVA: 0x00DD19D8 File Offset: 0x00DCFBD8
 		public void RefreshLinkEffect()
 		{
 			if (BattleLinkModel.Instance.CheckInDreamLink())
@@ -1540,7 +1540,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBattleLinkStatusChanged(ELinkStatus.None);
 		}
 
-		// Token: 0x0603C77E RID: 247678 RVA: 0x00E8126C File Offset: 0x00E7F46C
+		// Token: 0x060316D7 RID: 202455 RVA: 0x00DD1A0C File Offset: 0x00DCFC0C
 		public void RefreshLinkActive(bool isActive, bool isExplosion = false)
 		{
 			if (this.LinkActive == isActive && this.IsInitLinkEffect)
@@ -1584,7 +1584,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C77F RID: 247679 RVA: 0x00E81308 File Offset: 0x00E7F508
+		// Token: 0x060316D8 RID: 202456 RVA: 0x00DD1AA8 File Offset: 0x00DCFCA8
 		private void OnBattleLinkStatusChanged(ELinkStatus state)
 		{
 			if (WeeklyRogueModel.Instance.CheckIsInWeeklyRogue())
@@ -1637,7 +1637,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C780 RID: 247680 RVA: 0x00E813DB File Offset: 0x00E7F5DB
+		// Token: 0x060316D9 RID: 202457 RVA: 0x00DD1B7B File Offset: 0x00DCFD7B
 		public void SetInvisibleByKeyList([Nullable(new byte[]
 		{
 			2,
@@ -1648,7 +1648,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKeyItemNextTick();
 		}
 
-		// Token: 0x0603C781 RID: 247681 RVA: 0x00E813EA File Offset: 0x00E7F5EA
+		// Token: 0x060316DA RID: 202458 RVA: 0x00DD1B8A File Offset: 0x00DCFD8A
 		private void RefreshKeyItemNextTick()
 		{
 			if (this.RefreshKeyItemTimer != null)
@@ -1662,7 +1662,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, null, null);
 		}
 
-		// Token: 0x0603C782 RID: 247682 RVA: 0x00E81413 File Offset: 0x00E7F613
+		// Token: 0x060316DB RID: 202459 RVA: 0x00DD1BB3 File Offset: 0x00DCFDB3
 		public FormationItem()
 		{
 			Dictionary<ERoleQteType, FormationItem.EChildType> dictionary = new Dictionary<ERoleQteType, FormationItem.EChildType>();
@@ -1674,23 +1674,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base..ctor();
 		}
 
-		// Token: 0x0401F7FC RID: 129020
+		// Token: 0x0401A2B5 RID: 107189
 		private const int REFRESH_COOLDOWN_INTERVAL = 100;
 
-		// Token: 0x0401F7FD RID: 129021
+		// Token: 0x0401A2B6 RID: 107190
 		private const int CURE_DELAY = 1000;
 
-		// Token: 0x0401F7FE RID: 129022
+		// Token: 0x0401A2B7 RID: 107191
 		private const float LOW_HP_PERCENT = 0.2f;
 
-		// Token: 0x0401F7FF RID: 129023
+		// Token: 0x0401A2B8 RID: 107192
 		private const int LEVE_UP_TIME = 5000;
 
-		// Token: 0x0401F800 RID: 129024
+		// Token: 0x0401A2B9 RID: 107193
 		[Nullable(1)]
 		private readonly Dictionary<ERoleQteType, FormationItem.EChildType> QteTypeNiagaraMap;
 
-		// Token: 0x0401F801 RID: 129025
+		// Token: 0x0401A2BA RID: 107194
 		[Nullable(new byte[]
 		{
 			2,
@@ -1699,102 +1699,102 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap;
 
-		// Token: 0x0401F802 RID: 129026
+		// Token: 0x0401A2BB RID: 107195
 		public int PrefabIndex;
 
-		// Token: 0x0401F803 RID: 129027
+		// Token: 0x0401A2BC RID: 107196
 		public int PlayerId;
 
-		// Token: 0x0401F804 RID: 129028
+		// Token: 0x0401A2BD RID: 107197
 		public bool IsMyRole;
 
-		// Token: 0x0401F805 RID: 129029
+		// Token: 0x0401A2BE RID: 107198
 		public int RoleConfigId;
 
-		// Token: 0x0401F806 RID: 129030
+		// Token: 0x0401A2BF RID: 107199
 		public int RoleSkinId;
 
-		// Token: 0x0401F807 RID: 129031
+		// Token: 0x0401A2C0 RID: 107200
 		public BattleUiRoleData RoleData;
 
-		// Token: 0x0401F808 RID: 129032
+		// Token: 0x0401A2C1 RID: 107201
 		public int? EntityId;
 
-		// Token: 0x0401F809 RID: 129033
+		// Token: 0x0401A2C2 RID: 107202
 		public RoleInfo? RoleConfig;
 
-		// Token: 0x0401F80A RID: 129034
+		// Token: 0x0401A2C3 RID: 107203
 		public RoleSkin? RoleSkinConfig;
 
-		// Token: 0x0401F80B RID: 129035
+		// Token: 0x0401A2C4 RID: 107204
 		[Nullable(1)]
 		private readonly List<ITagTask> TagSignificantChangedTaskList;
 
-		// Token: 0x0401F80C RID: 129036
+		// Token: 0x0401A2C5 RID: 107205
 		private double CoolDownEndTime;
 
-		// Token: 0x0401F80D RID: 129037
+		// Token: 0x0401A2C6 RID: 107206
 		private double CoolDownTime;
 
-		// Token: 0x0401F80E RID: 129038
+		// Token: 0x0401A2C7 RID: 107207
 		private double LastRefreshTextCoolDownTime;
 
-		// Token: 0x0401F80F RID: 129039
+		// Token: 0x0401A2C8 RID: 107208
 		private TimerHandle CureDelayTimerId;
 
-		// Token: 0x0401F810 RID: 129040
+		// Token: 0x0401A2C9 RID: 107209
 		private EElementType? CurrentElementType;
 
-		// Token: 0x0401F811 RID: 129041
+		// Token: 0x0401A2CA RID: 107210
 		private ElementInfo? CurrentElementInfo;
 
-		// Token: 0x0401F812 RID: 129042
+		// Token: 0x0401A2CB RID: 107211
 		[Nullable(1)]
 		private string CurrentSetUltimateColor;
 
-		// Token: 0x0401F813 RID: 129043
+		// Token: 0x0401A2CC RID: 107212
 		private bool IsConcertoResponseOpen;
 
-		// Token: 0x0401F814 RID: 129044
+		// Token: 0x0401A2CD RID: 107213
 		private TimerHandle ConcertoChangeTimerId;
 
-		// Token: 0x0401F815 RID: 129045
+		// Token: 0x0401A2CE RID: 107214
 		private int ConcertoChangeEffectDelay;
 
-		// Token: 0x0401F816 RID: 129046
+		// Token: 0x0401A2CF RID: 107215
 		private CombineKeyItem KeyItem;
 
-		// Token: 0x0401F817 RID: 129047
+		// Token: 0x0401A2D0 RID: 107216
 		private FormationLevelUpItem LevelUpComponent;
 
-		// Token: 0x0401F818 RID: 129048
+		// Token: 0x0401A2D1 RID: 107217
 		private FormationTrialItem TrialComponent;
 
-		// Token: 0x0401F819 RID: 129049
+		// Token: 0x0401A2D2 RID: 107218
 		private FormationOnlineItem RoleHeadOnlineComponent;
 
-		// Token: 0x0401F81A RID: 129050
+		// Token: 0x0401A2D3 RID: 107219
 		private bool IsAssistRole;
 
-		// Token: 0x0401F81B RID: 129051
+		// Token: 0x0401A2D4 RID: 107220
 		private bool QteNiagaraActive;
 
-		// Token: 0x0401F81C RID: 129052
+		// Token: 0x0401A2D5 RID: 107221
 		private ERoleQteType CurrentQteNiagaraType;
 
-		// Token: 0x0401F81D RID: 129053
+		// Token: 0x0401A2D6 RID: 107222
 		private bool SelectedNiagaraActive;
 
-		// Token: 0x0401F81E RID: 129054
+		// Token: 0x0401A2D7 RID: 107223
 		private bool LinkActive;
 
-		// Token: 0x0401F81F RID: 129055
+		// Token: 0x0401A2D8 RID: 107224
 		private bool IsInitLinkEffect;
 
-		// Token: 0x0401F820 RID: 129056
+		// Token: 0x0401A2D9 RID: 107225
 		private bool RefreshCooldownExternalLock;
 
-		// Token: 0x0401F821 RID: 129057
+		// Token: 0x0401A2DA RID: 107226
 		[Nullable(new byte[]
 		{
 			2,
@@ -1802,64 +1802,64 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private List<string> InvisibleKeyList;
 
-		// Token: 0x0401F822 RID: 129058
+		// Token: 0x0401A2DB RID: 107227
 		private TimerHandle RefreshKeyItemTimer;
 
-		// Token: 0x0200BFAC RID: 49068
+		// Token: 0x0200A9B2 RID: 43442
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039D2F RID: 236847
+			// Token: 0x040346F1 RID: 214769
 			FormationToggle,
-			// Token: 0x04039D30 RID: 236848
+			// Token: 0x040346F2 RID: 214770
 			ChangeRoleCoolDownItem,
-			// Token: 0x04039D31 RID: 236849
+			// Token: 0x040346F3 RID: 214771
 			ChangeRoleCoolDownBarTexture,
-			// Token: 0x04039D32 RID: 236850
+			// Token: 0x040346F4 RID: 214772
 			ChangeRoleCoolDownText,
-			// Token: 0x04039D33 RID: 236851
+			// Token: 0x040346F5 RID: 214773
 			CureItem,
-			// Token: 0x04039D34 RID: 236852
+			// Token: 0x040346F6 RID: 214774
 			QTENiagara,
-			// Token: 0x04039D35 RID: 236853
+			// Token: 0x040346F7 RID: 214775
 			ConcertoChangeItem,
-			// Token: 0x04039D36 RID: 236854
+			// Token: 0x040346F8 RID: 214776
 			ConcertoChangeNiagara,
-			// Token: 0x04039D37 RID: 236855
+			// Token: 0x040346F9 RID: 214777
 			ConcertoChangeText,
-			// Token: 0x04039D38 RID: 236856
+			// Token: 0x040346FA RID: 214778
 			RoleHeadTexture,
-			// Token: 0x04039D39 RID: 236857
+			// Token: 0x040346FB RID: 214779
 			HpItem,
-			// Token: 0x04039D3A RID: 236858
+			// Token: 0x040346FC RID: 214780
 			ShieldSprite,
-			// Token: 0x04039D3B RID: 236859
+			// Token: 0x040346FD RID: 214781
 			HpBarSprite,
-			// Token: 0x04039D3C RID: 236860
+			// Token: 0x040346FE RID: 214782
 			LowHpBarSprite,
-			// Token: 0x04039D3D RID: 236861
+			// Token: 0x040346FF RID: 214783
 			ConcertoItem,
-			// Token: 0x04039D3E RID: 236862
+			// Token: 0x04034700 RID: 214784
 			ElementTexture,
-			// Token: 0x04039D3F RID: 236863
+			// Token: 0x04034701 RID: 214785
 			ElementBarSprite,
-			// Token: 0x04039D40 RID: 236864
+			// Token: 0x04034702 RID: 214786
 			UltimateTag,
-			// Token: 0x04039D41 RID: 236865
+			// Token: 0x04034703 RID: 214787
 			AnimSelect,
-			// Token: 0x04039D42 RID: 236866
+			// Token: 0x04034704 RID: 214788
 			AnimSwitch,
-			// Token: 0x04039D43 RID: 236867
+			// Token: 0x04034705 RID: 214789
 			LinkItem,
-			// Token: 0x04039D44 RID: 236868
+			// Token: 0x04034706 RID: 214790
 			LinkNiagara,
-			// Token: 0x04039D45 RID: 236869
+			// Token: 0x04034707 RID: 214791
 			LinkExplosionNiagara,
-			// Token: 0x04039D46 RID: 236870
+			// Token: 0x04034708 RID: 214792
 			QTETongZouNiagara,
-			// Token: 0x04039D47 RID: 236871
+			// Token: 0x04034709 RID: 214793
 			ExtraContainer,
-			// Token: 0x04039D48 RID: 236872
+			// Token: 0x0403470A RID: 214794
 			KeyItem
 		}
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000148 RID: 328
+	// Token: 0x02000157 RID: 343
 	public class ConfigChatById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060007B1 RID: 1969 RVA: 0x00085298 File Offset: 0x00083498
+		// Token: 0x0600080B RID: 2059 RVA: 0x0008ABFC File Offset: 0x00088DFC
 		static ConfigChatById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChatById.CreateStaticDefaultValue), new Action(ConfigChatById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060007B2 RID: 1970 RVA: 0x000852B8 File Offset: 0x000834B8
+		// Token: 0x0600080C RID: 2060 RVA: 0x0008AC1C File Offset: 0x00088E1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChatById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060007B3 RID: 1971 RVA: 0x00085337 File Offset: 0x00083537
+		// Token: 0x0600080D RID: 2061 RVA: 0x0008AC9B File Offset: 0x00088E9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChatById.LogPair = null;
 			ConfigChatById.HandleId = 0;
 		}
 
-		// Token: 0x060007B4 RID: 1972 RVA: 0x00085345 File Offset: 0x00083545
+		// Token: 0x0600080E RID: 2062 RVA: 0x0008ACA9 File Offset: 0x00088EA9
 		public static void Init()
 		{
 			ConfigChatById.HandleId = ConfigCommon.InitDataStatement(ConfigChatById.HandleId, "db_chat.db", "select BinData from `Chat` where Id=?");
 		}
 
-		// Token: 0x060007B5 RID: 1973 RVA: 0x00085360 File Offset: 0x00083560
+		// Token: 0x0600080F RID: 2063 RVA: 0x0008ACC4 File Offset: 0x00088EC4
 		public static Chat? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigChatById.HandleId, ConfigChatById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Chat?(rootAsChat);
 		}
 
-		// Token: 0x040008DC RID: 2268
+		// Token: 0x04000945 RID: 2373
 		private const string DB = "db_chat.db";
 
-		// Token: 0x040008DD RID: 2269
+		// Token: 0x04000946 RID: 2374
 		private const string FILE = "l.聊天.xlsx";
 
-		// Token: 0x040008DE RID: 2270
+		// Token: 0x04000947 RID: 2375
 		private const string TABLE = "Chat";
 
-		// Token: 0x040008DF RID: 2271
+		// Token: 0x04000948 RID: 2376
 		private const string COMMAND = "select BinData from `Chat` where Id=?";
 
-		// Token: 0x040008E0 RID: 2272
+		// Token: 0x04000949 RID: 2377
 		private const string KEY_PREFIX = "ChatById";
 
-		// Token: 0x040008E1 RID: 2273
+		// Token: 0x0400094A RID: 2378
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040008E2 RID: 2274
+		// Token: 0x0400094B RID: 2379
 		private static int HandleId;
 	}
 }

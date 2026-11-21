@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006535 RID: 25909
+	// Token: 0x02006BA3 RID: 27555
 	public class IDaolingAuthenticationT
 	{
-		// Token: 0x1700C09A RID: 49306
-		// (get) Token: 0x0602CF29 RID: 184105 RVA: 0x0062BE9E File Offset: 0x0062A09E
-		// (set) Token: 0x0602CF2A RID: 184106 RVA: 0x0062BEA6 File Offset: 0x0062A0A6
+		// Token: 0x1700CA2C RID: 51756
+		// (get) Token: 0x0602F6C7 RID: 194247 RVA: 0x0067834A File Offset: 0x0067654A
+		// (set) Token: 0x0602F6C8 RID: 194248 RVA: 0x00678352 File Offset: 0x00676552
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x0602CF2B RID: 184107 RVA: 0x0062BEAF File Offset: 0x0062A0AF
+		// Token: 0x0602F6C9 RID: 194249 RVA: 0x0067835B File Offset: 0x0067655B
 		public IDaolingAuthenticationT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

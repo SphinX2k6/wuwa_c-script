@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA8 RID: 23208
+	// Token: 0x02004A84 RID: 19076
 	public class DreamLinkButton : UiPanelBase
 	{
-		// Token: 0x0603AC9D RID: 240797 RVA: 0x00E01AA4 File Offset: 0x00DFFCA4
+		// Token: 0x0602FBE9 RID: 195561 RVA: 0x00D52058 File Offset: 0x00D50258
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AC9E RID: 240798 RVA: 0x00E01B70 File Offset: 0x00DFFD70
+		// Token: 0x0602FBEA RID: 195562 RVA: 0x00D52124 File Offset: 0x00D50324
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -38,26 +38,26 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetExtendToggle(0).OnPointUpCallBack.Bind(new Action<EToggleState>(this.OnClickButton));
 		}
 
-		// Token: 0x0603AC9F RID: 240799 RVA: 0x00E01BD7 File Offset: 0x00DFFDD7
+		// Token: 0x0602FBEB RID: 195563 RVA: 0x00D5218B File Offset: 0x00D5038B
 		public void SetRedDotState(bool bVisible)
 		{
 			base.GetItem(1).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603ACA0 RID: 240800 RVA: 0x00E01BE6 File Offset: 0x00DFFDE6
+		// Token: 0x0602FBEC RID: 195564 RVA: 0x00D5219A File Offset: 0x00D5039A
 		public void SetFinishedState(bool isFinished)
 		{
 			base.GetItem(2).SetUIActive(isFinished);
 		}
 
-		// Token: 0x0603ACA1 RID: 240801 RVA: 0x00E01BF5 File Offset: 0x00DFFDF5
+		// Token: 0x0602FBED RID: 195565 RVA: 0x00D521A9 File Offset: 0x00D503A9
 		[NullableContext(1)]
 		public void BindButtonFunction(Action func)
 		{
 			this.ButtonFunction = func;
 		}
 
-		// Token: 0x0603ACA2 RID: 240802 RVA: 0x00E01C00 File Offset: 0x00DFFE00
+		// Token: 0x0602FBEE RID: 195566 RVA: 0x00D521B4 File Offset: 0x00D503B4
 		public void SetToggleEnable(bool bEnable)
 		{
 			EToggleState state = bEnable ? EToggleState.ETT_UnChecked : EToggleState.ETT_UnDetermined;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0603ACA3 RID: 240803 RVA: 0x00E01C55 File Offset: 0x00DFFE55
+		// Token: 0x0602FBEF RID: 195567 RVA: 0x00D52209 File Offset: 0x00D50409
 		private void OnClickButton(EToggleState _)
 		{
 			Action buttonFunction = this.ButtonFunction;
@@ -81,26 +81,26 @@ namespace CSharpScript.Game.Module.DreamLink
 			buttonFunction();
 		}
 
-		// Token: 0x0401EAEF RID: 125679
+		// Token: 0x04019596 RID: 103830
 		[Nullable(2)]
 		private Action ButtonFunction;
 
-		// Token: 0x0200BCEB RID: 48363
+		// Token: 0x0200A6F4 RID: 42740
 		private class EButtonDefine
 		{
-			// Token: 0x04038FAD RID: 233389
+			// Token: 0x04033978 RID: 211320
 			public const int Toggle = 0;
 
-			// Token: 0x04038FAE RID: 233390
+			// Token: 0x04033979 RID: 211321
 			public const int RedDot = 1;
 
-			// Token: 0x04038FAF RID: 233391
+			// Token: 0x0403397A RID: 211322
 			public const int PanelDone = 2;
 
-			// Token: 0x04038FB0 RID: 233392
+			// Token: 0x0403397B RID: 211323
 			public const int PanelLock = 3;
 
-			// Token: 0x04038FB1 RID: 233393
+			// Token: 0x0403397C RID: 211324
 			public const int SpriteIcon = 4;
 		}
 	}

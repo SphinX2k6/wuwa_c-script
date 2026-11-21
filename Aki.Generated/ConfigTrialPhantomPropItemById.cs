@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A52 RID: 2642
+	// Token: 0x02000B27 RID: 2855
 	public class ConfigTrialPhantomPropItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E00 RID: 15872 RVA: 0x001B8868 File Offset: 0x001B6A68
+		// Token: 0x060042FE RID: 17150 RVA: 0x001D7BFC File Offset: 0x001D5DFC
 		static ConfigTrialPhantomPropItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrialPhantomPropItemById.CreateStaticDefaultValue), new Action(ConfigTrialPhantomPropItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E01 RID: 15873 RVA: 0x001B8888 File Offset: 0x001B6A88
+		// Token: 0x060042FF RID: 17151 RVA: 0x001D7C1C File Offset: 0x001D5E1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrialPhantomPropItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E02 RID: 15874 RVA: 0x001B8907 File Offset: 0x001B6B07
+		// Token: 0x06004300 RID: 17152 RVA: 0x001D7C9B File Offset: 0x001D5E9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrialPhantomPropItemById.LogPair = null;
 			ConfigTrialPhantomPropItemById.HandleId = 0;
 		}
 
-		// Token: 0x06003E03 RID: 15875 RVA: 0x001B8915 File Offset: 0x001B6B15
+		// Token: 0x06004301 RID: 17153 RVA: 0x001D7CA9 File Offset: 0x001D5EA9
 		public static void Init()
 		{
 			ConfigTrialPhantomPropItemById.HandleId = ConfigCommon.InitDataStatement(ConfigTrialPhantomPropItemById.HandleId, "db_trial_role.db", "select BinData from `TrialPhantomPropItem` where Id = ?");
 		}
 
-		// Token: 0x06003E04 RID: 15876 RVA: 0x001B8930 File Offset: 0x001B6B30
+		// Token: 0x06004302 RID: 17154 RVA: 0x001D7CC4 File Offset: 0x001D5EC4
 		public static TrialPhantomPropItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTrialPhantomPropItemById.HandleId, ConfigTrialPhantomPropItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TrialPhantomPropItem?(rootAsTrialPhantomPropItem);
 		}
 
-		// Token: 0x04004824 RID: 18468
+		// Token: 0x04004DF7 RID: 19959
 		private const string DB = "db_trial_role.db";
 
-		// Token: 0x04004825 RID: 18469
+		// Token: 0x04004DF8 RID: 19960
 		private const string FILE = "s.试用角色.xlsx";
 
-		// Token: 0x04004826 RID: 18470
+		// Token: 0x04004DF9 RID: 19961
 		private const string TABLE = "TrialPhantomPropItem";
 
-		// Token: 0x04004827 RID: 18471
+		// Token: 0x04004DFA RID: 19962
 		private const string COMMAND = "select BinData from `TrialPhantomPropItem` where Id = ?";
 
-		// Token: 0x04004828 RID: 18472
+		// Token: 0x04004DFB RID: 19963
 		private const string KEY_PREFIX = "TrialPhantomPropItemById";
 
-		// Token: 0x04004829 RID: 18473
+		// Token: 0x04004DFC RID: 19964
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400482A RID: 18474
+		// Token: 0x04004DFD RID: 19965
 		private static int HandleId;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077F8 RID: 30712
+	// Token: 0x02008036 RID: 32822
 	public enum TUnlockSystemOption : byte
 	{
-		// Token: 0x04012A66 RID: 76390
+		// Token: 0x04013B30 RID: 80688
 		NONE,
-		// Token: 0x04012A67 RID: 76391
+		// Token: 0x04013B31 RID: 80689
 		IUnlockAchievementSystemItem,
-		// Token: 0x04012A68 RID: 76392
+		// Token: 0x04013B32 RID: 80690
 		IUnlockAtlasSystemItem,
-		// Token: 0x04012A69 RID: 76393
+		// Token: 0x04013B33 RID: 80691
 		IUnLockCookSystemItem,
-		// Token: 0x04012A6A RID: 76394
+		// Token: 0x04013B34 RID: 80692
 		IUnLockDangoCollectSystemItem,
-		// Token: 0x04012A6B RID: 76395
+		// Token: 0x04013B35 RID: 80693
 		IUnlockPhotoMemoryCollectSystemItem
 	}
 }

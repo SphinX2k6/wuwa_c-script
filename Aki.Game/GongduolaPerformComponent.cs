@@ -13,12 +13,12 @@ using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020032ED RID: 13037
+// Token: 0x0200285F RID: 10335
 [NullableContext(1)]
 [Nullable(0)]
 public class GongduolaPerformComponent : VehiclePerformComponent
 {
-	// Token: 0x0601C5CC RID: 116172 RVA: 0x007EF2CC File Offset: 0x007ED4CC
+	// Token: 0x0601A287 RID: 107143 RVA: 0x00815974 File Offset: 0x00813B74
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -43,7 +43,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C5CD RID: 116173 RVA: 0x007EF384 File Offset: 0x007ED584
+	// Token: 0x0601A288 RID: 107144 RVA: 0x00815A2C File Offset: 0x00813C2C
 	protected override void OnActivate()
 	{
 		this.ActorComp.Actor.VehicleMovementComponent.SetMovementMode(EKuroVehicleMovementMode.KURO_VEHICLE_MOVE_Shipping, 0);
@@ -52,7 +52,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		base.OnActivate();
 	}
 
-	// Token: 0x0601C5CE RID: 116174 RVA: 0x007EF3D0 File Offset: 0x007ED5D0
+	// Token: 0x0601A289 RID: 107145 RVA: 0x00815A78 File Offset: 0x00813C78
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -60,7 +60,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.UpdateSprintCoolDown(delta);
 	}
 
-	// Token: 0x0601C5CF RID: 116175 RVA: 0x007EF3E8 File Offset: 0x007ED5E8
+	// Token: 0x0601A28A RID: 107146 RVA: 0x00815A90 File Offset: 0x00813C90
 	protected override bool OnEnd()
 	{
 		this.RemoveVehicleTagListeners();
@@ -73,7 +73,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601C5D0 RID: 116176 RVA: 0x007EF440 File Offset: 0x007ED640
+	// Token: 0x0601A28B RID: 107147 RVA: 0x00815AE8 File Offset: 0x00813CE8
 	protected override bool InitVehicleConfig()
 	{
 		BP_VehicleConfig_C bp_VehicleConfig_C = this.LoadVehicleConfigAsset();
@@ -86,7 +86,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return this.Config.Init();
 	}
 
-	// Token: 0x0601C5D1 RID: 116177 RVA: 0x007EF49C File Offset: 0x007ED69C
+	// Token: 0x0601A28C RID: 107148 RVA: 0x00815B44 File Offset: 0x00813D44
 	public override void RefreshMoveConfigFromVehicleConfig()
 	{
 		if (!(this.Config is GongduolaConfig))
@@ -107,7 +107,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		((GongduolaConfig)this.Config).SetBaseStateMoveConfig(ukuroVehicleMovementComponent);
 	}
 
-	// Token: 0x0601C5D2 RID: 116178 RVA: 0x007EF500 File Offset: 0x007ED700
+	// Token: 0x0601A28D RID: 107149 RVA: 0x00815BA8 File Offset: 0x00813DA8
 	protected unsafe override bool EnterConditionCheck(Entity entity, int seat, bool log = true)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -137,7 +137,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C5D3 RID: 116179 RVA: 0x007EF5E8 File Offset: 0x007ED7E8
+	// Token: 0x0601A28E RID: 107150 RVA: 0x00815C90 File Offset: 0x00813E90
 	protected unsafe override bool LeaveConditionCheck(Entity entity, bool log = true)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -185,7 +185,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C5D4 RID: 116180 RVA: 0x007EF778 File Offset: 0x007ED978
+	// Token: 0x0601A28F RID: 107151 RVA: 0x00815E20 File Offset: 0x00814020
 	public override bool CheckIfCanLeave()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -203,7 +203,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return entity2 != null && this.LeaveConditionCheck(entity2, false);
 	}
 
-	// Token: 0x0601C5D5 RID: 116181 RVA: 0x007EF7B0 File Offset: 0x007ED9B0
+	// Token: 0x0601A290 RID: 107152 RVA: 0x00815E58 File Offset: 0x00814058
 	public override bool CheckIfCanSprint()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -231,7 +231,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return (tagComp == null || !tagComp.HasTag(GameplayTagDefine.EGameplayTagId["载具.贡多拉.逻辑.禁止冲刺"])) && this.SprintUsableCount > 0 && !this.IsForbidInputSprint;
 	}
 
-	// Token: 0x0601C5D6 RID: 116182 RVA: 0x007EF83A File Offset: 0x007EDA3A
+	// Token: 0x0601A291 RID: 107153 RVA: 0x00815EE2 File Offset: 0x008140E2
 	public override bool CheckIfCanRiderSharing()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -242,7 +242,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return (tagComp == null || !tagComp.HasTag(GameplayTagDefine.EGameplayTagId["载具.逻辑.禁止共乘"])) && base.CheckIfCanRiderSharing();
 	}
 
-	// Token: 0x0601C5D7 RID: 116183 RVA: 0x007EF878 File Offset: 0x007EDA78
+	// Token: 0x0601A292 RID: 107154 RVA: 0x00815F20 File Offset: 0x00814120
 	public override void AddVehicleTagListeners()
 	{
 		if (this.VehicleTagListeners != null)
@@ -293,7 +293,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5D8 RID: 116184 RVA: 0x007EF9FC File Offset: 0x007EDBFC
+	// Token: 0x0601A293 RID: 107155 RVA: 0x008160A4 File Offset: 0x008142A4
 	public override void RemoveVehicleTagListeners()
 	{
 		if (this.VehicleTagListeners != null)
@@ -306,7 +306,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5D9 RID: 116185 RVA: 0x007EFA5C File Offset: 0x007EDC5C
+	// Token: 0x0601A294 RID: 107156 RVA: 0x00816104 File Offset: 0x00814304
 	private void OnJumpSkillEnableChanged(int tagId, bool tagExist)
 	{
 		bool flag = this.CheckIfCanLeave();
@@ -314,7 +314,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		EventSystem.Instance.Emit<bool, EInputAction>(EEventName.OnVehicleSkillEnableChanged, flag, EInputAction.跳跃);
 	}
 
-	// Token: 0x0601C5DA RID: 116186 RVA: 0x007EFA90 File Offset: 0x007EDC90
+	// Token: 0x0601A295 RID: 107157 RVA: 0x00816138 File Offset: 0x00814338
 	private void RefreshCanLeaveTag(bool canLeave)
 	{
 		if (canLeave)
@@ -339,19 +339,19 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5DB RID: 116187 RVA: 0x007EFAEA File Offset: 0x007EDCEA
+	// Token: 0x0601A296 RID: 107158 RVA: 0x00816192 File Offset: 0x00814392
 	private void OnSprintSkillEnableChanged(int tagId, bool tagExist)
 	{
 		EventSystem.Instance.Emit<bool, EInputAction>(EEventName.OnVehicleSkillEnableChanged, this.CheckIfCanSprint(), EInputAction.闪避);
 	}
 
-	// Token: 0x0601C5DC RID: 116188 RVA: 0x007EFB07 File Offset: 0x007EDD07
+	// Token: 0x0601A297 RID: 107159 RVA: 0x008161AF File Offset: 0x008143AF
 	private void OnRiderSharingEnableChanged(int tagId, bool tagExist)
 	{
 		EventSystem.Instance.Emit<bool, EInputAction>(EEventName.OnVehicleSkillEnableChanged, this.CheckIfCanRiderSharing(), EInputAction.技能1);
 	}
 
-	// Token: 0x0601C5DD RID: 116189 RVA: 0x007EFB24 File Offset: 0x007EDD24
+	// Token: 0x0601A298 RID: 107160 RVA: 0x008161CC File Offset: 0x008143CC
 	protected override void InitVehicleMovementFeature(IMovementVehicleFeature config)
 	{
 		this.CanBeenManipulated = false;
@@ -370,7 +370,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5DE RID: 116190 RVA: 0x007EFB8D File Offset: 0x007EDD8D
+	// Token: 0x0601A299 RID: 107161 RVA: 0x00816235 File Offset: 0x00814435
 	[NullableContext(2)]
 	protected override void OnEnterHitCollision(UPrimitiveComponent hitComp, AActor otherActor, UPrimitiveComponent otherComp, FVector normalImpulse, [Nullable(1)] FHitResult hitResult)
 	{
@@ -378,7 +378,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.BeginCollisionPerform(1000f);
 	}
 
-	// Token: 0x0601C5DF RID: 116191 RVA: 0x007EFBA4 File Offset: 0x007EDDA4
+	// Token: 0x0601A29A RID: 107162 RVA: 0x0081624C File Offset: 0x0081444C
 	[NullableContext(2)]
 	protected void CalculateImpactStrengthAndDirection(AActor otherActor, UPrimitiveComponent otherComp, [Nullable(1)] FHitResult hitResult)
 	{
@@ -413,7 +413,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.CollisionDirection = (float)num7 * (float)Math.Sign(this.TmpVector2.DotProduct(this.ActorComp.ActorRightProxy));
 	}
 
-	// Token: 0x0601C5E0 RID: 116192 RVA: 0x007EFD38 File Offset: 0x007EDF38
+	// Token: 0x0601A29B RID: 107163 RVA: 0x008163E0 File Offset: 0x008145E0
 	protected void BeginCollisionPerform(float animTime = 1000f)
 	{
 		this.IsBeingImpacted = true;
@@ -435,7 +435,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}, animTime, null, null, true, 1f);
 	}
 
-	// Token: 0x0601C5E1 RID: 116193 RVA: 0x007EFDA0 File Offset: 0x007EDFA0
+	// Token: 0x0601A29C RID: 107164 RVA: 0x00816448 File Offset: 0x00814648
 	public virtual bool TryEnterSprint(bool fromEvent = false)
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -467,7 +467,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C5E2 RID: 116194 RVA: 0x007EFE27 File Offset: 0x007EE027
+	// Token: 0x0601A29D RID: 107165 RVA: 0x008164CF File Offset: 0x008146CF
 	protected void EnterSprintTagListenTaskCallback(int tagId, bool bTagExists)
 	{
 		if (bTagExists)
@@ -478,7 +478,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.IsInSprintStartAction = false;
 	}
 
-	// Token: 0x0601C5E3 RID: 116195 RVA: 0x007EFE3C File Offset: 0x007EE03C
+	// Token: 0x0601A29E RID: 107166 RVA: 0x008164E4 File Offset: 0x008146E4
 	public void StartSprint()
 	{
 		if (!this.IsSprint)
@@ -512,7 +512,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		EventSystem.Instance.Emit<int, int>(EEventName.OnVehicleSkillUsableCountChanged, 0, this.SprintUsableCount);
 	}
 
-	// Token: 0x0601C5E4 RID: 116196 RVA: 0x007EFF70 File Offset: 0x007EE170
+	// Token: 0x0601A29F RID: 107167 RVA: 0x00816618 File Offset: 0x00814818
 	public void EndSprint()
 	{
 		((GongduolaConfig)this.Config).SetBaseStateMoveConfig(this.ActorComp.Actor.VehicleMovementComponent);
@@ -527,7 +527,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		tagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["载具.行为状态.动作状态.冲刺"]));
 	}
 
-	// Token: 0x0601C5E5 RID: 116197 RVA: 0x007EFFE0 File Offset: 0x007EE1E0
+	// Token: 0x0601A2A0 RID: 107168 RVA: 0x00816688 File Offset: 0x00814888
 	protected void UpdateSprintState(float deltaTime)
 	{
 		if (!this.IsSprint)
@@ -557,11 +557,11 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 				return;
 			}
 			this.TmpVector1.Set(1.0, this.ActorComp.InputDirectProxy.Y, 0.0);
-			this.ActorComp.SetInputDirect(this.TmpVector1, false);
+			this.ActorComp.SetInputDirect(this.TmpVector1, false, EInputDirectSpace.Relative);
 		}
 	}
 
-	// Token: 0x0601C5E6 RID: 116198 RVA: 0x007F0108 File Offset: 0x007EE308
+	// Token: 0x0601A2A1 RID: 107169 RVA: 0x008167B4 File Offset: 0x008149B4
 	protected void UpdateSprintCoolDown(float deltaTime)
 	{
 		GongduolaConfig gongduolaConfig = (GongduolaConfig)this.Config;
@@ -597,20 +597,20 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5E7 RID: 116199 RVA: 0x007F0204 File Offset: 0x007EE404
+	// Token: 0x0601A2A2 RID: 107170 RVA: 0x008168B0 File Offset: 0x00814AB0
 	public bool IsSprintSkillInCd()
 	{
 		GongduolaConfig gongduolaConfig = (GongduolaConfig)this.Config;
 		return this.SprintUsableCount != gongduolaConfig.SprintMaxUsableCount;
 	}
 
-	// Token: 0x0601C5E8 RID: 116200 RVA: 0x007F022E File Offset: 0x007EE42E
+	// Token: 0x0601A2A3 RID: 107171 RVA: 0x008168DA File Offset: 0x00814ADA
 	public int GetSprintSkillUsableCount()
 	{
 		return this.SprintUsableCount;
 	}
 
-	// Token: 0x0601C5E9 RID: 116201 RVA: 0x007F0238 File Offset: 0x007EE438
+	// Token: 0x0601A2A4 RID: 107172 RVA: 0x008168E4 File Offset: 0x00814AE4
 	[NullableContext(0)]
 	public ValueTuple<float, float> GetSprintSkillRemainingCd()
 	{
@@ -621,7 +621,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return new ValueTuple<float, float>(0f, 0f);
 	}
 
-	// Token: 0x0601C5EA RID: 116202 RVA: 0x007F029B File Offset: 0x007EE49B
+	// Token: 0x0601A2A5 RID: 107173 RVA: 0x00816947 File Offset: 0x00814B47
 	public void SetEnableInputSprint(bool enable)
 	{
 		if (this.IsForbidInputSprint != enable)
@@ -632,7 +632,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		EventSystem.Instance.Emit<bool, EInputAction>(EEventName.OnVehicleSkillEnableChanged, this.CheckIfCanSprint(), EInputAction.闪避);
 	}
 
-	// Token: 0x0601C5EB RID: 116203 RVA: 0x007F02CC File Offset: 0x007EE4CC
+	// Token: 0x0601A2A6 RID: 107174 RVA: 0x00816978 File Offset: 0x00814B78
 	public bool TryEnterWaterfallMove(IWaterfallMoveParams parameters)
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -655,7 +655,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C5EC RID: 116204 RVA: 0x007F0338 File Offset: 0x007EE538
+	// Token: 0x0601A2A7 RID: 107175 RVA: 0x008169E4 File Offset: 0x00814BE4
 	public unsafe void StartWaterfallMove(IWaterfallMoveParams parameters)
 	{
 		this.IsWaterfallMove = true;
@@ -684,7 +684,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x0601C5ED RID: 116205 RVA: 0x007F04EC File Offset: 0x007EE6EC
+	// Token: 0x0601A2A8 RID: 107176 RVA: 0x00816B98 File Offset: 0x00814D98
 	public unsafe void OnWaterfallMoveBeginEnd()
 	{
 		if (!this.IsWaterfallMove)
@@ -740,7 +740,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x0601C5EE RID: 116206 RVA: 0x007F06D8 File Offset: 0x007EE8D8
+	// Token: 0x0601A2A9 RID: 107177 RVA: 0x00816D84 File Offset: 0x00814F84
 	public unsafe void EndWaterfallMove()
 	{
 		if (!this.IsWaterfallMove)
@@ -776,7 +776,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.ActorComp.Actor.VehicleMovementComponent.bSafetyDepthCheck = true;
 	}
 
-	// Token: 0x0601C5EF RID: 116207 RVA: 0x007F088C File Offset: 0x007EEA8C
+	// Token: 0x0601A2AA RID: 107178 RVA: 0x00816F38 File Offset: 0x00815138
 	public void ForceEndWaterfallMove()
 	{
 		if (!this.IsWaterfallMove)
@@ -815,7 +815,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.EndWaterfallMove();
 	}
 
-	// Token: 0x0601C5F0 RID: 116208 RVA: 0x007F0924 File Offset: 0x007EEB24
+	// Token: 0x0601A2AB RID: 107179 RVA: 0x00816FD0 File Offset: 0x008151D0
 	public void WaterfallHideVehicleAndPassenger(bool isHide, string reason)
 	{
 		if (this.IsWaterfallHide == isHide)
@@ -836,7 +836,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5F1 RID: 116209 RVA: 0x007F09CC File Offset: 0x007EEBCC
+	// Token: 0x0601A2AC RID: 107180 RVA: 0x00817078 File Offset: 0x00815278
 	[NullableContext(2)]
 	protected void OnWaterfallMontageEnd(UAnimMontage montage, bool bInterrupted)
 	{
@@ -848,7 +848,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.EndWaterfallMove();
 	}
 
-	// Token: 0x0601C5F2 RID: 116210 RVA: 0x007F0A08 File Offset: 0x007EEC08
+	// Token: 0x0601A2AD RID: 107181 RVA: 0x008170B4 File Offset: 0x008152B4
 	public bool CheckIsWaterfallMoveDown(int splineId)
 	{
 		GameSplineComponent gameSplineComponent = new GameSplineComponent(splineId);
@@ -862,7 +862,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return GravityUtils.Instance.GetZnInGravityForActor(this.ActorComp, this.TmpVector1) < 0.0;
 	}
 
-	// Token: 0x0601C5F3 RID: 116211 RVA: 0x007F0A6C File Offset: 0x007EEC6C
+	// Token: 0x0601A2AE RID: 107182 RVA: 0x00817118 File Offset: 0x00815318
 	[NullableContext(2)]
 	protected UAnimMontage GetWatefallMontage()
 	{
@@ -877,7 +877,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return this.UpWaterfallMontage;
 	}
 
-	// Token: 0x0601C5F4 RID: 116212 RVA: 0x007F0A94 File Offset: 0x007EEC94
+	// Token: 0x0601A2AF RID: 107183 RVA: 0x00817140 File Offset: 0x00815340
 	protected unsafe void InitWaterfallMoveMontage()
 	{
 		ResourceSystem.Instance.LoadAsync<UAnimMontage>("/Game/Aki/Character/NPC/AlienNPC/Level_B/SB1Gongduola3/BaseAnim/AM_Waterfall.AM_Waterfall", delegate([Nullable(2)] UAnimMontage asset, string _)
@@ -939,7 +939,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601C5F5 RID: 116213 RVA: 0x007F0B0C File Offset: 0x007EED0C
+	// Token: 0x0601A2B0 RID: 107184 RVA: 0x008171B8 File Offset: 0x008153B8
 	protected void SetWaterfallConfig(IWaterfallMoveParams config)
 	{
 		this.WaterfallSplineId = config.SplineId;
@@ -949,7 +949,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.IsWaterfallMoveDown = (config.ChangeGravity == null && this.CheckIsWaterfallMoveDown(config.SplineId));
 	}
 
-	// Token: 0x0601C5F6 RID: 116214 RVA: 0x007F0B7C File Offset: 0x007EED7C
+	// Token: 0x0601A2B1 RID: 107185 RVA: 0x00817228 File Offset: 0x00815428
 	protected void ResetWaterfallConfig()
 	{
 		this.WaterfallSplineId = 0;
@@ -958,7 +958,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.IsWaterfallDynamicGravity = false;
 	}
 
-	// Token: 0x0601C5F7 RID: 116215 RVA: 0x007F0BA2 File Offset: 0x007EEDA2
+	// Token: 0x0601A2B2 RID: 107186 RVA: 0x0081724E File Offset: 0x0081544E
 	protected override void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 		base.LeaveVehiclePerform(info);
@@ -968,7 +968,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5F8 RID: 116216 RVA: 0x007F0BD4 File Offset: 0x007EEDD4
+	// Token: 0x0601A2B3 RID: 107187 RVA: 0x00817280 File Offset: 0x00815480
 	public override void HandlePendingDestroy()
 	{
 		this.IsPendingDestroy = true;
@@ -993,7 +993,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601C5F9 RID: 116217 RVA: 0x007F0C10 File Offset: 0x007EEE10
+	// Token: 0x0601A2B4 RID: 107188 RVA: 0x008172BC File Offset: 0x008154BC
 	protected override void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		EventSystem.Instance.RemoveWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
@@ -1012,7 +1012,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C5FA RID: 116218 RVA: 0x007F0CC0 File Offset: 0x007EEEC0
+	// Token: 0x0601A2B5 RID: 107189 RVA: 0x0081736C File Offset: 0x0081556C
 	protected void InitWaterTraceElement()
 	{
 		this.WaterTrace = new UTraceSphereElement();
@@ -1023,7 +1023,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		this.WaterTrace.SetTraceTypeQuery(KuroTraceTypeQuery.Water);
 	}
 
-	// Token: 0x0601C5FB RID: 116219 RVA: 0x007F0D28 File Offset: 0x007EEF28
+	// Token: 0x0601A2B6 RID: 107190 RVA: 0x008173D4 File Offset: 0x008155D4
 	protected bool DetectWaterSurface(global::Vector start, global::Vector end, global::Vector outSurfacePos)
 	{
 		TraceElementCommon.Instance.SetStartLocation(this.WaterTrace, start);
@@ -1043,7 +1043,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return false;
 	}
 
-	// Token: 0x0601C5FC RID: 116220 RVA: 0x007F0E03 File Offset: 0x007EF003
+	// Token: 0x0601A2B7 RID: 107191 RVA: 0x008174AF File Offset: 0x008156AF
 	public void GetBuoyancyBalancePosition(global::Vector waterSurfacePos, global::Vector output)
 	{
 		this.GetNormalizedBuoyancyBalanceOffset(this.TmpVector3);
@@ -1051,7 +1051,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		waterSurfacePos.Addition(this.TmpVector2, output);
 	}
 
-	// Token: 0x0601C5FD RID: 116221 RVA: 0x007F0E3C File Offset: 0x007EF03C
+	// Token: 0x0601A2B8 RID: 107192 RVA: 0x008174E8 File Offset: 0x008156E8
 	public void GetNormalizedBuoyancyBalanceOffset(global::Vector output)
 	{
 		float z = this.ActorComp.Actor.VehicleMovementComponent.VehicleShapeBounds.BoxExtent.Z;
@@ -1063,7 +1063,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		output.SubtractionEqual(this.TmpVector2);
 	}
 
-	// Token: 0x0601C5FE RID: 116222 RVA: 0x007F0EC8 File Offset: 0x007EF0C8
+	// Token: 0x0601A2B9 RID: 107193 RVA: 0x00817574 File Offset: 0x00815774
 	public unsafe override void FixBornLocation([Nullable(2)] global::Vector target = null, string context = "FixBornLocation")
 	{
 		if (this.ActorComp == null)
@@ -1121,13 +1121,13 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
 	}
 
-	// Token: 0x0601C5FF RID: 116223 RVA: 0x007F122C File Offset: 0x007EF42C
+	// Token: 0x0601A2BA RID: 107194 RVA: 0x008178D8 File Offset: 0x00815AD8
 	protected void OnTeleport()
 	{
 		this.ForceEndWaterfallMove();
 	}
 
-	// Token: 0x0601C600 RID: 116224 RVA: 0x007F1234 File Offset: 0x007EF434
+	// Token: 0x0601A2BB RID: 107195 RVA: 0x008178E0 File Offset: 0x00815AE0
 	public override void GetVehicleVelocity(global::Vector output)
 	{
 		if (this.ActorComp == null)
@@ -1142,7 +1142,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		output.DeepCopy(this.ActorComp.SimulatedVelocity);
 	}
 
-	// Token: 0x0601C601 RID: 116225 RVA: 0x007F126C File Offset: 0x007EF46C
+	// Token: 0x0601A2BC RID: 107196 RVA: 0x00817918 File Offset: 0x00815B18
 	public bool GetDrivedVehicleSeatLocalRot(int seat, global::Rotator outRot)
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -1178,7 +1178,7 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 		return true;
 	}
 
-	// Token: 0x0601C602 RID: 116226 RVA: 0x007F1338 File Offset: 0x007EF538
+	// Token: 0x0601A2BD RID: 107197 RVA: 0x008179E4 File Offset: 0x00815BE4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1186,314 +1186,294 @@ public class GongduolaPerformComponent : VehiclePerformComponent
 			return false;
 		}
 		GongduolaPerformComponent gongduolaPerformComponent = (GongduolaPerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("UeMovementMgr"))
+		if (gongduolaPerformComponent.UeMovementMgr == null)
 		{
-			if (gongduolaPerformComponent.UeMovementMgr == null)
-			{
-				this.UeMovementMgr = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UeVehicleMovementTickManageComponent>(this.UeMovementMgr), "UeMovementMgr"))
-			{
-				return false;
-			}
+			this.UeMovementMgr = null;
 		}
-		if (base.CanResetComponentProperty("ImpactTimerHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeMovementMgr), "UeMovementMgr"))
 		{
-			if (gongduolaPerformComponent.ImpactTimerHandle == null)
-			{
-				this.ImpactTimerHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ImpactTimerHandle), "ImpactTimerHandle"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsSprint"))
+		if (gongduolaPerformComponent.ImpactTimerHandle == null)
 		{
-			this.IsSprint = gongduolaPerformComponent.IsSprint;
+			this.ImpactTimerHandle = null;
 		}
-		if (base.CanResetComponentProperty("IsInSprintStartAction"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ImpactTimerHandle), "ImpactTimerHandle"))
 		{
-			this.IsInSprintStartAction = gongduolaPerformComponent.IsInSprintStartAction;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsEnterSprint"))
+		this.IsSprint = gongduolaPerformComponent.IsSprint;
+		this.IsInSprintStartAction = gongduolaPerformComponent.IsInSprintStartAction;
+		this.IsEnterSprint = gongduolaPerformComponent.IsEnterSprint;
+		this.SprintStopSpeedSquared = gongduolaPerformComponent.SprintStopSpeedSquared;
+		this.SprintCd = gongduolaPerformComponent.SprintCd;
+		this.SprintUsableCount = gongduolaPerformComponent.SprintUsableCount;
+		this.IsForbidInputSprint = gongduolaPerformComponent.IsForbidInputSprint;
+		this.SkipUsableChange = gongduolaPerformComponent.SkipUsableChange;
+		this.SprintEclapseTime = gongduolaPerformComponent.SprintEclapseTime;
+		this.SprintDuration = gongduolaPerformComponent.SprintDuration;
+		this.CanForceInput = gongduolaPerformComponent.CanForceInput;
+		if (gongduolaPerformComponent.SprintCdArray == null)
 		{
-			this.IsEnterSprint = gongduolaPerformComponent.IsEnterSprint;
+			this.SprintCdArray = null;
 		}
-		if (base.CanResetComponentProperty("SprintStopSpeedSquared"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SprintCdArray), "SprintCdArray"))
 		{
-			this.SprintStopSpeedSquared = gongduolaPerformComponent.SprintStopSpeedSquared;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SprintCd"))
+		if (gongduolaPerformComponent.EnterSprintTagListenTask == null)
 		{
-			this.SprintCd = gongduolaPerformComponent.SprintCd;
+			this.EnterSprintTagListenTask = null;
 		}
-		if (base.CanResetComponentProperty("SprintUsableCount"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnterSprintTagListenTask), "EnterSprintTagListenTask"))
 		{
-			this.SprintUsableCount = gongduolaPerformComponent.SprintUsableCount;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsForbidInputSprint"))
+		this.IsWaterfallMove = gongduolaPerformComponent.IsWaterfallMove;
+		this.WaterfallSplineId = gongduolaPerformComponent.WaterfallSplineId;
+		if (gongduolaPerformComponent.WaterfallDirect == null)
 		{
-			this.IsForbidInputSprint = gongduolaPerformComponent.IsForbidInputSprint;
+			this.WaterfallDirect = null;
 		}
-		if (base.CanResetComponentProperty("SkipUsableChange"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterfallDirect), "WaterfallDirect"))
 		{
-			this.SkipUsableChange = gongduolaPerformComponent.SkipUsableChange;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SprintEclapseTime"))
+		if (gongduolaPerformComponent.WaterfallGravity == null)
 		{
-			this.SprintEclapseTime = gongduolaPerformComponent.SprintEclapseTime;
+			this.WaterfallGravity = null;
 		}
-		if (base.CanResetComponentProperty("SprintDuration"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterfallGravity), "WaterfallGravity"))
 		{
-			this.SprintDuration = gongduolaPerformComponent.SprintDuration;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CanForceInput"))
+		this.IsWaterfallDynamicGravity = gongduolaPerformComponent.IsWaterfallDynamicGravity;
+		this.IsWaterfallHide = gongduolaPerformComponent.IsWaterfallHide;
+		this.IsWaterfallMoveDown = gongduolaPerformComponent.IsWaterfallMoveDown;
+		if (gongduolaPerformComponent.UpWaterfallMontage == null)
 		{
-			this.CanForceInput = gongduolaPerformComponent.CanForceInput;
+			this.UpWaterfallMontage = null;
 		}
-		if (base.CanResetComponentProperty("SprintCdArray"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UpWaterfallMontage), "UpWaterfallMontage"))
 		{
-			if (gongduolaPerformComponent.SprintCdArray == null)
-			{
-				this.SprintCdArray = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<float>>(this.SprintCdArray), "SprintCdArray"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("EnterSprintTagListenTask"))
+		if (gongduolaPerformComponent.DownWaterfallMontage == null)
 		{
-			if (gongduolaPerformComponent.EnterSprintTagListenTask == null)
-			{
-				this.EnterSprintTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.EnterSprintTagListenTask), "EnterSprintTagListenTask"))
-			{
-				return false;
-			}
+			this.DownWaterfallMontage = null;
 		}
-		if (base.CanResetComponentProperty("IsWaterfallMove"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DownWaterfallMontage), "DownWaterfallMontage"))
 		{
-			this.IsWaterfallMove = gongduolaPerformComponent.IsWaterfallMove;
+			return false;
 		}
-		if (base.CanResetComponentProperty("WaterfallSplineId"))
+		if (gongduolaPerformComponent.DynamicGravityWaterfallMontage == null)
 		{
-			this.WaterfallSplineId = gongduolaPerformComponent.WaterfallSplineId;
+			this.DynamicGravityWaterfallMontage = null;
 		}
-		if (base.CanResetComponentProperty("WaterfallDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicGravityWaterfallMontage), "DynamicGravityWaterfallMontage"))
 		{
-			if (gongduolaPerformComponent.WaterfallDirect == null)
-			{
-				this.WaterfallDirect = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.WaterfallDirect), "WaterfallDirect"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("WaterfallGravity"))
+		this.WaterfallUiDisableHandle = gongduolaPerformComponent.WaterfallUiDisableHandle;
+		if (gongduolaPerformComponent.WaterTrace == null)
 		{
-			if (gongduolaPerformComponent.WaterfallGravity == null)
-			{
-				this.WaterfallGravity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.WaterfallGravity), "WaterfallGravity"))
-			{
-				return false;
-			}
+			this.WaterTrace = null;
 		}
-		if (base.CanResetComponentProperty("IsWaterfallDynamicGravity"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterTrace), "WaterTrace"))
 		{
-			this.IsWaterfallDynamicGravity = gongduolaPerformComponent.IsWaterfallDynamicGravity;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsWaterfallHide"))
-		{
-			this.IsWaterfallHide = gongduolaPerformComponent.IsWaterfallHide;
-		}
-		if (base.CanResetComponentProperty("IsWaterfallMoveDown"))
-		{
-			this.IsWaterfallMoveDown = gongduolaPerformComponent.IsWaterfallMoveDown;
-		}
-		if (base.CanResetComponentProperty("UpWaterfallMontage"))
-		{
-			if (gongduolaPerformComponent.UpWaterfallMontage == null)
-			{
-				this.UpWaterfallMontage = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimMontage>(this.UpWaterfallMontage), "UpWaterfallMontage"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DownWaterfallMontage"))
-		{
-			if (gongduolaPerformComponent.DownWaterfallMontage == null)
-			{
-				this.DownWaterfallMontage = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimMontage>(this.DownWaterfallMontage), "DownWaterfallMontage"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DynamicGravityWaterfallMontage"))
-		{
-			if (gongduolaPerformComponent.DynamicGravityWaterfallMontage == null)
-			{
-				this.DynamicGravityWaterfallMontage = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimMontage>(this.DynamicGravityWaterfallMontage), "DynamicGravityWaterfallMontage"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WaterfallUiDisableHandle"))
-		{
-			this.WaterfallUiDisableHandle = gongduolaPerformComponent.WaterfallUiDisableHandle;
-		}
-		if (base.CanResetComponentProperty("WaterTrace"))
-		{
-			if (gongduolaPerformComponent.WaterTrace == null)
-			{
-				this.WaterTrace = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.WaterTrace), "WaterTrace"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UeMovementDisableHandle"))
-		{
-			this.UeMovementDisableHandle = gongduolaPerformComponent.UeMovementDisableHandle;
-		}
-		if (base.CanResetComponentProperty("CollisionStrength"))
-		{
-			this.CollisionStrength = gongduolaPerformComponent.CollisionStrength;
-		}
-		if (base.CanResetComponentProperty("CollisionDirection"))
-		{
-			this.CollisionDirection = gongduolaPerformComponent.CollisionDirection;
-		}
+		this.UeMovementDisableHandle = gongduolaPerformComponent.UeMovementDisableHandle;
+		this.CollisionStrength = gongduolaPerformComponent.CollisionStrength;
+		this.CollisionDirection = gongduolaPerformComponent.CollisionDirection;
 		return true;
 	}
 
-	// Token: 0x0400E0F4 RID: 57588
+	// Token: 0x17002AAD RID: 10925
+	// (get) Token: 0x0601A2BE RID: 107198 RVA: 0x00817CA2 File Offset: 0x00815EA2
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AAE RID: 10926
+	// (get) Token: 0x0601A2BF RID: 107199 RVA: 0x00817CA5 File Offset: 0x00815EA5
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AAF RID: 10927
+	// (get) Token: 0x0601A2C0 RID: 107200 RVA: 0x00817CA8 File Offset: 0x00815EA8
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AB0 RID: 10928
+	// (get) Token: 0x0601A2C1 RID: 107201 RVA: 0x00817CAB File Offset: 0x00815EAB
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AB1 RID: 10929
+	// (get) Token: 0x0601A2C2 RID: 107202 RVA: 0x00817CAE File Offset: 0x00815EAE
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AB2 RID: 10930
+	// (get) Token: 0x0601A2C3 RID: 107203 RVA: 0x00817CB1 File Offset: 0x00815EB1
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AB3 RID: 10931
+	// (get) Token: 0x0601A2C4 RID: 107204 RVA: 0x00817CB4 File Offset: 0x00815EB4
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E59F RID: 58783
 	private const float IMPACT_ANIM_TIME = 1000f;
 
-	// Token: 0x0400E0F5 RID: 57589
+	// Token: 0x0400E5A0 RID: 58784
 	private const float BORN_FIX_DOWN_WATER_DETECT_DIST = 200f;
 
-	// Token: 0x0400E0F6 RID: 57590
+	// Token: 0x0400E5A1 RID: 58785
 	private const float BORN_FIX_UP_WATER_DETECT_DIST = 200f;
 
-	// Token: 0x0400E0F7 RID: 57591
+	// Token: 0x0400E5A2 RID: 58786
 	private const string UP_WATERMOVE_MONTAGE_PATH = "/Game/Aki/Character/NPC/AlienNPC/Level_B/SB1Gongduola3/BaseAnim/AM_Waterfall.AM_Waterfall";
 
-	// Token: 0x0400E0F8 RID: 57592
+	// Token: 0x0400E5A3 RID: 58787
 	private const string DOWN_WATERMOVE_MONTAGE_PATH = "/Game/Aki/Character/NPC/AlienNPC/Level_B/SB1Gongduola3/BaseAnim/AM_Waterfall_Down.AM_Waterfall_Down";
 
-	// Token: 0x0400E0F9 RID: 57593
+	// Token: 0x0400E5A4 RID: 58788
 	private const string DYNAMIC_GRAVITY_WATERMOVE_MONTAGE_PATH = "/Game/Aki/Character/NPC/AlienNPC/Level_B/SB1Gongduola3/BaseAnim/AM_Waterfall_GravityFlip.AM_Waterfall_GravityFlip";
 
-	// Token: 0x0400E0FA RID: 57594
+	// Token: 0x0400E5A5 RID: 58789
 	private const string PROFILE_DETECT_WATER = "VehiclePerformComponent_SimpleWaterTrace";
 
-	// Token: 0x0400E0FB RID: 57595
+	// Token: 0x0400E5A6 RID: 58790
 	[Nullable(2)]
 	protected UeVehicleMovementTickManageComponent UeMovementMgr;
 
-	// Token: 0x0400E0FC RID: 57596
+	// Token: 0x0400E5A7 RID: 58791
 	[Nullable(2)]
 	public TimerHandle ImpactTimerHandle;
 
-	// Token: 0x0400E0FD RID: 57597
+	// Token: 0x0400E5A8 RID: 58792
 	public bool IsSprint;
 
-	// Token: 0x0400E0FE RID: 57598
+	// Token: 0x0400E5A9 RID: 58793
 	public bool IsInSprintStartAction;
 
-	// Token: 0x0400E0FF RID: 57599
+	// Token: 0x0400E5AA RID: 58794
 	public bool IsEnterSprint;
 
-	// Token: 0x0400E100 RID: 57600
+	// Token: 0x0400E5AB RID: 58795
 	public float SprintStopSpeedSquared;
 
-	// Token: 0x0400E101 RID: 57601
+	// Token: 0x0400E5AC RID: 58796
 	public float SprintCd;
 
-	// Token: 0x0400E102 RID: 57602
+	// Token: 0x0400E5AD RID: 58797
 	public int SprintUsableCount;
 
-	// Token: 0x0400E103 RID: 57603
+	// Token: 0x0400E5AE RID: 58798
 	protected bool IsForbidInputSprint;
 
-	// Token: 0x0400E104 RID: 57604
+	// Token: 0x0400E5AF RID: 58799
 	protected bool SkipUsableChange;
 
-	// Token: 0x0400E105 RID: 57605
+	// Token: 0x0400E5B0 RID: 58800
 	protected float SprintEclapseTime;
 
-	// Token: 0x0400E106 RID: 57606
+	// Token: 0x0400E5B1 RID: 58801
 	protected float SprintDuration;
 
-	// Token: 0x0400E107 RID: 57607
+	// Token: 0x0400E5B2 RID: 58802
 	protected bool CanForceInput = true;
 
-	// Token: 0x0400E108 RID: 57608
+	// Token: 0x0400E5B3 RID: 58803
 	protected List<float> SprintCdArray = new List<float>();
 
-	// Token: 0x0400E109 RID: 57609
+	// Token: 0x0400E5B4 RID: 58804
 	[Nullable(2)]
 	protected ITagTask EnterSprintTagListenTask;
 
-	// Token: 0x0400E10A RID: 57610
+	// Token: 0x0400E5B5 RID: 58805
 	public bool IsWaterfallMove;
 
-	// Token: 0x0400E10B RID: 57611
+	// Token: 0x0400E5B6 RID: 58806
 	public int WaterfallSplineId;
 
-	// Token: 0x0400E10C RID: 57612
+	// Token: 0x0400E5B7 RID: 58807
 	public global::Vector WaterfallDirect = global::Vector.Create();
 
-	// Token: 0x0400E10D RID: 57613
+	// Token: 0x0400E5B8 RID: 58808
 	public global::Vector WaterfallGravity = global::Vector.Create();
 
-	// Token: 0x0400E10E RID: 57614
+	// Token: 0x0400E5B9 RID: 58809
 	public bool IsWaterfallDynamicGravity;
 
-	// Token: 0x0400E10F RID: 57615
+	// Token: 0x0400E5BA RID: 58810
 	public bool IsWaterfallHide;
 
-	// Token: 0x0400E110 RID: 57616
+	// Token: 0x0400E5BB RID: 58811
 	protected bool IsWaterfallMoveDown;
 
-	// Token: 0x0400E111 RID: 57617
+	// Token: 0x0400E5BC RID: 58812
 	[Nullable(2)]
 	protected UAnimMontage UpWaterfallMontage;
 
-	// Token: 0x0400E112 RID: 57618
+	// Token: 0x0400E5BD RID: 58813
 	[Nullable(2)]
 	protected UAnimMontage DownWaterfallMontage;
 
-	// Token: 0x0400E113 RID: 57619
+	// Token: 0x0400E5BE RID: 58814
 	[Nullable(2)]
 	protected UAnimMontage DynamicGravityWaterfallMontage;
 
-	// Token: 0x0400E114 RID: 57620
+	// Token: 0x0400E5BF RID: 58815
 	protected int WaterfallUiDisableHandle;
 
-	// Token: 0x0400E115 RID: 57621
+	// Token: 0x0400E5C0 RID: 58816
 	[Nullable(2)]
 	protected UTraceSphereElement WaterTrace;
 
-	// Token: 0x0400E116 RID: 57622
+	// Token: 0x0400E5C1 RID: 58817
 	protected int UeMovementDisableHandle;
 
-	// Token: 0x0400E117 RID: 57623
+	// Token: 0x0400E5C2 RID: 58818
 	public float CollisionStrength;
 
-	// Token: 0x0400E118 RID: 57624
+	// Token: 0x0400E5C3 RID: 58819
 	public float CollisionDirection;
 }

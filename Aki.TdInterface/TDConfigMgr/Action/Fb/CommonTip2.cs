@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002763 RID: 10083
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A35 RID: 10805
 	public class CommonTip2 : ActionParams
 	{
-		// Token: 0x0600E0A0 RID: 57504 RVA: 0x0021339B File Offset: 0x0021159B
+		// Token: 0x0600EEBE RID: 61118 RVA: 0x0023012F File Offset: 0x0022E32F
 		public static CommonTip2 Create(ICommonTip2? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700439C RID: 17308
-		// (get) Token: 0x0600E0A1 RID: 57505 RVA: 0x002133BA File Offset: 0x002115BA
+		// Token: 0x17004702 RID: 18178
+		// (get) Token: 0x0600EEBF RID: 61119 RVA: 0x0023014E File Offset: 0x0022E34E
 		public virtual ICommonTip2PrepareCountdown TipOption
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C65 RID: 31845
+		// Token: 0x0400831B RID: 33563
 		private ICommonTip2 Instance;
 
-		// Token: 0x04007C66 RID: 31846
+		// Token: 0x0400831C RID: 33564
 		[Nullable(2)]
 		private ICommonTip2PrepareCountdown _TipOptionCache;
 
-		// Token: 0x04007C67 RID: 31847
+		// Token: 0x0400831D RID: 33565
 		private bool _TipOptionInited;
 	}
 }

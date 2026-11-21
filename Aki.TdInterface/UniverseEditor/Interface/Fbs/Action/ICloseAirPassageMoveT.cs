@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006410 RID: 25616
+	// Token: 0x02006A90 RID: 27280
 	public class ICloseAirPassageMoveT
 	{
-		// Token: 0x1700BEC0 RID: 48832
-		// (get) Token: 0x0602C533 RID: 181555 RVA: 0x006156AE File Offset: 0x006138AE
-		// (set) Token: 0x0602C534 RID: 181556 RVA: 0x006156B6 File Offset: 0x006138B6
+		// Token: 0x1700C85A RID: 51290
+		// (get) Token: 0x0602ED09 RID: 191753 RVA: 0x0066153A File Offset: 0x0065F73A
+		// (set) Token: 0x0602ED0A RID: 191754 RVA: 0x00661542 File Offset: 0x0065F742
 		public ESplineMovePattern Type { get; set; }
 
-		// Token: 0x1700BEC1 RID: 48833
-		// (get) Token: 0x0602C535 RID: 181557 RVA: 0x006156BF File Offset: 0x006138BF
-		// (set) Token: 0x0602C536 RID: 181558 RVA: 0x006156C7 File Offset: 0x006138C7
+		// Token: 0x1700C85B RID: 51291
+		// (get) Token: 0x0602ED0B RID: 191755 RVA: 0x0066154B File Offset: 0x0065F74B
+		// (set) Token: 0x0602ED0C RID: 191756 RVA: 0x00661553 File Offset: 0x0065F753
 		public float GravitySwitchAngularVelocity { get; set; }
 
-		// Token: 0x1700BEC2 RID: 48834
-		// (get) Token: 0x0602C537 RID: 181559 RVA: 0x006156D0 File Offset: 0x006138D0
-		// (set) Token: 0x0602C538 RID: 181560 RVA: 0x006156D8 File Offset: 0x006138D8
+		// Token: 0x1700C85C RID: 51292
+		// (get) Token: 0x0602ED0D RID: 191757 RVA: 0x0066155C File Offset: 0x0065F75C
+		// (set) Token: 0x0602ED0E RID: 191758 RVA: 0x00661564 File Offset: 0x0065F764
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C539 RID: 181561 RVA: 0x006156E1 File Offset: 0x006138E1
+		// Token: 0x0602ED0F RID: 191759 RVA: 0x0066156D File Offset: 0x0065F76D
 		public ICloseAirPassageMoveT()
 		{
 			this.Type = ESplineMovePattern.PathLine;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019F7 RID: 6647
+	// Token: 0x02001B8A RID: 7050
 	public class IEnableUiOperation_SetValue
 	{
-		// Token: 0x0400584B RID: 22603
+		// Token: 0x04005CAD RID: 23725
 		public EUiOperationType Type;
 	}
 }

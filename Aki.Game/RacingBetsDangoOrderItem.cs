@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Dango.DangoLogic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002711 RID: 10001
+// Token: 0x02001BFC RID: 7164
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class RacingBetsDangoOrderItem : GridProxyAbstract<DangoIdToDiceNum>
 {
-	// Token: 0x06014804 RID: 83972 RVA: 0x0052D659 File Offset: 0x0052B859
+	// Token: 0x06011CE6 RID: 72934 RVA: 0x0053C375 File Offset: 0x0053A575
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class RacingBetsDangoOrderItem : GridProxyAbstract<DangoIdToDiceNum>
 		};
 	}
 
-	// Token: 0x06014805 RID: 83973 RVA: 0x0052D694 File Offset: 0x0052B894
+	// Token: 0x06011CE7 RID: 72935 RVA: 0x0053C3B0 File Offset: 0x0053A5B0
 	[NullableContext(1)]
 	public override void Refresh(DangoIdToDiceNum diceInfo, bool isSelected, int gridIndex)
 	{
@@ -39,12 +39,12 @@ public class RacingBetsDangoOrderItem : GridProxyAbstract<DangoIdToDiceNum>
 		}
 	}
 
-	// Token: 0x02008D5F RID: 36191
+	// Token: 0x02007EE8 RID: 32488
 	private enum EComponent
 	{
-		// Token: 0x0402DDFF RID: 187903
+		// Token: 0x04029116 RID: 168214
 		DangoIcon,
-		// Token: 0x0402DE00 RID: 187904
+		// Token: 0x04029117 RID: 168215
 		DiceIcon
 	}
 }

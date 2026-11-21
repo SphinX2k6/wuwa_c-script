@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Start
 {
-	// Token: 0x02005250 RID: 21072
+	// Token: 0x02004220 RID: 16928
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaStartView : UiViewBase, IUiViewResource
 	{
-		// Token: 0x06035D8F RID: 220559 RVA: 0x00CBE285 File Offset: 0x00CBC485
+		// Token: 0x0602AC8A RID: 175242 RVA: 0x00C0B915 File Offset: 0x00C09B15
 		public PhantomArenaStartView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 		{
 		}
 
-		// Token: 0x06035D90 RID: 220560 RVA: 0x00CBE28E File Offset: 0x00CBC48E
+		// Token: 0x0602AC8B RID: 175243 RVA: 0x00C0B91E File Offset: 0x00C09B1E
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Start
 			};
 		}
 
-		// Token: 0x06035D91 RID: 220561 RVA: 0x00CBE2C8 File Offset: 0x00CBC4C8
+		// Token: 0x0602AC8C RID: 175244 RVA: 0x00C0B958 File Offset: 0x00C09B58
 		protected override void OnStart()
 		{
 			this.Data = (this.OpenParam as IPhantomArenaStartViewData);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Start
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06035D92 RID: 220562 RVA: 0x00CBE38B File Offset: 0x00CBC58B
+		// Token: 0x0602AC8D RID: 175245 RVA: 0x00C0BA1B File Offset: 0x00C09C1B
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveHandle();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Start
 			callback();
 		}
 
-		// Token: 0x06035D93 RID: 220563 RVA: 0x00CBE3AD File Offset: 0x00CBC5AD
+		// Token: 0x0602AC8E RID: 175246 RVA: 0x00C0BA3D File Offset: 0x00C09C3D
 		private void RemoveHandle()
 		{
 			if (this.Handle != null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Start
 			}
 		}
 
-		// Token: 0x06035D94 RID: 220564 RVA: 0x00CBE3CF File Offset: 0x00CBC5CF
+		// Token: 0x0602AC8F RID: 175247 RVA: 0x00C0BA5F File Offset: 0x00C09C5F
 		public string GetExtraResourceId([Nullable(2)] object param)
 		{
 			IPhantomArenaStartViewData phantomArenaStartViewData = param as IPhantomArenaStartViewData;
@@ -85,23 +85,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Start
 			return "UiItem_BattleStart";
 		}
 
-		// Token: 0x0401C8A5 RID: 116901
+		// Token: 0x040172DA RID: 94938
 		private const int SHOW_TIME = 2000;
 
-		// Token: 0x0401C8A6 RID: 116902
+		// Token: 0x040172DB RID: 94939
 		private TimerHandle Handle;
 
-		// Token: 0x0401C8A7 RID: 116903
+		// Token: 0x040172DC RID: 94940
 		private IPhantomArenaStartViewData Data;
 
-		// Token: 0x0200B406 RID: 46086
+		// Token: 0x02009E3E RID: 40510
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040368D3 RID: 223443
+			// Token: 0x04031326 RID: 201510
 			public const int TimeText = 0;
 
-			// Token: 0x040368D4 RID: 223444
+			// Token: 0x04031327 RID: 201511
 			public const int TitleText = 1;
 		}
 	}

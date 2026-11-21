@@ -7,19 +7,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018FC RID: 6396
+// Token: 0x02000DB5 RID: 3509
 [NullableContext(1)]
 [Nullable(0)]
 public class LevelSequencePlayer : IStaticVariableResetter
 {
-	// Token: 0x0600BB78 RID: 47992 RVA: 0x002A7EB1 File Offset: 0x002A60B1
+	// Token: 0x06008F62 RID: 36706 RVA: 0x002B260D File Offset: 0x002B080D
 	static LevelSequencePlayer()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelSequencePlayer.CreateStaticDefaultValue), new Action(LevelSequencePlayer.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17000F9C RID: 3996
-	// (get) Token: 0x0600BB79 RID: 47993 RVA: 0x002A7ED0 File Offset: 0x002A60D0
+	// Token: 0x17000FBF RID: 4031
+	// (get) Token: 0x06008F63 RID: 36707 RVA: 0x002B262C File Offset: 0x002B082C
 	private static HashSet<LevelSequencePlayer> PlayingInstances
 	{
 		get
@@ -28,7 +28,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB7A RID: 47994 RVA: 0x002A7ED8 File Offset: 0x002A60D8
+	// Token: 0x06008F64 RID: 36708 RVA: 0x002B2634 File Offset: 0x002B0834
 	[NullableContext(2)]
 	public LevelSequencePlayer(UUIItem uiItem = null)
 	{
@@ -37,14 +37,14 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.UiBaseActor.OnPreDestroyed.Add(new Action<AActor>(this.AutoDestroy));
 	}
 
-	// Token: 0x0600BB7B RID: 47995 RVA: 0x002A7F3B File Offset: 0x002A613B
+	// Token: 0x06008F65 RID: 36709 RVA: 0x002B2697 File Offset: 0x002B0897
 	[NullableContext(2)]
 	private void AutoDestroy(AActor _)
 	{
 		this.Clear();
 	}
 
-	// Token: 0x0600BB7C RID: 47996 RVA: 0x002A7F44 File Offset: 0x002A6144
+	// Token: 0x06008F66 RID: 36710 RVA: 0x002B26A0 File Offset: 0x002B08A0
 	public void BindSequenceCloseEvent(TSequenceEndEvent sequencePlayCloseEvent, bool clear = false)
 	{
 		if (clear && this.OnSequenceEndEvent != null)
@@ -61,7 +61,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.OnSequenceEndEvent = array;
 	}
 
-	// Token: 0x0600BB7D RID: 47997 RVA: 0x002A7FAC File Offset: 0x002A61AC
+	// Token: 0x06008F67 RID: 36711 RVA: 0x002B2708 File Offset: 0x002B0908
 	public void BindSequenceStartEvent(TSequenceStartEvent sequenceStartEvent)
 	{
 		if (this.OnSequenceStartEvent == null)
@@ -74,7 +74,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.OnSequenceStartEvent = array;
 	}
 
-	// Token: 0x0600BB7E RID: 47998 RVA: 0x002A7FFC File Offset: 0x002A61FC
+	// Token: 0x06008F68 RID: 36712 RVA: 0x002B2758 File Offset: 0x002B0958
 	public void StopCurrentSequence(bool needEvent = false, bool toLastFrame = false)
 	{
 		if (this.CurrentSequenceName == null)
@@ -85,7 +85,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.CurrentSequenceName = null;
 	}
 
-	// Token: 0x0600BB7F RID: 47999 RVA: 0x002A801C File Offset: 0x002A621C
+	// Token: 0x06008F69 RID: 36713 RVA: 0x002B2778 File Offset: 0x002B0978
 	public void StopSequenceByKey(string sequenceName, bool needEvent = false, bool toLastFrame = false)
 	{
 		if (!this.IsValid())
@@ -110,7 +110,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.OnSequenceStop(sequenceName);
 	}
 
-	// Token: 0x0600BB80 RID: 48000 RVA: 0x002A807C File Offset: 0x002A627C
+	// Token: 0x06008F6A RID: 36714 RVA: 0x002B27D8 File Offset: 0x002B09D8
 	public void ReplaySequenceByKey(string sequenceName)
 	{
 		if (!this.IsValid())
@@ -145,7 +145,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB81 RID: 48001 RVA: 0x002A8114 File Offset: 0x002A6314
+	// Token: 0x06008F6B RID: 36715 RVA: 0x002B2870 File Offset: 0x002B0A70
 	public void SequenceJumpToStartWhenPlaying(string sequenceName)
 	{
 		if (!this.IsValid())
@@ -165,7 +165,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB82 RID: 48002 RVA: 0x002A8170 File Offset: 0x002A6370
+	// Token: 0x06008F6C RID: 36716 RVA: 0x002B28CC File Offset: 0x002B0ACC
 	public void ChangePlaybackDirection(string sequenceName)
 	{
 		SequenceData sequenceData;
@@ -191,14 +191,14 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		sequencePlayer.ChangePlaybackDirection();
 	}
 
-	// Token: 0x0600BB83 RID: 48003 RVA: 0x002A81D1 File Offset: 0x002A63D1
+	// Token: 0x06008F6D RID: 36717 RVA: 0x002B292D File Offset: 0x002B0B2D
 	[NullableContext(2)]
 	public string GetCurrentSequence()
 	{
 		return this.CurrentSequenceName;
 	}
 
-	// Token: 0x0600BB84 RID: 48004 RVA: 0x002A81DC File Offset: 0x002A63DC
+	// Token: 0x06008F6E RID: 36718 RVA: 0x002B2938 File Offset: 0x002B0B38
 	public unsafe void PauseSequence()
 	{
 		if (!this.IsValid())
@@ -231,7 +231,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		usequencePlayContext.TryStop();
 	}
 
-	// Token: 0x0600BB85 RID: 48005 RVA: 0x002A8298 File Offset: 0x002A6498
+	// Token: 0x06008F6F RID: 36719 RVA: 0x002B29F4 File Offset: 0x002B0BF4
 	public unsafe void ResumeSequence()
 	{
 		if (!this.IsValid())
@@ -282,7 +282,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		sequencePlayer.Play();
 	}
 
-	// Token: 0x0600BB86 RID: 48006 RVA: 0x002A83C8 File Offset: 0x002A65C8
+	// Token: 0x06008F70 RID: 36720 RVA: 0x002B2B24 File Offset: 0x002B0D24
 	public void Clear()
 	{
 		UUIItem uiItem = this.UiItem;
@@ -311,7 +311,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.UiItem = null;
 	}
 
-	// Token: 0x0600BB87 RID: 48007 RVA: 0x002A84D8 File Offset: 0x002A66D8
+	// Token: 0x06008F71 RID: 36721 RVA: 0x002B2C34 File Offset: 0x002B0E34
 	public void StopPlayingSequence(bool needEvent = false, bool toLastFrame = true)
 	{
 		foreach (string sequenceName in new List<string>(this.PlayingSequenceNameMap.Keys))
@@ -320,13 +320,13 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB88 RID: 48008 RVA: 0x002A8538 File Offset: 0x002A6738
+	// Token: 0x06008F72 RID: 36722 RVA: 0x002B2C94 File Offset: 0x002B0E94
 	public bool IsPlayingSequence(string sequenceName)
 	{
 		return this.PlayingSequenceNameMap.ContainsKey(sequenceName);
 	}
 
-	// Token: 0x0600BB89 RID: 48009 RVA: 0x002A8548 File Offset: 0x002A6748
+	// Token: 0x06008F73 RID: 36723 RVA: 0x002B2CA4 File Offset: 0x002B0EA4
 	public void EndSequenceLastFrame(string sequenceName)
 	{
 		if (!this.IsValid())
@@ -347,7 +347,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB8A RID: 48010 RVA: 0x002A85AC File Offset: 0x002A67AC
+	// Token: 0x06008F74 RID: 36724 RVA: 0x002B2D08 File Offset: 0x002B0F08
 	public bool CheckSeqActorIsSeqPlaying(string sequenceName)
 	{
 		ALevelSequenceActor levelSequenceActor = this.GetLevelSequenceActor(sequenceName);
@@ -362,7 +362,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0600BB8B RID: 48011 RVA: 0x002A85EC File Offset: 0x002A67EC
+	// Token: 0x06008F75 RID: 36725 RVA: 0x002B2D48 File Offset: 0x002B0F48
 	public bool CheckSeqActorIsUnStopped(string sequenceName)
 	{
 		ALevelSequenceActor levelSequenceActor = this.GetLevelSequenceActor(sequenceName);
@@ -377,7 +377,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0600BB8C RID: 48012 RVA: 0x002A8629 File Offset: 0x002A6829
+	// Token: 0x06008F76 RID: 36726 RVA: 0x002B2D85 File Offset: 0x002B0F85
 	public void PlayOrReplaySequenceByName(string sequenceName, bool blockClick = false, float? playRate = null)
 	{
 		if (this.CheckSeqActorIsSeqPlaying(sequenceName))
@@ -388,13 +388,13 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.PlaySequencePurely(sequenceName, blockClick, false, null, playRate, false);
 	}
 
-	// Token: 0x0600BB8D RID: 48013 RVA: 0x002A8648 File Offset: 0x002A6848
+	// Token: 0x06008F77 RID: 36727 RVA: 0x002B2DA4 File Offset: 0x002B0FA4
 	public void PlayLevelSequenceByName(string sequenceName, bool blockClick = false, float? playRate = null, bool bJumpToLastFrame = false)
 	{
 		this.PlaySequencePurely(sequenceName, blockClick, false, null, playRate, bJumpToLastFrame);
 	}
 
-	// Token: 0x0600BB8E RID: 48014 RVA: 0x002A8658 File Offset: 0x002A6858
+	// Token: 0x06008F78 RID: 36728 RVA: 0x002B2DB4 File Offset: 0x002B0FB4
 	public UniTask PlaySequenceAsync(string sequenceName, [Nullable(2)] CustomPromise<bool> stopPromise, bool blockClick = false, bool playReverse = false, float? playRate = null, bool bJumpToLastFrame = false)
 	{
 		LevelSequencePlayer.<PlaySequenceAsync>d__32 <PlaySequenceAsync>d__;
@@ -411,7 +411,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		return <PlaySequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BB8F RID: 48015 RVA: 0x002A86D0 File Offset: 0x002A68D0
+	// Token: 0x06008F79 RID: 36729 RVA: 0x002B2E2C File Offset: 0x002B102C
 	public void PlaySequencePurely(string sequenceName, bool blockClick = false, bool playReverse = false, [Nullable(2)] CustomPromise<bool> stopPromise = null, float? playRate = null, bool bJumpToLastFrame = false)
 	{
 		if (!this.IsValid())
@@ -449,7 +449,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		this.OnSequenceStop(sequenceName);
 	}
 
-	// Token: 0x0600BB90 RID: 48016 RVA: 0x002A8790 File Offset: 0x002A6990
+	// Token: 0x06008F7A RID: 36730 RVA: 0x002B2EEC File Offset: 0x002B10EC
 	[return: Nullable(2)]
 	public USequencePlayContext GetSequencePlayContext(string sequenceName)
 	{
@@ -475,7 +475,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		return sequencePlayContextOfKey;
 	}
 
-	// Token: 0x0600BB91 RID: 48017 RVA: 0x002A8818 File Offset: 0x002A6A18
+	// Token: 0x06008F7B RID: 36731 RVA: 0x002B2F74 File Offset: 0x002B1174
 	[return: Nullable(2)]
 	public CustomPromise<bool> GetCurrentStopPromise(string sequenceName)
 	{
@@ -487,7 +487,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0600BB92 RID: 48018 RVA: 0x002A8840 File Offset: 0x002A6A40
+	// Token: 0x06008F7C RID: 36732 RVA: 0x002B2F9C File Offset: 0x002B119C
 	private void OnSequenceStart(string sequenceName)
 	{
 		SequenceData sequenceData;
@@ -506,7 +506,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB93 RID: 48019 RVA: 0x002A88A0 File Offset: 0x002A6AA0
+	// Token: 0x06008F7D RID: 36733 RVA: 0x002B2FFC File Offset: 0x002B11FC
 	private void OnSequenceStop(string sequenceName)
 	{
 		SequenceData sequenceData;
@@ -545,7 +545,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB94 RID: 48020 RVA: 0x002A896D File Offset: 0x002A6B6D
+	// Token: 0x06008F7E RID: 36734 RVA: 0x002B30C9 File Offset: 0x002B12C9
 	[return: Nullable(2)]
 	private ALevelSequenceActor GetLevelSequenceActor(string sequenceName)
 	{
@@ -556,7 +556,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0600BB95 RID: 48021 RVA: 0x002A8988 File Offset: 0x002A6B88
+	// Token: 0x06008F7F RID: 36735 RVA: 0x002B30E4 File Offset: 0x002B12E4
 	public void SetActorTag(string sequenceName, FName tag, AActor actor)
 	{
 		ALevelSequenceActor levelSequenceActor = this.GetLevelSequenceActor(sequenceName);
@@ -566,7 +566,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB96 RID: 48022 RVA: 0x002A89AC File Offset: 0x002A6BAC
+	// Token: 0x06008F80 RID: 36736 RVA: 0x002B3108 File Offset: 0x002B1308
 	public void SetRelativeTransform(string sequenceName, FTransformDouble transform)
 	{
 		ALevelSequenceActor levelSequenceActor = this.GetLevelSequenceActor(sequenceName);
@@ -579,14 +579,14 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600BB97 RID: 48023 RVA: 0x002A89E3 File Offset: 0x002A6BE3
+	// Token: 0x06008F81 RID: 36737 RVA: 0x002B313F File Offset: 0x002B133F
 	public bool IsValid()
 	{
 		AUIBaseActor uiBaseActor = this.UiBaseActor;
 		return uiBaseActor != null && uiBaseActor.IsValid();
 	}
 
-	// Token: 0x0600BB98 RID: 48024 RVA: 0x002A89F8 File Offset: 0x002A6BF8
+	// Token: 0x06008F82 RID: 36738 RVA: 0x002B3154 File Offset: 0x002B1354
 	public static void SetBanned(bool value)
 	{
 		Log instance = Log.Instance;
@@ -620,13 +620,13 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		EventSystem.Instance.Emit<bool>(EEventName.LevelSequencePlayerBandStateChange, value);
 	}
 
-	// Token: 0x0600BB99 RID: 48025 RVA: 0x002A8AAC File Offset: 0x002A6CAC
+	// Token: 0x06008F83 RID: 36739 RVA: 0x002B3208 File Offset: 0x002B1408
 	public static void CreateStaticDefaultValue()
 	{
 		LevelSequencePlayer._playingInstances = new HashSet<LevelSequencePlayer>();
 	}
 
-	// Token: 0x0600BB9A RID: 48026 RVA: 0x002A8AB8 File Offset: 0x002A6CB8
+	// Token: 0x06008F84 RID: 36740 RVA: 0x002B3214 File Offset: 0x002B1414
 	public static void ResetStaticDefaultValue()
 	{
 		LevelSequencePlayer.Banned = false;
@@ -634,24 +634,24 @@ public class LevelSequencePlayer : IStaticVariableResetter
 		LevelSequencePlayer._playingInstances = null;
 	}
 
-	// Token: 0x0600BB9B RID: 48027 RVA: 0x002A8AD0 File Offset: 0x002A6CD0
+	// Token: 0x06008F85 RID: 36741 RVA: 0x002B322C File Offset: 0x002B142C
 	public static bool GetBanned()
 	{
 		return LevelSequencePlayer.Banned;
 	}
 
-	// Token: 0x04005516 RID: 21782
+	// Token: 0x040055C1 RID: 21953
 	private readonly Dictionary<string, USequencePlayContext> PlayContextMap = new Dictionary<string, USequencePlayContext>();
 
-	// Token: 0x04005517 RID: 21783
+	// Token: 0x040055C2 RID: 21954
 	[Nullable(2)]
 	private AUIBaseActor UiBaseActor;
 
-	// Token: 0x04005518 RID: 21784
+	// Token: 0x040055C3 RID: 21955
 	[Nullable(2)]
 	private UUIItem UiItem;
 
-	// Token: 0x04005519 RID: 21785
+	// Token: 0x040055C4 RID: 21956
 	[Nullable(new byte[]
 	{
 		2,
@@ -659,7 +659,7 @@ public class LevelSequencePlayer : IStaticVariableResetter
 	})]
 	private TSequenceEndEvent[] OnSequenceEndEvent;
 
-	// Token: 0x0400551A RID: 21786
+	// Token: 0x040055C5 RID: 21957
 	[Nullable(new byte[]
 	{
 		2,
@@ -667,11 +667,11 @@ public class LevelSequencePlayer : IStaticVariableResetter
 	})]
 	private TSequenceStartEvent[] OnSequenceStartEvent;
 
-	// Token: 0x0400551B RID: 21787
+	// Token: 0x040055C6 RID: 21958
 	[Nullable(2)]
 	private string CurrentSequenceName;
 
-	// Token: 0x0400551C RID: 21788
+	// Token: 0x040055C7 RID: 21959
 	[Nullable(new byte[]
 	{
 		2,
@@ -679,9 +679,9 @@ public class LevelSequencePlayer : IStaticVariableResetter
 	})]
 	private static HashSet<LevelSequencePlayer> _playingInstances;
 
-	// Token: 0x0400551D RID: 21789
+	// Token: 0x040055C8 RID: 21960
 	private static bool Banned;
 
-	// Token: 0x0400551E RID: 21790
+	// Token: 0x040055C9 RID: 21961
 	private readonly Dictionary<string, SequenceData> PlayingSequenceNameMap = new Dictionary<string, SequenceData>();
 }

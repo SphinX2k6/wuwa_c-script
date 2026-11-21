@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D49 RID: 23881
+	// Token: 0x02006380 RID: 25472
 	public struct IBvbEnableHatredData : IFlatbufferObject
 	{
-		// Token: 0x1700B300 RID: 45824
-		// (get) Token: 0x06028D9E RID: 167326 RVA: 0x0059D4DD File Offset: 0x0059B6DD
+		// Token: 0x1700BC61 RID: 48225
+		// (get) Token: 0x0602B408 RID: 177160 RVA: 0x005E5F4D File Offset: 0x005E414D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028D9F RID: 167327 RVA: 0x0059D4EA File Offset: 0x0059B6EA
+		// Token: 0x0602B409 RID: 177161 RVA: 0x005E5F5A File Offset: 0x005E415A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028DA0 RID: 167328 RVA: 0x0059D4F4 File Offset: 0x0059B6F4
+		// Token: 0x0602B40A RID: 177162 RVA: 0x005E5F64 File Offset: 0x005E4164
 		public static IBvbEnableHatredData GetRootAsIBvbEnableHatredData(ByteBuffer _bb)
 		{
 			return IBvbEnableHatredData.GetRootAsIBvbEnableHatredData(_bb, default(IBvbEnableHatredData));
 		}
 
-		// Token: 0x06028DA1 RID: 167329 RVA: 0x0059D510 File Offset: 0x0059B710
+		// Token: 0x0602B40B RID: 177163 RVA: 0x005E5F80 File Offset: 0x005E4180
 		public static IBvbEnableHatredData GetRootAsIBvbEnableHatredData(ByteBuffer _bb, IBvbEnableHatredData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028DA2 RID: 167330 RVA: 0x0059D52D File Offset: 0x0059B72D
+		// Token: 0x0602B40C RID: 177164 RVA: 0x005E5F9D File Offset: 0x005E419D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028DA3 RID: 167331 RVA: 0x0059D53C File Offset: 0x0059B73C
+		// Token: 0x0602B40D RID: 177165 RVA: 0x005E5FAC File Offset: 0x005E41AC
 		public IBvbEnableHatredData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B301 RID: 45825
-		// (get) Token: 0x06028DA4 RID: 167332 RVA: 0x0059D54C File Offset: 0x0059B74C
+		// Token: 0x1700BC62 RID: 48226
+		// (get) Token: 0x0602B40E RID: 177166 RVA: 0x005E5FBC File Offset: 0x005E41BC
 		public EBvbEventName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028DA5 RID: 167333 RVA: 0x0059D588 File Offset: 0x0059B788
+		// Token: 0x0602B40F RID: 177167 RVA: 0x005E5FF8 File Offset: 0x005E41F8
 		public static Offset<IBvbEnableHatredData> CreateIBvbEnableHatredData(FlatBufferBuilder builder, EBvbEventName Type = EBvbEventName.AIEvolution)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbEnableHatredData.EndIBvbEnableHatredData(builder);
 		}
 
-		// Token: 0x06028DA6 RID: 167334 RVA: 0x0059D59E File Offset: 0x0059B79E
+		// Token: 0x0602B410 RID: 177168 RVA: 0x005E600E File Offset: 0x005E420E
 		public static void StartIBvbEnableHatredData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028DA7 RID: 167335 RVA: 0x0059D5A7 File Offset: 0x0059B7A7
+		// Token: 0x0602B411 RID: 177169 RVA: 0x005E6017 File Offset: 0x005E4217
 		public static void AddType(FlatBufferBuilder builder, EBvbEventName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028DA8 RID: 167336 RVA: 0x0059D5B2 File Offset: 0x0059B7B2
+		// Token: 0x0602B412 RID: 177170 RVA: 0x005E6022 File Offset: 0x005E4222
 		public static Offset<IBvbEnableHatredData> EndIBvbEnableHatredData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbEnableHatredData>(builder.EndTable());
 		}
 
-		// Token: 0x06028DA9 RID: 167337 RVA: 0x0059D5C0 File Offset: 0x0059B7C0
+		// Token: 0x0602B413 RID: 177171 RVA: 0x005E6030 File Offset: 0x005E4230
 		public IBvbEnableHatredDataT UnPack()
 		{
 			IBvbEnableHatredDataT bvbEnableHatredDataT = new IBvbEnableHatredDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return bvbEnableHatredDataT;
 		}
 
-		// Token: 0x06028DAA RID: 167338 RVA: 0x0059D5DB File Offset: 0x0059B7DB
+		// Token: 0x0602B414 RID: 177172 RVA: 0x005E604B File Offset: 0x005E424B
 		public void UnPackTo(IBvbEnableHatredDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06028DAB RID: 167339 RVA: 0x0059D5EC File Offset: 0x0059B7EC
+		// Token: 0x0602B415 RID: 177173 RVA: 0x005E605C File Offset: 0x005E425C
 		public static Offset<IBvbEnableHatredData> Pack(FlatBufferBuilder builder, IBvbEnableHatredDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbEnableHatredData.CreateIBvbEnableHatredData(builder, _o.Type);
 		}
 
-		// Token: 0x0400F6FE RID: 63230
+		// Token: 0x04010450 RID: 66640
 		private Table __p;
 	}
 }

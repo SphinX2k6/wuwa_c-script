@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A0E RID: 23054
+	// Token: 0x0200601B RID: 24603
 	public class ISunSpiritPlayerBattleConfigT
 	{
 	}

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200764A RID: 30282
+	// Token: 0x02007E58 RID: 32344
 	public enum TBlendAnimType : byte
 	{
-		// Token: 0x040125F7 RID: 75255
+		// Token: 0x04013641 RID: 79425
 		NONE,
-		// Token: 0x040125F8 RID: 75256
+		// Token: 0x04013642 RID: 79426
 		ISetAnimSequenceBlendAnimType,
-		// Token: 0x040125F9 RID: 75257
+		// Token: 0x04013643 RID: 79427
 		ISetStateMachineBlendAnimType
 	}
 }

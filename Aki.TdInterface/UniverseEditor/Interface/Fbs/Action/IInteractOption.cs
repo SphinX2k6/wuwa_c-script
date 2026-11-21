@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006993 RID: 27027
+	// Token: 0x02007046 RID: 28742
 	public struct IInteractOption : IFlatbufferObject
 	{
-		// Token: 0x1700C867 RID: 51303
-		// (get) Token: 0x0602F32E RID: 193326 RVA: 0x0066DB1A File Offset: 0x0066BD1A
+		// Token: 0x1700D26A RID: 53866
+		// (get) Token: 0x06031CFE RID: 204030 RVA: 0x006BE002 File Offset: 0x006BC202
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F32F RID: 193327 RVA: 0x0066DB27 File Offset: 0x0066BD27
+		// Token: 0x06031CFF RID: 204031 RVA: 0x006BE00F File Offset: 0x006BC20F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F330 RID: 193328 RVA: 0x0066DB30 File Offset: 0x0066BD30
+		// Token: 0x06031D00 RID: 204032 RVA: 0x006BE018 File Offset: 0x006BC218
 		public static IInteractOption GetRootAsIInteractOption(ByteBuffer _bb)
 		{
 			return IInteractOption.GetRootAsIInteractOption(_bb, default(IInteractOption));
 		}
 
-		// Token: 0x0602F331 RID: 193329 RVA: 0x0066DB4C File Offset: 0x0066BD4C
+		// Token: 0x06031D01 RID: 204033 RVA: 0x006BE034 File Offset: 0x006BC234
 		public static IInteractOption GetRootAsIInteractOption(ByteBuffer _bb, IInteractOption obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F332 RID: 193330 RVA: 0x0066DB69 File Offset: 0x0066BD69
+		// Token: 0x06031D02 RID: 204034 RVA: 0x006BE051 File Offset: 0x006BC251
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F333 RID: 193331 RVA: 0x0066DB78 File Offset: 0x0066BD78
+		// Token: 0x06031D03 RID: 204035 RVA: 0x006BE060 File Offset: 0x006BC260
 		public IInteractOption __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C868 RID: 51304
-		// (get) Token: 0x0602F334 RID: 193332 RVA: 0x0066DB88 File Offset: 0x0066BD88
+		// Token: 0x1700D26B RID: 53867
+		// (get) Token: 0x06031D04 RID: 204036 RVA: 0x006BE070 File Offset: 0x006BC270
 		public string Guid
 		{
 			get
@@ -65,20 +65,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F335 RID: 193333 RVA: 0x0066DBBF File Offset: 0x0066BDBF
+		// Token: 0x06031D05 RID: 204037 RVA: 0x006BE0A7 File Offset: 0x006BC2A7
 		public Span<byte> GetGuidBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602F336 RID: 193334 RVA: 0x0066DBCE File Offset: 0x0066BDCE
+		// Token: 0x06031D06 RID: 204038 RVA: 0x006BE0B6 File Offset: 0x006BC2B6
 		public byte[] GetGuidArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700C869 RID: 51305
-		// (get) Token: 0x0602F337 RID: 193335 RVA: 0x0066DBDC File Offset: 0x0066BDDC
+		// Token: 0x1700D26C RID: 53868
+		// (get) Token: 0x06031D07 RID: 204039 RVA: 0x006BE0C4 File Offset: 0x006BC2C4
 		public TInteractOption TypeType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F338 RID: 193336 RVA: 0x0066DC18 File Offset: 0x0066BE18
+		// Token: 0x06031D08 RID: 204040 RVA: 0x006BE100 File Offset: 0x006BC300
 		public TTable? Type<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -103,20 +103,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602F339 RID: 193337 RVA: 0x0066DC5C File Offset: 0x0066BE5C
+		// Token: 0x06031D09 RID: 204041 RVA: 0x006BE144 File Offset: 0x006BC344
 		public IInteractActions TypeAsIInteractActions()
 		{
 			return this.Type<IInteractActions>().Value;
 		}
 
-		// Token: 0x0602F33A RID: 193338 RVA: 0x0066DC78 File Offset: 0x0066BE78
+		// Token: 0x06031D0A RID: 204042 RVA: 0x006BE160 File Offset: 0x006BC360
 		public IInteractFlow TypeAsIInteractFlow()
 		{
 			return this.Type<IInteractFlow>().Value;
 		}
 
-		// Token: 0x1700C86A RID: 51306
-		// (get) Token: 0x0602F33B RID: 193339 RVA: 0x0066DC94 File Offset: 0x0066BE94
+		// Token: 0x1700D26D RID: 53869
+		// (get) Token: 0x06031D0B RID: 204043 RVA: 0x006BE17C File Offset: 0x006BC37C
 		public EInteractIcon Icon
 		{
 			get
@@ -130,8 +130,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C86B RID: 51307
-		// (get) Token: 0x0602F33C RID: 193340 RVA: 0x0066DCD4 File Offset: 0x0066BED4
+		// Token: 0x1700D26E RID: 53870
+		// (get) Token: 0x06031D0C RID: 204044 RVA: 0x006BE1BC File Offset: 0x006BC3BC
 		public string TidContent
 		{
 			get
@@ -145,20 +145,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F33D RID: 193341 RVA: 0x0066DD0C File Offset: 0x0066BF0C
+		// Token: 0x06031D0D RID: 204045 RVA: 0x006BE1F4 File Offset: 0x006BC3F4
 		public Span<byte> GetTidContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0602F33E RID: 193342 RVA: 0x0066DD1C File Offset: 0x0066BF1C
+		// Token: 0x06031D0E RID: 204046 RVA: 0x006BE204 File Offset: 0x006BC404
 		public byte[] GetTidContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700C86C RID: 51308
-		// (get) Token: 0x0602F33F RID: 193343 RVA: 0x0066DD2C File Offset: 0x0066BF2C
+		// Token: 0x1700D26F RID: 53871
+		// (get) Token: 0x06031D0F RID: 204047 RVA: 0x006BE214 File Offset: 0x006BC414
 		public IVectorInfo? InteractPointOffset
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C86D RID: 51309
-		// (get) Token: 0x0602F340 RID: 193344 RVA: 0x0066DD8C File Offset: 0x0066BF8C
+		// Token: 0x1700D270 RID: 53872
+		// (get) Token: 0x06031D10 RID: 204048 RVA: 0x006BE274 File Offset: 0x006BC474
 		public IConditionGroup? Condition
 		{
 			get
@@ -187,8 +187,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C86E RID: 51310
-		// (get) Token: 0x0602F341 RID: 193345 RVA: 0x0066DDEC File Offset: 0x0066BFEC
+		// Token: 0x1700D271 RID: 53873
+		// (get) Token: 0x06031D11 RID: 204049 RVA: 0x006BE2D4 File Offset: 0x006BC4D4
 		public IInteractOptionConfirmBox? ConfirmBox
 		{
 			get
@@ -202,8 +202,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C86F RID: 51311
-		// (get) Token: 0x0602F342 RID: 193346 RVA: 0x0066DE4C File Offset: 0x0066C04C
+		// Token: 0x1700D272 RID: 53874
+		// (get) Token: 0x06031D12 RID: 204050 RVA: 0x006BE334 File Offset: 0x006BC534
 		public EInteractUniqueness UniquenessTest
 		{
 			get
@@ -217,8 +217,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C870 RID: 51312
-		// (get) Token: 0x0602F343 RID: 193347 RVA: 0x0066DE8C File Offset: 0x0066C08C
+		// Token: 0x1700D273 RID: 53875
+		// (get) Token: 0x06031D13 RID: 204051 RVA: 0x006BE374 File Offset: 0x006BC574
 		public EDoInteract DoIntactType
 		{
 			get
@@ -232,8 +232,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C871 RID: 51313
-		// (get) Token: 0x0602F344 RID: 193348 RVA: 0x0066DECC File Offset: 0x0066C0CC
+		// Token: 0x1700D274 RID: 53876
+		// (get) Token: 0x06031D14 RID: 204052 RVA: 0x006BE3B4 File Offset: 0x006BC5B4
 		public float Range
 		{
 			get
@@ -247,8 +247,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C872 RID: 51314
-		// (get) Token: 0x0602F345 RID: 193349 RVA: 0x0066DF10 File Offset: 0x0066C110
+		// Token: 0x1700D275 RID: 53877
+		// (get) Token: 0x06031D15 RID: 204053 RVA: 0x006BE3F8 File Offset: 0x006BC5F8
 		public IDurationInteract? Duration
 		{
 			get
@@ -262,8 +262,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C873 RID: 51315
-		// (get) Token: 0x0602F346 RID: 193350 RVA: 0x0066DF70 File Offset: 0x0066C170
+		// Token: 0x1700D276 RID: 53878
+		// (get) Token: 0x06031D16 RID: 204054 RVA: 0x006BE458 File Offset: 0x006BC658
 		public IOptionLockTip? OptionLockTip
 		{
 			get
@@ -277,7 +277,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F347 RID: 193351 RVA: 0x0066DFD0 File Offset: 0x0066C1D0
+		// Token: 0x06031D17 RID: 204055 RVA: 0x006BE4B8 File Offset: 0x006BC6B8
 		public EOptionLockType OptionLockTypeList(int j)
 		{
 			int num = this.__p.__offset(30);
@@ -288,8 +288,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return (EOptionLockType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700C874 RID: 51316
-		// (get) Token: 0x0602F348 RID: 193352 RVA: 0x0066E010 File Offset: 0x0066C210
+		// Token: 0x1700D277 RID: 53879
+		// (get) Token: 0x06031D18 RID: 204056 RVA: 0x006BE4F8 File Offset: 0x006BC6F8
 		public int OptionLockTypeListLength
 		{
 			get
@@ -303,13 +303,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F349 RID: 193353 RVA: 0x0066E03C File Offset: 0x0066C23C
+		// Token: 0x06031D19 RID: 204057 RVA: 0x006BE524 File Offset: 0x006BC724
 		public Span<EOptionLockType> GetOptionLockTypeListBytes()
 		{
 			return this.__p.__vector_as_span<EOptionLockType>(30, 1);
 		}
 
-		// Token: 0x0602F34A RID: 193354 RVA: 0x0066E04C File Offset: 0x0066C24C
+		// Token: 0x06031D1A RID: 204058 RVA: 0x006BE534 File Offset: 0x006BC734
 		public EOptionLockType[] GetOptionLockTypeListArray()
 		{
 			int num = this.__p.__offset(30);
@@ -327,13 +327,63 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return array;
 		}
 
-		// Token: 0x1700C875 RID: 51317
-		// (get) Token: 0x0602F34B RID: 193355 RVA: 0x0066E0B8 File Offset: 0x0066C2B8
-		public ILongPressInteractConfig? LongPressInteractConfig
+		// Token: 0x06031D1B RID: 204059 RVA: 0x006BE5A0 File Offset: 0x006BC7A0
+		public EOptionUnlockType OptionUnlockTypeList(int j)
+		{
+			int num = this.__p.__offset(32);
+			if (num == 0)
+			{
+				return EOptionUnlockType.OnMecha;
+			}
+			return (EOptionUnlockType)this.__p.bb.Get(this.__p.__vector(num) + j);
+		}
+
+		// Token: 0x1700D278 RID: 53880
+		// (get) Token: 0x06031D1C RID: 204060 RVA: 0x006BE5E0 File Offset: 0x006BC7E0
+		public int OptionUnlockTypeListLength
 		{
 			get
 			{
 				int num = this.__p.__offset(32);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x06031D1D RID: 204061 RVA: 0x006BE60C File Offset: 0x006BC80C
+		public Span<EOptionUnlockType> GetOptionUnlockTypeListBytes()
+		{
+			return this.__p.__vector_as_span<EOptionUnlockType>(32, 1);
+		}
+
+		// Token: 0x06031D1E RID: 204062 RVA: 0x006BE61C File Offset: 0x006BC81C
+		public EOptionUnlockType[] GetOptionUnlockTypeListArray()
+		{
+			int num = this.__p.__offset(32);
+			if (num == 0)
+			{
+				return null;
+			}
+			int num2 = this.__p.__vector(num);
+			int num3 = this.__p.__vector_len(num);
+			EOptionUnlockType[] array = new EOptionUnlockType[num3];
+			for (int i = 0; i < num3; i++)
+			{
+				array[i] = (EOptionUnlockType)this.__p.bb.Get(num2 + i);
+			}
+			return array;
+		}
+
+		// Token: 0x1700D279 RID: 53881
+		// (get) Token: 0x06031D1F RID: 204063 RVA: 0x006BE688 File Offset: 0x006BC888
+		public ILongPressInteractConfig? LongPressInteractConfig
+		{
+			get
+			{
+				int num = this.__p.__offset(34);
 				if (num == 0)
 				{
 					return null;
@@ -342,24 +392,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C876 RID: 51318
-		// (get) Token: 0x0602F34C RID: 193356 RVA: 0x0066E118 File Offset: 0x0066C318
+		// Token: 0x1700D27A RID: 53882
+		// (get) Token: 0x06031D20 RID: 204064 RVA: 0x006BE6E8 File Offset: 0x006BC8E8
 		public bool KeepInRecall
 		{
 			get
 			{
-				int num = this.__p.__offset(34);
+				int num = this.__p.__offset(36);
 				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
 			}
 		}
 
-		// Token: 0x1700C877 RID: 51319
-		// (get) Token: 0x0602F34D RID: 193357 RVA: 0x0066E158 File Offset: 0x0066C358
+		// Token: 0x1700D27B RID: 53883
+		// (get) Token: 0x06031D21 RID: 204065 RVA: 0x006BE728 File Offset: 0x006BC928
 		public byte NullMask
 		{
 			get
 			{
-				int num = this.__p.__offset(36);
+				int num = this.__p.__offset(38);
 				if (num == 0)
 				{
 					return 0;
@@ -368,11 +418,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F34E RID: 193358 RVA: 0x0066E198 File Offset: 0x0066C398
-		public static Offset<IInteractOption> CreateIInteractOption(FlatBufferBuilder builder, StringOffset GuidOffset = default(StringOffset), TInteractOption Type_type = TInteractOption.NONE, int TypeOffset = 0, EInteractIcon Icon = EInteractIcon.Dialog, StringOffset TidContentOffset = default(StringOffset), Offset<IVectorInfo> InteractPointOffsetOffset = default(Offset<IVectorInfo>), Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), Offset<IInteractOptionConfirmBox> ConfirmBoxOffset = default(Offset<IInteractOptionConfirmBox>), EInteractUniqueness UniquenessTest = EInteractUniqueness.Closest, EDoInteract DoIntactType = EDoInteract.Direct, float Range = 0f, Offset<IDurationInteract> DurationOffset = default(Offset<IDurationInteract>), Offset<IOptionLockTip> OptionLockTipOffset = default(Offset<IOptionLockTip>), VectorOffset OptionLockTypeListOffset = default(VectorOffset), Offset<ILongPressInteractConfig> LongPressInteractConfigOffset = default(Offset<ILongPressInteractConfig>), bool KeepInRecall = false, byte NullMask = 0)
+		// Token: 0x06031D22 RID: 204066 RVA: 0x006BE768 File Offset: 0x006BC968
+		public static Offset<IInteractOption> CreateIInteractOption(FlatBufferBuilder builder, StringOffset GuidOffset = default(StringOffset), TInteractOption Type_type = TInteractOption.NONE, int TypeOffset = 0, EInteractIcon Icon = EInteractIcon.Dialog, StringOffset TidContentOffset = default(StringOffset), Offset<IVectorInfo> InteractPointOffsetOffset = default(Offset<IVectorInfo>), Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), Offset<IInteractOptionConfirmBox> ConfirmBoxOffset = default(Offset<IInteractOptionConfirmBox>), EInteractUniqueness UniquenessTest = EInteractUniqueness.Closest, EDoInteract DoIntactType = EDoInteract.Direct, float Range = 0f, Offset<IDurationInteract> DurationOffset = default(Offset<IDurationInteract>), Offset<IOptionLockTip> OptionLockTipOffset = default(Offset<IOptionLockTip>), VectorOffset OptionLockTypeListOffset = default(VectorOffset), VectorOffset OptionUnlockTypeListOffset = default(VectorOffset), Offset<ILongPressInteractConfig> LongPressInteractConfigOffset = default(Offset<ILongPressInteractConfig>), bool KeepInRecall = false, byte NullMask = 0)
 		{
-			builder.StartTable(17);
+			builder.StartTable(18);
 			IInteractOption.AddLongPressInteractConfig(builder, LongPressInteractConfigOffset);
+			IInteractOption.AddOptionUnlockTypeList(builder, OptionUnlockTypeListOffset);
 			IInteractOption.AddOptionLockTypeList(builder, OptionLockTypeListOffset);
 			IInteractOption.AddOptionLockTip(builder, OptionLockTipOffset);
 			IInteractOption.AddDuration(builder, DurationOffset);
@@ -392,97 +443,97 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInteractOption.EndIInteractOption(builder);
 		}
 
-		// Token: 0x0602F34F RID: 193359 RVA: 0x0066E238 File Offset: 0x0066C438
+		// Token: 0x06031D23 RID: 204067 RVA: 0x006BE810 File Offset: 0x006BCA10
 		public static void StartIInteractOption(FlatBufferBuilder builder)
 		{
-			builder.StartTable(17);
+			builder.StartTable(18);
 		}
 
-		// Token: 0x0602F350 RID: 193360 RVA: 0x0066E242 File Offset: 0x0066C442
+		// Token: 0x06031D24 RID: 204068 RVA: 0x006BE81A File Offset: 0x006BCA1A
 		public static void AddGuid(FlatBufferBuilder builder, StringOffset guidOffset)
 		{
 			builder.AddOffset(0, guidOffset.Value, 0);
 		}
 
-		// Token: 0x0602F351 RID: 193361 RVA: 0x0066E252 File Offset: 0x0066C452
+		// Token: 0x06031D25 RID: 204069 RVA: 0x006BE82A File Offset: 0x006BCA2A
 		public static void AddTypeType(FlatBufferBuilder builder, TInteractOption typeType)
 		{
 			builder.AddByte(1, (byte)typeType, 0);
 		}
 
-		// Token: 0x0602F352 RID: 193362 RVA: 0x0066E25D File Offset: 0x0066C45D
+		// Token: 0x06031D26 RID: 204070 RVA: 0x006BE835 File Offset: 0x006BCA35
 		public static void AddType(FlatBufferBuilder builder, int typeOffset)
 		{
 			builder.AddOffset(2, typeOffset, 0);
 		}
 
-		// Token: 0x0602F353 RID: 193363 RVA: 0x0066E268 File Offset: 0x0066C468
+		// Token: 0x06031D27 RID: 204071 RVA: 0x006BE840 File Offset: 0x006BCA40
 		public static void AddIcon(FlatBufferBuilder builder, EInteractIcon icon)
 		{
 			builder.AddByte(3, (byte)icon, 0);
 		}
 
-		// Token: 0x0602F354 RID: 193364 RVA: 0x0066E273 File Offset: 0x0066C473
+		// Token: 0x06031D28 RID: 204072 RVA: 0x006BE84B File Offset: 0x006BCA4B
 		public static void AddTidContent(FlatBufferBuilder builder, StringOffset tidContentOffset)
 		{
 			builder.AddOffset(4, tidContentOffset.Value, 0);
 		}
 
-		// Token: 0x0602F355 RID: 193365 RVA: 0x0066E283 File Offset: 0x0066C483
+		// Token: 0x06031D29 RID: 204073 RVA: 0x006BE85B File Offset: 0x006BCA5B
 		public static void AddInteractPointOffset(FlatBufferBuilder builder, Offset<IVectorInfo> interactPointOffsetOffset)
 		{
 			builder.AddOffset(5, interactPointOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x0602F356 RID: 193366 RVA: 0x0066E293 File Offset: 0x0066C493
+		// Token: 0x06031D2A RID: 204074 RVA: 0x006BE86B File Offset: 0x006BCA6B
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(6, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x0602F357 RID: 193367 RVA: 0x0066E2A3 File Offset: 0x0066C4A3
+		// Token: 0x06031D2B RID: 204075 RVA: 0x006BE87B File Offset: 0x006BCA7B
 		public static void AddConfirmBox(FlatBufferBuilder builder, Offset<IInteractOptionConfirmBox> confirmBoxOffset)
 		{
 			builder.AddOffset(7, confirmBoxOffset.Value, 0);
 		}
 
-		// Token: 0x0602F358 RID: 193368 RVA: 0x0066E2B3 File Offset: 0x0066C4B3
+		// Token: 0x06031D2C RID: 204076 RVA: 0x006BE88B File Offset: 0x006BCA8B
 		public static void AddUniquenessTest(FlatBufferBuilder builder, EInteractUniqueness uniquenessTest)
 		{
 			builder.AddByte(8, (byte)uniquenessTest, 0);
 		}
 
-		// Token: 0x0602F359 RID: 193369 RVA: 0x0066E2BE File Offset: 0x0066C4BE
+		// Token: 0x06031D2D RID: 204077 RVA: 0x006BE896 File Offset: 0x006BCA96
 		public static void AddDoIntactType(FlatBufferBuilder builder, EDoInteract doIntactType)
 		{
 			builder.AddByte(9, (byte)doIntactType, 0);
 		}
 
-		// Token: 0x0602F35A RID: 193370 RVA: 0x0066E2CA File Offset: 0x0066C4CA
+		// Token: 0x06031D2E RID: 204078 RVA: 0x006BE8A2 File Offset: 0x006BCAA2
 		public static void AddRange(FlatBufferBuilder builder, float range)
 		{
 			builder.AddFloat(10, range, 0.0);
 		}
 
-		// Token: 0x0602F35B RID: 193371 RVA: 0x0066E2DE File Offset: 0x0066C4DE
+		// Token: 0x06031D2F RID: 204079 RVA: 0x006BE8B6 File Offset: 0x006BCAB6
 		public static void AddDuration(FlatBufferBuilder builder, Offset<IDurationInteract> durationOffset)
 		{
 			builder.AddOffset(11, durationOffset.Value, 0);
 		}
 
-		// Token: 0x0602F35C RID: 193372 RVA: 0x0066E2EF File Offset: 0x0066C4EF
+		// Token: 0x06031D30 RID: 204080 RVA: 0x006BE8C7 File Offset: 0x006BCAC7
 		public static void AddOptionLockTip(FlatBufferBuilder builder, Offset<IOptionLockTip> optionLockTipOffset)
 		{
 			builder.AddOffset(12, optionLockTipOffset.Value, 0);
 		}
 
-		// Token: 0x0602F35D RID: 193373 RVA: 0x0066E300 File Offset: 0x0066C500
+		// Token: 0x06031D31 RID: 204081 RVA: 0x006BE8D8 File Offset: 0x006BCAD8
 		public static void AddOptionLockTypeList(FlatBufferBuilder builder, VectorOffset optionLockTypeListOffset)
 		{
 			builder.AddOffset(13, optionLockTypeListOffset.Value, 0);
 		}
 
-		// Token: 0x0602F35E RID: 193374 RVA: 0x0066E314 File Offset: 0x0066C514
+		// Token: 0x06031D32 RID: 204082 RVA: 0x006BE8EC File Offset: 0x006BCAEC
 		public static VectorOffset CreateOptionLockTypeListVector(FlatBufferBuilder builder, EOptionLockType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -493,7 +544,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F35F RID: 193375 RVA: 0x0066E34B File Offset: 0x0066C54B
+		// Token: 0x06031D33 RID: 204083 RVA: 0x006BE923 File Offset: 0x006BCB23
 		public static VectorOffset CreateOptionLockTypeListVectorBlock(FlatBufferBuilder builder, EOptionLockType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -501,7 +552,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F360 RID: 193376 RVA: 0x0066E365 File Offset: 0x0066C565
+		// Token: 0x06031D34 RID: 204084 RVA: 0x006BE93D File Offset: 0x006BCB3D
 		public static VectorOffset CreateOptionLockTypeListVectorBlock(FlatBufferBuilder builder, ArraySegment<EOptionLockType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -509,7 +560,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F361 RID: 193377 RVA: 0x0066E383 File Offset: 0x0066C583
+		// Token: 0x06031D35 RID: 204085 RVA: 0x006BE95B File Offset: 0x006BCB5B
 		public static VectorOffset CreateOptionLockTypeListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -517,37 +568,84 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602F362 RID: 193378 RVA: 0x0066E39C File Offset: 0x0066C59C
+		// Token: 0x06031D36 RID: 204086 RVA: 0x006BE974 File Offset: 0x006BCB74
 		public static void StartOptionLockTypeListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0602F363 RID: 193379 RVA: 0x0066E3A7 File Offset: 0x0066C5A7
+		// Token: 0x06031D37 RID: 204087 RVA: 0x006BE97F File Offset: 0x006BCB7F
+		public static void AddOptionUnlockTypeList(FlatBufferBuilder builder, VectorOffset optionUnlockTypeListOffset)
+		{
+			builder.AddOffset(14, optionUnlockTypeListOffset.Value, 0);
+		}
+
+		// Token: 0x06031D38 RID: 204088 RVA: 0x006BE990 File Offset: 0x006BCB90
+		public static VectorOffset CreateOptionUnlockTypeListVector(FlatBufferBuilder builder, EOptionUnlockType[] data)
+		{
+			builder.StartVector(1, data.Length, 1);
+			for (int i = data.Length - 1; i >= 0; i--)
+			{
+				builder.AddByte((byte)data[i]);
+			}
+			return builder.EndVector();
+		}
+
+		// Token: 0x06031D39 RID: 204089 RVA: 0x006BE9C7 File Offset: 0x006BCBC7
+		public static VectorOffset CreateOptionUnlockTypeListVectorBlock(FlatBufferBuilder builder, EOptionUnlockType[] data)
+		{
+			builder.StartVector(1, data.Length, 1);
+			builder.Add<EOptionUnlockType>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06031D3A RID: 204090 RVA: 0x006BE9E1 File Offset: 0x006BCBE1
+		public static VectorOffset CreateOptionUnlockTypeListVectorBlock(FlatBufferBuilder builder, ArraySegment<EOptionUnlockType> data)
+		{
+			builder.StartVector(1, data.Count, 1);
+			builder.Add<EOptionUnlockType>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06031D3B RID: 204091 RVA: 0x006BE9FF File Offset: 0x006BCBFF
+		public static VectorOffset CreateOptionUnlockTypeListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
+		{
+			builder.StartVector(1, sizeInBytes, 1);
+			builder.Add<EOptionUnlockType>(dataPtr, sizeInBytes);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06031D3C RID: 204092 RVA: 0x006BEA18 File Offset: 0x006BCC18
+		public static void StartOptionUnlockTypeListVector(FlatBufferBuilder builder, int numElems)
+		{
+			builder.StartVector(1, numElems, 1);
+		}
+
+		// Token: 0x06031D3D RID: 204093 RVA: 0x006BEA23 File Offset: 0x006BCC23
 		public static void AddLongPressInteractConfig(FlatBufferBuilder builder, Offset<ILongPressInteractConfig> longPressInteractConfigOffset)
 		{
-			builder.AddOffset(14, longPressInteractConfigOffset.Value, 0);
+			builder.AddOffset(15, longPressInteractConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602F364 RID: 193380 RVA: 0x0066E3B8 File Offset: 0x0066C5B8
+		// Token: 0x06031D3E RID: 204094 RVA: 0x006BEA34 File Offset: 0x006BCC34
 		public static void AddKeepInRecall(FlatBufferBuilder builder, bool keepInRecall)
 		{
-			builder.AddBool(15, keepInRecall, false);
+			builder.AddBool(16, keepInRecall, false);
 		}
 
-		// Token: 0x0602F365 RID: 193381 RVA: 0x0066E3C4 File Offset: 0x0066C5C4
+		// Token: 0x06031D3F RID: 204095 RVA: 0x006BEA40 File Offset: 0x006BCC40
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(16, nullMask, 0);
+			builder.AddByte(17, nullMask, 0);
 		}
 
-		// Token: 0x0602F366 RID: 193382 RVA: 0x0066E3D0 File Offset: 0x0066C5D0
+		// Token: 0x06031D40 RID: 204096 RVA: 0x006BEA4C File Offset: 0x006BCC4C
 		public static Offset<IInteractOption> EndIInteractOption(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractOption>(builder.EndTable());
 		}
 
-		// Token: 0x0602F367 RID: 193383 RVA: 0x0066E3E0 File Offset: 0x0066C5E0
+		// Token: 0x06031D41 RID: 204097 RVA: 0x006BEA5C File Offset: 0x006BCC5C
 		public IInteractOptionT UnPack()
 		{
 			IInteractOptionT interactOptionT = new IInteractOptionT();
@@ -555,7 +653,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return interactOptionT;
 		}
 
-		// Token: 0x0602F368 RID: 193384 RVA: 0x0066E3FC File Offset: 0x0066C5FC
+		// Token: 0x06031D42 RID: 204098 RVA: 0x006BEA78 File Offset: 0x006BCC78
 		public void UnPackTo(IInteractOptionT _o)
 		{
 			_o.Guid = this.Guid;
@@ -588,12 +686,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			{
 				_o.OptionLockTypeList.Add(this.OptionLockTypeList(i));
 			}
+			_o.OptionUnlockTypeList = new List<EOptionUnlockType>();
+			for (int j = 0; j < this.OptionUnlockTypeListLength; j++)
+			{
+				_o.OptionUnlockTypeList.Add(this.OptionUnlockTypeList(j));
+			}
 			_o.LongPressInteractConfig = ((this.LongPressInteractConfig != null) ? this.LongPressInteractConfig.Value.UnPack() : null);
 			_o.KeepInRecall = this.KeepInRecall;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602F369 RID: 193385 RVA: 0x0066E660 File Offset: 0x0066C860
+		// Token: 0x06031D43 RID: 204099 RVA: 0x006BED10 File Offset: 0x006BCF10
 		public static Offset<IInteractOption> Pack(FlatBufferBuilder builder, IInteractOptionT _o)
 		{
 			if (_o == null)
@@ -615,11 +718,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				EOptionLockType[] data = _o.OptionLockTypeList.ToArray();
 				optionLockTypeListOffset = IInteractOption.CreateOptionLockTypeListVector(builder, data);
 			}
+			VectorOffset optionUnlockTypeListOffset = default(VectorOffset);
+			if (_o.OptionUnlockTypeList != null)
+			{
+				EOptionUnlockType[] data2 = _o.OptionUnlockTypeList.ToArray();
+				optionUnlockTypeListOffset = IInteractOption.CreateOptionUnlockTypeListVector(builder, data2);
+			}
 			Offset<ILongPressInteractConfig> longPressInteractConfigOffset = (_o.LongPressInteractConfig == null) ? default(Offset<ILongPressInteractConfig>) : ILongPressInteractConfig.Pack(builder, _o.LongPressInteractConfig);
-			return IInteractOption.CreateIInteractOption(builder, guidOffset, type_type, typeOffset, _o.Icon, tidContentOffset, interactPointOffsetOffset, conditionOffset, confirmBoxOffset, _o.UniquenessTest, _o.DoIntactType, _o.Range, durationOffset, optionLockTipOffset, optionLockTypeListOffset, longPressInteractConfigOffset, _o.KeepInRecall, _o.NullMask);
+			return IInteractOption.CreateIInteractOption(builder, guidOffset, type_type, typeOffset, _o.Icon, tidContentOffset, interactPointOffsetOffset, conditionOffset, confirmBoxOffset, _o.UniquenessTest, _o.DoIntactType, _o.Range, durationOffset, optionLockTipOffset, optionLockTypeListOffset, optionUnlockTypeListOffset, longPressInteractConfigOffset, _o.KeepInRecall, _o.NullMask);
 		}
 
-		// Token: 0x04011125 RID: 69925
+		// Token: 0x04011F91 RID: 73617
 		private Table __p;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A80 RID: 27264
+	// Token: 0x02005BDD RID: 23517
 	public enum ESceneInteractSearchStrategyType
 	{
-		// Token: 0x04023672 RID: 145010
+		// Token: 0x0401E864 RID: 125028
 		ExploreInteractPoint,
-		// Token: 0x04023673 RID: 145011
+		// Token: 0x0401E865 RID: 125029
 		PlacedExploreInteractPoint
 	}
 }

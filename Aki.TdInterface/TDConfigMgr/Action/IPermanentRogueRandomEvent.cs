@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD8 RID: 7384
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EDF RID: 7903
 	public class IPermanentRogueRandomEvent : ISystemOptionType
 	{
-		// Token: 0x06009E85 RID: 40581 RVA: 0x0016A834 File Offset: 0x00168A34
+		// Token: 0x0600A833 RID: 43059 RVA: 0x0017E494 File Offset: 0x0017C694
 		private IPermanentRogueRandomEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E86 RID: 40582 RVA: 0x0016A86C File Offset: 0x00168A6C
+		// Token: 0x0600A834 RID: 43060 RVA: 0x0017E4CC File Offset: 0x0017C6CC
 		public static IPermanentRogueRandomEvent Create([Nullable(2)] IPermanentRogueRandomEvent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E87 RID: 40583 RVA: 0x0016A87F File Offset: 0x00168A7F
+		// Token: 0x0600A835 RID: 43061 RVA: 0x0017E4DF File Offset: 0x0017C6DF
 		public static IPermanentRogueRandomEvent CreateFromSetValue([Nullable(2)] IPermanentRogueRandomEvent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E88 RID: 40584 RVA: 0x0016A892 File Offset: 0x00168A92
+		// Token: 0x0600A836 RID: 43062 RVA: 0x0017E4F2 File Offset: 0x0017C6F2
 		public new IPermanentRogueRandomEvent_SetValue ToSetValue()
 		{
 			return new IPermanentRogueRandomEvent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003155 RID: 12629
-		// (get) Token: 0x06009E89 RID: 40585 RVA: 0x0016A8C9 File Offset: 0x00168AC9
-		// (set) Token: 0x06009E8A RID: 40586 RVA: 0x0016A8F4 File Offset: 0x00168AF4
+		// Token: 0x170033D9 RID: 13273
+		// (get) Token: 0x0600A837 RID: 43063 RVA: 0x0017E529 File Offset: 0x0017C729
+		// (set) Token: 0x0600A838 RID: 43064 RVA: 0x0017E554 File Offset: 0x0017C754
 		public override ESystemOptionType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003156 RID: 12630
-		// (get) Token: 0x06009E8B RID: 40587 RVA: 0x0016A904 File Offset: 0x00168B04
-		// (set) Token: 0x06009E8C RID: 40588 RVA: 0x0016A997 File Offset: 0x00168B97
+		// Token: 0x170033DA RID: 13274
+		// (get) Token: 0x0600A839 RID: 43065 RVA: 0x0017E564 File Offset: 0x0017C764
+		// (set) Token: 0x0600A83A RID: 43066 RVA: 0x0017E5F7 File Offset: 0x0017C7F7
 		public override List<ISystemOption> SystemOptions
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003157 RID: 12631
-		// (get) Token: 0x06009E8D RID: 40589 RVA: 0x0016A9AC File Offset: 0x00168BAC
-		// (set) Token: 0x06009E8E RID: 40590 RVA: 0x0016A9E6 File Offset: 0x00168BE6
+		// Token: 0x170033DB RID: 13275
+		// (get) Token: 0x0600A83B RID: 43067 RVA: 0x0017E60C File Offset: 0x0017C80C
+		// (set) Token: 0x0600A83C RID: 43068 RVA: 0x0017E646 File Offset: 0x0017C846
 		public override bool? KeepPreTalkItem
 		{
 			get
@@ -148,9 +146,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003158 RID: 12632
-		// (get) Token: 0x06009E8F RID: 40591 RVA: 0x0016A9F4 File Offset: 0x00168BF4
-		// (set) Token: 0x06009E90 RID: 40592 RVA: 0x0016AA1F File Offset: 0x00168C1F
+		// Token: 0x170033DC RID: 13276
+		// (get) Token: 0x0600A83D RID: 43069 RVA: 0x0017E654 File Offset: 0x0017C854
+		// (set) Token: 0x0600A83E RID: 43070 RVA: 0x0017E67F File Offset: 0x0017C87F
 		public virtual int EventId
 		{
 			get
@@ -171,18 +169,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FCA RID: 24522
+		// Token: 0x04006526 RID: 25894
 		[Nullable(2)]
 		protected new IPermanentRogueRandomEvent FbInstance;
 
-		// Token: 0x04005FCB RID: 24523
+		// Token: 0x04006527 RID: 25895
 		[Nullable(2)]
 		protected new IPermanentRogueRandomEvent_SetValue PocoInterface;
 
-		// Token: 0x04005FCC RID: 24524
+		// Token: 0x04006528 RID: 25896
 		private List<ISystemOption> _SystemOptionsCache;
 
-		// Token: 0x04005FCD RID: 24525
+		// Token: 0x04006529 RID: 25897
 		private bool _SystemOptionsInited;
 	}
 }

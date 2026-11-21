@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001047 RID: 4167
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001175 RID: 4469
 	public class IPhotographTarget
 	{
-		// Token: 0x06005D5C RID: 23900 RVA: 0x000E2150 File Offset: 0x000E0350
+		// Token: 0x0600634E RID: 25422 RVA: 0x000EF124 File Offset: 0x000ED324
 		private IPhotographTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D5D RID: 23901 RVA: 0x000E2188 File Offset: 0x000E0388
+		// Token: 0x0600634F RID: 25423 RVA: 0x000EF15C File Offset: 0x000ED35C
 		public static IPhotographTarget Create([Nullable(2)] IPhotographTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D5E RID: 23902 RVA: 0x000E219B File Offset: 0x000E039B
+		// Token: 0x06006350 RID: 25424 RVA: 0x000EF16F File Offset: 0x000ED36F
 		public static IPhotographTarget CreateFromSetValue([Nullable(2)] IPhotographTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D5F RID: 23903 RVA: 0x000E21AE File Offset: 0x000E03AE
+		// Token: 0x06006351 RID: 25425 RVA: 0x000EF182 File Offset: 0x000ED382
 		public IPhotographTarget_SetValue ToSetValue()
 		{
 			return new IPhotographTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EC5 RID: 7877
-		// (get) Token: 0x06005D60 RID: 23904 RVA: 0x000E21C1 File Offset: 0x000E03C1
-		// (set) Token: 0x06005D61 RID: 23905 RVA: 0x000E21EC File Offset: 0x000E03EC
+		// Token: 0x17002074 RID: 8308
+		// (get) Token: 0x06006352 RID: 25426 RVA: 0x000EF195 File Offset: 0x000ED395
+		// (set) Token: 0x06006353 RID: 25427 RVA: 0x000EF1C0 File Offset: 0x000ED3C0
 		public virtual EPhotographTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400383A RID: 14394
+		// Token: 0x04003B82 RID: 15234
 		[Nullable(2)]
 		protected IPhotographTarget FbInstance;
 
-		// Token: 0x0400383B RID: 14395
+		// Token: 0x04003B83 RID: 15235
 		[Nullable(2)]
 		protected IPhotographTarget_SetValue PocoInterface;
 	}

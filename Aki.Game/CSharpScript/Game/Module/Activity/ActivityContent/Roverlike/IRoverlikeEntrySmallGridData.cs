@@ -3,17 +3,17 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006192 RID: 24978
+	// Token: 0x02005110 RID: 20752
 	public interface IRoverlikeEntrySmallGridData
 	{
-		// Token: 0x170091F4 RID: 37364
-		// (get) Token: 0x0603F1D3 RID: 258515
-		// (set) Token: 0x0603F1D4 RID: 258516
+		// Token: 0x17006556 RID: 25942
+		// (get) Token: 0x06033E93 RID: 212627
+		// (set) Token: 0x06033E94 RID: 212628
 		int ConfigId { get; set; }
 
-		// Token: 0x170091F5 RID: 37365
-		// (get) Token: 0x0603F1D5 RID: 258517
-		// (set) Token: 0x0603F1D6 RID: 258518
+		// Token: 0x17006557 RID: 25943
+		// (get) Token: 0x06033E95 RID: 212629
+		// (set) Token: 0x06033E96 RID: 212630
 		RoverRogueGainDataType Type { get; set; }
 	}
 }

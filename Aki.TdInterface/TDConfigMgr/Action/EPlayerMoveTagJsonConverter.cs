@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023D0 RID: 9168
+	// Token: 0x02002667 RID: 9831
 	public class EPlayerMoveTagJsonConverter : JsonConverter<EPlayerMoveTag>
 	{
-		// Token: 0x0600C7A8 RID: 51112 RVA: 0x001D3AA0 File Offset: 0x001D1CA0
+		// Token: 0x0600D42B RID: 54315 RVA: 0x001ED24C File Offset: 0x001EB44C
 		public override EPlayerMoveTag Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPlayerMoveTagExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C7A9 RID: 51113 RVA: 0x001D3AC4 File Offset: 0x001D1CC4
+		// Token: 0x0600D42C RID: 54316 RVA: 0x001ED270 File Offset: 0x001EB470
 		public override void Write(Utf8JsonWriter writer, EPlayerMoveTag value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001B12 RID: 6930
+// Token: 0x02000FD1 RID: 4049
 [NullableContext(1)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchCardDataComponent)]
 public class FloroRanchCardDataComponent : FloroRanchEntityDataBaseComponent
 {
-	// Token: 0x0600CD9E RID: 52638 RVA: 0x002ED418 File Offset: 0x002EB618
+	// Token: 0x0600A1AF RID: 41391 RVA: 0x002F8504 File Offset: 0x002F6704
 	public override void RefreshEntityData(FloroRanchPlayUnit entityData)
 	{
 		if (entityData.Type != FloroRanchActionUnitType.Phantom)
@@ -26,7 +26,7 @@ public class FloroRanchCardDataComponent : FloroRanchEntityDataBaseComponent
 		this.RefreshEvolveData(entityData.EvolveData);
 	}
 
-	// Token: 0x0600CD9F RID: 52639 RVA: 0x002ED487 File Offset: 0x002EB687
+	// Token: 0x0600A1B0 RID: 41392 RVA: 0x002F8573 File Offset: 0x002F6773
 	[NullableContext(2)]
 	public void RefreshEvolveData(FREvolveData evolveData)
 	{
@@ -44,13 +44,13 @@ public class FloroRanchCardDataComponent : FloroRanchEntityDataBaseComponent
 		}
 	}
 
-	// Token: 0x0600CDA0 RID: 52640 RVA: 0x002ED4AD File Offset: 0x002EB6AD
+	// Token: 0x0600A1B1 RID: 41393 RVA: 0x002F8599 File Offset: 0x002F6799
 	public bool EvolveDataValid()
 	{
 		return this.EvolveData != null && this.EvolveData.IsValid;
 	}
 
-	// Token: 0x0600CDA1 RID: 52641 RVA: 0x002ED4C4 File Offset: 0x002EB6C4
+	// Token: 0x0600A1B2 RID: 41394 RVA: 0x002F85B0 File Offset: 0x002F67B0
 	public override string Info()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -60,7 +60,7 @@ public class FloroRanchCardDataComponent : FloroRanchEntityDataBaseComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600CDA2 RID: 52642 RVA: 0x002ED514 File Offset: 0x002EB714
+	// Token: 0x0600A1B3 RID: 41395 RVA: 0x002F8600 File Offset: 0x002F6800
 	public override string DebugInfo()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -70,11 +70,11 @@ public class FloroRanchCardDataComponent : FloroRanchEntityDataBaseComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x04005E4D RID: 24141
+	// Token: 0x04005F1C RID: 24348
 	[Nullable(2)]
 	public FloroRanchCardData CardData;
 
-	// Token: 0x04005E4E RID: 24142
+	// Token: 0x04005F1D RID: 24349
 	[Nullable(2)]
 	public FloroRanchEvolveData EvolveData;
 }

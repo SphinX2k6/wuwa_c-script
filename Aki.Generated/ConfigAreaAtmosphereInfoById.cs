@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200009F RID: 159
+	// Token: 0x020000A7 RID: 167
 	public class ConfigAreaAtmosphereInfoById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003BA RID: 954 RVA: 0x0006E9AF File Offset: 0x0006CBAF
+		// Token: 0x060003EA RID: 1002 RVA: 0x00073263 File Offset: 0x00071463
 		static ConfigAreaAtmosphereInfoById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaAtmosphereInfoById.CreateStaticDefaultValue), new Action(ConfigAreaAtmosphereInfoById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003BB RID: 955 RVA: 0x0006E9D0 File Offset: 0x0006CBD0
+		// Token: 0x060003EB RID: 1003 RVA: 0x00073284 File Offset: 0x00071484
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaAtmosphereInfoById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003BC RID: 956 RVA: 0x0006EA4F File Offset: 0x0006CC4F
+		// Token: 0x060003EC RID: 1004 RVA: 0x00073303 File Offset: 0x00071503
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaAtmosphereInfoById.LogPair = null;
 			ConfigAreaAtmosphereInfoById.HandleId = 0;
 		}
 
-		// Token: 0x060003BD RID: 957 RVA: 0x0006EA5D File Offset: 0x0006CC5D
+		// Token: 0x060003ED RID: 1005 RVA: 0x00073311 File Offset: 0x00071511
 		public static void Init()
 		{
 			ConfigAreaAtmosphereInfoById.HandleId = ConfigCommon.InitDataStatement(ConfigAreaAtmosphereInfoById.HandleId, "db_area.db", "select BinData from `AreaAtmosphereInfo` where Id=?");
 		}
 
-		// Token: 0x060003BE RID: 958 RVA: 0x0006EA78 File Offset: 0x0006CC78
+		// Token: 0x060003EE RID: 1006 RVA: 0x0007332C File Offset: 0x0007152C
 		public static AreaAtmosphereInfo? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAreaAtmosphereInfoById.HandleId, ConfigAreaAtmosphereInfoById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AreaAtmosphereInfo?(rootAsAreaAtmosphereInfo);
 		}
 
-		// Token: 0x0400043D RID: 1085
+		// Token: 0x04000475 RID: 1141
 		private const string DB = "db_area.db";
 
-		// Token: 0x0400043E RID: 1086
+		// Token: 0x04000476 RID: 1142
 		private const string FILE = "q.区域.xlsx";
 
-		// Token: 0x0400043F RID: 1087
+		// Token: 0x04000477 RID: 1143
 		private const string TABLE = "AreaAtmosphereInfo";
 
-		// Token: 0x04000440 RID: 1088
+		// Token: 0x04000478 RID: 1144
 		private const string COMMAND = "select BinData from `AreaAtmosphereInfo` where Id=?";
 
-		// Token: 0x04000441 RID: 1089
+		// Token: 0x04000479 RID: 1145
 		private const string KEY_PREFIX = "AreaAtmosphereInfoById";
 
-		// Token: 0x04000442 RID: 1090
+		// Token: 0x0400047A RID: 1146
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000443 RID: 1091
+		// Token: 0x0400047B RID: 1147
 		private static int HandleId;
 	}
 }

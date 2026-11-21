@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002360 RID: 9056
+// Token: 0x02001845 RID: 6213
 internal enum EPayShopSortEnum
 {
-	// Token: 0x040088A6 RID: 34982
+	// Token: 0x040089EB RID: 35307
 	Normal,
-	// Token: 0x040088A7 RID: 34983
+	// Token: 0x040089EC RID: 35308
 	RougeLike
 }

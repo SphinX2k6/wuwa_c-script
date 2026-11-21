@@ -3,10 +3,10 @@ using CSharpScript.Launcher.Ui.HotFix;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002669 RID: 9833
+// Token: 0x02001B54 RID: 6996
 public class QuestResourceUpdateProxy : IResourceUpdateView
 {
-	// Token: 0x06014215 RID: 82453 RVA: 0x00515E68 File Offset: 0x00514068
+	// Token: 0x060116F7 RID: 71415 RVA: 0x00524B20 File Offset: 0x00522D20
 	public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 	{
 		QuestResourceUpdateProxy.<ShowNotEnoughSpaceConfirmation>d__0 <ShowNotEnoughSpaceConfirmation>d__;
@@ -17,7 +17,7 @@ public class QuestResourceUpdateProxy : IResourceUpdateView
 		return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014216 RID: 82454 RVA: 0x00515EAB File Offset: 0x005140AB
+	// Token: 0x060116F8 RID: 71416 RVA: 0x00524B63 File Offset: 0x00522D63
 	public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 	{
 	}

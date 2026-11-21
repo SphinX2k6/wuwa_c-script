@@ -9,36 +9,36 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DCC RID: 7628
+// Token: 0x0200128E RID: 4750
 public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 {
-	// Token: 0x0600E819 RID: 59417 RVA: 0x0036D9D1 File Offset: 0x0036BBD1
+	// Token: 0x0600BC38 RID: 48184 RVA: 0x003796D1 File Offset: 0x003778D1
 	static GuideTutorialTipsView()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuideTutorialTipsView.CreateStaticDefaultValue), new Action(GuideTutorialTipsView.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E81A RID: 59418 RVA: 0x0036D9F0 File Offset: 0x0036BBF0
+	// Token: 0x0600BC39 RID: 48185 RVA: 0x003796F0 File Offset: 0x003778F0
 	public static void CreateStaticDefaultValue()
 	{
 		GuideTutorialTipsView.RealProcessLock = false;
 		GuideTutorialTipsView.BackupTimerHandle = null;
 	}
 
-	// Token: 0x0600E81B RID: 59419 RVA: 0x0036D9FE File Offset: 0x0036BBFE
+	// Token: 0x0600BC3A RID: 48186 RVA: 0x003796FE File Offset: 0x003778FE
 	public static void ResetStaticDefaultValue()
 	{
 		GuideTutorialTipsView.RealProcessLock = false;
 		GuideTutorialTipsView.BackupTimerHandle = null;
 	}
 
-	// Token: 0x0600E81C RID: 59420 RVA: 0x0036DA0C File Offset: 0x0036BC0C
+	// Token: 0x0600BC3B RID: 48187 RVA: 0x0037970C File Offset: 0x0037790C
 	[NullableContext(1)]
 	public GuideTutorialTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E81D RID: 59421 RVA: 0x0036DA18 File Offset: 0x0036BC18
+	// Token: 0x0600BC3C RID: 48188 RVA: 0x00379718 File Offset: 0x00377918
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -65,7 +65,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600E81E RID: 59422 RVA: 0x0036DB24 File Offset: 0x0036BD24
+	// Token: 0x0600BC3D RID: 48189 RVA: 0x00379824 File Offset: 0x00377A24
 	protected override UniTask OnCreateAsync()
 	{
 		GuideTutorialTipsView.<OnCreateAsync>d__13 <OnCreateAsync>d__;
@@ -76,7 +76,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E81F RID: 59423 RVA: 0x0036DB68 File Offset: 0x0036BD68
+	// Token: 0x0600BC3E RID: 48190 RVA: 0x00379868 File Offset: 0x00377A68
 	private void OpenGuideTutorialView()
 	{
 		UUIItem rootItem = this.RootItem;
@@ -87,7 +87,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E820 RID: 59424 RVA: 0x0036DBBC File Offset: 0x0036BDBC
+	// Token: 0x0600BC3F RID: 48191 RVA: 0x003798BC File Offset: 0x00377ABC
 	[NullableContext(1)]
 	private void OnStartSequenceEnd(string _)
 	{
@@ -98,7 +98,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0600E821 RID: 59425 RVA: 0x0036DC09 File Offset: 0x0036BE09
+	// Token: 0x0600BC40 RID: 48192 RVA: 0x00379909 File Offset: 0x00377B09
 	[NullableContext(1)]
 	private void OnFinishSequenceEnd(string _)
 	{
@@ -113,7 +113,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		this.OnTutorialHaveFinished();
 	}
 
-	// Token: 0x0600E822 RID: 59426 RVA: 0x0036DC48 File Offset: 0x0036BE48
+	// Token: 0x0600BC41 RID: 48193 RVA: 0x00379948 File Offset: 0x00377B48
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(0);
@@ -149,7 +149,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		GuideTutorialTipsView.BackupTimerHandle = null;
 	}
 
-	// Token: 0x0600E823 RID: 59427 RVA: 0x0036DD64 File Offset: 0x0036BF64
+	// Token: 0x0600BC42 RID: 48194 RVA: 0x00379A64 File Offset: 0x00377C64
 	protected override void OnAfterShow()
 	{
 		if (this.TutorialInfo.TipState == ETutorialListType.Tip)
@@ -160,7 +160,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		this.UiViewSequence.PlaySequence("StartAtOnce", false, null);
 	}
 
-	// Token: 0x0600E824 RID: 59428 RVA: 0x0036DDB4 File Offset: 0x0036BFB4
+	// Token: 0x0600BC43 RID: 48195 RVA: 0x00379AB4 File Offset: 0x00377CB4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TutorialInfo.TipState == ETutorialListType.Tip)
@@ -177,7 +177,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		GuideTutorialTipsView.ExecuteRealBeforeDestroy(0f);
 	}
 
-	// Token: 0x0600E825 RID: 59429 RVA: 0x0036DE10 File Offset: 0x0036C010
+	// Token: 0x0600BC44 RID: 48196 RVA: 0x00379B10 File Offset: 0x00377D10
 	private static void ExecuteRealBeforeDestroy(float deltaTime)
 	{
 		if (GuideTutorialTipsView.RealProcessLock)
@@ -193,27 +193,27 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		GuideTutorialTipsView.BackupTimerHandle = null;
 	}
 
-	// Token: 0x0600E826 RID: 59430 RVA: 0x0036DE41 File Offset: 0x0036C041
+	// Token: 0x0600BC45 RID: 48197 RVA: 0x00379B41 File Offset: 0x00377D41
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.HideHUD, new Action(this.OnBattleViewChange));
 		EventSystem.Instance.Add(EEventName.ShowHUD, new Action(this.OnBattleViewChange));
 	}
 
-	// Token: 0x0600E827 RID: 59431 RVA: 0x0036DE7B File Offset: 0x0036C07B
+	// Token: 0x0600BC46 RID: 48198 RVA: 0x00379B7B File Offset: 0x00377D7B
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.HideHUD, new Action(this.OnBattleViewChange));
 		EventSystem.Instance.Remove(EEventName.ShowHUD, new Action(this.OnBattleViewChange));
 	}
 
-	// Token: 0x0600E828 RID: 59432 RVA: 0x0036DEB5 File Offset: 0x0036C0B5
+	// Token: 0x0600BC47 RID: 48199 RVA: 0x00379BB5 File Offset: 0x00377DB5
 	private void OnBattleViewChange()
 	{
 		this.SetActive(UiManager.Instance.IsViewShow(EUiViewName.BattleView));
 	}
 
-	// Token: 0x0600E829 RID: 59433 RVA: 0x0036DECC File Offset: 0x0036C0CC
+	// Token: 0x0600BC48 RID: 48200 RVA: 0x00379BCC File Offset: 0x00377DCC
 	protected override void OnTick(float delta)
 	{
 		if (base.IsShow)
@@ -232,7 +232,7 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E82A RID: 59434 RVA: 0x0036DF58 File Offset: 0x0036C158
+	// Token: 0x0600BC49 RID: 48201 RVA: 0x00379C58 File Offset: 0x00377E58
 	private void OnTutorialHaveFinished()
 	{
 		UiManager.Instance.CloseView(this.ViewInfo.Name, delegate(bool _)
@@ -242,50 +242,50 @@ public class GuideTutorialTipsView : UiTickViewBase, IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x04006B5C RID: 27484
+	// Token: 0x04006C3D RID: 27709
 	[Nullable(2)]
 	public TutorialListInfo TutorialInfo;
 
-	// Token: 0x04006B5D RID: 27485
+	// Token: 0x04006C3E RID: 27710
 	private GuideTutorial? ViewConf;
 
-	// Token: 0x04006B5E RID: 27486
+	// Token: 0x04006C3F RID: 27711
 	private int TotalDuration;
 
-	// Token: 0x04006B5F RID: 27487
+	// Token: 0x04006C40 RID: 27712
 	[Nullable(2)]
 	private ULGUISpriteData_BaseObject TypeIconSprite;
 
-	// Token: 0x04006B60 RID: 27488
+	// Token: 0x04006C41 RID: 27713
 	private static bool RealProcessLock;
 
-	// Token: 0x04006B61 RID: 27489
+	// Token: 0x04006C42 RID: 27714
 	private const int BackupDuration = 5000;
 
-	// Token: 0x04006B62 RID: 27490
+	// Token: 0x04006C43 RID: 27715
 	[Nullable(2)]
 	private static TimerHandle BackupTimerHandle;
 
-	// Token: 0x020083AA RID: 33706
+	// Token: 0x02007531 RID: 30001
 	private enum EGuideTutorialTipsView
 	{
-		// Token: 0x0402AE1E RID: 175646
+		// Token: 0x04026143 RID: 155971
 		TxtName,
-		// Token: 0x0402AE1F RID: 175647
+		// Token: 0x04026144 RID: 155972
 		TutorialTypeTex,
-		// Token: 0x0402AE20 RID: 175648
+		// Token: 0x04026145 RID: 155973
 		TutorialBtn,
-		// Token: 0x0402AE21 RID: 175649
+		// Token: 0x04026146 RID: 155974
 		TimerSlider,
-		// Token: 0x0402AE22 RID: 175650
+		// Token: 0x04026147 RID: 155975
 		TxtEvent
 	}
 
-	// Token: 0x020083AB RID: 33707
+	// Token: 0x02007532 RID: 30002
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402AE23 RID: 175651
+		// Token: 0x04026148 RID: 155976
 		public static TTimerAction <0>__ExecuteRealBeforeDestroy;
 	}
 }

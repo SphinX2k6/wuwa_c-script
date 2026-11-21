@@ -4,12 +4,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070BC RID: 28860
+	// Token: 0x02006320 RID: 25376
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ReplaySample
 	{
-		// Token: 0x060465E8 RID: 288232 RVA: 0x011A3008 File Offset: 0x011A1208
+		// Token: 0x0603D6C1 RID: 251585 RVA: 0x011C2CEC File Offset: 0x011C0EEC
 		public ReplaySample(MoveReplaySample moveInfo, int controllerPlayerId, double time)
 		{
 			Aki.Protocol.Vector location = moveInfo.Location;
@@ -48,44 +48,44 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x04024DE5 RID: 151013
+		// Token: 0x04020923 RID: 133411
 		public global::Vector Location = global::Vector.Create();
 
-		// Token: 0x04024DE6 RID: 151014
+		// Token: 0x04020924 RID: 133412
 		public global::Rotator Rotation = global::Rotator.Create();
 
-		// Token: 0x04024DE7 RID: 151015
+		// Token: 0x04020925 RID: 133413
 		public global::Vector LinearVelocity = global::Vector.Create();
 
-		// Token: 0x04024DE8 RID: 151016
+		// Token: 0x04020926 RID: 133414
 		public global::Vector SlideForward = global::Vector.Create();
 
-		// Token: 0x04024DE9 RID: 151017
+		// Token: 0x04020927 RID: 133415
 		public float ControllerPitch;
 
-		// Token: 0x04024DEA RID: 151018
+		// Token: 0x04020928 RID: 133416
 		public int MovementMode;
 
-		// Token: 0x04024DEB RID: 151019
+		// Token: 0x04020929 RID: 133417
 		public int Input;
 
-		// Token: 0x04024DEC RID: 151020
+		// Token: 0x0402092A RID: 133418
 		public double TimeStamp;
 
-		// Token: 0x04024DED RID: 151021
+		// Token: 0x0402092B RID: 133419
 		[Nullable(2)]
 		public RelativeMove RelativeMove;
 
-		// Token: 0x04024DEE RID: 151022
+		// Token: 0x0402092C RID: 133420
 		public int ControllerPlayerId;
 
-		// Token: 0x04024DEF RID: 151023
+		// Token: 0x0402092D RID: 133421
 		public float TimeScale;
 
-		// Token: 0x04024DF0 RID: 151024
+		// Token: 0x0402092E RID: 133422
 		public long ServerTimeStamp;
 
-		// Token: 0x04024DF1 RID: 151025
+		// Token: 0x0402092F RID: 133423
 		public int Rtt;
 	}
 }

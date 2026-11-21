@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleLangCustomModel;
 using FilterDefine;
 
-// Token: 0x02001845 RID: 6213
+// Token: 0x02000CFE RID: 3326
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFilter : CommonFilter
 {
-	// Token: 0x0600B60C RID: 46604 RVA: 0x002929F0 File Offset: 0x00290BF0
+	// Token: 0x060089F7 RID: 35319 RVA: 0x0029D128 File Offset: 0x0029B328
 	protected object GetElementConfigId(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((RoleDataBase)data).GetElementInfo().Value.Id;
 	}
 
-	// Token: 0x0600B60D RID: 46605 RVA: 0x00292A20 File Offset: 0x00290C20
+	// Token: 0x060089F8 RID: 35320 RVA: 0x0029D158 File Offset: 0x0029B358
 	protected object GetWeaponType(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return ((RoleDataBase)data).GetRoleConfig().WeaponType;
 	}
 
-	// Token: 0x0600B60E RID: 46606 RVA: 0x00292A48 File Offset: 0x00290C48
+	// Token: 0x060089F9 RID: 35321 RVA: 0x0029D180 File Offset: 0x0029B380
 	protected object GetRoleTagIdList(object data, Dictionary<int, string> currentSelectMap)
 	{
 		RoleDataBase roleDataBase = (RoleDataBase)data;
 		return RoleModel.Instance.GetRoleTagByRoleInfo(roleDataBase.GetRoleConfig());
 	}
 
-	// Token: 0x0600B60F RID: 46607 RVA: 0x00292A6C File Offset: 0x00290C6C
+	// Token: 0x060089FA RID: 35322 RVA: 0x0029D1A4 File Offset: 0x0029B3A4
 	protected object GetRoleLangCustom(object data, Dictionary<int, string> currentSelectMap)
 	{
 		RoleInstance roleInstance = (RoleInstance)data;
 		return RoleLangCustomModel.Instance.GetRoleLangType(roleInstance.GetRoleId());
 	}
 
-	// Token: 0x0600B610 RID: 46608 RVA: 0x00292A98 File Offset: 0x00290C98
+	// Token: 0x060089FB RID: 35323 RVA: 0x0029D1D0 File Offset: 0x0029B3D0
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.Element, new TFilterConfig(this.GetElementConfigId));

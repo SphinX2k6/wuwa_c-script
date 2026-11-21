@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002153 RID: 8531
+// Token: 0x0200162B RID: 5675
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSaveLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014F6 RID: 5366
-	// (get) Token: 0x06010A2F RID: 68143 RVA: 0x0040C055 File Offset: 0x0040A255
-	// (set) Token: 0x06010A30 RID: 68144 RVA: 0x0040C05D File Offset: 0x0040A25D
+	// Token: 0x17001524 RID: 5412
+	// (get) Token: 0x0600DEA2 RID: 56994 RVA: 0x0041879D File Offset: 0x0041699D
+	// (set) Token: 0x0600DEA3 RID: 56995 RVA: 0x004187A5 File Offset: 0x004169A5
 	public override string event_id { get; set; } = "1836";
 
-	// Token: 0x04007DEC RID: 32236
+	// Token: 0x04007EFC RID: 32508
 	public int i_area_id;
 
-	// Token: 0x04007DED RID: 32237
+	// Token: 0x04007EFD RID: 32509
 	[Nullable(new byte[]
 	{
 		2,
@@ -23,7 +23,7 @@ public class FurnitureSaveLogEvent : PlayerCommonLogData
 	})]
 	public List<FurniturePlaceLogData> o_old_place;
 
-	// Token: 0x04007DEE RID: 32238
+	// Token: 0x04007EFE RID: 32510
 	[Nullable(new byte[]
 	{
 		2,
@@ -31,7 +31,7 @@ public class FurnitureSaveLogEvent : PlayerCommonLogData
 	})]
 	public List<FurniturePlaceLogData> o_new_place;
 
-	// Token: 0x04007DEF RID: 32239
+	// Token: 0x04007EFF RID: 32511
 	[Nullable(new byte[]
 	{
 		2,
@@ -39,15 +39,15 @@ public class FurnitureSaveLogEvent : PlayerCommonLogData
 	})]
 	public List<FurniturePlaceDiffLogData> o_diff;
 
-	// Token: 0x04007DF0 RID: 32240
+	// Token: 0x04007F00 RID: 32512
 	public int i_old_atmosphere;
 
-	// Token: 0x04007DF1 RID: 32241
+	// Token: 0x04007F01 RID: 32513
 	public int i_new_atmosphere;
 
-	// Token: 0x04007DF2 RID: 32242
+	// Token: 0x04007F02 RID: 32514
 	public int i_is_save;
 
-	// Token: 0x04007DF3 RID: 32243
+	// Token: 0x04007F03 RID: 32515
 	public string s_trace_id = "";
 }

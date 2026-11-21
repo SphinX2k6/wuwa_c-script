@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D64 RID: 15716
+	// Token: 0x0200417B RID: 16763
 	public struct ICheckSpringFestivalGameplayCompleted : IFlatbufferObject
 	{
-		// Token: 0x17006BDA RID: 27610
-		// (get) Token: 0x06015BE7 RID: 89063 RVA: 0x00322CD6 File Offset: 0x00320ED6
+		// Token: 0x17007194 RID: 29076
+		// (get) Token: 0x0601711F RID: 94495 RVA: 0x00349F4E File Offset: 0x0034814E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015BE8 RID: 89064 RVA: 0x00322CE3 File Offset: 0x00320EE3
+		// Token: 0x06017120 RID: 94496 RVA: 0x00349F5B File Offset: 0x0034815B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015BE9 RID: 89065 RVA: 0x00322CEC File Offset: 0x00320EEC
+		// Token: 0x06017121 RID: 94497 RVA: 0x00349F64 File Offset: 0x00348164
 		public static ICheckSpringFestivalGameplayCompleted GetRootAsICheckSpringFestivalGameplayCompleted(ByteBuffer _bb)
 		{
 			return ICheckSpringFestivalGameplayCompleted.GetRootAsICheckSpringFestivalGameplayCompleted(_bb, default(ICheckSpringFestivalGameplayCompleted));
 		}
 
-		// Token: 0x06015BEA RID: 89066 RVA: 0x00322D08 File Offset: 0x00320F08
+		// Token: 0x06017122 RID: 94498 RVA: 0x00349F80 File Offset: 0x00348180
 		public static ICheckSpringFestivalGameplayCompleted GetRootAsICheckSpringFestivalGameplayCompleted(ByteBuffer _bb, ICheckSpringFestivalGameplayCompleted obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015BEB RID: 89067 RVA: 0x00322D25 File Offset: 0x00320F25
+		// Token: 0x06017123 RID: 94499 RVA: 0x00349F9D File Offset: 0x0034819D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015BEC RID: 89068 RVA: 0x00322D34 File Offset: 0x00320F34
+		// Token: 0x06017124 RID: 94500 RVA: 0x00349FAC File Offset: 0x003481AC
 		public ICheckSpringFestivalGameplayCompleted __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006BDB RID: 27611
-		// (get) Token: 0x06015BED RID: 89069 RVA: 0x00322D44 File Offset: 0x00320F44
+		// Token: 0x17007195 RID: 29077
+		// (get) Token: 0x06017125 RID: 94501 RVA: 0x00349FBC File Offset: 0x003481BC
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BDC RID: 27612
-		// (get) Token: 0x06015BEE RID: 89070 RVA: 0x00322D80 File Offset: 0x00320F80
+		// Token: 0x17007196 RID: 29078
+		// (get) Token: 0x06017126 RID: 94502 RVA: 0x00349FF8 File Offset: 0x003481F8
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BDD RID: 27613
-		// (get) Token: 0x06015BEF RID: 89071 RVA: 0x00322DE0 File Offset: 0x00320FE0
+		// Token: 0x17007197 RID: 29079
+		// (get) Token: 0x06017127 RID: 94503 RVA: 0x0034A058 File Offset: 0x00348258
 		public TCheckSpringFestivalGameplayType GameplayTypeType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015BF0 RID: 89072 RVA: 0x00322E1C File Offset: 0x0032101C
+		// Token: 0x06017128 RID: 94504 RVA: 0x0034A094 File Offset: 0x00348294
 		public TTable? GameplayType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06015BF1 RID: 89073 RVA: 0x00322E64 File Offset: 0x00321064
+		// Token: 0x06017129 RID: 94505 RVA: 0x0034A0DC File Offset: 0x003482DC
 		public ICheckSpringFestivalGuessJokerCompleted GameplayTypeAsICheckSpringFestivalGuessJokerCompleted()
 		{
 			return this.GameplayType<ICheckSpringFestivalGuessJokerCompleted>().Value;
 		}
 
-		// Token: 0x06015BF2 RID: 89074 RVA: 0x00322E80 File Offset: 0x00321080
+		// Token: 0x0601712A RID: 94506 RVA: 0x0034A0F8 File Offset: 0x003482F8
 		public ICheckSpringFestivalMixDrinksCompleted GameplayTypeAsICheckSpringFestivalMixDrinksCompleted()
 		{
 			return this.GameplayType<ICheckSpringFestivalMixDrinksCompleted>().Value;
 		}
 
-		// Token: 0x06015BF3 RID: 89075 RVA: 0x00322E9B File Offset: 0x0032109B
+		// Token: 0x0601712B RID: 94507 RVA: 0x0034A113 File Offset: 0x00348313
 		public static Offset<ICheckSpringFestivalGameplayCompleted> CreateICheckSpringFestivalGameplayCompleted(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TCheckSpringFestivalGameplayType GameplayType_type = TCheckSpringFestivalGameplayType.NONE, int GameplayTypeOffset = 0)
 		{
 			builder.StartTable(4);
@@ -127,43 +127,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckSpringFestivalGameplayCompleted.EndICheckSpringFestivalGameplayCompleted(builder);
 		}
 
-		// Token: 0x06015BF4 RID: 89076 RVA: 0x00322EC7 File Offset: 0x003210C7
+		// Token: 0x0601712C RID: 94508 RVA: 0x0034A13F File Offset: 0x0034833F
 		public static void StartICheckSpringFestivalGameplayCompleted(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06015BF5 RID: 89077 RVA: 0x00322ED0 File Offset: 0x003210D0
+		// Token: 0x0601712D RID: 94509 RVA: 0x0034A148 File Offset: 0x00348348
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015BF6 RID: 89078 RVA: 0x00322EDB File Offset: 0x003210DB
+		// Token: 0x0601712E RID: 94510 RVA: 0x0034A153 File Offset: 0x00348353
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015BF7 RID: 89079 RVA: 0x00322EEB File Offset: 0x003210EB
+		// Token: 0x0601712F RID: 94511 RVA: 0x0034A163 File Offset: 0x00348363
 		public static void AddGameplayTypeType(FlatBufferBuilder builder, TCheckSpringFestivalGameplayType gameplayTypeType)
 		{
 			builder.AddByte(2, (byte)gameplayTypeType, 0);
 		}
 
-		// Token: 0x06015BF8 RID: 89080 RVA: 0x00322EF6 File Offset: 0x003210F6
+		// Token: 0x06017130 RID: 94512 RVA: 0x0034A16E File Offset: 0x0034836E
 		public static void AddGameplayType(FlatBufferBuilder builder, int gameplayTypeOffset)
 		{
 			builder.AddOffset(3, gameplayTypeOffset, 0);
 		}
 
-		// Token: 0x06015BF9 RID: 89081 RVA: 0x00322F01 File Offset: 0x00321101
+		// Token: 0x06017131 RID: 94513 RVA: 0x0034A179 File Offset: 0x00348379
 		public static Offset<ICheckSpringFestivalGameplayCompleted> EndICheckSpringFestivalGameplayCompleted(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSpringFestivalGameplayCompleted>(builder.EndTable());
 		}
 
-		// Token: 0x06015BFA RID: 89082 RVA: 0x00322F10 File Offset: 0x00321110
+		// Token: 0x06017132 RID: 94514 RVA: 0x0034A188 File Offset: 0x00348388
 		public ICheckSpringFestivalGameplayCompletedT UnPack()
 		{
 			ICheckSpringFestivalGameplayCompletedT checkSpringFestivalGameplayCompletedT = new ICheckSpringFestivalGameplayCompletedT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkSpringFestivalGameplayCompletedT;
 		}
 
-		// Token: 0x06015BFB RID: 89083 RVA: 0x00322F2C File Offset: 0x0032112C
+		// Token: 0x06017133 RID: 94515 RVA: 0x0034A1A4 File Offset: 0x003483A4
 		public void UnPackTo(ICheckSpringFestivalGameplayCompletedT _o)
 		{
 			_o.Type = this.Type;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.GameplayType.Value = ((this.GameplayType<ICheckSpringFestivalMixDrinksCompleted>() != null) ? this.GameplayType<ICheckSpringFestivalMixDrinksCompleted>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06015BFC RID: 89084 RVA: 0x00323010 File Offset: 0x00321210
+		// Token: 0x06017134 RID: 94516 RVA: 0x0034A288 File Offset: 0x00348488
 		public static Offset<ICheckSpringFestivalGameplayCompleted> Pack(FlatBufferBuilder builder, ICheckSpringFestivalGameplayCompletedT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckSpringFestivalGameplayCompleted.CreateICheckSpringFestivalGameplayCompleted(builder, _o.Type, preConditionsOffset, gameplayType_type, gameplayTypeOffset);
 		}
 
-		// Token: 0x0400B645 RID: 46661
+		// Token: 0x0400BFF2 RID: 49138
 		private Table __p;
 	}
 }

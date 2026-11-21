@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046C1 RID: 18113
+	// Token: 0x020035F2 RID: 13810
 	public enum EFingerIndex
 	{
-		// Token: 0x040196E4 RID: 104164
+		// Token: 0x04013D8B RID: 81291
 		One,
-		// Token: 0x040196E5 RID: 104165
+		// Token: 0x04013D8C RID: 81292
 		Two,
-		// Token: 0x040196E6 RID: 104166
+		// Token: 0x04013D8D RID: 81293
 		Three,
-		// Token: 0x040196E7 RID: 104167
+		// Token: 0x04013D8E RID: 81294
 		Four,
-		// Token: 0x040196E8 RID: 104168
+		// Token: 0x04013D8F RID: 81295
 		Five,
-		// Token: 0x040196E9 RID: 104169
+		// Token: 0x04013D90 RID: 81296
 		Six,
-		// Token: 0x040196EA RID: 104170
+		// Token: 0x04013D91 RID: 81297
 		Seven,
-		// Token: 0x040196EB RID: 104171
+		// Token: 0x04013D92 RID: 81298
 		Eight,
-		// Token: 0x040196EC RID: 104172
+		// Token: 0x04013D93 RID: 81299
 		Nine,
-		// Token: 0x040196ED RID: 104173
+		// Token: 0x04013D94 RID: 81300
 		Ten,
-		// Token: 0x040196EE RID: 104174
+		// Token: 0x04013D95 RID: 81301
 		None
 	}
 }

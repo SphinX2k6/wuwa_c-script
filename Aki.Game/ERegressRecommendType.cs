@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001460 RID: 5216
+// Token: 0x02000914 RID: 2324
 public enum ERegressRecommendType
 {
-	// Token: 0x04004164 RID: 16740
+	// Token: 0x040041FC RID: 16892
 	MainQuest = 1,
-	// Token: 0x04004165 RID: 16741
+	// Token: 0x040041FD RID: 16893
 	TimeLimitActivity,
-	// Token: 0x04004166 RID: 16742
+	// Token: 0x040041FE RID: 16894
 	NormalActivity,
-	// Token: 0x04004167 RID: 16743
+	// Token: 0x040041FF RID: 16895
 	Area
 }

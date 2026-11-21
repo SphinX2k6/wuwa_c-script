@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F55 RID: 20309
+	// Token: 0x02005484 RID: 21636
 	public struct ICaptureStrategicPoint2 : IFlatbufferObject
 	{
-		// Token: 0x17009287 RID: 37511
-		// (get) Token: 0x06020305 RID: 131845 RVA: 0x0047AA83 File Offset: 0x00478C83
+		// Token: 0x17009A00 RID: 39424
+		// (get) Token: 0x06022057 RID: 139351 RVA: 0x004B0A73 File Offset: 0x004AEC73
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020306 RID: 131846 RVA: 0x0047AA90 File Offset: 0x00478C90
+		// Token: 0x06022058 RID: 139352 RVA: 0x004B0A80 File Offset: 0x004AEC80
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020307 RID: 131847 RVA: 0x0047AA98 File Offset: 0x00478C98
+		// Token: 0x06022059 RID: 139353 RVA: 0x004B0A88 File Offset: 0x004AEC88
 		public static ICaptureStrategicPoint2 GetRootAsICaptureStrategicPoint2(ByteBuffer _bb)
 		{
 			return ICaptureStrategicPoint2.GetRootAsICaptureStrategicPoint2(_bb, default(ICaptureStrategicPoint2));
 		}
 
-		// Token: 0x06020308 RID: 131848 RVA: 0x0047AAB4 File Offset: 0x00478CB4
+		// Token: 0x0602205A RID: 139354 RVA: 0x004B0AA4 File Offset: 0x004AECA4
 		public static ICaptureStrategicPoint2 GetRootAsICaptureStrategicPoint2(ByteBuffer _bb, ICaptureStrategicPoint2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020309 RID: 131849 RVA: 0x0047AAD1 File Offset: 0x00478CD1
+		// Token: 0x0602205B RID: 139355 RVA: 0x004B0AC1 File Offset: 0x004AECC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602030A RID: 131850 RVA: 0x0047AAE0 File Offset: 0x00478CE0
+		// Token: 0x0602205C RID: 139356 RVA: 0x004B0AD0 File Offset: 0x004AECD0
 		public ICaptureStrategicPoint2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009288 RID: 37512
-		// (get) Token: 0x0602030B RID: 131851 RVA: 0x0047AAF0 File Offset: 0x00478CF0
+		// Token: 0x17009A01 RID: 39425
+		// (get) Token: 0x0602205D RID: 139357 RVA: 0x004B0AE0 File Offset: 0x004AECE0
 		public EProgressBarControlType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009289 RID: 37513
-		// (get) Token: 0x0602030C RID: 131852 RVA: 0x0047AB2C File Offset: 0x00478D2C
+		// Token: 0x17009A02 RID: 39426
+		// (get) Token: 0x0602205E RID: 139358 RVA: 0x004B0B1C File Offset: 0x004AED1C
 		public int MaxValue
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700928A RID: 37514
-		// (get) Token: 0x0602030D RID: 131853 RVA: 0x0047AB68 File Offset: 0x00478D68
+		// Token: 0x17009A03 RID: 39427
+		// (get) Token: 0x0602205F RID: 139359 RVA: 0x004B0B58 File Offset: 0x004AED58
 		public int InitValue
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700928B RID: 37515
-		// (get) Token: 0x0602030E RID: 131854 RVA: 0x0047ABA4 File Offset: 0x00478DA4
+		// Token: 0x17009A04 RID: 39428
+		// (get) Token: 0x06022060 RID: 139360 RVA: 0x004B0B94 File Offset: 0x004AED94
 		public int ProgressPerformanceAttribute
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700928C RID: 37516
-		// (get) Token: 0x0602030F RID: 131855 RVA: 0x0047ABE4 File Offset: 0x00478DE4
+		// Token: 0x17009A05 RID: 39429
+		// (get) Token: 0x06022061 RID: 139361 RVA: 0x004B0BD4 File Offset: 0x004AEDD4
 		public IStaticEntitiyMatch? EnemyEntitiyMatch
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700928D RID: 37517
-		// (get) Token: 0x06020310 RID: 131856 RVA: 0x0047AC44 File Offset: 0x00478E44
+		// Token: 0x17009A06 RID: 39430
+		// (get) Token: 0x06022062 RID: 139362 RVA: 0x004B0C34 File Offset: 0x004AEE34
 		public float PlayerInMonsterOutCaptureSpeed
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700928E RID: 37518
-		// (get) Token: 0x06020311 RID: 131857 RVA: 0x0047AC88 File Offset: 0x00478E88
+		// Token: 0x17009A07 RID: 39431
+		// (get) Token: 0x06022063 RID: 139363 RVA: 0x004B0C78 File Offset: 0x004AEE78
 		public float PlayerInMonsterInCaptureSpeed
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700928F RID: 37519
-		// (get) Token: 0x06020312 RID: 131858 RVA: 0x0047ACCC File Offset: 0x00478ECC
+		// Token: 0x17009A08 RID: 39432
+		// (get) Token: 0x06022064 RID: 139364 RVA: 0x004B0CBC File Offset: 0x004AEEBC
 		public float PlayerOutMonsterOutCaptureSpeed
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009290 RID: 37520
-		// (get) Token: 0x06020313 RID: 131859 RVA: 0x0047AD10 File Offset: 0x00478F10
+		// Token: 0x17009A09 RID: 39433
+		// (get) Token: 0x06022065 RID: 139365 RVA: 0x004B0D00 File Offset: 0x004AEF00
 		public float PlayerOutMonsterInCaptureSpeed
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009291 RID: 37521
-		// (get) Token: 0x06020314 RID: 131860 RVA: 0x0047AD54 File Offset: 0x00478F54
+		// Token: 0x17009A0A RID: 39434
+		// (get) Token: 0x06022066 RID: 139366 RVA: 0x004B0D44 File Offset: 0x004AEF44
 		public byte NullMask
 		{
 			get
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020315 RID: 131861 RVA: 0x0047AD94 File Offset: 0x00478F94
+		// Token: 0x06022067 RID: 139367 RVA: 0x004B0D84 File Offset: 0x004AEF84
 		public static Offset<ICaptureStrategicPoint2> CreateICaptureStrategicPoint2(FlatBufferBuilder builder, EProgressBarControlType Type = EProgressBarControlType.CaptureStrategicPoint, int MaxValue = 0, int InitValue = 0, int ProgressPerformanceAttribute = 0, Offset<IStaticEntitiyMatch> EnemyEntitiyMatchOffset = default(Offset<IStaticEntitiyMatch>), float PlayerInMonsterOutCaptureSpeed = 0f, float PlayerInMonsterInCaptureSpeed = 0f, float PlayerOutMonsterOutCaptureSpeed = 0f, float PlayerOutMonsterInCaptureSpeed = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(10);
@@ -214,79 +214,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICaptureStrategicPoint2.EndICaptureStrategicPoint2(builder);
 		}
 
-		// Token: 0x06020316 RID: 131862 RVA: 0x0047ADFC File Offset: 0x00478FFC
+		// Token: 0x06022068 RID: 139368 RVA: 0x004B0DEC File Offset: 0x004AEFEC
 		public static void StartICaptureStrategicPoint2(FlatBufferBuilder builder)
 		{
 			builder.StartTable(10);
 		}
 
-		// Token: 0x06020317 RID: 131863 RVA: 0x0047AE06 File Offset: 0x00479006
+		// Token: 0x06022069 RID: 139369 RVA: 0x004B0DF6 File Offset: 0x004AEFF6
 		public static void AddType(FlatBufferBuilder builder, EProgressBarControlType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06020318 RID: 131864 RVA: 0x0047AE11 File Offset: 0x00479011
+		// Token: 0x0602206A RID: 139370 RVA: 0x004B0E01 File Offset: 0x004AF001
 		public static void AddMaxValue(FlatBufferBuilder builder, int maxValue)
 		{
 			builder.AddInt(1, maxValue, 0);
 		}
 
-		// Token: 0x06020319 RID: 131865 RVA: 0x0047AE1C File Offset: 0x0047901C
+		// Token: 0x0602206B RID: 139371 RVA: 0x004B0E0C File Offset: 0x004AF00C
 		public static void AddInitValue(FlatBufferBuilder builder, int initValue)
 		{
 			builder.AddInt(2, initValue, 0);
 		}
 
-		// Token: 0x0602031A RID: 131866 RVA: 0x0047AE27 File Offset: 0x00479027
+		// Token: 0x0602206C RID: 139372 RVA: 0x004B0E17 File Offset: 0x004AF017
 		public static void AddProgressPerformanceAttribute(FlatBufferBuilder builder, int progressPerformanceAttribute)
 		{
 			builder.AddInt(3, progressPerformanceAttribute, 0);
 		}
 
-		// Token: 0x0602031B RID: 131867 RVA: 0x0047AE32 File Offset: 0x00479032
+		// Token: 0x0602206D RID: 139373 RVA: 0x004B0E22 File Offset: 0x004AF022
 		public static void AddEnemyEntitiyMatch(FlatBufferBuilder builder, Offset<IStaticEntitiyMatch> enemyEntitiyMatchOffset)
 		{
 			builder.AddOffset(4, enemyEntitiyMatchOffset.Value, 0);
 		}
 
-		// Token: 0x0602031C RID: 131868 RVA: 0x0047AE42 File Offset: 0x00479042
+		// Token: 0x0602206E RID: 139374 RVA: 0x004B0E32 File Offset: 0x004AF032
 		public static void AddPlayerInMonsterOutCaptureSpeed(FlatBufferBuilder builder, float playerInMonsterOutCaptureSpeed)
 		{
 			builder.AddFloat(5, playerInMonsterOutCaptureSpeed, 0.0);
 		}
 
-		// Token: 0x0602031D RID: 131869 RVA: 0x0047AE55 File Offset: 0x00479055
+		// Token: 0x0602206F RID: 139375 RVA: 0x004B0E45 File Offset: 0x004AF045
 		public static void AddPlayerInMonsterInCaptureSpeed(FlatBufferBuilder builder, float playerInMonsterInCaptureSpeed)
 		{
 			builder.AddFloat(6, playerInMonsterInCaptureSpeed, 0.0);
 		}
 
-		// Token: 0x0602031E RID: 131870 RVA: 0x0047AE68 File Offset: 0x00479068
+		// Token: 0x06022070 RID: 139376 RVA: 0x004B0E58 File Offset: 0x004AF058
 		public static void AddPlayerOutMonsterOutCaptureSpeed(FlatBufferBuilder builder, float playerOutMonsterOutCaptureSpeed)
 		{
 			builder.AddFloat(7, playerOutMonsterOutCaptureSpeed, 0.0);
 		}
 
-		// Token: 0x0602031F RID: 131871 RVA: 0x0047AE7B File Offset: 0x0047907B
+		// Token: 0x06022071 RID: 139377 RVA: 0x004B0E6B File Offset: 0x004AF06B
 		public static void AddPlayerOutMonsterInCaptureSpeed(FlatBufferBuilder builder, float playerOutMonsterInCaptureSpeed)
 		{
 			builder.AddFloat(8, playerOutMonsterInCaptureSpeed, 0.0);
 		}
 
-		// Token: 0x06020320 RID: 131872 RVA: 0x0047AE8E File Offset: 0x0047908E
+		// Token: 0x06022072 RID: 139378 RVA: 0x004B0E7E File Offset: 0x004AF07E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x06020321 RID: 131873 RVA: 0x0047AE9A File Offset: 0x0047909A
+		// Token: 0x06022073 RID: 139379 RVA: 0x004B0E8A File Offset: 0x004AF08A
 		public static Offset<ICaptureStrategicPoint2> EndICaptureStrategicPoint2(FlatBufferBuilder builder)
 		{
 			return new Offset<ICaptureStrategicPoint2>(builder.EndTable());
 		}
 
-		// Token: 0x06020322 RID: 131874 RVA: 0x0047AEA8 File Offset: 0x004790A8
+		// Token: 0x06022074 RID: 139380 RVA: 0x004B0E98 File Offset: 0x004AF098
 		public ICaptureStrategicPoint2T UnPack()
 		{
 			ICaptureStrategicPoint2T captureStrategicPoint2T = new ICaptureStrategicPoint2T();
@@ -294,7 +294,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return captureStrategicPoint2T;
 		}
 
-		// Token: 0x06020323 RID: 131875 RVA: 0x0047AEC4 File Offset: 0x004790C4
+		// Token: 0x06022075 RID: 139381 RVA: 0x004B0EB4 File Offset: 0x004AF0B4
 		public void UnPackTo(ICaptureStrategicPoint2T _o)
 		{
 			_o.Type = this.Type;
@@ -309,7 +309,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06020324 RID: 131876 RVA: 0x0047AF6C File Offset: 0x0047916C
+		// Token: 0x06022076 RID: 139382 RVA: 0x004B0F5C File Offset: 0x004AF15C
 		public static Offset<ICaptureStrategicPoint2> Pack(FlatBufferBuilder builder, ICaptureStrategicPoint2T _o)
 		{
 			if (_o == null)
@@ -320,7 +320,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICaptureStrategicPoint2.CreateICaptureStrategicPoint2(builder, _o.Type, _o.MaxValue, _o.InitValue, _o.ProgressPerformanceAttribute, enemyEntitiyMatchOffset, _o.PlayerInMonsterOutCaptureSpeed, _o.PlayerInMonsterInCaptureSpeed, _o.PlayerOutMonsterOutCaptureSpeed, _o.PlayerOutMonsterInCaptureSpeed, _o.NullMask);
 		}
 
-		// Token: 0x0400DDD9 RID: 56793
+		// Token: 0x0400E983 RID: 59779
 		private Table __p;
 	}
 }

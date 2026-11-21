@@ -8,29 +8,26 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.NPC.Animal
 {
-	// Token: 0x020041A5 RID: 16805
+	// Token: 0x020032C0 RID: 12992
 	[UnrealObjectPath("/Game/Aki/Character/NPC/Animal/BPI_AnimalEcological.BPI_AnimalEcological_C")]
 	public interface IBPI_AnimalEcological_C : IUnrealBlueprintInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x0602BBEF RID: 179183 RVA: 0x00A093F3 File Offset: 0x00A075F3
+		// Token: 0x06020E80 RID: 134784 RVA: 0x00952263 File Offset: 0x00950463
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void SystemUiEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__SystemUiEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF0 RID: 179184 RVA: 0x00A09407 File Offset: 0x00A07607
+		// Token: 0x06020E81 RID: 134785 RVA: 0x00952277 File Offset: 0x00950477
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void SystemUiStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__SystemUiStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF1 RID: 179185 RVA: 0x00A0941C File Offset: 0x00A0761C
+		// Token: 0x06020E82 RID: 134786 RVA: 0x0095228C File Offset: 0x0095048C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void FeedStart(FGameplayTag GameplayTag)
 		{
 			IBPI_AnimalEcological_C.__FeedStart_FunctionParams* ptr = stackalloc IBPI_AnimalEcological_C.__FeedStart_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(IBPI_AnimalEcological_C.__FeedStart_FunctionParams) & -16L;
@@ -39,9 +36,8 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__FeedStart_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602BBF2 RID: 179186 RVA: 0x00A09464 File Offset: 0x00A07664
+		// Token: 0x06020E83 RID: 134787 RVA: 0x009522D4 File Offset: 0x009504D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void GetCurrentActionTime(ref float ActionTime)
 		{
 			IBPI_AnimalEcological_C.__GetCurrentActionTime_FunctionParams* ptr = stackalloc IBPI_AnimalEcological_C.__GetCurrentActionTime_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(IBPI_AnimalEcological_C.__GetCurrentActionTime_FunctionParams) & -16L;
@@ -51,130 +47,117 @@ namespace AkiClient.Game.Aki.Character.NPC.Animal
 			ActionTime = ptr->ActionTime;
 		}
 
-		// Token: 0x0602BBF3 RID: 179187 RVA: 0x00A094B3 File Offset: 0x00A076B3
+		// Token: 0x06020E84 RID: 134788 RVA: 0x00952323 File Offset: 0x00950523
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void NoneStateEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__NoneStateEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF4 RID: 179188 RVA: 0x00A094C7 File Offset: 0x00A076C7
+		// Token: 0x06020E85 RID: 134789 RVA: 0x00952337 File Offset: 0x00950537
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void NoneStateStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__NoneStateStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF5 RID: 179189 RVA: 0x00A094DB File Offset: 0x00A076DB
+		// Token: 0x06020E86 RID: 134790 RVA: 0x0095234B File Offset: 0x0095054B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void StateMachineInitializationComplete()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__StateMachineInitializationComplete_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF6 RID: 179190 RVA: 0x00A094EF File Offset: 0x00A076EF
+		// Token: 0x06020E87 RID: 134791 RVA: 0x0095235F File Offset: 0x0095055F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void InteractEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__InteractEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF7 RID: 179191 RVA: 0x00A09503 File Offset: 0x00A07703
+		// Token: 0x06020E88 RID: 134792 RVA: 0x00952373 File Offset: 0x00950573
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void InteractStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__InteractStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF8 RID: 179192 RVA: 0x00A09517 File Offset: 0x00A07717
+		// Token: 0x06020E89 RID: 134793 RVA: 0x00952387 File Offset: 0x00950587
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void IdleEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__IdleEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBF9 RID: 179193 RVA: 0x00A0952B File Offset: 0x00A0772B
+		// Token: 0x06020E8A RID: 134794 RVA: 0x0095239B File Offset: 0x0095059B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void IdleStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__IdleStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBFA RID: 179194 RVA: 0x00A0953F File Offset: 0x00A0773F
+		// Token: 0x06020E8B RID: 134795 RVA: 0x009523AF File Offset: 0x009505AF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void UnderAttackEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__UnderAttackEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBFB RID: 179195 RVA: 0x00A09553 File Offset: 0x00A07753
+		// Token: 0x06020E8C RID: 134796 RVA: 0x009523C3 File Offset: 0x009505C3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void UnderAttackStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__UnderAttackStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBFC RID: 179196 RVA: 0x00A09567 File Offset: 0x00A07767
+		// Token: 0x06020E8D RID: 134797 RVA: 0x009523D7 File Offset: 0x009505D7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void AlertEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__AlertEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBFD RID: 179197 RVA: 0x00A0957B File Offset: 0x00A0777B
+		// Token: 0x06020E8E RID: 134798 RVA: 0x009523EB File Offset: 0x009505EB
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void AlertStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__AlertStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBFE RID: 179198 RVA: 0x00A0958F File Offset: 0x00A0778F
+		// Token: 0x06020E8F RID: 134799 RVA: 0x009523FF File Offset: 0x009505FF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void TakeOffEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__TakeOffEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602BBFF RID: 179199 RVA: 0x00A095A3 File Offset: 0x00A077A3
+		// Token: 0x06020E90 RID: 134800 RVA: 0x00952413 File Offset: 0x00950613
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void TakeOffStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_AnimalEcological_C_ReflectionImplementationFields.__TakeOffStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x04016CC6 RID: 93382
+		// Token: 0x04011D14 RID: 72980
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/NPC/Animal/BPI_AnimalEcological.BPI_AnimalEcological_C";
 
-		// Token: 0x0200A593 RID: 42387
+		// Token: 0x02008FE7 RID: 36839
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __FeedStart_FunctionParams
 		{
-			// Token: 0x0403241F RID: 205855
+			// Token: 0x0402CD96 RID: 183702
 			[FieldOffset(0)]
 			public FGameplayTag GameplayTag;
 		}
 
-		// Token: 0x0200A594 RID: 42388
+		// Token: 0x02008FE8 RID: 36840
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetCurrentActionTime_FunctionParams
 		{
-			// Token: 0x04032420 RID: 205856
+			// Token: 0x0402CD97 RID: 183703
 			[FieldOffset(0)]
 			public float ActionTime;
 		}

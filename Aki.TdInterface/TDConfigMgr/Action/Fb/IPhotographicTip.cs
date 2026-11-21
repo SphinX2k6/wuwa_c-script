@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002759 RID: 10073
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A25 RID: 10789
 	public class IPhotographicTip : ICommonTipType
 	{
-		// Token: 0x0600E06C RID: 57452 RVA: 0x00213058 File Offset: 0x00211258
+		// Token: 0x0600EE6C RID: 61036 RVA: 0x0022FB90 File Offset: 0x0022DD90
 		public static IPhotographicTip Create(IPhotographicTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700437C RID: 17276
-		// (get) Token: 0x0600E06D RID: 57453 RVA: 0x00213077 File Offset: 0x00211277
+		// Token: 0x170046D0 RID: 18128
+		// (get) Token: 0x0600EE6D RID: 61037 RVA: 0x0022FBAF File Offset: 0x0022DDAF
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700437D RID: 17277
-		// (get) Token: 0x0600E06E RID: 57454 RVA: 0x00213084 File Offset: 0x00211284
+		// Token: 0x170046D1 RID: 18129
+		// (get) Token: 0x0600EE6E RID: 61038 RVA: 0x0022FBBC File Offset: 0x0022DDBC
 		public virtual string MainText
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C57 RID: 31831
+		// Token: 0x04008305 RID: 33541
 		private IPhotographicTip Instance;
 	}
 }

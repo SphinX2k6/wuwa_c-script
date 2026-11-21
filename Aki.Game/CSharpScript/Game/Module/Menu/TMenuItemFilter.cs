@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053E4 RID: 21476
-	// (Invoke) Token: 0x06036EDF RID: 224991
+	// Token: 0x020043C7 RID: 17351
+	// (Invoke) Token: 0x0602BE27 RID: 179751
 	public delegate bool TMenuItemFilter(MenuData data);
 }

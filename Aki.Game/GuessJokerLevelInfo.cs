@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x0200105E RID: 4190
+// Token: 0x02000512 RID: 1298
 public class GuessJokerLevelInfo : IGuessJokerLevelInfo
 {
-	// Token: 0x170008BC RID: 2236
-	// (get) Token: 0x06006B5A RID: 27482 RVA: 0x001591D3 File Offset: 0x001573D3
-	// (set) Token: 0x06006B5B RID: 27483 RVA: 0x001591DB File Offset: 0x001573DB
+	// Token: 0x170008DC RID: 2268
+	// (get) Token: 0x06003EEF RID: 16111 RVA: 0x00161AFB File Offset: 0x0015FCFB
+	// (set) Token: 0x06003EF0 RID: 16112 RVA: 0x00161B03 File Offset: 0x0015FD03
 	public int LevelId { get; set; }
 
-	// Token: 0x170008BD RID: 2237
-	// (get) Token: 0x06006B5C RID: 27484 RVA: 0x001591E4 File Offset: 0x001573E4
-	// (set) Token: 0x06006B5D RID: 27485 RVA: 0x001591EC File Offset: 0x001573EC
+	// Token: 0x170008DD RID: 2269
+	// (get) Token: 0x06003EF1 RID: 16113 RVA: 0x00161B0C File Offset: 0x0015FD0C
+	// (set) Token: 0x06003EF2 RID: 16114 RVA: 0x00161B14 File Offset: 0x0015FD14
 	public bool Unlock { get; set; }
 
-	// Token: 0x170008BE RID: 2238
-	// (get) Token: 0x06006B5E RID: 27486 RVA: 0x001591F5 File Offset: 0x001573F5
-	// (set) Token: 0x06006B5F RID: 27487 RVA: 0x001591FD File Offset: 0x001573FD
+	// Token: 0x170008DE RID: 2270
+	// (get) Token: 0x06003EF3 RID: 16115 RVA: 0x00161B1D File Offset: 0x0015FD1D
+	// (set) Token: 0x06003EF4 RID: 16116 RVA: 0x00161B25 File Offset: 0x0015FD25
 	public bool FirstPass { get; set; }
 
-	// Token: 0x170008BF RID: 2239
-	// (get) Token: 0x06006B60 RID: 27488 RVA: 0x00159206 File Offset: 0x00157406
-	// (set) Token: 0x06006B61 RID: 27489 RVA: 0x0015920E File Offset: 0x0015740E
+	// Token: 0x170008DF RID: 2271
+	// (get) Token: 0x06003EF5 RID: 16117 RVA: 0x00161B2E File Offset: 0x0015FD2E
+	// (set) Token: 0x06003EF6 RID: 16118 RVA: 0x00161B36 File Offset: 0x0015FD36
 	public bool RewardGet { get; set; }
 
-	// Token: 0x170008C0 RID: 2240
-	// (get) Token: 0x06006B62 RID: 27490 RVA: 0x00159217 File Offset: 0x00157417
-	// (set) Token: 0x06006B63 RID: 27491 RVA: 0x0015921F File Offset: 0x0015741F
+	// Token: 0x170008E0 RID: 2272
+	// (get) Token: 0x06003EF7 RID: 16119 RVA: 0x00161B3F File Offset: 0x0015FD3F
+	// (set) Token: 0x06003EF8 RID: 16120 RVA: 0x00161B47 File Offset: 0x0015FD47
 	public bool PlayerWin { get; set; }
 }

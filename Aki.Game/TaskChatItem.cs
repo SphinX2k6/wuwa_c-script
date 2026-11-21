@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002535 RID: 9525
+// Token: 0x02001A1C RID: 6684
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -19,7 +19,7 @@ using UnrealEngine;
 })]
 public class TaskChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 {
-	// Token: 0x06013255 RID: 78421 RVA: 0x004C0998 File Offset: 0x004BEB98
+	// Token: 0x06010719 RID: 67353 RVA: 0x004CE944 File Offset: 0x004CCB44
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,13 +37,13 @@ public class TaskChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		};
 	}
 
-	// Token: 0x06013256 RID: 78422 RVA: 0x004C0A57 File Offset: 0x004BEC57
+	// Token: 0x0601071A RID: 67354 RVA: 0x004CEA03 File Offset: 0x004CCC03
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06013257 RID: 78423 RVA: 0x004C0A6C File Offset: 0x004BEC6C
+	// Token: 0x0601071B RID: 67355 RVA: 0x004CEA18 File Offset: 0x004CCC18
 	[NullableContext(1)]
 	public override void Refresh(PhoneMsgChatData data)
 	{
@@ -72,7 +72,7 @@ public class TaskChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "Message_QuestNotAccepted", Array.Empty<object>());
 	}
 
-	// Token: 0x06013258 RID: 78424 RVA: 0x004C0B34 File Offset: 0x004BED34
+	// Token: 0x0601071C RID: 67356 RVA: 0x004CEAE0 File Offset: 0x004CCCE0
 	private void SetView()
 	{
 		if (this.Quest == null)
@@ -90,7 +90,7 @@ public class TaskChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		this.SetSpriteByPath(questTypeMark, base.GetSprite(1), false, null, null);
 	}
 
-	// Token: 0x06013259 RID: 78425 RVA: 0x004C0BE4 File Offset: 0x004BEDE4
+	// Token: 0x0601071D RID: 67357 RVA: 0x004CEB90 File Offset: 0x004CCD90
 	private void OnGoToClick()
 	{
 		if (this.Quest == null || this.PhoneMsgChatData == null)
@@ -113,7 +113,7 @@ public class TaskChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		LogReportController.Instance.LogReport(onJumpInShortMessageLogEvent);
 	}
 
-	// Token: 0x0601325A RID: 78426 RVA: 0x004C0CBC File Offset: 0x004BEEBC
+	// Token: 0x0601071E RID: 67358 RVA: 0x004CEC68 File Offset: 0x004CCE68
 	public UniTask PlayTaskAnimationAsync()
 	{
 		TaskChatItem.<PlayTaskAnimationAsync>d__9 <PlayTaskAnimationAsync>d__;
@@ -124,36 +124,36 @@ public class TaskChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		return <PlayTaskAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601325B RID: 78427 RVA: 0x004C0CFF File Offset: 0x004BEEFF
+	// Token: 0x0601071F RID: 67359 RVA: 0x004CECAB File Offset: 0x004CCEAB
 	public void StopTaskAnimation()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("In", false, true);
 	}
 
-	// Token: 0x04009093 RID: 37011
+	// Token: 0x040091EA RID: 37354
 	private PhoneMsgChatData PhoneMsgChatData;
 
-	// Token: 0x04009094 RID: 37012
+	// Token: 0x040091EB RID: 37355
 	private IQuest Quest;
 
-	// Token: 0x04009095 RID: 37013
+	// Token: 0x040091EC RID: 37356
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008ABC RID: 35516
+	// Token: 0x02007C43 RID: 31811
 	[NullableContext(0)]
 	private enum EItemTaskComponent
 	{
-		// Token: 0x0402D0D9 RID: 184537
+		// Token: 0x040283ED RID: 164845
 		SpriteColor,
-		// Token: 0x0402D0DA RID: 184538
+		// Token: 0x040283EE RID: 164846
 		SpriteIconTask,
-		// Token: 0x0402D0DB RID: 184539
+		// Token: 0x040283EF RID: 164847
 		TxtTaskState,
-		// Token: 0x0402D0DC RID: 184540
+		// Token: 0x040283F0 RID: 164848
 		TxtTaskName,
-		// Token: 0x0402D0DD RID: 184541
+		// Token: 0x040283F1 RID: 164849
 		BtnGoTo,
-		// Token: 0x0402D0DE RID: 184542
+		// Token: 0x040283F2 RID: 164850
 		SpriteFinish
 	}
 }

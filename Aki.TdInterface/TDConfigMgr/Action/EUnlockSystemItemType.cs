@@ -3,20 +3,20 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016EF RID: 5871
+	// Token: 0x0200186B RID: 6251
 	[EnumExtensions]
 	public enum EUnlockSystemItemType
 	{
-		// Token: 0x04004F6F RID: 20335
+		// Token: 0x0400539C RID: 21404
 		CookSystem,
-		// Token: 0x04004F70 RID: 20336
+		// Token: 0x0400539D RID: 21405
 		AtlasSystem,
-		// Token: 0x04004F71 RID: 20337
+		// Token: 0x0400539E RID: 21406
 		AchievementSystem,
-		// Token: 0x04004F72 RID: 20338
+		// Token: 0x0400539F RID: 21407
 		[EnumStringMember("MemoirsSystem")]
 		PhotoMemoryCollect,
-		// Token: 0x04004F73 RID: 20339
+		// Token: 0x040053A0 RID: 21408
 		DangoCollect
 	}
 }

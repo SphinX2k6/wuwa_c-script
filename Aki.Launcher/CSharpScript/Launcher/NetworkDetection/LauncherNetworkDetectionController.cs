@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.NetworkDetection
 {
-	// Token: 0x020001A8 RID: 424
+	// Token: 0x020001AC RID: 428
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherNetworkDetectionController : Singleton
 	{
-		// Token: 0x06000BB5 RID: 2997 RVA: 0x00049998 File Offset: 0x00047B98
+		// Token: 0x06000BEC RID: 3052 RVA: 0x0004C188 File Offset: 0x0004A388
 		public unsafe bool SetDetectionConfig(ILoginServersData data)
 		{
 			if (this.LoginServersData != data)
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return true;
 		}
 
-		// Token: 0x06000BB6 RID: 2998 RVA: 0x00049A7C File Offset: 0x00047C7C
+		// Token: 0x06000BED RID: 3053 RVA: 0x0004C26C File Offset: 0x0004A46C
 		private unsafe bool CheckDetectionConfigEntryValidate(ILoginServersData data, INetworkDetectionConfig detectionConfig, bool log = false)
 		{
 			string pingUrl = detectionConfig.PingUrl;
@@ -75,7 +75,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return true;
 		}
 
-		// Token: 0x06000BB7 RID: 2999 RVA: 0x00049B30 File Offset: 0x00047D30
+		// Token: 0x06000BEE RID: 3054 RVA: 0x0004C320 File Offset: 0x0004A520
 		private bool CheckDetectionConfig()
 		{
 			if (this.NetworkDetectionConfig == null)
@@ -86,7 +86,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return true;
 		}
 
-		// Token: 0x06000BB8 RID: 3000 RVA: 0x00049B60 File Offset: 0x00047D60
+		// Token: 0x06000BEF RID: 3055 RVA: 0x0004C350 File Offset: 0x0004A550
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -103,7 +103,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartDetection>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BB9 RID: 3001 RVA: 0x00049BAC File Offset: 0x00047DAC
+		// Token: 0x06000BF0 RID: 3056 RVA: 0x0004C39C File Offset: 0x0004A59C
 		public INetworkDetectionResult StartProxyDetect()
 		{
 			string currentProxyAddress = UKuroNetworkDetection.GetCurrentProxyAddress();
@@ -116,14 +116,14 @@ namespace CSharpScript.Launcher.NetworkDetection
 			};
 		}
 
-		// Token: 0x06000BBA RID: 3002 RVA: 0x00049BEC File Offset: 0x00047DEC
+		// Token: 0x06000BF1 RID: 3057 RVA: 0x0004C3DC File Offset: 0x0004A5DC
 		public bool SkipDomainDetect()
 		{
 			string ip = this.NetworkDetectionConfig.ip;
 			return ip == null || !ip.StartsWith("http");
 		}
 
-		// Token: 0x06000BBB RID: 3003 RVA: 0x00049C18 File Offset: 0x00047E18
+		// Token: 0x06000BF2 RID: 3058 RVA: 0x0004C408 File Offset: 0x0004A608
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -139,7 +139,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartDomainDetect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BBC RID: 3004 RVA: 0x00049C5B File Offset: 0x00047E5B
+		// Token: 0x06000BF3 RID: 3059 RVA: 0x0004C44B File Offset: 0x0004A64B
 		public void ForceStopDomainDetect()
 		{
 			UKuroNetworkDetection.ResolveDomainFinish();
@@ -150,7 +150,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		}
 
-		// Token: 0x06000BBD RID: 3005 RVA: 0x00049C7C File Offset: 0x00047E7C
+		// Token: 0x06000BF4 RID: 3060 RVA: 0x0004C46C File Offset: 0x0004A66C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -166,7 +166,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartPingDetect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BBE RID: 3006 RVA: 0x00049CC0 File Offset: 0x00047EC0
+		// Token: 0x06000BF5 RID: 3061 RVA: 0x0004C4B0 File Offset: 0x0004A6B0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -182,13 +182,13 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartHttpsDetect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BBF RID: 3007 RVA: 0x00049D03 File Offset: 0x00047F03
+		// Token: 0x06000BF6 RID: 3062 RVA: 0x0004C4F3 File Offset: 0x0004A6F3
 		public bool GetGateWayUdpCheckState()
 		{
 			return this.GateWayUdpCheckState;
 		}
 
-		// Token: 0x06000BC0 RID: 3008 RVA: 0x00049D0C File Offset: 0x00047F0C
+		// Token: 0x06000BF7 RID: 3063 RVA: 0x0004C4FC File Offset: 0x0004A6FC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -204,7 +204,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartUdpDetect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BC1 RID: 3009 RVA: 0x00049D50 File Offset: 0x00047F50
+		// Token: 0x06000BF8 RID: 3064 RVA: 0x0004C540 File Offset: 0x0004A740
 		public unsafe void SetGateWayCheckInfo([Nullable(2)] ILoginNetworkDetectionConfig data, string uid)
 		{
 			if (data != null)
@@ -223,7 +223,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			instance.Debug(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06000BC2 RID: 3010 RVA: 0x00049DEC File Offset: 0x00047FEC
+		// Token: 0x06000BF9 RID: 3065 RVA: 0x0004C5DC File Offset: 0x0004A7DC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -239,7 +239,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartGateWayUdpReachable>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BC3 RID: 3011 RVA: 0x00049E30 File Offset: 0x00048030
+		// Token: 0x06000BFA RID: 3066 RVA: 0x0004C620 File Offset: 0x0004A820
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -255,7 +255,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartUdpCheckPingUrlList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BC4 RID: 3012 RVA: 0x00049E74 File Offset: 0x00048074
+		// Token: 0x06000BFB RID: 3067 RVA: 0x0004C664 File Offset: 0x0004A864
 		private unsafe void CheckGateWayDdpReachable(List<string> urlList, int index, int[] udpPortArray, string payload, Action<bool, int> callBack)
 		{
 			LauncherNetworkDetectionController.<>c__DisplayClass23_0 CS$<>8__locals1 = new LauncherNetworkDetectionController.<>c__DisplayClass23_0();
@@ -284,7 +284,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		}
 
-		// Token: 0x06000BC5 RID: 3013 RVA: 0x00049F74 File Offset: 0x00048174
+		// Token: 0x06000BFC RID: 3068 RVA: 0x0004C764 File Offset: 0x0004A964
 		private unsafe void CheckDetectUdp(List<string> urlList, int index, int[] udpPortArray, Action<bool, int> callBack)
 		{
 			LauncherNetworkDetectionController.<>c__DisplayClass24_0 CS$<>8__locals1 = new LauncherNetworkDetectionController.<>c__DisplayClass24_0();
@@ -312,7 +312,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		}
 
-		// Token: 0x06000BC6 RID: 3014 RVA: 0x0004A074 File Offset: 0x00048274
+		// Token: 0x06000BFD RID: 3069 RVA: 0x0004C864 File Offset: 0x0004AA64
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -328,7 +328,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return <StartTraceRouteDetect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000BC7 RID: 3015 RVA: 0x0004A0B8 File Offset: 0x000482B8
+		// Token: 0x06000BFE RID: 3070 RVA: 0x0004C8A8 File Offset: 0x0004AAA8
 		private void CheckLoginUrlReachable(List<string> loginUrlList, int index, Action<bool> callBack)
 		{
 			LauncherNetworkDetectionController.<>c__DisplayClass26_0 CS$<>8__locals1 = new LauncherNetworkDetectionController.<>c__DisplayClass26_0();
@@ -345,7 +345,7 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		}
 
-		// Token: 0x06000BC8 RID: 3016 RVA: 0x0004A134 File Offset: 0x00048334
+		// Token: 0x06000BFF RID: 3071 RVA: 0x0004C924 File Offset: 0x0004AB24
 		private string ExtractDomain(string input)
 		{
 			if (string.IsNullOrEmpty(input))
@@ -363,20 +363,20 @@ namespace CSharpScript.Launcher.NetworkDetection
 			return Regex.Replace(text, "^www\\.", "", RegexOptions.IgnoreCase);
 		}
 
-		// Token: 0x06000BC9 RID: 3017 RVA: 0x0004A1A7 File Offset: 0x000483A7
+		// Token: 0x06000C00 RID: 3072 RVA: 0x0004C997 File Offset: 0x0004AB97
 		public bool IsGlobalPlayer()
 		{
 			return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN";
 		}
 
-		// Token: 0x06000BCA RID: 3018 RVA: 0x0004A1C2 File Offset: 0x000483C2
+		// Token: 0x06000C01 RID: 3073 RVA: 0x0004C9B2 File Offset: 0x0004ABB2
 		public void ReportDetectionLog(LauncherNetworkDetectionBaseLog logData)
 		{
 			HotPatchLogReport.Instance.ReportNetworkDetection(logData);
 		}
 
-		// Token: 0x1700011D RID: 285
-		// (get) Token: 0x06000BCB RID: 3019 RVA: 0x0004A1CF File Offset: 0x000483CF
+		// Token: 0x17000123 RID: 291
+		// (get) Token: 0x06000C02 RID: 3074 RVA: 0x0004C9BF File Offset: 0x0004ABBF
 		public static LauncherNetworkDetectionController Instance
 		{
 			get
@@ -390,12 +390,12 @@ namespace CSharpScript.Launcher.NetworkDetection
 			}
 		}
 
-		// Token: 0x06000BCC RID: 3020 RVA: 0x0004A1F2 File Offset: 0x000483F2
+		// Token: 0x06000C03 RID: 3075 RVA: 0x0004C9E2 File Offset: 0x0004ABE2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000BCD RID: 3021 RVA: 0x0004A1F4 File Offset: 0x000483F4
+		// Token: 0x06000C04 RID: 3076 RVA: 0x0004C9E4 File Offset: 0x0004ABE4
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherNetworkDetectionController instance = LauncherNetworkDetectionController._instance;
@@ -406,43 +406,43 @@ namespace CSharpScript.Launcher.NetworkDetection
 			LauncherNetworkDetectionController._instance = null;
 		}
 
-		// Token: 0x06000BCE RID: 3022 RVA: 0x0004A20D File Offset: 0x0004840D
+		// Token: 0x06000C05 RID: 3077 RVA: 0x0004C9FD File Offset: 0x0004ABFD
 		static LauncherNetworkDetectionController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherNetworkDetectionController.CreateStaticDefaultValue), new Action(LauncherNetworkDetectionController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0400074D RID: 1869
+		// Token: 0x0400078A RID: 1930
 		private const int TIME_OUT = 2;
 
-		// Token: 0x0400074E RID: 1870
+		// Token: 0x0400078B RID: 1931
 		[Nullable(2)]
 		private INetworkDetectionConfig NetworkDetectionConfig;
 
-		// Token: 0x0400074F RID: 1871
+		// Token: 0x0400078C RID: 1932
 		[Nullable(2)]
 		private ILoginServersData LoginServersData;
 
-		// Token: 0x04000750 RID: 1872
+		// Token: 0x0400078D RID: 1933
 		[Nullable(2)]
 		private Action<int> OnResolveDomainName;
 
-		// Token: 0x04000751 RID: 1873
+		// Token: 0x0400078E RID: 1934
 		[Nullable(2)]
 		public INetworkDetectionPingResult PingResultCacheForLog;
 
-		// Token: 0x04000752 RID: 1874
+		// Token: 0x0400078F RID: 1935
 		[Nullable(2)]
 		public ILoginNetworkDetectionConfig LoginNetworkDetectionConfig;
 
-		// Token: 0x04000753 RID: 1875
+		// Token: 0x04000790 RID: 1936
 		[Nullable(2)]
 		private string GateWayUdpCheckUid;
 
-		// Token: 0x04000754 RID: 1876
+		// Token: 0x04000791 RID: 1937
 		private bool GateWayUdpCheckState;
 
-		// Token: 0x04000755 RID: 1877
+		// Token: 0x04000792 RID: 1938
 		[Nullable(2)]
 		private static LauncherNetworkDetectionController _instance;
 	}

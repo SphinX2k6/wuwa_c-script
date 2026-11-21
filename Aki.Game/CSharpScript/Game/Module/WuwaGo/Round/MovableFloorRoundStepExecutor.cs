@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Round
 {
-	// Token: 0x02004728 RID: 18216
+	// Token: 0x02003659 RID: 13913
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MovableFloorRoundStepExecutor : IRoundStepExecutor
 	{
-		// Token: 0x0602F9A6 RID: 194982 RVA: 0x00B06D3B File Offset: 0x00B04F3B
+		// Token: 0x06024170 RID: 147824 RVA: 0x00A36BC7 File Offset: 0x00A34DC7
 		public MovableFloorRoundStepExecutor(IWuWaGoGridMutationService gridMutationService, Func<int> getExecutionToken, [Nullable(new byte[]
 		{
 			1,
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		{
 		}
 
-		// Token: 0x0602F9A7 RID: 194983 RVA: 0x00B06D60 File Offset: 0x00B04F60
+		// Token: 0x06024171 RID: 147825 RVA: 0x00A36BEC File Offset: 0x00A34DEC
 		public UniTask Execute(ERoundStep step, IReadOnlyList<IExecutableUnit> units, int executionToken)
 		{
 			MovableFloorRoundStepExecutor.<Execute>d__5 <Execute>d__;
@@ -38,15 +38,15 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 			return <Execute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019B44 RID: 105284
+		// Token: 0x040141F4 RID: 82420
 		[CompilerGenerated]
 		private IWuWaGoGridMutationService <gridMutationService>P = gridMutationService;
 
-		// Token: 0x04019B45 RID: 105285
+		// Token: 0x040141F5 RID: 82421
 		[CompilerGenerated]
 		private Func<int> <getExecutionToken>P = getExecutionToken;
 
-		// Token: 0x04019B46 RID: 105286
+		// Token: 0x040141F6 RID: 82422
 		[Nullable(new byte[]
 		{
 			1,
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Round
 		[CompilerGenerated]
 		private Action<IExecutableUnit, string> <setCurrentProcess>P = setCurrentProcess;
 
-		// Token: 0x04019B47 RID: 105287
+		// Token: 0x040141F7 RID: 82423
 		[Nullable(new byte[]
 		{
 			2,

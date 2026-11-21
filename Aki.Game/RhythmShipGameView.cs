@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001090 RID: 4240
+// Token: 0x02000544 RID: 1348
 [NullableContext(2)]
 [Nullable(0)]
 public class RhythmShipGameView : UiViewBase
 {
-	// Token: 0x06006E54 RID: 28244 RVA: 0x00167A74 File Offset: 0x00165C74
+	// Token: 0x060041E9 RID: 16873 RVA: 0x001703A8 File Offset: 0x0016E5A8
 	[NullableContext(1)]
 	public RhythmShipGameView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006E55 RID: 28245 RVA: 0x00167AA8 File Offset: 0x00165CA8
+	// Token: 0x060041EA RID: 16874 RVA: 0x001703DC File Offset: 0x0016E5DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +53,7 @@ public class RhythmShipGameView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006E56 RID: 28246 RVA: 0x00167CC0 File Offset: 0x00165EC0
+	// Token: 0x060041EB RID: 16875 RVA: 0x001705F4 File Offset: 0x0016E7F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RhythmShipGameView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class RhythmShipGameView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006E57 RID: 28247 RVA: 0x00167D04 File Offset: 0x00165F04
+	// Token: 0x060041EC RID: 16876 RVA: 0x00170638 File Offset: 0x0016E838
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -102,7 +102,7 @@ public class RhythmShipGameView : UiViewBase
 		this.CurLineBtnDownCount = 0;
 	}
 
-	// Token: 0x06006E58 RID: 28248 RVA: 0x00167DF0 File Offset: 0x00165FF0
+	// Token: 0x060041ED RID: 16877 RVA: 0x00170724 File Offset: 0x0016E924
 	private void RefreshAutoJudgeInfo(int autoJudgeCount)
 	{
 		UUIText text = base.GetText(14);
@@ -118,13 +118,13 @@ public class RhythmShipGameView : UiViewBase
 		uuiitem2.SetChangeColor(bUseChangeColor2, fcolor);
 	}
 
-	// Token: 0x06006E59 RID: 28249 RVA: 0x00167E53 File Offset: 0x00166053
+	// Token: 0x060041EE RID: 16878 RVA: 0x00170787 File Offset: 0x0016E987
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
 	}
 
-	// Token: 0x06006E5A RID: 28250 RVA: 0x00167E5C File Offset: 0x0016605C
+	// Token: 0x060041EF RID: 16879 RVA: 0x00170790 File Offset: 0x0016E990
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
@@ -192,7 +192,7 @@ public class RhythmShipGameView : UiViewBase
 		button10.OnPointCancelCallBack.Bind(new Action(this.OnBtnLineUp));
 	}
 
-	// Token: 0x06006E5B RID: 28251 RVA: 0x001680C0 File Offset: 0x001662C0
+	// Token: 0x060041F0 RID: 16880 RVA: 0x001709F4 File Offset: 0x0016EBF4
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
@@ -209,7 +209,7 @@ public class RhythmShipGameView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006E5C RID: 28252 RVA: 0x001681BF File Offset: 0x001663BF
+	// Token: 0x060041F1 RID: 16881 RVA: 0x00170AF3 File Offset: 0x0016ECF3
 	private void OnRhythmGameStartCoolDown(TTimerAction callback)
 	{
 		RhythmShipCoolDownPanel coolDownPanel = this.CoolDownPanel;
@@ -220,13 +220,13 @@ public class RhythmShipGameView : UiViewBase
 		coolDownPanel.PlayCoolDownSequence(callback);
 	}
 
-	// Token: 0x06006E5D RID: 28253 RVA: 0x001681D2 File Offset: 0x001663D2
+	// Token: 0x060041F2 RID: 16882 RVA: 0x00170B06 File Offset: 0x0016ED06
 	private void OnRhythmGameAutoJudgeCountChanged(int autoJudgeCount)
 	{
 		this.RefreshAutoJudgeInfo(autoJudgeCount);
 	}
 
-	// Token: 0x06006E5E RID: 28254 RVA: 0x001681DB File Offset: 0x001663DB
+	// Token: 0x060041F3 RID: 16883 RVA: 0x00170B0F File Offset: 0x0016ED0F
 	private void OnRhythmGameEndCoolDown()
 	{
 		RhythmShipCoolDownPanel coolDownPanel = this.CoolDownPanel;
@@ -237,7 +237,7 @@ public class RhythmShipGameView : UiViewBase
 		coolDownPanel.StopCoolDownSequence();
 	}
 
-	// Token: 0x06006E5F RID: 28255 RVA: 0x001681F0 File Offset: 0x001663F0
+	// Token: 0x060041F4 RID: 16884 RVA: 0x00170B24 File Offset: 0x0016ED24
 	private void OnRhythmGameSpeedLevelConfigIndexChanged(int newValue)
 	{
 		int scoreMultiplierByLevel = RhythmGameModel.Instance.GetScoreMultiplierByLevel(newValue);
@@ -253,7 +253,7 @@ public class RhythmShipGameView : UiViewBase
 		scroeMultiText.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06006E60 RID: 28256 RVA: 0x00168248 File Offset: 0x00166448
+	// Token: 0x060041F5 RID: 16885 RVA: 0x00170B7C File Offset: 0x0016ED7C
 	private void OnRhythmGameNoteResultUpdate(EKuroRhythmGameRating? result, FKuroRhythmGameStatistics statistics)
 	{
 		EKuroRhythmGameRating? value = result;
@@ -297,7 +297,7 @@ public class RhythmShipGameView : UiViewBase
 		comboPanel.SetCombo(statistics.Combo);
 	}
 
-	// Token: 0x06006E61 RID: 28257 RVA: 0x0016832C File Offset: 0x0016652C
+	// Token: 0x060041F6 RID: 16886 RVA: 0x00170C60 File Offset: 0x0016EE60
 	private void OnRhythmGameFeverModeChanged(bool bFeverActive)
 	{
 		if (bFeverActive)
@@ -311,7 +311,7 @@ public class RhythmShipGameView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006E62 RID: 28258 RVA: 0x00168344 File Offset: 0x00166544
+	// Token: 0x060041F7 RID: 16887 RVA: 0x00170C78 File Offset: 0x0016EE78
 	private unsafe void OnRhythmGameFeverScoreChanged(int newScore, int oldScore)
 	{
 		float num = (float)newScore / (float)RhythmGameModel.Instance.FeverCeiling;
@@ -332,7 +332,7 @@ public class RhythmShipGameView : UiViewBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06006E63 RID: 28259 RVA: 0x00168408 File Offset: 0x00166608
+	// Token: 0x060041F8 RID: 16888 RVA: 0x00170D3C File Offset: 0x0016EF3C
 	private void OnBtnPauseClick()
 	{
 		if (!RhythmGameController.Instance.PlayerCanInput)
@@ -343,31 +343,31 @@ public class RhythmShipGameView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.RhythmShipPauseView, null, null);
 	}
 
-	// Token: 0x06006E64 RID: 28260 RVA: 0x00168452 File Offset: 0x00166652
+	// Token: 0x060041F9 RID: 16889 RVA: 0x00170D86 File Offset: 0x0016EF86
 	private void OnBtnTapLeftClick()
 	{
 		RhythmGameController.Instance.OnPlayerInputDown(EKuroRhythmGameInputType.TapLeft);
 	}
 
-	// Token: 0x06006E65 RID: 28261 RVA: 0x0016845F File Offset: 0x0016665F
+	// Token: 0x060041FA RID: 16890 RVA: 0x00170D93 File Offset: 0x0016EF93
 	private void OnBtnTapRightClick()
 	{
 		RhythmGameController.Instance.OnPlayerInputDown(EKuroRhythmGameInputType.TapRight);
 	}
 
-	// Token: 0x06006E66 RID: 28262 RVA: 0x0016846C File Offset: 0x0016666C
+	// Token: 0x060041FB RID: 16891 RVA: 0x00170DA0 File Offset: 0x0016EFA0
 	private void OnBtnFlickLeftClick()
 	{
 		RhythmGameController.Instance.OnPlayerInputDown(EKuroRhythmGameInputType.FlickLeft);
 	}
 
-	// Token: 0x06006E67 RID: 28263 RVA: 0x00168479 File Offset: 0x00166679
+	// Token: 0x060041FC RID: 16892 RVA: 0x00170DAD File Offset: 0x0016EFAD
 	private void OnBtnFlickRightClick()
 	{
 		RhythmGameController.Instance.OnPlayerInputDown(EKuroRhythmGameInputType.FlickRight);
 	}
 
-	// Token: 0x06006E68 RID: 28264 RVA: 0x00168486 File Offset: 0x00166686
+	// Token: 0x060041FD RID: 16893 RVA: 0x00170DBA File Offset: 0x0016EFBA
 	private void OnBtnLineClick()
 	{
 		this.CurLineBtnDownCount++;
@@ -377,7 +377,7 @@ public class RhythmShipGameView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006E69 RID: 28265 RVA: 0x001684AA File Offset: 0x001666AA
+	// Token: 0x060041FE RID: 16894 RVA: 0x00170DDE File Offset: 0x0016EFDE
 	private void OnBtnLineUp()
 	{
 		this.CurLineBtnDownCount--;
@@ -387,7 +387,7 @@ public class RhythmShipGameView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006E6A RID: 28266 RVA: 0x001684D0 File Offset: 0x001666D0
+	// Token: 0x060041FF RID: 16895 RVA: 0x00170E04 File Offset: 0x0016F004
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -417,7 +417,7 @@ public class RhythmShipGameView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06006E6B RID: 28267 RVA: 0x0016855D File Offset: 0x0016675D
+	// Token: 0x06004200 RID: 16896 RVA: 0x00170E91 File Offset: 0x0016F091
 	private void OnTouchUiEditSave(ECommonTouchUiEditGroup group)
 	{
 		if (group != ECommonTouchUiEditGroup.RhythmShip)
@@ -427,7 +427,7 @@ public class RhythmShipGameView : UiViewBase
 		this.ApplyTouchUiData();
 	}
 
-	// Token: 0x06006E6C RID: 28268 RVA: 0x0016856A File Offset: 0x0016676A
+	// Token: 0x06004201 RID: 16897 RVA: 0x00170E9E File Offset: 0x0016F09E
 	private void ApplyTouchUiData()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -437,10 +437,10 @@ public class RhythmShipGameView : UiViewBase
 		TouchUiEditApplyHelper.ApplyCommonTouchUiEditData(ECommonTouchUiEditGroup.RhythmShip, this, "UiView_RhythmShipGame");
 	}
 
-	// Token: 0x04003314 RID: 13076
+	// Token: 0x040033AD RID: 13229
 	private readonly int DefaultProgessWidth = 475;
 
-	// Token: 0x04003315 RID: 13077
+	// Token: 0x040033AE RID: 13230
 	[Nullable(1)]
 	private readonly RhythmShipGameView.EViewComponent[] buttonList = new RhythmShipGameView.EViewComponent[]
 	{
@@ -452,87 +452,87 @@ public class RhythmShipGameView : UiViewBase
 		RhythmShipGameView.EViewComponent.BtnRight3
 	};
 
-	// Token: 0x04003316 RID: 13078
+	// Token: 0x040033AF RID: 13231
 	private int RoleId;
 
-	// Token: 0x04003317 RID: 13079
+	// Token: 0x040033B0 RID: 13232
 	private UUISprite FeverProgressSprite;
 
-	// Token: 0x04003318 RID: 13080
+	// Token: 0x040033B1 RID: 13233
 	private UUIText ScroeMultiText;
 
-	// Token: 0x04003319 RID: 13081
+	// Token: 0x040033B2 RID: 13234
 	private UUIText ScoreText;
 
-	// Token: 0x0400331A RID: 13082
+	// Token: 0x040033B3 RID: 13235
 	private RhythmGameComboPanel ComboPanel;
 
-	// Token: 0x0400331B RID: 13083
+	// Token: 0x040033B4 RID: 13236
 	private RhythmShipCoolDownPanel CoolDownPanel;
 
-	// Token: 0x0400331C RID: 13084
+	// Token: 0x040033B5 RID: 13237
 	private RhythmGameHitResultPanel HitResultPanel;
 
-	// Token: 0x0400331D RID: 13085
+	// Token: 0x040033B6 RID: 13238
 	private RhythmGameRoleInfoPanel RoleInfoPanel;
 
-	// Token: 0x0400331E RID: 13086
+	// Token: 0x040033B7 RID: 13239
 	private int MultiCache = 1;
 
-	// Token: 0x0400331F RID: 13087
+	// Token: 0x040033B8 RID: 13240
 	private int ScoreCache;
 
-	// Token: 0x04003320 RID: 13088
+	// Token: 0x040033B9 RID: 13241
 	private int FeverScoreCache;
 
-	// Token: 0x04003321 RID: 13089
+	// Token: 0x040033BA RID: 13242
 	private int CurLineBtnDownCount;
 
-	// Token: 0x02007685 RID: 30341
+	// Token: 0x02006819 RID: 26649
 	[NullableContext(0)]
 	private enum EViewComponent
 	{
-		// Token: 0x040271BA RID: 160186
+		// Token: 0x04022505 RID: 140549
 		BtnPause,
-		// Token: 0x040271BB RID: 160187
+		// Token: 0x04022506 RID: 140550
 		TextScoreMulti,
-		// Token: 0x040271BC RID: 160188
+		// Token: 0x04022507 RID: 140551
 		TextScore,
-		// Token: 0x040271BD RID: 160189
+		// Token: 0x04022508 RID: 140552
 		TextScroeProgress,
-		// Token: 0x040271BE RID: 160190
+		// Token: 0x04022509 RID: 140553
 		PnlCombo,
-		// Token: 0x040271BF RID: 160191
+		// Token: 0x0402250A RID: 140554
 		IconHitResult,
-		// Token: 0x040271C0 RID: 160192
+		// Token: 0x0402250B RID: 140555
 		BtnLeft1,
-		// Token: 0x040271C1 RID: 160193
+		// Token: 0x0402250C RID: 140556
 		BtnLeft2,
-		// Token: 0x040271C2 RID: 160194
+		// Token: 0x0402250D RID: 140557
 		BtnLeft3,
-		// Token: 0x040271C3 RID: 160195
+		// Token: 0x0402250E RID: 140558
 		BtnRight1,
-		// Token: 0x040271C4 RID: 160196
+		// Token: 0x0402250F RID: 140559
 		BtnRight2,
-		// Token: 0x040271C5 RID: 160197
+		// Token: 0x04022510 RID: 140560
 		BtnRight3,
-		// Token: 0x040271C6 RID: 160198
+		// Token: 0x04022511 RID: 140561
 		ShieldItem,
-		// Token: 0x040271C7 RID: 160199
+		// Token: 0x04022512 RID: 140562
 		ShieldIcon,
-		// Token: 0x040271C8 RID: 160200
+		// Token: 0x04022513 RID: 140563
 		TextShieldNum,
-		// Token: 0x040271C9 RID: 160201
+		// Token: 0x04022514 RID: 140564
 		SprProgress,
-		// Token: 0x040271CA RID: 160202
+		// Token: 0x04022515 RID: 140565
 		PnlRoleSpeak,
-		// Token: 0x040271CB RID: 160203
+		// Token: 0x04022516 RID: 140566
 		IconRole,
-		// Token: 0x040271CC RID: 160204
+		// Token: 0x04022517 RID: 140567
 		PnlSpeak,
-		// Token: 0x040271CD RID: 160205
+		// Token: 0x04022518 RID: 140568
 		TextSpeak,
-		// Token: 0x040271CE RID: 160206
+		// Token: 0x04022519 RID: 140569
 		PnlTime
 	}
 }

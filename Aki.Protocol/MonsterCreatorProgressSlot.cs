@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009F8 RID: 2552
+	// Token: 0x020009E7 RID: 2535
 	public sealed class MonsterCreatorProgressSlot : IMessage<MonsterCreatorProgressSlot>, IMessage, IEquatable<MonsterCreatorProgressSlot>, IDeepCloneable<MonsterCreatorProgressSlot>, IBufferMessage
 	{
-		// Token: 0x0600DF70 RID: 57200 RVA: 0x0020C148 File Offset: 0x0020A348
+		// Token: 0x0600DE56 RID: 56918 RVA: 0x00209F5C File Offset: 0x0020815C
 		[NullableContext(1)]
 		public static MonsterCreatorProgressSlot Create()
 		{
 			return new MonsterCreatorProgressSlot();
 		}
 
-		// Token: 0x17002D4A RID: 11594
-		// (get) Token: 0x0600DF71 RID: 57201 RVA: 0x0020C14F File Offset: 0x0020A34F
+		// Token: 0x17002D0C RID: 11532
+		// (get) Token: 0x0600DE57 RID: 56919 RVA: 0x00209F63 File Offset: 0x00208163
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<MonsterCreatorProgressSlot> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D4B RID: 11595
-		// (get) Token: 0x0600DF72 RID: 57202 RVA: 0x0020C156 File Offset: 0x0020A356
+		// Token: 0x17002D0D RID: 11533
+		// (get) Token: 0x0600DE58 RID: 56920 RVA: 0x00209F6A File Offset: 0x0020816A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D4C RID: 11596
-		// (get) Token: 0x0600DF73 RID: 57203 RVA: 0x0020C159 File Offset: 0x0020A359
+		// Token: 0x17002D0E RID: 11534
+		// (get) Token: 0x0600DE59 RID: 56921 RVA: 0x00209F6D File Offset: 0x0020816D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DF74 RID: 57204 RVA: 0x0020C160 File Offset: 0x0020A360
+		// Token: 0x0600DE5A RID: 56922 RVA: 0x00209F74 File Offset: 0x00208174
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterCreatorProgressSlot()
 		{
 		}
 
-		// Token: 0x0600DF75 RID: 57205 RVA: 0x0020C180 File Offset: 0x0020A380
+		// Token: 0x0600DE5B RID: 56923 RVA: 0x00209F94 File Offset: 0x00208194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterCreatorProgressSlot(MonsterCreatorProgressSlot other) : this()
@@ -75,7 +75,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DF76 RID: 57206 RVA: 0x0020C1F6 File Offset: 0x0020A3F6
+		// Token: 0x0600DE5C RID: 56924 RVA: 0x0020A00A File Offset: 0x0020820A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterCreatorProgressSlot Clone()
@@ -83,9 +83,9 @@ namespace Aki.Protocol
 			return new MonsterCreatorProgressSlot(this);
 		}
 
-		// Token: 0x17002D4D RID: 11597
-		// (get) Token: 0x0600DF77 RID: 57207 RVA: 0x0020C1FE File Offset: 0x0020A3FE
-		// (set) Token: 0x0600DF78 RID: 57208 RVA: 0x0020C206 File Offset: 0x0020A406
+		// Token: 0x17002D0F RID: 11535
+		// (get) Token: 0x0600DE5D RID: 56925 RVA: 0x0020A012 File Offset: 0x00208212
+		// (set) Token: 0x0600DE5E RID: 56926 RVA: 0x0020A01A File Offset: 0x0020821A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WaveId
@@ -100,8 +100,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D4E RID: 11598
-		// (get) Token: 0x0600DF79 RID: 57209 RVA: 0x0020C20F File Offset: 0x0020A40F
+		// Token: 0x17002D10 RID: 11536
+		// (get) Token: 0x0600DE5F RID: 56927 RVA: 0x0020A023 File Offset: 0x00208223
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> KillMonIds
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D4F RID: 11599
-		// (get) Token: 0x0600DF7A RID: 57210 RVA: 0x0020C217 File Offset: 0x0020A417
-		// (set) Token: 0x0600DF7B RID: 57211 RVA: 0x0020C21F File Offset: 0x0020A41F
+		// Token: 0x17002D11 RID: 11537
+		// (get) Token: 0x0600DE60 RID: 56928 RVA: 0x0020A02B File Offset: 0x0020822B
+		// (set) Token: 0x0600DE61 RID: 56929 RVA: 0x0020A033 File Offset: 0x00208233
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurrentWaveEndTime
@@ -129,9 +129,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D50 RID: 11600
-		// (get) Token: 0x0600DF7C RID: 57212 RVA: 0x0020C228 File Offset: 0x0020A428
-		// (set) Token: 0x0600DF7D RID: 57213 RVA: 0x0020C230 File Offset: 0x0020A430
+		// Token: 0x17002D12 RID: 11538
+		// (get) Token: 0x0600DE62 RID: 56930 RVA: 0x0020A03C File Offset: 0x0020823C
+		// (set) Token: 0x0600DE63 RID: 56931 RVA: 0x0020A044 File Offset: 0x00208244
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SpawnStepType
@@ -146,9 +146,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D51 RID: 11601
-		// (get) Token: 0x0600DF7E RID: 57214 RVA: 0x0020C239 File Offset: 0x0020A439
-		// (set) Token: 0x0600DF7F RID: 57215 RVA: 0x0020C241 File Offset: 0x0020A441
+		// Token: 0x17002D13 RID: 11539
+		// (get) Token: 0x0600DE64 RID: 56932 RVA: 0x0020A04D File Offset: 0x0020824D
+		// (set) Token: 0x0600DE65 RID: 56933 RVA: 0x0020A055 File Offset: 0x00208255
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CreatorEntityConfigId
@@ -163,8 +163,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002D52 RID: 11602
-		// (get) Token: 0x0600DF80 RID: 57216 RVA: 0x0020C24A File Offset: 0x0020A44A
+		// Token: 0x17002D14 RID: 11540
+		// (get) Token: 0x0600DE66 RID: 56934 RVA: 0x0020A05E File Offset: 0x0020825E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SceneMonsterCreatedMonsterInfo> MonsterInfo
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DF81 RID: 57217 RVA: 0x0020C252 File Offset: 0x0020A452
+		// Token: 0x0600DE67 RID: 56935 RVA: 0x0020A066 File Offset: 0x00208266
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MonsterCreatorProgressSlot);
 		}
 
-		// Token: 0x0600DF82 RID: 57218 RVA: 0x0020C260 File Offset: 0x0020A460
+		// Token: 0x0600DE68 RID: 56936 RVA: 0x0020A074 File Offset: 0x00208274
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MonsterCreatorProgressSlot other)
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.WaveId == other.WaveId && this.killMonIds_.Equals(other.killMonIds_) && this.CurrentWaveEndTime == other.CurrentWaveEndTime && this.SpawnStepType == other.SpawnStepType && this.CreatorEntityConfigId == other.CreatorEntityConfigId && this.monsterInfo_.Equals(other.monsterInfo_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DF83 RID: 57219 RVA: 0x0020C2F4 File Offset: 0x0020A4F4
+		// Token: 0x0600DE69 RID: 56937 RVA: 0x0020A108 File Offset: 0x00208308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -222,7 +222,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DF84 RID: 57220 RVA: 0x0020C39A File Offset: 0x0020A59A
+		// Token: 0x0600DE6A RID: 56938 RVA: 0x0020A1AE File Offset: 0x002083AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -230,7 +230,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DF85 RID: 57221 RVA: 0x0020C3A7 File Offset: 0x0020A5A7
+		// Token: 0x0600DE6B RID: 56939 RVA: 0x0020A1BB File Offset: 0x002083BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DF86 RID: 57222 RVA: 0x0020C3B0 File Offset: 0x0020A5B0
+		// Token: 0x0600DE6C RID: 56940 RVA: 0x0020A1C4 File Offset: 0x002083C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -271,7 +271,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DF87 RID: 57223 RVA: 0x0020C464 File Offset: 0x0020A664
+		// Token: 0x0600DE6D RID: 56941 RVA: 0x0020A278 File Offset: 0x00208478
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -302,7 +302,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DF88 RID: 57224 RVA: 0x0020C510 File Offset: 0x0020A710
+		// Token: 0x0600DE6E RID: 56942 RVA: 0x0020A324 File Offset: 0x00208524
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MonsterCreatorProgressSlot other)
@@ -332,7 +332,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DF89 RID: 57225 RVA: 0x0020C5AA File Offset: 0x0020A7AA
+		// Token: 0x0600DE6F RID: 56943 RVA: 0x0020A3BE File Offset: 0x002085BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -340,7 +340,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DF8A RID: 57226 RVA: 0x0020C5B4 File Offset: 0x0020A7B4
+		// Token: 0x0600DE70 RID: 56944 RVA: 0x0020A3C8 File Offset: 0x002085C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -395,52 +395,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005C1B RID: 23579
+		// Token: 0x04005C24 RID: 23588
 		private static readonly MessageParser<MonsterCreatorProgressSlot> _parser = new MessageParser<MonsterCreatorProgressSlot>(() => new MonsterCreatorProgressSlot());
 
-		// Token: 0x04005C1C RID: 23580
+		// Token: 0x04005C25 RID: 23589
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005C1D RID: 23581
+		// Token: 0x04005C26 RID: 23590
 		public const int WaveIdFieldNumber = 1;
 
-		// Token: 0x04005C1E RID: 23582
+		// Token: 0x04005C27 RID: 23591
 		private int waveId_;
 
-		// Token: 0x04005C1F RID: 23583
+		// Token: 0x04005C28 RID: 23592
 		public const int KillMonIdsFieldNumber = 2;
 
-		// Token: 0x04005C20 RID: 23584
+		// Token: 0x04005C29 RID: 23593
 		private static readonly FieldCodec<int> _repeated_killMonIds_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x04005C21 RID: 23585
+		// Token: 0x04005C2A RID: 23594
 		private readonly RepeatedField<int> killMonIds_ = new RepeatedField<int>();
 
-		// Token: 0x04005C22 RID: 23586
+		// Token: 0x04005C2B RID: 23595
 		public const int CurrentWaveEndTimeFieldNumber = 3;
 
-		// Token: 0x04005C23 RID: 23587
+		// Token: 0x04005C2C RID: 23596
 		private int currentWaveEndTime_;
 
-		// Token: 0x04005C24 RID: 23588
+		// Token: 0x04005C2D RID: 23597
 		public const int SpawnStepTypeFieldNumber = 4;
 
-		// Token: 0x04005C25 RID: 23589
+		// Token: 0x04005C2E RID: 23598
 		private int spawnStepType_;
 
-		// Token: 0x04005C26 RID: 23590
+		// Token: 0x04005C2F RID: 23599
 		public const int CreatorEntityConfigIdFieldNumber = 5;
 
-		// Token: 0x04005C27 RID: 23591
+		// Token: 0x04005C30 RID: 23600
 		private int creatorEntityConfigId_;
 
-		// Token: 0x04005C28 RID: 23592
+		// Token: 0x04005C31 RID: 23601
 		public const int MonsterInfoFieldNumber = 6;
 
-		// Token: 0x04005C29 RID: 23593
+		// Token: 0x04005C32 RID: 23602
 		private static readonly FieldCodec<SceneMonsterCreatedMonsterInfo> _repeated_monsterInfo_codec = FieldCodec.ForMessage<SceneMonsterCreatedMonsterInfo>(50U, SceneMonsterCreatedMonsterInfo.Parser);
 
-		// Token: 0x04005C2A RID: 23594
+		// Token: 0x04005C33 RID: 23603
 		private readonly RepeatedField<SceneMonsterCreatedMonsterInfo> monsterInfo_ = new RepeatedField<SceneMonsterCreatedMonsterInfo>();
 	}
 }

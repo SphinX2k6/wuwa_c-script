@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001328 RID: 4904
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001478 RID: 5240
 	public class IQuestScheduleMeetCondition : IQuestScheduleType
 	{
-		// Token: 0x06007081 RID: 28801 RVA: 0x0010FA06 File Offset: 0x0010DC06
+		// Token: 0x06007721 RID: 30497 RVA: 0x0011DF72 File Offset: 0x0011C172
 		public static IQuestScheduleMeetCondition Create(IQuestScheduleMeetCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002404 RID: 9220
-		// (get) Token: 0x06007082 RID: 28802 RVA: 0x0010FA25 File Offset: 0x0010DC25
+		// Token: 0x170025D3 RID: 9683
+		// (get) Token: 0x06007722 RID: 30498 RVA: 0x0011DF91 File Offset: 0x0011C191
 		public override EQuestScheduleType Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002405 RID: 9221
-		// (get) Token: 0x06007083 RID: 28803 RVA: 0x0010FA32 File Offset: 0x0010DC32
+		// Token: 0x170025D4 RID: 9684
+		// (get) Token: 0x06007723 RID: 30499 RVA: 0x0011DF9E File Offset: 0x0011C19E
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -51,19 +49,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002406 RID: 9222
-		// (get) Token: 0x06007084 RID: 28804 RVA: 0x0010FA66 File Offset: 0x0010DC66
+		// Token: 0x170025D5 RID: 9685
+		// (get) Token: 0x06007724 RID: 30500 RVA: 0x0011DFD2 File Offset: 0x0011C1D2
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<VarRef> Vars
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002407 RID: 9223
-		// (get) Token: 0x06007085 RID: 28805 RVA: 0x0010FAA6 File Offset: 0x0010DCA6
+		// Token: 0x170025D6 RID: 9686
+		// (get) Token: 0x06007725 RID: 30501 RVA: 0x0011E012 File Offset: 0x0011C212
 		public virtual ETimeLeftIconType IconType
 		{
 			get
@@ -91,25 +89,25 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040E4 RID: 16612
+		// Token: 0x04004460 RID: 17504
 		private IQuestScheduleMeetCondition Instance;
 
-		// Token: 0x040040E5 RID: 16613
+		// Token: 0x04004461 RID: 17505
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040040E6 RID: 16614
+		// Token: 0x04004462 RID: 17506
 		private bool _ConditionInited;
 
-		// Token: 0x040040E7 RID: 16615
+		// Token: 0x04004463 RID: 17507
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<VarRef> _VarsCache;
 
-		// Token: 0x040040E8 RID: 16616
+		// Token: 0x04004464 RID: 17508
 		private bool _VarsInited;
 	}
 }

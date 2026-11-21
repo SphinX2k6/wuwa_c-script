@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029DC RID: 10716
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CC9 RID: 11465
 	public class OpenQteAction : ActionParams
 	{
-		// Token: 0x0600ECC1 RID: 60609 RVA: 0x00228F74 File Offset: 0x00227174
+		// Token: 0x0600FB58 RID: 64344 RVA: 0x002468F8 File Offset: 0x00244AF8
 		public static OpenQteAction Create(IOpenQteAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004ACB RID: 19147
-		// (get) Token: 0x0600ECC2 RID: 60610 RVA: 0x00228F93 File Offset: 0x00227193
+		// Token: 0x17004E74 RID: 20084
+		// (get) Token: 0x0600FB59 RID: 64345 RVA: 0x00246917 File Offset: 0x00244B17
 		public virtual IOpenQteConfig Config
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008262 RID: 33378
+		// Token: 0x04008953 RID: 35155
 		private IOpenQteAction Instance;
 
-		// Token: 0x04008263 RID: 33379
+		// Token: 0x04008954 RID: 35156
 		private IOpenQteConfig _ConfigCache;
 
-		// Token: 0x04008264 RID: 33380
+		// Token: 0x04008955 RID: 35157
 		private bool _ConfigInited;
 	}
 }

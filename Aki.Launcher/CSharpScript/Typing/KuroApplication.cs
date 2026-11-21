@@ -12,7 +12,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void ExitWithReason_Internal(bool isForce, string reason);
 
-		// Token: 0x06000204 RID: 516 RVA: 0x0000B290 File Offset: 0x00009490
+		// Token: 0x06000204 RID: 516 RVA: 0x0000B2C8 File Offset: 0x000094C8
 		public static void ExitWithReason(bool isForce, string reason)
 		{
 			KuroApplication.ExitWithReason_Internal(isForce, reason);
@@ -22,7 +22,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void ExitWithCode_Internal(bool isForce, string reason, int exitCode);
 
-		// Token: 0x06000206 RID: 518 RVA: 0x0000B299 File Offset: 0x00009499
+		// Token: 0x06000206 RID: 518 RVA: 0x0000B2D1 File Offset: 0x000094D1
 		public static void ExitWithCode(bool isForce, string reason, int exitCode)
 		{
 			KuroApplication.ExitWithCode_Internal(isForce, reason, exitCode);
@@ -32,7 +32,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string GetAppReleaseType_Internal();
 
-		// Token: 0x06000208 RID: 520 RVA: 0x0000B2A3 File Offset: 0x000094A3
+		// Token: 0x06000208 RID: 520 RVA: 0x0000B2DB File Offset: 0x000094DB
 		public static string GetAppReleaseType()
 		{
 			return KuroApplication.GetAppReleaseType_Internal();
@@ -42,7 +42,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string GetCommandLine_Internal();
 
-		// Token: 0x0600020A RID: 522 RVA: 0x0000B2AA File Offset: 0x000094AA
+		// Token: 0x0600020A RID: 522 RVA: 0x0000B2E2 File Offset: 0x000094E2
 		public static string GetCommandLine()
 		{
 			return KuroApplication.GetCommandLine_Internal();
@@ -52,7 +52,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string IniPlatformName_Internal();
 
-		// Token: 0x0600020C RID: 524 RVA: 0x0000B2B1 File Offset: 0x000094B1
+		// Token: 0x0600020C RID: 524 RVA: 0x0000B2E9 File Offset: 0x000094E9
 		public static string IniPlatformName()
 		{
 			return KuroApplication.IniPlatformName_Internal();
@@ -62,7 +62,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string IniPlatformNameIncludeEditor_Internal();
 
-		// Token: 0x0600020E RID: 526 RVA: 0x0000B2B8 File Offset: 0x000094B8
+		// Token: 0x0600020E RID: 526 RVA: 0x0000B2F0 File Offset: 0x000094F0
 		public static string IniPlatformNameIncludeEditor()
 		{
 			return KuroApplication.IniPlatformNameIncludeEditor_Internal();
@@ -72,7 +72,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsAsyncLoadingThreadEnabled_Internal();
 
-		// Token: 0x06000210 RID: 528 RVA: 0x0000B2BF File Offset: 0x000094BF
+		// Token: 0x06000210 RID: 528 RVA: 0x0000B2F7 File Offset: 0x000094F7
 		public static bool IsAsyncLoadingThreadEnabled()
 		{
 			return KuroApplication.IsAsyncLoadingThreadEnabled_Internal();
@@ -82,7 +82,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsBuildShipping_Internal();
 
-		// Token: 0x06000212 RID: 530 RVA: 0x0000B2C6 File Offset: 0x000094C6
+		// Token: 0x06000212 RID: 530 RVA: 0x0000B2FE File Offset: 0x000094FE
 		public static bool IsBuildShipping()
 		{
 			return KuroApplication.IsBuildShipping_Internal();
@@ -92,7 +92,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsBuildTest_Internal();
 
-		// Token: 0x06000214 RID: 532 RVA: 0x0000B2CD File Offset: 0x000094CD
+		// Token: 0x06000214 RID: 532 RVA: 0x0000B305 File Offset: 0x00009505
 		public static bool IsBuildTest()
 		{
 			return KuroApplication.IsBuildTest_Internal();
@@ -102,7 +102,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsWithEditor_Internal();
 
-		// Token: 0x06000216 RID: 534 RVA: 0x0000B2D4 File Offset: 0x000094D4
+		// Token: 0x06000216 RID: 534 RVA: 0x0000B30C File Offset: 0x0000950C
 		public static bool IsWithEditor()
 		{
 			return KuroApplication.IsWithEditor_Internal();
@@ -112,7 +112,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsWithStat_Internal();
 
-		// Token: 0x06000218 RID: 536 RVA: 0x0000B2DB File Offset: 0x000094DB
+		// Token: 0x06000218 RID: 536 RVA: 0x0000B313 File Offset: 0x00009513
 		public static bool IsWithStat()
 		{
 			return KuroApplication.IsWithStat_Internal();
@@ -122,7 +122,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string ProjectContentDir_Internal();
 
-		// Token: 0x0600021A RID: 538 RVA: 0x0000B2E2 File Offset: 0x000094E2
+		// Token: 0x0600021A RID: 538 RVA: 0x0000B31A File Offset: 0x0000951A
 		public static string ProjectContentDir()
 		{
 			return KuroApplication.ProjectContentDir_Internal();
@@ -132,7 +132,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string GetSessionCachedUserName_Internal();
 
-		// Token: 0x0600021C RID: 540 RVA: 0x0000B2E9 File Offset: 0x000094E9
+		// Token: 0x0600021C RID: 540 RVA: 0x0000B321 File Offset: 0x00009521
 		public static string GetSessionCachedUserName()
 		{
 			return KuroApplication.GetSessionCachedUserName_Internal();

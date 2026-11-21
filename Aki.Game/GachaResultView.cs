@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,23 +8,24 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BlackScreen;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Menu;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C9D RID: 7325
+// Token: 0x0200115C RID: 4444
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaResultView : GachaSceneView
 {
-	// Token: 0x0600DD0D RID: 56589 RVA: 0x003397D0 File Offset: 0x003379D0
+	// Token: 0x0600B123 RID: 45347 RVA: 0x00344D18 File Offset: 0x00342F18
 	public GachaResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DD0E RID: 56590 RVA: 0x00339830 File Offset: 0x00337A30
+	// Token: 0x0600B124 RID: 45348 RVA: 0x00344D78 File Offset: 0x00342F78
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,14 +47,14 @@ public class GachaResultView : GachaSceneView
 		};
 	}
 
-	// Token: 0x0600DD0F RID: 56591 RVA: 0x00339940 File Offset: 0x00337B40
+	// Token: 0x0600B125 RID: 45349 RVA: 0x00344E88 File Offset: 0x00343088
 	protected override void OnAfterInitComponentsData()
 	{
 		IGachaViewOpenData gachaViewOpenData = this.OpenParam as IGachaViewOpenData;
 		this.HideExtraReward = (gachaViewOpenData != null && gachaViewOpenData.ResultViewHideExtraReward);
 	}
 
-	// Token: 0x0600DD10 RID: 56592 RVA: 0x0033996C File Offset: 0x00337B6C
+	// Token: 0x0600B126 RID: 45350 RVA: 0x00344EB4 File Offset: 0x003430B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaResultView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -65,41 +65,41 @@ public class GachaResultView : GachaSceneView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD11 RID: 56593 RVA: 0x003399AF File Offset: 0x00337BAF
+	// Token: 0x0600B127 RID: 45351 RVA: 0x00344EF7 File Offset: 0x003430F7
 	protected override void OnBeforeShow()
 	{
 		BlackScreenController.Instance.RemoveBlackScreen("Close", "GachaSkip", "Default");
 		this.RefreshShare();
 	}
 
-	// Token: 0x0600DD12 RID: 56594 RVA: 0x003399D0 File Offset: 0x00337BD0
+	// Token: 0x0600B128 RID: 45352 RVA: 0x00344F18 File Offset: 0x00343118
 	protected override void OnAfterShow()
 	{
 		KuroSdkController.Instance.TryOpenReview();
 	}
 
-	// Token: 0x0600DD13 RID: 56595 RVA: 0x003399DC File Offset: 0x00337BDC
+	// Token: 0x0600B129 RID: 45353 RVA: 0x00344F24 File Offset: 0x00343124
 	protected override void OnBeforeDestroy()
 	{
 		CameraController instance = CameraController.Instance;
-		UiCamera uiCamera = UiCameraAnimationManager.Instance.UiCamera;
+		UiCamera uiCamera = UiCameraModel.Instance.UiCamera;
 		instance.SetViewTarget((uiCamera != null) ? uiCamera.GetCameraActor() : null, "GachaResultView.OnBeforeDestroy", 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, null, "MainCamera", null, null);
 		MenuController.Instance.OpenAllFilter();
 	}
 
-	// Token: 0x0600DD14 RID: 56596 RVA: 0x00339A3C File Offset: 0x00337C3C
+	// Token: 0x0600B12A RID: 45354 RVA: 0x00344F84 File Offset: 0x00343184
 	protected override void AfterAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnFirstShare, new Action(this.RefreshShare));
 	}
 
-	// Token: 0x0600DD15 RID: 56597 RVA: 0x00339A5A File Offset: 0x00337C5A
+	// Token: 0x0600B12B RID: 45355 RVA: 0x00344FA2 File Offset: 0x003431A2
 	protected override void AfterRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFirstShare, new Action(this.RefreshShare));
 	}
 
-	// Token: 0x0600DD16 RID: 56598 RVA: 0x00339A78 File Offset: 0x00337C78
+	// Token: 0x0600B12C RID: 45356 RVA: 0x00344FC0 File Offset: 0x003431C0
 	private void RefreshShare()
 	{
 		if (!ChannelController.Instance.CouldShare())
@@ -151,7 +151,7 @@ public class GachaResultView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD17 RID: 56599 RVA: 0x00339BF0 File Offset: 0x00337DF0
+	// Token: 0x0600B12D RID: 45357 RVA: 0x00345138 File Offset: 0x00343338
 	private int RewardItemSort(TItem a, TItem b)
 	{
 		int itemId = a.ItemData.ItemId;
@@ -169,33 +169,33 @@ public class GachaResultView : GachaSceneView
 		return num2.Value - num.Value;
 	}
 
-	// Token: 0x0600DD18 RID: 56600 RVA: 0x00339CA0 File Offset: 0x00337EA0
+	// Token: 0x0600B12E RID: 45358 RVA: 0x003451E5 File Offset: 0x003433E5
 	[NullableContext(2)]
 	private void RefreshExtraReward(List<TItem> rewardArray)
 	{
 		if (rewardArray != null && rewardArray.Count > 0 && !this.HideExtraReward)
 		{
 			base.GetItem(0).SetUIActive(true);
-			this.ExtraRewardLayout.RefreshByData(rewardArray.ToList<TItem>(), null, false);
+			this.ExtraRewardLayout.RefreshByData(rewardArray, null, false);
 			return;
 		}
 		base.GetItem(0).SetUIActive(false);
 	}
 
-	// Token: 0x0600DD19 RID: 56601 RVA: 0x00339CF0 File Offset: 0x00337EF0
+	// Token: 0x0600B12F RID: 45359 RVA: 0x00345224 File Offset: 0x00343424
 	[NullableContext(2)]
 	private void RefreshAdditionalReward(List<TItem> rewardArray)
 	{
 		if (rewardArray != null && rewardArray.Count > 0 && !this.HideExtraReward)
 		{
 			base.GetItem(2).SetUIActive(true);
-			this.AdditionalRewardLayout.RefreshByData(rewardArray.ToList<TItem>(), null, false);
+			this.AdditionalRewardLayout.RefreshByData(rewardArray, null, false);
 			return;
 		}
 		base.GetItem(2).SetUIActive(false);
 	}
 
-	// Token: 0x0600DD1A RID: 56602 RVA: 0x00339D40 File Offset: 0x00337F40
+	// Token: 0x0600B130 RID: 45360 RVA: 0x00345264 File Offset: 0x00343464
 	public UniTask HandleMultiGacha(global::GachaResult[] dataList)
 	{
 		GachaResultView.<HandleMultiGacha>d__22 <HandleMultiGacha>d__;
@@ -207,7 +207,7 @@ public class GachaResultView : GachaSceneView
 		return <HandleMultiGacha>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD1B RID: 56603 RVA: 0x00339D8C File Offset: 0x00337F8C
+	// Token: 0x0600B131 RID: 45361 RVA: 0x003452B0 File Offset: 0x003434B0
 	private UniTask HandleSingleGacha(global::GachaResult data)
 	{
 		GachaResultView.<HandleSingleGacha>d__23 <HandleSingleGacha>d__;
@@ -219,7 +219,7 @@ public class GachaResultView : GachaSceneView
 		return <HandleSingleGacha>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD1C RID: 56604 RVA: 0x00339DD8 File Offset: 0x00337FD8
+	// Token: 0x0600B132 RID: 45362 RVA: 0x003452FC File Offset: 0x003434FC
 	private void CoverRewardListToMap(IReadOnlyList<GachaReward> rewardList, Dictionary<int, int> rewardMap)
 	{
 		foreach (GachaReward reward in rewardList)
@@ -228,7 +228,7 @@ public class GachaResultView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD1D RID: 56605 RVA: 0x00339E24 File Offset: 0x00338024
+	// Token: 0x0600B133 RID: 45363 RVA: 0x00345348 File Offset: 0x00343548
 	private void CoverRewardToMap(GachaReward reward, Dictionary<int, int> rewardMap)
 	{
 		int num2;
@@ -242,7 +242,7 @@ public class GachaResultView : GachaSceneView
 		rewardMap.Add(reward.ItemId, value);
 	}
 
-	// Token: 0x0600DD1E RID: 56606 RVA: 0x00339E78 File Offset: 0x00338078
+	// Token: 0x0600B134 RID: 45364 RVA: 0x0034539C File Offset: 0x0034359C
 	[return: Nullable(2)]
 	private List<TItem> CoverRewardMapToItemList(Dictionary<int, int> rewardMap)
 	{
@@ -260,7 +260,7 @@ public class GachaResultView : GachaSceneView
 		return list;
 	}
 
-	// Token: 0x0600DD1F RID: 56607 RVA: 0x00339F08 File Offset: 0x00338108
+	// Token: 0x0600B135 RID: 45365 RVA: 0x0034542C File Offset: 0x0034362C
 	public int GetItemQuality(int itemId)
 	{
 		int result = 0;
@@ -287,19 +287,19 @@ public class GachaResultView : GachaSceneView
 		return result;
 	}
 
-	// Token: 0x0600DD20 RID: 56608 RVA: 0x00339F7C File Offset: 0x0033817C
+	// Token: 0x0600B136 RID: 45366 RVA: 0x003454A0 File Offset: 0x003436A0
 	private GachaResultItemNew InitGachaResultItem()
 	{
 		return new GachaResultItemNew();
 	}
 
-	// Token: 0x0600DD21 RID: 56609 RVA: 0x00339F83 File Offset: 0x00338183
+	// Token: 0x0600B137 RID: 45367 RVA: 0x003454A7 File Offset: 0x003436A7
 	private CommonItemSmallItemGrid InitRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600DD22 RID: 56610 RVA: 0x00339F8A File Offset: 0x0033818A
+	// Token: 0x0600B138 RID: 45368 RVA: 0x003454AE File Offset: 0x003436AE
 	[CompilerGenerated]
 	internal static int <HandleMultiGacha>g__RevertType|22_0(InventoryDefine.EItemDataType type)
 	{
@@ -313,14 +313,14 @@ public class GachaResultView : GachaSceneView
 		return 0;
 	}
 
-	// Token: 0x04006560 RID: 25952
+	// Token: 0x04006632 RID: 26162
 	private bool HideExtraReward;
 
-	// Token: 0x04006561 RID: 25953
+	// Token: 0x04006633 RID: 26163
 	[Nullable(2)]
 	private GachaResultItemNew SingleGachaResultItem;
 
-	// Token: 0x04006562 RID: 25954
+	// Token: 0x04006634 RID: 26164
 	[Nullable(new byte[]
 	{
 		2,
@@ -329,7 +329,7 @@ public class GachaResultView : GachaSceneView
 	})]
 	private GenericLayout<GachaResultItemNew, global::GachaResult> GachaResultLayout;
 
-	// Token: 0x04006563 RID: 25955
+	// Token: 0x04006635 RID: 26165
 	[Nullable(new byte[]
 	{
 		2,
@@ -337,7 +337,7 @@ public class GachaResultView : GachaSceneView
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ExtraRewardLayout;
 
-	// Token: 0x04006564 RID: 25956
+	// Token: 0x04006636 RID: 26166
 	[Nullable(new byte[]
 	{
 		2,
@@ -345,11 +345,11 @@ public class GachaResultView : GachaSceneView
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> AdditionalRewardLayout;
 
-	// Token: 0x04006565 RID: 25957
+	// Token: 0x04006637 RID: 26167
 	[Nullable(2)]
 	private ShareRewardInfo ShareRewardInfo;
 
-	// Token: 0x04006566 RID: 25958
+	// Token: 0x04006638 RID: 26168
 	private readonly Action NextBtn = delegate()
 	{
 		if (UiManager.Instance.IsViewHide(EUiViewName.GachaScanView) || UiManager.Instance.IsViewHide(EUiViewName.DrawMainView))
@@ -360,33 +360,33 @@ public class GachaResultView : GachaSceneView
 		EventSystem.Instance.Emit(EEventName.CloseGachaSceneView);
 	};
 
-	// Token: 0x04006567 RID: 25959
+	// Token: 0x04006639 RID: 26169
 	private readonly Action OnClickShare = delegate()
 	{
 		ChannelController.Instance.ShareGacha(GachaModel.Instance.CurGachaResult);
 	};
 
-	// Token: 0x02008278 RID: 33400
+	// Token: 0x020073FF RID: 29695
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A911 RID: 174353
+		// Token: 0x04025C30 RID: 154672
 		ExtraRewardRootItem,
-		// Token: 0x0402A912 RID: 174354
+		// Token: 0x04025C31 RID: 154673
 		ExtraRewardGridLayout,
-		// Token: 0x0402A913 RID: 174355
+		// Token: 0x04025C32 RID: 154674
 		AdditionalRewardRootItem,
-		// Token: 0x0402A914 RID: 174356
+		// Token: 0x04025C33 RID: 154675
 		AdditionalRewardGridLayout,
-		// Token: 0x0402A915 RID: 174357
+		// Token: 0x04025C34 RID: 154676
 		NextBtn,
-		// Token: 0x0402A916 RID: 174358
+		// Token: 0x04025C35 RID: 154677
 		ContentRootItem,
-		// Token: 0x0402A917 RID: 174359
+		// Token: 0x04025C36 RID: 154678
 		ShareBtn,
-		// Token: 0x0402A918 RID: 174360
+		// Token: 0x04025C37 RID: 154679
 		ShareReward,
-		// Token: 0x0402A919 RID: 174361
+		// Token: 0x04025C38 RID: 154680
 		ShareRewardTip
 	}
 }

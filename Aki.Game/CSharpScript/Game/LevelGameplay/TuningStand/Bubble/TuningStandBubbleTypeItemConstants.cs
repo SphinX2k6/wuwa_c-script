@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 {
-	// Token: 0x020069DC RID: 27100
+	// Token: 0x02005B38 RID: 23352
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TuningStandBubbleTypeItemConstants
 	{
-		// Token: 0x040232F0 RID: 144112
+		// Token: 0x0401E4E0 RID: 124128
 		public const string FULUOLUO_TALK = "FLL";
 
-		// Token: 0x040232F1 RID: 144113
+		// Token: 0x0401E4E1 RID: 124129
 		public const string MALE_TALK = "M";
 
-		// Token: 0x040232F2 RID: 144114
+		// Token: 0x0401E4E2 RID: 124130
 		public const string FEMALE_TALK = "F";
 
-		// Token: 0x040232F3 RID: 144115
+		// Token: 0x0401E4E3 RID: 124131
 		public const double COOL_DOWN_TIME = 20.0;
 	}
 }

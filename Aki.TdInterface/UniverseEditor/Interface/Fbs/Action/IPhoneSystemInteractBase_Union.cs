@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CB1 RID: 27825
+	// Token: 0x02007427 RID: 29735
 	public enum IPhoneSystemInteractBase_Union : byte
 	{
-		// Token: 0x0401160A RID: 71178
+		// Token: 0x0401257A RID: 75130
 		NONE,
-		// Token: 0x0401160B RID: 71179
+		// Token: 0x0401257B RID: 75131
 		IPhoneSystemInteractBase,
-		// Token: 0x0401160C RID: 71180
+		// Token: 0x0401257C RID: 75132
 		ISendPhoneMessage,
-		// Token: 0x0401160D RID: 71181
+		// Token: 0x0401257D RID: 75133
 		IDeletePhoneMessage,
-		// Token: 0x0401160E RID: 71182
+		// Token: 0x0401257E RID: 75134
 		IOpenPhoneMessageBoard,
-		// Token: 0x0401160F RID: 71183
+		// Token: 0x0401257F RID: 75135
 		IFlowOpenPhoneMessage
 	}
 }

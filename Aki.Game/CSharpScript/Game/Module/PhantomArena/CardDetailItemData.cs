@@ -5,31 +5,31 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardDetail;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x0200513A RID: 20794
+	// Token: 0x0200410A RID: 16650
 	[NullableContext(2)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class CardDetailItemData
 	{
-		// Token: 0x0603516F RID: 217455 RVA: 0x00C942A4 File Offset: 0x00C924A4
+		// Token: 0x0602A068 RID: 172136 RVA: 0x00BE16B8 File Offset: 0x00BDF8B8
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public CardDetailItemData()
 		{
 		}
 
-		// Token: 0x0401C4C4 RID: 115908
+		// Token: 0x04016EF9 RID: 93945
 		[Nullable(1)]
 		[RequiredMember]
 		public string Name;
 
-		// Token: 0x0401C4C5 RID: 115909
+		// Token: 0x04016EFA RID: 93946
 		public ICardAttributeData AttributeData;
 
-		// Token: 0x0401C4C6 RID: 115910
+		// Token: 0x04016EFB RID: 93947
 		public ICardDescriptionData CardDescriptionData;
 
-		// Token: 0x0401C4C7 RID: 115911
+		// Token: 0x04016EFC RID: 93948
 		[Nullable(new byte[]
 		{
 			2,
@@ -37,25 +37,25 @@ namespace CSharpScript.Game.Module.PhantomArena
 		})]
 		public List<CardDetailFactorDescItemData> FactorDataList;
 
-		// Token: 0x0401C4C8 RID: 115912
+		// Token: 0x04016EFD RID: 93949
 		public string BgDescription;
 
-		// Token: 0x0401C4C9 RID: 115913
+		// Token: 0x04016EFE RID: 93950
 		public ICardDetailTaskData TaskData;
 
-		// Token: 0x0401C4CA RID: 115914
+		// Token: 0x04016EFF RID: 93951
 		public ICardDetailActiveSkillData ActiveSkillData;
 
-		// Token: 0x0401C4CB RID: 115915
+		// Token: 0x04016F00 RID: 93952
 		public ICardDetailPassiveSkillData PassiveSkillData;
 
-		// Token: 0x0401C4CC RID: 115916
+		// Token: 0x04016F01 RID: 93953
 		public ICardDetailLockData LockData;
 
-		// Token: 0x0401C4CD RID: 115917
+		// Token: 0x04016F02 RID: 93954
 		public ICardDetailDurationData DurationData;
 
-		// Token: 0x0401C4CE RID: 115918
+		// Token: 0x04016F03 RID: 93955
 		public ICardDetailRemainRoundData RemainRoundData;
 	}
 }

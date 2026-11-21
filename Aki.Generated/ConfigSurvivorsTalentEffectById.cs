@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009A9 RID: 2473
+	// Token: 0x02000A7E RID: 2686
 	public class ConfigSurvivorsTalentEffectById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A0A RID: 14858 RVA: 0x001A1EF0 File Offset: 0x001A00F0
+		// Token: 0x06003F08 RID: 16136 RVA: 0x001C1284 File Offset: 0x001BF484
 		static ConfigSurvivorsTalentEffectById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSurvivorsTalentEffectById.CreateStaticDefaultValue), new Action(ConfigSurvivorsTalentEffectById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A0B RID: 14859 RVA: 0x001A1F10 File Offset: 0x001A0110
+		// Token: 0x06003F09 RID: 16137 RVA: 0x001C12A4 File Offset: 0x001BF4A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSurvivorsTalentEffectById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A0C RID: 14860 RVA: 0x001A1F8F File Offset: 0x001A018F
+		// Token: 0x06003F0A RID: 16138 RVA: 0x001C1323 File Offset: 0x001BF523
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSurvivorsTalentEffectById.LogPair = null;
 			ConfigSurvivorsTalentEffectById.HandleId = 0;
 		}
 
-		// Token: 0x06003A0D RID: 14861 RVA: 0x001A1F9D File Offset: 0x001A019D
+		// Token: 0x06003F0B RID: 16139 RVA: 0x001C1331 File Offset: 0x001BF531
 		public static void Init()
 		{
 			ConfigSurvivorsTalentEffectById.HandleId = ConfigCommon.InitDataStatement(ConfigSurvivorsTalentEffectById.HandleId, "db_survivors.db", "select BinData from `SurvivorsTalentEffect` where Id=?");
 		}
 
-		// Token: 0x06003A0E RID: 14862 RVA: 0x001A1FB8 File Offset: 0x001A01B8
+		// Token: 0x06003F0C RID: 16140 RVA: 0x001C134C File Offset: 0x001BF54C
 		public static SurvivorsTalentEffect? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSurvivorsTalentEffectById.HandleId, ConfigSurvivorsTalentEffectById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SurvivorsTalentEffect?(rootAsSurvivorsTalentEffect);
 		}
 
-		// Token: 0x04004385 RID: 17285
+		// Token: 0x04004958 RID: 18776
 		private const string DB = "db_survivors.db";
 
-		// Token: 0x04004386 RID: 17286
+		// Token: 0x04004959 RID: 18777
 		private const string FILE = "x.幸存者_局外.xlsx";
 
-		// Token: 0x04004387 RID: 17287
+		// Token: 0x0400495A RID: 18778
 		private const string TABLE = "SurvivorsTalentEffect";
 
-		// Token: 0x04004388 RID: 17288
+		// Token: 0x0400495B RID: 18779
 		private const string COMMAND = "select BinData from `SurvivorsTalentEffect` where Id=?";
 
-		// Token: 0x04004389 RID: 17289
+		// Token: 0x0400495C RID: 18780
 		private const string KEY_PREFIX = "SurvivorsTalentEffectById";
 
-		// Token: 0x0400438A RID: 17290
+		// Token: 0x0400495D RID: 18781
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400438B RID: 17291
+		// Token: 0x0400495E RID: 18782
 		private static int HandleId;
 	}
 }

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A7C RID: 6780
+// Token: 0x02000F3B RID: 3899
 [NullableContext(1)]
 [Nullable(0)]
 public class DeadEyeAimItem : UiPanelBase
 {
-	// Token: 0x0600C7B2 RID: 51122 RVA: 0x002D7AF4 File Offset: 0x002D5CF4
+	// Token: 0x06009BC2 RID: 39874 RVA: 0x002E2C10 File Offset: 0x002E0E10
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -24,7 +24,7 @@ public class DeadEyeAimItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C7B3 RID: 51123 RVA: 0x002D7B3C File Offset: 0x002D5D3C
+	// Token: 0x06009BC3 RID: 39875 RVA: 0x002E2C58 File Offset: 0x002E0E58
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(0);
@@ -34,7 +34,7 @@ public class DeadEyeAimItem : UiPanelBase
 		this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 	}
 
-	// Token: 0x0600C7B4 RID: 51124 RVA: 0x002D7B9C File Offset: 0x002D5D9C
+	// Token: 0x06009BC4 RID: 39876 RVA: 0x002E2CB8 File Offset: 0x002E0EB8
 	protected override void OnAfterShow()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -45,7 +45,7 @@ public class DeadEyeAimItem : UiPanelBase
 		sequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600C7B5 RID: 51125 RVA: 0x002D7BCC File Offset: 0x002D5DCC
+	// Token: 0x06009BC5 RID: 39877 RVA: 0x002E2CE8 File Offset: 0x002E0EE8
 	protected override UniTask OnBeforeHideAsync()
 	{
 		DeadEyeAimItem.<OnBeforeHideAsync>d__6 <OnBeforeHideAsync>d__;
@@ -56,13 +56,13 @@ public class DeadEyeAimItem : UiPanelBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7B6 RID: 51126 RVA: 0x002D7C0F File Offset: 0x002D5E0F
+	// Token: 0x06009BC6 RID: 39878 RVA: 0x002E2D2B File Offset: 0x002E0F2B
 	public Vector2D GetAimRange()
 	{
 		return this.Size;
 	}
 
-	// Token: 0x0600C7B7 RID: 51127 RVA: 0x002D7C18 File Offset: 0x002D5E18
+	// Token: 0x06009BC7 RID: 39879 RVA: 0x002E2D34 File Offset: 0x002E0F34
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -72,18 +72,18 @@ public class DeadEyeAimItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005C38 RID: 23608
+	// Token: 0x04005D07 RID: 23815
 	private readonly Vector2D Size = Vector2D.Create();
 
-	// Token: 0x04005C39 RID: 23609
+	// Token: 0x04005D08 RID: 23816
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x02007FC9 RID: 32713
+	// Token: 0x02007158 RID: 29016
 	[NullableContext(0)]
 	private class EViewComponent
 	{
-		// Token: 0x04029B89 RID: 170889
+		// Token: 0x04024EC6 RID: 151238
 		public const int NormalItem = 0;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200249E RID: 9374
+// Token: 0x02001985 RID: 6533
 public enum EVisionDetailTop
 {
-	// Token: 0x04008DBF RID: 36287
+	// Token: 0x04008F09 RID: 36617
 	NameText,
-	// Token: 0x04008DC0 RID: 36288
+	// Token: 0x04008F0A RID: 36618
 	ToggleLock,
-	// Token: 0x04008DC1 RID: 36289
+	// Token: 0x04008F0B RID: 36619
 	Desc,
-	// Token: 0x04008DC2 RID: 36290
+	// Token: 0x04008F0C RID: 36620
 	RankItem,
-	// Token: 0x04008DC3 RID: 36291
+	// Token: 0x04008F0D RID: 36621
 	RankText,
-	// Token: 0x04008DC4 RID: 36292
+	// Token: 0x04008F0E RID: 36622
 	SuitElementItem,
-	// Token: 0x04008DC5 RID: 36293
+	// Token: 0x04008F0F RID: 36623
 	ToggleDeprecate
 }

@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200111B RID: 4379
+// Token: 0x020005CF RID: 1487
 public class BabelTowerBuffDetailItem : UiPanelBase
 {
-	// Token: 0x06007297 RID: 29335 RVA: 0x00177EE0 File Offset: 0x001760E0
+	// Token: 0x0600462D RID: 17965 RVA: 0x0018089C File Offset: 0x0017EA9C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -32,7 +32,7 @@ public class BabelTowerBuffDetailItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007298 RID: 29336 RVA: 0x00177FAC File Offset: 0x001761AC
+	// Token: 0x0600462E RID: 17966 RVA: 0x00180968 File Offset: 0x0017EB68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerBuffDetailItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class BabelTowerBuffDetailItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007299 RID: 29337 RVA: 0x00177FEF File Offset: 0x001761EF
+	// Token: 0x0600462F RID: 17967 RVA: 0x001809AB File Offset: 0x0017EBAB
 	[NullableContext(1)]
 	public void Update(IBabelTowerBuffItemData data)
 	{
@@ -51,7 +51,7 @@ public class BabelTowerBuffDetailItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600729A RID: 29338 RVA: 0x00178000 File Offset: 0x00176200
+	// Token: 0x06004630 RID: 17968 RVA: 0x001809BC File Offset: 0x0017EBBC
 	public void Refresh()
 	{
 		if (this.Data == null)
@@ -94,30 +94,30 @@ public class BabelTowerBuffDetailItem : UiPanelBase
 		uiNiagara.ActivateSystem(true);
 	}
 
-	// Token: 0x0400350A RID: 13578
+	// Token: 0x040035A3 RID: 13731
 	[Nullable(2)]
 	private BabelTowerBuffStarAndDescItem StarAndDescItem;
 
-	// Token: 0x0400350B RID: 13579
+	// Token: 0x040035A4 RID: 13732
 	[Nullable(2)]
 	private IBabelTowerBuffItemData Data;
 
-	// Token: 0x020076E0 RID: 30432
+	// Token: 0x02006874 RID: 26740
 	private class EComponents
 	{
-		// Token: 0x040273A3 RID: 160675
+		// Token: 0x040226EC RID: 141036
 		public const int NameText = 0;
 
-		// Token: 0x040273A4 RID: 160676
+		// Token: 0x040226ED RID: 141037
 		public const int QualityBgTexture = 1;
 
-		// Token: 0x040273A5 RID: 160677
+		// Token: 0x040226EE RID: 141038
 		public const int ItemIconTexture = 2;
 
-		// Token: 0x040273A6 RID: 160678
+		// Token: 0x040226EF RID: 141039
 		public const int QualityNiagara = 3;
 
-		// Token: 0x040273A7 RID: 160679
+		// Token: 0x040226F0 RID: 141040
 		public const int ContentItem = 4;
 	}
 }

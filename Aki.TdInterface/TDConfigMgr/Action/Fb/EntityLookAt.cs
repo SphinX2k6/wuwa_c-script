@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002627 RID: 9767
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028E7 RID: 10471
 	public class EntityLookAt : ActionParams
 	{
-		// Token: 0x0600DB3D RID: 56125 RVA: 0x0020A55E File Offset: 0x0020875E
+		// Token: 0x0600E90B RID: 59659 RVA: 0x00226D2A File Offset: 0x00224F2A
 		public static EntityLookAt Create(IEntityLookAt? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040B1 RID: 16561
-		// (get) Token: 0x0600DB3E RID: 56126 RVA: 0x0020A57D File Offset: 0x0020877D
+		// Token: 0x170043EB RID: 17387
+		// (get) Token: 0x0600E90C RID: 59660 RVA: 0x00226D49 File Offset: 0x00224F49
 		public virtual int EntityId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040B2 RID: 16562
-		// (get) Token: 0x0600DB3F RID: 56127 RVA: 0x0020A58A File Offset: 0x0020878A
+		// Token: 0x170043EC RID: 17388
+		// (get) Token: 0x0600E90D RID: 59661 RVA: 0x00226D56 File Offset: 0x00224F56
 		public virtual VectorInfo Pos
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040B3 RID: 16563
-		// (get) Token: 0x0600DB40 RID: 56128 RVA: 0x0020A5C0 File Offset: 0x002087C0
+		// Token: 0x170043ED RID: 17389
+		// (get) Token: 0x0600E90E RID: 59662 RVA: 0x00226D8C File Offset: 0x00224F8C
 		public virtual bool? CameraMove
 		{
 			get
@@ -63,14 +61,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079CB RID: 31179
+		// Token: 0x04008067 RID: 32871
 		private IEntityLookAt Instance;
 
-		// Token: 0x040079CC RID: 31180
+		// Token: 0x04008068 RID: 32872
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x040079CD RID: 31181
+		// Token: 0x04008069 RID: 32873
 		private bool _PosInited;
 	}
 }

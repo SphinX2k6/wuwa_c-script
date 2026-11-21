@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x02002BB7 RID: 11191
+// Token: 0x02002132 RID: 8498
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,30 +15,30 @@ using UnrealEngine;
 })]
 public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondItemSt>, IStaticVariableResetter
 {
-	// Token: 0x06017329 RID: 95017 RVA: 0x005E16C2 File Offset: 0x005DF8C2
+	// Token: 0x06014D5A RID: 85338 RVA: 0x0060E296 File Offset: 0x0060C496
 	static TimeOfDaySecondCircleAttachItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimeOfDaySecondCircleAttachItem.CreateStaticDefaultValue), new Action(TimeOfDaySecondCircleAttachItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601732A RID: 95018 RVA: 0x005E16E1 File Offset: 0x005DF8E1
+	// Token: 0x06014D5B RID: 85339 RVA: 0x0060E2B5 File Offset: 0x0060C4B5
 	public TimeOfDaySecondCircleAttachItem(AActor uiItem = null) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0601732B RID: 95019 RVA: 0x005E170F File Offset: 0x005DF90F
+	// Token: 0x06014D5C RID: 85340 RVA: 0x0060E2E3 File Offset: 0x0060C4E3
 	public static void CreateStaticDefaultValue()
 	{
 		TimeOfDaySecondCircleAttachItem.MiddleOffsetCurve = null;
 	}
 
-	// Token: 0x0601732C RID: 95020 RVA: 0x005E1717 File Offset: 0x005DF917
+	// Token: 0x06014D5D RID: 85341 RVA: 0x0060E2EB File Offset: 0x0060C4EB
 	public static void ResetStaticDefaultValue()
 	{
 		TimeOfDaySecondCircleAttachItem.MiddleOffsetCurve = null;
 	}
 
-	// Token: 0x0601732D RID: 95021 RVA: 0x005E1720 File Offset: 0x005DF920
+	// Token: 0x06014D5E RID: 85342 RVA: 0x0060E2F4 File Offset: 0x0060C4F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -73,7 +73,7 @@ public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondIte
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601732E RID: 95022 RVA: 0x005E18AE File Offset: 0x005DFAAE
+	// Token: 0x06014D5F RID: 85343 RVA: 0x0060E482 File Offset: 0x0060C682
 	[NullableContext(1)]
 	protected override void OnRefreshItem(TimeOfDaySecondItemSt data)
 	{
@@ -85,7 +85,7 @@ public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondIte
 		this.OnMoveItem();
 	}
 
-	// Token: 0x0601732F RID: 95023 RVA: 0x005E18EC File Offset: 0x005DFAEC
+	// Token: 0x06014D60 RID: 85344 RVA: 0x0060E4C0 File Offset: 0x0060C6C0
 	private void RefreshShowText()
 	{
 		if (this.CurrentItemData != null)
@@ -96,7 +96,7 @@ public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondIte
 		}
 	}
 
-	// Token: 0x06017330 RID: 95024 RVA: 0x005E193C File Offset: 0x005DFB3C
+	// Token: 0x06014D61 RID: 85345 RVA: 0x0060E510 File Offset: 0x0060C710
 	private void RefreshArrow()
 	{
 		if (this.CurrentItemData != null)
@@ -114,7 +114,7 @@ public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondIte
 		}
 	}
 
-	// Token: 0x06017331 RID: 95025 RVA: 0x005E19A0 File Offset: 0x005DFBA0
+	// Token: 0x06014D62 RID: 85346 RVA: 0x0060E574 File Offset: 0x0060C774
 	protected override void OnMoveItem()
 	{
 		float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -206,7 +206,7 @@ public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondIte
 		this.RootItem.SetUIItemScale(uiitemScale2);
 	}
 
-	// Token: 0x06017332 RID: 95026 RVA: 0x005E1CC6 File Offset: 0x005DFEC6
+	// Token: 0x06014D63 RID: 85347 RVA: 0x0060E89A File Offset: 0x0060CA9A
 	private void OnClickStoneBtn()
 	{
 		if (this.CurrentItemData == null)
@@ -216,100 +216,100 @@ public class TimeOfDaySecondCircleAttachItem : AutoAttachItem<TimeOfDaySecondIte
 		EventSystem.Instance.Emit<TimeOfDaySecondCircleAttachItem>(EEventName.ClickTimeItem, this);
 	}
 
-	// Token: 0x06017333 RID: 95027 RVA: 0x005E1CE2 File Offset: 0x005DFEE2
+	// Token: 0x06014D64 RID: 85348 RVA: 0x0060E8B6 File Offset: 0x0060CAB6
 	protected override void OnUnSelect()
 	{
 	}
 
-	// Token: 0x06017334 RID: 95028 RVA: 0x005E1CE4 File Offset: 0x005DFEE4
+	// Token: 0x06014D65 RID: 85349 RVA: 0x0060E8B8 File Offset: 0x0060CAB8
 	public override void OnSelect()
 	{
 		TimeOfDayModel.Instance.CurrentSelectTimeItemSt = this.CurrentItemData;
 		EventSystem.Instance.Emit(EEventName.OnSelectTimeItem);
 	}
 
-	// Token: 0x0400ADAB RID: 44459
+	// Token: 0x0400B1B0 RID: 45488
 	private TimeOfDaySecondItemSt CurrentItemData;
 
-	// Token: 0x0400ADAC RID: 44460
+	// Token: 0x0400B1B1 RID: 45489
 	[Nullable(1)]
 	private readonly Rotator ArrowRotator = Rotator.Create();
 
-	// Token: 0x0400ADAD RID: 44461
+	// Token: 0x0400B1B2 RID: 45490
 	private readonly FVector DefaultScale = new FVector(0.8f, 0.8f, 0.8f);
 
-	// Token: 0x0400ADAE RID: 44462
+	// Token: 0x0400B1B3 RID: 45491
 	public static UCurveFloat MiddleOffsetCurve;
 
-	// Token: 0x0400ADAF RID: 44463
+	// Token: 0x0400B1B4 RID: 45492
 	private const float ANIMAL_SCALE = 0.8f;
 
-	// Token: 0x0400ADB0 RID: 44464
+	// Token: 0x0400B1B5 RID: 45493
 	private const int MIDDLE_TIME = 12;
 
-	// Token: 0x0400ADB1 RID: 44465
+	// Token: 0x0400B1B6 RID: 45494
 	private const int FULL_ANGLE = 360;
 
-	// Token: 0x0400ADB2 RID: 44466
+	// Token: 0x0400B1B7 RID: 45495
 	private const int ONE_HOUR_ANGLE = 30;
 
-	// Token: 0x0400ADB3 RID: 44467
+	// Token: 0x0400B1B8 RID: 45496
 	private const float LEFT_RANGE = 0.4f;
 
-	// Token: 0x0400ADB4 RID: 44468
+	// Token: 0x0400B1B9 RID: 45497
 	private const float MIDDLE_RANGE = 0.5f;
 
-	// Token: 0x0400ADB5 RID: 44469
+	// Token: 0x0400B1BA RID: 45498
 	private const float RIGHT_RANGE = 0.6f;
 
-	// Token: 0x0400ADB6 RID: 44470
+	// Token: 0x0400B1BB RID: 45499
 	private const float BORDER_ALPHA = 0.8f;
 
-	// Token: 0x0400ADB7 RID: 44471
+	// Token: 0x0400B1BC RID: 45500
 	private const float BORDER_RIGHT = 0.65625f;
 
-	// Token: 0x0400ADB8 RID: 44472
+	// Token: 0x0400B1BD RID: 45501
 	private const float BORDER_LEFT = 0.34375f;
 
-	// Token: 0x0400ADB9 RID: 44473
+	// Token: 0x0400B1BE RID: 45502
 	private const float BORDER_LEFT_HIDE = 0.03125f;
 
-	// Token: 0x0400ADBA RID: 44474
+	// Token: 0x0400B1BF RID: 45503
 	private const float BORDER_RIGHT_HIDE = 0.96875f;
 
-	// Token: 0x0400ADBB RID: 44475
+	// Token: 0x0400B1C0 RID: 45504
 	private const float BORDER_MIDDLE = 0.5f;
 
-	// Token: 0x0400ADBC RID: 44476
+	// Token: 0x0400B1C1 RID: 45505
 	private const float STONE2_BORDER_LEFT = 0.375f;
 
-	// Token: 0x0400ADBD RID: 44477
+	// Token: 0x0400B1C2 RID: 45506
 	private const float STONE2_BORDER_RIGHT = 0.625f;
 
-	// Token: 0x0400ADBE RID: 44478
+	// Token: 0x0400B1C3 RID: 45507
 	private const float NIAGARA_MIN_VALUE = 0.2f;
 
-	// Token: 0x0200916F RID: 37231
+	// Token: 0x020083B3 RID: 33715
 	[NullableContext(0)]
 	private enum ETimeOfDaySecondItemComponents
 	{
-		// Token: 0x0402F131 RID: 192817
+		// Token: 0x0402A837 RID: 174135
 		Arrow,
-		// Token: 0x0402F132 RID: 192818
+		// Token: 0x0402A838 RID: 174136
 		TimeText,
-		// Token: 0x0402F133 RID: 192819
+		// Token: 0x0402A839 RID: 174137
 		CurrentTimeShowText,
-		// Token: 0x0402F134 RID: 192820
+		// Token: 0x0402A83A RID: 174138
 		StoneBtn,
-		// Token: 0x0402F135 RID: 192821
+		// Token: 0x0402A83B RID: 174139
 		StoneMixTexture,
-		// Token: 0x0402F136 RID: 192822
+		// Token: 0x0402A83C RID: 174140
 		SelfItem,
-		// Token: 0x0402F137 RID: 192823
+		// Token: 0x0402A83D RID: 174141
 		EmptyItem,
-		// Token: 0x0402F138 RID: 192824
+		// Token: 0x0402A83E RID: 174142
 		NotEmptyItem,
-		// Token: 0x0402F139 RID: 192825
+		// Token: 0x0402A83F RID: 174143
 		NiagaraItem
 	}
 }

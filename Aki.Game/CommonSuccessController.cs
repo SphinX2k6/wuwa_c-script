@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020019AC RID: 6572
+// Token: 0x02000E6A RID: 3690
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class CommonSuccessController : UiControllerBase
 {
-	// Token: 0x0600BFA9 RID: 49065 RVA: 0x002B42E4 File Offset: 0x002B24E4
+	// Token: 0x060093B3 RID: 37811 RVA: 0x002BF274 File Offset: 0x002BD474
 	[NullableContext(2)]
 	public static void OpenCommonSuccessView(CommonSuccessData data = null, Action finishCallback = null)
 	{
@@ -24,8 +24,8 @@ public class CommonSuccessController : UiControllerBase
 		});
 	}
 
-	// Token: 0x17001012 RID: 4114
-	// (get) Token: 0x0600BFAA RID: 49066 RVA: 0x002B4325 File Offset: 0x002B2525
+	// Token: 0x17001037 RID: 4151
+	// (get) Token: 0x060093B4 RID: 37812 RVA: 0x002BF2B5 File Offset: 0x002BD4B5
 	public static CommonSuccessController Instance
 	{
 		get
@@ -34,7 +34,7 @@ public class CommonSuccessController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600BFAB RID: 49067 RVA: 0x002B432C File Offset: 0x002B252C
+	// Token: 0x060093B5 RID: 37813 RVA: 0x002BF2BC File Offset: 0x002BD4BC
 	public static CommonSuccessController GetOrCreateInstance()
 	{
 		if (CommonSuccessController._Instance == null)
@@ -44,7 +44,7 @@ public class CommonSuccessController : UiControllerBase
 		return CommonSuccessController._Instance;
 	}
 
-	// Token: 0x0600BFAC RID: 49068 RVA: 0x002B4340 File Offset: 0x002B2540
+	// Token: 0x060093B6 RID: 37814 RVA: 0x002BF2D0 File Offset: 0x002BD4D0
 	public static bool CreateInstance()
 	{
 		if (CommonSuccessController._Instance != null)
@@ -55,24 +55,24 @@ public class CommonSuccessController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600BFAD RID: 49069 RVA: 0x002B4356 File Offset: 0x002B2556
+	// Token: 0x060093B7 RID: 37815 RVA: 0x002BF2E6 File Offset: 0x002BD4E6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600BFAE RID: 49070 RVA: 0x002B4358 File Offset: 0x002B2558
+	// Token: 0x060093B8 RID: 37816 RVA: 0x002BF2E8 File Offset: 0x002BD4E8
 	public static void ResetStaticDefaultValue()
 	{
 		CommonSuccessController._Instance = null;
 	}
 
-	// Token: 0x0600BFAF RID: 49071 RVA: 0x002B4360 File Offset: 0x002B2560
+	// Token: 0x060093B9 RID: 37817 RVA: 0x002BF2F0 File Offset: 0x002BD4F0
 	static CommonSuccessController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CommonSuccessController.CreateStaticDefaultValue), new Action(CommonSuccessController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005635 RID: 22069
+	// Token: 0x040056E7 RID: 22247
 	[Nullable(2)]
 	private static CommonSuccessController _Instance;
 }

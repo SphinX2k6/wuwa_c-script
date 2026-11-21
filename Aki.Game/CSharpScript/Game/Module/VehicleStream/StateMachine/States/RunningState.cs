@@ -8,22 +8,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 {
-	// Token: 0x020048BC RID: 18620
+	// Token: 0x02003833 RID: 14387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RunningState : VehicleStateBase
 	{
-		// Token: 0x06030A8C RID: 199308 RVA: 0x00B4C324 File Offset: 0x00B4A524
+		// Token: 0x060255B8 RID: 153016 RVA: 0x00A8712C File Offset: 0x00A8532C
 		public RunningState(VehicleSmBlackBoard blackBoard) : base(EVehicleStateType.Running, blackBoard)
 		{
 		}
 
-		// Token: 0x06030A8D RID: 199309 RVA: 0x00B4C3A3 File Offset: 0x00B4A5A3
+		// Token: 0x060255B9 RID: 153017 RVA: 0x00A871AB File Offset: 0x00A853AB
 		protected override void OnCreate()
 		{
 		}
 
-		// Token: 0x06030A8E RID: 199310 RVA: 0x00B4C3A8 File Offset: 0x00B4A5A8
+		// Token: 0x060255BA RID: 153018 RVA: 0x00A871B0 File Offset: 0x00A853B0
 		[NullableContext(2)]
 		protected override void OnEnter(EVehicleStateType lastState, string reason = null)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A8F RID: 199311 RVA: 0x00B4C404 File Offset: 0x00B4A604
+		// Token: 0x060255BB RID: 153019 RVA: 0x00A8720C File Offset: 0x00A8540C
 		protected override void OnExit(EVehicleStateType nextState)
 		{
 			this.SubState = ERunningSubState.None;
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.BrakingAudioHandle = 0;
 		}
 
-		// Token: 0x06030A90 RID: 199312 RVA: 0x00B4C426 File Offset: 0x00B4A626
+		// Token: 0x060255BC RID: 153020 RVA: 0x00A8722E File Offset: 0x00A8542E
 		protected override void OnDestroy()
 		{
 			this.BlackBoard.StopAudio(this.EngineAudioHandle, true);
 			this.EngineAudioHandle = 0;
 		}
 
-		// Token: 0x06030A91 RID: 199313 RVA: 0x00B4C441 File Offset: 0x00B4A641
+		// Token: 0x060255BD RID: 153021 RVA: 0x00A87249 File Offset: 0x00A85449
 		public new void OnEnterPlayerRange()
 		{
 			if (this.BlackBoard.EngineAudio != null && this.EngineAudioHandle == 0)
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A92 RID: 199314 RVA: 0x00B4C475 File Offset: 0x00B4A675
+		// Token: 0x060255BE RID: 153022 RVA: 0x00A8727D File Offset: 0x00A8547D
 		public new void OnLeavePlayerRange()
 		{
 			this.BlackBoard.StopAudio(this.EngineAudioHandle, true);
 			this.EngineAudioHandle = 0;
 		}
 
-		// Token: 0x06030A93 RID: 199315 RVA: 0x00B4C490 File Offset: 0x00B4A690
+		// Token: 0x060255BF RID: 153023 RVA: 0x00A87298 File Offset: 0x00A85498
 		protected override void OnUpdate(float delta)
 		{
 			if (this.UpdateMove(delta))
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A94 RID: 199316 RVA: 0x00B4C4D9 File Offset: 0x00B4A6D9
+		// Token: 0x060255C0 RID: 153024 RVA: 0x00A872E1 File Offset: 0x00A854E1
 		protected override EVehicleStateType CheckGetNextState()
 		{
 			if (this.BlackBoard.CheckArrivedDestination())
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return EVehicleStateType.None;
 		}
 
-		// Token: 0x06030A95 RID: 199317 RVA: 0x00B4C500 File Offset: 0x00B4A700
+		// Token: 0x060255C1 RID: 153025 RVA: 0x00A87308 File Offset: 0x00A85508
 		private bool UpdateMove(float delta)
 		{
 			this.CheckUpdateRoadway();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return result;
 		}
 
-		// Token: 0x06030A96 RID: 199318 RVA: 0x00B4C570 File Offset: 0x00B4A770
+		// Token: 0x060255C2 RID: 153026 RVA: 0x00A87378 File Offset: 0x00A85578
 		private bool CheckUpdateRoadway()
 		{
 			float num = this.BlackBoard.CurrentSplineLength - this.BlackBoard.CurrentRootDistance;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return true;
 		}
 
-		// Token: 0x06030A97 RID: 199319 RVA: 0x00B4C5A4 File Offset: 0x00B4A7A4
+		// Token: 0x060255C3 RID: 153027 RVA: 0x00A873AC File Offset: 0x00A855AC
 		private void OnBeforeMove()
 		{
 			EMoveCheckResult beforeMoveCheckResult = this.MoveInfo.BeforeMoveCheckResult;
@@ -142,14 +142,14 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.DoByBeforeMoveCheckResult(beforeMoveCheckResult, moveCheckResult);
 		}
 
-		// Token: 0x06030A98 RID: 199320 RVA: 0x00B4C5E4 File Offset: 0x00B4A7E4
+		// Token: 0x060255C4 RID: 153028 RVA: 0x00A873EC File Offset: 0x00A855EC
 		private void UpdateSpeed(float delta)
 		{
 			float currentSpeed = (float)MathCommon.Clamp((double)this.BlackBoard.CurrentSpeed + (double)(this.BlackBoard.CurrentAcceleratedSpeed * delta) * TimeUtil.Instance.Millisecond, 0.0, (double)this.BlackBoard.NormalSpeed);
 			this.BlackBoard.CurrentSpeed = currentSpeed;
 		}
 
-		// Token: 0x06030A99 RID: 199321 RVA: 0x00B4C640 File Offset: 0x00B4A840
+		// Token: 0x060255C5 RID: 153029 RVA: 0x00A87448 File Offset: 0x00A85648
 		private bool UpdateMoveImp(float delta)
 		{
 			float currentRootDistance = this.BlackBoard.CurrentRootDistance;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return currentRootDistance != this.BlackBoard.CurrentRootDistance;
 		}
 
-		// Token: 0x06030A9A RID: 199322 RVA: 0x00B4C6F8 File Offset: 0x00B4A8F8
+		// Token: 0x060255C6 RID: 153030 RVA: 0x00A87500 File Offset: 0x00A85700
 		private EMoveCheckResult BeforeMoveCheck(float curRootDistance)
 		{
 			string text = base.CheckObstruction(curRootDistance, "VehicleStream.Running");
@@ -180,14 +180,14 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return EMoveCheckResult.None;
 		}
 
-		// Token: 0x06030A9B RID: 199323 RVA: 0x00B4C744 File Offset: 0x00B4A944
+		// Token: 0x060255C7 RID: 153031 RVA: 0x00A8754C File Offset: 0x00A8574C
 		private bool CheckWillArriveIntersection()
 		{
 			UKuroRoadway nextRoadway = this.BlackBoard.NextRoadway;
 			return nextRoadway != null && nextRoadway is UKuroRoadwayIntersection && VehicleStreamModel.Instance.CheckIntersectionRoadwayOccupied(nextRoadway.Id) && (this.BlackBoard.CurrentSplineLength - this.BlackBoard.CurrentRootHeadDistance) * 0.01f <= 5f;
 		}
 
-		// Token: 0x06030A9C RID: 199324 RVA: 0x00B4C7A4 File Offset: 0x00B4A9A4
+		// Token: 0x060255C8 RID: 153032 RVA: 0x00A875AC File Offset: 0x00A857AC
 		private void DoByBeforeMoveCheckResult(EMoveCheckResult lastMoveCheckResult, EMoveCheckResult moveCheckResult)
 		{
 			this.MoveInfo.BeforeMoveCheckResult = moveCheckResult;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A9D RID: 199325 RVA: 0x00B4C98B File Offset: 0x00B4AB8B
+		// Token: 0x060255C9 RID: 153033 RVA: 0x00A87793 File Offset: 0x00A85993
 		private EMoveCheckResult AfterMoveCheck(float beforeMoveRootDistance, float afterMoveRootDistance)
 		{
 			this.CheckCrossPlayer(beforeMoveRootDistance, afterMoveRootDistance);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return this.MoveInfo.AfterMoveCheckInfo.Result;
 		}
 
-		// Token: 0x06030A9E RID: 199326 RVA: 0x00B4C9BC File Offset: 0x00B4ABBC
+		// Token: 0x060255CA RID: 153034 RVA: 0x00A877C4 File Offset: 0x00A859C4
 		private void CheckCrossPlayer(float beforeMoveRootDistance, float afterMoveRootDistance)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.MoveInfo.TryUpdateAdjustDistance(EMoveCheckResult.CrossPlayer, afterAdjustDistance);
 		}
 
-		// Token: 0x06030A9F RID: 199327 RVA: 0x00B4CB18 File Offset: 0x00B4AD18
+		// Token: 0x060255CB RID: 153035 RVA: 0x00A87920 File Offset: 0x00A85B20
 		private unsafe void CheckCrossSameRoadwayVehicle(float beforeMoveRootDistance, float afterMoveRootDistance)
 		{
 			UKuroRoadway currentRoadway = this.BlackBoard.CurrentRoadway;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030AA0 RID: 199328 RVA: 0x00B4CD60 File Offset: 0x00B4AF60
+		// Token: 0x060255CC RID: 153036 RVA: 0x00A87B68 File Offset: 0x00A85D68
 		private void CheckCrossNextRoadwayVehicle(float beforeMoveRootDistance, float afterMoveRootDistance)
 		{
 			UKuroRoadway nextRoadway = this.BlackBoard.NextRoadway;
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030AA1 RID: 199329 RVA: 0x00B4CF0C File Offset: 0x00B4B10C
+		// Token: 0x060255CD RID: 153037 RVA: 0x00A87D14 File Offset: 0x00A85F14
 		private void CheckVehicleHeadOverRoadOnWaitIntersection(float afterMoveRootDistance)
 		{
 			UKuroRoadway nextRoadway = this.BlackBoard.NextRoadway;
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030AA2 RID: 199330 RVA: 0x00B4CF85 File Offset: 0x00B4B185
+		// Token: 0x060255CE RID: 153038 RVA: 0x00A87D8D File Offset: 0x00A85F8D
 		private void PredictedVariableSpeed()
 		{
 			if (this.SubState == ERunningSubState.BrakingByIntersection || this.SubState == ERunningSubState.BrakingByObstruction)
@@ -473,22 +473,22 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.CheckSpeedUpByDownSlope();
 		}
 
-		// Token: 0x06030AA3 RID: 199331 RVA: 0x00B4CFAC File Offset: 0x00B4B1AC
+		// Token: 0x060255CF RID: 153039 RVA: 0x00A87DB4 File Offset: 0x00A85FB4
 		private void CheckSlowDownByTurn()
 		{
 		}
 
-		// Token: 0x06030AA4 RID: 199332 RVA: 0x00B4CFAE File Offset: 0x00B4B1AE
+		// Token: 0x060255D0 RID: 153040 RVA: 0x00A87DB6 File Offset: 0x00A85FB6
 		private void CheckSlowDownByUpSlope()
 		{
 		}
 
-		// Token: 0x06030AA5 RID: 199333 RVA: 0x00B4CFB0 File Offset: 0x00B4B1B0
+		// Token: 0x060255D1 RID: 153041 RVA: 0x00A87DB8 File Offset: 0x00A85FB8
 		private void CheckSpeedUpByDownSlope()
 		{
 		}
 
-		// Token: 0x06030AA6 RID: 199334 RVA: 0x00B4CFB4 File Offset: 0x00B4B1B4
+		// Token: 0x060255D2 RID: 153042 RVA: 0x00A87DBC File Offset: 0x00A85FBC
 		private void UpdateDesireLocationAndRotation()
 		{
 			UKuroRoadway currentRoadway = this.BlackBoard.CurrentRoadway;
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030AA7 RID: 199335 RVA: 0x00B4D1F0 File Offset: 0x00B4B3F0
+		// Token: 0x060255D3 RID: 153043 RVA: 0x00A87FF8 File Offset: 0x00A861F8
 		private void SyncKeyPointToServer()
 		{
 			int num = -1;
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030AA8 RID: 199336 RVA: 0x00B4D298 File Offset: 0x00B4B498
+		// Token: 0x060255D4 RID: 153044 RVA: 0x00A880A0 File Offset: 0x00A862A0
 		private bool GetLocationWithRelativePosition([Nullable(2)] UKuroRoadway roadway, float distance, global::Vector outVector)
 		{
 			if (roadway == null)
@@ -583,13 +583,13 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return true;
 		}
 
-		// Token: 0x06030AA9 RID: 199337 RVA: 0x00B4D306 File Offset: 0x00B4B506
+		// Token: 0x060255D5 RID: 153045 RVA: 0x00A8810E File Offset: 0x00A8630E
 		private float CalculateAcceleratedSpeedByBrakingDistance(float brakingDistance)
 		{
 			return -(this.BlackBoard.CurrentSpeed * this.BlackBoard.CurrentSpeed) / (2f * brakingDistance);
 		}
 
-		// Token: 0x06030AAA RID: 199338 RVA: 0x00B4D328 File Offset: 0x00B4B528
+		// Token: 0x060255D6 RID: 153046 RVA: 0x00A88130 File Offset: 0x00A86330
 		private void PlayBrakingAudio(float brakingDistance)
 		{
 			this.IsBrakingLoop = (brakingDistance > 0.1f);
@@ -601,44 +601,44 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.BrakingAudioHandle = this.BlackBoard.OpenAudio(text, this.IsBrakingLoop);
 		}
 
-		// Token: 0x0401A27D RID: 107133
+		// Token: 0x04014AF0 RID: 84720
 		private ERunningSubState SubState;
 
-		// Token: 0x0401A27E RID: 107134
+		// Token: 0x04014AF1 RID: 84721
 		private readonly MoveCheckInfo MoveInfo = new MoveCheckInfo();
 
-		// Token: 0x0401A27F RID: 107135
+		// Token: 0x04014AF2 RID: 84722
 		private readonly global::Vector CurrentHeadLocation = global::Vector.Create();
 
-		// Token: 0x0401A280 RID: 107136
+		// Token: 0x04014AF3 RID: 84723
 		private readonly global::Vector CurrentTailLocation = global::Vector.Create();
 
-		// Token: 0x0401A281 RID: 107137
+		// Token: 0x04014AF4 RID: 84724
 		private readonly global::Vector CurrentDirection = global::Vector.Create();
 
-		// Token: 0x0401A282 RID: 107138
+		// Token: 0x04014AF5 RID: 84725
 		private readonly global::Rotator CurrentRotator = global::Rotator.Create();
 
-		// Token: 0x0401A283 RID: 107139
+		// Token: 0x04014AF6 RID: 84726
 		private readonly global::Vector CurrentTail2Center = global::Vector.Create();
 
-		// Token: 0x0401A284 RID: 107140
+		// Token: 0x04014AF7 RID: 84727
 		private readonly global::Vector CurrentLocation = global::Vector.Create();
 
-		// Token: 0x0401A285 RID: 107141
+		// Token: 0x04014AF8 RID: 84728
 		private readonly IDistanceAndRoadway TmpDistanceAndRoadway = new DistanceAndRoadway
 		{
 			Distance = 0f,
 			Roadway = null
 		};
 
-		// Token: 0x0401A286 RID: 107142
+		// Token: 0x04014AF9 RID: 84729
 		private int EngineAudioHandle;
 
-		// Token: 0x0401A287 RID: 107143
+		// Token: 0x04014AFA RID: 84730
 		private int BrakingAudioHandle;
 
-		// Token: 0x0401A288 RID: 107144
+		// Token: 0x04014AFB RID: 84731
 		private bool IsBrakingLoop;
 	}
 }

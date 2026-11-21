@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020019F5 RID: 6645
+// Token: 0x02000EB4 RID: 3764
 public class DailyActivityRewardData
 {
-	// Token: 0x0600C27E RID: 49790 RVA: 0x002BE4C6 File Offset: 0x002BC6C6
+	// Token: 0x0600968B RID: 38539 RVA: 0x002C949E File Offset: 0x002C769E
 	public DailyActivityRewardData(int rewardId, double progress, int maxIndex)
 	{
 		this.RewardId = rewardId;
@@ -11,12 +11,12 @@ public class DailyActivityRewardData
 		this.MaxIndex = maxIndex;
 	}
 
-	// Token: 0x04005984 RID: 22916
+	// Token: 0x04005A53 RID: 23123
 	public int MaxIndex;
 
-	// Token: 0x04005985 RID: 22917
+	// Token: 0x04005A54 RID: 23124
 	public double Progress;
 
-	// Token: 0x04005986 RID: 22918
+	// Token: 0x04005A55 RID: 23125
 	public int RewardId;
 }

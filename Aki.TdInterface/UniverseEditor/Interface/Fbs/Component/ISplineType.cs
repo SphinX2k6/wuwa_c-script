@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005986 RID: 22918
+	// Token: 0x02005F93 RID: 24467
 	public struct ISplineType : IFlatbufferObject
 	{
-		// Token: 0x1700AC00 RID: 44032
-		// (get) Token: 0x06026CEA RID: 158954 RVA: 0x0055796F File Offset: 0x00555B6F
+		// Token: 0x1700B534 RID: 46388
+		// (get) Token: 0x06029254 RID: 168532 RVA: 0x0059E5DB File Offset: 0x0059C7DB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026CEB RID: 158955 RVA: 0x0055797C File Offset: 0x00555B7C
+		// Token: 0x06029255 RID: 168533 RVA: 0x0059E5E8 File Offset: 0x0059C7E8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026CEC RID: 158956 RVA: 0x00557984 File Offset: 0x00555B84
+		// Token: 0x06029256 RID: 168534 RVA: 0x0059E5F0 File Offset: 0x0059C7F0
 		public static ISplineType GetRootAsISplineType(ByteBuffer _bb)
 		{
 			return ISplineType.GetRootAsISplineType(_bb, default(ISplineType));
 		}
 
-		// Token: 0x06026CED RID: 158957 RVA: 0x005579A0 File Offset: 0x00555BA0
+		// Token: 0x06029257 RID: 168535 RVA: 0x0059E60C File Offset: 0x0059C80C
 		public static ISplineType GetRootAsISplineType(ByteBuffer _bb, ISplineType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026CEE RID: 158958 RVA: 0x005579BD File Offset: 0x00555BBD
+		// Token: 0x06029258 RID: 168536 RVA: 0x0059E629 File Offset: 0x0059C829
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026CEF RID: 158959 RVA: 0x005579CC File Offset: 0x00555BCC
+		// Token: 0x06029259 RID: 168537 RVA: 0x0059E638 File Offset: 0x0059C838
 		public ISplineType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AC01 RID: 44033
-		// (get) Token: 0x06026CF0 RID: 158960 RVA: 0x005579DC File Offset: 0x00555BDC
+		// Token: 0x1700B535 RID: 46389
+		// (get) Token: 0x0602925A RID: 168538 RVA: 0x0059E648 File Offset: 0x0059C848
 		public ESplineType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026CF1 RID: 158961 RVA: 0x00557A18 File Offset: 0x00555C18
+		// Token: 0x0602925B RID: 168539 RVA: 0x0059E684 File Offset: 0x0059C884
 		public static Offset<ISplineType> CreateISplineType(FlatBufferBuilder builder, ESplineType Type = ESplineType.Common)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISplineType.EndISplineType(builder);
 		}
 
-		// Token: 0x06026CF2 RID: 158962 RVA: 0x00557A2E File Offset: 0x00555C2E
+		// Token: 0x0602925C RID: 168540 RVA: 0x0059E69A File Offset: 0x0059C89A
 		public static void StartISplineType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026CF3 RID: 158963 RVA: 0x00557A37 File Offset: 0x00555C37
+		// Token: 0x0602925D RID: 168541 RVA: 0x0059E6A3 File Offset: 0x0059C8A3
 		public static void AddType(FlatBufferBuilder builder, ESplineType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026CF4 RID: 158964 RVA: 0x00557A42 File Offset: 0x00555C42
+		// Token: 0x0602925E RID: 168542 RVA: 0x0059E6AE File Offset: 0x0059C8AE
 		public static Offset<ISplineType> EndISplineType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISplineType>(builder.EndTable());
 		}
 
-		// Token: 0x06026CF5 RID: 158965 RVA: 0x00557A50 File Offset: 0x00555C50
+		// Token: 0x0602925F RID: 168543 RVA: 0x0059E6BC File Offset: 0x0059C8BC
 		public ISplineTypeT UnPack()
 		{
 			ISplineTypeT splineTypeT = new ISplineTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return splineTypeT;
 		}
 
-		// Token: 0x06026CF6 RID: 158966 RVA: 0x00557A6B File Offset: 0x00555C6B
+		// Token: 0x06029260 RID: 168544 RVA: 0x0059E6D7 File Offset: 0x0059C8D7
 		public void UnPackTo(ISplineTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026CF7 RID: 158967 RVA: 0x00557A7C File Offset: 0x00555C7C
+		// Token: 0x06029261 RID: 168545 RVA: 0x0059E6E8 File Offset: 0x0059C8E8
 		public static Offset<ISplineType> Pack(FlatBufferBuilder builder, ISplineTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISplineType.CreateISplineType(builder, _o.Type);
 		}
 
-		// Token: 0x0400EF7B RID: 61307
+		// Token: 0x0400FC70 RID: 64624
 		private Table __p;
 	}
 }

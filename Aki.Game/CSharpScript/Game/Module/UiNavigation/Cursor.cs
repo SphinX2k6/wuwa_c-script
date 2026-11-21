@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048E6 RID: 18662
+	// Token: 0x0200385D RID: 14429
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Cursor : IStaticVariableResetter
 	{
-		// Token: 0x06030CBA RID: 199866 RVA: 0x00B54B25 File Offset: 0x00B52D25
+		// Token: 0x060257E7 RID: 153575 RVA: 0x00A8F995 File Offset: 0x00A8DB95
 		static Cursor()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(Cursor.CreateStaticDefaultValue), new Action(Cursor.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x1700799C RID: 31132
-		// (get) Token: 0x06030CBB RID: 199867 RVA: 0x00B54B44 File Offset: 0x00B52D44
+		// Token: 0x17004D04 RID: 19716
+		// (get) Token: 0x060257E8 RID: 153576 RVA: 0x00A8F9B4 File Offset: 0x00A8DBB4
 		private static Vector TempLocation
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x1700799D RID: 31133
-		// (get) Token: 0x06030CBC RID: 199868 RVA: 0x00B54B5C File Offset: 0x00B52D5C
+		// Token: 0x17004D05 RID: 19717
+		// (get) Token: 0x060257E9 RID: 153577 RVA: 0x00A8F9CC File Offset: 0x00A8DBCC
 		private static Rotator OriRotator
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x1700799E RID: 31134
-		// (get) Token: 0x06030CBD RID: 199869 RVA: 0x00B54B74 File Offset: 0x00B52D74
+		// Token: 0x17004D06 RID: 19718
+		// (get) Token: 0x060257EA RID: 153578 RVA: 0x00A8F9E4 File Offset: 0x00A8DBE4
 		private static Rotator TempRotator
 		{
 			get
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x1700799F RID: 31135
-		// (get) Token: 0x06030CBE RID: 199870 RVA: 0x00B54B8C File Offset: 0x00B52D8C
+		// Token: 0x17004D07 RID: 19719
+		// (get) Token: 0x060257EB RID: 153579 RVA: 0x00A8F9FC File Offset: 0x00A8DBFC
 		private static Vector TempFollowLocation
 		{
 			get
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079A0 RID: 31136
-		// (get) Token: 0x06030CBF RID: 199871 RVA: 0x00B54BA4 File Offset: 0x00B52DA4
+		// Token: 0x17004D08 RID: 19720
+		// (get) Token: 0x060257EC RID: 153580 RVA: 0x00A8FA14 File Offset: 0x00A8DC14
 		private static Vector TempThirdLocation
 		{
 			get
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CC0 RID: 199872 RVA: 0x00B54BBC File Offset: 0x00B52DBC
+		// Token: 0x060257ED RID: 153581 RVA: 0x00A8FA2C File Offset: 0x00A8DC2C
 		private void CreateOriginalItem()
 		{
 			if (this.OriginalParentItem != null && this.OriginalParentItem.IsValid())
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CC1 RID: 199873 RVA: 0x00B54C28 File Offset: 0x00B52E28
+		// Token: 0x060257EE RID: 153582 RVA: 0x00A8FA98 File Offset: 0x00A8DC98
 		protected void RefreshUseItem()
 		{
 			if (this.UseItem != null && this.UseItem.IsValid())
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			Cursor.OriRotator.Set(frotator.Pitch, frotator.Yaw, frotator.Roll);
 		}
 
-		// Token: 0x06030CC2 RID: 199874 RVA: 0x00B54D6C File Offset: 0x00B52F6C
+		// Token: 0x060257EF RID: 153583 RVA: 0x00A8FBDC File Offset: 0x00A8DDDC
 		private void SetUseItemMoveInstantly()
 		{
 			if (this.UseItem == null || this.FollowItem == null)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.UseItem.GetOwner().D_K2_SetActorLocationAndRotation(Cursor.TempFollowLocation.ToUeVector(false), Cursor.TempRotator.ToUeRotator(), false, ref fhitResult, false);
 		}
 
-		// Token: 0x06030CC3 RID: 199875 RVA: 0x00B54E7C File Offset: 0x00B5307C
+		// Token: 0x060257F0 RID: 153584 RVA: 0x00A8FCEC File Offset: 0x00A8DEEC
 		private void UpdateCursorItemAttachParent()
 		{
 			if (this.UseItem == null)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CC4 RID: 199876 RVA: 0x00B54F3C File Offset: 0x00B5313C
+		// Token: 0x060257F1 RID: 153585 RVA: 0x00A8FDAC File Offset: 0x00A8DFAC
 		public void SetFollowItem(TsUiNavigationBehaviorListener listener)
 		{
 			this.Listener = listener;
@@ -206,14 +206,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.UpdateCursorItemAttachParent();
 		}
 
-		// Token: 0x06030CC5 RID: 199877 RVA: 0x00B54FEF File Offset: 0x00B531EF
+		// Token: 0x060257F2 RID: 153586 RVA: 0x00A8FE5F File Offset: 0x00A8E05F
 		public void RepeatMove()
 		{
 			this.IsNeedMove = true;
 			this.MoveTickTime = 0f;
 		}
 
-		// Token: 0x06030CC6 RID: 199878 RVA: 0x00B55004 File Offset: 0x00B53204
+		// Token: 0x060257F3 RID: 153587 RVA: 0x00A8FE74 File Offset: 0x00A8E074
 		private void CacheFollowOffsetValue()
 		{
 			float width = this.FollowItem.GetWidth();
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			Cursor.TempHeight = height;
 		}
 
-		// Token: 0x06030CC7 RID: 199879 RVA: 0x00B55104 File Offset: 0x00B53304
+		// Token: 0x060257F4 RID: 153588 RVA: 0x00A8FF74 File Offset: 0x00A8E174
 		private void UpdateCursorAlpha()
 		{
 			if (this.IsUseItemActive)
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CC8 RID: 199880 RVA: 0x00B55124 File Offset: 0x00B53324
+		// Token: 0x060257F5 RID: 153589 RVA: 0x00A8FF94 File Offset: 0x00A8E194
 		public void SetIsUseMouse(bool value)
 		{
 			if (this.IsUseMouse == value)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06030CC9 RID: 199881 RVA: 0x00B5518B File Offset: 0x00B5338B
+		// Token: 0x060257F6 RID: 153590 RVA: 0x00A8FFFB File Offset: 0x00A8E1FB
 		private void HandleMoveInstantly()
 		{
 			if (this.IsMoveInstantly)
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CCA RID: 199882 RVA: 0x00B551A8 File Offset: 0x00B533A8
+		// Token: 0x060257F7 RID: 153591 RVA: 0x00A90018 File Offset: 0x00A8E218
 		private bool CheckMoveCondition()
 		{
 			if (!UiManager.Instance.IsInited)
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.IsNeedMove;
 		}
 
-		// Token: 0x06030CCB RID: 199883 RVA: 0x00B55220 File Offset: 0x00B53420
+		// Token: 0x060257F8 RID: 153592 RVA: 0x00A90090 File Offset: 0x00A8E290
 		private void HandleMove(float delta)
 		{
 			FVectorDouble fvectorDouble = this.FollowItem.D_K2_GetComponentLocation();
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.HandleRotationTransition(delta, owner);
 		}
 
-		// Token: 0x06030CCC RID: 199884 RVA: 0x00B5532C File Offset: 0x00B5352C
+		// Token: 0x060257F9 RID: 153593 RVA: 0x00A9019C File Offset: 0x00A8E39C
 		private void HandleRotationTransition(float delta, AActor useItemOwner)
 		{
 			int tempRotation = this.TempRotation;
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RotationTransitionRemaining = 0f;
 		}
 
-		// Token: 0x06030CCD RID: 199885 RVA: 0x00B55457 File Offset: 0x00B53657
+		// Token: 0x060257FA RID: 153594 RVA: 0x00A902C7 File Offset: 0x00A8E4C7
 		public void Tick(float delta)
 		{
 			if (this.CheckMoveCondition())
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CCE RID: 199886 RVA: 0x00B55470 File Offset: 0x00B53670
+		// Token: 0x060257FB RID: 153595 RVA: 0x00A902E0 File Offset: 0x00A8E4E0
 		public void Clear()
 		{
 			LguiResourceManager.Instance.CancelLoadPrefab(this.AsyncLoadId);
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.AppliedRotation = 0;
 		}
 
-		// Token: 0x06030CCF RID: 199887 RVA: 0x00B55557 File Offset: 0x00B53757
+		// Token: 0x060257FC RID: 153596 RVA: 0x00A903C7 File Offset: 0x00A8E5C7
 		private void SetMoveTickTime()
 		{
 			if (this.MoveTickTime <= 0f)
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CD0 RID: 199888 RVA: 0x00B55571 File Offset: 0x00B53771
+		// Token: 0x060257FD RID: 153597 RVA: 0x00A903E1 File Offset: 0x00A8E5E1
 		private void TickMoveTickTime(float delta)
 		{
 			if (this.MoveTickTime <= 0f)
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CD1 RID: 199889 RVA: 0x00B555A4 File Offset: 0x00B537A4
+		// Token: 0x060257FE RID: 153598 RVA: 0x00A90414 File Offset: 0x00A8E614
 		public void TrySetUseItemUiActive(bool value)
 		{
 			if (this.UseItem == null)
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.AddCursorActiveHandle();
 		}
 
-		// Token: 0x06030CD2 RID: 199890 RVA: 0x00B55608 File Offset: 0x00B53808
+		// Token: 0x060257FF RID: 153599 RVA: 0x00A90478 File Offset: 0x00A8E678
 		private void SetUseItemUiActive(bool active)
 		{
 			this.UseItem.SetUIActive(active);
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06030CD3 RID: 199891 RVA: 0x00B55658 File Offset: 0x00B53858
+		// Token: 0x06025800 RID: 153600 RVA: 0x00A904C8 File Offset: 0x00A8E6C8
 		private void AddCursorActiveHandle()
 		{
 			if (this.CursorActiveDelayTime == 0f)
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CursorActiveDelayTime = 0f;
 		}
 
-		// Token: 0x06030CD4 RID: 199892 RVA: 0x00B556B6 File Offset: 0x00B538B6
+		// Token: 0x06025801 RID: 153601 RVA: 0x00A90526 File Offset: 0x00A8E726
 		private void RemoveCursorActiveHandle()
 		{
 			if (this.CursorActiveHandle != null)
@@ -487,13 +487,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030CD5 RID: 199893 RVA: 0x00B556D8 File Offset: 0x00B538D8
+		// Token: 0x06025802 RID: 153602 RVA: 0x00A90548 File Offset: 0x00A8E748
 		public void SetCursorActiveDelayTime(float time)
 		{
 			this.CursorActiveDelayTime = time;
 		}
 
-		// Token: 0x06030CD6 RID: 199894 RVA: 0x00B556E1 File Offset: 0x00B538E1
+		// Token: 0x06025803 RID: 153603 RVA: 0x00A90551 File Offset: 0x00A8E751
 		public void RefreshCursorActive()
 		{
 			if (this.Listener == null)
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.TrySetUseItemUiActive(true);
 		}
 
-		// Token: 0x06030CD7 RID: 199895 RVA: 0x00B55709 File Offset: 0x00B53909
+		// Token: 0x06025804 RID: 153604 RVA: 0x00A90579 File Offset: 0x00A8E779
 		public static void CreateStaticDefaultValue()
 		{
 			Cursor._tempLocation = Vector.Create();
@@ -512,7 +512,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			Cursor._tempThirdLocation = Vector.Create();
 		}
 
-		// Token: 0x06030CD8 RID: 199896 RVA: 0x00B5572C File Offset: 0x00B5392C
+		// Token: 0x06025805 RID: 153605 RVA: 0x00A9059C File Offset: 0x00A8E79C
 		public static void ResetStaticDefaultValue()
 		{
 			Cursor.TempOffsetX = 0f;
@@ -526,105 +526,105 @@ namespace CSharpScript.Game.Module.UiNavigation
 			Cursor._oriRotator = null;
 		}
 
-		// Token: 0x0401A32F RID: 107311
+		// Token: 0x04014BA2 RID: 84898
 		public const float SPEED = 0.05f;
 
-		// Token: 0x0401A330 RID: 107312
+		// Token: 0x04014BA3 RID: 84899
 		public const float ALLOW_MOVE_TICK_LIMIT = 2000f;
 
-		// Token: 0x0401A331 RID: 107313
+		// Token: 0x04014BA4 RID: 84900
 		[Nullable(2)]
 		private UUIItem OriginalParentItem;
 
-		// Token: 0x0401A332 RID: 107314
+		// Token: 0x04014BA5 RID: 84901
 		[Nullable(2)]
 		private UUIItem OriginalItem;
 
-		// Token: 0x0401A333 RID: 107315
+		// Token: 0x04014BA6 RID: 84902
 		[Nullable(2)]
 		private UUIItem UseItem;
 
-		// Token: 0x0401A334 RID: 107316
+		// Token: 0x04014BA7 RID: 84903
 		[Nullable(2)]
 		private UUIItem FollowItem;
 
-		// Token: 0x0401A335 RID: 107317
+		// Token: 0x04014BA8 RID: 84904
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener Listener;
 
-		// Token: 0x0401A336 RID: 107318
+		// Token: 0x04014BA9 RID: 84905
 		private int AsyncLoadId = LguiResourceManager.Instance.InvalidId;
 
-		// Token: 0x0401A337 RID: 107319
+		// Token: 0x04014BAA RID: 84906
 		private float TotalSpeed;
 
-		// Token: 0x0401A338 RID: 107320
+		// Token: 0x04014BAB RID: 84907
 		private bool IsNeedMove;
 
-		// Token: 0x0401A339 RID: 107321
+		// Token: 0x04014BAC RID: 84908
 		private bool IsCursorOpen = true;
 
-		// Token: 0x0401A33A RID: 107322
+		// Token: 0x04014BAD RID: 84909
 		private bool IsUseMouse;
 
-		// Token: 0x0401A33B RID: 107323
+		// Token: 0x04014BAE RID: 84910
 		private bool IsInFloat;
 
-		// Token: 0x0401A33C RID: 107324
+		// Token: 0x04014BAF RID: 84911
 		private float RotationTransitionRemaining;
 
-		// Token: 0x0401A33D RID: 107325
+		// Token: 0x04014BB0 RID: 84912
 		private int AppliedRotation;
 
-		// Token: 0x0401A33E RID: 107326
+		// Token: 0x04014BB1 RID: 84913
 		public bool IsMoveInstantly;
 
-		// Token: 0x0401A33F RID: 107327
+		// Token: 0x04014BB2 RID: 84914
 		[Nullable(2)]
 		private static Vector _tempLocation;
 
-		// Token: 0x0401A340 RID: 107328
+		// Token: 0x04014BB3 RID: 84915
 		[Nullable(2)]
 		private static Rotator _oriRotator;
 
-		// Token: 0x0401A341 RID: 107329
+		// Token: 0x04014BB4 RID: 84916
 		[Nullable(2)]
 		private static Rotator _tempRotator;
 
-		// Token: 0x0401A342 RID: 107330
+		// Token: 0x04014BB5 RID: 84917
 		[Nullable(2)]
 		private static Vector _tempFollowLocation;
 
-		// Token: 0x0401A343 RID: 107331
+		// Token: 0x04014BB6 RID: 84918
 		private static float TempOffsetX;
 
-		// Token: 0x0401A344 RID: 107332
+		// Token: 0x04014BB7 RID: 84919
 		private static float TempOffsetY;
 
-		// Token: 0x0401A345 RID: 107333
+		// Token: 0x04014BB8 RID: 84920
 		private int TempRotation;
 
-		// Token: 0x0401A346 RID: 107334
+		// Token: 0x04014BB9 RID: 84921
 		[Nullable(2)]
 		private static Vector _tempThirdLocation;
 
-		// Token: 0x0401A347 RID: 107335
+		// Token: 0x04014BBA RID: 84922
 		private static float TempWidth;
 
-		// Token: 0x0401A348 RID: 107336
+		// Token: 0x04014BBB RID: 84923
 		private static float TempHeight;
 
-		// Token: 0x0401A349 RID: 107337
+		// Token: 0x04014BBC RID: 84924
 		private float MoveTickTime;
 
-		// Token: 0x0401A34A RID: 107338
+		// Token: 0x04014BBD RID: 84925
 		[Nullable(2)]
 		private TimerHandle CursorActiveHandle;
 
-		// Token: 0x0401A34B RID: 107339
+		// Token: 0x04014BBE RID: 84926
 		private bool IsUseItemActive;
 
-		// Token: 0x0401A34C RID: 107340
+		// Token: 0x04014BBF RID: 84927
 		private float CursorActiveDelayTime;
 	}
 }

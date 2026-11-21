@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000132 RID: 306
+	// Token: 0x02000141 RID: 321
 	public class ConfigCalabashDevelopConditionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600072D RID: 1837 RVA: 0x000823FC File Offset: 0x000805FC
+		// Token: 0x06000787 RID: 1927 RVA: 0x00087D60 File Offset: 0x00085F60
 		static ConfigCalabashDevelopConditionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCalabashDevelopConditionById.CreateStaticDefaultValue), new Action(ConfigCalabashDevelopConditionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600072E RID: 1838 RVA: 0x0008241C File Offset: 0x0008061C
+		// Token: 0x06000788 RID: 1928 RVA: 0x00087D80 File Offset: 0x00085F80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCalabashDevelopConditionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600072F RID: 1839 RVA: 0x0008249B File Offset: 0x0008069B
+		// Token: 0x06000789 RID: 1929 RVA: 0x00087DFF File Offset: 0x00085FFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCalabashDevelopConditionById.LogPair = null;
 			ConfigCalabashDevelopConditionById.HandleId = 0;
 		}
 
-		// Token: 0x06000730 RID: 1840 RVA: 0x000824A9 File Offset: 0x000806A9
+		// Token: 0x0600078A RID: 1930 RVA: 0x00087E0D File Offset: 0x0008600D
 		public static void Init()
 		{
 			ConfigCalabashDevelopConditionById.HandleId = ConfigCommon.InitDataStatement(ConfigCalabashDevelopConditionById.HandleId, "db_calabash.db", "select BinData from `CalabashDevelopCondition` where Id=?");
 		}
 
-		// Token: 0x06000731 RID: 1841 RVA: 0x000824C4 File Offset: 0x000806C4
+		// Token: 0x0600078B RID: 1931 RVA: 0x00087E28 File Offset: 0x00086028
 		public static CalabashDevelopCondition? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCalabashDevelopConditionById.HandleId, ConfigCalabashDevelopConditionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CalabashDevelopCondition?(rootAsCalabashDevelopCondition);
 		}
 
-		// Token: 0x04000842 RID: 2114
+		// Token: 0x040008AB RID: 2219
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x04000843 RID: 2115
+		// Token: 0x040008AC RID: 2220
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x04000844 RID: 2116
+		// Token: 0x040008AD RID: 2221
 		private const string TABLE = "CalabashDevelopCondition";
 
-		// Token: 0x04000845 RID: 2117
+		// Token: 0x040008AE RID: 2222
 		private const string COMMAND = "select BinData from `CalabashDevelopCondition` where Id=?";
 
-		// Token: 0x04000846 RID: 2118
+		// Token: 0x040008AF RID: 2223
 		private const string KEY_PREFIX = "CalabashDevelopConditionById";
 
-		// Token: 0x04000847 RID: 2119
+		// Token: 0x040008B0 RID: 2224
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000848 RID: 2120
+		// Token: 0x040008B1 RID: 2225
 		private static int HandleId;
 	}
 }

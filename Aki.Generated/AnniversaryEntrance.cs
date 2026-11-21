@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AFF RID: 2815
+	// Token: 0x02000BD9 RID: 3033
 	public struct AnniversaryEntrance : IFlatbufferObject
 	{
-		// Token: 0x17000307 RID: 775
-		// (get) Token: 0x06004818 RID: 18456 RVA: 0x001D6800 File Offset: 0x001D4A00
+		// Token: 0x1700031E RID: 798
+		// (get) Token: 0x06004D5F RID: 19807 RVA: 0x001F6088 File Offset: 0x001F4288
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004819 RID: 18457 RVA: 0x001D680D File Offset: 0x001D4A0D
+		// Token: 0x06004D60 RID: 19808 RVA: 0x001F6095 File Offset: 0x001F4295
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600481A RID: 18458 RVA: 0x001D6814 File Offset: 0x001D4A14
+		// Token: 0x06004D61 RID: 19809 RVA: 0x001F609C File Offset: 0x001F429C
 		public static AnniversaryEntrance GetRootAsAnniversaryEntrance(ByteBuffer _bb)
 		{
 			return AnniversaryEntrance.GetRootAsAnniversaryEntrance(_bb, default(AnniversaryEntrance));
 		}
 
-		// Token: 0x0600481B RID: 18459 RVA: 0x001D6830 File Offset: 0x001D4A30
+		// Token: 0x06004D62 RID: 19810 RVA: 0x001F60B8 File Offset: 0x001F42B8
 		public static AnniversaryEntrance GetRootAsAnniversaryEntrance(ByteBuffer _bb, AnniversaryEntrance obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600481C RID: 18460 RVA: 0x001D684D File Offset: 0x001D4A4D
+		// Token: 0x06004D63 RID: 19811 RVA: 0x001F60D5 File Offset: 0x001F42D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600481D RID: 18461 RVA: 0x001D685C File Offset: 0x001D4A5C
+		// Token: 0x06004D64 RID: 19812 RVA: 0x001F60E4 File Offset: 0x001F42E4
 		public AnniversaryEntrance __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000308 RID: 776
-		// (get) Token: 0x0600481E RID: 18462 RVA: 0x001D686C File Offset: 0x001D4A6C
+		// Token: 0x1700031F RID: 799
+		// (get) Token: 0x06004D65 RID: 19813 RVA: 0x001F60F4 File Offset: 0x001F42F4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000309 RID: 777
-		// (get) Token: 0x0600481F RID: 18463 RVA: 0x001D68A8 File Offset: 0x001D4AA8
+		// Token: 0x17000320 RID: 800
+		// (get) Token: 0x06004D66 RID: 19814 RVA: 0x001F6130 File Offset: 0x001F4330
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700030A RID: 778
-		// (get) Token: 0x06004820 RID: 18464 RVA: 0x001D68E4 File Offset: 0x001D4AE4
+		// Token: 0x17000321 RID: 801
+		// (get) Token: 0x06004D67 RID: 19815 RVA: 0x001F616C File Offset: 0x001F436C
 		public string IconPath
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004821 RID: 18465 RVA: 0x001D691B File Offset: 0x001D4B1B
+		// Token: 0x06004D68 RID: 19816 RVA: 0x001F61A3 File Offset: 0x001F43A3
 		public Span<byte> GetIconPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06004822 RID: 18466 RVA: 0x001D692A File Offset: 0x001D4B2A
+		// Token: 0x06004D69 RID: 19817 RVA: 0x001F61B2 File Offset: 0x001F43B2
 		public byte[] GetIconPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004AE0 RID: 19168
+		// Token: 0x040050BA RID: 20666
 		private Table __p;
 	}
 }

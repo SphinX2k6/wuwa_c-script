@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F8F RID: 8079
+	// Token: 0x020021CC RID: 8652
 	public class ITargetVehicle_SetValue
 	{
-		// Token: 0x04006B69 RID: 27497
+		// Token: 0x04007157 RID: 29015
 		public ETargetVehicle Type;
 	}
 }

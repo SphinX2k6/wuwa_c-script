@@ -1,39 +1,38 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002C99 RID: 11417
+// Token: 0x020021F2 RID: 8690
 [NullableContext(1)]
 [Nullable(0)]
 public class UiDangoCollisionComponent : UiModelComponentBase
 {
-	// Token: 0x06017DD0 RID: 97744 RVA: 0x00611629 File Offset: 0x0060F829
+	// Token: 0x06015644 RID: 87620 RVA: 0x006371CD File Offset: 0x006353CD
 	protected override void OnInit()
 	{
 		this.UiModelActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 	}
 
-	// Token: 0x06017DD1 RID: 97745 RVA: 0x0061163C File Offset: 0x0060F83C
+	// Token: 0x06015645 RID: 87621 RVA: 0x006371E0 File Offset: 0x006353E0
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017DD2 RID: 97746 RVA: 0x00611660 File Offset: 0x0060F860
+	// Token: 0x06015646 RID: 87622 RVA: 0x00637204 File Offset: 0x00635404
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017DD3 RID: 97747 RVA: 0x00611684 File Offset: 0x0060F884
+	// Token: 0x06015647 RID: 87623 RVA: 0x00637228 File Offset: 0x00635428
 	private void OnModelLoadComplete()
 	{
 		this.InitCollisionComponent();
 	}
 
-	// Token: 0x06017DD4 RID: 97748 RVA: 0x0061168C File Offset: 0x0060F88C
+	// Token: 0x06015648 RID: 87624 RVA: 0x00637230 File Offset: 0x00635430
 	private void InitCollisionComponent()
 	{
 		AActor actor = this.UiModelActorComponent.Actor;
@@ -51,18 +50,14 @@ public class UiDangoCollisionComponent : UiModelComponentBase
 		this.CollisionComponent.SetCollisionEnabled(ECollisionEnabled.QueryOnly);
 		this.CollisionComponent.SetCollisionObjectType(ECollisionChannel.ECC_Visibility);
 		this.CollisionComponent.SetCollisionResponseToAllChannels(ECollisionResponse.ECR_Block);
-		if (Info.Instance.IsPlayInEditor)
-		{
-			ULGUIBPLibrary.AddInstanceComponent(this.UiModelActorComponent.Actor, this.CollisionComponent);
-		}
 	}
 
-	// Token: 0x0400B1E7 RID: 45543
+	// Token: 0x0400B552 RID: 46418
 	private const float DANGO_COLLISION_SIZE = 35f;
 
-	// Token: 0x0400B1E8 RID: 45544
+	// Token: 0x0400B553 RID: 46419
 	protected UiModelActorComponent UiModelActorComponent;
 
-	// Token: 0x0400B1E9 RID: 45545
+	// Token: 0x0400B554 RID: 46420
 	protected UBoxComponent CollisionComponent;
 }

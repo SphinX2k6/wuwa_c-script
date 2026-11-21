@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028E1 RID: 10465
+// Token: 0x02001E5C RID: 7772
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleWeaponTabView : UiTabViewBase
 {
-	// Token: 0x060159A2 RID: 88482 RVA: 0x00573AFC File Offset: 0x00571CFC
+	// Token: 0x060133A6 RID: 78758 RVA: 0x0059E9C4 File Offset: 0x0059CBC4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x060159A3 RID: 88483 RVA: 0x00573BA8 File Offset: 0x00571DA8
+	// Token: 0x060133A7 RID: 78759 RVA: 0x0059EA70 File Offset: 0x0059CC70
 	private UniTask InitWeaponDetailTips()
 	{
 		RoleWeaponTabView.<InitWeaponDetailTips>d__6 <InitWeaponDetailTips>d__;
@@ -44,7 +44,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		return <InitWeaponDetailTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060159A4 RID: 88484 RVA: 0x00573BEC File Offset: 0x00571DEC
+	// Token: 0x060133A8 RID: 78760 RVA: 0x0059EAB4 File Offset: 0x0059CCB4
 	private UniTask InitEquipItem()
 	{
 		RoleWeaponTabView.<InitEquipItem>d__7 <InitEquipItem>d__;
@@ -55,7 +55,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		return <InitEquipItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060159A5 RID: 88485 RVA: 0x00573C30 File Offset: 0x00571E30
+	// Token: 0x060133A9 RID: 78761 RVA: 0x0059EAF8 File Offset: 0x0059CCF8
 	private UniTask InitWarningItem()
 	{
 		RoleWeaponTabView.<InitWarningItem>d__8 <InitWarningItem>d__;
@@ -66,7 +66,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		return <InitWarningItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060159A6 RID: 88486 RVA: 0x00573C74 File Offset: 0x00571E74
+	// Token: 0x060133AA RID: 78762 RVA: 0x0059EB3C File Offset: 0x0059CD3C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleWeaponTabView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060159A7 RID: 88487 RVA: 0x00573CB7 File Offset: 0x00571EB7
+	// Token: 0x060133AB RID: 78763 RVA: 0x0059EB7F File Offset: 0x0059CD7F
 	protected override void OnStart()
 	{
 		this.WeaponDetailTipsComponent.SetCanShowEquip(false);
@@ -85,7 +85,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		this.WeaponDetailTipsComponent.SetCultureFunction(new TWeaponDetailsTipsFunctionWithNumber(this.CultureClick));
 	}
 
-	// Token: 0x060159A8 RID: 88488 RVA: 0x00573CF4 File Offset: 0x00571EF4
+	// Token: 0x060133AC RID: 78764 RVA: 0x0059EBBC File Offset: 0x0059CDBC
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int, bool>(EEventName.OnItemLock, new Action<int, bool>(this.ItemLockEvent));
@@ -93,7 +93,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		EventSystem.Instance.Add(EEventName.ResetRoleFlag, new Action(this.ResetRoleFlag));
 	}
 
-	// Token: 0x060159A9 RID: 88489 RVA: 0x00573D58 File Offset: 0x00571F58
+	// Token: 0x060133AD RID: 78765 RVA: 0x0059EC20 File Offset: 0x0059CE20
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnItemLock, new Action<int, bool>(this.ItemLockEvent));
@@ -101,13 +101,13 @@ public class RoleWeaponTabView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.ResetRoleFlag, new Action(this.ResetRoleFlag));
 	}
 
-	// Token: 0x060159AA RID: 88490 RVA: 0x00573DB9 File Offset: 0x00571FB9
+	// Token: 0x060133AE RID: 78766 RVA: 0x0059EC81 File Offset: 0x0059CE81
 	private void ResetRoleFlag()
 	{
 		this.HasUpdateRole = false;
 	}
 
-	// Token: 0x060159AB RID: 88491 RVA: 0x00573DC2 File Offset: 0x00571FC2
+	// Token: 0x060133AF RID: 78767 RVA: 0x0059EC8A File Offset: 0x0059CE8A
 	protected override void OnBeforeShow()
 	{
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.RoleWeaponTabView);
@@ -123,7 +123,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		this.RefreshWeaponDetailTipsComponent();
 	}
 
-	// Token: 0x060159AC RID: 88492 RVA: 0x00573DF4 File Offset: 0x00571FF4
+	// Token: 0x060133B0 RID: 78768 RVA: 0x0059ECBC File Offset: 0x0059CEBC
 	protected override void OnBeforeDestroy()
 	{
 		if (this.WeaponDetailTipsComponent != null)
@@ -133,7 +133,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060159AD RID: 88493 RVA: 0x00573E14 File Offset: 0x00572014
+	// Token: 0x060133B1 RID: 78769 RVA: 0x0059ECDC File Offset: 0x0059CEDC
 	private void ReplaceClick(int incId)
 	{
 		RoleViewViewModel roleViewViewModel = new RoleViewViewModel(this.RoleViewAgent.GetCurSelectRoleId(), false, this.RoleViewAgent.Source);
@@ -141,7 +141,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		RoleController.Instance.OpenRoleViewByViewModel(EUiViewName.WeaponReplaceView, roleViewViewModel);
 	}
 
-	// Token: 0x060159AE RID: 88494 RVA: 0x00573E58 File Offset: 0x00572058
+	// Token: 0x060133B2 RID: 78770 RVA: 0x0059ED20 File Offset: 0x0059CF20
 	private void CultureClick(int incId)
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(incId);
@@ -160,13 +160,13 @@ public class RoleWeaponTabView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponRootView, param, null);
 	}
 
-	// Token: 0x060159AF RID: 88495 RVA: 0x00573ECB File Offset: 0x005720CB
+	// Token: 0x060133B3 RID: 78771 RVA: 0x0059ED93 File Offset: 0x0059CF93
 	private void ItemLockEvent(int uniqueId, bool bLock)
 	{
 		this.WeaponDetailTipsComponent.UpdateWeaponLock(bLock);
 	}
 
-	// Token: 0x060159B0 RID: 88496 RVA: 0x00573ED9 File Offset: 0x005720D9
+	// Token: 0x060133B4 RID: 78772 RVA: 0x0059EDA1 File Offset: 0x0059CFA1
 	private void UpdateWeaponEvent(int i)
 	{
 		this.HasUpdateRole = true;
@@ -174,13 +174,13 @@ public class RoleWeaponTabView : UiTabViewBase
 		this.RefreshWeaponDetailTipsComponent();
 	}
 
-	// Token: 0x060159B1 RID: 88497 RVA: 0x00573EEF File Offset: 0x005720EF
+	// Token: 0x060133B5 RID: 78773 RVA: 0x0059EDB7 File Offset: 0x0059CFB7
 	protected void PlayMontageStart(bool reLoop = false)
 	{
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Weapon, reLoop, false, false);
 	}
 
-	// Token: 0x060159B2 RID: 88498 RVA: 0x00573F00 File Offset: 0x00572100
+	// Token: 0x060133B6 RID: 78774 RVA: 0x0059EDC8 File Offset: 0x0059CFC8
 	private void RefreshWeaponDetailTipsComponent()
 	{
 		RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -209,7 +209,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		this.RefreshWarningItem();
 	}
 
-	// Token: 0x060159B3 RID: 88499 RVA: 0x00573FB8 File Offset: 0x005721B8
+	// Token: 0x060133B7 RID: 78775 RVA: 0x0059EE80 File Offset: 0x0059D080
 	private void RefreshEquipItem()
 	{
 		if (!this.RoleViewAgent.GetRoleSystemUiParams().SwitchSkin)
@@ -263,7 +263,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060159B4 RID: 88500 RVA: 0x00574080 File Offset: 0x00572280
+	// Token: 0x060133B8 RID: 78776 RVA: 0x0059EF48 File Offset: 0x0059D148
 	private void RefreshSkinBtn()
 	{
 		if (!this.RoleViewAgent.GetRoleSystemUiParams().SwitchSkin)
@@ -302,7 +302,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060159B5 RID: 88501 RVA: 0x00574118 File Offset: 0x00572318
+	// Token: 0x060133B9 RID: 78777 RVA: 0x0059EFE0 File Offset: 0x0059D1E0
 	private void RefreshRedDot()
 	{
 		if (this.RoleViewAgent.GetRoleSystemUiParams().SwitchSkin)
@@ -339,7 +339,7 @@ public class RoleWeaponTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060159B6 RID: 88502 RVA: 0x005741A8 File Offset: 0x005723A8
+	// Token: 0x060133BA RID: 78778 RVA: 0x0059F070 File Offset: 0x0059D270
 	private void RefreshWarningItem()
 	{
 		if (this.RoleViewAgent.Source == ERoleViewSource.WheelTower)
@@ -381,14 +381,14 @@ public class RoleWeaponTabView : UiTabViewBase
 		warningItem4.SetUiActive(false);
 	}
 
-	// Token: 0x060159B7 RID: 88503 RVA: 0x00574288 File Offset: 0x00572488
+	// Token: 0x060133BB RID: 78779 RVA: 0x0059F150 File Offset: 0x0059D350
 	private void OnSkinClick()
 	{
 		int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
 		SkinController.Instance.SkipToSkinView(curSelectRoleId, EUiTabViewName.WeaponSkinTabView, false, -1, null, null, null);
 	}
 
-	// Token: 0x060159B8 RID: 88504 RVA: 0x005742C6 File Offset: 0x005724C6
+	// Token: 0x060133BC RID: 78780 RVA: 0x0059F18E File Offset: 0x0059D38E
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -400,34 +400,34 @@ public class RoleWeaponTabView : UiTabViewBase
 		return this.WeaponDetailTipsComponent.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x0400A0BF RID: 41151
+	// Token: 0x0400A4A9 RID: 42153
 	private RoleViewAgent RoleViewAgent;
 
-	// Token: 0x0400A0C0 RID: 41152
+	// Token: 0x0400A4AA RID: 42154
 	private WeaponDetailTipsComponent WeaponDetailTipsComponent;
 
-	// Token: 0x0400A0C1 RID: 41153
+	// Token: 0x0400A4AB RID: 42155
 	private CommonEquippedItem EquipItem;
 
-	// Token: 0x0400A0C2 RID: 41154
+	// Token: 0x0400A4AC RID: 42156
 	private CommonWarningItem WarningItem;
 
-	// Token: 0x0400A0C3 RID: 41155
+	// Token: 0x0400A4AD RID: 42157
 	private bool HasUpdateRole;
 
-	// Token: 0x02008EEF RID: 36591
+	// Token: 0x02008137 RID: 33079
 	[NullableContext(0)]
 	private enum ERoleWeaponTabViewDefine
 	{
-		// Token: 0x0402E595 RID: 189845
+		// Token: 0x04029C90 RID: 171152
 		WeaponDetailTipsItem,
-		// Token: 0x0402E596 RID: 189846
+		// Token: 0x04029C91 RID: 171153
 		EquipRootItem,
-		// Token: 0x0402E597 RID: 189847
+		// Token: 0x04029C92 RID: 171154
 		SkinBtn,
-		// Token: 0x0402E598 RID: 189848
+		// Token: 0x04029C93 RID: 171155
 		SkinRedDot,
-		// Token: 0x0402E599 RID: 189849
+		// Token: 0x04029C94 RID: 171156
 		ItemWarning
 	}
 }

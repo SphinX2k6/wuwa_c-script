@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001909 RID: 6409
+// Token: 0x02000DC2 RID: 3522
 public class MediumItemGridCoolDownComponentParams : IMediumItemGridCoolDownComponentParams
 {
-	// Token: 0x17000FA7 RID: 4007
-	// (get) Token: 0x0600BBDE RID: 48094 RVA: 0x002A94E4 File Offset: 0x002A76E4
-	// (set) Token: 0x0600BBDF RID: 48095 RVA: 0x002A94EC File Offset: 0x002A76EC
+	// Token: 0x17000FCA RID: 4042
+	// (get) Token: 0x06008FC8 RID: 36808 RVA: 0x002B3C40 File Offset: 0x002B1E40
+	// (set) Token: 0x06008FC9 RID: 36809 RVA: 0x002B3C48 File Offset: 0x002B1E48
 	public float? CoolDown { get; set; }
 
-	// Token: 0x17000FA8 RID: 4008
-	// (get) Token: 0x0600BBE0 RID: 48096 RVA: 0x002A94F5 File Offset: 0x002A76F5
-	// (set) Token: 0x0600BBE1 RID: 48097 RVA: 0x002A94FD File Offset: 0x002A76FD
+	// Token: 0x17000FCB RID: 4043
+	// (get) Token: 0x06008FCA RID: 36810 RVA: 0x002B3C51 File Offset: 0x002B1E51
+	// (set) Token: 0x06008FCB RID: 36811 RVA: 0x002B3C59 File Offset: 0x002B1E59
 	public float? TotalCdTime { get; set; }
 }

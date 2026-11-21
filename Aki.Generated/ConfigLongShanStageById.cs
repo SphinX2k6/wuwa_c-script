@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004EF RID: 1263
+	// Token: 0x02000505 RID: 1285
 	public class ConfigLongShanStageById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001DA5 RID: 7589 RVA: 0x00100D1B File Offset: 0x000FEF1B
+		// Token: 0x06001E29 RID: 7721 RVA: 0x0010746F File Offset: 0x0010566F
 		static ConfigLongShanStageById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLongShanStageById.CreateStaticDefaultValue), new Action(ConfigLongShanStageById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001DA6 RID: 7590 RVA: 0x00100D3C File Offset: 0x000FEF3C
+		// Token: 0x06001E2A RID: 7722 RVA: 0x00107490 File Offset: 0x00105690
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLongShanStageById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001DA7 RID: 7591 RVA: 0x00100DBB File Offset: 0x000FEFBB
+		// Token: 0x06001E2B RID: 7723 RVA: 0x0010750F File Offset: 0x0010570F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLongShanStageById.LogPair = null;
 			ConfigLongShanStageById.HandleId = 0;
 		}
 
-		// Token: 0x06001DA8 RID: 7592 RVA: 0x00100DC9 File Offset: 0x000FEFC9
+		// Token: 0x06001E2C RID: 7724 RVA: 0x0010751D File Offset: 0x0010571D
 		public static void Init()
 		{
 			ConfigLongShanStageById.HandleId = ConfigCommon.InitDataStatement(ConfigLongShanStageById.HandleId, "db_longshanactivity.db", "select BinData from `LongShanStage` where Id=?");
 		}
 
-		// Token: 0x06001DA9 RID: 7593 RVA: 0x00100DE4 File Offset: 0x000FEFE4
+		// Token: 0x06001E2D RID: 7725 RVA: 0x00107538 File Offset: 0x00105738
 		public static LongShanStage? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLongShanStageById.HandleId, ConfigLongShanStageById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LongShanStage?(rootAsLongShanStage);
 		}
 
-		// Token: 0x0400226D RID: 8813
+		// Token: 0x04002307 RID: 8967
 		private const string DB = "db_longshanactivity.db";
 
-		// Token: 0x0400226E RID: 8814
+		// Token: 0x04002308 RID: 8968
 		private const string FILE = "l.龙山主题活动.xlsx";
 
-		// Token: 0x0400226F RID: 8815
+		// Token: 0x04002309 RID: 8969
 		private const string TABLE = "LongShanStage";
 
-		// Token: 0x04002270 RID: 8816
+		// Token: 0x0400230A RID: 8970
 		private const string COMMAND = "select BinData from `LongShanStage` where Id=?";
 
-		// Token: 0x04002271 RID: 8817
+		// Token: 0x0400230B RID: 8971
 		private const string KEY_PREFIX = "LongShanStageById";
 
-		// Token: 0x04002272 RID: 8818
+		// Token: 0x0400230C RID: 8972
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002273 RID: 8819
+		// Token: 0x0400230D RID: 8973
 		private static int HandleId;
 	}
 }

@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029E3 RID: 10723
+// Token: 0x02001F5E RID: 8030
 public class ShipTowerWelcomeView : UiTickViewBase
 {
-	// Token: 0x17001DB0 RID: 7600
-	// (get) Token: 0x060163BF RID: 91071 RVA: 0x0059FABD File Offset: 0x0059DCBD
+	// Token: 0x17001E09 RID: 7689
+	// (get) Token: 0x06013DC5 RID: 81349 RVA: 0x005CAA75 File Offset: 0x005C8C75
 	[Nullable(2)]
 	public new ShipTowerWelcomeViewParams OpenParam
 	{
@@ -19,13 +19,13 @@ public class ShipTowerWelcomeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060163C0 RID: 91072 RVA: 0x0059FACA File Offset: 0x0059DCCA
+	// Token: 0x06013DC6 RID: 81350 RVA: 0x005CAA82 File Offset: 0x005C8C82
 	[NullableContext(1)]
 	public ShipTowerWelcomeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060163C1 RID: 91073 RVA: 0x0059FAD3 File Offset: 0x0059DCD3
+	// Token: 0x06013DC7 RID: 81351 RVA: 0x005CAA8B File Offset: 0x005C8C8B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class ShipTowerWelcomeView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060163C2 RID: 91074 RVA: 0x0059FAF6 File Offset: 0x0059DCF6
+	// Token: 0x06013DC8 RID: 81352 RVA: 0x005CAAAE File Offset: 0x005C8CAE
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(0);
@@ -63,10 +63,10 @@ public class ShipTowerWelcomeView : UiTickViewBase
 		}, false);
 	}
 
-	// Token: 0x02009017 RID: 36887
+	// Token: 0x0200825E RID: 33374
 	private static class EChildType
 	{
-		// Token: 0x0402EA80 RID: 191104
+		// Token: 0x0402A178 RID: 172408
 		public const int TxtProgress = 0;
 	}
 }

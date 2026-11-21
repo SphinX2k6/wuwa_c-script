@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DF1 RID: 11761
+// Token: 0x0200234C RID: 9036
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataAdditiveAccelerate.LogicDataAdditiveAccelerate_C")]
 public class LogicDataAdditiveAccelerate : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021C4 RID: 8644
-	// (get) Token: 0x06018B25 RID: 101157 RVA: 0x00657B70 File Offset: 0x00655D70
-	// (set) Token: 0x06018B26 RID: 101158 RVA: 0x00657B84 File Offset: 0x00655D84
+	// Token: 0x17002228 RID: 8744
+	// (get) Token: 0x060163DA RID: 91098 RVA: 0x0067DBF4 File Offset: 0x0067BDF4
+	// (set) Token: 0x060163DB RID: 91099 RVA: 0x0067DC08 File Offset: 0x0067BE08
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector Acceleration
 	{
@@ -27,9 +27,9 @@ public class LogicDataAdditiveAccelerate : LogicDataBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170021C5 RID: 8645
-	// (get) Token: 0x06018B27 RID: 101159 RVA: 0x00657B99 File Offset: 0x00655D99
-	// (set) Token: 0x06018B28 RID: 101160 RVA: 0x00657BAD File Offset: 0x00655DAD
+	// Token: 0x17002229 RID: 8745
+	// (get) Token: 0x060163DC RID: 91100 RVA: 0x0067DC1D File Offset: 0x0067BE1D
+	// (set) Token: 0x060163DD RID: 91101 RVA: 0x0067DC31 File Offset: 0x0067BE31
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UCurveVector AccelerationCurve
@@ -46,7 +46,7 @@ public class LogicDataAdditiveAccelerate : LogicDataBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06018B29 RID: 101161 RVA: 0x00657BC2 File Offset: 0x00655DC2
+	// Token: 0x060163DE RID: 91102 RVA: 0x0067DC46 File Offset: 0x0067BE46
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataAdditiveAccelerate._ClassPtr == IntPtr.Zero)
@@ -56,35 +56,35 @@ public class LogicDataAdditiveAccelerate : LogicDataBase, IUnrealUObject, IUnrea
 		return LogicDataAdditiveAccelerate._ClassPtr;
 	}
 
-	// Token: 0x06018B2A RID: 101162 RVA: 0x00657BE8 File Offset: 0x00655DE8
+	// Token: 0x060163DF RID: 91103 RVA: 0x0067DC6C File Offset: 0x0067BE6C
 	public LogicDataAdditiveAccelerate() : this(BuiltinUtils.AllocNativeUObject(LogicDataAdditiveAccelerate.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018B2B RID: 101163 RVA: 0x00657C10 File Offset: 0x00655E10
+	// Token: 0x060163E0 RID: 91104 RVA: 0x0067DC94 File Offset: 0x0067BE94
 	[NullableContext(1)]
 	public LogicDataAdditiveAccelerate(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataAdditiveAccelerate.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018B2C RID: 101164 RVA: 0x00657C43 File Offset: 0x00655E43
+	// Token: 0x060163E1 RID: 91105 RVA: 0x0067DCC7 File Offset: 0x0067BEC7
 	protected LogicDataAdditiveAccelerate(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B827 RID: 47143
+	// Token: 0x0400BBAD RID: 48045
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataAdditiveAccelerate.LogicDataAdditiveAccelerate_C";
 
-	// Token: 0x0400B828 RID: 47144
+	// Token: 0x0400BBAE RID: 48046
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B829 RID: 47145
+	// Token: 0x0400BBAF RID: 48047
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B82A RID: 47146
+	// Token: 0x0400BBB0 RID: 48048
 	private static int __PropertyOffset_Acceleration;
 
-	// Token: 0x0400B82B RID: 47147
+	// Token: 0x0400BBB1 RID: 48049
 	private static int __PropertyOffset_AccelerationCurve;
 }

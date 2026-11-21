@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001595 RID: 5525
+// Token: 0x02000A4D RID: 2637
 public class WheelTowerLoadingTeamRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009D77 RID: 40311 RVA: 0x00222454 File Offset: 0x00220654
+	// Token: 0x06007155 RID: 29013 RVA: 0x0022C204 File Offset: 0x0022A404
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -34,7 +34,7 @@ public class WheelTowerLoadingTeamRoleItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D78 RID: 40312 RVA: 0x00222544 File Offset: 0x00220744
+	// Token: 0x06007156 RID: 29014 RVA: 0x0022C2F4 File Offset: 0x0022A4F4
 	public override void Refresh(int roleId, bool isSelected, int gridIndex)
 	{
 		int id = WheelTowerModel.Instance.TryGetRealRoleId(roleId);
@@ -87,7 +87,7 @@ public class WheelTowerLoadingTeamRoleItem : GridProxyAbstract<int>
 		item2.SetUIActive(roleSkillBranchIndexInGamePlay > -1);
 	}
 
-	// Token: 0x06009D79 RID: 40313 RVA: 0x002226F0 File Offset: 0x002208F0
+	// Token: 0x06007157 RID: 29015 RVA: 0x0022C4A0 File Offset: 0x0022A6A0
 	public UniTask RefreshRoleSkinAsync()
 	{
 		WheelTowerLoadingTeamRoleItem.<RefreshRoleSkinAsync>d__4 <RefreshRoleSkinAsync>d__;
@@ -98,10 +98,10 @@ public class WheelTowerLoadingTeamRoleItem : GridProxyAbstract<int>
 		return <RefreshRoleSkinAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400454A RID: 17738
+	// Token: 0x040045F0 RID: 17904
 	[Nullable(2)]
 	private RoleDataBase RoleDataBase;
 
-	// Token: 0x0400454B RID: 17739
+	// Token: 0x040045F1 RID: 17905
 	private bool IsTemplateRole;
 }

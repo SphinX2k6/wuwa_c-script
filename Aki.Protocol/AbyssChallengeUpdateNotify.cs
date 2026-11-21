@@ -12,7 +12,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AbyssChallengeUpdateNotify)]
 	public sealed class AbyssChallengeUpdateNotify : IMessage<AbyssChallengeUpdateNotify>, IMessage, IEquatable<AbyssChallengeUpdateNotify>, IDeepCloneable<AbyssChallengeUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06001149 RID: 4425 RVA: 0x00030361 File Offset: 0x0002E561
+		// Token: 0x06001174 RID: 4468 RVA: 0x00030915 File Offset: 0x0002EB15
 		[NullableContext(1)]
 		public static AbyssChallengeUpdateNotify Create()
 		{
@@ -20,7 +20,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000084 RID: 132
-		// (get) Token: 0x0600114A RID: 4426 RVA: 0x00030368 File Offset: 0x0002E568
+		// (get) Token: 0x06001175 RID: 4469 RVA: 0x0003091C File Offset: 0x0002EB1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,7 +32,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000085 RID: 133
-		// (get) Token: 0x0600114B RID: 4427 RVA: 0x0003036B File Offset: 0x0002E56B
+		// (get) Token: 0x06001176 RID: 4470 RVA: 0x0003091F File Offset: 0x0002EB1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600114C RID: 4428 RVA: 0x00030372 File Offset: 0x0002E572
+		// Token: 0x06001177 RID: 4471 RVA: 0x00030926 File Offset: 0x0002EB26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeUpdateNotify()
 		{
 		}
 
-		// Token: 0x0600114D RID: 4429 RVA: 0x00030390 File Offset: 0x0002E590
+		// Token: 0x06001178 RID: 4472 RVA: 0x00030944 File Offset: 0x0002EB44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeUpdateNotify(AbyssChallengeUpdateNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600114E RID: 4430 RVA: 0x000303CB File Offset: 0x0002E5CB
+		// Token: 0x06001179 RID: 4473 RVA: 0x0003097F File Offset: 0x0002EB7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssChallengeUpdateNotify Clone()
@@ -69,7 +69,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000086 RID: 134
-		// (get) Token: 0x0600114F RID: 4431 RVA: 0x000303D3 File Offset: 0x0002E5D3
+		// (get) Token: 0x0600117A RID: 4474 RVA: 0x00030987 File Offset: 0x0002EB87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockChallengeIds
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000087 RID: 135
-		// (get) Token: 0x06001150 RID: 4432 RVA: 0x000303DB File Offset: 0x0002E5DB
+		// (get) Token: 0x0600117B RID: 4475 RVA: 0x0003098F File Offset: 0x0002EB8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AbyssChallenge> ChallengeInfos
@@ -92,7 +92,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001151 RID: 4433 RVA: 0x000303E3 File Offset: 0x0002E5E3
+		// Token: 0x0600117C RID: 4476 RVA: 0x00030997 File Offset: 0x0002EB97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssChallengeUpdateNotify);
 		}
 
-		// Token: 0x06001152 RID: 4434 RVA: 0x000303F4 File Offset: 0x0002E5F4
+		// Token: 0x0600117D RID: 4477 RVA: 0x000309A8 File Offset: 0x0002EBA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssChallengeUpdateNotify other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.unlockChallengeIds_.Equals(other.unlockChallengeIds_) && this.challengeInfos_.Equals(other.challengeInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001153 RID: 4435 RVA: 0x00030448 File Offset: 0x0002E648
+		// Token: 0x0600117E RID: 4478 RVA: 0x000309FC File Offset: 0x0002EBFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001154 RID: 4436 RVA: 0x0003048A File Offset: 0x0002E68A
+		// Token: 0x0600117F RID: 4479 RVA: 0x00030A3E File Offset: 0x0002EC3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001155 RID: 4437 RVA: 0x00030497 File Offset: 0x0002E697
+		// Token: 0x06001180 RID: 4480 RVA: 0x00030A4B File Offset: 0x0002EC4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -139,20 +139,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001156 RID: 4438 RVA: 0x000304A0 File Offset: 0x0002E6A0
+		// Token: 0x06001181 RID: 4481 RVA: 0x00030A54 File Offset: 0x0002EC54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.unlockChallengeIds_.WriteTo(ref output, AbyssChallengeUpdateNotify._repeated_unlockChallengeIds_codec);
 			this.challengeInfos_.WriteTo(ref output, AbyssChallengeUpdateNotify._repeated_challengeInfos_codec);
+			this.unlockChallengeIds_.WriteTo(ref output, AbyssChallengeUpdateNotify._repeated_unlockChallengeIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06001157 RID: 4439 RVA: 0x000304D8 File Offset: 0x0002E6D8
+		// Token: 0x06001182 RID: 4482 RVA: 0x00030A8C File Offset: 0x0002EC8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001158 RID: 4440 RVA: 0x00030524 File Offset: 0x0002E724
+		// Token: 0x06001183 RID: 4483 RVA: 0x00030AD8 File Offset: 0x0002ECD8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssChallengeUpdateNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001159 RID: 4441 RVA: 0x00030563 File Offset: 0x0002E763
+		// Token: 0x06001184 RID: 4484 RVA: 0x00030B17 File Offset: 0x0002ED17
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600115A RID: 4442 RVA: 0x0003056C File Offset: 0x0002E76C
+		// Token: 0x06001185 RID: 4485 RVA: 0x00030B20 File Offset: 0x0002ED20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,43 +201,43 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 56U && num != 58U)
+				if (num != 42U)
 				{
-					if (num != 114U)
+					if (num != 48U && num != 50U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.challengeInfos_.AddEntriesFrom(ref input, AbyssChallengeUpdateNotify._repeated_challengeInfos_codec);
+						this.unlockChallengeIds_.AddEntriesFrom(ref input, AbyssChallengeUpdateNotify._repeated_unlockChallengeIds_codec);
 					}
 				}
 				else
 				{
-					this.unlockChallengeIds_.AddEntriesFrom(ref input, AbyssChallengeUpdateNotify._repeated_unlockChallengeIds_codec);
+					this.challengeInfos_.AddEntriesFrom(ref input, AbyssChallengeUpdateNotify._repeated_challengeInfos_codec);
 				}
 			}
 		}
 
-		// Token: 0x04001F6B RID: 8043
+		// Token: 0x04001FC1 RID: 8129
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04001F6C RID: 8044
-		public const int UnlockChallengeIdsFieldNumber = 7;
+		// Token: 0x04001FC2 RID: 8130
+		public const int UnlockChallengeIdsFieldNumber = 6;
 
-		// Token: 0x04001F6D RID: 8045
-		private static readonly FieldCodec<int> _repeated_unlockChallengeIds_codec = FieldCodec.ForInt32(58U);
+		// Token: 0x04001FC3 RID: 8131
+		private static readonly FieldCodec<int> _repeated_unlockChallengeIds_codec = FieldCodec.ForInt32(50U);
 
-		// Token: 0x04001F6E RID: 8046
+		// Token: 0x04001FC4 RID: 8132
 		private readonly RepeatedField<int> unlockChallengeIds_ = new RepeatedField<int>();
 
-		// Token: 0x04001F6F RID: 8047
-		public const int ChallengeInfosFieldNumber = 14;
+		// Token: 0x04001FC5 RID: 8133
+		public const int ChallengeInfosFieldNumber = 5;
 
-		// Token: 0x04001F70 RID: 8048
-		private static readonly FieldCodec<AbyssChallenge> _repeated_challengeInfos_codec = FieldCodec.ForMessage<AbyssChallenge>(114U, AbyssChallenge.Parser);
+		// Token: 0x04001FC6 RID: 8134
+		private static readonly FieldCodec<AbyssChallenge> _repeated_challengeInfos_codec = FieldCodec.ForMessage<AbyssChallenge>(42U, AbyssChallenge.Parser);
 
-		// Token: 0x04001F71 RID: 8049
+		// Token: 0x04001FC7 RID: 8135
 		private readonly RepeatedField<AbyssChallenge> challengeInfos_ = new RepeatedField<AbyssChallenge>();
 	}
 }

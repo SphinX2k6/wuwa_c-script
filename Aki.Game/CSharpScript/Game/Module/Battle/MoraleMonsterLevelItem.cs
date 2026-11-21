@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C53 RID: 23635
+	// Token: 0x02004C33 RID: 19507
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleMonsterLevelItem : StateExtraItemBase
 	{
-		// Token: 0x0603BBD8 RID: 244696 RVA: 0x00E44918 File Offset: 0x00E42B18
+		// Token: 0x06030B23 RID: 199459 RVA: 0x00D94CE4 File Offset: 0x00D92EE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BBD9 RID: 244697 RVA: 0x00E449A4 File Offset: 0x00E42BA4
+		// Token: 0x06030B24 RID: 199460 RVA: 0x00D94D70 File Offset: 0x00D92F70
 		protected override UniTask OnCreateAsync()
 		{
 			MoraleMonsterLevelItem.<OnCreateAsync>d__14 <OnCreateAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BBDA RID: 244698 RVA: 0x00E449E8 File Offset: 0x00E42BE8
+		// Token: 0x06030B25 RID: 199461 RVA: 0x00D94DB4 File Offset: 0x00D92FB4
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Add(EEventName.OnMoraleSumLevelChanged, new Action<int, int, int, int>(this.OnMoraleSumLevelChanged));
 		}
 
-		// Token: 0x0603BBDB RID: 244699 RVA: 0x00E44A44 File Offset: 0x00E42C44
+		// Token: 0x06030B26 RID: 199462 RVA: 0x00D94E10 File Offset: 0x00D93010
 		protected override void OnBeforeDestroy()
 		{
 			Dictionary<EMoraleLevelDiffType, UTexture> levelDiffTextureMap = this.LevelDiffTextureMap;
@@ -69,20 +69,20 @@ namespace CSharpScript.Game.Module.Battle
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603BBDC RID: 244700 RVA: 0x00E44A95 File Offset: 0x00E42C95
+		// Token: 0x06030B27 RID: 199463 RVA: 0x00D94E61 File Offset: 0x00D93061
 		private void OnMoraleSumLevelChanged(int oldLevel, int newLevel, int oldTempLevel, int newTempLevel)
 		{
 			this.SetMoraleLevelDiff(this.MoraleLevel);
 		}
 
-		// Token: 0x0603BBDD RID: 244701 RVA: 0x00E44AA4 File Offset: 0x00E42CA4
+		// Token: 0x06030B28 RID: 199464 RVA: 0x00D94E70 File Offset: 0x00D93070
 		protected override void OnInitExtraParams(ExtraItemParams param)
 		{
 			int moraleLevel = ((MoraleLevelItemParams)param).MoraleLevel;
 			this.SetMoraleLevel(moraleLevel);
 		}
 
-		// Token: 0x0603BBDE RID: 244702 RVA: 0x00E44AC4 File Offset: 0x00E42CC4
+		// Token: 0x06030B29 RID: 199465 RVA: 0x00D94E90 File Offset: 0x00D93090
 		private void SetMoraleLevel(int moraleLevel)
 		{
 			this.MoraleLevel = moraleLevel;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.SetMoraleLevelDiff(moraleLevel);
 		}
 
-		// Token: 0x0603BBDF RID: 244703 RVA: 0x00E44AF0 File Offset: 0x00E42CF0
+		// Token: 0x06030B2A RID: 199466 RVA: 0x00D94EBC File Offset: 0x00D930BC
 		private void SetMoraleLevelDiff(int moraleLevel)
 		{
 			EMoraleLevelDiffType moraleLevelDiffType = MoraleBattleModel.Instance.GetMoraleLevelDiffType(moraleLevel, null);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBE0 RID: 244704 RVA: 0x00E44C48 File Offset: 0x00E42E48
+		// Token: 0x06030B2B RID: 199467 RVA: 0x00D95014 File Offset: 0x00D93214
 		private UniTask LoadLevelDiffSprite(string path, EMoraleLevelDiffType index)
 		{
 			MoraleMonsterLevelItem.<LoadLevelDiffSprite>d__21 <LoadLevelDiffSprite>d__;
@@ -184,25 +184,25 @@ namespace CSharpScript.Game.Module.Battle
 			return <LoadLevelDiffSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401F1AC RID: 127404
+		// Token: 0x04019C5D RID: 105565
 		private const string LEVEL_DIFF_SPRITE_EASY = "/Game/Aki/UI/UIResources/UiFight/Image/Flag/T_EmenyMoraleLevelGray.T_EmenyMoraleLevelGray";
 
-		// Token: 0x0401F1AD RID: 127405
+		// Token: 0x04019C5E RID: 105566
 		private const string LEVEL_DIFF_SPRITE_NORMAL = "/Game/Aki/UI/UIResources/UiFight/Image/Flag/T_EmenyMoraleLevelYellow.T_EmenyMoraleLevelYellow";
 
-		// Token: 0x0401F1AE RID: 127406
+		// Token: 0x04019C5F RID: 105567
 		private const string LEVEL_DIFF_SPRITE_HARD = "/Game/Aki/UI/UIResources/UiFight/Image/Flag/T_EmenyMoraleLevelRed.T_EmenyMoraleLevelRed";
 
-		// Token: 0x0401F1AF RID: 127407
+		// Token: 0x04019C60 RID: 105568
 		private const string LEVEL_DIFF_COLOR_EASY = "#000000cc";
 
-		// Token: 0x0401F1B0 RID: 127408
+		// Token: 0x04019C61 RID: 105569
 		private const string LEVEL_DIFF_COLOR_NORMAL = "#ff9517cc";
 
-		// Token: 0x0401F1B1 RID: 127409
+		// Token: 0x04019C62 RID: 105570
 		private const string LEVEL_DIFF_COLOR_HARD = "#ff1e18cc";
 
-		// Token: 0x0401F1B2 RID: 127410
+		// Token: 0x04019C63 RID: 105571
 		[Nullable(new byte[]
 		{
 			2,
@@ -210,33 +210,33 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private Dictionary<EMoraleLevelDiffType, UTexture> LevelDiffTextureMap;
 
-		// Token: 0x0401F1B3 RID: 127411
+		// Token: 0x04019C64 RID: 105572
 		[Nullable(2)]
 		private UUITexture LevelDiffTexture;
 
-		// Token: 0x0401F1B4 RID: 127412
+		// Token: 0x04019C65 RID: 105573
 		[Nullable(2)]
 		private UUITexture LightTexture;
 
-		// Token: 0x0401F1B5 RID: 127413
+		// Token: 0x04019C66 RID: 105574
 		private int MoraleLevel = 1;
 
-		// Token: 0x0401F1B6 RID: 127414
+		// Token: 0x04019C67 RID: 105575
 		private EMoraleLevelDiffType? MoraleLevelDiffType;
 
-		// Token: 0x0401F1B7 RID: 127415
+		// Token: 0x04019C68 RID: 105576
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BE63 RID: 48739
+		// Token: 0x0200A869 RID: 43113
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040396A2 RID: 235170
+			// Token: 0x04034063 RID: 213091
 			LevelText,
-			// Token: 0x040396A3 RID: 235171
+			// Token: 0x04034064 RID: 213092
 			LevelDiffTexture,
-			// Token: 0x040396A4 RID: 235172
+			// Token: 0x04034065 RID: 213093
 			LightTexture
 		}
 	}

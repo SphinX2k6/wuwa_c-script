@@ -3,20 +3,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020B0 RID: 8368
+	// Token: 0x02002305 RID: 8965
 	public class IVisualNovelTransitionTime_SetValue
 	{
-		// Token: 0x04006E62 RID: 28258
+		// Token: 0x04007480 RID: 29824
 		public EVisualNovelTransitionType Type;
 
-		// Token: 0x04006E63 RID: 28259
-		[Nullable(1)]
+		// Token: 0x04007481 RID: 29825
+		[Nullable(2)]
 		public IVisualNovelDate EndDate;
 
-		// Token: 0x04006E64 RID: 28260
+		// Token: 0x04007482 RID: 29826
 		public int EndPeriodId;
 
-		// Token: 0x04006E65 RID: 28261
+		// Token: 0x04007483 RID: 29827
 		public bool? IsFullScreen;
 	}
 }

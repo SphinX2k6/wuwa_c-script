@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006778 RID: 26488
+	// Token: 0x02006DF8 RID: 28152
 	public class IFadeBackgroundFadeOutEffectTypeBase_UnionUnion
 	{
-		// Token: 0x1700C49A RID: 50330
-		// (get) Token: 0x0602E145 RID: 188741 RVA: 0x0064B955 File Offset: 0x00649B55
-		// (set) Token: 0x0602E146 RID: 188742 RVA: 0x0064B95D File Offset: 0x00649B5D
+		// Token: 0x1700CE50 RID: 52816
+		// (get) Token: 0x0603098B RID: 199051 RVA: 0x00699099 File Offset: 0x00697299
+		// (set) Token: 0x0603098C RID: 199052 RVA: 0x006990A1 File Offset: 0x006972A1
 		public IFadeBackgroundFadeOutEffectTypeBase_Union Type { get; set; }
 
-		// Token: 0x1700C49B RID: 50331
-		// (get) Token: 0x0602E147 RID: 188743 RVA: 0x0064B966 File Offset: 0x00649B66
-		// (set) Token: 0x0602E148 RID: 188744 RVA: 0x0064B96E File Offset: 0x00649B6E
+		// Token: 0x1700CE51 RID: 52817
+		// (get) Token: 0x0603098D RID: 199053 RVA: 0x006990AA File Offset: 0x006972AA
+		// (set) Token: 0x0603098E RID: 199054 RVA: 0x006990B2 File Offset: 0x006972B2
 		public object Value { get; set; }
 
-		// Token: 0x0602E149 RID: 188745 RVA: 0x0064B977 File Offset: 0x00649B77
+		// Token: 0x0603098F RID: 199055 RVA: 0x006990BB File Offset: 0x006972BB
 		public IFadeBackgroundFadeOutEffectTypeBase_UnionUnion()
 		{
 			this.Type = IFadeBackgroundFadeOutEffectTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602E14A RID: 188746 RVA: 0x0064B98D File Offset: 0x00649B8D
+		// Token: 0x06030990 RID: 199056 RVA: 0x006990D1 File Offset: 0x006972D1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602E14B RID: 188747 RVA: 0x0064B99F File Offset: 0x00649B9F
+		// Token: 0x06030991 RID: 199057 RVA: 0x006990E3 File Offset: 0x006972E3
 		public IFadeBackgroundFadeOutEffectTypeBaseT AsIFadeBackgroundFadeOutEffectTypeBase()
 		{
 			return this.As<IFadeBackgroundFadeOutEffectTypeBaseT>();
 		}
 
-		// Token: 0x0602E14C RID: 188748 RVA: 0x0064B9A7 File Offset: 0x00649BA7
+		// Token: 0x06030992 RID: 199058 RVA: 0x006990EB File Offset: 0x006972EB
 		public static IFadeBackgroundFadeOutEffectTypeBase_UnionUnion FromIFadeBackgroundFadeOutEffectTypeBase(IFadeBackgroundFadeOutEffectTypeBaseT _ifadebackgroundfadeouteffecttypebase)
 		{
 			return new IFadeBackgroundFadeOutEffectTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E14D RID: 188749 RVA: 0x0064B9BC File Offset: 0x00649BBC
+		// Token: 0x06030993 RID: 199059 RVA: 0x00699100 File Offset: 0x00697300
 		public IFadeBackgroundFadeOutEffectBlackT AsIFadeBackgroundFadeOutEffectBlack()
 		{
 			return this.As<IFadeBackgroundFadeOutEffectBlackT>();
 		}
 
-		// Token: 0x0602E14E RID: 188750 RVA: 0x0064B9C4 File Offset: 0x00649BC4
+		// Token: 0x06030994 RID: 199060 RVA: 0x00699108 File Offset: 0x00697308
 		public static IFadeBackgroundFadeOutEffectTypeBase_UnionUnion FromIFadeBackgroundFadeOutEffectBlack(IFadeBackgroundFadeOutEffectBlackT _ifadebackgroundfadeouteffectblack)
 		{
 			return new IFadeBackgroundFadeOutEffectTypeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E14F RID: 188751 RVA: 0x0064B9D9 File Offset: 0x00649BD9
+		// Token: 0x06030995 RID: 199061 RVA: 0x0069911D File Offset: 0x0069731D
 		public IFadeBackgroundFadeOutEffectScreenEffectT AsIFadeBackgroundFadeOutEffectScreenEffect()
 		{
 			return this.As<IFadeBackgroundFadeOutEffectScreenEffectT>();
 		}
 
-		// Token: 0x0602E150 RID: 188752 RVA: 0x0064B9E1 File Offset: 0x00649BE1
+		// Token: 0x06030996 RID: 199062 RVA: 0x00699125 File Offset: 0x00697325
 		public static IFadeBackgroundFadeOutEffectTypeBase_UnionUnion FromIFadeBackgroundFadeOutEffectScreenEffect(IFadeBackgroundFadeOutEffectScreenEffectT _ifadebackgroundfadeouteffectscreeneffect)
 		{
 			return new IFadeBackgroundFadeOutEffectTypeBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E151 RID: 188753 RVA: 0x0064B9F8 File Offset: 0x00649BF8
+		// Token: 0x06030997 RID: 199063 RVA: 0x0069913C File Offset: 0x0069733C
 		public static int Pack(FlatBufferBuilder builder, IFadeBackgroundFadeOutEffectTypeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

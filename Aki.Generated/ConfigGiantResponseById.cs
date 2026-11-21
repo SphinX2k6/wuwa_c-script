@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000397 RID: 919
+	// Token: 0x020003AD RID: 941
 	public class ConfigGiantResponseById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001590 RID: 5520 RVA: 0x000D3820 File Offset: 0x000D1A20
+		// Token: 0x06001614 RID: 5652 RVA: 0x000D9F74 File Offset: 0x000D8174
 		static ConfigGiantResponseById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGiantResponseById.CreateStaticDefaultValue), new Action(ConfigGiantResponseById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001591 RID: 5521 RVA: 0x000D3840 File Offset: 0x000D1A40
+		// Token: 0x06001615 RID: 5653 RVA: 0x000D9F94 File Offset: 0x000D8194
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGiantResponseById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001592 RID: 5522 RVA: 0x000D38BF File Offset: 0x000D1ABF
+		// Token: 0x06001616 RID: 5654 RVA: 0x000DA013 File Offset: 0x000D8213
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGiantResponseById.LogPair = null;
 			ConfigGiantResponseById.HandleId = 0;
 		}
 
-		// Token: 0x06001593 RID: 5523 RVA: 0x000D38CD File Offset: 0x000D1ACD
+		// Token: 0x06001617 RID: 5655 RVA: 0x000DA021 File Offset: 0x000D8221
 		public static void Init()
 		{
 			ConfigGiantResponseById.HandleId = ConfigCommon.InitDataStatement(ConfigGiantResponseById.HandleId, "db_giantresponse.db", "select BinData from `GiantResponse` where Id=?");
 		}
 
-		// Token: 0x06001594 RID: 5524 RVA: 0x000D38E8 File Offset: 0x000D1AE8
+		// Token: 0x06001618 RID: 5656 RVA: 0x000DA03C File Offset: 0x000D823C
 		public static GiantResponse? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGiantResponseById.HandleId, ConfigGiantResponseById.LogPair))
@@ -89,7 +89,7 @@ namespace Aki.Config
 			return new GiantResponse?(rootAsGiantResponse);
 		}
 
-		// Token: 0x06001595 RID: 5525 RVA: 0x000D3A60 File Offset: 0x000D1C60
+		// Token: 0x06001619 RID: 5657 RVA: 0x000DA1B4 File Offset: 0x000D83B4
 		[NullableContext(2)]
 		public static IReadOnlyList<GiantResponse> GetConfigList(int p0Id, bool useCache = true)
 		{
@@ -142,22 +142,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001905 RID: 6405
+		// Token: 0x0400199F RID: 6559
 		private const string DB = "db_giantresponse.db";
 
-		// Token: 0x04001906 RID: 6406
+		// Token: 0x040019A0 RID: 6560
 		private const string FILE = "k.可视化编辑/c.Csv/j.巨人响应/*.csv*";
 
-		// Token: 0x04001907 RID: 6407
+		// Token: 0x040019A1 RID: 6561
 		private const string TABLE = "GiantResponse";
 
-		// Token: 0x04001908 RID: 6408
+		// Token: 0x040019A2 RID: 6562
 		private const string COMMAND = "select BinData from `GiantResponse` where Id=?";
 
-		// Token: 0x04001909 RID: 6409
+		// Token: 0x040019A3 RID: 6563
 		private const string KEY_PREFIX = "GiantResponseById";
 
-		// Token: 0x0400190A RID: 6410
+		// Token: 0x040019A4 RID: 6564
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,7 +167,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400190B RID: 6411
+		// Token: 0x040019A5 RID: 6565
 		private static int HandleId;
 	}
 }

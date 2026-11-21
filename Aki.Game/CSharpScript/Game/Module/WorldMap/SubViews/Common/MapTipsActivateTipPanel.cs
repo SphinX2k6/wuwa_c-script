@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 {
-	// Token: 0x0200482F RID: 18479
+	// Token: 0x02003760 RID: 14176
 	public class MapTipsActivateTipPanel : UiPanelBase
 	{
-		// Token: 0x060305E9 RID: 198121 RVA: 0x00B3AB8C File Offset: 0x00B38D8C
+		// Token: 0x06024DB9 RID: 150969 RVA: 0x00A6AC58 File Offset: 0x00A68E58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,19 +33,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060305EA RID: 198122 RVA: 0x00B3AC53 File Offset: 0x00B38E53
+		// Token: 0x06024DBA RID: 150970 RVA: 0x00A6AD1F File Offset: 0x00A68F1F
 		protected override void OnStart()
 		{
 			this.SetDistanceTips();
 		}
 
-		// Token: 0x060305EB RID: 198123 RVA: 0x00B3AC5B File Offset: 0x00B38E5B
+		// Token: 0x06024DBB RID: 150971 RVA: 0x00A6AD27 File Offset: 0x00A68F27
 		private void OnClickHelpButton()
 		{
 			HelpController.Instance.OpenHelpById(119);
 		}
 
-		// Token: 0x060305EC RID: 198124 RVA: 0x00B3AC6C File Offset: 0x00B38E6C
+		// Token: 0x06024DBC RID: 150972 RVA: 0x00A6AD38 File Offset: 0x00A68F38
 		[NullableContext(2)]
 		public void SetHideTip(string hideReason)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			button.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x060305ED RID: 198125 RVA: 0x00B3ACC8 File Offset: 0x00B38EC8
+		// Token: 0x06024DBD RID: 150973 RVA: 0x00A6AD94 File Offset: 0x00A68F94
 		public void SetDistanceTips()
 		{
 			this.SetActivatedTip("QuickTravelOverDistance_Text", null);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			button.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x060305EE RID: 198126 RVA: 0x00B3AD08 File Offset: 0x00B38F08
+		// Token: 0x06024DBE RID: 150974 RVA: 0x00A6ADD4 File Offset: 0x00A68FD4
 		[NullableContext(1)]
 		public void SetActivatedTip(string textId, bool? showBtn = null)
 		{
@@ -97,19 +97,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Common
 			}
 		}
 
-		// Token: 0x0401A033 RID: 106547
+		// Token: 0x040146E7 RID: 83687
 		private const int HELP_ID = 119;
 
-		// Token: 0x0200AB09 RID: 43785
+		// Token: 0x020094B8 RID: 38072
 		public static class EComponents
 		{
-			// Token: 0x04033FC1 RID: 212929
+			// Token: 0x0402E741 RID: 190273
 			public const int SprLock = 0;
 
-			// Token: 0x04033FC2 RID: 212930
+			// Token: 0x0402E742 RID: 190274
 			public const int TxtActivated = 1;
 
-			// Token: 0x04033FC3 RID: 212931
+			// Token: 0x0402E743 RID: 190275
 			public const int BtnFunctionA = 2;
 		}
 	}

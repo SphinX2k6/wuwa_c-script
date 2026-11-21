@@ -5,18 +5,18 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 
-// Token: 0x0200266F RID: 9839
+// Token: 0x02001B5A RID: 7002
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewNodeData
 {
-	// Token: 0x0601428C RID: 82572 RVA: 0x005175E1 File Offset: 0x005157E1
+	// Token: 0x0601176E RID: 71534 RVA: 0x00526339 File Offset: 0x00524539
 	public QuestReviewNodeData(QuestReviewNode config)
 	{
 	}
 
-	// Token: 0x170019D4 RID: 6612
-	// (get) Token: 0x0601428D RID: 82573 RVA: 0x005175F0 File Offset: 0x005157F0
+	// Token: 0x17001A0C RID: 6668
+	// (get) Token: 0x0601176F RID: 71535 RVA: 0x00526348 File Offset: 0x00524548
 	public int Id
 	{
 		get
@@ -25,8 +25,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019D5 RID: 6613
-	// (get) Token: 0x0601428E RID: 82574 RVA: 0x0051760C File Offset: 0x0051580C
+	// Token: 0x17001A0D RID: 6669
+	// (get) Token: 0x06011770 RID: 71536 RVA: 0x00526364 File Offset: 0x00524564
 	public int PosIndex
 	{
 		get
@@ -35,8 +35,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019D6 RID: 6614
-	// (get) Token: 0x0601428F RID: 82575 RVA: 0x00517628 File Offset: 0x00515828
+	// Token: 0x17001A0E RID: 6670
+	// (get) Token: 0x06011771 RID: 71537 RVA: 0x00526380 File Offset: 0x00524580
 	public int QuestLine
 	{
 		get
@@ -45,8 +45,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019D7 RID: 6615
-	// (get) Token: 0x06014290 RID: 82576 RVA: 0x00517644 File Offset: 0x00515844
+	// Token: 0x17001A0F RID: 6671
+	// (get) Token: 0x06011772 RID: 71538 RVA: 0x0052639C File Offset: 0x0052459C
 	public int Successor
 	{
 		get
@@ -55,8 +55,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019D8 RID: 6616
-	// (get) Token: 0x06014291 RID: 82577 RVA: 0x00517660 File Offset: 0x00515860
+	// Token: 0x17001A10 RID: 6672
+	// (get) Token: 0x06011773 RID: 71539 RVA: 0x005263B8 File Offset: 0x005245B8
 	public string TitleId
 	{
 		get
@@ -65,8 +65,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019D9 RID: 6617
-	// (get) Token: 0x06014292 RID: 82578 RVA: 0x0051767C File Offset: 0x0051587C
+	// Token: 0x17001A11 RID: 6673
+	// (get) Token: 0x06011774 RID: 71540 RVA: 0x005263D4 File Offset: 0x005245D4
 	public string Desc
 	{
 		get
@@ -75,8 +75,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019DA RID: 6618
-	// (get) Token: 0x06014293 RID: 82579 RVA: 0x00517698 File Offset: 0x00515898
+	// Token: 0x17001A12 RID: 6674
+	// (get) Token: 0x06011775 RID: 71541 RVA: 0x005263F0 File Offset: 0x005245F0
 	public string Brief
 	{
 		get
@@ -85,8 +85,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019DB RID: 6619
-	// (get) Token: 0x06014294 RID: 82580 RVA: 0x005176B4 File Offset: 0x005158B4
+	// Token: 0x17001A13 RID: 6675
+	// (get) Token: 0x06011776 RID: 71542 RVA: 0x0052640C File Offset: 0x0052460C
 	public string ImageSmall
 	{
 		get
@@ -95,8 +95,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019DC RID: 6620
-	// (get) Token: 0x06014295 RID: 82581 RVA: 0x005176E4 File Offset: 0x005158E4
+	// Token: 0x17001A14 RID: 6676
+	// (get) Token: 0x06011777 RID: 71543 RVA: 0x0052643C File Offset: 0x0052463C
 	public string ImageLarge
 	{
 		get
@@ -105,8 +105,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019DD RID: 6621
-	// (get) Token: 0x06014296 RID: 82582 RVA: 0x00517714 File Offset: 0x00515914
+	// Token: 0x17001A15 RID: 6677
+	// (get) Token: 0x06011778 RID: 71544 RVA: 0x0052646C File Offset: 0x0052466C
 	public bool ShowOnceUnlock
 	{
 		get
@@ -115,13 +115,13 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019DE RID: 6622
-	// (get) Token: 0x06014297 RID: 82583 RVA: 0x0051772F File Offset: 0x0051592F
-	// (set) Token: 0x06014298 RID: 82584 RVA: 0x00517737 File Offset: 0x00515937
+	// Token: 0x17001A16 RID: 6678
+	// (get) Token: 0x06011779 RID: 71545 RVA: 0x00526487 File Offset: 0x00524687
+	// (set) Token: 0x0601177A RID: 71546 RVA: 0x0052648F File Offset: 0x0052468F
 	public EQuestReviewNodeState State { get; private set; }
 
-	// Token: 0x170019DF RID: 6623
-	// (get) Token: 0x06014299 RID: 82585 RVA: 0x00517740 File Offset: 0x00515940
+	// Token: 0x17001A17 RID: 6679
+	// (get) Token: 0x0601177B RID: 71547 RVA: 0x00526498 File Offset: 0x00524698
 	public EQuestReviewNodeLineType LineType
 	{
 		get
@@ -130,8 +130,8 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019E0 RID: 6624
-	// (get) Token: 0x0601429A RID: 82586 RVA: 0x00517744 File Offset: 0x00515944
+	// Token: 0x17001A18 RID: 6680
+	// (get) Token: 0x0601177C RID: 71548 RVA: 0x0052649C File Offset: 0x0052469C
 	public bool IsBranching
 	{
 		get
@@ -141,14 +141,14 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019E1 RID: 6625
-	// (get) Token: 0x0601429B RID: 82587 RVA: 0x00517778 File Offset: 0x00515978
-	// (set) Token: 0x0601429C RID: 82588 RVA: 0x00517780 File Offset: 0x00515980
+	// Token: 0x17001A19 RID: 6681
+	// (get) Token: 0x0601177D RID: 71549 RVA: 0x005264D0 File Offset: 0x005246D0
+	// (set) Token: 0x0601177E RID: 71550 RVA: 0x005264D8 File Offset: 0x005246D8
 	public int Predecessor { get; set; }
 
-	// Token: 0x170019E2 RID: 6626
-	// (get) Token: 0x0601429D RID: 82589 RVA: 0x0051778C File Offset: 0x0051598C
-	// (set) Token: 0x0601429E RID: 82590 RVA: 0x005177BC File Offset: 0x005159BC
+	// Token: 0x17001A1A RID: 6682
+	// (get) Token: 0x0601177F RID: 71551 RVA: 0x005264E4 File Offset: 0x005246E4
+	// (set) Token: 0x06011780 RID: 71552 RVA: 0x00526514 File Offset: 0x00524714
 	public bool IsFirstTimeShow
 	{
 		get
@@ -169,9 +169,9 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x170019E3 RID: 6627
-	// (get) Token: 0x0601429F RID: 82591 RVA: 0x005177F8 File Offset: 0x005159F8
-	// (set) Token: 0x060142A0 RID: 82592 RVA: 0x00517828 File Offset: 0x00515A28
+	// Token: 0x17001A1B RID: 6683
+	// (get) Token: 0x06011781 RID: 71553 RVA: 0x00526550 File Offset: 0x00524750
+	// (set) Token: 0x06011782 RID: 71554 RVA: 0x00526580 File Offset: 0x00524780
 	public bool HasRedDot
 	{
 		get
@@ -192,7 +192,7 @@ public class QuestReviewNodeData
 		}
 	}
 
-	// Token: 0x060142A1 RID: 82593 RVA: 0x00517863 File Offset: 0x00515A63
+	// Token: 0x06011783 RID: 71555 RVA: 0x005265BB File Offset: 0x005247BB
 	public void UpdateByServerData(QuestReviewNodeInfo data)
 	{
 		if (data.FinishCondition)
@@ -213,7 +213,7 @@ public class QuestReviewNodeData
 		this.State = EQuestReviewNodeState.Locked;
 	}
 
-	// Token: 0x060142A2 RID: 82594 RVA: 0x0051789C File Offset: 0x00515A9C
+	// Token: 0x06011784 RID: 71556 RVA: 0x005265F4 File Offset: 0x005247F4
 	private string ImageGetter(string imageMale, string imageFemale)
 	{
 		if (string.IsNullOrEmpty(imageMale))
@@ -236,6 +236,6 @@ public class QuestReviewNodeData
 		return string.Empty;
 	}
 
-	// Token: 0x040097D2 RID: 38866
+	// Token: 0x0400992A RID: 39210
 	private readonly QuestReviewNode Config = config;
 }

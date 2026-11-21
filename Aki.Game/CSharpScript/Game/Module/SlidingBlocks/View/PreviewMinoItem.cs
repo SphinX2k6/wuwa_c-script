@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B93 RID: 19347
+	// Token: 0x02003B3D RID: 15165
 	public class PreviewMinoItem : UiPanelBase
 	{
-		// Token: 0x06032223 RID: 205347 RVA: 0x00BA58B4 File Offset: 0x00BA3AB4
+		// Token: 0x06026FB3 RID: 159667 RVA: 0x00AE9A00 File Offset: 0x00AE7C00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032224 RID: 205348 RVA: 0x00BA58FC File Offset: 0x00BA3AFC
+		// Token: 0x06026FB4 RID: 159668 RVA: 0x00AE9A48 File Offset: 0x00AE7C48
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			sprite2.SetHeight(this.RootItem.GetHeight());
 		}
 
-		// Token: 0x06032225 RID: 205349 RVA: 0x00BA5938 File Offset: 0x00BA3B38
+		// Token: 0x06026FB5 RID: 159669 RVA: 0x00AE9A84 File Offset: 0x00AE7C84
 		[NullableContext(1)]
 		public UniTask StartShow(SlidingBlocksDefine.ETetrominoBorad tetrominoType, string styleName, double x, double y)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <StartShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032226 RID: 205350 RVA: 0x00BA599C File Offset: 0x00BA3B9C
+		// Token: 0x06026FB6 RID: 159670 RVA: 0x00AE9AE8 File Offset: 0x00AE7CE8
 		public UniTask EndShow()
 		{
 			PreviewMinoItem.<EndShow>d__6 <EndShow>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <EndShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032227 RID: 205351 RVA: 0x00BA59E0 File Offset: 0x00BA3BE0
+		// Token: 0x06026FB7 RID: 159671 RVA: 0x00AE9B2C File Offset: 0x00AE7D2C
 		[NullableContext(1)]
 		private PreviewMinoItem.CoordOffset GetCoordOffset(SlidingBlocksDefine.ETetrominoBorad boardType)
 		{
@@ -94,26 +94,26 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return coordOffset;
 		}
 
-		// Token: 0x0401AB53 RID: 109395
+		// Token: 0x040154A7 RID: 87207
 		public bool IsUse;
 
-		// Token: 0x0200ADA2 RID: 44450
+		// Token: 0x020097C1 RID: 38849
 		[RequiredMember]
 		private class CoordOffset
 		{
-			// Token: 0x1700A15F RID: 41311
-			// (get) Token: 0x0604DEC1 RID: 319169 RVA: 0x0149D3C6 File Offset: 0x0149B5C6
-			// (set) Token: 0x0604DEC2 RID: 319170 RVA: 0x0149D3CE File Offset: 0x0149B5CE
+			// Token: 0x170078FD RID: 30973
+			// (get) Token: 0x060444A4 RID: 279716 RVA: 0x014557FE File Offset: 0x014539FE
+			// (set) Token: 0x060444A5 RID: 279717 RVA: 0x01455806 File Offset: 0x01453A06
 			[RequiredMember]
 			public double X { get; set; }
 
-			// Token: 0x1700A160 RID: 41312
-			// (get) Token: 0x0604DEC3 RID: 319171 RVA: 0x0149D3D7 File Offset: 0x0149B5D7
-			// (set) Token: 0x0604DEC4 RID: 319172 RVA: 0x0149D3DF File Offset: 0x0149B5DF
+			// Token: 0x170078FE RID: 30974
+			// (get) Token: 0x060444A6 RID: 279718 RVA: 0x0145580F File Offset: 0x01453A0F
+			// (set) Token: 0x060444A7 RID: 279719 RVA: 0x01455817 File Offset: 0x01453A17
 			[RequiredMember]
 			public double Y { get; set; }
 
-			// Token: 0x0604DEC5 RID: 319173 RVA: 0x0149D3E8 File Offset: 0x0149B5E8
+			// Token: 0x060444A8 RID: 279720 RVA: 0x01455820 File Offset: 0x01453A20
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public CoordOffset()
@@ -121,10 +121,10 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x0200ADA3 RID: 44451
+		// Token: 0x020097C2 RID: 38850
 		private enum EViewComponent
 		{
-			// Token: 0x04034BC3 RID: 216003
+			// Token: 0x0402F56A RID: 193898
 			Sprite
 		}
 	}

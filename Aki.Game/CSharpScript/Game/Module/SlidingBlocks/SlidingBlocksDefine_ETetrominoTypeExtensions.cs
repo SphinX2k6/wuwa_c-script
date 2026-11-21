@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B8C RID: 19340
+	// Token: 0x02003B36 RID: 15158
 	public static class SlidingBlocksDefine_ETetrominoTypeExtensions
 	{
-		// Token: 0x060321F8 RID: 205304 RVA: 0x00BA462C File Offset: 0x00BA282C
+		// Token: 0x06026F88 RID: 159624 RVA: 0x00AE8778 File Offset: 0x00AE6978
 		public static string ToEnumString(this SlidingBlocksDefine.ETetrominoType value)
 		{
 			string result;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x060321F9 RID: 205305 RVA: 0x00BA47CC File Offset: 0x00BA29CC
+		// Token: 0x06026F89 RID: 159625 RVA: 0x00AE8918 File Offset: 0x00AE6B18
 		public static SlidingBlocksDefine.ETetrominoType FromString(string name)
 		{
 			SlidingBlocksDefine.ETetrominoType result;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x060321FA RID: 205306 RVA: 0x00BA47F8 File Offset: 0x00BA29F8
+		// Token: 0x06026F8A RID: 159626 RVA: 0x00AE8944 File Offset: 0x00AE6B44
 		public static bool TryFromString(string name, out SlidingBlocksDefine.ETetrominoType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return false;
 		}
 
-		// Token: 0x060321FB RID: 205307 RVA: 0x00BA4C0C File Offset: 0x00BA2E0C
+		// Token: 0x06026F8B RID: 159627 RVA: 0x00AE8D58 File Offset: 0x00AE6F58
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			};
 		}
 
-		// Token: 0x060321FC RID: 205308 RVA: 0x00BA4D13 File Offset: 0x00BA2F13
+		// Token: 0x06026F8C RID: 159628 RVA: 0x00AE8E5F File Offset: 0x00AE705F
 		public static SlidingBlocksDefine.ETetrominoType[] GetValues()
 		{
 			return new SlidingBlocksDefine.ETetrominoType[]
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			};
 		}
 
-		// Token: 0x060321FD RID: 205309 RVA: 0x00BA4D28 File Offset: 0x00BA2F28
+		// Token: 0x06026F8D RID: 159629 RVA: 0x00AE8E74 File Offset: 0x00AE7074
 		public static string[] GetNames()
 		{
 			return new string[]

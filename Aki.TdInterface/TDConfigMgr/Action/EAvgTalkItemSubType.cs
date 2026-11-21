@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001591 RID: 5521
+	// Token: 0x020016F0 RID: 5872
 	[EnumExtensions]
 	public enum EAvgTalkItemSubType
 	{
-		// Token: 0x04004973 RID: 18803
+		// Token: 0x04004D25 RID: 19749
 		Dialog,
-		// Token: 0x04004974 RID: 18804
+		// Token: 0x04004D26 RID: 19750
 		Enter,
-		// Token: 0x04004975 RID: 18805
+		// Token: 0x04004D27 RID: 19751
 		Exit,
-		// Token: 0x04004976 RID: 18806
+		// Token: 0x04004D28 RID: 19752
 		Option,
-		// Token: 0x04004977 RID: 18807
+		// Token: 0x04004D29 RID: 19753
 		Narration,
-		// Token: 0x04004978 RID: 18808
+		// Token: 0x04004D2A RID: 19754
 		CenterText
 	}
 }

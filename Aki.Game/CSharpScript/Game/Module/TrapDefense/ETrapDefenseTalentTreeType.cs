@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A6F RID: 19055
+	// Token: 0x02003A17 RID: 14871
 	public enum ETrapDefenseTalentTreeType
 	{
-		// Token: 0x0401A696 RID: 108182
+		// Token: 0x04014FE8 RID: 85992
 		Economy = 1,
-		// Token: 0x0401A697 RID: 108183
+		// Token: 0x04014FE9 RID: 85993
 		Build,
-		// Token: 0x0401A698 RID: 108184
+		// Token: 0x04014FEA RID: 85994
 		Ability,
-		// Token: 0x0401A699 RID: 108185
+		// Token: 0x04014FEB RID: 85995
 		Length
 	}
 }

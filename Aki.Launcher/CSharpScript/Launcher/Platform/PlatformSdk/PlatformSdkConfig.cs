@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000131 RID: 305
+	// Token: 0x02000135 RID: 309
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlatformSdkConfig : Singleton
 	{
-		// Token: 0x0600099F RID: 2463 RVA: 0x000433C8 File Offset: 0x000415C8
+		// Token: 0x060009D3 RID: 2515 RVA: 0x000457DC File Offset: 0x000439DC
 		public void Initialize()
 		{
 			string configPath = this.GetConfigPath();
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			this.Initialized = true;
 		}
 
-		// Token: 0x060009A0 RID: 2464 RVA: 0x00043468 File Offset: 0x00041668
+		// Token: 0x060009D4 RID: 2516 RVA: 0x0004587C File Offset: 0x00043A7C
 		private string GetApplicationReleaseType()
 		{
 			Dictionary<string, string> sdkEnvironment = BaseConfigController.Instance.GetSdkEnvironment();
@@ -59,7 +59,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "Product";
 		}
 
-		// Token: 0x060009A1 RID: 2465 RVA: 0x000434D4 File Offset: 0x000416D4
+		// Token: 0x060009D5 RID: 2517 RVA: 0x000458E8 File Offset: 0x00043AE8
 		private IPlatformReleaseData GetPlatformReleaseData()
 		{
 			IPlatformData platformData = this.GetPlatformData();
@@ -79,7 +79,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return platformData.PreRelease ?? new IPlatformReleaseData();
 		}
 
-		// Token: 0x060009A2 RID: 2466 RVA: 0x00043558 File Offset: 0x00041758
+		// Token: 0x060009D6 RID: 2518 RVA: 0x0004596C File Offset: 0x00043B6C
 		private IPlatformData GetPlatformData()
 		{
 			if (!this.Initialized)
@@ -93,7 +93,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return new IPlatformData();
 		}
 
-		// Token: 0x060009A3 RID: 2467 RVA: 0x000435A6 File Offset: 0x000417A6
+		// Token: 0x060009D7 RID: 2519 RVA: 0x000459BA File Offset: 0x00043BBA
 		private string GetConfigPath()
 		{
 			if (this.ConfigPath == null)
@@ -103,56 +103,56 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return this.ConfigPath;
 		}
 
-		// Token: 0x060009A4 RID: 2468 RVA: 0x000435CB File Offset: 0x000417CB
+		// Token: 0x060009D8 RID: 2520 RVA: 0x000459DF File Offset: 0x00043BDF
 		public string GetProjectId()
 		{
 			return this.GetPlatformData().projectId ?? "";
 		}
 
-		// Token: 0x060009A5 RID: 2469 RVA: 0x000435E1 File Offset: 0x000417E1
+		// Token: 0x060009D9 RID: 2521 RVA: 0x000459F5 File Offset: 0x00043BF5
 		public string GetProductId()
 		{
 			return this.GetPlatformReleaseData().productId ?? "";
 		}
 
-		// Token: 0x060009A6 RID: 2470 RVA: 0x000435F7 File Offset: 0x000417F7
+		// Token: 0x060009DA RID: 2522 RVA: 0x00045A0B File Offset: 0x00043C0B
 		public string GetChannelId()
 		{
 			return this.GetPlatformData().channelId ?? "";
 		}
 
-		// Token: 0x060009A7 RID: 2471 RVA: 0x0004360D File Offset: 0x0004180D
+		// Token: 0x060009DB RID: 2523 RVA: 0x00045A21 File Offset: 0x00043C21
 		public string GetPlatform()
 		{
 			return this.GetPlatformData().platform ?? "";
 		}
 
-		// Token: 0x060009A8 RID: 2472 RVA: 0x00043623 File Offset: 0x00041823
+		// Token: 0x060009DC RID: 2524 RVA: 0x00045A37 File Offset: 0x00043C37
 		public string GetVersion()
 		{
 			return this.GetPlatformData().version ?? "";
 		}
 
-		// Token: 0x060009A9 RID: 2473 RVA: 0x00043639 File Offset: 0x00041839
+		// Token: 0x060009DD RID: 2525 RVA: 0x00045A4D File Offset: 0x00043C4D
 		public string GetSdkVersion()
 		{
 			return this.GetPlatformData().sdkVersion ?? "";
 		}
 
-		// Token: 0x060009AA RID: 2474 RVA: 0x0004364F File Offset: 0x0004184F
+		// Token: 0x060009DE RID: 2526 RVA: 0x00045A63 File Offset: 0x00043C63
 		public string GetSdkServerVersion()
 		{
 			return this.GetPlatformData().sdkServerVersion ?? "";
 		}
 
-		// Token: 0x060009AB RID: 2475 RVA: 0x00043668 File Offset: 0x00041868
+		// Token: 0x060009DF RID: 2527 RVA: 0x00045A7C File Offset: 0x00043C7C
 		private string ReplaceLanguageString(string inString)
 		{
 			string str = LauncherLanguageLib.Instance.PackageLanguage ?? "";
 			return inString.Replace("language_{0}", "language_" + str);
 		}
 
-		// Token: 0x060009AC RID: 2476 RVA: 0x000436A0 File Offset: 0x000418A0
+		// Token: 0x060009E0 RID: 2528 RVA: 0x00045AB4 File Offset: 0x00043CB4
 		public string GetPrivacyPolicy()
 		{
 			if (this.SdkServerConfig == null)
@@ -167,7 +167,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return privacyPolicy ?? "";
 		}
 
-		// Token: 0x060009AD RID: 2477 RVA: 0x000436FC File Offset: 0x000418FC
+		// Token: 0x060009E1 RID: 2529 RVA: 0x00045B10 File Offset: 0x00043D10
 		public string GetTermsOfService()
 		{
 			if (this.SdkServerConfig == null)
@@ -182,7 +182,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return termsOfService ?? "";
 		}
 
-		// Token: 0x060009AE RID: 2478 RVA: 0x00043758 File Offset: 0x00041958
+		// Token: 0x060009E2 RID: 2530 RVA: 0x00045B6C File Offset: 0x00043D6C
 		public string GetChildPolicy()
 		{
 			if (this.SdkServerConfig == null)
@@ -197,7 +197,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return childProtocol ?? "";
 		}
 
-		// Token: 0x060009AF RID: 2479 RVA: 0x000437B4 File Offset: 0x000419B4
+		// Token: 0x060009E3 RID: 2531 RVA: 0x00045BC8 File Offset: 0x00043DC8
 		public string GetServerUrl(bool spare = false)
 		{
 			int num = (spare > false) ? 1 : 0;
@@ -216,7 +216,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B0 RID: 2480 RVA: 0x00043844 File Offset: 0x00041A44
+		// Token: 0x060009E4 RID: 2532 RVA: 0x00045C58 File Offset: 0x00043E58
 		public string GetPayUrl(bool spare = false)
 		{
 			int num = (spare > false) ? 1 : 0;
@@ -235,7 +235,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B1 RID: 2481 RVA: 0x000438D2 File Offset: 0x00041AD2
+		// Token: 0x060009E5 RID: 2533 RVA: 0x00045CE6 File Offset: 0x00043EE6
 		public string GetClientId()
 		{
 			if (this.SdkServerConfig != null)
@@ -245,7 +245,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B2 RID: 2482 RVA: 0x000438F6 File Offset: 0x00041AF6
+		// Token: 0x060009E6 RID: 2534 RVA: 0x00045D0A File Offset: 0x00043F0A
 		public string GetClientSecret()
 		{
 			if (this.SdkServerConfig != null)
@@ -255,7 +255,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B3 RID: 2483 RVA: 0x0004391A File Offset: 0x00041B1A
+		// Token: 0x060009E7 RID: 2535 RVA: 0x00045D2E File Offset: 0x00043F2E
 		public string GetPlatformPkg()
 		{
 			if (this.SdkServerConfig != null)
@@ -265,7 +265,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B4 RID: 2484 RVA: 0x0004393E File Offset: 0x00041B3E
+		// Token: 0x060009E8 RID: 2536 RVA: 0x00045D52 File Offset: 0x00043F52
 		public string GetPlatformClientId()
 		{
 			if (this.SdkServerConfig != null)
@@ -275,7 +275,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B5 RID: 2485 RVA: 0x00043962 File Offset: 0x00041B62
+		// Token: 0x060009E9 RID: 2537 RVA: 0x00045D76 File Offset: 0x00043F76
 		public string GetPlatformClientSecret()
 		{
 			if (this.SdkServerConfig != null)
@@ -285,7 +285,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B6 RID: 2486 RVA: 0x00043986 File Offset: 0x00041B86
+		// Token: 0x060009EA RID: 2538 RVA: 0x00045D9A File Offset: 0x00043F9A
 		public string GetUserCenterUrl()
 		{
 			if (this.SdkServerConfig != null)
@@ -295,7 +295,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B7 RID: 2487 RVA: 0x000439AA File Offset: 0x00041BAA
+		// Token: 0x060009EB RID: 2539 RVA: 0x00045DBE File Offset: 0x00043FBE
 		public string GetDataReportUrl()
 		{
 			if (this.SdkServerConfig != null)
@@ -305,7 +305,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B8 RID: 2488 RVA: 0x000439CE File Offset: 0x00041BCE
+		// Token: 0x060009EC RID: 2540 RVA: 0x00045DE2 File Offset: 0x00043FE2
 		public string GetKuroDataReportUrl()
 		{
 			if (this.SdkServerConfig != null)
@@ -315,7 +315,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009B9 RID: 2489 RVA: 0x000439F2 File Offset: 0x00041BF2
+		// Token: 0x060009ED RID: 2541 RVA: 0x00045E06 File Offset: 0x00044006
 		public string GetDataReportId()
 		{
 			if (this.SdkServerConfig != null)
@@ -325,7 +325,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009BA RID: 2490 RVA: 0x00043A16 File Offset: 0x00041C16
+		// Token: 0x060009EE RID: 2542 RVA: 0x00045E2A File Offset: 0x0004402A
 		public string GetCustomServiceUrl()
 		{
 			if (this.SdkServerConfig != null)
@@ -335,7 +335,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return "";
 		}
 
-		// Token: 0x060009BB RID: 2491 RVA: 0x00043A3C File Offset: 0x00041C3C
+		// Token: 0x060009EF RID: 2543 RVA: 0x00045E50 File Offset: 0x00044050
 		public unsafe string GetCustomerServiceUrl(string language)
 		{
 			CsLinkEntry csLinkEntry;
@@ -357,7 +357,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return ((csLinkEntry != null) ? csLinkEntry.link : null) ?? "";
 		}
 
-		// Token: 0x060009BC RID: 2492 RVA: 0x00043B08 File Offset: 0x00041D08
+		// Token: 0x060009F0 RID: 2544 RVA: 0x00045F1C File Offset: 0x0004411C
 		private string BuildHttp(string httpPre)
 		{
 			string applicationReleaseType = this.GetApplicationReleaseType();
@@ -378,7 +378,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060009BD RID: 2493 RVA: 0x00043BA8 File Offset: 0x00041DA8
+		// Token: 0x060009F1 RID: 2545 RVA: 0x00045FBC File Offset: 0x000441BC
 		[NullableContext(0)]
 		public UniTask<bool> RequestBaseData([Nullable(2)] HotFixManager view = null)
 		{
@@ -391,7 +391,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <RequestBaseData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060009BE RID: 2494 RVA: 0x00043BF4 File Offset: 0x00041DF4
+		// Token: 0x060009F2 RID: 2546 RVA: 0x00046008 File Offset: 0x00044208
 		public List<string> ShuffleList(List<string> list)
 		{
 			for (int i = list.Count - 1; i > 0; i--)
@@ -404,8 +404,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return list;
 		}
 
-		// Token: 0x170000FC RID: 252
-		// (get) Token: 0x060009BF RID: 2495 RVA: 0x00043C44 File Offset: 0x00041E44
+		// Token: 0x17000102 RID: 258
+		// (get) Token: 0x060009F3 RID: 2547 RVA: 0x00046058 File Offset: 0x00044258
 		public static PlatformSdkConfig Instance
 		{
 			get
@@ -419,12 +419,12 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x060009C0 RID: 2496 RVA: 0x00043C67 File Offset: 0x00041E67
+		// Token: 0x060009F4 RID: 2548 RVA: 0x0004607B File Offset: 0x0004427B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060009C1 RID: 2497 RVA: 0x00043C69 File Offset: 0x00041E69
+		// Token: 0x060009F5 RID: 2549 RVA: 0x0004607D File Offset: 0x0004427D
 		public static void ResetStaticDefaultValue()
 		{
 			PlatformSdkConfig instance = PlatformSdkConfig._instance;
@@ -435,44 +435,44 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			PlatformSdkConfig._instance = null;
 		}
 
-		// Token: 0x060009C2 RID: 2498 RVA: 0x00043C82 File Offset: 0x00041E82
+		// Token: 0x060009F6 RID: 2550 RVA: 0x00046096 File Offset: 0x00044296
 		static PlatformSdkConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlatformSdkConfig.CreateStaticDefaultValue), new Action(PlatformSdkConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060009C4 RID: 2500 RVA: 0x00043CBF File Offset: 0x00041EBF
+		// Token: 0x060009F8 RID: 2552 RVA: 0x000460D3 File Offset: 0x000442D3
 		[CompilerGenerated]
 		private string <RequestBaseData>g__GetHttpFunction|36_0(string httpPre)
 		{
 			return this.BuildHttp(httpPre);
 		}
 
-		// Token: 0x040005B3 RID: 1459
+		// Token: 0x040005EE RID: 1518
 		private readonly Dictionary<string, CsLinkEntry> CsDataMap = new Dictionary<string, CsLinkEntry>();
 
-		// Token: 0x040005B4 RID: 1460
+		// Token: 0x040005EF RID: 1519
 		[Nullable(2)]
 		private IConfigJson Json;
 
-		// Token: 0x040005B5 RID: 1461
+		// Token: 0x040005F0 RID: 1520
 		[Nullable(2)]
 		private SdkPlatformConfig SdkServerConfig;
 
-		// Token: 0x040005B6 RID: 1462
+		// Token: 0x040005F1 RID: 1521
 		public bool IsGlobal;
 
-		// Token: 0x040005B7 RID: 1463
+		// Token: 0x040005F2 RID: 1522
 		[Nullable(2)]
 		private string ConfigPath;
 
-		// Token: 0x040005B8 RID: 1464
+		// Token: 0x040005F3 RID: 1523
 		private bool Initialized;
 
-		// Token: 0x040005B9 RID: 1465
+		// Token: 0x040005F4 RID: 1524
 		private readonly Random _shuffleRandom = new Random();
 
-		// Token: 0x040005BA RID: 1466
+		// Token: 0x040005F5 RID: 1525
 		[Nullable(2)]
 		private static PlatformSdkConfig _instance;
 	}

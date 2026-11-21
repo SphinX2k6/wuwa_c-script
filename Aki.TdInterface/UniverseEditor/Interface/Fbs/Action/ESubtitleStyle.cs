@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006016 RID: 24598
+	// Token: 0x02006675 RID: 26229
 	public enum ESubtitleStyle : byte
 	{
-		// Token: 0x0401005C RID: 65628
+		// Token: 0x04010E41 RID: 69185
 		LevelA,
-		// Token: 0x0401005D RID: 65629
+		// Token: 0x04010E42 RID: 69186
 		NewLevelB
 	}
 }

@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200682B RID: 26667
+	// Token: 0x0200577B RID: 22395
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlOutBackpackTouchInput
 	{
-		// Token: 0x060428EC RID: 272620 RVA: 0x0102CD11 File Offset: 0x0102AF11
+		// Token: 0x06037440 RID: 226368 RVA: 0x00F6E24D File Offset: 0x00F6C44D
 		public void OnPointerDown(DangoBrawlOutBackpackItemBase item, [Nullable(2)] ULGUIPointerEventData data)
 		{
 			if (TouchFingerManager.Instance.GetTouchFingerCount() > 1)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.FirstPointerId = ((data != null) ? data.pointerID : 0);
 		}
 
-		// Token: 0x060428ED RID: 272621 RVA: 0x0102CD50 File Offset: 0x0102AF50
+		// Token: 0x06037441 RID: 226369 RVA: 0x00F6E28C File Offset: 0x00F6C48C
 		public bool TryAcceptPointerUp(DangoBrawlOutBackpackItemBase item, [Nullable(2)] ULGUIPointerEventData data)
 		{
 			int num = (data != null) ? data.pointerID : 0;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x060428EE RID: 272622 RVA: 0x0102CDE5 File Offset: 0x0102AFE5
+		// Token: 0x06037442 RID: 226370 RVA: 0x00F6E321 File Offset: 0x00F6C521
 		public void Reset()
 		{
 			this.FirstItem = null;
@@ -67,27 +67,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.MultiTouchEndTime = double.NegativeInfinity;
 		}
 
-		// Token: 0x060428EF RID: 272623 RVA: 0x0102CE0B File Offset: 0x0102B00B
+		// Token: 0x06037443 RID: 226371 RVA: 0x00F6E347 File Offset: 0x00F6C547
 		private void EnterMultiTouch()
 		{
 			this.InMultiTouch = true;
 			this.FirstItem = null;
 		}
 
-		// Token: 0x04022AC5 RID: 142021
+		// Token: 0x0401D322 RID: 119586
 		private const double MultiTouchCoolDownSeconds = 0.5;
 
-		// Token: 0x04022AC6 RID: 142022
+		// Token: 0x0401D323 RID: 119587
 		[Nullable(2)]
 		private DangoBrawlOutBackpackItemBase FirstItem;
 
-		// Token: 0x04022AC7 RID: 142023
+		// Token: 0x0401D324 RID: 119588
 		private int FirstPointerId;
 
-		// Token: 0x04022AC8 RID: 142024
+		// Token: 0x0401D325 RID: 119589
 		private bool InMultiTouch;
 
-		// Token: 0x04022AC9 RID: 142025
+		// Token: 0x0401D326 RID: 119590
 		private double MultiTouchEndTime = double.NegativeInfinity;
 	}
 }

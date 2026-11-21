@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F2F RID: 20271
+	// Token: 0x02005461 RID: 21601
 	public class IBuffConsumerComponentT
 	{
-		// Token: 0x1700921A RID: 37402
-		// (get) Token: 0x06020156 RID: 131414 RVA: 0x00476C82 File Offset: 0x00474E82
-		// (set) Token: 0x06020157 RID: 131415 RVA: 0x00476C8A File Offset: 0x00474E8A
+		// Token: 0x1700999C RID: 39324
+		// (get) Token: 0x06021EC6 RID: 138950 RVA: 0x004AD016 File Offset: 0x004AB216
+		// (set) Token: 0x06021EC7 RID: 138951 RVA: 0x004AD01E File Offset: 0x004AB21E
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700921B RID: 37403
-		// (get) Token: 0x06020158 RID: 131416 RVA: 0x00476C93 File Offset: 0x00474E93
-		// (set) Token: 0x06020159 RID: 131417 RVA: 0x00476C9B File Offset: 0x00474E9B
+		// Token: 0x1700999D RID: 39325
+		// (get) Token: 0x06021EC8 RID: 138952 RVA: 0x004AD027 File Offset: 0x004AB227
+		// (set) Token: 0x06021EC9 RID: 138953 RVA: 0x004AD02F File Offset: 0x004AB22F
 		public long BuffId { get; set; }
 
-		// Token: 0x1700921C RID: 37404
-		// (get) Token: 0x0602015A RID: 131418 RVA: 0x00476CA4 File Offset: 0x00474EA4
-		// (set) Token: 0x0602015B RID: 131419 RVA: 0x00476CAC File Offset: 0x00474EAC
+		// Token: 0x1700999E RID: 39326
+		// (get) Token: 0x06021ECA RID: 138954 RVA: 0x004AD038 File Offset: 0x004AB238
+		// (set) Token: 0x06021ECB RID: 138955 RVA: 0x004AD040 File Offset: 0x004AB240
 		public long BulletId { get; set; }
 
-		// Token: 0x1700921D RID: 37405
-		// (get) Token: 0x0602015C RID: 131420 RVA: 0x00476CB5 File Offset: 0x00474EB5
-		// (set) Token: 0x0602015D RID: 131421 RVA: 0x00476CBD File Offset: 0x00474EBD
+		// Token: 0x1700999F RID: 39327
+		// (get) Token: 0x06021ECC RID: 138956 RVA: 0x004AD049 File Offset: 0x004AB249
+		// (set) Token: 0x06021ECD RID: 138957 RVA: 0x004AD051 File Offset: 0x004AB251
 		public int ProducerEntityId { get; set; }
 
-		// Token: 0x1700921E RID: 37406
-		// (get) Token: 0x0602015E RID: 131422 RVA: 0x00476CC6 File Offset: 0x00474EC6
-		// (set) Token: 0x0602015F RID: 131423 RVA: 0x00476CCE File Offset: 0x00474ECE
+		// Token: 0x170099A0 RID: 39328
+		// (get) Token: 0x06021ECE RID: 138958 RVA: 0x004AD05A File Offset: 0x004AB25A
+		// (set) Token: 0x06021ECF RID: 138959 RVA: 0x004AD062 File Offset: 0x004AB262
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020160 RID: 131424 RVA: 0x00476CD7 File Offset: 0x00474ED7
+		// Token: 0x06021ED0 RID: 138960 RVA: 0x004AD06B File Offset: 0x004AB26B
 		public IBuffConsumerComponentT()
 		{
 			this.Disabled = false;

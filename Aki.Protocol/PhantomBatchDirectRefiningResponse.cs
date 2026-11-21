@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C1D RID: 3101
+	// Token: 0x02000C0D RID: 3085
 	[NetMessage(EMessageId.PhantomBatchDirectRefiningResponse)]
 	public sealed class PhantomBatchDirectRefiningResponse : IMessage<PhantomBatchDirectRefiningResponse>, IMessage, IEquatable<PhantomBatchDirectRefiningResponse>, IDeepCloneable<PhantomBatchDirectRefiningResponse>, IBufferMessage
 	{
-		// Token: 0x06010D4D RID: 68941 RVA: 0x00277074 File Offset: 0x00275274
+		// Token: 0x06010C4D RID: 68685 RVA: 0x0027530F File Offset: 0x0027350F
 		[NullableContext(1)]
 		public static PhantomBatchDirectRefiningResponse Create()
 		{
 			return new PhantomBatchDirectRefiningResponse();
 		}
 
-		// Token: 0x17003790 RID: 14224
-		// (get) Token: 0x06010D4E RID: 68942 RVA: 0x0027707B File Offset: 0x0027527B
+		// Token: 0x17003759 RID: 14169
+		// (get) Token: 0x06010C4E RID: 68686 RVA: 0x00275316 File Offset: 0x00273516
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003791 RID: 14225
-		// (get) Token: 0x06010D4F RID: 68943 RVA: 0x0027707E File Offset: 0x0027527E
+		// Token: 0x1700375A RID: 14170
+		// (get) Token: 0x06010C4F RID: 68687 RVA: 0x00275319 File Offset: 0x00273519
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010D50 RID: 68944 RVA: 0x00277085 File Offset: 0x00275285
+		// Token: 0x06010C50 RID: 68688 RVA: 0x00275320 File Offset: 0x00273520
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBatchDirectRefiningResponse()
 		{
 		}
 
-		// Token: 0x06010D51 RID: 68945 RVA: 0x002770A4 File Offset: 0x002752A4
+		// Token: 0x06010C51 RID: 68689 RVA: 0x00275340 File Offset: 0x00273540
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBatchDirectRefiningResponse(PhantomBatchDirectRefiningResponse other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06010D52 RID: 68946 RVA: 0x00277102 File Offset: 0x00275302
+		// Token: 0x06010C52 RID: 68690 RVA: 0x0027539E File Offset: 0x0027359E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBatchDirectRefiningResponse Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new PhantomBatchDirectRefiningResponse(this);
 		}
 
-		// Token: 0x17003792 RID: 14226
-		// (get) Token: 0x06010D53 RID: 68947 RVA: 0x0027710A File Offset: 0x0027530A
-		// (set) Token: 0x06010D54 RID: 68948 RVA: 0x00277112 File Offset: 0x00275312
+		// Token: 0x1700375B RID: 14171
+		// (get) Token: 0x06010C53 RID: 68691 RVA: 0x002753A6 File Offset: 0x002735A6
+		// (set) Token: 0x06010C54 RID: 68692 RVA: 0x002753AE File Offset: 0x002735AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -87,8 +87,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003793 RID: 14227
-		// (get) Token: 0x06010D55 RID: 68949 RVA: 0x0027711B File Offset: 0x0027531B
+		// Token: 0x1700375C RID: 14172
+		// (get) Token: 0x06010C55 RID: 68693 RVA: 0x002753B7 File Offset: 0x002735B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AddCountItemInfo> Items
@@ -99,8 +99,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003794 RID: 14228
-		// (get) Token: 0x06010D56 RID: 68950 RVA: 0x00277123 File Offset: 0x00275323
+		// Token: 0x1700375D RID: 14173
+		// (get) Token: 0x06010C56 RID: 68694 RVA: 0x002753BF File Offset: 0x002735BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhantomItem> CostPhantoms
@@ -111,9 +111,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003795 RID: 14229
-		// (get) Token: 0x06010D57 RID: 68951 RVA: 0x0027712B File Offset: 0x0027532B
-		// (set) Token: 0x06010D58 RID: 68952 RVA: 0x00277133 File Offset: 0x00275333
+		// Token: 0x1700375E RID: 14174
+		// (get) Token: 0x06010C57 RID: 68695 RVA: 0x002753C7 File Offset: 0x002735C7
+		// (set) Token: 0x06010C58 RID: 68696 RVA: 0x002753CF File Offset: 0x002735CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DirectRefineWeekTimes
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010D59 RID: 68953 RVA: 0x0027713C File Offset: 0x0027533C
+		// Token: 0x06010C59 RID: 68697 RVA: 0x002753D8 File Offset: 0x002735D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBatchDirectRefiningResponse);
 		}
 
-		// Token: 0x06010D5A RID: 68954 RVA: 0x0027714C File Offset: 0x0027534C
+		// Token: 0x06010C5A RID: 68698 RVA: 0x002753E8 File Offset: 0x002735E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBatchDirectRefiningResponse other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.items_.Equals(other.items_) && this.costPhantoms_.Equals(other.costPhantoms_) && this.DirectRefineWeekTimes == other.DirectRefineWeekTimes && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010D5B RID: 68955 RVA: 0x002771C0 File Offset: 0x002753C0
+		// Token: 0x06010C5B RID: 68699 RVA: 0x0027545C File Offset: 0x0027365C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010D5C RID: 68956 RVA: 0x0027723A File Offset: 0x0027543A
+		// Token: 0x06010C5C RID: 68700 RVA: 0x002754D6 File Offset: 0x002736D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010D5D RID: 68957 RVA: 0x00277247 File Offset: 0x00275447
+		// Token: 0x06010C5D RID: 68701 RVA: 0x002754E3 File Offset: 0x002736E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -183,30 +183,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010D5E RID: 68958 RVA: 0x00277250 File Offset: 0x00275450
+		// Token: 0x06010C5E RID: 68702 RVA: 0x002754EC File Offset: 0x002736EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.items_.WriteTo(ref output, PhantomBatchDirectRefiningResponse._repeated_items_codec);
+			if (this.DirectRefineWeekTimes != 0)
+			{
+				output.WriteRawTag(16);
+				output.WriteInt32(this.DirectRefineWeekTimes);
+			}
 			this.costPhantoms_.WriteTo(ref output, PhantomBatchDirectRefiningResponse._repeated_costPhantoms_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(64);
 				output.WriteEnum((int)this.ErrorCode);
 			}
-			if (this.DirectRefineWeekTimes != 0)
-			{
-				output.WriteRawTag(120);
-				output.WriteInt32(this.DirectRefineWeekTimes);
-			}
+			this.items_.WriteTo(ref output, PhantomBatchDirectRefiningResponse._repeated_items_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06010D5F RID: 68959 RVA: 0x002772CC File Offset: 0x002754CC
+		// Token: 0x06010C5F RID: 68703 RVA: 0x00275568 File Offset: 0x00273768
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010D60 RID: 68960 RVA: 0x00277348 File Offset: 0x00275548
+		// Token: 0x06010C60 RID: 68704 RVA: 0x002755E4 File Offset: 0x002737E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBatchDirectRefiningResponse other)
@@ -251,7 +251,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010D61 RID: 68961 RVA: 0x002773BA File Offset: 0x002755BA
+		// Token: 0x06010C61 RID: 68705 RVA: 0x00275656 File Offset: 0x00273856
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010D62 RID: 68962 RVA: 0x002773C4 File Offset: 0x002755C4
+		// Token: 0x06010C62 RID: 68706 RVA: 0x00275660 File Offset: 0x00273860
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -271,14 +271,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 42U)
+				if (num <= 26U)
 				{
-					if (num == 26U)
+					if (num == 16U)
 					{
-						this.items_.AddEntriesFrom(ref input, PhantomBatchDirectRefiningResponse._repeated_items_codec);
+						this.DirectRefineWeekTimes = input.ReadInt32();
 						continue;
 					}
-					if (num == 42U)
+					if (num == 26U)
 					{
 						this.costPhantoms_.AddEntriesFrom(ref input, PhantomBatchDirectRefiningResponse._repeated_costPhantoms_codec);
 						continue;
@@ -286,14 +286,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 80U)
+					if (num == 64U)
 					{
 						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
-					if (num == 120U)
+					if (num == 90U)
 					{
-						this.DirectRefineWeekTimes = input.ReadInt32();
+						this.items_.AddEntriesFrom(ref input, PhantomBatchDirectRefiningResponse._repeated_items_codec);
 						continue;
 					}
 				}
@@ -301,37 +301,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006ADB RID: 27355
+		// Token: 0x04006AEF RID: 27375
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006ADC RID: 27356
-		public const int ErrorCodeFieldNumber = 10;
+		// Token: 0x04006AF0 RID: 27376
+		public const int ErrorCodeFieldNumber = 8;
 
-		// Token: 0x04006ADD RID: 27357
+		// Token: 0x04006AF1 RID: 27377
 		private ErrorCode errorCode_;
 
-		// Token: 0x04006ADE RID: 27358
-		public const int ItemsFieldNumber = 3;
+		// Token: 0x04006AF2 RID: 27378
+		public const int ItemsFieldNumber = 11;
 
-		// Token: 0x04006ADF RID: 27359
-		private static readonly FieldCodec<AddCountItemInfo> _repeated_items_codec = FieldCodec.ForMessage<AddCountItemInfo>(26U, AddCountItemInfo.Parser);
+		// Token: 0x04006AF3 RID: 27379
+		private static readonly FieldCodec<AddCountItemInfo> _repeated_items_codec = FieldCodec.ForMessage<AddCountItemInfo>(90U, AddCountItemInfo.Parser);
 
-		// Token: 0x04006AE0 RID: 27360
+		// Token: 0x04006AF4 RID: 27380
 		private readonly RepeatedField<AddCountItemInfo> items_ = new RepeatedField<AddCountItemInfo>();
 
-		// Token: 0x04006AE1 RID: 27361
-		public const int CostPhantomsFieldNumber = 5;
+		// Token: 0x04006AF5 RID: 27381
+		public const int CostPhantomsFieldNumber = 3;
 
-		// Token: 0x04006AE2 RID: 27362
-		private static readonly FieldCodec<PhantomItem> _repeated_costPhantoms_codec = FieldCodec.ForMessage<PhantomItem>(42U, PhantomItem.Parser);
+		// Token: 0x04006AF6 RID: 27382
+		private static readonly FieldCodec<PhantomItem> _repeated_costPhantoms_codec = FieldCodec.ForMessage<PhantomItem>(26U, PhantomItem.Parser);
 
-		// Token: 0x04006AE3 RID: 27363
+		// Token: 0x04006AF7 RID: 27383
 		private readonly RepeatedField<PhantomItem> costPhantoms_ = new RepeatedField<PhantomItem>();
 
-		// Token: 0x04006AE4 RID: 27364
-		public const int DirectRefineWeekTimesFieldNumber = 15;
+		// Token: 0x04006AF8 RID: 27384
+		public const int DirectRefineWeekTimesFieldNumber = 2;
 
-		// Token: 0x04006AE5 RID: 27365
+		// Token: 0x04006AF9 RID: 27385
 		private int directRefineWeekTimes_;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001AD RID: 429
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001C4 RID: 452
 	public class IAdsortTransform
 	{
-		// Token: 0x06000698 RID: 1688 RVA: 0x000233F8 File Offset: 0x000215F8
+		// Token: 0x060006AE RID: 1710 RVA: 0x00024058 File Offset: 0x00022258
 		private IAdsortTransform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000699 RID: 1689 RVA: 0x00023430 File Offset: 0x00021630
+		// Token: 0x060006AF RID: 1711 RVA: 0x00024090 File Offset: 0x00022290
 		public static IAdsortTransform Create([Nullable(2)] IAdsortTransform instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600069A RID: 1690 RVA: 0x00023443 File Offset: 0x00021643
+		// Token: 0x060006B0 RID: 1712 RVA: 0x000240A3 File Offset: 0x000222A3
 		public static IAdsortTransform CreateFromSetValue([Nullable(2)] IAdsortTransform_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600069B RID: 1691 RVA: 0x00023456 File Offset: 0x00021656
+		// Token: 0x060006B1 RID: 1713 RVA: 0x000240B6 File Offset: 0x000222B6
 		public IAdsortTransform_SetValue ToSetValue()
 		{
 			return new IAdsortTransform_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000226 RID: 550
-		// (get) Token: 0x0600069C RID: 1692 RVA: 0x00023478 File Offset: 0x00021678
-		// (set) Token: 0x0600069D RID: 1693 RVA: 0x000234D9 File Offset: 0x000216D9
+		// Token: 0x1700022E RID: 558
+		// (get) Token: 0x060006B2 RID: 1714 RVA: 0x000240D8 File Offset: 0x000222D8
+		// (set) Token: 0x060006B3 RID: 1715 RVA: 0x00024139 File Offset: 0x00022339
 		public virtual VectorInfo Pos
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000227 RID: 551
-		// (get) Token: 0x0600069E RID: 1694 RVA: 0x000234F0 File Offset: 0x000216F0
-		// (set) Token: 0x0600069F RID: 1695 RVA: 0x00023551 File Offset: 0x00021751
+		// Token: 0x1700022F RID: 559
+		// (get) Token: 0x060006B4 RID: 1716 RVA: 0x00024150 File Offset: 0x00022350
+		// (set) Token: 0x060006B5 RID: 1717 RVA: 0x000241B1 File Offset: 0x000223B1
 		public virtual VectorInfo Rot
 		{
 			get
@@ -121,24 +119,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400082C RID: 2092
+		// Token: 0x04000885 RID: 2181
 		[Nullable(2)]
 		protected IAdsortTransform FbInstance;
 
-		// Token: 0x0400082D RID: 2093
+		// Token: 0x04000886 RID: 2182
 		[Nullable(2)]
 		protected IAdsortTransform_SetValue PocoInterface;
 
-		// Token: 0x0400082E RID: 2094
+		// Token: 0x04000887 RID: 2183
 		private VectorInfo _PosCache;
 
-		// Token: 0x0400082F RID: 2095
+		// Token: 0x04000888 RID: 2184
 		private bool _PosInited;
 
-		// Token: 0x04000830 RID: 2096
+		// Token: 0x04000889 RID: 2185
 		private VectorInfo _RotCache;
 
-		// Token: 0x04000831 RID: 2097
+		// Token: 0x0400088A RID: 2186
 		private bool _RotInited;
 	}
 }

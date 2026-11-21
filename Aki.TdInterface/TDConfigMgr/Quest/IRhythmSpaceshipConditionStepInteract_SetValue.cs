@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010F5 RID: 4341
+	// Token: 0x02001223 RID: 4643
 	public class IRhythmSpaceshipConditionStepInteract_SetValue
 	{
-		// Token: 0x04003B06 RID: 15110
+		// Token: 0x04003E54 RID: 15956
 		public ERhythmSpaceshipConditionStep Type;
 	}
 }

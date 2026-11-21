@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200014E RID: 334
+	// Token: 0x020000B4 RID: 180
 	[UnrealObjectPath("/Script/AIModule.BTService")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public abstract class UBTService : UBTAuxiliaryNode, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600172A RID: 5930 RVA: 0x00022149 File Offset: 0x00020349
+		// Token: 0x06000D8D RID: 3469 RVA: 0x00015645 File Offset: 0x00013845
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBTService._ClassPtr;
 		}
 
-		// Token: 0x170005F9 RID: 1529
-		// (get) Token: 0x0600172B RID: 5931 RVA: 0x00022155 File Offset: 0x00020355
-		// (set) Token: 0x0600172C RID: 5932 RVA: 0x00022165 File Offset: 0x00020365
+		// Token: 0x17000116 RID: 278
+		// (get) Token: 0x06000D8E RID: 3470 RVA: 0x00015651 File Offset: 0x00013851
+		// (set) Token: 0x06000D8F RID: 3471 RVA: 0x00015661 File Offset: 0x00013861
 		public unsafe float Interval
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005FA RID: 1530
-		// (get) Token: 0x0600172D RID: 5933 RVA: 0x00022176 File Offset: 0x00020376
-		// (set) Token: 0x0600172E RID: 5934 RVA: 0x00022186 File Offset: 0x00020386
+		// Token: 0x17000117 RID: 279
+		// (get) Token: 0x06000D90 RID: 3472 RVA: 0x00015672 File Offset: 0x00013872
+		// (set) Token: 0x06000D91 RID: 3473 RVA: 0x00015682 File Offset: 0x00013882
 		public unsafe float RandomDeviation
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005FB RID: 1531
-		// (get) Token: 0x0600172F RID: 5935 RVA: 0x00022197 File Offset: 0x00020397
-		// (set) Token: 0x06001730 RID: 5936 RVA: 0x000221B0 File Offset: 0x000203B0
+		// Token: 0x17000118 RID: 280
+		// (get) Token: 0x06000D92 RID: 3474 RVA: 0x00015693 File Offset: 0x00013893
+		// (set) Token: 0x06000D93 RID: 3475 RVA: 0x000156AC File Offset: 0x000138AC
 		public unsafe bool bCallTickOnSearchStart
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005FC RID: 1532
-		// (get) Token: 0x06001731 RID: 5937 RVA: 0x000221E0 File Offset: 0x000203E0
-		// (set) Token: 0x06001732 RID: 5938 RVA: 0x000221F9 File Offset: 0x000203F9
+		// Token: 0x17000119 RID: 281
+		// (get) Token: 0x06000D94 RID: 3476 RVA: 0x000156DC File Offset: 0x000138DC
+		// (set) Token: 0x06000D95 RID: 3477 RVA: 0x000156F5 File Offset: 0x000138F5
 		public unsafe bool bRestartTimerOnEachActivation
 		{
 			get
@@ -77,48 +77,48 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06001733 RID: 5939 RVA: 0x00022229 File Offset: 0x00020429
+		// Token: 0x06000D96 RID: 3478 RVA: 0x00015725 File Offset: 0x00013925
 		static UBTService()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AIModule.BTService");
 		}
 
-		// Token: 0x06001734 RID: 5940 RVA: 0x00022238 File Offset: 0x00020438
+		// Token: 0x06000D97 RID: 3479 RVA: 0x00015734 File Offset: 0x00013934
 		protected UBTService() : this(BuiltinUtils.AllocNativeUObject(UBTService.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06001735 RID: 5941 RVA: 0x00022260 File Offset: 0x00020460
+		// Token: 0x06000D98 RID: 3480 RVA: 0x0001575C File Offset: 0x0001395C
 		protected UBTService(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400056A RID: 1386
+		// Token: 0x04000274 RID: 628
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AIModule.BTService";
 
-		// Token: 0x0400056B RID: 1387
+		// Token: 0x04000275 RID: 629
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400056C RID: 1388
+		// Token: 0x04000276 RID: 630
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400056D RID: 1389
+		// Token: 0x04000277 RID: 631
 		internal static int __PropertyOffset_Interval;
 
-		// Token: 0x0400056E RID: 1390
+		// Token: 0x04000278 RID: 632
 		internal static int __PropertyOffset_RandomDeviation;
 
-		// Token: 0x0400056F RID: 1391
+		// Token: 0x04000279 RID: 633
 		internal static int __PropertyOffset_bCallTickOnSearchStart;
 
-		// Token: 0x04000570 RID: 1392
+		// Token: 0x0400027A RID: 634
 		internal static byte __PropertyMask_bCallTickOnSearchStart;
 
-		// Token: 0x04000571 RID: 1393
+		// Token: 0x0400027B RID: 635
 		internal static int __PropertyOffset_bRestartTimerOnEachActivation;
 
-		// Token: 0x04000572 RID: 1394
+		// Token: 0x0400027C RID: 636
 		internal static byte __PropertyMask_bRestartTimerOnEachActivation;
 	}
 }

@@ -8,25 +8,25 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 {
-	// Token: 0x02006E1B RID: 28187
+	// Token: 0x02005F9B RID: 24475
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class GravityFlipModel : ModelBase
 	{
-		// Token: 0x06044B84 RID: 281476 RVA: 0x010F6059 File Offset: 0x010F4259
+		// Token: 0x0603ACED RID: 240877 RVA: 0x010A0595 File Offset: 0x0109E795
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06044B85 RID: 281477 RVA: 0x010F605C File Offset: 0x010F425C
+		// Token: 0x0603ACEE RID: 240878 RVA: 0x010A0598 File Offset: 0x0109E798
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x06044B86 RID: 281478 RVA: 0x010F6060 File Offset: 0x010F4260
+		// Token: 0x0603ACEF RID: 240879 RVA: 0x010A059C File Offset: 0x0109E79C
 		public void InitGravityFlipParams(SceneItemGravityFlipComponent gravityFlipComp)
 		{
 			this.GravityFlipComp = gravityFlipComp;
@@ -70,14 +70,14 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			this.GravityFlipComp.OnEnterInteract();
 		}
 
-		// Token: 0x06044B87 RID: 281479 RVA: 0x010F61A0 File Offset: 0x010F43A0
+		// Token: 0x0603ACF0 RID: 240880 RVA: 0x010A06DC File Offset: 0x0109E8DC
 		public bool NeedChangeGravity()
 		{
 			return this.GravityFlipComp.CurGravityDirection != this.CurrentGravityDirection;
 		}
 
-		// Token: 0x170099F7 RID: 39415
-		// (get) Token: 0x06044B88 RID: 281480 RVA: 0x010F61B8 File Offset: 0x010F43B8
+		// Token: 0x17006EFA RID: 28410
+		// (get) Token: 0x0603ACF1 RID: 240881 RVA: 0x010A06F4 File Offset: 0x0109E8F4
 		public long GravityFlipEntityCreatureDataId
 		{
 			get
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			}
 		}
 
-		// Token: 0x06044B89 RID: 281481 RVA: 0x010F6200 File Offset: 0x010F4400
+		// Token: 0x0603ACF2 RID: 240882 RVA: 0x010A073C File Offset: 0x0109E93C
 		private GravityFlipType ConvertGravityDirectionToProtoType(EGravityDirection direction)
 		{
 			if (direction <= EGravityDirection.Left)
@@ -126,8 +126,8 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			return GravityFlipType.GravityDown;
 		}
 
-		// Token: 0x170099F8 RID: 39416
-		// (get) Token: 0x06044B8A RID: 281482 RVA: 0x010F622C File Offset: 0x010F442C
+		// Token: 0x17006EFB RID: 28411
+		// (get) Token: 0x0603ACF3 RID: 240883 RVA: 0x010A0768 File Offset: 0x0109E968
 		public GravityFlipType CurGravityFlipType
 		{
 			get
@@ -136,8 +136,8 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			}
 		}
 
-		// Token: 0x170099F9 RID: 39417
-		// (get) Token: 0x06044B8B RID: 281483 RVA: 0x010F623C File Offset: 0x010F443C
+		// Token: 0x17006EFC RID: 28412
+		// (get) Token: 0x0603ACF4 RID: 240884 RVA: 0x010A0778 File Offset: 0x0109E978
 		public EGravityDirection TargetDirection
 		{
 			get
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			}
 		}
 
-		// Token: 0x06044B8C RID: 281484 RVA: 0x010F62EC File Offset: 0x010F44EC
+		// Token: 0x0603ACF5 RID: 240885 RVA: 0x010A0828 File Offset: 0x0109EA28
 		protected override bool OnChangeMode()
 		{
 			SceneItemGravityFlipComponent gravityFlipComp = this.GravityFlipComp;
@@ -188,8 +188,8 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			return true;
 		}
 
-		// Token: 0x170099FA RID: 39418
-		// (get) Token: 0x06044B8D RID: 281485 RVA: 0x010F6336 File Offset: 0x010F4536
+		// Token: 0x17006EFD RID: 28413
+		// (get) Token: 0x0603ACF6 RID: 240886 RVA: 0x010A0872 File Offset: 0x0109EA72
 		public static GravityFlipModel Instance
 		{
 			get
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			}
 		}
 
-		// Token: 0x06044B8E RID: 281486 RVA: 0x010F633D File Offset: 0x010F453D
+		// Token: 0x0603ACF7 RID: 240887 RVA: 0x010A0879 File Offset: 0x0109EA79
 		public static GravityFlipModel GetOrCreateInstance()
 		{
 			if (GravityFlipModel._Instance == null)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			return GravityFlipModel._Instance;
 		}
 
-		// Token: 0x06044B8F RID: 281487 RVA: 0x010F6351 File Offset: 0x010F4551
+		// Token: 0x0603ACF8 RID: 240888 RVA: 0x010A088D File Offset: 0x0109EA8D
 		public static bool CreateInstance()
 		{
 			if (GravityFlipModel._Instance != null)
@@ -219,45 +219,45 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			return true;
 		}
 
-		// Token: 0x06044B90 RID: 281488 RVA: 0x010F6367 File Offset: 0x010F4567
+		// Token: 0x0603ACF9 RID: 240889 RVA: 0x010A08A3 File Offset: 0x0109EAA3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044B91 RID: 281489 RVA: 0x010F6369 File Offset: 0x010F4569
+		// Token: 0x0603ACFA RID: 240890 RVA: 0x010A08A5 File Offset: 0x0109EAA5
 		public static void ResetStaticDefaultValue()
 		{
 			GravityFlipModel._Instance = null;
 		}
 
-		// Token: 0x06044B92 RID: 281490 RVA: 0x010F6371 File Offset: 0x010F4571
+		// Token: 0x0603ACFB RID: 240891 RVA: 0x010A08AD File Offset: 0x0109EAAD
 		static GravityFlipModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GravityFlipModel.CreateStaticDefaultValue), new Action(GravityFlipModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023BF4 RID: 146420
+		// Token: 0x0401EE97 RID: 126615
 		[Nullable(2)]
 		public Entity GravityFlipEntity;
 
-		// Token: 0x04023BF5 RID: 146421
+		// Token: 0x0401EE98 RID: 126616
 		[Nullable(2)]
 		public SceneItemGravityFlipComponent GravityFlipComp;
 
-		// Token: 0x04023BF6 RID: 146422
+		// Token: 0x0401EE99 RID: 126617
 		public GravityFlipType CacheCorrectDirection = GravityFlipType.GravityDown;
 
-		// Token: 0x04023BF7 RID: 146423
+		// Token: 0x0401EE9A RID: 126618
 		public EGravityDirection CurrentGravityDirection;
 
-		// Token: 0x04023BF8 RID: 146424
+		// Token: 0x0401EE9B RID: 126619
 		public List<EGravityDirection> ValidGravityDirections = new List<EGravityDirection>();
 
-		// Token: 0x04023BF9 RID: 146425
+		// Token: 0x0401EE9C RID: 126620
 		[Nullable(2)]
 		public Action<int> ViewCallBackCache;
 
-		// Token: 0x04023BFA RID: 146426
+		// Token: 0x0401EE9D RID: 126621
 		[Nullable(2)]
 		private static GravityFlipModel _Instance;
 	}

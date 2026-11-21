@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A7A RID: 2682
+	// Token: 0x02000B44 RID: 2884
 	public class IInteractStyleBase
 	{
-		// Token: 0x06003DBE RID: 15806 RVA: 0x0009E4E2 File Offset: 0x0009C6E2
-		[NullableContext(1)]
+		// Token: 0x060041E7 RID: 16871 RVA: 0x000A7A9A File Offset: 0x000A5C9A
 		public static IInteractStyleBase Create(IInteractStyleBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E87 RID: 3719
-		// (get) Token: 0x06003DBF RID: 15807 RVA: 0x0009E501 File Offset: 0x0009C701
+		// Token: 0x17000F5A RID: 3930
+		// (get) Token: 0x060041E8 RID: 16872 RVA: 0x000A7AB9 File Offset: 0x000A5CB9
 		public virtual EInteractStyleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002261 RID: 8801
+		// Token: 0x0400247D RID: 9341
 		private IInteractStyleBase Instance;
 	}
 }

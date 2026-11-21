@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002839 RID: 10297
+// Token: 0x02001DB4 RID: 7604
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -21,7 +21,7 @@ using UnrealEngine;
 })]
 public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendItemDataBase>
 {
-	// Token: 0x060153AA RID: 86954 RVA: 0x0055D248 File Offset: 0x0055B448
+	// Token: 0x06012DA8 RID: 77224 RVA: 0x00587FA4 File Offset: 0x005861A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		};
 	}
 
-	// Token: 0x060153AB RID: 86955 RVA: 0x0055D334 File Offset: 0x0055B534
+	// Token: 0x06012DA9 RID: 77225 RVA: 0x00588090 File Offset: 0x00586290
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevRecommendItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,25 +52,25 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060153AC RID: 86956 RVA: 0x0055D378 File Offset: 0x0055B578
+	// Token: 0x06012DAA RID: 77226 RVA: 0x005880D4 File Offset: 0x005862D4
 	private void OnClickedGrid(MediumItemGridExtendCallback _)
 	{
 		RoleDevWeaponSubRecommendItemDataBase data = this.Data;
 		int? num = (data != null) ? new int?(data.WeaponId) : null;
 		if (num != null)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(num.Value, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(num.Value, true, null, false);
 		}
 	}
 
-	// Token: 0x060153AD RID: 86957 RVA: 0x0055D3C1 File Offset: 0x0055B5C1
+	// Token: 0x06012DAB RID: 77227 RVA: 0x0058811E File Offset: 0x0058631E
 	protected override void OnStart()
 	{
 		this.InitUiVisibility();
 		this.InitButton();
 	}
 
-	// Token: 0x060153AE RID: 86958 RVA: 0x0055D3CF File Offset: 0x0055B5CF
+	// Token: 0x06012DAC RID: 77228 RVA: 0x0058812C File Offset: 0x0058632C
 	private void InitUiVisibility()
 	{
 		UUIItem item = base.GetItem(4);
@@ -86,7 +86,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x060153AF RID: 86959 RVA: 0x0055D3F8 File Offset: 0x0055B5F8
+	// Token: 0x06012DAD RID: 77229 RVA: 0x00588154 File Offset: 0x00586354
 	private void InitButton()
 	{
 		this.ButtonJump.SetFunction(new Action<int>(this.OnClickJump));
@@ -96,7 +96,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		this.ButtonMoonCard.SetRedDotVisible(false);
 	}
 
-	// Token: 0x060153B0 RID: 86960 RVA: 0x0055D469 File Offset: 0x0055B669
+	// Token: 0x06012DAE RID: 77230 RVA: 0x005881C5 File Offset: 0x005863C5
 	public override void Refresh(RoleDevWeaponSubRecommendItemDataBase data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -105,8 +105,8 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		this.RefreshPanel(data);
 	}
 
-	// Token: 0x17001C47 RID: 7239
-	// (get) Token: 0x060153B1 RID: 86961 RVA: 0x0055D49C File Offset: 0x0055B69C
+	// Token: 0x17001C9F RID: 7327
+	// (get) Token: 0x06012DAF RID: 77231 RVA: 0x005881F8 File Offset: 0x005863F8
 	public int ItemIndex
 	{
 		get
@@ -115,7 +115,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		}
 	}
 
-	// Token: 0x060153B2 RID: 86962 RVA: 0x0055D4A4 File Offset: 0x0055B6A4
+	// Token: 0x06012DB0 RID: 77232 RVA: 0x00588200 File Offset: 0x00586400
 	private void RefreshPanel(RoleDevWeaponSubRecommendItemDataBase data)
 	{
 		UUIItem item = base.GetItem(7);
@@ -129,7 +129,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		this.RefreshItemGrid(data);
 	}
 
-	// Token: 0x060153B3 RID: 86963 RVA: 0x0055D508 File Offset: 0x0055B708
+	// Token: 0x06012DB1 RID: 77233 RVA: 0x00588264 File Offset: 0x00586464
 	private void RefreshItemGrid(RoleDevWeaponSubRecommendItemDataBase data)
 	{
 		WeaponConf? weaponConfigByItemId = WeaponConfig.Instance.GetWeaponConfigByItemId(data.WeaponId);
@@ -145,7 +145,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		this.ItemGrid.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060153B4 RID: 86964 RVA: 0x0055D564 File Offset: 0x0055B764
+	// Token: 0x06012DB2 RID: 77234 RVA: 0x005882C0 File Offset: 0x005864C0
 	private void RefreshJumpButton(RoleDevWeaponSubRecommendItemDataBase data)
 	{
 		if (this.ButtonJump == null)
@@ -163,7 +163,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		this.ButtonJump.SetUiActive(false);
 	}
 
-	// Token: 0x060153B5 RID: 86965 RVA: 0x0055D5E4 File Offset: 0x0055B7E4
+	// Token: 0x06012DB3 RID: 77235 RVA: 0x00588340 File Offset: 0x00586540
 	private void RefreshPathButton(RoleDevWeaponSubRecommendItemDataBase data)
 	{
 		UUIItem item = base.GetItem(4);
@@ -204,7 +204,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x060153B6 RID: 86966 RVA: 0x0055D726 File Offset: 0x0055B926
+	// Token: 0x06012DB4 RID: 77236 RVA: 0x00588482 File Offset: 0x00586682
 	private void OnClickCall()
 	{
 		RoleDevWeaponSubRecommendItemDataBase data = this.Data;
@@ -214,7 +214,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		}
 	}
 
-	// Token: 0x060153B7 RID: 86967 RVA: 0x0055D748 File Offset: 0x0055B948
+	// Token: 0x06012DB5 RID: 77237 RVA: 0x005884A4 File Offset: 0x005866A4
 	private void OnClickJump(int _)
 	{
 		if (this.Data == null)
@@ -248,7 +248,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		RoleDevController.Instance.LogRoleDevSubPageClick(this.Data.RoleId, ERoleDevMainPage.Weapon, subPage);
 	}
 
-	// Token: 0x060153B8 RID: 86968 RVA: 0x0055D7BC File Offset: 0x0055B9BC
+	// Token: 0x06012DB6 RID: 77238 RVA: 0x00588518 File Offset: 0x00586718
 	private void JumpToWeaponReplaceInterface()
 	{
 		WeaponInstance weaponInstanceByRoleId = WeaponModel.Instance.GetWeaponInstanceByRoleId(this.Data.RoleId);
@@ -298,7 +298,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		RoleDevUtils.OpenWeaponReplaceView(this.Data.RoleId, num2);
 	}
 
-	// Token: 0x060153B9 RID: 86969 RVA: 0x0055D960 File Offset: 0x0055BB60
+	// Token: 0x06012DB7 RID: 77239 RVA: 0x005886BC File Offset: 0x005868BC
 	private void JumpToBackpackInterface()
 	{
 		WeaponConf? weaponConfigByItemId = WeaponConfig.Instance.GetWeaponConfigByItemId(this.Data.WeaponId);
@@ -332,7 +332,7 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		UiManager.Instance.OpenView(EUiViewName.InventoryView, num, null);
 	}
 
-	// Token: 0x060153BA RID: 86970 RVA: 0x0055DAD4 File Offset: 0x0055BCD4
+	// Token: 0x06012DB8 RID: 77240 RVA: 0x00588830 File Offset: 0x00586A30
 	private void OnClickMoonCard(int _)
 	{
 		RoleDevWeaponSubRecommendItemDataBase data = this.Data;
@@ -346,63 +346,63 @@ public class RoleDevRecommendItem : GridProxyAbstract<RoleDevWeaponSubRecommendI
 		}
 	}
 
-	// Token: 0x060153BB RID: 86971 RVA: 0x0055DB40 File Offset: 0x0055BD40
+	// Token: 0x06012DB9 RID: 77241 RVA: 0x0058889C File Offset: 0x00586A9C
 	private void JumpToConfiguredPath(int jumpPath)
 	{
 		this.RunByConfigId(jumpPath, null);
 	}
 
-	// Token: 0x060153BC RID: 86972 RVA: 0x0055DB4A File Offset: 0x0055BD4A
+	// Token: 0x06012DBA RID: 77242 RVA: 0x005888A6 File Offset: 0x00586AA6
 	[NullableContext(2)]
 	private void RunByConfigId(int id, object @params = null)
 	{
 		SkipTaskManager.RunByConfigId(id, @params);
 	}
 
-	// Token: 0x060153BD RID: 86973 RVA: 0x0055DB53 File Offset: 0x0055BD53
+	// Token: 0x06012DBB RID: 77243 RVA: 0x005888AF File Offset: 0x00586AAF
 	private void JumpToGachaInterface()
 	{
 		UiManager.Instance.OpenView(EUiViewName.GachaMainView, this.Data.GachaId, null);
 	}
 
-	// Token: 0x04009EA5 RID: 40613
+	// Token: 0x0400A28E RID: 41614
 	[Nullable(2)]
 	private ButtonItem ButtonJump;
 
-	// Token: 0x04009EA6 RID: 40614
+	// Token: 0x0400A28F RID: 41615
 	[Nullable(2)]
 	private ButtonItem ButtonMoonCard;
 
-	// Token: 0x04009EA7 RID: 40615
+	// Token: 0x0400A290 RID: 41616
 	[Nullable(2)]
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04009EA8 RID: 40616
+	// Token: 0x0400A291 RID: 41617
 	[Nullable(2)]
 	private RoleDevWeaponSubRecommendItemDataBase Data;
 
-	// Token: 0x04009EA9 RID: 40617
+	// Token: 0x0400A292 RID: 41618
 	private int ItemIndexInternal;
 
-	// Token: 0x02008E7B RID: 36475
+	// Token: 0x020080C1 RID: 32961
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E354 RID: 189268
+		// Token: 0x04029A4E RID: 170574
 		WeaponItem,
-		// Token: 0x0402E355 RID: 189269
+		// Token: 0x04029A4F RID: 170575
 		WeaponName,
-		// Token: 0x0402E356 RID: 189270
+		// Token: 0x04029A50 RID: 170576
 		BtnCall,
-		// Token: 0x0402E357 RID: 189271
+		// Token: 0x04029A51 RID: 170577
 		BtnJump,
-		// Token: 0x0402E358 RID: 189272
+		// Token: 0x04029A52 RID: 170578
 		PanelNotObtained,
-		// Token: 0x0402E359 RID: 189273
+		// Token: 0x04029A53 RID: 170579
 		TxtNotObtained,
-		// Token: 0x0402E35A RID: 189274
+		// Token: 0x04029A54 RID: 170580
 		BtnMoonCard,
-		// Token: 0x0402E35B RID: 189275
+		// Token: 0x04029A55 RID: 170581
 		PanelStateGreen
 	}
 }

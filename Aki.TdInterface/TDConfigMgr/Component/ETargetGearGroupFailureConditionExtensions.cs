@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A2A RID: 2602
+	// Token: 0x02000AEF RID: 2799
 	public static class ETargetGearGroupFailureConditionExtensions
 	{
-		// Token: 0x0600396E RID: 14702 RVA: 0x000944E8 File Offset: 0x000926E8
+		// Token: 0x06003D46 RID: 15686 RVA: 0x0009CE1C File Offset: 0x0009B01C
 		public static string ToEnumString(this ETargetGearGroupFailureCondition value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600396F RID: 14703 RVA: 0x00094530 File Offset: 0x00092730
+		// Token: 0x06003D47 RID: 15687 RVA: 0x0009CE64 File Offset: 0x0009B064
 		public static ETargetGearGroupFailureCondition FromString(string name)
 		{
 			ETargetGearGroupFailureCondition result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003970 RID: 14704 RVA: 0x0009455C File Offset: 0x0009275C
+		// Token: 0x06003D48 RID: 15688 RVA: 0x0009CE90 File Offset: 0x0009B090
 		public static bool TryFromString(string name, out ETargetGearGroupFailureCondition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003971 RID: 14705 RVA: 0x000945B2 File Offset: 0x000927B2
+		// Token: 0x06003D49 RID: 15689 RVA: 0x0009CEE6 File Offset: 0x0009B0E6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003972 RID: 14706 RVA: 0x000945D2 File Offset: 0x000927D2
+		// Token: 0x06003D4A RID: 15690 RVA: 0x0009CF06 File Offset: 0x0009B106
 		public static ETargetGearGroupFailureCondition[] GetValues()
 		{
 			return new ETargetGearGroupFailureCondition[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003973 RID: 14707 RVA: 0x000945E2 File Offset: 0x000927E2
+		// Token: 0x06003D4B RID: 15691 RVA: 0x0009CF16 File Offset: 0x0009B116
 		public static string[] GetNames()
 		{
 			return new string[]

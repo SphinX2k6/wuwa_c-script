@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200062D RID: 1581
+	// Token: 0x020006CA RID: 1738
 	public class IProgressBarControl_SetValue
 	{
-		// Token: 0x04001787 RID: 6023
+		// Token: 0x04001979 RID: 6521
 		public EProgressBarControlType Type;
 
-		// Token: 0x04001788 RID: 6024
+		// Token: 0x0400197A RID: 6522
 		public int MaxValue;
 
-		// Token: 0x04001789 RID: 6025
+		// Token: 0x0400197B RID: 6523
 		public int InitValue;
 
-		// Token: 0x0400178A RID: 6026
+		// Token: 0x0400197C RID: 6524
 		public int? ProgressPerformanceAttribute;
 	}
 }

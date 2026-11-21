@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A73 RID: 27251
+	// Token: 0x02007195 RID: 29077
 	public struct IMaskTransition : IFlatbufferObject
 	{
-		// Token: 0x1700CA2B RID: 51755
-		// (get) Token: 0x0602FBA1 RID: 195489 RVA: 0x0067E96E File Offset: 0x0067CB6E
+		// Token: 0x1700D4D6 RID: 54486
+		// (get) Token: 0x060328C7 RID: 207047 RVA: 0x006D4A2E File Offset: 0x006D2C2E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FBA2 RID: 195490 RVA: 0x0067E97B File Offset: 0x0067CB7B
+		// Token: 0x060328C8 RID: 207048 RVA: 0x006D4A3B File Offset: 0x006D2C3B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FBA3 RID: 195491 RVA: 0x0067E984 File Offset: 0x0067CB84
+		// Token: 0x060328C9 RID: 207049 RVA: 0x006D4A44 File Offset: 0x006D2C44
 		public static IMaskTransition GetRootAsIMaskTransition(ByteBuffer _bb)
 		{
 			return IMaskTransition.GetRootAsIMaskTransition(_bb, default(IMaskTransition));
 		}
 
-		// Token: 0x0602FBA4 RID: 195492 RVA: 0x0067E9A0 File Offset: 0x0067CBA0
+		// Token: 0x060328CA RID: 207050 RVA: 0x006D4A60 File Offset: 0x006D2C60
 		public static IMaskTransition GetRootAsIMaskTransition(ByteBuffer _bb, IMaskTransition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FBA5 RID: 195493 RVA: 0x0067E9BD File Offset: 0x0067CBBD
+		// Token: 0x060328CB RID: 207051 RVA: 0x006D4A7D File Offset: 0x006D2C7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FBA6 RID: 195494 RVA: 0x0067E9CC File Offset: 0x0067CBCC
+		// Token: 0x060328CC RID: 207052 RVA: 0x006D4A8C File Offset: 0x006D2C8C
 		public IMaskTransition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CA2C RID: 51756
-		// (get) Token: 0x0602FBA7 RID: 195495 RVA: 0x0067E9DC File Offset: 0x0067CBDC
+		// Token: 0x1700D4D7 RID: 54487
+		// (get) Token: 0x060328CD RID: 207053 RVA: 0x006D4A9C File Offset: 0x006D2C9C
 		public ELevelSequenceTransition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA2D RID: 51757
-		// (get) Token: 0x0602FBA8 RID: 195496 RVA: 0x0067EA18 File Offset: 0x0067CC18
+		// Token: 0x1700D4D8 RID: 54488
+		// (get) Token: 0x060328CE RID: 207054 RVA: 0x006D4AD8 File Offset: 0x006D2CD8
 		public float Duration
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA2E RID: 51758
-		// (get) Token: 0x0602FBA9 RID: 195497 RVA: 0x0067EA58 File Offset: 0x0067CC58
+		// Token: 0x1700D4D9 RID: 54489
+		// (get) Token: 0x060328CF RID: 207055 RVA: 0x006D4B18 File Offset: 0x006D2D18
 		public ETransitionMask Mask
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA2F RID: 51759
-		// (get) Token: 0x0602FBAA RID: 195498 RVA: 0x0067EA94 File Offset: 0x0067CC94
+		// Token: 0x1700D4DA RID: 54490
+		// (get) Token: 0x060328D0 RID: 207056 RVA: 0x006D4B54 File Offset: 0x006D2D54
 		public IEaseData? FadeIn
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA30 RID: 51760
-		// (get) Token: 0x0602FBAB RID: 195499 RVA: 0x0067EAF4 File Offset: 0x0067CCF4
+		// Token: 0x1700D4DB RID: 54491
+		// (get) Token: 0x060328D1 RID: 207057 RVA: 0x006D4BB4 File Offset: 0x006D2DB4
 		public IEaseData? FadeOut
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA31 RID: 51761
-		// (get) Token: 0x0602FBAC RID: 195500 RVA: 0x0067EB54 File Offset: 0x0067CD54
+		// Token: 0x1700D4DC RID: 54492
+		// (get) Token: 0x060328D2 RID: 207058 RVA: 0x006D4C14 File Offset: 0x006D2E14
 		public byte NullMask
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FBAD RID: 195501 RVA: 0x0067EB91 File Offset: 0x0067CD91
+		// Token: 0x060328D3 RID: 207059 RVA: 0x006D4C51 File Offset: 0x006D2E51
 		public static Offset<IMaskTransition> CreateIMaskTransition(FlatBufferBuilder builder, ELevelSequenceTransition Type = ELevelSequenceTransition.Camera, float Duration = 0f, ETransitionMask Mask = ETransitionMask.BlackMask, Offset<IEaseData> FadeInOffset = default(Offset<IEaseData>), Offset<IEaseData> FadeOutOffset = default(Offset<IEaseData>), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -150,55 +150,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMaskTransition.EndIMaskTransition(builder);
 		}
 
-		// Token: 0x0602FBAE RID: 195502 RVA: 0x0067EBCD File Offset: 0x0067CDCD
+		// Token: 0x060328D4 RID: 207060 RVA: 0x006D4C8D File Offset: 0x006D2E8D
 		public static void StartIMaskTransition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602FBAF RID: 195503 RVA: 0x0067EBD6 File Offset: 0x0067CDD6
+		// Token: 0x060328D5 RID: 207061 RVA: 0x006D4C96 File Offset: 0x006D2E96
 		public static void AddType(FlatBufferBuilder builder, ELevelSequenceTransition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FBB0 RID: 195504 RVA: 0x0067EBE1 File Offset: 0x0067CDE1
+		// Token: 0x060328D6 RID: 207062 RVA: 0x006D4CA1 File Offset: 0x006D2EA1
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(1, duration, 0.0);
 		}
 
-		// Token: 0x0602FBB1 RID: 195505 RVA: 0x0067EBF4 File Offset: 0x0067CDF4
+		// Token: 0x060328D7 RID: 207063 RVA: 0x006D4CB4 File Offset: 0x006D2EB4
 		public static void AddMask(FlatBufferBuilder builder, ETransitionMask mask)
 		{
 			builder.AddByte(2, (byte)mask, 0);
 		}
 
-		// Token: 0x0602FBB2 RID: 195506 RVA: 0x0067EBFF File Offset: 0x0067CDFF
+		// Token: 0x060328D8 RID: 207064 RVA: 0x006D4CBF File Offset: 0x006D2EBF
 		public static void AddFadeIn(FlatBufferBuilder builder, Offset<IEaseData> fadeInOffset)
 		{
 			builder.AddOffset(3, fadeInOffset.Value, 0);
 		}
 
-		// Token: 0x0602FBB3 RID: 195507 RVA: 0x0067EC0F File Offset: 0x0067CE0F
+		// Token: 0x060328D9 RID: 207065 RVA: 0x006D4CCF File Offset: 0x006D2ECF
 		public static void AddFadeOut(FlatBufferBuilder builder, Offset<IEaseData> fadeOutOffset)
 		{
 			builder.AddOffset(4, fadeOutOffset.Value, 0);
 		}
 
-		// Token: 0x0602FBB4 RID: 195508 RVA: 0x0067EC1F File Offset: 0x0067CE1F
+		// Token: 0x060328DA RID: 207066 RVA: 0x006D4CDF File Offset: 0x006D2EDF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0602FBB5 RID: 195509 RVA: 0x0067EC2A File Offset: 0x0067CE2A
+		// Token: 0x060328DB RID: 207067 RVA: 0x006D4CEA File Offset: 0x006D2EEA
 		public static Offset<IMaskTransition> EndIMaskTransition(FlatBufferBuilder builder)
 		{
 			return new Offset<IMaskTransition>(builder.EndTable());
 		}
 
-		// Token: 0x0602FBB6 RID: 195510 RVA: 0x0067EC38 File Offset: 0x0067CE38
+		// Token: 0x060328DC RID: 207068 RVA: 0x006D4CF8 File Offset: 0x006D2EF8
 		public IMaskTransitionT UnPack()
 		{
 			IMaskTransitionT maskTransitionT = new IMaskTransitionT();
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return maskTransitionT;
 		}
 
-		// Token: 0x0602FBB7 RID: 195511 RVA: 0x0067EC54 File Offset: 0x0067CE54
+		// Token: 0x060328DD RID: 207069 RVA: 0x006D4D14 File Offset: 0x006D2F14
 		public void UnPackTo(IMaskTransitionT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602FBB8 RID: 195512 RVA: 0x0067ECF0 File Offset: 0x0067CEF0
+		// Token: 0x060328DE RID: 207070 RVA: 0x006D4DB0 File Offset: 0x006D2FB0
 		public static Offset<IMaskTransition> Pack(FlatBufferBuilder builder, IMaskTransitionT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMaskTransition.CreateIMaskTransition(builder, _o.Type, _o.Duration, _o.Mask, fadeInOffset, fadeOutOffset, _o.NullMask);
 		}
 
-		// Token: 0x04011297 RID: 70295
+		// Token: 0x0401218F RID: 74127
 		private Table __p;
 	}
 }

@@ -2,26 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AAE RID: 15022
+	// Token: 0x02003EB0 RID: 16048
 	public enum IParamsPreset_Union : byte
 	{
-		// Token: 0x0400AF3C RID: 44860
+		// Token: 0x0400B8A7 RID: 47271
 		NONE,
-		// Token: 0x0400AF3D RID: 44861
+		// Token: 0x0400B8A8 RID: 47272
 		IParamsPreset,
-		// Token: 0x0400AF3E RID: 44862
+		// Token: 0x0400B8A9 RID: 47273
 		IDecalParams,
-		// Token: 0x0400AF3F RID: 44863
+		// Token: 0x0400B8AA RID: 47274
 		IRushWarningEffectParams,
-		// Token: 0x0400AF40 RID: 44864
+		// Token: 0x0400B8AB RID: 47275
 		ITimeDisplayMaterialParams,
-		// Token: 0x0400AF41 RID: 44865
+		// Token: 0x0400B8AC RID: 47276
 		IScoreDisplayMaterialParams,
-		// Token: 0x0400AF42 RID: 44866
+		// Token: 0x0400B8AD RID: 47277
 		ILightPlateParams,
-		// Token: 0x0400AF43 RID: 44867
+		// Token: 0x0400B8AE RID: 47278
 		IFireBoxLampParams,
-		// Token: 0x0400AF44 RID: 44868
-		IWoodenBoxProliferateParams
+		// Token: 0x0400B8AF RID: 47279
+		IWoodenBoxProliferateParams,
+		// Token: 0x0400B8B0 RID: 47280
+		IFishParams,
+		// Token: 0x0400B8B1 RID: 47281
+		IEnergyFishParams
 	}
 }

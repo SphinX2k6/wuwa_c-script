@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000209 RID: 521
+	// Token: 0x0200021B RID: 539
 	public class ConfigDigitalScreenTextById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C39 RID: 3129 RVA: 0x0009EC34 File Offset: 0x0009CE34
+		// Token: 0x06000CA5 RID: 3237 RVA: 0x000A4B6C File Offset: 0x000A2D6C
 		static ConfigDigitalScreenTextById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDigitalScreenTextById.CreateStaticDefaultValue), new Action(ConfigDigitalScreenTextById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C3A RID: 3130 RVA: 0x0009EC54 File Offset: 0x0009CE54
+		// Token: 0x06000CA6 RID: 3238 RVA: 0x000A4B8C File Offset: 0x000A2D8C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDigitalScreenTextById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C3B RID: 3131 RVA: 0x0009ECD3 File Offset: 0x0009CED3
+		// Token: 0x06000CA7 RID: 3239 RVA: 0x000A4C0B File Offset: 0x000A2E0B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDigitalScreenTextById.LogPair = null;
 			ConfigDigitalScreenTextById.HandleId = 0;
 		}
 
-		// Token: 0x06000C3C RID: 3132 RVA: 0x0009ECE1 File Offset: 0x0009CEE1
+		// Token: 0x06000CA8 RID: 3240 RVA: 0x000A4C19 File Offset: 0x000A2E19
 		public static void Init()
 		{
 			ConfigDigitalScreenTextById.HandleId = ConfigCommon.InitDataStatement(ConfigDigitalScreenTextById.HandleId, "db_digital_screen.db", "select BinData from `DigitalScreenText` where Id=?");
 		}
 
-		// Token: 0x06000C3D RID: 3133 RVA: 0x0009ECFC File Offset: 0x0009CEFC
+		// Token: 0x06000CA9 RID: 3241 RVA: 0x000A4C34 File Offset: 0x000A2E34
 		public static DigitalScreenText? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDigitalScreenTextById.HandleId, ConfigDigitalScreenTextById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DigitalScreenText?(rootAsDigitalScreenText);
 		}
 
-		// Token: 0x04000E23 RID: 3619
+		// Token: 0x04000EA1 RID: 3745
 		private const string DB = "db_digital_screen.db";
 
-		// Token: 0x04000E24 RID: 3620
+		// Token: 0x04000EA2 RID: 3746
 		private const string FILE = "s.数码界面.xlsx";
 
-		// Token: 0x04000E25 RID: 3621
+		// Token: 0x04000EA3 RID: 3747
 		private const string TABLE = "DigitalScreenText";
 
-		// Token: 0x04000E26 RID: 3622
+		// Token: 0x04000EA4 RID: 3748
 		private const string COMMAND = "select BinData from `DigitalScreenText` where Id=?";
 
-		// Token: 0x04000E27 RID: 3623
+		// Token: 0x04000EA5 RID: 3749
 		private const string KEY_PREFIX = "DigitalScreenTextById";
 
-		// Token: 0x04000E28 RID: 3624
+		// Token: 0x04000EA6 RID: 3750
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E29 RID: 3625
+		// Token: 0x04000EA7 RID: 3751
 		private static int HandleId;
 	}
 }

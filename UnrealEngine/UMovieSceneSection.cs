@@ -7,24 +7,24 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002428 RID: 9256
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000786 RID: 1926
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneSection")]
-	[UnrealStructLayout(304, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 304)]
+	[UnrealStructLayout(320, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 320)]
 	public abstract class UMovieSceneSection : UMovieSceneSignedObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022ABD RID: 142013 RVA: 0x00334452 File Offset: 0x00332652
+		// Token: 0x0600A60C RID: 42508 RVA: 0x000F52DC File Offset: 0x000F34DC
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSection._ClassPtr;
 		}
 
-		// Token: 0x17008563 RID: 34147
-		// (get) Token: 0x06022ABE RID: 142014 RVA: 0x00334460 File Offset: 0x00332660
-		// (set) Token: 0x06022ABF RID: 142015 RVA: 0x00334499 File Offset: 0x00332699
+		// Token: 0x17001ED3 RID: 7891
+		// (get) Token: 0x0600A60D RID: 42509 RVA: 0x000F52E8 File Offset: 0x000F34E8
+		// (set) Token: 0x0600A60E RID: 42510 RVA: 0x000F5321 File Offset: 0x000F3521
+		[Nullable(1)]
 		public FMovieSceneSectionEvalOptions EvalOptions
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -35,59 +35,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneSectionEvalOptions.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_EvalOptions, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17008564 RID: 34148
-		// (get) Token: 0x06022AC0 RID: 142016 RVA: 0x003344BC File Offset: 0x003326BC
-		// (set) Token: 0x06022AC1 RID: 142017 RVA: 0x003344F5 File Offset: 0x003326F5
-		public FMovieSceneEasingSettings Easing
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneEasingSettings result;
-				if ((result = this._Easing) == null)
-				{
-					result = (this._Easing = new FMovieSceneEasingSettings(base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_Easing, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneEasingSettings.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_Easing, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17008565 RID: 34149
-		// (get) Token: 0x06022AC2 RID: 142018 RVA: 0x00334518 File Offset: 0x00332718
-		// (set) Token: 0x06022AC3 RID: 142019 RVA: 0x00334551 File Offset: 0x00332751
-		public FMovieSceneFrameRange SectionRange
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneFrameRange result;
-				if ((result = this._SectionRange) == null)
-				{
-					result = (this._SectionRange = new FMovieSceneFrameRange(base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_SectionRange, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneFrameRange.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_SectionRange, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17008566 RID: 34150
-		// (get) Token: 0x06022AC4 RID: 142020 RVA: 0x00334574 File Offset: 0x00332774
-		// (set) Token: 0x06022AC5 RID: 142021 RVA: 0x003345AD File Offset: 0x003327AD
+		// Token: 0x17001ED4 RID: 7892
+		// (get) Token: 0x0600A60F RID: 42511 RVA: 0x000F5344 File Offset: 0x000F3544
+		// (set) Token: 0x0600A610 RID: 42512 RVA: 0x000F537D File Offset: 0x000F357D
+		[Nullable(1)]
 		public FFrameNumber PreRollFrames
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -98,17 +59,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FFrameNumber.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_PreRollFrames, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17008567 RID: 34151
-		// (get) Token: 0x06022AC6 RID: 142022 RVA: 0x003345D0 File Offset: 0x003327D0
-		// (set) Token: 0x06022AC7 RID: 142023 RVA: 0x00334609 File Offset: 0x00332809
+		// Token: 0x17001ED5 RID: 7893
+		// (get) Token: 0x0600A611 RID: 42513 RVA: 0x000F53A0 File Offset: 0x000F35A0
+		// (set) Token: 0x0600A612 RID: 42514 RVA: 0x000F53D9 File Offset: 0x000F35D9
+		[Nullable(1)]
 		public FFrameNumber PostRollFrames
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -119,15 +83,16 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FFrameNumber.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_PostRollFrames, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17008568 RID: 34152
-		// (get) Token: 0x06022AC8 RID: 142024 RVA: 0x0033462A File Offset: 0x0033282A
-		// (set) Token: 0x06022AC9 RID: 142025 RVA: 0x0033463A File Offset: 0x0033283A
+		// Token: 0x17001ED6 RID: 7894
+		// (get) Token: 0x0600A613 RID: 42515 RVA: 0x000F53FA File Offset: 0x000F35FA
+		// (set) Token: 0x0600A614 RID: 42516 RVA: 0x000F540A File Offset: 0x000F360A
 		public unsafe int RowIndex
 		{
 			get
@@ -140,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008569 RID: 34153
-		// (get) Token: 0x06022ACA RID: 142026 RVA: 0x0033464B File Offset: 0x0033284B
-		// (set) Token: 0x06022ACB RID: 142027 RVA: 0x0033465B File Offset: 0x0033285B
+		// Token: 0x17001ED7 RID: 7895
+		// (get) Token: 0x0600A615 RID: 42517 RVA: 0x000F541B File Offset: 0x000F361B
+		// (set) Token: 0x0600A616 RID: 42518 RVA: 0x000F542B File Offset: 0x000F362B
 		public unsafe int OverlapPriority
 		{
 			get
@@ -155,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700856A RID: 34154
-		// (get) Token: 0x06022ACC RID: 142028 RVA: 0x0033466C File Offset: 0x0033286C
-		// (set) Token: 0x06022ACD RID: 142029 RVA: 0x00334685 File Offset: 0x00332885
+		// Token: 0x17001ED8 RID: 7896
+		// (get) Token: 0x0600A617 RID: 42519 RVA: 0x000F543C File Offset: 0x000F363C
+		// (set) Token: 0x0600A618 RID: 42520 RVA: 0x000F5455 File Offset: 0x000F3655
 		public unsafe bool bIsActive
 		{
 			get
@@ -170,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700856B RID: 34155
-		// (get) Token: 0x06022ACE RID: 142030 RVA: 0x003346B5 File Offset: 0x003328B5
-		// (set) Token: 0x06022ACF RID: 142031 RVA: 0x003346CE File Offset: 0x003328CE
+		// Token: 0x17001ED9 RID: 7897
+		// (get) Token: 0x0600A619 RID: 42521 RVA: 0x000F5485 File Offset: 0x000F3685
+		// (set) Token: 0x0600A61A RID: 42522 RVA: 0x000F549E File Offset: 0x000F369E
 		public unsafe bool bIsLocked
 		{
 			get
@@ -185,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700856C RID: 34156
-		// (get) Token: 0x06022AD0 RID: 142032 RVA: 0x003346FE File Offset: 0x003328FE
-		// (set) Token: 0x06022AD1 RID: 142033 RVA: 0x0033470E File Offset: 0x0033290E
+		// Token: 0x17001EDA RID: 7898
+		// (get) Token: 0x0600A61B RID: 42523 RVA: 0x000F54CE File Offset: 0x000F36CE
+		// (set) Token: 0x0600A61C RID: 42524 RVA: 0x000F54DE File Offset: 0x000F36DE
 		public unsafe float StartTime_DEPRECATED
 		{
 			get
@@ -200,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700856D RID: 34157
-		// (get) Token: 0x06022AD2 RID: 142034 RVA: 0x0033471F File Offset: 0x0033291F
-		// (set) Token: 0x06022AD3 RID: 142035 RVA: 0x0033472F File Offset: 0x0033292F
+		// Token: 0x17001EDB RID: 7899
+		// (get) Token: 0x0600A61D RID: 42525 RVA: 0x000F54EF File Offset: 0x000F36EF
+		// (set) Token: 0x0600A61E RID: 42526 RVA: 0x000F54FF File Offset: 0x000F36FF
 		public unsafe float EndTime_DEPRECATED
 		{
 			get
@@ -215,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700856E RID: 34158
-		// (get) Token: 0x06022AD4 RID: 142036 RVA: 0x00334740 File Offset: 0x00332940
-		// (set) Token: 0x06022AD5 RID: 142037 RVA: 0x00334750 File Offset: 0x00332950
+		// Token: 0x17001EDC RID: 7900
+		// (get) Token: 0x0600A61F RID: 42527 RVA: 0x000F5510 File Offset: 0x000F3710
+		// (set) Token: 0x0600A620 RID: 42528 RVA: 0x000F5520 File Offset: 0x000F3720
 		public unsafe float PreRollTime_DEPRECATED
 		{
 			get
@@ -230,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700856F RID: 34159
-		// (get) Token: 0x06022AD6 RID: 142038 RVA: 0x00334761 File Offset: 0x00332961
-		// (set) Token: 0x06022AD7 RID: 142039 RVA: 0x00334771 File Offset: 0x00332971
+		// Token: 0x17001EDD RID: 7901
+		// (get) Token: 0x0600A621 RID: 42529 RVA: 0x000F5531 File Offset: 0x000F3731
+		// (set) Token: 0x0600A622 RID: 42530 RVA: 0x000F5541 File Offset: 0x000F3741
 		public unsafe float PostRollTime_DEPRECATED
 		{
 			get
@@ -245,9 +210,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008570 RID: 34160
-		// (get) Token: 0x06022AD8 RID: 142040 RVA: 0x00334782 File Offset: 0x00332982
-		// (set) Token: 0x06022AD9 RID: 142041 RVA: 0x0033479B File Offset: 0x0033299B
+		// Token: 0x17001EDE RID: 7902
+		// (get) Token: 0x0600A623 RID: 42531 RVA: 0x000F5552 File Offset: 0x000F3752
+		// (set) Token: 0x0600A624 RID: 42532 RVA: 0x000F556B File Offset: 0x000F376B
 		public unsafe bool bIsInfinite_DEPRECATED
 		{
 			get
@@ -260,9 +225,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008571 RID: 34161
-		// (get) Token: 0x06022ADA RID: 142042 RVA: 0x003347CB File Offset: 0x003329CB
-		// (set) Token: 0x06022ADB RID: 142043 RVA: 0x003347DB File Offset: 0x003329DB
+		// Token: 0x17001EDF RID: 7903
+		// (get) Token: 0x0600A625 RID: 42533 RVA: 0x000F559B File Offset: 0x000F379B
+		// (set) Token: 0x0600A626 RID: 42534 RVA: 0x000F55AB File Offset: 0x000F37AB
 		public unsafe bool bSupportsInfiniteRange
 		{
 			get
@@ -275,566 +240,460 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008572 RID: 34162
-		// (get) Token: 0x06022ADC RID: 142044 RVA: 0x003347EC File Offset: 0x003329EC
-		// (set) Token: 0x06022ADD RID: 142045 RVA: 0x00334825 File Offset: 0x00332A25
-		public FOptionalMovieSceneBlendType BlendType
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FOptionalMovieSceneBlendType result;
-				if ((result = this._BlendType) == null)
-				{
-					result = (this._BlendType = new FOptionalMovieSceneBlendType(base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_BlendType, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FOptionalMovieSceneBlendType.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSection.__PropertyOffset_BlendType, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x06022ADE RID: 142046 RVA: 0x00334848 File Offset: 0x00332A48
+		// Token: 0x0600A627 RID: 42535 RVA: 0x000F55BC File Offset: 0x000F37BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetRowIndex(int NewRowIndex)
 		{
 			UMovieSceneSection.__SetRowIndex_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetRowIndex_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__SetRowIndex_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetRowIndex_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewRowIndex = NewRowIndex;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetRowIndex_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetRowIndex_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022ADF RID: 142047 RVA: 0x00334890 File Offset: 0x00332A90
+		// Token: 0x0600A628 RID: 42536 RVA: 0x000F5604 File Offset: 0x000F3804
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetPreRollFrames(int InPreRollFrames)
 		{
 			UMovieSceneSection.__SetPreRollFrames_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetPreRollFrames_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__SetPreRollFrames_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetPreRollFrames_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InPreRollFrames = InPreRollFrames;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetPreRollFrames_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetPreRollFrames_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022AE0 RID: 142048 RVA: 0x003348D8 File Offset: 0x00332AD8
+		// Token: 0x0600A629 RID: 42537 RVA: 0x000F564C File Offset: 0x000F384C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetPostRollFrames(int InPostRollFrames)
 		{
 			UMovieSceneSection.__SetPostRollFrames_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetPostRollFrames_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__SetPostRollFrames_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetPostRollFrames_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InPostRollFrames = InPostRollFrames;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetPostRollFrames_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetPostRollFrames_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022AE1 RID: 142049 RVA: 0x00334920 File Offset: 0x00332B20
+		// Token: 0x0600A62A RID: 42538 RVA: 0x000F5694 File Offset: 0x000F3894
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetOverlapPriority(int NewPriority)
 		{
 			UMovieSceneSection.__SetOverlapPriority_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetOverlapPriority_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__SetOverlapPriority_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetOverlapPriority_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewPriority = NewPriority;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetOverlapPriority_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetOverlapPriority_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022AE2 RID: 142050 RVA: 0x00334968 File Offset: 0x00332B68
+		// Token: 0x0600A62B RID: 42539 RVA: 0x000F56DC File Offset: 0x000F38DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetIsLocked(bool bInIsLocked)
 		{
 			UMovieSceneSection.__SetIsLocked_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetIsLocked_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UMovieSceneSection.__SetIsLocked_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetIsLocked_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bInIsLocked = bInIsLocked;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetIsLocked_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetIsLocked_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022AE3 RID: 142051 RVA: 0x003349B0 File Offset: 0x00332BB0
+		// Token: 0x0600A62C RID: 42540 RVA: 0x000F5724 File Offset: 0x000F3924
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetIsActive(bool bInIsActive)
 		{
 			UMovieSceneSection.__SetIsActive_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetIsActive_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UMovieSceneSection.__SetIsActive_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetIsActive_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bInIsActive = bInIsActive;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetIsActive_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetIsActive_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022AE4 RID: 142052 RVA: 0x003349F8 File Offset: 0x00332BF8
+		// Token: 0x0600A62D RID: 42541 RVA: 0x000F576C File Offset: 0x000F396C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetCompletionMode(EMovieSceneCompletionMode InCompletionMode)
 		{
 			UMovieSceneSection.__SetCompletionMode_FunctionParams* ptr = stackalloc UMovieSceneSection.__SetCompletionMode_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UMovieSceneSection.__SetCompletionMode_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__SetCompletionMode_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InCompletionMode = InCompletionMode;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetCompletionMode_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__SetCompletionMode_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06022AE5 RID: 142053 RVA: 0x00334A3F File Offset: 0x00332C3F
-		public void SetBlendType(EMovieSceneBlendType InBlendType)
-		{
-			UMovieSceneSection.__SetBlendType_Internal(base.NativePtr, InBlendType);
-		}
-
-		// Token: 0x06022AE6 RID: 142054 RVA: 0x00334A50 File Offset: 0x00332C50
+		// Token: 0x0600A62E RID: 42542 RVA: 0x000F57B4 File Offset: 0x000F39B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsLocked()
 		{
 			UMovieSceneSection.__IsLocked_FunctionParams* ptr = stackalloc UMovieSceneSection.__IsLocked_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UMovieSceneSection.__IsLocked_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__IsLocked_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__IsLocked_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__IsLocked_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AE7 RID: 142055 RVA: 0x00334A98 File Offset: 0x00332C98
+		// Token: 0x0600A62F RID: 42543 RVA: 0x000F57FC File Offset: 0x000F39FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsActive()
 		{
 			UMovieSceneSection.__IsActive_FunctionParams* ptr = stackalloc UMovieSceneSection.__IsActive_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UMovieSceneSection.__IsActive_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__IsActive_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__IsActive_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__IsActive_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AE8 RID: 142056 RVA: 0x00334AE0 File Offset: 0x00332CE0
+		// Token: 0x0600A630 RID: 42544 RVA: 0x000F5844 File Offset: 0x000F3A44
+		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FFrameNumberRangeBound GetStartFrame()
 		{
 			UMovieSceneSection.__GetStartFrame_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetStartFrame_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UMovieSceneSection.__GetStartFrame_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetStartFrame_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetStartFrame_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetStartFrame_NativeFunctionPtr, (void*)ptr);
 			return new FFrameNumberRangeBound(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x06022AE9 RID: 142057 RVA: 0x00334B30 File Offset: 0x00332D30
+		// Token: 0x0600A631 RID: 42545 RVA: 0x000F5894 File Offset: 0x000F3A94
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetRowIndex()
 		{
 			UMovieSceneSection.__GetRowIndex_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetRowIndex_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__GetRowIndex_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetRowIndex_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetRowIndex_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetRowIndex_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AEA RID: 142058 RVA: 0x00334B78 File Offset: 0x00332D78
+		// Token: 0x0600A632 RID: 42546 RVA: 0x000F58DC File Offset: 0x000F3ADC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetPreRollFrames()
 		{
 			UMovieSceneSection.__GetPreRollFrames_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetPreRollFrames_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__GetPreRollFrames_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetPreRollFrames_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetPreRollFrames_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetPreRollFrames_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AEB RID: 142059 RVA: 0x00334BC0 File Offset: 0x00332DC0
+		// Token: 0x0600A633 RID: 42547 RVA: 0x000F5924 File Offset: 0x000F3B24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetPostRollFrames()
 		{
 			UMovieSceneSection.__GetPostRollFrames_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetPostRollFrames_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__GetPostRollFrames_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetPostRollFrames_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetPostRollFrames_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetPostRollFrames_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AEC RID: 142060 RVA: 0x00334C08 File Offset: 0x00332E08
+		// Token: 0x0600A634 RID: 42548 RVA: 0x000F596C File Offset: 0x000F3B6C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetOverlapPriority()
 		{
 			UMovieSceneSection.__GetOverlapPriority_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetOverlapPriority_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UMovieSceneSection.__GetOverlapPriority_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetOverlapPriority_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetOverlapPriority_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetOverlapPriority_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AED RID: 142061 RVA: 0x00334C50 File Offset: 0x00332E50
+		// Token: 0x0600A635 RID: 42549 RVA: 0x000F59B4 File Offset: 0x000F3BB4
+		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FFrameNumberRangeBound GetEndFrame()
 		{
 			UMovieSceneSection.__GetEndFrame_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetEndFrame_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UMovieSceneSection.__GetEndFrame_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetEndFrame_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetEndFrame_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetEndFrame_NativeFunctionPtr, (void*)ptr);
 			return new FFrameNumberRangeBound(&ptr->__Result, true, true);
 		}
 
-		// Token: 0x06022AEE RID: 142062 RVA: 0x00334CA0 File Offset: 0x00332EA0
+		// Token: 0x0600A636 RID: 42550 RVA: 0x000F5A04 File Offset: 0x000F3C04
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe EMovieSceneCompletionMode GetCompletionMode()
 		{
 			UMovieSceneSection.__GetCompletionMode_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetCompletionMode_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UMovieSceneSection.__GetCompletionMode_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetCompletionMode_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetCompletionMode_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetCompletionMode_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06022AEF RID: 142063 RVA: 0x00334CE8 File Offset: 0x00332EE8
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe FOptionalMovieSceneBlendType GetBlendType()
-		{
-			UMovieSceneSection.__GetBlendType_FunctionParams* ptr = stackalloc UMovieSceneSection.__GetBlendType_FunctionParams[(UIntPtr)17] + 15L / (long)sizeof(UMovieSceneSection.__GetBlendType_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(UMovieSceneSection.__GetBlendType_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UMovieSceneSection.__GetBlendType_NativeFunctionPtr, (void*)ptr, 0);
-			return new FOptionalMovieSceneBlendType(&ptr->__Result, true, true);
-		}
-
-		// Token: 0x06022AF0 RID: 142064
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetBlendType_Internal(IntPtr @this, EMovieSceneBlendType InBlendType);
-
-		// Token: 0x06022AF1 RID: 142065 RVA: 0x00334D36 File Offset: 0x00332F36
+		// Token: 0x0600A637 RID: 42551 RVA: 0x000F5A49 File Offset: 0x000F3C49
 		static UMovieSceneSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneSection");
 		}
 
-		// Token: 0x06022AF2 RID: 142066 RVA: 0x00334D44 File Offset: 0x00332F44
+		// Token: 0x0600A638 RID: 42552 RVA: 0x000F5A58 File Offset: 0x000F3C58
 		protected UMovieSceneSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022AF3 RID: 142067 RVA: 0x00334D6C File Offset: 0x00332F6C
+		// Token: 0x0600A639 RID: 42553 RVA: 0x000F5A80 File Offset: 0x000F3C80
 		protected UMovieSceneSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012859 RID: 75865
+		// Token: 0x0400471B RID: 18203
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneSection";
 
-		// Token: 0x0401285A RID: 75866
+		// Token: 0x0400471C RID: 18204
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401285B RID: 75867
+		// Token: 0x0400471D RID: 18205
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401285C RID: 75868
+		// Token: 0x0400471E RID: 18206
 		internal static int __PropertyOffset_EvalOptions;
 
-		// Token: 0x0401285D RID: 75869
+		// Token: 0x0400471F RID: 18207
 		[Nullable(2)]
 		private FMovieSceneSectionEvalOptions _EvalOptions;
 
-		// Token: 0x0401285E RID: 75870
-		internal static int __PropertyOffset_Easing;
-
-		// Token: 0x0401285F RID: 75871
-		[Nullable(2)]
-		private FMovieSceneEasingSettings _Easing;
-
-		// Token: 0x04012860 RID: 75872
-		internal static int __PropertyOffset_SectionRange;
-
-		// Token: 0x04012861 RID: 75873
-		[Nullable(2)]
-		private FMovieSceneFrameRange _SectionRange;
-
-		// Token: 0x04012862 RID: 75874
+		// Token: 0x04004720 RID: 18208
 		internal static int __PropertyOffset_PreRollFrames;
 
-		// Token: 0x04012863 RID: 75875
+		// Token: 0x04004721 RID: 18209
 		[Nullable(2)]
 		private FFrameNumber _PreRollFrames;
 
-		// Token: 0x04012864 RID: 75876
+		// Token: 0x04004722 RID: 18210
 		internal static int __PropertyOffset_PostRollFrames;
 
-		// Token: 0x04012865 RID: 75877
+		// Token: 0x04004723 RID: 18211
 		[Nullable(2)]
 		private FFrameNumber _PostRollFrames;
 
-		// Token: 0x04012866 RID: 75878
+		// Token: 0x04004724 RID: 18212
 		internal static int __PropertyOffset_RowIndex;
 
-		// Token: 0x04012867 RID: 75879
+		// Token: 0x04004725 RID: 18213
 		internal static int __PropertyOffset_OverlapPriority;
 
-		// Token: 0x04012868 RID: 75880
+		// Token: 0x04004726 RID: 18214
 		internal static int __PropertyOffset_bIsActive;
 
-		// Token: 0x04012869 RID: 75881
+		// Token: 0x04004727 RID: 18215
 		internal static byte __PropertyMask_bIsActive;
 
-		// Token: 0x0401286A RID: 75882
+		// Token: 0x04004728 RID: 18216
 		internal static int __PropertyOffset_bIsLocked;
 
-		// Token: 0x0401286B RID: 75883
+		// Token: 0x04004729 RID: 18217
 		internal static byte __PropertyMask_bIsLocked;
 
-		// Token: 0x0401286C RID: 75884
+		// Token: 0x0400472A RID: 18218
 		internal static int __PropertyOffset_StartTime_DEPRECATED;
 
-		// Token: 0x0401286D RID: 75885
+		// Token: 0x0400472B RID: 18219
 		internal static int __PropertyOffset_EndTime_DEPRECATED;
 
-		// Token: 0x0401286E RID: 75886
+		// Token: 0x0400472C RID: 18220
 		internal static int __PropertyOffset_PreRollTime_DEPRECATED;
 
-		// Token: 0x0401286F RID: 75887
+		// Token: 0x0400472D RID: 18221
 		internal static int __PropertyOffset_PostRollTime_DEPRECATED;
 
-		// Token: 0x04012870 RID: 75888
+		// Token: 0x0400472E RID: 18222
 		internal static int __PropertyOffset_bIsInfinite_DEPRECATED;
 
-		// Token: 0x04012871 RID: 75889
+		// Token: 0x0400472F RID: 18223
 		internal static byte __PropertyMask_bIsInfinite_DEPRECATED;
 
-		// Token: 0x04012872 RID: 75890
+		// Token: 0x04004730 RID: 18224
 		internal static int __PropertyOffset_bSupportsInfiniteRange;
 
-		// Token: 0x04012873 RID: 75891
-		internal static int __PropertyOffset_BlendType;
-
-		// Token: 0x04012874 RID: 75892
-		[Nullable(2)]
-		private FOptionalMovieSceneBlendType _BlendType;
-
-		// Token: 0x04012875 RID: 75893
+		// Token: 0x04004731 RID: 18225
 		private static IntPtr __SetRowIndex_NativeFunctionPtr;
 
-		// Token: 0x04012876 RID: 75894
+		// Token: 0x04004732 RID: 18226
 		private static IntPtr __SetPreRollFrames_NativeFunctionPtr;
 
-		// Token: 0x04012877 RID: 75895
+		// Token: 0x04004733 RID: 18227
 		private static IntPtr __SetPostRollFrames_NativeFunctionPtr;
 
-		// Token: 0x04012878 RID: 75896
+		// Token: 0x04004734 RID: 18228
 		private static IntPtr __SetOverlapPriority_NativeFunctionPtr;
 
-		// Token: 0x04012879 RID: 75897
+		// Token: 0x04004735 RID: 18229
 		private static IntPtr __SetIsLocked_NativeFunctionPtr;
 
-		// Token: 0x0401287A RID: 75898
+		// Token: 0x04004736 RID: 18230
 		private static IntPtr __SetIsActive_NativeFunctionPtr;
 
-		// Token: 0x0401287B RID: 75899
+		// Token: 0x04004737 RID: 18231
 		private static IntPtr __SetCompletionMode_NativeFunctionPtr;
 
-		// Token: 0x0401287C RID: 75900
+		// Token: 0x04004738 RID: 18232
 		private static IntPtr __IsLocked_NativeFunctionPtr;
 
-		// Token: 0x0401287D RID: 75901
+		// Token: 0x04004739 RID: 18233
 		private static IntPtr __IsActive_NativeFunctionPtr;
 
-		// Token: 0x0401287E RID: 75902
+		// Token: 0x0400473A RID: 18234
 		private static IntPtr __GetStartFrame_NativeFunctionPtr;
 
-		// Token: 0x0401287F RID: 75903
+		// Token: 0x0400473B RID: 18235
 		private static IntPtr __GetRowIndex_NativeFunctionPtr;
 
-		// Token: 0x04012880 RID: 75904
+		// Token: 0x0400473C RID: 18236
 		private static IntPtr __GetPreRollFrames_NativeFunctionPtr;
 
-		// Token: 0x04012881 RID: 75905
+		// Token: 0x0400473D RID: 18237
 		private static IntPtr __GetPostRollFrames_NativeFunctionPtr;
 
-		// Token: 0x04012882 RID: 75906
+		// Token: 0x0400473E RID: 18238
 		private static IntPtr __GetOverlapPriority_NativeFunctionPtr;
 
-		// Token: 0x04012883 RID: 75907
+		// Token: 0x0400473F RID: 18239
 		private static IntPtr __GetEndFrame_NativeFunctionPtr;
 
-		// Token: 0x04012884 RID: 75908
+		// Token: 0x04004740 RID: 18240
 		private static IntPtr __GetCompletionMode_NativeFunctionPtr;
 
-		// Token: 0x04012885 RID: 75909
-		private static IntPtr __GetBlendType_NativeFunctionPtr;
-
-		// Token: 0x02003652 RID: 13906
-		[NullableContext(0)]
+		// Token: 0x02000F4B RID: 3915
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetRowIndex_FunctionParams
 		{
-			// Token: 0x04017720 RID: 96032
+			// Token: 0x04006321 RID: 25377
 			[FieldOffset(0)]
 			public int NewRowIndex;
 		}
 
-		// Token: 0x02003653 RID: 13907
-		[NullableContext(0)]
+		// Token: 0x02000F4C RID: 3916
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetPreRollFrames_FunctionParams
 		{
-			// Token: 0x04017721 RID: 96033
+			// Token: 0x04006322 RID: 25378
 			[FieldOffset(0)]
 			public int InPreRollFrames;
 		}
 
-		// Token: 0x02003654 RID: 13908
-		[NullableContext(0)]
+		// Token: 0x02000F4D RID: 3917
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetPostRollFrames_FunctionParams
 		{
-			// Token: 0x04017722 RID: 96034
+			// Token: 0x04006323 RID: 25379
 			[FieldOffset(0)]
 			public int InPostRollFrames;
 		}
 
-		// Token: 0x02003655 RID: 13909
-		[NullableContext(0)]
+		// Token: 0x02000F4E RID: 3918
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetOverlapPriority_FunctionParams
 		{
-			// Token: 0x04017723 RID: 96035
+			// Token: 0x04006324 RID: 25380
 			[FieldOffset(0)]
 			public int NewPriority;
 		}
 
-		// Token: 0x02003656 RID: 13910
-		[NullableContext(0)]
+		// Token: 0x02000F4F RID: 3919
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetIsLocked_FunctionParams
 		{
-			// Token: 0x04017724 RID: 96036
+			// Token: 0x04006325 RID: 25381
 			[FieldOffset(0)]
 			public bool bInIsLocked;
 		}
 
-		// Token: 0x02003657 RID: 13911
-		[NullableContext(0)]
+		// Token: 0x02000F50 RID: 3920
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetIsActive_FunctionParams
 		{
-			// Token: 0x04017725 RID: 96037
+			// Token: 0x04006326 RID: 25382
 			[FieldOffset(0)]
 			public bool bInIsActive;
 		}
 
-		// Token: 0x02003658 RID: 13912
-		[NullableContext(0)]
+		// Token: 0x02000F51 RID: 3921
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetCompletionMode_FunctionParams
 		{
-			// Token: 0x04017726 RID: 96038
+			// Token: 0x04006327 RID: 25383
 			[FieldOffset(0)]
 			public EMovieSceneCompletionMode InCompletionMode;
 		}
 
-		// Token: 0x02003659 RID: 13913
-		[NullableContext(0)]
+		// Token: 0x02000F52 RID: 3922
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsLocked_FunctionParams
 		{
-			// Token: 0x04017727 RID: 96039
+			// Token: 0x04006328 RID: 25384
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200365A RID: 13914
-		[NullableContext(0)]
+		// Token: 0x02000F53 RID: 3923
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsActive_FunctionParams
 		{
-			// Token: 0x04017728 RID: 96040
+			// Token: 0x04006329 RID: 25385
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200365B RID: 13915
-		[NullableContext(0)]
+		// Token: 0x02000F54 RID: 3924
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetStartFrame_FunctionParams
 		{
-			// Token: 0x04017729 RID: 96041
+			// Token: 0x0400632A RID: 25386
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200365C RID: 13916
-		[NullableContext(0)]
+		// Token: 0x02000F55 RID: 3925
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetRowIndex_FunctionParams
 		{
-			// Token: 0x0401772A RID: 96042
+			// Token: 0x0400632B RID: 25387
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x0200365D RID: 13917
-		[NullableContext(0)]
+		// Token: 0x02000F56 RID: 3926
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetPreRollFrames_FunctionParams
 		{
-			// Token: 0x0401772B RID: 96043
+			// Token: 0x0400632C RID: 25388
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x0200365E RID: 13918
-		[NullableContext(0)]
+		// Token: 0x02000F57 RID: 3927
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetPostRollFrames_FunctionParams
 		{
-			// Token: 0x0401772C RID: 96044
+			// Token: 0x0400632D RID: 25389
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x0200365F RID: 13919
-		[NullableContext(0)]
+		// Token: 0x02000F58 RID: 3928
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetOverlapPriority_FunctionParams
 		{
-			// Token: 0x0401772D RID: 96045
+			// Token: 0x0400632E RID: 25390
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x02003660 RID: 13920
-		[NullableContext(0)]
+		// Token: 0x02000F59 RID: 3929
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetEndFrame_FunctionParams
 		{
-			// Token: 0x0401772E RID: 96046
+			// Token: 0x0400632F RID: 25391
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003661 RID: 13921
-		[NullableContext(0)]
+		// Token: 0x02000F5A RID: 3930
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetCompletionMode_FunctionParams
 		{
-			// Token: 0x0401772F RID: 96047
+			// Token: 0x04006330 RID: 25392
 			[FieldOffset(0)]
 			public EMovieSceneCompletionMode __Result;
-		}
-
-		// Token: 0x02003662 RID: 13922
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 2)]
-		protected ref struct __GetBlendType_FunctionParams
-		{
-			// Token: 0x04017730 RID: 96048
-			[FieldOffset(0)]
-			public byte __Result;
 		}
 	}
 }

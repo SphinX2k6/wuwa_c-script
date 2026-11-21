@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200108E RID: 4238
+	// Token: 0x02001189 RID: 4489
 	public struct ScoreReward : IFlatbufferObject
 	{
-		// Token: 0x170034EF RID: 13551
-		// (get) Token: 0x0600CFA2 RID: 53154 RVA: 0x0030A158 File Offset: 0x00308358
+		// Token: 0x170035FC RID: 13820
+		// (get) Token: 0x0600D775 RID: 55157 RVA: 0x0032974C File Offset: 0x0032794C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CFA3 RID: 53155 RVA: 0x0030A165 File Offset: 0x00308365
+		// Token: 0x0600D776 RID: 55158 RVA: 0x00329759 File Offset: 0x00327959
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CFA4 RID: 53156 RVA: 0x0030A16C File Offset: 0x0030836C
+		// Token: 0x0600D777 RID: 55159 RVA: 0x00329760 File Offset: 0x00327960
 		public static ScoreReward GetRootAsScoreReward(ByteBuffer _bb)
 		{
 			return ScoreReward.GetRootAsScoreReward(_bb, default(ScoreReward));
 		}
 
-		// Token: 0x0600CFA5 RID: 53157 RVA: 0x0030A188 File Offset: 0x00308388
+		// Token: 0x0600D778 RID: 55160 RVA: 0x0032977C File Offset: 0x0032797C
 		public static ScoreReward GetRootAsScoreReward(ByteBuffer _bb, ScoreReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CFA6 RID: 53158 RVA: 0x0030A1A5 File Offset: 0x003083A5
+		// Token: 0x0600D779 RID: 55161 RVA: 0x00329799 File Offset: 0x00327999
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CFA7 RID: 53159 RVA: 0x0030A1B4 File Offset: 0x003083B4
+		// Token: 0x0600D77A RID: 55162 RVA: 0x003297A8 File Offset: 0x003279A8
 		public ScoreReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170034F0 RID: 13552
-		// (get) Token: 0x0600CFA8 RID: 53160 RVA: 0x0030A1C4 File Offset: 0x003083C4
+		// Token: 0x170035FD RID: 13821
+		// (get) Token: 0x0600D77B RID: 55163 RVA: 0x003297B8 File Offset: 0x003279B8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034F1 RID: 13553
-		// (get) Token: 0x0600CFA9 RID: 53161 RVA: 0x0030A200 File Offset: 0x00308400
+		// Token: 0x170035FE RID: 13822
+		// (get) Token: 0x0600D77C RID: 55164 RVA: 0x003297F4 File Offset: 0x003279F4
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034F2 RID: 13554
-		// (get) Token: 0x0600CFAA RID: 53162 RVA: 0x0030A23C File Offset: 0x0030843C
+		// Token: 0x170035FF RID: 13823
+		// (get) Token: 0x0600D77D RID: 55165 RVA: 0x00329830 File Offset: 0x00327A30
 		public int Score
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034F3 RID: 13555
-		// (get) Token: 0x0600CFAB RID: 53163 RVA: 0x0030A278 File Offset: 0x00308478
+		// Token: 0x17003600 RID: 13824
+		// (get) Token: 0x0600D77E RID: 55166 RVA: 0x0032986C File Offset: 0x00327A6C
 		public int Reward
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034F4 RID: 13556
-		// (get) Token: 0x0600CFAC RID: 53164 RVA: 0x0030A2B8 File Offset: 0x003084B8
+		// Token: 0x17003601 RID: 13825
+		// (get) Token: 0x0600D77F RID: 55167 RVA: 0x003298AC File Offset: 0x00327AAC
 		public string Desc
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CFAD RID: 53165 RVA: 0x0030A2F0 File Offset: 0x003084F0
+		// Token: 0x0600D780 RID: 55168 RVA: 0x003298E4 File Offset: 0x00327AE4
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600CFAE RID: 53166 RVA: 0x0030A300 File Offset: 0x00308500
+		// Token: 0x0600D781 RID: 55169 RVA: 0x003298F4 File Offset: 0x00327AF4
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0400519B RID: 20891
+		// Token: 0x0400579A RID: 22426
 		private Table __p;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020014A3 RID: 5283
+// Token: 0x02000957 RID: 2391
 public enum EActivityRegressDoubleDropEntryType
 {
-	// Token: 0x04004229 RID: 16937
+	// Token: 0x040042C1 RID: 17089
 	WorldBoss = 1,
-	// Token: 0x0400422A RID: 16938
+	// Token: 0x040042C2 RID: 17090
 	WeeklyDungeon
 }

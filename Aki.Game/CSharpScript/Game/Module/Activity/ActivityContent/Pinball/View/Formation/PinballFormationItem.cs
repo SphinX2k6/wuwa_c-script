@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x02006360 RID: 25440
+	// Token: 0x020052DE RID: 21214
 	public class PinballFormationItem : UiPanelBase
 	{
-		// Token: 0x06040017 RID: 262167 RVA: 0x00F7BCA8 File Offset: 0x00F79EA8
+		// Token: 0x06034CD8 RID: 216280 RVA: 0x00EC2C08 File Offset: 0x00EC0E08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040018 RID: 262168 RVA: 0x00F7BEE4 File Offset: 0x00F7A0E4
+		// Token: 0x06034CD9 RID: 216281 RVA: 0x00EC2E44 File Offset: 0x00EC1044
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballFormationItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040019 RID: 262169 RVA: 0x00F7BF27 File Offset: 0x00F7A127
+		// Token: 0x06034CDA RID: 216282 RVA: 0x00EC2E87 File Offset: 0x00EC1087
 		public void RefreshItem(int roleId)
 		{
 			this.RoleId = roleId;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			this.RefreshWeaponItem();
 		}
 
-		// Token: 0x0604001A RID: 262170 RVA: 0x00F7BF5C File Offset: 0x00F7A15C
+		// Token: 0x06034CDB RID: 216283 RVA: 0x00EC2EBC File Offset: 0x00EC10BC
 		private void RefreshRoleSpine()
 		{
 			if (this.RoleId <= 0)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			}).Forget();
 		}
 
-		// Token: 0x0604001B RID: 262171 RVA: 0x00F7C024 File Offset: 0x00F7A224
+		// Token: 0x06034CDC RID: 216284 RVA: 0x00EC2F84 File Offset: 0x00EC1184
 		private void RefreshRoleInfo()
 		{
 			if (this.RoleId <= 0)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			uuitextureTransitionComponent.SetStateTexture(EUISelectableSelectionState.Normal, newTexture2);
 		}
 
-		// Token: 0x0604001C RID: 262172 RVA: 0x00F7C240 File Offset: 0x00F7A440
+		// Token: 0x06034CDD RID: 216285 RVA: 0x00EC31A0 File Offset: 0x00EC13A0
 		private void RefreshWeaponItem()
 		{
 			if (this.RoleId <= 0)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			base.SetTextureByPath(roleWeapon.Icon, base.GetTexture(10), null, null);
 		}
 
-		// Token: 0x0604001D RID: 262173 RVA: 0x00F7C35E File Offset: 0x00F7A55E
+		// Token: 0x06034CDE RID: 216286 RVA: 0x00EC32BE File Offset: 0x00EC14BE
 		private void OnClickRoleBtn()
 		{
 			Action<int> onClickRoleBtnCallBack = this.OnClickRoleBtnCallBack;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			onClickRoleBtnCallBack(this.RoleId);
 		}
 
-		// Token: 0x0604001E RID: 262174 RVA: 0x00F7C378 File Offset: 0x00F7A578
+		// Token: 0x06034CDF RID: 216287 RVA: 0x00EC32D8 File Offset: 0x00EC14D8
 		private void OnClickWeaponBtn()
 		{
 			PinballActivityData activityData = PinballModel.Instance.ActivityData;
@@ -212,48 +212,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			UiManager.Instance.OpenView(EUiViewName.PinballWeaponEquipView, param, null);
 		}
 
-		// Token: 0x040215D8 RID: 136664
+		// Token: 0x0401BF07 RID: 114439
 		private int RoleId;
 
-		// Token: 0x040215D9 RID: 136665
+		// Token: 0x0401BF08 RID: 114440
 		private bool IsTrail;
 
-		// Token: 0x040215DA RID: 136666
+		// Token: 0x0401BF09 RID: 114441
 		[Nullable(2)]
 		private PinballRoleBdIconItem PinballRoleBdIconItem;
 
-		// Token: 0x040215DB RID: 136667
+		// Token: 0x0401BF0A RID: 114442
 		[Nullable(2)]
 		public Action<int> OnClickRoleBtnCallBack;
 
-		// Token: 0x0200C57F RID: 50559
+		// Token: 0x0200AF66 RID: 44902
 		private enum EComponent
 		{
-			// Token: 0x0403B9BA RID: 244154
+			// Token: 0x0403631C RID: 221980
 			RoleBtn,
-			// Token: 0x0403B9BB RID: 244155
+			// Token: 0x0403631D RID: 221981
 			RoleItem,
-			// Token: 0x0403B9BC RID: 244156
+			// Token: 0x0403631E RID: 221982
 			ShadowSpine,
-			// Token: 0x0403B9BD RID: 244157
+			// Token: 0x0403631F RID: 221983
 			RoleSpine,
-			// Token: 0x0403B9BE RID: 244158
+			// Token: 0x04036320 RID: 221984
 			TrailRoleItem,
-			// Token: 0x0403B9BF RID: 244159
+			// Token: 0x04036321 RID: 221985
 			RoleInfoItem,
-			// Token: 0x0403B9C0 RID: 244160
+			// Token: 0x04036322 RID: 221986
 			RoleNameText,
-			// Token: 0x0403B9C1 RID: 244161
+			// Token: 0x04036323 RID: 221987
 			BdIconItem,
-			// Token: 0x0403B9C2 RID: 244162
+			// Token: 0x04036324 RID: 221988
 			RoleLevelText,
-			// Token: 0x0403B9C3 RID: 244163
+			// Token: 0x04036325 RID: 221989
 			WeaponBtn,
-			// Token: 0x0403B9C4 RID: 244164
+			// Token: 0x04036326 RID: 221990
 			WeaponTexture,
-			// Token: 0x0403B9C5 RID: 244165
+			// Token: 0x04036327 RID: 221991
 			EmptyItem,
-			// Token: 0x0403B9C6 RID: 244166
+			// Token: 0x04036328 RID: 221992
 			ClassTexture
 		}
 	}

@@ -5,18 +5,18 @@ using CSharpScript.Game.LevelGamePlay.Common;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071D1 RID: 29137
+	// Token: 0x02006286 RID: 25222
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PathDrivenTrackRuntimeSet
 	{
-		// Token: 0x060474E9 RID: 292073 RVA: 0x01221D23 File Offset: 0x0121FF23
+		// Token: 0x0603CDEB RID: 249323 RVA: 0x0117BB5A File Offset: 0x01179D5A
 		public PathDrivenTrackRuntimeSet(int ownerEntityId)
 		{
 			this.OwnerEntityId = ownerEntityId;
 		}
 
-		// Token: 0x060474EA RID: 292074 RVA: 0x01221D3D File Offset: 0x0121FF3D
+		// Token: 0x0603CDEC RID: 249324 RVA: 0x0117BB74 File Offset: 0x01179D74
 		public void AddTrack(IPathDrivenSplineRuntimeData trackRuntimeData)
 		{
 			if (!this.Released)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			instance.ReleaseSpline(trackRuntimeData.SplineEntityId, (long)this.OwnerEntityId, EIdType.EntityId);
 		}
 
-		// Token: 0x060474EB RID: 292075 RVA: 0x01221D74 File Offset: 0x0121FF74
+		// Token: 0x0603CDED RID: 249325 RVA: 0x0117BBA8 File Offset: 0x01179DA8
 		public void Release()
 		{
 			if (this.Released)
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.TrackList.Clear();
 		}
 
-		// Token: 0x040257F1 RID: 153585
+		// Token: 0x04020460 RID: 132192
 		public readonly List<IPathDrivenSplineRuntimeData> TrackList = new List<IPathDrivenSplineRuntimeData>();
 
-		// Token: 0x040257F2 RID: 153586
+		// Token: 0x04020461 RID: 132193
 		private readonly int OwnerEntityId;
 
-		// Token: 0x040257F3 RID: 153587
+		// Token: 0x04020462 RID: 132194
 		private bool Released;
 	}
 }

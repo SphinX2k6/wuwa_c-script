@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005F0 RID: 1520
+	// Token: 0x02000608 RID: 1544
 	public class ConfigNewbieMainActTaskByTabId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023AF RID: 9135 RVA: 0x001234D8 File Offset: 0x001216D8
+		// Token: 0x0600243F RID: 9279 RVA: 0x00129F54 File Offset: 0x00128154
 		static ConfigNewbieMainActTaskByTabId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewbieMainActTaskByTabId.CreateStaticDefaultValue), new Action(ConfigNewbieMainActTaskByTabId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023B0 RID: 9136 RVA: 0x001234F8 File Offset: 0x001216F8
+		// Token: 0x06002440 RID: 9280 RVA: 0x00129F74 File Offset: 0x00128174
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewbieMainActTaskByTabId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023B1 RID: 9137 RVA: 0x00123577 File Offset: 0x00121777
+		// Token: 0x06002441 RID: 9281 RVA: 0x00129FF3 File Offset: 0x001281F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewbieMainActTaskByTabId.LogPair = null;
 			ConfigNewbieMainActTaskByTabId.HandleId = 0;
 		}
 
-		// Token: 0x060023B2 RID: 9138 RVA: 0x00123585 File Offset: 0x00121785
+		// Token: 0x06002442 RID: 9282 RVA: 0x0012A001 File Offset: 0x00128201
 		public static void Init()
 		{
 			ConfigNewbieMainActTaskByTabId.HandleId = ConfigCommon.InitDataStatement(ConfigNewbieMainActTaskByTabId.HandleId, "db_newplayersupportactivityv2.db", "select BinData from `NewbieMainActTask` where TabId=?");
 		}
 
-		// Token: 0x060023B3 RID: 9139 RVA: 0x001235A0 File Offset: 0x001217A0
+		// Token: 0x06002443 RID: 9283 RVA: 0x0012A01C File Offset: 0x0012821C
 		[NullableContext(2)]
 		public static IReadOnlyList<NewbieMainActTask> GetConfigList(int p0TabId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002976 RID: 10614
+		// Token: 0x04002A1E RID: 10782
 		private const string DB = "db_newplayersupportactivityv2.db";
 
-		// Token: 0x04002977 RID: 10615
+		// Token: 0x04002A1F RID: 10783
 		private const string FILE = "x.新手主线奖励新.xlsx";
 
-		// Token: 0x04002978 RID: 10616
+		// Token: 0x04002A20 RID: 10784
 		private const string TABLE = "NewbieMainActTask";
 
-		// Token: 0x04002979 RID: 10617
+		// Token: 0x04002A21 RID: 10785
 		private const string COMMAND = "select BinData from `NewbieMainActTask` where TabId=?";
 
-		// Token: 0x0400297A RID: 10618
+		// Token: 0x04002A22 RID: 10786
 		private const string KEY_PREFIX = "NewbieMainActTaskByTabId";
 
-		// Token: 0x0400297B RID: 10619
+		// Token: 0x04002A23 RID: 10787
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400297C RID: 10620
+		// Token: 0x04002A24 RID: 10788
 		private static int HandleId;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024FF RID: 9471
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027A5 RID: 10149
 	public class ISetGlobalTimeScale : ITimeScaleType
 	{
-		// Token: 0x0600D366 RID: 54118 RVA: 0x001F5716 File Offset: 0x001F3916
+		// Token: 0x0600E0C2 RID: 57538 RVA: 0x0021110E File Offset: 0x0020F30E
 		public static ISetGlobalTimeScale Create(ISetGlobalTimeScale? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B2A RID: 15146
-		// (get) Token: 0x0600D367 RID: 54119 RVA: 0x001F5735 File Offset: 0x001F3935
+		// Token: 0x17003E26 RID: 15910
+		// (get) Token: 0x0600E0C3 RID: 57539 RVA: 0x0021112D File Offset: 0x0020F32D
 		public override ETimeScaleType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B2B RID: 15147
-		// (get) Token: 0x0600D368 RID: 54120 RVA: 0x001F5742 File Offset: 0x001F3942
+		// Token: 0x17003E27 RID: 15911
+		// (get) Token: 0x0600E0C4 RID: 57540 RVA: 0x0021113A File Offset: 0x0020F33A
 		public virtual ISetGlobalTimeScaleType Config
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073E5 RID: 29669
+		// Token: 0x04007A37 RID: 31287
 		private ISetGlobalTimeScale Instance;
 
-		// Token: 0x040073E6 RID: 29670
+		// Token: 0x04007A38 RID: 31288
 		private ISetGlobalTimeScaleType _ConfigCache;
 
-		// Token: 0x040073E7 RID: 29671
+		// Token: 0x04007A39 RID: 31289
 		private bool _ConfigInited;
 	}
 }

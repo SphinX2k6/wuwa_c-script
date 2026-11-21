@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001126 RID: 4390
+// Token: 0x020005DA RID: 1498
 public enum EBabelTowerTabItem
 {
-	// Token: 0x0400352B RID: 13611
+	// Token: 0x040035C4 RID: 13764
 	NormalQuest,
-	// Token: 0x0400352C RID: 13612
+	// Token: 0x040035C5 RID: 13765
 	HardQuest
 }

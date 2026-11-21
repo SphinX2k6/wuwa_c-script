@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000700 RID: 1792
+	// Token: 0x020007A1 RID: 1953
 	public static class ISplineTypeExtensions
 	{
-		// Token: 0x06002694 RID: 9876 RVA: 0x0006713C File Offset: 0x0006533C
-		[NullableContext(1)]
+		// Token: 0x060029B4 RID: 10676 RVA: 0x0006E1AC File Offset: 0x0006C3AC
 		public static IReadOnlyList<IBaseSplinePointType> GetPoints(this ISplineType p)
 		{
 			ICommonSpline commonSpline = p as ICommonSpline;

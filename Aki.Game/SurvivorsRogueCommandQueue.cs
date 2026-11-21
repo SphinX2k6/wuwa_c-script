@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002AE4 RID: 10980
+// Token: 0x02002060 RID: 8288
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandQueue
 {
-	// Token: 0x17001E71 RID: 7793
-	// (get) Token: 0x06016D93 RID: 93587 RVA: 0x005CC7FC File Offset: 0x005CA9FC
+	// Token: 0x17001EC9 RID: 7881
+	// (get) Token: 0x060147C4 RID: 83908 RVA: 0x005F934C File Offset: 0x005F754C
 	[Nullable(2)]
 	public SurvivorsRogueCommandBase ForegroundCommand
 	{
@@ -25,7 +25,7 @@ public class SurvivorsRogueCommandQueue
 		}
 	}
 
-	// Token: 0x06016D94 RID: 93588 RVA: 0x005CC824 File Offset: 0x005CAA24
+	// Token: 0x060147C5 RID: 83909 RVA: 0x005F9374 File Offset: 0x005F7574
 	public void InitCommands(IList<SurvivorsOpData> dataList)
 	{
 		this.Commands.Clear();
@@ -37,14 +37,14 @@ public class SurvivorsRogueCommandQueue
 		this.PrintCommands();
 	}
 
-	// Token: 0x06016D95 RID: 93589 RVA: 0x005CC86B File Offset: 0x005CAA6B
+	// Token: 0x060147C6 RID: 83910 RVA: 0x005F93BB File Offset: 0x005F75BB
 	public void Clear()
 	{
 		this.Commands.Clear();
 		this.CommandsMap.Clear();
 	}
 
-	// Token: 0x06016D96 RID: 93590 RVA: 0x005CC884 File Offset: 0x005CAA84
+	// Token: 0x060147C7 RID: 83911 RVA: 0x005F93D4 File Offset: 0x005F75D4
 	public unsafe void PrintCommands()
 	{
 		Log.Instance.Info(ELogModule.SurvivorsRogue, ELogAuthor.YYZ, "[SurvivorsRogue] 指令队列打印开始", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -64,7 +64,7 @@ public class SurvivorsRogueCommandQueue
 		Log.Instance.Info(ELogModule.SurvivorsRogue, ELogAuthor.YYZ, "[SurvivorsRogue] 指令队列打印结束", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06016D97 RID: 93591 RVA: 0x005CC97C File Offset: 0x005CAB7C
+	// Token: 0x060147C8 RID: 83912 RVA: 0x005F94CC File Offset: 0x005F76CC
 	public unsafe void AddCommand(SurvivorsOpData data)
 	{
 		SurvivorsRogueCommandBase survivorsRogueCommandBase = SurvivorsRogueCommandFactory.Create(data);
@@ -88,7 +88,7 @@ public class SurvivorsRogueCommandQueue
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06016D98 RID: 93592 RVA: 0x005CCA60 File Offset: 0x005CAC60
+	// Token: 0x060147C9 RID: 83913 RVA: 0x005F95B0 File Offset: 0x005F77B0
 	public void UpdateCommand(SurvivorsOpData data)
 	{
 		SurvivorsRogueCommandBase survivorsRogueCommandBase;
@@ -99,7 +99,7 @@ public class SurvivorsRogueCommandQueue
 		survivorsRogueCommandBase.Update(data);
 	}
 
-	// Token: 0x06016D99 RID: 93593 RVA: 0x005CCA8C File Offset: 0x005CAC8C
+	// Token: 0x060147CA RID: 83914 RVA: 0x005F95DC File Offset: 0x005F77DC
 	public unsafe void RemoveCommand(int incId)
 	{
 		SurvivorsRogueCommandBase survivorsRogueCommandBase;
@@ -132,7 +132,7 @@ public class SurvivorsRogueCommandQueue
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06016D9A RID: 93594 RVA: 0x005CCB60 File Offset: 0x005CAD60
+	// Token: 0x060147CB RID: 83915 RVA: 0x005F96B0 File Offset: 0x005F78B0
 	public void SetForegroundIncId(int incId)
 	{
 		this.ForegroundCommandIncId = incId;
@@ -150,7 +150,7 @@ public class SurvivorsRogueCommandQueue
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016D9B RID: 93595 RVA: 0x005CCBDA File Offset: 0x005CADDA
+	// Token: 0x060147CC RID: 83916 RVA: 0x005F972A File Offset: 0x005F792A
 	public void StartForegroundCommand()
 	{
 		if (this.ForegroundCommand != null)
@@ -159,7 +159,7 @@ public class SurvivorsRogueCommandQueue
 		}
 	}
 
-	// Token: 0x06016D9C RID: 93596 RVA: 0x005CCBF0 File Offset: 0x005CADF0
+	// Token: 0x060147CD RID: 83917 RVA: 0x005F9740 File Offset: 0x005F7940
 	[NullableContext(2)]
 	public SurvivorsRogueCommandBase GetCommandByIncId(int incId)
 	{
@@ -171,18 +171,18 @@ public class SurvivorsRogueCommandQueue
 		return result;
 	}
 
-	// Token: 0x06016D9D RID: 93597 RVA: 0x005CCC10 File Offset: 0x005CAE10
+	// Token: 0x060147CE RID: 83918 RVA: 0x005F9760 File Offset: 0x005F7960
 	public IReadOnlyList<SurvivorsRogueCommandBase> GetCommands()
 	{
 		return this.Commands;
 	}
 
-	// Token: 0x0400A9BB RID: 43451
+	// Token: 0x0400ADC1 RID: 44481
 	private readonly List<SurvivorsRogueCommandBase> Commands = new List<SurvivorsRogueCommandBase>();
 
-	// Token: 0x0400A9BC RID: 43452
+	// Token: 0x0400ADC2 RID: 44482
 	private readonly Dictionary<int, SurvivorsRogueCommandBase> CommandsMap = new Dictionary<int, SurvivorsRogueCommandBase>();
 
-	// Token: 0x0400A9BD RID: 43453
+	// Token: 0x0400ADC3 RID: 44483
 	public int ForegroundCommandIncId = -1;
 }

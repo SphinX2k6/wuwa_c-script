@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200443A RID: 17466
+	// Token: 0x020048A2 RID: 18594
 	public struct IBehindScoreLeCondition : IFlatbufferObject
 	{
-		// Token: 0x17007B10 RID: 31504
-		// (get) Token: 0x06019FB6 RID: 106422 RVA: 0x003B6FBE File Offset: 0x003B51BE
+		// Token: 0x1700814F RID: 33103
+		// (get) Token: 0x0601B787 RID: 112519 RVA: 0x003E31CA File Offset: 0x003E13CA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x06019FB7 RID: 106423 RVA: 0x003B6FCB File Offset: 0x003B51CB
+		// Token: 0x0601B788 RID: 112520 RVA: 0x003E31D7 File Offset: 0x003E13D7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019FB8 RID: 106424 RVA: 0x003B6FD4 File Offset: 0x003B51D4
+		// Token: 0x0601B789 RID: 112521 RVA: 0x003E31E0 File Offset: 0x003E13E0
 		public static IBehindScoreLeCondition GetRootAsIBehindScoreLeCondition(ByteBuffer _bb)
 		{
 			return IBehindScoreLeCondition.GetRootAsIBehindScoreLeCondition(_bb, default(IBehindScoreLeCondition));
 		}
 
-		// Token: 0x06019FB9 RID: 106425 RVA: 0x003B6FF0 File Offset: 0x003B51F0
+		// Token: 0x0601B78A RID: 112522 RVA: 0x003E31FC File Offset: 0x003E13FC
 		public static IBehindScoreLeCondition GetRootAsIBehindScoreLeCondition(ByteBuffer _bb, IBehindScoreLeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019FBA RID: 106426 RVA: 0x003B700D File Offset: 0x003B520D
+		// Token: 0x0601B78B RID: 112523 RVA: 0x003E3219 File Offset: 0x003E1419
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019FBB RID: 106427 RVA: 0x003B701C File Offset: 0x003B521C
+		// Token: 0x0601B78C RID: 112524 RVA: 0x003E3228 File Offset: 0x003E1428
 		public IBehindScoreLeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007B11 RID: 31505
-		// (get) Token: 0x06019FBC RID: 106428 RVA: 0x003B702C File Offset: 0x003B522C
+		// Token: 0x17008150 RID: 33104
+		// (get) Token: 0x0601B78D RID: 112525 RVA: 0x003E3238 File Offset: 0x003E1438
 		public EDartSkillConditionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B12 RID: 31506
-		// (get) Token: 0x06019FBD RID: 106429 RVA: 0x003B7068 File Offset: 0x003B5268
+		// Token: 0x17008151 RID: 33105
+		// (get) Token: 0x0601B78E RID: 112526 RVA: 0x003E3274 File Offset: 0x003E1474
 		public int Score
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x06019FBE RID: 106430 RVA: 0x003B70A4 File Offset: 0x003B52A4
+		// Token: 0x0601B78F RID: 112527 RVA: 0x003E32B0 File Offset: 0x003E14B0
 		public static Offset<IBehindScoreLeCondition> CreateIBehindScoreLeCondition(FlatBufferBuilder builder, EDartSkillConditionType Type = EDartSkillConditionType.RemainScoreGe, int Score = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IBehindScoreLeCondition.EndIBehindScoreLeCondition(builder);
 		}
 
-		// Token: 0x06019FBF RID: 106431 RVA: 0x003B70C1 File Offset: 0x003B52C1
+		// Token: 0x0601B790 RID: 112528 RVA: 0x003E32CD File Offset: 0x003E14CD
 		public static void StartIBehindScoreLeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06019FC0 RID: 106432 RVA: 0x003B70CA File Offset: 0x003B52CA
+		// Token: 0x0601B791 RID: 112529 RVA: 0x003E32D6 File Offset: 0x003E14D6
 		public static void AddType(FlatBufferBuilder builder, EDartSkillConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019FC1 RID: 106433 RVA: 0x003B70D5 File Offset: 0x003B52D5
+		// Token: 0x0601B792 RID: 112530 RVA: 0x003E32E1 File Offset: 0x003E14E1
 		public static void AddScore(FlatBufferBuilder builder, int score)
 		{
 			builder.AddInt(1, score, 0);
 		}
 
-		// Token: 0x06019FC2 RID: 106434 RVA: 0x003B70E0 File Offset: 0x003B52E0
+		// Token: 0x0601B793 RID: 112531 RVA: 0x003E32EC File Offset: 0x003E14EC
 		public static Offset<IBehindScoreLeCondition> EndIBehindScoreLeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IBehindScoreLeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06019FC3 RID: 106435 RVA: 0x003B70F0 File Offset: 0x003B52F0
+		// Token: 0x0601B794 RID: 112532 RVA: 0x003E32FC File Offset: 0x003E14FC
 		public IBehindScoreLeConditionT UnPack()
 		{
 			IBehindScoreLeConditionT behindScoreLeConditionT = new IBehindScoreLeConditionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return behindScoreLeConditionT;
 		}
 
-		// Token: 0x06019FC4 RID: 106436 RVA: 0x003B710B File Offset: 0x003B530B
+		// Token: 0x0601B795 RID: 112533 RVA: 0x003E3317 File Offset: 0x003E1517
 		public void UnPackTo(IBehindScoreLeConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.Score = this.Score;
 		}
 
-		// Token: 0x06019FC5 RID: 106437 RVA: 0x003B7128 File Offset: 0x003B5328
+		// Token: 0x0601B796 RID: 112534 RVA: 0x003E3334 File Offset: 0x003E1534
 		public static Offset<IBehindScoreLeCondition> Pack(FlatBufferBuilder builder, IBehindScoreLeConditionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IBehindScoreLeCondition.CreateIBehindScoreLeCondition(builder, _o.Type, _o.Score);
 		}
 
-		// Token: 0x0400C408 RID: 50184
+		// Token: 0x0400CE36 RID: 52790
 		private Table __p;
 	}
 }

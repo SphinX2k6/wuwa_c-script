@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015D4 RID: 5588
+// Token: 0x02000A8C RID: 2700
 public class WheelTowerSeasonRewardInfoItem : UiPanelBase
 {
-	// Token: 0x06009E2F RID: 40495 RVA: 0x002271AC File Offset: 0x002253AC
+	// Token: 0x0600720D RID: 29197 RVA: 0x00230F5C File Offset: 0x0022F15C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class WheelTowerSeasonRewardInfoItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E30 RID: 40496 RVA: 0x00227238 File Offset: 0x00225438
+	// Token: 0x0600720E RID: 29198 RVA: 0x00230FE8 File Offset: 0x0022F1E8
 	[NullableContext(2)]
 	public void Refresh(TItem data, string previewIcon = null)
 	{

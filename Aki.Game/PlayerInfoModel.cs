@@ -6,19 +6,19 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020025EE RID: 9710
+// Token: 0x02001AD9 RID: 6873
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PlayerInfoModel : ModelBase
 {
-	// Token: 0x06013BE9 RID: 80873 RVA: 0x004F3A54 File Offset: 0x004F1C54
+	// Token: 0x060110CB RID: 69835 RVA: 0x005027E0 File Offset: 0x005009E0
 	public int? GetId()
 	{
 		return new int?(this.Id);
 	}
 
-	// Token: 0x06013BEA RID: 80874 RVA: 0x004F3A64 File Offset: 0x004F1C64
+	// Token: 0x060110CC RID: 69836 RVA: 0x005027F0 File Offset: 0x005009F0
 	public void SetId(int id)
 	{
 		this.Id = id;
@@ -32,62 +32,62 @@ public class PlayerInfoModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.ChangePlayerInfoId, id);
 	}
 
-	// Token: 0x06013BEB RID: 80875 RVA: 0x004F3ABD File Offset: 0x004F1CBD
+	// Token: 0x060110CD RID: 69837 RVA: 0x00502849 File Offset: 0x00500A49
 	public int[] GetIconList()
 	{
 		return this.IconList;
 	}
 
-	// Token: 0x06013BEC RID: 80876 RVA: 0x004F3AC5 File Offset: 0x004F1CC5
+	// Token: 0x060110CE RID: 69838 RVA: 0x00502851 File Offset: 0x00500A51
 	public void SetIconList(int[] iconList)
 	{
 		this.IconList = iconList;
 	}
 
-	// Token: 0x06013BED RID: 80877 RVA: 0x004F3ACE File Offset: 0x004F1CCE
+	// Token: 0x060110CF RID: 69839 RVA: 0x0050285A File Offset: 0x00500A5A
 	public int[] GetFrameList()
 	{
 		return this.FrameList;
 	}
 
-	// Token: 0x06013BEE RID: 80878 RVA: 0x004F3AD6 File Offset: 0x004F1CD6
+	// Token: 0x060110D0 RID: 69840 RVA: 0x00502862 File Offset: 0x00500A62
 	public void SetFrameList(int[] frameList)
 	{
 		this.FrameList = frameList;
 	}
 
-	// Token: 0x06013BEF RID: 80879 RVA: 0x004F3ADF File Offset: 0x004F1CDF
+	// Token: 0x060110D1 RID: 69841 RVA: 0x0050286B File Offset: 0x00500A6B
 	public Dictionary<int, int> GetNumberProp()
 	{
 		return this.NumberProp;
 	}
 
-	// Token: 0x06013BF0 RID: 80880 RVA: 0x004F3AE7 File Offset: 0x004F1CE7
+	// Token: 0x060110D2 RID: 69842 RVA: 0x00502873 File Offset: 0x00500A73
 	public void SetNumberProp(Dictionary<int, int> numberProp)
 	{
 		this.NumberProp = numberProp;
 	}
 
-	// Token: 0x06013BF1 RID: 80881 RVA: 0x004F3AF0 File Offset: 0x004F1CF0
+	// Token: 0x060110D3 RID: 69843 RVA: 0x0050287C File Offset: 0x00500A7C
 	public Dictionary<int, string> GetStringProp()
 	{
 		return this.StringProp;
 	}
 
-	// Token: 0x06013BF2 RID: 80882 RVA: 0x004F3AF8 File Offset: 0x004F1CF8
+	// Token: 0x060110D4 RID: 69844 RVA: 0x00502884 File Offset: 0x00500A84
 	public void SetStringProp(Dictionary<int, string> stringProp)
 	{
 		this.StringProp = stringProp;
 	}
 
-	// Token: 0x06013BF3 RID: 80883 RVA: 0x004F3B01 File Offset: 0x004F1D01
+	// Token: 0x060110D5 RID: 69845 RVA: 0x0050288D File Offset: 0x00500A8D
 	public void SetPlayerName(string name)
 	{
 		this.ChangeStringProp(7, name);
 		EventSystem.Instance.Emit(EEventName.OnNameChange);
 	}
 
-	// Token: 0x06013BF4 RID: 80884 RVA: 0x004F3B1C File Offset: 0x004F1D1C
+	// Token: 0x060110D6 RID: 69846 RVA: 0x005028A8 File Offset: 0x00500AA8
 	public void UpdatePlayerAttributeNumberInfo(Dictionary<int, int> attrIntMap)
 	{
 		int num = 0;
@@ -135,7 +135,7 @@ public class PlayerInfoModel : ModelBase
 		EventSystem.Instance.Emit<int, int, int, int, int, int, int>(EEventName.OnPlayerLevelChanged, num, valueOrDefault2, valueOrDefault, num2.Value, totalExp, levelExp3, levelExp2);
 	}
 
-	// Token: 0x06013BF5 RID: 80885 RVA: 0x004F3CD0 File Offset: 0x004F1ED0
+	// Token: 0x060110D7 RID: 69847 RVA: 0x00502A5C File Offset: 0x00500C5C
 	public void ChangeNumberProp(int key, int value)
 	{
 		if (this.NumberProp != null)
@@ -149,7 +149,7 @@ public class PlayerInfoModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BF6 RID: 80886 RVA: 0x004F3D20 File Offset: 0x004F1F20
+	// Token: 0x060110D8 RID: 69848 RVA: 0x00502AAC File Offset: 0x00500CAC
 	public void ChangeStringProp(int key, string value)
 	{
 		if (this.StringProp != null)
@@ -158,7 +158,7 @@ public class PlayerInfoModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BF7 RID: 80887 RVA: 0x004F3D38 File Offset: 0x004F1F38
+	// Token: 0x060110D9 RID: 69849 RVA: 0x00502AC4 File Offset: 0x00500CC4
 	public void UpdatePlayerAttributeStringInfo(Dictionary<int, string> attrStringMap)
 	{
 		foreach (KeyValuePair<int, string> keyValuePair in attrStringMap)
@@ -167,7 +167,7 @@ public class PlayerInfoModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013BF8 RID: 80888 RVA: 0x004F3D94 File Offset: 0x004F1F94
+	// Token: 0x060110DA RID: 69850 RVA: 0x00502B20 File Offset: 0x00500D20
 	private int GetTotalExp(IReadOnlyList<PlayerExp> playerExpConfigList, int sourceExp, int targetExp)
 	{
 		int num = 0;
@@ -178,7 +178,7 @@ public class PlayerInfoModel : ModelBase
 		return num - sourceExp + targetExp;
 	}
 
-	// Token: 0x06013BF9 RID: 80889 RVA: 0x004F3DE8 File Offset: 0x004F1FE8
+	// Token: 0x060110DB RID: 69851 RVA: 0x00502B74 File Offset: 0x00500D74
 	public int? GetNumberPropById(EPlayerInfoNumber key)
 	{
 		if (this.NumberProp == null)
@@ -193,7 +193,7 @@ public class PlayerInfoModel : ModelBase
 		return new int?(value);
 	}
 
-	// Token: 0x06013BFA RID: 80890 RVA: 0x004F3E27 File Offset: 0x004F2027
+	// Token: 0x060110DC RID: 69852 RVA: 0x00502BB3 File Offset: 0x00500DB3
 	public void SetNumberPropById(EPlayerInfoNumber key, int value)
 	{
 		if (this.NumberProp == null)
@@ -203,7 +203,7 @@ public class PlayerInfoModel : ModelBase
 		this.NumberProp[(int)key] = value;
 	}
 
-	// Token: 0x06013BFB RID: 80891 RVA: 0x004F3E40 File Offset: 0x004F2040
+	// Token: 0x060110DD RID: 69853 RVA: 0x00502BCC File Offset: 0x00500DCC
 	[NullableContext(2)]
 	public string GetStringPropById(EPlayerInfoNumber key)
 	{
@@ -219,7 +219,7 @@ public class PlayerInfoModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06013BFC RID: 80892 RVA: 0x004F3E6C File Offset: 0x004F206C
+	// Token: 0x060110DE RID: 69854 RVA: 0x00502BF8 File Offset: 0x00500DF8
 	public EPlayerGender GetPlayerGender()
 	{
 		int? numberPropById = this.GetNumberPropById(EPlayerInfoNumber.Sex);
@@ -230,7 +230,7 @@ public class PlayerInfoModel : ModelBase
 		return (EPlayerGender)numberPropById.Value;
 	}
 
-	// Token: 0x06013BFD RID: 80893 RVA: 0x004F3E94 File Offset: 0x004F2094
+	// Token: 0x060110DF RID: 69855 RVA: 0x00502C20 File Offset: 0x00500E20
 	public int GetPlayerMoney(int itemId)
 	{
 		if (itemId == 2)
@@ -256,7 +256,7 @@ public class PlayerInfoModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06013BFE RID: 80894 RVA: 0x004F3F0C File Offset: 0x004F210C
+	// Token: 0x060110E0 RID: 69856 RVA: 0x00502C98 File Offset: 0x00500E98
 	public int? GetPlayerMoneyItemId(EPlayerInfoNumber type)
 	{
 		if (type == EPlayerInfoNumber.MoneyGold)
@@ -274,7 +274,7 @@ public class PlayerInfoModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013BFF RID: 80895 RVA: 0x004F3F44 File Offset: 0x004F2144
+	// Token: 0x060110E1 RID: 69857 RVA: 0x00502CD0 File Offset: 0x00500ED0
 	[NullableContext(2)]
 	public string GetAccountName(bool bCheckConfig = true)
 	{
@@ -294,7 +294,7 @@ public class PlayerInfoModel : ModelBase
 		return FunctionModel.Instance.GetPlayerName();
 	}
 
-	// Token: 0x06013C00 RID: 80896 RVA: 0x004F3F98 File Offset: 0x004F2198
+	// Token: 0x060110E2 RID: 69858 RVA: 0x00502D24 File Offset: 0x00500F24
 	public bool IsPlayerId(int roleId, int? playerId = null)
 	{
 		int? num = playerId;
@@ -305,13 +305,13 @@ public class PlayerInfoModel : ModelBase
 		return (num.GetValueOrDefault() == id.GetValueOrDefault() & num != null == (id != null)) && roleId == playerRoleId;
 	}
 
-	// Token: 0x06013C01 RID: 80897 RVA: 0x004F3FF4 File Offset: 0x004F21F4
+	// Token: 0x060110E3 RID: 69859 RVA: 0x00502D80 File Offset: 0x00500F80
 	public int GetPlayerRoleId()
 	{
 		return RoleModel.Instance.GetCurSelectMainRoleId().GetValueOrDefault();
 	}
 
-	// Token: 0x06013C02 RID: 80898 RVA: 0x004F4014 File Offset: 0x004F2214
+	// Token: 0x060110E4 RID: 69860 RVA: 0x00502DA0 File Offset: 0x00500FA0
 	public string GetPlayerHeadIconBig()
 	{
 		int? numberPropById = this.GetNumberPropById(EPlayerInfoNumber.HeadPhoto);
@@ -326,7 +326,7 @@ public class PlayerInfoModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06013C03 RID: 80899 RVA: 0x004F4064 File Offset: 0x004F2264
+	// Token: 0x060110E5 RID: 69861 RVA: 0x00502DF0 File Offset: 0x00500FF0
 	public string GetPlayerHeadIconLarge()
 	{
 		int? numberPropById = this.GetNumberPropById(EPlayerInfoNumber.HeadPhoto);
@@ -341,7 +341,7 @@ public class PlayerInfoModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06013C04 RID: 80900 RVA: 0x004F40B4 File Offset: 0x004F22B4
+	// Token: 0x060110E6 RID: 69862 RVA: 0x00502E40 File Offset: 0x00501040
 	public string GetPlayerHeadIconCircle()
 	{
 		int? numberPropById = this.GetNumberPropById(EPlayerInfoNumber.HeadPhoto);
@@ -356,7 +356,7 @@ public class PlayerInfoModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06013C05 RID: 80901 RVA: 0x004F4104 File Offset: 0x004F2304
+	// Token: 0x060110E7 RID: 69863 RVA: 0x00502E90 File Offset: 0x00501090
 	public int GetHeadIconId()
 	{
 		int? numberPropById = this.GetNumberPropById(EPlayerInfoNumber.HeadPhoto);
@@ -367,7 +367,7 @@ public class PlayerInfoModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06013C06 RID: 80902 RVA: 0x004F412C File Offset: 0x004F232C
+	// Token: 0x060110E8 RID: 69864 RVA: 0x00502EB8 File Offset: 0x005010B8
 	[NullableContext(2)]
 	public string GetPlayerStand()
 	{
@@ -383,32 +383,32 @@ public class PlayerInfoModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06013C07 RID: 80903 RVA: 0x004F415E File Offset: 0x004F235E
+	// Token: 0x060110E9 RID: 69865 RVA: 0x00502EEA File Offset: 0x005010EA
 	public int? GetPlayerLevel()
 	{
 		return this.GetNumberPropById(EPlayerInfoNumber.Level);
 	}
 
-	// Token: 0x06013C08 RID: 80904 RVA: 0x004F4167 File Offset: 0x004F2367
+	// Token: 0x060110EA RID: 69866 RVA: 0x00502EF3 File Offset: 0x005010F3
 	public int? GetPlayerExp()
 	{
 		return this.GetNumberPropById(EPlayerInfoNumber.Experience);
 	}
 
-	// Token: 0x06013C09 RID: 80905 RVA: 0x004F4170 File Offset: 0x004F2370
+	// Token: 0x060110EB RID: 69867 RVA: 0x00502EFC File Offset: 0x005010FC
 	[NullableContext(2)]
 	public string GetPlayerName()
 	{
 		return this.GetStringPropById(EPlayerInfoNumber.Name);
 	}
 
-	// Token: 0x06013C0A RID: 80906 RVA: 0x004F4179 File Offset: 0x004F2379
+	// Token: 0x060110EC RID: 69868 RVA: 0x00502F05 File Offset: 0x00501105
 	public int GetRandomSeed()
 	{
 		return this.RandomSeed;
 	}
 
-	// Token: 0x06013C0B RID: 80907 RVA: 0x004F4184 File Offset: 0x004F2384
+	// Token: 0x060110ED RID: 69869 RVA: 0x00502F10 File Offset: 0x00501110
 	public int AdvanceRandomSeed(ERandomReason reason)
 	{
 		int randomSeed = this.RandomSeed;
@@ -416,7 +416,7 @@ public class PlayerInfoModel : ModelBase
 		return randomSeed;
 	}
 
-	// Token: 0x06013C0C RID: 80908 RVA: 0x004F41A6 File Offset: 0x004F23A6
+	// Token: 0x060110EE RID: 69870 RVA: 0x00502F32 File Offset: 0x00501132
 	public void InitThirdPartyId(string userId, string onlineId, string accountId)
 	{
 		this.UserId = userId;
@@ -425,29 +425,29 @@ public class PlayerInfoModel : ModelBase
 		EventSystem.Instance.Emit<string, string, string>(EEventName.TsSyncThirdPartyInfo, userId, onlineId, accountId);
 	}
 
-	// Token: 0x06013C0D RID: 80909 RVA: 0x004F41D0 File Offset: 0x004F23D0
+	// Token: 0x060110EF RID: 69871 RVA: 0x00502F5C File Offset: 0x0050115C
 	[NullableContext(2)]
 	public string GetThirdPartyUserId()
 	{
 		return this.UserId;
 	}
 
-	// Token: 0x06013C0E RID: 80910 RVA: 0x004F41D8 File Offset: 0x004F23D8
+	// Token: 0x060110F0 RID: 69872 RVA: 0x00502F64 File Offset: 0x00501164
 	[NullableContext(2)]
 	public string GetThirdPartyOnlineId()
 	{
 		return this.OnlineId;
 	}
 
-	// Token: 0x06013C0F RID: 80911 RVA: 0x004F41E0 File Offset: 0x004F23E0
+	// Token: 0x060110F1 RID: 69873 RVA: 0x00502F6C File Offset: 0x0050116C
 	[NullableContext(2)]
 	public string GetThirdPartyAccountId()
 	{
 		return this.AccountId;
 	}
 
-	// Token: 0x17001950 RID: 6480
-	// (get) Token: 0x06013C10 RID: 80912 RVA: 0x004F41E8 File Offset: 0x004F23E8
+	// Token: 0x17001988 RID: 6536
+	// (get) Token: 0x060110F2 RID: 69874 RVA: 0x00502F74 File Offset: 0x00501174
 	public static PlayerInfoModel Instance
 	{
 		get
@@ -456,7 +456,7 @@ public class PlayerInfoModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013C11 RID: 80913 RVA: 0x004F41EF File Offset: 0x004F23EF
+	// Token: 0x060110F3 RID: 69875 RVA: 0x00502F7B File Offset: 0x0050117B
 	public static PlayerInfoModel GetOrCreateInstance()
 	{
 		if (PlayerInfoModel._Instance == null)
@@ -466,7 +466,7 @@ public class PlayerInfoModel : ModelBase
 		return PlayerInfoModel._Instance;
 	}
 
-	// Token: 0x06013C12 RID: 80914 RVA: 0x004F4203 File Offset: 0x004F2403
+	// Token: 0x060110F4 RID: 69876 RVA: 0x00502F8F File Offset: 0x0050118F
 	public static bool CreateInstance()
 	{
 		if (PlayerInfoModel._Instance != null)
@@ -477,54 +477,54 @@ public class PlayerInfoModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013C13 RID: 80915 RVA: 0x004F4219 File Offset: 0x004F2419
+	// Token: 0x060110F5 RID: 69877 RVA: 0x00502FA5 File Offset: 0x005011A5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013C14 RID: 80916 RVA: 0x004F421B File Offset: 0x004F241B
+	// Token: 0x060110F6 RID: 69878 RVA: 0x00502FA7 File Offset: 0x005011A7
 	public static void ResetStaticDefaultValue()
 	{
 		PlayerInfoModel._Instance = null;
 	}
 
-	// Token: 0x06013C15 RID: 80917 RVA: 0x004F4223 File Offset: 0x004F2423
+	// Token: 0x060110F7 RID: 69879 RVA: 0x00502FAF File Offset: 0x005011AF
 	static PlayerInfoModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PlayerInfoModel.CreateStaticDefaultValue), new Action(PlayerInfoModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040094CF RID: 38095
+	// Token: 0x04009626 RID: 38438
 	private int Id;
 
-	// Token: 0x040094D0 RID: 38096
+	// Token: 0x04009627 RID: 38439
 	private int[] IconList = Array.Empty<int>();
 
-	// Token: 0x040094D1 RID: 38097
+	// Token: 0x04009628 RID: 38440
 	private int[] FrameList = Array.Empty<int>();
 
-	// Token: 0x040094D2 RID: 38098
+	// Token: 0x04009629 RID: 38441
 	private Dictionary<int, int> NumberProp = new Dictionary<int, int>();
 
-	// Token: 0x040094D3 RID: 38099
+	// Token: 0x0400962A RID: 38442
 	private Dictionary<int, string> StringProp = new Dictionary<int, string>();
 
-	// Token: 0x040094D4 RID: 38100
+	// Token: 0x0400962B RID: 38443
 	private string UserId = "";
 
-	// Token: 0x040094D5 RID: 38101
+	// Token: 0x0400962C RID: 38444
 	private string OnlineId = "";
 
-	// Token: 0x040094D6 RID: 38102
+	// Token: 0x0400962D RID: 38445
 	private string AccountId = "";
 
-	// Token: 0x040094D7 RID: 38103
+	// Token: 0x0400962E RID: 38446
 	public int RandomSeed;
 
-	// Token: 0x040094D8 RID: 38104
+	// Token: 0x0400962F RID: 38447
 	public bool NewbieGuideV2;
 
-	// Token: 0x040094D9 RID: 38105
+	// Token: 0x04009630 RID: 38448
 	[Nullable(2)]
 	private static PlayerInfoModel _Instance;
 }

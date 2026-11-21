@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020013AF RID: 5039
+// Token: 0x02000863 RID: 2147
 public enum ENewPlayerSupportEntrance
 {
-	// Token: 0x04003EDF RID: 16095
+	// Token: 0x04003F77 RID: 16247
 	ActivityRecommend = 1,
-	// Token: 0x04003EE0 RID: 16096
+	// Token: 0x04003F78 RID: 16248
 	Liveness,
-	// Token: 0x04003EE1 RID: 16097
+	// Token: 0x04003F79 RID: 16249
 	GiftPack,
-	// Token: 0x04003EE2 RID: 16098
+	// Token: 0x04003F7A RID: 16250
 	WeekCard,
-	// Token: 0x04003EE3 RID: 16099
+	// Token: 0x04003F7B RID: 16251
 	Gacha
 }

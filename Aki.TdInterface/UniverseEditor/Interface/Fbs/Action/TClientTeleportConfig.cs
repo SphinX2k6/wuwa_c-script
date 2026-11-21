@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007683 RID: 30339
+	// Token: 0x02007E91 RID: 32401
 	public enum TClientTeleportConfig : byte
 	{
-		// Token: 0x04012679 RID: 75385
+		// Token: 0x040136C4 RID: 79556
 		NONE,
-		// Token: 0x0401267A RID: 75386
+		// Token: 0x040136C5 RID: 79557
 		IClientTpRelativeEntityPos,
-		// Token: 0x0401267B RID: 75387
+		// Token: 0x040136C6 RID: 79558
 		IClientTpToStreamingTargetPoint
 	}
 }

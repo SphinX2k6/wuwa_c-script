@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001661 RID: 5729
+	// Token: 0x020002F9 RID: 761
 	[UnrealObjectPath("/Script/KuroAnim.KuroCharacterRecorder")]
 	[UnrealStructLayout(496, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 496)]
 	public class UKuroCharacterRecorder : UKuroTrackRecorder, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06014C07 RID: 84999 RVA: 0x001E8444 File Offset: 0x001E6644
+		// Token: 0x0600527B RID: 21115 RVA: 0x000735D2 File Offset: 0x000717D2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroCharacterRecorder._ClassPtr;
 		}
 
-		// Token: 0x06014C08 RID: 85000 RVA: 0x001E8450 File Offset: 0x001E6650
+		// Token: 0x0600527C RID: 21116 RVA: 0x000735E0 File Offset: 0x000717E0
 		public UKuroCharacterRecorder() : this(BuiltinUtils.AllocNativeUObject(UKuroCharacterRecorder.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014C09 RID: 85001 RVA: 0x001E8478 File Offset: 0x001E6678
+		// Token: 0x0600527D RID: 21117 RVA: 0x00073608 File Offset: 0x00071808
 		[NullableContext(1)]
 		public UKuroCharacterRecorder(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroCharacterRecorder.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700520E RID: 21006
-		// (get) Token: 0x06014C0A RID: 85002 RVA: 0x001E84AB File Offset: 0x001E66AB
-		// (set) Token: 0x06014C0B RID: 85003 RVA: 0x001E84BB File Offset: 0x001E66BB
+		// Token: 0x17001066 RID: 4198
+		// (get) Token: 0x0600527E RID: 21118 RVA: 0x0007363B File Offset: 0x0007183B
+		// (set) Token: 0x0600527F RID: 21119 RVA: 0x0007364B File Offset: 0x0007184B
 		public unsafe bool bUseClone
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700520F RID: 21007
-		// (get) Token: 0x06014C0C RID: 85004 RVA: 0x001E84CC File Offset: 0x001E66CC
-		// (set) Token: 0x06014C0D RID: 85005 RVA: 0x001E84DC File Offset: 0x001E66DC
+		// Token: 0x17001067 RID: 4199
+		// (get) Token: 0x06005280 RID: 21120 RVA: 0x0007365C File Offset: 0x0007185C
+		// (set) Token: 0x06005281 RID: 21121 RVA: 0x0007366C File Offset: 0x0007186C
 		public unsafe bool bRecordSkeletalMeshAnimSeq
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005210 RID: 21008
-		// (get) Token: 0x06014C0E RID: 85006 RVA: 0x001E84ED File Offset: 0x001E66ED
-		// (set) Token: 0x06014C0F RID: 85007 RVA: 0x001E84FD File Offset: 0x001E66FD
+		// Token: 0x17001068 RID: 4200
+		// (get) Token: 0x06005282 RID: 21122 RVA: 0x0007367D File Offset: 0x0007187D
+		// (set) Token: 0x06005283 RID: 21123 RVA: 0x0007368D File Offset: 0x0007188D
 		public unsafe bool bComponentPossessable
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005211 RID: 21009
-		// (get) Token: 0x06014C10 RID: 85008 RVA: 0x001E850E File Offset: 0x001E670E
-		// (set) Token: 0x06014C11 RID: 85009 RVA: 0x001E851E File Offset: 0x001E671E
+		// Token: 0x17001069 RID: 4201
+		// (get) Token: 0x06005284 RID: 21124 RVA: 0x0007369E File Offset: 0x0007189E
+		// (set) Token: 0x06005285 RID: 21125 RVA: 0x000736AE File Offset: 0x000718AE
 		public unsafe bool bActorPossessable
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005212 RID: 21010
-		// (get) Token: 0x06014C12 RID: 85010 RVA: 0x001E852F File Offset: 0x001E672F
-		// (set) Token: 0x06014C13 RID: 85011 RVA: 0x001E8543 File Offset: 0x001E6743
+		// Token: 0x1700106A RID: 4202
+		// (get) Token: 0x06005286 RID: 21126 RVA: 0x000736BF File Offset: 0x000718BF
+		// (set) Token: 0x06005287 RID: 21127 RVA: 0x000736D3 File Offset: 0x000718D3
 		[Nullable(2)]
 		public unsafe UObject BaseBlueprint
 		{
@@ -106,40 +106,40 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014C14 RID: 85012 RVA: 0x001E8558 File Offset: 0x001E6758
+		// Token: 0x06005288 RID: 21128 RVA: 0x000736E8 File Offset: 0x000718E8
 		static UKuroCharacterRecorder()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAnim.KuroCharacterRecorder");
 		}
 
-		// Token: 0x06014C15 RID: 85013 RVA: 0x001E8566 File Offset: 0x001E6766
+		// Token: 0x06005289 RID: 21129 RVA: 0x000736F6 File Offset: 0x000718F6
 		protected UKuroCharacterRecorder(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B500 RID: 46336
+		// Token: 0x04002197 RID: 8599
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroAnim.KuroCharacterRecorder";
 
-		// Token: 0x0400B501 RID: 46337
+		// Token: 0x04002198 RID: 8600
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B502 RID: 46338
+		// Token: 0x04002199 RID: 8601
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B503 RID: 46339
+		// Token: 0x0400219A RID: 8602
 		internal static int __PropertyOffset_bUseClone;
 
-		// Token: 0x0400B504 RID: 46340
+		// Token: 0x0400219B RID: 8603
 		internal static int __PropertyOffset_bRecordSkeletalMeshAnimSeq;
 
-		// Token: 0x0400B505 RID: 46341
+		// Token: 0x0400219C RID: 8604
 		internal static int __PropertyOffset_bComponentPossessable;
 
-		// Token: 0x0400B506 RID: 46342
+		// Token: 0x0400219D RID: 8605
 		internal static int __PropertyOffset_bActorPossessable;
 
-		// Token: 0x0400B507 RID: 46343
+		// Token: 0x0400219E RID: 8606
 		internal static int __PropertyOffset_BaseBlueprint;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EAA RID: 7850
+	// Token: 0x020020E3 RID: 8419
 	public class ISplineWayPoint_SetValue
 	{
-		// Token: 0x04006417 RID: 25623
+		// Token: 0x04006A05 RID: 27141
 		public int Spline;
 
-		// Token: 0x04006418 RID: 25624
+		// Token: 0x04006A06 RID: 27142
 		public int PointId;
 	}
 }

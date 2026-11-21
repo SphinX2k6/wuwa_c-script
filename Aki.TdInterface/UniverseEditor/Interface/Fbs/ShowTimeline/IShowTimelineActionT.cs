@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003B9C RID: 15260
+	// Token: 0x02003FA4 RID: 16292
 	public class IShowTimelineActionT
 	{
-		// Token: 0x1700689A RID: 26778
-		// (get) Token: 0x06014E93 RID: 85651 RVA: 0x00308BA5 File Offset: 0x00306DA5
-		// (set) Token: 0x06014E94 RID: 85652 RVA: 0x00308BAD File Offset: 0x00306DAD
+		// Token: 0x17006E39 RID: 28217
+		// (get) Token: 0x0601635D RID: 90973 RVA: 0x0032F13D File Offset: 0x0032D33D
+		// (set) Token: 0x0601635E RID: 90974 RVA: 0x0032F145 File Offset: 0x0032D345
 		public EShowTimelineType Type { get; set; }
 
-		// Token: 0x1700689B RID: 26779
-		// (get) Token: 0x06014E95 RID: 85653 RVA: 0x00308BB6 File Offset: 0x00306DB6
-		// (set) Token: 0x06014E96 RID: 85654 RVA: 0x00308BBE File Offset: 0x00306DBE
+		// Token: 0x17006E3A RID: 28218
+		// (get) Token: 0x0601635F RID: 90975 RVA: 0x0032F14E File Offset: 0x0032D34E
+		// (set) Token: 0x06016360 RID: 90976 RVA: 0x0032F156 File Offset: 0x0032D356
 		public EShowTimelineActionType ActionType { get; set; }
 
-		// Token: 0x1700689C RID: 26780
-		// (get) Token: 0x06014E97 RID: 85655 RVA: 0x00308BC7 File Offset: 0x00306DC7
-		// (set) Token: 0x06014E98 RID: 85656 RVA: 0x00308BCF File Offset: 0x00306DCF
+		// Token: 0x17006E3B RID: 28219
+		// (get) Token: 0x06016361 RID: 90977 RVA: 0x0032F15F File Offset: 0x0032D35F
+		// (set) Token: 0x06016362 RID: 90978 RVA: 0x0032F167 File Offset: 0x0032D367
 		public int ActionParam { get; set; }
 
-		// Token: 0x1700689D RID: 26781
-		// (get) Token: 0x06014E99 RID: 85657 RVA: 0x00308BD8 File Offset: 0x00306DD8
-		// (set) Token: 0x06014E9A RID: 85658 RVA: 0x00308BE0 File Offset: 0x00306DE0
+		// Token: 0x17006E3C RID: 28220
+		// (get) Token: 0x06016363 RID: 90979 RVA: 0x0032F170 File Offset: 0x0032D370
+		// (set) Token: 0x06016364 RID: 90980 RVA: 0x0032F178 File Offset: 0x0032D378
 		public TShowTimelineActionOptionUnion ActionData { get; set; }
 
-		// Token: 0x1700689E RID: 26782
-		// (get) Token: 0x06014E9B RID: 85659 RVA: 0x00308BE9 File Offset: 0x00306DE9
-		// (set) Token: 0x06014E9C RID: 85660 RVA: 0x00308BF1 File Offset: 0x00306DF1
+		// Token: 0x17006E3D RID: 28221
+		// (get) Token: 0x06016365 RID: 90981 RVA: 0x0032F181 File Offset: 0x0032D381
+		// (set) Token: 0x06016366 RID: 90982 RVA: 0x0032F189 File Offset: 0x0032D389
 		public IShowTimelineActionDisplayConfigT DisplayConfig { get; set; }
 
-		// Token: 0x06014E9D RID: 85661 RVA: 0x00308BFA File Offset: 0x00306DFA
+		// Token: 0x06016367 RID: 90983 RVA: 0x0032F192 File Offset: 0x0032D392
 		public IShowTimelineActionT()
 		{
 			this.Type = EShowTimelineType.Checkpoint;

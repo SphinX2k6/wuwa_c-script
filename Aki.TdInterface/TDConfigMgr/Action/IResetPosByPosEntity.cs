@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DAE RID: 7598
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FC5 RID: 8133
 	[JsonConverter(typeof(IResetPosByPosEntityConverter))]
 	public class IResetPosByPosEntity : IResetPosType
 	{
-		// Token: 0x0600A2CB RID: 41675 RVA: 0x001720E4 File Offset: 0x001702E4
+		// Token: 0x0600ACD5 RID: 44245 RVA: 0x0018680C File Offset: 0x00184A0C
 		private IResetPosByPosEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2CC RID: 41676 RVA: 0x0017211C File Offset: 0x0017031C
+		// Token: 0x0600ACD6 RID: 44246 RVA: 0x00186844 File Offset: 0x00184A44
 		public static IResetPosByPosEntity Create([Nullable(2)] IResetPosByPosEntity instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2CD RID: 41677 RVA: 0x0017212F File Offset: 0x0017032F
+		// Token: 0x0600ACD7 RID: 44247 RVA: 0x00186857 File Offset: 0x00184A57
 		public static IResetPosByPosEntity CreateFromSetValue([Nullable(2)] IResetPosByPosEntity_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2CE RID: 41678 RVA: 0x00172142 File Offset: 0x00170342
+		// Token: 0x0600ACD8 RID: 44248 RVA: 0x0018686A File Offset: 0x00184A6A
 		public new IResetPosByPosEntity_SetValue ToSetValue()
 		{
 			return new IResetPosByPosEntity_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003237 RID: 12855
-		// (get) Token: 0x0600A2CF RID: 41679 RVA: 0x00172161 File Offset: 0x00170361
-		// (set) Token: 0x0600A2D0 RID: 41680 RVA: 0x0017218C File Offset: 0x0017038C
+		// Token: 0x170034D1 RID: 13521
+		// (get) Token: 0x0600ACD9 RID: 44249 RVA: 0x00186889 File Offset: 0x00184A89
+		// (set) Token: 0x0600ACDA RID: 44250 RVA: 0x001868B4 File Offset: 0x00184AB4
 		public override EResetPosType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003238 RID: 12856
-		// (get) Token: 0x0600A2D1 RID: 41681 RVA: 0x0017219A File Offset: 0x0017039A
-		// (set) Token: 0x0600A2D2 RID: 41682 RVA: 0x001721C5 File Offset: 0x001703C5
+		// Token: 0x170034D2 RID: 13522
+		// (get) Token: 0x0600ACDB RID: 44251 RVA: 0x001868C2 File Offset: 0x00184AC2
+		// (set) Token: 0x0600ACDC RID: 44252 RVA: 0x001868ED File Offset: 0x00184AED
 		public virtual int Entity
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061BA RID: 25018
+		// Token: 0x04006742 RID: 26434
 		[Nullable(2)]
 		protected new IResetPosByPosEntity FbInstance;
 
-		// Token: 0x040061BB RID: 25019
+		// Token: 0x04006743 RID: 26435
 		[Nullable(2)]
 		protected new IResetPosByPosEntity_SetValue PocoInterface;
 	}

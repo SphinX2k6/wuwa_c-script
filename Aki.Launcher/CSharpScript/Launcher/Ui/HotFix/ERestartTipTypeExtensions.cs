@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000EC RID: 236
+	// Token: 0x020000F0 RID: 240
 	public static class ERestartTipTypeExtensions
 	{
-		// Token: 0x060007DC RID: 2012 RVA: 0x0003CACC File Offset: 0x0003ACCC
+		// Token: 0x06000810 RID: 2064 RVA: 0x0003EE6C File Offset: 0x0003D06C
 		public static string ToEnumString(this ERestartTipType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return result;
 		}
 
-		// Token: 0x060007DD RID: 2013 RVA: 0x0003CB20 File Offset: 0x0003AD20
+		// Token: 0x06000811 RID: 2065 RVA: 0x0003EEC0 File Offset: 0x0003D0C0
 		public static ERestartTipType FromString(string name)
 		{
 			ERestartTipType result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return result;
 		}
 
-		// Token: 0x060007DE RID: 2014 RVA: 0x0003CB4C File Offset: 0x0003AD4C
+		// Token: 0x06000812 RID: 2066 RVA: 0x0003EEEC File Offset: 0x0003D0EC
 		public static bool TryFromString(string name, out ERestartTipType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return true;
 		}
 
-		// Token: 0x060007DF RID: 2015 RVA: 0x0003CBB4 File Offset: 0x0003ADB4
+		// Token: 0x06000813 RID: 2067 RVA: 0x0003EF54 File Offset: 0x0003D154
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			};
 		}
 
-		// Token: 0x060007E0 RID: 2016 RVA: 0x0003CBDC File Offset: 0x0003ADDC
+		// Token: 0x06000814 RID: 2068 RVA: 0x0003EF7C File Offset: 0x0003D17C
 		public static ERestartTipType[] GetValues()
 		{
 			return new ERestartTipType[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			};
 		}
 
-		// Token: 0x060007E1 RID: 2017 RVA: 0x0003CBEF File Offset: 0x0003ADEF
+		// Token: 0x06000815 RID: 2069 RVA: 0x0003EF8F File Offset: 0x0003D18F
 		public static string[] GetNames()
 		{
 			return new string[]

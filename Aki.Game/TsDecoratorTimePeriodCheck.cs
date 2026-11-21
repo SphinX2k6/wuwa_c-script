@@ -13,8 +13,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000023 RID: 35
-	// (get) Token: 0x06000100 RID: 256 RVA: 0x000059EF File Offset: 0x00003BEF
-	// (set) Token: 0x06000101 RID: 257 RVA: 0x00005A03 File Offset: 0x00003C03
+	// (get) Token: 0x06000100 RID: 256 RVA: 0x00005BCB File Offset: 0x00003DCB
+	// (set) Token: 0x06000101 RID: 257 RVA: 0x00005BDF File Offset: 0x00003DDF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EArithmeticKeyOperation> CheckType
 	{
@@ -29,8 +29,8 @@ public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUOb
 	}
 
 	// Token: 0x17000024 RID: 36
-	// (get) Token: 0x06000102 RID: 258 RVA: 0x00005A18 File Offset: 0x00003C18
-	// (set) Token: 0x06000103 RID: 259 RVA: 0x00005A2C File Offset: 0x00003C2C
+	// (get) Token: 0x06000102 RID: 258 RVA: 0x00005BF4 File Offset: 0x00003DF4
+	// (set) Token: 0x06000103 RID: 259 RVA: 0x00005C08 File Offset: 0x00003E08
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TimePeriod
@@ -47,7 +47,7 @@ public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000104 RID: 260 RVA: 0x00005A41 File Offset: 0x00003C41
+	// Token: 0x06000104 RID: 260 RVA: 0x00005C1D File Offset: 0x00003E1D
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -58,32 +58,28 @@ public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000105 RID: 261 RVA: 0x00005A78 File Offset: 0x00003C78
+	// Token: 0x06000105 RID: 261 RVA: 0x00005C54 File Offset: 0x00003E54
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorTimePeriodCheck) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorTimePeriodCheck.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000106 RID: 262 RVA: 0x00005B18 File Offset: 0x00003D18
+	// Token: 0x06000106 RID: 262 RVA: 0x00005D0C File Offset: 0x00003F0C
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -119,7 +115,7 @@ public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUOb
 		return flag;
 	}
 
-	// Token: 0x06000107 RID: 263 RVA: 0x00005BC2 File Offset: 0x00003DC2
+	// Token: 0x06000107 RID: 263 RVA: 0x00005DB6 File Offset: 0x00003FB6
 	[NullableContext(1)]
 	private ETimePeriod ConvertETimePerioidType(string type)
 	{
@@ -130,7 +126,7 @@ public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUOb
 		return ETimePeriod.Night;
 	}
 
-	// Token: 0x06000108 RID: 264 RVA: 0x00005BD4 File Offset: 0x00003DD4
+	// Token: 0x06000108 RID: 264 RVA: 0x00005DC8 File Offset: 0x00003FC8
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorTimePeriodCheck._ClassPtr == IntPtr.Zero)
@@ -140,23 +136,23 @@ public class TsDecoratorTimePeriodCheck : UBTDecorator_BlueprintBase, IUnrealUOb
 		return TsDecoratorTimePeriodCheck._ClassPtr;
 	}
 
-	// Token: 0x06000109 RID: 265 RVA: 0x00005BF8 File Offset: 0x00003DF8
+	// Token: 0x06000109 RID: 265 RVA: 0x00005DEC File Offset: 0x00003FEC
 	public TsDecoratorTimePeriodCheck() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorTimePeriodCheck.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600010A RID: 266 RVA: 0x00005C20 File Offset: 0x00003E20
+	// Token: 0x0600010A RID: 266 RVA: 0x00005E14 File Offset: 0x00004014
 	[NullableContext(1)]
 	public TsDecoratorTimePeriodCheck(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorTimePeriodCheck.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600010B RID: 267 RVA: 0x00005C53 File Offset: 0x00003E53
+	// Token: 0x0600010B RID: 267 RVA: 0x00005E47 File Offset: 0x00004047
 	protected TsDecoratorTimePeriodCheck(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600010C RID: 268 RVA: 0x00005C68 File Offset: 0x00003E68
+	// Token: 0x0600010C RID: 268 RVA: 0x00005E5C File Offset: 0x0000405C
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

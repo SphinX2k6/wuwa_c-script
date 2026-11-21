@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CD1 RID: 15569
+	// Token: 0x020040E6 RID: 16614
 	public enum ESpringFestivalGameplayType : byte
 	{
-		// Token: 0x0400B4EA RID: 46314
+		// Token: 0x0400BE92 RID: 48786
 		MixDrinks,
-		// Token: 0x0400B4EB RID: 46315
+		// Token: 0x0400BE93 RID: 48787
 		GuessJoker
 	}
 }

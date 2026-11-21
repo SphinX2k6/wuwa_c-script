@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000E0 RID: 224
+	// Token: 0x020000E3 RID: 227
 	public class HotFixPopupRepairView : HotFixPopupUiView
 	{
-		// Token: 0x06000759 RID: 1881 RVA: 0x0003B510 File Offset: 0x00039710
+		// Token: 0x06000776 RID: 1910 RVA: 0x0003D0FC File Offset: 0x0003B2FC
 		protected override void OnStart()
 		{
 			base.OnStart();

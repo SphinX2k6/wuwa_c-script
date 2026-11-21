@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200097C RID: 2428
+	// Token: 0x02000A51 RID: 2641
 	public class ConfigSpringFestivalMainTaskByQuestId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038FC RID: 14588 RVA: 0x0019BBB4 File Offset: 0x00199DB4
+		// Token: 0x06003DFA RID: 15866 RVA: 0x001BAF48 File Offset: 0x001B9148
 		static ConfigSpringFestivalMainTaskByQuestId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringFestivalMainTaskByQuestId.CreateStaticDefaultValue), new Action(ConfigSpringFestivalMainTaskByQuestId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038FD RID: 14589 RVA: 0x0019BBD4 File Offset: 0x00199DD4
+		// Token: 0x06003DFB RID: 15867 RVA: 0x001BAF68 File Offset: 0x001B9168
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringFestivalMainTaskByQuestId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038FE RID: 14590 RVA: 0x0019BC53 File Offset: 0x00199E53
+		// Token: 0x06003DFC RID: 15868 RVA: 0x001BAFE7 File Offset: 0x001B91E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringFestivalMainTaskByQuestId.LogPair = null;
 			ConfigSpringFestivalMainTaskByQuestId.HandleId = 0;
 		}
 
-		// Token: 0x060038FF RID: 14591 RVA: 0x0019BC61 File Offset: 0x00199E61
+		// Token: 0x06003DFD RID: 15869 RVA: 0x001BAFF5 File Offset: 0x001B91F5
 		public static void Init()
 		{
 			ConfigSpringFestivalMainTaskByQuestId.HandleId = ConfigCommon.InitDataStatement(ConfigSpringFestivalMainTaskByQuestId.HandleId, "db_spring26.db", "select BinData from `SpringFestivalMainTask` where QuestId=?");
 		}
 
-		// Token: 0x06003900 RID: 14592 RVA: 0x0019BC7C File Offset: 0x00199E7C
+		// Token: 0x06003DFE RID: 15870 RVA: 0x001BB010 File Offset: 0x001B9210
 		public static SpringFestivalMainTask? GetConfig(int p0QuestId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpringFestivalMainTaskByQuestId.HandleId, ConfigSpringFestivalMainTaskByQuestId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpringFestivalMainTask?(rootAsSpringFestivalMainTask);
 		}
 
-		// Token: 0x0400424A RID: 16970
+		// Token: 0x0400481D RID: 18461
 		private const string DB = "db_spring26.db";
 
-		// Token: 0x0400424B RID: 16971
+		// Token: 0x0400481E RID: 18462
 		private const string FILE = "c.3.1春节活动外围.xlsx";
 
-		// Token: 0x0400424C RID: 16972
+		// Token: 0x0400481F RID: 18463
 		private const string TABLE = "SpringFestivalMainTask";
 
-		// Token: 0x0400424D RID: 16973
+		// Token: 0x04004820 RID: 18464
 		private const string COMMAND = "select BinData from `SpringFestivalMainTask` where QuestId=?";
 
-		// Token: 0x0400424E RID: 16974
+		// Token: 0x04004821 RID: 18465
 		private const string KEY_PREFIX = "SpringFestivalMainTaskByQuestId";
 
-		// Token: 0x0400424F RID: 16975
+		// Token: 0x04004822 RID: 18466
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004250 RID: 16976
+		// Token: 0x04004823 RID: 18467
 		private static int HandleId;
 	}
 }

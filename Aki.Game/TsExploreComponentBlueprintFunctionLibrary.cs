@@ -12,12 +12,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E3F RID: 11839
+// Token: 0x0200239B RID: 9115
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsExploreComponentBlueprintFunctionLibrary.TsExploreComponentBlueprintFunctionLibrary_C")]
 public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06019017 RID: 102423 RVA: 0x00671840 File Offset: 0x0066FA40
+	// Token: 0x060168E4 RID: 92388 RVA: 0x00697708 File Offset: 0x00695908
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static FVectorDouble CharacterGetHookLocation(int characterEntityId)
 	{
@@ -39,7 +39,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return grapplingHookPointComponent.HookLocation.ToUeVector(false);
 	}
 
-	// Token: 0x06019018 RID: 102424 RVA: 0x0067193C File Offset: 0x0066FB3C
+	// Token: 0x060168E5 RID: 92389 RVA: 0x00697804 File Offset: 0x00695A04
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static FVectorDouble MotorcycleGetHookLocation(int motorcycleEntityId)
 	{
@@ -61,7 +61,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return grapplingHookPointComponent.HookLocation.ToUeVector(false);
 	}
 
-	// Token: 0x06019019 RID: 102425 RVA: 0x00671A38 File Offset: 0x0066FC38
+	// Token: 0x060168E6 RID: 92390 RVA: 0x00697900 File Offset: 0x00695B00
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int CharacterGetInteractingHookEntityId(int characterEntityId)
 	{
@@ -83,7 +83,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return grapplingHookPointComponent.Entity.Id;
 	}
 
-	// Token: 0x0601901A RID: 102426 RVA: 0x00671B30 File Offset: 0x0066FD30
+	// Token: 0x060168E7 RID: 92391 RVA: 0x006979F8 File Offset: 0x00695BF8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int MotorcycleGetInteractingHookEntityId(int motorcycleEntityId)
 	{
@@ -105,7 +105,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return grapplingHookPointComponent.Entity.Id;
 	}
 
-	// Token: 0x0601901B RID: 102427 RVA: 0x00671C28 File Offset: 0x0066FE28
+	// Token: 0x060168E8 RID: 92392 RVA: 0x00697AF0 File Offset: 0x00695CF0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static EHookInteractTypeBp CharacterGetInteractingHookType(int characterEntityId)
 	{
@@ -127,7 +127,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return grapplingHookPointComponent.GetHookInteractTypeBp();
 	}
 
-	// Token: 0x0601901C RID: 102428 RVA: 0x00671D18 File Offset: 0x0066FF18
+	// Token: 0x060168E9 RID: 92393 RVA: 0x00697BE0 File Offset: 0x00695DE0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static EHookInteractTypeBp MotorcycleGetInteractingHookType(int motorcycleEntityId)
 	{
@@ -149,7 +149,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return grapplingHookPointComponent.GetHookInteractTypeBp();
 	}
 
-	// Token: 0x0601901D RID: 102429 RVA: 0x00671E08 File Offset: 0x00670008
+	// Token: 0x060168EA RID: 92394 RVA: 0x00697CD0 File Offset: 0x00695ED0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool MotorcyclePullCollection(int motorcycleEntityId)
 	{
@@ -157,7 +157,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return component != null && component.Valid && component.TryPullCollection();
 	}
 
-	// Token: 0x0601901E RID: 102430 RVA: 0x00671E34 File Offset: 0x00670034
+	// Token: 0x060168EB RID: 92395 RVA: 0x00697CFC File Offset: 0x00695EFC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsMotorcyclePullingCollectionWithProgress(int motorcycleEntityId)
 	{
@@ -170,7 +170,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return false;
 	}
 
-	// Token: 0x0601901F RID: 102431 RVA: 0x00671E6C File Offset: 0x0067006C
+	// Token: 0x060168EC RID: 92396 RVA: 0x00697D34 File Offset: 0x00695F34
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool MotorcycleCheckPullCollectionFinished(int motorcycleEntityId)
 	{
@@ -204,7 +204,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return pullingTarget2 == null || pullingTarget2.MoveFinish;
 	}
 
-	// Token: 0x06019020 RID: 102432 RVA: 0x00671F70 File Offset: 0x00670170
+	// Token: 0x060168ED RID: 92397 RVA: 0x00697E38 File Offset: 0x00696038
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool MotorcycleForceLockTarget(int motorcycleEntityId, int targetEntityId)
 	{
@@ -226,7 +226,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return component.ForceLockTarget(component2, "MotorcycleForceLockTarget");
 	}
 
-	// Token: 0x06019021 RID: 102433 RVA: 0x0067205C File Offset: 0x0067025C
+	// Token: 0x060168EE RID: 92398 RVA: 0x00697F24 File Offset: 0x00696124
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool CharacterForceLockTarget(int characterEntityId, int targetEntityId)
 	{
@@ -248,7 +248,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return component.ForceLockTarget(component2, "CharacterForceLockTarget");
 	}
 
-	// Token: 0x06019022 RID: 102434 RVA: 0x00672148 File Offset: 0x00670348
+	// Token: 0x060168EF RID: 92399 RVA: 0x00698010 File Offset: 0x00696210
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool CharacterCancelLockTarget(int characterEntityId, bool resetFocusTarget)
 	{
@@ -267,7 +267,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return true;
 	}
 
-	// Token: 0x06019023 RID: 102435 RVA: 0x006721B0 File Offset: 0x006703B0
+	// Token: 0x060168F0 RID: 92400 RVA: 0x00698078 File Offset: 0x00696278
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool MotorcycleGetFixHookParams(int motorcycleEntityId, ref float speed, ref UCurveFloat speedCurve, ref bool needQuat, ref FQuat targetQuat, ref UCurveFloat quatCurve)
@@ -290,7 +290,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return true;
 	}
 
-	// Token: 0x06019024 RID: 102436 RVA: 0x00672280 File Offset: 0x00670480
+	// Token: 0x060168F1 RID: 92401 RVA: 0x00698148 File Offset: 0x00696348
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static void SetExploreComponentSyncEnabled(int entityId, bool enabled)
 	{
@@ -319,7 +319,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		component.SyncEnabled = enabled;
 	}
 
-	// Token: 0x06019025 RID: 102437 RVA: 0x006723A8 File Offset: 0x006705A8
+	// Token: 0x060168F2 RID: 92402 RVA: 0x00698270 File Offset: 0x00696470
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static long GetCharacterFixHookBuffIdByTarget(int characterEntityId)
 	{
@@ -339,7 +339,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return component.GetFixHookBuffIdByTarget();
 	}
 
-	// Token: 0x06019026 RID: 102438 RVA: 0x00672450 File Offset: 0x00670650
+	// Token: 0x060168F3 RID: 92403 RVA: 0x00698318 File Offset: 0x00696518
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static long GetMotorcyclePullCollectionBuffIdByTarget(int motorcycleEntityId)
 	{
@@ -359,7 +359,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return component.GetPullCollectionBuffIdByTarget();
 	}
 
-	// Token: 0x06019027 RID: 102439 RVA: 0x006724F8 File Offset: 0x006706F8
+	// Token: 0x060168F4 RID: 92404 RVA: 0x006983C0 File Offset: 0x006965C0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool TransferRoleInteractingTargetToVehicle(int roleEntityId, int vehicleEntityId)
 	{
@@ -386,7 +386,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return true;
 	}
 
-	// Token: 0x06019028 RID: 102440 RVA: 0x00672564 File Offset: 0x00670764
+	// Token: 0x060168F5 RID: 92405 RVA: 0x0069842C File Offset: 0x0069662C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected unsafe static void SetIsHookEndByInterrupt(int motorcycleEntityId, bool isInterrupt)
 	{
@@ -405,7 +405,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		}
 	}
 
-	// Token: 0x06019029 RID: 102441 RVA: 0x00672608 File Offset: 0x00670808
+	// Token: 0x060168F6 RID: 92406 RVA: 0x006984D0 File Offset: 0x006966D0
 	protected static FVectorDouble GetManipulateInteractTargetLocation(int entityId)
 	{
 		CharacterManipulateInteractComponent component = EntitySystem.Instance.GetComponent<CharacterManipulateInteractComponent>(entityId);
@@ -418,7 +418,7 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return baseActorComponent.ActorLocation;
 	}
 
-	// Token: 0x0601902A RID: 102442 RVA: 0x0067264D File Offset: 0x0067084D
+	// Token: 0x060168F7 RID: 92407 RVA: 0x00698515 File Offset: 0x00696715
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsExploreComponentBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -428,95 +428,95 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		return TsExploreComponentBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601902B RID: 102443 RVA: 0x00672674 File Offset: 0x00670874
+	// Token: 0x060168F8 RID: 92408 RVA: 0x0069853C File Offset: 0x0069673C
 	public TsExploreComponentBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(TsExploreComponentBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601902C RID: 102444 RVA: 0x0067269C File Offset: 0x0067089C
+	// Token: 0x060168F9 RID: 92409 RVA: 0x00698564 File Offset: 0x00696764
 	[NullableContext(1)]
 	public TsExploreComponentBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsExploreComponentBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601902D RID: 102445 RVA: 0x006726CF File Offset: 0x006708CF
+	// Token: 0x060168FA RID: 92410 RVA: 0x00698597 File Offset: 0x00696797
 	protected TsExploreComponentBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601902E RID: 102446 RVA: 0x006726D8 File Offset: 0x006708D8
+	// Token: 0x060168FB RID: 92411 RVA: 0x006985A0 File Offset: 0x006967A0
 	protected unsafe static void __CPPCALL_CharacterGetHookLocation_Implementation(TsExploreComponentBlueprintFunctionLibrary.__CharacterGetHookLocation_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.CharacterGetHookLocation(__Params->characterEntityId);
 	}
 
-	// Token: 0x0601902F RID: 102447 RVA: 0x006726EB File Offset: 0x006708EB
+	// Token: 0x060168FC RID: 92412 RVA: 0x006985B3 File Offset: 0x006967B3
 	protected unsafe static void __CPPCALL_MotorcycleGetHookLocation_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcycleGetHookLocation_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.MotorcycleGetHookLocation(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x06019030 RID: 102448 RVA: 0x006726FE File Offset: 0x006708FE
+	// Token: 0x060168FD RID: 92413 RVA: 0x006985C6 File Offset: 0x006967C6
 	protected unsafe static void __CPPCALL_CharacterGetInteractingHookEntityId_Implementation(TsExploreComponentBlueprintFunctionLibrary.__CharacterGetInteractingHookEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.CharacterGetInteractingHookEntityId(__Params->characterEntityId);
 	}
 
-	// Token: 0x06019031 RID: 102449 RVA: 0x00672711 File Offset: 0x00670911
+	// Token: 0x060168FE RID: 92414 RVA: 0x006985D9 File Offset: 0x006967D9
 	protected unsafe static void __CPPCALL_MotorcycleGetInteractingHookEntityId_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcycleGetInteractingHookEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.MotorcycleGetInteractingHookEntityId(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x06019032 RID: 102450 RVA: 0x00672724 File Offset: 0x00670924
+	// Token: 0x060168FF RID: 92415 RVA: 0x006985EC File Offset: 0x006967EC
 	protected unsafe static void __CPPCALL_CharacterGetInteractingHookType_Implementation(TsExploreComponentBlueprintFunctionLibrary.__CharacterGetInteractingHookType_FunctionParams* __Params)
 	{
 		*(&__Params->__Result) = (byte)TsExploreComponentBlueprintFunctionLibrary.CharacterGetInteractingHookType(__Params->characterEntityId);
 	}
 
-	// Token: 0x06019033 RID: 102451 RVA: 0x00672739 File Offset: 0x00670939
+	// Token: 0x06016900 RID: 92416 RVA: 0x00698601 File Offset: 0x00696801
 	protected unsafe static void __CPPCALL_MotorcycleGetInteractingHookType_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcycleGetInteractingHookType_FunctionParams* __Params)
 	{
 		*(&__Params->__Result) = (byte)TsExploreComponentBlueprintFunctionLibrary.MotorcycleGetInteractingHookType(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x06019034 RID: 102452 RVA: 0x0067274E File Offset: 0x0067094E
+	// Token: 0x06016901 RID: 92417 RVA: 0x00698616 File Offset: 0x00696816
 	protected unsafe static void __CPPCALL_MotorcyclePullCollection_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcyclePullCollection_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.MotorcyclePullCollection(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x06019035 RID: 102453 RVA: 0x00672761 File Offset: 0x00670961
+	// Token: 0x06016902 RID: 92418 RVA: 0x00698629 File Offset: 0x00696829
 	protected unsafe static void __CPPCALL_IsMotorcyclePullingCollectionWithProgress_Implementation(TsExploreComponentBlueprintFunctionLibrary.__IsMotorcyclePullingCollectionWithProgress_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.IsMotorcyclePullingCollectionWithProgress(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x06019036 RID: 102454 RVA: 0x00672774 File Offset: 0x00670974
+	// Token: 0x06016903 RID: 92419 RVA: 0x0069863C File Offset: 0x0069683C
 	protected unsafe static void __CPPCALL_MotorcycleCheckPullCollectionFinished_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcycleCheckPullCollectionFinished_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.MotorcycleCheckPullCollectionFinished(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x06019037 RID: 102455 RVA: 0x00672787 File Offset: 0x00670987
+	// Token: 0x06016904 RID: 92420 RVA: 0x0069864F File Offset: 0x0069684F
 	protected unsafe static void __CPPCALL_MotorcycleForceLockTarget_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcycleForceLockTarget_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.MotorcycleForceLockTarget(__Params->motorcycleEntityId, __Params->targetEntityId);
 	}
 
-	// Token: 0x06019038 RID: 102456 RVA: 0x006727A0 File Offset: 0x006709A0
+	// Token: 0x06016905 RID: 92421 RVA: 0x00698668 File Offset: 0x00696868
 	protected unsafe static void __CPPCALL_CharacterForceLockTarget_Implementation(TsExploreComponentBlueprintFunctionLibrary.__CharacterForceLockTarget_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.CharacterForceLockTarget(__Params->characterEntityId, __Params->targetEntityId);
 	}
 
-	// Token: 0x06019039 RID: 102457 RVA: 0x006727B9 File Offset: 0x006709B9
+	// Token: 0x06016906 RID: 92422 RVA: 0x00698681 File Offset: 0x00696881
 	protected unsafe static void __CPPCALL_CharacterCancelLockTarget_Implementation(TsExploreComponentBlueprintFunctionLibrary.__CharacterCancelLockTarget_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.CharacterCancelLockTarget(__Params->characterEntityId, __Params->resetFocusTarget);
 	}
 
-	// Token: 0x0601903A RID: 102458 RVA: 0x006727D4 File Offset: 0x006709D4
+	// Token: 0x06016907 RID: 92423 RVA: 0x0069869C File Offset: 0x0069689C
 	protected unsafe static void __CPPCALL_MotorcycleGetFixHookParams_Implementation(TsExploreComponentBlueprintFunctionLibrary.__MotorcycleGetFixHookParams_FunctionParams* __Params)
 	{
 		UCurveFloat orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UCurveFloat>(__Params->speedCurve);
@@ -526,402 +526,402 @@ public class TsExploreComponentBlueprintFunctionLibrary : UBlueprintFunctionLibr
 		*(&__Params->quatCurve) = ((orCreateUObjectByNativePointer2 != null) ? orCreateUObjectByNativePointer2.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601903B RID: 102459 RVA: 0x0067284A File Offset: 0x00670A4A
+	// Token: 0x06016908 RID: 92424 RVA: 0x00698712 File Offset: 0x00696912
 	protected unsafe static void __CPPCALL_SetExploreComponentSyncEnabled_Implementation(TsExploreComponentBlueprintFunctionLibrary.__SetExploreComponentSyncEnabled_FunctionParams* __Params)
 	{
 		TsExploreComponentBlueprintFunctionLibrary.SetExploreComponentSyncEnabled(__Params->entityId, __Params->enabled);
 	}
 
-	// Token: 0x0601903C RID: 102460 RVA: 0x0067285D File Offset: 0x00670A5D
+	// Token: 0x06016909 RID: 92425 RVA: 0x00698725 File Offset: 0x00696925
 	protected unsafe static void __CPPCALL_GetCharacterFixHookBuffIdByTarget_Implementation(TsExploreComponentBlueprintFunctionLibrary.__GetCharacterFixHookBuffIdByTarget_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.GetCharacterFixHookBuffIdByTarget(__Params->characterEntityId);
 	}
 
-	// Token: 0x0601903D RID: 102461 RVA: 0x00672870 File Offset: 0x00670A70
+	// Token: 0x0601690A RID: 92426 RVA: 0x00698738 File Offset: 0x00696938
 	protected unsafe static void __CPPCALL_GetMotorcyclePullCollectionBuffIdByTarget_Implementation(TsExploreComponentBlueprintFunctionLibrary.__GetMotorcyclePullCollectionBuffIdByTarget_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.GetMotorcyclePullCollectionBuffIdByTarget(__Params->motorcycleEntityId);
 	}
 
-	// Token: 0x0601903E RID: 102462 RVA: 0x00672883 File Offset: 0x00670A83
+	// Token: 0x0601690B RID: 92427 RVA: 0x0069874B File Offset: 0x0069694B
 	protected unsafe static void __CPPCALL_TransferRoleInteractingTargetToVehicle_Implementation(TsExploreComponentBlueprintFunctionLibrary.__TransferRoleInteractingTargetToVehicle_FunctionParams* __Params)
 	{
 		__Params->__Result = TsExploreComponentBlueprintFunctionLibrary.TransferRoleInteractingTargetToVehicle(__Params->roleEntityId, __Params->vehicleEntityId);
 	}
 
-	// Token: 0x0601903F RID: 102463 RVA: 0x0067289C File Offset: 0x00670A9C
+	// Token: 0x0601690C RID: 92428 RVA: 0x00698764 File Offset: 0x00696964
 	protected unsafe static void __CPPCALL_SetIsHookEndByInterrupt_Implementation(TsExploreComponentBlueprintFunctionLibrary.__SetIsHookEndByInterrupt_FunctionParams* __Params)
 	{
 		TsExploreComponentBlueprintFunctionLibrary.SetIsHookEndByInterrupt(__Params->motorcycleEntityId, __Params->isInterrupt);
 	}
 
-	// Token: 0x0400BB91 RID: 48017
+	// Token: 0x0400BF1F RID: 48927
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsExploreComponentBlueprintFunctionLibrary.TsExploreComponentBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400BB92 RID: 48018
+	// Token: 0x0400BF20 RID: 48928
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400BB93 RID: 48019
+	// Token: 0x0400BF21 RID: 48929
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x020093AF RID: 37807
+	// Token: 0x020085D5 RID: 34261
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __CharacterGetHookLocation_FunctionParams
 	{
-		// Token: 0x0402FA5D RID: 195165
+		// Token: 0x0402B0E3 RID: 176355
 		[FieldOffset(0)]
 		public int characterEntityId;
 
-		// Token: 0x0402FA5E RID: 195166
+		// Token: 0x0402B0E4 RID: 176356
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA5F RID: 195167
+		// Token: 0x0402B0E5 RID: 176357
 		[FieldOffset(16)]
 		public FVectorDouble __Result;
 	}
 
-	// Token: 0x020093B0 RID: 37808
+	// Token: 0x020085D6 RID: 34262
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __MotorcycleGetHookLocation_FunctionParams
 	{
-		// Token: 0x0402FA60 RID: 195168
+		// Token: 0x0402B0E6 RID: 176358
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA61 RID: 195169
+		// Token: 0x0402B0E7 RID: 176359
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA62 RID: 195170
+		// Token: 0x0402B0E8 RID: 176360
 		[FieldOffset(16)]
 		public FVectorDouble __Result;
 	}
 
-	// Token: 0x020093B1 RID: 37809
+	// Token: 0x020085D7 RID: 34263
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CharacterGetInteractingHookEntityId_FunctionParams
 	{
-		// Token: 0x0402FA63 RID: 195171
+		// Token: 0x0402B0E9 RID: 176361
 		[FieldOffset(0)]
 		public int characterEntityId;
 
-		// Token: 0x0402FA64 RID: 195172
+		// Token: 0x0402B0EA RID: 176362
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA65 RID: 195173
+		// Token: 0x0402B0EB RID: 176363
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020093B2 RID: 37810
+	// Token: 0x020085D8 RID: 34264
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __MotorcycleGetInteractingHookEntityId_FunctionParams
 	{
-		// Token: 0x0402FA66 RID: 195174
+		// Token: 0x0402B0EC RID: 176364
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA67 RID: 195175
+		// Token: 0x0402B0ED RID: 176365
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA68 RID: 195176
+		// Token: 0x0402B0EE RID: 176366
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020093B3 RID: 37811
+	// Token: 0x020085D9 RID: 34265
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CharacterGetInteractingHookType_FunctionParams
 	{
-		// Token: 0x0402FA69 RID: 195177
+		// Token: 0x0402B0EF RID: 176367
 		[FieldOffset(0)]
 		public int characterEntityId;
 
-		// Token: 0x0402FA6A RID: 195178
+		// Token: 0x0402B0F0 RID: 176368
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA6B RID: 195179
+		// Token: 0x0402B0F1 RID: 176369
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x020093B4 RID: 37812
+	// Token: 0x020085DA RID: 34266
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __MotorcycleGetInteractingHookType_FunctionParams
 	{
-		// Token: 0x0402FA6C RID: 195180
+		// Token: 0x0402B0F2 RID: 176370
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA6D RID: 195181
+		// Token: 0x0402B0F3 RID: 176371
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA6E RID: 195182
+		// Token: 0x0402B0F4 RID: 176372
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x020093B5 RID: 37813
+	// Token: 0x020085DB RID: 34267
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __MotorcyclePullCollection_FunctionParams
 	{
-		// Token: 0x0402FA6F RID: 195183
+		// Token: 0x0402B0F5 RID: 176373
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA70 RID: 195184
+		// Token: 0x0402B0F6 RID: 176374
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA71 RID: 195185
+		// Token: 0x0402B0F7 RID: 176375
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093B6 RID: 37814
+	// Token: 0x020085DC RID: 34268
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __IsMotorcyclePullingCollectionWithProgress_FunctionParams
 	{
-		// Token: 0x0402FA72 RID: 195186
+		// Token: 0x0402B0F8 RID: 176376
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA73 RID: 195187
+		// Token: 0x0402B0F9 RID: 176377
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA74 RID: 195188
+		// Token: 0x0402B0FA RID: 176378
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093B7 RID: 37815
+	// Token: 0x020085DD RID: 34269
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __MotorcycleCheckPullCollectionFinished_FunctionParams
 	{
-		// Token: 0x0402FA75 RID: 195189
+		// Token: 0x0402B0FB RID: 176379
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA76 RID: 195190
+		// Token: 0x0402B0FC RID: 176380
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA77 RID: 195191
+		// Token: 0x0402B0FD RID: 176381
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093B8 RID: 37816
+	// Token: 0x020085DE RID: 34270
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __MotorcycleForceLockTarget_FunctionParams
 	{
-		// Token: 0x0402FA78 RID: 195192
+		// Token: 0x0402B0FE RID: 176382
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA79 RID: 195193
+		// Token: 0x0402B0FF RID: 176383
 		[FieldOffset(4)]
 		public int targetEntityId;
 
-		// Token: 0x0402FA7A RID: 195194
+		// Token: 0x0402B100 RID: 176384
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA7B RID: 195195
+		// Token: 0x0402B101 RID: 176385
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093B9 RID: 37817
+	// Token: 0x020085DF RID: 34271
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CharacterForceLockTarget_FunctionParams
 	{
-		// Token: 0x0402FA7C RID: 195196
+		// Token: 0x0402B102 RID: 176386
 		[FieldOffset(0)]
 		public int characterEntityId;
 
-		// Token: 0x0402FA7D RID: 195197
+		// Token: 0x0402B103 RID: 176387
 		[FieldOffset(4)]
 		public int targetEntityId;
 
-		// Token: 0x0402FA7E RID: 195198
+		// Token: 0x0402B104 RID: 176388
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA7F RID: 195199
+		// Token: 0x0402B105 RID: 176389
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093BA RID: 37818
+	// Token: 0x020085E0 RID: 34272
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CharacterCancelLockTarget_FunctionParams
 	{
-		// Token: 0x0402FA80 RID: 195200
+		// Token: 0x0402B106 RID: 176390
 		[FieldOffset(0)]
 		public int characterEntityId;
 
-		// Token: 0x0402FA81 RID: 195201
+		// Token: 0x0402B107 RID: 176391
 		[FieldOffset(4)]
 		public bool resetFocusTarget;
 
-		// Token: 0x0402FA82 RID: 195202
+		// Token: 0x0402B108 RID: 176392
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA83 RID: 195203
+		// Token: 0x0402B109 RID: 176393
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093BB RID: 37819
+	// Token: 0x020085E1 RID: 34273
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 80)]
 	protected ref struct __MotorcycleGetFixHookParams_FunctionParams
 	{
-		// Token: 0x0402FA84 RID: 195204
+		// Token: 0x0402B10A RID: 176394
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA85 RID: 195205
+		// Token: 0x0402B10B RID: 176395
 		[FieldOffset(4)]
 		public float speed;
 
-		// Token: 0x0402FA86 RID: 195206
+		// Token: 0x0402B10C RID: 176396
 		[FieldOffset(8)]
 		public IntPtr speedCurve;
 
-		// Token: 0x0402FA87 RID: 195207
+		// Token: 0x0402B10D RID: 176397
 		[FieldOffset(16)]
 		public bool needQuat;
 
-		// Token: 0x0402FA88 RID: 195208
+		// Token: 0x0402B10E RID: 176398
 		[FieldOffset(32)]
 		public FQuat targetQuat;
 
-		// Token: 0x0402FA89 RID: 195209
+		// Token: 0x0402B10F RID: 176399
 		[FieldOffset(48)]
 		public IntPtr quatCurve;
 
-		// Token: 0x0402FA8A RID: 195210
+		// Token: 0x0402B110 RID: 176400
 		[FieldOffset(56)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA8B RID: 195211
+		// Token: 0x0402B111 RID: 176401
 		[FieldOffset(64)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093BC RID: 37820
+	// Token: 0x020085E2 RID: 34274
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetExploreComponentSyncEnabled_FunctionParams
 	{
-		// Token: 0x0402FA8C RID: 195212
+		// Token: 0x0402B112 RID: 176402
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA8D RID: 195213
+		// Token: 0x0402B113 RID: 176403
 		[FieldOffset(4)]
 		public bool enabled;
 
-		// Token: 0x0402FA8E RID: 195214
+		// Token: 0x0402B114 RID: 176404
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020093BD RID: 37821
+	// Token: 0x020085E3 RID: 34275
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetCharacterFixHookBuffIdByTarget_FunctionParams
 	{
-		// Token: 0x0402FA8F RID: 195215
+		// Token: 0x0402B115 RID: 176405
 		[FieldOffset(0)]
 		public int characterEntityId;
 
-		// Token: 0x0402FA90 RID: 195216
+		// Token: 0x0402B116 RID: 176406
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA91 RID: 195217
+		// Token: 0x0402B117 RID: 176407
 		[FieldOffset(16)]
 		public long __Result;
 	}
 
-	// Token: 0x020093BE RID: 37822
+	// Token: 0x020085E4 RID: 34276
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMotorcyclePullCollectionBuffIdByTarget_FunctionParams
 	{
-		// Token: 0x0402FA92 RID: 195218
+		// Token: 0x0402B118 RID: 176408
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA93 RID: 195219
+		// Token: 0x0402B119 RID: 176409
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA94 RID: 195220
+		// Token: 0x0402B11A RID: 176410
 		[FieldOffset(16)]
 		public long __Result;
 	}
 
-	// Token: 0x020093BF RID: 37823
+	// Token: 0x020085E5 RID: 34277
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TransferRoleInteractingTargetToVehicle_FunctionParams
 	{
-		// Token: 0x0402FA95 RID: 195221
+		// Token: 0x0402B11B RID: 176411
 		[FieldOffset(0)]
 		public int roleEntityId;
 
-		// Token: 0x0402FA96 RID: 195222
+		// Token: 0x0402B11C RID: 176412
 		[FieldOffset(4)]
 		public int vehicleEntityId;
 
-		// Token: 0x0402FA97 RID: 195223
+		// Token: 0x0402B11D RID: 176413
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA98 RID: 195224
+		// Token: 0x0402B11E RID: 176414
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093C0 RID: 37824
+	// Token: 0x020085E6 RID: 34278
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetIsHookEndByInterrupt_FunctionParams
 	{
-		// Token: 0x0402FA99 RID: 195225
+		// Token: 0x0402B11F RID: 176415
 		[FieldOffset(0)]
 		public int motorcycleEntityId;
 
-		// Token: 0x0402FA9A RID: 195226
+		// Token: 0x0402B120 RID: 176416
 		[FieldOffset(4)]
 		public bool isInterrupt;
 
-		// Token: 0x0402FA9B RID: 195227
+		// Token: 0x0402B121 RID: 176417
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}

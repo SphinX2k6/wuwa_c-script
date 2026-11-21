@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 {
-	// Token: 0x020061BC RID: 25020
+	// Token: 0x0200513A RID: 20794
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityRoleSkinRewardSubView : ActivitySubViewBase
 	{
-		// Token: 0x0603F325 RID: 258853 RVA: 0x00F44ED4 File Offset: 0x00F430D4
+		// Token: 0x06033FE6 RID: 212966 RVA: 0x00E8BE2C File Offset: 0x00E8A02C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			};
 		}
 
-		// Token: 0x0603F326 RID: 258854 RVA: 0x00F4511C File Offset: 0x00F4331C
+		// Token: 0x06033FE7 RID: 212967 RVA: 0x00E8C074 File Offset: 0x00E8A274
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityRoleSkinRewardSubView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F327 RID: 258855 RVA: 0x00F45160 File Offset: 0x00F43360
+		// Token: 0x06033FE8 RID: 212968 RVA: 0x00E8C0B8 File Offset: 0x00E8A2B8
 		protected override void OnRefreshView()
 		{
 			SkinRewardActivityReward roleSkinConfig = this.GetRoleSkinConfig();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603F328 RID: 258856 RVA: 0x00F451B0 File Offset: 0x00F433B0
+		// Token: 0x06033FE9 RID: 212969 RVA: 0x00E8C108 File Offset: 0x00E8A308
 		protected override void OnStart()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603F329 RID: 258857 RVA: 0x00F45360 File Offset: 0x00F43560
+		// Token: 0x06033FEA RID: 212970 RVA: 0x00E8C2B8 File Offset: 0x00E8A4B8
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer viewSequencePlayer = this.ViewSequencePlayer;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			this.ViewSequencePlayer = null;
 		}
 
-		// Token: 0x0603F32A RID: 258858 RVA: 0x00F4537C File Offset: 0x00F4357C
+		// Token: 0x06033FEB RID: 212971 RVA: 0x00E8C2D4 File Offset: 0x00E8A4D4
 		private void RefreshReward()
 		{
 			List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			}
 		}
 
-		// Token: 0x0603F32B RID: 258859 RVA: 0x00F453B8 File Offset: 0x00F435B8
+		// Token: 0x06033FEC RID: 212972 RVA: 0x00E8C310 File Offset: 0x00E8A510
 		private void RefreshDesc()
 		{
 			SkinRewardActivityReward roleSkinConfig = this.GetRoleSkinConfig();
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(12), titleName, Array.Empty<object>());
 		}
 
-		// Token: 0x0603F32C RID: 258860 RVA: 0x00F45448 File Offset: 0x00F43648
+		// Token: 0x06033FED RID: 212973 RVA: 0x00E8C3A0 File Offset: 0x00E8A5A0
 		private void RefreshSex()
 		{
 			base.GetItem(0).SetUIActive(!this.IsFemale);
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			extendToggle2.SetToggleState(this.IsFemale ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603F32D RID: 258861 RVA: 0x00F454F4 File Offset: 0x00F436F4
+		// Token: 0x06033FEE RID: 212974 RVA: 0x00E8C44C File Offset: 0x00E8A64C
 		private void RefreshRedDot()
 		{
 			SkinRewardActivityReward roleSkinConfig = this.GetRoleSkinConfig();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			this.FunctionalComponent.FunctionButton.SetRedDotVisible(redDotVisible);
 		}
 
-		// Token: 0x0603F32E RID: 258862 RVA: 0x00F4553C File Offset: 0x00F4373C
+		// Token: 0x06033FEF RID: 212975 RVA: 0x00E8C494 File Offset: 0x00E8A694
 		private void RefreshBtn()
 		{
 			SkinRewardActivityReward roleSkinConfig = this.GetRoleSkinConfig();
@@ -190,14 +190,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(14), "RoverSkinEvent_Go", Array.Empty<object>());
 		}
 
-		// Token: 0x0603F32F RID: 258863 RVA: 0x00F45600 File Offset: 0x00F43800
+		// Token: 0x06033FF0 RID: 212976 RVA: 0x00E8C558 File Offset: 0x00E8A758
 		public SkinRewardActivityReward GetRoleSkinConfig()
 		{
 			int activityId = ActivityRoleSkinRewardController.Instance.ActivityId;
 			return ActivityRoleSkinRewardConfig.Instance.GetActivityConfig(activityId).Value;
 		}
 
-		// Token: 0x0603F330 RID: 258864 RVA: 0x00F4562B File Offset: 0x00F4382B
+		// Token: 0x06033FF1 RID: 212977 RVA: 0x00E8C583 File Offset: 0x00E8A783
 		[NullableContext(1)]
 		public CommonItemSmallItemGrid InitGridItem()
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			};
 		}
 
-		// Token: 0x0603F331 RID: 258865 RVA: 0x00F45644 File Offset: 0x00F43844
+		// Token: 0x06033FF2 RID: 212978 RVA: 0x00E8C59C File Offset: 0x00E8A79C
 		private void OnSkinDetailButtonClick()
 		{
 			SkinRewardActivityReward roleSkinConfig = this.GetRoleSkinConfig();
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			}, this.IsFemale);
 		}
 
-		// Token: 0x0603F332 RID: 258866 RVA: 0x00F456A2 File Offset: 0x00F438A2
+		// Token: 0x06033FF3 RID: 212979 RVA: 0x00E8C5FA File Offset: 0x00E8A7FA
 		private void OnGoTaskButtonClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			});
 		}
 
-		// Token: 0x0603F333 RID: 258867 RVA: 0x00F456C0 File Offset: 0x00F438C0
+		// Token: 0x06033FF4 RID: 212980 RVA: 0x00E8C618 File Offset: 0x00E8A818
 		private void OnGetSkinButtonClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -270,13 +270,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 					}
 					if (skinRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(skinRewardResponse.ErrorCode, 25865, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(skinRewardResponse.ErrorCode, 28305, null, true, true);
 					}
 				}, 0);
 			});
 		}
 
-		// Token: 0x0603F334 RID: 258868 RVA: 0x00F456E0 File Offset: 0x00F438E0
+		// Token: 0x06033FF5 RID: 212981 RVA: 0x00E8C638 File Offset: 0x00E8A838
 		private void OnMaleToggleClick(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603F335 RID: 258869 RVA: 0x00F45730 File Offset: 0x00F43930
+		// Token: 0x06033FF6 RID: 212982 RVA: 0x00E8C688 File Offset: 0x00E8A888
 		private void OnFemaleToggleClick(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -310,19 +310,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 			this.OnRefreshView();
 		}
 
-		// Token: 0x04020F03 RID: 134915
+		// Token: 0x0401B832 RID: 112690
 		private bool IsFemale;
 
-		// Token: 0x04020F04 RID: 134916
+		// Token: 0x0401B833 RID: 112691
 		private bool IsRewarded;
 
-		// Token: 0x04020F05 RID: 134917
+		// Token: 0x0401B834 RID: 112692
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04020F06 RID: 134918
+		// Token: 0x0401B835 RID: 112693
 		private ActivityDescriptionTypeB DescriptionComponent;
 
-		// Token: 0x04020F07 RID: 134919
+		// Token: 0x0401B836 RID: 112694
 		[Nullable(new byte[]
 		{
 			2,
@@ -330,10 +330,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleSkinReward
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x04020F08 RID: 134920
+		// Token: 0x0401B837 RID: 112695
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x04020F09 RID: 134921
+		// Token: 0x0401B838 RID: 112696
 		private LevelSequencePlayer ViewSequencePlayer;
 	}
 }

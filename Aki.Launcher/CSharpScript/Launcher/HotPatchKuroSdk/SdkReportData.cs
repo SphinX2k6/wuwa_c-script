@@ -7,12 +7,12 @@ using CSharpScript.Launcher.BaseConfig;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001E8 RID: 488
+	// Token: 0x020001ED RID: 493
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SdkReportData
 	{
-		// Token: 0x06000CDE RID: 3294 RVA: 0x0004E30F File Offset: 0x0004C50F
+		// Token: 0x06000D1F RID: 3359 RVA: 0x00050DFB File Offset: 0x0004EFFB
 		public SdkReportData([Nullable(new byte[]
 		{
 			2,
@@ -24,14 +24,14 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			this.IfGlobalSdk = (BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN");
 		}
 
-		// Token: 0x06000CDF RID: 3295 RVA: 0x0004E340 File Offset: 0x0004C540
+		// Token: 0x06000D20 RID: 3360 RVA: 0x00050E2C File Offset: 0x0004F02C
 		public virtual string GetEventName()
 		{
 			LauncherLog.Instance.Debug("当前LogReport没有重写EventName,请重写EventName", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return "";
 		}
 
-		// Token: 0x06000CE0 RID: 3296 RVA: 0x0004E36C File Offset: 0x0004C56C
+		// Token: 0x06000D21 RID: 3361 RVA: 0x00050E58 File Offset: 0x0004F058
 		protected virtual string GetEventDataJson()
 		{
 			if (this.EventData == null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06000CE1 RID: 3297 RVA: 0x0004E468 File Offset: 0x0004C668
+		// Token: 0x06000D22 RID: 3362 RVA: 0x00050F54 File Offset: 0x0004F154
 		public string GetReportString()
 		{
 			string text = JsonSerializer.Serialize<Dictionary<string, string>>(new Dictionary<string, string>
@@ -88,10 +88,10 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return text;
 		}
 
-		// Token: 0x040007FE RID: 2046
+		// Token: 0x0400083E RID: 2110
 		public bool IfGlobalSdk;
 
-		// Token: 0x040007FF RID: 2047
+		// Token: 0x0400083F RID: 2111
 		[Nullable(new byte[]
 		{
 			2,

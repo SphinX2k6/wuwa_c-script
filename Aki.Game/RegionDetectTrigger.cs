@@ -5,13 +5,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FFA RID: 12282
+// Token: 0x0200254F RID: 9551
 [NullableContext(1)]
 [Nullable(0)]
 public class RegionDetectTrigger : Trigger
 {
-	// Token: 0x170023BF RID: 9151
-	// (get) Token: 0x0601A05B RID: 106587 RVA: 0x006D0820 File Offset: 0x006CEA20
+	// Token: 0x17002481 RID: 9345
+	// (get) Token: 0x0601798F RID: 96655 RVA: 0x006F86BC File Offset: 0x006F68BC
 	[Nullable(2)]
 	private UKuroRegionDetectComponent RegionDetect
 	{
@@ -47,19 +47,19 @@ public class RegionDetectTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A05C RID: 106588 RVA: 0x006D088E File Offset: 0x006CEA8E
+	// Token: 0x06017990 RID: 96656 RVA: 0x006F872A File Offset: 0x006F692A
 	[NullableContext(2)]
 	public RegionDetectTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A05D RID: 106589 RVA: 0x006D08B5 File Offset: 0x006CEAB5
+	// Token: 0x06017991 RID: 96657 RVA: 0x006F8751 File Offset: 0x006F6951
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.RegionNameSet = new HashSet<string>(((triggerParams.Length != 0) ? triggerParams[0] : string.Empty).Split('#', StringSplitOptions.None));
 	}
 
-	// Token: 0x0601A05E RID: 106590 RVA: 0x006D08D8 File Offset: 0x006CEAD8
+	// Token: 0x06017992 RID: 96658 RVA: 0x006F8774 File Offset: 0x006F6974
 	protected override void OnActive()
 	{
 		this.AddEvent();
@@ -95,7 +95,7 @@ public class RegionDetectTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A05F RID: 106591 RVA: 0x006D09B8 File Offset: 0x006CEBB8
+	// Token: 0x06017993 RID: 96659 RVA: 0x006F8854 File Offset: 0x006F6A54
 	protected override void OnInactive()
 	{
 		this.RemoveEvent();
@@ -114,7 +114,7 @@ public class RegionDetectTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A060 RID: 106592 RVA: 0x006D0A18 File Offset: 0x006CEC18
+	// Token: 0x06017994 RID: 96660 RVA: 0x006F88B4 File Offset: 0x006F6AB4
 	private void AddEvent()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -137,7 +137,7 @@ public class RegionDetectTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A061 RID: 106593 RVA: 0x006D0AF0 File Offset: 0x006CECF0
+	// Token: 0x06017995 RID: 96661 RVA: 0x006F898C File Offset: 0x006F6B8C
 	private void RemoveEvent()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -160,25 +160,25 @@ public class RegionDetectTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A062 RID: 106594 RVA: 0x006D0BC5 File Offset: 0x006CEDC5
+	// Token: 0x06017996 RID: 96662 RVA: 0x006F8A61 File Offset: 0x006F6C61
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		this.RefreshDetectRoles();
 	}
 
-	// Token: 0x0601A063 RID: 106595 RVA: 0x006D0BCD File Offset: 0x006CEDCD
+	// Token: 0x06017997 RID: 96663 RVA: 0x006F8A69 File Offset: 0x006F6C69
 	private void OnOtherChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		this.RefreshDetectRoles();
 	}
 
-	// Token: 0x0601A064 RID: 106596 RVA: 0x006D0BD5 File Offset: 0x006CEDD5
+	// Token: 0x06017998 RID: 96664 RVA: 0x006F8A71 File Offset: 0x006F6C71
 	private void OnUpdateSceneTeam()
 	{
 		this.RefreshDetectRoles();
 	}
 
-	// Token: 0x0601A065 RID: 106597 RVA: 0x006D0BE0 File Offset: 0x006CEDE0
+	// Token: 0x06017999 RID: 96665 RVA: 0x006F8A7C File Offset: 0x006F6C7C
 	protected void RefreshDetectRoles()
 	{
 		if (this.RegionDetect == null)
@@ -202,7 +202,7 @@ public class RegionDetectTrigger : Trigger
 		this.RegionDetect.SetEventTargets(tarray, this.DetectId);
 	}
 
-	// Token: 0x0601A066 RID: 106598 RVA: 0x006D0C90 File Offset: 0x006CEE90
+	// Token: 0x0601799A RID: 96666 RVA: 0x006F8B2C File Offset: 0x006F6D2C
 	protected void OnEvent(int targetId, string regionName, bool isInRegion)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -217,22 +217,22 @@ public class RegionDetectTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A067 RID: 106599 RVA: 0x006D0CFD File Offset: 0x006CEEFD
+	// Token: 0x0601799B RID: 96667 RVA: 0x006F8B99 File Offset: 0x006F6D99
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4ED RID: 50413
+	// Token: 0x0400C8B5 RID: 51381
 	private HashSet<string> RegionNameSet = new HashSet<string>();
 
-	// Token: 0x0400C4EE RID: 50414
+	// Token: 0x0400C8B6 RID: 51382
 	private int DetectId;
 
-	// Token: 0x0400C4EF RID: 50415
+	// Token: 0x0400C8B7 RID: 51383
 	private readonly Dictionary<AActor, int> ActorToEntityId = new Dictionary<AActor, int>();
 
-	// Token: 0x0400C4F0 RID: 50416
+	// Token: 0x0400C8B8 RID: 51384
 	[Nullable(2)]
 	private UKuroRegionDetectComponent regionDetectInner;
 }

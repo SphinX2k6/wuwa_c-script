@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C6E RID: 15470
+	// Token: 0x0200407D RID: 16509
 	public class ITriggerTipShapeT
 	{
-		// Token: 0x17006AB6 RID: 27318
-		// (get) Token: 0x0601569D RID: 87709 RVA: 0x0031879A File Offset: 0x0031699A
-		// (set) Token: 0x0601569E RID: 87710 RVA: 0x003187A2 File Offset: 0x003169A2
+		// Token: 0x17007067 RID: 28775
+		// (get) Token: 0x06016BB1 RID: 93105 RVA: 0x0033F63A File Offset: 0x0033D83A
+		// (set) Token: 0x06016BB2 RID: 93106 RVA: 0x0033F642 File Offset: 0x0033D842
 		public ETriggerTipShape Type { get; set; }
 
-		// Token: 0x0601569F RID: 87711 RVA: 0x003187AB File Offset: 0x003169AB
+		// Token: 0x06016BB3 RID: 93107 RVA: 0x0033F64B File Offset: 0x0033D84B
 		public ITriggerTipShapeT()
 		{
 			this.Type = ETriggerTipShape.Box;

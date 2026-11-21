@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001767 RID: 5991
+// Token: 0x02000C20 RID: 3104
 public class AttributeSelectItem : UiPanelBase
 {
-	// Token: 0x0600AD97 RID: 44439 RVA: 0x002711F0 File Offset: 0x0026F3F0
+	// Token: 0x0600817E RID: 33150 RVA: 0x0027B6B0 File Offset: 0x002798B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class AttributeSelectItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AD98 RID: 44440 RVA: 0x00271278 File Offset: 0x0026F478
+	// Token: 0x0600817F RID: 33151 RVA: 0x0027B738 File Offset: 0x00279938
 	[NullableContext(1)]
 	private void RefreshByData(IRefineAttrItemData data)
 	{
@@ -37,7 +37,7 @@ public class AttributeSelectItem : UiPanelBase
 		base.GetText(2).SetText(formatAttributeValueString, true);
 	}
 
-	// Token: 0x0600AD99 RID: 44441 RVA: 0x00271338 File Offset: 0x0026F538
+	// Token: 0x06008180 RID: 33152 RVA: 0x0027B7F8 File Offset: 0x002799F8
 	[NullableContext(2)]
 	public void RefreshUi(IRefineAttrItemData data)
 	{
@@ -50,18 +50,18 @@ public class AttributeSelectItem : UiPanelBase
 		base.GetItem(4).SetUIActive(false);
 	}
 
-	// Token: 0x02007D5A RID: 32090
+	// Token: 0x02006EE0 RID: 28384
 	private enum EToggleComponent
 	{
-		// Token: 0x040290BF RID: 168127
+		// Token: 0x040243EA RID: 148458
 		IconAttribute,
-		// Token: 0x040290C0 RID: 168128
+		// Token: 0x040243EB RID: 148459
 		TextName,
-		// Token: 0x040290C1 RID: 168129
+		// Token: 0x040243EC RID: 148460
 		TextValue,
-		// Token: 0x040290C2 RID: 168130
+		// Token: 0x040243ED RID: 148461
 		PanelSelect,
-		// Token: 0x040290C3 RID: 168131
+		// Token: 0x040243EE RID: 148462
 		PanelConfirm
 	}
 }

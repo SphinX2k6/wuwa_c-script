@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E1E RID: 19998
+	// Token: 0x0200532D RID: 21293
 	public enum ESplineLine : byte
 	{
-		// Token: 0x0400DB47 RID: 56135
+		// Token: 0x0400E6B9 RID: 59065
 		Linear,
-		// Token: 0x0400DB48 RID: 56136
+		// Token: 0x0400E6BA RID: 59066
 		Curve,
-		// Token: 0x0400DB49 RID: 56137
+		// Token: 0x0400E6BB RID: 59067
 		Constant,
-		// Token: 0x0400DB4A RID: 56138
+		// Token: 0x0400E6BC RID: 59068
 		CurveCustomTangent
 	}
 }

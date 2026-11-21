@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000809 RID: 2057
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008AC RID: 2220
 	public class IWuWaGoLevelCenter : IWuWaGoEntityBase
 	{
-		// Token: 0x06002CA3 RID: 11427 RVA: 0x00073C88 File Offset: 0x00071E88
+		// Token: 0x06002FD3 RID: 12243 RVA: 0x0007AFEC File Offset: 0x000791EC
 		private IWuWaGoLevelCenter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002CA4 RID: 11428 RVA: 0x00073CC0 File Offset: 0x00071EC0
+		// Token: 0x06002FD4 RID: 12244 RVA: 0x0007B024 File Offset: 0x00079224
 		public static IWuWaGoLevelCenter Create([Nullable(2)] IWuWaGoLevelCenter instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CA5 RID: 11429 RVA: 0x00073CD3 File Offset: 0x00071ED3
+		// Token: 0x06002FD5 RID: 12245 RVA: 0x0007B037 File Offset: 0x00079237
 		public static IWuWaGoLevelCenter CreateFromSetValue([Nullable(2)] IWuWaGoLevelCenter_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CA6 RID: 11430 RVA: 0x00073CE6 File Offset: 0x00071EE6
+		// Token: 0x06002FD6 RID: 12246 RVA: 0x0007B04A File Offset: 0x0007924A
 		public new IWuWaGoLevelCenter_SetValue ToSetValue()
 		{
 			return new IWuWaGoLevelCenter_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BA7 RID: 2983
-		// (get) Token: 0x06002CA7 RID: 11431 RVA: 0x00073D1D File Offset: 0x00071F1D
-		// (set) Token: 0x06002CA8 RID: 11432 RVA: 0x00073D48 File Offset: 0x00071F48
+		// Token: 0x17000C6A RID: 3178
+		// (get) Token: 0x06002FD7 RID: 12247 RVA: 0x0007B081 File Offset: 0x00079281
+		// (set) Token: 0x06002FD8 RID: 12248 RVA: 0x0007B0AC File Offset: 0x000792AC
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BA8 RID: 2984
-		// (get) Token: 0x06002CA9 RID: 11433 RVA: 0x00073D56 File Offset: 0x00071F56
-		// (set) Token: 0x06002CAA RID: 11434 RVA: 0x00073D81 File Offset: 0x00071F81
+		// Token: 0x17000C6B RID: 3179
+		// (get) Token: 0x06002FD9 RID: 12249 RVA: 0x0007B0BA File Offset: 0x000792BA
+		// (set) Token: 0x06002FDA RID: 12250 RVA: 0x0007B0E5 File Offset: 0x000792E5
 		public virtual string LevelKey
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BA9 RID: 2985
-		// (get) Token: 0x06002CAB RID: 11435 RVA: 0x00073D8F File Offset: 0x00071F8F
-		// (set) Token: 0x06002CAC RID: 11436 RVA: 0x00073DB6 File Offset: 0x00071FB6
+		// Token: 0x17000C6C RID: 3180
+		// (get) Token: 0x06002FDB RID: 12251 RVA: 0x0007B0F3 File Offset: 0x000792F3
+		// (set) Token: 0x06002FDC RID: 12252 RVA: 0x0007B11A File Offset: 0x0007931A
 		public virtual List<int> LevelEntityIds
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BAA RID: 2986
-		// (get) Token: 0x06002CAD RID: 11437 RVA: 0x00073DC4 File Offset: 0x00071FC4
-		// (set) Token: 0x06002CAE RID: 11438 RVA: 0x00073DDB File Offset: 0x00071FDB
+		// Token: 0x17000C6D RID: 3181
+		// (get) Token: 0x06002FDD RID: 12253 RVA: 0x0007B128 File Offset: 0x00079328
+		// (set) Token: 0x06002FDE RID: 12254 RVA: 0x0007B13F File Offset: 0x0007933F
 		[Nullable(2)]
 		public virtual string EdActorPath
 		{
@@ -155,11 +153,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D89 RID: 7561
+		// Token: 0x04001F95 RID: 8085
 		[Nullable(2)]
 		protected new IWuWaGoLevelCenter FbInstance;
 
-		// Token: 0x04001D8A RID: 7562
+		// Token: 0x04001F96 RID: 8086
 		[Nullable(2)]
 		protected new IWuWaGoLevelCenter_SetValue PocoInterface;
 	}

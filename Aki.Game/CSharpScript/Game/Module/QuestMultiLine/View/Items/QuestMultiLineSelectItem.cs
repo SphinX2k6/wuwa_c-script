@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FC0 RID: 20416
+	// Token: 0x02003F89 RID: 16265
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineSelectItem : UiPanelBase
 	{
-		// Token: 0x0603440A RID: 214026 RVA: 0x00C450C8 File Offset: 0x00C432C8
+		// Token: 0x06029278 RID: 168568 RVA: 0x00B8E880 File Offset: 0x00B8CA80
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x0603440B RID: 214027 RVA: 0x00C45148 File Offset: 0x00C43348
+		// Token: 0x06029279 RID: 168569 RVA: 0x00B8E900 File Offset: 0x00B8CB00
 		public void RefreshItem(QuestMultiLineBranchData branchData)
 		{
 			if (branchData == null)
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), branchData.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0603440C RID: 214028 RVA: 0x00C451AC File Offset: 0x00C433AC
+		// Token: 0x0602927A RID: 168570 RVA: 0x00B8E964 File Offset: 0x00B8CB64
 		public void SetClickFunction(Action<int> clickFunction)
 		{
 			this.ClickFunction = clickFunction;
 		}
 
-		// Token: 0x0603440D RID: 214029 RVA: 0x00C451B5 File Offset: 0x00C433B5
+		// Token: 0x0602927B RID: 168571 RVA: 0x00B8E96D File Offset: 0x00B8CB6D
 		private void OnClickOk()
 		{
 			Action<int> clickFunction = this.ClickFunction;
@@ -58,11 +58,11 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			clickFunction(this.BranchData.BranchId);
 		}
 
-		// Token: 0x0401BC97 RID: 113815
+		// Token: 0x0401666C RID: 91756
 		[Nullable(2)]
 		private Action<int> ClickFunction;
 
-		// Token: 0x0401BC98 RID: 113816
+		// Token: 0x0401666D RID: 91757
 		[Nullable(2)]
 		private QuestMultiLineBranchData BranchData;
 	}

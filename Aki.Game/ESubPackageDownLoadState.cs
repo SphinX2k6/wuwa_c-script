@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002A95 RID: 10901
+// Token: 0x02002011 RID: 8209
 public enum ESubPackageDownLoadState
 {
-	// Token: 0x0400A86D RID: 43117
+	// Token: 0x0400AC73 RID: 44147
 	DownLoading = 1,
-	// Token: 0x0400A86E RID: 43118
+	// Token: 0x0400AC74 RID: 44148
 	Pause,
-	// Token: 0x0400A86F RID: 43119
+	// Token: 0x0400AC75 RID: 44149
 	Waiting,
-	// Token: 0x0400A870 RID: 43120
+	// Token: 0x0400AC76 RID: 44150
 	None,
-	// Token: 0x0400A871 RID: 43121
+	// Token: 0x0400AC77 RID: 44151
 	Finish
 }

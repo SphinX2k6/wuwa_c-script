@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EEB RID: 24299
+	// Token: 0x02004ED2 RID: 20178
 	public class WheelTowerInfoPanel : UiPanelBase
 	{
-		// Token: 0x0603DBF5 RID: 252917 RVA: 0x00EED074 File Offset: 0x00EEB274
+		// Token: 0x06032B90 RID: 207760 RVA: 0x00E3ED14 File Offset: 0x00E3CF14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DBF6 RID: 252918 RVA: 0x00EED164 File Offset: 0x00EEB364
+		// Token: 0x06032B91 RID: 207761 RVA: 0x00E3EE04 File Offset: 0x00E3D004
 		public void Refresh(bool isEndless)
 		{
 			WheelTowerModel instance = WheelTowerModel.Instance;

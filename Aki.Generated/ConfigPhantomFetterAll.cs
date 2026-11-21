@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000692 RID: 1682
+	// Token: 0x020006AA RID: 1706
 	public class ConfigPhantomFetterAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600277C RID: 10108 RVA: 0x00138F4C File Offset: 0x0013714C
+		// Token: 0x0600280C RID: 10252 RVA: 0x0013F9C8 File Offset: 0x0013DBC8
 		static ConfigPhantomFetterAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomFetterAll.CreateStaticDefaultValue), new Action(ConfigPhantomFetterAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600277D RID: 10109 RVA: 0x00138F6C File Offset: 0x0013716C
+		// Token: 0x0600280D RID: 10253 RVA: 0x0013F9E8 File Offset: 0x0013DBE8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomFetterAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600277E RID: 10110 RVA: 0x00138FEB File Offset: 0x001371EB
+		// Token: 0x0600280E RID: 10254 RVA: 0x0013FA67 File Offset: 0x0013DC67
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomFetterAll.LogPair = null;
 			ConfigPhantomFetterAll.HandleId = 0;
 		}
 
-		// Token: 0x0600277F RID: 10111 RVA: 0x00138FF9 File Offset: 0x001371F9
+		// Token: 0x0600280F RID: 10255 RVA: 0x0013FA75 File Offset: 0x0013DC75
 		public static void Init()
 		{
 			ConfigPhantomFetterAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomFetterAll.HandleId, "db_phantom.db", "select BinData from `PhantomFetter`");
 		}
 
-		// Token: 0x06002780 RID: 10112 RVA: 0x00139014 File Offset: 0x00137214
+		// Token: 0x06002810 RID: 10256 RVA: 0x0013FA90 File Offset: 0x0013DC90
 		[NullableContext(2)]
 		public static IReadOnlyList<PhantomFetter> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002DE4 RID: 11748
+		// Token: 0x04002E8C RID: 11916
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002DE5 RID: 11749
+		// Token: 0x04002E8D RID: 11917
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002DE6 RID: 11750
+		// Token: 0x04002E8E RID: 11918
 		private const string TABLE = "PhantomFetter";
 
-		// Token: 0x04002DE7 RID: 11751
+		// Token: 0x04002E8F RID: 11919
 		private const string COMMAND = "select BinData from `PhantomFetter`";
 
-		// Token: 0x04002DE8 RID: 11752
+		// Token: 0x04002E90 RID: 11920
 		private const string KEY_PREFIX = "PhantomFetterAll";
 
-		// Token: 0x04002DE9 RID: 11753
+		// Token: 0x04002E91 RID: 11921
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002DEA RID: 11754
+		// Token: 0x04002E92 RID: 11922
 		private static int HandleId;
 	}
 }

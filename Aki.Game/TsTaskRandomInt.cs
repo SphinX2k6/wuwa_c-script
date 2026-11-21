@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskRandomInt.TsTaskRandomInt_C")]
 public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001DA RID: 474
-	// (get) Token: 0x06000A57 RID: 2647 RVA: 0x000338A7 File Offset: 0x00031AA7
-	// (set) Token: 0x06000A58 RID: 2648 RVA: 0x000338B7 File Offset: 0x00031AB7
+	// Token: 0x170001DD RID: 477
+	// (get) Token: 0x06000A5D RID: 2653 RVA: 0x00034A4F File Offset: 0x00032C4F
+	// (set) Token: 0x06000A5E RID: 2654 RVA: 0x00034A5F File Offset: 0x00032C5F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Mode
 	{
@@ -30,9 +30,9 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x170001DB RID: 475
-	// (get) Token: 0x06000A59 RID: 2649 RVA: 0x000338C8 File Offset: 0x00031AC8
-	// (set) Token: 0x06000A5A RID: 2650 RVA: 0x000338D8 File Offset: 0x00031AD8
+	// Token: 0x170001DE RID: 478
+	// (get) Token: 0x06000A5F RID: 2655 RVA: 0x00034A70 File Offset: 0x00032C70
+	// (set) Token: 0x06000A60 RID: 2656 RVA: 0x00034A80 File Offset: 0x00032C80
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Min
 	{
@@ -46,9 +46,9 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x170001DC RID: 476
-	// (get) Token: 0x06000A5B RID: 2651 RVA: 0x000338E9 File Offset: 0x00031AE9
-	// (set) Token: 0x06000A5C RID: 2652 RVA: 0x000338F9 File Offset: 0x00031AF9
+	// Token: 0x170001DF RID: 479
+	// (get) Token: 0x06000A61 RID: 2657 RVA: 0x00034A91 File Offset: 0x00032C91
+	// (set) Token: 0x06000A62 RID: 2658 RVA: 0x00034AA1 File Offset: 0x00032CA1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Max
 	{
@@ -62,8 +62,8 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x170001DD RID: 477
-	// (get) Token: 0x06000A5D RID: 2653 RVA: 0x0003390C File Offset: 0x00031B0C
+	// Token: 0x170001E0 RID: 480
+	// (get) Token: 0x06000A63 RID: 2659 RVA: 0x00034AB4 File Offset: 0x00032CB4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> IntValueArray
 	{
@@ -79,8 +79,8 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x170001DE RID: 478
-	// (get) Token: 0x06000A5E RID: 2654 RVA: 0x00033948 File Offset: 0x00031B48
+	// Token: 0x170001E1 RID: 481
+	// (get) Token: 0x06000A64 RID: 2660 RVA: 0x00034AF0 File Offset: 0x00032CF0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> IntWeightArray
 	{
@@ -96,9 +96,9 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x170001DF RID: 479
-	// (get) Token: 0x06000A5F RID: 2655 RVA: 0x00033981 File Offset: 0x00031B81
-	// (set) Token: 0x06000A60 RID: 2656 RVA: 0x00033995 File Offset: 0x00031B95
+	// Token: 0x170001E2 RID: 482
+	// (get) Token: 0x06000A65 RID: 2661 RVA: 0x00034B29 File Offset: 0x00032D29
+	// (set) Token: 0x06000A66 RID: 2662 RVA: 0x00034B3D File Offset: 0x00032D3D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKeyWriteTo
 	{
@@ -112,7 +112,7 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x06000A61 RID: 2657 RVA: 0x000339AC File Offset: 0x00031BAC
+	// Token: 0x06000A67 RID: 2663 RVA: 0x00034B54 File Offset: 0x00032D54
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -141,7 +141,7 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x06000A62 RID: 2658 RVA: 0x00033A9C File Offset: 0x00031C9C
+	// Token: 0x06000A68 RID: 2664 RVA: 0x00034C44 File Offset: 0x00032E44
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
@@ -188,7 +188,7 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000A63 RID: 2659 RVA: 0x00033C04 File Offset: 0x00031E04
+	// Token: 0x06000A69 RID: 2665 RVA: 0x00034DAC File Offset: 0x00032FAC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskRandomInt._ClassPtr == IntPtr.Zero)
@@ -198,22 +198,22 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		return TsTaskRandomInt._ClassPtr;
 	}
 
-	// Token: 0x06000A64 RID: 2660 RVA: 0x00033C28 File Offset: 0x00031E28
+	// Token: 0x06000A6A RID: 2666 RVA: 0x00034DD0 File Offset: 0x00032FD0
 	public TsTaskRandomInt() : this(BuiltinUtils.AllocNativeUObject(TsTaskRandomInt.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000A65 RID: 2661 RVA: 0x00033C50 File Offset: 0x00031E50
+	// Token: 0x06000A6B RID: 2667 RVA: 0x00034DF8 File Offset: 0x00032FF8
 	public TsTaskRandomInt(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskRandomInt.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000A66 RID: 2662 RVA: 0x00033C83 File Offset: 0x00031E83
+	// Token: 0x06000A6C RID: 2668 RVA: 0x00034E2B File Offset: 0x0003302B
 	protected TsTaskRandomInt(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000A67 RID: 2663 RVA: 0x00033CB0 File Offset: 0x00031EB0
+	// Token: 0x06000A6D RID: 2669 RVA: 0x00034E58 File Offset: 0x00033058
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -222,62 +222,62 @@ public class TsTaskRandomInt : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnre
 		this.ReceiveExecuteAI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040007FB RID: 2043
+	// Token: 0x04000803 RID: 2051
 	private bool IsInitTsVariables;
 
-	// Token: 0x040007FC RID: 2044
+	// Token: 0x04000804 RID: 2052
 	private int TsMode;
 
-	// Token: 0x040007FD RID: 2045
+	// Token: 0x04000805 RID: 2053
 	private int TsMin;
 
-	// Token: 0x040007FE RID: 2046
+	// Token: 0x04000806 RID: 2054
 	private int TsMax;
 
-	// Token: 0x040007FF RID: 2047
+	// Token: 0x04000807 RID: 2055
 	private List<int> TsValues = new List<int>();
 
-	// Token: 0x04000800 RID: 2048
+	// Token: 0x04000808 RID: 2056
 	private List<int> TsWeights = new List<int>();
 
-	// Token: 0x04000801 RID: 2049
+	// Token: 0x04000809 RID: 2057
 	private int TsTotalWeight;
 
-	// Token: 0x04000802 RID: 2050
+	// Token: 0x0400080A RID: 2058
 	private string TsBlackboardKeyWriteTo = "";
 
-	// Token: 0x04000803 RID: 2051
+	// Token: 0x0400080B RID: 2059
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskRandomInt.TsTaskRandomInt_C";
 
-	// Token: 0x04000804 RID: 2052
+	// Token: 0x0400080C RID: 2060
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000805 RID: 2053
+	// Token: 0x0400080D RID: 2061
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000806 RID: 2054
+	// Token: 0x0400080E RID: 2062
 	private static int __PropertyOffset_Mode;
 
-	// Token: 0x04000807 RID: 2055
+	// Token: 0x0400080F RID: 2063
 	private static int __PropertyOffset_Min;
 
-	// Token: 0x04000808 RID: 2056
+	// Token: 0x04000810 RID: 2064
 	private static int __PropertyOffset_Max;
 
-	// Token: 0x04000809 RID: 2057
+	// Token: 0x04000811 RID: 2065
 	private static int __PropertyOffset_IntValueArray;
 
-	// Token: 0x0400080A RID: 2058
+	// Token: 0x04000812 RID: 2066
 	[Nullable(2)]
 	private TArray<int> _IntValueArray;
 
-	// Token: 0x0400080B RID: 2059
+	// Token: 0x04000813 RID: 2067
 	private static int __PropertyOffset_IntWeightArray;
 
-	// Token: 0x0400080C RID: 2060
+	// Token: 0x04000814 RID: 2068
 	[Nullable(2)]
 	private TArray<int> _IntWeightArray;
 
-	// Token: 0x0400080D RID: 2061
+	// Token: 0x04000815 RID: 2069
 	private static int __PropertyOffset_BlackboardKeyWriteTo;
 }

@@ -5,18 +5,18 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x0200691B RID: 26907
+	// Token: 0x0200586B RID: 22635
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AnniversarySubActivityAnniversaryGift : AnniversarySubActivityDataBase
 	{
-		// Token: 0x0604318B RID: 274827 RVA: 0x01059ACC File Offset: 0x01057CCC
+		// Token: 0x06037CE3 RID: 228579 RVA: 0x00F9B0F8 File Offset: 0x00F992F8
 		public AnniversarySubActivityAnniversaryGift(int id) : base(id)
 		{
 		}
 
-		// Token: 0x170097E9 RID: 38889
-		// (get) Token: 0x0604318C RID: 274828 RVA: 0x01059AD5 File Offset: 0x01057CD5
+		// Token: 0x17006B29 RID: 27433
+		// (get) Token: 0x06037CE4 RID: 228580 RVA: 0x00F9B101 File Offset: 0x00F99301
 		public ActivityTimePointRewardData ActivityData
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604318D RID: 274829 RVA: 0x01059AF8 File Offset: 0x01057CF8
+		// Token: 0x06037CE5 RID: 228581 RVA: 0x00F9B124 File Offset: 0x00F99324
 		[NullableContext(0)]
 		public override ValueTuple<int, int> GetCurrentProgress()
 		{
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return new ValueTuple<int, int>(num2, num);
 		}
 
-		// Token: 0x04022EEB RID: 143083
+		// Token: 0x0401D747 RID: 120647
 		private ActivityTimePointRewardData ActivityDataCache;
 	}
 }

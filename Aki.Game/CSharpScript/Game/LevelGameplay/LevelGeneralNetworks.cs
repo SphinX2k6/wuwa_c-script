@@ -34,18 +34,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069B1 RID: 27057
+	// Token: 0x02005B0D RID: 23309
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelGeneralNetworks : IStaticVariableResetter
 	{
-		// Token: 0x060434B6 RID: 275638 RVA: 0x010685AE File Offset: 0x010667AE
+		// Token: 0x060394EE RID: 234734 RVA: 0x0100C7FA File Offset: 0x0100A9FA
 		static LevelGeneralNetworks()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelGeneralNetworks.CreateStaticDefaultValue), new Action(LevelGeneralNetworks.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060434B7 RID: 275639 RVA: 0x010685D0 File Offset: 0x010667D0
+		// Token: 0x060394EF RID: 234735 RVA: 0x0100C81C File Offset: 0x0100AA1C
 		public static void Register()
 		{
 			Net instance = Net.Instance;
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			instance55.Register(id55, callback55);
 		}
 
-		// Token: 0x060434B8 RID: 275640 RVA: 0x01068F1C File Offset: 0x0106711C
+		// Token: 0x060394F0 RID: 234736 RVA: 0x0100D168 File Offset: 0x0100B368
 		public static void UnRegister()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ActionNotify);
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.UnRegister(ENotifyMessageId.DollDeliveryNotify);
 		}
 
-		// Token: 0x060434B9 RID: 275641 RVA: 0x010691EC File Offset: 0x010673EC
+		// Token: 0x060394F1 RID: 234737 RVA: 0x0100D438 File Offset: 0x0100B638
 		private static void OnEntityAddDynamicInteractNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityAddDynamicInteractNotify response = (EntityAddDynamicInteractNotify)msg;
@@ -565,7 +565,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434BA RID: 275642 RVA: 0x01069234 File Offset: 0x01067434
+		// Token: 0x060394F2 RID: 234738 RVA: 0x0100D480 File Offset: 0x0100B680
 		private static void OnEntityRemoveDynamicInteractNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityRemoveDynamicInteractNotify response = (EntityRemoveDynamicInteractNotify)msg;
@@ -590,7 +590,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434BB RID: 275643 RVA: 0x0106927C File Offset: 0x0106747C
+		// Token: 0x060394F3 RID: 234739 RVA: 0x0100D4C8 File Offset: 0x0100B6C8
 		private static void OnEntityChangeDynamicInteractTextNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityChangeDynamicInteractTextNotify notify = (EntityChangeDynamicInteractTextNotify)msg;
@@ -615,7 +615,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434BC RID: 275644 RVA: 0x010692C4 File Offset: 0x010674C4
+		// Token: 0x060394F4 RID: 234740 RVA: 0x0100D510 File Offset: 0x0100B710
 		private static void OnEntityInteractNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityInteractingNotify notify = (EntityInteractingNotify)msg;
@@ -640,7 +640,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434BD RID: 275645 RVA: 0x0106930C File Offset: 0x0106750C
+		// Token: 0x060394F5 RID: 234741 RVA: 0x0100D558 File Offset: 0x0100B758
 		private static void HandleEntityStateReadyNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityStateReadyNotify entityStateReadyNotify = (EntityStateReadyNotify)msg;
@@ -657,7 +657,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.UpdateState(entityStateReadyNotify.TagId, entityStateReadyNotify.Ready, false);
 		}
 
-		// Token: 0x060434BE RID: 275646 RVA: 0x01069358 File Offset: 0x01067558
+		// Token: 0x060394F6 RID: 234742 RVA: 0x0100D5A4 File Offset: 0x0100B7A4
 		private static void OnSceneItemBlackboardNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneItemBlackboardNotify sceneItemBlackboardNotify = (SceneItemBlackboardNotify)msg;
@@ -681,7 +681,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.ModifyBlackboardFromRemote(sceneItemBlackboardNotify.Params, sceneItemBlackboardNotify.FullUpdate);
 		}
 
-		// Token: 0x060434BF RID: 275647 RVA: 0x010693E0 File Offset: 0x010675E0
+		// Token: 0x060394F7 RID: 234743 RVA: 0x0100D62C File Offset: 0x0100B82C
 		private static void OnManipulatableSceneItemControllerIdModifyNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			BeControlledNotify notify = (BeControlledNotify)msg;
@@ -709,7 +709,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434C0 RID: 275648 RVA: 0x01069464 File Offset: 0x01067664
+		// Token: 0x060394F8 RID: 234744 RVA: 0x0100D6B0 File Offset: 0x0100B8B0
 		[NullableContext(1)]
 		private static void ControllerIdModifyInternal(BeControlledNotify notify)
 		{
@@ -739,7 +739,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060434C1 RID: 275649 RVA: 0x010694DC File Offset: 0x010676DC
+		// Token: 0x060394F9 RID: 234745 RVA: 0x0100D728 File Offset: 0x0100B928
 		private static void OnSceneItemAutonomousModifyNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneItemSetPosSenderNotify sceneItemSetPosSenderNotify = (SceneItemSetPosSenderNotify)msg;
@@ -761,7 +761,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434C2 RID: 275650 RVA: 0x01069534 File Offset: 0x01067734
+		// Token: 0x060394FA RID: 234746 RVA: 0x0100D780 File Offset: 0x0100B980
 		private unsafe static void SceneItemAutonomousModifyNotifyInternal(long entityId, int posSender)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(entityId);
@@ -804,7 +804,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			sceneItemMovementSyncComponent2.SetAutonomousId(new int?(posSender));
 		}
 
-		// Token: 0x060434C3 RID: 275651 RVA: 0x01069678 File Offset: 0x01067878
+		// Token: 0x060394FB RID: 234747 RVA: 0x0100D8C4 File Offset: 0x0100BAC4
 		private static void OnManipulatableSceneItemPosInFoundationNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			BeControlledPosInFoundationNotify notify = (BeControlledPosInFoundationNotify)msg;
@@ -834,7 +834,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434C4 RID: 275652 RVA: 0x0106971C File Offset: 0x0106791C
+		// Token: 0x060394FC RID: 234748 RVA: 0x0100D968 File Offset: 0x0100BB68
 		[NullableContext(1)]
 		private static void RelationIdModifyInternal(BeControlledPosInFoundationNotify notify)
 		{
@@ -855,7 +855,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060434C5 RID: 275653 RVA: 0x010697A4 File Offset: 0x010679A4
+		// Token: 0x060394FD RID: 234749 RVA: 0x0100D9F0 File Offset: 0x0100BBF0
 		private static void OnItemRelateFoundationNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			ItemRelateFoundationNotify notify = (ItemRelateFoundationNotify)msg;
@@ -885,7 +885,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434C6 RID: 275654 RVA: 0x01069848 File Offset: 0x01067A48
+		// Token: 0x060394FE RID: 234750 RVA: 0x0100DA94 File Offset: 0x0100BC94
 		[NullableContext(1)]
 		private static void ItemRelateFoundationInternal(ItemRelateFoundationNotify notify)
 		{
@@ -921,7 +921,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060434C7 RID: 275655 RVA: 0x01069918 File Offset: 0x01067B18
+		// Token: 0x060394FF RID: 234751 RVA: 0x0100DB64 File Offset: 0x0100BD64
 		private static void OnSceneItemAttachTargetChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityAttachChangeNotify entityAttachChangeNotify = (EntityAttachChangeNotify)msg;
@@ -989,7 +989,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060434C8 RID: 275656 RVA: 0x01069A98 File Offset: 0x01067C98
+		// Token: 0x06039500 RID: 234752 RVA: 0x0100DCE4 File Offset: 0x0100BEE4
 		private static void OnManipulateFxShowNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			BeControlledShowNotify notify = (BeControlledShowNotify)msg;
@@ -1014,7 +1014,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434C9 RID: 275657 RVA: 0x01069B18 File Offset: 0x01067D18
+		// Token: 0x06039501 RID: 234753 RVA: 0x0100DD64 File Offset: 0x0100BF64
 		[NullableContext(1)]
 		private static void FxShowInternal(BeControlledShowNotify notify)
 		{
@@ -1046,7 +1046,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.DeactiveHandFx();
 		}
 
-		// Token: 0x060434CA RID: 275658 RVA: 0x01069BA0 File Offset: 0x01067DA0
+		// Token: 0x06039502 RID: 234754 RVA: 0x0100DDEC File Offset: 0x0100BFEC
 		private static void OnAddPlacementNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			AddPlacementNotify notify = (AddPlacementNotify)msg;
@@ -1071,7 +1071,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434CB RID: 275659 RVA: 0x01069C24 File Offset: 0x01067E24
+		// Token: 0x06039503 RID: 234755 RVA: 0x0100DE70 File Offset: 0x0100C070
 		[NullableContext(1)]
 		private static void AddPlacementInternal(AddPlacementNotify notify)
 		{
@@ -1091,7 +1091,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.PutDownItem(component3, socketIndex, type, true);
 		}
 
-		// Token: 0x060434CC RID: 275660 RVA: 0x01069CEC File Offset: 0x01067EEC
+		// Token: 0x06039504 RID: 234756 RVA: 0x0100DF38 File Offset: 0x0100C138
 		private static void OnRemovePlacementFromBoardNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RemovePlacementFromBoardNotify notify = (RemovePlacementFromBoardNotify)msg;
@@ -1116,7 +1116,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434CD RID: 275661 RVA: 0x01069D70 File Offset: 0x01067F70
+		// Token: 0x06039505 RID: 234757 RVA: 0x0100DFBC File Offset: 0x0100C1BC
 		[NullableContext(1)]
 		private static void RemovePlacementInternal(RemovePlacementFromBoardNotify notify)
 		{
@@ -1136,7 +1136,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.PickUpItem(component3, socketIndex, type, true);
 		}
 
-		// Token: 0x060434CE RID: 275662 RVA: 0x01069E38 File Offset: 0x01068038
+		// Token: 0x06039506 RID: 234758 RVA: 0x0100E084 File Offset: 0x0100C284
 		private static void OnMovePlacementNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			MovePlacementNotify notify = (MovePlacementNotify)msg;
@@ -1161,7 +1161,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434CF RID: 275663 RVA: 0x01069EB8 File Offset: 0x010680B8
+		// Token: 0x06039507 RID: 234759 RVA: 0x0100E104 File Offset: 0x0100C304
 		[NullableContext(1)]
 		private static void MovePlacementInternal(MovePlacementNotify notify)
 		{
@@ -1175,7 +1175,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.PutDownItem(component2, socketIndex, EItemFoundation.BuildingBlock, true);
 		}
 
-		// Token: 0x060434D0 RID: 275664 RVA: 0x01069F44 File Offset: 0x01068144
+		// Token: 0x06039508 RID: 234760 RVA: 0x0100E190 File Offset: 0x0100C390
 		private static void OnCommitBoardSuccessNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			CommitBoardSuccessNotify notify = (CommitBoardSuccessNotify)msg;
@@ -1196,7 +1196,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434D1 RID: 275665 RVA: 0x01069F98 File Offset: 0x01068198
+		// Token: 0x06039509 RID: 234761 RVA: 0x0100E1E4 File Offset: 0x0100C3E4
 		[NullableContext(1)]
 		private static void CommitBoardSuccessInternal(CommitBoardSuccessNotify notify)
 		{
@@ -1204,7 +1204,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			CreatureModel.Instance.GetEntity(boardEntityId).Entity.GetComponent<SceneItemJigsawBaseComponent>().OnFinish();
 		}
 
-		// Token: 0x060434D2 RID: 275666 RVA: 0x01069FC8 File Offset: 0x010681C8
+		// Token: 0x0603950A RID: 234762 RVA: 0x0100E214 File Offset: 0x0100C414
 		private unsafe static void OnActionNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			ActionNotify actionNotify = (ActionNotify)msg;
@@ -1955,7 +1955,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventSystem.Instance.Emit<ActionNotify>(EEventName.BehaviorTreeStartActionSession, actionNotify);
 		}
 
-		// Token: 0x060434D3 RID: 275667 RVA: 0x0106B4F4 File Offset: 0x010696F4
+		// Token: 0x0603950B RID: 234763 RVA: 0x0100F740 File Offset: 0x0100D940
 		[NullableContext(1)]
 		private unsafe static void HandleEntityGroupActionByServerNotify(ActionNotify notify, long creatureDataId, bool isMatch, int triggerIndex)
 		{
@@ -2039,7 +2039,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434D4 RID: 275668 RVA: 0x0106B638 File Offset: 0x01069838
+		// Token: 0x0603950C RID: 234764 RVA: 0x0100F884 File Offset: 0x0100DA84
 		[NullableContext(1)]
 		private unsafe static void HandleEntityGroupFailureActionByServerNotify(ActionNotify notify, long creatureDataId)
 		{
@@ -2108,7 +2108,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434D5 RID: 275669 RVA: 0x0106B76C File Offset: 0x0106996C
+		// Token: 0x0603950D RID: 234765 RVA: 0x0100F9B8 File Offset: 0x0100DBB8
 		[NullableContext(1)]
 		private unsafe static void HandleEntityConditionListenerActionByServerNotify(ActionNotify notify, long creatureDataId, int listenGroupIndex)
 		{
@@ -2182,7 +2182,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434D6 RID: 275670 RVA: 0x0106B8A8 File Offset: 0x01069AA8
+		// Token: 0x0603950E RID: 234766 RVA: 0x0100FAF4 File Offset: 0x0100DCF4
 		[NullableContext(1)]
 		private unsafe static void HandleEntityAfterConditionListenerActionByServerNotify(ActionNotify notify, long creatureDataId, int listenGroupIndex, int afterConditionIndex)
 		{
@@ -2256,7 +2256,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060434D7 RID: 275671 RVA: 0x0106B9EC File Offset: 0x01069BEC
+		// Token: 0x0603950F RID: 234767 RVA: 0x0100FC38 File Offset: 0x0100DE38
 		public static void RequestSceneItemStateChange(int inEntityId, int inType)
 		{
 			SceneItemStateRequest sceneItemStateRequest = SceneItemStateRequest.Create();
@@ -2265,7 +2265,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.Call(ERequestMessageId.SceneItemStateRequest, sceneItemStateRequest, null, 0);
 		}
 
-		// Token: 0x060434D8 RID: 275672 RVA: 0x0106BA34 File Offset: 0x01069C34
+		// Token: 0x06039510 RID: 234768 RVA: 0x0100FC80 File Offset: 0x0100DE80
 		public static void RequestActiveOrDeactiveManipulateFx(int id, bool isActive)
 		{
 			BeControlledShowRequest beControlledShowRequest = BeControlledShowRequest.Create();
@@ -2274,20 +2274,20 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.Call(ERequestMessageId.BeControlledShowRequest, beControlledShowRequest, null, 0);
 		}
 
-		// Token: 0x060434D9 RID: 275673 RVA: 0x0106BA7B File Offset: 0x01069C7B
+		// Token: 0x06039511 RID: 234769 RVA: 0x0100FCC7 File Offset: 0x0100DEC7
 		[NullableContext(1)]
 		public static void RequestAwakePbEntity(int[] inEntityDataId, GeneralContext context)
 		{
 		}
 
-		// Token: 0x060434DA RID: 275674 RVA: 0x0106BA7D File Offset: 0x01069C7D
+		// Token: 0x06039512 RID: 234770 RVA: 0x0100FCC9 File Offset: 0x0100DEC9
 		[NullableContext(1)]
 		public static void RequestSpawnPbEntity(SpawnEntity spawnConfig, Action<bool> callback)
 		{
 			callback(true);
 		}
 
-		// Token: 0x060434DB RID: 275675 RVA: 0x0106BA88 File Offset: 0x01069C88
+		// Token: 0x06039513 RID: 234771 RVA: 0x0100FCD4 File Offset: 0x0100DED4
 		[NullableContext(1)]
 		public unsafe static void RequestChangeEntityState(IChangeEntityStateDirectly inInfo, [Nullable(2)] GeneralContext context)
 		{
@@ -2319,7 +2319,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434DC RID: 275676 RVA: 0x0106BB00 File Offset: 0x01069D00
+		// Token: 0x06039514 RID: 234772 RVA: 0x0100FD4C File Offset: 0x0100DF4C
 		[NullableContext(1)]
 		public unsafe static void RequestEntitySendEvent(long creatureDataId, string eventKey)
 		{
@@ -2363,13 +2363,13 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434DD RID: 275677 RVA: 0x0106BBE7 File Offset: 0x01069DE7
+		// Token: 0x06039515 RID: 234773 RVA: 0x0100FE33 File Offset: 0x0100E033
 		[NullableContext(1)]
 		public static void RequestDoAction(int inActionId, GeneralContext context)
 		{
 		}
 
-		// Token: 0x060434DE RID: 275678 RVA: 0x0106BBEC File Offset: 0x01069DEC
+		// Token: 0x06039516 RID: 234774 RVA: 0x0100FE38 File Offset: 0x0100E038
 		public static void RequestSetInitTagRequest(long inCreatureDataId)
 		{
 			if (inCreatureDataId == 0L)
@@ -2381,7 +2381,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.Call(ERequestMessageId.SetInitTagRequest, setInitTagRequest, null, 0);
 		}
 
-		// Token: 0x060434DF RID: 275679 RVA: 0x0106BC1C File Offset: 0x01069E1C
+		// Token: 0x06039517 RID: 234775 RVA: 0x0100FE68 File Offset: 0x0100E068
 		[NullableContext(1)]
 		public static void RequestActionsFinish(int playerId, int sessionId, int startIndex, string errorMessage, [Nullable(new byte[]
 		{
@@ -2401,7 +2401,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E0 RID: 275680 RVA: 0x0106BC78 File Offset: 0x01069E78
+		// Token: 0x06039518 RID: 234776 RVA: 0x0100FEC4 File Offset: 0x0100E0C4
 		public static void RequestEntityInteractOption(long id, int optionIndex, [Nullable(new byte[]
 		{
 			1,
@@ -2422,7 +2422,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E1 RID: 275681 RVA: 0x0106BCDC File Offset: 0x01069EDC
+		// Token: 0x06039519 RID: 234777 RVA: 0x0100FF28 File Offset: 0x0100E128
 		[NullableContext(1)]
 		public static void RequestEntityDynamicInteractOption(long creatureDataId, string guid, [Nullable(new byte[]
 		{
@@ -2440,7 +2440,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E2 RID: 275682 RVA: 0x0106BD34 File Offset: 0x01069F34
+		// Token: 0x0603951A RID: 234778 RVA: 0x0100FF80 File Offset: 0x0100E180
 		public static void RequestEntityRandomInteractOption(long creatureDataId, int randomOptionIndex, [Nullable(new byte[]
 		{
 			1,
@@ -2457,7 +2457,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E3 RID: 275683 RVA: 0x0106BD8C File Offset: 0x01069F8C
+		// Token: 0x0603951B RID: 234779 RVA: 0x0100FFD8 File Offset: 0x0100E1D8
 		[NullableContext(1)]
 		public static void RequestClientTeleportByClientTrigger(long creatureDataId, int pbDataId, global::Vector location, global::Rotator rotation, int actionIndex, bool isEnter, int? streamingPointIndex, [Nullable(new byte[]
 		{
@@ -2495,7 +2495,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E4 RID: 275684 RVA: 0x0106BE74 File Offset: 0x0106A074
+		// Token: 0x0603951C RID: 234780 RVA: 0x010100C0 File Offset: 0x0100E2C0
 		[NullableContext(1)]
 		public static void RequestClientTeleportByLongPressInteract(long creatureDataId, int pbDataId, global::Vector location, global::Rotator rotation, int actionIndex, int optionIndex, int? streamingPointIndex, [Nullable(new byte[]
 		{
@@ -2533,7 +2533,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E5 RID: 275685 RVA: 0x0106BF5C File Offset: 0x0106A15C
+		// Token: 0x0603951D RID: 234781 RVA: 0x010101A8 File Offset: 0x0100E3A8
 		[NullableContext(1)]
 		public static void RequestClientTeleportByNoRenderPortal(int configId, long vehicleServerEntityId, IVector location, IRotator rotation, [Nullable(new byte[]
 		{
@@ -2562,7 +2562,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E6 RID: 275686 RVA: 0x0106C054 File Offset: 0x0106A254
+		// Token: 0x0603951E RID: 234782 RVA: 0x010102A0 File Offset: 0x0100E4A0
 		[NullableContext(1)]
 		public static void RequestClientTeleportVehicle(long vehicleServerEntityId, global::Vector location, global::Rotator rotation, [Nullable(new byte[]
 		{
@@ -2581,7 +2581,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x060434E7 RID: 275687 RVA: 0x0106C0B0 File Offset: 0x0106A2B0
+		// Token: 0x0603951F RID: 234783 RVA: 0x010102FC File Offset: 0x0100E4FC
 		[NullableContext(1)]
 		public static bool IsEntityEnableAwake(int[] inEntityDataId)
 		{
@@ -2600,7 +2600,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x060434E8 RID: 275688 RVA: 0x0106C124 File Offset: 0x0106A324
+		// Token: 0x06039520 RID: 234784 RVA: 0x01010370 File Offset: 0x0100E570
 		public static bool CheckCurrentPlayerIsParticipator(GeneralContext context)
 		{
 			if (context == null)
@@ -2636,7 +2636,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060434E9 RID: 275689 RVA: 0x0106C1D4 File Offset: 0x0106A3D4
+		// Token: 0x06039521 RID: 234785 RVA: 0x01010420 File Offset: 0x0100E620
 		private static bool CheckIsParticipatorInGeneralLogicTree(BtType btType, int treeConfigId)
 		{
 			bool result = false;
@@ -2655,7 +2655,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060434EA RID: 275690 RVA: 0x0106C214 File Offset: 0x0106A414
+		// Token: 0x06039522 RID: 234786 RVA: 0x01010460 File Offset: 0x0100E660
 		private static bool CheckIsParticipatorInQuest(int questId)
 		{
 			global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -2679,7 +2679,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060434EB RID: 275691 RVA: 0x0106C260 File Offset: 0x0106A460
+		// Token: 0x06039523 RID: 234787 RVA: 0x010104AC File Offset: 0x0100E6AC
 		private static bool CheckIsParticipatorInLevelPlay(int levelPlayId)
 		{
 			global::LevelPlayInfo processingLevelPlayInfo = LevelPlayModel.Instance.GetProcessingLevelPlayInfo(levelPlayId);
@@ -2703,13 +2703,13 @@ namespace CSharpScript.Game.LevelGamePlay
 			return result;
 		}
 
-		// Token: 0x060434EC RID: 275692 RVA: 0x0106C2BB File Offset: 0x0106A4BB
+		// Token: 0x06039524 RID: 234788 RVA: 0x01010507 File Offset: 0x0100E707
 		private static bool CheckIsParticipatorInInstance(int instanceDungeonId)
 		{
 			return GameModeController.Instance.IsInInstance() && CreatureModel.Instance.GetInstanceId() == instanceDungeonId;
 		}
 
-		// Token: 0x060434ED RID: 275693 RVA: 0x0106C2D8 File Offset: 0x0106A4D8
+		// Token: 0x06039525 RID: 234789 RVA: 0x01010524 File Offset: 0x0100E724
 		private static void OnBoardGridDynamicConfigChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			BoardGridDynamicConfigChangeNotify notify = (BoardGridDynamicConfigChangeNotify)msg;
@@ -2739,7 +2739,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434EE RID: 275694 RVA: 0x0106C32C File Offset: 0x0106A52C
+		// Token: 0x06039526 RID: 234790 RVA: 0x01010578 File Offset: 0x0100E778
 		private static void OnBoardCanMovePlacementNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			BoardCanMovePlacementNotify notify = (BoardCanMovePlacementNotify)msg;
@@ -2764,7 +2764,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434EF RID: 275695 RVA: 0x0106C380 File Offset: 0x0106A580
+		// Token: 0x06039527 RID: 234791 RVA: 0x010105CC File Offset: 0x0100E7CC
 		private static void OnUpdateEnableSystemNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			foreach (EnableSystemFuncInfo enableSystemFuncInfo in ((UpdateEnableSystemNotify)msg).FuncInfo)
@@ -2777,7 +2777,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060434F0 RID: 275696 RVA: 0x0106C3EC File Offset: 0x0106A5EC
+		// Token: 0x06039528 RID: 234792 RVA: 0x01010638 File Offset: 0x0100E838
 		private static void OnUpdateEnableFunctionNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			foreach (EnableFunctionInfo enableFunctionInfo in ((UpdateEnableFunctionNotify)msg).FuncInfo)
@@ -2802,7 +2802,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060434F1 RID: 275697 RVA: 0x0106C49C File Offset: 0x0106A69C
+		// Token: 0x06039529 RID: 234793 RVA: 0x010106E8 File Offset: 0x0100E8E8
 		private static void OnOperationRestrictionNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			OperationRestrictionNotify operationRestrictionNotify = (OperationRestrictionNotify)msg;
@@ -2818,7 +2818,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			LevelGamePlayUtils.LevelOperationRestriction(operationRestrictionNotify.Params);
 		}
 
-		// Token: 0x060434F2 RID: 275698 RVA: 0x0106C4D4 File Offset: 0x0106A6D4
+		// Token: 0x0603952A RID: 234794 RVA: 0x01010720 File Offset: 0x0100E920
 		private static void OnEntityAccessRangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityAccessRangeNotify entityAccessRangeNotify = (EntityAccessRangeNotify)msg;
@@ -2849,7 +2849,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434F3 RID: 275699 RVA: 0x0106C580 File Offset: 0x0106A780
+		// Token: 0x0603952B RID: 234795 RVA: 0x010107CC File Offset: 0x0100E9CC
 		private static void OnPlayerAccessRangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			PlayerAccessRangeNotify playerAccessRangeNotify = (PlayerAccessRangeNotify)msg;
@@ -2876,7 +2876,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434F4 RID: 275700 RVA: 0x0106C5E8 File Offset: 0x0106A7E8
+		// Token: 0x0603952C RID: 234796 RVA: 0x01010834 File Offset: 0x0100EA34
 		private static void OnTrampleGearTransitionNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			TrampleGearTransitionNotify trampleGearTransitionNotify = (TrampleGearTransitionNotify)msg;
@@ -2902,7 +2902,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434F5 RID: 275701 RVA: 0x0106C644 File Offset: 0x0106A844
+		// Token: 0x0603952D RID: 234797 RVA: 0x01010890 File Offset: 0x0100EA90
 		public static void RequestPlayerAccessEffectArea(int entityId, bool isEnter)
 		{
 			PlayerAccessRangeRequest playerAccessRangeRequest = PlayerAccessRangeRequest.Create();
@@ -2911,7 +2911,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.Call(ERequestMessageId.PlayerAccessRangeRequest, playerAccessRangeRequest, null, 0);
 		}
 
-		// Token: 0x060434F6 RID: 275702 RVA: 0x0106C694 File Offset: 0x0106A894
+		// Token: 0x0603952E RID: 234798 RVA: 0x010108E0 File Offset: 0x0100EAE0
 		private static void OnEntityVarUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityVarUpdateNotify entityVarUpdateNotify = (EntityVarUpdateNotify)msg;
@@ -2934,7 +2934,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			creatureDataComponent.UpdateVar(entityVarUpdateNotify.VarName, entityVarUpdateNotify.VarDefine);
 		}
 
-		// Token: 0x060434F7 RID: 275703 RVA: 0x0106C6F0 File Offset: 0x0106A8F0
+		// Token: 0x0603952F RID: 234799 RVA: 0x0101093C File Offset: 0x0100EB3C
 		private static void OnChangeEntityName(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityHeadInfoNotify entityHeadInfoNotify = (EntityHeadInfoNotify)msg;
@@ -2961,7 +2961,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			EventSystem.Instance.EmitWithTarget(entity.Entity, EEventName.OnEntityNameChanged);
 		}
 
-		// Token: 0x060434F8 RID: 275704 RVA: 0x0106C778 File Offset: 0x0106A978
+		// Token: 0x06039530 RID: 234800 RVA: 0x010109C4 File Offset: 0x0100EBC4
 		private static void OnConnectorConnectEntityNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			ConnectorConnectEntityNotify connectorConnectEntityNotify = (ConnectorConnectEntityNotify)msg;
@@ -3001,7 +3001,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x060434F9 RID: 275705 RVA: 0x0106C8C0 File Offset: 0x0106AAC0
+		// Token: 0x06039531 RID: 234801 RVA: 0x01010B0C File Offset: 0x0100ED0C
 		[NullableContext(1)]
 		private static void ConnectorConnectInternal(long scr, List<long> targets, bool isConnect)
 		{
@@ -3029,7 +3029,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			commonConnectComponent2.ServerDisconnectEntities(targets);
 		}
 
-		// Token: 0x060434FA RID: 275706 RVA: 0x0106C908 File Offset: 0x0106AB08
+		// Token: 0x06039532 RID: 234802 RVA: 0x01010B54 File Offset: 0x0100ED54
 		private static void OnFirecrackerEntityCreatedNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			FirecrackerEntityCreatedNotify firecrackerEntityCreatedNotify = (FirecrackerEntityCreatedNotify)msg;
@@ -3075,7 +3075,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434FB RID: 275707 RVA: 0x0106C95C File Offset: 0x0106AB5C
+		// Token: 0x06039533 RID: 234803 RVA: 0x01010BA8 File Offset: 0x0100EDA8
 		private static void OnPortalReplaceNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			PortalReplaceNotify portalReplaceNotify = (PortalReplaceNotify)msg;
@@ -3136,7 +3136,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434FC RID: 275708 RVA: 0x0106C9C4 File Offset: 0x0106ABC4
+		// Token: 0x06039534 RID: 234804 RVA: 0x01010C10 File Offset: 0x0100EE10
 		public static void PushEntityTimeDilation(long creatureDataId, float timeDilation)
 		{
 			EntityTimeFlowPush entityTimeFlowPush = EntityTimeFlowPush.Create();
@@ -3145,13 +3145,13 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.Send(EPushMessageId.EntityTimeFlowPush, entityTimeFlowPush);
 		}
 
-		// Token: 0x060434FD RID: 275709 RVA: 0x0106C9F5 File Offset: 0x0106ABF5
+		// Token: 0x06039535 RID: 234805 RVA: 0x01010C41 File Offset: 0x0100EE41
 		public static bool CheckEntityCanPushTimeDilation(ETimeScaleModifyStrategy inStrategy)
 		{
 			return !GameModeModel.Instance.IsMulti && inStrategy == ETimeScaleModifyStrategy.AllowClientModify;
 		}
 
-		// Token: 0x060434FE RID: 275710 RVA: 0x0106CA0C File Offset: 0x0106AC0C
+		// Token: 0x06039536 RID: 234806 RVA: 0x01010C58 File Offset: 0x0100EE58
 		private static void OnSceneItemAttributeChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneItemAttributeChangeNotify notify = (SceneItemAttributeChangeNotify)msg;
@@ -3181,14 +3181,14 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060434FF RID: 275711 RVA: 0x0106CA6C File Offset: 0x0106AC6C
+		// Token: 0x06039537 RID: 234807 RVA: 0x01010CB8 File Offset: 0x0100EEB8
 		private static void OnAlertAreaNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			AlertAreaNotify notify = (AlertAreaNotify)msg;
 			AlertAreaController.Instance.UpdateAlertDataByServerNotify(notify);
 		}
 
-		// Token: 0x06043500 RID: 275712 RVA: 0x0106CA8C File Offset: 0x0106AC8C
+		// Token: 0x06039538 RID: 234808 RVA: 0x01010CD8 File Offset: 0x0100EED8
 		private static void OnSceneItemAiDisableNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneItemAiDisableNotify sceneItemAiDisableNotify = (SceneItemAiDisableNotify)msg;
@@ -3213,7 +3213,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043501 RID: 275713 RVA: 0x0106CAD8 File Offset: 0x0106ACD8
+		// Token: 0x06039539 RID: 234809 RVA: 0x01010D24 File Offset: 0x0100EF24
 		private static void OnSceneItemAiEnableNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneItemAiEnableNotify notify = (SceneItemAiEnableNotify)msg;
@@ -3241,7 +3241,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043502 RID: 275714 RVA: 0x0106CB2C File Offset: 0x0106AD2C
+		// Token: 0x0603953A RID: 234810 RVA: 0x01010D78 File Offset: 0x0100EF78
 		private static void OnSceneItemAiPatrolPointNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneItemAiPatrolPointNotify notify = (SceneItemAiPatrolPointNotify)msg;
@@ -3266,7 +3266,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043503 RID: 275715 RVA: 0x0106CB80 File Offset: 0x0106AD80
+		// Token: 0x0603953B RID: 234811 RVA: 0x01010DCC File Offset: 0x0100EFCC
 		private static void OnAnimalCollectStateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			AnimalCollectStateNotify notify = (AnimalCollectStateNotify)msg;
@@ -3302,7 +3302,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043504 RID: 275716 RVA: 0x0106CBD4 File Offset: 0x0106ADD4
+		// Token: 0x0603953C RID: 234812 RVA: 0x01010E20 File Offset: 0x0100F020
 		public unsafe static void RequestEntityCameraAlertStateChange(long creatureDataId, bool isAlert)
 		{
 			Action<EntityCameraAlertResponse, Net.CallbackStatus> response = delegate(EntityCameraAlertResponse response, Net.CallbackStatus _)
@@ -3329,7 +3329,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 0);
 		}
 
-		// Token: 0x06043505 RID: 275717 RVA: 0x0106CC44 File Offset: 0x0106AE44
+		// Token: 0x0603953D RID: 234813 RVA: 0x01010E90 File Offset: 0x0100F090
 		private static EntityHandle GetEntityByCreatureDataId(long protoId)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(protoId);
@@ -3346,7 +3346,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return entity;
 		}
 
-		// Token: 0x06043506 RID: 275718 RVA: 0x0106CCB0 File Offset: 0x0106AEB0
+		// Token: 0x0603953E RID: 234814 RVA: 0x01010EFC File Offset: 0x0100F0FC
 		private static void OnActionRelatedEntityInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			ActionRelatedEntityInfoNotify actionRelatedEntityInfoNotify = (ActionRelatedEntityInfoNotify)msg;
@@ -3371,7 +3371,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043507 RID: 275719 RVA: 0x0106CD98 File Offset: 0x0106AF98
+		// Token: 0x0603953F RID: 234815 RVA: 0x01010FE4 File Offset: 0x0100F1E4
 		private static void OnHookLockPointInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			HookLockPointInfoNotify notify = (HookLockPointInfoNotify)msg;
@@ -3396,7 +3396,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043508 RID: 275720 RVA: 0x0106CDEC File Offset: 0x0106AFEC
+		// Token: 0x06039540 RID: 234816 RVA: 0x01011038 File Offset: 0x0100F238
 		private static void AddHackingEntityNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			AddHackingEntityNotify addHackingEntityNotify = (AddHackingEntityNotify)msg;
@@ -3433,7 +3433,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043509 RID: 275721 RVA: 0x0106CE5C File Offset: 0x0106B05C
+		// Token: 0x06039541 RID: 234817 RVA: 0x010110A8 File Offset: 0x0100F2A8
 		private static void RemoveHackingEntityNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RemoveHackingEntityNotify removeHackingEntityNotify = (RemoveHackingEntityNotify)msg;
@@ -3470,7 +3470,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604350A RID: 275722 RVA: 0x0106CECC File Offset: 0x0106B0CC
+		// Token: 0x06039542 RID: 234818 RVA: 0x01011118 File Offset: 0x0100F318
 		private static void OnGravityFlipUpdateTypeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			GravityFlipUpdateTypeNotify notify = (GravityFlipUpdateTypeNotify)msg;
@@ -3495,7 +3495,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604350B RID: 275723 RVA: 0x0106CF20 File Offset: 0x0106B120
+		// Token: 0x06039543 RID: 234819 RVA: 0x0101116C File Offset: 0x0100F36C
 		private static void OnReplaceVehicleEntityNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			ReplaceVehicleEntityNotify replaceVehicleEntityNotify = (ReplaceVehicleEntityNotify)msg;
@@ -3512,7 +3512,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			LevelGeneralNetworks.OnReplaceVehicleEntity(entityId, newLoc, newRot, newGravityDir);
 		}
 
-		// Token: 0x0604350C RID: 275724 RVA: 0x0106CF7C File Offset: 0x0106B17C
+		// Token: 0x06039544 RID: 234820 RVA: 0x010111C8 File Offset: 0x0100F3C8
 		private static void OnEntityRewardItemNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EntityRewardItemNotify entityRewardItemNotify = (EntityRewardItemNotify)msg;
@@ -3534,7 +3534,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			component.UpdateRewardState(entityRewardItemNotify.EntityRewardItemPb);
 		}
 
-		// Token: 0x0604350D RID: 275725 RVA: 0x0106CFE8 File Offset: 0x0106B1E8
+		// Token: 0x06039545 RID: 234821 RVA: 0x01011234 File Offset: 0x0100F434
 		private static void OnCreateVehicleEntity(long entityId)
 		{
 			WaitEntityTask.Create("LevelGeneralNetworks.OnCreateVehicleEntity", entityId, delegate(bool? result)
@@ -3552,7 +3552,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604350E RID: 275726 RVA: 0x0106D028 File Offset: 0x0106B228
+		// Token: 0x06039546 RID: 234822 RVA: 0x01011274 File Offset: 0x0100F474
 		[NullableContext(1)]
 		private static void OnReplaceVehicleEntity(long entityId, global::Vector newLoc, global::Rotator newRot, global::Vector newGravityDir)
 		{
@@ -3609,7 +3609,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604350F RID: 275727 RVA: 0x0106D07C File Offset: 0x0106B27C
+		// Token: 0x06039547 RID: 234823 RVA: 0x010112C8 File Offset: 0x0100F4C8
 		private static void OnTemplateEntitySpawnerContentNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			TemplateEntitySpawnerContentNotify notify = (TemplateEntitySpawnerContentNotify)msg;
@@ -3636,7 +3636,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043510 RID: 275728 RVA: 0x0106D0D0 File Offset: 0x0106B2D0
+		// Token: 0x06039548 RID: 234824 RVA: 0x0101131C File Offset: 0x0100F51C
 		private static void OnForceClientTravelModify(bool oldValue, bool newValue)
 		{
 			if (LevelGeneralNetworks.WaitClientTravelFinishPromise != null)
@@ -3645,7 +3645,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043511 RID: 275729 RVA: 0x0106D0F0 File Offset: 0x0106B2F0
+		// Token: 0x06039549 RID: 234825 RVA: 0x0101133C File Offset: 0x0100F53C
 		[NullableContext(1)]
 		private static UniTask AsyncLowMemoryChangeSceneStart(bool enableHlodStreaming, string loadingTexturePath)
 		{
@@ -3658,14 +3658,14 @@ namespace CSharpScript.Game.LevelGamePlay
 			return <AsyncLowMemoryChangeSceneStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043512 RID: 275730 RVA: 0x0106D13C File Offset: 0x0106B33C
+		// Token: 0x0603954A RID: 234826 RVA: 0x01011388 File Offset: 0x0100F588
 		private static void OnLowMemoryChangeSceneStartNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			LowMemoryChangeSceneStartNotify lowMemoryChangeSceneStartNotify = (LowMemoryChangeSceneStartNotify)msg;
 			LevelGeneralNetworks.AsyncLowMemoryChangeSceneStart(!lowMemoryChangeSceneStartNotify.IsSwitchHLOD, lowMemoryChangeSceneStartNotify.AssignLoadingBackgroundImagePath).Forget();
 		}
 
-		// Token: 0x06043513 RID: 275731 RVA: 0x0106D16C File Offset: 0x0106B36C
+		// Token: 0x0603954B RID: 234827 RVA: 0x010113B8 File Offset: 0x0100F5B8
 		private static void OnCharacterMoveToPointNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			CharacterMoveToPointNotify notify = (CharacterMoveToPointNotify)msg;
@@ -3704,7 +3704,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043514 RID: 275732 RVA: 0x0106D1E8 File Offset: 0x0106B3E8
+		// Token: 0x0603954C RID: 234828 RVA: 0x01011434 File Offset: 0x0100F634
 		public static void PushCharacterMoveToPointEnd(long creatureDataId, bool bIsInterrupt)
 		{
 			CharacterMoveToPointEndPush characterMoveToPointEndPush = CharacterMoveToPointEndPush.Create();
@@ -3713,7 +3713,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			Net.Instance.Send(EPushMessageId.CharacterMoveToPointEndPush, characterMoveToPointEndPush);
 		}
 
-		// Token: 0x06043515 RID: 275733 RVA: 0x0106D21C File Offset: 0x0106B41C
+		// Token: 0x0603954D RID: 234829 RVA: 0x01011468 File Offset: 0x0100F668
 		[NullableContext(1)]
 		public unsafe static void HandleRecvCharacterMoveToPoint(Entity entity, CharacterMoveToPointConfig protoMoveConfig)
 		{
@@ -3805,7 +3805,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043516 RID: 275734 RVA: 0x0106D568 File Offset: 0x0106B768
+		// Token: 0x0603954E RID: 234830 RVA: 0x010117B4 File Offset: 0x0100F9B4
 		[NullableContext(1)]
 		public static void HandleRecvChracterMoveToPointEnd(Entity entity, bool bIsInterrupt)
 		{
@@ -3821,21 +3821,21 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043517 RID: 275735 RVA: 0x0106D5A4 File Offset: 0x0106B7A4
+		// Token: 0x0603954F RID: 234831 RVA: 0x010117F0 File Offset: 0x0100F9F0
 		public static void OnRollBlockOpenGamePlayNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RollBlockOpenGamePlayNotify notify = (RollBlockOpenGamePlayNotify)msg;
 			RollBlockController.Instance.EnterRollBlockGameplay(notify, false);
 		}
 
-		// Token: 0x06043518 RID: 275736 RVA: 0x0106D5C4 File Offset: 0x0106B7C4
+		// Token: 0x06039550 RID: 234832 RVA: 0x01011810 File Offset: 0x0100FA10
 		public static void OnRollBlockCloseGamePlayNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RollBlockCloseGamePlayNotify rollBlockCloseGamePlayNotify = (RollBlockCloseGamePlayNotify)msg;
 			RollBlockController.Instance.ExitRollBlockGameplay(rollBlockCloseGamePlayNotify.IncId, false);
 		}
 
-		// Token: 0x06043519 RID: 275737 RVA: 0x0106D5EC File Offset: 0x0106B7EC
+		// Token: 0x06039551 RID: 234833 RVA: 0x01011838 File Offset: 0x0100FA38
 		public static void OnRbBlockStateChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RbBlockStateChangeNotify rbBlockStateChangeNotify = (RbBlockStateChangeNotify)msg;
@@ -3848,7 +3848,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			RollBlockController.Instance.OnRollBlockStateChange(rbBlockStateChangeNotify);
 		}
 
-		// Token: 0x0604351A RID: 275738 RVA: 0x0106D638 File Offset: 0x0106B838
+		// Token: 0x06039552 RID: 234834 RVA: 0x01011884 File Offset: 0x0100FA84
 		public static void OnRollBlockUpdateGamePlayNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RollBlockUpdateGamePlayNotify rollBlockUpdateGamePlayNotify = (RollBlockUpdateGamePlayNotify)msg;
@@ -3865,28 +3865,28 @@ namespace CSharpScript.Game.LevelGamePlay
 			RollBlockController.Instance.UpdateRollBlockGameplayInfo(rollBlockUpdateGamePlayNotify.Info);
 		}
 
-		// Token: 0x0604351B RID: 275739 RVA: 0x0106D690 File Offset: 0x0106B890
+		// Token: 0x06039553 RID: 234835 RVA: 0x010118DC File Offset: 0x0100FADC
 		public static void OnRollBlockResetGamePlayNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RollBlockResetGamePlayNotify notify = (RollBlockResetGamePlayNotify)msg;
 			RollBlockController.Instance.OnNotifyGameplayReset(notify);
 		}
 
-		// Token: 0x0604351C RID: 275740 RVA: 0x0106D6B0 File Offset: 0x0106B8B0
+		// Token: 0x06039554 RID: 234836 RVA: 0x010118FC File Offset: 0x0100FAFC
 		public static void OnRollBlockUpdateAvailableInputsNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RollBlockUpdateAvailableInputsNotify notify = (RollBlockUpdateAvailableInputsNotify)msg;
 			RollBlockController.Instance.OnNotifyAvailableInputsChange(notify);
 		}
 
-		// Token: 0x0604351D RID: 275741 RVA: 0x0106D6D0 File Offset: 0x0106B8D0
+		// Token: 0x06039555 RID: 234837 RVA: 0x0101191C File Offset: 0x0100FB1C
 		public static void OnRollBlockItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RollBlockItemUpdateNotify notify = (RollBlockItemUpdateNotify)msg;
 			RollBlockController.Instance.UpdateRollBlockItem(notify);
 		}
 
-		// Token: 0x0604351E RID: 275742 RVA: 0x0106D6F0 File Offset: 0x0106B8F0
+		// Token: 0x06039556 RID: 234838 RVA: 0x0101193C File Offset: 0x0100FB3C
 		public static void OnBeamReceiveNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			BeamReceiveNotify notify = (BeamReceiveNotify)msg;
@@ -3911,35 +3911,35 @@ namespace CSharpScript.Game.LevelGamePlay
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604351F RID: 275743 RVA: 0x0106D744 File Offset: 0x0106B944
+		// Token: 0x06039557 RID: 234839 RVA: 0x01011990 File Offset: 0x0100FB90
 		public static void OnDollDeliveryNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			DollDeliveryNotify notify = (DollDeliveryNotify)msg;
 			DollGrabShowcaseController.Instance.OnNotifyDollDelivery(notify);
 		}
 
-		// Token: 0x06043520 RID: 275744 RVA: 0x0106D763 File Offset: 0x0106B963
+		// Token: 0x06039558 RID: 234840 RVA: 0x010119AF File Offset: 0x0100FBAF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043521 RID: 275745 RVA: 0x0106D765 File Offset: 0x0106B965
+		// Token: 0x06039559 RID: 234841 RVA: 0x010119B1 File Offset: 0x0100FBB1
 		public static void ResetStaticDefaultValue()
 		{
 			LevelGeneralNetworks.WaitClientTravelFinishPromise = null;
 		}
 
-		// Token: 0x040231FB RID: 143867
+		// Token: 0x0401E3EA RID: 123882
 		public const int WAIT_ENTITY_ERROR_TIME = 90000;
 
-		// Token: 0x040231FC RID: 143868
+		// Token: 0x0401E3EB RID: 123883
 		private static CustomPromise<bool> WaitClientTravelFinishPromise;
 
-		// Token: 0x0200CB00 RID: 51968
+		// Token: 0x0200B6DF RID: 46815
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403D531 RID: 251185
+			// Token: 0x04038913 RID: 231699
 			[Nullable(new byte[]
 			{
 				0,
@@ -3948,7 +3948,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__OnActionNotify;
 
-			// Token: 0x0403D532 RID: 251186
+			// Token: 0x04038914 RID: 231700
 			[Nullable(new byte[]
 			{
 				0,
@@ -3957,7 +3957,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <1>__OnEntityAddDynamicInteractNotify;
 
-			// Token: 0x0403D533 RID: 251187
+			// Token: 0x04038915 RID: 231701
 			[Nullable(new byte[]
 			{
 				0,
@@ -3966,7 +3966,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <2>__OnEntityRemoveDynamicInteractNotify;
 
-			// Token: 0x0403D534 RID: 251188
+			// Token: 0x04038916 RID: 231702
 			[Nullable(new byte[]
 			{
 				0,
@@ -3975,7 +3975,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <3>__OnEntityChangeDynamicInteractTextNotify;
 
-			// Token: 0x0403D535 RID: 251189
+			// Token: 0x04038917 RID: 231703
 			[Nullable(new byte[]
 			{
 				0,
@@ -3984,7 +3984,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <4>__OnEntityInteractNotify;
 
-			// Token: 0x0403D536 RID: 251190
+			// Token: 0x04038918 RID: 231704
 			[Nullable(new byte[]
 			{
 				0,
@@ -3993,7 +3993,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <5>__HandleEntityStateReadyNotify;
 
-			// Token: 0x0403D537 RID: 251191
+			// Token: 0x04038919 RID: 231705
 			[Nullable(new byte[]
 			{
 				0,
@@ -4002,7 +4002,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <6>__OnSceneItemBlackboardNotify;
 
-			// Token: 0x0403D538 RID: 251192
+			// Token: 0x0403891A RID: 231706
 			[Nullable(new byte[]
 			{
 				0,
@@ -4011,7 +4011,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <7>__OnManipulatableSceneItemControllerIdModifyNotify;
 
-			// Token: 0x0403D539 RID: 251193
+			// Token: 0x0403891B RID: 231707
 			[Nullable(new byte[]
 			{
 				0,
@@ -4020,7 +4020,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <8>__OnSceneItemAutonomousModifyNotify;
 
-			// Token: 0x0403D53A RID: 251194
+			// Token: 0x0403891C RID: 231708
 			[Nullable(new byte[]
 			{
 				0,
@@ -4029,7 +4029,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <9>__OnManipulatableSceneItemPosInFoundationNotify;
 
-			// Token: 0x0403D53B RID: 251195
+			// Token: 0x0403891D RID: 231709
 			[Nullable(new byte[]
 			{
 				0,
@@ -4038,7 +4038,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <10>__OnSceneItemAttachTargetChangeNotify;
 
-			// Token: 0x0403D53C RID: 251196
+			// Token: 0x0403891E RID: 231710
 			[Nullable(new byte[]
 			{
 				0,
@@ -4047,7 +4047,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <11>__OnManipulateFxShowNotify;
 
-			// Token: 0x0403D53D RID: 251197
+			// Token: 0x0403891F RID: 231711
 			[Nullable(new byte[]
 			{
 				0,
@@ -4056,7 +4056,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <12>__OnAddPlacementNotify;
 
-			// Token: 0x0403D53E RID: 251198
+			// Token: 0x04038920 RID: 231712
 			[Nullable(new byte[]
 			{
 				0,
@@ -4065,7 +4065,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <13>__OnRemovePlacementFromBoardNotify;
 
-			// Token: 0x0403D53F RID: 251199
+			// Token: 0x04038921 RID: 231713
 			[Nullable(new byte[]
 			{
 				0,
@@ -4074,7 +4074,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <14>__OnMovePlacementNotify;
 
-			// Token: 0x0403D540 RID: 251200
+			// Token: 0x04038922 RID: 231714
 			[Nullable(new byte[]
 			{
 				0,
@@ -4083,7 +4083,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <15>__OnCommitBoardSuccessNotify;
 
-			// Token: 0x0403D541 RID: 251201
+			// Token: 0x04038923 RID: 231715
 			[Nullable(new byte[]
 			{
 				0,
@@ -4092,7 +4092,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <16>__OnBoardGridDynamicConfigChangeNotify;
 
-			// Token: 0x0403D542 RID: 251202
+			// Token: 0x04038924 RID: 231716
 			[Nullable(new byte[]
 			{
 				0,
@@ -4101,7 +4101,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <17>__OnBoardCanMovePlacementNotify;
 
-			// Token: 0x0403D543 RID: 251203
+			// Token: 0x04038925 RID: 231717
 			[Nullable(new byte[]
 			{
 				0,
@@ -4110,7 +4110,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <18>__OnUpdateEnableSystemNotify;
 
-			// Token: 0x0403D544 RID: 251204
+			// Token: 0x04038926 RID: 231718
 			[Nullable(new byte[]
 			{
 				0,
@@ -4119,7 +4119,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <19>__OnOperationRestrictionNotify;
 
-			// Token: 0x0403D545 RID: 251205
+			// Token: 0x04038927 RID: 231719
 			[Nullable(new byte[]
 			{
 				0,
@@ -4128,7 +4128,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <20>__OnEntityAccessRangeNotify;
 
-			// Token: 0x0403D546 RID: 251206
+			// Token: 0x04038928 RID: 231720
 			[Nullable(new byte[]
 			{
 				0,
@@ -4137,7 +4137,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <21>__OnPlayerAccessRangeNotify;
 
-			// Token: 0x0403D547 RID: 251207
+			// Token: 0x04038929 RID: 231721
 			[Nullable(new byte[]
 			{
 				0,
@@ -4146,7 +4146,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <22>__OnTrampleGearTransitionNotify;
 
-			// Token: 0x0403D548 RID: 251208
+			// Token: 0x0403892A RID: 231722
 			[Nullable(new byte[]
 			{
 				0,
@@ -4155,7 +4155,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <23>__OnEntityVarUpdateNotify;
 
-			// Token: 0x0403D549 RID: 251209
+			// Token: 0x0403892B RID: 231723
 			[Nullable(new byte[]
 			{
 				0,
@@ -4164,7 +4164,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <24>__OnChangeEntityName;
 
-			// Token: 0x0403D54A RID: 251210
+			// Token: 0x0403892C RID: 231724
 			[Nullable(new byte[]
 			{
 				0,
@@ -4173,7 +4173,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <25>__OnConnectorConnectEntityNotify;
 
-			// Token: 0x0403D54B RID: 251211
+			// Token: 0x0403892D RID: 231725
 			[Nullable(new byte[]
 			{
 				0,
@@ -4182,7 +4182,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <26>__OnFirecrackerEntityCreatedNotify;
 
-			// Token: 0x0403D54C RID: 251212
+			// Token: 0x0403892E RID: 231726
 			[Nullable(new byte[]
 			{
 				0,
@@ -4191,7 +4191,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <27>__OnPortalReplaceNotify;
 
-			// Token: 0x0403D54D RID: 251213
+			// Token: 0x0403892F RID: 231727
 			[Nullable(new byte[]
 			{
 				0,
@@ -4200,7 +4200,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <28>__OnUpdateEnableFunctionNotify;
 
-			// Token: 0x0403D54E RID: 251214
+			// Token: 0x04038930 RID: 231728
 			[Nullable(new byte[]
 			{
 				0,
@@ -4209,7 +4209,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <29>__OnSceneItemAttributeChangeNotify;
 
-			// Token: 0x0403D54F RID: 251215
+			// Token: 0x04038931 RID: 231729
 			[Nullable(new byte[]
 			{
 				0,
@@ -4218,7 +4218,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <30>__OnItemRelateFoundationNotify;
 
-			// Token: 0x0403D550 RID: 251216
+			// Token: 0x04038932 RID: 231730
 			[Nullable(new byte[]
 			{
 				0,
@@ -4227,7 +4227,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <31>__OnAlertAreaNotify;
 
-			// Token: 0x0403D551 RID: 251217
+			// Token: 0x04038933 RID: 231731
 			[Nullable(new byte[]
 			{
 				0,
@@ -4236,7 +4236,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <32>__OnSceneItemAiEnableNotify;
 
-			// Token: 0x0403D552 RID: 251218
+			// Token: 0x04038934 RID: 231732
 			[Nullable(new byte[]
 			{
 				0,
@@ -4245,7 +4245,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <33>__OnSceneItemAiDisableNotify;
 
-			// Token: 0x0403D553 RID: 251219
+			// Token: 0x04038935 RID: 231733
 			[Nullable(new byte[]
 			{
 				0,
@@ -4254,7 +4254,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <34>__OnSceneItemAiPatrolPointNotify;
 
-			// Token: 0x0403D554 RID: 251220
+			// Token: 0x04038936 RID: 231734
 			[Nullable(new byte[]
 			{
 				0,
@@ -4263,7 +4263,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <35>__OnAnimalCollectStateNotify;
 
-			// Token: 0x0403D555 RID: 251221
+			// Token: 0x04038937 RID: 231735
 			[Nullable(new byte[]
 			{
 				0,
@@ -4272,7 +4272,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <36>__OnActionRelatedEntityInfoNotify;
 
-			// Token: 0x0403D556 RID: 251222
+			// Token: 0x04038938 RID: 231736
 			[Nullable(new byte[]
 			{
 				0,
@@ -4281,7 +4281,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <37>__OnHookLockPointInfoNotify;
 
-			// Token: 0x0403D557 RID: 251223
+			// Token: 0x04038939 RID: 231737
 			[Nullable(new byte[]
 			{
 				0,
@@ -4290,7 +4290,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <38>__AddHackingEntityNotify;
 
-			// Token: 0x0403D558 RID: 251224
+			// Token: 0x0403893A RID: 231738
 			[Nullable(new byte[]
 			{
 				0,
@@ -4299,7 +4299,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <39>__RemoveHackingEntityNotify;
 
-			// Token: 0x0403D559 RID: 251225
+			// Token: 0x0403893B RID: 231739
 			[Nullable(new byte[]
 			{
 				0,
@@ -4308,7 +4308,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <40>__OnGravityFlipUpdateTypeNotify;
 
-			// Token: 0x0403D55A RID: 251226
+			// Token: 0x0403893C RID: 231740
 			[Nullable(new byte[]
 			{
 				0,
@@ -4317,7 +4317,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <41>__OnReplaceVehicleEntityNotify;
 
-			// Token: 0x0403D55B RID: 251227
+			// Token: 0x0403893D RID: 231741
 			[Nullable(new byte[]
 			{
 				0,
@@ -4326,7 +4326,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <42>__OnEntityRewardItemNotify;
 
-			// Token: 0x0403D55C RID: 251228
+			// Token: 0x0403893E RID: 231742
 			[Nullable(new byte[]
 			{
 				0,
@@ -4335,7 +4335,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <43>__OnTemplateEntitySpawnerContentNotify;
 
-			// Token: 0x0403D55D RID: 251229
+			// Token: 0x0403893F RID: 231743
 			[Nullable(new byte[]
 			{
 				0,
@@ -4344,7 +4344,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <44>__OnLowMemoryChangeSceneStartNotify;
 
-			// Token: 0x0403D55E RID: 251230
+			// Token: 0x04038940 RID: 231744
 			[Nullable(new byte[]
 			{
 				0,
@@ -4353,7 +4353,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <45>__OnCharacterMoveToPointNotify;
 
-			// Token: 0x0403D55F RID: 251231
+			// Token: 0x04038941 RID: 231745
 			[Nullable(new byte[]
 			{
 				0,
@@ -4362,7 +4362,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <46>__OnRollBlockOpenGamePlayNotify;
 
-			// Token: 0x0403D560 RID: 251232
+			// Token: 0x04038942 RID: 231746
 			[Nullable(new byte[]
 			{
 				0,
@@ -4371,7 +4371,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <47>__OnRollBlockCloseGamePlayNotify;
 
-			// Token: 0x0403D561 RID: 251233
+			// Token: 0x04038943 RID: 231747
 			[Nullable(new byte[]
 			{
 				0,
@@ -4380,7 +4380,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <48>__OnRbBlockStateChangeNotify;
 
-			// Token: 0x0403D562 RID: 251234
+			// Token: 0x04038944 RID: 231748
 			[Nullable(new byte[]
 			{
 				0,
@@ -4389,7 +4389,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <49>__OnRollBlockUpdateGamePlayNotify;
 
-			// Token: 0x0403D563 RID: 251235
+			// Token: 0x04038945 RID: 231749
 			[Nullable(new byte[]
 			{
 				0,
@@ -4398,7 +4398,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <50>__OnRollBlockResetGamePlayNotify;
 
-			// Token: 0x0403D564 RID: 251236
+			// Token: 0x04038946 RID: 231750
 			[Nullable(new byte[]
 			{
 				0,
@@ -4407,7 +4407,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <51>__OnRollBlockUpdateAvailableInputsNotify;
 
-			// Token: 0x0403D565 RID: 251237
+			// Token: 0x04038947 RID: 231751
 			[Nullable(new byte[]
 			{
 				0,
@@ -4416,7 +4416,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <52>__OnRollBlockItemUpdateNotify;
 
-			// Token: 0x0403D566 RID: 251238
+			// Token: 0x04038948 RID: 231752
 			[Nullable(new byte[]
 			{
 				0,
@@ -4425,7 +4425,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <53>__OnBeamReceiveNotify;
 
-			// Token: 0x0403D567 RID: 251239
+			// Token: 0x04038949 RID: 231753
 			[Nullable(new byte[]
 			{
 				0,
@@ -4434,7 +4434,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <54>__OnDollDeliveryNotify;
 
-			// Token: 0x0403D568 RID: 251240
+			// Token: 0x0403894A RID: 231754
 			[Nullable(0)]
 			public static Action<bool, bool> <55>__OnForceClientTravelModify;
 		}

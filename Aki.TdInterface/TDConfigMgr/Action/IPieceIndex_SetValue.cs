@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CF7 RID: 7415
+	// Token: 0x02001F06 RID: 7942
 	public class IPieceIndex_SetValue
 	{
-		// Token: 0x04006019 RID: 24601
+		// Token: 0x0400658C RID: 25996
 		public int RowIndex;
 
-		// Token: 0x0400601A RID: 24602
+		// Token: 0x0400658D RID: 25997
 		public int ColumnIndex;
 	}
 }

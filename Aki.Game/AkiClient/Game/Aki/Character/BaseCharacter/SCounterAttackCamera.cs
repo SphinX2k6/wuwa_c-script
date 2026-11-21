@@ -8,7 +8,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004306 RID: 17158
+	// Token: 0x02003344 RID: 13124
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -16,105 +16,105 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 	[UnrealStructLayout(408, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 408)]
 	public class SCounterAttackCamera : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C5D7 RID: 181719 RVA: 0x00A1E23C File Offset: 0x00A1C43C
+		// Token: 0x06021302 RID: 135938 RVA: 0x0095B384 File Offset: 0x00959584
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCounterAttackCamera._ScriptStructPtr != 0) ? SCounterAttackCamera._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SCounterAttackCamera.SCounterAttackCamera", ref SCounterAttackCamera._ScriptStructPtr);
 		}
 
-		// Token: 0x17006EED RID: 28397
-		// (get) Token: 0x0602C5D8 RID: 181720 RVA: 0x00A1E260 File Offset: 0x00A1C460
-		// (set) Token: 0x0602C5D9 RID: 181721 RVA: 0x00A1E274 File Offset: 0x00A1C474
+		// Token: 0x1700430B RID: 17163
+		// (get) Token: 0x06021303 RID: 135939 RVA: 0x0095B3A8 File Offset: 0x009595A8
+		// (set) Token: 0x06021304 RID: 135940 RVA: 0x0095B3BC File Offset: 0x009595BC
 		public unsafe FGameplayTag Tag
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_Tag);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_Tag) = value;
 			}
 		}
 
-		// Token: 0x17006EEE RID: 28398
-		// (get) Token: 0x0602C5DA RID: 181722 RVA: 0x00A1E289 File Offset: 0x00A1C489
-		// (set) Token: 0x0602C5DB RID: 181723 RVA: 0x00A1E299 File Offset: 0x00A1C499
+		// Token: 0x1700430C RID: 17164
+		// (get) Token: 0x06021305 RID: 135941 RVA: 0x0095B3D1 File Offset: 0x009595D1
+		// (set) Token: 0x06021306 RID: 135942 RVA: 0x0095B3E1 File Offset: 0x009595E1
 		public unsafe float 持续时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_持续时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_持续时间) = value;
 			}
 		}
 
-		// Token: 0x17006EEF RID: 28399
-		// (get) Token: 0x0602C5DC RID: 181724 RVA: 0x00A1E2AA File Offset: 0x00A1C4AA
-		// (set) Token: 0x0602C5DD RID: 181725 RVA: 0x00A1E2BA File Offset: 0x00A1C4BA
+		// Token: 0x1700430D RID: 17165
+		// (get) Token: 0x06021307 RID: 135943 RVA: 0x0095B3F2 File Offset: 0x009595F2
+		// (set) Token: 0x06021308 RID: 135944 RVA: 0x0095B402 File Offset: 0x00959602
 		public unsafe float 淡入时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_淡入时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_淡入时间) = value;
 			}
 		}
 
-		// Token: 0x17006EF0 RID: 28400
-		// (get) Token: 0x0602C5DE RID: 181726 RVA: 0x00A1E2CB File Offset: 0x00A1C4CB
-		// (set) Token: 0x0602C5DF RID: 181727 RVA: 0x00A1E2DB File Offset: 0x00A1C4DB
+		// Token: 0x1700430E RID: 17166
+		// (get) Token: 0x06021309 RID: 135945 RVA: 0x0095B413 File Offset: 0x00959613
+		// (set) Token: 0x0602130A RID: 135946 RVA: 0x0095B423 File Offset: 0x00959623
 		public unsafe float 淡出时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_淡出时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_淡出时间) = value;
 			}
 		}
 
-		// Token: 0x17006EF1 RID: 28401
-		// (get) Token: 0x0602C5E0 RID: 181728 RVA: 0x00A1E2EC File Offset: 0x00A1C4EC
-		// (set) Token: 0x0602C5E1 RID: 181729 RVA: 0x00A1E2FC File Offset: 0x00A1C4FC
+		// Token: 0x1700430F RID: 17167
+		// (get) Token: 0x0602130B RID: 135947 RVA: 0x0095B434 File Offset: 0x00959634
+		// (set) Token: 0x0602130C RID: 135948 RVA: 0x0095B444 File Offset: 0x00959644
 		public unsafe float 打断淡出时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_打断淡出时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_打断淡出时间) = value;
 			}
 		}
 
-		// Token: 0x17006EF2 RID: 28402
-		// (get) Token: 0x0602C5E2 RID: 181730 RVA: 0x00A1E30D File Offset: 0x00A1C50D
-		// (set) Token: 0x0602C5E3 RID: 181731 RVA: 0x00A1E321 File Offset: 0x00A1C521
+		// Token: 0x17004310 RID: 17168
+		// (get) Token: 0x0602130D RID: 135949 RVA: 0x0095B455 File Offset: 0x00959655
+		// (set) Token: 0x0602130E RID: 135950 RVA: 0x0095B469 File Offset: 0x00959669
 		public unsafe string CameraAttachSocket
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCounterAttackCamera.__PropertyOffset_5)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCounterAttackCamera.__PropertyOffset_CameraAttachSocket)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCounterAttackCamera.__PropertyOffset_5)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCounterAttackCamera.__PropertyOffset_CameraAttachSocket)), value);
 			}
 		}
 
-		// Token: 0x17006EF3 RID: 28403
-		// (get) Token: 0x0602C5E4 RID: 181732 RVA: 0x00A1E338 File Offset: 0x00A1C538
-		// (set) Token: 0x0602C5E5 RID: 181733 RVA: 0x00A1E37B File Offset: 0x00A1C57B
+		// Token: 0x17004311 RID: 17169
+		// (get) Token: 0x0602130F RID: 135951 RVA: 0x0095B480 File Offset: 0x00959680
+		// (set) Token: 0x06021310 RID: 135952 RVA: 0x0095B4C3 File Offset: 0x009596C3
 		public SCameraModifier_Settings 摄像机配置
 		{
 			get
@@ -123,90 +123,78 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SCameraModifier_Settings result;
 				if ((result = this._摄像机配置) == null)
 				{
-					result = (this._摄像机配置 = new SCameraModifier_Settings(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._摄像机配置 = new SCameraModifier_Settings(base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_摄像机配置, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCameraModifier_Settings.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_6, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCameraModifier_Settings.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackCamera.__PropertyOffset_摄像机配置, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602C5E6 RID: 181734 RVA: 0x00A1E39C File Offset: 0x00A1C59C
+		// Token: 0x06021311 RID: 135953 RVA: 0x0095B4E4 File Offset: 0x009596E4
 		public SCounterAttackCamera()
 		{
 		}
 
-		// Token: 0x0602C5E7 RID: 181735 RVA: 0x00A1E3A4 File Offset: 0x00A1C5A4
-		public SCounterAttackCamera(FGameplayTag Tag, float 持续时间, float 淡入时间, float 淡出时间, float 打断淡出时间, string CameraAttachSocket, SCameraModifier_Settings 摄像机配置)
-		{
-			this.Tag = Tag;
-			this.持续时间 = 持续时间;
-			this.淡入时间 = 淡入时间;
-			this.淡出时间 = 淡出时间;
-			this.打断淡出时间 = 打断淡出时间;
-			this.CameraAttachSocket = CameraAttachSocket;
-			this.摄像机配置 = 摄像机配置;
-		}
-
-		// Token: 0x0602C5E8 RID: 181736 RVA: 0x00A1E3E1 File Offset: 0x00A1C5E1
+		// Token: 0x06021312 RID: 135954 RVA: 0x0095B4EC File Offset: 0x009596EC
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCounterAttackCamera.StaticStruct();
 		}
 
-		// Token: 0x0602C5E9 RID: 181737 RVA: 0x00A1E3ED File Offset: 0x00A1C5ED
+		// Token: 0x06021313 RID: 135955 RVA: 0x0095B4F8 File Offset: 0x009596F8
 		[NullableContext(2)]
 		public SCounterAttackCamera(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C5EA RID: 181738 RVA: 0x00A1E3F7 File Offset: 0x00A1C5F7
+		// Token: 0x06021314 RID: 135956 RVA: 0x0095B502 File Offset: 0x00959702
 		public SCounterAttackCamera(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C5EB RID: 181739 RVA: 0x00A1E402 File Offset: 0x00A1C602
+		// Token: 0x06021315 RID: 135957 RVA: 0x0095B50D File Offset: 0x0095970D
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCounterAttackCamera(Pointer, false, true);
 		}
 
-		// Token: 0x0602C5EC RID: 181740 RVA: 0x00A1E40C File Offset: 0x00A1C60C
+		// Token: 0x06021316 RID: 135958 RVA: 0x0095B517 File Offset: 0x00959717
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCounterAttackCamera(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401764D RID: 95821
+		// Token: 0x04012256 RID: 74326
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SCounterAttackCamera.SCounterAttackCamera";
 
-		// Token: 0x0401764E RID: 95822
+		// Token: 0x04012257 RID: 74327
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401764F RID: 95823
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012258 RID: 74328
+		internal static int __PropertyOffset_Tag;
 
-		// Token: 0x04017650 RID: 95824
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012259 RID: 74329
+		internal static int __PropertyOffset_持续时间;
 
-		// Token: 0x04017651 RID: 95825
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401225A RID: 74330
+		internal static int __PropertyOffset_淡入时间;
 
-		// Token: 0x04017652 RID: 95826
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401225B RID: 74331
+		internal static int __PropertyOffset_淡出时间;
 
-		// Token: 0x04017653 RID: 95827
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401225C RID: 74332
+		internal static int __PropertyOffset_打断淡出时间;
 
-		// Token: 0x04017654 RID: 95828
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401225D RID: 74333
+		internal static int __PropertyOffset_CameraAttachSocket;
 
-		// Token: 0x04017655 RID: 95829
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401225E RID: 74334
+		internal static int __PropertyOffset_摄像机配置;
 
-		// Token: 0x04017656 RID: 95830
+		// Token: 0x0401225F RID: 74335
 		[Nullable(2)]
 		private SCameraModifier_Settings _摄像机配置;
 	}

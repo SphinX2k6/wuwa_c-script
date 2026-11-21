@@ -6,15 +6,15 @@ using CSharpScript.Game.Module.MusicalInstrument;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004999 RID: 18841
+	// Token: 0x02003913 RID: 14611
 	public class ZitherLowPitchComponent : HotKeyComponent
 	{
-		// Token: 0x0603113A RID: 201018 RVA: 0x00B63A86 File Offset: 0x00B61C86
+		// Token: 0x06025C70 RID: 154736 RVA: 0x00A9E9D6 File Offset: 0x00A9CBD6
 		public ZitherLowPitchComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603113B RID: 201019 RVA: 0x00B63A90 File Offset: 0x00B61C90
+		// Token: 0x06025C71 RID: 154737 RVA: 0x00A9E9E0 File Offset: 0x00A9CBE0
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, guqinSubController != null, false);
 		}
 
-		// Token: 0x0603113C RID: 201020 RVA: 0x00B63ABC File Offset: 0x00B61CBC
+		// Token: 0x06025C72 RID: 154738 RVA: 0x00A9EA0C File Offset: 0x00A9CC0C
 		protected override void OnPress(HotKeyMap config)
 		{
 			GuqinSubController guqinSubController = MusicalInstrumentController.Instance.GetSubController(EInstrumentType.ChineseZither) as GuqinSubController;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603113D RID: 201021 RVA: 0x00B63AF0 File Offset: 0x00B61CF0
+		// Token: 0x06025C73 RID: 154739 RVA: 0x00A9EA40 File Offset: 0x00A9CC40
 		protected override void OnRelease(HotKeyMap config)
 		{
 			GuqinSubController guqinSubController = MusicalInstrumentController.Instance.GetSubController(EInstrumentType.ChineseZither) as GuqinSubController;

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069B3 RID: 27059
+	// Token: 0x02005B0F RID: 23311
 	public class ELevelGeneralConditionJsonConverter : JsonConverter<ELevelGeneralCondition>
 	{
-		// Token: 0x06043529 RID: 275753 RVA: 0x01072A24 File Offset: 0x01070C24
+		// Token: 0x06039561 RID: 234849 RVA: 0x01016E6C File Offset: 0x0101506C
 		public override ELevelGeneralCondition Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return ELevelGeneralConditionExtensions.FromString(@string);
 		}
 
-		// Token: 0x0604352A RID: 275754 RVA: 0x01072A48 File Offset: 0x01070C48
+		// Token: 0x06039562 RID: 234850 RVA: 0x01016E90 File Offset: 0x01015090
 		public override void Write(Utf8JsonWriter writer, ELevelGeneralCondition value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

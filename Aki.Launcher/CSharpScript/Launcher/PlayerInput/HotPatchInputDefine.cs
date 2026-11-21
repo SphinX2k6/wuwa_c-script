@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x02000119 RID: 281
+	// Token: 0x0200011D RID: 285
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotPatchInputDefine : Singleton
 	{
-		// Token: 0x170000F1 RID: 241
-		// (get) Token: 0x06000920 RID: 2336 RVA: 0x00041A8F File Offset: 0x0003FC8F
+		// Token: 0x170000F7 RID: 247
+		// (get) Token: 0x06000954 RID: 2388 RVA: 0x00043E57 File Offset: 0x00042057
 		public static HotPatchInputDefine Instance
 		{
 			get
@@ -24,12 +24,12 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000921 RID: 2337 RVA: 0x00041AB2 File Offset: 0x0003FCB2
+		// Token: 0x06000955 RID: 2389 RVA: 0x00043E7A File Offset: 0x0004207A
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000922 RID: 2338 RVA: 0x00041AB4 File Offset: 0x0003FCB4
+		// Token: 0x06000956 RID: 2390 RVA: 0x00043E7C File Offset: 0x0004207C
 		public static void ResetStaticDefaultValue()
 		{
 			HotPatchInputDefine instance = HotPatchInputDefine._instance;
@@ -40,13 +40,13 @@ namespace CSharpScript.Launcher.PlayerInput
 			HotPatchInputDefine._instance = null;
 		}
 
-		// Token: 0x06000923 RID: 2339 RVA: 0x00041ACD File Offset: 0x0003FCCD
+		// Token: 0x06000957 RID: 2391 RVA: 0x00043E95 File Offset: 0x00042095
 		static HotPatchInputDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotPatchInputDefine.CreateStaticDefaultValue), new Action(HotPatchInputDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000924 RID: 2340 RVA: 0x00041AEC File Offset: 0x0003FCEC
+		// Token: 0x06000958 RID: 2392 RVA: 0x00043EB4 File Offset: 0x000420B4
 		public HotPatchInputDefine()
 		{
 			Dictionary<string, EMouseKey> dictionary = new Dictionary<string, EMouseKey>();
@@ -117,19 +117,19 @@ namespace CSharpScript.Launcher.PlayerInput
 			base..ctor();
 		}
 
-		// Token: 0x0400052F RID: 1327
+		// Token: 0x0400056A RID: 1386
 		public const string ANY_KEY = "AnyKey";
 
-		// Token: 0x04000530 RID: 1328
+		// Token: 0x0400056B RID: 1387
 		public const int SCROLLBAR_INTERVAL = 800;
 
-		// Token: 0x04000531 RID: 1329
+		// Token: 0x0400056C RID: 1388
 		public readonly Dictionary<string, EMouseKey> pcInputMap;
 
-		// Token: 0x04000532 RID: 1330
+		// Token: 0x0400056D RID: 1389
 		public readonly Dictionary<string, EGamepadKey> gamepadActionInputMap;
 
-		// Token: 0x04000533 RID: 1331
+		// Token: 0x0400056E RID: 1390
 		[Nullable(new byte[]
 		{
 			1,
@@ -139,10 +139,10 @@ namespace CSharpScript.Launcher.PlayerInput
 		})]
 		public readonly Dictionary<string, ValueTuple<string, int>> gamepadAxisInputMap;
 
-		// Token: 0x04000534 RID: 1332
+		// Token: 0x0400056F RID: 1391
 		public readonly Dictionary<EGamepadKey, IKeyPath> gamepadKeyPathMap;
 
-		// Token: 0x04000535 RID: 1333
+		// Token: 0x04000570 RID: 1392
 		[Nullable(2)]
 		private static HotPatchInputDefine _instance;
 	}

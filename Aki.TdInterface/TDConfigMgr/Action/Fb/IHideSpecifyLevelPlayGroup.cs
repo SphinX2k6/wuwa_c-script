@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002795 RID: 10133
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A67 RID: 10855
 	public class IHideSpecifyLevelPlayGroup : IHideGroupType
 	{
-		// Token: 0x0600E18E RID: 57742 RVA: 0x0021557E File Offset: 0x0021377E
+		// Token: 0x0600EFAC RID: 61356 RVA: 0x00232312 File Offset: 0x00230512
 		public static IHideSpecifyLevelPlayGroup Create(IHideSpecifyLevelPlayGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004426 RID: 17446
-		// (get) Token: 0x0600E18F RID: 57743 RVA: 0x0021559D File Offset: 0x0021379D
+		// Token: 0x1700478C RID: 18316
+		// (get) Token: 0x0600EFAD RID: 61357 RVA: 0x00232331 File Offset: 0x00230531
 		public override EHideType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004427 RID: 17447
-		// (get) Token: 0x0600E190 RID: 57744 RVA: 0x002155AC File Offset: 0x002137AC
+		// Token: 0x1700478D RID: 18317
+		// (get) Token: 0x0600EFAE RID: 61358 RVA: 0x00232340 File Offset: 0x00230540
 		public virtual List<int> LevelPlays
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D13 RID: 32019
+		// Token: 0x040083C9 RID: 33737
 		private IHideSpecifyLevelPlayGroup Instance;
 
-		// Token: 0x04007D14 RID: 32020
+		// Token: 0x040083CA RID: 33738
 		private List<int> _LevelPlaysCache;
 
-		// Token: 0x04007D15 RID: 32021
+		// Token: 0x040083CB RID: 33739
 		private bool _LevelPlaysInited;
 	}
 }

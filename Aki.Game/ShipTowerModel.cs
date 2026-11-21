@@ -17,14 +17,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002998 RID: 10648
+// Token: 0x02001F13 RID: 7955
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ShipTowerModel : ModelBase
 {
-	// Token: 0x17001D93 RID: 7571
-	// (get) Token: 0x0601604D RID: 90189 RVA: 0x0058F273 File Offset: 0x0058D473
+	// Token: 0x17001DEC RID: 7660
+	// (get) Token: 0x06013A53 RID: 80467 RVA: 0x005BA237 File Offset: 0x005B8437
 	public int CurSeason
 	{
 		get
@@ -33,8 +33,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D94 RID: 7572
-	// (get) Token: 0x0601604E RID: 90190 RVA: 0x0058F27C File Offset: 0x0058D47C
+	// Token: 0x17001DED RID: 7661
+	// (get) Token: 0x06013A54 RID: 80468 RVA: 0x005BA240 File Offset: 0x005B8440
 	public SlashAndTowerSeason? CurSeasonCfg
 	{
 		get
@@ -47,8 +47,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D95 RID: 7573
-	// (get) Token: 0x0601604F RID: 90191 RVA: 0x0058F2AB File Offset: 0x0058D4AB
+	// Token: 0x17001DEE RID: 7662
+	// (get) Token: 0x06013A55 RID: 80469 RVA: 0x005BA26F File Offset: 0x005B846F
 	public long CurSeasonEndTime
 	{
 		get
@@ -57,8 +57,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D96 RID: 7574
-	// (get) Token: 0x06016050 RID: 90192 RVA: 0x0058F2B3 File Offset: 0x0058D4B3
+	// Token: 0x17001DEF RID: 7663
+	// (get) Token: 0x06013A56 RID: 80470 RVA: 0x005BA277 File Offset: 0x005B8477
 	public bool CurIsHaveRecord
 	{
 		get
@@ -67,8 +67,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D97 RID: 7575
-	// (get) Token: 0x06016051 RID: 90193 RVA: 0x0058F2BB File Offset: 0x0058D4BB
+	// Token: 0x17001DF0 RID: 7664
+	// (get) Token: 0x06013A57 RID: 80471 RVA: 0x005BA27F File Offset: 0x005B847F
 	public IReadOnlyList<ShipTowerStageData> TowerStageDataList
 	{
 		get
@@ -77,8 +77,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D98 RID: 7576
-	// (get) Token: 0x06016052 RID: 90194 RVA: 0x0058F2C3 File Offset: 0x0058D4C3
+	// Token: 0x17001DF1 RID: 7665
+	// (get) Token: 0x06013A58 RID: 80472 RVA: 0x005BA287 File Offset: 0x005B8487
 	public IReadOnlyDictionary<int, ShipTowerStageData> TowerStageDataMap
 	{
 		get
@@ -87,8 +87,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D99 RID: 7577
-	// (get) Token: 0x06016053 RID: 90195 RVA: 0x0058F2CB File Offset: 0x0058D4CB
+	// Token: 0x17001DF2 RID: 7666
+	// (get) Token: 0x06013A59 RID: 80473 RVA: 0x005BA28F File Offset: 0x005B848F
 	public int GetRewardTotalNum
 	{
 		get
@@ -97,8 +97,8 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D9A RID: 7578
-	// (get) Token: 0x06016054 RID: 90196 RVA: 0x0058F2D3 File Offset: 0x0058D4D3
+	// Token: 0x17001DF3 RID: 7667
+	// (get) Token: 0x06013A5A RID: 80474 RVA: 0x005BA297 File Offset: 0x005B8497
 	public bool IsRewardAllReceived
 	{
 		get
@@ -107,14 +107,14 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016055 RID: 90197 RVA: 0x0058F2E8 File Offset: 0x0058D4E8
+	// Token: 0x06013A5B RID: 80475 RVA: 0x005BA2AC File Offset: 0x005B84AC
 	protected override bool OnInit()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.ShipTowerView, new Func<EUiViewName, object, bool>(this.CheckCanOpen), "ShipTowerModel.CheckCanOpen");
 		return true;
 	}
 
-	// Token: 0x06016056 RID: 90198 RVA: 0x0058F30C File Offset: 0x0058D50C
+	// Token: 0x06013A5C RID: 80476 RVA: 0x005BA2D0 File Offset: 0x005B84D0
 	protected override bool OnClear()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.ShipTowerView, new Func<EUiViewName, object, bool>(this.CheckCanOpen));
@@ -125,13 +125,13 @@ public class ShipTowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016057 RID: 90199 RVA: 0x0058F361 File Offset: 0x0058D561
+	// Token: 0x06013A5D RID: 80477 RVA: 0x005BA325 File Offset: 0x005B8525
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x06016058 RID: 90200 RVA: 0x0058F364 File Offset: 0x0058D564
+	// Token: 0x06013A5E RID: 80478 RVA: 0x005BA328 File Offset: 0x005B8528
 	public void InitData(bool force = false)
 	{
 		if (this.IsInitData && !force)
@@ -143,7 +143,7 @@ public class ShipTowerModel : ModelBase
 		this.InitPlayerGetBuffList();
 	}
 
-	// Token: 0x06016059 RID: 90201 RVA: 0x0058F388 File Offset: 0x0058D588
+	// Token: 0x06013A5F RID: 80479 RVA: 0x005BA34C File Offset: 0x005B854C
 	private void InitPlayerGetBuffList()
 	{
 		HashSet<int> player = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.ShipTowerGetBuffSet, null);
@@ -156,7 +156,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601605A RID: 90202 RVA: 0x0058F3E8 File Offset: 0x0058D5E8
+	// Token: 0x06013A60 RID: 80480 RVA: 0x005BA3AC File Offset: 0x005B85AC
 	public void AddPlayerGetBuff(int buffId)
 	{
 		this.PlayerGetBuffSet.Add(buffId);
@@ -164,13 +164,13 @@ public class ShipTowerModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ShipTowerBuffNewUpdate);
 	}
 
-	// Token: 0x0601605B RID: 90203 RVA: 0x0058F415 File Offset: 0x0058D615
+	// Token: 0x06013A61 RID: 80481 RVA: 0x005BA3D9 File Offset: 0x005B85D9
 	private void InitBuffQualityList()
 	{
 		this.AddBuffQualityListBySeason(0);
 	}
 
-	// Token: 0x0601605C RID: 90204 RVA: 0x0058F420 File Offset: 0x0058D620
+	// Token: 0x06013A62 RID: 80482 RVA: 0x005BA3E4 File Offset: 0x005B85E4
 	private void AddBuffQualityListBySeason(int season)
 	{
 		IEnumerable<SlashBuffToItem> enumerable = ShipTowerConfig.Instance.GetBuffCfgBySeason(season) ?? new List<SlashBuffToItem>();
@@ -199,7 +199,7 @@ public class ShipTowerModel : ModelBase
 		this.UpdateBuffQualityList();
 	}
 
-	// Token: 0x0601605D RID: 90205 RVA: 0x0058F508 File Offset: 0x0058D708
+	// Token: 0x06013A63 RID: 80483 RVA: 0x005BA4CC File Offset: 0x005B86CC
 	public void CheckOldSeasonBuffQualityList()
 	{
 		foreach (ShipTowerBuffQuality shipTowerBuffQuality in this.BuffQualityList)
@@ -233,7 +233,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601605E RID: 90206 RVA: 0x0058F638 File Offset: 0x0058D838
+	// Token: 0x06013A64 RID: 80484 RVA: 0x005BA5FC File Offset: 0x005B87FC
 	private bool IsOldSeasonByBuffData(ShipTowerBuffData buffData)
 	{
 		if (buffData.Season != 0)
@@ -250,7 +250,7 @@ public class ShipTowerModel : ModelBase
 		return !flag || !flag2;
 	}
 
-	// Token: 0x0601605F RID: 90207 RVA: 0x0058F6C8 File Offset: 0x0058D8C8
+	// Token: 0x06013A65 RID: 80485 RVA: 0x005BA68C File Offset: 0x005B888C
 	public List<SlashAndTowerCfg> GetZeroSeasonInstConfig()
 	{
 		IReadOnlyList<SlashAndTowerCfg> stageCfgBySeason = ShipTowerConfig.Instance.GetStageCfgBySeason(0);
@@ -297,13 +297,13 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06016060 RID: 90208 RVA: 0x0058F870 File Offset: 0x0058DA70
+	// Token: 0x06013A66 RID: 80486 RVA: 0x005BA834 File Offset: 0x005B8A34
 	public bool IsOldSeason(int season)
 	{
 		return season != 0 && season != this.CurSeason;
 	}
 
-	// Token: 0x06016061 RID: 90209 RVA: 0x0058F884 File Offset: 0x0058DA84
+	// Token: 0x06013A67 RID: 80487 RVA: 0x005BA848 File Offset: 0x005B8A48
 	private void AddBuffData(SlashBuffToItem cfg)
 	{
 		if (this.BuffDataMap.ContainsKey(cfg.Id))
@@ -330,7 +330,7 @@ public class ShipTowerModel : ModelBase
 		this.BuffQualityMap[shipTowerBuffData.Quality] = value;
 	}
 
-	// Token: 0x06016062 RID: 90210 RVA: 0x0058F938 File Offset: 0x0058DB38
+	// Token: 0x06013A68 RID: 80488 RVA: 0x005BA8FC File Offset: 0x005B8AFC
 	private void UpdateBuffQualityList()
 	{
 		this.BuffQualityList.Clear();
@@ -338,7 +338,7 @@ public class ShipTowerModel : ModelBase
 		this.BuffQualityList.Sort((ShipTowerBuffQuality a, ShipTowerBuffQuality b) => b.Quality - a.Quality);
 	}
 
-	// Token: 0x06016063 RID: 90211 RVA: 0x0058F990 File Offset: 0x0058DB90
+	// Token: 0x06013A69 RID: 80489 RVA: 0x005BA954 File Offset: 0x005B8B54
 	[NullableContext(0)]
 	public UniTask<bool> CheckInitProto(bool needInitAreaData = false)
 	{
@@ -351,20 +351,20 @@ public class ShipTowerModel : ModelBase
 		return <CheckInitProto>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016064 RID: 90212 RVA: 0x0058F9DC File Offset: 0x0058DBDC
+	// Token: 0x06013A6A RID: 80490 RVA: 0x005BA9A0 File Offset: 0x005B8BA0
 	private bool IsNeedRequestInitData()
 	{
 		return this.IsOpen() && (this.TowerStageDataList.Count == 0 || !this.TowerStageDataList[0].IsHaveProtoData || this.TimeIsOver() || UiManager.Instance.IsViewOpen(EUiViewName.ShipTowerReviewView));
 	}
 
-	// Token: 0x06016065 RID: 90213 RVA: 0x0058FA33 File Offset: 0x0058DC33
+	// Token: 0x06013A6B RID: 80491 RVA: 0x005BA9F7 File Offset: 0x005B8BF7
 	private void InitAreaList()
 	{
 		this.AreaList.Clear();
 		this.AreaList.Add(this.CreateAreaDataById(0, false));
 	}
 
-	// Token: 0x06016066 RID: 90214 RVA: 0x0058FA54 File Offset: 0x0058DC54
+	// Token: 0x06013A6C RID: 80492 RVA: 0x005BAA18 File Offset: 0x005B8C18
 	public void CreateDefaultStageDataList()
 	{
 		if (this.TowerStageDataList.Count > 0)
@@ -388,7 +388,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016067 RID: 90215 RVA: 0x0058FAE0 File Offset: 0x0058DCE0
+	// Token: 0x06013A6D RID: 80493 RVA: 0x005BAAA4 File Offset: 0x005B8CA4
 	[NullableContext(2)]
 	private ShipTowerStageData CreateStageDataById(int id)
 	{
@@ -406,7 +406,7 @@ public class ShipTowerModel : ModelBase
 		return this.CreateStageDataByCfg(stageCfgById.Value);
 	}
 
-	// Token: 0x06016068 RID: 90216 RVA: 0x0058FB40 File Offset: 0x0058DD40
+	// Token: 0x06013A6E RID: 80494 RVA: 0x005BAB04 File Offset: 0x005B8D04
 	private ShipTowerStageData CreateStageDataByCfg(SlashAndTowerCfg cfg)
 	{
 		if (this.StageDataMap.ContainsKey(cfg.Id))
@@ -426,7 +426,7 @@ public class ShipTowerModel : ModelBase
 		return shipTowerStageData2;
 	}
 
-	// Token: 0x06016069 RID: 90217 RVA: 0x0058FBD0 File Offset: 0x0058DDD0
+	// Token: 0x06013A6F RID: 80495 RVA: 0x005BAB94 File Offset: 0x005B8D94
 	[NullableContext(2)]
 	public ShipTowerStageData GetStageDataById(int id)
 	{
@@ -438,7 +438,7 @@ public class ShipTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601606A RID: 90218 RVA: 0x0058FBF0 File Offset: 0x0058DDF0
+	// Token: 0x06013A70 RID: 80496 RVA: 0x005BABB4 File Offset: 0x005B8DB4
 	[NullableContext(2)]
 	public ShipTowerStageData GetEndlessStageData()
 	{
@@ -456,7 +456,7 @@ public class ShipTowerModel : ModelBase
 		return this.StageDataList[0];
 	}
 
-	// Token: 0x0601606B RID: 90219 RVA: 0x0058FC68 File Offset: 0x0058DE68
+	// Token: 0x06013A71 RID: 80497 RVA: 0x005BAC2C File Offset: 0x005B8E2C
 	public List<ShipTowerBuffQuality> GetBuffQualityList(bool isSortData = false)
 	{
 		if (isSortData)
@@ -466,7 +466,7 @@ public class ShipTowerModel : ModelBase
 		return this.BuffQualityList;
 	}
 
-	// Token: 0x0601606C RID: 90220 RVA: 0x0058FC7C File Offset: 0x0058DE7C
+	// Token: 0x06013A72 RID: 80498 RVA: 0x005BAC40 File Offset: 0x005B8E40
 	private void BuffQualityListSortData()
 	{
 		foreach (ShipTowerBuffQuality shipTowerBuffQuality in this.BuffQualityList)
@@ -475,7 +475,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601606D RID: 90221 RVA: 0x0058FCF0 File Offset: 0x0058DEF0
+	// Token: 0x06013A73 RID: 80499 RVA: 0x005BACB4 File Offset: 0x005B8EB4
 	[NullableContext(2)]
 	public ShipTowerBuffData GetBuffDataByBuffId(int buffId)
 	{
@@ -487,7 +487,7 @@ public class ShipTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601606E RID: 90222 RVA: 0x0058FD10 File Offset: 0x0058DF10
+	// Token: 0x06013A74 RID: 80500 RVA: 0x005BACD4 File Offset: 0x005B8ED4
 	public void SelectDefaultBuff(int? stageId = null)
 	{
 		foreach (ShipTowerBuffQuality shipTowerBuffQuality in this.GetBuffQualityList(true))
@@ -508,13 +508,13 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601606F RID: 90223 RVA: 0x0058FDE8 File Offset: 0x0058DFE8
+	// Token: 0x06013A75 RID: 80501 RVA: 0x005BADAC File Offset: 0x005B8FAC
 	public int GetRecommendLevelByInstId(int instId)
 	{
 		return InstanceDungeonConfig.Instance.GetRecommendLevel(instId, WorldLevelModel.Instance.CurWorldLevel);
 	}
 
-	// Token: 0x06016070 RID: 90224 RVA: 0x0058FE00 File Offset: 0x0058E000
+	// Token: 0x06013A76 RID: 80502 RVA: 0x005BADC4 File Offset: 0x005B8FC4
 	public List<ShipTowerTeamTab> GetTeamTabList()
 	{
 		if (this.TeamTabList.Count > 0)
@@ -534,13 +534,13 @@ public class ShipTowerModel : ModelBase
 		return this.TeamTabList;
 	}
 
-	// Token: 0x06016071 RID: 90225 RVA: 0x0058FE6C File Offset: 0x0058E06C
+	// Token: 0x06013A77 RID: 80503 RVA: 0x005BAE30 File Offset: 0x005B9030
 	public bool IsOtherTeamRoleData(int roleId)
 	{
 		return this.OtherTeamRoleMap.ContainsKey(roleId);
 	}
 
-	// Token: 0x06016072 RID: 90226 RVA: 0x0058FE7C File Offset: 0x0058E07C
+	// Token: 0x06013A78 RID: 80504 RVA: 0x005BAE40 File Offset: 0x005B9040
 	[NullableContext(2)]
 	public ShipTowerRoleData GetOtherTeamRoleData(int roleId)
 	{
@@ -552,13 +552,13 @@ public class ShipTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06016073 RID: 90227 RVA: 0x0058FE9C File Offset: 0x0058E09C
+	// Token: 0x06013A79 RID: 80505 RVA: 0x005BAE60 File Offset: 0x005B9060
 	public void AddOtherTeamRoleData(ShipTowerRoleData roleData)
 	{
 		this.OtherTeamRoleMap[roleData.RoleIdEdit] = roleData;
 	}
 
-	// Token: 0x06016074 RID: 90228 RVA: 0x0058FEB0 File Offset: 0x0058E0B0
+	// Token: 0x06013A7A RID: 80506 RVA: 0x005BAE74 File Offset: 0x005B9074
 	[NullableContext(2)]
 	public ShipTowerRoleData GetAllTeamRoleData(int roleId)
 	{
@@ -570,25 +570,25 @@ public class ShipTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06016075 RID: 90229 RVA: 0x0058FED0 File Offset: 0x0058E0D0
+	// Token: 0x06013A7B RID: 80507 RVA: 0x005BAE94 File Offset: 0x005B9094
 	public void AddAllTeamRoleData(ShipTowerRoleData roleData)
 	{
 		this.AllTeamRoleMap[roleData.RoleIdEdit] = roleData;
 	}
 
-	// Token: 0x06016076 RID: 90230 RVA: 0x0058FEE4 File Offset: 0x0058E0E4
+	// Token: 0x06013A7C RID: 80508 RVA: 0x005BAEA8 File Offset: 0x005B90A8
 	public void ClearAllTeamRoleData()
 	{
 		this.AllTeamRoleMap.Clear();
 	}
 
-	// Token: 0x06016077 RID: 90231 RVA: 0x0058FEF1 File Offset: 0x0058E0F1
+	// Token: 0x06013A7D RID: 80509 RVA: 0x005BAEB5 File Offset: 0x005B90B5
 	public void ClearOtherTeamRoleData()
 	{
 		this.OtherTeamRoleMap.Clear();
 	}
 
-	// Token: 0x06016078 RID: 90232 RVA: 0x0058FF00 File Offset: 0x0058E100
+	// Token: 0x06013A7E RID: 80510 RVA: 0x005BAEC4 File Offset: 0x005B90C4
 	public ShipTowerStageData GetNextChallengeStageData([Nullable(2)] ShipTowerStageData ignoreData = null)
 	{
 		foreach (ShipTowerStageData shipTowerStageData in this.StageDataList)
@@ -601,14 +601,14 @@ public class ShipTowerModel : ModelBase
 		return this.StageDataList[this.StageDataList.Count - 1];
 	}
 
-	// Token: 0x06016079 RID: 90233 RVA: 0x0058FF80 File Offset: 0x0058E180
+	// Token: 0x06013A7F RID: 80511 RVA: 0x005BAF44 File Offset: 0x005B9144
 	[NullableContext(2)]
 	public void OpenViewMain(ShipTowerViewParams param = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerView, param, null);
 	}
 
-	// Token: 0x0601607A RID: 90234 RVA: 0x0058FF93 File Offset: 0x0058E193
+	// Token: 0x06013A80 RID: 80512 RVA: 0x005BAF57 File Offset: 0x005B9157
 	public void AddNormalStackChildView(bool success, int viewId)
 	{
 		if (success)
@@ -622,7 +622,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601607B RID: 90235 RVA: 0x0058FFB4 File Offset: 0x0058E1B4
+	// Token: 0x06013A81 RID: 80513 RVA: 0x005BAF78 File Offset: 0x005B9178
 	public void OpenViewDesc(ShipTowerDescViewParams param, [Nullable(2)] TOpenViewCallBack finishCallback = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerDescView, param, delegate(bool success, int viewId)
@@ -637,64 +637,64 @@ public class ShipTowerModel : ModelBase
 		});
 	}
 
-	// Token: 0x0601607C RID: 90236 RVA: 0x0058FFF1 File Offset: 0x0058E1F1
+	// Token: 0x06013A82 RID: 80514 RVA: 0x005BAFB5 File Offset: 0x005B91B5
 	public void OpenViewBuff(ShipTowerBuffViewParams param)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerBuffView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x0601607D RID: 90237 RVA: 0x0059000F File Offset: 0x0058E20F
+	// Token: 0x06013A83 RID: 80515 RVA: 0x005BAFD3 File Offset: 0x005B91D3
 	public void OpenViewCover(ShipTowerCoverViewParams param)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerCoverView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x0601607E RID: 90238 RVA: 0x0059002D File Offset: 0x0058E22D
+	// Token: 0x06013A84 RID: 80516 RVA: 0x005BAFF1 File Offset: 0x005B91F1
 	public void OpenViewReset(ShipTowerResetViewParams param)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerResetView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x0601607F RID: 90239 RVA: 0x0059004B File Offset: 0x0058E24B
+	// Token: 0x06013A85 RID: 80517 RVA: 0x005BB00F File Offset: 0x005B920F
 	[NullableContext(2)]
 	public void OpenViewReward(ShipTowerRewardViewParams param = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerRewardView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x06016080 RID: 90240 RVA: 0x00590069 File Offset: 0x0058E269
+	// Token: 0x06013A86 RID: 80518 RVA: 0x005BB02D File Offset: 0x005B922D
 	public void OpenViewPassBuffShow(ShipTowerPassBuffShowViewParams param)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerPassBuffShowView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x06016081 RID: 90241 RVA: 0x00590087 File Offset: 0x0058E287
+	// Token: 0x06013A87 RID: 80519 RVA: 0x005BB04B File Offset: 0x005B924B
 	public void OpenViewTeamRecommend(ShipTowerTeamRecommendViewParams param)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerTeamRecommendView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x06016082 RID: 90242 RVA: 0x005900A5 File Offset: 0x0058E2A5
+	// Token: 0x06013A88 RID: 80520 RVA: 0x005BB069 File Offset: 0x005B9269
 	public void OpenViewMonsterDesc(ShipTowerMonsterDescViewParams param)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerMonsterDescView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x06016083 RID: 90243 RVA: 0x005900C3 File Offset: 0x0058E2C3
+	// Token: 0x06013A89 RID: 80521 RVA: 0x005BB087 File Offset: 0x005B9287
 	[NullableContext(2)]
 	public void OpenViewRecord(ShipTowerRecordViewParams param = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerRecordView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x06016084 RID: 90244 RVA: 0x005900E1 File Offset: 0x0058E2E1
+	// Token: 0x06013A8A RID: 80522 RVA: 0x005BB0A5 File Offset: 0x005B92A5
 	[NullableContext(2)]
 	public void OpenViewReview(ShipTowerReviewViewParams param = null)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ShipTowerReviewView, param, new TOpenViewCallBack(this.AddNormalStackChildView));
 	}
 
-	// Token: 0x06016085 RID: 90245 RVA: 0x00590100 File Offset: 0x0058E300
+	// Token: 0x06013A8B RID: 80523 RVA: 0x005BB0C4 File Offset: 0x005B92C4
 	[NullableContext(2)]
 	private unsafe bool CheckErrorCode(TErrorCode response, EResponseMessageId msgId, bool isShowTip = true)
 	{
@@ -721,13 +721,13 @@ public class ShipTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06016086 RID: 90246 RVA: 0x00590199 File Offset: 0x0058E399
+	// Token: 0x06013A8C RID: 80524 RVA: 0x005BB15D File Offset: 0x005B935D
 	public void UpdateSeasonNotify(SlashAndTowerOverNotify notify)
 	{
 		this.OpenConfirmSeasonUpdate(null);
 	}
 
-	// Token: 0x06016087 RID: 90247 RVA: 0x005901A4 File Offset: 0x0058E3A4
+	// Token: 0x06013A8D RID: 80525 RVA: 0x005BB168 File Offset: 0x005B9368
 	public void UpdateResultNotify(SlashAndTowerResultNotify notify)
 	{
 		ShipTowerStageData stageDataById = this.GetStageDataById(notify.LevelsId);
@@ -778,7 +778,7 @@ public class ShipTowerModel : ModelBase
 		}, null);
 	}
 
-	// Token: 0x06016088 RID: 90248 RVA: 0x00590360 File Offset: 0x0058E560
+	// Token: 0x06013A8E RID: 80526 RVA: 0x005BB324 File Offset: 0x005B9524
 	private unsafe List<IRewardExploreConfirmButton> GetFightFinishButtonList(ShipTowerStageData stageData, int newScore)
 	{
 		List<IRewardExploreConfirmButton> list = new List<IRewardExploreConfirmButton>
@@ -859,7 +859,7 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06016089 RID: 90249 RVA: 0x005905A0 File Offset: 0x0058E7A0
+	// Token: 0x06013A8F RID: 80527 RVA: 0x005BB564 File Offset: 0x005B9764
 	public void UpdateLevelPlayNotify(SlashAndTowerLevelPlayNotify notify)
 	{
 		foreach (SlashLevelPlayInfo slashLevelPlayInfo in notify.SlashLevelPlayInfos)
@@ -878,7 +878,7 @@ public class ShipTowerModel : ModelBase
 		this.UpdateAreaListState();
 	}
 
-	// Token: 0x0601608A RID: 90250 RVA: 0x0059063C File Offset: 0x0058E83C
+	// Token: 0x06013A90 RID: 80528 RVA: 0x005BB600 File Offset: 0x005B9800
 	[NullableContext(2)]
 	public void SlashAndTowerInfoResponse(SlashAndTowerInfoResponse response)
 	{
@@ -939,7 +939,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601608B RID: 90251 RVA: 0x0059088C File Offset: 0x0058EA8C
+	// Token: 0x06013A91 RID: 80529 RVA: 0x005BB850 File Offset: 0x005B9A50
 	[NullableContext(2)]
 	public void SlashAndTowerScoreRewardResponse(SlashAndTowerScoreRewardResponse response)
 	{
@@ -967,7 +967,7 @@ public class ShipTowerModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.ShipTowerRewardReceive, this.ReceivingAwardId);
 	}
 
-	// Token: 0x0601608C RID: 90252 RVA: 0x00590930 File Offset: 0x0058EB30
+	// Token: 0x06013A92 RID: 80530 RVA: 0x005BB8F4 File Offset: 0x005B9AF4
 	[NullableContext(2)]
 	public void EndLessHistoryResponse(EndLessHistoryResponse response)
 	{
@@ -989,7 +989,7 @@ public class ShipTowerModel : ModelBase
 		this.AddRecord("GhostShipCycle_Text2", (response != null) ? response.HistoryRecord : null);
 	}
 
-	// Token: 0x0601608D RID: 90253 RVA: 0x0059099C File Offset: 0x0058EB9C
+	// Token: 0x06013A93 RID: 80531 RVA: 0x005BB960 File Offset: 0x005B9B60
 	private void AddRecord(string name, [Nullable(2)] EndlessBattleRecord protoInfo)
 	{
 		if (protoInfo == null || (protoInfo != null && protoInfo.Id == 0))
@@ -1012,7 +1012,7 @@ public class ShipTowerModel : ModelBase
 		this.RecordList.Add(CS$<>8__locals1.data);
 	}
 
-	// Token: 0x0601608E RID: 90254 RVA: 0x00590A50 File Offset: 0x0058EC50
+	// Token: 0x06013A94 RID: 80532 RVA: 0x005BBA14 File Offset: 0x005B9C14
 	[NullableContext(2)]
 	public void SlashAndTowerSaveRecordResponse(int id, SlashAndTowerSaveRecordResponse response)
 	{
@@ -1040,7 +1040,7 @@ public class ShipTowerModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.ShipTowerSureCoverChallenge, id);
 	}
 
-	// Token: 0x0601608F RID: 90255 RVA: 0x00590AC8 File Offset: 0x0058ECC8
+	// Token: 0x06013A95 RID: 80533 RVA: 0x005BBA8C File Offset: 0x005B9C8C
 	[NullableContext(2)]
 	public void SlashAndTowerResetResponse(int id, SlashAndTowerResetResponse response)
 	{
@@ -1067,7 +1067,7 @@ public class ShipTowerModel : ModelBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("GhostShipRecordReset_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x06016090 RID: 90256 RVA: 0x00590B38 File Offset: 0x0058ED38
+	// Token: 0x06013A96 RID: 80534 RVA: 0x005BBAFC File Offset: 0x005B9CFC
 	[NullableContext(2)]
 	public void SlashAndTowerRecommendResponse(int id, SlashAndTowerRecommendResponse response)
 	{
@@ -1092,7 +1092,7 @@ public class ShipTowerModel : ModelBase
 		stageDataById.ProtoUpdateTeamRecommendList(response);
 	}
 
-	// Token: 0x06016091 RID: 90257 RVA: 0x00590B74 File Offset: 0x0058ED74
+	// Token: 0x06013A97 RID: 80535 RVA: 0x005BBB38 File Offset: 0x005B9D38
 	[NullableContext(2)]
 	public void SlashAndTowerReviewResponse(LstBattleRecordResponse response)
 	{
@@ -1131,7 +1131,7 @@ public class ShipTowerModel : ModelBase
 		this.ReviewProgressList.Add((response != null) ? response.LastTotalRewardCount : 0);
 	}
 
-	// Token: 0x06016092 RID: 90258 RVA: 0x00590C88 File Offset: 0x0058EE88
+	// Token: 0x06013A98 RID: 80536 RVA: 0x005BBC4C File Offset: 0x005B9E4C
 	public bool CheckCanOpen(EUiViewName name, object ob)
 	{
 		if (OnlineModel.Instance.GetIsTeamModel())
@@ -1156,7 +1156,7 @@ public class ShipTowerModel : ModelBase
 		return flag;
 	}
 
-	// Token: 0x06016093 RID: 90259 RVA: 0x00590D58 File Offset: 0x0058EF58
+	// Token: 0x06013A99 RID: 80537 RVA: 0x005BBD1C File Offset: 0x005B9F1C
 	public bool CheckInBattleShipTower()
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -1168,13 +1168,13 @@ public class ShipTowerModel : ModelBase
 		return config != null && config.Value.InstSubType == 27;
 	}
 
-	// Token: 0x06016094 RID: 90260 RVA: 0x00590DA9 File Offset: 0x0058EFA9
+	// Token: 0x06013A9A RID: 80538 RVA: 0x005BBD6D File Offset: 0x005B9F6D
 	public bool IsOpen()
 	{
 		return FunctionModel.Instance.IsOpen(10081);
 	}
 
-	// Token: 0x06016095 RID: 90261 RVA: 0x00590DBC File Offset: 0x0058EFBC
+	// Token: 0x06013A9B RID: 80539 RVA: 0x005BBD80 File Offset: 0x005B9F80
 	public void StartChallenge(ShipTowerStageData stageData)
 	{
 		this.ChallengeStageData = stageData;
@@ -1189,14 +1189,14 @@ public class ShipTowerModel : ModelBase
 		ShipTowerController.Instance.RequestChallenge(stageData, false, false);
 	}
 
-	// Token: 0x06016096 RID: 90262 RVA: 0x00590E44 File Offset: 0x0058F044
+	// Token: 0x06013A9C RID: 80540 RVA: 0x005BBE08 File Offset: 0x005BA008
 	private void SetChallengeBuffIdList(List<int> buffIdList)
 	{
 		this.ChallengeBuffIdList.Clear();
 		this.ChallengeBuffIdList.AddRange(buffIdList);
 	}
 
-	// Token: 0x06016097 RID: 90263 RVA: 0x00590E60 File Offset: 0x0058F060
+	// Token: 0x06013A9D RID: 80541 RVA: 0x005BBE24 File Offset: 0x005BA024
 	public void AgainChallenge()
 	{
 		if (this.CheckIsNeedShowConfirmSeasonUpdate(null))
@@ -1218,7 +1218,7 @@ public class ShipTowerModel : ModelBase
 		ShipTowerController.Instance.RequestChallenge(this.ChallengeStageData, isFromLast, true);
 	}
 
-	// Token: 0x06016098 RID: 90264 RVA: 0x00590EDC File Offset: 0x0058F0DC
+	// Token: 0x06013A9E RID: 80542 RVA: 0x005BBEA0 File Offset: 0x005BA0A0
 	public void OpenViewMainFromFight()
 	{
 		if (!this.CheckChallengeStageData())
@@ -1234,7 +1234,7 @@ public class ShipTowerModel : ModelBase
 		});
 	}
 
-	// Token: 0x06016099 RID: 90265 RVA: 0x00590F30 File Offset: 0x0058F130
+	// Token: 0x06013A9F RID: 80543 RVA: 0x005BBEF4 File Offset: 0x005BA0F4
 	private bool CheckChallengeStageData()
 	{
 		if (this.ChallengeStageData != null)
@@ -1253,7 +1253,7 @@ public class ShipTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601609A RID: 90266 RVA: 0x00590FB0 File Offset: 0x0058F1B0
+	// Token: 0x06013AA0 RID: 80544 RVA: 0x005BBF74 File Offset: 0x005BA174
 	public void ClearChallengeStageData()
 	{
 		if (this.ChallengeStageData == null)
@@ -1264,13 +1264,13 @@ public class ShipTowerModel : ModelBase
 		this.SetChallengeStageDataNull();
 	}
 
-	// Token: 0x0601609B RID: 90267 RVA: 0x00590FCC File Offset: 0x0058F1CC
+	// Token: 0x06013AA1 RID: 80545 RVA: 0x005BBF90 File Offset: 0x005BA190
 	public void SetChallengeStageDataNull()
 	{
 		this.ChallengeStageData = null;
 	}
 
-	// Token: 0x0601609C RID: 90268 RVA: 0x00590FD8 File Offset: 0x0058F1D8
+	// Token: 0x06013AA2 RID: 80546 RVA: 0x005BBF9C File Offset: 0x005BA19C
 	[NullableContext(0)]
 	public UniTask<bool> CheckIsNeedShowSeasonReview()
 	{
@@ -1282,7 +1282,7 @@ public class ShipTowerModel : ModelBase
 		return <CheckIsNeedShowSeasonReview>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601609D RID: 90269 RVA: 0x0059101C File Offset: 0x0058F21C
+	// Token: 0x06013AA3 RID: 80547 RVA: 0x005BBFE0 File Offset: 0x005BA1E0
 	private void CheckOldSeasonData()
 	{
 		List<ShipTowerStageData> list = new List<ShipTowerStageData>();
@@ -1304,7 +1304,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601609E RID: 90270 RVA: 0x005910E0 File Offset: 0x0058F2E0
+	// Token: 0x06013AA4 RID: 80548 RVA: 0x005BC0A4 File Offset: 0x005BA2A4
 	public string GetStageGradeResId(string charStr)
 	{
 		ShipTowerScoreGrade shipTowerScoreGrade;
@@ -1316,7 +1316,7 @@ public class ShipTowerModel : ModelBase
 		return shipTowerScoreGrade.ResId;
 	}
 
-	// Token: 0x0601609F RID: 90271 RVA: 0x0059111C File Offset: 0x0058F31C
+	// Token: 0x06013AA5 RID: 80549 RVA: 0x005BC0E0 File Offset: 0x005BA2E0
 	public string GetShareStageGradeResId(string charStr)
 	{
 		ShipTowerScoreGrade shipTowerScoreGrade;
@@ -1328,7 +1328,7 @@ public class ShipTowerModel : ModelBase
 		return shipTowerScoreGrade.BigResId;
 	}
 
-	// Token: 0x060160A0 RID: 90272 RVA: 0x00591158 File Offset: 0x0058F358
+	// Token: 0x06013AA6 RID: 80550 RVA: 0x005BC11C File Offset: 0x005BA31C
 	[NullableContext(2)]
 	public string GetStageGradeResIdByStageId(int stageId, int score)
 	{
@@ -1345,7 +1345,7 @@ public class ShipTowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060160A1 RID: 90273 RVA: 0x005911B4 File Offset: 0x0058F3B4
+	// Token: 0x06013AA7 RID: 80551 RVA: 0x005BC178 File Offset: 0x005BA378
 	[return: Nullable(2)]
 	public string GetStageGradeResIdByScore(int score, int[] targetList, string[] stageList)
 	{
@@ -1359,7 +1359,7 @@ public class ShipTowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060160A2 RID: 90274 RVA: 0x005911E4 File Offset: 0x0058F3E4
+	// Token: 0x06013AA8 RID: 80552 RVA: 0x005BC1A8 File Offset: 0x005BA3A8
 	[return: Nullable(2)]
 	public string GetShareStageGradeResIdByScore(int score, int[] targetList, string[] stageList)
 	{
@@ -1373,7 +1373,7 @@ public class ShipTowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060160A3 RID: 90275 RVA: 0x00591214 File Offset: 0x0058F414
+	// Token: 0x06013AA9 RID: 80553 RVA: 0x005BC1D8 File Offset: 0x005BA3D8
 	public string GetStageNameById(int stageId)
 	{
 		ShipTowerStageData stageDataById = this.GetStageDataById(stageId);
@@ -1394,7 +1394,7 @@ public class ShipTowerModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x060160A4 RID: 90276 RVA: 0x00591270 File Offset: 0x0058F470
+	// Token: 0x06013AAA RID: 80554 RVA: 0x005BC234 File Offset: 0x005BA434
 	public int GetStageOrderIndexById(int stageId)
 	{
 		ShipTowerStageData stageDataById = this.GetStageDataById(stageId);
@@ -1411,7 +1411,7 @@ public class ShipTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060160A5 RID: 90277 RVA: 0x005912B8 File Offset: 0x0058F4B8
+	// Token: 0x06013AAB RID: 80555 RVA: 0x005BC27C File Offset: 0x005BA47C
 	public bool GetStageIsEndlessById(int stageId)
 	{
 		ShipTowerStageData stageDataById = this.GetStageDataById(stageId);
@@ -1423,7 +1423,7 @@ public class ShipTowerModel : ModelBase
 		return stageCfgById != null && stageCfgById.Value.EndLess;
 	}
 
-	// Token: 0x060160A6 RID: 90278 RVA: 0x00591300 File Offset: 0x0058F500
+	// Token: 0x06013AAC RID: 80556 RVA: 0x005BC2C4 File Offset: 0x005BA4C4
 	public IBattleUiHoverTipsD GetInTheBattleBuffInfo()
 	{
 		object obj = this.CheckChallengeStageData() ? this.ChallengeStageData : this.StageDataList[0];
@@ -1477,7 +1477,7 @@ public class ShipTowerModel : ModelBase
 		};
 	}
 
-	// Token: 0x060160A7 RID: 90279 RVA: 0x005914B8 File Offset: 0x0058F6B8
+	// Token: 0x06013AAD RID: 80557 RVA: 0x005BC47C File Offset: 0x005BA67C
 	public void AddShowBuffId(int buffId, bool isShowTips = true)
 	{
 		this.GetBuffIdList.Add(buffId);
@@ -1491,7 +1491,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060160A8 RID: 90280 RVA: 0x005914F8 File Offset: 0x0058F6F8
+	// Token: 0x06013AAE RID: 80558 RVA: 0x005BC4BC File Offset: 0x005BA6BC
 	[NullableContext(0)]
 	public UniTask<bool> CheckShowGetBuff()
 	{
@@ -1503,13 +1503,13 @@ public class ShipTowerModel : ModelBase
 		return <CheckShowGetBuff>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060160A9 RID: 90281 RVA: 0x0059153B File Offset: 0x0058F73B
+	// Token: 0x06013AAF RID: 80559 RVA: 0x005BC4FF File Offset: 0x005BA6FF
 	public void ClearGetBuffIdList()
 	{
 		this.GetBuffIdList.Clear();
 	}
 
-	// Token: 0x060160AA RID: 90282 RVA: 0x00591548 File Offset: 0x0058F748
+	// Token: 0x06013AB0 RID: 80560 RVA: 0x005BC50C File Offset: 0x005BA70C
 	private List<TItem> GetShowGetBuffDataList()
 	{
 		List<TItem> list = new List<TItem>();
@@ -1536,7 +1536,7 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060160AB RID: 90283 RVA: 0x00591610 File Offset: 0x0058F810
+	// Token: 0x06013AB1 RID: 80561 RVA: 0x005BC5D4 File Offset: 0x005BA7D4
 	public UniTask OpenWelcomeView()
 	{
 		ShipTowerModel.<OpenWelcomeView>d__136 <OpenWelcomeView>d__;
@@ -1547,13 +1547,13 @@ public class ShipTowerModel : ModelBase
 		return <OpenWelcomeView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060160AC RID: 90284 RVA: 0x00591653 File Offset: 0x0058F853
+	// Token: 0x06013AB2 RID: 80562 RVA: 0x005BC617 File Offset: 0x005BA817
 	public void CloseWelcomeView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ShipTowerWelcomeView, null);
 	}
 
-	// Token: 0x060160AD RID: 90285 RVA: 0x00591665 File Offset: 0x0058F865
+	// Token: 0x06013AB3 RID: 80563 RVA: 0x005BC629 File Offset: 0x005BA829
 	[NullableContext(2)]
 	public bool CheckIsNeedShowConfirmSeasonUpdate(Action confirmCallback = null)
 	{
@@ -1565,13 +1565,13 @@ public class ShipTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060160AE RID: 90286 RVA: 0x00591679 File Offset: 0x0058F879
+	// Token: 0x06013AB4 RID: 80564 RVA: 0x005BC63D File Offset: 0x005BA83D
 	private bool IsShowConfirmSeasonUpdate()
 	{
 		return this.IsNeedShowSeasonReview || this.TimeIsOver();
 	}
 
-	// Token: 0x060160AF RID: 90287 RVA: 0x00591690 File Offset: 0x0058F890
+	// Token: 0x06013AB5 RID: 80565 RVA: 0x005BC654 File Offset: 0x005BA854
 	[NullableContext(2)]
 	private void OpenConfirmSeasonUpdate(Action confirmCallback = null)
 	{
@@ -1595,7 +1595,7 @@ public class ShipTowerModel : ModelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060160B0 RID: 90288 RVA: 0x00591700 File Offset: 0x0058F900
+	// Token: 0x06013AB6 RID: 80566 RVA: 0x005BC6C4 File Offset: 0x005BA8C4
 	public void OpenConfirmBackWorld()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ShipTowerFromViewLeaveInst);
@@ -1606,7 +1606,7 @@ public class ShipTowerModel : ModelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060160B1 RID: 90289 RVA: 0x0059173C File Offset: 0x0058F93C
+	// Token: 0x06013AB7 RID: 80567 RVA: 0x005BC700 File Offset: 0x005BA900
 	private void ConfirmSeasonUpdateCallback()
 	{
 		if (this.LeaveBattle())
@@ -1616,7 +1616,7 @@ public class ShipTowerModel : ModelBase
 		this.CloseMainView();
 	}
 
-	// Token: 0x060160B2 RID: 90290 RVA: 0x0059174D File Offset: 0x0058F94D
+	// Token: 0x06013AB8 RID: 80568 RVA: 0x005BC711 File Offset: 0x005BA911
 	public bool LeaveBattle()
 	{
 		if (!this.CheckInBattleShipTower())
@@ -1629,7 +1629,7 @@ public class ShipTowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060160B3 RID: 90291 RVA: 0x00591784 File Offset: 0x0058F984
+	// Token: 0x06013AB9 RID: 80569 RVA: 0x005BC748 File Offset: 0x005BA948
 	public bool IsExistFirstGetBuff()
 	{
 		foreach (ShipTowerBuffQuality shipTowerBuffQuality in this.BuffQualityList)
@@ -1648,13 +1648,13 @@ public class ShipTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060160B4 RID: 90292 RVA: 0x00591818 File Offset: 0x0058FA18
+	// Token: 0x06013ABA RID: 80570 RVA: 0x005BC7DC File Offset: 0x005BA9DC
 	public void CloseMainView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ShipTowerView, null);
 	}
 
-	// Token: 0x060160B5 RID: 90293 RVA: 0x0059182A File Offset: 0x0058FA2A
+	// Token: 0x06013ABB RID: 80571 RVA: 0x005BC7EE File Offset: 0x005BA9EE
 	public double GetRemainTime()
 	{
 		if (this.CurSeasonEndTime <= 0L)
@@ -1664,13 +1664,13 @@ public class ShipTowerModel : ModelBase
 		return (double)this.CurSeasonEndTime - TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x060160B6 RID: 90294 RVA: 0x00591852 File Offset: 0x0058FA52
+	// Token: 0x06013ABC RID: 80572 RVA: 0x005BC816 File Offset: 0x005BAA16
 	public bool TimeIsOver()
 	{
 		return this.GetRemainTime() <= 0.0;
 	}
 
-	// Token: 0x060160B7 RID: 90295 RVA: 0x00591868 File Offset: 0x0058FA68
+	// Token: 0x06013ABD RID: 80573 RVA: 0x005BC82C File Offset: 0x005BAA2C
 	public string GetRewardCountDownDesc()
 	{
 		double remainTime = this.GetRemainTime();
@@ -1686,7 +1686,7 @@ public class ShipTowerModel : ModelBase
 		});
 	}
 
-	// Token: 0x060160B8 RID: 90296 RVA: 0x005918B8 File Offset: 0x0058FAB8
+	// Token: 0x06013ABE RID: 80574 RVA: 0x005BC87C File Offset: 0x005BAA7C
 	public UniTask ReceiveAward(int id, int[] ids)
 	{
 		ShipTowerModel.<ReceiveAward>d__149 <ReceiveAward>d__;
@@ -1699,25 +1699,25 @@ public class ShipTowerModel : ModelBase
 		return <ReceiveAward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060160B9 RID: 90297 RVA: 0x0059190B File Offset: 0x0058FB0B
+	// Token: 0x06013ABF RID: 80575 RVA: 0x005BC8CF File Offset: 0x005BAACF
 	public bool IsCanReceiveAward()
 	{
 		return this.RewardCanReceiveNum > 0;
 	}
 
-	// Token: 0x060160BA RID: 90298 RVA: 0x00591916 File Offset: 0x0058FB16
+	// Token: 0x06013AC0 RID: 80576 RVA: 0x005BC8DA File Offset: 0x005BAADA
 	public bool IsEndlessRecordOpen()
 	{
 		return this.CurIsHaveRecord;
 	}
 
-	// Token: 0x060160BB RID: 90299 RVA: 0x0059191E File Offset: 0x0058FB1E
+	// Token: 0x06013AC1 RID: 80577 RVA: 0x005BC8E2 File Offset: 0x005BAAE2
 	public bool IsCanUseRole(int roleId)
 	{
 		return RoleModel.Instance.GetRoleInstanceById(roleId) != null;
 	}
 
-	// Token: 0x060160BC RID: 90300 RVA: 0x00591930 File Offset: 0x0058FB30
+	// Token: 0x06013AC2 RID: 80578 RVA: 0x005BC8F4 File Offset: 0x005BAAF4
 	public UniTask RequestRecord()
 	{
 		ShipTowerModel.<RequestRecord>d__153 <RequestRecord>d__;
@@ -1727,7 +1727,7 @@ public class ShipTowerModel : ModelBase
 		return <RequestRecord>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060160BD RID: 90301 RVA: 0x0059196C File Offset: 0x0058FB6C
+	// Token: 0x06013AC3 RID: 80579 RVA: 0x005BC930 File Offset: 0x005BAB30
 	public CommonDefine.ICountDown GetSeasonCountDownData()
 	{
 		double num = this.GetRemainTime();
@@ -1740,7 +1740,7 @@ public class ShipTowerModel : ModelBase
 		return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2));
 	}
 
-	// Token: 0x060160BE RID: 90302 RVA: 0x005919F0 File Offset: 0x0058FBF0
+	// Token: 0x06013AC4 RID: 80580 RVA: 0x005BC9B4 File Offset: 0x005BABB4
 	public string GetStageAreaName(int? stageId = null)
 	{
 		ShipTowerStageData shipTowerStageData;
@@ -1781,7 +1781,7 @@ public class ShipTowerModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x060160BF RID: 90303 RVA: 0x00591B10 File Offset: 0x0058FD10
+	// Token: 0x06013AC5 RID: 80581 RVA: 0x005BCAD4 File Offset: 0x005BACD4
 	public string GetCurrentStageSeasonName()
 	{
 		ShipTowerStageData currentStage = this.GetCurrentStage();
@@ -1794,7 +1794,7 @@ public class ShipTowerModel : ModelBase
 		return TextConfig.Instance.GetMultiTextByKey(text2, text2);
 	}
 
-	// Token: 0x060160C0 RID: 90304 RVA: 0x00591B64 File Offset: 0x0058FD64
+	// Token: 0x06013AC6 RID: 80582 RVA: 0x005BCB28 File Offset: 0x005BAD28
 	public string GetCurrentStageSeasonName2()
 	{
 		ShipTowerStageData currentStage = this.GetCurrentStage();
@@ -1807,7 +1807,7 @@ public class ShipTowerModel : ModelBase
 		return TextConfig.Instance.GetMultiTextByKey(text2, text2);
 	}
 
-	// Token: 0x060160C1 RID: 90305 RVA: 0x00591BB0 File Offset: 0x0058FDB0
+	// Token: 0x06013AC7 RID: 80583 RVA: 0x005BCB74 File Offset: 0x005BAD74
 	[NullableContext(2)]
 	public ShipTowerStageData GetCurrentStage()
 	{
@@ -1826,7 +1826,7 @@ public class ShipTowerModel : ModelBase
 		return this.StageDataList[0];
 	}
 
-	// Token: 0x060160C2 RID: 90306 RVA: 0x00591C08 File Offset: 0x0058FE08
+	// Token: 0x06013AC8 RID: 80584 RVA: 0x005BCBCC File Offset: 0x005BADCC
 	public bool IsPassZeroSeason()
 	{
 		if (!this.IsOpen())
@@ -1837,7 +1837,7 @@ public class ShipTowerModel : ModelBase
 		return currentStage == null || currentStage.BelongToSeason != 0;
 	}
 
-	// Token: 0x060160C3 RID: 90307 RVA: 0x00591C28 File Offset: 0x0058FE28
+	// Token: 0x06013AC9 RID: 80585 RVA: 0x005BCBEC File Offset: 0x005BADEC
 	public List<FormationData> GetPlayerTeamList()
 	{
 		List<FormationData> list = new List<FormationData>();
@@ -1857,7 +1857,7 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060160C4 RID: 90308 RVA: 0x00591C77 File Offset: 0x0058FE77
+	// Token: 0x06013ACA RID: 80586 RVA: 0x005BCC3B File Offset: 0x005BAE3B
 	public void UpdateToEdit()
 	{
 		this.StageDataList.ForEach(delegate(ShipTowerStageData stageData)
@@ -1866,7 +1866,7 @@ public class ShipTowerModel : ModelBase
 		});
 	}
 
-	// Token: 0x060160C5 RID: 90309 RVA: 0x00591CA4 File Offset: 0x0058FEA4
+	// Token: 0x06013ACB RID: 80587 RVA: 0x005BCC68 File Offset: 0x005BAE68
 	public List<ShipTowerAreaItemData> GetAreaList()
 	{
 		if (this.AreaList.Count >= 2)
@@ -1884,7 +1884,7 @@ public class ShipTowerModel : ModelBase
 		return this.AreaList;
 	}
 
-	// Token: 0x060160C6 RID: 90310 RVA: 0x00591D18 File Offset: 0x0058FF18
+	// Token: 0x06013ACC RID: 80588 RVA: 0x005BCCDC File Offset: 0x005BAEDC
 	public ShipTowerAreaItemData CreateAreaDataById(int areaId, bool isEndless = false)
 	{
 		List<ShipTowerRewardItemData> rewardListByAreaId = this.GetRewardListByAreaId(areaId, isEndless);
@@ -1905,7 +1905,7 @@ public class ShipTowerModel : ModelBase
 		};
 	}
 
-	// Token: 0x060160C7 RID: 90311 RVA: 0x00591DD0 File Offset: 0x0058FFD0
+	// Token: 0x06013ACD RID: 80589 RVA: 0x005BCD94 File Offset: 0x005BAF94
 	public List<ShipTowerRewardItemData> GetRewardListByAreaId(int areaId, bool isEndless = false)
 	{
 		List<ShipTowerRewardItemData> list = new List<ShipTowerRewardItemData>();
@@ -1946,7 +1946,7 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060160C8 RID: 90312 RVA: 0x00591F5C File Offset: 0x0059015C
+	// Token: 0x06013ACE RID: 80590 RVA: 0x005BCF20 File Offset: 0x005BB120
 	public void ClearAreaList()
 	{
 		for (int i = this.AreaList.Count - 1; i >= 0; i--)
@@ -1958,7 +1958,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060160C9 RID: 90313 RVA: 0x00591FA0 File Offset: 0x005901A0
+	// Token: 0x06013ACF RID: 80591 RVA: 0x005BCF64 File Offset: 0x005BB164
 	private void UpdateAreaListState()
 	{
 		this.RewardCanReceiveNum = 0;
@@ -2050,7 +2050,7 @@ public class ShipTowerModel : ModelBase
 		ActivityShipTowerController.RefreshActivityRedDot();
 	}
 
-	// Token: 0x060160CA RID: 90314 RVA: 0x0059223C File Offset: 0x0059043C
+	// Token: 0x06013AD0 RID: 80592 RVA: 0x005BD200 File Offset: 0x005BB400
 	public string GetRewardProgressText(bool useColor = true)
 	{
 		ValueTuple<int, int> rewardProgressNumData = this.GetRewardProgressNumData();
@@ -2073,7 +2073,7 @@ public class ShipTowerModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060160CB RID: 90315 RVA: 0x005922C8 File Offset: 0x005904C8
+	// Token: 0x06013AD1 RID: 80593 RVA: 0x005BD28C File Offset: 0x005BB48C
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetRewardProgressNumData()
 	{
@@ -2109,7 +2109,7 @@ public class ShipTowerModel : ModelBase
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x060160CC RID: 90316 RVA: 0x005923E8 File Offset: 0x005905E8
+	// Token: 0x06013AD2 RID: 80594 RVA: 0x005BD3AC File Offset: 0x005BB5AC
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetEndlessRewardProgressNumData()
 	{
@@ -2131,7 +2131,7 @@ public class ShipTowerModel : ModelBase
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x060160CD RID: 90317 RVA: 0x005924D4 File Offset: 0x005906D4
+	// Token: 0x06013AD3 RID: 80595 RVA: 0x005BD498 File Offset: 0x005BB698
 	public bool CheckIsScoreBattle()
 	{
 		if (this.CurSeasonCfg == null || !this.CurSeasonCfg.Value.IsOpenHot)
@@ -2142,7 +2142,7 @@ public class ShipTowerModel : ModelBase
 		return challengeStageData != null && challengeStageData.StageType > EShipTowerStageType.OneTimeStage;
 	}
 
-	// Token: 0x060160CE RID: 90318 RVA: 0x00592520 File Offset: 0x00590720
+	// Token: 0x06013AD4 RID: 80596 RVA: 0x005BD4E4 File Offset: 0x005BB6E4
 	[NullableContext(2)]
 	public ShipTowerTeamData GetCurrentStageTeamData()
 	{
@@ -2154,7 +2154,7 @@ public class ShipTowerModel : ModelBase
 		return currentStage.GetCurrentTeamData();
 	}
 
-	// Token: 0x060160CF RID: 90319 RVA: 0x00592534 File Offset: 0x00590734
+	// Token: 0x06013AD5 RID: 80597 RVA: 0x005BD4F8 File Offset: 0x005BB6F8
 	[NullableContext(2)]
 	public List<int> GetRewardIdsByDifficulties(bool isCanReceive)
 	{
@@ -2195,8 +2195,8 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x17001D9B RID: 7579
-	// (get) Token: 0x060160D0 RID: 90320 RVA: 0x005926D4 File Offset: 0x005908D4
+	// Token: 0x17001DF4 RID: 7668
+	// (get) Token: 0x06013AD6 RID: 80598 RVA: 0x005BD698 File Offset: 0x005BB898
 	public static ShipTowerModel Instance
 	{
 		get
@@ -2205,7 +2205,7 @@ public class ShipTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060160D1 RID: 90321 RVA: 0x005926DB File Offset: 0x005908DB
+	// Token: 0x06013AD7 RID: 80599 RVA: 0x005BD69F File Offset: 0x005BB89F
 	public static ShipTowerModel GetOrCreateInstance()
 	{
 		if (ShipTowerModel._Instance == null)
@@ -2215,7 +2215,7 @@ public class ShipTowerModel : ModelBase
 		return ShipTowerModel._Instance;
 	}
 
-	// Token: 0x060160D2 RID: 90322 RVA: 0x005926EF File Offset: 0x005908EF
+	// Token: 0x06013AD8 RID: 80600 RVA: 0x005BD6B3 File Offset: 0x005BB8B3
 	public static bool CreateInstance()
 	{
 		if (ShipTowerModel._Instance != null)
@@ -2226,24 +2226,24 @@ public class ShipTowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060160D3 RID: 90323 RVA: 0x00592705 File Offset: 0x00590905
+	// Token: 0x06013AD9 RID: 80601 RVA: 0x005BD6C9 File Offset: 0x005BB8C9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060160D4 RID: 90324 RVA: 0x00592707 File Offset: 0x00590907
+	// Token: 0x06013ADA RID: 80602 RVA: 0x005BD6CB File Offset: 0x005BB8CB
 	public static void ResetStaticDefaultValue()
 	{
 		ShipTowerModel._Instance = null;
 	}
 
-	// Token: 0x060160D5 RID: 90325 RVA: 0x0059270F File Offset: 0x0059090F
+	// Token: 0x06013ADB RID: 80603 RVA: 0x005BD6D3 File Offset: 0x005BB8D3
 	static ShipTowerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ShipTowerModel.CreateStaticDefaultValue), new Action(ShipTowerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060160D7 RID: 90327 RVA: 0x00592800 File Offset: 0x00590A00
+	// Token: 0x06013ADD RID: 80605 RVA: 0x005BD7C4 File Offset: 0x005BB9C4
 	[CompilerGenerated]
 	internal static List<ShipTowerMediumItemData> <UpdateResultNotify>g__MakeRoleList|100_0(ShipTowerTeamData teamData)
 	{
@@ -2261,7 +2261,7 @@ public class ShipTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060160D8 RID: 90328 RVA: 0x005928A0 File Offset: 0x00590AA0
+	// Token: 0x06013ADE RID: 80606 RVA: 0x005BD864 File Offset: 0x005BBA64
 	[CompilerGenerated]
 	internal static void <AddRecord>g__functionAddTeam|106_0(string teamTitle, [Nullable(2)] HalfEndlessBattleRecord teamInfo, ref ShipTowerModel.<>c__DisplayClass106_0 A_2)
 	{
@@ -2299,114 +2299,114 @@ public class ShipTowerModel : ModelBase
 		A_2.data.RecordList.Add(item);
 	}
 
-	// Token: 0x0400A44F RID: 42063
+	// Token: 0x0400A839 RID: 43065
 	private bool IsInitData;
 
-	// Token: 0x0400A450 RID: 42064
+	// Token: 0x0400A83A RID: 43066
 	private readonly List<ShipTowerStageData> StageDataList = new List<ShipTowerStageData>();
 
-	// Token: 0x0400A451 RID: 42065
+	// Token: 0x0400A83B RID: 43067
 	private readonly Dictionary<int, ShipTowerStageData> StageDataMap = new Dictionary<int, ShipTowerStageData>();
 
-	// Token: 0x0400A452 RID: 42066
+	// Token: 0x0400A83C RID: 43068
 	public bool DebugParallaxSub;
 
-	// Token: 0x0400A453 RID: 42067
+	// Token: 0x0400A83D RID: 43069
 	private readonly List<ShipTowerBuffQuality> BuffQualityList = new List<ShipTowerBuffQuality>();
 
-	// Token: 0x0400A454 RID: 42068
+	// Token: 0x0400A83E RID: 43070
 	private readonly Dictionary<int, ShipTowerBuffQuality> BuffQualityMap = new Dictionary<int, ShipTowerBuffQuality>();
 
-	// Token: 0x0400A455 RID: 42069
+	// Token: 0x0400A83F RID: 43071
 	private readonly Dictionary<int, ShipTowerBuffData> BuffDataMap = new Dictionary<int, ShipTowerBuffData>();
 
-	// Token: 0x0400A456 RID: 42070
+	// Token: 0x0400A840 RID: 43072
 	private readonly List<ShipTowerTeamTab> TeamTabList = new List<ShipTowerTeamTab>();
 
-	// Token: 0x0400A457 RID: 42071
+	// Token: 0x0400A841 RID: 43073
 	private readonly Dictionary<int, ShipTowerRoleData> OtherTeamRoleMap = new Dictionary<int, ShipTowerRoleData>();
 
-	// Token: 0x0400A458 RID: 42072
+	// Token: 0x0400A842 RID: 43074
 	private readonly Dictionary<int, ShipTowerRoleData> AllTeamRoleMap = new Dictionary<int, ShipTowerRoleData>();
 
-	// Token: 0x0400A459 RID: 42073
+	// Token: 0x0400A843 RID: 43075
 	private int Season;
 
-	// Token: 0x0400A45A RID: 42074
+	// Token: 0x0400A844 RID: 43076
 	private long SeasonEndTime;
 
-	// Token: 0x0400A45B RID: 42075
+	// Token: 0x0400A845 RID: 43077
 	private bool IsHaveRecord;
 
-	// Token: 0x0400A45C RID: 42076
+	// Token: 0x0400A846 RID: 43078
 	private bool IsNeedShowSeasonReview;
 
-	// Token: 0x0400A45D RID: 42077
+	// Token: 0x0400A847 RID: 43079
 	private readonly List<ShipTowerAreaItemData> AreaList = new List<ShipTowerAreaItemData>();
 
-	// Token: 0x0400A45E RID: 42078
+	// Token: 0x0400A848 RID: 43080
 	private readonly HashSet<int> ReceivedAwardScoreIdSet = new HashSet<int>();
 
-	// Token: 0x0400A45F RID: 42079
+	// Token: 0x0400A849 RID: 43081
 	private int ReceivingAwardId;
 
-	// Token: 0x0400A460 RID: 42080
+	// Token: 0x0400A84A RID: 43082
 	public List<ShipTowerAreaItemData> RecordList = new List<ShipTowerAreaItemData>();
 
-	// Token: 0x0400A461 RID: 42081
+	// Token: 0x0400A84B RID: 43083
 	private int RewardCanReceiveNum;
 
-	// Token: 0x0400A462 RID: 42082
+	// Token: 0x0400A84C RID: 43084
 	private int RewardTotalNum;
 
-	// Token: 0x0400A463 RID: 42083
+	// Token: 0x0400A84D RID: 43085
 	[Nullable(2)]
 	public ShipTowerStageData ChallengeStageData;
 
-	// Token: 0x0400A464 RID: 42084
+	// Token: 0x0400A84E RID: 43086
 	public readonly List<int> ChallengeBuffIdList = new List<int>();
 
-	// Token: 0x0400A465 RID: 42085
+	// Token: 0x0400A84F RID: 43087
 	public readonly List<ShipTowerReviewItemData> ReviewList = new List<ShipTowerReviewItemData>();
 
-	// Token: 0x0400A466 RID: 42086
+	// Token: 0x0400A850 RID: 43088
 	public readonly List<int> ReviewProgressList = new List<int>();
 
-	// Token: 0x0400A467 RID: 42087
+	// Token: 0x0400A851 RID: 43089
 	private readonly List<int> GetBuffIdList = new List<int>();
 
-	// Token: 0x0400A468 RID: 42088
+	// Token: 0x0400A852 RID: 43090
 	public readonly List<int> ShowBuffIdList = new List<int>();
 
-	// Token: 0x0400A469 RID: 42089
+	// Token: 0x0400A853 RID: 43091
 	[Nullable(2)]
 	private CustomPromise<bool> WelcomeViewPromise;
 
-	// Token: 0x0400A46A RID: 42090
+	// Token: 0x0400A854 RID: 43092
 	[Nullable(2)]
 	private CustomPromise<bool> SeasonReviewViewPromise;
 
-	// Token: 0x0400A46B RID: 42091
+	// Token: 0x0400A855 RID: 43093
 	[Nullable(2)]
 	private CustomPromise<bool> GetBuffViewPromise;
 
-	// Token: 0x0400A46C RID: 42092
+	// Token: 0x0400A856 RID: 43094
 	[Nullable(2)]
 	public ShipTowerBuffData CurSelectBuffData;
 
-	// Token: 0x0400A46D RID: 42093
+	// Token: 0x0400A857 RID: 43095
 	public readonly HashSet<int> PlayerGetBuffSet = new HashSet<int>();
 
-	// Token: 0x0400A46E RID: 42094
+	// Token: 0x0400A858 RID: 43096
 	public bool IsShowLeftTeamPanel;
 
-	// Token: 0x0400A46F RID: 42095
+	// Token: 0x0400A859 RID: 43097
 	public bool IsOpenedSeasonUpdate;
 
-	// Token: 0x0400A470 RID: 42096
+	// Token: 0x0400A85A RID: 43098
 	public bool IsOpenedViewByWorld;
 
-	// Token: 0x0400A471 RID: 42097
+	// Token: 0x0400A85B RID: 43099
 	[Nullable(2)]
 	private static ShipTowerModel _Instance;
 }

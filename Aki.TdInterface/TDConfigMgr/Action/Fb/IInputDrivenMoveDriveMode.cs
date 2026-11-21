@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200271D RID: 10013
+	// Token: 0x020029E4 RID: 10724
 	public class IInputDrivenMoveDriveMode : ISplineMoveDriveMode
 	{
-		// Token: 0x0600DF55 RID: 57173 RVA: 0x00211925 File Offset: 0x0020FB25
-		[NullableContext(1)]
+		// Token: 0x0600ED41 RID: 60737 RVA: 0x0022E2CD File Offset: 0x0022C4CD
 		public static IInputDrivenMoveDriveMode Create(IInputDrivenMoveDriveMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042DD RID: 17117
-		// (get) Token: 0x0600DF56 RID: 57174 RVA: 0x00211944 File Offset: 0x0020FB44
+		// Token: 0x17004627 RID: 17959
+		// (get) Token: 0x0600ED42 RID: 60738 RVA: 0x0022E2EC File Offset: 0x0022C4EC
 		public override ESplineMoveDriveMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BF1 RID: 31729
+		// Token: 0x04008296 RID: 33430
 		private IInputDrivenMoveDriveMode Instance;
 	}
 }

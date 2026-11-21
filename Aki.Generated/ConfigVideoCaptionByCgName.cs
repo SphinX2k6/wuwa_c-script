@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A73 RID: 2675
+	// Token: 0x02000B48 RID: 2888
 	public class ConfigVideoCaptionByCgName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003EC6 RID: 16070 RVA: 0x001BCFE8 File Offset: 0x001BB1E8
+		// Token: 0x060043C4 RID: 17348 RVA: 0x001DC37C File Offset: 0x001DA57C
 		static ConfigVideoCaptionByCgName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigVideoCaptionByCgName.CreateStaticDefaultValue), new Action(ConfigVideoCaptionByCgName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003EC7 RID: 16071 RVA: 0x001BD008 File Offset: 0x001BB208
+		// Token: 0x060043C5 RID: 17349 RVA: 0x001DC39C File Offset: 0x001DA59C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigVideoCaptionByCgName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003EC8 RID: 16072 RVA: 0x001BD087 File Offset: 0x001BB287
+		// Token: 0x060043C6 RID: 17350 RVA: 0x001DC41B File Offset: 0x001DA61B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigVideoCaptionByCgName.LogPair = null;
 			ConfigVideoCaptionByCgName.HandleId = 0;
 		}
 
-		// Token: 0x06003EC9 RID: 16073 RVA: 0x001BD095 File Offset: 0x001BB295
+		// Token: 0x060043C7 RID: 17351 RVA: 0x001DC429 File Offset: 0x001DA629
 		public static void Init()
 		{
 			ConfigVideoCaptionByCgName.HandleId = ConfigCommon.InitDataStatement(ConfigVideoCaptionByCgName.HandleId, "db_cgvedio.db", "select BinData from `VideoCaption` where CgName=?");
 		}
 
-		// Token: 0x06003ECA RID: 16074 RVA: 0x001BD0B0 File Offset: 0x001BB2B0
+		// Token: 0x060043C8 RID: 17352 RVA: 0x001DC444 File Offset: 0x001DA644
 		[return: Nullable(2)]
 		public static IReadOnlyList<VideoCaption> GetConfigList(string p0CgName, bool useCache = true)
 		{
@@ -86,22 +86,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400490B RID: 18699
+		// Token: 0x04004EDE RID: 20190
 		private const string DB = "db_cgvedio.db";
 
-		// Token: 0x0400490C RID: 18700
+		// Token: 0x04004EDF RID: 20191
 		private const string FILE = "g.过场cg.xlsx";
 
-		// Token: 0x0400490D RID: 18701
+		// Token: 0x04004EE0 RID: 20192
 		private const string TABLE = "VideoCaption";
 
-		// Token: 0x0400490E RID: 18702
+		// Token: 0x04004EE1 RID: 20193
 		private const string COMMAND = "select BinData from `VideoCaption` where CgName=?";
 
-		// Token: 0x0400490F RID: 18703
+		// Token: 0x04004EE2 RID: 20194
 		private const string KEY_PREFIX = "VideoCaptionByCgName";
 
-		// Token: 0x04004910 RID: 18704
+		// Token: 0x04004EE3 RID: 20195
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004911 RID: 18705
+		// Token: 0x04004EE4 RID: 20196
 		private static int HandleId;
 	}
 }

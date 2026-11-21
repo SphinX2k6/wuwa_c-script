@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028CA RID: 10442
+// Token: 0x02001E45 RID: 7749
 public class RoleSkillTrickInputItem : UiPanelBase
 {
-	// Token: 0x06015904 RID: 88324 RVA: 0x005720CC File Offset: 0x005702CC
+	// Token: 0x06013304 RID: 78596 RVA: 0x0059CF84 File Offset: 0x0059B184
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -25,20 +25,20 @@ public class RoleSkillTrickInputItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015905 RID: 88325 RVA: 0x00572135 File Offset: 0x00570335
+	// Token: 0x06013305 RID: 78597 RVA: 0x0059CFED File Offset: 0x0059B1ED
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<RoleSkillInputItem, IRoleSkillInputParam>(base.GetVerticalLayout(0), new Func<RoleSkillInputItem>(this.InitRoleSkillInputItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06015906 RID: 88326 RVA: 0x00572168 File Offset: 0x00570368
+	// Token: 0x06013306 RID: 78598 RVA: 0x0059D020 File Offset: 0x0059B220
 	[NullableContext(1)]
 	private RoleSkillInputItem InitRoleSkillInputItem()
 	{
 		return new RoleSkillInputItem();
 	}
 
-	// Token: 0x06015907 RID: 88327 RVA: 0x00572170 File Offset: 0x00570370
+	// Token: 0x06013307 RID: 78599 RVA: 0x0059D028 File Offset: 0x0059B228
 	[NullableContext(1)]
 	public UniTask RefreshAsync(List<IRoleSkillInputParam> param)
 	{
@@ -51,7 +51,7 @@ public class RoleSkillTrickInputItem : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400A08C RID: 41100
+	// Token: 0x0400A475 RID: 42101
 	[Nullable(new byte[]
 	{
 		2,
@@ -60,12 +60,12 @@ public class RoleSkillTrickInputItem : UiPanelBase
 	})]
 	private GenericLayout<RoleSkillInputItem, IRoleSkillInputParam> Layout;
 
-	// Token: 0x02008EDE RID: 36574
+	// Token: 0x02008126 RID: 33062
 	private enum ESkillInputComponent
 	{
-		// Token: 0x0402E54E RID: 189774
+		// Token: 0x04029C49 RID: 171081
 		Layout,
-		// Token: 0x0402E54F RID: 189775
+		// Token: 0x04029C4A RID: 171082
 		InputItem
 	}
 }

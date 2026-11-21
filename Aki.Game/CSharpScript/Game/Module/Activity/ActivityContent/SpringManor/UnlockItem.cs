@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006081 RID: 24705
+	// Token: 0x02004FFF RID: 20479
 	public class UnlockItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E77B RID: 255867 RVA: 0x00F18A20 File Offset: 0x00F16C20
+		// Token: 0x0603343F RID: 209983 RVA: 0x00E5F7E4 File Offset: 0x00E5D9E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E77C RID: 255868 RVA: 0x00F18AB3 File Offset: 0x00F16CB3
+		// Token: 0x06033440 RID: 209984 RVA: 0x00E5F877 File Offset: 0x00E5DA77
 		private void OnButtonClick()
 		{
 			if (this.SkipEntryId <= 0)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.ExecuteSkipEntry(this.SkipEntryId, this.OnTrackPositionCallback);
 		}
 
-		// Token: 0x0603E77D RID: 255869 RVA: 0x00F18ADC File Offset: 0x00F16CDC
+		// Token: 0x06033441 RID: 209985 RVA: 0x00E5F8A0 File Offset: 0x00E5DAA0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.SkipEntryId = data;
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x04020AD5 RID: 133845
+		// Token: 0x0401B402 RID: 111618
 		private const float ARROW_DISABLE_ALPHA = 0.3f;
 
-		// Token: 0x04020AD6 RID: 133846
+		// Token: 0x0401B403 RID: 111619
 		private int SkipEntryId;
 
-		// Token: 0x04020AD7 RID: 133847
+		// Token: 0x0401B404 RID: 111620
 		[Nullable(2)]
 		public Action OnTrackPositionCallback;
 	}

@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D48 RID: 23880
+	// Token: 0x02004D2A RID: 19754
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class HeadStateViewBase : BattleVisibleChildView
 	{
-		// Token: 0x0603C9B2 RID: 248242 RVA: 0x00E8B41C File Offset: 0x00E8961C
+		// Token: 0x0603190B RID: 203019 RVA: 0x00DDBBCC File Offset: 0x00DD9DCC
 		public void CreateHeadStateView(USceneComponent parentComponent, EHeadStateViewType headStateType, float detailHeadStateRange, float stateViewDisplayMaxDistance, float stateViewDisplayMinDistance)
 		{
 			this.InitHeadStateView(headStateType, detailHeadStateRange, stateViewDisplayMaxDistance, stateViewDisplayMinDistance);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.CreateByPathAsync(resourcePath, parentComponent as UUIItem, true).Forget();
 		}
 
-		// Token: 0x0603C9B3 RID: 248243 RVA: 0x00E8B48C File Offset: 0x00E8968C
+		// Token: 0x0603190C RID: 203020 RVA: 0x00DDBC3C File Offset: 0x00DD9E3C
 		public UniTask CreateHeadStateViewAsync(USceneComponent parentComponent, EHeadStateViewType headStateType, float detailHeadStateRange, float stateViewDisplayMaxDistance, float stateViewDisplayMinDistance)
 		{
 			HeadStateViewBase.<CreateHeadStateViewAsync>d__42 <CreateHeadStateViewAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CreateHeadStateViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C9B4 RID: 248244 RVA: 0x00E8B4F9 File Offset: 0x00E896F9
+		// Token: 0x0603190D RID: 203021 RVA: 0x00DDBCA9 File Offset: 0x00DD9EA9
 		private void InitHeadStateView(EHeadStateViewType headStateType, float detailHeadStateRange, float stateViewDisplayMaxDistance, float stateViewDisplayMinDistance)
 		{
 			if (string.IsNullOrEmpty(this.GetResourceId()))
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HpMachine.UpdateParams(headStateType);
 		}
 
-		// Token: 0x0603C9B5 RID: 248245 RVA: 0x00E8B534 File Offset: 0x00E89734
+		// Token: 0x0603190E RID: 203022 RVA: 0x00DDBCE4 File Offset: 0x00DD9EE4
 		public unsafe void ShowHeadStateView(HeadStateData headStateData)
 		{
 			if (this.HeadStateData != null)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowBattleVisibleChildView(true);
 		}
 
-		// Token: 0x0603C9B6 RID: 248246 RVA: 0x00E8B668 File Offset: 0x00E89868
+		// Token: 0x0603190F RID: 203023 RVA: 0x00DDBE18 File Offset: 0x00DDA018
 		public void RecycleHeadStateView(Action<HeadStateViewBase, EHeadStateViewType> callback)
 		{
 			this.RecycleCallback = callback;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9B7 RID: 248247 RVA: 0x00E8B6B8 File Offset: 0x00E898B8
+		// Token: 0x06031910 RID: 203024 RVA: 0x00DDBE68 File Offset: 0x00DDA068
 		public void DestroyHeadStateView()
 		{
 			this.RecycleCallback = null;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Destroy(null);
 		}
 
-		// Token: 0x0603C9B8 RID: 248248 RVA: 0x00E8B718 File Offset: 0x00E89918
+		// Token: 0x06031911 RID: 203025 RVA: 0x00DDBEC8 File Offset: 0x00DDA0C8
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			HeadStateViewBase.<OnBeforeShowAsyncImplement>d__47 <OnBeforeShowAsyncImplement>d__;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C9B9 RID: 248249 RVA: 0x00E8B75B File Offset: 0x00E8995B
+		// Token: 0x06031912 RID: 203026 RVA: 0x00DDBF0B File Offset: 0x00DDA10B
 		protected override void OnBeforeShow()
 		{
 			if (this.HeadStateData == null)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9BA RID: 248250 RVA: 0x00E8B78D File Offset: 0x00E8998D
+		// Token: 0x06031913 RID: 203027 RVA: 0x00DDBF3D File Offset: 0x00DDA13D
 		protected override void OnAfterHide()
 		{
 			if (this.HeadStateData == null && this.RecycleCallback != null)
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9BB RID: 248251 RVA: 0x00E8B7B8 File Offset: 0x00E899B8
+		// Token: 0x06031914 RID: 203028 RVA: 0x00DDBF68 File Offset: 0x00DDA168
 		protected virtual string GetResourceId()
 		{
 			return "UiItem_LittleMonsterState_Prefab";
 		}
 
-		// Token: 0x0603C9BC RID: 248252 RVA: 0x00E8B7C0 File Offset: 0x00E899C0
+		// Token: 0x06031915 RID: 203029 RVA: 0x00DDBF70 File Offset: 0x00DDA170
 		protected override bool DestroyOverride()
 		{
 			this.BudgetNode.UnregisterTick();
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C9BD RID: 248253 RVA: 0x00E8B80C File Offset: 0x00E89A0C
+		// Token: 0x06031916 RID: 203030 RVA: 0x00DDBFBC File Offset: 0x00DDA1BC
 		[NullableContext(0)]
 		protected UniTask<bool> LoadExtraItem([Nullable(2)] ExtraItemParams param)
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadExtraItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C9BE RID: 248254 RVA: 0x00E8B857 File Offset: 0x00E89A57
+		// Token: 0x06031917 RID: 203031 RVA: 0x00DDC007 File Offset: 0x00DDA207
 		protected void RemoveExtraItem()
 		{
 			if (this.ExtraItem == null)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ExtraItem = null;
 		}
 
-		// Token: 0x0603C9BF RID: 248255 RVA: 0x00E8B888 File Offset: 0x00E89A88
+		// Token: 0x06031918 RID: 203032 RVA: 0x00DDC038 File Offset: 0x00DDA238
 		protected virtual void ActiveBattleHeadState(HeadStateData headStateData)
 		{
 			float hp = this.GetHp();
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NeedCorrectionOutside = false;
 		}
 
-		// Token: 0x0603C9C0 RID: 248256 RVA: 0x00E8B8F8 File Offset: 0x00E89AF8
+		// Token: 0x06031919 RID: 203033 RVA: 0x00DDC0A8 File Offset: 0x00DDA2A8
 		public void ActivateHideTimeDown(float hideTimeDown, [Nullable(new byte[]
 		{
 			2,
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideTimerId = TimerSystem.Instance.Delay(new TTimerAction(this.OnHideTimeDownEnded), hideTimeDown, null, null, true, 1f);
 		}
 
-		// Token: 0x0603C9C1 RID: 248257 RVA: 0x00E8B94B File Offset: 0x00E89B4B
+		// Token: 0x0603191A RID: 203034 RVA: 0x00DDC0FB File Offset: 0x00DDA2FB
 		private void OnHideTimeDownEnded(float _ = 0f)
 		{
 			if (this.OnHideCallback != null)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9C2 RID: 248258 RVA: 0x00E8B972 File Offset: 0x00E89B72
+		// Token: 0x0603191B RID: 203035 RVA: 0x00DDC122 File Offset: 0x00DDA322
 		private void RemoveHideTimer()
 		{
 			if (this.HideTimerId != null)
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9C3 RID: 248259 RVA: 0x00E8B994 File Offset: 0x00E89B94
+		// Token: 0x0603191C RID: 203036 RVA: 0x00DDC144 File Offset: 0x00DDA344
 		protected void SetHeadStateScale(float scale)
 		{
 			if (Math.Abs(this.CurrentScaleZ - scale) > this.ScaleToleration)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9C4 RID: 248260 RVA: 0x00E8B9D1 File Offset: 0x00E89BD1
+		// Token: 0x0603191D RID: 203037 RVA: 0x00DDC181 File Offset: 0x00DDA381
 		public virtual void OnRefresh(float distance, float scale, float delta)
 		{
 			if (!this.IsActivated)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LerpBarPercent(delta);
 		}
 
-		// Token: 0x0603C9C5 RID: 248261 RVA: 0x00E8B9F1 File Offset: 0x00E89BF1
+		// Token: 0x0603191E RID: 203038 RVA: 0x00DDC1A1 File Offset: 0x00DDA3A1
 		private void RefreshHeadStateTransform(float scale)
 		{
 			this.SetHeadStateScale(scale);
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHeadStateRotation();
 		}
 
-		// Token: 0x0603C9C6 RID: 248262 RVA: 0x00E8BA08 File Offset: 0x00E89C08
+		// Token: 0x0603191F RID: 203039 RVA: 0x00DDC1B8 File Offset: 0x00DDA3B8
 		protected void RefreshHeadStateRotation()
 		{
 			global::Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0603C9C7 RID: 248263 RVA: 0x00E8BB9C File Offset: 0x00E89D9C
+		// Token: 0x06031920 RID: 203040 RVA: 0x00DDC34C File Offset: 0x00DDA54C
 		private void RefreshHeadStateLocation()
 		{
 			this.TmpWorldLocation.FromUeVector(this.HeadStateData.GetWorldLocation());
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentWorldLocation.Set(tmpWorldLocation.X, tmpWorldLocation.Y, tmpWorldLocation.Z);
 		}
 
-		// Token: 0x0603C9C8 RID: 248264 RVA: 0x00E8BC1C File Offset: 0x00E89E1C
+		// Token: 0x06031921 RID: 203041 RVA: 0x00DDC3CC File Offset: 0x00DDA5CC
 		protected void CheckAndCorrectionOutside(global::Vector worldLocation)
 		{
 			FVectorDouble fvectorDouble = worldLocation.ToUeVector(false);
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9C9 RID: 248265 RVA: 0x00E8BD7C File Offset: 0x00E89F7C
+		// Token: 0x06031922 RID: 203042 RVA: 0x00DDC52C File Offset: 0x00DDA72C
 		protected virtual void ResetBattleHeadState()
 		{
 			this.UnBindCallback();
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveExtraItem();
 		}
 
-		// Token: 0x0603C9CA RID: 248266 RVA: 0x00E8BD98 File Offset: 0x00E89F98
+		// Token: 0x06031923 RID: 203043 RVA: 0x00DDC548 File Offset: 0x00DDA748
 		private void LerpBarPercent(float delta)
 		{
 			if (this.AnimTime == -1f)
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AnimTime += delta;
 		}
 
-		// Token: 0x0603C9CB RID: 248267 RVA: 0x00E8BDFC File Offset: 0x00E89FFC
+		// Token: 0x06031924 RID: 203044 RVA: 0x00DDC5AC File Offset: 0x00DDA7AC
 		private void RefreshBarBuffPercent(float? percent = null)
 		{
 			if (this.Percent != null && percent != null && Math.Abs(this.Percent.Value - percent.Value) < 0.01f)
@@ -458,12 +458,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Percent = percent;
 		}
 
-		// Token: 0x0603C9CC RID: 248268 RVA: 0x00E8BE6A File Offset: 0x00E8A06A
+		// Token: 0x06031925 RID: 203045 RVA: 0x00DDC61A File Offset: 0x00DDA81A
 		protected virtual void OnLerpBarBufferPercent(float percent)
 		{
 		}
 
-		// Token: 0x0603C9CD RID: 248269 RVA: 0x00E8BE6C File Offset: 0x00E8A06C
+		// Token: 0x06031926 RID: 203046 RVA: 0x00DDC61C File Offset: 0x00DDA81C
 		protected virtual void PlayBarAnimation(float hpPercent)
 		{
 			float currentBarPercent = this.CurrentBarPercent;
@@ -483,12 +483,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9CE RID: 248270 RVA: 0x00E8BED5 File Offset: 0x00E8A0D5
+		// Token: 0x06031927 RID: 203047 RVA: 0x00DDC685 File Offset: 0x00DDA885
 		protected virtual void OnBeginBarAnimation(float sourceBarPercent)
 		{
 		}
 
-		// Token: 0x0603C9CF RID: 248271 RVA: 0x00E8BED7 File Offset: 0x00E8A0D7
+		// Token: 0x06031928 RID: 203048 RVA: 0x00DDC687 File Offset: 0x00DDA887
 		protected virtual void StopBarLerpAnimation()
 		{
 			this.TargetBarPercent = 0f;
@@ -497,8 +497,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HpMachine.Reset();
 		}
 
-		// Token: 0x17008E19 RID: 36377
-		// (get) Token: 0x0603C9D0 RID: 248272 RVA: 0x00E8BF05 File Offset: 0x00E8A105
+		// Token: 0x170061EB RID: 25067
+		// (get) Token: 0x06031929 RID: 203049 RVA: 0x00DDC6B5 File Offset: 0x00DDA8B5
 		public EHeadStateViewType HeadStateType
 		{
 			get
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C9D1 RID: 248273 RVA: 0x00E8BF10 File Offset: 0x00E8A110
+		// Token: 0x0603192A RID: 203050 RVA: 0x00DDC6C0 File Offset: 0x00DDA8C0
 		public bool TryGetFollowData(HeadStateFollowData outData)
 		{
 			if (this.CurrentScaleZ < 0f)
@@ -519,7 +519,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C9D2 RID: 248274 RVA: 0x00E8BF68 File Offset: 0x00E8A168
+		// Token: 0x0603192B RID: 203051 RVA: 0x00DDC718 File Offset: 0x00DDA918
 		protected virtual void BindCallback()
 		{
 			this.HeadStateData.BindOnShieldChanged(new Action<float>(this.OnShieldChanged));
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HeadStateData.BindOnCampChanged(new Action(this.OnCampChanged));
 		}
 
-		// Token: 0x0603C9D3 RID: 248275 RVA: 0x00E8C063 File Offset: 0x00E8A263
+		// Token: 0x0603192C RID: 203052 RVA: 0x00DDC813 File Offset: 0x00DDAA13
 		protected virtual void UnBindCallback()
 		{
 			HeadStateData headStateData = this.HeadStateData;
@@ -545,12 +545,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			headStateData.UnBindAllCallback();
 		}
 
-		// Token: 0x0603C9D4 RID: 248276 RVA: 0x00E8C075 File Offset: 0x00E8A275
+		// Token: 0x0603192D RID: 203053 RVA: 0x00DDC825 File Offset: 0x00DDAA25
 		protected virtual void OnFallDownVisibleChange()
 		{
 		}
 
-		// Token: 0x0603C9D5 RID: 248277 RVA: 0x00E8C078 File Offset: 0x00E8A278
+		// Token: 0x0603192E RID: 203054 RVA: 0x00DDC828 File Offset: 0x00DDAA28
 		protected virtual void RefreshHardnessAttributeId()
 		{
 			if (this.HeadStateData.ContainsTagById(GameplayTagDefine.EGameplayTagId["功能.功能制作.狂暴生效"]))
@@ -565,12 +565,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnEliteStateChange();
 		}
 
-		// Token: 0x0603C9D6 RID: 248278 RVA: 0x00E8C0D1 File Offset: 0x00E8A2D1
+		// Token: 0x0603192F RID: 203055 RVA: 0x00DDC881 File Offset: 0x00DDAA81
 		protected virtual void OnEliteStateChange()
 		{
 		}
 
-		// Token: 0x0603C9D7 RID: 248279 RVA: 0x00E8C0D3 File Offset: 0x00E8A2D3
+		// Token: 0x06031930 RID: 203056 RVA: 0x00DDC883 File Offset: 0x00DDAA83
 		public void AddOrRemoveBuff(int entityId, in GameplayCue cue, bool isAdd, int handleId)
 		{
 			if (!this.IsActivated)
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnAddOrRemoveBuff(entityId, cue, isAdd, handleId);
 		}
 
-		// Token: 0x0603C9D8 RID: 248280 RVA: 0x00E8C0E9 File Offset: 0x00E8A2E9
+		// Token: 0x06031931 RID: 203057 RVA: 0x00DDC899 File Offset: 0x00DDAA99
 		public void RoleLevelChange(int configId, int exp, int level)
 		{
 			if (!this.IsActivated)
@@ -590,7 +590,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnRoleLevelChange(configId, exp, level);
 		}
 
-		// Token: 0x0603C9D9 RID: 248281 RVA: 0x00E8C0FD File Offset: 0x00E8A2FD
+		// Token: 0x06031932 RID: 203058 RVA: 0x00DDC8AD File Offset: 0x00DDAAAD
 		public void ChangeTeam()
 		{
 			if (!this.IsActivated)
@@ -600,87 +600,87 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnChangeTeam();
 		}
 
-		// Token: 0x0603C9DA RID: 248282 RVA: 0x00E8C10E File Offset: 0x00E8A30E
+		// Token: 0x06031933 RID: 203059 RVA: 0x00DDC8BE File Offset: 0x00DDAABE
 		protected virtual void OnAddOrRemoveBuff(int entityId, in GameplayCue cue, bool isAdd, int handleId)
 		{
 		}
 
-		// Token: 0x0603C9DB RID: 248283 RVA: 0x00E8C110 File Offset: 0x00E8A310
+		// Token: 0x06031934 RID: 203060 RVA: 0x00DDC8C0 File Offset: 0x00DDAAC0
 		protected virtual void OnRoleLevelChange(int configId, int exp, int level)
 		{
 		}
 
-		// Token: 0x0603C9DC RID: 248284 RVA: 0x00E8C112 File Offset: 0x00E8A312
+		// Token: 0x06031935 RID: 203061 RVA: 0x00DDC8C2 File Offset: 0x00DDAAC2
 		protected virtual void OnChangeTeam()
 		{
 		}
 
-		// Token: 0x0603C9DD RID: 248285 RVA: 0x00E8C114 File Offset: 0x00E8A314
+		// Token: 0x06031936 RID: 203062 RVA: 0x00DDC8C4 File Offset: 0x00DDAAC4
 		protected virtual void OnShieldChanged(float shield)
 		{
 		}
 
-		// Token: 0x0603C9DE RID: 248286 RVA: 0x00E8C116 File Offset: 0x00E8A316
+		// Token: 0x06031937 RID: 203063 RVA: 0x00DDC8C6 File Offset: 0x00DDAAC6
 		protected virtual void OnHardnessHideChanged(bool bTagExists)
 		{
 		}
 
-		// Token: 0x0603C9DF RID: 248287 RVA: 0x00E8C118 File Offset: 0x00E8A318
+		// Token: 0x06031938 RID: 203064 RVA: 0x00DDC8C8 File Offset: 0x00DDAAC8
 		private void OnHardnessActivated(bool bTagExists)
 		{
 			this.OnHardnessAttributeChanged();
 		}
 
-		// Token: 0x0603C9E0 RID: 248288 RVA: 0x00E8C120 File Offset: 0x00E8A320
+		// Token: 0x06031939 RID: 203065 RVA: 0x00DDC8D0 File Offset: 0x00DDAAD0
 		private void OnRageActivated(bool bTagExists)
 		{
 			this.OnHardnessAttributeChanged();
 		}
 
-		// Token: 0x0603C9E1 RID: 248289 RVA: 0x00E8C128 File Offset: 0x00E8A328
+		// Token: 0x0603193A RID: 203066 RVA: 0x00DDC8D8 File Offset: 0x00DDAAD8
 		protected virtual void OnHardnessAttributeChanged()
 		{
 			this.RefreshHardnessAttributeId();
 		}
 
-		// Token: 0x0603C9E2 RID: 248290 RVA: 0x00E8C130 File Offset: 0x00E8A330
+		// Token: 0x0603193B RID: 203067 RVA: 0x00DDC8E0 File Offset: 0x00DDAAE0
 		protected virtual void OnHardnessChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 		}
 
-		// Token: 0x0603C9E3 RID: 248291 RVA: 0x00E8C132 File Offset: 0x00E8A332
+		// Token: 0x0603193C RID: 203068 RVA: 0x00DDC8E2 File Offset: 0x00DDAAE2
 		protected virtual void VulnerabilityActivated(bool bTagExists)
 		{
 		}
 
-		// Token: 0x0603C9E4 RID: 248292 RVA: 0x00E8C134 File Offset: 0x00E8A334
+		// Token: 0x0603193D RID: 203069 RVA: 0x00DDC8E4 File Offset: 0x00DDAAE4
 		protected virtual void OnLevelChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 		}
 
-		// Token: 0x0603C9E5 RID: 248293 RVA: 0x00E8C136 File Offset: 0x00E8A336
+		// Token: 0x0603193E RID: 203070 RVA: 0x00DDC8E6 File Offset: 0x00DDAAE6
 		protected virtual void OnLifeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.OnHealthChanged();
 		}
 
-		// Token: 0x0603C9E6 RID: 248294 RVA: 0x00E8C13E File Offset: 0x00E8A33E
+		// Token: 0x0603193F RID: 203071 RVA: 0x00DDC8EE File Offset: 0x00DDAAEE
 		protected virtual void OnHealthChanged()
 		{
 		}
 
-		// Token: 0x0603C9E7 RID: 248295 RVA: 0x00E8C140 File Offset: 0x00E8A340
+		// Token: 0x06031940 RID: 203072 RVA: 0x00DDC8F0 File Offset: 0x00DDAAF0
 		protected virtual void OnCampChanged()
 		{
 			this.RefreshOnCampChanged();
 		}
 
-		// Token: 0x0603C9E8 RID: 248296 RVA: 0x00E8C148 File Offset: 0x00E8A348
+		// Token: 0x06031941 RID: 203073 RVA: 0x00DDC8F8 File Offset: 0x00DDAAF8
 		protected virtual void RefreshOnCampChanged()
 		{
 		}
 
-		// Token: 0x0603C9E9 RID: 248297 RVA: 0x00E8C14A File Offset: 0x00E8A34A
+		// Token: 0x06031942 RID: 203074 RVA: 0x00DDC8FA File Offset: 0x00DDAAFA
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -692,7 +692,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.HeadStateData.GetHpAndShieldPercent();
 		}
 
-		// Token: 0x0603C9EA RID: 248298 RVA: 0x00E8C157 File Offset: 0x00E8A357
+		// Token: 0x06031943 RID: 203075 RVA: 0x00DDC907 File Offset: 0x00DDAB07
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -704,132 +704,132 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.HeadStateData.GetHpAndMaxHp();
 		}
 
-		// Token: 0x0603C9EB RID: 248299 RVA: 0x00E8C164 File Offset: 0x00E8A364
+		// Token: 0x06031944 RID: 203076 RVA: 0x00DDC914 File Offset: 0x00DDAB14
 		protected bool IsDetailVisible()
 		{
 			return this.Distance > this.StateViewDisplayMinDistance && (this.HeadStateData.HasFightTag || this.Distance <= this.DetailHeadStateRangeInternal);
 		}
 
-		// Token: 0x0603C9EC RID: 248300 RVA: 0x00E8C196 File Offset: 0x00E8A396
+		// Token: 0x06031945 RID: 203077 RVA: 0x00DDC946 File Offset: 0x00DDAB46
 		protected bool IsLevelTextVisible()
 		{
 			return this.Distance >= this.StateViewDisplayMinDistance && this.Distance <= this.StateViewDisplayMaxDistance && !this.IsShowExtraItem();
 		}
 
-		// Token: 0x0603C9ED RID: 248301 RVA: 0x00E8C1BF File Offset: 0x00E8A3BF
+		// Token: 0x06031946 RID: 203078 RVA: 0x00DDC96F File Offset: 0x00DDAB6F
 		protected bool IsBuffVisible()
 		{
 			return this.Distance >= this.StateViewDisplayMinDistance && this.Distance <= this.DetailHeadStateRangeInternal;
 		}
 
-		// Token: 0x0603C9EE RID: 248302 RVA: 0x00E8C1E2 File Offset: 0x00E8A3E2
+		// Token: 0x06031947 RID: 203079 RVA: 0x00DDC992 File Offset: 0x00DDAB92
 		protected bool IsShowExtraItem()
 		{
 			return this.ExtraItem != null;
 		}
 
-		// Token: 0x0603C9EF RID: 248303 RVA: 0x00E8C1ED File Offset: 0x00E8A3ED
+		// Token: 0x06031948 RID: 203080 RVA: 0x00DDC99D File Offset: 0x00DDAB9D
 		protected virtual int GetLevel()
 		{
 			return this.HeadStateData.GetLevel();
 		}
 
-		// Token: 0x0603C9F0 RID: 248304 RVA: 0x00E8C1FA File Offset: 0x00E8A3FA
+		// Token: 0x06031949 RID: 203081 RVA: 0x00DDC9AA File Offset: 0x00DDABAA
 		protected virtual float GetMaxHp()
 		{
 			return this.HeadStateData.GetMaxHp();
 		}
 
-		// Token: 0x0603C9F1 RID: 248305 RVA: 0x00E8C207 File Offset: 0x00E8A407
+		// Token: 0x0603194A RID: 203082 RVA: 0x00DDC9B7 File Offset: 0x00DDABB7
 		protected virtual float GetHp()
 		{
 			return this.HeadStateData.GetHp();
 		}
 
-		// Token: 0x0603C9F2 RID: 248306 RVA: 0x00E8C214 File Offset: 0x00E8A414
+		// Token: 0x0603194B RID: 203083 RVA: 0x00DDC9C4 File Offset: 0x00DDABC4
 		protected virtual float GetMonsterShield()
 		{
 			return this.HeadStateData.GetShield();
 		}
 
-		// Token: 0x0603C9F3 RID: 248307 RVA: 0x00E8C221 File Offset: 0x00E8A421
+		// Token: 0x0603194C RID: 203084 RVA: 0x00DDC9D1 File Offset: 0x00DDABD1
 		protected string GetHpColor()
 		{
 			return this.HeadStateData.GetHpColor();
 		}
 
-		// Token: 0x0401F918 RID: 129304
+		// Token: 0x0401A3D1 RID: 107473
 		[StaticVariableRuleIgnore]
 		private static readonly global::Rotator BaseRotation = new global::Rotator(0f, 90f, -90f);
 
-		// Token: 0x0401F919 RID: 129305
+		// Token: 0x0401A3D2 RID: 107474
 		private const float UPDATE_TOLERATION = 0.1f;
 
-		// Token: 0x0401F91A RID: 129306
+		// Token: 0x0401A3D3 RID: 107475
 		private const float PERCENT_TOLERATION = 0.01f;
 
-		// Token: 0x0401F91B RID: 129307
+		// Token: 0x0401A3D4 RID: 107476
 		private const float SCALE_TOLERATION = 0.004f;
 
-		// Token: 0x0401F91C RID: 129308
+		// Token: 0x0401A3D5 RID: 107477
 		protected float ScaleToleration = 0.004f;
 
-		// Token: 0x0401F91D RID: 129309
+		// Token: 0x0401A3D6 RID: 107478
 		protected float CurrentBarPercent = 1f;
 
-		// Token: 0x0401F91E RID: 129310
+		// Token: 0x0401A3D7 RID: 107479
 		private float TargetBarPercent;
 
-		// Token: 0x0401F91F RID: 129311
+		// Token: 0x0401A3D8 RID: 107480
 		private float SourceBarPercent;
 
-		// Token: 0x0401F920 RID: 129312
+		// Token: 0x0401A3D9 RID: 107481
 		private float AnimTime = -1f;
 
-		// Token: 0x0401F921 RID: 129313
+		// Token: 0x0401A3DA RID: 107482
 		protected bool IsActivated;
 
-		// Token: 0x0401F922 RID: 129314
+		// Token: 0x0401A3DB RID: 107483
 		[Nullable(2)]
 		protected HeadStateData HeadStateData;
 
-		// Token: 0x0401F923 RID: 129315
+		// Token: 0x0401A3DC RID: 107484
 		private EHeadStateViewType HeadStateTypeInternal;
 
-		// Token: 0x0401F924 RID: 129316
+		// Token: 0x0401A3DD RID: 107485
 		protected float DetailHeadStateRangeInternal;
 
-		// Token: 0x0401F925 RID: 129317
+		// Token: 0x0401A3DE RID: 107486
 		protected float StateViewDisplayMaxDistance;
 
-		// Token: 0x0401F926 RID: 129318
+		// Token: 0x0401A3DF RID: 107487
 		protected float StateViewDisplayMinDistance;
 
-		// Token: 0x0401F927 RID: 129319
+		// Token: 0x0401A3E0 RID: 107488
 		private float CurrentScaleZ = -1f;
 
-		// Token: 0x0401F928 RID: 129320
+		// Token: 0x0401A3E1 RID: 107489
 		private readonly global::Rotator TmpRotator = new global::Rotator();
 
-		// Token: 0x0401F929 RID: 129321
+		// Token: 0x0401A3E2 RID: 107490
 		private readonly global::Rotator RootActorRotation = new global::Rotator();
 
-		// Token: 0x0401F92A RID: 129322
+		// Token: 0x0401A3E3 RID: 107491
 		protected float Distance;
 
-		// Token: 0x0401F92B RID: 129323
+		// Token: 0x0401A3E4 RID: 107492
 		protected EAttributeType HardnessAttributeId;
 
-		// Token: 0x0401F92C RID: 129324
+		// Token: 0x0401A3E5 RID: 107493
 		protected EAttributeType MaxHardnessAttributeId;
 
-		// Token: 0x0401F92D RID: 129325
+		// Token: 0x0401A3E6 RID: 107494
 		private readonly global::Vector CurrentWorldLocation = new global::Vector();
 
-		// Token: 0x0401F92E RID: 129326
+		// Token: 0x0401A3E7 RID: 107495
 		private readonly global::Vector TmpWorldLocation = new global::Vector();
 
-		// Token: 0x0401F92F RID: 129327
+		// Token: 0x0401A3E8 RID: 107496
 		[Nullable(new byte[]
 		{
 			2,
@@ -837,58 +837,58 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Action<Entity> OnHideCallback;
 
-		// Token: 0x0401F930 RID: 129328
+		// Token: 0x0401A3E9 RID: 107497
 		[Nullable(2)]
 		private TimerHandle HideTimerId;
 
-		// Token: 0x0401F931 RID: 129329
+		// Token: 0x0401A3EA RID: 107498
 		private readonly HpBufferStateMachine HpMachine = new HpBufferStateMachine();
 
-		// Token: 0x0401F932 RID: 129330
+		// Token: 0x0401A3EB RID: 107499
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[HeadState]HeadState-Tick", "", "");
 
-		// Token: 0x0401F933 RID: 129331
+		// Token: 0x0401A3EC RID: 107500
 		[StaticVariableRuleIgnore]
 		private static readonly Stat LerpStatsObject = Stat.Create("[HeadState]HeadState-Lerp", "", "");
 
-		// Token: 0x0401F934 RID: 129332
+		// Token: 0x0401A3ED RID: 107501
 		[StaticVariableRuleIgnore]
 		private static readonly Stat ActivateStatsObject = Stat.Create("[HeadState]HeadState-Activate", "", "");
 
-		// Token: 0x0401F935 RID: 129333
+		// Token: 0x0401A3EE RID: 107502
 		[StaticVariableRuleIgnore]
 		private static readonly Stat RefreshTransformStatsObject = Stat.Create("[HeadState]HeadState-RefreshTransform", "", "");
 
-		// Token: 0x0401F936 RID: 129334
+		// Token: 0x0401A3EF RID: 107503
 		private readonly Stat DestroyStatsObject = Stat.Create("[HeadState]HeadState-Destroy", "", "");
 
-		// Token: 0x0401F937 RID: 129335
+		// Token: 0x0401A3F0 RID: 107504
 		private float? Percent = new float?((float)-1);
 
-		// Token: 0x0401F938 RID: 129336
+		// Token: 0x0401A3F1 RID: 107505
 		private bool UseBattlePool;
 
-		// Token: 0x0401F939 RID: 129337
+		// Token: 0x0401A3F2 RID: 107506
 		protected bool NeedCorrectionOutside;
 
-		// Token: 0x0401F93A RID: 129338
+		// Token: 0x0401A3F3 RID: 107507
 		private readonly global::Vector PositionTmp = new global::Vector();
 
-		// Token: 0x0401F93B RID: 129339
+		// Token: 0x0401A3F4 RID: 107508
 		private readonly global::Vector DirectionTmp = new global::Vector();
 
-		// Token: 0x0401F93C RID: 129340
+		// Token: 0x0401A3F5 RID: 107509
 		private readonly global::Vector OffsetTmp = new global::Vector();
 
-		// Token: 0x0401F93D RID: 129341
+		// Token: 0x0401A3F6 RID: 107510
 		[Nullable(2)]
 		protected StateExtraItemBase ExtraItem;
 
-		// Token: 0x0401F93E RID: 129342
+		// Token: 0x0401A3F7 RID: 107511
 		private readonly HeadStateViewBase.HeadStateViewNode BudgetNode = new HeadStateViewBase.HeadStateViewNode();
 
-		// Token: 0x0401F93F RID: 129343
+		// Token: 0x0401A3F8 RID: 107512
 		[Nullable(new byte[]
 		{
 			2,
@@ -896,11 +896,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Action<HeadStateViewBase, EHeadStateViewType> RecycleCallback;
 
-		// Token: 0x0200BFE9 RID: 49129
+		// Token: 0x0200A9EF RID: 43503
 		[NullableContext(0)]
 		private class HeadStateViewNode : IGameBudgetManagedObject
 		{
-			// Token: 0x0605026E RID: 328302 RVA: 0x01581DB8 File Offset: 0x0157FFB8
+			// Token: 0x060467B1 RID: 288689 RVA: 0x0153B150 File Offset: 0x01539350
 			[NullableContext(1)]
 			public void RegisterTick(HeadStateViewBase owner)
 			{
@@ -923,7 +923,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.GameBudgetManagedTokenInternal = new uint?(GameBudgetInterfaceController.Instance.RegisterTick(tsBattleHeadStateViewConfig.GroupName, tsBattleHeadStateViewConfig.SignificanceGroup, this, this.Owner.GetRootActor(), true, true, true, true));
 			}
 
-			// Token: 0x0605026F RID: 328303 RVA: 0x01581E66 File Offset: 0x01580066
+			// Token: 0x060467B2 RID: 288690 RVA: 0x0153B1FE File Offset: 0x015393FE
 			public void UnregisterTick()
 			{
 				if (this.GameBudgetManagedTokenInternal != null)
@@ -937,7 +937,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x06050270 RID: 328304 RVA: 0x01581EA4 File Offset: 0x015800A4
+			// Token: 0x060467B3 RID: 288691 RVA: 0x0153B23C File Offset: 0x0153943C
 			public void CacheRefreshInfo(float distance, float scale, float delta)
 			{
 				this.LastDistance = distance;
@@ -946,7 +946,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.IsUpdateOutside = true;
 			}
 
-			// Token: 0x06050271 RID: 328305 RVA: 0x01581EC2 File Offset: 0x015800C2
+			// Token: 0x060467B4 RID: 288692 RVA: 0x0153B25A File Offset: 0x0153945A
 			public void ScheduledTick(float deltaSeconds, int deltaFrames, float distance)
 			{
 				if (this.IsUpdateOutside && this.IsEnabled && this.IsShow)
@@ -956,8 +956,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x1700A264 RID: 41572
-			// (get) Token: 0x06050272 RID: 328306 RVA: 0x01581F00 File Offset: 0x01580100
+			// Token: 0x17007A01 RID: 31233
+			// (get) Token: 0x060467B5 RID: 288693 RVA: 0x0153B298 File Offset: 0x01539498
 			public bool HasScheduledAfterTick
 			{
 				get
@@ -966,8 +966,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x1700A265 RID: 41573
-			// (get) Token: 0x06050273 RID: 328307 RVA: 0x01581F03 File Offset: 0x01580103
+			// Token: 0x17007A02 RID: 31234
+			// (get) Token: 0x060467B6 RID: 288694 RVA: 0x0153B29B File Offset: 0x0153949B
 			public bool HasOnEnabledChange
 			{
 				get
@@ -976,14 +976,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x06050274 RID: 328308 RVA: 0x01581F06 File Offset: 0x01580106
+			// Token: 0x060467B7 RID: 288695 RVA: 0x0153B29E File Offset: 0x0153949E
 			public void OnEnabledChange(bool enable, float distance)
 			{
 				this.IsEnabled = enable;
 			}
 
-			// Token: 0x1700A266 RID: 41574
-			// (get) Token: 0x06050275 RID: 328309 RVA: 0x01581F0F File Offset: 0x0158010F
+			// Token: 0x17007A03 RID: 31235
+			// (get) Token: 0x060467B8 RID: 288696 RVA: 0x0153B2A7 File Offset: 0x015394A7
 			public bool HasOnWasRecentlyRenderedOnScreenChange
 			{
 				get
@@ -992,44 +992,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x06050276 RID: 328310 RVA: 0x01581F12 File Offset: 0x01580112
+			// Token: 0x060467B9 RID: 288697 RVA: 0x0153B2AA File Offset: 0x015394AA
 			public void OnWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 			{
 				this.IsShow = wasRecentlyRenderedOnScreen;
 			}
 
-			// Token: 0x06050277 RID: 328311 RVA: 0x01581F1B File Offset: 0x0158011B
+			// Token: 0x060467BA RID: 288698 RVA: 0x0153B2B3 File Offset: 0x015394B3
 			public GCHandle GetGCHandle()
 			{
 				return this.GameBudgetGCHandle;
 			}
 
-			// Token: 0x04039E7B RID: 237179
+			// Token: 0x0403483D RID: 215101
 			[Nullable(2)]
 			private HeadStateViewBase Owner;
 
-			// Token: 0x04039E7C RID: 237180
+			// Token: 0x0403483E RID: 215102
 			private bool IsEnabled = true;
 
-			// Token: 0x04039E7D RID: 237181
+			// Token: 0x0403483F RID: 215103
 			private bool IsShow = true;
 
-			// Token: 0x04039E7E RID: 237182
+			// Token: 0x04034840 RID: 215104
 			private float LastDistance;
 
-			// Token: 0x04039E7F RID: 237183
+			// Token: 0x04034841 RID: 215105
 			private float LastScale;
 
-			// Token: 0x04039E80 RID: 237184
+			// Token: 0x04034842 RID: 215106
 			private float LastDelta;
 
-			// Token: 0x04039E81 RID: 237185
+			// Token: 0x04034843 RID: 215107
 			private bool IsUpdateOutside;
 
-			// Token: 0x04039E82 RID: 237186
+			// Token: 0x04034844 RID: 215108
 			private uint? GameBudgetManagedTokenInternal;
 
-			// Token: 0x04039E83 RID: 237187
+			// Token: 0x04034845 RID: 215109
 			private GCHandle GameBudgetGCHandle;
 		}
 	}

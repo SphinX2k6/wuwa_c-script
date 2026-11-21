@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200011A RID: 282
+	// Token: 0x02000129 RID: 297
 	public class ConfigBranchLineAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600069D RID: 1693 RVA: 0x0007F008 File Offset: 0x0007D208
+		// Token: 0x060006F7 RID: 1783 RVA: 0x0008496C File Offset: 0x00082B6C
 		static ConfigBranchLineAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBranchLineAll.CreateStaticDefaultValue), new Action(ConfigBranchLineAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600069E RID: 1694 RVA: 0x0007F028 File Offset: 0x0007D228
+		// Token: 0x060006F8 RID: 1784 RVA: 0x0008498C File Offset: 0x00082B8C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBranchLineAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600069F RID: 1695 RVA: 0x0007F0A7 File Offset: 0x0007D2A7
+		// Token: 0x060006F9 RID: 1785 RVA: 0x00084A0B File Offset: 0x00082C0B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBranchLineAll.LogPair = null;
 			ConfigBranchLineAll.HandleId = 0;
 		}
 
-		// Token: 0x060006A0 RID: 1696 RVA: 0x0007F0B5 File Offset: 0x0007D2B5
+		// Token: 0x060006FA RID: 1786 RVA: 0x00084A19 File Offset: 0x00082C19
 		public static void Init()
 		{
 			ConfigBranchLineAll.HandleId = ConfigCommon.InitDataStatement(ConfigBranchLineAll.HandleId, "db_moonchasing.db", "select BinData from `BranchLine`");
 		}
 
-		// Token: 0x060006A1 RID: 1697 RVA: 0x0007F0D0 File Offset: 0x0007D2D0
+		// Token: 0x060006FB RID: 1787 RVA: 0x00084A34 File Offset: 0x00082C34
 		[NullableContext(2)]
 		public static IReadOnlyList<BranchLine> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400079A RID: 1946
+		// Token: 0x04000803 RID: 2051
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x0400079B RID: 1947
+		// Token: 0x04000804 RID: 2052
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x0400079C RID: 1948
+		// Token: 0x04000805 RID: 2053
 		private const string TABLE = "BranchLine";
 
-		// Token: 0x0400079D RID: 1949
+		// Token: 0x04000806 RID: 2054
 		private const string COMMAND = "select BinData from `BranchLine`";
 
-		// Token: 0x0400079E RID: 1950
+		// Token: 0x04000807 RID: 2055
 		private const string KEY_PREFIX = "BranchLineAll";
 
-		// Token: 0x0400079F RID: 1951
+		// Token: 0x04000808 RID: 2056
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007A0 RID: 1952
+		// Token: 0x04000809 RID: 2057
 		private static int HandleId;
 	}
 }

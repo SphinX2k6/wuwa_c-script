@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200224E RID: 8782
+	// Token: 0x020024BB RID: 9403
 	[EnumExtensions]
 	public enum TPlayMode
 	{
-		// Token: 0x040072D9 RID: 29401
+		// Token: 0x04007926 RID: 31014
 		direct,
-		// Token: 0x040072DA RID: 29402
+		// Token: 0x04007927 RID: 31015
 		instant,
-		// Token: 0x040072DB RID: 29403
+		// Token: 0x04007928 RID: 31016
 		loop,
-		// Token: 0x040072DC RID: 29404
+		// Token: 0x04007929 RID: 31017
 		shortestPath
 	}
 }

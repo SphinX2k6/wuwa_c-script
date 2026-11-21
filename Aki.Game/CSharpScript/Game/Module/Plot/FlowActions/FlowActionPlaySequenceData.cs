@@ -10,10 +10,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C9 RID: 20681
+	// Token: 0x02004099 RID: 16537
 	public class FlowActionPlaySequenceData : FlowActionBase
 	{
-		// Token: 0x06034F0C RID: 216844 RVA: 0x00C8A168 File Offset: 0x00C88368
+		// Token: 0x06029E05 RID: 171525 RVA: 0x00BD7450 File Offset: 0x00BD5650
 		protected override void OnExecute()
 		{
 			PlaySequenceData playSequenceData = this.ActionInfo.Params as PlaySequenceData;
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			});
 		}
 
-		// Token: 0x06034F0D RID: 216845 RVA: 0x00C8A275 File Offset: 0x00C88475
+		// Token: 0x06029E06 RID: 171526 RVA: 0x00BD755D File Offset: 0x00BD575D
 		private void OnSequenceStart(float _)
 		{
 			FlowController.Instance.EnableSkip(true);
 		}
 
-		// Token: 0x06034F0E RID: 216846 RVA: 0x00C8A284 File Offset: 0x00C88484
+		// Token: 0x06029E07 RID: 171527 RVA: 0x00BD756C File Offset: 0x00BD576C
 		private void OnSequenceFinish(bool state)
 		{
 			FlowController.Instance.EnableSkip(false);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F0F RID: 216847 RVA: 0x00C8A2E0 File Offset: 0x00C884E0
+		// Token: 0x06029E08 RID: 171528 RVA: 0x00BD75C8 File Offset: 0x00BD57C8
 		protected override void OnInterruptExecute()
 		{
 			FlowController.Instance.EnableSkip(false);
@@ -80,13 +80,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}).Forget();
 		}
 
-		// Token: 0x06034F10 RID: 216848 RVA: 0x00C8A34D File Offset: 0x00C8854D
+		// Token: 0x06029E09 RID: 171529 RVA: 0x00BD7635 File Offset: 0x00BD5835
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034F11 RID: 216849 RVA: 0x00C8A358 File Offset: 0x00C88558
+		// Token: 0x06029E0A RID: 171530 RVA: 0x00BD7640 File Offset: 0x00BD5840
 		private UniTask SkipPromise()
 		{
 			FlowActionPlaySequenceData.<SkipPromise>d__5 <SkipPromise>d__;

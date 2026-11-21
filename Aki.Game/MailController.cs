@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,13 +10,13 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x020021CA RID: 8650
+// Token: 0x020016AE RID: 5806
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MailController : UiControllerBase
 {
-	// Token: 0x06010CF7 RID: 68855 RVA: 0x004154B0 File Offset: 0x004136B0
+	// Token: 0x0600E188 RID: 57736 RVA: 0x00421D90 File Offset: 0x0041FF90
 	public static void ShowMailFloatTipsByTextKey(string textKey)
 	{
 		string multiTextByKey = TextConfig.Instance.GetMultiTextByKey(textKey, "");
@@ -28,13 +27,13 @@ public class MailController : UiControllerBase
 		ScrollingTipsController.Instance.ShowTipsByText(multiTextByKey);
 	}
 
-	// Token: 0x06010CF8 RID: 68856 RVA: 0x004154E2 File Offset: 0x004136E2
+	// Token: 0x0600E189 RID: 57737 RVA: 0x00421DC2 File Offset: 0x0041FFC2
 	public static bool CanOpenView(EUiViewName viewName, object param)
 	{
 		return FunctionModel.Instance.IsOpen(10020);
 	}
 
-	// Token: 0x06010CF9 RID: 68857 RVA: 0x004154F3 File Offset: 0x004136F3
+	// Token: 0x0600E18A RID: 57738 RVA: 0x00421DD3 File Offset: 0x0041FFD3
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager instance = UiManager.Instance;
@@ -47,7 +46,7 @@ public class MailController : UiControllerBase
 		instance.AddOpenViewCheckFunction(mailBoxView, func, "MailController.CanOpenView");
 	}
 
-	// Token: 0x06010CFA RID: 68858 RVA: 0x00415524 File Offset: 0x00413724
+	// Token: 0x0600E18B RID: 57739 RVA: 0x00421E04 File Offset: 0x00420004
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager instance = UiManager.Instance;
@@ -60,7 +59,7 @@ public class MailController : UiControllerBase
 		instance.RemoveOpenViewCheckFunction(formation2DView, func);
 	}
 
-	// Token: 0x06010CFB RID: 68859 RVA: 0x00415550 File Offset: 0x00413750
+	// Token: 0x0600E18C RID: 57740 RVA: 0x00421E30 File Offset: 0x00420030
 	protected override void OnAddEvents()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -73,7 +72,7 @@ public class MailController : UiControllerBase
 		instance.Add(name, handle);
 	}
 
-	// Token: 0x06010CFC RID: 68860 RVA: 0x0041557D File Offset: 0x0041377D
+	// Token: 0x0600E18D RID: 57741 RVA: 0x00421E5D File Offset: 0x0042005D
 	protected override void OnRemoveEvents()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -86,7 +85,7 @@ public class MailController : UiControllerBase
 		instance.Remove(name, handle);
 	}
 
-	// Token: 0x06010CFD RID: 68861 RVA: 0x004155AC File Offset: 0x004137AC
+	// Token: 0x0600E18E RID: 57742 RVA: 0x00421E8C File Offset: 0x0042008C
 	protected override void OnRegisterNetEvent()
 	{
 		Net instance = Net.Instance;
@@ -115,7 +114,7 @@ public class MailController : UiControllerBase
 		instance3.Register(id3, callback3);
 	}
 
-	// Token: 0x06010CFE RID: 68862 RVA: 0x0041563A File Offset: 0x0041383A
+	// Token: 0x0600E18F RID: 57743 RVA: 0x00421F1A File Offset: 0x0042011A
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.MailInfosNotify);
@@ -123,7 +122,7 @@ public class MailController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.MailAddNotify);
 	}
 
-	// Token: 0x06010CFF RID: 68863 RVA: 0x0041566C File Offset: 0x0041386C
+	// Token: 0x0600E190 RID: 57744 RVA: 0x00421F4C File Offset: 0x0042014C
 	[NullableContext(2)]
 	private static void OnMailInfosNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -147,7 +146,7 @@ public class MailController : UiControllerBase
 		MailController.TryShowNewMailTips("NewMail");
 	}
 
-	// Token: 0x06010D00 RID: 68864 RVA: 0x0041574C File Offset: 0x0041394C
+	// Token: 0x0600E191 RID: 57745 RVA: 0x0042202C File Offset: 0x0042022C
 	[NullableContext(2)]
 	private static void OnMailDeleteNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -176,7 +175,7 @@ public class MailController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.DeletingMailPassively);
 	}
 
-	// Token: 0x06010D01 RID: 68865 RVA: 0x00415808 File Offset: 0x00413A08
+	// Token: 0x0600E192 RID: 57746 RVA: 0x004220E8 File Offset: 0x004202E8
 	[NullableContext(2)]
 	private static void OnMailAddNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -224,13 +223,13 @@ public class MailController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.AddingNewMail);
 	}
 
-	// Token: 0x06010D02 RID: 68866 RVA: 0x00415930 File Offset: 0x00413B30
+	// Token: 0x0600E193 RID: 57747 RVA: 0x00422210 File Offset: 0x00420410
 	private static void OnWorldDoneAndCloseLoading()
 	{
 		MailController.TryShowNewMailTips("NewMail");
 	}
 
-	// Token: 0x06010D03 RID: 68867 RVA: 0x0041593C File Offset: 0x00413B3C
+	// Token: 0x0600E194 RID: 57748 RVA: 0x0042221C File Offset: 0x0042041C
 	private static void TryShowNewMailTips(string promptId = "NewMail")
 	{
 		if (!GameModeModel.Instance.WorldDoneAndLoadingClosed)
@@ -254,7 +253,7 @@ public class MailController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010D04 RID: 68868 RVA: 0x00415A04 File Offset: 0x00413C04
+	// Token: 0x0600E195 RID: 57749 RVA: 0x004222E4 File Offset: 0x004204E4
 	public static void SelectedMail(MailData selectedMail)
 	{
 		if (selectedMail != null)
@@ -269,7 +268,7 @@ public class MailController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010D05 RID: 68869 RVA: 0x00415A5C File Offset: 0x00413C5C
+	// Token: 0x0600E196 RID: 57750 RVA: 0x0042233C File Offset: 0x0042053C
 	public static void RequestReadMail(string mailId, int configId)
 	{
 		MailReadRequest mailReadRequest = MailReadRequest.Create();
@@ -286,7 +285,7 @@ public class MailController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010D06 RID: 68870 RVA: 0x00415AC8 File Offset: 0x00413CC8
+	// Token: 0x0600E197 RID: 57751 RVA: 0x004223A8 File Offset: 0x004205A8
 	private static void OnReadMailResponse(MailReadResponse response, int configId)
 	{
 		if (response == null)
@@ -295,7 +294,7 @@ public class MailController : UiControllerBase
 		}
 		if (response.ErrorCode != Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 28318, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 23666, null, true, true);
 			return;
 		}
 		MailData mailInstanceById = MailModel.Instance.GetMailInstanceById(response.Id);
@@ -319,7 +318,7 @@ public class MailController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010D07 RID: 68871 RVA: 0x00415BBC File Offset: 0x00413DBC
+	// Token: 0x0600E198 RID: 57752 RVA: 0x0042249C File Offset: 0x0042069C
 	public static void RequestPickAttachment(List<string> attachmentIds, EMailAttachmentPickType pickType)
 	{
 		MailGetAttachmentRequest mailGetAttachmentRequest = MailGetAttachmentRequest.Create();
@@ -341,7 +340,7 @@ public class MailController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010D08 RID: 68872 RVA: 0x00415C6C File Offset: 0x00413E6C
+	// Token: 0x0600E199 RID: 57753 RVA: 0x0042254C File Offset: 0x0042074C
 	private static void OnPickMailAttachmentResponse(MailGetAttachmentResponse response, EMailAttachmentPickType pickType)
 	{
 		if (response == null)
@@ -350,7 +349,7 @@ public class MailController : UiControllerBase
 		}
 		if (response.ErrorCode == Aki.Protocol.ErrorCode.Success)
 		{
-			Dictionary<string, int> successIdMap = response.SuccessIdMap.ToDictionary((KeyValuePair<string, int> pair) => pair.Key, (KeyValuePair<string, int> pair) => pair.Value);
+			Dictionary<string, int> successIdMap = new Dictionary<string, int>(response.SuccessIdMap);
 			MailModel.Instance.SetLastPickedAttachments(successIdMap, pickType);
 			return;
 		}
@@ -379,10 +378,10 @@ public class MailController : UiControllerBase
 			GenericPromptController.Instance.ShowPromptByCode(text, Array.Empty<object>());
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 27409, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 26747, null, true, true);
 	}
 
-	// Token: 0x06010D09 RID: 68873 RVA: 0x00415D6C File Offset: 0x00413F6C
+	// Token: 0x0600E19A RID: 57754 RVA: 0x0042260C File Offset: 0x0042080C
 	public static void RequestMailFavorite(string mailId, bool isFavorite, Action onFailed = null, Action onSuccess = null)
 	{
 		if (MailModel.Instance.CanRequestMailFavorite(mailId, isFavorite))
@@ -408,7 +407,7 @@ public class MailController : UiControllerBase
 					long expiryTime = MathUtils.Instance.LongToNumber(mailFavoriteResponse.ExpiryTime);
 					if (mailFavoriteResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(mailFavoriteResponse.ErrorCode, 26065, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(mailFavoriteResponse.ErrorCode, 17919, null, true, true);
 						Action onFailed4 = onFailed;
 						if (onFailed4 == null)
 						{
@@ -440,7 +439,7 @@ public class MailController : UiControllerBase
 		onFailed2();
 	}
 
-	// Token: 0x06010D0A RID: 68874 RVA: 0x00415DF0 File Offset: 0x00413FF0
+	// Token: 0x0600E19B RID: 57755 RVA: 0x00422690 File Offset: 0x00420890
 	public static void RequestDeleteFavoriteMail(string mailId)
 	{
 		MailData mailInstanceById = MailModel.Instance.GetMailInstanceById(mailId);
@@ -465,7 +464,7 @@ public class MailController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010D0B RID: 68875 RVA: 0x00415E58 File Offset: 0x00414058
+	// Token: 0x0600E19C RID: 57756 RVA: 0x004226F8 File Offset: 0x004208F8
 	public static void RequestDeleteMail(List<string> mailIds)
 	{
 		MailDeleteRequest mailDeleteRequest = MailDeleteRequest.Create();
@@ -487,12 +486,12 @@ public class MailController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06010D0C RID: 68876 RVA: 0x00415ED0 File Offset: 0x004140D0
+	// Token: 0x0600E19D RID: 57757 RVA: 0x00422770 File Offset: 0x00420970
 	private static void OnDeleteMailResponse(MailDeleteResponse response)
 	{
 		if (response.ErrorCode != Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 20393, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 22089, null, true, true);
 			return;
 		}
 		if (response.SuccessIds.Count > 0)
@@ -512,7 +511,7 @@ public class MailController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010D0D RID: 68877 RVA: 0x00415FAC File Offset: 0x004141AC
+	// Token: 0x0600E19E RID: 57758 RVA: 0x0042284C File Offset: 0x00420A4C
 	public static void OpenMailJumpView(MailData mailData)
 	{
 		int subContentJumpId = mailData.GetSubContentJumpId();
@@ -539,7 +538,7 @@ public class MailController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010D0E RID: 68878 RVA: 0x0041602C File Offset: 0x0041422C
+	// Token: 0x0600E19F RID: 57759 RVA: 0x004228CC File Offset: 0x00420ACC
 	private static bool TryOpenMailToInventoryJump(int accessPathId, int jumpParam, int jumpParam2)
 	{
 		AccessPath? accessPathConfig = SkipInterfaceConfig.Instance.GetAccessPathConfig(accessPathId);
@@ -576,7 +575,7 @@ public class MailController : UiControllerBase
 		return MailController.OpenMailBagJump(num3, num4);
 	}
 
-	// Token: 0x06010D0F RID: 68879 RVA: 0x00416160 File Offset: 0x00414360
+	// Token: 0x0600E1A0 RID: 57760 RVA: 0x00422A00 File Offset: 0x00420C00
 	private static bool TryMailJump(EFunctionType jumpId, int jumpParam, int jumpParam2)
 	{
 		if (jumpParam <= 0 && jumpParam2 <= 0)
@@ -668,7 +667,7 @@ public class MailController : UiControllerBase
 		return MailController.OpenMailJumpSubTab(jumpId, jumpParam, jumpParam2);
 	}
 
-	// Token: 0x06010D10 RID: 68880 RVA: 0x0041627C File Offset: 0x0041447C
+	// Token: 0x0600E1A1 RID: 57761 RVA: 0x00422B1C File Offset: 0x00420D1C
 	private static bool OpenMailJumpSubTab(EFunctionType jumpId, int jumpParam, int jumpParam2)
 	{
 		if (jumpParam <= 0)
@@ -713,7 +712,7 @@ public class MailController : UiControllerBase
 		int? num = (jumpParam2 > 0) ? new int?(jumpParam2) : null;
 		if (euiViewName == EUiViewName.AdventureGuideView)
 		{
-			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(euiTabViewName), num, null);
+			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(euiTabViewName), num, null, null);
 			return true;
 		}
 		if (euiViewName == EUiViewName.CalabashRootView)
@@ -729,7 +728,7 @@ public class MailController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010D11 RID: 68881 RVA: 0x00416400 File Offset: 0x00414600
+	// Token: 0x0600E1A2 RID: 57762 RVA: 0x00422CAC File Offset: 0x00420EAC
 	private static UiDynamicTab? FindMailJumpTab(List<UiDynamicTab> tabList, int jumpParam)
 	{
 		foreach (UiDynamicTab value in tabList)
@@ -753,7 +752,7 @@ public class MailController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x06010D12 RID: 68882 RVA: 0x004164CC File Offset: 0x004146CC
+	// Token: 0x0600E1A3 RID: 57763 RVA: 0x00422D78 File Offset: 0x00420F78
 	private static void OpenMailShopJump(int shopId, int subTabId)
 	{
 		if (!FunctionModel.Instance.IsOpen(10010))
@@ -778,7 +777,7 @@ public class MailController : UiControllerBase
 		PayShopController.Instance.OpenPayShopViewWithTab((PayShopDefine.EPayShopTabType)shopId, subTabId);
 	}
 
-	// Token: 0x06010D13 RID: 68883 RVA: 0x0041655C File Offset: 0x0041475C
+	// Token: 0x0600E1A4 RID: 57764 RVA: 0x00422E08 File Offset: 0x00421008
 	private static bool OpenMailBagJump(int mainTypeId, int uniqueId)
 	{
 		if (mainTypeId <= 0 && uniqueId <= 0)
@@ -804,7 +803,7 @@ public class MailController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010D14 RID: 68884 RVA: 0x004165E8 File Offset: 0x004147E8
+	// Token: 0x0600E1A5 RID: 57765 RVA: 0x00422E94 File Offset: 0x00421094
 	public static void RecordMailJumpLog(MailData mailData)
 	{
 		MailJumpLogEvent logData = new MailJumpLogEvent
@@ -818,8 +817,8 @@ public class MailController : UiControllerBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x1700155A RID: 5466
-	// (get) Token: 0x06010D15 RID: 68885 RVA: 0x00416648 File Offset: 0x00414848
+	// Token: 0x17001591 RID: 5521
+	// (get) Token: 0x0600E1A6 RID: 57766 RVA: 0x00422EF4 File Offset: 0x004210F4
 	public static MailController Instance
 	{
 		get
@@ -828,7 +827,7 @@ public class MailController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010D16 RID: 68886 RVA: 0x0041664F File Offset: 0x0041484F
+	// Token: 0x0600E1A7 RID: 57767 RVA: 0x00422EFB File Offset: 0x004210FB
 	public static MailController GetOrCreateInstance()
 	{
 		if (MailController._Instance == null)
@@ -838,7 +837,7 @@ public class MailController : UiControllerBase
 		return MailController._Instance;
 	}
 
-	// Token: 0x06010D17 RID: 68887 RVA: 0x00416663 File Offset: 0x00414863
+	// Token: 0x0600E1A8 RID: 57768 RVA: 0x00422F0F File Offset: 0x0042110F
 	public static bool CreateInstance()
 	{
 		if (MailController._Instance != null)
@@ -849,32 +848,32 @@ public class MailController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010D18 RID: 68888 RVA: 0x00416679 File Offset: 0x00414879
+	// Token: 0x0600E1A9 RID: 57769 RVA: 0x00422F25 File Offset: 0x00421125
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010D19 RID: 68889 RVA: 0x0041667B File Offset: 0x0041487B
+	// Token: 0x0600E1AA RID: 57770 RVA: 0x00422F27 File Offset: 0x00421127
 	public static void ResetStaticDefaultValue()
 	{
 		MailController._Instance = null;
 	}
 
-	// Token: 0x06010D1A RID: 68890 RVA: 0x00416683 File Offset: 0x00414883
+	// Token: 0x0600E1AB RID: 57771 RVA: 0x00422F2F File Offset: 0x0042112F
 	static MailController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MailController.CreateStaticDefaultValue), new Action(MailController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007FD3 RID: 32723
+	// Token: 0x0400811A RID: 33050
 	[Nullable(2)]
 	private static MailController _Instance;
 
-	// Token: 0x02008707 RID: 34567
+	// Token: 0x02007892 RID: 30866
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402BEBA RID: 179898
+		// Token: 0x040271D9 RID: 160217
 		[Nullable(new byte[]
 		{
 			0,
@@ -882,11 +881,11 @@ public class MailController : UiControllerBase
 		})]
 		public static Func<EUiViewName, object, bool> <0>__CanOpenView;
 
-		// Token: 0x0402BEBB RID: 179899
+		// Token: 0x040271DA RID: 160218
 		[Nullable(0)]
 		public static Action <1>__OnWorldDoneAndCloseLoading;
 
-		// Token: 0x0402BEBC RID: 179900
+		// Token: 0x040271DB RID: 160219
 		[Nullable(new byte[]
 		{
 			0,
@@ -895,7 +894,7 @@ public class MailController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <2>__OnMailInfosNotify;
 
-		// Token: 0x0402BEBD RID: 179901
+		// Token: 0x040271DC RID: 160220
 		[Nullable(new byte[]
 		{
 			0,
@@ -904,7 +903,7 @@ public class MailController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <3>__OnMailDeleteNotify;
 
-		// Token: 0x0402BEBE RID: 179902
+		// Token: 0x040271DD RID: 160221
 		[Nullable(new byte[]
 		{
 			0,

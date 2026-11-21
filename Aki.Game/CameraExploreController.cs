@@ -6,13 +6,13 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x020001FC RID: 508
+// Token: 0x02000200 RID: 512
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraExploreController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06001FF8 RID: 8184 RVA: 0x000A63FC File Offset: 0x000A45FC
+	// Token: 0x060020A6 RID: 8358 RVA: 0x000AD750 File Offset: 0x000AB950
 	public CameraExploreController(FightCameraLogicComponent camera) : base(camera)
 	{
 		this.StateMachine = new StateMachine<CameraExploreController, CameraExploreController.ECameraState>(this, null);
@@ -22,13 +22,13 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		this.StateMachine.Start(CameraExploreController.ECameraState.Default);
 	}
 
-	// Token: 0x06001FF9 RID: 8185 RVA: 0x000A647D File Offset: 0x000A467D
+	// Token: 0x060020A7 RID: 8359 RVA: 0x000AD7D1 File Offset: 0x000AB9D1
 	public override string Name()
 	{
 		return "ExploreController";
 	}
 
-	// Token: 0x06001FFA RID: 8186 RVA: 0x000A6484 File Offset: 0x000A4684
+	// Token: 0x060020A8 RID: 8360 RVA: 0x000AD7D8 File Offset: 0x000AB9D8
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraExplore.修正角度Min, "CheckAdjustYawAngleMin");
@@ -44,7 +44,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		base.RegisterPairConfigKey(EFightCameraExplore.OutRangeMin, EFightCameraExplore.OutRangeMax, true);
 	}
 
-	// Token: 0x06001FFB RID: 8187 RVA: 0x000A6554 File Offset: 0x000A4754
+	// Token: 0x060020A9 RID: 8361 RVA: 0x000AD8A8 File Offset: 0x000ABAA8
 	public void EnterCameraExplore(int id, FVectorDouble? lookAt1, FVectorDouble? lookAt2, float prepTime, float fadeDistance, float armLengthMin, float armLengthMax)
 	{
 		this.CurrentTriggerRangeId = id;
@@ -87,7 +87,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		}
 	}
 
-	// Token: 0x06001FFC RID: 8188 RVA: 0x000A6690 File Offset: 0x000A4890
+	// Token: 0x060020AA RID: 8362 RVA: 0x000AD9E4 File Offset: 0x000ABBE4
 	public void ExitCameraExplore(int id)
 	{
 		this.InTriggerRangeSet.Remove(id);
@@ -150,7 +150,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		}
 	}
 
-	// Token: 0x06001FFD RID: 8189 RVA: 0x000A686C File Offset: 0x000A4A6C
+	// Token: 0x060020AB RID: 8363 RVA: 0x000ADBC0 File Offset: 0x000ABDC0
 	protected override void UpdateInternal(float deltaTime)
 	{
 		if (this.Camera.IsModifiedArmRotationPitch || this.Camera.IsModifiedArmRotationYaw || this.Camera.IsModifiedArmLength)
@@ -160,7 +160,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		this.StateMachine.Update(deltaTime);
 	}
 
-	// Token: 0x06001FFE RID: 8190 RVA: 0x000A68BC File Offset: 0x000A4ABC
+	// Token: 0x060020AC RID: 8364 RVA: 0x000ADC10 File Offset: 0x000ABE10
 	public bool CheckAdjust()
 	{
 		if (!this.IsInTriggerRange)
@@ -187,13 +187,13 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		return moveState - ECharMoveState.Walk <= 5;
 	}
 
-	// Token: 0x06001FFF RID: 8191 RVA: 0x000A6973 File Offset: 0x000A4B73
+	// Token: 0x060020AD RID: 8365 RVA: 0x000ADCC7 File Offset: 0x000ABEC7
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06002000 RID: 8192 RVA: 0x000A697C File Offset: 0x000A4B7C
+	// Token: 0x060020AE RID: 8366 RVA: 0x000ADCD0 File Offset: 0x000ABED0
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -387,7 +387,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06002001 RID: 8193 RVA: 0x000A6D58 File Offset: 0x000A4F58
+	// Token: 0x060020AF RID: 8367 RVA: 0x000AE0AC File Offset: 0x000AC2AC
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -868,7 +868,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06002002 RID: 8194 RVA: 0x000A756C File Offset: 0x000A576C
+	// Token: 0x060020B0 RID: 8368 RVA: 0x000AE8C0 File Offset: 0x000ACAC0
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -877,61 +877,61 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040013D8 RID: 5080
+	// Token: 0x0400141A RID: 5146
 	public double CheckAdjustYawAngleMin;
 
-	// Token: 0x040013D9 RID: 5081
+	// Token: 0x0400141B RID: 5147
 	public double CheckAdjustYawAngleMax;
 
-	// Token: 0x040013DA RID: 5082
+	// Token: 0x0400141C RID: 5148
 	public double DefaultPitchInRangeMin;
 
-	// Token: 0x040013DB RID: 5083
+	// Token: 0x0400141D RID: 5149
 	public double DefaultPitchInRangeMax;
 
-	// Token: 0x040013DC RID: 5084
+	// Token: 0x0400141E RID: 5150
 	public double DefaultPitchOutRangeMin;
 
-	// Token: 0x040013DD RID: 5085
+	// Token: 0x0400141F RID: 5151
 	public double DefaultPitchOutRangeMax;
 
-	// Token: 0x040013DE RID: 5086
+	// Token: 0x04001420 RID: 5152
 	public double CheckCameraDirectionCos;
 
-	// Token: 0x040013DF RID: 5087
+	// Token: 0x04001421 RID: 5153
 	public double CheckMoveDirectionCos;
 
-	// Token: 0x040013E0 RID: 5088
+	// Token: 0x04001422 RID: 5154
 	public readonly Vector LookAtLocation1 = Vector.Create();
 
-	// Token: 0x040013E1 RID: 5089
+	// Token: 0x04001423 RID: 5155
 	public readonly Vector LookAtLocation2 = Vector.Create();
 
-	// Token: 0x040013E2 RID: 5090
+	// Token: 0x04001424 RID: 5156
 	public readonly Vector LookAtDirection = Vector.Create();
 
-	// Token: 0x040013E3 RID: 5091
+	// Token: 0x04001425 RID: 5157
 	private readonly StateMachine<CameraExploreController, CameraExploreController.ECameraState> StateMachine;
 
-	// Token: 0x040013E4 RID: 5092
+	// Token: 0x04001426 RID: 5158
 	public double PrepTime;
 
-	// Token: 0x040013E5 RID: 5093
+	// Token: 0x04001427 RID: 5159
 	public double FadeDistance;
 
-	// Token: 0x040013E6 RID: 5094
+	// Token: 0x04001428 RID: 5160
 	public double ArmLengthMin;
 
-	// Token: 0x040013E7 RID: 5095
+	// Token: 0x04001429 RID: 5161
 	public double ArmLengthMax;
 
-	// Token: 0x040013E8 RID: 5096
+	// Token: 0x0400142A RID: 5162
 	private bool IsInTriggerRange;
 
-	// Token: 0x040013E9 RID: 5097
+	// Token: 0x0400142B RID: 5163
 	public bool HasLookAtPoint;
 
-	// Token: 0x040013EA RID: 5098
+	// Token: 0x0400142C RID: 5164
 	[Nullable(new byte[]
 	{
 		1,
@@ -939,22 +939,22 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 	})]
 	private readonly Dictionary<int, ValueTuple<FVectorDouble?, FVectorDouble?, double, double, double, double>> InTriggerRangeSet = new Dictionary<int, ValueTuple<FVectorDouble?, FVectorDouble?, double, double, double, double>>();
 
-	// Token: 0x040013EB RID: 5099
+	// Token: 0x0400142D RID: 5165
 	private int CurrentTriggerRangeId;
 
-	// Token: 0x02007426 RID: 29734
+	// Token: 0x020065B7 RID: 26039
 	[NullableContext(0)]
 	public enum ECameraState
 	{
-		// Token: 0x040267B4 RID: 157620
+		// Token: 0x04021AF2 RID: 137970
 		Default,
-		// Token: 0x040267B5 RID: 157621
+		// Token: 0x04021AF3 RID: 137971
 		ReadyAdjust,
-		// Token: 0x040267B6 RID: 157622
+		// Token: 0x04021AF4 RID: 137972
 		Adjust
 	}
 
-	// Token: 0x02007427 RID: 29735
+	// Token: 0x020065B8 RID: 26040
 	[Nullable(new byte[]
 	{
 		0,
@@ -962,7 +962,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 	})]
 	public class DefaultState : StateBase<CameraExploreController, CameraExploreController.ECameraState>
 	{
-		// Token: 0x060487CE RID: 296910 RVA: 0x012A5DBF File Offset: 0x012A3FBF
+		// Token: 0x0603EC2B RID: 257067 RVA: 0x01249043 File Offset: 0x01247243
 		public DefaultState(CameraExploreController owner, CameraExploreController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -971,7 +971,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		{
 		}
 
-		// Token: 0x060487CF RID: 296911 RVA: 0x012A5DCA File Offset: 0x012A3FCA
+		// Token: 0x0603EC2C RID: 257068 RVA: 0x0124904E File Offset: 0x0124724E
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Owner.CheckAdjust())
@@ -981,7 +981,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		}
 	}
 
-	// Token: 0x02007428 RID: 29736
+	// Token: 0x020065B9 RID: 26041
 	[Nullable(new byte[]
 	{
 		0,
@@ -989,7 +989,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 	})]
 	public class ReadyAdjustState : StateBase<CameraExploreController, CameraExploreController.ECameraState>
 	{
-		// Token: 0x060487D0 RID: 296912 RVA: 0x012A5DE6 File Offset: 0x012A3FE6
+		// Token: 0x0603EC2D RID: 257069 RVA: 0x0124906A File Offset: 0x0124726A
 		public ReadyAdjustState(CameraExploreController owner, CameraExploreController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -998,13 +998,13 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		{
 		}
 
-		// Token: 0x060487D1 RID: 296913 RVA: 0x012A5DF1 File Offset: 0x012A3FF1
+		// Token: 0x0603EC2E RID: 257070 RVA: 0x01249075 File Offset: 0x01247275
 		protected override void OnEnter(CameraExploreController.ECameraState? state)
 		{
 			this.ElapseTime = 0.0;
 		}
 
-		// Token: 0x060487D2 RID: 296914 RVA: 0x012A5E04 File Offset: 0x012A4004
+		// Token: 0x0603EC2F RID: 257071 RVA: 0x01249088 File Offset: 0x01247288
 		protected override void OnUpdate(float delta)
 		{
 			this.ElapseTime += (double)delta;
@@ -1019,11 +1019,11 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			}
 		}
 
-		// Token: 0x040267B7 RID: 157623
+		// Token: 0x04021AF5 RID: 137973
 		private double ElapseTime;
 	}
 
-	// Token: 0x02007429 RID: 29737
+	// Token: 0x020065BA RID: 26042
 	[Nullable(new byte[]
 	{
 		0,
@@ -1031,7 +1031,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 	})]
 	public class AdjustState : StateBase<CameraExploreController, CameraExploreController.ECameraState>
 	{
-		// Token: 0x060487D3 RID: 296915 RVA: 0x012A5E5C File Offset: 0x012A405C
+		// Token: 0x0603EC30 RID: 257072 RVA: 0x012490E0 File Offset: 0x012472E0
 		public AdjustState(CameraExploreController owner, CameraExploreController.ECameraState state, [Nullable(new byte[]
 		{
 			2,
@@ -1040,8 +1040,8 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 		{
 		}
 
-		// Token: 0x17009FB4 RID: 40884
-		// (get) Token: 0x060487D4 RID: 296916 RVA: 0x012A5EA9 File Offset: 0x012A40A9
+		// Token: 0x17007752 RID: 30546
+		// (get) Token: 0x0603EC31 RID: 257073 RVA: 0x0124912D File Offset: 0x0124732D
 		private double Sign
 		{
 			get
@@ -1050,7 +1050,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			}
 		}
 
-		// Token: 0x060487D5 RID: 296917 RVA: 0x012A5EB8 File Offset: 0x012A40B8
+		// Token: 0x0603EC32 RID: 257074 RVA: 0x0124913C File Offset: 0x0124733C
 		protected override void OnEnter(CameraExploreController.ECameraState? state)
 		{
 			this.StartCameraArmOffset.DeepCopy(this.CurrentCameraArmOffset);
@@ -1074,19 +1074,19 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			this.CalculateDesiredArmLength();
 		}
 
-		// Token: 0x060487D6 RID: 296918 RVA: 0x012A5FDC File Offset: 0x012A41DC
+		// Token: 0x0603EC33 RID: 257075 RVA: 0x01249260 File Offset: 0x01247460
 		public override bool CanReEnter()
 		{
 			return true;
 		}
 
-		// Token: 0x060487D7 RID: 296919 RVA: 0x012A5FE0 File Offset: 0x012A41E0
+		// Token: 0x0603EC34 RID: 257076 RVA: 0x01249264 File Offset: 0x01247464
 		protected override void OnReEnter()
 		{
 			this.OnEnter(null);
 		}
 
-		// Token: 0x060487D8 RID: 296920 RVA: 0x012A5FFC File Offset: 0x012A41FC
+		// Token: 0x0603EC35 RID: 257077 RVA: 0x01249280 File Offset: 0x01247480
 		protected override void OnUpdate(float delta)
 		{
 			if (!this.Owner.CheckAdjust())
@@ -1100,7 +1100,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			this.LastCharacterPosition.DeepCopy(vector);
 		}
 
-		// Token: 0x060487D9 RID: 296921 RVA: 0x012A6060 File Offset: 0x012A4260
+		// Token: 0x0603EC36 RID: 257078 RVA: 0x012492E4 File Offset: 0x012474E4
 		private void UpdateMoveDistance(Vector charPosition)
 		{
 			if (!charPosition.Equals(this.LastCharacterPosition, 0.0001))
@@ -1118,7 +1118,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			}
 		}
 
-		// Token: 0x060487DA RID: 296922 RVA: 0x012A60EC File Offset: 0x012A42EC
+		// Token: 0x0603EC37 RID: 257079 RVA: 0x01249370 File Offset: 0x01247570
 		private void CalculateDesiredRotation()
 		{
 			Vector inB = Vector.Create(this.Owner.Camera.PlayerLocation);
@@ -1176,7 +1176,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			this.AdjustDesiredRotatorPitch = MathUtils.Instance.RangeClamp((double)CameraUtility.GetZnInGravity(vector3), this.Owner.DefaultPitchInRangeMin, this.Owner.DefaultPitchInRangeMax, this.Owner.DefaultPitchOutRangeMin, this.Owner.DefaultPitchOutRangeMax);
 		}
 
-		// Token: 0x060487DB RID: 296923 RVA: 0x012A6404 File Offset: 0x012A4604
+		// Token: 0x0603EC38 RID: 257080 RVA: 0x01249688 File Offset: 0x01247888
 		private void CalculateDesiredArmLength()
 		{
 			this.AdjustBeginArmLength = (double)this.Owner.Camera.DesiredCamera.ArmLength;
@@ -1193,7 +1193,7 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			this.AdjustDesiredArmLength = this.AdjustBeginArmLength;
 		}
 
-		// Token: 0x060487DC RID: 296924 RVA: 0x012A6484 File Offset: 0x012A4684
+		// Token: 0x0603EC39 RID: 257081 RVA: 0x01249708 File Offset: 0x01247908
 		private void Interpolate()
 		{
 			double num = (this.Owner.FadeDistance > 0.0) ? (this.MoveDistance / this.Owner.FadeDistance) : 1.0;
@@ -1218,46 +1218,46 @@ public class CameraExploreController : CameraControllerBase, ICanGetConfigMapVal
 			this.Owner.Camera.IsModifiedArmLength = true;
 		}
 
-		// Token: 0x040267B8 RID: 157624
+		// Token: 0x04021AF6 RID: 137974
 		private double MoveDistance;
 
-		// Token: 0x040267B9 RID: 157625
+		// Token: 0x04021AF7 RID: 137975
 		private readonly Vector LastCharacterPosition = Vector.Create();
 
-		// Token: 0x040267BA RID: 157626
+		// Token: 0x04021AF8 RID: 137976
 		private readonly Vector LookAtVector = Vector.Create();
 
-		// Token: 0x040267BB RID: 157627
+		// Token: 0x04021AF9 RID: 137977
 		private double CharacterStartDistance;
 
-		// Token: 0x040267BC RID: 157628
+		// Token: 0x04021AFA RID: 137978
 		private bool Positive;
 
-		// Token: 0x040267BD RID: 157629
+		// Token: 0x04021AFB RID: 137979
 		private double AdjustBeginRotatorPitch;
 
-		// Token: 0x040267BE RID: 157630
+		// Token: 0x04021AFC RID: 137980
 		private double AdjustDesiredRotatorPitch;
 
-		// Token: 0x040267BF RID: 157631
+		// Token: 0x04021AFD RID: 137981
 		public Vector CurrentCameraArmOffset = Vector.Create();
 
-		// Token: 0x040267C0 RID: 157632
+		// Token: 0x04021AFE RID: 137982
 		private readonly Vector StartCameraArmOffset = Vector.Create();
 
-		// Token: 0x040267C1 RID: 157633
+		// Token: 0x04021AFF RID: 137983
 		private double AdjustBeginRotatorYaw;
 
-		// Token: 0x040267C2 RID: 157634
+		// Token: 0x04021B00 RID: 137984
 		private double AdjustDesiredRotatorYaw;
 
-		// Token: 0x040267C3 RID: 157635
+		// Token: 0x04021B01 RID: 137985
 		private double AdjustBeginArmLength;
 
-		// Token: 0x040267C4 RID: 157636
+		// Token: 0x04021B02 RID: 137986
 		private double AdjustDesiredArmLength;
 
-		// Token: 0x040267C5 RID: 157637
+		// Token: 0x04021B03 RID: 137987
 		private readonly Rotator TmpRotator = Rotator.Create();
 	}
 }

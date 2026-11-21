@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075C9 RID: 30153
+	// Token: 0x02007DC2 RID: 32194
 	public class IVisualNovelPerformanceTransitionT
 	{
-		// Token: 0x1700E505 RID: 58629
-		// (get) Token: 0x06036EB0 RID: 224944 RVA: 0x007744DF File Offset: 0x007726DF
-		// (set) Token: 0x06036EB1 RID: 224945 RVA: 0x007744E7 File Offset: 0x007726E7
+		// Token: 0x1700F132 RID: 61746
+		// (get) Token: 0x0603A2DF RID: 238303 RVA: 0x007D7C67 File Offset: 0x007D5E67
+		// (set) Token: 0x0603A2E0 RID: 238304 RVA: 0x007D7C6F File Offset: 0x007D5E6F
 		public EVisualNovelPerformanceType Type { get; set; }
 
-		// Token: 0x1700E506 RID: 58630
-		// (get) Token: 0x06036EB2 RID: 224946 RVA: 0x007744F0 File Offset: 0x007726F0
-		// (set) Token: 0x06036EB3 RID: 224947 RVA: 0x007744F8 File Offset: 0x007726F8
+		// Token: 0x1700F133 RID: 61747
+		// (get) Token: 0x0603A2E1 RID: 238305 RVA: 0x007D7C78 File Offset: 0x007D5E78
+		// (set) Token: 0x0603A2E2 RID: 238306 RVA: 0x007D7C80 File Offset: 0x007D5E80
 		public float StartTime { get; set; }
 
-		// Token: 0x1700E507 RID: 58631
-		// (get) Token: 0x06036EB4 RID: 224948 RVA: 0x00774501 File Offset: 0x00772701
-		// (set) Token: 0x06036EB5 RID: 224949 RVA: 0x00774509 File Offset: 0x00772709
+		// Token: 0x1700F134 RID: 61748
+		// (get) Token: 0x0603A2E3 RID: 238307 RVA: 0x007D7C89 File Offset: 0x007D5E89
+		// (set) Token: 0x0603A2E4 RID: 238308 RVA: 0x007D7C91 File Offset: 0x007D5E91
 		public IVisualNovelTransitionPerformanceSolarSchoolT TransitionPerformanceConfig { get; set; }
 
-		// Token: 0x1700E508 RID: 58632
-		// (get) Token: 0x06036EB6 RID: 224950 RVA: 0x00774512 File Offset: 0x00772712
-		// (set) Token: 0x06036EB7 RID: 224951 RVA: 0x0077451A File Offset: 0x0077271A
+		// Token: 0x1700F135 RID: 61749
+		// (get) Token: 0x0603A2E5 RID: 238309 RVA: 0x007D7C9A File Offset: 0x007D5E9A
+		// (set) Token: 0x0603A2E6 RID: 238310 RVA: 0x007D7CA2 File Offset: 0x007D5EA2
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036EB8 RID: 224952 RVA: 0x00774523 File Offset: 0x00772723
+		// Token: 0x0603A2E7 RID: 238311 RVA: 0x007D7CAB File Offset: 0x007D5EAB
 		public IVisualNovelPerformanceTransitionT()
 		{
 			this.Type = EVisualNovelPerformanceType.Enter;

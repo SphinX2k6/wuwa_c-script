@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001D7C RID: 7548
+// Token: 0x0200123E RID: 4670
 public enum ESetTrackReason
 {
-	// Token: 0x040069D5 RID: 27093
+	// Token: 0x04006AB5 RID: 27317
 	None,
-	// Token: 0x040069D6 RID: 27094
+	// Token: 0x04006AB6 RID: 27318
 	QuestFinished,
-	// Token: 0x040069D7 RID: 27095
+	// Token: 0x04006AB7 RID: 27319
 	TreeExpressionComponentDispose
 }

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010D7 RID: 4311
+// Token: 0x0200058B RID: 1419
 [NullableContext(1)]
 [Nullable(0)]
 public class AdvanceNoticeNewRoleTabView : AdvanceNoticeTabViewBase
 {
-	// Token: 0x0600703D RID: 28733 RVA: 0x0016DF78 File Offset: 0x0016C178
+	// Token: 0x060043D3 RID: 17363 RVA: 0x00176934 File Offset: 0x00174B34
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class AdvanceNoticeNewRoleTabView : AdvanceNoticeTabViewBase
 		};
 	}
 
-	// Token: 0x0600703E RID: 28734 RVA: 0x0016E09C File Offset: 0x0016C29C
+	// Token: 0x060043D4 RID: 17364 RVA: 0x00176A58 File Offset: 0x00174C58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AdvanceNoticeNewRoleTabView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class AdvanceNoticeNewRoleTabView : AdvanceNoticeTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600703F RID: 28735 RVA: 0x0016E0E0 File Offset: 0x0016C2E0
+	// Token: 0x060043D5 RID: 17365 RVA: 0x00176A9C File Offset: 0x00174C9C
 	protected override void RefreshView()
 	{
 		int currentSubTabId = this.ViewModel.CurrentSubTabId;
@@ -84,7 +84,7 @@ public class AdvanceNoticeNewRoleTabView : AdvanceNoticeTabViewBase
 		this.ShowItem(currentSubTabId, advertisingTabCharacterById.Type, path).Forget();
 	}
 
-	// Token: 0x06007040 RID: 28736 RVA: 0x0016E268 File Offset: 0x0016C468
+	// Token: 0x060043D6 RID: 17366 RVA: 0x00176C24 File Offset: 0x00174E24
 	private void CheckToSetTextureByPath(string texturePath, UUITexture textureComp)
 	{
 		if (StringUtils.IsBlank(texturePath))
@@ -94,7 +94,7 @@ public class AdvanceNoticeNewRoleTabView : AdvanceNoticeTabViewBase
 		base.SetTextureByPath(texturePath, textureComp, null, null);
 	}
 
-	// Token: 0x06007041 RID: 28737 RVA: 0x0016E290 File Offset: 0x0016C490
+	// Token: 0x060043D7 RID: 17367 RVA: 0x00176C4C File Offset: 0x00174E4C
 	private UniTask ShowItem(int id, int type, string path)
 	{
 		AdvanceNoticeNewRoleTabView.<ShowItem>d__8 <ShowItem>d__;
@@ -108,44 +108,44 @@ public class AdvanceNoticeNewRoleTabView : AdvanceNoticeTabViewBase
 		return <ShowItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04003418 RID: 13336
+	// Token: 0x040034B1 RID: 13489
 	[Nullable(2)]
 	private AdvanceNoticeNewRoleDetailItem DetailItem;
 
-	// Token: 0x04003419 RID: 13337
+	// Token: 0x040034B2 RID: 13490
 	private readonly Dictionary<int, AdvanceNoticeItemView> AdvanceNoticeItemViewMap = new Dictionary<int, AdvanceNoticeItemView>();
 
-	// Token: 0x0400341A RID: 13338
+	// Token: 0x040034B3 RID: 13491
 	[Nullable(2)]
 	private AdvanceNoticeItemView CurrentItem;
 
-	// Token: 0x0200769C RID: 30364
+	// Token: 0x02006830 RID: 26672
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402724B RID: 160331
+		// Token: 0x04022594 RID: 140692
 		BgTexture,
-		// Token: 0x0402724C RID: 160332
+		// Token: 0x04022595 RID: 140693
 		TitleDescText,
-		// Token: 0x0402724D RID: 160333
+		// Token: 0x04022596 RID: 140694
 		NameText,
-		// Token: 0x0402724E RID: 160334
+		// Token: 0x04022597 RID: 140695
 		ContentText,
-		// Token: 0x0402724F RID: 160335
+		// Token: 0x04022598 RID: 140696
 		DetailItem,
-		// Token: 0x04027250 RID: 160336
+		// Token: 0x04022599 RID: 140697
 		GetWayTitleText,
-		// Token: 0x04027251 RID: 160337
+		// Token: 0x0402259A RID: 140698
 		GetWayDescText,
-		// Token: 0x04027252 RID: 160338
+		// Token: 0x0402259B RID: 140699
 		ContentTexture,
-		// Token: 0x04027253 RID: 160339
+		// Token: 0x0402259C RID: 140700
 		ShadowTexture,
-		// Token: 0x04027254 RID: 160340
+		// Token: 0x0402259D RID: 140701
 		PurpleEffectNiagara,
-		// Token: 0x04027255 RID: 160341
+		// Token: 0x0402259E RID: 140702
 		GoldEffectNiagara,
-		// Token: 0x04027256 RID: 160342
+		// Token: 0x0402259F RID: 140703
 		PnlContent
 	}
 }

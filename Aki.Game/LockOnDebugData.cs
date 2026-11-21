@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020030DE RID: 12510
+// Token: 0x02002636 RID: 9782
 [NullableContext(1)]
 [Nullable(0)]
 public class LockOnDebugData
 {
-	// Token: 0x0601ACA7 RID: 109735 RVA: 0x0073A4E3 File Offset: 0x007386E3
+	// Token: 0x060186C3 RID: 100035 RVA: 0x0075FF1F File Offset: 0x0075E11F
 	public LockOnDebugData(LockOnInfo info)
 	{
 		this.Info = info;
 	}
 
-	// Token: 0x0601ACA8 RID: 109736 RVA: 0x0073A500 File Offset: 0x00738700
+	// Token: 0x060186C4 RID: 100036 RVA: 0x0075FF3C File Offset: 0x0075E13C
 	public void DrawDebug(Entity me)
 	{
 		Entity entity = EntitySystem.Instance.Get<Entity>(this.Info.EntityHandle.Id);
@@ -51,7 +51,7 @@ public class LockOnDebugData
 		}
 	}
 
-	// Token: 0x0601ACA9 RID: 109737 RVA: 0x0073A6AC File Offset: 0x007388AC
+	// Token: 0x060186C5 RID: 100037 RVA: 0x007600E8 File Offset: 0x0075E2E8
 	[NullableContext(2)]
 	private double GetDebugTextOffset(Entity target)
 	{
@@ -85,7 +85,7 @@ public class LockOnDebugData
 		return 120.0;
 	}
 
-	// Token: 0x0601ACAA RID: 109738 RVA: 0x0073A728 File Offset: 0x00738928
+	// Token: 0x060186C6 RID: 100038 RVA: 0x00760164 File Offset: 0x0075E364
 	private FTransformDouble GetSkillBoneTransform(Entity target, string bone)
 	{
 		CharacterActorComponent component = target.GetComponent<CharacterActorComponent>();
@@ -103,25 +103,25 @@ public class LockOnDebugData
 		return MathUtils.Instance.DefaultTransformDouble;
 	}
 
-	// Token: 0x0400CEE8 RID: 52968
+	// Token: 0x0400D2D8 RID: 53976
 	[Nullable(2)]
 	public string ShowTip;
 
-	// Token: 0x0400CEE9 RID: 52969
+	// Token: 0x0400D2D9 RID: 53977
 	public EColorType ColorType;
 
-	// Token: 0x0400CEEA RID: 52970
+	// Token: 0x0400D2DA RID: 53978
 	private readonly Vector TargetLocation = Vector.Create();
 
-	// Token: 0x0400CEEB RID: 52971
+	// Token: 0x0400D2DB RID: 53979
 	private static readonly FLinearColor RedColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400CEEC RID: 52972
+	// Token: 0x0400D2DC RID: 53980
 	private static readonly FLinearColor GreenColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x0400CEED RID: 52973
+	// Token: 0x0400D2DD RID: 53981
 	private static readonly FLinearColor BlackColor = new FLinearColor(0f, 0f, 0f, 1f);
 
-	// Token: 0x0400CEEE RID: 52974
+	// Token: 0x0400D2DE RID: 53982
 	private readonly LockOnInfo Info;
 }

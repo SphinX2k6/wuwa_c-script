@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000030 RID: 48
+	// Token: 0x02000015 RID: 21
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(64, 16, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 64)]
@@ -16,7 +16,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 16, Size = 64)]
 	public struct FMatrix : IEquatable<FMatrix>, IEqualityOperators<FMatrix, FMatrix, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x0600028E RID: 654 RVA: 0x000089D0 File Offset: 0x00006BD0
+		// Token: 0x06000213 RID: 531 RVA: 0x0000523C File Offset: 0x0000343C
 		public FMatrix(in FPlane x, in FPlane y, in FPlane z, in FPlane w)
 		{
 			this.Row0 = new FVector4(x.X, x.Y, x.Z, x.W);
@@ -25,7 +25,7 @@ namespace UnrealEngine
 			this.Row3 = new FVector4(w.X, w.Y, w.Z, w.W);
 		}
 
-		// Token: 0x0600028F RID: 655 RVA: 0x00008A70 File Offset: 0x00006C70
+		// Token: 0x06000214 RID: 532 RVA: 0x000052DC File Offset: 0x000034DC
 		public FMatrix(in FVector x, in FVector y, in FVector z, in FVector w)
 		{
 			this.Row0 = new FVector4(ref x, 0f);
@@ -34,7 +34,7 @@ namespace UnrealEngine
 			this.Row3 = new FVector4(ref w, 1f);
 		}
 
-		// Token: 0x06000290 RID: 656 RVA: 0x00008AC4 File Offset: 0x00006CC4
+		// Token: 0x06000215 RID: 533 RVA: 0x00005330 File Offset: 0x00003530
 		public unsafe FMatrix(float m00, float m01, float m02, float m03, float m10, float m11, float m12, float m13, float m20, float m21, float m22, float m23, float m30, float m31, float m32, float m33)
 		{
 			this.Row0 = default(FVector4);
@@ -60,8 +60,8 @@ namespace UnrealEngine
 			*(ref ptr.Arr.FixedElementField + (IntPtr)15 * 4) = m33;
 		}
 
-		// Token: 0x17000008 RID: 8
-		// (get) Token: 0x06000291 RID: 657 RVA: 0x00008C32 File Offset: 0x00006E32
+		// Token: 0x17000007 RID: 7
+		// (get) Token: 0x06000216 RID: 534 RVA: 0x0000549E File Offset: 0x0000369E
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public readonly ref FMatrixView View
 		{
@@ -71,8 +71,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000009 RID: 9
-		// (get) Token: 0x06000292 RID: 658 RVA: 0x00008C3F File Offset: 0x00006E3F
+		// Token: 0x17000008 RID: 8
+		// (get) Token: 0x06000217 RID: 535 RVA: 0x000054AB File Offset: 0x000036AB
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		public ref FMatrixView RwView
 		{
@@ -82,7 +82,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000293 RID: 659 RVA: 0x00008C4C File Offset: 0x00006E4C
+		// Token: 0x06000218 RID: 536 RVA: 0x000054B8 File Offset: 0x000036B8
 		public unsafe readonly ReadOnlySpan<float> AsReadOnlySpan()
 		{
 			fixed (float* ptr = &this.View.Arr.FixedElementField)
@@ -91,7 +91,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000294 RID: 660 RVA: 0x00008C78 File Offset: 0x00006E78
+		// Token: 0x06000219 RID: 537 RVA: 0x000054E4 File Offset: 0x000036E4
 		public unsafe Span<float> AsSpan()
 		{
 			fixed (float* ptr = &this.RwView.Arr.FixedElementField)
@@ -100,7 +100,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700000A RID: 10
+		// Token: 0x17000009 RID: 9
 		public unsafe float this[int row, int column]
 		{
 			readonly get
@@ -113,19 +113,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000297 RID: 663 RVA: 0x00008CD8 File Offset: 0x00006ED8
+		// Token: 0x0600021C RID: 540 RVA: 0x00005544 File Offset: 0x00003744
 		public void SetIdentity()
 		{
 			this = FMatrix.Identity;
 		}
 
-		// Token: 0x06000298 RID: 664 RVA: 0x00008CE5 File Offset: 0x00006EE5
+		// Token: 0x0600021D RID: 541 RVA: 0x00005551 File Offset: 0x00003751
 		public readonly bool Equals(FMatrix other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06000299 RID: 665 RVA: 0x00008CF4 File Offset: 0x00006EF4
+		// Token: 0x0600021E RID: 542 RVA: 0x00005560 File Offset: 0x00003760
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -137,7 +137,7 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600029A RID: 666 RVA: 0x00008D20 File Offset: 0x00006F20
+		// Token: 0x0600021F RID: 543 RVA: 0x0000558C File Offset: 0x0000378C
 		[NullableContext(1)]
 		public unsafe override readonly string ToString()
 		{
@@ -179,7 +179,7 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0600029B RID: 667 RVA: 0x00008F94 File Offset: 0x00007194
+		// Token: 0x06000220 RID: 544 RVA: 0x00005800 File Offset: 0x00003A00
 		public override readonly int GetHashCode()
 		{
 			int num = 17;
@@ -191,199 +191,199 @@ namespace UnrealEngine
 			return num;
 		}
 
-		// Token: 0x0600029C RID: 668
+		// Token: 0x06000221 RID: 545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Eq(in FMatrix a, in FMatrix b);
 
-		// Token: 0x0600029D RID: 669
+		// Token: 0x06000222 RID: 546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Equals(in FMatrix a, in FMatrix b, float tolerance);
 
-		// Token: 0x0600029E RID: 670
+		// Token: 0x06000223 RID: 547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_Add(in FMatrix a, in FMatrix b);
 
-		// Token: 0x0600029F RID: 671
+		// Token: 0x06000224 RID: 548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_Mul(in FMatrix a, in FMatrix b);
 
-		// Token: 0x060002A0 RID: 672
+		// Token: 0x06000225 RID: 549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_MulFloat(in FMatrix a, float b);
 
-		// Token: 0x060002A1 RID: 673
+		// Token: 0x06000226 RID: 550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 Internal_TransformFVector4(in FMatrix a, in FVector4 b);
 
-		// Token: 0x060002A2 RID: 674
+		// Token: 0x06000227 RID: 551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 Internal_TransformPosition(in FMatrix a, in FVector b);
 
-		// Token: 0x060002A3 RID: 675
+		// Token: 0x06000228 RID: 552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_InverseTransformPosition(in FMatrix a, in FVector b);
 
-		// Token: 0x060002A4 RID: 676
+		// Token: 0x06000229 RID: 553
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector4 Internal_TransformVector(in FMatrix a, in FVector b);
 
-		// Token: 0x060002A5 RID: 677
+		// Token: 0x0600022A RID: 554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_InverseTransformVector(in FMatrix a, in FVector b);
 
-		// Token: 0x060002A6 RID: 678
+		// Token: 0x0600022B RID: 555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_GetTransposed(in FMatrix a);
 
-		// Token: 0x060002A7 RID: 679
+		// Token: 0x0600022C RID: 556
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_Determinant(in FMatrix a);
 
-		// Token: 0x060002A8 RID: 680
+		// Token: 0x0600022D RID: 557
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_RotDeterminant(in FMatrix a);
 
-		// Token: 0x060002A9 RID: 681
+		// Token: 0x0600022E RID: 558
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_InverseFast(in FMatrix a);
 
-		// Token: 0x060002AA RID: 682
+		// Token: 0x0600022F RID: 559
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_Inverse(in FMatrix a);
 
-		// Token: 0x060002AB RID: 683
+		// Token: 0x06000230 RID: 560
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_TransposeAdjoint(in FMatrix a);
 
-		// Token: 0x060002AC RID: 684
+		// Token: 0x06000231 RID: 561
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_RemoveScaling(ref FMatrix a, float b);
 
-		// Token: 0x060002AD RID: 685
+		// Token: 0x06000232 RID: 562
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_GetMatrixWithoutScale(in FMatrix a, float b);
 
-		// Token: 0x060002AE RID: 686
+		// Token: 0x06000233 RID: 563
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetScaleVector(in FMatrix a, float b);
 
-		// Token: 0x060002AF RID: 687
+		// Token: 0x06000234 RID: 564
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_ExtractScaling(ref FMatrix a, float b);
 
-		// Token: 0x060002B0 RID: 688
+		// Token: 0x06000235 RID: 565
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_RemoveTranslation(in FMatrix a);
 
-		// Token: 0x060002B1 RID: 689
+		// Token: 0x06000236 RID: 566
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FMatrix Internal_ConcatTranslation(in FMatrix a, in FVector b);
 
-		// Token: 0x060002B2 RID: 690
+		// Token: 0x06000237 RID: 567
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_ContainsNaN(in FMatrix a);
 
-		// Token: 0x060002B3 RID: 691
+		// Token: 0x06000238 RID: 568
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetMaximumAxisScale(in FMatrix a);
 
-		// Token: 0x060002B4 RID: 692
+		// Token: 0x06000239 RID: 569
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_ScaleTranslation(ref FMatrix a, in FVector b);
 
-		// Token: 0x060002B5 RID: 693
+		// Token: 0x0600023A RID: 570
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetOrigin(in FMatrix a);
 
-		// Token: 0x060002B6 RID: 694
+		// Token: 0x0600023B RID: 571
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetScaledAxis(in FMatrix a, EAxis b);
 
-		// Token: 0x060002B7 RID: 695
+		// Token: 0x0600023C RID: 572
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_GetScaledAxes(in FMatrix a, out FVector b, out FVector c, out FVector d);
 
-		// Token: 0x060002B8 RID: 696
+		// Token: 0x0600023D RID: 573
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetUnitAxis(in FMatrix a, EAxis b);
 
-		// Token: 0x060002B9 RID: 697
+		// Token: 0x0600023E RID: 574
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_GetUnitAxes(in FMatrix a, out FVector b, out FVector c, out FVector d);
 
-		// Token: 0x060002BA RID: 698
+		// Token: 0x0600023F RID: 575
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetAxis(ref FMatrix a, int b, in FVector c);
 
-		// Token: 0x060002BB RID: 699
+		// Token: 0x06000240 RID: 576
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetOrigin(ref FMatrix a, in FVector b);
 
-		// Token: 0x060002BC RID: 700
+		// Token: 0x06000241 RID: 577
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void Internal_SetAxes(ref FMatrix a, FVector* b, FVector* c, FVector* d, FVector* e);
 
-		// Token: 0x060002BD RID: 701
+		// Token: 0x06000242 RID: 578
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetColumn(in FMatrix a, int b);
 
-		// Token: 0x060002BE RID: 702
+		// Token: 0x06000243 RID: 579
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetColumn(ref FMatrix a, int b, in FVector c);
 
-		// Token: 0x060002BF RID: 703
+		// Token: 0x06000244 RID: 580
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_Rotator(in FMatrix a);
 
-		// Token: 0x060002C0 RID: 704
+		// Token: 0x06000245 RID: 581
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat Internal_ToQuat(in FMatrix a);
 
-		// Token: 0x060002C1 RID: 705
+		// Token: 0x06000246 RID: 582
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_GetFrustumNearPlane(in FMatrix a, out FPlane b);
 
-		// Token: 0x060002C2 RID: 706
+		// Token: 0x06000247 RID: 583
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_GetFrustumFarPlane(in FMatrix a, out FPlane b);
 
-		// Token: 0x060002C3 RID: 707
+		// Token: 0x06000248 RID: 584
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_GetFrustumLeftPlane(in FMatrix a, out FPlane b);
 
-		// Token: 0x060002C4 RID: 708
+		// Token: 0x06000249 RID: 585
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_GetFrustumRightPlane(in FMatrix a, out FPlane b);
 
-		// Token: 0x060002C5 RID: 709
+		// Token: 0x0600024A RID: 586
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_GetFrustumTopPlane(in FMatrix a, out FPlane b);
 
-		// Token: 0x060002C6 RID: 710
+		// Token: 0x0600024B RID: 587
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_GetFrustumBottomPlane(in FMatrix a, out FPlane b);
 
-		// Token: 0x060002C7 RID: 711
+		// Token: 0x0600024C RID: 588
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Mirror(ref FMatrix a, EAxis b, EAxis c);
 
-		// Token: 0x060002C8 RID: 712
+		// Token: 0x0600024D RID: 589
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void Internal_To3x4MatrixTranspose(in FMatrix a, float* @out);
 
-		// Token: 0x060002C9 RID: 713 RVA: 0x00008FD4 File Offset: 0x000071D4
+		// Token: 0x0600024E RID: 590 RVA: 0x00005840 File Offset: 0x00003A40
 		public static bool operator ==(FMatrix a, FMatrix b)
 		{
 			return FMatrix.Internal_Eq(a, b);
 		}
 
-		// Token: 0x060002CA RID: 714 RVA: 0x00008FDF File Offset: 0x000071DF
+		// Token: 0x0600024F RID: 591 RVA: 0x0000584B File Offset: 0x00003A4B
 		public static bool operator !=(FMatrix a, FMatrix b)
 		{
 			return !FMatrix.Internal_Eq(a, b);
 		}
 
-		// Token: 0x060002CB RID: 715 RVA: 0x00008FF0 File Offset: 0x000071F0
+		// Token: 0x06000250 RID: 592 RVA: 0x0000585C File Offset: 0x00003A5C
 		public unsafe bool Equals(in FMatrix b, float tolerance = 0.0001f)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -395,7 +395,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002CC RID: 716 RVA: 0x00009010 File Offset: 0x00007210
+		// Token: 0x06000251 RID: 593 RVA: 0x0000587C File Offset: 0x00003A7C
 		public unsafe static FMatrix operator +(in FMatrix a, in FMatrix b)
 		{
 			fixed (FMatrix* ptr = &a)
@@ -407,7 +407,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002CD RID: 717 RVA: 0x0000902C File Offset: 0x0000722C
+		// Token: 0x06000252 RID: 594 RVA: 0x00005898 File Offset: 0x00003A98
 		public unsafe static FMatrix operator *(in FMatrix a, in FMatrix b)
 		{
 			fixed (FMatrix* ptr = &a)
@@ -419,7 +419,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002CE RID: 718 RVA: 0x00009048 File Offset: 0x00007248
+		// Token: 0x06000253 RID: 595 RVA: 0x000058B4 File Offset: 0x00003AB4
 		public unsafe static FMatrix operator *(in FMatrix m, float scale)
 		{
 			fixed (FMatrix* ptr = &m)
@@ -428,7 +428,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002CF RID: 719 RVA: 0x00009060 File Offset: 0x00007260
+		// Token: 0x06000254 RID: 596 RVA: 0x000058CC File Offset: 0x00003ACC
 		public unsafe readonly FVector4 TransformFVector4(in FVector4 v)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -440,7 +440,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D0 RID: 720 RVA: 0x0000907C File Offset: 0x0000727C
+		// Token: 0x06000255 RID: 597 RVA: 0x000058E8 File Offset: 0x00003AE8
 		public unsafe readonly FVector4 TransformPosition(in FVector v)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -452,7 +452,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D1 RID: 721 RVA: 0x00009098 File Offset: 0x00007298
+		// Token: 0x06000256 RID: 598 RVA: 0x00005904 File Offset: 0x00003B04
 		public unsafe readonly FVector InverseTransformPosition(in FVector v)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -464,7 +464,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D2 RID: 722 RVA: 0x000090B4 File Offset: 0x000072B4
+		// Token: 0x06000257 RID: 599 RVA: 0x00005920 File Offset: 0x00003B20
 		public unsafe readonly FVector4 TransformVector(in FVector v)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -476,7 +476,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D3 RID: 723 RVA: 0x000090D0 File Offset: 0x000072D0
+		// Token: 0x06000258 RID: 600 RVA: 0x0000593C File Offset: 0x00003B3C
 		public unsafe readonly FVector InverseTransformVector(in FVector v)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -488,7 +488,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D4 RID: 724 RVA: 0x000090EC File Offset: 0x000072EC
+		// Token: 0x06000259 RID: 601 RVA: 0x00005958 File Offset: 0x00003B58
 		public unsafe readonly FMatrix GetTransposed()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -497,7 +497,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D5 RID: 725 RVA: 0x00009104 File Offset: 0x00007304
+		// Token: 0x0600025A RID: 602 RVA: 0x00005970 File Offset: 0x00003B70
 		public unsafe readonly float Determinant()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -506,7 +506,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D6 RID: 726 RVA: 0x0000911C File Offset: 0x0000731C
+		// Token: 0x0600025B RID: 603 RVA: 0x00005988 File Offset: 0x00003B88
 		public unsafe readonly float RotDeterminant()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -515,7 +515,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D7 RID: 727 RVA: 0x00009134 File Offset: 0x00007334
+		// Token: 0x0600025C RID: 604 RVA: 0x000059A0 File Offset: 0x00003BA0
 		public unsafe readonly FMatrix InverseFast()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -524,7 +524,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D8 RID: 728 RVA: 0x0000914C File Offset: 0x0000734C
+		// Token: 0x0600025D RID: 605 RVA: 0x000059B8 File Offset: 0x00003BB8
 		public unsafe readonly FMatrix Inverse()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -533,7 +533,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002D9 RID: 729 RVA: 0x00009164 File Offset: 0x00007364
+		// Token: 0x0600025E RID: 606 RVA: 0x000059D0 File Offset: 0x00003BD0
 		public unsafe readonly FMatrix TransposeAdjoint()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -542,7 +542,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002DA RID: 730 RVA: 0x0000917C File Offset: 0x0000737C
+		// Token: 0x0600025F RID: 607 RVA: 0x000059E8 File Offset: 0x00003BE8
 		public unsafe void RemoveScaling(float tolerance = 1E-08f)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -551,7 +551,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002DB RID: 731 RVA: 0x00009198 File Offset: 0x00007398
+		// Token: 0x06000260 RID: 608 RVA: 0x00005A04 File Offset: 0x00003C04
 		public unsafe readonly FMatrix GetMatrixWithoutScale(float tolerance = 1E-08f)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -560,7 +560,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002DC RID: 732 RVA: 0x000091B0 File Offset: 0x000073B0
+		// Token: 0x06000261 RID: 609 RVA: 0x00005A1C File Offset: 0x00003C1C
 		public unsafe readonly FVector GetScaleVector(float tolerance = 1E-08f)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -569,7 +569,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002DD RID: 733 RVA: 0x000091C8 File Offset: 0x000073C8
+		// Token: 0x06000262 RID: 610 RVA: 0x00005A34 File Offset: 0x00003C34
 		public unsafe FVector ExtractScaling(float tolerance = 1E-08f)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -578,7 +578,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002DE RID: 734 RVA: 0x000091E0 File Offset: 0x000073E0
+		// Token: 0x06000263 RID: 611 RVA: 0x00005A4C File Offset: 0x00003C4C
 		public unsafe readonly FMatrix RemoveTranslation()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -587,7 +587,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002DF RID: 735 RVA: 0x000091F8 File Offset: 0x000073F8
+		// Token: 0x06000264 RID: 612 RVA: 0x00005A64 File Offset: 0x00003C64
 		public unsafe readonly FMatrix ConcatTranslation(in FVector translation)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -599,7 +599,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E0 RID: 736 RVA: 0x00009214 File Offset: 0x00007414
+		// Token: 0x06000265 RID: 613 RVA: 0x00005A80 File Offset: 0x00003C80
 		public unsafe readonly bool ContainsNaN()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -608,7 +608,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E1 RID: 737 RVA: 0x0000922C File Offset: 0x0000742C
+		// Token: 0x06000266 RID: 614 RVA: 0x00005A98 File Offset: 0x00003C98
 		public unsafe readonly float GetMaximumAxisScale()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -617,7 +617,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E2 RID: 738 RVA: 0x00009244 File Offset: 0x00007444
+		// Token: 0x06000267 RID: 615 RVA: 0x00005AB0 File Offset: 0x00003CB0
 		public unsafe void ScaleTranslation(in FVector scale)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -629,7 +629,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E3 RID: 739 RVA: 0x00009268 File Offset: 0x00007468
+		// Token: 0x06000268 RID: 616 RVA: 0x00005AD4 File Offset: 0x00003CD4
 		public unsafe readonly FVector GetOrigin()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -638,7 +638,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E4 RID: 740 RVA: 0x00009280 File Offset: 0x00007480
+		// Token: 0x06000269 RID: 617 RVA: 0x00005AEC File Offset: 0x00003CEC
 		public unsafe readonly FVector GetScaledAxis(EAxis axis)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -647,7 +647,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E5 RID: 741 RVA: 0x00009298 File Offset: 0x00007498
+		// Token: 0x0600026A RID: 618 RVA: 0x00005B04 File Offset: 0x00003D04
 		public unsafe readonly void GetScaledAxes(out FVector x, out FVector y, out FVector z)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -665,7 +665,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E6 RID: 742 RVA: 0x000092CC File Offset: 0x000074CC
+		// Token: 0x0600026B RID: 619 RVA: 0x00005B38 File Offset: 0x00003D38
 		public unsafe readonly FVector GetUnitAxis(EAxis axis)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -674,7 +674,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E7 RID: 743 RVA: 0x000092E4 File Offset: 0x000074E4
+		// Token: 0x0600026C RID: 620 RVA: 0x00005B50 File Offset: 0x00003D50
 		public unsafe readonly void GetUnitAxes(out FVector x, out FVector y, out FVector z)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -692,7 +692,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E8 RID: 744 RVA: 0x00009318 File Offset: 0x00007518
+		// Token: 0x0600026D RID: 621 RVA: 0x00005B84 File Offset: 0x00003D84
 		public unsafe void SetAxis(int i, in FVector axis)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -704,7 +704,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002E9 RID: 745 RVA: 0x0000933C File Offset: 0x0000753C
+		// Token: 0x0600026E RID: 622 RVA: 0x00005BA8 File Offset: 0x00003DA8
 		public unsafe void SetOrigin(in FVector origin)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -716,7 +716,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002EA RID: 746 RVA: 0x00009360 File Offset: 0x00007560
+		// Token: 0x0600026F RID: 623 RVA: 0x00005BCC File Offset: 0x00003DCC
 		public unsafe void SetAxes(FVector? x = null, FVector? y = null, FVector? z = null, FVector? w = null)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -725,7 +725,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002EB RID: 747 RVA: 0x000093F4 File Offset: 0x000075F4
+		// Token: 0x06000270 RID: 624 RVA: 0x00005C60 File Offset: 0x00003E60
 		public unsafe readonly FVector GetColumn(int i)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -734,7 +734,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002EC RID: 748 RVA: 0x0000940C File Offset: 0x0000760C
+		// Token: 0x06000271 RID: 625 RVA: 0x00005C78 File Offset: 0x00003E78
 		public unsafe void SetColumn(int i, in FVector value)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -743,7 +743,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002ED RID: 749 RVA: 0x00009428 File Offset: 0x00007628
+		// Token: 0x06000272 RID: 626 RVA: 0x00005C94 File Offset: 0x00003E94
 		public unsafe readonly FRotator Rotator()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -752,7 +752,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002EE RID: 750 RVA: 0x00009440 File Offset: 0x00007640
+		// Token: 0x06000273 RID: 627 RVA: 0x00005CAC File Offset: 0x00003EAC
 		public unsafe readonly FQuat ToQuat()
 		{
 			fixed (FMatrix* ptr = &this)
@@ -761,7 +761,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002EF RID: 751 RVA: 0x00009458 File Offset: 0x00007658
+		// Token: 0x06000274 RID: 628 RVA: 0x00005CC4 File Offset: 0x00003EC4
 		public unsafe readonly bool GetFrustumNearPlane(out FPlane plane)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -773,7 +773,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F0 RID: 752 RVA: 0x00009474 File Offset: 0x00007674
+		// Token: 0x06000275 RID: 629 RVA: 0x00005CE0 File Offset: 0x00003EE0
 		public unsafe readonly bool GetFrustumFarPlane(out FPlane plane)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -785,7 +785,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F1 RID: 753 RVA: 0x00009490 File Offset: 0x00007690
+		// Token: 0x06000276 RID: 630 RVA: 0x00005CFC File Offset: 0x00003EFC
 		public unsafe readonly bool GetFrustumLeftPlane(out FPlane plane)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -797,7 +797,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F2 RID: 754 RVA: 0x000094AC File Offset: 0x000076AC
+		// Token: 0x06000277 RID: 631 RVA: 0x00005D18 File Offset: 0x00003F18
 		public unsafe readonly bool GetFrustumRightPlane(out FPlane plane)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -809,7 +809,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F3 RID: 755 RVA: 0x000094C8 File Offset: 0x000076C8
+		// Token: 0x06000278 RID: 632 RVA: 0x00005D34 File Offset: 0x00003F34
 		public unsafe readonly bool GetFrustumTopPlane(out FPlane plane)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -821,7 +821,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F4 RID: 756 RVA: 0x000094E4 File Offset: 0x000076E4
+		// Token: 0x06000279 RID: 633 RVA: 0x00005D50 File Offset: 0x00003F50
 		public unsafe readonly bool GetFrustumBottomPlane(out FPlane plane)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -833,7 +833,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F5 RID: 757 RVA: 0x00009500 File Offset: 0x00007700
+		// Token: 0x0600027A RID: 634 RVA: 0x00005D6C File Offset: 0x00003F6C
 		public unsafe void Mirror(EAxis mirrorAxis, EAxis flipAxis)
 		{
 			fixed (FMatrix* ptr = &this)
@@ -842,7 +842,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F6 RID: 758 RVA: 0x0000951C File Offset: 0x0000771C
+		// Token: 0x0600027B RID: 635 RVA: 0x00005D88 File Offset: 0x00003F88
 		public unsafe readonly void To3x4MatrixTranspose(Span<float> result)
 		{
 			if (result.Length < 12)
@@ -859,35 +859,35 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060002F7 RID: 759 RVA: 0x00009556 File Offset: 0x00007756
+		// Token: 0x0600027C RID: 636 RVA: 0x00005DC2 File Offset: 0x00003FC2
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMatrix._ScriptStructPtr != 0) ? FMatrix._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.Matrix", ref FMatrix._ScriptStructPtr);
 		}
 
-		// Token: 0x040000C7 RID: 199
+		// Token: 0x04000080 RID: 128
 		[FieldOffset(0)]
 		public FVector4 Row0;
 
-		// Token: 0x040000C8 RID: 200
+		// Token: 0x04000081 RID: 129
 		[FieldOffset(16)]
 		public FVector4 Row1;
 
-		// Token: 0x040000C9 RID: 201
+		// Token: 0x04000082 RID: 130
 		[FieldOffset(32)]
 		public FVector4 Row2;
 
-		// Token: 0x040000CA RID: 202
+		// Token: 0x04000083 RID: 131
 		[FieldOffset(48)]
 		public FVector4 Row3;
 
-		// Token: 0x040000CB RID: 203
+		// Token: 0x04000084 RID: 132
 		public static readonly FMatrix Identity = new FMatrix(1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 0f, 1f);
 
-		// Token: 0x040000CC RID: 204
+		// Token: 0x04000085 RID: 133
 		public const string __ObjectPath = "/Script/CoreUObject.Matrix";
 
-		// Token: 0x040000CD RID: 205
+		// Token: 0x04000086 RID: 134
 		private static IntPtr _ScriptStructPtr;
 	}
 }

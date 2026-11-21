@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200216B RID: 8555
+	// Token: 0x020023CC RID: 9164
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RestorePlayerCameraAdjustment : ActionParams
 	{
-		// Token: 0x0600BC30 RID: 48176 RVA: 0x001B20C4 File Offset: 0x001B02C4
-		[NullableContext(1)]
+		// Token: 0x0600C7BE RID: 51134 RVA: 0x001C9278 File Offset: 0x001C7478
+		[NullableContext(0)]
 		private RestorePlayerCameraAdjustment_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC31 RID: 48177 RVA: 0x001B20FC File Offset: 0x001B02FC
-		[NullableContext(1)]
+		// Token: 0x0600C7BF RID: 51135 RVA: 0x001C92B0 File Offset: 0x001C74B0
+		[NullableContext(0)]
 		public static RestorePlayerCameraAdjustment Create([Nullable(2)] RestorePlayerCameraAdjustment instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC32 RID: 48178 RVA: 0x001B210F File Offset: 0x001B030F
-		[NullableContext(1)]
+		// Token: 0x0600C7C0 RID: 51136 RVA: 0x001C92C3 File Offset: 0x001C74C3
+		[NullableContext(0)]
 		public static RestorePlayerCameraAdjustment CreateFromSetValue([Nullable(2)] RestorePlayerCameraAdjustment_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC33 RID: 48179 RVA: 0x001B2122 File Offset: 0x001B0322
-		[NullableContext(1)]
+		// Token: 0x0600C7C1 RID: 51137 RVA: 0x001C92D6 File Offset: 0x001C74D6
+		[NullableContext(0)]
 		public RestorePlayerCameraAdjustment_SetValue ToSetValue()
 		{
 			return new RestorePlayerCameraAdjustment_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003955 RID: 14677
-		// (get) Token: 0x0600BC34 RID: 48180 RVA: 0x001B2144 File Offset: 0x001B0344
-		// (set) Token: 0x0600BC35 RID: 48181 RVA: 0x001B21A5 File Offset: 0x001B03A5
+		// Token: 0x17003C42 RID: 15426
+		// (get) Token: 0x0600C7C2 RID: 51138 RVA: 0x001C92F8 File Offset: 0x001C74F8
+		// (set) Token: 0x0600C7C3 RID: 51139 RVA: 0x001C9359 File Offset: 0x001C7559
 		public virtual IResetFocusConfig ResetFocus
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003956 RID: 14678
-		// (get) Token: 0x0600BC36 RID: 48182 RVA: 0x001B21BA File Offset: 0x001B03BA
-		// (set) Token: 0x0600BC37 RID: 48183 RVA: 0x001B21E1 File Offset: 0x001B03E1
+		// Token: 0x17003C43 RID: 15427
+		// (get) Token: 0x0600C7C4 RID: 51140 RVA: 0x001C936E File Offset: 0x001C756E
+		// (set) Token: 0x0600C7C5 RID: 51141 RVA: 0x001C9395 File Offset: 0x001C7595
 		public virtual string SubScreenKey
 		{
 			get
@@ -118,17 +118,17 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400706A RID: 28778
+		// Token: 0x0400769F RID: 30367
 		protected new RestorePlayerCameraAdjustment FbInstance;
 
-		// Token: 0x0400706B RID: 28779
+		// Token: 0x040076A0 RID: 30368
 		protected RestorePlayerCameraAdjustment_SetValue PocoInterface;
 
-		// Token: 0x0400706C RID: 28780
-		[Nullable(1)]
+		// Token: 0x040076A1 RID: 30369
+		[Nullable(0)]
 		private IResetFocusConfig _ResetFocusCache;
 
-		// Token: 0x0400706D RID: 28781
+		// Token: 0x040076A2 RID: 30370
 		private bool _ResetFocusInited;
 	}
 }

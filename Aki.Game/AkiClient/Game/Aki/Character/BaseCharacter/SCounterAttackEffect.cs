@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004307 RID: 17159
+	// Token: 0x02003345 RID: 13125
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,15 +15,15 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 	[UnrealStructLayout(528, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 524)]
 	public class SCounterAttackEffect : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C5ED RID: 181741 RVA: 0x00A1E415 File Offset: 0x00A1C615
+		// Token: 0x06021317 RID: 135959 RVA: 0x0095B520 File Offset: 0x00959720
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCounterAttackEffect._ScriptStructPtr != 0) ? SCounterAttackEffect._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SCounterAttackEffect.SCounterAttackEffect", ref SCounterAttackEffect._ScriptStructPtr);
 		}
 
-		// Token: 0x17006EF4 RID: 28404
-		// (get) Token: 0x0602C5EE RID: 181742 RVA: 0x00A1E439 File Offset: 0x00A1C639
-		// (set) Token: 0x0602C5EF RID: 181743 RVA: 0x00A1E44D File Offset: 0x00A1C64D
+		// Token: 0x17004312 RID: 17170
+		// (get) Token: 0x06021318 RID: 135960 RVA: 0x0095B544 File Offset: 0x00959744
+		// (set) Token: 0x06021319 RID: 135961 RVA: 0x0095B558 File Offset: 0x00959758
 		[Nullable(new byte[]
 		{
 			0,
@@ -38,7 +38,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_震屏);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -47,13 +47,13 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_震屏) = value;
 			}
 		}
 
-		// Token: 0x17006EF5 RID: 28405
-		// (get) Token: 0x0602C5F0 RID: 181744 RVA: 0x00A1E464 File Offset: 0x00A1C664
-		// (set) Token: 0x0602C5F1 RID: 181745 RVA: 0x00A1E4A7 File Offset: 0x00A1C6A7
+		// Token: 0x17004313 RID: 17171
+		// (get) Token: 0x0602131A RID: 135962 RVA: 0x0095B570 File Offset: 0x00959770
+		// (set) Token: 0x0602131B RID: 135963 RVA: 0x0095B5B3 File Offset: 0x009597B3
 		public FSoftObjectPath 特效DA
 		{
 			get
@@ -62,19 +62,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FSoftObjectPath result;
 				if ((result = this._特效DA) == null)
 				{
-					result = (this._特效DA = new FSoftObjectPath(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._特效DA = new FSoftObjectPath(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效DA, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效DA, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006EF6 RID: 28406
-		// (get) Token: 0x0602C5F2 RID: 181746 RVA: 0x00A1E4C8 File Offset: 0x00A1C6C8
-		// (set) Token: 0x0602C5F3 RID: 181747 RVA: 0x00A1E50B File Offset: 0x00A1C70B
+		// Token: 0x17004314 RID: 17172
+		// (get) Token: 0x0602131C RID: 135964 RVA: 0x0095B5D4 File Offset: 0x009597D4
+		// (set) Token: 0x0602131D RID: 135965 RVA: 0x0095B617 File Offset: 0x00959817
 		public STimeScale 攻击者顿帧
 		{
 			get
@@ -83,19 +83,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				STimeScale result;
 				if ((result = this._攻击者顿帧) == null)
 				{
-					result = (this._攻击者顿帧 = new STimeScale(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._攻击者顿帧 = new STimeScale(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_攻击者顿帧, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(STimeScale.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(STimeScale.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_攻击者顿帧, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006EF7 RID: 28407
-		// (get) Token: 0x0602C5F4 RID: 181748 RVA: 0x00A1E52C File Offset: 0x00A1C72C
-		// (set) Token: 0x0602C5F5 RID: 181749 RVA: 0x00A1E56F File Offset: 0x00A1C76F
+		// Token: 0x17004315 RID: 17173
+		// (get) Token: 0x0602131E RID: 135966 RVA: 0x0095B638 File Offset: 0x00959838
+		// (set) Token: 0x0602131F RID: 135967 RVA: 0x0095B67B File Offset: 0x0095987B
 		public STimeScale 被击者顿帧
 		{
 			get
@@ -104,19 +104,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				STimeScale result;
 				if ((result = this._被击者顿帧) == null)
 				{
-					result = (this._被击者顿帧 = new STimeScale(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._被击者顿帧 = new STimeScale(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_被击者顿帧, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(STimeScale.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_3, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(STimeScale.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_被击者顿帧, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006EF8 RID: 28408
-		// (get) Token: 0x0602C5F6 RID: 181750 RVA: 0x00A1E590 File Offset: 0x00A1C790
-		// (set) Token: 0x0602C5F7 RID: 181751 RVA: 0x00A1E5D3 File Offset: 0x00A1C7D3
+		// Token: 0x17004316 RID: 17174
+		// (get) Token: 0x06021320 RID: 135968 RVA: 0x0095B69C File Offset: 0x0095989C
+		// (set) Token: 0x06021321 RID: 135969 RVA: 0x0095B6DF File Offset: 0x009598DF
 		public SCounterAttackCamera 摄像机设置
 		{
 			get
@@ -125,156 +125,139 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SCounterAttackCamera result;
 				if ((result = this._摄像机设置) == null)
 				{
-					result = (this._摄像机设置 = new SCounterAttackCamera(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._摄像机设置 = new SCounterAttackCamera(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_摄像机设置, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SCounterAttackCamera.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_4, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SCounterAttackCamera.StaticStruct(), base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_摄像机设置, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006EF9 RID: 28409
-		// (get) Token: 0x0602C5F8 RID: 181752 RVA: 0x00A1E5F4 File Offset: 0x00A1C7F4
-		// (set) Token: 0x0602C5F9 RID: 181753 RVA: 0x00A1E608 File Offset: 0x00A1C808
+		// Token: 0x17004317 RID: 17175
+		// (get) Token: 0x06021322 RID: 135970 RVA: 0x0095B700 File Offset: 0x00959900
+		// (set) Token: 0x06021323 RID: 135971 RVA: 0x0095B714 File Offset: 0x00959914
 		public unsafe FVector 特效Offset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效Offset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效Offset) = value;
 			}
 		}
 
-		// Token: 0x17006EFA RID: 28410
-		// (get) Token: 0x0602C5FA RID: 181754 RVA: 0x00A1E61D File Offset: 0x00A1C81D
-		// (set) Token: 0x0602C5FB RID: 181755 RVA: 0x00A1E631 File Offset: 0x00A1C831
+		// Token: 0x17004318 RID: 17176
+		// (get) Token: 0x06021324 RID: 135972 RVA: 0x0095B729 File Offset: 0x00959929
+		// (set) Token: 0x06021325 RID: 135973 RVA: 0x0095B73D File Offset: 0x0095993D
 		public unsafe FVector 特效Scale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效Scale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效Scale) = value;
 			}
 		}
 
-		// Token: 0x17006EFB RID: 28411
-		// (get) Token: 0x0602C5FC RID: 181756 RVA: 0x00A1E646 File Offset: 0x00A1C846
-		// (set) Token: 0x0602C5FD RID: 181757 RVA: 0x00A1E656 File Offset: 0x00A1C856
+		// Token: 0x17004319 RID: 17177
+		// (get) Token: 0x06021326 RID: 135974 RVA: 0x0095B752 File Offset: 0x00959952
+		// (set) Token: 0x06021327 RID: 135975 RVA: 0x0095B762 File Offset: 0x00959962
 		public unsafe float 特效位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SCounterAttackEffect.__PropertyOffset_特效位置) = value;
 			}
 		}
 
-		// Token: 0x0602C5FE RID: 181758 RVA: 0x00A1E667 File Offset: 0x00A1C867
+		// Token: 0x06021328 RID: 135976 RVA: 0x0095B773 File Offset: 0x00959973
 		public SCounterAttackEffect()
 		{
 		}
 
-		// Token: 0x0602C5FF RID: 181759 RVA: 0x00A1E670 File Offset: 0x00A1C870
-		public SCounterAttackEffect([Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<UCameraShakeBase> 震屏, FSoftObjectPath 特效DA, STimeScale 攻击者顿帧, STimeScale 被击者顿帧, SCounterAttackCamera 摄像机设置, FVector 特效Offset, FVector 特效Scale, float 特效位置)
-		{
-			this.震屏 = 震屏;
-			this.特效DA = 特效DA;
-			this.攻击者顿帧 = 攻击者顿帧;
-			this.被击者顿帧 = 被击者顿帧;
-			this.摄像机设置 = 摄像机设置;
-			this.特效Offset = 特效Offset;
-			this.特效Scale = 特效Scale;
-			this.特效位置 = 特效位置;
-		}
-
-		// Token: 0x0602C600 RID: 181760 RVA: 0x00A1E6C0 File Offset: 0x00A1C8C0
+		// Token: 0x06021329 RID: 135977 RVA: 0x0095B77B File Offset: 0x0095997B
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCounterAttackEffect.StaticStruct();
 		}
 
-		// Token: 0x0602C601 RID: 181761 RVA: 0x00A1E6CC File Offset: 0x00A1C8CC
+		// Token: 0x0602132A RID: 135978 RVA: 0x0095B787 File Offset: 0x00959987
 		[NullableContext(2)]
 		public SCounterAttackEffect(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C602 RID: 181762 RVA: 0x00A1E6D6 File Offset: 0x00A1C8D6
+		// Token: 0x0602132B RID: 135979 RVA: 0x0095B791 File Offset: 0x00959991
 		public SCounterAttackEffect(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C603 RID: 181763 RVA: 0x00A1E6E1 File Offset: 0x00A1C8E1
+		// Token: 0x0602132C RID: 135980 RVA: 0x0095B79C File Offset: 0x0095999C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCounterAttackEffect(Pointer, false, true);
 		}
 
-		// Token: 0x0602C604 RID: 181764 RVA: 0x00A1E6EB File Offset: 0x00A1C8EB
+		// Token: 0x0602132D RID: 135981 RVA: 0x0095B7A6 File Offset: 0x009599A6
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCounterAttackEffect(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017657 RID: 95831
+		// Token: 0x04012260 RID: 74336
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SCounterAttackEffect.SCounterAttackEffect";
 
-		// Token: 0x04017658 RID: 95832
+		// Token: 0x04012261 RID: 74337
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017659 RID: 95833
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012262 RID: 74338
+		internal static int __PropertyOffset_震屏;
 
-		// Token: 0x0401765A RID: 95834
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012263 RID: 74339
+		internal static int __PropertyOffset_特效DA;
 
-		// Token: 0x0401765B RID: 95835
+		// Token: 0x04012264 RID: 74340
 		[Nullable(2)]
 		private FSoftObjectPath _特效DA;
 
-		// Token: 0x0401765C RID: 95836
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012265 RID: 74341
+		internal static int __PropertyOffset_攻击者顿帧;
 
-		// Token: 0x0401765D RID: 95837
+		// Token: 0x04012266 RID: 74342
 		[Nullable(2)]
 		private STimeScale _攻击者顿帧;
 
-		// Token: 0x0401765E RID: 95838
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012267 RID: 74343
+		internal static int __PropertyOffset_被击者顿帧;
 
-		// Token: 0x0401765F RID: 95839
+		// Token: 0x04012268 RID: 74344
 		[Nullable(2)]
 		private STimeScale _被击者顿帧;
 
-		// Token: 0x04017660 RID: 95840
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012269 RID: 74345
+		internal static int __PropertyOffset_摄像机设置;
 
-		// Token: 0x04017661 RID: 95841
+		// Token: 0x0401226A RID: 74346
 		[Nullable(2)]
 		private SCounterAttackCamera _摄像机设置;
 
-		// Token: 0x04017662 RID: 95842
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401226B RID: 74347
+		internal static int __PropertyOffset_特效Offset;
 
-		// Token: 0x04017663 RID: 95843
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401226C RID: 74348
+		internal static int __PropertyOffset_特效Scale;
 
-		// Token: 0x04017664 RID: 95844
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401226D RID: 74349
+		internal static int __PropertyOffset_特效位置;
 	}
 }

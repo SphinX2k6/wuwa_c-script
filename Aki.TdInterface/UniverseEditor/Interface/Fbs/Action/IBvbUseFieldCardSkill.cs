@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006266 RID: 25190
+	// Token: 0x020068D7 RID: 26839
 	public struct IBvbUseFieldCardSkill : IFlatbufferObject
 	{
-		// Token: 0x1700BBB6 RID: 48054
-		// (get) Token: 0x0602B766 RID: 178022 RVA: 0x005FBDE9 File Offset: 0x005F9FE9
+		// Token: 0x1700C53E RID: 50494
+		// (get) Token: 0x0602DEC7 RID: 188103 RVA: 0x00646BF1 File Offset: 0x00644DF1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B767 RID: 178023 RVA: 0x005FBDF6 File Offset: 0x005F9FF6
+		// Token: 0x0602DEC8 RID: 188104 RVA: 0x00646BFE File Offset: 0x00644DFE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B768 RID: 178024 RVA: 0x005FBE00 File Offset: 0x005FA000
+		// Token: 0x0602DEC9 RID: 188105 RVA: 0x00646C08 File Offset: 0x00644E08
 		public static IBvbUseFieldCardSkill GetRootAsIBvbUseFieldCardSkill(ByteBuffer _bb)
 		{
 			return IBvbUseFieldCardSkill.GetRootAsIBvbUseFieldCardSkill(_bb, default(IBvbUseFieldCardSkill));
 		}
 
-		// Token: 0x0602B769 RID: 178025 RVA: 0x005FBE1C File Offset: 0x005FA01C
+		// Token: 0x0602DECA RID: 188106 RVA: 0x00646C24 File Offset: 0x00644E24
 		public static IBvbUseFieldCardSkill GetRootAsIBvbUseFieldCardSkill(ByteBuffer _bb, IBvbUseFieldCardSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B76A RID: 178026 RVA: 0x005FBE39 File Offset: 0x005FA039
+		// Token: 0x0602DECB RID: 188107 RVA: 0x00646C41 File Offset: 0x00644E41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B76B RID: 178027 RVA: 0x005FBE48 File Offset: 0x005FA048
+		// Token: 0x0602DECC RID: 188108 RVA: 0x00646C50 File Offset: 0x00644E50
 		public IBvbUseFieldCardSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BBB7 RID: 48055
-		// (get) Token: 0x0602B76C RID: 178028 RVA: 0x005FBE58 File Offset: 0x005FA058
+		// Token: 0x1700C53F RID: 50495
+		// (get) Token: 0x0602DECD RID: 188109 RVA: 0x00646C60 File Offset: 0x00644E60
 		public EBvbPlayerOperationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B76D RID: 178029 RVA: 0x005FBE94 File Offset: 0x005FA094
+		// Token: 0x0602DECE RID: 188110 RVA: 0x00646C9C File Offset: 0x00644E9C
 		public static Offset<IBvbUseFieldCardSkill> CreateIBvbUseFieldCardSkill(FlatBufferBuilder builder, EBvbPlayerOperationType Type = EBvbPlayerOperationType.BvbDeploy)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbUseFieldCardSkill.EndIBvbUseFieldCardSkill(builder);
 		}
 
-		// Token: 0x0602B76E RID: 178030 RVA: 0x005FBEAA File Offset: 0x005FA0AA
+		// Token: 0x0602DECF RID: 188111 RVA: 0x00646CB2 File Offset: 0x00644EB2
 		public static void StartIBvbUseFieldCardSkill(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B76F RID: 178031 RVA: 0x005FBEB3 File Offset: 0x005FA0B3
+		// Token: 0x0602DED0 RID: 188112 RVA: 0x00646CBB File Offset: 0x00644EBB
 		public static void AddType(FlatBufferBuilder builder, EBvbPlayerOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B770 RID: 178032 RVA: 0x005FBEBE File Offset: 0x005FA0BE
+		// Token: 0x0602DED1 RID: 188113 RVA: 0x00646CC6 File Offset: 0x00644EC6
 		public static Offset<IBvbUseFieldCardSkill> EndIBvbUseFieldCardSkill(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbUseFieldCardSkill>(builder.EndTable());
 		}
 
-		// Token: 0x0602B771 RID: 178033 RVA: 0x005FBECC File Offset: 0x005FA0CC
+		// Token: 0x0602DED2 RID: 188114 RVA: 0x00646CD4 File Offset: 0x00644ED4
 		public IBvbUseFieldCardSkillT UnPack()
 		{
 			IBvbUseFieldCardSkillT bvbUseFieldCardSkillT = new IBvbUseFieldCardSkillT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return bvbUseFieldCardSkillT;
 		}
 
-		// Token: 0x0602B772 RID: 178034 RVA: 0x005FBEE7 File Offset: 0x005FA0E7
+		// Token: 0x0602DED3 RID: 188115 RVA: 0x00646CEF File Offset: 0x00644EEF
 		public void UnPackTo(IBvbUseFieldCardSkillT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602B773 RID: 178035 RVA: 0x005FBEF8 File Offset: 0x005FA0F8
+		// Token: 0x0602DED4 RID: 188116 RVA: 0x00646D00 File Offset: 0x00644F00
 		public static Offset<IBvbUseFieldCardSkill> Pack(FlatBufferBuilder builder, IBvbUseFieldCardSkillT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbUseFieldCardSkill.CreateIBvbUseFieldCardSkill(builder, _o.Type);
 		}
 
-		// Token: 0x040107C0 RID: 67520
+		// Token: 0x040115D5 RID: 71125
 		private Table __p;
 	}
 }

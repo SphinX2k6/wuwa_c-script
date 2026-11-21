@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200591A RID: 22810
+	// Token: 0x02005F27 RID: 24359
 	public struct ISkyboxComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AB0E RID: 43790
-		// (get) Token: 0x060268FE RID: 157950 RVA: 0x0054FCE4 File Offset: 0x0054DEE4
+		// Token: 0x1700B442 RID: 46146
+		// (get) Token: 0x06028E68 RID: 167528 RVA: 0x00596950 File Offset: 0x00594B50
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060268FF RID: 157951 RVA: 0x0054FCF1 File Offset: 0x0054DEF1
+		// Token: 0x06028E69 RID: 167529 RVA: 0x0059695D File Offset: 0x00594B5D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026900 RID: 157952 RVA: 0x0054FCF8 File Offset: 0x0054DEF8
+		// Token: 0x06028E6A RID: 167530 RVA: 0x00596964 File Offset: 0x00594B64
 		public static ISkyboxComponent GetRootAsISkyboxComponent(ByteBuffer _bb)
 		{
 			return ISkyboxComponent.GetRootAsISkyboxComponent(_bb, default(ISkyboxComponent));
 		}
 
-		// Token: 0x06026901 RID: 157953 RVA: 0x0054FD14 File Offset: 0x0054DF14
+		// Token: 0x06028E6B RID: 167531 RVA: 0x00596980 File Offset: 0x00594B80
 		public static ISkyboxComponent GetRootAsISkyboxComponent(ByteBuffer _bb, ISkyboxComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026902 RID: 157954 RVA: 0x0054FD31 File Offset: 0x0054DF31
+		// Token: 0x06028E6C RID: 167532 RVA: 0x0059699D File Offset: 0x00594B9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026903 RID: 157955 RVA: 0x0054FD40 File Offset: 0x0054DF40
+		// Token: 0x06028E6D RID: 167533 RVA: 0x005969AC File Offset: 0x00594BAC
 		public ISkyboxComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AB0F RID: 43791
-		// (get) Token: 0x06026904 RID: 157956 RVA: 0x0054FD50 File Offset: 0x0054DF50
+		// Token: 0x1700B443 RID: 46147
+		// (get) Token: 0x06028E6E RID: 167534 RVA: 0x005969BC File Offset: 0x00594BBC
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB10 RID: 43792
-		// (get) Token: 0x06026905 RID: 157957 RVA: 0x0054FD90 File Offset: 0x0054DF90
+		// Token: 0x1700B444 RID: 46148
+		// (get) Token: 0x06028E6F RID: 167535 RVA: 0x005969FC File Offset: 0x00594BFC
 		public string WeatherDataAsset
 		{
 			get
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026906 RID: 157958 RVA: 0x0054FDC7 File Offset: 0x0054DFC7
+		// Token: 0x06028E70 RID: 167536 RVA: 0x00596A33 File Offset: 0x00594C33
 		public Span<byte> GetWeatherDataAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06026907 RID: 157959 RVA: 0x0054FDD6 File Offset: 0x0054DFD6
+		// Token: 0x06028E71 RID: 167537 RVA: 0x00596A42 File Offset: 0x00594C42
 		public byte[] GetWeatherDataAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700AB11 RID: 43793
-		// (get) Token: 0x06026908 RID: 157960 RVA: 0x0054FDE4 File Offset: 0x0054DFE4
+		// Token: 0x1700B445 RID: 46149
+		// (get) Token: 0x06028E72 RID: 167538 RVA: 0x00596A50 File Offset: 0x00594C50
 		public string PPTODDataAsset
 		{
 			get
@@ -100,20 +100,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026909 RID: 157961 RVA: 0x0054FE1B File Offset: 0x0054E01B
+		// Token: 0x06028E73 RID: 167539 RVA: 0x00596A87 File Offset: 0x00594C87
 		public Span<byte> GetPPTODDataAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602690A RID: 157962 RVA: 0x0054FE2A File Offset: 0x0054E02A
+		// Token: 0x06028E74 RID: 167540 RVA: 0x00596A96 File Offset: 0x00594C96
 		public byte[] GetPPTODDataAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700AB12 RID: 43794
-		// (get) Token: 0x0602690B RID: 157963 RVA: 0x0054FE38 File Offset: 0x0054E038
+		// Token: 0x1700B446 RID: 46150
+		// (get) Token: 0x06028E75 RID: 167541 RVA: 0x00596AA4 File Offset: 0x00594CA4
 		public int SkyboxSetting
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB13 RID: 43795
-		// (get) Token: 0x0602690C RID: 157964 RVA: 0x0054FE78 File Offset: 0x0054E078
+		// Token: 0x1700B447 RID: 46151
+		// (get) Token: 0x06028E76 RID: 167542 RVA: 0x00596AE4 File Offset: 0x00594CE4
 		public float FadeTime
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB14 RID: 43796
-		// (get) Token: 0x0602690D RID: 157965 RVA: 0x0054FEBC File Offset: 0x0054E0BC
+		// Token: 0x1700B448 RID: 46152
+		// (get) Token: 0x06028E77 RID: 167543 RVA: 0x00596B28 File Offset: 0x00594D28
 		public float Priority
 		{
 			get
@@ -157,8 +157,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB15 RID: 43797
-		// (get) Token: 0x0602690E RID: 157966 RVA: 0x0054FF00 File Offset: 0x0054E100
+		// Token: 0x1700B449 RID: 46153
+		// (get) Token: 0x06028E78 RID: 167544 RVA: 0x00596B6C File Offset: 0x00594D6C
 		public TTriggerMode TriggerModeType
 		{
 			get
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602690F RID: 157967 RVA: 0x0054FF40 File Offset: 0x0054E140
+		// Token: 0x06028E79 RID: 167545 RVA: 0x00596BAC File Offset: 0x00594DAC
 		public TTable? TriggerMode<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(18);
@@ -183,20 +183,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06026910 RID: 157968 RVA: 0x0054FF88 File Offset: 0x0054E188
+		// Token: 0x06028E7A RID: 167546 RVA: 0x00596BF4 File Offset: 0x00594DF4
 		public ISkyboxDistanceTrigger TriggerModeAsISkyboxDistanceTrigger()
 		{
 			return this.TriggerMode<ISkyboxDistanceTrigger>().Value;
 		}
 
-		// Token: 0x06026911 RID: 157969 RVA: 0x0054FFA4 File Offset: 0x0054E1A4
+		// Token: 0x06028E7B RID: 167547 RVA: 0x00596C10 File Offset: 0x00594E10
 		public ISkyboxGlobalTrigger TriggerModeAsISkyboxGlobalTrigger()
 		{
 			return this.TriggerMode<ISkyboxGlobalTrigger>().Value;
 		}
 
-		// Token: 0x1700AB16 RID: 43798
-		// (get) Token: 0x06026912 RID: 157970 RVA: 0x0054FFC0 File Offset: 0x0054E1C0
+		// Token: 0x1700B44A RID: 46154
+		// (get) Token: 0x06028E7C RID: 167548 RVA: 0x00596C2C File Offset: 0x00594E2C
 		public byte NullMask
 		{
 			get
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026913 RID: 157971 RVA: 0x00550000 File Offset: 0x0054E200
+		// Token: 0x06028E7D RID: 167549 RVA: 0x00596C6C File Offset: 0x00594E6C
 		public static Offset<ISkyboxComponent> CreateISkyboxComponent(FlatBufferBuilder builder, bool Disabled = false, StringOffset WeatherDataAssetOffset = default(StringOffset), StringOffset PPTODDataAssetOffset = default(StringOffset), int SkyboxSetting = 0, float FadeTime = 0f, float Priority = 0f, TTriggerMode TriggerMode_type = TTriggerMode.NONE, int TriggerModeOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -226,73 +226,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISkyboxComponent.EndISkyboxComponent(builder);
 		}
 
-		// Token: 0x06026914 RID: 157972 RVA: 0x00550060 File Offset: 0x0054E260
+		// Token: 0x06028E7E RID: 167550 RVA: 0x00596CCC File Offset: 0x00594ECC
 		public static void StartISkyboxComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x06026915 RID: 157973 RVA: 0x0055006A File Offset: 0x0054E26A
+		// Token: 0x06028E7F RID: 167551 RVA: 0x00596CD6 File Offset: 0x00594ED6
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06026916 RID: 157974 RVA: 0x00550075 File Offset: 0x0054E275
+		// Token: 0x06028E80 RID: 167552 RVA: 0x00596CE1 File Offset: 0x00594EE1
 		public static void AddWeatherDataAsset(FlatBufferBuilder builder, StringOffset weatherDataAssetOffset)
 		{
 			builder.AddOffset(1, weatherDataAssetOffset.Value, 0);
 		}
 
-		// Token: 0x06026917 RID: 157975 RVA: 0x00550085 File Offset: 0x0054E285
+		// Token: 0x06028E81 RID: 167553 RVA: 0x00596CF1 File Offset: 0x00594EF1
 		public static void AddPPTODDataAsset(FlatBufferBuilder builder, StringOffset pPTODDataAssetOffset)
 		{
 			builder.AddOffset(2, pPTODDataAssetOffset.Value, 0);
 		}
 
-		// Token: 0x06026918 RID: 157976 RVA: 0x00550095 File Offset: 0x0054E295
+		// Token: 0x06028E82 RID: 167554 RVA: 0x00596D01 File Offset: 0x00594F01
 		public static void AddSkyboxSetting(FlatBufferBuilder builder, int skyboxSetting)
 		{
 			builder.AddInt(3, skyboxSetting, 0);
 		}
 
-		// Token: 0x06026919 RID: 157977 RVA: 0x005500A0 File Offset: 0x0054E2A0
+		// Token: 0x06028E83 RID: 167555 RVA: 0x00596D0C File Offset: 0x00594F0C
 		public static void AddFadeTime(FlatBufferBuilder builder, float fadeTime)
 		{
 			builder.AddFloat(4, fadeTime, 0.0);
 		}
 
-		// Token: 0x0602691A RID: 157978 RVA: 0x005500B3 File Offset: 0x0054E2B3
+		// Token: 0x06028E84 RID: 167556 RVA: 0x00596D1F File Offset: 0x00594F1F
 		public static void AddPriority(FlatBufferBuilder builder, float priority)
 		{
 			builder.AddFloat(5, priority, 0.0);
 		}
 
-		// Token: 0x0602691B RID: 157979 RVA: 0x005500C6 File Offset: 0x0054E2C6
+		// Token: 0x06028E85 RID: 167557 RVA: 0x00596D32 File Offset: 0x00594F32
 		public static void AddTriggerModeType(FlatBufferBuilder builder, TTriggerMode triggerModeType)
 		{
 			builder.AddByte(6, (byte)triggerModeType, 0);
 		}
 
-		// Token: 0x0602691C RID: 157980 RVA: 0x005500D1 File Offset: 0x0054E2D1
+		// Token: 0x06028E86 RID: 167558 RVA: 0x00596D3D File Offset: 0x00594F3D
 		public static void AddTriggerMode(FlatBufferBuilder builder, int triggerModeOffset)
 		{
 			builder.AddOffset(7, triggerModeOffset, 0);
 		}
 
-		// Token: 0x0602691D RID: 157981 RVA: 0x005500DC File Offset: 0x0054E2DC
+		// Token: 0x06028E87 RID: 167559 RVA: 0x00596D48 File Offset: 0x00594F48
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x0602691E RID: 157982 RVA: 0x005500E7 File Offset: 0x0054E2E7
+		// Token: 0x06028E88 RID: 167560 RVA: 0x00596D53 File Offset: 0x00594F53
 		public static Offset<ISkyboxComponent> EndISkyboxComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISkyboxComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602691F RID: 157983 RVA: 0x005500F4 File Offset: 0x0054E2F4
+		// Token: 0x06028E89 RID: 167561 RVA: 0x00596D60 File Offset: 0x00594F60
 		public ISkyboxComponentT UnPack()
 		{
 			ISkyboxComponentT skyboxComponentT = new ISkyboxComponentT();
@@ -300,7 +300,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return skyboxComponentT;
 		}
 
-		// Token: 0x06026920 RID: 157984 RVA: 0x00550110 File Offset: 0x0054E310
+		// Token: 0x06028E8A RID: 167562 RVA: 0x00596D7C File Offset: 0x00594F7C
 		public void UnPackTo(ISkyboxComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -326,7 +326,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026921 RID: 157985 RVA: 0x0055020C File Offset: 0x0054E40C
+		// Token: 0x06028E8B RID: 167563 RVA: 0x00596E78 File Offset: 0x00595078
 		public static Offset<ISkyboxComponent> Pack(FlatBufferBuilder builder, ISkyboxComponentT _o)
 		{
 			if (_o == null)
@@ -340,7 +340,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISkyboxComponent.CreateISkyboxComponent(builder, _o.Disabled, weatherDataAssetOffset, pptoddataAssetOffset, _o.SkyboxSetting, _o.FadeTime, _o.Priority, triggerMode_type, triggerModeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EEC8 RID: 61128
+		// Token: 0x0400FBBD RID: 64445
 		private Table __p;
 	}
 }

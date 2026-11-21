@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200173C RID: 5948
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018BB RID: 6331
 	public class GuestOperateUiAnimation : ActionParams
 	{
-		// Token: 0x06007DDD RID: 32221 RVA: 0x0012DB04 File Offset: 0x0012BD04
+		// Token: 0x060084C5 RID: 33989 RVA: 0x0013CCAC File Offset: 0x0013AEAC
 		private GuestOperateUiAnimation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007DDE RID: 32222 RVA: 0x0012DB3C File Offset: 0x0012BD3C
+		// Token: 0x060084C6 RID: 33990 RVA: 0x0013CCE4 File Offset: 0x0013AEE4
 		public static GuestOperateUiAnimation Create([Nullable(2)] GuestOperateUiAnimation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007DDF RID: 32223 RVA: 0x0012DB4F File Offset: 0x0012BD4F
+		// Token: 0x060084C7 RID: 33991 RVA: 0x0013CCF7 File Offset: 0x0013AEF7
 		public static GuestOperateUiAnimation CreateFromSetValue([Nullable(2)] GuestOperateUiAnimation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007DE0 RID: 32224 RVA: 0x0012DB62 File Offset: 0x0012BD62
+		// Token: 0x060084C8 RID: 33992 RVA: 0x0013CD0A File Offset: 0x0013AF0A
 		public GuestOperateUiAnimation_SetValue ToSetValue()
 		{
 			return new GuestOperateUiAnimation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002968 RID: 10600
-		// (get) Token: 0x06007DE1 RID: 32225 RVA: 0x0012DB75 File Offset: 0x0012BD75
-		// (set) Token: 0x06007DE2 RID: 32226 RVA: 0x0012DB9C File Offset: 0x0012BD9C
+		// Token: 0x17002B55 RID: 11093
+		// (get) Token: 0x060084C9 RID: 33993 RVA: 0x0013CD1D File Offset: 0x0013AF1D
+		// (set) Token: 0x060084CA RID: 33994 RVA: 0x0013CD44 File Offset: 0x0013AF44
 		public virtual IGuestOperateUiAnimationType UiAnimationConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005041 RID: 20545
+		// Token: 0x04005474 RID: 21620
 		[Nullable(2)]
 		protected new GuestOperateUiAnimation FbInstance;
 
-		// Token: 0x04005042 RID: 20546
+		// Token: 0x04005475 RID: 21621
 		[Nullable(2)]
 		protected GuestOperateUiAnimation_SetValue PocoInterface;
 	}

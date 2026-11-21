@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A4B RID: 19019
+	// Token: 0x02004F11 RID: 20241
 	public struct ICheckHoldingHandsCharacterType : IFlatbufferObject
 	{
-		// Token: 0x170089B0 RID: 35248
-		// (get) Token: 0x0601DC88 RID: 121992 RVA: 0x0042FE91 File Offset: 0x0042E091
+		// Token: 0x1700908C RID: 37004
+		// (get) Token: 0x0601F72B RID: 128811 RVA: 0x0046101D File Offset: 0x0045F21D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DC89 RID: 121993 RVA: 0x0042FE9E File Offset: 0x0042E09E
+		// Token: 0x0601F72C RID: 128812 RVA: 0x0046102A File Offset: 0x0045F22A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DC8A RID: 121994 RVA: 0x0042FEA8 File Offset: 0x0042E0A8
+		// Token: 0x0601F72D RID: 128813 RVA: 0x00461034 File Offset: 0x0045F234
 		public static ICheckHoldingHandsCharacterType GetRootAsICheckHoldingHandsCharacterType(ByteBuffer _bb)
 		{
 			return ICheckHoldingHandsCharacterType.GetRootAsICheckHoldingHandsCharacterType(_bb, default(ICheckHoldingHandsCharacterType));
 		}
 
-		// Token: 0x0601DC8B RID: 121995 RVA: 0x0042FEC4 File Offset: 0x0042E0C4
+		// Token: 0x0601F72E RID: 128814 RVA: 0x00461050 File Offset: 0x0045F250
 		public static ICheckHoldingHandsCharacterType GetRootAsICheckHoldingHandsCharacterType(ByteBuffer _bb, ICheckHoldingHandsCharacterType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DC8C RID: 121996 RVA: 0x0042FEE1 File Offset: 0x0042E0E1
+		// Token: 0x0601F72F RID: 128815 RVA: 0x0046106D File Offset: 0x0045F26D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DC8D RID: 121997 RVA: 0x0042FEF0 File Offset: 0x0042E0F0
+		// Token: 0x0601F730 RID: 128816 RVA: 0x0046107C File Offset: 0x0045F27C
 		public ICheckHoldingHandsCharacterType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170089B1 RID: 35249
-		// (get) Token: 0x0601DC8E RID: 121998 RVA: 0x0042FF00 File Offset: 0x0042E100
+		// Token: 0x1700908D RID: 37005
+		// (get) Token: 0x0601F731 RID: 128817 RVA: 0x0046108C File Offset: 0x0045F28C
 		public ECheckHoldingHandsCharacter Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DC8F RID: 121999 RVA: 0x0042FF3C File Offset: 0x0042E13C
+		// Token: 0x0601F732 RID: 128818 RVA: 0x004610C8 File Offset: 0x0045F2C8
 		public static Offset<ICheckHoldingHandsCharacterType> CreateICheckHoldingHandsCharacterType(FlatBufferBuilder builder, ECheckHoldingHandsCharacter Type = ECheckHoldingHandsCharacter.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckHoldingHandsCharacterType.EndICheckHoldingHandsCharacterType(builder);
 		}
 
-		// Token: 0x0601DC90 RID: 122000 RVA: 0x0042FF52 File Offset: 0x0042E152
+		// Token: 0x0601F733 RID: 128819 RVA: 0x004610DE File Offset: 0x0045F2DE
 		public static void StartICheckHoldingHandsCharacterType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601DC91 RID: 122001 RVA: 0x0042FF5B File Offset: 0x0042E15B
+		// Token: 0x0601F734 RID: 128820 RVA: 0x004610E7 File Offset: 0x0045F2E7
 		public static void AddType(FlatBufferBuilder builder, ECheckHoldingHandsCharacter type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DC92 RID: 122002 RVA: 0x0042FF66 File Offset: 0x0042E166
+		// Token: 0x0601F735 RID: 128821 RVA: 0x004610F2 File Offset: 0x0045F2F2
 		public static Offset<ICheckHoldingHandsCharacterType> EndICheckHoldingHandsCharacterType(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckHoldingHandsCharacterType>(builder.EndTable());
 		}
 
-		// Token: 0x0601DC93 RID: 122003 RVA: 0x0042FF74 File Offset: 0x0042E174
+		// Token: 0x0601F736 RID: 128822 RVA: 0x00461100 File Offset: 0x0045F300
 		public ICheckHoldingHandsCharacterTypeT UnPack()
 		{
 			ICheckHoldingHandsCharacterTypeT checkHoldingHandsCharacterTypeT = new ICheckHoldingHandsCharacterTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkHoldingHandsCharacterTypeT;
 		}
 
-		// Token: 0x0601DC94 RID: 122004 RVA: 0x0042FF8F File Offset: 0x0042E18F
+		// Token: 0x0601F737 RID: 128823 RVA: 0x0046111B File Offset: 0x0045F31B
 		public void UnPackTo(ICheckHoldingHandsCharacterTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601DC95 RID: 122005 RVA: 0x0042FFA0 File Offset: 0x0042E1A0
+		// Token: 0x0601F738 RID: 128824 RVA: 0x0046112C File Offset: 0x0045F32C
 		public static Offset<ICheckHoldingHandsCharacterType> Pack(FlatBufferBuilder builder, ICheckHoldingHandsCharacterTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckHoldingHandsCharacterType.CreateICheckHoldingHandsCharacterType(builder, _o.Type);
 		}
 
-		// Token: 0x0400D2A2 RID: 53922
+		// Token: 0x0400DD7D RID: 56701
 		private Table __p;
 	}
 }

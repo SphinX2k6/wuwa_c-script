@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015BA RID: 5562
+	// Token: 0x0200162C RID: 5676
 	public enum BattleModule
 	{
-		// Token: 0x0400BC8F RID: 48271
+		// Token: 0x0400C182 RID: 49538
 		[OriginalName("Damage")]
 		Damage,
-		// Token: 0x0400BC90 RID: 48272
+		// Token: 0x0400C183 RID: 49539
 		[OriginalName("GameplayEffect")]
 		GameplayEffect,
-		// Token: 0x0400BC91 RID: 48273
+		// Token: 0x0400C184 RID: 49540
 		[OriginalName("Log")]
 		Log
 	}

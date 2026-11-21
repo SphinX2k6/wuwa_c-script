@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200571F RID: 22303
+	// Token: 0x02005D26 RID: 23846
 	public class IPerformanceOptimization_UnionUnion
 	{
-		// Token: 0x1700A62A RID: 42538
-		// (get) Token: 0x06025504 RID: 152836 RVA: 0x00526251 File Offset: 0x00524451
-		// (set) Token: 0x06025505 RID: 152837 RVA: 0x00526259 File Offset: 0x00524459
+		// Token: 0x1700AF4A RID: 44874
+		// (get) Token: 0x06027A13 RID: 162323 RVA: 0x0056BF59 File Offset: 0x0056A159
+		// (set) Token: 0x06027A14 RID: 162324 RVA: 0x0056BF61 File Offset: 0x0056A161
 		public IPerformanceOptimization_Union Type { get; set; }
 
-		// Token: 0x1700A62B RID: 42539
-		// (get) Token: 0x06025506 RID: 152838 RVA: 0x00526262 File Offset: 0x00524462
-		// (set) Token: 0x06025507 RID: 152839 RVA: 0x0052626A File Offset: 0x0052446A
+		// Token: 0x1700AF4B RID: 44875
+		// (get) Token: 0x06027A15 RID: 162325 RVA: 0x0056BF6A File Offset: 0x0056A16A
+		// (set) Token: 0x06027A16 RID: 162326 RVA: 0x0056BF72 File Offset: 0x0056A172
 		public object Value { get; set; }
 
-		// Token: 0x06025508 RID: 152840 RVA: 0x00526273 File Offset: 0x00524473
+		// Token: 0x06027A17 RID: 162327 RVA: 0x0056BF7B File Offset: 0x0056A17B
 		public IPerformanceOptimization_UnionUnion()
 		{
 			this.Type = IPerformanceOptimization_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025509 RID: 152841 RVA: 0x00526289 File Offset: 0x00524489
+		// Token: 0x06027A18 RID: 162328 RVA: 0x0056BF91 File Offset: 0x0056A191
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602550A RID: 152842 RVA: 0x0052629B File Offset: 0x0052449B
+		// Token: 0x06027A19 RID: 162329 RVA: 0x0056BFA3 File Offset: 0x0056A1A3
 		public IPerformanceOptimizationT AsIPerformanceOptimization()
 		{
 			return this.As<IPerformanceOptimizationT>();
 		}
 
-		// Token: 0x0602550B RID: 152843 RVA: 0x005262A3 File Offset: 0x005244A3
+		// Token: 0x06027A1A RID: 162330 RVA: 0x0056BFAB File Offset: 0x0056A1AB
 		public static IPerformanceOptimization_UnionUnion FromIPerformanceOptimization(IPerformanceOptimizationT _iperformanceoptimization)
 		{
 			return new IPerformanceOptimization_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602550C RID: 152844 RVA: 0x005262B8 File Offset: 0x005244B8
+		// Token: 0x06027A1B RID: 162331 RVA: 0x0056BFC0 File Offset: 0x0056A1C0
 		public IPlaneMovementOptimizationConfigT AsIPlaneMovementOptimizationConfig()
 		{
 			return this.As<IPlaneMovementOptimizationConfigT>();
 		}
 
-		// Token: 0x0602550D RID: 152845 RVA: 0x005262C0 File Offset: 0x005244C0
+		// Token: 0x06027A1C RID: 162332 RVA: 0x0056BFC8 File Offset: 0x0056A1C8
 		public static IPerformanceOptimization_UnionUnion FromIPlaneMovementOptimizationConfig(IPlaneMovementOptimizationConfigT _iplanemovementoptimizationconfig)
 		{
 			return new IPerformanceOptimization_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602550E RID: 152846 RVA: 0x005262D5 File Offset: 0x005244D5
+		// Token: 0x06027A1D RID: 162333 RVA: 0x0056BFDD File Offset: 0x0056A1DD
 		public IDamageTextOptimizationConfigT AsIDamageTextOptimizationConfig()
 		{
 			return this.As<IDamageTextOptimizationConfigT>();
 		}
 
-		// Token: 0x0602550F RID: 152847 RVA: 0x005262DD File Offset: 0x005244DD
+		// Token: 0x06027A1E RID: 162334 RVA: 0x0056BFE5 File Offset: 0x0056A1E5
 		public static IPerformanceOptimization_UnionUnion FromIDamageTextOptimizationConfig(IDamageTextOptimizationConfigT _idamagetextoptimizationconfig)
 		{
 			return new IPerformanceOptimization_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025510 RID: 152848 RVA: 0x005262F4 File Offset: 0x005244F4
+		// Token: 0x06027A1F RID: 162335 RVA: 0x0056BFFC File Offset: 0x0056A1FC
 		public static int Pack(FlatBufferBuilder builder, IPerformanceOptimization_UnionUnion _o)
 		{
 			switch (_o.Type)

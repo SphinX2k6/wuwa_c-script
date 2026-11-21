@@ -4,75 +4,75 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005564 RID: 21860
+	// Token: 0x02004536 RID: 17718
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingPointMarkCreateParam : IDynamicMarkCreateParams
 	{
-		// Token: 0x170085E9 RID: 34281
-		// (get) Token: 0x06037BCB RID: 228299 RVA: 0x00D38E01 File Offset: 0x00D37001
-		// (set) Token: 0x06037BCC RID: 228300 RVA: 0x00D38E09 File Offset: 0x00D37009
+		// Token: 0x17005989 RID: 22921
+		// (get) Token: 0x0602CA9B RID: 182939 RVA: 0x00C868D5 File Offset: 0x00C84AD5
+		// (set) Token: 0x0602CA9C RID: 182940 RVA: 0x00C868DD File Offset: 0x00C84ADD
 		public TTrackTarget TrackTarget { get; set; }
 
-		// Token: 0x170085EA RID: 34282
-		// (get) Token: 0x06037BCD RID: 228301 RVA: 0x00D38E12 File Offset: 0x00D37012
-		// (set) Token: 0x06037BCE RID: 228302 RVA: 0x00D38E1A File Offset: 0x00D3701A
+		// Token: 0x1700598A RID: 22922
+		// (get) Token: 0x0602CA9D RID: 182941 RVA: 0x00C868E6 File Offset: 0x00C84AE6
+		// (set) Token: 0x0602CA9E RID: 182942 RVA: 0x00C868EE File Offset: 0x00C84AEE
 		public int MarkConfigId { get; set; }
 
-		// Token: 0x170085EB RID: 34283
-		// (get) Token: 0x06037BCF RID: 228303 RVA: 0x00D38E23 File Offset: 0x00D37023
-		// (set) Token: 0x06037BD0 RID: 228304 RVA: 0x00D38E2B File Offset: 0x00D3702B
+		// Token: 0x1700598B RID: 22923
+		// (get) Token: 0x0602CA9F RID: 182943 RVA: 0x00C868F7 File Offset: 0x00C84AF7
+		// (set) Token: 0x0602CAA0 RID: 182944 RVA: 0x00C868FF File Offset: 0x00C84AFF
 		public EMarkType MarkType { get; set; }
 
-		// Token: 0x170085EC RID: 34284
-		// (get) Token: 0x06037BD1 RID: 228305 RVA: 0x00D38E34 File Offset: 0x00D37034
-		// (set) Token: 0x06037BD2 RID: 228306 RVA: 0x00D38E3C File Offset: 0x00D3703C
+		// Token: 0x1700598C RID: 22924
+		// (get) Token: 0x0602CAA1 RID: 182945 RVA: 0x00C86908 File Offset: 0x00C84B08
+		// (set) Token: 0x0602CAA2 RID: 182946 RVA: 0x00C86910 File Offset: 0x00C84B10
 		public int? MarkId { get; set; }
 
-		// Token: 0x170085ED RID: 34285
-		// (get) Token: 0x06037BD3 RID: 228307 RVA: 0x00D38E45 File Offset: 0x00D37045
-		// (set) Token: 0x06037BD4 RID: 228308 RVA: 0x00D38E4D File Offset: 0x00D3704D
+		// Token: 0x1700598D RID: 22925
+		// (get) Token: 0x0602CAA3 RID: 182947 RVA: 0x00C86919 File Offset: 0x00C84B19
+		// (set) Token: 0x0602CAA4 RID: 182948 RVA: 0x00C86921 File Offset: 0x00C84B21
 		public ETrackSource? TrackSource { get; set; }
 
-		// Token: 0x170085EE RID: 34286
-		// (get) Token: 0x06037BD5 RID: 228309 RVA: 0x00D38E56 File Offset: 0x00D37056
-		// (set) Token: 0x06037BD6 RID: 228310 RVA: 0x00D38E5E File Offset: 0x00D3705E
+		// Token: 0x1700598E RID: 22926
+		// (get) Token: 0x0602CAA5 RID: 182949 RVA: 0x00C8692A File Offset: 0x00C84B2A
+		// (set) Token: 0x0602CAA6 RID: 182950 RVA: 0x00C86932 File Offset: 0x00C84B32
 		public bool? DestroyOnUnTrack { get; set; }
 
-		// Token: 0x170085EF RID: 34287
-		// (get) Token: 0x06037BD7 RID: 228311 RVA: 0x00D38E67 File Offset: 0x00D37067
-		// (set) Token: 0x06037BD8 RID: 228312 RVA: 0x00D38E6F File Offset: 0x00D3706F
+		// Token: 0x1700598F RID: 22927
+		// (get) Token: 0x0602CAA7 RID: 182951 RVA: 0x00C8693B File Offset: 0x00C84B3B
+		// (set) Token: 0x0602CAA8 RID: 182952 RVA: 0x00C86943 File Offset: 0x00C84B43
 		public int? TeleportId { get; set; }
 
-		// Token: 0x170085F0 RID: 34288
-		// (get) Token: 0x06037BD9 RID: 228313 RVA: 0x00D38E78 File Offset: 0x00D37078
-		// (set) Token: 0x06037BDA RID: 228314 RVA: 0x00D38E80 File Offset: 0x00D37080
+		// Token: 0x17005990 RID: 22928
+		// (get) Token: 0x0602CAA9 RID: 182953 RVA: 0x00C8694C File Offset: 0x00C84B4C
+		// (set) Token: 0x0602CAAA RID: 182954 RVA: 0x00C86954 File Offset: 0x00C84B54
 		public int? EntityConfigId { get; set; }
 
-		// Token: 0x170085F1 RID: 34289
-		// (get) Token: 0x06037BDB RID: 228315 RVA: 0x00D38E89 File Offset: 0x00D37089
-		// (set) Token: 0x06037BDC RID: 228316 RVA: 0x00D38E91 File Offset: 0x00D37091
+		// Token: 0x17005991 RID: 22929
+		// (get) Token: 0x0602CAAB RID: 182955 RVA: 0x00C8695D File Offset: 0x00C84B5D
+		// (set) Token: 0x0602CAAC RID: 182956 RVA: 0x00C86965 File Offset: 0x00C84B65
 		public MarkState? ServerMarkState { get; set; }
 
-		// Token: 0x170085F2 RID: 34290
-		// (get) Token: 0x06037BDD RID: 228317 RVA: 0x00D38E9A File Offset: 0x00D3709A
-		// (set) Token: 0x06037BDE RID: 228318 RVA: 0x00D38EA2 File Offset: 0x00D370A2
+		// Token: 0x17005992 RID: 22930
+		// (get) Token: 0x0602CAAD RID: 182957 RVA: 0x00C8696E File Offset: 0x00C84B6E
+		// (set) Token: 0x0602CAAE RID: 182958 RVA: 0x00C86976 File Offset: 0x00C84B76
 		[Nullable(2)]
 		public MapAndDungeonInfo MapAndDungeonInfo { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x170085F3 RID: 34291
-		// (get) Token: 0x06037BDF RID: 228319 RVA: 0x00D38EAB File Offset: 0x00D370AB
-		// (set) Token: 0x06037BE0 RID: 228320 RVA: 0x00D38EB3 File Offset: 0x00D370B3
+		// Token: 0x17005993 RID: 22931
+		// (get) Token: 0x0602CAAF RID: 182959 RVA: 0x00C8697F File Offset: 0x00C84B7F
+		// (set) Token: 0x0602CAB0 RID: 182960 RVA: 0x00C86987 File Offset: 0x00C84B87
 		public EMapGravityDirection? Gravity { get; set; }
 
-		// Token: 0x170085F4 RID: 34292
-		// (get) Token: 0x06037BE1 RID: 228321 RVA: 0x00D38EBC File Offset: 0x00D370BC
-		// (set) Token: 0x06037BE2 RID: 228322 RVA: 0x00D38EC4 File Offset: 0x00D370C4
+		// Token: 0x17005994 RID: 22932
+		// (get) Token: 0x0602CAB1 RID: 182961 RVA: 0x00C86990 File Offset: 0x00C84B90
+		// (set) Token: 0x0602CAB2 RID: 182962 RVA: 0x00C86998 File Offset: 0x00C84B98
 		public int? AreaId { get; set; }
 
-		// Token: 0x170085F5 RID: 34293
-		// (get) Token: 0x06037BE3 RID: 228323 RVA: 0x00D38ECD File Offset: 0x00D370CD
-		// (set) Token: 0x06037BE4 RID: 228324 RVA: 0x00D38ED5 File Offset: 0x00D370D5
+		// Token: 0x17005995 RID: 22933
+		// (get) Token: 0x0602CAB3 RID: 182963 RVA: 0x00C869A1 File Offset: 0x00C84BA1
+		// (set) Token: 0x0602CAB4 RID: 182964 RVA: 0x00C869A9 File Offset: 0x00C84BA9
 		public EFishPointDetectSourceType FishPointDetectSourceType { get; set; }
 	}
 }

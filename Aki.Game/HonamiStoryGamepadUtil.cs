@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001E88 RID: 7816
+// Token: 0x0200134A RID: 4938
 public static class HonamiStoryGamepadUtil
 {
-	// Token: 0x0600EE49 RID: 61001 RVA: 0x0038CE20 File Offset: 0x0038B020
+	// Token: 0x0600C268 RID: 49768 RVA: 0x00398A10 File Offset: 0x00396C10
 	public static void HideAllTips()
 	{
 		HonamiStoryBackpackView honamiStoryBackpackView = UiManager.Instance.GetViewByName(EUiViewName.HonamiStoryBackpackView) as HonamiStoryBackpackView;
@@ -19,7 +19,7 @@ public static class HonamiStoryGamepadUtil
 		}
 	}
 
-	// Token: 0x0600EE4A RID: 61002 RVA: 0x0038CE6C File Offset: 0x0038B06C
+	// Token: 0x0600C269 RID: 49769 RVA: 0x00398A5C File Offset: 0x00396C5C
 	public static void EnterMask()
 	{
 		HonamiStoryBackpackView honamiStoryBackpackView = UiManager.Instance.GetViewByName(EUiViewName.HonamiStoryBackpackView) as HonamiStoryBackpackView;
@@ -34,7 +34,7 @@ public static class HonamiStoryGamepadUtil
 		}
 	}
 
-	// Token: 0x0600EE4B RID: 61003 RVA: 0x0038CEB8 File Offset: 0x0038B0B8
+	// Token: 0x0600C26A RID: 49770 RVA: 0x00398AA8 File Offset: 0x00396CA8
 	public static void ExitMask()
 	{
 		HonamiStoryBackpackView honamiStoryBackpackView = UiManager.Instance.GetViewByName(EUiViewName.HonamiStoryBackpackView) as HonamiStoryBackpackView;

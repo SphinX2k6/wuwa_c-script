@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000904 RID: 2308
+	// Token: 0x020009AD RID: 2477
 	public static class EBuffProducerModeExtensions
 	{
-		// Token: 0x06003443 RID: 13379 RVA: 0x0008574C File Offset: 0x0008394C
+		// Token: 0x0600379D RID: 14237 RVA: 0x0008CFBC File Offset: 0x0008B1BC
 		public static string ToEnumString(this EBuffProducerMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003444 RID: 13380 RVA: 0x00085794 File Offset: 0x00083994
+		// Token: 0x0600379E RID: 14238 RVA: 0x0008D004 File Offset: 0x0008B204
 		public static EBuffProducerMode FromString(string name)
 		{
 			EBuffProducerMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003445 RID: 13381 RVA: 0x000857C0 File Offset: 0x000839C0
+		// Token: 0x0600379F RID: 14239 RVA: 0x0008D030 File Offset: 0x0008B230
 		public static bool TryFromString(string name, out EBuffProducerMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003446 RID: 13382 RVA: 0x00085816 File Offset: 0x00083A16
+		// Token: 0x060037A0 RID: 14240 RVA: 0x0008D086 File Offset: 0x0008B286
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003447 RID: 13383 RVA: 0x00085836 File Offset: 0x00083A36
+		// Token: 0x060037A1 RID: 14241 RVA: 0x0008D0A6 File Offset: 0x0008B2A6
 		public static EBuffProducerMode[] GetValues()
 		{
 			return new EBuffProducerMode[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003448 RID: 13384 RVA: 0x00085846 File Offset: 0x00083A46
+		// Token: 0x060037A2 RID: 14242 RVA: 0x0008D0B6 File Offset: 0x0008B2B6
 		public static string[] GetNames()
 		{
 			return new string[]

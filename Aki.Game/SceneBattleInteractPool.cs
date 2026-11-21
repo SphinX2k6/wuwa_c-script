@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02002946 RID: 10566
+// Token: 0x02001EC1 RID: 7873
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneBattleInteractPool : IStaticVariableResetter
 {
-	// Token: 0x06015D31 RID: 89393 RVA: 0x00580974 File Offset: 0x0057EB74
+	// Token: 0x06013735 RID: 79669 RVA: 0x005AB974 File Offset: 0x005A9B74
 	static SceneBattleInteractPool()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SceneBattleInteractPool.CreateStaticDefaultValue), new Action(SceneBattleInteractPool.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015D32 RID: 89394 RVA: 0x00580993 File Offset: 0x0057EB93
+	// Token: 0x06013736 RID: 79670 RVA: 0x005AB993 File Offset: 0x005A9B93
 	public static void CreateStaticDefaultValue()
 	{
 		SceneBattleInteractPool.TraceCapsuleElementList = new List<UTraceCapsuleElement>();
@@ -23,7 +23,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		SceneBattleInteractPool.TraceSphereElementList = new List<UTraceSphereElement>();
 	}
 
-	// Token: 0x06015D33 RID: 89395 RVA: 0x005809B3 File Offset: 0x0057EBB3
+	// Token: 0x06013737 RID: 79671 RVA: 0x005AB9B3 File Offset: 0x005A9BB3
 	public static void ResetStaticDefaultValue()
 	{
 		SceneBattleInteractPool.TraceCapsuleElementList = null;
@@ -31,25 +31,25 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		SceneBattleInteractPool.TraceSphereElementList = null;
 	}
 
-	// Token: 0x06015D34 RID: 89396 RVA: 0x005809C7 File Offset: 0x0057EBC7
+	// Token: 0x06013738 RID: 79672 RVA: 0x005AB9C7 File Offset: 0x005A9BC7
 	public static UTraceCapsuleElement GetTraceCapsuleElement(ETraceTypeQuery traceChannel)
 	{
 		return SceneBattleInteractPool.GetTraceElement<UTraceCapsuleElement>(UTraceCapsuleElement.StaticClass().ToClass(), SceneBattleInteractPool.TraceCapsuleElementList, traceChannel, false);
 	}
 
-	// Token: 0x06015D35 RID: 89397 RVA: 0x005809DF File Offset: 0x0057EBDF
+	// Token: 0x06013739 RID: 79673 RVA: 0x005AB9DF File Offset: 0x005A9BDF
 	public static UTraceLineElement GetTraceLineElement(ETraceTypeQuery traceChannel)
 	{
 		return SceneBattleInteractPool.GetTraceElement<UTraceLineElement>(UTraceLineElement.StaticClass().ToClass(), SceneBattleInteractPool.TraceLineElementList, traceChannel, false);
 	}
 
-	// Token: 0x06015D36 RID: 89398 RVA: 0x005809F7 File Offset: 0x0057EBF7
+	// Token: 0x0601373A RID: 79674 RVA: 0x005AB9F7 File Offset: 0x005A9BF7
 	public static UTraceSphereElement GetTraceSphereElement(ETraceTypeQuery traceChannel)
 	{
 		return SceneBattleInteractPool.GetTraceElement<UTraceSphereElement>(UTraceSphereElement.StaticClass().ToClass(), SceneBattleInteractPool.TraceSphereElementList, traceChannel, false);
 	}
 
-	// Token: 0x06015D37 RID: 89399 RVA: 0x00580A10 File Offset: 0x0057EC10
+	// Token: 0x0601373B RID: 79675 RVA: 0x005ABA10 File Offset: 0x005A9C10
 	private static T GetTraceElement<[Nullable(0)] T>(UClass type, List<T> elementList, ETraceTypeQuery traceChannel, bool bIsSingle = false) where T : UTraceBaseElement
 	{
 		if (elementList.Count > 0)
@@ -70,7 +70,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		return t2;
 	}
 
-	// Token: 0x06015D38 RID: 89400 RVA: 0x00580A9E File Offset: 0x0057EC9E
+	// Token: 0x0601373C RID: 79676 RVA: 0x005ABA9E File Offset: 0x005A9C9E
 	[NullableContext(2)]
 	public static void RecycleTraceCapsuleElement(UTraceCapsuleElement traceElement)
 	{
@@ -81,7 +81,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015D39 RID: 89401 RVA: 0x00580AB5 File Offset: 0x0057ECB5
+	// Token: 0x0601373D RID: 79677 RVA: 0x005ABAB5 File Offset: 0x005A9CB5
 	[NullableContext(2)]
 	public static void RecycleTraceLineElement(UTraceLineElement traceElement)
 	{
@@ -92,7 +92,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015D3A RID: 89402 RVA: 0x00580ACC File Offset: 0x0057ECCC
+	// Token: 0x0601373E RID: 79678 RVA: 0x005ABACC File Offset: 0x005A9CCC
 	[NullableContext(2)]
 	public static void RecycleTraceSphereElement(UTraceSphereElement traceElement)
 	{
@@ -103,7 +103,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015D3B RID: 89403 RVA: 0x00580AE3 File Offset: 0x0057ECE3
+	// Token: 0x0601373F RID: 79679 RVA: 0x005ABAE3 File Offset: 0x005A9CE3
 	public static void Clear()
 	{
 		List<UTraceCapsuleElement> traceCapsuleElementList = SceneBattleInteractPool.TraceCapsuleElementList;
@@ -124,7 +124,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 		traceSphereElementList.Clear();
 	}
 
-	// Token: 0x0400A276 RID: 41590
+	// Token: 0x0400A660 RID: 42592
 	[Nullable(new byte[]
 	{
 		2,
@@ -132,7 +132,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 	})]
 	private static List<UTraceCapsuleElement> TraceCapsuleElementList;
 
-	// Token: 0x0400A277 RID: 41591
+	// Token: 0x0400A661 RID: 42593
 	[Nullable(new byte[]
 	{
 		2,
@@ -140,7 +140,7 @@ public class SceneBattleInteractPool : IStaticVariableResetter
 	})]
 	private static List<UTraceLineElement> TraceLineElementList;
 
-	// Token: 0x0400A278 RID: 41592
+	// Token: 0x0400A662 RID: 42594
 	[Nullable(new byte[]
 	{
 		2,

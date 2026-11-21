@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002953 RID: 10579
+	// Token: 0x02002C35 RID: 11317
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEnableSectionalUi : IUiOperationType
 	{
-		// Token: 0x0600EA8C RID: 60044 RVA: 0x002257A6 File Offset: 0x002239A6
-		[NullableContext(1)]
+		// Token: 0x0600F8F7 RID: 63735 RVA: 0x00242D86 File Offset: 0x00240F86
+		[NullableContext(0)]
 		public static IEnableSectionalUi Create(IEnableSectionalUi? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049A8 RID: 18856
-		// (get) Token: 0x0600EA8D RID: 60045 RVA: 0x002257C5 File Offset: 0x002239C5
+		// Token: 0x17004D3B RID: 19771
+		// (get) Token: 0x0600F8F8 RID: 63736 RVA: 0x00242DA5 File Offset: 0x00240FA5
 		public override EUiOperationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049A9 RID: 18857
-		// (get) Token: 0x0600EA8E RID: 60046 RVA: 0x002257D4 File Offset: 0x002239D4
+		// Token: 0x17004D3C RID: 19772
+		// (get) Token: 0x0600F8F9 RID: 63737 RVA: 0x00242DB4 File Offset: 0x00240FB4
 		public virtual bool? ShowMiniMap
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049AA RID: 18858
-		// (get) Token: 0x0600EA8F RID: 60047 RVA: 0x0022580C File Offset: 0x00223A0C
+		// Token: 0x17004D3D RID: 19773
+		// (get) Token: 0x0600F8FA RID: 63738 RVA: 0x00242DEC File Offset: 0x00240FEC
 		public virtual bool? ShowQuestTrack
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049AB RID: 18859
-		// (get) Token: 0x0600EA90 RID: 60048 RVA: 0x00225844 File Offset: 0x00223A44
+		// Token: 0x17004D3E RID: 19774
+		// (get) Token: 0x0600F8FB RID: 63739 RVA: 0x00242E24 File Offset: 0x00241024
 		public virtual bool? ShowEsc
 		{
 			get
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049AC RID: 18860
-		// (get) Token: 0x0600EA91 RID: 60049 RVA: 0x0022587C File Offset: 0x00223A7C
+		// Token: 0x17004D3F RID: 19775
+		// (get) Token: 0x0600F8FC RID: 63740 RVA: 0x00242E5C File Offset: 0x0024105C
 		public virtual bool? ShowSystem
 		{
 			get
@@ -90,8 +90,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049AD RID: 18861
-		// (get) Token: 0x0600EA92 RID: 60050 RVA: 0x002258B4 File Offset: 0x00223AB4
+		// Token: 0x17004D40 RID: 19776
+		// (get) Token: 0x0600F8FD RID: 63741 RVA: 0x00242E94 File Offset: 0x00241094
 		public virtual bool? ShowScreenEffect
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049AE RID: 18862
-		// (get) Token: 0x0600EA93 RID: 60051 RVA: 0x002258EC File Offset: 0x00223AEC
+		// Token: 0x17004D41 RID: 19777
+		// (get) Token: 0x0600F8FE RID: 63742 RVA: 0x00242ECC File Offset: 0x002410CC
 		public virtual bool? ShowRoleFormation
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049AF RID: 18863
-		// (get) Token: 0x0600EA94 RID: 60052 RVA: 0x00225924 File Offset: 0x00223B24
+		// Token: 0x17004D42 RID: 19778
+		// (get) Token: 0x0600F8FF RID: 63743 RVA: 0x00242F04 File Offset: 0x00241104
 		public virtual bool? ShowRoleStatus
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B0 RID: 18864
-		// (get) Token: 0x0600EA95 RID: 60053 RVA: 0x0022595C File Offset: 0x00223B5C
+		// Token: 0x17004D43 RID: 19779
+		// (get) Token: 0x0600F900 RID: 63744 RVA: 0x00242F3C File Offset: 0x0024113C
 		public virtual bool? ShowBossStatus
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B1 RID: 18865
-		// (get) Token: 0x0600EA96 RID: 60054 RVA: 0x00225998 File Offset: 0x00223B98
+		// Token: 0x17004D44 RID: 19780
+		// (get) Token: 0x0600F901 RID: 63745 RVA: 0x00242F78 File Offset: 0x00241178
 		public virtual bool? ShowGuideLayer
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B2 RID: 18866
-		// (get) Token: 0x0600EA97 RID: 60055 RVA: 0x002259D4 File Offset: 0x00223BD4
+		// Token: 0x17004D45 RID: 19781
+		// (get) Token: 0x0600F902 RID: 63746 RVA: 0x00242FB4 File Offset: 0x002411B4
 		public virtual bool? ShowMonsterHpBar
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B3 RID: 18867
-		// (get) Token: 0x0600EA98 RID: 60056 RVA: 0x00225A10 File Offset: 0x00223C10
+		// Token: 0x17004D46 RID: 19782
+		// (get) Token: 0x0600F903 RID: 63747 RVA: 0x00242FF0 File Offset: 0x002411F0
 		public virtual bool? ShowDamageText
 		{
 			get
@@ -188,8 +188,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B4 RID: 18868
-		// (get) Token: 0x0600EA99 RID: 60057 RVA: 0x00225A4C File Offset: 0x00223C4C
+		// Token: 0x17004D47 RID: 19783
+		// (get) Token: 0x0600F904 RID: 63748 RVA: 0x0024302C File Offset: 0x0024122C
 		public virtual bool? ShowPing
 		{
 			get
@@ -202,8 +202,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B5 RID: 18869
-		// (get) Token: 0x0600EA9A RID: 60058 RVA: 0x00225A88 File Offset: 0x00223C88
+		// Token: 0x17004D48 RID: 19784
+		// (get) Token: 0x0600F905 RID: 63749 RVA: 0x00243068 File Offset: 0x00241268
 		public virtual bool? ShowOther
 		{
 			get
@@ -216,8 +216,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B6 RID: 18870
-		// (get) Token: 0x0600EA9B RID: 60059 RVA: 0x00225AC4 File Offset: 0x00223CC4
+		// Token: 0x17004D49 RID: 19785
+		// (get) Token: 0x0600F906 RID: 63750 RVA: 0x002430A4 File Offset: 0x002412A4
 		public virtual List<EUiElement> AlwaysShowUiSections
 		{
 			get
@@ -241,8 +241,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049B7 RID: 18871
-		// (get) Token: 0x0600EA9C RID: 60060 RVA: 0x00225B40 File Offset: 0x00223D40
+		// Token: 0x17004D4A RID: 19786
+		// (get) Token: 0x0600F907 RID: 63751 RVA: 0x00243120 File Offset: 0x00241320
 		public virtual bool? ShowPositionOfficial
 		{
 			get
@@ -255,13 +255,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008143 RID: 33091
+		// Token: 0x0400881F RID: 34847
 		private IEnableSectionalUi Instance;
 
-		// Token: 0x04008144 RID: 33092
+		// Token: 0x04008820 RID: 34848
 		private List<EUiElement> _AlwaysShowUiSectionsCache;
 
-		// Token: 0x04008145 RID: 33093
+		// Token: 0x04008821 RID: 34849
 		private bool _AlwaysShowUiSectionsInited;
 	}
 }

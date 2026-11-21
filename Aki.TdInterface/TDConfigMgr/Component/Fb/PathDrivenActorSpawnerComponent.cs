@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E20 RID: 3616
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F1C RID: 3868
 	public class PathDrivenActorSpawnerComponent : IComponentBase
 	{
-		// Token: 0x060051D2 RID: 20946 RVA: 0x000C9B4A File Offset: 0x000C7D4A
+		// Token: 0x060056F9 RID: 22265 RVA: 0x000D5412 File Offset: 0x000D3612
 		public static PathDrivenActorSpawnerComponent Create(IPathDrivenActorSpawnerComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B4F RID: 6991
-		// (get) Token: 0x060051D3 RID: 20947 RVA: 0x000C9B6C File Offset: 0x000C7D6C
+		// Token: 0x17001CBC RID: 7356
+		// (get) Token: 0x060056FA RID: 22266 RVA: 0x000D5434 File Offset: 0x000D3634
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B50 RID: 6992
-		// (get) Token: 0x060051D4 RID: 20948 RVA: 0x000C9BA4 File Offset: 0x000C7DA4
+		// Token: 0x17001CBD RID: 7357
+		// (get) Token: 0x060056FB RID: 22267 RVA: 0x000D546C File Offset: 0x000D366C
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B51 RID: 6993
-		// (get) Token: 0x060051D5 RID: 20949 RVA: 0x000C9BBA File Offset: 0x000C7DBA
+		// Token: 0x17001CBE RID: 7358
+		// (get) Token: 0x060056FC RID: 22268 RVA: 0x000D5482 File Offset: 0x000D3682
 		public virtual IIntervalSplineSpawn SpawnRule
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B52 RID: 6994
-		// (get) Token: 0x060051D6 RID: 20950 RVA: 0x000C9BEE File Offset: 0x000C7DEE
+		// Token: 0x17001CBF RID: 7359
+		// (get) Token: 0x060056FD RID: 22269 RVA: 0x000D54B6 File Offset: 0x000D36B6
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -79,20 +77,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F1F RID: 12063
+		// Token: 0x040031E7 RID: 12775
 		private IPathDrivenActorSpawnerComponent Instance;
 
-		// Token: 0x04002F20 RID: 12064
+		// Token: 0x040031E8 RID: 12776
 		[Nullable(2)]
 		private IIntervalSplineSpawn _SpawnRuleCache;
 
-		// Token: 0x04002F21 RID: 12065
+		// Token: 0x040031E9 RID: 12777
 		private bool _SpawnRuleInited;
 
-		// Token: 0x04002F22 RID: 12066
+		// Token: 0x040031EA RID: 12778
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04002F23 RID: 12067
+		// Token: 0x040031EB RID: 12779
 		private bool _TargetInited;
 	}
 }

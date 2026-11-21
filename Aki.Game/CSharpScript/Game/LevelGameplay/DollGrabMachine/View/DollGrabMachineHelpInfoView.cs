@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EEB RID: 28395
+	// Token: 0x0200606B RID: 24683
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabMachineHelpInfoView : UiViewBase
 	{
-		// Token: 0x06045273 RID: 283251 RVA: 0x0111A987 File Offset: 0x01118B87
+		// Token: 0x0603B41C RID: 242716 RVA: 0x010C4717 File Offset: 0x010C2917
 		public DollGrabMachineHelpInfoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045274 RID: 283252 RVA: 0x0111A9A4 File Offset: 0x01118BA4
+		// Token: 0x0603B41D RID: 242717 RVA: 0x010C4734 File Offset: 0x010C2934
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045275 RID: 283253 RVA: 0x0111AA70 File Offset: 0x01118C70
+		// Token: 0x0603B41E RID: 242718 RVA: 0x010C4800 File Offset: 0x010C2A00
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DollGrabMachineHelpInfoView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045276 RID: 283254 RVA: 0x0111AAB3 File Offset: 0x01118CB3
+		// Token: 0x0603B41F RID: 242719 RVA: 0x010C4843 File Offset: 0x010C2A43
 		protected override void OnBeforeShow()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			item.SetUIActive(true);
 		}
 
-		// Token: 0x06045277 RID: 283255 RVA: 0x0111AAD8 File Offset: 0x01118CD8
+		// Token: 0x0603B420 RID: 242720 RVA: 0x010C4868 File Offset: 0x010C2A68
 		private TabItem CreateTabItem()
 		{
 			TabItem tabItem = new TabItem();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return tabItem;
 		}
 
-		// Token: 0x06045278 RID: 283256 RVA: 0x0111AAF4 File Offset: 0x01118CF4
+		// Token: 0x0603B421 RID: 242721 RVA: 0x010C4884 File Offset: 0x010C2A84
 		private void OnClickTab(int tabIndex)
 		{
 			if (this.SelectedTabIndex == tabIndex)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			sequencePlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x06045279 RID: 283257 RVA: 0x0111AB4C File Offset: 0x01118D4C
+		// Token: 0x0603B422 RID: 242722 RVA: 0x010C48DC File Offset: 0x010C2ADC
 		private void RefreshDescriptionScroll()
 		{
 			this.InitScrollViewData();
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			setMultiTemplateScrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x0604527A RID: 283258 RVA: 0x0111AB84 File Offset: 0x01118D84
+		// Token: 0x0603B423 RID: 242723 RVA: 0x010C4914 File Offset: 0x010C2B14
 		private void InitScrollViewData()
 		{
 			this.ScrollDataList = new List<IMultiTemplateGridData>();
@@ -157,11 +157,11 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ScrollDataList.Add(dollPlayDescriptionItemTemplateData2);
 		}
 
-		// Token: 0x04024054 RID: 147540
+		// Token: 0x0401F307 RID: 127751
 		[Nullable(2)]
 		private DollGrabMachineHelpInfoCaptionPanel CaptionPanel;
 
-		// Token: 0x04024055 RID: 147541
+		// Token: 0x0401F308 RID: 127752
 		[Nullable(new byte[]
 		{
 			2,
@@ -169,17 +169,17 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 		})]
 		private GenericLayout<TabItem, int> TabLayout;
 
-		// Token: 0x04024056 RID: 147542
+		// Token: 0x0401F309 RID: 127753
 		[Nullable(2)]
 		private MultiTemplateScrollView SetMultiTemplateScrollView;
 
-		// Token: 0x04024057 RID: 147543
+		// Token: 0x0401F30A RID: 127754
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04024058 RID: 147544
+		// Token: 0x0401F30B RID: 127755
 		private List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x04024059 RID: 147545
+		// Token: 0x0401F30C RID: 127756
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

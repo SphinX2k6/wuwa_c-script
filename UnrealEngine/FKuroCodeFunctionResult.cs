@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018C3 RID: 6339
+	// Token: 0x020003DE RID: 990
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroCodeFunctionResult")]
 	[UnrealStructLayout(904, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 904)]
 	public class FKuroCodeFunctionResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060176CF RID: 95951 RVA: 0x00224218 File Offset: 0x00222418
+		// Token: 0x06006149 RID: 24905 RVA: 0x0008B1AD File Offset: 0x000893AD
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroCodeFunctionResult._ScriptStructPtr != 0) ? FKuroCodeFunctionResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroCodeFunctionResult", ref FKuroCodeFunctionResult._ScriptStructPtr);
 		}
 
-		// Token: 0x17005E99 RID: 24217
-		// (get) Token: 0x060176D0 RID: 95952 RVA: 0x0022423C File Offset: 0x0022243C
-		// (set) Token: 0x060176D1 RID: 95953 RVA: 0x0022424C File Offset: 0x0022244C
+		// Token: 0x170013D1 RID: 5073
+		// (get) Token: 0x0600614A RID: 24906 RVA: 0x0008B1D1 File Offset: 0x000893D1
+		// (set) Token: 0x0600614B RID: 24907 RVA: 0x0008B1E1 File Offset: 0x000893E1
 		public unsafe bool Success
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E9A RID: 24218
-		// (get) Token: 0x060176D2 RID: 95954 RVA: 0x0022425D File Offset: 0x0022245D
-		// (set) Token: 0x060176D3 RID: 95955 RVA: 0x00224271 File Offset: 0x00222471
+		// Token: 0x170013D2 RID: 5074
+		// (get) Token: 0x0600614C RID: 24908 RVA: 0x0008B1F2 File Offset: 0x000893F2
+		// (set) Token: 0x0600614D RID: 24909 RVA: 0x0008B206 File Offset: 0x00089406
 		public unsafe string ErrorMessage
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E9B RID: 24219
-		// (get) Token: 0x060176D4 RID: 95956 RVA: 0x00224288 File Offset: 0x00222488
-		// (set) Token: 0x060176D5 RID: 95957 RVA: 0x002242CB File Offset: 0x002224CB
+		// Token: 0x170013D3 RID: 5075
+		// (get) Token: 0x0600614E RID: 24910 RVA: 0x0008B21C File Offset: 0x0008941C
+		// (set) Token: 0x0600614F RID: 24911 RVA: 0x0008B25F File Offset: 0x0008945F
 		public FKuroCodeFunctionPayload Values
 		{
 			get
@@ -70,64 +70,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060176D6 RID: 95958 RVA: 0x002242EC File Offset: 0x002224EC
+		// Token: 0x06006150 RID: 24912 RVA: 0x0008B280 File Offset: 0x00089480
 		public FKuroCodeFunctionResult()
 		{
 		}
 
-		// Token: 0x060176D7 RID: 95959 RVA: 0x002242F4 File Offset: 0x002224F4
-		public FKuroCodeFunctionResult(bool Success, string ErrorMessage, FKuroCodeFunctionPayload Values)
-		{
-			this.Success = Success;
-			this.ErrorMessage = ErrorMessage;
-			this.Values = Values;
-		}
-
-		// Token: 0x060176D8 RID: 95960 RVA: 0x00224311 File Offset: 0x00222511
+		// Token: 0x06006151 RID: 24913 RVA: 0x0008B288 File Offset: 0x00089488
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroCodeFunctionResult.StaticStruct();
 		}
 
-		// Token: 0x060176D9 RID: 95961 RVA: 0x0022431D File Offset: 0x0022251D
+		// Token: 0x06006152 RID: 24914 RVA: 0x0008B294 File Offset: 0x00089494
 		[NullableContext(2)]
 		public FKuroCodeFunctionResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060176DA RID: 95962 RVA: 0x00224327 File Offset: 0x00222527
+		// Token: 0x06006153 RID: 24915 RVA: 0x0008B29E File Offset: 0x0008949E
 		public FKuroCodeFunctionResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060176DB RID: 95963 RVA: 0x00224332 File Offset: 0x00222532
+		// Token: 0x06006154 RID: 24916 RVA: 0x0008B2A9 File Offset: 0x000894A9
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroCodeFunctionResult(Pointer, false, true);
 		}
 
-		// Token: 0x060176DC RID: 95964 RVA: 0x0022433C File Offset: 0x0022253C
+		// Token: 0x06006155 RID: 24917 RVA: 0x0008B2B3 File Offset: 0x000894B3
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroCodeFunctionResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CBDD RID: 52189
+		// Token: 0x0400297E RID: 10622
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroCodeFunctionResult";
 
-		// Token: 0x0400CBDE RID: 52190
+		// Token: 0x0400297F RID: 10623
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CBDF RID: 52191
+		// Token: 0x04002980 RID: 10624
 		internal static int __PropertyOffset_Success;
 
-		// Token: 0x0400CBE0 RID: 52192
+		// Token: 0x04002981 RID: 10625
 		internal static int __PropertyOffset_ErrorMessage;
 
-		// Token: 0x0400CBE1 RID: 52193
+		// Token: 0x04002982 RID: 10626
 		internal static int __PropertyOffset_Values;
 
-		// Token: 0x0400CBE2 RID: 52194
+		// Token: 0x04002983 RID: 10627
 		[Nullable(2)]
 		private FKuroCodeFunctionPayload _Values;
 	}

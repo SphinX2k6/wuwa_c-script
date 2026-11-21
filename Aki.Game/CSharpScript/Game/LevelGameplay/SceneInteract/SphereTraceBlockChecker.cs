@@ -4,24 +4,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A7B RID: 27259
+	// Token: 0x02005BD8 RID: 23512
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SphereTraceBlockChecker : SceneInteractBlockChecker
 	{
-		// Token: 0x06043C16 RID: 277526 RVA: 0x01095B8F File Offset: 0x01093D8F
+		// Token: 0x06039C64 RID: 236644 RVA: 0x0103A3CF File Offset: 0x010385CF
 		public SphereTraceBlockChecker(string TraceProfileKey)
 		{
 			this.TraceProfileKey = TraceProfileKey;
 		}
 
-		// Token: 0x06043C17 RID: 277527 RVA: 0x01095BCA File Offset: 0x01093DCA
+		// Token: 0x06039C65 RID: 236645 RVA: 0x0103A40A File Offset: 0x0103860A
 		public override void Dispose()
 		{
 			this.SphereTrace = null;
 		}
 
-		// Token: 0x06043C18 RID: 277528 RVA: 0x01095BD4 File Offset: 0x01093DD4
+		// Token: 0x06039C66 RID: 236646 RVA: 0x0103A414 File Offset: 0x01038614
 		public override bool IsBlocked(Vector destLocation, ISceneInteractSearchParams @params, bool useAscendSegment, Func<bool, UTraceBaseElement, bool> filterTraceResult, bool debugDraw, [Nullable(2)] AActor describeIgnoreActor = null)
 		{
 			UTraceSphereElement orCreateSphereTrace = this.GetOrCreateSphereTrace(@params);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return flag2;
 		}
 
-		// Token: 0x06043C19 RID: 277529 RVA: 0x01095D14 File Offset: 0x01093F14
+		// Token: 0x06039C67 RID: 236647 RVA: 0x0103A554 File Offset: 0x01038754
 		private string DescribeBlocker(UTraceBaseElement element, [Nullable(2)] AActor ignoreActor)
 		{
 			UKuroHitResult hitResult = element.HitResult;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return "";
 		}
 
-		// Token: 0x06043C1A RID: 277530 RVA: 0x01095D74 File Offset: 0x01093F74
+		// Token: 0x06039C68 RID: 236648 RVA: 0x0103A5B4 File Offset: 0x010387B4
 		private void CalcAscendMidLocation(Vector charLoc, Vector destLocation, ISceneInteractSearchParams @params, Vector outMidLocation)
 		{
 			outMidLocation.DeepCopy(charLoc);
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			outMidLocation.AdditionEqual(this.TmpUpDir);
 		}
 
-		// Token: 0x06043C1B RID: 277531 RVA: 0x01095E3C File Offset: 0x0109403C
+		// Token: 0x06039C69 RID: 236649 RVA: 0x0103A67C File Offset: 0x0103887C
 		[return: Nullable(2)]
 		private UTraceSphereElement GetOrCreateSphereTrace(ISceneInteractSearchParams @params)
 		{
@@ -160,26 +160,26 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return this.SphereTrace;
 		}
 
-		// Token: 0x04023667 RID: 144999
+		// Token: 0x0401E859 RID: 125017
 		private const int SPHERE_TRACE_RADIUS = 1;
 
-		// Token: 0x04023668 RID: 145000
+		// Token: 0x0401E85A RID: 125018
 		[Nullable(2)]
 		private UTraceSphereElement SphereTrace;
 
-		// Token: 0x04023669 RID: 145001
+		// Token: 0x0401E85B RID: 125019
 		private readonly Vector EndLocation = Vector.Create();
 
-		// Token: 0x0402366A RID: 145002
+		// Token: 0x0401E85C RID: 125020
 		private readonly Vector AscendMidLocation = Vector.Create();
 
-		// Token: 0x0402366B RID: 145003
+		// Token: 0x0401E85D RID: 125021
 		private readonly Vector TmpUpDir = Vector.Create();
 
-		// Token: 0x0402366C RID: 145004
+		// Token: 0x0401E85E RID: 125022
 		private readonly Vector TmpToDest = Vector.Create();
 
-		// Token: 0x0402366D RID: 145005
+		// Token: 0x0401E85F RID: 125023
 		private readonly string TraceProfileKey;
 	}
 }

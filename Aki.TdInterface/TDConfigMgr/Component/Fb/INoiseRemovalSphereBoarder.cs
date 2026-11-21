@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E4A RID: 3658
+	// Token: 0x02000F46 RID: 3910
 	public class INoiseRemovalSphereBoarder : INoiseRemovalBoarderBase
 	{
-		// Token: 0x0600529A RID: 21146 RVA: 0x000CB437 File Offset: 0x000C9637
-		[NullableContext(1)]
+		// Token: 0x060057C1 RID: 22465 RVA: 0x000D6CFF File Offset: 0x000D4EFF
 		public static INoiseRemovalSphereBoarder Create(INoiseRemovalSphereBoarder? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BC3 RID: 7107
-		// (get) Token: 0x0600529B RID: 21147 RVA: 0x000CB456 File Offset: 0x000C9656
+		// Token: 0x17001D30 RID: 7472
+		// (get) Token: 0x060057C2 RID: 22466 RVA: 0x000D6D1E File Offset: 0x000D4F1E
 		public override ENoiseRemovalBoarderShape Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC4 RID: 7108
-		// (get) Token: 0x0600529C RID: 21148 RVA: 0x000CB463 File Offset: 0x000C9663
+		// Token: 0x17001D31 RID: 7473
+		// (get) Token: 0x060057C3 RID: 22467 RVA: 0x000D6D2B File Offset: 0x000D4F2B
 		public virtual float Radius
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F9D RID: 12189
+		// Token: 0x04003265 RID: 12901
 		private INoiseRemovalSphereBoarder Instance;
 	}
 }

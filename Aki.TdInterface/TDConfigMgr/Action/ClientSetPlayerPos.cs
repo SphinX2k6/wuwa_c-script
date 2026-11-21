@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001505 RID: 5381
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001660 RID: 5728
 	public class ClientSetPlayerPos : ActionParams
 	{
-		// Token: 0x06007A52 RID: 31314 RVA: 0x00124234 File Offset: 0x00122434
+		// Token: 0x06008125 RID: 33061 RVA: 0x00132F14 File Offset: 0x00131114
 		private ClientSetPlayerPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A53 RID: 31315 RVA: 0x0012426C File Offset: 0x0012246C
+		// Token: 0x06008126 RID: 33062 RVA: 0x00132F4C File Offset: 0x0013114C
 		public static ClientSetPlayerPos Create([Nullable(2)] ClientSetPlayerPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A54 RID: 31316 RVA: 0x0012427F File Offset: 0x0012247F
+		// Token: 0x06008127 RID: 33063 RVA: 0x00132F5F File Offset: 0x0013115F
 		public static ClientSetPlayerPos CreateFromSetValue([Nullable(2)] ClientSetPlayerPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A55 RID: 31317 RVA: 0x00124292 File Offset: 0x00122492
+		// Token: 0x06008128 RID: 33064 RVA: 0x00132F72 File Offset: 0x00131172
 		public ClientSetPlayerPos_SetValue ToSetValue()
 		{
 			return new ClientSetPlayerPos_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028D9 RID: 10457
-		// (get) Token: 0x06007A56 RID: 31318 RVA: 0x001242A5 File Offset: 0x001224A5
-		// (set) Token: 0x06007A57 RID: 31319 RVA: 0x001242CC File Offset: 0x001224CC
+		// Token: 0x17002AC3 RID: 10947
+		// (get) Token: 0x06008129 RID: 33065 RVA: 0x00132F85 File Offset: 0x00131185
+		// (set) Token: 0x0600812A RID: 33066 RVA: 0x00132FAC File Offset: 0x001311AC
 		public virtual IClientTeleportConfig TelePortConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046DD RID: 18141
+		// Token: 0x04004A7C RID: 19068
 		[Nullable(2)]
 		protected new ClientSetPlayerPos FbInstance;
 
-		// Token: 0x040046DE RID: 18142
+		// Token: 0x04004A7D RID: 19069
 		[Nullable(2)]
 		protected ClientSetPlayerPos_SetValue PocoInterface;
 	}

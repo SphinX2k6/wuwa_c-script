@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026ED RID: 9965
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029B1 RID: 10673
 	public class ISetMonsterMoveWithSpline : IExecBattleActionType
 	{
-		// Token: 0x0600DE90 RID: 56976 RVA: 0x00210469 File Offset: 0x0020E669
+		// Token: 0x0600EC6D RID: 60525 RVA: 0x0022CCE2 File Offset: 0x0022AEE2
 		public static ISetMonsterMoveWithSpline Create(ISetMonsterMoveWithSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004278 RID: 17016
-		// (get) Token: 0x0600DE91 RID: 56977 RVA: 0x00210488 File Offset: 0x0020E688
+		// Token: 0x170045B9 RID: 17849
+		// (get) Token: 0x0600EC6E RID: 60526 RVA: 0x0022CD01 File Offset: 0x0022AF01
 		public override EExecBattleActionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004279 RID: 17017
-		// (get) Token: 0x0600DE92 RID: 56978 RVA: 0x00210498 File Offset: 0x0020E698
+		// Token: 0x170045BA RID: 17850
+		// (get) Token: 0x0600EC6F RID: 60527 RVA: 0x0022CD10 File Offset: 0x0022AF10
 		public virtual List<IMonsterMoveSplineConfig> MoveSplineConfigs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B89 RID: 31625
+		// Token: 0x04008229 RID: 33321
 		private ISetMonsterMoveWithSpline Instance;
 
-		// Token: 0x04007B8A RID: 31626
+		// Token: 0x0400822A RID: 33322
 		private List<IMonsterMoveSplineConfig> _MoveSplineConfigsCache;
 
-		// Token: 0x04007B8B RID: 31627
+		// Token: 0x0400822B RID: 33323
 		private bool _MoveSplineConfigsInited;
 	}
 }

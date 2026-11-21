@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000858 RID: 2136
+	// Token: 0x02000874 RID: 2164
 	public class ConfigRogueResSynergyTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003222 RID: 12834 RVA: 0x00174EF3 File Offset: 0x001730F3
+		// Token: 0x060032CA RID: 13002 RVA: 0x0017C1DB File Offset: 0x0017A3DB
 		static ConfigRogueResSynergyTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueResSynergyTypeById.CreateStaticDefaultValue), new Action(ConfigRogueResSynergyTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003223 RID: 12835 RVA: 0x00174F14 File Offset: 0x00173114
+		// Token: 0x060032CB RID: 13003 RVA: 0x0017C1FC File Offset: 0x0017A3FC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueResSynergyTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003224 RID: 12836 RVA: 0x00174F93 File Offset: 0x00173193
+		// Token: 0x060032CC RID: 13004 RVA: 0x0017C27B File Offset: 0x0017A47B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueResSynergyTypeById.LogPair = null;
 			ConfigRogueResSynergyTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06003225 RID: 12837 RVA: 0x00174FA1 File Offset: 0x001731A1
+		// Token: 0x060032CD RID: 13005 RVA: 0x0017C289 File Offset: 0x0017A489
 		public static void Init()
 		{
 			ConfigRogueResSynergyTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueResSynergyTypeById.HandleId, "db_permanentrogue.db", "select BinData from `RogueResSynergyType` where Id=?");
 		}
 
-		// Token: 0x06003226 RID: 12838 RVA: 0x00174FBC File Offset: 0x001731BC
+		// Token: 0x060032CE RID: 13006 RVA: 0x0017C2A4 File Offset: 0x0017A4A4
 		public static RogueResSynergyType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueResSynergyTypeById.HandleId, ConfigRogueResSynergyTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueResSynergyType?(rootAsRogueResSynergyType);
 		}
 
-		// Token: 0x04003A4E RID: 14926
+		// Token: 0x04003B12 RID: 15122
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x04003A4F RID: 14927
+		// Token: 0x04003B13 RID: 15123
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x04003A50 RID: 14928
+		// Token: 0x04003B14 RID: 15124
 		private const string TABLE = "RogueResSynergyType";
 
-		// Token: 0x04003A51 RID: 14929
+		// Token: 0x04003B15 RID: 15125
 		private const string COMMAND = "select BinData from `RogueResSynergyType` where Id=?";
 
-		// Token: 0x04003A52 RID: 14930
+		// Token: 0x04003B16 RID: 15126
 		private const string KEY_PREFIX = "RogueResSynergyTypeById";
 
-		// Token: 0x04003A53 RID: 14931
+		// Token: 0x04003B17 RID: 15127
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003A54 RID: 14932
+		// Token: 0x04003B18 RID: 15128
 		private static int HandleId;
 	}
 }

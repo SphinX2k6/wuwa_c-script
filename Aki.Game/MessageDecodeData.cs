@@ -1,40 +1,40 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A8E RID: 6798
+// Token: 0x02000F4D RID: 3917
 [NullableContext(1)]
 [Nullable(0)]
 public class MessageDecodeData : CommonLogData
 {
-	// Token: 0x17001072 RID: 4210
-	// (get) Token: 0x0600C89A RID: 51354 RVA: 0x002DBECC File Offset: 0x002DA0CC
-	// (set) Token: 0x0600C89B RID: 51355 RVA: 0x002DBED4 File Offset: 0x002DA0D4
+	// Token: 0x17001097 RID: 4247
+	// (get) Token: 0x06009CAB RID: 40107 RVA: 0x002E7050 File Offset: 0x002E5250
+	// (set) Token: 0x06009CAC RID: 40108 RVA: 0x002E7058 File Offset: 0x002E5258
 	public override string event_id { get; set; } = "1022";
 
-	// Token: 0x04005C72 RID: 23666
+	// Token: 0x04005D41 RID: 23873
 	public uint i_kcp_conv;
 
-	// Token: 0x04005C73 RID: 23667
+	// Token: 0x04005D42 RID: 23874
 	public int i_seq_no;
 
-	// Token: 0x04005C74 RID: 23668
+	// Token: 0x04005D43 RID: 23875
 	public int i_message_id;
 
-	// Token: 0x04005C75 RID: 23669
+	// Token: 0x04005D44 RID: 23876
 	public int i_crc;
 
-	// Token: 0x04005C76 RID: 23670
+	// Token: 0x04005D45 RID: 23877
 	public int i_error_code;
 
-	// Token: 0x04005C77 RID: 23671
+	// Token: 0x04005D46 RID: 23878
 	public string s_channel_id = string.Empty;
 
-	// Token: 0x04005C78 RID: 23672
+	// Token: 0x04005D47 RID: 23879
 	public string s_client_ip = string.Empty;
 
-	// Token: 0x04005C79 RID: 23673
+	// Token: 0x04005D48 RID: 23880
 	public string s_before_hexdump = string.Empty;
 
-	// Token: 0x04005C7A RID: 23674
+	// Token: 0x04005D49 RID: 23881
 	public string s_after_hexdump = string.Empty;
 }

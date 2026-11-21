@@ -14,25 +14,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001085 RID: 4229
+// Token: 0x02000539 RID: 1337
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class RhythmGameController : UiControllerBase
 {
-	// Token: 0x06006DBB RID: 28091 RVA: 0x001634DE File Offset: 0x001616DE
+	// Token: 0x06004150 RID: 16720 RVA: 0x0016BE12 File Offset: 0x0016A012
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06006DBC RID: 28092 RVA: 0x001634FC File Offset: 0x001616FC
+	// Token: 0x06004151 RID: 16721 RVA: 0x0016BE30 File Offset: 0x0016A030
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x06006DBD RID: 28093 RVA: 0x0016351C File Offset: 0x0016171C
+	// Token: 0x06004152 RID: 16722 RVA: 0x0016BE50 File Offset: 0x0016A050
 	private void OnWorldDone()
 	{
 		this.FeverTimes = 0;
@@ -58,7 +58,7 @@ public class RhythmGameController : UiControllerBase
 		}, 60000);
 	}
 
-	// Token: 0x06006DBE RID: 28094 RVA: 0x001635D8 File Offset: 0x001617D8
+	// Token: 0x06004153 RID: 16723 RVA: 0x0016BF0C File Offset: 0x0016A10C
 	protected override bool OnLeaveLevel()
 	{
 		if (!this.IsEnterRhythmGame)
@@ -101,7 +101,7 @@ public class RhythmGameController : UiControllerBase
 		return base.OnLeaveLevel();
 	}
 
-	// Token: 0x06006DBF RID: 28095 RVA: 0x00163718 File Offset: 0x00161918
+	// Token: 0x06004154 RID: 16724 RVA: 0x0016C04C File Offset: 0x0016A24C
 	private UniTask StartRhythmGame()
 	{
 		RhythmGameController.<StartRhythmGame>d__34 <StartRhythmGame>d__;
@@ -112,7 +112,7 @@ public class RhythmGameController : UiControllerBase
 		return <StartRhythmGame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006DC0 RID: 28096 RVA: 0x0016375C File Offset: 0x0016195C
+	// Token: 0x06004155 RID: 16725 RVA: 0x0016C090 File Offset: 0x0016A290
 	private UniTask LoadRhythmGameItemAsync()
 	{
 		RhythmGameController.<LoadRhythmGameItemAsync>d__35 <LoadRhythmGameItemAsync>d__;
@@ -123,7 +123,7 @@ public class RhythmGameController : UiControllerBase
 		return <LoadRhythmGameItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006DC1 RID: 28097 RVA: 0x001637A0 File Offset: 0x001619A0
+	// Token: 0x06004156 RID: 16726 RVA: 0x0016C0D4 File Offset: 0x0016A2D4
 	[NullableContext(0)]
 	private UniTask<bool> LoadShipActorAsync()
 	{
@@ -135,7 +135,7 @@ public class RhythmGameController : UiControllerBase
 		return <LoadShipActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006DC2 RID: 28098 RVA: 0x001637E4 File Offset: 0x001619E4
+	// Token: 0x06004157 RID: 16727 RVA: 0x0016C118 File Offset: 0x0016A318
 	[NullableContext(0)]
 	private UniTask<bool> LoadRhythmGameConfigAsync()
 	{
@@ -146,7 +146,7 @@ public class RhythmGameController : UiControllerBase
 		return <LoadRhythmGameConfigAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006DC3 RID: 28099 RVA: 0x00163820 File Offset: 0x00161A20
+	// Token: 0x06004158 RID: 16728 RVA: 0x0016C154 File Offset: 0x0016A354
 	private void StartRhythmGameInternal(int roleId)
 	{
 		Log.Instance.Info(ELogModule.RhythmGame, ELogAuthor.CH, "----[StartRhythmGameInternal]----", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -325,7 +325,7 @@ public class RhythmGameController : UiControllerBase
 		this.PlayStartingCameraAnim();
 	}
 
-	// Token: 0x06006DC4 RID: 28100 RVA: 0x00163EBA File Offset: 0x001620BA
+	// Token: 0x06004159 RID: 16729 RVA: 0x0016C7EE File Offset: 0x0016A9EE
 	private void InitTimerSystem()
 	{
 		if (this.RhythmGameTimerSystem != null)
@@ -335,7 +335,7 @@ public class RhythmGameController : UiControllerBase
 		this.RhythmGameTimerSystem = new TimerSystemInstance();
 	}
 
-	// Token: 0x06006DC5 RID: 28101 RVA: 0x00163EDA File Offset: 0x001620DA
+	// Token: 0x0600415A RID: 16730 RVA: 0x0016C80E File Offset: 0x0016AA0E
 	private void ClearTimerSystem()
 	{
 		if (this.RhythmGameTimerSystem != null)
@@ -345,7 +345,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DC6 RID: 28102 RVA: 0x00163EF8 File Offset: 0x001620F8
+	// Token: 0x0600415B RID: 16731 RVA: 0x0016C82C File Offset: 0x0016AA2C
 	public unsafe void GetOffsetFromMusic()
 	{
 		if (!this.IsBeginPlayMusic || this.MusicEventHandle == 0 || this.IsPause)
@@ -387,7 +387,7 @@ public class RhythmGameController : UiControllerBase
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06006DC7 RID: 28103 RVA: 0x00164065 File Offset: 0x00162265
+	// Token: 0x0600415C RID: 16732 RVA: 0x0016C999 File Offset: 0x0016AB99
 	public UKuroRhythmGameShipController GetRhythmGameShipController()
 	{
 		UKuroRhythmGameManager rhythmGameManager = this.RhythmGameManager;
@@ -398,7 +398,7 @@ public class RhythmGameController : UiControllerBase
 		return rhythmGameManager.ShipController;
 	}
 
-	// Token: 0x06006DC8 RID: 28104 RVA: 0x00164078 File Offset: 0x00162278
+	// Token: 0x0600415D RID: 16733 RVA: 0x0016C9AC File Offset: 0x0016ABAC
 	public void OnPlayerInputDown(EKuroRhythmGameInputType type)
 	{
 		if (type == EKuroRhythmGameInputType.Line)
@@ -417,7 +417,7 @@ public class RhythmGameController : UiControllerBase
 		rhythmGameManager.OnPlayerInputDown(type);
 	}
 
-	// Token: 0x06006DC9 RID: 28105 RVA: 0x0016409F File Offset: 0x0016229F
+	// Token: 0x0600415E RID: 16734 RVA: 0x0016C9D3 File Offset: 0x0016ABD3
 	public void OnPlayerInputUp(EKuroRhythmGameInputType type)
 	{
 		if (type == EKuroRhythmGameInputType.Line)
@@ -436,7 +436,7 @@ public class RhythmGameController : UiControllerBase
 		rhythmGameManager.OnPlayerInputUp(type);
 	}
 
-	// Token: 0x06006DCA RID: 28106 RVA: 0x001640C8 File Offset: 0x001622C8
+	// Token: 0x0600415F RID: 16735 RVA: 0x0016C9FC File Offset: 0x0016ABFC
 	private unsafe void OnGameEvent(EKuroRhythmChartEventType eventType)
 	{
 		Log instance = Log.Instance;
@@ -486,7 +486,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DCB RID: 28107 RVA: 0x00164214 File Offset: 0x00162414
+	// Token: 0x06004160 RID: 16736 RVA: 0x0016CB48 File Offset: 0x0016AD48
 	private void SpawnStartEffect()
 	{
 		RhythmGamePerformanceCameraConfig startCameraConfig = RhythmGameModel.Instance.RhythmGameConfig.StartCameraConfig;
@@ -515,7 +515,7 @@ public class RhythmGameController : UiControllerBase
 		}, (startCameraConfig.Time + 2f) * 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06006DCC RID: 28108 RVA: 0x00164318 File Offset: 0x00162518
+	// Token: 0x06004161 RID: 16737 RVA: 0x0016CC4C File Offset: 0x0016AE4C
 	private void LoadMusicAndPause()
 	{
 		if (this.MusicEvent != null)
@@ -547,7 +547,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DCD RID: 28109 RVA: 0x001643A5 File Offset: 0x001625A5
+	// Token: 0x06004162 RID: 16738 RVA: 0x0016CCD9 File Offset: 0x0016AED9
 	private void PlayStartingCameraAnim()
 	{
 		UKuroRhythmGameManager rhythmGameManager = this.RhythmGameManager;
@@ -565,7 +565,7 @@ public class RhythmGameController : UiControllerBase
 		}, this.TotalOffset * 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x06006DCE RID: 28110 RVA: 0x001643E4 File Offset: 0x001625E4
+	// Token: 0x06004163 RID: 16739 RVA: 0x0016CD18 File Offset: 0x0016AF18
 	private void ClearCache()
 	{
 		if (this.SplineActor != null && this.SplineActor.IsValid())
@@ -653,7 +653,7 @@ public class RhythmGameController : UiControllerBase
 		this.CachedTimeOffset = 0f;
 	}
 
-	// Token: 0x06006DCF RID: 28111 RVA: 0x00164754 File Offset: 0x00162954
+	// Token: 0x06004164 RID: 16740 RVA: 0x0016D088 File Offset: 0x0016B288
 	private void RhythmGameManagerTick(float deltaTime)
 	{
 		if (this.IsPause)
@@ -687,7 +687,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DD0 RID: 28112 RVA: 0x00164848 File Offset: 0x00162A48
+	// Token: 0x06004165 RID: 16741 RVA: 0x0016D17C File Offset: 0x0016B37C
 	private unsafe void OnNoteResult(int noteIndex, EKuroRhythmGameNoteType noteType, EKuroRhythmGameRating result, FVectorDouble worldPosition, FQuat rotation)
 	{
 		Log instance = Log.Instance;
@@ -716,7 +716,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DD1 RID: 28113 RVA: 0x0016493C File Offset: 0x00162B3C
+	// Token: 0x06004166 RID: 16742 RVA: 0x0016D270 File Offset: 0x0016B470
 	private void PlayHitAudioEvent(EKuroRhythmGameNoteType noteType)
 	{
 		double hitTime = Time.Instance.Now;
@@ -770,7 +770,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DD2 RID: 28114 RVA: 0x00164A04 File Offset: 0x00162C04
+	// Token: 0x06004167 RID: 16743 RVA: 0x0016D338 File Offset: 0x0016B538
 	private void OnHoldNoteStop()
 	{
 		if (this.HoldNoteEventHandle != 0)
@@ -780,13 +780,13 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DD3 RID: 28115 RVA: 0x00164A3A File Offset: 0x00162C3A
+	// Token: 0x06004168 RID: 16744 RVA: 0x0016D36E File Offset: 0x0016B56E
 	private void OnHoldNoteTimeout()
 	{
 		AudioSystem.Instance.PostEvent("play_ui_rhythmship_gamenote_line");
 	}
 
-	// Token: 0x06006DD4 RID: 28116 RVA: 0x00164A4C File Offset: 0x00162C4C
+	// Token: 0x06004169 RID: 16745 RVA: 0x0016D380 File Offset: 0x0016B580
 	private void OnFeverStateChanged(bool bFeverActive)
 	{
 		Log instance = Log.Instance;
@@ -816,7 +816,7 @@ public class RhythmGameController : UiControllerBase
 		AudioSystem.Instance.PostEvent("play_ui_rhythmship_gamefever_end");
 	}
 
-	// Token: 0x06006DD5 RID: 28117 RVA: 0x00164B28 File Offset: 0x00162D28
+	// Token: 0x0600416A RID: 16746 RVA: 0x0016D45C File Offset: 0x0016B65C
 	private unsafe void OnHiddenScoreLevelChanged(int newLevel, int oldLevel)
 	{
 		Log instance = Log.Instance;
@@ -836,7 +836,7 @@ public class RhythmGameController : UiControllerBase
 		AudioSystem.Instance.PostEvent("play_ui_rhythmship_gamespeedlevel_down");
 	}
 
-	// Token: 0x06006DD6 RID: 28118 RVA: 0x00164BCC File Offset: 0x00162DCC
+	// Token: 0x0600416B RID: 16747 RVA: 0x0016D500 File Offset: 0x0016B700
 	private unsafe void OnFeverScoreChanged(int newScore, int oldScore)
 	{
 		Log instance = Log.Instance;
@@ -850,7 +850,7 @@ public class RhythmGameController : UiControllerBase
 		EventSystem.Instance.Emit<int, int>(EEventName.OnRhythmGameFeverScoreChanged, newScore, oldScore);
 	}
 
-	// Token: 0x06006DD7 RID: 28119 RVA: 0x00164C4C File Offset: 0x00162E4C
+	// Token: 0x0600416C RID: 16748 RVA: 0x0016D580 File Offset: 0x0016B780
 	private void AllNotesFinished()
 	{
 		RhythmGamePerformanceCameraConfig endCameraConfig = RhythmGameModel.Instance.RhythmGameConfig.EndCameraConfig;
@@ -871,7 +871,7 @@ public class RhythmGameController : UiControllerBase
 		this.OnStopRhythmGame(false);
 	}
 
-	// Token: 0x06006DD8 RID: 28120 RVA: 0x00164CE8 File Offset: 0x00162EE8
+	// Token: 0x0600416D RID: 16749 RVA: 0x0016D61C File Offset: 0x0016B81C
 	public void OnStopRhythmGame(bool isQuit = false)
 	{
 		Log.Instance.Info(ELogModule.RhythmGame, ELogAuthor.CH, "OnAllNotesFinished", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -990,7 +990,7 @@ public class RhythmGameController : UiControllerBase
 		}, null);
 	}
 
-	// Token: 0x06006DD9 RID: 28121 RVA: 0x00165038 File Offset: 0x00163238
+	// Token: 0x0600416E RID: 16750 RVA: 0x0016D96C File Offset: 0x0016BB6C
 	private void OnTunnelFlickSwitch(bool bToLeft)
 	{
 		Log instance = Log.Instance;
@@ -1002,14 +1002,14 @@ public class RhythmGameController : UiControllerBase
 		RhythmGameShipController.Instance.TriggerRollAnim(bToLeft);
 	}
 
-	// Token: 0x06006DDA RID: 28122 RVA: 0x00165080 File Offset: 0x00163280
+	// Token: 0x0600416F RID: 16751 RVA: 0x0016D9B4 File Offset: 0x0016BBB4
 	private void OnLineHitTrigger()
 	{
 		Log.Instance.Info(ELogModule.RhythmGame, ELogAuthor.CH, "OnLineHitTrigger", default(ReadOnlySpan<ValueTuple<string, object>>));
 		RhythmGameShipController.Instance.TriggerLineHit();
 	}
 
-	// Token: 0x06006DDB RID: 28123 RVA: 0x001650B8 File Offset: 0x001632B8
+	// Token: 0x06004170 RID: 16752 RVA: 0x0016D9EC File Offset: 0x0016BBEC
 	private void OnJumpEvent(float beatDurationMs)
 	{
 		Log instance = Log.Instance;
@@ -1021,7 +1021,7 @@ public class RhythmGameController : UiControllerBase
 		RhythmGameShipController.Instance.TriggerJumpAnim();
 	}
 
-	// Token: 0x06006DDC RID: 28124 RVA: 0x00165100 File Offset: 0x00163300
+	// Token: 0x06004171 RID: 16753 RVA: 0x0016DA34 File Offset: 0x0016BC34
 	private unsafe void OnTrackSwitched(int newTrackIndex, int oldTrackIndex)
 	{
 		Log instance = Log.Instance;
@@ -1035,7 +1035,7 @@ public class RhythmGameController : UiControllerBase
 		RhythmGameShipController.Instance.TriggerTranslationAnim(newTrackIndex < oldTrackIndex);
 	}
 
-	// Token: 0x06006DDD RID: 28125 RVA: 0x0016517C File Offset: 0x0016337C
+	// Token: 0x06004172 RID: 16754 RVA: 0x0016DAB0 File Offset: 0x0016BCB0
 	private unsafe void OnHoldScoreUpdated(int newHoldScore, int oldHoldScore)
 	{
 		Log instance = Log.Instance;
@@ -1053,7 +1053,7 @@ public class RhythmGameController : UiControllerBase
 		instance2.Emit<EKuroRhythmGameRating?, FKuroRhythmGameStatistics>(name, p, (rhythmGameManager != null) ? rhythmGameManager.Statistics : null);
 	}
 
-	// Token: 0x06006DDE RID: 28126 RVA: 0x00165214 File Offset: 0x00163414
+	// Token: 0x06004173 RID: 16755 RVA: 0x0016DB48 File Offset: 0x0016BD48
 	private unsafe void PlayHitResultEffect(EKuroRhythmGameNoteType noteType, FVectorDouble? worldPosition, FQuat? rotation)
 	{
 		IReadOnlyList<string> readOnlyList2;
@@ -1113,7 +1113,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DDF RID: 28127 RVA: 0x00165428 File Offset: 0x00163628
+	// Token: 0x06004174 RID: 16756 RVA: 0x0016DD5C File Offset: 0x0016BF5C
 	private void OnAutoJudgeCountChange(int autoJudgeCount)
 	{
 		Log instance = Log.Instance;
@@ -1125,7 +1125,7 @@ public class RhythmGameController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnRhythmGameAutoJudgeCountChanged, autoJudgeCount);
 	}
 
-	// Token: 0x06006DE0 RID: 28128 RVA: 0x00165475 File Offset: 0x00163675
+	// Token: 0x06004175 RID: 16757 RVA: 0x0016DDA9 File Offset: 0x0016BFA9
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.RhythmShipPauseView || viewName == EUiViewName.GuideTutorialView || viewName == EUiViewName.GuideTutorialPopView)
@@ -1134,7 +1134,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DE1 RID: 28129 RVA: 0x001654A4 File Offset: 0x001636A4
+	// Token: 0x06004176 RID: 16758 RVA: 0x0016DDD8 File Offset: 0x0016BFD8
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.RhythmShipPauseView || viewName == EUiViewName.GuideTutorialView || viewName == EUiViewName.GuideTutorialPopView)
@@ -1143,13 +1143,13 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DE2 RID: 28130 RVA: 0x001654D3 File Offset: 0x001636D3
+	// Token: 0x06004177 RID: 16759 RVA: 0x0016DE07 File Offset: 0x0016C007
 	public int GetCurrentBeatDurationMs()
 	{
 		return (int)Math.Round((double)(60f / this.RhythmGameManager.CurrentBPM * 1000f));
 	}
 
-	// Token: 0x06006DE3 RID: 28131 RVA: 0x001654F4 File Offset: 0x001636F4
+	// Token: 0x06004178 RID: 16760 RVA: 0x0016DE28 File Offset: 0x0016C028
 	public void StopRhythmGame()
 	{
 		this.OnStopRhythmGame(false);
@@ -1163,7 +1163,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DE4 RID: 28132 RVA: 0x00165543 File Offset: 0x00163743
+	// Token: 0x06004179 RID: 16761 RVA: 0x0016DE77 File Offset: 0x0016C077
 	public void SetShipSpeed(float speed)
 	{
 		UKuroRhythmGameManager rhythmGameManager = this.RhythmGameManager;
@@ -1174,7 +1174,7 @@ public class RhythmGameController : UiControllerBase
 		rhythmGameManager.SetShipMovementSpeed(speed);
 	}
 
-	// Token: 0x06006DE5 RID: 28133 RVA: 0x00165558 File Offset: 0x00163758
+	// Token: 0x0600417A RID: 16762 RVA: 0x0016DE8C File Offset: 0x0016C08C
 	public void PauseGame()
 	{
 		EventSystem.Instance.Emit(EEventName.OnRhythmGameEndCoolDown);
@@ -1210,7 +1210,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DE6 RID: 28134 RVA: 0x0016563D File Offset: 0x0016383D
+	// Token: 0x0600417B RID: 16763 RVA: 0x0016DF71 File Offset: 0x0016C171
 	public void ResumeGame()
 	{
 		EventSystem.Instance.Emit<TTimerAction>(EEventName.OnRhythmGameStartCoolDown, delegate(float _)
@@ -1264,7 +1264,7 @@ public class RhythmGameController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06006DE7 RID: 28135 RVA: 0x0016565C File Offset: 0x0016385C
+	// Token: 0x0600417C RID: 16764 RVA: 0x0016DF90 File Offset: 0x0016C190
 	public float CurrentPlayedTime()
 	{
 		UKuroRhythmGameManager rhythmGameManager = this.RhythmGameManager;
@@ -1276,20 +1276,20 @@ public class RhythmGameController : UiControllerBase
 		return num - this.TotalOffset;
 	}
 
-	// Token: 0x06006DE8 RID: 28136 RVA: 0x00165697 File Offset: 0x00163897
+	// Token: 0x0600417D RID: 16765 RVA: 0x0016DFCB File Offset: 0x0016C1CB
 	public void ApplyAudioTimeOffset(float offset)
 	{
 		this.CachedTimeOffset = offset / 1000f;
 		this.IsAccumulatingTimeOffset = true;
 	}
 
-	// Token: 0x06006DE9 RID: 28137 RVA: 0x001656AD File Offset: 0x001638AD
+	// Token: 0x0600417E RID: 16766 RVA: 0x0016DFE1 File Offset: 0x0016C1E1
 	public TsGameSplineActor GetSplineActor()
 	{
 		return this.SplineActor;
 	}
 
-	// Token: 0x06006DEA RID: 28138 RVA: 0x001656B8 File Offset: 0x001638B8
+	// Token: 0x0600417F RID: 16767 RVA: 0x0016DFEC File Offset: 0x0016C1EC
 	public void SetRhythmGameStatistics(int score, int accuracy, int perfectCount, int greatCount, int goodCount, int badCount, int missCount, int maxCombo)
 	{
 		UKuroRhythmGameManager rhythmGameManager = this.RhythmGameManager;
@@ -1312,7 +1312,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DEB RID: 28139 RVA: 0x0016574C File Offset: 0x0016394C
+	// Token: 0x06004180 RID: 16768 RVA: 0x0016E080 File Offset: 0x0016C280
 	[NullableContext(1)]
 	public void PlayRoleFeverAudio(string musicEvent)
 	{
@@ -1332,7 +1332,7 @@ public class RhythmGameController : UiControllerBase
 		this.RoleFeverAudioHandle = handleId;
 	}
 
-	// Token: 0x06006DEC RID: 28140 RVA: 0x001657C0 File Offset: 0x001639C0
+	// Token: 0x06004181 RID: 16769 RVA: 0x0016E0F4 File Offset: 0x0016C2F4
 	private void StopRoleFeverAudio()
 	{
 		if (this.RoleFeverAudioHandle != 0)
@@ -1342,7 +1342,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DED RID: 28141 RVA: 0x001657F8 File Offset: 0x001639F8
+	// Token: 0x06004182 RID: 16770 RVA: 0x0016E12C File Offset: 0x0016C32C
 	private void PauseRoleFeverAudio()
 	{
 		if (this.RoleFeverAudioHandle != 0)
@@ -1351,7 +1351,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DEE RID: 28142 RVA: 0x00165828 File Offset: 0x00163A28
+	// Token: 0x06004183 RID: 16771 RVA: 0x0016E15C File Offset: 0x0016C35C
 	private void ResumeRoleFeverAudio()
 	{
 		if (this.RoleFeverAudioHandle != 0)
@@ -1360,14 +1360,14 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DEF RID: 28143 RVA: 0x00165857 File Offset: 0x00163A57
+	// Token: 0x06004184 RID: 16772 RVA: 0x0016E18B File Offset: 0x0016C38B
 	public bool GetIsPause()
 	{
 		return this.IsPause;
 	}
 
-	// Token: 0x17000920 RID: 2336
-	// (get) Token: 0x06006DF0 RID: 28144 RVA: 0x0016585F File Offset: 0x00163A5F
+	// Token: 0x17000940 RID: 2368
+	// (get) Token: 0x06004185 RID: 16773 RVA: 0x0016E193 File Offset: 0x0016C393
 	[Nullable(1)]
 	public static RhythmGameController Instance
 	{
@@ -1378,7 +1378,7 @@ public class RhythmGameController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006DF1 RID: 28145 RVA: 0x00165866 File Offset: 0x00163A66
+	// Token: 0x06004186 RID: 16774 RVA: 0x0016E19A File Offset: 0x0016C39A
 	[NullableContext(1)]
 	public static RhythmGameController GetOrCreateInstance()
 	{
@@ -1389,7 +1389,7 @@ public class RhythmGameController : UiControllerBase
 		return RhythmGameController._Instance;
 	}
 
-	// Token: 0x06006DF2 RID: 28146 RVA: 0x0016587A File Offset: 0x00163A7A
+	// Token: 0x06004187 RID: 16775 RVA: 0x0016E1AE File Offset: 0x0016C3AE
 	public static bool CreateInstance()
 	{
 		if (RhythmGameController._Instance != null)
@@ -1400,115 +1400,115 @@ public class RhythmGameController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06006DF3 RID: 28147 RVA: 0x00165890 File Offset: 0x00163A90
+	// Token: 0x06004188 RID: 16776 RVA: 0x0016E1C4 File Offset: 0x0016C3C4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006DF4 RID: 28148 RVA: 0x00165892 File Offset: 0x00163A92
+	// Token: 0x06004189 RID: 16777 RVA: 0x0016E1C6 File Offset: 0x0016C3C6
 	public static void ResetStaticDefaultValue()
 	{
 		RhythmGameController._Instance = null;
 	}
 
-	// Token: 0x06006DF5 RID: 28149 RVA: 0x0016589A File Offset: 0x00163A9A
+	// Token: 0x0600418A RID: 16778 RVA: 0x0016E1CE File Offset: 0x0016C3CE
 	static RhythmGameController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RhythmGameController.CreateStaticDefaultValue), new Action(RhythmGameController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040032AF RID: 12975
+	// Token: 0x04003348 RID: 13128
 	private const int SplineEntityId = 229800000;
 
-	// Token: 0x040032B0 RID: 12976
+	// Token: 0x04003349 RID: 13129
 	[Nullable(1)]
 	private const string RhythmGameConfigPath = "/Game/Aki/Data/Gameplay/RhythmGame/DefaultRhythmGameConfig.DefaultRhythmGameConfig";
 
-	// Token: 0x040032B1 RID: 12977
+	// Token: 0x0400334A RID: 13130
 	private const int LockInputAfterFinishTime = 300;
 
-	// Token: 0x040032B2 RID: 12978
+	// Token: 0x0400334B RID: 13131
 	private BP_Plane_C ShipActor;
 
-	// Token: 0x040032B3 RID: 12979
+	// Token: 0x0400334C RID: 13132
 	private TsGameSplineActor SplineActor;
 
-	// Token: 0x040032B4 RID: 12980
+	// Token: 0x0400334D RID: 13133
 	private USplineComponent SplineComp;
 
-	// Token: 0x040032B5 RID: 12981
+	// Token: 0x0400334E RID: 13134
 	private UKuroRhythmGameManager RhythmGameManager;
 
-	// Token: 0x040032B6 RID: 12982
+	// Token: 0x0400334F RID: 13135
 	private bool ChangedCamera;
 
-	// Token: 0x040032B7 RID: 12983
+	// Token: 0x04003350 RID: 13136
 	private int RhythmGameManagerTickId = -1;
 
-	// Token: 0x040032B8 RID: 12984
+	// Token: 0x04003351 RID: 13137
 	private FKuroRhythmChartData RhythmGameData;
 
-	// Token: 0x040032B9 RID: 12985
+	// Token: 0x04003352 RID: 13138
 	private string MusicEvent;
 
-	// Token: 0x040032BA RID: 12986
+	// Token: 0x04003353 RID: 13139
 	private int StartEffectHandle = -1;
 
-	// Token: 0x040032BB RID: 12987
+	// Token: 0x04003354 RID: 13140
 	private float TotalOffset;
 
-	// Token: 0x040032BC RID: 12988
+	// Token: 0x04003355 RID: 13141
 	private bool IsPause;
 
-	// Token: 0x040032BD RID: 12989
+	// Token: 0x04003356 RID: 13142
 	private bool IsDisableRecordUpLoad;
 
-	// Token: 0x040032BE RID: 12990
+	// Token: 0x04003357 RID: 13143
 	private bool IsBeginPlayMusic;
 
-	// Token: 0x040032BF RID: 12991
+	// Token: 0x04003358 RID: 13144
 	[Nullable(1)]
 	private int[] GuideIds = Array.Empty<int>();
 
-	// Token: 0x040032C0 RID: 12992
+	// Token: 0x04003359 RID: 13145
 	public bool PlayerCanInput;
 
-	// Token: 0x040032C1 RID: 12993
+	// Token: 0x0400335A RID: 13146
 	private bool LineHoldKeyPressed;
 
-	// Token: 0x040032C2 RID: 12994
+	// Token: 0x0400335B RID: 13147
 	private int MusicEventHandle;
 
-	// Token: 0x040032C3 RID: 12995
+	// Token: 0x0400335C RID: 13148
 	private int CurrentGuideId;
 
-	// Token: 0x040032C4 RID: 12996
+	// Token: 0x0400335D RID: 13149
 	private int HoldNoteEventHandle;
 
-	// Token: 0x040032C5 RID: 12997
+	// Token: 0x0400335E RID: 13150
 	private int FeverLoopEventHandle;
 
-	// Token: 0x040032C6 RID: 12998
+	// Token: 0x0400335F RID: 13151
 	private float CachedTimeOffset;
 
-	// Token: 0x040032C7 RID: 12999
+	// Token: 0x04003360 RID: 13152
 	private bool IsAccumulatingTimeOffset;
 
-	// Token: 0x040032C8 RID: 13000
+	// Token: 0x04003361 RID: 13153
 	private readonly float TimeOffsetApplySpeed = 0.3f;
 
-	// Token: 0x040032C9 RID: 13001
+	// Token: 0x04003362 RID: 13154
 	private int FeverTimes;
 
-	// Token: 0x040032CA RID: 13002
+	// Token: 0x04003363 RID: 13155
 	public TimerSystemInstance RhythmGameTimerSystem;
 
-	// Token: 0x040032CB RID: 13003
+	// Token: 0x04003364 RID: 13156
 	private int RoleFeverAudioHandle;
 
-	// Token: 0x040032CC RID: 13004
+	// Token: 0x04003365 RID: 13157
 	private bool IsEnterRhythmGame;
 
-	// Token: 0x040032CD RID: 13005
+	// Token: 0x04003366 RID: 13158
 	private static RhythmGameController _Instance;
 }

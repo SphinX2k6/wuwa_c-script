@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F01 RID: 7937
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200213A RID: 8506
 	public class ISwitchEffectStateEffectBase
 	{
-		// Token: 0x0600A9BC RID: 43452 RVA: 0x0017E87C File Offset: 0x0017CA7C
+		// Token: 0x0600B48E RID: 46222 RVA: 0x00194874 File Offset: 0x00192A74
 		private ISwitchEffectStateEffectBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A9BD RID: 43453 RVA: 0x0017E8B4 File Offset: 0x0017CAB4
+		// Token: 0x0600B48F RID: 46223 RVA: 0x001948AC File Offset: 0x00192AAC
 		public static ISwitchEffectStateEffectBase Create([Nullable(2)] ISwitchEffectStateEffectBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9BE RID: 43454 RVA: 0x0017E8C7 File Offset: 0x0017CAC7
+		// Token: 0x0600B490 RID: 46224 RVA: 0x001948BF File Offset: 0x00192ABF
 		public static ISwitchEffectStateEffectBase CreateFromSetValue([Nullable(2)] ISwitchEffectStateEffectBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9BF RID: 43455 RVA: 0x0017E8DA File Offset: 0x0017CADA
+		// Token: 0x0600B491 RID: 46225 RVA: 0x001948D2 File Offset: 0x00192AD2
 		public ISwitchEffectStateEffectBase_SetValue ToSetValue()
 		{
 			return new ISwitchEffectStateEffectBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033B4 RID: 13236
-		// (get) Token: 0x0600A9C0 RID: 43456 RVA: 0x0017E8ED File Offset: 0x0017CAED
-		// (set) Token: 0x0600A9C1 RID: 43457 RVA: 0x0017E918 File Offset: 0x0017CB18
+		// Token: 0x1700367F RID: 13951
+		// (get) Token: 0x0600B492 RID: 46226 RVA: 0x001948E5 File Offset: 0x00192AE5
+		// (set) Token: 0x0600B493 RID: 46227 RVA: 0x00194910 File Offset: 0x00192B10
 		public virtual ESwitchEffectStateEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064ED RID: 25837
+		// Token: 0x04006ADC RID: 27356
 		[Nullable(2)]
 		protected ISwitchEffectStateEffectBase FbInstance;
 
-		// Token: 0x040064EE RID: 25838
+		// Token: 0x04006ADD RID: 27357
 		[Nullable(2)]
 		protected ISwitchEffectStateEffectBase_SetValue PocoInterface;
 	}

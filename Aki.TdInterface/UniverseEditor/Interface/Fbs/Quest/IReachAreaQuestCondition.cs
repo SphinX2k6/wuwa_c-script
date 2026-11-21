@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200406A RID: 16490
+	// Token: 0x020044AB RID: 17579
 	public struct IReachAreaQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x17007445 RID: 29765
-		// (get) Token: 0x06017F2F RID: 98095 RVA: 0x00374C4D File Offset: 0x00372E4D
+		// Token: 0x17007A47 RID: 31303
+		// (get) Token: 0x060195C8 RID: 103880 RVA: 0x0039EA41 File Offset: 0x0039CC41
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F30 RID: 98096 RVA: 0x00374C5A File Offset: 0x00372E5A
+		// Token: 0x060195C9 RID: 103881 RVA: 0x0039EA4E File Offset: 0x0039CC4E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017F31 RID: 98097 RVA: 0x00374C64 File Offset: 0x00372E64
+		// Token: 0x060195CA RID: 103882 RVA: 0x0039EA58 File Offset: 0x0039CC58
 		public static IReachAreaQuestCondition GetRootAsIReachAreaQuestCondition(ByteBuffer _bb)
 		{
 			return IReachAreaQuestCondition.GetRootAsIReachAreaQuestCondition(_bb, default(IReachAreaQuestCondition));
 		}
 
-		// Token: 0x06017F32 RID: 98098 RVA: 0x00374C80 File Offset: 0x00372E80
+		// Token: 0x060195CB RID: 103883 RVA: 0x0039EA74 File Offset: 0x0039CC74
 		public static IReachAreaQuestCondition GetRootAsIReachAreaQuestCondition(ByteBuffer _bb, IReachAreaQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017F33 RID: 98099 RVA: 0x00374C9D File Offset: 0x00372E9D
+		// Token: 0x060195CC RID: 103884 RVA: 0x0039EA91 File Offset: 0x0039CC91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017F34 RID: 98100 RVA: 0x00374CAC File Offset: 0x00372EAC
+		// Token: 0x060195CD RID: 103885 RVA: 0x0039EAA0 File Offset: 0x0039CCA0
 		public IReachAreaQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007446 RID: 29766
-		// (get) Token: 0x06017F35 RID: 98101 RVA: 0x00374CBC File Offset: 0x00372EBC
+		// Token: 0x17007A48 RID: 31304
+		// (get) Token: 0x060195CE RID: 103886 RVA: 0x0039EAB0 File Offset: 0x0039CCB0
 		public EChildQuest Type
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007447 RID: 29767
-		// (get) Token: 0x06017F36 RID: 98102 RVA: 0x00374CF8 File Offset: 0x00372EF8
+		// Token: 0x17007A49 RID: 31305
+		// (get) Token: 0x060195CF RID: 103887 RVA: 0x0039EAEC File Offset: 0x0039CCEC
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007448 RID: 29768
-		// (get) Token: 0x06017F37 RID: 98103 RVA: 0x00374D58 File Offset: 0x00372F58
+		// Token: 0x17007A4A RID: 31306
+		// (get) Token: 0x060195D0 RID: 103888 RVA: 0x0039EB4C File Offset: 0x0039CD4C
 		public IVectorInfo? Pos
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007449 RID: 29769
-		// (get) Token: 0x06017F38 RID: 98104 RVA: 0x00374DB8 File Offset: 0x00372FB8
+		// Token: 0x17007A4B RID: 31307
+		// (get) Token: 0x060195D1 RID: 103889 RVA: 0x0039EBAC File Offset: 0x0039CDAC
 		public int Range
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700744A RID: 29770
-		// (get) Token: 0x06017F39 RID: 98105 RVA: 0x00374DF8 File Offset: 0x00372FF8
+		// Token: 0x17007A4C RID: 31308
+		// (get) Token: 0x060195D2 RID: 103890 RVA: 0x0039EBEC File Offset: 0x0039CDEC
 		public int EntityId
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700744B RID: 29771
-		// (get) Token: 0x06017F3A RID: 98106 RVA: 0x00374E38 File Offset: 0x00373038
+		// Token: 0x17007A4D RID: 31309
+		// (get) Token: 0x060195D3 RID: 103891 RVA: 0x0039EC2C File Offset: 0x0039CE2C
 		public int RangeEntityId
 		{
 			get
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F3B RID: 98107 RVA: 0x00374E78 File Offset: 0x00373078
+		// Token: 0x060195D4 RID: 103892 RVA: 0x0039EC6C File Offset: 0x0039CE6C
 		public int RangeEntities(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -152,8 +152,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700744C RID: 29772
-		// (get) Token: 0x06017F3C RID: 98108 RVA: 0x00374EB8 File Offset: 0x003730B8
+		// Token: 0x17007A4E RID: 31310
+		// (get) Token: 0x060195D5 RID: 103893 RVA: 0x0039ECAC File Offset: 0x0039CEAC
 		public int RangeEntitiesLength
 		{
 			get
@@ -167,19 +167,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F3D RID: 98109 RVA: 0x00374EE4 File Offset: 0x003730E4
+		// Token: 0x060195D6 RID: 103894 RVA: 0x0039ECD8 File Offset: 0x0039CED8
 		public Span<int> GetRangeEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x06017F3E RID: 98110 RVA: 0x00374EF4 File Offset: 0x003730F4
+		// Token: 0x060195D7 RID: 103895 RVA: 0x0039ECE8 File Offset: 0x0039CEE8
 		public int[] GetRangeEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(16);
 		}
 
-		// Token: 0x06017F3F RID: 98111 RVA: 0x00374F04 File Offset: 0x00373104
+		// Token: 0x060195D8 RID: 103896 RVA: 0x0039ECF8 File Offset: 0x0039CEF8
 		public TMatchRoleOption MatchRoleOptionType(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -190,8 +190,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return (TMatchRoleOption)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700744D RID: 29773
-		// (get) Token: 0x06017F40 RID: 98112 RVA: 0x00374F44 File Offset: 0x00373144
+		// Token: 0x17007A4F RID: 31311
+		// (get) Token: 0x060195D9 RID: 103897 RVA: 0x0039ED38 File Offset: 0x0039CF38
 		public int MatchRoleOptionTypeLength
 		{
 			get
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F41 RID: 98113 RVA: 0x00374F70 File Offset: 0x00373170
+		// Token: 0x060195DA RID: 103898 RVA: 0x0039ED64 File Offset: 0x0039CF64
 		public Span<TMatchRoleOption> GetMatchRoleOptionTypeBytes()
 		{
 			return this.__p.__vector_as_span<TMatchRoleOption>(18, 1);
 		}
 
-		// Token: 0x06017F42 RID: 98114 RVA: 0x00374F80 File Offset: 0x00373180
+		// Token: 0x060195DB RID: 103899 RVA: 0x0039ED74 File Offset: 0x0039CF74
 		public TMatchRoleOption[] GetMatchRoleOptionTypeArray()
 		{
 			int num = this.__p.__offset(18);
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return array;
 		}
 
-		// Token: 0x06017F43 RID: 98115 RVA: 0x00374FEC File Offset: 0x003731EC
+		// Token: 0x060195DC RID: 103900 RVA: 0x0039EDE0 File Offset: 0x0039CFE0
 		public TTable? MatchRoleOption<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(20);
@@ -240,8 +240,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700744E RID: 29774
-		// (get) Token: 0x06017F44 RID: 98116 RVA: 0x00375034 File Offset: 0x00373234
+		// Token: 0x17007A50 RID: 31312
+		// (get) Token: 0x060195DD RID: 103901 RVA: 0x0039EE28 File Offset: 0x0039D028
 		public int MatchRoleOptionLength
 		{
 			get
@@ -255,8 +255,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700744F RID: 29775
-		// (get) Token: 0x06017F45 RID: 98117 RVA: 0x00375060 File Offset: 0x00373260
+		// Token: 0x17007A51 RID: 31313
+		// (get) Token: 0x060195DE RID: 103902 RVA: 0x0039EE54 File Offset: 0x0039D054
 		public string EffectPath
 		{
 			get
@@ -270,20 +270,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F46 RID: 98118 RVA: 0x00375098 File Offset: 0x00373298
+		// Token: 0x060195DF RID: 103903 RVA: 0x0039EE8C File Offset: 0x0039D08C
 		public Span<byte> GetEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x06017F47 RID: 98119 RVA: 0x003750A8 File Offset: 0x003732A8
+		// Token: 0x060195E0 RID: 103904 RVA: 0x0039EE9C File Offset: 0x0039D09C
 		public byte[] GetEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(22);
 		}
 
-		// Token: 0x17007450 RID: 29776
-		// (get) Token: 0x06017F48 RID: 98120 RVA: 0x003750B8 File Offset: 0x003732B8
+		// Token: 0x17007A52 RID: 31314
+		// (get) Token: 0x060195E1 RID: 103905 RVA: 0x0039EEAC File Offset: 0x0039D0AC
 		public byte NullMask
 		{
 			get
@@ -297,7 +297,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017F49 RID: 98121 RVA: 0x003750F8 File Offset: 0x003732F8
+		// Token: 0x060195E2 RID: 103906 RVA: 0x0039EEEC File Offset: 0x0039D0EC
 		public static Offset<IReachAreaQuestCondition> CreateIReachAreaQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>), int Range = 0, int EntityId = 0, int RangeEntityId = 0, VectorOffset RangeEntitiesOffset = default(VectorOffset), VectorOffset MatchRoleOption_typeOffset = default(VectorOffset), VectorOffset MatchRoleOptionOffset = default(VectorOffset), StringOffset EffectPathOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(11);
@@ -315,55 +315,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IReachAreaQuestCondition.EndIReachAreaQuestCondition(builder);
 		}
 
-		// Token: 0x06017F4A RID: 98122 RVA: 0x00375168 File Offset: 0x00373368
+		// Token: 0x060195E3 RID: 103907 RVA: 0x0039EF5C File Offset: 0x0039D15C
 		public static void StartIReachAreaQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x06017F4B RID: 98123 RVA: 0x00375172 File Offset: 0x00373372
+		// Token: 0x060195E4 RID: 103908 RVA: 0x0039EF66 File Offset: 0x0039D166
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017F4C RID: 98124 RVA: 0x0037517D File Offset: 0x0037337D
+		// Token: 0x060195E5 RID: 103909 RVA: 0x0039EF71 File Offset: 0x0039D171
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06017F4D RID: 98125 RVA: 0x0037518D File Offset: 0x0037338D
+		// Token: 0x060195E6 RID: 103910 RVA: 0x0039EF81 File Offset: 0x0039D181
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(2, posOffset.Value, 0);
 		}
 
-		// Token: 0x06017F4E RID: 98126 RVA: 0x0037519D File Offset: 0x0037339D
+		// Token: 0x060195E7 RID: 103911 RVA: 0x0039EF91 File Offset: 0x0039D191
 		public static void AddRange(FlatBufferBuilder builder, int range)
 		{
 			builder.AddInt(3, range, 0);
 		}
 
-		// Token: 0x06017F4F RID: 98127 RVA: 0x003751A8 File Offset: 0x003733A8
+		// Token: 0x060195E8 RID: 103912 RVA: 0x0039EF9C File Offset: 0x0039D19C
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(4, entityId, 0);
 		}
 
-		// Token: 0x06017F50 RID: 98128 RVA: 0x003751B3 File Offset: 0x003733B3
+		// Token: 0x060195E9 RID: 103913 RVA: 0x0039EFA7 File Offset: 0x0039D1A7
 		public static void AddRangeEntityId(FlatBufferBuilder builder, int rangeEntityId)
 		{
 			builder.AddInt(5, rangeEntityId, 0);
 		}
 
-		// Token: 0x06017F51 RID: 98129 RVA: 0x003751BE File Offset: 0x003733BE
+		// Token: 0x060195EA RID: 103914 RVA: 0x0039EFB2 File Offset: 0x0039D1B2
 		public static void AddRangeEntities(FlatBufferBuilder builder, VectorOffset rangeEntitiesOffset)
 		{
 			builder.AddOffset(6, rangeEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x06017F52 RID: 98130 RVA: 0x003751D0 File Offset: 0x003733D0
+		// Token: 0x060195EB RID: 103915 RVA: 0x0039EFC4 File Offset: 0x0039D1C4
 		public static VectorOffset CreateRangeEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -374,7 +374,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F53 RID: 98131 RVA: 0x00375207 File Offset: 0x00373407
+		// Token: 0x060195EC RID: 103916 RVA: 0x0039EFFB File Offset: 0x0039D1FB
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -382,7 +382,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F54 RID: 98132 RVA: 0x00375221 File Offset: 0x00373421
+		// Token: 0x060195ED RID: 103917 RVA: 0x0039F015 File Offset: 0x0039D215
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -390,7 +390,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F55 RID: 98133 RVA: 0x0037523F File Offset: 0x0037343F
+		// Token: 0x060195EE RID: 103918 RVA: 0x0039F033 File Offset: 0x0039D233
 		public static VectorOffset CreateRangeEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -398,19 +398,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F56 RID: 98134 RVA: 0x00375258 File Offset: 0x00373458
+		// Token: 0x060195EF RID: 103919 RVA: 0x0039F04C File Offset: 0x0039D24C
 		public static void StartRangeEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017F57 RID: 98135 RVA: 0x00375263 File Offset: 0x00373463
+		// Token: 0x060195F0 RID: 103920 RVA: 0x0039F057 File Offset: 0x0039D257
 		public static void AddMatchRoleOptionType(FlatBufferBuilder builder, VectorOffset matchRoleOptionTypeOffset)
 		{
 			builder.AddOffset(7, matchRoleOptionTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06017F58 RID: 98136 RVA: 0x00375274 File Offset: 0x00373474
+		// Token: 0x060195F1 RID: 103921 RVA: 0x0039F068 File Offset: 0x0039D268
 		public static VectorOffset CreateMatchRoleOptionTypeVector(FlatBufferBuilder builder, TMatchRoleOption[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -421,7 +421,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F59 RID: 98137 RVA: 0x003752AB File Offset: 0x003734AB
+		// Token: 0x060195F2 RID: 103922 RVA: 0x0039F09F File Offset: 0x0039D29F
 		public static VectorOffset CreateMatchRoleOptionTypeVectorBlock(FlatBufferBuilder builder, TMatchRoleOption[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -429,7 +429,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F5A RID: 98138 RVA: 0x003752C5 File Offset: 0x003734C5
+		// Token: 0x060195F3 RID: 103923 RVA: 0x0039F0B9 File Offset: 0x0039D2B9
 		public static VectorOffset CreateMatchRoleOptionTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TMatchRoleOption> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -437,7 +437,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F5B RID: 98139 RVA: 0x003752E3 File Offset: 0x003734E3
+		// Token: 0x060195F4 RID: 103924 RVA: 0x0039F0D7 File Offset: 0x0039D2D7
 		public static VectorOffset CreateMatchRoleOptionTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -445,19 +445,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F5C RID: 98140 RVA: 0x003752FC File Offset: 0x003734FC
+		// Token: 0x060195F5 RID: 103925 RVA: 0x0039F0F0 File Offset: 0x0039D2F0
 		public static void StartMatchRoleOptionTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06017F5D RID: 98141 RVA: 0x00375307 File Offset: 0x00373507
+		// Token: 0x060195F6 RID: 103926 RVA: 0x0039F0FB File Offset: 0x0039D2FB
 		public static void AddMatchRoleOption(FlatBufferBuilder builder, VectorOffset matchRoleOptionOffset)
 		{
 			builder.AddOffset(8, matchRoleOptionOffset.Value, 0);
 		}
 
-		// Token: 0x06017F5E RID: 98142 RVA: 0x00375318 File Offset: 0x00373518
+		// Token: 0x060195F7 RID: 103927 RVA: 0x0039F10C File Offset: 0x0039D30C
 		public static VectorOffset CreateMatchRoleOptionVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -468,7 +468,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F5F RID: 98143 RVA: 0x0037534F File Offset: 0x0037354F
+		// Token: 0x060195F8 RID: 103928 RVA: 0x0039F143 File Offset: 0x0039D343
 		public static VectorOffset CreateMatchRoleOptionVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -476,7 +476,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F60 RID: 98144 RVA: 0x00375369 File Offset: 0x00373569
+		// Token: 0x060195F9 RID: 103929 RVA: 0x0039F15D File Offset: 0x0039D35D
 		public static VectorOffset CreateMatchRoleOptionVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -484,7 +484,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F61 RID: 98145 RVA: 0x00375387 File Offset: 0x00373587
+		// Token: 0x060195FA RID: 103930 RVA: 0x0039F17B File Offset: 0x0039D37B
 		public static VectorOffset CreateMatchRoleOptionVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -492,31 +492,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017F62 RID: 98146 RVA: 0x003753A0 File Offset: 0x003735A0
+		// Token: 0x060195FB RID: 103931 RVA: 0x0039F194 File Offset: 0x0039D394
 		public static void StartMatchRoleOptionVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017F63 RID: 98147 RVA: 0x003753AB File Offset: 0x003735AB
+		// Token: 0x060195FC RID: 103932 RVA: 0x0039F19F File Offset: 0x0039D39F
 		public static void AddEffectPath(FlatBufferBuilder builder, StringOffset effectPathOffset)
 		{
 			builder.AddOffset(9, effectPathOffset.Value, 0);
 		}
 
-		// Token: 0x06017F64 RID: 98148 RVA: 0x003753BC File Offset: 0x003735BC
+		// Token: 0x060195FD RID: 103933 RVA: 0x0039F1B0 File Offset: 0x0039D3B0
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(10, nullMask, 0);
 		}
 
-		// Token: 0x06017F65 RID: 98149 RVA: 0x003753C8 File Offset: 0x003735C8
+		// Token: 0x060195FE RID: 103934 RVA: 0x0039F1BC File Offset: 0x0039D3BC
 		public static Offset<IReachAreaQuestCondition> EndIReachAreaQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IReachAreaQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06017F66 RID: 98150 RVA: 0x003753D8 File Offset: 0x003735D8
+		// Token: 0x060195FF RID: 103935 RVA: 0x0039F1CC File Offset: 0x0039D3CC
 		public IReachAreaQuestConditionT UnPack()
 		{
 			IReachAreaQuestConditionT reachAreaQuestConditionT = new IReachAreaQuestConditionT();
@@ -524,7 +524,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return reachAreaQuestConditionT;
 		}
 
-		// Token: 0x06017F67 RID: 98151 RVA: 0x003753F4 File Offset: 0x003735F4
+		// Token: 0x06019600 RID: 103936 RVA: 0x0039F1E8 File Offset: 0x0039D3E8
 		public void UnPackTo(IReachAreaQuestConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -543,17 +543,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			{
 				TMatchRoleOptionUnion tmatchRoleOptionUnion = new TMatchRoleOptionUnion();
 				tmatchRoleOptionUnion.Type = this.MatchRoleOptionType(j);
-				TMatchRoleOption tmatchRoleOption = this.MatchRoleOptionType(j);
-				if (tmatchRoleOption != TMatchRoleOption.IMatchPhantomRole)
+				switch (this.MatchRoleOptionType(j))
 				{
-					if (tmatchRoleOption == TMatchRoleOption.IMatchPlayerRole)
-					{
-						tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchPlayerRole>(j) != null) ? this.MatchRoleOption<IMatchPlayerRole>(j).Value.UnPack() : null);
-					}
-				}
-				else
-				{
+				case TMatchRoleOption.IMatchAssistCharacterRole:
+					tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchAssistCharacterRole>(j) != null) ? this.MatchRoleOption<IMatchAssistCharacterRole>(j).Value.UnPack() : null);
+					break;
+				case TMatchRoleOption.IMatchPhantomRole:
 					tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchPhantomRole>(j) != null) ? this.MatchRoleOption<IMatchPhantomRole>(j).Value.UnPack() : null);
+					break;
+				case TMatchRoleOption.IMatchPlayerRole:
+					tmatchRoleOptionUnion.Value = ((this.MatchRoleOption<IMatchPlayerRole>(j) != null) ? this.MatchRoleOption<IMatchPlayerRole>(j).Value.UnPack() : null);
+					break;
 				}
 				_o.MatchRoleOption.Add(tmatchRoleOptionUnion);
 			}
@@ -561,7 +561,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06017F68 RID: 98152 RVA: 0x003755AC File Offset: 0x003737AC
+		// Token: 0x06019601 RID: 103937 RVA: 0x0039F3E4 File Offset: 0x0039D5E4
 		public static Offset<IReachAreaQuestCondition> Pack(FlatBufferBuilder builder, IReachAreaQuestConditionT _o)
 		{
 			if (_o == null)
@@ -600,7 +600,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IReachAreaQuestCondition.CreateIReachAreaQuestCondition(builder, _o.Type, preConditionsOffset, posOffset, _o.Range, _o.EntityId, _o.RangeEntityId, rangeEntitiesOffset, matchRoleOption_typeOffset, matchRoleOptionOffset, effectPathOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400BBDA RID: 48090
+		// Token: 0x0400C5C1 RID: 50625
 		private Table __p;
 	}
 }

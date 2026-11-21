@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200464C RID: 17996
+	// Token: 0x0200357D RID: 13693
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractSystemViewItem : CommonPopViewBase
 	{
-		// Token: 0x0602E723 RID: 190243 RVA: 0x00ABB140 File Offset: 0x00AB9340
+		// Token: 0x06022E6D RID: 142957 RVA: 0x009E8770 File Offset: 0x009E6970
 		public override UUIItem GetAttachParent()
 		{
 			return base.GetItem(4);
 		}
 
-		// Token: 0x0602E724 RID: 190244 RVA: 0x00ABB14C File Offset: 0x00AB934C
+		// Token: 0x06022E6E RID: 142958 RVA: 0x009E877C File Offset: 0x009E697C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Ui
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602E725 RID: 190245 RVA: 0x00ABB218 File Offset: 0x00AB9418
+		// Token: 0x06022E6F RID: 142959 RVA: 0x009E8848 File Offset: 0x009E6A48
 		protected override void OnStart()
 		{
 			this.PopupCaptionItem = new PopupCaptionItem(base.GetItem(3));
@@ -92,14 +92,14 @@ namespace CSharpScript.Game.Ui
 			this.PopupCaptionItem.SetTitleIconVisible(false);
 		}
 
-		// Token: 0x0602E726 RID: 190246 RVA: 0x00ABB3BD File Offset: 0x00AB95BD
+		// Token: 0x06022E70 RID: 142960 RVA: 0x009E89ED File Offset: 0x009E6BED
 		protected override void OnBeforeDestroy()
 		{
 			this.InteractBackgroundConfig = null;
 			this.PopupCaptionItem = null;
 		}
 
-		// Token: 0x0602E727 RID: 190247 RVA: 0x00ABB3D4 File Offset: 0x00AB95D4
+		// Token: 0x06022E71 RID: 142961 RVA: 0x009E8A04 File Offset: 0x009E6C04
 		private void OnClickedHelpButton()
 		{
 			if (this.InteractBackgroundConfig != null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E728 RID: 190248 RVA: 0x00ABB410 File Offset: 0x00AB9610
+		// Token: 0x06022E72 RID: 142962 RVA: 0x009E8A40 File Offset: 0x009E6C40
 		private void OnClickedCloseButton()
 		{
 			Log instance = Log.Instance;
@@ -121,26 +121,26 @@ namespace CSharpScript.Game.Ui
 			UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 		}
 
-		// Token: 0x0602E729 RID: 190249 RVA: 0x00ABB469 File Offset: 0x00AB9669
+		// Token: 0x06022E73 RID: 142963 RVA: 0x009E8A99 File Offset: 0x009E6C99
 		public override void SetTitleVisible(bool bVisible)
 		{
 			base.GetText(1).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0602E72A RID: 190250 RVA: 0x00ABB478 File Offset: 0x00AB9678
+		// Token: 0x06022E74 RID: 142964 RVA: 0x009E8AA8 File Offset: 0x009E6CA8
 		public override void SetTitleText(string titleTextId)
 		{
 			UUIText text = base.GetText(1);
 			LguiUtil.Instance.SetLocalTextNew(text, titleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0602E72B RID: 190251 RVA: 0x00ABB49E File Offset: 0x00AB969E
+		// Token: 0x06022E75 RID: 142965 RVA: 0x009E8ACE File Offset: 0x009E6CCE
 		public void SetTitleSpriteVisible(bool bVisible)
 		{
 			base.GetSprite(0).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0602E72C RID: 190252 RVA: 0x00ABB4B0 File Offset: 0x00AB96B0
+		// Token: 0x06022E76 RID: 142966 RVA: 0x009E8AE0 File Offset: 0x009E6CE0
 		public void SetTitleSprite(string spritePath)
 		{
 			UUISprite titleSprite = base.GetSprite(0);
@@ -151,13 +151,13 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E72D RID: 190253 RVA: 0x00ABB4FF File Offset: 0x00AB96FF
+		// Token: 0x06022E77 RID: 142967 RVA: 0x009E8B2F File Offset: 0x009E6D2F
 		public void SetContentSpriteVisible(bool bVisible)
 		{
 			base.GetSprite(2).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0602E72E RID: 190254 RVA: 0x00ABB510 File Offset: 0x00AB9710
+		// Token: 0x06022E78 RID: 142968 RVA: 0x009E8B40 File Offset: 0x009E6D40
 		public void SetContentSprite(string spritePath)
 		{
 			UUISprite contentSprite = base.GetSprite(2);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E72F RID: 190255 RVA: 0x00ABB55F File Offset: 0x00AB975F
+		// Token: 0x06022E79 RID: 142969 RVA: 0x009E8B8F File Offset: 0x009E6D8F
 		public void SetCaptionTitleVisible(bool bVisible)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Ui
 			popupCaptionItem.SetTitleTextActive(bVisible);
 		}
 
-		// Token: 0x0602E730 RID: 190256 RVA: 0x00ABB572 File Offset: 0x00AB9772
+		// Token: 0x06022E7A RID: 142970 RVA: 0x009E8BA2 File Offset: 0x009E6DA2
 		public void SetCurrencyItemVisible(bool bVisible)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Ui
 			popupCaptionItem.SetCurrencyItemVisible(bVisible);
 		}
 
-		// Token: 0x0602E731 RID: 190257 RVA: 0x00ABB585 File Offset: 0x00AB9785
+		// Token: 0x06022E7B RID: 142971 RVA: 0x009E8BB5 File Offset: 0x009E6DB5
 		public void SetCaptionTitleSprite(string spriteTexture)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Ui
 			popupCaptionItem.SetTitleIcon(spriteTexture);
 		}
 
-		// Token: 0x0602E732 RID: 190258 RVA: 0x00ABB598 File Offset: 0x00AB9798
+		// Token: 0x06022E7C RID: 142972 RVA: 0x009E8BC8 File Offset: 0x009E6DC8
 		public void SetCaptionTitleIconVisible(bool bVisible)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Ui
 			popupCaptionItem.SetTitleIconVisible(bVisible);
 		}
 
-		// Token: 0x0602E733 RID: 190259 RVA: 0x00ABB5AC File Offset: 0x00AB97AC
+		// Token: 0x06022E7D RID: 142973 RVA: 0x009E8BDC File Offset: 0x009E6DDC
 		public UniTask SetCostItemList(int[] itemConfigList)
 		{
 			InteractSystemViewItem.<SetCostItemList>d__19 <SetCostItemList>d__;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Ui
 			return <SetCostItemList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E734 RID: 190260 RVA: 0x00ABB5F7 File Offset: 0x00AB97F7
+		// Token: 0x06022E7E RID: 142974 RVA: 0x009E8C27 File Offset: 0x009E6E27
 		public void SetHelpButtonVisible(bool bVisible)
 		{
 			PopupCaptionItem popupCaptionItem = this.PopupCaptionItem;
@@ -235,30 +235,30 @@ namespace CSharpScript.Game.Ui
 			popupCaptionItem.SetHelpBtnActive(bVisible);
 		}
 
-		// Token: 0x04018E23 RID: 101923
+		// Token: 0x0401347C RID: 78972
 		[Nullable(2)]
 		private PopupCaptionItem PopupCaptionItem;
 
-		// Token: 0x04018E24 RID: 101924
+		// Token: 0x0401347D RID: 78973
 		private InteractBackGround? InteractBackgroundConfig;
 
-		// Token: 0x0200A8A7 RID: 43175
+		// Token: 0x02009263 RID: 37475
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04033580 RID: 210304
+			// Token: 0x0402DD16 RID: 187670
 			public const int TitleSprite = 0;
 
-			// Token: 0x04033581 RID: 210305
+			// Token: 0x0402DD17 RID: 187671
 			public const int TitleText = 1;
 
-			// Token: 0x04033582 RID: 210306
+			// Token: 0x0402DD18 RID: 187672
 			public const int ContentSprite = 2;
 
-			// Token: 0x04033583 RID: 210307
+			// Token: 0x0402DD19 RID: 187673
 			public const int CaptionItem = 3;
 
-			// Token: 0x04033584 RID: 210308
+			// Token: 0x0402DD1A RID: 187674
 			public const int ContentItem = 4;
 		}
 	}

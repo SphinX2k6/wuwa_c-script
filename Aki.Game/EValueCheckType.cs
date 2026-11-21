@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002EE8 RID: 12008
+// Token: 0x0200243B RID: 9275
 public enum EValueCheckType
 {
-	// Token: 0x0400C035 RID: 49205
+	// Token: 0x0400C3D0 RID: 50128
 	Less,
-	// Token: 0x0400C036 RID: 49206
+	// Token: 0x0400C3D1 RID: 50129
 	Equal,
-	// Token: 0x0400C037 RID: 49207
+	// Token: 0x0400C3D2 RID: 50130
 	Greater
 }

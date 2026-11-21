@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020032CD RID: 13005
+// Token: 0x0200283E RID: 10302
 public enum ELeaveVehicleType
 {
-	// Token: 0x0400DF9F RID: 57247
+	// Token: 0x0400E442 RID: 58434
 	Launch,
-	// Token: 0x0400DFA0 RID: 57248
+	// Token: 0x0400E443 RID: 58435
 	StandUp,
-	// Token: 0x0400DFA1 RID: 57249
+	// Token: 0x0400E444 RID: 58436
 	SeatStandUp,
-	// Token: 0x0400DFA2 RID: 57250
+	// Token: 0x0400E445 RID: 58437
 	DelayExit,
-	// Token: 0x0400DFA3 RID: 57251
+	// Token: 0x0400E446 RID: 58438
 	AllRole
 }

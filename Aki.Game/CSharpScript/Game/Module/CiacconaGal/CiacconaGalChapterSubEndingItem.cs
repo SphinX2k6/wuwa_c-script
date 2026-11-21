@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BEB RID: 23531
+	// Token: 0x02004BCB RID: 19403
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaGalChapterSubEndingItem : GridProxyAbstract<CiacconaGalSubEndingData>
 	{
-		// Token: 0x0603B79E RID: 243614 RVA: 0x00E2EEF0 File Offset: 0x00E2D0F0
+		// Token: 0x060306E9 RID: 198377 RVA: 0x00D7F200 File Offset: 0x00D7D400
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B79F RID: 243615 RVA: 0x00E2EFE0 File Offset: 0x00E2D1E0
+		// Token: 0x060306EA RID: 198378 RVA: 0x00D7F2F0 File Offset: 0x00D7D4F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalChapterSubEndingItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7A0 RID: 243616 RVA: 0x00E2F024 File Offset: 0x00E2D224
+		// Token: 0x060306EB RID: 198379 RVA: 0x00D7F334 File Offset: 0x00D7D534
 		[NullableContext(1)]
 		public override void Refresh(CiacconaGalSubEndingData data, bool isSelected, int gridIndex)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), this.Data.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B7A1 RID: 243617 RVA: 0x00E2F1DC File Offset: 0x00E2D3DC
+		// Token: 0x060306EC RID: 198380 RVA: 0x00D7F4EC File Offset: 0x00D7D6EC
 		private void OnBtnRewardClick()
 		{
 			CiacconaGalChapterData chapterDataBySubEndingId = CiacconaGalModel.Instance.GetChapterDataBySubEndingId(this.Data.Id);
@@ -102,32 +102,32 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0401EFC6 RID: 126918
+		// Token: 0x04019A77 RID: 105079
 		private CiacconaGalSubEndingData Data;
 
-		// Token: 0x0401EFC7 RID: 126919
+		// Token: 0x04019A78 RID: 105080
 		private ButtonSpriteItem BtnReward;
 
-		// Token: 0x0200BDCF RID: 48591
+		// Token: 0x0200A7D7 RID: 42967
 		[NullableContext(0)]
 		private class ESubEndingItemComponentDefine
 		{
-			// Token: 0x040393B7 RID: 234423
+			// Token: 0x04033D7A RID: 212346
 			public const int TextureBg = 0;
 
-			// Token: 0x040393B8 RID: 234424
+			// Token: 0x04033D7B RID: 212347
 			public const int SpriteIcon = 1;
 
-			// Token: 0x040393B9 RID: 234425
+			// Token: 0x04033D7C RID: 212348
 			public const int TextTitle = 2;
 
-			// Token: 0x040393BA RID: 234426
+			// Token: 0x04033D7D RID: 212349
 			public const int TextDesc = 3;
 
-			// Token: 0x040393BB RID: 234427
+			// Token: 0x04033D7E RID: 212350
 			public const int ItemBtnReward = 4;
 
-			// Token: 0x040393BC RID: 234428
+			// Token: 0x04033D7F RID: 212351
 			public const int SpriteFinished = 5;
 		}
 	}

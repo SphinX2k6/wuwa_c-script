@@ -17,19 +17,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005870 RID: 22640
+	// Token: 0x02004848 RID: 18504
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonEntranceRootView : UiTickViewBase
 	{
-		// Token: 0x06039958 RID: 235864 RVA: 0x00DAE22B File Offset: 0x00DAC42B
+		// Token: 0x0602E879 RID: 190585 RVA: 0x00CFD0F7 File Offset: 0x00CFB2F7
 		public InstanceDungeonEntranceRootView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17008A62 RID: 35426
-		// (get) Token: 0x06039959 RID: 235865 RVA: 0x00DAE260 File Offset: 0x00DAC460
-		// (set) Token: 0x0603995A RID: 235866 RVA: 0x00DAE268 File Offset: 0x00DAC468
+		// Token: 0x17005E2E RID: 24110
+		// (get) Token: 0x0602E87A RID: 190586 RVA: 0x00CFD12C File Offset: 0x00CFB32C
+		// (set) Token: 0x0602E87B RID: 190587 RVA: 0x00CFD134 File Offset: 0x00CFB334
 		private int InstanceId
 		{
 			get
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17008A63 RID: 35427
-		// (get) Token: 0x0603995B RID: 235867 RVA: 0x00DAE2E1 File Offset: 0x00DAC4E1
+		// Token: 0x17005E2F RID: 24111
+		// (get) Token: 0x0602E87C RID: 190588 RVA: 0x00CFD1AD File Offset: 0x00CFB3AD
 		private bool InstanceBgDirty
 		{
 			get
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0603995C RID: 235868 RVA: 0x00DAE2EC File Offset: 0x00DAC4EC
+		// Token: 0x0602E87D RID: 190589 RVA: 0x00CFD1B8 File Offset: 0x00CFB3B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603995D RID: 235869 RVA: 0x00DAE3FC File Offset: 0x00DAC5FC
+		// Token: 0x0602E87E RID: 190590 RVA: 0x00CFD2C8 File Offset: 0x00CFB4C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InstanceDungeonEntranceRootView.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -101,20 +101,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603995E RID: 235870 RVA: 0x00DAE43F File Offset: 0x00DAC63F
+		// Token: 0x0602E87F RID: 190591 RVA: 0x00CFD30B File Offset: 0x00CFB50B
 		protected override void OnStart()
 		{
 			this.UpdateInstancesView();
 			this.UpdateInstanceSubView();
 		}
 
-		// Token: 0x0603995F RID: 235871 RVA: 0x00DAE44D File Offset: 0x00DAC64D
+		// Token: 0x0602E880 RID: 190592 RVA: 0x00CFD319 File Offset: 0x00CFB519
 		protected override void OnBeforeShow()
 		{
 			this.UpdateEntranceDetail();
 		}
 
-		// Token: 0x06039960 RID: 235872 RVA: 0x00DAE455 File Offset: 0x00DAC655
+		// Token: 0x0602E881 RID: 190593 RVA: 0x00CFD321 File Offset: 0x00CFB521
 		protected override void OnAfterShow()
 		{
 			if (this.InstanceIdList.Count <= 0)
@@ -123,28 +123,28 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039961 RID: 235873 RVA: 0x00DAE472 File Offset: 0x00DAC672
+		// Token: 0x0602E882 RID: 190594 RVA: 0x00CFD33E File Offset: 0x00CFB53E
 		protected override void OnBeforeDestroy()
 		{
 			this.DisposeView();
 			this.DisposeData();
 		}
 
-		// Token: 0x06039962 RID: 235874 RVA: 0x00DAE480 File Offset: 0x00DAC680
+		// Token: 0x0602E883 RID: 190595 RVA: 0x00CFD34C File Offset: 0x00CFB54C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnClickEnterInstanceSingle, new Action(this.HandleOnClickEnterInstanceSingle));
 			EventSystem.Instance.Add(EEventName.OnNeedRefreshByProtocol, new Action(this.HandleOnNeedRefreshByProtocol));
 		}
 
-		// Token: 0x06039963 RID: 235875 RVA: 0x00DAE4BA File Offset: 0x00DAC6BA
+		// Token: 0x0602E884 RID: 190596 RVA: 0x00CFD386 File Offset: 0x00CFB586
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnClickEnterInstanceSingle, new Action(this.HandleOnClickEnterInstanceSingle));
 			EventSystem.Instance.Remove(EEventName.OnNeedRefreshByProtocol, new Action(this.HandleOnNeedRefreshByProtocol));
 		}
 
-		// Token: 0x06039964 RID: 235876 RVA: 0x00DAE4F4 File Offset: 0x00DAC6F4
+		// Token: 0x0602E885 RID: 190597 RVA: 0x00CFD3C0 File Offset: 0x00CFB5C0
 		protected override void OnTick(float delta)
 		{
 			this.CountDownMs -= (int)delta;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.CountDownMs = 2000;
 		}
 
-		// Token: 0x06039965 RID: 235877 RVA: 0x00DAE520 File Offset: 0x00DAC720
+		// Token: 0x0602E886 RID: 190598 RVA: 0x00CFD3EC File Offset: 0x00CFB5EC
 		private void InitData()
 		{
 			this.EntranceId = InstanceDungeonEntranceModel.Instance.EntranceId;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039966 RID: 235878 RVA: 0x00DAE64C File Offset: 0x00DAC84C
+		// Token: 0x0602E887 RID: 190599 RVA: 0x00CFD518 File Offset: 0x00CFB718
 		private void DisposeData()
 		{
 			this.InstanceIdList.Clear();
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			InstanceDungeonEntranceModel.Instance.SelectInstanceId = 0;
 		}
 
-		// Token: 0x06039967 RID: 235879 RVA: 0x00DAE67A File Offset: 0x00DAC87A
+		// Token: 0x0602E888 RID: 190600 RVA: 0x00CFD546 File Offset: 0x00CFB746
 		private void DisposeView()
 		{
 			DynamicScrollView<InstanceDetectItem, InstanceDetectDynamicItem, InstanceDetectionDynamicData> instanceLoopScroll = this.InstanceLoopScroll;
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.InstanceLoopScroll = null;
 		}
 
-		// Token: 0x06039968 RID: 235880 RVA: 0x00DAE694 File Offset: 0x00DAC894
+		// Token: 0x0602E889 RID: 190601 RVA: 0x00CFD560 File Offset: 0x00CFB760
 		private void CreateCaption()
 		{
 			CommonTabComponentData<CommonTabItem> data = new CommonTabComponentData<CommonTabItem>(new Func<UUIItem, int?, CommonTabItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			});
 		}
 
-		// Token: 0x06039969 RID: 235881 RVA: 0x00DAE770 File Offset: 0x00DAC970
+		// Token: 0x0602E88A RID: 190602 RVA: 0x00CFD63C File Offset: 0x00CFB83C
 		private UniTask CreateInstanceLoopScrollAsync()
 		{
 			InstanceDungeonEntranceRootView.<CreateInstanceLoopScrollAsync>d__37 <CreateInstanceLoopScrollAsync>d__;
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <CreateInstanceLoopScrollAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603996A RID: 235882 RVA: 0x00DAE7B4 File Offset: 0x00DAC9B4
+		// Token: 0x0602E88B RID: 190603 RVA: 0x00CFD680 File Offset: 0x00CFB880
 		private UniTask CreateInstanceSubViewAsync()
 		{
 			InstanceDungeonEntranceRootView.<CreateInstanceSubViewAsync>d__38 <CreateInstanceSubViewAsync>d__;
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <CreateInstanceSubViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603996B RID: 235883 RVA: 0x00DAE7F8 File Offset: 0x00DAC9F8
+		// Token: 0x0602E88C RID: 190604 RVA: 0x00CFD6C4 File Offset: 0x00CFB8C4
 		private void UpdateEntranceDetail()
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(this.InstanceId);
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0603996C RID: 235884 RVA: 0x00DAE884 File Offset: 0x00DACA84
+		// Token: 0x0602E88D RID: 190605 RVA: 0x00CFD750 File Offset: 0x00CFB950
 		private void UpdateInstancesView()
 		{
 			InstanceDetectionDynamicData[] instanceListBySelectSeriesId = this.GetInstanceListBySelectSeriesId();
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			});
 		}
 
-		// Token: 0x0603996D RID: 235885 RVA: 0x00DAE8C8 File Offset: 0x00DACAC8
+		// Token: 0x0602E88E RID: 190606 RVA: 0x00CFD794 File Offset: 0x00CFB994
 		private void UpdateInstanceSubView()
 		{
 			IInstanceDungeonEntranceAbility subView = this.SubView;
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			subView.RefreshExternalAsync();
 		}
 
-		// Token: 0x0603996E RID: 235886 RVA: 0x00DAE8DC File Offset: 0x00DACADC
+		// Token: 0x0602E88F RID: 190607 RVA: 0x00CFD7A8 File Offset: 0x00CFB9A8
 		private InstanceDetectionDynamicData[] GetInstanceListBySelectSeriesId()
 		{
 			this.ScrollIndex = 0;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return list.ToArray();
 		}
 
-		// Token: 0x0603996F RID: 235887 RVA: 0x00DAEAA8 File Offset: 0x00DACCA8
+		// Token: 0x0602E890 RID: 190608 RVA: 0x00CFD974 File Offset: 0x00CFBB74
 		private void RefreshInstanceIdByTitleMap()
 		{
 			int num = 0;
@@ -442,13 +442,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			InstanceDungeonEntranceModel.Instance.SelectInstanceId = this.InstanceId;
 		}
 
-		// Token: 0x06039970 RID: 235888 RVA: 0x00DAEC34 File Offset: 0x00DACE34
+		// Token: 0x0602E891 RID: 190609 RVA: 0x00CFDB00 File Offset: 0x00CFBD00
 		private bool GetIsAllowedClickBegin()
 		{
 			return this.NextCanClickButtonTime <= TimeUtil.Instance.GetServerTimeStamp();
 		}
 
-		// Token: 0x06039971 RID: 235889 RVA: 0x00DAEC4C File Offset: 0x00DACE4C
+		// Token: 0x0602E892 RID: 190610 RVA: 0x00CFDB18 File Offset: 0x00CFBD18
 		private InstanceDetectItem CreateInstanceGrid(InstanceDetectionDynamicData data, UUIItem uiItem, int index)
 		{
 			InstanceDetectItem instanceDetectItem = new InstanceDetectItem();
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return instanceDetectItem;
 		}
 
-		// Token: 0x06039972 RID: 235890 RVA: 0x00DAECC0 File Offset: 0x00DACEC0
+		// Token: 0x0602E893 RID: 190611 RVA: 0x00CFDB8C File Offset: 0x00CFBD8C
 		private void RefreshInstanceById(int id, UUIExtendToggle toggle, [Nullable(2)] InstanceDetectionDynamicData data = null)
 		{
 			this.InstanceId = id;
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.UiViewSequence.PlaySequence("Xz", false, null);
 		}
 
-		// Token: 0x06039973 RID: 235891 RVA: 0x00DAED5C File Offset: 0x00DACF5C
+		// Token: 0x0602E894 RID: 190612 RVA: 0x00CFDC28 File Offset: 0x00CFBE28
 		private void RefreshSeriesById(int id, UUIExtendToggle toggle, bool isShow)
 		{
 			if (this.CurrentSeriesToggle != null && this.CurrentSeriesToggle != toggle)
@@ -508,13 +508,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			instanceLoopScroll2.BindLateUpdate(new Action<float>(this.ScrollToItem));
 		}
 
-		// Token: 0x06039974 RID: 235892 RVA: 0x00DAEDF8 File Offset: 0x00DACFF8
+		// Token: 0x0602E895 RID: 190613 RVA: 0x00CFDCC4 File Offset: 0x00CFBEC4
 		private bool CanExecuteChange(int id)
 		{
 			return this.InstanceId != id;
 		}
 
-		// Token: 0x06039975 RID: 235893 RVA: 0x00DAEE08 File Offset: 0x00DAD008
+		// Token: 0x0602E896 RID: 190614 RVA: 0x00CFDCD4 File Offset: 0x00CFBED4
 		private void ScrollToItem(float delta)
 		{
 			int valueOrDefault = this.TitleInstanceGridNumberMap.GetValueOrDefault(this.SeriesId, 0);
@@ -528,31 +528,31 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			instanceLoopScroll.UnBindLateUpdate();
 		}
 
-		// Token: 0x06039976 RID: 235894 RVA: 0x00DAEE5E File Offset: 0x00DAD05E
+		// Token: 0x0602E897 RID: 190615 RVA: 0x00CFDD2A File Offset: 0x00CFBF2A
 		private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x06039977 RID: 235895 RVA: 0x00DAEE65 File Offset: 0x00DAD065
+		// Token: 0x0602E898 RID: 190616 RVA: 0x00CFDD31 File Offset: 0x00CFBF31
 		private void ToggleCallBack(int index)
 		{
 		}
 
-		// Token: 0x06039978 RID: 235896 RVA: 0x00DAEE67 File Offset: 0x00DAD067
+		// Token: 0x0602E899 RID: 190617 RVA: 0x00CFDD33 File Offset: 0x00CFBF33
 		[NullableContext(2)]
 		private CommonTabData GetCommonData(int index)
 		{
 			return null;
 		}
 
-		// Token: 0x06039979 RID: 235897 RVA: 0x00DAEE6A File Offset: 0x00DAD06A
+		// Token: 0x0602E89A RID: 190618 RVA: 0x00CFDD36 File Offset: 0x00CFBF36
 		private void OnClickBackBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603997A RID: 235898 RVA: 0x00DAEE74 File Offset: 0x00DAD074
+		// Token: 0x0602E89B RID: 190619 RVA: 0x00CFDD40 File Offset: 0x00CFBF40
 		private void HandleOnClickEnterInstanceSingle()
 		{
 			if (!this.GetIsAllowedClickBegin())
@@ -609,14 +609,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			InstanceDungeonEntranceController.Instance.ContinueEntranceFlow();
 		}
 
-		// Token: 0x0603997B RID: 235899 RVA: 0x00DAF009 File Offset: 0x00DAD209
+		// Token: 0x0602E89C RID: 190620 RVA: 0x00CFDED5 File Offset: 0x00CFC0D5
 		private void HandleOnNeedRefreshByProtocol()
 		{
 			this.UpdateInstancesView();
 			this.UpdateInstanceSubView();
 		}
 
-		// Token: 0x0603997C RID: 235900 RVA: 0x00DAF018 File Offset: 0x00DAD218
+		// Token: 0x0602E89D RID: 190621 RVA: 0x00CFDEE4 File Offset: 0x00CFC0E4
 		private void HandleOnUpdateInstancesView()
 		{
 			if (this.InstanceLoopScroll != null)
@@ -639,7 +639,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			subView.RefreshOnTick();
 		}
 
-		// Token: 0x0603997D RID: 235901 RVA: 0x00DAF074 File Offset: 0x00DAD274
+		// Token: 0x0602E89E RID: 190622 RVA: 0x00CFDF40 File Offset: 0x00CFC140
 		private void OpenPowerConfirm()
 		{
 			int instanceId = this.InstanceId;
@@ -654,56 +654,56 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603997E RID: 235902 RVA: 0x00DAF0DE File Offset: 0x00DAD2DE
+		// Token: 0x0602E89F RID: 190623 RVA: 0x00CFDFAA File Offset: 0x00CFC1AA
 		private void PlayPopupLevelSequenceReverse()
 		{
 			this.UiViewSequence.StopSequenceByKey("Popup", false, false);
 			this.UiViewSequence.PlaySequencePurely("Popup", false, true);
 		}
 
-		// Token: 0x0401E1B3 RID: 123315
+		// Token: 0x04018C50 RID: 101456
 		private int EntranceId;
 
-		// Token: 0x0401E1B4 RID: 123316
+		// Token: 0x04018C51 RID: 101457
 		private int InstanceIdInternal;
 
-		// Token: 0x0401E1B5 RID: 123317
+		// Token: 0x04018C52 RID: 101458
 		private bool InstanceBgDirtyInternal;
 
-		// Token: 0x0401E1B6 RID: 123318
+		// Token: 0x04018C53 RID: 101459
 		private int SeriesId;
 
-		// Token: 0x0401E1B7 RID: 123319
+		// Token: 0x04018C54 RID: 101460
 		private int ScrollIndex;
 
-		// Token: 0x0401E1B8 RID: 123320
+		// Token: 0x04018C55 RID: 101461
 		private double NextCanClickButtonTime;
 
-		// Token: 0x0401E1B9 RID: 123321
+		// Token: 0x04018C56 RID: 101462
 		private readonly List<int> InstanceIdList = new List<int>();
 
-		// Token: 0x0401E1BA RID: 123322
+		// Token: 0x04018C57 RID: 101463
 		private readonly Dictionary<int, List<int>> InstanceByTitleMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x0401E1BB RID: 123323
+		// Token: 0x04018C58 RID: 101464
 		private readonly Dictionary<int, int> TitleInstanceGridNumberMap = new Dictionary<int, int>();
 
-		// Token: 0x0401E1BC RID: 123324
+		// Token: 0x04018C59 RID: 101465
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSeriesToggle;
 
-		// Token: 0x0401E1BD RID: 123325
+		// Token: 0x04018C5A RID: 101466
 		[Nullable(2)]
 		private UUIExtendToggle CurrentInstanceToggle;
 
-		// Token: 0x0401E1BE RID: 123326
+		// Token: 0x04018C5B RID: 101467
 		[Nullable(2)]
 		private InstanceDetectionDynamicData CurrentInstanceDynamicData;
 
-		// Token: 0x0401E1BF RID: 123327
+		// Token: 0x04018C5C RID: 101468
 		private int CountDownMs = 2000;
 
-		// Token: 0x0401E1C0 RID: 123328
+		// Token: 0x04018C5D RID: 101469
 		[Nullable(new byte[]
 		{
 			2,
@@ -713,33 +713,33 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private DynamicScrollView<InstanceDetectItem, InstanceDetectDynamicItem, InstanceDetectionDynamicData> InstanceLoopScroll;
 
-		// Token: 0x0401E1C1 RID: 123329
+		// Token: 0x04018C5E RID: 101470
 		[Nullable(2)]
 		private IInstanceDungeonEntranceAbility SubView;
 
-		// Token: 0x0401E1C2 RID: 123330
+		// Token: 0x04018C5F RID: 101471
 		private TabComponentWithCaptionItem<CommonTabItem> CaptionItem;
 
-		// Token: 0x0401E1C3 RID: 123331
+		// Token: 0x04018C60 RID: 101472
 		private const int CLICK_INSTANCE_BEGIN_BUTTON_CD = 500;
 
-		// Token: 0x0200BAB0 RID: 47792
+		// Token: 0x0200A4C9 RID: 42185
 		[NullableContext(0)]
 		private enum EChildCom
 		{
-			// Token: 0x040386AF RID: 231087
+			// Token: 0x040330B0 RID: 209072
 			ScrollInstanceSeries,
-			// Token: 0x040386B0 RID: 231088
+			// Token: 0x040330B1 RID: 209073
 			InstanceDetectItem,
-			// Token: 0x040386B1 RID: 231089
+			// Token: 0x040330B2 RID: 209074
 			UiItemInstanceSeries,
-			// Token: 0x040386B2 RID: 231090
+			// Token: 0x040330B3 RID: 209075
 			TextureInstanceBG,
-			// Token: 0x040386B3 RID: 231091
+			// Token: 0x040330B4 RID: 209076
 			MatchParentItem,
-			// Token: 0x040386B4 RID: 231092
+			// Token: 0x040330B5 RID: 209077
 			ContentParentItem,
-			// Token: 0x040386B5 RID: 231093
+			// Token: 0x040330B6 RID: 209078
 			CaptionItem
 		}
 	}

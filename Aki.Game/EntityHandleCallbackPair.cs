@@ -2,47 +2,47 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020034FE RID: 13566
+// Token: 0x02002A73 RID: 10867
 [NullableContext(2)]
 [Nullable(0)]
 public class EntityHandleCallbackPair
 {
-	// Token: 0x170028FB RID: 10491
-	// (get) Token: 0x0601DBDC RID: 121820 RVA: 0x00855491 File Offset: 0x00853691
-	// (set) Token: 0x0601DBDD RID: 121821 RVA: 0x00855499 File Offset: 0x00853699
+	// Token: 0x17002C94 RID: 11412
+	// (get) Token: 0x0601B8F3 RID: 112883 RVA: 0x0087D8E5 File Offset: 0x0087BAE5
+	// (set) Token: 0x0601B8F4 RID: 112884 RVA: 0x0087D8ED File Offset: 0x0087BAED
 	public EntityHandle Handle { get; set; }
 
-	// Token: 0x170028FC RID: 10492
-	// (get) Token: 0x0601DBDE RID: 121822 RVA: 0x008554A2 File Offset: 0x008536A2
-	// (set) Token: 0x0601DBDF RID: 121823 RVA: 0x008554AA File Offset: 0x008536AA
+	// Token: 0x17002C95 RID: 11413
+	// (get) Token: 0x0601B8F5 RID: 112885 RVA: 0x0087D8F6 File Offset: 0x0087BAF6
+	// (set) Token: 0x0601B8F6 RID: 112886 RVA: 0x0087D8FE File Offset: 0x0087BAFE
 	public long CreatureDataId { get; set; }
 
-	// Token: 0x170028FD RID: 10493
-	// (get) Token: 0x0601DBE0 RID: 121824 RVA: 0x008554B3 File Offset: 0x008536B3
-	// (set) Token: 0x0601DBE1 RID: 121825 RVA: 0x008554BB File Offset: 0x008536BB
+	// Token: 0x17002C96 RID: 11414
+	// (get) Token: 0x0601B8F7 RID: 112887 RVA: 0x0087D907 File Offset: 0x0087BB07
+	// (set) Token: 0x0601B8F8 RID: 112888 RVA: 0x0087D90F File Offset: 0x0087BB0F
 	public int PbDataId { get; set; }
 
-	// Token: 0x170028FE RID: 10494
-	// (get) Token: 0x0601DBE2 RID: 121826 RVA: 0x008554C4 File Offset: 0x008536C4
-	// (set) Token: 0x0601DBE3 RID: 121827 RVA: 0x008554CC File Offset: 0x008536CC
+	// Token: 0x17002C97 RID: 11415
+	// (get) Token: 0x0601B8F9 RID: 112889 RVA: 0x0087D918 File Offset: 0x0087BB18
+	// (set) Token: 0x0601B8FA RID: 112890 RVA: 0x0087D920 File Offset: 0x0087BB20
 	public float AngleRatio { get; set; }
 
-	// Token: 0x170028FF RID: 10495
-	// (get) Token: 0x0601DBE4 RID: 121828 RVA: 0x008554D5 File Offset: 0x008536D5
-	// (set) Token: 0x0601DBE5 RID: 121829 RVA: 0x008554DD File Offset: 0x008536DD
+	// Token: 0x17002C98 RID: 11416
+	// (get) Token: 0x0601B8FB RID: 112891 RVA: 0x0087D929 File Offset: 0x0087BB29
+	// (set) Token: 0x0601B8FC RID: 112892 RVA: 0x0087D931 File Offset: 0x0087BB31
 	public float Priority { get; set; }
 
-	// Token: 0x17002900 RID: 10496
-	// (get) Token: 0x0601DBE6 RID: 121830 RVA: 0x008554E6 File Offset: 0x008536E6
-	// (set) Token: 0x0601DBE7 RID: 121831 RVA: 0x008554EE File Offset: 0x008536EE
+	// Token: 0x17002C99 RID: 11417
+	// (get) Token: 0x0601B8FD RID: 112893 RVA: 0x0087D93A File Offset: 0x0087BB3A
+	// (set) Token: 0x0601B8FE RID: 112894 RVA: 0x0087D942 File Offset: 0x0087BB42
 	public int Order { get; set; }
 
-	// Token: 0x17002901 RID: 10497
-	// (get) Token: 0x0601DBE8 RID: 121832 RVA: 0x008554F7 File Offset: 0x008536F7
-	// (set) Token: 0x0601DBE9 RID: 121833 RVA: 0x008554FF File Offset: 0x008536FF
+	// Token: 0x17002C9A RID: 11418
+	// (get) Token: 0x0601B8FF RID: 112895 RVA: 0x0087D94B File Offset: 0x0087BB4B
+	// (set) Token: 0x0601B900 RID: 112896 RVA: 0x0087D953 File Offset: 0x0087BB53
 	public int Version { get; set; }
 
-	// Token: 0x0601DBEA RID: 121834 RVA: 0x00855508 File Offset: 0x00853708
+	// Token: 0x0601B901 RID: 112897 RVA: 0x0087D95C File Offset: 0x0087BB5C
 	public void AddCallback(Action<ELoadResultType> callback)
 	{
 		if (callback != null)
@@ -51,13 +51,13 @@ public class EntityHandleCallbackPair
 		}
 	}
 
-	// Token: 0x0601DBEB RID: 121835 RVA: 0x00855519 File Offset: 0x00853719
+	// Token: 0x0601B902 RID: 112898 RVA: 0x0087D96D File Offset: 0x0087BB6D
 	public void ClearCallbacks()
 	{
 		this.Callbacks.Clear();
 	}
 
-	// Token: 0x0601DBEC RID: 121836 RVA: 0x00855528 File Offset: 0x00853728
+	// Token: 0x0601B903 RID: 112899 RVA: 0x0087D97C File Offset: 0x0087BB7C
 	public void InvokeCallbacks(ELoadResultType result)
 	{
 		foreach (Action<ELoadResultType> action in this.Callbacks)
@@ -79,7 +79,7 @@ public class EntityHandleCallbackPair
 		}
 	}
 
-	// Token: 0x0400E97E RID: 59774
+	// Token: 0x0400EE39 RID: 60985
 	[Nullable(1)]
 	private readonly List<Action<ELoadResultType>> Callbacks = new List<Action<ELoadResultType>>();
 }

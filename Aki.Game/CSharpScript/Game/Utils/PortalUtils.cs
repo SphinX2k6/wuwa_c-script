@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004553 RID: 17747
+	// Token: 0x0200347B RID: 13435
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PortalUtils : Singleton
 	{
-		// Token: 0x17007552 RID: 30034
-		// (get) Token: 0x0602DD8E RID: 187790 RVA: 0x00A8A770 File Offset: 0x00A88970
+		// Token: 0x17004809 RID: 18441
+		// (get) Token: 0x06022470 RID: 140400 RVA: 0x009B5CA0 File Offset: 0x009B3EA0
 		private PortalCapturePerformanceConfig DefaultCapturePerformanceConfig
 		{
 			get
@@ -26,19 +26,63 @@ namespace CSharpScript.Game.Utils
 					{
 						{
 							EPortalCaptureLevel.VeryLow,
-							new FSceneCaptureComponent2DParams(1000000f, 64, 1, 1, 2000f, false, false, false, true)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 1000000f,
+								CaptureMaxRTSize = 64,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = false,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = true
+							}
 						},
 						{
 							EPortalCaptureLevel.Low,
-							new FSceneCaptureComponent2DParams(0.033333f, 256, 1, 1, 2000f, true, false, false, true)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 0.033333f,
+								CaptureMaxRTSize = 256,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = true,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = true
+							}
 						},
 						{
 							EPortalCaptureLevel.Mid,
-							new FSceneCaptureComponent2DParams(0.033333f, 512, 1, 1, 2000f, true, false, false, true)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 0.033333f,
+								CaptureMaxRTSize = 512,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = true,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = true
+							}
 						},
 						{
 							EPortalCaptureLevel.High,
-							new FSceneCaptureComponent2DParams(0.016667f, 1024, 1, 1, 2000f, true, false, false, true)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 0.016667f,
+								CaptureMaxRTSize = 1024,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = true,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = true
+							}
 						}
 					}, new Dictionary<EPortalCaptureLevel, double>
 					{
@@ -58,19 +102,63 @@ namespace CSharpScript.Game.Utils
 					{
 						{
 							EPortalCaptureLevel.VeryLow,
-							new FSceneCaptureComponent2DParams(1000000f, 64, 1, 1, 2000f, false, false, false, false)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 1000000f,
+								CaptureMaxRTSize = 64,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = false,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = false
+							}
 						},
 						{
 							EPortalCaptureLevel.Low,
-							new FSceneCaptureComponent2DParams(0.066667f, 128, 1, 1, 2000f, true, false, false, false)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 0.066667f,
+								CaptureMaxRTSize = 128,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = true,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = false
+							}
 						},
 						{
 							EPortalCaptureLevel.Mid,
-							new FSceneCaptureComponent2DParams(0.066667f, 256, 1, 1, 2000f, true, false, false, true)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 0.066667f,
+								CaptureMaxRTSize = 256,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = true,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = true
+							}
 						},
 						{
 							EPortalCaptureLevel.High,
-							new FSceneCaptureComponent2DParams(0.066667f, 256, 1, 1, 2000f, true, false, false, true)
+							new FSceneCaptureComponent2DParams
+							{
+								CaptureInterval = 0.066667f,
+								CaptureMaxRTSize = 256,
+								CaptureMaxRTSizeXScale = 1,
+								CaptureMaxRTSizeYScale = 1,
+								MaxViewDistanceOverride = 2000f,
+								bEnableCapture = true,
+								bCaptureSkeletal = false,
+								bCaptureDynamicShadows = false,
+								bCaptureParticles = true
+							}
 						}
 					}, new Dictionary<EPortalCaptureLevel, double>
 					{
@@ -92,7 +180,7 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DD8F RID: 187791 RVA: 0x00A8A918 File Offset: 0x00A88B18
+		// Token: 0x06022471 RID: 140401 RVA: 0x009B5FF8 File Offset: 0x009B41F8
 		private void DrawCaptureDebug(Transform playerCameraTrans, FTransformDouble sourcePortalWorld, FTransformDouble targetPortalWorld, FTransformDouble captureTransform, double nearPlane, double nearCenterY, double nearCenterZ, double nearHalfWidth, double nearHalfHeight)
 		{
 			FVectorDouble fvectorDouble = new FVectorDouble(nearPlane, nearCenterY, nearCenterZ);
@@ -109,7 +197,7 @@ namespace CSharpScript.Game.Utils
 			this.DrawDebugTransform(targetPortalWorld, 80f, 0f);
 		}
 
-		// Token: 0x0602DD90 RID: 187792 RVA: 0x00A8A9F8 File Offset: 0x00A88BF8
+		// Token: 0x06022472 RID: 140402 RVA: 0x009B60D8 File Offset: 0x009B42D8
 		private void DrawDebugFrustumToPlane(FVectorDouble origin, FVectorDouble center, FVectorDouble right, FVectorDouble up)
 		{
 			FVectorDouble fvectorDouble = new FVectorDouble(center.X - right.X - up.X, center.Y - right.Y - up.Y, center.Z - right.Z - up.Z);
@@ -127,38 +215,38 @@ namespace CSharpScript.Game.Utils
 			this.DrawDebugSphere(origin, this.DebugColorCyan, 10f, 0f);
 		}
 
-		// Token: 0x0602DD91 RID: 187793 RVA: 0x00A8ABCC File Offset: 0x00A88DCC
+		// Token: 0x06022473 RID: 140403 RVA: 0x009B62AC File Offset: 0x009B44AC
 		private void DrawDebugSphere(FVectorDouble position, FLinearColor color, float radius = 18f, float duration = 5f)
 		{
 			UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, position, radius, 12, new FLinearColor?(color), duration, 2f);
 		}
 
-		// Token: 0x0602DD92 RID: 187794 RVA: 0x00A8ABE9 File Offset: 0x00A88DE9
+		// Token: 0x06022474 RID: 140404 RVA: 0x009B62C9 File Offset: 0x009B44C9
 		private void DrawDebugArrow(FVectorDouble start, FVectorDouble end, FLinearColor color)
 		{
 			UKismetSystemLibrary.D_DrawDebugArrow(GlobalData.World, start, end, 24f, color, 5f, 2f);
 		}
 
-		// Token: 0x0602DD93 RID: 187795 RVA: 0x00A8AC08 File Offset: 0x00A88E08
+		// Token: 0x06022475 RID: 140405 RVA: 0x009B62E8 File Offset: 0x009B44E8
 		private void DrawDebugDirection(FVectorDouble start, IVector direction, FLinearColor color, float scale = 120f)
 		{
 			FVectorDouble end = new FVectorDouble(start.X + direction.X * (double)scale, start.Y + direction.Y * (double)scale, start.Z + direction.Z * (double)scale);
 			this.DrawDebugArrow(start, end, color);
 		}
 
-		// Token: 0x0602DD94 RID: 187796 RVA: 0x00A8AC58 File Offset: 0x00A88E58
+		// Token: 0x06022476 RID: 140406 RVA: 0x009B6338 File Offset: 0x009B4538
 		private void DrawDebugTransform(FTransformDouble transform, float scale = 80f, float duration = 5f)
 		{
 			UKismetSystemLibrary.D_DrawDebugCoordinateSystem(GlobalData.World, transform.GetLocation(), transform.Rotator(), scale, duration, 2f);
 		}
 
-		// Token: 0x0602DD95 RID: 187797 RVA: 0x00A8AC79 File Offset: 0x00A88E79
+		// Token: 0x06022477 RID: 140407 RVA: 0x009B6359 File Offset: 0x009B4559
 		private void DrawDebugLine(FVectorDouble start, FVectorDouble end, FLinearColor color, float duration = 5f)
 		{
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, start, end, color, duration, 2f);
 		}
 
-		// Token: 0x0602DD96 RID: 187798 RVA: 0x00A8AC90 File Offset: 0x00A88E90
+		// Token: 0x06022478 RID: 140408 RVA: 0x009B6370 File Offset: 0x009B4570
 		[return: Nullable(2)]
 		public Vector GetMappingPosToOtherPortal(Vector mapFromPos, long portalId, bool bA2B, Vector outPos, bool enableDebug = false)
 		{
@@ -191,7 +279,7 @@ namespace CSharpScript.Game.Utils
 			return this.GetMappingPosByPortalTransform(mapFromPos, portalInTf, portalOutTf, outPos, enableDebug);
 		}
 
-		// Token: 0x0602DD97 RID: 187799 RVA: 0x00A8AD04 File Offset: 0x00A88F04
+		// Token: 0x06022479 RID: 140409 RVA: 0x009B63E4 File Offset: 0x009B45E4
 		public Vector GetMappingPosByPortalTransform(Vector mapFromPos, FTransformDouble portalInTf, FTransformDouble portalOutTf, Vector outPos, bool enableDebug = false)
 		{
 			FVectorDouble fvectorDouble = mapFromPos.ToUeVector(false);
@@ -207,7 +295,7 @@ namespace CSharpScript.Game.Utils
 			return outPos;
 		}
 
-		// Token: 0x0602DD98 RID: 187800 RVA: 0x00A8AD78 File Offset: 0x00A88F78
+		// Token: 0x0602247A RID: 140410 RVA: 0x009B6458 File Offset: 0x009B4658
 		public Vector GetMappingVecByPortalTransform(Vector mapFromVec, FTransformDouble portalInTf, FTransformDouble portalOutTf, Vector outVec, bool enableDebug = false)
 		{
 			FVectorDouble fvectorDouble = mapFromVec.ToUeVector(false);
@@ -227,7 +315,7 @@ namespace CSharpScript.Game.Utils
 			return outVec;
 		}
 
-		// Token: 0x0602DD99 RID: 187801 RVA: 0x00A8AE70 File Offset: 0x00A89070
+		// Token: 0x0602247B RID: 140411 RVA: 0x009B6550 File Offset: 0x009B4750
 		public FTransformDouble? GetMappingTransformToOtherPortal(FTransformDouble mapFromTf, long portalId, bool bA2B)
 		{
 			if (portalId == 0L)
@@ -258,7 +346,7 @@ namespace CSharpScript.Game.Utils
 			return new FTransformDouble?(this.GetMappingTransformByPortalTransform(mapFromTf, portalInTf, portalOutTf, false));
 		}
 
-		// Token: 0x0602DD9A RID: 187802 RVA: 0x00A8AEEC File Offset: 0x00A890EC
+		// Token: 0x0602247C RID: 140412 RVA: 0x009B65CC File Offset: 0x009B47CC
 		public FTransformDouble GetMappingTransformByPortalTransform(FTransformDouble mapFromTf, FTransformDouble portalInTf, FTransformDouble portalOutTf, bool enableDebug = false)
 		{
 			FTransformDouble relativeTransform = mapFromTf.GetRelativeTransform(portalInTf);
@@ -274,7 +362,7 @@ namespace CSharpScript.Game.Utils
 			return ftransformDouble;
 		}
 
-		// Token: 0x0602DD9B RID: 187803 RVA: 0x00A8AF70 File Offset: 0x00A89170
+		// Token: 0x0602247D RID: 140413 RVA: 0x009B6650 File Offset: 0x009B4850
 		[NullableContext(2)]
 		public FTransformDouble? GetMappingOffsetTransformToOtherPortal(FTransformDouble mapFromTf, long portalId, bool bA2B, IVector mapFromOffsetDir = null, float offset = 0f, bool enableGroundFix = false, bool enableDebug = false)
 		{
@@ -306,7 +394,7 @@ namespace CSharpScript.Game.Utils
 			return this.GetMappingOffsetTransformByPortalTransform(mapFromTf, ftransformDouble3, ftransformDouble2, null, mapFromOffsetDir, offset, enableGroundFix, enableDebug);
 		}
 
-		// Token: 0x0602DD9C RID: 187804 RVA: 0x00A8AFF4 File Offset: 0x00A891F4
+		// Token: 0x0602247E RID: 140414 RVA: 0x009B66D4 File Offset: 0x009B48D4
 		[NullableContext(2)]
 		public FTransformDouble? GetMappingOffsetTransformByPortalTransform(in FTransformDouble mapFromTf, in FTransformDouble portalInTf, in FTransformDouble portalOutTf, IVector portalOutGravityDirect = null, IVector mapFromOffsetDir = null, float offset = 0f, bool enableGroundFix = false, bool enableDebug = false)
 		{
@@ -357,7 +445,7 @@ namespace CSharpScript.Game.Utils
 			return new FTransformDouble?(mappingTransformByPortalTransform);
 		}
 
-		// Token: 0x0602DD9D RID: 187805 RVA: 0x00A8B1A8 File Offset: 0x00A893A8
+		// Token: 0x0602247F RID: 140415 RVA: 0x009B6888 File Offset: 0x009B4A88
 		private void AddMappedOffset(ref FTransformDouble mapToTf, in FTransformDouble portalInTf, in FTransformDouble portalOutTf, Vector upVec, Vector fallbackDir, IVector mapFromOffsetDir, float offset, bool enableDebug)
 		{
 			Vector tempMapFromOffsetDirVec = this.TempMapFromOffsetDirVec;
@@ -380,7 +468,7 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DD9E RID: 187806 RVA: 0x00A8B290 File Offset: 0x00A89490
+		// Token: 0x06022480 RID: 140416 RVA: 0x009B6970 File Offset: 0x009B4B70
 		private void TryFixUndergroundByProjectedGravityColumn(ref FTransformDouble mapToTf, FTransformDouble portalOutTf, IVector portalOutGravityDirect, bool enableDebug)
 		{
 			Vector tempGroundFixGravityDir = this.TempGroundFixGravityDir;
@@ -443,7 +531,7 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DD9F RID: 187807 RVA: 0x00A8B4D8 File Offset: 0x00A896D8
+		// Token: 0x06022481 RID: 140417 RVA: 0x009B6BB8 File Offset: 0x009B4DB8
 		public bool UpdateCaptureCamera(Transform playerCameraTrans, FTransformDouble sourcePortalWorld, FTransformDouble targetPortalWorld, FVector sourcePortalBounds, USceneCaptureComponent2D capture, bool enableDebug = false)
 		{
 			capture.bUseCustomProjectionMatrix = false;
@@ -519,7 +607,7 @@ namespace CSharpScript.Game.Utils
 			return true;
 		}
 
-		// Token: 0x0602DDA0 RID: 187808 RVA: 0x00A8B834 File Offset: 0x00A89A34
+		// Token: 0x06022482 RID: 140418 RVA: 0x009B6F14 File Offset: 0x009B5114
 		public bool UpdateCaptureCameraOffAxis(Transform playerCameraTrans, FTransformDouble sourcePortalWorld, FTransformDouble targetPortalWorld, FVector sourcePortalBounds, USceneCaptureComponent2D capture, bool enableDebug = false)
 		{
 			Transform tmpOffAxisCamTrans = this.TmpOffAxisCamTrans;
@@ -553,7 +641,7 @@ namespace CSharpScript.Game.Utils
 			return UKuroRenderingRuntimeBPPluginBPLibrary.SetSceneCaptureOffAxisProjection(capture, (float)num5, (float)num6, (float)num7, (float)num8, (float)x);
 		}
 
-		// Token: 0x0602DDA1 RID: 187809 RVA: 0x00A8B988 File Offset: 0x00A89B88
+		// Token: 0x06022483 RID: 140419 RVA: 0x009B7068 File Offset: 0x009B5268
 		public void GetMappingCameraTransformToOtherPortal(Transform playerCameraTrans, FTransformDouble sourcePortalWorld, FTransformDouble targetPortalWorld, Transform outTf)
 		{
 			FTransformDouble relativeTransform = playerCameraTrans.ToUeTransform().GetRelativeTransform(sourcePortalWorld);
@@ -566,7 +654,7 @@ namespace CSharpScript.Game.Utils
 			outTf.GetScale3D().Set(1.0, 1.0, 1.0);
 		}
 
-		// Token: 0x0602DDA2 RID: 187810 RVA: 0x00A8BA10 File Offset: 0x00A89C10
+		// Token: 0x06022484 RID: 140420 RVA: 0x009B70F0 File Offset: 0x009B52F0
 		public EPortalCaptureLevel ComputeCapturePerformanceLevel(bool portalEnabled, Transform playerCameraTrans, FTransformDouble portalWorldTransform, [Nullable(2)] PortalCapturePerformanceConfig config = null)
 		{
 			if (!portalEnabled)
@@ -597,7 +685,7 @@ namespace CSharpScript.Game.Utils
 			return EPortalCaptureLevel.High;
 		}
 
-		// Token: 0x0602DDA3 RID: 187811 RVA: 0x00A8BAB0 File Offset: 0x00A89CB0
+		// Token: 0x06022485 RID: 140421 RVA: 0x009B7190 File Offset: 0x009B5390
 		[NullableContext(2)]
 		public FSceneCaptureComponent2DParams ApplyCapturePerformance([Nullable(1)] USceneCaptureComponent2D capture, EPortalCaptureLevel configLevel, float captureMaxViewDistance, PortalCapturePerformanceConfig config = null)
 		{
@@ -610,7 +698,18 @@ namespace CSharpScript.Game.Utils
 			{
 				return null;
 			}
-			FSceneCaptureComponent2DParams fsceneCaptureComponent2DParams2 = new FSceneCaptureComponent2DParams(fsceneCaptureComponent2DParams.CaptureInterval, fsceneCaptureComponent2DParams.CaptureMaxRTSize, fsceneCaptureComponent2DParams.CaptureMaxRTSizeXScale, fsceneCaptureComponent2DParams.CaptureMaxRTSizeYScale, fsceneCaptureComponent2DParams.MaxViewDistanceOverride, fsceneCaptureComponent2DParams.bEnableCapture, fsceneCaptureComponent2DParams.bCaptureSkeletal, fsceneCaptureComponent2DParams.bCaptureDynamicShadows, fsceneCaptureComponent2DParams.bCaptureParticles);
+			FSceneCaptureComponent2DParams fsceneCaptureComponent2DParams2 = new FSceneCaptureComponent2DParams
+			{
+				CaptureInterval = fsceneCaptureComponent2DParams.CaptureInterval,
+				CaptureMaxRTSize = fsceneCaptureComponent2DParams.CaptureMaxRTSize,
+				CaptureMaxRTSizeXScale = fsceneCaptureComponent2DParams.CaptureMaxRTSizeXScale,
+				CaptureMaxRTSizeYScale = fsceneCaptureComponent2DParams.CaptureMaxRTSizeYScale,
+				MaxViewDistanceOverride = fsceneCaptureComponent2DParams.MaxViewDistanceOverride,
+				bEnableCapture = fsceneCaptureComponent2DParams.bEnableCapture,
+				bCaptureSkeletal = fsceneCaptureComponent2DParams.bCaptureSkeletal,
+				bCaptureDynamicShadows = fsceneCaptureComponent2DParams.bCaptureDynamicShadows,
+				bCaptureParticles = fsceneCaptureComponent2DParams.bCaptureParticles
+			};
 			if (Info.Instance.IsMacPlatform())
 			{
 				fsceneCaptureComponent2DParams2.bCaptureParticles = false;
@@ -620,7 +719,7 @@ namespace CSharpScript.Game.Utils
 			return fsceneCaptureComponent2DParams2;
 		}
 
-		// Token: 0x0602DDA4 RID: 187812 RVA: 0x00A8BB52 File Offset: 0x00A89D52
+		// Token: 0x06022486 RID: 140422 RVA: 0x009B7268 File Offset: 0x009B5468
 		private static EPortalPlatform GetCurrentPlatform()
 		{
 			if (!Info.Instance.IsMobilePlatform())
@@ -630,15 +729,15 @@ namespace CSharpScript.Game.Utils
 			return EPortalPlatform.Mobile;
 		}
 
-		// Token: 0x0602DDA5 RID: 187813 RVA: 0x00A8BB63 File Offset: 0x00A89D63
+		// Token: 0x06022487 RID: 140423 RVA: 0x009B7279 File Offset: 0x009B5479
 		private void GravityPlaneProjection(Vector v, Vector up, Vector outV)
 		{
 			up.Multiply(v.DotProduct(up), this.TempProjectionScratch);
 			v.Subtraction(this.TempProjectionScratch, outV);
 		}
 
-		// Token: 0x17007553 RID: 30035
-		// (get) Token: 0x0602DDA6 RID: 187814 RVA: 0x00A8BB87 File Offset: 0x00A89D87
+		// Token: 0x1700480A RID: 18442
+		// (get) Token: 0x06022488 RID: 140424 RVA: 0x009B729D File Offset: 0x009B549D
 		public static PortalUtils Instance
 		{
 			get
@@ -652,12 +751,12 @@ namespace CSharpScript.Game.Utils
 			}
 		}
 
-		// Token: 0x0602DDA7 RID: 187815 RVA: 0x00A8BBAA File Offset: 0x00A89DAA
+		// Token: 0x06022489 RID: 140425 RVA: 0x009B72C0 File Offset: 0x009B54C0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DDA8 RID: 187816 RVA: 0x00A8BBAC File Offset: 0x00A89DAC
+		// Token: 0x0602248A RID: 140426 RVA: 0x009B72C2 File Offset: 0x009B54C2
 		public static void ResetStaticDefaultValue()
 		{
 			PortalUtils instance = PortalUtils._instance;
@@ -668,13 +767,13 @@ namespace CSharpScript.Game.Utils
 			PortalUtils._instance = null;
 		}
 
-		// Token: 0x0602DDA9 RID: 187817 RVA: 0x00A8BBC5 File Offset: 0x00A89DC5
+		// Token: 0x0602248B RID: 140427 RVA: 0x009B72DB File Offset: 0x009B54DB
 		static PortalUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PortalUtils.CreateStaticDefaultValue), new Action(PortalUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602DDAA RID: 187818 RVA: 0x00A8BBE4 File Offset: 0x00A89DE4
+		// Token: 0x0602248C RID: 140428 RVA: 0x009B72FC File Offset: 0x009B54FC
 		public PortalUtils()
 		{
 			FQuat fquat = new FQuat(ref Vector.ZAxisVector, 3.1415927f);
@@ -717,146 +816,146 @@ namespace CSharpScript.Game.Utils
 			base..ctor();
 		}
 
-		// Token: 0x040187B7 RID: 100279
+		// Token: 0x04012DF1 RID: 77297
 		private const float PORTAL_DEBUG_DURATION = 5f;
 
-		// Token: 0x040187B8 RID: 100280
+		// Token: 0x04012DF2 RID: 77298
 		private const float PORTAL_CAPTURE_DEBUG_DURATION = 0f;
 
-		// Token: 0x040187B9 RID: 100281
+		// Token: 0x04012DF3 RID: 77299
 		private const float PORTAL_DEBUG_THICKNESS = 2f;
 
-		// Token: 0x040187BA RID: 100282
+		// Token: 0x04012DF4 RID: 77300
 		private const float PORTAL_DEBUG_AXIS_SCALE = 80f;
 
-		// Token: 0x040187BB RID: 100283
+		// Token: 0x04012DF5 RID: 77301
 		private const float PORTAL_DEBUG_ARROW_SCALE = 120f;
 
-		// Token: 0x040187BC RID: 100284
+		// Token: 0x04012DF6 RID: 77302
 		private const float GROUND_FIX_LIFT_DISTANCE = 25f;
 
-		// Token: 0x040187BD RID: 100285
+		// Token: 0x04012DF7 RID: 77303
 		private const float GROUND_FIX_MIN_TRACE_DISTANCE = 25f;
 
-		// Token: 0x040187BE RID: 100286
+		// Token: 0x04012DF8 RID: 77304
 		private const float CAPTURE_MIN_TAN_HALF_FOV = 0.0001f;
 
-		// Token: 0x040187BF RID: 100287
+		// Token: 0x04012DF9 RID: 77305
 		private const double CAPTURE_MIN_HALF_TAN = 0.0001;
 
-		// Token: 0x040187C0 RID: 100288
+		// Token: 0x04012DFA RID: 77306
 		private readonly FTransformDouble PortalRotateTf;
 
-		// Token: 0x040187C1 RID: 100289
+		// Token: 0x04012DFB RID: 77307
 		private readonly Vector TempTargetTfUpVec;
 
-		// Token: 0x040187C2 RID: 100290
+		// Token: 0x04012DFC RID: 77308
 		private readonly Vector TempSourceForwardVec;
 
-		// Token: 0x040187C3 RID: 100291
+		// Token: 0x04012DFD RID: 77309
 		private readonly Vector TempSourceRightVec;
 
-		// Token: 0x040187C4 RID: 100292
+		// Token: 0x04012DFE RID: 77310
 		private readonly Vector TempMappedForwardVec;
 
-		// Token: 0x040187C5 RID: 100293
+		// Token: 0x04012DFF RID: 77311
 		private readonly Vector TempMappedRightVec;
 
-		// Token: 0x040187C6 RID: 100294
+		// Token: 0x04012E00 RID: 77312
 		private readonly Vector TempProjectedForwardVec;
 
-		// Token: 0x040187C7 RID: 100295
+		// Token: 0x04012E01 RID: 77313
 		private readonly Vector TempProjectedRightVec;
 
-		// Token: 0x040187C8 RID: 100296
+		// Token: 0x04012E02 RID: 77314
 		private readonly Vector TempNewForwardVec;
 
-		// Token: 0x040187C9 RID: 100297
+		// Token: 0x04012E03 RID: 77315
 		private readonly Vector TempProjectionScratch;
 
-		// Token: 0x040187CA RID: 100298
+		// Token: 0x04012E04 RID: 77316
 		private readonly Vector TempMapFromOffsetDirVec;
 
-		// Token: 0x040187CB RID: 100299
+		// Token: 0x04012E05 RID: 77317
 		private readonly Vector TempMappedOffsetDirVec;
 
-		// Token: 0x040187CC RID: 100300
+		// Token: 0x04012E06 RID: 77318
 		private readonly Vector TempOffsetDirOnUpPlaneVec;
 
-		// Token: 0x040187CD RID: 100301
+		// Token: 0x04012E07 RID: 77319
 		private readonly Vector TempOffsetVec;
 
-		// Token: 0x040187CE RID: 100302
+		// Token: 0x04012E08 RID: 77320
 		private readonly Vector TempGroundFixGravityDir;
 
-		// Token: 0x040187CF RID: 100303
+		// Token: 0x04012E09 RID: 77321
 		private readonly Vector TempGroundFixPortalOutLocation;
 
-		// Token: 0x040187D0 RID: 100304
+		// Token: 0x04012E0A RID: 77322
 		private readonly Vector TempGroundFixMapToLocation;
 
-		// Token: 0x040187D1 RID: 100305
+		// Token: 0x04012E0B RID: 77323
 		private readonly Vector TempGroundFixOffsetVec;
 
-		// Token: 0x040187D2 RID: 100306
+		// Token: 0x04012E0C RID: 77324
 		private readonly Vector TempGroundFixGravityProjection;
 
-		// Token: 0x040187D3 RID: 100307
+		// Token: 0x04012E0D RID: 77325
 		private readonly Vector TempGroundFixTraceStart;
 
-		// Token: 0x040187D4 RID: 100308
+		// Token: 0x04012E0E RID: 77326
 		private readonly Vector TempGroundFixTraceEnd;
 
-		// Token: 0x040187D5 RID: 100309
+		// Token: 0x04012E0F RID: 77327
 		private readonly Vector TempGroundFixHitPoint;
 
-		// Token: 0x040187D6 RID: 100310
+		// Token: 0x04012E10 RID: 77328
 		private readonly Vector TmpCaptureV1;
 
-		// Token: 0x040187D7 RID: 100311
+		// Token: 0x04012E11 RID: 77329
 		private readonly Transform TmpCaptureT1;
 
-		// Token: 0x040187D8 RID: 100312
+		// Token: 0x04012E12 RID: 77330
 		private readonly Transform TmpCaptureT2;
 
-		// Token: 0x040187D9 RID: 100313
+		// Token: 0x04012E13 RID: 77331
 		private readonly Transform TmpCaptureT3;
 
-		// Token: 0x040187DA RID: 100314
+		// Token: 0x04012E14 RID: 77332
 		private readonly Transform TmpOffAxisCamTrans;
 
-		// Token: 0x040187DB RID: 100315
+		// Token: 0x04012E15 RID: 77333
 		private readonly Transform TmpOffAxisTargetTrans;
 
-		// Token: 0x040187DC RID: 100316
+		// Token: 0x04012E16 RID: 77334
 		private readonly Vector TmpOffAxisBounds;
 
-		// Token: 0x040187DD RID: 100317
+		// Token: 0x04012E17 RID: 77335
 		private readonly FLinearColor DebugColorCyan;
 
-		// Token: 0x040187DE RID: 100318
+		// Token: 0x04012E18 RID: 77336
 		private readonly FLinearColor DebugColorGreen;
 
-		// Token: 0x040187DF RID: 100319
+		// Token: 0x04012E19 RID: 77337
 		private readonly FLinearColor DebugColorOrange;
 
-		// Token: 0x040187E0 RID: 100320
+		// Token: 0x04012E1A RID: 77338
 		private readonly FLinearColor DebugColorLightBlue;
 
-		// Token: 0x040187E1 RID: 100321
+		// Token: 0x04012E1B RID: 77339
 		private readonly FLinearColor DebugColorRed;
 
-		// Token: 0x040187E2 RID: 100322
+		// Token: 0x04012E1C RID: 77340
 		private readonly FLinearColor DebugColorYellow;
 
-		// Token: 0x040187E3 RID: 100323
+		// Token: 0x04012E1D RID: 77341
 		private readonly FLinearColor DebugColorMintGreen;
 
-		// Token: 0x040187E4 RID: 100324
+		// Token: 0x04012E1E RID: 77342
 		[Nullable(2)]
 		private PortalCapturePerformanceConfig DefaultCapturePerformanceConfigInstance;
 
-		// Token: 0x040187E5 RID: 100325
+		// Token: 0x04012E1F RID: 77343
 		[Nullable(2)]
 		private static PortalUtils _instance;
 	}

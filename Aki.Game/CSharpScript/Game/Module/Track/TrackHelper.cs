@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.Map.Marks.MarkItem;
 
 namespace CSharpScript.Game.Module.Track
 {
-	// Token: 0x02004AFB RID: 19195
+	// Token: 0x02003AA3 RID: 15011
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class TrackHelper
 	{
-		// Token: 0x06031B60 RID: 203616 RVA: 0x00B8B628 File Offset: 0x00B89828
+		// Token: 0x060268F0 RID: 157936 RVA: 0x00ACF684 File Offset: 0x00ACD884
 		public static void SetMarkItemTrack(MarkItem markItem, [Nullable(2)] Action finishCallback = null)
 		{
 			TaskMarkItem taskMarkItem = markItem as TaskMarkItem;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Track
 			TrackHelper.HandleNormalMarkItemTracking(markItem, finishCallback);
 		}
 
-		// Token: 0x06031B61 RID: 203617 RVA: 0x00B8B650 File Offset: 0x00B89850
+		// Token: 0x060268F1 RID: 157937 RVA: 0x00ACF6AC File Offset: 0x00ACD8AC
 		private static void HandleTaskMarkItemTracking(TaskMarkItem taskMarkItem, [Nullable(2)] Action finishCallback)
 		{
 			if (taskMarkItem.NodeId != 0)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Track
 			}
 		}
 
-		// Token: 0x06031B62 RID: 203618 RVA: 0x00B8B6EC File Offset: 0x00B898EC
+		// Token: 0x060268F2 RID: 157938 RVA: 0x00ACF748 File Offset: 0x00ACD948
 		private static void HandleTaskMarkWithoutBehaviorId(TaskMarkItem taskMarkItem, [Nullable(2)] Action finishCallback)
 		{
 			TrackMapMarkParams curTrackMark = MapModel.Instance.GetCurTrackMark();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Track
 			finishCallback2();
 		}
 
-		// Token: 0x06031B63 RID: 203619 RVA: 0x00B8B774 File Offset: 0x00B89974
+		// Token: 0x060268F3 RID: 157939 RVA: 0x00ACF7D0 File Offset: 0x00ACD9D0
 		private static void HandleNormalMarkItemTracking(MarkItem markItem, [Nullable(2)] Action finishCallback)
 		{
 			if (!markItem.IsTracked)

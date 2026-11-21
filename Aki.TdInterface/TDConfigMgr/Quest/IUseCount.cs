@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011DE RID: 4574
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200131A RID: 4890
 	public class IUseCount : IProgressBarLeftType
 	{
-		// Token: 0x060067E4 RID: 26596 RVA: 0x000F8734 File Offset: 0x000F6934
+		// Token: 0x06006E25 RID: 28197 RVA: 0x00106040 File Offset: 0x00104240
 		private IUseCount_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060067E5 RID: 26597 RVA: 0x000F876C File Offset: 0x000F696C
+		// Token: 0x06006E26 RID: 28198 RVA: 0x00106078 File Offset: 0x00104278
 		public static IUseCount Create([Nullable(2)] IUseCount instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067E6 RID: 26598 RVA: 0x000F877F File Offset: 0x000F697F
+		// Token: 0x06006E27 RID: 28199 RVA: 0x0010608B File Offset: 0x0010428B
 		public static IUseCount CreateFromSetValue([Nullable(2)] IUseCount_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067E7 RID: 26599 RVA: 0x000F8792 File Offset: 0x000F6992
+		// Token: 0x06006E28 RID: 28200 RVA: 0x0010609E File Offset: 0x0010429E
 		public new IUseCount_SetValue ToSetValue()
 		{
 			return new IUseCount_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021AA RID: 8618
-		// (get) Token: 0x060067E8 RID: 26600 RVA: 0x000F87A5 File Offset: 0x000F69A5
-		// (set) Token: 0x060067E9 RID: 26601 RVA: 0x000F87D0 File Offset: 0x000F69D0
+		// Token: 0x1700236B RID: 9067
+		// (get) Token: 0x06006E29 RID: 28201 RVA: 0x001060B1 File Offset: 0x001042B1
+		// (set) Token: 0x06006E2A RID: 28202 RVA: 0x001060DC File Offset: 0x001042DC
 		public override EProgressBarLeftType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E4B RID: 15947
+		// Token: 0x040041B9 RID: 16825
 		[Nullable(2)]
 		protected new IUseCount FbInstance;
 
-		// Token: 0x04003E4C RID: 15948
+		// Token: 0x040041BA RID: 16826
 		[Nullable(2)]
 		protected new IUseCount_SetValue PocoInterface;
 	}

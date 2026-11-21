@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x0200188A RID: 6282
+// Token: 0x02000D43 RID: 3395
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemSort : CommonSort<EItemSortWayType>
 {
-	// Token: 0x0600B7FE RID: 47102 RVA: 0x0029A780 File Offset: 0x00298980
+	// Token: 0x06008BE7 RID: 35815 RVA: 0x002A4E98 File Offset: 0x002A3098
 	private int SortConfigIdAscending(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -22,7 +22,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return configId - configId2;
 	}
 
-	// Token: 0x0600B7FF RID: 47103 RVA: 0x0029A7A8 File Offset: 0x002989A8
+	// Token: 0x06008BE8 RID: 35816 RVA: 0x002A4EC0 File Offset: 0x002A30C0
 	private int SortConfigId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -35,7 +35,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return (itemViewData2.GetConfigId() - configId) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B800 RID: 47104 RVA: 0x0029A7D8 File Offset: 0x002989D8
+	// Token: 0x06008BE9 RID: 35817 RVA: 0x002A4EF0 File Offset: 0x002A30F0
 	private int SortLevel(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -48,7 +48,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return (itemViewData2.GetAttributeLevel() - attributeLevel) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B801 RID: 47105 RVA: 0x0029A808 File Offset: 0x00298A08
+	// Token: 0x06008BEA RID: 35818 RVA: 0x002A4F20 File Offset: 0x002A3120
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -61,7 +61,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return (itemViewData2.GetQuality() - quality) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B802 RID: 47106 RVA: 0x0029A838 File Offset: 0x00298A38
+	// Token: 0x06008BEB RID: 35819 RVA: 0x002A4F50 File Offset: 0x002A3150
 	private int SortCount(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -75,7 +75,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return (count - count2) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B803 RID: 47107 RVA: 0x0029A86C File Offset: 0x00298A6C
+	// Token: 0x06008BEC RID: 35820 RVA: 0x002A4F84 File Offset: 0x002A3184
 	private int SortSortIndex(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -89,7 +89,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return (sortIndex - sortIndex2) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B804 RID: 47108 RVA: 0x0029A8A0 File Offset: 0x00298AA0
+	// Token: 0x06008BED RID: 35821 RVA: 0x002A4FB8 File Offset: 0x002A31B8
 	private int SortUniqueId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -103,7 +103,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return (uniqueId - uniqueId2) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B805 RID: 47109 RVA: 0x0029A8D4 File Offset: 0x00298AD4
+	// Token: 0x06008BEE RID: 35822 RVA: 0x002A4FEC File Offset: 0x002A31EC
 	private int SortTimeLimit(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -129,7 +129,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return num2 - num;
 	}
 
-	// Token: 0x0600B806 RID: 47110 RVA: 0x0029A930 File Offset: 0x00298B30
+	// Token: 0x06008BEF RID: 35823 RVA: 0x002A5048 File Offset: 0x002A3248
 	private int GetItemShowTypeSortValue(global::ItemViewData itemData)
 	{
 		ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(itemData.GetConfigId());
@@ -146,7 +146,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return itemShowTypeConfig.Value.ItemSort;
 	}
 
-	// Token: 0x0600B807 RID: 47111 RVA: 0x0029A998 File Offset: 0x00298B98
+	// Token: 0x06008BF0 RID: 35824 RVA: 0x002A50B0 File Offset: 0x002A32B0
 	private int SortItemShowType(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -159,7 +159,7 @@ public class ItemSort : CommonSort<EItemSortWayType>
 		return this.GetItemShowTypeSortValue(itemData2) - itemShowTypeSortValue;
 	}
 
-	// Token: 0x0600B808 RID: 47112 RVA: 0x0029A9C4 File Offset: 0x00298BC4
+	// Token: 0x06008BF1 RID: 35825 RVA: 0x002A50DC File Offset: 0x002A32DC
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EItemSortWayType.ConfigId, new TSortResult(this.SortConfigId));

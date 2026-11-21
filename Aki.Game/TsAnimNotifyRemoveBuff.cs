@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001C9 RID: 457
+// Token: 0x020001CD RID: 461
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyRemoveBuff.TsAnimNotifyRemoveBuff_C")]
 public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000491 RID: 1169
-	// (get) Token: 0x06001C8D RID: 7309 RVA: 0x00091547 File Offset: 0x0008F747
-	// (set) Token: 0x06001C8E RID: 7310 RVA: 0x00091557 File Offset: 0x0008F757
+	// Token: 0x170004B3 RID: 1203
+	// (get) Token: 0x06001D2A RID: 7466 RVA: 0x000981BF File Offset: 0x000963BF
+	// (set) Token: 0x06001D2B RID: 7467 RVA: 0x000981CF File Offset: 0x000963CF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe long BuffId
 	{
@@ -28,9 +28,9 @@ public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000492 RID: 1170
-	// (get) Token: 0x06001C8F RID: 7311 RVA: 0x00091568 File Offset: 0x0008F768
-	// (set) Token: 0x06001C90 RID: 7312 RVA: 0x00091578 File Offset: 0x0008F778
+	// Token: 0x170004B4 RID: 1204
+	// (get) Token: 0x06001D2C RID: 7468 RVA: 0x000981E0 File Offset: 0x000963E0
+	// (set) Token: 0x06001D2D RID: 7469 RVA: 0x000981F0 File Offset: 0x000963F0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int StackCount
 	{
@@ -44,7 +44,7 @@ public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06001C91 RID: 7313 RVA: 0x0009158C File Offset: 0x0008F78C
+	// Token: 0x06001D2E RID: 7470 RVA: 0x00098204 File Offset: 0x00096404
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
@@ -74,7 +74,7 @@ public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return true;
 	}
 
-	// Token: 0x06001C92 RID: 7314 RVA: 0x0009164E File Offset: 0x0008F84E
+	// Token: 0x06001D2F RID: 7471 RVA: 0x000982C6 File Offset: 0x000964C6
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
@@ -82,7 +82,7 @@ public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return "移除BUFF";
 	}
 
-	// Token: 0x06001C93 RID: 7315 RVA: 0x00091655 File Offset: 0x0008F855
+	// Token: 0x06001D30 RID: 7472 RVA: 0x000982CD File Offset: 0x000964CD
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyRemoveBuff._ClassPtr == IntPtr.Zero)
@@ -92,23 +92,23 @@ public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		return TsAnimNotifyRemoveBuff._ClassPtr;
 	}
 
-	// Token: 0x06001C94 RID: 7316 RVA: 0x0009167C File Offset: 0x0008F87C
+	// Token: 0x06001D31 RID: 7473 RVA: 0x000982F4 File Offset: 0x000964F4
 	public TsAnimNotifyRemoveBuff() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyRemoveBuff.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001C95 RID: 7317 RVA: 0x000916A4 File Offset: 0x0008F8A4
+	// Token: 0x06001D32 RID: 7474 RVA: 0x0009831C File Offset: 0x0009651C
 	[NullableContext(1)]
 	public TsAnimNotifyRemoveBuff(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyRemoveBuff.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001C96 RID: 7318 RVA: 0x000916D7 File Offset: 0x0008F8D7
+	// Token: 0x06001D33 RID: 7475 RVA: 0x0009834F File Offset: 0x0009654F
 	protected TsAnimNotifyRemoveBuff(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001C97 RID: 7319 RVA: 0x000916E0 File Offset: 0x0008F8E0
+	// Token: 0x06001D34 RID: 7476 RVA: 0x00098358 File Offset: 0x00096558
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -116,25 +116,25 @@ public class TsAnimNotifyRemoveBuff : TsAnimNotifyBase, IUnrealUObject, IUnrealO
 		__Params->__Result = this.K2_Notify(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001C98 RID: 7320 RVA: 0x00091713 File Offset: 0x0008F913
+	// Token: 0x06001D35 RID: 7477 RVA: 0x0009838B File Offset: 0x0009658B
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x040011F2 RID: 4594
+	// Token: 0x04001235 RID: 4661
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyRemoveBuff.TsAnimNotifyRemoveBuff_C";
 
-	// Token: 0x040011F3 RID: 4595
+	// Token: 0x04001236 RID: 4662
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040011F4 RID: 4596
+	// Token: 0x04001237 RID: 4663
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040011F5 RID: 4597
+	// Token: 0x04001238 RID: 4664
 	private static int __PropertyOffset_BuffId;
 
-	// Token: 0x040011F6 RID: 4598
+	// Token: 0x04001239 RID: 4665
 	private static int __PropertyOffset_StackCount;
 }

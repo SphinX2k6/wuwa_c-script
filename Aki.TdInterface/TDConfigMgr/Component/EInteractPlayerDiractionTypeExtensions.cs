@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000976 RID: 2422
+	// Token: 0x02000A29 RID: 2601
 	public static class EInteractPlayerDiractionTypeExtensions
 	{
-		// Token: 0x06003644 RID: 13892 RVA: 0x0008D8C8 File Offset: 0x0008BAC8
+		// Token: 0x060039CB RID: 14795 RVA: 0x00095834 File Offset: 0x00093A34
 		public static string ToEnumString(this EInteractPlayerDiractionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003645 RID: 13893 RVA: 0x0008D900 File Offset: 0x0008BB00
+		// Token: 0x060039CC RID: 14796 RVA: 0x0009586C File Offset: 0x00093A6C
 		public static EInteractPlayerDiractionType FromString(string name)
 		{
 			EInteractPlayerDiractionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003646 RID: 13894 RVA: 0x0008D929 File Offset: 0x0008BB29
+		// Token: 0x060039CD RID: 14797 RVA: 0x00095895 File Offset: 0x00093A95
 		public static bool TryFromString(string name, out EInteractPlayerDiractionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003647 RID: 13895 RVA: 0x0008D962 File Offset: 0x0008BB62
+		// Token: 0x060039CE RID: 14798 RVA: 0x000958CE File Offset: 0x00093ACE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003648 RID: 13896 RVA: 0x0008D97A File Offset: 0x0008BB7A
+		// Token: 0x060039CF RID: 14799 RVA: 0x000958E6 File Offset: 0x00093AE6
 		public static EInteractPlayerDiractionType[] GetValues()
 		{
 			return new EInteractPlayerDiractionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003649 RID: 13897 RVA: 0x0008D986 File Offset: 0x0008BB86
+		// Token: 0x060039D0 RID: 14800 RVA: 0x000958F2 File Offset: 0x00093AF2
 		public static string[] GetNames()
 		{
 			return new string[]

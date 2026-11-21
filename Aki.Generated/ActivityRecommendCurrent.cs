@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ACA RID: 2762
+	// Token: 0x02000BA4 RID: 2980
 	public struct ActivityRecommendCurrent : IFlatbufferObject
 	{
-		// Token: 0x1700016E RID: 366
-		// (get) Token: 0x060043B5 RID: 17333 RVA: 0x001CCE81 File Offset: 0x001CB081
+		// Token: 0x17000185 RID: 389
+		// (get) Token: 0x060048FC RID: 18684 RVA: 0x001ECA61 File Offset: 0x001EAC61
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060043B6 RID: 17334 RVA: 0x001CCE8E File Offset: 0x001CB08E
+		// Token: 0x060048FD RID: 18685 RVA: 0x001ECA6E File Offset: 0x001EAC6E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060043B7 RID: 17335 RVA: 0x001CCE98 File Offset: 0x001CB098
+		// Token: 0x060048FE RID: 18686 RVA: 0x001ECA78 File Offset: 0x001EAC78
 		public static ActivityRecommendCurrent GetRootAsActivityRecommendCurrent(ByteBuffer _bb)
 		{
 			return ActivityRecommendCurrent.GetRootAsActivityRecommendCurrent(_bb, default(ActivityRecommendCurrent));
 		}
 
-		// Token: 0x060043B8 RID: 17336 RVA: 0x001CCEB4 File Offset: 0x001CB0B4
+		// Token: 0x060048FF RID: 18687 RVA: 0x001ECA94 File Offset: 0x001EAC94
 		public static ActivityRecommendCurrent GetRootAsActivityRecommendCurrent(ByteBuffer _bb, ActivityRecommendCurrent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060043B9 RID: 17337 RVA: 0x001CCED1 File Offset: 0x001CB0D1
+		// Token: 0x06004900 RID: 18688 RVA: 0x001ECAB1 File Offset: 0x001EACB1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060043BA RID: 17338 RVA: 0x001CCEE0 File Offset: 0x001CB0E0
+		// Token: 0x06004901 RID: 18689 RVA: 0x001ECAC0 File Offset: 0x001EACC0
 		public ActivityRecommendCurrent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700016F RID: 367
-		// (get) Token: 0x060043BB RID: 17339 RVA: 0x001CCEF0 File Offset: 0x001CB0F0
+		// Token: 0x17000186 RID: 390
+		// (get) Token: 0x06004902 RID: 18690 RVA: 0x001ECAD0 File Offset: 0x001EACD0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000170 RID: 368
-		// (get) Token: 0x060043BC RID: 17340 RVA: 0x001CCF2C File Offset: 0x001CB12C
+		// Token: 0x17000187 RID: 391
+		// (get) Token: 0x06004903 RID: 18691 RVA: 0x001ECB0C File Offset: 0x001EAD0C
 		public int ActivityGroup
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AA7 RID: 19111
+		// Token: 0x04005081 RID: 20609
 		private Table __p;
 	}
 }

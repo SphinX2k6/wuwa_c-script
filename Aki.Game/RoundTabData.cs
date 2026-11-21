@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200163B RID: 5691
+// Token: 0x02000AF3 RID: 2803
 internal class RoundTabData
 {
-	// Token: 0x17000D89 RID: 3465
-	// (get) Token: 0x06009FE5 RID: 40933 RVA: 0x00232629 File Offset: 0x00230829
-	// (set) Token: 0x06009FE6 RID: 40934 RVA: 0x00232631 File Offset: 0x00230831
+	// Token: 0x17000DAA RID: 3498
+	// (get) Token: 0x060073C3 RID: 29635 RVA: 0x0023C46D File Offset: 0x0023A66D
+	// (set) Token: 0x060073C4 RID: 29636 RVA: 0x0023C475 File Offset: 0x0023A675
 	public int Round { get; set; }
 
-	// Token: 0x17000D8A RID: 3466
-	// (get) Token: 0x06009FE7 RID: 40935 RVA: 0x0023263A File Offset: 0x0023083A
-	// (set) Token: 0x06009FE8 RID: 40936 RVA: 0x00232642 File Offset: 0x00230842
+	// Token: 0x17000DAB RID: 3499
+	// (get) Token: 0x060073C5 RID: 29637 RVA: 0x0023C47E File Offset: 0x0023A67E
+	// (set) Token: 0x060073C6 RID: 29638 RVA: 0x0023C486 File Offset: 0x0023A686
 	public bool IsLock { get; set; }
 }

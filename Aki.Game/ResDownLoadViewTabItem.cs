@@ -8,10 +8,10 @@ using CSharpScript.Launcher.DiffPatch.Update;
 using CSharpScript.Launcher.Ui.HotFix;
 using UnrealEngine;
 
-// Token: 0x02002762 RID: 10082
+// Token: 0x02001C4D RID: 7245
 public class ResDownLoadViewTabItem : GridProxyAbstract<int>
 {
-	// Token: 0x06014AEC RID: 84716 RVA: 0x0053BC80 File Offset: 0x00539E80
+	// Token: 0x06011FCF RID: 73679 RVA: 0x0054AA90 File Offset: 0x00548C90
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -27,7 +27,7 @@ public class ResDownLoadViewTabItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014AED RID: 84717 RVA: 0x0053BD0C File Offset: 0x00539F0C
+	// Token: 0x06011FD0 RID: 73680 RVA: 0x0054AB1C File Offset: 0x00548D1C
 	protected override void OnStart()
 	{
 		UUIExtendToggle toggle = base.GetExtendToggle(0);
@@ -40,7 +40,7 @@ public class ResDownLoadViewTabItem : GridProxyAbstract<int>
 		});
 	}
 
-	// Token: 0x06014AEE RID: 84718 RVA: 0x0053BD50 File Offset: 0x00539F50
+	// Token: 0x06011FD1 RID: 73681 RVA: 0x0054AB60 File Offset: 0x00548D60
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TabIndex = data;
@@ -75,37 +75,37 @@ public class ResDownLoadViewTabItem : GridProxyAbstract<int>
 		base.GetText(2).SetText(HotFixManager.ByteConverter(videoResSize), true);
 	}
 
-	// Token: 0x06014AEF RID: 84719 RVA: 0x0053BE27 File Offset: 0x0053A027
+	// Token: 0x06011FD2 RID: 73682 RVA: 0x0054AC37 File Offset: 0x00548E37
 	public void SelectToggle()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06014AF0 RID: 84720 RVA: 0x0053BE3A File Offset: 0x0053A03A
+	// Token: 0x06011FD3 RID: 73683 RVA: 0x0054AC4A File Offset: 0x00548E4A
 	[NullableContext(1)]
 	public override object GetKey(int data, int displayIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x04009B64 RID: 39780
+	// Token: 0x04009CBC RID: 40124
 	private int TabIndex;
 
-	// Token: 0x04009B65 RID: 39781
+	// Token: 0x04009CBD RID: 40125
 	private int ResType;
 
-	// Token: 0x04009B66 RID: 39782
+	// Token: 0x04009CBE RID: 40126
 	[Nullable(1)]
 	public Action<int, int, UUIExtendToggle> OnClickExtendToggleCallBack;
 
-	// Token: 0x02008DCB RID: 36299
+	// Token: 0x02007F53 RID: 32595
 	private enum EResDownLoadViewTabItem
 	{
-		// Token: 0x0402E047 RID: 188487
+		// Token: 0x0402935C RID: 168796
 		Toggle,
-		// Token: 0x0402E048 RID: 188488
+		// Token: 0x0402935D RID: 168797
 		NameText,
-		// Token: 0x0402E049 RID: 188489
+		// Token: 0x0402935E RID: 168798
 		SpaceText
 	}
 }

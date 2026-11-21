@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E37 RID: 3639
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F33 RID: 3891
 	public class IConditionalStreamingSource : IStreamingSourceConfigBase
 	{
-		// Token: 0x0600523D RID: 21053 RVA: 0x000CA965 File Offset: 0x000C8B65
+		// Token: 0x06005764 RID: 22372 RVA: 0x000D622D File Offset: 0x000D442D
 		public static IConditionalStreamingSource Create(IConditionalStreamingSource? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B8C RID: 7052
-		// (get) Token: 0x0600523E RID: 21054 RVA: 0x000CA984 File Offset: 0x000C8B84
+		// Token: 0x17001CF9 RID: 7417
+		// (get) Token: 0x06005765 RID: 22373 RVA: 0x000D624C File Offset: 0x000D444C
 		public override EStreamingSourceMode Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B8D RID: 7053
-		// (get) Token: 0x0600523F RID: 21055 RVA: 0x000CA994 File Offset: 0x000C8B94
+		// Token: 0x17001CFA RID: 7418
+		// (get) Token: 0x06005766 RID: 22374 RVA: 0x000D625C File Offset: 0x000D445C
 		public virtual List<IConditionalStreamingSourceConfig> StreamingSourceConfigs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F64 RID: 12132
+		// Token: 0x0400322C RID: 12844
 		private IConditionalStreamingSource Instance;
 
-		// Token: 0x04002F65 RID: 12133
+		// Token: 0x0400322D RID: 12845
 		private List<IConditionalStreamingSourceConfig> _StreamingSourceConfigsCache;
 
-		// Token: 0x04002F66 RID: 12134
+		// Token: 0x0400322E RID: 12846
 		private bool _StreamingSourceConfigsInited;
 	}
 }

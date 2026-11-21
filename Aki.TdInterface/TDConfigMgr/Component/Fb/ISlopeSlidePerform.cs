@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D97 RID: 3479
+	// Token: 0x02000E93 RID: 3731
 	public class ISlopeSlidePerform : ISlidePerformType
 	{
-		// Token: 0x06004F1A RID: 20250 RVA: 0x000C421F File Offset: 0x000C241F
-		[NullableContext(1)]
+		// Token: 0x0600543F RID: 21567 RVA: 0x000CFA6F File Offset: 0x000CDC6F
 		public static ISlopeSlidePerform Create(ISlopeSlidePerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019A9 RID: 6569
-		// (get) Token: 0x06004F1B RID: 20251 RVA: 0x000C423E File Offset: 0x000C243E
+		// Token: 0x17001B14 RID: 6932
+		// (get) Token: 0x06005440 RID: 21568 RVA: 0x000CFA8E File Offset: 0x000CDC8E
 		public override ESlidePerformType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019AA RID: 6570
-		// (get) Token: 0x06004F1C RID: 20252 RVA: 0x000C424C File Offset: 0x000C244C
+		// Token: 0x17001B15 RID: 6933
+		// (get) Token: 0x06005441 RID: 21569 RVA: 0x000CFA9C File Offset: 0x000CDC9C
 		public virtual int? TriggerLandingDistance
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019AB RID: 6571
-		// (get) Token: 0x06004F1D RID: 20253 RVA: 0x000C4284 File Offset: 0x000C2484
+		// Token: 0x17001B16 RID: 6934
+		// (get) Token: 0x06005442 RID: 21570 RVA: 0x000CFAD4 File Offset: 0x000CDCD4
 		public virtual int? FallbackLandingPointId
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019AC RID: 6572
-		// (get) Token: 0x06004F1E RID: 20254 RVA: 0x000C42BC File Offset: 0x000C24BC
+		// Token: 0x17001B17 RID: 6935
+		// (get) Token: 0x06005443 RID: 21571 RVA: 0x000CFB0C File Offset: 0x000CDD0C
 		public virtual bool? IsAllowJump
 		{
 			get
@@ -74,7 +72,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D74 RID: 11636
+		// Token: 0x0400303A RID: 12346
 		private ISlopeSlidePerform Instance;
 	}
 }

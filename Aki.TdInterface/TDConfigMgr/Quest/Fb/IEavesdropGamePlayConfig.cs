@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012D9 RID: 4825
+	// Token: 0x0200141F RID: 5151
 	public class IEavesdropGamePlayConfig : ISpecialGamePlayConfig
 	{
-		// Token: 0x06006E43 RID: 28227 RVA: 0x0010A9A6 File Offset: 0x00108BA6
-		[NullableContext(1)]
+		// Token: 0x060074C1 RID: 29889 RVA: 0x00118C36 File Offset: 0x00116E36
 		public static IEavesdropGamePlayConfig Create(IEavesdropGamePlayConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002264 RID: 8804
-		// (get) Token: 0x06006E44 RID: 28228 RVA: 0x0010A9C5 File Offset: 0x00108BC5
+		// Token: 0x17002425 RID: 9253
+		// (get) Token: 0x060074C2 RID: 29890 RVA: 0x00118C55 File Offset: 0x00116E55
 		public override ESpecialGamePlayConfigType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002265 RID: 8805
-		// (get) Token: 0x06006E45 RID: 28229 RVA: 0x0010A9D2 File Offset: 0x00108BD2
+		// Token: 0x17002426 RID: 9254
+		// (get) Token: 0x060074C3 RID: 29891 RVA: 0x00118C62 File Offset: 0x00116E62
 		public virtual int EavesdropEntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002266 RID: 8806
-		// (get) Token: 0x06006E46 RID: 28230 RVA: 0x0010A9DF File Offset: 0x00108BDF
+		// Token: 0x17002427 RID: 9255
+		// (get) Token: 0x060074C4 RID: 29892 RVA: 0x00118C6F File Offset: 0x00116E6F
 		public virtual int HintRangeEntityId
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002267 RID: 8807
-		// (get) Token: 0x06006E47 RID: 28231 RVA: 0x0010A9EC File Offset: 0x00108BEC
+		// Token: 0x17002428 RID: 9256
+		// (get) Token: 0x060074C5 RID: 29893 RVA: 0x00118C7C File Offset: 0x00116E7C
 		public virtual int ListenableRangeEntityId
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002268 RID: 8808
-		// (get) Token: 0x06006E48 RID: 28232 RVA: 0x0010A9F9 File Offset: 0x00108BF9
+		// Token: 0x17002429 RID: 9257
+		// (get) Token: 0x060074C6 RID: 29894 RVA: 0x00118C89 File Offset: 0x00116E89
 		public virtual int TooCloseRangeEntityId
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002269 RID: 8809
-		// (get) Token: 0x06006E49 RID: 28233 RVA: 0x0010AA06 File Offset: 0x00108C06
+		// Token: 0x1700242A RID: 9258
+		// (get) Token: 0x060074C7 RID: 29895 RVA: 0x00118C96 File Offset: 0x00116E96
 		public virtual int HintTag
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700226A RID: 8810
-		// (get) Token: 0x06006E4A RID: 28234 RVA: 0x0010AA13 File Offset: 0x00108C13
+		// Token: 0x1700242B RID: 9259
+		// (get) Token: 0x060074C8 RID: 29896 RVA: 0x00118CA3 File Offset: 0x00116EA3
 		public virtual int ListenableTag
 		{
 			get
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700226B RID: 8811
-		// (get) Token: 0x06006E4B RID: 28235 RVA: 0x0010AA20 File Offset: 0x00108C20
+		// Token: 0x1700242C RID: 9260
+		// (get) Token: 0x060074C9 RID: 29897 RVA: 0x00118CB0 File Offset: 0x00116EB0
 		public virtual int TooCloseTag
 		{
 			get
@@ -101,8 +99,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700226C RID: 8812
-		// (get) Token: 0x06006E4C RID: 28236 RVA: 0x0010AA2D File Offset: 0x00108C2D
+		// Token: 0x1700242D RID: 9261
+		// (get) Token: 0x060074CA RID: 29898 RVA: 0x00118CBD File Offset: 0x00116EBD
 		public virtual int ListenedTag
 		{
 			get
@@ -111,7 +109,35 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F2F RID: 16175
+		// Token: 0x1700242E RID: 9262
+		// (get) Token: 0x060074CB RID: 29899 RVA: 0x00118CCC File Offset: 0x00116ECC
+		public virtual int? EavesdroppingTag
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new int?(this.Instance.EavesdroppingTag);
+			}
+		}
+
+		// Token: 0x1700242F RID: 9263
+		// (get) Token: 0x060074CC RID: 29900 RVA: 0x00118D04 File Offset: 0x00116F04
+		public virtual bool? BlockInteractOnListen
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 2) == 0)
+				{
+					return null;
+				}
+				return new bool?(this.Instance.BlockInteractOnListen);
+			}
+		}
+
+		// Token: 0x0400429D RID: 17053
 		private IEavesdropGamePlayConfig Instance;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel
 {
-	// Token: 0x02004D73 RID: 19827
+	// Token: 0x02003D3C RID: 15676
 	public class RoleLangCustomDefine
 	{
-		// Token: 0x0401B32D RID: 111405
+		// Token: 0x04015CFF RID: 89343
 		public const int ROLE_LANG_CUSTOM_NO_DATA_ERROR_CODE = 1900369;
 	}
 }

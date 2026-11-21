@@ -4,35 +4,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007145 RID: 28997
+	// Token: 0x02006373 RID: 25459
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class UpdateRotationParams : IUpdateRotationParams
 	{
-		// Token: 0x17009D43 RID: 40259
-		// (get) Token: 0x06046C8E RID: 289934 RVA: 0x011D618A File Offset: 0x011D438A
-		// (set) Token: 0x06046C8F RID: 289935 RVA: 0x011D6192 File Offset: 0x011D4392
+		// Token: 0x17007515 RID: 29973
+		// (get) Token: 0x0603DADF RID: 252639 RVA: 0x011DEB9E File Offset: 0x011DCD9E
+		// (set) Token: 0x0603DAE0 RID: 252640 RVA: 0x011DEBA6 File Offset: 0x011DCDA6
 		public float DeltaTimeMs { get; set; }
 
-		// Token: 0x17009D44 RID: 40260
-		// (get) Token: 0x06046C90 RID: 289936 RVA: 0x011D619B File Offset: 0x011D439B
-		// (set) Token: 0x06046C91 RID: 289937 RVA: 0x011D61A3 File Offset: 0x011D43A3
+		// Token: 0x17007516 RID: 29974
+		// (get) Token: 0x0603DAE1 RID: 252641 RVA: 0x011DEBAF File Offset: 0x011DCDAF
+		// (set) Token: 0x0603DAE2 RID: 252642 RVA: 0x011DEBB7 File Offset: 0x011DCDB7
 		public float RotationInterpSpeed { get; set; }
 
-		// Token: 0x17009D45 RID: 40261
-		// (get) Token: 0x06046C92 RID: 289938 RVA: 0x011D61AC File Offset: 0x011D43AC
-		// (set) Token: 0x06046C93 RID: 289939 RVA: 0x011D61B4 File Offset: 0x011D43B4
+		// Token: 0x17007517 RID: 29975
+		// (get) Token: 0x0603DAE3 RID: 252643 RVA: 0x011DEBC0 File Offset: 0x011DCDC0
+		// (set) Token: 0x0603DAE4 RID: 252644 RVA: 0x011DEBC8 File Offset: 0x011DCDC8
 		[RequiredMember]
 		public FRotator RotateOffset { get; set; }
 
-		// Token: 0x17009D46 RID: 40262
-		// (get) Token: 0x06046C94 RID: 289940 RVA: 0x011D61BD File Offset: 0x011D43BD
-		// (set) Token: 0x06046C95 RID: 289941 RVA: 0x011D61C5 File Offset: 0x011D43C5
+		// Token: 0x17007518 RID: 29976
+		// (get) Token: 0x0603DAE5 RID: 252645 RVA: 0x011DEBD1 File Offset: 0x011DCDD1
+		// (set) Token: 0x0603DAE6 RID: 252646 RVA: 0x011DEBD9 File Offset: 0x011DCDD9
 		[RequiredMember]
 		public FollowShooterAimTarget AimTarget { get; set; }
 
-		// Token: 0x06046C96 RID: 289942 RVA: 0x011D61CE File Offset: 0x011D43CE
+		// Token: 0x0603DAE7 RID: 252647 RVA: 0x011DEBE2 File Offset: 0x011DCDE2
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public UpdateRotationParams()

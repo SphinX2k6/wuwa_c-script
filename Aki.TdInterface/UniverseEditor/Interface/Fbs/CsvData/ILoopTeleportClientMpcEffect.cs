@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x02004905 RID: 18693
+	// Token: 0x02004DA0 RID: 19872
 	public struct ILoopTeleportClientMpcEffect : IFlatbufferObject
 	{
-		// Token: 0x1700878A RID: 34698
-		// (get) Token: 0x0601D384 RID: 119684 RVA: 0x0041F5DA File Offset: 0x0041D7DA
+		// Token: 0x17008E2D RID: 36397
+		// (get) Token: 0x0601ED1D RID: 126237 RVA: 0x0044ED3A File Offset: 0x0044CF3A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D385 RID: 119685 RVA: 0x0041F5E7 File Offset: 0x0041D7E7
+		// Token: 0x0601ED1E RID: 126238 RVA: 0x0044ED47 File Offset: 0x0044CF47
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D386 RID: 119686 RVA: 0x0041F5F0 File Offset: 0x0041D7F0
+		// Token: 0x0601ED1F RID: 126239 RVA: 0x0044ED50 File Offset: 0x0044CF50
 		public static ILoopTeleportClientMpcEffect GetRootAsILoopTeleportClientMpcEffect(ByteBuffer _bb)
 		{
 			return ILoopTeleportClientMpcEffect.GetRootAsILoopTeleportClientMpcEffect(_bb, default(ILoopTeleportClientMpcEffect));
 		}
 
-		// Token: 0x0601D387 RID: 119687 RVA: 0x0041F60C File Offset: 0x0041D80C
+		// Token: 0x0601ED20 RID: 126240 RVA: 0x0044ED6C File Offset: 0x0044CF6C
 		public static ILoopTeleportClientMpcEffect GetRootAsILoopTeleportClientMpcEffect(ByteBuffer _bb, ILoopTeleportClientMpcEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D388 RID: 119688 RVA: 0x0041F629 File Offset: 0x0041D829
+		// Token: 0x0601ED21 RID: 126241 RVA: 0x0044ED89 File Offset: 0x0044CF89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D389 RID: 119689 RVA: 0x0041F638 File Offset: 0x0041D838
+		// Token: 0x0601ED22 RID: 126242 RVA: 0x0044ED98 File Offset: 0x0044CF98
 		public ILoopTeleportClientMpcEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700878B RID: 34699
-		// (get) Token: 0x0601D38A RID: 119690 RVA: 0x0041F648 File Offset: 0x0041D848
+		// Token: 0x17008E2E RID: 36398
+		// (get) Token: 0x0601ED23 RID: 126243 RVA: 0x0044EDA8 File Offset: 0x0044CFA8
 		public ELoopTeleportClientEffectType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x1700878C RID: 34700
-		// (get) Token: 0x0601D38B RID: 119691 RVA: 0x0041F684 File Offset: 0x0041D884
+		// Token: 0x17008E2F RID: 36399
+		// (get) Token: 0x0601ED24 RID: 126244 RVA: 0x0044EDE4 File Offset: 0x0044CFE4
 		public string Path
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D38C RID: 119692 RVA: 0x0041F6BB File Offset: 0x0041D8BB
+		// Token: 0x0601ED25 RID: 126245 RVA: 0x0044EE1B File Offset: 0x0044D01B
 		public Span<byte> GetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601D38D RID: 119693 RVA: 0x0041F6CA File Offset: 0x0041D8CA
+		// Token: 0x0601ED26 RID: 126246 RVA: 0x0044EE2A File Offset: 0x0044D02A
 		public byte[] GetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601D38E RID: 119694 RVA: 0x0041F6D8 File Offset: 0x0041D8D8
+		// Token: 0x0601ED27 RID: 126247 RVA: 0x0044EE38 File Offset: 0x0044D038
 		public static Offset<ILoopTeleportClientMpcEffect> CreateILoopTeleportClientMpcEffect(FlatBufferBuilder builder, ELoopTeleportClientEffectType Type = ELoopTeleportClientEffectType.ScreenEffect, StringOffset PathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return ILoopTeleportClientMpcEffect.EndILoopTeleportClientMpcEffect(builder);
 		}
 
-		// Token: 0x0601D38F RID: 119695 RVA: 0x0041F6F5 File Offset: 0x0041D8F5
+		// Token: 0x0601ED28 RID: 126248 RVA: 0x0044EE55 File Offset: 0x0044D055
 		public static void StartILoopTeleportClientMpcEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601D390 RID: 119696 RVA: 0x0041F6FE File Offset: 0x0041D8FE
+		// Token: 0x0601ED29 RID: 126249 RVA: 0x0044EE5E File Offset: 0x0044D05E
 		public static void AddType(FlatBufferBuilder builder, ELoopTeleportClientEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D391 RID: 119697 RVA: 0x0041F709 File Offset: 0x0041D909
+		// Token: 0x0601ED2A RID: 126250 RVA: 0x0044EE69 File Offset: 0x0044D069
 		public static void AddPath(FlatBufferBuilder builder, StringOffset pathOffset)
 		{
 			builder.AddOffset(1, pathOffset.Value, 0);
 		}
 
-		// Token: 0x0601D392 RID: 119698 RVA: 0x0041F719 File Offset: 0x0041D919
+		// Token: 0x0601ED2B RID: 126251 RVA: 0x0044EE79 File Offset: 0x0044D079
 		public static Offset<ILoopTeleportClientMpcEffect> EndILoopTeleportClientMpcEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<ILoopTeleportClientMpcEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0601D393 RID: 119699 RVA: 0x0041F728 File Offset: 0x0041D928
+		// Token: 0x0601ED2C RID: 126252 RVA: 0x0044EE88 File Offset: 0x0044D088
 		public ILoopTeleportClientMpcEffectT UnPack()
 		{
 			ILoopTeleportClientMpcEffectT loopTeleportClientMpcEffectT = new ILoopTeleportClientMpcEffectT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return loopTeleportClientMpcEffectT;
 		}
 
-		// Token: 0x0601D394 RID: 119700 RVA: 0x0041F743 File Offset: 0x0041D943
+		// Token: 0x0601ED2D RID: 126253 RVA: 0x0044EEA3 File Offset: 0x0044D0A3
 		public void UnPackTo(ILoopTeleportClientMpcEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.Path = this.Path;
 		}
 
-		// Token: 0x0601D395 RID: 119701 RVA: 0x0041F760 File Offset: 0x0041D960
+		// Token: 0x0601ED2E RID: 126254 RVA: 0x0044EEC0 File Offset: 0x0044D0C0
 		public static Offset<ILoopTeleportClientMpcEffect> Pack(FlatBufferBuilder builder, ILoopTeleportClientMpcEffectT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return ILoopTeleportClientMpcEffect.CreateILoopTeleportClientMpcEffect(builder, _o.Type, pathOffset);
 		}
 
-		// Token: 0x0400CF75 RID: 53109
+		// Token: 0x0400DA00 RID: 55808
 		private Table __p;
 	}
 }

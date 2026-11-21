@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200039A RID: 922
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003E3 RID: 995
 	public class IFixedStreamingSource : IStreamingSourceConfigBase
 	{
-		// Token: 0x0600125D RID: 4701 RVA: 0x0003CBBC File Offset: 0x0003ADBC
+		// Token: 0x060013A3 RID: 5027 RVA: 0x0003FEF4 File Offset: 0x0003E0F4
 		private IFixedStreamingSource_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600125E RID: 4702 RVA: 0x0003CBF4 File Offset: 0x0003ADF4
+		// Token: 0x060013A4 RID: 5028 RVA: 0x0003FF2C File Offset: 0x0003E12C
 		public static IFixedStreamingSource Create([Nullable(2)] IFixedStreamingSource instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600125F RID: 4703 RVA: 0x0003CC07 File Offset: 0x0003AE07
+		// Token: 0x060013A5 RID: 5029 RVA: 0x0003FF3F File Offset: 0x0003E13F
 		public static IFixedStreamingSource CreateFromSetValue([Nullable(2)] IFixedStreamingSource_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001260 RID: 4704 RVA: 0x0003CC1A File Offset: 0x0003AE1A
+		// Token: 0x060013A6 RID: 5030 RVA: 0x0003FF52 File Offset: 0x0003E152
 		public new IFixedStreamingSource_SetValue ToSetValue()
 		{
 			return new IFixedStreamingSource_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000525 RID: 1317
-		// (get) Token: 0x06001261 RID: 4705 RVA: 0x0003CC39 File Offset: 0x0003AE39
-		// (set) Token: 0x06001262 RID: 4706 RVA: 0x0003CC64 File Offset: 0x0003AE64
+		// Token: 0x1700057A RID: 1402
+		// (get) Token: 0x060013A7 RID: 5031 RVA: 0x0003FF71 File Offset: 0x0003E171
+		// (set) Token: 0x060013A8 RID: 5032 RVA: 0x0003FF9C File Offset: 0x0003E19C
 		public override EStreamingSourceMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000526 RID: 1318
-		// (get) Token: 0x06001263 RID: 4707 RVA: 0x0003CC74 File Offset: 0x0003AE74
-		// (set) Token: 0x06001264 RID: 4708 RVA: 0x0003CCD5 File Offset: 0x0003AED5
+		// Token: 0x1700057B RID: 1403
+		// (get) Token: 0x060013A9 RID: 5033 RVA: 0x0003FFAC File Offset: 0x0003E1AC
+		// (set) Token: 0x060013AA RID: 5034 RVA: 0x0004000D File Offset: 0x0003E20D
 		public virtual IStreamingSourceConfig StreamingSourceConfig
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000ED0 RID: 3792
+		// Token: 0x04000FC8 RID: 4040
 		[Nullable(2)]
 		protected new IFixedStreamingSource FbInstance;
 
-		// Token: 0x04000ED1 RID: 3793
+		// Token: 0x04000FC9 RID: 4041
 		[Nullable(2)]
 		protected new IFixedStreamingSource_SetValue PocoInterface;
 
-		// Token: 0x04000ED2 RID: 3794
+		// Token: 0x04000FCA RID: 4042
 		private IStreamingSourceConfig _StreamingSourceConfigCache;
 
-		// Token: 0x04000ED3 RID: 3795
+		// Token: 0x04000FCB RID: 4043
 		private bool _StreamingSourceConfigInited;
 	}
 }

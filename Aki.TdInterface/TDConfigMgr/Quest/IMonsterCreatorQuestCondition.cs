@@ -7,13 +7,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001011 RID: 4113
+	// Token: 0x0200113D RID: 4413
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMonsterCreatorQuestCondition : IQuestCondition
 	{
-		// Token: 0x06005BC4 RID: 23492 RVA: 0x000DE98C File Offset: 0x000DCB8C
-		[NullableContext(1)]
+		// Token: 0x060061A4 RID: 24996 RVA: 0x000EB5CC File Offset: 0x000E97CC
+		[NullableContext(0)]
 		private IMonsterCreatorQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005BC5 RID: 23493 RVA: 0x000DE9C4 File Offset: 0x000DCBC4
-		[NullableContext(1)]
+		// Token: 0x060061A5 RID: 24997 RVA: 0x000EB604 File Offset: 0x000E9804
+		[NullableContext(0)]
 		public static IMonsterCreatorQuestCondition Create([Nullable(2)] IMonsterCreatorQuestCondition instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BC6 RID: 23494 RVA: 0x000DE9D7 File Offset: 0x000DCBD7
-		[NullableContext(1)]
+		// Token: 0x060061A6 RID: 24998 RVA: 0x000EB617 File Offset: 0x000E9817
+		[NullableContext(0)]
 		public static IMonsterCreatorQuestCondition CreateFromSetValue([Nullable(2)] IMonsterCreatorQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BC7 RID: 23495 RVA: 0x000DE9EC File Offset: 0x000DCBEC
-		[NullableContext(1)]
+		// Token: 0x060061A7 RID: 24999 RVA: 0x000EB62C File Offset: 0x000E982C
+		[NullableContext(0)]
 		public new IMonsterCreatorQuestCondition_SetValue ToSetValue()
 		{
 			return new IMonsterCreatorQuestCondition_SetValue
@@ -69,13 +69,14 @@ namespace Aki.TDConfigMgr.Quest
 				PrefabVar = this.PrefabVar,
 				ShowMonsterMergedHpBar = this.ShowMonsterMergedHpBar,
 				MonsterMergedHpBarSettings = this.MonsterMergedHpBarSettings,
+				SpecificMonsterDeadPositions = this.SpecificMonsterDeadPositions,
 				EdTidMonsterGroupName = this.EdTidMonsterGroupName
 			};
 		}
 
-		// Token: 0x17001E4A RID: 7754
-		// (get) Token: 0x06005BC8 RID: 23496 RVA: 0x000DEA5E File Offset: 0x000DCC5E
-		// (set) Token: 0x06005BC9 RID: 23497 RVA: 0x000DEA89 File Offset: 0x000DCC89
+		// Token: 0x17001FF3 RID: 8179
+		// (get) Token: 0x060061A8 RID: 25000 RVA: 0x000EB6AA File Offset: 0x000E98AA
+		// (set) Token: 0x060061A9 RID: 25001 RVA: 0x000EB6D5 File Offset: 0x000E98D5
 		public override EChildQuest Type
 		{
 			get
@@ -96,9 +97,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E4B RID: 7755
-		// (get) Token: 0x06005BCA RID: 23498 RVA: 0x000DEA98 File Offset: 0x000DCC98
-		// (set) Token: 0x06005BCB RID: 23499 RVA: 0x000DEAF9 File Offset: 0x000DCCF9
+		// Token: 0x17001FF4 RID: 8180
+		// (get) Token: 0x060061AA RID: 25002 RVA: 0x000EB6E4 File Offset: 0x000E98E4
+		// (set) Token: 0x060061AB RID: 25003 RVA: 0x000EB745 File Offset: 0x000E9945
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -126,9 +127,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E4C RID: 7756
-		// (get) Token: 0x06005BCC RID: 23500 RVA: 0x000DEB0E File Offset: 0x000DCD0E
-		// (set) Token: 0x06005BCD RID: 23501 RVA: 0x000DEB35 File Offset: 0x000DCD35
+		// Token: 0x17001FF5 RID: 8181
+		// (get) Token: 0x060061AC RID: 25004 RVA: 0x000EB75A File Offset: 0x000E995A
+		// (set) Token: 0x060061AD RID: 25005 RVA: 0x000EB781 File Offset: 0x000E9981
 		public virtual string TidMonsterGroupName
 		{
 			get
@@ -150,13 +151,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E4D RID: 7757
-		// (get) Token: 0x06005BCE RID: 23502 RVA: 0x000DEB43 File Offset: 0x000DCD43
-		// (set) Token: 0x06005BCF RID: 23503 RVA: 0x000DEB6A File Offset: 0x000DCD6A
-		[Nullable(1)]
+		// Token: 0x17001FF6 RID: 8182
+		// (get) Token: 0x060061AE RID: 25006 RVA: 0x000EB78F File Offset: 0x000E998F
+		// (set) Token: 0x060061AF RID: 25007 RVA: 0x000EB7B6 File Offset: 0x000E99B6
+		[Nullable(0)]
 		public virtual List<int> MonsterCreatorEntityIds
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -170,16 +171,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return pocoInterface.MonsterCreatorEntityIds;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().MonsterCreatorEntityIds = value;
 			}
 		}
 
-		// Token: 0x17001E4E RID: 7758
-		// (get) Token: 0x06005BD0 RID: 23504 RVA: 0x000DEB78 File Offset: 0x000DCD78
-		// (set) Token: 0x06005BD1 RID: 23505 RVA: 0x000DEB9F File Offset: 0x000DCD9F
+		// Token: 0x17001FF7 RID: 8183
+		// (get) Token: 0x060061B0 RID: 25008 RVA: 0x000EB7C4 File Offset: 0x000E99C4
+		// (set) Token: 0x060061B1 RID: 25009 RVA: 0x000EB7EB File Offset: 0x000E99EB
 		public virtual VarRef PrefabVar
 		{
 			get
@@ -201,9 +202,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E4F RID: 7759
-		// (get) Token: 0x06005BD2 RID: 23506 RVA: 0x000DEBB0 File Offset: 0x000DCDB0
-		// (set) Token: 0x06005BD3 RID: 23507 RVA: 0x000DEBEA File Offset: 0x000DCDEA
+		// Token: 0x17001FF8 RID: 8184
+		// (get) Token: 0x060061B2 RID: 25010 RVA: 0x000EB7FC File Offset: 0x000E99FC
+		// (set) Token: 0x060061B3 RID: 25011 RVA: 0x000EB836 File Offset: 0x000E9A36
 		public virtual bool? ShowMonsterMergedHpBar
 		{
 			get
@@ -225,9 +226,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E50 RID: 7760
-		// (get) Token: 0x06005BD4 RID: 23508 RVA: 0x000DEBF8 File Offset: 0x000DCDF8
-		// (set) Token: 0x06005BD5 RID: 23509 RVA: 0x000DEC59 File Offset: 0x000DCE59
+		// Token: 0x17001FF9 RID: 8185
+		// (get) Token: 0x060061B4 RID: 25012 RVA: 0x000EB844 File Offset: 0x000E9A44
+		// (set) Token: 0x060061B5 RID: 25013 RVA: 0x000EB8A5 File Offset: 0x000E9AA5
 		public virtual IMonsterMergedHpBarSettings MonsterMergedHpBarSettings
 		{
 			get
@@ -255,9 +256,62 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E51 RID: 7761
-		// (get) Token: 0x06005BD6 RID: 23510 RVA: 0x000DEC6E File Offset: 0x000DCE6E
-		// (set) Token: 0x06005BD7 RID: 23511 RVA: 0x000DEC85 File Offset: 0x000DCE85
+		// Token: 0x17001FFA RID: 8186
+		// (get) Token: 0x060061B6 RID: 25014 RVA: 0x000EB8BC File Offset: 0x000E9ABC
+		// (set) Token: 0x060061B7 RID: 25015 RVA: 0x000EB94F File Offset: 0x000E9B4F
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public virtual List<ISpecificMonsterDeadPosition> SpecificMonsterDeadPositions
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this._SpecificMonsterDeadPositionsInited)
+				{
+					return this._SpecificMonsterDeadPositionsCache;
+				}
+				this._SpecificMonsterDeadPositionsInited = true;
+				if (this.FbInstance != null)
+				{
+					List<ISpecificMonsterDeadPosition> specificMonsterDeadPositions = this.FbInstance.SpecificMonsterDeadPositions;
+					if (specificMonsterDeadPositions != null)
+					{
+						this._SpecificMonsterDeadPositionsCache = new List<ISpecificMonsterDeadPosition>(specificMonsterDeadPositions.Count);
+						for (int i = 0; i < specificMonsterDeadPositions.Count; i++)
+						{
+							this._SpecificMonsterDeadPositionsCache.Add(ISpecificMonsterDeadPosition.Create(specificMonsterDeadPositions[i]));
+						}
+					}
+				}
+				else
+				{
+					IMonsterCreatorQuestCondition_SetValue pocoInterface = this.PocoInterface;
+					this._SpecificMonsterDeadPositionsCache = ((pocoInterface != null) ? pocoInterface.SpecificMonsterDeadPositions : null);
+				}
+				return this._SpecificMonsterDeadPositionsCache;
+			}
+			[param: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			set
+			{
+				this.GetOrCreatePoco().SpecificMonsterDeadPositions = value;
+				this._SpecificMonsterDeadPositionsInited = false;
+			}
+		}
+
+		// Token: 0x17001FFB RID: 8187
+		// (get) Token: 0x060061B8 RID: 25016 RVA: 0x000EB964 File Offset: 0x000E9B64
+		// (set) Token: 0x060061B9 RID: 25017 RVA: 0x000EB97B File Offset: 0x000E9B7B
 		public virtual string EdTidMonsterGroupName
 		{
 			get
@@ -274,24 +328,35 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003743 RID: 14147
+		// Token: 0x04003A7B RID: 14971
 		protected new IMonsterCreatorQuestCondition FbInstance;
 
-		// Token: 0x04003744 RID: 14148
+		// Token: 0x04003A7C RID: 14972
 		protected new IMonsterCreatorQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003745 RID: 14149
-		[Nullable(1)]
+		// Token: 0x04003A7D RID: 14973
+		[Nullable(0)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003746 RID: 14150
+		// Token: 0x04003A7E RID: 14974
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003747 RID: 14151
-		[Nullable(1)]
+		// Token: 0x04003A7F RID: 14975
+		[Nullable(0)]
 		private IMonsterMergedHpBarSettings _MonsterMergedHpBarSettingsCache;
 
-		// Token: 0x04003748 RID: 14152
+		// Token: 0x04003A80 RID: 14976
 		private bool _MonsterMergedHpBarSettingsInited;
+
+		// Token: 0x04003A81 RID: 14977
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		private List<ISpecificMonsterDeadPosition> _SpecificMonsterDeadPositionsCache;
+
+		// Token: 0x04003A82 RID: 14978
+		private bool _SpecificMonsterDeadPositionsInited;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068AA RID: 26794
+	// Token: 0x020057FA RID: 22522
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 	})]
 	public class AdamSmasherStageItem : GridProxyAbstract<IAdamSmasherStageItemData>
 	{
-		// Token: 0x06042DDE RID: 273886 RVA: 0x010478E0 File Offset: 0x01045AE0
+		// Token: 0x06037936 RID: 227638 RVA: 0x00F88EF0 File Offset: 0x00F870F0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042DDF RID: 273887 RVA: 0x01047A26 File Offset: 0x01045C26
+		// Token: 0x06037937 RID: 227639 RVA: 0x00F89036 File Offset: 0x00F87236
 		public int GetStageId()
 		{
 			IAdamSmasherStageItemData stageData = this.StageData;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return stageData.StageId;
 		}
 
-		// Token: 0x06042DE0 RID: 273888 RVA: 0x01047A3C File Offset: 0x01045C3C
+		// Token: 0x06037938 RID: 227640 RVA: 0x00F8904C File Offset: 0x00F8724C
 		public override void Refresh(IAdamSmasherStageItemData data, bool isSelected, int gridIndex)
 		{
 			this.StageData = data;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshDecorationSprite(data);
 		}
 
-		// Token: 0x06042DE1 RID: 273889 RVA: 0x01047BB4 File Offset: 0x01045DB4
+		// Token: 0x06037939 RID: 227641 RVA: 0x00F891C4 File Offset: 0x00F873C4
 		public void RefreshDecorationSprite(IAdamSmasherStageItemData data)
 		{
 			string path = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity34/Cyberpunk/Challenge" + (data.IsHard ? "/SP_TogLevelSelDecoSP.SP_TogLevelSelDecoSP" : "/SP_TogLevelSelDecoNor.SP_TogLevelSelDecoNor");
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.SetSpriteByPath(path2, base.GetSprite(11), false, null, null);
 		}
 
-		// Token: 0x06042DE2 RID: 273890 RVA: 0x01047C34 File Offset: 0x01045E34
+		// Token: 0x0603793A RID: 227642 RVA: 0x00F89244 File Offset: 0x00F87444
 		public void SetToggleActive(bool selected)
 		{
 			if (this.StageData == null)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			base.GetText(2).useChangeColor = useChangeColor;
 		}
 
-		// Token: 0x06042DE3 RID: 273891 RVA: 0x01047CA5 File Offset: 0x01045EA5
+		// Token: 0x0603793B RID: 227643 RVA: 0x00F892B5 File Offset: 0x00F874B5
 		private void OnToggleClick(EToggleState state)
 		{
 			if (this.StageData == null)
@@ -134,47 +134,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			adamSmasherSelectView.ChangeStageId(this.StageData.StageId);
 		}
 
-		// Token: 0x04022CB2 RID: 142514
+		// Token: 0x0401D50E RID: 120078
 		private const string NormalColor = "#666666FF";
 
-		// Token: 0x04022CB3 RID: 142515
+		// Token: 0x0401D50F RID: 120079
 		private const string HardColor = "#ff606f";
 
-		// Token: 0x04022CB4 RID: 142516
+		// Token: 0x0401D510 RID: 120080
 		[Nullable(2)]
 		public Action<int> OnStageClick;
 
-		// Token: 0x04022CB5 RID: 142517
+		// Token: 0x0401D511 RID: 120081
 		[Nullable(2)]
 		private IAdamSmasherStageItemData StageData;
 
-		// Token: 0x0200CA7C RID: 51836
+		// Token: 0x0200B444 RID: 46148
 		[NullableContext(0)]
 		private enum EStageItemComponent
 		{
-			// Token: 0x0403D34F RID: 250703
+			// Token: 0x04037C2A RID: 228394
 			ToggleBtn,
-			// Token: 0x0403D350 RID: 250704
+			// Token: 0x04037C2B RID: 228395
 			IndexText,
-			// Token: 0x0403D351 RID: 250705
+			// Token: 0x04037C2C RID: 228396
 			NameText,
-			// Token: 0x0403D352 RID: 250706
+			// Token: 0x04037C2D RID: 228397
 			LockPanel,
-			// Token: 0x0403D353 RID: 250707
+			// Token: 0x04037C2E RID: 228398
 			NormalPanel,
-			// Token: 0x0403D354 RID: 250708
+			// Token: 0x04037C2F RID: 228399
 			SelectItem,
-			// Token: 0x0403D355 RID: 250709
+			// Token: 0x04037C30 RID: 228400
 			FinishItem,
-			// Token: 0x0403D356 RID: 250710
+			// Token: 0x04037C31 RID: 228401
 			RedDot,
-			// Token: 0x0403D357 RID: 250711
+			// Token: 0x04037C32 RID: 228402
 			BossPanel,
-			// Token: 0x0403D358 RID: 250712
+			// Token: 0x04037C33 RID: 228403
 			BossLockPanel,
-			// Token: 0x0403D359 RID: 250713
+			// Token: 0x04037C34 RID: 228404
 			DecorationSprite,
-			// Token: 0x0403D35A RID: 250714
+			// Token: 0x04037C35 RID: 228405
 			FinishSprite
 		}
 	}

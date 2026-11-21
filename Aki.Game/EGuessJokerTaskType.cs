@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200104E RID: 4174
+// Token: 0x02000502 RID: 1282
 public enum EGuessJokerTaskType
 {
-	// Token: 0x04003175 RID: 12661
+	// Token: 0x0400320E RID: 12814
 	Display,
-	// Token: 0x04003176 RID: 12662
+	// Token: 0x0400320F RID: 12815
 	Interactive
 }

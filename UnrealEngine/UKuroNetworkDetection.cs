@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019FD RID: 6653
+	// Token: 0x02000482 RID: 1154
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroNetwork.KuroNetworkDetection")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroNetworkDetection : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018A9E RID: 101022 RVA: 0x00245FCE File Offset: 0x002441CE
+		// Token: 0x06006D10 RID: 27920 RVA: 0x0009F5C2 File Offset: 0x0009D7C2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroNetworkDetection._ClassPtr;
 		}
 
-		// Token: 0x06018A9F RID: 101023 RVA: 0x00245FDC File Offset: 0x002441DC
+		// Token: 0x06006D11 RID: 27921 RVA: 0x0009F5D0 File Offset: 0x0009D7D0
 		public UKuroNetworkDetection() : this(BuiltinUtils.AllocNativeUObject(UKuroNetworkDetection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018AA0 RID: 101024 RVA: 0x00246004 File Offset: 0x00244204
+		// Token: 0x06006D12 RID: 27922 RVA: 0x0009F5F8 File Offset: 0x0009D7F8
 		public UKuroNetworkDetection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroNetworkDetection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06018AA1 RID: 101025 RVA: 0x00246038 File Offset: 0x00244238
+		// Token: 0x06006D13 RID: 27923 RVA: 0x0009F62C File Offset: 0x0009D82C
 		[NullableContext(2)]
 		public unsafe static void TestUdpReachable([Nullable(1)] string IpAddress, in TArray<int> Ports, FTestUdpResultDelegate ResultDelegate)
 		{
@@ -38,7 +38,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06018AA2 RID: 101026 RVA: 0x0024607C File Offset: 0x0024427C
+		// Token: 0x06006D14 RID: 27924 RVA: 0x0009F670 File Offset: 0x0009D870
 		public unsafe static void SetCDNConfig(string CDNConfig)
 		{
 			FString fstring = FString.AllocTemp(CDNConfig);
@@ -46,7 +46,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06018AA3 RID: 101027 RVA: 0x002460A0 File Offset: 0x002442A0
+		// Token: 0x06006D15 RID: 27925 RVA: 0x0009F694 File Offset: 0x0009D894
 		public unsafe static void ResolveDomainName(string DomainName, [Nullable(2)] FResolveDomainDelegate Callback)
 		{
 			FString fstring = FString.AllocTemp(DomainName);
@@ -54,11 +54,11 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06018AA4 RID: 101028
+		// Token: 0x06006D16 RID: 27926
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ResolveDomainFinish();
 
-		// Token: 0x06018AA5 RID: 101029 RVA: 0x002460D4 File Offset: 0x002442D4
+		// Token: 0x06006D17 RID: 27927 RVA: 0x0009F6C8 File Offset: 0x0009D8C8
 		public unsafe static string GetDetectionConfig(string ServerName)
 		{
 			FString fstring = FString.AllocTemp(ServerName);
@@ -67,13 +67,13 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06018AA6 RID: 101030 RVA: 0x002460FD File Offset: 0x002442FD
+		// Token: 0x06006D18 RID: 27928 RVA: 0x0009F6F1 File Offset: 0x0009D8F1
 		public static string GetCurrentProxyAddress()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroNetworkDetection.__GetCurrentProxyAddress_Internal());
 		}
 
-		// Token: 0x06018AA7 RID: 101031 RVA: 0x0024610C File Offset: 0x0024430C
+		// Token: 0x06006D19 RID: 27929 RVA: 0x0009F700 File Offset: 0x0009D900
 		public unsafe static void GatewayUdpReachable(string IpAddress, [Nullable(2)] in TArray<int> Ports, string Payload, [Nullable(2)] FTestUdpResultDelegate ResultDelegate)
 		{
 			FString fstring = FString.AllocTemp(IpAddress);
@@ -83,58 +83,58 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06018AA8 RID: 101032
+		// Token: 0x06006D1A RID: 27930
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void DetectionFinish(bool bSuccess);
 
-		// Token: 0x06018AA9 RID: 101033
+		// Token: 0x06006D1B RID: 27931
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void AbortGatewayUdpReachable();
 
-		// Token: 0x06018AAA RID: 101034
+		// Token: 0x06006D1C RID: 27932
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TestUdpReachable_Internal(in FString IpAddress, IntPtr Ports, IntPtr ResultDelegate);
 
-		// Token: 0x06018AAB RID: 101035
+		// Token: 0x06006D1D RID: 27933
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCDNConfig_Internal(in FString CDNConfig);
 
-		// Token: 0x06018AAC RID: 101036
+		// Token: 0x06006D1E RID: 27934
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResolveDomainName_Internal(in FString DomainName, IntPtr Callback);
 
-		// Token: 0x06018AAD RID: 101037
+		// Token: 0x06006D1F RID: 27935
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetDetectionConfig_Internal(in FString ServerName);
 
-		// Token: 0x06018AAE RID: 101038
+		// Token: 0x06006D20 RID: 27936
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurrentProxyAddress_Internal();
 
-		// Token: 0x06018AAF RID: 101039
+		// Token: 0x06006D21 RID: 27937
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GatewayUdpReachable_Internal(in FString IpAddress, IntPtr Ports, in FString Payload, IntPtr ResultDelegate);
 
-		// Token: 0x06018AB0 RID: 101040 RVA: 0x0024615F File Offset: 0x0024435F
+		// Token: 0x06006D22 RID: 27938 RVA: 0x0009F753 File Offset: 0x0009D953
 		static UKuroNetworkDetection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroNetwork.KuroNetworkDetection");
 		}
 
-		// Token: 0x06018AB1 RID: 101041 RVA: 0x0024616D File Offset: 0x0024436D
+		// Token: 0x06006D23 RID: 27939 RVA: 0x0009F761 File Offset: 0x0009D961
 		protected UKuroNetworkDetection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D53D RID: 54589
+		// Token: 0x04002E97 RID: 11927
 		public new const string __ObjectPath = "/Script/KuroNetwork.KuroNetworkDetection";
 
-		// Token: 0x0400D53E RID: 54590
+		// Token: 0x04002E98 RID: 11928
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D53F RID: 54591
+		// Token: 0x04002E99 RID: 11929
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

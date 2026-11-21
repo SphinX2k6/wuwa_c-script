@@ -8,13 +8,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BattleUiSet
 {
-	// Token: 0x02005E61 RID: 24161
+	// Token: 0x02004E46 RID: 20038
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class BattleUiSetModel : ModelBase
 	{
-		// Token: 0x0603D6BD RID: 251581 RVA: 0x00ED0B94 File Offset: 0x00ECED94
+		// Token: 0x0603264D RID: 206413 RVA: 0x00E22104 File Offset: 0x00E20304
 		protected override bool OnInit()
 		{
 			for (int i = 0; i < 9; i++)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return true;
 		}
 
-		// Token: 0x0603D6BE RID: 251582 RVA: 0x00ED0CBC File Offset: 0x00ECEEBC
+		// Token: 0x0603264E RID: 206414 RVA: 0x00E2222C File Offset: 0x00E2042C
 		protected override bool OnClear()
 		{
 			this.PanelDataMap.Clear();
@@ -48,26 +48,26 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return true;
 		}
 
-		// Token: 0x0603D6BF RID: 251583 RVA: 0x00ED0CDC File Offset: 0x00ECEEDC
+		// Token: 0x0603264F RID: 206415 RVA: 0x00E2224C File Offset: 0x00E2044C
 		public IReadOnlyDictionary<int, BattleUiSetPanelData> GetPanelDataMap()
 		{
 			return this.PanelDataMap;
 		}
 
-		// Token: 0x0603D6C0 RID: 251584 RVA: 0x00ED0CE4 File Offset: 0x00ECEEE4
+		// Token: 0x06032650 RID: 206416 RVA: 0x00E22254 File Offset: 0x00E20454
 		public IReadOnlyDictionary<int, BattleUiSetPanelItemData> GetPanelItemDataMap()
 		{
 			return this.PanelItemDataMap;
 		}
 
-		// Token: 0x0603D6C1 RID: 251585 RVA: 0x00ED0CEC File Offset: 0x00ECEEEC
+		// Token: 0x06032651 RID: 206417 RVA: 0x00E2225C File Offset: 0x00E2045C
 		[NullableContext(2)]
 		public BattleUiSetPanelItemData GetPanelItemDataByConfigId(int configId)
 		{
 			return this.PanelItemDataMap.GetValueOrDefault(configId);
 		}
 
-		// Token: 0x0603D6C2 RID: 251586 RVA: 0x00ED0CFA File Offset: 0x00ECEEFA
+		// Token: 0x06032652 RID: 206418 RVA: 0x00E2226A File Offset: 0x00E2046A
 		[NullableContext(2)]
 		public void SetPanelItemSelected(BattleUiSetPanelItemData panelItemData)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			EventSystem.Instance.Emit<BattleUiSetPanelItemData>(EEventName.OnSelectedEditPanelItem, this.SelectedPanelItemData);
 		}
 
-		// Token: 0x0603D6C3 RID: 251587 RVA: 0x00ED0D28 File Offset: 0x00ECEF28
+		// Token: 0x06032653 RID: 206419 RVA: 0x00E22298 File Offset: 0x00E20498
 		public void ResetSettings()
 		{
 			foreach (BattleUiSetPanelItemData battleUiSetPanelItemData in this.GetPanelItemDataMap().Values)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			}
 		}
 
-		// Token: 0x0603D6C4 RID: 251588 RVA: 0x00ED0DB0 File Offset: 0x00ECEFB0
+		// Token: 0x06032654 RID: 206420 RVA: 0x00E22320 File Offset: 0x00E20520
 		public void SaveSettings()
 		{
 			IReadOnlyDictionary<int, BattleUiSetPanelItemData> panelItemDataMap = this.GetPanelItemDataMap();
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			BattleUiSetController.MobileButtonSettingUpdateRequest(list);
 		}
 
-		// Token: 0x0603D6C5 RID: 251589 RVA: 0x00ED0EA4 File Offset: 0x00ECF0A4
+		// Token: 0x06032655 RID: 206421 RVA: 0x00E22414 File Offset: 0x00E20614
 		public void ReInitSettings()
 		{
 			foreach (BattleUiSetPanelItemData battleUiSetPanelItemData in this.GetPanelItemDataMap().Values)
@@ -137,35 +137,35 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			}
 		}
 
-		// Token: 0x0603D6C6 RID: 251590 RVA: 0x00ED0EF4 File Offset: 0x00ECF0F4
+		// Token: 0x06032656 RID: 206422 RVA: 0x00E22464 File Offset: 0x00E20664
 		public void AddTouchFingerData(TouchFingerData touchFingerData)
 		{
 			EFingerIndex fingerIndex = touchFingerData.GetFingerIndex();
 			this.TouchFingerDataMap[fingerIndex] = touchFingerData;
 		}
 
-		// Token: 0x0603D6C7 RID: 251591 RVA: 0x00ED0F18 File Offset: 0x00ECF118
+		// Token: 0x06032657 RID: 206423 RVA: 0x00E22488 File Offset: 0x00E20688
 		public void RemoveTouchFingerData(TouchFingerData touchFingerData)
 		{
 			EFingerIndex fingerIndex = touchFingerData.GetFingerIndex();
 			this.TouchFingerDataMap.Remove(fingerIndex);
 		}
 
-		// Token: 0x0603D6C8 RID: 251592 RVA: 0x00ED0F39 File Offset: 0x00ECF139
+		// Token: 0x06032658 RID: 206424 RVA: 0x00E224A9 File Offset: 0x00E206A9
 		public int GetTouchFingerDataCount()
 		{
 			return this.TouchFingerDataMap.Count;
 		}
 
-		// Token: 0x0603D6C9 RID: 251593 RVA: 0x00ED0F46 File Offset: 0x00ECF146
+		// Token: 0x06032659 RID: 206425 RVA: 0x00E224B6 File Offset: 0x00E206B6
 		[NullableContext(2)]
 		public TouchFingerData GetTouchFingerData(EFingerIndex fingerIndex)
 		{
 			return this.TouchFingerDataMap.GetValueOrDefault(fingerIndex);
 		}
 
-		// Token: 0x17008E76 RID: 36470
-		// (get) Token: 0x0603D6CA RID: 251594 RVA: 0x00ED0F54 File Offset: 0x00ECF154
+		// Token: 0x17006248 RID: 25160
+		// (get) Token: 0x0603265A RID: 206426 RVA: 0x00E224C4 File Offset: 0x00E206C4
 		public static BattleUiSetModel Instance
 		{
 			get
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			}
 		}
 
-		// Token: 0x0603D6CB RID: 251595 RVA: 0x00ED0F5B File Offset: 0x00ECF15B
+		// Token: 0x0603265B RID: 206427 RVA: 0x00E224CB File Offset: 0x00E206CB
 		public static BattleUiSetModel GetOrCreateInstance()
 		{
 			if (BattleUiSetModel._Instance == null)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return BattleUiSetModel._Instance;
 		}
 
-		// Token: 0x0603D6CC RID: 251596 RVA: 0x00ED0F6F File Offset: 0x00ECF16F
+		// Token: 0x0603265C RID: 206428 RVA: 0x00E224DF File Offset: 0x00E206DF
 		public static bool CreateInstance()
 		{
 			if (BattleUiSetModel._Instance != null)
@@ -195,52 +195,52 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return true;
 		}
 
-		// Token: 0x0603D6CD RID: 251597 RVA: 0x00ED0F85 File Offset: 0x00ECF185
+		// Token: 0x0603265D RID: 206429 RVA: 0x00E224F5 File Offset: 0x00E206F5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D6CE RID: 251598 RVA: 0x00ED0F87 File Offset: 0x00ECF187
+		// Token: 0x0603265E RID: 206430 RVA: 0x00E224F7 File Offset: 0x00E206F7
 		public static void ResetStaticDefaultValue()
 		{
 			BattleUiSetModel._Instance = null;
 		}
 
-		// Token: 0x0603D6CF RID: 251599 RVA: 0x00ED0F8F File Offset: 0x00ECF18F
+		// Token: 0x0603265F RID: 206431 RVA: 0x00E224FF File Offset: 0x00E206FF
 		static BattleUiSetModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleUiSetModel.CreateStaticDefaultValue), new Action(BattleUiSetModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040200D0 RID: 131280
+		// Token: 0x0401AB97 RID: 109463
 		private readonly Dictionary<int, BattleUiSetPanelData> PanelDataMap = new Dictionary<int, BattleUiSetPanelData>();
 
-		// Token: 0x040200D1 RID: 131281
+		// Token: 0x0401AB98 RID: 109464
 		private readonly Dictionary<int, BattleUiSetPanelItemData> PanelItemDataMap = new Dictionary<int, BattleUiSetPanelItemData>();
 
-		// Token: 0x040200D2 RID: 131282
+		// Token: 0x0401AB99 RID: 109465
 		[Nullable(2)]
 		public BattleUiSetPanelItemData SelectedPanelItemData;
 
-		// Token: 0x040200D3 RID: 131283
+		// Token: 0x0401AB9A RID: 109466
 		private readonly Dictionary<EFingerIndex, TouchFingerData> TouchFingerDataMap = new Dictionary<EFingerIndex, TouchFingerData>();
 
-		// Token: 0x040200D4 RID: 131284
+		// Token: 0x0401AB9B RID: 109467
 		public float MinTouchMoveDifference;
 
-		// Token: 0x040200D5 RID: 131285
+		// Token: 0x0401AB9C RID: 109468
 		public float MaxTouchMoveDifference;
 
-		// Token: 0x040200D6 RID: 131286
+		// Token: 0x0401AB9D RID: 109469
 		public float MaxTouchMoveValue;
 
-		// Token: 0x040200D7 RID: 131287
+		// Token: 0x0401AB9E RID: 109470
 		public float MinTouchMoveValue;
 
-		// Token: 0x040200D8 RID: 131288
+		// Token: 0x0401AB9F RID: 109471
 		public float ControlScaleRate;
 
-		// Token: 0x040200D9 RID: 131289
+		// Token: 0x0401ABA0 RID: 109472
 		[Nullable(2)]
 		private static BattleUiSetModel _Instance;
 	}

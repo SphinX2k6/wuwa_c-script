@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 {
-	// Token: 0x0200656F RID: 25967
+	// Token: 0x020054ED RID: 21741
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class ActivityFunPlayPages : UiPanelBase
 	{
-		// Token: 0x06041132 RID: 266546 RVA: 0x00FC52D4 File Offset: 0x00FC34D4
+		// Token: 0x06035DF7 RID: 220663 RVA: 0x00F0C2B8 File Offset: 0x00F0A4B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -65,25 +65,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041133 RID: 266547 RVA: 0x00FC5573 File Offset: 0x00FC3773
+		// Token: 0x06035DF8 RID: 220664 RVA: 0x00F0C557 File Offset: 0x00F0A757
 		protected override void OnStart()
 		{
 			this.InitPageDot();
 		}
 
-		// Token: 0x06041134 RID: 266548 RVA: 0x00FC557B File Offset: 0x00FC377B
+		// Token: 0x06035DF9 RID: 220665 RVA: 0x00F0C55F File Offset: 0x00F0A75F
 		private void InitPageDot()
 		{
 			this.PageDotLayout = new GenericLayout<ActivityFunPlayPage, FunPlaySharpComment>(base.GetHorizontalLayout(11), new Func<ActivityFunPlayPage>(this.CreatePageDot), null, false, true);
 		}
 
-		// Token: 0x06041135 RID: 266549 RVA: 0x00FC559F File Offset: 0x00FC379F
+		// Token: 0x06035DFA RID: 220666 RVA: 0x00F0C583 File Offset: 0x00F0A783
 		private ActivityFunPlayPage CreatePageDot()
 		{
 			return new ActivityFunPlayPage();
 		}
 
-		// Token: 0x06041136 RID: 266550 RVA: 0x00FC55A8 File Offset: 0x00FC37A8
+		// Token: 0x06035DFB RID: 220667 RVA: 0x00F0C58C File Offset: 0x00F0A78C
 		private void MoveToLeft()
 		{
 			if (this.CurrentCommentIndex - 1 < 0)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			pageDotLayout.SelectGridProxy(this.CurrentCommentIndex, true);
 		}
 
-		// Token: 0x06041137 RID: 266551 RVA: 0x00FC55F8 File Offset: 0x00FC37F8
+		// Token: 0x06035DFC RID: 220668 RVA: 0x00F0C5DC File Offset: 0x00F0A7DC
 		private void MoveToRight()
 		{
 			ActivityFunPlayChallengeData currentChallengeData = ActivityFunPlayModel.Instance.GetCurrentChallengeData();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			pageDotLayout.SelectGridProxy(this.CurrentCommentIndex, true);
 		}
 
-		// Token: 0x06041138 RID: 266552 RVA: 0x00FC5668 File Offset: 0x00FC3868
+		// Token: 0x06035DFD RID: 220669 RVA: 0x00F0C64C File Offset: 0x00F0A84C
 		public void Refresh(bool reset)
 		{
 			ActivityFunPlayChallengeData currentChallengeData = ActivityFunPlayModel.Instance.GetCurrentChallengeData();
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.RefreshPageDotLayout(sharpComments);
 		}
 
-		// Token: 0x06041139 RID: 266553 RVA: 0x00FC5764 File Offset: 0x00FC3964
+		// Token: 0x06035DFE RID: 220670 RVA: 0x00F0C748 File Offset: 0x00F0A948
 		public void RefreshPageDotLayout(List<FunPlaySharpComment> list)
 		{
 			base.GetHorizontalLayout(11).RootUIComp.Get().SetUIActive(list.Count > 1);
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			}
 		}
 
-		// Token: 0x0604113A RID: 266554 RVA: 0x00FC57BC File Offset: 0x00FC39BC
+		// Token: 0x06035DFF RID: 220671 RVA: 0x00F0C7A0 File Offset: 0x00F0A9A0
 		private void OnSelectedComment(int index)
 		{
 			ActivityFunPlayChallengeData currentChallengeData = ActivityFunPlayModel.Instance.GetCurrentChallengeData();
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			this.RefreshVarStatePanel(new FunPlaySharpComment?(value));
 		}
 
-		// Token: 0x0604113B RID: 266555 RVA: 0x00FC58D4 File Offset: 0x00FC3AD4
+		// Token: 0x06035E00 RID: 220672 RVA: 0x00F0C8B8 File Offset: 0x00F0AAB8
 		private void RefreshVarStatePanel(FunPlaySharpComment? data)
 		{
 			int? num = (data != null) ? new int?(data.GetValueOrDefault().VarState) : null;
@@ -226,20 +226,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			base.GetItem(15).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0604113C RID: 266556 RVA: 0x00FC595C File Offset: 0x00FC3B5C
+		// Token: 0x06035E01 RID: 220673 RVA: 0x00F0C940 File Offset: 0x00F0AB40
 		private void RefreshArrowBtn(int index, int length)
 		{
 			base.GetButton(3).RootUIComp.Get().SetUIActive(index > 0);
 			base.GetButton(4).RootUIComp.Get().SetUIActive(index < length - 1);
 		}
 
-		// Token: 0x0604113D RID: 266557 RVA: 0x00FC59A5 File Offset: 0x00FC3BA5
+		// Token: 0x06035E02 RID: 220674 RVA: 0x00F0C989 File Offset: 0x00F0AB89
 		public void SetParentSequence(UiBehaviorLevelSequence sequence)
 		{
 			this.ParentUiViewSequence = sequence;
 		}
 
-		// Token: 0x0604113E RID: 266558 RVA: 0x00FC59B0 File Offset: 0x00FC3BB0
+		// Token: 0x06035E03 RID: 220675 RVA: 0x00F0C994 File Offset: 0x00F0AB94
 		private void PlaySwitchAnimation()
 		{
 			if (this.ParentUiViewSequence != null && this.ParentUiViewSequence.HasSequenceNameInPlaying("Switch1"))
@@ -254,68 +254,68 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 			parentUiViewSequence.PlaySequence("Switch1", false, null);
 		}
 
-		// Token: 0x04021E99 RID: 138905
+		// Token: 0x0401C7CA RID: 116682
 		private GenericLayout<ActivityFunPlayPage, FunPlaySharpComment> PageDotLayout;
 
-		// Token: 0x04021E9A RID: 138906
+		// Token: 0x0401C7CB RID: 116683
 		private int CurrentCommentIndex;
 
-		// Token: 0x04021E9B RID: 138907
+		// Token: 0x0401C7CC RID: 116684
 		private int CurrentCommentId;
 
-		// Token: 0x04021E9C RID: 138908
+		// Token: 0x0401C7CD RID: 116685
 		private UiBehaviorLevelSequence ParentUiViewSequence;
 
-		// Token: 0x0200C765 RID: 51045
+		// Token: 0x0200B14A RID: 45386
 		[NullableContext(0)]
 		private class EPageComponent
 		{
-			// Token: 0x0403C3D6 RID: 246742
+			// Token: 0x04036D28 RID: 224552
 			public const int Draggable = 0;
 
-			// Token: 0x0403C3D7 RID: 246743
+			// Token: 0x04036D29 RID: 224553
 			public const int TextureContent = 1;
 
-			// Token: 0x0403C3D8 RID: 246744
+			// Token: 0x04036D2A RID: 224554
 			public const int TextureItem = 2;
 
-			// Token: 0x0403C3D9 RID: 246745
+			// Token: 0x04036D2B RID: 224555
 			public const int BtnLeft = 3;
 
-			// Token: 0x0403C3DA RID: 246746
+			// Token: 0x04036D2C RID: 224556
 			public const int BtnRight = 4;
 
-			// Token: 0x0403C3DB RID: 246747
+			// Token: 0x04036D2D RID: 224557
 			public const int RoleNone = 5;
 
-			// Token: 0x0403C3DC RID: 246748
+			// Token: 0x04036D2E RID: 224558
 			public const int Role = 6;
 
-			// Token: 0x0403C3DD RID: 246749
+			// Token: 0x04036D2F RID: 224559
 			public const int RoleHeadIcon = 7;
 
-			// Token: 0x0403C3DE RID: 246750
+			// Token: 0x04036D30 RID: 224560
 			public const int RoleName = 8;
 
-			// Token: 0x0403C3DF RID: 246751
+			// Token: 0x04036D31 RID: 224561
 			public const int RoleComment = 9;
 
-			// Token: 0x0403C3E0 RID: 246752
+			// Token: 0x04036D32 RID: 224562
 			public const int TimeTxt = 10;
 
-			// Token: 0x0403C3E1 RID: 246753
+			// Token: 0x04036D33 RID: 224563
 			public const int PageDotRoot = 11;
 
-			// Token: 0x0403C3E2 RID: 246754
+			// Token: 0x04036D34 RID: 224564
 			public const int PhotoTexture = 12;
 
-			// Token: 0x0403C3E3 RID: 246755
+			// Token: 0x04036D35 RID: 224565
 			public const int QuestionMark = 13;
 
-			// Token: 0x0403C3E4 RID: 246756
+			// Token: 0x04036D36 RID: 224566
 			public const int PnlRed = 14;
 
-			// Token: 0x0403C3E5 RID: 246757
+			// Token: 0x04036D37 RID: 224567
 			public const int PnlGreen = 15;
 		}
 	}

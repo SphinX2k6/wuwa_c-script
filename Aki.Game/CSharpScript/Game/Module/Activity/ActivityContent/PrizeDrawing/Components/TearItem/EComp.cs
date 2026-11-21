@@ -2,40 +2,40 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.TearItem
 {
-	// Token: 0x020062AB RID: 25259
+	// Token: 0x02005229 RID: 21033
 	internal enum EComp
 	{
-		// Token: 0x04021389 RID: 136073
+		// Token: 0x0401BCB8 RID: 113848
 		Content,
-		// Token: 0x0402138A RID: 136074
+		// Token: 0x0401BCB9 RID: 113849
 		Tear,
-		// Token: 0x0402138B RID: 136075
+		// Token: 0x0401BCBA RID: 113850
 		NiagaraBurst,
-		// Token: 0x0402138C RID: 136076
+		// Token: 0x0401BCBB RID: 113851
 		NiagaraShine,
-		// Token: 0x0402138D RID: 136077
+		// Token: 0x0401BCBC RID: 113852
 		NiagaraInnerGlow,
-		// Token: 0x0402138E RID: 136078
+		// Token: 0x0401BCBD RID: 113853
 		TearShadow,
-		// Token: 0x0402138F RID: 136079
+		// Token: 0x0401BCBE RID: 113854
 		Emoji1,
-		// Token: 0x04021390 RID: 136080
+		// Token: 0x0401BCBF RID: 113855
 		Emoji2,
-		// Token: 0x04021391 RID: 136081
+		// Token: 0x0401BCC0 RID: 113856
 		Emoji3,
-		// Token: 0x04021392 RID: 136082
+		// Token: 0x0401BCC1 RID: 113857
 		Emoji4,
-		// Token: 0x04021393 RID: 136083
+		// Token: 0x0401BCC2 RID: 113858
 		NiagaraStand,
-		// Token: 0x04021394 RID: 136084
+		// Token: 0x0401BCC3 RID: 113859
 		NiagaraInnerGlowMinor,
-		// Token: 0x04021395 RID: 136085
+		// Token: 0x0401BCC4 RID: 113860
 		NiagaraBurstMinor,
-		// Token: 0x04021396 RID: 136086
+		// Token: 0x0401BCC5 RID: 113861
 		NiagaraShineMinor,
-		// Token: 0x04021397 RID: 136087
+		// Token: 0x0401BCC6 RID: 113862
 		FxControl,
-		// Token: 0x04021398 RID: 136088
+		// Token: 0x0401BCC7 RID: 113863
 		FxControlMinor
 	}
 }

@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200115F RID: 4447
+// Token: 0x02000613 RID: 1555
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerHardLevelChoseView : UiViewBase
 {
-	// Token: 0x06007527 RID: 29991 RVA: 0x001819B8 File Offset: 0x0017FBB8
+	// Token: 0x060048BE RID: 18622 RVA: 0x0018A4E8 File Offset: 0x001886E8
 	public BabelTowerHardLevelChoseView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007528 RID: 29992 RVA: 0x001819CC File Offset: 0x0017FBCC
+	// Token: 0x060048BF RID: 18623 RVA: 0x0018A4FC File Offset: 0x001886FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -63,19 +63,19 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007529 RID: 29993 RVA: 0x00181BE3 File Offset: 0x0017FDE3
+	// Token: 0x060048C0 RID: 18624 RVA: 0x0018A713 File Offset: 0x00188913
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BabelTowerRefreshLevelInfo, new Action(this.BabelTowerRefreshLevelInfo));
 	}
 
-	// Token: 0x0600752A RID: 29994 RVA: 0x00181C01 File Offset: 0x0017FE01
+	// Token: 0x060048C1 RID: 18625 RVA: 0x0018A731 File Offset: 0x00188931
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BabelTowerRefreshLevelInfo, new Action(this.BabelTowerRefreshLevelInfo));
 	}
 
-	// Token: 0x0600752B RID: 29995 RVA: 0x00181C20 File Offset: 0x0017FE20
+	// Token: 0x060048C2 RID: 18626 RVA: 0x0018A750 File Offset: 0x00188950
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerHardLevelChoseView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -86,7 +86,7 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600752C RID: 29996 RVA: 0x00181C63 File Offset: 0x0017FE63
+	// Token: 0x060048C3 RID: 18627 RVA: 0x0018A793 File Offset: 0x00188993
 	protected override void OnStart()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.BabelTowerQuestRedDot, base.GetItem(5), null, 0);
@@ -98,13 +98,13 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600752D RID: 29997 RVA: 0x00181C96 File Offset: 0x0017FE96
+	// Token: 0x060048C4 RID: 18628 RVA: 0x0018A7C6 File Offset: 0x001889C6
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.BabelTowerQuestRedDot, base.GetItem(5), 0);
 	}
 
-	// Token: 0x0600752E RID: 29998 RVA: 0x00181CB0 File Offset: 0x0017FEB0
+	// Token: 0x060048C5 RID: 18629 RVA: 0x0018A7E0 File Offset: 0x001889E0
 	protected override void OnBeforeShow()
 	{
 		int levelChoseHandle = BabelTowerModel.Instance.LevelChoseHandle;
@@ -158,7 +158,7 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600752F RID: 29999 RVA: 0x00181D4C File Offset: 0x0017FF4C
+	// Token: 0x060048C6 RID: 18630 RVA: 0x0018A87C File Offset: 0x00188A7C
 	private void RefreshView()
 	{
 		BabelTowerData babelTowerData = BabelTowerController.Instance.GetBabelTowerData();
@@ -195,7 +195,7 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		uuiinturnAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x06007530 RID: 30000 RVA: 0x00181EC8 File Offset: 0x001800C8
+	// Token: 0x060048C7 RID: 18631 RVA: 0x0018A9F8 File Offset: 0x00188BF8
 	private void OnCloseBtnClick()
 	{
 		IBabelTowerHardLevelChoseViewData data = this.Data;
@@ -214,13 +214,13 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007531 RID: 30001 RVA: 0x00181F24 File Offset: 0x00180124
+	// Token: 0x060048C8 RID: 18632 RVA: 0x0018AA54 File Offset: 0x00188C54
 	private void OnClickRankBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerRankView, null, null);
 	}
 
-	// Token: 0x06007532 RID: 30002 RVA: 0x00181F37 File Offset: 0x00180137
+	// Token: 0x060048C9 RID: 18633 RVA: 0x0018AA67 File Offset: 0x00188C67
 	private void OnClickQuestBtn()
 	{
 		if (!BabelTowerController.Instance.GetBabelTowerData().CheckIfInOpenTime())
@@ -231,14 +231,14 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerQuestView, null, null);
 	}
 
-	// Token: 0x06007533 RID: 30003 RVA: 0x00181F70 File Offset: 0x00180170
+	// Token: 0x060048CA RID: 18634 RVA: 0x0018AAA0 File Offset: 0x00188CA0
 	private void OnClickLoopItem(int levelId)
 	{
 		BabelTowerController.Instance.SaveNewLevelClickData(levelId, EBabelTowerDifficulty.Hard);
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerDeTermSelectViewNew, levelId, null);
 	}
 
-	// Token: 0x06007534 RID: 30004 RVA: 0x00181F94 File Offset: 0x00180194
+	// Token: 0x060048CB RID: 18635 RVA: 0x0018AAC4 File Offset: 0x00188CC4
 	private BabelTowerHardLevelChoseItem InitItem()
 	{
 		return new BabelTowerHardLevelChoseItem
@@ -247,19 +247,19 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007535 RID: 30005 RVA: 0x00181FAD File Offset: 0x001801AD
+	// Token: 0x060048CC RID: 18636 RVA: 0x0018AADD File Offset: 0x00188CDD
 	private void BabelTowerRefreshLevelInfo()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06007536 RID: 30006 RVA: 0x00181FB5 File Offset: 0x001801B5
+	// Token: 0x060048CD RID: 18637 RVA: 0x0018AAE5 File Offset: 0x00188CE5
 	protected override void OnBeforeHide()
 	{
 		BabelTowerModel.Instance.LevelChoseHandle = 0;
 	}
 
-	// Token: 0x06007537 RID: 30007 RVA: 0x00181FC4 File Offset: 0x001801C4
+	// Token: 0x060048CE RID: 18638 RVA: 0x0018AAF4 File Offset: 0x00188CF4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -288,18 +288,18 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 		};
 	}
 
-	// Token: 0x040035DA RID: 13786
+	// Token: 0x04003673 RID: 13939
 	[Nullable(2)]
 	private IBabelTowerHardLevelChoseViewData Data;
 
-	// Token: 0x040035DB RID: 13787
+	// Token: 0x04003674 RID: 13940
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040035DC RID: 13788
+	// Token: 0x04003675 RID: 13941
 	private List<BabelActivityLevelInfo> LevelList = new List<BabelActivityLevelInfo>();
 
-	// Token: 0x040035DD RID: 13789
+	// Token: 0x04003676 RID: 13942
 	[Nullable(new byte[]
 	{
 		2,
@@ -308,48 +308,48 @@ public class BabelTowerHardLevelChoseView : UiViewBase
 	})]
 	private LoopScrollView<BabelTowerHardLevelChoseItem, BabelActivityLevelInfo> LoopScrollView;
 
-	// Token: 0x040035DE RID: 13790
+	// Token: 0x04003677 RID: 13943
 	[Nullable(2)]
 	private BabelTowerHardLevelChoseItem CurrentPlayLoopSeqItem;
 
-	// Token: 0x02007723 RID: 30499
+	// Token: 0x020068B1 RID: 26801
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040274D1 RID: 160977
+		// Token: 0x04022810 RID: 141328
 		public const int CaptionItem = 0;
 
-		// Token: 0x040274D2 RID: 160978
+		// Token: 0x04022811 RID: 141329
 		public const int TargetText = 1;
 
-		// Token: 0x040274D3 RID: 160979
+		// Token: 0x04022812 RID: 141330
 		public const int RankBtn = 2;
 
-		// Token: 0x040274D4 RID: 160980
+		// Token: 0x04022813 RID: 141331
 		public const int RankBtnRedDotItem = 3;
 
-		// Token: 0x040274D5 RID: 160981
+		// Token: 0x04022814 RID: 141332
 		public const int QuestBtn = 4;
 
-		// Token: 0x040274D6 RID: 160982
+		// Token: 0x04022815 RID: 141333
 		public const int QuestBtnRedDotItem = 5;
 
-		// Token: 0x040274D7 RID: 160983
+		// Token: 0x04022816 RID: 141334
 		public const int QuestText1 = 6;
 
-		// Token: 0x040274D8 RID: 160984
+		// Token: 0x04022817 RID: 141335
 		public const int QuestText2 = 7;
 
-		// Token: 0x040274D9 RID: 160985
+		// Token: 0x04022818 RID: 141336
 		public const int LoopScrollView = 8;
 
-		// Token: 0x040274DA RID: 160986
+		// Token: 0x04022819 RID: 141337
 		public const int LoopScrollItem = 9;
 
-		// Token: 0x040274DB RID: 160987
+		// Token: 0x0402281A RID: 141338
 		public const int OneText = 10;
 
-		// Token: 0x040274DC RID: 160988
+		// Token: 0x0402281B RID: 141339
 		public const int TowText = 11;
 	}
 }

@@ -13,14 +13,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 {
-	// Token: 0x020052CE RID: 21198
+	// Token: 0x0200429E RID: 17054
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaAreaFunctionalProxy : PhantomArenaAreaProxyBase, IAreaCanvas, ISkillInteractMainInterface
 	{
-		// Token: 0x170082F2 RID: 33522
-		// (get) Token: 0x060363D1 RID: 222161 RVA: 0x00CD5088 File Offset: 0x00CD3288
-		// (set) Token: 0x060363D2 RID: 222162 RVA: 0x00CD5095 File Offset: 0x00CD3295
+		// Token: 0x170056B2 RID: 22194
+		// (get) Token: 0x0602B2CC RID: 176844 RVA: 0x00C227B0 File Offset: 0x00C209B0
+		// (set) Token: 0x0602B2CD RID: 176845 RVA: 0x00C227BD File Offset: 0x00C209BD
 		public new PhantomArenaAreaFunctionalItem AreaItem
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x170082F3 RID: 33523
-		// (get) Token: 0x060363D3 RID: 222163 RVA: 0x00CD509E File Offset: 0x00CD329E
+		// Token: 0x170056B3 RID: 22195
+		// (get) Token: 0x0602B2CE RID: 176846 RVA: 0x00C227C6 File Offset: 0x00C209C6
 		public override EPhantomArenaCardAreaType AreaType
 		{
 			get
@@ -43,12 +43,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363D4 RID: 222164 RVA: 0x00CD50A1 File Offset: 0x00CD32A1
+		// Token: 0x0602B2CF RID: 176847 RVA: 0x00C227C9 File Offset: 0x00C209C9
 		public PhantomArenaAreaFunctionalProxy(int index, PhantomArenaFunctionalArea area) : base(index, area)
 		{
 		}
 
-		// Token: 0x060363D5 RID: 222165 RVA: 0x00CD50AB File Offset: 0x00CD32AB
+		// Token: 0x0602B2D0 RID: 176848 RVA: 0x00C227D3 File Offset: 0x00C209D3
 		private void MagicUseCard()
 		{
 			if (this.Card != null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363D6 RID: 222166 RVA: 0x00CD50CC File Offset: 0x00CD32CC
+		// Token: 0x0602B2D1 RID: 176849 RVA: 0x00C227F4 File Offset: 0x00C209F4
 		[NullableContext(0)]
 		protected UniTask<bool> OnHandleAreaBySetCard()
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <OnHandleAreaBySetCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363D7 RID: 222167 RVA: 0x00CD5110 File Offset: 0x00CD3310
+		// Token: 0x0602B2D2 RID: 176850 RVA: 0x00C22838 File Offset: 0x00C20A38
 		protected void ResetCardProxy()
 		{
 			if (this.Card != null)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363D8 RID: 222168 RVA: 0x00CD51C0 File Offset: 0x00CD33C0
+		// Token: 0x0602B2D3 RID: 176851 RVA: 0x00C228E8 File Offset: 0x00C20AE8
 		[NullableContext(0)]
 		protected override UniTask<bool> OnHandleCardSetting([Nullable(1)] PhantomArenaCard card)
 		{
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <OnHandleCardSetting>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363D9 RID: 222169 RVA: 0x00CD520C File Offset: 0x00CD340C
+		// Token: 0x0602B2D4 RID: 176852 RVA: 0x00C22934 File Offset: 0x00C20B34
 		public override bool CheckGuideCondition(PhantomArenaCard card)
 		{
 			if (card.Data.Index == -1)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			});
 		}
 
-		// Token: 0x060363DA RID: 222170 RVA: 0x00CD52A4 File Offset: 0x00CD34A4
+		// Token: 0x0602B2D5 RID: 176853 RVA: 0x00C229CC File Offset: 0x00C20BCC
 		public override bool CheckSettingCardCondition(PhantomArenaCard card)
 		{
 			bool flag;
@@ -130,19 +130,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return result;
 		}
 
-		// Token: 0x060363DB RID: 222171 RVA: 0x00CD52D5 File Offset: 0x00CD34D5
+		// Token: 0x0602B2D6 RID: 176854 RVA: 0x00C229FD File Offset: 0x00C20BFD
 		protected override UUIItem GetCardRootItem()
 		{
 			return this.AreaItem.GetCardRootItem();
 		}
 
-		// Token: 0x060363DC RID: 222172 RVA: 0x00CD52E2 File Offset: 0x00CD34E2
+		// Token: 0x0602B2D7 RID: 176855 RVA: 0x00C22A0A File Offset: 0x00C20C0A
 		public bool CheckCanvasSortOrder(List<EPhantomArenaInteractTag> tagList, ISkillTriggerInfo skillTriggerInfo)
 		{
 			return this.Card != null;
 		}
 
-		// Token: 0x060363DD RID: 222173 RVA: 0x00CD52F0 File Offset: 0x00CD34F0
+		// Token: 0x0602B2D8 RID: 176856 RVA: 0x00C22A18 File Offset: 0x00C20C18
 		public void HandleSortOrder()
 		{
 			if (this.Card != null)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363DE RID: 222174 RVA: 0x00CD5344 File Offset: 0x00CD3544
+		// Token: 0x0602B2D9 RID: 176857 RVA: 0x00C22A6C File Offset: 0x00C20C6C
 		public void CancelSortOrder()
 		{
 			if (this.Card != null)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363DF RID: 222175 RVA: 0x00CD5398 File Offset: 0x00CD3598
+		// Token: 0x0602B2DA RID: 176858 RVA: 0x00C22AC0 File Offset: 0x00C20CC0
 		public UniTask StartSkillInteract()
 		{
 			PhantomArenaAreaFunctionalProxy.<StartSkillInteract>d__17 <StartSkillInteract>d__;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <StartSkillInteract>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363E0 RID: 222176 RVA: 0x00CD53DC File Offset: 0x00CD35DC
+		// Token: 0x0602B2DB RID: 176859 RVA: 0x00C22B04 File Offset: 0x00C20D04
 		public void CancelSkillInteract()
 		{
 			this.AreaItem.SetIncreaseActive(false).Forget();
@@ -200,13 +200,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363E1 RID: 222177 RVA: 0x00CD5468 File Offset: 0x00CD3668
+		// Token: 0x0602B2DC RID: 176860 RVA: 0x00C22B90 File Offset: 0x00C20D90
 		public ISkillTriggerInfo GetData()
 		{
 			return PhantomArenaBattleModel.Instance.BuffEffectData.CardSkillTriggerInfo;
 		}
 
-		// Token: 0x060363E2 RID: 222178 RVA: 0x00CD5479 File Offset: 0x00CD3679
+		// Token: 0x0602B2DD RID: 176861 RVA: 0x00C22BA1 File Offset: 0x00C20DA1
 		public void FinishSkillInteract()
 		{
 			this.AreaItem.SetIncreaseActive(false).Forget();
@@ -214,13 +214,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			this.ParentArea.FinishBuffEffect(this.Index);
 		}
 
-		// Token: 0x060363E3 RID: 222179 RVA: 0x00CD54A3 File Offset: 0x00CD36A3
+		// Token: 0x0602B2DE RID: 176862 RVA: 0x00C22BCB File Offset: 0x00C20DCB
 		[NullableContext(2)]
 		public void ReceiveUiInteract(ISkillInteractMainUiInteract uiInteract)
 		{
 		}
 
-		// Token: 0x0401CAD8 RID: 117464
+		// Token: 0x0401750D RID: 95501
 		public bool InSkillInteract;
 	}
 }

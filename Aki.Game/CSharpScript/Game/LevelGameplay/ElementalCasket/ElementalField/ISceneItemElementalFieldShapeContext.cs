@@ -5,11 +5,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EA0 RID: 28320
+	// Token: 0x02006020 RID: 24608
 	public interface ISceneItemElementalFieldShapeContext
 	{
-		// Token: 0x17009A6F RID: 39535
-		// (get) Token: 0x0604501B RID: 282651
+		// Token: 0x17006FA6 RID: 28582
+		// (get) Token: 0x0603B1BC RID: 242108
 		[Nullable(new byte[]
 		{
 			1,
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			1
 		})] get; }
 
-		// Token: 0x17009A70 RID: 39536
-		// (get) Token: 0x0604501C RID: 282652
+		// Token: 0x17006FA7 RID: 28583
+		// (get) Token: 0x0603B1BD RID: 242109
 		[Nullable(new byte[]
 		{
 			1,
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			2
 		})] get; }
 
-		// Token: 0x17009A71 RID: 39537
-		// (get) Token: 0x0604501D RID: 282653
+		// Token: 0x17006FA8 RID: 28584
+		// (get) Token: 0x0603B1BE RID: 242110
 		[Nullable(new byte[]
 		{
 			1,

@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Fight.Enum
 {
-	// Token: 0x02003F7A RID: 16250
+	// Token: 0x02003217 RID: 12823
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Fight/Enum/BPEDetachmentRule.BPEDetachmentRule")]
 	public enum BPEDetachmentRule : byte
 	{
-		// Token: 0x04015441 RID: 87105
+		// Token: 0x040112E4 RID: 70372
 		KeepRelative,
-		// Token: 0x04015442 RID: 87106
+		// Token: 0x040112E5 RID: 70373
 		KeepWorld,
-		// Token: 0x04015443 RID: 87107
+		// Token: 0x040112E6 RID: 70374
 		BPEDetachmentRule_MAX
 	}
 }

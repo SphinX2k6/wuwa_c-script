@@ -4,39 +4,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x0200726D RID: 29293
+	// Token: 0x020063EC RID: 25580
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecData
 	{
-		// Token: 0x17009E8A RID: 40586
-		// (get) Token: 0x06047C6D RID: 293997 RVA: 0x0125D149 File Offset: 0x0125B349
-		// (set) Token: 0x06047C6E RID: 293998 RVA: 0x0125D151 File Offset: 0x0125B351
+		// Token: 0x170075E3 RID: 30179
+		// (get) Token: 0x0603E02A RID: 253994 RVA: 0x011FDAD9 File Offset: 0x011FBCD9
+		// (set) Token: 0x0603E02B RID: 253995 RVA: 0x011FDAE1 File Offset: 0x011FBCE1
 		public int Id { get; set; }
 
-		// Token: 0x17009E8B RID: 40587
-		// (get) Token: 0x06047C6F RID: 293999 RVA: 0x0125D15A File Offset: 0x0125B35A
-		// (set) Token: 0x06047C70 RID: 294000 RVA: 0x0125D162 File Offset: 0x0125B362
+		// Token: 0x170075E4 RID: 30180
+		// (get) Token: 0x0603E02C RID: 253996 RVA: 0x011FDAEA File Offset: 0x011FBCEA
+		// (set) Token: 0x0603E02D RID: 253997 RVA: 0x011FDAF2 File Offset: 0x011FBCF2
 		public string Path { get; set; }
 
-		// Token: 0x17009E8C RID: 40588
-		// (get) Token: 0x06047C71 RID: 294001 RVA: 0x0125D16B File Offset: 0x0125B36B
-		// (set) Token: 0x06047C72 RID: 294002 RVA: 0x0125D173 File Offset: 0x0125B373
+		// Token: 0x170075E5 RID: 30181
+		// (get) Token: 0x0603E02E RID: 253998 RVA: 0x011FDAFB File Offset: 0x011FBCFB
+		// (set) Token: 0x0603E02F RID: 253999 RVA: 0x011FDB03 File Offset: 0x011FBD03
 		public byte SpecType { get; set; }
 
-		// Token: 0x17009E8D RID: 40589
-		// (get) Token: 0x06047C73 RID: 294003 RVA: 0x0125D17C File Offset: 0x0125B37C
-		// (set) Token: 0x06047C74 RID: 294004 RVA: 0x0125D184 File Offset: 0x0125B384
+		// Token: 0x170075E6 RID: 30182
+		// (get) Token: 0x0603E030 RID: 254000 RVA: 0x011FDB0C File Offset: 0x011FBD0C
+		// (set) Token: 0x0603E031 RID: 254001 RVA: 0x011FDB14 File Offset: 0x011FBD14
 		public sbyte EffectRegularType { get; set; }
 
-		// Token: 0x17009E8E RID: 40590
-		// (get) Token: 0x06047C75 RID: 294005 RVA: 0x0125D18D File Offset: 0x0125B38D
-		// (set) Token: 0x06047C76 RID: 294006 RVA: 0x0125D195 File Offset: 0x0125B395
+		// Token: 0x170075E7 RID: 30183
+		// (get) Token: 0x0603E032 RID: 254002 RVA: 0x011FDB1D File Offset: 0x011FBD1D
+		// (set) Token: 0x0603E033 RID: 254003 RVA: 0x011FDB25 File Offset: 0x011FBD25
 		public float LifeTime { get; set; }
 
-		// Token: 0x17009E8F RID: 40591
-		// (get) Token: 0x06047C77 RID: 294007 RVA: 0x0125D19E File Offset: 0x0125B39E
-		// (set) Token: 0x06047C78 RID: 294008 RVA: 0x0125D1A6 File Offset: 0x0125B3A6
+		// Token: 0x170075E8 RID: 30184
+		// (get) Token: 0x0603E034 RID: 254004 RVA: 0x011FDB2E File Offset: 0x011FBD2E
+		// (set) Token: 0x0603E035 RID: 254005 RVA: 0x011FDB36 File Offset: 0x011FBD36
 		public List<int> Children { get; set; }
 	}
 }

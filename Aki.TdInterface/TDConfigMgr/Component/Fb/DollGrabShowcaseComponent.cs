@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DFF RID: 3583
+	// Token: 0x02000EFB RID: 3835
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DollGrabShowcaseComponent : IComponentBase
 	{
-		// Token: 0x06005122 RID: 20770 RVA: 0x000C8371 File Offset: 0x000C6571
-		[NullableContext(1)]
+		// Token: 0x06005649 RID: 22089 RVA: 0x000D3C39 File Offset: 0x000D1E39
+		[NullableContext(0)]
 		public static DollGrabShowcaseComponent Create(IDollGrabShowcaseComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AE1 RID: 6881
-		// (get) Token: 0x06005123 RID: 20771 RVA: 0x000C8390 File Offset: 0x000C6590
+		// Token: 0x17001C4E RID: 7246
+		// (get) Token: 0x0600564A RID: 22090 RVA: 0x000D3C58 File Offset: 0x000D1E58
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AE2 RID: 6882
-		// (get) Token: 0x06005124 RID: 20772 RVA: 0x000C83C8 File Offset: 0x000C65C8
+		// Token: 0x17001C4F RID: 7247
+		// (get) Token: 0x0600564B RID: 22091 RVA: 0x000D3C90 File Offset: 0x000D1E90
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AE3 RID: 6883
-		// (get) Token: 0x06005125 RID: 20773 RVA: 0x000C83DE File Offset: 0x000C65DE
+		// Token: 0x17001C50 RID: 7248
+		// (get) Token: 0x0600564C RID: 22092 RVA: 0x000D3CA6 File Offset: 0x000D1EA6
 		public virtual EDollGrabShowcaseBelongType BelongType
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AE4 RID: 6884
-		// (get) Token: 0x06005126 RID: 20774 RVA: 0x000C83EC File Offset: 0x000C65EC
+		// Token: 0x17001C51 RID: 7249
+		// (get) Token: 0x0600564D RID: 22093 RVA: 0x000D3CB4 File Offset: 0x000D1EB4
 		public virtual int? BindInfiniteModeDollGrabEntityId
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AE5 RID: 6885
-		// (get) Token: 0x06005127 RID: 20775 RVA: 0x000C8422 File Offset: 0x000C6622
+		// Token: 0x17001C52 RID: 7250
+		// (get) Token: 0x0600564E RID: 22094 RVA: 0x000D3CEA File Offset: 0x000D1EEA
 		public virtual IDollGrabShowcaseDollCameraConfig CameraConfig
 		{
 			get
@@ -88,19 +88,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AE6 RID: 6886
-		// (get) Token: 0x06005128 RID: 20776 RVA: 0x000C8458 File Offset: 0x000C6658
+		// Token: 0x17001C53 RID: 7251
+		// (get) Token: 0x0600564F RID: 22095 RVA: 0x000D3D20 File Offset: 0x000D1F20
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IShowcaseDeliveryReward> DeliveryRewards
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -123,24 +123,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EA8 RID: 11944
+		// Token: 0x04003170 RID: 12656
 		private IDollGrabShowcaseComponent Instance;
 
-		// Token: 0x04002EA9 RID: 11945
+		// Token: 0x04003171 RID: 12657
 		private IDollGrabShowcaseDollCameraConfig _CameraConfigCache;
 
-		// Token: 0x04002EAA RID: 11946
+		// Token: 0x04003172 RID: 12658
 		private bool _CameraConfigInited;
 
-		// Token: 0x04002EAB RID: 11947
+		// Token: 0x04003173 RID: 12659
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IShowcaseDeliveryReward> _DeliveryRewardsCache;
 
-		// Token: 0x04002EAC RID: 11948
+		// Token: 0x04003174 RID: 12660
 		private bool _DeliveryRewardsInited;
 	}
 }

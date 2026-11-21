@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ECB RID: 20171
+	// Token: 0x02003E94 RID: 16020
 	public interface IRogueBattleMapRoleGridInfo
 	{
-		// Token: 0x17007F01 RID: 32513
-		// (get) Token: 0x06033C95 RID: 212117
-		// (set) Token: 0x06033C96 RID: 212118
+		// Token: 0x170052B1 RID: 21169
+		// (get) Token: 0x06028B00 RID: 166656
+		// (set) Token: 0x06028B01 RID: 166657
 		int ConfigId { get; set; }
 
-		// Token: 0x17007F02 RID: 32514
-		// (get) Token: 0x06033C97 RID: 212119
-		// (set) Token: 0x06033C98 RID: 212120
+		// Token: 0x170052B2 RID: 21170
+		// (get) Token: 0x06028B02 RID: 166658
+		// (set) Token: 0x06028B03 RID: 166659
 		bool IsGain { get; set; }
 
-		// Token: 0x17007F03 RID: 32515
-		// (get) Token: 0x06033C99 RID: 212121
-		// (set) Token: 0x06033C9A RID: 212122
+		// Token: 0x170052B3 RID: 21171
+		// (get) Token: 0x06028B04 RID: 166660
+		// (set) Token: 0x06028B05 RID: 166661
 		bool NeedLevel { get; set; }
 	}
 }

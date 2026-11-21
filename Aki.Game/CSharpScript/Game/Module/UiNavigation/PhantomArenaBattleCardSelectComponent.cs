@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A7 RID: 18855
+	// Token: 0x02003921 RID: 14625
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleCardSelectComponent : PhantomArenaBattleComponentBase
 	{
-		// Token: 0x0603116C RID: 201068 RVA: 0x00B6415C File Offset: 0x00B6235C
+		// Token: 0x06025CA2 RID: 154786 RVA: 0x00A9F0AC File Offset: 0x00A9D2AC
 		public PhantomArenaBattleCardSelectComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603116D RID: 201069 RVA: 0x00B64168 File Offset: 0x00B62368
+		// Token: 0x06025CA3 RID: 154787 RVA: 0x00A9F0B8 File Offset: 0x00A9D2B8
 		protected override void OnPress(HotKeyMap _)
 		{
 			if (base.Proxy == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603116E RID: 201070 RVA: 0x00B641E4 File Offset: 0x00B623E4
+		// Token: 0x06025CA4 RID: 154788 RVA: 0x00A9F134 File Offset: 0x00A9D334
 		private UniTask PutDownCardToFunctional()
 		{
 			PhantomArenaBattleCardSelectComponent.<PutDownCardToFunctional>d__2 <PutDownCardToFunctional>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <PutDownCardToFunctional>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603116F RID: 201071 RVA: 0x00B64228 File Offset: 0x00B62428
+		// Token: 0x06025CA5 RID: 154789 RVA: 0x00A9F178 File Offset: 0x00A9D378
 		private UniTask SelectHandCard(NavigationSelectableBase navigationComponent)
 		{
 			PhantomArenaBattleCardSelectComponent.<SelectHandCard>d__3 <SelectHandCard>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <SelectHandCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031170 RID: 201072 RVA: 0x00B64274 File Offset: 0x00B62474
+		// Token: 0x06025CA6 RID: 154790 RVA: 0x00A9F1C4 File Offset: 0x00A9D3C4
 		private UniTask SelectBattleCard(NavigationSelectableBase navigationComponent)
 		{
 			PhantomArenaBattleCardSelectComponent.<SelectBattleCard>d__4 <SelectBattleCard>d__;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <SelectBattleCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031171 RID: 201073 RVA: 0x00B642B8 File Offset: 0x00B624B8
+		// Token: 0x06025CA7 RID: 154791 RVA: 0x00A9F208 File Offset: 0x00A9D408
 		[NullableContext(2)]
 		private TsUiNavigationBehaviorListener GetOwnBattleSlotListenerByIndex(int index)
 		{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list[index];
 		}
 
-		// Token: 0x06031172 RID: 201074 RVA: 0x00B64350 File Offset: 0x00B62550
+		// Token: 0x06025CA8 RID: 154792 RVA: 0x00A9F2A0 File Offset: 0x00A9D4A0
 		[NullableContext(2)]
 		private TsUiNavigationBehaviorListener GetOwnHandCardListenerByIndex(int index)
 		{

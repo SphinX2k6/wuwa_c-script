@@ -5,29 +5,29 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02000F14 RID: 3860
+// Token: 0x020003C9 RID: 969
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementGroupData
 {
-	// Token: 0x17000796 RID: 1942
-	// (get) Token: 0x06006177 RID: 24951 RVA: 0x0013009C File Offset: 0x0012E29C
-	// (set) Token: 0x06006178 RID: 24952 RVA: 0x001300A4 File Offset: 0x0012E2A4
+	// Token: 0x170007B8 RID: 1976
+	// (get) Token: 0x0600350F RID: 13583 RVA: 0x001389C0 File Offset: 0x00136BC0
+	// (set) Token: 0x06003510 RID: 13584 RVA: 0x001389C8 File Offset: 0x00136BC8
 	public long UUID { get; set; }
 
-	// Token: 0x06006179 RID: 24953 RVA: 0x001300AD File Offset: 0x0012E2AD
+	// Token: 0x06003511 RID: 13585 RVA: 0x001389D1 File Offset: 0x00136BD1
 	public void OnSetUUID(long uuid)
 	{
 		this.Id = (int)this.UUID;
 	}
 
-	// Token: 0x0600617A RID: 24954 RVA: 0x001300BC File Offset: 0x0012E2BC
+	// Token: 0x06003512 RID: 13586 RVA: 0x001389E0 File Offset: 0x00136BE0
 	public AchievementGroupData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x0600617B RID: 24955 RVA: 0x001300EF File Offset: 0x0012E2EF
+	// Token: 0x06003513 RID: 13587 RVA: 0x00138A13 File Offset: 0x00136C13
 	public void Phrase(AchievementGroupEntry message)
 	{
 		this.HasGetRewardState = new bool?(message.IsReceive);
@@ -35,67 +35,67 @@ public class AchievementGroupData
 		this.IfUnLock = true;
 	}
 
-	// Token: 0x0600617C RID: 24956 RVA: 0x0013011B File Offset: 0x0012E31B
+	// Token: 0x06003514 RID: 13588 RVA: 0x00138A3F File Offset: 0x00136C3F
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x0600617D RID: 24957 RVA: 0x00130123 File Offset: 0x0012E323
+	// Token: 0x06003515 RID: 13589 RVA: 0x00138A47 File Offset: 0x00136C47
 	public int GetSort()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupSort(this.Id);
 	}
 
-	// Token: 0x0600617E RID: 24958 RVA: 0x00130135 File Offset: 0x0012E335
+	// Token: 0x06003516 RID: 13590 RVA: 0x00138A59 File Offset: 0x00136C59
 	public string GetTitle()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupTitle(this.Id);
 	}
 
-	// Token: 0x0600617F RID: 24959 RVA: 0x00130147 File Offset: 0x0012E347
+	// Token: 0x06003517 RID: 13591 RVA: 0x00138A6B File Offset: 0x00136C6B
 	public string GetTitleId()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupTitleId(this.Id);
 	}
 
-	// Token: 0x06006180 RID: 24960 RVA: 0x00130159 File Offset: 0x0012E359
+	// Token: 0x06003518 RID: 13592 RVA: 0x00138A7D File Offset: 0x00136C7D
 	public string GetTexture()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupIcon(this.Id);
 	}
 
-	// Token: 0x06006181 RID: 24961 RVA: 0x0013016B File Offset: 0x0012E36B
+	// Token: 0x06003519 RID: 13593 RVA: 0x00138A8F File Offset: 0x00136C8F
 	public string GetSmallIcon()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupSmallIcon(this.Id);
 	}
 
-	// Token: 0x06006182 RID: 24962 RVA: 0x0013017D File Offset: 0x0012E37D
+	// Token: 0x0600351A RID: 13594 RVA: 0x00138AA1 File Offset: 0x00136CA1
 	public string GetBackgroundIcon()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupBackgroundIcon(this.Id);
 	}
 
-	// Token: 0x06006183 RID: 24963 RVA: 0x0013018F File Offset: 0x0012E38F
+	// Token: 0x0600351B RID: 13595 RVA: 0x00138AB3 File Offset: 0x00136CB3
 	public int GetCategory()
 	{
 		return AchievementConfig.Instance.GetAchievementGroupCategory(this.Id);
 	}
 
-	// Token: 0x06006184 RID: 24964 RVA: 0x001301A1 File Offset: 0x0012E3A1
+	// Token: 0x0600351C RID: 13596 RVA: 0x00138AC5 File Offset: 0x00136CC5
 	public long? GetFinishTime()
 	{
 		return this.FinishTime;
 	}
 
-	// Token: 0x06006185 RID: 24965 RVA: 0x001301A9 File Offset: 0x0012E3A9
+	// Token: 0x0600351D RID: 13597 RVA: 0x00138ACD File Offset: 0x00136CCD
 	public bool GetShowState()
 	{
 		return this.IfUnLock && AchievementConfig.Instance.GetAchievementGroupEnable(this.Id);
 	}
 
-	// Token: 0x06006186 RID: 24966 RVA: 0x001301CC File Offset: 0x0012E3CC
+	// Token: 0x0600351E RID: 13598 RVA: 0x00138AF0 File Offset: 0x00136CF0
 	public List<TItem> GetRewards()
 	{
 		if (!this.RewardInitState)
@@ -119,19 +119,19 @@ public class AchievementGroupData
 		return this.Rewards;
 	}
 
-	// Token: 0x06006187 RID: 24967 RVA: 0x00130286 File Offset: 0x0012E486
+	// Token: 0x0600351F RID: 13599 RVA: 0x00138BAA File Offset: 0x00136DAA
 	public bool SmallItemRedPoint()
 	{
 		return this.RedPoint() || AchievementModel.Instance.GetGroupAchievementsIsRedDot(this.Id);
 	}
 
-	// Token: 0x06006188 RID: 24968 RVA: 0x001302A2 File Offset: 0x0012E4A2
+	// Token: 0x06003520 RID: 13600 RVA: 0x00138BC6 File Offset: 0x00136DC6
 	public bool RedPoint()
 	{
 		return this.GetFinishState() == EAchievementStateEnum.CanGetReward && this.GetShowState() && this.GetRewards().Count > 0;
 	}
 
-	// Token: 0x06006189 RID: 24969 RVA: 0x001302CC File Offset: 0x0012E4CC
+	// Token: 0x06003521 RID: 13601 RVA: 0x00138BF0 File Offset: 0x00136DF0
 	public int GetCurrentProgress()
 	{
 		List<AchievementData> groupAchievements = AchievementModel.Instance.GetGroupAchievements(this.Id, true);
@@ -149,7 +149,7 @@ public class AchievementGroupData
 		return num;
 	}
 
-	// Token: 0x0600618A RID: 24970 RVA: 0x00130330 File Offset: 0x0012E530
+	// Token: 0x06003522 RID: 13602 RVA: 0x00138C54 File Offset: 0x00136E54
 	public int GetMaxProgress()
 	{
 		List<AchievementData> groupAchievements = AchievementModel.Instance.GetGroupAchievements(this.Id, true);
@@ -167,7 +167,7 @@ public class AchievementGroupData
 		return num;
 	}
 
-	// Token: 0x0600618B RID: 24971 RVA: 0x00130394 File Offset: 0x0012E594
+	// Token: 0x06003523 RID: 13603 RVA: 0x00138CB8 File Offset: 0x00136EB8
 	public EAchievementStateEnum GetFinishState()
 	{
 		if (this.HasGetRewardState.GetValueOrDefault())
@@ -183,7 +183,7 @@ public class AchievementGroupData
 		return EAchievementStateEnum.UnFinished;
 	}
 
-	// Token: 0x0600618C RID: 24972 RVA: 0x001303D4 File Offset: 0x0012E5D4
+	// Token: 0x06003524 RID: 13604 RVA: 0x00138CF8 File Offset: 0x00136EF8
 	public string GetAchievementGroupProgress()
 	{
 		int num = 0;
@@ -211,21 +211,21 @@ public class AchievementGroupData
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x04002C51 RID: 11345
+	// Token: 0x04002CEA RID: 11498
 	private bool? HasGetRewardState = new bool?(false);
 
-	// Token: 0x04002C52 RID: 11346
+	// Token: 0x04002CEB RID: 11499
 	private long? FinishTime = new long?(0L);
 
-	// Token: 0x04002C53 RID: 11347
+	// Token: 0x04002CEC RID: 11500
 	private List<TItem> Rewards = new List<TItem>();
 
-	// Token: 0x04002C54 RID: 11348
+	// Token: 0x04002CED RID: 11501
 	private bool RewardInitState;
 
-	// Token: 0x04002C55 RID: 11349
+	// Token: 0x04002CEE RID: 11502
 	private bool IfUnLock;
 
-	// Token: 0x04002C56 RID: 11350
+	// Token: 0x04002CEF RID: 11503
 	private int Id;
 }

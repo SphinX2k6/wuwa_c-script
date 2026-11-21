@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200115E RID: 4446
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200128E RID: 4750
 	public class ISurvivorsRougeConditionStepPrepare : ISurvivorsRougeConditionStepBase
 	{
-		// Token: 0x060064F2 RID: 25842 RVA: 0x000F2620 File Offset: 0x000F0820
+		// Token: 0x06006AF9 RID: 27385 RVA: 0x000FF8E4 File Offset: 0x000FDAE4
 		private ISurvivorsRougeConditionStepPrepare_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060064F3 RID: 25843 RVA: 0x000F2658 File Offset: 0x000F0858
+		// Token: 0x06006AFA RID: 27386 RVA: 0x000FF91C File Offset: 0x000FDB1C
 		public static ISurvivorsRougeConditionStepPrepare Create([Nullable(2)] ISurvivorsRougeConditionStepPrepare instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060064F4 RID: 25844 RVA: 0x000F266B File Offset: 0x000F086B
+		// Token: 0x06006AFB RID: 27387 RVA: 0x000FF92F File Offset: 0x000FDB2F
 		public static ISurvivorsRougeConditionStepPrepare CreateFromSetValue([Nullable(2)] ISurvivorsRougeConditionStepPrepare_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060064F5 RID: 25845 RVA: 0x000F267E File Offset: 0x000F087E
+		// Token: 0x06006AFC RID: 27388 RVA: 0x000FF942 File Offset: 0x000FDB42
 		public new ISurvivorsRougeConditionStepPrepare_SetValue ToSetValue()
 		{
 			return new ISurvivorsRougeConditionStepPrepare_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020F1 RID: 8433
-		// (get) Token: 0x060064F6 RID: 25846 RVA: 0x000F2691 File Offset: 0x000F0891
-		// (set) Token: 0x060064F7 RID: 25847 RVA: 0x000F26BC File Offset: 0x000F08BC
+		// Token: 0x170022A7 RID: 8871
+		// (get) Token: 0x06006AFD RID: 27389 RVA: 0x000FF955 File Offset: 0x000FDB55
+		// (set) Token: 0x06006AFE RID: 27390 RVA: 0x000FF980 File Offset: 0x000FDB80
 		public override ESurvivorsRougeConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C94 RID: 15508
+		// Token: 0x04003FE7 RID: 16359
 		[Nullable(2)]
 		protected new ISurvivorsRougeConditionStepPrepare FbInstance;
 
-		// Token: 0x04003C95 RID: 15509
+		// Token: 0x04003FE8 RID: 16360
 		[Nullable(2)]
 		protected new ISurvivorsRougeConditionStepPrepare_SetValue PocoInterface;
 	}

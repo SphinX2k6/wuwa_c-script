@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001295 RID: 4757
+	// Token: 0x020013D7 RID: 5079
 	public class EStatisticsEventTypeJsonConverter : JsonConverter<EStatisticsEventType>
 	{
-		// Token: 0x06006B47 RID: 27463 RVA: 0x001019DC File Offset: 0x000FFBDC
+		// Token: 0x060071A3 RID: 29091 RVA: 0x0010F7B4 File Offset: 0x0010D9B4
 		public override EStatisticsEventType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EStatisticsEventTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B48 RID: 27464 RVA: 0x00101A00 File Offset: 0x000FFC00
+		// Token: 0x060071A4 RID: 29092 RVA: 0x0010F7D8 File Offset: 0x0010D9D8
 		public override void Write(Utf8JsonWriter writer, EStatisticsEventType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

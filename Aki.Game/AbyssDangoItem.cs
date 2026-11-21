@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
@@ -10,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A23 RID: 6691
+// Token: 0x02000EE2 RID: 3810
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -19,7 +18,7 @@ using UnrealEngine;
 })]
 public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 {
-	// Token: 0x0600C4E0 RID: 50400 RVA: 0x002CA6CC File Offset: 0x002C88CC
+	// Token: 0x060098F0 RID: 39152 RVA: 0x002D57E4 File Offset: 0x002D39E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +39,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		};
 	}
 
-	// Token: 0x0600C4E1 RID: 50401 RVA: 0x002CA7D0 File Offset: 0x002C89D0
+	// Token: 0x060098F1 RID: 39153 RVA: 0x002D58E8 File Offset: 0x002D3AE8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AbyssDangoItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -50,13 +49,13 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C4E2 RID: 50402 RVA: 0x002CA80B File Offset: 0x002C8A0B
+	// Token: 0x060098F2 RID: 39154 RVA: 0x002D5923 File Offset: 0x002D3B23
 	private void OnSelectToggleClick(EToggleState toggleState)
 	{
 		this.CurrentData.OnSelectCallBack(this.CurrentData);
 	}
 
-	// Token: 0x0600C4E3 RID: 50403 RVA: 0x002CA823 File Offset: 0x002C8A23
+	// Token: 0x060098F3 RID: 39155 RVA: 0x002D593B File Offset: 0x002D3B3B
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RedDotBindState)
@@ -65,7 +64,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		}
 	}
 
-	// Token: 0x0600C4E4 RID: 50404 RVA: 0x002CA844 File Offset: 0x002C8A44
+	// Token: 0x060098F4 RID: 39156 RVA: 0x002D595C File Offset: 0x002D3B5C
 	public override void Refresh(AbyssDangoItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -85,7 +84,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		}
 	}
 
-	// Token: 0x0600C4E5 RID: 50405 RVA: 0x002CA8D4 File Offset: 0x002C8AD4
+	// Token: 0x060098F5 RID: 39157 RVA: 0x002D59EC File Offset: 0x002D3BEC
 	private void RefreshLikeItem(AbyssDangoItemData data)
 	{
 		InstanceDungeon? dungeonConfig = BattleTeamModel.Instance.Context.GetDungeonConfig();
@@ -103,7 +102,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 			int id = dungeonConfig.Value.Id;
 			if (num.GetValueOrDefault() == id & num != null)
 			{
-				bool uiactive = config.Value.RecommendLittleRole().Contains(data.DangoId);
+				bool uiactive = Array.IndexOf<int>(config.Value.RecommendLittleRole(), data.DangoId) >= 0;
 				UUIItem item = base.GetItem(7);
 				if (item == null)
 				{
@@ -125,7 +124,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600C4E6 RID: 50406 RVA: 0x002CA9C4 File Offset: 0x002C8BC4
+	// Token: 0x060098F6 RID: 39158 RVA: 0x002D5AE4 File Offset: 0x002D3CE4
 	private void RefreshToggleState(AbyssDangoItemData data)
 	{
 		EToggleState state = data.SelectState ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -137,13 +136,13 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600C4E7 RID: 50407 RVA: 0x002CA9F4 File Offset: 0x002C8BF4
+	// Token: 0x060098F7 RID: 39159 RVA: 0x002D5B14 File Offset: 0x002D3D14
 	private void RefreshQualitySprite(AbyssDangoItemData data)
 	{
 		this.RefreshQualitySpriteAsync(data);
 	}
 
-	// Token: 0x0600C4E8 RID: 50408 RVA: 0x002CAA00 File Offset: 0x002C8C00
+	// Token: 0x060098F8 RID: 39160 RVA: 0x002D5B20 File Offset: 0x002D3D20
 	private void RefreshQualitySpriteAsync(AbyssDangoItemData data)
 	{
 		AbyssDangoItem.<>c__DisplayClass13_0 CS$<>8__locals1 = new AbyssDangoItem.<>c__DisplayClass13_0();
@@ -161,14 +160,14 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0600C4E9 RID: 50409 RVA: 0x002CAA44 File Offset: 0x002C8C44
+	// Token: 0x060098F9 RID: 39161 RVA: 0x002D5B64 File Offset: 0x002D3D64
 	private void RefreshAvatarTexture(AbyssDangoItemData data)
 	{
 		string formationIcon = DangoAbyssModel.Instance.GetDangoAbyssRoleData(data.DangoId).GetFormationIcon();
 		base.SetTextureByPath(formationIcon, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0600C4EA RID: 50410 RVA: 0x002CAA80 File Offset: 0x002C8C80
+	// Token: 0x060098FA RID: 39162 RVA: 0x002D5BA0 File Offset: 0x002D3DA0
 	private void RefreshLevelText(AbyssDangoItemData data)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = DangoAbyssModel.Instance.GetDangoAbyssRoleData(data.DangoId);
@@ -182,7 +181,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		item.SetUIActive(!dangoAbyssRoleData.GetIfLock());
 	}
 
-	// Token: 0x0600C4EB RID: 50411 RVA: 0x002CAAE4 File Offset: 0x002C8CE4
+	// Token: 0x060098FB RID: 39163 RVA: 0x002D5C04 File Offset: 0x002D3E04
 	private void RefreshBelongTexture(AbyssDangoItemData data)
 	{
 		int playerId = data.PlayerId;
@@ -204,7 +203,7 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		texture2.SetUIActive(false);
 	}
 
-	// Token: 0x0600C4EC RID: 50412 RVA: 0x002CAB74 File Offset: 0x002C8D74
+	// Token: 0x060098FC RID: 39164 RVA: 0x002D5C94 File Offset: 0x002D3E94
 	private void RefreshLockItem(AbyssDangoItemData data)
 	{
 		bool ifLock = DangoAbyssModel.Instance.GetDangoAbyssRoleData(data.DangoId).GetIfLock();
@@ -216,41 +215,41 @@ public class AbyssDangoItem : GridProxyAbstract<AbyssDangoItemData>
 		item.SetUIActive(ifLock);
 	}
 
-	// Token: 0x04005AC4 RID: 23236
+	// Token: 0x04005B93 RID: 23443
 	private AbyssDangoItemData CurrentData = new AbyssDangoItemData();
 
-	// Token: 0x04005AC5 RID: 23237
+	// Token: 0x04005B94 RID: 23444
 	[Nullable(2)]
 	private AbyssDangoCircleQualityItem DangoCircleQualityItem;
 
-	// Token: 0x04005AC6 RID: 23238
+	// Token: 0x04005B95 RID: 23445
 	[Nullable(2)]
 	private CustomPromise QualityItemPromise;
 
-	// Token: 0x04005AC7 RID: 23239
+	// Token: 0x04005B96 RID: 23446
 	private bool RedDotBindState;
 
-	// Token: 0x02007F68 RID: 32616
+	// Token: 0x020070F7 RID: 28919
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029981 RID: 170369
+		// Token: 0x04024CBE RID: 150718
 		QualityItem,
-		// Token: 0x04029982 RID: 170370
+		// Token: 0x04024CBF RID: 150719
 		AvatarTexture,
-		// Token: 0x04029983 RID: 170371
+		// Token: 0x04024CC0 RID: 150720
 		BelongTexture,
-		// Token: 0x04029984 RID: 170372
+		// Token: 0x04024CC1 RID: 150721
 		AddCountItem,
-		// Token: 0x04029985 RID: 170373
+		// Token: 0x04024CC2 RID: 150722
 		LevelText,
-		// Token: 0x04029986 RID: 170374
+		// Token: 0x04024CC3 RID: 150723
 		LockItem,
-		// Token: 0x04029987 RID: 170375
+		// Token: 0x04024CC4 RID: 150724
 		SelectToggle,
-		// Token: 0x04029988 RID: 170376
+		// Token: 0x04024CC5 RID: 150725
 		LikeItem,
-		// Token: 0x04029989 RID: 170377
+		// Token: 0x04024CC6 RID: 150726
 		RedDot
 	}
 }

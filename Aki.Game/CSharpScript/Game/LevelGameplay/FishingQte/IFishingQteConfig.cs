@@ -1,102 +1,101 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Aki.Config;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E2D RID: 28205
+	// Token: 0x02005FAD RID: 24493
 	[NullableContext(1)]
 	public interface IFishingQteConfig
 	{
-		// Token: 0x17009A01 RID: 39425
-		// (get) Token: 0x06044BDB RID: 281563
-		// (set) Token: 0x06044BDC RID: 281564
+		// Token: 0x17006F04 RID: 28420
+		// (get) Token: 0x0603AD44 RID: 240964
+		// (set) Token: 0x0603AD45 RID: 240965
 		int Id { get; set; }
 
-		// Token: 0x17009A02 RID: 39426
-		// (get) Token: 0x06044BDD RID: 281565
-		// (set) Token: 0x06044BDE RID: 281566
+		// Token: 0x17006F05 RID: 28421
+		// (get) Token: 0x0603AD46 RID: 240966
+		// (set) Token: 0x0603AD47 RID: 240967
 		List<int> RandomArea { get; set; }
 
-		// Token: 0x17009A03 RID: 39427
-		// (get) Token: 0x06044BDF RID: 281567
-		// (set) Token: 0x06044BE0 RID: 281568
-		IntArray[] InvalidArea { get; set; }
+		// Token: 0x17006F06 RID: 28422
+		// (get) Token: 0x0603AD48 RID: 240968
+		// (set) Token: 0x0603AD49 RID: 240969
+		List<List<int>> InvalidArea { get; set; }
 
-		// Token: 0x17009A04 RID: 39428
-		// (get) Token: 0x06044BE1 RID: 281569
-		// (set) Token: 0x06044BE2 RID: 281570
+		// Token: 0x17006F07 RID: 28423
+		// (get) Token: 0x0603AD4A RID: 240970
+		// (set) Token: 0x0603AD4B RID: 240971
 		int MaxScore { get; set; }
 
-		// Token: 0x17009A05 RID: 39429
-		// (get) Token: 0x06044BE3 RID: 281571
-		// (set) Token: 0x06044BE4 RID: 281572
+		// Token: 0x17006F08 RID: 28424
+		// (get) Token: 0x0603AD4C RID: 240972
+		// (set) Token: 0x0603AD4D RID: 240973
 		int HitAreaScore { get; set; }
 
-		// Token: 0x17009A06 RID: 39430
-		// (get) Token: 0x06044BE5 RID: 281573
-		// (set) Token: 0x06044BE6 RID: 281574
+		// Token: 0x17006F09 RID: 28425
+		// (get) Token: 0x0603AD4E RID: 240974
+		// (set) Token: 0x0603AD4F RID: 240975
 		int PerfectSize { get; set; }
 
-		// Token: 0x17009A07 RID: 39431
-		// (get) Token: 0x06044BE7 RID: 281575
-		// (set) Token: 0x06044BE8 RID: 281576
+		// Token: 0x17006F0A RID: 28426
+		// (get) Token: 0x0603AD50 RID: 240976
+		// (set) Token: 0x0603AD51 RID: 240977
 		Dictionary<int, int> PerfectAppearRate { get; set; }
 
-		// Token: 0x17009A08 RID: 39432
-		// (get) Token: 0x06044BE9 RID: 281577
-		// (set) Token: 0x06044BEA RID: 281578
+		// Token: 0x17006F0B RID: 28427
+		// (get) Token: 0x0603AD52 RID: 240978
+		// (set) Token: 0x0603AD53 RID: 240979
 		int PerfectScore { get; set; }
 
-		// Token: 0x17009A09 RID: 39433
-		// (get) Token: 0x06044BEB RID: 281579
-		// (set) Token: 0x06044BEC RID: 281580
+		// Token: 0x17006F0C RID: 28428
+		// (get) Token: 0x0603AD54 RID: 240980
+		// (set) Token: 0x0603AD55 RID: 240981
 		Dictionary<int, int> CursorSpeed { get; set; }
 
-		// Token: 0x17009A0A RID: 39434
-		// (get) Token: 0x06044BED RID: 281581
-		// (set) Token: 0x06044BEE RID: 281582
+		// Token: 0x17006F0D RID: 28429
+		// (get) Token: 0x0603AD56 RID: 240982
+		// (set) Token: 0x0603AD57 RID: 240983
 		int HitColdTime { get; set; }
 
-		// Token: 0x17009A0B RID: 39435
-		// (get) Token: 0x06044BEF RID: 281583
-		// (set) Token: 0x06044BF0 RID: 281584
+		// Token: 0x17006F0E RID: 28430
+		// (get) Token: 0x0603AD58 RID: 240984
+		// (set) Token: 0x0603AD59 RID: 240985
 		int ScoreUp { get; set; }
 
-		// Token: 0x17009A0C RID: 39436
-		// (get) Token: 0x06044BF1 RID: 281585
-		// (set) Token: 0x06044BF2 RID: 281586
+		// Token: 0x17006F0F RID: 28431
+		// (get) Token: 0x0603AD5A RID: 240986
+		// (set) Token: 0x0603AD5B RID: 240987
 		int MultiBoxGroup { get; set; }
 
-		// Token: 0x17009A0D RID: 39437
-		// (get) Token: 0x06044BF3 RID: 281587
-		// (set) Token: 0x06044BF4 RID: 281588
+		// Token: 0x17006F10 RID: 28432
+		// (get) Token: 0x0603AD5C RID: 240988
+		// (set) Token: 0x0603AD5D RID: 240989
 		List<float> HiddenInterval { get; set; }
 
-		// Token: 0x17009A0E RID: 39438
-		// (get) Token: 0x06044BF5 RID: 281589
-		// (set) Token: 0x06044BF6 RID: 281590
+		// Token: 0x17006F11 RID: 28433
+		// (get) Token: 0x0603AD5E RID: 240990
+		// (set) Token: 0x0603AD5F RID: 240991
 		Dictionary<int, int> RouletteRotateSpeed { get; set; }
 
-		// Token: 0x17009A0F RID: 39439
-		// (get) Token: 0x06044BF7 RID: 281591
-		// (set) Token: 0x06044BF8 RID: 281592
+		// Token: 0x17006F12 RID: 28434
+		// (get) Token: 0x0603AD60 RID: 240992
+		// (set) Token: 0x0603AD61 RID: 240993
 		int MistakeScore { get; set; }
 
-		// Token: 0x17009A10 RID: 39440
-		// (get) Token: 0x06044BF9 RID: 281593
-		// (set) Token: 0x06044BFA RID: 281594
+		// Token: 0x17006F13 RID: 28435
+		// (get) Token: 0x0603AD62 RID: 240994
+		// (set) Token: 0x0603AD63 RID: 240995
 		bool IsAnticlockwise { get; set; }
 
-		// Token: 0x17009A11 RID: 39441
-		// (get) Token: 0x06044BFB RID: 281595
-		// (set) Token: 0x06044BFC RID: 281596
+		// Token: 0x17006F14 RID: 28436
+		// (get) Token: 0x0603AD64 RID: 240996
+		// (set) Token: 0x0603AD65 RID: 240997
 		string Comment { get; set; }
 
-		// Token: 0x17009A12 RID: 39442
-		// (get) Token: 0x06044BFD RID: 281597
-		// (set) Token: 0x06044BFE RID: 281598
+		// Token: 0x17006F15 RID: 28437
+		// (get) Token: 0x0603AD66 RID: 240998
+		// (set) Token: 0x0603AD67 RID: 240999
 		int RefreshType { get; set; }
 	}
 }

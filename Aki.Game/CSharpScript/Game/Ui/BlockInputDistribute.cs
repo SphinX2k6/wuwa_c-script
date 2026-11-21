@@ -12,10 +12,10 @@ using CSharpScript.Game.World.Model;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004680 RID: 18048
+	// Token: 0x020035B1 RID: 13745
 	public class BlockInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E97A RID: 190842 RVA: 0x00AC94E4 File Offset: 0x00AC76E4
+		// Token: 0x060230C4 RID: 143556 RVA: 0x009F7218 File Offset: 0x009F5418
 		public override bool OnRefresh()
 		{
 			if (this.IsInSeamlessTravel())
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E97B RID: 190843 RVA: 0x00AC9A03 File Offset: 0x00AC7C03
+		// Token: 0x060230C5 RID: 143557 RVA: 0x009F7737 File Offset: 0x009F5937
 		private bool IsInSeamlessTravel()
 		{
 			if (!SeamlessTravelModel.Instance.IsSeamlessTravel)
@@ -200,43 +200,43 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E97C RID: 190844 RVA: 0x00AC9A28 File Offset: 0x00AC7C28
+		// Token: 0x060230C6 RID: 143558 RVA: 0x009F775C File Offset: 0x009F595C
 		private bool IsLoading()
 		{
 			return LoadingModel.Instance.IsLoading;
 		}
 
-		// Token: 0x0602E97D RID: 190845 RVA: 0x00AC9A34 File Offset: 0x00AC7C34
+		// Token: 0x060230C7 RID: 143559 RVA: 0x009F7768 File Offset: 0x009F5968
 		private bool IsKick()
 		{
 			return ReConnectModel.Instance.GetReConnectStatus() == EReConnectStatus.ReConnectDoing;
 		}
 
-		// Token: 0x0602E97E RID: 190846 RVA: 0x00AC9A43 File Offset: 0x00AC7C43
+		// Token: 0x060230C8 RID: 143560 RVA: 0x009F7777 File Offset: 0x009F5977
 		private bool IsSdkGetFocus()
 		{
 			return KuroSdkModel.Instance.GetSdkFocusState();
 		}
 
-		// Token: 0x0602E97F RID: 190847 RVA: 0x00AC9A4F File Offset: 0x00AC7C4F
+		// Token: 0x060230C9 RID: 143561 RVA: 0x009F7783 File Offset: 0x009F5983
 		private bool IsInVideoView()
 		{
 			return UiManager.Instance.IsViewOpen(EUiViewName.VideoView);
 		}
 
-		// Token: 0x0602E980 RID: 190848 RVA: 0x00AC9A60 File Offset: 0x00AC7C60
+		// Token: 0x060230CA RID: 143562 RVA: 0x009F7794 File Offset: 0x009F5994
 		private bool IsInBlackScreen()
 		{
 			return BlackScreenFadeController.Instance.NeedInputDis;
 		}
 
-		// Token: 0x0602E981 RID: 190849 RVA: 0x00AC9A6C File Offset: 0x00AC7C6C
+		// Token: 0x060230CB RID: 143563 RVA: 0x009F77A0 File Offset: 0x009F59A0
 		private bool IsInBattleSettlement()
 		{
 			return BattleUiModel.Instance.IsInBattleSettlement;
 		}
 
-		// Token: 0x0602E982 RID: 190850 RVA: 0x00AC9A78 File Offset: 0x00AC7C78
+		// Token: 0x060230CC RID: 143564 RVA: 0x009F77AC File Offset: 0x009F59AC
 		private bool IsInWaterfallMove()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -256,14 +256,14 @@ namespace CSharpScript.Game.Ui
 			return obj2 != null && obj2.IsWaterfallMove;
 		}
 
-		// Token: 0x0602E983 RID: 190851 RVA: 0x00AC9ACA File Offset: 0x00AC7CCA
+		// Token: 0x060230CD RID: 143565 RVA: 0x009F77FE File Offset: 0x009F59FE
 		private bool IsInLinkExplosion()
 		{
 			BattleLinkController instance = BattleLinkController.Instance;
 			return instance != null && instance.GetIsInLinkExplosion();
 		}
 
-		// Token: 0x0602E984 RID: 190852 RVA: 0x00AC9ADC File Offset: 0x00AC7CDC
+		// Token: 0x060230CE RID: 143566 RVA: 0x009F7810 File Offset: 0x009F5A10
 		private bool IsTransitionPopupBlock()
 		{
 			TransitionPopupView transitionPopupView = UiManager.Instance.GetViewByName(EUiViewName.TransitionPopupView) as TransitionPopupView;

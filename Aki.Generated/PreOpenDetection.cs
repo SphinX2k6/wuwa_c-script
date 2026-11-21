@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F59 RID: 3929
+	// Token: 0x0200103E RID: 4158
 	public struct PreOpenDetection : IFlatbufferObject
 	{
-		// Token: 0x17002AEB RID: 10987
-		// (get) Token: 0x0600B33F RID: 45887 RVA: 0x002CB130 File Offset: 0x002C9330
+		// Token: 0x17002B51 RID: 11089
+		// (get) Token: 0x0600B960 RID: 47456 RVA: 0x002E797C File Offset: 0x002E5B7C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B340 RID: 45888 RVA: 0x002CB13D File Offset: 0x002C933D
+		// Token: 0x0600B961 RID: 47457 RVA: 0x002E7989 File Offset: 0x002E5B89
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B341 RID: 45889 RVA: 0x002CB144 File Offset: 0x002C9344
+		// Token: 0x0600B962 RID: 47458 RVA: 0x002E7990 File Offset: 0x002E5B90
 		public static PreOpenDetection GetRootAsPreOpenDetection(ByteBuffer _bb)
 		{
 			return PreOpenDetection.GetRootAsPreOpenDetection(_bb, default(PreOpenDetection));
 		}
 
-		// Token: 0x0600B342 RID: 45890 RVA: 0x002CB160 File Offset: 0x002C9360
+		// Token: 0x0600B963 RID: 47459 RVA: 0x002E79AC File Offset: 0x002E5BAC
 		public static PreOpenDetection GetRootAsPreOpenDetection(ByteBuffer _bb, PreOpenDetection obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B343 RID: 45891 RVA: 0x002CB17D File Offset: 0x002C937D
+		// Token: 0x0600B964 RID: 47460 RVA: 0x002E79C9 File Offset: 0x002E5BC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B344 RID: 45892 RVA: 0x002CB18C File Offset: 0x002C938C
+		// Token: 0x0600B965 RID: 47461 RVA: 0x002E79D8 File Offset: 0x002E5BD8
 		public PreOpenDetection __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002AEC RID: 10988
-		// (get) Token: 0x0600B345 RID: 45893 RVA: 0x002CB19C File Offset: 0x002C939C
+		// Token: 0x17002B52 RID: 11090
+		// (get) Token: 0x0600B966 RID: 47462 RVA: 0x002E79E8 File Offset: 0x002E5BE8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AED RID: 10989
-		// (get) Token: 0x0600B346 RID: 45894 RVA: 0x002CB1D8 File Offset: 0x002C93D8
+		// Token: 0x17002B53 RID: 11091
+		// (get) Token: 0x0600B967 RID: 47463 RVA: 0x002E7A24 File Offset: 0x002E5C24
 		public int SoundAreaType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AEE RID: 10990
-		// (get) Token: 0x0600B347 RID: 45895 RVA: 0x002CB214 File Offset: 0x002C9414
+		// Token: 0x17002B54 RID: 11092
+		// (get) Token: 0x0600B968 RID: 47464 RVA: 0x002E7A60 File Offset: 0x002E5C60
 		public int PlayType
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B348 RID: 45896 RVA: 0x002CB250 File Offset: 0x002C9450
+		// Token: 0x0600B969 RID: 47465 RVA: 0x002E7A9C File Offset: 0x002E5C9C
 		public int PlayTypeArray(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002AEF RID: 10991
-		// (get) Token: 0x0600B349 RID: 45897 RVA: 0x002CB290 File Offset: 0x002C9490
+		// Token: 0x17002B55 RID: 11093
+		// (get) Token: 0x0600B96A RID: 47466 RVA: 0x002E7ADC File Offset: 0x002E5CDC
 		public int PlayTypeArrayLength
 		{
 			get
@@ -120,20 +120,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B34A RID: 45898 RVA: 0x002CB2BC File Offset: 0x002C94BC
+		// Token: 0x0600B96B RID: 47467 RVA: 0x002E7B08 File Offset: 0x002E5D08
 		public Span<int> GetPlayTypeArrayBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600B34B RID: 45899 RVA: 0x002CB2CC File Offset: 0x002C94CC
+		// Token: 0x0600B96C RID: 47468 RVA: 0x002E7B18 File Offset: 0x002E5D18
 		public int[] GetPlayTypeArrayArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002AF0 RID: 10992
-		// (get) Token: 0x0600B34C RID: 45900 RVA: 0x002CB2E4 File Offset: 0x002C94E4
+		// Token: 0x17002B56 RID: 11094
+		// (get) Token: 0x0600B96D RID: 47469 RVA: 0x002E7B30 File Offset: 0x002E5D30
 		public int DetectionId
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AF1 RID: 10993
-		// (get) Token: 0x0600B34D RID: 45901 RVA: 0x002CB324 File Offset: 0x002C9524
+		// Token: 0x17002B57 RID: 11095
+		// (get) Token: 0x0600B96E RID: 47470 RVA: 0x002E7B70 File Offset: 0x002E5D70
 		public int ConditionGroup
 		{
 			get
@@ -162,8 +162,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AF2 RID: 10994
-		// (get) Token: 0x0600B34E RID: 45902 RVA: 0x002CB364 File Offset: 0x002C9564
+		// Token: 0x17002B58 RID: 11096
+		// (get) Token: 0x0600B96F RID: 47471 RVA: 0x002E7BB0 File Offset: 0x002E5DB0
 		public int TeleportEntityId
 		{
 			get
@@ -177,8 +177,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AF3 RID: 10995
-		// (get) Token: 0x0600B34F RID: 45903 RVA: 0x002CB3A4 File Offset: 0x002C95A4
+		// Token: 0x17002B59 RID: 11097
+		// (get) Token: 0x0600B970 RID: 47472 RVA: 0x002E7BF0 File Offset: 0x002E5DF0
 		public int DungeonEntranceId
 		{
 			get
@@ -192,8 +192,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AF4 RID: 10996
-		// (get) Token: 0x0600B350 RID: 45904 RVA: 0x002CB3E4 File Offset: 0x002C95E4
+		// Token: 0x17002B5A RID: 11098
+		// (get) Token: 0x0600B971 RID: 47473 RVA: 0x002E7C30 File Offset: 0x002E5E30
 		public int InstanceID
 		{
 			get
@@ -207,8 +207,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002AF5 RID: 10997
-		// (get) Token: 0x0600B351 RID: 45905 RVA: 0x002CB424 File Offset: 0x002C9624
+		// Token: 0x17002B5B RID: 11099
+		// (get) Token: 0x0600B972 RID: 47474 RVA: 0x002E7C70 File Offset: 0x002E5E70
 		public bool Spoiler
 		{
 			get
@@ -218,25 +218,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B352 RID: 45906 RVA: 0x002CB464 File Offset: 0x002C9664
+		// Token: 0x0600B973 RID: 47475 RVA: 0x002E7CB0 File Offset: 0x002E5EB0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PlayTypeArrayIter()或GetPlayTypeArrayBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PlayTypeArray()
+		public int[] PlayTypeArray()
 		{
-			PreOpenDetection preOpenDetection = this;
-			return preOpenDetection.GetPlayTypeArrayArray() ?? Array.Empty<int>();
+			return this.GetPlayTypeArrayArray();
 		}
 
-		// Token: 0x0600B353 RID: 45907 RVA: 0x002CB488 File Offset: 0x002C9688
+		// Token: 0x0600B974 RID: 47476 RVA: 0x002E7CB8 File Offset: 0x002E5EB8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PlayTypeArrayIter()
+		public IEnumerable<int> PlayTypeArrayIter()
 		{
 			PreOpenDetection.<PlayTypeArrayIter>d__32 <PlayTypeArrayIter>d__ = new PreOpenDetection.<PlayTypeArrayIter>d__32(-2);
 			<PlayTypeArrayIter>d__.<>3__<>4__this = this;
 			return <PlayTypeArrayIter>d__;
 		}
 
-		// Token: 0x04005026 RID: 20518
+		// Token: 0x0400560B RID: 22027
 		private Table __p;
 	}
 }

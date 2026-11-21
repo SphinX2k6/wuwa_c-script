@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200274A RID: 10058
+	// Token: 0x02002A16 RID: 10774
 	public class ICommonTipPrepareCountdown : ICommonTipType
 	{
-		// Token: 0x0600E020 RID: 57376 RVA: 0x00212BB4 File Offset: 0x00210DB4
-		[NullableContext(1)]
+		// Token: 0x0600EE20 RID: 60960 RVA: 0x0022F6EC File Offset: 0x0022D8EC
 		public static ICommonTipPrepareCountdown Create(ICommonTipPrepareCountdown? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700434E RID: 17230
-		// (get) Token: 0x0600E021 RID: 57377 RVA: 0x00212BD3 File Offset: 0x00210DD3
+		// Token: 0x170046A2 RID: 18082
+		// (get) Token: 0x0600EE21 RID: 60961 RVA: 0x0022F70B File Offset: 0x0022D90B
 		public override ECommonTipType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C48 RID: 31816
+		// Token: 0x040082F6 RID: 33526
 		private ICommonTipPrepareCountdown Instance;
 	}
 }

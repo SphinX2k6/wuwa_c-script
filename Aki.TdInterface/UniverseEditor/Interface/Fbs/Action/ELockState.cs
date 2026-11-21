@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F99 RID: 24473
+	// Token: 0x020065EA RID: 26090
 	public enum ELockState : byte
 	{
-		// Token: 0x0400FE73 RID: 65139
+		// Token: 0x04010C25 RID: 68645
 		Lock,
-		// Token: 0x0400FE74 RID: 65140
+		// Token: 0x04010C26 RID: 68646
 		Unlock
 	}
 }

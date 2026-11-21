@@ -4,34 +4,34 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.Avg
 {
-	// Token: 0x020050E5 RID: 20709
+	// Token: 0x020040B5 RID: 16565
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class AvgTalkerMoveActionContext
 	{
-		// Token: 0x17008094 RID: 32916
-		// (get) Token: 0x06034F8F RID: 216975 RVA: 0x00C8C5FB File Offset: 0x00C8A7FB
-		// (set) Token: 0x06034F90 RID: 216976 RVA: 0x00C8C603 File Offset: 0x00C8A803
+		// Token: 0x17005454 RID: 21588
+		// (get) Token: 0x06029E88 RID: 171656 RVA: 0x00BD98E3 File Offset: 0x00BD7AE3
+		// (set) Token: 0x06029E89 RID: 171657 RVA: 0x00BD98EB File Offset: 0x00BD7AEB
 		public int CharacterId { get; set; }
 
-		// Token: 0x17008095 RID: 32917
-		// (get) Token: 0x06034F91 RID: 216977 RVA: 0x00C8C60C File Offset: 0x00C8A80C
-		// (set) Token: 0x06034F92 RID: 216978 RVA: 0x00C8C614 File Offset: 0x00C8A814
+		// Token: 0x17005455 RID: 21589
+		// (get) Token: 0x06029E8A RID: 171658 RVA: 0x00BD98F4 File Offset: 0x00BD7AF4
+		// (set) Token: 0x06029E8B RID: 171659 RVA: 0x00BD98FC File Offset: 0x00BD7AFC
 		public EAvgRoleAnimationType AnimationType { get; set; }
 
-		// Token: 0x17008096 RID: 32918
-		// (get) Token: 0x06034F93 RID: 216979 RVA: 0x00C8C61D File Offset: 0x00C8A81D
-		// (set) Token: 0x06034F94 RID: 216980 RVA: 0x00C8C625 File Offset: 0x00C8A825
+		// Token: 0x17005456 RID: 21590
+		// (get) Token: 0x06029E8C RID: 171660 RVA: 0x00BD9905 File Offset: 0x00BD7B05
+		// (set) Token: 0x06029E8D RID: 171661 RVA: 0x00BD990D File Offset: 0x00BD7B0D
 		public EAvgRolePosition TargetPosition { get; set; }
 
-		// Token: 0x17008097 RID: 32919
-		// (get) Token: 0x06034F95 RID: 216981 RVA: 0x00C8C62E File Offset: 0x00C8A82E
-		// (set) Token: 0x06034F96 RID: 216982 RVA: 0x00C8C636 File Offset: 0x00C8A836
+		// Token: 0x17005457 RID: 21591
+		// (get) Token: 0x06029E8E RID: 171662 RVA: 0x00BD9916 File Offset: 0x00BD7B16
+		// (set) Token: 0x06029E8F RID: 171663 RVA: 0x00BD991E File Offset: 0x00BD7B1E
 		[RequiredMember]
 		public IEaseData EaseCurve { get; set; }
 
-		// Token: 0x06034F97 RID: 216983 RVA: 0x00C8C63F File Offset: 0x00C8A83F
+		// Token: 0x06029E90 RID: 171664 RVA: 0x00BD9927 File Offset: 0x00BD7B27
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public AvgTalkerMoveActionContext()

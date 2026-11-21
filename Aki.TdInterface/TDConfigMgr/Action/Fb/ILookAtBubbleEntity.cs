@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A69 RID: 10857
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D5D RID: 11613
 	public class ILookAtBubbleEntity : IDefaultLookAtType
 	{
-		// Token: 0x0600EEC9 RID: 61129 RVA: 0x0022BE10 File Offset: 0x0022A010
+		// Token: 0x0600FD7F RID: 64895 RVA: 0x00249B1C File Offset: 0x00247D1C
 		public static ILookAtBubbleEntity Create(ILookAtBubbleEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BB9 RID: 19385
-		// (get) Token: 0x0600EECA RID: 61130 RVA: 0x0022BE2F File Offset: 0x0022A02F
+		// Token: 0x17004F73 RID: 20339
+		// (get) Token: 0x0600FD80 RID: 64896 RVA: 0x00249B3B File Offset: 0x00247D3B
 		public override EDefaultLookAtType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BBA RID: 19386
-		// (get) Token: 0x0600EECB RID: 61131 RVA: 0x0022BE3C File Offset: 0x0022A03C
+		// Token: 0x17004F74 RID: 20340
+		// (get) Token: 0x0600FD81 RID: 64897 RVA: 0x00249B48 File Offset: 0x00247D48
 		public virtual List<ILookAtBubbleEntityConfig> BubbleEntityConfig
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400835D RID: 33629
+		// Token: 0x04008A61 RID: 35425
 		private ILookAtBubbleEntity Instance;
 
-		// Token: 0x0400835E RID: 33630
+		// Token: 0x04008A62 RID: 35426
 		private List<ILookAtBubbleEntityConfig> _BubbleEntityConfigCache;
 
-		// Token: 0x0400835F RID: 33631
+		// Token: 0x04008A63 RID: 35427
 		private bool _BubbleEntityConfigInited;
 	}
 }

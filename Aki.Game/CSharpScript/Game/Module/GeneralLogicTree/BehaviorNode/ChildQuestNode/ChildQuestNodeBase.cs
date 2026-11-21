@@ -8,18 +8,18 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059CC RID: 22988
+	// Token: 0x020049A5 RID: 18853
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class ChildQuestNodeBase : BehaviorNodeBase
 	{
-		// Token: 0x0603A452 RID: 238674 RVA: 0x00DDB2D0 File Offset: 0x00DD94D0
+		// Token: 0x0602F379 RID: 193401 RVA: 0x00D2AB58 File Offset: 0x00D28D58
 		protected ChildQuestNodeBase(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B92 RID: 35730
-		// (get) Token: 0x0603A453 RID: 238675 RVA: 0x00DDB2E1 File Offset: 0x00DD94E1
+		// Token: 0x17005F5F RID: 24415
+		// (get) Token: 0x0602F37A RID: 193402 RVA: 0x00D2AB69 File Offset: 0x00D28D69
 		public override EBtNode NodeType
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B93 RID: 35731
-		// (get) Token: 0x0603A454 RID: 238676 RVA: 0x00DDB2E5 File Offset: 0x00DD94E5
+		// Token: 0x17005F60 RID: 24416
+		// (get) Token: 0x0602F37B RID: 193403 RVA: 0x00D2AB6D File Offset: 0x00D28D6D
 		protected virtual List<int> CorrelativeEntities
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B94 RID: 35732
-		// (get) Token: 0x0603A455 RID: 238677 RVA: 0x00DDB2E8 File Offset: 0x00DD94E8
+		// Token: 0x17005F61 RID: 24417
+		// (get) Token: 0x0602F37C RID: 193404 RVA: 0x00D2AB70 File Offset: 0x00D28D70
 		public bool CanGiveUp
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B95 RID: 35733
-		// (get) Token: 0x0603A456 RID: 238678 RVA: 0x00DDB2F3 File Offset: 0x00DD94F3
+		// Token: 0x17005F62 RID: 24418
+		// (get) Token: 0x0602F37D RID: 193405 RVA: 0x00D2AB7B File Offset: 0x00D28D7B
 		public bool InProgress
 		{
 			get
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B96 RID: 35734
-		// (get) Token: 0x0603A457 RID: 238679 RVA: 0x00DDB2FE File Offset: 0x00DD94FE
+		// Token: 0x17005F63 RID: 24419
+		// (get) Token: 0x0602F37E RID: 193406 RVA: 0x00D2AB86 File Offset: 0x00D28D86
 		public bool IsFinished
 		{
 			get
@@ -68,8 +68,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B97 RID: 35735
-		// (get) Token: 0x0603A458 RID: 238680 RVA: 0x00DDB309 File Offset: 0x00DD9509
+		// Token: 0x17005F64 RID: 24420
+		// (get) Token: 0x0602F37F RID: 193407 RVA: 0x00D2AB91 File Offset: 0x00D28D91
 		public ITrackLevelPlay TrackLevelPlay
 		{
 			get
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A459 RID: 238681 RVA: 0x00DDB33C File Offset: 0x00DD953C
+		// Token: 0x0602F380 RID: 193408 RVA: 0x00D2ABC4 File Offset: 0x00D28DC4
 		[NullableContext(1)]
 		public override void Init(Blackboard blackBoard, ENodeStatusUpdateReason reason, global::NodeInfo data, IBtNode config, BtType btType)
 		{
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A45A RID: 238682 RVA: 0x00DDB3A8 File Offset: 0x00DD95A8
+		// Token: 0x0602F381 RID: 193409 RVA: 0x00D2AC30 File Offset: 0x00D28E30
 		public void UpdateChildQuestStatus(ChildQuestNodeStatus status, ENodeStatusUpdateReason reason)
 		{
 			ChildQuestNodeStatus childQuestStatus = this.ChildQuestStatus;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			EventSystem.Instance.Emit<GeneralContext, ChildQuestNodeStatus, ChildQuestNodeStatus>(EEventName.AfterLogicTreeChildQuestNodeStatusChange, this.Context, childQuestStatus, status);
 		}
 
-		// Token: 0x0603A45B RID: 238683 RVA: 0x00DDB438 File Offset: 0x00DD9638
+		// Token: 0x0602F382 RID: 193410 RVA: 0x00D2ACC0 File Offset: 0x00D28EC0
 		protected override void OnNodeActive()
 		{
 			this.AddTag(EBehaviorTreeTag.CanShow, base.NodeId.ToString());
@@ -153,20 +153,20 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A45C RID: 238684 RVA: 0x00DDB4C5 File Offset: 0x00DD96C5
+		// Token: 0x0602F383 RID: 193411 RVA: 0x00D2AD4D File Offset: 0x00D28F4D
 		private void Start(ENodeStatusUpdateReason reason)
 		{
 			this.AddEventsOnChildQuestStart();
 			this.OnStart(reason);
 		}
 
-		// Token: 0x0603A45D RID: 238685 RVA: 0x00DDB4D4 File Offset: 0x00DD96D4
+		// Token: 0x0602F384 RID: 193412 RVA: 0x00D2AD5C File Offset: 0x00D28F5C
 		private void Finish()
 		{
 			this.End(true);
 		}
 
-		// Token: 0x0603A45E RID: 238686 RVA: 0x00DDB4E0 File Offset: 0x00DD96E0
+		// Token: 0x0602F385 RID: 193413 RVA: 0x00D2AD68 File Offset: 0x00D28F68
 		protected override void OnNodeDeActive(bool success)
 		{
 			this.RemoveTag(EBehaviorTreeTag.CanShow, base.NodeId.ToString());
@@ -196,14 +196,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A45F RID: 238687 RVA: 0x00DDB572 File Offset: 0x00DD9772
+		// Token: 0x0602F386 RID: 193414 RVA: 0x00D2ADFA File Offset: 0x00D28FFA
 		private void End(bool bFinished)
 		{
 			this.RemoveEventsOnChildQuestEnd();
 			this.OnEnd(bFinished);
 		}
 
-		// Token: 0x0603A460 RID: 238688 RVA: 0x00DDB584 File Offset: 0x00DD9784
+		// Token: 0x0602F387 RID: 193415 RVA: 0x00D2AE0C File Offset: 0x00D2900C
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -246,27 +246,27 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A461 RID: 238689 RVA: 0x00DDB6CD File Offset: 0x00DD98CD
+		// Token: 0x0602F388 RID: 193416 RVA: 0x00D2AF55 File Offset: 0x00D29155
 		protected virtual void OnStart(ENodeStatusUpdateReason reason)
 		{
 		}
 
-		// Token: 0x0603A462 RID: 238690 RVA: 0x00DDB6CF File Offset: 0x00DD98CF
+		// Token: 0x0602F389 RID: 193417 RVA: 0x00D2AF57 File Offset: 0x00D29157
 		protected virtual void OnEnd(bool bFinished)
 		{
 		}
 
-		// Token: 0x0603A463 RID: 238691 RVA: 0x00DDB6D1 File Offset: 0x00DD98D1
+		// Token: 0x0602F38A RID: 193418 RVA: 0x00D2AF59 File Offset: 0x00D29159
 		protected virtual void AddEventsOnChildQuestStart()
 		{
 		}
 
-		// Token: 0x0603A464 RID: 238692 RVA: 0x00DDB6D3 File Offset: 0x00DD98D3
+		// Token: 0x0602F38B RID: 193419 RVA: 0x00D2AF5B File Offset: 0x00D2915B
 		protected virtual void RemoveEventsOnChildQuestEnd()
 		{
 		}
 
-		// Token: 0x0603A465 RID: 238693 RVA: 0x00DDB6D8 File Offset: 0x00DD98D8
+		// Token: 0x0602F38C RID: 193420 RVA: 0x00D2AF60 File Offset: 0x00D29160
 		protected virtual void SubmitNode(GeneralLogicTreeNodeExtraInfo parkourInfo = null)
 		{
 			if (this.Blackboard.ContainTag(EBehaviorTreeTag.RollbackWaiting))
@@ -290,51 +290,51 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			GeneralLogicTreeController.Instance.RequestSubmitNode(this.Context, new Action<bool>(this.OnAfterSubmit), parkourInfo);
 		}
 
-		// Token: 0x0603A466 RID: 238694 RVA: 0x00DDB73E File Offset: 0x00DD993E
+		// Token: 0x0602F38D RID: 193421 RVA: 0x00D2AFC6 File Offset: 0x00D291C6
 		protected virtual void OnBeforeSubmit()
 		{
 			this.Submitting = true;
 		}
 
-		// Token: 0x0603A467 RID: 238695 RVA: 0x00DDB747 File Offset: 0x00DD9947
+		// Token: 0x0602F38E RID: 193422 RVA: 0x00D2AFCF File Offset: 0x00D291CF
 		protected virtual void OnAfterSubmit(bool submitSuccess)
 		{
 			this.Submitting = false;
 		}
 
-		// Token: 0x0603A468 RID: 238696 RVA: 0x00DDB750 File Offset: 0x00DD9950
+		// Token: 0x0602F38F RID: 193423 RVA: 0x00D2AFD8 File Offset: 0x00D291D8
 		protected virtual bool CheckCanSubmitAboutFocusMode()
 		{
 			return true;
 		}
 
-		// Token: 0x0603A469 RID: 238697 RVA: 0x00DDB753 File Offset: 0x00DD9953
+		// Token: 0x0602F390 RID: 193424 RVA: 0x00D2AFDB File Offset: 0x00D291DB
 		protected virtual void BecauseOfFocusModeNoSubmit()
 		{
 		}
 
-		// Token: 0x0603A46A RID: 238698 RVA: 0x00DDB755 File Offset: 0x00DD9955
+		// Token: 0x0602F391 RID: 193425 RVA: 0x00D2AFDD File Offset: 0x00D291DD
 		public List<int> GetCorrelativeEntities()
 		{
 			return this.CorrelativeEntities;
 		}
 
-		// Token: 0x0401E61B RID: 124443
+		// Token: 0x040190BA RID: 102586
 		public EChildQuest ChildQuestType = EChildQuest.CheckEntityState;
 
-		// Token: 0x0401E61C RID: 124444
+		// Token: 0x040190BB RID: 102587
 		public int CustomTrackIconId;
 
-		// Token: 0x0401E61D RID: 124445
+		// Token: 0x040190BC RID: 102588
 		protected bool Submitting;
 
-		// Token: 0x0401E61E RID: 124446
+		// Token: 0x040190BD RID: 102589
 		protected ChildQuestNodeStatus ChildQuestStatus;
 
-		// Token: 0x0401E61F RID: 124447
+		// Token: 0x040190BE RID: 102590
 		public ITrackAreaText ModifyTrackAreaTextConfig;
 
-		// Token: 0x0401E620 RID: 124448
+		// Token: 0x040190BF RID: 102591
 		public ITrackCustomBoard TrackCustomBoard;
 	}
 }

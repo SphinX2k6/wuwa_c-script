@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039EB RID: 14827
+	// Token: 0x02003042 RID: 12354
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 增加实体 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F0DE RID: 127198 RVA: 0x008A905D File Offset: 0x008A725D
+		// Token: 0x0601D53F RID: 120127 RVA: 0x008F16BD File Offset: 0x008EF8BD
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 增加实体.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F0DF RID: 127199 RVA: 0x008A9069 File Offset: 0x008A7269
+		// Token: 0x0601D540 RID: 120128 RVA: 0x008F16C9 File Offset: 0x008EF8C9
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__增加实体__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__增加实体__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F0E0 RID: 127200 RVA: 0x008A908C File Offset: 0x008A728C
+		// Token: 0x0601D541 RID: 120129 RVA: 0x008F16EC File Offset: 0x008EF8EC
 		public 增加实体()
 		{
 		}
 
-		// Token: 0x0601F0E1 RID: 127201 RVA: 0x008A9094 File Offset: 0x008A7294
+		// Token: 0x0601D542 RID: 120130 RVA: 0x008F16F4 File Offset: 0x008EF8F4
 		[NullableContext(2)]
 		public 增加实体(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F0E2 RID: 127202 RVA: 0x008A909E File Offset: 0x008A729E
+		// Token: 0x0601D543 RID: 120131 RVA: 0x008F16FE File Offset: 0x008EF8FE
 		public 增加实体(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F0E3 RID: 127203 RVA: 0x008A90A9 File Offset: 0x008A72A9
+		// Token: 0x0601D544 RID: 120132 RVA: 0x008F1709 File Offset: 0x008EF909
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, AActor>) ?? ((Action<int, AActor>)Delegate.CreateDelegate(typeof(Action<int, AActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F0E4 RID: 127204 RVA: 0x008A90DB File Offset: 0x008A72DB
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D545 RID: 120133 RVA: 0x008F173B File Offset: 0x008EF93B
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 增加实体.RegisterId);
 		}
 
-		// Token: 0x0601F0E5 RID: 127205 RVA: 0x008A9115 File Offset: 0x008A7315
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D546 RID: 120134 RVA: 0x008F1775 File Offset: 0x008EF975
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F0E6 RID: 127206 RVA: 0x008A9120 File Offset: 0x008A7320
+		// Token: 0x0601D547 RID: 120135 RVA: 0x008F1780 File Offset: 0x008EF980
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int 实体ID, AActor Entity)
 		{
 			增加实体.__增加实体_DelegateParams* ptr = stackalloc 增加实体.__增加实体_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(增加实体.__增加实体_DelegateParams) & -16L;
@@ -95,10 +92,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F0E7 RID: 127207 RVA: 0x008A9174 File Offset: 0x008A7374
+		// Token: 0x0601D548 RID: 120136 RVA: 0x008F17D4 File Offset: 0x008EF9D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, AActor> action = target as Action<int, AActor>;
@@ -110,32 +106,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(((增加实体.__增加实体_DelegateParams*)__Parameters)->实体ID, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400EE18 RID: 60952
+		// Token: 0x0400F740 RID: 63296
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:增加实体__DelegateSignature";
 
-		// Token: 0x0400EE19 RID: 60953
+		// Token: 0x0400F741 RID: 63297
 		private static int RegisterId;
 
-		// Token: 0x020099E5 RID: 39397
+		// Token: 0x02008C99 RID: 35993
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __增加实体_DelegateParams
+		private ref struct __增加实体_DelegateParams
 		{
-			// Token: 0x04030EB8 RID: 200376
+			// Token: 0x0402C798 RID: 182168
 			[FieldOffset(0)]
 			public int 实体ID;
 
-			// Token: 0x04030EB9 RID: 200377
+			// Token: 0x0402C799 RID: 182169
 			[FieldOffset(8)]
 			public IntPtr Entity;
 		}
 
-		// Token: 0x020099E6 RID: 39398
+		// Token: 0x02008C9A RID: 35994
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EBA RID: 200378
+			// Token: 0x0402C79A RID: 182170
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

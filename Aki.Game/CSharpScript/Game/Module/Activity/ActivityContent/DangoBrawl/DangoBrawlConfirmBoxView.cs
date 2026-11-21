@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067FD RID: 26621
+	// Token: 0x0200574D RID: 22349
 	public class DangoBrawlConfirmBoxView : ConfirmBoxView
 	{
-		// Token: 0x0604266C RID: 271980 RVA: 0x0101FE5E File Offset: 0x0101E05E
+		// Token: 0x060371C1 RID: 225729 RVA: 0x00F613A2 File Offset: 0x00F5F5A2
 		[NullableContext(1)]
 		public DangoBrawlConfirmBoxView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0604266D RID: 271981 RVA: 0x0101FE67 File Offset: 0x0101E067
+		// Token: 0x060371C2 RID: 225730 RVA: 0x00F613AB File Offset: 0x00F5F5AB
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(11, typeof(UUIItem)));
 		}
 
-		// Token: 0x0604266E RID: 271982 RVA: 0x0101FE8C File Offset: 0x0101E08C
+		// Token: 0x060371C3 RID: 225731 RVA: 0x00F613D0 File Offset: 0x00F5F5D0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlConfirmBoxView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604266F RID: 271983 RVA: 0x0101FECF File Offset: 0x0101E0CF
+		// Token: 0x060371C4 RID: 225732 RVA: 0x00F61413 File Offset: 0x00F5F613
 		protected override void OnBeforeShow()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			childPopView.SetTitleByTextIdAndArg("ConfirmBox_538_Title", Array.Empty<object>());
 		}
 
-		// Token: 0x0200C96D RID: 51565
+		// Token: 0x0200B33A RID: 45882
 		private class EConfirmBoxViewDefine
 		{
-			// Token: 0x0403CD35 RID: 249141
+			// Token: 0x04037622 RID: 226850
 			public const int Toggle = 6;
 
-			// Token: 0x0403CD36 RID: 249142
+			// Token: 0x04037623 RID: 226851
 			public const int Line = 11;
 		}
 	}

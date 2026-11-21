@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005265 RID: 21093
+	// Token: 0x020057CD RID: 22477
 	public class IFixedAngleItemT
 	{
-		// Token: 0x17009A7C RID: 39548
-		// (get) Token: 0x06022507 RID: 140551 RVA: 0x004C1CF2 File Offset: 0x004BFEF2
-		// (set) Token: 0x06022508 RID: 140552 RVA: 0x004C1CFA File Offset: 0x004BFEFA
+		// Token: 0x1700A278 RID: 41592
+		// (get) Token: 0x0602449D RID: 148637 RVA: 0x004FC7B6 File Offset: 0x004FA9B6
+		// (set) Token: 0x0602449E RID: 148638 RVA: 0x004FC7BE File Offset: 0x004FA9BE
 		public int InitAngle { get; set; }
 
-		// Token: 0x17009A7D RID: 39549
-		// (get) Token: 0x06022509 RID: 140553 RVA: 0x004C1D03 File Offset: 0x004BFF03
-		// (set) Token: 0x0602250A RID: 140554 RVA: 0x004C1D0B File Offset: 0x004BFF0B
+		// Token: 0x1700A279 RID: 41593
+		// (get) Token: 0x0602449F RID: 148639 RVA: 0x004FC7C7 File Offset: 0x004FA9C7
+		// (set) Token: 0x060244A0 RID: 148640 RVA: 0x004FC7CF File Offset: 0x004FA9CF
 		public int TargetAngle { get; set; }
 
-		// Token: 0x17009A7E RID: 39550
-		// (get) Token: 0x0602250B RID: 140555 RVA: 0x004C1D14 File Offset: 0x004BFF14
-		// (set) Token: 0x0602250C RID: 140556 RVA: 0x004C1D1C File Offset: 0x004BFF1C
+		// Token: 0x1700A27A RID: 41594
+		// (get) Token: 0x060244A1 RID: 148641 RVA: 0x004FC7D8 File Offset: 0x004FA9D8
+		// (set) Token: 0x060244A2 RID: 148642 RVA: 0x004FC7E0 File Offset: 0x004FA9E0
 		public int RotateAngle { get; set; }
 
-		// Token: 0x0602250D RID: 140557 RVA: 0x004C1D25 File Offset: 0x004BFF25
+		// Token: 0x060244A3 RID: 148643 RVA: 0x004FC7E9 File Offset: 0x004FA9E9
 		public IFixedAngleItemT()
 		{
 			this.InitAngle = 0;

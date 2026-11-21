@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006608 RID: 26120
+	// Token: 0x02005586 RID: 21894
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingDockQuestChildItemData : IFishingDockQuestChildItemData
 	{
-		// Token: 0x170095FD RID: 38397
-		// (get) Token: 0x06041762 RID: 268130 RVA: 0x00FDA359 File Offset: 0x00FD8559
-		// (set) Token: 0x06041763 RID: 268131 RVA: 0x00FDA361 File Offset: 0x00FD8561
+		// Token: 0x1700695F RID: 26975
+		// (get) Token: 0x06036427 RID: 222247 RVA: 0x00F213D9 File Offset: 0x00F1F5D9
+		// (set) Token: 0x06036428 RID: 222248 RVA: 0x00F213E1 File Offset: 0x00F1F5E1
 		public string DesText { get; set; }
 
-		// Token: 0x170095FE RID: 38398
-		// (get) Token: 0x06041764 RID: 268132 RVA: 0x00FDA36A File Offset: 0x00FD856A
-		// (set) Token: 0x06041765 RID: 268133 RVA: 0x00FDA372 File Offset: 0x00FD8572
+		// Token: 0x17006960 RID: 26976
+		// (get) Token: 0x06036429 RID: 222249 RVA: 0x00F213EA File Offset: 0x00F1F5EA
+		// (set) Token: 0x0603642A RID: 222250 RVA: 0x00F213F2 File Offset: 0x00F1F5F2
 		public int MaxCount { get; set; }
 
-		// Token: 0x170095FF RID: 38399
-		// (get) Token: 0x06041766 RID: 268134 RVA: 0x00FDA37B File Offset: 0x00FD857B
-		// (set) Token: 0x06041767 RID: 268135 RVA: 0x00FDA383 File Offset: 0x00FD8583
+		// Token: 0x17006961 RID: 26977
+		// (get) Token: 0x0603642B RID: 222251 RVA: 0x00F213FB File Offset: 0x00F1F5FB
+		// (set) Token: 0x0603642C RID: 222252 RVA: 0x00F21403 File Offset: 0x00F1F603
 		public int CurrentCount { get; set; }
 	}
 }

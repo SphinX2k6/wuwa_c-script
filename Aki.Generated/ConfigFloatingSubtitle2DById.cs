@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000307 RID: 775
+	// Token: 0x0200031C RID: 796
 	public class ConfigFloatingSubtitle2DById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600122F RID: 4655 RVA: 0x000C05E3 File Offset: 0x000BE7E3
+		// Token: 0x060012AD RID: 4781 RVA: 0x000C6AEF File Offset: 0x000C4CEF
 		static ConfigFloatingSubtitle2DById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFloatingSubtitle2DById.CreateStaticDefaultValue), new Action(ConfigFloatingSubtitle2DById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001230 RID: 4656 RVA: 0x000C0604 File Offset: 0x000BE804
+		// Token: 0x060012AE RID: 4782 RVA: 0x000C6B10 File Offset: 0x000C4D10
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFloatingSubtitle2DById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001231 RID: 4657 RVA: 0x000C0683 File Offset: 0x000BE883
+		// Token: 0x060012AF RID: 4783 RVA: 0x000C6B8F File Offset: 0x000C4D8F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFloatingSubtitle2DById.LogPair = null;
 			ConfigFloatingSubtitle2DById.HandleId = 0;
 		}
 
-		// Token: 0x06001232 RID: 4658 RVA: 0x000C0691 File Offset: 0x000BE891
+		// Token: 0x060012B0 RID: 4784 RVA: 0x000C6B9D File Offset: 0x000C4D9D
 		public static void Init()
 		{
 			ConfigFloatingSubtitle2DById.HandleId = ConfigCommon.InitDataStatement(ConfigFloatingSubtitle2DById.HandleId, "db_floatingsubtitle.db", "select BinData from `FloatingSubtitle2D` where Id=?");
 		}
 
-		// Token: 0x06001233 RID: 4659 RVA: 0x000C06AC File Offset: 0x000BE8AC
+		// Token: 0x060012B1 RID: 4785 RVA: 0x000C6BB8 File Offset: 0x000C4DB8
 		public static FloatingSubtitle2D? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFloatingSubtitle2DById.HandleId, ConfigFloatingSubtitle2DById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FloatingSubtitle2D?(rootAsFloatingSubtitle2D);
 		}
 
-		// Token: 0x04001515 RID: 5397
+		// Token: 0x040015A8 RID: 5544
 		private const string DB = "db_floatingsubtitle.db";
 
-		// Token: 0x04001516 RID: 5398
+		// Token: 0x040015A9 RID: 5545
 		private const string FILE = "p.飘浮字幕.xlsx";
 
-		// Token: 0x04001517 RID: 5399
+		// Token: 0x040015AA RID: 5546
 		private const string TABLE = "FloatingSubtitle2D";
 
-		// Token: 0x04001518 RID: 5400
+		// Token: 0x040015AB RID: 5547
 		private const string COMMAND = "select BinData from `FloatingSubtitle2D` where Id=?";
 
-		// Token: 0x04001519 RID: 5401
+		// Token: 0x040015AC RID: 5548
 		private const string KEY_PREFIX = "FloatingSubtitle2DById";
 
-		// Token: 0x0400151A RID: 5402
+		// Token: 0x040015AD RID: 5549
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400151B RID: 5403
+		// Token: 0x040015AE RID: 5550
 		private static int HandleId;
 	}
 }

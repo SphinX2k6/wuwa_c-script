@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046E2 RID: 18146
+	// Token: 0x02004B4A RID: 19274
 	public enum EEntityClientCreateState : byte
 	{
-		// Token: 0x0400C960 RID: 51552
+		// Token: 0x0400D38F RID: 54159
 		None,
-		// Token: 0x0400C961 RID: 51553
+		// Token: 0x0400D390 RID: 54160
 		Requesting,
-		// Token: 0x0400C962 RID: 51554
+		// Token: 0x0400D391 RID: 54161
 		CreateSuccess,
-		// Token: 0x0400C963 RID: 51555
+		// Token: 0x0400D392 RID: 54162
 		CreateFail
 	}
 }

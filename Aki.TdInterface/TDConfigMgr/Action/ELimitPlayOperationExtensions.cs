@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002371 RID: 9073
+	// Token: 0x020025E6 RID: 9702
 	public static class ELimitPlayOperationExtensions
 	{
-		// Token: 0x0600C5FB RID: 50683 RVA: 0x001D0080 File Offset: 0x001CE280
+		// Token: 0x0600D1E5 RID: 53733 RVA: 0x001E8360 File Offset: 0x001E6560
 		public static string ToEnumString(this ELimitPlayOperation value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5FC RID: 50684 RVA: 0x001D00F8 File Offset: 0x001CE2F8
+		// Token: 0x0600D1E6 RID: 53734 RVA: 0x001E83D8 File Offset: 0x001E65D8
 		public static ELimitPlayOperation FromString(string name)
 		{
 			ELimitPlayOperation result;
@@ -50,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5FD RID: 50685 RVA: 0x001D0124 File Offset: 0x001CE324
+		// Token: 0x0600D1E7 RID: 53735 RVA: 0x001E8404 File Offset: 0x001E6604
 		public static bool TryFromString(string name, out ELimitPlayOperation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -124,7 +124,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C5FE RID: 50686 RVA: 0x001D0215 File Offset: 0x001CE415
+		// Token: 0x0600D1E8 RID: 53736 RVA: 0x001E84F5 File Offset: 0x001E66F5
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -139,7 +139,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5FF RID: 50687 RVA: 0x001D0255 File Offset: 0x001CE455
+		// Token: 0x0600D1E9 RID: 53737 RVA: 0x001E8535 File Offset: 0x001E6735
 		public static ELimitPlayOperation[] GetValues()
 		{
 			return new ELimitPlayOperation[]
@@ -154,7 +154,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C600 RID: 50688 RVA: 0x001D0268 File Offset: 0x001CE468
+		// Token: 0x0600D1EA RID: 53738 RVA: 0x001E8548 File Offset: 0x001E6748
 		public static string[] GetNames()
 		{
 			return new string[]

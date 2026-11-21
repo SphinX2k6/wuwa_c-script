@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F21 RID: 3873
+// Token: 0x020003D6 RID: 982
 public class AchievementFinishView : UiViewBase
 {
-	// Token: 0x06006219 RID: 25113 RVA: 0x00132ACD File Offset: 0x00130CCD
+	// Token: 0x060035B1 RID: 13745 RVA: 0x0013B3F1 File Offset: 0x001395F1
 	[NullableContext(1)]
 	public AchievementFinishView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600621A RID: 25114 RVA: 0x00132AE0 File Offset: 0x00130CE0
+	// Token: 0x060035B2 RID: 13746 RVA: 0x0013B404 File Offset: 0x00139604
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class AchievementFinishView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600621B RID: 25115 RVA: 0x00132B4C File Offset: 0x00130D4C
+	// Token: 0x060035B3 RID: 13747 RVA: 0x0013B470 File Offset: 0x00139670
 	protected override void OnBeforeShow()
 	{
 		int id = AchievementModel.Instance.CurrentFinishAchievementArray[0];
@@ -40,7 +40,7 @@ public class AchievementFinishView : UiViewBase
 		this.Ticker = TickSystem.Instance.Add(new Action<float>(this.OnTick), "Achievement", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 	}
 
-	// Token: 0x0600621C RID: 25116 RVA: 0x00132BC8 File Offset: 0x00130DC8
+	// Token: 0x060035B4 RID: 13748 RVA: 0x0013B4EC File Offset: 0x001396EC
 	private void RefreshTexture()
 	{
 		int groupId = this.AchievementData.GetGroupId();
@@ -51,13 +51,13 @@ public class AchievementFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600621D RID: 25117 RVA: 0x00132C1C File Offset: 0x00130E1C
+	// Token: 0x060035B5 RID: 13749 RVA: 0x0013B540 File Offset: 0x00139740
 	private void RefreshDesc()
 	{
 		base.GetText(1).SetText(this.AchievementData.GetTitle(), true);
 	}
 
-	// Token: 0x0600621E RID: 25118 RVA: 0x00132C36 File Offset: 0x00130E36
+	// Token: 0x060035B6 RID: 13750 RVA: 0x0013B55A File Offset: 0x0013975A
 	private void OnTick(float deltaTime)
 	{
 		this.CurrentRunningTime += deltaTime;
@@ -68,7 +68,7 @@ public class AchievementFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600621F RID: 25119 RVA: 0x00132C60 File Offset: 0x00130E60
+	// Token: 0x060035B7 RID: 13751 RVA: 0x0013B584 File Offset: 0x00139784
 	private void ClearTimer()
 	{
 		this.CurrentRunningTime = 0f;
@@ -79,28 +79,28 @@ public class AchievementFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006220 RID: 25120 RVA: 0x00132C8E File Offset: 0x00130E8E
+	// Token: 0x060035B8 RID: 13752 RVA: 0x0013B5B2 File Offset: 0x001397B2
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimer();
 	}
 
-	// Token: 0x04002C8D RID: 11405
+	// Token: 0x04002D26 RID: 11558
 	[Nullable(2)]
 	private AchievementData AchievementData;
 
-	// Token: 0x04002C8E RID: 11406
+	// Token: 0x04002D27 RID: 11559
 	private int Ticker = -1;
 
-	// Token: 0x04002C8F RID: 11407
+	// Token: 0x04002D28 RID: 11560
 	private float CurrentRunningTime;
 
-	// Token: 0x0200756A RID: 30058
+	// Token: 0x020066FE RID: 26366
 	private enum EComponents
 	{
-		// Token: 0x04026D23 RID: 159011
+		// Token: 0x0402206E RID: 139374
 		Texture,
-		// Token: 0x04026D24 RID: 159012
+		// Token: 0x0402206F RID: 139375
 		Desc
 	}
 }

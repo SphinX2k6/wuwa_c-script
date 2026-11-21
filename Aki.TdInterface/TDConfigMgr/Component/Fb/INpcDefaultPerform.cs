@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BCF RID: 3023
+	// Token: 0x02000C9D RID: 3229
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcDefaultPerform
 	{
-		// Token: 0x0600457B RID: 17787 RVA: 0x000AFEE5 File Offset: 0x000AE0E5
-		[NullableContext(1)]
+		// Token: 0x060049D4 RID: 18900 RVA: 0x000B9FA9 File Offset: 0x000B81A9
+		[NullableContext(0)]
 		public static INpcDefaultPerform Create(INpcDefaultPerform? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700139A RID: 5018
-		// (get) Token: 0x0600457C RID: 17788 RVA: 0x000AFF04 File Offset: 0x000AE104
+		// Token: 0x17001495 RID: 5269
+		// (get) Token: 0x060049D5 RID: 18901 RVA: 0x000B9FC8 File Offset: 0x000B81C8
 		public virtual List<int> BuffEffectIds
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002786 RID: 10118
+		// Token: 0x040029CE RID: 10702
 		private INpcDefaultPerform Instance;
 
-		// Token: 0x04002787 RID: 10119
+		// Token: 0x040029CF RID: 10703
 		private List<int> _BuffEffectIdsCache;
 
-		// Token: 0x04002788 RID: 10120
+		// Token: 0x040029D0 RID: 10704
 		private bool _BuffEffectIdsInited;
 	}
 }

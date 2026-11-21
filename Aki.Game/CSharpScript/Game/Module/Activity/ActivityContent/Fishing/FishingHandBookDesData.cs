@@ -3,32 +3,32 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006602 RID: 26114
+	// Token: 0x02005580 RID: 21888
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingHandBookDesData : IFishingHandBookDesData
 	{
-		// Token: 0x170095EA RID: 38378
-		// (get) Token: 0x0604172C RID: 268076 RVA: 0x00FD9B6B File Offset: 0x00FD7D6B
-		// (set) Token: 0x0604172D RID: 268077 RVA: 0x00FD9B73 File Offset: 0x00FD7D73
+		// Token: 0x1700694C RID: 26956
+		// (get) Token: 0x060363F1 RID: 222193 RVA: 0x00F20BEB File Offset: 0x00F1EDEB
+		// (set) Token: 0x060363F2 RID: 222194 RVA: 0x00F20BF3 File Offset: 0x00F1EDF3
 		public string DesText { get; set; }
 
-		// Token: 0x170095EB RID: 38379
-		// (get) Token: 0x0604172E RID: 268078 RVA: 0x00FD9B7C File Offset: 0x00FD7D7C
-		// (set) Token: 0x0604172F RID: 268079 RVA: 0x00FD9B84 File Offset: 0x00FD7D84
+		// Token: 0x1700694D RID: 26957
+		// (get) Token: 0x060363F3 RID: 222195 RVA: 0x00F20BFC File Offset: 0x00F1EDFC
+		// (set) Token: 0x060363F4 RID: 222196 RVA: 0x00F20C04 File Offset: 0x00F1EE04
 		public string DataText { get; set; }
 
-		// Token: 0x170095EC RID: 38380
-		// (get) Token: 0x06041730 RID: 268080 RVA: 0x00FD9B8D File Offset: 0x00FD7D8D
-		// (set) Token: 0x06041731 RID: 268081 RVA: 0x00FD9B95 File Offset: 0x00FD7D95
+		// Token: 0x1700694E RID: 26958
+		// (get) Token: 0x060363F5 RID: 222197 RVA: 0x00F20C0D File Offset: 0x00F1EE0D
+		// (set) Token: 0x060363F6 RID: 222198 RVA: 0x00F20C15 File Offset: 0x00F1EE15
 		public bool? IsGolden { get; set; }
 
-		// Token: 0x170095ED RID: 38381
-		// (get) Token: 0x06041732 RID: 268082 RVA: 0x00FD9B9E File Offset: 0x00FD7D9E
-		// (set) Token: 0x06041733 RID: 268083 RVA: 0x00FD9BA6 File Offset: 0x00FD7DA6
+		// Token: 0x1700694F RID: 26959
+		// (get) Token: 0x060363F7 RID: 222199 RVA: 0x00F20C1E File Offset: 0x00F1EE1E
+		// (set) Token: 0x060363F8 RID: 222200 RVA: 0x00F20C26 File Offset: 0x00F1EE26
 		public bool? IsSliver { get; set; }
 
-		// Token: 0x06041734 RID: 268084 RVA: 0x00FD9BAF File Offset: 0x00FD7DAF
+		// Token: 0x060363F9 RID: 222201 RVA: 0x00F20C2F File Offset: 0x00F1EE2F
 		public FishingHandBookDesData()
 		{
 			this.DesText = "";

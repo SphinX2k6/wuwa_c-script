@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine.Extension;
 
-// Token: 0x02000055 RID: 85
+// Token: 0x02000057 RID: 87
 [NullableContext(1)]
 [Nullable(0)]
 public class PriorityQueue<[Nullable(2)] T> : IClearable
 {
-	// Token: 0x0600026A RID: 618 RVA: 0x0000D96C File Offset: 0x0000BB6C
+	// Token: 0x060002A5 RID: 677 RVA: 0x0000E754 File Offset: 0x0000C954
 	public PriorityQueue(Comparison<T> compare)
 	{
 		this._Compare = compare;
 	}
 
-	// Token: 0x0600026B RID: 619 RVA: 0x0000D994 File Offset: 0x0000BB94
+	// Token: 0x060002A6 RID: 678 RVA: 0x0000E77C File Offset: 0x0000C97C
 	public void Clone(PriorityQueue<T> origin)
 	{
 		this.Clear();
@@ -28,8 +28,8 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		}
 	}
 
-	// Token: 0x17000052 RID: 82
-	// (get) Token: 0x0600026C RID: 620 RVA: 0x0000DA48 File Offset: 0x0000BC48
+	// Token: 0x17000059 RID: 89
+	// (get) Token: 0x060002A7 RID: 679 RVA: 0x0000E830 File Offset: 0x0000CA30
 	public int Size
 	{
 		get
@@ -38,8 +38,8 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		}
 	}
 
-	// Token: 0x17000053 RID: 83
-	// (get) Token: 0x0600026D RID: 621 RVA: 0x0000DA55 File Offset: 0x0000BC55
+	// Token: 0x1700005A RID: 90
+	// (get) Token: 0x060002A8 RID: 680 RVA: 0x0000E83D File Offset: 0x0000CA3D
 	public bool Empty
 	{
 		get
@@ -48,8 +48,8 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		}
 	}
 
-	// Token: 0x17000054 RID: 84
-	// (get) Token: 0x0600026E RID: 622 RVA: 0x0000DA68 File Offset: 0x0000BC68
+	// Token: 0x1700005B RID: 91
+	// (get) Token: 0x060002A9 RID: 681 RVA: 0x0000E850 File Offset: 0x0000CA50
 	[Nullable(2)]
 	public T Top
 	{
@@ -65,20 +65,20 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		}
 	}
 
-	// Token: 0x0600026F RID: 623 RVA: 0x0000DAB4 File Offset: 0x0000BCB4
+	// Token: 0x060002AA RID: 682 RVA: 0x0000E89C File Offset: 0x0000CA9C
 	public void Clear()
 	{
 		this._Heap.Clear();
 		this._Hash.Clear();
 	}
 
-	// Token: 0x06000270 RID: 624 RVA: 0x0000DACC File Offset: 0x0000BCCC
+	// Token: 0x060002AB RID: 683 RVA: 0x0000E8B4 File Offset: 0x0000CAB4
 	public bool Has(T item)
 	{
 		return this._Hash.ContainsKey(item);
 	}
 
-	// Token: 0x06000271 RID: 625 RVA: 0x0000DADC File Offset: 0x0000BCDC
+	// Token: 0x060002AC RID: 684 RVA: 0x0000E8C4 File Offset: 0x0000CAC4
 	public void ForEach(Func<T, bool> callback)
 	{
 		foreach (T arg in this._Heap)
@@ -90,7 +90,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		}
 	}
 
-	// Token: 0x06000272 RID: 626 RVA: 0x0000DB34 File Offset: 0x0000BD34
+	// Token: 0x060002AD RID: 685 RVA: 0x0000E91C File Offset: 0x0000CB1C
 	public void Push(T item)
 	{
 		int count = this._Heap.Count;
@@ -99,7 +99,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		this.Up(count);
 	}
 
-	// Token: 0x06000273 RID: 627 RVA: 0x0000DB70 File Offset: 0x0000BD70
+	// Token: 0x060002AE RID: 686 RVA: 0x0000E958 File Offset: 0x0000CB58
 	[NullableContext(2)]
 	public T Pop()
 	{
@@ -121,7 +121,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		return t;
 	}
 
-	// Token: 0x06000274 RID: 628 RVA: 0x0000DC2C File Offset: 0x0000BE2C
+	// Token: 0x060002AF RID: 687 RVA: 0x0000EA14 File Offset: 0x0000CC14
 	public bool Remove(T item)
 	{
 		int num;
@@ -145,7 +145,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		return true;
 	}
 
-	// Token: 0x06000275 RID: 629 RVA: 0x0000DD00 File Offset: 0x0000BF00
+	// Token: 0x060002B0 RID: 688 RVA: 0x0000EAE8 File Offset: 0x0000CCE8
 	public bool Update(T item)
 	{
 		int index;
@@ -161,7 +161,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		return true;
 	}
 
-	// Token: 0x06000276 RID: 630 RVA: 0x0000DD4C File Offset: 0x0000BF4C
+	// Token: 0x060002B1 RID: 689 RVA: 0x0000EB34 File Offset: 0x0000CD34
 	public void Heapify()
 	{
 		for (int i = (this._Heap.Count - 2) / 2; i >= 0; i--)
@@ -170,7 +170,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		}
 	}
 
-	// Token: 0x06000277 RID: 631 RVA: 0x0000DD7C File Offset: 0x0000BF7C
+	// Token: 0x060002B2 RID: 690 RVA: 0x0000EB64 File Offset: 0x0000CD64
 	private bool Up(int index)
 	{
 		bool result = false;
@@ -189,7 +189,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		return result;
 	}
 
-	// Token: 0x06000278 RID: 632 RVA: 0x0000DDCC File Offset: 0x0000BFCC
+	// Token: 0x060002B3 RID: 691 RVA: 0x0000EBB4 File Offset: 0x0000CDB4
 	private bool Down(int index)
 	{
 		bool result = false;
@@ -214,7 +214,7 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		return result;
 	}
 
-	// Token: 0x06000279 RID: 633 RVA: 0x0000DE70 File Offset: 0x0000C070
+	// Token: 0x060002B4 RID: 692 RVA: 0x0000EC58 File Offset: 0x0000CE58
 	private void Swap(int i, int j)
 	{
 		T value = this._Heap[i];
@@ -224,12 +224,12 @@ public class PriorityQueue<[Nullable(2)] T> : IClearable
 		this._Hash[this._Heap[j]] = j;
 	}
 
-	// Token: 0x040001E0 RID: 480
+	// Token: 0x040001F6 RID: 502
 	private readonly List<T> _Heap = new List<T>();
 
-	// Token: 0x040001E1 RID: 481
+	// Token: 0x040001F7 RID: 503
 	private readonly Dictionary<T, int> _Hash = new Dictionary<T, int>();
 
-	// Token: 0x040001E2 RID: 482
+	// Token: 0x040001F8 RID: 504
 	private readonly Comparison<T> _Compare;
 }

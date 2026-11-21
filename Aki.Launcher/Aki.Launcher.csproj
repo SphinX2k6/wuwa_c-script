@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37600991-511A-49CC-9A91-B04AB32BBB5F}</ProjectGuid>
+    <ProjectGuid>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F97}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aki.Launcher</RootNamespace>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,53 +32,36 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Google.FlatBuffers">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
-    </Reference>
-    <Reference Include="Sharphereal.Core">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Sharphereal.ThirdParty.UniTask">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.ThirdParty.UniTask.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.StackTrace">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Diagnostics.StackTrace.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Linq">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Linq.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Diagnostics.StackTrace.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.InteropServices.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.InteropServices.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Numerics">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.Numerics.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Encoding.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encodings.Web">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Json">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Json.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.RegularExpressions.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.RegularExpressions.dll</HintPath>
     </Reference>
     <Reference Include="UniTask">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UniTask.dll</HintPath>
-    </Reference>
-    <Reference Include="UnrealEngine">
-      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UnrealEngine.dll</HintPath>
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\CSharpDump\Assemblies\UniTask.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +75,8 @@
     <Compile Include="--y__InlineArray5.cs" />
     <Compile Include="--y__InlineArray6.cs" />
     <Compile Include="--y__InlineArray7.cs" />
+    <Compile Include="--y__InlineArray8.cs" />
+    <Compile Include="--y__InlineArray9.cs" />
     <Compile Include="-Module-.cs" />
     <Compile Include="AkiClient\Game\Aki\Core\BP_MainGameInstance_C.cs" />
     <Compile Include="AkiClient\Game\Aki\HotPatch\OnAnyKeyPressCallback.cs" />
@@ -167,6 +153,8 @@
     <Compile Include="CSharpScript\Launcher\BaseConfig\TPublicConfigKeyExtensions.cs" />
     <Compile Include="CSharpScript\Launcher\BaseConfig\TPublicConfigKeyJsonConverter.cs" />
     <Compile Include="CSharpScript\Launcher\BaseConfig\VersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\VulkanSettingConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\VulkanSettingIntegerConverter.cs" />
     <Compile Include="CSharpScript\Launcher\CSharpScriptBuildInfo.cs" />
     <Compile Include="CSharpScript\Launcher\Define\DbInfo.cs" />
     <Compile Include="CSharpScript\Launcher\Define\EResFile.cs" />
@@ -267,6 +255,7 @@
     <Compile Include="CSharpScript\Launcher\EAppPlatform.cs" />
     <Compile Include="CSharpScript\Launcher\EHotPatchState.cs" />
     <Compile Include="CSharpScript\Launcher\ENetworkType.cs" />
+    <Compile Include="CSharpScript\Launcher\EStartupTimingStep.cs" />
     <Compile Include="CSharpScript\Launcher\ETsCompileShaderBatchMode.cs" />
     <Compile Include="CSharpScript\Launcher\Framework\ITickable.cs" />
     <Compile Include="CSharpScript\Launcher\HotPatch.cs" />
@@ -285,6 +274,7 @@
     <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkWindows.cs" />
     <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkWindowsGlobal.cs" />
     <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkXboxGlobal.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\OpenHarmonyGameWindowStateData.cs" />
     <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkCheckVersionEnd.cs" />
     <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkCheckVersionFail.cs" />
     <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkCheckVersionStart.cs" />
@@ -536,6 +526,7 @@
     <Compile Include="CSharpScript\Launcher\SoPatch\SoPathConfig.cs" />
     <Compile Include="CSharpScript\Launcher\SoPatch\SoVersion.cs" />
     <Compile Include="CSharpScript\Launcher\SoPatch\VersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\StartupTimingLog.cs" />
     <Compile Include="CSharpScript\Launcher\StorageAlertLog.cs" />
     <Compile Include="CSharpScript\Launcher\ThinkDataReport\RealKRDataLaunchReporter.cs" />
     <Compile Include="CSharpScript\Launcher\ThinkDataReport\RealThinkDataLaunchReporter.cs" />
@@ -576,6 +567,7 @@
     <Compile Include="CSharpScript\Launcher\Ui\HotFix\IHotFixLayoutData.cs" />
     <Compile Include="CSharpScript\Launcher\Ui\HotFix\IHotFixLayoutItem.cs" />
     <Compile Include="CSharpScript\Launcher\Ui\HotFix\IResourceUpdateView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\LauncherLogUploadView.cs" />
     <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionEntryItem.cs" />
     <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionLayoutItemData.cs" />
     <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionModel.cs" />
@@ -683,6 +675,7 @@
     <Compile Include="CSharpScript\Launcher\Util\LauncherGameSettingLib.cs" />
     <Compile Include="CSharpScript\Launcher\Util\LauncherJson.cs" />
     <Compile Include="CSharpScript\Launcher\Util\LauncherLanguageLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherPackageStateLib.cs" />
     <Compile Include="CSharpScript\Launcher\Util\LauncherResourceLib.cs" />
     <Compile Include="CSharpScript\Launcher\Util\LauncherStorageLib.cs" />
     <Compile Include="CSharpScript\Launcher\Util\LauncherTextLib.cs" />
@@ -724,6 +717,32 @@
     <Compile Include="__TsHotPatchPanelConfig_SubClassMissingExportProxy.cs" />
     <Compile Include="__TsSplash_InheritProxy.cs" />
     <Compile Include="__TsSplash_SubClassMissingExportProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sharphereal.Core\Sharphereal.Core.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F9E}</Project>
+      <Name>Sharphereal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharphereal.ThirdParty.UniTask\Sharphereal.ThirdParty.UniTask.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8F9F}</Project>
+      <Name>Sharphereal.ThirdParty.UniTask</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Collections\System.Collections.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA0}</Project>
+      <Name>System.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Runtime\System.Runtime.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA2}</Project>
+      <Name>System.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Text.Json\System.Text.Json.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA3}</Project>
+      <Name>System.Text.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnrealEngine\UnrealEngine.csproj">
+      <Project>{03A230D2-6EEE-4B35-BE86-5EB1E30E8FA4}</Project>
+      <Name>UnrealEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

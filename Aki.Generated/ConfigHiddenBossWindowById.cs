@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003D5 RID: 981
+	// Token: 0x020003EB RID: 1003
 	public class ConfigHiddenBossWindowById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001705 RID: 5893 RVA: 0x000DBA30 File Offset: 0x000D9C30
+		// Token: 0x06001789 RID: 6025 RVA: 0x000E2184 File Offset: 0x000E0384
 		static ConfigHiddenBossWindowById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHiddenBossWindowById.CreateStaticDefaultValue), new Action(ConfigHiddenBossWindowById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001706 RID: 5894 RVA: 0x000DBA50 File Offset: 0x000D9C50
+		// Token: 0x0600178A RID: 6026 RVA: 0x000E21A4 File Offset: 0x000E03A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHiddenBossWindowById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001707 RID: 5895 RVA: 0x000DBACF File Offset: 0x000D9CCF
+		// Token: 0x0600178B RID: 6027 RVA: 0x000E2223 File Offset: 0x000E0423
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHiddenBossWindowById.LogPair = null;
 			ConfigHiddenBossWindowById.HandleId = 0;
 		}
 
-		// Token: 0x06001708 RID: 5896 RVA: 0x000DBADD File Offset: 0x000D9CDD
+		// Token: 0x0600178C RID: 6028 RVA: 0x000E2231 File Offset: 0x000E0431
 		public static void Init()
 		{
 			ConfigHiddenBossWindowById.HandleId = ConfigCommon.InitDataStatement(ConfigHiddenBossWindowById.HandleId, "db_punishreport.db", "select BinData from `HiddenBossWindow` where Id=?");
 		}
 
-		// Token: 0x06001709 RID: 5897 RVA: 0x000DBAF8 File Offset: 0x000D9CF8
+		// Token: 0x0600178D RID: 6029 RVA: 0x000E224C File Offset: 0x000E044C
 		public static HiddenBossWindow? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHiddenBossWindowById.HandleId, ConfigHiddenBossWindowById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HiddenBossWindow?(rootAsHiddenBossWindow);
 		}
 
-		// Token: 0x04001AB7 RID: 6839
+		// Token: 0x04001B51 RID: 6993
 		private const string DB = "db_punishreport.db";
 
-		// Token: 0x04001AB8 RID: 6840
+		// Token: 0x04001B52 RID: 6994
 		private const string FILE = "t.讨伐报告.xlsx";
 
-		// Token: 0x04001AB9 RID: 6841
+		// Token: 0x04001B53 RID: 6995
 		private const string TABLE = "HiddenBossWindow";
 
-		// Token: 0x04001ABA RID: 6842
+		// Token: 0x04001B54 RID: 6996
 		private const string COMMAND = "select BinData from `HiddenBossWindow` where Id=?";
 
-		// Token: 0x04001ABB RID: 6843
+		// Token: 0x04001B55 RID: 6997
 		private const string KEY_PREFIX = "HiddenBossWindowById";
 
-		// Token: 0x04001ABC RID: 6844
+		// Token: 0x04001B56 RID: 6998
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001ABD RID: 6845
+		// Token: 0x04001B57 RID: 6999
 		private static int HandleId;
 	}
 }

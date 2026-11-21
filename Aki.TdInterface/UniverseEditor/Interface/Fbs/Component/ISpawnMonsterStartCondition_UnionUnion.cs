@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005966 RID: 22886
+	// Token: 0x02005F73 RID: 24435
 	public class ISpawnMonsterStartCondition_UnionUnion
 	{
-		// Token: 0x1700ABC2 RID: 43970
-		// (get) Token: 0x06026BC9 RID: 158665 RVA: 0x0055559D File Offset: 0x0055379D
-		// (set) Token: 0x06026BCA RID: 158666 RVA: 0x005555A5 File Offset: 0x005537A5
+		// Token: 0x1700B4F6 RID: 46326
+		// (get) Token: 0x06029133 RID: 168243 RVA: 0x0059C209 File Offset: 0x0059A409
+		// (set) Token: 0x06029134 RID: 168244 RVA: 0x0059C211 File Offset: 0x0059A411
 		public ISpawnMonsterStartCondition_Union Type { get; set; }
 
-		// Token: 0x1700ABC3 RID: 43971
-		// (get) Token: 0x06026BCB RID: 158667 RVA: 0x005555AE File Offset: 0x005537AE
-		// (set) Token: 0x06026BCC RID: 158668 RVA: 0x005555B6 File Offset: 0x005537B6
+		// Token: 0x1700B4F7 RID: 46327
+		// (get) Token: 0x06029135 RID: 168245 RVA: 0x0059C21A File Offset: 0x0059A41A
+		// (set) Token: 0x06029136 RID: 168246 RVA: 0x0059C222 File Offset: 0x0059A422
 		public object Value { get; set; }
 
-		// Token: 0x06026BCD RID: 158669 RVA: 0x005555BF File Offset: 0x005537BF
+		// Token: 0x06029137 RID: 168247 RVA: 0x0059C22B File Offset: 0x0059A42B
 		public ISpawnMonsterStartCondition_UnionUnion()
 		{
 			this.Type = ISpawnMonsterStartCondition_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06026BCE RID: 158670 RVA: 0x005555D5 File Offset: 0x005537D5
+		// Token: 0x06029138 RID: 168248 RVA: 0x0059C241 File Offset: 0x0059A441
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06026BCF RID: 158671 RVA: 0x005555E7 File Offset: 0x005537E7
+		// Token: 0x06029139 RID: 168249 RVA: 0x0059C253 File Offset: 0x0059A453
 		public ISpawnMonsterStartConditionT AsISpawnMonsterStartCondition()
 		{
 			return this.As<ISpawnMonsterStartConditionT>();
 		}
 
-		// Token: 0x06026BD0 RID: 158672 RVA: 0x005555EF File Offset: 0x005537EF
+		// Token: 0x0602913A RID: 168250 RVA: 0x0059C25B File Offset: 0x0059A45B
 		public static ISpawnMonsterStartCondition_UnionUnion FromISpawnMonsterStartCondition(ISpawnMonsterStartConditionT _ispawnmonsterstartcondition)
 		{
 			return new ISpawnMonsterStartCondition_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026BD1 RID: 158673 RVA: 0x00555604 File Offset: 0x00553804
+		// Token: 0x0602913B RID: 168251 RVA: 0x0059C270 File Offset: 0x0059A470
 		public IImmediateStartConditionT AsIImmediateStartCondition()
 		{
 			return this.As<IImmediateStartConditionT>();
 		}
 
-		// Token: 0x06026BD2 RID: 158674 RVA: 0x0055560C File Offset: 0x0055380C
+		// Token: 0x0602913C RID: 168252 RVA: 0x0059C278 File Offset: 0x0059A478
 		public static ISpawnMonsterStartCondition_UnionUnion FromIImmediateStartCondition(IImmediateStartConditionT _iimmediatestartcondition)
 		{
 			return new ISpawnMonsterStartCondition_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026BD3 RID: 158675 RVA: 0x00555621 File Offset: 0x00553821
+		// Token: 0x0602913D RID: 168253 RVA: 0x0059C28D File Offset: 0x0059A48D
 		public ITriggerRangeStartConditionT AsITriggerRangeStartCondition()
 		{
 			return this.As<ITriggerRangeStartConditionT>();
 		}
 
-		// Token: 0x06026BD4 RID: 158676 RVA: 0x00555629 File Offset: 0x00553829
+		// Token: 0x0602913E RID: 168254 RVA: 0x0059C295 File Offset: 0x0059A495
 		public static ISpawnMonsterStartCondition_UnionUnion FromITriggerRangeStartCondition(ITriggerRangeStartConditionT _itriggerrangestartcondition)
 		{
 			return new ISpawnMonsterStartCondition_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026BD5 RID: 158677 RVA: 0x00555640 File Offset: 0x00553840
+		// Token: 0x0602913F RID: 168255 RVA: 0x0059C2AC File Offset: 0x0059A4AC
 		public static int Pack(FlatBufferBuilder builder, ISpawnMonsterStartCondition_UnionUnion _o)
 		{
 			switch (_o.Type)

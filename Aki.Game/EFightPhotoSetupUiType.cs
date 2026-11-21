@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001272 RID: 4722
+// Token: 0x02000726 RID: 1830
 public enum EFightPhotoSetupUiType
 {
-	// Token: 0x04003A69 RID: 14953
+	// Token: 0x04003B01 RID: 15105
 	Slider,
-	// Token: 0x04003A6A RID: 14954
+	// Token: 0x04003B02 RID: 15106
 	DropDown,
-	// Token: 0x04003A6B RID: 14955
+	// Token: 0x04003B03 RID: 15107
 	Scroll
 }

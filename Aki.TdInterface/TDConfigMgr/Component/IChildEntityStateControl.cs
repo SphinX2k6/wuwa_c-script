@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200023D RID: 573
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000264 RID: 612
 	public class IChildEntityStateControl
 	{
-		// Token: 0x06000A36 RID: 2614 RVA: 0x0002AEF4 File Offset: 0x000290F4
+		// Token: 0x06000AAA RID: 2730 RVA: 0x0002C6B4 File Offset: 0x0002A8B4
 		private IChildEntityStateControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A37 RID: 2615 RVA: 0x0002AF2C File Offset: 0x0002912C
+		// Token: 0x06000AAB RID: 2731 RVA: 0x0002C6EC File Offset: 0x0002A8EC
 		public static IChildEntityStateControl Create([Nullable(2)] IChildEntityStateControl instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A38 RID: 2616 RVA: 0x0002AF3F File Offset: 0x0002913F
+		// Token: 0x06000AAC RID: 2732 RVA: 0x0002C6FF File Offset: 0x0002A8FF
 		public static IChildEntityStateControl CreateFromSetValue([Nullable(2)] IChildEntityStateControl_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A39 RID: 2617 RVA: 0x0002AF52 File Offset: 0x00029152
+		// Token: 0x06000AAD RID: 2733 RVA: 0x0002C712 File Offset: 0x0002A912
 		public IChildEntityStateControl_SetValue ToSetValue()
 		{
 			return new IChildEntityStateControl_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700031D RID: 797
-		// (get) Token: 0x06000A3A RID: 2618 RVA: 0x0002AF7D File Offset: 0x0002917D
-		// (set) Token: 0x06000A3B RID: 2619 RVA: 0x0002AFA8 File Offset: 0x000291A8
+		// Token: 0x1700033C RID: 828
+		// (get) Token: 0x06000AAE RID: 2734 RVA: 0x0002C73D File Offset: 0x0002A93D
+		// (set) Token: 0x06000AAF RID: 2735 RVA: 0x0002C768 File Offset: 0x0002A968
 		public virtual ETemplateEntityGroupType GroupType
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700031E RID: 798
-		// (get) Token: 0x06000A3C RID: 2620 RVA: 0x0002AFB6 File Offset: 0x000291B6
-		// (set) Token: 0x06000A3D RID: 2621 RVA: 0x0002AFE1 File Offset: 0x000291E1
+		// Token: 0x1700033D RID: 829
+		// (get) Token: 0x06000AB0 RID: 2736 RVA: 0x0002C776 File Offset: 0x0002A976
+		// (set) Token: 0x06000AB1 RID: 2737 RVA: 0x0002C7A1 File Offset: 0x0002A9A1
 		public virtual string InitState
 		{
 			get
@@ -108,20 +106,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700031F RID: 799
-		// (get) Token: 0x06000A3E RID: 2622 RVA: 0x0002AFF0 File Offset: 0x000291F0
-		// (set) Token: 0x06000A3F RID: 2623 RVA: 0x0002B083 File Offset: 0x00029283
+		// Token: 0x1700033E RID: 830
+		// (get) Token: 0x06000AB2 RID: 2738 RVA: 0x0002C7B0 File Offset: 0x0002A9B0
+		// (set) Token: 0x06000AB3 RID: 2739 RVA: 0x0002C843 File Offset: 0x0002AA43
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IChildStateChangedConfig> OnChildStateChangedConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -152,7 +150,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -161,23 +159,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A45 RID: 2629
+		// Token: 0x04000ACF RID: 2767
 		[Nullable(2)]
 		protected IChildEntityStateControl FbInstance;
 
-		// Token: 0x04000A46 RID: 2630
+		// Token: 0x04000AD0 RID: 2768
 		[Nullable(2)]
 		protected IChildEntityStateControl_SetValue PocoInterface;
 
-		// Token: 0x04000A47 RID: 2631
+		// Token: 0x04000AD1 RID: 2769
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IChildStateChangedConfig> _OnChildStateChangedConfigsCache;
 
-		// Token: 0x04000A48 RID: 2632
+		// Token: 0x04000AD2 RID: 2770
 		private bool _OnChildStateChangedConfigsInited;
 	}
 }

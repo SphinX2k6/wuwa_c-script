@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006821 RID: 26657
+	// Token: 0x02005771 RID: 22385
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlLoadingView : UiViewBase
 	{
-		// Token: 0x06042850 RID: 272464 RVA: 0x0102A030 File Offset: 0x01028230
+		// Token: 0x060373A4 RID: 226212 RVA: 0x00F6B56C File Offset: 0x00F6976C
 		public DangoBrawlLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042851 RID: 272465 RVA: 0x0102A068 File Offset: 0x01028268
+		// Token: 0x060373A5 RID: 226213 RVA: 0x00F6B5A4 File Offset: 0x00F697A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042852 RID: 272466 RVA: 0x0102A1BC File Offset: 0x010283BC
+		// Token: 0x060373A6 RID: 226214 RVA: 0x00F6B6F8 File Offset: 0x00F698F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlLoadingView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042853 RID: 272467 RVA: 0x0102A1FF File Offset: 0x010283FF
+		// Token: 0x060373A7 RID: 226215 RVA: 0x00F6B73B File Offset: 0x00F6993B
 		protected override void OnStart()
 		{
 			this.RefreshInfo();
 		}
 
-		// Token: 0x06042854 RID: 272468 RVA: 0x0102A207 File Offset: 0x01028407
+		// Token: 0x060373A8 RID: 226216 RVA: 0x00F6B743 File Offset: 0x00F69943
 		protected override void OnBeforeDestroy()
 		{
 			AUIBaseActor rootActor = this.RootActor;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			rootActor.OnSequencePlayEvent.Unbind();
 		}
 
-		// Token: 0x06042855 RID: 272469 RVA: 0x0102A21E File Offset: 0x0102841E
+		// Token: 0x060373A9 RID: 226217 RVA: 0x00F6B75A File Offset: 0x00F6995A
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "TrashTalkSelf")
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042856 RID: 272470 RVA: 0x0102A258 File Offset: 0x01028458
+		// Token: 0x060373AA RID: 226218 RVA: 0x00F6B794 File Offset: 0x00F69994
 		private void PostTrashTalkAudio(bool isSelf, string eventName)
 		{
 			if (string.IsNullOrEmpty(eventName))
@@ -127,13 +127,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			AudioSystem.Instance.PostEvent(eventName, acharacter2, null);
 		}
 
-		// Token: 0x06042857 RID: 272471 RVA: 0x0102A2C1 File Offset: 0x010284C1
+		// Token: 0x060373AB RID: 226219 RVA: 0x00F6B7FD File Offset: 0x00F699FD
 		protected override void OnFinishShow()
 		{
 			this.DoOnFinishShow().Forget();
 		}
 
-		// Token: 0x06042858 RID: 272472 RVA: 0x0102A2D0 File Offset: 0x010284D0
+		// Token: 0x060373AC RID: 226220 RVA: 0x00F6B80C File Offset: 0x00F69A0C
 		private void RefreshInfo()
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), this.OpponentTrashTalkTextKey, Array.Empty<object>());
 		}
 
-		// Token: 0x06042859 RID: 272473 RVA: 0x0102A4E8 File Offset: 0x010286E8
+		// Token: 0x060373AD RID: 226221 RVA: 0x00F6BA24 File Offset: 0x00F69C24
 		private void RefreshOccupationIcon(int occupationId, int texComp)
 		{
 			DangoBrawlOccupation? occupationConfigById = DangoBrawlConfig.Instance.GetOccupationConfigById(occupationId);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.SetTextureByPath(occupationConfigById.Value.Icon, base.GetTexture(texComp), null, null);
 		}
 
-		// Token: 0x0604285A RID: 272474 RVA: 0x0102A534 File Offset: 0x01028734
+		// Token: 0x060373AE RID: 226222 RVA: 0x00F6BA70 File Offset: 0x00F69C70
 		[return: TupleElementNames(new string[]
 		{
 			"TextKey",
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new ValueTuple<string, string>(config.Value.Textkey, config.Value.AudioEvent);
 		}
 
-		// Token: 0x0604285B RID: 272475 RVA: 0x0102A5D8 File Offset: 0x010287D8
+		// Token: 0x060373AF RID: 226223 RVA: 0x00F6BB14 File Offset: 0x00F69D14
 		private UniTask DoOnFinishShow()
 		{
 			DangoBrawlLoadingView.<DoOnFinishShow>d__16 <DoOnFinishShow>d__;
@@ -242,39 +242,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <DoOnFinishShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04022A97 RID: 141975
+		// Token: 0x0401D2F4 RID: 119540
 		private string SelfTrashTalkTextKey = string.Empty;
 
-		// Token: 0x04022A98 RID: 141976
+		// Token: 0x0401D2F5 RID: 119541
 		private string OpponentTrashTalkTextKey = string.Empty;
 
-		// Token: 0x04022A99 RID: 141977
+		// Token: 0x0401D2F6 RID: 119542
 		private string SelfTrashTalkAudioEvent = string.Empty;
 
-		// Token: 0x04022A9A RID: 141978
+		// Token: 0x0401D2F7 RID: 119543
 		private string OpponentTrashTalkAudioEvent = string.Empty;
 
-		// Token: 0x0200C9BB RID: 51643
+		// Token: 0x0200B387 RID: 45959
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CF1C RID: 249628
+			// Token: 0x04037806 RID: 227334
 			TxtMode,
-			// Token: 0x0403CF1D RID: 249629
+			// Token: 0x04037807 RID: 227335
 			TxtTitle,
-			// Token: 0x0403CF1E RID: 249630
+			// Token: 0x04037808 RID: 227336
 			TxtContentLeft,
-			// Token: 0x0403CF1F RID: 249631
+			// Token: 0x04037809 RID: 227337
 			TxtContentRight,
-			// Token: 0x0403CF20 RID: 249632
+			// Token: 0x0403780A RID: 227338
 			TexIconBlue,
-			// Token: 0x0403CF21 RID: 249633
+			// Token: 0x0403780B RID: 227339
 			TxtNameBlue,
-			// Token: 0x0403CF22 RID: 249634
+			// Token: 0x0403780C RID: 227340
 			TexIconRed,
-			// Token: 0x0403CF23 RID: 249635
+			// Token: 0x0403780D RID: 227341
 			TxtNameRed,
-			// Token: 0x0403CF24 RID: 249636
+			// Token: 0x0403780E RID: 227342
 			UIView_BackpackBrawlLoading
 		}
 	}

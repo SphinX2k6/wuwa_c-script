@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065EA RID: 26090
+	// Token: 0x02006C55 RID: 27733
 	public static class IDisableModulePlayerOperationVerify
 	{
-		// Token: 0x0602D466 RID: 185446 RVA: 0x00634940 File Offset: 0x00632B40
+		// Token: 0x0602FC13 RID: 195603 RVA: 0x0068117C File Offset: 0x0067F37C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false))
@@ -55,9 +55,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 								{
 									verifyAction5 = (IDisableModulePlayerOperationVerify.<>O.<4>__Verify = new VerifyUnionAction(TSceneInteractionOperationVerify.Verify));
 								}
-								if (verifier.VerifyUnion(tablePos, typeIdVOffset5, valueVOffset5, verifyAction5, false))
+								if (verifier.VerifyUnion(tablePos, typeIdVOffset5, valueVOffset5, verifyAction5, false) && verifier.VerifyField(tablePos, 26, 1UL, 1UL, false))
 								{
-									return verifier.VerifyTableEnd(tablePos);
+									short typeIdVOffset6 = 26;
+									short valueVOffset6 = 28;
+									VerifyUnionAction verifyAction6;
+									if ((verifyAction6 = IDisableModulePlayerOperationVerify.<>O.<5>__Verify) == null)
+									{
+										verifyAction6 = (IDisableModulePlayerOperationVerify.<>O.<5>__Verify = new VerifyUnionAction(TPlayerAiControlVerify.Verify));
+									}
+									if (verifier.VerifyUnion(tablePos, typeIdVOffset6, valueVOffset6, verifyAction6, false))
+									{
+										return verifier.VerifyTableEnd(tablePos);
+									}
 								}
 							}
 						}
@@ -67,24 +77,27 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007D42 RID: 32066
+		// Token: 0x020085B9 RID: 34233
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040138B7 RID: 80055
+			// Token: 0x04014962 RID: 84322
 			public static VerifyUnionAction <0>__Verify;
 
-			// Token: 0x040138B8 RID: 80056
+			// Token: 0x04014963 RID: 84323
 			public static VerifyUnionAction <1>__Verify;
 
-			// Token: 0x040138B9 RID: 80057
+			// Token: 0x04014964 RID: 84324
 			public static VerifyUnionAction <2>__Verify;
 
-			// Token: 0x040138BA RID: 80058
+			// Token: 0x04014965 RID: 84325
 			public static VerifyUnionAction <3>__Verify;
 
-			// Token: 0x040138BB RID: 80059
+			// Token: 0x04014966 RID: 84326
 			public static VerifyUnionAction <4>__Verify;
+
+			// Token: 0x04014967 RID: 84327
+			public static VerifyUnionAction <5>__Verify;
 		}
 	}
 }

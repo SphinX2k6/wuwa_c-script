@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000984 RID: 2436
+	// Token: 0x02000A37 RID: 2615
 	public static class EJigsawCompleteConditionExtensions
 	{
-		// Token: 0x06003683 RID: 13955 RVA: 0x0008E09C File Offset: 0x0008C29C
+		// Token: 0x06003A0A RID: 14858 RVA: 0x00096008 File Offset: 0x00094208
 		public static string ToEnumString(this EJigsawCompleteCondition value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003684 RID: 13956 RVA: 0x0008E0F0 File Offset: 0x0008C2F0
+		// Token: 0x06003A0B RID: 14859 RVA: 0x0009605C File Offset: 0x0009425C
 		public static EJigsawCompleteCondition FromString(string name)
 		{
 			EJigsawCompleteCondition result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003685 RID: 13957 RVA: 0x0008E11C File Offset: 0x0008C31C
+		// Token: 0x06003A0C RID: 14860 RVA: 0x00096088 File Offset: 0x00094288
 		public static bool TryFromString(string name, out EJigsawCompleteCondition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003686 RID: 13958 RVA: 0x0008E184 File Offset: 0x0008C384
+		// Token: 0x06003A0D RID: 14861 RVA: 0x000960F0 File Offset: 0x000942F0
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003687 RID: 13959 RVA: 0x0008E1AC File Offset: 0x0008C3AC
+		// Token: 0x06003A0E RID: 14862 RVA: 0x00096118 File Offset: 0x00094318
 		public static EJigsawCompleteCondition[] GetValues()
 		{
 			return new EJigsawCompleteCondition[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003688 RID: 13960 RVA: 0x0008E1BF File Offset: 0x0008C3BF
+		// Token: 0x06003A0F RID: 14863 RVA: 0x0009612B File Offset: 0x0009432B
 		public static string[] GetNames()
 		{
 			return new string[]

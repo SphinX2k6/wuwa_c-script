@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042AD RID: 17069
+	// Token: 0x02004709 RID: 18185
 	public enum IWordArtResourceType_Union : byte
 	{
-		// Token: 0x0400BF51 RID: 48977
+		// Token: 0x0400C95E RID: 51550
 		NONE,
-		// Token: 0x0400BF52 RID: 48978
+		// Token: 0x0400C95F RID: 51551
 		IWordArtResourceType,
-		// Token: 0x0400BF53 RID: 48979
+		// Token: 0x0400C960 RID: 51552
 		IWordArtDefaultResourceType
 	}
 }

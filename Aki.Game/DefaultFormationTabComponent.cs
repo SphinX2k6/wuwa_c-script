@@ -3,66 +3,66 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001C07 RID: 7175
+// Token: 0x020010C6 RID: 4294
 [NullableContext(1)]
 [Nullable(0)]
 internal sealed class DefaultFormationTabComponent : IFormationTabComponent
 {
-	// Token: 0x0600D692 RID: 54930 RVA: 0x0031A158 File Offset: 0x00318358
+	// Token: 0x0600AAA5 RID: 43685 RVA: 0x00325448 File Offset: 0x00323648
 	public DefaultFormationTabComponent(UUIItem uiItem, CommonTabComponentData<EditFormationTabItem> data)
 	{
 		this.Component = new TabComponentWithTitle<EditFormationTabItem>(uiItem, data);
 	}
 
-	// Token: 0x0600D693 RID: 54931 RVA: 0x0031A16D File Offset: 0x0031836D
+	// Token: 0x0600AAA6 RID: 43686 RVA: 0x0032545D File Offset: 0x0032365D
 	public void Destroy()
 	{
 		this.Component.Destroy(null);
 	}
 
-	// Token: 0x0600D694 RID: 54932 RVA: 0x0031A17B File Offset: 0x0031837B
+	// Token: 0x0600AAA7 RID: 43687 RVA: 0x0032546B File Offset: 0x0032366B
 	public UniTask RefreshTabItemAsync(int length)
 	{
 		return this.Component.RefreshTabItemAsync(length);
 	}
 
-	// Token: 0x0600D695 RID: 54933 RVA: 0x0031A189 File Offset: 0x00318389
+	// Token: 0x0600AAA8 RID: 43688 RVA: 0x00325479 File Offset: 0x00323679
 	public void SelectToggleByIndex(int index, bool bIgnored = false)
 	{
 		this.Component.SelectToggleByIndex(index, bIgnored);
 	}
 
-	// Token: 0x0600D696 RID: 54934 RVA: 0x0031A198 File Offset: 0x00318398
+	// Token: 0x0600AAA9 RID: 43689 RVA: 0x00325488 File Offset: 0x00323688
 	public int GetSelectedIndex()
 	{
 		return this.Component.GetSelectedIndex();
 	}
 
-	// Token: 0x0600D697 RID: 54935 RVA: 0x0031A1A5 File Offset: 0x003183A5
+	// Token: 0x0600AAAA RID: 43690 RVA: 0x00325495 File Offset: 0x00323695
 	public void ScrollToToggleByIndex(int index)
 	{
 		this.Component.ScrollToToggleByIndex(index);
 	}
 
-	// Token: 0x0600D698 RID: 54936 RVA: 0x0031A1B3 File Offset: 0x003183B3
+	// Token: 0x0600AAAB RID: 43691 RVA: 0x003254A3 File Offset: 0x003236A3
 	[NullableContext(2)]
 	public EditFormationTabItem GetTabItemByIndex(int index)
 	{
 		return this.Component.GetTabItemByIndex(index);
 	}
 
-	// Token: 0x0600D699 RID: 54937 RVA: 0x0031A1C1 File Offset: 0x003183C1
+	// Token: 0x0600AAAC RID: 43692 RVA: 0x003254B1 File Offset: 0x003236B1
 	public void RefreshTitleByIndex(int index)
 	{
 		this.Component.RefreshTitleByIndex(index);
 	}
 
-	// Token: 0x0600D69A RID: 54938 RVA: 0x0031A1CF File Offset: 0x003183CF
+	// Token: 0x0600AAAD RID: 43693 RVA: 0x003254BF File Offset: 0x003236BF
 	public void SetCanChange(Func<int, bool> callback)
 	{
 		this.Component.SetCanChange(callback);
 	}
 
-	// Token: 0x04006223 RID: 25123
+	// Token: 0x040062F5 RID: 25333
 	private readonly TabComponentWithTitle<EditFormationTabItem> Component;
 }

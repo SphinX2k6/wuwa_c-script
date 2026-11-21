@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using AkiClient.Game.Aki.Character.Vehicle.Motor.Data;
-using AkiClient.Game.Aki.Render.RuntimeBP.SnowCoverInteraction.BluePrints;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
@@ -10,14 +9,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 {
-	// Token: 0x02004034 RID: 16436
+	// Token: 0x0200328C RID: 12940
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Vehicle/Motor/BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C")]
-	[UnrealStructLayout(2272, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2272)]
+	[UnrealStructLayout(2288, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2273)]
 	public class BP_Motor_BaseVehicle_C : BP_BaseVehicle_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602A2C2 RID: 172738 RVA: 0x009D8224 File Offset: 0x009D6424
+		// Token: 0x0602062B RID: 132651 RVA: 0x00944F9F File Offset: 0x0094319F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_Motor_BaseVehicle_C._ClassPtr == IntPtr.Zero)
@@ -27,277 +26,264 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 			return BP_Motor_BaseVehicle_C._ClassPtr;
 		}
 
-		// Token: 0x0602A2C3 RID: 172739 RVA: 0x009D8248 File Offset: 0x009D6448
+		// Token: 0x0602062C RID: 132652 RVA: 0x00944FC4 File Offset: 0x009431C4
 		public BP_Motor_BaseVehicle_C() : this(BuiltinUtils.AllocNativeUObject(BP_Motor_BaseVehicle_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602A2C4 RID: 172740 RVA: 0x009D8270 File Offset: 0x009D6470
+		// Token: 0x0602062D RID: 132653 RVA: 0x00944FEC File Offset: 0x009431EC
 		[NullableContext(1)]
 		public BP_Motor_BaseVehicle_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_Motor_BaseVehicle_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700670A RID: 26378
-		// (get) Token: 0x0602A2C5 RID: 172741 RVA: 0x009D82A3 File Offset: 0x009D64A3
-		// (set) Token: 0x0602A2C6 RID: 172742 RVA: 0x009D82B7 File Offset: 0x009D64B7
-		public unsafe BP_MotorObjTrailActor_C BP_MotorObjTrailActor2
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_MotorObjTrailActor_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_1);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_1, value);
-			}
-		}
-
-		// Token: 0x1700670B RID: 26379
-		// (get) Token: 0x0602A2C7 RID: 172743 RVA: 0x009D82CC File Offset: 0x009D64CC
-		// (set) Token: 0x0602A2C8 RID: 172744 RVA: 0x009D82E0 File Offset: 0x009D64E0
-		public unsafe BP_MotorObjTrailActor_C BP_MotorObjTrailActor
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_MotorObjTrailActor_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_2);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_2, value);
-			}
-		}
-
-		// Token: 0x1700670C RID: 26380
-		// (get) Token: 0x0602A2C9 RID: 172745 RVA: 0x009D82F5 File Offset: 0x009D64F5
-		// (set) Token: 0x0602A2CA RID: 172746 RVA: 0x009D8309 File Offset: 0x009D6509
+		// Token: 0x17003EC4 RID: 16068
+		// (get) Token: 0x0602062E RID: 132654 RVA: 0x0094501F File Offset: 0x0094321F
+		// (set) Token: 0x0602062F RID: 132655 RVA: 0x00945033 File Offset: 0x00943233
 		public unsafe USkeletalMeshComponent OtherCase5
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase5);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase5, value);
 			}
 		}
 
-		// Token: 0x1700670D RID: 26381
-		// (get) Token: 0x0602A2CB RID: 172747 RVA: 0x009D831E File Offset: 0x009D651E
-		// (set) Token: 0x0602A2CC RID: 172748 RVA: 0x009D8332 File Offset: 0x009D6532
+		// Token: 0x17003EC5 RID: 16069
+		// (get) Token: 0x06020630 RID: 132656 RVA: 0x00945048 File Offset: 0x00943248
+		// (set) Token: 0x06020631 RID: 132657 RVA: 0x0094505C File Offset: 0x0094325C
 		public unsafe USkeletalMeshComponent OtherCase4
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase4);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase4, value);
 			}
 		}
 
-		// Token: 0x1700670E RID: 26382
-		// (get) Token: 0x0602A2CD RID: 172749 RVA: 0x009D8347 File Offset: 0x009D6547
-		// (set) Token: 0x0602A2CE RID: 172750 RVA: 0x009D835B File Offset: 0x009D655B
+		// Token: 0x17003EC6 RID: 16070
+		// (get) Token: 0x06020632 RID: 132658 RVA: 0x00945071 File Offset: 0x00943271
+		// (set) Token: 0x06020633 RID: 132659 RVA: 0x00945085 File Offset: 0x00943285
 		public unsafe USphereComponent SphereForInteraction2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USphereComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<USphereComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_SphereForInteraction2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_SphereForInteraction2, value);
 			}
 		}
 
-		// Token: 0x1700670F RID: 26383
-		// (get) Token: 0x0602A2CF RID: 172751 RVA: 0x009D8370 File Offset: 0x009D6570
-		// (set) Token: 0x0602A2D0 RID: 172752 RVA: 0x009D8384 File Offset: 0x009D6584
+		// Token: 0x17003EC7 RID: 16071
+		// (get) Token: 0x06020634 RID: 132660 RVA: 0x0094509A File Offset: 0x0094329A
+		// (set) Token: 0x06020635 RID: 132661 RVA: 0x009450AE File Offset: 0x009432AE
 		public unsafe USphereComponent SphereForInteraction
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USphereComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<USphereComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_SphereForInteraction);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_SphereForInteraction, value);
 			}
 		}
 
-		// Token: 0x17006710 RID: 26384
-		// (get) Token: 0x0602A2D1 RID: 172753 RVA: 0x009D8399 File Offset: 0x009D6599
-		// (set) Token: 0x0602A2D2 RID: 172754 RVA: 0x009D83AD File Offset: 0x009D65AD
+		// Token: 0x17003EC8 RID: 16072
+		// (get) Token: 0x06020636 RID: 132662 RVA: 0x009450C3 File Offset: 0x009432C3
+		// (set) Token: 0x06020637 RID: 132663 RVA: 0x009450D7 File Offset: 0x009432D7
 		public unsafe UCapsuleComponent CapsuleForTriggerAndBlock
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCapsuleComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<UCapsuleComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_CapsuleForTriggerAndBlock);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_CapsuleForTriggerAndBlock, value);
 			}
 		}
 
-		// Token: 0x17006711 RID: 26385
-		// (get) Token: 0x0602A2D3 RID: 172755 RVA: 0x009D83C2 File Offset: 0x009D65C2
-		// (set) Token: 0x0602A2D4 RID: 172756 RVA: 0x009D83D6 File Offset: 0x009D65D6
+		// Token: 0x17003EC9 RID: 16073
+		// (get) Token: 0x06020638 RID: 132664 RVA: 0x009450EC File Offset: 0x009432EC
+		// (set) Token: 0x06020639 RID: 132665 RVA: 0x00945100 File Offset: 0x00943300
 		public unsafe UCapsuleComponent CapsuleForDither
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCapsuleComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<UCapsuleComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_CapsuleForDither);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_CapsuleForDither, value);
 			}
 		}
 
-		// Token: 0x17006712 RID: 26386
-		// (get) Token: 0x0602A2D5 RID: 172757 RVA: 0x009D83EB File Offset: 0x009D65EB
-		// (set) Token: 0x0602A2D6 RID: 172758 RVA: 0x009D83FF File Offset: 0x009D65FF
+		// Token: 0x17003ECA RID: 16074
+		// (get) Token: 0x0602063A RID: 132666 RVA: 0x00945115 File Offset: 0x00943315
+		// (set) Token: 0x0602063B RID: 132667 RVA: 0x00945129 File Offset: 0x00943329
 		public unsafe USkeletalMeshComponent OtherCase3
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_9);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase3);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_9, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase3, value);
 			}
 		}
 
-		// Token: 0x17006713 RID: 26387
-		// (get) Token: 0x0602A2D7 RID: 172759 RVA: 0x009D8414 File Offset: 0x009D6614
-		// (set) Token: 0x0602A2D8 RID: 172760 RVA: 0x009D8428 File Offset: 0x009D6628
+		// Token: 0x17003ECB RID: 16075
+		// (get) Token: 0x0602063C RID: 132668 RVA: 0x0094513E File Offset: 0x0094333E
+		// (set) Token: 0x0602063D RID: 132669 RVA: 0x00945152 File Offset: 0x00943352
 		public unsafe USkeletalMeshComponent OtherCase2
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_10);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase2);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_10, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase2, value);
 			}
 		}
 
-		// Token: 0x17006714 RID: 26388
-		// (get) Token: 0x0602A2D9 RID: 172761 RVA: 0x009D843D File Offset: 0x009D663D
-		// (set) Token: 0x0602A2DA RID: 172762 RVA: 0x009D8451 File Offset: 0x009D6651
+		// Token: 0x17003ECC RID: 16076
+		// (get) Token: 0x0602063E RID: 132670 RVA: 0x00945167 File Offset: 0x00943367
+		// (set) Token: 0x0602063F RID: 132671 RVA: 0x0094517B File Offset: 0x0094337B
 		public unsafe USkeletalMeshComponent OtherCase1
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_11);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase1);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_11, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_OtherCase1, value);
 			}
 		}
 
-		// Token: 0x17006715 RID: 26389
-		// (get) Token: 0x0602A2DB RID: 172763 RVA: 0x009D8466 File Offset: 0x009D6666
-		// (set) Token: 0x0602A2DC RID: 172764 RVA: 0x009D847A File Offset: 0x009D667A
+		// Token: 0x17003ECD RID: 16077
+		// (get) Token: 0x06020640 RID: 132672 RVA: 0x00945190 File Offset: 0x00943390
+		// (set) Token: 0x06020641 RID: 132673 RVA: 0x009451A4 File Offset: 0x009433A4
 		public unsafe UCapsuleComponent CapsuleForPhotograph
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCapsuleComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_12);
+				return BuiltinUtils.ObjectPropertyGetter<UCapsuleComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_CapsuleForPhotograph);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_12, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_CapsuleForPhotograph, value);
 			}
 		}
 
-		// Token: 0x17006716 RID: 26390
-		// (get) Token: 0x0602A2DD RID: 172765 RVA: 0x009D848F File Offset: 0x009D668F
-		// (set) Token: 0x0602A2DE RID: 172766 RVA: 0x009D84A3 File Offset: 0x009D66A3
+		// Token: 0x17003ECE RID: 16078
+		// (get) Token: 0x06020642 RID: 132674 RVA: 0x009451B9 File Offset: 0x009433B9
+		// (set) Token: 0x06020643 RID: 132675 RVA: 0x009451CD File Offset: 0x009433CD
 		public unsafe UDataTable 技能表_用于加载_
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UDataTable>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_13);
+				return BuiltinUtils.ObjectPropertyGetter<UDataTable>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_技能表_用于加载_);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_13, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_技能表_用于加载_, value);
 			}
 		}
 
-		// Token: 0x17006717 RID: 26391
-		// (get) Token: 0x0602A2DF RID: 172767 RVA: 0x009D84B8 File Offset: 0x009D66B8
-		// (set) Token: 0x0602A2E0 RID: 172768 RVA: 0x009D84C8 File Offset: 0x009D66C8
+		// Token: 0x17003ECF RID: 16079
+		// (get) Token: 0x06020644 RID: 132676 RVA: 0x009451E2 File Offset: 0x009433E2
+		// (set) Token: 0x06020645 RID: 132677 RVA: 0x009451F2 File Offset: 0x009433F2
 		public unsafe float 虚化碰撞NPC半径
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Motor_BaseVehicle_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_Motor_BaseVehicle_C.__PropertyOffset_虚化碰撞NPC半径);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Motor_BaseVehicle_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_Motor_BaseVehicle_C.__PropertyOffset_虚化碰撞NPC半径) = value;
 			}
 		}
 
-		// Token: 0x17006718 RID: 26392
-		// (get) Token: 0x0602A2E1 RID: 172769 RVA: 0x009D84D9 File Offset: 0x009D66D9
-		// (set) Token: 0x0602A2E2 RID: 172770 RVA: 0x009D84ED File Offset: 0x009D66ED
+		// Token: 0x17003ED0 RID: 16080
+		// (get) Token: 0x06020646 RID: 132678 RVA: 0x00945203 File Offset: 0x00943403
+		// (set) Token: 0x06020647 RID: 132679 RVA: 0x00945217 File Offset: 0x00943417
 		public unsafe UCurveFloat 深度虚化值曲线
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_15);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_深度虚化值曲线);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_15, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Motor_BaseVehicle_C.__PropertyOffset_深度虚化值曲线, value);
 			}
 		}
 
-		// Token: 0x0602A2E3 RID: 172771 RVA: 0x009D8502 File Offset: 0x009D6702
+		// Token: 0x17003ED1 RID: 16081
+		// (get) Token: 0x06020648 RID: 132680 RVA: 0x0094522C File Offset: 0x0094342C
+		// (set) Token: 0x06020649 RID: 132681 RVA: 0x0094523C File Offset: 0x0094343C
+		public unsafe bool NewVar_0
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)BP_Motor_BaseVehicle_C.__PropertyOffset_NewVar_0) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)BP_Motor_BaseVehicle_C.__PropertyOffset_NewVar_0) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x0602064A RID: 132682 RVA: 0x0094524D File Offset: 0x0094344D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		public virtual void 测试增删配置()
+		{
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__测试增删配置_NativeFunctionPtr, null);
+		}
+
+		// Token: 0x0602064B RID: 132683 RVA: 0x00945261 File Offset: 0x00943461
+		[SkipLocalsInit]
 		public virtual void 解锁最高速度()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__解锁最高速度_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2E4 RID: 172772 RVA: 0x009D8516 File Offset: 0x009D6716
+		// Token: 0x0602064C RID: 132684 RVA: 0x00945275 File Offset: 0x00943475
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 打开关闭Debug()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__打开关闭Debug_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2E5 RID: 172773 RVA: 0x009D852A File Offset: 0x009D672A
+		// Token: 0x0602064D RID: 132685 RVA: 0x00945289 File Offset: 0x00943489
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 解锁二段跳_蓄力跳_新退场技()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__解锁二段跳_蓄力跳_新退场技_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2E6 RID: 172774 RVA: 0x009D853E File Offset: 0x009D673E
+		// Token: 0x0602064E RID: 132686 RVA: 0x0094529D File Offset: 0x0094349D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 刷新配置()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__刷新配置_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2E7 RID: 172775 RVA: 0x009D8554 File Offset: 0x009D6754
+		// Token: 0x0602064F RID: 132687 RVA: 0x009452B4 File Offset: 0x009434B4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetConfigDataNameTagMap(ref TMap<FName, FGameplayTag> Result)
 		{
 			BP_Motor_BaseVehicle_C.__GetConfigDataNameTagMap_FunctionParams* ptr = stackalloc BP_Motor_BaseVehicle_C.__GetConfigDataNameTagMap_FunctionParams[(UIntPtr)239] + 15L / (long)sizeof(BP_Motor_BaseVehicle_C.__GetConfigDataNameTagMap_FunctionParams) & -16L;
@@ -316,9 +302,8 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 			UnrealReflectionUtils.DestroyStruct(BP_Motor_BaseVehicle_C.__GetConfigDataNameTagMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602A2E8 RID: 172776 RVA: 0x009D85D0 File Offset: 0x009D67D0
+		// Token: 0x06020650 RID: 132688 RVA: 0x00945330 File Offset: 0x00943530
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetConfigDataByKeyName(FName Name, ref SMotorConfigs Result)
 		{
 			BP_Motor_BaseVehicle_C.__GetConfigDataByKeyName_FunctionParams* ptr = stackalloc BP_Motor_BaseVehicle_C.__GetConfigDataByKeyName_FunctionParams[(UIntPtr)167] + 15L / (long)sizeof(BP_Motor_BaseVehicle_C.__GetConfigDataByKeyName_FunctionParams) & -16L;
@@ -336,9 +321,8 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 			UnrealReflectionUtils.DestroyStruct(BP_Motor_BaseVehicle_C.__GetConfigDataByKeyName_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602A2E9 RID: 172777 RVA: 0x009D8674 File Offset: 0x009D6874
+		// Token: 0x06020651 RID: 132689 RVA: 0x009453D4 File Offset: 0x009435D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_Motor_BaseVehicle_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Motor_BaseVehicle_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Motor_BaseVehicle_C.__ReceiveTick_FunctionParams) & -16L;
@@ -347,150 +331,147 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A2EA RID: 172778 RVA: 0x009D86BC File Offset: 0x009D68BC
+		// Token: 0x06020652 RID: 132690 RVA: 0x0094541C File Offset: 0x0094361C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_Motor_BaseVehicle_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Motor_BaseVehicle_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Motor_BaseVehicle_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Motor_BaseVehicle_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A2EB RID: 172779 RVA: 0x009D8703 File Offset: 0x009D6903
+		// Token: 0x06020653 RID: 132691 RVA: 0x00945462 File Offset: 0x00943662
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2EC RID: 172780 RVA: 0x009D8717 File Offset: 0x009D6917
+		// Token: 0x06020654 RID: 132692 RVA: 0x00945476 File Offset: 0x00943676
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Motor_BaseVehicle_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2ED RID: 172781 RVA: 0x009D872C File Offset: 0x009D692C
+		// Token: 0x06020655 RID: 132693 RVA: 0x0094548A File Offset: 0x0094368A
 		protected BP_Motor_BaseVehicle_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015BD2 RID: 89042
+		// Token: 0x040117D8 RID: 71640
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Vehicle/Motor/BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C";
 
-		// Token: 0x04015BD3 RID: 89043
+		// Token: 0x040117D9 RID: 71641
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015BD4 RID: 89044
+		// Token: 0x040117DA RID: 71642
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015BD5 RID: 89045
-		internal static int __PropertyOffset_1;
+		// Token: 0x040117DB RID: 71643
+		internal static int __PropertyOffset_OtherCase5;
 
-		// Token: 0x04015BD6 RID: 89046
-		internal static int __PropertyOffset_2;
+		// Token: 0x040117DC RID: 71644
+		internal static int __PropertyOffset_OtherCase4;
 
-		// Token: 0x04015BD7 RID: 89047
-		internal static int __PropertyOffset_3;
+		// Token: 0x040117DD RID: 71645
+		internal static int __PropertyOffset_SphereForInteraction2;
 
-		// Token: 0x04015BD8 RID: 89048
-		internal static int __PropertyOffset_4;
+		// Token: 0x040117DE RID: 71646
+		internal static int __PropertyOffset_SphereForInteraction;
 
-		// Token: 0x04015BD9 RID: 89049
-		internal static int __PropertyOffset_5;
+		// Token: 0x040117DF RID: 71647
+		internal static int __PropertyOffset_CapsuleForTriggerAndBlock;
 
-		// Token: 0x04015BDA RID: 89050
-		internal static int __PropertyOffset_6;
+		// Token: 0x040117E0 RID: 71648
+		internal static int __PropertyOffset_CapsuleForDither;
 
-		// Token: 0x04015BDB RID: 89051
-		internal static int __PropertyOffset_7;
+		// Token: 0x040117E1 RID: 71649
+		internal static int __PropertyOffset_OtherCase3;
 
-		// Token: 0x04015BDC RID: 89052
-		internal static int __PropertyOffset_8;
+		// Token: 0x040117E2 RID: 71650
+		internal static int __PropertyOffset_OtherCase2;
 
-		// Token: 0x04015BDD RID: 89053
-		internal static int __PropertyOffset_9;
+		// Token: 0x040117E3 RID: 71651
+		internal static int __PropertyOffset_OtherCase1;
 
-		// Token: 0x04015BDE RID: 89054
-		internal static int __PropertyOffset_10;
+		// Token: 0x040117E4 RID: 71652
+		internal static int __PropertyOffset_CapsuleForPhotograph;
 
-		// Token: 0x04015BDF RID: 89055
-		internal static int __PropertyOffset_11;
+		// Token: 0x040117E5 RID: 71653
+		internal static int __PropertyOffset_技能表_用于加载_;
 
-		// Token: 0x04015BE0 RID: 89056
-		internal static int __PropertyOffset_12;
+		// Token: 0x040117E6 RID: 71654
+		internal static int __PropertyOffset_虚化碰撞NPC半径;
 
-		// Token: 0x04015BE1 RID: 89057
-		internal static int __PropertyOffset_13;
+		// Token: 0x040117E7 RID: 71655
+		internal static int __PropertyOffset_深度虚化值曲线;
 
-		// Token: 0x04015BE2 RID: 89058
-		internal static int __PropertyOffset_14;
+		// Token: 0x040117E8 RID: 71656
+		internal static int __PropertyOffset_NewVar_0;
 
-		// Token: 0x04015BE3 RID: 89059
-		internal static int __PropertyOffset_15;
+		// Token: 0x040117E9 RID: 71657
+		private static IntPtr __测试增删配置_NativeFunctionPtr;
 
-		// Token: 0x04015BE4 RID: 89060
+		// Token: 0x040117EA RID: 71658
 		private static IntPtr __解锁最高速度_NativeFunctionPtr;
 
-		// Token: 0x04015BE5 RID: 89061
+		// Token: 0x040117EB RID: 71659
 		private static IntPtr __打开关闭Debug_NativeFunctionPtr;
 
-		// Token: 0x04015BE6 RID: 89062
+		// Token: 0x040117EC RID: 71660
 		private static IntPtr __解锁二段跳_蓄力跳_新退场技_NativeFunctionPtr;
 
-		// Token: 0x04015BE7 RID: 89063
+		// Token: 0x040117ED RID: 71661
 		private static IntPtr __刷新配置_NativeFunctionPtr;
 
-		// Token: 0x04015BE8 RID: 89064
+		// Token: 0x040117EE RID: 71662
 		private static IntPtr __GetConfigDataNameTagMap_NativeFunctionPtr;
 
-		// Token: 0x04015BE9 RID: 89065
+		// Token: 0x040117EF RID: 71663
 		private static IntPtr __GetConfigDataByKeyName_NativeFunctionPtr;
 
-		// Token: 0x04015BEA RID: 89066
+		// Token: 0x040117F0 RID: 71664
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x04015BEB RID: 89067
+		// Token: 0x040117F1 RID: 71665
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x0200A345 RID: 41797
+		// Token: 0x02008F5A RID: 36698
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 224)]
 		protected ref struct __GetConfigDataNameTagMap_FunctionParams
 		{
-			// Token: 0x04032109 RID: 205065
+			// Token: 0x0402CCCE RID: 183502
 			[FieldOffset(0)]
 			public byte Result;
 		}
 
-		// Token: 0x0200A346 RID: 41798
+		// Token: 0x02008F5B RID: 36699
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 152)]
 		protected ref struct __GetConfigDataByKeyName_FunctionParams
 		{
-			// Token: 0x0403210A RID: 205066
+			// Token: 0x0402CCCF RID: 183503
 			[FieldOffset(0)]
 			public FName Name;
 
-			// Token: 0x0403210B RID: 205067
+			// Token: 0x0402CCD0 RID: 183504
 			[FieldOffset(16)]
 			public byte Result;
 		}
 
-		// Token: 0x0200A347 RID: 41799
+		// Token: 0x02008F5C RID: 36700
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403210C RID: 205068
+			// Token: 0x0402CCD1 RID: 183505
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

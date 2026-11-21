@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200109B RID: 4251
+// Token: 0x0200054F RID: 1359
 public enum ERecommendTagStyle
 {
-	// Token: 0x0400335F RID: 13151
+	// Token: 0x040033F8 RID: 13304
 	None,
-	// Token: 0x04003360 RID: 13152
+	// Token: 0x040033F9 RID: 13305
 	TimeLimit,
-	// Token: 0x04003361 RID: 13153
+	// Token: 0x040033FA RID: 13306
 	NormalActivity,
-	// Token: 0x04003362 RID: 13154
+	// Token: 0x040033FB RID: 13307
 	Area
 }

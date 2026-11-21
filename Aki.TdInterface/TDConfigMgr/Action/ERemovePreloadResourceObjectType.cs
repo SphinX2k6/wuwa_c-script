@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001687 RID: 5767
+	// Token: 0x020017FC RID: 6140
 	[EnumExtensions]
 	public enum ERemovePreloadResourceObjectType
 	{
-		// Token: 0x04004D4A RID: 19786
+		// Token: 0x04005155 RID: 20821
 		RemovePreloadResourceTrialCharacter,
-		// Token: 0x04004D4B RID: 19787
+		// Token: 0x04005156 RID: 20822
 		RemovePreloadResourcePhantomCharacter,
-		// Token: 0x04004D4C RID: 19788
+		// Token: 0x04005157 RID: 20823
 		RemovePreloadLinkResource,
-		// Token: 0x04004D4D RID: 19789
+		// Token: 0x04005158 RID: 20824
 		RemovePreloadFlows
 	}
 }

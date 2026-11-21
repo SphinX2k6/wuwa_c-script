@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001556 RID: 5462
+	// Token: 0x020016B2 RID: 5810
 	public class DangoAbyssCreateRewardTreasureBox : ActionParams
 	{
-		// Token: 0x06007B79 RID: 31609 RVA: 0x0012989A File Offset: 0x00127A9A
-		[NullableContext(1)]
+		// Token: 0x0600824D RID: 33357 RVA: 0x00138846 File Offset: 0x00136A46
 		public static DangoAbyssCreateRewardTreasureBox Create([Nullable(2)] DangoAbyssCreateRewardTreasureBox instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0400471E RID: 18206
+		// Token: 0x04004ABA RID: 19130
 		[Nullable(2)]
 		protected new DangoAbyssCreateRewardTreasureBox FbInstance;
 	}

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073B9 RID: 29625
+	// Token: 0x02007BA0 RID: 31648
 	public class ITeleportTransitionWithFadeInScreenT
 	{
-		// Token: 0x1700E0ED RID: 57581
-		// (get) Token: 0x06035CA6 RID: 220326 RVA: 0x007524BA File Offset: 0x007506BA
-		// (set) Token: 0x06035CA7 RID: 220327 RVA: 0x007524C2 File Offset: 0x007506C2
+		// Token: 0x1700ECFD RID: 60669
+		// (get) Token: 0x06039041 RID: 233537 RVA: 0x007B49FA File Offset: 0x007B2BFA
+		// (set) Token: 0x06039042 RID: 233538 RVA: 0x007B4A02 File Offset: 0x007B2C02
 		public ETeleportTransitionType Type { get; set; }
 
-		// Token: 0x1700E0EE RID: 57582
-		// (get) Token: 0x06035CA8 RID: 220328 RVA: 0x007524CB File Offset: 0x007506CB
-		// (set) Token: 0x06035CA9 RID: 220329 RVA: 0x007524D3 File Offset: 0x007506D3
+		// Token: 0x1700ECFE RID: 60670
+		// (get) Token: 0x06039043 RID: 233539 RVA: 0x007B4A0B File Offset: 0x007B2C0B
+		// (set) Token: 0x06039044 RID: 233540 RVA: 0x007B4A13 File Offset: 0x007B2C13
 		public EFadeInScreenShowType ScreenType { get; set; }
 
-		// Token: 0x1700E0EF RID: 57583
-		// (get) Token: 0x06035CAA RID: 220330 RVA: 0x007524DC File Offset: 0x007506DC
-		// (set) Token: 0x06035CAB RID: 220331 RVA: 0x007524E4 File Offset: 0x007506E4
+		// Token: 0x1700ECFF RID: 60671
+		// (get) Token: 0x06039045 RID: 233541 RVA: 0x007B4A1C File Offset: 0x007B2C1C
+		// (set) Token: 0x06039046 RID: 233542 RVA: 0x007B4A24 File Offset: 0x007B2C24
 		public byte NullMask { get; set; }
 
-		// Token: 0x06035CAC RID: 220332 RVA: 0x007524ED File Offset: 0x007506ED
+		// Token: 0x06039047 RID: 233543 RVA: 0x007B4A2D File Offset: 0x007B2C2D
 		public ITeleportTransitionWithFadeInScreenT()
 		{
 			this.Type = ETeleportTransitionType.PlayMp4;

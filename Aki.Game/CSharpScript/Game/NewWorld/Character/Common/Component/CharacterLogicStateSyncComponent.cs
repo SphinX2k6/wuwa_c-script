@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.CombatMessage;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C6 RID: 28870
+	// Token: 0x0200632A RID: 25386
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterLogicStateSyncComponent : EntityComponent
 	{
-		// Token: 0x0604667D RID: 288381 RVA: 0x011A866C File Offset: 0x011A686C
+		// Token: 0x0603D764 RID: 251748 RVA: 0x011C7CAC File Offset: 0x011C5EAC
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604667E RID: 288382 RVA: 0x011A86FC File Offset: 0x011A68FC
+		// Token: 0x0603D765 RID: 251749 RVA: 0x011C7D3C File Offset: 0x011C5F3C
 		protected override void OnActivate()
 		{
 			CombatMessageController.Instance.RegisterAfterTick(this, new Action<float>(this.ForceAfterTickInternal));
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604667F RID: 288383 RVA: 0x011A880C File Offset: 0x011A6A0C
+		// Token: 0x0603D766 RID: 251750 RVA: 0x011C7E4C File Offset: 0x011C604C
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget<bool>(base.Entity, EEventName.CharSwitchControl, new Action<bool>(this.OnSwitchControl));
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046680 RID: 288384 RVA: 0x011A888C File Offset: 0x011A6A8C
+		// Token: 0x0603D767 RID: 251751 RVA: 0x011C7ECC File Offset: 0x011C60CC
 		private void LogicStateInitRequest()
 		{
 			LogicStateInitPush logicStateInitPush = LogicStateInitPush.Create();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CombatNet.Instance.Send(EPushMessageId.LogicStateInitPush, base.Entity, logicStateInitPush, null, null, null);
 		}
 
-		// Token: 0x06046681 RID: 288385 RVA: 0x011A8954 File Offset: 0x011A6B54
+		// Token: 0x0603D768 RID: 251752 RVA: 0x011C7F94 File Offset: 0x011C6194
 		private void InitWithPb(LogicStateComponentPb data)
 		{
 			this.SetLogicState(global::ELogicStateType.CharPositionState, data.PositionState);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.Inited = true;
 		}
 
-		// Token: 0x06046682 RID: 288386 RVA: 0x011A89F0 File Offset: 0x011A6BF0
+		// Token: 0x0603D769 RID: 251753 RVA: 0x011C8030 File Offset: 0x011C6230
 		private void SetLogicState(global::ELogicStateType stateType, int value)
 		{
 			switch (stateType)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046683 RID: 288387 RVA: 0x011A8A47 File Offset: 0x011A6C47
+		// Token: 0x0603D76A RID: 251754 RVA: 0x011C8087 File Offset: 0x011C6287
 		public void OnSwitchControl(bool control)
 		{
 			if (control && !this.Inited)
@@ -135,13 +135,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046684 RID: 288388 RVA: 0x011A8A61 File Offset: 0x011A6C61
+		// Token: 0x0603D76B RID: 251755 RVA: 0x011C80A1 File Offset: 0x011C62A1
 		private void OnRoleGoUp()
 		{
 			this.ForcePush = true;
 		}
 
-		// Token: 0x06046685 RID: 288389 RVA: 0x011A8A6A File Offset: 0x011A6C6A
+		// Token: 0x0603D76C RID: 251756 RVA: 0x011C80AA File Offset: 0x011C62AA
 		[NullableContext(2)]
 		[CombatListen(ENotifyMessageId.LogicStateInitNotify, true, false)]
 		public static void LogicStateInitNotify(Entity entity, [Nullable(1)] LogicStateInitNotify data, CombatCommon combatCommon = null)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			characterLogicStateSyncComponent.InitWithPb(data.InitData);
 		}
 
-		// Token: 0x06046686 RID: 288390 RVA: 0x011A8A88 File Offset: 0x011A6C88
+		// Token: 0x0603D76D RID: 251757 RVA: 0x011C80C8 File Offset: 0x011C62C8
 		private void ForceAfterTickInternal(float deltaTime)
 		{
 			if (!this.ActorComp.IsMoveAutonomousProxy)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046687 RID: 288391 RVA: 0x011A8C04 File Offset: 0x011A6E04
+		// Token: 0x0603D76E RID: 251758 RVA: 0x011C8244 File Offset: 0x011C6444
 		private long GetClientEntityId()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return num4.GetValueOrDefault();
 		}
 
-		// Token: 0x06046688 RID: 288392 RVA: 0x011A8CA4 File Offset: 0x011A6EA4
+		// Token: 0x0603D76F RID: 251759 RVA: 0x011C82E4 File Offset: 0x011C64E4
 		[NullableContext(2)]
 		[CombatListen(ENotifyMessageId.SwitchLogicStateNotify, true, false)]
 		public static void SwitchLogicStateNotify(Entity entity, [Nullable(1)] SwitchLogicStateNotify data, CombatCommon combatCommon = null)
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046689 RID: 288393 RVA: 0x011A8D2C File Offset: 0x011A6F2C
+		// Token: 0x0603D770 RID: 251760 RVA: 0x011C836C File Offset: 0x011C656C
 		private static void TransferNotifyState(CharacterLogicStateSyncComponent logicStateSyncComp, int stateType, int state)
 		{
 			if (state == 0)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			logicStateSyncComp.SetLogicState((global::ELogicStateType)stateType, (state == 127) ? 0 : state);
 		}
 
-		// Token: 0x0604668A RID: 288394 RVA: 0x011A8D44 File Offset: 0x011A6F44
+		// Token: 0x0603D771 RID: 251761 RVA: 0x011C8384 File Offset: 0x011C6584
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -273,101 +273,107 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterLogicStateSyncComponent characterLogicStateSyncComponent = (CharacterLogicStateSyncComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterLogicStateSyncComponent.ActorComp == null)
 			{
-				if (characterLogicStateSyncComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("UnifiedStateComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (characterLogicStateSyncComponent.UnifiedStateComp == null)
-				{
-					this.UnifiedStateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LogicStateComponentPb"))
+			if (characterLogicStateSyncComponent.UnifiedStateComp == null)
 			{
-				if (characterLogicStateSyncComponent.LogicStateComponentPb == null)
-				{
-					this.LogicStateComponentPb = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LogicStateComponentPb>(this.LogicStateComponentPb), "LogicStateComponentPb"))
-				{
-					return false;
-				}
+				this.UnifiedStateComp = null;
 			}
-			if (base.CanResetComponentProperty("LogicStates"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 			{
-				if (characterLogicStateSyncComponent.LogicStates == null)
-				{
-					this.LogicStates = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.LogicStates), "LogicStates"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastLogicStates"))
+			if (characterLogicStateSyncComponent.LogicStateComponentPb == null)
 			{
-				if (characterLogicStateSyncComponent.LastLogicStates == null)
-				{
-					this.LastLogicStates = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.LastLogicStates), "LastLogicStates"))
-				{
-					return false;
-				}
+				this.LogicStateComponentPb = null;
 			}
-			if (base.CanResetComponentProperty("IsRole"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LogicStateComponentPb), "LogicStateComponentPb"))
 			{
-				this.IsRole = characterLogicStateSyncComponent.IsRole;
+				return false;
 			}
-			if (base.CanResetComponentProperty("Inited"))
+			if (characterLogicStateSyncComponent.LogicStates == null)
 			{
-				this.Inited = characterLogicStateSyncComponent.Inited;
+				this.LogicStates = null;
 			}
-			if (base.CanResetComponentProperty("ForcePush"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LogicStates), "LogicStates"))
 			{
-				this.ForcePush = characterLogicStateSyncComponent.ForcePush;
+				return false;
 			}
+			if (characterLogicStateSyncComponent.LastLogicStates == null)
+			{
+				this.LastLogicStates = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLogicStates), "LastLogicStates"))
+			{
+				return false;
+			}
+			this.IsRole = characterLogicStateSyncComponent.IsRole;
+			this.Inited = characterLogicStateSyncComponent.Inited;
+			this.ForcePush = characterLogicStateSyncComponent.ForcePush;
 			return true;
 		}
 
-		// Token: 0x04024E4D RID: 151117
+		// Token: 0x17007495 RID: 29845
+		// (get) Token: 0x0603D772 RID: 251762 RVA: 0x011C849F File Offset: 0x011C669F
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007496 RID: 29846
+		// (get) Token: 0x0603D773 RID: 251763 RVA: 0x011C84A2 File Offset: 0x011C66A2
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007497 RID: 29847
+		// (get) Token: 0x0603D774 RID: 251764 RVA: 0x011C84A5 File Offset: 0x011C66A5
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402098B RID: 133515
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024E4E RID: 151118
+		// Token: 0x0402098C RID: 133516
 		[Nullable(2)]
 		private CharacterUnifiedStateComponent UnifiedStateComp;
 
-		// Token: 0x04024E4F RID: 151119
+		// Token: 0x0402098D RID: 133517
 		[Nullable(2)]
 		private LogicStateComponentPb LogicStateComponentPb;
 
-		// Token: 0x04024E50 RID: 151120
+		// Token: 0x0402098E RID: 133518
 		private int[] LogicStates = Array.Empty<int>();
 
-		// Token: 0x04024E51 RID: 151121
+		// Token: 0x0402098F RID: 133519
 		private int[] LastLogicStates = Array.Empty<int>();
 
-		// Token: 0x04024E52 RID: 151122
+		// Token: 0x04020990 RID: 133520
 		private bool IsRole;
 
-		// Token: 0x04024E53 RID: 151123
+		// Token: 0x04020991 RID: 133521
 		public bool Inited;
 
-		// Token: 0x04024E54 RID: 151124
+		// Token: 0x04020992 RID: 133522
 		private bool ForcePush;
 	}
 }

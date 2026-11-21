@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200589B RID: 22683
+	// Token: 0x02005EA8 RID: 24232
 	public class IScanTraceEffectT
 	{
-		// Token: 0x1700A9C7 RID: 43463
-		// (get) Token: 0x060263F6 RID: 156662 RVA: 0x005458D7 File Offset: 0x00543AD7
-		// (set) Token: 0x060263F7 RID: 156663 RVA: 0x005458DF File Offset: 0x00543ADF
+		// Token: 0x1700B2F7 RID: 45815
+		// (get) Token: 0x06028958 RID: 166232 RVA: 0x0058C423 File Offset: 0x0058A623
+		// (set) Token: 0x06028959 RID: 166233 RVA: 0x0058C42B File Offset: 0x0058A62B
 		public string Effect { get; set; }
 
-		// Token: 0x1700A9C8 RID: 43464
-		// (get) Token: 0x060263F8 RID: 156664 RVA: 0x005458E8 File Offset: 0x00543AE8
-		// (set) Token: 0x060263F9 RID: 156665 RVA: 0x005458F0 File Offset: 0x00543AF0
+		// Token: 0x1700B2F8 RID: 45816
+		// (get) Token: 0x0602895A RID: 166234 RVA: 0x0058C434 File Offset: 0x0058A634
+		// (set) Token: 0x0602895B RID: 166235 RVA: 0x0058C43C File Offset: 0x0058A63C
 		public int Target { get; set; }
 
-		// Token: 0x060263FA RID: 156666 RVA: 0x005458F9 File Offset: 0x00543AF9
+		// Token: 0x0602895C RID: 166236 RVA: 0x0058C445 File Offset: 0x0058A645
 		public IScanTraceEffectT()
 		{
 			this.Effect = null;

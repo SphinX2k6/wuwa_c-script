@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EB5 RID: 7861
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020EE RID: 8430
 	public class IStartSlidePerformType
 	{
-		// Token: 0x0600A822 RID: 43042 RVA: 0x0017BB24 File Offset: 0x00179D24
+		// Token: 0x0600B2F2 RID: 45810 RVA: 0x00191AC4 File Offset: 0x0018FCC4
 		private IStartSlidePerformType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A823 RID: 43043 RVA: 0x0017BB5C File Offset: 0x00179D5C
+		// Token: 0x0600B2F3 RID: 45811 RVA: 0x00191AFC File Offset: 0x0018FCFC
 		public static IStartSlidePerformType Create([Nullable(2)] IStartSlidePerformType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A824 RID: 43044 RVA: 0x0017BB6F File Offset: 0x00179D6F
+		// Token: 0x0600B2F4 RID: 45812 RVA: 0x00191B0F File Offset: 0x0018FD0F
 		public static IStartSlidePerformType CreateFromSetValue([Nullable(2)] IStartSlidePerformType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A825 RID: 43045 RVA: 0x0017BB82 File Offset: 0x00179D82
+		// Token: 0x0600B2F5 RID: 45813 RVA: 0x00191B22 File Offset: 0x0018FD22
 		public IStartSlidePerformType_SetValue ToSetValue()
 		{
 			return new IStartSlidePerformType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003359 RID: 13145
-		// (get) Token: 0x0600A826 RID: 43046 RVA: 0x0017BB95 File Offset: 0x00179D95
-		// (set) Token: 0x0600A827 RID: 43047 RVA: 0x0017BBC0 File Offset: 0x00179DC0
+		// Token: 0x17003623 RID: 13859
+		// (get) Token: 0x0600B2F6 RID: 45814 RVA: 0x00191B35 File Offset: 0x0018FD35
+		// (set) Token: 0x0600B2F7 RID: 45815 RVA: 0x00191B60 File Offset: 0x0018FD60
 		public virtual ESlidePerformType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006432 RID: 25650
+		// Token: 0x04006A20 RID: 27168
 		[Nullable(2)]
 		protected IStartSlidePerformType FbInstance;
 
-		// Token: 0x04006433 RID: 25651
+		// Token: 0x04006A21 RID: 27169
 		[Nullable(2)]
 		protected IStartSlidePerformType_SetValue PocoInterface;
 	}

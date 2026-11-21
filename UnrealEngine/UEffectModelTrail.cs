@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018AD RID: 6317
+	// Token: 0x020003CF RID: 975
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.EffectModelTrail")]
 	[UnrealStructLayout(720, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 720)]
 	public class UEffectModelTrail : UEffectModelBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017600 RID: 95744 RVA: 0x002229AA File Offset: 0x00220BAA
+		// Token: 0x06006093 RID: 24723 RVA: 0x00089B8A File Offset: 0x00087D8A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEffectModelTrail._ClassPtr;
 		}
 
-		// Token: 0x06017601 RID: 95745 RVA: 0x002229B8 File Offset: 0x00220BB8
+		// Token: 0x06006094 RID: 24724 RVA: 0x00089B98 File Offset: 0x00087D98
 		public UEffectModelTrail() : this(BuiltinUtils.AllocNativeUObject(UEffectModelTrail.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017602 RID: 95746 RVA: 0x002229E0 File Offset: 0x00220BE0
+		// Token: 0x06006095 RID: 24725 RVA: 0x00089BC0 File Offset: 0x00087DC0
 		public UEffectModelTrail(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEffectModelTrail.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005E7E RID: 24190
-		// (get) Token: 0x06017603 RID: 95747 RVA: 0x00222A13 File Offset: 0x00220C13
-		// (set) Token: 0x06017604 RID: 95748 RVA: 0x00222A23 File Offset: 0x00220C23
+		// Token: 0x170013B9 RID: 5049
+		// (get) Token: 0x06006096 RID: 24726 RVA: 0x00089BF3 File Offset: 0x00087DF3
+		// (set) Token: 0x06006097 RID: 24727 RVA: 0x00089C03 File Offset: 0x00087E03
 		public unsafe bool AttachToBones
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E7F RID: 24191
-		// (get) Token: 0x06017605 RID: 95749 RVA: 0x00222A34 File Offset: 0x00220C34
-		// (set) Token: 0x06017606 RID: 95750 RVA: 0x00222A6D File Offset: 0x00220C6D
+		// Token: 0x170013BA RID: 5050
+		// (get) Token: 0x06006098 RID: 24728 RVA: 0x00089C14 File Offset: 0x00087E14
+		// (set) Token: 0x06006099 RID: 24729 RVA: 0x00089C4D File Offset: 0x00087E4D
 		public TArray<FName> AttachBoneNames
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E80 RID: 24192
-		// (get) Token: 0x06017607 RID: 95751 RVA: 0x00222A7C File Offset: 0x00220C7C
-		// (set) Token: 0x06017608 RID: 95752 RVA: 0x00222AB5 File Offset: 0x00220CB5
+		// Token: 0x170013BB RID: 5051
+		// (get) Token: 0x0600609A RID: 24730 RVA: 0x00089C5C File Offset: 0x00087E5C
+		// (set) Token: 0x0600609B RID: 24731 RVA: 0x00089C95 File Offset: 0x00087E95
 		public TArray<FVector> RelativeLocations
 		{
 			get
@@ -86,9 +86,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E81 RID: 24193
-		// (get) Token: 0x06017609 RID: 95753 RVA: 0x00222AC4 File Offset: 0x00220CC4
-		// (set) Token: 0x0601760A RID: 95754 RVA: 0x00222AFD File Offset: 0x00220CFD
+		// Token: 0x170013BC RID: 5052
+		// (get) Token: 0x0600609C RID: 24732 RVA: 0x00089CA4 File Offset: 0x00087EA4
+		// (set) Token: 0x0600609D RID: 24733 RVA: 0x00089CDD File Offset: 0x00087EDD
 		public TMap<int, FKuroCurveVector> LocationsCurve
 		{
 			get
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E82 RID: 24194
-		// (get) Token: 0x0601760B RID: 95755 RVA: 0x00222B0B File Offset: 0x00220D0B
-		// (set) Token: 0x0601760C RID: 95756 RVA: 0x00222B1F File Offset: 0x00220D1F
+		// Token: 0x170013BD RID: 5053
+		// (get) Token: 0x0600609E RID: 24734 RVA: 0x00089CEB File Offset: 0x00087EEB
+		// (set) Token: 0x0600609F RID: 24735 RVA: 0x00089CFF File Offset: 0x00087EFF
 		[Nullable(2)]
 		public unsafe UMaterialInstance Material
 		{
@@ -125,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E83 RID: 24195
-		// (get) Token: 0x0601760D RID: 95757 RVA: 0x00222B34 File Offset: 0x00220D34
-		// (set) Token: 0x0601760E RID: 95758 RVA: 0x00222B44 File Offset: 0x00220D44
+		// Token: 0x170013BE RID: 5054
+		// (get) Token: 0x060060A0 RID: 24736 RVA: 0x00089D14 File Offset: 0x00087F14
+		// (set) Token: 0x060060A1 RID: 24737 RVA: 0x00089D24 File Offset: 0x00087F24
 		public unsafe float UnitLength
 		{
 			get
@@ -140,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E84 RID: 24196
-		// (get) Token: 0x0601760F RID: 95759 RVA: 0x00222B58 File Offset: 0x00220D58
-		// (set) Token: 0x06017610 RID: 95760 RVA: 0x00222B91 File Offset: 0x00220D91
+		// Token: 0x170013BF RID: 5055
+		// (get) Token: 0x060060A2 RID: 24738 RVA: 0x00089D38 File Offset: 0x00087F38
+		// (set) Token: 0x060060A3 RID: 24739 RVA: 0x00089D71 File Offset: 0x00087F71
 		public FKuroCurveFloat DissipateSpeed
 		{
 			get
@@ -161,9 +161,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E85 RID: 24197
-		// (get) Token: 0x06017611 RID: 95761 RVA: 0x00222BB4 File Offset: 0x00220DB4
-		// (set) Token: 0x06017612 RID: 95762 RVA: 0x00222BED File Offset: 0x00220DED
+		// Token: 0x170013C0 RID: 5056
+		// (get) Token: 0x060060A4 RID: 24740 RVA: 0x00089D94 File Offset: 0x00087F94
+		// (set) Token: 0x060060A5 RID: 24741 RVA: 0x00089DCD File Offset: 0x00087FCD
 		public FKuroCurveFloat Alpha
 		{
 			get
@@ -182,9 +182,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E86 RID: 24198
-		// (get) Token: 0x06017613 RID: 95763 RVA: 0x00222C10 File Offset: 0x00220E10
-		// (set) Token: 0x06017614 RID: 95764 RVA: 0x00222C49 File Offset: 0x00220E49
+		// Token: 0x170013C1 RID: 5057
+		// (get) Token: 0x060060A6 RID: 24742 RVA: 0x00089DF0 File Offset: 0x00087FF0
+		// (set) Token: 0x060060A7 RID: 24743 RVA: 0x00089E29 File Offset: 0x00088029
 		public TMap<FName, FKuroCurveFloat> FloatParameters
 		{
 			get
@@ -203,9 +203,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E87 RID: 24199
-		// (get) Token: 0x06017615 RID: 95765 RVA: 0x00222C58 File Offset: 0x00220E58
-		// (set) Token: 0x06017616 RID: 95766 RVA: 0x00222C91 File Offset: 0x00220E91
+		// Token: 0x170013C2 RID: 5058
+		// (get) Token: 0x060060A8 RID: 24744 RVA: 0x00089E38 File Offset: 0x00088038
+		// (set) Token: 0x060060A9 RID: 24745 RVA: 0x00089E71 File Offset: 0x00088071
 		public TMap<FName, FKuroCurveLinearColor> ColorParameters
 		{
 			get
@@ -224,9 +224,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E88 RID: 24200
-		// (get) Token: 0x06017617 RID: 95767 RVA: 0x00222C9F File Offset: 0x00220E9F
-		// (set) Token: 0x06017618 RID: 95768 RVA: 0x00222CAF File Offset: 0x00220EAF
+		// Token: 0x170013C3 RID: 5059
+		// (get) Token: 0x060060AA RID: 24746 RVA: 0x00089E7F File Offset: 0x0008807F
+		// (set) Token: 0x060060AB RID: 24747 RVA: 0x00089E8F File Offset: 0x0008808F
 		public unsafe bool DestroyAtOnce
 		{
 			get
@@ -239,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E89 RID: 24201
-		// (get) Token: 0x06017619 RID: 95769 RVA: 0x00222CC0 File Offset: 0x00220EC0
-		// (set) Token: 0x0601761A RID: 95770 RVA: 0x00222CD0 File Offset: 0x00220ED0
+		// Token: 0x170013C4 RID: 5060
+		// (get) Token: 0x060060AC RID: 24748 RVA: 0x00089EA0 File Offset: 0x000880A0
+		// (set) Token: 0x060060AD RID: 24749 RVA: 0x00089EB0 File Offset: 0x000880B0
 		public unsafe float DissipateSpeedAfterDead
 		{
 			get
@@ -254,47 +254,47 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601761B RID: 95771 RVA: 0x00222CE1 File Offset: 0x00220EE1
+		// Token: 0x060060AE RID: 24750 RVA: 0x00089EC1 File Offset: 0x000880C1
 		static UEffectModelTrail()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.EffectModelTrail");
 		}
 
-		// Token: 0x0601761C RID: 95772 RVA: 0x00222CEF File Offset: 0x00220EEF
+		// Token: 0x060060AF RID: 24751 RVA: 0x00089ECF File Offset: 0x000880CF
 		protected UEffectModelTrail(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CB5A RID: 52058
+		// Token: 0x04002919 RID: 10521
 		public new const string __ObjectPath = "/Script/KuroGameplay.EffectModelTrail";
 
-		// Token: 0x0400CB5B RID: 52059
+		// Token: 0x0400291A RID: 10522
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CB5C RID: 52060
+		// Token: 0x0400291B RID: 10523
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CB5D RID: 52061
+		// Token: 0x0400291C RID: 10524
 		internal static int __PropertyOffset_AttachToBones;
 
-		// Token: 0x0400CB5E RID: 52062
+		// Token: 0x0400291D RID: 10525
 		internal static int __PropertyOffset_AttachBoneNames;
 
-		// Token: 0x0400CB5F RID: 52063
+		// Token: 0x0400291E RID: 10526
 		[Nullable(2)]
 		private TArray<FName> _AttachBoneNames;
 
-		// Token: 0x0400CB60 RID: 52064
+		// Token: 0x0400291F RID: 10527
 		internal static int __PropertyOffset_RelativeLocations;
 
-		// Token: 0x0400CB61 RID: 52065
+		// Token: 0x04002920 RID: 10528
 		[Nullable(2)]
 		private TArray<FVector> _RelativeLocations;
 
-		// Token: 0x0400CB62 RID: 52066
+		// Token: 0x04002921 RID: 10529
 		internal static int __PropertyOffset_LocationsCurve;
 
-		// Token: 0x0400CB63 RID: 52067
+		// Token: 0x04002922 RID: 10530
 		[Nullable(new byte[]
 		{
 			2,
@@ -302,30 +302,30 @@ namespace UnrealEngine
 		})]
 		private TMap<int, FKuroCurveVector> _LocationsCurve;
 
-		// Token: 0x0400CB64 RID: 52068
+		// Token: 0x04002923 RID: 10531
 		internal static int __PropertyOffset_Material;
 
-		// Token: 0x0400CB65 RID: 52069
+		// Token: 0x04002924 RID: 10532
 		internal static int __PropertyOffset_UnitLength;
 
-		// Token: 0x0400CB66 RID: 52070
+		// Token: 0x04002925 RID: 10533
 		internal static int __PropertyOffset_DissipateSpeed;
 
-		// Token: 0x0400CB67 RID: 52071
+		// Token: 0x04002926 RID: 10534
 		[Nullable(2)]
 		private FKuroCurveFloat _DissipateSpeed;
 
-		// Token: 0x0400CB68 RID: 52072
+		// Token: 0x04002927 RID: 10535
 		internal static int __PropertyOffset_Alpha;
 
-		// Token: 0x0400CB69 RID: 52073
+		// Token: 0x04002928 RID: 10536
 		[Nullable(2)]
 		private FKuroCurveFloat _Alpha;
 
-		// Token: 0x0400CB6A RID: 52074
+		// Token: 0x04002929 RID: 10537
 		internal static int __PropertyOffset_FloatParameters;
 
-		// Token: 0x0400CB6B RID: 52075
+		// Token: 0x0400292A RID: 10538
 		[Nullable(new byte[]
 		{
 			2,
@@ -333,10 +333,10 @@ namespace UnrealEngine
 		})]
 		private TMap<FName, FKuroCurveFloat> _FloatParameters;
 
-		// Token: 0x0400CB6C RID: 52076
+		// Token: 0x0400292B RID: 10539
 		internal static int __PropertyOffset_ColorParameters;
 
-		// Token: 0x0400CB6D RID: 52077
+		// Token: 0x0400292C RID: 10540
 		[Nullable(new byte[]
 		{
 			2,
@@ -344,10 +344,10 @@ namespace UnrealEngine
 		})]
 		private TMap<FName, FKuroCurveLinearColor> _ColorParameters;
 
-		// Token: 0x0400CB6E RID: 52078
+		// Token: 0x0400292D RID: 10541
 		internal static int __PropertyOffset_DestroyAtOnce;
 
-		// Token: 0x0400CB6F RID: 52079
+		// Token: 0x0400292E RID: 10542
 		internal static int __PropertyOffset_DissipateSpeedAfterDead;
 	}
 }

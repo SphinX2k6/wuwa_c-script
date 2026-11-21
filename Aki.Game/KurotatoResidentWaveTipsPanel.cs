@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CBD RID: 7357
+// Token: 0x0200117F RID: 4479
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoResidentWaveTipsPanel : UiPanelBase
 {
-	// Token: 0x0600DE7F RID: 56959 RVA: 0x0034102C File Offset: 0x0033F22C
+	// Token: 0x0600B29C RID: 45724 RVA: 0x0034CA54 File Offset: 0x0034AC54
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE80 RID: 56960 RVA: 0x003410B4 File Offset: 0x0033F2B4
+	// Token: 0x0600B29D RID: 45725 RVA: 0x0034CADC File Offset: 0x0034ACDC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KurotatoResidentWaveTipsPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -39,13 +39,13 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE81 RID: 56961 RVA: 0x003410F7 File Offset: 0x0033F2F7
+	// Token: 0x0600B29E RID: 45726 RVA: 0x0034CB1F File Offset: 0x0034AD1F
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600DE82 RID: 56962 RVA: 0x0034110C File Offset: 0x0033F30C
+	// Token: 0x0600B29F RID: 45727 RVA: 0x0034CB34 File Offset: 0x0034AD34
 	protected override void OnBeforeShow()
 	{
 		BehaviorTreeUpdateDelegateProxy behaviorDelegate = KurotatoModel.Instance.BattleData.BehaviorDelegate;
@@ -57,7 +57,7 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		base.GetItem(4).SetUIActive(false);
 	}
 
-	// Token: 0x0600DE83 RID: 56963 RVA: 0x00341190 File Offset: 0x0033F390
+	// Token: 0x0600B2A0 RID: 45728 RVA: 0x0034CBB8 File Offset: 0x0034ADB8
 	protected override void OnBeforeHide()
 	{
 		BehaviorTreeUpdateDelegateProxy behaviorDelegate = KurotatoModel.Instance.BattleData.BehaviorDelegate;
@@ -68,19 +68,19 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		this.NeedTick = false;
 	}
 
-	// Token: 0x0600DE84 RID: 56964 RVA: 0x00341205 File Offset: 0x0033F405
+	// Token: 0x0600B2A1 RID: 45729 RVA: 0x0034CC2D File Offset: 0x0034AE2D
 	public void ShowTips()
 	{
 		base.Show(null);
 	}
 
-	// Token: 0x0600DE85 RID: 56965 RVA: 0x0034120E File Offset: 0x0033F40E
+	// Token: 0x0600B2A2 RID: 45730 RVA: 0x0034CC36 File Offset: 0x0034AE36
 	public void HideTips()
 	{
 		base.Hide(null);
 	}
 
-	// Token: 0x0600DE86 RID: 56966 RVA: 0x00341218 File Offset: 0x0033F418
+	// Token: 0x0600B2A3 RID: 45731 RVA: 0x0034CC40 File Offset: 0x0034AE40
 	public void OnTick(float delta)
 	{
 		if (!this.TickEnabled || !this.NeedTick)
@@ -104,7 +104,7 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE87 RID: 56967 RVA: 0x003412A4 File Offset: 0x0033F4A4
+	// Token: 0x0600B2A4 RID: 45732 RVA: 0x0034CCCC File Offset: 0x0034AECC
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "MoveLeft")
@@ -114,7 +114,7 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE88 RID: 56968 RVA: 0x003412C8 File Offset: 0x0033F4C8
+	// Token: 0x0600B2A5 RID: 45733 RVA: 0x0034CCF0 File Offset: 0x0034AEF0
 	private void OnBatchUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		int num = (int)MathUtils.Instance.LongToNumber(newVarDefine.Int);
@@ -127,13 +127,13 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DE89 RID: 56969 RVA: 0x00341328 File Offset: 0x0033F528
+	// Token: 0x0600B2A6 RID: 45734 RVA: 0x0034CD50 File Offset: 0x0034AF50
 	private void OnMaxBatchUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		this.Refresh(false);
 	}
 
-	// Token: 0x0600DE8A RID: 56970 RVA: 0x00341334 File Offset: 0x0033F534
+	// Token: 0x0600B2A7 RID: 45735 RVA: 0x0034CD5C File Offset: 0x0034AF5C
 	private void Refresh(bool advanced)
 	{
 		KurotatoModel instance = KurotatoModel.Instance;
@@ -169,7 +169,7 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		this.LayoutWavePoints(batch, maxBatch, advanced);
 	}
 
-	// Token: 0x0600DE8B RID: 56971 RVA: 0x0034147C File Offset: 0x0033F67C
+	// Token: 0x0600B2A8 RID: 45736 RVA: 0x0034CEA4 File Offset: 0x0034B0A4
 	private void LayoutWavePoints(int curWave, int maxBatch, bool advanced)
 	{
 		int num = curWave - 1;
@@ -193,50 +193,50 @@ public class KurotatoResidentWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006631 RID: 26161
+	// Token: 0x04006710 RID: 26384
 	private const int WAVE_POINT_COUNT = 12;
 
-	// Token: 0x04006632 RID: 26162
+	// Token: 0x04006711 RID: 26385
 	private const int WAVE_POINT_CENTER_INDEX = 6;
 
-	// Token: 0x04006633 RID: 26163
+	// Token: 0x04006712 RID: 26386
 	private const float WAVE_POINT_MOVE_SPEED = 0.25f;
 
-	// Token: 0x04006634 RID: 26164
+	// Token: 0x04006713 RID: 26387
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04006635 RID: 26165
+	// Token: 0x04006714 RID: 26388
 	private readonly KurotatoWavePointItem[] WavePointItems = new KurotatoWavePointItem[12];
 
-	// Token: 0x04006636 RID: 26166
+	// Token: 0x04006715 RID: 26389
 	private float WavePointWidth;
 
-	// Token: 0x04006637 RID: 26167
+	// Token: 0x04006716 RID: 26390
 	private bool NeedTick;
 
-	// Token: 0x04006638 RID: 26168
+	// Token: 0x04006717 RID: 26391
 	private float MoveLengthRecord;
 
-	// Token: 0x04006639 RID: 26169
+	// Token: 0x04006718 RID: 26392
 	private bool TickEnabled;
 
-	// Token: 0x020082AB RID: 33451
+	// Token: 0x02007434 RID: 29748
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AA12 RID: 174610
+		// Token: 0x04025D3A RID: 154938
 		public const int TextWaveNum = 0;
 
-		// Token: 0x0402AA13 RID: 174611
+		// Token: 0x04025D3B RID: 154939
 		public const int TextWaveTitle = 1;
 
-		// Token: 0x0402AA14 RID: 174612
+		// Token: 0x04025D3C RID: 154940
 		public const int PanelDrag = 2;
 
-		// Token: 0x0402AA15 RID: 174613
+		// Token: 0x04025D3D RID: 154941
 		public const int PanelPoint = 3;
 
-		// Token: 0x0402AA16 RID: 174614
+		// Token: 0x04025D3E RID: 154942
 		public const int Texture = 4;
 	}
 }

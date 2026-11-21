@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BB7 RID: 19383
+	// Token: 0x020050A1 RID: 20641
 	public class ICompareMinAlertValueT
 	{
-		// Token: 0x17008CBB RID: 36027
-		// (get) Token: 0x0601E934 RID: 125236 RVA: 0x00446C66 File Offset: 0x00444E66
-		// (set) Token: 0x0601E935 RID: 125237 RVA: 0x00446C6E File Offset: 0x00444E6E
+		// Token: 0x170093D4 RID: 37844
+		// (get) Token: 0x060204E0 RID: 132320 RVA: 0x004797CA File Offset: 0x004779CA
+		// (set) Token: 0x060204E1 RID: 132321 RVA: 0x004797D2 File Offset: 0x004779D2
 		public EComparedAlertValueType Type { get; set; }
 
-		// Token: 0x0601E936 RID: 125238 RVA: 0x00446C77 File Offset: 0x00444E77
+		// Token: 0x060204E2 RID: 132322 RVA: 0x004797DB File Offset: 0x004779DB
 		public ICompareMinAlertValueT()
 		{
 			this.Type = EComparedAlertValueType.Min;

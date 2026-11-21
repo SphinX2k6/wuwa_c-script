@@ -3,27 +3,27 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003656 RID: 13910
+// Token: 0x02002BCB RID: 11211
 public class __TsTaskBlackBoardSetString_InheritProxy : TsTaskBlackBoardSetString
 {
-	// Token: 0x0601E26B RID: 123499 RVA: 0x00882AAC File Offset: 0x00880CAC
+	// Token: 0x0601BF8A RID: 114570 RVA: 0x008AA750 File Offset: 0x008A8950
 	[NullableContext(1)]
 	public __TsTaskBlackBoardSetString_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskBlackBoardSetString.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E26C RID: 123500 RVA: 0x00882ADF File Offset: 0x00880CDF
+	// Token: 0x0601BF8B RID: 114571 RVA: 0x008AA783 File Offset: 0x008A8983
 	protected __TsTaskBlackBoardSetString_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E26D RID: 123501 RVA: 0x00882AE8 File Offset: 0x00880CE8
+	// Token: 0x0601BF8C RID: 114572 RVA: 0x008AA78C File Offset: 0x008A898C
 	protected override void __CPPCALL_InitTsVariables_Implementation()
 	{
 		base.InitTsVariables_Implementation();
 	}
 
-	// Token: 0x0601E26E RID: 123502 RVA: 0x00882AF0 File Offset: 0x00880CF0
+	// Token: 0x0601BF8D RID: 114573 RVA: 0x008AA794 File Offset: 0x008A8994
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

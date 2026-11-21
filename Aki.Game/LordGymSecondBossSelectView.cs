@@ -5,22 +5,22 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020021AF RID: 8623
+// Token: 0x02001693 RID: 5779
 public class LordGymSecondBossSelectView : LordGymLordEntranceSelectView
 {
-	// Token: 0x06010C65 RID: 68709 RVA: 0x004130BC File Offset: 0x004112BC
+	// Token: 0x0600E0F6 RID: 57590 RVA: 0x0041F9A4 File Offset: 0x0041DBA4
 	[NullableContext(1)]
 	public LordGymSecondBossSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010C66 RID: 68710 RVA: 0x004130C5 File Offset: 0x004112C5
+	// Token: 0x0600E0F7 RID: 57591 RVA: 0x0041F9AD File Offset: 0x0041DBAD
 	protected override void OnStart()
 	{
 		this.AddHomeBtnExitDungeonCallback();
 	}
 
-	// Token: 0x06010C67 RID: 68711 RVA: 0x004130CD File Offset: 0x004112CD
+	// Token: 0x0600E0F8 RID: 57592 RVA: 0x0041F9B5 File Offset: 0x0041DBB5
 	private void AddHomeBtnExitDungeonCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -38,7 +38,7 @@ public class LordGymSecondBossSelectView : LordGymLordEntranceSelectView
 		});
 	}
 
-	// Token: 0x06010C68 RID: 68712 RVA: 0x00413100 File Offset: 0x00411300
+	// Token: 0x0600E0F9 RID: 57593 RVA: 0x0041F9E8 File Offset: 0x0041DBE8
 	protected override void OpenSelectView()
 	{
 		LordGymModel.Instance.EntranceEntityId = this.SelectedEntranceId;
@@ -51,7 +51,7 @@ public class LordGymSecondBossSelectView : LordGymLordEntranceSelectView
 		UiManager.Instance.OpenView(EUiViewName.LordGymSecondDifficultySelectView, param, null);
 	}
 
-	// Token: 0x06010C69 RID: 68713 RVA: 0x00413154 File Offset: 0x00411354
+	// Token: 0x0600E0FA RID: 57594 RVA: 0x0041FA3C File Offset: 0x0041DC3C
 	protected override void InitSelect()
 	{
 		int index = 0;
@@ -74,7 +74,7 @@ public class LordGymSecondBossSelectView : LordGymLordEntranceSelectView
 		}
 	}
 
-	// Token: 0x06010C6A RID: 68714 RVA: 0x004131F0 File Offset: 0x004113F0
+	// Token: 0x0600E0FB RID: 57595 RVA: 0x0041FAD8 File Offset: 0x0041DCD8
 	protected override void OnCloseBtnClick()
 	{
 		if (!LordGymController.Instance.IsInLordGymDungeon())

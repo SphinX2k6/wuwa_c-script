@@ -19,13 +19,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006ECD RID: 28365
+	// Token: 0x0200604D RID: 24653
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabShowcaseController : ControllerBase
 	{
-		// Token: 0x17009AD1 RID: 39633
-		// (get) Token: 0x06045141 RID: 282945 RVA: 0x01111804 File Offset: 0x0110FA04
+		// Token: 0x17007008 RID: 28680
+		// (get) Token: 0x0603B2E2 RID: 242402 RVA: 0x010BB8E0 File Offset: 0x010B9AE0
 		[Nullable(2)]
 		private SceneItemDollGrabMachineComponent DollGrabMachineComponent
 		{
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AD2 RID: 39634
-		// (get) Token: 0x06045142 RID: 282946 RVA: 0x01111871 File Offset: 0x0110FA71
+		// Token: 0x17007009 RID: 28681
+		// (get) Token: 0x0603B2E3 RID: 242403 RVA: 0x010BB94D File Offset: 0x010B9B4D
 		[Nullable(new byte[]
 		{
 			2,
@@ -75,8 +75,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AD3 RID: 39635
-		// (get) Token: 0x06045143 RID: 282947 RVA: 0x01111888 File Offset: 0x0110FA88
+		// Token: 0x1700700A RID: 28682
+		// (get) Token: 0x0603B2E4 RID: 242404 RVA: 0x010BB964 File Offset: 0x010B9B64
 		public int ConditionId
 		{
 			get
@@ -90,8 +90,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AD4 RID: 39636
-		// (get) Token: 0x06045144 RID: 282948 RVA: 0x0111189B File Offset: 0x0110FA9B
+		// Token: 0x1700700B RID: 28683
+		// (get) Token: 0x0603B2E5 RID: 242405 RVA: 0x010BB977 File Offset: 0x010B9B77
 		public bool IsEndlessMode
 		{
 			get
@@ -101,8 +101,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AD5 RID: 39637
-		// (get) Token: 0x06045145 RID: 282949 RVA: 0x011118AE File Offset: 0x0110FAAE
+		// Token: 0x1700700C RID: 28684
+		// (get) Token: 0x0603B2E6 RID: 242406 RVA: 0x010BB98A File Offset: 0x010B9B8A
 		[Nullable(2)]
 		public IDollGrabInfiniteShowCaseRewardData CurrentScoreRewardData
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045146 RID: 282950 RVA: 0x011118C4 File Offset: 0x0110FAC4
+		// Token: 0x0603B2E7 RID: 242407 RVA: 0x010BB9A0 File Offset: 0x010B9BA0
 		protected override bool OnInit()
 		{
 			global::Log.Instance.Info(ELogModule.DollGrabMachine, ELogAuthor.FJH, "[DollGrabMachineController] 初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x06045147 RID: 282951 RVA: 0x011118FB File Offset: 0x0110FAFB
+		// Token: 0x0603B2E8 RID: 242408 RVA: 0x010BB9D7 File Offset: 0x010B9BD7
 		private void OpenDollGrabShowcaseInspectView()
 		{
 			if (this.IsGameplayReady)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			TsInteractionUtils.RegisterOpenViewName(EUiViewName.DollGrabShowcaseInspectView);
 		}
 
-		// Token: 0x06045148 RID: 282952 RVA: 0x01111934 File Offset: 0x0110FB34
+		// Token: 0x0603B2E9 RID: 242409 RVA: 0x010BBA10 File Offset: 0x010B9C10
 		public UniTask InitAllDollShowcaseActors()
 		{
 			DollGrabShowcaseController.<InitAllDollShowcaseActors>d__17 <InitAllDollShowcaseActors>d__;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return <InitAllDollShowcaseActors>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045149 RID: 282953 RVA: 0x01111978 File Offset: 0x0110FB78
+		// Token: 0x0603B2EA RID: 242410 RVA: 0x010BBA54 File Offset: 0x010B9C54
 		public void StartDollGrabShowcaseView(IDollGrabShowcase config)
 		{
 			if (this.IsGameplayReady)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.OpenDollGrabShowcaseInspectView();
 		}
 
-		// Token: 0x0604514A RID: 282954 RVA: 0x01111A28 File Offset: 0x0110FC28
+		// Token: 0x0603B2EB RID: 242411 RVA: 0x010BBB04 File Offset: 0x010B9D04
 		public void StartDollGrabShowcaseViewByDelivery()
 		{
 			if (this.IsGameplayReady || this.DollGrabShowcaseComponent == null)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.OpenDollGrabShowcaseInspectView();
 		}
 
-		// Token: 0x0604514B RID: 282955 RVA: 0x01111A64 File Offset: 0x0110FC64
+		// Token: 0x0603B2EC RID: 242412 RVA: 0x010BBB40 File Offset: 0x010B9D40
 		[NullableContext(2)]
 		public void OpenAllViewCamera(Action<ELevelEventState> finishCallback = null)
 		{
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			DollGrabModel.Instance.ExecuteAdjustPlayerCamera(component, cameraInfo, "DollGrabMachineFixCamera", finishCallback);
 		}
 
-		// Token: 0x0604514C RID: 282956 RVA: 0x01111BD0 File Offset: 0x0110FDD0
+		// Token: 0x0603B2ED RID: 242413 RVA: 0x010BBCAC File Offset: 0x010B9EAC
 		public UniTask OpenFocusViewCamera(DollViewCameraInfo cameraInfo)
 		{
 			DollGrabShowcaseController.<OpenFocusViewCamera>d__21 <OpenFocusViewCamera>d__;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return <OpenFocusViewCamera>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604514D RID: 282957 RVA: 0x01111C1C File Offset: 0x0110FE1C
+		// Token: 0x0603B2EE RID: 242414 RVA: 0x010BBCF8 File Offset: 0x010B9EF8
 		public void OnClickMoveInput(string name, InputDistributeDefine.EActionType actionType)
 		{
 			if (actionType == InputDistributeDefine.EActionType.Press)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604514E RID: 282958 RVA: 0x01111C9F File Offset: 0x0110FE9F
+		// Token: 0x0603B2EF RID: 242415 RVA: 0x010BBD7B File Offset: 0x010B9F7B
 		public void ExitDollGrabGameplay()
 		{
 			this.IsGameplayReady = false;
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.DollGrabShowcaseComponent = null;
 		}
 
-		// Token: 0x0604514F RID: 282959 RVA: 0x01111CDC File Offset: 0x0110FEDC
+		// Token: 0x0603B2F0 RID: 242416 RVA: 0x010BBDB8 File Offset: 0x010B9FB8
 		public void OnNotifyDollDelivery(DollDeliveryNotify notify)
 		{
 			Dictionary<string, List<int>> dictionary = new Dictionary<string, List<int>>();
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045150 RID: 282960 RVA: 0x01111F58 File Offset: 0x01110158
+		// Token: 0x0603B2F1 RID: 242417 RVA: 0x010BC034 File Offset: 0x010BA234
 		public void OnClickDelivery()
 		{
 			if (this.DollGrabShowcaseComponent == null)
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}, 0);
 		}
 
-		// Token: 0x06045151 RID: 282961 RVA: 0x01111FB8 File Offset: 0x011101B8
+		// Token: 0x0603B2F2 RID: 242418 RVA: 0x010BC094 File Offset: 0x010BA294
 		[NullableContext(0)]
 		public UniTask<bool> RequestDollMachineMapInfoAsync()
 		{
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return <RequestDollMachineMapInfoAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045152 RID: 282962 RVA: 0x01111FF4 File Offset: 0x011101F4
+		// Token: 0x0603B2F3 RID: 242419 RVA: 0x010BC0D0 File Offset: 0x010BA2D0
 		public void RegisterShowcase(SceneItemDollGrabShowcaseComponent comp)
 		{
 			if (this.DollGrabShowcaseMap.ContainsKey(comp.BelongType))
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045153 RID: 282963 RVA: 0x01112064 File Offset: 0x01110264
+		// Token: 0x0603B2F4 RID: 242420 RVA: 0x010BC140 File Offset: 0x010BA340
 		public void UnregisterShowcase(SceneItemDollGrabShowcaseComponent comp)
 		{
 			if (!this.DollGrabShowcaseMap.ContainsKey(comp.BelongType))
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.DollGrabShowcaseMap.Remove(comp.BelongType);
 		}
 
-		// Token: 0x06045154 RID: 282964 RVA: 0x0111208C File Offset: 0x0111028C
+		// Token: 0x0603B2F5 RID: 242421 RVA: 0x010BC168 File Offset: 0x010BA368
 		public List<DollItemInfo> GetCurrentDollItemInfoList()
 		{
 			if (this.DollGrabShowcaseComponent == null)
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return this.DollGrabShowcaseComponent.GetDollItemInfoList();
 		}
 
-		// Token: 0x06045155 RID: 282965 RVA: 0x011120A7 File Offset: 0x011102A7
+		// Token: 0x0603B2F6 RID: 242422 RVA: 0x010BC183 File Offset: 0x010BA383
 		[NullableContext(2)]
 		public IDollCollectData GetCollectData()
 		{
@@ -437,7 +437,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return this.DollGrabShowcaseComponent.GetCollectData();
 		}
 
-		// Token: 0x06045156 RID: 282966 RVA: 0x011120BE File Offset: 0x011102BE
+		// Token: 0x0603B2F7 RID: 242423 RVA: 0x010BC19A File Offset: 0x010BA39A
 		public void SetDeliveryCompleteCallback(Action callback)
 		{
 			if (this.DollGrabShowcaseComponent == null)
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.DollGrabShowcaseComponent.SetDeliveryCompleteCallback(callback);
 		}
 
-		// Token: 0x06045157 RID: 282967 RVA: 0x011120D8 File Offset: 0x011102D8
+		// Token: 0x0603B2F8 RID: 242424 RVA: 0x010BC1B4 File Offset: 0x010BA3B4
 		public void ChangeShowcasePerformanceState(int state)
 		{
 			if (this.DollGrabShowcaseComponent == null)
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			component.ChangePerformanceState(state, false, true);
 		}
 
-		// Token: 0x06045158 RID: 282968 RVA: 0x0111210C File Offset: 0x0111030C
+		// Token: 0x0603B2F9 RID: 242425 RVA: 0x010BC1E8 File Offset: 0x010BA3E8
 		[NullableContext(0)]
 		public UniTask<int?> StartDollGrabDeliveryView([Nullable(1)] SceneItemDollGrabShowcaseComponent showcaseComp)
 		{
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return <StartDollGrabDeliveryView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045159 RID: 282969 RVA: 0x01112157 File Offset: 0x01110357
+		// Token: 0x0603B2FA RID: 242426 RVA: 0x010BC233 File Offset: 0x010BA433
 		public List<int> GetShowcaseBindingItemIds()
 		{
 			if (this.DollGrabShowcaseComponent == null)
@@ -485,8 +485,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return this.DollGrabShowcaseComponent.GetAllBindingItemIds();
 		}
 
-		// Token: 0x17009AD6 RID: 39638
-		// (get) Token: 0x0604515A RID: 282970 RVA: 0x01112172 File Offset: 0x01110372
+		// Token: 0x1700700D RID: 28685
+		// (get) Token: 0x0603B2FB RID: 242427 RVA: 0x010BC24E File Offset: 0x010BA44E
 		public static DollGrabShowcaseController Instance
 		{
 			get
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604515B RID: 282971 RVA: 0x01112179 File Offset: 0x01110379
+		// Token: 0x0603B2FC RID: 242428 RVA: 0x010BC255 File Offset: 0x010BA455
 		public static DollGrabShowcaseController GetOrCreateInstance()
 		{
 			if (DollGrabShowcaseController._Instance == null)
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return DollGrabShowcaseController._Instance;
 		}
 
-		// Token: 0x0604515C RID: 282972 RVA: 0x0111218D File Offset: 0x0111038D
+		// Token: 0x0603B2FD RID: 242429 RVA: 0x010BC269 File Offset: 0x010BA469
 		public static bool CreateInstance()
 		{
 			if (DollGrabShowcaseController._Instance != null)
@@ -516,40 +516,40 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x0604515D RID: 282973 RVA: 0x011121A3 File Offset: 0x011103A3
+		// Token: 0x0603B2FE RID: 242430 RVA: 0x010BC27F File Offset: 0x010BA47F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604515E RID: 282974 RVA: 0x011121A5 File Offset: 0x011103A5
+		// Token: 0x0603B2FF RID: 242431 RVA: 0x010BC281 File Offset: 0x010BA481
 		public static void ResetStaticDefaultValue()
 		{
 			DollGrabShowcaseController._Instance = null;
 		}
 
-		// Token: 0x0604515F RID: 282975 RVA: 0x011121AD File Offset: 0x011103AD
+		// Token: 0x0603B300 RID: 242432 RVA: 0x010BC289 File Offset: 0x010BA489
 		static DollGrabShowcaseController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DollGrabShowcaseController.CreateStaticDefaultValue), new Action(DollGrabShowcaseController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023F85 RID: 147333
+		// Token: 0x0401F238 RID: 127544
 		[Nullable(2)]
 		private SceneItemDollGrabShowcaseComponent DollGrabShowcaseComponent;
 
-		// Token: 0x04023F86 RID: 147334
+		// Token: 0x0401F239 RID: 127545
 		private bool IsGameplayReady;
 
-		// Token: 0x04023F87 RID: 147335
+		// Token: 0x0401F23A RID: 127546
 		private readonly Dictionary<string, List<int>> DollDeliveryInfo = new Dictionary<string, List<int>>();
 
-		// Token: 0x04023F88 RID: 147336
+		// Token: 0x0401F23B RID: 127547
 		private readonly Dictionary<string, SceneItemDollGrabShowcaseComponent> DollGrabShowcaseMap = new Dictionary<string, SceneItemDollGrabShowcaseComponent>();
 
-		// Token: 0x04023F89 RID: 147337
+		// Token: 0x0401F23C RID: 127548
 		public bool EndToEndlessMode;
 
-		// Token: 0x04023F8A RID: 147338
+		// Token: 0x0401F23D RID: 127549
 		[Nullable(2)]
 		private static DollGrabShowcaseController _Instance;
 	}

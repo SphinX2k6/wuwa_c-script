@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000FAD RID: 4013
+// Token: 0x02000462 RID: 1122
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureEntityVisibleManager
 {
-	// Token: 0x06006694 RID: 26260 RVA: 0x00144218 File Offset: 0x00142418
+	// Token: 0x06003A2C RID: 14892 RVA: 0x0014CAAC File Offset: 0x0014ACAC
 	public void LockFurnitureEntity()
 	{
 		this.FurnitureEntityLock = true;
 	}
 
-	// Token: 0x06006695 RID: 26261 RVA: 0x00144221 File Offset: 0x00142421
+	// Token: 0x06003A2D RID: 14893 RVA: 0x0014CAB5 File Offset: 0x0014ACB5
 	public void UnlockFurnitureEntity()
 	{
 		this.FurnitureEntityLock = false;
 	}
 
-	// Token: 0x06006696 RID: 26262 RVA: 0x0014422C File Offset: 0x0014242C
+	// Token: 0x06003A2E RID: 14894 RVA: 0x0014CAC0 File Offset: 0x0014ACC0
 	public void DisabledAllEntities()
 	{
 		if (this.DisabledEntityList.Count > 0)
@@ -63,7 +63,7 @@ public class FurnitureEntityVisibleManager
 		}
 	}
 
-	// Token: 0x06006697 RID: 26263 RVA: 0x0014434C File Offset: 0x0014254C
+	// Token: 0x06003A2F RID: 14895 RVA: 0x0014CBE0 File Offset: 0x0014ADE0
 	public void EnabledAllEntities()
 	{
 		this.EnableAllFurnitureEntity();
@@ -82,7 +82,7 @@ public class FurnitureEntityVisibleManager
 		this.DisabledEntityList.Clear();
 	}
 
-	// Token: 0x06006698 RID: 26264 RVA: 0x001443D4 File Offset: 0x001425D4
+	// Token: 0x06003A30 RID: 14896 RVA: 0x0014CC68 File Offset: 0x0014AE68
 	public void EnableAllFurnitureEntity()
 	{
 		if (this.FurnitureEntityLock)
@@ -113,7 +113,7 @@ public class FurnitureEntityVisibleManager
 		}
 	}
 
-	// Token: 0x06006699 RID: 26265 RVA: 0x00144474 File Offset: 0x00142674
+	// Token: 0x06003A31 RID: 14897 RVA: 0x0014CD08 File Offset: 0x0014AF08
 	public bool TryEnableFurnitureEntity(EntityHandle entityHandle)
 	{
 		if (this.FurnitureEntityLock)
@@ -144,7 +144,7 @@ public class FurnitureEntityVisibleManager
 		return true;
 	}
 
-	// Token: 0x0600669A RID: 26266 RVA: 0x001444D8 File Offset: 0x001426D8
+	// Token: 0x06003A32 RID: 14898 RVA: 0x0014CD6C File Offset: 0x0014AF6C
 	public void EnableSpareShopNpcEntity()
 	{
 		int handleId = FurnitureModel.Instance.HandleId;
@@ -159,7 +159,7 @@ public class FurnitureEntityVisibleManager
 		CreatureController.Instance.SetEntityEnable(worldEntity, true, "进入家具装修状态", false);
 	}
 
-	// Token: 0x0600669B RID: 26267 RVA: 0x00144548 File Offset: 0x00142748
+	// Token: 0x06003A33 RID: 14899 RVA: 0x0014CDDC File Offset: 0x0014AFDC
 	public void DisableSpareShopNpcEntity()
 	{
 		EntityHandle spareShopNpcEntityHandle = this.SpareShopNpcEntityHandle;
@@ -172,19 +172,19 @@ public class FurnitureEntityVisibleManager
 		this.SpareShopNpcEntityHandle = null;
 	}
 
-	// Token: 0x0600669C RID: 26268 RVA: 0x00144585 File Offset: 0x00142785
+	// Token: 0x06003A34 RID: 14900 RVA: 0x0014CE19 File Offset: 0x0014B019
 	private bool EntityTypeFilter(CreatureDataComponent creatureComponent)
 	{
 		return creatureComponent.IsRole() || creatureComponent.IsPlayer() || creatureComponent.IsNpc() || creatureComponent.IsSceneItem() || creatureComponent.IsAnimal();
 	}
 
-	// Token: 0x04002E92 RID: 11922
+	// Token: 0x04002F2B RID: 12075
 	private readonly List<EntityHandle> DisabledEntityList = new List<EntityHandle>();
 
-	// Token: 0x04002E93 RID: 11923
+	// Token: 0x04002F2C RID: 12076
 	[Nullable(2)]
 	private EntityHandle SpareShopNpcEntityHandle;
 
-	// Token: 0x04002E94 RID: 11924
+	// Token: 0x04002F2D RID: 12077
 	private bool FurnitureEntityLock;
 }

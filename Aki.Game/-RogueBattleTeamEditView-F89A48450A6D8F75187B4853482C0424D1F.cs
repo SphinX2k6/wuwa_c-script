@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x02002773 RID: 10099
+// Token: 0x02001C5E RID: 7262
 internal enum <RogueBattleTeamEditView>F89A48450A6D8F75187B4853482C0424D1FF275B01F31413D5E26965512E3BDD9__ERogueBattleTeamEditViewDefine
 {
-	// Token: 0x04009BB1 RID: 39857
+	// Token: 0x04009D09 RID: 40201
 	RoleSlot1,
-	// Token: 0x04009BB2 RID: 39858
+	// Token: 0x04009D0A RID: 40202
 	RoleSlot2,
-	// Token: 0x04009BB3 RID: 39859
+	// Token: 0x04009D0B RID: 40203
 	RoleSlot3,
-	// Token: 0x04009BB4 RID: 39860
+	// Token: 0x04009D0C RID: 40204
 	BtnConfirm,
-	// Token: 0x04009BB5 RID: 39861
+	// Token: 0x04009D0D RID: 40205
 	TxtConfirm,
-	// Token: 0x04009BB6 RID: 39862
+	// Token: 0x04009D0E RID: 40206
 	CaptionItem,
-	// Token: 0x04009BB7 RID: 39863
+	// Token: 0x04009D0F RID: 40207
 	BtnBuffDetail,
-	// Token: 0x04009BB8 RID: 39864
+	// Token: 0x04009D10 RID: 40208
 	LinkItem,
-	// Token: 0x04009BB9 RID: 39865
+	// Token: 0x04009D11 RID: 40209
 	SpriteBg,
-	// Token: 0x04009BBA RID: 39866
+	// Token: 0x04009D12 RID: 40210
 	ProgressItem,
-	// Token: 0x04009BBB RID: 39867
+	// Token: 0x04009D13 RID: 40211
 	FetterList,
-	// Token: 0x04009BBC RID: 39868
+	// Token: 0x04009D14 RID: 40212
 	DragItem,
-	// Token: 0x04009BBD RID: 39869
+	// Token: 0x04009D15 RID: 40213
 	DragRoleItem
 }

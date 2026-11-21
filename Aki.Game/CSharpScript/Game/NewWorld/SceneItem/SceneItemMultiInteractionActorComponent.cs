@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007187 RID: 29063
+	// Token: 0x0200623B RID: 25147
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemMultiInteractionActorComponent : EntityComponent
 	{
-		// Token: 0x06047102 RID: 291074 RVA: 0x01204871 File Offset: 0x01202A71
+		// Token: 0x0603C9AF RID: 248239 RVA: 0x0115EA49 File Offset: 0x0115CC49
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047103 RID: 291075 RVA: 0x01204898 File Offset: 0x01202A98
+		// Token: 0x0603C9B0 RID: 248240 RVA: 0x0115EA70 File Offset: 0x0115CC70
 		private void AfterFinishGenerateActor()
 		{
 			this.GenerateFinish = true;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047104 RID: 291076 RVA: 0x01204AFC File Offset: 0x01202CFC
+		// Token: 0x0603C9B1 RID: 248241 RVA: 0x0115ECD4 File Offset: 0x0115CED4
 		protected override bool OnEnd()
 		{
 			foreach (int tagId in SceneItemMultiInteractionActorComponent.NeedForwardTagIds)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047105 RID: 291077 RVA: 0x01204C10 File Offset: 0x01202E10
+		// Token: 0x0603C9B2 RID: 248242 RVA: 0x0115EDE8 File Offset: 0x0115CFE8
 		private void OnGameplayTagChanged(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047106 RID: 291078 RVA: 0x01204CC8 File Offset: 0x01202EC8
+		// Token: 0x0603C9B3 RID: 248243 RVA: 0x0115EEA0 File Offset: 0x0115D0A0
 		private void GenerateActorInternal(JigsawIndex index, AActor actor)
 		{
 			Vector vector = this.GeneratedActorIndex2LocFunc(index);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, null, null);
 		}
 
-		// Token: 0x06047107 RID: 291079 RVA: 0x01204DFC File Offset: 0x01202FFC
+		// Token: 0x0603C9B4 RID: 248244 RVA: 0x0115EFD4 File Offset: 0x0115D1D4
 		private EKuroSceneInteractionState GetCurrentState(IReadOnlyList<int> tags)
 		{
 			TMap<FGameplayTag, EKuroSceneInteractionState> 场景交互物状态列表 = this.ModelConfig.场景交互物状态列表;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return EKuroSceneInteractionState.Error;
 		}
 
-		// Token: 0x06047108 RID: 291080 RVA: 0x01204E70 File Offset: 0x01203070
+		// Token: 0x0603C9B5 RID: 248245 RVA: 0x0115F048 File Offset: 0x0115D248
 		private void GenerateActorMap(AActor actor)
 		{
 			TArray<AActor> tarray = new TArray<AActor>();
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047109 RID: 291081 RVA: 0x01204EC4 File Offset: 0x012030C4
+		// Token: 0x0603C9B6 RID: 248246 RVA: 0x0115F09C File Offset: 0x0115D29C
 		private void ProcessingNewActor(SceneInteractionActor actor)
 		{
 			List<EKuroSceneInteractionState> list = new List<EKuroSceneInteractionState>();
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InteractionDataMap[actor] = new SceneItemMultiInteractionActorComponent.InteractionData(actor.States, actor.Effects);
 		}
 
-		// Token: 0x0604710A RID: 291082 RVA: 0x0120552C File Offset: 0x0120372C
+		// Token: 0x0603C9B7 RID: 248247 RVA: 0x0115F70C File Offset: 0x0115D90C
 		private void ResetActorOwner(AActor actor, AActor owner)
 		{
 			TArray<AActor> tarray = new TArray<AActor>();
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			actor.Owner = owner;
 		}
 
-		// Token: 0x0604710B RID: 291083 RVA: 0x01205570 File Offset: 0x01203770
+		// Token: 0x0603C9B8 RID: 248248 RVA: 0x0115F750 File Offset: 0x0115D950
 		public void InitGenerateInfo(string modelConfig, List<JigsawIndex> indexArray, Func<JigsawIndex, Vector> index2LocFunc, [Nullable(new byte[]
 		{
 			2,
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.IsInit = true;
 		}
 
-		// Token: 0x0604710C RID: 291084 RVA: 0x012055D0 File Offset: 0x012037D0
+		// Token: 0x0603C9B9 RID: 248249 RVA: 0x0115F7B0 File Offset: 0x0115D9B0
 		public void InitLevelDynamic(FVectorDouble location, FRotator rotation)
 		{
 			UObject world = GlobalData.World;
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604710D RID: 291085 RVA: 0x01205698 File Offset: 0x01203898
+		// Token: 0x0603C9BA RID: 248250 RVA: 0x0115F878 File Offset: 0x0115DA78
 		private void SetupSceneInteractionWhenLoadCompleted()
 		{
 			this.SceneInteractionInfo.AttachToActor(this.ActorComp.Owner);
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604710E RID: 291086 RVA: 0x0120576C File Offset: 0x0120396C
+		// Token: 0x0603C9BB RID: 248251 RVA: 0x0115F950 File Offset: 0x0115DB50
 		protected override void OnEnable()
 		{
 			if (this.NeedGenWhenEnable && this.GeneratedActorIndexArray != null)
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604710F RID: 291087 RVA: 0x0120579C File Offset: 0x0120399C
+		// Token: 0x0603C9BC RID: 248252 RVA: 0x0115F980 File Offset: 0x0115DB80
 		private void SplitFrameGenerateActor(float delta)
 		{
 			int i = 0;
@@ -526,13 +526,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047110 RID: 291088 RVA: 0x01205812 File Offset: 0x01203A12
+		// Token: 0x0603C9BD RID: 248253 RVA: 0x0115F9F6 File Offset: 0x0115DBF6
 		public bool IsChildrenActor(AActor actor)
 		{
 			return actor.Owner != null && this.InteractionDataMap.ContainsKey(actor.Owner);
 		}
 
-		// Token: 0x06047111 RID: 291089 RVA: 0x01205830 File Offset: 0x01203A30
+		// Token: 0x0603C9BE RID: 248254 RVA: 0x0115FA14 File Offset: 0x0115DC14
 		[return: Nullable(2)]
 		public SceneInteractionActor GetInteractionActorByIndex(JigsawIndex index)
 		{
@@ -544,19 +544,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return result;
 		}
 
-		// Token: 0x06047112 RID: 291090 RVA: 0x01205855 File Offset: 0x01203A55
+		// Token: 0x0603C9BF RID: 248255 RVA: 0x0115FA39 File Offset: 0x0115DC39
 		public void AddTagsByIndex(JigsawIndex index, List<int> tags)
 		{
 			this.AddTagsByIndexInternal(index, tags);
 		}
 
-		// Token: 0x06047113 RID: 291091 RVA: 0x0120585F File Offset: 0x01203A5F
+		// Token: 0x0603C9C0 RID: 248256 RVA: 0x0115FA43 File Offset: 0x0115DC43
 		public void AddTagsByIndex(JigsawIndex index, int tags)
 		{
 			this.AddTagsByIndexInternal(index, tags);
 		}
 
-		// Token: 0x06047114 RID: 291092 RVA: 0x01205870 File Offset: 0x01203A70
+		// Token: 0x0603C9C1 RID: 248257 RVA: 0x0115FA54 File Offset: 0x0115DC54
 		private void AddTagsByIndexInternal(JigsawIndex index, object tags)
 		{
 			SceneInteractionActor sceneInteractionActor = this.GeneratedActorMap.ContainsKey(index.GetKey()) ? this.GeneratedActorMap[index.GetKey()] : null;
@@ -612,19 +612,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047115 RID: 291093 RVA: 0x012059D4 File Offset: 0x01203BD4
+		// Token: 0x0603C9C2 RID: 248258 RVA: 0x0115FBB8 File Offset: 0x0115DDB8
 		public void RemoveTagsByIndex(JigsawIndex index, List<int> tags)
 		{
 			this.RemoveTagsByIndexInternal(index, tags);
 		}
 
-		// Token: 0x06047116 RID: 291094 RVA: 0x012059DE File Offset: 0x01203BDE
+		// Token: 0x0603C9C3 RID: 248259 RVA: 0x0115FBC2 File Offset: 0x0115DDC2
 		public void RemoveTagsByIndex(JigsawIndex index, int tags)
 		{
 			this.RemoveTagsByIndexInternal(index, tags);
 		}
 
-		// Token: 0x06047117 RID: 291095 RVA: 0x012059F0 File Offset: 0x01203BF0
+		// Token: 0x0603C9C4 RID: 248260 RVA: 0x0115FBD4 File Offset: 0x0115DDD4
 		private void RemoveTagsByIndexInternal(JigsawIndex index, object tags)
 		{
 			SceneInteractionActor sceneInteractionActor = this.GeneratedActorMap.ContainsKey(index.GetKey()) ? this.GeneratedActorMap[index.GetKey()] : null;
@@ -680,14 +680,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047118 RID: 291096 RVA: 0x01205B54 File Offset: 0x01203D54
+		// Token: 0x0603C9C5 RID: 248261 RVA: 0x0115FD38 File Offset: 0x0115DF38
 		public bool HasTagByIndex(JigsawIndex index, int tag)
 		{
 			List<int> list;
 			return (this.GenerateFinish ? this.GeneratedActorTagMap : this.CacheTagsMaps).TryGetValue(index.GetKey(), out list) && list.Contains(tag);
 		}
 
-		// Token: 0x06047119 RID: 291097 RVA: 0x01205B90 File Offset: 0x01203D90
+		// Token: 0x0603C9C6 RID: 248262 RVA: 0x0115FD74 File Offset: 0x0115DF74
 		private void ChangeSceneInteractionEffectOnTagChanged(JigsawIndex index, int tagId, bool isAdd)
 		{
 			Dictionary<int, ESceneInteractionEffect> dictionary = this.SceneInteractionEffectMap.GetValueOrDefault(index.GetKey());
@@ -730,7 +730,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604711A RID: 291098 RVA: 0x01205C64 File Offset: 0x01203E64
+		// Token: 0x0603C9C7 RID: 248263 RVA: 0x0115FE48 File Offset: 0x0115E048
 		private void UpdateSceneInteractionLevel(JigsawIndex index)
 		{
 			string key = index.GetKey();
@@ -754,7 +754,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			sceneInteractionActor.SetState(ekuroSceneInteractionState, true, false);
 		}
 
-		// Token: 0x0604711B RID: 291099 RVA: 0x01205CF0 File Offset: 0x01203EF0
+		// Token: 0x0603C9C8 RID: 248264 RVA: 0x0115FED4 File Offset: 0x0115E0D4
 		public void DynamicRemoveActorByIndex(JigsawIndex index)
 		{
 			if (!this.GenerateFinish)
@@ -772,7 +772,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			valueOrDefault.DestroySelf();
 		}
 
-		// Token: 0x0604711C RID: 291100 RVA: 0x01205D54 File Offset: 0x01203F54
+		// Token: 0x0603C9C9 RID: 248265 RVA: 0x0115FF38 File Offset: 0x0115E138
 		public void DynamicAddActorByIndex(JigsawIndex index, List<int> tagIds)
 		{
 			if (!this.GenerateFinish)
@@ -791,25 +791,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.GenerateActorInternal(index, this.SceneInteractionInfo.MainActor);
 		}
 
-		// Token: 0x0604711D RID: 291101 RVA: 0x01205DCB File Offset: 0x01203FCB
+		// Token: 0x0603C9CA RID: 248266 RVA: 0x0115FFAF File Offset: 0x0115E1AF
 		public bool GetIsInit()
 		{
 			return this.IsInit;
 		}
 
-		// Token: 0x0604711E RID: 291102 RVA: 0x01205DD3 File Offset: 0x01203FD3
+		// Token: 0x0603C9CB RID: 248267 RVA: 0x0115FFB7 File Offset: 0x0115E1B7
 		public bool GetIsFinish()
 		{
 			return this.GenerateFinish;
 		}
 
-		// Token: 0x0604711F RID: 291103 RVA: 0x01205DDB File Offset: 0x01203FDB
+		// Token: 0x0603C9CC RID: 248268 RVA: 0x0115FFBF File Offset: 0x0115E1BF
 		public void SetIsFinish(bool value)
 		{
 			this.GenerateFinish = value;
 		}
 
-		// Token: 0x06047120 RID: 291104 RVA: 0x01205DE4 File Offset: 0x01203FE4
+		// Token: 0x0603C9CD RID: 248269 RVA: 0x0115FFC8 File Offset: 0x0115E1C8
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -817,130 +817,127 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemMultiInteractionActorComponent sceneItemMultiInteractionActorComponent = (SceneItemMultiInteractionActorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemMultiInteractionActorComponent.ActorComp == null)
 			{
-				if (sceneItemMultiInteractionActorComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemMultiInteractionActorComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ModelConfig"))
-			{
-				if (sceneItemMultiInteractionActorComponent.ModelConfig == null)
-				{
-					this.ModelConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SModelConfig>(this.ModelConfig), "ModelConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OnGeneratedFinish"))
-			{
-				if (sceneItemMultiInteractionActorComponent.OnGeneratedFinish == null)
-				{
-					this.OnGeneratedFinish = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnGeneratedFinish), "OnGeneratedFinish"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsInit"))
-			{
-				this.IsInit = sceneItemMultiInteractionActorComponent.IsInit;
-			}
-			if (base.CanResetComponentProperty("GenerateFinish"))
-			{
-				this.GenerateFinish = sceneItemMultiInteractionActorComponent.GenerateFinish;
-			}
-			if (base.CanResetComponentProperty("SceneInteractionInfo"))
-			{
-				if (sceneItemMultiInteractionActorComponent.SceneInteractionInfo == null)
-				{
-					this.SceneInteractionInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneInteractionLevel>(this.SceneInteractionInfo), "SceneInteractionInfo"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("GeneratedActorIndexArray"))
-			{
-				if (sceneItemMultiInteractionActorComponent.GeneratedActorIndexArray == null)
-				{
-					this.GeneratedActorIndexArray = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<JigsawIndex>>(this.GeneratedActorIndexArray), "GeneratedActorIndexArray"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CacheTagsMaps") && sceneItemMultiInteractionActorComponent.CacheTagsMaps != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, List<int>>>(this.CacheTagsMaps), "CacheTagsMaps"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("GeneratedActorIndex2LocFunc"))
+			if (sceneItemMultiInteractionActorComponent.TagComp == null)
 			{
-				if (sceneItemMultiInteractionActorComponent.GeneratedActorIndex2LocFunc == null)
-				{
-					this.GeneratedActorIndex2LocFunc = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Func<JigsawIndex, Vector>>(this.GeneratedActorIndex2LocFunc), "GeneratedActorIndex2LocFunc"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("CacheActorMap") && sceneItemMultiInteractionActorComponent.CacheActorMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, AActor>>(this.CacheActorMap), "CacheActorMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InteractionDataMap") && sceneItemMultiInteractionActorComponent.InteractionDataMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, SceneItemMultiInteractionActorComponent.InteractionData>>(this.InteractionDataMap), "InteractionDataMap"))
+			if (sceneItemMultiInteractionActorComponent.ModelConfig == null)
+			{
+				this.ModelConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ModelConfig), "ModelConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("GeneratedActorMap") && sceneItemMultiInteractionActorComponent.GeneratedActorMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SceneInteractionActor>>(this.GeneratedActorMap), "GeneratedActorMap"))
+			if (sceneItemMultiInteractionActorComponent.OnGeneratedFinish == null)
+			{
+				this.OnGeneratedFinish = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnGeneratedFinish), "OnGeneratedFinish"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("GeneratedActorTagMap"))
+			this.IsInit = sceneItemMultiInteractionActorComponent.IsInit;
+			this.GenerateFinish = sceneItemMultiInteractionActorComponent.GenerateFinish;
+			if (sceneItemMultiInteractionActorComponent.SceneInteractionInfo == null)
 			{
-				if (sceneItemMultiInteractionActorComponent.GeneratedActorTagMap == null)
-				{
-					this.GeneratedActorTagMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, List<int>>>(this.GeneratedActorTagMap), "GeneratedActorTagMap"))
-				{
-					return false;
-				}
+				this.SceneInteractionInfo = null;
 			}
-			if (base.CanResetComponentProperty("SceneInteractionEffectMap") && sceneItemMultiInteractionActorComponent.SceneInteractionEffectMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Dictionary<int, ESceneInteractionEffect>>>(this.SceneInteractionEffectMap), "SceneInteractionEffectMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractionInfo), "SceneInteractionInfo"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("NeedGenWhenEnable"))
+			if (sceneItemMultiInteractionActorComponent.GeneratedActorIndexArray == null)
 			{
-				this.NeedGenWhenEnable = sceneItemMultiInteractionActorComponent.NeedGenWhenEnable;
+				this.GeneratedActorIndexArray = null;
 			}
-			return !base.CanResetComponentProperty("DynamicOperateWaitQueue") || sceneItemMultiInteractionActorComponent.DynamicOperateWaitQueue == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Queue<SceneItemMultiInteractionActorComponent.WaitQueueData>>(this.DynamicOperateWaitQueue), "DynamicOperateWaitQueue");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GeneratedActorIndexArray), "GeneratedActorIndexArray"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.CacheTagsMaps != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheTagsMaps), "CacheTagsMaps"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.GeneratedActorIndex2LocFunc == null)
+			{
+				this.GeneratedActorIndex2LocFunc = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GeneratedActorIndex2LocFunc), "GeneratedActorIndex2LocFunc"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.CacheActorMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheActorMap), "CacheActorMap"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.InteractionDataMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractionDataMap), "InteractionDataMap"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.GeneratedActorMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.GeneratedActorMap), "GeneratedActorMap"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.GeneratedActorTagMap == null)
+			{
+				this.GeneratedActorTagMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GeneratedActorTagMap), "GeneratedActorTagMap"))
+			{
+				return false;
+			}
+			if (sceneItemMultiInteractionActorComponent.SceneInteractionEffectMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneInteractionEffectMap), "SceneInteractionEffectMap"))
+			{
+				return false;
+			}
+			this.NeedGenWhenEnable = sceneItemMultiInteractionActorComponent.NeedGenWhenEnable;
+			return sceneItemMultiInteractionActorComponent.DynamicOperateWaitQueue == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicOperateWaitQueue), "DynamicOperateWaitQueue");
 		}
 
-		// Token: 0x06047122 RID: 291106 RVA: 0x01206194 File Offset: 0x01204394
+		// Token: 0x17007295 RID: 29333
+		// (get) Token: 0x0603C9CE RID: 248270 RVA: 0x01160236 File Offset: 0x0115E436
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007296 RID: 29334
+		// (get) Token: 0x0603C9CF RID: 248271 RVA: 0x01160239 File Offset: 0x0115E439
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007297 RID: 29335
+		// (get) Token: 0x0603C9D0 RID: 248272 RVA: 0x0116023C File Offset: 0x0115E43C
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603C9D2 RID: 248274 RVA: 0x011602A4 File Offset: 0x0115E4A4
 		// Note: this type is marked as 'beforefieldinit'.
 		unsafe static SceneItemMultiInteractionActorComponent()
 		{
@@ -955,43 +952,43 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			SceneItemMultiInteractionActorComponent.NeedForwardTagIds = list;
 		}
 
-		// Token: 0x040255B9 RID: 153017
+		// Token: 0x04020220 RID: 131616
 		private static readonly int DefaultTagId = GameplayTagDefine.EGameplayTagId["物体.表现.初始状态"];
 
-		// Token: 0x040255BA RID: 153018
+		// Token: 0x04020221 RID: 131617
 		private const int MAX_GEN_TIME = 3;
 
-		// Token: 0x040255BB RID: 153019
+		// Token: 0x04020222 RID: 131618
 		[StaticVariableRuleIgnore]
 		private static readonly List<int> NeedForwardTagIds;
 
-		// Token: 0x040255BC RID: 153020
+		// Token: 0x04020223 RID: 131619
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040255BD RID: 153021
+		// Token: 0x04020224 RID: 131620
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x040255BE RID: 153022
+		// Token: 0x04020225 RID: 131621
 		[Nullable(2)]
 		private SModelConfig ModelConfig;
 
-		// Token: 0x040255BF RID: 153023
+		// Token: 0x04020226 RID: 131622
 		[Nullable(2)]
 		private Action OnGeneratedFinish;
 
-		// Token: 0x040255C0 RID: 153024
+		// Token: 0x04020227 RID: 131623
 		private bool IsInit;
 
-		// Token: 0x040255C1 RID: 153025
+		// Token: 0x04020228 RID: 131624
 		private bool GenerateFinish;
 
-		// Token: 0x040255C2 RID: 153026
+		// Token: 0x04020229 RID: 131625
 		[Nullable(2)]
 		private SceneInteractionLevel SceneInteractionInfo;
 
-		// Token: 0x040255C3 RID: 153027
+		// Token: 0x0402022A RID: 131626
 		[Nullable(new byte[]
 		{
 			2,
@@ -999,10 +996,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<JigsawIndex> GeneratedActorIndexArray;
 
-		// Token: 0x040255C4 RID: 153028
+		// Token: 0x0402022B RID: 131627
 		private readonly Dictionary<string, List<int>> CacheTagsMaps = new Dictionary<string, List<int>>();
 
-		// Token: 0x040255C5 RID: 153029
+		// Token: 0x0402022C RID: 131628
 		[Nullable(new byte[]
 		{
 			2,
@@ -1011,43 +1008,43 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Func<JigsawIndex, Vector> GeneratedActorIndex2LocFunc;
 
-		// Token: 0x040255C6 RID: 153030
+		// Token: 0x0402022D RID: 131629
 		private readonly Dictionary<AActor, AActor> CacheActorMap = new Dictionary<AActor, AActor>();
 
-		// Token: 0x040255C7 RID: 153031
+		// Token: 0x0402022E RID: 131630
 		private readonly Dictionary<AActor, SceneItemMultiInteractionActorComponent.InteractionData> InteractionDataMap = new Dictionary<AActor, SceneItemMultiInteractionActorComponent.InteractionData>();
 
-		// Token: 0x040255C8 RID: 153032
+		// Token: 0x0402022F RID: 131631
 		private readonly Dictionary<string, SceneInteractionActor> GeneratedActorMap = new Dictionary<string, SceneInteractionActor>();
 
-		// Token: 0x040255C9 RID: 153033
+		// Token: 0x04020230 RID: 131632
 		private Dictionary<string, List<int>> GeneratedActorTagMap = new Dictionary<string, List<int>>();
 
-		// Token: 0x040255CA RID: 153034
+		// Token: 0x04020231 RID: 131633
 		private readonly Dictionary<string, Dictionary<int, ESceneInteractionEffect>> SceneInteractionEffectMap = new Dictionary<string, Dictionary<int, ESceneInteractionEffect>>();
 
-		// Token: 0x040255CB RID: 153035
+		// Token: 0x04020232 RID: 131634
 		private bool NeedGenWhenEnable;
 
-		// Token: 0x040255CC RID: 153036
+		// Token: 0x04020233 RID: 131635
 		private readonly Queue<SceneItemMultiInteractionActorComponent.WaitQueueData> DynamicOperateWaitQueue = new Queue<SceneItemMultiInteractionActorComponent.WaitQueueData>(4);
 
-		// Token: 0x0200CED6 RID: 52950
-		// (Invoke) Token: 0x06051FA9 RID: 335785
+		// Token: 0x0200BA6C RID: 47724
+		// (Invoke) Token: 0x06048753 RID: 296787
 		[NullableContext(0)]
 		private delegate void TDynamicAddFunc(JigsawIndex index, List<int> tagIds);
 
-		// Token: 0x0200CED7 RID: 52951
-		// (Invoke) Token: 0x06051FAD RID: 335789
+		// Token: 0x0200BA6D RID: 47725
+		// (Invoke) Token: 0x06048757 RID: 296791
 		[NullableContext(0)]
 		private delegate void TDynamicRemoveFunc(JigsawIndex index);
 
-		// Token: 0x0200CED8 RID: 52952
+		// Token: 0x0200BA6E RID: 47726
 		[NullableContext(2)]
 		[Nullable(0)]
 		private class InteractionData
 		{
-			// Token: 0x06051FB0 RID: 335792 RVA: 0x016462B1 File Offset: 0x016444B1
+			// Token: 0x0604875A RID: 296794 RVA: 0x016183D9 File Offset: 0x016165D9
 			public InteractionData([Nullable(new byte[]
 			{
 				1,
@@ -1062,18 +1059,18 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.Effects = effects;
 			}
 
-			// Token: 0x0403E3B4 RID: 254900
+			// Token: 0x040396DA RID: 235226
 			public TMap<EKuroSceneInteractionState, SSceneInteractionitem> States;
 
-			// Token: 0x0403E3B5 RID: 254901
+			// Token: 0x040396DB RID: 235227
 			public TMap<ESceneInteractionEffect, SScenePropertyEffect> Effects;
 		}
 
-		// Token: 0x0200CED9 RID: 52953
+		// Token: 0x0200BA6F RID: 47727
 		[Nullable(0)]
 		private class WaitQueueData
 		{
-			// Token: 0x06051FB1 RID: 335793 RVA: 0x016462C7 File Offset: 0x016444C7
+			// Token: 0x0604875B RID: 296795 RVA: 0x016183EF File Offset: 0x016165EF
 			public WaitQueueData(SceneItemMultiInteractionActorComponent.TDynamicAddFunc func, JigsawIndex index, List<int> tagIds)
 			{
 				this.Func = func;
@@ -1081,7 +1078,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.TagIds = tagIds;
 			}
 
-			// Token: 0x06051FB2 RID: 335794 RVA: 0x016462E9 File Offset: 0x016444E9
+			// Token: 0x0604875C RID: 296796 RVA: 0x01618411 File Offset: 0x01616611
 			public WaitQueueData(SceneItemMultiInteractionActorComponent.TDynamicRemoveFunc func, JigsawIndex index, List<int> tagIds)
 			{
 				this.Func = func;
@@ -1089,7 +1086,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.TagIds = tagIds;
 			}
 
-			// Token: 0x0403E3B6 RID: 254902
+			// Token: 0x040396DC RID: 235228
 			[Nullable(new byte[]
 			{
 				0,
@@ -1098,10 +1095,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			})]
 			public OneOf<SceneItemMultiInteractionActorComponent.TDynamicAddFunc, SceneItemMultiInteractionActorComponent.TDynamicRemoveFunc> Func;
 
-			// Token: 0x0403E3B7 RID: 254903
+			// Token: 0x040396DD RID: 235229
 			public JigsawIndex Index;
 
-			// Token: 0x0403E3B8 RID: 254904
+			// Token: 0x040396DE RID: 235230
 			public List<int> TagIds;
 		}
 	}

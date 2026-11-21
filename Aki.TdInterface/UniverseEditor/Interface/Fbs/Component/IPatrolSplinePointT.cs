@@ -6,80 +6,85 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005714 RID: 22292
+	// Token: 0x02005D1B RID: 23835
 	public class IPatrolSplinePointT
 	{
-		// Token: 0x1700A60E RID: 42510
-		// (get) Token: 0x0602549F RID: 152735 RVA: 0x005256C4 File Offset: 0x005238C4
-		// (set) Token: 0x060254A0 RID: 152736 RVA: 0x005256CC File Offset: 0x005238CC
+		// Token: 0x1700AF2D RID: 44845
+		// (get) Token: 0x060279AC RID: 162220 RVA: 0x0056B3A2 File Offset: 0x005695A2
+		// (set) Token: 0x060279AD RID: 162221 RVA: 0x0056B3AA File Offset: 0x005695AA
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700A60F RID: 42511
-		// (get) Token: 0x060254A1 RID: 152737 RVA: 0x005256D5 File Offset: 0x005238D5
-		// (set) Token: 0x060254A2 RID: 152738 RVA: 0x005256DD File Offset: 0x005238DD
+		// Token: 0x1700AF2E RID: 44846
+		// (get) Token: 0x060279AE RID: 162222 RVA: 0x0056B3B3 File Offset: 0x005695B3
+		// (set) Token: 0x060279AF RID: 162223 RVA: 0x0056B3BB File Offset: 0x005695BB
 		public IVectorInfoT ArriveTangent { get; set; }
 
-		// Token: 0x1700A610 RID: 42512
-		// (get) Token: 0x060254A3 RID: 152739 RVA: 0x005256E6 File Offset: 0x005238E6
-		// (set) Token: 0x060254A4 RID: 152740 RVA: 0x005256EE File Offset: 0x005238EE
+		// Token: 0x1700AF2F RID: 44847
+		// (get) Token: 0x060279B0 RID: 162224 RVA: 0x0056B3C4 File Offset: 0x005695C4
+		// (set) Token: 0x060279B1 RID: 162225 RVA: 0x0056B3CC File Offset: 0x005695CC
 		public IVectorInfoT LeaveTangent { get; set; }
 
-		// Token: 0x1700A611 RID: 42513
-		// (get) Token: 0x060254A5 RID: 152741 RVA: 0x005256F7 File Offset: 0x005238F7
-		// (set) Token: 0x060254A6 RID: 152742 RVA: 0x005256FF File Offset: 0x005238FF
+		// Token: 0x1700AF30 RID: 44848
+		// (get) Token: 0x060279B2 RID: 162226 RVA: 0x0056B3D5 File Offset: 0x005695D5
+		// (set) Token: 0x060279B3 RID: 162227 RVA: 0x0056B3DD File Offset: 0x005695DD
 		public ESplineLine LineType { get; set; }
 
-		// Token: 0x1700A612 RID: 42514
-		// (get) Token: 0x060254A7 RID: 152743 RVA: 0x00525708 File Offset: 0x00523908
-		// (set) Token: 0x060254A8 RID: 152744 RVA: 0x00525710 File Offset: 0x00523910
+		// Token: 0x1700AF31 RID: 44849
+		// (get) Token: 0x060279B4 RID: 162228 RVA: 0x0056B3E6 File Offset: 0x005695E6
+		// (set) Token: 0x060279B5 RID: 162229 RVA: 0x0056B3EE File Offset: 0x005695EE
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x1700A613 RID: 42515
-		// (get) Token: 0x060254A9 RID: 152745 RVA: 0x00525719 File Offset: 0x00523919
-		// (set) Token: 0x060254AA RID: 152746 RVA: 0x00525721 File Offset: 0x00523921
+		// Token: 0x1700AF32 RID: 44850
+		// (get) Token: 0x060279B6 RID: 162230 RVA: 0x0056B3F7 File Offset: 0x005695F7
+		// (set) Token: 0x060279B7 RID: 162231 RVA: 0x0056B3FF File Offset: 0x005695FF
 		public EPatrolMoveState MoveState { get; set; }
 
-		// Token: 0x1700A614 RID: 42516
-		// (get) Token: 0x060254AB RID: 152747 RVA: 0x0052572A File Offset: 0x0052392A
-		// (set) Token: 0x060254AC RID: 152748 RVA: 0x00525732 File Offset: 0x00523932
+		// Token: 0x1700AF33 RID: 44851
+		// (get) Token: 0x060279B8 RID: 162232 RVA: 0x0056B408 File Offset: 0x00569608
+		// (set) Token: 0x060279B9 RID: 162233 RVA: 0x0056B410 File Offset: 0x00569610
 		public ECharPositionStateType CharPositionState { get; set; }
 
-		// Token: 0x1700A615 RID: 42517
-		// (get) Token: 0x060254AD RID: 152749 RVA: 0x0052573B File Offset: 0x0052393B
-		// (set) Token: 0x060254AE RID: 152750 RVA: 0x00525743 File Offset: 0x00523943
+		// Token: 0x1700AF34 RID: 44852
+		// (get) Token: 0x060279BA RID: 162234 RVA: 0x0056B419 File Offset: 0x00569619
+		// (set) Token: 0x060279BB RID: 162235 RVA: 0x0056B421 File Offset: 0x00569621
 		public int MoveSpeed { get; set; }
 
-		// Token: 0x1700A616 RID: 42518
-		// (get) Token: 0x060254AF RID: 152751 RVA: 0x0052574C File Offset: 0x0052394C
-		// (set) Token: 0x060254B0 RID: 152752 RVA: 0x00525754 File Offset: 0x00523954
+		// Token: 0x1700AF35 RID: 44853
+		// (get) Token: 0x060279BC RID: 162236 RVA: 0x0056B42A File Offset: 0x0056962A
+		// (set) Token: 0x060279BD RID: 162237 RVA: 0x0056B432 File Offset: 0x00569632
+		public int TurnSpeed { get; set; }
+
+		// Token: 0x1700AF36 RID: 44854
+		// (get) Token: 0x060279BE RID: 162238 RVA: 0x0056B43B File Offset: 0x0056963B
+		// (set) Token: 0x060279BF RID: 162239 RVA: 0x0056B443 File Offset: 0x00569643
 		public bool IgnorePoint { get; set; }
 
-		// Token: 0x1700A617 RID: 42519
-		// (get) Token: 0x060254B1 RID: 152753 RVA: 0x0052575D File Offset: 0x0052395D
-		// (set) Token: 0x060254B2 RID: 152754 RVA: 0x00525765 File Offset: 0x00523965
+		// Token: 0x1700AF37 RID: 44855
+		// (get) Token: 0x060279C0 RID: 162240 RVA: 0x0056B44C File Offset: 0x0056964C
+		// (set) Token: 0x060279C1 RID: 162241 RVA: 0x0056B454 File Offset: 0x00569654
 		public int StayTime { get; set; }
 
-		// Token: 0x1700A618 RID: 42520
-		// (get) Token: 0x060254B3 RID: 152755 RVA: 0x0052576E File Offset: 0x0052396E
-		// (set) Token: 0x060254B4 RID: 152756 RVA: 0x00525776 File Offset: 0x00523976
+		// Token: 0x1700AF38 RID: 44856
+		// (get) Token: 0x060279C2 RID: 162242 RVA: 0x0056B45D File Offset: 0x0056965D
+		// (set) Token: 0x060279C3 RID: 162243 RVA: 0x0056B465 File Offset: 0x00569665
 		public bool IsHide { get; set; }
 
-		// Token: 0x1700A619 RID: 42521
-		// (get) Token: 0x060254B5 RID: 152757 RVA: 0x0052577F File Offset: 0x0052397F
-		// (set) Token: 0x060254B6 RID: 152758 RVA: 0x00525787 File Offset: 0x00523987
+		// Token: 0x1700AF39 RID: 44857
+		// (get) Token: 0x060279C4 RID: 162244 RVA: 0x0056B46E File Offset: 0x0056966E
+		// (set) Token: 0x060279C5 RID: 162245 RVA: 0x0056B476 File Offset: 0x00569676
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700A61A RID: 42522
-		// (get) Token: 0x060254B7 RID: 152759 RVA: 0x00525790 File Offset: 0x00523990
-		// (set) Token: 0x060254B8 RID: 152760 RVA: 0x00525798 File Offset: 0x00523998
+		// Token: 0x1700AF3A RID: 44858
+		// (get) Token: 0x060279C6 RID: 162246 RVA: 0x0056B47F File Offset: 0x0056967F
+		// (set) Token: 0x060279C7 RID: 162247 RVA: 0x0056B487 File Offset: 0x00569687
 		public bool IsEnableIk { get; set; }
 
-		// Token: 0x1700A61B RID: 42523
-		// (get) Token: 0x060254B9 RID: 152761 RVA: 0x005257A1 File Offset: 0x005239A1
-		// (set) Token: 0x060254BA RID: 152762 RVA: 0x005257A9 File Offset: 0x005239A9
+		// Token: 0x1700AF3B RID: 44859
+		// (get) Token: 0x060279C8 RID: 162248 RVA: 0x0056B490 File Offset: 0x00569690
+		// (set) Token: 0x060279C9 RID: 162249 RVA: 0x0056B498 File Offset: 0x00569698
 		public byte NullMask { get; set; }
 
-		// Token: 0x060254BB RID: 152763 RVA: 0x005257B4 File Offset: 0x005239B4
+		// Token: 0x060279CA RID: 162250 RVA: 0x0056B4A4 File Offset: 0x005696A4
 		public IPatrolSplinePointT()
 		{
 			this.Position = null;
@@ -90,6 +95,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			this.MoveState = EPatrolMoveState.None;
 			this.CharPositionState = ECharPositionStateType.Ground;
 			this.MoveSpeed = 0;
+			this.TurnSpeed = 0;
 			this.IgnorePoint = false;
 			this.StayTime = 0;
 			this.IsHide = false;

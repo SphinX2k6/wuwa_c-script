@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001911 RID: 6417
+// Token: 0x02000DCA RID: 3530
 public class MediumItemGridDisableComponent : MediumItemGridVisibleComponent
 {
-	// Token: 0x0600BC04 RID: 48132 RVA: 0x002A9E4F File Offset: 0x002A804F
+	// Token: 0x06008FEE RID: 36846 RVA: 0x002B45AB File Offset: 0x002B27AB
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemDark";
 	}
 
-	// Token: 0x0600BC05 RID: 48133 RVA: 0x002A9E56 File Offset: 0x002A8056
+	// Token: 0x06008FEF RID: 36847 RVA: 0x002B45B2 File Offset: 0x002B27B2
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;

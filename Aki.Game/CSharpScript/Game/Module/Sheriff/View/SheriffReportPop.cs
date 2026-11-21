@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C59 RID: 19545
+	// Token: 0x02003C0A RID: 15370
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffReportPop : UiTickViewBase
 	{
-		// Token: 0x0603287F RID: 206975 RVA: 0x00BC5763 File Offset: 0x00BC3963
+		// Token: 0x06027632 RID: 161330 RVA: 0x00B0A3AF File Offset: 0x00B085AF
 		public SheriffReportPop(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032880 RID: 206976 RVA: 0x00BC5780 File Offset: 0x00BC3980
+		// Token: 0x06027633 RID: 161331 RVA: 0x00B0A3CC File Offset: 0x00B085CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032881 RID: 206977 RVA: 0x00BC5914 File Offset: 0x00BC3B14
+		// Token: 0x06027634 RID: 161332 RVA: 0x00B0A560 File Offset: 0x00B08760
 		protected override void OnStart()
 		{
 			AUIBaseActor rootActor = this.RootActor;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(5), EKeyMode.Default);
 		}
 
-		// Token: 0x06032882 RID: 206978 RVA: 0x00BC59D1 File Offset: 0x00BC3BD1
+		// Token: 0x06027635 RID: 161333 RVA: 0x00B0A61D File Offset: 0x00B0881D
 		protected override void OnBeforeShow()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			extendToggle2.SetSelfInteractive(false);
 		}
 
-		// Token: 0x06032883 RID: 206979 RVA: 0x00BC59F8 File Offset: 0x00BC3BF8
+		// Token: 0x06027636 RID: 161334 RVA: 0x00B0A644 File Offset: 0x00B08844
 		protected override void OnBeforeDestroy()
 		{
 			TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.TabViewComponent = null;
 		}
 
-		// Token: 0x06032884 RID: 206980 RVA: 0x00BC5A14 File Offset: 0x00BC3C14
+		// Token: 0x06027637 RID: 161335 RVA: 0x00B0A660 File Offset: 0x00B08860
 		private void InitData()
 		{
 			ISheriffReportPopViewParam sheriffReportPopViewParam = this.OpenParam as ISheriffReportPopViewParam;
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			instance.SetLocalTextNew(text3, textStringId, new <>z__ReadOnlySingleElementList<object>(defaultInterpolatedStringHandler.ToStringAndClear()));
 		}
 
-		// Token: 0x06032885 RID: 206981 RVA: 0x00BC5B21 File Offset: 0x00BC3D21
+		// Token: 0x06027638 RID: 161336 RVA: 0x00B0A76D File Offset: 0x00B0896D
 		private void OnClickBackBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06032886 RID: 206982 RVA: 0x00BC5B2C File Offset: 0x00BC3D2C
+		// Token: 0x06027639 RID: 161337 RVA: 0x00B0A778 File Offset: 0x00B08978
 		private void OnClickTogSkyEyeTab(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[0], EUiTabViewName.SheriffReportDetailItem, null, extraParams, null);
 		}
 
-		// Token: 0x06032887 RID: 206983 RVA: 0x00BC5BA0 File Offset: 0x00BC3DA0
+		// Token: 0x0602763A RID: 161338 RVA: 0x00B0A7EC File Offset: 0x00B089EC
 		private void OnClickTogSkyEyeTab2(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[1], EUiTabViewName.SheriffReportRecordItem, null, this.CriminalId, null);
 		}
 
-		// Token: 0x06032888 RID: 206984 RVA: 0x00BC5BFC File Offset: 0x00BC3DFC
+		// Token: 0x0602763B RID: 161339 RVA: 0x00B0A848 File Offset: 0x00B08A48
 		private void OnSequenceEventStart(string sequenceName, string eventName)
 		{
 			if (sequenceName != "Start" || eventName != "Start")
@@ -228,50 +228,50 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			}
 		}
 
-		// Token: 0x0401AE5D RID: 110173
+		// Token: 0x040157BA RID: 87994
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x0401AE5E RID: 110174
+		// Token: 0x040157BB RID: 87995
 		[Nullable(2)]
 		protected SheriffAnomalyInfo AnomalyInfo;
 
-		// Token: 0x0401AE5F RID: 110175
+		// Token: 0x040157BC RID: 87996
 		[Nullable(2)]
 		protected SheriffCriminalInfo CriminalInfo;
 
-		// Token: 0x0401AE60 RID: 110176
+		// Token: 0x040157BD RID: 87997
 		[Nullable(2)]
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x0401AE61 RID: 110177
+		// Token: 0x040157BE RID: 87998
 		protected int CriminalId;
 
-		// Token: 0x0401AE62 RID: 110178
+		// Token: 0x040157BF RID: 87999
 		protected bool BothPage = true;
 
-		// Token: 0x0200ADFD RID: 44541
+		// Token: 0x0200981B RID: 38939
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034D8B RID: 216459
+			// Token: 0x0402F730 RID: 194352
 			public const int BackBtn = 0;
 
-			// Token: 0x04034D8C RID: 216460
+			// Token: 0x0402F731 RID: 194353
 			public const int PanelTab = 1;
 
-			// Token: 0x04034D8D RID: 216461
+			// Token: 0x0402F732 RID: 194354
 			public const int TogSkyEyeTab = 2;
 
-			// Token: 0x04034D8E RID: 216462
+			// Token: 0x0402F733 RID: 194355
 			public const int TogSkyEyeTab2 = 3;
 
-			// Token: 0x04034D8F RID: 216463
+			// Token: 0x0402F734 RID: 194356
 			public const int TxtTitle = 4;
 
-			// Token: 0x04034D90 RID: 216464
+			// Token: 0x0402F735 RID: 194357
 			public const int Content = 5;
 
-			// Token: 0x04034D91 RID: 216465
+			// Token: 0x0402F736 RID: 194358
 			public const int TxtProgress = 6;
 		}
 	}

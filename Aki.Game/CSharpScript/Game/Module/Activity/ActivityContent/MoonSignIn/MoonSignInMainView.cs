@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006466 RID: 25702
+	// Token: 0x020053E4 RID: 21476
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoonSignInMainView : UiViewBase
 	{
-		// Token: 0x0604096F RID: 264559 RVA: 0x00FA238F File Offset: 0x00FA058F
+		// Token: 0x06035630 RID: 218672 RVA: 0x00EE930B File Offset: 0x00EE750B
 		public MoonSignInMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040970 RID: 264560 RVA: 0x00FA2398 File Offset: 0x00FA0598
+		// Token: 0x06035631 RID: 218673 RVA: 0x00EE9314 File Offset: 0x00EE7514
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040971 RID: 264561 RVA: 0x00FA25F8 File Offset: 0x00FA07F8
+		// Token: 0x06035632 RID: 218674 RVA: 0x00EE9574 File Offset: 0x00EE7774
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoonSignInMainView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040972 RID: 264562 RVA: 0x00FA263C File Offset: 0x00FA083C
+		// Token: 0x06035633 RID: 218675 RVA: 0x00EE95B8 File Offset: 0x00EE77B8
 		protected override void OnStart()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -113,14 +113,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.OpenIllustratedView();
 		}
 
-		// Token: 0x06040973 RID: 264563 RVA: 0x00FA26C3 File Offset: 0x00FA08C3
+		// Token: 0x06035634 RID: 218676 RVA: 0x00EE963F File Offset: 0x00EE783F
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTitle();
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06040974 RID: 264564 RVA: 0x00FA26D4 File Offset: 0x00FA08D4
+		// Token: 0x06035635 RID: 218677 RVA: 0x00EE9650 File Offset: 0x00EE7850
 		private void RefreshTitle()
 		{
 			base.GetItem(7).SetUIActive(false);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(8), phaseOfMoonById.Value.BuffDes, Array.Empty<object>());
 		}
 
-		// Token: 0x06040975 RID: 264565 RVA: 0x00FA27A7 File Offset: 0x00FA09A7
+		// Token: 0x06035636 RID: 218678 RVA: 0x00EE9723 File Offset: 0x00EE7923
 		private void RefreshRedDot()
 		{
 			UUIItem item = base.GetItem(10);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			item.SetUIActive(((data != null) ? data.GetCurrentItemCount() : 0) >= 1);
 		}
 
-		// Token: 0x06040976 RID: 264566 RVA: 0x00FA27D4 File Offset: 0x00FA09D4
+		// Token: 0x06035637 RID: 218679 RVA: 0x00EE9750 File Offset: 0x00EE7950
 		private void OpenWishView(bool playWishShow = false)
 		{
 			base.GetItem(6).SetUIActive(true);
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06040977 RID: 264567 RVA: 0x00FA283C File Offset: 0x00FA0A3C
+		// Token: 0x06035638 RID: 218680 RVA: 0x00EE97B8 File Offset: 0x00EE79B8
 		private void OpenIllustratedView()
 		{
 			MoonSignInIllustrated illustratedView = this.IllustratedView;
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			levelSequencePlayer2.PlayLevelSequenceByName("WishHideView", false, null, false);
 		}
 
-		// Token: 0x06040978 RID: 264568 RVA: 0x00FA28AD File Offset: 0x00FA0AAD
+		// Token: 0x06035639 RID: 218681 RVA: 0x00EE9829 File Offset: 0x00EE7A29
 		private void OnClickIllustratedBtn()
 		{
 			this.OpenIllustratedView();
 		}
 
-		// Token: 0x06040979 RID: 264569 RVA: 0x00FA28B8 File Offset: 0x00FA0AB8
+		// Token: 0x0603563A RID: 218682 RVA: 0x00EE9834 File Offset: 0x00EE7A34
 		private void OnClickWishBtn()
 		{
 			MoonSignInData data = MoonSignInController.Instance.GetData();
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			ScrollingTipsController.Instance.ShowTipsByTextId("MoonSignInItemCountNotEnough", Array.Empty<object>());
 		}
 
-		// Token: 0x0604097A RID: 264570 RVA: 0x00FA2904 File Offset: 0x00FA0B04
+		// Token: 0x0603563B RID: 218683 RVA: 0x00EE9880 File Offset: 0x00EE7A80
 		private void OnClickCurrentMoonDesBtn()
 		{
 			base.GetItem(7).SetUIActive(true);
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			button.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x0604097B RID: 264571 RVA: 0x00FA2940 File Offset: 0x00FA0B40
+		// Token: 0x0603563C RID: 218684 RVA: 0x00EE98BC File Offset: 0x00EE7ABC
 		private void OnClickCurrentMoonTipsCloseBtn()
 		{
 			base.GetItem(7).SetUIActive(false);
@@ -241,13 +241,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			button.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0604097C RID: 264572 RVA: 0x00FA297A File Offset: 0x00FA0B7A
+		// Token: 0x0603563D RID: 218685 RVA: 0x00EE98F6 File Offset: 0x00EE7AF6
 		private void OnClickIllustratedViewSwitchBtn()
 		{
 			this.OpenWishView(true);
 		}
 
-		// Token: 0x0604097D RID: 264573 RVA: 0x00FA2983 File Offset: 0x00FA0B83
+		// Token: 0x0603563E RID: 218686 RVA: 0x00EE98FF File Offset: 0x00EE7AFF
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -258,53 +258,53 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x04021952 RID: 137554
+		// Token: 0x0401C281 RID: 115329
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021953 RID: 137555
+		// Token: 0x0401C282 RID: 115330
 		private MoonSignInIllustrated IllustratedView;
 
-		// Token: 0x04021954 RID: 137556
+		// Token: 0x0401C283 RID: 115331
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C690 RID: 50832
+		// Token: 0x0200B076 RID: 45174
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403BF16 RID: 245526
+			// Token: 0x04036871 RID: 223345
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403BF17 RID: 245527
+			// Token: 0x04036872 RID: 223346
 			public const int CurrentMoonNameText = 1;
 
-			// Token: 0x0403BF18 RID: 245528
+			// Token: 0x04036873 RID: 223347
 			public const int CurrentMoonDesBtn = 2;
 
-			// Token: 0x0403BF19 RID: 245529
+			// Token: 0x04036874 RID: 223348
 			public const int IllustratedBtn = 3;
 
-			// Token: 0x0403BF1A RID: 245530
+			// Token: 0x04036875 RID: 223349
 			public const int WishBtn = 4;
 
-			// Token: 0x0403BF1B RID: 245531
+			// Token: 0x04036876 RID: 223350
 			public const int IllustratedItem = 5;
 
-			// Token: 0x0403BF1C RID: 245532
+			// Token: 0x04036877 RID: 223351
 			public const int WishItem = 6;
 
-			// Token: 0x0403BF1D RID: 245533
+			// Token: 0x04036878 RID: 223352
 			public const int CurrentMoonTipsItem = 7;
 
-			// Token: 0x0403BF1E RID: 245534
+			// Token: 0x04036879 RID: 223353
 			public const int CurrentMoonTipsText = 8;
 
-			// Token: 0x0403BF1F RID: 245535
+			// Token: 0x0403687A RID: 223354
 			public const int CurrentMoonNameItem = 9;
 
-			// Token: 0x0403BF20 RID: 245536
+			// Token: 0x0403687B RID: 223355
 			public const int WishBtnRedDotItem = 10;
 
-			// Token: 0x0403BF21 RID: 245537
+			// Token: 0x0403687C RID: 223356
 			public const int CurrentMoonTipsCloseBtn = 13;
 		}
 	}

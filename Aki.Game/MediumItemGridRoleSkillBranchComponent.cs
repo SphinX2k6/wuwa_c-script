@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001932 RID: 6450
+// Token: 0x02000DEC RID: 3564
 public class MediumItemGridRoleSkillBranchComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCB3 RID: 48307 RVA: 0x002AB384 File Offset: 0x002A9584
+	// Token: 0x060090A4 RID: 37028 RVA: 0x002B5C7C File Offset: 0x002B3E7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,14 +19,14 @@ public class MediumItemGridRoleSkillBranchComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCB4 RID: 48308 RVA: 0x002AB3CC File Offset: 0x002A95CC
+	// Token: 0x060090A5 RID: 37029 RVA: 0x002B5CC4 File Offset: 0x002B3EC4
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRoleTag";
 	}
 
-	// Token: 0x0600BCB5 RID: 48309 RVA: 0x002AB3D4 File Offset: 0x002A95D4
+	// Token: 0x060090A6 RID: 37030 RVA: 0x002B5CCC File Offset: 0x002B3ECC
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -43,10 +43,10 @@ public class MediumItemGridRoleSkillBranchComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x02007E97 RID: 32407
+	// Token: 0x02007020 RID: 28704
 	private class EComponent
 	{
-		// Token: 0x04029675 RID: 169589
+		// Token: 0x040249A7 RID: 149927
 		public const int ItemTag = 0;
 	}
 }

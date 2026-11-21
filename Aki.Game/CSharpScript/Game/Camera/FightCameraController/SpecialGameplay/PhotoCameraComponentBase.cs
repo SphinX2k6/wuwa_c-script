@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Data.Camera.PhotoCamera;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072FA RID: 29434
+	// Token: 0x0200647D RID: 25725
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class PhotoCameraComponentBase
 	{
-		// Token: 0x0604839F RID: 295839 RVA: 0x0128E057 File Offset: 0x0128C257
+		// Token: 0x0603E7EB RID: 255979 RVA: 0x01230A0B File Offset: 0x0122EC0B
 		[NullableContext(1)]
 		public static EPhotoCameraComponent GetId(Type type)
 		{
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return customAttribute.Id;
 		}
 
-		// Token: 0x17009F5F RID: 40799
-		// (get) Token: 0x060483A0 RID: 295840 RVA: 0x0128E06A File Offset: 0x0128C26A
+		// Token: 0x170076FD RID: 30461
+		// (get) Token: 0x0603E7EC RID: 255980 RVA: 0x01230A1E File Offset: 0x0122EC1E
 		public bool IsInited
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F60 RID: 40800
-		// (get) Token: 0x060483A1 RID: 295841 RVA: 0x0128E072 File Offset: 0x0128C272
+		// Token: 0x170076FE RID: 30462
+		// (get) Token: 0x0603E7ED RID: 255981 RVA: 0x01230A26 File Offset: 0x0122EC26
 		public bool IsActive
 		{
 			get
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F61 RID: 40801
-		// (get) Token: 0x060483A2 RID: 295842 RVA: 0x0128E07A File Offset: 0x0128C27A
+		// Token: 0x170076FF RID: 30463
+		// (get) Token: 0x0603E7EE RID: 255982 RVA: 0x01230A2E File Offset: 0x0122EC2E
 		public bool IsDestroyed
 		{
 			get
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x060483A3 RID: 295843 RVA: 0x0128E082 File Offset: 0x0128C282
+		// Token: 0x0603E7EF RID: 255983 RVA: 0x01230A36 File Offset: 0x0122EC36
 		[NullableContext(1)]
 		public void Init(IPhotoCameraHost host)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnInit();
 		}
 
-		// Token: 0x060483A4 RID: 295844 RVA: 0x0128E0A9 File Offset: 0x0128C2A9
+		// Token: 0x0603E7F0 RID: 255984 RVA: 0x01230A5D File Offset: 0x0122EC5D
 		public void Activate()
 		{
 			if (!this.InitedFlag || this.ActiveFlag || this.DestroyedFlag)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnActivate();
 		}
 
-		// Token: 0x060483A5 RID: 295845 RVA: 0x0128E0D1 File Offset: 0x0128C2D1
+		// Token: 0x0603E7F1 RID: 255985 RVA: 0x01230A85 File Offset: 0x0122EC85
 		public void Deactivate()
 		{
 			if (!this.ActiveFlag)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnDeactivate();
 		}
 
-		// Token: 0x060483A6 RID: 295846 RVA: 0x0128E0E9 File Offset: 0x0128C2E9
+		// Token: 0x0603E7F2 RID: 255986 RVA: 0x01230A9D File Offset: 0x0122EC9D
 		public void Tick(float deltaTime)
 		{
 			if (!this.ActiveFlag)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnTick(deltaTime);
 		}
 
-		// Token: 0x060483A7 RID: 295847 RVA: 0x0128E0FB File Offset: 0x0128C2FB
+		// Token: 0x0603E7F3 RID: 255987 RVA: 0x01230AAF File Offset: 0x0122ECAF
 		public void ModeChangeStart(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			if (!this.ActiveFlag)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnModeChangeStart(prev, next);
 		}
 
-		// Token: 0x060483A8 RID: 295848 RVA: 0x0128E10E File Offset: 0x0128C30E
+		// Token: 0x0603E7F4 RID: 255988 RVA: 0x01230AC2 File Offset: 0x0122ECC2
 		public void ModeChangeFinish(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			if (!this.ActiveFlag)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnModeChangeFinish(prev, next);
 		}
 
-		// Token: 0x060483A9 RID: 295849 RVA: 0x0128E121 File Offset: 0x0128C321
+		// Token: 0x0603E7F5 RID: 255989 RVA: 0x01230AD5 File Offset: 0x0122ECD5
 		public void CharacterChanged(TsBaseCharacter character)
 		{
 			if (!this.ActiveFlag)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.OnCharacterChanged(character);
 		}
 
-		// Token: 0x060483AA RID: 295850 RVA: 0x0128E133 File Offset: 0x0128C333
+		// Token: 0x0603E7F6 RID: 255990 RVA: 0x01230AE7 File Offset: 0x0122ECE7
 		public void Destroy()
 		{
 			if (this.DestroyedFlag)
@@ -143,56 +143,56 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.Host = null;
 		}
 
-		// Token: 0x060483AB RID: 295851 RVA: 0x0128E160 File Offset: 0x0128C360
+		// Token: 0x0603E7F7 RID: 255991 RVA: 0x01230B14 File Offset: 0x0122ED14
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x060483AC RID: 295852 RVA: 0x0128E162 File Offset: 0x0128C362
+		// Token: 0x0603E7F8 RID: 255992 RVA: 0x01230B16 File Offset: 0x0122ED16
 		protected virtual void OnActivate()
 		{
 		}
 
-		// Token: 0x060483AD RID: 295853 RVA: 0x0128E164 File Offset: 0x0128C364
+		// Token: 0x0603E7F9 RID: 255993 RVA: 0x01230B18 File Offset: 0x0122ED18
 		protected virtual void OnDeactivate()
 		{
 		}
 
-		// Token: 0x060483AE RID: 295854 RVA: 0x0128E166 File Offset: 0x0128C366
+		// Token: 0x0603E7FA RID: 255994 RVA: 0x01230B1A File Offset: 0x0122ED1A
 		protected virtual void OnTick(float deltaTime)
 		{
 		}
 
-		// Token: 0x060483AF RID: 295855 RVA: 0x0128E168 File Offset: 0x0128C368
+		// Token: 0x0603E7FB RID: 255995 RVA: 0x01230B1C File Offset: 0x0122ED1C
 		protected virtual void OnModeChangeStart(PhotoCameraType? prev, PhotoCameraType next)
 		{
 		}
 
-		// Token: 0x060483B0 RID: 295856 RVA: 0x0128E16A File Offset: 0x0128C36A
+		// Token: 0x0603E7FC RID: 255996 RVA: 0x01230B1E File Offset: 0x0122ED1E
 		protected virtual void OnModeChangeFinish(PhotoCameraType? prev, PhotoCameraType next)
 		{
 		}
 
-		// Token: 0x060483B1 RID: 295857 RVA: 0x0128E16C File Offset: 0x0128C36C
+		// Token: 0x0603E7FD RID: 255997 RVA: 0x01230B20 File Offset: 0x0122ED20
 		protected virtual void OnCharacterChanged(TsBaseCharacter character)
 		{
 		}
 
-		// Token: 0x060483B2 RID: 295858 RVA: 0x0128E16E File Offset: 0x0128C36E
+		// Token: 0x0603E7FE RID: 255998 RVA: 0x01230B22 File Offset: 0x0122ED22
 		protected virtual void OnDestroy()
 		{
 		}
 
-		// Token: 0x0402628D RID: 156301
+		// Token: 0x04021578 RID: 136568
 		protected IPhotoCameraHost Host;
 
-		// Token: 0x0402628E RID: 156302
+		// Token: 0x04021579 RID: 136569
 		private bool InitedFlag;
 
-		// Token: 0x0402628F RID: 156303
+		// Token: 0x0402157A RID: 136570
 		private bool ActiveFlag;
 
-		// Token: 0x04026290 RID: 156304
+		// Token: 0x0402157B RID: 136571
 		private bool DestroyedFlag;
 	}
 }

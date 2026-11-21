@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x02005774 RID: 22388
+	// Token: 0x0200474B RID: 18251
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 	})]
 	public class KurotatoAttrSelectCard : GridProxyAbstract<IKurotatoAttrSelectCardData>
 	{
-		// Token: 0x06038DF7 RID: 232951 RVA: 0x00D836FC File Offset: 0x00D818FC
+		// Token: 0x0602DD07 RID: 187655 RVA: 0x00CD2204 File Offset: 0x00CD0404
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038DF8 RID: 232952 RVA: 0x00D837A4 File Offset: 0x00D819A4
+		// Token: 0x0602DD08 RID: 187656 RVA: 0x00CD22AC File Offset: 0x00CD04AC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoAttrSelectCard.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -50,25 +50,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038DF9 RID: 232953 RVA: 0x00D837E7 File Offset: 0x00D819E7
+		// Token: 0x0602DD09 RID: 187657 RVA: 0x00CD22EF File Offset: 0x00CD04EF
 		public void SetFunctionCb(Action<int> cb)
 		{
 			this.FunctionCb = cb;
 		}
 
-		// Token: 0x06038DFA RID: 232954 RVA: 0x00D837F0 File Offset: 0x00D819F0
+		// Token: 0x0602DD0A RID: 187658 RVA: 0x00CD22F8 File Offset: 0x00CD04F8
 		public void SetAttrPreviewCb(Action<int, bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> cb)
 		{
 			this.AttrPreviewCb = cb;
 		}
 
-		// Token: 0x06038DFB RID: 232955 RVA: 0x00D837F9 File Offset: 0x00D819F9
+		// Token: 0x0602DD0B RID: 187659 RVA: 0x00CD2301 File Offset: 0x00CD0501
 		public void ClearAttrPreviewSelection()
 		{
 			this.CardItem.ClearAttrPreviewSelection();
 		}
 
-		// Token: 0x06038DFC RID: 232956 RVA: 0x00D83806 File Offset: 0x00D81A06
+		// Token: 0x0602DD0C RID: 187660 RVA: 0x00CD230E File Offset: 0x00CD050E
 		public int GetSelectionId()
 		{
 			IKurotatoAttrSelectCardData data = this.Data;
@@ -79,14 +79,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return data.SelectionId;
 		}
 
-		// Token: 0x06038DFD RID: 232957 RVA: 0x00D83819 File Offset: 0x00D81A19
+		// Token: 0x0602DD0D RID: 187661 RVA: 0x00CD2321 File Offset: 0x00CD0521
 		public bool IsRecommend()
 		{
 			IKurotatoAttrSelectCardData data = this.Data;
 			return data != null && data.IsRecommend;
 		}
 
-		// Token: 0x06038DFE RID: 232958 RVA: 0x00D8382C File Offset: 0x00D81A2C
+		// Token: 0x0602DD0E RID: 187662 RVA: 0x00CD2334 File Offset: 0x00CD0534
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return this.CardItem.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x06038DFF RID: 232959 RVA: 0x00D8384F File Offset: 0x00D81A4F
+		// Token: 0x0602DD0F RID: 187663 RVA: 0x00CD2357 File Offset: 0x00CD0557
 		public override void Refresh(IKurotatoAttrSelectCardData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			base.GetButton(1).GetRootComponent().SetUIActive(data.SelectType == EKurotatoAttrSelectType.Upgrade);
 		}
 
-		// Token: 0x06038E00 RID: 232960 RVA: 0x00D8387E File Offset: 0x00D81A7E
+		// Token: 0x0602DD10 RID: 187664 RVA: 0x00CD2386 File Offset: 0x00CD0586
 		private void OnClickFunction()
 		{
 			Action<int> functionCb = this.FunctionCb;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			functionCb(this.Data.SelectionId);
 		}
 
-		// Token: 0x06038E01 RID: 232961 RVA: 0x00D8389B File Offset: 0x00D81A9B
+		// Token: 0x0602DD11 RID: 187665 RVA: 0x00CD23A3 File Offset: 0x00CD05A3
 		private void OnAttrPreview(bool active, IReadOnlyList<IKurotatoAttrPreviewDelta> deltas)
 		{
 			Action<int, bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> attrPreviewCb = this.AttrPreviewCb;
@@ -131,18 +131,18 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			attrPreviewCb(this.Data.SelectionId, active, deltas);
 		}
 
-		// Token: 0x0401DD3C RID: 122172
+		// Token: 0x040187D2 RID: 100306
 		[Nullable(2)]
 		private IKurotatoAttrSelectCardData Data;
 
-		// Token: 0x0401DD3D RID: 122173
+		// Token: 0x040187D3 RID: 100307
 		private readonly KurotatoAttrSelectCardItem CardItem = new KurotatoAttrSelectCardItem();
 
-		// Token: 0x0401DD3E RID: 122174
+		// Token: 0x040187D4 RID: 100308
 		[Nullable(2)]
 		private Action<int> FunctionCb;
 
-		// Token: 0x0401DD3F RID: 122175
+		// Token: 0x040187D5 RID: 100309
 		[Nullable(new byte[]
 		{
 			2,
@@ -151,14 +151,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 		})]
 		private Action<int, bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> AttrPreviewCb;
 
-		// Token: 0x0200B985 RID: 47493
+		// Token: 0x0200A39F RID: 41887
 		[NullableContext(0)]
 		private class EChildComp
 		{
-			// Token: 0x0403818B RID: 229771
+			// Token: 0x04032B85 RID: 207749
 			public const int CardItem = 0;
 
-			// Token: 0x0403818C RID: 229772
+			// Token: 0x04032B86 RID: 207750
 			public const int ButtonFunction = 1;
 		}
 	}

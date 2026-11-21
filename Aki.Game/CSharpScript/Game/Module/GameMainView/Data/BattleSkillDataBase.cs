@@ -11,68 +11,68 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.Data
 {
-	// Token: 0x02005A05 RID: 23045
+	// Token: 0x020049E1 RID: 18913
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class BattleSkillDataBase : ISkillButtonData
 	{
-		// Token: 0x17008BB4 RID: 35764
-		// (get) Token: 0x0603A64B RID: 239179 RVA: 0x00DE4CA2 File Offset: 0x00DE2EA2
+		// Token: 0x17005F82 RID: 24450
+		// (get) Token: 0x0602F594 RID: 193940 RVA: 0x00D351F2 File Offset: 0x00D333F2
 		public bool IsExploreAsFight { get; }
 
-		// Token: 0x17008BB5 RID: 35765
-		// (get) Token: 0x0603A64C RID: 239180 RVA: 0x00DE4CAA File Offset: 0x00DE2EAA
+		// Token: 0x17005F83 RID: 24451
+		// (get) Token: 0x0602F595 RID: 193941 RVA: 0x00D351FA File Offset: 0x00D333FA
 		public ESkillButtonAttributeUsageMode AttributeUsageMode { get; }
 
-		// Token: 0x17008BB6 RID: 35766
-		// (get) Token: 0x0603A64D RID: 239181 RVA: 0x00DE4CB2 File Offset: 0x00DE2EB2
+		// Token: 0x17005F84 RID: 24452
+		// (get) Token: 0x0602F596 RID: 193942 RVA: 0x00D35202 File Offset: 0x00D33402
 		public int[] AttributeUsageParams { get; }
 
-		// Token: 0x17008BB7 RID: 35767
-		// (get) Token: 0x0603A64E RID: 239182 RVA: 0x00DE4CBA File Offset: 0x00DE2EBA
+		// Token: 0x17005F85 RID: 24453
+		// (get) Token: 0x0602F597 RID: 193943 RVA: 0x00D3520A File Offset: 0x00D3340A
 		public EAttributeType AttributeId { get; }
 
-		// Token: 0x17008BB8 RID: 35768
-		// (get) Token: 0x0603A64F RID: 239183 RVA: 0x00DE4CC2 File Offset: 0x00DE2EC2
+		// Token: 0x17005F86 RID: 24454
+		// (get) Token: 0x0602F598 RID: 193944 RVA: 0x00D35212 File Offset: 0x00D33412
 		public bool IsEnableSlideControl { get; }
 
-		// Token: 0x17008BB9 RID: 35769
-		// (get) Token: 0x0603A650 RID: 239184 RVA: 0x00DE4CCA File Offset: 0x00DE2ECA
+		// Token: 0x17005F87 RID: 24455
+		// (get) Token: 0x0602F599 RID: 193945 RVA: 0x00D3521A File Offset: 0x00D3341A
 		public bool IsLimitCountCustom { get; }
 
-		// Token: 0x17008BBA RID: 35770
-		// (get) Token: 0x0603A651 RID: 239185 RVA: 0x00DE4CD2 File Offset: 0x00DE2ED2
+		// Token: 0x17005F88 RID: 24456
+		// (get) Token: 0x0602F59A RID: 193946 RVA: 0x00D35222 File Offset: 0x00D33422
 		public int RemainingCountCustom { get; }
 
-		// Token: 0x17008BBB RID: 35771
-		// (get) Token: 0x0603A652 RID: 239186 RVA: 0x00DE4CDA File Offset: 0x00DE2EDA
+		// Token: 0x17005F89 RID: 24457
+		// (get) Token: 0x0602F59B RID: 193947 RVA: 0x00D3522A File Offset: 0x00D3342A
 		public int TotalCoolDownCustom { get; }
 
-		// Token: 0x17008BBC RID: 35772
-		// (get) Token: 0x0603A653 RID: 239187 RVA: 0x00DE4CE2 File Offset: 0x00DE2EE2
+		// Token: 0x17005F8A RID: 24458
+		// (get) Token: 0x0602F59C RID: 193948 RVA: 0x00D35232 File Offset: 0x00D33432
 		public bool HideCoolDownTextCustom { get; }
 
-		// Token: 0x17008BBD RID: 35773
-		// (get) Token: 0x0603A654 RID: 239188 RVA: 0x00DE4CEA File Offset: 0x00DE2EEA
+		// Token: 0x17005F8B RID: 24459
+		// (get) Token: 0x0602F59D RID: 193949 RVA: 0x00D3523A File Offset: 0x00D3343A
 		public bool IsLimitCountVehicleSkill { get; }
 
-		// Token: 0x17008BBE RID: 35774
-		// (get) Token: 0x0603A655 RID: 239189 RVA: 0x00DE4CF2 File Offset: 0x00DE2EF2
+		// Token: 0x17005F8C RID: 24460
+		// (get) Token: 0x0602F59E RID: 193950 RVA: 0x00D35242 File Offset: 0x00D33442
 		public int RemainingCountVehicleSkill { get; }
 
-		// Token: 0x17008BBF RID: 35775
-		// (get) Token: 0x0603A656 RID: 239190 RVA: 0x00DE4CFA File Offset: 0x00DE2EFA
+		// Token: 0x17005F8D RID: 24461
+		// (get) Token: 0x0602F59F RID: 193951 RVA: 0x00D3524A File Offset: 0x00D3344A
 		public EInputAction[] SharedHoldRingFxActions { get; }
 
-		// Token: 0x17008BC0 RID: 35776
-		// (get) Token: 0x0603A657 RID: 239191 RVA: 0x00DE4D02 File Offset: 0x00DE2F02
+		// Token: 0x17005F8E RID: 24462
+		// (get) Token: 0x0602F5A0 RID: 193952 RVA: 0x00D35252 File Offset: 0x00D33452
 		public bool IsEnableDotIndicator { get; }
 
-		// Token: 0x17008BC1 RID: 35777
-		// (get) Token: 0x0603A658 RID: 239192 RVA: 0x00DE4D0A File Offset: 0x00DE2F0A
+		// Token: 0x17005F8F RID: 24463
+		// (get) Token: 0x0602F5A1 RID: 193953 RVA: 0x00D3525A File Offset: 0x00D3345A
 		public int DotIndicatorCount { get; }
 
-		// Token: 0x0603A659 RID: 239193 RVA: 0x00DE4D12 File Offset: 0x00DE2F12
+		// Token: 0x0602F5A2 RID: 193954 RVA: 0x00D35262 File Offset: 0x00D33462
 		[NullableContext(1)]
 		public void InitData(string actionName)
 		{
@@ -80,368 +80,368 @@ namespace CSharpScript.Game.Module.GameMainView.Data
 			this.OnInitData();
 		}
 
-		// Token: 0x0603A65A RID: 239194 RVA: 0x00DE4D21 File Offset: 0x00DE2F21
+		// Token: 0x0602F5A3 RID: 193955 RVA: 0x00D35271 File Offset: 0x00D33471
 		protected virtual void OnInitData()
 		{
 		}
 
-		// Token: 0x0603A65B RID: 239195 RVA: 0x00DE4D23 File Offset: 0x00DE2F23
+		// Token: 0x0602F5A4 RID: 193956 RVA: 0x00D35273 File Offset: 0x00D33473
 		public virtual EInputAction GetActionType()
 		{
 			return EInputAction.None;
 		}
 
-		// Token: 0x0603A65C RID: 239196 RVA: 0x00DE4D2A File Offset: 0x00DE2F2A
+		// Token: 0x0602F5A5 RID: 193957 RVA: 0x00D3527A File Offset: 0x00D3347A
 		[NullableContext(1)]
 		public string GetInputAction()
 		{
 			return this.GetActionName();
 		}
 
-		// Token: 0x0603A65D RID: 239197 RVA: 0x00DE4D32 File Offset: 0x00DE2F32
+		// Token: 0x0602F5A6 RID: 193958 RVA: 0x00D35282 File Offset: 0x00D33482
 		public virtual bool IsEnableInput()
 		{
 			return true;
 		}
 
-		// Token: 0x0603A65E RID: 239198 RVA: 0x00DE4D35 File Offset: 0x00DE2F35
+		// Token: 0x0602F5A7 RID: 193959 RVA: 0x00D35285 File Offset: 0x00D33485
 		public virtual double GetLongPressTime()
 		{
 			return 0.0;
 		}
 
-		// Token: 0x0603A65F RID: 239199 RVA: 0x00DE4D40 File Offset: 0x00DE2F40
+		// Token: 0x0602F5A8 RID: 193960 RVA: 0x00D35290 File Offset: 0x00D33490
 		public virtual void RefreshLongPressTime()
 		{
 		}
 
-		// Token: 0x0603A660 RID: 239200 RVA: 0x00DE4D42 File Offset: 0x00DE2F42
+		// Token: 0x0602F5A9 RID: 193961 RVA: 0x00D35292 File Offset: 0x00D33492
 		public virtual bool? GetIsLongPressControlCamera()
 		{
 			return new bool?(false);
 		}
 
-		// Token: 0x0603A661 RID: 239201 RVA: 0x00DE4D4A File Offset: 0x00DE2F4A
+		// Token: 0x0602F5AA RID: 193962 RVA: 0x00D3529A File Offset: 0x00D3349A
 		public string GetActionName()
 		{
 			return this.ActionName;
 		}
 
-		// Token: 0x0603A662 RID: 239202 RVA: 0x00DE4D52 File Offset: 0x00DE2F52
+		// Token: 0x0602F5AB RID: 193963 RVA: 0x00D352A2 File Offset: 0x00D334A2
 		public virtual bool? IsMultiStageSkill()
 		{
 			return new bool?(false);
 		}
 
-		// Token: 0x0603A663 RID: 239203 RVA: 0x00DE4D5A File Offset: 0x00DE2F5A
+		// Token: 0x0602F5AC RID: 193964 RVA: 0x00D352AA File Offset: 0x00D334AA
 		[NullableContext(1)]
 		public virtual string GetMultiSkillTexturePath()
 		{
 			return "";
 		}
 
-		// Token: 0x0603A664 RID: 239204 RVA: 0x00DE4D61 File Offset: 0x00DE2F61
+		// Token: 0x0602F5AD RID: 193965 RVA: 0x00D352B1 File Offset: 0x00D334B1
 		public virtual string GetSkillTexturePath()
 		{
 			return "";
 		}
 
-		// Token: 0x0603A665 RID: 239205 RVA: 0x00DE4D68 File Offset: 0x00DE2F68
+		// Token: 0x0602F5AE RID: 193966 RVA: 0x00D352B8 File Offset: 0x00D334B8
 		public virtual int GetSkillId()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603A666 RID: 239206 RVA: 0x00DE4D6B File Offset: 0x00DE2F6B
+		// Token: 0x0602F5AF RID: 193967 RVA: 0x00D352BB File Offset: 0x00D334BB
 		public virtual string GetSkillIconName()
 		{
 			return "";
 		}
 
-		// Token: 0x0603A667 RID: 239207 RVA: 0x00DE4D72 File Offset: 0x00DE2F72
+		// Token: 0x0602F5B0 RID: 193968 RVA: 0x00D352C2 File Offset: 0x00D334C2
 		public virtual MultiSkillInfo GetMultiSkillInfo()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A668 RID: 239208 RVA: 0x00DE4D75 File Offset: 0x00DE2F75
+		// Token: 0x0602F5B1 RID: 193969 RVA: 0x00D352C5 File Offset: 0x00D334C5
 		public virtual GroupSkillCdInfo GetGroupSkillCdInfo()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A669 RID: 239209 RVA: 0x00DE4D78 File Offset: 0x00DE2F78
+		// Token: 0x0602F5B2 RID: 193970 RVA: 0x00D352C8 File Offset: 0x00D334C8
 		public virtual bool HasCdComponent()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A66A RID: 239210 RVA: 0x00DE4D7B File Offset: 0x00DE2F7B
+		// Token: 0x0602F5B3 RID: 193971 RVA: 0x00D352CB File Offset: 0x00D334CB
 		public virtual float GetSkillRemainingCoolDown()
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603A66B RID: 239211 RVA: 0x00DE4D82 File Offset: 0x00DE2F82
+		// Token: 0x0602F5B4 RID: 193972 RVA: 0x00D352D2 File Offset: 0x00D334D2
 		public virtual bool IsCdVisible()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A66C RID: 239212 RVA: 0x00DE4D85 File Offset: 0x00DE2F85
+		// Token: 0x0602F5B5 RID: 193973 RVA: 0x00D352D5 File Offset: 0x00D334D5
 		public virtual void RefreshIsEnable()
 		{
 		}
 
-		// Token: 0x0603A66D RID: 239213 RVA: 0x00DE4D87 File Offset: 0x00DE2F87
+		// Token: 0x0602F5B6 RID: 193974 RVA: 0x00D352D7 File Offset: 0x00D334D7
 		public virtual bool IsVehicleSkillInCd()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A66E RID: 239214 RVA: 0x00DE4D8A File Offset: 0x00DE2F8A
+		// Token: 0x0602F5B7 RID: 193975 RVA: 0x00D352DA File Offset: 0x00D334DA
 		public virtual float GetRemainingCoolDownCustom()
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603A66F RID: 239215 RVA: 0x00DE4D91 File Offset: 0x00DE2F91
+		// Token: 0x0602F5B8 RID: 193976 RVA: 0x00D352E1 File Offset: 0x00D334E1
 		public virtual float GetAttribute()
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603A670 RID: 239216 RVA: 0x00DE4D98 File Offset: 0x00DE2F98
+		// Token: 0x0602F5B9 RID: 193977 RVA: 0x00D352E8 File Offset: 0x00D334E8
 		public virtual float GetMaxAttribute()
 		{
 			return 0f;
 		}
 
-		// Token: 0x0603A671 RID: 239217 RVA: 0x00DE4D9F File Offset: 0x00DE2F9F
+		// Token: 0x0602F5BA RID: 193978 RVA: 0x00D352EF File Offset: 0x00D334EF
 		public virtual ESkillButtonType GetButtonType()
 		{
 			return ESkillButtonType.None;
 		}
 
-		// Token: 0x0603A672 RID: 239218 RVA: 0x00DE4DA2 File Offset: 0x00DE2FA2
+		// Token: 0x0602F5BB RID: 193979 RVA: 0x00D352F2 File Offset: 0x00D334F2
 		public virtual bool IsSkillInItemUseCd()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A673 RID: 239219 RVA: 0x00DE4DA5 File Offset: 0x00DE2FA5
+		// Token: 0x0602F5BC RID: 193980 RVA: 0x00D352F5 File Offset: 0x00D334F5
 		public virtual bool IsEquippedItemBanReqUse()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A674 RID: 239220 RVA: 0x00DE4DA8 File Offset: 0x00DE2FA8
+		// Token: 0x0602F5BD RID: 193981 RVA: 0x00D352F8 File Offset: 0x00D334F8
 		public virtual bool IsSkillInItemUseBuffCd()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A675 RID: 239221 RVA: 0x00DE4DAB File Offset: 0x00DE2FAB
+		// Token: 0x0602F5BE RID: 193982 RVA: 0x00D352FB File Offset: 0x00D334FB
 		[NullableContext(0)]
 		public virtual ValueTuple<double, double> GetEquippedItemUsingBuffCd()
 		{
 			return new ValueTuple<double, double>(0.0, 0.0);
 		}
 
-		// Token: 0x0603A676 RID: 239222 RVA: 0x00DE4DC4 File Offset: 0x00DE2FC4
+		// Token: 0x0602F5BF RID: 193983 RVA: 0x00D35314 File Offset: 0x00D33514
 		public virtual bool IsSkillInItemUseSkillCd()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A677 RID: 239223 RVA: 0x00DE4DC7 File Offset: 0x00DE2FC7
+		// Token: 0x0602F5C0 RID: 193984 RVA: 0x00D35317 File Offset: 0x00D33517
 		[NullableContext(0)]
 		public virtual ValueTuple<double, double> GetEquippedItemUsingSkillCd()
 		{
 			return new ValueTuple<double, double>(0.0, 0.0);
 		}
 
-		// Token: 0x0603A678 RID: 239224 RVA: 0x00DE4DE0 File Offset: 0x00DE2FE0
+		// Token: 0x0602F5C1 RID: 193985 RVA: 0x00D35330 File Offset: 0x00D33530
 		[NullableContext(0)]
 		public virtual ValueTuple<double, double> GetVehicleSkillCd()
 		{
 			return new ValueTuple<double, double>(0.0, 0.0);
 		}
 
-		// Token: 0x0603A679 RID: 239225 RVA: 0x00DE4DF9 File Offset: 0x00DE2FF9
+		// Token: 0x0602F5C2 RID: 193986 RVA: 0x00D35349 File Offset: 0x00D33549
 		public bool GetExploreSkillChange()
 		{
 			return this.IsExploreSkillChange;
 		}
 
-		// Token: 0x0603A67A RID: 239226 RVA: 0x00DE4E01 File Offset: 0x00DE3001
+		// Token: 0x0602F5C3 RID: 193987 RVA: 0x00D35351 File Offset: 0x00D33551
 		public void SetExploreSkillChange(bool isExploreSkillChange)
 		{
 			this.IsExploreSkillChange = isExploreSkillChange;
 		}
 
-		// Token: 0x0603A67B RID: 239227 RVA: 0x00DE4E0A File Offset: 0x00DE300A
+		// Token: 0x0602F5C4 RID: 193988 RVA: 0x00D3535A File Offset: 0x00D3355A
 		[NullableContext(1)]
 		public virtual string GetMaxAttributeEffectPath()
 		{
 			return "";
 		}
 
-		// Token: 0x0603A67C RID: 239228 RVA: 0x00DE4E14 File Offset: 0x00DE3014
+		// Token: 0x0602F5C5 RID: 193989 RVA: 0x00D35364 File Offset: 0x00D33564
 		public virtual FLinearColor? GetMaxAttributeColor()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A67D RID: 239229 RVA: 0x00DE4E2C File Offset: 0x00DE302C
+		// Token: 0x0602F5C6 RID: 193990 RVA: 0x00D3537C File Offset: 0x00D3357C
 		public virtual SkillButtonEffect? GetDynamicEffectConfig()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A67E RID: 239230 RVA: 0x00DE4E42 File Offset: 0x00DE3042
+		// Token: 0x0602F5C7 RID: 193991 RVA: 0x00D35392 File Offset: 0x00D33592
 		public virtual int GetCdCompletedEffectId()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603A67F RID: 239231 RVA: 0x00DE4E48 File Offset: 0x00DE3048
+		// Token: 0x0602F5C8 RID: 193992 RVA: 0x00D35398 File Offset: 0x00D33598
 		public virtual SkillButtonEffect? GetCdCompletedEffectConfig()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A680 RID: 239232 RVA: 0x00DE4E5E File Offset: 0x00DE305E
+		// Token: 0x0602F5C9 RID: 193993 RVA: 0x00D353AE File Offset: 0x00D335AE
 		public virtual bool HasConfigFollower()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A681 RID: 239233 RVA: 0x00DE4E64 File Offset: 0x00DE3064
+		// Token: 0x0602F5CA RID: 193994 RVA: 0x00D353B4 File Offset: 0x00D335B4
 		public virtual FColor? GetFrameSpriteColor()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A682 RID: 239234 RVA: 0x00DE4E7A File Offset: 0x00DE307A
+		// Token: 0x0602F5CB RID: 193995 RVA: 0x00D353CA File Offset: 0x00D335CA
 		public virtual bool HasAttribute()
 		{
 			return this.AttributeId != EAttributeType.None && this.MaxAttributeId != 0;
 		}
 
-		// Token: 0x0603A683 RID: 239235 RVA: 0x00DE4E8F File Offset: 0x00DE308F
+		// Token: 0x0602F5CC RID: 193996 RVA: 0x00D353DF File Offset: 0x00D335DF
 		public virtual bool IsEnable()
 		{
 			return true;
 		}
 
-		// Token: 0x0603A684 RID: 239236 RVA: 0x00DE4E92 File Offset: 0x00DE3092
+		// Token: 0x0602F5CD RID: 193997 RVA: 0x00D353E2 File Offset: 0x00D335E2
 		public virtual void InitVehicleHandle()
 		{
 		}
 
-		// Token: 0x0603A685 RID: 239237 RVA: 0x00DE4E94 File Offset: 0x00DE3094
+		// Token: 0x0602F5CE RID: 193998 RVA: 0x00D353E4 File Offset: 0x00D335E4
 		public bool IsShowLongPress()
 		{
 			return this.IsShowLongPressInternal;
 		}
 
-		// Token: 0x0603A686 RID: 239238 RVA: 0x00DE4E9C File Offset: 0x00DE309C
+		// Token: 0x0602F5CF RID: 193999 RVA: 0x00D353EC File Offset: 0x00D335EC
 		public virtual void RefreshIsShowLongPress()
 		{
 		}
 
-		// Token: 0x0603A687 RID: 239239 RVA: 0x00DE4E9E File Offset: 0x00DE309E
+		// Token: 0x0602F5D0 RID: 194000 RVA: 0x00D353EE File Offset: 0x00D335EE
 		public virtual void RefreshLongPressDuration()
 		{
 		}
 
-		// Token: 0x0603A688 RID: 239240 RVA: 0x00DE4EA0 File Offset: 0x00DE30A0
+		// Token: 0x0602F5D1 RID: 194001 RVA: 0x00D353F0 File Offset: 0x00D335F0
 		public double GetLongPressDuration()
 		{
 			return (double)this.LongPressDuration;
 		}
 
-		// Token: 0x0603A689 RID: 239241 RVA: 0x00DE4EA9 File Offset: 0x00DE30A9
+		// Token: 0x0602F5D2 RID: 194002 RVA: 0x00D353F9 File Offset: 0x00D335F9
 		public virtual bool GetIsLongPressing()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A68A RID: 239242 RVA: 0x00DE4EAC File Offset: 0x00DE30AC
+		// Token: 0x0602F5D3 RID: 194003 RVA: 0x00D353FC File Offset: 0x00D335FC
 		public bool GetIsConfigShowLongPress()
 		{
 			return this.IsConfigShowLongPress;
 		}
 
-		// Token: 0x0603A68B RID: 239243 RVA: 0x00DE4EB4 File Offset: 0x00DE30B4
+		// Token: 0x0602F5D4 RID: 194004 RVA: 0x00D35404 File Offset: 0x00D33604
 		public void SetIsConfigShowLongPress(bool value)
 		{
 			this.IsConfigShowLongPress = value;
 		}
 
-		// Token: 0x0603A68C RID: 239244 RVA: 0x00DE4EBD File Offset: 0x00DE30BD
+		// Token: 0x0602F5D5 RID: 194005 RVA: 0x00D3540D File Offset: 0x00D3360D
 		public bool IsVisible()
 		{
 			return this.IsVisibleInternal;
 		}
 
-		// Token: 0x0603A68D RID: 239245 RVA: 0x00DE4EC5 File Offset: 0x00DE30C5
+		// Token: 0x0602F5D6 RID: 194006 RVA: 0x00D35415 File Offset: 0x00D33615
 		public virtual int GetMaxAttributeBurstEffectId()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603A68E RID: 239246 RVA: 0x00DE4EC8 File Offset: 0x00DE30C8
+		// Token: 0x0602F5D7 RID: 194007 RVA: 0x00D35418 File Offset: 0x00D33618
 		public virtual SkillButtonEffect? GetMaxAttributeBurstEffectConfig()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A68F RID: 239247 RVA: 0x00DE4EDE File Offset: 0x00DE30DE
+		// Token: 0x0602F5D8 RID: 194008 RVA: 0x00D3542E File Offset: 0x00D3362E
 		public virtual bool IsEnableLongPress()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A690 RID: 239248 RVA: 0x00DE4EE1 File Offset: 0x00DE30E1
+		// Token: 0x0602F5D9 RID: 194009 RVA: 0x00D35431 File Offset: 0x00D33631
 		public virtual SkillButtonTypeFormationData GetFormationData()
 		{
 			return null;
 		}
 
-		// Token: 0x0603A691 RID: 239249 RVA: 0x00DE4EE4 File Offset: 0x00DE30E4
+		// Token: 0x0602F5DA RID: 194010 RVA: 0x00D35434 File Offset: 0x00D33634
 		public virtual bool IsSkillIdChangeByTag()
 		{
 			return false;
 		}
 
-		// Token: 0x0603A692 RID: 239250 RVA: 0x00DE4EE7 File Offset: 0x00DE30E7
+		// Token: 0x0602F5DB RID: 194011 RVA: 0x00D35437 File Offset: 0x00D33637
 		public List<EInputAction> GetValidSharedHoldRingFxActions()
 		{
 			return null;
 		}
 
-		// Token: 0x0401E701 RID: 124673
+		// Token: 0x040191A8 RID: 102824
 		[Nullable(1)]
 		private string ActionName = "";
 
-		// Token: 0x0401E702 RID: 124674
+		// Token: 0x040191A9 RID: 102825
 		private bool IsExploreSkillChange;
 
-		// Token: 0x0401E707 RID: 124679
+		// Token: 0x040191AE RID: 102830
 		public int MaxAttributeId;
 
-		// Token: 0x0401E708 RID: 124680
+		// Token: 0x040191AF RID: 102831
 		protected bool IsShowLongPressInternal;
 
-		// Token: 0x0401E709 RID: 124681
+		// Token: 0x040191B0 RID: 102832
 		protected float LongPressDuration;
 
-		// Token: 0x0401E70A RID: 124682
+		// Token: 0x040191B1 RID: 102833
 		protected bool IsConfigShowLongPress;
 
-		// Token: 0x0401E70B RID: 124683
+		// Token: 0x040191B2 RID: 102834
 		protected bool IsVisibleInternal = true;
 	}
 }

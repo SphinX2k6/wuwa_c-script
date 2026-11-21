@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x0200512C RID: 20780
+	// Token: 0x020040FC RID: 16636
 	[RequiredMember]
 	public class BadgeGroupSkillData
 	{
-		// Token: 0x06035161 RID: 217441 RVA: 0x00C94222 File Offset: 0x00C92422
+		// Token: 0x0602A05A RID: 172122 RVA: 0x00BE1636 File Offset: 0x00BDF836
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public BadgeGroupSkillData()
 		{
 		}
 
-		// Token: 0x0401C49B RID: 115867
+		// Token: 0x04016ED0 RID: 93904
 		[RequiredMember]
 		public int GroupId;
 
-		// Token: 0x0401C49C RID: 115868
+		// Token: 0x04016ED1 RID: 93905
 		[RequiredMember]
 		public int SkillId;
 	}

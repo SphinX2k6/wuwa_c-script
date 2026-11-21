@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001826 RID: 6182
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019B1 RID: 6577
 	public class IBvbChangeHandCard : IBvbPlayerOperationType
 	{
-		// Token: 0x060084AB RID: 33963 RVA: 0x0013BEDC File Offset: 0x0013A0DC
+		// Token: 0x06008BD1 RID: 35793 RVA: 0x0014B6D0 File Offset: 0x001498D0
 		private IBvbChangeHandCard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060084AC RID: 33964 RVA: 0x0013BF14 File Offset: 0x0013A114
+		// Token: 0x06008BD2 RID: 35794 RVA: 0x0014B708 File Offset: 0x00149908
 		public static IBvbChangeHandCard Create([Nullable(2)] IBvbChangeHandCard instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060084AD RID: 33965 RVA: 0x0013BF27 File Offset: 0x0013A127
+		// Token: 0x06008BD3 RID: 35795 RVA: 0x0014B71B File Offset: 0x0014991B
 		public static IBvbChangeHandCard CreateFromSetValue([Nullable(2)] IBvbChangeHandCard_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060084AE RID: 33966 RVA: 0x0013BF3A File Offset: 0x0013A13A
+		// Token: 0x06008BD4 RID: 35796 RVA: 0x0014B72E File Offset: 0x0014992E
 		public new IBvbChangeHandCard_SetValue ToSetValue()
 		{
 			return new IBvbChangeHandCard_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B71 RID: 11121
-		// (get) Token: 0x060084AF RID: 33967 RVA: 0x0013BF59 File Offset: 0x0013A159
-		// (set) Token: 0x060084B0 RID: 33968 RVA: 0x0013BF84 File Offset: 0x0013A184
+		// Token: 0x17002D6B RID: 11627
+		// (get) Token: 0x06008BD5 RID: 35797 RVA: 0x0014B74D File Offset: 0x0014994D
+		// (set) Token: 0x06008BD6 RID: 35798 RVA: 0x0014B778 File Offset: 0x00149978
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B72 RID: 11122
-		// (get) Token: 0x060084B1 RID: 33969 RVA: 0x0013BF94 File Offset: 0x0013A194
-		// (set) Token: 0x060084B2 RID: 33970 RVA: 0x0013BFCE File Offset: 0x0013A1CE
+		// Token: 0x17002D6C RID: 11628
+		// (get) Token: 0x06008BD7 RID: 35799 RVA: 0x0014B788 File Offset: 0x00149988
+		// (set) Token: 0x06008BD8 RID: 35800 RVA: 0x0014B7C2 File Offset: 0x001499C2
 		public virtual int? HandCardIndex
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053EE RID: 21486
+		// Token: 0x0400583A RID: 22586
 		[Nullable(2)]
 		protected new IBvbChangeHandCard FbInstance;
 
-		// Token: 0x040053EF RID: 21487
+		// Token: 0x0400583B RID: 22587
 		[Nullable(2)]
 		protected new IBvbChangeHandCard_SetValue PocoInterface;
 	}

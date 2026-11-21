@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000143 RID: 323
+	// Token: 0x02000147 RID: 327
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ISdkRequestCheckoutProductParam
 	{
-		// Token: 0x040005FF RID: 1535
+		// Token: 0x0400063A RID: 1594
 		public string AccessToken;
 
-		// Token: 0x04000600 RID: 1536
+		// Token: 0x0400063B RID: 1595
 		public string ServerId;
 
-		// Token: 0x04000601 RID: 1537
+		// Token: 0x0400063C RID: 1596
 		public string ServerName;
 
-		// Token: 0x04000602 RID: 1538
+		// Token: 0x0400063D RID: 1597
 		public string RoleId;
 
-		// Token: 0x04000603 RID: 1539
+		// Token: 0x0400063E RID: 1598
 		public string RoleName;
 	}
 }

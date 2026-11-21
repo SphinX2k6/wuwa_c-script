@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200008D RID: 141
+	// Token: 0x02000090 RID: 144
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageUpdater
 	{
-		// Token: 0x06000511 RID: 1297 RVA: 0x0002F5FE File Offset: 0x0002D7FE
+		// Token: 0x06000528 RID: 1320 RVA: 0x00030B66 File Offset: 0x0002ED66
 		public void Init(UObject worldContext, [Nullable(2)] LanguageUpdateUiEvent uiEvent)
 		{
 			this.VersionMisc.Init(worldContext);
@@ -29,7 +29,7 @@ namespace CSharpScript.Launcher.Update
 			this.CalculateDownloadStatus("LanguageUpdater Init");
 		}
 
-		// Token: 0x06000512 RID: 1298 RVA: 0x0002F634 File Offset: 0x0002D834
+		// Token: 0x06000529 RID: 1321 RVA: 0x00030B9C File Offset: 0x0002ED9C
 		public void Delete(UObject worldContext)
 		{
 			LanguageUpdater.SafeDeleteFile(this.VersionMisc.GetMountFilePath());
@@ -39,7 +39,7 @@ namespace CSharpScript.Launcher.Update
 			this.Status = ELanguageDownloadStatus.None;
 		}
 
-		// Token: 0x06000513 RID: 1299 RVA: 0x0002F684 File Offset: 0x0002D884
+		// Token: 0x0600052A RID: 1322 RVA: 0x00030BEC File Offset: 0x0002EDEC
 		public UniTask Update(IResourceUpdateView updateViewImplement, UObject worldContext)
 		{
 			LanguageUpdater.<Update>d__14 <Update>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.Update
 			return <Update>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000514 RID: 1300 RVA: 0x0002F6D8 File Offset: 0x0002D8D8
+		// Token: 0x0600052B RID: 1323 RVA: 0x00030C40 File Offset: 0x0002EE40
 		private UniTask OldUpdate(IResourceUpdateView updateViewImplement, UObject worldContext)
 		{
 			LanguageUpdater.<OldUpdate>d__15 <OldUpdate>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.Update
 			return <OldUpdate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000515 RID: 1301 RVA: 0x0002F72C File Offset: 0x0002D92C
+		// Token: 0x0600052C RID: 1324 RVA: 0x00030C94 File Offset: 0x0002EE94
 		private UniTask NewDiffUpdate(IResourceUpdateView updateViewImplement, UObject worldContext)
 		{
 			LanguageUpdater.<NewDiffUpdate>d__16 <NewDiffUpdate>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Launcher.Update
 			return <NewDiffUpdate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000516 RID: 1302 RVA: 0x0002F778 File Offset: 0x0002D978
+		// Token: 0x0600052D RID: 1325 RVA: 0x00030CE0 File Offset: 0x0002EEE0
 		public void Pause()
 		{
 			LauncherLog.Instance.Info("Pause Language Downloading.", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -86,7 +86,7 @@ namespace CSharpScript.Launcher.Update
 			this.CalculateDownloadStatus("LanguageUpdater Pause");
 		}
 
-		// Token: 0x06000517 RID: 1303 RVA: 0x0002F7BC File Offset: 0x0002D9BC
+		// Token: 0x0600052E RID: 1326 RVA: 0x00030D24 File Offset: 0x0002EF24
 		[NullableContext(2)]
 		public unsafe void CalculateDownloadStatus(string reason = null)
 		{
@@ -154,7 +154,7 @@ namespace CSharpScript.Launcher.Update
 			instance3.Info(message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 6));
 		}
 
-		// Token: 0x06000518 RID: 1304 RVA: 0x0002FA5C File Offset: 0x0002DC5C
+		// Token: 0x0600052F RID: 1327 RVA: 0x00030FC4 File Offset: 0x0002F1C4
 		private unsafe static void SafeDeleteFile(string filePath)
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -173,52 +173,52 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x0600051A RID: 1306 RVA: 0x0002FB0D File Offset: 0x0002DD0D
+		// Token: 0x06000531 RID: 1329 RVA: 0x00031075 File Offset: 0x0002F275
 		[CompilerGenerated]
 		private void <OldUpdate>g__ProgressCb|15_0(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 			this.UpdateView.UpdatePatchProgress(receiveSize, curProgress, totalProgress, downloadSpeed);
 		}
 
-		// Token: 0x040002E9 RID: 745
+		// Token: 0x04000317 RID: 791
 		public ELanguageDownloadStatus Status;
 
-		// Token: 0x040002EA RID: 746
+		// Token: 0x04000318 RID: 792
 		public bool IsDownloading;
 
-		// Token: 0x040002EB RID: 747
+		// Token: 0x04000319 RID: 793
 		public long LocalDiskSize;
 
-		// Token: 0x040002EC RID: 748
+		// Token: 0x0400031A RID: 794
 		public long TotalDiskSize;
 
-		// Token: 0x040002ED RID: 749
+		// Token: 0x0400031B RID: 795
 		public string LanguageCode = "";
 
-		// Token: 0x040002EE RID: 750
+		// Token: 0x0400031C RID: 796
 		[Nullable(2)]
 		public UrlPrefixDownload Downloader;
 
-		// Token: 0x040002EF RID: 751
+		// Token: 0x0400031D RID: 797
 		[Nullable(2)]
 		public ResourceUpdate Updater;
 
-		// Token: 0x040002F0 RID: 752
+		// Token: 0x0400031E RID: 798
 		[Nullable(2)]
 		public DiffUpdate DiffUpdater;
 
-		// Token: 0x040002F1 RID: 753
+		// Token: 0x0400031F RID: 799
 		[Nullable(2)]
 		public LanguageVersionMisc VersionMisc;
 
-		// Token: 0x040002F2 RID: 754
+		// Token: 0x04000320 RID: 800
 		[Nullable(2)]
 		public ResPackageInfo DiffResInfo;
 
-		// Token: 0x040002F3 RID: 755
+		// Token: 0x04000321 RID: 801
 		public List<ResPackageInfo> RoleVoiceResInfos = new List<ResPackageInfo>();
 
-		// Token: 0x040002F4 RID: 756
+		// Token: 0x04000322 RID: 802
 		[Nullable(2)]
 		public LanguageUpdateViewAgent UpdateView;
 	}

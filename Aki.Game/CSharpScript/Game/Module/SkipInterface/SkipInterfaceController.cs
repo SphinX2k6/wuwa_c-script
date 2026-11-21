@@ -7,20 +7,20 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkipInterface
 {
-	// Token: 0x02004BA1 RID: 19361
+	// Token: 0x02003B4B RID: 15179
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SkipInterfaceController : ControllerBase
 	{
-		// Token: 0x060322A0 RID: 205472 RVA: 0x00BA7CBD File Offset: 0x00BA5EBD
+		// Token: 0x06027030 RID: 159792 RVA: 0x00AEBE09 File Offset: 0x00AEA009
 		protected override bool OnInit()
 		{
 			this.AddEvents();
 			return true;
 		}
 
-		// Token: 0x060322A1 RID: 205473 RVA: 0x00BA7CC6 File Offset: 0x00BA5EC6
+		// Token: 0x06027031 RID: 159793 RVA: 0x00AEBE12 File Offset: 0x00AEA012
 		protected override bool OnClear()
 		{
 			this.RemoveEvents();
@@ -28,27 +28,27 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return true;
 		}
 
-		// Token: 0x060322A2 RID: 205474 RVA: 0x00BA7CD4 File Offset: 0x00BA5ED4
+		// Token: 0x06027032 RID: 159794 RVA: 0x00AEBE20 File Offset: 0x00AEA020
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<EUiViewName>(EEventName.OpenViewBegined, this.OnPreOpenView);
 			EventSystem.Instance.Add(EEventName.EnterGameSuccess, new Action(this.EnterGameSuccess));
 		}
 
-		// Token: 0x060322A3 RID: 205475 RVA: 0x00BA7D02 File Offset: 0x00BA5F02
+		// Token: 0x06027033 RID: 159795 RVA: 0x00AEBE4E File Offset: 0x00AEA04E
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<EUiViewName>(EEventName.OpenViewBegined, this.OnPreOpenView);
 			EventSystem.Instance.Remove(EEventName.EnterGameSuccess, new Action(this.EnterGameSuccess));
 		}
 
-		// Token: 0x060322A4 RID: 205476 RVA: 0x00BA7D30 File Offset: 0x00BA5F30
+		// Token: 0x06027034 RID: 159796 RVA: 0x00AEBE7C File Offset: 0x00AEA07C
 		private void EnterGameSuccess()
 		{
 			this.RequestAccessPathConfig();
 		}
 
-		// Token: 0x060322A5 RID: 205477 RVA: 0x00BA7D3C File Offset: 0x00BA5F3C
+		// Token: 0x06027035 RID: 159797 RVA: 0x00AEBE88 File Offset: 0x00AEA088
 		private UniTask RequestAccessPathConfig()
 		{
 			SkipInterfaceController.<RequestAccessPathConfig>d__6 <RequestAccessPathConfig>d__;
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return <RequestAccessPathConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17007C4C RID: 31820
-		// (get) Token: 0x060322A6 RID: 205478 RVA: 0x00BA7D77 File Offset: 0x00BA5F77
+		// Token: 0x17004FF6 RID: 20470
+		// (get) Token: 0x06027036 RID: 159798 RVA: 0x00AEBEC3 File Offset: 0x00AEA0C3
 		public static SkipInterfaceController Instance
 		{
 			get
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			}
 		}
 
-		// Token: 0x060322A7 RID: 205479 RVA: 0x00BA7D7E File Offset: 0x00BA5F7E
+		// Token: 0x06027037 RID: 159799 RVA: 0x00AEBECA File Offset: 0x00AEA0CA
 		public static SkipInterfaceController GetOrCreateInstance()
 		{
 			if (SkipInterfaceController._Instance == null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return SkipInterfaceController._Instance;
 		}
 
-		// Token: 0x060322A8 RID: 205480 RVA: 0x00BA7D92 File Offset: 0x00BA5F92
+		// Token: 0x06027038 RID: 159800 RVA: 0x00AEBEDE File Offset: 0x00AEA0DE
 		public static bool CreateInstance()
 		{
 			if (SkipInterfaceController._Instance != null)
@@ -89,24 +89,24 @@ namespace CSharpScript.Game.Module.SkipInterface
 			return true;
 		}
 
-		// Token: 0x060322A9 RID: 205481 RVA: 0x00BA7DA8 File Offset: 0x00BA5FA8
+		// Token: 0x06027039 RID: 159801 RVA: 0x00AEBEF4 File Offset: 0x00AEA0F4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060322AA RID: 205482 RVA: 0x00BA7DAA File Offset: 0x00BA5FAA
+		// Token: 0x0602703A RID: 159802 RVA: 0x00AEBEF6 File Offset: 0x00AEA0F6
 		public static void ResetStaticDefaultValue()
 		{
 			SkipInterfaceController._Instance = null;
 		}
 
-		// Token: 0x060322AB RID: 205483 RVA: 0x00BA7DB2 File Offset: 0x00BA5FB2
+		// Token: 0x0602703B RID: 159803 RVA: 0x00AEBEFE File Offset: 0x00AEA0FE
 		static SkipInterfaceController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkipInterfaceController.CreateStaticDefaultValue), new Action(SkipInterfaceController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060322AC RID: 205484 RVA: 0x00BA7DD1 File Offset: 0x00BA5FD1
+		// Token: 0x0602703C RID: 159804 RVA: 0x00AEBF1D File Offset: 0x00AEA11D
 		public SkipInterfaceController()
 		{
 			Action<EUiViewName> onPreOpenView;
@@ -118,18 +118,18 @@ namespace CSharpScript.Game.Module.SkipInterface
 			base..ctor();
 		}
 
-		// Token: 0x0401AB7A RID: 109434
+		// Token: 0x040154CE RID: 87246
 		private readonly Action<EUiViewName> OnPreOpenView;
 
-		// Token: 0x0401AB7B RID: 109435
+		// Token: 0x040154CF RID: 87247
 		[Nullable(2)]
 		private static SkipInterfaceController _Instance;
 
-		// Token: 0x0200ADCA RID: 44490
+		// Token: 0x020097E9 RID: 38889
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04034C8F RID: 216207
+			// Token: 0x0402F636 RID: 194102
 			[Nullable(0)]
 			public static Action<EUiViewName> <0>__CheckContainRingView;
 		}

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FBE RID: 20414
+	// Token: 0x02003F87 RID: 16263
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLinePathItem : UiPanelBase
 	{
-		// Token: 0x060343FE RID: 214014 RVA: 0x00C449EE File Offset: 0x00C42BEE
+		// Token: 0x0602926C RID: 168556 RVA: 0x00B8E1A6 File Offset: 0x00B8C3A6
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x060343FF RID: 214015 RVA: 0x00C44A27 File Offset: 0x00C42C27
+		// Token: 0x0602926D RID: 168557 RVA: 0x00B8E1DF File Offset: 0x00B8C3DF
 		public void DrawPath(QuestMultiLineComponentData componentData)
 		{
 			this.DrawPathByPoints(componentData.AnimMovePoint);
 		}
 
-		// Token: 0x06034400 RID: 214016 RVA: 0x00C44A38 File Offset: 0x00C42C38
+		// Token: 0x0602926E RID: 168558 RVA: 0x00B8E1F0 File Offset: 0x00B8C3F0
 		public void DrawPathByPoints(IntVector2D[] points)
 		{
 			if (points == null || points.Length < 2)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.DrawPathByPoints(list);
 		}
 
-		// Token: 0x06034401 RID: 214017 RVA: 0x00C44A9C File Offset: 0x00C42C9C
+		// Token: 0x0602926F RID: 168559 RVA: 0x00B8E254 File Offset: 0x00B8C454
 		public void DrawPathByPoints(IReadOnlyList<global::Vector> points)
 		{
 			if (points == null || points.Count < 2)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			sprite.SetAnchorOffset(tarray.Get(tarray.Num() - 1));
 		}
 
-		// Token: 0x06034402 RID: 214018 RVA: 0x00C44B8E File Offset: 0x00C42D8E
+		// Token: 0x06029270 RID: 168560 RVA: 0x00B8E346 File Offset: 0x00B8C546
 		public void SetVisibleForAnim(bool visible)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x06034403 RID: 214019 RVA: 0x00C44BBC File Offset: 0x00C42DBC
+		// Token: 0x06029271 RID: 168561 RVA: 0x00B8E374 File Offset: 0x00B8C574
 		public void SetVisibleProgress(float t)
 		{
 			if (this.FollowCurve == null || this.FollowPresampled == null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			rootItem.SetUIActive(false);
 		}
 
-		// Token: 0x06034404 RID: 214020 RVA: 0x00C44CE4 File Offset: 0x00C42EE4
+		// Token: 0x06029272 RID: 168562 RVA: 0x00B8E49C File Offset: 0x00B8C69C
 		public void PlayDrawProgressively(QuestMultiLineComponentData componentData, float? speedUiPxPerSec = null, [Nullable(2)] Action onComplete = null)
 		{
 			this.StopDraw();
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x06034405 RID: 214021 RVA: 0x00C44EF1 File Offset: 0x00C430F1
+		// Token: 0x06029273 RID: 168563 RVA: 0x00B8E6A9 File Offset: 0x00B8C8A9
 		public void StopDraw()
 		{
 			if (this.DrawTimerHandle != null)
@@ -244,13 +244,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x06034406 RID: 214022 RVA: 0x00C44F0E File Offset: 0x00C4310E
+		// Token: 0x06029274 RID: 168564 RVA: 0x00B8E6C6 File Offset: 0x00B8C8C6
 		protected override void OnBeforeDestroy()
 		{
 			this.StopDraw();
 		}
 
-		// Token: 0x06034407 RID: 214023 RVA: 0x00C44F18 File Offset: 0x00C43118
+		// Token: 0x06029275 RID: 168565 RVA: 0x00B8E6D0 File Offset: 0x00B8C8D0
 		private void ApplyProgress(UUI2DLineRaw lineRaw, UUISprite arrowSprite, CatmullRomCurve curve, IReadOnlyList<global::Vector> presampled, float t)
 		{
 			float num = Math.Min(1f, Math.Max(0f, t));
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			arrowSprite.SetAnchorOffset(new FVector2D((float)point.X, (float)point.Y));
 		}
 
-		// Token: 0x06034408 RID: 214024 RVA: 0x00C4503C File Offset: 0x00C4323C
+		// Token: 0x06029276 RID: 168566 RVA: 0x00B8E7F4 File Offset: 0x00B8C9F4
 		private void ApplyFullPath(UUI2DLineRaw lineRaw, UUISprite arrowSprite, CatmullRomCurve curve, IReadOnlyList<global::Vector> presampled)
 		{
 			TArray<FVector2D> tarray = QuestMultiLineUtils.PointArrayToVectorArray(presampled);
@@ -291,15 +291,15 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			arrowSprite.SetAnchorOffset(tarray.Get(tarray.Num() - 1));
 		}
 
-		// Token: 0x0401BC90 RID: 113808
+		// Token: 0x04016665 RID: 91749
 		[Nullable(2)]
 		private TimerHandle DrawTimerHandle;
 
-		// Token: 0x0401BC91 RID: 113809
+		// Token: 0x04016666 RID: 91750
 		[Nullable(2)]
 		private CatmullRomCurve FollowCurve;
 
-		// Token: 0x0401BC92 RID: 113810
+		// Token: 0x04016667 RID: 91751
 		[Nullable(new byte[]
 		{
 			2,

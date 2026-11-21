@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058BD RID: 22717
+	// Token: 0x02004895 RID: 18581
 	public enum EInstanceSubTitleType
 	{
-		// Token: 0x0401E2A6 RID: 123558
+		// Token: 0x04018D43 RID: 101699
 		TextId = 1,
-		// Token: 0x0401E2A7 RID: 123559
+		// Token: 0x04018D44 RID: 101700
 		RecommendLevel,
-		// Token: 0x0401E2A8 RID: 123560
+		// Token: 0x04018D45 RID: 101701
 		External
 	}
 }

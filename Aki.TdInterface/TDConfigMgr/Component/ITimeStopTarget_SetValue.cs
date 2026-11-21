@@ -4,14 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000794 RID: 1940
+	// Token: 0x02000835 RID: 2101
 	public class ITimeStopTarget_SetValue
 	{
-		// Token: 0x04001C24 RID: 7204
-		[Nullable(1)]
+		// Token: 0x04001E2D RID: 7725
 		public List<int> EntityIds;
 
-		// Token: 0x04001C25 RID: 7205
+		// Token: 0x04001E2E RID: 7726
 		[Nullable(2)]
 		public IDynamicEntityMatch EntityMatch;
 	}

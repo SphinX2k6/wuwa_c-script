@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055C3 RID: 21955
+	// Token: 0x02005B61 RID: 23393
 	public enum IMotorInteractConstraintType_Union : byte
 	{
-		// Token: 0x0400E90A RID: 59658
+		// Token: 0x0400F56C RID: 62828
 		NONE,
-		// Token: 0x0400E90B RID: 59659
+		// Token: 0x0400F56D RID: 62829
 		IMotorInteractConstraintType,
-		// Token: 0x0400E90C RID: 59660
+		// Token: 0x0400F56E RID: 62830
 		IFaceToTargetMotorInteractConstraint
 	}
 }

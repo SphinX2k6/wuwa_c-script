@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001244 RID: 4676
+	// Token: 0x02001384 RID: 4996
 	public static class EFlipperSystemVarExtensions
 	{
-		// Token: 0x060069D9 RID: 27097 RVA: 0x000FD928 File Offset: 0x000FBB28
+		// Token: 0x0600702C RID: 28716 RVA: 0x0010B554 File Offset: 0x00109754
 		public static string ToEnumString(this EFlipperSystemVar value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069DA RID: 27098 RVA: 0x000FD950 File Offset: 0x000FBB50
+		// Token: 0x0600702D RID: 28717 RVA: 0x0010B57C File Offset: 0x0010977C
 		public static EFlipperSystemVar FromString(string name)
 		{
 			EFlipperSystemVar result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069DB RID: 27099 RVA: 0x000FD979 File Offset: 0x000FBB79
+		// Token: 0x0600702E RID: 28718 RVA: 0x0010B5A5 File Offset: 0x001097A5
 		public static bool TryFromString(string name, out EFlipperSystemVar value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x060069DC RID: 27100 RVA: 0x000FD99E File Offset: 0x000FBB9E
+		// Token: 0x0600702F RID: 28719 RVA: 0x0010B5CA File Offset: 0x001097CA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069DD RID: 27101 RVA: 0x000FD9AE File Offset: 0x000FBBAE
+		// Token: 0x06007030 RID: 28720 RVA: 0x0010B5DA File Offset: 0x001097DA
 		public static EFlipperSystemVar[] GetValues()
 		{
 			return new EFlipperSystemVar[1];
 		}
 
-		// Token: 0x060069DE RID: 27102 RVA: 0x000FD9B6 File Offset: 0x000FBBB6
+		// Token: 0x06007031 RID: 28721 RVA: 0x0010B5E2 File Offset: 0x001097E2
 		public static string[] GetNames()
 		{
 			return new string[]

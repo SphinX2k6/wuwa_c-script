@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D62 RID: 3426
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E5C RID: 3676
 	public class InhalationAbilityComponent : IComponentBase
 	{
-		// Token: 0x06004E05 RID: 19973 RVA: 0x000C1D0B File Offset: 0x000BFF0B
+		// Token: 0x06005321 RID: 21281 RVA: 0x000CD44F File Offset: 0x000CB64F
 		public static InhalationAbilityComponent Create(IInhalationAbilityComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018FE RID: 6398
-		// (get) Token: 0x06004E06 RID: 19974 RVA: 0x000C1D2C File Offset: 0x000BFF2C
+		// Token: 0x17001A64 RID: 6756
+		// (get) Token: 0x06005322 RID: 21282 RVA: 0x000CD470 File Offset: 0x000CB670
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018FF RID: 6399
-		// (get) Token: 0x06004E07 RID: 19975 RVA: 0x000C1D64 File Offset: 0x000BFF64
+		// Token: 0x17001A65 RID: 6757
+		// (get) Token: 0x06005323 RID: 21283 RVA: 0x000CD4A8 File Offset: 0x000CB6A8
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001900 RID: 6400
-		// (get) Token: 0x06004E08 RID: 19976 RVA: 0x000C1D7C File Offset: 0x000BFF7C
+		// Token: 0x17001A66 RID: 6758
+		// (get) Token: 0x06005324 RID: 21284 RVA: 0x000CD4C0 File Offset: 0x000CB6C0
 		public virtual List<IInhalationConfig> InhalationConfigs
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CBB RID: 11451
+		// Token: 0x04002F7B RID: 12155
 		private IInhalationAbilityComponent Instance;
 
-		// Token: 0x04002CBC RID: 11452
+		// Token: 0x04002F7C RID: 12156
 		private List<IInhalationConfig> _InhalationConfigsCache;
 
-		// Token: 0x04002CBD RID: 11453
+		// Token: 0x04002F7D RID: 12157
 		private bool _InhalationConfigsInited;
 	}
 }

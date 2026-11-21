@@ -1,33 +1,32 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraEffect
 {
-	// Token: 0x02007153 RID: 29011
+	// Token: 0x02006381 RID: 25473
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AbnormalThunder : PeriodExecution
 	{
-		// Token: 0x06046D38 RID: 290104 RVA: 0x011D980B File Offset: 0x011D7A0B
+		// Token: 0x0603DB92 RID: 252818 RVA: 0x011E29BF File Offset: 0x011E0BBF
 		public AbnormalThunder(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 		{
 		}
 
-		// Token: 0x06046D39 RID: 290105 RVA: 0x011D9814 File Offset: 0x011D7A14
+		// Token: 0x0603DB93 RID: 252819 RVA: 0x011E29C8 File Offset: 0x011E0BC8
 		protected override void InitParameters(ExtraEffectParameters parameters)
 		{
 			if (parameters.ExtraEffectParameters_ == null)
 			{
 				return;
 			}
-			this.ReductionRateThunder = float.Parse(parameters.ExtraEffectParameters_.ElementAtOrDefault(0) ?? "0") * 0.0001f;
-			this.ReductionRateExplode = float.Parse(parameters.ExtraEffectParameters_.ElementAtOrDefault(1) ?? "0") * 0.0001f;
-			this.ExplodeBuffId = long.Parse(parameters.ExtraEffectParameters_.ElementAtOrDefault(2) ?? "0");
-			this.ExecuteAddBuffId = long.Parse(parameters.ExtraEffectParameters_.ElementAtOrDefault(5) ?? "0");
+			this.ReductionRateThunder = float.Parse(((parameters.ExtraEffectParameters_.Length != 0) ? parameters.ExtraEffectParameters_[0] : null) ?? "0") * 0.0001f;
+			this.ReductionRateExplode = float.Parse(((parameters.ExtraEffectParameters_.Length > 1) ? parameters.ExtraEffectParameters_[1] : null) ?? "0") * 0.0001f;
+			this.ExplodeBuffId = long.Parse(((parameters.ExtraEffectParameters_.Length > 2) ? parameters.ExtraEffectParameters_[2] : null) ?? "0");
+			this.ExecuteAddBuffId = long.Parse(((parameters.ExtraEffectParameters_.Length > 5) ? parameters.ExtraEffectParameters_[5] : null) ?? "0");
 		}
 
-		// Token: 0x06046D3A RID: 290106 RVA: 0x011D98B8 File Offset: 0x011D7AB8
+		// Token: 0x0603DB94 RID: 252820 RVA: 0x011E2A90 File Offset: 0x011E0C90
 		[return: Nullable(2)]
 		public override object OnExecute(params object[] args)
 		{
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			return null;
 		}
 
-		// Token: 0x06046D3B RID: 290107 RVA: 0x011D99DC File Offset: 0x011D7BDC
+		// Token: 0x0603DB95 RID: 252821 RVA: 0x011E2BB4 File Offset: 0x011E0DB4
 		protected override void DoBuffStackOverflow(int oldStack, int newStack, int stackLimitMax)
 		{
 			int num = newStack - stackLimitMax;
@@ -74,16 +73,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.ExtraE
 			}
 		}
 
-		// Token: 0x040252C0 RID: 152256
+		// Token: 0x04020BA3 RID: 134051
 		protected float ReductionRateThunder;
 
-		// Token: 0x040252C1 RID: 152257
+		// Token: 0x04020BA4 RID: 134052
 		protected float ReductionRateExplode;
 
-		// Token: 0x040252C2 RID: 152258
+		// Token: 0x04020BA5 RID: 134053
 		protected long ExplodeBuffId;
 
-		// Token: 0x040252C3 RID: 152259
+		// Token: 0x04020BA6 RID: 134054
 		protected long ExecuteAddBuffId;
 	}
 }

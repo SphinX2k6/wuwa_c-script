@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class AudioDefine
 {
-	// Token: 0x06000072 RID: 114 RVA: 0x00004A38 File Offset: 0x00002C38
+	// Token: 0x06000072 RID: 114 RVA: 0x00004648 File Offset: 0x00002848
 	static AudioDefine()
 	{
 		HashSet<string> hashSet = new HashSet<string>();
@@ -327,6 +327,22 @@ public class AudioDefine
 				}
 			},
 			{
+				"mute_scene_music",
+				new HashSet<string>
+				{
+					"mute",
+					"none"
+				}
+			},
+			{
+				"mute_3_8_avgloading_music",
+				new HashSet<string>
+				{
+					"mute",
+					"none"
+				}
+			},
+			{
 				"game_rogue_link_state",
 				new HashSet<string>
 				{
@@ -478,6 +494,32 @@ public class AudioDefine
 				}
 			},
 			{
+				"solarschool_daytime",
+				new HashSet<string>
+				{
+					"day",
+					"evening"
+				}
+			},
+			{
+				"solarschool_season",
+				new HashSet<string>
+				{
+					"spring",
+					"summer",
+					"autumn",
+					"winter",
+					"festival"
+				}
+			},
+			{
+				"solarschool_filter",
+				new HashSet<string>
+				{
+					"none"
+				}
+			},
+			{
 				"ui_music_3_5_wawaji",
 				new HashSet<string>
 				{
@@ -592,6 +634,7 @@ public class AudioDefine
 		"global_seq_rate",
 		"global_wet",
 		"interact_level_chun_huaqiao",
+		"level_3_8_piano_volume",
 		"mini_game_lifepoint_spreading_grids",
 		"mini_game_lifepoint_spreading_speed",
 		"mini_game_lifepoint_spreads_counting",

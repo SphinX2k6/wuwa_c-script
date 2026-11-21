@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200593B RID: 22843
+	// Token: 0x02005F48 RID: 24392
 	public struct ISlotShape : IFlatbufferObject
 	{
-		// Token: 0x1700AB77 RID: 43895
-		// (get) Token: 0x06026A74 RID: 158324 RVA: 0x00552D20 File Offset: 0x00550F20
+		// Token: 0x1700B4AB RID: 46251
+		// (get) Token: 0x06028FDE RID: 167902 RVA: 0x0059998C File Offset: 0x00597B8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026A75 RID: 158325 RVA: 0x00552D2D File Offset: 0x00550F2D
+		// Token: 0x06028FDF RID: 167903 RVA: 0x00599999 File Offset: 0x00597B99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026A76 RID: 158326 RVA: 0x00552D34 File Offset: 0x00550F34
+		// Token: 0x06028FE0 RID: 167904 RVA: 0x005999A0 File Offset: 0x00597BA0
 		public static ISlotShape GetRootAsISlotShape(ByteBuffer _bb)
 		{
 			return ISlotShape.GetRootAsISlotShape(_bb, default(ISlotShape));
 		}
 
-		// Token: 0x06026A77 RID: 158327 RVA: 0x00552D50 File Offset: 0x00550F50
+		// Token: 0x06028FE1 RID: 167905 RVA: 0x005999BC File Offset: 0x00597BBC
 		public static ISlotShape GetRootAsISlotShape(ByteBuffer _bb, ISlotShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026A78 RID: 158328 RVA: 0x00552D6D File Offset: 0x00550F6D
+		// Token: 0x06028FE2 RID: 167906 RVA: 0x005999D9 File Offset: 0x00597BD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026A79 RID: 158329 RVA: 0x00552D7C File Offset: 0x00550F7C
+		// Token: 0x06028FE3 RID: 167907 RVA: 0x005999E8 File Offset: 0x00597BE8
 		public ISlotShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AB78 RID: 43896
-		// (get) Token: 0x06026A7A RID: 158330 RVA: 0x00552D8C File Offset: 0x00550F8C
+		// Token: 0x1700B4AC RID: 46252
+		// (get) Token: 0x06028FE4 RID: 167908 RVA: 0x005999F8 File Offset: 0x00597BF8
 		public IVectorInfo? Center
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB79 RID: 43897
-		// (get) Token: 0x06026A7B RID: 158331 RVA: 0x00552DEC File Offset: 0x00550FEC
+		// Token: 0x1700B4AD RID: 46253
+		// (get) Token: 0x06028FE5 RID: 167909 RVA: 0x00599A58 File Offset: 0x00597C58
 		public IVectorInfo? Size
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB7A RID: 43898
-		// (get) Token: 0x06026A7C RID: 158332 RVA: 0x00552E4C File Offset: 0x0055104C
+		// Token: 0x1700B4AE RID: 46254
+		// (get) Token: 0x06028FE6 RID: 167910 RVA: 0x00599AB8 File Offset: 0x00597CB8
 		public IVectorInfo? Rotator
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026A7D RID: 158333 RVA: 0x00552EA9 File Offset: 0x005510A9
+		// Token: 0x06028FE7 RID: 167911 RVA: 0x00599B15 File Offset: 0x00597D15
 		public static Offset<ISlotShape> CreateISlotShape(FlatBufferBuilder builder, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> SizeOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotatorOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISlotShape.EndISlotShape(builder);
 		}
 
-		// Token: 0x06026A7E RID: 158334 RVA: 0x00552ECD File Offset: 0x005510CD
+		// Token: 0x06028FE8 RID: 167912 RVA: 0x00599B39 File Offset: 0x00597D39
 		public static void StartISlotShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06026A7F RID: 158335 RVA: 0x00552ED6 File Offset: 0x005510D6
+		// Token: 0x06028FE9 RID: 167913 RVA: 0x00599B42 File Offset: 0x00597D42
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(0, centerOffset.Value, 0);
 		}
 
-		// Token: 0x06026A80 RID: 158336 RVA: 0x00552EE6 File Offset: 0x005510E6
+		// Token: 0x06028FEA RID: 167914 RVA: 0x00599B52 File Offset: 0x00597D52
 		public static void AddSize(FlatBufferBuilder builder, Offset<IVectorInfo> sizeOffset)
 		{
 			builder.AddOffset(1, sizeOffset.Value, 0);
 		}
 
-		// Token: 0x06026A81 RID: 158337 RVA: 0x00552EF6 File Offset: 0x005510F6
+		// Token: 0x06028FEB RID: 167915 RVA: 0x00599B62 File Offset: 0x00597D62
 		public static void AddRotator(FlatBufferBuilder builder, Offset<IVectorInfo> rotatorOffset)
 		{
 			builder.AddOffset(2, rotatorOffset.Value, 0);
 		}
 
-		// Token: 0x06026A82 RID: 158338 RVA: 0x00552F06 File Offset: 0x00551106
+		// Token: 0x06028FEC RID: 167916 RVA: 0x00599B72 File Offset: 0x00597D72
 		public static Offset<ISlotShape> EndISlotShape(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlotShape>(builder.EndTable());
 		}
 
-		// Token: 0x06026A83 RID: 158339 RVA: 0x00552F14 File Offset: 0x00551114
+		// Token: 0x06028FED RID: 167917 RVA: 0x00599B80 File Offset: 0x00597D80
 		public ISlotShapeT UnPack()
 		{
 			ISlotShapeT slotShapeT = new ISlotShapeT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return slotShapeT;
 		}
 
-		// Token: 0x06026A84 RID: 158340 RVA: 0x00552F30 File Offset: 0x00551130
+		// Token: 0x06028FEE RID: 167918 RVA: 0x00599B9C File Offset: 0x00597D9C
 		public void UnPackTo(ISlotShapeT _o)
 		{
 			_o.Center = ((this.Center != null) ? this.Center.Value.UnPack() : null);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Rotator = ((this.Rotator != null) ? this.Rotator.Value.UnPack() : null);
 		}
 
-		// Token: 0x06026A85 RID: 158341 RVA: 0x00552FCC File Offset: 0x005511CC
+		// Token: 0x06028FEF RID: 167919 RVA: 0x00599C38 File Offset: 0x00597E38
 		public static Offset<ISlotShape> Pack(FlatBufferBuilder builder, ISlotShapeT _o)
 		{
 			if (_o == null)
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISlotShape.CreateISlotShape(builder, centerOffset, sizeOffset, rotatorOffset);
 		}
 
-		// Token: 0x0400EF0C RID: 61196
+		// Token: 0x0400FC01 RID: 64513
 		private Table __p;
 	}
 }

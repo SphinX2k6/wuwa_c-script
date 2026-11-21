@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02001BEF RID: 7151
+// Token: 0x020010AE RID: 4270
 public class EditingRoleData_Tmp
 {
-	// Token: 0x0600D527 RID: 54567 RVA: 0x0031161F File Offset: 0x0030F81F
+	// Token: 0x0600A93A RID: 43322 RVA: 0x0031C863 File Offset: 0x0031AA63
 	public EditingRoleData_Tmp(int position)
 	{
 		this.Position = position;
 	}
 
-	// Token: 0x0400619B RID: 24987
+	// Token: 0x0400626A RID: 25194
 	public readonly int Position;
 
-	// Token: 0x0400619C RID: 24988
+	// Token: 0x0400626B RID: 25195
 	public int RoleId;
 }

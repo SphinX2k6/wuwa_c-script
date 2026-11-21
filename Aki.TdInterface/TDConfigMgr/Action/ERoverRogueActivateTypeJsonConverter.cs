@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023FA RID: 9210
+	// Token: 0x02002691 RID: 9873
 	public class ERoverRogueActivateTypeJsonConverter : JsonConverter<ERoverRogueActivateType>
 	{
-		// Token: 0x0600C865 RID: 51301 RVA: 0x001D5460 File Offset: 0x001D3660
+		// Token: 0x0600D4E8 RID: 54504 RVA: 0x001EEC0C File Offset: 0x001ECE0C
 		public override ERoverRogueActivateType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ERoverRogueActivateTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C866 RID: 51302 RVA: 0x001D5484 File Offset: 0x001D3684
+		// Token: 0x0600D4E9 RID: 54505 RVA: 0x001EEC30 File Offset: 0x001ECE30
 		public override void Write(Utf8JsonWriter writer, ERoverRogueActivateType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

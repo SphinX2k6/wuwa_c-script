@@ -3,12 +3,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x02005373 RID: 21363
+	// Token: 0x02004356 RID: 17238
 	public class MusicalInstrumentExitParam
 	{
-		// Token: 0x17008354 RID: 33620
-		// (get) Token: 0x06036949 RID: 223561 RVA: 0x00CECAFF File Offset: 0x00CEACFF
-		// (set) Token: 0x0603694A RID: 223562 RVA: 0x00CECB07 File Offset: 0x00CEAD07
+		// Token: 0x17005720 RID: 22304
+		// (get) Token: 0x0602B890 RID: 178320 RVA: 0x00C3BACF File Offset: 0x00C39CCF
+		// (set) Token: 0x0602B891 RID: 178321 RVA: 0x00C3BAD7 File Offset: 0x00C39CD7
 		public EInstrumentType Type { get; set; }
 	}
 }

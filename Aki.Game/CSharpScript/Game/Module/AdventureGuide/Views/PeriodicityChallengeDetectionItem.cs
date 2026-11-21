@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE1 RID: 24289
+	// Token: 0x02004EC8 RID: 20168
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PeriodicityChallengeDetectionItem : UiPanelBase
 	{
-		// Token: 0x0603DBBF RID: 252863 RVA: 0x00EEAAEC File Offset: 0x00EE8CEC
+		// Token: 0x06032B5A RID: 207706 RVA: 0x00E3C7A0 File Offset: 0x00E3A9A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DBC0 RID: 252864 RVA: 0x00EEAE38 File Offset: 0x00EE9038
+		// Token: 0x06032B5B RID: 207707 RVA: 0x00E3CAEC File Offset: 0x00E3ACEC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PeriodicityChallengeDetectionItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -92,7 +91,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DBC1 RID: 252865 RVA: 0x00EEAE7C File Offset: 0x00EE907C
+		// Token: 0x06032B5C RID: 207708 RVA: 0x00E3CB30 File Offset: 0x00E3AD30
 		protected override void OnStart()
 		{
 			base.GetItem(4).SetUIActive(false);
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ShipTowerLayout = new GenericScrollViewNew<ShipTowerItem, int>(base.GetScrollViewWithScrollbar(13), new Func<ShipTowerItem>(this.OnShipTowerLayoutUpdater), null, false, null);
 		}
 
-		// Token: 0x0603DBC2 RID: 252866 RVA: 0x00EEAEF3 File Offset: 0x00EE90F3
+		// Token: 0x06032B5D RID: 207709 RVA: 0x00E3CBA7 File Offset: 0x00E3ADA7
 		public void RefreshItem(SoundAreaDetectionRecord data)
 		{
 			this.Data = data;
@@ -112,7 +111,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.RefreshSubItem();
 		}
 
-		// Token: 0x0603DBC3 RID: 252867 RVA: 0x00EEAF20 File Offset: 0x00EE9120
+		// Token: 0x06032B5E RID: 207710 RVA: 0x00E3CBD4 File Offset: 0x00E3ADD4
 		private void RefreshTitle()
 		{
 			SoundAreaDetectionRecord data = this.Data;
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0603DBC4 RID: 252868 RVA: 0x00EEB020 File Offset: 0x00EE9220
+		// Token: 0x06032B5F RID: 207711 RVA: 0x00E3CCD4 File Offset: 0x00E3AED4
 		private void RefreshTraceBtn()
 		{
 			bool flag2;
@@ -150,7 +149,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			base.GetItem(6).SetUIActive(!flag3);
 		}
 
-		// Token: 0x0603DBC5 RID: 252869 RVA: 0x00EEB090 File Offset: 0x00EE9290
+		// Token: 0x06032B60 RID: 207712 RVA: 0x00E3CD44 File Offset: 0x00E3AF44
 		private void RefreshSubItem()
 		{
 			bool flag = AdventureGuideModel.Instance.IsTowerType(this.Type);
@@ -170,14 +169,14 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			{
 				int num = AdventureDefine.periodicityChallengeTypeToTarget[this.Type];
 				int[] difficultyAllAreaFirstFloor = TowerModel.Instance.GetDifficultyAllAreaFirstFloor(num, false);
-				this.TowerLayout.RefreshByData(difficultyAllAreaFirstFloor.ToList<int>(), null, false);
+				this.TowerLayout.RefreshByData(difficultyAllAreaFirstFloor, null, false);
 				int maxDifficulty = TowerModel.Instance.GetMaxDifficulty();
 				base.GetItem(4).SetUIActive(maxDifficulty == num);
 				return;
 			}
 			if (flag2)
 			{
-				List<int> list = AdventureGuideModel.Instance.GetShipTowerStateListByType(this.Type).ToList<int>();
+				List<int> list = new List<int>(AdventureGuideModel.Instance.GetShipTowerStateListByType(this.Type));
 				if (this.Type == EPeriodicityChallengeType.ShipTowerNormal)
 				{
 					this.ShipTowerLastItem.SetUiActive(false);
@@ -246,19 +245,19 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBC6 RID: 252870 RVA: 0x00EEB3A3 File Offset: 0x00EE95A3
+		// Token: 0x06032B61 RID: 207713 RVA: 0x00E3D052 File Offset: 0x00E3B252
 		private TowerItem OnTowerLayoutUpdater()
 		{
 			return new TowerItem();
 		}
 
-		// Token: 0x0603DBC7 RID: 252871 RVA: 0x00EEB3AA File Offset: 0x00EE95AA
+		// Token: 0x06032B62 RID: 207714 RVA: 0x00E3D059 File Offset: 0x00E3B259
 		private ShipTowerItem OnShipTowerLayoutUpdater()
 		{
 			return new ShipTowerItem();
 		}
 
-		// Token: 0x0603DBC8 RID: 252872 RVA: 0x00EEB3B4 File Offset: 0x00EE95B4
+		// Token: 0x06032B63 RID: 207715 RVA: 0x00E3D060 File Offset: 0x00E3B260
 		private void OnClickTrackBtn()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -357,7 +356,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBC9 RID: 252873 RVA: 0x00EEB60C File Offset: 0x00EE980C
+		// Token: 0x06032B64 RID: 207716 RVA: 0x00E3D2B8 File Offset: 0x00E3B4B8
 		private void HandleDungeonDetection()
 		{
 			DungeonDetectionRecord soundAreaDetectData = AdventureGuideModel.Instance.GetSoundAreaDetectData(this.Data.Id);
@@ -373,7 +372,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}, this.Data.Id);
 		}
 
-		// Token: 0x0603DBCA RID: 252874 RVA: 0x00EEB69C File Offset: 0x00EE989C
+		// Token: 0x06032B65 RID: 207717 RVA: 0x00E3D348 File Offset: 0x00E3B548
 		private void HandleSilentAreaDetection()
 		{
 			SilentAreaDetectionRecord silentAreaDetectData = AdventureGuideModel.Instance.GetSilentAreaDetectData(this.Data.Id);
@@ -385,7 +384,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			AdventureGuideController.Instance.RequestForDetection(DetectionType.SilentArea, silentAreaDetectData.Conf.LevelPlayList(), this.Data.Id);
 		}
 
-		// Token: 0x0603DBCB RID: 252875 RVA: 0x00EEB70C File Offset: 0x00EE990C
+		// Token: 0x06032B66 RID: 207718 RVA: 0x00E3D3B8 File Offset: 0x00E3B5B8
 		private void OnClickLockBtn()
 		{
 			List<IActivityConditionData> list = new List<IActivityConditionData>();
@@ -414,14 +413,14 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x04020408 RID: 132104
+		// Token: 0x0401AEDA RID: 110298
 		[Nullable(2)]
 		private SoundAreaDetectionRecord Data;
 
-		// Token: 0x04020409 RID: 132105
+		// Token: 0x0401AEDB RID: 110299
 		private EPeriodicityChallengeType Type;
 
-		// Token: 0x0402040A RID: 132106
+		// Token: 0x0401AEDC RID: 110300
 		[Nullable(new byte[]
 		{
 			2,
@@ -429,7 +428,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private GenericLayout<TowerItem, int> TowerLayout;
 
-		// Token: 0x0402040B RID: 132107
+		// Token: 0x0401AEDD RID: 110301
 		[Nullable(new byte[]
 		{
 			2,
@@ -437,11 +436,11 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private GenericScrollViewNew<ShipTowerItem, int> ShipTowerLayout;
 
-		// Token: 0x0402040C RID: 132108
+		// Token: 0x0401AEDE RID: 110302
 		[Nullable(2)]
 		private ShipTowerItem ShipTowerLastItem;
 
-		// Token: 0x0402040D RID: 132109
+		// Token: 0x0401AEDF RID: 110303
 		[Nullable(2)]
 		private WheelTowerInfoPanel WheelTowerInfoPanel;
 	}

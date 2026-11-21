@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002252 RID: 8786
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024BF RID: 9407
 	public class TrapDefenseChangeMiniMap : ActionParams
 	{
-		// Token: 0x0600C0BE RID: 49342 RVA: 0x001BA94C File Offset: 0x001B8B4C
+		// Token: 0x0600CC84 RID: 52356 RVA: 0x001D20D0 File Offset: 0x001D02D0
 		private TrapDefenseChangeMiniMap_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0BF RID: 49343 RVA: 0x001BA984 File Offset: 0x001B8B84
+		// Token: 0x0600CC85 RID: 52357 RVA: 0x001D2108 File Offset: 0x001D0308
 		public static TrapDefenseChangeMiniMap Create([Nullable(2)] TrapDefenseChangeMiniMap instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0C0 RID: 49344 RVA: 0x001BA997 File Offset: 0x001B8B97
+		// Token: 0x0600CC86 RID: 52358 RVA: 0x001D211B File Offset: 0x001D031B
 		public static TrapDefenseChangeMiniMap CreateFromSetValue([Nullable(2)] TrapDefenseChangeMiniMap_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0C1 RID: 49345 RVA: 0x001BA9AA File Offset: 0x001B8BAA
+		// Token: 0x0600CC87 RID: 52359 RVA: 0x001D212E File Offset: 0x001D032E
 		public TrapDefenseChangeMiniMap_SetValue ToSetValue()
 		{
 			return new TrapDefenseChangeMiniMap_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A51 RID: 14929
-		// (get) Token: 0x0600C0C2 RID: 49346 RVA: 0x001BA9BD File Offset: 0x001B8BBD
-		// (set) Token: 0x0600C0C3 RID: 49347 RVA: 0x001BA9E8 File Offset: 0x001B8BE8
+		// Token: 0x17003D48 RID: 15688
+		// (get) Token: 0x0600CC88 RID: 52360 RVA: 0x001D2141 File Offset: 0x001D0341
+		// (set) Token: 0x0600CC89 RID: 52361 RVA: 0x001D216C File Offset: 0x001D036C
 		public virtual int MiniMapId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072E3 RID: 29411
+		// Token: 0x04007930 RID: 31024
 		[Nullable(2)]
 		protected new TrapDefenseChangeMiniMap FbInstance;
 
-		// Token: 0x040072E4 RID: 29412
+		// Token: 0x04007931 RID: 31025
 		[Nullable(2)]
 		protected TrapDefenseChangeMiniMap_SetValue PocoInterface;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001646 RID: 5702
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017B3 RID: 6067
 	public class EnableSplineMoveModel : ActionParams
 	{
-		// Token: 0x06007C7D RID: 31869 RVA: 0x0012B4EC File Offset: 0x001296EC
+		// Token: 0x0600835B RID: 33627 RVA: 0x0013A598 File Offset: 0x00138798
 		private EnableSplineMoveModel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C7E RID: 31870 RVA: 0x0012B524 File Offset: 0x00129724
+		// Token: 0x0600835C RID: 33628 RVA: 0x0013A5D0 File Offset: 0x001387D0
 		public static EnableSplineMoveModel Create([Nullable(2)] EnableSplineMoveModel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C7F RID: 31871 RVA: 0x0012B537 File Offset: 0x00129737
+		// Token: 0x0600835D RID: 33629 RVA: 0x0013A5E3 File Offset: 0x001387E3
 		public static EnableSplineMoveModel CreateFromSetValue([Nullable(2)] EnableSplineMoveModel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C80 RID: 31872 RVA: 0x0012B54A File Offset: 0x0012974A
+		// Token: 0x0600835E RID: 33630 RVA: 0x0013A5F6 File Offset: 0x001387F6
 		public EnableSplineMoveModel_SetValue ToSetValue()
 		{
 			return new EnableSplineMoveModel_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002928 RID: 10536
-		// (get) Token: 0x06007C81 RID: 31873 RVA: 0x0012B55D File Offset: 0x0012975D
-		// (set) Token: 0x06007C82 RID: 31874 RVA: 0x0012B584 File Offset: 0x00129784
+		// Token: 0x17002B13 RID: 11027
+		// (get) Token: 0x0600835F RID: 33631 RVA: 0x0013A609 File Offset: 0x00138809
+		// (set) Token: 0x06008360 RID: 33632 RVA: 0x0013A630 File Offset: 0x00138830
 		public virtual ISplineMoveConfig Config
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C74 RID: 19572
+		// Token: 0x04005068 RID: 20584
 		[Nullable(2)]
 		protected new EnableSplineMoveModel FbInstance;
 
-		// Token: 0x04004C75 RID: 19573
+		// Token: 0x04005069 RID: 20585
 		[Nullable(2)]
 		protected EnableSplineMoveModel_SetValue PocoInterface;
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -13,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004879 RID: 18553
+	// Token: 0x020037F0 RID: 14320
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -22,7 +21,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 	})]
 	public class VillageInfrMissionListItem : GridProxyAbstract<IVillageInfrBuildQuestParam>
 	{
-		// Token: 0x060308BF RID: 198847 RVA: 0x00B4624C File Offset: 0x00B4444C
+		// Token: 0x060253EB RID: 152555 RVA: 0x00A80FE8 File Offset: 0x00A7F1E8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x060308C0 RID: 198848 RVA: 0x00B462CC File Offset: 0x00B444CC
+		// Token: 0x060253EC RID: 152556 RVA: 0x00A81068 File Offset: 0x00A7F268
 		protected override void OnStart()
 		{
 			this.Item.Initialize(base.GetItem(0).GetOwner());
@@ -45,11 +44,11 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.Item.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback callbackParameter)
 			{
 				TItem? titem = callbackParameter.Data as TItem?;
-				ItemController.Instance.OpenItemTipsByItemId(titem.Value.ItemData.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(titem.Value.ItemData.ItemId, true, null, false);
 			});
 		}
 
-		// Token: 0x060308C1 RID: 198849 RVA: 0x00B46344 File Offset: 0x00B44544
+		// Token: 0x060253ED RID: 152557 RVA: 0x00A810E0 File Offset: 0x00A7F2E0
 		public override void Refresh(IVillageInfrBuildQuestParam data, bool isSelected, int gridIndex)
 		{
 			this.Id = data.Id;
@@ -60,18 +59,25 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshBtn();
 		}
 
-		// Token: 0x060308C2 RID: 198850 RVA: 0x00B46378 File Offset: 0x00B44578
+		// Token: 0x060253EE RID: 152558 RVA: 0x00A81114 File Offset: 0x00A7F314
 		private void RefreshName()
 		{
 			AccessPath? accessPathConfig = SkipInterfaceConfig.Instance.GetAccessPathConfig(this.Id);
 			base.GetText(1).ShowTextNew(accessPathConfig.Value.Description);
 		}
 
-		// Token: 0x060308C3 RID: 198851 RVA: 0x00B463B4 File Offset: 0x00B445B4
+		// Token: 0x060253EF RID: 152559 RVA: 0x00A81150 File Offset: 0x00A7F350
 		private void RefreshReward()
 		{
 			InfrV2TreeBuild? infrTreeBuild = VillageInfrConfig.Instance.GetInfrTreeBuild(this.SelectId);
-			int num = infrTreeBuild.Value.Requirement().Keys.First<int>();
+			int num = 0;
+			using (Dictionary<int, int>.KeyCollection.Enumerator enumerator = infrTreeBuild.Value.Requirement().Keys.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					num = enumerator.Current;
+				}
+			}
 			int item = infrTreeBuild.Value.FinishCondition(this.Index);
 			int count = infrTreeBuild.Value.ItemNum(this.Index);
 			TItem titem = new TItem(new InventoryDefine.GetItemData(num, 0), count);
@@ -85,7 +91,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.Item.Apply<PropSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x060308C4 RID: 198852 RVA: 0x00B46480 File Offset: 0x00B44680
+		// Token: 0x060253F0 RID: 152560 RVA: 0x00A81254 File Offset: 0x00A7F454
 		private void RefreshBtn()
 		{
 			int item = VillageInfrConfig.Instance.GetInfrTreeBuild(this.SelectId).Value.FinishCondition(this.Index);
@@ -93,23 +99,23 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetButton(2).RootUIComp.Get().SetUIActive(!flag);
 		}
 
-		// Token: 0x060308C5 RID: 198853 RVA: 0x00B464E4 File Offset: 0x00B446E4
+		// Token: 0x060253F1 RID: 152561 RVA: 0x00A812B8 File Offset: 0x00A7F4B8
 		private void OnClickFunction()
 		{
 			SkipTaskManager.RunByConfigId(VillageInfrConfig.Instance.GetInfrTreeBuild(this.SelectId).Value.GetQuestAccessPathArray()[this.Index], null);
 			EventSystem.Instance.Emit(EEventName.VillageInfrMissionItemClick);
 		}
 
-		// Token: 0x0401A141 RID: 106817
+		// Token: 0x040149B4 RID: 84404
 		private int Id;
 
-		// Token: 0x0401A142 RID: 106818
+		// Token: 0x040149B5 RID: 84405
 		private int Index;
 
-		// Token: 0x0401A143 RID: 106819
+		// Token: 0x040149B6 RID: 84406
 		private int SelectId;
 
-		// Token: 0x0401A144 RID: 106820
+		// Token: 0x040149B7 RID: 84407
 		private readonly SmallItemGrid Item = new SmallItemGrid();
 	}
 }

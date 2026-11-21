@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F25 RID: 7973
+	// Token: 0x0200062D RID: 1581
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVehicle.KuroAnimInstanceVehicle")]
-	[UnrealStructLayout(2672, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2672)]
+	[UnrealStructLayout(2688, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2688)]
 	public class UKuroAnimInstanceVehicle : UKuroAnimInstance, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601E3D4 RID: 123860 RVA: 0x002CF159 File Offset: 0x002CD359
+		// Token: 0x060089D0 RID: 35280 RVA: 0x000CFA8D File Offset: 0x000CDC8D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroAnimInstanceVehicle._ClassPtr;
 		}
 
-		// Token: 0x0601E3D5 RID: 123861 RVA: 0x002CF168 File Offset: 0x002CD368
+		// Token: 0x060089D1 RID: 35281 RVA: 0x000CFA9C File Offset: 0x000CDC9C
 		public UKuroAnimInstanceVehicle() : this(BuiltinUtils.AllocNativeUObject(UKuroAnimInstanceVehicle.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601E3D6 RID: 123862 RVA: 0x002CF190 File Offset: 0x002CD390
+		// Token: 0x060089D2 RID: 35282 RVA: 0x000CFAC4 File Offset: 0x000CDCC4
 		[NullableContext(1)]
 		public UKuroAnimInstanceVehicle(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroAnimInstanceVehicle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700780A RID: 30730
-		// (get) Token: 0x0601E3D7 RID: 123863 RVA: 0x002CF1C3 File Offset: 0x002CD3C3
-		// (set) Token: 0x0601E3D8 RID: 123864 RVA: 0x002CF1D7 File Offset: 0x002CD3D7
+		// Token: 0x170019B2 RID: 6578
+		// (get) Token: 0x060089D3 RID: 35283 RVA: 0x000CFAF7 File Offset: 0x000CDCF7
+		// (set) Token: 0x060089D4 RID: 35284 RVA: 0x000CFB0B File Offset: 0x000CDD0B
 		public unsafe UAbpLogicParams LogicParams
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700780B RID: 30731
-		// (get) Token: 0x0601E3D9 RID: 123865 RVA: 0x002CF1EC File Offset: 0x002CD3EC
-		// (set) Token: 0x0601E3DA RID: 123866 RVA: 0x002CF200 File Offset: 0x002CD400
+		// Token: 0x170019B3 RID: 6579
+		// (get) Token: 0x060089D5 RID: 35285 RVA: 0x000CFB20 File Offset: 0x000CDD20
+		// (set) Token: 0x060089D6 RID: 35286 RVA: 0x000CFB34 File Offset: 0x000CDD34
 		public unsafe AKuroBaseVehicle BaseVehicle
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700780C RID: 30732
-		// (get) Token: 0x0601E3DB RID: 123867 RVA: 0x002CF215 File Offset: 0x002CD415
-		// (set) Token: 0x0601E3DC RID: 123868 RVA: 0x002CF225 File Offset: 0x002CD425
+		// Token: 0x170019B4 RID: 6580
+		// (get) Token: 0x060089D7 RID: 35287 RVA: 0x000CFB49 File Offset: 0x000CDD49
+		// (set) Token: 0x060089D8 RID: 35288 RVA: 0x000CFB59 File Offset: 0x000CDD59
 		public unsafe float DeltaTime
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700780D RID: 30733
-		// (get) Token: 0x0601E3DD RID: 123869 RVA: 0x002CF236 File Offset: 0x002CD436
-		// (set) Token: 0x0601E3DE RID: 123870 RVA: 0x002CF246 File Offset: 0x002CD446
+		// Token: 0x170019B5 RID: 6581
+		// (get) Token: 0x060089D9 RID: 35289 RVA: 0x000CFB6A File Offset: 0x000CDD6A
+		// (set) Token: 0x060089DA RID: 35290 RVA: 0x000CFB7A File Offset: 0x000CDD7A
 		public unsafe int EntityId
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700780E RID: 30734
-		// (get) Token: 0x0601E3DF RID: 123871 RVA: 0x002CF257 File Offset: 0x002CD457
-		// (set) Token: 0x0601E3E0 RID: 123872 RVA: 0x002CF267 File Offset: 0x002CD467
+		// Token: 0x170019B6 RID: 6582
+		// (get) Token: 0x060089DB RID: 35291 RVA: 0x000CFB8B File Offset: 0x000CDD8B
+		// (set) Token: 0x060089DC RID: 35292 RVA: 0x000CFB9B File Offset: 0x000CDD9B
 		public unsafe bool bIsAutonomousProxy
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700780F RID: 30735
-		// (get) Token: 0x0601E3E1 RID: 123873 RVA: 0x002CF278 File Offset: 0x002CD478
-		// (set) Token: 0x0601E3E2 RID: 123874 RVA: 0x002CF28C File Offset: 0x002CD48C
+		// Token: 0x170019B7 RID: 6583
+		// (get) Token: 0x060089DD RID: 35293 RVA: 0x000CFBAC File Offset: 0x000CDDAC
+		// (set) Token: 0x060089DE RID: 35294 RVA: 0x000CFBC0 File Offset: 0x000CDDC0
 		public unsafe FVector Velocity
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007810 RID: 30736
-		// (get) Token: 0x0601E3E3 RID: 123875 RVA: 0x002CF2A1 File Offset: 0x002CD4A1
-		// (set) Token: 0x0601E3E4 RID: 123876 RVA: 0x002CF2B1 File Offset: 0x002CD4B1
+		// Token: 0x170019B8 RID: 6584
+		// (get) Token: 0x060089DF RID: 35295 RVA: 0x000CFBD5 File Offset: 0x000CDDD5
+		// (set) Token: 0x060089E0 RID: 35296 RVA: 0x000CFBE5 File Offset: 0x000CDDE5
 		public unsafe bool bIsMovedLocation
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007811 RID: 30737
-		// (get) Token: 0x0601E3E5 RID: 123877 RVA: 0x002CF2C2 File Offset: 0x002CD4C2
-		// (set) Token: 0x0601E3E6 RID: 123878 RVA: 0x002CF2D6 File Offset: 0x002CD4D6
+		// Token: 0x170019B9 RID: 6585
+		// (get) Token: 0x060089E1 RID: 35297 RVA: 0x000CFBF6 File Offset: 0x000CDDF6
+		// (set) Token: 0x060089E2 RID: 35298 RVA: 0x000CFC0A File Offset: 0x000CDE0A
 		public unsafe FVector Acceleration
 		{
 			get
@@ -150,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007812 RID: 30738
-		// (get) Token: 0x0601E3E7 RID: 123879 RVA: 0x002CF2EB File Offset: 0x002CD4EB
-		// (set) Token: 0x0601E3E8 RID: 123880 RVA: 0x002CF2FF File Offset: 0x002CD4FF
+		// Token: 0x170019BA RID: 6586
+		// (get) Token: 0x060089E3 RID: 35299 RVA: 0x000CFC1F File Offset: 0x000CDE1F
+		// (set) Token: 0x060089E4 RID: 35300 RVA: 0x000CFC33 File Offset: 0x000CDE33
 		public unsafe FVector ActorForward
 		{
 			get
@@ -165,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007813 RID: 30739
-		// (get) Token: 0x0601E3E9 RID: 123881 RVA: 0x002CF314 File Offset: 0x002CD514
-		// (set) Token: 0x0601E3EA RID: 123882 RVA: 0x002CF324 File Offset: 0x002CD524
+		// Token: 0x170019BB RID: 6587
+		// (get) Token: 0x060089E5 RID: 35301 RVA: 0x000CFC48 File Offset: 0x000CDE48
+		// (set) Token: 0x060089E6 RID: 35302 RVA: 0x000CFC58 File Offset: 0x000CDE58
 		public unsafe bool bHasDriver
 		{
 			get
@@ -180,75 +180,75 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E3EB RID: 123883 RVA: 0x002CF335 File Offset: 0x002CD535
+		// Token: 0x060089E7 RID: 35303 RVA: 0x000CFC69 File Offset: 0x000CDE69
 		public void SetDriver(ABaseCharacter InDriver)
 		{
 			UKuroAnimInstanceVehicle.__SetDriver_Internal(base.NativePtr, (InDriver != null) ? InDriver.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601E3EC RID: 123884 RVA: 0x002CF352 File Offset: 0x002CD552
+		// Token: 0x060089E8 RID: 35304 RVA: 0x000CFC86 File Offset: 0x000CDE86
 		public ABaseCharacter GetDriver()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ABaseCharacter>(UKuroAnimInstanceVehicle.__GetDriver_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601E3ED RID: 123885
+		// Token: 0x060089E9 RID: 35305
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDriver_Internal(IntPtr @this, IntPtr InDriver);
 
-		// Token: 0x0601E3EE RID: 123886
+		// Token: 0x060089EA RID: 35306
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDriver_Internal(IntPtr @this);
 
-		// Token: 0x0601E3EF RID: 123887 RVA: 0x002CF364 File Offset: 0x002CD564
+		// Token: 0x060089EB RID: 35307 RVA: 0x000CFC98 File Offset: 0x000CDE98
 		static UKuroAnimInstanceVehicle()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroVehicle.KuroAnimInstanceVehicle");
 		}
 
-		// Token: 0x0601E3F0 RID: 123888 RVA: 0x002CF372 File Offset: 0x002CD572
+		// Token: 0x060089EC RID: 35308 RVA: 0x000CFCA6 File Offset: 0x000CDEA6
 		protected UKuroAnimInstanceVehicle(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010518 RID: 66840
+		// Token: 0x04003BD3 RID: 15315
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroVehicle.KuroAnimInstanceVehicle";
 
-		// Token: 0x04010519 RID: 66841
+		// Token: 0x04003BD4 RID: 15316
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401051A RID: 66842
+		// Token: 0x04003BD5 RID: 15317
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401051B RID: 66843
+		// Token: 0x04003BD6 RID: 15318
 		internal static int __PropertyOffset_LogicParams;
 
-		// Token: 0x0401051C RID: 66844
+		// Token: 0x04003BD7 RID: 15319
 		internal static int __PropertyOffset_BaseVehicle;
 
-		// Token: 0x0401051D RID: 66845
+		// Token: 0x04003BD8 RID: 15320
 		internal static int __PropertyOffset_DeltaTime;
 
-		// Token: 0x0401051E RID: 66846
+		// Token: 0x04003BD9 RID: 15321
 		internal static int __PropertyOffset_EntityId;
 
-		// Token: 0x0401051F RID: 66847
+		// Token: 0x04003BDA RID: 15322
 		internal static int __PropertyOffset_bIsAutonomousProxy;
 
-		// Token: 0x04010520 RID: 66848
+		// Token: 0x04003BDB RID: 15323
 		internal static int __PropertyOffset_Velocity;
 
-		// Token: 0x04010521 RID: 66849
+		// Token: 0x04003BDC RID: 15324
 		internal static int __PropertyOffset_bIsMovedLocation;
 
-		// Token: 0x04010522 RID: 66850
+		// Token: 0x04003BDD RID: 15325
 		internal static int __PropertyOffset_Acceleration;
 
-		// Token: 0x04010523 RID: 66851
+		// Token: 0x04003BDE RID: 15326
 		internal static int __PropertyOffset_ActorForward;
 
-		// Token: 0x04010524 RID: 66852
+		// Token: 0x04003BDF RID: 15327
 		internal static int __PropertyOffset_bHasDriver;
 	}
 }

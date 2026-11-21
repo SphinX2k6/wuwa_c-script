@@ -4,12 +4,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F90 RID: 8080
+// Token: 0x02001452 RID: 5202
 [NullableContext(2)]
 [Nullable(0)]
 public class InfoDisplayAudioPlayerImpl
 {
-	// Token: 0x0600FAC3 RID: 64195 RVA: 0x003CC4AC File Offset: 0x003CA6AC
+	// Token: 0x0600CEE2 RID: 52962 RVA: 0x003D7FE0 File Offset: 0x003D61E0
 	[NullableContext(1)]
 	public InfoDisplayAudioPlayerImpl(AActor rootActor, UUIExtendToggle togglePlay)
 	{
@@ -17,19 +17,19 @@ public class InfoDisplayAudioPlayerImpl
 		this.TogglePlay = togglePlay;
 	}
 
-	// Token: 0x0600FAC4 RID: 64196 RVA: 0x003CC4D4 File Offset: 0x003CA6D4
+	// Token: 0x0600CEE3 RID: 52963 RVA: 0x003D8008 File Offset: 0x003D6208
 	public void Start()
 	{
 		this.InternalPlay();
 	}
 
-	// Token: 0x0600FAC5 RID: 64197 RVA: 0x003CC4DC File Offset: 0x003CA6DC
+	// Token: 0x0600CEE4 RID: 52964 RVA: 0x003D8010 File Offset: 0x003D6210
 	public void Stop()
 	{
 		this.Release();
 	}
 
-	// Token: 0x0600FAC6 RID: 64198 RVA: 0x003CC4E4 File Offset: 0x003CA6E4
+	// Token: 0x0600CEE5 RID: 52965 RVA: 0x003D8018 File Offset: 0x003D6218
 	public void Release()
 	{
 		this.ResetSpectrum();
@@ -40,13 +40,13 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAC7 RID: 64199 RVA: 0x003CC50C File Offset: 0x003CA70C
+	// Token: 0x0600CEE6 RID: 52966 RVA: 0x003D8040 File Offset: 0x003D6240
 	[NullableContext(1)]
 	public void SetSpectrumCallBack(Action<TArray<float>, float> spectrumCall)
 	{
 	}
 
-	// Token: 0x0600FAC8 RID: 64200 RVA: 0x003CC510 File Offset: 0x003CA710
+	// Token: 0x0600CEE7 RID: 52967 RVA: 0x003D8044 File Offset: 0x003D6244
 	[NullableContext(1)]
 	public UniTask SetAudioClipPathAndLoadAudio(string audioPath)
 	{
@@ -59,13 +59,13 @@ public class InfoDisplayAudioPlayerImpl
 		return <SetAudioClipPathAndLoadAudio>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FAC9 RID: 64201 RVA: 0x003CC55B File Offset: 0x003CA75B
+	// Token: 0x0600CEE8 RID: 52968 RVA: 0x003D808F File Offset: 0x003D628F
 	public void OnClickPlayAudioBtn()
 	{
 		this.InternalPlay();
 	}
 
-	// Token: 0x0600FACA RID: 64202 RVA: 0x003CC563 File Offset: 0x003CA763
+	// Token: 0x0600CEE9 RID: 52969 RVA: 0x003D8097 File Offset: 0x003D6297
 	public void OnTick(float deltaTime)
 	{
 		if (!this.IsPlaying())
@@ -75,25 +75,25 @@ public class InfoDisplayAudioPlayerImpl
 		this.RefreshPlayInfo(deltaTime);
 	}
 
-	// Token: 0x0600FACB RID: 64203 RVA: 0x003CC575 File Offset: 0x003CA775
+	// Token: 0x0600CEEA RID: 52970 RVA: 0x003D80A9 File Offset: 0x003D62A9
 	public bool IsPlaying()
 	{
 		return this.PlayState && !this.PauseState;
 	}
 
-	// Token: 0x0600FACC RID: 64204 RVA: 0x003CC58A File Offset: 0x003CA78A
+	// Token: 0x0600CEEB RID: 52971 RVA: 0x003D80BE File Offset: 0x003D62BE
 	public float GetMaxDurationInSecond()
 	{
 		return this.MaxDuration;
 	}
 
-	// Token: 0x0600FACD RID: 64205 RVA: 0x003CC592 File Offset: 0x003CA792
+	// Token: 0x0600CEEC RID: 52972 RVA: 0x003D80C6 File Offset: 0x003D62C6
 	public float GetCurrentRunningTimeInSecond()
 	{
 		return this.CurrentRunningTime / 1000f;
 	}
 
-	// Token: 0x0600FACE RID: 64206 RVA: 0x003CC5A0 File Offset: 0x003CA7A0
+	// Token: 0x0600CEED RID: 52973 RVA: 0x003D80D4 File Offset: 0x003D62D4
 	[NullableContext(0)]
 	private UniTask<bool> LoadAudio()
 	{
@@ -105,7 +105,7 @@ public class InfoDisplayAudioPlayerImpl
 		return <LoadAudio>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FACF RID: 64207 RVA: 0x003CC5E4 File Offset: 0x003CA7E4
+	// Token: 0x0600CEEE RID: 52974 RVA: 0x003D8118 File Offset: 0x003D6318
 	private void InternalPlay()
 	{
 		if (!this.AudioEventLoaded)
@@ -151,7 +151,7 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAD0 RID: 64208 RVA: 0x003CC6A8 File Offset: 0x003CA8A8
+	// Token: 0x0600CEEF RID: 52975 RVA: 0x003D81DC File Offset: 0x003D63DC
 	private void PauseMusic()
 	{
 		this.PauseState = true;
@@ -162,7 +162,7 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAD1 RID: 64209 RVA: 0x003CC6EC File Offset: 0x003CA8EC
+	// Token: 0x0600CEF0 RID: 52976 RVA: 0x003D8220 File Offset: 0x003D6420
 	private void ResumeMusic()
 	{
 		this.PauseState = false;
@@ -173,7 +173,7 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAD2 RID: 64210 RVA: 0x003CC730 File Offset: 0x003CA930
+	// Token: 0x0600CEF1 RID: 52977 RVA: 0x003D8264 File Offset: 0x003D6464
 	private void EndCallBack(EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
 	{
 		if (callbackType == EAkCallbackType.EndOfEvent && this.PlayState)
@@ -198,7 +198,7 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAD3 RID: 64211 RVA: 0x003CC79C File Offset: 0x003CA99C
+	// Token: 0x0600CEF2 RID: 52978 RVA: 0x003D82D0 File Offset: 0x003D64D0
 	[NullableContext(1)]
 	private void PlayAudio(string audioPath)
 	{
@@ -208,7 +208,7 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAD4 RID: 64212 RVA: 0x003CC7E3 File Offset: 0x003CA9E3
+	// Token: 0x0600CEF3 RID: 52979 RVA: 0x003D8317 File Offset: 0x003D6517
 	private void RefreshPlayInfo(float deltaTime)
 	{
 		this.CurrentRunningTime += deltaTime;
@@ -218,7 +218,7 @@ public class InfoDisplayAudioPlayerImpl
 		}
 	}
 
-	// Token: 0x0600FAD5 RID: 64213 RVA: 0x003CC819 File Offset: 0x003CAA19
+	// Token: 0x0600CEF4 RID: 52980 RVA: 0x003D834D File Offset: 0x003D654D
 	private void ResetSpectrum()
 	{
 		if (this.RootActor != null)
@@ -230,46 +230,46 @@ public class InfoDisplayAudioPlayerImpl
 		this.AudioEventLoaded = false;
 	}
 
-	// Token: 0x040074BB RID: 29883
+	// Token: 0x0400759C RID: 30108
 	private const int MS_PER_SECOND = 1000;
 
-	// Token: 0x040074BC RID: 29884
+	// Token: 0x0400759D RID: 30109
 	private readonly UUIExtendToggle TogglePlay;
 
-	// Token: 0x040074BD RID: 29885
+	// Token: 0x0400759E RID: 30110
 	private readonly AActor RootActor;
 
-	// Token: 0x040074BE RID: 29886
+	// Token: 0x0400759F RID: 30111
 	private float CurrentRunningTime;
 
-	// Token: 0x040074BF RID: 29887
+	// Token: 0x040075A0 RID: 30112
 	private readonly int PlayFlag = 1;
 
-	// Token: 0x040074C0 RID: 29888
+	// Token: 0x040075A1 RID: 30113
 	private bool PlayState;
 
-	// Token: 0x040074C1 RID: 29889
+	// Token: 0x040075A2 RID: 30114
 	private float MaxDuration;
 
-	// Token: 0x040074C2 RID: 29890
+	// Token: 0x040075A3 RID: 30115
 	[Nullable(1)]
 	private string AudioClipPath = "";
 
-	// Token: 0x040074C3 RID: 29891
+	// Token: 0x040075A4 RID: 30116
 	private bool PauseState;
 
-	// Token: 0x040074C4 RID: 29892
+	// Token: 0x040075A5 RID: 30117
 	private bool AudioEventLoaded;
 
-	// Token: 0x040074C5 RID: 29893
+	// Token: 0x040075A6 RID: 30118
 	private FOnAkPostEventCallback AudioDelegate;
 
-	// Token: 0x040074C6 RID: 29894
+	// Token: 0x040075A7 RID: 30119
 	public Action OverrideEndCallBack;
 
-	// Token: 0x040074C7 RID: 29895
+	// Token: 0x040075A8 RID: 30120
 	public Action OnPlay;
 
-	// Token: 0x040074C8 RID: 29896
+	// Token: 0x040075A9 RID: 30121
 	public Action OnPause;
 }

@@ -8,28 +8,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B2 RID: 22194
+	// Token: 0x02004688 RID: 18056
 	public class LoginOfficialStatusView : UiViewBase
 	{
-		// Token: 0x06038758 RID: 231256 RVA: 0x00D677DD File Offset: 0x00D659DD
+		// Token: 0x0602D655 RID: 185941 RVA: 0x00CB59A1 File Offset: 0x00CB3BA1
 		[NullableContext(1)]
 		public LoginOfficialStatusView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038759 RID: 231257 RVA: 0x00D677E6 File Offset: 0x00D659E6
+		// Token: 0x0602D656 RID: 185942 RVA: 0x00CB59AA File Offset: 0x00CB3BAA
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.LoginStatusChange, new Action(this.RefreshStatus));
 		}
 
-		// Token: 0x0603875A RID: 231258 RVA: 0x00D67801 File Offset: 0x00D65A01
+		// Token: 0x0602D657 RID: 185943 RVA: 0x00CB59C5 File Offset: 0x00CB3BC5
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.LoginStatusChange, new Action(this.RefreshStatus));
 		}
 
-		// Token: 0x0603875B RID: 231259 RVA: 0x00D6781C File Offset: 0x00D65A1C
+		// Token: 0x0602D658 RID: 185944 RVA: 0x00CB59E0 File Offset: 0x00CB3BE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Login
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603875C RID: 231260 RVA: 0x00D67864 File Offset: 0x00D65A64
+		// Token: 0x0602D659 RID: 185945 RVA: 0x00CB5A28 File Offset: 0x00CB3C28
 		protected override void OnStart()
 		{
 			this.RefreshStatus();
 		}
 
-		// Token: 0x0603875D RID: 231261 RVA: 0x00D6786C File Offset: 0x00D65A6C
+		// Token: 0x0602D65A RID: 185946 RVA: 0x00CB5A30 File Offset: 0x00CB3C30
 		private void RefreshStatus()
 		{
 			int loginStatus = (int)LoginModel.Instance.GetLoginStatus();

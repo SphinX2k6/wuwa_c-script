@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D33 RID: 23859
+	// Token: 0x02004D15 RID: 19733
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FormationHeadIconEnergyBar
 	{
-		// Token: 0x0603C825 RID: 247845 RVA: 0x00E844B0 File Offset: 0x00E826B0
+		// Token: 0x0603177E RID: 202622 RVA: 0x00DD4C50 File Offset: 0x00DD2E50
 		public void InitParentItem(int index, UUIItem parentItem)
 		{
 			if (index >= this.ParentItemList.Length)
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ParentItemList[index] = parentItem;
 		}
 
-		// Token: 0x0603C826 RID: 247846 RVA: 0x00E84500 File Offset: 0x00E82700
+		// Token: 0x0603177F RID: 202623 RVA: 0x00DD4CA0 File Offset: 0x00DD2EA0
 		public void RemoveEntity(int entityId)
 		{
 			HeadIconEnergyBarBase headIconEnergyBarBase;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DisableEntityIdSet.Remove(entityId);
 		}
 
-		// Token: 0x0603C827 RID: 247847 RVA: 0x00E84534 File Offset: 0x00E82734
+		// Token: 0x06031780 RID: 202624 RVA: 0x00DD4CD4 File Offset: 0x00DD2ED4
 		public void InitData(int position, FormationItemData formationItemData, [Nullable(2)] BattleUiRoleData roleData, int parentItemIndex)
 		{
 			int? num;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshVisible(num2.Value, roleData.IsCurEntity, -1);
 		}
 
-		// Token: 0x0603C828 RID: 247848 RVA: 0x00E84670 File Offset: 0x00E82870
+		// Token: 0x06031781 RID: 202625 RVA: 0x00DD4E10 File Offset: 0x00DD3010
 		public void RefreshVisible(int entityId, bool isCurEntity, int parentItemIndex = -1)
 		{
 			if (entityId == 0)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C829 RID: 247849 RVA: 0x00E846C0 File Offset: 0x00E828C0
+		// Token: 0x06031782 RID: 202626 RVA: 0x00DD4E60 File Offset: 0x00DD3060
 		public void Destroy()
 		{
 			foreach (HeadIconEnergyBarBase headIconEnergyBarBase in this.EnergyBarMap.Values)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DisableEntityIdSet.Clear();
 		}
 
-		// Token: 0x0603C82A RID: 247850 RVA: 0x00E8472C File Offset: 0x00E8292C
+		// Token: 0x06031783 RID: 202627 RVA: 0x00DD4ECC File Offset: 0x00DD30CC
 		public void Tick(float delta)
 		{
 			foreach (HeadIconEnergyBarBase headIconEnergyBarBase in this.EnergyBarMap.Values)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C82B RID: 247851 RVA: 0x00E84784 File Offset: 0x00E82984
+		// Token: 0x06031784 RID: 202628 RVA: 0x00DD4F24 File Offset: 0x00DD3124
 		private void LoadByConfig(UUIItem parentItem, BattleUiRoleData roleData, int entityId, HeadIconEnergyBar config)
 		{
 			Func<HeadIconEnergyBarBase> func;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			headIconEnergyBarBase.SetVisible(true, 0);
 		}
 
-		// Token: 0x0603C82D RID: 247853 RVA: 0x00E8480C File Offset: 0x00E82A0C
+		// Token: 0x06031786 RID: 202630 RVA: 0x00DD4FAC File Offset: 0x00DD31AC
 		// Note: this type is marked as 'beforefieldinit'.
 		static FormationHeadIconEnergyBar()
 		{
@@ -157,46 +157,46 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			FormationHeadIconEnergyBar.EnergyBarClassMap = dictionary;
 		}
 
-		// Token: 0x0401F868 RID: 129128
+		// Token: 0x0401A321 RID: 107297
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, Func<HeadIconEnergyBarBase>> EnergyBarClassMap;
 
-		// Token: 0x0401F869 RID: 129129
+		// Token: 0x0401A322 RID: 107298
 		private UUIItem[] ParentItemList = Array.Empty<UUIItem>();
 
-		// Token: 0x0401F86A RID: 129130
+		// Token: 0x0401A323 RID: 107299
 		private readonly Dictionary<int, HeadIconEnergyBarBase> EnergyBarMap = new Dictionary<int, HeadIconEnergyBarBase>();
 
-		// Token: 0x0401F86B RID: 129131
+		// Token: 0x0401A324 RID: 107300
 		private readonly HashSet<int> DisableEntityIdSet = new HashSet<int>();
 
-		// Token: 0x0200BFCC RID: 49100
+		// Token: 0x0200A9D2 RID: 43474
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x04039DCB RID: 237003
+			// Token: 0x0403478D RID: 214925
 			Default,
-			// Token: 0x04039DCC RID: 237004
+			// Token: 0x0403478E RID: 214926
 			RoleForeground
 		}
 
-		// Token: 0x0200BFCD RID: 49101
+		// Token: 0x0200A9D3 RID: 43475
 		[NullableContext(0)]
 		private enum EHeadIconEnergyBarType
 		{
-			// Token: 0x04039DCE RID: 237006
+			// Token: 0x04034790 RID: 214928
 			Common,
-			// Token: 0x04039DCF RID: 237007
+			// Token: 0x04034791 RID: 214929
 			FuLuoLuo,
-			// Token: 0x04039DD0 RID: 237008
+			// Token: 0x04034792 RID: 214930
 			JiaBeiLiNa,
-			// Token: 0x04039DD1 RID: 237009
+			// Token: 0x04034793 RID: 214931
 			Daniya,
-			// Token: 0x04039DD2 RID: 237010
+			// Token: 0x04034794 RID: 214932
 			Xigelika,
-			// Token: 0x04039DD3 RID: 237011
+			// Token: 0x04034795 RID: 214933
 			Ruibeika,
-			// Token: 0x04039DD4 RID: 237012
+			// Token: 0x04034796 RID: 214934
 			Suisui
 		}
 	}

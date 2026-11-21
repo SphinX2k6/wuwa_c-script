@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000728 RID: 1832
+	// Token: 0x0200010E RID: 270
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.FrameNumberRange")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FFrameNumberRange : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060061D6 RID: 25046 RVA: 0x0008C454 File Offset: 0x0008A654
+		// Token: 0x0600113C RID: 4412 RVA: 0x0001B4E1 File Offset: 0x000196E1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FFrameNumberRange._ScriptStructPtr != 0) ? FFrameNumberRange._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.FrameNumberRange", ref FFrameNumberRange._ScriptStructPtr);
 		}
 
-		// Token: 0x1700177F RID: 6015
-		// (get) Token: 0x060061D7 RID: 25047 RVA: 0x0008C478 File Offset: 0x0008A678
-		// (set) Token: 0x060061D8 RID: 25048 RVA: 0x0008C4BB File Offset: 0x0008A6BB
+		// Token: 0x170001B0 RID: 432
+		// (get) Token: 0x0600113D RID: 4413 RVA: 0x0001B508 File Offset: 0x00019708
+		// (set) Token: 0x0600113E RID: 4414 RVA: 0x0001B54B File Offset: 0x0001974B
 		public FFrameNumberRangeBound LowerBound
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001780 RID: 6016
-		// (get) Token: 0x060061D9 RID: 25049 RVA: 0x0008C4DC File Offset: 0x0008A6DC
-		// (set) Token: 0x060061DA RID: 25050 RVA: 0x0008C51F File Offset: 0x0008A71F
+		// Token: 0x170001B1 RID: 433
+		// (get) Token: 0x0600113F RID: 4415 RVA: 0x0001B56C File Offset: 0x0001976C
+		// (set) Token: 0x06001140 RID: 4416 RVA: 0x0001B5AF File Offset: 0x000197AF
 		public FFrameNumberRangeBound UpperBound
 		{
 			get
@@ -61,64 +61,57 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060061DB RID: 25051 RVA: 0x0008C540 File Offset: 0x0008A740
+		// Token: 0x06001141 RID: 4417 RVA: 0x0001B5D0 File Offset: 0x000197D0
 		public FFrameNumberRange()
 		{
 		}
 
-		// Token: 0x060061DC RID: 25052 RVA: 0x0008C548 File Offset: 0x0008A748
-		public FFrameNumberRange(FFrameNumberRangeBound LowerBound, FFrameNumberRangeBound UpperBound)
-		{
-			this.LowerBound = LowerBound;
-			this.UpperBound = UpperBound;
-		}
-
-		// Token: 0x060061DD RID: 25053 RVA: 0x0008C55E File Offset: 0x0008A75E
+		// Token: 0x06001142 RID: 4418 RVA: 0x0001B5D8 File Offset: 0x000197D8
 		protected override IntPtr GetUStructPtr()
 		{
 			return FFrameNumberRange.StaticStruct();
 		}
 
-		// Token: 0x060061DE RID: 25054 RVA: 0x0008C56A File Offset: 0x0008A76A
+		// Token: 0x06001143 RID: 4419 RVA: 0x0001B5E4 File Offset: 0x000197E4
 		[NullableContext(2)]
 		public FFrameNumberRange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060061DF RID: 25055 RVA: 0x0008C574 File Offset: 0x0008A774
+		// Token: 0x06001144 RID: 4420 RVA: 0x0001B5EE File Offset: 0x000197EE
 		public FFrameNumberRange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060061E0 RID: 25056 RVA: 0x0008C57F File Offset: 0x0008A77F
+		// Token: 0x06001145 RID: 4421 RVA: 0x0001B5F9 File Offset: 0x000197F9
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FFrameNumberRange(Pointer, false, true);
 		}
 
-		// Token: 0x060061E1 RID: 25057 RVA: 0x0008C589 File Offset: 0x0008A789
+		// Token: 0x06001146 RID: 4422 RVA: 0x0001B603 File Offset: 0x00019803
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FFrameNumberRange(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04002EB5 RID: 11957
+		// Token: 0x040004EB RID: 1259
 		public const string __ObjectPath = "/Script/CoreUObject.FrameNumberRange";
 
-		// Token: 0x04002EB6 RID: 11958
+		// Token: 0x040004EC RID: 1260
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04002EB7 RID: 11959
+		// Token: 0x040004ED RID: 1261
 		internal static int __PropertyOffset_LowerBound;
 
-		// Token: 0x04002EB8 RID: 11960
+		// Token: 0x040004EE RID: 1262
 		[Nullable(2)]
 		private FFrameNumberRangeBound _LowerBound;
 
-		// Token: 0x04002EB9 RID: 11961
+		// Token: 0x040004EF RID: 1263
 		internal static int __PropertyOffset_UpperBound;
 
-		// Token: 0x04002EBA RID: 11962
+		// Token: 0x040004F0 RID: 1264
 		[Nullable(2)]
 		private FFrameNumberRangeBound _UpperBound;
 	}

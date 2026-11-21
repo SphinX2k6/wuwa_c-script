@@ -13,14 +13,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071C3 RID: 29123
+	// Token: 0x02006278 RID: 25208
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class PathDrivenActorSpawnerComponent : EntityComponent, IComponentDependency, IDynamicDetectableActorSource
+	public class PathDrivenActorSpawnerComponent : EntityComponent, IDynamicDetectableActorSource
 	{
-		// Token: 0x17009DC4 RID: 40388
-		// (get) Token: 0x06047463 RID: 291939 RVA: 0x01220C0D File Offset: 0x0121EE0D
-		public static Type[] Dependencies
+		// Token: 0x17007314 RID: 29460
+		// (get) Token: 0x0603CD5E RID: 249182 RVA: 0x0117AB19 File Offset: 0x01178D19
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047464 RID: 291940 RVA: 0x01220C30 File Offset: 0x0121EE30
+		// Token: 0x0603CD5F RID: 249183 RVA: 0x0117AB3C File Offset: 0x01178D3C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return this.Config != null && this.SpawnRule != null;
 		}
 
-		// Token: 0x06047465 RID: 291941 RVA: 0x01220C80 File Offset: 0x0121EE80
+		// Token: 0x0603CD60 RID: 249184 RVA: 0x0117AB8C File Offset: 0x01178D8C
 		protected unsafe override bool OnStart()
 		{
 			this.StateComp = base.Entity.GetComponent<SceneItemStateComponent>();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return !string.IsNullOrEmpty(this.ActorClassPath);
 		}
 
-		// Token: 0x06047466 RID: 291942 RVA: 0x01220E9C File Offset: 0x0121F09C
+		// Token: 0x0603CD61 RID: 249185 RVA: 0x0117ADA8 File Offset: 0x01178FA8
 		protected override void OnActivate()
 		{
 			EventSystem.Instance.AddWithTargetUseHoldKey<int, bool>(this, base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnStateChange));
@@ -105,13 +105,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047467 RID: 291943 RVA: 0x01220EF2 File Offset: 0x0121F0F2
+		// Token: 0x0603CD62 RID: 249186 RVA: 0x0117ADFE File Offset: 0x01178FFE
 		protected override void OnEnable()
 		{
 			this.TryRegisterPreMoveTick();
 		}
 
-		// Token: 0x06047468 RID: 291944 RVA: 0x01220EFC File Offset: 0x0121F0FC
+		// Token: 0x0603CD63 RID: 249187 RVA: 0x0117AE08 File Offset: 0x01179008
 		private void TrySubscribeHitUnfreeze()
 		{
 			bool flag = base.Entity.GetComponent<SceneItemElementalDetectableComponent>() != null;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047469 RID: 291945 RVA: 0x01220FB4 File Offset: 0x0121F1B4
+		// Token: 0x0603CD64 RID: 249188 RVA: 0x0117AEC0 File Offset: 0x011790C0
 		protected override void OnTick(float delta)
 		{
 			if (this.State != EPathDrivenActorSpawnerState.Running)
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeController.Tick(num);
 		}
 
-		// Token: 0x0604746A RID: 291946 RVA: 0x01220FF7 File Offset: 0x0121F1F7
+		// Token: 0x0603CD65 RID: 249189 RVA: 0x0117AF03 File Offset: 0x01179103
 		protected override void OnDisable(string reason)
 		{
 			this.TryUnregisterPreMoveTick();
 		}
 
-		// Token: 0x0604746B RID: 291947 RVA: 0x01220FFF File Offset: 0x0121F1FF
+		// Token: 0x0603CD66 RID: 249190 RVA: 0x0117AF0B File Offset: 0x0117910B
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x0604746C RID: 291948 RVA: 0x01221028 File Offset: 0x0121F228
+		// Token: 0x0603CD67 RID: 249191 RVA: 0x0117AF34 File Offset: 0x01179134
 		protected override bool OnClear()
 		{
 			this.TryUnregisterPreMoveTick();
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x0604746D RID: 291949 RVA: 0x0122108C File Offset: 0x0121F28C
+		// Token: 0x0603CD68 RID: 249192 RVA: 0x0117AF98 File Offset: 0x01179198
 		private void OnPreMoveTick(float delta)
 		{
 			if (this.State != EPathDrivenActorSpawnerState.Running)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeController.TickMoveComponents(num);
 		}
 
-		// Token: 0x0604746E RID: 291950 RVA: 0x012210CF File Offset: 0x0121F2CF
+		// Token: 0x0603CD69 RID: 249193 RVA: 0x0117AFDB File Offset: 0x011791DB
 		private void OnStateChange(int _1 = 0, bool _2 = false)
 		{
 			SceneItemStateComponent stateComp = this.StateComp;
@@ -218,13 +218,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.RequestStop("[PathDrivenActorSpawnerComponent] StateInactive");
 		}
 
-		// Token: 0x0604746F RID: 291951 RVA: 0x012210F8 File Offset: 0x0121F2F8
+		// Token: 0x0603CD6A RID: 249194 RVA: 0x0117B004 File Offset: 0x01179204
 		private void OnEntityHitAlways(HitInformation hitData)
 		{
 			this.LastEntityHitData = hitData;
 		}
 
-		// Token: 0x06047470 RID: 291952 RVA: 0x01221104 File Offset: 0x0121F304
+		// Token: 0x0603CD6B RID: 249195 RVA: 0x0117B010 File Offset: 0x01179210
 		private void OnEntityHitByHitActorData(BulletHitActorData hitActorData)
 		{
 			HitInformation lastEntityHitData = this.LastEntityHitData;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047471 RID: 291953 RVA: 0x012211A7 File Offset: 0x0121F3A7
+		// Token: 0x0603CD6C RID: 249196 RVA: 0x0117B0B3 File Offset: 0x011792B3
 		private void RequestStart()
 		{
 			this.DesiredRunning = true;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.TryStartRunning();
 		}
 
-		// Token: 0x06047472 RID: 291954 RVA: 0x012211C8 File Offset: 0x0121F3C8
+		// Token: 0x0603CD6D RID: 249197 RVA: 0x0117B0D4 File Offset: 0x011792D4
 		private void TryStartRunning()
 		{
 			if (this.DesiredRunning)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047473 RID: 291955 RVA: 0x0122126C File Offset: 0x0121F46C
+		// Token: 0x0603CD6E RID: 249198 RVA: 0x0117B178 File Offset: 0x01179378
 		private void StartPrepareTracks()
 		{
 			if (this.State == EPathDrivenActorSpawnerState.PreparingTracks || this.SpawnRule == null)
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.PrepareTracksAsync(ownerPbDataId, splineEntityIds, valueOrDefault, valueOrDefault2);
 		}
 
-		// Token: 0x06047474 RID: 291956 RVA: 0x012212E4 File Offset: 0x0121F4E4
+		// Token: 0x0603CD6F RID: 249199 RVA: 0x0117B1F0 File Offset: 0x011793F0
 		private UniTask PrepareTracksAsync(int? ownerPbDataId, IReadOnlyList<int> splineEntityIds, bool allowClosedLoopTrack, bool isFollowSplineDir)
 		{
 			PathDrivenActorSpawnerComponent.<PrepareTracksAsync>d__36 <PrepareTracksAsync>d__;
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return <PrepareTracksAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06047475 RID: 291957 RVA: 0x01221348 File Offset: 0x0121F548
+		// Token: 0x0603CD70 RID: 249200 RVA: 0x0117B254 File Offset: 0x01179454
 		private void RequestStop(string reason)
 		{
 			if (!this.DesiredRunning && this.State == EPathDrivenActorSpawnerState.Idle && this.TrackRuntimeSet == null && this.RuntimeController == null)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.StopAndClear(reason);
 		}
 
-		// Token: 0x06047476 RID: 291958 RVA: 0x01221372 File Offset: 0x0121F572
+		// Token: 0x0603CD71 RID: 249201 RVA: 0x0117B27E File Offset: 0x0117947E
 		private void StopAndClear(string reason)
 		{
 			this.DesiredRunning = false;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.ReleaseTrackSet();
 		}
 
-		// Token: 0x06047477 RID: 291959 RVA: 0x012213AC File Offset: 0x0121F5AC
+		// Token: 0x0603CD72 RID: 249202 RVA: 0x0117B2B8 File Offset: 0x011794B8
 		private void EnterState(EPathDrivenActorSpawnerState state)
 		{
 			this.State = state;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.TryDisableOwnerConstantTick();
 		}
 
-		// Token: 0x06047478 RID: 291960 RVA: 0x012213C6 File Offset: 0x0121F5C6
+		// Token: 0x0603CD73 RID: 249203 RVA: 0x0117B2D2 File Offset: 0x011794D2
 		private void ReleaseTrackSet()
 		{
 			PathDrivenTrackRuntimeSet trackRuntimeSet = this.TrackRuntimeSet;
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.TrackRuntimeSet = null;
 		}
 
-		// Token: 0x06047479 RID: 291961 RVA: 0x012213E0 File Offset: 0x0121F5E0
+		// Token: 0x0603CD74 RID: 249204 RVA: 0x0117B2EC File Offset: 0x011794EC
 		private void TryCreateRuntimeController()
 		{
 			if (this.RuntimeController == null)
@@ -407,28 +407,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604747A RID: 291962 RVA: 0x0122146A File Offset: 0x0121F66A
+		// Token: 0x0603CD75 RID: 249205 RVA: 0x0117B376 File Offset: 0x01179576
 		public bool IsRunning()
 		{
 			PathDrivenActorRuntimeController runtimeController = this.RuntimeController;
 			return runtimeController != null && runtimeController.IsRunning;
 		}
 
-		// Token: 0x0604747B RID: 291963 RVA: 0x0122147D File Offset: 0x0121F67D
+		// Token: 0x0603CD76 RID: 249206 RVA: 0x0117B389 File Offset: 0x01179589
 		public bool IsBatchSpawned()
 		{
 			PathDrivenActorRuntimeController runtimeController = this.RuntimeController;
 			return runtimeController != null && runtimeController.IsBatchSpawned;
 		}
 
-		// Token: 0x0604747C RID: 291964 RVA: 0x01221490 File Offset: 0x0121F690
+		// Token: 0x0603CD77 RID: 249207 RVA: 0x0117B39C File Offset: 0x0117959C
 		public List<AActor> GetDetectableActors()
 		{
 			PathDrivenActorRuntimeController runtimeController = this.RuntimeController;
 			return ((runtimeController != null) ? runtimeController.GetActiveActors() : null) ?? new List<AActor>();
 		}
 
-		// Token: 0x0604747D RID: 291965 RVA: 0x012214B0 File Offset: 0x0121F6B0
+		// Token: 0x0603CD78 RID: 249208 RVA: 0x0117B3BC File Offset: 0x011795BC
 		public void OnActorsEnterField(IReadOnlyList<AActor> actors)
 		{
 			foreach (AActor actor in actors)
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604747E RID: 291966 RVA: 0x01221508 File Offset: 0x0121F708
+		// Token: 0x0603CD79 RID: 249209 RVA: 0x0117B414 File Offset: 0x01179614
 		public void OnActorsLeaveField(IReadOnlyList<AActor> actors)
 		{
 			foreach (AActor actor in actors)
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604747F RID: 291967 RVA: 0x01221560 File Offset: 0x0121F760
+		// Token: 0x0603CD7A RID: 249210 RVA: 0x0117B46C File Offset: 0x0117966C
 		private void TryEnableOwnerConstantTick()
 		{
 			if (this.IsOwnerConstantTickEnabled || !this.IsExplosiveBarrelClass)
@@ -471,7 +471,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.IsOwnerConstantTickEnabled = true;
 		}
 
-		// Token: 0x06047480 RID: 291968 RVA: 0x012215B4 File Offset: 0x0121F7B4
+		// Token: 0x0603CD7B RID: 249211 RVA: 0x0117B4C0 File Offset: 0x011796C0
 		private void TryDisableOwnerConstantTick()
 		{
 			if (!this.IsOwnerConstantTickEnabled)
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.IsOwnerConstantTickEnabled = false;
 		}
 
-		// Token: 0x06047481 RID: 291969 RVA: 0x012215FD File Offset: 0x0121F7FD
+		// Token: 0x0603CD7C RID: 249212 RVA: 0x0117B509 File Offset: 0x01179709
 		private void TryRegisterPreMoveTick()
 		{
 			if (this.IsPreMoveTickRegistered)
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.IsPreMoveTickRegistered = true;
 		}
 
-		// Token: 0x06047482 RID: 291970 RVA: 0x01221637 File Offset: 0x0121F837
+		// Token: 0x0603CD7D RID: 249213 RVA: 0x0117B543 File Offset: 0x01179743
 		private void TryUnregisterPreMoveTick()
 		{
 			if (!this.IsPreMoveTickRegistered)
@@ -513,13 +513,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.IsPreMoveTickRegistered = false;
 		}
 
-		// Token: 0x06047483 RID: 291971 RVA: 0x01221654 File Offset: 0x0121F854
+		// Token: 0x0603CD7E RID: 249214 RVA: 0x0117B560 File Offset: 0x01179760
 		private bool ShouldUsePreMoveTick()
 		{
 			return this.IsWaterBoxTransportClass;
 		}
 
-		// Token: 0x06047484 RID: 291972 RVA: 0x0122165C File Offset: 0x0121F85C
+		// Token: 0x0603CD7F RID: 249215 RVA: 0x0117B568 File Offset: 0x01179768
 		[NullableContext(2)]
 		private string NormalizeActorClassPath(string actorBlueprintPath)
 		{
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return text;
 		}
 
-		// Token: 0x06047485 RID: 291973 RVA: 0x012216C4 File Offset: 0x0121F8C4
+		// Token: 0x0603CD80 RID: 249216 RVA: 0x0117B5D0 File Offset: 0x011797D0
 		private unsafe void TryLoadActorClassAsync()
 		{
 			PathDrivenActorSpawnerComponent.<>c__DisplayClass53_0 CS$<>8__locals1 = new PathDrivenActorSpawnerComponent.<>c__DisplayClass53_0();
@@ -640,7 +640,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.ActorClassLoadHandle = num2;
 		}
 
-		// Token: 0x06047486 RID: 291974 RVA: 0x012217D2 File Offset: 0x0121F9D2
+		// Token: 0x0603CD81 RID: 249217 RVA: 0x0117B6DE File Offset: 0x011798DE
 		private void CancelActorClassLoad()
 		{
 			if (this.ActorClassLoadHandle != -1)
@@ -652,7 +652,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.DesiredRunning = false;
 		}
 
-		// Token: 0x06047487 RID: 291975 RVA: 0x0122180C File Offset: 0x0121FA0C
+		// Token: 0x0603CD82 RID: 249218 RVA: 0x0117B718 File Offset: 0x01179918
 		private int? GetOwnerPbDataId()
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return new int?(component.GetPbDataId());
 		}
 
-		// Token: 0x06047488 RID: 291976 RVA: 0x0122183C File Offset: 0x0121FA3C
+		// Token: 0x0603CD83 RID: 249219 RVA: 0x0117B748 File Offset: 0x01179948
 		private bool HasStagnationHandleConfig()
 		{
 			IIntervalSplineSpawn spawnRule = this.SpawnRule;
@@ -685,7 +685,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return false;
 		}
 
-		// Token: 0x06047489 RID: 291977 RVA: 0x012218C4 File Offset: 0x0121FAC4
+		// Token: 0x0603CD84 RID: 249220 RVA: 0x0117B7D0 File Offset: 0x011799D0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -693,189 +693,208 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 				return false;
 			}
 			PathDrivenActorSpawnerComponent pathDrivenActorSpawnerComponent = (PathDrivenActorSpawnerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("StateComp"))
+			if (pathDrivenActorSpawnerComponent.StateComp == null)
 			{
-				if (pathDrivenActorSpawnerComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (pathDrivenActorSpawnerComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PathDrivenActorSpawnerComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SpawnRule"))
-			{
-				if (pathDrivenActorSpawnerComponent.SpawnRule == null)
-				{
-					this.SpawnRule = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IIntervalSplineSpawn>(this.SpawnRule), "SpawnRule"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorClassPath"))
-			{
-				this.ActorClassPath = pathDrivenActorSpawnerComponent.ActorClassPath;
-			}
-			if (base.CanResetComponentProperty("ActorClass"))
-			{
-				if (pathDrivenActorSpawnerComponent.ActorClass == null)
-				{
-					this.ActorClass = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UClass>(this.ActorClass), "ActorClass"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsWaterBoxTransportClass"))
-			{
-				this.IsWaterBoxTransportClass = pathDrivenActorSpawnerComponent.IsWaterBoxTransportClass;
-			}
-			if (base.CanResetComponentProperty("IsExplosiveBarrelClass"))
-			{
-				this.IsExplosiveBarrelClass = pathDrivenActorSpawnerComponent.IsExplosiveBarrelClass;
-			}
-			if (base.CanResetComponentProperty("IsChainMode"))
-			{
-				this.IsChainMode = pathDrivenActorSpawnerComponent.IsChainMode;
-			}
-			if (base.CanResetComponentProperty("ActorClassLoadHandle"))
-			{
-				this.ActorClassLoadHandle = pathDrivenActorSpawnerComponent.ActorClassLoadHandle;
-			}
-			if (base.CanResetComponentProperty("ActorClassLoadToken"))
-			{
-				this.ActorClassLoadToken = pathDrivenActorSpawnerComponent.ActorClassLoadToken;
-			}
-			if (base.CanResetComponentProperty("DesiredRunning"))
-			{
-				this.DesiredRunning = pathDrivenActorSpawnerComponent.DesiredRunning;
-			}
-			if (base.CanResetComponentProperty("State"))
-			{
-				this.State = pathDrivenActorSpawnerComponent.State;
-			}
-			if (base.CanResetComponentProperty("IsOwnerConstantTickEnabled"))
-			{
-				this.IsOwnerConstantTickEnabled = pathDrivenActorSpawnerComponent.IsOwnerConstantTickEnabled;
-			}
-			if (base.CanResetComponentProperty("IsPreMoveTickRegistered"))
-			{
-				this.IsPreMoveTickRegistered = pathDrivenActorSpawnerComponent.IsPreMoveTickRegistered;
-			}
-			if (base.CanResetComponentProperty("TrackRuntimeSet"))
-			{
-				if (pathDrivenActorSpawnerComponent.TrackRuntimeSet == null)
-				{
-					this.TrackRuntimeSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PathDrivenTrackRuntimeSet>(this.TrackRuntimeSet), "TrackRuntimeSet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TrackRuntimeBuilder") && pathDrivenActorSpawnerComponent.TrackRuntimeBuilder != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PathDrivenTrackRuntimeBuilder>(this.TrackRuntimeBuilder), "TrackRuntimeBuilder"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RuntimeController"))
+			if (pathDrivenActorSpawnerComponent.Config == null)
 			{
-				if (pathDrivenActorSpawnerComponent.RuntimeController == null)
-				{
-					this.RuntimeController = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PathDrivenActorRuntimeController>(this.RuntimeController), "RuntimeController"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("LastEntityHitData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (pathDrivenActorSpawnerComponent.LastEntityHitData == null)
-				{
-					this.LastEntityHitData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HitInformation>(this.LastEntityHitData), "LastEntityHitData"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (pathDrivenActorSpawnerComponent.SpawnRule == null)
+			{
+				this.SpawnRule = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpawnRule), "SpawnRule"))
+			{
+				return false;
+			}
+			this.ActorClassPath = pathDrivenActorSpawnerComponent.ActorClassPath;
+			if (pathDrivenActorSpawnerComponent.ActorClass == null)
+			{
+				this.ActorClass = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorClass), "ActorClass"))
+			{
+				return false;
+			}
+			this.IsWaterBoxTransportClass = pathDrivenActorSpawnerComponent.IsWaterBoxTransportClass;
+			this.IsExplosiveBarrelClass = pathDrivenActorSpawnerComponent.IsExplosiveBarrelClass;
+			this.IsChainMode = pathDrivenActorSpawnerComponent.IsChainMode;
+			this.ActorClassLoadHandle = pathDrivenActorSpawnerComponent.ActorClassLoadHandle;
+			this.ActorClassLoadToken = pathDrivenActorSpawnerComponent.ActorClassLoadToken;
+			this.DesiredRunning = pathDrivenActorSpawnerComponent.DesiredRunning;
+			this.State = pathDrivenActorSpawnerComponent.State;
+			this.IsOwnerConstantTickEnabled = pathDrivenActorSpawnerComponent.IsOwnerConstantTickEnabled;
+			this.IsPreMoveTickRegistered = pathDrivenActorSpawnerComponent.IsPreMoveTickRegistered;
+			if (pathDrivenActorSpawnerComponent.TrackRuntimeSet == null)
+			{
+				this.TrackRuntimeSet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrackRuntimeSet), "TrackRuntimeSet"))
+			{
+				return false;
+			}
+			if (pathDrivenActorSpawnerComponent.TrackRuntimeBuilder != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrackRuntimeBuilder), "TrackRuntimeBuilder"))
+			{
+				return false;
+			}
+			if (pathDrivenActorSpawnerComponent.RuntimeController == null)
+			{
+				this.RuntimeController = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RuntimeController), "RuntimeController"))
+			{
+				return false;
+			}
+			if (pathDrivenActorSpawnerComponent.LastEntityHitData == null)
+			{
+				this.LastEntityHitData = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastEntityHitData), "LastEntityHitData"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040257C1 RID: 153537
+		// Token: 0x17007315 RID: 29461
+		// (get) Token: 0x0603CD85 RID: 249221 RVA: 0x0117B9B7 File Offset: 0x01179BB7
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007316 RID: 29462
+		// (get) Token: 0x0603CD86 RID: 249222 RVA: 0x0117B9BA File Offset: 0x01179BBA
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007317 RID: 29463
+		// (get) Token: 0x0603CD87 RID: 249223 RVA: 0x0117B9BD File Offset: 0x01179BBD
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007318 RID: 29464
+		// (get) Token: 0x0603CD88 RID: 249224 RVA: 0x0117B9C0 File Offset: 0x01179BC0
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007319 RID: 29465
+		// (get) Token: 0x0603CD89 RID: 249225 RVA: 0x0117B9C3 File Offset: 0x01179BC3
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700731A RID: 29466
+		// (get) Token: 0x0603CD8A RID: 249226 RVA: 0x0117B9C6 File Offset: 0x01179BC6
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700731B RID: 29467
+		// (get) Token: 0x0603CD8B RID: 249227 RVA: 0x0117B9C9 File Offset: 0x01179BC9
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020430 RID: 132144
 		[Nullable(2)]
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x040257C2 RID: 153538
+		// Token: 0x04020431 RID: 132145
 		[Nullable(2)]
 		private PathDrivenActorSpawnerComponent Config;
 
-		// Token: 0x040257C3 RID: 153539
+		// Token: 0x04020432 RID: 132146
 		[Nullable(2)]
 		private IIntervalSplineSpawn SpawnRule;
 
-		// Token: 0x040257C4 RID: 153540
+		// Token: 0x04020433 RID: 132147
 		[Nullable(2)]
 		private string ActorClassPath;
 
-		// Token: 0x040257C5 RID: 153541
+		// Token: 0x04020434 RID: 132148
 		[Nullable(2)]
 		private UClass ActorClass;
 
-		// Token: 0x040257C6 RID: 153542
+		// Token: 0x04020435 RID: 132149
 		private bool IsWaterBoxTransportClass;
 
-		// Token: 0x040257C7 RID: 153543
+		// Token: 0x04020436 RID: 132150
 		private bool IsExplosiveBarrelClass;
 
-		// Token: 0x040257C8 RID: 153544
+		// Token: 0x04020437 RID: 132151
 		private bool IsChainMode;
 
-		// Token: 0x040257C9 RID: 153545
+		// Token: 0x04020438 RID: 132152
 		private int ActorClassLoadHandle = -1;
 
-		// Token: 0x040257CA RID: 153546
+		// Token: 0x04020439 RID: 132153
 		private int ActorClassLoadToken;
 
-		// Token: 0x040257CB RID: 153547
+		// Token: 0x0402043A RID: 132154
 		private bool DesiredRunning;
 
-		// Token: 0x040257CC RID: 153548
+		// Token: 0x0402043B RID: 132155
 		private EPathDrivenActorSpawnerState State;
 
-		// Token: 0x040257CD RID: 153549
+		// Token: 0x0402043C RID: 132156
 		private bool IsOwnerConstantTickEnabled;
 
-		// Token: 0x040257CE RID: 153550
+		// Token: 0x0402043D RID: 132157
 		private bool IsPreMoveTickRegistered;
 
-		// Token: 0x040257CF RID: 153551
+		// Token: 0x0402043E RID: 132158
 		[Nullable(2)]
 		private PathDrivenTrackRuntimeSet TrackRuntimeSet;
 
-		// Token: 0x040257D0 RID: 153552
+		// Token: 0x0402043F RID: 132159
 		private readonly PathDrivenTrackRuntimeBuilder TrackRuntimeBuilder = new PathDrivenTrackRuntimeBuilder();
 
-		// Token: 0x040257D1 RID: 153553
+		// Token: 0x04020440 RID: 132160
 		[Nullable(2)]
 		private PathDrivenActorRuntimeController RuntimeController;
 
-		// Token: 0x040257D2 RID: 153554
+		// Token: 0x04020441 RID: 132161
 		[Nullable(2)]
 		private HitInformation LastEntityHitData;
 	}

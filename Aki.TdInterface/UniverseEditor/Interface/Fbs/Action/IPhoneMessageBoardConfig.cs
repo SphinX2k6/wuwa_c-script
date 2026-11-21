@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CA2 RID: 27810
+	// Token: 0x02007418 RID: 29720
 	public struct IPhoneMessageBoardConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CF13 RID: 53011
-		// (get) Token: 0x0603101D RID: 200733 RVA: 0x006A7072 File Offset: 0x006A5272
+		// Token: 0x1700DA50 RID: 55888
+		// (get) Token: 0x06033FF4 RID: 212980 RVA: 0x007022A6 File Offset: 0x007004A6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603101E RID: 200734 RVA: 0x006A707F File Offset: 0x006A527F
+		// Token: 0x06033FF5 RID: 212981 RVA: 0x007022B3 File Offset: 0x007004B3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603101F RID: 200735 RVA: 0x006A7088 File Offset: 0x006A5288
+		// Token: 0x06033FF6 RID: 212982 RVA: 0x007022BC File Offset: 0x007004BC
 		public static IPhoneMessageBoardConfig GetRootAsIPhoneMessageBoardConfig(ByteBuffer _bb)
 		{
 			return IPhoneMessageBoardConfig.GetRootAsIPhoneMessageBoardConfig(_bb, default(IPhoneMessageBoardConfig));
 		}
 
-		// Token: 0x06031020 RID: 200736 RVA: 0x006A70A4 File Offset: 0x006A52A4
+		// Token: 0x06033FF7 RID: 212983 RVA: 0x007022D8 File Offset: 0x007004D8
 		public static IPhoneMessageBoardConfig GetRootAsIPhoneMessageBoardConfig(ByteBuffer _bb, IPhoneMessageBoardConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031021 RID: 200737 RVA: 0x006A70C1 File Offset: 0x006A52C1
+		// Token: 0x06033FF8 RID: 212984 RVA: 0x007022F5 File Offset: 0x007004F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031022 RID: 200738 RVA: 0x006A70D0 File Offset: 0x006A52D0
+		// Token: 0x06033FF9 RID: 212985 RVA: 0x00702304 File Offset: 0x00700504
 		public IPhoneMessageBoardConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF14 RID: 53012
-		// (get) Token: 0x06031023 RID: 200739 RVA: 0x006A70E0 File Offset: 0x006A52E0
+		// Token: 0x1700DA51 RID: 55889
+		// (get) Token: 0x06033FFA RID: 212986 RVA: 0x00702314 File Offset: 0x00700514
 		public int PhoneMessageId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF15 RID: 53013
-		// (get) Token: 0x06031024 RID: 200740 RVA: 0x006A711C File Offset: 0x006A531C
+		// Token: 0x1700DA52 RID: 55890
+		// (get) Token: 0x06033FFB RID: 212987 RVA: 0x00702350 File Offset: 0x00700550
 		public byte NullMask
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031025 RID: 200741 RVA: 0x006A7158 File Offset: 0x006A5358
+		// Token: 0x06033FFC RID: 212988 RVA: 0x0070238C File Offset: 0x0070058C
 		public static Offset<IPhoneMessageBoardConfig> CreateIPhoneMessageBoardConfig(FlatBufferBuilder builder, int PhoneMessageId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhoneMessageBoardConfig.EndIPhoneMessageBoardConfig(builder);
 		}
 
-		// Token: 0x06031026 RID: 200742 RVA: 0x006A7175 File Offset: 0x006A5375
+		// Token: 0x06033FFD RID: 212989 RVA: 0x007023A9 File Offset: 0x007005A9
 		public static void StartIPhoneMessageBoardConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031027 RID: 200743 RVA: 0x006A717E File Offset: 0x006A537E
+		// Token: 0x06033FFE RID: 212990 RVA: 0x007023B2 File Offset: 0x007005B2
 		public static void AddPhoneMessageId(FlatBufferBuilder builder, int phoneMessageId)
 		{
 			builder.AddInt(0, phoneMessageId, 0);
 		}
 
-		// Token: 0x06031028 RID: 200744 RVA: 0x006A7189 File Offset: 0x006A5389
+		// Token: 0x06033FFF RID: 212991 RVA: 0x007023BD File Offset: 0x007005BD
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x06031029 RID: 200745 RVA: 0x006A7194 File Offset: 0x006A5394
+		// Token: 0x06034000 RID: 212992 RVA: 0x007023C8 File Offset: 0x007005C8
 		public static Offset<IPhoneMessageBoardConfig> EndIPhoneMessageBoardConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhoneMessageBoardConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603102A RID: 200746 RVA: 0x006A71A4 File Offset: 0x006A53A4
+		// Token: 0x06034001 RID: 212993 RVA: 0x007023D8 File Offset: 0x007005D8
 		public IPhoneMessageBoardConfigT UnPack()
 		{
 			IPhoneMessageBoardConfigT phoneMessageBoardConfigT = new IPhoneMessageBoardConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return phoneMessageBoardConfigT;
 		}
 
-		// Token: 0x0603102B RID: 200747 RVA: 0x006A71BF File Offset: 0x006A53BF
+		// Token: 0x06034002 RID: 212994 RVA: 0x007023F3 File Offset: 0x007005F3
 		public void UnPackTo(IPhoneMessageBoardConfigT _o)
 		{
 			_o.PhoneMessageId = this.PhoneMessageId;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603102C RID: 200748 RVA: 0x006A71DC File Offset: 0x006A53DC
+		// Token: 0x06034003 RID: 212995 RVA: 0x00702410 File Offset: 0x00700610
 		public static Offset<IPhoneMessageBoardConfig> Pack(FlatBufferBuilder builder, IPhoneMessageBoardConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhoneMessageBoardConfig.CreateIPhoneMessageBoardConfig(builder, _o.PhoneMessageId, _o.NullMask);
 		}
 
-		// Token: 0x040115FB RID: 71163
+		// Token: 0x0401256B RID: 75115
 		private Table __p;
 	}
 }

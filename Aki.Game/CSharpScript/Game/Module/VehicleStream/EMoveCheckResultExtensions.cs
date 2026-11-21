@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048B4 RID: 18612
+	// Token: 0x0200382B RID: 14379
 	public static class EMoveCheckResultExtensions
 	{
-		// Token: 0x06030A51 RID: 199249 RVA: 0x00B4AE0C File Offset: 0x00B4900C
+		// Token: 0x0602557D RID: 152957 RVA: 0x00A85C14 File Offset: 0x00A83E14
 		public static string ToEnumString(this EMoveCheckResult value)
 		{
 			string result;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A52 RID: 199250 RVA: 0x00B4AEA8 File Offset: 0x00B490A8
+		// Token: 0x0602557E RID: 152958 RVA: 0x00A85CB0 File Offset: 0x00A83EB0
 		public static EMoveCheckResult FromString(string name)
 		{
 			EMoveCheckResult result;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A53 RID: 199251 RVA: 0x00B4AED4 File Offset: 0x00B490D4
+		// Token: 0x0602557F RID: 152959 RVA: 0x00A85CDC File Offset: 0x00A83EDC
 		public static bool TryFromString(string name, out EMoveCheckResult value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return false;
 		}
 
-		// Token: 0x06030A54 RID: 199252 RVA: 0x00B4B03C File Offset: 0x00B4923C
+		// Token: 0x06025580 RID: 152960 RVA: 0x00A85E44 File Offset: 0x00A84044
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			};
 		}
 
-		// Token: 0x06030A55 RID: 199253 RVA: 0x00B4B0A1 File Offset: 0x00B492A1
+		// Token: 0x06025581 RID: 152961 RVA: 0x00A85EA9 File Offset: 0x00A840A9
 		public static EMoveCheckResult[] GetValues()
 		{
 			return new EMoveCheckResult[]
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			};
 		}
 
-		// Token: 0x06030A56 RID: 199254 RVA: 0x00B4B0B8 File Offset: 0x00B492B8
+		// Token: 0x06025582 RID: 152962 RVA: 0x00A85EC0 File Offset: 0x00A840C0
 		public static string[] GetNames()
 		{
 			return new string[]

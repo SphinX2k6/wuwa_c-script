@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B62 RID: 15202
+	// Token: 0x02003F6A RID: 16234
 	public enum TVarValidateConfig : byte
 	{
-		// Token: 0x0400B080 RID: 45184
+		// Token: 0x0400B9FD RID: 47613
 		NONE,
-		// Token: 0x0400B081 RID: 45185
+		// Token: 0x0400B9FE RID: 47614
 		IVarBooleanValidateConfig,
-		// Token: 0x0400B082 RID: 45186
+		// Token: 0x0400B9FF RID: 47615
 		IVarEntityValidateConfig,
-		// Token: 0x0400B083 RID: 45187
+		// Token: 0x0400BA00 RID: 47616
 		IVarFloatValidateConfig,
-		// Token: 0x0400B084 RID: 45188
+		// Token: 0x0400BA01 RID: 47617
 		IVarIntValidateConfig,
-		// Token: 0x0400B085 RID: 45189
+		// Token: 0x0400BA02 RID: 47618
 		IVarPrefabValidateConfig,
-		// Token: 0x0400B086 RID: 45190
+		// Token: 0x0400BA03 RID: 47619
 		IVarQuestStateValidateConfig,
-		// Token: 0x0400B087 RID: 45191
+		// Token: 0x0400BA04 RID: 47620
 		IVarQuestValidateConfig,
-		// Token: 0x0400B088 RID: 45192
+		// Token: 0x0400BA05 RID: 47621
 		IVarStringValidateConfig,
-		// Token: 0x0400B089 RID: 45193
+		// Token: 0x0400BA06 RID: 47622
 		IVarTransformValidateConfig
 	}
 }

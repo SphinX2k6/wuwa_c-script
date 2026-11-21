@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200588C RID: 22668
+	// Token: 0x02004864 RID: 18532
 	public class PowerRewardButtonItem : UiPanelBase
 	{
-		// Token: 0x06039AFB RID: 236283 RVA: 0x00DB5B78 File Offset: 0x00DB3D78
+		// Token: 0x0602EA1E RID: 191006 RVA: 0x00D04A90 File Offset: 0x00D02C90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039AFC RID: 236284 RVA: 0x00DB5C81 File Offset: 0x00DB3E81
+		// Token: 0x0602EA1F RID: 191007 RVA: 0x00D04B99 File Offset: 0x00D02D99
 		private void OnRewardButtonClick()
 		{
 			IPowerRewardButtonItemData data = this.Data;
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			data.RewardCallBack();
 		}
 
-		// Token: 0x06039AFD RID: 236285 RVA: 0x00DB5C98 File Offset: 0x00DB3E98
+		// Token: 0x0602EA20 RID: 191008 RVA: 0x00D04BB0 File Offset: 0x00D02DB0
 		protected override void OnStart()
 		{
 			base.SetItemIcon(base.GetTexture(3), 5, null, null);
 		}
 
-		// Token: 0x06039AFE RID: 236286 RVA: 0x00DB5CBD File Offset: 0x00DB3EBD
+		// Token: 0x0602EA21 RID: 191009 RVA: 0x00D04BD5 File Offset: 0x00D02DD5
 		[NullableContext(1)]
 		public void Update(IPowerRewardButtonItemData data)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.Refresh();
 		}
 
-		// Token: 0x06039AFF RID: 236287 RVA: 0x00DB5CCC File Offset: 0x00DB3ECC
+		// Token: 0x0602EA22 RID: 191010 RVA: 0x00D04BE4 File Offset: 0x00D02DE4
 		public void Refresh()
 		{
 			if (this.Data == null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.RefreshPowerState();
 		}
 
-		// Token: 0x06039B00 RID: 236288 RVA: 0x00DB5D40 File Offset: 0x00DB3F40
+		// Token: 0x0602EA23 RID: 191011 RVA: 0x00D04C58 File Offset: 0x00D02E58
 		public void RefreshPowerState()
 		{
 			if (this.Data == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x06039B01 RID: 236289 RVA: 0x00DB5D93 File Offset: 0x00DB3F93
+		// Token: 0x0602EA24 RID: 191012 RVA: 0x00D04CAB File Offset: 0x00D02EAB
 		public void SetIsEnable(bool isEnable)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -106,22 +106,22 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			button.SetSelfInteractive(isEnable);
 		}
 
-		// Token: 0x0401E23D RID: 123453
+		// Token: 0x04018CDA RID: 101594
 		[Nullable(2)]
 		private IPowerRewardButtonItemData Data;
 
-		// Token: 0x0200BAE9 RID: 47849
+		// Token: 0x0200A502 RID: 42242
 		private enum EComponent
 		{
-			// Token: 0x040387A5 RID: 231333
+			// Token: 0x040331A6 RID: 209318
 			RewardButton,
-			// Token: 0x040387A6 RID: 231334
+			// Token: 0x040331A7 RID: 209319
 			RewardText,
-			// Token: 0x040387A7 RID: 231335
+			// Token: 0x040331A8 RID: 209320
 			RedDotItem,
-			// Token: 0x040387A8 RID: 231336
+			// Token: 0x040331A9 RID: 209321
 			PowerTexture,
-			// Token: 0x040387A9 RID: 231337
+			// Token: 0x040331AA RID: 209322
 			PowerNumText
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200593E RID: 22846
+	// Token: 0x02005F4B RID: 24395
 	public struct ISnapAngleConfig : IFlatbufferObject
 	{
-		// Token: 0x1700AB7E RID: 43902
-		// (get) Token: 0x06026A8E RID: 158350 RVA: 0x00553135 File Offset: 0x00551335
+		// Token: 0x1700B4B2 RID: 46258
+		// (get) Token: 0x06028FF8 RID: 167928 RVA: 0x00599DA1 File Offset: 0x00597FA1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026A8F RID: 158351 RVA: 0x00553142 File Offset: 0x00551342
+		// Token: 0x06028FF9 RID: 167929 RVA: 0x00599DAE File Offset: 0x00597FAE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026A90 RID: 158352 RVA: 0x0055314C File Offset: 0x0055134C
+		// Token: 0x06028FFA RID: 167930 RVA: 0x00599DB8 File Offset: 0x00597FB8
 		public static ISnapAngleConfig GetRootAsISnapAngleConfig(ByteBuffer _bb)
 		{
 			return ISnapAngleConfig.GetRootAsISnapAngleConfig(_bb, default(ISnapAngleConfig));
 		}
 
-		// Token: 0x06026A91 RID: 158353 RVA: 0x00553168 File Offset: 0x00551368
+		// Token: 0x06028FFB RID: 167931 RVA: 0x00599DD4 File Offset: 0x00597FD4
 		public static ISnapAngleConfig GetRootAsISnapAngleConfig(ByteBuffer _bb, ISnapAngleConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026A92 RID: 158354 RVA: 0x00553185 File Offset: 0x00551385
+		// Token: 0x06028FFC RID: 167932 RVA: 0x00599DF1 File Offset: 0x00597FF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026A93 RID: 158355 RVA: 0x00553194 File Offset: 0x00551394
+		// Token: 0x06028FFD RID: 167933 RVA: 0x00599E00 File Offset: 0x00598000
 		public ISnapAngleConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AB7F RID: 43903
-		// (get) Token: 0x06026A94 RID: 158356 RVA: 0x005531A4 File Offset: 0x005513A4
+		// Token: 0x1700B4B3 RID: 46259
+		// (get) Token: 0x06028FFE RID: 167934 RVA: 0x00599E10 File Offset: 0x00598010
 		public float Angle
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AB80 RID: 43904
-		// (get) Token: 0x06026A95 RID: 158357 RVA: 0x005531E4 File Offset: 0x005513E4
+		// Token: 0x1700B4B4 RID: 46260
+		// (get) Token: 0x06028FFF RID: 167935 RVA: 0x00599E50 File Offset: 0x00598050
 		public float Range
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026A96 RID: 158358 RVA: 0x00553224 File Offset: 0x00551424
+		// Token: 0x06029000 RID: 167936 RVA: 0x00599E90 File Offset: 0x00598090
 		public static Offset<ISnapAngleConfig> CreateISnapAngleConfig(FlatBufferBuilder builder, float Angle = 0f, float Range = 0f)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISnapAngleConfig.EndISnapAngleConfig(builder);
 		}
 
-		// Token: 0x06026A97 RID: 158359 RVA: 0x00553241 File Offset: 0x00551441
+		// Token: 0x06029001 RID: 167937 RVA: 0x00599EAD File Offset: 0x005980AD
 		public static void StartISnapAngleConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06026A98 RID: 158360 RVA: 0x0055324A File Offset: 0x0055144A
+		// Token: 0x06029002 RID: 167938 RVA: 0x00599EB6 File Offset: 0x005980B6
 		public static void AddAngle(FlatBufferBuilder builder, float angle)
 		{
 			builder.AddFloat(0, angle, 0.0);
 		}
 
-		// Token: 0x06026A99 RID: 158361 RVA: 0x0055325D File Offset: 0x0055145D
+		// Token: 0x06029003 RID: 167939 RVA: 0x00599EC9 File Offset: 0x005980C9
 		public static void AddRange(FlatBufferBuilder builder, float range)
 		{
 			builder.AddFloat(1, range, 0.0);
 		}
 
-		// Token: 0x06026A9A RID: 158362 RVA: 0x00553270 File Offset: 0x00551470
+		// Token: 0x06029004 RID: 167940 RVA: 0x00599EDC File Offset: 0x005980DC
 		public static Offset<ISnapAngleConfig> EndISnapAngleConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISnapAngleConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026A9B RID: 158363 RVA: 0x00553280 File Offset: 0x00551480
+		// Token: 0x06029005 RID: 167941 RVA: 0x00599EEC File Offset: 0x005980EC
 		public ISnapAngleConfigT UnPack()
 		{
 			ISnapAngleConfigT snapAngleConfigT = new ISnapAngleConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return snapAngleConfigT;
 		}
 
-		// Token: 0x06026A9C RID: 158364 RVA: 0x0055329B File Offset: 0x0055149B
+		// Token: 0x06029006 RID: 167942 RVA: 0x00599F07 File Offset: 0x00598107
 		public void UnPackTo(ISnapAngleConfigT _o)
 		{
 			_o.Angle = this.Angle;
 			_o.Range = this.Range;
 		}
 
-		// Token: 0x06026A9D RID: 158365 RVA: 0x005532B8 File Offset: 0x005514B8
+		// Token: 0x06029007 RID: 167943 RVA: 0x00599F24 File Offset: 0x00598124
 		public static Offset<ISnapAngleConfig> Pack(FlatBufferBuilder builder, ISnapAngleConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISnapAngleConfig.CreateISnapAngleConfig(builder, _o.Angle, _o.Range);
 		}
 
-		// Token: 0x0400EF10 RID: 61200
+		// Token: 0x0400FC05 RID: 64517
 		private Table __p;
 	}
 }

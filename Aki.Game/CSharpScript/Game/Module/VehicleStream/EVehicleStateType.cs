@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048A2 RID: 18594
+	// Token: 0x02003819 RID: 14361
 	public enum EVehicleStateType
 	{
-		// Token: 0x0401A1EA RID: 106986
+		// Token: 0x04014A5D RID: 84573
 		None,
-		// Token: 0x0401A1EB RID: 106987
+		// Token: 0x04014A5E RID: 84574
 		Born,
-		// Token: 0x0401A1EC RID: 106988
+		// Token: 0x04014A5F RID: 84575
 		Running,
-		// Token: 0x0401A1ED RID: 106989
+		// Token: 0x04014A60 RID: 84576
 		Braking,
-		// Token: 0x0401A1EE RID: 106990
+		// Token: 0x04014A61 RID: 84577
 		Destroy
 	}
 }

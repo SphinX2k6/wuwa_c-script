@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001031 RID: 4145
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200115D RID: 4445
 	public class IOutOfRangeTrackEntity
 	{
-		// Token: 0x06005C70 RID: 23664 RVA: 0x000DFD7C File Offset: 0x000DDF7C
+		// Token: 0x06006252 RID: 25170 RVA: 0x000ECA74 File Offset: 0x000EAC74
 		private IOutOfRangeTrackEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C71 RID: 23665 RVA: 0x000DFDB4 File Offset: 0x000DDFB4
+		// Token: 0x06006253 RID: 25171 RVA: 0x000ECAAC File Offset: 0x000EACAC
 		public static IOutOfRangeTrackEntity Create([Nullable(2)] IOutOfRangeTrackEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C72 RID: 23666 RVA: 0x000DFDC7 File Offset: 0x000DDFC7
+		// Token: 0x06006254 RID: 25172 RVA: 0x000ECABF File Offset: 0x000EACBF
 		public static IOutOfRangeTrackEntity CreateFromSetValue([Nullable(2)] IOutOfRangeTrackEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C73 RID: 23667 RVA: 0x000DFDDA File Offset: 0x000DDFDA
+		// Token: 0x06006255 RID: 25173 RVA: 0x000ECAD2 File Offset: 0x000EACD2
 		public IOutOfRangeTrackEntity_SetValue ToSetValue()
 		{
 			return new IOutOfRangeTrackEntity_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E70 RID: 7792
-		// (get) Token: 0x06005C74 RID: 23668 RVA: 0x000DFE11 File Offset: 0x000DE011
-		// (set) Token: 0x06005C75 RID: 23669 RVA: 0x000DFE3C File Offset: 0x000DE03C
+		// Token: 0x1700201A RID: 8218
+		// (get) Token: 0x06006256 RID: 25174 RVA: 0x000ECB09 File Offset: 0x000EAD09
+		// (set) Token: 0x06006257 RID: 25175 RVA: 0x000ECB34 File Offset: 0x000EAD34
 		public virtual int TrackEntityId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E71 RID: 7793
-		// (get) Token: 0x06005C76 RID: 23670 RVA: 0x000DFE4C File Offset: 0x000DE04C
-		// (set) Token: 0x06005C77 RID: 23671 RVA: 0x000DFEAD File Offset: 0x000DE0AD
+		// Token: 0x1700201B RID: 8219
+		// (get) Token: 0x06006258 RID: 25176 RVA: 0x000ECB44 File Offset: 0x000EAD44
+		// (set) Token: 0x06006259 RID: 25177 RVA: 0x000ECBA5 File Offset: 0x000EADA5
 		public virtual VectorInfo Center
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E72 RID: 7794
-		// (get) Token: 0x06005C78 RID: 23672 RVA: 0x000DFEC2 File Offset: 0x000DE0C2
-		// (set) Token: 0x06005C79 RID: 23673 RVA: 0x000DFEED File Offset: 0x000DE0ED
+		// Token: 0x1700201C RID: 8220
+		// (get) Token: 0x0600625A RID: 25178 RVA: 0x000ECBBA File Offset: 0x000EADBA
+		// (set) Token: 0x0600625B RID: 25179 RVA: 0x000ECBE5 File Offset: 0x000EADE5
 		public virtual int Radius
 		{
 			get
@@ -139,9 +137,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E73 RID: 7795
-		// (get) Token: 0x06005C7A RID: 23674 RVA: 0x000DFEFC File Offset: 0x000DE0FC
-		// (set) Token: 0x06005C7B RID: 23675 RVA: 0x000DFF36 File Offset: 0x000DE136
+		// Token: 0x1700201D RID: 8221
+		// (get) Token: 0x0600625C RID: 25180 RVA: 0x000ECBF4 File Offset: 0x000EADF4
+		// (set) Token: 0x0600625D RID: 25181 RVA: 0x000ECC2E File Offset: 0x000EAE2E
 		public virtual bool? OverrideChildNodeTrackTarget
 		{
 			get
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003797 RID: 14231
+		// Token: 0x04003AD2 RID: 15058
 		[Nullable(2)]
 		protected IOutOfRangeTrackEntity FbInstance;
 
-		// Token: 0x04003798 RID: 14232
+		// Token: 0x04003AD3 RID: 15059
 		[Nullable(2)]
 		protected IOutOfRangeTrackEntity_SetValue PocoInterface;
 
-		// Token: 0x04003799 RID: 14233
+		// Token: 0x04003AD4 RID: 15060
 		private VectorInfo _CenterCache;
 
-		// Token: 0x0400379A RID: 14234
+		// Token: 0x04003AD5 RID: 15061
 		private bool _CenterInited;
 	}
 }

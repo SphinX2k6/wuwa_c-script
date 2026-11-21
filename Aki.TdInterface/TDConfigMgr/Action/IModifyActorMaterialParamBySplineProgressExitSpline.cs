@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BE4 RID: 7140
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DD1 RID: 7633
 	public class IModifyActorMaterialParamBySplineProgressExitSpline : IModifyActorMaterialParamBySplineProgressConfig
 	{
-		// Token: 0x060098E9 RID: 39145 RVA: 0x00160300 File Offset: 0x0015E500
+		// Token: 0x0600A20D RID: 41485 RVA: 0x001730FC File Offset: 0x001712FC
 		private IModifyActorMaterialParamBySplineProgressExitSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060098EA RID: 39146 RVA: 0x00160338 File Offset: 0x0015E538
+		// Token: 0x0600A20E RID: 41486 RVA: 0x00173134 File Offset: 0x00171334
 		public static IModifyActorMaterialParamBySplineProgressExitSpline Create([Nullable(2)] IModifyActorMaterialParamBySplineProgressExitSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098EB RID: 39147 RVA: 0x0016034B File Offset: 0x0015E54B
+		// Token: 0x0600A20F RID: 41487 RVA: 0x00173147 File Offset: 0x00171347
 		public static IModifyActorMaterialParamBySplineProgressExitSpline CreateFromSetValue([Nullable(2)] IModifyActorMaterialParamBySplineProgressExitSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,19 +48,20 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098EC RID: 39148 RVA: 0x0016035E File Offset: 0x0015E55E
+		// Token: 0x0600A210 RID: 41488 RVA: 0x0017315A File Offset: 0x0017135A
 		public new IModifyActorMaterialParamBySplineProgressExitSpline_SetValue ToSetValue()
 		{
 			return new IModifyActorMaterialParamBySplineProgressExitSpline_SetValue
 			{
 				Type = this.Type,
+				MoveTarget = this.MoveTarget,
 				SplineEntityId = this.SplineEntityId
 			};
 		}
 
-		// Token: 0x17002FF5 RID: 12277
-		// (get) Token: 0x060098ED RID: 39149 RVA: 0x0016037D File Offset: 0x0015E57D
-		// (set) Token: 0x060098EE RID: 39150 RVA: 0x001603A8 File Offset: 0x0015E5A8
+		// Token: 0x1700325B RID: 12891
+		// (get) Token: 0x0600A211 RID: 41489 RVA: 0x00173185 File Offset: 0x00171385
+		// (set) Token: 0x0600A212 RID: 41490 RVA: 0x001731B0 File Offset: 0x001713B0
 		public override EModifyActorMaterialParamBySplineProgressType Type
 		{
 			get
@@ -83,9 +82,36 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FF6 RID: 12278
-		// (get) Token: 0x060098EF RID: 39151 RVA: 0x001603B6 File Offset: 0x0015E5B6
-		// (set) Token: 0x060098F0 RID: 39152 RVA: 0x001603E1 File Offset: 0x0015E5E1
+		// Token: 0x1700325C RID: 12892
+		// (get) Token: 0x0600A213 RID: 41491 RVA: 0x001731BE File Offset: 0x001713BE
+		// (set) Token: 0x0600A214 RID: 41492 RVA: 0x001731E5 File Offset: 0x001713E5
+		[Nullable(2)]
+		public override IModifyActorMaterialParamBySplineProgressTarget MoveTarget
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.MoveTarget;
+				}
+				IModifyActorMaterialParamBySplineProgressExitSpline_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.MoveTarget;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco().MoveTarget = value;
+			}
+		}
+
+		// Token: 0x1700325D RID: 12893
+		// (get) Token: 0x0600A215 RID: 41493 RVA: 0x001731F3 File Offset: 0x001713F3
+		// (set) Token: 0x0600A216 RID: 41494 RVA: 0x0017321E File Offset: 0x0017141E
 		public override int SplineEntityId
 		{
 			get
@@ -106,11 +132,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D30 RID: 23856
+		// Token: 0x04006252 RID: 25170
 		[Nullable(2)]
 		protected new IModifyActorMaterialParamBySplineProgressExitSpline FbInstance;
 
-		// Token: 0x04005D31 RID: 23857
+		// Token: 0x04006253 RID: 25171
 		[Nullable(2)]
 		protected new IModifyActorMaterialParamBySplineProgressExitSpline_SetValue PocoInterface;
 	}

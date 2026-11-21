@@ -4,49 +4,49 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005B02 RID: 23298
+	// Token: 0x02004AE3 RID: 19171
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MachiningData : IMachiningData, ICookItemData
 	{
-		// Token: 0x17008C63 RID: 35939
-		// (get) Token: 0x0603AFE5 RID: 241637 RVA: 0x00E11041 File Offset: 0x00E0F241
-		// (set) Token: 0x0603AFE6 RID: 241638 RVA: 0x00E11049 File Offset: 0x00E0F249
+		// Token: 0x1700603D RID: 24637
+		// (get) Token: 0x0602FF57 RID: 196439 RVA: 0x00D61D59 File Offset: 0x00D5FF59
+		// (set) Token: 0x0602FF58 RID: 196440 RVA: 0x00D61D61 File Offset: 0x00D5FF61
 		public ECookListType MainType { get; set; }
 
-		// Token: 0x17008C64 RID: 35940
-		// (get) Token: 0x0603AFE7 RID: 241639 RVA: 0x00E11052 File Offset: 0x00E0F252
-		// (set) Token: 0x0603AFE8 RID: 241640 RVA: 0x00E1105A File Offset: 0x00E0F25A
+		// Token: 0x1700603E RID: 24638
+		// (get) Token: 0x0602FF59 RID: 196441 RVA: 0x00D61D6A File Offset: 0x00D5FF6A
+		// (set) Token: 0x0602FF5A RID: 196442 RVA: 0x00D61D72 File Offset: 0x00D5FF72
 		public int ItemId { get; set; }
 
-		// Token: 0x17008C65 RID: 35941
-		// (get) Token: 0x0603AFE9 RID: 241641 RVA: 0x00E11063 File Offset: 0x00E0F263
-		// (set) Token: 0x0603AFEA RID: 241642 RVA: 0x00E1106B File Offset: 0x00E0F26B
+		// Token: 0x1700603F RID: 24639
+		// (get) Token: 0x0602FF5B RID: 196443 RVA: 0x00D61D7B File Offset: 0x00D5FF7B
+		// (set) Token: 0x0602FF5C RID: 196444 RVA: 0x00D61D83 File Offset: 0x00D5FF83
 		public bool IsNew { get; set; }
 
-		// Token: 0x17008C66 RID: 35942
-		// (get) Token: 0x0603AFEB RID: 241643 RVA: 0x00E11074 File Offset: 0x00E0F274
-		// (set) Token: 0x0603AFEC RID: 241644 RVA: 0x00E1107C File Offset: 0x00E0F27C
+		// Token: 0x17006040 RID: 24640
+		// (get) Token: 0x0602FF5D RID: 196445 RVA: 0x00D61D8C File Offset: 0x00D5FF8C
+		// (set) Token: 0x0602FF5E RID: 196446 RVA: 0x00D61D94 File Offset: 0x00D5FF94
 		public int Quality { get; set; }
 
-		// Token: 0x17008C67 RID: 35943
-		// (get) Token: 0x0603AFED RID: 241645 RVA: 0x00E11085 File Offset: 0x00E0F285
-		// (set) Token: 0x0603AFEE RID: 241646 RVA: 0x00E1108D File Offset: 0x00E0F28D
+		// Token: 0x17006041 RID: 24641
+		// (get) Token: 0x0602FF5F RID: 196447 RVA: 0x00D61D9D File Offset: 0x00D5FF9D
+		// (set) Token: 0x0602FF60 RID: 196448 RVA: 0x00D61DA5 File Offset: 0x00D5FFA5
 		public bool IsUnLock { get; set; }
 
-		// Token: 0x17008C68 RID: 35944
-		// (get) Token: 0x0603AFEF RID: 241647 RVA: 0x00E11096 File Offset: 0x00E0F296
-		// (set) Token: 0x0603AFF0 RID: 241648 RVA: 0x00E1109E File Offset: 0x00E0F29E
+		// Token: 0x17006042 RID: 24642
+		// (get) Token: 0x0602FF61 RID: 196449 RVA: 0x00D61DAE File Offset: 0x00D5FFAE
+		// (set) Token: 0x0602FF62 RID: 196450 RVA: 0x00D61DB6 File Offset: 0x00D5FFB6
 		public List<int> InteractiveList { get; set; }
 
-		// Token: 0x17008C69 RID: 35945
-		// (get) Token: 0x0603AFF1 RID: 241649 RVA: 0x00E110A7 File Offset: 0x00E0F2A7
-		// (set) Token: 0x0603AFF2 RID: 241650 RVA: 0x00E110AF File Offset: 0x00E0F2AF
+		// Token: 0x17006043 RID: 24643
+		// (get) Token: 0x0602FF63 RID: 196451 RVA: 0x00D61DBF File Offset: 0x00D5FFBF
+		// (set) Token: 0x0602FF64 RID: 196452 RVA: 0x00D61DC7 File Offset: 0x00D5FFC7
 		public List<int> UnlockList { get; set; }
 
-		// Token: 0x17008C6A RID: 35946
-		// (get) Token: 0x0603AFF3 RID: 241651 RVA: 0x00E110B8 File Offset: 0x00E0F2B8
-		// (set) Token: 0x0603AFF4 RID: 241652 RVA: 0x00E110C0 File Offset: 0x00E0F2C0
+		// Token: 0x17006044 RID: 24644
+		// (get) Token: 0x0602FF65 RID: 196453 RVA: 0x00D61DD0 File Offset: 0x00D5FFD0
+		// (set) Token: 0x0602FF66 RID: 196454 RVA: 0x00D61DD8 File Offset: 0x00D5FFD8
 		public int IsMachining { get; set; }
 	}
 }

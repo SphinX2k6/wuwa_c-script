@@ -6,13 +6,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Map.MapDefine;
 
-// Token: 0x020021E2 RID: 8674
+// Token: 0x020016C6 RID: 5830
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MapExploreToolModel : ModelBase
 {
-	// Token: 0x06010E21 RID: 69153 RVA: 0x0041C098 File Offset: 0x0041A298
+	// Token: 0x0600E2B2 RID: 58034 RVA: 0x00428978 File Offset: 0x00426B78
 	protected override bool OnInit()
 	{
 		this.MapSkillToPhantomSkill.Add(ERouletteSkillId.临时传送, ERouletteExploreId.临时传送);
@@ -126,7 +126,7 @@ public class MapExploreToolModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010E22 RID: 69154 RVA: 0x0041C328 File Offset: 0x0041A528
+	// Token: 0x0600E2B3 RID: 58035 RVA: 0x00428C08 File Offset: 0x00426E08
 	protected override bool OnClear()
 	{
 		this.MapSkillToPhantomSkill.Clear();
@@ -140,20 +140,20 @@ public class MapExploreToolModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010E23 RID: 69155 RVA: 0x0041C3AC File Offset: 0x0041A5AC
+	// Token: 0x0600E2B4 RID: 58036 RVA: 0x00428C8C File Offset: 0x00426E8C
 	protected override bool OnLeaveLevel()
 	{
 		this.CharExploreSkillIsBusy = false;
 		return true;
 	}
 
-	// Token: 0x06010E24 RID: 69156 RVA: 0x0041C3B6 File Offset: 0x0041A5B6
+	// Token: 0x0600E2B5 RID: 58037 RVA: 0x00428C96 File Offset: 0x00426E96
 	protected override bool OnChangeMode()
 	{
 		return true;
 	}
 
-	// Token: 0x06010E25 RID: 69157 RVA: 0x0041C3BC File Offset: 0x0041A5BC
+	// Token: 0x0600E2B6 RID: 58038 RVA: 0x00428C9C File Offset: 0x00426E9C
 	private void OnCreateMapMark(DynamicMarkCreateInfo info)
 	{
 		switch (info.MarkType)
@@ -187,7 +187,7 @@ public class MapExploreToolModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010E26 RID: 69158 RVA: 0x0041C460 File Offset: 0x0041A660
+	// Token: 0x0600E2B7 RID: 58039 RVA: 0x00428D40 File Offset: 0x00426F40
 	private void OnRemoveMapMark(EMarkType markType, int markId)
 	{
 		switch (markType)
@@ -221,7 +221,7 @@ public class MapExploreToolModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010E27 RID: 69159 RVA: 0x0041C4F0 File Offset: 0x0041A6F0
+	// Token: 0x0600E2B8 RID: 58040 RVA: 0x00428DD0 File Offset: 0x00426FD0
 	public ERouletteExploreId? GetPhantomSkillIdBySkillId(int skillId)
 	{
 		ERouletteExploreId value;
@@ -232,7 +232,7 @@ public class MapExploreToolModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010E28 RID: 69160 RVA: 0x0041C520 File Offset: 0x0041A720
+	// Token: 0x0600E2B9 RID: 58041 RVA: 0x00428E00 File Offset: 0x00427000
 	public EMapExploreToolCheckTipId? GetRespTipsId(MapExploreToolUsingInfo usingInfo, ExploreToolResponse response)
 	{
 		Dictionary<ErrorCode, EMapExploreToolCheckTipId> dictionary;
@@ -244,7 +244,7 @@ public class MapExploreToolModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010E29 RID: 69161 RVA: 0x0041C574 File Offset: 0x0041A774
+	// Token: 0x0600E2BA RID: 58042 RVA: 0x00428E54 File Offset: 0x00427054
 	public EMapExploreToolCheckTipId? GetNotEnoughTipsId(MapExploreToolUsingInfo usingInfo)
 	{
 		EMapExploreToolCheckTipId value;
@@ -255,7 +255,7 @@ public class MapExploreToolModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010E2A RID: 69162 RVA: 0x0041C5A8 File Offset: 0x0041A7A8
+	// Token: 0x0600E2BB RID: 58043 RVA: 0x00428E88 File Offset: 0x00427088
 	public EConfirmBoxConfigId? GetConfirmBoxId(MapExploreToolUsingInfo usingInfo, ExploreToolResponse response = null)
 	{
 		bool flag = response == null;
@@ -300,7 +300,7 @@ public class MapExploreToolModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010E2B RID: 69163 RVA: 0x0041C68C File Offset: 0x0041A88C
+	// Token: 0x0600E2BC RID: 58044 RVA: 0x00428F6C File Offset: 0x0042716C
 	public bool ShowCostConfirmBox(MapExploreToolUsingInfo usingInfo, ExploreToolResponse response = null)
 	{
 		bool flag = response == null;
@@ -328,21 +328,21 @@ public class MapExploreToolModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06010E2C RID: 69164 RVA: 0x0041C6DC File Offset: 0x0041A8DC
+	// Token: 0x0600E2BD RID: 58045 RVA: 0x00428FBC File Offset: 0x004271BC
 	public bool IsRespMeanSuccess(MapExploreToolUsingInfo usingInfo, ExploreToolResponse response)
 	{
 		HashSet<ErrorCode> hashSet;
 		return this.SkillToSuccessRespCode.TryGetValue((ERouletteExploreId)usingInfo.PhantomSkillId, out hashSet) && response.Content.HasValue && hashSet.Contains(response.GetErrorCode());
 	}
 
-	// Token: 0x06010E2D RID: 69165 RVA: 0x0041C720 File Offset: 0x0041A920
+	// Token: 0x0600E2BE RID: 58046 RVA: 0x00429000 File Offset: 0x00427200
 	public bool IsRespMeanCheckPass(MapExploreToolUsingInfo usingInfo, ExploreToolResponse response)
 	{
 		HashSet<ErrorCode> hashSet;
 		return this.SkillToCheckPassRespCode.TryGetValue((ERouletteExploreId)usingInfo.PhantomSkillId, out hashSet) && response.Content.HasValue && hashSet.Contains(response.GetErrorCode());
 	}
 
-	// Token: 0x06010E2E RID: 69166 RVA: 0x0041C764 File Offset: 0x0041A964
+	// Token: 0x0600E2BF RID: 58047 RVA: 0x00429044 File Offset: 0x00427244
 	public unsafe void SetCharExploreSkillBusy(bool isBusy)
 	{
 		Log instance = Log.Instance;
@@ -356,13 +356,13 @@ public class MapExploreToolModel : ModelBase
 		this.CharExploreSkillIsBusy = isBusy;
 	}
 
-	// Token: 0x06010E2F RID: 69167 RVA: 0x0041C7DA File Offset: 0x0041A9DA
+	// Token: 0x0600E2C0 RID: 58048 RVA: 0x004290BA File Offset: 0x004272BA
 	public bool GetCharExploreSkillBusy()
 	{
 		return this.CharExploreSkillIsBusy;
 	}
 
-	// Token: 0x06010E30 RID: 69168 RVA: 0x0041C7E4 File Offset: 0x0041A9E4
+	// Token: 0x0600E2C1 RID: 58049 RVA: 0x004290C4 File Offset: 0x004272C4
 	public int? GetToolPlaceLimit(ERouletteExploreId phantomSkillId)
 	{
 		switch (phantomSkillId)
@@ -378,13 +378,13 @@ public class MapExploreToolModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010E31 RID: 69169 RVA: 0x0041C844 File Offset: 0x0041AA44
+	// Token: 0x0600E2C2 RID: 58050 RVA: 0x00429124 File Offset: 0x00427324
 	public bool IsToolHasPlaceLimit(ERouletteExploreId phantomSkillId)
 	{
 		return this.GetToolPlaceLimit(phantomSkillId) != null;
 	}
 
-	// Token: 0x06010E32 RID: 69170 RVA: 0x0041C868 File Offset: 0x0041AA68
+	// Token: 0x0600E2C3 RID: 58051 RVA: 0x00429148 File Offset: 0x00427348
 	public bool IsToolReachPlaceLimit(ERouletteExploreId phantomSkillId)
 	{
 		int? toolPlaceLimit = this.GetToolPlaceLimit(phantomSkillId);
@@ -396,7 +396,7 @@ public class MapExploreToolModel : ModelBase
 		return toolPlaceNum != null && toolPlaceNum.Value >= toolPlaceLimit.Value;
 	}
 
-	// Token: 0x06010E33 RID: 69171 RVA: 0x0041C8AC File Offset: 0x0041AAAC
+	// Token: 0x0600E2C4 RID: 58052 RVA: 0x0042918C File Offset: 0x0042738C
 	public int? GetToolPlaceNum(ERouletteExploreId phantomSkillId)
 	{
 		int value;
@@ -407,7 +407,7 @@ public class MapExploreToolModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010E34 RID: 69172 RVA: 0x0041C8DC File Offset: 0x0041AADC
+	// Token: 0x0600E2C5 RID: 58053 RVA: 0x004291BC File Offset: 0x004273BC
 	public unsafe void SetToolPlaceNum(ERouletteExploreId phantomSkillId, int placeNum, bool isAdd)
 	{
 		int? num = null;
@@ -439,8 +439,8 @@ public class MapExploreToolModel : ModelBase
 		EventSystem.Instance.Emit<ERouletteExploreId, int>(EEventName.OnMapExploreToolPlaceNumUpdated, phantomSkillId, placeNum);
 	}
 
-	// Token: 0x17001561 RID: 5473
-	// (get) Token: 0x06010E35 RID: 69173 RVA: 0x0041C9B6 File Offset: 0x0041ABB6
+	// Token: 0x17001598 RID: 5528
+	// (get) Token: 0x0600E2C6 RID: 58054 RVA: 0x00429296 File Offset: 0x00427496
 	public static MapExploreToolModel Instance
 	{
 		get
@@ -449,7 +449,7 @@ public class MapExploreToolModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010E36 RID: 69174 RVA: 0x0041C9BD File Offset: 0x0041ABBD
+	// Token: 0x0600E2C7 RID: 58055 RVA: 0x0042929D File Offset: 0x0042749D
 	public static MapExploreToolModel GetOrCreateInstance()
 	{
 		if (MapExploreToolModel._Instance == null)
@@ -459,7 +459,7 @@ public class MapExploreToolModel : ModelBase
 		return MapExploreToolModel._Instance;
 	}
 
-	// Token: 0x06010E37 RID: 69175 RVA: 0x0041C9D1 File Offset: 0x0041ABD1
+	// Token: 0x0600E2C8 RID: 58056 RVA: 0x004292B1 File Offset: 0x004274B1
 	public static bool CreateInstance()
 	{
 		if (MapExploreToolModel._Instance != null)
@@ -470,45 +470,45 @@ public class MapExploreToolModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010E38 RID: 69176 RVA: 0x0041C9E7 File Offset: 0x0041ABE7
+	// Token: 0x0600E2C9 RID: 58057 RVA: 0x004292C7 File Offset: 0x004274C7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010E39 RID: 69177 RVA: 0x0041C9E9 File Offset: 0x0041ABE9
+	// Token: 0x0600E2CA RID: 58058 RVA: 0x004292C9 File Offset: 0x004274C9
 	public static void ResetStaticDefaultValue()
 	{
 		MapExploreToolModel._Instance = null;
 	}
 
-	// Token: 0x06010E3A RID: 69178 RVA: 0x0041C9F1 File Offset: 0x0041ABF1
+	// Token: 0x0600E2CB RID: 58059 RVA: 0x004292D1 File Offset: 0x004274D1
 	static MapExploreToolModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MapExploreToolModel.CreateStaticDefaultValue), new Action(MapExploreToolModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008047 RID: 32839
+	// Token: 0x0400818E RID: 33166
 	private readonly Dictionary<ERouletteSkillId, ERouletteExploreId> MapSkillToPhantomSkill = new Dictionary<ERouletteSkillId, ERouletteExploreId>();
 
-	// Token: 0x04008048 RID: 32840
+	// Token: 0x0400818F RID: 33167
 	private readonly Dictionary<ERouletteExploreId, Dictionary<ErrorCode, EMapExploreToolCheckTipId>> RespCodeToTipsId = new Dictionary<ERouletteExploreId, Dictionary<ErrorCode, EMapExploreToolCheckTipId>>();
 
-	// Token: 0x04008049 RID: 32841
+	// Token: 0x04008190 RID: 33168
 	private readonly Dictionary<ERouletteExploreId, EMapExploreToolCheckTipId> SkillToNotEnoughTipsId = new Dictionary<ERouletteExploreId, EMapExploreToolCheckTipId>();
 
-	// Token: 0x0400804A RID: 32842
+	// Token: 0x04008191 RID: 33169
 	private readonly Dictionary<ERouletteExploreId, HashSet<ErrorCode>> SkillToSuccessRespCode = new Dictionary<ERouletteExploreId, HashSet<ErrorCode>>();
 
-	// Token: 0x0400804B RID: 32843
+	// Token: 0x04008192 RID: 33170
 	private readonly Dictionary<ERouletteExploreId, HashSet<ErrorCode>> SkillToCheckPassRespCode = new Dictionary<ERouletteExploreId, HashSet<ErrorCode>>();
 
-	// Token: 0x0400804C RID: 32844
+	// Token: 0x04008193 RID: 33171
 	private bool CharExploreSkillIsBusy;
 
-	// Token: 0x0400804D RID: 32845
+	// Token: 0x04008194 RID: 33172
 	private readonly Dictionary<ERouletteExploreId, int> SkillToExploreToolPlaceNum = new Dictionary<ERouletteExploreId, int>();
 
-	// Token: 0x0400804E RID: 32846
+	// Token: 0x04008195 RID: 33173
 	[Nullable(2)]
 	private static MapExploreToolModel _Instance;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ED0 RID: 7888
+	// Token: 0x02002109 RID: 8457
 	public class ISubPlotModePromptWithProfilePic_SetValue
 	{
-		// Token: 0x04006481 RID: 25729
+		// Token: 0x04006A70 RID: 27248
 		public ESubPlotModeType Type;
 	}
 }

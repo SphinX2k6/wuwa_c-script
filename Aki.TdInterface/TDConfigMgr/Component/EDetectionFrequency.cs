@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200008F RID: 143
+	// Token: 0x02000094 RID: 148
 	[EnumExtensions]
 	public enum EDetectionFrequency
 	{
-		// Token: 0x04000391 RID: 913
+		// Token: 0x040003AA RID: 938
 		Low,
-		// Token: 0x04000392 RID: 914
+		// Token: 0x040003AB RID: 939
 		Medium,
-		// Token: 0x04000393 RID: 915
+		// Token: 0x040003AC RID: 940
 		High,
-		// Token: 0x04000394 RID: 916
+		// Token: 0x040003AD RID: 941
 		SuperHigh
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002357 RID: 9047
+	// Token: 0x020025CC RID: 9676
 	public static class EHighlightTypeExtensions
 	{
-		// Token: 0x0600C586 RID: 50566 RVA: 0x001CD43C File Offset: 0x001CB63C
+		// Token: 0x0600D170 RID: 53616 RVA: 0x001E571C File Offset: 0x001E391C
 		public static string ToEnumString(this EHighlightType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C587 RID: 50567 RVA: 0x001CD474 File Offset: 0x001CB674
+		// Token: 0x0600D171 RID: 53617 RVA: 0x001E5754 File Offset: 0x001E3954
 		public static EHighlightType FromString(string name)
 		{
 			EHighlightType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C588 RID: 50568 RVA: 0x001CD49D File Offset: 0x001CB69D
+		// Token: 0x0600D172 RID: 53618 RVA: 0x001E577D File Offset: 0x001E397D
 		public static bool TryFromString(string name, out EHighlightType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C589 RID: 50569 RVA: 0x001CD4D6 File Offset: 0x001CB6D6
+		// Token: 0x0600D173 RID: 53619 RVA: 0x001E57B6 File Offset: 0x001E39B6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C58A RID: 50570 RVA: 0x001CD4EE File Offset: 0x001CB6EE
+		// Token: 0x0600D174 RID: 53620 RVA: 0x001E57CE File Offset: 0x001E39CE
 		public static EHighlightType[] GetValues()
 		{
 			return new EHighlightType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C58B RID: 50571 RVA: 0x001CD4FA File Offset: 0x001CB6FA
+		// Token: 0x0600D175 RID: 53621 RVA: 0x001E57DA File Offset: 0x001E39DA
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A02 RID: 6658
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B95 RID: 7061
 	public class IEnterOrbitalCameraType
 	{
-		// Token: 0x06008EA7 RID: 36519 RVA: 0x0014D8BC File Offset: 0x0014BABC
+		// Token: 0x06009609 RID: 38409 RVA: 0x0015D72C File Offset: 0x0015B92C
 		private IEnterOrbitalCameraType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008EA8 RID: 36520 RVA: 0x0014D8F4 File Offset: 0x0014BAF4
+		// Token: 0x0600960A RID: 38410 RVA: 0x0015D764 File Offset: 0x0015B964
 		public static IEnterOrbitalCameraType Create([Nullable(2)] IEnterOrbitalCameraType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EA9 RID: 36521 RVA: 0x0014D907 File Offset: 0x0014BB07
+		// Token: 0x0600960B RID: 38411 RVA: 0x0015D777 File Offset: 0x0015B977
 		public static IEnterOrbitalCameraType CreateFromSetValue([Nullable(2)] IEnterOrbitalCameraType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EAA RID: 36522 RVA: 0x0014D91A File Offset: 0x0014BB1A
+		// Token: 0x0600960C RID: 38412 RVA: 0x0015D78A File Offset: 0x0015B98A
 		public IEnterOrbitalCameraType_SetValue ToSetValue()
 		{
 			return new IEnterOrbitalCameraType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DA5 RID: 11685
-		// (get) Token: 0x06008EAB RID: 36523 RVA: 0x0014D92D File Offset: 0x0014BB2D
-		// (set) Token: 0x06008EAC RID: 36524 RVA: 0x0014D958 File Offset: 0x0014BB58
+		// Token: 0x17002FB1 RID: 12209
+		// (get) Token: 0x0600960D RID: 38413 RVA: 0x0015D79D File Offset: 0x0015B99D
+		// (set) Token: 0x0600960E RID: 38414 RVA: 0x0015D7C8 File Offset: 0x0015B9C8
 		public virtual EEnterOrbitalCameraType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005862 RID: 22626
+		// Token: 0x04005CC4 RID: 23748
 		[Nullable(2)]
 		protected IEnterOrbitalCameraType FbInstance;
 
-		// Token: 0x04005863 RID: 22627
+		// Token: 0x04005CC5 RID: 23749
 		[Nullable(2)]
 		protected IEnterOrbitalCameraType_SetValue PocoInterface;
 	}

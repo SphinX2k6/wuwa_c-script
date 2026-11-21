@@ -7,13 +7,13 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x02004614 RID: 17940
+	// Token: 0x0200353D RID: 13629
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GuideGroupInfo
 	{
-		// Token: 0x170075C0 RID: 30144
-		// (get) Token: 0x0602E3B9 RID: 189369 RVA: 0x00AB0DB8 File Offset: 0x00AAEFB8
+		// Token: 0x17004878 RID: 18552
+		// (get) Token: 0x06022AAE RID: 141998 RVA: 0x009DD4AC File Offset: 0x009DB6AC
 		public GuideStepInfo CurrentGuideStep
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			}
 		}
 
-		// Token: 0x0602E3BA RID: 189370 RVA: 0x00AB0DEC File Offset: 0x00AAEFEC
+		// Token: 0x06022AAF RID: 141999 RVA: 0x009DD4E0 File Offset: 0x009DB6E0
 		public GuideGroupInfo(int groupId)
 		{
 			this.Id = groupId;
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			this.StateMachine.Start(EGuideGroupState.Init);
 		}
 
-		// Token: 0x0602E3BB RID: 189371 RVA: 0x00AB0E74 File Offset: 0x00AAF074
+		// Token: 0x06022AB0 RID: 142000 RVA: 0x009DD568 File Offset: 0x009DB768
 		public bool GetIfPreExecute()
 		{
 			return this.StepInfoList.Count != 0 && Math.Abs(this.StepInfoList[0].Config.TimeScale - 1f) > 1E-08f;
 		}
 
-		// Token: 0x0602E3BC RID: 189372 RVA: 0x00AB0EBC File Offset: 0x00AAF0BC
+		// Token: 0x06022AB1 RID: 142001 RVA: 0x009DD5B0 File Offset: 0x009DB7B0
 		public unsafe void SwitchState(EGuideGroupState groupState)
 		{
 			EGuideGroupState state = groupState;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			this.StateMachine.Switch(state);
 		}
 
-		// Token: 0x0602E3BD RID: 189373 RVA: 0x00AB1014 File Offset: 0x00AAF214
+		// Token: 0x06022AB2 RID: 142002 RVA: 0x009DD708 File Offset: 0x009DB908
 		public void PumpStep()
 		{
 			if (this.StepInfoList.Count == 0)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			guideStepInfo.TryEnterExecuting();
 		}
 
-		// Token: 0x0602E3BE RID: 189374 RVA: 0x00AB1158 File Offset: 0x00AAF358
+		// Token: 0x06022AB3 RID: 142003 RVA: 0x009DD84C File Offset: 0x009DBA4C
 		private void EndCurrentStep()
 		{
 			int currentStepIndex = this.CurrentStepIndex;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			}
 		}
 
-		// Token: 0x0602E3BF RID: 189375 RVA: 0x00AB1190 File Offset: 0x00AAF390
+		// Token: 0x06022AB4 RID: 142004 RVA: 0x009DD884 File Offset: 0x009DBA84
 		public void Reset()
 		{
 			this.EndCurrentStep();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			EventSystem.Instance.Emit<int>(EEventName.GuideGroupRest, this.Id);
 		}
 
-		// Token: 0x0602E3C0 RID: 189376 RVA: 0x00AB11BC File Offset: 0x00AAF3BC
+		// Token: 0x06022AB5 RID: 142005 RVA: 0x009DD8B0 File Offset: 0x009DBAB0
 		[NullableContext(1)]
 		public bool HasAnyFinishedStep(HashSet<int> stepIdSet)
 		{
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			return false;
 		}
 
-		// Token: 0x0602E3C1 RID: 189377 RVA: 0x00AB11F8 File Offset: 0x00AAF3F8
+		// Token: 0x06022AB6 RID: 142006 RVA: 0x009DD8EC File Offset: 0x009DBAEC
 		public void Break()
 		{
 			EGuideGroupState? currentState = this.StateMachine.CurrentState;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			EventSystem.Instance.Emit<int>(EEventName.GuideGroupBreak, this.Id);
 		}
 
-		// Token: 0x0602E3C2 RID: 189378 RVA: 0x00AB1260 File Offset: 0x00AAF460
+		// Token: 0x06022AB7 RID: 142007 RVA: 0x009DD954 File Offset: 0x009DBB54
 		public bool CanEnterExecuting()
 		{
 			if (LoadingModel.Instance.IsLoading || LoadingModel.Instance.IsLoadingView)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			return true;
 		}
 
-		// Token: 0x0602E3C3 RID: 189379 RVA: 0x00AB12BC File Offset: 0x00AAF4BC
+		// Token: 0x06022AB8 RID: 142008 RVA: 0x009DD9B0 File Offset: 0x009DBBB0
 		public bool CheckIsGuideRunning()
 		{
 			EGuideGroupState? currentState = this.StateMachine.CurrentState;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			return !(currentState.GetValueOrDefault() == eguideGroupState & currentState != null);
 		}
 
-		// Token: 0x0602E3C4 RID: 189380 RVA: 0x00AB12EC File Offset: 0x00AAF4EC
+		// Token: 0x06022AB9 RID: 142009 RVA: 0x009DD9E0 File Offset: 0x009DBBE0
 		public bool CheckIsGuideRunningWithoutPending()
 		{
 			EGuideGroupState? currentState = this.StateMachine.CurrentState;
@@ -233,10 +233,10 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			return false;
 		}
 
-		// Token: 0x04018D1A RID: 101658
+		// Token: 0x04013359 RID: 78681
 		public readonly int Id;
 
-		// Token: 0x04018D1B RID: 101659
+		// Token: 0x0401335A RID: 78682
 		[Nullable(new byte[]
 		{
 			2,
@@ -244,20 +244,20 @@ namespace CSharpScript.Game.Guide.GroupInfo
 		})]
 		public readonly StateMachine<GuideGroupInfo, EGuideGroupState> StateMachine;
 
-		// Token: 0x04018D1C RID: 101660
+		// Token: 0x0401335B RID: 78683
 		[Nullable(1)]
 		public readonly List<GuideStepInfo> StepInfoList = new List<GuideStepInfo>();
 
-		// Token: 0x04018D1D RID: 101661
+		// Token: 0x0401335C RID: 78684
 		public bool IsFake;
 
-		// Token: 0x04018D1E RID: 101662
+		// Token: 0x0401335D RID: 78685
 		public int CurrentStepIndex = -1;
 
-		// Token: 0x04018D1F RID: 101663
+		// Token: 0x0401335E RID: 78686
 		public CustomPromise FinishPromise;
 
-		// Token: 0x04018D20 RID: 101664
+		// Token: 0x0401335F RID: 78687
 		public HashSet<int> BreakExcludeStepIdSet;
 	}
 }

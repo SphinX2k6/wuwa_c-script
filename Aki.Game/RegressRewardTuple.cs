@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001446 RID: 5190
+// Token: 0x020008FA RID: 2298
 public struct RegressRewardTuple
 {
-	// Token: 0x040040F8 RID: 16632
+	// Token: 0x04004190 RID: 16784
 	public int Id;
 
-	// Token: 0x040040F9 RID: 16633
+	// Token: 0x04004191 RID: 16785
 	public int Num;
 
-	// Token: 0x040040FA RID: 16634
+	// Token: 0x04004192 RID: 16786
 	public bool Received;
 }

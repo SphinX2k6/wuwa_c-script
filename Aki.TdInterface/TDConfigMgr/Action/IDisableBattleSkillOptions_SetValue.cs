@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019A7 RID: 6567
+	// Token: 0x02001B2E RID: 6958
 	public class IDisableBattleSkillOptions_SetValue
 	{
-		// Token: 0x04005774 RID: 22388
+		// Token: 0x04005BBD RID: 23485
 		public bool? IsDisablePhantomSkill;
 
-		// Token: 0x04005775 RID: 22389
+		// Token: 0x04005BBE RID: 23486
 		public bool? IsDisableCharacterSkill;
 
-		// Token: 0x04005776 RID: 22390
+		// Token: 0x04005BBF RID: 23487
 		[Nullable(2)]
 		public IDisableCharacterSectionalSkillOption IsDisableCharacterSectionalSkill;
 	}

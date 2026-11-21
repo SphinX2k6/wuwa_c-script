@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004680 RID: 18048
+	// Token: 0x02004AE8 RID: 19176
 	public static class IPlayFlowForGmVerify
 	{
-		// Token: 0x0601B66C RID: 112236 RVA: 0x003E4DD4 File Offset: 0x003E2FD4
+		// Token: 0x0601CE41 RID: 118337 RVA: 0x00411070 File Offset: 0x0040F270
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return false;
 		}
 
-		// Token: 0x020079CF RID: 31183
+		// Token: 0x02008218 RID: 33304
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401336B RID: 78699
+			// Token: 0x040143D2 RID: 82898
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001389 RID: 5001
+// Token: 0x0200083D RID: 2109
 [NullableContext(1)]
 [Nullable(0)]
 internal class TeamListItem : UiPanelBase
 {
-	// Token: 0x06008C17 RID: 35863 RVA: 0x001E02F0 File Offset: 0x001DE4F0
+	// Token: 0x06005FB2 RID: 24498 RVA: 0x001E9144 File Offset: 0x001E7344
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ internal class TeamListItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008C18 RID: 35864 RVA: 0x001E03C8 File Offset: 0x001DE5C8
+	// Token: 0x06005FB3 RID: 24499 RVA: 0x001E921C File Offset: 0x001E741C
 	private void OnClickButton()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.QuickRoleSelectView))
@@ -53,7 +53,7 @@ internal class TeamListItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008C19 RID: 35865 RVA: 0x001E041C File Offset: 0x001DE61C
+	// Token: 0x06005FB4 RID: 24500 RVA: 0x001E9270 File Offset: 0x001E7470
 	private QuickRoleSelectViewData GetRoleSelectViewData()
 	{
 		MowingTowerLevelDetailInfo levelInfo = this.CurrentTeamInfo.LevelInfo;
@@ -123,7 +123,7 @@ internal class TeamListItem : UiPanelBase
 		return quickRoleSelectViewData;
 	}
 
-	// Token: 0x06008C1A RID: 35866 RVA: 0x001E06B0 File Offset: 0x001DE8B0
+	// Token: 0x06005FB5 RID: 24501 RVA: 0x001E9504 File Offset: 0x001E7704
 	private void OnEnsureFormation(int[] roleIdList)
 	{
 		for (int i = 0; i < TeamListItem.ROLE_TEAM_SIZE; i++)
@@ -139,7 +139,7 @@ internal class TeamListItem : UiPanelBase
 		this.OnSelectTeamRole();
 	}
 
-	// Token: 0x06008C1B RID: 35867 RVA: 0x001E071C File Offset: 0x001DE91C
+	// Token: 0x06005FB6 RID: 24502 RVA: 0x001E9570 File Offset: 0x001E7770
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TeamListItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -150,13 +150,13 @@ internal class TeamListItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008C1C RID: 35868 RVA: 0x001E075F File Offset: 0x001DE95F
+	// Token: 0x06005FB7 RID: 24503 RVA: 0x001E95B3 File Offset: 0x001E77B3
 	private TeamRoleItem CreateTeamRoleItem()
 	{
 		return new TeamRoleItem();
 	}
 
-	// Token: 0x06008C1D RID: 35869 RVA: 0x001E0768 File Offset: 0x001DE968
+	// Token: 0x06005FB8 RID: 24504 RVA: 0x001E95BC File Offset: 0x001E77BC
 	public void RefreshTeamRole(MowingTowerTeamInfo teamInfo, ETeamBelong belongTo)
 	{
 		this.CurrentTeamInfo = teamInfo;
@@ -191,7 +191,7 @@ internal class TeamListItem : UiPanelBase
 		this.RefreshLevelText();
 	}
 
-	// Token: 0x06008C1E RID: 35870 RVA: 0x001E0850 File Offset: 0x001DEA50
+	// Token: 0x06005FB9 RID: 24505 RVA: 0x001E96A4 File Offset: 0x001E78A4
 	private void RefreshElementItem()
 	{
 		for (int i = 0; i < this.ElementItemArray.Count; i++)
@@ -211,13 +211,13 @@ internal class TeamListItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x06008C1F RID: 35871 RVA: 0x001E0900 File Offset: 0x001DEB00
+	// Token: 0x06005FBA RID: 24506 RVA: 0x001E9754 File Offset: 0x001E7954
 	private void RefreshLevelText()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "BossRushRecommendLevel", new <>z__ReadOnlySingleElementList<object>(this.CurrentTeamInfo.GetRecommendLevel().ToString()));
 	}
 
-	// Token: 0x06008C20 RID: 35872 RVA: 0x001E093B File Offset: 0x001DEB3B
+	// Token: 0x06005FBB RID: 24507 RVA: 0x001E978F File Offset: 0x001E798F
 	private void OnSelectTeamRole()
 	{
 		Action refreshLowLevelTips = this.RefreshLowLevelTips;
@@ -228,31 +228,31 @@ internal class TeamListItem : UiPanelBase
 		this.RefreshTeamRole(this.CurrentTeamInfo, this.BelongTo);
 	}
 
-	// Token: 0x06008C21 RID: 35873 RVA: 0x001E0960 File Offset: 0x001DEB60
+	// Token: 0x06005FBC RID: 24508 RVA: 0x001E97B4 File Offset: 0x001E79B4
 	public void BindRefreshLowLevelTips(Action func)
 	{
 		this.RefreshLowLevelTips = func;
 	}
 
-	// Token: 0x04003E24 RID: 15908
+	// Token: 0x04003EBC RID: 16060
 	[Nullable(2)]
 	private MowingTowerTeamInfo CurrentTeamInfo;
 
-	// Token: 0x04003E25 RID: 15909
+	// Token: 0x04003EBD RID: 16061
 	private ETeamBelong BelongTo;
 
-	// Token: 0x04003E26 RID: 15910
+	// Token: 0x04003EBE RID: 16062
 	[Nullable(2)]
 	private CommonElementItem ElementItem1;
 
-	// Token: 0x04003E27 RID: 15911
+	// Token: 0x04003EBF RID: 16063
 	[Nullable(2)]
 	private CommonElementItem ElementItem2;
 
-	// Token: 0x04003E28 RID: 15912
+	// Token: 0x04003EC0 RID: 16064
 	private readonly List<CommonElementItem> ElementItemArray = new List<CommonElementItem>();
 
-	// Token: 0x04003E29 RID: 15913
+	// Token: 0x04003EC1 RID: 16065
 	[Nullable(new byte[]
 	{
 		2,
@@ -261,11 +261,11 @@ internal class TeamListItem : UiPanelBase
 	})]
 	private GenericLayout<TeamRoleItem, TeamData> TeamLayout;
 
-	// Token: 0x04003E2A RID: 15914
+	// Token: 0x04003EC2 RID: 16066
 	[Nullable(2)]
 	private Action RefreshLowLevelTips;
 
-	// Token: 0x04003E2B RID: 15915
+	// Token: 0x04003EC3 RID: 16067
 	[StaticVariableRuleIgnore]
 	private static int ROLE_TEAM_SIZE = 3;
 }

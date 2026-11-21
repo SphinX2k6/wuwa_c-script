@@ -5,16 +5,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000076 RID: 118
+	// Token: 0x02000079 RID: 121
 	public class NearbyQuitGate : IStaticVariableResetter
 	{
-		// Token: 0x06000322 RID: 802 RVA: 0x00010FED File Offset: 0x0000F1ED
+		// Token: 0x06000332 RID: 818 RVA: 0x00011E6D File Offset: 0x0001006D
 		static NearbyQuitGate()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(NearbyQuitGate.CreateStaticDefaultValue), new Action(NearbyQuitGate.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000323 RID: 803 RVA: 0x0001100C File Offset: 0x0000F20C
+		// Token: 0x06000333 RID: 819 RVA: 0x00011E8C File Offset: 0x0001008C
 		public static void Trip()
 		{
 			if (NearbyQuitGate.bPending)
@@ -25,20 +25,20 @@ namespace CSharpScript.Launcher.Util
 			LauncherLog.Instance.Info("[NearbyQuitGate] tripped.", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06000324 RID: 804 RVA: 0x0001103F File Offset: 0x0000F23F
+		// Token: 0x06000334 RID: 820 RVA: 0x00011EBF File Offset: 0x000100BF
 		public static bool IsPending()
 		{
 			return NearbyQuitGate.bPending;
 		}
 
-		// Token: 0x06000325 RID: 805 RVA: 0x00011046 File Offset: 0x0000F246
+		// Token: 0x06000335 RID: 821 RVA: 0x00011EC6 File Offset: 0x000100C6
 		[NullableContext(1)]
 		public static void SetPresenter(Func<UniTask> presenter)
 		{
 			NearbyQuitGate.Presenter = presenter;
 		}
 
-		// Token: 0x06000326 RID: 806 RVA: 0x00011050 File Offset: 0x0000F250
+		// Token: 0x06000336 RID: 822 RVA: 0x00011ED0 File Offset: 0x000100D0
 		public static UniTask ParkIfPending()
 		{
 			NearbyQuitGate.<ParkIfPending>d__7 <ParkIfPending>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Launcher.Util
 			return <ParkIfPending>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000327 RID: 807 RVA: 0x0001108B File Offset: 0x0000F28B
+		// Token: 0x06000337 RID: 823 RVA: 0x00011F0B File Offset: 0x0001010B
 		public static void CreateStaticDefaultValue()
 		{
 			NearbyQuitGate.bPending = false;
@@ -56,7 +56,7 @@ namespace CSharpScript.Launcher.Util
 			NearbyQuitGate.Presenter = null;
 		}
 
-		// Token: 0x06000328 RID: 808 RVA: 0x0001109F File Offset: 0x0000F29F
+		// Token: 0x06000338 RID: 824 RVA: 0x00011F1F File Offset: 0x0001011F
 		public static void ResetStaticDefaultValue()
 		{
 			NearbyQuitGate.bPending = false;
@@ -64,13 +64,13 @@ namespace CSharpScript.Launcher.Util
 			NearbyQuitGate.Presenter = null;
 		}
 
-		// Token: 0x04000246 RID: 582
+		// Token: 0x04000272 RID: 626
 		private static bool bPending;
 
-		// Token: 0x04000247 RID: 583
+		// Token: 0x04000273 RID: 627
 		private static bool bPresented;
 
-		// Token: 0x04000248 RID: 584
+		// Token: 0x04000274 RID: 628
 		[Nullable(2)]
 		private static Func<UniTask> Presenter;
 	}

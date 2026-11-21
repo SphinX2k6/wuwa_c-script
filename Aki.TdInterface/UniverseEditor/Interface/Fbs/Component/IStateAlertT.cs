@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200599C RID: 22940
+	// Token: 0x02005FA9 RID: 24489
 	public class IStateAlertT
 	{
-		// Token: 0x1700AC26 RID: 44070
-		// (get) Token: 0x06026DA6 RID: 159142 RVA: 0x00558D3B File Offset: 0x00556F3B
-		// (set) Token: 0x06026DA7 RID: 159143 RVA: 0x00558D43 File Offset: 0x00556F43
+		// Token: 0x1700B55A RID: 46426
+		// (get) Token: 0x06029310 RID: 168720 RVA: 0x0059F9A7 File Offset: 0x0059DBA7
+		// (set) Token: 0x06029311 RID: 168721 RVA: 0x0059F9AF File Offset: 0x0059DBAF
 		public string State { get; set; }
 
-		// Token: 0x1700AC27 RID: 44071
-		// (get) Token: 0x06026DA8 RID: 159144 RVA: 0x00558D4C File Offset: 0x00556F4C
-		// (set) Token: 0x06026DA9 RID: 159145 RVA: 0x00558D54 File Offset: 0x00556F54
+		// Token: 0x1700B55B RID: 46427
+		// (get) Token: 0x06029312 RID: 168722 RVA: 0x0059F9B8 File Offset: 0x0059DBB8
+		// (set) Token: 0x06029313 RID: 168723 RVA: 0x0059F9C0 File Offset: 0x0059DBC0
 		public int Alert { get; set; }
 
-		// Token: 0x06026DAA RID: 159146 RVA: 0x00558D5D File Offset: 0x00556F5D
+		// Token: 0x06029314 RID: 168724 RVA: 0x0059F9C9 File Offset: 0x0059DBC9
 		public IStateAlertT()
 		{
 			this.State = null;

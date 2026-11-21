@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005886 RID: 22662
+	// Token: 0x02005E93 RID: 24211
 	public class IRollBlockFloorComponentT
 	{
-		// Token: 0x1700A97A RID: 43386
-		// (get) Token: 0x060262F6 RID: 156406 RVA: 0x005438D0 File Offset: 0x00541AD0
-		// (set) Token: 0x060262F7 RID: 156407 RVA: 0x005438D8 File Offset: 0x00541AD8
+		// Token: 0x1700B2AA RID: 45738
+		// (get) Token: 0x06028858 RID: 165976 RVA: 0x0058A41C File Offset: 0x0058861C
+		// (set) Token: 0x06028859 RID: 165977 RVA: 0x0058A424 File Offset: 0x00588624
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A97B RID: 43387
-		// (get) Token: 0x060262F8 RID: 156408 RVA: 0x005438E1 File Offset: 0x00541AE1
-		// (set) Token: 0x060262F9 RID: 156409 RVA: 0x005438E9 File Offset: 0x00541AE9
+		// Token: 0x1700B2AB RID: 45739
+		// (get) Token: 0x0602885A RID: 165978 RVA: 0x0058A42D File Offset: 0x0058862D
+		// (set) Token: 0x0602885B RID: 165979 RVA: 0x0058A435 File Offset: 0x00588635
 		public byte NullMask { get; set; }
 
-		// Token: 0x060262FA RID: 156410 RVA: 0x005438F2 File Offset: 0x00541AF2
+		// Token: 0x0602885C RID: 165980 RVA: 0x0058A43E File Offset: 0x0058863E
 		public IRollBlockFloorComponentT()
 		{
 			this.Disabled = false;

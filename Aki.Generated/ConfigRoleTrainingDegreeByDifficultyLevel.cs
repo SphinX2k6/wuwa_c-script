@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008D0 RID: 2256
+	// Token: 0x0200091B RID: 2331
 	public class ConfigRoleTrainingDegreeByDifficultyLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060034F3 RID: 13555 RVA: 0x00184A14 File Offset: 0x00182C14
+		// Token: 0x060036B5 RID: 14005 RVA: 0x00191C34 File Offset: 0x0018FE34
 		static ConfigRoleTrainingDegreeByDifficultyLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleTrainingDegreeByDifficultyLevel.CreateStaticDefaultValue), new Action(ConfigRoleTrainingDegreeByDifficultyLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060034F4 RID: 13556 RVA: 0x00184A34 File Offset: 0x00182C34
+		// Token: 0x060036B6 RID: 14006 RVA: 0x00191C54 File Offset: 0x0018FE54
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleTrainingDegreeByDifficultyLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060034F5 RID: 13557 RVA: 0x00184AB3 File Offset: 0x00182CB3
+		// Token: 0x060036B7 RID: 14007 RVA: 0x00191CD3 File Offset: 0x0018FED3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleTrainingDegreeByDifficultyLevel.LogPair = null;
 			ConfigRoleTrainingDegreeByDifficultyLevel.HandleId = 0;
 		}
 
-		// Token: 0x060034F6 RID: 13558 RVA: 0x00184AC1 File Offset: 0x00182CC1
+		// Token: 0x060036B8 RID: 14008 RVA: 0x00191CE1 File Offset: 0x0018FEE1
 		public static void Init()
 		{
 			ConfigRoleTrainingDegreeByDifficultyLevel.HandleId = ConfigCommon.InitDataStatement(ConfigRoleTrainingDegreeByDifficultyLevel.HandleId, "db_roletrainingdegree.db", "select BinData from `RoleTrainingDegree` where DifficultyLevel = ?");
 		}
 
-		// Token: 0x060034F7 RID: 13559 RVA: 0x00184ADC File Offset: 0x00182CDC
+		// Token: 0x060036B9 RID: 14009 RVA: 0x00191CFC File Offset: 0x0018FEFC
 		public static RoleTrainingDegree? GetConfig(int p0DifficultyLevel, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleTrainingDegreeByDifficultyLevel.HandleId, ConfigRoleTrainingDegreeByDifficultyLevel.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleTrainingDegree?(rootAsRoleTrainingDegree);
 		}
 
-		// Token: 0x04003D96 RID: 15766
+		// Token: 0x04003FA3 RID: 16291
 		private const string DB = "db_roletrainingdegree.db";
 
-		// Token: 0x04003D97 RID: 15767
+		// Token: 0x04003FA4 RID: 16292
 		private const string FILE = "j.角色练度标准.xlsx";
 
-		// Token: 0x04003D98 RID: 15768
+		// Token: 0x04003FA5 RID: 16293
 		private const string TABLE = "RoleTrainingDegree";
 
-		// Token: 0x04003D99 RID: 15769
+		// Token: 0x04003FA6 RID: 16294
 		private const string COMMAND = "select BinData from `RoleTrainingDegree` where DifficultyLevel = ?";
 
-		// Token: 0x04003D9A RID: 15770
+		// Token: 0x04003FA7 RID: 16295
 		private const string KEY_PREFIX = "RoleTrainingDegreeByDifficultyLevel";
 
-		// Token: 0x04003D9B RID: 15771
+		// Token: 0x04003FA8 RID: 16296
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D9C RID: 15772
+		// Token: 0x04003FA9 RID: 16297
 		private static int HandleId;
 	}
 }

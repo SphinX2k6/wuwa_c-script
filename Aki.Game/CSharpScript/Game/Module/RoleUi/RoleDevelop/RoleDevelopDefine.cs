@@ -4,22 +4,27 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D31 RID: 19761
+	// Token: 0x02003CF0 RID: 15600
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopDefine : IStaticVariableResetter
 	{
-		// Token: 0x06033092 RID: 209042 RVA: 0x00BE1E25 File Offset: 0x00BE0025
+		// Token: 0x06027E7D RID: 163453 RVA: 0x00B27796 File Offset: 0x00B25996
 		static RoleDevelopDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoleDevelopDefine.CreateStaticDefaultValue), new Action(RoleDevelopDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06033093 RID: 209043 RVA: 0x00BE1E44 File Offset: 0x00BE0044
+		// Token: 0x06027E7E RID: 163454 RVA: 0x00B277B8 File Offset: 0x00B259B8
 		public static void CreateStaticDefaultValue()
 		{
 			RoleDevelopDefine.roleDevelopCategoryConfig = new List<RoleDevelopCategoryData>
 			{
+				new RoleDevelopCategoryData
+				{
+					CategoryType = ERoleDevelopCategoryType.Overview,
+					CategoryName = "RoleProject_Overview"
+				},
 				new RoleDevelopCategoryData
 				{
 					CategoryType = ERoleDevelopCategoryType.Role,
@@ -62,44 +67,47 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 			};
 		}
 
-		// Token: 0x06033094 RID: 209044 RVA: 0x00BE1F09 File Offset: 0x00BE0109
+		// Token: 0x06027E7F RID: 163455 RVA: 0x00B2789A File Offset: 0x00B25A9A
 		public static void ResetStaticDefaultValue()
 		{
 			RoleDevelopDefine.roleDevelopCategoryConfig = null;
 			RoleDevelopDefine.roleDevelopHotRoleTagColor = null;
 		}
 
-		// Token: 0x0401B266 RID: 111206
+		// Token: 0x04015C1F RID: 89119
 		public const int ROLE_DEVELOP_WORLD_DROP_PROMPT_PURPLE_QUALITY = 4;
 
-		// Token: 0x0401B267 RID: 111207
+		// Token: 0x04015C20 RID: 89120
 		public const int ROLE_DEVELOP_WORLD_DROP_PROMPT_GOLD_QUALITY = 5;
 
-		// Token: 0x0401B268 RID: 111208
+		// Token: 0x04015C21 RID: 89121
 		public const int ROLE_DEVELOP_WORLD_DROP_PROMPT_PURPLE_SOAR_LEVEL_THRESHOLD = 4;
 
-		// Token: 0x0401B269 RID: 111209
+		// Token: 0x04015C22 RID: 89122
 		public const int ROLE_DEVELOP_WORLD_DROP_PROMPT_GOLD_SOAR_LEVEL_THRESHOLD = 5;
 
-		// Token: 0x0401B26A RID: 111210
+		// Token: 0x04015C23 RID: 89123
 		public const int PROSPECT_ROLE_SKILL_TARGET_LEVEL = 10;
 
-		// Token: 0x0401B26B RID: 111211
+		// Token: 0x04015C24 RID: 89124
 		public const int PROSPECT_ROLE_SKILL_DEFAULT_LEVEL = 1;
 
-		// Token: 0x0401B26C RID: 111212
+		// Token: 0x04015C25 RID: 89125
 		public const int SKILL_PLAN_BREAKTHROUGH_LEVEL_LIMIT = 6;
 
-		// Token: 0x0401B26D RID: 111213
+		// Token: 0x04015C26 RID: 89126
+		public const int PHANTOM_FETTER_TRIGGER_THRESHOLD = 5;
+
+		// Token: 0x04015C27 RID: 89127
 		public const string ROLE_DEVELOP_ITEM_STATE_TAG_PREFAB = "UiItem_ItemBRoleDevelopTag";
 
-		// Token: 0x0401B26E RID: 111214
+		// Token: 0x04015C28 RID: 89128
 		public const string ROLE_DEVELOP_RESULT_LINK_PREFAB = "UiItem_RoleDevelopResultLink";
 
-		// Token: 0x0401B26F RID: 111215
+		// Token: 0x04015C29 RID: 89129
 		public static List<RoleDevelopCategoryData> roleDevelopCategoryConfig;
 
-		// Token: 0x0401B270 RID: 111216
+		// Token: 0x04015C2A RID: 89130
 		public static Dictionary<ERoleDevelopHotRoleTag, string> roleDevelopHotRoleTagColor;
 	}
 }

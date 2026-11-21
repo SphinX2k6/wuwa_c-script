@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Test
 {
-	// Token: 0x02003B76 RID: 15222
+	// Token: 0x02003F7E RID: 16254
 	public class ITestSummaryT
 	{
-		// Token: 0x17006854 RID: 26708
-		// (get) Token: 0x06014D67 RID: 85351 RVA: 0x00306A81 File Offset: 0x00304C81
-		// (set) Token: 0x06014D68 RID: 85352 RVA: 0x00306A89 File Offset: 0x00304C89
+		// Token: 0x17006DF3 RID: 28147
+		// (get) Token: 0x06016231 RID: 90673 RVA: 0x0032D019 File Offset: 0x0032B219
+		// (set) Token: 0x06016232 RID: 90674 RVA: 0x0032D021 File Offset: 0x0032B221
 		public int Total { get; set; }
 
-		// Token: 0x17006855 RID: 26709
-		// (get) Token: 0x06014D69 RID: 85353 RVA: 0x00306A92 File Offset: 0x00304C92
-		// (set) Token: 0x06014D6A RID: 85354 RVA: 0x00306A9A File Offset: 0x00304C9A
+		// Token: 0x17006DF4 RID: 28148
+		// (get) Token: 0x06016233 RID: 90675 RVA: 0x0032D02A File Offset: 0x0032B22A
+		// (set) Token: 0x06016234 RID: 90676 RVA: 0x0032D032 File Offset: 0x0032B232
 		public int Passed { get; set; }
 
-		// Token: 0x17006856 RID: 26710
-		// (get) Token: 0x06014D6B RID: 85355 RVA: 0x00306AA3 File Offset: 0x00304CA3
-		// (set) Token: 0x06014D6C RID: 85356 RVA: 0x00306AAB File Offset: 0x00304CAB
+		// Token: 0x17006DF5 RID: 28149
+		// (get) Token: 0x06016235 RID: 90677 RVA: 0x0032D03B File Offset: 0x0032B23B
+		// (set) Token: 0x06016236 RID: 90678 RVA: 0x0032D043 File Offset: 0x0032B243
 		public int Failed { get; set; }
 
-		// Token: 0x17006857 RID: 26711
-		// (get) Token: 0x06014D6D RID: 85357 RVA: 0x00306AB4 File Offset: 0x00304CB4
-		// (set) Token: 0x06014D6E RID: 85358 RVA: 0x00306ABC File Offset: 0x00304CBC
+		// Token: 0x17006DF6 RID: 28150
+		// (get) Token: 0x06016237 RID: 90679 RVA: 0x0032D04C File Offset: 0x0032B24C
+		// (set) Token: 0x06016238 RID: 90680 RVA: 0x0032D054 File Offset: 0x0032B254
 		public bool IsRequiredCaseAllPassed { get; set; }
 
-		// Token: 0x17006858 RID: 26712
-		// (get) Token: 0x06014D6F RID: 85359 RVA: 0x00306AC5 File Offset: 0x00304CC5
-		// (set) Token: 0x06014D70 RID: 85360 RVA: 0x00306ACD File Offset: 0x00304CCD
+		// Token: 0x17006DF7 RID: 28151
+		// (get) Token: 0x06016239 RID: 90681 RVA: 0x0032D05D File Offset: 0x0032B25D
+		// (set) Token: 0x0601623A RID: 90682 RVA: 0x0032D065 File Offset: 0x0032B265
 		public int Time { get; set; }
 
-		// Token: 0x17006859 RID: 26713
-		// (get) Token: 0x06014D71 RID: 85361 RVA: 0x00306AD6 File Offset: 0x00304CD6
-		// (set) Token: 0x06014D72 RID: 85362 RVA: 0x00306ADE File Offset: 0x00304CDE
+		// Token: 0x17006DF8 RID: 28152
+		// (get) Token: 0x0601623B RID: 90683 RVA: 0x0032D06E File Offset: 0x0032B26E
+		// (set) Token: 0x0601623C RID: 90684 RVA: 0x0032D076 File Offset: 0x0032B276
 		public string ErrorMsg { get; set; }
 
-		// Token: 0x1700685A RID: 26714
-		// (get) Token: 0x06014D73 RID: 85363 RVA: 0x00306AE7 File Offset: 0x00304CE7
-		// (set) Token: 0x06014D74 RID: 85364 RVA: 0x00306AEF File Offset: 0x00304CEF
+		// Token: 0x17006DF9 RID: 28153
+		// (get) Token: 0x0601623D RID: 90685 RVA: 0x0032D07F File Offset: 0x0032B27F
+		// (set) Token: 0x0601623E RID: 90686 RVA: 0x0032D087 File Offset: 0x0032B287
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014D75 RID: 85365 RVA: 0x00306AF8 File Offset: 0x00304CF8
+		// Token: 0x0601623F RID: 90687 RVA: 0x0032D090 File Offset: 0x0032B290
 		public ITestSummaryT()
 		{
 			this.Total = 0;

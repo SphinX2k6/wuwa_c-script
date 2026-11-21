@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AF1 RID: 2801
+	// Token: 0x02000BBC RID: 3004
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHookInteractType
 	{
-		// Token: 0x06004077 RID: 16503 RVA: 0x000A4A0A File Offset: 0x000A2C0A
-		[NullableContext(1)]
+		// Token: 0x060044A6 RID: 17574 RVA: 0x000AE03E File Offset: 0x000AC23E
+		[NullableContext(0)]
 		public static IHookInteractType Create(IHookInteractType? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001052 RID: 4178
-		// (get) Token: 0x06004078 RID: 16504 RVA: 0x000A4A29 File Offset: 0x000A2C29
+		// Token: 0x17001129 RID: 4393
+		// (get) Token: 0x060044A7 RID: 17575 RVA: 0x000AE05D File Offset: 0x000AC25D
 		public virtual EHookInteractType Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001053 RID: 4179
-		// (get) Token: 0x06004079 RID: 16505 RVA: 0x000A4A38 File Offset: 0x000A2C38
+		// Token: 0x1700112A RID: 4394
+		// (get) Token: 0x060044A8 RID: 17576 RVA: 0x000AE06C File Offset: 0x000AC26C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001054 RID: 4180
-		// (get) Token: 0x0600407A RID: 16506 RVA: 0x000A4AB4 File Offset: 0x000A2CB4
+		// Token: 0x1700112B RID: 4395
+		// (get) Token: 0x060044A9 RID: 17577 RVA: 0x000AE0E8 File Offset: 0x000AC2E8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001055 RID: 4181
-		// (get) Token: 0x0600407B RID: 16507 RVA: 0x000A4B30 File Offset: 0x000A2D30
+		// Token: 0x1700112C RID: 4396
+		// (get) Token: 0x060044AA RID: 17578 RVA: 0x000AE164 File Offset: 0x000AC364
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001056 RID: 4182
-		// (get) Token: 0x0600407C RID: 16508 RVA: 0x000A4BAA File Offset: 0x000A2DAA
+		// Token: 0x1700112D RID: 4397
+		// (get) Token: 0x060044AB RID: 17579 RVA: 0x000AE1DE File Offset: 0x000AC3DE
 		public virtual IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -156,46 +156,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023F4 RID: 9204
+		// Token: 0x04002611 RID: 9745
 		private IHookInteractType Instance;
 
-		// Token: 0x040023F5 RID: 9205
+		// Token: 0x04002612 RID: 9746
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x040023F6 RID: 9206
+		// Token: 0x04002613 RID: 9747
 		private bool _HookActionsInited;
 
-		// Token: 0x040023F7 RID: 9207
+		// Token: 0x04002614 RID: 9748
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x040023F8 RID: 9208
+		// Token: 0x04002615 RID: 9749
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x040023F9 RID: 9209
+		// Token: 0x04002616 RID: 9750
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x040023FA RID: 9210
+		// Token: 0x04002617 RID: 9751
 		private bool _FinishActionsInited;
 
-		// Token: 0x040023FB RID: 9211
+		// Token: 0x04002618 RID: 9752
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x040023FC RID: 9212
+		// Token: 0x04002619 RID: 9753
 		private bool _ClientHookActionConfigInited;
 	}
 }

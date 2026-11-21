@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Framework
 {
-	// Token: 0x02003A0B RID: 14859
+	// Token: 0x02003063 RID: 12387
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class OnMiddleMouseScroll : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F275 RID: 127605 RVA: 0x008AE1A2 File Offset: 0x008AC3A2
+		// Token: 0x0601D6D8 RID: 120536 RVA: 0x008F63C2 File Offset: 0x008F45C2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return OnMiddleMouseScroll.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F276 RID: 127606 RVA: 0x008AE1AE File Offset: 0x008AC3AE
+		// Token: 0x0601D6D9 RID: 120537 RVA: 0x008F63CE File Offset: 0x008F45CE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (LGUIEventSystemActor_C.__OnMiddleMouseScroll__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,32 +28,31 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return LGUIEventSystemActor_C.__OnMiddleMouseScroll__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F277 RID: 127607 RVA: 0x008AE1D1 File Offset: 0x008AC3D1
+		// Token: 0x0601D6DA RID: 120538 RVA: 0x008F63F1 File Offset: 0x008F45F1
 		public OnMiddleMouseScroll()
 		{
 		}
 
-		// Token: 0x0601F278 RID: 127608 RVA: 0x008AE1D9 File Offset: 0x008AC3D9
+		// Token: 0x0601D6DB RID: 120539 RVA: 0x008F63F9 File Offset: 0x008F45F9
 		[NullableContext(2)]
 		public OnMiddleMouseScroll(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F279 RID: 127609 RVA: 0x008AE1E3 File Offset: 0x008AC3E3
+		// Token: 0x0601D6DC RID: 120540 RVA: 0x008F6403 File Offset: 0x008F4603
 		public OnMiddleMouseScroll(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F27A RID: 127610 RVA: 0x008AE1EE File Offset: 0x008AC3EE
+		// Token: 0x0601D6DD RID: 120541 RVA: 0x008F640E File Offset: 0x008F460E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F27B RID: 127611 RVA: 0x008AE220 File Offset: 0x008AC420
+		// Token: 0x0601D6DE RID: 120542 RVA: 0x008F6440 File Offset: 0x008F4640
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<float> Callback)
 		{
 			if (OnMiddleMouseScroll.RegisterId == 0)
@@ -68,17 +67,15 @@ namespace AkiClient.Game.Aki.UI.Framework
 			base.Add(Callback, OnMiddleMouseScroll.RegisterId);
 		}
 
-		// Token: 0x0601F27C RID: 127612 RVA: 0x008AE25A File Offset: 0x008AC45A
+		// Token: 0x0601D6DF RID: 120543 RVA: 0x008F647A File Offset: 0x008F467A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<float> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F27D RID: 127613 RVA: 0x008AE264 File Offset: 0x008AC464
+		// Token: 0x0601D6E0 RID: 120544 RVA: 0x008F6484 File Offset: 0x008F4684
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(float AxisValue)
 		{
 			OnMiddleMouseScroll.__OnMiddleMouseScroll_DelegateParams* ptr = stackalloc OnMiddleMouseScroll.__OnMiddleMouseScroll_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(OnMiddleMouseScroll.__OnMiddleMouseScroll_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace AkiClient.Game.Aki.UI.Framework
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F27E RID: 127614 RVA: 0x008AE2A0 File Offset: 0x008AC4A0
+		// Token: 0x0601D6E1 RID: 120545 RVA: 0x008F64C0 File Offset: 0x008F46C0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -101,28 +97,28 @@ namespace AkiClient.Game.Aki.UI.Framework
 			action(((OnMiddleMouseScroll.__OnMiddleMouseScroll_DelegateParams*)__Parameters)->AxisValue);
 		}
 
-		// Token: 0x0400EEB8 RID: 61112
+		// Token: 0x0400F7DA RID: 63450
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Framework/LGUIEventSystemActor.LGUIEventSystemActor_C:OnMiddleMouseScroll__DelegateSignature";
 
-		// Token: 0x0400EEB9 RID: 61113
+		// Token: 0x0400F7DB RID: 63451
 		private static int RegisterId;
 
-		// Token: 0x02009A5B RID: 39515
+		// Token: 0x02008D0A RID: 36106
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __OnMiddleMouseScroll_DelegateParams
+		private ref struct __OnMiddleMouseScroll_DelegateParams
 		{
-			// Token: 0x04030F94 RID: 200596
+			// Token: 0x0402C858 RID: 182360
 			[FieldOffset(0)]
 			public float AxisValue;
 		}
 
-		// Token: 0x02009A5C RID: 39516
+		// Token: 0x02008D0B RID: 36107
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030F95 RID: 200597
+			// Token: 0x0402C859 RID: 182361
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200507A RID: 20602
+	// Token: 0x0200404A RID: 16458
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotAutoSelectOptionComponent
 	{
-		// Token: 0x06034C93 RID: 216211 RVA: 0x00C7CC54 File Offset: 0x00C7AE54
+		// Token: 0x06029B88 RID: 170888 RVA: 0x00BCA02C File Offset: 0x00BC822C
 		[NullableContext(1)]
 		public void Init(IPlotAutoSelectOptionComponentContext context)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.Clear();
 		}
 
-		// Token: 0x06034C94 RID: 216212 RVA: 0x00C7CD04 File Offset: 0x00C7AF04
+		// Token: 0x06029B89 RID: 170889 RVA: 0x00BCA0DC File Offset: 0x00BC82DC
 		public static PlotOptionItem GetDefaultSelectedOptionItem([Nullable(new byte[]
 		{
 			2,
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return list[0];
 		}
 
-		// Token: 0x06034C95 RID: 216213 RVA: 0x00C7CE38 File Offset: 0x00C7B038
+		// Token: 0x06029B8A RID: 170890 RVA: 0x00BCA210 File Offset: 0x00BC8410
 		public void Clear()
 		{
 			this.IsOptionShowing = false;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.HideImportantTips();
 		}
 
-		// Token: 0x06034C96 RID: 216214 RVA: 0x00C7CE50 File Offset: 0x00C7B050
+		// Token: 0x06029B8B RID: 170891 RVA: 0x00BCA228 File Offset: 0x00BC8428
 		public void OnOptionsShow()
 		{
 			this.IsOptionShowing = true;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.TryStartAutoSelectCountdown(talkItem);
 		}
 
-		// Token: 0x06034C97 RID: 216215 RVA: 0x00C7CEBC File Offset: 0x00C7B0BC
+		// Token: 0x06029B8C RID: 170892 RVA: 0x00BCA294 File Offset: 0x00BC8494
 		public void OnOptionSelected()
 		{
 			this.IsOptionShowing = false;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.RefreshImmersiveMousePause();
 		}
 
-		// Token: 0x06034C98 RID: 216216 RVA: 0x00C7CED4 File Offset: 0x00C7B0D4
+		// Token: 0x06029B8D RID: 170893 RVA: 0x00BCA2AC File Offset: 0x00BC84AC
 		public void OnAutoPlayStateChanged()
 		{
 			if (!this.IsOptionShowing)
@@ -146,13 +146,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.TryStartAutoSelectCountdown(talkItem);
 		}
 
-		// Token: 0x06034C99 RID: 216217 RVA: 0x00C7CF39 File Offset: 0x00C7B139
+		// Token: 0x06029B8E RID: 170894 RVA: 0x00BCA311 File Offset: 0x00BC8511
 		public void OnImmersiveInputStateChange()
 		{
 			this.RefreshImmersiveMousePause();
 		}
 
-		// Token: 0x06034C9A RID: 216218 RVA: 0x00C7CF44 File Offset: 0x00C7B144
+		// Token: 0x06029B8F RID: 170895 RVA: 0x00BCA31C File Offset: 0x00BC851C
 		public void OnSelectedOptionChanged()
 		{
 			if (this.CountdownMode != PlotAutoSelectOptionComponent.EPlotOptionCountdownMode.AutoSelect)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.TryRefreshAutoSelectCountdownOption(talkItem);
 		}
 
-		// Token: 0x06034C9B RID: 216219 RVA: 0x00C7CF7C File Offset: 0x00C7B17C
+		// Token: 0x06029B90 RID: 170896 RVA: 0x00BCA354 File Offset: 0x00BC8554
 		public void OnTick(float delta, bool isMute)
 		{
 			if (this.CountdownMode == PlotAutoSelectOptionComponent.EPlotOptionCountdownMode.None || isMute)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034C9C RID: 216220 RVA: 0x00C7CFF0 File Offset: 0x00C7B1F0
+		// Token: 0x06029B91 RID: 170897 RVA: 0x00BCA3C8 File Offset: 0x00BC85C8
 		[NullableContext(1)]
 		private unsafe bool TryStartTimeLimitCountdown(ITalkItem content)
 		{
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034C9D RID: 216221 RVA: 0x00C7D110 File Offset: 0x00C7B310
+		// Token: 0x06029B92 RID: 170898 RVA: 0x00BCA4E8 File Offset: 0x00BC86E8
 		[NullableContext(1)]
 		private bool TryShowDisableAutoSelectTips(ITalkItem content)
 		{
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034C9E RID: 216222 RVA: 0x00C7D134 File Offset: 0x00C7B334
+		// Token: 0x06029B93 RID: 170899 RVA: 0x00BCA50C File Offset: 0x00BC870C
 		[NullableContext(1)]
 		private bool TryStartAutoSelectCountdown(ITalkItem content)
 		{
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034C9F RID: 216223 RVA: 0x00C7D214 File Offset: 0x00C7B414
+		// Token: 0x06029B94 RID: 170900 RVA: 0x00BCA5EC File Offset: 0x00BC87EC
 		[NullableContext(1)]
 		private bool TryRefreshAutoSelectCountdownOption(ITalkItem content)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034CA0 RID: 216224 RVA: 0x00C7D278 File Offset: 0x00C7B478
+		// Token: 0x06029B95 RID: 170901 RVA: 0x00BCA650 File Offset: 0x00BC8850
 		private void StartCountdown(PlotAutoSelectOptionComponent.EPlotOptionCountdownMode mode, int optionIndex, float limitTime)
 		{
 			this.HideImportantTips();
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.RefreshImmersiveMousePause();
 		}
 
-		// Token: 0x06034CA1 RID: 216225 RVA: 0x00C7D2E4 File Offset: 0x00C7B4E4
+		// Token: 0x06029B96 RID: 170902 RVA: 0x00BCA6BC File Offset: 0x00BC88BC
 		private void FinishCountdown(bool needSelect)
 		{
 			if (this.CountdownMode == PlotAutoSelectOptionComponent.EPlotOptionCountdownMode.None)
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034CA2 RID: 216226 RVA: 0x00C7D3E8 File Offset: 0x00C7B5E8
+		// Token: 0x06029B97 RID: 170903 RVA: 0x00BCA7C0 File Offset: 0x00BC89C0
 		private void SelectTimeLimitOption(int optionIndex)
 		{
 			PlotOptionItem plotOptionItem = null;
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			selectOptionByIndexDelegate(optionIndex);
 		}
 
-		// Token: 0x06034CA3 RID: 216227 RVA: 0x00C7D47F File Offset: 0x00C7B67F
+		// Token: 0x06029B98 RID: 170904 RVA: 0x00BCA857 File Offset: 0x00BC8A57
 		private void ResetCountdown(bool hideBar)
 		{
 			this.CountdownMode = PlotAutoSelectOptionComponent.EPlotOptionCountdownMode.None;
@@ -435,13 +435,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.RefreshImmersiveMousePause();
 		}
 
-		// Token: 0x06034CA4 RID: 216228 RVA: 0x00C7D4B4 File Offset: 0x00C7B6B4
+		// Token: 0x06029B99 RID: 170905 RVA: 0x00BCA88C File Offset: 0x00BC8A8C
 		private UUISliderComponent GetCurrentCountdownBar()
 		{
 			return this.GetCountdownBar(this.CountdownMode);
 		}
 
-		// Token: 0x06034CA5 RID: 216229 RVA: 0x00C7D4C2 File Offset: 0x00C7B6C2
+		// Token: 0x06029B9A RID: 170906 RVA: 0x00BCA89A File Offset: 0x00BC8A9A
 		private UUISliderComponent GetCountdownBar(PlotAutoSelectOptionComponent.EPlotOptionCountdownMode mode)
 		{
 			if (mode == PlotAutoSelectOptionComponent.EPlotOptionCountdownMode.AutoSelect)
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return this.OptionLimitBar;
 		}
 
-		// Token: 0x06034CA6 RID: 216230 RVA: 0x00C7D4DF File Offset: 0x00C7B6DF
+		// Token: 0x06029B9B RID: 170907 RVA: 0x00BCA8B7 File Offset: 0x00BC8AB7
 		private void HideCountdownBars()
 		{
 			UUISliderComponent optionLimitBar = this.OptionLimitBar;
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			autoSelectTimeBar.GetRootComponent().SetUIActive(false);
 		}
 
-		// Token: 0x06034CA7 RID: 216231 RVA: 0x00C7D510 File Offset: 0x00C7B710
+		// Token: 0x06029B9C RID: 170908 RVA: 0x00BCA8E8 File Offset: 0x00BC8AE8
 		private void RefreshImmersiveMousePause()
 		{
 			bool flag = this.ShouldPauseImmersiveMouseForAutoOption();
@@ -484,13 +484,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			InputManager.Instance.ResumeImmersiveMouseMode(EImmersiveMouseModeReason.PlotAutoSelectOptionHover);
 		}
 
-		// Token: 0x06034CA8 RID: 216232 RVA: 0x00C7D55A File Offset: 0x00C7B75A
+		// Token: 0x06029B9D RID: 170909 RVA: 0x00BCA932 File Offset: 0x00BC8B32
 		private bool ShouldPauseImmersiveMouseForAutoOption()
 		{
 			return this.IsOptionShowing && PlotModel.Instance.PlotConfig.AutoPlayState == EAutoPlayState.Auto && InputManager.Instance.GetImmersiveInputWakeState() && this.HasVisibleOptionItem();
 		}
 
-		// Token: 0x06034CA9 RID: 216233 RVA: 0x00C7D58C File Offset: 0x00C7B78C
+		// Token: 0x06029B9E RID: 170910 RVA: 0x00BCA964 File Offset: 0x00BC8B64
 		private bool HasVisibleOptionItem()
 		{
 			Func<PlotOptionItem[]> getOptionItemsDelegate = this.GetOptionItemsDelegate;
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return false;
 		}
 
-		// Token: 0x06034CAA RID: 216234 RVA: 0x00C7D5D0 File Offset: 0x00C7B7D0
+		// Token: 0x06029B9F RID: 170911 RVA: 0x00BCA9A8 File Offset: 0x00BC8BA8
 		private int GetTotalDisplayCharLengthOfVisibleOptions()
 		{
 			Func<PlotOptionItem[]> getOptionItemsDelegate = this.GetOptionItemsDelegate;
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return num;
 		}
 
-		// Token: 0x06034CAB RID: 216235 RVA: 0x00C7D624 File Offset: 0x00C7B824
+		// Token: 0x06029BA0 RID: 170912 RVA: 0x00BCA9FC File Offset: 0x00BC8BFC
 		private float GetAudioRemainingTime()
 		{
 			float val = 0f;
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return Math.Max(val, (getAudioRemainingTimeDelegate != null) ? getAudioRemainingTimeDelegate() : 0f);
 		}
 
-		// Token: 0x06034CAC RID: 216236 RVA: 0x00C7D646 File Offset: 0x00C7B846
+		// Token: 0x06029BA1 RID: 170913 RVA: 0x00BCAA1E File Offset: 0x00BC8C1E
 		private float GetAutoSelectExtraWaitTime()
 		{
 			float val = 0f;
@@ -546,7 +546,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return Math.Max(val, (getAutoSelectExtraWaitTimeDelegate != null) ? getAutoSelectExtraWaitTimeDelegate() : 0f);
 		}
 
-		// Token: 0x06034CAD RID: 216237 RVA: 0x00C7D668 File Offset: 0x00C7B868
+		// Token: 0x06029BA2 RID: 170914 RVA: 0x00BCAA40 File Offset: 0x00BC8C40
 		private void RefreshAutoSelectCountdownByAudioRemaining()
 		{
 			if (this.CountdownMode != PlotAutoSelectOptionComponent.EPlotOptionCountdownMode.AutoSelect)
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.OptionLimitTime = this.OptionLimitTimeDuration + num2;
 		}
 
-		// Token: 0x06034CAE RID: 216238 RVA: 0x00C7D6BC File Offset: 0x00C7B8BC
+		// Token: 0x06029BA3 RID: 170915 RVA: 0x00BCAA94 File Offset: 0x00BC8C94
 		private PlotOptionItem GetAutoSelectOptionItem(ITalkItem content)
 		{
 			Func<PlotOptionItem> getSelectedOptionDelegate = this.GetSelectedOptionDelegate;
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return PlotAutoSelectOptionComponent.GetDefaultSelectedOptionItem((getOptionItemsDelegate != null) ? getOptionItemsDelegate() : null, content);
 		}
 
-		// Token: 0x06034CAF RID: 216239 RVA: 0x00C7D70C File Offset: 0x00C7B90C
+		// Token: 0x06029BA4 RID: 170916 RVA: 0x00BCAAE4 File Offset: 0x00BC8CE4
 		private bool IsConfiguredOptionLocked(ITalkItem content, int optionIndex)
 		{
 			if (((content != null) ? content.Options : null) == null || optionIndex < 0 || optionIndex >= content.Options.Count)
@@ -591,7 +591,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return !PlotModel.Instance.CheckOptionCondition(option, optionIndex, content);
 		}
 
-		// Token: 0x06034CB0 RID: 216240 RVA: 0x00C7D758 File Offset: 0x00C7B958
+		// Token: 0x06029BA5 RID: 170917 RVA: 0x00BCAB30 File Offset: 0x00BC8D30
 		private void PauseAutoSelectByLockedOption(ITalkItem content, int optionIndex)
 		{
 			PlotConfig plotConfig = PlotModel.Instance.PlotConfig;
@@ -624,14 +624,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			ScrollingTipsController.Instance.ShowTipsByText(text);
 		}
 
-		// Token: 0x06034CB1 RID: 216241 RVA: 0x00C7D820 File Offset: 0x00C7BA20
+		// Token: 0x06029BA6 RID: 170918 RVA: 0x00BCABF8 File Offset: 0x00BC8DF8
 		[NullableContext(1)]
 		private bool IsAutoSelectEnabled(ITalkItem content)
 		{
 			return PlotModel.Instance.PlotConfig.AutoPlayState == EAutoPlayState.Auto && content.Type.GetValueOrDefault() != ETalkItemType.SystemOption;
 		}
 
-		// Token: 0x06034CB2 RID: 216242 RVA: 0x00C7D858 File Offset: 0x00C7BA58
+		// Token: 0x06029BA7 RID: 170919 RVA: 0x00BCAC30 File Offset: 0x00BC8E30
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private ITalkItemDisableAutoSelectOptionGroup GetDisableAutoSelectConfig(ITalkItem content)
@@ -662,7 +662,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034CB3 RID: 216243 RVA: 0x00C7D8A0 File Offset: 0x00C7BAA0
+		// Token: 0x06029BA8 RID: 170920 RVA: 0x00BCAC78 File Offset: 0x00BC8E78
 		[NullableContext(1)]
 		private void ShowImportantTips(ITalkItemDisableAutoSelectOptionGroup config)
 		{
@@ -703,7 +703,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			importantList.SetUIActive(true);
 		}
 
-		// Token: 0x06034CB4 RID: 216244 RVA: 0x00C7D968 File Offset: 0x00C7BB68
+		// Token: 0x06029BA9 RID: 170921 RVA: 0x00BCAD40 File Offset: 0x00BC8F40
 		private void HideImportantTips()
 		{
 			UUIItem importantList = this.ImportantList;
@@ -714,46 +714,46 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			importantList.SetUIActive(false);
 		}
 
-		// Token: 0x0401C1FC RID: 115196
+		// Token: 0x04016C27 RID: 93223
 		private const int INVALID_OPTION_INDEX = -1;
 
-		// Token: 0x0401C1FD RID: 115197
+		// Token: 0x04016C28 RID: 93224
 		private const float MIN_AUTO_SELECT_WAIT_TIME = 3000f;
 
-		// Token: 0x0401C1FE RID: 115198
+		// Token: 0x04016C29 RID: 93225
 		[Nullable(1)]
 		private const string DEFAULT_IMPORTANT_TEXT_KEY = "ImportantSelectionDefault";
 
-		// Token: 0x0401C1FF RID: 115199
+		// Token: 0x04016C2A RID: 93226
 		[Nullable(1)]
 		private const string DEFAULT_IMPORTANT_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Image/InteractionIcon/T_InteractionExclamation.T_InteractionExclamation";
 
-		// Token: 0x0401C200 RID: 115200
+		// Token: 0x04016C2B RID: 93227
 		[Nullable(1)]
 		private const string LOCKED_OPTION_TIPS_TEXT_ID = "LockedOptionPauseAutoSelection";
 
-		// Token: 0x0401C201 RID: 115201
+		// Token: 0x04016C2C RID: 93228
 		private UUISliderComponent OptionLimitBar;
 
-		// Token: 0x0401C202 RID: 115202
+		// Token: 0x04016C2D RID: 93229
 		private UUISliderComponent AutoSelectTimeBar;
 
-		// Token: 0x0401C203 RID: 115203
+		// Token: 0x04016C2E RID: 93230
 		private UUIItem ImportantList;
 
-		// Token: 0x0401C204 RID: 115204
+		// Token: 0x04016C2F RID: 93231
 		private UUITexture ImportantOptionTipsIcon;
 
-		// Token: 0x0401C205 RID: 115205
+		// Token: 0x04016C30 RID: 93232
 		private UUIText ImportantOptionTipsText;
 
-		// Token: 0x0401C206 RID: 115206
+		// Token: 0x04016C31 RID: 93233
 		private Func<ITalkItem> GetCurrentContentDelegate;
 
-		// Token: 0x0401C207 RID: 115207
+		// Token: 0x04016C32 RID: 93234
 		private Func<PlotOptionItem> GetSelectedOptionDelegate;
 
-		// Token: 0x0401C208 RID: 115208
+		// Token: 0x04016C33 RID: 93235
 		[Nullable(new byte[]
 		{
 			2,
@@ -762,16 +762,16 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 		})]
 		private Func<PlotOptionItem[]> GetOptionItemsDelegate;
 
-		// Token: 0x0401C209 RID: 115209
+		// Token: 0x04016C34 RID: 93236
 		private Func<float> GetAudioRemainingTimeDelegate;
 
-		// Token: 0x0401C20A RID: 115210
+		// Token: 0x04016C35 RID: 93237
 		private Func<float> GetAutoSelectExtraWaitTimeDelegate;
 
-		// Token: 0x0401C20B RID: 115211
+		// Token: 0x04016C36 RID: 93238
 		private Action<int> SelectOptionByIndexDelegate;
 
-		// Token: 0x0401C20C RID: 115212
+		// Token: 0x04016C37 RID: 93239
 		[Nullable(new byte[]
 		{
 			2,
@@ -780,36 +780,36 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 		})]
 		private Action<string, UUITexture> SetTextureByPathDelegate;
 
-		// Token: 0x0401C20D RID: 115213
+		// Token: 0x04016C38 RID: 93240
 		private Action RefreshAutoPlayButtonDelegate;
 
-		// Token: 0x0401C20E RID: 115214
+		// Token: 0x04016C39 RID: 93241
 		private PlotAutoSelectOptionComponent.EPlotOptionCountdownMode CountdownMode;
 
-		// Token: 0x0401C20F RID: 115215
+		// Token: 0x04016C3A RID: 93242
 		private float OptionLimitTime;
 
-		// Token: 0x0401C210 RID: 115216
+		// Token: 0x04016C3B RID: 93243
 		private float OptionLimitTimeDuration;
 
-		// Token: 0x0401C211 RID: 115217
+		// Token: 0x04016C3C RID: 93244
 		private int CountdownOptionIndex = -1;
 
-		// Token: 0x0401C212 RID: 115218
+		// Token: 0x04016C3D RID: 93245
 		private bool IsOptionShowing;
 
-		// Token: 0x0401C213 RID: 115219
+		// Token: 0x04016C3E RID: 93246
 		private bool IsImmersiveMousePaused;
 
-		// Token: 0x0200B21B RID: 45595
+		// Token: 0x02009C54 RID: 40020
 		[NullableContext(0)]
 		private enum EPlotOptionCountdownMode
 		{
-			// Token: 0x04035FFC RID: 221180
+			// Token: 0x04030A50 RID: 199248
 			None,
-			// Token: 0x04035FFD RID: 221181
+			// Token: 0x04030A51 RID: 199249
 			TimeLimit,
-			// Token: 0x04035FFE RID: 221182
+			// Token: 0x04030A52 RID: 199250
 			AutoSelect
 		}
 	}

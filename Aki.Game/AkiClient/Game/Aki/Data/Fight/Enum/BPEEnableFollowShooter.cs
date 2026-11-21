@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Fight.Enum
 {
-	// Token: 0x02003F7B RID: 16251
+	// Token: 0x02003218 RID: 12824
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Fight/Enum/BPEEnableFollowShooter.BPEEnableFollowShooter")]
 	public enum BPEEnableFollowShooter : byte
 	{
-		// Token: 0x04015445 RID: 87109
+		// Token: 0x040112E8 RID: 70376
 		AutoDetectedFreezeWater,
-		// Token: 0x04015446 RID: 87110
+		// Token: 0x040112E9 RID: 70377
 		GameAbility,
-		// Token: 0x04015447 RID: 87111
+		// Token: 0x040112EA RID: 70378
 		AutoDetectedGamePartitionObject,
-		// Token: 0x04015448 RID: 87112
+		// Token: 0x040112EB RID: 70379
 		BPEEnableFollowShooter_MAX
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D7C RID: 7548
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F8D RID: 8077
 	public class IQteHourglassConfig
 	{
-		// Token: 0x0600A1C5 RID: 41413 RVA: 0x00170464 File Offset: 0x0016E664
+		// Token: 0x0600ABB1 RID: 43953 RVA: 0x00184888 File Offset: 0x00182A88
 		private IQteHourglassConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A1C6 RID: 41414 RVA: 0x0017049C File Offset: 0x0016E69C
+		// Token: 0x0600ABB2 RID: 43954 RVA: 0x001848C0 File Offset: 0x00182AC0
 		public static IQteHourglassConfig Create([Nullable(2)] IQteHourglassConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1C7 RID: 41415 RVA: 0x001704AF File Offset: 0x0016E6AF
+		// Token: 0x0600ABB3 RID: 43955 RVA: 0x001848D3 File Offset: 0x00182AD3
 		public static IQteHourglassConfig CreateFromSetValue([Nullable(2)] IQteHourglassConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1C8 RID: 41416 RVA: 0x001704C2 File Offset: 0x0016E6C2
+		// Token: 0x0600ABB4 RID: 43956 RVA: 0x001848E6 File Offset: 0x00182AE6
 		public IQteHourglassConfig_SetValue ToSetValue()
 		{
 			return new IQteHourglassConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031FF RID: 12799
-		// (get) Token: 0x0600A1C9 RID: 41417 RVA: 0x001704F9 File Offset: 0x0016E6F9
-		// (set) Token: 0x0600A1CA RID: 41418 RVA: 0x00170524 File Offset: 0x0016E724
+		// Token: 0x17003493 RID: 13459
+		// (get) Token: 0x0600ABB5 RID: 43957 RVA: 0x0018491D File Offset: 0x00182B1D
+		// (set) Token: 0x0600ABB6 RID: 43958 RVA: 0x00184948 File Offset: 0x00182B48
 		public virtual int QteId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003200 RID: 12800
-		// (get) Token: 0x0600A1CB RID: 41419 RVA: 0x00170532 File Offset: 0x0016E732
-		// (set) Token: 0x0600A1CC RID: 41420 RVA: 0x00170561 File Offset: 0x0016E761
+		// Token: 0x17003494 RID: 13460
+		// (get) Token: 0x0600ABB7 RID: 43959 RVA: 0x00184956 File Offset: 0x00182B56
+		// (set) Token: 0x0600ABB8 RID: 43960 RVA: 0x00184985 File Offset: 0x00182B85
 		public virtual float TrailTime
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003201 RID: 12801
-		// (get) Token: 0x0600A1CD RID: 41421 RVA: 0x0017056F File Offset: 0x0016E76F
-		// (set) Token: 0x0600A1CE RID: 41422 RVA: 0x0017059A File Offset: 0x0016E79A
+		// Token: 0x17003495 RID: 13461
+		// (get) Token: 0x0600ABB9 RID: 43961 RVA: 0x00184993 File Offset: 0x00182B93
+		// (set) Token: 0x0600ABBA RID: 43962 RVA: 0x001849BE File Offset: 0x00182BBE
 		public virtual string TrailCurveX
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003202 RID: 12802
-		// (get) Token: 0x0600A1CF RID: 41423 RVA: 0x001705A8 File Offset: 0x0016E7A8
-		// (set) Token: 0x0600A1D0 RID: 41424 RVA: 0x001705D3 File Offset: 0x0016E7D3
+		// Token: 0x17003496 RID: 13462
+		// (get) Token: 0x0600ABBB RID: 43963 RVA: 0x001849CC File Offset: 0x00182BCC
+		// (set) Token: 0x0600ABBC RID: 43964 RVA: 0x001849F7 File Offset: 0x00182BF7
 		public virtual string TrailCurveY
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006146 RID: 24902
+		// Token: 0x040066C2 RID: 26306
 		[Nullable(2)]
 		protected IQteHourglassConfig FbInstance;
 
-		// Token: 0x04006147 RID: 24903
+		// Token: 0x040066C3 RID: 26307
 		[Nullable(2)]
 		protected IQteHourglassConfig_SetValue PocoInterface;
 	}

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001270 RID: 4720
+	// Token: 0x020012DF RID: 4831
 	[NetMessage(EMessageId.SplinePositionUpdateRequest)]
 	public sealed class SplinePositionUpdateRequest : IMessage<SplinePositionUpdateRequest>, IMessage, IEquatable<SplinePositionUpdateRequest>, IDeepCloneable<SplinePositionUpdateRequest>, IBufferMessage
 	{
-		// Token: 0x06019248 RID: 102984 RVA: 0x003A843E File Offset: 0x003A663E
+		// Token: 0x06019C7E RID: 105598 RVA: 0x003C2B8B File Offset: 0x003C0D8B
 		[NullableContext(1)]
 		public static SplinePositionUpdateRequest Create()
 		{
 			return new SplinePositionUpdateRequest();
 		}
 
-		// Token: 0x170054CD RID: 21709
-		// (get) Token: 0x06019249 RID: 102985 RVA: 0x003A8445 File Offset: 0x003A6645
+		// Token: 0x1700574E RID: 22350
+		// (get) Token: 0x06019C7F RID: 105599 RVA: 0x003C2B92 File Offset: 0x003C0D92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054CE RID: 21710
-		// (get) Token: 0x0601924A RID: 102986 RVA: 0x003A8448 File Offset: 0x003A6648
+		// Token: 0x1700574F RID: 22351
+		// (get) Token: 0x06019C80 RID: 105600 RVA: 0x003C2B95 File Offset: 0x003C0D95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601924B RID: 102987 RVA: 0x003A844F File Offset: 0x003A664F
+		// Token: 0x06019C81 RID: 105601 RVA: 0x003C2B9C File Offset: 0x003C0D9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SplinePositionUpdateRequest()
 		{
 		}
 
-		// Token: 0x0601924C RID: 102988 RVA: 0x003A8458 File Offset: 0x003A6658
+		// Token: 0x06019C82 RID: 105602 RVA: 0x003C2BA4 File Offset: 0x003C0DA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SplinePositionUpdateRequest(SplinePositionUpdateRequest other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601924D RID: 102989 RVA: 0x003A84C4 File Offset: 0x003A66C4
+		// Token: 0x06019C83 RID: 105603 RVA: 0x003C2C10 File Offset: 0x003C0E10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SplinePositionUpdateRequest Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new SplinePositionUpdateRequest(this);
 		}
 
-		// Token: 0x170054CF RID: 21711
-		// (get) Token: 0x0601924E RID: 102990 RVA: 0x003A84CC File Offset: 0x003A66CC
-		// (set) Token: 0x0601924F RID: 102991 RVA: 0x003A84D4 File Offset: 0x003A66D4
+		// Token: 0x17005750 RID: 22352
+		// (get) Token: 0x06019C84 RID: 105604 RVA: 0x003C2C18 File Offset: 0x003C0E18
+		// (set) Token: 0x06019C85 RID: 105605 RVA: 0x003C2C20 File Offset: 0x003C0E20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int InstId
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054D0 RID: 21712
-		// (get) Token: 0x06019250 RID: 102992 RVA: 0x003A84DD File Offset: 0x003A66DD
-		// (set) Token: 0x06019251 RID: 102993 RVA: 0x003A84E5 File Offset: 0x003A66E5
+		// Token: 0x17005751 RID: 22353
+		// (get) Token: 0x06019C86 RID: 105606 RVA: 0x003C2C29 File Offset: 0x003C0E29
+		// (set) Token: 0x06019C87 RID: 105607 RVA: 0x003C2C31 File Offset: 0x003C0E31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SplineId
@@ -105,9 +105,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054D1 RID: 21713
-		// (get) Token: 0x06019252 RID: 102994 RVA: 0x003A84EE File Offset: 0x003A66EE
-		// (set) Token: 0x06019253 RID: 102995 RVA: 0x003A84F6 File Offset: 0x003A66F6
+		// Token: 0x17005752 RID: 22354
+		// (get) Token: 0x06019C88 RID: 105608 RVA: 0x003C2C3A File Offset: 0x003C0E3A
+		// (set) Token: 0x06019C89 RID: 105609 RVA: 0x003C2C42 File Offset: 0x003C0E42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SplineIdx
@@ -122,9 +122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054D2 RID: 21714
-		// (get) Token: 0x06019254 RID: 102996 RVA: 0x003A84FF File Offset: 0x003A66FF
-		// (set) Token: 0x06019255 RID: 102997 RVA: 0x003A8507 File Offset: 0x003A6707
+		// Token: 0x17005753 RID: 22355
+		// (get) Token: 0x06019C8A RID: 105610 RVA: 0x003C2C4B File Offset: 0x003C0E4B
+		// (set) Token: 0x06019C8B RID: 105611 RVA: 0x003C2C53 File Offset: 0x003C0E53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityId
@@ -139,9 +139,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054D3 RID: 21715
-		// (get) Token: 0x06019256 RID: 102998 RVA: 0x003A8510 File Offset: 0x003A6710
-		// (set) Token: 0x06019257 RID: 102999 RVA: 0x003A8518 File Offset: 0x003A6718
+		// Token: 0x17005754 RID: 22356
+		// (get) Token: 0x06019C8C RID: 105612 RVA: 0x003C2C5C File Offset: 0x003C0E5C
+		// (set) Token: 0x06019C8D RID: 105613 RVA: 0x003C2C64 File Offset: 0x003C0E64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Dir
@@ -156,9 +156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170054D4 RID: 21716
-		// (get) Token: 0x06019258 RID: 103000 RVA: 0x003A8521 File Offset: 0x003A6721
-		// (set) Token: 0x06019259 RID: 103001 RVA: 0x003A8529 File Offset: 0x003A6729
+		// Token: 0x17005755 RID: 22357
+		// (get) Token: 0x06019C8E RID: 105614 RVA: 0x003C2C6D File Offset: 0x003C0E6D
+		// (set) Token: 0x06019C8F RID: 105615 RVA: 0x003C2C75 File Offset: 0x003C0E75
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcTimeScheduleSplineType SplineType
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601925A RID: 103002 RVA: 0x003A8532 File Offset: 0x003A6732
+		// Token: 0x06019C90 RID: 105616 RVA: 0x003C2C7E File Offset: 0x003C0E7E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SplinePositionUpdateRequest);
 		}
 
-		// Token: 0x0601925B RID: 103003 RVA: 0x003A8540 File Offset: 0x003A6740
+		// Token: 0x06019C91 RID: 105617 RVA: 0x003C2C8C File Offset: 0x003C0E8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SplinePositionUpdateRequest other)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.InstId == other.InstId && this.SplineId == other.SplineId && this.SplineIdx == other.SplineIdx && this.EntityId == other.EntityId && this.Dir == other.Dir && this.SplineType == other.SplineType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601925C RID: 103004 RVA: 0x003A85CC File Offset: 0x003A67CC
+		// Token: 0x06019C92 RID: 105618 RVA: 0x003C2D18 File Offset: 0x003C0F18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601925D RID: 103005 RVA: 0x003A868F File Offset: 0x003A688F
+		// Token: 0x06019C93 RID: 105619 RVA: 0x003C2DDB File Offset: 0x003C0FDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601925E RID: 103006 RVA: 0x003A869C File Offset: 0x003A689C
+		// Token: 0x06019C94 RID: 105620 RVA: 0x003C2DE8 File Offset: 0x003C0FE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -242,40 +242,40 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601925F RID: 103007 RVA: 0x003A86A8 File Offset: 0x003A68A8
+		// Token: 0x06019C95 RID: 105621 RVA: 0x003C2DF4 File Offset: 0x003C0FF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.SplineIdx != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.SplineIdx);
-			}
-			if (this.InstId != 0)
-			{
-				output.WriteRawTag(32);
-				output.WriteInt32(this.InstId);
-			}
-			if (this.Dir)
-			{
-				output.WriteRawTag(40);
-				output.WriteBool(this.Dir);
-			}
-			if (this.SplineType != NpcTimeScheduleSplineType.PathSpline)
-			{
-				output.WriteRawTag(72);
-				output.WriteEnum((int)this.SplineType);
-			}
 			if (this.SplineId != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.SplineId);
 			}
 			if (this.EntityId != 0L)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(24);
 				output.WriteInt64(this.EntityId);
+			}
+			if (this.Dir)
+			{
+				output.WriteRawTag(32);
+				output.WriteBool(this.Dir);
+			}
+			if (this.SplineType != NpcTimeScheduleSplineType.PathSpline)
+			{
+				output.WriteRawTag(48);
+				output.WriteEnum((int)this.SplineType);
+			}
+			if (this.SplineIdx != 0)
+			{
+				output.WriteRawTag(56);
+				output.WriteInt32(this.SplineIdx);
+			}
+			if (this.InstId != 0)
+			{
+				output.WriteRawTag(96);
+				output.WriteInt32(this.InstId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -283,7 +283,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019260 RID: 103008 RVA: 0x003A8770 File Offset: 0x003A6970
+		// Token: 0x06019C96 RID: 105622 RVA: 0x003C2EC0 File Offset: 0x003C10C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -320,7 +320,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06019261 RID: 103009 RVA: 0x003A881C File Offset: 0x003A6A1C
+		// Token: 0x06019C97 RID: 105623 RVA: 0x003C2F6C File Offset: 0x003C116C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SplinePositionUpdateRequest other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06019262 RID: 103010 RVA: 0x003A88BC File Offset: 0x003A6ABC
+		// Token: 0x06019C98 RID: 105624 RVA: 0x003C300C File Offset: 0x003C120C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06019263 RID: 103011 RVA: 0x003A88C8 File Offset: 0x003A6AC8
+		// Token: 0x06019C99 RID: 105625 RVA: 0x003C3018 File Offset: 0x003C1218
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,19 +376,19 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 40U)
+				if (num <= 32U)
 				{
-					if (num == 8U)
+					if (num == 16U)
 					{
-						this.SplineIdx = input.ReadInt32();
+						this.SplineId = input.ReadInt32();
+						continue;
+					}
+					if (num == 24U)
+					{
+						this.EntityId = input.ReadInt64();
 						continue;
 					}
 					if (num == 32U)
-					{
-						this.InstId = input.ReadInt32();
-						continue;
-					}
-					if (num == 40U)
 					{
 						this.Dir = input.ReadBool();
 						continue;
@@ -396,19 +396,19 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 72U)
+					if (num == 48U)
 					{
 						this.SplineType = (NpcTimeScheduleSplineType)input.ReadEnum();
 						continue;
 					}
-					if (num == 88U)
+					if (num == 56U)
 					{
-						this.SplineId = input.ReadInt32();
+						this.SplineIdx = input.ReadInt32();
 						continue;
 					}
 					if (num == 96U)
 					{
-						this.EntityId = input.ReadInt64();
+						this.InstId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -416,43 +416,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040093FC RID: 37884
+		// Token: 0x04009826 RID: 38950
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040093FD RID: 37885
-		public const int InstIdFieldNumber = 4;
+		// Token: 0x04009827 RID: 38951
+		public const int InstIdFieldNumber = 12;
 
-		// Token: 0x040093FE RID: 37886
+		// Token: 0x04009828 RID: 38952
 		private int instId_;
 
-		// Token: 0x040093FF RID: 37887
-		public const int SplineIdFieldNumber = 11;
+		// Token: 0x04009829 RID: 38953
+		public const int SplineIdFieldNumber = 2;
 
-		// Token: 0x04009400 RID: 37888
+		// Token: 0x0400982A RID: 38954
 		private int splineId_;
 
-		// Token: 0x04009401 RID: 37889
-		public const int SplineIdxFieldNumber = 1;
+		// Token: 0x0400982B RID: 38955
+		public const int SplineIdxFieldNumber = 7;
 
-		// Token: 0x04009402 RID: 37890
+		// Token: 0x0400982C RID: 38956
 		private int splineIdx_;
 
-		// Token: 0x04009403 RID: 37891
-		public const int EntityIdFieldNumber = 12;
+		// Token: 0x0400982D RID: 38957
+		public const int EntityIdFieldNumber = 3;
 
-		// Token: 0x04009404 RID: 37892
+		// Token: 0x0400982E RID: 38958
 		private long entityId_;
 
-		// Token: 0x04009405 RID: 37893
-		public const int DirFieldNumber = 5;
+		// Token: 0x0400982F RID: 38959
+		public const int DirFieldNumber = 4;
 
-		// Token: 0x04009406 RID: 37894
+		// Token: 0x04009830 RID: 38960
 		private bool dir_;
 
-		// Token: 0x04009407 RID: 37895
-		public const int SplineTypeFieldNumber = 9;
+		// Token: 0x04009831 RID: 38961
+		public const int SplineTypeFieldNumber = 6;
 
-		// Token: 0x04009408 RID: 37896
+		// Token: 0x04009832 RID: 38962
 		private NpcTimeScheduleSplineType splineType_;
 	}
 }

@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhoneMessage;
 using UnrealEngine;
 
-// Token: 0x0200252B RID: 9515
+// Token: 0x02001A12 RID: 6674
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 {
-	// Token: 0x06013215 RID: 78357 RVA: 0x004BF990 File Offset: 0x004BDB90
+	// Token: 0x060106D5 RID: 67285 RVA: 0x004CD69C File Offset: 0x004CB89C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,25 +33,25 @@ public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 		};
 	}
 
-	// Token: 0x06013216 RID: 78358 RVA: 0x004BFA4F File Offset: 0x004BDC4F
+	// Token: 0x060106D6 RID: 67286 RVA: 0x004CD75B File Offset: 0x004CB95B
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.PhoneMsgDialogBgThemeCharmUpdate, new Action(this.OnRedDotUpdate));
 	}
 
-	// Token: 0x06013217 RID: 78359 RVA: 0x004BFA6D File Offset: 0x004BDC6D
+	// Token: 0x060106D7 RID: 67287 RVA: 0x004CD779 File Offset: 0x004CB979
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.PhoneMsgDialogBgThemeCharmUpdate, new Action(this.OnRedDotUpdate));
 	}
 
-	// Token: 0x06013218 RID: 78360 RVA: 0x004BFA8B File Offset: 0x004BDC8B
+	// Token: 0x060106D8 RID: 67288 RVA: 0x004CD797 File Offset: 0x004CB997
 	private void OnRedDotUpdate()
 	{
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06013219 RID: 78361 RVA: 0x004BFA93 File Offset: 0x004BDC93
+	// Token: 0x060106D9 RID: 67289 RVA: 0x004CD79F File Offset: 0x004CB99F
 	public void RefreshRedDot()
 	{
 		UUIItem item = base.GetItem(5);
@@ -59,7 +59,7 @@ public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 		item.SetUIActive(phoneMsgThemeData != null && phoneMsgThemeData.IsHasRedDot());
 	}
 
-	// Token: 0x0601321A RID: 78362 RVA: 0x004BFAB4 File Offset: 0x004BDCB4
+	// Token: 0x060106DA RID: 67290 RVA: 0x004CD7C0 File Offset: 0x004CB9C0
 	public override void Refresh(PhoneMsgThemeItemData data)
 	{
 		if (data == null)
@@ -78,7 +78,7 @@ public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 		this.SetToggleState(data.IsSelected, true);
 	}
 
-	// Token: 0x0601321B RID: 78363 RVA: 0x004BFB54 File Offset: 0x004BDD54
+	// Token: 0x060106DB RID: 67291 RVA: 0x004CD860 File Offset: 0x004CBA60
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.OnToggleCallBack != null && this.PhoneMsgThemeData != null)
@@ -93,7 +93,7 @@ public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 		}
 	}
 
-	// Token: 0x0601321C RID: 78364 RVA: 0x004BFBC0 File Offset: 0x004BDDC0
+	// Token: 0x060106DC RID: 67292 RVA: 0x004CD8CC File Offset: 0x004CBACC
 	public void SetToggleState(bool state, bool isFirstRefresh = false)
 	{
 		if (this.PhoneMsgThemeData == null)
@@ -105,19 +105,19 @@ public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 		base.GetExtendToggle(0).SetToggleState(state2, false, isFirstRefresh, isFirstRefresh);
 	}
 
-	// Token: 0x0601321D RID: 78365 RVA: 0x004BFBFB File Offset: 0x004BDDFB
+	// Token: 0x060106DD RID: 67293 RVA: 0x004CD907 File Offset: 0x004CBB07
 	public void OnSelected()
 	{
 		this.SetToggleState(true, false);
 	}
 
-	// Token: 0x0601321E RID: 78366 RVA: 0x004BFC05 File Offset: 0x004BDE05
+	// Token: 0x060106DE RID: 67294 RVA: 0x004CD911 File Offset: 0x004CBB11
 	public void OnDeselected()
 	{
 		this.SetToggleState(false, false);
 	}
 
-	// Token: 0x0601321F RID: 78367 RVA: 0x004BFC10 File Offset: 0x004BDE10
+	// Token: 0x060106DF RID: 67295 RVA: 0x004CD91C File Offset: 0x004CBB1C
 	public void RefreshSpeakerNameTextColor(int bgId)
 	{
 		bool flag = PhoneMsgModel.Instance.IsDefaultChatBg(bgId);
@@ -130,17 +130,17 @@ public class PhoneMsgThemeItem : SyncGridProxyAbstract<PhoneMsgThemeItemData>
 		text.SetUIActive(!flag);
 	}
 
-	// Token: 0x06013220 RID: 78368 RVA: 0x004BFC4C File Offset: 0x004BDE4C
+	// Token: 0x060106E0 RID: 67296 RVA: 0x004CD958 File Offset: 0x004CBB58
 	public void HideRedDot()
 	{
 		base.GetItem(5).SetUIActive(false);
 	}
 
-	// Token: 0x04009077 RID: 36983
+	// Token: 0x040091CC RID: 37324
 	[Nullable(2)]
 	private PhoneMsgThemeItemData PhoneMsgThemeData;
 
-	// Token: 0x04009078 RID: 36984
+	// Token: 0x040091CD RID: 37325
 	[Nullable(new byte[]
 	{
 		2,

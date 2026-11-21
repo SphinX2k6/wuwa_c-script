@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200151F RID: 5407
+// Token: 0x020009D7 RID: 2519
 public class TimePointRewardData
 {
-	// Token: 0x17000D42 RID: 3394
-	// (get) Token: 0x06009A35 RID: 39477 RVA: 0x00215ADB File Offset: 0x00213CDB
+	// Token: 0x17000D63 RID: 3427
+	// (get) Token: 0x06006E13 RID: 28179 RVA: 0x0021F877 File Offset: 0x0021DA77
 	public ETimePointRewardState RewardState
 	{
 		get
@@ -21,21 +21,21 @@ public class TimePointRewardData
 		}
 	}
 
-	// Token: 0x040043DE RID: 17374
+	// Token: 0x04004484 RID: 17540
 	public int Id;
 
-	// Token: 0x040043DF RID: 17375
+	// Token: 0x04004485 RID: 17541
 	public long RewardTime;
 
-	// Token: 0x040043E0 RID: 17376
+	// Token: 0x04004486 RID: 17542
 	public bool HasClaimed;
 
-	// Token: 0x040043E1 RID: 17377
+	// Token: 0x04004487 RID: 17543
 	public bool HasUnlock;
 
-	// Token: 0x040043E2 RID: 17378
+	// Token: 0x04004488 RID: 17544
 	public int CurrentCheckInCount;
 
-	// Token: 0x040043E3 RID: 17379
+	// Token: 0x04004489 RID: 17545
 	public int ConditionCount;
 }

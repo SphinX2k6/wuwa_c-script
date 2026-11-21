@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200718F RID: 29071
+	// Token: 0x02007964 RID: 31076
 	public static class ISplineMovePattern_UnionVerify
 	{
-		// Token: 0x060338B7 RID: 211127 RVA: 0x006F14D4 File Offset: 0x006EF6D4
+		// Token: 0x06036BB1 RID: 224177 RVA: 0x00752710 File Offset: 0x00750910
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -31,6 +31,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IMechaAirPassageMoveVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
+				result = IPetalGrabMoveVerify.Verify(verifier, tablePos);
+				break;
+			case 8:
 				result = IMotorcycleTrackVerify.Verify(verifier, tablePos);
 				break;
 			default:

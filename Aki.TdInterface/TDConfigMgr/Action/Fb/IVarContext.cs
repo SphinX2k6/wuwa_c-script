@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024E7 RID: 9447
+	// Token: 0x0200278C RID: 10124
 	public class IVarContext
 	{
-		// Token: 0x0600D2EC RID: 53996 RVA: 0x001F49D2 File Offset: 0x001F2BD2
-		[NullableContext(1)]
+		// Token: 0x0600E042 RID: 57410 RVA: 0x0021026A File Offset: 0x0020E46A
 		public static IVarContext Create(IVarContext? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AE0 RID: 15072
-		// (get) Token: 0x0600D2ED RID: 53997 RVA: 0x001F49F1 File Offset: 0x001F2BF1
+		// Token: 0x17003DD8 RID: 15832
+		// (get) Token: 0x0600E043 RID: 57411 RVA: 0x00210289 File Offset: 0x0020E489
 		public virtual EVarContext Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073B1 RID: 29617
+		// Token: 0x040079FE RID: 31230
 		private IVarContext Instance;
 	}
 }

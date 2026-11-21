@@ -4,12 +4,12 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 using UnrealEngine;
 
-// Token: 0x02002BCD RID: 11213
+// Token: 0x02002148 RID: 8520
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerDefenseEventRaycastResult
 {
-	// Token: 0x0601748A RID: 95370 RVA: 0x005EAEC4 File Offset: 0x005E90C4
+	// Token: 0x06014EBB RID: 85691 RVA: 0x00617A5C File Offset: 0x00615C5C
 	[NullableContext(2)]
 	public bool Raycast(TsTowerDefenseEventActor target, ETowerDefenseEventTrapPlacementType placementType, float degree, bool canRecycle)
 	{
@@ -49,7 +49,7 @@ public class TowerDefenseEventRaycastResult
 		return flag;
 	}
 
-	// Token: 0x0601748B RID: 95371 RVA: 0x005EB098 File Offset: 0x005E9298
+	// Token: 0x06014EBC RID: 85692 RVA: 0x00617C30 File Offset: 0x00615E30
 	public void Reset()
 	{
 		this.BuildingGridRaycastResult.Target = new TWeakObjectPtr<UObject>(null);
@@ -65,7 +65,7 @@ public class TowerDefenseEventRaycastResult
 		this.IsStateDirty = this.UpdateRaycastState(this.Target, false);
 	}
 
-	// Token: 0x0601748C RID: 95372 RVA: 0x005EB180 File Offset: 0x005E9380
+	// Token: 0x06014EBD RID: 85693 RVA: 0x00617D18 File Offset: 0x00615F18
 	[NullableContext(2)]
 	private bool UpdateRaycastState(TsTowerDefenseEventActor target, bool canRecycle)
 	{
@@ -74,7 +74,7 @@ public class TowerDefenseEventRaycastResult
 		return flag || flag2;
 	}
 
-	// Token: 0x0601748D RID: 95373 RVA: 0x005EB1A0 File Offset: 0x005E93A0
+	// Token: 0x06014EBE RID: 85694 RVA: 0x00617D38 File Offset: 0x00615F38
 	[NullableContext(2)]
 	private bool UpdateBuildState(TsTowerDefenseEventActor target)
 	{
@@ -107,7 +107,7 @@ public class TowerDefenseEventRaycastResult
 		return result;
 	}
 
-	// Token: 0x0601748E RID: 95374 RVA: 0x005EB274 File Offset: 0x005E9474
+	// Token: 0x06014EBF RID: 85695 RVA: 0x00617E0C File Offset: 0x0061600C
 	private bool UpdateRecycleState(bool canRecycle)
 	{
 		bool flag = canRecycle && this.RaycastTarget != null;
@@ -116,63 +116,63 @@ public class TowerDefenseEventRaycastResult
 		return result;
 	}
 
-	// Token: 0x0400AE36 RID: 44598
+	// Token: 0x0400B23B RID: 45627
 	private FKuroBuildingGridRaycastResult BuildingGridRaycastResult = new FKuroBuildingGridRaycastResult();
 
-	// Token: 0x0400AE37 RID: 44599
+	// Token: 0x0400B23C RID: 45628
 	public Vector Start = Vector.Create();
 
-	// Token: 0x0400AE38 RID: 44600
+	// Token: 0x0400B23D RID: 45629
 	public Vector End = Vector.Create();
 
-	// Token: 0x0400AE39 RID: 44601
+	// Token: 0x0400B23E RID: 45630
 	[Nullable(2)]
 	public TsTowerDefenseEventActor Target;
 
-	// Token: 0x0400AE3A RID: 44602
+	// Token: 0x0400B23F RID: 45631
 	[Nullable(2)]
 	public TsTowerDefenseEventActor RaycastTarget;
 
-	// Token: 0x0400AE3B RID: 44603
+	// Token: 0x0400B240 RID: 45632
 	[Nullable(2)]
 	public AKuroBuildingGrid Grid;
 
-	// Token: 0x0400AE3C RID: 44604
+	// Token: 0x0400B241 RID: 45633
 	public Vector Location = Vector.Create();
 
-	// Token: 0x0400AE3D RID: 44605
+	// Token: 0x0400B242 RID: 45634
 	public Rotator Rotation = Rotator.Create();
 
-	// Token: 0x0400AE3E RID: 44606
+	// Token: 0x0400B243 RID: 45635
 	public Vector2D Coords = Vector2D.Create(0.0, 0.0);
 
-	// Token: 0x0400AE3F RID: 44607
+	// Token: 0x0400B244 RID: 45636
 	public float Degree;
 
-	// Token: 0x0400AE40 RID: 44608
+	// Token: 0x0400B245 RID: 45637
 	public Vector Normal = Vector.Create();
 
-	// Token: 0x0400AE41 RID: 44609
+	// Token: 0x0400B246 RID: 45638
 	public ETowerDefenseEventTrapPlacementType PlacementType = ETowerDefenseEventTrapPlacementType.Ground;
 
-	// Token: 0x0400AE42 RID: 44610
+	// Token: 0x0400B247 RID: 45639
 	public bool IsStateDirty;
 
-	// Token: 0x0400AE43 RID: 44611
+	// Token: 0x0400B248 RID: 45640
 	public bool IsInvalidPlacement;
 
-	// Token: 0x0400AE44 RID: 44612
+	// Token: 0x0400B249 RID: 45641
 	public bool IsCanPlace;
 
-	// Token: 0x0400AE45 RID: 44613
+	// Token: 0x0400B24A RID: 45642
 	public bool IsCanBuild;
 
-	// Token: 0x0400AE46 RID: 44614
+	// Token: 0x0400B24B RID: 45643
 	public bool IsPolluted;
 
-	// Token: 0x0400AE47 RID: 44615
+	// Token: 0x0400B24C RID: 45644
 	public int PollutedNum;
 
-	// Token: 0x0400AE48 RID: 44616
+	// Token: 0x0400B24D RID: 45645
 	public bool IsCanRecycle;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020027CA RID: 10186
+// Token: 0x02001D45 RID: 7493
 public enum ERoleSkillDescType
 {
-	// Token: 0x04009D6C RID: 40300
+	// Token: 0x0400A155 RID: 41301
 	ResumeDesc,
-	// Token: 0x04009D6D RID: 40301
+	// Token: 0x0400A156 RID: 41302
 	MultiDesc
 }

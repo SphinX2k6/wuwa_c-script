@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200096F RID: 2415
+	// Token: 0x020001BC RID: 444
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FConstraintBrokenSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06008853 RID: 34899 RVA: 0x000C34A4 File Offset: 0x000C16A4
+		// Token: 0x0600207F RID: 8319 RVA: 0x0002FE71 File Offset: 0x0002E071
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FConstraintBrokenSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06008854 RID: 34900 RVA: 0x000C34B0 File Offset: 0x000C16B0
+		// Token: 0x06002080 RID: 8320 RVA: 0x0002FE7D File Offset: 0x0002E07D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FConstraintBrokenSignature._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FConstraintBrokenSignature._FunctionPtr;
 		}
 
-		// Token: 0x06008855 RID: 34901 RVA: 0x000C34D3 File Offset: 0x000C16D3
+		// Token: 0x06002081 RID: 8321 RVA: 0x0002FEA0 File Offset: 0x0002E0A0
 		public FConstraintBrokenSignature()
 		{
 		}
 
-		// Token: 0x06008856 RID: 34902 RVA: 0x000C34DB File Offset: 0x000C16DB
+		// Token: 0x06002082 RID: 8322 RVA: 0x0002FEA8 File Offset: 0x0002E0A8
 		[NullableContext(2)]
 		public FConstraintBrokenSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06008857 RID: 34903 RVA: 0x000C34E5 File Offset: 0x000C16E5
+		// Token: 0x06002083 RID: 8323 RVA: 0x0002FEB2 File Offset: 0x0002E0B2
 		public FConstraintBrokenSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06008858 RID: 34904 RVA: 0x000C34F0 File Offset: 0x000C16F0
+		// Token: 0x06002084 RID: 8324 RVA: 0x0002FEBD File Offset: 0x0002E0BD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06008859 RID: 34905 RVA: 0x000C3522 File Offset: 0x000C1722
+		// Token: 0x06002085 RID: 8325 RVA: 0x0002FEEF File Offset: 0x0002E0EF
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int> Callback)
 		{
 			if (FConstraintBrokenSignature.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FConstraintBrokenSignature.RegisterId);
 		}
 
-		// Token: 0x0600885A RID: 34906 RVA: 0x000C355C File Offset: 0x000C175C
+		// Token: 0x06002086 RID: 8326 RVA: 0x0002FF29 File Offset: 0x0002E129
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0600885B RID: 34907 RVA: 0x000C3568 File Offset: 0x000C1768
+		// Token: 0x06002087 RID: 8327 RVA: 0x0002FF34 File Offset: 0x0002E134
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int ConstraintIndex)
 		{
 			FConstraintBrokenSignature.__FConstraintBrokenSignature_DelegateParams* ptr = stackalloc FConstraintBrokenSignature.__FConstraintBrokenSignature_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FConstraintBrokenSignature.__FConstraintBrokenSignature_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0600885C RID: 34908 RVA: 0x000C35A4 File Offset: 0x000C17A4
+		// Token: 0x06002088 RID: 8328 RVA: 0x0002FF70 File Offset: 0x0002E170
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FConstraintBrokenSignature.__FConstraintBrokenSignature_DelegateParams*)__Parameters)->ConstraintIndex);
 		}
 
-		// Token: 0x040040CE RID: 16590
+		// Token: 0x04000AD3 RID: 2771
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040040CF RID: 16591
+		// Token: 0x04000AD4 RID: 2772
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ConstraintBrokenSignature__DelegateSignature";
 
-		// Token: 0x040040D0 RID: 16592
+		// Token: 0x04000AD5 RID: 2773
 		private static int RegisterId;
 
-		// Token: 0x02002CDF RID: 11487
+		// Token: 0x0200099B RID: 2459
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FConstraintBrokenSignature_DelegateParams
+		private ref struct __FConstraintBrokenSignature_DelegateParams
 		{
-			// Token: 0x0401668D RID: 91789
+			// Token: 0x04005902 RID: 22786
 			[FieldOffset(0)]
 			public int ConstraintIndex;
 		}
 
-		// Token: 0x02002CE0 RID: 11488
+		// Token: 0x0200099C RID: 2460
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401668E RID: 91790
+			// Token: 0x04005903 RID: 22787
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200258C RID: 9612
+	// Token: 0x0200283A RID: 10298
 	public class IVisualNovelRoleIntroductionSolarSchool : IVisualNovelRoleIntroductionConfigBase
 	{
-		// Token: 0x0600D7B2 RID: 55218 RVA: 0x00201DEA File Offset: 0x001FFFEA
-		[NullableContext(1)]
+		// Token: 0x0600E52C RID: 58668 RVA: 0x0021DB1E File Offset: 0x0021BD1E
 		public static IVisualNovelRoleIntroductionSolarSchool Create(IVisualNovelRoleIntroductionSolarSchool? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E5C RID: 15964
-		// (get) Token: 0x0600D7B3 RID: 55219 RVA: 0x00201E09 File Offset: 0x00200009
+		// Token: 0x17004166 RID: 16742
+		// (get) Token: 0x0600E52D RID: 58669 RVA: 0x0021DB3D File Offset: 0x0021BD3D
 		public override EVisualNovelSubType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E5D RID: 15965
-		// (get) Token: 0x0600D7B4 RID: 55220 RVA: 0x00201E16 File Offset: 0x00200016
+		// Token: 0x17004167 RID: 16743
+		// (get) Token: 0x0600E52E RID: 58670 RVA: 0x0021DB4A File Offset: 0x0021BD4A
 		public virtual int IntroductionId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E5E RID: 15966
-		// (get) Token: 0x0600D7B5 RID: 55221 RVA: 0x00201E24 File Offset: 0x00200024
+		// Token: 0x17004168 RID: 16744
+		// (get) Token: 0x0600E52F RID: 58671 RVA: 0x0021DB58 File Offset: 0x0021BD58
 		public virtual float? Duration
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007758 RID: 30552
+		// Token: 0x04007DBE RID: 32190
 		private IVisualNovelRoleIntroductionSolarSchool Instance;
 	}
 }

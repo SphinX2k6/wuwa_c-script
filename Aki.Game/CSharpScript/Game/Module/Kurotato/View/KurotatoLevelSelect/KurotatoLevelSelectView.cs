@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x0200575B RID: 22363
+	// Token: 0x02004732 RID: 18226
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoLevelSelectView : UiTickViewBase
 	{
-		// Token: 0x06038D22 RID: 232738 RVA: 0x00D7EFB4 File Offset: 0x00D7D1B4
+		// Token: 0x0602DC32 RID: 187442 RVA: 0x00CCD98C File Offset: 0x00CCBB8C
 		public KurotatoLevelSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038D23 RID: 232739 RVA: 0x00D7EFD0 File Offset: 0x00D7D1D0
+		// Token: 0x0602DC33 RID: 187443 RVA: 0x00CCD9A8 File Offset: 0x00CCBBA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 27;
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038D24 RID: 232740 RVA: 0x00D7F3C4 File Offset: 0x00D7D5C4
+		// Token: 0x0602DC34 RID: 187444 RVA: 0x00CCDD9C File Offset: 0x00CCBF9C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoLevelSelectView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D25 RID: 232741 RVA: 0x00D7F408 File Offset: 0x00D7D608
+		// Token: 0x0602DC35 RID: 187445 RVA: 0x00CCDDE0 File Offset: 0x00CCBFE0
 		protected override void OnBeforeShow()
 		{
 			this.RefreshRecordInfo();
@@ -129,13 +128,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(22), levelGroupConfig.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06038D26 RID: 232742 RVA: 0x00D7F4D1 File Offset: 0x00D7D6D1
+		// Token: 0x0602DC36 RID: 187446 RVA: 0x00CCDEA9 File Offset: 0x00CCC0A9
 		protected override void OnTick(float delta)
 		{
 			this.RefreshLockText();
 		}
 
-		// Token: 0x06038D27 RID: 232743 RVA: 0x00D7F4DC File Offset: 0x00D7D6DC
+		// Token: 0x0602DC37 RID: 187447 RVA: 0x00CCDEB4 File Offset: 0x00CCC0B4
 		private void RefreshRecordInfo()
 		{
 			bool flag = this.LevelSelectViewData.LevelMode == EKurotatoLevelMode.Endless;
@@ -152,7 +151,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			item2.SetUIActive(!flag);
 		}
 
-		// Token: 0x06038D28 RID: 232744 RVA: 0x00D7F524 File Offset: 0x00D7D724
+		// Token: 0x0602DC38 RID: 187448 RVA: 0x00CCDEFC File Offset: 0x00CCC0FC
 		private void InitScrollViewData()
 		{
 			this.ScrollDataList = new List<IMultiTemplateGridData>();
@@ -178,7 +177,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			}
 		}
 
-		// Token: 0x06038D29 RID: 232745 RVA: 0x00D7F680 File Offset: 0x00D7D880
+		// Token: 0x0602DC39 RID: 187449 RVA: 0x00CCE058 File Offset: 0x00CCC258
 		private int GetSelectedLevelIndex()
 		{
 			for (int i = 0; i < this.ScrollDataList.Count; i++)
@@ -192,7 +191,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			return 1;
 		}
 
-		// Token: 0x06038D2A RID: 232746 RVA: 0x00D7F6CE File Offset: 0x00D7D8CE
+		// Token: 0x0602DC3A RID: 187450 RVA: 0x00CCE0A6 File Offset: 0x00CCC2A6
 		private void RefreshView()
 		{
 			this.RefreshLevelBasicInfo();
@@ -204,7 +203,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.RefreshBottomInfo();
 		}
 
-		// Token: 0x06038D2B RID: 232747 RVA: 0x00D7F6FC File Offset: 0x00D7D8FC
+		// Token: 0x0602DC3B RID: 187451 RVA: 0x00CCE0D4 File Offset: 0x00CCC2D4
 		private void RefreshLevelBasicInfo()
 		{
 			KurotatoLevel? levelConfig = KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id);
@@ -223,7 +222,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(10), levelConfig.Value.DetailDesc, new <>z__ReadOnlySingleElementList<object>(levelConfig.Value.DetailDescParamsIter()));
 		}
 
-		// Token: 0x06038D2C RID: 232748 RVA: 0x00D7F7CC File Offset: 0x00D7D9CC
+		// Token: 0x0602DC3C RID: 187452 RVA: 0x00CCE1A4 File Offset: 0x00CCC3A4
 		private void RefreshTargetList()
 		{
 			KurotatoLevel? levelConfig = KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id);
@@ -254,7 +253,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			}, true);
 		}
 
-		// Token: 0x06038D2D RID: 232749 RVA: 0x00D7F8A4 File Offset: 0x00D7DAA4
+		// Token: 0x0602DC3D RID: 187453 RVA: 0x00CCE27C File Offset: 0x00CCC47C
 		private void RefreshRewardPanel()
 		{
 			List<IKurotatoSmallItemGridData> sortedRewardList = this.GetSortedRewardList(KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value);
@@ -282,16 +281,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			}
 		}
 
-		// Token: 0x06038D2E RID: 232750 RVA: 0x00D7F918 File Offset: 0x00D7DB18
+		// Token: 0x0602DC3E RID: 187454 RVA: 0x00CCE2F0 File Offset: 0x00CCC4F0
 		private List<IKurotatoSmallItemGridData> GetSortedRewardList(KurotatoLevel levelConfig)
 		{
 			List<IKurotatoSmallItemGridData> list = new List<IKurotatoSmallItemGridData>();
-			list.AddRange(this.SortRewardByQuality(levelConfig.UnLockedWeaponsIter().ToList<int>(), EKurotatoCardType.Weapon));
-			list.AddRange(this.SortRewardByQuality(levelConfig.UnLockedItemsIter().ToList<int>(), EKurotatoCardType.Item));
+			list.AddRange(this.SortRewardByQuality(new List<int>(levelConfig.UnLockedWeaponsIter()), EKurotatoCardType.Weapon));
+			list.AddRange(this.SortRewardByQuality(new List<int>(levelConfig.UnLockedItemsIter()), EKurotatoCardType.Item));
 			return list;
 		}
 
-		// Token: 0x06038D2F RID: 232751 RVA: 0x00D7F954 File Offset: 0x00D7DB54
+		// Token: 0x0602DC3F RID: 187455 RVA: 0x00CCE32C File Offset: 0x00CCC52C
 		private List<IKurotatoSmallItemGridData> SortRewardByQuality(List<int> ids, EKurotatoCardType cardType)
 		{
 			KurotatoConfig kurotatoConfig = KurotatoConfig.Instance;
@@ -306,21 +305,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 				}
 				return a - b;
 			});
-			return (from id in list
-			select new KurotatoSmallItemGridData
+			List<IKurotatoSmallItemGridData> list2 = new List<IKurotatoSmallItemGridData>(list.Count);
+			foreach (int id in list)
 			{
-				Type = cardType,
-				Id = id,
-				IncId = 0,
-				Count = 1,
-				IsReceived = new bool?(this.SelectedLevelData.IsFinished)
-			}).ToList<IKurotatoSmallItemGridData>();
+				list2.Add(new KurotatoSmallItemGridData
+				{
+					Type = cardType,
+					Id = id,
+					IncId = 0,
+					Count = 1,
+					IsReceived = new bool?(this.SelectedLevelData.IsFinished)
+				});
+			}
+			return list2;
 		}
 
-		// Token: 0x06038D30 RID: 232752 RVA: 0x00D7F9B0 File Offset: 0x00D7DBB0
+		// Token: 0x0602DC40 RID: 187456 RVA: 0x00CCE3F4 File Offset: 0x00CCC5F4
 		private void RefreshUnlockRolePanel()
 		{
-			List<int> list = KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value.UnlockCharactersIter().ToList<int>();
+			List<int> list = new List<int>(KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value.UnlockCharactersIter());
 			int? num = (list.Count > 0) ? new int?(list[0]) : null;
 			KurotatoLevelUnlockRolePanel unlockRolePanel = this.UnlockRolePanel;
 			if (unlockRolePanel != null)
@@ -338,10 +341,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			}
 		}
 
-		// Token: 0x06038D31 RID: 232753 RVA: 0x00D7FA60 File Offset: 0x00D7DC60
+		// Token: 0x0602DC41 RID: 187457 RVA: 0x00CCE4A4 File Offset: 0x00CCC6A4
 		private void RefreshLimitRolePanel()
 		{
-			int limitRoleId = this.GetLimitRoleId(KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value.CharactersIter().ToList<int>());
+			int limitRoleId = this.GetLimitRoleId(new List<int>(KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value.CharactersIter()));
 			UUIItem item = base.GetItem(24);
 			if (item != null)
 			{
@@ -356,7 +359,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(26), kurotatoRoleData.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06038D32 RID: 232754 RVA: 0x00D7FB20 File Offset: 0x00D7DD20
+		// Token: 0x0602DC42 RID: 187458 RVA: 0x00CCE564 File Offset: 0x00CCC764
 		private int GetLimitRoleId(IReadOnlyList<int> characters)
 		{
 			if (characters.Count == 0)
@@ -368,21 +371,23 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 				return characters[0];
 			}
 			List<KurotatoRoleData> kurotatoRoleList = this.ActivityData.GetKurotatoRoleList();
-			using (IEnumerator<int> enumerator = characters.GetEnumerator())
+			foreach (int num in characters)
 			{
-				while (enumerator.MoveNext())
+				using (List<KurotatoRoleData>.Enumerator enumerator2 = kurotatoRoleList.GetEnumerator())
 				{
-					int id = enumerator.Current;
-					if (kurotatoRoleList.Any((KurotatoRoleData data) => data.Id == id))
+					while (enumerator2.MoveNext())
 					{
-						return id;
+						if (enumerator2.Current.Id == num)
+						{
+							return num;
+						}
 					}
 				}
 			}
 			return characters[0];
 		}
 
-		// Token: 0x06038D33 RID: 232755 RVA: 0x00D7FBBC File Offset: 0x00D7DDBC
+		// Token: 0x0602DC43 RID: 187459 RVA: 0x00CCE618 File Offset: 0x00CCC818
 		private void RefreshEndlessInfo()
 		{
 			if (!this.SelectedLevelData.IsEndless)
@@ -397,7 +402,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			endlessHistoryPanel.Refresh(this.SelectedLevelData);
 		}
 
-		// Token: 0x06038D34 RID: 232756 RVA: 0x00D7FBE4 File Offset: 0x00D7DDE4
+		// Token: 0x0602DC44 RID: 187460 RVA: 0x00CCE640 File Offset: 0x00CCC840
 		private void RefreshBottomInfo()
 		{
 			bool hasArchivedData = this.SelectedLevelData.HasArchivedData;
@@ -435,7 +440,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			gotoBtn.SetLocalTextNew(textId, Array.Empty<object>());
 		}
 
-		// Token: 0x06038D35 RID: 232757 RVA: 0x00D7FCEC File Offset: 0x00D7DEEC
+		// Token: 0x0602DC45 RID: 187461 RVA: 0x00CCE748 File Offset: 0x00CCC948
 		private void RefreshLockText()
 		{
 			if (this.SelectedLevelData == null || this.SelectedLevelData.IsUnLock)
@@ -459,7 +464,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			text.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x06038D36 RID: 232758 RVA: 0x00D7FDA4 File Offset: 0x00D7DFA4
+		// Token: 0x0602DC46 RID: 187462 RVA: 0x00CCE800 File Offset: 0x00CCCA00
 		private void OnItemClick(int id, int index)
 		{
 			this.LevelSelectViewData.LevelId = id;
@@ -472,32 +477,35 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			base.PlayOrReplaySequence("Switch", false, null);
 		}
 
-		// Token: 0x06038D37 RID: 232759 RVA: 0x00D7FE16 File Offset: 0x00D7E016
+		// Token: 0x0602DC47 RID: 187463 RVA: 0x00CCE872 File Offset: 0x00CCCA72
 		private bool IsSelected(int id)
 		{
 			return this.LevelSelectViewData.LevelId == id;
 		}
 
-		// Token: 0x06038D38 RID: 232760 RVA: 0x00D7FE28 File Offset: 0x00D7E028
+		// Token: 0x0602DC48 RID: 187464 RVA: 0x00CCE884 File Offset: 0x00CCCA84
 		private void OnRewardToggleClickCallback(IKurotatoSmallItemGridData cardData)
 		{
 			List<IKurotatoSmallItemGridData> sortedRewardList = this.GetSortedRewardList(KurotatoConfig.Instance.GetLevelConfig(this.LevelSelectViewData.LevelId).Value);
-			List<KurotatoCardTip> cardData2 = (from entry in sortedRewardList
-			select new KurotatoCardTip
+			List<KurotatoCardTip> list = new List<KurotatoCardTip>(sortedRewardList.Count);
+			foreach (IKurotatoSmallItemGridData kurotatoSmallItemGridData in sortedRewardList)
 			{
-				CardType = entry.Type,
-				SelectId = entry.Id,
-				IsConfigId = new bool?(true)
-			}).ToList<KurotatoCardTip>();
+				list.Add(new KurotatoCardTip
+				{
+					CardType = kurotatoSmallItemGridData.Type,
+					SelectId = kurotatoSmallItemGridData.Id,
+					IsConfigId = new bool?(true)
+				});
+			}
 			UiManager.Instance.OpenView(EUiViewName.KurotatoPopupWeaponDetailView, new KurotatoPopupItemDetailOpenParam
 			{
 				Index = sortedRewardList.FindIndex((IKurotatoSmallItemGridData entry) => entry.Type == cardData.Type && entry.Id == cardData.Id),
-				CardData = cardData2,
+				CardData = list,
 				IsOutSide = new bool?(true)
 			}, null);
 		}
 
-		// Token: 0x06038D39 RID: 232761 RVA: 0x00D7FED4 File Offset: 0x00D7E0D4
+		// Token: 0x0602DC49 RID: 187465 RVA: 0x00CCE97C File Offset: 0x00CCCB7C
 		private KurotatoWeaponSmallItemGrid CreateRewardItem()
 		{
 			KurotatoWeaponSmallItemGrid item = new KurotatoWeaponSmallItemGrid(false);
@@ -513,16 +521,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			return item;
 		}
 
-		// Token: 0x06038D3A RID: 232762 RVA: 0x00D7FF17 File Offset: 0x00D7E117
+		// Token: 0x0602DC4A RID: 187466 RVA: 0x00CCE9BF File Offset: 0x00CCCBBF
 		private KurotatoLevelTargetItem CreateTargetItem()
 		{
 			return new KurotatoLevelTargetItem();
 		}
 
-		// Token: 0x06038D3B RID: 232763 RVA: 0x00D7FF20 File Offset: 0x00D7E120
+		// Token: 0x0602DC4B RID: 187467 RVA: 0x00CCE9C8 File Offset: 0x00CCCBC8
 		private void OnUnlockRoleBtnClick(int roleId)
 		{
-			List<int> list = KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value.UnlockCharactersIter().ToList<int>();
+			List<int> list = new List<int>(KurotatoConfig.Instance.GetLevelConfig(this.SelectedLevelData.Id).Value.UnlockCharactersIter());
 			int index = list.IndexOf(roleId);
 			KurotatoPopupUnlockRoleOpenParam param = new KurotatoPopupUnlockRoleOpenParam
 			{
@@ -532,7 +540,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			UiManager.Instance.OpenView(EUiViewName.KurotatoPopupUnlockRoleView, param, null);
 		}
 
-		// Token: 0x06038D3C RID: 232764 RVA: 0x00D7FF88 File Offset: 0x00D7E188
+		// Token: 0x0602DC4C RID: 187468 RVA: 0x00CCEA30 File Offset: 0x00CCCC30
 		private void OnMonsterHandbookBtnClick()
 		{
 			KurotatoEnemyDetailBookMainViewOpenParam param = new KurotatoEnemyDetailBookMainViewOpenParam
@@ -543,13 +551,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			UiManager.Instance.OpenView(EUiViewName.KurotatoEnemyDetailBookMainView, param, null);
 		}
 
-		// Token: 0x06038D3D RID: 232765 RVA: 0x00D7FFC4 File Offset: 0x00D7E1C4
+		// Token: 0x0602DC4D RID: 187469 RVA: 0x00CCEA6C File Offset: 0x00CCCC6C
 		private void OnClickArchiveBtn()
 		{
 			HelpController.Instance.OpenHelpById(630);
 		}
 
-		// Token: 0x06038D3E RID: 232766 RVA: 0x00D7FFD8 File Offset: 0x00D7E1D8
+		// Token: 0x0602DC4E RID: 187470 RVA: 0x00CCEA80 File Offset: 0x00CCCC80
 		private void RefreshArchiveItem()
 		{
 			KurotatoLevelData selectedLevelData = this.SelectedLevelData;
@@ -572,20 +580,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			captionItem3.SetCaptionChangeColor(flag);
 		}
 
-		// Token: 0x06038D3F RID: 232767 RVA: 0x00D8003B File Offset: 0x00D7E23B
+		// Token: 0x0602DC4F RID: 187471 RVA: 0x00CCEAE3 File Offset: 0x00CCCCE3
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038D40 RID: 232768 RVA: 0x00D80044 File Offset: 0x00D7E244
+		// Token: 0x0602DC50 RID: 187472 RVA: 0x00CCEAEC File Offset: 0x00CCCCEC
 		private void OnHelpBtnClick()
 		{
 			int helpGroupId = (this.LevelSelectViewData.LevelMode == EKurotatoLevelMode.Endless) ? 614 : 573;
 			HelpController.Instance.OpenHelpById(helpGroupId);
 		}
 
-		// Token: 0x06038D41 RID: 232769 RVA: 0x00D8007C File Offset: 0x00D7E27C
+		// Token: 0x0602DC51 RID: 187473 RVA: 0x00CCEB24 File Offset: 0x00CCCD24
 		private void OnGotoBtnClick(int data)
 		{
 			if (this.SelectedLevelData.ArchiveWave != -1)
@@ -613,31 +621,31 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			UiManager.Instance.OpenView(EUiViewName.KurotatoRoleSelectView, this.LevelSelectViewData, null);
 		}
 
-		// Token: 0x0401DCE5 RID: 122085
+		// Token: 0x0401877B RID: 100219
 		[Nullable(2)]
 		private KurotatoLevelSelectViewData LevelSelectViewData;
 
-		// Token: 0x0401DCE6 RID: 122086
+		// Token: 0x0401877C RID: 100220
 		private KurotatoActivityData ActivityData;
 
-		// Token: 0x0401DCE7 RID: 122087
+		// Token: 0x0401877D RID: 100221
 		private List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0401DCE8 RID: 122088
+		// Token: 0x0401877E RID: 100222
 		private int SelectedIndex = 1;
 
-		// Token: 0x0401DCE9 RID: 122089
+		// Token: 0x0401877F RID: 100223
 		private KurotatoLevelData SelectedLevelData;
 
-		// Token: 0x0401DCEA RID: 122090
+		// Token: 0x04018780 RID: 100224
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DCEB RID: 122091
+		// Token: 0x04018781 RID: 100225
 		[Nullable(2)]
 		private MultiTemplateScrollView LevelMultiTemplateScrollView;
 
-		// Token: 0x0401DCEC RID: 122092
+		// Token: 0x04018782 RID: 100226
 		[Nullable(new byte[]
 		{
 			2,
@@ -646,7 +654,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 		})]
 		private GenericScrollViewNew<KurotatoLevelTargetItem, KurotatoLevelTargetItemData> TargetScroll;
 
-		// Token: 0x0401DCED RID: 122093
+		// Token: 0x04018783 RID: 100227
 		[Nullable(new byte[]
 		{
 			2,
@@ -655,15 +663,15 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 		})]
 		private GenericScrollViewNew<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData> RewardScroll;
 
-		// Token: 0x0401DCEE RID: 122094
+		// Token: 0x04018784 RID: 100228
 		[Nullable(2)]
 		private KurotatoLevelUnlockRolePanel UnlockRolePanel;
 
-		// Token: 0x0401DCEF RID: 122095
+		// Token: 0x04018785 RID: 100229
 		[Nullable(2)]
 		private KurotatoEndlessHistoryPanel EndlessHistoryPanel;
 
-		// Token: 0x0401DCF0 RID: 122096
+		// Token: 0x04018786 RID: 100230
 		[Nullable(2)]
 		private ButtonItem GotoBtn;
 	}

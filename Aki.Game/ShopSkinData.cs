@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x02002A22 RID: 10786
+// Token: 0x02001F9D RID: 8093
 [NullableContext(1)]
 [Nullable(0)]
 public class ShopSkinData
 {
-	// Token: 0x06016688 RID: 91784 RVA: 0x005AAB31 File Offset: 0x005A8D31
+	// Token: 0x0601408E RID: 82062 RVA: 0x005D5B0D File Offset: 0x005D3D0D
 	public static ShopSkinData Create(PayShopGoods data)
 	{
 		ShopSkinData shopSkinData = new ShopSkinData();
@@ -18,7 +18,7 @@ public class ShopSkinData
 		return shopSkinData;
 	}
 
-	// Token: 0x06016689 RID: 91785 RVA: 0x005AAB40 File Offset: 0x005A8D40
+	// Token: 0x0601408F RID: 82063 RVA: 0x005D5B1C File Offset: 0x005D3D1C
 	public void InitData(PayShopGoods data)
 	{
 		this.PayShopGoods = data;
@@ -41,7 +41,7 @@ public class ShopSkinData
 		}
 	}
 
-	// Token: 0x0601668A RID: 91786 RVA: 0x005AAC04 File Offset: 0x005A8E04
+	// Token: 0x06014090 RID: 82064 RVA: 0x005D5BE0 File Offset: 0x005D3DE0
 	public bool GetIfCanBuy()
 	{
 		if (!this.GetPayShopGoods().IfCanBuy())
@@ -60,19 +60,19 @@ public class ShopSkinData
 		return true;
 	}
 
-	// Token: 0x0601668B RID: 91787 RVA: 0x005AAC58 File Offset: 0x005A8E58
+	// Token: 0x06014091 RID: 82065 RVA: 0x005D5C34 File Offset: 0x005D3E34
 	public PayShopGoods GetCurrentGoodsData()
 	{
 		return this.PayShopGoods;
 	}
 
-	// Token: 0x0601668C RID: 91788 RVA: 0x005AAC60 File Offset: 0x005A8E60
+	// Token: 0x06014092 RID: 82066 RVA: 0x005D5C3C File Offset: 0x005D3E3C
 	public int GetItemId()
 	{
 		return this.RewardSkinId.Value;
 	}
 
-	// Token: 0x0601668D RID: 91789 RVA: 0x005AAC70 File Offset: 0x005A8E70
+	// Token: 0x06014093 RID: 82067 RVA: 0x005D5C4C File Offset: 0x005D3E4C
 	public TItem[] GetAllReward()
 	{
 		List<TItem> list = new List<TItem>();
@@ -83,7 +83,7 @@ public class ShopSkinData
 		return list.ToArray();
 	}
 
-	// Token: 0x0601668E RID: 91790 RVA: 0x005AACB0 File Offset: 0x005A8EB0
+	// Token: 0x06014094 RID: 82068 RVA: 0x005D5C8C File Offset: 0x005D3E8C
 	public TItem[] GetOtherReward()
 	{
 		List<TItem> list = new List<TItem>();
@@ -96,13 +96,13 @@ public class ShopSkinData
 		return list.ToArray();
 	}
 
-	// Token: 0x0601668F RID: 91791 RVA: 0x005AAD30 File Offset: 0x005A8F30
+	// Token: 0x06014095 RID: 82069 RVA: 0x005D5D0C File Offset: 0x005D3F0C
 	public PayShopGoods GetPayShopGoods()
 	{
 		return this.PayShopGoods;
 	}
 
-	// Token: 0x06016690 RID: 91792 RVA: 0x005AAD38 File Offset: 0x005A8F38
+	// Token: 0x06014096 RID: 82070 RVA: 0x005D5D14 File Offset: 0x005D3F14
 	public string GetDiscountText()
 	{
 		PayShopGoods currentGoodsData = this.GetCurrentGoodsData();
@@ -121,7 +121,7 @@ public class ShopSkinData
 		return "";
 	}
 
-	// Token: 0x06016691 RID: 91793 RVA: 0x005AAD88 File Offset: 0x005A8F88
+	// Token: 0x06014097 RID: 82071 RVA: 0x005D5D64 File Offset: 0x005D3F64
 	[NullableContext(2)]
 	public object GetDiscountTimeData()
 	{
@@ -138,67 +138,67 @@ public class ShopSkinData
 		return null;
 	}
 
-	// Token: 0x06016692 RID: 91794 RVA: 0x005AADBE File Offset: 0x005A8FBE
+	// Token: 0x06014098 RID: 82072 RVA: 0x005D5D9A File Offset: 0x005D3F9A
 	public IPriceData GetPriceData()
 	{
 		return this.GetCurrentGoodsData().GetPriceData();
 	}
 
-	// Token: 0x06016693 RID: 91795 RVA: 0x005AADCB File Offset: 0x005A8FCB
+	// Token: 0x06014099 RID: 82073 RVA: 0x005D5DA7 File Offset: 0x005D3FA7
 	public bool GetIfDirect()
 	{
 		return this.GetCurrentGoodsData().IsDirect();
 	}
 
-	// Token: 0x06016694 RID: 91796 RVA: 0x005AADD8 File Offset: 0x005A8FD8
+	// Token: 0x0601409A RID: 82074 RVA: 0x005D5DB4 File Offset: 0x005D3FB4
 	public string GetDirectPriceText()
 	{
 		return this.GetCurrentGoodsData().GetDirectPriceText();
 	}
 
-	// Token: 0x06016695 RID: 91797 RVA: 0x005AADE5 File Offset: 0x005A8FE5
+	// Token: 0x0601409B RID: 82075 RVA: 0x005D5DC1 File Offset: 0x005D3FC1
 	public RoleSkinData GetRoleSkinData()
 	{
 		return RoleSkinModel.Instance.GetRoleSkinData(this.GetItemId());
 	}
 
-	// Token: 0x06016696 RID: 91798 RVA: 0x005AADF7 File Offset: 0x005A8FF7
+	// Token: 0x0601409C RID: 82076 RVA: 0x005D5DD3 File Offset: 0x005D3FD3
 	public string GetPayShopPreviewRoleTexturePath()
 	{
 		return this.GetRoleSkinData().GetPayShopPreviewRoleTexturePath();
 	}
 
-	// Token: 0x06016697 RID: 91799 RVA: 0x005AAE04 File Offset: 0x005A9004
+	// Token: 0x0601409D RID: 82077 RVA: 0x005D5DE0 File Offset: 0x005D3FE0
 	public string GetPayShopPreviewRoleTextureBgPath()
 	{
 		return this.GetRoleSkinData().GetPayShopPreviewRoleTextureBgPath();
 	}
 
-	// Token: 0x06016698 RID: 91800 RVA: 0x005AAE11 File Offset: 0x005A9011
+	// Token: 0x0601409E RID: 82078 RVA: 0x005D5DED File Offset: 0x005D3FED
 	public string GetPayShopPreviewWeaponTexturePath()
 	{
 		return this.GetRoleSkinData().GetPayShopPreviewWeaponTexturePath();
 	}
 
-	// Token: 0x06016699 RID: 91801 RVA: 0x005AAE1E File Offset: 0x005A901E
+	// Token: 0x0601409F RID: 82079 RVA: 0x005D5DFA File Offset: 0x005D3FFA
 	public string GetPayShopPreviewBuyRoleTexturePath()
 	{
 		return this.GetRoleSkinData().GetPayShopPreviewBuyRoleTexturePath();
 	}
 
-	// Token: 0x0601669A RID: 91802 RVA: 0x005AAE2B File Offset: 0x005A902B
+	// Token: 0x060140A0 RID: 82080 RVA: 0x005D5E07 File Offset: 0x005D4007
 	public string GetPayShopPreviewBuyRoleSuitWeaponTexturePath()
 	{
 		return this.GetRoleSkinData().GetPayShopPreviewBuyRoleSuitWeaponTexturePath();
 	}
 
-	// Token: 0x0400A69E RID: 42654
+	// Token: 0x0400AA87 RID: 43655
 	[Nullable(2)]
 	private PayShopGoods PayShopGoods;
 
-	// Token: 0x0400A69F RID: 42655
+	// Token: 0x0400AA88 RID: 43656
 	private int? RewardSkinId;
 
-	// Token: 0x0400A6A0 RID: 42656
+	// Token: 0x0400AA89 RID: 43657
 	private readonly Dictionary<int, int> OtherRewardMap = new Dictionary<int, int>();
 }

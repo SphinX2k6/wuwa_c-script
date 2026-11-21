@@ -1,6 +1,6 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001F85 RID: 8069
-// (Invoke) Token: 0x0600FA66 RID: 64102
+// Token: 0x02001447 RID: 5191
+// (Invoke) Token: 0x0600CE85 RID: 52869
 public delegate void TToggleFunction(EToggleState state, int influenceId);

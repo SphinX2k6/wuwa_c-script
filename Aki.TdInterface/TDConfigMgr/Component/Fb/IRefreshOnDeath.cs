@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AAA RID: 2730
+	// Token: 0x02000B74 RID: 2932
 	public class IRefreshOnDeath : IRefreshConditionBase
 	{
-		// Token: 0x06003EFB RID: 16123 RVA: 0x000A1242 File Offset: 0x0009F442
-		[NullableContext(1)]
+		// Token: 0x06004325 RID: 17189 RVA: 0x000AA836 File Offset: 0x000A8A36
 		public static IRefreshOnDeath Create(IRefreshOnDeath? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F64 RID: 3940
-		// (get) Token: 0x06003EFC RID: 16124 RVA: 0x000A1261 File Offset: 0x0009F461
+		// Token: 0x17001038 RID: 4152
+		// (get) Token: 0x06004326 RID: 17190 RVA: 0x000AA855 File Offset: 0x000A8A55
 		public override ERewardDropType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022FB RID: 8955
+		// Token: 0x04002517 RID: 9495
 		private IRefreshOnDeath Instance;
 	}
 }

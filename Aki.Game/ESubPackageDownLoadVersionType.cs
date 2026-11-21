@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002A94 RID: 10900
+// Token: 0x02002010 RID: 8208
 public enum ESubPackageDownLoadVersionType
 {
-	// Token: 0x0400A869 RID: 43113
+	// Token: 0x0400AC6F RID: 44143
 	Key = 1,
-	// Token: 0x0400A86A RID: 43114
+	// Token: 0x0400AC70 RID: 44144
 	Optional,
-	// Token: 0x0400A86B RID: 43115
+	// Token: 0x0400AC71 RID: 44145
 	Expand
 }

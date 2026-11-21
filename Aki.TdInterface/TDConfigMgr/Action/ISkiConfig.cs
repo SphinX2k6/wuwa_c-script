@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E77 RID: 7799
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020AC RID: 8364
 	public class ISkiConfig : ISportConfig
 	{
-		// Token: 0x0600A6EA RID: 42730 RVA: 0x001798EC File Offset: 0x00177AEC
+		// Token: 0x0600B1A2 RID: 45474 RVA: 0x0018F5EC File Offset: 0x0018D7EC
 		private ISkiConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A6EB RID: 42731 RVA: 0x00179924 File Offset: 0x00177B24
+		// Token: 0x0600B1A3 RID: 45475 RVA: 0x0018F624 File Offset: 0x0018D824
 		public static ISkiConfig Create([Nullable(2)] ISkiConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6EC RID: 42732 RVA: 0x00179937 File Offset: 0x00177B37
+		// Token: 0x0600B1A4 RID: 45476 RVA: 0x0018F637 File Offset: 0x0018D837
 		public static ISkiConfig CreateFromSetValue([Nullable(2)] ISkiConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6ED RID: 42733 RVA: 0x0017994A File Offset: 0x00177B4A
+		// Token: 0x0600B1A5 RID: 45477 RVA: 0x0018F64A File Offset: 0x0018D84A
 		public new ISkiConfig_SetValue ToSetValue()
 		{
 			return new ISkiConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700331A RID: 13082
-		// (get) Token: 0x0600A6EE RID: 42734 RVA: 0x00179969 File Offset: 0x00177B69
-		// (set) Token: 0x0600A6EF RID: 42735 RVA: 0x00179994 File Offset: 0x00177B94
+		// Token: 0x170035DE RID: 13790
+		// (get) Token: 0x0600B1A6 RID: 45478 RVA: 0x0018F669 File Offset: 0x0018D869
+		// (set) Token: 0x0600B1A7 RID: 45479 RVA: 0x0018F694 File Offset: 0x0018D894
 		public override ESportStateType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700331B RID: 13083
-		// (get) Token: 0x0600A6F0 RID: 42736 RVA: 0x001799A2 File Offset: 0x00177BA2
-		// (set) Token: 0x0600A6F1 RID: 42737 RVA: 0x001799C9 File Offset: 0x00177BC9
+		// Token: 0x170035DF RID: 13791
+		// (get) Token: 0x0600B1A8 RID: 45480 RVA: 0x0018F6A2 File Offset: 0x0018D8A2
+		// (set) Token: 0x0600B1A9 RID: 45481 RVA: 0x0018F6C9 File Offset: 0x0018D8C9
 		public virtual ISkiConfigType Config
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063A7 RID: 25511
+		// Token: 0x0400698B RID: 27019
 		[Nullable(2)]
 		protected new ISkiConfig FbInstance;
 
-		// Token: 0x040063A8 RID: 25512
+		// Token: 0x0400698C RID: 27020
 		[Nullable(2)]
 		protected new ISkiConfig_SetValue PocoInterface;
 	}

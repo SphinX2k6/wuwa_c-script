@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A49 RID: 2633
+	// Token: 0x02000B12 RID: 2834
 	public class EWuWaGoGridLinkTypeJsonConverter : JsonConverter<EWuWaGoGridLinkType>
 	{
-		// Token: 0x060039FB RID: 14843 RVA: 0x00095A84 File Offset: 0x00093C84
+		// Token: 0x06003DE5 RID: 15845 RVA: 0x0009E654 File Offset: 0x0009C854
 		public override EWuWaGoGridLinkType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EWuWaGoGridLinkTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060039FC RID: 14844 RVA: 0x00095AA8 File Offset: 0x00093CA8
+		// Token: 0x06003DE6 RID: 15846 RVA: 0x0009E678 File Offset: 0x0009C878
 		public override void Write(Utf8JsonWriter writer, EWuWaGoGridLinkType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

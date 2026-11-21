@@ -5,24 +5,24 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020000A2 RID: 162
+	// Token: 0x02000087 RID: 135
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class UnrealUObject : UnrealObject
 	{
-		// Token: 0x060010A2 RID: 4258 RVA: 0x00018FE3 File Offset: 0x000171E3
+		// Token: 0x06000C35 RID: 3125 RVA: 0x00013D07 File Offset: 0x00011F07
 		protected UnrealUObject()
 		{
 			throw new Exception("UnrealUObject cannot be instantiated by script.");
 		}
 
-		// Token: 0x060010A3 RID: 4259 RVA: 0x00018FF5 File Offset: 0x000171F5
+		// Token: 0x06000C36 RID: 3126 RVA: 0x00013D19 File Offset: 0x00011F19
 		protected UnrealUObject(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 			BuiltinUtils.BindNativeUObject(this);
 		}
 
-		// Token: 0x060010A4 RID: 4260 RVA: 0x00019004 File Offset: 0x00017204
+		// Token: 0x06000C37 RID: 3127 RVA: 0x00013D28 File Offset: 0x00011F28
 		~UnrealUObject()
 		{
 			if (this._NativePtr != IntPtr.Zero)
@@ -31,8 +31,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004D4 RID: 1236
-		// (get) Token: 0x060010A5 RID: 4261 RVA: 0x00019044 File Offset: 0x00017244
+		// Token: 0x170000DC RID: 220
+		// (get) Token: 0x06000C38 RID: 3128 RVA: 0x00013D68 File Offset: 0x00011F68
 		public int ObjectIndex
 		{
 			get
@@ -41,8 +41,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004D5 RID: 1237
-		// (get) Token: 0x060010A6 RID: 4262 RVA: 0x00019051 File Offset: 0x00017251
+		// Token: 0x170000DD RID: 221
+		// (get) Token: 0x06000C39 RID: 3129 RVA: 0x00013D75 File Offset: 0x00011F75
 		public int ObjectSerialNumber
 		{
 			get
@@ -51,54 +51,54 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060010A7 RID: 4263 RVA: 0x0001905E File Offset: 0x0001725E
+		// Token: 0x06000C3A RID: 3130 RVA: 0x00013D82 File Offset: 0x00011F82
 		public override bool IsValid()
 		{
 			return this._NativePtr != IntPtr.Zero && UObjectGlobals.IsValid(this._NativePtr);
 		}
 
-		// Token: 0x060010A8 RID: 4264 RVA: 0x0001907A File Offset: 0x0001727A
+		// Token: 0x06000C3B RID: 3131 RVA: 0x00013D9E File Offset: 0x00011F9E
 		public UClassStackOnlyPtr GetClass()
 		{
 			base.FastCheckIsValid();
 			return UnrealUObject.Internal_GetClass(this._NativePtr);
 		}
 
-		// Token: 0x060010A9 RID: 4265 RVA: 0x0001908D File Offset: 0x0001728D
+		// Token: 0x06000C3C RID: 3132 RVA: 0x00013DB1 File Offset: 0x00011FB1
 		public string GetName()
 		{
 			base.FastCheckIsValid();
 			return UnrealUObject.Internal_GetName(this._NativePtr);
 		}
 
-		// Token: 0x060010AA RID: 4266 RVA: 0x000190A0 File Offset: 0x000172A0
+		// Token: 0x06000C3D RID: 3133 RVA: 0x00013DC4 File Offset: 0x00011FC4
 		public FName GetFName()
 		{
 			base.FastCheckIsValid();
 			return UnrealUObject.Internal_GetFName(this._NativePtr);
 		}
 
-		// Token: 0x060010AB RID: 4267 RVA: 0x000190B3 File Offset: 0x000172B3
+		// Token: 0x06000C3E RID: 3134 RVA: 0x00013DD7 File Offset: 0x00011FD7
 		public string GetPathName()
 		{
 			base.FastCheckIsValid();
 			return UnrealUObject.Internal_GetPathName(this._NativePtr);
 		}
 
-		// Token: 0x060010AC RID: 4268 RVA: 0x000190C6 File Offset: 0x000172C6
+		// Token: 0x06000C3F RID: 3135 RVA: 0x00013DEA File Offset: 0x00011FEA
 		public bool IsA(UClassStackOnlyPtr ClassPtr)
 		{
 			base.FastCheckIsValid();
 			return UnrealUObject.Internal_IsA(this._NativePtr, ClassPtr);
 		}
 
-		// Token: 0x060010AD RID: 4269 RVA: 0x000190DA File Offset: 0x000172DA
+		// Token: 0x06000C40 RID: 3136 RVA: 0x00013DFE File Offset: 0x00011FFE
 		public bool IsA<[Nullable(0)] T>() where T : UnrealUObject, IUnrealUObject
 		{
 			return this.IsA(IUnrealUObject.StaticClass());
 		}
 
-		// Token: 0x060010AE RID: 4270 RVA: 0x000190ED File Offset: 0x000172ED
+		// Token: 0x06000C41 RID: 3137 RVA: 0x00013E11 File Offset: 0x00012011
 		public sealed override string ToString()
 		{
 			if (!this.IsValid())
@@ -108,31 +108,31 @@ namespace UnrealEngine
 			return this.GetName();
 		}
 
-		// Token: 0x060010AF RID: 4271
+		// Token: 0x06000C42 RID: 3138
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern int Internal_ObjectIndex(IntPtr ObjectPtr);
 
-		// Token: 0x060010B0 RID: 4272
+		// Token: 0x06000C43 RID: 3139
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern int Internal_ObjectSerialNumber(IntPtr ObjectPtr);
 
-		// Token: 0x060010B1 RID: 4273
+		// Token: 0x06000C44 RID: 3140
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern UClassStackOnlyPtr Internal_GetClass(IntPtr ObjectPtr);
 
-		// Token: 0x060010B2 RID: 4274
+		// Token: 0x06000C45 RID: 3141
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern string Internal_GetName(IntPtr ObjectPtr);
 
-		// Token: 0x060010B3 RID: 4275
+		// Token: 0x06000C46 RID: 3142
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern FName Internal_GetFName(IntPtr ObjectPtr);
 
-		// Token: 0x060010B4 RID: 4276
+		// Token: 0x06000C47 RID: 3143
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern string Internal_GetPathName(IntPtr ObjectPtr);
 
-		// Token: 0x060010B5 RID: 4277
+		// Token: 0x06000C48 RID: 3144
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern bool Internal_IsA(IntPtr ObjectPtr, UClassStackOnlyPtr ClassPtr);
 	}

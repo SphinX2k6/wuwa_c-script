@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x0200026C RID: 620
+	// Token: 0x02000273 RID: 627
 	public class IEvalNetworkConfig
 	{
-		// Token: 0x04000A05 RID: 2565
+		// Token: 0x04000A53 RID: 2643
 		public bool? Shuffle;
 
-		// Token: 0x04000A06 RID: 2566
+		// Token: 0x04000A54 RID: 2644
 		public float? EvalTime;
 
-		// Token: 0x04000A07 RID: 2567
+		// Token: 0x04000A55 RID: 2645
 		public float? SkipSize;
 	}
 }

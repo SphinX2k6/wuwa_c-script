@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004519 RID: 17689
+	// Token: 0x02004981 RID: 18817
 	public class ILevelPlayReward_UnionUnion
 	{
-		// Token: 0x17007D62 RID: 32098
-		// (get) Token: 0x0601A947 RID: 108871 RVA: 0x003CB989 File Offset: 0x003C9B89
-		// (set) Token: 0x0601A948 RID: 108872 RVA: 0x003CB991 File Offset: 0x003C9B91
+		// Token: 0x170083A3 RID: 33699
+		// (get) Token: 0x0601C11C RID: 114972 RVA: 0x003F7C25 File Offset: 0x003F5E25
+		// (set) Token: 0x0601C11D RID: 114973 RVA: 0x003F7C2D File Offset: 0x003F5E2D
 		public ILevelPlayReward_Union Type { get; set; }
 
-		// Token: 0x17007D63 RID: 32099
-		// (get) Token: 0x0601A949 RID: 108873 RVA: 0x003CB99A File Offset: 0x003C9B9A
-		// (set) Token: 0x0601A94A RID: 108874 RVA: 0x003CB9A2 File Offset: 0x003C9BA2
+		// Token: 0x170083A4 RID: 33700
+		// (get) Token: 0x0601C11E RID: 114974 RVA: 0x003F7C36 File Offset: 0x003F5E36
+		// (set) Token: 0x0601C11F RID: 114975 RVA: 0x003F7C3E File Offset: 0x003F5E3E
 		public object Value { get; set; }
 
-		// Token: 0x0601A94B RID: 108875 RVA: 0x003CB9AB File Offset: 0x003C9BAB
+		// Token: 0x0601C120 RID: 114976 RVA: 0x003F7C47 File Offset: 0x003F5E47
 		public ILevelPlayReward_UnionUnion()
 		{
 			this.Type = ILevelPlayReward_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601A94C RID: 108876 RVA: 0x003CB9C1 File Offset: 0x003C9BC1
+		// Token: 0x0601C121 RID: 114977 RVA: 0x003F7C5D File Offset: 0x003F5E5D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601A94D RID: 108877 RVA: 0x003CB9D3 File Offset: 0x003C9BD3
+		// Token: 0x0601C122 RID: 114978 RVA: 0x003F7C6F File Offset: 0x003F5E6F
 		public ILevelPlayRewardT AsILevelPlayReward()
 		{
 			return this.As<ILevelPlayRewardT>();
 		}
 
-		// Token: 0x0601A94E RID: 108878 RVA: 0x003CB9DB File Offset: 0x003C9BDB
+		// Token: 0x0601C123 RID: 114979 RVA: 0x003F7C77 File Offset: 0x003F5E77
 		public static ILevelPlayReward_UnionUnion FromILevelPlayReward(ILevelPlayRewardT _ilevelplayreward)
 		{
 			return new ILevelPlayReward_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601A94F RID: 108879 RVA: 0x003CB9F0 File Offset: 0x003C9BF0
+		// Token: 0x0601C124 RID: 114980 RVA: 0x003F7C8C File Offset: 0x003F5E8C
 		public INoneRewardParamT AsINoneRewardParam()
 		{
 			return this.As<INoneRewardParamT>();
 		}
 
-		// Token: 0x0601A950 RID: 108880 RVA: 0x003CB9F8 File Offset: 0x003C9BF8
+		// Token: 0x0601C125 RID: 114981 RVA: 0x003F7C94 File Offset: 0x003F5E94
 		public static ILevelPlayReward_UnionUnion FromINoneRewardParam(INoneRewardParamT _inonerewardparam)
 		{
 			return new ILevelPlayReward_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601A951 RID: 108881 RVA: 0x003CBA0D File Offset: 0x003C9C0D
+		// Token: 0x0601C126 RID: 114982 RVA: 0x003F7CA9 File Offset: 0x003F5EA9
 		public IAutomaticRewardParamT AsIAutomaticRewardParam()
 		{
 			return this.As<IAutomaticRewardParamT>();
 		}
 
-		// Token: 0x0601A952 RID: 108882 RVA: 0x003CBA15 File Offset: 0x003C9C15
+		// Token: 0x0601C127 RID: 114983 RVA: 0x003F7CB1 File Offset: 0x003F5EB1
 		public static ILevelPlayReward_UnionUnion FromIAutomaticRewardParam(IAutomaticRewardParamT _iautomaticrewardparam)
 		{
 			return new ILevelPlayReward_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601A953 RID: 108883 RVA: 0x003CBA2A File Offset: 0x003C9C2A
+		// Token: 0x0601C128 RID: 114984 RVA: 0x003F7CC6 File Offset: 0x003F5EC6
 		public IVariableRewardParamT AsIVariableRewardParam()
 		{
 			return this.As<IVariableRewardParamT>();
 		}
 
-		// Token: 0x0601A954 RID: 108884 RVA: 0x003CBA32 File Offset: 0x003C9C32
+		// Token: 0x0601C129 RID: 114985 RVA: 0x003F7CCE File Offset: 0x003F5ECE
 		public static ILevelPlayReward_UnionUnion FromIVariableRewardParam(IVariableRewardParamT _ivariablerewardparam)
 		{
 			return new ILevelPlayReward_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601A955 RID: 108885 RVA: 0x003CBA47 File Offset: 0x003C9C47
+		// Token: 0x0601C12A RID: 114986 RVA: 0x003F7CE3 File Offset: 0x003F5EE3
 		public IInteractRewardParamT AsIInteractRewardParam()
 		{
 			return this.As<IInteractRewardParamT>();
 		}
 
-		// Token: 0x0601A956 RID: 108886 RVA: 0x003CBA4F File Offset: 0x003C9C4F
+		// Token: 0x0601C12B RID: 114987 RVA: 0x003F7CEB File Offset: 0x003F5EEB
 		public static ILevelPlayReward_UnionUnion FromIInteractRewardParam(IInteractRewardParamT _iinteractrewardparam)
 		{
 			return new ILevelPlayReward_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601A957 RID: 108887 RVA: 0x003CBA64 File Offset: 0x003C9C64
+		// Token: 0x0601C12C RID: 114988 RVA: 0x003F7D00 File Offset: 0x003F5F00
 		public static int Pack(FlatBufferBuilder builder, ILevelPlayReward_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -2,34 +2,34 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000079 RID: 121
+	// Token: 0x0200007C RID: 124
 	public enum EBodyType
 	{
-		// Token: 0x0400025A RID: 602
+		// Token: 0x04000269 RID: 617
 		MaleS = 1,
-		// Token: 0x0400025B RID: 603
+		// Token: 0x0400026A RID: 618
 		MaleM,
-		// Token: 0x0400025C RID: 604
+		// Token: 0x0400026B RID: 619
 		MaleXL,
-		// Token: 0x0400025D RID: 605
+		// Token: 0x0400026C RID: 620
 		FemaleS,
-		// Token: 0x0400025E RID: 606
+		// Token: 0x0400026D RID: 621
 		FemaleMS,
-		// Token: 0x0400025F RID: 607
+		// Token: 0x0400026E RID: 622
 		FemaleM,
-		// Token: 0x04000260 RID: 608
+		// Token: 0x0400026F RID: 623
 		FemaleXL,
-		// Token: 0x04000261 RID: 609
+		// Token: 0x04000270 RID: 624
 		ShopHand,
-		// Token: 0x04000262 RID: 610
+		// Token: 0x04000271 RID: 625
 		ShopStore,
-		// Token: 0x04000263 RID: 611
+		// Token: 0x04000272 RID: 626
 		ShopDoll,
-		// Token: 0x04000264 RID: 612
+		// Token: 0x04000273 RID: 627
 		ShopPhonograph,
-		// Token: 0x04000265 RID: 613
+		// Token: 0x04000274 RID: 628
 		ShopPicture,
-		// Token: 0x04000266 RID: 614
+		// Token: 0x04000275 RID: 629
 		ShopIRIS
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028EE RID: 10478
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BC6 RID: 11206
 	public class ISkiConfigType
 	{
-		// Token: 0x0600E8C5 RID: 59589 RVA: 0x002227C9 File Offset: 0x002209C9
+		// Token: 0x0600F706 RID: 63238 RVA: 0x0023F981 File Offset: 0x0023DB81
 		public static ISkiConfigType Create(ISkiConfigType? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048AB RID: 18603
-		// (get) Token: 0x0600E8C6 RID: 59590 RVA: 0x002227E8 File Offset: 0x002209E8
+		// Token: 0x17004C28 RID: 19496
+		// (get) Token: 0x0600F707 RID: 63239 RVA: 0x0023F9A0 File Offset: 0x0023DBA0
 		public virtual ESkiConfig Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048AC RID: 18604
-		// (get) Token: 0x0600E8C7 RID: 59591 RVA: 0x002227F5 File Offset: 0x002209F5
+		// Token: 0x17004C29 RID: 19497
+		// (get) Token: 0x0600F708 RID: 63240 RVA: 0x0023F9AD File Offset: 0x0023DBAD
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008080 RID: 32896
+		// Token: 0x04008744 RID: 34628
 		private ISkiConfigType Instance;
 
-		// Token: 0x04008081 RID: 32897
+		// Token: 0x04008745 RID: 34629
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04008082 RID: 32898
+		// Token: 0x04008746 RID: 34630
 		private bool _TargetInited;
 	}
 }

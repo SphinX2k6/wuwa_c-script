@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200110C RID: 4364
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200123A RID: 4666
 	public class IRoleTowerConditionStepLoadSubLevel : IRoleTowerConditionStepBase
 	{
-		// Token: 0x0600629A RID: 25242 RVA: 0x000ED558 File Offset: 0x000EB758
+		// Token: 0x06006895 RID: 26773 RVA: 0x000FA6CC File Offset: 0x000F88CC
 		private IRoleTowerConditionStepLoadSubLevel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600629B RID: 25243 RVA: 0x000ED590 File Offset: 0x000EB790
+		// Token: 0x06006896 RID: 26774 RVA: 0x000FA704 File Offset: 0x000F8904
 		public static IRoleTowerConditionStepLoadSubLevel Create([Nullable(2)] IRoleTowerConditionStepLoadSubLevel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600629C RID: 25244 RVA: 0x000ED5A3 File Offset: 0x000EB7A3
+		// Token: 0x06006897 RID: 26775 RVA: 0x000FA717 File Offset: 0x000F8917
 		public static IRoleTowerConditionStepLoadSubLevel CreateFromSetValue([Nullable(2)] IRoleTowerConditionStepLoadSubLevel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600629D RID: 25245 RVA: 0x000ED5B6 File Offset: 0x000EB7B6
+		// Token: 0x06006898 RID: 26776 RVA: 0x000FA72A File Offset: 0x000F892A
 		public new IRoleTowerConditionStepLoadSubLevel_SetValue ToSetValue()
 		{
 			return new IRoleTowerConditionStepLoadSubLevel_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700203F RID: 8255
-		// (get) Token: 0x0600629E RID: 25246 RVA: 0x000ED5C9 File Offset: 0x000EB7C9
-		// (set) Token: 0x0600629F RID: 25247 RVA: 0x000ED5F4 File Offset: 0x000EB7F4
+		// Token: 0x170021F2 RID: 8690
+		// (get) Token: 0x06006899 RID: 26777 RVA: 0x000FA73D File Offset: 0x000F893D
+		// (set) Token: 0x0600689A RID: 26778 RVA: 0x000FA768 File Offset: 0x000F8968
 		public override ERoleTowerConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B2E RID: 15150
+		// Token: 0x04003E7C RID: 15996
 		[Nullable(2)]
 		protected new IRoleTowerConditionStepLoadSubLevel FbInstance;
 
-		// Token: 0x04003B2F RID: 15151
+		// Token: 0x04003E7D RID: 15997
 		[Nullable(2)]
 		protected new IRoleTowerConditionStepLoadSubLevel_SetValue PocoInterface;
 	}

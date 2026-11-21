@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 {
-	// Token: 0x02006A87 RID: 27271
+	// Token: 0x02005BE4 RID: 23524
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SplineLandingResolver
 	{
-		// Token: 0x06043C59 RID: 277593 RVA: 0x0109688D File Offset: 0x01094A8D
+		// Token: 0x06039CA7 RID: 236711 RVA: 0x0103B0CD File Offset: 0x010392CD
 		public void Clear()
 		{
 			this.HasResolved = false;
 		}
 
-		// Token: 0x06043C5A RID: 277594 RVA: 0x01096896 File Offset: 0x01094A96
+		// Token: 0x06039CA8 RID: 236712 RVA: 0x0103B0D6 File Offset: 0x010392D6
 		public Vector GetResolvedLocation()
 		{
 			if (!this.HasResolved)
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			return this.ResolvedLocation;
 		}
 
-		// Token: 0x06043C5B RID: 277595 RVA: 0x010968A8 File Offset: 0x01094AA8
+		// Token: 0x06039CA9 RID: 236713 RVA: 0x0103B0E8 File Offset: 0x010392E8
 		public void TryResolve(USplineComponent spline, Vector jumpPointLocation, [Nullable(1)] ISceneInteractSearchParams @params, AActor referenceActor = null)
 		{
 			this.HasResolved = false;
@@ -60,19 +60,19 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			this.HasResolved = SplineLandingSelector.SelectLandingLocation(spline, jumpPointLocation, @params, this.ResolvedLocation, refLocation, refRotation);
 		}
 
-		// Token: 0x04023680 RID: 145024
+		// Token: 0x0401E872 RID: 125042
 		private Vector ResolvedLocation;
 
-		// Token: 0x04023681 RID: 145025
+		// Token: 0x0401E873 RID: 125043
 		private bool HasResolved;
 
-		// Token: 0x04023682 RID: 145026
+		// Token: 0x0401E874 RID: 125044
 		private Vector RefLocation;
 
-		// Token: 0x04023683 RID: 145027
+		// Token: 0x0401E875 RID: 125045
 		private Rotator RefRotator;
 
-		// Token: 0x04023684 RID: 145028
+		// Token: 0x0401E876 RID: 125046
 		private Quat RefRotation;
 	}
 }

@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200689B RID: 26779
+	// Token: 0x02006F3C RID: 28476
 	public class IGravityControlOptionT
 	{
-		// Token: 0x1700C6CF RID: 50895
-		// (get) Token: 0x0602EB4C RID: 191308 RVA: 0x0065E273 File Offset: 0x0065C473
-		// (set) Token: 0x0602EB4D RID: 191309 RVA: 0x0065E27B File Offset: 0x0065C47B
+		// Token: 0x1700D0B5 RID: 53429
+		// (get) Token: 0x06031486 RID: 201862 RVA: 0x006AD2F3 File Offset: 0x006AB4F3
+		// (set) Token: 0x06031487 RID: 201863 RVA: 0x006AD2FB File Offset: 0x006AB4FB
 		public ESystemOptionType Type { get; set; }
 
-		// Token: 0x1700C6D0 RID: 50896
-		// (get) Token: 0x0602EB4E RID: 191310 RVA: 0x0065E284 File Offset: 0x0065C484
-		// (set) Token: 0x0602EB4F RID: 191311 RVA: 0x0065E28C File Offset: 0x0065C48C
+		// Token: 0x1700D0B6 RID: 53430
+		// (get) Token: 0x06031488 RID: 201864 RVA: 0x006AD304 File Offset: 0x006AB504
+		// (set) Token: 0x06031489 RID: 201865 RVA: 0x006AD30C File Offset: 0x006AB50C
 		public List<ISystemOptionT> SystemOptions { get; set; }
 
-		// Token: 0x1700C6D1 RID: 50897
-		// (get) Token: 0x0602EB50 RID: 191312 RVA: 0x0065E295 File Offset: 0x0065C495
-		// (set) Token: 0x0602EB51 RID: 191313 RVA: 0x0065E29D File Offset: 0x0065C49D
+		// Token: 0x1700D0B7 RID: 53431
+		// (get) Token: 0x0603148A RID: 201866 RVA: 0x006AD315 File Offset: 0x006AB515
+		// (set) Token: 0x0603148B RID: 201867 RVA: 0x006AD31D File Offset: 0x006AB51D
 		public bool KeepPreTalkItem { get; set; }
 
-		// Token: 0x1700C6D2 RID: 50898
-		// (get) Token: 0x0602EB52 RID: 191314 RVA: 0x0065E2A6 File Offset: 0x0065C4A6
-		// (set) Token: 0x0602EB53 RID: 191315 RVA: 0x0065E2AE File Offset: 0x0065C4AE
+		// Token: 0x1700D0B8 RID: 53432
+		// (get) Token: 0x0603148C RID: 201868 RVA: 0x006AD326 File Offset: 0x006AB526
+		// (set) Token: 0x0603148D RID: 201869 RVA: 0x006AD32E File Offset: 0x006AB52E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602EB54 RID: 191316 RVA: 0x0065E2B7 File Offset: 0x0065C4B7
+		// Token: 0x0603148E RID: 201870 RVA: 0x006AD337 File Offset: 0x006AB537
 		public IGravityControlOptionT()
 		{
 			this.Type = ESystemOptionType.RogueRandomEvent;

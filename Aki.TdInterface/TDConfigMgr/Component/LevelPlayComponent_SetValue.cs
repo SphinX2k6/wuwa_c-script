@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000824 RID: 2084
+	// Token: 0x020008C7 RID: 2247
 	public class LevelPlayComponent_SetValue
 	{
-		// Token: 0x04001E01 RID: 7681
+		// Token: 0x0400200D RID: 8205
 		public bool? Disabled;
 
-		// Token: 0x04001E02 RID: 7682
+		// Token: 0x0400200E RID: 8206
 		public bool? EdIsLocked;
 
-		// Token: 0x04001E03 RID: 7683
+		// Token: 0x0400200F RID: 8207
 		public int LevelPlayId;
 	}
 }

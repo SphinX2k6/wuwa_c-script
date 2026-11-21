@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077F9 RID: 30713
+	// Token: 0x02008037 RID: 32823
 	public class TUnlockSystemOptionUnion
 	{
-		// Token: 0x1700E6E9 RID: 59113
-		// (get) Token: 0x06037B3E RID: 228158 RVA: 0x0078800A File Offset: 0x0078620A
-		// (set) Token: 0x06037B3F RID: 228159 RVA: 0x00788012 File Offset: 0x00786212
+		// Token: 0x1700F347 RID: 62279
+		// (get) Token: 0x0603B0E3 RID: 241891 RVA: 0x007ED982 File Offset: 0x007EBB82
+		// (set) Token: 0x0603B0E4 RID: 241892 RVA: 0x007ED98A File Offset: 0x007EBB8A
 		public TUnlockSystemOption Type { get; set; }
 
-		// Token: 0x1700E6EA RID: 59114
-		// (get) Token: 0x06037B40 RID: 228160 RVA: 0x0078801B File Offset: 0x0078621B
-		// (set) Token: 0x06037B41 RID: 228161 RVA: 0x00788023 File Offset: 0x00786223
+		// Token: 0x1700F348 RID: 62280
+		// (get) Token: 0x0603B0E5 RID: 241893 RVA: 0x007ED993 File Offset: 0x007EBB93
+		// (set) Token: 0x0603B0E6 RID: 241894 RVA: 0x007ED99B File Offset: 0x007EBB9B
 		public object Value { get; set; }
 
-		// Token: 0x06037B42 RID: 228162 RVA: 0x0078802C File Offset: 0x0078622C
+		// Token: 0x0603B0E7 RID: 241895 RVA: 0x007ED9A4 File Offset: 0x007EBBA4
 		public TUnlockSystemOptionUnion()
 		{
 			this.Type = TUnlockSystemOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037B43 RID: 228163 RVA: 0x00788042 File Offset: 0x00786242
+		// Token: 0x0603B0E8 RID: 241896 RVA: 0x007ED9BA File Offset: 0x007EBBBA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037B44 RID: 228164 RVA: 0x00788054 File Offset: 0x00786254
+		// Token: 0x0603B0E9 RID: 241897 RVA: 0x007ED9CC File Offset: 0x007EBBCC
 		public IUnlockAchievementSystemItemT AsIUnlockAchievementSystemItem()
 		{
 			return this.As<IUnlockAchievementSystemItemT>();
 		}
 
-		// Token: 0x06037B45 RID: 228165 RVA: 0x0078805C File Offset: 0x0078625C
+		// Token: 0x0603B0EA RID: 241898 RVA: 0x007ED9D4 File Offset: 0x007EBBD4
 		public static TUnlockSystemOptionUnion FromIUnlockAchievementSystemItem(IUnlockAchievementSystemItemT _iunlockachievementsystemitem)
 		{
 			return new TUnlockSystemOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B46 RID: 228166 RVA: 0x00788071 File Offset: 0x00786271
+		// Token: 0x0603B0EB RID: 241899 RVA: 0x007ED9E9 File Offset: 0x007EBBE9
 		public IUnlockAtlasSystemItemT AsIUnlockAtlasSystemItem()
 		{
 			return this.As<IUnlockAtlasSystemItemT>();
 		}
 
-		// Token: 0x06037B47 RID: 228167 RVA: 0x00788079 File Offset: 0x00786279
+		// Token: 0x0603B0EC RID: 241900 RVA: 0x007ED9F1 File Offset: 0x007EBBF1
 		public static TUnlockSystemOptionUnion FromIUnlockAtlasSystemItem(IUnlockAtlasSystemItemT _iunlockatlassystemitem)
 		{
 			return new TUnlockSystemOptionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B48 RID: 228168 RVA: 0x0078808E File Offset: 0x0078628E
+		// Token: 0x0603B0ED RID: 241901 RVA: 0x007EDA06 File Offset: 0x007EBC06
 		public IUnLockCookSystemItemT AsIUnLockCookSystemItem()
 		{
 			return this.As<IUnLockCookSystemItemT>();
 		}
 
-		// Token: 0x06037B49 RID: 228169 RVA: 0x00788096 File Offset: 0x00786296
+		// Token: 0x0603B0EE RID: 241902 RVA: 0x007EDA0E File Offset: 0x007EBC0E
 		public static TUnlockSystemOptionUnion FromIUnLockCookSystemItem(IUnLockCookSystemItemT _iunlockcooksystemitem)
 		{
 			return new TUnlockSystemOptionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B4A RID: 228170 RVA: 0x007880AB File Offset: 0x007862AB
+		// Token: 0x0603B0EF RID: 241903 RVA: 0x007EDA23 File Offset: 0x007EBC23
 		public IUnLockDangoCollectSystemItemT AsIUnLockDangoCollectSystemItem()
 		{
 			return this.As<IUnLockDangoCollectSystemItemT>();
 		}
 
-		// Token: 0x06037B4B RID: 228171 RVA: 0x007880B3 File Offset: 0x007862B3
+		// Token: 0x0603B0F0 RID: 241904 RVA: 0x007EDA2B File Offset: 0x007EBC2B
 		public static TUnlockSystemOptionUnion FromIUnLockDangoCollectSystemItem(IUnLockDangoCollectSystemItemT _iunlockdangocollectsystemitem)
 		{
 			return new TUnlockSystemOptionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B4C RID: 228172 RVA: 0x007880C8 File Offset: 0x007862C8
+		// Token: 0x0603B0F1 RID: 241905 RVA: 0x007EDA40 File Offset: 0x007EBC40
 		public IUnlockPhotoMemoryCollectSystemItemT AsIUnlockPhotoMemoryCollectSystemItem()
 		{
 			return this.As<IUnlockPhotoMemoryCollectSystemItemT>();
 		}
 
-		// Token: 0x06037B4D RID: 228173 RVA: 0x007880D0 File Offset: 0x007862D0
+		// Token: 0x0603B0F2 RID: 241906 RVA: 0x007EDA48 File Offset: 0x007EBC48
 		public static TUnlockSystemOptionUnion FromIUnlockPhotoMemoryCollectSystemItem(IUnlockPhotoMemoryCollectSystemItemT _iunlockphotomemorycollectsystemitem)
 		{
 			return new TUnlockSystemOptionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B4E RID: 228174 RVA: 0x007880E8 File Offset: 0x007862E8
+		// Token: 0x0603B0F3 RID: 241907 RVA: 0x007EDA60 File Offset: 0x007EBC60
 		public static int Pack(FlatBufferBuilder builder, TUnlockSystemOptionUnion _o)
 		{
 			switch (_o.Type)

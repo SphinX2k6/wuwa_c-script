@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A2 RID: 10402
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002B77 RID: 11127
 	public class IBaseCurve
 	{
-		// Token: 0x0600E646 RID: 58950 RVA: 0x0021D5BC File Offset: 0x0021B7BC
-		[NullableContext(1)]
+		// Token: 0x0600F475 RID: 62581 RVA: 0x0023A53C File Offset: 0x0023873C
 		public static IBaseCurve Create(IBaseCurve? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046C4 RID: 18116
-		// (get) Token: 0x0600E647 RID: 58951 RVA: 0x0021D5DB File Offset: 0x0021B7DB
+		// Token: 0x17004A35 RID: 18997
+		// (get) Token: 0x0600F476 RID: 62582 RVA: 0x0023A55B File Offset: 0x0023875B
 		public virtual EBaseCurveType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046C5 RID: 18117
-		// (get) Token: 0x0600E648 RID: 58952 RVA: 0x0021D5E8 File Offset: 0x0021B7E8
+		// Token: 0x17004A36 RID: 18998
+		// (get) Token: 0x0600F477 RID: 62583 RVA: 0x0023A568 File Offset: 0x00238768
 		public virtual float N
 		{
 			get
@@ -43,17 +40,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046C6 RID: 18118
-		// (get) Token: 0x0600E649 RID: 58953 RVA: 0x0021D5F5 File Offset: 0x0021B7F5
+		// Token: 0x17004A37 RID: 18999
+		// (get) Token: 0x0600F478 RID: 62584 RVA: 0x0023A575 File Offset: 0x00238775
+		[Nullable(2)]
 		public virtual string CurveAsset
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.CurveAsset;
 			}
 		}
 
-		// Token: 0x04007F52 RID: 32594
+		// Token: 0x04008611 RID: 34321
 		private IBaseCurve Instance;
 	}
 }

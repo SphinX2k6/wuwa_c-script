@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CFF RID: 23807
+	// Token: 0x02006333 RID: 25395
 	public enum EMotorParkourSystemVarType : byte
 	{
-		// Token: 0x0400F663 RID: 63075
+		// Token: 0x040103B2 RID: 66482
 		CurLap,
-		// Token: 0x0400F664 RID: 63076
+		// Token: 0x040103B3 RID: 66483
 		TotalTime,
-		// Token: 0x0400F665 RID: 63077
+		// Token: 0x040103B4 RID: 66484
 		ParkourFinished,
-		// Token: 0x0400F666 RID: 63078
+		// Token: 0x040103B5 RID: 66485
 		BestTime,
-		// Token: 0x0400F667 RID: 63079
+		// Token: 0x040103B6 RID: 66486
 		CurCostTime
 	}
 }

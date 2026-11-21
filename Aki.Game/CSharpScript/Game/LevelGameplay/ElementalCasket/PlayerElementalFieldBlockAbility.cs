@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E74 RID: 28276
+	// Token: 0x02005FF5 RID: 24565
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalFieldBlockAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044E93 RID: 282259 RVA: 0x01105141 File Offset: 0x01103341
+		// Token: 0x0603B031 RID: 241713 RVA: 0x010AF760 File Offset: 0x010AD960
 		public PlayerElementalFieldBlockAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E94 RID: 282260 RVA: 0x0110515C File Offset: 0x0110335C
+		// Token: 0x0603B032 RID: 241714 RVA: 0x010AF778 File Offset: 0x010AD978
 		public override void OnActivated(Entity entity)
 		{
 			this.FireFieldBlockTargetOverlapSet.Clear();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.EnsureOverlapDetector();
 		}
 
-		// Token: 0x06044E95 RID: 282261 RVA: 0x01105202 File Offset: 0x01103402
+		// Token: 0x0603B033 RID: 241715 RVA: 0x010AF81E File Offset: 0x010ADA1E
 		public override void OnDeactivated(Entity entity)
 		{
 			this.DetachDetector();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RestorePrim();
 		}
 
-		// Token: 0x06044E96 RID: 282262 RVA: 0x0110523C File Offset: 0x0110343C
+		// Token: 0x0603B034 RID: 241716 RVA: 0x010AF858 File Offset: 0x010ADA58
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			this.CheckPlayerElementalCasket();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.ApplyResponse();
 		}
 
-		// Token: 0x06044E97 RID: 282263 RVA: 0x011052D4 File Offset: 0x011034D4
+		// Token: 0x0603B035 RID: 241717 RVA: 0x010AF8F0 File Offset: 0x010ADAF0
 		private void CheckPlayerElementalCasket()
 		{
 			PlayerElementalCasketComponent playerElementalCasketComponent = ElementalCasketController.Instance.GetPlayerElementalCasketComponent();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E98 RID: 282264 RVA: 0x01105360 File Offset: 0x01103560
+		// Token: 0x0603B036 RID: 241718 RVA: 0x010AF97C File Offset: 0x010ADB7C
 		private void RestorePrim()
 		{
 			UPrimitiveComponent currentPrimitiveComponent = this.CurrentPrimitiveComponent;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.OriginResponse = null;
 		}
 
-		// Token: 0x06044E99 RID: 282265 RVA: 0x011053C8 File Offset: 0x011035C8
+		// Token: 0x0603B037 RID: 241719 RVA: 0x010AF9E4 File Offset: 0x010ADBE4
 		[NullableContext(2)]
 		private UPrimitiveComponent GetTargetPrimComp()
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return ucapsuleComponent;
 		}
 
-		// Token: 0x06044E9A RID: 282266 RVA: 0x01105458 File Offset: 0x01103658
+		// Token: 0x0603B038 RID: 241720 RVA: 0x010AFA74 File Offset: 0x010ADC74
 		private void EnsureOverlapDetector()
 		{
 			UPrimitiveComponent targetPrimComp = this.GetTargetPrimComp();
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.CountOverlappingTargets(targetPrimComp);
 		}
 
-		// Token: 0x06044E9B RID: 282267 RVA: 0x01105514 File Offset: 0x01103714
+		// Token: 0x0603B039 RID: 241721 RVA: 0x010AFB30 File Offset: 0x010ADD30
 		private void DetachDetector()
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.FireDetectorOriginResponse = null;
 		}
 
-		// Token: 0x06044E9C RID: 282268 RVA: 0x011055B0 File Offset: 0x011037B0
+		// Token: 0x0603B03A RID: 241722 RVA: 0x010AFBCC File Offset: 0x010ADDCC
 		private void CountOverlappingTargets(UPrimitiveComponent prim)
 		{
 			this.FireFieldBlockTargetOverlapSet.Clear();
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			objectTypeElement.ClearCacheData(false);
 		}
 
-		// Token: 0x06044E9D RID: 282269 RVA: 0x01105720 File Offset: 0x01103920
+		// Token: 0x0603B03B RID: 241723 RVA: 0x010AFD3C File Offset: 0x010ADF3C
 		[NullableContext(2)]
 		private void OnDetectorBeginOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex, bool bFromSweep, [Nullable(1)] FHitResult sweepResult)
 		{
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.ApplyResponse();
 		}
 
-		// Token: 0x06044E9E RID: 282270 RVA: 0x01105774 File Offset: 0x01103974
+		// Token: 0x0603B03C RID: 241724 RVA: 0x010AFD90 File Offset: 0x010ADF90
 		[NullableContext(2)]
 		private void OnDetectorEndOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex)
 		{
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.ApplyResponse();
 		}
 
-		// Token: 0x06044E9F RID: 282271 RVA: 0x011057C8 File Offset: 0x011039C8
+		// Token: 0x0603B03D RID: 241725 RVA: 0x010AFDE4 File Offset: 0x010ADFE4
 		private void ApplyResponse()
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.SetResponse(instance, block);
 		}
 
-		// Token: 0x06044EA0 RID: 282272 RVA: 0x01105800 File Offset: 0x01103A00
+		// Token: 0x0603B03E RID: 241726 RVA: 0x010AFE1C File Offset: 0x010AE01C
 		private void SetResponse(ElementalCasketModel model, bool block)
 		{
 			UPrimitiveComponent targetPrimComp = this.GetTargetPrimComp();
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EA1 RID: 282273 RVA: 0x01105848 File Offset: 0x01103A48
+		// Token: 0x0603B03F RID: 241727 RVA: 0x010AFE64 File Offset: 0x010AE064
 		private void RefreshCurrentFloor()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -320,30 +320,40 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			characterActorComponent2.RefreshCurrentFloor();
 		}
 
-		// Token: 0x04023E17 RID: 146967
+		// Token: 0x17006F74 RID: 28532
+		// (get) Token: 0x0603B040 RID: 241728 RVA: 0x010AFEAC File Offset: 0x010AE0AC
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0CF RID: 127183
 		private const string COUNT_OVERLAP_PROFILE_KEY = "PlayerElementalFieldBlockAbility.CountOverlappingTargets";
 
-		// Token: 0x04023E18 RID: 146968
+		// Token: 0x0401F0D0 RID: 127184
 		[Nullable(2)]
 		private UPrimitiveComponent FireFieldBlockDetector;
 
-		// Token: 0x04023E19 RID: 146969
+		// Token: 0x0401F0D1 RID: 127185
 		private int FireFieldBlockHandledRequestCount;
 
-		// Token: 0x04023E1A RID: 146970
+		// Token: 0x0401F0D2 RID: 127186
 		private ECollisionResponse? FireDetectorOriginResponse;
 
-		// Token: 0x04023E1B RID: 146971
+		// Token: 0x0401F0D3 RID: 127187
 		private readonly HashSet<UPrimitiveComponent> FireFieldBlockTargetOverlapSet = new HashSet<UPrimitiveComponent>();
 
-		// Token: 0x04023E1C RID: 146972
+		// Token: 0x0401F0D4 RID: 127188
 		[Nullable(2)]
 		private UPrimitiveComponent CurrentPrimitiveComponent;
 
-		// Token: 0x04023E1D RID: 146973
+		// Token: 0x0401F0D5 RID: 127189
 		private ECollisionResponse? OriginResponse;
 
-		// Token: 0x04023E1E RID: 146974
+		// Token: 0x0401F0D6 RID: 127190
 		private bool CachedPlayerElementalCasketFireFieldOpened;
 	}
 }

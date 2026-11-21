@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 {
-	// Token: 0x02005736 RID: 22326
+	// Token: 0x0200470D RID: 18189
 	public class KurotatoWeaponSmallItemGrid : LoopScrollSmallItemGrid<int>
 	{
-		// Token: 0x06038C23 RID: 232483 RVA: 0x00D79500 File Offset: 0x00D77700
+		// Token: 0x0602DB33 RID: 187187 RVA: 0x00CC7BB0 File Offset: 0x00CC5DB0
 		protected override void OnRefresh(int id, bool isSelected, int gridIndex)
 		{
 			if (id == 0)
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			base.Apply<KurotatoSmallItemGrid>(parameters2);
 		}
 
-		// Token: 0x06038C24 RID: 232484 RVA: 0x00D795D2 File Offset: 0x00D777D2
+		// Token: 0x0602DB34 RID: 187188 RVA: 0x00CC7C82 File Offset: 0x00CC5E82
 		[NullableContext(1)]
 		public void SetToggleClickCallback(Action<int> callback)
 		{
 			this.ToggleClickCallback = callback;
 		}
 
-		// Token: 0x06038C25 RID: 232485 RVA: 0x00D795DB File Offset: 0x00D777DB
+		// Token: 0x0602DB35 RID: 187189 RVA: 0x00CC7C8B File Offset: 0x00CC5E8B
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			this.SetSelected(false, false);
@@ -65,10 +65,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.RoleSelect
 			}
 		}
 
-		// Token: 0x0401DC70 RID: 121968
+		// Token: 0x04018706 RID: 100102
 		private int ItemId;
 
-		// Token: 0x0401DC71 RID: 121969
+		// Token: 0x04018707 RID: 100103
 		[Nullable(2)]
 		private Action<int> ToggleClickCallback;
 	}

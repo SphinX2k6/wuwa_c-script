@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200101F RID: 4127
+	// Token: 0x02001107 RID: 4359
 	public struct RogueSeason : IFlatbufferObject
 	{
-		// Token: 0x1700310B RID: 12555
-		// (get) Token: 0x0600C4C4 RID: 50372 RVA: 0x002F1870 File Offset: 0x002EFA70
+		// Token: 0x17003186 RID: 12678
+		// (get) Token: 0x0600CB0E RID: 51982 RVA: 0x0030D878 File Offset: 0x0030BA78
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4C5 RID: 50373 RVA: 0x002F187D File Offset: 0x002EFA7D
+		// Token: 0x0600CB0F RID: 51983 RVA: 0x0030D885 File Offset: 0x0030BA85
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C4C6 RID: 50374 RVA: 0x002F1884 File Offset: 0x002EFA84
+		// Token: 0x0600CB10 RID: 51984 RVA: 0x0030D88C File Offset: 0x0030BA8C
 		public static RogueSeason GetRootAsRogueSeason(ByteBuffer _bb)
 		{
 			return RogueSeason.GetRootAsRogueSeason(_bb, default(RogueSeason));
 		}
 
-		// Token: 0x0600C4C7 RID: 50375 RVA: 0x002F18A0 File Offset: 0x002EFAA0
+		// Token: 0x0600CB11 RID: 51985 RVA: 0x0030D8A8 File Offset: 0x0030BAA8
 		public static RogueSeason GetRootAsRogueSeason(ByteBuffer _bb, RogueSeason obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C4C8 RID: 50376 RVA: 0x002F18BD File Offset: 0x002EFABD
+		// Token: 0x0600CB12 RID: 51986 RVA: 0x0030D8C5 File Offset: 0x0030BAC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C4C9 RID: 50377 RVA: 0x002F18CC File Offset: 0x002EFACC
+		// Token: 0x0600CB13 RID: 51987 RVA: 0x0030D8D4 File Offset: 0x0030BAD4
 		public RogueSeason __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700310C RID: 12556
-		// (get) Token: 0x0600C4CA RID: 50378 RVA: 0x002F18DC File Offset: 0x002EFADC
+		// Token: 0x17003187 RID: 12679
+		// (get) Token: 0x0600CB14 RID: 51988 RVA: 0x0030D8E4 File Offset: 0x0030BAE4
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700310D RID: 12557
-		// (get) Token: 0x0600C4CB RID: 50379 RVA: 0x002F1918 File Offset: 0x002EFB18
+		// Token: 0x17003188 RID: 12680
+		// (get) Token: 0x0600CB15 RID: 51989 RVA: 0x0030D920 File Offset: 0x0030BB20
 		public int ActivityId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700310E RID: 12558
-		// (get) Token: 0x0600C4CC RID: 50380 RVA: 0x002F1954 File Offset: 0x002EFB54
+		// Token: 0x17003189 RID: 12681
+		// (get) Token: 0x0600CB16 RID: 51990 RVA: 0x0030D95C File Offset: 0x0030BB5C
 		public string SeasonName
 		{
 			get
@@ -96,20 +96,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4CD RID: 50381 RVA: 0x002F198B File Offset: 0x002EFB8B
+		// Token: 0x0600CB17 RID: 51991 RVA: 0x0030D993 File Offset: 0x0030BB93
 		public Span<byte> GetSeasonNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600C4CE RID: 50382 RVA: 0x002F199A File Offset: 0x002EFB9A
+		// Token: 0x0600CB18 RID: 51992 RVA: 0x0030D9A2 File Offset: 0x0030BBA2
 		public byte[] GetSeasonNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700310F RID: 12559
-		// (get) Token: 0x0600C4CF RID: 50383 RVA: 0x002F19B4 File Offset: 0x002EFBB4
+		// Token: 0x1700318A RID: 12682
+		// (get) Token: 0x0600CB19 RID: 51993 RVA: 0x0030D9BC File Offset: 0x0030BBBC
 		public int PointItem
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003110 RID: 12560
-		// (get) Token: 0x0600C4D0 RID: 50384 RVA: 0x002F19F4 File Offset: 0x002EFBF4
+		// Token: 0x1700318B RID: 12683
+		// (get) Token: 0x0600CB1A RID: 51994 RVA: 0x0030D9FC File Offset: 0x0030BBFC
 		public int InstanceDungeonEntrance
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4D1 RID: 50385 RVA: 0x002F1A34 File Offset: 0x002EFC34
+		// Token: 0x0600CB1B RID: 51995 RVA: 0x0030DA3C File Offset: 0x0030BC3C
 		public DicIntIntArray? InstanceDungeonList(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -149,8 +149,8 @@ namespace Aki.Config
 			return new DicIntIntArray?(default(DicIntIntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003111 RID: 12561
-		// (get) Token: 0x0600C4D2 RID: 50386 RVA: 0x002F1A98 File Offset: 0x002EFC98
+		// Token: 0x1700318C RID: 12684
+		// (get) Token: 0x0600CB1C RID: 51996 RVA: 0x0030DAA0 File Offset: 0x0030BCA0
 		public int InstanceDungeonListLength
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4D3 RID: 50387 RVA: 0x002F1AC4 File Offset: 0x002EFCC4
+		// Token: 0x0600CB1D RID: 51997 RVA: 0x0030DACC File Offset: 0x0030BCCC
 		public DicIntString? InstanceDungeonTypeName(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -175,8 +175,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003112 RID: 12562
-		// (get) Token: 0x0600C4D4 RID: 50388 RVA: 0x002F1B28 File Offset: 0x002EFD28
+		// Token: 0x1700318D RID: 12685
+		// (get) Token: 0x0600CB1E RID: 51998 RVA: 0x0030DB30 File Offset: 0x0030BD30
 		public int InstanceDungeonTypeNameLength
 		{
 			get
@@ -190,8 +190,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003113 RID: 12563
-		// (get) Token: 0x0600C4D5 RID: 50389 RVA: 0x002F1B54 File Offset: 0x002EFD54
+		// Token: 0x1700318E RID: 12686
+		// (get) Token: 0x0600CB1F RID: 51999 RVA: 0x0030DB5C File Offset: 0x0030BD5C
 		public int ChallengeInstanceId
 		{
 			get
@@ -205,8 +205,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003114 RID: 12564
-		// (get) Token: 0x0600C4D6 RID: 50390 RVA: 0x002F1B94 File Offset: 0x002EFD94
+		// Token: 0x1700318F RID: 12687
+		// (get) Token: 0x0600CB20 RID: 52000 RVA: 0x0030DB9C File Offset: 0x0030BD9C
 		public int SaveDataMaxNum
 		{
 			get
@@ -220,8 +220,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003115 RID: 12565
-		// (get) Token: 0x0600C4D7 RID: 50391 RVA: 0x002F1BD4 File Offset: 0x002EFDD4
+		// Token: 0x17003190 RID: 12688
+		// (get) Token: 0x0600CB21 RID: 52001 RVA: 0x0030DBDC File Offset: 0x0030BDDC
 		public string TabIcon
 		{
 			get
@@ -235,20 +235,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4D8 RID: 50392 RVA: 0x002F1C0C File Offset: 0x002EFE0C
+		// Token: 0x0600CB22 RID: 52002 RVA: 0x0030DC14 File Offset: 0x0030BE14
 		public Span<byte> GetTabIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600C4D9 RID: 50393 RVA: 0x002F1C1C File Offset: 0x002EFE1C
+		// Token: 0x0600CB23 RID: 52003 RVA: 0x0030DC24 File Offset: 0x0030BE24
 		public byte[] GetTabIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003116 RID: 12566
-		// (get) Token: 0x0600C4DA RID: 50394 RVA: 0x002F1C34 File Offset: 0x002EFE34
+		// Token: 0x17003191 RID: 12689
+		// (get) Token: 0x0600CB24 RID: 52004 RVA: 0x0030DC3C File Offset: 0x0030BE3C
 		public int ShopId
 		{
 			get
@@ -262,8 +262,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003117 RID: 12567
-		// (get) Token: 0x0600C4DB RID: 50395 RVA: 0x002F1C74 File Offset: 0x002EFE74
+		// Token: 0x17003192 RID: 12690
+		// (get) Token: 0x0600CB25 RID: 52005 RVA: 0x0030DC7C File Offset: 0x0030BE7C
 		public int Achievement
 		{
 			get
@@ -277,8 +277,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003118 RID: 12568
-		// (get) Token: 0x0600C4DC RID: 50396 RVA: 0x002F1CB4 File Offset: 0x002EFEB4
+		// Token: 0x17003193 RID: 12691
+		// (get) Token: 0x0600CB26 RID: 52006 RVA: 0x0030DCBC File Offset: 0x0030BEBC
 		public int ParamId
 		{
 			get
@@ -292,8 +292,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003119 RID: 12569
-		// (get) Token: 0x0600C4DD RID: 50397 RVA: 0x002F1CF4 File Offset: 0x002EFEF4
+		// Token: 0x17003194 RID: 12692
+		// (get) Token: 0x0600CB27 RID: 52007 RVA: 0x0030DCFC File Offset: 0x0030BEFC
 		public string RogueThemeType
 		{
 			get
@@ -307,53 +307,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C4DE RID: 50398 RVA: 0x002F1D2C File Offset: 0x002EFF2C
+		// Token: 0x0600CB28 RID: 52008 RVA: 0x0030DD34 File Offset: 0x0030BF34
 		public Span<byte> GetRogueThemeTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(30, 1);
 		}
 
-		// Token: 0x0600C4DF RID: 50399 RVA: 0x002F1D3C File Offset: 0x002EFF3C
+		// Token: 0x0600CB29 RID: 52009 RVA: 0x0030DD44 File Offset: 0x0030BF44
 		public byte[] GetRogueThemeTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(30) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600C4E0 RID: 50400 RVA: 0x002F1D54 File Offset: 0x002EFF54
+		// Token: 0x0600CB2A RID: 52010 RVA: 0x0030DD5C File Offset: 0x0030BF5C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用InstanceDungeonListFrozenDict()缓存字典，遍历请使用InstanceDungeonListIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, IntArray> InstanceDungeonList()
+		public Dictionary<int, IntArray> InstanceDungeonList()
 		{
 			return this.InstanceDungeonListIter().ToDictionary((DicIntIntArray element) => element.Key, (DicIntIntArray element) => element.Value.Value);
 		}
 
-		// Token: 0x0600C4E1 RID: 50401 RVA: 0x002F1DAA File Offset: 0x002EFFAA
+		// Token: 0x0600CB2B RID: 52011 RVA: 0x0030DDB2 File Offset: 0x0030BFB2
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntIntArray> InstanceDungeonListIter()
+		public IEnumerable<DicIntIntArray> InstanceDungeonListIter()
 		{
 			RogueSeason.<InstanceDungeonListIter>d__45 <InstanceDungeonListIter>d__ = new RogueSeason.<InstanceDungeonListIter>d__45(-2);
 			<InstanceDungeonListIter>d__.<>3__<>4__this = this;
 			return <InstanceDungeonListIter>d__;
 		}
 
-		// Token: 0x0600C4E2 RID: 50402 RVA: 0x002F1DC0 File Offset: 0x002EFFC0
+		// Token: 0x0600CB2C RID: 52012 RVA: 0x0030DDC8 File Offset: 0x0030BFC8
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用InstanceDungeonTypeNameFrozenDict()缓存字典，遍历请使用InstanceDungeonTypeNameIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> InstanceDungeonTypeName()
+		public Dictionary<int, string> InstanceDungeonTypeName()
 		{
 			return this.InstanceDungeonTypeNameIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x0600C4E3 RID: 50403 RVA: 0x002F1E16 File Offset: 0x002F0016
+		// Token: 0x0600CB2D RID: 52013 RVA: 0x0030DE1E File Offset: 0x0030C01E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> InstanceDungeonTypeNameIter()
+		public IEnumerable<DicIntString> InstanceDungeonTypeNameIter()
 		{
 			RogueSeason.<InstanceDungeonTypeNameIter>d__47 <InstanceDungeonTypeNameIter>d__ = new RogueSeason.<InstanceDungeonTypeNameIter>d__47(-2);
 			<InstanceDungeonTypeNameIter>d__.<>3__<>4__this = this;
 			return <InstanceDungeonTypeNameIter>d__;
 		}
 
-		// Token: 0x0600C4E4 RID: 50404 RVA: 0x002F1E2C File Offset: 0x002F002C
+		// Token: 0x0600CB2E RID: 52014 RVA: 0x0030DE34 File Offset: 0x0030C034
 		public IntArray? GetInstanceDungeonList(int key)
 		{
 			this.EnsureInstanceDungeonListCacheIfNeeded();
@@ -365,7 +363,7 @@ namespace Aki.Config
 			return new IntArray?(value);
 		}
 
-		// Token: 0x0600C4E5 RID: 50405 RVA: 0x002F1E60 File Offset: 0x002F0060
+		// Token: 0x0600CB2F RID: 52015 RVA: 0x0030DE68 File Offset: 0x0030C068
 		[NullableContext(2)]
 		public string GetInstanceDungeonTypeName(int key)
 		{
@@ -378,7 +376,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x0600C4E6 RID: 50406 RVA: 0x002F1E88 File Offset: 0x002F0088
+		// Token: 0x0600CB30 RID: 52016 RVA: 0x0030DE90 File Offset: 0x0030C090
 		private void EnsureInstanceDungeonListCacheIfNeeded()
 		{
 			if (this.InstanceDungeonListCache != null)
@@ -388,7 +386,7 @@ namespace Aki.Config
 			this.InstanceDungeonListCache = this.InstanceDungeonListIter().ToFrozenDictionary((DicIntIntArray kvp) => kvp.Key, (DicIntIntArray kvp) => kvp.Value.Value, null);
 		}
 
-		// Token: 0x0600C4E7 RID: 50407 RVA: 0x002F1EF0 File Offset: 0x002F00F0
+		// Token: 0x0600CB31 RID: 52017 RVA: 0x0030DEF8 File Offset: 0x0030C0F8
 		private void EnsureInstanceDungeonTypeNameCacheIfNeeded()
 		{
 			if (this.InstanceDungeonTypeNameCache != null)
@@ -398,34 +396,30 @@ namespace Aki.Config
 			this.InstanceDungeonTypeNameCache = this.InstanceDungeonTypeNameIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600C4E8 RID: 50408 RVA: 0x002F1F56 File Offset: 0x002F0156
-		[NullableContext(2)]
-		public FrozenDictionary<int, IntArray> GetInstanceDungeonListFrozenDict(int key)
+		// Token: 0x0600CB32 RID: 52018 RVA: 0x0030DF5E File Offset: 0x0030C15E
+		[NullableContext(1)]
+		public FrozenDictionary<int, IntArray> GetInstanceDungeonListFrozenDict()
 		{
 			this.EnsureInstanceDungeonListCacheIfNeeded();
 			return this.InstanceDungeonListCache;
 		}
 
-		// Token: 0x0600C4E9 RID: 50409 RVA: 0x002F1F64 File Offset: 0x002F0164
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetInstanceDungeonTypeNameFrozenDict(int key)
+		// Token: 0x0600CB33 RID: 52019 RVA: 0x0030DF6C File Offset: 0x0030C16C
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetInstanceDungeonTypeNameFrozenDict()
 		{
 			this.EnsureInstanceDungeonTypeNameCacheIfNeeded();
 			return this.InstanceDungeonTypeNameCache;
 		}
 
-		// Token: 0x0400510F RID: 20751
+		// Token: 0x040056F7 RID: 22263
 		private Table __p;
 
-		// Token: 0x04005110 RID: 20752
+		// Token: 0x040056F8 RID: 22264
 		[Nullable(2)]
 		private FrozenDictionary<int, IntArray> InstanceDungeonListCache;
 
-		// Token: 0x04005111 RID: 20753
+		// Token: 0x040056F9 RID: 22265
 		[Nullable(new byte[]
 		{
 			2,

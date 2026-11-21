@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010D7 RID: 4311
+	// Token: 0x02001205 RID: 4613
 	public class IRecallConditionBase_SetValue
 	{
-		// Token: 0x04003AAF RID: 15023
+		// Token: 0x04003DFC RID: 15868
 		public ERecallConditionType Type;
 
-		// Token: 0x04003AB0 RID: 15024
+		// Token: 0x04003DFD RID: 15869
 		public ERecallOperation Operation;
 	}
 }

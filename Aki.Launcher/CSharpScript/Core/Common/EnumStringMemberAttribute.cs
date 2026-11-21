@@ -7,7 +7,7 @@ namespace CSharpScript.Core.Common
 	[AttributeUsage(AttributeTargets.Field)]
 	public class EnumStringMemberAttribute : Attribute
 	{
-		// Token: 0x06000246 RID: 582 RVA: 0x0000B5D8 File Offset: 0x000097D8
+		// Token: 0x06000246 RID: 582 RVA: 0x0000B610 File Offset: 0x00009810
 		[NullableContext(1)]
 		public EnumStringMemberAttribute(string Value)
 		{

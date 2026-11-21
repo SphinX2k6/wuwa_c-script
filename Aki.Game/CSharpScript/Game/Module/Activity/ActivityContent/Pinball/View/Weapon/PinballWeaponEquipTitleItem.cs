@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062E3 RID: 25315
+	// Token: 0x02005261 RID: 21089
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 	})]
 	public class PinballWeaponEquipTitleItem : SyncGridProxyAbstract<IPinballWeaponEquipTitleItemData>
 	{
-		// Token: 0x0603FB15 RID: 260885 RVA: 0x00F68C84 File Offset: 0x00F66E84
+		// Token: 0x060347D6 RID: 214998 RVA: 0x00EAFBE0 File Offset: 0x00EADDE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FB16 RID: 260886 RVA: 0x00F68D30 File Offset: 0x00F66F30
+		// Token: 0x060347D7 RID: 214999 RVA: 0x00EAFC8C File Offset: 0x00EADE8C
 		[NullableContext(1)]
 		public override void Refresh(IPinballWeaponEquipTitleItemData data)
 		{
@@ -42,16 +42,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.SetSpriteByPath(data.TypeIconPath, base.GetSprite(1), false, null, null);
 		}
 
-		// Token: 0x0200C4CF RID: 50383
+		// Token: 0x0200AEB6 RID: 44726
 		private enum EComponent
 		{
-			// Token: 0x0403B639 RID: 243257
+			// Token: 0x04035F9B RID: 221083
 			BgSprite,
-			// Token: 0x0403B63A RID: 243258
+			// Token: 0x04035F9C RID: 221084
 			TypeIconSprite,
-			// Token: 0x0403B63B RID: 243259
+			// Token: 0x04035F9D RID: 221085
 			NameText,
-			// Token: 0x0403B63C RID: 243260
+			// Token: 0x04035F9E RID: 221086
 			StateIconSprite
 		}
 	}

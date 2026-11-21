@@ -8,28 +8,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x0200731C RID: 29468
+	// Token: 0x0200649F RID: 25759
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineTaskMontage : AiStateMachineTask, IAiTaskMontage
 	{
-		// Token: 0x17009F86 RID: 40838
-		// (get) Token: 0x0604854A RID: 296266 RVA: 0x0129A3D6 File Offset: 0x012985D6
-		// (set) Token: 0x0604854B RID: 296267 RVA: 0x0129A3DE File Offset: 0x012985DE
+		// Token: 0x17007724 RID: 30500
+		// (get) Token: 0x0603E997 RID: 256407 RVA: 0x0123CE56 File Offset: 0x0123B056
+		// (set) Token: 0x0603E998 RID: 256408 RVA: 0x0123CE5E File Offset: 0x0123B05E
 		public bool Playing { get; set; }
 
-		// Token: 0x17009F87 RID: 40839
-		// (get) Token: 0x0604854C RID: 296268 RVA: 0x0129A3E7 File Offset: 0x012985E7
-		// (set) Token: 0x0604854D RID: 296269 RVA: 0x0129A3EF File Offset: 0x012985EF
+		// Token: 0x17007725 RID: 30501
+		// (get) Token: 0x0603E999 RID: 256409 RVA: 0x0123CE67 File Offset: 0x0123B067
+		// (set) Token: 0x0603E99A RID: 256410 RVA: 0x0123CE6F File Offset: 0x0123B06F
 		public float RemainedTrigger { get; set; } = -1f;
 
-		// Token: 0x0604854E RID: 296270 RVA: 0x0129A3F8 File Offset: 0x012985F8
+		// Token: 0x0603E99B RID: 256411 RVA: 0x0123CE78 File Offset: 0x0123B078
 		public AiStateMachineTaskMontage(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Task state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x17009F88 RID: 40840
-		// (get) Token: 0x0604854F RID: 296271 RVA: 0x0129A435 File Offset: 0x01298635
+		// Token: 0x17007726 RID: 30502
+		// (get) Token: 0x0603E99C RID: 256412 RVA: 0x0123CEB5 File Offset: 0x0123B0B5
 		public bool HasResource
 		{
 			get
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048550 RID: 296272 RVA: 0x0129A454 File Offset: 0x01298654
+		// Token: 0x0603E99D RID: 256413 RVA: 0x0123CED4 File Offset: 0x0123B0D4
 		protected unsafe override bool OnInit(CombatStateMachineDefine.Fsm.Task task)
 		{
 			AiStateMachineBase node = this.Node;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return true;
 		}
 
-		// Token: 0x06048551 RID: 296273 RVA: 0x0129A774 File Offset: 0x01298974
+		// Token: 0x0603E99E RID: 256414 RVA: 0x0123D1F4 File Offset: 0x0123B3F4
 		public unsafe override void OnEnter(long? contextId = null)
 		{
 			if (this.ForcePush2Server && !this.ForcePushRegistered)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.Node.TaskFinished = true;
 		}
 
-		// Token: 0x06048552 RID: 296274 RVA: 0x0129AA58 File Offset: 0x01298C58
+		// Token: 0x0603E99F RID: 256415 RVA: 0x0123D4D8 File Offset: 0x0123B6D8
 		public unsafe override void OnExit(long? contextId = null)
 		{
 			if (this.Node != null)
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.Playing = false;
 		}
 
-		// Token: 0x06048553 RID: 296275 RVA: 0x0129ABC0 File Offset: 0x01298DC0
+		// Token: 0x0603E9A0 RID: 256416 RVA: 0x0123D640 File Offset: 0x0123B840
 		protected override void OnTick(float deltaSeconds, long? contextId = null)
 		{
 			if (this.Node != null && this.Node.MontageComponent != null && this.MontageHandle != null)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.CheckPredictEnd(deltaSeconds);
 		}
 
-		// Token: 0x06048554 RID: 296276 RVA: 0x0129AC14 File Offset: 0x01298E14
+		// Token: 0x0603E9A1 RID: 256417 RVA: 0x0123D694 File Offset: 0x0123B894
 		protected override void OnClear()
 		{
 			if (this.Node != null && this.Node.MontageComponent != null && this.MontageHandle != null)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.MontageHandle = null;
 		}
 
-		// Token: 0x06048555 RID: 296277 RVA: 0x0129AC6C File Offset: 0x01298E6C
+		// Token: 0x0603E9A2 RID: 256418 RVA: 0x0123D6EC File Offset: 0x0123B8EC
 		private void OnLoadCompleted()
 		{
 			this.Loading = false;
@@ -284,14 +284,14 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			moveComponent.SetForceSpeed(Vector.ZeroVectorProxy);
 		}
 
-		// Token: 0x06048556 RID: 296278 RVA: 0x0129ACFA File Offset: 0x01298EFA
+		// Token: 0x0603E9A3 RID: 256419 RVA: 0x0123D77A File Offset: 0x0123B97A
 		private void OnMontageEnd(bool isInterrupted)
 		{
 			this.Node.TaskFinished = true;
 			this.MontageHandle = null;
 		}
 
-		// Token: 0x06048557 RID: 296279 RVA: 0x0129AD14 File Offset: 0x01298F14
+		// Token: 0x0603E9A4 RID: 256420 RVA: 0x0123D794 File Offset: 0x0123B994
 		private unsafe void OnMontageRemain(float remainTime)
 		{
 			CombatLog instance = CombatLog.Instance;
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			EventSystem.Instance.EmitWithTarget<float>(this, EEventName.OnMontageRemain, remainTime);
 		}
 
-		// Token: 0x06048558 RID: 296280 RVA: 0x0129ADCC File Offset: 0x01298FCC
+		// Token: 0x0603E9A5 RID: 256421 RVA: 0x0123D84C File Offset: 0x0123BA4C
 		public double GetTimeRemaining()
 		{
 			if (this.Node == null || this.Node.MontageComponent == null)
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return (double)((this.MontageHandle != null) ? this.Node.MontageComponent.GetMontageTimeRemaining(this.MontageHandle.Value) : -1f);
 		}
 
-		// Token: 0x06048559 RID: 296281 RVA: 0x0129AE28 File Offset: 0x01299028
+		// Token: 0x0603E9A6 RID: 256422 RVA: 0x0123D8A8 File Offset: 0x0123BAA8
 		public double GetTimeElapsing()
 		{
 			if (this.Node == null || this.Node.MontageComponent == null)
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return (double)((this.MontageHandle != null) ? this.Node.MontageComponent.GetMontageTimeElapsing(this.MontageHandle.Value) : -1f);
 		}
 
-		// Token: 0x0604855A RID: 296282 RVA: 0x0129AE84 File Offset: 0x01299084
+		// Token: 0x0603E9A7 RID: 256423 RVA: 0x0123D904 File Offset: 0x0123BB04
 		public double GetTimeLength()
 		{
 			if (this.Node == null || this.Node.MontageComponent == null)
@@ -337,13 +337,13 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return (double)((this.MontageHandle != null) ? this.Node.MontageComponent.GetMontageTimeLength(this.MontageHandle.Value) : -1f);
 		}
 
-		// Token: 0x0604855B RID: 296283 RVA: 0x0129AEE0 File Offset: 0x012990E0
+		// Token: 0x0603E9A8 RID: 256424 RVA: 0x0123D960 File Offset: 0x0123BB60
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x0604855C RID: 296284 RVA: 0x0129AEE9 File Offset: 0x012990E9
+		// Token: 0x0603E9A9 RID: 256425 RVA: 0x0123D969 File Offset: 0x0123BB69
 		[NullableContext(2)]
 		private string GetNameByHandle(int handle)
 		{
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return this.Node.MontageComponent.GetMontageTaskNameByHandle(handle);
 		}
 
-		// Token: 0x0604855D RID: 296285 RVA: 0x0129AF13 File Offset: 0x01299113
+		// Token: 0x0603E9AA RID: 256426 RVA: 0x0123D993 File Offset: 0x0123BB93
 		[NullableContext(2)]
 		public string GetNameByCurrentHandle()
 		{
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return null;
 		}
 
-		// Token: 0x0604855E RID: 296286 RVA: 0x0129AF38 File Offset: 0x01299138
+		// Token: 0x0603E9AB RID: 256427 RVA: 0x0123D9B8 File Offset: 0x0123BBB8
 		private unsafe void CheckPredictEnd(float deltaSeconds)
 		{
 			if (!this.Playing || this.Loading)
@@ -420,44 +420,44 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x040263D7 RID: 156631
+		// Token: 0x040216C4 RID: 136900
 		private string MontageName = "";
 
-		// Token: 0x040263D8 RID: 156632
+		// Token: 0x040216C5 RID: 136901
 		private bool HideOnLoading;
 
-		// Token: 0x040263D9 RID: 156633
+		// Token: 0x040216C6 RID: 136902
 		private float BlendInTime;
 
-		// Token: 0x040263DA RID: 156634
+		// Token: 0x040216C7 RID: 136903
 		private bool ForcePush2Server;
 
-		// Token: 0x040263DB RID: 156635
+		// Token: 0x040216C8 RID: 136904
 		public int ConfigReplaceTagId;
 
-		// Token: 0x040263DC RID: 156636
+		// Token: 0x040216C9 RID: 136905
 		public string ConfigReplaceTagName = "";
 
-		// Token: 0x040263DD RID: 156637
+		// Token: 0x040216CA RID: 136906
 		[Nullable(2)]
 		private IStateRepPerfBase ReplaceConfig;
 
-		// Token: 0x040263DE RID: 156638
+		// Token: 0x040216CB RID: 136907
 		private bool ForcePushRegistered;
 
-		// Token: 0x040263DF RID: 156639
+		// Token: 0x040216CC RID: 136908
 		private int? DisableHandle;
 
-		// Token: 0x040263E0 RID: 156640
+		// Token: 0x040216CD RID: 136909
 		private int? MontageHandle;
 
-		// Token: 0x040263E1 RID: 156641
+		// Token: 0x040216CE RID: 136910
 		private bool Loading;
 
-		// Token: 0x040263E4 RID: 156644
+		// Token: 0x040216D1 RID: 136913
 		private int MontageHash = -1;
 
-		// Token: 0x040263E5 RID: 156645
+		// Token: 0x040216D2 RID: 136914
 		private float PredictEndDuration = -1f;
 	}
 }

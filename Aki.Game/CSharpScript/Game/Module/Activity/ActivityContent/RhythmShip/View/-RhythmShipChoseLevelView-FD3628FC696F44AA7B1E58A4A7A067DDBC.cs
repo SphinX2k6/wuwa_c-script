@@ -2,94 +2,94 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006211 RID: 25105
+	// Token: 0x0200518F RID: 20879
 	internal enum <RhythmShipChoseLevelView>FD3628FC696F44AA7B1E58A4A7A067DDBCAF0F1D7D6AA146CBCEAD77217B0CF93__EComponent
 	{
-		// Token: 0x0402109F RID: 135327
+		// Token: 0x0401B9CE RID: 113102
 		CaptionItem,
-		// Token: 0x040210A0 RID: 135328
+		// Token: 0x0401B9CF RID: 113103
 		KeyBindingsBtn,
-		// Token: 0x040210A1 RID: 135329
+		// Token: 0x0401B9D0 RID: 113104
 		TitleItem,
-		// Token: 0x040210A2 RID: 135330
+		// Token: 0x0401B9D1 RID: 113105
 		PlanetNameText,
-		// Token: 0x040210A3 RID: 135331
+		// Token: 0x0401B9D2 RID: 113106
 		LeftBtn,
-		// Token: 0x040210A4 RID: 135332
+		// Token: 0x0401B9D3 RID: 113107
 		RightBtn,
-		// Token: 0x040210A5 RID: 135333
+		// Token: 0x0401B9D4 RID: 113108
 		Drag,
-		// Token: 0x040210A6 RID: 135334
+		// Token: 0x0401B9D5 RID: 113109
 		LevelLayout,
-		// Token: 0x040210A7 RID: 135335
+		// Token: 0x0401B9D6 RID: 113110
 		LimitTaskBtn,
-		// Token: 0x040210A8 RID: 135336
+		// Token: 0x0401B9D7 RID: 113111
 		TaskLimitText,
-		// Token: 0x040210A9 RID: 135337
+		// Token: 0x0401B9D8 RID: 113112
 		TaskLimitTimeText,
-		// Token: 0x040210AA RID: 135338
+		// Token: 0x0401B9D9 RID: 113113
 		TaskBtn,
-		// Token: 0x040210AB RID: 135339
+		// Token: 0x0401B9DA RID: 113114
 		TaskText,
-		// Token: 0x040210AC RID: 135340
+		// Token: 0x0401B9DB RID: 113115
 		LinkageBtnItem,
-		// Token: 0x040210AD RID: 135341
+		// Token: 0x0401B9DC RID: 113116
 		LinkageRedDotItem,
-		// Token: 0x040210AE RID: 135342
+		// Token: 0x0401B9DD RID: 113117
 		FastTravelBtn,
-		// Token: 0x040210AF RID: 135343
+		// Token: 0x0401B9DE RID: 113118
 		LevelDetailItem,
-		// Token: 0x040210B0 RID: 135344
+		// Token: 0x0401B9DF RID: 113119
 		BgItem,
-		// Token: 0x040210B1 RID: 135345
+		// Token: 0x0401B9E0 RID: 113120
 		NormalLevelItem,
-		// Token: 0x040210B2 RID: 135346
+		// Token: 0x0401B9E1 RID: 113121
 		Level1Item,
-		// Token: 0x040210B3 RID: 135347
+		// Token: 0x0401B9E2 RID: 113122
 		Level2Item,
-		// Token: 0x040210B4 RID: 135348
+		// Token: 0x0401B9E3 RID: 113123
 		Level3Item,
-		// Token: 0x040210B5 RID: 135349
+		// Token: 0x0401B9E4 RID: 113124
 		Level4Item,
-		// Token: 0x040210B6 RID: 135350
+		// Token: 0x0401B9E5 RID: 113125
 		Level5Item,
-		// Token: 0x040210B7 RID: 135351
+		// Token: 0x0401B9E6 RID: 113126
 		LinkageItem,
-		// Token: 0x040210B8 RID: 135352
+		// Token: 0x0401B9E7 RID: 113127
 		DetailLevelListPanelItem,
-		// Token: 0x040210B9 RID: 135353
+		// Token: 0x0401B9E8 RID: 113128
 		DetailLevel1Item,
-		// Token: 0x040210BA RID: 135354
+		// Token: 0x0401B9E9 RID: 113129
 		DetailLevel2Item,
-		// Token: 0x040210BB RID: 135355
+		// Token: 0x0401B9EA RID: 113130
 		DetailLevel3Item,
-		// Token: 0x040210BC RID: 135356
+		// Token: 0x0401B9EB RID: 113131
 		DetailLevel4Item,
-		// Token: 0x040210BD RID: 135357
+		// Token: 0x0401B9EC RID: 113132
 		LimitTaskRedDotItem,
-		// Token: 0x040210BE RID: 135358
+		// Token: 0x0401B9ED RID: 113133
 		TaskRedDotItem,
-		// Token: 0x040210BF RID: 135359
+		// Token: 0x0401B9EE RID: 113134
 		LeftRedDotItem,
-		// Token: 0x040210C0 RID: 135360
+		// Token: 0x0401B9EF RID: 113135
 		RightRedDotItem,
-		// Token: 0x040210C1 RID: 135361
+		// Token: 0x0401B9F0 RID: 113136
 		BgMaskItem,
-		// Token: 0x040210C2 RID: 135362
+		// Token: 0x0401B9F1 RID: 113137
 		NextBgItem,
-		// Token: 0x040210C3 RID: 135363
+		// Token: 0x0401B9F2 RID: 113138
 		BgAnimationItem,
-		// Token: 0x040210C4 RID: 135364
+		// Token: 0x0401B9F3 RID: 113139
 		BgGlowTexture,
-		// Token: 0x040210C5 RID: 135365
+		// Token: 0x0401B9F4 RID: 113140
 		LeftBottomItem,
-		// Token: 0x040210C6 RID: 135366
+		// Token: 0x0401B9F5 RID: 113141
 		TimeLimitItem,
-		// Token: 0x040210C7 RID: 135367
+		// Token: 0x0401B9F6 RID: 113142
 		LevelDetailLeftBtn,
-		// Token: 0x040210C8 RID: 135368
+		// Token: 0x0401B9F7 RID: 113143
 		LevelDetailRightBtn,
-		// Token: 0x040210C9 RID: 135369
+		// Token: 0x0401B9F8 RID: 113144
 		MainLineHideItem
 	}
 }

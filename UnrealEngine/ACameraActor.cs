@@ -6,51 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000906 RID: 2310
+	// Token: 0x02000198 RID: 408
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.CameraActor")]
-	[UnrealStructLayout(3680, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3680)]
+	[UnrealStructLayout(3728, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3728)]
 	public class ACameraActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007EBD RID: 32445 RVA: 0x000B5D20 File Offset: 0x000B3F20
+		// Token: 0x06001B5A RID: 7002 RVA: 0x00028BDB File Offset: 0x00026DDB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ACameraActor._ClassPtr;
 		}
 
-		// Token: 0x06007EBE RID: 32446 RVA: 0x000B5D2C File Offset: 0x000B3F2C
+		// Token: 0x06001B5B RID: 7003 RVA: 0x00028BE8 File Offset: 0x00026DE8
 		public ACameraActor() : this(BuiltinUtils.AllocNativeUObject(ACameraActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06007EBF RID: 32447 RVA: 0x000B5D54 File Offset: 0x000B3F54
+		// Token: 0x06001B5C RID: 7004 RVA: 0x00028C10 File Offset: 0x00026E10
 		[NullableContext(1)]
 		public ACameraActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ACameraActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001DC7 RID: 7623
-		// (get) Token: 0x06007EC0 RID: 32448 RVA: 0x000B5D87 File Offset: 0x000B3F87
-		// (set) Token: 0x06007EC1 RID: 32449 RVA: 0x000B5D9B File Offset: 0x000B3F9B
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EAutoReceiveInput> AutoActivateForPlayer
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)ACameraActor.__PropertyOffset_AutoActivateForPlayer);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)ACameraActor.__PropertyOffset_AutoActivateForPlayer) = value;
-			}
-		}
-
-		// Token: 0x17001DC8 RID: 7624
-		// (get) Token: 0x06007EC2 RID: 32450 RVA: 0x000B5DB0 File Offset: 0x000B3FB0
-		// (set) Token: 0x06007EC3 RID: 32451 RVA: 0x000B5DC4 File Offset: 0x000B3FC4
+		// Token: 0x17000345 RID: 837
+		// (get) Token: 0x06001B5D RID: 7005 RVA: 0x00028C43 File Offset: 0x00026E43
+		// (set) Token: 0x06001B5E RID: 7006 RVA: 0x00028C57 File Offset: 0x00026E57
 		public unsafe UCameraComponent CameraComponent
 		{
 			get
@@ -63,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001DC9 RID: 7625
-		// (get) Token: 0x06007EC4 RID: 32452 RVA: 0x000B5DD9 File Offset: 0x000B3FD9
-		// (set) Token: 0x06007EC5 RID: 32453 RVA: 0x000B5DED File Offset: 0x000B3FED
+		// Token: 0x17000346 RID: 838
+		// (get) Token: 0x06001B5F RID: 7007 RVA: 0x00028C6C File Offset: 0x00026E6C
+		// (set) Token: 0x06001B60 RID: 7008 RVA: 0x00028C80 File Offset: 0x00026E80
 		public unsafe USceneComponent SceneComponent
 		{
 			get
@@ -78,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001DCA RID: 7626
-		// (get) Token: 0x06007EC6 RID: 32454 RVA: 0x000B5E02 File Offset: 0x000B4002
-		// (set) Token: 0x06007EC7 RID: 32455 RVA: 0x000B5E1B File Offset: 0x000B401B
+		// Token: 0x17000347 RID: 839
+		// (get) Token: 0x06001B61 RID: 7009 RVA: 0x00028C95 File Offset: 0x00026E95
+		// (set) Token: 0x06001B62 RID: 7010 RVA: 0x00028CAE File Offset: 0x00026EAE
 		public unsafe bool bConstrainAspectRatio_DEPRECATED
 		{
 			get
@@ -93,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001DCB RID: 7627
-		// (get) Token: 0x06007EC8 RID: 32456 RVA: 0x000B5E4B File Offset: 0x000B404B
-		// (set) Token: 0x06007EC9 RID: 32457 RVA: 0x000B5E5B File Offset: 0x000B405B
+		// Token: 0x17000348 RID: 840
+		// (get) Token: 0x06001B63 RID: 7011 RVA: 0x00028CDE File Offset: 0x00026EDE
+		// (set) Token: 0x06001B64 RID: 7012 RVA: 0x00028CEE File Offset: 0x00026EEE
 		public unsafe float AspectRatio_DEPRECATED
 		{
 			get
@@ -108,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001DCC RID: 7628
-		// (get) Token: 0x06007ECA RID: 32458 RVA: 0x000B5E6C File Offset: 0x000B406C
-		// (set) Token: 0x06007ECB RID: 32459 RVA: 0x000B5E7C File Offset: 0x000B407C
+		// Token: 0x17000349 RID: 841
+		// (get) Token: 0x06001B65 RID: 7013 RVA: 0x00028CFF File Offset: 0x00026EFF
+		// (set) Token: 0x06001B66 RID: 7014 RVA: 0x00028D0F File Offset: 0x00026F0F
 		public unsafe float FOVAngle_DEPRECATED
 		{
 			get
@@ -123,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001DCD RID: 7629
-		// (get) Token: 0x06007ECC RID: 32460 RVA: 0x000B5E8D File Offset: 0x000B408D
-		// (set) Token: 0x06007ECD RID: 32461 RVA: 0x000B5E9D File Offset: 0x000B409D
+		// Token: 0x1700034A RID: 842
+		// (get) Token: 0x06001B67 RID: 7015 RVA: 0x00028D20 File Offset: 0x00026F20
+		// (set) Token: 0x06001B68 RID: 7016 RVA: 0x00028D30 File Offset: 0x00026F30
 		public unsafe float PostProcessBlendWeight_DEPRECATED
 		{
 			get
@@ -138,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001DCE RID: 7630
-		// (get) Token: 0x06007ECE RID: 32462 RVA: 0x000B5EB0 File Offset: 0x000B40B0
-		// (set) Token: 0x06007ECF RID: 32463 RVA: 0x000B5EE9 File Offset: 0x000B40E9
+		// Token: 0x1700034B RID: 843
+		// (get) Token: 0x06001B69 RID: 7017 RVA: 0x00028D44 File Offset: 0x00026F44
+		// (set) Token: 0x06001B6A RID: 7018 RVA: 0x00028D7D File Offset: 0x00026F7D
 		[Nullable(1)]
 		public FPostProcessSettings PostProcessSettings_DEPRECATED
 		{
@@ -162,65 +144,62 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007ED0 RID: 32464 RVA: 0x000B5F0A File Offset: 0x000B410A
+		// Token: 0x06001B6B RID: 7019 RVA: 0x00028D9E File Offset: 0x00026F9E
 		public int GetAutoActivatePlayerIndex()
 		{
 			return ACameraActor.__GetAutoActivatePlayerIndex_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06007ED1 RID: 32465
+		// Token: 0x06001B6C RID: 7020
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetAutoActivatePlayerIndex_Internal(IntPtr @this);
 
-		// Token: 0x06007ED2 RID: 32466 RVA: 0x000B5F17 File Offset: 0x000B4117
+		// Token: 0x06001B6D RID: 7021 RVA: 0x00028DAB File Offset: 0x00026FAB
 		static ACameraActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.CameraActor");
 		}
 
-		// Token: 0x06007ED3 RID: 32467 RVA: 0x000B5F25 File Offset: 0x000B4125
+		// Token: 0x06001B6E RID: 7022 RVA: 0x00028DB9 File Offset: 0x00026FB9
 		protected ACameraActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003CCC RID: 15564
+		// Token: 0x040008D9 RID: 2265
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.CameraActor";
 
-		// Token: 0x04003CCD RID: 15565
+		// Token: 0x040008DA RID: 2266
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003CCE RID: 15566
+		// Token: 0x040008DB RID: 2267
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003CCF RID: 15567
-		internal static int __PropertyOffset_AutoActivateForPlayer;
-
-		// Token: 0x04003CD0 RID: 15568
+		// Token: 0x040008DC RID: 2268
 		internal static int __PropertyOffset_CameraComponent;
 
-		// Token: 0x04003CD1 RID: 15569
+		// Token: 0x040008DD RID: 2269
 		internal static int __PropertyOffset_SceneComponent;
 
-		// Token: 0x04003CD2 RID: 15570
+		// Token: 0x040008DE RID: 2270
 		internal static int __PropertyOffset_bConstrainAspectRatio_DEPRECATED;
 
-		// Token: 0x04003CD3 RID: 15571
+		// Token: 0x040008DF RID: 2271
 		internal static byte __PropertyMask_bConstrainAspectRatio_DEPRECATED;
 
-		// Token: 0x04003CD4 RID: 15572
+		// Token: 0x040008E0 RID: 2272
 		internal static int __PropertyOffset_AspectRatio_DEPRECATED;
 
-		// Token: 0x04003CD5 RID: 15573
+		// Token: 0x040008E1 RID: 2273
 		internal static int __PropertyOffset_FOVAngle_DEPRECATED;
 
-		// Token: 0x04003CD6 RID: 15574
+		// Token: 0x040008E2 RID: 2274
 		internal static int __PropertyOffset_PostProcessBlendWeight_DEPRECATED;
 
-		// Token: 0x04003CD7 RID: 15575
+		// Token: 0x040008E3 RID: 2275
 		internal static int __PropertyOffset_PostProcessSettings_DEPRECATED;
 
-		// Token: 0x04003CD8 RID: 15576
+		// Token: 0x040008E4 RID: 2276
 		private FPostProcessSettings _PostProcessSettings_DEPRECATED;
 	}
 }

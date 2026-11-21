@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002A03 RID: 10755
+// Token: 0x02001F7E RID: 8062
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 {
-	// Token: 0x06016510 RID: 91408 RVA: 0x005A5AB0 File Offset: 0x005A3CB0
+	// Token: 0x06013F17 RID: 81687 RVA: 0x005D0A88 File Offset: 0x005CEC88
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 		};
 	}
 
-	// Token: 0x06016511 RID: 91409 RVA: 0x005A5B64 File Offset: 0x005A3D64
+	// Token: 0x06013F18 RID: 81688 RVA: 0x005D0B3C File Offset: 0x005CED3C
 	protected override void OnStart()
 	{
 		this.ItemGrid = new SmallItemGrid();
@@ -42,7 +42,7 @@ public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 		toggle.OnStateChange.Add(new Action<EToggleState>(this.OnClickToggle));
 	}
 
-	// Token: 0x06016512 RID: 91410 RVA: 0x005A5BC4 File Offset: 0x005A3DC4
+	// Token: 0x06013F19 RID: 81689 RVA: 0x005D0B9C File Offset: 0x005CED9C
 	[NullableContext(1)]
 	public override void Refresh(IShowerInviteItemData data, bool isSelected, int gridIndex)
 	{
@@ -87,7 +87,7 @@ public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 		text2.SetText(favorLevel.ToString() ?? "", true);
 	}
 
-	// Token: 0x06016513 RID: 91411 RVA: 0x005A5D18 File Offset: 0x005A3F18
+	// Token: 0x06013F1A RID: 81690 RVA: 0x005D0CF0 File Offset: 0x005CEEF0
 	private void RefreshState()
 	{
 		if (this.IsInFormation)
@@ -154,14 +154,14 @@ public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 		}
 	}
 
-	// Token: 0x06016514 RID: 91412 RVA: 0x005A5E1D File Offset: 0x005A401D
+	// Token: 0x06013F1B RID: 81691 RVA: 0x005D0DF5 File Offset: 0x005CEFF5
 	[NullableContext(1)]
 	public void BindRoleSelectCallback(Action<RoleInstance> callback)
 	{
 		this.RoleSelectCallback = callback;
 	}
 
-	// Token: 0x06016515 RID: 91413 RVA: 0x005A5E26 File Offset: 0x005A4026
+	// Token: 0x06013F1C RID: 81692 RVA: 0x005D0DFE File Offset: 0x005CEFFE
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<RoleInstance> roleSelectCallback = this.RoleSelectCallback;
@@ -172,19 +172,19 @@ public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 		roleSelectCallback(this.RoleInstance);
 	}
 
-	// Token: 0x0400A5F7 RID: 42487
+	// Token: 0x0400A9E1 RID: 43489
 	private int RoleId;
 
-	// Token: 0x0400A5F8 RID: 42488
+	// Token: 0x0400A9E2 RID: 43490
 	private RoleInstance RoleInstance;
 
-	// Token: 0x0400A5F9 RID: 42489
+	// Token: 0x0400A9E3 RID: 43491
 	private bool IsInFormation;
 
-	// Token: 0x0400A5FA RID: 42490
+	// Token: 0x0400A9E4 RID: 43492
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x0400A5FB RID: 42491
+	// Token: 0x0400A9E5 RID: 43493
 	[Nullable(new byte[]
 	{
 		2,
@@ -192,32 +192,32 @@ public class ShowerInviteItem : GridProxyAbstract<IShowerInviteItemData>
 	})]
 	private Action<RoleInstance> RoleSelectCallback;
 
-	// Token: 0x0400A5FC RID: 42492
+	// Token: 0x0400A9E6 RID: 43494
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x0200903D RID: 36925
+	// Token: 0x02008284 RID: 33412
 	[NullableContext(0)]
 	private class EShowerInviteItemComponents
 	{
-		// Token: 0x0402EB44 RID: 191300
+		// Token: 0x0402A23C RID: 172604
 		public const int Toggle = 0;
 
-		// Token: 0x0402EB45 RID: 191301
+		// Token: 0x0402A23D RID: 172605
 		public const int RoleNameText = 1;
 
-		// Token: 0x0402EB46 RID: 191302
+		// Token: 0x0402A23E RID: 172606
 		public const int FavorDesText = 2;
 
-		// Token: 0x0402EB47 RID: 191303
+		// Token: 0x0402A23F RID: 172607
 		public const int RoleItem = 3;
 
-		// Token: 0x0402EB48 RID: 191304
+		// Token: 0x0402A240 RID: 172608
 		public const int FavorLevelText = 4;
 
-		// Token: 0x0402EB49 RID: 191305
+		// Token: 0x0402A241 RID: 172609
 		public const int NumItem = 5;
 
-		// Token: 0x0402EB4A RID: 191306
+		// Token: 0x0402A242 RID: 172610
 		public const int NumText = 6;
 	}
 }

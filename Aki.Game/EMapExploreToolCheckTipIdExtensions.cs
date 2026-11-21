@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200354D RID: 13645
+// Token: 0x02002AC2 RID: 10946
 public static class EMapExploreToolCheckTipIdExtensions
 {
-	// Token: 0x0601DF81 RID: 122753 RVA: 0x0086608C File Offset: 0x0086428C
+	// Token: 0x0601BCA9 RID: 113833 RVA: 0x0088DBF4 File Offset: 0x0088BDF4
 	public static string ToEnumString(this EMapExploreToolCheckTipId value)
 	{
 		string result;
@@ -55,7 +55,7 @@ public static class EMapExploreToolCheckTipIdExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF82 RID: 122754 RVA: 0x0086614C File Offset: 0x0086434C
+	// Token: 0x0601BCAA RID: 113834 RVA: 0x0088DCB4 File Offset: 0x0088BEB4
 	public static EMapExploreToolCheckTipId FromString(string name)
 	{
 		EMapExploreToolCheckTipId result;
@@ -66,7 +66,7 @@ public static class EMapExploreToolCheckTipIdExtensions
 		return result;
 	}
 
-	// Token: 0x0601DF83 RID: 122755 RVA: 0x00866178 File Offset: 0x00864378
+	// Token: 0x0601BCAB RID: 113835 RVA: 0x0088DCE0 File Offset: 0x0088BEE0
 	public static bool TryFromString(string name, out EMapExploreToolCheckTipId value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -197,7 +197,7 @@ public static class EMapExploreToolCheckTipIdExtensions
 		return false;
 	}
 
-	// Token: 0x0601DF84 RID: 122756 RVA: 0x00866378 File Offset: 0x00864578
+	// Token: 0x0601BCAC RID: 113836 RVA: 0x0088DEE0 File Offset: 0x0088C0E0
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -218,7 +218,7 @@ public static class EMapExploreToolCheckTipIdExtensions
 		};
 	}
 
-	// Token: 0x0601DF85 RID: 122757 RVA: 0x008663F8 File Offset: 0x008645F8
+	// Token: 0x0601BCAD RID: 113837 RVA: 0x0088DF60 File Offset: 0x0088C160
 	public static EMapExploreToolCheckTipId[] GetValues()
 	{
 		return new EMapExploreToolCheckTipId[]
@@ -239,7 +239,7 @@ public static class EMapExploreToolCheckTipIdExtensions
 		};
 	}
 
-	// Token: 0x0601DF86 RID: 122758 RVA: 0x0086640C File Offset: 0x0086460C
+	// Token: 0x0601BCAE RID: 113838 RVA: 0x0088DF74 File Offset: 0x0088C174
 	public static string[] GetNames()
 	{
 		return new string[]

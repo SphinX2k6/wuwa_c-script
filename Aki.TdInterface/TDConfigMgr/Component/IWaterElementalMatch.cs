@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007CD RID: 1997
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000870 RID: 2160
 	public class IWaterElementalMatch : IElementalMatchBase
 	{
-		// Token: 0x06002B4B RID: 11083 RVA: 0x00070FF4 File Offset: 0x0006F1F4
+		// Token: 0x06002E7B RID: 11899 RVA: 0x00078358 File Offset: 0x00076558
 		private IWaterElementalMatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B4C RID: 11084 RVA: 0x0007102C File Offset: 0x0006F22C
+		// Token: 0x06002E7C RID: 11900 RVA: 0x00078390 File Offset: 0x00076590
 		public static IWaterElementalMatch Create([Nullable(2)] IWaterElementalMatch instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B4D RID: 11085 RVA: 0x0007103F File Offset: 0x0006F23F
+		// Token: 0x06002E7D RID: 11901 RVA: 0x000783A3 File Offset: 0x000765A3
 		public static IWaterElementalMatch CreateFromSetValue([Nullable(2)] IWaterElementalMatch_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B4E RID: 11086 RVA: 0x00071052 File Offset: 0x0006F252
+		// Token: 0x06002E7E RID: 11902 RVA: 0x000783B6 File Offset: 0x000765B6
 		public new IWaterElementalMatch_SetValue ToSetValue()
 		{
 			return new IWaterElementalMatch_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B55 RID: 2901
-		// (get) Token: 0x06002B4F RID: 11087 RVA: 0x00071089 File Offset: 0x0006F289
-		// (set) Token: 0x06002B50 RID: 11088 RVA: 0x000710B4 File Offset: 0x0006F2B4
+		// Token: 0x17000C18 RID: 3096
+		// (get) Token: 0x06002E7F RID: 11903 RVA: 0x000783ED File Offset: 0x000765ED
+		// (set) Token: 0x06002E80 RID: 11904 RVA: 0x00078418 File Offset: 0x00076618
 		public override EElementalType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B56 RID: 2902
-		// (get) Token: 0x06002B51 RID: 11089 RVA: 0x000710C2 File Offset: 0x0006F2C2
-		// (set) Token: 0x06002B52 RID: 11090 RVA: 0x000710ED File Offset: 0x0006F2ED
+		// Token: 0x17000C19 RID: 3097
+		// (get) Token: 0x06002E81 RID: 11905 RVA: 0x00078426 File Offset: 0x00076626
+		// (set) Token: 0x06002E82 RID: 11906 RVA: 0x00078451 File Offset: 0x00076651
 		public virtual bool CanStagnate
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B57 RID: 2903
-		// (get) Token: 0x06002B53 RID: 11091 RVA: 0x000710FC File Offset: 0x0006F2FC
-		// (set) Token: 0x06002B54 RID: 11092 RVA: 0x0007115D File Offset: 0x0006F35D
+		// Token: 0x17000C1A RID: 3098
+		// (get) Token: 0x06002E83 RID: 11907 RVA: 0x00078460 File Offset: 0x00076660
+		// (set) Token: 0x06002E84 RID: 11908 RVA: 0x000784C1 File Offset: 0x000766C1
 		[Nullable(2)]
 		public virtual IWaterStagnationActorConfig StagnationActorConfig
 		{
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B58 RID: 2904
-		// (get) Token: 0x06002B55 RID: 11093 RVA: 0x00071174 File Offset: 0x0006F374
-		// (set) Token: 0x06002B56 RID: 11094 RVA: 0x000711AE File Offset: 0x0006F3AE
+		// Token: 0x17000C1B RID: 3099
+		// (get) Token: 0x06002E85 RID: 11909 RVA: 0x000784D8 File Offset: 0x000766D8
+		// (set) Token: 0x06002E86 RID: 11910 RVA: 0x00078512 File Offset: 0x00076712
 		public virtual float? StagnationImmuneDurationAfterHit
 		{
 			get
@@ -162,18 +160,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CC1 RID: 7361
+		// Token: 0x04001ECD RID: 7885
 		[Nullable(2)]
 		protected new IWaterElementalMatch FbInstance;
 
-		// Token: 0x04001CC2 RID: 7362
+		// Token: 0x04001ECE RID: 7886
 		[Nullable(2)]
 		protected new IWaterElementalMatch_SetValue PocoInterface;
 
-		// Token: 0x04001CC3 RID: 7363
+		// Token: 0x04001ECF RID: 7887
 		private IWaterStagnationActorConfig _StagnationActorConfigCache;
 
-		// Token: 0x04001CC4 RID: 7364
+		// Token: 0x04001ED0 RID: 7888
 		private bool _StagnationActorConfigInited;
 	}
 }

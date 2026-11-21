@@ -4,28 +4,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x02005385 RID: 21381
+	// Token: 0x02004368 RID: 17256
 	[NullableContext(1)]
 	public interface IUiItemAspectOffsetConfig
 	{
-		// Token: 0x17008389 RID: 33673
-		// (get) Token: 0x06036A08 RID: 223752
-		// (set) Token: 0x06036A09 RID: 223753
+		// Token: 0x17005755 RID: 22357
+		// (get) Token: 0x0602B94E RID: 178510
+		// (set) Token: 0x0602B94F RID: 178511
 		UUIItem UiItem { get; set; }
 
-		// Token: 0x1700838A RID: 33674
-		// (get) Token: 0x06036A0A RID: 223754
-		// (set) Token: 0x06036A0B RID: 223755
+		// Token: 0x17005756 RID: 22358
+		// (get) Token: 0x0602B950 RID: 178512
+		// (set) Token: 0x0602B951 RID: 178513
 		Vector2D OriginalOffset { get; set; }
 
-		// Token: 0x1700838B RID: 33675
-		// (get) Token: 0x06036A0C RID: 223756
-		// (set) Token: 0x06036A0D RID: 223757
+		// Token: 0x17005757 RID: 22359
+		// (get) Token: 0x0602B952 RID: 178514
+		// (set) Token: 0x0602B953 RID: 178515
 		float OffsetWidthDirection { get; set; }
 
-		// Token: 0x1700838C RID: 33676
-		// (get) Token: 0x06036A0E RID: 223758
-		// (set) Token: 0x06036A0F RID: 223759
+		// Token: 0x17005758 RID: 22360
+		// (get) Token: 0x0602B954 RID: 178516
+		// (set) Token: 0x0602B955 RID: 178517
 		float OffsetHeightDirection { get; set; }
 	}
 }

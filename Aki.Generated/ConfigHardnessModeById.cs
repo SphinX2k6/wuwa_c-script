@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003CF RID: 975
+	// Token: 0x020003E5 RID: 997
 	public class ConfigHardnessModeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016E1 RID: 5857 RVA: 0x000DAD44 File Offset: 0x000D8F44
+		// Token: 0x06001765 RID: 5989 RVA: 0x000E1498 File Offset: 0x000DF698
 		static ConfigHardnessModeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHardnessModeById.CreateStaticDefaultValue), new Action(ConfigHardnessModeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016E2 RID: 5858 RVA: 0x000DAD64 File Offset: 0x000D8F64
+		// Token: 0x06001766 RID: 5990 RVA: 0x000E14B8 File Offset: 0x000DF6B8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHardnessModeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016E3 RID: 5859 RVA: 0x000DADE3 File Offset: 0x000D8FE3
+		// Token: 0x06001767 RID: 5991 RVA: 0x000E1537 File Offset: 0x000DF737
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHardnessModeById.LogPair = null;
 			ConfigHardnessModeById.HandleId = 0;
 		}
 
-		// Token: 0x060016E4 RID: 5860 RVA: 0x000DADF1 File Offset: 0x000D8FF1
+		// Token: 0x06001768 RID: 5992 RVA: 0x000E1545 File Offset: 0x000DF745
 		public static void Init()
 		{
 			ConfigHardnessModeById.HandleId = ConfigCommon.InitDataStatement(ConfigHardnessModeById.HandleId, "db_hardness_mode.db", "select BinData from `HardnessMode` where Id=?");
 		}
 
-		// Token: 0x060016E5 RID: 5861 RVA: 0x000DAE0C File Offset: 0x000D900C
+		// Token: 0x06001769 RID: 5993 RVA: 0x000E1560 File Offset: 0x000DF760
 		public static HardnessMode? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHardnessModeById.HandleId, ConfigHardnessModeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HardnessMode?(rootAsHardnessMode);
 		}
 
-		// Token: 0x04001A8D RID: 6797
+		// Token: 0x04001B27 RID: 6951
 		private const string DB = "db_hardness_mode.db";
 
-		// Token: 0x04001A8E RID: 6798
+		// Token: 0x04001B28 RID: 6952
 		private const string FILE = "b.白条.xlsx";
 
-		// Token: 0x04001A8F RID: 6799
+		// Token: 0x04001B29 RID: 6953
 		private const string TABLE = "HardnessMode";
 
-		// Token: 0x04001A90 RID: 6800
+		// Token: 0x04001B2A RID: 6954
 		private const string COMMAND = "select BinData from `HardnessMode` where Id=?";
 
-		// Token: 0x04001A91 RID: 6801
+		// Token: 0x04001B2B RID: 6955
 		private const string KEY_PREFIX = "HardnessModeById";
 
-		// Token: 0x04001A92 RID: 6802
+		// Token: 0x04001B2C RID: 6956
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A93 RID: 6803
+		// Token: 0x04001B2D RID: 6957
 		private static int HandleId;
 	}
 }

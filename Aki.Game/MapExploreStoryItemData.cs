@@ -1,33 +1,33 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AA9 RID: 6825
+// Token: 0x02000F68 RID: 3944
 [NullableContext(2)]
 [Nullable(0)]
 public class MapExploreStoryItemData : IMapExploreStoryItemData
 {
-	// Token: 0x170010AB RID: 4267
-	// (get) Token: 0x0600CA29 RID: 51753 RVA: 0x002E18A8 File Offset: 0x002DFAA8
-	// (set) Token: 0x0600CA2A RID: 51754 RVA: 0x002E18B0 File Offset: 0x002DFAB0
+	// Token: 0x170010D0 RID: 4304
+	// (get) Token: 0x06009E3A RID: 40506 RVA: 0x002EC9F8 File Offset: 0x002EABF8
+	// (set) Token: 0x06009E3B RID: 40507 RVA: 0x002ECA00 File Offset: 0x002EAC00
 	public bool IsOpen { get; set; }
 
-	// Token: 0x170010AC RID: 4268
-	// (get) Token: 0x0600CA2B RID: 51755 RVA: 0x002E18B9 File Offset: 0x002DFAB9
-	// (set) Token: 0x0600CA2C RID: 51756 RVA: 0x002E18C1 File Offset: 0x002DFAC1
+	// Token: 0x170010D1 RID: 4305
+	// (get) Token: 0x06009E3C RID: 40508 RVA: 0x002ECA09 File Offset: 0x002EAC09
+	// (set) Token: 0x06009E3D RID: 40509 RVA: 0x002ECA11 File Offset: 0x002EAC11
 	public string StoryContent { get; set; }
 
-	// Token: 0x170010AD RID: 4269
-	// (get) Token: 0x0600CA2D RID: 51757 RVA: 0x002E18CA File Offset: 0x002DFACA
-	// (set) Token: 0x0600CA2E RID: 51758 RVA: 0x002E18D2 File Offset: 0x002DFAD2
+	// Token: 0x170010D2 RID: 4306
+	// (get) Token: 0x06009E3E RID: 40510 RVA: 0x002ECA1A File Offset: 0x002EAC1A
+	// (set) Token: 0x06009E3F RID: 40511 RVA: 0x002ECA22 File Offset: 0x002EAC22
 	public string StoryTitle { get; set; }
 
-	// Token: 0x170010AE RID: 4270
-	// (get) Token: 0x0600CA2F RID: 51759 RVA: 0x002E18DB File Offset: 0x002DFADB
-	// (set) Token: 0x0600CA30 RID: 51760 RVA: 0x002E18E3 File Offset: 0x002DFAE3
+	// Token: 0x170010D3 RID: 4307
+	// (get) Token: 0x06009E40 RID: 40512 RVA: 0x002ECA2B File Offset: 0x002EAC2B
+	// (set) Token: 0x06009E41 RID: 40513 RVA: 0x002ECA33 File Offset: 0x002EAC33
 	public string LockedDesc { get; set; }
 
-	// Token: 0x170010AF RID: 4271
-	// (get) Token: 0x0600CA31 RID: 51761 RVA: 0x002E18EC File Offset: 0x002DFAEC
-	// (set) Token: 0x0600CA32 RID: 51762 RVA: 0x002E18F4 File Offset: 0x002DFAF4
+	// Token: 0x170010D4 RID: 4308
+	// (get) Token: 0x06009E42 RID: 40514 RVA: 0x002ECA3C File Offset: 0x002EAC3C
+	// (set) Token: 0x06009E43 RID: 40515 RVA: 0x002ECA44 File Offset: 0x002EAC44
 	public bool? IsNewOpen { get; set; }
 }

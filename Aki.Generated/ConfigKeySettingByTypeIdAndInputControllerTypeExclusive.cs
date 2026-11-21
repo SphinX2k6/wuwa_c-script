@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200046E RID: 1134
+	// Token: 0x02000484 RID: 1156
 	public class ConfigKeySettingByTypeIdAndInputControllerTypeExclusive : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001A9E RID: 6814 RVA: 0x000EFD83 File Offset: 0x000EDF83
+		// Token: 0x06001B22 RID: 6946 RVA: 0x000F64D7 File Offset: 0x000F46D7
 		static ConfigKeySettingByTypeIdAndInputControllerTypeExclusive()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.CreateStaticDefaultValue), new Action(ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001A9F RID: 6815 RVA: 0x000EFDA4 File Offset: 0x000EDFA4
+		// Token: 0x06001B23 RID: 6947 RVA: 0x000F64F8 File Offset: 0x000F46F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001AA0 RID: 6816 RVA: 0x000EFE23 File Offset: 0x000EE023
+		// Token: 0x06001B24 RID: 6948 RVA: 0x000F6577 File Offset: 0x000F4777
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.LogPair = null;
 			ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.HandleId = 0;
 		}
 
-		// Token: 0x06001AA1 RID: 6817 RVA: 0x000EFE31 File Offset: 0x000EE031
+		// Token: 0x06001B25 RID: 6949 RVA: 0x000F6585 File Offset: 0x000F4785
 		public static void Init()
 		{
 			ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.HandleId = ConfigCommon.InitDataStatement(ConfigKeySettingByTypeIdAndInputControllerTypeExclusive.HandleId, "db_menu.db", "select BinData from `KeySetting` where TypeId=? AND InputControllerType=? AND ExclusiveType = ?");
 		}
 
-		// Token: 0x06001AA2 RID: 6818 RVA: 0x000EFE4C File Offset: 0x000EE04C
+		// Token: 0x06001B26 RID: 6950 RVA: 0x000F65A0 File Offset: 0x000F47A0
 		[NullableContext(2)]
 		public static IReadOnlyList<KeySetting> GetConfigList(int p0TypeId, int p1InputControllerType, int p2ExclusiveType, bool useCache = true)
 		{
@@ -104,22 +104,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001EE6 RID: 7910
+		// Token: 0x04001F80 RID: 8064
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04001EE7 RID: 7911
+		// Token: 0x04001F81 RID: 8065
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04001EE8 RID: 7912
+		// Token: 0x04001F82 RID: 8066
 		private const string TABLE = "KeySetting";
 
-		// Token: 0x04001EE9 RID: 7913
+		// Token: 0x04001F83 RID: 8067
 		private const string COMMAND = "select BinData from `KeySetting` where TypeId=? AND InputControllerType=? AND ExclusiveType = ?";
 
-		// Token: 0x04001EEA RID: 7914
+		// Token: 0x04001F84 RID: 8068
 		private const string KEY_PREFIX = "KeySettingByTypeIdAndInputControllerTypeExclusive";
 
-		// Token: 0x04001EEB RID: 7915
+		// Token: 0x04001F85 RID: 8069
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001EEC RID: 7916
+		// Token: 0x04001F86 RID: 8070
 		private static int HandleId;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200193C RID: 6460
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AC5 RID: 6853
 	public class IControlTrackingSelf : IControlTrackingType
 	{
-		// Token: 0x06008A7F RID: 35455 RVA: 0x0014639C File Offset: 0x0014459C
+		// Token: 0x060091AB RID: 37291 RVA: 0x00155CDC File Offset: 0x00153EDC
 		private IControlTrackingSelf_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A80 RID: 35456 RVA: 0x001463D4 File Offset: 0x001445D4
+		// Token: 0x060091AC RID: 37292 RVA: 0x00155D14 File Offset: 0x00153F14
 		public static IControlTrackingSelf Create([Nullable(2)] IControlTrackingSelf instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A81 RID: 35457 RVA: 0x001463E7 File Offset: 0x001445E7
+		// Token: 0x060091AD RID: 37293 RVA: 0x00155D27 File Offset: 0x00153F27
 		public static IControlTrackingSelf CreateFromSetValue([Nullable(2)] IControlTrackingSelf_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A82 RID: 35458 RVA: 0x001463FA File Offset: 0x001445FA
+		// Token: 0x060091AE RID: 37294 RVA: 0x00155D3A File Offset: 0x00153F3A
 		public new IControlTrackingSelf_SetValue ToSetValue()
 		{
 			return new IControlTrackingSelf_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CBA RID: 11450
-		// (get) Token: 0x06008A83 RID: 35459 RVA: 0x0014640D File Offset: 0x0014460D
-		// (set) Token: 0x06008A84 RID: 35460 RVA: 0x00146438 File Offset: 0x00144638
+		// Token: 0x17002EBA RID: 11962
+		// (get) Token: 0x060091AF RID: 37295 RVA: 0x00155D4D File Offset: 0x00153F4D
+		// (set) Token: 0x060091B0 RID: 37296 RVA: 0x00155D78 File Offset: 0x00153F78
 		public override EControlTrackingType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005691 RID: 22161
+		// Token: 0x04005AE1 RID: 23265
 		[Nullable(2)]
 		protected new IControlTrackingSelf FbInstance;
 
-		// Token: 0x04005692 RID: 22162
+		// Token: 0x04005AE2 RID: 23266
 		[Nullable(2)]
 		protected new IControlTrackingSelf_SetValue PocoInterface;
 	}

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004937 RID: 18743
+	// Token: 0x02004DEC RID: 19948
 	public enum EElementalBoxStateTargetType : byte
 	{
-		// Token: 0x0400D0A5 RID: 53413
+		// Token: 0x0400DB67 RID: 56167
 		Player,
-		// Token: 0x0400D0A6 RID: 53414
+		// Token: 0x0400DB68 RID: 56168
 		Foundation,
-		// Token: 0x0400D0A7 RID: 53415
+		// Token: 0x0400DB69 RID: 56169
 		ElementalBox,
-		// Token: 0x0400D0A8 RID: 53416
+		// Token: 0x0400DB6A RID: 56170
 		FoundationSelf
 	}
 }

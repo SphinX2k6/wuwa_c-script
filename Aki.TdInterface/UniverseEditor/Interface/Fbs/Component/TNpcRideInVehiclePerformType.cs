@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C72 RID: 23666
+	// Token: 0x0200629A RID: 25242
 	public enum TNpcRideInVehiclePerformType : byte
 	{
-		// Token: 0x0400F4C4 RID: 62660
+		// Token: 0x040101F7 RID: 66039
 		NONE,
-		// Token: 0x0400F4C5 RID: 62661
+		// Token: 0x040101F8 RID: 66040
 		ICyberpunkShareEmptyVehiclePerform,
-		// Token: 0x0400F4C6 RID: 62662
+		// Token: 0x040101F9 RID: 66041
 		INpcRideInAutoGongduolaPerform,
-		// Token: 0x0400F4C7 RID: 62663
+		// Token: 0x040101FA RID: 66042
 		INpcRideInGongduolaPerform,
-		// Token: 0x0400F4C8 RID: 62664
+		// Token: 0x040101FB RID: 66043
 		IWoodenOxenAndFlowingHorsesPerform
 	}
 }

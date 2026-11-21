@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B30 RID: 19248
+	// Token: 0x02003AD8 RID: 15064
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefensePhantomSkillItemInBattleData : ITowerDefensePhantomSkillItemInBattleData
 	{
-		// Token: 0x17007B6A RID: 31594
-		// (get) Token: 0x06031D8F RID: 204175 RVA: 0x00B926AF File Offset: 0x00B908AF
-		// (set) Token: 0x06031D90 RID: 204176 RVA: 0x00B926B7 File Offset: 0x00B908B7
+		// Token: 0x17004F17 RID: 20247
+		// (get) Token: 0x06026B1F RID: 158495 RVA: 0x00AD6713 File Offset: 0x00AD4913
+		// (set) Token: 0x06026B20 RID: 158496 RVA: 0x00AD671B File Offset: 0x00AD491B
 		public string Skill { get; set; }
 
-		// Token: 0x17007B6B RID: 31595
-		// (get) Token: 0x06031D91 RID: 204177 RVA: 0x00B926C0 File Offset: 0x00B908C0
-		// (set) Token: 0x06031D92 RID: 204178 RVA: 0x00B926C8 File Offset: 0x00B908C8
+		// Token: 0x17004F18 RID: 20248
+		// (get) Token: 0x06026B21 RID: 158497 RVA: 0x00AD6724 File Offset: 0x00AD4924
+		// (set) Token: 0x06026B22 RID: 158498 RVA: 0x00AD672C File Offset: 0x00AD492C
 		public string Description { get; set; }
 
-		// Token: 0x17007B6C RID: 31596
-		// (get) Token: 0x06031D93 RID: 204179 RVA: 0x00B926D1 File Offset: 0x00B908D1
-		// (set) Token: 0x06031D94 RID: 204180 RVA: 0x00B926D9 File Offset: 0x00B908D9
+		// Token: 0x17004F19 RID: 20249
+		// (get) Token: 0x06026B23 RID: 158499 RVA: 0x00AD6735 File Offset: 0x00AD4935
+		// (set) Token: 0x06026B24 RID: 158500 RVA: 0x00AD673D File Offset: 0x00AD493D
 		[Nullable(new byte[]
 		{
 			2,
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			1
 		})] set; }
 
-		// Token: 0x17007B6D RID: 31597
-		// (get) Token: 0x06031D95 RID: 204181 RVA: 0x00B926E2 File Offset: 0x00B908E2
-		// (set) Token: 0x06031D96 RID: 204182 RVA: 0x00B926EA File Offset: 0x00B908EA
+		// Token: 0x17004F1A RID: 20250
+		// (get) Token: 0x06026B25 RID: 158501 RVA: 0x00AD6746 File Offset: 0x00AD4946
+		// (set) Token: 0x06026B26 RID: 158502 RVA: 0x00AD674E File Offset: 0x00AD494E
 		public bool IsUnlock { get; set; }
 
-		// Token: 0x17007B6E RID: 31598
-		// (get) Token: 0x06031D97 RID: 204183 RVA: 0x00B926F3 File Offset: 0x00B908F3
-		// (set) Token: 0x06031D98 RID: 204184 RVA: 0x00B926FB File Offset: 0x00B908FB
+		// Token: 0x17004F1B RID: 20251
+		// (get) Token: 0x06026B27 RID: 158503 RVA: 0x00AD6757 File Offset: 0x00AD4957
+		// (set) Token: 0x06026B28 RID: 158504 RVA: 0x00AD675F File Offset: 0x00AD495F
 		public bool IsCurrent { get; set; }
 	}
 }

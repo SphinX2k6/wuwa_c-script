@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002CBD RID: 11453
+// Token: 0x02002216 RID: 8726
 public interface IUiModelSetDitherEffect
 {
-	// Token: 0x06017F0E RID: 98062
+	// Token: 0x06015787 RID: 87943
 	void OnModelDitherEffectChange(float value);
 }

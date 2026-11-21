@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020026AA RID: 9898
+// Token: 0x02001B95 RID: 7061
 [NullableContext(1)]
 public interface IQuestTreeNodeItemLoader
 {
-	// Token: 0x06014468 RID: 83048
+	// Token: 0x0601194A RID: 72010
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ public interface IQuestTreeNodeItemLoader
 	})]
 	UniTask<IQuestTreeNodeItem> LoadNodeItem(QuestTreeNodeData nodeData, UUIItem parent);
 
-	// Token: 0x06014469 RID: 83049
+	// Token: 0x0601194B RID: 72011
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -24,7 +24,7 @@ public interface IQuestTreeNodeItemLoader
 	})]
 	UniTask<IQuestTreeNodeItem> LoadNodeContainer(List<QuestTreeNodeData> nodeDataList, UUIItem parent);
 
-	// Token: 0x0601446A RID: 83050
+	// Token: 0x0601194C RID: 72012
 	[NullableContext(2)]
 	[return: Nullable(new byte[]
 	{

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005914 RID: 22804
+	// Token: 0x020048ED RID: 18669
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrastructureMissionItem : GridProxyAbstract<InfrastructureMissionItemData>
 	{
-		// Token: 0x06039E9A RID: 237210 RVA: 0x00DC1FF8 File Offset: 0x00DC01F8
+		// Token: 0x0602EDBD RID: 191933 RVA: 0x00D112F8 File Offset: 0x00D0F4F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039E9B RID: 237211 RVA: 0x00DC20C4 File Offset: 0x00DC02C4
+		// Token: 0x0602EDBE RID: 191934 RVA: 0x00D113C4 File Offset: 0x00D0F5C4
 		[NullableContext(1)]
 		public override void Refresh(InfrastructureMissionItemData data, bool isSelected, int gridIndex)
 		{
@@ -58,22 +58,22 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetText(2).SetColor(FColor.FromHex("#ffffff"));
 		}
 
-		// Token: 0x0200BB90 RID: 48016
+		// Token: 0x0200A5A0 RID: 42400
 		private class EChildType
 		{
-			// Token: 0x040389E9 RID: 231913
+			// Token: 0x040333D1 RID: 209873
 			public const int SpriteCompleteIcon = 0;
 
-			// Token: 0x040389EA RID: 231914
+			// Token: 0x040333D2 RID: 209874
 			public const int SpriteDone = 1;
 
-			// Token: 0x040389EB RID: 231915
+			// Token: 0x040333D3 RID: 209875
 			public const int TextName = 2;
 
-			// Token: 0x040389EC RID: 231916
+			// Token: 0x040333D4 RID: 209876
 			public const int TextNum = 3;
 
-			// Token: 0x040389ED RID: 231917
+			// Token: 0x040333D5 RID: 209877
 			public const int SpriteLine = 4;
 		}
 	}

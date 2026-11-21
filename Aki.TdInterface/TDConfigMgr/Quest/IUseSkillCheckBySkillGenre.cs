@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011E6 RID: 4582
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001322 RID: 4898
 	public class IUseSkillCheckBySkillGenre : IUseSkillCheckBase
 	{
-		// Token: 0x0600680C RID: 26636 RVA: 0x000F8B74 File Offset: 0x000F6D74
+		// Token: 0x06006E4D RID: 28237 RVA: 0x00106480 File Offset: 0x00104680
 		private IUseSkillCheckBySkillGenre_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600680D RID: 26637 RVA: 0x000F8BAC File Offset: 0x000F6DAC
+		// Token: 0x06006E4E RID: 28238 RVA: 0x001064B8 File Offset: 0x001046B8
 		public static IUseSkillCheckBySkillGenre Create([Nullable(2)] IUseSkillCheckBySkillGenre instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600680E RID: 26638 RVA: 0x000F8BBF File Offset: 0x000F6DBF
+		// Token: 0x06006E4F RID: 28239 RVA: 0x001064CB File Offset: 0x001046CB
 		public static IUseSkillCheckBySkillGenre CreateFromSetValue([Nullable(2)] IUseSkillCheckBySkillGenre_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600680F RID: 26639 RVA: 0x000F8BD2 File Offset: 0x000F6DD2
+		// Token: 0x06006E50 RID: 28240 RVA: 0x001064DE File Offset: 0x001046DE
 		public new IUseSkillCheckBySkillGenre_SetValue ToSetValue()
 		{
 			return new IUseSkillCheckBySkillGenre_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021B2 RID: 8626
-		// (get) Token: 0x06006810 RID: 26640 RVA: 0x000F8BF1 File Offset: 0x000F6DF1
-		// (set) Token: 0x06006811 RID: 26641 RVA: 0x000F8C1C File Offset: 0x000F6E1C
+		// Token: 0x17002373 RID: 9075
+		// (get) Token: 0x06006E51 RID: 28241 RVA: 0x001064FD File Offset: 0x001046FD
+		// (set) Token: 0x06006E52 RID: 28242 RVA: 0x00106528 File Offset: 0x00104728
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021B3 RID: 8627
-		// (get) Token: 0x06006812 RID: 26642 RVA: 0x000F8C2A File Offset: 0x000F6E2A
-		// (set) Token: 0x06006813 RID: 26643 RVA: 0x000F8C55 File Offset: 0x000F6E55
+		// Token: 0x17002374 RID: 9076
+		// (get) Token: 0x06006E53 RID: 28243 RVA: 0x00106536 File Offset: 0x00104736
+		// (set) Token: 0x06006E54 RID: 28244 RVA: 0x00106561 File Offset: 0x00104761
 		public virtual ESkillCategory SkillGenre
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E5D RID: 15965
+		// Token: 0x040041CB RID: 16843
 		[Nullable(2)]
 		protected new IUseSkillCheckBySkillGenre FbInstance;
 
-		// Token: 0x04003E5E RID: 15966
+		// Token: 0x040041CC RID: 16844
 		[Nullable(2)]
 		protected new IUseSkillCheckBySkillGenre_SetValue PocoInterface;
 	}

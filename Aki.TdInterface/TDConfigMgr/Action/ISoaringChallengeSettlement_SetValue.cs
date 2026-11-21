@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E96 RID: 7830
+	// Token: 0x020020CB RID: 8395
 	public class ISoaringChallengeSettlement_SetValue
 	{
-		// Token: 0x040063E8 RID: 25576
+		// Token: 0x040069CC RID: 27084
 		public EDynamicSettlementType Type;
 	}
 }

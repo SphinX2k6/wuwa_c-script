@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ECE RID: 28366
+	// Token: 0x02007652 RID: 30290
 	public class IRideFlyingCarT
 	{
-		// Token: 0x1700D317 RID: 54039
-		// (get) Token: 0x06032219 RID: 205337 RVA: 0x006C6E14 File Offset: 0x006C5014
-		// (set) Token: 0x0603221A RID: 205338 RVA: 0x006C6E1C File Offset: 0x006C501C
+		// Token: 0x1700DE6E RID: 56942
+		// (get) Token: 0x06035259 RID: 217689 RVA: 0x00722B48 File Offset: 0x00720D48
+		// (set) Token: 0x0603525A RID: 217690 RVA: 0x00722B50 File Offset: 0x00720D50
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700D318 RID: 54040
-		// (get) Token: 0x0603221B RID: 205339 RVA: 0x006C6E25 File Offset: 0x006C5025
-		// (set) Token: 0x0603221C RID: 205340 RVA: 0x006C6E2D File Offset: 0x006C502D
+		// Token: 0x1700DE6F RID: 56943
+		// (get) Token: 0x0603525B RID: 217691 RVA: 0x00722B59 File Offset: 0x00720D59
+		// (set) Token: 0x0603525C RID: 217692 RVA: 0x00722B61 File Offset: 0x00720D61
 		public int FirstPersonCameraTag { get; set; }
 
-		// Token: 0x1700D319 RID: 54041
-		// (get) Token: 0x0603221D RID: 205341 RVA: 0x006C6E36 File Offset: 0x006C5036
-		// (set) Token: 0x0603221E RID: 205342 RVA: 0x006C6E3E File Offset: 0x006C503E
+		// Token: 0x1700DE70 RID: 56944
+		// (get) Token: 0x0603525D RID: 217693 RVA: 0x00722B6A File Offset: 0x00720D6A
+		// (set) Token: 0x0603525E RID: 217694 RVA: 0x00722B72 File Offset: 0x00720D72
 		public int ThirdPersonCameraTag { get; set; }
 
-		// Token: 0x1700D31A RID: 54042
-		// (get) Token: 0x0603221F RID: 205343 RVA: 0x006C6E47 File Offset: 0x006C5047
-		// (set) Token: 0x06032220 RID: 205344 RVA: 0x006C6E4F File Offset: 0x006C504F
+		// Token: 0x1700DE71 RID: 56945
+		// (get) Token: 0x0603525F RID: 217695 RVA: 0x00722B7B File Offset: 0x00720D7B
+		// (set) Token: 0x06035260 RID: 217696 RVA: 0x00722B83 File Offset: 0x00720D83
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032221 RID: 205345 RVA: 0x006C6E58 File Offset: 0x006C5058
+		// Token: 0x06035261 RID: 217697 RVA: 0x00722B8C File Offset: 0x00720D8C
 		public IRideFlyingCarT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A17 RID: 10775
+// Token: 0x02001F92 RID: 8082
 [NullableContext(2)]
 [Nullable(0)]
 public class SkeletalObserverHandle
 {
-	// Token: 0x17001DD2 RID: 7634
-	// (get) Token: 0x060165E0 RID: 91616 RVA: 0x005A9441 File Offset: 0x005A7641
+	// Token: 0x17001E2B RID: 7723
+	// (get) Token: 0x06013FE7 RID: 81895 RVA: 0x005D4419 File Offset: 0x005D2619
 	public UiModelBase Model
 	{
 		get
@@ -22,7 +22,7 @@ public class SkeletalObserverHandle
 		}
 	}
 
-	// Token: 0x060165E1 RID: 91617 RVA: 0x005A9454 File Offset: 0x005A7654
+	// Token: 0x06013FE8 RID: 81896 RVA: 0x005D442C File Offset: 0x005D262C
 	public void CreateSkeletalObserverHandle(EUiModelUseWay useWay)
 	{
 		this.SkeletalObserver = ActorSystem.Instance.Get<TsSkeletalObserver>(TsSkeletalObserver.StaticClass(), new FTransformDouble(), null, true);
@@ -39,7 +39,7 @@ public class SkeletalObserverHandle
 		this.SkeletalObserver.Init(useWay);
 	}
 
-	// Token: 0x060165E2 RID: 91618 RVA: 0x005A94BE File Offset: 0x005A76BE
+	// Token: 0x06013FE9 RID: 81897 RVA: 0x005D4496 File Offset: 0x005D2696
 	public void ResetSkeletalObserverHandle()
 	{
 		TsSkeletalObserver skeletalObserver = this.SkeletalObserver;
@@ -50,13 +50,13 @@ public class SkeletalObserverHandle
 		this.SkeletalObserver = null;
 	}
 
-	// Token: 0x060165E3 RID: 91619 RVA: 0x005A94D8 File Offset: 0x005A76D8
+	// Token: 0x06013FEA RID: 81898 RVA: 0x005D44B0 File Offset: 0x005D26B0
 	public void AddUiShowRoomShowActor(bool includeFromChildActors)
 	{
 		AActor skeletalObserver = this.SkeletalObserver;
 		UiSceneManager.Instance.AddUiShowRoomShowActor(skeletalObserver, includeFromChildActors);
 	}
 
-	// Token: 0x0400A678 RID: 42616
+	// Token: 0x0400AA62 RID: 43618
 	private TsSkeletalObserver SkeletalObserver;
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031F2 RID: 12786
+// Token: 0x02002761 RID: 10081
 public class VehicleRideLocation
 {
-	// Token: 0x0400D8D7 RID: 55511
+	// Token: 0x0400DD75 RID: 56693
 	public CommonNpcPerformComponent.EEnterVehicleDirection Direction;
 
-	// Token: 0x0400D8D8 RID: 55512
+	// Token: 0x0400DD76 RID: 56694
 	[Nullable(1)]
 	public readonly Vector Location = Vector.Create();
 }

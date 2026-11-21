@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F02 RID: 16130
+	// Token: 0x02004340 RID: 17216
 	public struct ILevelPlayRecallData : IFlatbufferObject
 	{
-		// Token: 0x17006FE2 RID: 28642
-		// (get) Token: 0x06016D52 RID: 93522 RVA: 0x0034AFA3 File Offset: 0x003491A3
+		// Token: 0x170075D1 RID: 30161
+		// (get) Token: 0x060183A9 RID: 99241 RVA: 0x0037416F File Offset: 0x0037236F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016D53 RID: 93523 RVA: 0x0034AFB0 File Offset: 0x003491B0
+		// Token: 0x060183AA RID: 99242 RVA: 0x0037417C File Offset: 0x0037237C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016D54 RID: 93524 RVA: 0x0034AFB8 File Offset: 0x003491B8
+		// Token: 0x060183AB RID: 99243 RVA: 0x00374184 File Offset: 0x00372384
 		public static ILevelPlayRecallData GetRootAsILevelPlayRecallData(ByteBuffer _bb)
 		{
 			return ILevelPlayRecallData.GetRootAsILevelPlayRecallData(_bb, default(ILevelPlayRecallData));
 		}
 
-		// Token: 0x06016D55 RID: 93525 RVA: 0x0034AFD4 File Offset: 0x003491D4
+		// Token: 0x060183AC RID: 99244 RVA: 0x003741A0 File Offset: 0x003723A0
 		public static ILevelPlayRecallData GetRootAsILevelPlayRecallData(ByteBuffer _bb, ILevelPlayRecallData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016D56 RID: 93526 RVA: 0x0034AFF1 File Offset: 0x003491F1
+		// Token: 0x060183AD RID: 99245 RVA: 0x003741BD File Offset: 0x003723BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016D57 RID: 93527 RVA: 0x0034B000 File Offset: 0x00349200
+		// Token: 0x060183AE RID: 99246 RVA: 0x003741CC File Offset: 0x003723CC
 		public ILevelPlayRecallData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FE3 RID: 28643
-		// (get) Token: 0x06016D58 RID: 93528 RVA: 0x0034B010 File Offset: 0x00349210
+		// Token: 0x170075D2 RID: 30162
+		// (get) Token: 0x060183AF RID: 99247 RVA: 0x003741DC File Offset: 0x003723DC
 		public ERecallDataType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006FE4 RID: 28644
-		// (get) Token: 0x06016D59 RID: 93529 RVA: 0x0034B04C File Offset: 0x0034924C
+		// Token: 0x170075D3 RID: 30163
+		// (get) Token: 0x060183B0 RID: 99248 RVA: 0x00374218 File Offset: 0x00372418
 		public int Id
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006FE5 RID: 28645
-		// (get) Token: 0x06016D5A RID: 93530 RVA: 0x0034B088 File Offset: 0x00349288
+		// Token: 0x170075D4 RID: 30164
+		// (get) Token: 0x060183B1 RID: 99249 RVA: 0x00374254 File Offset: 0x00372454
 		public ILevelPlayRecallConfig? RecallConfig
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016D5B RID: 93531 RVA: 0x0034B0E5 File Offset: 0x003492E5
+		// Token: 0x060183B2 RID: 99250 RVA: 0x003742B1 File Offset: 0x003724B1
 		public static Offset<ILevelPlayRecallData> CreateILevelPlayRecallData(FlatBufferBuilder builder, ERecallDataType Type = ERecallDataType.LevelPlay, int Id = 0, Offset<ILevelPlayRecallConfig> RecallConfigOffset = default(Offset<ILevelPlayRecallConfig>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ILevelPlayRecallData.EndILevelPlayRecallData(builder);
 		}
 
-		// Token: 0x06016D5C RID: 93532 RVA: 0x0034B109 File Offset: 0x00349309
+		// Token: 0x060183B3 RID: 99251 RVA: 0x003742D5 File Offset: 0x003724D5
 		public static void StartILevelPlayRecallData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06016D5D RID: 93533 RVA: 0x0034B112 File Offset: 0x00349312
+		// Token: 0x060183B4 RID: 99252 RVA: 0x003742DE File Offset: 0x003724DE
 		public static void AddType(FlatBufferBuilder builder, ERecallDataType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016D5E RID: 93534 RVA: 0x0034B11D File Offset: 0x0034931D
+		// Token: 0x060183B5 RID: 99253 RVA: 0x003742E9 File Offset: 0x003724E9
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06016D5F RID: 93535 RVA: 0x0034B128 File Offset: 0x00349328
+		// Token: 0x060183B6 RID: 99254 RVA: 0x003742F4 File Offset: 0x003724F4
 		public static void AddRecallConfig(FlatBufferBuilder builder, Offset<ILevelPlayRecallConfig> recallConfigOffset)
 		{
 			builder.AddOffset(2, recallConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06016D60 RID: 93536 RVA: 0x0034B138 File Offset: 0x00349338
+		// Token: 0x060183B7 RID: 99255 RVA: 0x00374304 File Offset: 0x00372504
 		public static Offset<ILevelPlayRecallData> EndILevelPlayRecallData(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlayRecallData>(builder.EndTable());
 		}
 
-		// Token: 0x06016D61 RID: 93537 RVA: 0x0034B148 File Offset: 0x00349348
+		// Token: 0x060183B8 RID: 99256 RVA: 0x00374314 File Offset: 0x00372514
 		public ILevelPlayRecallDataT UnPack()
 		{
 			ILevelPlayRecallDataT levelPlayRecallDataT = new ILevelPlayRecallDataT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return levelPlayRecallDataT;
 		}
 
-		// Token: 0x06016D62 RID: 93538 RVA: 0x0034B164 File Offset: 0x00349364
+		// Token: 0x060183B9 RID: 99257 RVA: 0x00374330 File Offset: 0x00372530
 		public void UnPackTo(ILevelPlayRecallDataT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.RecallConfig = ((this.RecallConfig != null) ? this.RecallConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x06016D63 RID: 93539 RVA: 0x0034B1B8 File Offset: 0x003493B8
+		// Token: 0x060183BA RID: 99258 RVA: 0x00374384 File Offset: 0x00372584
 		public static Offset<ILevelPlayRecallData> Pack(FlatBufferBuilder builder, ILevelPlayRecallDataT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ILevelPlayRecallData.CreateILevelPlayRecallData(builder, _o.Type, _o.Id, recallConfigOffset);
 		}
 
-		// Token: 0x0400B8DF RID: 47327
+		// Token: 0x0400C2BC RID: 49852
 		private Table __p;
 	}
 }

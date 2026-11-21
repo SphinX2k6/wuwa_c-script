@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018A4 RID: 6308
+	// Token: 0x020003C7 RID: 967
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.EffectModelMaterialController")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public class UEffectModelMaterialController : UEffectModelBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060173EA RID: 95210 RVA: 0x0021E951 File Offset: 0x0021CB51
+		// Token: 0x06005E8D RID: 24205 RVA: 0x00085D2C File Offset: 0x00083F2C
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEffectModelMaterialController._ClassPtr;
 		}
 
-		// Token: 0x060173EB RID: 95211 RVA: 0x0021E960 File Offset: 0x0021CB60
+		// Token: 0x06005E8E RID: 24206 RVA: 0x00085D38 File Offset: 0x00083F38
 		public UEffectModelMaterialController() : this(BuiltinUtils.AllocNativeUObject(UEffectModelMaterialController.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060173EC RID: 95212 RVA: 0x0021E988 File Offset: 0x0021CB88
+		// Token: 0x06005E8F RID: 24207 RVA: 0x00085D60 File Offset: 0x00083F60
 		[NullableContext(1)]
 		public UEffectModelMaterialController(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEffectModelMaterialController.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D8B RID: 23947
-		// (get) Token: 0x060173ED RID: 95213 RVA: 0x0021E9BB File Offset: 0x0021CBBB
-		// (set) Token: 0x060173EE RID: 95214 RVA: 0x0021E9CF File Offset: 0x0021CBCF
+		// Token: 0x170012CA RID: 4810
+		// (get) Token: 0x06005E90 RID: 24208 RVA: 0x00085D93 File Offset: 0x00083F93
+		// (set) Token: 0x06005E91 RID: 24209 RVA: 0x00085DA7 File Offset: 0x00083FA7
 		public unsafe UKuroMaterialControllerDataAsset MaterialControllerData
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D8C RID: 23948
-		// (get) Token: 0x060173EF RID: 95215 RVA: 0x0021E9E4 File Offset: 0x0021CBE4
-		// (set) Token: 0x060173F0 RID: 95216 RVA: 0x0021E9F8 File Offset: 0x0021CBF8
+		// Token: 0x170012CB RID: 4811
+		// (get) Token: 0x06005E92 RID: 24210 RVA: 0x00085DBC File Offset: 0x00083FBC
+		// (set) Token: 0x06005E93 RID: 24211 RVA: 0x00085DD0 File Offset: 0x00083FD0
 		public unsafe UKuroMaterialControllerDataAsset MaterialControllerGroupData
 		{
 			get
@@ -60,31 +60,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060173F1 RID: 95217 RVA: 0x0021EA0D File Offset: 0x0021CC0D
+		// Token: 0x06005E94 RID: 24212 RVA: 0x00085DE5 File Offset: 0x00083FE5
 		static UEffectModelMaterialController()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.EffectModelMaterialController");
 		}
 
-		// Token: 0x060173F2 RID: 95218 RVA: 0x0021EA1B File Offset: 0x0021CC1B
+		// Token: 0x06005E95 RID: 24213 RVA: 0x00085DF3 File Offset: 0x00083FF3
 		protected UEffectModelMaterialController(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C9CD RID: 51661
+		// Token: 0x04002797 RID: 10135
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.EffectModelMaterialController";
 
-		// Token: 0x0400C9CE RID: 51662
+		// Token: 0x04002798 RID: 10136
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C9CF RID: 51663
+		// Token: 0x04002799 RID: 10137
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C9D0 RID: 51664
+		// Token: 0x0400279A RID: 10138
 		internal static int __PropertyOffset_MaterialControllerData;
 
-		// Token: 0x0400C9D1 RID: 51665
+		// Token: 0x0400279B RID: 10139
 		internal static int __PropertyOffset_MaterialControllerGroupData;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006624 RID: 26148
+	// Token: 0x020055A2 RID: 21922
 	internal class ERoleType
 	{
-		// Token: 0x040221B7 RID: 139703
+		// Token: 0x0401CAE8 RID: 117480
 		public const int Init = 0;
 
-		// Token: 0x040221B8 RID: 139704
+		// Token: 0x0401CAE9 RID: 117481
 		public const int Player = 4;
 
-		// Token: 0x040221B9 RID: 139705
+		// Token: 0x0401CAEA RID: 117482
 		public const int Phoebe = 5;
 	}
 }

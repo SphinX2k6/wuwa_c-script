@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EAA RID: 7850
+// Token: 0x0200136C RID: 4972
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryItemTipsBase : UiPanelBase
 {
-	// Token: 0x0600F13C RID: 61756 RVA: 0x0039F6B4 File Offset: 0x0039D8B4
+	// Token: 0x0600C55B RID: 50523 RVA: 0x003AB270 File Offset: 0x003A9470
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +53,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F13D RID: 61757 RVA: 0x0039F93C File Offset: 0x0039DB3C
+	// Token: 0x0600C55C RID: 50524 RVA: 0x003AB4F8 File Offset: 0x003A96F8
 	protected override void OnBeforeCreateImplement()
 	{
 		this.LevelPlaySequence = new UiBehaviorLevelSequence(this);
@@ -62,7 +62,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.LevelPlaySequence.AddSequenceStartEvent("Start", new Action<string>(this.OnCloseSequenceStart));
 	}
 
-	// Token: 0x0600F13E RID: 61758 RVA: 0x0039F99C File Offset: 0x0039DB9C
+	// Token: 0x0600C55D RID: 50525 RVA: 0x003AB558 File Offset: 0x003A9758
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryItemTipsBase.<OnBeforeStartAsync>d__28 <OnBeforeStartAsync>d__;
@@ -73,7 +73,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F13F RID: 61759 RVA: 0x0039F9E0 File Offset: 0x0039DBE0
+	// Token: 0x0600C55E RID: 50526 RVA: 0x003AB59C File Offset: 0x003A979C
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(19);
@@ -82,7 +82,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		EventSystem.Instance.Add(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
 	}
 
-	// Token: 0x0600F140 RID: 61760 RVA: 0x0039FA44 File Offset: 0x0039DC44
+	// Token: 0x0600C55F RID: 50527 RVA: 0x003AB600 File Offset: 0x003A9800
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHonamiStorySkillDescModeChange, new Action<bool>(this.OnSkillDescModeChange));
@@ -93,7 +93,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.ButtonRightB = null;
 	}
 
-	// Token: 0x0600F141 RID: 61761 RVA: 0x0039FAA8 File Offset: 0x0039DCA8
+	// Token: 0x0600C560 RID: 50528 RVA: 0x003AB664 File Offset: 0x003A9864
 	protected void InitButtonState()
 	{
 		this.ConfirmQuick = new ButtonItem(base.GetItem(15));
@@ -105,7 +105,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.ConfirmRight.SetLocalTextNew(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F142 RID: 61762 RVA: 0x0039FB44 File Offset: 0x0039DD44
+	// Token: 0x0600C561 RID: 50529 RVA: 0x003AB700 File Offset: 0x003A9900
 	protected void RefreshButton(HonamiStoryItemDataBase data, EHonamiStoryBackpackType backpackType)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(6);
@@ -126,7 +126,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.RefreshSideButton(data, backpackType);
 	}
 
-	// Token: 0x0600F143 RID: 61763 RVA: 0x0039FBB0 File Offset: 0x0039DDB0
+	// Token: 0x0600C562 RID: 50530 RVA: 0x003AB76C File Offset: 0x003A996C
 	protected void RefreshConfirmButton(HonamiStoryItemDataBase data, EHonamiStoryBackpackType backpackType)
 	{
 		if (this.TipsState == EHonamiStoryTipsState.ShopView)
@@ -214,7 +214,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F144 RID: 61764 RVA: 0x0039FCF0 File Offset: 0x0039DEF0
+	// Token: 0x0600C563 RID: 50531 RVA: 0x003AB8AC File Offset: 0x003A9AAC
 	protected void RefreshSideButton(HonamiStoryItemDataBase data, EHonamiStoryBackpackType backpackType)
 	{
 		bool flag = data.GetItemType() == EHonamiStoryItemType.Plugin && backpackType != EHonamiStoryBackpackType.Player;
@@ -226,7 +226,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.SideButtonActive = (flag2 || flag);
 	}
 
-	// Token: 0x0600F145 RID: 61765 RVA: 0x0039FD58 File Offset: 0x0039DF58
+	// Token: 0x0600C564 RID: 50532 RVA: 0x003AB914 File Offset: 0x003A9B14
 	public bool Refresh(HonamiStoryItemDataBase data, EHonamiStoryBackpackType backpackType, int curPos, Action cb, Vector2D gridLoc, Vector2D gridSize)
 	{
 		HonamiStoryBackpackLogicController backpackLogic = HonamiStoryModel.Instance.GetBackpackLogic();
@@ -270,47 +270,28 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		UiResourceConfig instance = UiResourceConfig.Instance;
 		string text = (instance != null) ? instance.GetResourcePath(resourceId) : null;
 		this.SetSpriteByPath(text ?? string.Empty, base.GetSprite(2), false, null, null);
-		string text2 = PublicUtil.Instance.GetConfigTextByKey(data.GetItemTypeText());
-		if (!Info.Instance.IsBuildShipping)
+		string configTextByKey = PublicUtil.Instance.GetConfigTextByKey(data.GetItemTypeText());
+		UUIText text2 = base.GetText(3);
+		if (text2 != null)
 		{
-			string str = text2;
-			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(4, 1);
-			defaultInterpolatedStringHandler.AppendLiteral(" ID:");
-			defaultInterpolatedStringHandler.AppendFormatted<int>(data.GetItemId());
-			text2 = str + defaultInterpolatedStringHandler.ToStringAndClear();
-			if (data.GetItemType() == EHonamiStoryItemType.Plugin)
-			{
-				HonamiStoryEquipItemData honamiStoryEquipItemData = data as HonamiStoryEquipItemData;
-				string str2 = text2;
-				defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(13, 2);
-				defaultInterpolatedStringHandler.AppendLiteral(" Type:");
-				defaultInterpolatedStringHandler.AppendFormatted<int>(data.GetSubType());
-				defaultInterpolatedStringHandler.AppendLiteral(" Power:");
-				defaultInterpolatedStringHandler.AppendFormatted<int?>((honamiStoryEquipItemData != null) ? new int?(honamiStoryEquipItemData.GetBaseEnhance()) : null);
-				text2 = str2 + defaultInterpolatedStringHandler.ToStringAndClear();
-			}
-		}
-		UUIText text3 = base.GetText(3);
-		if (text3 != null)
-		{
-			text3.SetText(text2, true);
+			text2.SetText(configTextByKey, true);
 		}
 		UUITexture texture = base.GetTexture(22);
 		base.SetItemIcon(texture, data.GetItemId(), null, null);
 		this.SetSpriteByPath(HonamiStoryConfig.Instance.GetHonamiStoryQuality(data.GetQuality()).Value.Bg, base.GetSprite(1), false, null, null);
-		UUIText text4 = base.GetText(5);
-		if (text4 != null)
+		UUIText text3 = base.GetText(5);
+		if (text3 != null)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 			defaultInterpolatedStringHandler.AppendFormatted<int>(data.GetSellPrice());
-			text4.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
+			text3.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 		int itemType = (int)data.GetItemType();
 		this.UpdateHeight = 0f;
 		if (itemType != 2)
 		{
-			HonamiStoryEquipItemData honamiStoryEquipItemData2 = data as HonamiStoryEquipItemData;
-			if (honamiStoryEquipItemData2 == null)
+			HonamiStoryEquipItemData honamiStoryEquipItemData = data as HonamiStoryEquipItemData;
+			if (honamiStoryEquipItemData == null)
 			{
 				Log instance2 = Log.Instance;
 				ELogModule module = ELogModule.HonamiStory;
@@ -320,7 +301,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 				instance2.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 				return false;
 			}
-			int[] mainPropList = honamiStoryEquipItemData2.GetMainPropList();
+			int[] mainPropList = honamiStoryEquipItemData.GetMainPropList();
 			List<IHonamiStoryTipsPropertyData> list = new List<IHonamiStoryTipsPropertyData>();
 			foreach (int propId in mainPropList)
 			{
@@ -329,7 +310,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 					PropId = propId
 				});
 			}
-			List<IHonamiStoryTipsBuffInfo> buffTempIdList = honamiStoryEquipItemData2.GetBuffTempIdList(false);
+			List<IHonamiStoryTipsBuffInfo> buffTempIdList = honamiStoryEquipItemData.GetBuffTempIdList(false);
 			GenericLayout<HonamiStoryTipsPropertyItem, IHonamiStoryTipsPropertyData> propertyLayout = this.PropertyLayout;
 			if (propertyLayout != null)
 			{
@@ -357,7 +338,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600F146 RID: 61766 RVA: 0x003A0124 File Offset: 0x0039E324
+	// Token: 0x0600C565 RID: 50533 RVA: 0x003ABC2C File Offset: 0x003A9E2C
 	public void SetAutoLocation(Vector2D gridLoc, Vector2D gridSize)
 	{
 		float width = this.RootItem.GetWidth();
@@ -453,13 +434,13 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.RootItem.SetUIWorldLocation(fvector);
 	}
 
-	// Token: 0x0600F147 RID: 61767 RVA: 0x003A03B7 File Offset: 0x0039E5B7
+	// Token: 0x0600C566 RID: 50534 RVA: 0x003ABEBF File Offset: 0x003AA0BF
 	public void SetMaskAttach(UUIButtonComponent uiItem)
 	{
 		this.MaskButton = uiItem;
 	}
 
-	// Token: 0x0600F148 RID: 61768 RVA: 0x003A03C0 File Offset: 0x0039E5C0
+	// Token: 0x0600C567 RID: 50535 RVA: 0x003ABEC8 File Offset: 0x003AA0C8
 	public void SetTipsVisible(bool isVisible)
 	{
 		this.MaskButton.RootUIComp.Get().SetUIActive(isVisible);
@@ -491,33 +472,33 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F149 RID: 61769 RVA: 0x003A0461 File Offset: 0x0039E661
+	// Token: 0x0600C568 RID: 50536 RVA: 0x003ABF69 File Offset: 0x003AA169
 	[NullableContext(2)]
 	public void SetItemDataOut(HonamiStoryItemDataBase data)
 	{
 		this.ItemData = data;
 	}
 
-	// Token: 0x0600F14A RID: 61770 RVA: 0x003A046A File Offset: 0x0039E66A
+	// Token: 0x0600C569 RID: 50537 RVA: 0x003ABF72 File Offset: 0x003AA172
 	[NullableContext(2)]
 	public HonamiStoryItemDataBase GetItemDataOut()
 	{
 		return this.ItemData;
 	}
 
-	// Token: 0x0600F14B RID: 61771 RVA: 0x003A0472 File Offset: 0x0039E672
+	// Token: 0x0600C56A RID: 50538 RVA: 0x003ABF7A File Offset: 0x003AA17A
 	public void SetTipsState(EHonamiStoryTipsState state)
 	{
 		this.TipsState = state;
 	}
 
-	// Token: 0x0600F14C RID: 61772 RVA: 0x003A047B File Offset: 0x0039E67B
+	// Token: 0x0600C56B RID: 50539 RVA: 0x003ABF83 File Offset: 0x003AA183
 	public void SetBottomOffset(float value)
 	{
 		this.BottomOffset = value;
 	}
 
-	// Token: 0x0600F14D RID: 61773 RVA: 0x003A0484 File Offset: 0x0039E684
+	// Token: 0x0600C56C RID: 50540 RVA: 0x003ABF8C File Offset: 0x003AA18C
 	protected void OnDiscardItem()
 	{
 		if (this.ItemData.IsLock())
@@ -542,7 +523,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F14E RID: 61774 RVA: 0x003A0534 File Offset: 0x0039E734
+	// Token: 0x0600C56D RID: 50541 RVA: 0x003AC03C File Offset: 0x003AA23C
 	private void RefreshDoubleClicked()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -600,7 +581,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F14F RID: 61775 RVA: 0x003A0630 File Offset: 0x0039E830
+	// Token: 0x0600C56E RID: 50542 RVA: 0x003AC138 File Offset: 0x003AA338
 	private void OnClickedLock(EToggleState toggleState)
 	{
 		bool curLock = this.ItemData.IsLock();
@@ -631,26 +612,26 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600F150 RID: 61776 RVA: 0x003A06A6 File Offset: 0x0039E8A6
+	// Token: 0x0600C56F RID: 50543 RVA: 0x003AC1AE File Offset: 0x003AA3AE
 	public void OnClickedMask()
 	{
 		HonamiStoryModel.Instance.SetBackpackLogicState(EHonamiStoryBackpackLogicState.Normal);
 		this.SetTipsVisible(false);
 	}
 
-	// Token: 0x0600F151 RID: 61777 RVA: 0x003A06BA File Offset: 0x0039E8BA
+	// Token: 0x0600C570 RID: 50544 RVA: 0x003AC1C2 File Offset: 0x003AA3C2
 	private HonamiStoryTipsPropertyItem CreateProp()
 	{
 		return new HonamiStoryTipsPropertyItem();
 	}
 
-	// Token: 0x0600F152 RID: 61778 RVA: 0x003A06C1 File Offset: 0x0039E8C1
+	// Token: 0x0600C571 RID: 50545 RVA: 0x003AC1C9 File Offset: 0x003AA3C9
 	private HonamiStoryTipsTextItem CreateSkill()
 	{
 		return new HonamiStoryTipsTextItem();
 	}
 
-	// Token: 0x0600F153 RID: 61779 RVA: 0x003A06C8 File Offset: 0x0039E8C8
+	// Token: 0x0600C572 RID: 50546 RVA: 0x003AC1D0 File Offset: 0x003AA3D0
 	private void OnClickedQuick(int _)
 	{
 		if (this.BackpackType == EHonamiStoryBackpackType.Player)
@@ -678,7 +659,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		HonamiStoryModel.Instance.SetBackpackLogicState(EHonamiStoryBackpackLogicState.Normal);
 	}
 
-	// Token: 0x0600F154 RID: 61780 RVA: 0x003A0794 File Offset: 0x0039E994
+	// Token: 0x0600C573 RID: 50547 RVA: 0x003AC29C File Offset: 0x003AA49C
 	private void OnClickedConfirm(int _)
 	{
 		if (this.TipsState == EHonamiStoryTipsState.InGame)
@@ -700,7 +681,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F155 RID: 61781 RVA: 0x003A07EC File Offset: 0x0039E9EC
+	// Token: 0x0600C574 RID: 50548 RVA: 0x003AC2F4 File Offset: 0x003AA4F4
 	private void OnClickedToBackpack()
 	{
 		EHonamiStoryBackpack curBackpack = (this.BackpackType == EHonamiStoryBackpackType.Player) ? EHonamiStoryBackpack.Player : EHonamiStoryBackpack.PickUpBox;
@@ -713,7 +694,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		HonamiStoryModel.Instance.SetBackpackLogicState(EHonamiStoryBackpackLogicState.Normal);
 	}
 
-	// Token: 0x0600F156 RID: 61782 RVA: 0x003A083C File Offset: 0x0039EA3C
+	// Token: 0x0600C575 RID: 50549 RVA: 0x003AC344 File Offset: 0x003AA544
 	private void OnClickedInstead()
 	{
 		HonamiStoryBackpackLogicController backpackLogic = HonamiStoryModel.Instance.GetBackpackLogic();
@@ -729,7 +710,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		this.SetTipsVisible(false);
 	}
 
-	// Token: 0x0600F157 RID: 61783 RVA: 0x003A088B File Offset: 0x0039EA8B
+	// Token: 0x0600C576 RID: 50550 RVA: 0x003AC393 File Offset: 0x003AA593
 	public void SetEnable(bool value)
 	{
 		base.SetUiActive(value);
@@ -741,13 +722,13 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		originalItem.SetUIActive(value);
 	}
 
-	// Token: 0x0600F158 RID: 61784 RVA: 0x003A08A5 File Offset: 0x0039EAA5
+	// Token: 0x0600C577 RID: 50551 RVA: 0x003AC3AD File Offset: 0x003AA5AD
 	private void OnCloseSequenceStart(string _)
 	{
 		this.SetEnable(true);
 	}
 
-	// Token: 0x0600F159 RID: 61785 RVA: 0x003A08B0 File Offset: 0x0039EAB0
+	// Token: 0x0600C578 RID: 50552 RVA: 0x003AC3B8 File Offset: 0x003AA5B8
 	private void OnLayoutUpdate(float _)
 	{
 		float height = this.RootItem.GetHeight();
@@ -758,7 +739,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F15A RID: 61786 RVA: 0x003A08EC File Offset: 0x0039EAEC
+	// Token: 0x0600C579 RID: 50553 RVA: 0x003AC3F4 File Offset: 0x003AA5F4
 	private void OnSkillDescModeChange(bool isSimple)
 	{
 		if (this.ItemData == null || this.ItemData.GetItemType() == EHonamiStoryItemType.Normal)
@@ -779,13 +760,13 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		skillLayout.RefreshByDataDirectlySync(buffTempIdList);
 	}
 
-	// Token: 0x0600F15B RID: 61787 RVA: 0x003A093A File Offset: 0x0039EB3A
+	// Token: 0x0600C57A RID: 50554 RVA: 0x003AC442 File Offset: 0x003AA642
 	private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		this.RefreshDoubleClicked();
 	}
 
-	// Token: 0x0600F15C RID: 61788 RVA: 0x003A0944 File Offset: 0x0039EB44
+	// Token: 0x0600C57B RID: 50555 RVA: 0x003AC44C File Offset: 0x003AA64C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -816,28 +797,28 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F15D RID: 61789 RVA: 0x003A09A9 File Offset: 0x0039EBA9
+	// Token: 0x0600C57C RID: 50556 RVA: 0x003AC4B1 File Offset: 0x003AA6B1
 	private void OnCloseSequenceFinish(string _)
 	{
 		this.SetEnable(false);
 	}
 
-	// Token: 0x04006F90 RID: 28560
+	// Token: 0x04007071 RID: 28785
 	private const int RIGHT_OFFSET = 60;
 
-	// Token: 0x04006F91 RID: 28561
+	// Token: 0x04007072 RID: 28786
 	private const int PROPERTY_MAX_COUNT = 3;
 
-	// Token: 0x04006F92 RID: 28562
+	// Token: 0x04007073 RID: 28787
 	private const int BUFF_MAX_COUNT = 1;
 
-	// Token: 0x04006F93 RID: 28563
+	// Token: 0x04007074 RID: 28788
 	protected bool ActivityOpen;
 
-	// Token: 0x04006F94 RID: 28564
+	// Token: 0x04007075 RID: 28789
 	protected float SideButtonWidth;
 
-	// Token: 0x04006F95 RID: 28565
+	// Token: 0x04007076 RID: 28790
 	[Nullable(new byte[]
 	{
 		2,
@@ -846,7 +827,7 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 	})]
 	protected GenericLayout<HonamiStoryTipsPropertyItem, IHonamiStoryTipsPropertyData> PropertyLayout;
 
-	// Token: 0x04006F96 RID: 28566
+	// Token: 0x04007077 RID: 28791
 	[Nullable(new byte[]
 	{
 		2,
@@ -855,125 +836,125 @@ public class HonamiStoryItemTipsBase : UiPanelBase
 	})]
 	protected GenericLayout<HonamiStoryTipsTextItem, IHonamiStoryTipsBuffInfo> SkillLayout;
 
-	// Token: 0x04006F97 RID: 28567
+	// Token: 0x04007078 RID: 28792
 	[Nullable(2)]
 	protected UUIButtonComponent MaskButton;
 
-	// Token: 0x04006F98 RID: 28568
+	// Token: 0x04007079 RID: 28793
 	protected EHonamiStoryTipsState TipsState;
 
-	// Token: 0x04006F99 RID: 28569
+	// Token: 0x0400707A RID: 28794
 	[Nullable(2)]
 	protected ButtonItem ConfirmQuick;
 
-	// Token: 0x04006F9A RID: 28570
+	// Token: 0x0400707B RID: 28795
 	[Nullable(2)]
 	protected ButtonItem ConfirmRight;
 
-	// Token: 0x04006F9B RID: 28571
+	// Token: 0x0400707C RID: 28796
 	[Nullable(2)]
 	protected HonamiStoryItemDataBase ItemData;
 
-	// Token: 0x04006F9C RID: 28572
+	// Token: 0x0400707D RID: 28797
 	protected EHonamiStoryBackpackType BackpackType;
 
-	// Token: 0x04006F9D RID: 28573
+	// Token: 0x0400707E RID: 28798
 	protected float BottomOffset = 200f;
 
-	// Token: 0x04006F9E RID: 28574
+	// Token: 0x0400707F RID: 28799
 	protected int CurrentPos = -1;
 
-	// Token: 0x04006F9F RID: 28575
+	// Token: 0x04007080 RID: 28800
 	[Nullable(2)]
 	protected HonamiStoryItemTipsSideButton ButtonRightA;
 
-	// Token: 0x04006FA0 RID: 28576
+	// Token: 0x04007081 RID: 28801
 	[Nullable(2)]
 	protected HonamiStoryItemTipsSideButton ButtonRightB;
 
-	// Token: 0x04006FA1 RID: 28577
+	// Token: 0x04007082 RID: 28802
 	[Nullable(2)]
 	protected HonamiStoryItemTipsSideButton ButtonLeftA;
 
-	// Token: 0x04006FA2 RID: 28578
+	// Token: 0x04007083 RID: 28803
 	[Nullable(2)]
 	protected HonamiStoryItemTipsSideButton ButtonLeftB;
 
-	// Token: 0x04006FA3 RID: 28579
+	// Token: 0x04007084 RID: 28804
 	protected bool SideButtonActive;
 
-	// Token: 0x04006FA4 RID: 28580
+	// Token: 0x04007085 RID: 28805
 	[Nullable(2)]
 	protected Action OnHideCb;
 
-	// Token: 0x04006FA5 RID: 28581
+	// Token: 0x04007086 RID: 28806
 	protected Vector2D GridLoc;
 
-	// Token: 0x04006FA6 RID: 28582
+	// Token: 0x04007087 RID: 28807
 	protected Vector2D GridSize;
 
-	// Token: 0x04006FA7 RID: 28583
+	// Token: 0x04007088 RID: 28808
 	protected float UpdateHeight;
 
-	// Token: 0x04006FA8 RID: 28584
+	// Token: 0x04007089 RID: 28809
 	[Nullable(2)]
 	private UiBehaviorLevelSequence LevelPlaySequence;
 
-	// Token: 0x0200847B RID: 33915
+	// Token: 0x02007600 RID: 30208
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402B1D3 RID: 176595
+		// Token: 0x040264F7 RID: 156919
 		TxtName,
-		// Token: 0x0402B1D4 RID: 176596
+		// Token: 0x040264F8 RID: 156920
 		SpriteTitleBg,
-		// Token: 0x0402B1D5 RID: 176597
+		// Token: 0x040264F9 RID: 156921
 		SpriteTypeIcon,
-		// Token: 0x0402B1D6 RID: 176598
+		// Token: 0x040264FA RID: 156922
 		TxtType,
-		// Token: 0x0402B1D7 RID: 176599
+		// Token: 0x040264FB RID: 156923
 		TexCost,
-		// Token: 0x0402B1D8 RID: 176600
+		// Token: 0x040264FC RID: 156924
 		TxtLevel,
-		// Token: 0x0402B1D9 RID: 176601
+		// Token: 0x040264FD RID: 156925
 		TogLock,
-		// Token: 0x0402B1DA RID: 176602
+		// Token: 0x040264FE RID: 156926
 		PanelTipsTime,
-		// Token: 0x0402B1DB RID: 176603
+		// Token: 0x040264FF RID: 156927
 		TxtTime,
-		// Token: 0x0402B1DC RID: 176604
+		// Token: 0x04026500 RID: 156928
 		PanelTipsProperty,
-		// Token: 0x0402B1DD RID: 176605
+		// Token: 0x04026501 RID: 156929
 		PanelList,
-		// Token: 0x0402B1DE RID: 176606
+		// Token: 0x04026502 RID: 156930
 		PanelSkill,
-		// Token: 0x0402B1DF RID: 176607
+		// Token: 0x04026503 RID: 156931
 		MainDescItem,
-		// Token: 0x0402B1E0 RID: 176608
+		// Token: 0x04026504 RID: 156932
 		TxtDesc,
-		// Token: 0x0402B1E1 RID: 176609
+		// Token: 0x04026505 RID: 156933
 		BtnConfirmA,
-		// Token: 0x0402B1E2 RID: 176610
+		// Token: 0x04026506 RID: 156934
 		BtnConfirmB,
-		// Token: 0x0402B1E3 RID: 176611
+		// Token: 0x04026507 RID: 156935
 		PanelBtnR,
-		// Token: 0x0402B1E4 RID: 176612
+		// Token: 0x04026508 RID: 156936
 		BtnRA,
-		// Token: 0x0402B1E5 RID: 176613
+		// Token: 0x04026509 RID: 156937
 		BtnRB,
-		// Token: 0x0402B1E6 RID: 176614
+		// Token: 0x0402650A RID: 156938
 		PanelBtnL,
-		// Token: 0x0402B1E7 RID: 176615
+		// Token: 0x0402650B RID: 156939
 		BtnLA,
-		// Token: 0x0402B1E8 RID: 176616
+		// Token: 0x0402650C RID: 156940
 		BtnLB,
-		// Token: 0x0402B1E9 RID: 176617
+		// Token: 0x0402650D RID: 156941
 		TexIcon,
-		// Token: 0x0402B1EA RID: 176618
+		// Token: 0x0402650E RID: 156942
 		PanelBottom,
-		// Token: 0x0402B1EB RID: 176619
+		// Token: 0x0402650F RID: 156943
 		PanelDoubleClicked,
-		// Token: 0x0402B1EC RID: 176620
+		// Token: 0x04026510 RID: 156944
 		TxtDoubleClicked
 	}
 }

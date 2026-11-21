@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200562C RID: 22060
+	// Token: 0x02004602 RID: 17922
 	public class PopupComponentInfoItem : UiPanelBase
 	{
-		// Token: 0x060381CF RID: 229839 RVA: 0x00D4AF34 File Offset: 0x00D49134
+		// Token: 0x0602D0CD RID: 184525 RVA: 0x00C98C7C File Offset: 0x00C96E7C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381D0 RID: 229840 RVA: 0x00D4AF90 File Offset: 0x00D49190
+		// Token: 0x0602D0CE RID: 184526 RVA: 0x00C98CD8 File Offset: 0x00C96ED8
 		[NullableContext(1)]
 		public void Refresh(string titleId, int itemId, string valueTxt)
 		{

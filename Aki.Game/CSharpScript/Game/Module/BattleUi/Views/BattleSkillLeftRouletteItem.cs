@@ -13,10 +13,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CEC RID: 23788
+	// Token: 0x02004CCE RID: 19662
 	public class BattleSkillLeftRouletteItem : UiPanelBase
 	{
-		// Token: 0x0603C3CF RID: 246735 RVA: 0x00E6B9F4 File Offset: 0x00E69BF4
+		// Token: 0x06031325 RID: 201509 RVA: 0x00DBBFA8 File Offset: 0x00DBA1A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C3D0 RID: 246736 RVA: 0x00E6BA3C File Offset: 0x00E69C3C
+		// Token: 0x06031326 RID: 201510 RVA: 0x00DBBFF0 File Offset: 0x00DBA1F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleSkillLeftRouletteItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -39,20 +39,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C3D1 RID: 246737 RVA: 0x00E6BA7F File Offset: 0x00E69C7F
+		// Token: 0x06031327 RID: 201511 RVA: 0x00DBC033 File Offset: 0x00DBA233
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiRouletteKeyChanged, new Action(this.OnRouletteKeyChanged));
 		}
 
-		// Token: 0x0603C3D2 RID: 246738 RVA: 0x00E6BA9D File Offset: 0x00E69C9D
+		// Token: 0x06031328 RID: 201512 RVA: 0x00DBC051 File Offset: 0x00DBA251
 		private void OnRouletteKeyChanged()
 		{
 			this.RefreshKeyItem();
 			this.RefreshVisible();
 		}
 
-		// Token: 0x0603C3D3 RID: 246739 RVA: 0x00E6BAAC File Offset: 0x00E69CAC
+		// Token: 0x06031329 RID: 201513 RVA: 0x00DBC060 File Offset: 0x00DBA260
 		public void RefreshKeyItem()
 		{
 			SkillButtonUiGamepadDataBase gamepadData = SkillButtonUiModel.Instance.GamepadData;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C3D4 RID: 246740 RVA: 0x00E6BB08 File Offset: 0x00E69D08
+		// Token: 0x0603132A RID: 201514 RVA: 0x00DBC0BC File Offset: 0x00DBA2BC
 		public void RefreshVisible()
 		{
 			if (base.IsDestroyOrDestroying)
@@ -98,14 +98,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(active);
 		}
 
-		// Token: 0x0401F648 RID: 128584
+		// Token: 0x0401A101 RID: 106753
 		[Nullable(2)]
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0200BF47 RID: 48967
+		// Token: 0x0200A94D RID: 43341
 		private enum EChildType
 		{
-			// Token: 0x04039B1D RID: 236317
+			// Token: 0x040344DF RID: 214239
 			KeyItem
 		}
 	}

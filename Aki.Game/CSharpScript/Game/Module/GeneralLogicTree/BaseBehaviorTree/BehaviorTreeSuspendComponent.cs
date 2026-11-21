@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 {
-	// Token: 0x020059EA RID: 23018
+	// Token: 0x020049C3 RID: 18883
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BehaviorTreeSuspendComponent
 	{
-		// Token: 0x0603A543 RID: 238915 RVA: 0x00DDFF2D File Offset: 0x00DDE12D
+		// Token: 0x0602F46A RID: 193642 RVA: 0x00D2F799 File Offset: 0x00D2D999
 		public BehaviorTreeSuspendComponent(long treeIncId, Blackboard blackBoard)
 		{
 			this.Blackboard = blackBoard;
 			this.TreeIncId = treeIncId;
 		}
 
-		// Token: 0x0603A544 RID: 238916 RVA: 0x00DDFF50 File Offset: 0x00DDE150
+		// Token: 0x0602F46B RID: 193643 RVA: 0x00D2F7BC File Offset: 0x00D2D9BC
 		public EBehaviorTreeSuspendType GetSuspendType()
 		{
 			if (this.CurSuspendState == EBehaviorTreeSuspendType.None)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			return EBehaviorTreeSuspendType.None;
 		}
 
-		// Token: 0x0603A545 RID: 238917 RVA: 0x00DDFF9C File Offset: 0x00DDE19C
+		// Token: 0x0602F46C RID: 193644 RVA: 0x00D2F808 File Offset: 0x00D2DA08
 		[NullableContext(2)]
 		public string GetSuspendText()
 		{
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			return result;
 		}
 
-		// Token: 0x0603A546 RID: 238918 RVA: 0x00DDFFFE File Offset: 0x00DDE1FE
+		// Token: 0x0602F46D RID: 193645 RVA: 0x00D2F86A File Offset: 0x00D2DA6A
 		public IReadOnlyList<IOccupationInfo> GetOccupations()
 		{
 			return this.Occupations;
 		}
 
-		// Token: 0x0603A547 RID: 238919 RVA: 0x00DE0008 File Offset: 0x00DDE208
+		// Token: 0x0602F46E RID: 193646 RVA: 0x00D2F874 File Offset: 0x00D2DA74
 		private string ConvertOccupationToTipString(IOccupationInfo occupation)
 		{
 			string textById = TextConfig.Instance.GetTextById("QuestResourcesIsOccupied");
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			return UKuroStaticLibrary.KuroFormatText(textById, tarray);
 		}
 
-		// Token: 0x0603A548 RID: 238920 RVA: 0x00DE0060 File Offset: 0x00DDE260
+		// Token: 0x0602F46F RID: 193647 RVA: 0x00D2F8CC File Offset: 0x00D2DACC
 		public void UpdateOccupations(int nodeId, int curSuspendState, IReadOnlyList<OccupationPbInfo> occupationInfos)
 		{
 			this.CurSuspendState = (EBehaviorTreeSuspendType)curSuspendState;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			EventSystem.Instance.EmitWithTarget<long, int, EBehaviorTreeSuspendType>(this.Blackboard, EEventName.GeneralLogicTreeSuspend, this.TreeIncId, nodeId, suspendType);
 		}
 
-		// Token: 0x0603A549 RID: 238921 RVA: 0x00DE0198 File Offset: 0x00DDE398
+		// Token: 0x0602F470 RID: 193648 RVA: 0x00D2FA04 File Offset: 0x00D2DC04
 		public void ClearOccupations()
 		{
 			this.Occupations.Clear();
@@ -122,16 +122,16 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			EventSystem.Instance.EmitWithTarget<long>(this.Blackboard, EEventName.GeneralLogicTreeCancelSuspend, this.TreeIncId);
 		}
 
-		// Token: 0x0401E698 RID: 124568
+		// Token: 0x04019137 RID: 102711
 		private readonly long TreeIncId;
 
-		// Token: 0x0401E699 RID: 124569
+		// Token: 0x04019138 RID: 102712
 		private readonly Blackboard Blackboard;
 
-		// Token: 0x0401E69A RID: 124570
+		// Token: 0x04019139 RID: 102713
 		private List<IOccupationInfo> Occupations = new List<IOccupationInfo>();
 
-		// Token: 0x0401E69B RID: 124571
+		// Token: 0x0401913A RID: 102714
 		private EBehaviorTreeSuspendType CurSuspendState;
 	}
 }

@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D7A RID: 7546
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001F8B RID: 8075
 	public class IQteHourglass : IUiGame
 	{
-		// Token: 0x0600A1B9 RID: 41401 RVA: 0x001702B4 File Offset: 0x0016E4B4
-		[NullableContext(1)]
+		// Token: 0x0600ABA5 RID: 43941 RVA: 0x001846D8 File Offset: 0x001828D8
 		private IQteHourglass_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A1BA RID: 41402 RVA: 0x001702EC File Offset: 0x0016E4EC
-		[NullableContext(1)]
+		// Token: 0x0600ABA6 RID: 43942 RVA: 0x00184710 File Offset: 0x00182910
 		public static IQteHourglass Create([Nullable(2)] IQteHourglass instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1BB RID: 41403 RVA: 0x001702FF File Offset: 0x0016E4FF
-		[NullableContext(1)]
+		// Token: 0x0600ABA7 RID: 43943 RVA: 0x00184723 File Offset: 0x00182923
 		public static IQteHourglass CreateFromSetValue([Nullable(2)] IQteHourglass_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1BC RID: 41404 RVA: 0x00170312 File Offset: 0x0016E512
-		[NullableContext(1)]
+		// Token: 0x0600ABA8 RID: 43944 RVA: 0x00184736 File Offset: 0x00182936
 		public new IQteHourglass_SetValue ToSetValue()
 		{
 			return new IQteHourglass_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031FC RID: 12796
-		// (get) Token: 0x0600A1BD RID: 41405 RVA: 0x0017033D File Offset: 0x0016E53D
-		// (set) Token: 0x0600A1BE RID: 41406 RVA: 0x00170368 File Offset: 0x0016E568
+		// Token: 0x17003490 RID: 13456
+		// (get) Token: 0x0600ABA9 RID: 43945 RVA: 0x00184761 File Offset: 0x00182961
+		// (set) Token: 0x0600ABAA RID: 43946 RVA: 0x0018478C File Offset: 0x0018298C
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -89,11 +83,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031FD RID: 12797
-		// (get) Token: 0x0600A1BF RID: 41407 RVA: 0x00170376 File Offset: 0x0016E576
-		// (set) Token: 0x0600A1C0 RID: 41408 RVA: 0x0017039D File Offset: 0x0016E59D
+		// Token: 0x17003491 RID: 13457
+		// (get) Token: 0x0600ABAB RID: 43947 RVA: 0x0018479A File Offset: 0x0018299A
+		// (set) Token: 0x0600ABAC RID: 43948 RVA: 0x001847C1 File Offset: 0x001829C1
+		[Nullable(2)]
 		public virtual List<int> QteIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -107,26 +103,27 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.QteIds;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().QteIds = value;
 			}
 		}
 
-		// Token: 0x170031FE RID: 12798
-		// (get) Token: 0x0600A1C1 RID: 41409 RVA: 0x001703AC File Offset: 0x0016E5AC
-		// (set) Token: 0x0600A1C2 RID: 41410 RVA: 0x0017043F File Offset: 0x0016E63F
+		// Token: 0x17003492 RID: 13458
+		// (get) Token: 0x0600ABAD RID: 43949 RVA: 0x001847D0 File Offset: 0x001829D0
+		// (set) Token: 0x0600ABAE RID: 43950 RVA: 0x00184863 File Offset: 0x00182A63
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IQteHourglassConfig> QteConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -157,7 +154,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -166,21 +163,23 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400613F RID: 24895
+		// Token: 0x040066BB RID: 26299
+		[Nullable(2)]
 		protected new IQteHourglass FbInstance;
 
-		// Token: 0x04006140 RID: 24896
+		// Token: 0x040066BC RID: 26300
+		[Nullable(2)]
 		protected new IQteHourglass_SetValue PocoInterface;
 
-		// Token: 0x04006141 RID: 24897
+		// Token: 0x040066BD RID: 26301
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IQteHourglassConfig> _QteConfigsCache;
 
-		// Token: 0x04006142 RID: 24898
+		// Token: 0x040066BE RID: 26302
 		private bool _QteConfigsInited;
 	}
 }

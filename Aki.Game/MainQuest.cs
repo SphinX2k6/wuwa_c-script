@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Quest;
 
-// Token: 0x02002641 RID: 9793
+// Token: 0x02001B2C RID: 6956
 [NullableContext(1)]
 [Nullable(0)]
 public class MainQuest : global::Quest
 {
-	// Token: 0x0601411D RID: 82205 RVA: 0x0050F29E File Offset: 0x0050D49E
+	// Token: 0x060115FF RID: 71167 RVA: 0x0051E05E File Offset: 0x0051C25E
 	public MainQuest(EQuest type, IQuest questConfig) : base(type, questConfig)
 	{
 	}
 
-	// Token: 0x0601411E RID: 82206 RVA: 0x0050F2A8 File Offset: 0x0050D4A8
+	// Token: 0x06011600 RID: 71168 RVA: 0x0051E068 File Offset: 0x0051C268
 	public override void SetUpBehaviorTree(BaseBehaviorTree behaviorTree)
 	{
 		base.SetUpBehaviorTree(behaviorTree);

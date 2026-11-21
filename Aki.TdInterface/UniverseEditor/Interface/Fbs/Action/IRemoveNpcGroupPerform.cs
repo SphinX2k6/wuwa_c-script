@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E52 RID: 28242
+	// Token: 0x020075D3 RID: 30163
 	public struct IRemoveNpcGroupPerform : IFlatbufferObject
 	{
-		// Token: 0x1700D266 RID: 53862
-		// (get) Token: 0x06031E7A RID: 204410 RVA: 0x006C0A5D File Offset: 0x006BEC5D
+		// Token: 0x1700DDB8 RID: 56760
+		// (get) Token: 0x06034EA2 RID: 216738 RVA: 0x0071C55D File Offset: 0x0071A75D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031E7B RID: 204411 RVA: 0x006C0A6A File Offset: 0x006BEC6A
+		// Token: 0x06034EA3 RID: 216739 RVA: 0x0071C56A File Offset: 0x0071A76A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031E7C RID: 204412 RVA: 0x006C0A74 File Offset: 0x006BEC74
+		// Token: 0x06034EA4 RID: 216740 RVA: 0x0071C574 File Offset: 0x0071A774
 		public static IRemoveNpcGroupPerform GetRootAsIRemoveNpcGroupPerform(ByteBuffer _bb)
 		{
 			return IRemoveNpcGroupPerform.GetRootAsIRemoveNpcGroupPerform(_bb, default(IRemoveNpcGroupPerform));
 		}
 
-		// Token: 0x06031E7D RID: 204413 RVA: 0x006C0A90 File Offset: 0x006BEC90
+		// Token: 0x06034EA5 RID: 216741 RVA: 0x0071C590 File Offset: 0x0071A790
 		public static IRemoveNpcGroupPerform GetRootAsIRemoveNpcGroupPerform(ByteBuffer _bb, IRemoveNpcGroupPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031E7E RID: 204414 RVA: 0x006C0AAD File Offset: 0x006BECAD
+		// Token: 0x06034EA6 RID: 216742 RVA: 0x0071C5AD File Offset: 0x0071A7AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031E7F RID: 204415 RVA: 0x006C0ABC File Offset: 0x006BECBC
+		// Token: 0x06034EA7 RID: 216743 RVA: 0x0071C5BC File Offset: 0x0071A7BC
 		public IRemoveNpcGroupPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D267 RID: 53863
-		// (get) Token: 0x06031E80 RID: 204416 RVA: 0x006C0ACC File Offset: 0x006BECCC
+		// Token: 0x1700DDB9 RID: 56761
+		// (get) Token: 0x06034EA8 RID: 216744 RVA: 0x0071C5CC File Offset: 0x0071A7CC
 		public string Key
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031E81 RID: 204417 RVA: 0x006C0B03 File Offset: 0x006BED03
+		// Token: 0x06034EA9 RID: 216745 RVA: 0x0071C603 File Offset: 0x0071A803
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06031E82 RID: 204418 RVA: 0x006C0B12 File Offset: 0x006BED12
+		// Token: 0x06034EAA RID: 216746 RVA: 0x0071C612 File Offset: 0x0071A812
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06031E83 RID: 204419 RVA: 0x006C0B20 File Offset: 0x006BED20
+		// Token: 0x06034EAB RID: 216747 RVA: 0x0071C620 File Offset: 0x0071A820
 		public static Offset<IRemoveNpcGroupPerform> CreateIRemoveNpcGroupPerform(FlatBufferBuilder builder, StringOffset KeyOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemoveNpcGroupPerform.EndIRemoveNpcGroupPerform(builder);
 		}
 
-		// Token: 0x06031E84 RID: 204420 RVA: 0x006C0B36 File Offset: 0x006BED36
+		// Token: 0x06034EAC RID: 216748 RVA: 0x0071C636 File Offset: 0x0071A836
 		public static void StartIRemoveNpcGroupPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031E85 RID: 204421 RVA: 0x006C0B3F File Offset: 0x006BED3F
+		// Token: 0x06034EAD RID: 216749 RVA: 0x0071C63F File Offset: 0x0071A83F
 		public static void AddKey(FlatBufferBuilder builder, StringOffset keyOffset)
 		{
 			builder.AddOffset(0, keyOffset.Value, 0);
 		}
 
-		// Token: 0x06031E86 RID: 204422 RVA: 0x006C0B4F File Offset: 0x006BED4F
+		// Token: 0x06034EAE RID: 216750 RVA: 0x0071C64F File Offset: 0x0071A84F
 		public static Offset<IRemoveNpcGroupPerform> EndIRemoveNpcGroupPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<IRemoveNpcGroupPerform>(builder.EndTable());
 		}
 
-		// Token: 0x06031E87 RID: 204423 RVA: 0x006C0B5C File Offset: 0x006BED5C
+		// Token: 0x06034EAF RID: 216751 RVA: 0x0071C65C File Offset: 0x0071A85C
 		public IRemoveNpcGroupPerformT UnPack()
 		{
 			IRemoveNpcGroupPerformT removeNpcGroupPerformT = new IRemoveNpcGroupPerformT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return removeNpcGroupPerformT;
 		}
 
-		// Token: 0x06031E88 RID: 204424 RVA: 0x006C0B77 File Offset: 0x006BED77
+		// Token: 0x06034EB0 RID: 216752 RVA: 0x0071C677 File Offset: 0x0071A877
 		public void UnPackTo(IRemoveNpcGroupPerformT _o)
 		{
 			_o.Key = this.Key;
 		}
 
-		// Token: 0x06031E89 RID: 204425 RVA: 0x006C0B88 File Offset: 0x006BED88
+		// Token: 0x06034EB1 RID: 216753 RVA: 0x0071C688 File Offset: 0x0071A888
 		public static Offset<IRemoveNpcGroupPerform> Pack(FlatBufferBuilder builder, IRemoveNpcGroupPerformT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRemoveNpcGroupPerform.CreateIRemoveNpcGroupPerform(builder, keyOffset);
 		}
 
-		// Token: 0x04011838 RID: 71736
+		// Token: 0x040127BA RID: 75706
 		private Table __p;
 	}
 }

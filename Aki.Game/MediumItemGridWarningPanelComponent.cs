@@ -4,19 +4,19 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001947 RID: 6471
+// Token: 0x02000E04 RID: 3588
 [NullableContext(2)]
 [Nullable(0)]
 public class MediumItemGridWarningPanelComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BD0A RID: 48394 RVA: 0x002AC65E File Offset: 0x002AA85E
+	// Token: 0x0600910D RID: 37133 RVA: 0x002B74A2 File Offset: 0x002B56A2
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_RoleComOccupy";
 	}
 
-	// Token: 0x0600BD0B RID: 48395 RVA: 0x002AC668 File Offset: 0x002AA868
+	// Token: 0x0600910E RID: 37134 RVA: 0x002B74AC File Offset: 0x002B56AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MediumItemGridWarningPanelComponent.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -27,7 +27,7 @@ public class MediumItemGridWarningPanelComponent : MediumItemGridComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BD0C RID: 48396 RVA: 0x002AC6AC File Offset: 0x002AA8AC
+	// Token: 0x0600910F RID: 37135 RVA: 0x002B74F0 File Offset: 0x002B56F0
 	protected override void OnRefresh(object data)
 	{
 		MediumWarningPanelInfo mediumWarningPanelInfo = data as MediumWarningPanelInfo;
@@ -56,6 +56,6 @@ public class MediumItemGridWarningPanelComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x04005550 RID: 21840
+	// Token: 0x040055FD RID: 22013
 	private CommonWarningItem WarningItem;
 }

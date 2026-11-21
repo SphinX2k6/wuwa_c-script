@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200143E RID: 5182
+// Token: 0x020008F2 RID: 2290
 public class ActivityRegressRecommendView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x06009252 RID: 37458 RVA: 0x001F4CF8 File Offset: 0x001F2EF8
+	// Token: 0x060065E7 RID: 26087 RVA: 0x001FD834 File Offset: 0x001FBA34
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class ActivityRegressRecommendView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009253 RID: 37459 RVA: 0x001F4D34 File Offset: 0x001F2F34
+	// Token: 0x060065E8 RID: 26088 RVA: 0x001FD870 File Offset: 0x001FBA70
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressRecommendView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -30,14 +30,14 @@ public class ActivityRegressRecommendView : ActivityRegressMainSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009254 RID: 37460 RVA: 0x001F4D77 File Offset: 0x001F2F77
+	// Token: 0x060065E9 RID: 26089 RVA: 0x001FD8B3 File Offset: 0x001FBAB3
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.RecommendItemScrollView = new GenericLayout<ActivityRegressRecommendItem, int>(base.GetVerticalLayout(1), new Func<ActivityRegressRecommendItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x06009255 RID: 37461 RVA: 0x001F4DA0 File Offset: 0x001F2FA0
+	// Token: 0x060065EA RID: 26090 RVA: 0x001FD8DC File Offset: 0x001FBADC
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -45,21 +45,21 @@ public class ActivityRegressRecommendView : ActivityRegressMainSubViewBase
 		this.RecommendItemScrollView.RefreshByData(recommendDataList, null, true);
 	}
 
-	// Token: 0x06009256 RID: 37462 RVA: 0x001F4DCC File Offset: 0x001F2FCC
+	// Token: 0x060065EB RID: 26091 RVA: 0x001FD908 File Offset: 0x001FBB08
 	[NullableContext(1)]
 	private ActivityRegressRecommendItem InitItem()
 	{
 		return new ActivityRegressRecommendItem();
 	}
 
-	// Token: 0x040040C7 RID: 16583
+	// Token: 0x0400415F RID: 16735
 	private const int MAIN_QUEST_ITEM_ID = 1;
 
-	// Token: 0x040040C8 RID: 16584
+	// Token: 0x04004160 RID: 16736
 	[Nullable(2)]
 	private ActivityRegressRecommendItem MainQuestItem;
 
-	// Token: 0x040040C9 RID: 16585
+	// Token: 0x04004161 RID: 16737
 	[Nullable(new byte[]
 	{
 		2,
@@ -67,13 +67,13 @@ public class ActivityRegressRecommendView : ActivityRegressMainSubViewBase
 	})]
 	private GenericLayout<ActivityRegressRecommendItem, int> RecommendItemScrollView;
 
-	// Token: 0x02007A6C RID: 31340
+	// Token: 0x02006BF0 RID: 27632
 	private class EComponents
 	{
-		// Token: 0x04028487 RID: 164999
+		// Token: 0x040237A1 RID: 145313
 		public const int MainQuestItem = 0;
 
-		// Token: 0x04028488 RID: 165000
+		// Token: 0x040237A2 RID: 145314
 		public const int RecommendItemLayout = 1;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023C2 RID: 9154
+	// Token: 0x02002657 RID: 9815
 	public class EPhoneBoardTypeJsonConverter : JsonConverter<EPhoneBoardType>
 	{
-		// Token: 0x0600C769 RID: 51049 RVA: 0x001D3120 File Offset: 0x001D1320
+		// Token: 0x0600D3E3 RID: 54243 RVA: 0x001EC7B8 File Offset: 0x001EA9B8
 		public override EPhoneBoardType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPhoneBoardTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C76A RID: 51050 RVA: 0x001D3144 File Offset: 0x001D1344
+		// Token: 0x0600D3E4 RID: 54244 RVA: 0x001EC7DC File Offset: 0x001EA9DC
 		public override void Write(Utf8JsonWriter writer, EPhoneBoardType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

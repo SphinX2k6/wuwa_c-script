@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200005A RID: 90
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class DungeonEntryComponent : IComponentBase
 	{
-		// Token: 0x060002FC RID: 764 RVA: 0x0001ADA0 File Offset: 0x00018FA0
+		// Token: 0x06000300 RID: 768 RVA: 0x0001B714 File Offset: 0x00019914
 		private DungeonEntryComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060002FD RID: 765 RVA: 0x0001ADD8 File Offset: 0x00018FD8
+		// Token: 0x06000301 RID: 769 RVA: 0x0001B74C File Offset: 0x0001994C
 		public static DungeonEntryComponent Create([Nullable(2)] DungeonEntryComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060002FE RID: 766 RVA: 0x0001ADEB File Offset: 0x00018FEB
+		// Token: 0x06000302 RID: 770 RVA: 0x0001B75F File Offset: 0x0001995F
 		public static DungeonEntryComponent CreateFromSetValue([Nullable(2)] DungeonEntryComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060002FF RID: 767 RVA: 0x0001ADFE File Offset: 0x00018FFE
+		// Token: 0x06000303 RID: 771 RVA: 0x0001B772 File Offset: 0x00019972
 		public new DungeonEntryComponent_SetValue ToSetValue()
 		{
 			return new DungeonEntryComponent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000109 RID: 265
-		// (get) Token: 0x06000300 RID: 768 RVA: 0x0001AE20 File Offset: 0x00019020
-		// (set) Token: 0x06000301 RID: 769 RVA: 0x0001AE5A File Offset: 0x0001905A
+		// Token: 0x1700010B RID: 267
+		// (get) Token: 0x06000304 RID: 772 RVA: 0x0001B794 File Offset: 0x00019994
+		// (set) Token: 0x06000305 RID: 773 RVA: 0x0001B7CE File Offset: 0x000199CE
 		public override bool? Disabled
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700010A RID: 266
-		// (get) Token: 0x06000302 RID: 770 RVA: 0x0001AE68 File Offset: 0x00019068
-		// (set) Token: 0x06000303 RID: 771 RVA: 0x0001AE92 File Offset: 0x00019092
+		// Token: 0x1700010C RID: 268
+		// (get) Token: 0x06000306 RID: 774 RVA: 0x0001B7DC File Offset: 0x000199DC
+		// (set) Token: 0x06000307 RID: 775 RVA: 0x0001B806 File Offset: 0x00019A06
 		public override bool? EdIsLocked
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040001E8 RID: 488
+		// Token: 0x040001ED RID: 493
 		[Nullable(2)]
 		protected new DungeonEntryComponent FbInstance;
 
-		// Token: 0x040001E9 RID: 489
+		// Token: 0x040001EE RID: 494
 		[Nullable(2)]
 		protected new DungeonEntryComponent_SetValue PocoInterface;
 	}

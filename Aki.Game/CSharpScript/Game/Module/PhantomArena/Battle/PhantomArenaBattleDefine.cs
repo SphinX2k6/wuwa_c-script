@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x0200523F RID: 21055
+	// Token: 0x0200420F RID: 16911
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class PhantomArenaBattleDefine
 	{
-		// Token: 0x0401C833 RID: 116787
+		// Token: 0x04017268 RID: 94824
 		[StaticVariableRuleIgnore]
 		public static readonly int[] functionAreaTypeList = new int[]
 		{
@@ -21,82 +21,82 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			1
 		};
 
-		// Token: 0x0401C834 RID: 116788
+		// Token: 0x04017269 RID: 94825
 		public const int CHECK_ATTACH_DISTANCE = 200;
 
-		// Token: 0x0401C835 RID: 116789
+		// Token: 0x0401726A RID: 94826
 		public const int DISTANCE_MAX = 99999;
 
-		// Token: 0x0401C836 RID: 116790
+		// Token: 0x0401726B RID: 94827
 		public const int HANDCARD_LIMIT = 6;
 
-		// Token: 0x0401C837 RID: 116791
+		// Token: 0x0401726C RID: 94828
 		public const int HAND_PHANTOMARENA_INDEX = -1;
 
-		// Token: 0x0401C838 RID: 116792
+		// Token: 0x0401726D RID: 94829
 		public const int INVALID_CARD_ID = -1;
 
-		// Token: 0x0401C839 RID: 116793
+		// Token: 0x0401726E RID: 94830
 		public const int UNVALID_FIGHT_ID = -1;
 
-		// Token: 0x0401C83A RID: 116794
+		// Token: 0x0401726F RID: 94831
 		public const int UNVALID_DURABILITY = -1;
 
-		// Token: 0x0401C83B RID: 116795
+		// Token: 0x04017270 RID: 94832
 		public const int LIMIT_BATTLE_CARD_NUM = 4;
 
-		// Token: 0x0401C83C RID: 116796
+		// Token: 0x04017271 RID: 94833
 		public const int COST_ONE = 1;
 
-		// Token: 0x0401C83D RID: 116797
+		// Token: 0x04017272 RID: 94834
 		public const int COST_THREE = 3;
 
-		// Token: 0x0401C83E RID: 116798
+		// Token: 0x04017273 RID: 94835
 		public const int AI_SENSE_ID = 80017;
 
-		// Token: 0x0401C83F RID: 116799
+		// Token: 0x04017274 RID: 94836
 		public const string AI_HATE_ID = "80017";
 
-		// Token: 0x0401C840 RID: 116800
+		// Token: 0x04017275 RID: 94837
 		public const int HIDETIPS_BY_FUNCTIONALDRAG_DISTANCE = 100;
 
-		// Token: 0x0401C841 RID: 116801
+		// Token: 0x04017276 RID: 94838
 		public const int PLAY_STARTTIME_CARD_TWEEN_DELAY = 30;
 
-		// Token: 0x0401C842 RID: 116802
+		// Token: 0x04017277 RID: 94839
 		public const float PLAY_TWEEN_DURATION = 0.5f;
 
-		// Token: 0x0401C843 RID: 116803
+		// Token: 0x04017278 RID: 94840
 		public const float PLAY_RESET_POS_TWEEN_DURATION = 0.2f;
 
-		// Token: 0x0401C844 RID: 116804
+		// Token: 0x04017279 RID: 94841
 		public const float PLAY_CHANGE_CARD_TWEEN_DURATION = 0.2f;
 
-		// Token: 0x0401C845 RID: 116805
+		// Token: 0x0401727A RID: 94842
 		public const float PLAY_MOVE_DURATION = 0.2f;
 
-		// Token: 0x0401C846 RID: 116806
+		// Token: 0x0401727B RID: 94843
 		public const float ACCUMULATE_TWEEN_TIME = 0.3f;
 
-		// Token: 0x0401C847 RID: 116807
+		// Token: 0x0401727C RID: 94844
 		public const float DAMAGE_TWEEN_TIME = 0.4f;
 
-		// Token: 0x0401C848 RID: 116808
+		// Token: 0x0401727D RID: 94845
 		public const float DAMAGE_COUNT_TWEEN_TIME = 0.2f;
 
-		// Token: 0x0401C849 RID: 116809
+		// Token: 0x0401727E RID: 94846
 		public const float NPC_DISSOLVE_VALUE = 0.55f;
 
-		// Token: 0x0401C84A RID: 116810
+		// Token: 0x0401727F RID: 94847
 		public const float NPC_DISSOLVE_TWEEN_TIME = 0.5f;
 
-		// Token: 0x0401C84B RID: 116811
+		// Token: 0x04017280 RID: 94848
 		public const string ENTITY_COMPONENT_DISABLE_KEY = "PhantomArenaBattle";
 
-		// Token: 0x0401C84C RID: 116812
+		// Token: 0x04017281 RID: 94849
 		public const string HIT_AUDIO = "play_ui_phantomarena_missile_shot_cardskill";
 
-		// Token: 0x0401C84D RID: 116813
+		// Token: 0x04017282 RID: 94850
 		public const string DAMAGE_AUDIO = "play_ui_phantomarena_missile_shot_settlement";
 	}
 }

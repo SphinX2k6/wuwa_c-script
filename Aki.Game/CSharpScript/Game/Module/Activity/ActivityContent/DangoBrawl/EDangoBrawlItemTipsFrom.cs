@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006778 RID: 26488
+	// Token: 0x020056C8 RID: 22216
 	public enum EDangoBrawlItemTipsFrom
 	{
-		// Token: 0x040227AB RID: 141227
+		// Token: 0x0401D008 RID: 118792
 		Shop = 1,
-		// Token: 0x040227AC RID: 141228
+		// Token: 0x0401D009 RID: 118793
 		Bag,
-		// Token: 0x040227AD RID: 141229
+		// Token: 0x0401D00A RID: 118794
 		Bench,
-		// Token: 0x040227AE RID: 141230
+		// Token: 0x0401D00B RID: 118795
 		Battle,
-		// Token: 0x040227AF RID: 141231
+		// Token: 0x0401D00C RID: 118796
 		Fixed
 	}
 }

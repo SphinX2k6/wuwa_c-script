@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EEE RID: 20206
+	// Token: 0x02003EB7 RID: 16055
 	public class RogueBattleMapSummaryGridEffectTabView : UiTabViewBase
 	{
-		// Token: 0x06033D80 RID: 212352 RVA: 0x00C24ED8 File Offset: 0x00C230D8
+		// Token: 0x06028BEB RID: 166891 RVA: 0x00B6E480 File Offset: 0x00B6C680
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,31 +30,31 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D81 RID: 212353 RVA: 0x00C24FAD File Offset: 0x00C231AD
+		// Token: 0x06028BEC RID: 166892 RVA: 0x00B6E555 File Offset: 0x00B6C755
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<RogueBattleMapGridEffectTabItem, IRogueBattleMapGridEffectInfo>(base.GetVerticalLayout(5), new Func<RogueBattleMapGridEffectTabItem>(this.InitItem), null, false, true);
 		}
 
-		// Token: 0x06033D82 RID: 212354 RVA: 0x00C24FD0 File Offset: 0x00C231D0
+		// Token: 0x06028BED RID: 166893 RVA: 0x00B6E578 File Offset: 0x00B6C778
 		protected override void OnBeforeShow()
 		{
 			this.OnClickedTeam();
 		}
 
-		// Token: 0x06033D83 RID: 212355 RVA: 0x00C24FD8 File Offset: 0x00C231D8
+		// Token: 0x06028BEE RID: 166894 RVA: 0x00B6E580 File Offset: 0x00B6C780
 		protected override void OnAfterShow()
 		{
 			this.UiViewSequence.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x06033D84 RID: 212356 RVA: 0x00C24FFF File Offset: 0x00C231FF
+		// Token: 0x06028BEF RID: 166895 RVA: 0x00B6E5A7 File Offset: 0x00B6C7A7
 		protected override void OnBeforeDestroy()
 		{
 			this.Layout = null;
 		}
 
-		// Token: 0x06033D85 RID: 212357 RVA: 0x00C25008 File Offset: 0x00C23208
+		// Token: 0x06028BF0 RID: 166896 RVA: 0x00B6E5B0 File Offset: 0x00B6C7B0
 		private void OnClickedTeam()
 		{
 			UUIItem item = base.GetItem(0);
@@ -90,20 +90,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetArtText(1).SetText(text2);
 		}
 
-		// Token: 0x06033D86 RID: 212358 RVA: 0x00C250AA File Offset: 0x00C232AA
+		// Token: 0x06028BF1 RID: 166897 RVA: 0x00B6E652 File Offset: 0x00B6C852
 		[NullableContext(1)]
 		private RogueBattleMapGridEffectTabItem InitItem()
 		{
 			return new RogueBattleMapGridEffectTabItem();
 		}
 
-		// Token: 0x06033D87 RID: 212359 RVA: 0x00C250B1 File Offset: 0x00C232B1
+		// Token: 0x06028BF2 RID: 166898 RVA: 0x00B6E659 File Offset: 0x00B6C859
 		private void OnClickedMore()
 		{
 			HelpController.Instance.OpenHelpById(260);
 		}
 
-		// Token: 0x0401B8B6 RID: 112822
+		// Token: 0x04016289 RID: 90761
 		[Nullable(new byte[]
 		{
 			2,
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RogueBattleMapGridEffectTabItem, IRogueBattleMapGridEffectInfo> Layout;
 
-		// Token: 0x0401B8B7 RID: 112823
+		// Token: 0x0401628A RID: 90762
 		private const int MORE_HELPID = 260;
 	}
 }

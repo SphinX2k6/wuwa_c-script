@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004518 RID: 17688
+	// Token: 0x02004980 RID: 18816
 	public enum ILevelPlayReward_Union : byte
 	{
-		// Token: 0x0400C58B RID: 50571
+		// Token: 0x0400CFBA RID: 53178
 		NONE,
-		// Token: 0x0400C58C RID: 50572
+		// Token: 0x0400CFBB RID: 53179
 		ILevelPlayReward,
-		// Token: 0x0400C58D RID: 50573
+		// Token: 0x0400CFBC RID: 53180
 		INoneRewardParam,
-		// Token: 0x0400C58E RID: 50574
+		// Token: 0x0400CFBD RID: 53181
 		IAutomaticRewardParam,
-		// Token: 0x0400C58F RID: 50575
+		// Token: 0x0400CFBE RID: 53182
 		IVariableRewardParam,
-		// Token: 0x0400C590 RID: 50576
+		// Token: 0x0400CFBF RID: 53183
 		IInteractRewardParam
 	}
 }

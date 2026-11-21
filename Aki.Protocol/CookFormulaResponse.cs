@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020002F5 RID: 757
+	// Token: 0x020002FC RID: 764
 	[NetMessage(EMessageId.CookFormulaResponse)]
 	public sealed class CookFormulaResponse : IMessage<CookFormulaResponse>, IMessage, IEquatable<CookFormulaResponse>, IDeepCloneable<CookFormulaResponse>, IBufferMessage
 	{
-		// Token: 0x06004CB6 RID: 19638 RVA: 0x000BA9FD File Offset: 0x000B8BFD
+		// Token: 0x06004D8F RID: 19855 RVA: 0x000BCDE9 File Offset: 0x000BAFE9
 		[NullableContext(1)]
 		public static CookFormulaResponse Create()
 		{
 			return new CookFormulaResponse();
 		}
 
-		// Token: 0x17000D88 RID: 3464
-		// (get) Token: 0x06004CB7 RID: 19639 RVA: 0x000BAA04 File Offset: 0x000B8C04
+		// Token: 0x17000DB5 RID: 3509
+		// (get) Token: 0x06004D90 RID: 19856 RVA: 0x000BCDF0 File Offset: 0x000BAFF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D89 RID: 3465
-		// (get) Token: 0x06004CB8 RID: 19640 RVA: 0x000BAA07 File Offset: 0x000B8C07
+		// Token: 0x17000DB6 RID: 3510
+		// (get) Token: 0x06004D91 RID: 19857 RVA: 0x000BCDF3 File Offset: 0x000BAFF3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004CB9 RID: 19641 RVA: 0x000BAA0E File Offset: 0x000B8C0E
+		// Token: 0x06004D92 RID: 19858 RVA: 0x000BCDFA File Offset: 0x000BAFFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CookFormulaResponse()
 		{
 		}
 
-		// Token: 0x06004CBA RID: 19642 RVA: 0x000BAA16 File Offset: 0x000B8C16
+		// Token: 0x06004D93 RID: 19859 RVA: 0x000BCE02 File Offset: 0x000BB002
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CookFormulaResponse(CookFormulaResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004CBB RID: 19643 RVA: 0x000BAA47 File Offset: 0x000B8C47
+		// Token: 0x06004D94 RID: 19860 RVA: 0x000BCE33 File Offset: 0x000BB033
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CookFormulaResponse Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new CookFormulaResponse(this);
 		}
 
-		// Token: 0x17000D8A RID: 3466
-		// (get) Token: 0x06004CBC RID: 19644 RVA: 0x000BAA4F File Offset: 0x000B8C4F
-		// (set) Token: 0x06004CBD RID: 19645 RVA: 0x000BAA57 File Offset: 0x000B8C57
+		// Token: 0x17000DB7 RID: 3511
+		// (get) Token: 0x06004D95 RID: 19861 RVA: 0x000BCE3B File Offset: 0x000BB03B
+		// (set) Token: 0x06004D96 RID: 19862 RVA: 0x000BCE43 File Offset: 0x000BB043
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D8B RID: 3467
-		// (get) Token: 0x06004CBE RID: 19646 RVA: 0x000BAA60 File Offset: 0x000B8C60
-		// (set) Token: 0x06004CBF RID: 19647 RVA: 0x000BAA68 File Offset: 0x000B8C68
+		// Token: 0x17000DB8 RID: 3512
+		// (get) Token: 0x06004D97 RID: 19863 RVA: 0x000BCE4C File Offset: 0x000BB04C
+		// (set) Token: 0x06004D98 RID: 19864 RVA: 0x000BCE54 File Offset: 0x000BB054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CookFormulaId
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004CC0 RID: 19648 RVA: 0x000BAA71 File Offset: 0x000B8C71
+		// Token: 0x06004D99 RID: 19865 RVA: 0x000BCE5D File Offset: 0x000BB05D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CookFormulaResponse);
 		}
 
-		// Token: 0x06004CC1 RID: 19649 RVA: 0x000BAA7F File Offset: 0x000B8C7F
+		// Token: 0x06004D9A RID: 19866 RVA: 0x000BCE6B File Offset: 0x000BB06B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CookFormulaResponse other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && this.CookFormulaId == other.CookFormulaId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004CC2 RID: 19650 RVA: 0x000BAAC0 File Offset: 0x000B8CC0
+		// Token: 0x06004D9B RID: 19867 RVA: 0x000BCEAC File Offset: 0x000BB0AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004CC3 RID: 19651 RVA: 0x000BAB1E File Offset: 0x000B8D1E
+		// Token: 0x06004D9C RID: 19868 RVA: 0x000BCF0A File Offset: 0x000BB10A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004CC4 RID: 19652 RVA: 0x000BAB2B File Offset: 0x000B8D2B
+		// Token: 0x06004D9D RID: 19869 RVA: 0x000BCF17 File Offset: 0x000BB117
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004CC5 RID: 19653 RVA: 0x000BAB34 File Offset: 0x000B8D34
+		// Token: 0x06004D9E RID: 19870 RVA: 0x000BCF20 File Offset: 0x000BB120
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.CookFormulaId != 0)
-			{
-				output.WriteRawTag(88);
-				output.WriteInt32(this.CookFormulaId);
-			}
 			if (this.Code != ErrorCode.Success)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(32);
 				output.WriteEnum((int)this.Code);
+			}
+			if (this.CookFormulaId != 0)
+			{
+				output.WriteRawTag(80);
+				output.WriteInt32(this.CookFormulaId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004CC6 RID: 19654 RVA: 0x000BAB90 File Offset: 0x000B8D90
+		// Token: 0x06004D9F RID: 19871 RVA: 0x000BCF7C File Offset: 0x000BB17C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004CC7 RID: 19655 RVA: 0x000BABE8 File Offset: 0x000B8DE8
+		// Token: 0x06004DA0 RID: 19872 RVA: 0x000BCFD4 File Offset: 0x000BB1D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CookFormulaResponse other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004CC8 RID: 19656 RVA: 0x000BAC38 File Offset: 0x000B8E38
+		// Token: 0x06004DA1 RID: 19873 RVA: 0x000BD024 File Offset: 0x000BB224
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004CC9 RID: 19657 RVA: 0x000BAC44 File Offset: 0x000B8E44
+		// Token: 0x06004DA2 RID: 19874 RVA: 0x000BD030 File Offset: 0x000BB230
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 88U)
+				if (num != 32U)
 				{
-					if (num != 104U)
+					if (num != 80U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.Code = (ErrorCode)input.ReadEnum();
+						this.CookFormulaId = input.ReadInt32();
 					}
 				}
 				else
 				{
-					this.CookFormulaId = input.ReadInt32();
+					this.Code = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04003114 RID: 12564
+		// Token: 0x040031AB RID: 12715
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003115 RID: 12565
-		public const int CodeFieldNumber = 13;
+		// Token: 0x040031AC RID: 12716
+		public const int CodeFieldNumber = 4;
 
-		// Token: 0x04003116 RID: 12566
+		// Token: 0x040031AD RID: 12717
 		private ErrorCode code_;
 
-		// Token: 0x04003117 RID: 12567
-		public const int CookFormulaIdFieldNumber = 11;
+		// Token: 0x040031AE RID: 12718
+		public const int CookFormulaIdFieldNumber = 10;
 
-		// Token: 0x04003118 RID: 12568
+		// Token: 0x040031AF RID: 12719
 		private int cookFormulaId_;
 	}
 }

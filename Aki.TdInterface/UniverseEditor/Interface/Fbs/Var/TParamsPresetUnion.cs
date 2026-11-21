@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B51 RID: 15185
+	// Token: 0x02003F59 RID: 16217
 	public class TParamsPresetUnion
 	{
-		// Token: 0x1700681F RID: 26655
-		// (get) Token: 0x06014C25 RID: 85029 RVA: 0x0030454C File Offset: 0x0030274C
-		// (set) Token: 0x06014C26 RID: 85030 RVA: 0x00304554 File Offset: 0x00302754
+		// Token: 0x17006DBE RID: 28094
+		// (get) Token: 0x060160EB RID: 90347 RVA: 0x0032AA62 File Offset: 0x00328C62
+		// (set) Token: 0x060160EC RID: 90348 RVA: 0x0032AA6A File Offset: 0x00328C6A
 		public TParamsPreset Type { get; set; }
 
-		// Token: 0x17006820 RID: 26656
-		// (get) Token: 0x06014C27 RID: 85031 RVA: 0x0030455D File Offset: 0x0030275D
-		// (set) Token: 0x06014C28 RID: 85032 RVA: 0x00304565 File Offset: 0x00302765
+		// Token: 0x17006DBF RID: 28095
+		// (get) Token: 0x060160ED RID: 90349 RVA: 0x0032AA73 File Offset: 0x00328C73
+		// (set) Token: 0x060160EE RID: 90350 RVA: 0x0032AA7B File Offset: 0x00328C7B
 		public object Value { get; set; }
 
-		// Token: 0x06014C29 RID: 85033 RVA: 0x0030456E File Offset: 0x0030276E
+		// Token: 0x060160EF RID: 90351 RVA: 0x0032AA84 File Offset: 0x00328C84
 		public TParamsPresetUnion()
 		{
 			this.Type = TParamsPreset.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06014C2A RID: 85034 RVA: 0x00304584 File Offset: 0x00302784
+		// Token: 0x060160F0 RID: 90352 RVA: 0x0032AA9A File Offset: 0x00328C9A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06014C2B RID: 85035 RVA: 0x00304596 File Offset: 0x00302796
+		// Token: 0x060160F1 RID: 90353 RVA: 0x0032AAAC File Offset: 0x00328CAC
 		public IDecalParamsT AsIDecalParams()
 		{
 			return this.As<IDecalParamsT>();
 		}
 
-		// Token: 0x06014C2C RID: 85036 RVA: 0x0030459E File Offset: 0x0030279E
+		// Token: 0x060160F2 RID: 90354 RVA: 0x0032AAB4 File Offset: 0x00328CB4
 		public static TParamsPresetUnion FromIDecalParams(IDecalParamsT _idecalparams)
 		{
 			return new TParamsPresetUnion
@@ -45,13 +45,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C2D RID: 85037 RVA: 0x003045B3 File Offset: 0x003027B3
+		// Token: 0x060160F3 RID: 90355 RVA: 0x0032AAC9 File Offset: 0x00328CC9
+		public IEnergyFishParamsT AsIEnergyFishParams()
+		{
+			return this.As<IEnergyFishParamsT>();
+		}
+
+		// Token: 0x060160F4 RID: 90356 RVA: 0x0032AAD1 File Offset: 0x00328CD1
+		public static TParamsPresetUnion FromIEnergyFishParams(IEnergyFishParamsT _ienergyfishparams)
+		{
+			return new TParamsPresetUnion
+			{
+				Type = TParamsPreset.IEnergyFishParams,
+				Value = _ienergyfishparams
+			};
+		}
+
+		// Token: 0x060160F5 RID: 90357 RVA: 0x0032AAE6 File Offset: 0x00328CE6
 		public IFireBoxLampParamsT AsIFireBoxLampParams()
 		{
 			return this.As<IFireBoxLampParamsT>();
 		}
 
-		// Token: 0x06014C2E RID: 85038 RVA: 0x003045BB File Offset: 0x003027BB
+		// Token: 0x060160F6 RID: 90358 RVA: 0x0032AAEE File Offset: 0x00328CEE
 		public static TParamsPresetUnion FromIFireBoxLampParams(IFireBoxLampParamsT _ifireboxlampparams)
 		{
 			return new TParamsPresetUnion
@@ -61,13 +77,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C2F RID: 85039 RVA: 0x003045D0 File Offset: 0x003027D0
+		// Token: 0x060160F7 RID: 90359 RVA: 0x0032AB03 File Offset: 0x00328D03
+		public IFishParamsT AsIFishParams()
+		{
+			return this.As<IFishParamsT>();
+		}
+
+		// Token: 0x060160F8 RID: 90360 RVA: 0x0032AB0B File Offset: 0x00328D0B
+		public static TParamsPresetUnion FromIFishParams(IFishParamsT _ifishparams)
+		{
+			return new TParamsPresetUnion
+			{
+				Type = TParamsPreset.IFishParams,
+				Value = _ifishparams
+			};
+		}
+
+		// Token: 0x060160F9 RID: 90361 RVA: 0x0032AB20 File Offset: 0x00328D20
 		public ILightPlateParamsT AsILightPlateParams()
 		{
 			return this.As<ILightPlateParamsT>();
 		}
 
-		// Token: 0x06014C30 RID: 85040 RVA: 0x003045D8 File Offset: 0x003027D8
+		// Token: 0x060160FA RID: 90362 RVA: 0x0032AB28 File Offset: 0x00328D28
 		public static TParamsPresetUnion FromILightPlateParams(ILightPlateParamsT _ilightplateparams)
 		{
 			return new TParamsPresetUnion
@@ -77,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C31 RID: 85041 RVA: 0x003045ED File Offset: 0x003027ED
+		// Token: 0x060160FB RID: 90363 RVA: 0x0032AB3D File Offset: 0x00328D3D
 		public IRushWarningEffectParamsT AsIRushWarningEffectParams()
 		{
 			return this.As<IRushWarningEffectParamsT>();
 		}
 
-		// Token: 0x06014C32 RID: 85042 RVA: 0x003045F5 File Offset: 0x003027F5
+		// Token: 0x060160FC RID: 90364 RVA: 0x0032AB45 File Offset: 0x00328D45
 		public static TParamsPresetUnion FromIRushWarningEffectParams(IRushWarningEffectParamsT _irushwarningeffectparams)
 		{
 			return new TParamsPresetUnion
@@ -93,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C33 RID: 85043 RVA: 0x0030460A File Offset: 0x0030280A
+		// Token: 0x060160FD RID: 90365 RVA: 0x0032AB5A File Offset: 0x00328D5A
 		public IScoreDisplayMaterialParamsT AsIScoreDisplayMaterialParams()
 		{
 			return this.As<IScoreDisplayMaterialParamsT>();
 		}
 
-		// Token: 0x06014C34 RID: 85044 RVA: 0x00304612 File Offset: 0x00302812
+		// Token: 0x060160FE RID: 90366 RVA: 0x0032AB62 File Offset: 0x00328D62
 		public static TParamsPresetUnion FromIScoreDisplayMaterialParams(IScoreDisplayMaterialParamsT _iscoredisplaymaterialparams)
 		{
 			return new TParamsPresetUnion
@@ -109,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C35 RID: 85045 RVA: 0x00304627 File Offset: 0x00302827
+		// Token: 0x060160FF RID: 90367 RVA: 0x0032AB77 File Offset: 0x00328D77
 		public ITimeDisplayMaterialParamsT AsITimeDisplayMaterialParams()
 		{
 			return this.As<ITimeDisplayMaterialParamsT>();
 		}
 
-		// Token: 0x06014C36 RID: 85046 RVA: 0x0030462F File Offset: 0x0030282F
+		// Token: 0x06016100 RID: 90368 RVA: 0x0032AB7F File Offset: 0x00328D7F
 		public static TParamsPresetUnion FromITimeDisplayMaterialParams(ITimeDisplayMaterialParamsT _itimedisplaymaterialparams)
 		{
 			return new TParamsPresetUnion
@@ -125,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C37 RID: 85047 RVA: 0x00304644 File Offset: 0x00302844
+		// Token: 0x06016101 RID: 90369 RVA: 0x0032AB94 File Offset: 0x00328D94
 		public IWoodenBoxProliferateParamsT AsIWoodenBoxProliferateParams()
 		{
 			return this.As<IWoodenBoxProliferateParamsT>();
 		}
 
-		// Token: 0x06014C38 RID: 85048 RVA: 0x0030464C File Offset: 0x0030284C
+		// Token: 0x06016102 RID: 90370 RVA: 0x0032AB9C File Offset: 0x00328D9C
 		public static TParamsPresetUnion FromIWoodenBoxProliferateParams(IWoodenBoxProliferateParamsT _iwoodenboxproliferateparams)
 		{
 			return new TParamsPresetUnion
@@ -141,15 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C39 RID: 85049 RVA: 0x00304664 File Offset: 0x00302864
+		// Token: 0x06016103 RID: 90371 RVA: 0x0032ABB4 File Offset: 0x00328DB4
 		public static int Pack(FlatBufferBuilder builder, TParamsPresetUnion _o)
 		{
 			switch (_o.Type)
 			{
 			case TParamsPreset.IDecalParams:
 				return IDecalParams.Pack(builder, _o.AsIDecalParams()).Value;
+			case TParamsPreset.IEnergyFishParams:
+				return IEnergyFishParams.Pack(builder, _o.AsIEnergyFishParams()).Value;
 			case TParamsPreset.IFireBoxLampParams:
 				return IFireBoxLampParams.Pack(builder, _o.AsIFireBoxLampParams()).Value;
+			case TParamsPreset.IFishParams:
+				return IFishParams.Pack(builder, _o.AsIFishParams()).Value;
 			case TParamsPreset.ILightPlateParams:
 				return ILightPlateParams.Pack(builder, _o.AsILightPlateParams()).Value;
 			case TParamsPreset.IRushWarningEffectParams:

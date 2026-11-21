@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200662F RID: 26159
+	// Token: 0x020055AD RID: 21933
 	public class FishingTechTabItem : CommonTabItemBase, ITabViewRegister
 	{
-		// Token: 0x0604193C RID: 268604 RVA: 0x00FE7ACC File Offset: 0x00FE5CCC
+		// Token: 0x06036601 RID: 222721 RVA: 0x00F2EB84 File Offset: 0x00F2CD84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604193D RID: 268605 RVA: 0x00FE7B51 File Offset: 0x00FE5D51
+		// Token: 0x06036602 RID: 222722 RVA: 0x00F2EC09 File Offset: 0x00F2CE09
 		private void OnToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -43,36 +43,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604193E RID: 268606 RVA: 0x00FE7B6F File Offset: 0x00FE5D6F
+		// Token: 0x06036603 RID: 222723 RVA: 0x00F2EC27 File Offset: 0x00F2CE27
 		[NullableContext(1)]
 		protected override void OnUpdateTabIcon(string iconPath)
 		{
 		}
 
-		// Token: 0x0604193F RID: 268607 RVA: 0x00FE7B71 File Offset: 0x00FE5D71
+		// Token: 0x06036604 RID: 222724 RVA: 0x00F2EC29 File Offset: 0x00F2CE29
 		protected override void OnSetToggleState(EToggleState state, bool bFire)
 		{
 			base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x06041940 RID: 268608 RVA: 0x00FE7B84 File Offset: 0x00FE5D84
+		// Token: 0x06036605 RID: 222725 RVA: 0x00F2EC3C File Offset: 0x00F2CE3C
 		[NullableContext(1)]
 		protected override UUIExtendToggle GetTabToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06041941 RID: 268609 RVA: 0x00FE7B8D File Offset: 0x00FE5D8D
+		// Token: 0x06036606 RID: 222726 RVA: 0x00F2EC45 File Offset: 0x00F2CE45
 		[NullableContext(1)]
 		public void RegisterViewModule(UiTabViewBase tabView)
 		{
 			tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 		}
 
-		// Token: 0x0200C84C RID: 51276
+		// Token: 0x0200B22E RID: 45614
 		private class EComponentDefine
 		{
-			// Token: 0x0403C816 RID: 247830
+			// Token: 0x0403715B RID: 225627
 			public const int Toggle = 0;
 		}
 	}

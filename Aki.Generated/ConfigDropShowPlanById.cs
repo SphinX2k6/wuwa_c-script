@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000240 RID: 576
+	// Token: 0x02000252 RID: 594
 	public class ConfigDropShowPlanById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000D84 RID: 3460 RVA: 0x000A5F34 File Offset: 0x000A4134
+		// Token: 0x06000DF0 RID: 3568 RVA: 0x000ABE6C File Offset: 0x000AA06C
 		static ConfigDropShowPlanById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDropShowPlanById.CreateStaticDefaultValue), new Action(ConfigDropShowPlanById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000D85 RID: 3461 RVA: 0x000A5F54 File Offset: 0x000A4154
+		// Token: 0x06000DF1 RID: 3569 RVA: 0x000ABE8C File Offset: 0x000AA08C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDropShowPlanById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000D86 RID: 3462 RVA: 0x000A5FD3 File Offset: 0x000A41D3
+		// Token: 0x06000DF2 RID: 3570 RVA: 0x000ABF0B File Offset: 0x000AA10B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDropShowPlanById.LogPair = null;
 			ConfigDropShowPlanById.HandleId = 0;
 		}
 
-		// Token: 0x06000D87 RID: 3463 RVA: 0x000A5FE1 File Offset: 0x000A41E1
+		// Token: 0x06000DF3 RID: 3571 RVA: 0x000ABF19 File Offset: 0x000AA119
 		public static void Init()
 		{
 			ConfigDropShowPlanById.HandleId = ConfigCommon.InitDataStatement(ConfigDropShowPlanById.HandleId, "db_drop.db", "select BinData from `DropShowPlan` where Id=?");
 		}
 
-		// Token: 0x06000D88 RID: 3464 RVA: 0x000A5FFC File Offset: 0x000A41FC
+		// Token: 0x06000DF4 RID: 3572 RVA: 0x000ABF34 File Offset: 0x000AA134
 		public static DropShowPlan? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDropShowPlanById.HandleId, ConfigDropShowPlanById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DropShowPlan?(rootAsDropShowPlan);
 		}
 
-		// Token: 0x04000FA4 RID: 4004
+		// Token: 0x04001022 RID: 4130
 		private const string DB = "db_drop.db";
 
-		// Token: 0x04000FA5 RID: 4005
+		// Token: 0x04001023 RID: 4131
 		private const string FILE = "d.掉落.xlsx";
 
-		// Token: 0x04000FA6 RID: 4006
+		// Token: 0x04001024 RID: 4132
 		private const string TABLE = "DropShowPlan";
 
-		// Token: 0x04000FA7 RID: 4007
+		// Token: 0x04001025 RID: 4133
 		private const string COMMAND = "select BinData from `DropShowPlan` where Id=?";
 
-		// Token: 0x04000FA8 RID: 4008
+		// Token: 0x04001026 RID: 4134
 		private const string KEY_PREFIX = "DropShowPlanById";
 
-		// Token: 0x04000FA9 RID: 4009
+		// Token: 0x04001027 RID: 4135
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FAA RID: 4010
+		// Token: 0x04001028 RID: 4136
 		private static int HandleId;
 	}
 }

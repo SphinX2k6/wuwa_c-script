@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E0 RID: 2016
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000883 RID: 2179
 	public class IWellStreamingRenderConfig_SetValue
 	{
-		// Token: 0x04001D0F RID: 7439
+		// Token: 0x04001F1B RID: 7963
 		public IWellStreamingRenderSelfConfig SelfConfig;
 
-		// Token: 0x04001D10 RID: 7440
+		// Token: 0x04001F1C RID: 7964
 		public IWellStreamingRenderPointConfig AsStreamPointConfig;
 	}
 }

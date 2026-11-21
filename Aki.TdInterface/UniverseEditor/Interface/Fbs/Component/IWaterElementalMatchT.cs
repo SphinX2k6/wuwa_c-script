@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B51 RID: 23377
+	// Token: 0x02006167 RID: 24935
 	public class IWaterElementalMatchT
 	{
-		// Token: 0x1700B08E RID: 45198
-		// (get) Token: 0x06027FC1 RID: 163777 RVA: 0x0057F765 File Offset: 0x0057D965
-		// (set) Token: 0x06027FC2 RID: 163778 RVA: 0x0057F76D File Offset: 0x0057D96D
+		// Token: 0x1700B9D6 RID: 47574
+		// (get) Token: 0x0602A585 RID: 173445 RVA: 0x005C71F5 File Offset: 0x005C53F5
+		// (set) Token: 0x0602A586 RID: 173446 RVA: 0x005C71FD File Offset: 0x005C53FD
 		public EElementalType Type { get; set; }
 
-		// Token: 0x1700B08F RID: 45199
-		// (get) Token: 0x06027FC3 RID: 163779 RVA: 0x0057F776 File Offset: 0x0057D976
-		// (set) Token: 0x06027FC4 RID: 163780 RVA: 0x0057F77E File Offset: 0x0057D97E
+		// Token: 0x1700B9D7 RID: 47575
+		// (get) Token: 0x0602A587 RID: 173447 RVA: 0x005C7206 File Offset: 0x005C5406
+		// (set) Token: 0x0602A588 RID: 173448 RVA: 0x005C720E File Offset: 0x005C540E
 		public bool CanStagnate { get; set; }
 
-		// Token: 0x1700B090 RID: 45200
-		// (get) Token: 0x06027FC5 RID: 163781 RVA: 0x0057F787 File Offset: 0x0057D987
-		// (set) Token: 0x06027FC6 RID: 163782 RVA: 0x0057F78F File Offset: 0x0057D98F
+		// Token: 0x1700B9D8 RID: 47576
+		// (get) Token: 0x0602A589 RID: 173449 RVA: 0x005C7217 File Offset: 0x005C5417
+		// (set) Token: 0x0602A58A RID: 173450 RVA: 0x005C721F File Offset: 0x005C541F
 		public IWaterStagnationActorConfigT StagnationActorConfig { get; set; }
 
-		// Token: 0x1700B091 RID: 45201
-		// (get) Token: 0x06027FC7 RID: 163783 RVA: 0x0057F798 File Offset: 0x0057D998
-		// (set) Token: 0x06027FC8 RID: 163784 RVA: 0x0057F7A0 File Offset: 0x0057D9A0
+		// Token: 0x1700B9D9 RID: 47577
+		// (get) Token: 0x0602A58B RID: 173451 RVA: 0x005C7228 File Offset: 0x005C5428
+		// (set) Token: 0x0602A58C RID: 173452 RVA: 0x005C7230 File Offset: 0x005C5430
 		public float StagnationImmuneDurationAfterHit { get; set; }
 
-		// Token: 0x1700B092 RID: 45202
-		// (get) Token: 0x06027FC9 RID: 163785 RVA: 0x0057F7A9 File Offset: 0x0057D9A9
-		// (set) Token: 0x06027FCA RID: 163786 RVA: 0x0057F7B1 File Offset: 0x0057D9B1
+		// Token: 0x1700B9DA RID: 47578
+		// (get) Token: 0x0602A58D RID: 173453 RVA: 0x005C7239 File Offset: 0x005C5439
+		// (set) Token: 0x0602A58E RID: 173454 RVA: 0x005C7241 File Offset: 0x005C5441
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027FCB RID: 163787 RVA: 0x0057F7BA File Offset: 0x0057D9BA
+		// Token: 0x0602A58F RID: 173455 RVA: 0x005C724A File Offset: 0x005C544A
 		public IWaterElementalMatchT()
 		{
 			this.Type = EElementalType.Fire;

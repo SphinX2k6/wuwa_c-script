@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x0200478D RID: 18317
+	// Token: 0x02004BF5 RID: 19445
 	public struct IEffectConfigMonsterDeathGroup : IFlatbufferObject
 	{
-		// Token: 0x17008362 RID: 33634
-		// (get) Token: 0x0601C357 RID: 115543 RVA: 0x003FE7B8 File Offset: 0x003FC9B8
+		// Token: 0x170089A3 RID: 35235
+		// (get) Token: 0x0601DB2C RID: 121644 RVA: 0x0042AA54 File Offset: 0x00428C54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			}
 		}
 
-		// Token: 0x0601C358 RID: 115544 RVA: 0x003FE7C5 File Offset: 0x003FC9C5
+		// Token: 0x0601DB2D RID: 121645 RVA: 0x0042AA61 File Offset: 0x00428C61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C359 RID: 115545 RVA: 0x003FE7CC File Offset: 0x003FC9CC
+		// Token: 0x0601DB2E RID: 121646 RVA: 0x0042AA68 File Offset: 0x00428C68
 		public static IEffectConfigMonsterDeathGroup GetRootAsIEffectConfigMonsterDeathGroup(ByteBuffer _bb)
 		{
 			return IEffectConfigMonsterDeathGroup.GetRootAsIEffectConfigMonsterDeathGroup(_bb, default(IEffectConfigMonsterDeathGroup));
 		}
 
-		// Token: 0x0601C35A RID: 115546 RVA: 0x003FE7E8 File Offset: 0x003FC9E8
+		// Token: 0x0601DB2F RID: 121647 RVA: 0x0042AA84 File Offset: 0x00428C84
 		public static IEffectConfigMonsterDeathGroup GetRootAsIEffectConfigMonsterDeathGroup(ByteBuffer _bb, IEffectConfigMonsterDeathGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C35B RID: 115547 RVA: 0x003FE805 File Offset: 0x003FCA05
+		// Token: 0x0601DB30 RID: 121648 RVA: 0x0042AAA1 File Offset: 0x00428CA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C35C RID: 115548 RVA: 0x003FE814 File Offset: 0x003FCA14
+		// Token: 0x0601DB31 RID: 121649 RVA: 0x0042AAB0 File Offset: 0x00428CB0
 		public IEffectConfigMonsterDeathGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008363 RID: 33635
-		// (get) Token: 0x0601C35D RID: 115549 RVA: 0x003FE824 File Offset: 0x003FCA24
+		// Token: 0x170089A4 RID: 35236
+		// (get) Token: 0x0601DB32 RID: 121650 RVA: 0x0042AAC0 File Offset: 0x00428CC0
 		public EEffectConfigType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			}
 		}
 
-		// Token: 0x0601C35E RID: 115550 RVA: 0x003FE860 File Offset: 0x003FCA60
+		// Token: 0x0601DB33 RID: 121651 RVA: 0x0042AAFC File Offset: 0x00428CFC
 		public IMonsterTagDeathEffectData? EffectGroup(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return new IMonsterTagDeathEffectData?(default(IMonsterTagDeathEffectData).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17008364 RID: 33636
-		// (get) Token: 0x0601C35F RID: 115551 RVA: 0x003FE8C0 File Offset: 0x003FCAC0
+		// Token: 0x170089A5 RID: 35237
+		// (get) Token: 0x0601DB34 RID: 121652 RVA: 0x0042AB5C File Offset: 0x00428D5C
 		public int EffectGroupLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			}
 		}
 
-		// Token: 0x0601C360 RID: 115552 RVA: 0x003FE8EB File Offset: 0x003FCAEB
+		// Token: 0x0601DB35 RID: 121653 RVA: 0x0042AB87 File Offset: 0x00428D87
 		public static Offset<IEffectConfigMonsterDeathGroup> CreateIEffectConfigMonsterDeathGroup(FlatBufferBuilder builder, EEffectConfigType Type = EEffectConfigType.Death, VectorOffset EffectGroupOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return IEffectConfigMonsterDeathGroup.EndIEffectConfigMonsterDeathGroup(builder);
 		}
 
-		// Token: 0x0601C361 RID: 115553 RVA: 0x003FE908 File Offset: 0x003FCB08
+		// Token: 0x0601DB36 RID: 121654 RVA: 0x0042ABA4 File Offset: 0x00428DA4
 		public static void StartIEffectConfigMonsterDeathGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601C362 RID: 115554 RVA: 0x003FE911 File Offset: 0x003FCB11
+		// Token: 0x0601DB37 RID: 121655 RVA: 0x0042ABAD File Offset: 0x00428DAD
 		public static void AddType(FlatBufferBuilder builder, EEffectConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601C363 RID: 115555 RVA: 0x003FE91C File Offset: 0x003FCB1C
+		// Token: 0x0601DB38 RID: 121656 RVA: 0x0042ABB8 File Offset: 0x00428DB8
 		public static void AddEffectGroup(FlatBufferBuilder builder, VectorOffset effectGroupOffset)
 		{
 			builder.AddOffset(1, effectGroupOffset.Value, 0);
 		}
 
-		// Token: 0x0601C364 RID: 115556 RVA: 0x003FE92C File Offset: 0x003FCB2C
+		// Token: 0x0601DB39 RID: 121657 RVA: 0x0042ABC8 File Offset: 0x00428DC8
 		public static VectorOffset CreateEffectGroupVector(FlatBufferBuilder builder, Offset<IMonsterTagDeathEffectData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C365 RID: 115557 RVA: 0x003FE96C File Offset: 0x003FCB6C
+		// Token: 0x0601DB3A RID: 121658 RVA: 0x0042AC08 File Offset: 0x00428E08
 		public static VectorOffset CreateEffectGroupVectorBlock(FlatBufferBuilder builder, Offset<IMonsterTagDeathEffectData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C366 RID: 115558 RVA: 0x003FE986 File Offset: 0x003FCB86
+		// Token: 0x0601DB3B RID: 121659 RVA: 0x0042AC22 File Offset: 0x00428E22
 		public static VectorOffset CreateEffectGroupVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMonsterTagDeathEffectData>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C367 RID: 115559 RVA: 0x003FE9A4 File Offset: 0x003FCBA4
+		// Token: 0x0601DB3C RID: 121660 RVA: 0x0042AC40 File Offset: 0x00428E40
 		public static VectorOffset CreateEffectGroupVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C368 RID: 115560 RVA: 0x003FE9BD File Offset: 0x003FCBBD
+		// Token: 0x0601DB3D RID: 121661 RVA: 0x0042AC59 File Offset: 0x00428E59
 		public static void StartEffectGroupVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601C369 RID: 115561 RVA: 0x003FE9C8 File Offset: 0x003FCBC8
+		// Token: 0x0601DB3E RID: 121662 RVA: 0x0042AC64 File Offset: 0x00428E64
 		public static Offset<IEffectConfigMonsterDeathGroup> EndIEffectConfigMonsterDeathGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<IEffectConfigMonsterDeathGroup>(builder.EndTable());
 		}
 
-		// Token: 0x0601C36A RID: 115562 RVA: 0x003FE9D8 File Offset: 0x003FCBD8
+		// Token: 0x0601DB3F RID: 121663 RVA: 0x0042AC74 File Offset: 0x00428E74
 		public IEffectConfigMonsterDeathGroupT UnPack()
 		{
 			IEffectConfigMonsterDeathGroupT effectConfigMonsterDeathGroupT = new IEffectConfigMonsterDeathGroupT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return effectConfigMonsterDeathGroupT;
 		}
 
-		// Token: 0x0601C36B RID: 115563 RVA: 0x003FE9F4 File Offset: 0x003FCBF4
+		// Token: 0x0601DB40 RID: 121664 RVA: 0x0042AC90 File Offset: 0x00428E90
 		public void UnPackTo(IEffectConfigMonsterDeathGroupT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			}
 		}
 
-		// Token: 0x0601C36C RID: 115564 RVA: 0x003FEA60 File Offset: 0x003FCC60
+		// Token: 0x0601DB41 RID: 121665 RVA: 0x0042ACFC File Offset: 0x00428EFC
 		public static Offset<IEffectConfigMonsterDeathGroup> Pack(FlatBufferBuilder builder, IEffectConfigMonsterDeathGroupT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return IEffectConfigMonsterDeathGroup.CreateIEffectConfigMonsterDeathGroup(builder, _o.Type, effectGroupOffset);
 		}
 
-		// Token: 0x0400CBF5 RID: 52213
+		// Token: 0x0400D62B RID: 54827
 		private Table __p;
 	}
 }

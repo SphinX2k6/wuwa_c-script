@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D2A RID: 23850
+	// Token: 0x02004D0C RID: 19724
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleTimeDilationButton : FormationExtraButton
 	{
-		// Token: 0x0603C7A0 RID: 247712 RVA: 0x00E81AEC File Offset: 0x00E7FCEC
+		// Token: 0x060316F9 RID: 202489 RVA: 0x00DD228C File Offset: 0x00DD048C
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7A1 RID: 247713 RVA: 0x00E81BC8 File Offset: 0x00E7FDC8
+		// Token: 0x060316FA RID: 202490 RVA: 0x00DD2368 File Offset: 0x00DD0568
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleTimeDilationButton.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C7A2 RID: 247714 RVA: 0x00E81C0B File Offset: 0x00E7FE0B
+		// Token: 0x060316FB RID: 202491 RVA: 0x00DD23AB File Offset: 0x00DD05AB
 		protected override void OnBeforeCreateImplement()
 		{
 			this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiLevelSequence);
 		}
 
-		// Token: 0x0603C7A3 RID: 247715 RVA: 0x00E81C28 File Offset: 0x00E7FE28
+		// Token: 0x060316FC RID: 202492 RVA: 0x00DD23C8 File Offset: 0x00DD05C8
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputDistributeController.Instance.BindAction("Link大招", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputActive));
 		}
 
-		// Token: 0x0603C7A4 RID: 247716 RVA: 0x00E81D30 File Offset: 0x00E7FF30
+		// Token: 0x060316FD RID: 202493 RVA: 0x00DD24D0 File Offset: 0x00DD06D0
 		protected override void OnShowBattleChildView()
 		{
 			base.OnShowBattleChildView();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnStateChanged();
 		}
 
-		// Token: 0x0603C7A5 RID: 247717 RVA: 0x00E81DB4 File Offset: 0x00E7FFB4
+		// Token: 0x060316FE RID: 202494 RVA: 0x00DD2554 File Offset: 0x00DD0754
 		protected override void OnHideBattleChildView()
 		{
 			base.OnHideBattleChildView();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.EnableCoolDown = false;
 		}
 
-		// Token: 0x0603C7A6 RID: 247718 RVA: 0x00E81E38 File Offset: 0x00E80038
+		// Token: 0x060316FF RID: 202495 RVA: 0x00DD25D8 File Offset: 0x00DD07D8
 		public override void Tick(float delta)
 		{
 			if (!this.EnableCoolDown)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barCdText.SetText(num.ToString("F1"), true);
 		}
 
-		// Token: 0x0603C7A7 RID: 247719 RVA: 0x00E81EBC File Offset: 0x00E800BC
+		// Token: 0x06031700 RID: 202496 RVA: 0x00DD265C File Offset: 0x00DD085C
 		[NullableContext(1)]
 		private void OnInputActive(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -147,19 +147,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TriggerAction();
 		}
 
-		// Token: 0x0603C7A8 RID: 247720 RVA: 0x00E81ED1 File Offset: 0x00E800D1
+		// Token: 0x06031701 RID: 202497 RVA: 0x00DD2671 File Offset: 0x00DD0871
 		private void OnClicked(EToggleState _)
 		{
 			this.TriggerAction();
 		}
 
-		// Token: 0x0603C7A9 RID: 247721 RVA: 0x00E81ED9 File Offset: 0x00E800D9
+		// Token: 0x06031702 RID: 202498 RVA: 0x00DD2679 File Offset: 0x00DD0879
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.RefreshKeyItemVisible();
 		}
 
-		// Token: 0x0603C7AA RID: 247722 RVA: 0x00E81EE4 File Offset: 0x00E800E4
+		// Token: 0x06031703 RID: 202499 RVA: 0x00DD2684 File Offset: 0x00DD0884
 		private void TriggerAction()
 		{
 			Log.Instance.Info(ELogModule.Battle, ELogAuthor.LJM, "[BattleTimeDilationButton]", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7AB RID: 247723 RVA: 0x00E81F58 File Offset: 0x00E80158
+		// Token: 0x06031704 RID: 202500 RVA: 0x00DD26F8 File Offset: 0x00DD08F8
 		private void ClearAction()
 		{
 			Log.Instance.Info(ELogModule.Battle, ELogAuthor.LJM, "[BattleTimeDilationButton]ClearAction", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7AC RID: 247724 RVA: 0x00E81FE8 File Offset: 0x00E801E8
+		// Token: 0x06031705 RID: 202501 RVA: 0x00DD2788 File Offset: 0x00DD0988
 		private void OnStateChanged()
 		{
 			switch (BattleUiModel.Instance.CurrentTimeDilationSkillState)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateAllEffectState();
 		}
 
-		// Token: 0x0603C7AD RID: 247725 RVA: 0x00E820A4 File Offset: 0x00E802A4
+		// Token: 0x06031706 RID: 202502 RVA: 0x00DD2844 File Offset: 0x00DD0A44
 		private void FightPhotoLogReport()
 		{
 			FightPhotoTimeDilationLogEvent fightPhotoTimeDilationLogEvent = new FightPhotoTimeDilationLogEvent();
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			LogReportController.Instance.LogReport(fightPhotoTimeDilationLogEvent);
 		}
 
-		// Token: 0x0603C7AE RID: 247726 RVA: 0x00E8210C File Offset: 0x00E8030C
+		// Token: 0x06031707 RID: 202503 RVA: 0x00DD28AC File Offset: 0x00DD0AAC
 		public void PlayShowAnim()
 		{
 			if (this.UiLevelSequence.HasSequenceNameInPlaying("Start"))
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UiLevelSequence.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x0603C7AF RID: 247727 RVA: 0x00E82160 File Offset: 0x00E80360
+		// Token: 0x06031708 RID: 202504 RVA: 0x00DD2900 File Offset: 0x00DD0B00
 		public void PlayLoopAnim()
 		{
 			if (this.UiLevelSequence.HasSequenceNameInPlaying("Loop"))
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UiLevelSequence.PlaySequence("Loop", false, null);
 		}
 
-		// Token: 0x0603C7B0 RID: 247728 RVA: 0x00E821B4 File Offset: 0x00E803B4
+		// Token: 0x06031709 RID: 202505 RVA: 0x00DD2954 File Offset: 0x00DD0B54
 		public void PlayCloseAnim()
 		{
 			if (this.UiLevelSequence.HasSequenceNameInPlaying("Close"))
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UiLevelSequence.PlaySequence("Close", false, null);
 		}
 
-		// Token: 0x0603C7B1 RID: 247729 RVA: 0x00E82208 File Offset: 0x00E80408
+		// Token: 0x0603170A RID: 202506 RVA: 0x00DD29A8 File Offset: 0x00DD0BA8
 		private void RefreshKeyItemVisible()
 		{
 			CombineKeyItem keyItemPc = this.KeyItemPc;
@@ -313,14 +313,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItemGp.SetUiActive(Info.Instance.IsInGamepad());
 		}
 
-		// Token: 0x0603C7B2 RID: 247730 RVA: 0x00E8223F File Offset: 0x00E8043F
+		// Token: 0x0603170B RID: 202507 RVA: 0x00DD29DF File Offset: 0x00DD0BDF
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearAction();
 			InputDistributeController.Instance.UnBindAction("Link大招", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputActive));
 		}
 
-		// Token: 0x0603C7B3 RID: 247731 RVA: 0x00E82262 File Offset: 0x00E80462
+		// Token: 0x0603170C RID: 202508 RVA: 0x00DD2A02 File Offset: 0x00DD0C02
 		private void OnEffectLoaded(ELoadEffectResult result, int handle)
 		{
 			if (result != ELoadEffectResult.Success)
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateEffectState(handle);
 		}
 
-		// Token: 0x0603C7B4 RID: 247732 RVA: 0x00E82270 File Offset: 0x00E80470
+		// Token: 0x0603170D RID: 202509 RVA: 0x00DD2A10 File Offset: 0x00DD0C10
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.FightPhotographView)
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnStateChanged();
 		}
 
-		// Token: 0x0603C7B5 RID: 247733 RVA: 0x00E8228D File Offset: 0x00E8048D
+		// Token: 0x0603170E RID: 202510 RVA: 0x00DD2A2D File Offset: 0x00DD0C2D
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.FightPhotographView)
@@ -352,14 +352,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnStateChanged();
 		}
 
-		// Token: 0x0603C7B6 RID: 247734 RVA: 0x00E822AA File Offset: 0x00E804AA
+		// Token: 0x0603170F RID: 202511 RVA: 0x00DD2A4A File Offset: 0x00DD0C4A
 		private void UpdateAllEffectState()
 		{
 			this.UpdateEffectState(this.PostEffectHandle);
 			this.UpdateScreenEffect();
 		}
 
-		// Token: 0x0603C7B7 RID: 247735 RVA: 0x00E822C0 File Offset: 0x00E804C0
+		// Token: 0x06031710 RID: 202512 RVA: 0x00DD2A60 File Offset: 0x00DD0C60
 		private void UpdateEffectState(int handle)
 		{
 			if (!EffectSystem.Instance.IsValid(handle))
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7B8 RID: 247736 RVA: 0x00E82348 File Offset: 0x00E80548
+		// Token: 0x06031711 RID: 202513 RVA: 0x00DD2AE8 File Offset: 0x00DD0CE8
 		private void UpdateScreenEffect()
 		{
 			if (this.ScreenEffectHandle != 0)
@@ -408,76 +408,76 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F82D RID: 129069
+		// Token: 0x0401A2E6 RID: 107238
 		[Nullable(1)]
 		private const string POST_EFFECT_PATH = "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Post_ForTimeStop_White.DA_Fx_Group_Post_ForTimeStop_White";
 
-		// Token: 0x0401F82E RID: 129070
+		// Token: 0x0401A2E7 RID: 107239
 		[Nullable(1)]
 		private const string SCREEN_EFFECT_PATH = "/Game/Aki/Effect/DataAsset/ScreenDA/SD_Fight/Bigworld/DA_Fx_Screen_ForTimeStop_White.DA_Fx_Screen_ForTimeStop_White";
 
-		// Token: 0x0401F82F RID: 129071
+		// Token: 0x0401A2E8 RID: 107240
 		private CombineKeyItem KeyItemPc;
 
-		// Token: 0x0401F830 RID: 129072
+		// Token: 0x0401A2E9 RID: 107241
 		private CombineKeyItem KeyItemGp;
 
-		// Token: 0x0401F831 RID: 129073
+		// Token: 0x0401A2EA RID: 107242
 		private UUIItem PanelCdRoot;
 
-		// Token: 0x0401F832 RID: 129074
+		// Token: 0x0401A2EB RID: 107243
 		private UUISprite BarCdSprite;
 
-		// Token: 0x0401F833 RID: 129075
+		// Token: 0x0401A2EC RID: 107244
 		private UUIText BarCdText;
 
-		// Token: 0x0401F834 RID: 129076
+		// Token: 0x0401A2ED RID: 107245
 		private UUIExtendToggle ToggleHourGlass;
 
-		// Token: 0x0401F835 RID: 129077
+		// Token: 0x0401A2EE RID: 107246
 		public UiBehaviorLevelSequence UiLevelSequence;
 
-		// Token: 0x0401F836 RID: 129078
+		// Token: 0x0401A2EF RID: 107247
 		private int PostEffectHandle;
 
-		// Token: 0x0401F837 RID: 129079
+		// Token: 0x0401A2F0 RID: 107248
 		private int ScreenEffectHandle;
 
-		// Token: 0x0401F838 RID: 129080
+		// Token: 0x0401A2F1 RID: 107249
 		private float TotalCoolDownTime;
 
-		// Token: 0x0401F839 RID: 129081
+		// Token: 0x0401A2F2 RID: 107250
 		private float CoolDownStartTime;
 
-		// Token: 0x0401F83A RID: 129082
+		// Token: 0x0401A2F3 RID: 107251
 		private bool EnableCoolDown;
 
-		// Token: 0x0401F83B RID: 129083
+		// Token: 0x0401A2F4 RID: 107252
 		private bool IsPhotographViewOpen;
 
-		// Token: 0x0200BFB7 RID: 49079
+		// Token: 0x0200A9BD RID: 43453
 		[NullableContext(0)]
 		private enum EDesktopChildType
 		{
-			// Token: 0x04039D6E RID: 236910
+			// Token: 0x04034730 RID: 214832
 			KeyItemPc = 5,
-			// Token: 0x04039D6F RID: 236911
+			// Token: 0x04034731 RID: 214833
 			KeyItemGp
 		}
 
-		// Token: 0x0200BFB8 RID: 49080
+		// Token: 0x0200A9BE RID: 43454
 		[NullableContext(0)]
 		private enum EBattleTimeDilationComponent
 		{
-			// Token: 0x04039D71 RID: 236913
+			// Token: 0x04034733 RID: 214835
 			RootItem,
-			// Token: 0x04039D72 RID: 236914
+			// Token: 0x04034734 RID: 214836
 			ToggleHourGlass,
-			// Token: 0x04039D73 RID: 236915
+			// Token: 0x04034735 RID: 214837
 			PanelCDRoot,
-			// Token: 0x04039D74 RID: 236916
+			// Token: 0x04034736 RID: 214838
 			BarCDSprite,
-			// Token: 0x04039D75 RID: 236917
+			// Token: 0x04034737 RID: 214839
 			BarCDText
 		}
 	}

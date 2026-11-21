@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006805 RID: 26629
+	// Token: 0x02006E85 RID: 28293
 	public class IFlowDefineNpcGroupPerformType_UnionUnion
 	{
-		// Token: 0x1700C5A1 RID: 50593
-		// (get) Token: 0x0602E5DE RID: 189918 RVA: 0x006541FD File Offset: 0x006523FD
-		// (set) Token: 0x0602E5DF RID: 189919 RVA: 0x00654205 File Offset: 0x00652405
+		// Token: 0x1700CF57 RID: 53079
+		// (get) Token: 0x06030E24 RID: 200228 RVA: 0x006A1941 File Offset: 0x0069FB41
+		// (set) Token: 0x06030E25 RID: 200229 RVA: 0x006A1949 File Offset: 0x0069FB49
 		public IFlowDefineNpcGroupPerformType_Union Type { get; set; }
 
-		// Token: 0x1700C5A2 RID: 50594
-		// (get) Token: 0x0602E5E0 RID: 189920 RVA: 0x0065420E File Offset: 0x0065240E
-		// (set) Token: 0x0602E5E1 RID: 189921 RVA: 0x00654216 File Offset: 0x00652416
+		// Token: 0x1700CF58 RID: 53080
+		// (get) Token: 0x06030E26 RID: 200230 RVA: 0x006A1952 File Offset: 0x0069FB52
+		// (set) Token: 0x06030E27 RID: 200231 RVA: 0x006A195A File Offset: 0x0069FB5A
 		public object Value { get; set; }
 
-		// Token: 0x0602E5E2 RID: 189922 RVA: 0x0065421F File Offset: 0x0065241F
+		// Token: 0x06030E28 RID: 200232 RVA: 0x006A1963 File Offset: 0x0069FB63
 		public IFlowDefineNpcGroupPerformType_UnionUnion()
 		{
 			this.Type = IFlowDefineNpcGroupPerformType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602E5E3 RID: 189923 RVA: 0x00654235 File Offset: 0x00652435
+		// Token: 0x06030E29 RID: 200233 RVA: 0x006A1979 File Offset: 0x0069FB79
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602E5E4 RID: 189924 RVA: 0x00654247 File Offset: 0x00652447
+		// Token: 0x06030E2A RID: 200234 RVA: 0x006A198B File Offset: 0x0069FB8B
 		public IFlowDefineNpcGroupPerformTypeT AsIFlowDefineNpcGroupPerformType()
 		{
 			return this.As<IFlowDefineNpcGroupPerformTypeT>();
 		}
 
-		// Token: 0x0602E5E5 RID: 189925 RVA: 0x0065424F File Offset: 0x0065244F
+		// Token: 0x06030E2B RID: 200235 RVA: 0x006A1993 File Offset: 0x0069FB93
 		public static IFlowDefineNpcGroupPerformType_UnionUnion FromIFlowDefineNpcGroupPerformType(IFlowDefineNpcGroupPerformTypeT _iflowdefinenpcgroupperformtype)
 		{
 			return new IFlowDefineNpcGroupPerformType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E5E6 RID: 189926 RVA: 0x00654264 File Offset: 0x00652464
+		// Token: 0x06030E2C RID: 200236 RVA: 0x006A19A8 File Offset: 0x0069FBA8
 		public IFlowDefineNpcHandInHandPerformT AsIFlowDefineNpcHandInHandPerform()
 		{
 			return this.As<IFlowDefineNpcHandInHandPerformT>();
 		}
 
-		// Token: 0x0602E5E7 RID: 189927 RVA: 0x0065426C File Offset: 0x0065246C
+		// Token: 0x06030E2D RID: 200237 RVA: 0x006A19B0 File Offset: 0x0069FBB0
 		public static IFlowDefineNpcGroupPerformType_UnionUnion FromIFlowDefineNpcHandInHandPerform(IFlowDefineNpcHandInHandPerformT _iflowdefinenpchandinhandperform)
 		{
 			return new IFlowDefineNpcGroupPerformType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E5E8 RID: 189928 RVA: 0x00654281 File Offset: 0x00652481
+		// Token: 0x06030E2E RID: 200238 RVA: 0x006A19C5 File Offset: 0x0069FBC5
 		public IFlowDefineNpcMotorcycleSharingPerformT AsIFlowDefineNpcMotorcycleSharingPerform()
 		{
 			return this.As<IFlowDefineNpcMotorcycleSharingPerformT>();
 		}
 
-		// Token: 0x0602E5E9 RID: 189929 RVA: 0x00654289 File Offset: 0x00652489
+		// Token: 0x06030E2F RID: 200239 RVA: 0x006A19CD File Offset: 0x0069FBCD
 		public static IFlowDefineNpcGroupPerformType_UnionUnion FromIFlowDefineNpcMotorcycleSharingPerform(IFlowDefineNpcMotorcycleSharingPerformT _iflowdefinenpcmotorcyclesharingperform)
 		{
 			return new IFlowDefineNpcGroupPerformType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E5EA RID: 189930 RVA: 0x0065429E File Offset: 0x0065249E
+		// Token: 0x06030E30 RID: 200240 RVA: 0x006A19E2 File Offset: 0x0069FBE2
 		public IFlowDefineNpcCancelMotorcycleSharingPerformT AsIFlowDefineNpcCancelMotorcycleSharingPerform()
 		{
 			return this.As<IFlowDefineNpcCancelMotorcycleSharingPerformT>();
 		}
 
-		// Token: 0x0602E5EB RID: 189931 RVA: 0x006542A6 File Offset: 0x006524A6
+		// Token: 0x06030E31 RID: 200241 RVA: 0x006A19EA File Offset: 0x0069FBEA
 		public static IFlowDefineNpcGroupPerformType_UnionUnion FromIFlowDefineNpcCancelMotorcycleSharingPerform(IFlowDefineNpcCancelMotorcycleSharingPerformT _iflowdefinenpccancelmotorcyclesharingperform)
 		{
 			return new IFlowDefineNpcGroupPerformType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E5EC RID: 189932 RVA: 0x006542BB File Offset: 0x006524BB
+		// Token: 0x06030E32 RID: 200242 RVA: 0x006A19FF File Offset: 0x0069FBFF
 		public IFlowDefineNpcSupportedWalkingPerformT AsIFlowDefineNpcSupportedWalkingPerform()
 		{
 			return this.As<IFlowDefineNpcSupportedWalkingPerformT>();
 		}
 
-		// Token: 0x0602E5ED RID: 189933 RVA: 0x006542C3 File Offset: 0x006524C3
+		// Token: 0x06030E33 RID: 200243 RVA: 0x006A1A07 File Offset: 0x0069FC07
 		public static IFlowDefineNpcGroupPerformType_UnionUnion FromIFlowDefineNpcSupportedWalkingPerform(IFlowDefineNpcSupportedWalkingPerformT _iflowdefinenpcsupportedwalkingperform)
 		{
 			return new IFlowDefineNpcGroupPerformType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E5EE RID: 189934 RVA: 0x006542D8 File Offset: 0x006524D8
+		// Token: 0x06030E34 RID: 200244 RVA: 0x006A1A1C File Offset: 0x0069FC1C
 		public IFlowDefineNpcCancelSupportedWalkingPerformT AsIFlowDefineNpcCancelSupportedWalkingPerform()
 		{
 			return this.As<IFlowDefineNpcCancelSupportedWalkingPerformT>();
 		}
 
-		// Token: 0x0602E5EF RID: 189935 RVA: 0x006542E0 File Offset: 0x006524E0
+		// Token: 0x06030E35 RID: 200245 RVA: 0x006A1A24 File Offset: 0x0069FC24
 		public static IFlowDefineNpcGroupPerformType_UnionUnion FromIFlowDefineNpcCancelSupportedWalkingPerform(IFlowDefineNpcCancelSupportedWalkingPerformT _iflowdefinenpccancelsupportedwalkingperform)
 		{
 			return new IFlowDefineNpcGroupPerformType_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602E5F0 RID: 189936 RVA: 0x006542F8 File Offset: 0x006524F8
+		// Token: 0x06030E36 RID: 200246 RVA: 0x006A1A3C File Offset: 0x0069FC3C
 		public static int Pack(FlatBufferBuilder builder, IFlowDefineNpcGroupPerformType_UnionUnion _o)
 		{
 			switch (_o.Type)

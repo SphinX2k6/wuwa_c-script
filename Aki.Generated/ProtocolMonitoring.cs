@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F5E RID: 3934
+	// Token: 0x02001045 RID: 4165
 	public struct ProtocolMonitoring : IFlatbufferObject
 	{
-		// Token: 0x17002B18 RID: 11032
-		// (get) Token: 0x0600B3BD RID: 46013 RVA: 0x002CC2B0 File Offset: 0x002CA4B0
+		// Token: 0x17002B90 RID: 11152
+		// (get) Token: 0x0600B9FA RID: 47610 RVA: 0x002E8F64 File Offset: 0x002E7164
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B3BE RID: 46014 RVA: 0x002CC2BD File Offset: 0x002CA4BD
+		// Token: 0x0600B9FB RID: 47611 RVA: 0x002E8F71 File Offset: 0x002E7171
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B3BF RID: 46015 RVA: 0x002CC2C4 File Offset: 0x002CA4C4
+		// Token: 0x0600B9FC RID: 47612 RVA: 0x002E8F78 File Offset: 0x002E7178
 		public static ProtocolMonitoring GetRootAsProtocolMonitoring(ByteBuffer _bb)
 		{
 			return ProtocolMonitoring.GetRootAsProtocolMonitoring(_bb, default(ProtocolMonitoring));
 		}
 
-		// Token: 0x0600B3C0 RID: 46016 RVA: 0x002CC2E0 File Offset: 0x002CA4E0
+		// Token: 0x0600B9FD RID: 47613 RVA: 0x002E8F94 File Offset: 0x002E7194
 		public static ProtocolMonitoring GetRootAsProtocolMonitoring(ByteBuffer _bb, ProtocolMonitoring obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B3C1 RID: 46017 RVA: 0x002CC2FD File Offset: 0x002CA4FD
+		// Token: 0x0600B9FE RID: 47614 RVA: 0x002E8FB1 File Offset: 0x002E71B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B3C2 RID: 46018 RVA: 0x002CC30C File Offset: 0x002CA50C
+		// Token: 0x0600B9FF RID: 47615 RVA: 0x002E8FC0 File Offset: 0x002E71C0
 		public ProtocolMonitoring __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002B19 RID: 11033
-		// (get) Token: 0x0600B3C3 RID: 46019 RVA: 0x002CC31C File Offset: 0x002CA51C
+		// Token: 0x17002B91 RID: 11153
+		// (get) Token: 0x0600BA00 RID: 47616 RVA: 0x002E8FD0 File Offset: 0x002E71D0
 		public int ProtocolId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002B1A RID: 11034
-		// (get) Token: 0x0600B3C4 RID: 46020 RVA: 0x002CC358 File Offset: 0x002CA558
+		// Token: 0x17002B92 RID: 11154
+		// (get) Token: 0x0600BA01 RID: 47617 RVA: 0x002E900C File Offset: 0x002E720C
 		public int ActionId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400502C RID: 20524
+		// Token: 0x04005613 RID: 22035
 		private Table __p;
 	}
 }

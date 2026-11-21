@@ -4,22 +4,20 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Action.Fb;
-using Aki.TDConfigMgr.Wrapper.Out;
 using Aki.UniverseEditor.Interface.Fbs.Action;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common;
 using Google.FlatBuffers;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005094 RID: 20628
+	// Token: 0x02004064 RID: 16484
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowConfig : ConfigBase
 	{
-		// Token: 0x17008082 RID: 32898
-		// (get) Token: 0x06034DB0 RID: 216496 RVA: 0x00C81868 File Offset: 0x00C7FA68
+		// Token: 0x17005442 RID: 21570
+		// (get) Token: 0x06029CA9 RID: 171177 RVA: 0x00BCEE34 File Offset: 0x00BCD034
 		private CacheLru<string, FlowConfig.FlowListFbIndex> FlowListFbLru
 		{
 			get
@@ -33,19 +31,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034DB1 RID: 216497 RVA: 0x00C8189B File Offset: 0x00C7FA9B
+		// Token: 0x06029CAA RID: 171178 RVA: 0x00BCEE67 File Offset: 0x00BCD067
 		protected override bool OnInit()
 		{
 			this.CacheFlowListMap = new Dictionary<string, FlowListData>();
-			if (!PublicUtil.Instance.UseDbConfig())
-			{
-				FlowListData.AudioCache = new HashSet<string>();
-				this.ReadAudioConfig();
-			}
 			return true;
 		}
 
-		// Token: 0x06034DB2 RID: 216498 RVA: 0x00C818C5 File Offset: 0x00C7FAC5
+		// Token: 0x06029CAB RID: 171179 RVA: 0x00BCEE75 File Offset: 0x00BCD075
 		protected override bool OnClear()
 		{
 			this.CacheFlowListMap = null;
@@ -53,7 +46,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x06034DB3 RID: 216499 RVA: 0x00C818D8 File Offset: 0x00C7FAD8
+		// Token: 0x06029CAC RID: 171180 RVA: 0x00BCEE88 File Offset: 0x00BCD088
 		[return: Nullable(2)]
 		private unsafe FlowConfig.FlowListFbIndex LoadFlowListFromFb(string flowListName)
 		{
@@ -79,7 +72,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return null;
 		}
 
-		// Token: 0x06034DB4 RID: 216500 RVA: 0x00C81978 File Offset: 0x00C7FB78
+		// Token: 0x06029CAD RID: 171181 RVA: 0x00BCEF28 File Offset: 0x00BCD128
 		[return: Nullable(2)]
 		private unsafe Aki.TDConfigMgr.Action.IFlowInfo GetFbFlowInfo(string flowListName, int flowId)
 		{
@@ -99,7 +92,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return flowInfo;
 		}
 
-		// Token: 0x06034DB5 RID: 216501 RVA: 0x00C819FC File Offset: 0x00C7FBFC
+		// Token: 0x06029CAE RID: 171182 RVA: 0x00BCEFAC File Offset: 0x00BCD1AC
 		[return: Nullable(2)]
 		private unsafe Aki.TDConfigMgr.Action.IStateInfo GetFbFlowState(string flowListName, int flowId, int stateId)
 		{
@@ -119,7 +112,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return stateInfo;
 		}
 
-		// Token: 0x06034DB6 RID: 216502 RVA: 0x00C81A84 File Offset: 0x00C7FC84
+		// Token: 0x06029CAF RID: 171183 RVA: 0x00BCF034 File Offset: 0x00BCD234
 		[NullableContext(2)]
 		public unsafe Aki.TDConfigMgr.Action.ShowTalk GetRandomFlow([Nullable(1)] string flowListName, int flowId, string ownerName, int? flowState = null)
 		{
@@ -153,7 +146,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return ((actionInfo != null) ? actionInfo.Params : null) as Aki.TDConfigMgr.Action.ShowTalk;
 		}
 
-		// Token: 0x06034DB7 RID: 216503 RVA: 0x00C81B68 File Offset: 0x00C7FD68
+		// Token: 0x06029CB0 RID: 171184 RVA: 0x00BCF118 File Offset: 0x00BCD318
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -161,148 +154,52 @@ namespace CSharpScript.Game.Module.Plot.Flow
 		})]
 		public List<Aki.TDConfigMgr.Action.ActionInfo> GetFlowStateActions(string flowListName, int flowId, int stateId)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
+			if (fbFlowState == null)
 			{
-				if (WrapperSetting.UseFb)
-				{
-					Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
-					if (fbFlowState == null)
-					{
-						return null;
-					}
-					return fbFlowState.Actions;
-				}
-				else
-				{
-					FlowState? dbStateInfo = this.GetDbStateInfo(flowListName, flowId, stateId);
-					if (dbStateInfo == null)
-					{
-						return null;
-					}
-					return Json.Parse<List<Aki.TDConfigMgr.Action.ActionInfo>>(dbStateInfo.Value.Actions, null);
-				}
+				return null;
 			}
-			else
-			{
-				Aki.TDConfigMgr.Action.IStateInfo jsonStateInfo = this.GetJsonStateInfo(flowListName, flowId, stateId, null);
-				if (jsonStateInfo == null)
-				{
-					return null;
-				}
-				return jsonStateInfo.Actions;
-			}
+			return fbFlowState.Actions;
 		}
 
-		// Token: 0x06034DB8 RID: 216504 RVA: 0x00C81BE0 File Offset: 0x00C7FDE0
+		// Token: 0x06029CB1 RID: 171185 RVA: 0x00BCF13C File Offset: 0x00BCD33C
 		public bool? GetFlowNeedLoad(string flowListName, int flowId, int stateId)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
+			if (fbFlowState == null)
 			{
-				if (!WrapperSetting.UseFb)
-				{
-					return new bool?(this.GetDbStateInfo(flowListName, flowId, stateId).Value.IsPreloadFlow);
-				}
-				Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
-				if (fbFlowState == null)
-				{
-					return null;
-				}
-				return fbFlowState.IsPreloadFlow;
+				return null;
 			}
-			else
-			{
-				Aki.TDConfigMgr.Action.IStateInfo jsonStateInfo = this.GetJsonStateInfo(flowListName, flowId, stateId, null);
-				if (jsonStateInfo == null)
-				{
-					return null;
-				}
-				return jsonStateInfo.IsPreloadFlow;
-			}
+			return fbFlowState.IsPreloadFlow;
 		}
 
-		// Token: 0x06034DB9 RID: 216505 RVA: 0x00C81C5C File Offset: 0x00C7FE5C
+		// Token: 0x06029CB2 RID: 171186 RVA: 0x00BCF168 File Offset: 0x00BCD368
 		public bool? GetFlowStateKeepMusic(string flowListName, int flowId, int stateId)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
-			{
-				if (WrapperSetting.UseFb)
-				{
-					Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
-					return new bool?(((fbFlowState != null) ? fbFlowState.KeepBgm : null).GetValueOrDefault());
-				}
-				FlowState? dbStateInfo = this.GetDbStateInfo(flowListName, flowId, stateId);
-				if (dbStateInfo == null)
-				{
-					return new bool?(false);
-				}
-				return new bool?(dbStateInfo.Value.KeepBgm);
-			}
-			else
-			{
-				Aki.TDConfigMgr.Action.IStateInfo jsonStateInfo = this.GetJsonStateInfo(flowListName, flowId, stateId, null);
-				if (jsonStateInfo == null)
-				{
-					return new bool?(false);
-				}
-				return jsonStateInfo.KeepBgm;
-			}
+			Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
+			return new bool?(((fbFlowState != null) ? fbFlowState.KeepBgm : null).GetValueOrDefault());
 		}
 
-		// Token: 0x06034DBA RID: 216506 RVA: 0x00C81CF4 File Offset: 0x00C7FEF4
+		// Token: 0x06029CB3 RID: 171187 RVA: 0x00BCF1A0 File Offset: 0x00BCD3A0
 		public bool GetFlowIsClientFlow(string flowListName, int flowId, int stateId)
 		{
-			if (!PublicUtil.Instance.UseDbConfig())
-			{
-				Aki.TDConfigMgr.Action.IStateInfo jsonStateInfo = this.GetJsonStateInfo(flowListName, flowId, stateId, null);
-				return ((jsonStateInfo != null) ? jsonStateInfo.IsClientFlow : null).GetValueOrDefault();
-			}
-			if (WrapperSetting.UseFb)
-			{
-				Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
-				return ((fbFlowState != null) ? fbFlowState.IsClientFlow : null).GetValueOrDefault();
-			}
-			FlowState? dbStateInfo = this.GetDbStateInfo(flowListName, flowId, stateId);
-			return dbStateInfo != null && dbStateInfo.GetValueOrDefault().IsClientFlow;
+			Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
+			return ((fbFlowState != null) ? fbFlowState.IsClientFlow : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06034DBB RID: 216507 RVA: 0x00C81D88 File Offset: 0x00C7FF88
+		// Token: 0x06029CB4 RID: 171188 RVA: 0x00BCF1D4 File Offset: 0x00BCD3D4
 		[return: Nullable(2)]
 		public Aki.TDConfigMgr.Action.IStateProgramSpecialProcessChangeTeamOptimization GetFlowProgramSpecialProcess(string flowListName, int flowId, int stateId)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
+			if (fbFlowState == null)
 			{
-				if (WrapperSetting.UseFb)
-				{
-					Aki.TDConfigMgr.Action.IStateInfo fbFlowState = this.GetFbFlowState(flowListName, flowId, stateId);
-					if (fbFlowState == null)
-					{
-						return null;
-					}
-					return fbFlowState.ProgramSpecialProcess;
-				}
-				else
-				{
-					FlowState? dbStateInfo = this.GetDbStateInfo(flowListName, flowId, stateId);
-					string text = (dbStateInfo != null) ? dbStateInfo.GetValueOrDefault().ProgramSpecialProcess : null;
-					if (string.IsNullOrEmpty(text))
-					{
-						return null;
-					}
-					return Json.Parse<Aki.TDConfigMgr.Action.IStateProgramSpecialProcessChangeTeamOptimization>(text, null);
-				}
+				return null;
 			}
-			else
-			{
-				Aki.TDConfigMgr.Action.IStateInfo jsonStateInfo = this.GetJsonStateInfo(flowListName, flowId, stateId, null);
-				if (jsonStateInfo == null)
-				{
-					return null;
-				}
-				return jsonStateInfo.ProgramSpecialProcess;
-			}
+			return fbFlowState.ProgramSpecialProcess;
 		}
 
-		// Token: 0x06034DBC RID: 216508 RVA: 0x00C81E0C File Offset: 0x00C8000C
+		// Token: 0x06029CB5 RID: 171189 RVA: 0x00BCF1F8 File Offset: 0x00BCD3F8
 		private FlowState? GetDbStateInfo(string flowListName, int flowId, int stateId)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 3);
@@ -325,90 +222,28 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return config;
 		}
 
-		// Token: 0x06034DBD RID: 216509 RVA: 0x00C81E94 File Offset: 0x00C80094
+		// Token: 0x06029CB6 RID: 171190 RVA: 0x00BCF280 File Offset: 0x00BCD480
 		[return: Nullable(new byte[]
 		{
 			2,
 			1
 		})]
-		private unsafe List<Aki.TDConfigMgr.Action.ActionInfo> GetRandomStateActions(string flowListName, int flowId, [Nullable(2)] string ownerName)
+		private List<Aki.TDConfigMgr.Action.ActionInfo> GetRandomStateActions(string flowListName, int flowId, [Nullable(2)] string ownerName)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			Aki.TDConfigMgr.Action.IFlowInfo fbFlowInfo = this.GetFbFlowInfo(flowListName, flowId);
+			if (((fbFlowInfo != null) ? fbFlowInfo.States : null) == null || fbFlowInfo.States.Count == 0)
 			{
-				if (WrapperSetting.UseFb)
-				{
-					Aki.TDConfigMgr.Action.IFlowInfo fbFlowInfo = this.GetFbFlowInfo(flowListName, flowId);
-					if (((fbFlowInfo != null) ? fbFlowInfo.States : null) == null || fbFlowInfo.States.Count == 0)
-					{
-						return null;
-					}
-					Aki.TDConfigMgr.Action.IStateInfo randomArrayItem = ObjectUtils.GetRandomArrayItem<Aki.TDConfigMgr.Action.IStateInfo>(fbFlowInfo.States);
-					if (randomArrayItem == null)
-					{
-						return null;
-					}
-					return randomArrayItem.Actions;
-				}
-				else
-				{
-					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-					defaultInterpolatedStringHandler.AppendFormatted(flowListName);
-					defaultInterpolatedStringHandler.AppendLiteral("_");
-					defaultInterpolatedStringHandler.AppendFormatted<int>(flowId);
-					Flow? config = ConfigFlowById.GetConfig(defaultInterpolatedStringHandler.ToStringAndClear(), true);
-					if (config == null)
-					{
-						global::Log instance = global::Log.Instance;
-						ELogModule module = ELogModule.Plot;
-						ELogAuthor author = ELogAuthor.YSQ;
-						string message = "找不到剧情配置";
-						<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("flowListName", flowListName);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("flowId", flowId);
-						instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-						return null;
-					}
-					int? randomStructArrayItem = ObjectUtils.GetRandomStructArrayItem<int>(config.Value.GetStatesArray());
-					if (randomStructArrayItem == null)
-					{
-						return null;
-					}
-					return this.GetFlowStateActions(flowListName, flowId, randomStructArrayItem.Value);
-				}
+				return null;
 			}
-			else
+			Aki.TDConfigMgr.Action.IStateInfo randomArrayItem = ObjectUtils.GetRandomArrayItem<Aki.TDConfigMgr.Action.IStateInfo>(fbFlowInfo.States);
+			if (randomArrayItem == null)
 			{
-				Aki.TDConfigMgr.Action.IFlowInfo flowInfo = this.GetFlowInfo(flowListName, flowId, ownerName);
-				if (flowInfo == null || flowInfo.States == null || flowInfo.States.Count == 0)
-				{
-					global::Log instance2 = global::Log.Instance;
-					ELogModule module2 = ELogModule.Level;
-					ELogAuthor author2 = ELogAuthor.CJH;
-					string message2 = "找不到剧情配置";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("flowListName", flowListName);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("flowId", flowId);
-					instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
-					return null;
-				}
-				Aki.TDConfigMgr.Action.IStateInfo randomArrayItem2 = ObjectUtils.GetRandomArrayItem<Aki.TDConfigMgr.Action.IStateInfo>(flowInfo.States);
-				if (randomArrayItem2 == null)
-				{
-					global::Log instance3 = global::Log.Instance;
-					ELogModule module3 = ELogModule.Plot;
-					ELogAuthor author3 = ELogAuthor.YSQ;
-					string message3 = "剧情状态为空";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("flowListName", flowListName);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("flowId", flowId);
-					instance3.Error(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
-					return null;
-				}
-				return randomArrayItem2.Actions;
+				return null;
 			}
+			return randomArrayItem.Actions;
 		}
 
-		// Token: 0x06034DBE RID: 216510 RVA: 0x00C820B0 File Offset: 0x00C802B0
+		// Token: 0x06029CB7 RID: 171191 RVA: 0x00BCF2D0 File Offset: 0x00BCD4D0
 		[NullableContext(2)]
 		private unsafe Aki.TDConfigMgr.Action.IStateInfo GetJsonStateInfo([Nullable(1)] string flowListName, int flowId, int stateId, string ownerName = null)
 		{
@@ -443,7 +278,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return stateInfo;
 		}
 
-		// Token: 0x06034DBF RID: 216511 RVA: 0x00C82188 File Offset: 0x00C80388
+		// Token: 0x06029CB8 RID: 171192 RVA: 0x00BCF3A8 File Offset: 0x00BCD5A8
 		[NullableContext(2)]
 		private unsafe FlowListData GetFlowListData([Nullable(1)] string flowListName, string ownerName = null)
 		{
@@ -476,7 +311,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return flowListData;
 		}
 
-		// Token: 0x06034DC0 RID: 216512 RVA: 0x00C82260 File Offset: 0x00C80460
+		// Token: 0x06029CB9 RID: 171193 RVA: 0x00BCF480 File Offset: 0x00BCD680
 		[NullableContext(2)]
 		private Aki.TDConfigMgr.Action.IFlowInfo GetFlowInfo([Nullable(1)] string flowListName, int flowId, string ownerName = null)
 		{
@@ -498,13 +333,13 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return flowInfo;
 		}
 
-		// Token: 0x06034DC1 RID: 216513 RVA: 0x00C822B0 File Offset: 0x00C804B0
+		// Token: 0x06029CBA RID: 171194 RVA: 0x00BCF4D0 File Offset: 0x00BCD6D0
 		private void ReadAudioConfig()
 		{
 			bool isPlayInEditor = GlobalData.IsPlayInEditor;
 		}
 
-		// Token: 0x06034DC2 RID: 216514 RVA: 0x00C822B8 File Offset: 0x00C804B8
+		// Token: 0x06029CBB RID: 171195 RVA: 0x00BCF4D8 File Offset: 0x00BCD6D8
 		public void ResetLocalFlowConfig()
 		{
 			Dictionary<string, FlowListData> cacheFlowListMap = this.CacheFlowListMap;
@@ -515,8 +350,8 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			cacheFlowListMap.Clear();
 		}
 
-		// Token: 0x17008083 RID: 32899
-		// (get) Token: 0x06034DC3 RID: 216515 RVA: 0x00C822CA File Offset: 0x00C804CA
+		// Token: 0x17005443 RID: 21571
+		// (get) Token: 0x06029CBC RID: 171196 RVA: 0x00BCF4EA File Offset: 0x00BCD6EA
 		public static FlowConfig Instance
 		{
 			get
@@ -525,7 +360,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034DC4 RID: 216516 RVA: 0x00C822D1 File Offset: 0x00C804D1
+		// Token: 0x06029CBD RID: 171197 RVA: 0x00BCF4F1 File Offset: 0x00BCD6F1
 		public static FlowConfig GetOrCreateInstance()
 		{
 			if (FlowConfig._Instance == null)
@@ -535,7 +370,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return FlowConfig._Instance;
 		}
 
-		// Token: 0x06034DC5 RID: 216517 RVA: 0x00C822E5 File Offset: 0x00C804E5
+		// Token: 0x06029CBE RID: 171198 RVA: 0x00BCF505 File Offset: 0x00BCD705
 		public static bool CreateInstance()
 		{
 			if (FlowConfig._Instance != null)
@@ -546,24 +381,24 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x06034DC6 RID: 216518 RVA: 0x00C822FB File Offset: 0x00C804FB
+		// Token: 0x06029CBF RID: 171199 RVA: 0x00BCF51B File Offset: 0x00BCD71B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034DC7 RID: 216519 RVA: 0x00C822FD File Offset: 0x00C804FD
+		// Token: 0x06029CC0 RID: 171200 RVA: 0x00BCF51D File Offset: 0x00BCD71D
 		public static void ResetStaticDefaultValue()
 		{
 			FlowConfig._Instance = null;
 		}
 
-		// Token: 0x06034DC8 RID: 216520 RVA: 0x00C82305 File Offset: 0x00C80505
+		// Token: 0x06029CC1 RID: 171201 RVA: 0x00BCF525 File Offset: 0x00BCD725
 		static FlowConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlowConfig.CreateStaticDefaultValue), new Action(FlowConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401C281 RID: 115329
+		// Token: 0x04016CB0 RID: 93360
 		[Nullable(new byte[]
 		{
 			2,
@@ -572,13 +407,13 @@ namespace CSharpScript.Game.Module.Plot.Flow
 		})]
 		private Dictionary<string, FlowListData> CacheFlowListMap;
 
-		// Token: 0x0401C282 RID: 115330
+		// Token: 0x04016CB1 RID: 93361
 		private string FlowListFbPath = UBlueprintPathsLibrary.ProjectContentDir() + "Aki/Config/UniverseEditorConfig/FlowLists/";
 
-		// Token: 0x0401C283 RID: 115331
+		// Token: 0x04016CB2 RID: 93362
 		private const int FLOW_LIST_FB_LRU_CAPACITY = 20;
 
-		// Token: 0x0401C284 RID: 115332
+		// Token: 0x04016CB3 RID: 93363
 		[Nullable(new byte[]
 		{
 			2,
@@ -587,15 +422,15 @@ namespace CSharpScript.Game.Module.Plot.Flow
 		})]
 		private CacheLru<string, FlowConfig.FlowListFbIndex> FlowListFbLruInternal;
 
-		// Token: 0x0401C285 RID: 115333
+		// Token: 0x04016CB4 RID: 93364
 		[Nullable(2)]
 		private static FlowConfig _Instance;
 
-		// Token: 0x0200B222 RID: 45602
+		// Token: 0x02009C5B RID: 40027
 		[Nullable(0)]
 		private sealed class FlowListFbIndex
 		{
-			// Token: 0x0604E7CE RID: 321486 RVA: 0x014D794C File Offset: 0x014D5B4C
+			// Token: 0x06044DD8 RID: 282072 RVA: 0x0149124C File Offset: 0x0148F44C
 			public FlowListFbIndex(Aki.TDConfigMgr.Action.IFlowListInfo flowList)
 			{
 				if (flowList.Flows == null)
@@ -617,7 +452,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 				}
 			}
 
-			// Token: 0x0604E7CF RID: 321487 RVA: 0x014D7A40 File Offset: 0x014D5C40
+			// Token: 0x06044DD9 RID: 282073 RVA: 0x01491340 File Offset: 0x0148F540
 			[NullableContext(2)]
 			public Aki.TDConfigMgr.Action.IFlowInfo GetFlow(int flowId)
 			{
@@ -629,7 +464,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 				return result;
 			}
 
-			// Token: 0x0604E7D0 RID: 321488 RVA: 0x014D7A60 File Offset: 0x014D5C60
+			// Token: 0x06044DDA RID: 282074 RVA: 0x01491360 File Offset: 0x0148F560
 			[NullableContext(2)]
 			public Aki.TDConfigMgr.Action.IStateInfo GetState(int flowId, int stateId)
 			{
@@ -642,10 +477,10 @@ namespace CSharpScript.Game.Module.Plot.Flow
 				return result;
 			}
 
-			// Token: 0x0403604F RID: 221263
+			// Token: 0x04030AA3 RID: 199331
 			private readonly Dictionary<int, Aki.TDConfigMgr.Action.IFlowInfo> _flowMap = new Dictionary<int, Aki.TDConfigMgr.Action.IFlowInfo>();
 
-			// Token: 0x04036050 RID: 221264
+			// Token: 0x04030AA4 RID: 199332
 			private readonly Dictionary<int, Dictionary<int, Aki.TDConfigMgr.Action.IStateInfo>> _stateMapByFlow = new Dictionary<int, Dictionary<int, Aki.TDConfigMgr.Action.IStateInfo>>();
 		}
 	}

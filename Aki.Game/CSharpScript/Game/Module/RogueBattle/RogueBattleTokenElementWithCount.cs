@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EB6 RID: 20150
+	// Token: 0x02003E7F RID: 15999
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleTokenElementWithCount : GridProxyAbstract<IRogueBattleElementInfo>
 	{
-		// Token: 0x06033BFC RID: 211964 RVA: 0x00C1FDD3 File Offset: 0x00C1DFD3
+		// Token: 0x06028A67 RID: 166503 RVA: 0x00B692EB File Offset: 0x00B674EB
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BFD RID: 211965 RVA: 0x00C1FE0C File Offset: 0x00C1E00C
+		// Token: 0x06028A68 RID: 166504 RVA: 0x00B69324 File Offset: 0x00B67524
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleTokenElementWithCount.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033BFE RID: 211966 RVA: 0x00C1FE50 File Offset: 0x00C1E050
+		// Token: 0x06028A69 RID: 166505 RVA: 0x00B69368 File Offset: 0x00B67568
 		public override void Refresh(IRogueBattleElementInfo elementInfo, bool isSelected, int gridIndex)
 		{
 			RogueBattleTokenElement elementItem = this.ElementItem;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			text.SetChangeColor(isPreview, fcolor);
 		}
 
-		// Token: 0x0401B7F7 RID: 112631
+		// Token: 0x040161CA RID: 90570
 		[Nullable(2)]
 		public RogueBattleTokenElement ElementItem;
 	}

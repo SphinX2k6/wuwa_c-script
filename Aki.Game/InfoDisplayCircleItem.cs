@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001F98 RID: 8088
+// Token: 0x0200145A RID: 5210
 public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 {
-	// Token: 0x0600FB35 RID: 64309 RVA: 0x003CDB1C File Offset: 0x003CBD1C
+	// Token: 0x0600CF57 RID: 53079 RVA: 0x003D96DC File Offset: 0x003D78DC
 	[NullableContext(1)]
 	public InfoDisplayCircleItem(AActor uiActor) : base(uiActor)
 	{
 	}
 
-	// Token: 0x0600FB36 RID: 64310 RVA: 0x003CDB4C File Offset: 0x003CBD4C
+	// Token: 0x0600CF58 RID: 53080 RVA: 0x003D970C File Offset: 0x003D790C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -34,7 +34,7 @@ public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB37 RID: 64311 RVA: 0x003CDBF4 File Offset: 0x003CBDF4
+	// Token: 0x0600CF59 RID: 53081 RVA: 0x003D97B4 File Offset: 0x003D79B4
 	public override void RefreshItem(int showItemIndex)
 	{
 		if (this.Data == null)
@@ -53,7 +53,7 @@ public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 		}
 	}
 
-	// Token: 0x0600FB38 RID: 64312 RVA: 0x003CDC40 File Offset: 0x003CBE40
+	// Token: 0x0600CF5A RID: 53082 RVA: 0x003D9800 File Offset: 0x003D7A00
 	public override void OnMoveItem(float vectorX)
 	{
 		AutoAttachExhibitionItem attachItem = base.GetAttachItem();
@@ -98,14 +98,14 @@ public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 		}
 	}
 
-	// Token: 0x0600FB39 RID: 64313 RVA: 0x003CDDC2 File Offset: 0x003CBFC2
+	// Token: 0x0600CF5B RID: 53083 RVA: 0x003D9982 File Offset: 0x003D7B82
 	[NullableContext(2)]
 	public override void SetData(object param)
 	{
 		this.Data = (param as string[]);
 	}
 
-	// Token: 0x0600FB3A RID: 64314 RVA: 0x003CDDD0 File Offset: 0x003CBFD0
+	// Token: 0x0600CF5C RID: 53084 RVA: 0x003D9990 File Offset: 0x003D7B90
 	private void RefreshTexture()
 	{
 		if (this.CurrentItemData != "")
@@ -118,7 +118,7 @@ public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 		}
 	}
 
-	// Token: 0x0600FB3B RID: 64315 RVA: 0x003CDE14 File Offset: 0x003CC014
+	// Token: 0x0600CF5D RID: 53085 RVA: 0x003D99D4 File Offset: 0x003D7BD4
 	private void OnClickItem()
 	{
 		AutoAttachExhibitionItem attachItem = base.GetAttachItem();
@@ -140,22 +140,22 @@ public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 		}
 	}
 
-	// Token: 0x040074E4 RID: 29924
+	// Token: 0x040075C6 RID: 30150
 	private const int FRONT_HIERACHY = 3;
 
-	// Token: 0x040074E5 RID: 29925
+	// Token: 0x040075C7 RID: 30151
 	private const float ANIMAL_SCALE = 0.8f;
 
-	// Token: 0x040074E6 RID: 29926
+	// Token: 0x040075C8 RID: 30152
 	private const float LEFT_RANGE = 0.4f;
 
-	// Token: 0x040074E7 RID: 29927
+	// Token: 0x040075C9 RID: 30153
 	private const float MIDDLE_RANGE = 0.5f;
 
-	// Token: 0x040074E8 RID: 29928
+	// Token: 0x040075CA RID: 30154
 	private const float RIGHT_RANGE = 0.6f;
 
-	// Token: 0x040074E9 RID: 29929
+	// Token: 0x040075CB RID: 30155
 	[Nullable(new byte[]
 	{
 		2,
@@ -163,20 +163,20 @@ public class InfoDisplayCircleItem : AutoAttachExhibitionItemAbstract
 	})]
 	private string[] Data;
 
-	// Token: 0x040074EA RID: 29930
+	// Token: 0x040075CC RID: 30156
 	[Nullable(1)]
 	private string CurrentItemData = "";
 
-	// Token: 0x040074EB RID: 29931
+	// Token: 0x040075CD RID: 30157
 	private readonly FVector DefaultScale = new FVector(0.8f, 0.8f, 0.8f);
 
-	// Token: 0x02008586 RID: 34182
+	// Token: 0x0200770B RID: 30475
 	private class EInfoDisplayNoCircleItemComponents
 	{
-		// Token: 0x0402B790 RID: 178064
+		// Token: 0x04026AB3 RID: 158387
 		public const int Btn = 0;
 
-		// Token: 0x0402B791 RID: 178065
+		// Token: 0x04026AB4 RID: 158388
 		public const int Texture = 1;
 	}
 }

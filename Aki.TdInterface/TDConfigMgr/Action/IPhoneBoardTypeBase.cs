@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CDC RID: 7388
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EEB RID: 7915
 	public class IPhoneBoardTypeBase
 	{
-		// Token: 0x06009E9D RID: 40605 RVA: 0x0016AB40 File Offset: 0x00168D40
+		// Token: 0x0600A87D RID: 43133 RVA: 0x0017EDA0 File Offset: 0x0017CFA0
 		private IPhoneBoardTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E9E RID: 40606 RVA: 0x0016AB78 File Offset: 0x00168D78
+		// Token: 0x0600A87E RID: 43134 RVA: 0x0017EDD8 File Offset: 0x0017CFD8
 		public static IPhoneBoardTypeBase Create([Nullable(2)] IPhoneBoardTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E9F RID: 40607 RVA: 0x0016AB8B File Offset: 0x00168D8B
+		// Token: 0x0600A87F RID: 43135 RVA: 0x0017EDEB File Offset: 0x0017CFEB
 		public static IPhoneBoardTypeBase CreateFromSetValue([Nullable(2)] IPhoneBoardTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EA0 RID: 40608 RVA: 0x0016AB9E File Offset: 0x00168D9E
+		// Token: 0x0600A880 RID: 43136 RVA: 0x0017EDFE File Offset: 0x0017CFFE
 		public IPhoneBoardTypeBase_SetValue ToSetValue()
 		{
 			return new IPhoneBoardTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700315B RID: 12635
-		// (get) Token: 0x06009EA1 RID: 40609 RVA: 0x0016ABB1 File Offset: 0x00168DB1
-		// (set) Token: 0x06009EA2 RID: 40610 RVA: 0x0016ABDC File Offset: 0x00168DDC
+		// Token: 0x170033EC RID: 13292
+		// (get) Token: 0x0600A881 RID: 43137 RVA: 0x0017EE11 File Offset: 0x0017D011
+		// (set) Token: 0x0600A882 RID: 43138 RVA: 0x0017EE3C File Offset: 0x0017D03C
 		public virtual EPhoneBoardType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FD6 RID: 24534
+		// Token: 0x04006549 RID: 25929
 		[Nullable(2)]
 		protected IPhoneBoardTypeBase FbInstance;
 
-		// Token: 0x04005FD7 RID: 24535
+		// Token: 0x0400654A RID: 25930
 		[Nullable(2)]
 		protected IPhoneBoardTypeBase_SetValue PocoInterface;
 	}

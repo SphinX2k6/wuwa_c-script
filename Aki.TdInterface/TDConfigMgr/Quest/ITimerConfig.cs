@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011A2 RID: 4514
+	// Token: 0x020012DC RID: 4828
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITimerConfig
 	{
-		// Token: 0x06006674 RID: 26228 RVA: 0x000F5828 File Offset: 0x000F3A28
-		[NullableContext(1)]
+		// Token: 0x06006CAB RID: 27819 RVA: 0x00102FF4 File Offset: 0x001011F4
+		[NullableContext(0)]
 		private ITimerConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006675 RID: 26229 RVA: 0x000F5860 File Offset: 0x000F3A60
-		[NullableContext(1)]
+		// Token: 0x06006CAC RID: 27820 RVA: 0x0010302C File Offset: 0x0010122C
+		[NullableContext(0)]
 		public static ITimerConfig Create([Nullable(2)] ITimerConfig instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006676 RID: 26230 RVA: 0x000F5873 File Offset: 0x000F3A73
-		[NullableContext(1)]
+		// Token: 0x06006CAD RID: 27821 RVA: 0x0010303F File Offset: 0x0010123F
+		[NullableContext(0)]
 		public static ITimerConfig CreateFromSetValue([Nullable(2)] ITimerConfig_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006677 RID: 26231 RVA: 0x000F5886 File Offset: 0x000F3A86
-		[NullableContext(1)]
+		// Token: 0x06006CAE RID: 27822 RVA: 0x00103052 File Offset: 0x00101252
+		[NullableContext(0)]
 		public ITimerConfig_SetValue ToSetValue()
 		{
 			return new ITimerConfig_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700214C RID: 8524
-		// (get) Token: 0x06006678 RID: 26232 RVA: 0x000F58C0 File Offset: 0x000F3AC0
-		// (set) Token: 0x06006679 RID: 26233 RVA: 0x000F58FA File Offset: 0x000F3AFA
+		// Token: 0x1700230B RID: 8971
+		// (get) Token: 0x06006CAF RID: 27823 RVA: 0x0010308C File Offset: 0x0010128C
+		// (set) Token: 0x06006CB0 RID: 27824 RVA: 0x001030C6 File Offset: 0x001012C6
 		public virtual int? Time
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700214D RID: 8525
-		// (get) Token: 0x0600667A RID: 26234 RVA: 0x000F5908 File Offset: 0x000F3B08
-		// (set) Token: 0x0600667B RID: 26235 RVA: 0x000F592F File Offset: 0x000F3B2F
+		// Token: 0x1700230C RID: 8972
+		// (get) Token: 0x06006CB1 RID: 27825 RVA: 0x001030D4 File Offset: 0x001012D4
+		// (set) Token: 0x06006CB2 RID: 27826 RVA: 0x001030FB File Offset: 0x001012FB
 		public virtual VarRef VarForTime
 		{
 			get
@@ -116,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700214E RID: 8526
-		// (get) Token: 0x0600667C RID: 26236 RVA: 0x000F593D File Offset: 0x000F3B3D
-		// (set) Token: 0x0600667D RID: 26237 RVA: 0x000F5968 File Offset: 0x000F3B68
+		// Token: 0x1700230D RID: 8973
+		// (get) Token: 0x06006CB3 RID: 27827 RVA: 0x00103109 File Offset: 0x00101309
+		// (set) Token: 0x06006CB4 RID: 27828 RVA: 0x00103134 File Offset: 0x00101334
 		public virtual ETimerType TimerType
 		{
 			get
@@ -139,9 +139,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700214F RID: 8527
-		// (get) Token: 0x0600667E RID: 26238 RVA: 0x000F5978 File Offset: 0x000F3B78
-		// (set) Token: 0x0600667F RID: 26239 RVA: 0x000F59D9 File Offset: 0x000F3BD9
+		// Token: 0x1700230E RID: 8974
+		// (get) Token: 0x06006CB5 RID: 27829 RVA: 0x00103144 File Offset: 0x00101344
+		// (set) Token: 0x06006CB6 RID: 27830 RVA: 0x001031A5 File Offset: 0x001013A5
 		public virtual ITimerUiConfig UiConfig
 		{
 			get
@@ -169,17 +169,17 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D79 RID: 15737
+		// Token: 0x040040E1 RID: 16609
 		protected ITimerConfig FbInstance;
 
-		// Token: 0x04003D7A RID: 15738
+		// Token: 0x040040E2 RID: 16610
 		protected ITimerConfig_SetValue PocoInterface;
 
-		// Token: 0x04003D7B RID: 15739
-		[Nullable(1)]
+		// Token: 0x040040E3 RID: 16611
+		[Nullable(0)]
 		private ITimerUiConfig _UiConfigCache;
 
-		// Token: 0x04003D7C RID: 15740
+		// Token: 0x040040E4 RID: 16612
 		private bool _UiConfigInited;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CBA RID: 27834
+	// Token: 0x02005E34 RID: 24116
 	public class LevelConditionCheckKurotatoLevelFinished : LevelConditionBase
 	{
-		// Token: 0x0604460C RID: 280076 RVA: 0x010DCDC8 File Offset: 0x010DAFC8
+		// Token: 0x0603A766 RID: 239462 RVA: 0x01086E1C File Offset: 0x0108501C
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000422 RID: 1058
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200047B RID: 1147
 	public class IHitLogicChangeCountDownState : IHitLogicType
 	{
-		// Token: 0x06001559 RID: 5465 RVA: 0x000430C8 File Offset: 0x000412C8
+		// Token: 0x060016F3 RID: 5875 RVA: 0x00046E10 File Offset: 0x00045010
 		private IHitLogicChangeCountDownState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600155A RID: 5466 RVA: 0x00043100 File Offset: 0x00041300
+		// Token: 0x060016F4 RID: 5876 RVA: 0x00046E48 File Offset: 0x00045048
 		public static IHitLogicChangeCountDownState Create([Nullable(2)] IHitLogicChangeCountDownState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600155B RID: 5467 RVA: 0x00043113 File Offset: 0x00041313
+		// Token: 0x060016F5 RID: 5877 RVA: 0x00046E5B File Offset: 0x0004505B
 		public static IHitLogicChangeCountDownState CreateFromSetValue([Nullable(2)] IHitLogicChangeCountDownState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600155C RID: 5468 RVA: 0x00043126 File Offset: 0x00041326
+		// Token: 0x060016F6 RID: 5878 RVA: 0x00046E6E File Offset: 0x0004506E
 		public new IHitLogicChangeCountDownState_SetValue ToSetValue()
 		{
 			return new IHitLogicChangeCountDownState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005D7 RID: 1495
-		// (get) Token: 0x0600155D RID: 5469 RVA: 0x00043139 File Offset: 0x00041339
-		// (set) Token: 0x0600155E RID: 5470 RVA: 0x00043164 File Offset: 0x00041364
+		// Token: 0x1700063E RID: 1598
+		// (get) Token: 0x060016F7 RID: 5879 RVA: 0x00046E81 File Offset: 0x00045081
+		// (set) Token: 0x060016F8 RID: 5880 RVA: 0x00046EAC File Offset: 0x000450AC
 		public override EHitLogicType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400108A RID: 4234
+		// Token: 0x040011AC RID: 4524
 		[Nullable(2)]
 		protected new IHitLogicChangeCountDownState FbInstance;
 
-		// Token: 0x0400108B RID: 4235
+		// Token: 0x040011AD RID: 4525
 		[Nullable(2)]
 		protected new IHitLogicChangeCountDownState_SetValue PocoInterface;
 	}

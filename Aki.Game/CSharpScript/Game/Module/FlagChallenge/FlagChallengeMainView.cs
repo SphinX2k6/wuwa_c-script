@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A6A RID: 23146
+	// Token: 0x02004A46 RID: 19014
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeMainView : UiViewBase
 	{
-		// Token: 0x0603AA7A RID: 240250 RVA: 0x00DF70C1 File Offset: 0x00DF52C1
+		// Token: 0x0602F9C3 RID: 195011 RVA: 0x00D47645 File Offset: 0x00D45845
 		public FlagChallengeMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AA7B RID: 240251 RVA: 0x00DF70E0 File Offset: 0x00DF52E0
+		// Token: 0x0602F9C4 RID: 195012 RVA: 0x00D47664 File Offset: 0x00D45864
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA7C RID: 240252 RVA: 0x00DF74F8 File Offset: 0x00DF56F8
+		// Token: 0x0602F9C5 RID: 195013 RVA: 0x00D47A7C File Offset: 0x00D45C7C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeMainView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AA7D RID: 240253 RVA: 0x00DF753C File Offset: 0x00DF573C
+		// Token: 0x0602F9C6 RID: 195014 RVA: 0x00D47AC0 File Offset: 0x00D45CC0
 		protected override void OnStart()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotFlagChallengeActivityReward, base.GetItem(36), null, this.ActivityId);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Add(EEventName.OnFlagChallengeTaskUpdate, new Action<int>(this.OnTaskUpdate));
 		}
 
-		// Token: 0x0603AA7E RID: 240254 RVA: 0x00DF760C File Offset: 0x00DF580C
+		// Token: 0x0602F9C7 RID: 195015 RVA: 0x00D47B90 File Offset: 0x00D45D90
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotFlagChallengeActivityReward, base.GetItem(36), this.ActivityId);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Remove(EEventName.OnFlagChallengeTaskUpdate, new Action<int>(this.OnTaskUpdate));
 		}
 
-		// Token: 0x0603AA7F RID: 240255 RVA: 0x00DF7670 File Offset: 0x00DF5870
+		// Token: 0x0602F9C8 RID: 195016 RVA: 0x00D47BF4 File Offset: 0x00D45DF4
 		private void InitViewData()
 		{
 			ActivityFlagChallengeData activityFlagChallengeData = (ActivityFlagChallengeData)this.OpenParam;
@@ -124,14 +124,14 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.UpdateViewData();
 		}
 
-		// Token: 0x0603AA80 RID: 240256 RVA: 0x00DF7704 File Offset: 0x00DF5904
+		// Token: 0x0602F9C9 RID: 195017 RVA: 0x00D47C88 File Offset: 0x00D45E88
 		private void UpdateViewData()
 		{
 			int levelRecommendStrongholdId = FlagChallengeModel.Instance.GetLevelRecommendStrongholdId(this.ActivityId, this.SelectedLevelId, null);
 			this.EnterStrongholdId = levelRecommendStrongholdId;
 		}
 
-		// Token: 0x0603AA81 RID: 240257 RVA: 0x00DF7730 File Offset: 0x00DF5930
+		// Token: 0x0602F9CA RID: 195018 RVA: 0x00D47CB4 File Offset: 0x00D45EB4
 		private UniTask CreateAreaItemAsync(UUIItem uiItem, int index)
 		{
 			FlagChallengeMainView.<CreateAreaItemAsync>d__19 <CreateAreaItemAsync>d__;
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <CreateAreaItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AA82 RID: 240258 RVA: 0x00DF7783 File Offset: 0x00DF5983
+		// Token: 0x0602F9CB RID: 195019 RVA: 0x00D47D07 File Offset: 0x00D45F07
 		private void RefreshTaskView()
 		{
 			base.GetText(18).SetText(this.Data.GetTaskProgressText(), true);
 		}
 
-		// Token: 0x0603AA83 RID: 240259 RVA: 0x00DF77A0 File Offset: 0x00DF59A0
+		// Token: 0x0602F9CC RID: 195020 RVA: 0x00D47D24 File Offset: 0x00D45F24
 		private void RefreshLevelView()
 		{
 			EFlagChallengeUiStyleType uiStyle = this.Data.GetLevelData(this.SelectedLevelId).GetUiStyle();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetItem(34).SetUIActive(uiStyle == EFlagChallengeUiStyleType.Red || uiStyle == EFlagChallengeUiStyleType.Hidden);
 		}
 
-		// Token: 0x0603AA84 RID: 240260 RVA: 0x00DF7934 File Offset: 0x00DF5B34
+		// Token: 0x0602F9CD RID: 195021 RVA: 0x00D47EB8 File Offset: 0x00D460B8
 		private void RefreshLevelDetailView()
 		{
 			FlagChallengeLevelData levelData = this.Data.GetLevelData(this.SelectedLevelId);
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetItem(39).SetUIActive(flag);
 		}
 
-		// Token: 0x0603AA85 RID: 240261 RVA: 0x00DF7B94 File Offset: 0x00DF5D94
+		// Token: 0x0602F9CE RID: 195022 RVA: 0x00D48118 File Offset: 0x00D46318
 		private string GetLevelDiffBgRes(int targetLevel)
 		{
 			switch (FlagChallengeModel.Instance.GetLevelDiffType(this.ActivityId, targetLevel, null))
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA86 RID: 240262 RVA: 0x00DF7BE8 File Offset: 0x00DF5DE8
+		// Token: 0x0602F9CF RID: 195023 RVA: 0x00D4816C File Offset: 0x00D4636C
 		private void RefreshAreaView(bool isClear = true)
 		{
 			if (isClear)
@@ -256,19 +256,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA87 RID: 240263 RVA: 0x00DF7D14 File Offset: 0x00DF5F14
+		// Token: 0x0602F9D0 RID: 195024 RVA: 0x00D48298 File Offset: 0x00D46498
 		private void OnBuffButtonClick()
 		{
 			FlagChallengeController.Instance.OpenFlagChallengeBuffView(this.ActivityId, null);
 		}
 
-		// Token: 0x0603AA88 RID: 240264 RVA: 0x00DF7D3A File Offset: 0x00DF5F3A
+		// Token: 0x0602F9D1 RID: 195025 RVA: 0x00D482BE File Offset: 0x00D464BE
 		private void OnTaskButtonClick()
 		{
 			FlagChallengeController.Instance.OpenFlagChallengeTaskView(this.ActivityId);
 		}
 
-		// Token: 0x0603AA89 RID: 240265 RVA: 0x00DF7D4C File Offset: 0x00DF5F4C
+		// Token: 0x0602F9D2 RID: 195026 RVA: 0x00D482D0 File Offset: 0x00D464D0
 		private void OnDetailButtonClick()
 		{
 			int levelRecommendStrongholdId = FlagChallengeModel.Instance.GetLevelRecommendStrongholdId(this.ActivityId, this.SelectedLevelId, null);
@@ -276,20 +276,20 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			FlagChallengeController.Instance.OpenFlagChallengeAreaDetailView(this.ActivityId, this.SelectedLevelId, strongholdData.StrongholdConfig.AreaId, new int?(strongholdData.Id));
 		}
 
-		// Token: 0x0603AA8A RID: 240266 RVA: 0x00DF7DAC File Offset: 0x00DF5FAC
+		// Token: 0x0602F9D3 RID: 195027 RVA: 0x00D48330 File Offset: 0x00D46530
 		private void OnHelpClick()
 		{
 			int mainViewHelpId = FlagChallengeConfig.Instance.GetMainViewHelpId();
 			HelpController.Instance.OpenHelpById(mainViewHelpId);
 		}
 
-		// Token: 0x0603AA8B RID: 240267 RVA: 0x00DF7DCF File Offset: 0x00DF5FCF
+		// Token: 0x0602F9D4 RID: 195028 RVA: 0x00D48353 File Offset: 0x00D46553
 		private void OnChallengeButtonClick()
 		{
 			FlagChallengeController.Instance.OpenFlagChallengeSelectRoleView(this.ActivityId, this.SelectedLevelId, this.EnterStrongholdId);
 		}
 
-		// Token: 0x0603AA8C RID: 240268 RVA: 0x00DF7DED File Offset: 0x00DF5FED
+		// Token: 0x0602F9D5 RID: 195029 RVA: 0x00D48371 File Offset: 0x00D46571
 		private FlagChallengeLevelTabItem CreateLevelItem()
 		{
 			FlagChallengeLevelTabItem flagChallengeLevelTabItem = new FlagChallengeLevelTabItem();
@@ -297,13 +297,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return flagChallengeLevelTabItem;
 		}
 
-		// Token: 0x0603AA8D RID: 240269 RVA: 0x00DF7E06 File Offset: 0x00DF6006
+		// Token: 0x0602F9D6 RID: 195030 RVA: 0x00D4838A File Offset: 0x00D4658A
 		private void OnCloseButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603AA8E RID: 240270 RVA: 0x00DF7E0F File Offset: 0x00DF600F
+		// Token: 0x0602F9D7 RID: 195031 RVA: 0x00D48393 File Offset: 0x00D46593
 		private void OnTaskUpdate(int activityId)
 		{
 			if (activityId != this.ActivityId)
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshTaskView();
 		}
 
-		// Token: 0x0603AA8F RID: 240271 RVA: 0x00DF7E24 File Offset: 0x00DF6024
+		// Token: 0x0602F9D8 RID: 195032 RVA: 0x00D483A8 File Offset: 0x00D465A8
 		private void OnLevelTabItemSelect(int levelId)
 		{
 			GenericLayout<FlagChallengeLevelTabItem, FlagChallengeLevelData> genericLayout = this.LevelScrollView.GetGenericLayout();
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SequencePlayer.PlayOrReplaySequenceByName("Switch", true, null);
 		}
 
-		// Token: 0x0603AA90 RID: 240272 RVA: 0x00DF7E9C File Offset: 0x00DF609C
+		// Token: 0x0602F9D9 RID: 195033 RVA: 0x00D48420 File Offset: 0x00D46620
 		private void OnLevelAreaItemClick(int areaId)
 		{
 			this.SelectedAreaId = new int?(areaId);
@@ -336,13 +336,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			FlagChallengeController.Instance.OpenFlagChallengeAreaDetailView(this.ActivityId, this.SelectedLevelId, this.SelectedAreaId.Value, new int?(areaRecommendStrongholdId));
 		}
 
-		// Token: 0x0401E994 RID: 125332
+		// Token: 0x0401943B RID: 103483
 		private int ActivityId;
 
-		// Token: 0x0401E995 RID: 125333
+		// Token: 0x0401943C RID: 103484
 		private FlagChallengeData Data;
 
-		// Token: 0x0401E996 RID: 125334
+		// Token: 0x0401943D RID: 103485
 		[Nullable(new byte[]
 		{
 			2,
@@ -351,32 +351,32 @@ namespace CSharpScript.Game.Module.FlagChallenge
 		})]
 		private GenericScrollViewNew<FlagChallengeLevelTabItem, FlagChallengeLevelData> LevelScrollView;
 
-		// Token: 0x0401E997 RID: 125335
+		// Token: 0x0401943E RID: 103486
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401E998 RID: 125336
+		// Token: 0x0401943F RID: 103487
 		private FlagChallengeLevelInfoItem LevelInfoItem;
 
-		// Token: 0x0401E999 RID: 125337
+		// Token: 0x04019440 RID: 103488
 		private FlagChallengeCompleteItem CompleteItem;
 
-		// Token: 0x0401E99A RID: 125338
+		// Token: 0x04019441 RID: 103489
 		private readonly List<FlagChallengeLevelAreaItem> AreaItemList = new List<FlagChallengeLevelAreaItem>();
 
-		// Token: 0x0401E99B RID: 125339
+		// Token: 0x04019442 RID: 103490
 		private readonly Dictionary<int, FlagChallengeLevelAreaItem> AreaItemMap = new Dictionary<int, FlagChallengeLevelAreaItem>();
 
-		// Token: 0x0401E99C RID: 125340
+		// Token: 0x04019443 RID: 103491
 		private int SelectedLevelId;
 
-		// Token: 0x0401E99D RID: 125341
+		// Token: 0x04019444 RID: 103492
 		private int? SelectedAreaId;
 
-		// Token: 0x0401E99E RID: 125342
+		// Token: 0x04019445 RID: 103493
 		private int EnterStrongholdId;
 
-		// Token: 0x0401E99F RID: 125343
+		// Token: 0x04019446 RID: 103494
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 	}

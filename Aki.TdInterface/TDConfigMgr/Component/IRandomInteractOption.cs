@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000652 RID: 1618
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006EF RID: 1775
 	public class IRandomInteractOption
 	{
-		// Token: 0x0600229E RID: 8862 RVA: 0x0005F24C File Offset: 0x0005D44C
+		// Token: 0x060025A4 RID: 9636 RVA: 0x00065F60 File Offset: 0x00064160
 		private IRandomInteractOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600229F RID: 8863 RVA: 0x0005F284 File Offset: 0x0005D484
+		// Token: 0x060025A5 RID: 9637 RVA: 0x00065F98 File Offset: 0x00064198
 		public static IRandomInteractOption Create([Nullable(2)] IRandomInteractOption instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022A0 RID: 8864 RVA: 0x0005F297 File Offset: 0x0005D497
+		// Token: 0x060025A6 RID: 9638 RVA: 0x00065FAB File Offset: 0x000641AB
 		public static IRandomInteractOption CreateFromSetValue([Nullable(2)] IRandomInteractOption_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022A1 RID: 8865 RVA: 0x0005F2AA File Offset: 0x0005D4AA
+		// Token: 0x060025A7 RID: 9639 RVA: 0x00065FBE File Offset: 0x000641BE
 		public IRandomInteractOption_SetValue ToSetValue()
 		{
 			return new IRandomInteractOption_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000933 RID: 2355
-		// (get) Token: 0x060022A2 RID: 8866 RVA: 0x0005F2C9 File Offset: 0x0005D4C9
-		// (set) Token: 0x060022A3 RID: 8867 RVA: 0x0005F2F4 File Offset: 0x0005D4F4
+		// Token: 0x170009EA RID: 2538
+		// (get) Token: 0x060025A8 RID: 9640 RVA: 0x00065FDD File Offset: 0x000641DD
+		// (set) Token: 0x060025A9 RID: 9641 RVA: 0x00066008 File Offset: 0x00064208
 		public virtual int Weight
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000934 RID: 2356
-		// (get) Token: 0x060022A4 RID: 8868 RVA: 0x0005F304 File Offset: 0x0005D504
-		// (set) Token: 0x060022A5 RID: 8869 RVA: 0x0005F365 File Offset: 0x0005D565
+		// Token: 0x170009EB RID: 2539
+		// (get) Token: 0x060025AA RID: 9642 RVA: 0x00066018 File Offset: 0x00064218
+		// (set) Token: 0x060025AB RID: 9643 RVA: 0x00066079 File Offset: 0x00064279
 		public virtual IInteractOption Option
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400180B RID: 6155
+		// Token: 0x040019FD RID: 6653
 		[Nullable(2)]
 		protected IRandomInteractOption FbInstance;
 
-		// Token: 0x0400180C RID: 6156
+		// Token: 0x040019FE RID: 6654
 		[Nullable(2)]
 		protected IRandomInteractOption_SetValue PocoInterface;
 
-		// Token: 0x0400180D RID: 6157
+		// Token: 0x040019FF RID: 6655
 		private IInteractOption _OptionCache;
 
-		// Token: 0x0400180E RID: 6158
+		// Token: 0x04001A00 RID: 6656
 		private bool _OptionInited;
 	}
 }

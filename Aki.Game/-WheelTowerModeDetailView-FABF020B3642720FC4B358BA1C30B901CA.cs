@@ -1,66 +1,66 @@
 ﻿using System;
 
-// Token: 0x0200161C RID: 5660
+// Token: 0x02000AD4 RID: 2772
 internal enum <WheelTowerModeDetailView>FABF020B3642720FC4B358BA1C30B901CA7EB2CCE84E18723C22C68BEAFEEC10C__EWheelTowerModeDetailViewComponent
 {
-	// Token: 0x040047B8 RID: 18360
+	// Token: 0x0400485E RID: 18526
 	ItemCaption,
-	// Token: 0x040047B9 RID: 18361
+	// Token: 0x0400485F RID: 18527
 	ItemModeTitle,
-	// Token: 0x040047BA RID: 18362
+	// Token: 0x04004860 RID: 18528
 	TextureScoreLevel,
-	// Token: 0x040047BB RID: 18363
+	// Token: 0x04004861 RID: 18529
 	TextScoreTitle,
-	// Token: 0x040047BC RID: 18364
+	// Token: 0x04004862 RID: 18530
 	TextScore,
-	// Token: 0x040047BD RID: 18365
+	// Token: 0x04004863 RID: 18531
 	BtnScoreLevelRule,
-	// Token: 0x040047BE RID: 18366
+	// Token: 0x04004864 RID: 18532
 	TextNextScore,
-	// Token: 0x040047BF RID: 18367
+	// Token: 0x04004865 RID: 18533
 	SpriteScoreProgress,
-	// Token: 0x040047C0 RID: 18368
+	// Token: 0x04004866 RID: 18534
 	TextBossProgress,
-	// Token: 0x040047C1 RID: 18369
+	// Token: 0x04004867 RID: 18535
 	ScrollViewBoss,
-	// Token: 0x040047C2 RID: 18370
+	// Token: 0x04004868 RID: 18536
 	BtnRecord,
-	// Token: 0x040047C3 RID: 18371
+	// Token: 0x04004869 RID: 18537
 	ScrollViewTeam,
-	// Token: 0x040047C4 RID: 18372
+	// Token: 0x0400486A RID: 18538
 	ItemTeam,
-	// Token: 0x040047C5 RID: 18373
+	// Token: 0x0400486B RID: 18539
 	ItemTipPanel,
-	// Token: 0x040047C6 RID: 18374
+	// Token: 0x0400486C RID: 18540
 	TextTip,
-	// Token: 0x040047C7 RID: 18375
+	// Token: 0x0400486D RID: 18541
 	BtnReset,
-	// Token: 0x040047C8 RID: 18376
+	// Token: 0x0400486E RID: 18542
 	ItemContinueBtn,
-	// Token: 0x040047C9 RID: 18377
+	// Token: 0x0400486F RID: 18543
 	TextureLevelGridBg,
-	// Token: 0x040047CA RID: 18378
+	// Token: 0x04004870 RID: 18544
 	TextureLevelCircleBg,
-	// Token: 0x040047CB RID: 18379
+	// Token: 0x04004871 RID: 18545
 	TextureLevelCircle2Bg,
-	// Token: 0x040047CC RID: 18380
+	// Token: 0x04004872 RID: 18546
 	TextureLevelBg,
-	// Token: 0x040047CD RID: 18381
+	// Token: 0x04004873 RID: 18547
 	TextureLevelBgLight,
-	// Token: 0x040047CE RID: 18382
+	// Token: 0x04004874 RID: 18548
 	TextureLevelKingBgLight,
-	// Token: 0x040047CF RID: 18383
+	// Token: 0x04004875 RID: 18549
 	BtnBossHandBook,
-	// Token: 0x040047D0 RID: 18384
+	// Token: 0x04004876 RID: 18550
 	ItemEndlessPanel,
-	// Token: 0x040047D1 RID: 18385
+	// Token: 0x04004877 RID: 18551
 	ItemNormalPanel,
-	// Token: 0x040047D2 RID: 18386
+	// Token: 0x04004878 RID: 18552
 	SpriteProgressBarEndless,
-	// Token: 0x040047D3 RID: 18387
+	// Token: 0x04004879 RID: 18553
 	SpriteProgressBarNormal,
-	// Token: 0x040047D4 RID: 18388
+	// Token: 0x0400487A RID: 18554
 	TextureLine,
-	// Token: 0x040047D5 RID: 18389
+	// Token: 0x0400487B RID: 18555
 	ShareBtnItem
 }

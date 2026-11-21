@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006623 RID: 26147
+	// Token: 0x020055A1 RID: 21921
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class FishingRoleTechItem : GridProxyAbstract<IFishingTechNode>
 	{
-		// Token: 0x060418DD RID: 268509 RVA: 0x00FE5530 File Offset: 0x00FE3730
+		// Token: 0x060365A2 RID: 222626 RVA: 0x00F2C5E4 File Offset: 0x00F2A7E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060418DE RID: 268510 RVA: 0x00FE56E0 File Offset: 0x00FE38E0
+		// Token: 0x060365A3 RID: 222627 RVA: 0x00F2C794 File Offset: 0x00F2A994
 		protected override void OnStart()
 		{
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x060418DF RID: 268511 RVA: 0x00FE56F0 File Offset: 0x00FE38F0
+		// Token: 0x060365A4 RID: 222628 RVA: 0x00F2C7A4 File Offset: 0x00F2A9A4
 		[NullableContext(1)]
 		public override void Refresh(IFishingTechNode data, bool isSelected, int gridIndex)
 		{
@@ -109,13 +109,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), fishingTechEffectById2.Desc, list.ToArray());
 		}
 
-		// Token: 0x060418E0 RID: 268512 RVA: 0x00FE5941 File Offset: 0x00FE3B41
+		// Token: 0x060365A5 RID: 222629 RVA: 0x00F2C9F5 File Offset: 0x00F2ABF5
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FishingRoleTechNode, base.GetItem(8), this.Node.ConfigId);
 		}
 
-		// Token: 0x060418E1 RID: 268513 RVA: 0x00FE5964 File Offset: 0x00FE3B64
+		// Token: 0x060365A6 RID: 222630 RVA: 0x00F2CA18 File Offset: 0x00F2AC18
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			Action<IFishingTechNode, UUIExtendToggle> onClickToggleBack = this.OnClickToggleBack;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			onClickToggleBack(this.Node, base.GetExtendToggle(6));
 		}
 
-		// Token: 0x060418E2 RID: 268514 RVA: 0x00FE5983 File Offset: 0x00FE3B83
+		// Token: 0x060365A7 RID: 222631 RVA: 0x00F2CA37 File Offset: 0x00F2AC37
 		public void SelectToggle()
 		{
 			Action<IFishingTechNode, UUIExtendToggle> onClickToggleBack = this.OnClickToggleBack;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetExtendToggle(6).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x040221B5 RID: 139701
+		// Token: 0x0401CAE6 RID: 117478
 		[Nullable(new byte[]
 		{
 			2,
@@ -146,41 +146,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		public Action<IFishingTechNode, UUIExtendToggle> OnClickToggleBack;
 
-		// Token: 0x040221B6 RID: 139702
+		// Token: 0x0401CAE7 RID: 117479
 		[Nullable(2)]
 		public IFishingTechNode Node;
 
-		// Token: 0x0200C83C RID: 51260
+		// Token: 0x0200B21E RID: 45598
 		private class EComponentDefine
 		{
-			// Token: 0x0403C7BB RID: 247739
+			// Token: 0x04037100 RID: 225536
 			public const int NameText = 0;
 
-			// Token: 0x0403C7BC RID: 247740
+			// Token: 0x04037101 RID: 225537
 			public const int DesText = 1;
 
-			// Token: 0x0403C7BD RID: 247741
+			// Token: 0x04037102 RID: 225538
 			public const int LockItem = 2;
 
-			// Token: 0x0403C7BE RID: 247742
+			// Token: 0x04037103 RID: 225539
 			public const int EnableItem = 3;
 
-			// Token: 0x0403C7BF RID: 247743
+			// Token: 0x04037104 RID: 225540
 			public const int MaxItem = 4;
 
-			// Token: 0x0403C7C0 RID: 247744
+			// Token: 0x04037105 RID: 225541
 			public const int IconTexture = 5;
 
-			// Token: 0x0403C7C1 RID: 247745
+			// Token: 0x04037106 RID: 225542
 			public const int Toggle = 6;
 
-			// Token: 0x0403C7C2 RID: 247746
+			// Token: 0x04037107 RID: 225543
 			public const int TechLevelText = 7;
 
-			// Token: 0x0403C7C3 RID: 247747
+			// Token: 0x04037108 RID: 225544
 			public const int RedDotItem = 8;
 
-			// Token: 0x0403C7C4 RID: 247748
+			// Token: 0x04037109 RID: 225545
 			public const int ScrollViewBar = 9;
 		}
 	}

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D30 RID: 19760
+	// Token: 0x0200522C RID: 21036
 	public enum TCheckFormationRoleInfo : byte
 	{
-		// Token: 0x0400D733 RID: 55091
+		// Token: 0x0400E261 RID: 57953
 		NONE,
-		// Token: 0x0400D734 RID: 55092
+		// Token: 0x0400E262 RID: 57954
 		IFeatureCollectionLevel,
-		// Token: 0x0400D735 RID: 55093
+		// Token: 0x0400E263 RID: 57955
 		IHasEquippedVision,
-		// Token: 0x0400D736 RID: 55094
+		// Token: 0x0400E264 RID: 57956
 		IHasUpgradableVision,
-		// Token: 0x0400D737 RID: 55095
+		// Token: 0x0400E265 RID: 57957
 		IRoleLevel,
-		// Token: 0x0400D738 RID: 55096
+		// Token: 0x0400E266 RID: 57958
 		IWeaponLevel
 	}
 }

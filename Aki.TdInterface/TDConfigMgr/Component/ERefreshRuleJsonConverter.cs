@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F1 RID: 2545
+	// Token: 0x02000AB6 RID: 2742
 	public class ERefreshRuleJsonConverter : JsonConverter<ERefreshRule>
 	{
-		// Token: 0x0600386F RID: 14447 RVA: 0x00092240 File Offset: 0x00090440
+		// Token: 0x06003C47 RID: 15431 RVA: 0x0009AB00 File Offset: 0x00098D00
 		public override ERefreshRule Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ERefreshRuleExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003870 RID: 14448 RVA: 0x00092264 File Offset: 0x00090464
+		// Token: 0x06003C48 RID: 15432 RVA: 0x0009AB24 File Offset: 0x00098D24
 		public override void Write(Utf8JsonWriter writer, ERefreshRule value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

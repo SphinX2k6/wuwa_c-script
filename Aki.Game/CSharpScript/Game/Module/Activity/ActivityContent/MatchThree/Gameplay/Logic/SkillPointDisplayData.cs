@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064FD RID: 25853
+	// Token: 0x0200547B RID: 21627
 	[NullableContext(2)]
 	[Nullable(0)]
 	public readonly struct SkillPointDisplayData
 	{
-		// Token: 0x06040E76 RID: 265846 RVA: 0x00FBAE49 File Offset: 0x00FB9049
+		// Token: 0x06035B3A RID: 219962 RVA: 0x00F01E79 File Offset: 0x00F00079
 		public SkillPointDisplayData(int energyNode, string icon, bool charged, bool released)
 		{
 			this.EnergyNode = energyNode;
@@ -17,16 +17,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Released = released;
 		}
 
-		// Token: 0x04021D3F RID: 138559
+		// Token: 0x0401C670 RID: 116336
 		public readonly int EnergyNode;
 
-		// Token: 0x04021D40 RID: 138560
+		// Token: 0x0401C671 RID: 116337
 		public readonly string Icon;
 
-		// Token: 0x04021D41 RID: 138561
+		// Token: 0x0401C672 RID: 116338
 		public readonly bool Charged;
 
-		// Token: 0x04021D42 RID: 138562
+		// Token: 0x0401C673 RID: 116339
 		public readonly bool Released;
 	}
 }

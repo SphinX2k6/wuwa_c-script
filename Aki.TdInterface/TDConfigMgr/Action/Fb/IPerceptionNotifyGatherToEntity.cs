@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026DC RID: 9948
+	// Token: 0x020029A0 RID: 10656
 	public class IPerceptionNotifyGatherToEntity : IBattleStatePerceptionBehaviorType
 	{
-		// Token: 0x0600DE46 RID: 56902 RVA: 0x0020FB3B File Offset: 0x0020DD3B
-		[NullableContext(1)]
+		// Token: 0x0600EC22 RID: 60450 RVA: 0x0022C37B File Offset: 0x0022A57B
 		public static IPerceptionNotifyGatherToEntity Create(IPerceptionNotifyGatherToEntity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004250 RID: 16976
-		// (get) Token: 0x0600DE47 RID: 56903 RVA: 0x0020FB5A File Offset: 0x0020DD5A
+		// Token: 0x17004590 RID: 17808
+		// (get) Token: 0x0600EC23 RID: 60451 RVA: 0x0022C39A File Offset: 0x0022A59A
 		public override EBattleStatePerceptionBehavior Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004251 RID: 16977
-		// (get) Token: 0x0600DE48 RID: 56904 RVA: 0x0020FB67 File Offset: 0x0020DD67
+		// Token: 0x17004591 RID: 17809
+		// (get) Token: 0x0600EC24 RID: 60452 RVA: 0x0022C3A7 File Offset: 0x0022A5A7
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B64 RID: 31588
+		// Token: 0x04008204 RID: 33284
 		private IPerceptionNotifyGatherToEntity Instance;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200611F RID: 24863
+	// Token: 0x02006781 RID: 26497
 	public struct IAddBuffToFollowShooter : IFlatbufferObject
 	{
-		// Token: 0x1700B73B RID: 46907
-		// (get) Token: 0x0602A7CF RID: 174031 RVA: 0x005DA086 File Offset: 0x005D8286
+		// Token: 0x1700C0A6 RID: 49318
+		// (get) Token: 0x0602CEB0 RID: 183984 RVA: 0x0062402E File Offset: 0x0062222E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A7D0 RID: 174032 RVA: 0x005DA093 File Offset: 0x005D8293
+		// Token: 0x0602CEB1 RID: 183985 RVA: 0x0062403B File Offset: 0x0062223B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A7D1 RID: 174033 RVA: 0x005DA09C File Offset: 0x005D829C
+		// Token: 0x0602CEB2 RID: 183986 RVA: 0x00624044 File Offset: 0x00622244
 		public static IAddBuffToFollowShooter GetRootAsIAddBuffToFollowShooter(ByteBuffer _bb)
 		{
 			return IAddBuffToFollowShooter.GetRootAsIAddBuffToFollowShooter(_bb, default(IAddBuffToFollowShooter));
 		}
 
-		// Token: 0x0602A7D2 RID: 174034 RVA: 0x005DA0B8 File Offset: 0x005D82B8
+		// Token: 0x0602CEB3 RID: 183987 RVA: 0x00624060 File Offset: 0x00622260
 		public static IAddBuffToFollowShooter GetRootAsIAddBuffToFollowShooter(ByteBuffer _bb, IAddBuffToFollowShooter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A7D3 RID: 174035 RVA: 0x005DA0D5 File Offset: 0x005D82D5
+		// Token: 0x0602CEB4 RID: 183988 RVA: 0x0062407D File Offset: 0x0062227D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A7D4 RID: 174036 RVA: 0x005DA0E4 File Offset: 0x005D82E4
+		// Token: 0x0602CEB5 RID: 183989 RVA: 0x0062408C File Offset: 0x0062228C
 		public IAddBuffToFollowShooter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602A7D5 RID: 174037 RVA: 0x005DA0F4 File Offset: 0x005D82F4
+		// Token: 0x0602CEB6 RID: 183990 RVA: 0x0062409C File Offset: 0x0062229C
 		public long BuffIds(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x1700B73C RID: 46908
-		// (get) Token: 0x0602A7D6 RID: 174038 RVA: 0x005DA134 File Offset: 0x005D8334
+		// Token: 0x1700C0A7 RID: 49319
+		// (get) Token: 0x0602CEB7 RID: 183991 RVA: 0x006240DC File Offset: 0x006222DC
 		public int BuffIdsLength
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A7D7 RID: 174039 RVA: 0x005DA15F File Offset: 0x005D835F
+		// Token: 0x0602CEB8 RID: 183992 RVA: 0x00624107 File Offset: 0x00622307
 		public Span<long> GetBuffIdsBytes()
 		{
 			return this.__p.__vector_as_span<long>(4, 8);
 		}
 
-		// Token: 0x0602A7D8 RID: 174040 RVA: 0x005DA16E File Offset: 0x005D836E
+		// Token: 0x0602CEB9 RID: 183993 RVA: 0x00624116 File Offset: 0x00622316
 		public long[] GetBuffIdsArray()
 		{
 			return this.__p.__vector_as_array<long>(4);
 		}
 
-		// Token: 0x1700B73D RID: 46909
-		// (get) Token: 0x0602A7D9 RID: 174041 RVA: 0x005DA17C File Offset: 0x005D837C
+		// Token: 0x1700C0A8 RID: 49320
+		// (get) Token: 0x0602CEBA RID: 183994 RVA: 0x00624124 File Offset: 0x00622324
 		public int FollowShooterId
 		{
 			get
@@ -101,8 +101,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B73E RID: 46910
-		// (get) Token: 0x0602A7DA RID: 174042 RVA: 0x005DA1B8 File Offset: 0x005D83B8
+		// Token: 0x1700C0A9 RID: 49321
+		// (get) Token: 0x0602CEBB RID: 183995 RVA: 0x00624160 File Offset: 0x00622360
 		public byte NullMask
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A7DB RID: 174043 RVA: 0x005DA1F4 File Offset: 0x005D83F4
+		// Token: 0x0602CEBC RID: 183996 RVA: 0x0062419C File Offset: 0x0062239C
 		public static Offset<IAddBuffToFollowShooter> CreateIAddBuffToFollowShooter(FlatBufferBuilder builder, VectorOffset BuffIdsOffset = default(VectorOffset), int FollowShooterId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -126,19 +126,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddBuffToFollowShooter.EndIAddBuffToFollowShooter(builder);
 		}
 
-		// Token: 0x0602A7DC RID: 174044 RVA: 0x005DA218 File Offset: 0x005D8418
+		// Token: 0x0602CEBD RID: 183997 RVA: 0x006241C0 File Offset: 0x006223C0
 		public static void StartIAddBuffToFollowShooter(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602A7DD RID: 174045 RVA: 0x005DA221 File Offset: 0x005D8421
+		// Token: 0x0602CEBE RID: 183998 RVA: 0x006241C9 File Offset: 0x006223C9
 		public static void AddBuffIds(FlatBufferBuilder builder, VectorOffset buffIdsOffset)
 		{
 			builder.AddOffset(0, buffIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602A7DE RID: 174046 RVA: 0x005DA234 File Offset: 0x005D8434
+		// Token: 0x0602CEBF RID: 183999 RVA: 0x006241DC File Offset: 0x006223DC
 		public static VectorOffset CreateBuffIdsVector(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A7DF RID: 174047 RVA: 0x005DA26B File Offset: 0x005D846B
+		// Token: 0x0602CEC0 RID: 184000 RVA: 0x00624213 File Offset: 0x00622413
 		public static VectorOffset CreateBuffIdsVectorBlock(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A7E0 RID: 174048 RVA: 0x005DA285 File Offset: 0x005D8485
+		// Token: 0x0602CEC1 RID: 184001 RVA: 0x0062422D File Offset: 0x0062242D
 		public static VectorOffset CreateBuffIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<long> data)
 		{
 			builder.StartVector(8, data.Count, 8);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A7E1 RID: 174049 RVA: 0x005DA2A3 File Offset: 0x005D84A3
+		// Token: 0x0602CEC2 RID: 184002 RVA: 0x0062424B File Offset: 0x0062244B
 		public static VectorOffset CreateBuffIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,31 +173,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602A7E2 RID: 174050 RVA: 0x005DA2BC File Offset: 0x005D84BC
+		// Token: 0x0602CEC3 RID: 184003 RVA: 0x00624264 File Offset: 0x00622464
 		public static void StartBuffIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(8, numElems, 8);
 		}
 
-		// Token: 0x0602A7E3 RID: 174051 RVA: 0x005DA2C7 File Offset: 0x005D84C7
+		// Token: 0x0602CEC4 RID: 184004 RVA: 0x0062426F File Offset: 0x0062246F
 		public static void AddFollowShooterId(FlatBufferBuilder builder, int followShooterId)
 		{
 			builder.AddInt(1, followShooterId, 0);
 		}
 
-		// Token: 0x0602A7E4 RID: 174052 RVA: 0x005DA2D2 File Offset: 0x005D84D2
+		// Token: 0x0602CEC5 RID: 184005 RVA: 0x0062427A File Offset: 0x0062247A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602A7E5 RID: 174053 RVA: 0x005DA2DD File Offset: 0x005D84DD
+		// Token: 0x0602CEC6 RID: 184006 RVA: 0x00624285 File Offset: 0x00622485
 		public static Offset<IAddBuffToFollowShooter> EndIAddBuffToFollowShooter(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddBuffToFollowShooter>(builder.EndTable());
 		}
 
-		// Token: 0x0602A7E6 RID: 174054 RVA: 0x005DA2EC File Offset: 0x005D84EC
+		// Token: 0x0602CEC7 RID: 184007 RVA: 0x00624294 File Offset: 0x00622494
 		public IAddBuffToFollowShooterT UnPack()
 		{
 			IAddBuffToFollowShooterT addBuffToFollowShooterT = new IAddBuffToFollowShooterT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return addBuffToFollowShooterT;
 		}
 
-		// Token: 0x0602A7E7 RID: 174055 RVA: 0x005DA308 File Offset: 0x005D8508
+		// Token: 0x0602CEC8 RID: 184008 RVA: 0x006242B0 File Offset: 0x006224B0
 		public void UnPackTo(IAddBuffToFollowShooterT _o)
 		{
 			_o.BuffIds = new List<long>();
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602A7E8 RID: 174056 RVA: 0x005DA35C File Offset: 0x005D855C
+		// Token: 0x0602CEC9 RID: 184009 RVA: 0x00624304 File Offset: 0x00622504
 		public static Offset<IAddBuffToFollowShooter> Pack(FlatBufferBuilder builder, IAddBuffToFollowShooterT _o)
 		{
 			if (_o == null)
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddBuffToFollowShooter.CreateIAddBuffToFollowShooter(builder, buffIdsOffset, _o.FollowShooterId, _o.NullMask);
 		}
 
-		// Token: 0x040104F0 RID: 66800
+		// Token: 0x040112F4 RID: 70388
 		private Table __p;
 	}
 }

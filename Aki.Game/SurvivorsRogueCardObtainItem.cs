@@ -4,7 +4,7 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002AD3 RID: 10963
+// Token: 0x0200204F RID: 8271
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 })]
 public class SurvivorsRogueCardObtainItem : SurvivorsRogueCardScrollItemBase<GoodsDetail>
 {
-	// Token: 0x06016D06 RID: 93446 RVA: 0x005CB2C0 File Offset: 0x005C94C0
+	// Token: 0x06014737 RID: 83767 RVA: 0x005F7E14 File Offset: 0x005F6014
 	public override UniTask RefreshAsync(GoodsDetail data, bool isSelected, int gridIndex)
 	{
 		SurvivorsRogueCardObtainItem.<RefreshAsync>d__1 <RefreshAsync>d__;
@@ -27,7 +27,7 @@ public class SurvivorsRogueCardObtainItem : SurvivorsRogueCardScrollItemBase<Goo
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D07 RID: 93447 RVA: 0x005CB31C File Offset: 0x005C951C
+	// Token: 0x06014738 RID: 83768 RVA: 0x005F7E70 File Offset: 0x005F6070
 	private UniTask RefreshRoleLv(Aki.Protocol.SurvivorsGainData gainData, int gridIndex)
 	{
 		SurvivorsRogueCardObtainItem.<RefreshRoleLv>d__2 <RefreshRoleLv>d__;
@@ -40,7 +40,7 @@ public class SurvivorsRogueCardObtainItem : SurvivorsRogueCardScrollItemBase<Goo
 		return <RefreshRoleLv>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D08 RID: 93448 RVA: 0x005CB370 File Offset: 0x005C9570
+	// Token: 0x06014739 RID: 83769 RVA: 0x005F7EC4 File Offset: 0x005F60C4
 	private UniTask RefreshWeaponLv(Aki.Protocol.SurvivorsGainData gainData, int gridIndex)
 	{
 		SurvivorsRogueCardObtainItem.<RefreshWeaponLv>d__3 <RefreshWeaponLv>d__;
@@ -53,7 +53,7 @@ public class SurvivorsRogueCardObtainItem : SurvivorsRogueCardScrollItemBase<Goo
 		return <RefreshWeaponLv>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D09 RID: 93449 RVA: 0x005CB3C4 File Offset: 0x005C95C4
+	// Token: 0x0601473A RID: 83770 RVA: 0x005F7F18 File Offset: 0x005F6118
 	private UniTask RefreshNewWeapon(Aki.Protocol.SurvivorsGainData gainData, int gridIndex)
 	{
 		SurvivorsRogueCardObtainItem.<RefreshNewWeapon>d__4 <RefreshNewWeapon>d__;
@@ -66,7 +66,7 @@ public class SurvivorsRogueCardObtainItem : SurvivorsRogueCardScrollItemBase<Goo
 		return <RefreshNewWeapon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D0A RID: 93450 RVA: 0x005CB418 File Offset: 0x005C9618
+	// Token: 0x0601473B RID: 83771 RVA: 0x005F7F6C File Offset: 0x005F616C
 	private UniTask RefreshNewItem(Aki.Protocol.SurvivorsGainData gainData, int gridIndex)
 	{
 		SurvivorsRogueCardObtainItem.<RefreshNewItem>d__5 <RefreshNewItem>d__;
@@ -79,24 +79,24 @@ public class SurvivorsRogueCardObtainItem : SurvivorsRogueCardScrollItemBase<Goo
 		return <RefreshNewItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016D0B RID: 93451 RVA: 0x005CB46B File Offset: 0x005C966B
+	// Token: 0x0601473C RID: 83772 RVA: 0x005F7FBF File Offset: 0x005F61BF
 	public override void OnSelected(bool fireEvent)
 	{
 		base.SetSelected(true, fireEvent, false);
 	}
 
-	// Token: 0x06016D0C RID: 93452 RVA: 0x005CB476 File Offset: 0x005C9676
+	// Token: 0x0601473D RID: 83773 RVA: 0x005F7FCA File Offset: 0x005F61CA
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.SetSelected(false, fireEvent, false);
 	}
 
-	// Token: 0x06016D0D RID: 93453 RVA: 0x005CB481 File Offset: 0x005C9681
+	// Token: 0x0601473E RID: 83774 RVA: 0x005F7FD5 File Offset: 0x005F61D5
 	public override object GetKey(GoodsDetail data, int gridIndex)
 	{
 		return data.SurvivorsGainData.IncId;
 	}
 
-	// Token: 0x0400A97C RID: 43388
+	// Token: 0x0400AD82 RID: 44418
 	protected GoodsDetail GoodData;
 }

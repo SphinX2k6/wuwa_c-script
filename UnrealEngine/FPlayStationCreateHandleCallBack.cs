@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EFB RID: 7931
+	// Token: 0x02000608 RID: 1544
 	public sealed class FPlayStationCreateHandleCallBack : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E1E7 RID: 123367 RVA: 0x002CC20C File Offset: 0x002CA40C
+		// Token: 0x06008827 RID: 34855 RVA: 0x000CD194 File Offset: 0x000CB394
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FPlayStationCreateHandleCallBack.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E1E8 RID: 123368 RVA: 0x002CC218 File Offset: 0x002CA418
+		// Token: 0x06008828 RID: 34856 RVA: 0x000CD1A0 File Offset: 0x000CB3A0
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FPlayStationCreateHandleCallBack._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FPlayStationCreateHandleCallBack._FunctionPtr;
 		}
 
-		// Token: 0x0601E1E9 RID: 123369 RVA: 0x002CC23B File Offset: 0x002CA43B
+		// Token: 0x06008829 RID: 34857 RVA: 0x000CD1C3 File Offset: 0x000CB3C3
 		public FPlayStationCreateHandleCallBack()
 		{
 		}
 
-		// Token: 0x0601E1EA RID: 123370 RVA: 0x002CC243 File Offset: 0x002CA443
+		// Token: 0x0600882A RID: 34858 RVA: 0x000CD1CB File Offset: 0x000CB3CB
 		[NullableContext(2)]
 		public FPlayStationCreateHandleCallBack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E1EB RID: 123371 RVA: 0x002CC24D File Offset: 0x002CA44D
+		// Token: 0x0600882B RID: 34859 RVA: 0x000CD1D5 File Offset: 0x000CB3D5
 		public FPlayStationCreateHandleCallBack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E1EC RID: 123372 RVA: 0x002CC258 File Offset: 0x002CA458
+		// Token: 0x0600882C RID: 34860 RVA: 0x000CD1E0 File Offset: 0x000CB3E0
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E1ED RID: 123373 RVA: 0x002CC28A File Offset: 0x002CA48A
+		// Token: 0x0600882D RID: 34861 RVA: 0x000CD212 File Offset: 0x000CB412
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, int> Callback)
 		{
 			if (FPlayStationCreateHandleCallBack.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FPlayStationCreateHandleCallBack.RegisterId);
 		}
 
-		// Token: 0x0601E1EE RID: 123374 RVA: 0x002CC2C4 File Offset: 0x002CA4C4
+		// Token: 0x0600882E RID: 34862 RVA: 0x000CD24C File Offset: 0x000CB44C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int ret, int result)
 		{
 			FPlayStationCreateHandleCallBack.__FPlayStationCreateHandleCallBack_DelegateParams* ptr = stackalloc FPlayStationCreateHandleCallBack.__FPlayStationCreateHandleCallBack_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FPlayStationCreateHandleCallBack.__FPlayStationCreateHandleCallBack_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E1EF RID: 123375 RVA: 0x002CC308 File Offset: 0x002CA508
+		// Token: 0x0600882F RID: 34863 RVA: 0x000CD290 File Offset: 0x000CB490
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -91,35 +88,35 @@ namespace UnrealEngine
 			action(((FPlayStationCreateHandleCallBack.__FPlayStationCreateHandleCallBack_DelegateParams*)__Parameters)->ret, ((FPlayStationCreateHandleCallBack.__FPlayStationCreateHandleCallBack_DelegateParams*)__Parameters)->result);
 		}
 
-		// Token: 0x04010451 RID: 66641
+		// Token: 0x04003B23 RID: 15139
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010452 RID: 66642
+		// Token: 0x04003B24 RID: 15140
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.PlayStationCreateHandleCallBack__DelegateSignature";
 
-		// Token: 0x04010453 RID: 66643
+		// Token: 0x04003B25 RID: 15141
 		private static int RegisterId;
 
-		// Token: 0x020033E1 RID: 13281
+		// Token: 0x02000E30 RID: 3632
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FPlayStationCreateHandleCallBack_DelegateParams
+		private ref struct __FPlayStationCreateHandleCallBack_DelegateParams
 		{
-			// Token: 0x04017399 RID: 95129
+			// Token: 0x040061C8 RID: 25032
 			[FieldOffset(0)]
 			public int ret;
 
-			// Token: 0x0401739A RID: 95130
+			// Token: 0x040061C9 RID: 25033
 			[FieldOffset(4)]
 			public int result;
 		}
 
-		// Token: 0x020033E2 RID: 13282
+		// Token: 0x02000E31 RID: 3633
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401739B RID: 95131
+			// Token: 0x040061CA RID: 25034
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

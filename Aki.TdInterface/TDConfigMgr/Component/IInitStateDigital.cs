@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200046A RID: 1130
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004C3 RID: 1219
 	public class IInitStateDigital : IInitState
 	{
-		// Token: 0x060016C9 RID: 5833 RVA: 0x00045D10 File Offset: 0x00043F10
+		// Token: 0x06001863 RID: 6243 RVA: 0x00049A58 File Offset: 0x00047C58
 		private IInitStateDigital_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016CA RID: 5834 RVA: 0x00045D48 File Offset: 0x00043F48
+		// Token: 0x06001864 RID: 6244 RVA: 0x00049A90 File Offset: 0x00047C90
 		public static IInitStateDigital Create([Nullable(2)] IInitStateDigital instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016CB RID: 5835 RVA: 0x00045D5B File Offset: 0x00043F5B
+		// Token: 0x06001865 RID: 6245 RVA: 0x00049AA3 File Offset: 0x00047CA3
 		public static IInitStateDigital CreateFromSetValue([Nullable(2)] IInitStateDigital_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016CC RID: 5836 RVA: 0x00045D6E File Offset: 0x00043F6E
+		// Token: 0x06001866 RID: 6246 RVA: 0x00049AB6 File Offset: 0x00047CB6
 		public new IInitStateDigital_SetValue ToSetValue()
 		{
 			return new IInitStateDigital_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000623 RID: 1571
-		// (get) Token: 0x060016CD RID: 5837 RVA: 0x00045D81 File Offset: 0x00043F81
-		// (set) Token: 0x060016CE RID: 5838 RVA: 0x00045DAC File Offset: 0x00043FAC
+		// Token: 0x1700068A RID: 1674
+		// (get) Token: 0x06001867 RID: 6247 RVA: 0x00049AC9 File Offset: 0x00047CC9
+		// (set) Token: 0x06001868 RID: 6248 RVA: 0x00049AF4 File Offset: 0x00047CF4
 		public override EInitStateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001144 RID: 4420
+		// Token: 0x04001266 RID: 4710
 		[Nullable(2)]
 		protected new IInitStateDigital FbInstance;
 
-		// Token: 0x04001145 RID: 4421
+		// Token: 0x04001267 RID: 4711
 		[Nullable(2)]
 		protected new IInitStateDigital_SetValue PocoInterface;
 	}

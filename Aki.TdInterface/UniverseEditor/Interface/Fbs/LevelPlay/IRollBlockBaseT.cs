@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200454F RID: 17743
+	// Token: 0x020049B7 RID: 18871
 	public class IRollBlockBaseT
 	{
-		// Token: 0x17007DDE RID: 32222
-		// (get) Token: 0x0601AB43 RID: 109379 RVA: 0x003CEEBC File Offset: 0x003CD0BC
-		// (set) Token: 0x0601AB44 RID: 109380 RVA: 0x003CEEC4 File Offset: 0x003CD0C4
+		// Token: 0x1700841F RID: 33823
+		// (get) Token: 0x0601C318 RID: 115480 RVA: 0x003FB158 File Offset: 0x003F9358
+		// (set) Token: 0x0601C319 RID: 115481 RVA: 0x003FB160 File Offset: 0x003F9360
 		public ERollBlockBlockType Type { get; set; }
 
-		// Token: 0x17007DDF RID: 32223
-		// (get) Token: 0x0601AB45 RID: 109381 RVA: 0x003CEECD File Offset: 0x003CD0CD
-		// (set) Token: 0x0601AB46 RID: 109382 RVA: 0x003CEED5 File Offset: 0x003CD0D5
+		// Token: 0x17008420 RID: 33824
+		// (get) Token: 0x0601C31A RID: 115482 RVA: 0x003FB169 File Offset: 0x003F9369
+		// (set) Token: 0x0601C31B RID: 115483 RVA: 0x003FB171 File Offset: 0x003F9371
 		public int BlockId { get; set; }
 
-		// Token: 0x0601AB47 RID: 109383 RVA: 0x003CEEDE File Offset: 0x003CD0DE
+		// Token: 0x0601C31C RID: 115484 RVA: 0x003FB17A File Offset: 0x003F937A
 		public IRollBlockBaseT()
 		{
 			this.Type = ERollBlockBlockType.Block1;

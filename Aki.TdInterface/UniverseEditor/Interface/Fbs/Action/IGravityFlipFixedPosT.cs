@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200689E RID: 26782
+	// Token: 0x02006F3F RID: 28479
 	public class IGravityFlipFixedPosT
 	{
-		// Token: 0x1700C6D6 RID: 50902
-		// (get) Token: 0x0602EB66 RID: 191334 RVA: 0x0065E4E4 File Offset: 0x0065C6E4
-		// (set) Token: 0x0602EB67 RID: 191335 RVA: 0x0065E4EC File Offset: 0x0065C6EC
+		// Token: 0x1700D0BC RID: 53436
+		// (get) Token: 0x060314A0 RID: 201888 RVA: 0x006AD564 File Offset: 0x006AB764
+		// (set) Token: 0x060314A1 RID: 201889 RVA: 0x006AD56C File Offset: 0x006AB76C
 		public ETeleportType Type { get; set; }
 
-		// Token: 0x1700C6D7 RID: 50903
-		// (get) Token: 0x0602EB68 RID: 191336 RVA: 0x0065E4F5 File Offset: 0x0065C6F5
-		// (set) Token: 0x0602EB69 RID: 191337 RVA: 0x0065E4FD File Offset: 0x0065C6FD
+		// Token: 0x1700D0BD RID: 53437
+		// (get) Token: 0x060314A2 RID: 201890 RVA: 0x006AD575 File Offset: 0x006AB775
+		// (set) Token: 0x060314A3 RID: 201891 RVA: 0x006AD57D File Offset: 0x006AB77D
 		public int GravityAndPosEntityId { get; set; }
 
-		// Token: 0x0602EB6A RID: 191338 RVA: 0x0065E506 File Offset: 0x0065C706
+		// Token: 0x060314A4 RID: 201892 RVA: 0x006AD586 File Offset: 0x006AB786
 		public IGravityFlipFixedPosT()
 		{
 			this.Type = ETeleportType.FixedPos;

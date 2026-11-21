@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000063 RID: 99
 	public class DynamicSpawnMonsterComponent_SetValue
 	{
-		// Token: 0x04000207 RID: 519
+		// Token: 0x0400020C RID: 524
 		public bool? Disabled;
 
-		// Token: 0x04000208 RID: 520
+		// Token: 0x0400020D RID: 525
 		public bool? EdIsLocked;
 
-		// Token: 0x04000209 RID: 521
-		[Nullable(1)]
+		// Token: 0x0400020E RID: 526
 		public List<IConditionSpawnMonster> Group;
 	}
 }

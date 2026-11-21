@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200042E RID: 1070
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000487 RID: 1159
 	public class IHitTimeScaleRatio
 	{
-		// Token: 0x0600158F RID: 5519 RVA: 0x000436DC File Offset: 0x000418DC
+		// Token: 0x06001729 RID: 5929 RVA: 0x00047424 File Offset: 0x00045624
 		private IHitTimeScaleRatio_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001590 RID: 5520 RVA: 0x00043714 File Offset: 0x00041914
+		// Token: 0x0600172A RID: 5930 RVA: 0x0004745C File Offset: 0x0004565C
 		public static IHitTimeScaleRatio Create([Nullable(2)] IHitTimeScaleRatio instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001591 RID: 5521 RVA: 0x00043727 File Offset: 0x00041927
+		// Token: 0x0600172B RID: 5931 RVA: 0x0004746F File Offset: 0x0004566F
 		public static IHitTimeScaleRatio CreateFromSetValue([Nullable(2)] IHitTimeScaleRatio_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001592 RID: 5522 RVA: 0x0004373A File Offset: 0x0004193A
+		// Token: 0x0600172C RID: 5932 RVA: 0x00047482 File Offset: 0x00045682
 		public IHitTimeScaleRatio_SetValue ToSetValue()
 		{
 			return new IHitTimeScaleRatio_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005E0 RID: 1504
-		// (get) Token: 0x06001593 RID: 5523 RVA: 0x00043765 File Offset: 0x00041965
-		// (set) Token: 0x06001594 RID: 5524 RVA: 0x00043794 File Offset: 0x00041994
+		// Token: 0x17000647 RID: 1607
+		// (get) Token: 0x0600172D RID: 5933 RVA: 0x000474AD File Offset: 0x000456AD
+		// (set) Token: 0x0600172E RID: 5934 RVA: 0x000474DC File Offset: 0x000456DC
 		public virtual float TimeRatio
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005E1 RID: 1505
-		// (get) Token: 0x06001595 RID: 5525 RVA: 0x000437A4 File Offset: 0x000419A4
-		// (set) Token: 0x06001596 RID: 5526 RVA: 0x000437DE File Offset: 0x000419DE
+		// Token: 0x17000648 RID: 1608
+		// (get) Token: 0x0600172F RID: 5935 RVA: 0x000474EC File Offset: 0x000456EC
+		// (set) Token: 0x06001730 RID: 5936 RVA: 0x00047526 File Offset: 0x00045726
 		public virtual float? MaxExtraTime
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005E2 RID: 1506
-		// (get) Token: 0x06001597 RID: 5527 RVA: 0x000437EC File Offset: 0x000419EC
-		// (set) Token: 0x06001598 RID: 5528 RVA: 0x0004381B File Offset: 0x00041A1B
+		// Token: 0x17000649 RID: 1609
+		// (get) Token: 0x06001731 RID: 5937 RVA: 0x00047534 File Offset: 0x00045734
+		// (set) Token: 0x06001732 RID: 5938 RVA: 0x00047563 File Offset: 0x00045763
 		public virtual float ValueRatio
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010A3 RID: 4259
+		// Token: 0x040011C5 RID: 4549
 		[Nullable(2)]
 		protected IHitTimeScaleRatio FbInstance;
 
-		// Token: 0x040010A4 RID: 4260
+		// Token: 0x040011C6 RID: 4550
 		[Nullable(2)]
 		protected IHitTimeScaleRatio_SetValue PocoInterface;
 	}

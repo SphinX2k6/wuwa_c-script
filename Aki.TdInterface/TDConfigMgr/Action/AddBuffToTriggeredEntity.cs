@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200148F RID: 5263
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015E8 RID: 5608
 	public class AddBuffToTriggeredEntity : ActionParams
 	{
-		// Token: 0x060077BA RID: 30650 RVA: 0x0011F484 File Offset: 0x0011D684
+		// Token: 0x06007E87 RID: 32391 RVA: 0x0012E0D0 File Offset: 0x0012C2D0
 		private AddBuffToTriggeredEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060077BB RID: 30651 RVA: 0x0011F4BC File Offset: 0x0011D6BC
+		// Token: 0x06007E88 RID: 32392 RVA: 0x0012E108 File Offset: 0x0012C308
 		public static AddBuffToTriggeredEntity Create([Nullable(2)] AddBuffToTriggeredEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060077BC RID: 30652 RVA: 0x0011F4CF File Offset: 0x0011D6CF
+		// Token: 0x06007E89 RID: 32393 RVA: 0x0012E11B File Offset: 0x0012C31B
 		public static AddBuffToTriggeredEntity CreateFromSetValue([Nullable(2)] AddBuffToTriggeredEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060077BD RID: 30653 RVA: 0x0011F4E2 File Offset: 0x0011D6E2
+		// Token: 0x06007E8A RID: 32394 RVA: 0x0012E12E File Offset: 0x0012C32E
 		public AddBuffToTriggeredEntity_SetValue ToSetValue()
 		{
 			return new AddBuffToTriggeredEntity_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700283C RID: 10300
-		// (get) Token: 0x060077BE RID: 30654 RVA: 0x0011F4F5 File Offset: 0x0011D6F5
-		// (set) Token: 0x060077BF RID: 30655 RVA: 0x0011F51C File Offset: 0x0011D71C
+		// Token: 0x17002A26 RID: 10790
+		// (get) Token: 0x06007E8B RID: 32395 RVA: 0x0012E141 File Offset: 0x0012C341
+		// (set) Token: 0x06007E8C RID: 32396 RVA: 0x0012E168 File Offset: 0x0012C368
 		public virtual List<long> BuffIds
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400459E RID: 17822
+		// Token: 0x04004939 RID: 18745
 		[Nullable(2)]
 		protected new AddBuffToTriggeredEntity FbInstance;
 
-		// Token: 0x0400459F RID: 17823
+		// Token: 0x0400493A RID: 18746
 		[Nullable(2)]
 		protected AddBuffToTriggeredEntity_SetValue PocoInterface;
 	}

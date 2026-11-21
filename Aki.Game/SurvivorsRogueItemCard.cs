@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002B93 RID: 11155
+// Token: 0x0200210F RID: 8463
 public class SurvivorsRogueItemCard : SurvivorsRogueCardBaseData, ISurvivorsRogueItemCard, ISurvivorsRogueCardBase, ISurvivorsHandbookItemDataBase
 {
-	// Token: 0x060171E5 RID: 94693 RVA: 0x005DCB28 File Offset: 0x005DAD28
+	// Token: 0x06014C16 RID: 85014 RVA: 0x00609708 File Offset: 0x00607908
 	public SurvivorsRogueItemCard()
 	{
 		base.Type = ESurvivorsRogueItemType.Normal;
 	}
 
-	// Token: 0x17001F16 RID: 7958
-	// (get) Token: 0x060171E6 RID: 94694 RVA: 0x005DCB37 File Offset: 0x005DAD37
-	// (set) Token: 0x060171E7 RID: 94695 RVA: 0x005DCB3F File Offset: 0x005DAD3F
+	// Token: 0x17001F6E RID: 8046
+	// (get) Token: 0x06014C17 RID: 85015 RVA: 0x00609717 File Offset: 0x00607917
+	// (set) Token: 0x06014C18 RID: 85016 RVA: 0x0060971F File Offset: 0x0060791F
 	public bool? IsNew { get; set; }
 }

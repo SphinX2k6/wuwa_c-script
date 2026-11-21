@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 {
-	// Token: 0x020047F8 RID: 18424
+	// Token: 0x02003729 RID: 14121
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PunishReportTargetListPanel
 	{
-		// Token: 0x06030411 RID: 197649 RVA: 0x00B310BD File Offset: 0x00B2F2BD
+		// Token: 0x06024BE1 RID: 150497 RVA: 0x00A6105D File Offset: 0x00A5F25D
 		public void Initialize(UUILayoutBase rootLayout)
 		{
 			this.TargetListLayout = new GenericLayoutAdd<PunishReportTargetListItemPanel>(rootLayout, new TLayoutRefresh<PunishReportTargetListItemPanel>(this.OnLayoutRefresh));
 		}
 
-		// Token: 0x06030412 RID: 197650 RVA: 0x00B310D8 File Offset: 0x00B2F2D8
+		// Token: 0x06024BE2 RID: 150498 RVA: 0x00A61078 File Offset: 0x00A5F278
 		private ILayoutItem<PunishReportTargetListItemPanel> OnLayoutRefresh(object data, UUIItem uiItem, int index, int originalItemIndex)
 		{
 			PunishReportTargetListItemPanel punishReportTargetListItemPanel = new PunishReportTargetListItemPanel();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			};
 		}
 
-		// Token: 0x06030413 RID: 197651 RVA: 0x00B31118 File Offset: 0x00B2F318
+		// Token: 0x06024BE3 RID: 150499 RVA: 0x00A610B8 File Offset: 0x00A5F2B8
 		public PunishReportTargetListItemPanel AddItemByKey(string key)
 		{
 			GenericLayoutAdd<PunishReportTargetListItemPanel> targetListLayout = this.TargetListLayout;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			return punishReportTargetListItemPanel;
 		}
 
-		// Token: 0x06030414 RID: 197652 RVA: 0x00B31198 File Offset: 0x00B2F398
+		// Token: 0x06024BE4 RID: 150500 RVA: 0x00A61138 File Offset: 0x00A5F338
 		public void Clear()
 		{
 			GenericLayoutAdd<PunishReportTargetListItemPanel> targetListLayout = this.TargetListLayout;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			targetListLayout.ClearChildren();
 		}
 
-		// Token: 0x04019F98 RID: 106392
+		// Token: 0x0401464C RID: 83532
 		[Nullable(new byte[]
 		{
 			2,

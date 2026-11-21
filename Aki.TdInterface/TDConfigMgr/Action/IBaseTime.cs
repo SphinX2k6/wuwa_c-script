@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017FC RID: 6140
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001985 RID: 6533
 	public class IBaseTime
 	{
-		// Token: 0x060083DB RID: 33755 RVA: 0x0013A8C8 File Offset: 0x00138AC8
+		// Token: 0x06008AF7 RID: 35575 RVA: 0x00149FB0 File Offset: 0x001481B0
 		private IBaseTime_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060083DC RID: 33756 RVA: 0x0013A900 File Offset: 0x00138B00
+		// Token: 0x06008AF8 RID: 35576 RVA: 0x00149FE8 File Offset: 0x001481E8
 		public static IBaseTime Create([Nullable(2)] IBaseTime instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083DD RID: 33757 RVA: 0x0013A913 File Offset: 0x00138B13
+		// Token: 0x06008AF9 RID: 35577 RVA: 0x00149FFB File Offset: 0x001481FB
 		public static IBaseTime CreateFromSetValue([Nullable(2)] IBaseTime_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083DE RID: 33758 RVA: 0x0013A926 File Offset: 0x00138B26
+		// Token: 0x06008AFA RID: 35578 RVA: 0x0014A00E File Offset: 0x0014820E
 		public IBaseTime_SetValue ToSetValue()
 		{
 			return new IBaseTime_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B48 RID: 11080
-		// (get) Token: 0x060083DF RID: 33759 RVA: 0x0013A945 File Offset: 0x00138B45
-		// (set) Token: 0x060083E0 RID: 33760 RVA: 0x0013A970 File Offset: 0x00138B70
+		// Token: 0x17002D40 RID: 11584
+		// (get) Token: 0x06008AFB RID: 35579 RVA: 0x0014A02D File Offset: 0x0014822D
+		// (set) Token: 0x06008AFC RID: 35580 RVA: 0x0014A058 File Offset: 0x00148258
 		public virtual int Hour
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B49 RID: 11081
-		// (get) Token: 0x060083E1 RID: 33761 RVA: 0x0013A97E File Offset: 0x00138B7E
-		// (set) Token: 0x060083E2 RID: 33762 RVA: 0x0013A9A9 File Offset: 0x00138BA9
+		// Token: 0x17002D41 RID: 11585
+		// (get) Token: 0x06008AFD RID: 35581 RVA: 0x0014A066 File Offset: 0x00148266
+		// (set) Token: 0x06008AFE RID: 35582 RVA: 0x0014A091 File Offset: 0x00148291
 		public virtual int Minute
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005393 RID: 21395
+		// Token: 0x040057DB RID: 22491
 		[Nullable(2)]
 		protected IBaseTime FbInstance;
 
-		// Token: 0x04005394 RID: 21396
+		// Token: 0x040057DC RID: 22492
 		[Nullable(2)]
 		protected IBaseTime_SetValue PocoInterface;
 	}

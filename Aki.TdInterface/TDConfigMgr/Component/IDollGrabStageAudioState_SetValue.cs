@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002CA RID: 714
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000311 RID: 785
 	public class IDollGrabStageAudioState_SetValue
 	{
-		// Token: 0x04000C31 RID: 3121
+		// Token: 0x04000D1B RID: 3355
 		public string Group;
 
-		// Token: 0x04000C32 RID: 3122
+		// Token: 0x04000D1C RID: 3356
 		public string State;
 	}
 }

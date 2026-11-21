@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CF2 RID: 7410
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F01 RID: 7937
 	public class IPictureCaptionConfig
 	{
-		// Token: 0x06009F05 RID: 40709 RVA: 0x0016B720 File Offset: 0x00169920
+		// Token: 0x0600A8E5 RID: 43237 RVA: 0x0017F980 File Offset: 0x0017DB80
 		private IPictureCaptionConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F06 RID: 40710 RVA: 0x0016B758 File Offset: 0x00169958
+		// Token: 0x0600A8E6 RID: 43238 RVA: 0x0017F9B8 File Offset: 0x0017DBB8
 		public static IPictureCaptionConfig Create([Nullable(2)] IPictureCaptionConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F07 RID: 40711 RVA: 0x0016B76B File Offset: 0x0016996B
+		// Token: 0x0600A8E7 RID: 43239 RVA: 0x0017F9CB File Offset: 0x0017DBCB
 		public static IPictureCaptionConfig CreateFromSetValue([Nullable(2)] IPictureCaptionConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F08 RID: 40712 RVA: 0x0016B77E File Offset: 0x0016997E
+		// Token: 0x0600A8E8 RID: 43240 RVA: 0x0017F9DE File Offset: 0x0017DBDE
 		public IPictureCaptionConfig_SetValue ToSetValue()
 		{
 			return new IPictureCaptionConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700316E RID: 12654
-		// (get) Token: 0x06009F09 RID: 40713 RVA: 0x0016B7B5 File Offset: 0x001699B5
-		// (set) Token: 0x06009F0A RID: 40714 RVA: 0x0016B7E0 File Offset: 0x001699E0
+		// Token: 0x170033FF RID: 13311
+		// (get) Token: 0x0600A8E9 RID: 43241 RVA: 0x0017FA15 File Offset: 0x0017DC15
+		// (set) Token: 0x0600A8EA RID: 43242 RVA: 0x0017FA40 File Offset: 0x0017DC40
 		public virtual string PictureCaption
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700316F RID: 12655
-		// (get) Token: 0x06009F0B RID: 40715 RVA: 0x0016B7EE File Offset: 0x001699EE
-		// (set) Token: 0x06009F0C RID: 40716 RVA: 0x0016B815 File Offset: 0x00169A15
+		// Token: 0x17003400 RID: 13312
+		// (get) Token: 0x0600A8EB RID: 43243 RVA: 0x0017FA4E File Offset: 0x0017DC4E
+		// (set) Token: 0x0600A8EC RID: 43244 RVA: 0x0017FA75 File Offset: 0x0017DC75
 		[Nullable(2)]
 		public virtual string UiPrefabId
 		{
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003170 RID: 12656
-		// (get) Token: 0x06009F0D RID: 40717 RVA: 0x0016B823 File Offset: 0x00169A23
-		// (set) Token: 0x06009F0E RID: 40718 RVA: 0x0016B852 File Offset: 0x00169A52
+		// Token: 0x17003401 RID: 13313
+		// (get) Token: 0x0600A8ED RID: 43245 RVA: 0x0017FA83 File Offset: 0x0017DC83
+		// (set) Token: 0x0600A8EE RID: 43246 RVA: 0x0017FAB2 File Offset: 0x0017DCB2
 		public virtual float Duration
 		{
 			get
@@ -135,9 +133,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003171 RID: 12657
-		// (get) Token: 0x06009F0F RID: 40719 RVA: 0x0016B860 File Offset: 0x00169A60
-		// (set) Token: 0x06009F10 RID: 40720 RVA: 0x0016B8C1 File Offset: 0x00169AC1
+		// Token: 0x17003402 RID: 13314
+		// (get) Token: 0x0600A8EF RID: 43247 RVA: 0x0017FAC0 File Offset: 0x0017DCC0
+		// (set) Token: 0x0600A8F0 RID: 43248 RVA: 0x0017FB21 File Offset: 0x0017DD21
 		[Nullable(2)]
 		public virtual IUiAnimConfig UiAnimConfig
 		{
@@ -168,18 +166,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006009 RID: 24585
+		// Token: 0x0400657C RID: 25980
 		[Nullable(2)]
 		protected IPictureCaptionConfig FbInstance;
 
-		// Token: 0x0400600A RID: 24586
+		// Token: 0x0400657D RID: 25981
 		[Nullable(2)]
 		protected IPictureCaptionConfig_SetValue PocoInterface;
 
-		// Token: 0x0400600B RID: 24587
+		// Token: 0x0400657E RID: 25982
 		private IUiAnimConfig _UiAnimConfigCache;
 
-		// Token: 0x0400600C RID: 24588
+		// Token: 0x0400657F RID: 25983
 		private bool _UiAnimConfigInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001125 RID: 4389
+	// Token: 0x0200125B RID: 4699
 	public struct TetrisMap : IFlatbufferObject
 	{
-		// Token: 0x17003A3A RID: 14906
-		// (get) Token: 0x0600DE3D RID: 56893 RVA: 0x0032C7F0 File Offset: 0x0032A9F0
+		// Token: 0x17003D9C RID: 15772
+		// (get) Token: 0x0600EBA4 RID: 60324 RVA: 0x00357D10 File Offset: 0x00355F10
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DE3E RID: 56894 RVA: 0x0032C7FD File Offset: 0x0032A9FD
+		// Token: 0x0600EBA5 RID: 60325 RVA: 0x00357D1D File Offset: 0x00355F1D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DE3F RID: 56895 RVA: 0x0032C804 File Offset: 0x0032AA04
+		// Token: 0x0600EBA6 RID: 60326 RVA: 0x00357D24 File Offset: 0x00355F24
 		public static TetrisMap GetRootAsTetrisMap(ByteBuffer _bb)
 		{
 			return TetrisMap.GetRootAsTetrisMap(_bb, default(TetrisMap));
 		}
 
-		// Token: 0x0600DE40 RID: 56896 RVA: 0x0032C820 File Offset: 0x0032AA20
+		// Token: 0x0600EBA7 RID: 60327 RVA: 0x00357D40 File Offset: 0x00355F40
 		public static TetrisMap GetRootAsTetrisMap(ByteBuffer _bb, TetrisMap obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DE41 RID: 56897 RVA: 0x0032C83D File Offset: 0x0032AA3D
+		// Token: 0x0600EBA8 RID: 60328 RVA: 0x00357D5D File Offset: 0x00355F5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DE42 RID: 56898 RVA: 0x0032C84C File Offset: 0x0032AA4C
+		// Token: 0x0600EBA9 RID: 60329 RVA: 0x00357D6C File Offset: 0x00355F6C
 		public TetrisMap __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003A3B RID: 14907
-		// (get) Token: 0x0600DE43 RID: 56899 RVA: 0x0032C85C File Offset: 0x0032AA5C
+		// Token: 0x17003D9D RID: 15773
+		// (get) Token: 0x0600EBAA RID: 60330 RVA: 0x00357D7C File Offset: 0x00355F7C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A3C RID: 14908
-		// (get) Token: 0x0600DE44 RID: 56900 RVA: 0x0032C898 File Offset: 0x0032AA98
+		// Token: 0x17003D9E RID: 15774
+		// (get) Token: 0x0600EBAB RID: 60331 RVA: 0x00357DB8 File Offset: 0x00355FB8
 		public int MapID
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A3D RID: 14909
-		// (get) Token: 0x0600DE45 RID: 56901 RVA: 0x0032C8D4 File Offset: 0x0032AAD4
+		// Token: 0x17003D9F RID: 15775
+		// (get) Token: 0x0600EBAC RID: 60332 RVA: 0x00357DF4 File Offset: 0x00355FF4
 		public TetrisBoardItemConfig? Column1
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A3E RID: 14910
-		// (get) Token: 0x0600DE46 RID: 56902 RVA: 0x0032C934 File Offset: 0x0032AB34
+		// Token: 0x17003DA0 RID: 15776
+		// (get) Token: 0x0600EBAD RID: 60333 RVA: 0x00357E54 File Offset: 0x00356054
 		public TetrisBoardItemConfig? Column2
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A3F RID: 14911
-		// (get) Token: 0x0600DE47 RID: 56903 RVA: 0x0032C994 File Offset: 0x0032AB94
+		// Token: 0x17003DA1 RID: 15777
+		// (get) Token: 0x0600EBAE RID: 60334 RVA: 0x00357EB4 File Offset: 0x003560B4
 		public TetrisBoardItemConfig? Column3
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A40 RID: 14912
-		// (get) Token: 0x0600DE48 RID: 56904 RVA: 0x0032C9F4 File Offset: 0x0032ABF4
+		// Token: 0x17003DA2 RID: 15778
+		// (get) Token: 0x0600EBAF RID: 60335 RVA: 0x00357F14 File Offset: 0x00356114
 		public TetrisBoardItemConfig? Column4
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A41 RID: 14913
-		// (get) Token: 0x0600DE49 RID: 56905 RVA: 0x0032CA54 File Offset: 0x0032AC54
+		// Token: 0x17003DA3 RID: 15779
+		// (get) Token: 0x0600EBB0 RID: 60336 RVA: 0x00357F74 File Offset: 0x00356174
 		public TetrisBoardItemConfig? Column5
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A42 RID: 14914
-		// (get) Token: 0x0600DE4A RID: 56906 RVA: 0x0032CAB4 File Offset: 0x0032ACB4
+		// Token: 0x17003DA4 RID: 15780
+		// (get) Token: 0x0600EBB1 RID: 60337 RVA: 0x00357FD4 File Offset: 0x003561D4
 		public TetrisBoardItemConfig? Column6
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A43 RID: 14915
-		// (get) Token: 0x0600DE4B RID: 56907 RVA: 0x0032CB14 File Offset: 0x0032AD14
+		// Token: 0x17003DA5 RID: 15781
+		// (get) Token: 0x0600EBB2 RID: 60338 RVA: 0x00358034 File Offset: 0x00356234
 		public TetrisBoardItemConfig? Column7
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A44 RID: 14916
-		// (get) Token: 0x0600DE4C RID: 56908 RVA: 0x0032CB74 File Offset: 0x0032AD74
+		// Token: 0x17003DA6 RID: 15782
+		// (get) Token: 0x0600EBB3 RID: 60339 RVA: 0x00358094 File Offset: 0x00356294
 		public TetrisBoardItemConfig? Column8
 		{
 			get
@@ -197,7 +197,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005263 RID: 21091
+		// Token: 0x040058A6 RID: 22694
 		private Table __p;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200186B RID: 6251
+	// Token: 0x020019F6 RID: 6646
 	public class IChangeElementalBoxStateTargetBoxId_SetValue
 	{
-		// Token: 0x040054B9 RID: 21689
+		// Token: 0x04005906 RID: 22790
 		public EChangeElementalBoxStateTargetType Type;
 
-		// Token: 0x040054BA RID: 21690
+		// Token: 0x04005907 RID: 22791
 		public int TargetBoxId;
 	}
 }

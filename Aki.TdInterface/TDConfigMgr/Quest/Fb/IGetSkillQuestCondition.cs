@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200136A RID: 4970
+	// Token: 0x020014BA RID: 5306
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IGetSkillQuestCondition : IQuestCondition
 	{
-		// Token: 0x060071B7 RID: 29111 RVA: 0x00111DC2 File Offset: 0x0010FFC2
-		[NullableContext(1)]
+		// Token: 0x06007857 RID: 30807 RVA: 0x0012032E File Offset: 0x0011E52E
+		[NullableContext(0)]
 		public static IGetSkillQuestCondition Create(IGetSkillQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024B6 RID: 9398
-		// (get) Token: 0x060071B8 RID: 29112 RVA: 0x00111DE1 File Offset: 0x0010FFE1
+		// Token: 0x17002685 RID: 9861
+		// (get) Token: 0x06007858 RID: 30808 RVA: 0x0012034D File Offset: 0x0011E54D
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024B7 RID: 9399
-		// (get) Token: 0x060071B9 RID: 29113 RVA: 0x00111DEE File Offset: 0x0010FFEE
+		// Token: 0x17002686 RID: 9862
+		// (get) Token: 0x06007859 RID: 30809 RVA: 0x0012035A File Offset: 0x0011E55A
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024B8 RID: 9400
-		// (get) Token: 0x060071BA RID: 29114 RVA: 0x00111E22 File Offset: 0x00110022
+		// Token: 0x17002687 RID: 9863
+		// (get) Token: 0x0600785A RID: 30810 RVA: 0x0012038E File Offset: 0x0011E58E
 		public virtual ESkillType SkillType
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024B9 RID: 9401
-		// (get) Token: 0x060071BB RID: 29115 RVA: 0x00111E2F File Offset: 0x0011002F
+		// Token: 0x17002688 RID: 9864
+		// (get) Token: 0x0600785B RID: 30811 RVA: 0x0012039B File Offset: 0x0011E59B
 		public virtual int SkillId
 		{
 			get
@@ -70,13 +70,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041AE RID: 16814
+		// Token: 0x0400452A RID: 17706
 		private IGetSkillQuestCondition Instance;
 
-		// Token: 0x040041AF RID: 16815
+		// Token: 0x0400452B RID: 17707
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040041B0 RID: 16816
+		// Token: 0x0400452C RID: 17708
 		private bool _PreConditionsInited;
 	}
 }

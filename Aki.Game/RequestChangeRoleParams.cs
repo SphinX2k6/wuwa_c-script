@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02002948 RID: 10568
+// Token: 0x02001EC3 RID: 7875
 public class RequestChangeRoleParams : IRequestChangeRoleParams
 {
-	// Token: 0x17001D50 RID: 7504
-	// (get) Token: 0x06015D47 RID: 89415 RVA: 0x00580B1C File Offset: 0x0057ED1C
-	// (set) Token: 0x06015D48 RID: 89416 RVA: 0x00580B24 File Offset: 0x0057ED24
+	// Token: 0x17001DA9 RID: 7593
+	// (get) Token: 0x0601374B RID: 79691 RVA: 0x005ABB1C File Offset: 0x005A9D1C
+	// (set) Token: 0x0601374C RID: 79692 RVA: 0x005ABB24 File Offset: 0x005A9D24
 	public bool? FilterSameRole { get; set; }
 
-	// Token: 0x17001D51 RID: 7505
-	// (get) Token: 0x06015D49 RID: 89417 RVA: 0x00580B2D File Offset: 0x0057ED2D
-	// (set) Token: 0x06015D4A RID: 89418 RVA: 0x00580B35 File Offset: 0x0057ED35
+	// Token: 0x17001DAA RID: 7594
+	// (get) Token: 0x0601374D RID: 79693 RVA: 0x005ABB2D File Offset: 0x005A9D2D
+	// (set) Token: 0x0601374E RID: 79694 RVA: 0x005ABB35 File Offset: 0x005A9D35
 	public bool? GoDownWaitSkillEnd { get; set; }
 
-	// Token: 0x17001D52 RID: 7506
-	// (get) Token: 0x06015D4B RID: 89419 RVA: 0x00580B3E File Offset: 0x0057ED3E
-	// (set) Token: 0x06015D4C RID: 89420 RVA: 0x00580B46 File Offset: 0x0057ED46
+	// Token: 0x17001DAB RID: 7595
+	// (get) Token: 0x0601374F RID: 79695 RVA: 0x005ABB3E File Offset: 0x005A9D3E
+	// (set) Token: 0x06013750 RID: 79696 RVA: 0x005ABB46 File Offset: 0x005A9D46
 	public bool? ForceInheritTransform { get; set; }
 
-	// Token: 0x17001D53 RID: 7507
-	// (get) Token: 0x06015D4D RID: 89421 RVA: 0x00580B4F File Offset: 0x0057ED4F
-	// (set) Token: 0x06015D4E RID: 89422 RVA: 0x00580B57 File Offset: 0x0057ED57
+	// Token: 0x17001DAC RID: 7596
+	// (get) Token: 0x06013751 RID: 79697 RVA: 0x005ABB4F File Offset: 0x005A9D4F
+	// (set) Token: 0x06013752 RID: 79698 RVA: 0x005ABB57 File Offset: 0x005A9D57
 	public bool? GoBattleInvincible { get; set; }
 
-	// Token: 0x17001D54 RID: 7508
-	// (get) Token: 0x06015D4F RID: 89423 RVA: 0x00580B60 File Offset: 0x0057ED60
-	// (set) Token: 0x06015D50 RID: 89424 RVA: 0x00580B68 File Offset: 0x0057ED68
+	// Token: 0x17001DAD RID: 7597
+	// (get) Token: 0x06013753 RID: 79699 RVA: 0x005ABB60 File Offset: 0x005A9D60
+	// (set) Token: 0x06013754 RID: 79700 RVA: 0x005ABB68 File Offset: 0x005A9D68
 	public bool? CanUseGoBattleSkill { get; set; }
 }

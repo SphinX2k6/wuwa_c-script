@@ -4,22 +4,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B10 RID: 19216
+	// Token: 0x02003AB8 RID: 15032
 	public interface ITowerDefenseEventSpecialCellInfo : ITowerDefenseEventSpecialCellBaseInfo, ITowerDefenseEventCombatInfo, ITowerDefenseEventConfigInfo
 	{
-		// Token: 0x17007B26 RID: 31526
-		// (get) Token: 0x06031C2E RID: 203822
-		// (set) Token: 0x06031C2F RID: 203823
+		// Token: 0x17004ED3 RID: 20179
+		// (get) Token: 0x060269BE RID: 158142
+		// (set) Token: 0x060269BF RID: 158143
 		[Nullable(2)]
 		string GridId { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007B27 RID: 31527
-		// (get) Token: 0x06031C30 RID: 203824
-		// (set) Token: 0x06031C31 RID: 203825
+		// Token: 0x17004ED4 RID: 20180
+		// (get) Token: 0x060269C0 RID: 158144
+		// (set) Token: 0x060269C1 RID: 158145
 		[Nullable(1)]
 		Vector2D Coords { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x06031C32 RID: 203826
+		// Token: 0x060269C2 RID: 158146
 		void UpdateTransform(FVectorDouble position, FRotator rotation);
 	}
 }

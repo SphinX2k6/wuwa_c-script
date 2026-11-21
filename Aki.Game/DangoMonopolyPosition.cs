@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200123F RID: 4671
+// Token: 0x020006F3 RID: 1779
 public class DangoMonopolyPosition : UiPanelBase
 {
-	// Token: 0x06007E9A RID: 32410 RVA: 0x001AD0A4 File Offset: 0x001AB2A4
+	// Token: 0x06005231 RID: 21041 RVA: 0x001B5D5C File Offset: 0x001B3F5C
 	[NullableContext(1)]
 	public UniTask Init(UUIItem parent)
 	{
@@ -22,7 +22,7 @@ public class DangoMonopolyPosition : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E9B RID: 32411 RVA: 0x001AD0EF File Offset: 0x001AB2EF
+	// Token: 0x06005232 RID: 21042 RVA: 0x001B5DA7 File Offset: 0x001B3FA7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,17 +31,17 @@ public class DangoMonopolyPosition : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007E9C RID: 32412 RVA: 0x001AD112 File Offset: 0x001AB312
+	// Token: 0x06005233 RID: 21043 RVA: 0x001B5DCA File Offset: 0x001B3FCA
 	public void UpdatePosition(FVector2D vec, bool show = true)
 	{
 		this.SetActive(show);
 		base.GetRootItem().SetAnchorOffset(vec);
 	}
 
-	// Token: 0x02007843 RID: 30787
+	// Token: 0x020069CE RID: 27086
 	private enum EChildType
 	{
-		// Token: 0x04027A24 RID: 162340
+		// Token: 0x04022D55 RID: 142677
 		Item
 	}
 }

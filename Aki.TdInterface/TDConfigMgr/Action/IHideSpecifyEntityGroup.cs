@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B07 RID: 6919
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CB6 RID: 7350
 	public class IHideSpecifyEntityGroup : IHideGroupType
 	{
-		// Token: 0x06009426 RID: 37926 RVA: 0x0015744C File Offset: 0x0015564C
+		// Token: 0x06009C10 RID: 39952 RVA: 0x00168128 File Offset: 0x00166328
 		private IHideSpecifyEntityGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009427 RID: 37927 RVA: 0x00157484 File Offset: 0x00155684
+		// Token: 0x06009C11 RID: 39953 RVA: 0x00168160 File Offset: 0x00166360
 		public static IHideSpecifyEntityGroup Create([Nullable(2)] IHideSpecifyEntityGroup instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009428 RID: 37928 RVA: 0x00157497 File Offset: 0x00155697
+		// Token: 0x06009C12 RID: 39954 RVA: 0x00168173 File Offset: 0x00166373
 		public static IHideSpecifyEntityGroup CreateFromSetValue([Nullable(2)] IHideSpecifyEntityGroup_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009429 RID: 37929 RVA: 0x001574AA File Offset: 0x001556AA
+		// Token: 0x06009C13 RID: 39955 RVA: 0x00168186 File Offset: 0x00166386
 		public new IHideSpecifyEntityGroup_SetValue ToSetValue()
 		{
 			return new IHideSpecifyEntityGroup_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EDE RID: 11998
-		// (get) Token: 0x0600942A RID: 37930 RVA: 0x001574D5 File Offset: 0x001556D5
-		// (set) Token: 0x0600942B RID: 37931 RVA: 0x00157500 File Offset: 0x00155700
+		// Token: 0x17003104 RID: 12548
+		// (get) Token: 0x06009C14 RID: 39956 RVA: 0x001681B1 File Offset: 0x001663B1
+		// (set) Token: 0x06009C15 RID: 39957 RVA: 0x001681DC File Offset: 0x001663DC
 		public override EHideType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EDF RID: 11999
-		// (get) Token: 0x0600942C RID: 37932 RVA: 0x0015750E File Offset: 0x0015570E
-		// (set) Token: 0x0600942D RID: 37933 RVA: 0x00157535 File Offset: 0x00155735
+		// Token: 0x17003105 RID: 12549
+		// (get) Token: 0x06009C16 RID: 39958 RVA: 0x001681EA File Offset: 0x001663EA
+		// (set) Token: 0x06009C17 RID: 39959 RVA: 0x00168211 File Offset: 0x00166411
 		public virtual List<int> EntityIds
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EE0 RID: 12000
-		// (get) Token: 0x0600942E RID: 37934 RVA: 0x00157544 File Offset: 0x00155744
-		// (set) Token: 0x0600942F RID: 37935 RVA: 0x0015757E File Offset: 0x0015577E
+		// Token: 0x17003106 RID: 12550
+		// (get) Token: 0x06009C18 RID: 39960 RVA: 0x00168220 File Offset: 0x00166420
+		// (set) Token: 0x06009C19 RID: 39961 RVA: 0x0016825A File Offset: 0x0016645A
 		public virtual bool? ForceClean
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AE3 RID: 23267
+		// Token: 0x04005F81 RID: 24449
 		[Nullable(2)]
 		protected new IHideSpecifyEntityGroup FbInstance;
 
-		// Token: 0x04005AE4 RID: 23268
+		// Token: 0x04005F82 RID: 24450
 		[Nullable(2)]
 		protected new IHideSpecifyEntityGroup_SetValue PocoInterface;
 	}

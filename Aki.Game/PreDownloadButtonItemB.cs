@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002212 RID: 8722
+// Token: 0x020016F6 RID: 5878
 public class PreDownloadButtonItemB : UiPanelBase
 {
-	// Token: 0x06010FFA RID: 69626 RVA: 0x00424F33 File Offset: 0x00423133
+	// Token: 0x0600E490 RID: 58512 RVA: 0x00431ACF File Offset: 0x0042FCCF
 	[NullableContext(1)]
 	public PreDownloadButtonItemB(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06010FFB RID: 69627 RVA: 0x00424F48 File Offset: 0x00423148
+	// Token: 0x0600E491 RID: 58513 RVA: 0x00431AE4 File Offset: 0x0042FCE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ public class PreDownloadButtonItemB : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06010FFC RID: 69628 RVA: 0x00424FB4 File Offset: 0x004231B4
+	// Token: 0x0600E492 RID: 58514 RVA: 0x00431B50 File Offset: 0x0042FD50
 	public void BindRedDot()
 	{
 		UUIItem item = base.GetItem(0);
@@ -38,7 +38,7 @@ public class PreDownloadButtonItemB : UiPanelBase
 		RedDotController.Instance.BindRedDot(ERedDotName.PreDownloadComplete, item2, null, 0);
 	}
 
-	// Token: 0x06010FFD RID: 69629 RVA: 0x00424FF0 File Offset: 0x004231F0
+	// Token: 0x0600E493 RID: 58515 RVA: 0x00431B8C File Offset: 0x0042FD8C
 	public void UnBindRedDot()
 	{
 		UUIItem item = base.GetItem(0);
@@ -47,12 +47,12 @@ public class PreDownloadButtonItemB : UiPanelBase
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.PreDownloadComplete, item2, 0);
 	}
 
-	// Token: 0x02008749 RID: 34633
+	// Token: 0x020078D2 RID: 30930
 	private enum EComponentTypeB
 	{
-		// Token: 0x0402BFA4 RID: 180132
+		// Token: 0x040272BC RID: 160444
 		RedDot,
-		// Token: 0x0402BFA5 RID: 180133
+		// Token: 0x040272BD RID: 160445
 		GreenDot
 	}
 }

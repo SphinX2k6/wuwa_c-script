@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A34 RID: 6708
+	// Token: 0x02001BC9 RID: 7113
 	public class IFaceExpressionAnimSequenceConfig_SetValue
 	{
-		// Token: 0x040058D3 RID: 22739
+		// Token: 0x04005D38 RID: 23864
 		public EFaceExpressionConfigType Type;
 
-		// Token: 0x040058D4 RID: 22740
-		[Nullable(1)]
+		// Token: 0x04005D39 RID: 23865
 		public string Path;
 	}
 }

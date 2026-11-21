@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A98 RID: 10904
+	// Token: 0x02002D8C RID: 11660
 	public class PlayWalkingOverlayMontage : ActionParams
 	{
-		// Token: 0x0600EF80 RID: 61312 RVA: 0x0022D0E0 File Offset: 0x0022B2E0
-		[NullableContext(1)]
+		// Token: 0x0600FE36 RID: 65078 RVA: 0x0024ADEC File Offset: 0x00248FEC
 		public static PlayWalkingOverlayMontage Create(IPlayWalkingOverlayMontage? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C12 RID: 19474
-		// (get) Token: 0x0600EF81 RID: 61313 RVA: 0x0022D0FF File Offset: 0x0022B2FF
+		// Token: 0x17004FCC RID: 20428
+		// (get) Token: 0x0600FE37 RID: 65079 RVA: 0x0024AE0B File Offset: 0x0024900B
 		public virtual int EntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C13 RID: 19475
-		// (get) Token: 0x0600EF82 RID: 61314 RVA: 0x0022D10C File Offset: 0x0022B30C
+		// Token: 0x17004FCD RID: 20429
+		// (get) Token: 0x0600FE38 RID: 65080 RVA: 0x0024AE18 File Offset: 0x00249018
 		public virtual int OverlapMontageId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C14 RID: 19476
-		// (get) Token: 0x0600EF83 RID: 61315 RVA: 0x0022D11C File Offset: 0x0022B31C
+		// Token: 0x17004FCE RID: 20430
+		// (get) Token: 0x0600FE39 RID: 65081 RVA: 0x0024AE28 File Offset: 0x00249028
 		public virtual float? LoopDuration
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C15 RID: 19477
-		// (get) Token: 0x0600EF84 RID: 61316 RVA: 0x0022D154 File Offset: 0x0022B354
+		// Token: 0x17004FCF RID: 20431
+		// (get) Token: 0x0600FE3A RID: 65082 RVA: 0x0024AE60 File Offset: 0x00249060
 		public virtual int? RepeatTimes
 		{
 			get
@@ -69,7 +67,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083C2 RID: 33730
+		// Token: 0x04008AC6 RID: 35526
 		private IPlayWalkingOverlayMontage Instance;
 	}
 }

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200617B RID: 24955
+	// Token: 0x020050F9 RID: 20729
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeRoleSelectTitlePanel : UiPanelBase
 	{
-		// Token: 0x0603F134 RID: 258356 RVA: 0x00F3DFA4 File Offset: 0x00F3C1A4
+		// Token: 0x06033DF4 RID: 212468 RVA: 0x00E84E6C File Offset: 0x00E8306C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F135 RID: 258357 RVA: 0x00F3E094 File Offset: 0x00F3C294
+		// Token: 0x06033DF5 RID: 212469 RVA: 0x00E84F5C File Offset: 0x00E8315C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeRoleSelectTitlePanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F136 RID: 258358 RVA: 0x00F3E0D7 File Offset: 0x00F3C2D7
+		// Token: 0x06033DF6 RID: 212470 RVA: 0x00E84F9F File Offset: 0x00E8319F
 		protected override void OnBeforeDestroy()
 		{
 			this.LightTagPanel = null;
 			this.DarkTagPanel = null;
 		}
 
-		// Token: 0x0603F137 RID: 258359 RVA: 0x00F3E0E8 File Offset: 0x00F3C2E8
+		// Token: 0x06033DF7 RID: 212471 RVA: 0x00E84FB0 File Offset: 0x00E831B0
 		public void RefreshElement(bool isLight, RoverRogueRoleType? cfg)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item2.SetUIActive(!isLight);
 		}
 
-		// Token: 0x0603F138 RID: 258360 RVA: 0x00F3E1F8 File Offset: 0x00F3C3F8
+		// Token: 0x06033DF8 RID: 212472 RVA: 0x00E850C0 File Offset: 0x00E832C0
 		private void RefreshTagPanel(RoverlikeRoleEelmentTagPanel panel, RoverRogueRoleType? cfg, int tagIndex)
 		{
 			if (panel == null)
@@ -122,32 +122,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			panel.SetActive(false);
 		}
 
-		// Token: 0x04020E43 RID: 134723
+		// Token: 0x0401B770 RID: 112496
 		private RoverlikeRoleEelmentTagPanel LightTagPanel;
 
-		// Token: 0x04020E44 RID: 134724
+		// Token: 0x0401B771 RID: 112497
 		private RoverlikeRoleEelmentTagPanel DarkTagPanel;
 
-		// Token: 0x0200C3E5 RID: 50149
+		// Token: 0x0200ADCC RID: 44492
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B1C8 RID: 242120
+			// Token: 0x04035B29 RID: 219945
 			public const int TxtElementName = 0;
 
-			// Token: 0x0403B1C9 RID: 242121
+			// Token: 0x04035B2A RID: 219946
 			public const int SprElementLight = 1;
 
-			// Token: 0x0403B1CA RID: 242122
+			// Token: 0x04035B2B RID: 219947
 			public const int SprElementDark = 2;
 
-			// Token: 0x0403B1CB RID: 242123
+			// Token: 0x04035B2C RID: 219948
 			public const int PnlTypeLight = 3;
 
-			// Token: 0x0403B1CC RID: 242124
+			// Token: 0x04035B2D RID: 219949
 			public const int PnlTypeDark = 4;
 
-			// Token: 0x0403B1CD RID: 242125
+			// Token: 0x04035B2E RID: 219950
 			public const int TxtType = 5;
 		}
 	}

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x02005236 RID: 21046
+	// Token: 0x02004206 RID: 16902
 	public enum EPhantomArenaBattleDetailsPositionType
 	{
-		// Token: 0x0401C817 RID: 116759
+		// Token: 0x0401724C RID: 94796
 		LeftTop,
-		// Token: 0x0401C818 RID: 116760
+		// Token: 0x0401724D RID: 94797
 		RightTop,
-		// Token: 0x0401C819 RID: 116761
+		// Token: 0x0401724E RID: 94798
 		LeftBottom,
-		// Token: 0x0401C81A RID: 116762
+		// Token: 0x0401724F RID: 94799
 		RightBottom
 	}
 }

@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056AB RID: 22187
+	// Token: 0x02005C4F RID: 23631
 	public class IOperationsAfterEntityGroupFailureT
 	{
-		// Token: 0x1700A501 RID: 42241
-		// (get) Token: 0x0602508E RID: 151694 RVA: 0x0051D1FD File Offset: 0x0051B3FD
-		// (set) Token: 0x0602508F RID: 151695 RVA: 0x0051D205 File Offset: 0x0051B405
+		// Token: 0x1700AD95 RID: 44437
+		// (get) Token: 0x060272E3 RID: 160483 RVA: 0x0055E145 File Offset: 0x0055C345
+		// (set) Token: 0x060272E4 RID: 160484 RVA: 0x0055E14D File Offset: 0x0055C34D
 		public bool IsResetState { get; set; }
 
-		// Token: 0x1700A502 RID: 42242
-		// (get) Token: 0x06025090 RID: 151696 RVA: 0x0051D20E File Offset: 0x0051B40E
-		// (set) Token: 0x06025091 RID: 151697 RVA: 0x0051D216 File Offset: 0x0051B416
+		// Token: 0x1700AD96 RID: 44438
+		// (get) Token: 0x060272E5 RID: 160485 RVA: 0x0055E156 File Offset: 0x0055C356
+		// (set) Token: 0x060272E6 RID: 160486 RVA: 0x0055E15E File Offset: 0x0055C35E
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700A503 RID: 42243
-		// (get) Token: 0x06025092 RID: 151698 RVA: 0x0051D21F File Offset: 0x0051B41F
-		// (set) Token: 0x06025093 RID: 151699 RVA: 0x0051D227 File Offset: 0x0051B427
+		// Token: 0x1700AD97 RID: 44439
+		// (get) Token: 0x060272E7 RID: 160487 RVA: 0x0055E167 File Offset: 0x0055C367
+		// (set) Token: 0x060272E8 RID: 160488 RVA: 0x0055E16F File Offset: 0x0055C36F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025094 RID: 151700 RVA: 0x0051D230 File Offset: 0x0051B430
+		// Token: 0x060272E9 RID: 160489 RVA: 0x0055E178 File Offset: 0x0055C378
 		public IOperationsAfterEntityGroupFailureT()
 		{
 			this.IsResetState = false;

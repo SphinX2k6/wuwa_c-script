@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001084 RID: 4228
+// Token: 0x02000538 RID: 1336
 public class RhythmGameComboPanel : UiPanelBase
 {
-	// Token: 0x06006DB7 RID: 28087 RVA: 0x00163384 File Offset: 0x00161584
+	// Token: 0x0600414C RID: 16716 RVA: 0x0016BCB8 File Offset: 0x00169EB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class RhythmGameComboPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006DB8 RID: 28088 RVA: 0x001633ED File Offset: 0x001615ED
+	// Token: 0x0600414D RID: 16717 RVA: 0x0016BD21 File Offset: 0x00169F21
 	protected override void OnBeforeCreate()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -34,7 +34,7 @@ public class RhythmGameComboPanel : UiPanelBase
 		this.TextComboNum = base.GetText(1);
 	}
 
-	// Token: 0x06006DB9 RID: 28089 RVA: 0x00163420 File Offset: 0x00161620
+	// Token: 0x0600414E RID: 16718 RVA: 0x0016BD54 File Offset: 0x00169F54
 	public void SetCombo(int combo)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -70,23 +70,23 @@ public class RhythmGameComboPanel : UiPanelBase
 		this.LastCombo = combo;
 	}
 
-	// Token: 0x040032AC RID: 12972
+	// Token: 0x04003345 RID: 13125
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040032AD RID: 12973
+	// Token: 0x04003346 RID: 13126
 	[Nullable(2)]
 	private UUIText TextComboNum;
 
-	// Token: 0x040032AE RID: 12974
+	// Token: 0x04003347 RID: 13127
 	private int LastCombo;
 
-	// Token: 0x02007676 RID: 30326
+	// Token: 0x0200680A RID: 26634
 	private enum EViewComponent
 	{
-		// Token: 0x04027189 RID: 160137
+		// Token: 0x040224D4 RID: 140500
 		TextCombo,
-		// Token: 0x0402718A RID: 160138
+		// Token: 0x040224D5 RID: 140501
 		TextComboNum
 	}
 }

@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200465D RID: 18013
+	// Token: 0x0200358E RID: 13710
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiViewSetContainer : UiViewContainer
 	{
-		// Token: 0x0602E80A RID: 190474 RVA: 0x00ABE8C4 File Offset: 0x00ABCAC4
+		// Token: 0x06022F54 RID: 143188 RVA: 0x009EBF44 File Offset: 0x009EA144
 		public UiViewSetContainer(Dictionary<EUiViewName, UiViewBase> map)
 		{
 			this.Map = map;
 		}
 
-		// Token: 0x0602E80B RID: 190475 RVA: 0x00ABE8D4 File Offset: 0x00ABCAD4
+		// Token: 0x06022F55 RID: 143189 RVA: 0x009EBF54 File Offset: 0x009EA154
 		[NullableContext(0)]
 		public override UniTask<bool> OpenViewAsync([Nullable(1)] UiViewBase view)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E80C RID: 190476 RVA: 0x00ABE920 File Offset: 0x00ABCB20
+		// Token: 0x06022F56 RID: 143190 RVA: 0x009EBFA0 File Offset: 0x009EA1A0
 		public override UniTask CloseViewAsync(UiViewBase view)
 		{
 			UiViewSetContainer.<CloseViewAsync>d__3 <CloseViewAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E80D RID: 190477 RVA: 0x00ABE96C File Offset: 0x00ABCB6C
+		// Token: 0x06022F57 RID: 143191 RVA: 0x009EBFEC File Offset: 0x009EA1EC
 		public override void ClearContainer(bool isSeamlessTravel)
 		{
 			List<EUiViewName> list = new List<EUiViewName>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E80E RID: 190478 RVA: 0x00ABEA34 File Offset: 0x00ABCC34
+		// Token: 0x06022F58 RID: 143192 RVA: 0x009EC0B4 File Offset: 0x009EA2B4
 		public override UniTask PreOpenViewAsync(UiViewBase view)
 		{
 			UiViewSetContainer.<PreOpenViewAsync>d__5 <PreOpenViewAsync>d__;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Ui
 			return <PreOpenViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E80F RID: 190479 RVA: 0x00ABEA78 File Offset: 0x00ABCC78
+		// Token: 0x06022F59 RID: 143193 RVA: 0x009EC0F8 File Offset: 0x009EA2F8
 		public override UniTask OpenViewAfterPreOpenedAsync(UiViewBase view)
 		{
 			UiViewSetContainer.<OpenViewAfterPreOpenedAsync>d__6 <OpenViewAfterPreOpenedAsync>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewAfterPreOpenedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04018E3D RID: 101949
+		// Token: 0x04013496 RID: 78998
 		[Nullable(new byte[]
 		{
 			2,

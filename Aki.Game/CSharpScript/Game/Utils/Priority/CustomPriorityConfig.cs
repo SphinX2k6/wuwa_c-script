@@ -3,27 +3,27 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Priority
 {
-	// Token: 0x0200455F RID: 17759
+	// Token: 0x02003487 RID: 13447
 	public class CustomPriorityConfig<T> : ICustomPriorityConfig<T> where T : struct, Enum
 	{
-		// Token: 0x17007563 RID: 30051
-		// (get) Token: 0x0602DDDF RID: 187871 RVA: 0x00A8C1F9 File Offset: 0x00A8A3F9
-		// (set) Token: 0x0602DDE0 RID: 187872 RVA: 0x00A8C201 File Offset: 0x00A8A401
+		// Token: 0x1700481A RID: 18458
+		// (get) Token: 0x060224C1 RID: 140481 RVA: 0x009B7911 File Offset: 0x009B5B11
+		// (set) Token: 0x060224C2 RID: 140482 RVA: 0x009B7919 File Offset: 0x009B5B19
 		public bool Enable { get; set; }
 
-		// Token: 0x17007564 RID: 30052
-		// (get) Token: 0x0602DDE1 RID: 187873 RVA: 0x00A8C20A File Offset: 0x00A8A40A
-		// (set) Token: 0x0602DDE2 RID: 187874 RVA: 0x00A8C212 File Offset: 0x00A8A412
+		// Token: 0x1700481B RID: 18459
+		// (get) Token: 0x060224C3 RID: 140483 RVA: 0x009B7922 File Offset: 0x009B5B22
+		// (set) Token: 0x060224C4 RID: 140484 RVA: 0x009B792A File Offset: 0x009B5B2A
 		public T? Enum { get; set; }
 
-		// Token: 0x17007565 RID: 30053
-		// (get) Token: 0x0602DDE3 RID: 187875 RVA: 0x00A8C21B File Offset: 0x00A8A41B
-		// (set) Token: 0x0602DDE4 RID: 187876 RVA: 0x00A8C223 File Offset: 0x00A8A423
+		// Token: 0x1700481C RID: 18460
+		// (get) Token: 0x060224C5 RID: 140485 RVA: 0x009B7933 File Offset: 0x009B5B33
+		// (set) Token: 0x060224C6 RID: 140486 RVA: 0x009B793B File Offset: 0x009B5B3B
 		public int? Priority { get; set; }
 
-		// Token: 0x17007566 RID: 30054
-		// (get) Token: 0x0602DDE5 RID: 187877 RVA: 0x00A8C22C File Offset: 0x00A8A42C
-		// (set) Token: 0x0602DDE6 RID: 187878 RVA: 0x00A8C234 File Offset: 0x00A8A434
+		// Token: 0x1700481D RID: 18461
+		// (get) Token: 0x060224C7 RID: 140487 RVA: 0x009B7944 File Offset: 0x009B5B44
+		// (set) Token: 0x060224C8 RID: 140488 RVA: 0x009B794C File Offset: 0x009B5B4C
 		[Nullable(new byte[]
 		{
 			2,
@@ -39,24 +39,24 @@ namespace CSharpScript.Game.Utils.Priority
 			1
 		})] set; }
 
-		// Token: 0x17007567 RID: 30055
-		// (get) Token: 0x0602DDE7 RID: 187879 RVA: 0x00A8C23D File Offset: 0x00A8A43D
-		// (set) Token: 0x0602DDE8 RID: 187880 RVA: 0x00A8C245 File Offset: 0x00A8A445
+		// Token: 0x1700481E RID: 18462
+		// (get) Token: 0x060224C9 RID: 140489 RVA: 0x009B7955 File Offset: 0x009B5B55
+		// (set) Token: 0x060224CA RID: 140490 RVA: 0x009B795D File Offset: 0x009B5B5D
 		public bool? EnterReentrant { get; set; }
 
-		// Token: 0x17007568 RID: 30056
-		// (get) Token: 0x0602DDE9 RID: 187881 RVA: 0x00A8C24E File Offset: 0x00A8A44E
-		// (set) Token: 0x0602DDEA RID: 187882 RVA: 0x00A8C256 File Offset: 0x00A8A456
+		// Token: 0x1700481F RID: 18463
+		// (get) Token: 0x060224CB RID: 140491 RVA: 0x009B7966 File Offset: 0x009B5B66
+		// (set) Token: 0x060224CC RID: 140492 RVA: 0x009B796E File Offset: 0x009B5B6E
 		public bool? ForceEnterCallback { get; set; }
 
-		// Token: 0x17007569 RID: 30057
-		// (get) Token: 0x0602DDEB RID: 187883 RVA: 0x00A8C25F File Offset: 0x00A8A45F
-		// (set) Token: 0x0602DDEC RID: 187884 RVA: 0x00A8C267 File Offset: 0x00A8A467
+		// Token: 0x17004820 RID: 18464
+		// (get) Token: 0x060224CD RID: 140493 RVA: 0x009B7977 File Offset: 0x009B5B77
+		// (set) Token: 0x060224CE RID: 140494 RVA: 0x009B797F File Offset: 0x009B5B7F
 		public bool? CheckEnterValid { get; set; }
 
-		// Token: 0x1700756A RID: 30058
-		// (get) Token: 0x0602DDED RID: 187885 RVA: 0x00A8C270 File Offset: 0x00A8A470
-		// (set) Token: 0x0602DDEE RID: 187886 RVA: 0x00A8C278 File Offset: 0x00A8A478
+		// Token: 0x17004821 RID: 18465
+		// (get) Token: 0x060224CF RID: 140495 RVA: 0x009B7988 File Offset: 0x009B5B88
+		// (set) Token: 0x060224D0 RID: 140496 RVA: 0x009B7990 File Offset: 0x009B5B90
 		[Nullable(new byte[]
 		{
 			2,
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.Utils.Priority
 			1
 		})] set; }
 
-		// Token: 0x1700756B RID: 30059
-		// (get) Token: 0x0602DDEF RID: 187887 RVA: 0x00A8C281 File Offset: 0x00A8A481
-		// (set) Token: 0x0602DDF0 RID: 187888 RVA: 0x00A8C289 File Offset: 0x00A8A489
+		// Token: 0x17004822 RID: 18466
+		// (get) Token: 0x060224D1 RID: 140497 RVA: 0x009B7999 File Offset: 0x009B5B99
+		// (set) Token: 0x060224D2 RID: 140498 RVA: 0x009B79A1 File Offset: 0x009B5BA1
 		public bool? ForceExitCallback { get; set; }
 
-		// Token: 0x1700756C RID: 30060
-		// (get) Token: 0x0602DDF1 RID: 187889 RVA: 0x00A8C292 File Offset: 0x00A8A492
-		// (set) Token: 0x0602DDF2 RID: 187890 RVA: 0x00A8C29A File Offset: 0x00A8A49A
+		// Token: 0x17004823 RID: 18467
+		// (get) Token: 0x060224D3 RID: 140499 RVA: 0x009B79AA File Offset: 0x009B5BAA
+		// (set) Token: 0x060224D4 RID: 140500 RVA: 0x009B79B2 File Offset: 0x009B5BB2
 		public bool? CheckExitValid { get; set; }
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DBA RID: 19898
+	// Token: 0x020052BE RID: 21182
 	public enum EInteractDefaultIcon : byte
 	{
-		// Token: 0x0400D9F5 RID: 55797
+		// Token: 0x0400E544 RID: 58692
 		Collect,
-		// Token: 0x0400D9F6 RID: 55798
+		// Token: 0x0400E545 RID: 58693
 		BigTeleporter,
-		// Token: 0x0400D9F7 RID: 55799
+		// Token: 0x0400E546 RID: 58694
 		SmallTeleporter,
-		// Token: 0x0400D9F8 RID: 55800
+		// Token: 0x0400E547 RID: 58695
 		TreasureBox,
-		// Token: 0x0400D9F9 RID: 55801
+		// Token: 0x0400E548 RID: 58696
 		UnknownCollect
 	}
 }

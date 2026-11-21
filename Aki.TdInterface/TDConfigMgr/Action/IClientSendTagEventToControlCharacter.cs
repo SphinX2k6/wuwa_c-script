@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018C6 RID: 6342
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A57 RID: 6743
 	public class IClientSendTagEventToControlCharacter : IExecClientBattleActionType
 	{
-		// Token: 0x06008809 RID: 34825 RVA: 0x001420B4 File Offset: 0x001402B4
+		// Token: 0x06008F51 RID: 36689 RVA: 0x00151C2C File Offset: 0x0014FE2C
 		private IClientSendTagEventToControlCharacter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600880A RID: 34826 RVA: 0x001420EC File Offset: 0x001402EC
+		// Token: 0x06008F52 RID: 36690 RVA: 0x00151C64 File Offset: 0x0014FE64
 		public static IClientSendTagEventToControlCharacter Create([Nullable(2)] IClientSendTagEventToControlCharacter instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600880B RID: 34827 RVA: 0x001420FF File Offset: 0x001402FF
+		// Token: 0x06008F53 RID: 36691 RVA: 0x00151C77 File Offset: 0x0014FE77
 		public static IClientSendTagEventToControlCharacter CreateFromSetValue([Nullable(2)] IClientSendTagEventToControlCharacter_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600880C RID: 34828 RVA: 0x00142112 File Offset: 0x00140312
+		// Token: 0x06008F54 RID: 36692 RVA: 0x00151C8A File Offset: 0x0014FE8A
 		public new IClientSendTagEventToControlCharacter_SetValue ToSetValue()
 		{
 			return new IClientSendTagEventToControlCharacter_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C30 RID: 11312
-		// (get) Token: 0x0600880D RID: 34829 RVA: 0x00142131 File Offset: 0x00140331
-		// (set) Token: 0x0600880E RID: 34830 RVA: 0x0014215C File Offset: 0x0014035C
+		// Token: 0x17002E32 RID: 11826
+		// (get) Token: 0x06008F55 RID: 36693 RVA: 0x00151CA9 File Offset: 0x0014FEA9
+		// (set) Token: 0x06008F56 RID: 36694 RVA: 0x00151CD4 File Offset: 0x0014FED4
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C31 RID: 11313
-		// (get) Token: 0x0600880F RID: 34831 RVA: 0x0014216A File Offset: 0x0014036A
-		// (set) Token: 0x06008810 RID: 34832 RVA: 0x00142191 File Offset: 0x00140391
+		// Token: 0x17002E33 RID: 11827
+		// (get) Token: 0x06008F57 RID: 36695 RVA: 0x00151CE2 File Offset: 0x0014FEE2
+		// (set) Token: 0x06008F58 RID: 36696 RVA: 0x00151D09 File Offset: 0x0014FF09
 		public virtual List<string> EventTags
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400557F RID: 21887
+		// Token: 0x040059D9 RID: 23001
 		[Nullable(2)]
 		protected new IClientSendTagEventToControlCharacter FbInstance;
 
-		// Token: 0x04005580 RID: 21888
+		// Token: 0x040059DA RID: 23002
 		[Nullable(2)]
 		protected new IClientSendTagEventToControlCharacter_SetValue PocoInterface;
 	}

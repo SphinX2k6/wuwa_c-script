@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002465 RID: 9317
+	// Token: 0x02002706 RID: 9990
 	public static class ETeleportToLatestResetPointTypeExtensions
 	{
-		// Token: 0x0600CA45 RID: 51781 RVA: 0x001DC3B8 File Offset: 0x001DA5B8
+		// Token: 0x0600D6F5 RID: 55029 RVA: 0x001F646C File Offset: 0x001F466C
 		public static string ToEnumString(this ETeleportToLatestResetPointType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA46 RID: 51782 RVA: 0x001DC3E0 File Offset: 0x001DA5E0
+		// Token: 0x0600D6F6 RID: 55030 RVA: 0x001F6494 File Offset: 0x001F4694
 		public static ETeleportToLatestResetPointType FromString(string name)
 		{
 			ETeleportToLatestResetPointType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA47 RID: 51783 RVA: 0x001DC409 File Offset: 0x001DA609
+		// Token: 0x0600D6F7 RID: 55031 RVA: 0x001F64BD File Offset: 0x001F46BD
 		public static bool TryFromString(string name, out ETeleportToLatestResetPointType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CA48 RID: 51784 RVA: 0x001DC42E File Offset: 0x001DA62E
+		// Token: 0x0600D6F8 RID: 55032 RVA: 0x001F64E2 File Offset: 0x001F46E2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA49 RID: 51785 RVA: 0x001DC43E File Offset: 0x001DA63E
+		// Token: 0x0600D6F9 RID: 55033 RVA: 0x001F64F2 File Offset: 0x001F46F2
 		public static ETeleportToLatestResetPointType[] GetValues()
 		{
 			return new ETeleportToLatestResetPointType[1];
 		}
 
-		// Token: 0x0600CA4A RID: 51786 RVA: 0x001DC446 File Offset: 0x001DA646
+		// Token: 0x0600D6FA RID: 55034 RVA: 0x001F64FA File Offset: 0x001F46FA
 		public static string[] GetNames()
 		{
 			return new string[]

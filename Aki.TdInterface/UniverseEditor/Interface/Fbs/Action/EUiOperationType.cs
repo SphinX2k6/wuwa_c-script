@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200604A RID: 24650
+	// Token: 0x020066AB RID: 26283
 	public enum EUiOperationType : byte
 	{
-		// Token: 0x040101B4 RID: 65972
+		// Token: 0x04010FA7 RID: 69543
 		Enable,
-		// Token: 0x040101B5 RID: 65973
+		// Token: 0x04010FA8 RID: 69544
 		EnableSectionalUi,
-		// Token: 0x040101B6 RID: 65974
+		// Token: 0x04010FA9 RID: 69545
 		Disable
 	}
 }

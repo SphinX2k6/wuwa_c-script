@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D0C RID: 27916
+	// Token: 0x02005E89 RID: 24201
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCompareVar : LevelConditionBase
 	{
-		// Token: 0x060446BB RID: 280251 RVA: 0x010E048C File Offset: 0x010DE68C
+		// Token: 0x0603A81B RID: 239643 RVA: 0x0108A618 File Offset: 0x01088818
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			GeneralContext context = (eventArgs.Length != 0) ? (eventArgs[0] as GeneralContext) : null;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x060446BC RID: 280252 RVA: 0x010E0790 File Offset: 0x010DE990
+		// Token: 0x0603A81C RID: 239644 RVA: 0x0108A91C File Offset: 0x01088B1C
 		private static void TryGetNumericValue(object value, out double result)
 		{
 			if (value is int)

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000253 RID: 595
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000296 RID: 662
 	public class ICommonSpline : ISplineType
 	{
-		// Token: 0x06000ABE RID: 2750 RVA: 0x0002C148 File Offset: 0x0002A348
+		// Token: 0x06000BD8 RID: 3032 RVA: 0x0002EE38 File Offset: 0x0002D038
 		private ICommonSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000ABF RID: 2751 RVA: 0x0002C180 File Offset: 0x0002A380
+		// Token: 0x06000BD9 RID: 3033 RVA: 0x0002EE70 File Offset: 0x0002D070
 		public static ICommonSpline Create([Nullable(2)] ICommonSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000AC0 RID: 2752 RVA: 0x0002C193 File Offset: 0x0002A393
+		// Token: 0x06000BDA RID: 3034 RVA: 0x0002EE83 File Offset: 0x0002D083
 		public static ICommonSpline CreateFromSetValue([Nullable(2)] ICommonSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000AC1 RID: 2753 RVA: 0x0002C1A6 File Offset: 0x0002A3A6
+		// Token: 0x06000BDB RID: 3035 RVA: 0x0002EE96 File Offset: 0x0002D096
 		public new ICommonSpline_SetValue ToSetValue()
 		{
 			return new ICommonSpline_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000340 RID: 832
-		// (get) Token: 0x06000AC2 RID: 2754 RVA: 0x0002C1C5 File Offset: 0x0002A3C5
-		// (set) Token: 0x06000AC3 RID: 2755 RVA: 0x0002C1F0 File Offset: 0x0002A3F0
+		// Token: 0x17000388 RID: 904
+		// (get) Token: 0x06000BDC RID: 3036 RVA: 0x0002EEB5 File Offset: 0x0002D0B5
+		// (set) Token: 0x06000BDD RID: 3037 RVA: 0x0002EEE0 File Offset: 0x0002D0E0
 		public override ESplineType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000341 RID: 833
-		// (get) Token: 0x06000AC4 RID: 2756 RVA: 0x0002C200 File Offset: 0x0002A400
-		// (set) Token: 0x06000AC5 RID: 2757 RVA: 0x0002C293 File Offset: 0x0002A493
+		// Token: 0x17000389 RID: 905
+		// (get) Token: 0x06000BDE RID: 3038 RVA: 0x0002EEF0 File Offset: 0x0002D0F0
+		// (set) Token: 0x06000BDF RID: 3039 RVA: 0x0002EF83 File Offset: 0x0002D183
 		public virtual List<ICommonSplinePoint> Points
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A92 RID: 2706
+		// Token: 0x04000B73 RID: 2931
 		[Nullable(2)]
 		protected new ICommonSpline FbInstance;
 
-		// Token: 0x04000A93 RID: 2707
+		// Token: 0x04000B74 RID: 2932
 		[Nullable(2)]
 		protected new ICommonSpline_SetValue PocoInterface;
 
-		// Token: 0x04000A94 RID: 2708
+		// Token: 0x04000B75 RID: 2933
 		private List<ICommonSplinePoint> _PointsCache;
 
-		// Token: 0x04000A95 RID: 2709
+		// Token: 0x04000B76 RID: 2934
 		private bool _PointsInited;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -9,13 +8,13 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017F1 RID: 6129
+// Token: 0x02000CAA RID: 3242
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonCurrencyItem : UiPanelBase
 {
-	// Token: 0x17000F1D RID: 3869
-	// (set) Token: 0x0600B35D RID: 45917 RVA: 0x00288AAD File Offset: 0x00286CAD
+	// Token: 0x17000F40 RID: 3904
+	// (set) Token: 0x06008747 RID: 34631 RVA: 0x00293181 File Offset: 0x00291381
 	public Action<int> ButtonFunction
 	{
 		set
@@ -25,7 +24,7 @@ public class CommonCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B35E RID: 45918 RVA: 0x00288AC4 File Offset: 0x00286CC4
+	// Token: 0x06008748 RID: 34632 RVA: 0x00293198 File Offset: 0x00291398
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -62,7 +61,7 @@ public class CommonCurrencyItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B35F RID: 45919 RVA: 0x00288C75 File Offset: 0x00286E75
+	// Token: 0x06008749 RID: 34633 RVA: 0x00293349 File Offset: 0x00291549
 	private void ButtonClick()
 	{
 		Action beforeButtonFunction = this.BeforeButtonFunction;
@@ -78,17 +77,17 @@ public class CommonCurrencyItem : UiPanelBase
 		buttonFunctionInternal(this.ItemId);
 	}
 
-	// Token: 0x0600B360 RID: 45920 RVA: 0x00288C9E File Offset: 0x00286E9E
+	// Token: 0x0600874A RID: 34634 RVA: 0x00293372 File Offset: 0x00291572
 	private void TextureClick()
 	{
 		if (this.TextureClickCheckFunction != null && !this.TextureClickCheckFunction(this.ItemId))
 		{
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 	}
 
-	// Token: 0x0600B361 RID: 45921 RVA: 0x00288CCE File Offset: 0x00286ECE
+	// Token: 0x0600874B RID: 34635 RVA: 0x002933A3 File Offset: 0x002915A3
 	protected override void OnStart()
 	{
 		if (!this.SkipAutoAddEvent)
@@ -97,7 +96,7 @@ public class CommonCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B362 RID: 45922 RVA: 0x00288CDE File Offset: 0x00286EDE
+	// Token: 0x0600874C RID: 34636 RVA: 0x002933B3 File Offset: 0x002915B3
 	protected override void OnBeforeDestroy()
 	{
 		if (!this.SkipAutoAddEvent)
@@ -106,7 +105,7 @@ public class CommonCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B363 RID: 45923 RVA: 0x00288CF0 File Offset: 0x00286EF0
+	// Token: 0x0600874D RID: 34637 RVA: 0x002933C4 File Offset: 0x002915C4
 	public virtual void AddEventListener()
 	{
 		if (this.EventListenerAdded)
@@ -121,7 +120,7 @@ public class CommonCurrencyItem : UiPanelBase
 		EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 	}
 
-	// Token: 0x0600B364 RID: 45924 RVA: 0x00288D9C File Offset: 0x00286F9C
+	// Token: 0x0600874E RID: 34638 RVA: 0x00293470 File Offset: 0x00291670
 	public virtual void RemoveEventListener()
 	{
 		if (!this.EventListenerAdded)
@@ -136,19 +135,19 @@ public class CommonCurrencyItem : UiPanelBase
 		EventSystem.Instance.Remove<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 	}
 
-	// Token: 0x0600B365 RID: 45925 RVA: 0x00288E45 File Offset: 0x00287045
+	// Token: 0x0600874F RID: 34639 RVA: 0x00293519 File Offset: 0x00291719
 	private void RefreshCurrency(int itemId = 0)
 	{
 		this.RefreshCountText(null);
 	}
 
-	// Token: 0x0600B366 RID: 45926 RVA: 0x00288E4E File Offset: 0x0028704E
+	// Token: 0x06008750 RID: 34640 RVA: 0x00293522 File Offset: 0x00291722
 	private void OnPayShopGoodsBuy()
 	{
 		this.RefreshCurrency(0);
 	}
 
-	// Token: 0x0600B367 RID: 45927 RVA: 0x00288E58 File Offset: 0x00287058
+	// Token: 0x06008751 RID: 34641 RVA: 0x0029352C File Offset: 0x0029172C
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> normalItemList)
 	{
 		foreach (IProto_NormalItem proto_NormalItem in normalItemList)
@@ -161,17 +160,26 @@ public class CommonCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B368 RID: 45928 RVA: 0x00288EB0 File Offset: 0x002870B0
+	// Token: 0x06008752 RID: 34642 RVA: 0x00293584 File Offset: 0x00291784
 	private void OnRemoveCommonItem(IReadOnlyList<int> configId)
 	{
-		if (!configId.Contains(this.ItemId))
+		bool flag = false;
+		for (int i = 0; i < configId.Count; i++)
+		{
+			if (configId[i] == this.ItemId)
+			{
+				flag = true;
+				break;
+			}
+		}
+		if (!flag)
 		{
 			return;
 		}
 		this.RefreshCountText(null);
 	}
 
-	// Token: 0x0600B369 RID: 45929 RVA: 0x00288EC8 File Offset: 0x002870C8
+	// Token: 0x06008753 RID: 34643 RVA: 0x002935C2 File Offset: 0x002917C2
 	private void OnCommonItemCountRefresh(IProto_NormalItem normalItem, int count, int lastCount)
 	{
 		if (this.ItemId != normalItem.Id)
@@ -181,7 +189,7 @@ public class CommonCurrencyItem : UiPanelBase
 		this.RefreshCountText(null);
 	}
 
-	// Token: 0x0600B36A RID: 45930 RVA: 0x00288EE0 File Offset: 0x002870E0
+	// Token: 0x06008754 RID: 34644 RVA: 0x002935DC File Offset: 0x002917DC
 	private void SetTexture()
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -193,7 +201,7 @@ public class CommonCurrencyItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600B36B RID: 45931 RVA: 0x00288F3C File Offset: 0x0028713C
+	// Token: 0x06008755 RID: 34645 RVA: 0x00293638 File Offset: 0x00291838
 	private void SetTextureAllTransition()
 	{
 		UUITextureTransitionComponent uiTextureTransitionComponent = base.GetUiTextureTransitionComponent(4);
@@ -203,7 +211,7 @@ public class CommonCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B36C RID: 45932 RVA: 0x00288F68 File Offset: 0x00287168
+	// Token: 0x06008756 RID: 34646 RVA: 0x00293664 File Offset: 0x00291864
 	private void PayCurrencyClick(int itemId)
 	{
 		int? num = GachaConfig.Instance.PrimaryCurrency();
@@ -221,21 +229,21 @@ public class CommonCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B36D RID: 45933 RVA: 0x00288FCF File Offset: 0x002871CF
+	// Token: 0x06008757 RID: 34647 RVA: 0x002936CB File Offset: 0x002918CB
 	public virtual void RefreshTemp(int itemId, string countText = null)
 	{
 		this.ShowWithoutText(itemId);
 		this.RefreshCountText(countText);
 	}
 
-	// Token: 0x0600B36E RID: 45934 RVA: 0x00288FDF File Offset: 0x002871DF
+	// Token: 0x06008758 RID: 34648 RVA: 0x002936DB File Offset: 0x002918DB
 	public virtual void ShowWithoutText(int itemId)
 	{
 		this.ItemId = itemId;
 		this.SetTexture();
 	}
 
-	// Token: 0x0600B36F RID: 45935 RVA: 0x00288FF0 File Offset: 0x002871F0
+	// Token: 0x06008759 RID: 34649 RVA: 0x002936EC File Offset: 0x002918EC
 	[NullableContext(2)]
 	public void RefreshCountText(string text = null)
 	{
@@ -248,43 +256,43 @@ public class CommonCurrencyItem : UiPanelBase
 		text2.SetText(text3.ToString(), true);
 	}
 
-	// Token: 0x0600B370 RID: 45936 RVA: 0x00289034 File Offset: 0x00287234
+	// Token: 0x0600875A RID: 34650 RVA: 0x00293730 File Offset: 0x00291930
 	public void SetCountText(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x0600B371 RID: 45937 RVA: 0x00289049 File Offset: 0x00287249
+	// Token: 0x0600875B RID: 34651 RVA: 0x00293745 File Offset: 0x00291945
 	public void SetCountTextNew(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x0600B372 RID: 45938 RVA: 0x0028905E File Offset: 0x0028725E
+	// Token: 0x0600875C RID: 34652 RVA: 0x0029375A File Offset: 0x0029195A
 	public void SetCount(int count)
 	{
 		base.GetText(1).SetText(count.ToString(), true);
 	}
 
-	// Token: 0x0600B373 RID: 45939 RVA: 0x00289074 File Offset: 0x00287274
+	// Token: 0x0600875D RID: 34653 RVA: 0x00293770 File Offset: 0x00291970
 	public void SetButtonFunction(Action<int> callback)
 	{
 		this.ButtonFunction = callback;
 	}
 
-	// Token: 0x0600B374 RID: 45940 RVA: 0x0028907D File Offset: 0x0028727D
+	// Token: 0x0600875E RID: 34654 RVA: 0x00293779 File Offset: 0x00291979
 	public void SetBeforeButtonFunction(Action callback)
 	{
 		this.BeforeButtonFunction = callback;
 	}
 
-	// Token: 0x0600B375 RID: 45941 RVA: 0x00289086 File Offset: 0x00287286
+	// Token: 0x0600875F RID: 34655 RVA: 0x00293782 File Offset: 0x00291982
 	public void SetTextureClickCheckFunction(Func<int, bool> callback)
 	{
 		this.TextureClickCheckFunction = callback;
 	}
 
-	// Token: 0x0600B376 RID: 45942 RVA: 0x00289090 File Offset: 0x00287290
+	// Token: 0x06008760 RID: 34656 RVA: 0x0029378C File Offset: 0x0029198C
 	public void SetButtonActive(bool bActive)
 	{
 		UUIItem uuiitem = base.GetButton(2).RootUIComp.Get();
@@ -295,19 +303,19 @@ public class CommonCurrencyItem : UiPanelBase
 		uuiitem.SetUIActive(bActive);
 	}
 
-	// Token: 0x0600B377 RID: 45943 RVA: 0x002890BC File Offset: 0x002872BC
+	// Token: 0x06008761 RID: 34657 RVA: 0x002937B8 File Offset: 0x002919B8
 	public void RefreshMaxItem(bool bActive)
 	{
 		base.GetItem(8).SetUIActive(bActive);
 	}
 
-	// Token: 0x0600B378 RID: 45944 RVA: 0x002890CB File Offset: 0x002872CB
+	// Token: 0x06008762 RID: 34658 RVA: 0x002937C7 File Offset: 0x002919C7
 	public void SetToPayShopFunction()
 	{
 		this.ButtonFunction = new Action<int>(this.PayCurrencyClick);
 	}
 
-	// Token: 0x0600B379 RID: 45945 RVA: 0x002890E0 File Offset: 0x002872E0
+	// Token: 0x06008763 RID: 34659 RVA: 0x002937DC File Offset: 0x002919DC
 	public virtual void RefreshAddButtonActive()
 	{
 		int? num = GachaConfig.Instance.PrimaryCurrency();
@@ -338,54 +346,54 @@ public class CommonCurrencyItem : UiPanelBase
 		uuiitem2.SetUIActive(true);
 	}
 
-	// Token: 0x0400513F RID: 20799
+	// Token: 0x040051EA RID: 20970
 	public int ItemId;
 
-	// Token: 0x04005140 RID: 20800
+	// Token: 0x040051EB RID: 20971
 	public bool SkipAutoAddEvent;
 
-	// Token: 0x04005141 RID: 20801
+	// Token: 0x040051EC RID: 20972
 	private bool EventListenerAdded;
 
-	// Token: 0x04005142 RID: 20802
+	// Token: 0x040051ED RID: 20973
 	private Action<int> ButtonFunctionInternal;
 
-	// Token: 0x04005143 RID: 20803
+	// Token: 0x040051EE RID: 20974
 	private Action BeforeButtonFunction;
 
-	// Token: 0x04005144 RID: 20804
+	// Token: 0x040051EF RID: 20975
 	[Nullable(2)]
 	private Func<int, bool> TextureClickCheckFunction;
 
-	// Token: 0x02007DE5 RID: 32229
+	// Token: 0x02006F6B RID: 28523
 	[NullableContext(0)]
 	private class ECommonCurrencyItem
 	{
-		// Token: 0x04029340 RID: 168768
+		// Token: 0x0402466B RID: 149099
 		public const int Texture = 0;
 
-		// Token: 0x04029341 RID: 168769
+		// Token: 0x0402466C RID: 149100
 		public const int CountText = 1;
 
-		// Token: 0x04029342 RID: 168770
+		// Token: 0x0402466D RID: 149101
 		public const int Button = 2;
 
-		// Token: 0x04029343 RID: 168771
+		// Token: 0x0402466E RID: 149102
 		public const int TextureButton = 3;
 
-		// Token: 0x04029344 RID: 168772
+		// Token: 0x0402466F RID: 149103
 		public const int TextureTransition = 4;
 
-		// Token: 0x04029345 RID: 168773
+		// Token: 0x04024670 RID: 149104
 		public const int SliderItem = 5;
 
-		// Token: 0x04029346 RID: 168774
+		// Token: 0x04024671 RID: 149105
 		public const int SliderSprite = 6;
 
-		// Token: 0x04029347 RID: 168775
+		// Token: 0x04024672 RID: 149106
 		public const int SpriteIcon = 7;
 
-		// Token: 0x04029348 RID: 168776
+		// Token: 0x04024673 RID: 149107
 		public const int MaxItem = 8;
 	}
 }

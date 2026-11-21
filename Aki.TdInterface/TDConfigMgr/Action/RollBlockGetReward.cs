@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002177 RID: 8567
+	// Token: 0x020023D8 RID: 9176
 	public class RollBlockGetReward : ActionParams
 	{
-		// Token: 0x0600BC5A RID: 48218 RVA: 0x001B252D File Offset: 0x001B072D
-		[NullableContext(1)]
+		// Token: 0x0600C7E8 RID: 51176 RVA: 0x001C96E1 File Offset: 0x001C78E1
 		public static RollBlockGetReward Create([Nullable(2)] RollBlockGetReward instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04007081 RID: 28801
+		// Token: 0x040076B6 RID: 30390
 		[Nullable(2)]
 		protected new RollBlockGetReward FbInstance;
 	}

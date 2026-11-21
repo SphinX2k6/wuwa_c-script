@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x02007234 RID: 29236
+	// Token: 0x020062E9 RID: 25321
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class BulletCasterBase : IBulletCaster
 	{
-		// Token: 0x06047A62 RID: 293474 RVA: 0x01255414 File Offset: 0x01253614
+		// Token: 0x0603D3C3 RID: 250819 RVA: 0x011ADFAC File Offset: 0x011AC1AC
 		public BulletCasterBase(BulletCasterInitParam bulletCasterInitParam)
 		{
 			this.BulletCasterInitParam = bulletCasterInitParam;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.WarningEffect = bulletCasterInitParam.WarningEffect;
 		}
 
-		// Token: 0x06047A63 RID: 293475 RVA: 0x01255480 File Offset: 0x01253680
+		// Token: 0x0603D3C4 RID: 250820 RVA: 0x011AE018 File Offset: 0x011AC218
 		public virtual void Start()
 		{
 			if ((this.CasterConfig.DelayTime ?? 0) != 0)
@@ -52,10 +52,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.OnStart();
 		}
 
-		// Token: 0x06047A64 RID: 293476
+		// Token: 0x0603D3C5 RID: 250821
 		protected abstract void OnStart();
 
-		// Token: 0x06047A65 RID: 293477 RVA: 0x01255534 File Offset: 0x01253734
+		// Token: 0x0603D3C6 RID: 250822 RVA: 0x011AE0CC File Offset: 0x011AC2CC
 		public virtual void Stop()
 		{
 			foreach (TimerHandle timerHandle in this.CasterWaitStartTimers)
@@ -69,10 +69,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.OnStop();
 		}
 
-		// Token: 0x06047A66 RID: 293478
+		// Token: 0x0603D3C7 RID: 250823
 		protected abstract void OnStop();
 
-		// Token: 0x06047A67 RID: 293479 RVA: 0x012555A0 File Offset: 0x012537A0
+		// Token: 0x0603D3C8 RID: 250824 RVA: 0x011AE138 File Offset: 0x011AC338
 		public virtual void SetTimeDilationRespectOwnerEntity()
 		{
 			PawnTimeScaleComponent component = this.OwnerEntity.GetComponent<PawnTimeScaleComponent>();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.SetTimeDilation(timeDilation);
 		}
 
-		// Token: 0x06047A68 RID: 293480 RVA: 0x012555E0 File Offset: 0x012537E0
+		// Token: 0x0603D3C9 RID: 250825 RVA: 0x011AE178 File Offset: 0x011AC378
 		public virtual void SetTimeDilation(float timeDilation)
 		{
 			foreach (TimerHandle timerHandle in this.CasterWaitStartTimers)
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.OnSetTimeDilation(timeDilation);
 		}
 
-		// Token: 0x06047A69 RID: 293481
+		// Token: 0x0603D3CA RID: 250826
 		protected abstract void OnSetTimeDilation(float timeDilation);
 
-		// Token: 0x06047A6A RID: 293482
+		// Token: 0x0603D3CB RID: 250827
 		protected abstract void StartImmediately();
 
-		// Token: 0x06047A6B RID: 293483 RVA: 0x01255644 File Offset: 0x01253844
+		// Token: 0x0603D3CC RID: 250828 RVA: 0x011AE1DC File Offset: 0x011AC3DC
 		protected int PlayWarningEffect()
 		{
 			if (this.WarningEffect.Length == 0)
@@ -117,31 +117,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			return num;
 		}
 
-		// Token: 0x06047A6C RID: 293484
+		// Token: 0x0603D3CD RID: 250829
 		protected abstract void SetEffectParam(int effectHandleId);
 
-		// Token: 0x04025B25 RID: 154405
+		// Token: 0x04020794 RID: 133012
 		[Nullable(2)]
 		public Entity OwnerEntity;
 
-		// Token: 0x04025B26 RID: 154406
+		// Token: 0x04020795 RID: 133013
 		[Nullable(2)]
 		public IBatchBulletCaster CasterConfig;
 
-		// Token: 0x04025B27 RID: 154407
+		// Token: 0x04020796 RID: 133014
 		[Nullable(2)]
 		public Transform CasterRelTransform;
 
-		// Token: 0x04025B28 RID: 154408
+		// Token: 0x04020797 RID: 133015
 		public long BulletContextId;
 
-		// Token: 0x04025B29 RID: 154409
+		// Token: 0x04020798 RID: 133016
 		public string WarningEffect = "";
 
-		// Token: 0x04025B2A RID: 154410
+		// Token: 0x04020799 RID: 133017
 		private readonly List<TimerHandle> CasterWaitStartTimers = new List<TimerHandle>();
 
-		// Token: 0x04025B2B RID: 154411
+		// Token: 0x0402079A RID: 133018
 		protected BulletCasterInitParam BulletCasterInitParam;
 	}
 }

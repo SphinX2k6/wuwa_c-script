@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005744 RID: 22340
+	// Token: 0x0200471B RID: 18203
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 	})]
 	public class AttributeItem : GridProxyAbstract<IAttributeListItem>
 	{
-		// Token: 0x06038CB0 RID: 232624 RVA: 0x00D7BFB8 File Offset: 0x00D7A1B8
+		// Token: 0x0602DBC0 RID: 187328 RVA: 0x00CCA784 File Offset: 0x00CC8984
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CB1 RID: 232625 RVA: 0x00D7C0E8 File Offset: 0x00D7A2E8
+		// Token: 0x0602DBC1 RID: 187329 RVA: 0x00CCA8B4 File Offset: 0x00CC8AB4
 		[NullableContext(1)]
 		public override void Refresh(IAttributeListItem data, bool isSelected, int gridIndex)
 		{
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 			KurotatoCharacter? kurotatoCharacter;
 			int[] array = (KurotatoConfig.Instance.GetCharacterById(KurotatoModel.Instance.GetRoleId()) != null) ? kurotatoCharacter.GetValueOrDefault().GetMainPropertyArray() : null;
-			base.GetSprite(7).SetUIActive(array != null && array.Contains(data.AttrId));
+			base.GetSprite(7).SetUIActive(array != null && Array.IndexOf<int>(array, data.AttrId) >= 0);
 			UUINiagara uiNiagara = base.GetUiNiagara(6);
 			if (data.JustChanged.GetValueOrDefault())
 			{
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CB2 RID: 232626 RVA: 0x00D7C300 File Offset: 0x00D7A500
+		// Token: 0x0602DBC2 RID: 187330 RVA: 0x00CCAAD2 File Offset: 0x00CC8CD2
 		public void HideChangeFx()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(6);
@@ -101,24 +100,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			uiNiagara.SetUIActive(false);
 		}
 
-		// Token: 0x0200B92D RID: 47405
+		// Token: 0x0200A34D RID: 41805
 		private enum EAttrChildComp
 		{
-			// Token: 0x04038017 RID: 229399
+			// Token: 0x04032A24 RID: 207396
 			TextureIcon,
-			// Token: 0x04038018 RID: 229400
+			// Token: 0x04032A25 RID: 207397
 			TextAttributeName,
-			// Token: 0x04038019 RID: 229401
+			// Token: 0x04032A26 RID: 207398
 			TextNum,
-			// Token: 0x0403801A RID: 229402
+			// Token: 0x04032A27 RID: 207399
 			SpriteIconBgA,
-			// Token: 0x0403801B RID: 229403
+			// Token: 0x04032A28 RID: 207400
 			SpriteIconBgB,
-			// Token: 0x0403801C RID: 229404
+			// Token: 0x04032A29 RID: 207401
 			SpriteBg,
-			// Token: 0x0403801D RID: 229405
+			// Token: 0x04032A2A RID: 207402
 			NiagaraGlow,
-			// Token: 0x0403801E RID: 229406
+			// Token: 0x04032A2B RID: 207403
 			SpriteMainPropertyLight
 		}
 	}

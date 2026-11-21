@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001256 RID: 4694
+	// Token: 0x02001396 RID: 5014
 	public static class EMechaTrackScoreDetectionTypeExtensions
 	{
-		// Token: 0x06006A2A RID: 27178 RVA: 0x000FE824 File Offset: 0x000FCA24
+		// Token: 0x0600707D RID: 28797 RVA: 0x0010C450 File Offset: 0x0010A650
 		public static string ToEnumString(this EMechaTrackScoreDetectionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A2B RID: 27179 RVA: 0x000FE86C File Offset: 0x000FCA6C
+		// Token: 0x0600707E RID: 28798 RVA: 0x0010C498 File Offset: 0x0010A698
 		public static EMechaTrackScoreDetectionType FromString(string name)
 		{
 			EMechaTrackScoreDetectionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A2C RID: 27180 RVA: 0x000FE898 File Offset: 0x000FCA98
+		// Token: 0x0600707F RID: 28799 RVA: 0x0010C4C4 File Offset: 0x0010A6C4
 		public static bool TryFromString(string name, out EMechaTrackScoreDetectionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A2D RID: 27181 RVA: 0x000FE8EE File Offset: 0x000FCAEE
+		// Token: 0x06007080 RID: 28800 RVA: 0x0010C51A File Offset: 0x0010A71A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A2E RID: 27182 RVA: 0x000FE90E File Offset: 0x000FCB0E
+		// Token: 0x06007081 RID: 28801 RVA: 0x0010C53A File Offset: 0x0010A73A
 		public static EMechaTrackScoreDetectionType[] GetValues()
 		{
 			return new EMechaTrackScoreDetectionType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A2F RID: 27183 RVA: 0x000FE91E File Offset: 0x000FCB1E
+		// Token: 0x06007082 RID: 28802 RVA: 0x0010C54A File Offset: 0x0010A74A
 		public static string[] GetNames()
 		{
 			return new string[]

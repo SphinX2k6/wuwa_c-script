@@ -6,51 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200128A RID: 4746
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002B4 RID: 692
 	[UnrealObjectPath("/Script/Engine.WorldPartitionSubsystem")]
 	[UnrealStructLayout(1152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1152)]
 	public class UWorldPartitionSubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601163A RID: 71226 RVA: 0x001986AA File Offset: 0x001968AA
+		// Token: 0x06004ADF RID: 19167 RVA: 0x00068CD4 File Offset: 0x00066ED4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UWorldPartitionSubsystem._ClassPtr;
 		}
 
-		// Token: 0x0601163B RID: 71227 RVA: 0x001986B8 File Offset: 0x001968B8
+		// Token: 0x06004AE0 RID: 19168 RVA: 0x00068CE0 File Offset: 0x00066EE0
 		public UWorldPartitionSubsystem() : this(BuiltinUtils.AllocNativeUObject(UWorldPartitionSubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601163C RID: 71228 RVA: 0x001986E0 File Offset: 0x001968E0
+		// Token: 0x06004AE1 RID: 19169 RVA: 0x00068D08 File Offset: 0x00066F08
+		[NullableContext(1)]
 		public UWorldPartitionSubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UWorldPartitionSubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170043C0 RID: 17344
-		// (get) Token: 0x0601163D RID: 71229 RVA: 0x00198714 File Offset: 0x00196914
-		// (set) Token: 0x0601163E RID: 71230 RVA: 0x0019874D File Offset: 0x0019694D
-		public TArray<UWorldPartition> RegisteredWorldPartitions
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UWorldPartition> result;
-				if ((result = this._RegisteredWorldPartitions) == null)
-				{
-					result = (this._RegisteredWorldPartitions = new TArray<UWorldPartition>(base.NativePtr + (IntPtr)UWorldPartitionSubsystem.__PropertyOffset_RegisteredWorldPartitions, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.RegisteredWorldPartitions.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x0601163F RID: 71231 RVA: 0x0019875C File Offset: 0x0019695C
+		// Token: 0x06004AE2 RID: 19170 RVA: 0x00068D3C File Offset: 0x00066F3C
+		[NullableContext(1)]
 		public unsafe void SetStreamingEnable(bool StreamingEnable, string Reason = "")
 		{
 			FString fstring = FString.AllocTemp(Reason);
@@ -58,37 +37,26 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06011640 RID: 71232 RVA: 0x00198787 File Offset: 0x00196987
+		// Token: 0x06004AE3 RID: 19171 RVA: 0x00068D67 File Offset: 0x00066F67
 		public void ReloadActorStreamingCells()
 		{
 			UWorldPartitionSubsystem.__ReloadActorStreamingCells_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06011641 RID: 71233 RVA: 0x00198794 File Offset: 0x00196994
+		// Token: 0x06004AE4 RID: 19172 RVA: 0x00068D74 File Offset: 0x00066F74
 		[NullableContext(2)]
 		public void MarkActorStreamingCellsDirty(UWorld InWorld, ref TArray<FName> ModifiedActors)
 		{
 			UWorldPartitionSubsystem.__MarkActorStreamingCellsDirty_Internal(base.NativePtr, (InWorld != null) ? InWorld.NativePtr : IntPtr.Zero, (ModifiedActors ?? new TArray<FName>()).NativePtr);
 		}
 
-		// Token: 0x06011642 RID: 71234 RVA: 0x001987C1 File Offset: 0x001969C1
-		[NullableContext(2)]
-		public bool KURO_IsStreamingCompleted(EWorldPartitionRuntimeCellState QueryState, [Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FWorldPartitionStreamingQuerySource> QuerySources, bool bExactState, ref FStreamingCompleteContext Params, bool bWaitForLevelInstanceWP = true)
-		{
-			return UWorldPartitionSubsystem.__KURO_IsStreamingCompleted_Internal(base.NativePtr, QueryState, (QuerySources ?? new TArray<FWorldPartitionStreamingQuerySource>()).NativePtr, bExactState, (Params ?? new FStreamingCompleteContext()).NativePtr, bWaitForLevelInstanceWP);
-		}
-
-		// Token: 0x06011643 RID: 71235 RVA: 0x001987F3 File Offset: 0x001969F3
+		// Token: 0x06004AE5 RID: 19173 RVA: 0x00068DA1 File Offset: 0x00066FA1
 		public bool IsStreamingEnable()
 		{
 			return UWorldPartitionSubsystem.__IsStreamingEnable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06011644 RID: 71236 RVA: 0x00198800 File Offset: 0x00196A00
+		// Token: 0x06004AE6 RID: 19174 RVA: 0x00068DAE File Offset: 0x00066FAE
 		public bool IsStreamingCompletedWithPhysicsReady(EWorldPartitionRuntimeCellState QueryState, [Nullable(new byte[]
 		{
 			2,
@@ -98,7 +66,7 @@ namespace UnrealEngine
 			return UWorldPartitionSubsystem.__IsStreamingCompletedWithPhysicsReady_Internal(base.NativePtr, QueryState, (QuerySources ?? new TArray<FWorldPartitionStreamingQuerySource>()).NativePtr);
 		}
 
-		// Token: 0x06011645 RID: 71237 RVA: 0x00198820 File Offset: 0x00196A20
+		// Token: 0x06004AE7 RID: 19175 RVA: 0x00068DCC File Offset: 0x00066FCC
 		public unsafe bool IsStreamingCompleted(EWorldPartitionRuntimeCellState QueryState, [Nullable(new byte[]
 		{
 			2,
@@ -116,7 +84,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06011646 RID: 71238 RVA: 0x0019885E File Offset: 0x00196A5E
+		// Token: 0x06004AE8 RID: 19176 RVA: 0x00068E0A File Offset: 0x0006700A
 		public bool IsRenderAssetsStreamingCompletedForQuerySources([Nullable(new byte[]
 		{
 			2,
@@ -126,118 +94,104 @@ namespace UnrealEngine
 			return UWorldPartitionSubsystem.__IsRenderAssetsStreamingCompletedForQuerySources_Internal(base.NativePtr, (QuerySources ?? new TArray<FWorldPartitionStreamingQuerySource>()).NativePtr, bIgnoreQuerySource, bQueryMeshOnly, bForceStopQuery);
 		}
 
-		// Token: 0x06011647 RID: 71239 RVA: 0x0019887F File Offset: 0x00196A7F
+		// Token: 0x06004AE9 RID: 19177 RVA: 0x00068E2B File Offset: 0x0006702B
 		[NullableContext(2)]
 		public bool IsRenderAssetsStreamingCompleted(in FWorldPartitionStreamingQuerySource QuerySource, bool bIgnoreQuerySource, bool bQueryMeshOnly, bool bForceStopQuery)
 		{
 			return UWorldPartitionSubsystem.__IsRenderAssetsStreamingCompleted_Internal(base.NativePtr, (QuerySource ?? new FWorldPartitionStreamingQuerySource()).NativePtr, bIgnoreQuerySource, bQueryMeshOnly, bForceStopQuery);
 		}
 
-		// Token: 0x06011648 RID: 71240 RVA: 0x001988A0 File Offset: 0x00196AA0
+		// Token: 0x06004AEA RID: 19178 RVA: 0x00068E4C File Offset: 0x0006704C
 		public bool IsAllStreamingCompleted(bool bWaitForLevelInstanceWP = true)
 		{
 			return UWorldPartitionSubsystem.__IsAllStreamingCompleted_Internal(base.NativePtr, bWaitForLevelInstanceWP);
 		}
 
-		// Token: 0x06011649 RID: 71241 RVA: 0x001988AE File Offset: 0x00196AAE
+		// Token: 0x06004AEB RID: 19179 RVA: 0x00068E5A File Offset: 0x0006705A
 		public void FlushUnloadingStreamingCells()
 		{
 			UWorldPartitionSubsystem.__FlushUnloadingStreamingCells_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601164A RID: 71242 RVA: 0x001988BB File Offset: 0x00196ABB
+		// Token: 0x06004AEC RID: 19180 RVA: 0x00068E67 File Offset: 0x00067067
 		public void D_AddOrRemoveRenderAssetsQueryViewInfo(in FVectorDouble ViewOrigin, float Duration = 0f, float BoostFactor = 1.2f)
 		{
 			UWorldPartitionSubsystem.__D_AddOrRemoveRenderAssetsQueryViewInfo_Internal(base.NativePtr, ViewOrigin, Duration, BoostFactor);
 		}
 
-		// Token: 0x0601164B RID: 71243 RVA: 0x001988CB File Offset: 0x00196ACB
+		// Token: 0x06004AED RID: 19181 RVA: 0x00068E77 File Offset: 0x00067077
 		public void AddOrRemoveRenderAssetsQueryViewInfo(in FVector ViewOrigin, float Duration = 0f, float BoostFactor = 1.2f)
 		{
 			UWorldPartitionSubsystem.__AddOrRemoveRenderAssetsQueryViewInfo_Internal(base.NativePtr, ViewOrigin, Duration, BoostFactor);
 		}
 
-		// Token: 0x0601164C RID: 71244
+		// Token: 0x06004AEE RID: 19182
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStreamingEnable_Internal(IntPtr @this, bool StreamingEnable, in FString Reason);
 
-		// Token: 0x0601164D RID: 71245
+		// Token: 0x06004AEF RID: 19183
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReloadActorStreamingCells_Internal(IntPtr @this);
 
-		// Token: 0x0601164E RID: 71246
+		// Token: 0x06004AF0 RID: 19184
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MarkActorStreamingCellsDirty_Internal(IntPtr @this, IntPtr InWorld, IntPtr ModifiedActors);
 
-		// Token: 0x0601164F RID: 71247
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __KURO_IsStreamingCompleted_Internal(IntPtr @this, EWorldPartitionRuntimeCellState QueryState, IntPtr QuerySources, bool bExactState, IntPtr Params, bool bWaitForLevelInstanceWP);
-
-		// Token: 0x06011650 RID: 71248
+		// Token: 0x06004AF1 RID: 19185
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingEnable_Internal(IntPtr @this);
 
-		// Token: 0x06011651 RID: 71249
+		// Token: 0x06004AF2 RID: 19186
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingCompletedWithPhysicsReady_Internal(IntPtr @this, EWorldPartitionRuntimeCellState QueryState, IntPtr QuerySources);
 
-		// Token: 0x06011652 RID: 71250
+		// Token: 0x06004AF3 RID: 19187
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingCompleted_Internal(IntPtr @this, EWorldPartitionRuntimeCellState QueryState, IntPtr QuerySources, bool bReturnCellDetail, ref int CellNum, ref int MatchCellNum, bool bExactState, bool bEnableDataLayerTest);
 
-		// Token: 0x06011653 RID: 71251
+		// Token: 0x06004AF4 RID: 19188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsRenderAssetsStreamingCompletedForQuerySources_Internal(IntPtr @this, IntPtr QuerySources, bool bIgnoreQuerySource, bool bQueryMeshOnly, bool bForceStopQuery);
 
-		// Token: 0x06011654 RID: 71252
+		// Token: 0x06004AF5 RID: 19189
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsRenderAssetsStreamingCompleted_Internal(IntPtr @this, IntPtr QuerySource, bool bIgnoreQuerySource, bool bQueryMeshOnly, bool bForceStopQuery);
 
-		// Token: 0x06011655 RID: 71253
+		// Token: 0x06004AF6 RID: 19190
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsAllStreamingCompleted_Internal(IntPtr @this, bool bWaitForLevelInstanceWP);
 
-		// Token: 0x06011656 RID: 71254
+		// Token: 0x06004AF7 RID: 19191
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __FlushUnloadingStreamingCells_Internal(IntPtr @this);
 
-		// Token: 0x06011657 RID: 71255
+		// Token: 0x06004AF8 RID: 19192
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_AddOrRemoveRenderAssetsQueryViewInfo_Internal(IntPtr @this, in FVectorDouble ViewOrigin, float Duration, float BoostFactor);
 
-		// Token: 0x06011658 RID: 71256
+		// Token: 0x06004AF9 RID: 19193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddOrRemoveRenderAssetsQueryViewInfo_Internal(IntPtr @this, in FVector ViewOrigin, float Duration, float BoostFactor);
 
-		// Token: 0x06011659 RID: 71257 RVA: 0x001988DB File Offset: 0x00196ADB
+		// Token: 0x06004AFA RID: 19194 RVA: 0x00068E87 File Offset: 0x00067087
 		static UWorldPartitionSubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.WorldPartitionSubsystem");
 		}
 
-		// Token: 0x0601165A RID: 71258 RVA: 0x001988E9 File Offset: 0x00196AE9
+		// Token: 0x06004AFB RID: 19195 RVA: 0x00068E95 File Offset: 0x00067095
 		protected UWorldPartitionSubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040094E4 RID: 38116
+		// Token: 0x04001D90 RID: 7568
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.WorldPartitionSubsystem";
 
-		// Token: 0x040094E5 RID: 38117
+		// Token: 0x04001D91 RID: 7569
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040094E6 RID: 38118
+		// Token: 0x04001D92 RID: 7570
 		private static IntPtr _ClassDefaultObjectPtr;
-
-		// Token: 0x040094E7 RID: 38119
-		internal static int __PropertyOffset_RegisteredWorldPartitions;
-
-		// Token: 0x040094E8 RID: 38120
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UWorldPartition> _RegisteredWorldPartitions;
 	}
 }

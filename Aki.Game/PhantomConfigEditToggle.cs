@@ -7,10 +7,10 @@ using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200242A RID: 9258
+// Token: 0x0200190F RID: 6415
 internal class PhantomConfigEditToggle : UiPanelBase
 {
-	// Token: 0x0601291D RID: 76061 RVA: 0x00493BA4 File Offset: 0x00491DA4
+	// Token: 0x0600FDD3 RID: 64979 RVA: 0x004A1170 File Offset: 0x0049F370
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -31,7 +31,7 @@ internal class PhantomConfigEditToggle : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601291E RID: 76062 RVA: 0x00493C4C File Offset: 0x00491E4C
+	// Token: 0x0600FDD4 RID: 64980 RVA: 0x004A1218 File Offset: 0x0049F418
 	protected override void OnStart()
 	{
 		ServerStorageBoolean serverStorageBoolean = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PhantomBattleConfigApplyPlanWhenSaved) as ServerStorageBoolean;
@@ -44,7 +44,7 @@ internal class PhantomConfigEditToggle : UiPanelBase
 		extendToggle.SetToggleState(state, false, false, true);
 	}
 
-	// Token: 0x0601291F RID: 76063 RVA: 0x00493CA4 File Offset: 0x00491EA4
+	// Token: 0x0600FDD5 RID: 64981 RVA: 0x004A1270 File Offset: 0x0049F470
 	private void OnClickedToggle(EToggleState state)
 	{
 		ServerStorageBoolean serverStorageBoolean = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PhantomBattleConfigApplyPlanWhenSaved) as ServerStorageBoolean;
@@ -61,12 +61,12 @@ internal class PhantomConfigEditToggle : UiPanelBase
 		extendToggle.SetToggleState(valueOrDefault ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x020089AB RID: 35243
+	// Token: 0x02007B32 RID: 31538
 	private enum EToggle
 	{
-		// Token: 0x0402CBBB RID: 183227
+		// Token: 0x04027ED1 RID: 163537
 		Toggle,
-		// Token: 0x0402CBBC RID: 183228
+		// Token: 0x04027ED2 RID: 163538
 		Txt
 	}
 }

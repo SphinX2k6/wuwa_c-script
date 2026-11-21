@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020030B9 RID: 12473
+// Token: 0x02002611 RID: 9745
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class PositionStateDisableHandler : DisableHandler<InputFunctionContext>
 {
-	// Token: 0x0601AB73 RID: 109427 RVA: 0x007325FC File Offset: 0x007307FC
+	// Token: 0x06018582 RID: 99714 RVA: 0x00757F68 File Offset: 0x00756168
 	protected override bool ShouldStop(InputFunctionContext context)
 	{
 		BaseUnifiedStateComponent component = context.Entity.GetComponent<BaseUnifiedStateComponent>();

@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F59 RID: 28505
+	// Token: 0x020060DA RID: 24794
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BigStuffedRingItem : UiPanelBase
 	{
-		// Token: 0x17009B5E RID: 39774
-		// (get) Token: 0x0604557D RID: 284029 RVA: 0x01128E50 File Offset: 0x01127050
+		// Token: 0x1700709D RID: 28829
+		// (get) Token: 0x0603B72B RID: 243499 RVA: 0x010D2C30 File Offset: 0x010D0E30
 		[Nullable(new byte[]
 		{
 			0,
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x0604557E RID: 284030 RVA: 0x01128E58 File Offset: 0x01127058
+		// Token: 0x0603B72C RID: 243500 RVA: 0x010D2C38 File Offset: 0x010D0E38
 		public BigStuffedRingItem(int id, AActor actor)
 		{
 			this.Id = id;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.RingLight = new BigStuffedRingLightItem(this.Id, this.RingConfig);
 		}
 
-		// Token: 0x0604557F RID: 284031 RVA: 0x01128FEC File Offset: 0x011271EC
+		// Token: 0x0603B72D RID: 243501 RVA: 0x010D2DCC File Offset: 0x010D0FCC
 		public BigStuffedRingItem(int id, AActor actor, [Nullable(2)] BrokenRockRingConfig config)
 		{
 			this.Id = id;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.RingLight = new BigStuffedRingLightItem(this.Id, config);
 		}
 
-		// Token: 0x06045580 RID: 284032 RVA: 0x011290E0 File Offset: 0x011272E0
+		// Token: 0x0603B72E RID: 243502 RVA: 0x010D2EC0 File Offset: 0x010D10C0
 		public UniTask InitAsync()
 		{
 			BigStuffedRingItem.<InitAsync>d__31 <InitAsync>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045581 RID: 284033 RVA: 0x01129124 File Offset: 0x01127324
+		// Token: 0x0603B72F RID: 243503 RVA: 0x010D2F04 File Offset: 0x010D1104
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045582 RID: 284034 RVA: 0x01129214 File Offset: 0x01127414
+		// Token: 0x0603B730 RID: 243504 RVA: 0x010D2FF4 File Offset: 0x010D11F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BigStuffedRingItem.<OnBeforeStartAsync>d__33 <OnBeforeStartAsync>d__;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045583 RID: 284035 RVA: 0x01129257 File Offset: 0x01127457
+		// Token: 0x0603B731 RID: 243505 RVA: 0x010D3037 File Offset: 0x010D1237
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06045584 RID: 284036 RVA: 0x01129274 File Offset: 0x01127474
+		// Token: 0x0603B732 RID: 243506 RVA: 0x010D3054 File Offset: 0x010D1254
 		[NullableContext(2)]
 		public void OnAreaClick(EAreaType areaType, ContinuousArea area)
 		{
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x06045585 RID: 284037 RVA: 0x0112931C File Offset: 0x0112751C
+		// Token: 0x0603B733 RID: 243507 RVA: 0x010D30FC File Offset: 0x010D12FC
 		private void OnSequenceStart(string sequenceName)
 		{
 			if (sequenceName == "Miss" || sequenceName == "Press01" || sequenceName == "Press02")
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x06045586 RID: 284038 RVA: 0x01129374 File Offset: 0x01127574
+		// Token: 0x0603B734 RID: 243508 RVA: 0x010D3154 File Offset: 0x010D1354
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Miss" || sequenceName == "Press01" || sequenceName == "Press02")
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x06045587 RID: 284039 RVA: 0x011293CC File Offset: 0x011275CC
+		// Token: 0x0603B735 RID: 243509 RVA: 0x010D31AC File Offset: 0x010D13AC
 		public void OnArrowEnter()
 		{
 			this.IsArrowStayHere = true;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.LevelSequencePlayer.PlayLevelSequenceByName("In", false, null, false);
 		}
 
-		// Token: 0x06045588 RID: 284040 RVA: 0x01129448 File Offset: 0x01127648
+		// Token: 0x0603B736 RID: 243510 RVA: 0x010D3228 File Offset: 0x010D1428
 		public void OnArrowExit()
 		{
 			this.IsArrowStayHere = false;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Out", false, null, false);
 		}
 
-		// Token: 0x06045589 RID: 284041 RVA: 0x011294C4 File Offset: 0x011276C4
+		// Token: 0x0603B737 RID: 243511 RVA: 0x010D32A4 File Offset: 0x010D14A4
 		public void OnArrowStayAreaUpdate(int relativeValidAreaIndex)
 		{
 			if (!this.IsArrowStayHere)
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x0604558A RID: 284042 RVA: 0x01129630 File Offset: 0x01127830
+		// Token: 0x0603B738 RID: 243512 RVA: 0x010D3410 File Offset: 0x010D1610
 		public void OnTick(float delta)
 		{
 			BigStuffedDollModel instance = BigStuffedDollModel.Instance;
@@ -363,13 +363,13 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			arrow.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0604558B RID: 284043 RVA: 0x0112973F File Offset: 0x0112793F
+		// Token: 0x0603B739 RID: 243513 RVA: 0x010D351F File Offset: 0x010D171F
 		public void SpawnContinuousArea(int continuousIndex)
 		{
 			this.RingSpecialArea.SpawnSingleContinuousArea(continuousIndex);
 		}
 
-		// Token: 0x0604558C RID: 284044 RVA: 0x0112974D File Offset: 0x0112794D
+		// Token: 0x0603B73A RID: 243514 RVA: 0x010D352D File Offset: 0x010D172D
 		public int GetCurrentArrowStayCellIndex()
 		{
 			if (!this.IsArrowStayHere)
@@ -379,37 +379,37 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return (int)Math.Floor((double)(Math.Abs(this.CurrentRotator.Yaw) % 360f / 10f)) + 1;
 		}
 
-		// Token: 0x040242B6 RID: 148150
+		// Token: 0x0401F56B RID: 128363
 		private const string BLANK_QTE_ANIM = "Miss";
 
-		// Token: 0x040242B7 RID: 148151
+		// Token: 0x0401F56C RID: 128364
 		private const string GOODAREA_QTE_ANIM = "Press01";
 
-		// Token: 0x040242B8 RID: 148152
+		// Token: 0x0401F56D RID: 128365
 		private const string BONUSAREA_QTE_ANIM = "Press02";
 
-		// Token: 0x040242B9 RID: 148153
+		// Token: 0x0401F56E RID: 128366
 		private const string SWITCH_IN_CURRENT = "In";
 
-		// Token: 0x040242BA RID: 148154
+		// Token: 0x0401F56F RID: 128367
 		private const string SWITCH_OUT_CURRENT = "Out";
 
-		// Token: 0x040242BB RID: 148155
+		// Token: 0x0401F570 RID: 128368
 		private const string CURRENT_RING_SHOW = "Start01";
 
-		// Token: 0x040242BC RID: 148156
+		// Token: 0x0401F571 RID: 128369
 		private const string NOT_CURRENT_RING_SHOW = "Start02";
 
-		// Token: 0x040242BD RID: 148157
+		// Token: 0x0401F572 RID: 128370
 		private const string COMMON_LIGHT = "Light01";
 
-		// Token: 0x040242BE RID: 148158
+		// Token: 0x0401F573 RID: 128371
 		private const string PERFECT_LIGHT = "Light02";
 
-		// Token: 0x040242BF RID: 148159
+		// Token: 0x0401F574 RID: 128372
 		public readonly int Id = -1;
 
-		// Token: 0x040242C0 RID: 148160
+		// Token: 0x0401F575 RID: 128373
 		[Nullable(new byte[]
 		{
 			0,
@@ -417,78 +417,78 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 		})]
 		private readonly OneOf<BrokenRockRing, BrokenRockRingConfig> RingConfig;
 
-		// Token: 0x040242C1 RID: 148161
+		// Token: 0x0401F576 RID: 128374
 		[Nullable(2)]
 		private readonly BigStuffedRingInfo RingInfo;
 
-		// Token: 0x040242C2 RID: 148162
+		// Token: 0x0401F577 RID: 128375
 		[Nullable(2)]
 		private readonly AActor MyRootActor;
 
-		// Token: 0x040242C3 RID: 148163
+		// Token: 0x0401F578 RID: 128376
 		[Nullable(2)]
 		private readonly BigStuffedRingBgItem RingBg;
 
-		// Token: 0x040242C4 RID: 148164
+		// Token: 0x0401F579 RID: 128377
 		[Nullable(2)]
 		private readonly BigStuffedRingSpecialAreaItem RingSpecialArea;
 
-		// Token: 0x040242C5 RID: 148165
+		// Token: 0x0401F57A RID: 128378
 		[Nullable(2)]
 		private readonly BigStuffedRingLightItem RingLight;
 
-		// Token: 0x040242C6 RID: 148166
+		// Token: 0x0401F57B RID: 128379
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040242C7 RID: 148167
+		// Token: 0x0401F57C RID: 128380
 		[Nullable(2)]
 		private UUIItem Arrow;
 
-		// Token: 0x040242C8 RID: 148168
+		// Token: 0x0401F57D RID: 128381
 		private bool IsArrowStayHere;
 
-		// Token: 0x040242C9 RID: 148169
+		// Token: 0x0401F57E RID: 128382
 		private readonly Rotator CurrentRotator = Rotator.Create();
 
-		// Token: 0x040242CA RID: 148170
+		// Token: 0x0401F57F RID: 128383
 		private float ArrowActiveStartYawAngle;
 
-		// Token: 0x040242CB RID: 148171
+		// Token: 0x0401F580 RID: 128384
 		private float ArrowActiveEndYawAngle;
 
-		// Token: 0x040242CC RID: 148172
+		// Token: 0x0401F581 RID: 128385
 		private readonly bool IsWholeRing;
 
-		// Token: 0x040242CD RID: 148173
+		// Token: 0x0401F582 RID: 128386
 		private bool InitAnimPlay;
 
-		// Token: 0x040242CE RID: 148174
+		// Token: 0x0401F583 RID: 128387
 		private EAreaType CurrentAreaType;
 
-		// Token: 0x040242CF RID: 148175
+		// Token: 0x0401F584 RID: 128388
 		private int CurrentContinuousIndex = -1;
 
-		// Token: 0x0200CD90 RID: 52624
+		// Token: 0x0200B982 RID: 47490
 		[NullableContext(0)]
 		private class EViewComponent
 		{
-			// Token: 0x0403DF04 RID: 253700
+			// Token: 0x04039333 RID: 234291
 			public const int FlagCurrentTexture = 0;
 
-			// Token: 0x0403DF05 RID: 253701
+			// Token: 0x04039334 RID: 234292
 			public const int ContentRoot = 1;
 
-			// Token: 0x0403DF06 RID: 253702
+			// Token: 0x04039335 RID: 234293
 			public const int Arrow = 2;
 
-			// Token: 0x0403DF07 RID: 253703
+			// Token: 0x04039336 RID: 234294
 			public const int RingBg = 3;
 
-			// Token: 0x0403DF08 RID: 253704
+			// Token: 0x04039337 RID: 234295
 			public const int RingSpecialArea = 4;
 
-			// Token: 0x0403DF09 RID: 253705
+			// Token: 0x04039338 RID: 234296
 			public const int RingLight = 5;
 		}
 	}

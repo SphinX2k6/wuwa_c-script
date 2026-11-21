@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002B88 RID: 11144
+// Token: 0x02002104 RID: 8452
 public enum ESurvivorsLevelDiff
 {
-	// Token: 0x0400ACD3 RID: 44243
+	// Token: 0x0400B0DA RID: 45274
 	Easy,
-	// Token: 0x0400ACD4 RID: 44244
+	// Token: 0x0400B0DB RID: 45275
 	Normal,
-	// Token: 0x0400ACD5 RID: 44245
+	// Token: 0x0400B0DC RID: 45276
 	Challenge
 }

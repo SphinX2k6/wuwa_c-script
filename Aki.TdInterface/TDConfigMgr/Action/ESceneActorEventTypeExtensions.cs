@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023FB RID: 9211
+	// Token: 0x02002692 RID: 9874
 	public static class ESceneActorEventTypeExtensions
 	{
-		// Token: 0x0600C868 RID: 51304 RVA: 0x001D549C File Offset: 0x001D369C
+		// Token: 0x0600D4EB RID: 54507 RVA: 0x001EEC48 File Offset: 0x001ECE48
 		public static string ToEnumString(this ESceneActorEventType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C869 RID: 51305 RVA: 0x001D54E4 File Offset: 0x001D36E4
+		// Token: 0x0600D4EC RID: 54508 RVA: 0x001EEC90 File Offset: 0x001ECE90
 		public static ESceneActorEventType FromString(string name)
 		{
 			ESceneActorEventType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C86A RID: 51306 RVA: 0x001D5510 File Offset: 0x001D3710
+		// Token: 0x0600D4ED RID: 54509 RVA: 0x001EECBC File Offset: 0x001ECEBC
 		public static bool TryFromString(string name, out ESceneActorEventType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C86B RID: 51307 RVA: 0x001D5566 File Offset: 0x001D3766
+		// Token: 0x0600D4EE RID: 54510 RVA: 0x001EED12 File Offset: 0x001ECF12
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C86C RID: 51308 RVA: 0x001D5586 File Offset: 0x001D3786
+		// Token: 0x0600D4EF RID: 54511 RVA: 0x001EED32 File Offset: 0x001ECF32
 		public static ESceneActorEventType[] GetValues()
 		{
 			return new ESceneActorEventType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C86D RID: 51309 RVA: 0x001D5596 File Offset: 0x001D3796
+		// Token: 0x0600D4F0 RID: 54512 RVA: 0x001EED42 File Offset: 0x001ECF42
 		public static string[] GetNames()
 		{
 			return new string[]

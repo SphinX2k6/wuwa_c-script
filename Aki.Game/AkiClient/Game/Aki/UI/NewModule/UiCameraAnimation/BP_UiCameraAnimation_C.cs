@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.NewModule.UiCameraAnimation
 {
-	// Token: 0x020039D3 RID: 14803
+	// Token: 0x02003035 RID: 12341
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/UI/NewModule/UiCameraAnimation/BP_UiCameraAnimation.BP_UiCameraAnimation_C")]
 	[UnrealStructLayout(1064, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1064)]
 	public class BP_UiCameraAnimation_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601EF39 RID: 126777 RVA: 0x008A5AF2 File Offset: 0x008A3CF2
+		// Token: 0x0601D43D RID: 119869 RVA: 0x008EF637 File Offset: 0x008ED837
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_UiCameraAnimation_C._ClassPtr == IntPtr.Zero)
@@ -24,103 +24,101 @@ namespace AkiClient.Game.Aki.UI.NewModule.UiCameraAnimation
 			return BP_UiCameraAnimation_C._ClassPtr;
 		}
 
-		// Token: 0x0601EF3A RID: 126778 RVA: 0x008A5B18 File Offset: 0x008A3D18
+		// Token: 0x0601D43E RID: 119870 RVA: 0x008EF65C File Offset: 0x008ED85C
 		public BP_UiCameraAnimation_C() : this(BuiltinUtils.AllocNativeUObject(BP_UiCameraAnimation_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601EF3B RID: 126779 RVA: 0x008A5B40 File Offset: 0x008A3D40
+		// Token: 0x0601D43F RID: 119871 RVA: 0x008EF684 File Offset: 0x008ED884
 		[NullableContext(1)]
 		public BP_UiCameraAnimation_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_UiCameraAnimation_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700298B RID: 10635
-		// (get) Token: 0x0601EF3C RID: 126780 RVA: 0x008A5B73 File Offset: 0x008A3D73
-		// (set) Token: 0x0601EF3D RID: 126781 RVA: 0x008A5B87 File Offset: 0x008A3D87
+		// Token: 0x17002E6F RID: 11887
+		// (get) Token: 0x0601D440 RID: 119872 RVA: 0x008EF6B7 File Offset: 0x008ED8B7
+		// (set) Token: 0x0601D441 RID: 119873 RVA: 0x008EF6CB File Offset: 0x008ED8CB
 		public unsafe UCameraComponent Camera
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCameraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UCameraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_Camera);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_Camera, value);
 			}
 		}
 
-		// Token: 0x1700298C RID: 10636
-		// (get) Token: 0x0601EF3E RID: 126782 RVA: 0x008A5B9C File Offset: 0x008A3D9C
-		// (set) Token: 0x0601EF3F RID: 126783 RVA: 0x008A5BB0 File Offset: 0x008A3DB0
+		// Token: 0x17002E70 RID: 11888
+		// (get) Token: 0x0601D442 RID: 119874 RVA: 0x008EF6E0 File Offset: 0x008ED8E0
+		// (set) Token: 0x0601D443 RID: 119875 RVA: 0x008EF6F4 File Offset: 0x008ED8F4
 		public unsafe USpringArmComponent SpringArm
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USpringArmComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USpringArmComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_SpringArm);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_SpringArm, value);
 			}
 		}
 
-		// Token: 0x1700298D RID: 10637
-		// (get) Token: 0x0601EF40 RID: 126784 RVA: 0x008A5BC5 File Offset: 0x008A3DC5
-		// (set) Token: 0x0601EF41 RID: 126785 RVA: 0x008A5BD9 File Offset: 0x008A3DD9
+		// Token: 0x17002E71 RID: 11889
+		// (get) Token: 0x0601D444 RID: 119876 RVA: 0x008EF709 File Offset: 0x008ED909
+		// (set) Token: 0x0601D445 RID: 119877 RVA: 0x008EF71D File Offset: 0x008ED91D
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_UiCameraAnimation_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x0601EF42 RID: 126786 RVA: 0x008A5BEE File Offset: 0x008A3DEE
+		// Token: 0x0601D446 RID: 119878 RVA: 0x008EF732 File Offset: 0x008ED932
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_UiCameraAnimation_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601EF43 RID: 126787 RVA: 0x008A5C02 File Offset: 0x008A3E02
+		// Token: 0x0601D447 RID: 119879 RVA: 0x008EF746 File Offset: 0x008ED946
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_UiCameraAnimation_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_UiCameraAnimation_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601EF44 RID: 126788 RVA: 0x008A5C17 File Offset: 0x008A3E17
+		// Token: 0x0601D448 RID: 119880 RVA: 0x008EF75A File Offset: 0x008ED95A
 		protected BP_UiCameraAnimation_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400ECF4 RID: 60660
+		// Token: 0x0400F684 RID: 63108
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/UI/NewModule/UiCameraAnimation/BP_UiCameraAnimation.BP_UiCameraAnimation_C";
 
-		// Token: 0x0400ECF5 RID: 60661
+		// Token: 0x0400F685 RID: 63109
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400ECF6 RID: 60662
+		// Token: 0x0400F686 RID: 63110
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400ECF7 RID: 60663
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400F687 RID: 63111
+		internal static int __PropertyOffset_Camera;
 
-		// Token: 0x0400ECF8 RID: 60664
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F688 RID: 63112
+		internal static int __PropertyOffset_SpringArm;
 
-		// Token: 0x0400ECF9 RID: 60665
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F689 RID: 63113
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x0400ECFA RID: 60666
+		// Token: 0x0400F68A RID: 63114
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 	}
 }

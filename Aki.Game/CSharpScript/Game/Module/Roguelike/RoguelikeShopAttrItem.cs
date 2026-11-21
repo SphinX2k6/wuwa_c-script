@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E28 RID: 20008
+	// Token: 0x02003DF1 RID: 15857
 	public class RoguelikeShopAttrItem : UiPanelBase
 	{
-		// Token: 0x06033991 RID: 211345 RVA: 0x00C123B8 File Offset: 0x00C105B8
+		// Token: 0x060287FC RID: 165884 RVA: 0x00B5B8EC File Offset: 0x00B59AEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033992 RID: 211346 RVA: 0x00C12424 File Offset: 0x00C10624
+		// Token: 0x060287FD RID: 165885 RVA: 0x00B5B958 File Offset: 0x00B59B58
 		[NullableContext(1)]
 		public void Update(AffixEntry data)
 		{
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(1).SetUIActive(data.IsUnlock.Value);
 		}
 
-		// Token: 0x0200AFD3 RID: 45011
+		// Token: 0x02009A05 RID: 39429
 		private class ERoguelikeShopAttrItemDefine
 		{
-			// Token: 0x0403560B RID: 218635
+			// Token: 0x0403003B RID: 196667
 			public const int TxtAttrDesc = 0;
 
-			// Token: 0x0403560C RID: 218636
+			// Token: 0x0403003C RID: 196668
 			public const int UnlockItem = 1;
 		}
 	}

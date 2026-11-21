@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E44 RID: 28228
+	// Token: 0x02005FC5 RID: 24517
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingQteRingBgItem : UiPanelBase
 	{
-		// Token: 0x06044CF6 RID: 281846 RVA: 0x010FAD8E File Offset: 0x010F8F8E
+		// Token: 0x0603AE83 RID: 241283 RVA: 0x010A530E File Offset: 0x010A350E
 		public FishingQteRingBgItem(FishingQteRingInfo RingInfo, IFishingQteConfig RingConfig)
 		{
 			this.RingInfo = RingInfo;
 			this.RingConfig = RingConfig;
 		}
 
-		// Token: 0x06044CF7 RID: 281847 RVA: 0x010FADB0 File Offset: 0x010F8FB0
+		// Token: 0x0603AE84 RID: 241284 RVA: 0x010A5330 File Offset: 0x010A3530
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -33,18 +33,18 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CF8 RID: 281848 RVA: 0x010FADF8 File Offset: 0x010F8FF8
+		// Token: 0x0603AE85 RID: 241285 RVA: 0x010A5378 File Offset: 0x010A3578
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06044CF9 RID: 281849 RVA: 0x010FADFA File Offset: 0x010F8FFA
+		// Token: 0x0603AE86 RID: 241286 RVA: 0x010A537A File Offset: 0x010A357A
 		protected override void OnBeforeDestroy()
 		{
 			this.BgItemList.Clear();
 		}
 
-		// Token: 0x06044CFA RID: 281850 RVA: 0x010FAE08 File Offset: 0x010F9008
+		// Token: 0x0603AE87 RID: 241287 RVA: 0x010A5388 File Offset: 0x010A3588
 		public UniTask SpawnBgArea()
 		{
 			FishingQteRingBgItem.<SpawnBgArea>d__7 <SpawnBgArea>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return <SpawnBgArea>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044CFB RID: 281851 RVA: 0x010FAE4C File Offset: 0x010F904C
+		// Token: 0x0603AE88 RID: 241288 RVA: 0x010A53CC File Offset: 0x010A35CC
 		public void PlayAnim(string sequenceName)
 		{
 			foreach (FishingQteRingBgSingleItem fishingQteRingBgSingleItem in this.BgItemList)
@@ -64,20 +64,20 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x04023CC5 RID: 146629
+		// Token: 0x0401EF7A RID: 126842
 		protected FishingQteRingInfo RingInfo;
 
-		// Token: 0x04023CC6 RID: 146630
+		// Token: 0x0401EF7B RID: 126843
 		protected IFishingQteConfig RingConfig;
 
-		// Token: 0x04023CC7 RID: 146631
+		// Token: 0x0401EF7C RID: 126844
 		protected List<FishingQteRingBgSingleItem> BgItemList = new List<FishingQteRingBgSingleItem>();
 
-		// Token: 0x0200CCFA RID: 52474
+		// Token: 0x0200B8EA RID: 47338
 		[NullableContext(0)]
 		private class EBgComponents
 		{
-			// Token: 0x0403DCF0 RID: 253168
+			// Token: 0x04039112 RID: 233746
 			public const int BgRing = 0;
 		}
 	}

@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Camera.CameraDebugTool
 {
-	// Token: 0x02003FBB RID: 16315
+	// Token: 0x02003243 RID: 12867
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,112 +14,104 @@ namespace AkiClient.Game.Aki.Data.Camera.CameraDebugTool
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 21)]
 	public class SCameraDebugTool_CameraProperty : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029C3B RID: 171067 RVA: 0x009CC074 File Offset: 0x009CA274
+		// Token: 0x06020264 RID: 131684 RVA: 0x0093E76F File Offset: 0x0093C96F
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCameraDebugTool_CameraProperty._ScriptStructPtr != 0) ? SCameraDebugTool_CameraProperty._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Camera/CameraDebugTool/SCameraDebugTool_CameraProperty.SCameraDebugTool_CameraProperty", ref SCameraDebugTool_CameraProperty._ScriptStructPtr);
 		}
 
-		// Token: 0x1700652C RID: 25900
-		// (get) Token: 0x06029C3C RID: 171068 RVA: 0x009CC098 File Offset: 0x009CA298
-		// (set) Token: 0x06029C3D RID: 171069 RVA: 0x009CC0AC File Offset: 0x009CA2AC
+		// Token: 0x17003D93 RID: 15763
+		// (get) Token: 0x06020265 RID: 131685 RVA: 0x0093E793 File Offset: 0x0093C993
+		// (set) Token: 0x06020266 RID: 131686 RVA: 0x0093E7A7 File Offset: 0x0093C9A7
 		public unsafe string PropertyName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_PropertyName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_PropertyName)), value);
 			}
 		}
 
-		// Token: 0x1700652D RID: 25901
-		// (get) Token: 0x06029C3E RID: 171070 RVA: 0x009CC0C1 File Offset: 0x009CA2C1
-		// (set) Token: 0x06029C3F RID: 171071 RVA: 0x009CC0D1 File Offset: 0x009CA2D1
+		// Token: 0x17003D94 RID: 15764
+		// (get) Token: 0x06020267 RID: 131687 RVA: 0x0093E7BC File Offset: 0x0093C9BC
+		// (set) Token: 0x06020268 RID: 131688 RVA: 0x0093E7CC File Offset: 0x0093C9CC
 		public unsafe float Value
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_Value);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_Value) = value;
 			}
 		}
 
-		// Token: 0x1700652E RID: 25902
-		// (get) Token: 0x06029C40 RID: 171072 RVA: 0x009CC0E2 File Offset: 0x009CA2E2
-		// (set) Token: 0x06029C41 RID: 171073 RVA: 0x009CC0F2 File Offset: 0x009CA2F2
+		// Token: 0x17003D95 RID: 15765
+		// (get) Token: 0x06020269 RID: 131689 RVA: 0x0093E7DD File Offset: 0x0093C9DD
+		// (set) Token: 0x0602026A RID: 131690 RVA: 0x0093E7ED File Offset: 0x0093C9ED
 		public unsafe bool IsEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_IsEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCameraDebugTool_CameraProperty.__PropertyOffset_IsEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06029C42 RID: 171074 RVA: 0x009CC103 File Offset: 0x009CA303
+		// Token: 0x0602026B RID: 131691 RVA: 0x0093E7FE File Offset: 0x0093C9FE
 		public SCameraDebugTool_CameraProperty()
 		{
 		}
 
-		// Token: 0x06029C43 RID: 171075 RVA: 0x009CC10B File Offset: 0x009CA30B
-		public SCameraDebugTool_CameraProperty(string PropertyName, float Value, bool IsEffect)
-		{
-			this.PropertyName = PropertyName;
-			this.Value = Value;
-			this.IsEffect = IsEffect;
-		}
-
-		// Token: 0x06029C44 RID: 171076 RVA: 0x009CC128 File Offset: 0x009CA328
+		// Token: 0x0602026C RID: 131692 RVA: 0x0093E806 File Offset: 0x0093CA06
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCameraDebugTool_CameraProperty.StaticStruct();
 		}
 
-		// Token: 0x06029C45 RID: 171077 RVA: 0x009CC134 File Offset: 0x009CA334
+		// Token: 0x0602026D RID: 131693 RVA: 0x0093E812 File Offset: 0x0093CA12
 		[NullableContext(2)]
 		public SCameraDebugTool_CameraProperty(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029C46 RID: 171078 RVA: 0x009CC13E File Offset: 0x009CA33E
+		// Token: 0x0602026E RID: 131694 RVA: 0x0093E81C File Offset: 0x0093CA1C
 		public SCameraDebugTool_CameraProperty(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029C47 RID: 171079 RVA: 0x009CC149 File Offset: 0x009CA349
+		// Token: 0x0602026F RID: 131695 RVA: 0x0093E827 File Offset: 0x0093CA27
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCameraDebugTool_CameraProperty(Pointer, false, true);
 		}
 
-		// Token: 0x06029C48 RID: 171080 RVA: 0x009CC153 File Offset: 0x009CA353
+		// Token: 0x06020270 RID: 131696 RVA: 0x0093E831 File Offset: 0x0093CA31
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCameraDebugTool_CameraProperty(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401572D RID: 87853
+		// Token: 0x040114D5 RID: 70869
 		public const string __ObjectPath = "/Game/Aki/Data/Camera/CameraDebugTool/SCameraDebugTool_CameraProperty.SCameraDebugTool_CameraProperty";
 
-		// Token: 0x0401572E RID: 87854
+		// Token: 0x040114D6 RID: 70870
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401572F RID: 87855
-		internal static int __PropertyOffset_0;
+		// Token: 0x040114D7 RID: 70871
+		internal static int __PropertyOffset_PropertyName;
 
-		// Token: 0x04015730 RID: 87856
-		internal static int __PropertyOffset_1;
+		// Token: 0x040114D8 RID: 70872
+		internal static int __PropertyOffset_Value;
 
-		// Token: 0x04015731 RID: 87857
-		internal static int __PropertyOffset_2;
+		// Token: 0x040114D9 RID: 70873
+		internal static int __PropertyOffset_IsEffect;
 	}
 }

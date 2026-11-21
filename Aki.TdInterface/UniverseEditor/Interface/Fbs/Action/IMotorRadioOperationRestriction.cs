@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B27 RID: 27431
+	// Token: 0x0200726D RID: 29293
 	public struct IMotorRadioOperationRestriction : IFlatbufferObject
 	{
-		// Token: 0x1700CBDF RID: 52191
-		// (get) Token: 0x0603025D RID: 197213 RVA: 0x0068B6AC File Offset: 0x006898AC
+		// Token: 0x1700D6C4 RID: 54980
+		// (get) Token: 0x060330AE RID: 209070 RVA: 0x006E3B2E File Offset: 0x006E1D2E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603025E RID: 197214 RVA: 0x0068B6B9 File Offset: 0x006898B9
+		// Token: 0x060330AF RID: 209071 RVA: 0x006E3B3B File Offset: 0x006E1D3B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603025F RID: 197215 RVA: 0x0068B6C0 File Offset: 0x006898C0
+		// Token: 0x060330B0 RID: 209072 RVA: 0x006E3B44 File Offset: 0x006E1D44
 		public static IMotorRadioOperationRestriction GetRootAsIMotorRadioOperationRestriction(ByteBuffer _bb)
 		{
 			return IMotorRadioOperationRestriction.GetRootAsIMotorRadioOperationRestriction(_bb, default(IMotorRadioOperationRestriction));
 		}
 
-		// Token: 0x06030260 RID: 197216 RVA: 0x0068B6DC File Offset: 0x006898DC
+		// Token: 0x060330B1 RID: 209073 RVA: 0x006E3B60 File Offset: 0x006E1D60
 		public static IMotorRadioOperationRestriction GetRootAsIMotorRadioOperationRestriction(ByteBuffer _bb, IMotorRadioOperationRestriction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030261 RID: 197217 RVA: 0x0068B6F9 File Offset: 0x006898F9
+		// Token: 0x060330B2 RID: 209074 RVA: 0x006E3B7D File Offset: 0x006E1D7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030262 RID: 197218 RVA: 0x0068B708 File Offset: 0x00689908
+		// Token: 0x060330B3 RID: 209075 RVA: 0x006E3B8C File Offset: 0x006E1D8C
 		public IMotorRadioOperationRestriction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CBE0 RID: 52192
-		// (get) Token: 0x06030263 RID: 197219 RVA: 0x0068B718 File Offset: 0x00689918
+		// Token: 0x1700D6C5 RID: 54981
+		// (get) Token: 0x060330B4 RID: 209076 RVA: 0x006E3B9C File Offset: 0x006E1D9C
 		public EMotorRadioOperationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030264 RID: 197220 RVA: 0x0068B754 File Offset: 0x00689954
+		// Token: 0x060330B5 RID: 209077 RVA: 0x006E3BD8 File Offset: 0x006E1DD8
 		public static Offset<IMotorRadioOperationRestriction> CreateIMotorRadioOperationRestriction(FlatBufferBuilder builder, EMotorRadioOperationType Type = EMotorRadioOperationType.EnableAll)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorRadioOperationRestriction.EndIMotorRadioOperationRestriction(builder);
 		}
 
-		// Token: 0x06030265 RID: 197221 RVA: 0x0068B76A File Offset: 0x0068996A
+		// Token: 0x060330B6 RID: 209078 RVA: 0x006E3BEE File Offset: 0x006E1DEE
 		public static void StartIMotorRadioOperationRestriction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030266 RID: 197222 RVA: 0x0068B773 File Offset: 0x00689973
+		// Token: 0x060330B7 RID: 209079 RVA: 0x006E3BF7 File Offset: 0x006E1DF7
 		public static void AddType(FlatBufferBuilder builder, EMotorRadioOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030267 RID: 197223 RVA: 0x0068B77E File Offset: 0x0068997E
+		// Token: 0x060330B8 RID: 209080 RVA: 0x006E3C02 File Offset: 0x006E1E02
 		public static Offset<IMotorRadioOperationRestriction> EndIMotorRadioOperationRestriction(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorRadioOperationRestriction>(builder.EndTable());
 		}
 
-		// Token: 0x06030268 RID: 197224 RVA: 0x0068B78C File Offset: 0x0068998C
+		// Token: 0x060330B9 RID: 209081 RVA: 0x006E3C10 File Offset: 0x006E1E10
 		public IMotorRadioOperationRestrictionT UnPack()
 		{
 			IMotorRadioOperationRestrictionT motorRadioOperationRestrictionT = new IMotorRadioOperationRestrictionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorRadioOperationRestrictionT;
 		}
 
-		// Token: 0x06030269 RID: 197225 RVA: 0x0068B7A7 File Offset: 0x006899A7
+		// Token: 0x060330BA RID: 209082 RVA: 0x006E3C2B File Offset: 0x006E1E2B
 		public void UnPackTo(IMotorRadioOperationRestrictionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0603026A RID: 197226 RVA: 0x0068B7B8 File Offset: 0x006899B8
+		// Token: 0x060330BB RID: 209083 RVA: 0x006E3C3C File Offset: 0x006E1E3C
 		public static Offset<IMotorRadioOperationRestriction> Pack(FlatBufferBuilder builder, IMotorRadioOperationRestrictionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorRadioOperationRestriction.CreateIMotorRadioOperationRestriction(builder, _o.Type);
 		}
 
-		// Token: 0x040113BD RID: 70589
+		// Token: 0x040122E4 RID: 74468
 		private Table __p;
 	}
 }

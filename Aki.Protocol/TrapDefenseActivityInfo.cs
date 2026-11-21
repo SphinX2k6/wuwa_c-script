@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001402 RID: 5122
+	// Token: 0x02001475 RID: 5237
 	public sealed class TrapDefenseActivityInfo : IMessage<TrapDefenseActivityInfo>, IMessage, IEquatable<TrapDefenseActivityInfo>, IDeepCloneable<TrapDefenseActivityInfo>, IBufferMessage
 	{
-		// Token: 0x0601B270 RID: 111216 RVA: 0x003EF50F File Offset: 0x003ED70F
+		// Token: 0x0601BCFB RID: 113915 RVA: 0x0040A7E3 File Offset: 0x004089E3
 		[NullableContext(1)]
 		public static TrapDefenseActivityInfo Create()
 		{
 			return new TrapDefenseActivityInfo();
 		}
 
-		// Token: 0x17005B90 RID: 23440
-		// (get) Token: 0x0601B271 RID: 111217 RVA: 0x003EF516 File Offset: 0x003ED716
+		// Token: 0x17005E25 RID: 24101
+		// (get) Token: 0x0601BCFC RID: 113916 RVA: 0x0040A7EA File Offset: 0x004089EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B91 RID: 23441
-		// (get) Token: 0x0601B272 RID: 111218 RVA: 0x003EF519 File Offset: 0x003ED719
+		// Token: 0x17005E26 RID: 24102
+		// (get) Token: 0x0601BCFD RID: 113917 RVA: 0x0040A7ED File Offset: 0x004089ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B273 RID: 111219 RVA: 0x003EF520 File Offset: 0x003ED720
+		// Token: 0x0601BCFE RID: 113918 RVA: 0x0040A7F4 File Offset: 0x004089F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseActivityInfo()
 		{
 		}
 
-		// Token: 0x0601B274 RID: 111220 RVA: 0x003EF58C File Offset: 0x003ED78C
+		// Token: 0x0601BCFF RID: 113919 RVA: 0x0040A860 File Offset: 0x00408A60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseActivityInfo(TrapDefenseActivityInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B275 RID: 111221 RVA: 0x003EF680 File Offset: 0x003ED880
+		// Token: 0x0601BD00 RID: 113920 RVA: 0x0040A954 File Offset: 0x00408B54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseActivityInfo Clone()
@@ -79,8 +79,8 @@ namespace Aki.Protocol
 			return new TrapDefenseActivityInfo(this);
 		}
 
-		// Token: 0x17005B92 RID: 23442
-		// (get) Token: 0x0601B276 RID: 111222 RVA: 0x003EF688 File Offset: 0x003ED888
+		// Token: 0x17005E27 RID: 24103
+		// (get) Token: 0x0601BD01 RID: 113921 RVA: 0x0040A95C File Offset: 0x00408B5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockTechNodes
@@ -91,8 +91,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B93 RID: 23443
-		// (get) Token: 0x0601B277 RID: 111223 RVA: 0x003EF690 File Offset: 0x003ED890
+		// Token: 0x17005E28 RID: 24104
+		// (get) Token: 0x0601BD02 RID: 113922 RVA: 0x0040A964 File Offset: 0x00408B64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TrapDefenseRewardInfo> SpecialRewards
@@ -103,8 +103,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B94 RID: 23444
-		// (get) Token: 0x0601B278 RID: 111224 RVA: 0x003EF698 File Offset: 0x003ED898
+		// Token: 0x17005E29 RID: 24105
+		// (get) Token: 0x0601BD03 RID: 113923 RVA: 0x0040A96C File Offset: 0x00408B6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TrapDefenseRewardInfo> Rewards
@@ -115,8 +115,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B95 RID: 23445
-		// (get) Token: 0x0601B279 RID: 111225 RVA: 0x003EF6A0 File Offset: 0x003ED8A0
+		// Token: 0x17005E2A RID: 24106
+		// (get) Token: 0x0601BD04 RID: 113924 RVA: 0x0040A974 File Offset: 0x00408B74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TrapDefenseAuxiliaryInfo> Auxiliaries
@@ -127,8 +127,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B96 RID: 23446
-		// (get) Token: 0x0601B27A RID: 111226 RVA: 0x003EF6A8 File Offset: 0x003ED8A8
+		// Token: 0x17005E2B RID: 24107
+		// (get) Token: 0x0601BD05 RID: 113925 RVA: 0x0040A97C File Offset: 0x00408B7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TrapDefenseBuildingInfo> Buildings
@@ -139,8 +139,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B97 RID: 23447
-		// (get) Token: 0x0601B27B RID: 111227 RVA: 0x003EF6B0 File Offset: 0x003ED8B0
+		// Token: 0x17005E2C RID: 24108
+		// (get) Token: 0x0601BD06 RID: 113926 RVA: 0x0040A984 File Offset: 0x00408B84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TrapDefenseChallengeInfo> Challenges
@@ -151,9 +151,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B98 RID: 23448
-		// (get) Token: 0x0601B27C RID: 111228 RVA: 0x003EF6B8 File Offset: 0x003ED8B8
-		// (set) Token: 0x0601B27D RID: 111229 RVA: 0x003EF6C0 File Offset: 0x003ED8C0
+		// Token: 0x17005E2D RID: 24109
+		// (get) Token: 0x0601BD07 RID: 113927 RVA: 0x0040A98C File Offset: 0x00408B8C
+		// (set) Token: 0x0601BD08 RID: 113928 RVA: 0x0040A994 File Offset: 0x00408B94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitBeginTime
@@ -168,9 +168,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B99 RID: 23449
-		// (get) Token: 0x0601B27E RID: 111230 RVA: 0x003EF6C9 File Offset: 0x003ED8C9
-		// (set) Token: 0x0601B27F RID: 111231 RVA: 0x003EF6D1 File Offset: 0x003ED8D1
+		// Token: 0x17005E2E RID: 24110
+		// (get) Token: 0x0601BD09 RID: 113929 RVA: 0x0040A99D File Offset: 0x00408B9D
+		// (set) Token: 0x0601BD0A RID: 113930 RVA: 0x0040A9A5 File Offset: 0x00408BA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long LimitEndTime
@@ -185,8 +185,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B9A RID: 23450
-		// (get) Token: 0x0601B280 RID: 111232 RVA: 0x003EF6DA File Offset: 0x003ED8DA
+		// Token: 0x17005E2F RID: 24111
+		// (get) Token: 0x0601BD0B RID: 113931 RVA: 0x0040A9AE File Offset: 0x00408BAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockBds
@@ -197,9 +197,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B9B RID: 23451
-		// (get) Token: 0x0601B281 RID: 111233 RVA: 0x003EF6E2 File Offset: 0x003ED8E2
-		// (set) Token: 0x0601B282 RID: 111234 RVA: 0x003EF6EA File Offset: 0x003ED8EA
+		// Token: 0x17005E30 RID: 24112
+		// (get) Token: 0x0601BD0C RID: 113932 RVA: 0x0040A9B6 File Offset: 0x00408BB6
+		// (set) Token: 0x0601BD0D RID: 113933 RVA: 0x0040A9BE File Offset: 0x00408BBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalTechPoint
@@ -214,9 +214,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B9C RID: 23452
-		// (get) Token: 0x0601B283 RID: 111235 RVA: 0x003EF6F3 File Offset: 0x003ED8F3
-		// (set) Token: 0x0601B284 RID: 111236 RVA: 0x003EF6FB File Offset: 0x003ED8FB
+		// Token: 0x17005E31 RID: 24113
+		// (get) Token: 0x0601BD0E RID: 113934 RVA: 0x0040A9C7 File Offset: 0x00408BC7
+		// (set) Token: 0x0601BD0F RID: 113935 RVA: 0x0040A9CF File Offset: 0x00408BCF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LeftTechPoint
@@ -231,9 +231,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B9D RID: 23453
-		// (get) Token: 0x0601B285 RID: 111237 RVA: 0x003EF704 File Offset: 0x003ED904
-		// (set) Token: 0x0601B286 RID: 111238 RVA: 0x003EF70C File Offset: 0x003ED90C
+		// Token: 0x17005E32 RID: 24114
+		// (get) Token: 0x0601BD10 RID: 113936 RVA: 0x0040A9D8 File Offset: 0x00408BD8
+		// (set) Token: 0x0601BD11 RID: 113937 RVA: 0x0040A9E0 File Offset: 0x00408BE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LeftLevelUpPoint
@@ -248,9 +248,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B9E RID: 23454
-		// (get) Token: 0x0601B287 RID: 111239 RVA: 0x003EF715 File Offset: 0x003ED915
-		// (set) Token: 0x0601B288 RID: 111240 RVA: 0x003EF71D File Offset: 0x003ED91D
+		// Token: 0x17005E33 RID: 24115
+		// (get) Token: 0x0601BD12 RID: 113938 RVA: 0x0040A9E9 File Offset: 0x00408BE9
+		// (set) Token: 0x0601BD13 RID: 113939 RVA: 0x0040A9F1 File Offset: 0x00408BF1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalLevelUpPoint
@@ -265,8 +265,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B9F RID: 23455
-		// (get) Token: 0x0601B289 RID: 111241 RVA: 0x003EF726 File Offset: 0x003ED926
+		// Token: 0x17005E34 RID: 24116
+		// (get) Token: 0x0601BD14 RID: 113940 RVA: 0x0040A9FA File Offset: 0x00408BFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockBdGroups
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B28A RID: 111242 RVA: 0x003EF72E File Offset: 0x003ED92E
+		// Token: 0x0601BD15 RID: 113941 RVA: 0x0040AA02 File Offset: 0x00408C02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrapDefenseActivityInfo);
 		}
 
-		// Token: 0x0601B28B RID: 111243 RVA: 0x003EF73C File Offset: 0x003ED93C
+		// Token: 0x0601BD16 RID: 113942 RVA: 0x0040AA10 File Offset: 0x00408C10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrapDefenseActivityInfo other)
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.unlockTechNodes_.Equals(other.unlockTechNodes_) && this.specialRewards_.Equals(other.specialRewards_) && this.rewards_.Equals(other.rewards_) && this.auxiliaries_.Equals(other.auxiliaries_) && this.buildings_.Equals(other.buildings_) && this.challenges_.Equals(other.challenges_) && this.LimitBeginTime == other.LimitBeginTime && this.LimitEndTime == other.LimitEndTime && this.unlockBds_.Equals(other.unlockBds_) && this.TotalTechPoint == other.TotalTechPoint && this.LeftTechPoint == other.LeftTechPoint && this.LeftLevelUpPoint == other.LeftLevelUpPoint && this.TotalLevelUpPoint == other.TotalLevelUpPoint && this.unlockBdGroups_.Equals(other.unlockBdGroups_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B28C RID: 111244 RVA: 0x003EF870 File Offset: 0x003EDA70
+		// Token: 0x0601BD17 RID: 113943 RVA: 0x0040AB44 File Offset: 0x00408D44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -338,7 +338,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B28D RID: 111245 RVA: 0x003EF99C File Offset: 0x003EDB9C
+		// Token: 0x0601BD18 RID: 113944 RVA: 0x0040AC70 File Offset: 0x00408E70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -346,7 +346,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B28E RID: 111246 RVA: 0x003EF9A9 File Offset: 0x003EDBA9
+		// Token: 0x0601BD19 RID: 113945 RVA: 0x0040AC7D File Offset: 0x00408E7D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -354,7 +354,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B28F RID: 111247 RVA: 0x003EF9B4 File Offset: 0x003EDBB4
+		// Token: 0x0601BD1A RID: 113946 RVA: 0x0040AC88 File Offset: 0x00408E88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -403,7 +403,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B290 RID: 111248 RVA: 0x003EFB08 File Offset: 0x003EDD08
+		// Token: 0x0601BD1B RID: 113947 RVA: 0x0040ADDC File Offset: 0x00408FDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -448,7 +448,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B291 RID: 111249 RVA: 0x003EFC58 File Offset: 0x003EDE58
+		// Token: 0x0601BD1C RID: 113948 RVA: 0x0040AF2C File Offset: 0x0040912C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrapDefenseActivityInfo other)
@@ -492,7 +492,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B292 RID: 111250 RVA: 0x003EFD80 File Offset: 0x003EDF80
+		// Token: 0x0601BD1D RID: 113949 RVA: 0x0040B054 File Offset: 0x00409254
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -500,7 +500,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B293 RID: 111251 RVA: 0x003EFD8C File Offset: 0x003EDF8C
+		// Token: 0x0601BD1E RID: 113950 RVA: 0x0040B060 File Offset: 0x00409260
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -625,115 +625,115 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009D15 RID: 40213
+		// Token: 0x0400A15C RID: 41308
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009D16 RID: 40214
+		// Token: 0x0400A15D RID: 41309
 		public const int UnlockTechNodesFieldNumber = 1;
 
-		// Token: 0x04009D17 RID: 40215
+		// Token: 0x0400A15E RID: 41310
 		private static readonly FieldCodec<int> _repeated_unlockTechNodes_codec = FieldCodec.ForInt32(10U);
 
-		// Token: 0x04009D18 RID: 40216
+		// Token: 0x0400A15F RID: 41311
 		private readonly RepeatedField<int> unlockTechNodes_ = new RepeatedField<int>();
 
-		// Token: 0x04009D19 RID: 40217
+		// Token: 0x0400A160 RID: 41312
 		public const int SpecialRewardsFieldNumber = 2;
 
-		// Token: 0x04009D1A RID: 40218
+		// Token: 0x0400A161 RID: 41313
 		private static readonly FieldCodec<TrapDefenseRewardInfo> _repeated_specialRewards_codec = FieldCodec.ForMessage<TrapDefenseRewardInfo>(18U, TrapDefenseRewardInfo.Parser);
 
-		// Token: 0x04009D1B RID: 40219
+		// Token: 0x0400A162 RID: 41314
 		private readonly RepeatedField<TrapDefenseRewardInfo> specialRewards_ = new RepeatedField<TrapDefenseRewardInfo>();
 
-		// Token: 0x04009D1C RID: 40220
+		// Token: 0x0400A163 RID: 41315
 		public const int RewardsFieldNumber = 3;
 
-		// Token: 0x04009D1D RID: 40221
+		// Token: 0x0400A164 RID: 41316
 		private static readonly FieldCodec<TrapDefenseRewardInfo> _repeated_rewards_codec = FieldCodec.ForMessage<TrapDefenseRewardInfo>(26U, TrapDefenseRewardInfo.Parser);
 
-		// Token: 0x04009D1E RID: 40222
+		// Token: 0x0400A165 RID: 41317
 		private readonly RepeatedField<TrapDefenseRewardInfo> rewards_ = new RepeatedField<TrapDefenseRewardInfo>();
 
-		// Token: 0x04009D1F RID: 40223
+		// Token: 0x0400A166 RID: 41318
 		public const int AuxiliariesFieldNumber = 4;
 
-		// Token: 0x04009D20 RID: 40224
+		// Token: 0x0400A167 RID: 41319
 		private static readonly FieldCodec<TrapDefenseAuxiliaryInfo> _repeated_auxiliaries_codec = FieldCodec.ForMessage<TrapDefenseAuxiliaryInfo>(34U, TrapDefenseAuxiliaryInfo.Parser);
 
-		// Token: 0x04009D21 RID: 40225
+		// Token: 0x0400A168 RID: 41320
 		private readonly RepeatedField<TrapDefenseAuxiliaryInfo> auxiliaries_ = new RepeatedField<TrapDefenseAuxiliaryInfo>();
 
-		// Token: 0x04009D22 RID: 40226
+		// Token: 0x0400A169 RID: 41321
 		public const int BuildingsFieldNumber = 5;
 
-		// Token: 0x04009D23 RID: 40227
+		// Token: 0x0400A16A RID: 41322
 		private static readonly FieldCodec<TrapDefenseBuildingInfo> _repeated_buildings_codec = FieldCodec.ForMessage<TrapDefenseBuildingInfo>(42U, TrapDefenseBuildingInfo.Parser);
 
-		// Token: 0x04009D24 RID: 40228
+		// Token: 0x0400A16B RID: 41323
 		private readonly RepeatedField<TrapDefenseBuildingInfo> buildings_ = new RepeatedField<TrapDefenseBuildingInfo>();
 
-		// Token: 0x04009D25 RID: 40229
+		// Token: 0x0400A16C RID: 41324
 		public const int ChallengesFieldNumber = 6;
 
-		// Token: 0x04009D26 RID: 40230
+		// Token: 0x0400A16D RID: 41325
 		private static readonly FieldCodec<TrapDefenseChallengeInfo> _repeated_challenges_codec = FieldCodec.ForMessage<TrapDefenseChallengeInfo>(50U, TrapDefenseChallengeInfo.Parser);
 
-		// Token: 0x04009D27 RID: 40231
+		// Token: 0x0400A16E RID: 41326
 		private readonly RepeatedField<TrapDefenseChallengeInfo> challenges_ = new RepeatedField<TrapDefenseChallengeInfo>();
 
-		// Token: 0x04009D28 RID: 40232
+		// Token: 0x0400A16F RID: 41327
 		public const int LimitBeginTimeFieldNumber = 7;
 
-		// Token: 0x04009D29 RID: 40233
+		// Token: 0x0400A170 RID: 41328
 		private long limitBeginTime_;
 
-		// Token: 0x04009D2A RID: 40234
+		// Token: 0x0400A171 RID: 41329
 		public const int LimitEndTimeFieldNumber = 8;
 
-		// Token: 0x04009D2B RID: 40235
+		// Token: 0x0400A172 RID: 41330
 		private long limitEndTime_;
 
-		// Token: 0x04009D2C RID: 40236
+		// Token: 0x0400A173 RID: 41331
 		public const int UnlockBdsFieldNumber = 9;
 
-		// Token: 0x04009D2D RID: 40237
+		// Token: 0x0400A174 RID: 41332
 		private static readonly FieldCodec<int> _repeated_unlockBds_codec = FieldCodec.ForInt32(74U);
 
-		// Token: 0x04009D2E RID: 40238
+		// Token: 0x0400A175 RID: 41333
 		private readonly RepeatedField<int> unlockBds_ = new RepeatedField<int>();
 
-		// Token: 0x04009D2F RID: 40239
+		// Token: 0x0400A176 RID: 41334
 		public const int TotalTechPointFieldNumber = 10;
 
-		// Token: 0x04009D30 RID: 40240
+		// Token: 0x0400A177 RID: 41335
 		private int totalTechPoint_;
 
-		// Token: 0x04009D31 RID: 40241
+		// Token: 0x0400A178 RID: 41336
 		public const int LeftTechPointFieldNumber = 11;
 
-		// Token: 0x04009D32 RID: 40242
+		// Token: 0x0400A179 RID: 41337
 		private int leftTechPoint_;
 
-		// Token: 0x04009D33 RID: 40243
+		// Token: 0x0400A17A RID: 41338
 		public const int LeftLevelUpPointFieldNumber = 12;
 
-		// Token: 0x04009D34 RID: 40244
+		// Token: 0x0400A17B RID: 41339
 		private int leftLevelUpPoint_;
 
-		// Token: 0x04009D35 RID: 40245
+		// Token: 0x0400A17C RID: 41340
 		public const int TotalLevelUpPointFieldNumber = 13;
 
-		// Token: 0x04009D36 RID: 40246
+		// Token: 0x0400A17D RID: 41341
 		private int totalLevelUpPoint_;
 
-		// Token: 0x04009D37 RID: 40247
+		// Token: 0x0400A17E RID: 41342
 		public const int UnlockBdGroupsFieldNumber = 14;
 
-		// Token: 0x04009D38 RID: 40248
+		// Token: 0x0400A17F RID: 41343
 		private static readonly FieldCodec<int> _repeated_unlockBdGroups_codec = FieldCodec.ForInt32(114U);
 
-		// Token: 0x04009D39 RID: 40249
+		// Token: 0x0400A180 RID: 41344
 		private readonly RepeatedField<int> unlockBdGroups_ = new RepeatedField<int>();
 	}
 }

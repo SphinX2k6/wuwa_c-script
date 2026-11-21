@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006209 RID: 25097
+	// Token: 0x0200687A RID: 26746
 	public enum IBlendAnimTargetBase_Union : byte
 	{
-		// Token: 0x04010743 RID: 67395
+		// Token: 0x04011557 RID: 70999
 		NONE,
-		// Token: 0x04010744 RID: 67396
+		// Token: 0x04011558 RID: 71000
 		IBlendAnimTargetBase,
-		// Token: 0x04010745 RID: 67397
+		// Token: 0x04011559 RID: 71001
 		IPlayerBlendAnimTarget
 	}
 }

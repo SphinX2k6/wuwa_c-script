@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027E7 RID: 10215
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002ABA RID: 10938
 	public class IFailurePoseInteract : ILeisureInteractType
 	{
-		// Token: 0x0600E2FA RID: 58106 RVA: 0x00217DA7 File Offset: 0x00215FA7
+		// Token: 0x0600F11F RID: 61727 RVA: 0x00234C0A File Offset: 0x00232E0A
 		public static IFailurePoseInteract Create(IFailurePoseInteract? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044EE RID: 17646
-		// (get) Token: 0x0600E2FB RID: 58107 RVA: 0x00217DC6 File Offset: 0x00215FC6
+		// Token: 0x17004859 RID: 18521
+		// (get) Token: 0x0600F120 RID: 61728 RVA: 0x00234C29 File Offset: 0x00232E29
 		public override ELeisureInteract Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044EF RID: 17647
-		// (get) Token: 0x0600E2FC RID: 58108 RVA: 0x00217DD3 File Offset: 0x00215FD3
+		// Token: 0x1700485A RID: 18522
+		// (get) Token: 0x0600F121 RID: 61729 RVA: 0x00234C36 File Offset: 0x00232E36
 		public virtual VectorInfo Rot
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DC9 RID: 32201
+		// Token: 0x04008486 RID: 33926
 		private IFailurePoseInteract Instance;
 
-		// Token: 0x04007DCA RID: 32202
+		// Token: 0x04008487 RID: 33927
 		[Nullable(2)]
 		private VectorInfo _RotCache;
 
-		// Token: 0x04007DCB RID: 32203
+		// Token: 0x04008488 RID: 33928
 		private bool _RotInited;
 	}
 }

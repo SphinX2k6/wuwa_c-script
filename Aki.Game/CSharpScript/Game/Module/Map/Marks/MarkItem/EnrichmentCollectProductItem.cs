@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054E1 RID: 21729
+	// Token: 0x020044B4 RID: 17588
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EnrichmentCollectProductItem : ServerMarkItem
 	{
-		// Token: 0x17008538 RID: 34104
-		// (get) Token: 0x060377B4 RID: 227252 RVA: 0x00D2D96B File Offset: 0x00D2BB6B
+		// Token: 0x170058C6 RID: 22726
+		// (get) Token: 0x0602C670 RID: 181872 RVA: 0x00C7BA4F File Offset: 0x00C79C4F
 		public override EMarkType MarkType
 		{
 			get
@@ -23,24 +23,24 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x060377B5 RID: 227253 RVA: 0x00D2D96F File Offset: 0x00D2BB6F
+		// Token: 0x0602C671 RID: 181873 RVA: 0x00C7BA53 File Offset: 0x00C79C53
 		public EnrichmentCollectProductItem(DynamicMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
 		{
 		}
 
-		// Token: 0x060377B6 RID: 227254 RVA: 0x00D2D97C File Offset: 0x00D2BB7C
+		// Token: 0x0602C672 RID: 181874 RVA: 0x00C7BA60 File Offset: 0x00C79C60
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.EnrichmentCollectProductItemView;
 		}
 
-		// Token: 0x060377B7 RID: 227255 RVA: 0x00D2D97F File Offset: 0x00D2BB7F
+		// Token: 0x0602C673 RID: 181875 RVA: 0x00C7BA63 File Offset: 0x00C79C63
 		protected override MarkItemView CreateView()
 		{
 			return new EnrichmentCollectProductItemView(this);
 		}
 
-		// Token: 0x060377B8 RID: 227256 RVA: 0x00D2D988 File Offset: 0x00D2BB88
+		// Token: 0x0602C674 RID: 181876 RVA: 0x00C7BA6C File Offset: 0x00C79C6C
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
@@ -51,13 +51,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.UpdateVisibleRelativeState();
 		}
 
-		// Token: 0x060377B9 RID: 227257 RVA: 0x00D2D9BD File Offset: 0x00D2BBBD
+		// Token: 0x0602C675 RID: 181877 RVA: 0x00C7BAA1 File Offset: 0x00C79CA1
 		public void SetConfigId(int configId)
 		{
 			this.OnSetConfigId(configId);
 		}
 
-		// Token: 0x060377BA RID: 227258 RVA: 0x00D2D9C8 File Offset: 0x00D2BBC8
+		// Token: 0x0602C676 RID: 181878 RVA: 0x00C7BAAC File Offset: 0x00C79CAC
 		public void OnSetConfigId(int configId)
 		{
 			MapMark value = MapConfig.Instance.GetConfigMark(configId).Value;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			});
 		}
 
-		// Token: 0x060377BB RID: 227259 RVA: 0x00D2DA44 File Offset: 0x00D2BC44
+		// Token: 0x0602C677 RID: 181879 RVA: 0x00C7BB28 File Offset: 0x00C79D28
 		public override bool GetInteractiveFlag()
 		{
 			return false;

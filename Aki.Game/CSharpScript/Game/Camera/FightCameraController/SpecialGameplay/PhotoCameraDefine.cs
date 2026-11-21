@@ -5,10 +5,10 @@ using AkiClient.Game.Aki.Data.Camera.PhotoCamera;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x02007305 RID: 29445
+	// Token: 0x02006488 RID: 25736
 	public class PhotoCameraDefine
 	{
-		// Token: 0x040262FE RID: 156414
+		// Token: 0x040215EB RID: 136683
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<PhotoCameraType, string> PhotoModeConfigPathMap = new Dictionary<PhotoCameraType, string>

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002679 RID: 9849
+	// Token: 0x02002938 RID: 10552
 	public class DestroySelf : ActionParams
 	{
-		// Token: 0x0600DCB3 RID: 56499 RVA: 0x0020D30E File Offset: 0x0020B50E
-		[NullableContext(1)]
+		// Token: 0x0600EA7F RID: 60031 RVA: 0x00229A1E File Offset: 0x00227C1E
 		public static DestroySelf Create(IDestroySelf? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004183 RID: 16771
-		// (get) Token: 0x0600DCB4 RID: 56500 RVA: 0x0020D330 File Offset: 0x0020B530
+		// Token: 0x170044BD RID: 17597
+		// (get) Token: 0x0600EA80 RID: 60032 RVA: 0x00229A40 File Offset: 0x00227C40
 		public virtual bool? DelayDestroy
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AA9 RID: 31401
+		// Token: 0x04008140 RID: 33088
 		private IDestroySelf Instance;
 	}
 }

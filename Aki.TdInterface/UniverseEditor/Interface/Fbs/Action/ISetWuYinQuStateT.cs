@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070B6 RID: 28854
+	// Token: 0x02007882 RID: 30850
 	public class ISetWuYinQuStateT
 	{
-		// Token: 0x1700D659 RID: 54873
-		// (get) Token: 0x060331A3 RID: 209315 RVA: 0x006E4473 File Offset: 0x006E2673
-		// (set) Token: 0x060331A4 RID: 209316 RVA: 0x006E447B File Offset: 0x006E267B
+		// Token: 0x1700E23C RID: 57916
+		// (get) Token: 0x06036445 RID: 222277 RVA: 0x00744A7F File Offset: 0x00742C7F
+		// (set) Token: 0x06036446 RID: 222278 RVA: 0x00744A87 File Offset: 0x00742C87
 		public string WuYinQuName { get; set; }
 
-		// Token: 0x1700D65A RID: 54874
-		// (get) Token: 0x060331A5 RID: 209317 RVA: 0x006E4484 File Offset: 0x006E2684
-		// (set) Token: 0x060331A6 RID: 209318 RVA: 0x006E448C File Offset: 0x006E268C
+		// Token: 0x1700E23D RID: 57917
+		// (get) Token: 0x06036447 RID: 222279 RVA: 0x00744A90 File Offset: 0x00742C90
+		// (set) Token: 0x06036448 RID: 222280 RVA: 0x00744A98 File Offset: 0x00742C98
 		public EWuYinQuState State { get; set; }
 
-		// Token: 0x060331A7 RID: 209319 RVA: 0x006E4495 File Offset: 0x006E2695
+		// Token: 0x06036449 RID: 222281 RVA: 0x00744AA1 File Offset: 0x00742CA1
 		public ISetWuYinQuStateT()
 		{
 			this.WuYinQuName = null;

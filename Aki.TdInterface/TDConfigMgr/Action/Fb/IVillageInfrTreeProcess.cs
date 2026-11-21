@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029A6 RID: 10662
+	// Token: 0x02002C93 RID: 11411
 	public class IVillageInfrTreeProcess : IVillageInfrBuildOption
 	{
-		// Token: 0x0600EBF2 RID: 60402 RVA: 0x00227B67 File Offset: 0x00225D67
-		[NullableContext(1)]
+		// Token: 0x0600FA89 RID: 64137 RVA: 0x002454EC File Offset: 0x002436EC
 		public static IVillageInfrTreeProcess Create(IVillageInfrTreeProcess? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A68 RID: 19048
-		// (get) Token: 0x0600EBF3 RID: 60403 RVA: 0x00227B86 File Offset: 0x00225D86
+		// Token: 0x17004E11 RID: 19985
+		// (get) Token: 0x0600FA8A RID: 64138 RVA: 0x0024550B File Offset: 0x0024370B
 		public override EVillageInfrBuildType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A69 RID: 19049
-		// (get) Token: 0x0600EBF4 RID: 60404 RVA: 0x00227B93 File Offset: 0x00225D93
+		// Token: 0x17004E12 RID: 19986
+		// (get) Token: 0x0600FA8B RID: 64139 RVA: 0x00245518 File Offset: 0x00243718
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081EC RID: 33260
+		// Token: 0x040088DD RID: 35037
 		private IVillageInfrTreeProcess Instance;
 	}
 }

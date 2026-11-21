@@ -5,22 +5,22 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001DCF RID: 7631
+// Token: 0x02001291 RID: 4753
 [NullableContext(1)]
 [Nullable(0)]
 public class AnimalHandBookView : HandBookBaseView
 {
-	// Token: 0x0600E84E RID: 59470 RVA: 0x0036F75A File Offset: 0x0036D95A
+	// Token: 0x0600BC6D RID: 48237 RVA: 0x0037B45A File Offset: 0x0037965A
 	public AnimalHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 		this.ConfigList = new List<AnimalHandBook>();
 		this.HandBookCommonItemList = new List<HandBookCommonItem>();
 	}
 
-	// Token: 0x0600E84F RID: 59471 RVA: 0x0036F779 File Offset: 0x0036D979
+	// Token: 0x0600BC6E RID: 48238 RVA: 0x0037B479 File Offset: 0x00379679
 	protected override void OnStart()
 	{
 		base.SetDefaultState();
@@ -28,13 +28,13 @@ public class AnimalHandBookView : HandBookBaseView
 		this.RefreshLockText();
 	}
 
-	// Token: 0x0600E850 RID: 59472 RVA: 0x0036F790 File Offset: 0x0036D990
+	// Token: 0x0600BC6F RID: 48239 RVA: 0x0037B48D File Offset: 0x0037968D
 	protected override void OnAfterShow()
 	{
-		this.UiCameraHandleData = UiCameraAnimationManager.Instance.PushCameraHandleByHandleName("1062", true, true, "1001", false, null, null);
+		this.UiCameraHandleData = UiCameraModel.Instance.PushCameraHandleByHandleName("1062", true, true, "1001", false, null);
 	}
 
-	// Token: 0x0600E851 RID: 59473 RVA: 0x0036F7C4 File Offset: 0x0036D9C4
+	// Token: 0x0600BC70 RID: 48240 RVA: 0x0037B4B0 File Offset: 0x003796B0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -42,7 +42,7 @@ public class AnimalHandBookView : HandBookBaseView
 		EventSystem.Instance.Add(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600E852 RID: 59474 RVA: 0x0036F828 File Offset: 0x0036DA28
+	// Token: 0x0600BC71 RID: 48241 RVA: 0x0037B514 File Offset: 0x00379714
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -50,7 +50,7 @@ public class AnimalHandBookView : HandBookBaseView
 		EventSystem.Instance.Remove(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600E853 RID: 59475 RVA: 0x0036F88C File Offset: 0x0036DA8C
+	// Token: 0x0600BC72 RID: 48242 RVA: 0x0037B578 File Offset: 0x00379778
 	protected override HandBookCommonItem InitHandBookCommonItem()
 	{
 		HandBookCommonItem handBookCommonItem = new HandBookCommonItem();
@@ -59,7 +59,7 @@ public class AnimalHandBookView : HandBookBaseView
 		return handBookCommonItem;
 	}
 
-	// Token: 0x0600E854 RID: 59476 RVA: 0x0036F8C0 File Offset: 0x0036DAC0
+	// Token: 0x0600BC73 RID: 48243 RVA: 0x0037B5AC File Offset: 0x003797AC
 	public override List<CommonTabItemData> GetTabItemData(List<CommonTabData> tabData)
 	{
 		List<CommonTabItemData> list = new List<CommonTabItemData>();
@@ -75,7 +75,7 @@ public class AnimalHandBookView : HandBookBaseView
 		return list;
 	}
 
-	// Token: 0x0600E855 RID: 59477 RVA: 0x0036F914 File Offset: 0x0036DB14
+	// Token: 0x0600BC74 RID: 48244 RVA: 0x0037B600 File Offset: 0x00379800
 	protected void OnToggleClick(MediumItemGridExtendCallback callbackParameter)
 	{
 		HandBookCommonItemData handBookCommonItemData = callbackParameter.Data as HandBookCommonItemData;
@@ -113,21 +113,21 @@ public class AnimalHandBookView : HandBookBaseView
 		HandBookController.Instance.SetAnimalMeshShow(animalHandBook.Id, this.SkeletalObserverHandle);
 	}
 
-	// Token: 0x0600E856 RID: 59478 RVA: 0x0036FA3C File Offset: 0x0036DC3C
+	// Token: 0x0600BC75 RID: 48245 RVA: 0x0037B728 File Offset: 0x00379928
 	protected void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Animal);
 		base.SetCollectText(collectProgress[0], collectProgress[1]);
 	}
 
-	// Token: 0x0600E857 RID: 59479 RVA: 0x0036FA64 File Offset: 0x0036DC64
+	// Token: 0x0600BC76 RID: 48246 RVA: 0x0037B750 File Offset: 0x00379950
 	protected void RefreshLockText()
 	{
 		string textById = TextConfig.Instance.GetTextById("AnimalHandBookLock");
 		base.SetLockText(textById);
 	}
 
-	// Token: 0x0600E858 RID: 59480 RVA: 0x0036FA88 File Offset: 0x0036DC88
+	// Token: 0x0600BC77 RID: 48247 RVA: 0x0037B774 File Offset: 0x00379974
 	protected void RefreshDropItem(AnimalHandBook animalHandBook)
 	{
 		List<TItem> list = new List<TItem>();
@@ -141,7 +141,7 @@ public class AnimalHandBookView : HandBookBaseView
 		}
 	}
 
-	// Token: 0x0600E859 RID: 59481 RVA: 0x0036FAD0 File Offset: 0x0036DCD0
+	// Token: 0x0600BC78 RID: 48248 RVA: 0x0037B7BC File Offset: 0x003799BC
 	protected void RefreshInfoItemLayout(AnimalHandBook handBookConfig)
 	{
 		List<string> list = new List<string>();
@@ -150,13 +150,13 @@ public class AnimalHandBookView : HandBookBaseView
 		base.InitInfoItemLayout(list);
 	}
 
-	// Token: 0x0600E85A RID: 59482 RVA: 0x0036FAFF File Offset: 0x0036DCFF
+	// Token: 0x0600BC79 RID: 48249 RVA: 0x0037B7EB File Offset: 0x003799EB
 	private void OnHandBookDataUpdate(EHandBookTabType eHandBookTabType, int i)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0600E85B RID: 59483 RVA: 0x0036FB08 File Offset: 0x0036DD08
+	// Token: 0x0600BC7A RID: 48250 RVA: 0x0037B7F4 File Offset: 0x003799F4
 	protected void Refresh()
 	{
 		this.ConfigList = HandBookConfig.Instance.GetAnimalHandBookConfigList();
@@ -183,7 +183,7 @@ public class AnimalHandBookView : HandBookBaseView
 		this.RefreshCollectText();
 	}
 
-	// Token: 0x0600E85C RID: 59484 RVA: 0x0036FC0C File Offset: 0x0036DE0C
+	// Token: 0x0600BC7B RID: 48251 RVA: 0x0037B8F8 File Offset: 0x00379AF8
 	protected void OnHandBookRead(EHandBookTabType type, int id)
 	{
 		if (type != EHandBookTabType.Animal)
@@ -202,20 +202,20 @@ public class AnimalHandBookView : HandBookBaseView
 		}
 	}
 
-	// Token: 0x0600E85D RID: 59485 RVA: 0x0036FC6B File Offset: 0x0036DE6B
+	// Token: 0x0600BC7C RID: 48252 RVA: 0x0037B957 File Offset: 0x00379B57
 	protected override void OnBeforePlayCloseSequence()
 	{
-		UiCameraAnimationManager.Instance.PopCameraHandle(this.UiCameraHandleData, null);
+		UiCameraModel.Instance.PopCameraHandle(this.UiCameraHandleData, null);
 	}
 
-	// Token: 0x0600E85E RID: 59486 RVA: 0x0036FC7E File Offset: 0x0036DE7E
+	// Token: 0x0600BC7D RID: 48253 RVA: 0x0037B96B File Offset: 0x00379B6B
 	protected override void OnBeforeCreate()
 	{
 		UiSceneManager.Instance.InitHandBookObserver();
 		this.SkeletalObserverHandle = UiSceneManager.Instance.GetHandBookObserver();
 	}
 
-	// Token: 0x0600E85F RID: 59487 RVA: 0x0036FC9A File Offset: 0x0036DE9A
+	// Token: 0x0600BC7E RID: 48254 RVA: 0x0037B987 File Offset: 0x00379B87
 	protected override void OnBeforeDestroy()
 	{
 		UiSceneManager.Instance.DestroyHandBookObserver();
@@ -225,17 +225,17 @@ public class AnimalHandBookView : HandBookBaseView
 		this.HandBookCommonItemList = new List<HandBookCommonItem>();
 	}
 
-	// Token: 0x04006B75 RID: 27509
+	// Token: 0x04006C56 RID: 27734
 	private IReadOnlyList<AnimalHandBook> ConfigList;
 
-	// Token: 0x04006B76 RID: 27510
+	// Token: 0x04006C57 RID: 27735
 	private List<HandBookCommonItem> HandBookCommonItemList;
 
-	// Token: 0x04006B77 RID: 27511
+	// Token: 0x04006C58 RID: 27736
 	[Nullable(2)]
 	private UiCameraHandleData UiCameraHandleData;
 
-	// Token: 0x04006B78 RID: 27512
+	// Token: 0x04006C59 RID: 27737
 	[Nullable(2)]
 	private SkeletalObserverHandle SkeletalObserverHandle;
 }

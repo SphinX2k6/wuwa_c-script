@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 
-// Token: 0x02002FFC RID: 12284
+// Token: 0x02002551 RID: 9553
 [NullableContext(1)]
 [Nullable(0)]
 public class EnterBattleTrigger : Trigger
 {
-	// Token: 0x0601A06E RID: 106606 RVA: 0x006D0E70 File Offset: 0x006CF070
+	// Token: 0x060179A2 RID: 96674 RVA: 0x006F8D0C File Offset: 0x006F6F0C
 	[NullableContext(2)]
 	public EnterBattleTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A06F RID: 106607 RVA: 0x006D0E81 File Offset: 0x006CF081
+	// Token: 0x060179A3 RID: 96675 RVA: 0x006F8D1D File Offset: 0x006F6F1D
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.NotTryTriggerOnActive = (Convert.ToInt32((triggerParams.Length > 1) ? triggerParams[1] : "0") == 1);
 	}
 
-	// Token: 0x0601A070 RID: 106608 RVA: 0x006D0EA1 File Offset: 0x006CF0A1
+	// Token: 0x060179A4 RID: 96676 RVA: 0x006F8D3D File Offset: 0x006F6F3D
 	protected override void OnActive()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.OnBattleStateChanged, new Action<bool>(this.OnEvent));
@@ -31,13 +31,13 @@ public class EnterBattleTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A071 RID: 106609 RVA: 0x006D0EDA File Offset: 0x006CF0DA
+	// Token: 0x060179A5 RID: 96677 RVA: 0x006F8D76 File Offset: 0x006F6F76
 	protected override void OnInactive()
 	{
 		EventSystem.Instance.Remove<bool>(EEventName.OnBattleStateChanged, new Action<bool>(this.OnEvent));
 	}
 
-	// Token: 0x0601A072 RID: 106610 RVA: 0x006D0EF8 File Offset: 0x006CF0F8
+	// Token: 0x060179A6 RID: 96678 RVA: 0x006F8D94 File Offset: 0x006F6F94
 	private void OnEvent(bool isInBattleState)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -50,12 +50,12 @@ public class EnterBattleTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A073 RID: 106611 RVA: 0x006D0F1E File Offset: 0x006CF11E
+	// Token: 0x060179A7 RID: 96679 RVA: 0x006F8DBA File Offset: 0x006F6FBA
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4F2 RID: 50418
+	// Token: 0x0400C8BA RID: 51386
 	private bool NotTryTriggerOnActive;
 }

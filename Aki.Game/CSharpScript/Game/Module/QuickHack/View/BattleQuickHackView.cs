@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F8F RID: 20367
+	// Token: 0x02003F58 RID: 16216
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleQuickHackView : QuickHackViewBase
 	{
-		// Token: 0x0603426E RID: 213614 RVA: 0x00C3D5DD File Offset: 0x00C3B7DD
+		// Token: 0x060290DC RID: 168156 RVA: 0x00B86D89 File Offset: 0x00B84F89
 		public BattleQuickHackView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603426F RID: 213615 RVA: 0x00C3D5E8 File Offset: 0x00C3B7E8
+		// Token: 0x060290DD RID: 168157 RVA: 0x00B86D94 File Offset: 0x00B84F94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 36;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034270 RID: 213616 RVA: 0x00C3DAD0 File Offset: 0x00C3BCD0
+		// Token: 0x060290DE RID: 168158 RVA: 0x00B8727C File Offset: 0x00B8547C
 		protected override int GetUiComponentType(EQuickHackUiType uiType)
 		{
 			switch (uiType)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x06034271 RID: 213617 RVA: 0x00C3DB6C File Offset: 0x00C3BD6C
+		// Token: 0x060290DF RID: 168159 RVA: 0x00B87318 File Offset: 0x00B85518
 		protected override void RefreshInput(bool enable)
 		{
 			if (enable)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			InputDistributeController.Instance.UnBindAxis("WheelAxis", new TInputHandle<float>(this.OnInputWheelAxis));
 		}
 
-		// Token: 0x06034272 RID: 213618 RVA: 0x00C3DC28 File Offset: 0x00C3BE28
+		// Token: 0x060290E0 RID: 168160 RVA: 0x00B873D4 File Offset: 0x00B855D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleQuickHackView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034273 RID: 213619 RVA: 0x00C3DC6C File Offset: 0x00C3BE6C
+		// Token: 0x060290E1 RID: 168161 RVA: 0x00B87418 File Offset: 0x00B85618
 		protected override void OnStart()
 		{
 			this.AutoUseSkillLongPressTime = ConfigCommonParamById.GetIntConfig("QuickHackAutoUseSkillLongPressTime").GetValueOrDefault();
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			base.OnStart();
 		}
 
-		// Token: 0x06034274 RID: 213620 RVA: 0x00C3DCCC File Offset: 0x00C3BECC
+		// Token: 0x060290E2 RID: 168162 RVA: 0x00B87478 File Offset: 0x00B85678
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshUseSkillLongPressMode(this.HasLockOnTarget);
 		}
 
-		// Token: 0x06034275 RID: 213621 RVA: 0x00C3DD1C File Offset: 0x00C3BF1C
+		// Token: 0x060290E3 RID: 168163 RVA: 0x00B874C8 File Offset: 0x00B856C8
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -220,19 +220,19 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x06034276 RID: 213622 RVA: 0x00C3DD85 File Offset: 0x00C3BF85
+		// Token: 0x060290E4 RID: 168164 RVA: 0x00B87531 File Offset: 0x00B85731
 		protected override bool ShouldShowTargetItem()
 		{
 			return false;
 		}
 
-		// Token: 0x06034277 RID: 213623 RVA: 0x00C3DD88 File Offset: 0x00C3BF88
+		// Token: 0x060290E5 RID: 168165 RVA: 0x00B87534 File Offset: 0x00B85734
 		protected override string GetSelectSkillAudioPath()
 		{
 			return "play_role_lucy_bat_burst01_qh_select";
 		}
 
-		// Token: 0x06034278 RID: 213624 RVA: 0x00C3DD90 File Offset: 0x00C3BF90
+		// Token: 0x060290E6 RID: 168166 RVA: 0x00B8753C File Offset: 0x00B8573C
 		protected override List<UUIItem> GetSkillItems()
 		{
 			return new List<UUIItem>
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			};
 		}
 
-		// Token: 0x06034279 RID: 213625 RVA: 0x00C3DE03 File Offset: 0x00C3C003
+		// Token: 0x060290E7 RID: 168167 RVA: 0x00B875AF File Offset: 0x00B857AF
 		protected override string[] GetInputDistributeTags()
 		{
 			return new string[]
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			};
 		}
 
-		// Token: 0x0603427A RID: 213626 RVA: 0x00C3DE2B File Offset: 0x00C3C02B
+		// Token: 0x060290E8 RID: 168168 RVA: 0x00B875D7 File Offset: 0x00B857D7
 		protected override bool UseCurrentSkill()
 		{
 			bool flag = base.UseCurrentSkill();
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return flag;
 		}
 
-		// Token: 0x0603427B RID: 213627 RVA: 0x00C3DE46 File Offset: 0x00C3C046
+		// Token: 0x060290E9 RID: 168169 RVA: 0x00B875F2 File Offset: 0x00B857F2
 		private void OnInputWheelAxis(string name, float value, InputIdentification inputIdentification)
 		{
 			if (value != 0f)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x0603427C RID: 213628 RVA: 0x00C3DE73 File Offset: 0x00C3C073
+		// Token: 0x060290EA RID: 168170 RVA: 0x00B8761F File Offset: 0x00B8581F
 		private void RefreshUseSkillLongPressMode(bool hasLockOnTarget)
 		{
 			BattleQuickHackLongPressItem useSkillLongPressItem = this.UseSkillLongPressItem;
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x0603427D RID: 213629 RVA: 0x00C3DEA6 File Offset: 0x00C3C0A6
+		// Token: 0x060290EB RID: 168171 RVA: 0x00B87652 File Offset: 0x00B85852
 		private void UseSkillPress()
 		{
 			if (!QuickHackController.Instance.CheckRamEnoughUseAnySkill())
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.UseSkillLongPress();
 		}
 
-		// Token: 0x0603427E RID: 213630 RVA: 0x00C3DEDC File Offset: 0x00C3C0DC
+		// Token: 0x060290EC RID: 168172 RVA: 0x00B87688 File Offset: 0x00B85888
 		private void UseSkillLongPress()
 		{
 			BattleQuickHackLongPressItem useSkillLongPressItem = this.UseSkillLongPressItem;
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x0603427F RID: 213631 RVA: 0x00C3DF9E File Offset: 0x00C3C19E
+		// Token: 0x060290ED RID: 168173 RVA: 0x00B8774A File Offset: 0x00B8594A
 		private void UseSkillRelease()
 		{
 			BattleQuickHackLongPressItem useSkillLongPressItem = this.UseSkillLongPressItem;
@@ -387,133 +387,133 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.UseSkillLongPressTimer = null;
 		}
 
-		// Token: 0x0401BB96 RID: 113558
+		// Token: 0x0401656B RID: 91499
 		[Nullable(2)]
 		private BattleQuickHackLongPressItem UseSkillLongPressItem;
 
-		// Token: 0x0401BB97 RID: 113559
+		// Token: 0x0401656C RID: 91500
 		private bool HasLockOnTarget;
 
-		// Token: 0x0401BB98 RID: 113560
+		// Token: 0x0401656D RID: 91501
 		[Nullable(2)]
 		private TimerHandle UseSkillLongPressTimer;
 
-		// Token: 0x0401BB99 RID: 113561
+		// Token: 0x0401656E RID: 91502
 		private int AutoUseSkillLongPressTime;
 
-		// Token: 0x0401BB9A RID: 113562
+		// Token: 0x0401656F RID: 91503
 		private int TryExitLongPressTime;
 
-		// Token: 0x0200B0A3 RID: 45219
+		// Token: 0x02009AD3 RID: 39635
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x040359B5 RID: 219573
+			// Token: 0x040303E0 RID: 197600
 			public const int RamTitleText = 0;
 
-			// Token: 0x040359B6 RID: 219574
+			// Token: 0x040303E1 RID: 197601
 			public const int RamBarLayout = 1;
 
-			// Token: 0x040359B7 RID: 219575
+			// Token: 0x040303E2 RID: 197602
 			public const int RamItem = 2;
 
-			// Token: 0x040359B8 RID: 219576
+			// Token: 0x040303E3 RID: 197603
 			public const int TipItem = 3;
 
-			// Token: 0x040359B9 RID: 219577
+			// Token: 0x040303E4 RID: 197604
 			public const int TipText = 4;
 
-			// Token: 0x040359BA RID: 219578
+			// Token: 0x040303E5 RID: 197605
 			public const int SkillPanelLayout = 5;
 
-			// Token: 0x040359BB RID: 219579
+			// Token: 0x040303E6 RID: 197606
 			public const int SkillItem = 6;
 
-			// Token: 0x040359BC RID: 219580
+			// Token: 0x040303E7 RID: 197607
 			public const int InfoPanelItem = 7;
 
-			// Token: 0x040359BD RID: 219581
+			// Token: 0x040303E8 RID: 197608
 			public const int InfoTitleText = 8;
 
-			// Token: 0x040359BE RID: 219582
+			// Token: 0x040303E9 RID: 197609
 			public const int InfoTagBgSprite = 9;
 
-			// Token: 0x040359BF RID: 219583
+			// Token: 0x040303EA RID: 197610
 			public const int InfoTagText = 10;
 
-			// Token: 0x040359C0 RID: 219584
+			// Token: 0x040303EB RID: 197611
 			public const int InfoDurationText = 11;
 
-			// Token: 0x040359C1 RID: 219585
+			// Token: 0x040303EC RID: 197612
 			public const int InfoUploadText = 12;
 
-			// Token: 0x040359C2 RID: 219586
+			// Token: 0x040303ED RID: 197613
 			public const int InfoDescText = 13;
 
-			// Token: 0x040359C3 RID: 219587
+			// Token: 0x040303EE RID: 197614
 			public const int DurationLimitItem = 14;
 
-			// Token: 0x040359C4 RID: 219588
+			// Token: 0x040303EF RID: 197615
 			public const int DurationLimitText = 15;
 
-			// Token: 0x040359C5 RID: 219589
+			// Token: 0x040303F0 RID: 197616
 			public const int DurationLimitBarSprite = 16;
 
-			// Token: 0x040359C6 RID: 219590
+			// Token: 0x040303F1 RID: 197617
 			public const int UseSkillButton = 17;
 
-			// Token: 0x040359C7 RID: 219591
+			// Token: 0x040303F2 RID: 197618
 			public const int FinishButton = 18;
 
-			// Token: 0x040359C8 RID: 219592
+			// Token: 0x040303F3 RID: 197619
 			public const int UnlockItem = 19;
 
-			// Token: 0x040359C9 RID: 219593
+			// Token: 0x040303F4 RID: 197620
 			public const int LockItem = 20;
 
-			// Token: 0x040359CA RID: 219594
+			// Token: 0x040303F5 RID: 197621
 			public const int TargetItem = 21;
 
-			// Token: 0x040359CB RID: 219595
+			// Token: 0x040303F6 RID: 197622
 			public const int RamSpriteDarkBlue = 22;
 
-			// Token: 0x040359CC RID: 219596
+			// Token: 0x040303F7 RID: 197623
 			public const int RamSpriteBlue = 23;
 
-			// Token: 0x040359CD RID: 219597
+			// Token: 0x040303F8 RID: 197624
 			public const int RamSpriteRedA = 24;
 
-			// Token: 0x040359CE RID: 219598
+			// Token: 0x040303F9 RID: 197625
 			public const int RamSpriteRedB = 25;
 
-			// Token: 0x040359CF RID: 219599
+			// Token: 0x040303FA RID: 197626
 			public const int UseSkillLongPressItem = 26;
 
-			// Token: 0x040359D0 RID: 219600
+			// Token: 0x040303FB RID: 197627
 			public const int UseSkillKeyItem = 27;
 
-			// Token: 0x040359D1 RID: 219601
+			// Token: 0x040303FC RID: 197628
 			public const int UseSkillNiagaraItem = 28;
 
-			// Token: 0x040359D2 RID: 219602
+			// Token: 0x040303FD RID: 197629
 			public const int InfoLineItem = 29;
 
-			// Token: 0x040359D3 RID: 219603
+			// Token: 0x040303FE RID: 197630
 			public const int SkillItem2 = 30;
 
-			// Token: 0x040359D4 RID: 219604
+			// Token: 0x040303FF RID: 197631
 			public const int SkillItem3 = 31;
 
-			// Token: 0x040359D5 RID: 219605
+			// Token: 0x04030400 RID: 197632
 			public const int SkillItem4 = 32;
 
-			// Token: 0x040359D6 RID: 219606
+			// Token: 0x04030401 RID: 197633
 			public const int SkillItem5 = 33;
 
-			// Token: 0x040359D7 RID: 219607
+			// Token: 0x04030402 RID: 197634
 			public const int SkillItem6 = 34;
 
-			// Token: 0x040359D8 RID: 219608
+			// Token: 0x04030403 RID: 197635
 			public const int SkillItem7 = 35;
 		}
 	}

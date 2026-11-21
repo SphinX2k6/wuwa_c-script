@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001905 RID: 6405
+// Token: 0x02000DBE RID: 3518
 [NullableContext(1)]
 [Nullable(0)]
 public class MediumItemGridCheckTickComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BBCC RID: 48076 RVA: 0x002A9194 File Offset: 0x002A7394
+	// Token: 0x06008FB6 RID: 36790 RVA: 0x002B38F0 File Offset: 0x002B1AF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -23,13 +23,13 @@ public class MediumItemGridCheckTickComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBCD RID: 48077 RVA: 0x002A91FD File Offset: 0x002A73FD
+	// Token: 0x06008FB7 RID: 36791 RVA: 0x002B3959 File Offset: 0x002B1B59
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemSelTick";
 	}
 
-	// Token: 0x0600BBCE RID: 48078 RVA: 0x002A9204 File Offset: 0x002A7404
+	// Token: 0x06008FB8 RID: 36792 RVA: 0x002B3960 File Offset: 0x002B1B60
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -61,7 +61,7 @@ public class MediumItemGridCheckTickComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BBCF RID: 48079 RVA: 0x002A9280 File Offset: 0x002A7480
+	// Token: 0x06008FB9 RID: 36793 RVA: 0x002B39DC File Offset: 0x002B1BDC
 	public void SetSpriteColor(string hexColor)
 	{
 		FColor color = FColor.FromHex(hexColor);
@@ -73,7 +73,7 @@ public class MediumItemGridCheckTickComponent : MediumItemGridComponent
 		sprite.SetColor(color);
 	}
 
-	// Token: 0x0600BBD0 RID: 48080 RVA: 0x002A92A6 File Offset: 0x002A74A6
+	// Token: 0x06008FBA RID: 36794 RVA: 0x002B3A02 File Offset: 0x002B1C02
 	public void SetSpriteAlpha(float alpha)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -84,7 +84,7 @@ public class MediumItemGridCheckTickComponent : MediumItemGridComponent
 		sprite.SetAlpha(alpha);
 	}
 
-	// Token: 0x0600BBD1 RID: 48081 RVA: 0x002A92BC File Offset: 0x002A74BC
+	// Token: 0x06008FBB RID: 36795 RVA: 0x002B3A18 File Offset: 0x002B1C18
 	public void SetSpriteTickColor(string hexColor)
 	{
 		FColor color = FColor.FromHex(hexColor);
@@ -96,20 +96,20 @@ public class MediumItemGridCheckTickComponent : MediumItemGridComponent
 		sprite.SetColor(color);
 	}
 
-	// Token: 0x0600BBD2 RID: 48082 RVA: 0x002A92E2 File Offset: 0x002A74E2
+	// Token: 0x06008FBC RID: 36796 RVA: 0x002B3A3E File Offset: 0x002B1C3E
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x02007E7C RID: 32380
+	// Token: 0x02007003 RID: 28675
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04029638 RID: 169528
+		// Token: 0x04024964 RID: 149860
 		public const int Sprite = 0;
 
-		// Token: 0x04029639 RID: 169529
+		// Token: 0x04024965 RID: 149861
 		public const int SpriteTick = 1;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200705C RID: 28764
+	// Token: 0x02007828 RID: 30760
 	public class ISetPosAT
 	{
-		// Token: 0x1700D5D4 RID: 54740
-		// (get) Token: 0x06032EF2 RID: 208626 RVA: 0x006DF401 File Offset: 0x006DD601
-		// (set) Token: 0x06032EF3 RID: 208627 RVA: 0x006DF409 File Offset: 0x006DD609
+		// Token: 0x1700E1B7 RID: 57783
+		// (get) Token: 0x06036193 RID: 221587 RVA: 0x0073F9B5 File Offset: 0x0073DBB5
+		// (set) Token: 0x06036194 RID: 221588 RVA: 0x0073F9BD File Offset: 0x0073DBBD
 		public IPosAT Pos { get; set; }
 
-		// Token: 0x06032EF4 RID: 208628 RVA: 0x006DF412 File Offset: 0x006DD612
+		// Token: 0x06036195 RID: 221589 RVA: 0x0073F9C6 File Offset: 0x0073DBC6
 		public ISetPosAT()
 		{
 			this.Pos = null;

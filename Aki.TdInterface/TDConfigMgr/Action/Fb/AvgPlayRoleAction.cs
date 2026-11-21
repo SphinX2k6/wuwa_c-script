@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002561 RID: 9569
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200280A RID: 10250
 	public class AvgPlayRoleAction : ActionParams
 	{
-		// Token: 0x0600D6DC RID: 55004 RVA: 0x00200696 File Offset: 0x001FE896
+		// Token: 0x0600E446 RID: 58438 RVA: 0x0021C292 File Offset: 0x0021A492
 		public static AvgPlayRoleAction Create(IAvgPlayRoleAction? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DDC RID: 15836
-		// (get) Token: 0x0600D6DD RID: 55005 RVA: 0x002006B8 File Offset: 0x001FE8B8
+		// Token: 0x170040E0 RID: 16608
+		// (get) Token: 0x0600E447 RID: 58439 RVA: 0x0021C2B4 File Offset: 0x0021A4B4
 		public virtual List<IAvgPlayRoleActionItem> RoleActionList
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040076FF RID: 30463
+		// Token: 0x04007D5C RID: 32092
 		private IAvgPlayRoleAction Instance;
 
-		// Token: 0x04007700 RID: 30464
+		// Token: 0x04007D5D RID: 32093
 		private List<IAvgPlayRoleActionItem> _RoleActionListCache;
 
-		// Token: 0x04007701 RID: 30465
+		// Token: 0x04007D5E RID: 32094
 		private bool _RoleActionListInited;
 	}
 }

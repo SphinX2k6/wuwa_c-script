@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F91 RID: 20369
+	// Token: 0x020054C0 RID: 21696
 	public struct ICheckGearHit : IFlatbufferObject
 	{
-		// Token: 0x1700935C RID: 37724
-		// (get) Token: 0x060205EB RID: 132587 RVA: 0x00480ED8 File Offset: 0x0047F0D8
+		// Token: 0x17009AD5 RID: 39637
+		// (get) Token: 0x0602233D RID: 140093 RVA: 0x004B6EC8 File Offset: 0x004B50C8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060205EC RID: 132588 RVA: 0x00480EE5 File Offset: 0x0047F0E5
+		// Token: 0x0602233E RID: 140094 RVA: 0x004B6ED5 File Offset: 0x004B50D5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060205ED RID: 132589 RVA: 0x00480EEC File Offset: 0x0047F0EC
+		// Token: 0x0602233F RID: 140095 RVA: 0x004B6EDC File Offset: 0x004B50DC
 		public static ICheckGearHit GetRootAsICheckGearHit(ByteBuffer _bb)
 		{
 			return ICheckGearHit.GetRootAsICheckGearHit(_bb, default(ICheckGearHit));
 		}
 
-		// Token: 0x060205EE RID: 132590 RVA: 0x00480F08 File Offset: 0x0047F108
+		// Token: 0x06022340 RID: 140096 RVA: 0x004B6EF8 File Offset: 0x004B50F8
 		public static ICheckGearHit GetRootAsICheckGearHit(ByteBuffer _bb, ICheckGearHit obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060205EF RID: 132591 RVA: 0x00480F25 File Offset: 0x0047F125
+		// Token: 0x06022341 RID: 140097 RVA: 0x004B6F15 File Offset: 0x004B5115
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060205F0 RID: 132592 RVA: 0x00480F34 File Offset: 0x0047F134
+		// Token: 0x06022342 RID: 140098 RVA: 0x004B6F24 File Offset: 0x004B5124
 		public ICheckGearHit __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700935D RID: 37725
-		// (get) Token: 0x060205F1 RID: 132593 RVA: 0x00480F44 File Offset: 0x0047F144
+		// Token: 0x17009AD6 RID: 39638
+		// (get) Token: 0x06022343 RID: 140099 RVA: 0x004B6F34 File Offset: 0x004B5134
 		public int HitIndex
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060205F2 RID: 132594 RVA: 0x00480F80 File Offset: 0x0047F180
+		// Token: 0x06022344 RID: 140100 RVA: 0x004B6F70 File Offset: 0x004B5170
 		public int AffectIndex(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700935E RID: 37726
-		// (get) Token: 0x060205F3 RID: 132595 RVA: 0x00480FC0 File Offset: 0x0047F1C0
+		// Token: 0x17009AD7 RID: 39639
+		// (get) Token: 0x06022345 RID: 140101 RVA: 0x004B6FB0 File Offset: 0x004B51B0
 		public int AffectIndexLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060205F4 RID: 132596 RVA: 0x00480FEB File Offset: 0x0047F1EB
+		// Token: 0x06022346 RID: 140102 RVA: 0x004B6FDB File Offset: 0x004B51DB
 		public Span<int> GetAffectIndexBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x060205F5 RID: 132597 RVA: 0x00480FFA File Offset: 0x0047F1FA
+		// Token: 0x06022347 RID: 140103 RVA: 0x004B6FEA File Offset: 0x004B51EA
 		public int[] GetAffectIndexArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x1700935F RID: 37727
-		// (get) Token: 0x060205F6 RID: 132598 RVA: 0x00481008 File Offset: 0x0047F208
+		// Token: 0x17009AD8 RID: 39640
+		// (get) Token: 0x06022348 RID: 140104 RVA: 0x004B6FF8 File Offset: 0x004B51F8
 		public EGearHitAffectType AffectType
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060205F7 RID: 132599 RVA: 0x00481044 File Offset: 0x0047F244
+		// Token: 0x06022349 RID: 140105 RVA: 0x004B7034 File Offset: 0x004B5234
 		public static Offset<ICheckGearHit> CreateICheckGearHit(FlatBufferBuilder builder, int HitIndex = 0, VectorOffset AffectIndexOffset = default(VectorOffset), EGearHitAffectType AffectType = EGearHitAffectType.ChangeNextState)
 		{
 			builder.StartTable(3);
@@ -126,25 +126,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICheckGearHit.EndICheckGearHit(builder);
 		}
 
-		// Token: 0x060205F8 RID: 132600 RVA: 0x00481068 File Offset: 0x0047F268
+		// Token: 0x0602234A RID: 140106 RVA: 0x004B7058 File Offset: 0x004B5258
 		public static void StartICheckGearHit(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060205F9 RID: 132601 RVA: 0x00481071 File Offset: 0x0047F271
+		// Token: 0x0602234B RID: 140107 RVA: 0x004B7061 File Offset: 0x004B5261
 		public static void AddHitIndex(FlatBufferBuilder builder, int hitIndex)
 		{
 			builder.AddInt(0, hitIndex, 0);
 		}
 
-		// Token: 0x060205FA RID: 132602 RVA: 0x0048107C File Offset: 0x0047F27C
+		// Token: 0x0602234C RID: 140108 RVA: 0x004B706C File Offset: 0x004B526C
 		public static void AddAffectIndex(FlatBufferBuilder builder, VectorOffset affectIndexOffset)
 		{
 			builder.AddOffset(1, affectIndexOffset.Value, 0);
 		}
 
-		// Token: 0x060205FB RID: 132603 RVA: 0x0048108C File Offset: 0x0047F28C
+		// Token: 0x0602234D RID: 140109 RVA: 0x004B707C File Offset: 0x004B527C
 		public static VectorOffset CreateAffectIndexVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060205FC RID: 132604 RVA: 0x004810C3 File Offset: 0x0047F2C3
+		// Token: 0x0602234E RID: 140110 RVA: 0x004B70B3 File Offset: 0x004B52B3
 		public static VectorOffset CreateAffectIndexVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060205FD RID: 132605 RVA: 0x004810DD File Offset: 0x0047F2DD
+		// Token: 0x0602234F RID: 140111 RVA: 0x004B70CD File Offset: 0x004B52CD
 		public static VectorOffset CreateAffectIndexVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060205FE RID: 132606 RVA: 0x004810FB File Offset: 0x0047F2FB
+		// Token: 0x06022350 RID: 140112 RVA: 0x004B70EB File Offset: 0x004B52EB
 		public static VectorOffset CreateAffectIndexVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -179,25 +179,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060205FF RID: 132607 RVA: 0x00481114 File Offset: 0x0047F314
+		// Token: 0x06022351 RID: 140113 RVA: 0x004B7104 File Offset: 0x004B5304
 		public static void StartAffectIndexVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06020600 RID: 132608 RVA: 0x0048111F File Offset: 0x0047F31F
+		// Token: 0x06022352 RID: 140114 RVA: 0x004B710F File Offset: 0x004B530F
 		public static void AddAffectType(FlatBufferBuilder builder, EGearHitAffectType affectType)
 		{
 			builder.AddByte(2, (byte)affectType, 0);
 		}
 
-		// Token: 0x06020601 RID: 132609 RVA: 0x0048112A File Offset: 0x0047F32A
+		// Token: 0x06022353 RID: 140115 RVA: 0x004B711A File Offset: 0x004B531A
 		public static Offset<ICheckGearHit> EndICheckGearHit(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckGearHit>(builder.EndTable());
 		}
 
-		// Token: 0x06020602 RID: 132610 RVA: 0x00481138 File Offset: 0x0047F338
+		// Token: 0x06022354 RID: 140116 RVA: 0x004B7128 File Offset: 0x004B5328
 		public ICheckGearHitT UnPack()
 		{
 			ICheckGearHitT checkGearHitT = new ICheckGearHitT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return checkGearHitT;
 		}
 
-		// Token: 0x06020603 RID: 132611 RVA: 0x00481154 File Offset: 0x0047F354
+		// Token: 0x06022355 RID: 140117 RVA: 0x004B7144 File Offset: 0x004B5344
 		public void UnPackTo(ICheckGearHitT _o)
 		{
 			_o.HitIndex = this.HitIndex;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.AffectType = this.AffectType;
 		}
 
-		// Token: 0x06020604 RID: 132612 RVA: 0x004811A8 File Offset: 0x0047F3A8
+		// Token: 0x06022356 RID: 140118 RVA: 0x004B7198 File Offset: 0x004B5398
 		public static Offset<ICheckGearHit> Pack(FlatBufferBuilder builder, ICheckGearHitT _o)
 		{
 			if (_o == null)
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICheckGearHit.CreateICheckGearHit(builder, _o.HitIndex, affectIndexOffset, _o.AffectType);
 		}
 
-		// Token: 0x0400DE52 RID: 56914
+		// Token: 0x0400E9FC RID: 59900
 		private Table __p;
 	}
 }

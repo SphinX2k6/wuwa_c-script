@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001598 RID: 5528
+	// Token: 0x020016F7 RID: 5879
 	[EnumExtensions]
 	public enum EBlendAnimState
 	{
-		// Token: 0x04004991 RID: 18833
+		// Token: 0x04004D43 RID: 19779
 		CombatIdle,
-		// Token: 0x04004992 RID: 18834
+		// Token: 0x04004D44 RID: 19780
 		Fall,
-		// Token: 0x04004993 RID: 18835
+		// Token: 0x04004D45 RID: 19781
 		Slide,
-		// Token: 0x04004994 RID: 18836
+		// Token: 0x04004D46 RID: 19782
 		Run,
-		// Token: 0x04004995 RID: 18837
+		// Token: 0x04004D47 RID: 19783
 		Walk
 	}
 }

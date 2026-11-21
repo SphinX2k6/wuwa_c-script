@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065C7 RID: 26055
+	// Token: 0x02005545 RID: 21829
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardQuicklySellPanel : UiPanelBase
 	{
-		// Token: 0x060415A6 RID: 267686 RVA: 0x00FD634C File Offset: 0x00FD454C
+		// Token: 0x0603626B RID: 221803 RVA: 0x00F1D38C File Offset: 0x00F1B58C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060415A7 RID: 267687 RVA: 0x00FD648D File Offset: 0x00FD468D
+		// Token: 0x0603626C RID: 221804 RVA: 0x00F1D4CD File Offset: 0x00F1B6CD
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, false);
 		}
 
-		// Token: 0x060415A8 RID: 267688 RVA: 0x00FD64B8 File Offset: 0x00FD46B8
+		// Token: 0x0603626D RID: 221805 RVA: 0x00F1D4F8 File Offset: 0x00F1B6F8
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer.Clear();
 		}
 
-		// Token: 0x060415A9 RID: 267689 RVA: 0x00FD64C8 File Offset: 0x00FD46C8
+		// Token: 0x0603626E RID: 221806 RVA: 0x00F1D508 File Offset: 0x00F1B708
 		public void SetPanelVisible(bool bVisible)
 		{
 			if (bVisible)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SequencePlayer.PlaySequencePurely("Close", false, false, null, null, false);
 		}
 
-		// Token: 0x060415AA RID: 267690 RVA: 0x00FD6534 File Offset: 0x00FD4734
+		// Token: 0x0603626F RID: 221807 RVA: 0x00F1D574 File Offset: 0x00F1B774
 		public void RefreshPanel(int price, EBackpackQuicklySellType sellType)
 		{
 			bool flag = sellType == EBackpackQuicklySellType.Full;
@@ -110,35 +110,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x04022015 RID: 139285
+		// Token: 0x0401C946 RID: 117062
 		public Action ConfirmBtnClick;
 
-		// Token: 0x04022016 RID: 139286
+		// Token: 0x0401C947 RID: 117063
 		public Action CloseBtnClick;
 
-		// Token: 0x04022017 RID: 139287
+		// Token: 0x0401C948 RID: 117064
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C7E8 RID: 51176
+		// Token: 0x0200B1CB RID: 45515
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C604 RID: 247300
+			// Token: 0x04036F52 RID: 225106
 			public const int PriceText = 0;
 
-			// Token: 0x0403C605 RID: 247301
+			// Token: 0x04036F53 RID: 225107
 			public const int PriceIcon = 1;
 
-			// Token: 0x0403C606 RID: 247302
+			// Token: 0x04036F54 RID: 225108
 			public const int ConfirmBtn = 2;
 
-			// Token: 0x0403C607 RID: 247303
+			// Token: 0x04036F55 RID: 225109
 			public const int ConditionItem = 3;
 
-			// Token: 0x0403C608 RID: 247304
+			// Token: 0x04036F56 RID: 225110
 			public const int ConditionText = 4;
 
-			// Token: 0x0403C609 RID: 247305
+			// Token: 0x04036F57 RID: 225111
 			public const int CloseBtn = 5;
 		}
 	}

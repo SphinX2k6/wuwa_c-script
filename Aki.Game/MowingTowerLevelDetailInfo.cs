@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200137D RID: 4989
+// Token: 0x02000831 RID: 2097
 [NullableContext(1)]
 [Nullable(0)]
 public class MowingTowerLevelDetailInfo
 {
-	// Token: 0x06008BAF RID: 35759 RVA: 0x001DDF50 File Offset: 0x001DC150
+	// Token: 0x06005F4A RID: 24394 RVA: 0x001E6D80 File Offset: 0x001E4F80
 	public void Phrase(int activityId, MowTowerLevelsInfo data)
 	{
 		this.ActivityId = activityId;
@@ -68,85 +68,85 @@ public class MowingTowerLevelDetailInfo
 		}
 	}
 
-	// Token: 0x06008BB0 RID: 35760 RVA: 0x001DE194 File Offset: 0x001DC394
+	// Token: 0x06005F4B RID: 24395 RVA: 0x001E6FC4 File Offset: 0x001E51C4
 	public void SetId(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06008BB1 RID: 35761 RVA: 0x001DE19D File Offset: 0x001DC39D
+	// Token: 0x06005F4C RID: 24396 RVA: 0x001E6FCD File Offset: 0x001E51CD
 	public void SetFirstScore(int score)
 	{
 		this.FirstPartScore = score;
 	}
 
-	// Token: 0x06008BB2 RID: 35762 RVA: 0x001DE1A6 File Offset: 0x001DC3A6
+	// Token: 0x06005F4D RID: 24397 RVA: 0x001E6FD6 File Offset: 0x001E51D6
 	public void SetLowerScore(int score)
 	{
 		this.LowPartScore = score;
 	}
 
-	// Token: 0x06008BB3 RID: 35763 RVA: 0x001DE1AF File Offset: 0x001DC3AF
+	// Token: 0x06005F4E RID: 24398 RVA: 0x001E6FDF File Offset: 0x001E51DF
 	public void SetUnLockTime(double unLockTime)
 	{
 		this.UnLockTime = unLockTime;
 	}
 
-	// Token: 0x06008BB4 RID: 35764 RVA: 0x001DE1B8 File Offset: 0x001DC3B8
+	// Token: 0x06005F4F RID: 24399 RVA: 0x001E6FE8 File Offset: 0x001E51E8
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06008BB5 RID: 35765 RVA: 0x001DE1C0 File Offset: 0x001DC3C0
+	// Token: 0x06005F50 RID: 24400 RVA: 0x001E6FF0 File Offset: 0x001E51F0
 	public string GetNormalTexturePath()
 	{
 		return this.GetConfig().Value.NormalTexture;
 	}
 
-	// Token: 0x06008BB6 RID: 35766 RVA: 0x001DE1E4 File Offset: 0x001DC3E4
+	// Token: 0x06005F51 RID: 24401 RVA: 0x001E7014 File Offset: 0x001E5214
 	public string GetLockTexturePath()
 	{
 		return this.GetConfig().Value.LockTexture;
 	}
 
-	// Token: 0x06008BB7 RID: 35767 RVA: 0x001DE208 File Offset: 0x001DC408
+	// Token: 0x06005F52 RID: 24402 RVA: 0x001E7038 File Offset: 0x001E5238
 	public int[] GetRecommendElementIdArray(ETeamBelong belongTo)
 	{
 		return this.GetInstanceDungeonConfig(belongTo).Value.RecommendElement();
 	}
 
-	// Token: 0x06008BB8 RID: 35768 RVA: 0x001DE22C File Offset: 0x001DC42C
+	// Token: 0x06005F53 RID: 24403 RVA: 0x001E705C File Offset: 0x001E525C
 	public bool GetUnLockState()
 	{
 		return this.IsOpen;
 	}
 
-	// Token: 0x06008BB9 RID: 35769 RVA: 0x001DE234 File Offset: 0x001DC434
+	// Token: 0x06005F54 RID: 24404 RVA: 0x001E7064 File Offset: 0x001E5264
 	public int GetScore()
 	{
 		return this.FirstPartScore + this.LowPartScore;
 	}
 
-	// Token: 0x06008BBA RID: 35770 RVA: 0x001DE243 File Offset: 0x001DC443
+	// Token: 0x06005F55 RID: 24405 RVA: 0x001E7073 File Offset: 0x001E5273
 	public int GetFirstScore()
 	{
 		return this.FirstPartScore;
 	}
 
-	// Token: 0x06008BBB RID: 35771 RVA: 0x001DE24B File Offset: 0x001DC44B
+	// Token: 0x06005F56 RID: 24406 RVA: 0x001E707B File Offset: 0x001E527B
 	public int GetLowScore()
 	{
 		return this.LowPartScore;
 	}
 
-	// Token: 0x06008BBC RID: 35772 RVA: 0x001DE254 File Offset: 0x001DC454
+	// Token: 0x06005F57 RID: 24407 RVA: 0x001E7084 File Offset: 0x001E5284
 	public string GetLevelTips()
 	{
 		return this.GetConfig().Value.LevelTips;
 	}
 
-	// Token: 0x06008BBD RID: 35773 RVA: 0x001DE278 File Offset: 0x001DC478
+	// Token: 0x06005F58 RID: 24408 RVA: 0x001E70A8 File Offset: 0x001E52A8
 	public string GetUnlockTimeText()
 	{
 		if (TimeUtil.Instance.GetServerTime() < this.UnLockTime)
@@ -160,50 +160,50 @@ public class MowingTowerLevelDetailInfo
 		return ConfigMultiTextLang.GetLocalTextNew("MowingTowerUnlockCondition", null);
 	}
 
-	// Token: 0x06008BBE RID: 35774 RVA: 0x001DE2DE File Offset: 0x001DC4DE
+	// Token: 0x06005F59 RID: 24409 RVA: 0x001E710E File Offset: 0x001E530E
 	public double GetUnLockTime()
 	{
 		return this.UnLockTime;
 	}
 
-	// Token: 0x06008BBF RID: 35775 RVA: 0x001DE2E6 File Offset: 0x001DC4E6
+	// Token: 0x06005F5A RID: 24410 RVA: 0x001E7116 File Offset: 0x001E5316
 	public MowTowerLevelsRe? GetConfig()
 	{
 		return MowingTowerConfig.Instance.GetBossMowingTowerConfigById(this.Id);
 	}
 
-	// Token: 0x06008BC0 RID: 35776 RVA: 0x001DE2F8 File Offset: 0x001DC4F8
+	// Token: 0x06005F5B RID: 24411 RVA: 0x001E7128 File Offset: 0x001E5328
 	public int GetMaxBuffCount()
 	{
 		return this.GetConfig().Value.BuffCount;
 	}
 
-	// Token: 0x06008BC1 RID: 35777 RVA: 0x001DE31C File Offset: 0x001DC51C
+	// Token: 0x06005F5C RID: 24412 RVA: 0x001E714C File Offset: 0x001E534C
 	public int GetInstanceDungeonId()
 	{
 		return this.GetConfig().Value.InstIds()[0];
 	}
 
-	// Token: 0x06008BC2 RID: 35778 RVA: 0x001DE344 File Offset: 0x001DC544
+	// Token: 0x06005F5D RID: 24413 RVA: 0x001E7174 File Offset: 0x001E5374
 	public bool GetIsInfinite()
 	{
 		return this.GetConfig().Value.IsInfinite;
 	}
 
-	// Token: 0x06008BC3 RID: 35779 RVA: 0x001DE368 File Offset: 0x001DC568
+	// Token: 0x06005F5E RID: 24414 RVA: 0x001E7198 File Offset: 0x001E5398
 	public string GetLevelDesc()
 	{
 		return this.GetConfig().Value.LevelDesc;
 	}
 
-	// Token: 0x06008BC4 RID: 35780 RVA: 0x001DE38C File Offset: 0x001DC58C
+	// Token: 0x06005F5F RID: 24415 RVA: 0x001E71BC File Offset: 0x001E53BC
 	public InstanceDungeon? GetInstanceDungeonConfig(ETeamBelong belongTo)
 	{
 		int id = this.GetConfig().Value.InstIds()[(int)belongTo];
 		return InstanceDungeonConfig.Instance.GetConfig(id);
 	}
 
-	// Token: 0x06008BC5 RID: 35781 RVA: 0x001DE3C0 File Offset: 0x001DC5C0
+	// Token: 0x06005F60 RID: 24416 RVA: 0x001E71F0 File Offset: 0x001E53F0
 	public MowingTowerTeamInfo ConvertToTeamInfo()
 	{
 		MowingTowerTeamInfo mowingTowerTeamInfo = new MowingTowerTeamInfo();
@@ -226,33 +226,33 @@ public class MowingTowerLevelDetailInfo
 		return mowingTowerTeamInfo;
 	}
 
-	// Token: 0x04003DEE RID: 15854
+	// Token: 0x04003E86 RID: 16006
 	private int ActivityId;
 
-	// Token: 0x04003DEF RID: 15855
+	// Token: 0x04003E87 RID: 16007
 	private int Id;
 
-	// Token: 0x04003DF0 RID: 15856
+	// Token: 0x04003E88 RID: 16008
 	private int FirstPartScore;
 
-	// Token: 0x04003DF1 RID: 15857
+	// Token: 0x04003E89 RID: 16009
 	private int LowPartScore;
 
-	// Token: 0x04003DF2 RID: 15858
+	// Token: 0x04003E8A RID: 16010
 	private double UnLockTime;
 
-	// Token: 0x04003DF3 RID: 15859
+	// Token: 0x04003E8B RID: 16011
 	private List<MowingTowerBuffInfo> BuffInfo = new List<MowingTowerBuffInfo>();
 
-	// Token: 0x04003DF4 RID: 15860
+	// Token: 0x04003E8C RID: 16012
 	private List<MowingTowerBuffInfo> OptionBuffInfo = new List<MowingTowerBuffInfo>();
 
-	// Token: 0x04003DF5 RID: 15861
+	// Token: 0x04003E8D RID: 16013
 	private List<MowingTowerRoleInfo> FirstPartRoleInfo = new List<MowingTowerRoleInfo>();
 
-	// Token: 0x04003DF6 RID: 15862
+	// Token: 0x04003E8E RID: 16014
 	private List<MowingTowerRoleInfo> LowPartRoleInfo = new List<MowingTowerRoleInfo>();
 
-	// Token: 0x04003DF7 RID: 15863
+	// Token: 0x04003E8F RID: 16015
 	private bool IsOpen;
 }

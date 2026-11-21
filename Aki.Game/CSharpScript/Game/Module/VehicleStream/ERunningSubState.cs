@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048A3 RID: 18595
+	// Token: 0x0200381A RID: 14362
 	public enum ERunningSubState
 	{
-		// Token: 0x0401A1F0 RID: 106992
+		// Token: 0x04014A63 RID: 84579
 		None,
-		// Token: 0x0401A1F1 RID: 106993
+		// Token: 0x04014A64 RID: 84580
 		Normal,
-		// Token: 0x0401A1F2 RID: 106994
+		// Token: 0x04014A65 RID: 84581
 		BrakingByObstruction,
-		// Token: 0x0401A1F3 RID: 106995
+		// Token: 0x04014A66 RID: 84582
 		BrakingByIntersection,
-		// Token: 0x0401A1F4 RID: 106996
+		// Token: 0x04014A67 RID: 84583
 		WaitingModelBuffer,
-		// Token: 0x0401A1F5 RID: 106997
+		// Token: 0x04014A68 RID: 84584
 		SlowDownByTurn,
-		// Token: 0x0401A1F6 RID: 106998
+		// Token: 0x04014A69 RID: 84585
 		SlowDownByUphillSlope,
-		// Token: 0x0401A1F7 RID: 106999
+		// Token: 0x04014A6A RID: 84586
 		SlowDownByDownhillSlope
 	}
 }

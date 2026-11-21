@@ -5,50 +5,50 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AE8 RID: 23272
+	// Token: 0x020060F5 RID: 24821
 	public class ITriggerExitConfigT
 	{
-		// Token: 0x1700AF86 RID: 44934
-		// (get) Token: 0x06027B82 RID: 162690 RVA: 0x00576CF0 File Offset: 0x00574EF0
-		// (set) Token: 0x06027B83 RID: 162691 RVA: 0x00576CF8 File Offset: 0x00574EF8
+		// Token: 0x1700B8C2 RID: 47298
+		// (get) Token: 0x0602A10E RID: 172302 RVA: 0x005BE1B4 File Offset: 0x005BC3B4
+		// (set) Token: 0x0602A10F RID: 172303 RVA: 0x005BE1BC File Offset: 0x005BC3BC
 		public int ExtraRange { get; set; }
 
-		// Token: 0x1700AF87 RID: 44935
-		// (get) Token: 0x06027B84 RID: 162692 RVA: 0x00576D01 File Offset: 0x00574F01
-		// (set) Token: 0x06027B85 RID: 162693 RVA: 0x00576D09 File Offset: 0x00574F09
+		// Token: 0x1700B8C3 RID: 47299
+		// (get) Token: 0x0602A110 RID: 172304 RVA: 0x005BE1C5 File Offset: 0x005BC3C5
+		// (set) Token: 0x0602A111 RID: 172305 RVA: 0x005BE1CD File Offset: 0x005BC3CD
 		public int MaxTriggerTimes { get; set; }
 
-		// Token: 0x1700AF88 RID: 44936
-		// (get) Token: 0x06027B86 RID: 162694 RVA: 0x00576D12 File Offset: 0x00574F12
-		// (set) Token: 0x06027B87 RID: 162695 RVA: 0x00576D1A File Offset: 0x00574F1A
+		// Token: 0x1700B8C4 RID: 47300
+		// (get) Token: 0x0602A112 RID: 172306 RVA: 0x005BE1D6 File Offset: 0x005BC3D6
+		// (set) Token: 0x0602A113 RID: 172307 RVA: 0x005BE1DE File Offset: 0x005BC3DE
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700AF89 RID: 44937
-		// (get) Token: 0x06027B88 RID: 162696 RVA: 0x00576D23 File Offset: 0x00574F23
-		// (set) Token: 0x06027B89 RID: 162697 RVA: 0x00576D2B File Offset: 0x00574F2B
+		// Token: 0x1700B8C5 RID: 47301
+		// (get) Token: 0x0602A114 RID: 172308 RVA: 0x005BE1E7 File Offset: 0x005BC3E7
+		// (set) Token: 0x0602A115 RID: 172309 RVA: 0x005BE1EF File Offset: 0x005BC3EF
 		public int MatchTypeCount { get; set; }
 
-		// Token: 0x1700AF8A RID: 44938
-		// (get) Token: 0x06027B8A RID: 162698 RVA: 0x00576D34 File Offset: 0x00574F34
-		// (set) Token: 0x06027B8B RID: 162699 RVA: 0x00576D3C File Offset: 0x00574F3C
+		// Token: 0x1700B8C6 RID: 47302
+		// (get) Token: 0x0602A116 RID: 172310 RVA: 0x005BE1F8 File Offset: 0x005BC3F8
+		// (set) Token: 0x0602A117 RID: 172311 RVA: 0x005BE200 File Offset: 0x005BC400
 		public bool ExitByNotEnterCondition { get; set; }
 
-		// Token: 0x1700AF8B RID: 44939
-		// (get) Token: 0x06027B8C RID: 162700 RVA: 0x00576D45 File Offset: 0x00574F45
-		// (set) Token: 0x06027B8D RID: 162701 RVA: 0x00576D4D File Offset: 0x00574F4D
+		// Token: 0x1700B8C7 RID: 47303
+		// (get) Token: 0x0602A118 RID: 172312 RVA: 0x005BE209 File Offset: 0x005BC409
+		// (set) Token: 0x0602A119 RID: 172313 RVA: 0x005BE211 File Offset: 0x005BC411
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700AF8C RID: 44940
-		// (get) Token: 0x06027B8E RID: 162702 RVA: 0x00576D56 File Offset: 0x00574F56
-		// (set) Token: 0x06027B8F RID: 162703 RVA: 0x00576D5E File Offset: 0x00574F5E
+		// Token: 0x1700B8C8 RID: 47304
+		// (get) Token: 0x0602A11A RID: 172314 RVA: 0x005BE21A File Offset: 0x005BC41A
+		// (set) Token: 0x0602A11B RID: 172315 RVA: 0x005BE222 File Offset: 0x005BC422
 		public bool DisableExecuteActionsWhenDestroy { get; set; }
 
-		// Token: 0x1700AF8D RID: 44941
-		// (get) Token: 0x06027B90 RID: 162704 RVA: 0x00576D67 File Offset: 0x00574F67
-		// (set) Token: 0x06027B91 RID: 162705 RVA: 0x00576D6F File Offset: 0x00574F6F
+		// Token: 0x1700B8C9 RID: 47305
+		// (get) Token: 0x0602A11C RID: 172316 RVA: 0x005BE22B File Offset: 0x005BC42B
+		// (set) Token: 0x0602A11D RID: 172317 RVA: 0x005BE233 File Offset: 0x005BC433
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027B92 RID: 162706 RVA: 0x00576D78 File Offset: 0x00574F78
+		// Token: 0x0602A11E RID: 172318 RVA: 0x005BE23C File Offset: 0x005BC43C
 		public ITriggerExitConfigT()
 		{
 			this.ExtraRange = 0;

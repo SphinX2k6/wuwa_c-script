@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001264 RID: 4708
+	// Token: 0x020013A4 RID: 5028
 	public static class EPlayerDamageInfoTypeExtensions
 	{
-		// Token: 0x06006A69 RID: 27241 RVA: 0x000FF028 File Offset: 0x000FD228
+		// Token: 0x060070BC RID: 28860 RVA: 0x0010CC54 File Offset: 0x0010AE54
 		public static string ToEnumString(this EPlayerDamageInfoType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A6A RID: 27242 RVA: 0x000FF060 File Offset: 0x000FD260
+		// Token: 0x060070BD RID: 28861 RVA: 0x0010CC8C File Offset: 0x0010AE8C
 		public static EPlayerDamageInfoType FromString(string name)
 		{
 			EPlayerDamageInfoType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A6B RID: 27243 RVA: 0x000FF089 File Offset: 0x000FD289
+		// Token: 0x060070BE RID: 28862 RVA: 0x0010CCB5 File Offset: 0x0010AEB5
 		public static bool TryFromString(string name, out EPlayerDamageInfoType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006A6C RID: 27244 RVA: 0x000FF0C2 File Offset: 0x000FD2C2
+		// Token: 0x060070BF RID: 28863 RVA: 0x0010CCEE File Offset: 0x0010AEEE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A6D RID: 27245 RVA: 0x000FF0DA File Offset: 0x000FD2DA
+		// Token: 0x060070C0 RID: 28864 RVA: 0x0010CD06 File Offset: 0x0010AF06
 		public static EPlayerDamageInfoType[] GetValues()
 		{
 			return new EPlayerDamageInfoType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A6E RID: 27246 RVA: 0x000FF0E6 File Offset: 0x000FD2E6
+		// Token: 0x060070C1 RID: 28865 RVA: 0x0010CD12 File Offset: 0x0010AF12
 		public static string[] GetNames()
 		{
 			return new string[]

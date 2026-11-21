@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,12 +14,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001693 RID: 5779
+// Token: 0x02000B4B RID: 2891
 [NullableContext(1)]
 [Nullable(0)]
 public class AdventureTargetView : UiTabViewBase
 {
-	// Token: 0x0600A4DE RID: 42206 RVA: 0x0024BBB0 File Offset: 0x00249DB0
+	// Token: 0x060078BE RID: 30910 RVA: 0x00255F1C File Offset: 0x0025411C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 20;
@@ -81,7 +80,7 @@ public class AdventureTargetView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A4DF RID: 42207 RVA: 0x0024BEFC File Offset: 0x0024A0FC
+	// Token: 0x060078BF RID: 30911 RVA: 0x00256268 File Offset: 0x00254468
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.AdventureTaskStateChange, new Action<IReadOnlyList<int>>(this.OnTaskStateChange));
@@ -89,7 +88,7 @@ public class AdventureTargetView : UiTabViewBase
 		EventSystem.Instance.Add(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
 	}
 
-	// Token: 0x0600A4E0 RID: 42208 RVA: 0x0024BF60 File Offset: 0x0024A160
+	// Token: 0x060078C0 RID: 30912 RVA: 0x002562CC File Offset: 0x002544CC
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.AdventureTaskStateChange, new Action<IReadOnlyList<int>>(this.OnTaskStateChange));
@@ -97,7 +96,7 @@ public class AdventureTargetView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
 	}
 
-	// Token: 0x0600A4E1 RID: 42209 RVA: 0x0024BFC4 File Offset: 0x0024A1C4
+	// Token: 0x060078C1 RID: 30913 RVA: 0x00256330 File Offset: 0x00254530
 	protected override void OnTickUiTabViewBase(float deltaTime)
 	{
 		if (this.StopFront)
@@ -112,7 +111,7 @@ public class AdventureTargetView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600A4E2 RID: 42210 RVA: 0x0024C010 File Offset: 0x0024A210
+	// Token: 0x060078C2 RID: 30914 RVA: 0x0025637C File Offset: 0x0025457C
 	protected override void OnStart()
 	{
 		base.GetText(1).SetUIActive(false);
@@ -126,7 +125,7 @@ public class AdventureTargetView : UiTabViewBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600A4E3 RID: 42211 RVA: 0x0024C0C0 File Offset: 0x0024A2C0
+	// Token: 0x060078C3 RID: 30915 RVA: 0x0025642C File Offset: 0x0025462C
 	private AdventureTargetRewardItem OnRewardLayoutUpdater()
 	{
 		AdventureTargetRewardItem adventureTargetRewardItem = new AdventureTargetRewardItem();
@@ -135,19 +134,19 @@ public class AdventureTargetView : UiTabViewBase
 		return adventureTargetRewardItem;
 	}
 
-	// Token: 0x0600A4E4 RID: 42212 RVA: 0x0024C0EB File Offset: 0x0024A2EB
+	// Token: 0x060078C4 RID: 30916 RVA: 0x00256457 File Offset: 0x00254657
 	private void OnRewardItemClick(MediumItemGridExtendCallback callbackParameter)
 	{
-		ItemController.Instance.OpenItemTipsByItemId(((TItem)callbackParameter.Data).ItemData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(((TItem)callbackParameter.Data).ItemData.ItemId, true, null, false);
 	}
 
-	// Token: 0x0600A4E5 RID: 42213 RVA: 0x0024C10E File Offset: 0x0024A30E
+	// Token: 0x060078C5 RID: 30917 RVA: 0x0025647B File Offset: 0x0025467B
 	private bool CanRewardItemChangeToggle(object _, bool result, EToggleState state)
 	{
 		return false;
 	}
 
-	// Token: 0x0600A4E6 RID: 42214 RVA: 0x0024C111 File Offset: 0x0024A311
+	// Token: 0x060078C6 RID: 30918 RVA: 0x0025647E File Offset: 0x0025467E
 	private AdventureTargetItem OnTaskLayoutUpdater()
 	{
 		AdventureTargetItem adventureTargetItem = new AdventureTargetItem();
@@ -155,7 +154,7 @@ public class AdventureTargetView : UiTabViewBase
 		return adventureTargetItem;
 	}
 
-	// Token: 0x0600A4E7 RID: 42215 RVA: 0x0024C12C File Offset: 0x0024A32C
+	// Token: 0x060078C7 RID: 30919 RVA: 0x00256498 File Offset: 0x00254698
 	private void OnTaskItemGetClick(int adventureId)
 	{
 		if (this.Clicking)
@@ -181,7 +180,7 @@ public class AdventureTargetView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x0600A4E8 RID: 42216 RVA: 0x0024C1B6 File Offset: 0x0024A3B6
+	// Token: 0x060078C8 RID: 30920 RVA: 0x00256522 File Offset: 0x00254722
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardLayout = null;
@@ -194,7 +193,7 @@ public class AdventureTargetView : UiTabViewBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600A4E9 RID: 42217 RVA: 0x0024C1E0 File Offset: 0x0024A3E0
+	// Token: 0x060078C9 RID: 30921 RVA: 0x0025654C File Offset: 0x0025474C
 	private void UpdateBtnStatus(int nowChapter)
 	{
 		UUIButtonComponent button = base.GetButton(3);
@@ -217,7 +216,7 @@ public class AdventureTargetView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600A4EA RID: 42218 RVA: 0x0024C238 File Offset: 0x0024A438
+	// Token: 0x060078CA RID: 30922 RVA: 0x002565A4 File Offset: 0x002547A4
 	protected override void OnBeforeShow()
 	{
 		this.FrontBarSprite.SetFillAmount(0f);
@@ -237,7 +236,7 @@ public class AdventureTargetView : UiTabViewBase
 			{
 				int chapterReceivedCount = AdventureGuideModel.Instance.GetChapterReceivedCount(i);
 				int rewardUnlockCount = chapterAdventureConfig.Value.RewardUnlockCount;
-				if (!rewardChaptersList.Contains(i) && chapterReceivedCount >= rewardUnlockCount && num <= i)
+				if (Array.IndexOf<int>(rewardChaptersList, i) < 0 && chapterReceivedCount >= rewardUnlockCount && num <= i)
 				{
 					num = i;
 					flag = true;
@@ -282,7 +281,7 @@ public class AdventureTargetView : UiTabViewBase
 		EventSystem.Instance.Emit<int>(EEventName.AdventureHelpBtn, 0);
 	}
 
-	// Token: 0x0600A4EB RID: 42219 RVA: 0x0024C388 File Offset: 0x0024A588
+	// Token: 0x060078CB RID: 30923 RVA: 0x002566F4 File Offset: 0x002548F4
 	public void SetAdventureTargetInfoByChapter(int chapter, bool rebuildList = true)
 	{
 		this.NowShowingChapter = chapter;
@@ -296,7 +295,7 @@ public class AdventureTargetView : UiTabViewBase
 		this.SetAdventureProgress(chapter);
 	}
 
-	// Token: 0x0600A4EC RID: 42220 RVA: 0x0024C3C8 File Offset: 0x0024A5C8
+	// Token: 0x060078CC RID: 30924 RVA: 0x00256734 File Offset: 0x00254934
 	public void SetChapterInfo(int chapter)
 	{
 		AdventureTaskChapter? chapterAdventureConfig = AdventureGuideConfig.Instance.GetChapterAdventureConfig(chapter);
@@ -321,12 +320,12 @@ public class AdventureTargetView : UiTabViewBase
 		UUIButtonComponent rewardBtn = this.RewardBtn;
 		if (rewardBtn != null)
 		{
-			rewardBtn.RootUIComp.Get().SetUIActive(unLockChaptersList.Contains(chapter));
+			rewardBtn.RootUIComp.Get().SetUIActive(Array.IndexOf<int>(unLockChaptersList, chapter) >= 0);
 		}
-		this.RewardBtn.SetSelfInteractive(chapterReceivedCount >= rewardUnlockCount && !rewardChaptersList.Contains(chapter));
-		if (unLockChaptersList.Contains(chapter))
+		this.RewardBtn.SetSelfInteractive(chapterReceivedCount >= rewardUnlockCount && Array.IndexOf<int>(rewardChaptersList, chapter) < 0);
+		if (Array.IndexOf<int>(unLockChaptersList, chapter) >= 0)
 		{
-			if (rewardChaptersList.Contains(chapter))
+			if (Array.IndexOf<int>(rewardChaptersList, chapter) >= 0)
 			{
 				LguiUtil.Instance.SetLocalText(text, "ChapterRewardGet", Array.Empty<object>());
 			}
@@ -352,7 +351,7 @@ public class AdventureTargetView : UiTabViewBase
 		}));
 	}
 
-	// Token: 0x0600A4ED RID: 42221 RVA: 0x0024C614 File Offset: 0x0024A814
+	// Token: 0x060078CD RID: 30925 RVA: 0x00256988 File Offset: 0x00254B88
 	private void BuildTaskList(AdventureTaskRecord[] taskList)
 	{
 		GenericScrollViewNew<AdventureTargetItem, AdventureTaskRecord> targetItemLayout = this.TargetItemLayout;
@@ -360,10 +359,10 @@ public class AdventureTargetView : UiTabViewBase
 		{
 			return;
 		}
-		targetItemLayout.RefreshByData(taskList.ToList<AdventureTaskRecord>(), null, true);
+		targetItemLayout.RefreshByData(taskList, null, true);
 	}
 
-	// Token: 0x0600A4EE RID: 42222 RVA: 0x0024C630 File Offset: 0x0024A830
+	// Token: 0x060078CE RID: 30926 RVA: 0x002569A0 File Offset: 0x00254BA0
 	private void SetAdventureProgress(int chapter)
 	{
 		AdventureTaskChapter? chapterAdventureConfig = AdventureGuideConfig.Instance.GetChapterAdventureConfig(chapter);
@@ -389,7 +388,7 @@ public class AdventureTargetView : UiTabViewBase
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(19), (chapterReceivedCount < levelUnlockCount) ? "Adventure_Taget_NextLevelLock" : "Adventure_Taget_NextLevelUnlock", new <>z__ReadOnlySingleElementList<object>(chapter + 1));
 			this.TargetFront = Math.Min(1f, (float)chapterReceivedCount / (float)levelUnlockCount);
 		}
-		bool uiactive = AdventureGuideModel.Instance.GetUnLockChaptersList().Contains(chapter);
+		bool uiactive = Array.IndexOf<int>(AdventureGuideModel.Instance.GetUnLockChaptersList(), chapter) >= 0;
 		base.GetText(19).SetUIActive(uiactive);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(15), "Adventure_Taget_State_Number", new <>z__ReadOnlySingleElementList<object>(chapter));
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(20), "Adventure_Taget_RewardUnlock", new <>z__ReadOnlyArray<object>(new object[]
@@ -397,10 +396,10 @@ public class AdventureTargetView : UiTabViewBase
 			Math.Min(chapterReceivedCount, rewardUnlockCount),
 			rewardUnlockCount
 		}));
-		base.GetItem(9).SetUIActive(chapterReceivedCount >= rewardUnlockCount && !AdventureGuideModel.Instance.GetRewardChaptersList().Contains(chapter));
+		base.GetItem(9).SetUIActive(chapterReceivedCount >= rewardUnlockCount && Array.IndexOf<int>(AdventureGuideModel.Instance.GetRewardChaptersList(), chapter) < 0);
 	}
 
-	// Token: 0x0600A4EF RID: 42223 RVA: 0x0024C840 File Offset: 0x0024AA40
+	// Token: 0x060078CF RID: 30927 RVA: 0x00256BB4 File Offset: 0x00254DB4
 	private void RefreshRewardItemReceive()
 	{
 		if (AdventureGuideConfig.Instance.GetChapterAdventureConfig(this.NowShowingChapter) == null)
@@ -411,11 +410,11 @@ public class AdventureTargetView : UiTabViewBase
 		GenericLayout<AdventureTargetRewardItem, TItem> rewardLayout = this.RewardLayout;
 		foreach (AdventureTargetRewardItem adventureTargetRewardItem in (((rewardLayout != null) ? rewardLayout.GetLayoutItemList() : null) ?? new List<AdventureTargetRewardItem>()))
 		{
-			adventureTargetRewardItem.SetReceivedFlagVisible(new bool?(rewardChaptersList.Contains(this.NowShowingChapter)));
+			adventureTargetRewardItem.SetReceivedFlagVisible(new bool?(Array.IndexOf<int>(rewardChaptersList, this.NowShowingChapter) >= 0));
 		}
 	}
 
-	// Token: 0x0600A4F0 RID: 42224 RVA: 0x0024C8DC File Offset: 0x0024AADC
+	// Token: 0x060078D0 RID: 30928 RVA: 0x00256C58 File Offset: 0x00254E58
 	private void OnPreBtnClick()
 	{
 		if (this.NowShowingChapter > 1)
@@ -426,7 +425,7 @@ public class AdventureTargetView : UiTabViewBase
 				frontBarSprite.SetFillAmount(0f);
 			}
 			int num = this.NowShowingChapter - 1;
-			this.SetAdventureTargetInfoByChapter(num, AdventureGuideModel.Instance.GetUnLockChaptersList().Contains(num));
+			this.SetAdventureTargetInfoByChapter(num, Array.IndexOf<int>(AdventureGuideModel.Instance.GetUnLockChaptersList(), num) >= 0);
 		}
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
 		if (levelSequencePlayer != null)
@@ -441,7 +440,7 @@ public class AdventureTargetView : UiTabViewBase
 		levelSequencePlayer2.PlayLevelSequenceByName("Switch", false, null, false);
 	}
 
-	// Token: 0x0600A4F1 RID: 42225 RVA: 0x0024C95C File Offset: 0x0024AB5C
+	// Token: 0x060078D1 RID: 30929 RVA: 0x00256CE0 File Offset: 0x00254EE0
 	private void OnNextBtnClick()
 	{
 		if (this.NowShowingChapter < AdventureGuideConfig.Instance.GetMaxChapter())
@@ -452,7 +451,7 @@ public class AdventureTargetView : UiTabViewBase
 				frontBarSprite.SetFillAmount(0f);
 			}
 			int num = this.NowShowingChapter + 1;
-			this.SetAdventureTargetInfoByChapter(num, AdventureGuideModel.Instance.GetUnLockChaptersList().Contains(num));
+			this.SetAdventureTargetInfoByChapter(num, Array.IndexOf<int>(AdventureGuideModel.Instance.GetUnLockChaptersList(), num) >= 0);
 		}
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
 		if (levelSequencePlayer != null)
@@ -467,7 +466,7 @@ public class AdventureTargetView : UiTabViewBase
 		levelSequencePlayer2.PlayLevelSequenceByName("Switch", false, null, false);
 	}
 
-	// Token: 0x0600A4F2 RID: 42226 RVA: 0x0024C9E4 File Offset: 0x0024ABE4
+	// Token: 0x060078D2 RID: 30930 RVA: 0x00256D70 File Offset: 0x00254F70
 	private void OnRewardBtnClick()
 	{
 		AdventureTaskChapter? chapterAdventureConfig = AdventureGuideConfig.Instance.GetChapterAdventureConfig(this.NowShowingChapter);
@@ -487,7 +486,7 @@ public class AdventureTargetView : UiTabViewBase
 		ScrollingTipsController.Instance.ShowTipsByText(textById);
 	}
 
-	// Token: 0x0600A4F3 RID: 42227 RVA: 0x0024CA67 File Offset: 0x0024AC67
+	// Token: 0x060078D3 RID: 30931 RVA: 0x00256DF3 File Offset: 0x00254FF3
 	private void OnChapterRewardReceived(int id)
 	{
 		if (this.NowShowingChapter == id)
@@ -499,7 +498,7 @@ public class AdventureTargetView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600A4F4 RID: 42228 RVA: 0x0024CA94 File Offset: 0x0024AC94
+	// Token: 0x060078D4 RID: 30932 RVA: 0x00256E20 File Offset: 0x00255020
 	private void OnTaskStateChange(IReadOnlyList<int> ids)
 	{
 		bool flag = false;
@@ -515,18 +514,18 @@ public class AdventureTargetView : UiTabViewBase
 		{
 			return;
 		}
-		AdventureTaskRecord[] source = AdventureGuideModel.Instance.GetChapterTasks(this.NowShowingChapter);
+		AdventureTaskRecord[] data = AdventureGuideModel.Instance.GetChapterTasks(this.NowShowingChapter);
 		this.SetAdventureTargetInfoByChapter(this.NowShowingChapter, false);
-		source = AdventureGuideModel.Instance.SortChapterTasks(this.NowShowingChapter);
+		data = AdventureGuideModel.Instance.SortChapterTasks(this.NowShowingChapter);
 		GenericScrollViewNew<AdventureTargetItem, AdventureTaskRecord> targetItemLayout = this.TargetItemLayout;
 		if (targetItemLayout == null)
 		{
 			return;
 		}
-		targetItemLayout.RefreshByData(source.ToList<AdventureTaskRecord>(), null, false);
+		targetItemLayout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x0600A4F5 RID: 42229 RVA: 0x0024CB3C File Offset: 0x0024AD3C
+	// Token: 0x060078D5 RID: 30933 RVA: 0x00256EC0 File Offset: 0x002550C0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -553,25 +552,25 @@ public class AdventureTargetView : UiTabViewBase
 		return null;
 	}
 
-	// Token: 0x0600A4F6 RID: 42230 RVA: 0x0024CB99 File Offset: 0x0024AD99
+	// Token: 0x060078D6 RID: 30934 RVA: 0x00256F1D File Offset: 0x0025511D
 	private void OnCloseRewardView()
 	{
 		this.StopFront = false;
 	}
 
-	// Token: 0x04004A95 RID: 19093
+	// Token: 0x04004B3C RID: 19260
 	private const string REWARD_RECEIVED = "ChapterRewardGet";
 
-	// Token: 0x04004A96 RID: 19094
+	// Token: 0x04004B3D RID: 19261
 	private const string NOT_FINISH_TIP = "NotFinishedTip";
 
-	// Token: 0x04004A97 RID: 19095
+	// Token: 0x04004B3E RID: 19262
 	private const string GET_REWARD = "GetReward";
 
-	// Token: 0x04004A98 RID: 19096
+	// Token: 0x04004B3F RID: 19263
 	private const float FRONT_ADD_FRAME = 0.01f;
 
-	// Token: 0x04004A99 RID: 19097
+	// Token: 0x04004B40 RID: 19264
 	[Nullable(new byte[]
 	{
 		2,
@@ -579,14 +578,14 @@ public class AdventureTargetView : UiTabViewBase
 	})]
 	private GenericLayout<AdventureTargetRewardItem, TItem> RewardLayout;
 
-	// Token: 0x04004A9A RID: 19098
+	// Token: 0x04004B41 RID: 19265
 	private int NowShowingChapter;
 
-	// Token: 0x04004A9B RID: 19099
+	// Token: 0x04004B42 RID: 19266
 	[Nullable(2)]
 	private UUIButtonComponent RewardBtn;
 
-	// Token: 0x04004A9C RID: 19100
+	// Token: 0x04004B43 RID: 19267
 	[Nullable(new byte[]
 	{
 		2,
@@ -595,70 +594,70 @@ public class AdventureTargetView : UiTabViewBase
 	})]
 	private GenericScrollViewNew<AdventureTargetItem, AdventureTaskRecord> TargetItemLayout;
 
-	// Token: 0x04004A9D RID: 19101
+	// Token: 0x04004B44 RID: 19268
 	[Nullable(2)]
 	private UUISprite FrontBarSprite;
 
-	// Token: 0x04004A9E RID: 19102
+	// Token: 0x04004B45 RID: 19269
 	private float TargetFront;
 
-	// Token: 0x04004A9F RID: 19103
+	// Token: 0x04004B46 RID: 19270
 	private bool StopFront;
 
-	// Token: 0x04004AA0 RID: 19104
+	// Token: 0x04004B47 RID: 19271
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004AA1 RID: 19105
+	// Token: 0x04004B48 RID: 19272
 	private bool Clicking;
 
-	// Token: 0x02007C6D RID: 31853
+	// Token: 0x02006DF2 RID: 28146
 	[NullableContext(0)]
 	private enum ENodeDefine
 	{
-		// Token: 0x04028D1B RID: 167195
+		// Token: 0x04024044 RID: 147524
 		RewardBtn,
-		// Token: 0x04028D1C RID: 167196
+		// Token: 0x04024045 RID: 147525
 		ProgressText,
-		// Token: 0x04028D1D RID: 167197
+		// Token: 0x04024046 RID: 147526
 		TargetItem,
-		// Token: 0x04028D1E RID: 167198
+		// Token: 0x04024047 RID: 147527
 		PreBtn,
-		// Token: 0x04028D1F RID: 167199
+		// Token: 0x04024048 RID: 147528
 		NextBtn,
-		// Token: 0x04028D20 RID: 167200
+		// Token: 0x04024049 RID: 147529
 		RewardItem,
-		// Token: 0x04028D21 RID: 167201
+		// Token: 0x0402404A RID: 147530
 		ChapterText,
-		// Token: 0x04028D22 RID: 167202
+		// Token: 0x0402404B RID: 147531
 		RewardLayout,
-		// Token: 0x04028D23 RID: 167203
+		// Token: 0x0402404C RID: 147532
 		FrontBar,
-		// Token: 0x04028D24 RID: 167204
+		// Token: 0x0402404D RID: 147533
 		RedDotItem,
-		// Token: 0x04028D25 RID: 167205
+		// Token: 0x0402404E RID: 147534
 		ConfirmText,
-		// Token: 0x04028D26 RID: 167206
+		// Token: 0x0402404F RID: 147535
 		PanelExpItem,
-		// Token: 0x04028D27 RID: 167207
+		// Token: 0x04024050 RID: 147536
 		TaskScroll,
-		// Token: 0x04028D28 RID: 167208
+		// Token: 0x04024051 RID: 147537
 		NextChapterTip,
-		// Token: 0x04028D29 RID: 167209
+		// Token: 0x04024052 RID: 147538
 		AdventureTaskItem,
-		// Token: 0x04028D2A RID: 167210
+		// Token: 0x04024053 RID: 147539
 		StateText,
-		// Token: 0x04028D2B RID: 167211
+		// Token: 0x04024054 RID: 147540
 		EmptyText,
-		// Token: 0x04028D2C RID: 167212
+		// Token: 0x04024055 RID: 147541
 		LeftRedDotItem,
-		// Token: 0x04028D2D RID: 167213
+		// Token: 0x04024056 RID: 147542
 		RightRedDotItem,
-		// Token: 0x04028D2E RID: 167214
+		// Token: 0x04024057 RID: 147543
 		NextLevelProgressText,
-		// Token: 0x04028D2F RID: 167215
+		// Token: 0x04024058 RID: 147544
 		CurrentRewardText,
-		// Token: 0x04028D30 RID: 167216
+		// Token: 0x04024059 RID: 147545
 		ChapterTargetText
 	}
 }

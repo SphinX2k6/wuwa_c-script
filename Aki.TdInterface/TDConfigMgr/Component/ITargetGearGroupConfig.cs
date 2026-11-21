@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200074C RID: 1868
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007ED RID: 2029
 	public class ITargetGearGroupConfig
 	{
-		// Token: 0x06002855 RID: 10325 RVA: 0x0006AED0 File Offset: 0x000690D0
+		// Token: 0x06002B79 RID: 11129 RVA: 0x00072078 File Offset: 0x00070278
 		private ITargetGearGroupConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002856 RID: 10326 RVA: 0x0006AF08 File Offset: 0x00069108
+		// Token: 0x06002B7A RID: 11130 RVA: 0x000720B0 File Offset: 0x000702B0
 		public static ITargetGearGroupConfig Create([Nullable(2)] ITargetGearGroupConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002857 RID: 10327 RVA: 0x0006AF1B File Offset: 0x0006911B
+		// Token: 0x06002B7B RID: 11131 RVA: 0x000720C3 File Offset: 0x000702C3
 		public static ITargetGearGroupConfig CreateFromSetValue([Nullable(2)] ITargetGearGroupConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002858 RID: 10328 RVA: 0x0006AF30 File Offset: 0x00069130
+		// Token: 0x06002B7C RID: 11132 RVA: 0x000720D8 File Offset: 0x000702D8
 		public ITargetGearGroupConfig_SetValue ToSetValue()
 		{
 			return new ITargetGearGroupConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A99 RID: 2713
-		// (get) Token: 0x06002859 RID: 10329 RVA: 0x0006AF7E File Offset: 0x0006917E
-		// (set) Token: 0x0600285A RID: 10330 RVA: 0x0006AFA5 File Offset: 0x000691A5
+		// Token: 0x17000B59 RID: 2905
+		// (get) Token: 0x06002B7D RID: 11133 RVA: 0x00072126 File Offset: 0x00070326
+		// (set) Token: 0x06002B7E RID: 11134 RVA: 0x0007214D File Offset: 0x0007034D
 		public virtual List<int> Entitys
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A9A RID: 2714
-		// (get) Token: 0x0600285B RID: 10331 RVA: 0x0006AFB3 File Offset: 0x000691B3
-		// (set) Token: 0x0600285C RID: 10332 RVA: 0x0006AFDA File Offset: 0x000691DA
+		// Token: 0x17000B5A RID: 2906
+		// (get) Token: 0x06002B7F RID: 11135 RVA: 0x0007215B File Offset: 0x0007035B
+		// (set) Token: 0x06002B80 RID: 11136 RVA: 0x00072182 File Offset: 0x00070382
 		public virtual ITargetGearGroupSuccessContdion SuccessCondition
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A9B RID: 2715
-		// (get) Token: 0x0600285D RID: 10333 RVA: 0x0006AFE8 File Offset: 0x000691E8
-		// (set) Token: 0x0600285E RID: 10334 RVA: 0x0006B00F File Offset: 0x0006920F
+		// Token: 0x17000B5B RID: 2907
+		// (get) Token: 0x06002B81 RID: 11137 RVA: 0x00072190 File Offset: 0x00070390
+		// (set) Token: 0x06002B82 RID: 11138 RVA: 0x000721B7 File Offset: 0x000703B7
 		public virtual List<ITargetGearGroupFailureCondition> FailureConditions
 		{
 			get
@@ -136,20 +134,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A9C RID: 2716
-		// (get) Token: 0x0600285F RID: 10335 RVA: 0x0006B020 File Offset: 0x00069220
-		// (set) Token: 0x06002860 RID: 10336 RVA: 0x0006B0B3 File Offset: 0x000692B3
+		// Token: 0x17000B5C RID: 2908
+		// (get) Token: 0x06002B83 RID: 11139 RVA: 0x000721C8 File Offset: 0x000703C8
+		// (set) Token: 0x06002B84 RID: 11140 RVA: 0x0007225B File Offset: 0x0007045B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ICheckGearHit> CheckGears
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -180,7 +178,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -189,9 +187,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A9D RID: 2717
-		// (get) Token: 0x06002861 RID: 10337 RVA: 0x0006B0C8 File Offset: 0x000692C8
-		// (set) Token: 0x06002862 RID: 10338 RVA: 0x0006B0EF File Offset: 0x000692EF
+		// Token: 0x17000B5D RID: 2909
+		// (get) Token: 0x06002B85 RID: 11141 RVA: 0x00072270 File Offset: 0x00070470
+		// (set) Token: 0x06002B86 RID: 11142 RVA: 0x00072297 File Offset: 0x00070497
 		[Nullable(2)]
 		public virtual IGroupFinishConfig FinishConfig
 		{
@@ -216,23 +214,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B28 RID: 6952
+		// Token: 0x04001D2D RID: 7469
 		[Nullable(2)]
 		protected ITargetGearGroupConfig FbInstance;
 
-		// Token: 0x04001B29 RID: 6953
+		// Token: 0x04001D2E RID: 7470
 		[Nullable(2)]
 		protected ITargetGearGroupConfig_SetValue PocoInterface;
 
-		// Token: 0x04001B2A RID: 6954
+		// Token: 0x04001D2F RID: 7471
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ICheckGearHit> _CheckGearsCache;
 
-		// Token: 0x04001B2B RID: 6955
+		// Token: 0x04001D30 RID: 7472
 		private bool _CheckGearsInited;
 	}
 }

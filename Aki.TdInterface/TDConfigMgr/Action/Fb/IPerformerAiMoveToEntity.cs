@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200298E RID: 10638
+	// Token: 0x02002C75 RID: 11381
 	public class IPerformerAiMoveToEntity : IPerformerAiMoveConfig
 	{
-		// Token: 0x0600EB8D RID: 60301 RVA: 0x0022731E File Offset: 0x0022551E
-		[NullableContext(1)]
+		// Token: 0x0600FA0B RID: 64011 RVA: 0x00244AAA File Offset: 0x00242CAA
 		public static IPerformerAiMoveToEntity Create(IPerformerAiMoveToEntity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A33 RID: 18995
-		// (get) Token: 0x0600EB8E RID: 60302 RVA: 0x0022733D File Offset: 0x0022553D
+		// Token: 0x17004DCF RID: 19919
+		// (get) Token: 0x0600FA0C RID: 64012 RVA: 0x00244AC9 File Offset: 0x00242CC9
 		public override EPerformerAiMoveToType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A34 RID: 18996
-		// (get) Token: 0x0600EB8F RID: 60303 RVA: 0x0022734A File Offset: 0x0022554A
+		// Token: 0x17004DD0 RID: 19920
+		// (get) Token: 0x0600FA0D RID: 64013 RVA: 0x00244AD6 File Offset: 0x00242CD6
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081BA RID: 33210
+		// Token: 0x0400889F RID: 34975
 		private IPerformerAiMoveToEntity Instance;
 	}
 }

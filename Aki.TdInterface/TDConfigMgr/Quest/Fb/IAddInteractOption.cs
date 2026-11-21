@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200136C RID: 4972
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014BC RID: 5308
 	public class IAddInteractOption
 	{
-		// Token: 0x060071C2 RID: 29122 RVA: 0x00111EE0 File Offset: 0x001100E0
+		// Token: 0x06007862 RID: 30818 RVA: 0x0012044C File Offset: 0x0011E64C
 		public static IAddInteractOption Create(IAddInteractOption? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024BD RID: 9405
-		// (get) Token: 0x060071C3 RID: 29123 RVA: 0x00111EFF File Offset: 0x001100FF
+		// Token: 0x1700268C RID: 9868
+		// (get) Token: 0x06007863 RID: 30819 RVA: 0x0012046B File Offset: 0x0011E66B
 		public virtual IInteractOption Option
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024BE RID: 9406
-		// (get) Token: 0x060071C4 RID: 29124 RVA: 0x00111F33 File Offset: 0x00110133
+		// Token: 0x1700268D RID: 9869
+		// (get) Token: 0x06007864 RID: 30820 RVA: 0x0012049F File Offset: 0x0011E69F
 		public virtual int EntityId
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024BF RID: 9407
-		// (get) Token: 0x060071C5 RID: 29125 RVA: 0x00111F40 File Offset: 0x00110140
+		// Token: 0x1700268E RID: 9870
+		// (get) Token: 0x06007865 RID: 30821 RVA: 0x001204AC File Offset: 0x0011E6AC
 		public virtual bool? IsManualFinish
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024C0 RID: 9408
-		// (get) Token: 0x060071C6 RID: 29126 RVA: 0x00111F78 File Offset: 0x00110178
+		// Token: 0x1700268F RID: 9871
+		// (get) Token: 0x06007866 RID: 30822 RVA: 0x001204E4 File Offset: 0x0011E6E4
 		public virtual bool? IsManualDelete
 		{
 			get
@@ -77,8 +75,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024C1 RID: 9409
-		// (get) Token: 0x060071C7 RID: 29127 RVA: 0x00111FAE File Offset: 0x001101AE
+		// Token: 0x17002690 RID: 9872
+		// (get) Token: 0x06007867 RID: 30823 RVA: 0x0012051A File Offset: 0x0011E71A
 		[Nullable(2)]
 		public virtual string InteractToken
 		{
@@ -89,14 +87,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041B6 RID: 16822
+		// Token: 0x04004532 RID: 17714
 		private IAddInteractOption Instance;
 
-		// Token: 0x040041B7 RID: 16823
+		// Token: 0x04004533 RID: 17715
 		[Nullable(2)]
 		private IInteractOption _OptionCache;
 
-		// Token: 0x040041B8 RID: 16824
+		// Token: 0x04004534 RID: 17716
 		private bool _OptionInited;
 	}
 }

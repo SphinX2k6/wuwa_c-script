@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EBD RID: 20157
+	// Token: 0x020053E6 RID: 21478
 	public class IAttachTargetComponentT
 	{
-		// Token: 0x1700909E RID: 37022
-		// (get) Token: 0x0601FBFD RID: 130045 RVA: 0x0046B887 File Offset: 0x00469A87
-		// (set) Token: 0x0601FBFE RID: 130046 RVA: 0x0046B88F File Offset: 0x00469A8F
+		// Token: 0x170097FF RID: 38911
+		// (get) Token: 0x060218FF RID: 137471 RVA: 0x004A0D63 File Offset: 0x0049EF63
+		// (set) Token: 0x06021900 RID: 137472 RVA: 0x004A0D6B File Offset: 0x0049EF6B
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700909F RID: 37023
-		// (get) Token: 0x0601FBFF RID: 130047 RVA: 0x0046B898 File Offset: 0x00469A98
-		// (set) Token: 0x0601FC00 RID: 130048 RVA: 0x0046B8A0 File Offset: 0x00469AA0
+		// Token: 0x17009800 RID: 38912
+		// (get) Token: 0x06021901 RID: 137473 RVA: 0x004A0D74 File Offset: 0x0049EF74
+		// (set) Token: 0x06021902 RID: 137474 RVA: 0x004A0D7C File Offset: 0x0049EF7C
 		public TAttachTargetUnion AttachTarget { get; set; }
 
-		// Token: 0x170090A0 RID: 37024
-		// (get) Token: 0x0601FC01 RID: 130049 RVA: 0x0046B8A9 File Offset: 0x00469AA9
-		// (set) Token: 0x0601FC02 RID: 130050 RVA: 0x0046B8B1 File Offset: 0x00469AB1
+		// Token: 0x17009801 RID: 38913
+		// (get) Token: 0x06021903 RID: 137475 RVA: 0x004A0D85 File Offset: 0x0049EF85
+		// (set) Token: 0x06021904 RID: 137476 RVA: 0x004A0D8D File Offset: 0x0049EF8D
 		public EAttachRuleType PosRule { get; set; }
 
-		// Token: 0x170090A1 RID: 37025
-		// (get) Token: 0x0601FC03 RID: 130051 RVA: 0x0046B8BA File Offset: 0x00469ABA
-		// (set) Token: 0x0601FC04 RID: 130052 RVA: 0x0046B8C2 File Offset: 0x00469AC2
+		// Token: 0x17009802 RID: 38914
+		// (get) Token: 0x06021905 RID: 137477 RVA: 0x004A0D96 File Offset: 0x0049EF96
+		// (set) Token: 0x06021906 RID: 137478 RVA: 0x004A0D9E File Offset: 0x0049EF9E
 		public EAttachRuleType RotRule { get; set; }
 
-		// Token: 0x170090A2 RID: 37026
-		// (get) Token: 0x0601FC05 RID: 130053 RVA: 0x0046B8CB File Offset: 0x00469ACB
-		// (set) Token: 0x0601FC06 RID: 130054 RVA: 0x0046B8D3 File Offset: 0x00469AD3
+		// Token: 0x17009803 RID: 38915
+		// (get) Token: 0x06021907 RID: 137479 RVA: 0x004A0DA7 File Offset: 0x0049EFA7
+		// (set) Token: 0x06021908 RID: 137480 RVA: 0x004A0DAF File Offset: 0x0049EFAF
 		public TAttachTimingUnion AttachTiming { get; set; }
 
-		// Token: 0x170090A3 RID: 37027
-		// (get) Token: 0x0601FC07 RID: 130055 RVA: 0x0046B8DC File Offset: 0x00469ADC
-		// (set) Token: 0x0601FC08 RID: 130056 RVA: 0x0046B8E4 File Offset: 0x00469AE4
+		// Token: 0x17009804 RID: 38916
+		// (get) Token: 0x06021909 RID: 137481 RVA: 0x004A0DB8 File Offset: 0x0049EFB8
+		// (set) Token: 0x0602190A RID: 137482 RVA: 0x004A0DC0 File Offset: 0x0049EFC0
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601FC09 RID: 130057 RVA: 0x0046B8ED File Offset: 0x00469AED
+		// Token: 0x0602190B RID: 137483 RVA: 0x004A0DC9 File Offset: 0x0049EFC9
 		public IAttachTargetComponentT()
 		{
 			this.Disabled = false;

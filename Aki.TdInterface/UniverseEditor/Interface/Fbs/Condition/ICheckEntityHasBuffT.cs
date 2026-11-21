@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A04 RID: 18948
+	// Token: 0x02004EC4 RID: 20164
 	public class ICheckEntityHasBuffT
 	{
-		// Token: 0x1700891E RID: 35102
-		// (get) Token: 0x0601DA12 RID: 121362 RVA: 0x0042B943 File Offset: 0x00429B43
-		// (set) Token: 0x0601DA13 RID: 121363 RVA: 0x0042B94B File Offset: 0x00429B4B
+		// Token: 0x17008FEE RID: 36846
+		// (get) Token: 0x0601F485 RID: 128133 RVA: 0x0045C5AF File Offset: 0x0045A7AF
+		// (set) Token: 0x0601F486 RID: 128134 RVA: 0x0045C5B7 File Offset: 0x0045A7B7
 		public ECondition Type { get; set; }
 
-		// Token: 0x1700891F RID: 35103
-		// (get) Token: 0x0601DA14 RID: 121364 RVA: 0x0042B954 File Offset: 0x00429B54
-		// (set) Token: 0x0601DA15 RID: 121365 RVA: 0x0042B95C File Offset: 0x00429B5C
+		// Token: 0x17008FEF RID: 36847
+		// (get) Token: 0x0601F487 RID: 128135 RVA: 0x0045C5C0 File Offset: 0x0045A7C0
+		// (set) Token: 0x0601F488 RID: 128136 RVA: 0x0045C5C8 File Offset: 0x0045A7C8
 		public IMonsterBuffContainerT Target { get; set; }
 
-		// Token: 0x17008920 RID: 35104
-		// (get) Token: 0x0601DA16 RID: 121366 RVA: 0x0042B965 File Offset: 0x00429B65
-		// (set) Token: 0x0601DA17 RID: 121367 RVA: 0x0042B96D File Offset: 0x00429B6D
+		// Token: 0x17008FF0 RID: 36848
+		// (get) Token: 0x0601F489 RID: 128137 RVA: 0x0045C5D1 File Offset: 0x0045A7D1
+		// (set) Token: 0x0601F48A RID: 128138 RVA: 0x0045C5D9 File Offset: 0x0045A7D9
 		public long BuffId { get; set; }
 
-		// Token: 0x17008921 RID: 35105
-		// (get) Token: 0x0601DA18 RID: 121368 RVA: 0x0042B976 File Offset: 0x00429B76
-		// (set) Token: 0x0601DA19 RID: 121369 RVA: 0x0042B97E File Offset: 0x00429B7E
+		// Token: 0x17008FF1 RID: 36849
+		// (get) Token: 0x0601F48B RID: 128139 RVA: 0x0045C5E2 File Offset: 0x0045A7E2
+		// (set) Token: 0x0601F48C RID: 128140 RVA: 0x0045C5EA File Offset: 0x0045A7EA
 		public bool HasBuff { get; set; }
 
-		// Token: 0x0601DA1A RID: 121370 RVA: 0x0042B987 File Offset: 0x00429B87
+		// Token: 0x0601F48D RID: 128141 RVA: 0x0045C5F3 File Offset: 0x0045A7F3
 		public ICheckEntityHasBuffT()
 		{
 			this.Type = ECondition.CompareVar;

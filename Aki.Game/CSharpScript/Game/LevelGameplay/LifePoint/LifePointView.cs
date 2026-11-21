@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LifePoint
 {
-	// Token: 0x02006AD1 RID: 27345
+	// Token: 0x02005C49 RID: 23625
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LifePointView : UiTickViewBase
 	{
-		// Token: 0x06043F00 RID: 278272 RVA: 0x010A89BB File Offset: 0x010A6BBB
+		// Token: 0x0603A049 RID: 237641 RVA: 0x0105206B File Offset: 0x0105026B
 		public LifePointView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17009979 RID: 39289
-		// (get) Token: 0x06043F01 RID: 278273 RVA: 0x010A89DA File Offset: 0x010A6BDA
+		// Token: 0x17006E7C RID: 28284
+		// (get) Token: 0x0603A04A RID: 237642 RVA: 0x0105208A File Offset: 0x0105028A
 		private EPieceColorType TargetColor
 		{
 			get
@@ -33,21 +33,21 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043F02 RID: 278274 RVA: 0x010A89F0 File Offset: 0x010A6BF0
+		// Token: 0x0603A04B RID: 237643 RVA: 0x010520A0 File Offset: 0x010502A0
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 			EventSystem.Instance.Add(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
 		}
 
-		// Token: 0x06043F03 RID: 278275 RVA: 0x010A8A2A File Offset: 0x010A6C2A
+		// Token: 0x0603A04C RID: 237644 RVA: 0x010520DA File Offset: 0x010502DA
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 			EventSystem.Instance.Remove(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
 		}
 
-		// Token: 0x06043F04 RID: 278276 RVA: 0x010A8A64 File Offset: 0x010A6C64
+		// Token: 0x0603A04D RID: 237645 RVA: 0x01052114 File Offset: 0x01050314
 		private void OnCloseRewardView()
 		{
 			if (LifePointModel.Instance.Config.CloseUiAfterCompletion != null)
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043F05 RID: 278277 RVA: 0x010A8A91 File Offset: 0x010A6C91
+		// Token: 0x0603A04E RID: 237646 RVA: 0x01052141 File Offset: 0x01050341
 		private void OnActivitySequenceEmitEvent(string param)
 		{
 			(base.GetLayoutBase(2).GetOwner().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController).Play("", -1, false);
 		}
 
-		// Token: 0x06043F06 RID: 278278 RVA: 0x010A8AC0 File Offset: 0x010A6CC0
+		// Token: 0x0603A04F RID: 237647 RVA: 0x01052170 File Offset: 0x01050370
 		protected unsafe override void OnRegisterComponent()
 		{
 			LifePointView.<>c__DisplayClass19_0 CS$<>8__locals1 = new LifePointView.<>c__DisplayClass19_0();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043F07 RID: 278279 RVA: 0x010A8DF0 File Offset: 0x010A6FF0
+		// Token: 0x0603A050 RID: 237648 RVA: 0x010524A0 File Offset: 0x010506A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LifePointView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043F08 RID: 278280 RVA: 0x010A8E34 File Offset: 0x010A7034
+		// Token: 0x0603A051 RID: 237649 RVA: 0x010524E4 File Offset: 0x010506E4
 		protected override void OnStart()
 		{
 			base.GetItem(3).SetUIActive(false);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043F09 RID: 278281 RVA: 0x010A8FC4 File Offset: 0x010A71C4
+		// Token: 0x0603A052 RID: 237650 RVA: 0x01052674 File Offset: 0x01050874
 		protected override void OnBeforeHide()
 		{
 			if (!this.LastHide)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043F0A RID: 278282 RVA: 0x010A8FD8 File Offset: 0x010A71D8
+		// Token: 0x0603A053 RID: 237651 RVA: 0x01052688 File Offset: 0x01050888
 		protected override void OnBeforeDestroy()
 		{
 			foreach (List<Grid> list in this.Grids)
@@ -196,13 +196,13 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.LogFinishEvent();
 		}
 
-		// Token: 0x06043F0B RID: 278283 RVA: 0x010A9084 File Offset: 0x010A7284
+		// Token: 0x0603A054 RID: 237652 RVA: 0x01052734 File Offset: 0x01050934
 		private void OnExit()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06043F0C RID: 278284 RVA: 0x010A9090 File Offset: 0x010A7290
+		// Token: 0x0603A055 RID: 237653 RVA: 0x01052740 File Offset: 0x01050940
 		private void OnReset()
 		{
 			ScrollingTipsController.Instance.ShowTipsByTextId("LNXT_YiCaiHua_Tips0002", Array.Empty<object>());
@@ -218,13 +218,13 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.FinishState = false;
 		}
 
-		// Token: 0x06043F0D RID: 278285 RVA: 0x010A90F1 File Offset: 0x010A72F1
+		// Token: 0x0603A056 RID: 237654 RVA: 0x010527A1 File Offset: 0x010509A1
 		private void OnHelp()
 		{
 			HelpController.Instance.OpenHelpById(170);
 		}
 
-		// Token: 0x06043F0E RID: 278286 RVA: 0x010A9104 File Offset: 0x010A7304
+		// Token: 0x0603A057 RID: 237655 RVA: 0x010527B4 File Offset: 0x010509B4
 		private void Reset()
 		{
 			for (int i = 0; i < 8; i++)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			LifePointModel.Instance.AudioMap.Clear();
 		}
 
-		// Token: 0x06043F0F RID: 278287 RVA: 0x010A9190 File Offset: 0x010A7390
+		// Token: 0x0603A058 RID: 237656 RVA: 0x01052840 File Offset: 0x01050A40
 		private void OnAfterResetAnim()
 		{
 			for (int i = 0; i < 8; i++)
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.OnCancel();
 		}
 
-		// Token: 0x06043F10 RID: 278288 RVA: 0x010A9248 File Offset: 0x010A7448
+		// Token: 0x0603A059 RID: 237657 RVA: 0x010528F8 File Offset: 0x01050AF8
 		private void OnConfirm()
 		{
 			this.StepLimited = LifePointModel.Instance.Config.StepLimit + LifePointModel.Instance.GetStepBonus();
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.CurrentDownCount++;
 		}
 
-		// Token: 0x06043F11 RID: 278289 RVA: 0x010A92B7 File Offset: 0x010A74B7
+		// Token: 0x0603A05A RID: 237658 RVA: 0x01052967 File Offset: 0x01050B67
 		private void OnCancel()
 		{
 			this.Step = this.StepLimited;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			text.SetColor(LifePointModel.Instance.NormalStepColor);
 		}
 
-		// Token: 0x06043F12 RID: 278290 RVA: 0x010A92F0 File Offset: 0x010A74F0
+		// Token: 0x0603A05B RID: 237659 RVA: 0x010529A0 File Offset: 0x01050BA0
 		private void SelectColor(bool bSelected, EPieceColorType color)
 		{
 			if (bSelected)
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043F13 RID: 278291 RVA: 0x010A9360 File Offset: 0x010A7560
+		// Token: 0x0603A05C RID: 237660 RVA: 0x01052A10 File Offset: 0x01050C10
 		private void OnGridClick(int x, int y)
 		{
 			if (this.HandleReset || this.CurrentColor == null || this.Step <= 0 || this.Step > this.StepLimited)
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			}
 		}
 
-		// Token: 0x06043F14 RID: 278292 RVA: 0x010A9690 File Offset: 0x010A7890
+		// Token: 0x0603A05D RID: 237661 RVA: 0x01052D40 File Offset: 0x01050F40
 		protected override void OnTick(float delta)
 		{
 			if (!this.HandleClick && !this.HandleReset)
@@ -411,7 +411,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.ConsumeAudio();
 		}
 
-		// Token: 0x06043F15 RID: 278293 RVA: 0x010A973C File Offset: 0x010A793C
+		// Token: 0x0603A05E RID: 237662 RVA: 0x01052DEC File Offset: 0x01050FEC
 		private void ConsumeAudio()
 		{
 			foreach (KeyValuePair<int, float[]> keyValuePair in LifePointModel.Instance.AudioMap)
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			LifePointModel.Instance.AudioMap.Clear();
 		}
 
-		// Token: 0x06043F16 RID: 278294 RVA: 0x010A9828 File Offset: 0x010A7A28
+		// Token: 0x0603A05F RID: 237663 RVA: 0x01052ED8 File Offset: 0x010510D8
 		private void CheckFinish()
 		{
 			if (!this.HandleClick && !this.HandleReset)
@@ -469,7 +469,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			this.HandleReset = false;
 		}
 
-		// Token: 0x06043F17 RID: 278295 RVA: 0x010A994C File Offset: 0x010A7B4C
+		// Token: 0x0603A060 RID: 237664 RVA: 0x01052FFC File Offset: 0x010511FC
 		private bool CheckColor()
 		{
 			foreach (List<Grid> list in this.Grids)
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			return true;
 		}
 
-		// Token: 0x06043F18 RID: 278296 RVA: 0x010A99EC File Offset: 0x010A7BEC
+		// Token: 0x0603A061 RID: 237665 RVA: 0x0105309C File Offset: 0x0105129C
 		public void GmFinish()
 		{
 			GeneralLogicTreeController.Instance.RequestFinishUiGameplay(UiGamePlayType.LifePoint, "");
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			base.PlaySequence("Complete", new Action(this.OnExit), false);
 		}
 
-		// Token: 0x06043F19 RID: 278297 RVA: 0x010A9A28 File Offset: 0x010A7C28
+		// Token: 0x0603A062 RID: 237666 RVA: 0x010530D8 File Offset: 0x010512D8
 		private void LogFinishEvent()
 		{
 			LifePointDrawLogEvent lifePointDrawLogEvent = new LifePointDrawLogEvent();
@@ -524,61 +524,61 @@ namespace CSharpScript.Game.LevelGamePlay.LifePoint
 			LogReportController.Instance.LogReport(lifePointDrawLogEvent);
 		}
 
-		// Token: 0x04023832 RID: 145458
+		// Token: 0x0401EAD2 RID: 125650
 		[Nullable(2)]
 		private Action FinishCallback;
 
-		// Token: 0x04023833 RID: 145459
+		// Token: 0x0401EAD3 RID: 125651
 		private readonly List<List<Grid>> Grids = new List<List<Grid>>();
 
-		// Token: 0x04023834 RID: 145460
+		// Token: 0x0401EAD4 RID: 125652
 		private EPieceColorType? CurrentColor;
 
-		// Token: 0x04023835 RID: 145461
+		// Token: 0x0401EAD5 RID: 125653
 		private int Step;
 
-		// Token: 0x04023836 RID: 145462
+		// Token: 0x0401EAD6 RID: 125654
 		private int StepLimited;
 
-		// Token: 0x04023837 RID: 145463
+		// Token: 0x0401EAD7 RID: 125655
 		private bool HandleClick;
 
-		// Token: 0x04023838 RID: 145464
+		// Token: 0x0401EAD8 RID: 125656
 		private bool HandleReset;
 
-		// Token: 0x04023839 RID: 145465
+		// Token: 0x0401EAD9 RID: 125657
 		private readonly Dictionary<EPieceColorType, EChildComp> ToggleColorMap = new Dictionary<EPieceColorType, EChildComp>();
 
-		// Token: 0x0402383A RID: 145466
+		// Token: 0x0401EADA RID: 125658
 		private bool FinishState;
 
-		// Token: 0x0402383B RID: 145467
+		// Token: 0x0401EADB RID: 125659
 		private int CurrentDownCount;
 
-		// Token: 0x0402383C RID: 145468
+		// Token: 0x0401EADC RID: 125660
 		private int CurrentEntityId;
 
-		// Token: 0x0200CBB2 RID: 52146
+		// Token: 0x0200B7A3 RID: 47011
 		[Nullable(0)]
 		[RequiredMember]
 		public class Params
 		{
-			// Token: 0x06051778 RID: 333688 RVA: 0x0161B7E7 File Offset: 0x016199E7
+			// Token: 0x06047FE3 RID: 294883 RVA: 0x015F0B03 File Offset: 0x015EED03
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public Params()
 			{
 			}
 
-			// Token: 0x0403D7A5 RID: 251813
+			// Token: 0x04038BC8 RID: 232392
 			[RequiredMember]
 			public ILifePoint Config;
 
-			// Token: 0x0403D7A6 RID: 251814
+			// Token: 0x04038BC9 RID: 232393
 			[RequiredMember]
 			public int EntityId;
 
-			// Token: 0x0403D7A7 RID: 251815
+			// Token: 0x04038BCA RID: 232394
 			[RequiredMember]
 			public Action Callback;
 		}

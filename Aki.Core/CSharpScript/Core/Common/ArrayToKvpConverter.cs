@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x0200016F RID: 367
+	// Token: 0x02000174 RID: 372
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Core.Common
 	})]
 	public class ArrayToKvpConverter<[Nullable(2)] TKey, [Nullable(2)] TValue> : JsonConverter<KeyValuePair<TKey, TValue>>
 	{
-		// Token: 0x06000C9D RID: 3229 RVA: 0x0003B1FC File Offset: 0x000393FC
+		// Token: 0x06000CF8 RID: 3320 RVA: 0x0003BEC0 File Offset: 0x0003A0C0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -42,7 +42,7 @@ namespace CSharpScript.Core.Common
 			return new KeyValuePair<TKey, TValue>(key, value);
 		}
 
-		// Token: 0x06000C9E RID: 3230 RVA: 0x0003B25B File Offset: 0x0003945B
+		// Token: 0x06000CF9 RID: 3321 RVA: 0x0003BF1F File Offset: 0x0003A11F
 		public override void Write(Utf8JsonWriter writer, [Nullable(new byte[]
 		{
 			0,

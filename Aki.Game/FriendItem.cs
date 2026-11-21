@@ -13,7 +13,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C3B RID: 7227
+// Token: 0x020010FA RID: 4346
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -22,7 +22,7 @@ using UnrealEngine;
 })]
 public class FriendItem : GridProxyAbstract<FriendItemSt>
 {
-	// Token: 0x0600D993 RID: 55699 RVA: 0x00326B58 File Offset: 0x00324D58
+	// Token: 0x0600ADA9 RID: 44457 RVA: 0x00331F58 File Offset: 0x00330158
 	public FriendItem(EUiViewName belongView, UUIItem uiItem = null)
 	{
 		this.BelongView = new EUiViewName?(belongView);
@@ -33,7 +33,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D994 RID: 55700 RVA: 0x00326BAC File Offset: 0x00324DAC
+	// Token: 0x0600ADAA RID: 44458 RVA: 0x00331FAC File Offset: 0x003301AC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 21;
@@ -92,7 +92,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D995 RID: 55701 RVA: 0x00326ED4 File Offset: 0x003250D4
+	// Token: 0x0600ADAB RID: 44459 RVA: 0x003322D4 File Offset: 0x003304D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FriendItem.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -103,7 +103,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D996 RID: 55702 RVA: 0x00326F18 File Offset: 0x00325118
+	// Token: 0x0600ADAC RID: 44460 RVA: 0x00332318 File Offset: 0x00330518
 	protected override void OnStart()
 	{
 		this.ConfirmBtn = new ButtonAndTextItem(base.GetItem(11));
@@ -128,7 +128,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.ButtonInfoList.Add(new FunctionButtonInfo("SP_ChatFriend", new Func<bool>(this.GetChatButtonState), new Action(this.OnClickChatButton)));
 	}
 
-	// Token: 0x0600D997 RID: 55703 RVA: 0x003270CE File Offset: 0x003252CE
+	// Token: 0x0600ADAD RID: 44461 RVA: 0x003324CE File Offset: 0x003306CE
 	private void OnClickConfirmButton()
 	{
 		if (this.GetPlayerData().PlayerIsOnline && this.IfCanEnterOtherWorld())
@@ -137,7 +137,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D998 RID: 55704 RVA: 0x003270FB File Offset: 0x003252FB
+	// Token: 0x0600ADAE RID: 44462 RVA: 0x003324FB File Offset: 0x003306FB
 	[NullableContext(1)]
 	public override void Refresh(FriendItemSt playerData, bool isSelected, int gridIndex)
 	{
@@ -153,14 +153,14 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D999 RID: 55705 RVA: 0x00327134 File Offset: 0x00325334
+	// Token: 0x0600ADAF RID: 44463 RVA: 0x00332534 File Offset: 0x00330734
 	public void RefreshMute()
 	{
 		bool uiactive = ChatModel.Instance.IsInMute(this.GetPlayerData().PlayerId);
 		base.GetItem(1).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600D99A RID: 55706 RVA: 0x00327164 File Offset: 0x00325364
+	// Token: 0x0600ADB0 RID: 44464 RVA: 0x00332564 File Offset: 0x00330764
 	private void UpdateItem(int playerDataId)
 	{
 		this.FriendInstanceId = playerDataId;
@@ -190,7 +190,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.RefreshOnlineStateShow();
 	}
 
-	// Token: 0x0600D99B RID: 55707 RVA: 0x0032721C File Offset: 0x0032541C
+	// Token: 0x0600ADB1 RID: 44465 RVA: 0x0033261C File Offset: 0x0033081C
 	private void ShowNecessaryItem()
 	{
 		this.RefreshMute();
@@ -206,14 +206,14 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.RefreshPcItem();
 	}
 
-	// Token: 0x0600D99C RID: 55708 RVA: 0x0032726B File Offset: 0x0032546B
+	// Token: 0x0600ADB2 RID: 44466 RVA: 0x0033266B File Offset: 0x0033086B
 	private void RefreshPlayerSign()
 	{
 		base.GetText(9).SetText(this.GetPlayerData().Signature, true);
 		base.GetItem(13).SetUIActive(this.GetPlayerData().Signature.Length > 0);
 	}
 
-	// Token: 0x0600D99D RID: 55709 RVA: 0x003272A8 File Offset: 0x003254A8
+	// Token: 0x0600ADB3 RID: 44467 RVA: 0x003326A8 File Offset: 0x003308A8
 	private void RefreshCurdCard()
 	{
 		int curCard = this.GetPlayerData().CurCard;
@@ -223,7 +223,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D99E RID: 55710 RVA: 0x003272F4 File Offset: 0x003254F4
+	// Token: 0x0600ADB4 RID: 44468 RVA: 0x003326F4 File Offset: 0x003308F4
 	private void RefreshTeamItem()
 	{
 		if (FriendModel.Instance.FilterState.GetValueOrDefault() != EFriendFilter.RecentMultiple)
@@ -235,7 +235,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.TeamItem.RefreshView(this.GetPlayerData());
 	}
 
-	// Token: 0x0600D99F RID: 55711 RVA: 0x00327340 File Offset: 0x00325540
+	// Token: 0x0600ADB5 RID: 44469 RVA: 0x00332740 File Offset: 0x00330940
 	[NullableContext(1)]
 	private bool UpdateButton(ButtonAndSpriteItem button, FunctionButtonInfo buttonInfo)
 	{
@@ -248,7 +248,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		return false;
 	}
 
-	// Token: 0x0600D9A0 RID: 55712 RVA: 0x0032736C File Offset: 0x0032556C
+	// Token: 0x0600ADB6 RID: 44470 RVA: 0x0033276C File Offset: 0x0033096C
 	private void RefreshButtonList()
 	{
 		for (int i = 0; i < this.ButtonList.Count; i++)
@@ -261,37 +261,37 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9A1 RID: 55713 RVA: 0x003273CA File Offset: 0x003255CA
+	// Token: 0x0600ADB7 RID: 44471 RVA: 0x003327CA File Offset: 0x003309CA
 	private bool GetChatButtonState()
 	{
 		return FriendModel.Instance.IsMyFriend(this.GetPlayerData().PlayerId);
 	}
 
-	// Token: 0x0600D9A2 RID: 55714 RVA: 0x003273E4 File Offset: 0x003255E4
+	// Token: 0x0600ADB8 RID: 44472 RVA: 0x003327E4 File Offset: 0x003309E4
 	private bool GetRemoveButtonState()
 	{
 		return this.BelongView == EUiViewName.FriendBlackListView;
 	}
 
-	// Token: 0x0600D9A3 RID: 55715 RVA: 0x00327418 File Offset: 0x00325618
+	// Token: 0x0600ADB9 RID: 44473 RVA: 0x00332818 File Offset: 0x00330A18
 	private bool GetRefuseButtonState()
 	{
 		return (FriendModel.Instance.FilterState.GetValueOrDefault() == EFriendFilter.FriendRequest && this.BelongView == EUiViewName.FriendView) || (this.BelongView == EUiViewName.FriendSearchView && FriendModel.Instance.HasFriendApplication(this.GetPlayerData().PlayerId));
 	}
 
-	// Token: 0x0600D9A4 RID: 55716 RVA: 0x003274A8 File Offset: 0x003256A8
+	// Token: 0x0600ADBA RID: 44474 RVA: 0x003328A8 File Offset: 0x00330AA8
 	private bool GetAddButtonState()
 	{
 		return !FriendModel.Instance.IsMyFriend(this.GetPlayerData().PlayerId) && !FriendModel.Instance.HasFriendApplication(this.GetPlayerData().PlayerId) && (this.BelongView == EUiViewName.FriendSearchView || (FriendModel.Instance.FilterState.GetValueOrDefault() == EFriendFilter.RecentMultiple && this.BelongView == EUiViewName.FriendView));
 	}
 
-	// Token: 0x0600D9A5 RID: 55717 RVA: 0x00327554 File Offset: 0x00325754
+	// Token: 0x0600ADBB RID: 44475 RVA: 0x00332954 File Offset: 0x00330B54
 	private bool GetAgreeButtonState()
 	{
 		return (FriendModel.Instance.FilterState.GetValueOrDefault() == EFriendFilter.FriendRequest && this.BelongView == EUiViewName.FriendView) || (this.BelongView == EUiViewName.FriendSearchView && FriendModel.Instance.HasFriendApplication(this.GetPlayerData().PlayerId));
 	}
 
-	// Token: 0x0600D9A6 RID: 55718 RVA: 0x003275E4 File Offset: 0x003257E4
+	// Token: 0x0600ADBC RID: 44476 RVA: 0x003329E4 File Offset: 0x00330BE4
 	private void RefreshConfirmButtonShowState()
 	{
 		bool flag = false;
@@ -306,13 +306,13 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9A7 RID: 55719 RVA: 0x0032765C File Offset: 0x0032585C
+	// Token: 0x0600ADBD RID: 44477 RVA: 0x00332A5C File Offset: 0x00330C5C
 	private void RefreshConfirmButtonEnable()
 	{
 		this.ConfirmBtn.RefreshEnable(this.GetPlayerData().PlayerIsOnline && this.IfCanEnterOtherWorld() && FunctionModel.Instance.IsOpen(10021));
 	}
 
-	// Token: 0x0600D9A8 RID: 55720 RVA: 0x00327690 File Offset: 0x00325890
+	// Token: 0x0600ADBE RID: 44478 RVA: 0x00332A90 File Offset: 0x00330C90
 	private void RefreshConfirmButtonText()
 	{
 		if (!FunctionModel.Instance.IsOpen(10021))
@@ -336,13 +336,13 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.ConfirmBtn.RefreshText("FriendApplyJoin", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D9A9 RID: 55721 RVA: 0x00327739 File Offset: 0x00325939
+	// Token: 0x0600ADBF RID: 44479 RVA: 0x00332B39 File Offset: 0x00330D39
 	private bool IfCanEnterOtherWorld()
 	{
 		return OnlineModel.Instance.CanJoinOtherWorld(WorldLevelModel.Instance.OriginWorldLevel, this.GetPlayerData().WorldLevel);
 	}
 
-	// Token: 0x0600D9AA RID: 55722 RVA: 0x0032775C File Offset: 0x0032595C
+	// Token: 0x0600ADC0 RID: 44480 RVA: 0x00332B5C File Offset: 0x00330D5C
 	private void RefreshName()
 	{
 		UUIText text = base.GetText(2);
@@ -358,12 +358,12 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		uuitext.SetText(((playerData2 != null) ? playerData2.PlayerName : null) ?? "", true);
 	}
 
-	// Token: 0x0600D9AB RID: 55723 RVA: 0x003277DC File Offset: 0x003259DC
+	// Token: 0x0600ADC1 RID: 44481 RVA: 0x00332BDC File Offset: 0x00330DDC
 	private void RefreshRedPoint()
 	{
 	}
 
-	// Token: 0x0600D9AC RID: 55724 RVA: 0x003277E0 File Offset: 0x003259E0
+	// Token: 0x0600ADC2 RID: 44482 RVA: 0x00332BE0 File Offset: 0x00330DE0
 	private void RefreshOnlineStateShow()
 	{
 		bool playerIsOnline = this.GetPlayerData().PlayerIsOnline;
@@ -395,7 +395,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		this.RefreshOnLinePoint();
 	}
 
-	// Token: 0x0600D9AD RID: 55725 RVA: 0x003278D4 File Offset: 0x00325AD4
+	// Token: 0x0600ADC3 RID: 44483 RVA: 0x00332CD4 File Offset: 0x00330ED4
 	private void RefreshOnLinePoint()
 	{
 		UUISprite sprite = base.GetSprite(4);
@@ -421,13 +421,13 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9AE RID: 55726 RVA: 0x00327966 File Offset: 0x00325B66
+	// Token: 0x0600ADC4 RID: 44484 RVA: 0x00332D66 File Offset: 0x00330F66
 	private FriendData GetPlayerData()
 	{
 		return FriendModel.Instance.GetSelectedPlayerOrItemInstance(new int?(this.FriendInstanceId), this.BelongView);
 	}
 
-	// Token: 0x0600D9AF RID: 55727 RVA: 0x00327984 File Offset: 0x00325B84
+	// Token: 0x0600ADC5 RID: 44485 RVA: 0x00332D84 File Offset: 0x00330F84
 	private void OnClickRefuseBtn()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(new int?(this.FriendInstanceId), null);
@@ -447,7 +447,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		GenericPromptController.Instance.ShowPromptByCode("FriendRequestOutOfDate", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D9B0 RID: 55728 RVA: 0x00327A1C File Offset: 0x00325C1C
+	// Token: 0x0600ADC6 RID: 44486 RVA: 0x00332E1C File Offset: 0x0033101C
 	private void OnClickAgreeBtn()
 	{
 		FriendData playerData = this.GetPlayerData();
@@ -482,7 +482,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		FriendController.Instance.RequestFriendApplyHandle(this.RequestSendIdList, FriendApplyOperator.Approve);
 	}
 
-	// Token: 0x0600D9B1 RID: 55729 RVA: 0x00327B24 File Offset: 0x00325D24
+	// Token: 0x0600ADC7 RID: 44487 RVA: 0x00332F24 File Offset: 0x00331124
 	private void OnClickAddBtn()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(new int?(this.FriendInstanceId), null);
@@ -509,7 +509,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9B2 RID: 55730 RVA: 0x00327BF0 File Offset: 0x00325DF0
+	// Token: 0x0600ADC8 RID: 44488 RVA: 0x00332FF0 File Offset: 0x003311F0
 	private void OnClickRemoveBtn()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(new int?(this.FriendInstanceId), null);
@@ -526,7 +526,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		GenericPromptController.Instance.ShowPromptByCode("IsNotBlockedPlayer", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D9B3 RID: 55731 RVA: 0x00327C5C File Offset: 0x00325E5C
+	// Token: 0x0600ADC9 RID: 44489 RVA: 0x0033305C File Offset: 0x0033125C
 	private void OnClickChatButton()
 	{
 		FriendData playerData = this.GetPlayerData();
@@ -537,7 +537,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		ChatController.Instance.OpenFriendChat(playerData.PlayerId);
 	}
 
-	// Token: 0x0600D9B4 RID: 55732 RVA: 0x00327C84 File Offset: 0x00325E84
+	// Token: 0x0600ADCA RID: 44490 RVA: 0x00333084 File Offset: 0x00331284
 	private void RefreshPcItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -576,7 +576,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9B5 RID: 55733 RVA: 0x00327CF8 File Offset: 0x00325EF8
+	// Token: 0x0600ADCB RID: 44491 RVA: 0x003330F8 File Offset: 0x003312F8
 	private void RefreshThirdPartyItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -631,7 +631,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9B6 RID: 55734 RVA: 0x00327E00 File Offset: 0x00326000
+	// Token: 0x0600ADCC RID: 44492 RVA: 0x00333200 File Offset: 0x00331400
 	private void OnClickFriendItemBtn()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(new int?(this.FriendInstanceId), null);
@@ -665,7 +665,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		});
 	}
 
-	// Token: 0x0600D9B7 RID: 55735 RVA: 0x00327E7C File Offset: 0x0032607C
+	// Token: 0x0600ADCD RID: 44493 RVA: 0x0033327C File Offset: 0x0033147C
 	private void ShowFindNullFriendTipsByViewType()
 	{
 		EFriendFilter? filterState = FriendModel.Instance.FilterState;
@@ -680,7 +680,7 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9B8 RID: 55736 RVA: 0x00327ED1 File Offset: 0x003260D1
+	// Token: 0x0600ADCE RID: 44494 RVA: 0x003332D1 File Offset: 0x003314D1
 	private void RefreshOnSent()
 	{
 		if (FriendModel.Instance.CurrentApplyFriendListHasPlayer(this.FriendInstanceId))
@@ -689,109 +689,109 @@ public class FriendItem : GridProxyAbstract<FriendItemSt>
 		}
 	}
 
-	// Token: 0x0600D9B9 RID: 55737 RVA: 0x00327EEB File Offset: 0x003260EB
+	// Token: 0x0600ADCF RID: 44495 RVA: 0x003332EB File Offset: 0x003314EB
 	public void SetIsInBlackList(bool isInBlackList)
 	{
 		this.IsInBlackList = isInBlackList;
 	}
 
-	// Token: 0x04006328 RID: 25384
+	// Token: 0x040063FA RID: 25594
 	private ButtonAndTextItem ConfirmBtn;
 
-	// Token: 0x04006329 RID: 25385
+	// Token: 0x040063FB RID: 25595
 	private TeamItem TeamItem;
 
-	// Token: 0x0400632A RID: 25386
+	// Token: 0x040063FC RID: 25596
 	protected int FriendInstanceId;
 
-	// Token: 0x0400632B RID: 25387
+	// Token: 0x040063FD RID: 25597
 	protected EUiViewName? BelongView;
 
-	// Token: 0x0400632C RID: 25388
+	// Token: 0x040063FE RID: 25598
 	private List<int> RequestSendIdList;
 
-	// Token: 0x0400632D RID: 25389
+	// Token: 0x040063FF RID: 25599
 	private PlayerHeadItem HeadPhotoItem;
 
-	// Token: 0x0400632E RID: 25390
+	// Token: 0x04006400 RID: 25600
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x0400632F RID: 25391
+	// Token: 0x04006401 RID: 25601
 	[Nullable(1)]
 	private readonly List<ButtonAndSpriteItem> ButtonList = new List<ButtonAndSpriteItem>();
 
-	// Token: 0x04006330 RID: 25392
+	// Token: 0x04006402 RID: 25602
 	[Nullable(1)]
 	private readonly List<FunctionButtonInfo> ButtonInfoList = new List<FunctionButtonInfo>();
 
-	// Token: 0x04006331 RID: 25393
+	// Token: 0x04006403 RID: 25603
 	private bool IsInBlackList;
 
-	// Token: 0x020081FE RID: 33278
+	// Token: 0x02007387 RID: 29575
 	[NullableContext(0)]
 	private class EItemComponents
 	{
-		// Token: 0x0402A6B2 RID: 173746
+		// Token: 0x040259D9 RID: 154073
 		public const int HeadPhotoItem = 0;
 
-		// Token: 0x0402A6B3 RID: 173747
+		// Token: 0x040259DA RID: 154074
 		public const int ShieldNode = 1;
 
-		// Token: 0x0402A6B4 RID: 173748
+		// Token: 0x040259DB RID: 154075
 		public const int NameText = 2;
 
-		// Token: 0x0402A6B5 RID: 173749
+		// Token: 0x040259DC RID: 154076
 		public const int LevelText = 3;
 
-		// Token: 0x0402A6B6 RID: 173750
+		// Token: 0x040259DD RID: 154077
 		public const int OnlineStateSprite = 4;
 
-		// Token: 0x0402A6B7 RID: 173751
+		// Token: 0x040259DE RID: 154078
 		public const int OnlineStateText = 5;
 
-		// Token: 0x0402A6B8 RID: 173752
+		// Token: 0x040259DF RID: 154079
 		public const int FirstButtonItem = 6;
 
-		// Token: 0x0402A6B9 RID: 173753
+		// Token: 0x040259E0 RID: 154080
 		public const int SecondButtonItem = 7;
 
-		// Token: 0x0402A6BA RID: 173754
+		// Token: 0x040259E1 RID: 154081
 		public const int PlayerTextureBg = 8;
 
-		// Token: 0x0402A6BB RID: 173755
+		// Token: 0x040259E2 RID: 154082
 		public const int PlayerSignText = 9;
 
-		// Token: 0x0402A6BC RID: 173756
+		// Token: 0x040259E3 RID: 154083
 		public const int TeamItem = 10;
 
-		// Token: 0x0402A6BD RID: 173757
+		// Token: 0x040259E4 RID: 154084
 		public const int ConfirmBtnItem = 11;
 
-		// Token: 0x0402A6BE RID: 173758
+		// Token: 0x040259E5 RID: 154085
 		public const int FriendItemButton = 12;
 
-		// Token: 0x0402A6BF RID: 173759
+		// Token: 0x040259E6 RID: 154086
 		public const int SignItem = 13;
 
-		// Token: 0x0402A6C0 RID: 173760
+		// Token: 0x040259E7 RID: 154087
 		public const int ThirdButtonItem = 14;
 
-		// Token: 0x0402A6C1 RID: 173761
+		// Token: 0x040259E8 RID: 154088
 		public const int ForthButtonItem = 15;
 
-		// Token: 0x0402A6C2 RID: 173762
+		// Token: 0x040259E9 RID: 154089
 		public const int FifthButtonItem = 16;
 
-		// Token: 0x0402A6C3 RID: 173763
+		// Token: 0x040259EA RID: 154090
 		public const int ThirdPartyTexture = 17;
 
-		// Token: 0x0402A6C4 RID: 173764
+		// Token: 0x040259EB RID: 154091
 		public const int ThirdPartyText = 18;
 
-		// Token: 0x0402A6C5 RID: 173765
+		// Token: 0x040259EC RID: 154092
 		public const int PcItem = 19;
 
-		// Token: 0x0402A6C6 RID: 173766
+		// Token: 0x040259ED RID: 154093
 		public const int PlayerTitleItem = 20;
 	}
 }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003232 RID: 12850
+// Token: 0x020027A1 RID: 10145
 [NullableContext(1)]
 [Nullable(0)]
 public class LimitTagHandler
 {
-	// Token: 0x0601BB66 RID: 113510 RVA: 0x007A0C26 File Offset: 0x0079EE26
+	// Token: 0x060196EB RID: 104171 RVA: 0x007C9532 File Offset: 0x007C7732
 	public LimitTagHandler(int tagId, int priority, bool tagExist, Action<bool> callBack)
 	{
 		this.TagId = tagId;
@@ -16,24 +16,24 @@ public class LimitTagHandler
 		this.CallBack = callBack;
 	}
 
-	// Token: 0x0400DA4B RID: 55883
+	// Token: 0x0400DEEA RID: 57066
 	private const int MAX_PRIORITY = 3;
 
-	// Token: 0x0400DA4C RID: 55884
+	// Token: 0x0400DEEB RID: 57067
 	public int TagId;
 
-	// Token: 0x0400DA4D RID: 55885
+	// Token: 0x0400DEEC RID: 57068
 	public double Priority;
 
-	// Token: 0x0400DA4E RID: 55886
+	// Token: 0x0400DEED RID: 57069
 	public bool TagExist;
 
-	// Token: 0x0400DA4F RID: 55887
+	// Token: 0x0400DEEE RID: 57070
 	public Action<bool> CallBack;
 
-	// Token: 0x0400DA50 RID: 55888
+	// Token: 0x0400DEEF RID: 57071
 	public List<int> MutuallyTags = new List<int>();
 
-	// Token: 0x0400DA51 RID: 55889
+	// Token: 0x0400DEF0 RID: 57072
 	public bool Active;
 }

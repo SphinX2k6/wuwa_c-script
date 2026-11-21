@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001627 RID: 5671
+// Token: 0x02000ADF RID: 2783
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerRecommendView : UiViewBase
 {
-	// Token: 0x06009FA3 RID: 40867 RVA: 0x002311AF File Offset: 0x0022F3AF
+	// Token: 0x06007381 RID: 29569 RVA: 0x0023AFFB File Offset: 0x002391FB
 	public WheelTowerRecommendView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009FA4 RID: 40868 RVA: 0x002311B8 File Offset: 0x0022F3B8
+	// Token: 0x06007382 RID: 29570 RVA: 0x0023B004 File Offset: 0x00239204
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -34,7 +34,7 @@ public class WheelTowerRecommendView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009FA5 RID: 40869 RVA: 0x00231224 File Offset: 0x0022F424
+	// Token: 0x06007383 RID: 29571 RVA: 0x0023B070 File Offset: 0x00239270
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerRecommendView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class WheelTowerRecommendView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009FA6 RID: 40870 RVA: 0x00231267 File Offset: 0x0022F467
+	// Token: 0x06007384 RID: 29572 RVA: 0x0023B0B3 File Offset: 0x002392B3
 	private WheelTowerRecommendTeam CreateTeamItem()
 	{
 		return new WheelTowerRecommendTeam
@@ -54,7 +54,7 @@ public class WheelTowerRecommendView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009FA7 RID: 40871 RVA: 0x00231280 File Offset: 0x0022F480
+	// Token: 0x06007385 RID: 29573 RVA: 0x0023B0CC File Offset: 0x002392CC
 	private void OnApplyBtnClick(NewTowerRecommendTeam data)
 	{
 		List<int> list = new List<int>();
@@ -74,7 +74,7 @@ public class WheelTowerRecommendView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04004840 RID: 18496
+	// Token: 0x040048E6 RID: 18662
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E9E RID: 28318
+	// Token: 0x02007622 RID: 30242
 	public class IResetPlayerPosWithPresentationT
 	{
-		// Token: 0x1700D2D9 RID: 53977
-		// (get) Token: 0x060320D1 RID: 205009 RVA: 0x006C4EDB File Offset: 0x006C30DB
-		// (set) Token: 0x060320D2 RID: 205010 RVA: 0x006C4EE3 File Offset: 0x006C30E3
+		// Token: 0x1700DE30 RID: 56880
+		// (get) Token: 0x06035111 RID: 217361 RVA: 0x00720C0F File Offset: 0x0071EE0F
+		// (set) Token: 0x06035112 RID: 217362 RVA: 0x00720C17 File Offset: 0x0071EE17
 		public IResetPresentationFailureT Presentation { get; set; }
 
-		// Token: 0x1700D2DA RID: 53978
-		// (get) Token: 0x060320D3 RID: 205011 RVA: 0x006C4EEC File Offset: 0x006C30EC
-		// (set) Token: 0x060320D4 RID: 205012 RVA: 0x006C4EF4 File Offset: 0x006C30F4
+		// Token: 0x1700DE31 RID: 56881
+		// (get) Token: 0x06035113 RID: 217363 RVA: 0x00720C20 File Offset: 0x0071EE20
+		// (set) Token: 0x06035114 RID: 217364 RVA: 0x00720C28 File Offset: 0x0071EE28
 		public TResetPosTypeUnion ResetPosConfig { get; set; }
 
-		// Token: 0x1700D2DB RID: 53979
-		// (get) Token: 0x060320D5 RID: 205013 RVA: 0x006C4EFD File Offset: 0x006C30FD
-		// (set) Token: 0x060320D6 RID: 205014 RVA: 0x006C4F05 File Offset: 0x006C3105
+		// Token: 0x1700DE32 RID: 56882
+		// (get) Token: 0x06035115 RID: 217365 RVA: 0x00720C31 File Offset: 0x0071EE31
+		// (set) Token: 0x06035116 RID: 217366 RVA: 0x00720C39 File Offset: 0x0071EE39
 		public bool NeedWaitResetPos { get; set; }
 
-		// Token: 0x1700D2DC RID: 53980
-		// (get) Token: 0x060320D7 RID: 205015 RVA: 0x006C4F0E File Offset: 0x006C310E
-		// (set) Token: 0x060320D8 RID: 205016 RVA: 0x006C4F16 File Offset: 0x006C3116
+		// Token: 0x1700DE33 RID: 56883
+		// (get) Token: 0x06035117 RID: 217367 RVA: 0x00720C42 File Offset: 0x0071EE42
+		// (set) Token: 0x06035118 RID: 217368 RVA: 0x00720C4A File Offset: 0x0071EE4A
 		public byte NullMask { get; set; }
 
-		// Token: 0x060320D9 RID: 205017 RVA: 0x006C4F1F File Offset: 0x006C311F
+		// Token: 0x06035119 RID: 217369 RVA: 0x00720C53 File Offset: 0x0071EE53
 		public IResetPlayerPosWithPresentationT()
 		{
 			this.Presentation = null;

@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200431A RID: 17178
+	// Token: 0x02004779 RID: 18297
 	public enum TSurvivorsRougeConditionStep : byte
 	{
-		// Token: 0x0400C0C0 RID: 49344
+		// Token: 0x0400CAD8 RID: 51928
 		NONE,
-		// Token: 0x0400C0C1 RID: 49345
+		// Token: 0x0400CAD9 RID: 51929
 		ISurvivorsRougeConditionStepBattle,
-		// Token: 0x0400C0C2 RID: 49346
+		// Token: 0x0400CADA RID: 51930
 		ISurvivorsRougeConditionStepChestReward,
-		// Token: 0x0400C0C3 RID: 49347
+		// Token: 0x0400CADB RID: 51931
 		ISurvivorsRougeConditionStepChooseItem,
-		// Token: 0x0400C0C4 RID: 49348
+		// Token: 0x0400CADC RID: 51932
 		ISurvivorsRougeConditionStepChooseWeapon,
-		// Token: 0x0400C0C5 RID: 49349
+		// Token: 0x0400CADD RID: 51933
 		ISurvivorsRougeConditionStepEnd,
-		// Token: 0x0400C0C6 RID: 49350
+		// Token: 0x0400CADE RID: 51934
 		ISurvivorsRougeConditionStepPrepare,
-		// Token: 0x0400C0C7 RID: 49351
+		// Token: 0x0400CADF RID: 51935
 		ISurvivorsRougeConditionStepShopping
 	}
 }

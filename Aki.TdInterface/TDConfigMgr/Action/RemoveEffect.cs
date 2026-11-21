@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200214A RID: 8522
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023AB RID: 9131
 	public class RemoveEffect : ActionParams
 	{
-		// Token: 0x0600BB96 RID: 48022 RVA: 0x001B1048 File Offset: 0x001AF248
+		// Token: 0x0600C724 RID: 50980 RVA: 0x001C81FC File Offset: 0x001C63FC
 		private RemoveEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB97 RID: 48023 RVA: 0x001B1080 File Offset: 0x001AF280
+		// Token: 0x0600C725 RID: 50981 RVA: 0x001C8234 File Offset: 0x001C6434
 		public static RemoveEffect Create([Nullable(2)] RemoveEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB98 RID: 48024 RVA: 0x001B1093 File Offset: 0x001AF293
+		// Token: 0x0600C726 RID: 50982 RVA: 0x001C8247 File Offset: 0x001C6447
 		public static RemoveEffect CreateFromSetValue([Nullable(2)] RemoveEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB99 RID: 48025 RVA: 0x001B10A6 File Offset: 0x001AF2A6
+		// Token: 0x0600C727 RID: 50983 RVA: 0x001C825A File Offset: 0x001C645A
 		public RemoveEffect_SetValue ToSetValue()
 		{
 			return new RemoveEffect_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003939 RID: 14649
-		// (get) Token: 0x0600BB9A RID: 48026 RVA: 0x001B10BC File Offset: 0x001AF2BC
-		// (set) Token: 0x0600BB9B RID: 48027 RVA: 0x001B111D File Offset: 0x001AF31D
+		// Token: 0x17003C26 RID: 15398
+		// (get) Token: 0x0600C728 RID: 50984 RVA: 0x001C8270 File Offset: 0x001C6470
+		// (set) Token: 0x0600C729 RID: 50985 RVA: 0x001C82D1 File Offset: 0x001C64D1
 		public virtual IRemoveScreenEffect RemoveEffectConfig
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007025 RID: 28709
+		// Token: 0x0400765A RID: 30298
 		[Nullable(2)]
 		protected new RemoveEffect FbInstance;
 
-		// Token: 0x04007026 RID: 28710
+		// Token: 0x0400765B RID: 30299
 		[Nullable(2)]
 		protected RemoveEffect_SetValue PocoInterface;
 
-		// Token: 0x04007027 RID: 28711
+		// Token: 0x0400765C RID: 30300
 		private IRemoveScreenEffect _RemoveEffectConfigCache;
 
-		// Token: 0x04007028 RID: 28712
+		// Token: 0x0400765D RID: 30301
 		private bool _RemoveEffectConfigInited;
 	}
 }

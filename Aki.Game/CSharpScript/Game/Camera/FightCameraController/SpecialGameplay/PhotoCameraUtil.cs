@@ -8,43 +8,43 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x02007308 RID: 29448
+	// Token: 0x0200648B RID: 25739
 	public class PhotoCameraUtil
 	{
-		// Token: 0x0604846B RID: 296043 RVA: 0x012927CB File Offset: 0x012909CB
+		// Token: 0x0603E8B8 RID: 256184 RVA: 0x0123524E File Offset: 0x0123344E
 		public static bool IsModeAllowCharacterMove(PhotoCameraType? mode)
 		{
 			return mode != null && PhotoCameraUtil.PhotoModeAllowCharacterMoveSet.Contains(mode.Value);
 		}
 
-		// Token: 0x0604846C RID: 296044 RVA: 0x012927EC File Offset: 0x012909EC
+		// Token: 0x0603E8B9 RID: 256185 RVA: 0x0123526C File Offset: 0x0123346C
 		public static bool IsMoveBlocked()
 		{
 			PhotoJoystickOwnerController currentJoystickOwner = PhotographController.Instance.CurrentJoystickOwner;
 			return currentJoystickOwner != null && currentJoystickOwner.Current > EPhotoJoystickOwner.CameraMove;
 		}
 
-		// Token: 0x0604846D RID: 296045 RVA: 0x01292814 File Offset: 0x01290A14
+		// Token: 0x0603E8BA RID: 256186 RVA: 0x01235294 File Offset: 0x01233494
 		public static bool IsInCursorMode()
 		{
 			PhotoJoystickOwnerController currentJoystickOwner = PhotographController.Instance.CurrentJoystickOwner;
 			return currentJoystickOwner != null && currentJoystickOwner.Current == EPhotoJoystickOwner.Cursor;
 		}
 
-		// Token: 0x0604846E RID: 296046 RVA: 0x0129283C File Offset: 0x01290A3C
+		// Token: 0x0603E8BB RID: 256187 RVA: 0x012352BC File Offset: 0x012334BC
 		public static bool IsCameraMoveBlockedByUi()
 		{
 			PhotoJoystickOwnerController currentJoystickOwner = PhotographController.Instance.CurrentJoystickOwner;
 			return currentJoystickOwner != null && currentJoystickOwner.Current != EPhotoJoystickOwner.CameraMove && currentJoystickOwner.Current != EPhotoJoystickOwner.Cursor;
 		}
 
-		// Token: 0x0604846F RID: 296047 RVA: 0x0129286D File Offset: 0x01290A6D
+		// Token: 0x0603E8BC RID: 256188 RVA: 0x012352ED File Offset: 0x012334ED
 		public static float ReverseFovByRange(float value, float minFov, float maxFov)
 		{
 			return MathUtils.Instance.RangeClamp(value, minFov, maxFov, maxFov, minFov);
 		}
 
-		// Token: 0x06048470 RID: 296048 RVA: 0x01292880 File Offset: 0x01290A80
+		// Token: 0x0603E8BD RID: 256189 RVA: 0x01235300 File Offset: 0x01233500
 		[NullableContext(2)]
 		public static EPhotoCameraBodyType ToPhotoCameraBodyType(string roleBody)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return result;
 		}
 
-		// Token: 0x06048471 RID: 296049 RVA: 0x012928D0 File Offset: 0x01290AD0
+		// Token: 0x0603E8BE RID: 256190 RVA: 0x01235350 File Offset: 0x01233550
 		public unsafe static EPhotoCameraBodyType GetBodyType(int roleId, EMorphType morphType)
 		{
 			if (morphType == EMorphType.默认形态)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x04026307 RID: 156423
+		// Token: 0x040215F4 RID: 136692
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<PhotoCameraType> PhotoModeAllowCharacterMoveSet = new HashSet<PhotoCameraType>

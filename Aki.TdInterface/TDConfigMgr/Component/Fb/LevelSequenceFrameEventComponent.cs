@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D7B RID: 3451
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E77 RID: 3703
 	public class LevelSequenceFrameEventComponent : IComponentBase
 	{
-		// Token: 0x06004E86 RID: 20102 RVA: 0x000C2CA6 File Offset: 0x000C0EA6
+		// Token: 0x060053AB RID: 21419 RVA: 0x000CE4F6 File Offset: 0x000CC6F6
 		public static LevelSequenceFrameEventComponent Create(ILevelSequenceFrameEventComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700194D RID: 6477
-		// (get) Token: 0x06004E87 RID: 20103 RVA: 0x000C2CC8 File Offset: 0x000C0EC8
+		// Token: 0x17001AB8 RID: 6840
+		// (get) Token: 0x060053AC RID: 21420 RVA: 0x000CE518 File Offset: 0x000CC718
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700194E RID: 6478
-		// (get) Token: 0x06004E88 RID: 20104 RVA: 0x000C2D00 File Offset: 0x000C0F00
+		// Token: 0x17001AB9 RID: 6841
+		// (get) Token: 0x060053AD RID: 21421 RVA: 0x000CE550 File Offset: 0x000CC750
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700194F RID: 6479
-		// (get) Token: 0x06004E89 RID: 20105 RVA: 0x000C2D18 File Offset: 0x000C0F18
+		// Token: 0x17001ABA RID: 6842
+		// (get) Token: 0x060053AE RID: 21422 RVA: 0x000CE568 File Offset: 0x000CC768
 		public virtual List<ILevelSequenceSectionInfo> ForwardSections
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001950 RID: 6480
-		// (get) Token: 0x06004E8A RID: 20106 RVA: 0x000C2D84 File Offset: 0x000C0F84
+		// Token: 0x17001ABB RID: 6843
+		// (get) Token: 0x060053AF RID: 21423 RVA: 0x000CE5D4 File Offset: 0x000CC7D4
 		public virtual List<ILevelSequenceSectionInfo> BackWardSections
 		{
 			get
@@ -89,19 +86,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D12 RID: 11538
+		// Token: 0x04002FD8 RID: 12248
 		private ILevelSequenceFrameEventComponent Instance;
 
-		// Token: 0x04002D13 RID: 11539
+		// Token: 0x04002FD9 RID: 12249
 		private List<ILevelSequenceSectionInfo> _ForwardSectionsCache;
 
-		// Token: 0x04002D14 RID: 11540
+		// Token: 0x04002FDA RID: 12250
 		private bool _ForwardSectionsInited;
 
-		// Token: 0x04002D15 RID: 11541
+		// Token: 0x04002FDB RID: 12251
 		private List<ILevelSequenceSectionInfo> _BackWardSectionsCache;
 
-		// Token: 0x04002D16 RID: 11542
+		// Token: 0x04002FDC RID: 12252
 		private bool _BackWardSectionsInited;
 	}
 }

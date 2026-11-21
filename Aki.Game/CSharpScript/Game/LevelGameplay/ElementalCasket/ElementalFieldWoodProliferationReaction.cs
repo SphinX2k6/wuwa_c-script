@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E87 RID: 28295
+	// Token: 0x02006008 RID: 24584
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementalFieldWoodProliferationReaction : IElementalFieldReaction
 	{
-		// Token: 0x06044F3F RID: 282431 RVA: 0x01109B80 File Offset: 0x01107D80
+		// Token: 0x0603B0EF RID: 241903 RVA: 0x010B4108 File Offset: 0x010B2308
 		public void ExecuteEnter(EntityHandle detector, EntityHandle target)
 		{
 			ILevelPrefabParamsConfig paramsConfig = WoodenBoxProliferateHelper.GetParamsConfig(target.Entity);
@@ -38,12 +38,12 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F40 RID: 282432 RVA: 0x01109BF4 File Offset: 0x01107DF4
+		// Token: 0x0603B0F0 RID: 241904 RVA: 0x010B417C File Offset: 0x010B237C
 		public void ExecuteLeave(EntityHandle detector, EntityHandle target)
 		{
 		}
 
-		// Token: 0x06044F41 RID: 282433 RVA: 0x01109BF8 File Offset: 0x01107DF8
+		// Token: 0x0603B0F1 RID: 241905 RVA: 0x010B4180 File Offset: 0x010B2380
 		private unsafe bool Proliferate(EntityHandle target, ILevelPrefabParamsConfig config)
 		{
 			SceneItemActorComponent component = target.Entity.GetComponent<SceneItemActorComponent>();

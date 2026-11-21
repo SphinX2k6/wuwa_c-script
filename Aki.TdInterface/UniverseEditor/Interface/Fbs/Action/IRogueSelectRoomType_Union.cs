@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EF4 RID: 28404
+	// Token: 0x02007678 RID: 30328
 	public enum IRogueSelectRoomType_Union : byte
 	{
-		// Token: 0x040118E7 RID: 71911
+		// Token: 0x0401286C RID: 75884
 		NONE,
-		// Token: 0x040118E8 RID: 71912
+		// Token: 0x0401286D RID: 75885
 		IRogueSelectRoomType,
-		// Token: 0x040118E9 RID: 71913
+		// Token: 0x0401286E RID: 75886
 		IRogueRoleSelectRoom
 	}
 }

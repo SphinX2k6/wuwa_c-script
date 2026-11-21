@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001429 RID: 5161
+// Token: 0x020008DD RID: 2269
 public class PinballItemDataMonster : IPinballItemDataMonster
 {
-	// Token: 0x17000CAE RID: 3246
-	// (get) Token: 0x060091A8 RID: 37288 RVA: 0x001F2FFC File Offset: 0x001F11FC
-	// (set) Token: 0x060091A9 RID: 37289 RVA: 0x001F3004 File Offset: 0x001F1204
+	// Token: 0x17000CCE RID: 3278
+	// (get) Token: 0x0600653D RID: 25917 RVA: 0x001FBB38 File Offset: 0x001F9D38
+	// (set) Token: 0x0600653E RID: 25918 RVA: 0x001FBB40 File Offset: 0x001F9D40
 	public EPinballItemType Type { get; set; }
 
-	// Token: 0x17000CAF RID: 3247
-	// (get) Token: 0x060091AA RID: 37290 RVA: 0x001F300D File Offset: 0x001F120D
-	// (set) Token: 0x060091AB RID: 37291 RVA: 0x001F3015 File Offset: 0x001F1215
+	// Token: 0x17000CCF RID: 3279
+	// (get) Token: 0x0600653F RID: 25919 RVA: 0x001FBB49 File Offset: 0x001F9D49
+	// (set) Token: 0x06006540 RID: 25920 RVA: 0x001FBB51 File Offset: 0x001F9D51
 	public int Id { get; set; }
 }

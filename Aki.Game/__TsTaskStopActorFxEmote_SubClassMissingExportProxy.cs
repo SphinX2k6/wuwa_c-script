@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036C5 RID: 14021
+// Token: 0x02002C3A RID: 11322
 public class __TsTaskStopActorFxEmote_SubClassMissingExportProxy : __TsTaskStopActorFxEmote_InheritProxy
 {
-	// Token: 0x0601E39D RID: 123805 RVA: 0x008855B0 File Offset: 0x008837B0
+	// Token: 0x0601C0B6 RID: 114870 RVA: 0x008ACF88 File Offset: 0x008AB188
 	[NullableContext(1)]
 	protected __TsTaskStopActorFxEmote_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskStopActorFxEmote.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E39E RID: 123806 RVA: 0x008855E3 File Offset: 0x008837E3
+	// Token: 0x0601C0B7 RID: 114871 RVA: 0x008ACFBB File Offset: 0x008AB1BB
 	protected __TsTaskStopActorFxEmote_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

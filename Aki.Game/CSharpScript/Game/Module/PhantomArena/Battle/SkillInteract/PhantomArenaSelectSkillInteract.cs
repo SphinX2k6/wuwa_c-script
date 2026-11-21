@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005282 RID: 21122
+	// Token: 0x02004252 RID: 16978
 	public class PhantomArenaSelectSkillInteract : PhantomArenaSkillInteractBase, ISkillInteractMainUiInteract
 	{
-		// Token: 0x06036046 RID: 221254 RVA: 0x00CC87E0 File Offset: 0x00CC69E0
+		// Token: 0x0602AF41 RID: 175937 RVA: 0x00C15EE4 File Offset: 0x00C140E4
 		private void TriggerCardActiveSkill()
 		{
 			PhantomCardData phantomCardData;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			this.BattleProxy.SkillTriggerMask.RefreshSkill(phantomBattleCardConfig.Name, phantomBattleCardConfig.CardEffectDescription, phantomBattleCardConfig.CardEffectDescriptionParams());
 		}
 
-		// Token: 0x06036047 RID: 221255 RVA: 0x00CC8898 File Offset: 0x00CC6A98
+		// Token: 0x0602AF42 RID: 175938 RVA: 0x00C15F9C File Offset: 0x00C1419C
 		private void TriggerCardClickSkill()
 		{
 			PhantomCardData battleCardByCardId = PhantomArenaBattleModel.Instance.OwnData.GetBattleCardByCardId(this.Data.DataId.Value);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			this.BattleProxy.SkillTriggerMask.RefreshSkill(phantomBattleCardConfig.Name, phantomBattleCardConfig.DurableSkillDescription, phantomBattleCardConfig.DurableSkillDescriptionParams());
 		}
 
-		// Token: 0x06036048 RID: 221256 RVA: 0x00CC891C File Offset: 0x00CC6B1C
+		// Token: 0x0602AF43 RID: 175939 RVA: 0x00C16020 File Offset: 0x00C14220
 		private void TriggerPassiveSkill()
 		{
 			this.BattleProxy.SkillTriggerMask.ShowTriggerMask(this.Data.DataId);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			}
 		}
 
-		// Token: 0x06036049 RID: 221257 RVA: 0x00CC8A1C File Offset: 0x00CC6C1C
+		// Token: 0x0602AF44 RID: 175940 RVA: 0x00C16120 File Offset: 0x00C14320
 		private void TriggerRoleSkill()
 		{
 			this.BattleProxy.SkillTriggerMask.ShowTriggerMask(this.Data.DataId);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			}
 		}
 
-		// Token: 0x0603604A RID: 221258 RVA: 0x00CC8AF8 File Offset: 0x00CC6CF8
+		// Token: 0x0602AF45 RID: 175941 RVA: 0x00C161FC File Offset: 0x00C143FC
 		private void TriggerSkill()
 		{
 			if (this.Data.IsRole)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			}
 		}
 
-		// Token: 0x0603604B RID: 221259 RVA: 0x00CC8B5C File Offset: 0x00CC6D5C
+		// Token: 0x0602AF46 RID: 175942 RVA: 0x00C16260 File Offset: 0x00C14460
 		private void ShowSkillTriggerMask()
 		{
 			this.TriggerSkill();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			this.BattleProxy.SkillTriggerMask.RefreshCancelBtnActive(this.Data.IsPassive);
 		}
 
-		// Token: 0x0603604C RID: 221260 RVA: 0x00CC8BAC File Offset: 0x00CC6DAC
+		// Token: 0x0602AF47 RID: 175943 RVA: 0x00C162B0 File Offset: 0x00C144B0
 		private void SortOrderAreaCanvas()
 		{
 			List<EPhantomArenaInteractTag> list = new List<EPhantomArenaInteractTag>
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			this.BattleProxy.CanvasManager.SortOrderAreaCanvas(list, this.Data, this);
 		}
 
-		// Token: 0x0603604D RID: 221261 RVA: 0x00CC8BFC File Offset: 0x00CC6DFC
+		// Token: 0x0602AF48 RID: 175944 RVA: 0x00C16300 File Offset: 0x00C14500
 		protected override UniTask<EPhantomArenaSkillInteractExecuteResult> OnExecute([Nullable(1)] PhantomArenaBattleProxy proxy)
 		{
 			PhantomArenaSelectSkillInteract.<OnExecute>d__10 <OnExecute>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <OnExecute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603604E RID: 221262 RVA: 0x00CC8C48 File Offset: 0x00CC6E48
+		// Token: 0x0602AF49 RID: 175945 RVA: 0x00C1634C File Offset: 0x00C1454C
 		protected UniTask<bool> TryHandleFinish()
 		{
 			PhantomArenaSelectSkillInteract.<TryHandleFinish>d__11 <TryHandleFinish>d__;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <TryHandleFinish>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603604F RID: 221263 RVA: 0x00CC8C8C File Offset: 0x00CC6E8C
+		// Token: 0x0602AF4A RID: 175946 RVA: 0x00C16390 File Offset: 0x00C14590
 		private void Reset()
 		{
 			this.BattleProxy.HideLine();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			this.BattleProxy.UnRegisterCantDragReason(EPhantomArenaCantDragReason.SelectSkillInteract);
 		}
 
-		// Token: 0x06036050 RID: 221264 RVA: 0x00CC8D2C File Offset: 0x00CC6F2C
+		// Token: 0x0602AF4B RID: 175947 RVA: 0x00C16430 File Offset: 0x00C14630
 		protected unsafe bool OnReceiveClickData(int cardId, int index, bool isSelected)
 		{
 			Log instance = Log.Instance;
@@ -186,13 +186,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return true;
 		}
 
-		// Token: 0x06036051 RID: 221265 RVA: 0x00CC8E18 File Offset: 0x00CC7018
+		// Token: 0x0602AF4C RID: 175948 RVA: 0x00C1651C File Offset: 0x00C1471C
 		protected bool OnCheckCondition()
 		{
 			return this.SelectedIdMap.Count >= this.ConditionSize;
 		}
 
-		// Token: 0x06036052 RID: 221266 RVA: 0x00CC8E30 File Offset: 0x00CC7030
+		// Token: 0x0602AF4D RID: 175949 RVA: 0x00C16534 File Offset: 0x00C14734
 		protected UniTask<bool> OnHandleFinish()
 		{
 			PhantomArenaSelectSkillInteract.<OnHandleFinish>d__15 <OnHandleFinish>d__;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return <OnHandleFinish>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036053 RID: 221267 RVA: 0x00CC8E74 File Offset: 0x00CC7074
+		// Token: 0x0602AF4E RID: 175950 RVA: 0x00C16578 File Offset: 0x00C14778
 		[NullableContext(1)]
 		public bool ReceiveClickData(ESkillInteractMainUiInteractType type, params object[] data)
 		{
@@ -222,14 +222,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 			return this.OnReceiveClickData((int)data[0], (int)data[1], (bool)data[2]);
 		}
 
-		// Token: 0x0401C99D RID: 117149
+		// Token: 0x040173D2 RID: 95186
 		[Nullable(1)]
 		private readonly Dictionary<int, int> SelectedIdMap = new Dictionary<int, int>();
 
-		// Token: 0x0401C99E RID: 117150
+		// Token: 0x040173D3 RID: 95187
 		private int LastSelectedId = -1;
 
-		// Token: 0x0401C99F RID: 117151
+		// Token: 0x040173D4 RID: 95188
 		private int ConditionSize;
 	}
 }

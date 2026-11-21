@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006589 RID: 25993
+	// Token: 0x02005507 RID: 21767
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingTimeLimitShopTabView : UiTabViewBase
 	{
-		// Token: 0x0604124E RID: 266830 RVA: 0x00FC9B64 File Offset: 0x00FC7D64
+		// Token: 0x06035F13 RID: 220947 RVA: 0x00F10B14 File Offset: 0x00F0ED14
 		protected override void OnBeforeShow()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0604124F RID: 266831 RVA: 0x00FC9BA0 File Offset: 0x00FC7DA0
+		// Token: 0x06035F14 RID: 220948 RVA: 0x00F10B50 File Offset: 0x00F0ED50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041250 RID: 266832 RVA: 0x00FC9C0C File Offset: 0x00FC7E0C
+		// Token: 0x06035F15 RID: 220949 RVA: 0x00F10BBC File Offset: 0x00F0EDBC
 		protected override void OnStart()
 		{
 			this.ActivityDataBase = (this.ExtraParams as ActivityFishingData);
@@ -53,21 +53,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.LoopScrollView = new LoopScrollView<FishingLimitTimeShopGridItem, IPayShopUnionData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<FishingLimitTimeShopGridItem>(this.InitItem), false);
 		}
 
-		// Token: 0x06041251 RID: 266833 RVA: 0x00FC9C63 File Offset: 0x00FC7E63
+		// Token: 0x06035F16 RID: 220950 RVA: 0x00F10C13 File Offset: 0x00F0EE13
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 			EventSystem.Instance.Add(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 		}
 
-		// Token: 0x06041252 RID: 266834 RVA: 0x00FC9C9D File Offset: 0x00FC7E9D
+		// Token: 0x06035F17 RID: 220951 RVA: 0x00F10C4D File Offset: 0x00F0EE4D
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 			EventSystem.Instance.Remove(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 		}
 
-		// Token: 0x06041253 RID: 266835 RVA: 0x00FC9CD8 File Offset: 0x00FC7ED8
+		// Token: 0x06035F18 RID: 220952 RVA: 0x00F10C88 File Offset: 0x00F0EE88
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			FishingTimeLimitShopTabView.<OnShowAsyncImplementImplement>d__8 <OnShowAsyncImplementImplement>d__;
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041254 RID: 266836 RVA: 0x00FC9D1B File Offset: 0x00FC7F1B
+		// Token: 0x06035F19 RID: 220953 RVA: 0x00F10CCB File Offset: 0x00F0EECB
 		private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 		{
 			this.LoopScrollView.RefreshAllGridProxies();
 		}
 
-		// Token: 0x06041255 RID: 266837 RVA: 0x00FC9D28 File Offset: 0x00FC7F28
+		// Token: 0x06035F1A RID: 220954 RVA: 0x00F10CD8 File Offset: 0x00F0EED8
 		private void OnShopVersionCodeChange()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PayShopRefresh);
@@ -93,33 +93,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			Log.Instance.Info(ELogModule.Activity, ELogAuthor.YYZ, "[FishingActivity] PayShop:DockyardBuyTabView 商品VersionCode不同步,打开弹窗", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06041256 RID: 266838 RVA: 0x00FC9D83 File Offset: 0x00FC7F83
+		// Token: 0x06035F1B RID: 220955 RVA: 0x00F10D33 File Offset: 0x00F0EF33
 		private FishingLimitTimeShopGridItem InitItem()
 		{
 			return new FishingLimitTimeShopGridItem(this.ActivityDataBase);
 		}
 
-		// Token: 0x06041258 RID: 266840 RVA: 0x00FC9D98 File Offset: 0x00FC7F98
+		// Token: 0x06035F1D RID: 220957 RVA: 0x00F10D48 File Offset: 0x00F0EF48
 		[CompilerGenerated]
 		internal static void <OnShopVersionCodeChange>g__confirmFunction|10_0()
 		{
 			UiManager.Instance.CloseView(EUiViewName.FishingTimeLimitView, null);
 		}
 
-		// Token: 0x04021EF7 RID: 138999
+		// Token: 0x0401C828 RID: 116776
 		protected LoopScrollView<FishingLimitTimeShopGridItem, IPayShopUnionData> LoopScrollView;
 
-		// Token: 0x04021EF8 RID: 139000
+		// Token: 0x0401C829 RID: 116777
 		protected ActivityFishingData ActivityDataBase;
 
-		// Token: 0x0200C783 RID: 51075
+		// Token: 0x0200B168 RID: 45416
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C46B RID: 246891
+			// Token: 0x04036DBC RID: 224700
 			public const int Scroll = 0;
 
-			// Token: 0x0403C46C RID: 246892
+			// Token: 0x04036DBD RID: 224701
 			public const int ShopItem = 1;
 		}
 	}

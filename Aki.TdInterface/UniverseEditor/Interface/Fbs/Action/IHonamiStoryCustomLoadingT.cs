@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200691F RID: 26911
+	// Token: 0x02006FD2 RID: 28626
 	public class IHonamiStoryCustomLoadingT
 	{
-		// Token: 0x1700C7AB RID: 51115
-		// (get) Token: 0x0602EFAD RID: 192429 RVA: 0x00667EBC File Offset: 0x006660BC
-		// (set) Token: 0x0602EFAE RID: 192430 RVA: 0x00667EC4 File Offset: 0x006660C4
+		// Token: 0x1700D1AE RID: 53678
+		// (get) Token: 0x0603197D RID: 203133 RVA: 0x006B83A4 File Offset: 0x006B65A4
+		// (set) Token: 0x0603197E RID: 203134 RVA: 0x006B83AC File Offset: 0x006B65AC
 		public ESpecialCustomLoadingType Type { get; set; }
 
-		// Token: 0x1700C7AC RID: 51116
-		// (get) Token: 0x0602EFAF RID: 192431 RVA: 0x00667ECD File Offset: 0x006660CD
-		// (set) Token: 0x0602EFB0 RID: 192432 RVA: 0x00667ED5 File Offset: 0x006660D5
+		// Token: 0x1700D1AF RID: 53679
+		// (get) Token: 0x0603197F RID: 203135 RVA: 0x006B83B5 File Offset: 0x006B65B5
+		// (set) Token: 0x06031980 RID: 203136 RVA: 0x006B83BD File Offset: 0x006B65BD
 		public int LoadingId { get; set; }
 
-		// Token: 0x0602EFB1 RID: 192433 RVA: 0x00667EDE File Offset: 0x006660DE
+		// Token: 0x06031981 RID: 203137 RVA: 0x006B83C6 File Offset: 0x006B65C6
 		public IHonamiStoryCustomLoadingT()
 		{
 			this.Type = ESpecialCustomLoadingType.HonamiStory;

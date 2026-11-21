@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200543F RID: 21567
+	// Token: 0x02004422 RID: 17442
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 	})]
 	public class SetItem : GridProxyAbstract<ISetItemData>
 	{
-		// Token: 0x06037118 RID: 225560 RVA: 0x00D0CFFC File Offset: 0x00D0B1FC
+		// Token: 0x0602C061 RID: 180321 RVA: 0x00C5C41C File Offset: 0x00C5A61C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x06037119 RID: 225561 RVA: 0x00D0D064 File Offset: 0x00D0B264
+		// Token: 0x0602C062 RID: 180322 RVA: 0x00C5C484 File Offset: 0x00C5A684
 		public override void Refresh(ISetItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -38,19 +38,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603711A RID: 225562 RVA: 0x00D0D0AD File Offset: 0x00D0B2AD
+		// Token: 0x0602C063 RID: 180323 RVA: 0x00C5C4CD File Offset: 0x00C5A6CD
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603711B RID: 225563 RVA: 0x00D0D0C0 File Offset: 0x00D0B2C0
+		// Token: 0x0602C064 RID: 180324 RVA: 0x00C5C4E0 File Offset: 0x00C5A6E0
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603711C RID: 225564 RVA: 0x00D0D0D3 File Offset: 0x00D0B2D3
+		// Token: 0x0602C065 RID: 180325 RVA: 0x00C5C4F3 File Offset: 0x00C5A6F3
 		private void OnClickItemToggle(EToggleState toggleState)
 		{
 			if (this.Data != null && this.CallbackClickItem != null)
@@ -59,11 +59,11 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x0401D0E2 RID: 119010
+		// Token: 0x04017B7B RID: 97147
 		[Nullable(2)]
 		private ISetItemData Data;
 
-		// Token: 0x0401D0E3 RID: 119011
+		// Token: 0x04017B7C RID: 97148
 		[Nullable(new byte[]
 		{
 			2,

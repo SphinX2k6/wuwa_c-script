@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x0200589C RID: 22684
+	// Token: 0x02004874 RID: 18548
 	public class InstanceDungeonLockItem : UiPanelBase
 	{
-		// Token: 0x06039B83 RID: 236419 RVA: 0x00DB7D4C File Offset: 0x00DB5F4C
+		// Token: 0x0602EAA6 RID: 191142 RVA: 0x00D06C64 File Offset: 0x00D04E64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,24 +22,24 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039B84 RID: 236420 RVA: 0x00DB7D94 File Offset: 0x00DB5F94
+		// Token: 0x0602EAA7 RID: 191143 RVA: 0x00D06CAC File Offset: 0x00D04EAC
 		[NullableContext(1)]
 		public void RefreshItem(TableTextArgNew args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), args.TextKey, args.Params);
 		}
 
-		// Token: 0x06039B85 RID: 236421 RVA: 0x00DB7DB3 File Offset: 0x00DB5FB3
+		// Token: 0x0602EAA8 RID: 191144 RVA: 0x00D06CCB File Offset: 0x00D04ECB
 		[NullableContext(1)]
 		public void SetLockText(string lockText)
 		{
 			base.GetText(0).SetText(lockText, true);
 		}
 
-		// Token: 0x0200BB06 RID: 47878
+		// Token: 0x0200A51F RID: 42271
 		private enum EChildType
 		{
-			// Token: 0x04038807 RID: 231431
+			// Token: 0x04033208 RID: 209416
 			TextLock
 		}
 	}

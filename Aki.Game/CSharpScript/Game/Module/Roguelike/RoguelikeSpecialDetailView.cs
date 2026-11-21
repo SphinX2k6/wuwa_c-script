@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E31 RID: 20017
+	// Token: 0x02003DFA RID: 15866
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeSpecialDetailView : UiViewBase
 	{
-		// Token: 0x060339CC RID: 211404 RVA: 0x00C13EC4 File Offset: 0x00C120C4
+		// Token: 0x06028837 RID: 165943 RVA: 0x00B5D3F0 File Offset: 0x00B5B5F0
 		public RoguelikeSpecialDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060339CD RID: 211405 RVA: 0x00C13EF4 File Offset: 0x00C120F4
+		// Token: 0x06028838 RID: 165944 RVA: 0x00B5D420 File Offset: 0x00B5B620
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -58,7 +57,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060339CE RID: 211406 RVA: 0x00C140A4 File Offset: 0x00C122A4
+		// Token: 0x06028839 RID: 165945 RVA: 0x00B5D5D0 File Offset: 0x00B5B7D0
 		protected override void OnStart()
 		{
 			object[] array = this.OpenParam as object[];
@@ -73,19 +72,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshUi(this.GainEntryData);
 		}
 
-		// Token: 0x060339CF RID: 211407 RVA: 0x00C14123 File Offset: 0x00C12323
+		// Token: 0x0602883A RID: 165946 RVA: 0x00B5D64F File Offset: 0x00B5B84F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoguelikeDataUpdate, new Action(this.RoguelikeDataRefresh));
 		}
 
-		// Token: 0x060339D0 RID: 211408 RVA: 0x00C14141 File Offset: 0x00C12341
+		// Token: 0x0602883B RID: 165947 RVA: 0x00B5D66D File Offset: 0x00B5B86D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeDataUpdate, new Action(this.RoguelikeDataRefresh));
 		}
 
-		// Token: 0x060339D1 RID: 211409 RVA: 0x00C14160 File Offset: 0x00C12360
+		// Token: 0x0602883C RID: 165948 RVA: 0x00B5D68C File Offset: 0x00B5B88C
 		private void RefreshUi(RogueGainEntry data)
 		{
 			RougeMiraclecreation? roguelikeSpecialConfig = RoguelikeConfig.Instance.GetRoguelikeSpecialConfig(data.ConfigId);
@@ -107,8 +106,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			string textStringId = (edescModel2.GetValueOrDefault() == edescModel3 & edescModel2 != null) ? roguelikeSpecialConfig.Value.BriefDescribe : roguelikeSpecialConfig.Value.Describe;
 			edescModel2 = edescModel;
 			edescModel3 = EDescModel.SIMPLE;
-			string[] source = (edescModel2.GetValueOrDefault() == edescModel3 & edescModel2 != null) ? roguelikeSpecialConfig.Value.BriefDescParam() : roguelikeSpecialConfig.Value.DescParam();
-			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), textStringId, source.ToArray<string>());
+			string[] args = (edescModel2.GetValueOrDefault() == edescModel3 & edescModel2 != null) ? roguelikeSpecialConfig.Value.BriefDescParam() : roguelikeSpecialConfig.Value.DescParam();
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), textStringId, args);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(6), roguelikeSpecialConfig.Value.StoryDescribe, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "RogueSpecialRemainTime", new <>z__ReadOnlySingleElementList<object>(data.RestCount));
 			base.GetText(4).SetUIActive(data.RestCount != 0);
@@ -123,7 +122,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshStarLayout(roguelikeSpecialConfig.Value.Level, roguelikeSpecialConfig.Value.MaxLevel);
 		}
 
-		// Token: 0x060339D2 RID: 211410 RVA: 0x00C143CC File Offset: 0x00C125CC
+		// Token: 0x0602883D RID: 165949 RVA: 0x00B5D8F4 File Offset: 0x00B5BAF4
 		private void RefreshStarLayout(int level, int maxLevel)
 		{
 			List<bool> list = new List<bool>();
@@ -135,13 +134,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.StarLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060339D3 RID: 211411 RVA: 0x00C14405 File Offset: 0x00C12605
+		// Token: 0x0602883E RID: 165950 RVA: 0x00B5D92D File Offset: 0x00B5BB2D
 		private void RoguelikeDataRefresh()
 		{
 			this.RefreshUi(this.GainEntryData);
 		}
 
-		// Token: 0x060339D4 RID: 211412 RVA: 0x00C14413 File Offset: 0x00C12613
+		// Token: 0x0602883F RID: 165951 RVA: 0x00B5D93B File Offset: 0x00B5BB3B
 		private void OnClickCloseBtn()
 		{
 			base.CloseMe(delegate(bool success)
@@ -155,15 +154,15 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x0401B5FE RID: 112126
+		// Token: 0x04015FD1 RID: 90065
 		[Nullable(2)]
 		private RogueGainEntry GainEntryData;
 
-		// Token: 0x0401B5FF RID: 112127
+		// Token: 0x04015FD2 RID: 90066
 		[Nullable(2)]
 		private Action<bool?> CloseCallBack;
 
-		// Token: 0x0401B600 RID: 112128
+		// Token: 0x04015FD3 RID: 90067
 		[Nullable(new byte[]
 		{
 			2,
@@ -171,41 +170,41 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikeSelectSpecialStarItem, bool> StarLayout;
 
-		// Token: 0x0401B601 RID: 112129
+		// Token: 0x04015FD4 RID: 90068
 		private readonly Func<RoguelikeSelectSpecialStarItem> CreateStarItem = () => new RoguelikeSelectSpecialStarItem();
 
-		// Token: 0x0200AFE8 RID: 45032
+		// Token: 0x02009A1A RID: 39450
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04035677 RID: 218743
+			// Token: 0x040300A7 RID: 196775
 			public const int Icon = 0;
 
-			// Token: 0x04035678 RID: 218744
+			// Token: 0x040300A8 RID: 196776
 			public const int BgIcon = 1;
 
-			// Token: 0x04035679 RID: 218745
+			// Token: 0x040300A9 RID: 196777
 			public const int Name = 2;
 
-			// Token: 0x0403567A RID: 218746
+			// Token: 0x040300AA RID: 196778
 			public const int StarLayout = 3;
 
-			// Token: 0x0403567B RID: 218747
+			// Token: 0x040300AB RID: 196779
 			public const int RemainTimeText = 4;
 
-			// Token: 0x0403567C RID: 218748
+			// Token: 0x040300AC RID: 196780
 			public const int Desc = 5;
 
-			// Token: 0x0403567D RID: 218749
+			// Token: 0x040300AD RID: 196781
 			public const int StoryDesc = 6;
 
-			// Token: 0x0403567E RID: 218750
+			// Token: 0x040300AE RID: 196782
 			public const int CloseButton = 7;
 
-			// Token: 0x0403567F RID: 218751
+			// Token: 0x040300AF RID: 196783
 			public const int Niagara = 8;
 
-			// Token: 0x04035680 RID: 218752
+			// Token: 0x040300B0 RID: 196784
 			public const int NiagaraNor = 9;
 		}
 	}

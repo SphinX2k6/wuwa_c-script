@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A56 RID: 2646
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B1F RID: 2847
 	public class FlowComponent : IComponentBase
 	{
-		// Token: 0x06003CEF RID: 15599 RVA: 0x0009CBAF File Offset: 0x0009ADAF
+		// Token: 0x0600410F RID: 16655 RVA: 0x000A6027 File Offset: 0x000A4227
 		public static FlowComponent Create(IFlowComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E00 RID: 3584
-		// (get) Token: 0x06003CF0 RID: 15600 RVA: 0x0009CBD0 File Offset: 0x0009ADD0
+		// Token: 0x17000ECC RID: 3788
+		// (get) Token: 0x06004110 RID: 16656 RVA: 0x000A6048 File Offset: 0x000A4248
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E01 RID: 3585
-		// (get) Token: 0x06003CF1 RID: 15601 RVA: 0x0009CC08 File Offset: 0x0009AE08
+		// Token: 0x17000ECD RID: 3789
+		// (get) Token: 0x06004111 RID: 16657 RVA: 0x000A6080 File Offset: 0x000A4280
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E02 RID: 3586
-		// (get) Token: 0x06003CF2 RID: 15602 RVA: 0x0009CC1E File Offset: 0x0009AE1E
+		// Token: 0x17000ECE RID: 3790
+		// (get) Token: 0x06004112 RID: 16658 RVA: 0x000A6096 File Offset: 0x000A4296
 		public virtual PlayFlow InitState
 		{
 			get
@@ -63,14 +61,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040021F5 RID: 8693
+		// Token: 0x0400240C RID: 9228
 		private IFlowComponent Instance;
 
-		// Token: 0x040021F6 RID: 8694
+		// Token: 0x0400240D RID: 9229
 		[Nullable(2)]
 		private PlayFlow _InitStateCache;
 
-		// Token: 0x040021F7 RID: 8695
+		// Token: 0x0400240E RID: 9230
 		private bool _InitStateInited;
 	}
 }

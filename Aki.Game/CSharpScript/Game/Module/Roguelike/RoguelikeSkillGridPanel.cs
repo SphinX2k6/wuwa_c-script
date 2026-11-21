@@ -10,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E2B RID: 20011
+	// Token: 0x02003DF4 RID: 15860
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeSkillGridPanel : UiPanelBase, IGridProxy<List<RogueTalentTree>>
 	{
-		// Token: 0x17007ECF RID: 32463
-		// (get) Token: 0x0603399E RID: 211358 RVA: 0x00C12F37 File Offset: 0x00C11137
-		// (set) Token: 0x0603399F RID: 211359 RVA: 0x00C12F3F File Offset: 0x00C1113F
+		// Token: 0x1700527F RID: 21119
+		// (get) Token: 0x06028809 RID: 165897 RVA: 0x00B5C46B File Offset: 0x00B5A66B
+		// (set) Token: 0x0602880A RID: 165898 RVA: 0x00B5C473 File Offset: 0x00B5A673
 		[Nullable(new byte[]
 		{
 			2,
@@ -39,17 +39,17 @@ namespace CSharpScript.Game.Module.Roguelike
 			1
 		})] set; }
 
-		// Token: 0x17007ED0 RID: 32464
-		// (get) Token: 0x060339A0 RID: 211360 RVA: 0x00C12F48 File Offset: 0x00C11148
-		// (set) Token: 0x060339A1 RID: 211361 RVA: 0x00C12F50 File Offset: 0x00C11150
+		// Token: 0x17005280 RID: 21120
+		// (get) Token: 0x0602880B RID: 165899 RVA: 0x00B5C47C File Offset: 0x00B5A67C
+		// (set) Token: 0x0602880C RID: 165900 RVA: 0x00B5C484 File Offset: 0x00B5A684
 		public int GridIndex { get; set; }
 
-		// Token: 0x17007ED1 RID: 32465
-		// (get) Token: 0x060339A2 RID: 211362 RVA: 0x00C12F59 File Offset: 0x00C11159
-		// (set) Token: 0x060339A3 RID: 211363 RVA: 0x00C12F61 File Offset: 0x00C11161
+		// Token: 0x17005281 RID: 21121
+		// (get) Token: 0x0602880D RID: 165901 RVA: 0x00B5C48D File Offset: 0x00B5A68D
+		// (set) Token: 0x0602880E RID: 165902 RVA: 0x00B5C495 File Offset: 0x00B5A695
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x060339A4 RID: 211364 RVA: 0x00C12F6C File Offset: 0x00C1116C
+		// Token: 0x0602880F RID: 165903 RVA: 0x00B5C4A0 File Offset: 0x00B5A6A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -65,18 +65,18 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060339A5 RID: 211365 RVA: 0x00C12FF6 File Offset: 0x00C111F6
+		// Token: 0x06028810 RID: 165904 RVA: 0x00B5C52A File Offset: 0x00B5A72A
 		public RoguelikeSkillNode GetNodeByPos(int pos)
 		{
 			return this.NodeMap[pos];
 		}
 
-		// Token: 0x060339A6 RID: 211366 RVA: 0x00C13004 File Offset: 0x00C11204
+		// Token: 0x06028811 RID: 165905 RVA: 0x00B5C538 File Offset: 0x00B5A738
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x060339A7 RID: 211367 RVA: 0x00C13008 File Offset: 0x00C11208
+		// Token: 0x06028812 RID: 165906 RVA: 0x00B5C53C File Offset: 0x00B5A73C
 		public void BuildNode()
 		{
 			foreach (RogueTalentTree data in this.NodeDataList)
@@ -95,51 +95,51 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060339A8 RID: 211368 RVA: 0x00C130E0 File Offset: 0x00C112E0
+		// Token: 0x06028813 RID: 165907 RVA: 0x00B5C614 File Offset: 0x00B5A814
 		public void Refresh(List<RogueTalentTree> data, bool isSelected, int gridIndex)
 		{
 			this.NodeDataList = data;
 			this.BuildNode();
 		}
 
-		// Token: 0x060339A9 RID: 211369 RVA: 0x00C130EF File Offset: 0x00C112EF
+		// Token: 0x06028814 RID: 165908 RVA: 0x00B5C623 File Offset: 0x00B5A823
 		public void Clear()
 		{
 		}
 
-		// Token: 0x060339AA RID: 211370 RVA: 0x00C130F1 File Offset: 0x00C112F1
+		// Token: 0x06028815 RID: 165909 RVA: 0x00B5C625 File Offset: 0x00B5A825
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x060339AB RID: 211371 RVA: 0x00C130F3 File Offset: 0x00C112F3
+		// Token: 0x06028816 RID: 165910 RVA: 0x00B5C627 File Offset: 0x00B5A827
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x060339AC RID: 211372 RVA: 0x00C130F5 File Offset: 0x00C112F5
+		// Token: 0x06028817 RID: 165911 RVA: 0x00B5C629 File Offset: 0x00B5A829
 		public object GetKey(List<RogueTalentTree> data, int gridIndex)
 		{
 			return null;
 		}
 
-		// Token: 0x0401B5F0 RID: 112112
+		// Token: 0x04015FC3 RID: 90051
 		public List<RoguelikeSkillNode> NodeMap = new List<RoguelikeSkillNode>();
 
-		// Token: 0x0401B5F1 RID: 112113
+		// Token: 0x04015FC4 RID: 90052
 		public List<RogueTalentTree> NodeDataList = new List<RogueTalentTree>();
 
-		// Token: 0x0200AFD9 RID: 45017
+		// Token: 0x02009A0B RID: 39435
 		[NullableContext(0)]
 		private class ERoguelikeSkillGridPanelDefine
 		{
-			// Token: 0x04035632 RID: 218674
+			// Token: 0x04030062 RID: 196706
 			public const int Pos1 = 0;
 
-			// Token: 0x04035633 RID: 218675
+			// Token: 0x04030063 RID: 196707
 			public const int Pos2 = 1;
 
-			// Token: 0x04035634 RID: 218676
+			// Token: 0x04030064 RID: 196708
 			public const int Pos3 = 2;
 		}
 	}

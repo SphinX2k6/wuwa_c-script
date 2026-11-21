@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B79 RID: 11129
+// Token: 0x020020F5 RID: 8437
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueSettleBaseView : UiViewBase
 {
-	// Token: 0x060170C4 RID: 94404 RVA: 0x005DA157 File Offset: 0x005D8357
+	// Token: 0x06014AF5 RID: 84725 RVA: 0x00606CC7 File Offset: 0x00604EC7
 	public SurvivorsRogueSettleBaseView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060170C5 RID: 94405 RVA: 0x005DA16C File Offset: 0x005D836C
+	// Token: 0x06014AF6 RID: 84726 RVA: 0x00606CDC File Offset: 0x00604EDC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,23 +51,23 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 		};
 	}
 
-	// Token: 0x060170C6 RID: 94406 RVA: 0x005DA370 File Offset: 0x005D8570
+	// Token: 0x06014AF7 RID: 84727 RVA: 0x00606EE0 File Offset: 0x006050E0
 	protected void SetBtnReturnMainVisible(bool bVisible)
 	{
 		base.GetButton(18).RootUIComp.Get().SetUIActive(bVisible);
 	}
 
-	// Token: 0x060170C7 RID: 94407 RVA: 0x005DA398 File Offset: 0x005D8598
+	// Token: 0x06014AF8 RID: 84728 RVA: 0x00606F08 File Offset: 0x00605108
 	protected virtual void OnClickBtnReturn()
 	{
 	}
 
-	// Token: 0x060170C8 RID: 94408 RVA: 0x005DA39A File Offset: 0x005D859A
+	// Token: 0x06014AF9 RID: 84729 RVA: 0x00606F0A File Offset: 0x0060510A
 	protected virtual void OnClickBtnReturnMain()
 	{
 	}
 
-	// Token: 0x060170C9 RID: 94409 RVA: 0x005DA39C File Offset: 0x005D859C
+	// Token: 0x06014AFA RID: 84730 RVA: 0x00606F0C File Offset: 0x0060510C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueSettleBaseView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -78,19 +78,19 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060170CA RID: 94410 RVA: 0x005DA3DF File Offset: 0x005D85DF
+	// Token: 0x06014AFB RID: 84731 RVA: 0x00606F4F File Offset: 0x0060514F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x060170CB RID: 94411 RVA: 0x005DA3FD File Offset: 0x005D85FD
+	// Token: 0x06014AFC RID: 84732 RVA: 0x00606F6D File Offset: 0x0060516D
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x060170CC RID: 94412 RVA: 0x005DA41C File Offset: 0x005D861C
+	// Token: 0x06014AFD RID: 84733 RVA: 0x00606F8C File Offset: 0x0060518C
 	protected override void OnAfterShow()
 	{
 		foreach (SurvivorsRogueWeaponSettleItem survivorsRogueWeaponSettleItem in this.WeaponList.GetLayoutItemList())
@@ -99,13 +99,13 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x060170CD RID: 94413 RVA: 0x005DA474 File Offset: 0x005D8674
+	// Token: 0x06014AFE RID: 84734 RVA: 0x00606FE4 File Offset: 0x006051E4
 	protected override void OnBeforeDestroyImplement()
 	{
 		this.ScrollingNumberTool.Clear();
 	}
 
-	// Token: 0x060170CE RID: 94414 RVA: 0x005DA481 File Offset: 0x005D8681
+	// Token: 0x06014AFF RID: 84735 RVA: 0x00606FF1 File Offset: 0x006051F1
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "InturnAni")
@@ -119,21 +119,21 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x060170CF RID: 94415 RVA: 0x005DA4B8 File Offset: 0x005D86B8
+	// Token: 0x06014B00 RID: 84736 RVA: 0x00607028 File Offset: 0x00605228
 	private SurvivorsRogueWeaponSettleItem CreateWeaponInfo()
 	{
 		return new SurvivorsRogueWeaponSettleItem();
 	}
 
-	// Token: 0x060170D0 RID: 94416 RVA: 0x005DA4BF File Offset: 0x005D86BF
+	// Token: 0x06014B01 RID: 84737 RVA: 0x0060702F File Offset: 0x0060522F
 	[NullableContext(2)]
 	protected virtual ResultView GetViewInfo()
 	{
 		return null;
 	}
 
-	// Token: 0x060170D1 RID: 94417 RVA: 0x005DA4C4 File Offset: 0x005D86C4
-	private List<ISurvivorsWeaponGridData> GetAllWeaponGridData(IList<Aki.Protocol.SurvivorsGainData> dataList, int weaponMaxCount)
+	// Token: 0x06014B02 RID: 84738 RVA: 0x00607034 File Offset: 0x00605234
+	private List<ISurvivorsWeaponGridData> GetAllWeaponGridData(IReadOnlyList<Aki.Protocol.SurvivorsGainData> dataList, int weaponMaxCount)
 	{
 		List<SurvivorsWeaponGainData> list = new List<SurvivorsWeaponGainData>();
 		foreach (Aki.Protocol.SurvivorsGainData survivorsGainData in dataList)
@@ -149,7 +149,7 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 		return SurvivorsRogueModel.Instance.GainData.GetWeaponGridDataList(weaponGainListWithBondInfo, new int?(weaponMaxCount));
 	}
 
-	// Token: 0x060170D2 RID: 94418 RVA: 0x005DA57C File Offset: 0x005D877C
+	// Token: 0x06014B03 RID: 84739 RVA: 0x006070EC File Offset: 0x006052EC
 	protected UniTask RefreshAsync()
 	{
 		SurvivorsRogueSettleBaseView.<RefreshAsync>d__19 <RefreshAsync>d__;
@@ -160,13 +160,13 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400AC8A RID: 44170
+	// Token: 0x0400B090 RID: 45200
 	private const string ENDLESS_NO_ACHIEVED_ICON = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Settlement/SP_SurvivorSettlementIconWuJin01.SP_SurvivorSettlementIconWuJin01";
 
-	// Token: 0x0400AC8B RID: 44171
+	// Token: 0x0400B091 RID: 45201
 	private const string ENDLESS_ACHIEVED_ICON = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/Survivor/Settlement/SP_SurvivorSettlementIconWuJin02.SP_SurvivorSettlementIconWuJin02";
 
-	// Token: 0x0400AC8C RID: 44172
+	// Token: 0x0400B092 RID: 45202
 	[Nullable(new byte[]
 	{
 		2,
@@ -175,10 +175,10 @@ public class SurvivorsRogueSettleBaseView : UiViewBase
 	})]
 	private GenericLayout<SurvivorsRogueWeaponSettleItem, ISurvivorsWeaponGridData> WeaponList;
 
-	// Token: 0x0400AC8D RID: 44173
+	// Token: 0x0400B093 RID: 45203
 	[Nullable(2)]
 	private SurvivorsRogueRoleInfoItem RoleInfo;
 
-	// Token: 0x0400AC8E RID: 44174
+	// Token: 0x0400B094 RID: 45204
 	private readonly ScrollingNumberTool ScrollingNumberTool = new ScrollingNumberTool();
 }

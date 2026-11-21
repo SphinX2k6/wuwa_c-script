@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001820 RID: 6176
+	// Token: 0x02000375 RID: 885
 	public sealed class FHttpResponseRuntimeHandler : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06016D05 RID: 93445 RVA: 0x00214C87 File Offset: 0x00212E87
+		// Token: 0x060059CB RID: 22987 RVA: 0x0007EBEE File Offset: 0x0007CDEE
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FHttpResponseRuntimeHandler.StaticFunctionPtr();
 		}
 
-		// Token: 0x06016D06 RID: 93446 RVA: 0x00214C93 File Offset: 0x00212E93
+		// Token: 0x060059CC RID: 22988 RVA: 0x0007EBFA File Offset: 0x0007CDFA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FHttpResponseRuntimeHandler._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FHttpResponseRuntimeHandler._FunctionPtr;
 		}
 
-		// Token: 0x06016D07 RID: 93447 RVA: 0x00214CB6 File Offset: 0x00212EB6
+		// Token: 0x060059CD RID: 22989 RVA: 0x0007EC1D File Offset: 0x0007CE1D
 		public FHttpResponseRuntimeHandler()
 		{
 		}
 
-		// Token: 0x06016D08 RID: 93448 RVA: 0x00214CBE File Offset: 0x00212EBE
+		// Token: 0x060059CE RID: 22990 RVA: 0x0007EC25 File Offset: 0x0007CE25
 		[NullableContext(2)]
 		public FHttpResponseRuntimeHandler(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016D09 RID: 93449 RVA: 0x00214CC8 File Offset: 0x00212EC8
+		// Token: 0x060059CF RID: 22991 RVA: 0x0007EC2F File Offset: 0x0007CE2F
 		public FHttpResponseRuntimeHandler(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016D0A RID: 93450 RVA: 0x00214CD3 File Offset: 0x00212ED3
+		// Token: 0x060059D0 RID: 22992 RVA: 0x0007EC3A File Offset: 0x0007CE3A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool, int, string>) ?? ((Action<bool, int, string>)Delegate.CreateDelegate(typeof(Action<bool, int, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06016D0B RID: 93451 RVA: 0x00214D05 File Offset: 0x00212F05
+		// Token: 0x060059D1 RID: 22993 RVA: 0x0007EC6C File Offset: 0x0007CE6C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool, int, string> Callback)
 		{
 			if (FHttpResponseRuntimeHandler.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FHttpResponseRuntimeHandler.RegisterId);
 		}
 
-		// Token: 0x06016D0C RID: 93452 RVA: 0x00214D40 File Offset: 0x00212F40
+		// Token: 0x060059D2 RID: 22994 RVA: 0x0007ECA8 File Offset: 0x0007CEA8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool Success, int Code, string Data)
 		{
 			FHttpResponseRuntimeHandler.__FHttpResponseRuntimeHandler_DelegateParams* ptr = stackalloc FHttpResponseRuntimeHandler.__FHttpResponseRuntimeHandler_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FHttpResponseRuntimeHandler.__FHttpResponseRuntimeHandler_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FHttpResponseRuntimeHandler._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06016D0D RID: 93453 RVA: 0x00214DA4 File Offset: 0x00212FA4
+		// Token: 0x060059D3 RID: 22995 RVA: 0x0007ED0C File Offset: 0x0007CF0C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, int, string> action = target as Action<bool, int, string>;
@@ -95,39 +92,39 @@ namespace UnrealEngine
 			action(((FHttpResponseRuntimeHandler.__FHttpResponseRuntimeHandler_DelegateParams*)__Parameters)->Success, ((FHttpResponseRuntimeHandler.__FHttpResponseRuntimeHandler_DelegateParams*)__Parameters)->Code, arg);
 		}
 
-		// Token: 0x0400C64B RID: 50763
+		// Token: 0x04002541 RID: 9537
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C64C RID: 50764
+		// Token: 0x04002542 RID: 9538
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroEditorRuntime.HttpResponseRuntimeHandler__DelegateSignature";
 
-		// Token: 0x0400C64D RID: 50765
+		// Token: 0x04002543 RID: 9539
 		private static int RegisterId;
 
-		// Token: 0x02002F5D RID: 12125
+		// Token: 0x02000A86 RID: 2694
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FHttpResponseRuntimeHandler_DelegateParams
+		private ref struct __FHttpResponseRuntimeHandler_DelegateParams
 		{
-			// Token: 0x04016B11 RID: 92945
+			// Token: 0x04005AD3 RID: 23251
 			[FieldOffset(0)]
 			public bool Success;
 
-			// Token: 0x04016B12 RID: 92946
+			// Token: 0x04005AD4 RID: 23252
 			[FieldOffset(4)]
 			public int Code;
 
-			// Token: 0x04016B13 RID: 92947
+			// Token: 0x04005AD5 RID: 23253
 			[FieldOffset(8)]
 			public FString Data;
 		}
 
-		// Token: 0x02002F5E RID: 12126
+		// Token: 0x02000A87 RID: 2695
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B14 RID: 92948
+			// Token: 0x04005AD6 RID: 23254
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

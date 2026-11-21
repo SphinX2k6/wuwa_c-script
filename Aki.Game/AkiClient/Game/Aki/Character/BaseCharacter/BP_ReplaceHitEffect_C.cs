@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004283 RID: 17027
+	// Token: 0x020032E5 RID: 13029
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/BP_ReplaceHitEffect.BP_ReplaceHitEffect_C")]
 	[UnrealStructLayout(320, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 320)]
 	public class BP_ReplaceHitEffect_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C360 RID: 181088 RVA: 0x00A1A18B File Offset: 0x00A1838B
+		// Token: 0x060211AD RID: 135597 RVA: 0x00959473 File Offset: 0x00957673
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_ReplaceHitEffect_C._ClassPtr == IntPtr.Zero)
@@ -24,94 +24,94 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			return BP_ReplaceHitEffect_C._ClassPtr;
 		}
 
-		// Token: 0x0602C361 RID: 181089 RVA: 0x00A1A1B0 File Offset: 0x00A183B0
+		// Token: 0x060211AE RID: 135598 RVA: 0x00959498 File Offset: 0x00957698
 		public BP_ReplaceHitEffect_C() : this(BuiltinUtils.AllocNativeUObject(BP_ReplaceHitEffect_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C362 RID: 181090 RVA: 0x00A1A1D8 File Offset: 0x00A183D8
+		// Token: 0x060211AF RID: 135599 RVA: 0x009594C0 File Offset: 0x009576C0
 		public BP_ReplaceHitEffect_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_ReplaceHitEffect_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006E2E RID: 28206
-		// (get) Token: 0x0602C363 RID: 181091 RVA: 0x00A1A20B File Offset: 0x00A1840B
-		// (set) Token: 0x0602C364 RID: 181092 RVA: 0x00A1A220 File Offset: 0x00A18420
+		// Token: 0x1700429F RID: 17055
+		// (get) Token: 0x060211B0 RID: 135600 RVA: 0x009594F3 File Offset: 0x009576F3
+		// (set) Token: 0x060211B1 RID: 135601 RVA: 0x00959508 File Offset: 0x00957708
 		public TSoftClassPtr<UKuroCameraShake> 震屏
 		{
 			get
 			{
-				return new TSoftClassPtr<UKuroCameraShake>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_0, this);
+				return new TSoftClassPtr<UKuroCameraShake>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_震屏, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_0, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_震屏, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006E2F RID: 28207
-		// (get) Token: 0x0602C365 RID: 181093 RVA: 0x00A1A245 File Offset: 0x00A18445
-		// (set) Token: 0x0602C366 RID: 181094 RVA: 0x00A1A25A File Offset: 0x00A1845A
+		// Token: 0x170042A0 RID: 17056
+		// (get) Token: 0x060211B2 RID: 135602 RVA: 0x0095952D File Offset: 0x0095772D
+		// (set) Token: 0x060211B3 RID: 135603 RVA: 0x00959542 File Offset: 0x00957742
 		public TSoftObjectPtr<UEffectModelBase> 受击特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_1, this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_受击特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_1, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_受击特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006E30 RID: 28208
-		// (get) Token: 0x0602C367 RID: 181095 RVA: 0x00A1A27F File Offset: 0x00A1847F
-		// (set) Token: 0x0602C368 RID: 181096 RVA: 0x00A1A294 File Offset: 0x00A18494
+		// Token: 0x170042A1 RID: 17057
+		// (get) Token: 0x060211B4 RID: 135604 RVA: 0x00959567 File Offset: 0x00957767
+		// (set) Token: 0x060211B5 RID: 135605 RVA: 0x0095957C File Offset: 0x0095777C
 		public TSoftObjectPtr<EffectModelAudio> 受击音效
 		{
 			get
 			{
-				return new TSoftObjectPtr<EffectModelAudio>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_2, this);
+				return new TSoftObjectPtr<EffectModelAudio>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_受击音效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_2, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_受击音效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006E31 RID: 28209
-		// (get) Token: 0x0602C369 RID: 181097 RVA: 0x00A1A2B9 File Offset: 0x00A184B9
-		// (set) Token: 0x0602C36A RID: 181098 RVA: 0x00A1A2CE File Offset: 0x00A184CE
+		// Token: 0x170042A2 RID: 17058
+		// (get) Token: 0x060211B6 RID: 135606 RVA: 0x009595A1 File Offset: 0x009577A1
+		// (set) Token: 0x060211B7 RID: 135607 RVA: 0x009595B6 File Offset: 0x009577B6
 		public TSoftObjectPtr<UEffectModelBase> 命中特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_3, this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_命中特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_3, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_命中特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006E32 RID: 28210
-		// (get) Token: 0x0602C36B RID: 181099 RVA: 0x00A1A2F3 File Offset: 0x00A184F3
-		// (set) Token: 0x0602C36C RID: 181100 RVA: 0x00A1A303 File Offset: 0x00A18503
+		// Token: 0x170042A3 RID: 17059
+		// (get) Token: 0x060211B8 RID: 135608 RVA: 0x009595DB File Offset: 0x009577DB
+		// (set) Token: 0x060211B9 RID: 135609 RVA: 0x009595EB File Offset: 0x009577EB
 		public unsafe bool 替换近战子弹顿帧
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_替换近战子弹顿帧) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_替换近战子弹顿帧) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006E33 RID: 28211
-		// (get) Token: 0x0602C36D RID: 181101 RVA: 0x00A1A314 File Offset: 0x00A18514
-		// (set) Token: 0x0602C36E RID: 181102 RVA: 0x00A1A34D File Offset: 0x00A1854D
+		// Token: 0x170042A4 RID: 17060
+		// (get) Token: 0x060211BA RID: 135610 RVA: 0x009595FC File Offset: 0x009577FC
+		// (set) Token: 0x060211BB RID: 135611 RVA: 0x00959635 File Offset: 0x00957835
 		public STimeScale 顿帧
 		{
 			get
@@ -120,19 +120,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				STimeScale result;
 				if ((result = this._顿帧) == null)
 				{
-					result = (this._顿帧 = new STimeScale(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_5, this));
+					result = (this._顿帧 = new STimeScale(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_顿帧, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(STimeScale.StaticStruct(), base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_5, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(STimeScale.StaticStruct(), base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_顿帧, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E34 RID: 28212
-		// (get) Token: 0x0602C36F RID: 181103 RVA: 0x00A1A370 File Offset: 0x00A18570
-		// (set) Token: 0x0602C370 RID: 181104 RVA: 0x00A1A3A9 File Offset: 0x00A185A9
+		// Token: 0x170042A5 RID: 17061
+		// (get) Token: 0x060211BC RID: 135612 RVA: 0x00959658 File Offset: 0x00957858
+		// (set) Token: 0x060211BD RID: 135613 RVA: 0x00959691 File Offset: 0x00957891
 		public TArray<FName> 不替换的部位
 		{
 			get
@@ -141,7 +141,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<FName> result;
 				if ((result = this._不替换的部位) == null)
 				{
-					result = (this._不替换的部位 = new TArray<FName>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_6, this));
+					result = (this._不替换的部位 = new TArray<FName>(base.NativePtr + (IntPtr)BP_ReplaceHitEffect_C.__PropertyOffset_不替换的部位, this));
 				}
 				return result;
 			}
@@ -151,46 +151,46 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x0602C371 RID: 181105 RVA: 0x00A1A3B7 File Offset: 0x00A185B7
+		// Token: 0x060211BE RID: 135614 RVA: 0x0095969F File Offset: 0x0095789F
 		protected BP_ReplaceHitEffect_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017246 RID: 94790
+		// Token: 0x04011F6D RID: 73581
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/BP_ReplaceHitEffect.BP_ReplaceHitEffect_C";
 
-		// Token: 0x04017247 RID: 94791
+		// Token: 0x04011F6E RID: 73582
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017248 RID: 94792
+		// Token: 0x04011F6F RID: 73583
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017249 RID: 94793
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011F70 RID: 73584
+		internal static int __PropertyOffset_震屏;
 
-		// Token: 0x0401724A RID: 94794
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011F71 RID: 73585
+		internal static int __PropertyOffset_受击特效;
 
-		// Token: 0x0401724B RID: 94795
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011F72 RID: 73586
+		internal static int __PropertyOffset_受击音效;
 
-		// Token: 0x0401724C RID: 94796
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011F73 RID: 73587
+		internal static int __PropertyOffset_命中特效;
 
-		// Token: 0x0401724D RID: 94797
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011F74 RID: 73588
+		internal static int __PropertyOffset_替换近战子弹顿帧;
 
-		// Token: 0x0401724E RID: 94798
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011F75 RID: 73589
+		internal static int __PropertyOffset_顿帧;
 
-		// Token: 0x0401724F RID: 94799
+		// Token: 0x04011F76 RID: 73590
 		[Nullable(2)]
 		private STimeScale _顿帧;
 
-		// Token: 0x04017250 RID: 94800
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011F77 RID: 73591
+		internal static int __PropertyOffset_不替换的部位;
 
-		// Token: 0x04017251 RID: 94801
+		// Token: 0x04011F78 RID: 73592
 		[Nullable(2)]
 		private TArray<FName> _不替换的部位;
 	}

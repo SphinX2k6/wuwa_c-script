@@ -6,12 +6,12 @@ using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Utils.ResponsibilityChain;
 
-// Token: 0x02001D67 RID: 7527
+// Token: 0x02001229 RID: 4649
 [NullableContext(2)]
 [Nullable(0)]
 public class RangeFailedParameterContext : IParameterContext
 {
-	// Token: 0x0600E4FD RID: 58621 RVA: 0x0035F100 File Offset: 0x0035D300
+	// Token: 0x0600B91B RID: 47387 RVA: 0x0036AD54 File Offset: 0x00368F54
 	[NullableContext(1)]
 	public RangeFailedParameterContext(IRangeLimitingCondition config)
 	{
@@ -44,7 +44,7 @@ public class RangeFailedParameterContext : IParameterContext
 		}
 	}
 
-	// Token: 0x0600E4FE RID: 58622 RVA: 0x0035F234 File Offset: 0x0035D434
+	// Token: 0x0600B91C RID: 47388 RVA: 0x0036AE88 File Offset: 0x00369088
 	public void Clear()
 	{
 		if (this.FailRangeCheck != null)
@@ -54,27 +54,27 @@ public class RangeFailedParameterContext : IParameterContext
 		}
 	}
 
-	// Token: 0x0600E4FF RID: 58623 RVA: 0x0035F251 File Offset: 0x0035D451
+	// Token: 0x0600B91D RID: 47389 RVA: 0x0036AEA5 File Offset: 0x003690A5
 	public bool IsValid()
 	{
 		return !StringUtils.IsBlank(this.RangeFailedEffectPath);
 	}
 
-	// Token: 0x04006995 RID: 27029
+	// Token: 0x04006A75 RID: 27253
 	public int RangeEffectHandleId;
 
-	// Token: 0x04006996 RID: 27030
+	// Token: 0x04006A76 RID: 27254
 	public string RangeFailedEffectPath;
 
-	// Token: 0x04006997 RID: 27031
+	// Token: 0x04006A77 RID: 27255
 	public Vector RangeFailedEffectCenterPos;
 
-	// Token: 0x04006998 RID: 27032
+	// Token: 0x04006A78 RID: 27256
 	public float RangeFailedEffectRadius;
 
-	// Token: 0x04006999 RID: 27033
+	// Token: 0x04006A79 RID: 27257
 	public List<int> RangeEntities;
 
-	// Token: 0x0400699A RID: 27034
+	// Token: 0x04006A7A RID: 27258
 	public RangeCheck FailRangeCheck;
 }

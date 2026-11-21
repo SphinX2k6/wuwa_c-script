@@ -3,35 +3,35 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E94 RID: 3732
+	// Token: 0x02000FA7 RID: 4007
 	[EnumExtensions]
 	public enum EShowUiType
 	{
-		// Token: 0x04003179 RID: 12665
+		// Token: 0x0400347F RID: 13439
 		All,
-		// Token: 0x0400317A RID: 12666
+		// Token: 0x04003480 RID: 13440
 		RogueAbilitySelect,
-		// Token: 0x0400317B RID: 12667
+		// Token: 0x04003481 RID: 13441
 		InformationView,
-		// Token: 0x0400317C RID: 12668
+		// Token: 0x04003482 RID: 13442
 		RogueRandomEvent,
-		// Token: 0x0400317D RID: 12669
+		// Token: 0x04003483 RID: 13443
 		RoleTrialActivities,
-		// Token: 0x0400317E RID: 12670
+		// Token: 0x04003484 RID: 13444
 		RoleSkinTrialActivities,
-		// Token: 0x0400317F RID: 12671
+		// Token: 0x04003485 RID: 13445
 		Cook,
-		// Token: 0x04003180 RID: 12672
+		// Token: 0x04003486 RID: 13446
 		Synthetic,
-		// Token: 0x04003181 RID: 12673
+		// Token: 0x04003487 RID: 13447
 		Forging,
-		// Token: 0x04003182 RID: 12674
+		// Token: 0x04003488 RID: 13448
 		MowBuffDistribute,
-		// Token: 0x04003183 RID: 12675
+		// Token: 0x04003489 RID: 13449
 		PermanentRogueUi,
-		// Token: 0x04003184 RID: 12676
+		// Token: 0x0400348A RID: 13450
 		CiacconaAvgBoard,
-		// Token: 0x04003185 RID: 12677
+		// Token: 0x0400348B RID: 13451
 		ItemObtain
 	}
 }

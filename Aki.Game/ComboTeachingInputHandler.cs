@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Input;
 
-// Token: 0x020017C7 RID: 6087
+// Token: 0x02000C80 RID: 3200
 public class ComboTeachingInputHandler : IInputHandler
 {
-	// Token: 0x0600B1C5 RID: 45509 RVA: 0x00283575 File Offset: 0x00281775
+	// Token: 0x060085AD RID: 34221 RVA: 0x0028DB1D File Offset: 0x0028BD1D
 	public int GetPriority()
 	{
 		return 1;
 	}
 
-	// Token: 0x0600B1C6 RID: 45510 RVA: 0x00283578 File Offset: 0x00281778
+	// Token: 0x060085AE RID: 34222 RVA: 0x0028DB20 File Offset: 0x0028BD20
 	[NullableContext(1)]
 	public InputFilter GetInputFilter()
 	{
@@ -31,50 +31,50 @@ public class ComboTeachingInputHandler : IInputHandler
 		return this.InputFilter;
 	}
 
-	// Token: 0x0600B1C7 RID: 45511 RVA: 0x002835EF File Offset: 0x002817EF
+	// Token: 0x060085AF RID: 34223 RVA: 0x0028DB97 File Offset: 0x0028BD97
 	public void HandlePressEvent(EInputAction action, float time)
 	{
 		EventSystem.Instance.Emit<EInputAction, float>(EEventName.ComboTeachingPress, action, time);
 	}
 
-	// Token: 0x0600B1C8 RID: 45512 RVA: 0x00283603 File Offset: 0x00281803
+	// Token: 0x060085B0 RID: 34224 RVA: 0x0028DBAB File Offset: 0x0028BDAB
 	public void HandleReleaseEvent(EInputAction action, float time)
 	{
 		EventSystem.Instance.Emit<EInputAction, float>(EEventName.ComboTeachingRelease, action, time);
 	}
 
-	// Token: 0x0600B1C9 RID: 45513 RVA: 0x00283617 File Offset: 0x00281817
+	// Token: 0x060085B1 RID: 34225 RVA: 0x0028DBBF File Offset: 0x0028BDBF
 	public void HandleHoldEvent(EInputAction action, float time)
 	{
 		EventSystem.Instance.Emit<EInputAction, float>(EEventName.ComboTeachingHold, action, time);
 	}
 
-	// Token: 0x0600B1CA RID: 45514 RVA: 0x0028362B File Offset: 0x0028182B
+	// Token: 0x060085B2 RID: 34226 RVA: 0x0028DBD3 File Offset: 0x0028BDD3
 	public void HandleInputAxis(EInputAxis axis, float value)
 	{
 	}
 
-	// Token: 0x0600B1CB RID: 45515 RVA: 0x0028362D File Offset: 0x0028182D
+	// Token: 0x060085B3 RID: 34227 RVA: 0x0028DBD5 File Offset: 0x0028BDD5
 	public void ClearInputAxis(bool nextFrame)
 	{
 	}
 
-	// Token: 0x0600B1CC RID: 45516 RVA: 0x0028362F File Offset: 0x0028182F
+	// Token: 0x060085B4 RID: 34228 RVA: 0x0028DBD7 File Offset: 0x0028BDD7
 	public void ClearSingleAxisInput(EInputAxis axis, bool nextFrame)
 	{
 	}
 
-	// Token: 0x0600B1CD RID: 45517 RVA: 0x00283631 File Offset: 0x00281831
+	// Token: 0x060085B5 RID: 34229 RVA: 0x0028DBD9 File Offset: 0x0028BDD9
 	public void PreProcessInput(float deltaTime, bool gamePaused)
 	{
 	}
 
-	// Token: 0x0600B1CE RID: 45518 RVA: 0x00283633 File Offset: 0x00281833
+	// Token: 0x060085B6 RID: 34230 RVA: 0x0028DBDB File Offset: 0x0028BDDB
 	public void PostProcessInput(float deltaTime, bool gamePaused)
 	{
 	}
 
-	// Token: 0x040050AC RID: 20652
+	// Token: 0x04005157 RID: 20823
 	[Nullable(2)]
 	public InputFilter InputFilter;
 }

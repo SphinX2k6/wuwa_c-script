@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Personal;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020023C7 RID: 9159
+// Token: 0x020018AC RID: 6316
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalBirthView : UiTickViewBase
 {
-	// Token: 0x060124F4 RID: 74996 RVA: 0x00482607 File Offset: 0x00480807
+	// Token: 0x0600F9A6 RID: 63910 RVA: 0x0048FB07 File Offset: 0x0048DD07
 	public PersonalBirthView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060124F5 RID: 74997 RVA: 0x00482640 File Offset: 0x00480840
+	// Token: 0x0600F9A7 RID: 63911 RVA: 0x0048FB40 File Offset: 0x0048DD40
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,19 +45,19 @@ public class PersonalBirthView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060124F6 RID: 74998 RVA: 0x004827E3 File Offset: 0x004809E3
+	// Token: 0x0600F9A8 RID: 63912 RVA: 0x0048FCE3 File Offset: 0x0048DEE3
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnBirthChange, new Action(this.OnBirthChange));
 	}
 
-	// Token: 0x060124F7 RID: 74999 RVA: 0x00482801 File Offset: 0x00480A01
+	// Token: 0x0600F9A9 RID: 63913 RVA: 0x0048FD01 File Offset: 0x0048DF01
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnBirthChange, new Action(this.OnBirthChange));
 	}
 
-	// Token: 0x060124F8 RID: 75000 RVA: 0x00482820 File Offset: 0x00480A20
+	// Token: 0x0600F9AA RID: 63914 RVA: 0x0048FD20 File Offset: 0x0048DF20
 	private void OnBirthChange()
 	{
 		string textById = TextConfig.Instance.GetTextById("SetBirthSuccess");
@@ -65,13 +65,13 @@ public class PersonalBirthView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060124F9 RID: 75001 RVA: 0x0048284F File Offset: 0x00480A4F
+	// Token: 0x0600F9AB RID: 63915 RVA: 0x0048FD4F File Offset: 0x0048DF4F
 	protected void OnLeftButtonClicked()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060124FA RID: 75002 RVA: 0x00482858 File Offset: 0x00480A58
+	// Token: 0x0600F9AC RID: 63916 RVA: 0x0048FD58 File Offset: 0x0048DF58
 	protected void OnRightButtonClicked()
 	{
 		if (this.IsSetBirth())
@@ -89,7 +89,7 @@ public class PersonalBirthView : UiTickViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060124FB RID: 75003 RVA: 0x004828A1 File Offset: 0x00480AA1
+	// Token: 0x0600F9AD RID: 63917 RVA: 0x0048FDA1 File Offset: 0x0048DFA1
 	protected void OnMonthButtonClick()
 	{
 		if (this.IsSetBirth())
@@ -100,7 +100,7 @@ public class PersonalBirthView : UiTickViewBase
 		this.IsSelectMonthToggle = true;
 	}
 
-	// Token: 0x060124FC RID: 75004 RVA: 0x004828B9 File Offset: 0x00480AB9
+	// Token: 0x0600F9AE RID: 63918 RVA: 0x0048FDB9 File Offset: 0x0048DFB9
 	protected void OnDayButtonClick()
 	{
 		if (this.IsSetBirth())
@@ -115,20 +115,20 @@ public class PersonalBirthView : UiTickViewBase
 		this.IsSelectDayToggle = true;
 	}
 
-	// Token: 0x060124FD RID: 75005 RVA: 0x004828DC File Offset: 0x00480ADC
+	// Token: 0x0600F9AF RID: 63919 RVA: 0x0048FDDC File Offset: 0x0048DFDC
 	protected bool IsSetBirth()
 	{
 		int birthday = PersonalModel.Instance.GetBirthday();
 		return BirthdayModel.Instance.GetBirthdayIsReset() && birthday != 0;
 	}
 
-	// Token: 0x060124FE RID: 75006 RVA: 0x00482906 File Offset: 0x00480B06
+	// Token: 0x0600F9B0 RID: 63920 RVA: 0x0048FE06 File Offset: 0x0048E006
 	protected void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060124FF RID: 75007 RVA: 0x00482910 File Offset: 0x00480B10
+	// Token: 0x0600F9B1 RID: 63921 RVA: 0x0048FE10 File Offset: 0x0048E010
 	protected override void OnStart()
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(8), "AcquireCancel", Array.Empty<object>());
@@ -169,7 +169,7 @@ public class PersonalBirthView : UiTickViewBase
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06012500 RID: 75008 RVA: 0x00482AA4 File Offset: 0x00480CA4
+	// Token: 0x0600F9B2 RID: 63922 RVA: 0x0048FFA4 File Offset: 0x0048E1A4
 	private void RefreshLeftCircleExhibitionView()
 	{
 		UUIItem item = base.GetItem(0);
@@ -185,7 +185,7 @@ public class PersonalBirthView : UiTickViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06012501 RID: 75009 RVA: 0x00482B2F File Offset: 0x00480D2F
+	// Token: 0x0600F9B3 RID: 63923 RVA: 0x0049002F File Offset: 0x0048E22F
 	private PersonalBirthAttachItem OnCreateLeftCircleItem(AActor actor, int index, int showNum)
 	{
 		PersonalBirthAttachItem personalBirthAttachItem = new PersonalBirthAttachItem(actor);
@@ -194,7 +194,7 @@ public class PersonalBirthView : UiTickViewBase
 		return personalBirthAttachItem;
 	}
 
-	// Token: 0x06012502 RID: 75010 RVA: 0x00482B50 File Offset: 0x00480D50
+	// Token: 0x0600F9B4 RID: 63924 RVA: 0x00490050 File Offset: 0x0048E250
 	private void OnSelectedLeftNum(int num)
 	{
 		this.MonthNumber = new int?(num);
@@ -212,7 +212,7 @@ public class PersonalBirthView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06012503 RID: 75011 RVA: 0x00482BE0 File Offset: 0x00480DE0
+	// Token: 0x0600F9B5 RID: 63925 RVA: 0x004900E0 File Offset: 0x0048E2E0
 	private void RefreshRightCircleExhibitionView()
 	{
 		UUIItem item = base.GetItem(2);
@@ -232,7 +232,7 @@ public class PersonalBirthView : UiTickViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06012504 RID: 75012 RVA: 0x00482C89 File Offset: 0x00480E89
+	// Token: 0x0600F9B6 RID: 63926 RVA: 0x00490189 File Offset: 0x0048E389
 	private PersonalBirthAttachItem OnCreateRightCircleItem(AActor actor, int index, int showNum)
 	{
 		PersonalBirthAttachItem personalBirthAttachItem = new PersonalBirthAttachItem(actor);
@@ -241,7 +241,7 @@ public class PersonalBirthView : UiTickViewBase
 		return personalBirthAttachItem;
 	}
 
-	// Token: 0x06012505 RID: 75013 RVA: 0x00482CAC File Offset: 0x00480EAC
+	// Token: 0x0600F9B7 RID: 63927 RVA: 0x004901AC File Offset: 0x0048E3AC
 	private void OnSelectedRightNum(int num)
 	{
 		this.DayNumber = new int?(num);
@@ -253,7 +253,7 @@ public class PersonalBirthView : UiTickViewBase
 		base.GetText(7).SetText(num.ToString(), true);
 	}
 
-	// Token: 0x06012506 RID: 75014 RVA: 0x00482D04 File Offset: 0x00480F04
+	// Token: 0x0600F9B8 RID: 63928 RVA: 0x00490204 File Offset: 0x0048E404
 	private int GetDays(int month)
 	{
 		if (month == 2)
@@ -271,12 +271,12 @@ public class PersonalBirthView : UiTickViewBase
 		return this.SmallMonthDays;
 	}
 
-	// Token: 0x06012507 RID: 75015 RVA: 0x00482D49 File Offset: 0x00480F49
+	// Token: 0x0600F9B9 RID: 63929 RVA: 0x00490249 File Offset: 0x0048E449
 	protected override void OnAfterShow()
 	{
 	}
 
-	// Token: 0x06012508 RID: 75016 RVA: 0x00482D4C File Offset: 0x00480F4C
+	// Token: 0x0600F9BA RID: 63930 RVA: 0x0049024C File Offset: 0x0048E44C
 	protected override void OnBeforeHide()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(13);
@@ -290,7 +290,7 @@ public class PersonalBirthView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06012509 RID: 75017 RVA: 0x00482DAD File Offset: 0x00480FAD
+	// Token: 0x0600F9BB RID: 63931 RVA: 0x004902AD File Offset: 0x0048E4AD
 	protected override void OnBeforeDestroy()
 	{
 		CircleAttachView<int, PersonalBirthAttachItem> leftCircleExhibitionView = this.LeftCircleExhibitionView;
@@ -306,7 +306,7 @@ public class PersonalBirthView : UiTickViewBase
 		rightCircleExhibitionView.Clear();
 	}
 
-	// Token: 0x04008A61 RID: 35425
+	// Token: 0x04008BA8 RID: 35752
 	[Nullable(new byte[]
 	{
 		2,
@@ -314,7 +314,7 @@ public class PersonalBirthView : UiTickViewBase
 	})]
 	private CircleAttachView<int, PersonalBirthAttachItem> LeftCircleExhibitionView;
 
-	// Token: 0x04008A62 RID: 35426
+	// Token: 0x04008BA9 RID: 35753
 	[Nullable(new byte[]
 	{
 		2,
@@ -322,13 +322,13 @@ public class PersonalBirthView : UiTickViewBase
 	})]
 	private CircleAttachView<int, PersonalBirthAttachItem> RightCircleExhibitionView;
 
-	// Token: 0x04008A63 RID: 35427
+	// Token: 0x04008BAA RID: 35754
 	private int? MonthNumber;
 
-	// Token: 0x04008A64 RID: 35428
+	// Token: 0x04008BAB RID: 35755
 	private int? DayNumber;
 
-	// Token: 0x04008A65 RID: 35429
+	// Token: 0x04008BAC RID: 35756
 	private readonly int[] BigMonth = new int[]
 	{
 		1,
@@ -340,24 +340,24 @@ public class PersonalBirthView : UiTickViewBase
 		12
 	};
 
-	// Token: 0x04008A66 RID: 35430
+	// Token: 0x04008BAD RID: 35757
 	private readonly int BigMonthDays = 31;
 
-	// Token: 0x04008A67 RID: 35431
+	// Token: 0x04008BAE RID: 35758
 	private readonly int SmallMonthDays = 30;
 
-	// Token: 0x04008A68 RID: 35432
+	// Token: 0x04008BAF RID: 35759
 	private readonly int FebruaryDays = 29;
 
-	// Token: 0x04008A69 RID: 35433
+	// Token: 0x04008BB0 RID: 35760
 	private bool IsSelectMonthToggle;
 
-	// Token: 0x04008A6A RID: 35434
+	// Token: 0x04008BB1 RID: 35761
 	private bool IsSelectDayToggle;
 
-	// Token: 0x04008A6B RID: 35435
+	// Token: 0x04008BB2 RID: 35762
 	private const int SHOW_GAP = 2;
 
-	// Token: 0x04008A6C RID: 35436
+	// Token: 0x04008BB3 RID: 35763
 	private const int MONTH_COUNT = 12;
 }

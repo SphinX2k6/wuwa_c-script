@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006803 RID: 26627
+	// Token: 0x02005753 RID: 22355
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookFilterView : UiViewBase
 	{
-		// Token: 0x06042694 RID: 272020 RVA: 0x010207E4 File Offset: 0x0101E9E4
+		// Token: 0x060371E9 RID: 225769 RVA: 0x00F61D28 File Offset: 0x00F5FF28
 		public DangoBrawlHandBookFilterView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042695 RID: 272021 RVA: 0x010207F8 File Offset: 0x0101E9F8
+		// Token: 0x060371EA RID: 225770 RVA: 0x00F61D3C File Offset: 0x00F5FF3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042696 RID: 272022 RVA: 0x01020988 File Offset: 0x0101EB88
+		// Token: 0x060371EB RID: 225771 RVA: 0x00F61ECC File Offset: 0x00F600CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlHandBookFilterView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042697 RID: 272023 RVA: 0x010209CC File Offset: 0x0101EBCC
+		// Token: 0x060371EC RID: 225772 RVA: 0x00F61F10 File Offset: 0x00F60110
 		protected override void OnBeforeShow()
 		{
 			this.OpenData = (this.OpenParam as DangoBrawlHandBookFilterOpenData);
@@ -83,14 +83,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			baseSortItem.SetSelectedIds(this.SelectedOccupationIds);
 		}
 
-		// Token: 0x06042698 RID: 272024 RVA: 0x01020A35 File Offset: 0x0101EC35
+		// Token: 0x060371ED RID: 225773 RVA: 0x00F61F79 File Offset: 0x00F60179
 		private void OnClickSortList(List<int> occupationIds)
 		{
 			this.SelectedOccupationIds.Clear();
 			this.SelectedOccupationIds.AddRange(occupationIds);
 		}
 
-		// Token: 0x06042699 RID: 272025 RVA: 0x01020A4E File Offset: 0x0101EC4E
+		// Token: 0x060371EE RID: 225774 RVA: 0x00F61F92 File Offset: 0x00F60192
 		private void OnBtnResetClick()
 		{
 			DangoBrawlHandBookFilterSortItem baseSortItem = this.BaseSortItem;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SelectedOccupationIds.Clear();
 		}
 
-		// Token: 0x0604269A RID: 272026 RVA: 0x01020A6C File Offset: 0x0101EC6C
+		// Token: 0x060371EF RID: 225775 RVA: 0x00F61FB0 File Offset: 0x00F601B0
 		private void OnBtnConfirmClick()
 		{
 			DangoBrawlHandBookFilterOpenData openData = this.OpenData;
@@ -116,36 +116,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040229D0 RID: 141776
+		// Token: 0x0401D22D RID: 119341
 		[Nullable(2)]
 		private DangoBrawlHandBookFilterOpenData OpenData;
 
-		// Token: 0x040229D1 RID: 141777
+		// Token: 0x0401D22E RID: 119342
 		[Nullable(2)]
 		private DangoBrawlHandBookFilterSortItem BaseSortItem;
 
-		// Token: 0x040229D2 RID: 141778
+		// Token: 0x0401D22F RID: 119343
 		private readonly List<int> SelectedOccupationIds = new List<int>();
 
-		// Token: 0x0200C974 RID: 51572
+		// Token: 0x0200B341 RID: 45889
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CD53 RID: 249171
+			// Token: 0x04037640 RID: 226880
 			BtnReset,
-			// Token: 0x0403CD54 RID: 249172
+			// Token: 0x04037641 RID: 226881
 			BtnConfirm,
-			// Token: 0x0403CD55 RID: 249173
+			// Token: 0x04037642 RID: 226882
 			PnlBaseSort,
-			// Token: 0x0403CD56 RID: 249174
+			// Token: 0x04037643 RID: 226883
 			PnlAttributeSort,
-			// Token: 0x0403CD57 RID: 249175
+			// Token: 0x04037644 RID: 226884
 			TxtTitle,
-			// Token: 0x0403CD58 RID: 249176
+			// Token: 0x04037645 RID: 226885
 			PnlHor,
-			// Token: 0x0403CD59 RID: 249177
+			// Token: 0x04037646 RID: 226886
 			TxtTips,
-			// Token: 0x0403CD5A RID: 249178
+			// Token: 0x04037647 RID: 226887
 			PnlIcon
 		}
 	}

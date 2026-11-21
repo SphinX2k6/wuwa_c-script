@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200268E RID: 9870
+	// Token: 0x02002951 RID: 10577
 	public class IMp4BackgroundColor
 	{
-		// Token: 0x0600DCFD RID: 56573 RVA: 0x0020D9A5 File Offset: 0x0020BBA5
-		[NullableContext(1)]
+		// Token: 0x0600EAD4 RID: 60116 RVA: 0x0022A145 File Offset: 0x00228345
 		public static IMp4BackgroundColor Create(IMp4BackgroundColor? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041A3 RID: 16803
-		// (get) Token: 0x0600DCFE RID: 56574 RVA: 0x0020D9C4 File Offset: 0x0020BBC4
+		// Token: 0x170044E0 RID: 17632
+		// (get) Token: 0x0600EAD5 RID: 60117 RVA: 0x0022A164 File Offset: 0x00228364
 		public virtual EMp4BackgroundColor FadeIn
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041A4 RID: 16804
-		// (get) Token: 0x0600DCFF RID: 56575 RVA: 0x0020D9D1 File Offset: 0x0020BBD1
+		// Token: 0x170044E1 RID: 17633
+		// (get) Token: 0x0600EAD6 RID: 60118 RVA: 0x0022A171 File Offset: 0x00228371
 		public virtual EMp4BackgroundColor FadeOut
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AC4 RID: 31428
+		// Token: 0x04008161 RID: 33121
 		private IMp4BackgroundColor Instance;
 	}
 }

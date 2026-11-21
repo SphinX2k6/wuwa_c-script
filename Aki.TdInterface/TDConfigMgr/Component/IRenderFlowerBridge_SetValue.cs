@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200067B RID: 1659
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200071A RID: 1818
 	public class IRenderFlowerBridge_SetValue
 	{
-		// Token: 0x0400187C RID: 6268
+		// Token: 0x04001A75 RID: 6773
 		public ERenderSpecifiedRangeType Type;
 
-		// Token: 0x0400187D RID: 6269
+		// Token: 0x04001A76 RID: 6774
 		public int Radius;
 
-		// Token: 0x0400187E RID: 6270
+		// Token: 0x04001A77 RID: 6775
 		public ITargetEntityType CenterTarget;
 
-		// Token: 0x0400187F RID: 6271
+		// Token: 0x04001A78 RID: 6776
 		public string AkEvent;
 	}
 }

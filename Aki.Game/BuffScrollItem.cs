@@ -7,10 +7,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001379 RID: 4985
+// Token: 0x0200082D RID: 2093
 internal class BuffScrollItem : UiPanelBase
 {
-	// Token: 0x06008B7B RID: 35707 RVA: 0x001DD258 File Offset: 0x001DB458
+	// Token: 0x06005F16 RID: 24342 RVA: 0x001E6094 File Offset: 0x001E4294
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ internal class BuffScrollItem : UiPanelBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06008B7C RID: 35708 RVA: 0x001DD334 File Offset: 0x001DB534
+	// Token: 0x06005F17 RID: 24343 RVA: 0x001E6170 File Offset: 0x001E4370
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Unbind();
@@ -39,25 +39,25 @@ internal class BuffScrollItem : UiPanelBase
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06008B7D RID: 35709 RVA: 0x001DD380 File Offset: 0x001DB580
+	// Token: 0x06005F18 RID: 24344 RVA: 0x001E61BC File Offset: 0x001E43BC
 	private bool CanClickLikeToggle()
 	{
 		return this.CurrentData != null && this.CurrentData.CheckClickAble != null && this.CurrentData.CheckClickAble(this.CurrentData);
 	}
 
-	// Token: 0x06008B7E RID: 35710 RVA: 0x001DD3B1 File Offset: 0x001DB5B1
+	// Token: 0x06005F19 RID: 24345 RVA: 0x001E61ED File Offset: 0x001E43ED
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		this.CurrentData.OnClickToggle(this.CurrentData);
 	}
 
-	// Token: 0x06008B7F RID: 35711 RVA: 0x001DD3CC File Offset: 0x001DB5CC
+	// Token: 0x06005F1A RID: 24346 RVA: 0x001E6208 File Offset: 0x001E4408
 	public void SetToggleActiveState(bool state)
 	{
 		base.GetExtendToggle(0).RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x06008B80 RID: 35712 RVA: 0x001DD3F3 File Offset: 0x001DB5F3
+	// Token: 0x06005F1B RID: 24347 RVA: 0x001E622F File Offset: 0x001E442F
 	[NullableContext(1)]
 	public void Refresh(BuffScrollItemData data, bool isSelected, int gridIndex)
 	{
@@ -70,33 +70,33 @@ internal class BuffScrollItem : UiPanelBase
 		this.RefreshSelectedTag();
 	}
 
-	// Token: 0x06008B81 RID: 35713 RVA: 0x001DD420 File Offset: 0x001DB620
+	// Token: 0x06005F1C RID: 24348 RVA: 0x001E625C File Offset: 0x001E445C
 	private void RefreshSelectedTag()
 	{
 		base.GetItem(5).SetUIActive(this.CurrentData.SelectedAtStart);
 	}
 
-	// Token: 0x06008B82 RID: 35714 RVA: 0x001DD43C File Offset: 0x001DB63C
+	// Token: 0x06005F1D RID: 24349 RVA: 0x001E6278 File Offset: 0x001E4478
 	private void RefreshToggleState()
 	{
 		EToggleState state = this.CurrentData.Selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06008B83 RID: 35715 RVA: 0x001DD46C File Offset: 0x001DB66C
+	// Token: 0x06005F1E RID: 24350 RVA: 0x001E62A8 File Offset: 0x001E44A8
 	private void RefreshLockState()
 	{
 		base.GetItem(4).SetUIActive(false);
 	}
 
-	// Token: 0x06008B84 RID: 35716 RVA: 0x001DD47C File Offset: 0x001DB67C
+	// Token: 0x06005F1F RID: 24351 RVA: 0x001E62B8 File Offset: 0x001E44B8
 	private void RefreshName()
 	{
 		MowTowerBuffRe? mowingTowerBuffById = MowingTowerConfig.Instance.GetMowingTowerBuffById(this.CurrentData.BuffId);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), mowingTowerBuffById.Value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x06008B85 RID: 35717 RVA: 0x001DD4C4 File Offset: 0x001DB6C4
+	// Token: 0x06005F20 RID: 24352 RVA: 0x001E6300 File Offset: 0x001E4500
 	private void RefreshDesc()
 	{
 		MowTowerBuffRe? mowingTowerBuffById = MowingTowerConfig.Instance.GetMowingTowerBuffById(this.CurrentData.BuffId);
@@ -123,14 +123,14 @@ internal class BuffScrollItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), mowingTowerBuffById.Value.Description, array2);
 	}
 
-	// Token: 0x06008B86 RID: 35718 RVA: 0x001DD5E8 File Offset: 0x001DB7E8
+	// Token: 0x06005F21 RID: 24353 RVA: 0x001E6424 File Offset: 0x001E4624
 	private void RefreshBuffTexture()
 	{
 		string texture = MowingTowerConfig.Instance.GetMowingTowerBuffById(this.CurrentData.BuffId).Value.Texture;
 		base.SetTextureByPath(texture, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x04003DE7 RID: 15847
+	// Token: 0x04003E7F RID: 15999
 	[Nullable(2)]
 	private BuffScrollItemData CurrentData;
 }

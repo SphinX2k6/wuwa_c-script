@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000A70 RID: 2672
+	// Token: 0x02000A5F RID: 2655
 	public sealed class MotorFightWaveGroupPb : IMessage<MotorFightWaveGroupPb>, IMessage, IEquatable<MotorFightWaveGroupPb>, IDeepCloneable<MotorFightWaveGroupPb>, IBufferMessage
 	{
-		// Token: 0x0600E8FE RID: 59646 RVA: 0x002206B5 File Offset: 0x0021E8B5
+		// Token: 0x0600E7E4 RID: 59364 RVA: 0x0021E4C1 File Offset: 0x0021C6C1
 		[NullableContext(1)]
 		public static MotorFightWaveGroupPb Create()
 		{
 			return new MotorFightWaveGroupPb();
 		}
 
-		// Token: 0x17002F47 RID: 12103
-		// (get) Token: 0x0600E8FF RID: 59647 RVA: 0x002206BC File Offset: 0x0021E8BC
+		// Token: 0x17002F09 RID: 12041
+		// (get) Token: 0x0600E7E5 RID: 59365 RVA: 0x0021E4C8 File Offset: 0x0021C6C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<MotorFightWaveGroupPb> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002F48 RID: 12104
-		// (get) Token: 0x0600E900 RID: 59648 RVA: 0x002206C3 File Offset: 0x0021E8C3
+		// Token: 0x17002F0A RID: 12042
+		// (get) Token: 0x0600E7E6 RID: 59366 RVA: 0x0021E4CF File Offset: 0x0021C6CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002F49 RID: 12105
-		// (get) Token: 0x0600E901 RID: 59649 RVA: 0x002206C6 File Offset: 0x0021E8C6
+		// Token: 0x17002F0B RID: 12043
+		// (get) Token: 0x0600E7E7 RID: 59367 RVA: 0x0021E4D2 File Offset: 0x0021C6D2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E902 RID: 59650 RVA: 0x002206CD File Offset: 0x0021E8CD
+		// Token: 0x0600E7E8 RID: 59368 RVA: 0x0021E4D9 File Offset: 0x0021C6D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightWaveGroupPb()
 		{
 		}
 
-		// Token: 0x0600E903 RID: 59651 RVA: 0x002206F8 File Offset: 0x0021E8F8
+		// Token: 0x0600E7E9 RID: 59369 RVA: 0x0021E504 File Offset: 0x0021C704
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightWaveGroupPb(MotorFightWaveGroupPb other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600E904 RID: 59652 RVA: 0x0022075B File Offset: 0x0021E95B
+		// Token: 0x0600E7EA RID: 59370 RVA: 0x0021E567 File Offset: 0x0021C767
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorFightWaveGroupPb Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new MotorFightWaveGroupPb(this);
 		}
 
-		// Token: 0x17002F4A RID: 12106
-		// (get) Token: 0x0600E905 RID: 59653 RVA: 0x00220763 File Offset: 0x0021E963
-		// (set) Token: 0x0600E906 RID: 59654 RVA: 0x0022076B File Offset: 0x0021E96B
+		// Token: 0x17002F0C RID: 12044
+		// (get) Token: 0x0600E7EB RID: 59371 RVA: 0x0021E56F File Offset: 0x0021C76F
+		// (set) Token: 0x0600E7EC RID: 59372 RVA: 0x0021E577 File Offset: 0x0021C777
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WaveGroupId
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002F4B RID: 12107
-		// (get) Token: 0x0600E907 RID: 59655 RVA: 0x00220774 File Offset: 0x0021E974
+		// Token: 0x17002F0D RID: 12045
+		// (get) Token: 0x0600E7ED RID: 59373 RVA: 0x0021E580 File Offset: 0x0021C780
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MotorFightMonsterPb> Monsters
@@ -110,8 +110,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002F4C RID: 12108
-		// (get) Token: 0x0600E908 RID: 59656 RVA: 0x0022077C File Offset: 0x0021E97C
+		// Token: 0x17002F0E RID: 12046
+		// (get) Token: 0x0600E7EE RID: 59374 RVA: 0x0021E588 File Offset: 0x0021C788
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MotorFightBossPb> Bosses
@@ -122,8 +122,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002F4D RID: 12109
-		// (get) Token: 0x0600E909 RID: 59657 RVA: 0x00220784 File Offset: 0x0021E984
+		// Token: 0x17002F0F RID: 12047
+		// (get) Token: 0x0600E7EF RID: 59375 RVA: 0x0021E590 File Offset: 0x0021C790
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MotorFightBuffGatePb> BuffGates
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E90A RID: 59658 RVA: 0x0022078C File Offset: 0x0021E98C
+		// Token: 0x0600E7F0 RID: 59376 RVA: 0x0021E598 File Offset: 0x0021C798
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MotorFightWaveGroupPb);
 		}
 
-		// Token: 0x0600E90B RID: 59659 RVA: 0x0022079C File Offset: 0x0021E99C
+		// Token: 0x0600E7F1 RID: 59377 RVA: 0x0021E5A8 File Offset: 0x0021C7A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MotorFightWaveGroupPb other)
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.WaveGroupId == other.WaveGroupId && this.monsters_.Equals(other.monsters_) && this.bosses_.Equals(other.bosses_) && this.buffGates_.Equals(other.buffGates_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600E90C RID: 59660 RVA: 0x00220814 File Offset: 0x0021EA14
+		// Token: 0x0600E7F2 RID: 59378 RVA: 0x0021E620 File Offset: 0x0021C820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E90D RID: 59661 RVA: 0x0022087D File Offset: 0x0021EA7D
+		// Token: 0x0600E7F3 RID: 59379 RVA: 0x0021E689 File Offset: 0x0021C889
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600E90E RID: 59662 RVA: 0x0022088A File Offset: 0x0021EA8A
+		// Token: 0x0600E7F4 RID: 59380 RVA: 0x0021E696 File Offset: 0x0021C896
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600E90F RID: 59663 RVA: 0x00220894 File Offset: 0x0021EA94
+		// Token: 0x0600E7F5 RID: 59381 RVA: 0x0021E6A0 File Offset: 0x0021C8A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E910 RID: 59664 RVA: 0x00220904 File Offset: 0x0021EB04
+		// Token: 0x0600E7F6 RID: 59382 RVA: 0x0021E710 File Offset: 0x0021C910
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -225,7 +225,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E911 RID: 59665 RVA: 0x0022097C File Offset: 0x0021EB7C
+		// Token: 0x0600E7F7 RID: 59383 RVA: 0x0021E788 File Offset: 0x0021C988
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MotorFightWaveGroupPb other)
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600E912 RID: 59666 RVA: 0x002209EB File Offset: 0x0021EBEB
+		// Token: 0x0600E7F8 RID: 59384 RVA: 0x0021E7F7 File Offset: 0x0021C9F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -252,7 +252,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600E913 RID: 59667 RVA: 0x002209F4 File Offset: 0x0021EBF4
+		// Token: 0x0600E7F9 RID: 59385 RVA: 0x0021E800 File Offset: 0x0021CA00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -294,43 +294,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005ECB RID: 24267
+		// Token: 0x04005ED4 RID: 24276
 		private static readonly MessageParser<MotorFightWaveGroupPb> _parser = new MessageParser<MotorFightWaveGroupPb>(() => new MotorFightWaveGroupPb());
 
-		// Token: 0x04005ECC RID: 24268
+		// Token: 0x04005ED5 RID: 24277
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005ECD RID: 24269
+		// Token: 0x04005ED6 RID: 24278
 		public const int WaveGroupIdFieldNumber = 1;
 
-		// Token: 0x04005ECE RID: 24270
+		// Token: 0x04005ED7 RID: 24279
 		private int waveGroupId_;
 
-		// Token: 0x04005ECF RID: 24271
+		// Token: 0x04005ED8 RID: 24280
 		public const int MonstersFieldNumber = 2;
 
-		// Token: 0x04005ED0 RID: 24272
+		// Token: 0x04005ED9 RID: 24281
 		private static readonly FieldCodec<MotorFightMonsterPb> _repeated_monsters_codec = FieldCodec.ForMessage<MotorFightMonsterPb>(18U, MotorFightMonsterPb.Parser);
 
-		// Token: 0x04005ED1 RID: 24273
+		// Token: 0x04005EDA RID: 24282
 		private readonly RepeatedField<MotorFightMonsterPb> monsters_ = new RepeatedField<MotorFightMonsterPb>();
 
-		// Token: 0x04005ED2 RID: 24274
+		// Token: 0x04005EDB RID: 24283
 		public const int BossesFieldNumber = 3;
 
-		// Token: 0x04005ED3 RID: 24275
+		// Token: 0x04005EDC RID: 24284
 		private static readonly FieldCodec<MotorFightBossPb> _repeated_bosses_codec = FieldCodec.ForMessage<MotorFightBossPb>(26U, MotorFightBossPb.Parser);
 
-		// Token: 0x04005ED4 RID: 24276
+		// Token: 0x04005EDD RID: 24285
 		private readonly RepeatedField<MotorFightBossPb> bosses_ = new RepeatedField<MotorFightBossPb>();
 
-		// Token: 0x04005ED5 RID: 24277
+		// Token: 0x04005EDE RID: 24286
 		public const int BuffGatesFieldNumber = 4;
 
-		// Token: 0x04005ED6 RID: 24278
+		// Token: 0x04005EDF RID: 24287
 		private static readonly FieldCodec<MotorFightBuffGatePb> _repeated_buffGates_codec = FieldCodec.ForMessage<MotorFightBuffGatePb>(34U, MotorFightBuffGatePb.Parser);
 
-		// Token: 0x04005ED7 RID: 24279
+		// Token: 0x04005EE0 RID: 24288
 		private readonly RepeatedField<MotorFightBuffGatePb> buffGates_ = new RepeatedField<MotorFightBuffGatePb>();
 	}
 }

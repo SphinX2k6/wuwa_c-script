@@ -13,12 +13,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Util
 {
-	// Token: 0x0200719F RID: 29087
+	// Token: 0x02006254 RID: 25172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemUtility
 	{
-		// Token: 0x060472B4 RID: 291508 RVA: 0x01215600 File Offset: 0x01213800
+		// Token: 0x0603CBAA RID: 248746 RVA: 0x0116F620 File Offset: 0x0116D820
 		[return: Nullable(2)]
 		public static TsBaseItem GetBaseItemActor(Entity entity)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			return null;
 		}
 
-		// Token: 0x060472B5 RID: 291509 RVA: 0x01215624 File Offset: 0x01213824
+		// Token: 0x0603CBAB RID: 248747 RVA: 0x0116F644 File Offset: 0x0116D844
 		public unsafe static void HandleTriggerStateActionByServerNotify(ActionNotify notify, long creatureDataId, long otherCreatureDataId)
 		{
 			if (LevelGeneralController.Instance.LevelEventLogOpen)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060472B6 RID: 291510 RVA: 0x01215760 File Offset: 0x01213960
+		// Token: 0x0603CBAC RID: 248748 RVA: 0x0116F780 File Offset: 0x0116D980
 		public unsafe static void HandleExitTriggerStateActionByServerNotify(ActionNotify notify, long creatureDataId, long otherCreatureDataId)
 		{
 			if (LevelGeneralController.Instance.LevelEventLogOpen)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060472B7 RID: 291511 RVA: 0x012158C0 File Offset: 0x01213AC0
+		// Token: 0x0603CBAD RID: 248749 RVA: 0x0116F8E0 File Offset: 0x0116DAE0
 		public unsafe static void HandleSceneItemStateActionByServerNotify(ActionNotify notify, long creatureDataId, int actionsIndex)
 		{
 			if (LevelGeneralController.Instance.LevelEventLogOpen)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472B8 RID: 291512 RVA: 0x012159FC File Offset: 0x01213BFC
+		// Token: 0x0603CBAE RID: 248750 RVA: 0x0116FA1C File Offset: 0x0116DC1C
 		public static void HandleExploreInteractActionByServerNotify(ActionNotify notify, long creatureDataId)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleExploreInteractActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472B9 RID: 291513 RVA: 0x01215A44 File Offset: 0x01213C44
+		// Token: 0x0603CBAF RID: 248751 RVA: 0x0116FA64 File Offset: 0x0116DC64
 		public static void HandleSceneItemDestructibleActionByServerNotify(ActionNotify notify, long creatureDataId)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleSceneItemDestructibleActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472BA RID: 291514 RVA: 0x01215A8C File Offset: 0x01213C8C
+		// Token: 0x0603CBB0 RID: 248752 RVA: 0x0116FAAC File Offset: 0x0116DCAC
 		public static void HandleTimeTrackControlActionByServerNotify(ActionNotify notify, long creatureDataId, EntityTimelineTrackCtxPb actionInfo)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleTimeTrackControlActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472BB RID: 291515 RVA: 0x01215AD8 File Offset: 0x01213CD8
+		// Token: 0x0603CBB1 RID: 248753 RVA: 0x0116FAF8 File Offset: 0x0116DCF8
 		public static void HandleLifeCycleStageActionByServerNotify(ActionNotify notify, long creatureDataId, bool isCreateStage)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleLifeCycleStageActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472BC RID: 291516 RVA: 0x01215B24 File Offset: 0x01213D24
+		// Token: 0x0603CBB2 RID: 248754 RVA: 0x0116FB44 File Offset: 0x0116DD44
 		public static void HandleTrampleActivateActionByServerNotify(ActionNotify notify, long creatureDataId, bool bActivate)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleTrampleActivateActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472BD RID: 291517 RVA: 0x01215B70 File Offset: 0x01213D70
+		// Token: 0x0603CBB3 RID: 248755 RVA: 0x0116FB90 File Offset: 0x0116DD90
 		public static void HandleBeamReceiveActionByServerNotify(ActionNotify notify, long creatureDataId, EntityBeamReceiveType receiveType)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleBeamReceiveActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472BE RID: 291518 RVA: 0x01215BBC File Offset: 0x01213DBC
+		// Token: 0x0603CBB4 RID: 248756 RVA: 0x0116FBDC File Offset: 0x0116DDDC
 		public static void HandleSceneItemStateChangeConditionActionByServerNotify(ActionNotify notify, long creatureDataId, int stateIndex, int conditionIndex)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleSceneItemStateChangeConditionActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472BF RID: 291519 RVA: 0x01215C10 File Offset: 0x01213E10
+		// Token: 0x0603CBB5 RID: 248757 RVA: 0x0116FC30 File Offset: 0x0116DE30
 		public static void HandleHookLockPointActionByServerNotify(ActionNotify notify, long creatureDataId, HookInteractActionType actionType)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleHookLockPointActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C0 RID: 291520 RVA: 0x01215C5C File Offset: 0x01213E5C
+		// Token: 0x0603CBB6 RID: 248758 RVA: 0x0116FC7C File Offset: 0x0116DE7C
 		public static void HandleExploreSkillCustomActionByServerNotify(ActionNotify notify, long creatureDataId)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleExploreSkillCustomActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C1 RID: 291521 RVA: 0x01215CA4 File Offset: 0x01213EA4
+		// Token: 0x0603CBB7 RID: 248759 RVA: 0x0116FCC4 File Offset: 0x0116DEC4
 		public unsafe static void HandleTemplateSpawnerActionByServerNotify(ActionNotify notify, long creatureDataId)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleTemplateSpawnerActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C2 RID: 291522 RVA: 0x01215CEC File Offset: 0x01213EEC
+		// Token: 0x0603CBB8 RID: 248760 RVA: 0x0116FD0C File Offset: 0x0116DF0C
 		public static void HandleTargetGearHitPartByServerNotify(ActionNotify notify, long creatureDataId, int hitPartIndex)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleTargetGearHitPartByServerNotify", creatureDataId, delegate(bool? result)
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C3 RID: 291523 RVA: 0x01215D38 File Offset: 0x01213F38
+		// Token: 0x0603CBB9 RID: 248761 RVA: 0x0116FD58 File Offset: 0x0116DF58
 		public static void HandleTargetGearActionByHitTypeByServerNotify(ActionNotify notify, long creatureDataId, int configIndex)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleTargetGearActionByHitTypeByServerNotify", creatureDataId, delegate(bool? result)
@@ -561,7 +561,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C4 RID: 291524 RVA: 0x01215D84 File Offset: 0x01213F84
+		// Token: 0x0603CBBA RID: 248762 RVA: 0x0116FDA4 File Offset: 0x0116DFA4
 		public static void HandleFlowerPollutionActionByServerNotify(ActionNotify notify, long creatureDataId, PlayEnterOrExitPollutionRangeType rangeType)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleFlowerPollutionActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C5 RID: 291525 RVA: 0x01215DD0 File Offset: 0x01213FD0
+		// Token: 0x0603CBBB RID: 248763 RVA: 0x0116FDF0 File Offset: 0x0116DFF0
 		public static void HandleEntityQuickHackSkillActionByServerNotify(ActionNotify notify, long creatureDataId, int skillId, int stateTagId)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleEntityQuickHackSkillActionByServerNotify", creatureDataId, delegate(bool? result)
@@ -612,7 +612,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060472C6 RID: 291526 RVA: 0x01215E24 File Offset: 0x01214024
+		// Token: 0x0603CBBC RID: 248764 RVA: 0x0116FE44 File Offset: 0x0116E044
 		public static void HandleCasketTriggerActionByServerNotify(ActionNotify notify, long creatureDataId, bool isEnter, int index)
 		{
 			WaitEntityTask.Create("SceneItemUtility.HandleCasketTriggerActionByServerNotify", creatureDataId, delegate(bool? result)

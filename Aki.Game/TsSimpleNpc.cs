@@ -13,22 +13,22 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200325D RID: 12893
+// Token: 0x020027CC RID: 10188
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/SimpleNpc/Blueprint/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/SimpleNpc/Blueprint/TsSimpleNpc.TsSimpleNpc_C")]
 public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601BD3D RID: 113981 RVA: 0x007B224A File Offset: 0x007B044A
+	// Token: 0x06019904 RID: 104708 RVA: 0x007DA4CE File Offset: 0x007D86CE
 	static TsSimpleNpc()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsSimpleNpc.CreateStaticDefaultValue), new Action(TsSimpleNpc.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700264A RID: 9802
-	// (get) Token: 0x0601BD3E RID: 113982 RVA: 0x007B2269 File Offset: 0x007B0469
-	// (set) Token: 0x0601BD3F RID: 113983 RVA: 0x007B227D File Offset: 0x007B047D
+	// Token: 0x170028CC RID: 10444
+	// (get) Token: 0x06019905 RID: 104709 RVA: 0x007DA4ED File Offset: 0x007D86ED
+	// (set) Token: 0x06019906 RID: 104710 RVA: 0x007DA501 File Offset: 0x007D8701
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UCapsuleComponent CapsuleCollision
 	{
@@ -42,9 +42,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700264B RID: 9803
-	// (get) Token: 0x0601BD40 RID: 113984 RVA: 0x007B2292 File Offset: 0x007B0492
-	// (set) Token: 0x0601BD41 RID: 113985 RVA: 0x007B22A6 File Offset: 0x007B04A6
+	// Token: 0x170028CD RID: 10445
+	// (get) Token: 0x06019907 RID: 104711 RVA: 0x007DA516 File Offset: 0x007D8716
+	// (set) Token: 0x06019908 RID: 104712 RVA: 0x007DA52A File Offset: 0x007D872A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe USkeletalMeshComponent Mesh
 	{
@@ -58,9 +58,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700264C RID: 9804
-	// (get) Token: 0x0601BD42 RID: 113986 RVA: 0x007B22BB File Offset: 0x007B04BB
-	// (set) Token: 0x0601BD43 RID: 113987 RVA: 0x007B22CF File Offset: 0x007B04CF
+	// Token: 0x170028CE RID: 10446
+	// (get) Token: 0x06019909 RID: 104713 RVA: 0x007DA53F File Offset: 0x007D873F
+	// (set) Token: 0x0601990A RID: 104714 RVA: 0x007DA553 File Offset: 0x007D8753
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe CharRenderingComponent CharRenderingComponent
 	{
@@ -74,9 +74,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700264D RID: 9805
-	// (get) Token: 0x0601BD44 RID: 113988 RVA: 0x007B22E4 File Offset: 0x007B04E4
-	// (set) Token: 0x0601BD45 RID: 113989 RVA: 0x007B231D File Offset: 0x007B051D
+	// Token: 0x170028CF RID: 10447
+	// (get) Token: 0x0601990B RID: 104715 RVA: 0x007DA568 File Offset: 0x007D8768
+	// (set) Token: 0x0601990C RID: 104716 RVA: 0x007DA5A1 File Offset: 0x007D87A1
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath DA
@@ -99,9 +99,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700264E RID: 9806
-	// (get) Token: 0x0601BD46 RID: 113990 RVA: 0x007B2345 File Offset: 0x007B0545
-	// (set) Token: 0x0601BD47 RID: 113991 RVA: 0x007B2355 File Offset: 0x007B0555
+	// Token: 0x170028D0 RID: 10448
+	// (get) Token: 0x0601990D RID: 104717 RVA: 0x007DA5C9 File Offset: 0x007D87C9
+	// (set) Token: 0x0601990E RID: 104718 RVA: 0x007DA5D9 File Offset: 0x007D87D9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisappearOnSunny
 	{
@@ -115,9 +115,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700264F RID: 9807
-	// (get) Token: 0x0601BD48 RID: 113992 RVA: 0x007B2366 File Offset: 0x007B0566
-	// (set) Token: 0x0601BD49 RID: 113993 RVA: 0x007B2376 File Offset: 0x007B0576
+	// Token: 0x170028D1 RID: 10449
+	// (get) Token: 0x0601990F RID: 104719 RVA: 0x007DA5EA File Offset: 0x007D87EA
+	// (set) Token: 0x06019910 RID: 104720 RVA: 0x007DA5FA File Offset: 0x007D87FA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisappearOnCloudy
 	{
@@ -131,9 +131,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002650 RID: 9808
-	// (get) Token: 0x0601BD4A RID: 113994 RVA: 0x007B2387 File Offset: 0x007B0587
-	// (set) Token: 0x0601BD4B RID: 113995 RVA: 0x007B2397 File Offset: 0x007B0597
+	// Token: 0x170028D2 RID: 10450
+	// (get) Token: 0x06019911 RID: 104721 RVA: 0x007DA60B File Offset: 0x007D880B
+	// (set) Token: 0x06019912 RID: 104722 RVA: 0x007DA61B File Offset: 0x007D881B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisappearOnRainy
 	{
@@ -147,9 +147,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002651 RID: 9809
-	// (get) Token: 0x0601BD4C RID: 113996 RVA: 0x007B23A8 File Offset: 0x007B05A8
-	// (set) Token: 0x0601BD4D RID: 113997 RVA: 0x007B23B8 File Offset: 0x007B05B8
+	// Token: 0x170028D3 RID: 10451
+	// (get) Token: 0x06019913 RID: 104723 RVA: 0x007DA62C File Offset: 0x007D882C
+	// (set) Token: 0x06019914 RID: 104724 RVA: 0x007DA63C File Offset: 0x007D883C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisappearOnThunderRain
 	{
@@ -163,9 +163,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002652 RID: 9810
-	// (get) Token: 0x0601BD4E RID: 113998 RVA: 0x007B23C9 File Offset: 0x007B05C9
-	// (set) Token: 0x0601BD4F RID: 113999 RVA: 0x007B23D9 File Offset: 0x007B05D9
+	// Token: 0x170028D4 RID: 10452
+	// (get) Token: 0x06019915 RID: 104725 RVA: 0x007DA64D File Offset: 0x007D884D
+	// (set) Token: 0x06019916 RID: 104726 RVA: 0x007DA65D File Offset: 0x007D885D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DisappearOnSnowy
 	{
@@ -179,9 +179,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002653 RID: 9811
-	// (get) Token: 0x0601BD50 RID: 114000 RVA: 0x007B23EA File Offset: 0x007B05EA
-	// (set) Token: 0x0601BD51 RID: 114001 RVA: 0x007B23FA File Offset: 0x007B05FA
+	// Token: 0x170028D5 RID: 10453
+	// (get) Token: 0x06019917 RID: 104727 RVA: 0x007DA66E File Offset: 0x007D886E
+	// (set) Token: 0x06019918 RID: 104728 RVA: 0x007DA67E File Offset: 0x007D887E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int LodLevel
 	{
@@ -195,9 +195,9 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002654 RID: 9812
-	// (get) Token: 0x0601BD52 RID: 114002 RVA: 0x007B240B File Offset: 0x007B060B
-	// (set) Token: 0x0601BD53 RID: 114003 RVA: 0x007B241B File Offset: 0x007B061B
+	// Token: 0x170028D6 RID: 10454
+	// (get) Token: 0x06019919 RID: 104729 RVA: 0x007DA68F File Offset: 0x007D888F
+	// (set) Token: 0x0601991A RID: 104730 RVA: 0x007DA69F File Offset: 0x007D889F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float DebugDitherValue
 	{
@@ -211,8 +211,8 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002655 RID: 9813
-	// (get) Token: 0x0601BD54 RID: 114004 RVA: 0x007B242C File Offset: 0x007B062C
+	// Token: 0x170028D7 RID: 10455
+	// (get) Token: 0x0601991B RID: 104731 RVA: 0x007DA6B0 File Offset: 0x007D88B0
 	[Nullable(1)]
 	public CharacterDitherEffectController DitherEffectController
 	{
@@ -227,27 +227,21 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD55 RID: 114005 RVA: 0x007B2450 File Offset: 0x007B0650
+	// Token: 0x0601991C RID: 104732 RVA: 0x007DA6D4 File Offset: 0x007D88D4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void EditorInit()
+	public override void EditorInit()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("EditorInit"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("EditorInit"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.EditorInit_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD56 RID: 114006 RVA: 0x007B24C0 File Offset: 0x007B06C0
+	// Token: 0x0601991D RID: 104733 RVA: 0x007DA730 File Offset: 0x007D8930
 	protected virtual void EditorInit_Implementation()
 	{
 		base.bEditorTickBySelected = true;
@@ -271,28 +265,25 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		base.EditorSetActorComponentsTickEnabled(false);
 	}
 
-	// Token: 0x0601BD57 RID: 114007 RVA: 0x007B258C File Offset: 0x007B078C
+	// Token: 0x0601991E RID: 104734 RVA: 0x007DA7FC File Offset: 0x007D89FC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void EditorTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("EditorTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AKuroEffectActor.__EditorTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("EditorTick"), TsSimpleNpc.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AKuroEffectActor.__EditorTick_FunctionParams*)ptr + 15L / (long)sizeof(AKuroEffectActor.__EditorTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.EditorTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AKuroEffectActor.__EditorTick_FunctionParams* ptr = stackalloc AKuroEffectActor.__EditorTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AKuroEffectActor.__EditorTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601BD58 RID: 114008 RVA: 0x007B2604 File Offset: 0x007B0804
+	// Token: 0x0601991F RID: 104735 RVA: 0x007DA888 File Offset: 0x007D8A88
 	protected virtual void EditorTick_Implementation(float deltaSeconds)
 	{
 		if (this.TempLocation == null)
@@ -353,33 +344,27 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD59 RID: 114009 RVA: 0x007B2798 File Offset: 0x007B0998
+	// Token: 0x06019920 RID: 104736 RVA: 0x007DAA1C File Offset: 0x007D8C1C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD5A RID: 114010 RVA: 0x007B2808 File Offset: 0x007B0A08
+	// Token: 0x06019921 RID: 104737 RVA: 0x007DAA75 File Offset: 0x007D8C75
 	protected virtual void ReceiveBeginPlay_Implementation()
 	{
 		this.InitData();
 	}
 
-	// Token: 0x0601BD5B RID: 114011 RVA: 0x007B2810 File Offset: 0x007B0A10
+	// Token: 0x06019922 RID: 104738 RVA: 0x007DAA80 File Offset: 0x007D8C80
 	public void InitData()
 	{
 		this.FindComponents();
@@ -393,7 +378,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		base.Tags.Add(CharacterNameDefines.Instance.NO_SLIDE);
 	}
 
-	// Token: 0x0601BD5C RID: 114012 RVA: 0x007B286C File Offset: 0x007B0A6C
+	// Token: 0x06019923 RID: 104739 RVA: 0x007DAADC File Offset: 0x007D8CDC
 	private void InitCollisionInfo()
 	{
 		this.CapsuleCollision.bCanCharacterStandOn = false;
@@ -403,7 +388,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		CollisionUtils.Instance.SetCollisionResponseToPawn(this.CapsuleCollision, EPawnChannel.All, ECollisionResponse.ECR_Block);
 	}
 
-	// Token: 0x0601BD5D RID: 114013 RVA: 0x007B28C0 File Offset: 0x007B0AC0
+	// Token: 0x06019924 RID: 104740 RVA: 0x007DAB30 File Offset: 0x007D8D30
 	private void InitBaseInfo()
 	{
 		this.FlowLogic = new SimpleNpcFlowLogic(this);
@@ -429,7 +414,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD5E RID: 114014 RVA: 0x007B2985 File Offset: 0x007B0B85
+	// Token: 0x06019925 RID: 104741 RVA: 0x007DABF5 File Offset: 0x007D8DF5
 	private void InitRenderInfo()
 	{
 		this.CharRenderingComponent.Init(ECharacterRenderingType.Npc);
@@ -437,7 +422,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.SetAnimUROParams();
 	}
 
-	// Token: 0x0601BD5F RID: 114015 RVA: 0x007B29A0 File Offset: 0x007B0BA0
+	// Token: 0x06019926 RID: 104742 RVA: 0x007DAC10 File Offset: 0x007D8E10
 	private void InitDaInfo()
 	{
 		if (ObjectUtils.SoftObjectPathIsValid(this.DA))
@@ -456,29 +441,26 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		SimpleNpcController.Instance.CheckNpcShowState(this, true, true);
 	}
 
-	// Token: 0x0601BD60 RID: 114016 RVA: 0x007B29FC File Offset: 0x007B0BFC
+	// Token: 0x06019927 RID: 104743 RVA: 0x007DAC6C File Offset: 0x007D8E6C
 	[NullableContext(0)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> endPlayReason)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveEndPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsSimpleNpc.__ReceiveEndPlay_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveEndPlay"), TsSimpleNpc.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsSimpleNpc.__ReceiveEndPlay_FunctionParams*)ptr + 15L / (long)sizeof(TsSimpleNpc.__ReceiveEndPlay_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->endPlayReason = endPlayReason;
+			this.ReceiveEndPlay_Implementation(endPlayReason);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsSimpleNpc.__ReceiveEndPlay_FunctionParams* ptr = stackalloc TsSimpleNpc.__ReceiveEndPlay_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsSimpleNpc.__ReceiveEndPlay_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->endPlayReason = endPlayReason;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601BD61 RID: 114017 RVA: 0x007B2A74 File Offset: 0x007B0C74
+	// Token: 0x06019928 RID: 104744 RVA: 0x007DACF8 File Offset: 0x007D8EF8
 	[NullableContext(0)]
 	protected unsafe void ReceiveEndPlay_Implementation(TEnumAsByte<EEndPlayReason> endPlayReason)
 	{
@@ -509,7 +491,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD62 RID: 114018 RVA: 0x007B2B50 File Offset: 0x007B0D50
+	// Token: 0x06019929 RID: 104745 RVA: 0x007DADD4 File Offset: 0x007D8FD4
 	private void FindComponents()
 	{
 		if (this.CapsuleCollision == null || !this.CapsuleCollision.IsValid())
@@ -526,27 +508,21 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD63 RID: 114019 RVA: 0x007B2BF0 File Offset: 0x007B0DF0
+	// Token: 0x0601992A RID: 104746 RVA: 0x007DAE74 File Offset: 0x007D9074
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void LoadModel()
+	public virtual void LoadModel()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("LoadModel"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("LoadModel"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.LoadModel_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD64 RID: 114020 RVA: 0x007B2C60 File Offset: 0x007B0E60
+	// Token: 0x0601992B RID: 104747 RVA: 0x007DAECD File Offset: 0x007D90CD
 	protected void LoadModel_Implementation()
 	{
 		this.FindComponents();
@@ -554,54 +530,45 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.LoadModelByDA();
 	}
 
-	// Token: 0x0601BD65 RID: 114021 RVA: 0x007B2C78 File Offset: 0x007B0E78
+	// Token: 0x0601992C RID: 104748 RVA: 0x007DAEE4 File Offset: 0x007D90E4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void DebugSetNpcDitherValue(float value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DebugSetNpcDitherValue"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DebugSetNpcDitherValue"), TsSimpleNpc.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams*)ptr + 15L / (long)sizeof(TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->value = value;
+			this.DebugSetNpcDitherValue_Implementation(value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams* ptr = stackalloc TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601BD66 RID: 114022 RVA: 0x007B2CEE File Offset: 0x007B0EEE
+	// Token: 0x0601992D RID: 104749 RVA: 0x007DAF70 File Offset: 0x007D9170
 	protected void DebugSetNpcDitherValue_Implementation(float value)
 	{
 		this.SetDitherEffect(value, ECharacterDitherType.Fight);
 	}
 
-	// Token: 0x0601BD67 RID: 114023 RVA: 0x007B2CF8 File Offset: 0x007B0EF8
+	// Token: 0x0601992E RID: 104750 RVA: 0x007DAF7C File Offset: 0x007D917C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void SetDefaultCollision()
+	public virtual void SetDefaultCollision()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDefaultCollision"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDefaultCollision"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.SetDefaultCollision_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD68 RID: 114024 RVA: 0x007B2D68 File Offset: 0x007B0F68
+	// Token: 0x0601992F RID: 104751 RVA: 0x007DAFD8 File Offset: 0x007D91D8
 	protected void SetDefaultCollision_Implementation()
 	{
 		USkeletalMeshComponent mesh = this.Mesh;
@@ -616,27 +583,21 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.CapsuleCollision.CapsuleRadius = 25f;
 	}
 
-	// Token: 0x0601BD69 RID: 114025 RVA: 0x007B2DE4 File Offset: 0x007B0FE4
+	// Token: 0x06019930 RID: 104752 RVA: 0x007DB054 File Offset: 0x007D9254
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ResetMeshLocation()
+	public virtual void ResetMeshLocation()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ResetMeshLocation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ResetMeshLocation"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ResetMeshLocation_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD6A RID: 114026 RVA: 0x007B2E54 File Offset: 0x007B1054
+	// Token: 0x06019931 RID: 104753 RVA: 0x007DB0B0 File Offset: 0x007D92B0
 	protected void ResetMeshLocation_Implementation()
 	{
 		FHitResult fhitResult = new FHitResult();
@@ -648,27 +609,21 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref fhitResult, false);
 	}
 
-	// Token: 0x0601BD6B RID: 114027 RVA: 0x007B2ECC File Offset: 0x007B10CC
+	// Token: 0x06019932 RID: 104754 RVA: 0x007DB128 File Offset: 0x007D9328
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void FindFloor()
+	public virtual void FindFloor()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("FindFloor"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("FindFloor"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.FindFloor_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD6C RID: 114028 RVA: 0x007B2F3C File Offset: 0x007B113C
+	// Token: 0x06019933 RID: 104755 RVA: 0x007DB184 File Offset: 0x007D9384
 	protected void FindFloor_Implementation()
 	{
 		this.FindComponents();
@@ -700,7 +655,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD6D RID: 114029 RVA: 0x007B3068 File Offset: 0x007B1268
+	// Token: 0x06019934 RID: 104756 RVA: 0x007DB2B0 File Offset: 0x007D94B0
 	public bool LoadModelByDA()
 	{
 		if (this.CapsuleCollision == null || this.Mesh == null)
@@ -728,7 +683,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		return true;
 	}
 
-	// Token: 0x0601BD6E RID: 114030 RVA: 0x007B30DC File Offset: 0x007B12DC
+	// Token: 0x06019935 RID: 104757 RVA: 0x007DB324 File Offset: 0x007D9524
 	private void HandleLoadedDaConfig(PD_NpcSetupData_C daConfig, bool isEditor = false)
 	{
 		if (daConfig == null)
@@ -754,7 +709,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.NeedResetCollision = true;
 	}
 
-	// Token: 0x0601BD6F RID: 114031 RVA: 0x007B3167 File Offset: 0x007B1367
+	// Token: 0x06019936 RID: 104758 RVA: 0x007DB3AF File Offset: 0x007D95AF
 	public void StartFlowLogic()
 	{
 		if (this.FlowLogic == null)
@@ -764,36 +719,33 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.FlowLogic.StartFlowLogic();
 	}
 
-	// Token: 0x0601BD70 RID: 114032 RVA: 0x007B317D File Offset: 0x007B137D
+	// Token: 0x06019937 RID: 104759 RVA: 0x007DB3C5 File Offset: 0x007D95C5
 	public void SetDitherEffect(float dither, ECharacterDitherType ditherType = ECharacterDitherType.Temporary)
 	{
 		this.DitherEffectController.SetDitherEffect((double)dither, ditherType, true);
 	}
 
-	// Token: 0x0601BD71 RID: 114033 RVA: 0x007B3190 File Offset: 0x007B1390
+	// Token: 0x06019938 RID: 104760 RVA: 0x007DB3D8 File Offset: 0x007D95D8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ShowDialog(string text, float removeSeconds = -1f)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ShowDialog"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsSimpleNpc.__ShowDialog_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ShowDialog"), TsSimpleNpc.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsSimpleNpc.__ShowDialog_FunctionParams*)ptr + 15L / (long)sizeof(TsSimpleNpc.__ShowDialog_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->text), text);
-			ptr2->removeSeconds = removeSeconds;
+			this.ShowDialog_Implementation(text, removeSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsSimpleNpc.__ShowDialog_FunctionParams* ptr = stackalloc TsSimpleNpc.__ShowDialog_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsSimpleNpc.__ShowDialog_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->text), text);
+		ptr->removeSeconds = removeSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601BD72 RID: 114034 RVA: 0x007B3214 File Offset: 0x007B1414
+	// Token: 0x06019939 RID: 104761 RVA: 0x007DB474 File Offset: 0x007D9674
 	[NullableContext(1)]
 	protected void ShowDialog_Implementation(string text, float removeSeconds = -1f)
 	{
@@ -807,27 +759,21 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}).Forget();
 	}
 
-	// Token: 0x0601BD73 RID: 114035 RVA: 0x007B3268 File Offset: 0x007B1468
+	// Token: 0x0601993A RID: 104762 RVA: 0x007DB4C8 File Offset: 0x007D96C8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void HideDialog()
+	public virtual void HideDialog()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("HideDialog"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("HideDialog"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.HideDialog_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD74 RID: 114036 RVA: 0x007B32D8 File Offset: 0x007B14D8
+	// Token: 0x0601993B RID: 104763 RVA: 0x007DB521 File Offset: 0x007D9721
 	protected void HideDialog_Implementation()
 	{
 		if (this.FlowLogic == null)
@@ -837,58 +783,48 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.FlowLogic.HideDialog();
 	}
 
-	// Token: 0x0601BD75 RID: 114037 RVA: 0x007B32F0 File Offset: 0x007B14F0
+	// Token: 0x0601993C RID: 104764 RVA: 0x007DB538 File Offset: 0x007D9738
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool TryPlayMontage(string montagePath)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("TryPlayMontage"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsSimpleNpc.__TryPlayMontage_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("TryPlayMontage"), TsSimpleNpc.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsSimpleNpc.__TryPlayMontage_FunctionParams*)ptr + 15L / (long)sizeof(TsSimpleNpc.__TryPlayMontage_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->montagePath), montagePath);
+			return this.TryPlayMontage_Implementation(montagePath);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsSimpleNpc.__TryPlayMontage_FunctionParams* ptr = stackalloc TsSimpleNpc.__TryPlayMontage_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsSimpleNpc.__TryPlayMontage_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->montagePath), montagePath);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601BD76 RID: 114038 RVA: 0x007B3372 File Offset: 0x007B1572
+	// Token: 0x0601993D RID: 104765 RVA: 0x007DB5D0 File Offset: 0x007D97D0
 	[NullableContext(1)]
 	protected bool TryPlayMontage_Implementation(string montagePath)
 	{
 		return this.FlowLogic != null && this.FlowLogic.TryPlayMontage(montagePath);
 	}
 
-	// Token: 0x0601BD77 RID: 114039 RVA: 0x007B338C File Offset: 0x007B158C
+	// Token: 0x0601993E RID: 104766 RVA: 0x007DB5E8 File Offset: 0x007D97E8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void StopMontage()
+	public virtual void StopMontage()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("StopMontage"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSimpleNpc) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("StopMontage"), TsSimpleNpc.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.StopMontage_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601BD78 RID: 114040 RVA: 0x007B33FC File Offset: 0x007B15FC
+	// Token: 0x0601993F RID: 104767 RVA: 0x007DB641 File Offset: 0x007D9841
 	protected void StopMontage_Implementation()
 	{
 		if (this.FlowLogic == null)
@@ -898,7 +834,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.FlowLogic.StopMontage();
 	}
 
-	// Token: 0x0601BD79 RID: 114041 RVA: 0x007B3412 File Offset: 0x007B1612
+	// Token: 0x06019940 RID: 104768 RVA: 0x007DB657 File Offset: 0x007D9857
 	public void FilterFlowWorldState()
 	{
 		SimpleNpcFlowLogic flowLogic = this.FlowLogic;
@@ -909,8 +845,8 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		flowLogic.FilterFlowWorldState();
 	}
 
-	// Token: 0x17002656 RID: 9814
-	// (get) Token: 0x0601BD7A RID: 114042 RVA: 0x007B3424 File Offset: 0x007B1624
+	// Token: 0x170028D8 RID: 10456
+	// (get) Token: 0x06019941 RID: 104769 RVA: 0x007DB669 File Offset: 0x007D9869
 	public bool IsHiding
 	{
 		get
@@ -919,8 +855,8 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002657 RID: 9815
-	// (get) Token: 0x0601BD7B RID: 114043 RVA: 0x007B342F File Offset: 0x007B162F
+	// Token: 0x170028D9 RID: 10457
+	// (get) Token: 0x06019942 RID: 104770 RVA: 0x007DB674 File Offset: 0x007D9874
 	public FVectorDouble SelfLocation
 	{
 		get
@@ -929,8 +865,8 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002658 RID: 9816
-	// (get) Token: 0x0601BD7C RID: 114044 RVA: 0x007B343C File Offset: 0x007B163C
+	// Token: 0x170028DA RID: 10458
+	// (get) Token: 0x06019943 RID: 104771 RVA: 0x007DB681 File Offset: 0x007D9881
 	[Nullable(1)]
 	public Vector SelfLocationProxy
 	{
@@ -941,8 +877,8 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17002659 RID: 9817
-	// (get) Token: 0x0601BD7D RID: 114045 RVA: 0x007B3444 File Offset: 0x007B1644
+	// Token: 0x170028DB RID: 10459
+	// (get) Token: 0x06019944 RID: 104772 RVA: 0x007DB689 File Offset: 0x007D9889
 	public bool IsInLogicRange
 	{
 		get
@@ -951,7 +887,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD7E RID: 114046 RVA: 0x007B3454 File Offset: 0x007B1654
+	// Token: 0x06019945 RID: 104773 RVA: 0x007DB698 File Offset: 0x007D9898
 	public void ChangeLogicRangeState(bool isInLogicRange)
 	{
 		bool? isInLogicRangeInternal = this.IsInLogicRangeInternal;
@@ -974,7 +910,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.IsInLogicRangeInternal = new bool?(isInLogicRange);
 	}
 
-	// Token: 0x0601BD7F RID: 114047 RVA: 0x007B34B8 File Offset: 0x007B16B8
+	// Token: 0x06019946 RID: 104774 RVA: 0x007DB6FC File Offset: 0x007D98FC
 	private void SetLogicTickRunning(bool isRun)
 	{
 		if (!isRun)
@@ -1004,7 +940,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}, 100f, 1f, null, null, true);
 	}
 
-	// Token: 0x0601BD80 RID: 114048 RVA: 0x007B3554 File Offset: 0x007B1754
+	// Token: 0x06019947 RID: 104775 RVA: 0x007DB798 File Offset: 0x007D9998
 	private void OnLogicTick()
 	{
 		double worldTimeSeconds = Time.Instance.WorldTimeSeconds;
@@ -1016,13 +952,13 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD81 RID: 114049 RVA: 0x007B3593 File Offset: 0x007B1793
+	// Token: 0x06019948 RID: 104776 RVA: 0x007DB7D7 File Offset: 0x007D99D7
 	private void CacheComponents()
 	{
 		this.CachedComponents = base.K2_GetComponentsByClass(UActorComponent.StaticClass());
 	}
 
-	// Token: 0x0601BD82 RID: 114050 RVA: 0x007B35AC File Offset: 0x007B17AC
+	// Token: 0x06019949 RID: 104777 RVA: 0x007DB7F0 File Offset: 0x007D99F0
 	public void SetTickEnabled(bool value)
 	{
 		bool? isTickEnabled = this.IsTickEnabled;
@@ -1045,7 +981,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD83 RID: 114051 RVA: 0x007B362C File Offset: 0x007B182C
+	// Token: 0x0601994A RID: 104778 RVA: 0x007DB870 File Offset: 0x007D9A70
 	private void CloseSkeletalMeshShadow()
 	{
 		if (this.CachedComponents == null)
@@ -1070,7 +1006,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD84 RID: 114052 RVA: 0x007B36A0 File Offset: 0x007B18A0
+	// Token: 0x0601994B RID: 104779 RVA: 0x007DB8E4 File Offset: 0x007D9AE4
 	public unsafe void SetMainShadowEnabled(bool value)
 	{
 		bool? isShowShadow = this.IsShowShadow;
@@ -1119,8 +1055,8 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700265A RID: 9818
-	// (get) Token: 0x0601BD85 RID: 114053 RVA: 0x007B3831 File Offset: 0x007B1A31
+	// Token: 0x170028DC RID: 10460
+	// (get) Token: 0x0601994C RID: 104780 RVA: 0x007DBA75 File Offset: 0x007D9C75
 	public bool IsLodShow
 	{
 		get
@@ -1129,7 +1065,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD86 RID: 114054 RVA: 0x007B3858 File Offset: 0x007B1A58
+	// Token: 0x0601994D RID: 104781 RVA: 0x007DBA9C File Offset: 0x007D9C9C
 	private void SetAnimUROParams()
 	{
 		FAnimUpdateRateParameters fanimUpdateRateParameters = new FAnimUpdateRateParameters();
@@ -1154,7 +1090,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0601BD87 RID: 114055 RVA: 0x007B3916 File Offset: 0x007B1B16
+	// Token: 0x0601994E RID: 104782 RVA: 0x007DBB5A File Offset: 0x007D9D5A
 	public static void CreateStaticDefaultValue()
 	{
 		TsSimpleNpc.InstanceCount = 0;
@@ -1162,7 +1098,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		TsSimpleNpc.SphereTrace = null;
 	}
 
-	// Token: 0x0601BD88 RID: 114056 RVA: 0x007B392A File Offset: 0x007B1B2A
+	// Token: 0x0601994F RID: 104783 RVA: 0x007DBB6E File Offset: 0x007D9D6E
 	public static void ResetStaticDefaultValue()
 	{
 		TsSimpleNpc.InstanceCount = 0;
@@ -1170,7 +1106,7 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		TsSimpleNpc.SphereTrace = null;
 	}
 
-	// Token: 0x0601BD89 RID: 114057 RVA: 0x007B393E File Offset: 0x007B1B3E
+	// Token: 0x06019950 RID: 104784 RVA: 0x007DBB82 File Offset: 0x007D9D82
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSimpleNpc._ClassPtr == IntPtr.Zero)
@@ -1180,80 +1116,80 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		return TsSimpleNpc._ClassPtr;
 	}
 
-	// Token: 0x0601BD8A RID: 114058 RVA: 0x007B3964 File Offset: 0x007B1B64
+	// Token: 0x06019951 RID: 104785 RVA: 0x007DBBA8 File Offset: 0x007D9DA8
 	public TsSimpleNpc() : this(BuiltinUtils.AllocNativeUObject(TsSimpleNpc.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601BD8B RID: 114059 RVA: 0x007B398C File Offset: 0x007B1B8C
+	// Token: 0x06019952 RID: 104786 RVA: 0x007DBBD0 File Offset: 0x007D9DD0
 	[NullableContext(1)]
 	public TsSimpleNpc(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSimpleNpc.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601BD8C RID: 114060 RVA: 0x007B39BF File Offset: 0x007B1BBF
+	// Token: 0x06019953 RID: 104787 RVA: 0x007DBC03 File Offset: 0x007D9E03
 	protected TsSimpleNpc(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601BD8D RID: 114061 RVA: 0x007B39C8 File Offset: 0x007B1BC8
+	// Token: 0x06019954 RID: 104788 RVA: 0x007DBC0C File Offset: 0x007D9E0C
 	protected virtual void __CPPCALL_EditorInit_Implementation()
 	{
 		this.EditorInit_Implementation();
 	}
 
-	// Token: 0x0601BD8E RID: 114062 RVA: 0x007B39D0 File Offset: 0x007B1BD0
+	// Token: 0x06019955 RID: 104789 RVA: 0x007DBC14 File Offset: 0x007D9E14
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_EditorTick_Implementation(AKuroEffectActor.__EditorTick_FunctionParams* __Params)
 	{
 		this.EditorTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x0601BD8F RID: 114063 RVA: 0x007B39DE File Offset: 0x007B1BDE
+	// Token: 0x06019956 RID: 104790 RVA: 0x007DBC22 File Offset: 0x007D9E22
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x0601BD90 RID: 114064 RVA: 0x007B39E6 File Offset: 0x007B1BE6
+	// Token: 0x06019957 RID: 104791 RVA: 0x007DBC2A File Offset: 0x007D9E2A
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveEndPlay_Implementation(TsSimpleNpc.__ReceiveEndPlay_FunctionParams* __Params)
 	{
 		this.ReceiveEndPlay_Implementation(__Params->endPlayReason);
 	}
 
-	// Token: 0x0601BD91 RID: 114065 RVA: 0x007B39F4 File Offset: 0x007B1BF4
+	// Token: 0x06019958 RID: 104792 RVA: 0x007DBC38 File Offset: 0x007D9E38
 	protected virtual void __CPPCALL_LoadModel_Implementation()
 	{
 		this.LoadModel_Implementation();
 	}
 
-	// Token: 0x0601BD92 RID: 114066 RVA: 0x007B39FC File Offset: 0x007B1BFC
+	// Token: 0x06019959 RID: 104793 RVA: 0x007DBC40 File Offset: 0x007D9E40
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_DebugSetNpcDitherValue_Implementation(TsSimpleNpc.__DebugSetNpcDitherValue_FunctionParams* __Params)
 	{
 		this.DebugSetNpcDitherValue_Implementation(__Params->value);
 	}
 
-	// Token: 0x0601BD93 RID: 114067 RVA: 0x007B3A0A File Offset: 0x007B1C0A
+	// Token: 0x0601995A RID: 104794 RVA: 0x007DBC4E File Offset: 0x007D9E4E
 	protected virtual void __CPPCALL_SetDefaultCollision_Implementation()
 	{
 		this.SetDefaultCollision_Implementation();
 	}
 
-	// Token: 0x0601BD94 RID: 114068 RVA: 0x007B3A12 File Offset: 0x007B1C12
+	// Token: 0x0601995B RID: 104795 RVA: 0x007DBC56 File Offset: 0x007D9E56
 	protected virtual void __CPPCALL_ResetMeshLocation_Implementation()
 	{
 		this.ResetMeshLocation_Implementation();
 	}
 
-	// Token: 0x0601BD95 RID: 114069 RVA: 0x007B3A1A File Offset: 0x007B1C1A
+	// Token: 0x0601995C RID: 104796 RVA: 0x007DBC5E File Offset: 0x007D9E5E
 	protected virtual void __CPPCALL_FindFloor_Implementation()
 	{
 		this.FindFloor_Implementation();
 	}
 
-	// Token: 0x0601BD96 RID: 114070 RVA: 0x007B3A24 File Offset: 0x007B1C24
+	// Token: 0x0601995D RID: 104797 RVA: 0x007DBC68 File Offset: 0x007D9E68
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ShowDialog_Implementation(TsSimpleNpc.__ShowDialog_FunctionParams* __Params)
 	{
@@ -1261,13 +1197,13 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		this.ShowDialog_Implementation(text, __Params->removeSeconds);
 	}
 
-	// Token: 0x0601BD97 RID: 114071 RVA: 0x007B3A4B File Offset: 0x007B1C4B
+	// Token: 0x0601995E RID: 104798 RVA: 0x007DBC8F File Offset: 0x007D9E8F
 	protected virtual void __CPPCALL_HideDialog_Implementation()
 	{
 		this.HideDialog_Implementation();
 	}
 
-	// Token: 0x0601BD98 RID: 114072 RVA: 0x007B3A54 File Offset: 0x007B1C54
+	// Token: 0x0601995F RID: 104799 RVA: 0x007DBC98 File Offset: 0x007D9E98
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_TryPlayMontage_Implementation(TsSimpleNpc.__TryPlayMontage_FunctionParams* __Params)
 	{
@@ -1275,107 +1211,107 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 		__Params->__Result = this.TryPlayMontage_Implementation(montagePath);
 	}
 
-	// Token: 0x0601BD99 RID: 114073 RVA: 0x007B3A7B File Offset: 0x007B1C7B
+	// Token: 0x06019960 RID: 104800 RVA: 0x007DBCBF File Offset: 0x007D9EBF
 	protected virtual void __CPPCALL_StopMontage_Implementation()
 	{
 		this.StopMontage_Implementation();
 	}
 
-	// Token: 0x0400DB99 RID: 56217
+	// Token: 0x0400E038 RID: 57400
 	[Nullable(1)]
 	private const string PROFILE_KEY = "SimpleNpc_FindFloor";
 
-	// Token: 0x0400DB9A RID: 56218
+	// Token: 0x0400E039 RID: 57401
 	private const float DEFAULT_HALF_HEIGHT = 85f;
 
-	// Token: 0x0400DB9B RID: 56219
+	// Token: 0x0400E03A RID: 57402
 	private const float DEFAULT_RADIUS = 25f;
 
-	// Token: 0x0400DB9C RID: 56220
+	// Token: 0x0400E03B RID: 57403
 	private const float DEFAULT_MESH_YAW = -90f;
 
-	// Token: 0x0400DB9D RID: 56221
+	// Token: 0x0400E03C RID: 57404
 	private const float FIND_FLOOR_RAY_LENGTH = 500f;
 
-	// Token: 0x0400DB9E RID: 56222
+	// Token: 0x0400E03D RID: 57405
 	private const float MIN_EDITOR_MOVE_CHANGED = 900f;
 
-	// Token: 0x0400DB9F RID: 56223
+	// Token: 0x0400E03E RID: 57406
 	private const int LOGIC_TICK_INTERVAL = 100;
 
-	// Token: 0x0400DBA0 RID: 56224
+	// Token: 0x0400E03F RID: 57407
 	public double TempDistanceSquared;
 
-	// Token: 0x0400DBA1 RID: 56225
+	// Token: 0x0400E040 RID: 57408
 	public float CurDither;
 
-	// Token: 0x0400DBA2 RID: 56226
+	// Token: 0x0400E041 RID: 57409
 	public bool IsNotUnload;
 
-	// Token: 0x0400DBA3 RID: 56227
+	// Token: 0x0400E042 RID: 57410
 	private SimpleNpcFlowLogic FlowLogic;
 
-	// Token: 0x0400DBA4 RID: 56228
+	// Token: 0x0400E043 RID: 57411
 	private Vector TempLocation;
 
-	// Token: 0x0400DBA5 RID: 56229
+	// Token: 0x0400E044 RID: 57412
 	private Vector CachedLocation;
 
-	// Token: 0x0400DBA6 RID: 56230
+	// Token: 0x0400E045 RID: 57413
 	private UAnimInstance TempAnimInstance;
 
-	// Token: 0x0400DBA7 RID: 56231
+	// Token: 0x0400E046 RID: 57414
 	private UAnimationAsset TempAnimAsset;
 
-	// Token: 0x0400DBA8 RID: 56232
+	// Token: 0x0400E047 RID: 57415
 	private string TempDaPath;
 
-	// Token: 0x0400DBA9 RID: 56233
+	// Token: 0x0400E048 RID: 57416
 	private bool NeedResetCollision;
 
-	// Token: 0x0400DBAA RID: 56234
+	// Token: 0x0400E049 RID: 57417
 	private bool IsDirty;
 
-	// Token: 0x0400DBAB RID: 56235
+	// Token: 0x0400E04A RID: 57418
 	private FVectorDouble? StartLocation;
 
-	// Token: 0x0400DBAC RID: 56236
+	// Token: 0x0400E04B RID: 57419
 	private Vector StartLocationProxy;
 
-	// Token: 0x0400DBAD RID: 56237
+	// Token: 0x0400E04C RID: 57420
 	private int InstanceId;
 
-	// Token: 0x0400DBAE RID: 56238
+	// Token: 0x0400E04D RID: 57421
 	private CharacterDitherEffectController DitherEffectControllerInternal;
 
-	// Token: 0x0400DBAF RID: 56239
+	// Token: 0x0400E04E RID: 57422
 	private bool? IsInLogicRangeInternal;
 
-	// Token: 0x0400DBB0 RID: 56240
+	// Token: 0x0400E04F RID: 57423
 	private TimerHandle RegisterLoopTimerId;
 
-	// Token: 0x0400DBB1 RID: 56241
+	// Token: 0x0400E050 RID: 57424
 	private float LastGameSeconds;
 
-	// Token: 0x0400DBB2 RID: 56242
+	// Token: 0x0400E051 RID: 57425
 	private bool IsModelLoadedInternal;
 
-	// Token: 0x0400DBB3 RID: 56243
+	// Token: 0x0400E052 RID: 57426
 	private static int InstanceCount;
 
-	// Token: 0x0400DBB4 RID: 56244
+	// Token: 0x0400E053 RID: 57427
 	private static int DeleteCount;
 
-	// Token: 0x0400DBB5 RID: 56245
+	// Token: 0x0400E054 RID: 57428
 	private static UTraceSphereElement SphereTrace;
 
-	// Token: 0x0400DBB6 RID: 56246
+	// Token: 0x0400E055 RID: 57429
 	private bool? IsShowShadow;
 
-	// Token: 0x0400DBB7 RID: 56247
+	// Token: 0x0400E056 RID: 57430
 	private bool? IsTickEnabled;
 
-	// Token: 0x0400DBB8 RID: 56248
+	// Token: 0x0400E057 RID: 57431
 	[Nullable(new byte[]
 	{
 		2,
@@ -1383,100 +1319,100 @@ public class TsSimpleNpc : AKuroEffectActor, IStaticVariableResetter, IUnrealUOb
 	})]
 	private TArray<UActorComponent> CachedComponents;
 
-	// Token: 0x0400DBB9 RID: 56249
+	// Token: 0x0400E058 RID: 57432
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/SimpleNpc/Blueprint/TsSimpleNpc.TsSimpleNpc_C";
 
-	// Token: 0x0400DBBA RID: 56250
+	// Token: 0x0400E059 RID: 57433
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DBBB RID: 56251
+	// Token: 0x0400E05A RID: 57434
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400DBBC RID: 56252
+	// Token: 0x0400E05B RID: 57435
 	private static int __PropertyOffset_CapsuleCollision;
 
-	// Token: 0x0400DBBD RID: 56253
+	// Token: 0x0400E05C RID: 57436
 	private static int __PropertyOffset_Mesh;
 
-	// Token: 0x0400DBBE RID: 56254
+	// Token: 0x0400E05D RID: 57437
 	private static int __PropertyOffset_CharRenderingComponent;
 
-	// Token: 0x0400DBBF RID: 56255
+	// Token: 0x0400E05E RID: 57438
 	private static int __PropertyOffset_DA;
 
-	// Token: 0x0400DBC0 RID: 56256
+	// Token: 0x0400E05F RID: 57439
 	private FSoftObjectPath _DA;
 
-	// Token: 0x0400DBC1 RID: 56257
+	// Token: 0x0400E060 RID: 57440
 	private static int __PropertyOffset_DisappearOnSunny;
 
-	// Token: 0x0400DBC2 RID: 56258
+	// Token: 0x0400E061 RID: 57441
 	private static int __PropertyOffset_DisappearOnCloudy;
 
-	// Token: 0x0400DBC3 RID: 56259
+	// Token: 0x0400E062 RID: 57442
 	private static int __PropertyOffset_DisappearOnRainy;
 
-	// Token: 0x0400DBC4 RID: 56260
+	// Token: 0x0400E063 RID: 57443
 	private static int __PropertyOffset_DisappearOnThunderRain;
 
-	// Token: 0x0400DBC5 RID: 56261
+	// Token: 0x0400E064 RID: 57444
 	private static int __PropertyOffset_DisappearOnSnowy;
 
-	// Token: 0x0400DBC6 RID: 56262
+	// Token: 0x0400E065 RID: 57445
 	private static int __PropertyOffset_LodLevel;
 
-	// Token: 0x0400DBC7 RID: 56263
+	// Token: 0x0400E066 RID: 57446
 	private static int __PropertyOffset_DebugDitherValue;
 
-	// Token: 0x02009732 RID: 38706
+	// Token: 0x02008958 RID: 35160
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected new ref struct __ReceiveEndPlay_FunctionParams
 	{
-		// Token: 0x04030636 RID: 198198
+		// Token: 0x0402BCCC RID: 179404
 		[FieldOffset(0)]
 		public TEnumAsByte<EEndPlayReason> endPlayReason;
 	}
 
-	// Token: 0x02009733 RID: 38707
+	// Token: 0x02008959 RID: 35161
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __DebugSetNpcDitherValue_FunctionParams
 	{
-		// Token: 0x04030637 RID: 198199
+		// Token: 0x0402BCCD RID: 179405
 		[FieldOffset(0)]
 		public float value;
 	}
 
-	// Token: 0x02009734 RID: 38708
+	// Token: 0x0200895A RID: 35162
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ShowDialog_FunctionParams
 	{
-		// Token: 0x04030638 RID: 198200
+		// Token: 0x0402BCCE RID: 179406
 		[FieldOffset(0)]
 		public FString text;
 
-		// Token: 0x04030639 RID: 198201
+		// Token: 0x0402BCCF RID: 179407
 		[FieldOffset(16)]
 		public float removeSeconds;
 	}
 
-	// Token: 0x02009735 RID: 38709
+	// Token: 0x0200895B RID: 35163
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TryPlayMontage_FunctionParams
 	{
-		// Token: 0x0403063A RID: 198202
+		// Token: 0x0402BCD0 RID: 179408
 		[FieldOffset(0)]
 		public FString montagePath;
 
-		// Token: 0x0403063B RID: 198203
+		// Token: 0x0402BCD1 RID: 179409
 		[FieldOffset(16)]
 		public bool __Result;
 	}

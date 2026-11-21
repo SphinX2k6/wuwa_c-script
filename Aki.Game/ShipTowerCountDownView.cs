@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029A3 RID: 10659
+// Token: 0x02001F1E RID: 7966
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerCountDownView : UiViewBase
 {
-	// Token: 0x0601618B RID: 90507 RVA: 0x00596515 File Offset: 0x00594715
+	// Token: 0x06013B91 RID: 80785 RVA: 0x005C14D5 File Offset: 0x005BF6D5
 	public ShipTowerCountDownView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601618C RID: 90508 RVA: 0x0059652C File Offset: 0x0059472C
+	// Token: 0x06013B92 RID: 80786 RVA: 0x005C14EC File Offset: 0x005BF6EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,12 +28,12 @@ public class ShipTowerCountDownView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601618D RID: 90509 RVA: 0x00596586 File Offset: 0x00594786
+	// Token: 0x06013B93 RID: 80787 RVA: 0x005C1546 File Offset: 0x005BF746
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x0601618E RID: 90510 RVA: 0x00596588 File Offset: 0x00594788
+	// Token: 0x06013B94 RID: 80788 RVA: 0x005C1548 File Offset: 0x005BF748
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerCountDownView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -44,39 +44,39 @@ public class ShipTowerCountDownView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601618F RID: 90511 RVA: 0x005965CB File Offset: 0x005947CB
+	// Token: 0x06013B95 RID: 80789 RVA: 0x005C158B File Offset: 0x005BF78B
 	protected override void OnStart()
 	{
 		this.HideWave();
 	}
 
-	// Token: 0x06016190 RID: 90512 RVA: 0x005965D3 File Offset: 0x005947D3
+	// Token: 0x06013B96 RID: 80790 RVA: 0x005C1593 File Offset: 0x005BF793
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<double, double>(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.EventUpdateCountDown));
 		EventSystem.Instance.Add<string>(EEventName.ShipTowerBattleTip, new Action<string>(this.EventShipTowerBattleTip));
 	}
 
-	// Token: 0x06016191 RID: 90513 RVA: 0x0059660D File Offset: 0x0059480D
+	// Token: 0x06013B97 RID: 80791 RVA: 0x005C15CD File Offset: 0x005BF7CD
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.EventUpdateCountDown));
 		EventSystem.Instance.Remove(EEventName.ShipTowerBattleTip, new Action<string>(this.EventShipTowerBattleTip));
 	}
 
-	// Token: 0x06016192 RID: 90514 RVA: 0x00596647 File Offset: 0x00594847
+	// Token: 0x06013B98 RID: 80792 RVA: 0x005C1607 File Offset: 0x005BF807
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearWaveTimer();
 	}
 
-	// Token: 0x06016193 RID: 90515 RVA: 0x0059664F File Offset: 0x0059484F
+	// Token: 0x06013B99 RID: 80793 RVA: 0x005C160F File Offset: 0x005BF80F
 	private string FormatTimeUnit(int value)
 	{
 		return ((value < 10) ? "0" : "") + value.ToString();
 	}
 
-	// Token: 0x06016194 RID: 90516 RVA: 0x00596670 File Offset: 0x00594870
+	// Token: 0x06013B9A RID: 80794 RVA: 0x005C1630 File Offset: 0x005BF830
 	private void EventUpdateCountDown(double remainTime, double timerEndTime)
 	{
 		int value = (int)Math.Floor(remainTime % TimeUtil.Instance.Hour / TimeUtil.Instance.Minute);
@@ -100,14 +100,14 @@ public class ShipTowerCountDownView : UiViewBase
 		}), true);
 	}
 
-	// Token: 0x06016195 RID: 90517 RVA: 0x0059671C File Offset: 0x0059491C
+	// Token: 0x06013B9B RID: 80795 RVA: 0x005C16DC File Offset: 0x005BF8DC
 	private void EventShipTowerBattleTip(string text)
 	{
 		this.TipQueue.Add(text);
 		this.TryShowNextTip();
 	}
 
-	// Token: 0x06016196 RID: 90518 RVA: 0x00596730 File Offset: 0x00594930
+	// Token: 0x06013B9C RID: 80796 RVA: 0x005C16F0 File Offset: 0x005BF8F0
 	private void TryShowNextTip()
 	{
 		if (this.IsTipShowing || this.TipQueue.Count == 0)
@@ -133,7 +133,7 @@ public class ShipTowerCountDownView : UiViewBase
 		base.PlaySequence("WaveIn", null, false);
 	}
 
-	// Token: 0x06016197 RID: 90519 RVA: 0x005967D8 File Offset: 0x005949D8
+	// Token: 0x06013B9D RID: 80797 RVA: 0x005C1798 File Offset: 0x005BF998
 	private void HideWave()
 	{
 		UUIItem item = base.GetItem(1);
@@ -145,13 +145,13 @@ public class ShipTowerCountDownView : UiViewBase
 		this.TryShowNextTip();
 	}
 
-	// Token: 0x06016198 RID: 90520 RVA: 0x005967FA File Offset: 0x005949FA
+	// Token: 0x06013B9E RID: 80798 RVA: 0x005C17BA File Offset: 0x005BF9BA
 	private void HideWaveCallback(float _)
 	{
 		this.HideWaveAsync().Forget();
 	}
 
-	// Token: 0x06016199 RID: 90521 RVA: 0x00596808 File Offset: 0x00594A08
+	// Token: 0x06013B9F RID: 80799 RVA: 0x005C17C8 File Offset: 0x005BF9C8
 	private UniTask HideWaveAsync()
 	{
 		ShipTowerCountDownView.<HideWaveAsync>d__19 <HideWaveAsync>d__;
@@ -162,7 +162,7 @@ public class ShipTowerCountDownView : UiViewBase
 		return <HideWaveAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601619A RID: 90522 RVA: 0x0059684B File Offset: 0x00594A4B
+	// Token: 0x06013BA0 RID: 80800 RVA: 0x005C180B File Offset: 0x005BFA0B
 	private void ClearWaveTimer()
 	{
 		if (this.WaveTimer != null)
@@ -172,35 +172,35 @@ public class ShipTowerCountDownView : UiViewBase
 		this.WaveTimer = null;
 	}
 
-	// Token: 0x0400A4B5 RID: 42165
+	// Token: 0x0400A89F RID: 43167
 	[Nullable(2)]
 	private TimerHandle WaveTimer;
 
-	// Token: 0x0400A4B6 RID: 42166
+	// Token: 0x0400A8A0 RID: 43168
 	private readonly List<string> TipQueue = new List<string>();
 
-	// Token: 0x0400A4B7 RID: 42167
+	// Token: 0x0400A8A1 RID: 43169
 	private bool IsTipShowing;
 
-	// Token: 0x02008FAC RID: 36780
+	// Token: 0x020081F5 RID: 33269
 	[NullableContext(0)]
 	public class Params
 	{
-		// Token: 0x0402E889 RID: 190601
+		// Token: 0x04029F88 RID: 171912
 		public double EndTime;
 	}
 
-	// Token: 0x02008FAD RID: 36781
+	// Token: 0x020081F6 RID: 33270
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E88A RID: 190602
+		// Token: 0x04029F89 RID: 171913
 		public const int TxtCountDown = 0;
 
-		// Token: 0x0402E88B RID: 190603
+		// Token: 0x04029F8A RID: 171914
 		public const int ItemWaveRoot = 1;
 
-		// Token: 0x0402E88C RID: 190604
+		// Token: 0x04029F8B RID: 171915
 		public const int TxtWave = 2;
 	}
 }

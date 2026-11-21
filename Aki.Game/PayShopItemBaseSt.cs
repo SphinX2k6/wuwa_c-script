@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x02002388 RID: 9096
+// Token: 0x0200186D RID: 6253
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopItemBaseSt
 {
-	// Token: 0x060122E3 RID: 74467 RVA: 0x00479440 File Offset: 0x00477640
+	// Token: 0x0600F795 RID: 63381 RVA: 0x00486790 File Offset: 0x00484990
 	public PayShopItemBaseSt()
 	{
 		this.Id = 0;
@@ -32,7 +32,7 @@ public class PayShopItemBaseSt
 		this.CurrentLanguage = "";
 	}
 
-	// Token: 0x060122E4 RID: 74468 RVA: 0x004794F0 File Offset: 0x004776F0
+	// Token: 0x0600F796 RID: 63382 RVA: 0x00486840 File Offset: 0x00484A40
 	public void Refresh(IPayShopUnionData data)
 	{
 		if (this.CurrentLanguage != LanguageSystem.Instance.PackageLanguage)
@@ -51,7 +51,7 @@ public class PayShopItemBaseSt
 		}
 	}
 
-	// Token: 0x060122E5 RID: 74469 RVA: 0x00479538 File Offset: 0x00477738
+	// Token: 0x0600F797 RID: 63383 RVA: 0x00486888 File Offset: 0x00484A88
 	public void PhraseFromPayItemData(PayShopGoods data)
 	{
 		this.Quality = data.GetItemData().Quality;
@@ -75,7 +75,7 @@ public class PayShopItemBaseSt
 		this.CurrentLanguage = LanguageSystem.Instance.PackageLanguage;
 	}
 
-	// Token: 0x060122E6 RID: 74470 RVA: 0x00479690 File Offset: 0x00477890
+	// Token: 0x0600F798 RID: 63384 RVA: 0x004869E0 File Offset: 0x00484BE0
 	public void PhrasePromPayItemData(PayItemData data)
 	{
 		this.Quality = data.GetQuality();
@@ -96,44 +96,44 @@ public class PayShopItemBaseSt
 		this.GachaPrice = new Func<string>(data.GetGachaAveragePriceText);
 	}
 
-	// Token: 0x04008968 RID: 35176
+	// Token: 0x04008AAF RID: 35503
 	public int Id;
 
-	// Token: 0x04008969 RID: 35177
+	// Token: 0x04008AB0 RID: 35504
 	public int Quality;
 
-	// Token: 0x0400896A RID: 35178
+	// Token: 0x04008AB1 RID: 35505
 	public EItemQualityType QualityType;
 
-	// Token: 0x0400896B RID: 35179
+	// Token: 0x04008AB2 RID: 35506
 	public int ItemId;
 
-	// Token: 0x0400896C RID: 35180
+	// Token: 0x04008AB3 RID: 35507
 	public int ItemCount;
 
-	// Token: 0x0400896D RID: 35181
+	// Token: 0x04008AB4 RID: 35508
 	public string ItemName;
 
-	// Token: 0x0400896E RID: 35182
+	// Token: 0x04008AB5 RID: 35509
 	public bool IsDirect;
 
-	// Token: 0x0400896F RID: 35183
+	// Token: 0x04008AB6 RID: 35510
 	[Nullable(2)]
 	public IPriceData PriceData;
 
-	// Token: 0x04008970 RID: 35184
+	// Token: 0x04008AB7 RID: 35511
 	public bool IfRechargeItem;
 
-	// Token: 0x04008971 RID: 35185
+	// Token: 0x04008AB8 RID: 35512
 	public string StageImage;
 
-	// Token: 0x04008972 RID: 35186
+	// Token: 0x04008AB9 RID: 35513
 	public string ShowStageImage;
 
-	// Token: 0x04008973 RID: 35187
+	// Token: 0x04008ABA RID: 35514
 	public int OnceBuyLimitCount;
 
-	// Token: 0x04008974 RID: 35188
+	// Token: 0x04008ABB RID: 35515
 	[Nullable(new byte[]
 	{
 		2,
@@ -141,15 +141,15 @@ public class PayShopItemBaseSt
 	})]
 	public Func<string> GetShopTipsText;
 
-	// Token: 0x04008975 RID: 35189
+	// Token: 0x04008ABC RID: 35516
 	[Nullable(2)]
 	public Func<bool> GetIfNeedShowDownTipsText;
 
-	// Token: 0x04008976 RID: 35190
+	// Token: 0x04008ABD RID: 35517
 	[Nullable(2)]
 	public Func<string> GetDownTipsText;
 
-	// Token: 0x04008977 RID: 35191
+	// Token: 0x04008ABE RID: 35518
 	[Nullable(new byte[]
 	{
 		2,
@@ -157,7 +157,7 @@ public class PayShopItemBaseSt
 	})]
 	public Func<string> GetSpriteTextBgColor;
 
-	// Token: 0x04008978 RID: 35192
+	// Token: 0x04008ABF RID: 35519
 	[Nullable(new byte[]
 	{
 		2,
@@ -165,11 +165,11 @@ public class PayShopItemBaseSt
 	})]
 	public Func<string> GetTextTipsColor;
 
-	// Token: 0x04008979 RID: 35193
+	// Token: 0x04008AC0 RID: 35520
 	[Nullable(2)]
 	public Func<bool> RedDotExistFunc;
 
-	// Token: 0x0400897A RID: 35194
+	// Token: 0x04008AC1 RID: 35521
 	[Nullable(new byte[]
 	{
 		2,
@@ -177,11 +177,11 @@ public class PayShopItemBaseSt
 	})]
 	public Func<string> GetDirectPriceTextFunc;
 
-	// Token: 0x0400897B RID: 35195
+	// Token: 0x04008AC2 RID: 35522
 	[Nullable(2)]
 	public Func<double> GachaAverageCount;
 
-	// Token: 0x0400897C RID: 35196
+	// Token: 0x04008AC3 RID: 35523
 	[Nullable(new byte[]
 	{
 		2,
@@ -189,6 +189,6 @@ public class PayShopItemBaseSt
 	})]
 	public Func<string> GachaPrice;
 
-	// Token: 0x0400897D RID: 35197
+	// Token: 0x04008AC4 RID: 35524
 	private string CurrentLanguage;
 }

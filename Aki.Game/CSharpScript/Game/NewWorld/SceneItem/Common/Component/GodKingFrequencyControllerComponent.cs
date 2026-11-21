@@ -12,35 +12,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007212 RID: 29202
-	[NullableContext(2)]
+	// Token: 0x020062C7 RID: 25287
+	[NullableContext(1)]
 	[Nullable(0)]
 	public class GodKingFrequencyControllerComponent : EntityComponent
 	{
-		// Token: 0x17009E23 RID: 40483
-		// (get) Token: 0x060477C6 RID: 292806 RVA: 0x0123673B File Offset: 0x0123493B
+		// Token: 0x17007391 RID: 29585
+		// (get) Token: 0x0603D0DF RID: 250079 RVA: 0x011900CF File Offset: 0x0118E2CF
+		[Nullable(2)]
 		private EntityHandle GodKingFrequencyEntityHandle
 		{
+			[NullableContext(2)]
 			get
 			{
 				return CreatureModel.Instance.GetEntityByPbDataId(this.Config.GodKingFrequencyEntity);
 			}
 		}
 
-		// Token: 0x17009E24 RID: 40484
-		// (get) Token: 0x060477C7 RID: 292807 RVA: 0x01236752 File Offset: 0x01234952
-		[Nullable(new byte[]
+		// Token: 0x17007392 RID: 29586
+		// (get) Token: 0x0603D0E0 RID: 250080 RVA: 0x011900E6 File Offset: 0x0118E2E6
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -50,7 +42,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477C8 RID: 292808 RVA: 0x01236768 File Offset: 0x01234968
+		// Token: 0x0603D0E1 RID: 250081 RVA: 0x011900FC File Offset: 0x0118E2FC
+		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			Entity entity = base.Entity;
@@ -68,7 +61,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.Config != null;
 		}
 
-		// Token: 0x060477C9 RID: 292809 RVA: 0x012367BA File Offset: 0x012349BA
+		// Token: 0x0603D0E2 RID: 250082 RVA: 0x0119014E File Offset: 0x0118E34E
 		protected override bool OnStart()
 		{
 			this.InitAttachStatue();
@@ -78,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477CA RID: 292810 RVA: 0x012367D6 File Offset: 0x012349D6
+		// Token: 0x0603D0E3 RID: 250083 RVA: 0x0119016A File Offset: 0x0118E36A
 		protected override bool OnEnd()
 		{
 			this.SetPlayerAvoidanceEnabled(false);
@@ -86,33 +79,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477CB RID: 292811 RVA: 0x012367E6 File Offset: 0x012349E6
+		// Token: 0x0603D0E4 RID: 250084 RVA: 0x0119017A File Offset: 0x0118E37A
 		private void RegisterEvents()
 		{
 			EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 		}
 
-		// Token: 0x060477CC RID: 292812 RVA: 0x01236804 File Offset: 0x01234A04
+		// Token: 0x0603D0E5 RID: 250085 RVA: 0x01190198 File Offset: 0x0118E398
 		private void UnRegisterEvents()
 		{
 			EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
 		}
 
-		// Token: 0x060477CD RID: 292813 RVA: 0x0123682E File Offset: 0x01234A2E
+		// Token: 0x0603D0E6 RID: 250086 RVA: 0x011901C2 File Offset: 0x0118E3C2
 		private void Finish()
 		{
 			this.OnEnd();
 		}
 
-		// Token: 0x060477CE RID: 292814 RVA: 0x01236837 File Offset: 0x01234A37
-		[NullableContext(1)]
+		// Token: 0x0603D0E7 RID: 250087 RVA: 0x011901CB File Offset: 0x0118E3CB
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			this.SetPlayerAvoidanceEnabled(true);
 		}
 
-		// Token: 0x060477CF RID: 292815 RVA: 0x01236840 File Offset: 0x01234A40
+		// Token: 0x0603D0E8 RID: 250088 RVA: 0x011901D4 File Offset: 0x0118E3D4
 		private void SetPlayerAvoidanceEnabled(bool enable)
 		{
 			if (!AvoidanceModel.Instance.UseRVOAvoidance)
@@ -144,7 +136,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477D0 RID: 292816 RVA: 0x012368F4 File Offset: 0x01234AF4
+		// Token: 0x0603D0E9 RID: 250089 RVA: 0x01190288 File Offset: 0x0118E488
+		[NullableContext(2)]
 		private Vector GetEntityLocationByPbDataId(int pbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -164,7 +157,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return null;
 		}
 
-		// Token: 0x060477D1 RID: 292817 RVA: 0x01236950 File Offset: 0x01234B50
+		// Token: 0x0603D0EA RID: 250090 RVA: 0x011902E4 File Offset: 0x0118E4E4
 		private bool TryMoveToStatue(int statuePbDataId)
 		{
 			GodKingFrequencyControllerComponent.<>c__DisplayClass16_0 CS$<>8__locals1 = new GodKingFrequencyControllerComponent.<>c__DisplayClass16_0();
@@ -219,8 +212,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477D2 RID: 292818 RVA: 0x01236A4C File Offset: 0x01234C4C
-		[NullableContext(1)]
+		// Token: 0x0603D0EB RID: 250091 RVA: 0x011903E0 File Offset: 0x0118E5E0
 		private bool CheckStatueState(int statuePbDataId, string exclusiveTagName)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(statuePbDataId);
@@ -241,8 +233,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return false;
 		}
 
-		// Token: 0x060477D3 RID: 292819 RVA: 0x01236AC4 File Offset: 0x01234CC4
-		[NullableContext(1)]
+		// Token: 0x0603D0EC RID: 250092 RVA: 0x01190458 File Offset: 0x0118E658
 		private void StatueOnMyPlayerInOutRangeLocal(EntityHandle statueEntityHandle, bool isEnter)
 		{
 			if (isEnter && statueEntityHandle == this.CurrentAttachStatueEntityHandle)
@@ -266,7 +257,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477D4 RID: 292820 RVA: 0x01236B9C File Offset: 0x01234D9C
+		// Token: 0x0603D0ED RID: 250093 RVA: 0x01190530 File Offset: 0x0118E730
 		private void InitStatues()
 		{
 			WaitEntityTask.CreateWithPbDataId("[GodKingFrequencyControllerComponent] 等待雕像实体创建", this.Config.StatueEntityIdList, delegate(bool? result)
@@ -294,7 +285,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, 30000 * this.Config.StatueEntityIdList.Count, false, false);
 		}
 
-		// Token: 0x060477D5 RID: 292821 RVA: 0x01236BD8 File Offset: 0x01234DD8
+		// Token: 0x0603D0EE RID: 250094 RVA: 0x0119056C File Offset: 0x0118E76C
 		private unsafe void InitAttachStatue()
 		{
 			List<int> pbDataIds = new List<int>
@@ -375,8 +366,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, 30000 * pbDataIds.Count, false, false);
 		}
 
-		// Token: 0x060477D6 RID: 292822 RVA: 0x01236C50 File Offset: 0x01234E50
-		[NullableContext(1)]
+		// Token: 0x0603D0EF RID: 250095 RVA: 0x011905E4 File Offset: 0x0118E7E4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -384,38 +374,54 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			GodKingFrequencyControllerComponent godKingFrequencyControllerComponent = (GodKingFrequencyControllerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (godKingFrequencyControllerComponent.Config == null)
 			{
-				if (godKingFrequencyControllerComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GodKingFrequencyControllerComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CurrentAttachStatueEntityHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (godKingFrequencyControllerComponent.CurrentAttachStatueEntityHandle == null)
-				{
-					this.CurrentAttachStatueEntityHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.CurrentAttachStatueEntityHandle), "CurrentAttachStatueEntityHandle"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (godKingFrequencyControllerComponent.CurrentAttachStatueEntityHandle == null)
+			{
+				this.CurrentAttachStatueEntityHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentAttachStatueEntityHandle), "CurrentAttachStatueEntityHandle"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040259B7 RID: 154039
+		// Token: 0x17007393 RID: 29587
+		// (get) Token: 0x0603D0F0 RID: 250096 RVA: 0x0119065A File Offset: 0x0118E85A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007394 RID: 29588
+		// (get) Token: 0x0603D0F1 RID: 250097 RVA: 0x0119065D File Offset: 0x0118E85D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020626 RID: 132646
 		private const int EACH_WAIT_ENTITY_OVER_TIME = 30000;
 
-		// Token: 0x040259B8 RID: 154040
+		// Token: 0x04020627 RID: 132647
+		[Nullable(2)]
 		private GodKingFrequencyControllerComponent Config;
 
-		// Token: 0x040259B9 RID: 154041
+		// Token: 0x04020628 RID: 132648
+		[Nullable(2)]
 		private EntityHandle CurrentAttachStatueEntityHandle;
 	}
 }

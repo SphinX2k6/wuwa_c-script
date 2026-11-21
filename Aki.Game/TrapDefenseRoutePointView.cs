@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.TrapDefense;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D32 RID: 7474
+// Token: 0x020011F4 RID: 4596
 public class TrapDefenseRoutePointView : UiPanelBase
 {
-	// Token: 0x0600E253 RID: 57939 RVA: 0x00352B30 File Offset: 0x00350D30
+	// Token: 0x0600B670 RID: 46704 RVA: 0x0035E560 File Offset: 0x0035C760
 	protected override void OnBeforeShow()
 	{
 		UUIItem sprite = base.GetSprite(0);
@@ -17,7 +17,7 @@ public class TrapDefenseRoutePointView : UiPanelBase
 		this.RootItem.SetAlpha(0f);
 	}
 
-	// Token: 0x0600E254 RID: 57940 RVA: 0x00352B70 File Offset: 0x00350D70
+	// Token: 0x0600B671 RID: 46705 RVA: 0x0035E5A0 File Offset: 0x0035C7A0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class TrapDefenseRoutePointView : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E255 RID: 57941 RVA: 0x00352B94 File Offset: 0x00350D94
+	// Token: 0x0600B672 RID: 46706 RVA: 0x0035E5C4 File Offset: 0x0035C7C4
 	[NullableContext(1)]
 	public void UpdatePosition(FVector worldPosition, float scale, Vector2D centerOffset)
 	{
@@ -42,16 +42,16 @@ public class TrapDefenseRoutePointView : UiPanelBase
 		base.GetRootItem().SetAnchorOffset(vector2D.ToUeVector2D(false));
 	}
 
-	// Token: 0x040068AF RID: 26799
+	// Token: 0x0400698E RID: 27022
 	public double StartTimestamp;
 
-	// Token: 0x040068B0 RID: 26800
+	// Token: 0x0400698F RID: 27023
 	public int Index;
 
-	// Token: 0x02008338 RID: 33592
+	// Token: 0x020074C1 RID: 29889
 	private static class EChildComponent
 	{
-		// Token: 0x0402AC97 RID: 175255
+		// Token: 0x04025FBF RID: 155583
 		public const int Icon = 0;
 	}
 }

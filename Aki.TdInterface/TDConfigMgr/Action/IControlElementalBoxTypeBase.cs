@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001938 RID: 6456
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AC1 RID: 6849
 	public class IControlElementalBoxTypeBase
 	{
-		// Token: 0x06008A6D RID: 35437 RVA: 0x001461E4 File Offset: 0x001443E4
+		// Token: 0x06009199 RID: 37273 RVA: 0x00155B24 File Offset: 0x00153D24
 		private IControlElementalBoxTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A6E RID: 35438 RVA: 0x0014621C File Offset: 0x0014441C
+		// Token: 0x0600919A RID: 37274 RVA: 0x00155B5C File Offset: 0x00153D5C
 		public static IControlElementalBoxTypeBase Create([Nullable(2)] IControlElementalBoxTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A6F RID: 35439 RVA: 0x0014622F File Offset: 0x0014442F
+		// Token: 0x0600919B RID: 37275 RVA: 0x00155B6F File Offset: 0x00153D6F
 		public static IControlElementalBoxTypeBase CreateFromSetValue([Nullable(2)] IControlElementalBoxTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A70 RID: 35440 RVA: 0x00146242 File Offset: 0x00144442
+		// Token: 0x0600919C RID: 37276 RVA: 0x00155B82 File Offset: 0x00153D82
 		public IControlElementalBoxTypeBase_SetValue ToSetValue()
 		{
 			return new IControlElementalBoxTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CB7 RID: 11447
-		// (get) Token: 0x06008A71 RID: 35441 RVA: 0x00146255 File Offset: 0x00144455
-		// (set) Token: 0x06008A72 RID: 35442 RVA: 0x00146280 File Offset: 0x00144480
+		// Token: 0x17002EB7 RID: 11959
+		// (get) Token: 0x0600919D RID: 37277 RVA: 0x00155B95 File Offset: 0x00153D95
+		// (set) Token: 0x0600919E RID: 37278 RVA: 0x00155BC0 File Offset: 0x00153DC0
 		public virtual EControlElementalBoxType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400568A RID: 22154
+		// Token: 0x04005ADA RID: 23258
 		[Nullable(2)]
 		protected IControlElementalBoxTypeBase FbInstance;
 
-		// Token: 0x0400568B RID: 22155
+		// Token: 0x04005ADB RID: 23259
 		[Nullable(2)]
 		protected IControlElementalBoxTypeBase_SetValue PocoInterface;
 	}

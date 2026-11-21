@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006267 RID: 25191
+	// Token: 0x020051E5 RID: 20965
 	public class RealmBetweenLevelData : IRealmBetweenLevelData
 	{
-		// Token: 0x17009265 RID: 37477
-		// (get) Token: 0x0603F71B RID: 259867 RVA: 0x00F567C0 File Offset: 0x00F549C0
-		// (set) Token: 0x0603F71C RID: 259868 RVA: 0x00F567C8 File Offset: 0x00F549C8
+		// Token: 0x170065C7 RID: 26055
+		// (get) Token: 0x060343DC RID: 213980 RVA: 0x00E9D71C File Offset: 0x00E9B91C
+		// (set) Token: 0x060343DD RID: 213981 RVA: 0x00E9D724 File Offset: 0x00E9B924
 		public int Id { get; set; }
 
-		// Token: 0x17009266 RID: 37478
-		// (get) Token: 0x0603F71D RID: 259869 RVA: 0x00F567D1 File Offset: 0x00F549D1
-		// (set) Token: 0x0603F71E RID: 259870 RVA: 0x00F567D9 File Offset: 0x00F549D9
+		// Token: 0x170065C8 RID: 26056
+		// (get) Token: 0x060343DE RID: 213982 RVA: 0x00E9D72D File Offset: 0x00E9B92D
+		// (set) Token: 0x060343DF RID: 213983 RVA: 0x00E9D735 File Offset: 0x00E9B935
 		public int Level { get; set; }
 
-		// Token: 0x17009267 RID: 37479
-		// (get) Token: 0x0603F71F RID: 259871 RVA: 0x00F567E2 File Offset: 0x00F549E2
-		// (set) Token: 0x0603F720 RID: 259872 RVA: 0x00F567EA File Offset: 0x00F549EA
+		// Token: 0x170065C9 RID: 26057
+		// (get) Token: 0x060343E0 RID: 213984 RVA: 0x00E9D73E File Offset: 0x00E9B93E
+		// (set) Token: 0x060343E1 RID: 213985 RVA: 0x00E9D746 File Offset: 0x00E9B946
 		public int AccumulateExp { get; set; }
 
-		// Token: 0x17009268 RID: 37480
-		// (get) Token: 0x0603F721 RID: 259873 RVA: 0x00F567F3 File Offset: 0x00F549F3
-		// (set) Token: 0x0603F722 RID: 259874 RVA: 0x00F567FB File Offset: 0x00F549FB
+		// Token: 0x170065CA RID: 26058
+		// (get) Token: 0x060343E2 RID: 213986 RVA: 0x00E9D74F File Offset: 0x00E9B94F
+		// (set) Token: 0x060343E3 RID: 213987 RVA: 0x00E9D757 File Offset: 0x00E9B957
 		public int TargetExp { get; set; }
 	}
 }

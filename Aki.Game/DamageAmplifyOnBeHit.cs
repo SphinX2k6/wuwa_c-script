@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F77 RID: 12151
+// Token: 0x020024CB RID: 9419
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageAmplifyOnBeHit : BuffEffect, IStaticVariableResetter
 {
-	// Token: 0x06019D29 RID: 105769 RVA: 0x006BC84B File Offset: 0x006BAA4B
+	// Token: 0x0601763B RID: 95803 RVA: 0x006E315B File Offset: 0x006E135B
 	static DamageAmplifyOnBeHit()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DamageAmplifyOnBeHit.CreateStaticDefaultValue), new Action(DamageAmplifyOnBeHit.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06019D2A RID: 105770 RVA: 0x006BC86A File Offset: 0x006BAA6A
+	// Token: 0x0601763C RID: 95804 RVA: 0x006E317A File Offset: 0x006E137A
 	public DamageAmplifyOnBeHit(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019D2B RID: 105771 RVA: 0x006BC879 File Offset: 0x006BAA79
+	// Token: 0x0601763D RID: 95805 RVA: 0x006E3189 File Offset: 0x006E1389
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		this.Value = AbilityUtils.GetLevelValue<float>(parameters.ExtraEffectGrowParameters1, this.Level, 0f);
 	}
 
-	// Token: 0x06019D2C RID: 105772 RVA: 0x006BC897 File Offset: 0x006BAA97
+	// Token: 0x0601763E RID: 95806 RVA: 0x006E31A7 File Offset: 0x006E13A7
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -32,7 +32,7 @@ public class DamageAmplifyOnBeHit : BuffEffect, IStaticVariableResetter
 		return value * (float)((buff != null) ? buff.StackCount : 1);
 	}
 
-	// Token: 0x06019D2D RID: 105773 RVA: 0x006BC8B8 File Offset: 0x006BAAB8
+	// Token: 0x0601763F RID: 95807 RVA: 0x006E31C8 File Offset: 0x006E13C8
 	public static float ApplyEffects(RequirementPayload requirements, SnapshotPayload snapshots)
 	{
 		CharacterBuffComponent ownerBuffComponent = snapshots.Attacker.OwnerBuffComponent;
@@ -53,27 +53,27 @@ public class DamageAmplifyOnBeHit : BuffEffect, IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06019D2E RID: 105774 RVA: 0x006BC954 File Offset: 0x006BAB54
+	// Token: 0x06017640 RID: 95808 RVA: 0x006E3264 File Offset: 0x006E1464
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x06019D2F RID: 105775 RVA: 0x006BC95B File Offset: 0x006BAB5B
+	// Token: 0x06017641 RID: 95809 RVA: 0x006E326B File Offset: 0x006E146B
 	public static void CreateStaticDefaultValue()
 	{
 		DamageAmplifyOnBeHit.TempModifiedResult = 0f;
 	}
 
-	// Token: 0x06019D30 RID: 105776 RVA: 0x006BC967 File Offset: 0x006BAB67
+	// Token: 0x06017642 RID: 95810 RVA: 0x006E3277 File Offset: 0x006E1477
 	public static void ResetStaticDefaultValue()
 	{
 		DamageAmplifyOnBeHit.TempModifiedResult = 0f;
 	}
 
-	// Token: 0x0400C2F2 RID: 49906
+	// Token: 0x0400C69B RID: 50843
 	public float Value;
 
-	// Token: 0x0400C2F3 RID: 49907
+	// Token: 0x0400C69C RID: 50844
 	public static float TempModifiedResult;
 }

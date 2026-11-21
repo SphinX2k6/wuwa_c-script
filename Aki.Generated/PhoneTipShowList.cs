@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F01 RID: 3841
+	// Token: 0x02000FE6 RID: 4070
 	public struct PhoneTipShowList : IFlatbufferObject
 	{
-		// Token: 0x17002791 RID: 10129
-		// (get) Token: 0x0600AAE5 RID: 43749 RVA: 0x002B86D5 File Offset: 0x002B68D5
+		// Token: 0x170027F7 RID: 10231
+		// (get) Token: 0x0600B106 RID: 45318 RVA: 0x002D5475 File Offset: 0x002D3675
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AAE6 RID: 43750 RVA: 0x002B86E2 File Offset: 0x002B68E2
+		// Token: 0x0600B107 RID: 45319 RVA: 0x002D5482 File Offset: 0x002D3682
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AAE7 RID: 43751 RVA: 0x002B86EC File Offset: 0x002B68EC
+		// Token: 0x0600B108 RID: 45320 RVA: 0x002D548C File Offset: 0x002D368C
 		public static PhoneTipShowList GetRootAsPhoneTipShowList(ByteBuffer _bb)
 		{
 			return PhoneTipShowList.GetRootAsPhoneTipShowList(_bb, default(PhoneTipShowList));
 		}
 
-		// Token: 0x0600AAE8 RID: 43752 RVA: 0x002B8708 File Offset: 0x002B6908
+		// Token: 0x0600B109 RID: 45321 RVA: 0x002D54A8 File Offset: 0x002D36A8
 		public static PhoneTipShowList GetRootAsPhoneTipShowList(ByteBuffer _bb, PhoneTipShowList obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AAE9 RID: 43753 RVA: 0x002B8725 File Offset: 0x002B6925
+		// Token: 0x0600B10A RID: 45322 RVA: 0x002D54C5 File Offset: 0x002D36C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AAEA RID: 43754 RVA: 0x002B8734 File Offset: 0x002B6934
+		// Token: 0x0600B10B RID: 45323 RVA: 0x002D54D4 File Offset: 0x002D36D4
 		public PhoneTipShowList __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002792 RID: 10130
-		// (get) Token: 0x0600AAEB RID: 43755 RVA: 0x002B8744 File Offset: 0x002B6944
+		// Token: 0x170027F8 RID: 10232
+		// (get) Token: 0x0600B10C RID: 45324 RVA: 0x002D54E4 File Offset: 0x002D36E4
 		public int DungeonSubType
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AAEC RID: 43756 RVA: 0x002B8780 File Offset: 0x002B6980
+		// Token: 0x0600B10D RID: 45325 RVA: 0x002D5520 File Offset: 0x002D3720
 		public int WorldDungeonSubTypeList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002793 RID: 10131
-		// (get) Token: 0x0600AAED RID: 43757 RVA: 0x002B87C0 File Offset: 0x002B69C0
+		// Token: 0x170027F9 RID: 10233
+		// (get) Token: 0x0600B10E RID: 45326 RVA: 0x002D5560 File Offset: 0x002D3760
 		public int WorldDungeonSubTypeListLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AAEE RID: 43758 RVA: 0x002B87EB File Offset: 0x002B69EB
+		// Token: 0x0600B10F RID: 45327 RVA: 0x002D558B File Offset: 0x002D378B
 		public Span<int> GetWorldDungeonSubTypeListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600AAEF RID: 43759 RVA: 0x002B87FA File Offset: 0x002B69FA
+		// Token: 0x0600B110 RID: 45328 RVA: 0x002D559A File Offset: 0x002D379A
 		public int[] GetWorldDungeonSubTypeListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600AAF0 RID: 43760 RVA: 0x002B8814 File Offset: 0x002B6A14
+		// Token: 0x0600B111 RID: 45329 RVA: 0x002D55B1 File Offset: 0x002D37B1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WorldDungeonSubTypeListIter()或GetWorldDungeonSubTypeListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WorldDungeonSubTypeList()
+		public int[] WorldDungeonSubTypeList()
 		{
-			PhoneTipShowList phoneTipShowList = this;
-			return phoneTipShowList.GetWorldDungeonSubTypeListArray() ?? Array.Empty<int>();
+			return this.GetWorldDungeonSubTypeListArray();
 		}
 
-		// Token: 0x0600AAF1 RID: 43761 RVA: 0x002B8838 File Offset: 0x002B6A38
+		// Token: 0x0600B112 RID: 45330 RVA: 0x002D55B9 File Offset: 0x002D37B9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WorldDungeonSubTypeListIter()
+		public IEnumerable<int> WorldDungeonSubTypeListIter()
 		{
 			PhoneTipShowList.<WorldDungeonSubTypeListIter>d__16 <WorldDungeonSubTypeListIter>d__ = new PhoneTipShowList.<WorldDungeonSubTypeListIter>d__16(-2);
 			<WorldDungeonSubTypeListIter>d__.<>3__<>4__this = this;
 			return <WorldDungeonSubTypeListIter>d__;
 		}
 
-		// Token: 0x04004FC9 RID: 20425
+		// Token: 0x040055AE RID: 21934
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F59 RID: 3929
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001083 RID: 4227
 	public class IEnterDungeonSubTypeCondition : IEnterDungeon
 	{
-		// Token: 0x06005752 RID: 22354 RVA: 0x000D5998 File Offset: 0x000D3B98
+		// Token: 0x06005D26 RID: 23846 RVA: 0x000E2404 File Offset: 0x000E0604
 		private IEnterDungeonSubTypeCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005753 RID: 22355 RVA: 0x000D59D0 File Offset: 0x000D3BD0
+		// Token: 0x06005D27 RID: 23847 RVA: 0x000E243C File Offset: 0x000E063C
 		public static IEnterDungeonSubTypeCondition Create([Nullable(2)] IEnterDungeonSubTypeCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005754 RID: 22356 RVA: 0x000D59E3 File Offset: 0x000D3BE3
+		// Token: 0x06005D28 RID: 23848 RVA: 0x000E244F File Offset: 0x000E064F
 		public static IEnterDungeonSubTypeCondition CreateFromSetValue([Nullable(2)] IEnterDungeonSubTypeCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005755 RID: 22357 RVA: 0x000D59F6 File Offset: 0x000D3BF6
+		// Token: 0x06005D29 RID: 23849 RVA: 0x000E2462 File Offset: 0x000E0662
 		public new IEnterDungeonSubTypeCondition_SetValue ToSetValue()
 		{
 			return new IEnterDungeonSubTypeCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D25 RID: 7461
-		// (get) Token: 0x06005756 RID: 22358 RVA: 0x000D5A15 File Offset: 0x000D3C15
-		// (set) Token: 0x06005757 RID: 22359 RVA: 0x000D5A40 File Offset: 0x000D3C40
+		// Token: 0x17001ECB RID: 7883
+		// (get) Token: 0x06005D2A RID: 23850 RVA: 0x000E2481 File Offset: 0x000E0681
+		// (set) Token: 0x06005D2B RID: 23851 RVA: 0x000E24AC File Offset: 0x000E06AC
 		public override EDungeonConditionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D26 RID: 7462
-		// (get) Token: 0x06005758 RID: 22360 RVA: 0x000D5A4E File Offset: 0x000D3C4E
-		// (set) Token: 0x06005759 RID: 22361 RVA: 0x000D5A79 File Offset: 0x000D3C79
+		// Token: 0x17001ECC RID: 7884
+		// (get) Token: 0x06005D2C RID: 23852 RVA: 0x000E24BA File Offset: 0x000E06BA
+		// (set) Token: 0x06005D2D RID: 23853 RVA: 0x000E24E5 File Offset: 0x000E06E5
 		public virtual EDungeonSubType DungeonSubType
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034D6 RID: 13526
+		// Token: 0x04003807 RID: 14343
 		[Nullable(2)]
 		protected new IEnterDungeonSubTypeCondition FbInstance;
 
-		// Token: 0x040034D7 RID: 13527
+		// Token: 0x04003808 RID: 14344
 		[Nullable(2)]
 		protected new IEnterDungeonSubTypeCondition_SetValue PocoInterface;
 	}

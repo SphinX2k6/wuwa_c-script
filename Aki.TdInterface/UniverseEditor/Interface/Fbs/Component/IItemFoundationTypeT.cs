@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005498 RID: 21656
+	// Token: 0x02005A1E RID: 23070
 	public class IItemFoundationTypeT
 	{
-		// Token: 0x17009F7B RID: 40827
-		// (get) Token: 0x06023A54 RID: 146004 RVA: 0x004EDB1E File Offset: 0x004EBD1E
-		// (set) Token: 0x06023A55 RID: 146005 RVA: 0x004EDB26 File Offset: 0x004EBD26
+		// Token: 0x1700A7B5 RID: 42933
+		// (get) Token: 0x06025B0C RID: 154380 RVA: 0x0052AB92 File Offset: 0x00528D92
+		// (set) Token: 0x06025B0D RID: 154381 RVA: 0x0052AB9A File Offset: 0x00528D9A
 		public EItemFoundation Type { get; set; }
 
-		// Token: 0x06023A56 RID: 146006 RVA: 0x004EDB2F File Offset: 0x004EBD2F
+		// Token: 0x06025B0E RID: 154382 RVA: 0x0052ABA3 File Offset: 0x00528DA3
 		public IItemFoundationTypeT()
 		{
 			this.Type = EItemFoundation.CategoryMatching;

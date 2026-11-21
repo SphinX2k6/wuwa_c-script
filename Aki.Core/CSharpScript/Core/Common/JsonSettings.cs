@@ -7,18 +7,18 @@ using System.Text.Json.Serialization.Metadata;
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x0200016D RID: 365
+	// Token: 0x02000172 RID: 370
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class JsonSettings : IStaticVariableResetter
 	{
-		// Token: 0x06000C96 RID: 3222 RVA: 0x0003B048 File Offset: 0x00039248
+		// Token: 0x06000CF1 RID: 3313 RVA: 0x0003BD0C File Offset: 0x00039F0C
 		static JsonSettings()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(JsonSettings.CreateStaticDefaultValue), new Action(JsonSettings.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C97 RID: 3223 RVA: 0x0003B068 File Offset: 0x00039268
+		// Token: 0x06000CF2 RID: 3314 RVA: 0x0003BD2C File Offset: 0x00039F2C
 		public static void CreateStaticDefaultValue()
 		{
 			List<IJsonTypeInfoResolver> list = new List<IJsonTypeInfoResolver>();
@@ -46,7 +46,7 @@ namespace CSharpScript.Core.Common
 			};
 		}
 
-		// Token: 0x06000C98 RID: 3224 RVA: 0x0003B0F4 File Offset: 0x000392F4
+		// Token: 0x06000CF3 RID: 3315 RVA: 0x0003BDB8 File Offset: 0x00039FB8
 		public static void ResetStaticDefaultValue()
 		{
 			JsonSettings.EncodeOptions = null;
@@ -55,16 +55,16 @@ namespace CSharpScript.Core.Common
 			JsonSettings.TestJsonTypeInfoResolver = null;
 		}
 
-		// Token: 0x0400073F RID: 1855
+		// Token: 0x0400074E RID: 1870
 		public static JsonSerializerOptions EncodeOptions;
 
-		// Token: 0x04000740 RID: 1856
+		// Token: 0x0400074F RID: 1871
 		public static JsonSerializerOptions DecodeOptions;
 
-		// Token: 0x04000741 RID: 1857
+		// Token: 0x04000750 RID: 1872
 		public static IJsonTypeInfoResolver GameJsonTypeInfoResolver;
 
-		// Token: 0x04000742 RID: 1858
+		// Token: 0x04000751 RID: 1873
 		public static IJsonTypeInfoResolver TestJsonTypeInfoResolver;
 	}
 }

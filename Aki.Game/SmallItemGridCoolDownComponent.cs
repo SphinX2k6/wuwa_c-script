@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200196F RID: 6511
+// Token: 0x02000E2C RID: 3628
 public class SmallItemGridCoolDownComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BEB8 RID: 48824 RVA: 0x002B26CC File Offset: 0x002B08CC
+	// Token: 0x060092C0 RID: 37568 RVA: 0x002BD650 File Offset: 0x002BB850
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class SmallItemGridCoolDownComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BEB9 RID: 48825 RVA: 0x002B2738 File Offset: 0x002B0938
+	// Token: 0x060092C1 RID: 37569 RVA: 0x002BD6BC File Offset: 0x002BB8BC
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -55,25 +55,25 @@ public class SmallItemGridCoolDownComponent : SmallItemGridComponent
 		LguiUtil.Instance.SetLocalTextNew(text, "ItemCdTime_Day", new <>z__ReadOnlySingleElementList<object>(timeValue));
 	}
 
-	// Token: 0x0600BEBA RID: 48826 RVA: 0x002B286F File Offset: 0x002B0A6F
+	// Token: 0x060092C2 RID: 37570 RVA: 0x002BD7F3 File Offset: 0x002BB9F3
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBCD";
 	}
 
-	// Token: 0x0600BEBB RID: 48827 RVA: 0x002B2876 File Offset: 0x002B0A76
+	// Token: 0x060092C3 RID: 37571 RVA: 0x002BD7FA File Offset: 0x002BB9FA
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x02007EBE RID: 32446
+	// Token: 0x0200704D RID: 28749
 	private enum EChildType
 	{
-		// Token: 0x040296F3 RID: 169715
+		// Token: 0x04024A30 RID: 150064
 		CoolDownPercentSprite,
-		// Token: 0x040296F4 RID: 169716
+		// Token: 0x04024A31 RID: 150065
 		CoolDownText
 	}
 }

@@ -4,32 +4,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020000A3 RID: 163
+	// Token: 0x02000088 RID: 136
 	public abstract class UnrealUserDefinedStructProxy : UnrealScriptStructProxy
 	{
-		// Token: 0x060010B6 RID: 4278 RVA: 0x00019103 File Offset: 0x00017303
+		// Token: 0x06000C49 RID: 3145 RVA: 0x00013E27 File Offset: 0x00012027
 		protected UnrealUserDefinedStructProxy()
 		{
 			BuiltinUtils.AddRefForUUserDefinedStruct(this.GetUStructPtr());
 		}
 
-		// Token: 0x060010B7 RID: 4279 RVA: 0x00019116 File Offset: 0x00017316
+		// Token: 0x06000C4A RID: 3146 RVA: 0x00013E3A File Offset: 0x0001203A
 		[NullableContext(2)]
 		protected UnrealUserDefinedStructProxy(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 			if (base.IsNativePtrAllocated)
 			{
-				BuiltinUtils.DecRefForUUserDefinedStruct(this.GetUStructPtr());
+				BuiltinUtils.AddRefForUUserDefinedStruct(this.GetUStructPtr());
 			}
 		}
 
-		// Token: 0x060010B8 RID: 4280 RVA: 0x00019133 File Offset: 0x00017333
+		// Token: 0x06000C4B RID: 3147 RVA: 0x00013E57 File Offset: 0x00012057
 		protected UnrealUserDefinedStructProxy(IntPtr NativePtr, bool bWithMoveConstruct, bool bWithCopyConstructIfCannotMove) : base(NativePtr, bWithMoveConstruct, bWithCopyConstructIfCannotMove)
 		{
 			BuiltinUtils.AddRefForUUserDefinedStruct(this.GetUStructPtr());
 		}
 
-		// Token: 0x060010B9 RID: 4281 RVA: 0x00019149 File Offset: 0x00017349
+		// Token: 0x06000C4C RID: 3148 RVA: 0x00013E6D File Offset: 0x0001206D
 		protected override void OnScriptObjectDestruct()
 		{
 			if (this._NativePtr != IntPtr.Zero && base.IsNativePtrAllocated)

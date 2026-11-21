@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004934 RID: 18740
+	// Token: 0x02004DE8 RID: 19944
 	public enum EConditionCount : byte
 	{
-		// Token: 0x0400D097 RID: 53399
+		// Token: 0x0400DB55 RID: 56149
 		All,
-		// Token: 0x0400D098 RID: 53400
+		// Token: 0x0400DB56 RID: 56150
 		Any,
-		// Token: 0x0400D099 RID: 53401
+		// Token: 0x0400DB57 RID: 56151
 		Two,
-		// Token: 0x0400D09A RID: 53402
+		// Token: 0x0400DB58 RID: 56152
 		Three,
-		// Token: 0x0400D09B RID: 53403
+		// Token: 0x0400DB59 RID: 56153
 		Four,
-		// Token: 0x0400D09C RID: 53404
+		// Token: 0x0400DB5A RID: 56154
 		Five
 	}
 }

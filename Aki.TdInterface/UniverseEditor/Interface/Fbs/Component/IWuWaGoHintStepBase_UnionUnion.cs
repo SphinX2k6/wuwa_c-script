@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BB6 RID: 23478
+	// Token: 0x020061CC RID: 25036
 	public class IWuWaGoHintStepBase_UnionUnion
 	{
-		// Token: 0x1700B166 RID: 45414
-		// (get) Token: 0x06028349 RID: 164681 RVA: 0x0058650D File Offset: 0x0058470D
-		// (set) Token: 0x0602834A RID: 164682 RVA: 0x00586515 File Offset: 0x00584715
+		// Token: 0x1700BAAE RID: 47790
+		// (get) Token: 0x0602A90D RID: 174349 RVA: 0x005CDF9D File Offset: 0x005CC19D
+		// (set) Token: 0x0602A90E RID: 174350 RVA: 0x005CDFA5 File Offset: 0x005CC1A5
 		public IWuWaGoHintStepBase_Union Type { get; set; }
 
-		// Token: 0x1700B167 RID: 45415
-		// (get) Token: 0x0602834B RID: 164683 RVA: 0x0058651E File Offset: 0x0058471E
-		// (set) Token: 0x0602834C RID: 164684 RVA: 0x00586526 File Offset: 0x00584726
+		// Token: 0x1700BAAF RID: 47791
+		// (get) Token: 0x0602A90F RID: 174351 RVA: 0x005CDFAE File Offset: 0x005CC1AE
+		// (set) Token: 0x0602A910 RID: 174352 RVA: 0x005CDFB6 File Offset: 0x005CC1B6
 		public object Value { get; set; }
 
-		// Token: 0x0602834D RID: 164685 RVA: 0x0058652F File Offset: 0x0058472F
+		// Token: 0x0602A911 RID: 174353 RVA: 0x005CDFBF File Offset: 0x005CC1BF
 		public IWuWaGoHintStepBase_UnionUnion()
 		{
 			this.Type = IWuWaGoHintStepBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602834E RID: 164686 RVA: 0x00586545 File Offset: 0x00584745
+		// Token: 0x0602A912 RID: 174354 RVA: 0x005CDFD5 File Offset: 0x005CC1D5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602834F RID: 164687 RVA: 0x00586557 File Offset: 0x00584757
+		// Token: 0x0602A913 RID: 174355 RVA: 0x005CDFE7 File Offset: 0x005CC1E7
 		public IWuWaGoHintStepBaseT AsIWuWaGoHintStepBase()
 		{
 			return this.As<IWuWaGoHintStepBaseT>();
 		}
 
-		// Token: 0x06028350 RID: 164688 RVA: 0x0058655F File Offset: 0x0058475F
+		// Token: 0x0602A914 RID: 174356 RVA: 0x005CDFEF File Offset: 0x005CC1EF
 		public static IWuWaGoHintStepBase_UnionUnion FromIWuWaGoHintStepBase(IWuWaGoHintStepBaseT _iwuwagohintstepbase)
 		{
 			return new IWuWaGoHintStepBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028351 RID: 164689 RVA: 0x00586574 File Offset: 0x00584774
+		// Token: 0x0602A915 RID: 174357 RVA: 0x005CE004 File Offset: 0x005CC204
 		public IWuWaGoHintStepMoveT AsIWuWaGoHintStepMove()
 		{
 			return this.As<IWuWaGoHintStepMoveT>();
 		}
 
-		// Token: 0x06028352 RID: 164690 RVA: 0x0058657C File Offset: 0x0058477C
+		// Token: 0x0602A916 RID: 174358 RVA: 0x005CE00C File Offset: 0x005CC20C
 		public static IWuWaGoHintStepBase_UnionUnion FromIWuWaGoHintStepMove(IWuWaGoHintStepMoveT _iwuwagohintstepmove)
 		{
 			return new IWuWaGoHintStepBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028353 RID: 164691 RVA: 0x00586591 File Offset: 0x00584791
+		// Token: 0x0602A917 RID: 174359 RVA: 0x005CE021 File Offset: 0x005CC221
 		public IWuWaGoHintStepInteractT AsIWuWaGoHintStepInteract()
 		{
 			return this.As<IWuWaGoHintStepInteractT>();
 		}
 
-		// Token: 0x06028354 RID: 164692 RVA: 0x00586599 File Offset: 0x00584799
+		// Token: 0x0602A918 RID: 174360 RVA: 0x005CE029 File Offset: 0x005CC229
 		public static IWuWaGoHintStepBase_UnionUnion FromIWuWaGoHintStepInteract(IWuWaGoHintStepInteractT _iwuwagohintstepinteract)
 		{
 			return new IWuWaGoHintStepBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028355 RID: 164693 RVA: 0x005865B0 File Offset: 0x005847B0
+		// Token: 0x0602A919 RID: 174361 RVA: 0x005CE040 File Offset: 0x005CC240
 		public static int Pack(FlatBufferBuilder builder, IWuWaGoHintStepBase_UnionUnion _o)
 		{
 			switch (_o.Type)

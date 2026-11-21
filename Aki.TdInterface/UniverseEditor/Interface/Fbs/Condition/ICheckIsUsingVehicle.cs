@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AA8 RID: 19112
+	// Token: 0x02004F77 RID: 20343
 	public struct ICheckIsUsingVehicle : IFlatbufferObject
 	{
-		// Token: 0x17008A80 RID: 35456
-		// (get) Token: 0x0601DFD2 RID: 122834 RVA: 0x00435BA4 File Offset: 0x00433DA4
+		// Token: 0x1700916D RID: 37229
+		// (get) Token: 0x0601FABB RID: 129723 RVA: 0x004673C4 File Offset: 0x004655C4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DFD3 RID: 122835 RVA: 0x00435BB1 File Offset: 0x00433DB1
+		// Token: 0x0601FABC RID: 129724 RVA: 0x004673D1 File Offset: 0x004655D1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DFD4 RID: 122836 RVA: 0x00435BB8 File Offset: 0x00433DB8
+		// Token: 0x0601FABD RID: 129725 RVA: 0x004673D8 File Offset: 0x004655D8
 		public static ICheckIsUsingVehicle GetRootAsICheckIsUsingVehicle(ByteBuffer _bb)
 		{
 			return ICheckIsUsingVehicle.GetRootAsICheckIsUsingVehicle(_bb, default(ICheckIsUsingVehicle));
 		}
 
-		// Token: 0x0601DFD5 RID: 122837 RVA: 0x00435BD4 File Offset: 0x00433DD4
+		// Token: 0x0601FABE RID: 129726 RVA: 0x004673F4 File Offset: 0x004655F4
 		public static ICheckIsUsingVehicle GetRootAsICheckIsUsingVehicle(ByteBuffer _bb, ICheckIsUsingVehicle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DFD6 RID: 122838 RVA: 0x00435BF1 File Offset: 0x00433DF1
+		// Token: 0x0601FABF RID: 129727 RVA: 0x00467411 File Offset: 0x00465611
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DFD7 RID: 122839 RVA: 0x00435C00 File Offset: 0x00433E00
+		// Token: 0x0601FAC0 RID: 129728 RVA: 0x00467420 File Offset: 0x00465620
 		public ICheckIsUsingVehicle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A81 RID: 35457
-		// (get) Token: 0x0601DFD8 RID: 122840 RVA: 0x00435C10 File Offset: 0x00433E10
+		// Token: 0x1700916E RID: 37230
+		// (get) Token: 0x0601FAC1 RID: 129729 RVA: 0x00467430 File Offset: 0x00465630
 		public EVehicleConditionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A82 RID: 35458
-		// (get) Token: 0x0601DFD9 RID: 122841 RVA: 0x00435C4C File Offset: 0x00433E4C
+		// Token: 0x1700916F RID: 37231
+		// (get) Token: 0x0601FAC2 RID: 129730 RVA: 0x0046746C File Offset: 0x0046566C
 		public int TargetVehicle
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A83 RID: 35459
-		// (get) Token: 0x0601DFDA RID: 122842 RVA: 0x00435C88 File Offset: 0x00433E88
+		// Token: 0x17009170 RID: 37232
+		// (get) Token: 0x0601FAC3 RID: 129731 RVA: 0x004674A8 File Offset: 0x004656A8
 		public EVehicleSeat Seat
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A84 RID: 35460
-		// (get) Token: 0x0601DFDB RID: 122843 RVA: 0x00435CC4 File Offset: 0x00433EC4
+		// Token: 0x17009171 RID: 37233
+		// (get) Token: 0x0601FAC4 RID: 129732 RVA: 0x004674E4 File Offset: 0x004656E4
 		public bool CheckIsBeingUsed
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A85 RID: 35461
-		// (get) Token: 0x0601DFDC RID: 122844 RVA: 0x00435D04 File Offset: 0x00433F04
+		// Token: 0x17009172 RID: 37234
+		// (get) Token: 0x0601FAC5 RID: 129733 RVA: 0x00467524 File Offset: 0x00465724
 		public byte NullMask
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DFDD RID: 122845 RVA: 0x00435D41 File Offset: 0x00433F41
+		// Token: 0x0601FAC6 RID: 129734 RVA: 0x00467561 File Offset: 0x00465761
 		public static Offset<ICheckIsUsingVehicle> CreateICheckIsUsingVehicle(FlatBufferBuilder builder, EVehicleConditionType Type = EVehicleConditionType.UsingVehicle, int TargetVehicle = 0, EVehicleSeat Seat = EVehicleSeat.Seat0, bool CheckIsBeingUsed = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsUsingVehicle.EndICheckIsUsingVehicle(builder);
 		}
 
-		// Token: 0x0601DFDE RID: 122846 RVA: 0x00435D75 File Offset: 0x00433F75
+		// Token: 0x0601FAC7 RID: 129735 RVA: 0x00467595 File Offset: 0x00465795
 		public static void StartICheckIsUsingVehicle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601DFDF RID: 122847 RVA: 0x00435D7E File Offset: 0x00433F7E
+		// Token: 0x0601FAC8 RID: 129736 RVA: 0x0046759E File Offset: 0x0046579E
 		public static void AddType(FlatBufferBuilder builder, EVehicleConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DFE0 RID: 122848 RVA: 0x00435D89 File Offset: 0x00433F89
+		// Token: 0x0601FAC9 RID: 129737 RVA: 0x004675A9 File Offset: 0x004657A9
 		public static void AddTargetVehicle(FlatBufferBuilder builder, int targetVehicle)
 		{
 			builder.AddInt(1, targetVehicle, 0);
 		}
 
-		// Token: 0x0601DFE1 RID: 122849 RVA: 0x00435D94 File Offset: 0x00433F94
+		// Token: 0x0601FACA RID: 129738 RVA: 0x004675B4 File Offset: 0x004657B4
 		public static void AddSeat(FlatBufferBuilder builder, EVehicleSeat seat)
 		{
 			builder.AddUshort(2, (ushort)seat, 0);
 		}
 
-		// Token: 0x0601DFE2 RID: 122850 RVA: 0x00435D9F File Offset: 0x00433F9F
+		// Token: 0x0601FACB RID: 129739 RVA: 0x004675BF File Offset: 0x004657BF
 		public static void AddCheckIsBeingUsed(FlatBufferBuilder builder, bool checkIsBeingUsed)
 		{
 			builder.AddBool(3, checkIsBeingUsed, false);
 		}
 
-		// Token: 0x0601DFE3 RID: 122851 RVA: 0x00435DAA File Offset: 0x00433FAA
+		// Token: 0x0601FACC RID: 129740 RVA: 0x004675CA File Offset: 0x004657CA
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601DFE4 RID: 122852 RVA: 0x00435DB5 File Offset: 0x00433FB5
+		// Token: 0x0601FACD RID: 129741 RVA: 0x004675D5 File Offset: 0x004657D5
 		public static Offset<ICheckIsUsingVehicle> EndICheckIsUsingVehicle(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsUsingVehicle>(builder.EndTable());
 		}
 
-		// Token: 0x0601DFE5 RID: 122853 RVA: 0x00435DC4 File Offset: 0x00433FC4
+		// Token: 0x0601FACE RID: 129742 RVA: 0x004675E4 File Offset: 0x004657E4
 		public ICheckIsUsingVehicleT UnPack()
 		{
 			ICheckIsUsingVehicleT checkIsUsingVehicleT = new ICheckIsUsingVehicleT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsUsingVehicleT;
 		}
 
-		// Token: 0x0601DFE6 RID: 122854 RVA: 0x00435DDF File Offset: 0x00433FDF
+		// Token: 0x0601FACF RID: 129743 RVA: 0x004675FF File Offset: 0x004657FF
 		public void UnPackTo(ICheckIsUsingVehicleT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601DFE7 RID: 122855 RVA: 0x00435E20 File Offset: 0x00434020
+		// Token: 0x0601FAD0 RID: 129744 RVA: 0x00467640 File Offset: 0x00465840
 		public static Offset<ICheckIsUsingVehicle> Pack(FlatBufferBuilder builder, ICheckIsUsingVehicleT _o)
 		{
 			if (_o == null)
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsUsingVehicle.CreateICheckIsUsingVehicle(builder, _o.Type, _o.TargetVehicle, _o.Seat, _o.CheckIsBeingUsed, _o.NullMask);
 		}
 
-		// Token: 0x0400D31F RID: 54047
+		// Token: 0x0400DE04 RID: 56836
 		private Table __p;
 	}
 }

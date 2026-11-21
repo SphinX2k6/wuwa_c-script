@@ -4,13 +4,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C90 RID: 19600
+	// Token: 0x02003C41 RID: 15425
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeamlessTravelTreadmill
 	{
-		// Token: 0x17007D01 RID: 32001
-		// (get) Token: 0x06032A8A RID: 207498 RVA: 0x00BD0B33 File Offset: 0x00BCED33
+		// Token: 0x170050AB RID: 20651
+		// (get) Token: 0x0602783D RID: 161853 RVA: 0x00B15797 File Offset: 0x00B13997
 		public bool IsInit
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x17007D02 RID: 32002
-		// (get) Token: 0x06032A8B RID: 207499 RVA: 0x00BD0B3B File Offset: 0x00BCED3B
+		// Token: 0x170050AC RID: 20652
+		// (get) Token: 0x0602783E RID: 161854 RVA: 0x00B1579F File Offset: 0x00B1399F
 		public bool IsActive
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A8C RID: 207500 RVA: 0x00BD0B44 File Offset: 0x00BCED44
+		// Token: 0x0602783F RID: 161855 RVA: 0x00B157A8 File Offset: 0x00B139A8
 		public void Init(SeamlessTravelContext config, Action<bool> callback)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.LoadFloor(callback);
 		}
 
-		// Token: 0x06032A8D RID: 207501 RVA: 0x00BD0BC4 File Offset: 0x00BCEDC4
+		// Token: 0x06027840 RID: 161856 RVA: 0x00B15828 File Offset: 0x00B13A28
 		public void Tick(float delta)
 		{
 			if (!this.IsInit)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			floorMatParams.Update(delta);
 		}
 
-		// Token: 0x06032A8E RID: 207502 RVA: 0x00BD0C54 File Offset: 0x00BCEE54
+		// Token: 0x06027841 RID: 161857 RVA: 0x00B158B8 File Offset: 0x00B13AB8
 		public void Destroy()
 		{
 			AStaticMeshActor floor = this.Floor;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.TmpRotator.Reset();
 		}
 
-		// Token: 0x06032A8F RID: 207503 RVA: 0x00BD0D04 File Offset: 0x00BCEF04
+		// Token: 0x06027842 RID: 161858 RVA: 0x00B15968 File Offset: 0x00B13B68
 		public void Reset()
 		{
 			this.ActorComp = null;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.TmpRotator.Reset();
 		}
 
-		// Token: 0x06032A90 RID: 207504 RVA: 0x00BD0D7C File Offset: 0x00BCEF7C
+		// Token: 0x06027843 RID: 161859 RVA: 0x00B159E0 File Offset: 0x00B13BE0
 		protected void GetInitFloorTransform(Transform outTransform)
 		{
 			this.LockOnGravityDirect.Multiply((double)this.ActorComp.ScaledHalfHeight + this.FloorExtend.Z, this.TmpVector);
@@ -148,14 +148,14 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			outTransform.SetRotation(quat);
 		}
 
-		// Token: 0x06032A91 RID: 207505 RVA: 0x00BD0E9C File Offset: 0x00BCF09C
+		// Token: 0x06027844 RID: 161860 RVA: 0x00B15B00 File Offset: 0x00B13D00
 		protected void HandleFalseInit(Action<bool> callback)
 		{
 			callback(false);
 			this.IsInitInternal = true;
 		}
 
-		// Token: 0x06032A92 RID: 207506 RVA: 0x00BD0EAC File Offset: 0x00BCF0AC
+		// Token: 0x06027845 RID: 161861 RVA: 0x00B15B10 File Offset: 0x00B13D10
 		protected unsafe void LoadFloor(Action<bool> callback)
 		{
 			SeamlessTravelTreadmill.<>c__DisplayClass35_0 CS$<>8__locals1 = new SeamlessTravelTreadmill.<>c__DisplayClass35_0();
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}, ResourceSystem.EResourceLoadPriority.Default, "SeamlessTravel");
 		}
 
-		// Token: 0x06032A93 RID: 207507 RVA: 0x00BD0F18 File Offset: 0x00BCF118
+		// Token: 0x06027846 RID: 161862 RVA: 0x00B15B7C File Offset: 0x00B13D7C
 		protected void LoadFloorMaterial(Action<bool> callback)
 		{
 			SeamlessTravelFloorParams floorParams = this.Context.FloorParams;
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}, ResourceSystem.EResourceLoadPriority.Default, "SeamlessTravel.Treadmill");
 		}
 
-		// Token: 0x06032A94 RID: 207508 RVA: 0x00BD0FC8 File Offset: 0x00BCF1C8
+		// Token: 0x06027847 RID: 161863 RVA: 0x00B15C2C File Offset: 0x00B13E2C
 		protected void UpdateFloorMatUV(Vector moveDelta)
 		{
 			if (!this.IsLockMove)
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			floorMatParams2.Offset.G = floorMatParams2.Offset.G + (float)(this.TmpVector.Y % num2 / num2);
 		}
 
-		// Token: 0x06032A95 RID: 207509 RVA: 0x00BD1090 File Offset: 0x00BCF290
+		// Token: 0x06027848 RID: 161864 RVA: 0x00B15CF4 File Offset: 0x00B13EF4
 		protected void LockActorMove()
 		{
 			if (this.ActorComp == null)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.ActorComp.SetActorLocation(this.TmpVector.ToUeVector(false), "万向跑步机锁定位置", true);
 		}
 
-		// Token: 0x06032A96 RID: 207510 RVA: 0x00BD114C File Offset: 0x00BCF34C
+		// Token: 0x06027849 RID: 161865 RVA: 0x00B15DB0 File Offset: 0x00B13FB0
 		public void AppearEffect(Action callback)
 		{
 			if (this.FloorMatParams == null)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.IsActiveInternal = true;
 		}
 
-		// Token: 0x06032A97 RID: 207511 RVA: 0x00BD11D0 File Offset: 0x00BCF3D0
+		// Token: 0x0602784A RID: 161866 RVA: 0x00B15E34 File Offset: 0x00B14034
 		public void DisappearEffect(Action callback)
 		{
 			if (this.FloorMatParams == null)
@@ -351,13 +351,13 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.FloorMatParams.AlphaDelta = -num;
 		}
 
-		// Token: 0x06032A98 RID: 207512 RVA: 0x00BD1271 File Offset: 0x00BCF471
+		// Token: 0x0602784B RID: 161867 RVA: 0x00B15ED5 File Offset: 0x00B140D5
 		public void EnableLockMove(bool enable)
 		{
 			this.IsLockMove = enable;
 		}
 
-		// Token: 0x06032A99 RID: 207513 RVA: 0x00BD127C File Offset: 0x00BCF47C
+		// Token: 0x0602784C RID: 161868 RVA: 0x00B15EE0 File Offset: 0x00B140E0
 		[NullableContext(2)]
 		public unsafe void ResetLockOnLocation(Vector targetLocation = null, Vector gravityDirect = null)
 		{
@@ -402,13 +402,13 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06032A9A RID: 207514 RVA: 0x00BD139C File Offset: 0x00BCF59C
+		// Token: 0x0602784D RID: 161869 RVA: 0x00B16000 File Offset: 0x00B14200
 		public void GetLockOnLocation(Vector outVec)
 		{
 			outVec.DeepCopy(this.LockOnLocation);
 		}
 
-		// Token: 0x06032A9B RID: 207515 RVA: 0x00BD13AA File Offset: 0x00BCF5AA
+		// Token: 0x0602784E RID: 161870 RVA: 0x00B1600E File Offset: 0x00B1420E
 		[NullableContext(2)]
 		public AActor GetFloorActor()
 		{
@@ -420,95 +420,95 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return this.Floor;
 		}
 
-		// Token: 0x0401AF67 RID: 110439
+		// Token: 0x040158C4 RID: 88260
 		private const string DEFAULT_FLOOR_MESH_PATH = "/Engine/BasicShapes/Plane.Plane";
 
-		// Token: 0x0401AF68 RID: 110440
+		// Token: 0x040158C5 RID: 88261
 		private static readonly FName floorMeshMaterialOffsetParam = new FName("Offset");
 
-		// Token: 0x0401AF69 RID: 110441
+		// Token: 0x040158C6 RID: 88262
 		private static readonly FName floorMeshMaterialAlphaParam = new FName("Alpha");
 
-		// Token: 0x0401AF6A RID: 110442
+		// Token: 0x040158C7 RID: 88263
 		private const float DEFAULT_APPEAR_ALPHA_DELTA = 0.5f;
 
-		// Token: 0x0401AF6B RID: 110443
+		// Token: 0x040158C8 RID: 88264
 		private const float DEFAULT_DISAPPEAR_ALPHA_DELTA = 0.5f;
 
-		// Token: 0x0401AF6C RID: 110444
+		// Token: 0x040158C9 RID: 88265
 		private const int DEFAULT_FLOOR_SCALE_X = 100;
 
-		// Token: 0x0401AF6D RID: 110445
+		// Token: 0x040158CA RID: 88266
 		private const int DEFAULT_FLOOR_SCALE_Y = 100;
 
-		// Token: 0x0401AF6E RID: 110446
+		// Token: 0x040158CB RID: 88267
 		private const int DEFAULT_FLOOR_SCALE_Z = 1;
 
-		// Token: 0x0401AF6F RID: 110447
+		// Token: 0x040158CC RID: 88268
 		public const int DEFAULT_SEAMLESS_TRANSITION_HEIGHT = 2000000;
 
-		// Token: 0x0401AF70 RID: 110448
+		// Token: 0x040158CD RID: 88269
 		[Nullable(2)]
 		protected CharacterActorComponent ActorComp;
 
-		// Token: 0x0401AF71 RID: 110449
+		// Token: 0x040158CE RID: 88270
 		[Nullable(2)]
 		protected SeamlessTravelContext Context;
 
-		// Token: 0x0401AF72 RID: 110450
+		// Token: 0x040158CF RID: 88271
 		[Nullable(2)]
 		protected AStaticMeshActor Floor;
 
-		// Token: 0x0401AF73 RID: 110451
+		// Token: 0x040158D0 RID: 88272
 		protected Vector FloorExtend = Vector.Create();
 
-		// Token: 0x0401AF74 RID: 110452
+		// Token: 0x040158D1 RID: 88273
 		[Nullable(2)]
 		protected SeamlessTravelTreadmill.FloorMaterialParams FloorMatParams;
 
-		// Token: 0x0401AF75 RID: 110453
+		// Token: 0x040158D2 RID: 88274
 		protected bool IsInitInternal;
 
-		// Token: 0x0401AF76 RID: 110454
+		// Token: 0x040158D3 RID: 88275
 		protected bool IsLockMove;
 
-		// Token: 0x0401AF77 RID: 110455
+		// Token: 0x040158D4 RID: 88276
 		protected bool IsActiveInternal;
 
-		// Token: 0x0401AF78 RID: 110456
+		// Token: 0x040158D5 RID: 88277
 		protected Vector LockOnLocation = Vector.Create();
 
-		// Token: 0x0401AF79 RID: 110457
+		// Token: 0x040158D6 RID: 88278
 		protected Vector LockOnGravityDirect = Vector.Create();
 
-		// Token: 0x0401AF7A RID: 110458
+		// Token: 0x040158D7 RID: 88279
 		protected Vector LocationDelta = Vector.Create();
 
-		// Token: 0x0401AF7B RID: 110459
+		// Token: 0x040158D8 RID: 88280
 		protected Vector TmpVector = Vector.Create();
 
-		// Token: 0x0401AF7C RID: 110460
+		// Token: 0x040158D9 RID: 88281
 		protected Transform TmpTransform = Transform.Create();
 
-		// Token: 0x0401AF7D RID: 110461
+		// Token: 0x040158DA RID: 88282
 		protected Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0401AF7E RID: 110462
+		// Token: 0x040158DB RID: 88283
 		protected Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x0200AE42 RID: 44610
+		// Token: 0x02009860 RID: 39008
 		[NullableContext(2)]
 		[Nullable(0)]
 		protected class FloorMaterialParams
 		{
-			// Token: 0x0604DFC3 RID: 319427 RVA: 0x014A555C File Offset: 0x014A375C
+			// Token: 0x060445A4 RID: 279972 RVA: 0x0145D974 File Offset: 0x0145BB74
 			[NullableContext(1)]
 			public FloorMaterialParams(SeamlessTravelTreadmill owner)
 			{
 				this.Owner = owner;
 			}
 
-			// Token: 0x0604DFC4 RID: 319428 RVA: 0x014A558A File Offset: 0x014A378A
+			// Token: 0x060445A5 RID: 279973 RVA: 0x0145D9A2 File Offset: 0x0145BBA2
 			[NullableContext(1)]
 			public void Bind(UMaterialInstanceDynamic mat)
 			{
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 				this.Material = mat;
 			}
 
-			// Token: 0x0604DFC5 RID: 319429 RVA: 0x014A55A8 File Offset: 0x014A37A8
+			// Token: 0x060445A6 RID: 279974 RVA: 0x0145D9C0 File Offset: 0x0145BBC0
 			public void Reset()
 			{
 				this.Offset.R = 0f;
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 				this.OnDisappearEndHandle = null;
 			}
 
-			// Token: 0x0604DFC6 RID: 319430 RVA: 0x014A560C File Offset: 0x014A380C
+			// Token: 0x060445A7 RID: 279975 RVA: 0x0145DA24 File Offset: 0x0145BC24
 			public void Update(float deltaTime)
 			{
 				if (!this.Owner.IsInit)
@@ -584,38 +584,38 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 				}
 			}
 
-			// Token: 0x0604DFC7 RID: 319431 RVA: 0x014A57AB File Offset: 0x014A39AB
+			// Token: 0x060445A8 RID: 279976 RVA: 0x0145DBC3 File Offset: 0x0145BDC3
 			public bool IsVisible()
 			{
 				return this.Alpha > 0f;
 			}
 
-			// Token: 0x04034EAE RID: 216750
+			// Token: 0x0402F853 RID: 194643
 			public FLinearColor Offset = new FLinearColor(0f, 0f, 0f, 0f);
 
-			// Token: 0x04034EAF RID: 216751
+			// Token: 0x0402F854 RID: 194644
 			public float Alpha;
 
-			// Token: 0x04034EB0 RID: 216752
+			// Token: 0x0402F855 RID: 194645
 			public double AlphaDelta;
 
-			// Token: 0x04034EB1 RID: 216753
+			// Token: 0x0402F856 RID: 194646
 			[Nullable(1)]
 			private readonly SeamlessTravelTreadmill Owner;
 
-			// Token: 0x04034EB2 RID: 216754
+			// Token: 0x0402F857 RID: 194647
 			private UMaterialInstanceDynamic Material;
 
-			// Token: 0x04034EB3 RID: 216755
+			// Token: 0x0402F858 RID: 194648
 			public Action OnAppearStartHandle;
 
-			// Token: 0x04034EB4 RID: 216756
+			// Token: 0x0402F859 RID: 194649
 			public Action OnAppearEndHandle;
 
-			// Token: 0x04034EB5 RID: 216757
+			// Token: 0x0402F85A RID: 194650
 			public Action OnDisappearStartHandle;
 
-			// Token: 0x04034EB6 RID: 216758
+			// Token: 0x0402F85B RID: 194651
 			public Action OnDisappearEndHandle;
 		}
 	}

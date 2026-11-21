@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020011E4 RID: 4580
+// Token: 0x02000698 RID: 1688
 public enum ECollectionState
 {
-	// Token: 0x0400380C RID: 14348
+	// Token: 0x040038A5 RID: 14501
 	PreQuest,
-	// Token: 0x0400380D RID: 14349
+	// Token: 0x040038A6 RID: 14502
 	InQuest,
-	// Token: 0x0400380E RID: 14350
+	// Token: 0x040038A7 RID: 14503
 	Finished
 }

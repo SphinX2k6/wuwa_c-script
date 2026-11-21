@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 {
-	// Token: 0x02005446 RID: 21574
+	// Token: 0x02004429 RID: 17449
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FilterSettingSliderItem : UiPanelBase
 	{
-		// Token: 0x17008443 RID: 33859
-		// (get) Token: 0x06037155 RID: 225621 RVA: 0x00D0E888 File Offset: 0x00D0CA88
+		// Token: 0x1700580F RID: 22543
+		// (get) Token: 0x0602C09E RID: 180382 RVA: 0x00C5DCA0 File Offset: 0x00C5BEA0
 		private FilterSettingViewModel ParentViewModel
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			}
 		}
 
-		// Token: 0x06037157 RID: 225623 RVA: 0x00D0E8A8 File Offset: 0x00D0CAA8
+		// Token: 0x0602C0A0 RID: 180384 RVA: 0x00C5DCC0 File Offset: 0x00C5BEC0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			};
 		}
 
-		// Token: 0x06037158 RID: 225624 RVA: 0x00D0E904 File Offset: 0x00D0CB04
+		// Token: 0x0602C0A1 RID: 180385 RVA: 0x00C5DD1C File Offset: 0x00C5BF1C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FilterSettingSliderItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037159 RID: 225625 RVA: 0x00D0E947 File Offset: 0x00D0CB47
+		// Token: 0x0602C0A2 RID: 180386 RVA: 0x00C5DD5F File Offset: 0x00C5BF5F
 		protected override void OnBeforeDestroy()
 		{
 			UUISliderComponent slider = base.GetSlider(1);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			slider.OnValueChangeCb.Unbind();
 		}
 
-		// Token: 0x0603715A RID: 225626 RVA: 0x00D0E95F File Offset: 0x00D0CB5F
+		// Token: 0x0602C0A3 RID: 180387 RVA: 0x00C5DD77 File Offset: 0x00C5BF77
 		private void OnSliderValueChanged(float value)
 		{
 			if (this.ParentViewModel != null && !this.ParentViewModel.IsPropertyDirty(2))
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			}
 		}
 
-		// Token: 0x0603715B RID: 225627 RVA: 0x00D0E998 File Offset: 0x00D0CB98
+		// Token: 0x0602C0A4 RID: 180388 RVA: 0x00C5DDB0 File Offset: 0x00C5BFB0
 		[NullableContext(1)]
 		public void SetTitleText(string text)
 		{
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x0603715C RID: 225628 RVA: 0x00D0E9AD File Offset: 0x00D0CBAD
+		// Token: 0x0602C0A5 RID: 180389 RVA: 0x00C5DDC5 File Offset: 0x00C5BFC5
 		public void SetSliderValue(float value)
 		{
 			UUISliderComponent slider = base.GetSlider(1);

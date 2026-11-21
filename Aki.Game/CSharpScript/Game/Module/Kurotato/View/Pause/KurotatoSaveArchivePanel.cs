@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Pause
 {
-	// Token: 0x02005740 RID: 22336
+	// Token: 0x02004717 RID: 18199
 	internal class KurotatoSaveArchivePanel : UiPanelBase
 	{
-		// Token: 0x06038C90 RID: 232592 RVA: 0x00D7B8A8 File Offset: 0x00D79AA8
+		// Token: 0x0602DBA0 RID: 187296 RVA: 0x00CC9F58 File Offset: 0x00CC8158
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038C91 RID: 232593 RVA: 0x00D7B9B4 File Offset: 0x00D79BB4
+		// Token: 0x0602DBA1 RID: 187297 RVA: 0x00CCA064 File Offset: 0x00CC8264
 		public void SetGoDetailActive(bool active)
 		{
 			UUIItem uuiitem = base.GetButton(4).RootUIComp.Get();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			uuiitem.SetUIActive(active);
 		}
 
-		// Token: 0x06038C92 RID: 232594 RVA: 0x00D7B9E0 File Offset: 0x00D79BE0
+		// Token: 0x0602DBA2 RID: 187298 RVA: 0x00CCA090 File Offset: 0x00CC8290
 		[NullableContext(2)]
 		public void RefreshSaveInfo(KurotatoSaveData saveData, int saveIndex)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			base.GetText(3).SetText(ConfigMultiTextLang.GetLocalTextNew("Kurotato_Lv", null) + saveData.RoleLevel.ToString(), true);
 		}
 
-		// Token: 0x06038C93 RID: 232595 RVA: 0x00D7BA64 File Offset: 0x00D79C64
+		// Token: 0x0602DBA3 RID: 187299 RVA: 0x00CCA114 File Offset: 0x00CC8314
 		private void OnClickBtnGoDetail()
 		{
 			List<KurotatoInstInfo> roleSaveInstInfos = KurotatoModel.Instance.GetRoleSaveInstInfos();
@@ -78,21 +78,21 @@ namespace CSharpScript.Game.Module.Kurotato.View.Pause
 			UiManager.Instance.OpenView(EUiViewName.KurotatoTabMainView, param, null);
 		}
 
-		// Token: 0x0401DC91 RID: 122001
+		// Token: 0x04018727 RID: 100135
 		private int SaveIndex;
 
-		// Token: 0x0200B929 RID: 47401
+		// Token: 0x0200A34A RID: 41802
 		private enum ESaveArchiveComp
 		{
-			// Token: 0x04038006 RID: 229382
+			// Token: 0x04032A16 RID: 207382
 			PanelEmpty,
-			// Token: 0x04038007 RID: 229383
+			// Token: 0x04032A17 RID: 207383
 			PanelInfo,
-			// Token: 0x04038008 RID: 229384
+			// Token: 0x04032A18 RID: 207384
 			TextSaveTime,
-			// Token: 0x04038009 RID: 229385
+			// Token: 0x04032A19 RID: 207385
 			TextSaveLevel,
-			// Token: 0x0403800A RID: 229386
+			// Token: 0x04032A1A RID: 207386
 			BtnGoDetail
 		}
 	}

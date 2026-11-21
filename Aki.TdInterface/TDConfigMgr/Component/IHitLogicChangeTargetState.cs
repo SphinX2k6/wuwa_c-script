@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200042A RID: 1066
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000483 RID: 1155
 	public class IHitLogicChangeTargetState : IHitLogicType
 	{
-		// Token: 0x0600157B RID: 5499 RVA: 0x000433FC File Offset: 0x000415FC
+		// Token: 0x06001715 RID: 5909 RVA: 0x00047144 File Offset: 0x00045344
 		private IHitLogicChangeTargetState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600157C RID: 5500 RVA: 0x00043434 File Offset: 0x00041634
+		// Token: 0x06001716 RID: 5910 RVA: 0x0004717C File Offset: 0x0004537C
 		public static IHitLogicChangeTargetState Create([Nullable(2)] IHitLogicChangeTargetState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600157D RID: 5501 RVA: 0x00043447 File Offset: 0x00041647
+		// Token: 0x06001717 RID: 5911 RVA: 0x0004718F File Offset: 0x0004538F
 		public static IHitLogicChangeTargetState CreateFromSetValue([Nullable(2)] IHitLogicChangeTargetState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600157E RID: 5502 RVA: 0x0004345A File Offset: 0x0004165A
+		// Token: 0x06001718 RID: 5912 RVA: 0x000471A2 File Offset: 0x000453A2
 		public new IHitLogicChangeTargetState_SetValue ToSetValue()
 		{
 			return new IHitLogicChangeTargetState_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005DC RID: 1500
-		// (get) Token: 0x0600157F RID: 5503 RVA: 0x00043485 File Offset: 0x00041685
-		// (set) Token: 0x06001580 RID: 5504 RVA: 0x000434B0 File Offset: 0x000416B0
+		// Token: 0x17000643 RID: 1603
+		// (get) Token: 0x06001719 RID: 5913 RVA: 0x000471CD File Offset: 0x000453CD
+		// (set) Token: 0x0600171A RID: 5914 RVA: 0x000471F8 File Offset: 0x000453F8
 		public override EHitLogicType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005DD RID: 1501
-		// (get) Token: 0x06001581 RID: 5505 RVA: 0x000434C0 File Offset: 0x000416C0
-		// (set) Token: 0x06001582 RID: 5506 RVA: 0x00043553 File Offset: 0x00041753
+		// Token: 0x17000644 RID: 1604
+		// (get) Token: 0x0600171B RID: 5915 RVA: 0x00047208 File Offset: 0x00045408
+		// (set) Token: 0x0600171C RID: 5916 RVA: 0x0004729B File Offset: 0x0004549B
 		public virtual List<IConditionHitConfigWithBullet> TargetBulletHitConfigs
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005DE RID: 1502
-		// (get) Token: 0x06001583 RID: 5507 RVA: 0x00043568 File Offset: 0x00041768
-		// (set) Token: 0x06001584 RID: 5508 RVA: 0x000435FB File Offset: 0x000417FB
+		// Token: 0x17000645 RID: 1605
+		// (get) Token: 0x0600171D RID: 5917 RVA: 0x000472B0 File Offset: 0x000454B0
+		// (set) Token: 0x0600171E RID: 5918 RVA: 0x00047343 File Offset: 0x00045543
 		public virtual List<IConditionHitConfig> OtherBulletsHitConfig
 		{
 			get
@@ -161,24 +159,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001097 RID: 4247
+		// Token: 0x040011B9 RID: 4537
 		[Nullable(2)]
 		protected new IHitLogicChangeTargetState FbInstance;
 
-		// Token: 0x04001098 RID: 4248
+		// Token: 0x040011BA RID: 4538
 		[Nullable(2)]
 		protected new IHitLogicChangeTargetState_SetValue PocoInterface;
 
-		// Token: 0x04001099 RID: 4249
+		// Token: 0x040011BB RID: 4539
 		private List<IConditionHitConfigWithBullet> _TargetBulletHitConfigsCache;
 
-		// Token: 0x0400109A RID: 4250
+		// Token: 0x040011BC RID: 4540
 		private bool _TargetBulletHitConfigsInited;
 
-		// Token: 0x0400109B RID: 4251
+		// Token: 0x040011BD RID: 4541
 		private List<IConditionHitConfig> _OtherBulletsHitConfigCache;
 
-		// Token: 0x0400109C RID: 4252
+		// Token: 0x040011BE RID: 4542
 		private bool _OtherBulletsHitConfigInited;
 	}
 }

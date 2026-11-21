@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AdventureGuide;
 
-// Token: 0x0200168C RID: 5772
+// Token: 0x02000B44 RID: 2884
 [NullableContext(1)]
 [Nullable(0)]
 public static class AdventureGuideControllerHelper
 {
-	// Token: 0x0600A419 RID: 42009 RVA: 0x00246B0C File Offset: 0x00244D0C
+	// Token: 0x060077F8 RID: 30712 RVA: 0x00250DB4 File Offset: 0x0024EFB4
 	public static int silentAreasSortFunc(SilentAreaDetectionRecord a, SilentAreaDetectionRecord b)
 	{
 		if (a.Conf.DangerType != b.Conf.DangerType)
@@ -21,7 +21,7 @@ public static class AdventureGuideControllerHelper
 		return a.Conf.Id - b.Conf.Id;
 	}
 
-	// Token: 0x0600A41A RID: 42010 RVA: 0x00246BB0 File Offset: 0x00244DB0
+	// Token: 0x060077F9 RID: 30713 RVA: 0x00250E58 File Offset: 0x0024F058
 	public static int monsterSortFunc(MonsterDetectionRecord a, MonsterDetectionRecord b)
 	{
 		if (a.Conf.DangerType != b.Conf.DangerType)

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C2E RID: 19502
+	// Token: 0x02005121 RID: 20769
 	public struct IGramophoneCheckCondition : IFlatbufferObject
 	{
-		// Token: 0x17008DAA RID: 36266
-		// (get) Token: 0x0601EE67 RID: 126567 RVA: 0x00452F7E File Offset: 0x0045117E
+		// Token: 0x170094D3 RID: 38099
+		// (get) Token: 0x06020A6B RID: 133739 RVA: 0x0048685A File Offset: 0x00484A5A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE68 RID: 126568 RVA: 0x00452F8B File Offset: 0x0045118B
+		// Token: 0x06020A6C RID: 133740 RVA: 0x00486867 File Offset: 0x00484A67
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EE69 RID: 126569 RVA: 0x00452F94 File Offset: 0x00451194
+		// Token: 0x06020A6D RID: 133741 RVA: 0x00486870 File Offset: 0x00484A70
 		public static IGramophoneCheckCondition GetRootAsIGramophoneCheckCondition(ByteBuffer _bb)
 		{
 			return IGramophoneCheckCondition.GetRootAsIGramophoneCheckCondition(_bb, default(IGramophoneCheckCondition));
 		}
 
-		// Token: 0x0601EE6A RID: 126570 RVA: 0x00452FB0 File Offset: 0x004511B0
+		// Token: 0x06020A6E RID: 133742 RVA: 0x0048688C File Offset: 0x00484A8C
 		public static IGramophoneCheckCondition GetRootAsIGramophoneCheckCondition(ByteBuffer _bb, IGramophoneCheckCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EE6B RID: 126571 RVA: 0x00452FCD File Offset: 0x004511CD
+		// Token: 0x06020A6F RID: 133743 RVA: 0x004868A9 File Offset: 0x00484AA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EE6C RID: 126572 RVA: 0x00452FDC File Offset: 0x004511DC
+		// Token: 0x06020A70 RID: 133744 RVA: 0x004868B8 File Offset: 0x00484AB8
 		public IGramophoneCheckCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008DAB RID: 36267
-		// (get) Token: 0x0601EE6D RID: 126573 RVA: 0x00452FEC File Offset: 0x004511EC
+		// Token: 0x170094D4 RID: 38100
+		// (get) Token: 0x06020A71 RID: 133745 RVA: 0x004868C8 File Offset: 0x00484AC8
 		public ECommonMatchType CheckType
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE6E RID: 126574 RVA: 0x00453028 File Offset: 0x00451228
+		// Token: 0x06020A72 RID: 133746 RVA: 0x00486904 File Offset: 0x00484B04
 		public int PlayList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17008DAC RID: 36268
-		// (get) Token: 0x0601EE6F RID: 126575 RVA: 0x00453068 File Offset: 0x00451268
+		// Token: 0x170094D5 RID: 38101
+		// (get) Token: 0x06020A73 RID: 133747 RVA: 0x00486944 File Offset: 0x00484B44
 		public int PlayListLength
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE70 RID: 126576 RVA: 0x00453093 File Offset: 0x00451293
+		// Token: 0x06020A74 RID: 133748 RVA: 0x0048696F File Offset: 0x00484B6F
 		public Span<int> GetPlayListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0601EE71 RID: 126577 RVA: 0x004530A2 File Offset: 0x004512A2
+		// Token: 0x06020A75 RID: 133749 RVA: 0x0048697E File Offset: 0x00484B7E
 		public int[] GetPlayListArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x0601EE72 RID: 126578 RVA: 0x004530B0 File Offset: 0x004512B0
+		// Token: 0x06020A76 RID: 133750 RVA: 0x0048698C File Offset: 0x00484B8C
 		public static Offset<IGramophoneCheckCondition> CreateIGramophoneCheckCondition(FlatBufferBuilder builder, ECommonMatchType CheckType = ECommonMatchType.MatchAll, VectorOffset PlayListOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IGramophoneCheckCondition.EndIGramophoneCheckCondition(builder);
 		}
 
-		// Token: 0x0601EE73 RID: 126579 RVA: 0x004530CD File Offset: 0x004512CD
+		// Token: 0x06020A77 RID: 133751 RVA: 0x004869A9 File Offset: 0x00484BA9
 		public static void StartIGramophoneCheckCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601EE74 RID: 126580 RVA: 0x004530D6 File Offset: 0x004512D6
+		// Token: 0x06020A78 RID: 133752 RVA: 0x004869B2 File Offset: 0x00484BB2
 		public static void AddCheckType(FlatBufferBuilder builder, ECommonMatchType checkType)
 		{
 			builder.AddByte(0, (byte)checkType, 0);
 		}
 
-		// Token: 0x0601EE75 RID: 126581 RVA: 0x004530E1 File Offset: 0x004512E1
+		// Token: 0x06020A79 RID: 133753 RVA: 0x004869BD File Offset: 0x00484BBD
 		public static void AddPlayList(FlatBufferBuilder builder, VectorOffset playListOffset)
 		{
 			builder.AddOffset(1, playListOffset.Value, 0);
 		}
 
-		// Token: 0x0601EE76 RID: 126582 RVA: 0x004530F4 File Offset: 0x004512F4
+		// Token: 0x06020A7A RID: 133754 RVA: 0x004869D0 File Offset: 0x00484BD0
 		public static VectorOffset CreatePlayListVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EE77 RID: 126583 RVA: 0x0045312B File Offset: 0x0045132B
+		// Token: 0x06020A7B RID: 133755 RVA: 0x00486A07 File Offset: 0x00484C07
 		public static VectorOffset CreatePlayListVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EE78 RID: 126584 RVA: 0x00453145 File Offset: 0x00451345
+		// Token: 0x06020A7C RID: 133756 RVA: 0x00486A21 File Offset: 0x00484C21
 		public static VectorOffset CreatePlayListVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EE79 RID: 126585 RVA: 0x00453163 File Offset: 0x00451363
+		// Token: 0x06020A7D RID: 133757 RVA: 0x00486A3F File Offset: 0x00484C3F
 		public static VectorOffset CreatePlayListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,19 +163,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EE7A RID: 126586 RVA: 0x0045317C File Offset: 0x0045137C
+		// Token: 0x06020A7E RID: 133758 RVA: 0x00486A58 File Offset: 0x00484C58
 		public static void StartPlayListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601EE7B RID: 126587 RVA: 0x00453187 File Offset: 0x00451387
+		// Token: 0x06020A7F RID: 133759 RVA: 0x00486A63 File Offset: 0x00484C63
 		public static Offset<IGramophoneCheckCondition> EndIGramophoneCheckCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IGramophoneCheckCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601EE7C RID: 126588 RVA: 0x00453194 File Offset: 0x00451394
+		// Token: 0x06020A80 RID: 133760 RVA: 0x00486A70 File Offset: 0x00484C70
 		public IGramophoneCheckConditionT UnPack()
 		{
 			IGramophoneCheckConditionT gramophoneCheckConditionT = new IGramophoneCheckConditionT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return gramophoneCheckConditionT;
 		}
 
-		// Token: 0x0601EE7D RID: 126589 RVA: 0x004531B0 File Offset: 0x004513B0
+		// Token: 0x06020A81 RID: 133761 RVA: 0x00486A8C File Offset: 0x00484C8C
 		public void UnPackTo(IGramophoneCheckConditionT _o)
 		{
 			_o.CheckType = this.CheckType;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE7E RID: 126590 RVA: 0x004531F8 File Offset: 0x004513F8
+		// Token: 0x06020A82 RID: 133762 RVA: 0x00486AD4 File Offset: 0x00484CD4
 		public static Offset<IGramophoneCheckCondition> Pack(FlatBufferBuilder builder, IGramophoneCheckConditionT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IGramophoneCheckCondition.CreateIGramophoneCheckCondition(builder, _o.CheckType, playListOffset);
 		}
 
-		// Token: 0x0400D5D0 RID: 54736
+		// Token: 0x0400E0EF RID: 57583
 		private Table __p;
 	}
 }

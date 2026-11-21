@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D3A RID: 7482
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F4B RID: 8011
 	public class IPostAkEventMusicSubtitle : IPostAkEventType
 	{
-		// Token: 0x0600A089 RID: 41097 RVA: 0x0016E338 File Offset: 0x0016C538
+		// Token: 0x0600AA75 RID: 43637 RVA: 0x0018275C File Offset: 0x0018095C
 		private IPostAkEventMusicSubtitle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A08A RID: 41098 RVA: 0x0016E370 File Offset: 0x0016C570
+		// Token: 0x0600AA76 RID: 43638 RVA: 0x00182794 File Offset: 0x00180994
 		public static IPostAkEventMusicSubtitle Create([Nullable(2)] IPostAkEventMusicSubtitle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A08B RID: 41099 RVA: 0x0016E383 File Offset: 0x0016C583
+		// Token: 0x0600AA77 RID: 43639 RVA: 0x001827A7 File Offset: 0x001809A7
 		public static IPostAkEventMusicSubtitle CreateFromSetValue([Nullable(2)] IPostAkEventMusicSubtitle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A08C RID: 41100 RVA: 0x0016E398 File Offset: 0x0016C598
+		// Token: 0x0600AA78 RID: 43640 RVA: 0x001827BC File Offset: 0x001809BC
 		public new IPostAkEventMusicSubtitle_SetValue ToSetValue()
 		{
 			return new IPostAkEventMusicSubtitle_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031C4 RID: 12740
-		// (get) Token: 0x0600A08D RID: 41101 RVA: 0x0016E3E6 File Offset: 0x0016C5E6
-		// (set) Token: 0x0600A08E RID: 41102 RVA: 0x0016E411 File Offset: 0x0016C611
+		// Token: 0x17003458 RID: 13400
+		// (get) Token: 0x0600AA79 RID: 43641 RVA: 0x0018280A File Offset: 0x00180A0A
+		// (set) Token: 0x0600AA7A RID: 43642 RVA: 0x00182835 File Offset: 0x00180A35
 		public override EPostAkEvent Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031C5 RID: 12741
-		// (get) Token: 0x0600A08F RID: 41103 RVA: 0x0016E41F File Offset: 0x0016C61F
-		// (set) Token: 0x0600A090 RID: 41104 RVA: 0x0016E44A File Offset: 0x0016C64A
+		// Token: 0x17003459 RID: 13401
+		// (get) Token: 0x0600AA7B RID: 43643 RVA: 0x00182843 File Offset: 0x00180A43
+		// (set) Token: 0x0600AA7C RID: 43644 RVA: 0x0018286E File Offset: 0x00180A6E
 		public virtual string MusicSubtitleGroupTag
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031C6 RID: 12742
-		// (get) Token: 0x0600A091 RID: 41105 RVA: 0x0016E458 File Offset: 0x0016C658
-		// (set) Token: 0x0600A092 RID: 41106 RVA: 0x0016E483 File Offset: 0x0016C683
+		// Token: 0x1700345A RID: 13402
+		// (get) Token: 0x0600AA7D RID: 43645 RVA: 0x0018287C File Offset: 0x00180A7C
+		// (set) Token: 0x0600AA7E RID: 43646 RVA: 0x001828A7 File Offset: 0x00180AA7
 		public virtual string AkEvent
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031C7 RID: 12743
-		// (get) Token: 0x0600A093 RID: 41107 RVA: 0x0016E494 File Offset: 0x0016C694
-		// (set) Token: 0x0600A094 RID: 41108 RVA: 0x0016E4CE File Offset: 0x0016C6CE
+		// Token: 0x1700345B RID: 13403
+		// (get) Token: 0x0600AA7F RID: 43647 RVA: 0x001828B8 File Offset: 0x00180AB8
+		// (set) Token: 0x0600AA80 RID: 43648 RVA: 0x001828F2 File Offset: 0x00180AF2
 		public virtual bool? IsLoop
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031C8 RID: 12744
-		// (get) Token: 0x0600A095 RID: 41109 RVA: 0x0016E4DC File Offset: 0x0016C6DC
-		// (set) Token: 0x0600A096 RID: 41110 RVA: 0x0016E516 File Offset: 0x0016C716
+		// Token: 0x1700345C RID: 13404
+		// (get) Token: 0x0600AA81 RID: 43649 RVA: 0x00182900 File Offset: 0x00180B00
+		// (set) Token: 0x0600AA82 RID: 43650 RVA: 0x0018293A File Offset: 0x00180B3A
 		public virtual bool? IsEndAkEvent
 		{
 			get
@@ -180,11 +178,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060BF RID: 24767
+		// Token: 0x0400663B RID: 26171
 		[Nullable(2)]
 		protected new IPostAkEventMusicSubtitle FbInstance;
 
-		// Token: 0x040060C0 RID: 24768
+		// Token: 0x0400663C RID: 26172
 		[Nullable(2)]
 		protected new IPostAkEventMusicSubtitle_SetValue PocoInterface;
 	}

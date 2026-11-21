@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002EB8 RID: 11960
+// Token: 0x0200240B RID: 9227
 [NullableContext(1)]
 [Nullable(0)]
 public class CustomSetActorRotation : CustomActionBase
 {
-	// Token: 0x06019892 RID: 104594 RVA: 0x00699C2C File Offset: 0x00697E2C
+	// Token: 0x06017178 RID: 94584 RVA: 0x006BFEEC File Offset: 0x006BE0EC
 	public CustomSetActorRotation(CharacterActorComponent actorComp, BaseActorComponent targetActorComp, CharacterAnimationComponent animComp, double angle, ECustomSetRotationType rotationType, [Nullable(2)] Action callback = null, int modelBufferTime = 200)
 	{
 		this.ActorComp = actorComp;
@@ -19,7 +19,7 @@ public class CustomSetActorRotation : CustomActionBase
 		this.ModelBufferTime = modelBufferTime;
 	}
 
-	// Token: 0x06019893 RID: 104595 RVA: 0x00699C98 File Offset: 0x00697E98
+	// Token: 0x06017179 RID: 94585 RVA: 0x006BFF58 File Offset: 0x006BE158
 	protected override void OnRunAction()
 	{
 		if (this.ActorComp == null || this.AnimComp == null || this.TargetActorComp == null)
@@ -51,7 +51,7 @@ public class CustomSetActorRotation : CustomActionBase
 		}
 	}
 
-	// Token: 0x06019894 RID: 104596 RVA: 0x00699DC0 File Offset: 0x00697FC0
+	// Token: 0x0601717A RID: 94586 RVA: 0x006C0080 File Offset: 0x006BE280
 	protected override void OnCheckFinish(float deltaTime)
 	{
 		if (this.IsFinish)
@@ -89,33 +89,33 @@ public class CustomSetActorRotation : CustomActionBase
 		this.ActorComp.SetOverrideTurnSpeed(new float?((float)180));
 	}
 
-	// Token: 0x0400BEB7 RID: 48823
+	// Token: 0x0400C252 RID: 49746
 	private readonly Vector CacheVector = Vector.Create();
 
-	// Token: 0x0400BEB8 RID: 48824
+	// Token: 0x0400C253 RID: 49747
 	private readonly Vector CacheVector2 = Vector.Create();
 
-	// Token: 0x0400BEB9 RID: 48825
+	// Token: 0x0400C254 RID: 49748
 	private readonly Rotator CacheRotator = Rotator.Create();
 
-	// Token: 0x0400BEBA RID: 48826
+	// Token: 0x0400C255 RID: 49749
 	private float DeltaTime;
 
-	// Token: 0x0400BEBB RID: 48827
+	// Token: 0x0400C256 RID: 49750
 	private readonly CharacterActorComponent ActorComp;
 
-	// Token: 0x0400BEBC RID: 48828
+	// Token: 0x0400C257 RID: 49751
 	private readonly BaseActorComponent TargetActorComp;
 
-	// Token: 0x0400BEBD RID: 48829
+	// Token: 0x0400C258 RID: 49752
 	private readonly CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400BEBE RID: 48830
+	// Token: 0x0400C259 RID: 49753
 	private readonly double Angle;
 
-	// Token: 0x0400BEBF RID: 48831
+	// Token: 0x0400C25A RID: 49754
 	private readonly ECustomSetRotationType RotationType;
 
-	// Token: 0x0400BEC0 RID: 48832
+	// Token: 0x0400C25B RID: 49755
 	private readonly int ModelBufferTime;
 }

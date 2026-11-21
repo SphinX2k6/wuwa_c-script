@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006132 RID: 24882
+	// Token: 0x02006797 RID: 26519
 	public class IAddOrSubAlertValueChangeSpeedT
 	{
-		// Token: 0x1700B764 RID: 46948
-		// (get) Token: 0x0602A895 RID: 174229 RVA: 0x005DB660 File Offset: 0x005D9860
-		// (set) Token: 0x0602A896 RID: 174230 RVA: 0x005DB668 File Offset: 0x005D9868
+		// Token: 0x1700C0D4 RID: 49364
+		// (get) Token: 0x0602CF8E RID: 184206 RVA: 0x0062583C File Offset: 0x00623A3C
+		// (set) Token: 0x0602CF8F RID: 184207 RVA: 0x00625844 File Offset: 0x00623A44
 		public EValueChangeType Type { get; set; }
 
-		// Token: 0x1700B765 RID: 46949
-		// (get) Token: 0x0602A897 RID: 174231 RVA: 0x005DB671 File Offset: 0x005D9871
-		// (set) Token: 0x0602A898 RID: 174232 RVA: 0x005DB679 File Offset: 0x005D9879
+		// Token: 0x1700C0D5 RID: 49365
+		// (get) Token: 0x0602CF90 RID: 184208 RVA: 0x0062584D File Offset: 0x00623A4D
+		// (set) Token: 0x0602CF91 RID: 184209 RVA: 0x00625855 File Offset: 0x00623A55
 		public float DeltaValue { get; set; }
 
-		// Token: 0x0602A899 RID: 174233 RVA: 0x005DB682 File Offset: 0x005D9882
+		// Token: 0x0602CF92 RID: 184210 RVA: 0x0062585E File Offset: 0x00623A5E
 		public IAddOrSubAlertValueChangeSpeedT()
 		{
 			this.Type = EValueChangeType.AddOrSub;

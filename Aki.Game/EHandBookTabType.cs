@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02001DEE RID: 7662
+// Token: 0x020012B0 RID: 4784
 public enum EHandBookTabType
 {
-	// Token: 0x04006C1B RID: 27675
+	// Token: 0x04006CFC RID: 27900
 	Monster,
-	// Token: 0x04006C1C RID: 27676
+	// Token: 0x04006CFD RID: 27901
 	Phantom,
-	// Token: 0x04006C1D RID: 27677
+	// Token: 0x04006CFE RID: 27902
 	Geography,
-	// Token: 0x04006C1E RID: 27678
+	// Token: 0x04006CFF RID: 27903
 	Weapon,
-	// Token: 0x04006C1F RID: 27679
+	// Token: 0x04006D00 RID: 27904
 	Animal,
-	// Token: 0x04006C20 RID: 27680
+	// Token: 0x04006D01 RID: 27905
 	Item,
-	// Token: 0x04006C21 RID: 27681
+	// Token: 0x04006D02 RID: 27906
 	Chip,
-	// Token: 0x04006C22 RID: 27682
+	// Token: 0x04006D03 RID: 27907
 	Quest,
-	// Token: 0x04006C23 RID: 27683
+	// Token: 0x04006D04 RID: 27908
 	RoleQuest,
-	// Token: 0x04006C24 RID: 27684
+	// Token: 0x04006D05 RID: 27909
 	MainQuest,
-	// Token: 0x04006C25 RID: 27685
+	// Token: 0x04006D06 RID: 27910
 	Role,
-	// Token: 0x04006C26 RID: 27686
+	// Token: 0x04006D07 RID: 27911
 	Noun
 }

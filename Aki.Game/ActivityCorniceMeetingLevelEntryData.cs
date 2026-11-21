@@ -5,12 +5,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020011F3 RID: 4595
+// Token: 0x020006A7 RID: 1703
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityCorniceMeetingLevelEntryData
 {
-	// Token: 0x06007AAB RID: 31403 RVA: 0x0019D194 File Offset: 0x0019B394
+	// Token: 0x06004E42 RID: 20034 RVA: 0x001A5E3C File Offset: 0x001A403C
 	public ActivityCorniceMeetingLevelEntryData(CorniceLevelPlayEnrty data, int playId)
 	{
 		this.LevelPlayId = playId;
@@ -23,7 +23,7 @@ public class ActivityCorniceMeetingLevelEntryData
 		}
 	}
 
-	// Token: 0x06007AAC RID: 31404 RVA: 0x0019D224 File Offset: 0x0019B424
+	// Token: 0x06004E43 RID: 20035 RVA: 0x001A5ECC File Offset: 0x001A40CC
 	public bool IsUnlock()
 	{
 		if (this.UnlockTime != 0L)
@@ -33,19 +33,19 @@ public class ActivityCorniceMeetingLevelEntryData
 		return this.UnlockTime == 0L;
 	}
 
-	// Token: 0x06007AAD RID: 31405 RVA: 0x0019D24F File Offset: 0x0019B44F
+	// Token: 0x06004E44 RID: 20036 RVA: 0x001A5EF7 File Offset: 0x001A40F7
 	public bool IsRewarded(int score)
 	{
 		return this.RewardedMap.ContainsKey(score);
 	}
 
-	// Token: 0x06007AAE RID: 31406 RVA: 0x0019D25D File Offset: 0x0019B45D
+	// Token: 0x06004E45 RID: 20037 RVA: 0x001A5F05 File Offset: 0x001A4105
 	public bool IsAllFinished()
 	{
 		return this.MaxScore >= this.GetMaxScoreConfig();
 	}
 
-	// Token: 0x06007AAF RID: 31407 RVA: 0x0019D270 File Offset: 0x0019B470
+	// Token: 0x06004E46 RID: 20038 RVA: 0x001A5F18 File Offset: 0x001A4118
 	public void UpdateData(CorniceLevelPlayEnrty data)
 	{
 		this.MaxScore = data.MaxScore;
@@ -56,44 +56,44 @@ public class ActivityCorniceMeetingLevelEntryData
 		}
 	}
 
-	// Token: 0x06007AB0 RID: 31408 RVA: 0x0019D2DC File Offset: 0x0019B4DC
+	// Token: 0x06004E47 RID: 20039 RVA: 0x001A5F84 File Offset: 0x001A4184
 	public void UpdateRewarded(int score)
 	{
 		this.RewardedMap[score] = true;
 	}
 
-	// Token: 0x06007AB1 RID: 31409 RVA: 0x0019D2EC File Offset: 0x0019B4EC
+	// Token: 0x06004E48 RID: 20040 RVA: 0x001A5F94 File Offset: 0x001A4194
 	public string GetBackgroundPath()
 	{
 		return ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId).Value.BackgroundTexture;
 	}
 
-	// Token: 0x06007AB2 RID: 31410 RVA: 0x0019D31C File Offset: 0x0019B51C
+	// Token: 0x06004E49 RID: 20041 RVA: 0x001A5FC4 File Offset: 0x001A41C4
 	public string GetTitle()
 	{
 		return ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId).Value.Title;
 	}
 
-	// Token: 0x06007AB3 RID: 31411 RVA: 0x0019D34C File Offset: 0x0019B54C
+	// Token: 0x06004E4A RID: 20042 RVA: 0x001A5FF4 File Offset: 0x001A41F4
 	public int GetMarkId()
 	{
 		return ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId).Value.MarkId;
 	}
 
-	// Token: 0x06007AB4 RID: 31412 RVA: 0x0019D37C File Offset: 0x0019B57C
+	// Token: 0x06004E4B RID: 20043 RVA: 0x001A6024 File Offset: 0x001A4224
 	public int GetMaxScoreConfig()
 	{
 		return ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId).Value.MaxScore;
 	}
 
-	// Token: 0x06007AB5 RID: 31413 RVA: 0x0019D3AC File Offset: 0x0019B5AC
+	// Token: 0x06004E4C RID: 20044 RVA: 0x001A6054 File Offset: 0x001A4254
 	public bool IsRewardAllFinished()
 	{
 		CorniceChallenge? corniceMeetingChallengeConfig = ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId);
 		return corniceMeetingChallengeConfig != null && corniceMeetingChallengeConfig.Value.RewardListLength == this.RewardedMap.Count;
 	}
 
-	// Token: 0x06007AB6 RID: 31414 RVA: 0x0019D3F4 File Offset: 0x0019B5F4
+	// Token: 0x06004E4D RID: 20045 RVA: 0x001A609C File Offset: 0x001A429C
 	public List<int> GetRewardList()
 	{
 		CorniceChallenge? corniceMeetingChallengeConfig = ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId);
@@ -108,7 +108,7 @@ public class ActivityCorniceMeetingLevelEntryData
 		return list;
 	}
 
-	// Token: 0x06007AB7 RID: 31415 RVA: 0x0019D464 File Offset: 0x0019B664
+	// Token: 0x06004E4E RID: 20046 RVA: 0x001A610C File Offset: 0x001A430C
 	public IntPair GetRewardPair(int index)
 	{
 		CorniceChallenge? corniceMeetingChallengeConfig = ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId);
@@ -119,13 +119,13 @@ public class ActivityCorniceMeetingLevelEntryData
 		return corniceMeetingChallengeConfig.Value.RewardList(index).Value;
 	}
 
-	// Token: 0x06007AB8 RID: 31416 RVA: 0x0019D4C3 File Offset: 0x0019B6C3
+	// Token: 0x06004E4F RID: 20047 RVA: 0x001A616B File Offset: 0x001A436B
 	public bool GetRedDot()
 	{
 		return this.IsUnlock() && (this.GetChallengeNewLocalRedDot() || this.GetScoreRedDot());
 	}
 
-	// Token: 0x06007AB9 RID: 31417 RVA: 0x0019D4E4 File Offset: 0x0019B6E4
+	// Token: 0x06004E50 RID: 20048 RVA: 0x001A618C File Offset: 0x001A438C
 	public bool GetScoreRedDot()
 	{
 		CorniceChallenge? corniceMeetingChallengeConfig = ActivityCorniceMeetingConfig.Instance.GetCorniceMeetingChallengeConfig(this.LevelPlayId);
@@ -144,34 +144,34 @@ public class ActivityCorniceMeetingLevelEntryData
 		return result;
 	}
 
-	// Token: 0x06007ABA RID: 31418 RVA: 0x0019D564 File Offset: 0x0019B764
+	// Token: 0x06004E51 RID: 20049 RVA: 0x001A620C File Offset: 0x001A440C
 	public void SetChallengeLocalRedDot(bool state)
 	{
 		ActivityModel.Instance.SaveActivityData(ActivityCorniceMeetingController.Instance.ActivityId, this.LevelPlayId, 0, 0, (state > false) ? 1 : 0);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, ActivityCorniceMeetingController.Instance.ActivityId);
 	}
 
-	// Token: 0x06007ABB RID: 31419 RVA: 0x0019D5A0 File Offset: 0x0019B7A0
+	// Token: 0x06004E52 RID: 20050 RVA: 0x001A6248 File Offset: 0x001A4448
 	public bool GetChallengeNewLocalRedDot()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(ActivityCorniceMeetingController.Instance.ActivityId, 1, this.LevelPlayId, 0, 0) == 1;
 	}
 
-	// Token: 0x04003837 RID: 14391
+	// Token: 0x040038D0 RID: 14544
 	public int LevelPlayId;
 
-	// Token: 0x04003838 RID: 14392
+	// Token: 0x040038D1 RID: 14545
 	public int MaxScore;
 
-	// Token: 0x04003839 RID: 14393
+	// Token: 0x040038D2 RID: 14546
 	public int RemainTime;
 
-	// Token: 0x0400383A RID: 14394
+	// Token: 0x040038D3 RID: 14547
 	public long UnlockTime;
 
-	// Token: 0x0400383B RID: 14395
+	// Token: 0x040038D4 RID: 14548
 	public int CurrentScore;
 
-	// Token: 0x0400383C RID: 14396
+	// Token: 0x040038D5 RID: 14549
 	public Dictionary<int, bool> RewardedMap = new Dictionary<int, bool>();
 }

@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D35 RID: 7477
+// Token: 0x020011F7 RID: 4599
 public class TrapDefenseComboPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E285 RID: 57989 RVA: 0x003539BC File Offset: 0x00351BBC
+	// Token: 0x0600B6A2 RID: 46754 RVA: 0x0035F3EC File Offset: 0x0035D5EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class TrapDefenseComboPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E286 RID: 57990 RVA: 0x00353A18 File Offset: 0x00351C18
+	// Token: 0x0600B6A3 RID: 46755 RVA: 0x0035F448 File Offset: 0x0035D648
 	protected override void OnStart()
 	{
 		this.Sequence = new UiSequencePlayer(base.GetRootItem());
@@ -30,13 +30,13 @@ public class TrapDefenseComboPanel : BattleChildViewPanel
 		this.AdvancedPerformanceThreshold = (float)TrapDefenseConfig.Instance.GetTrapDefenseComboAdvancedPerformanceThreshold();
 	}
 
-	// Token: 0x0600E287 RID: 57991 RVA: 0x00353A6A File Offset: 0x00351C6A
+	// Token: 0x0600B6A4 RID: 46756 RVA: 0x0035F49A File Offset: 0x0035D69A
 	protected override void OnBeforeShow()
 	{
 		this.Sequence.PlaySequencePurely("Start", false, false);
 	}
 
-	// Token: 0x0600E288 RID: 57992 RVA: 0x00353A80 File Offset: 0x00351C80
+	// Token: 0x0600B6A5 RID: 46757 RVA: 0x0035F4B0 File Offset: 0x0035D6B0
 	protected override UniTask OnBeforeHideAsync()
 	{
 		TrapDefenseComboPanel.<OnBeforeHideAsync>d__9 <OnBeforeHideAsync>d__;
@@ -47,20 +47,20 @@ public class TrapDefenseComboPanel : BattleChildViewPanel
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E289 RID: 57993 RVA: 0x00353AC3 File Offset: 0x00351CC3
+	// Token: 0x0600B6A6 RID: 46758 RVA: 0x0035F4F3 File Offset: 0x0035D6F3
 	protected override void OnBeforeDestroy()
 	{
 		this.Sequence.Clear();
 		this.ComboNumSequence.Clear();
 	}
 
-	// Token: 0x0600E28A RID: 57994 RVA: 0x00353ADB File Offset: 0x00351CDB
+	// Token: 0x0600B6A7 RID: 46759 RVA: 0x0035F50B File Offset: 0x0035D70B
 	protected override bool OnCheckBattleChildViewPanelShowCondition()
 	{
 		return this.RemainTime > 0f;
 	}
 
-	// Token: 0x0600E28B RID: 57995 RVA: 0x00353AEA File Offset: 0x00351CEA
+	// Token: 0x0600B6A8 RID: 46760 RVA: 0x0035F51A File Offset: 0x0035D71A
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		if (this.RemainTime <= 0f)
@@ -74,7 +74,7 @@ public class TrapDefenseComboPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E28C RID: 57996 RVA: 0x00353B1C File Offset: 0x00351D1C
+	// Token: 0x0600B6A9 RID: 46761 RVA: 0x0035F54C File Offset: 0x0035D74C
 	public void RefreshComboNum(int comboNum)
 	{
 		base.GetArtText(0).SetText(comboNum.ToString());
@@ -84,7 +84,7 @@ public class TrapDefenseComboPanel : BattleChildViewPanel
 		base.ShowBattleChildViewPanel();
 	}
 
-	// Token: 0x0600E28D RID: 57997 RVA: 0x00353B85 File Offset: 0x00351D85
+	// Token: 0x0600B6AA RID: 46762 RVA: 0x0035F5B5 File Offset: 0x0035D7B5
 	public void HideComboPanel()
 	{
 		if (this.RemainTime > 0f)
@@ -94,33 +94,33 @@ public class TrapDefenseComboPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x040068C0 RID: 26816
+	// Token: 0x0400699F RID: 27039
 	protected float DurationTime;
 
-	// Token: 0x040068C1 RID: 26817
+	// Token: 0x040069A0 RID: 27040
 	protected float RemainTime;
 
-	// Token: 0x040068C2 RID: 26818
+	// Token: 0x040069A1 RID: 27041
 	protected float AdvancedPerformanceThreshold;
 
-	// Token: 0x040068C3 RID: 26819
+	// Token: 0x040069A2 RID: 27042
 	[Nullable(1)]
 	protected UiSequencePlayer Sequence;
 
-	// Token: 0x040068C4 RID: 26820
+	// Token: 0x040069A3 RID: 27043
 	[Nullable(1)]
 	protected UiSequencePlayer ComboNumSequence;
 
-	// Token: 0x0200833E RID: 33598
+	// Token: 0x020074C7 RID: 29895
 	private static class EComponentDefine
 	{
-		// Token: 0x0402ACBD RID: 175293
+		// Token: 0x04025FE5 RID: 155621
 		public const int ComboNum = 0;
 
-		// Token: 0x0402ACBE RID: 175294
+		// Token: 0x04025FE6 RID: 155622
 		public const int AdvancedPerformance = 1;
 
-		// Token: 0x0402ACBF RID: 175295
+		// Token: 0x04025FE7 RID: 155623
 		public const int ComboItem = 2;
 	}
 }

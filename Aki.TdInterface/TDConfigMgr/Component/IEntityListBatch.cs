@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000321 RID: 801
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000368 RID: 872
 	public class IEntityListBatch : IEntityBatchType
 	{
-		// Token: 0x06000FBC RID: 4028 RVA: 0x000375DC File Offset: 0x000357DC
+		// Token: 0x060010EE RID: 4334 RVA: 0x0003A5A8 File Offset: 0x000387A8
 		private IEntityListBatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FBD RID: 4029 RVA: 0x00037614 File Offset: 0x00035814
+		// Token: 0x060010EF RID: 4335 RVA: 0x0003A5E0 File Offset: 0x000387E0
 		public static IEntityListBatch Create([Nullable(2)] IEntityListBatch instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FBE RID: 4030 RVA: 0x00037627 File Offset: 0x00035827
+		// Token: 0x060010F0 RID: 4336 RVA: 0x0003A5F3 File Offset: 0x000387F3
 		public static IEntityListBatch CreateFromSetValue([Nullable(2)] IEntityListBatch_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FBF RID: 4031 RVA: 0x0003763A File Offset: 0x0003583A
+		// Token: 0x060010F1 RID: 4337 RVA: 0x0003A606 File Offset: 0x00038806
 		public new IEntityListBatch_SetValue ToSetValue()
 		{
 			return new IEntityListBatch_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000489 RID: 1161
-		// (get) Token: 0x06000FC0 RID: 4032 RVA: 0x00037659 File Offset: 0x00035859
-		// (set) Token: 0x06000FC1 RID: 4033 RVA: 0x00037684 File Offset: 0x00035884
+		// Token: 0x170004D7 RID: 1239
+		// (get) Token: 0x060010F2 RID: 4338 RVA: 0x0003A625 File Offset: 0x00038825
+		// (set) Token: 0x060010F3 RID: 4339 RVA: 0x0003A650 File Offset: 0x00038850
 		public override EEntityBatchType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700048A RID: 1162
-		// (get) Token: 0x06000FC2 RID: 4034 RVA: 0x00037692 File Offset: 0x00035892
-		// (set) Token: 0x06000FC3 RID: 4035 RVA: 0x000376B9 File Offset: 0x000358B9
+		// Token: 0x170004D8 RID: 1240
+		// (get) Token: 0x060010F4 RID: 4340 RVA: 0x0003A65E File Offset: 0x0003885E
+		// (set) Token: 0x060010F5 RID: 4341 RVA: 0x0003A685 File Offset: 0x00038885
 		public virtual List<int> EntityIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D68 RID: 3432
+		// Token: 0x04000E53 RID: 3667
 		[Nullable(2)]
 		protected new IEntityListBatch FbInstance;
 
-		// Token: 0x04000D69 RID: 3433
+		// Token: 0x04000E54 RID: 3668
 		[Nullable(2)]
 		protected new IEntityListBatch_SetValue PocoInterface;
 	}

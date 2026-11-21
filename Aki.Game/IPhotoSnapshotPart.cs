@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x020025A6 RID: 9638
+// Token: 0x02001A91 RID: 6801
 public interface IPhotoSnapshotPart
 {
-	// Token: 0x06013849 RID: 79945
+	// Token: 0x06010D2B RID: 68907
 	void Capture();
 
-	// Token: 0x0601384A RID: 79946
+	// Token: 0x06010D2C RID: 68908
 	void Apply();
 }

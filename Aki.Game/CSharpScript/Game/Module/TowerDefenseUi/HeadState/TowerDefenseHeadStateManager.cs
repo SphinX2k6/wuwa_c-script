@@ -9,32 +9,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 {
-	// Token: 0x02004AFF RID: 19199
+	// Token: 0x02003AA7 RID: 15015
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseHeadStateManager
 	{
-		// Token: 0x06031B83 RID: 203651 RVA: 0x00B8BCE4 File Offset: 0x00B89EE4
+		// Token: 0x06026913 RID: 157971 RVA: 0x00ACFD40 File Offset: 0x00ACDF40
 		public void Init()
 		{
 			this.MaxDistanceSquared = (double)ConfigCommonParamById.GetIntConfig("TowerDefenseHeadStateShowMaxDistance").Value;
 			this.MinDistanceSquared = (double)ConfigCommonParamById.GetIntConfig("TowerDefenseHeadStateShowMinDistance").Value;
 		}
 
-		// Token: 0x06031B84 RID: 203652 RVA: 0x00B8BD23 File Offset: 0x00B89F23
+		// Token: 0x06026914 RID: 157972 RVA: 0x00ACFD7F File Offset: 0x00ACDF7F
 		public void OnWorldDone()
 		{
 			this.LoadDynamicBatchView();
 		}
 
-		// Token: 0x06031B85 RID: 203653 RVA: 0x00B8BD2B File Offset: 0x00B89F2B
+		// Token: 0x06026915 RID: 157973 RVA: 0x00ACFD87 File Offset: 0x00ACDF87
 		public void LoadDynamicBatchView()
 		{
 			this.DynamicBatchView = new TowerDefenseHeadStateDynamicBatchView();
 			this.DynamicBatchView.CreateThenShowByResourceIdAsync("UiItem_TowerDefenseHPDynamicBatch", UiLayer.Instance.WorldSpaceUiRootItem, true).Forget();
 		}
 
-		// Token: 0x06031B86 RID: 203654 RVA: 0x00B8BD58 File Offset: 0x00B89F58
+		// Token: 0x06026916 RID: 157974 RVA: 0x00ACFDB4 File Offset: 0x00ACDFB4
 		public void AddEntity(int entityId, global::Vector position, int maxHp, int hp, int shield)
 		{
 			if (this.HeadStateMap.ContainsKey(entityId))
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.ModifyHpList.Add(towerDefenseHeadStateData);
 		}
 
-		// Token: 0x06031B87 RID: 203655 RVA: 0x00B8BDBC File Offset: 0x00B89FBC
+		// Token: 0x06026917 RID: 157975 RVA: 0x00ACFE18 File Offset: 0x00ACE018
 		public void HandleMsg(int entityId, global::Vector position, int maxHp, int hp, int shield)
 		{
 			TowerDefenseHeadStateData towerDefenseHeadStateData;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			}
 		}
 
-		// Token: 0x06031B88 RID: 203656 RVA: 0x00B8BE08 File Offset: 0x00B8A008
+		// Token: 0x06026918 RID: 157976 RVA: 0x00ACFE64 File Offset: 0x00ACE064
 		public void RemoveEntity(int entityId)
 		{
 			TowerDefenseHeadStateData item;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			}
 		}
 
-		// Token: 0x06031B89 RID: 203657 RVA: 0x00B8BE34 File Offset: 0x00B8A034
+		// Token: 0x06026919 RID: 157977 RVA: 0x00ACFE90 File Offset: 0x00ACE090
 		public void Tick(float delta)
 		{
 			foreach (TowerDefenseHeadStateData towerDefenseHeadStateData in this.CreateList)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			}
 		}
 
-		// Token: 0x06031B8A RID: 203658 RVA: 0x00B8C078 File Offset: 0x00B8A278
+		// Token: 0x0602691A RID: 157978 RVA: 0x00AD00D4 File Offset: 0x00ACE2D4
 		public UCurveFloat GetScaleCurve()
 		{
 			if (this.ScaleCurve == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			return this.ScaleCurve;
 		}
 
-		// Token: 0x06031B8B RID: 203659 RVA: 0x00B8C0B4 File Offset: 0x00B8A2B4
+		// Token: 0x0602691B RID: 157979 RVA: 0x00AD0110 File Offset: 0x00ACE310
 		public void Clear()
 		{
 			this.CreateList.Clear();
@@ -162,32 +162,32 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.DynamicBatchView = null;
 		}
 
-		// Token: 0x0401A8CE RID: 108750
+		// Token: 0x04015220 RID: 86560
 		private readonly Dictionary<int, TowerDefenseHeadStateData> HeadStateMap = new Dictionary<int, TowerDefenseHeadStateData>();
 
-		// Token: 0x0401A8CF RID: 108751
+		// Token: 0x04015221 RID: 86561
 		private readonly List<TowerDefenseHeadStateData> CreateList = new List<TowerDefenseHeadStateData>();
 
-		// Token: 0x0401A8D0 RID: 108752
+		// Token: 0x04015222 RID: 86562
 		private readonly List<TowerDefenseHeadStateData> ModifyHpList = new List<TowerDefenseHeadStateData>();
 
-		// Token: 0x0401A8D1 RID: 108753
+		// Token: 0x04015223 RID: 86563
 		private readonly List<TowerDefenseHeadStateData> DestroyList = new List<TowerDefenseHeadStateData>();
 
-		// Token: 0x0401A8D2 RID: 108754
+		// Token: 0x04015224 RID: 86564
 		private readonly List<TowerDefenseHeadStateData> SortList = new List<TowerDefenseHeadStateData>();
 
-		// Token: 0x0401A8D3 RID: 108755
+		// Token: 0x04015225 RID: 86565
 		[Nullable(2)]
 		private UCurveFloat ScaleCurve;
 
-		// Token: 0x0401A8D4 RID: 108756
+		// Token: 0x04015226 RID: 86566
 		private double MaxDistanceSquared;
 
-		// Token: 0x0401A8D5 RID: 108757
+		// Token: 0x04015227 RID: 86567
 		private double MinDistanceSquared;
 
-		// Token: 0x0401A8D6 RID: 108758
+		// Token: 0x04015228 RID: 86568
 		[Nullable(2)]
 		private TowerDefenseHeadStateDynamicBatchView DynamicBatchView;
 	}

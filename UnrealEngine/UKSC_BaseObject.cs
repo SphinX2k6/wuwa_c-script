@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CFD RID: 7421
+	// Token: 0x02000561 RID: 1377
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_BaseObject")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public class UKSC_BaseObject : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C8E7 RID: 116967 RVA: 0x002A3763 File Offset: 0x002A1963
+		// Token: 0x06007DA8 RID: 32168 RVA: 0x000BA54B File Offset: 0x000B874B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_BaseObject._ClassPtr;
 		}
 
-		// Token: 0x0601C8E8 RID: 116968 RVA: 0x002A3770 File Offset: 0x002A1970
+		// Token: 0x06007DA9 RID: 32169 RVA: 0x000BA558 File Offset: 0x000B8758
 		public UKSC_BaseObject() : this(BuiltinUtils.AllocNativeUObject(UKSC_BaseObject.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C8E9 RID: 116969 RVA: 0x002A3798 File Offset: 0x002A1998
+		// Token: 0x06007DAA RID: 32170 RVA: 0x000BA580 File Offset: 0x000B8780
 		[NullableContext(1)]
 		public UKSC_BaseObject(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_BaseObject.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700730D RID: 29453
-		// (get) Token: 0x0601C8EA RID: 116970 RVA: 0x002A37CB File Offset: 0x002A19CB
-		// (set) Token: 0x0601C8EB RID: 116971 RVA: 0x002A37DF File Offset: 0x002A19DF
+		// Token: 0x17001837 RID: 6199
+		// (get) Token: 0x06007DAB RID: 32171 RVA: 0x000BA5B3 File Offset: 0x000B87B3
+		// (set) Token: 0x06007DAC RID: 32172 RVA: 0x000BA5C7 File Offset: 0x000B87C7
 		[Nullable(2)]
 		public unsafe UKSC_World KscWorld
 		{
@@ -46,28 +46,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C8EC RID: 116972 RVA: 0x002A37F4 File Offset: 0x002A19F4
+		// Token: 0x06007DAD RID: 32173 RVA: 0x000BA5DC File Offset: 0x000B87DC
 		static UKSC_BaseObject()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_BaseObject");
 		}
 
-		// Token: 0x0601C8ED RID: 116973 RVA: 0x002A3802 File Offset: 0x002A1A02
+		// Token: 0x06007DAE RID: 32174 RVA: 0x000BA5EA File Offset: 0x000B87EA
 		protected UKSC_BaseObject(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F7AB RID: 63403
+		// Token: 0x040036C1 RID: 14017
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_BaseObject";
 
-		// Token: 0x0400F7AC RID: 63404
+		// Token: 0x040036C2 RID: 14018
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F7AD RID: 63405
+		// Token: 0x040036C3 RID: 14019
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F7AE RID: 63406
+		// Token: 0x040036C4 RID: 14020
 		internal static int __PropertyOffset_KscWorld;
 	}
 }

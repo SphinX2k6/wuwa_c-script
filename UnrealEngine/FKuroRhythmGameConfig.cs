@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C4C RID: 7244
-	[NullableContext(1)]
+	// Token: 0x020004FE RID: 1278
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.KuroRhythmGameConfig")]
 	[UnrealStructLayout(272, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 272)]
 	public class FKuroRhythmGameConfig : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601C0E0 RID: 114912 RVA: 0x002949B6 File Offset: 0x00292BB6
+		// Token: 0x06007787 RID: 30599 RVA: 0x000AEA75 File Offset: 0x000ACC75
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroRhythmGameConfig._ScriptStructPtr != 0) ? FKuroRhythmGameConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroRhythmGame.KuroRhythmGameConfig", ref FKuroRhythmGameConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17007166 RID: 29030
-		// (get) Token: 0x0601C0E1 RID: 114913 RVA: 0x002949DA File Offset: 0x00292BDA
-		// (set) Token: 0x0601C0E2 RID: 114914 RVA: 0x002949EA File Offset: 0x00292BEA
+		// Token: 0x17001709 RID: 5897
+		// (get) Token: 0x06007788 RID: 30600 RVA: 0x000AEA99 File Offset: 0x000ACC99
+		// (set) Token: 0x06007789 RID: 30601 RVA: 0x000AEAA9 File Offset: 0x000ACCA9
 		public unsafe float GlobalTimeOffset
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007167 RID: 29031
-		// (get) Token: 0x0601C0E3 RID: 114915 RVA: 0x002949FB File Offset: 0x00292BFB
-		// (set) Token: 0x0601C0E4 RID: 114916 RVA: 0x00294A0B File Offset: 0x00292C0B
+		// Token: 0x1700170A RID: 5898
+		// (get) Token: 0x0600778A RID: 30602 RVA: 0x000AEABA File Offset: 0x000ACCBA
+		// (set) Token: 0x0600778B RID: 30603 RVA: 0x000AEACA File Offset: 0x000ACCCA
 		public unsafe int ScorePerfect
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007168 RID: 29032
-		// (get) Token: 0x0601C0E5 RID: 114917 RVA: 0x00294A1C File Offset: 0x00292C1C
-		// (set) Token: 0x0601C0E6 RID: 114918 RVA: 0x00294A2C File Offset: 0x00292C2C
+		// Token: 0x1700170B RID: 5899
+		// (get) Token: 0x0600778C RID: 30604 RVA: 0x000AEADB File Offset: 0x000ACCDB
+		// (set) Token: 0x0600778D RID: 30605 RVA: 0x000AEAEB File Offset: 0x000ACCEB
 		public unsafe int ScoreGreat
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007169 RID: 29033
-		// (get) Token: 0x0601C0E7 RID: 114919 RVA: 0x00294A3D File Offset: 0x00292C3D
-		// (set) Token: 0x0601C0E8 RID: 114920 RVA: 0x00294A4D File Offset: 0x00292C4D
+		// Token: 0x1700170C RID: 5900
+		// (get) Token: 0x0600778E RID: 30606 RVA: 0x000AEAFC File Offset: 0x000ACCFC
+		// (set) Token: 0x0600778F RID: 30607 RVA: 0x000AEB0C File Offset: 0x000ACD0C
 		public unsafe int ScoreGood
 		{
 			get
@@ -79,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700716A RID: 29034
-		// (get) Token: 0x0601C0E9 RID: 114921 RVA: 0x00294A5E File Offset: 0x00292C5E
-		// (set) Token: 0x0601C0EA RID: 114922 RVA: 0x00294A6E File Offset: 0x00292C6E
+		// Token: 0x1700170D RID: 5901
+		// (get) Token: 0x06007790 RID: 30608 RVA: 0x000AEB1D File Offset: 0x000ACD1D
+		// (set) Token: 0x06007791 RID: 30609 RVA: 0x000AEB2D File Offset: 0x000ACD2D
 		public unsafe int ScoreBad
 		{
 			get
@@ -94,9 +94,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700716B RID: 29035
-		// (get) Token: 0x0601C0EB RID: 114923 RVA: 0x00294A7F File Offset: 0x00292C7F
-		// (set) Token: 0x0601C0EC RID: 114924 RVA: 0x00294A8F File Offset: 0x00292C8F
+		// Token: 0x1700170E RID: 5902
+		// (get) Token: 0x06007792 RID: 30610 RVA: 0x000AEB3E File Offset: 0x000ACD3E
+		// (set) Token: 0x06007793 RID: 30611 RVA: 0x000AEB4E File Offset: 0x000ACD4E
 		public unsafe int ScoreMiss
 		{
 			get
@@ -109,9 +109,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700716C RID: 29036
-		// (get) Token: 0x0601C0ED RID: 114925 RVA: 0x00294AA0 File Offset: 0x00292CA0
-		// (set) Token: 0x0601C0EE RID: 114926 RVA: 0x00294AB0 File Offset: 0x00292CB0
+		// Token: 0x1700170F RID: 5903
+		// (get) Token: 0x06007794 RID: 30612 RVA: 0x000AEB5F File Offset: 0x000ACD5F
+		// (set) Token: 0x06007795 RID: 30613 RVA: 0x000AEB6F File Offset: 0x000ACD6F
 		public unsafe int LineHoldScorePerHalfBeatPerfect
 		{
 			get
@@ -124,9 +124,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700716D RID: 29037
-		// (get) Token: 0x0601C0EF RID: 114927 RVA: 0x00294AC1 File Offset: 0x00292CC1
-		// (set) Token: 0x0601C0F0 RID: 114928 RVA: 0x00294AD1 File Offset: 0x00292CD1
+		// Token: 0x17001710 RID: 5904
+		// (get) Token: 0x06007796 RID: 30614 RVA: 0x000AEB80 File Offset: 0x000ACD80
+		// (set) Token: 0x06007797 RID: 30615 RVA: 0x000AEB90 File Offset: 0x000ACD90
 		public unsafe int LineHoldScorePerHalfBeatGreat
 		{
 			get
@@ -139,9 +139,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700716E RID: 29038
-		// (get) Token: 0x0601C0F1 RID: 114929 RVA: 0x00294AE2 File Offset: 0x00292CE2
-		// (set) Token: 0x0601C0F2 RID: 114930 RVA: 0x00294AF2 File Offset: 0x00292CF2
+		// Token: 0x17001711 RID: 5905
+		// (get) Token: 0x06007798 RID: 30616 RVA: 0x000AEBA1 File Offset: 0x000ACDA1
+		// (set) Token: 0x06007799 RID: 30617 RVA: 0x000AEBB1 File Offset: 0x000ACDB1
 		public unsafe int LineHoldScorePerHalfBeatGood
 		{
 			get
@@ -154,9 +154,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700716F RID: 29039
-		// (get) Token: 0x0601C0F3 RID: 114931 RVA: 0x00294B03 File Offset: 0x00292D03
-		// (set) Token: 0x0601C0F4 RID: 114932 RVA: 0x00294B13 File Offset: 0x00292D13
+		// Token: 0x17001712 RID: 5906
+		// (get) Token: 0x0600779A RID: 30618 RVA: 0x000AEBC2 File Offset: 0x000ACDC2
+		// (set) Token: 0x0600779B RID: 30619 RVA: 0x000AEBD2 File Offset: 0x000ACDD2
 		public unsafe int LineHoldScorePerHalfBeatBad
 		{
 			get
@@ -169,9 +169,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007170 RID: 29040
-		// (get) Token: 0x0601C0F5 RID: 114933 RVA: 0x00294B24 File Offset: 0x00292D24
-		// (set) Token: 0x0601C0F6 RID: 114934 RVA: 0x00294B34 File Offset: 0x00292D34
+		// Token: 0x17001713 RID: 5907
+		// (get) Token: 0x0600779C RID: 30620 RVA: 0x000AEBE3 File Offset: 0x000ACDE3
+		// (set) Token: 0x0600779D RID: 30621 RVA: 0x000AEBF3 File Offset: 0x000ACDF3
 		public unsafe float EarlyMiss
 		{
 			get
@@ -184,9 +184,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007171 RID: 29041
-		// (get) Token: 0x0601C0F7 RID: 114935 RVA: 0x00294B45 File Offset: 0x00292D45
-		// (set) Token: 0x0601C0F8 RID: 114936 RVA: 0x00294B55 File Offset: 0x00292D55
+		// Token: 0x17001714 RID: 5908
+		// (get) Token: 0x0600779E RID: 30622 RVA: 0x000AEC04 File Offset: 0x000ACE04
+		// (set) Token: 0x0600779F RID: 30623 RVA: 0x000AEC14 File Offset: 0x000ACE14
 		public unsafe float EarlyBad
 		{
 			get
@@ -199,9 +199,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007172 RID: 29042
-		// (get) Token: 0x0601C0F9 RID: 114937 RVA: 0x00294B66 File Offset: 0x00292D66
-		// (set) Token: 0x0601C0FA RID: 114938 RVA: 0x00294B76 File Offset: 0x00292D76
+		// Token: 0x17001715 RID: 5909
+		// (get) Token: 0x060077A0 RID: 30624 RVA: 0x000AEC25 File Offset: 0x000ACE25
+		// (set) Token: 0x060077A1 RID: 30625 RVA: 0x000AEC35 File Offset: 0x000ACE35
 		public unsafe float EarlyGood
 		{
 			get
@@ -214,9 +214,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007173 RID: 29043
-		// (get) Token: 0x0601C0FB RID: 114939 RVA: 0x00294B87 File Offset: 0x00292D87
-		// (set) Token: 0x0601C0FC RID: 114940 RVA: 0x00294B97 File Offset: 0x00292D97
+		// Token: 0x17001716 RID: 5910
+		// (get) Token: 0x060077A2 RID: 30626 RVA: 0x000AEC46 File Offset: 0x000ACE46
+		// (set) Token: 0x060077A3 RID: 30627 RVA: 0x000AEC56 File Offset: 0x000ACE56
 		public unsafe float EarlyGreat
 		{
 			get
@@ -229,9 +229,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007174 RID: 29044
-		// (get) Token: 0x0601C0FD RID: 114941 RVA: 0x00294BA8 File Offset: 0x00292DA8
-		// (set) Token: 0x0601C0FE RID: 114942 RVA: 0x00294BB8 File Offset: 0x00292DB8
+		// Token: 0x17001717 RID: 5911
+		// (get) Token: 0x060077A4 RID: 30628 RVA: 0x000AEC67 File Offset: 0x000ACE67
+		// (set) Token: 0x060077A5 RID: 30629 RVA: 0x000AEC77 File Offset: 0x000ACE77
 		public unsafe float Perfect
 		{
 			get
@@ -244,9 +244,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007175 RID: 29045
-		// (get) Token: 0x0601C0FF RID: 114943 RVA: 0x00294BC9 File Offset: 0x00292DC9
-		// (set) Token: 0x0601C100 RID: 114944 RVA: 0x00294BD9 File Offset: 0x00292DD9
+		// Token: 0x17001718 RID: 5912
+		// (get) Token: 0x060077A6 RID: 30630 RVA: 0x000AEC88 File Offset: 0x000ACE88
+		// (set) Token: 0x060077A7 RID: 30631 RVA: 0x000AEC98 File Offset: 0x000ACE98
 		public unsafe float LateGreat
 		{
 			get
@@ -259,9 +259,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007176 RID: 29046
-		// (get) Token: 0x0601C101 RID: 114945 RVA: 0x00294BEA File Offset: 0x00292DEA
-		// (set) Token: 0x0601C102 RID: 114946 RVA: 0x00294BFA File Offset: 0x00292DFA
+		// Token: 0x17001719 RID: 5913
+		// (get) Token: 0x060077A8 RID: 30632 RVA: 0x000AECA9 File Offset: 0x000ACEA9
+		// (set) Token: 0x060077A9 RID: 30633 RVA: 0x000AECB9 File Offset: 0x000ACEB9
 		public unsafe float LateGood
 		{
 			get
@@ -274,9 +274,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007177 RID: 29047
-		// (get) Token: 0x0601C103 RID: 114947 RVA: 0x00294C0B File Offset: 0x00292E0B
-		// (set) Token: 0x0601C104 RID: 114948 RVA: 0x00294C1B File Offset: 0x00292E1B
+		// Token: 0x1700171A RID: 5914
+		// (get) Token: 0x060077AA RID: 30634 RVA: 0x000AECCA File Offset: 0x000ACECA
+		// (set) Token: 0x060077AB RID: 30635 RVA: 0x000AECDA File Offset: 0x000ACEDA
 		public unsafe float LateBad
 		{
 			get
@@ -289,9 +289,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007178 RID: 29048
-		// (get) Token: 0x0601C105 RID: 114949 RVA: 0x00294C2C File Offset: 0x00292E2C
-		// (set) Token: 0x0601C106 RID: 114950 RVA: 0x00294C3C File Offset: 0x00292E3C
+		// Token: 0x1700171B RID: 5915
+		// (get) Token: 0x060077AC RID: 30636 RVA: 0x000AECEB File Offset: 0x000ACEEB
+		// (set) Token: 0x060077AD RID: 30637 RVA: 0x000AECFB File Offset: 0x000ACEFB
 		public unsafe float Miss
 		{
 			get
@@ -304,11 +304,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007179 RID: 29049
-		// (get) Token: 0x0601C107 RID: 114951 RVA: 0x00294C50 File Offset: 0x00292E50
-		// (set) Token: 0x0601C108 RID: 114952 RVA: 0x00294C93 File Offset: 0x00292E93
+		// Token: 0x1700171C RID: 5916
+		// (get) Token: 0x060077AE RID: 30638 RVA: 0x000AED0C File Offset: 0x000ACF0C
+		// (set) Token: 0x060077AF RID: 30639 RVA: 0x000AED4F File Offset: 0x000ACF4F
+		[Nullable(1)]
 		public FKuroRhythmGameHiddenScore HiddenScore
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -319,15 +321,16 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FKuroRhythmGameHiddenScore.StaticStruct(), base.NativePtr + (IntPtr)FKuroRhythmGameConfig.__PropertyOffset_HiddenScore, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700717A RID: 29050
-		// (get) Token: 0x0601C109 RID: 114953 RVA: 0x00294CB4 File Offset: 0x00292EB4
-		// (set) Token: 0x0601C10A RID: 114954 RVA: 0x00294CC4 File Offset: 0x00292EC4
+		// Token: 0x1700171D RID: 5917
+		// (get) Token: 0x060077B0 RID: 30640 RVA: 0x000AED70 File Offset: 0x000ACF70
+		// (set) Token: 0x060077B1 RID: 30641 RVA: 0x000AED80 File Offset: 0x000ACF80
 		public unsafe int FeverScoreMax
 		{
 			get
@@ -340,9 +343,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700717B RID: 29051
-		// (get) Token: 0x0601C10B RID: 114955 RVA: 0x00294CD5 File Offset: 0x00292ED5
-		// (set) Token: 0x0601C10C RID: 114956 RVA: 0x00294CE5 File Offset: 0x00292EE5
+		// Token: 0x1700171E RID: 5918
+		// (get) Token: 0x060077B2 RID: 30642 RVA: 0x000AED91 File Offset: 0x000ACF91
+		// (set) Token: 0x060077B3 RID: 30643 RVA: 0x000AEDA1 File Offset: 0x000ACFA1
 		public unsafe int FeverConsumptionPerSecond
 		{
 			get
@@ -355,30 +358,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700717C RID: 29052
-		// (get) Token: 0x0601C10D RID: 114957 RVA: 0x00294CF8 File Offset: 0x00292EF8
-		// (set) Token: 0x0601C10E RID: 114958 RVA: 0x00294D3B File Offset: 0x00292F3B
-		public FKuroRhythmGameFeverConfig FeverConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FKuroRhythmGameFeverConfig result;
-				if ((result = this._FeverConfig) == null)
-				{
-					result = (this._FeverConfig = new FKuroRhythmGameFeverConfig(base.NativePtr + (IntPtr)FKuroRhythmGameConfig.__PropertyOffset_FeverConfig, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroRhythmGameFeverConfig.StaticStruct(), base.NativePtr + (IntPtr)FKuroRhythmGameConfig.__PropertyOffset_FeverConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700717D RID: 29053
-		// (get) Token: 0x0601C10F RID: 114959 RVA: 0x00294D5C File Offset: 0x00292F5C
-		// (set) Token: 0x0601C110 RID: 114960 RVA: 0x00294D6C File Offset: 0x00292F6C
+		// Token: 0x1700171F RID: 5919
+		// (get) Token: 0x060077B4 RID: 30644 RVA: 0x000AEDB2 File Offset: 0x000ACFB2
+		// (set) Token: 0x060077B5 RID: 30645 RVA: 0x000AEDC2 File Offset: 0x000ACFC2
 		public unsafe float CurvatureDeltaDistance
 		{
 			get
@@ -391,9 +373,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700717E RID: 29054
-		// (get) Token: 0x0601C111 RID: 114961 RVA: 0x00294D7D File Offset: 0x00292F7D
-		// (set) Token: 0x0601C112 RID: 114962 RVA: 0x00294D8D File Offset: 0x00292F8D
+		// Token: 0x17001720 RID: 5920
+		// (get) Token: 0x060077B6 RID: 30646 RVA: 0x000AEDD3 File Offset: 0x000ACFD3
+		// (set) Token: 0x060077B7 RID: 30647 RVA: 0x000AEDE3 File Offset: 0x000ACFE3
 		public unsafe float CurvatureMultiplier
 		{
 			get
@@ -406,9 +388,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700717F RID: 29055
-		// (get) Token: 0x0601C113 RID: 114963 RVA: 0x00294D9E File Offset: 0x00292F9E
-		// (set) Token: 0x0601C114 RID: 114964 RVA: 0x00294DAE File Offset: 0x00292FAE
+		// Token: 0x17001721 RID: 5921
+		// (get) Token: 0x060077B8 RID: 30648 RVA: 0x000AEDF4 File Offset: 0x000ACFF4
+		// (set) Token: 0x060077B9 RID: 30649 RVA: 0x000AEE04 File Offset: 0x000AD004
 		public unsafe float TrackWidth
 		{
 			get
@@ -421,9 +403,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007180 RID: 29056
-		// (get) Token: 0x0601C115 RID: 114965 RVA: 0x00294DBF File Offset: 0x00292FBF
-		// (set) Token: 0x0601C116 RID: 114966 RVA: 0x00294DCF File Offset: 0x00292FCF
+		// Token: 0x17001722 RID: 5922
+		// (get) Token: 0x060077BA RID: 30650 RVA: 0x000AEE15 File Offset: 0x000AD015
+		// (set) Token: 0x060077BB RID: 30651 RVA: 0x000AEE25 File Offset: 0x000AD025
 		public unsafe int TrackCount
 		{
 			get
@@ -436,9 +418,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007181 RID: 29057
-		// (get) Token: 0x0601C117 RID: 114967 RVA: 0x00294DE0 File Offset: 0x00292FE0
-		// (set) Token: 0x0601C118 RID: 114968 RVA: 0x00294DF0 File Offset: 0x00292FF0
+		// Token: 0x17001723 RID: 5923
+		// (get) Token: 0x060077BC RID: 30652 RVA: 0x000AEE36 File Offset: 0x000AD036
+		// (set) Token: 0x060077BD RID: 30653 RVA: 0x000AEE46 File Offset: 0x000AD046
 		public unsafe float TrackSwitchDuration
 		{
 			get
@@ -451,9 +433,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007182 RID: 29058
-		// (get) Token: 0x0601C119 RID: 114969 RVA: 0x00294E01 File Offset: 0x00293001
-		// (set) Token: 0x0601C11A RID: 114970 RVA: 0x00294E11 File Offset: 0x00293011
+		// Token: 0x17001724 RID: 5924
+		// (get) Token: 0x060077BE RID: 30654 RVA: 0x000AEE57 File Offset: 0x000AD057
+		// (set) Token: 0x060077BF RID: 30655 RVA: 0x000AEE67 File Offset: 0x000AD067
 		public unsafe float Acceleration
 		{
 			get
@@ -466,9 +448,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007183 RID: 29059
-		// (get) Token: 0x0601C11B RID: 114971 RVA: 0x00294E22 File Offset: 0x00293022
-		// (set) Token: 0x0601C11C RID: 114972 RVA: 0x00294E32 File Offset: 0x00293032
+		// Token: 0x17001725 RID: 5925
+		// (get) Token: 0x060077C0 RID: 30656 RVA: 0x000AEE78 File Offset: 0x000AD078
+		// (set) Token: 0x060077C1 RID: 30657 RVA: 0x000AEE88 File Offset: 0x000AD088
 		public unsafe float ShipZAxisOffset
 		{
 			get
@@ -481,221 +463,172 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007184 RID: 29060
-		// (get) Token: 0x0601C11D RID: 114973 RVA: 0x00294E43 File Offset: 0x00293043
-		// (set) Token: 0x0601C11E RID: 114974 RVA: 0x00294E57 File Offset: 0x00293057
-		[Nullable(2)]
+		// Token: 0x17001726 RID: 5926
+		// (get) Token: 0x060077C2 RID: 30658 RVA: 0x000AEE99 File Offset: 0x000AD099
+		// (set) Token: 0x060077C3 RID: 30659 RVA: 0x000AEEAD File Offset: 0x000AD0AD
 		public unsafe UNiagaraSystem EffectSystem
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UNiagaraSystem>(base.NativePtr / (IntPtr)sizeof(void*) + FKuroRhythmGameConfig.__PropertyOffset_EffectSystem);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FKuroRhythmGameConfig.__PropertyOffset_EffectSystem, value);
 			}
 		}
 
-		// Token: 0x17007185 RID: 29061
-		// (get) Token: 0x0601C11F RID: 114975 RVA: 0x00294E6C File Offset: 0x0029306C
-		// (set) Token: 0x0601C120 RID: 114976 RVA: 0x00294E80 File Offset: 0x00293080
-		[Nullable(2)]
+		// Token: 0x17001727 RID: 5927
+		// (get) Token: 0x060077C4 RID: 30660 RVA: 0x000AEEC2 File Offset: 0x000AD0C2
+		// (set) Token: 0x060077C5 RID: 30661 RVA: 0x000AEED6 File Offset: 0x000AD0D6
 		public unsafe UCurveFloat JumpHeightCurve
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + FKuroRhythmGameConfig.__PropertyOffset_JumpHeightCurve);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FKuroRhythmGameConfig.__PropertyOffset_JumpHeightCurve, value);
 			}
 		}
 
-		// Token: 0x0601C121 RID: 114977 RVA: 0x00294E95 File Offset: 0x00293095
+		// Token: 0x060077C6 RID: 30662 RVA: 0x000AEEEB File Offset: 0x000AD0EB
 		public FKuroRhythmGameConfig()
 		{
 		}
 
-		// Token: 0x0601C122 RID: 114978 RVA: 0x00294EA0 File Offset: 0x002930A0
-		public FKuroRhythmGameConfig(float GlobalTimeOffset, int ScorePerfect, int ScoreGreat, int ScoreGood, int ScoreBad, int ScoreMiss, int LineHoldScorePerHalfBeatPerfect, int LineHoldScorePerHalfBeatGreat, int LineHoldScorePerHalfBeatGood, int LineHoldScorePerHalfBeatBad, float EarlyMiss, float EarlyBad, float EarlyGood, float EarlyGreat, float Perfect, float LateGreat, float LateGood, float LateBad, float Miss, FKuroRhythmGameHiddenScore HiddenScore, int FeverScoreMax, int FeverConsumptionPerSecond, FKuroRhythmGameFeverConfig FeverConfig, float CurvatureDeltaDistance, float CurvatureMultiplier, float TrackWidth, int TrackCount, float TrackSwitchDuration, float Acceleration, float ShipZAxisOffset, UNiagaraSystem EffectSystem, UCurveFloat JumpHeightCurve)
-		{
-			this.GlobalTimeOffset = GlobalTimeOffset;
-			this.ScorePerfect = ScorePerfect;
-			this.ScoreGreat = ScoreGreat;
-			this.ScoreGood = ScoreGood;
-			this.ScoreBad = ScoreBad;
-			this.ScoreMiss = ScoreMiss;
-			this.LineHoldScorePerHalfBeatPerfect = LineHoldScorePerHalfBeatPerfect;
-			this.LineHoldScorePerHalfBeatGreat = LineHoldScorePerHalfBeatGreat;
-			this.LineHoldScorePerHalfBeatGood = LineHoldScorePerHalfBeatGood;
-			this.LineHoldScorePerHalfBeatBad = LineHoldScorePerHalfBeatBad;
-			this.EarlyMiss = EarlyMiss;
-			this.EarlyBad = EarlyBad;
-			this.EarlyGood = EarlyGood;
-			this.EarlyGreat = EarlyGreat;
-			this.Perfect = Perfect;
-			this.LateGreat = LateGreat;
-			this.LateGood = LateGood;
-			this.LateBad = LateBad;
-			this.Miss = Miss;
-			this.HiddenScore = HiddenScore;
-			this.FeverScoreMax = FeverScoreMax;
-			this.FeverConsumptionPerSecond = FeverConsumptionPerSecond;
-			this.FeverConfig = FeverConfig;
-			this.CurvatureDeltaDistance = CurvatureDeltaDistance;
-			this.CurvatureMultiplier = CurvatureMultiplier;
-			this.TrackWidth = TrackWidth;
-			this.TrackCount = TrackCount;
-			this.TrackSwitchDuration = TrackSwitchDuration;
-			this.Acceleration = Acceleration;
-			this.ShipZAxisOffset = ShipZAxisOffset;
-			this.EffectSystem = EffectSystem;
-			this.JumpHeightCurve = JumpHeightCurve;
-		}
-
-		// Token: 0x0601C123 RID: 114979 RVA: 0x00294FB0 File Offset: 0x002931B0
+		// Token: 0x060077C7 RID: 30663 RVA: 0x000AEEF3 File Offset: 0x000AD0F3
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroRhythmGameConfig.StaticStruct();
 		}
 
-		// Token: 0x0601C124 RID: 114980 RVA: 0x00294FBC File Offset: 0x002931BC
-		[NullableContext(2)]
+		// Token: 0x060077C8 RID: 30664 RVA: 0x000AEEFF File Offset: 0x000AD0FF
 		public FKuroRhythmGameConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C125 RID: 114981 RVA: 0x00294FC6 File Offset: 0x002931C6
+		// Token: 0x060077C9 RID: 30665 RVA: 0x000AEF09 File Offset: 0x000AD109
 		public FKuroRhythmGameConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C126 RID: 114982 RVA: 0x00294FD1 File Offset: 0x002931D1
+		// Token: 0x060077CA RID: 30666 RVA: 0x000AEF14 File Offset: 0x000AD114
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroRhythmGameConfig(Pointer, false, true);
 		}
 
-		// Token: 0x0601C127 RID: 114983 RVA: 0x00294FDB File Offset: 0x002931DB
+		// Token: 0x060077CB RID: 30667 RVA: 0x000AEF1E File Offset: 0x000AD11E
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroRhythmGameConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F160 RID: 61792
+		// Token: 0x04003291 RID: 12945
+		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.KuroRhythmGameConfig";
 
-		// Token: 0x0400F161 RID: 61793
+		// Token: 0x04003292 RID: 12946
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F162 RID: 61794
+		// Token: 0x04003293 RID: 12947
 		internal static int __PropertyOffset_GlobalTimeOffset;
 
-		// Token: 0x0400F163 RID: 61795
+		// Token: 0x04003294 RID: 12948
 		internal static int __PropertyOffset_ScorePerfect;
 
-		// Token: 0x0400F164 RID: 61796
+		// Token: 0x04003295 RID: 12949
 		internal static int __PropertyOffset_ScoreGreat;
 
-		// Token: 0x0400F165 RID: 61797
+		// Token: 0x04003296 RID: 12950
 		internal static int __PropertyOffset_ScoreGood;
 
-		// Token: 0x0400F166 RID: 61798
+		// Token: 0x04003297 RID: 12951
 		internal static int __PropertyOffset_ScoreBad;
 
-		// Token: 0x0400F167 RID: 61799
+		// Token: 0x04003298 RID: 12952
 		internal static int __PropertyOffset_ScoreMiss;
 
-		// Token: 0x0400F168 RID: 61800
+		// Token: 0x04003299 RID: 12953
 		internal static int __PropertyOffset_LineHoldScorePerHalfBeatPerfect;
 
-		// Token: 0x0400F169 RID: 61801
+		// Token: 0x0400329A RID: 12954
 		internal static int __PropertyOffset_LineHoldScorePerHalfBeatGreat;
 
-		// Token: 0x0400F16A RID: 61802
+		// Token: 0x0400329B RID: 12955
 		internal static int __PropertyOffset_LineHoldScorePerHalfBeatGood;
 
-		// Token: 0x0400F16B RID: 61803
+		// Token: 0x0400329C RID: 12956
 		internal static int __PropertyOffset_LineHoldScorePerHalfBeatBad;
 
-		// Token: 0x0400F16C RID: 61804
+		// Token: 0x0400329D RID: 12957
 		internal static int __PropertyOffset_EarlyMiss;
 
-		// Token: 0x0400F16D RID: 61805
+		// Token: 0x0400329E RID: 12958
 		internal static int __PropertyOffset_EarlyBad;
 
-		// Token: 0x0400F16E RID: 61806
+		// Token: 0x0400329F RID: 12959
 		internal static int __PropertyOffset_EarlyGood;
 
-		// Token: 0x0400F16F RID: 61807
+		// Token: 0x040032A0 RID: 12960
 		internal static int __PropertyOffset_EarlyGreat;
 
-		// Token: 0x0400F170 RID: 61808
+		// Token: 0x040032A1 RID: 12961
 		internal static int __PropertyOffset_Perfect;
 
-		// Token: 0x0400F171 RID: 61809
+		// Token: 0x040032A2 RID: 12962
 		internal static int __PropertyOffset_LateGreat;
 
-		// Token: 0x0400F172 RID: 61810
+		// Token: 0x040032A3 RID: 12963
 		internal static int __PropertyOffset_LateGood;
 
-		// Token: 0x0400F173 RID: 61811
+		// Token: 0x040032A4 RID: 12964
 		internal static int __PropertyOffset_LateBad;
 
-		// Token: 0x0400F174 RID: 61812
+		// Token: 0x040032A5 RID: 12965
 		internal static int __PropertyOffset_Miss;
 
-		// Token: 0x0400F175 RID: 61813
+		// Token: 0x040032A6 RID: 12966
 		internal static int __PropertyOffset_HiddenScore;
 
-		// Token: 0x0400F176 RID: 61814
-		[Nullable(2)]
+		// Token: 0x040032A7 RID: 12967
 		private FKuroRhythmGameHiddenScore _HiddenScore;
 
-		// Token: 0x0400F177 RID: 61815
+		// Token: 0x040032A8 RID: 12968
 		internal static int __PropertyOffset_FeverScoreMax;
 
-		// Token: 0x0400F178 RID: 61816
+		// Token: 0x040032A9 RID: 12969
 		internal static int __PropertyOffset_FeverConsumptionPerSecond;
 
-		// Token: 0x0400F179 RID: 61817
-		internal static int __PropertyOffset_FeverConfig;
-
-		// Token: 0x0400F17A RID: 61818
-		[Nullable(2)]
-		private FKuroRhythmGameFeverConfig _FeverConfig;
-
-		// Token: 0x0400F17B RID: 61819
+		// Token: 0x040032AA RID: 12970
 		internal static int __PropertyOffset_CurvatureDeltaDistance;
 
-		// Token: 0x0400F17C RID: 61820
+		// Token: 0x040032AB RID: 12971
 		internal static int __PropertyOffset_CurvatureMultiplier;
 
-		// Token: 0x0400F17D RID: 61821
+		// Token: 0x040032AC RID: 12972
 		internal static int __PropertyOffset_TrackWidth;
 
-		// Token: 0x0400F17E RID: 61822
+		// Token: 0x040032AD RID: 12973
 		internal static int __PropertyOffset_TrackCount;
 
-		// Token: 0x0400F17F RID: 61823
+		// Token: 0x040032AE RID: 12974
 		internal static int __PropertyOffset_TrackSwitchDuration;
 
-		// Token: 0x0400F180 RID: 61824
+		// Token: 0x040032AF RID: 12975
 		internal static int __PropertyOffset_Acceleration;
 
-		// Token: 0x0400F181 RID: 61825
+		// Token: 0x040032B0 RID: 12976
 		internal static int __PropertyOffset_ShipZAxisOffset;
 
-		// Token: 0x0400F182 RID: 61826
+		// Token: 0x040032B1 RID: 12977
 		internal static int __PropertyOffset_EffectSystem;
 
-		// Token: 0x0400F183 RID: 61827
+		// Token: 0x040032B2 RID: 12978
 		internal static int __PropertyOffset_JumpHeightCurve;
 	}
 }

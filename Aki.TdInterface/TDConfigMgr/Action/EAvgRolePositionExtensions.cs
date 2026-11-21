@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022AD RID: 8877
+	// Token: 0x0200251C RID: 9500
 	public static class EAvgRolePositionExtensions
 	{
-		// Token: 0x0600C289 RID: 49801 RVA: 0x001C6CC0 File Offset: 0x001C4EC0
+		// Token: 0x0600CE58 RID: 52824 RVA: 0x001DEAC8 File Offset: 0x001DCCC8
 		public static string ToEnumString(this EAvgRolePosition value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C28A RID: 49802 RVA: 0x001C6D20 File Offset: 0x001C4F20
+		// Token: 0x0600CE59 RID: 52825 RVA: 0x001DEB28 File Offset: 0x001DCD28
 		public static EAvgRolePosition FromString(string name)
 		{
 			EAvgRolePosition result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C28B RID: 49803 RVA: 0x001C6D4C File Offset: 0x001C4F4C
+		// Token: 0x0600CE5A RID: 52826 RVA: 0x001DEB54 File Offset: 0x001DCD54
 		public static bool TryFromString(string name, out EAvgRolePosition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C28C RID: 49804 RVA: 0x001C6DC6 File Offset: 0x001C4FC6
+		// Token: 0x0600CE5B RID: 52827 RVA: 0x001DEBCE File Offset: 0x001DCDCE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C28D RID: 49805 RVA: 0x001C6DF6 File Offset: 0x001C4FF6
+		// Token: 0x0600CE5C RID: 52828 RVA: 0x001DEBFE File Offset: 0x001DCDFE
 		public static EAvgRolePosition[] GetValues()
 		{
 			return new EAvgRolePosition[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C28E RID: 49806 RVA: 0x001C6E09 File Offset: 0x001C5009
+		// Token: 0x0600CE5D RID: 52829 RVA: 0x001DEC11 File Offset: 0x001DCE11
 		public static string[] GetNames()
 		{
 			return new string[]

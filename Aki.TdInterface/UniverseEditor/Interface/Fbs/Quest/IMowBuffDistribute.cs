@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F4D RID: 16205
+	// Token: 0x0200438B RID: 17291
 	public struct IMowBuffDistribute : IFlatbufferObject
 	{
-		// Token: 0x170070B2 RID: 28850
-		// (get) Token: 0x060170AA RID: 94378 RVA: 0x0035296F File Offset: 0x00350B6F
+		// Token: 0x170076A3 RID: 30371
+		// (get) Token: 0x0601870C RID: 100108 RVA: 0x0037BDE3 File Offset: 0x00379FE3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060170AB RID: 94379 RVA: 0x0035297C File Offset: 0x00350B7C
+		// Token: 0x0601870D RID: 100109 RVA: 0x0037BDF0 File Offset: 0x00379FF0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060170AC RID: 94380 RVA: 0x00352984 File Offset: 0x00350B84
+		// Token: 0x0601870E RID: 100110 RVA: 0x0037BDF8 File Offset: 0x00379FF8
 		public static IMowBuffDistribute GetRootAsIMowBuffDistribute(ByteBuffer _bb)
 		{
 			return IMowBuffDistribute.GetRootAsIMowBuffDistribute(_bb, default(IMowBuffDistribute));
 		}
 
-		// Token: 0x060170AD RID: 94381 RVA: 0x003529A0 File Offset: 0x00350BA0
+		// Token: 0x0601870F RID: 100111 RVA: 0x0037BE14 File Offset: 0x0037A014
 		public static IMowBuffDistribute GetRootAsIMowBuffDistribute(ByteBuffer _bb, IMowBuffDistribute obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060170AE RID: 94382 RVA: 0x003529BD File Offset: 0x00350BBD
+		// Token: 0x06018710 RID: 100112 RVA: 0x0037BE31 File Offset: 0x0037A031
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060170AF RID: 94383 RVA: 0x003529CC File Offset: 0x00350BCC
+		// Token: 0x06018711 RID: 100113 RVA: 0x0037BE40 File Offset: 0x0037A040
 		public IMowBuffDistribute __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170070B3 RID: 28851
-		// (get) Token: 0x060170B0 RID: 94384 RVA: 0x003529DC File Offset: 0x00350BDC
+		// Token: 0x170076A4 RID: 30372
+		// (get) Token: 0x06018712 RID: 100114 RVA: 0x0037BE50 File Offset: 0x0037A050
 		public EShowUiType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170070B4 RID: 28852
-		// (get) Token: 0x060170B1 RID: 94385 RVA: 0x00352A18 File Offset: 0x00350C18
+		// Token: 0x170076A5 RID: 30373
+		// (get) Token: 0x06018713 RID: 100115 RVA: 0x0037BE8C File Offset: 0x0037A08C
 		public int BoardId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060170B2 RID: 94386 RVA: 0x00352A54 File Offset: 0x00350C54
+		// Token: 0x06018714 RID: 100116 RVA: 0x0037BEC8 File Offset: 0x0037A0C8
 		public static Offset<IMowBuffDistribute> CreateIMowBuffDistribute(FlatBufferBuilder builder, EShowUiType Type = EShowUiType.All, int BoardId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMowBuffDistribute.EndIMowBuffDistribute(builder);
 		}
 
-		// Token: 0x060170B3 RID: 94387 RVA: 0x00352A71 File Offset: 0x00350C71
+		// Token: 0x06018715 RID: 100117 RVA: 0x0037BEE5 File Offset: 0x0037A0E5
 		public static void StartIMowBuffDistribute(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060170B4 RID: 94388 RVA: 0x00352A7A File Offset: 0x00350C7A
+		// Token: 0x06018716 RID: 100118 RVA: 0x0037BEEE File Offset: 0x0037A0EE
 		public static void AddType(FlatBufferBuilder builder, EShowUiType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060170B5 RID: 94389 RVA: 0x00352A85 File Offset: 0x00350C85
+		// Token: 0x06018717 RID: 100119 RVA: 0x0037BEF9 File Offset: 0x0037A0F9
 		public static void AddBoardId(FlatBufferBuilder builder, int boardId)
 		{
 			builder.AddInt(1, boardId, 0);
 		}
 
-		// Token: 0x060170B6 RID: 94390 RVA: 0x00352A90 File Offset: 0x00350C90
+		// Token: 0x06018718 RID: 100120 RVA: 0x0037BF04 File Offset: 0x0037A104
 		public static Offset<IMowBuffDistribute> EndIMowBuffDistribute(FlatBufferBuilder builder)
 		{
 			return new Offset<IMowBuffDistribute>(builder.EndTable());
 		}
 
-		// Token: 0x060170B7 RID: 94391 RVA: 0x00352AA0 File Offset: 0x00350CA0
+		// Token: 0x06018719 RID: 100121 RVA: 0x0037BF14 File Offset: 0x0037A114
 		public IMowBuffDistributeT UnPack()
 		{
 			IMowBuffDistributeT mowBuffDistributeT = new IMowBuffDistributeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return mowBuffDistributeT;
 		}
 
-		// Token: 0x060170B8 RID: 94392 RVA: 0x00352ABB File Offset: 0x00350CBB
+		// Token: 0x0601871A RID: 100122 RVA: 0x0037BF2F File Offset: 0x0037A12F
 		public void UnPackTo(IMowBuffDistributeT _o)
 		{
 			_o.Type = this.Type;
 			_o.BoardId = this.BoardId;
 		}
 
-		// Token: 0x060170B9 RID: 94393 RVA: 0x00352AD8 File Offset: 0x00350CD8
+		// Token: 0x0601871B RID: 100123 RVA: 0x0037BF4C File Offset: 0x0037A14C
 		public static Offset<IMowBuffDistribute> Pack(FlatBufferBuilder builder, IMowBuffDistributeT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMowBuffDistribute.CreateIMowBuffDistribute(builder, _o.Type, _o.BoardId);
 		}
 
-		// Token: 0x0400B95E RID: 47454
+		// Token: 0x0400C33C RID: 49980
 		private Table __p;
 	}
 }

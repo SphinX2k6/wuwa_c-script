@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200624F RID: 25167
+	// Token: 0x020051CD RID: 20941
 	internal enum <RhythmShipSettlementView>F92C7F6BD94CDEF08F8B1B9A510AD2217BD9DC219B87D051073030383483517C4__EComponent
 	{
-		// Token: 0x040211C0 RID: 135616
+		// Token: 0x0401BAEF RID: 113391
 		LevelTexture,
-		// Token: 0x040211C1 RID: 135617
+		// Token: 0x0401BAF0 RID: 113392
 		ScoreText,
-		// Token: 0x040211C2 RID: 135618
+		// Token: 0x0401BAF1 RID: 113393
 		NewBestScoreTagItem,
-		// Token: 0x040211C3 RID: 135619
+		// Token: 0x0401BAF2 RID: 113394
 		NewBestScoreTagText,
-		// Token: 0x040211C4 RID: 135620
+		// Token: 0x0401BAF3 RID: 113395
 		RankingBgTexture,
-		// Token: 0x040211C5 RID: 135621
+		// Token: 0x0401BAF4 RID: 113396
 		RankingTexture,
-		// Token: 0x040211C6 RID: 135622
+		// Token: 0x0401BAF5 RID: 113397
 		HighLevelItem,
-		// Token: 0x040211C7 RID: 135623
+		// Token: 0x0401BAF6 RID: 113398
 		RhythmItemLayout,
-		// Token: 0x040211C8 RID: 135624
+		// Token: 0x0401BAF7 RID: 113399
 		RhythmItem,
-		// Token: 0x040211C9 RID: 135625
+		// Token: 0x0401BAF8 RID: 113400
 		CompleteText,
-		// Token: 0x040211CA RID: 135626
+		// Token: 0x0401BAF9 RID: 113401
 		ComboText,
-		// Token: 0x040211CB RID: 135627
+		// Token: 0x0401BAFA RID: 113402
 		BestScoreText,
-		// Token: 0x040211CC RID: 135628
+		// Token: 0x0401BAFB RID: 113403
 		LeaveBtn,
-		// Token: 0x040211CD RID: 135629
+		// Token: 0x0401BAFC RID: 113404
 		GoOnGameBtn
 	}
 }

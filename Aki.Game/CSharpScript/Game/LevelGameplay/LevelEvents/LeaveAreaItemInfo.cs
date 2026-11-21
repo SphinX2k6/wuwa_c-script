@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Area;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B36 RID: 27446
+	// Token: 0x02005CAE RID: 23726
 	internal class LeaveAreaItemInfo
 	{
-		// Token: 0x0604413C RID: 278844 RVA: 0x010BD0A0 File Offset: 0x010BB2A0
+		// Token: 0x0603A28E RID: 238222 RVA: 0x0106692C File Offset: 0x01064B2C
 		[NullableContext(1)]
 		public static bool TryLeave(ILeaveAreaItem info)
 		{

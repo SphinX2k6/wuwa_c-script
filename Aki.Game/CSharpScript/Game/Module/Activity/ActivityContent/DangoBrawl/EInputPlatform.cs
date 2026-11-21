@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006784 RID: 26500
+	// Token: 0x020056D4 RID: 22228
 	public enum EInputPlatform
 	{
-		// Token: 0x040227E2 RID: 141282
+		// Token: 0x0401D03F RID: 118847
 		Mobile,
-		// Token: 0x040227E3 RID: 141283
+		// Token: 0x0401D040 RID: 118848
 		Pc,
-		// Token: 0x040227E4 RID: 141284
+		// Token: 0x0401D041 RID: 118849
 		Gamepad
 	}
 }

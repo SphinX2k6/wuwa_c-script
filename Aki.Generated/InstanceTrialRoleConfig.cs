@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D75 RID: 3445
+	// Token: 0x02000E5A RID: 3674
 	public struct InstanceTrialRoleConfig : IFlatbufferObject
 	{
-		// Token: 0x170019C1 RID: 6593
-		// (get) Token: 0x060085A7 RID: 34215 RVA: 0x00264631 File Offset: 0x00262831
+		// Token: 0x17001A25 RID: 6693
+		// (get) Token: 0x06008BC2 RID: 35778 RVA: 0x0028297E File Offset: 0x00280B7E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085A8 RID: 34216 RVA: 0x0026463E File Offset: 0x0026283E
+		// Token: 0x06008BC3 RID: 35779 RVA: 0x0028298B File Offset: 0x00280B8B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060085A9 RID: 34217 RVA: 0x00264648 File Offset: 0x00262848
+		// Token: 0x06008BC4 RID: 35780 RVA: 0x00282994 File Offset: 0x00280B94
 		public static InstanceTrialRoleConfig GetRootAsInstanceTrialRoleConfig(ByteBuffer _bb)
 		{
 			return InstanceTrialRoleConfig.GetRootAsInstanceTrialRoleConfig(_bb, default(InstanceTrialRoleConfig));
 		}
 
-		// Token: 0x060085AA RID: 34218 RVA: 0x00264664 File Offset: 0x00262864
+		// Token: 0x06008BC5 RID: 35781 RVA: 0x002829B0 File Offset: 0x00280BB0
 		public static InstanceTrialRoleConfig GetRootAsInstanceTrialRoleConfig(ByteBuffer _bb, InstanceTrialRoleConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060085AB RID: 34219 RVA: 0x00264681 File Offset: 0x00262881
+		// Token: 0x06008BC6 RID: 35782 RVA: 0x002829CD File Offset: 0x00280BCD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060085AC RID: 34220 RVA: 0x00264690 File Offset: 0x00262890
+		// Token: 0x06008BC7 RID: 35783 RVA: 0x002829DC File Offset: 0x00280BDC
 		public InstanceTrialRoleConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170019C2 RID: 6594
-		// (get) Token: 0x060085AD RID: 34221 RVA: 0x002646A0 File Offset: 0x002628A0
+		// Token: 0x17001A26 RID: 6694
+		// (get) Token: 0x06008BC8 RID: 35784 RVA: 0x002829EC File Offset: 0x00280BEC
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085AE RID: 34222 RVA: 0x002646DC File Offset: 0x002628DC
+		// Token: 0x06008BC9 RID: 35785 RVA: 0x00282A28 File Offset: 0x00280C28
 		public int MaleFormation(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170019C3 RID: 6595
-		// (get) Token: 0x060085AF RID: 34223 RVA: 0x0026471C File Offset: 0x0026291C
+		// Token: 0x17001A27 RID: 6695
+		// (get) Token: 0x06008BCA RID: 35786 RVA: 0x00282A68 File Offset: 0x00280C68
 		public int MaleFormationLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085B0 RID: 34224 RVA: 0x00264747 File Offset: 0x00262947
+		// Token: 0x06008BCB RID: 35787 RVA: 0x00282A93 File Offset: 0x00280C93
 		public Span<int> GetMaleFormationBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x060085B1 RID: 34225 RVA: 0x00264756 File Offset: 0x00262956
+		// Token: 0x06008BCC RID: 35788 RVA: 0x00282AA2 File Offset: 0x00280CA2
 		public int[] GetMaleFormationArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060085B2 RID: 34226 RVA: 0x00264770 File Offset: 0x00262970
+		// Token: 0x06008BCD RID: 35789 RVA: 0x00282ABC File Offset: 0x00280CBC
 		public int FemaleFormation(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170019C4 RID: 6596
-		// (get) Token: 0x060085B3 RID: 34227 RVA: 0x002647B0 File Offset: 0x002629B0
+		// Token: 0x17001A28 RID: 6696
+		// (get) Token: 0x06008BCE RID: 35790 RVA: 0x00282AFC File Offset: 0x00280CFC
 		public int FemaleFormationLength
 		{
 			get
@@ -128,19 +128,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085B4 RID: 34228 RVA: 0x002647DB File Offset: 0x002629DB
+		// Token: 0x06008BCF RID: 35791 RVA: 0x00282B27 File Offset: 0x00280D27
 		public Span<int> GetFemaleFormationBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x060085B5 RID: 34229 RVA: 0x002647EA File Offset: 0x002629EA
+		// Token: 0x06008BD0 RID: 35792 RVA: 0x00282B36 File Offset: 0x00280D36
 		public int[] GetFemaleFormationArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060085B6 RID: 34230 RVA: 0x00264804 File Offset: 0x00262A04
+		// Token: 0x06008BD1 RID: 35793 RVA: 0x00282B50 File Offset: 0x00280D50
 		public int MaleDelayFormation(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -151,8 +151,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170019C5 RID: 6597
-		// (get) Token: 0x060085B7 RID: 34231 RVA: 0x00264844 File Offset: 0x00262A44
+		// Token: 0x17001A29 RID: 6697
+		// (get) Token: 0x06008BD2 RID: 35794 RVA: 0x00282B90 File Offset: 0x00280D90
 		public int MaleDelayFormationLength
 		{
 			get
@@ -166,19 +166,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085B8 RID: 34232 RVA: 0x00264870 File Offset: 0x00262A70
+		// Token: 0x06008BD3 RID: 35795 RVA: 0x00282BBC File Offset: 0x00280DBC
 		public Span<int> GetMaleDelayFormationBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x060085B9 RID: 34233 RVA: 0x00264880 File Offset: 0x00262A80
+		// Token: 0x06008BD4 RID: 35796 RVA: 0x00282BCC File Offset: 0x00280DCC
 		public int[] GetMaleDelayFormationArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060085BA RID: 34234 RVA: 0x00264898 File Offset: 0x00262A98
+		// Token: 0x06008BD5 RID: 35797 RVA: 0x00282BE4 File Offset: 0x00280DE4
 		public int FemaleDelayFormation(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -189,8 +189,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170019C6 RID: 6598
-		// (get) Token: 0x060085BB RID: 34235 RVA: 0x002648D8 File Offset: 0x00262AD8
+		// Token: 0x17001A2A RID: 6698
+		// (get) Token: 0x06008BD6 RID: 35798 RVA: 0x00282C24 File Offset: 0x00280E24
 		public int FemaleDelayFormationLength
 		{
 			get
@@ -204,20 +204,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085BC RID: 34236 RVA: 0x00264904 File Offset: 0x00262B04
+		// Token: 0x06008BD7 RID: 35799 RVA: 0x00282C50 File Offset: 0x00280E50
 		public Span<int> GetFemaleDelayFormationBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x060085BD RID: 34237 RVA: 0x00264914 File Offset: 0x00262B14
+		// Token: 0x06008BD8 RID: 35800 RVA: 0x00282C60 File Offset: 0x00280E60
 		public int[] GetFemaleDelayFormationArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170019C7 RID: 6599
-		// (get) Token: 0x060085BE RID: 34238 RVA: 0x0026492C File Offset: 0x00262B2C
+		// Token: 0x17001A2B RID: 6699
+		// (get) Token: 0x06008BD9 RID: 35801 RVA: 0x00282C78 File Offset: 0x00280E78
 		public bool OnlyTrial
 		{
 			get
@@ -227,8 +227,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019C8 RID: 6600
-		// (get) Token: 0x060085BF RID: 34239 RVA: 0x0026496C File Offset: 0x00262B6C
+		// Token: 0x17001A2C RID: 6700
+		// (get) Token: 0x06008BDA RID: 35802 RVA: 0x00282CB8 File Offset: 0x00280EB8
 		public bool AutoChange
 		{
 			get
@@ -238,8 +238,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019C9 RID: 6601
-		// (get) Token: 0x060085C0 RID: 34240 RVA: 0x002649AC File Offset: 0x00262BAC
+		// Token: 0x17001A2D RID: 6701
+		// (get) Token: 0x06008BDB RID: 35803 RVA: 0x00282CF8 File Offset: 0x00280EF8
 		public bool ShowInEntrance
 		{
 			get
@@ -249,79 +249,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085C1 RID: 34241 RVA: 0x002649EC File Offset: 0x00262BEC
+		// Token: 0x06008BDC RID: 35804 RVA: 0x00282D38 File Offset: 0x00280F38
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FemaleDelayFormationIter()或GetFemaleDelayFormationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FemaleDelayFormation()
+		public int[] FemaleDelayFormation()
 		{
-			InstanceTrialRoleConfig instanceTrialRoleConfig = this;
-			return instanceTrialRoleConfig.GetFemaleDelayFormationArray() ?? Array.Empty<int>();
+			return this.GetFemaleDelayFormationArray();
 		}
 
-		// Token: 0x060085C2 RID: 34242 RVA: 0x00264A10 File Offset: 0x00262C10
+		// Token: 0x06008BDD RID: 35805 RVA: 0x00282D40 File Offset: 0x00280F40
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FemaleDelayFormationIter()
+		public IEnumerable<int> FemaleDelayFormationIter()
 		{
 			InstanceTrialRoleConfig.<FemaleDelayFormationIter>d__37 <FemaleDelayFormationIter>d__ = new InstanceTrialRoleConfig.<FemaleDelayFormationIter>d__37(-2);
 			<FemaleDelayFormationIter>d__.<>3__<>4__this = this;
 			return <FemaleDelayFormationIter>d__;
 		}
 
-		// Token: 0x060085C3 RID: 34243 RVA: 0x00264A28 File Offset: 0x00262C28
+		// Token: 0x06008BDE RID: 35806 RVA: 0x00282D55 File Offset: 0x00280F55
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FemaleFormationIter()或GetFemaleFormationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FemaleFormation()
+		public int[] FemaleFormation()
 		{
-			InstanceTrialRoleConfig instanceTrialRoleConfig = this;
-			return instanceTrialRoleConfig.GetFemaleFormationArray() ?? Array.Empty<int>();
+			return this.GetFemaleFormationArray();
 		}
 
-		// Token: 0x060085C4 RID: 34244 RVA: 0x00264A4C File Offset: 0x00262C4C
+		// Token: 0x06008BDF RID: 35807 RVA: 0x00282D5D File Offset: 0x00280F5D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FemaleFormationIter()
+		public IEnumerable<int> FemaleFormationIter()
 		{
 			InstanceTrialRoleConfig.<FemaleFormationIter>d__39 <FemaleFormationIter>d__ = new InstanceTrialRoleConfig.<FemaleFormationIter>d__39(-2);
 			<FemaleFormationIter>d__.<>3__<>4__this = this;
 			return <FemaleFormationIter>d__;
 		}
 
-		// Token: 0x060085C5 RID: 34245 RVA: 0x00264A64 File Offset: 0x00262C64
+		// Token: 0x06008BE0 RID: 35808 RVA: 0x00282D72 File Offset: 0x00280F72
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MaleDelayFormationIter()或GetMaleDelayFormationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MaleDelayFormation()
+		public int[] MaleDelayFormation()
 		{
-			InstanceTrialRoleConfig instanceTrialRoleConfig = this;
-			return instanceTrialRoleConfig.GetMaleDelayFormationArray() ?? Array.Empty<int>();
+			return this.GetMaleDelayFormationArray();
 		}
 
-		// Token: 0x060085C6 RID: 34246 RVA: 0x00264A88 File Offset: 0x00262C88
+		// Token: 0x06008BE1 RID: 35809 RVA: 0x00282D7A File Offset: 0x00280F7A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MaleDelayFormationIter()
+		public IEnumerable<int> MaleDelayFormationIter()
 		{
 			InstanceTrialRoleConfig.<MaleDelayFormationIter>d__41 <MaleDelayFormationIter>d__ = new InstanceTrialRoleConfig.<MaleDelayFormationIter>d__41(-2);
 			<MaleDelayFormationIter>d__.<>3__<>4__this = this;
 			return <MaleDelayFormationIter>d__;
 		}
 
-		// Token: 0x060085C7 RID: 34247 RVA: 0x00264AA0 File Offset: 0x00262CA0
+		// Token: 0x06008BE2 RID: 35810 RVA: 0x00282D8F File Offset: 0x00280F8F
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MaleFormationIter()或GetMaleFormationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MaleFormation()
+		public int[] MaleFormation()
 		{
-			InstanceTrialRoleConfig instanceTrialRoleConfig = this;
-			return instanceTrialRoleConfig.GetMaleFormationArray() ?? Array.Empty<int>();
+			return this.GetMaleFormationArray();
 		}
 
-		// Token: 0x060085C8 RID: 34248 RVA: 0x00264AC4 File Offset: 0x00262CC4
+		// Token: 0x06008BE3 RID: 35811 RVA: 0x00282D97 File Offset: 0x00280F97
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MaleFormationIter()
+		public IEnumerable<int> MaleFormationIter()
 		{
 			InstanceTrialRoleConfig.<MaleFormationIter>d__43 <MaleFormationIter>d__ = new InstanceTrialRoleConfig.<MaleFormationIter>d__43(-2);
 			<MaleFormationIter>d__.<>3__<>4__this = this;
 			return <MaleFormationIter>d__;
 		}
 
-		// Token: 0x04004DFD RID: 19965
+		// Token: 0x040053E2 RID: 21474
 		private Table __p;
 	}
 }

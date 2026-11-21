@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001601 RID: 5633
+// Token: 0x02000AB9 RID: 2745
 internal enum <WheelTowerModeTitleItem>F7F845511B5528332FE045816C33F4BEB3818228E341B1449275D4936C86C3A15__EWheelTowerModeTitleItemComponent
 {
-	// Token: 0x04004716 RID: 18198
+	// Token: 0x040047BC RID: 18364
 	TexIconNormal,
-	// Token: 0x04004717 RID: 18199
+	// Token: 0x040047BD RID: 18365
 	TexIconEndless,
-	// Token: 0x04004718 RID: 18200
+	// Token: 0x040047BE RID: 18366
 	TxtModeTitle
 }

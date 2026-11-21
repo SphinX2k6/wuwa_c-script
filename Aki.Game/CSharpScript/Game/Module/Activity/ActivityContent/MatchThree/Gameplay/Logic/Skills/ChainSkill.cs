@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic.Skills
 {
-	// Token: 0x02006504 RID: 25860
+	// Token: 0x02005482 RID: 21634
 	[NullableContext(2)]
 	[Nullable(0)]
 	public sealed class ChainSkill : ISkill
 	{
-		// Token: 0x06040E93 RID: 265875 RVA: 0x00FBB32C File Offset: 0x00FB952C
+		// Token: 0x06035B57 RID: 219991 RVA: 0x00F0235C File Offset: 0x00F0055C
 		public ChainSkill(MatchThreeSkill cfg)
 		{
 			int[] chainExtra;
@@ -30,24 +30,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base..ctor();
 		}
 
-		// Token: 0x17009514 RID: 38164
-		// (get) Token: 0x06040E94 RID: 265876 RVA: 0x00FBB3B8 File Offset: 0x00FB95B8
+		// Token: 0x17006876 RID: 26742
+		// (get) Token: 0x06035B58 RID: 219992 RVA: 0x00F023E8 File Offset: 0x00F005E8
 		public int Id { get; }
 
-		// Token: 0x17009515 RID: 38165
-		// (get) Token: 0x06040E95 RID: 265877 RVA: 0x00FBB3C0 File Offset: 0x00FB95C0
+		// Token: 0x17006877 RID: 26743
+		// (get) Token: 0x06035B59 RID: 219993 RVA: 0x00F023F0 File Offset: 0x00F005F0
 		public int EnergyNode { get; }
 
-		// Token: 0x17009516 RID: 38166
-		// (get) Token: 0x06040E96 RID: 265878 RVA: 0x00FBB3C8 File Offset: 0x00FB95C8
+		// Token: 0x17006878 RID: 26744
+		// (get) Token: 0x06035B5A RID: 219994 RVA: 0x00F023F8 File Offset: 0x00F005F8
 		public string Icon { get; }
 
-		// Token: 0x17009517 RID: 38167
-		// (get) Token: 0x06040E97 RID: 265879 RVA: 0x00FBB3D0 File Offset: 0x00FB95D0
+		// Token: 0x17006879 RID: 26745
+		// (get) Token: 0x06035B5B RID: 219995 RVA: 0x00F02400 File Offset: 0x00F00600
 		public string Name { get; }
 
-		// Token: 0x17009518 RID: 38168
-		// (get) Token: 0x06040E98 RID: 265880 RVA: 0x00FBB3D8 File Offset: 0x00FB95D8
+		// Token: 0x1700687A RID: 26746
+		// (get) Token: 0x06035B5C RID: 219996 RVA: 0x00F02408 File Offset: 0x00F00608
 		public ESkillCastEffect CastEffect
 		{
 			get
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E99 RID: 265881 RVA: 0x00FBB3DC File Offset: 0x00FB95DC
+		// Token: 0x06035B5D RID: 219997 RVA: 0x00F0240C File Offset: 0x00F0060C
 		[NullableContext(1)]
 		public unsafe void Release(ISkillContext ctx)
 		{
@@ -80,14 +80,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x04021D6B RID: 138603
+		// Token: 0x0401C69C RID: 116380
 		[Nullable(1)]
 		private readonly int[] Params = cfg.GetParamsArray();
 
-		// Token: 0x04021D6C RID: 138604
+		// Token: 0x0401C69D RID: 116381
 		private readonly bool IsUltimate = cfg.Type == 4;
 
-		// Token: 0x04021D6D RID: 138605
+		// Token: 0x0401C69E RID: 116382
 		[Nullable(1)]
 		private readonly int[] ChainExtra;
 	}

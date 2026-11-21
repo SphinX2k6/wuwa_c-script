@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001937 RID: 6455
+// Token: 0x02000DF3 RID: 3571
 public class MediumItemGridStarLevelComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCC9 RID: 48329 RVA: 0x002AB768 File Offset: 0x002A9968
+	// Token: 0x060090C4 RID: 37060 RVA: 0x002B6234 File Offset: 0x002B4434
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class MediumItemGridStarLevelComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCCA RID: 48330 RVA: 0x002AB7D1 File Offset: 0x002A99D1
+	// Token: 0x060090C5 RID: 37061 RVA: 0x002B629D File Offset: 0x002B449D
 	protected override void OnActivate()
 	{
 		this.VerticalItem = base.GetItem(0);
@@ -33,21 +33,21 @@ public class MediumItemGridStarLevelComponent : MediumItemGridComponent
 		sprite.SetUIActive(false);
 	}
 
-	// Token: 0x0600BCCB RID: 48331 RVA: 0x002AB7F2 File Offset: 0x002A99F2
+	// Token: 0x060090C6 RID: 37062 RVA: 0x002B62BE File Offset: 0x002B44BE
 	protected override void OnDeactivate()
 	{
 		this.StarSpriteActorList.Clear();
 		this.VerticalItem = null;
 	}
 
-	// Token: 0x0600BCCC RID: 48332 RVA: 0x002AB806 File Offset: 0x002A9A06
+	// Token: 0x060090C7 RID: 37063 RVA: 0x002B62D2 File Offset: 0x002B44D2
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemTagStar";
 	}
 
-	// Token: 0x0600BCCD RID: 48333 RVA: 0x002AB810 File Offset: 0x002A9A10
+	// Token: 0x060090C8 RID: 37064 RVA: 0x002B62DC File Offset: 0x002B44DC
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -96,7 +96,7 @@ public class MediumItemGridStarLevelComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BCCE RID: 48334 RVA: 0x002AB8FC File Offset: 0x002A9AFC
+	// Token: 0x060090C9 RID: 37065 RVA: 0x002B63C8 File Offset: 0x002B45C8
 	private void HiddenAllStar()
 	{
 		foreach (AUIBaseActor auibaseActor in this.StarSpriteActorList)
@@ -112,24 +112,24 @@ public class MediumItemGridStarLevelComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x04005543 RID: 21827
+	// Token: 0x040055F0 RID: 22000
 	[Nullable(2)]
 	private UUIItem VerticalItem;
 
-	// Token: 0x04005544 RID: 21828
+	// Token: 0x040055F1 RID: 22001
 	[Nullable(1)]
 	private readonly List<AUIBaseActor> StarSpriteActorList = new List<AUIBaseActor>();
 
-	// Token: 0x04005545 RID: 21829
+	// Token: 0x040055F2 RID: 22002
 	private int StarLevel;
 
-	// Token: 0x02007E9C RID: 32412
+	// Token: 0x02007029 RID: 28713
 	private class EChildType
 	{
-		// Token: 0x0402967A RID: 169594
+		// Token: 0x040249B2 RID: 149938
 		public const int VerticalItem = 0;
 
-		// Token: 0x0402967B RID: 169595
+		// Token: 0x040249B3 RID: 149939
 		public const int StarSprite = 1;
 	}
 }

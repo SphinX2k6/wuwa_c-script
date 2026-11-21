@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200163E RID: 5694
+	// Token: 0x020016B5 RID: 5813
 	public enum RoverRogueGainOperateType
 	{
-		// Token: 0x0400C099 RID: 49305
+		// Token: 0x0400C5A4 RID: 50596
 		[OriginalName("RoverRogueBlessSelect")]
 		RoverRogueBlessSelect,
-		// Token: 0x0400C09A RID: 49306
+		// Token: 0x0400C5A5 RID: 50597
 		[OriginalName("RoverRogueRoleEnhanceSelect")]
 		RoverRogueRoleEnhanceSelect,
-		// Token: 0x0400C09B RID: 49307
+		// Token: 0x0400C5A6 RID: 50598
 		[OriginalName("RoverRogueBlessEnhanceSelect")]
 		RoverRogueBlessEnhanceSelect,
-		// Token: 0x0400C09C RID: 49308
+		// Token: 0x0400C5A7 RID: 50599
 		[OriginalName("RoverRogueBlessGroupSelect")]
 		RoverRogueBlessGroupSelect
 	}

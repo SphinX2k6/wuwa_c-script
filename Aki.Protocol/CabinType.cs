@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015C2 RID: 5570
+	// Token: 0x02001634 RID: 5684
 	public enum CabinType
 	{
-		// Token: 0x0400BCB4 RID: 48308
+		// Token: 0x0400C1A7 RID: 49575
 		[OriginalName("ShipCabin")]
 		ShipCabin,
-		// Token: 0x0400BCB5 RID: 48309
+		// Token: 0x0400C1A8 RID: 49576
 		[OriginalName("TempCabin")]
 		TempCabin,
-		// Token: 0x0400BCB6 RID: 48310
+		// Token: 0x0400C1A9 RID: 49577
 		[OriginalName("NetCabin")]
 		NetCabin,
-		// Token: 0x0400BCB7 RID: 48311
+		// Token: 0x0400C1AA RID: 49578
 		[OriginalName("Cage")]
 		Cage,
-		// Token: 0x0400BCB8 RID: 48312
+		// Token: 0x0400C1AB RID: 49579
 		[OriginalName("HandIn")]
 		HandIn
 	}

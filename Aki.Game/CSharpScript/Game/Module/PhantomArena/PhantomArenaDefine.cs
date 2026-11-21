@@ -5,12 +5,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005106 RID: 20742
+	// Token: 0x020040D6 RID: 16598
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaDefine
 	{
-		// Token: 0x06035129 RID: 217385 RVA: 0x00C93ABB File Offset: 0x00C91CBB
+		// Token: 0x0602A022 RID: 172066 RVA: 0x00BE0ECF File Offset: 0x00BDF0CF
 		private static TCardSlotSortFunc CreateElementSortFunc(ECardElement element)
 		{
 			return delegate(CardSlotSortInfo a, CardSlotSortInfo b)
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			};
 		}
 
-		// Token: 0x0603512B RID: 217387 RVA: 0x00C93ADC File Offset: 0x00C91CDC
+		// Token: 0x0602A024 RID: 172068 RVA: 0x00BE0EF0 File Offset: 0x00BDF0F0
 		// Note: this type is marked as 'beforefieldinit'.
 		static PhantomArenaDefine()
 		{
@@ -359,46 +359,52 @@ namespace CSharpScript.Game.Module.PhantomArena
 			};
 		}
 
-		// Token: 0x0401C3B5 RID: 115637
+		// Token: 0x04016DE8 RID: 93672
 		public const int CARD_COUNT_PER_PAGE = 8;
 
-		// Token: 0x0401C3B6 RID: 115638
+		// Token: 0x04016DE9 RID: 93673
 		public const string CARD_ALL_ELEMENT_TAB_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Image/IconElementRound/T_IconElementAll.T_IconElementAll";
 
-		// Token: 0x0401C3B7 RID: 115639
+		// Token: 0x04016DEA RID: 93674
 		public const string CARD_ALL_ELEMENT_TAB_COLOR = "FFFFFFFF";
 
-		// Token: 0x0401C3B8 RID: 115640
+		// Token: 0x04016DEB RID: 93675
 		public const string CARD_SLOT_FRAME_NORMAL_ICON_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity24/SoundRemnantArena/Outside/SP_IconOutsideTeamListNor.SP_IconOutsideTeamListNor";
 
-		// Token: 0x0401C3B9 RID: 115641
+		// Token: 0x04016DEC RID: 93676
 		public const string CARD_SLOT_FRAME_GOLD_ICON_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity24/SoundRemnantArena/Outside/SP_IconOutsideTeamListGold.SP_IconOutsideTeamListGold";
 
-		// Token: 0x0401C3BA RID: 115642
+		// Token: 0x04016DED RID: 93677
 		public const string CARD_COST_TEXT_ID = "PhantomBattle_1001";
 
-		// Token: 0x0401C3BB RID: 115643
+		// Token: 0x04016DEE RID: 93678
 		public const string CARD_ATTACK_TEXT_ID = "PhantomBattle_1002";
 
-		// Token: 0x0401C3BC RID: 115644
+		// Token: 0x04016DEF RID: 93679
 		public const string CARD_LIFE_TEXT_ID = "PhantomBattle_1003";
 
-		// Token: 0x0401C3BD RID: 115645
+		// Token: 0x04016DF0 RID: 93680
 		public const string CARD_CRIT_RATE_TEXT_ID = "PhantomBattle_1004";
 
-		// Token: 0x0401C3BE RID: 115646
+		// Token: 0x04016DF1 RID: 93681
 		public const string CARD_CRIT_DAMAGE_TEXT_ID = "PhantomBattle_1005";
 
-		// Token: 0x0401C3BF RID: 115647
+		// Token: 0x04016DF2 RID: 93682
 		public const string POINTS_NAME_TEXT = "PhantomBattle_1106";
 
-		// Token: 0x0401C3C0 RID: 115648
+		// Token: 0x04016DF3 RID: 93683
 		public const string ACTIVITY_SUBVIEW_TEXT_UNLOCK = "PhantomBattle_1103";
 
-		// Token: 0x0401C3C1 RID: 115649
+		// Token: 0x04016DF4 RID: 93684
 		public const int GYM_MAX_LEVEL = 7;
 
-		// Token: 0x0401C3C2 RID: 115650
+		// Token: 0x04016DF5 RID: 93685
+		public const int GYM_UNLOCK_CHECKED_CACHE_KEY = 2;
+
+		// Token: 0x04016DF6 RID: 93686
+		public const int GYM_RED_DOT_CHECKED_CACHE_KEY = 3;
+
+		// Token: 0x04016DF7 RID: 93687
 		[StaticVariableRuleIgnore]
 		public static readonly string[] positionGymLevel = new string[]
 		{
@@ -411,181 +417,181 @@ namespace CSharpScript.Game.Module.PhantomArena
 			"right"
 		};
 
-		// Token: 0x0401C3C3 RID: 115651
+		// Token: 0x04016DF8 RID: 93688
 		public const int REPEAT_GYM_MAX_DIFFICULTY = 2;
 
-		// Token: 0x0401C3C4 RID: 115652
+		// Token: 0x04016DF9 RID: 93689
 		public const float GYM_INERTIA_TWEEN_TIME = 0.618f;
 
-		// Token: 0x0401C3C5 RID: 115653
+		// Token: 0x04016DFA RID: 93690
 		public const int GYM_BG_OFFSET_MAX = 330;
 
-		// Token: 0x0401C3C6 RID: 115654
+		// Token: 0x04016DFB RID: 93691
 		public const int GYM_GYM_OFFSET_MIDDLE = -700;
 
-		// Token: 0x0401C3C7 RID: 115655
+		// Token: 0x04016DFC RID: 93692
 		public const string ENTRANCE_TASK_TEXT_ID = "PhantomBattle_1093";
 
-		// Token: 0x0401C3C8 RID: 115656
+		// Token: 0x04016DFD RID: 93693
 		public const string ENTRANCE_SHOP_TEXT_ID = "PhantomBattle_1094";
 
-		// Token: 0x0401C3C9 RID: 115657
+		// Token: 0x04016DFE RID: 93694
 		public const string ENTRANCE_CARD_TEXT_ID = "PhantomBattle_1095";
 
-		// Token: 0x0401C3CA RID: 115658
+		// Token: 0x04016DFF RID: 93695
 		public const string ENTRANCE_ROLE_TEXT_ID = "PhantomBattle_1096";
 
-		// Token: 0x0401C3CB RID: 115659
+		// Token: 0x04016E00 RID: 93696
 		public const string ENTRANCE_COLLECTION_TEXT_ID = "PhantomBattle_1097";
 
-		// Token: 0x0401C3CC RID: 115660
+		// Token: 0x04016E01 RID: 93697
 		public const string ENTRANCE_MAINSHOP_ID = "PhantomBattle_1098";
 
-		// Token: 0x0401C3CD RID: 115661
+		// Token: 0x04016E02 RID: 93698
 		public const string ENTRANCE_LEVEL_COUNT_ID = "PhantomBattle_1025";
 
-		// Token: 0x0401C3CE RID: 115662
+		// Token: 0x04016E03 RID: 93699
 		public const string ENTRANCE_SHOP_COUNT_ID = "PhantomBattle_1100";
 
-		// Token: 0x0401C3CF RID: 115663
+		// Token: 0x04016E04 RID: 93700
 		public const string BVB_SPEEDUP_TIPS = "PhantomBattle_1107";
 
-		// Token: 0x0401C3D0 RID: 115664
+		// Token: 0x04016E05 RID: 93701
 		public const string ENTRANCE_GYM_LOCK_TEXT_ID = "PhantomBattleGym_Locked";
 
-		// Token: 0x0401C3D1 RID: 115665
+		// Token: 0x04016E06 RID: 93702
 		public const string ENTRANCE_NPC_LOCK_TEXT_ID = "PhantomBattleNpc_Locked";
 
-		// Token: 0x0401C3D2 RID: 115666
+		// Token: 0x04016E07 RID: 93703
 		public const string ENTRANCE_MASTER_INFO_EXP_TEXT_ID = "TowerDefence_LV";
 
-		// Token: 0x0401C3D3 RID: 115667
+		// Token: 0x04016E08 RID: 93704
 		public const string COLLECT_BADGE_GROUP_TITLE = "PrefabTextItem_3661046131_Text";
 
-		// Token: 0x0401C3D4 RID: 115668
+		// Token: 0x04016E09 RID: 93705
 		public const string COLLECT_ELEMENT_PHYSICAL_NAME = "PhantomBattle_1123";
 
-		// Token: 0x0401C3D5 RID: 115669
+		// Token: 0x04016E0A RID: 93706
 		public const int HELP_ID_ENTRANCE = 334;
 
-		// Token: 0x0401C3D6 RID: 115670
+		// Token: 0x04016E0B RID: 93707
 		public const int HELP_ID_SHOP = 335;
 
-		// Token: 0x0401C3D7 RID: 115671
+		// Token: 0x04016E0C RID: 93708
 		public const int HELP_ID_COLLECT = 338;
 
-		// Token: 0x0401C3D8 RID: 115672
+		// Token: 0x04016E0D RID: 93709
 		public const int HELP_ID_COLLECT_NEW = 477;
 
-		// Token: 0x0401C3D9 RID: 115673
+		// Token: 0x04016E0E RID: 93710
 		public const int HELP_ID_LEVEL = 341;
 
-		// Token: 0x0401C3DA RID: 115674
+		// Token: 0x04016E0F RID: 93711
 		public const int INSTANCE_SUCCESS = 3029;
 
-		// Token: 0x0401C3DB RID: 115675
+		// Token: 0x04016E10 RID: 93712
 		public const int INSTANCE_FAIL = 3030;
 
-		// Token: 0x0401C3DC RID: 115676
+		// Token: 0x04016E11 RID: 93713
 		public const string TEXT_RESULT_LEVEL_SKILL_DESC = "Text_ResultLevelSkillDesc_Text";
 
-		// Token: 0x0401C3DD RID: 115677
+		// Token: 0x04016E12 RID: 93714
 		public const string GYM_BG_LEFT_COLOR = "GymTabViewTextureBgLeftColor";
 
-		// Token: 0x0401C3DE RID: 115678
+		// Token: 0x04016E13 RID: 93715
 		public const string GYM_BG_LEFT_GRAY = "GymTabViewTextureBgLeftGray";
 
-		// Token: 0x0401C3DF RID: 115679
+		// Token: 0x04016E14 RID: 93716
 		public const string GYM_BG_LEFT_WHITE = "GymTabViewTextureBgLeftWhite";
 
-		// Token: 0x0401C3E0 RID: 115680
+		// Token: 0x04016E15 RID: 93717
 		public const string GYM_BG_MIDDLE_COLOR = "GymTabViewTextureBgMiddleColor";
 
-		// Token: 0x0401C3E1 RID: 115681
+		// Token: 0x04016E16 RID: 93718
 		public const string GYM_BG_MIDDLE_GRAY = "GymTabViewTextureBgMiddleGray";
 
-		// Token: 0x0401C3E2 RID: 115682
+		// Token: 0x04016E17 RID: 93719
 		public const string GYM_BG_MIDDLE_WHITE = "GymTabViewTextureBgMiddleWhite";
 
-		// Token: 0x0401C3E3 RID: 115683
+		// Token: 0x04016E18 RID: 93720
 		public const string GYM_BG_RIGHT_COLOR = "GymTabViewTextureBgRightColor";
 
-		// Token: 0x0401C3E4 RID: 115684
+		// Token: 0x04016E19 RID: 93721
 		public const string GYM_BG_RIGHT_GRAY = "GymTabViewTextureBgRightGray";
 
-		// Token: 0x0401C3E5 RID: 115685
+		// Token: 0x04016E1A RID: 93722
 		public const int DECK_ID_NONE = -1;
 
-		// Token: 0x0401C3E6 RID: 115686
+		// Token: 0x04016E1B RID: 93723
 		public const int DECK_ID_EMPTY_TEMP = -100;
 
-		// Token: 0x0401C3E7 RID: 115687
+		// Token: 0x04016E1C RID: 93724
 		public const int SPECIAL_TASK_TABTYPE = 0;
 
-		// Token: 0x0401C3E8 RID: 115688
+		// Token: 0x04016E1D RID: 93725
 		public const string MYSTERY_NPC_HEAD = "MysteryNpcHead";
 
-		// Token: 0x0401C3E9 RID: 115689
+		// Token: 0x04016E1E RID: 93726
 		public const int HAND_PHANTOMARENA_INDEX = -1;
 
-		// Token: 0x0401C3EA RID: 115690
+		// Token: 0x04016E1F RID: 93727
 		public const int UNVALID_FIGHT_ID = -1;
 
-		// Token: 0x0401C3EB RID: 115691
+		// Token: 0x04016E20 RID: 93728
 		public const int COST_ONE = 1;
 
-		// Token: 0x0401C3EC RID: 115692
+		// Token: 0x04016E21 RID: 93729
 		public const int COST_THREE = 3;
 
-		// Token: 0x0401C3ED RID: 115693
+		// Token: 0x04016E22 RID: 93730
 		[StaticVariableRuleIgnore]
 		public static Dictionary<ECardTabType, ECardElement[]> cardTabTypeToFilterElementList;
 
-		// Token: 0x0401C3EE RID: 115694
+		// Token: 0x04016E23 RID: 93731
 		[StaticVariableRuleIgnore]
 		public static Dictionary<ECardTabType, ECardElement> cardTabTypeToElementConfigId;
 
-		// Token: 0x0401C3EF RID: 115695
+		// Token: 0x04016E24 RID: 93732
 		[StaticVariableRuleIgnore]
 		public static Dictionary<ECardSlotSortType, TCardSlotSortFunc> cardSlotSortTypeToSortFunc;
 
-		// Token: 0x0401C3F0 RID: 115696
+		// Token: 0x04016E25 RID: 93733
 		[StaticVariableRuleIgnore]
 		public static TCardSlotSortFunc cardSlotDefaultSortFunc;
 
-		// Token: 0x0401C3F1 RID: 115697
+		// Token: 0x04016E26 RID: 93734
 		[StaticVariableRuleIgnore]
 		public static TDeckCardSlotSortFunc deckCardSlotDefaultSortFunc;
 
-		// Token: 0x0401C3F2 RID: 115698
+		// Token: 0x04016E27 RID: 93735
 		[StaticVariableRuleIgnore]
 		public static TDeckBuilderCardItemDataSortFunc deckBuilderCardItemDataSortFunc;
 
-		// Token: 0x0401C3F3 RID: 115699
+		// Token: 0x04016E28 RID: 93736
 		[StaticVariableRuleIgnore]
 		public static Dictionary<EAddCardResult, string> addCardFailedResultToTipTextId;
 
-		// Token: 0x0401C3F4 RID: 115700
+		// Token: 0x04016E29 RID: 93737
 		[StaticVariableRuleIgnore]
 		public static Dictionary<EUiTabViewName, string[]> phantomArenaEntranceShopTabIconMap;
 
-		// Token: 0x0401C3F5 RID: 115701
+		// Token: 0x04016E2A RID: 93738
 		[StaticVariableRuleIgnore]
 		public static Dictionary<int, string> difficultNumTextures;
 
-		// Token: 0x0401C3F6 RID: 115702
+		// Token: 0x04016E2B RID: 93739
 		[StaticVariableRuleIgnore]
 		public static Dictionary<PhantomArenaDefine.EPhantomBattleSettleReason, string> phantomBattleSettleReasonToTextId;
 
-		// Token: 0x0200B299 RID: 45721
+		// Token: 0x02009CD2 RID: 40146
 		[NullableContext(0)]
 		public enum EPhantomBattleSettleReason
 		{
-			// Token: 0x040361CE RID: 221646
+			// Token: 0x04030C23 RID: 199715
 			CommonSettle,
-			// Token: 0x040361CF RID: 221647
+			// Token: 0x04030C24 RID: 199716
 			RoundSettle,
-			// Token: 0x040361D0 RID: 221648
+			// Token: 0x04030C25 RID: 199717
 			LimitSettle
 		}
 	}

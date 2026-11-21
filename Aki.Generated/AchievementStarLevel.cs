@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ABF RID: 2751
+	// Token: 0x02000B94 RID: 2964
 	public struct AchievementStarLevel : IFlatbufferObject
 	{
 		// Token: 0x170000F9 RID: 249
-		// (get) Token: 0x06004296 RID: 17046 RVA: 0x001CA400 File Offset: 0x001C8600
+		// (get) Token: 0x06004794 RID: 18324 RVA: 0x001E9644 File Offset: 0x001E7844
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,31 +16,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004297 RID: 17047 RVA: 0x001CA40D File Offset: 0x001C860D
+		// Token: 0x06004795 RID: 18325 RVA: 0x001E9651 File Offset: 0x001E7851
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004298 RID: 17048 RVA: 0x001CA414 File Offset: 0x001C8614
+		// Token: 0x06004796 RID: 18326 RVA: 0x001E9658 File Offset: 0x001E7858
 		public static AchievementStarLevel GetRootAsAchievementStarLevel(ByteBuffer _bb)
 		{
 			return AchievementStarLevel.GetRootAsAchievementStarLevel(_bb, default(AchievementStarLevel));
 		}
 
-		// Token: 0x06004299 RID: 17049 RVA: 0x001CA430 File Offset: 0x001C8630
+		// Token: 0x06004797 RID: 18327 RVA: 0x001E9674 File Offset: 0x001E7874
 		public static AchievementStarLevel GetRootAsAchievementStarLevel(ByteBuffer _bb, AchievementStarLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600429A RID: 17050 RVA: 0x001CA44D File Offset: 0x001C864D
+		// Token: 0x06004798 RID: 18328 RVA: 0x001E9691 File Offset: 0x001E7891
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600429B RID: 17051 RVA: 0x001CA45C File Offset: 0x001C865C
+		// Token: 0x06004799 RID: 18329 RVA: 0x001E96A0 File Offset: 0x001E78A0
 		public AchievementStarLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -48,7 +48,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000FA RID: 250
-		// (get) Token: 0x0600429C RID: 17052 RVA: 0x001CA46C File Offset: 0x001C866C
+		// (get) Token: 0x0600479A RID: 18330 RVA: 0x001E96B0 File Offset: 0x001E78B0
 		public int Level
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000FB RID: 251
-		// (get) Token: 0x0600429D RID: 17053 RVA: 0x001CA4A8 File Offset: 0x001C86A8
+		// (get) Token: 0x0600479B RID: 18331 RVA: 0x001E96EC File Offset: 0x001E78EC
 		public int DropId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004A99 RID: 19097
+		// Token: 0x0400506C RID: 20588
 		private Table __p;
 	}
 }

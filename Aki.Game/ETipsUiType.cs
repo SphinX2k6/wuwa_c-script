@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018E7 RID: 6375
+// Token: 0x02000DA0 RID: 3488
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct ETipsUiType : IEquatable<ETipsUiType>
 {
-	// Token: 0x0600BAC5 RID: 47813 RVA: 0x002A4D5A File Offset: 0x002A2F5A
+	// Token: 0x06008EAE RID: 36526 RVA: 0x002AF4BB File Offset: 0x002AD6BB
 	private ETipsUiType(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x0600BAC6 RID: 47814 RVA: 0x002A4D63 File Offset: 0x002A2F63
+	// Token: 0x06008EAF RID: 36527 RVA: 0x002AF4C4 File Offset: 0x002AD6C4
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x0600BAC7 RID: 47815 RVA: 0x002A4D6B File Offset: 0x002A2F6B
+	// Token: 0x06008EB0 RID: 36528 RVA: 0x002AF4CC File Offset: 0x002AD6CC
 	public bool Equals(ETipsUiType other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x0600BAC8 RID: 47816 RVA: 0x002A4D80 File Offset: 0x002A2F80
+	// Token: 0x06008EB1 RID: 36529 RVA: 0x002AF4E0 File Offset: 0x002AD6E0
 	public override bool Equals(object obj)
 	{
 		if (obj is ETipsUiType)
@@ -35,7 +35,7 @@ public readonly struct ETipsUiType : IEquatable<ETipsUiType>
 		return false;
 	}
 
-	// Token: 0x0600BAC9 RID: 47817 RVA: 0x002A4DA5 File Offset: 0x002A2FA5
+	// Token: 0x06008EB2 RID: 36530 RVA: 0x002AF505 File Offset: 0x002AD705
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -46,66 +46,66 @@ public readonly struct ETipsUiType : IEquatable<ETipsUiType>
 		return value.GetHashCode();
 	}
 
-	// Token: 0x0600BACA RID: 47818 RVA: 0x002A4DB8 File Offset: 0x002A2FB8
+	// Token: 0x06008EB3 RID: 36531 RVA: 0x002AF518 File Offset: 0x002AD718
 	public static bool operator ==(ETipsUiType left, ETipsUiType right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x0600BACB RID: 47819 RVA: 0x002A4DC2 File Offset: 0x002A2FC2
+	// Token: 0x06008EB4 RID: 36532 RVA: 0x002AF522 File Offset: 0x002AD722
 	public static bool operator !=(ETipsUiType left, ETipsUiType right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x040054D2 RID: 21714
+	// Token: 0x0400557D RID: 21885
 	private readonly string _Value;
 
-	// Token: 0x040054D3 RID: 21715
+	// Token: 0x0400557E RID: 21886
 	public const string ItemTipsComponentValue = "ItemTipsComponent";
 
-	// Token: 0x040054D4 RID: 21716
+	// Token: 0x0400557F RID: 21887
 	public static readonly ETipsUiType ItemTipsComponent = new ETipsUiType("ItemTipsComponent");
 
-	// Token: 0x040054D5 RID: 21717
+	// Token: 0x04005580 RID: 21888
 	public const string PowerTipsItemValue = "PowerTipsItem";
 
-	// Token: 0x040054D6 RID: 21718
+	// Token: 0x04005581 RID: 21889
 	public static readonly ETipsUiType PowerTipsItem = new ETipsUiType("PowerTipsItem");
 
-	// Token: 0x040054D7 RID: 21719
+	// Token: 0x04005582 RID: 21890
 	public const string PersonalCardPreviewComponentValue = "PersonalCardPreviewComponent";
 
-	// Token: 0x040054D8 RID: 21720
+	// Token: 0x04005583 RID: 21891
 	public static readonly ETipsUiType PersonalCardPreviewComponent = new ETipsUiType("PersonalCardPreviewComponent");
 
-	// Token: 0x040054D9 RID: 21721
+	// Token: 0x04005584 RID: 21892
 	public const string PersonalHeadPreviewComponentValue = "PersonalHeadPreviewComponent";
 
-	// Token: 0x040054DA RID: 21722
+	// Token: 0x04005585 RID: 21893
 	public static readonly ETipsUiType PersonalHeadPreviewComponent = new ETipsUiType("PersonalHeadPreviewComponent");
 
-	// Token: 0x040054DB RID: 21723
+	// Token: 0x04005586 RID: 21894
 	public const string PersonalTitlePreviewComponentValue = "PersonalTitlePreviewComponent";
 
-	// Token: 0x040054DC RID: 21724
+	// Token: 0x04005587 RID: 21895
 	public static readonly ETipsUiType PersonalTitlePreviewComponent = new ETipsUiType("PersonalTitlePreviewComponent");
 
-	// Token: 0x040054DD RID: 21725
+	// Token: 0x04005588 RID: 21896
 	public const string HonamiStoryTipsItemValue = "HonamiStoryTipsItem";
 
-	// Token: 0x040054DE RID: 21726
+	// Token: 0x04005589 RID: 21897
 	public static readonly ETipsUiType HonamiStoryTipsItem = new ETipsUiType("HonamiStoryTipsItem");
 
-	// Token: 0x040054DF RID: 21727
+	// Token: 0x0400558A RID: 21898
 	public const string FurnitureTipsItemValue = "FurnitureTipsItem";
 
-	// Token: 0x040054E0 RID: 21728
+	// Token: 0x0400558B RID: 21899
 	public static readonly ETipsUiType FurnitureTipsItem = new ETipsUiType("FurnitureTipsItem");
 
-	// Token: 0x040054E1 RID: 21729
+	// Token: 0x0400558C RID: 21900
 	public const string PinballTipsItemValue = "PinballTipsItem";
 
-	// Token: 0x040054E2 RID: 21730
+	// Token: 0x0400558D RID: 21901
 	public static readonly ETipsUiType PinballTipsItem = new ETipsUiType("PinballTipsItem");
 }

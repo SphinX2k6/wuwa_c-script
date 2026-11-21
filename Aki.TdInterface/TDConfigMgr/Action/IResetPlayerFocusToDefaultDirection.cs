@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DA8 RID: 7592
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FBF RID: 8127
 	public class IResetPlayerFocusToDefaultDirection : IResetPlayerFocusType
 	{
-		// Token: 0x0600A2B1 RID: 41649 RVA: 0x00171E2C File Offset: 0x0017002C
+		// Token: 0x0600ACBB RID: 44219 RVA: 0x00186554 File Offset: 0x00184754
 		private IResetPlayerFocusToDefaultDirection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2B2 RID: 41650 RVA: 0x00171E64 File Offset: 0x00170064
+		// Token: 0x0600ACBC RID: 44220 RVA: 0x0018658C File Offset: 0x0018478C
 		public static IResetPlayerFocusToDefaultDirection Create([Nullable(2)] IResetPlayerFocusToDefaultDirection instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2B3 RID: 41651 RVA: 0x00171E77 File Offset: 0x00170077
+		// Token: 0x0600ACBD RID: 44221 RVA: 0x0018659F File Offset: 0x0018479F
 		public static IResetPlayerFocusToDefaultDirection CreateFromSetValue([Nullable(2)] IResetPlayerFocusToDefaultDirection_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2B4 RID: 41652 RVA: 0x00171E8A File Offset: 0x0017008A
+		// Token: 0x0600ACBE RID: 44222 RVA: 0x001865B2 File Offset: 0x001847B2
 		public new IResetPlayerFocusToDefaultDirection_SetValue ToSetValue()
 		{
 			return new IResetPlayerFocusToDefaultDirection_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003233 RID: 12851
-		// (get) Token: 0x0600A2B5 RID: 41653 RVA: 0x00171E9D File Offset: 0x0017009D
-		// (set) Token: 0x0600A2B6 RID: 41654 RVA: 0x00171EC8 File Offset: 0x001700C8
+		// Token: 0x170034CD RID: 13517
+		// (get) Token: 0x0600ACBF RID: 44223 RVA: 0x001865C5 File Offset: 0x001847C5
+		// (set) Token: 0x0600ACC0 RID: 44224 RVA: 0x001865F0 File Offset: 0x001847F0
 		public override EResetPlayerFocusType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061AE RID: 25006
+		// Token: 0x04006736 RID: 26422
 		[Nullable(2)]
 		protected new IResetPlayerFocusToDefaultDirection FbInstance;
 
-		// Token: 0x040061AF RID: 25007
+		// Token: 0x04006737 RID: 26423
 		[Nullable(2)]
 		protected new IResetPlayerFocusToDefaultDirection_SetValue PocoInterface;
 	}

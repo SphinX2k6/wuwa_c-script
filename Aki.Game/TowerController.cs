@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,13 +14,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002BD0 RID: 11216
+// Token: 0x0200214B RID: 8523
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class TowerController : ControllerBase
 {
-	// Token: 0x060174AD RID: 95405 RVA: 0x005EBAFD File Offset: 0x005E9CFD
+	// Token: 0x06014EDE RID: 85726 RVA: 0x00618695 File Offset: 0x00616895
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -29,7 +28,7 @@ public class TowerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060174AE RID: 95406 RVA: 0x005EBB0C File Offset: 0x005E9D0C
+	// Token: 0x06014EDF RID: 85727 RVA: 0x006186A4 File Offset: 0x006168A4
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -37,21 +36,21 @@ public class TowerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060174AF RID: 95407 RVA: 0x005EBB1B File Offset: 0x005E9D1B
+	// Token: 0x06014EE0 RID: 85728 RVA: 0x006186B3 File Offset: 0x006168B3
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.WorldDone));
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate));
 	}
 
-	// Token: 0x060174B0 RID: 95408 RVA: 0x005EBB55 File Offset: 0x005E9D55
+	// Token: 0x06014EE1 RID: 85729 RVA: 0x006186ED File Offset: 0x006168ED
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.WorldDone));
 		EventSystem.Instance.Remove(EEventName.OnFunctionOpenUpdate, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate));
 	}
 
-	// Token: 0x060174B1 RID: 95409 RVA: 0x005EBB90 File Offset: 0x005E9D90
+	// Token: 0x06014EE2 RID: 85730 RVA: 0x00618728 File Offset: 0x00616928
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TowerInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.TowerInfoUpdateNotify));
@@ -60,7 +59,7 @@ public class TowerController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.TowerEndNotify, new Action<IMessage, Net.CallbackStatus>(this.TowerEndNotify));
 	}
 
-	// Token: 0x060174B2 RID: 95410 RVA: 0x005EBC10 File Offset: 0x005E9E10
+	// Token: 0x06014EE3 RID: 85731 RVA: 0x006187A8 File Offset: 0x006169A8
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TowerInfoUpdateNotify);
@@ -69,7 +68,7 @@ public class TowerController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.TowerEndNotify);
 	}
 
-	// Token: 0x060174B3 RID: 95411 RVA: 0x005EBC5D File Offset: 0x005E9E5D
+	// Token: 0x06014EE4 RID: 85732 RVA: 0x006187F5 File Offset: 0x006169F5
 	private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 	{
 		if (functionType != EFunctionType.NewTower)
@@ -83,7 +82,7 @@ public class TowerController : ControllerBase
 		this.TowerRequest();
 	}
 
-	// Token: 0x060174B4 RID: 95412 RVA: 0x005EBC74 File Offset: 0x005E9E74
+	// Token: 0x06014EE5 RID: 85733 RVA: 0x0061880C File Offset: 0x00616A0C
 	private void WorldDone()
 	{
 		TowerModel.Instance.IsWaitTowerStart = false;
@@ -94,18 +93,9 @@ public class TowerController : ControllerBase
 			TowerConfig? towerInfo = TowerClimbConfig.Instance.GetTowerInfo(TowerModel.Instance.NeedOpenConfirmViewTowerId);
 			UiManager.Instance.OpenView(EUiViewName.TowerFloorView, towerInfo.Value.AreaNum, null);
 		}
-		if (TowerModel.Instance.CheckInTower())
-		{
-			UiTimeDilation.Instance.AddWaitSetTimeDilationTag("TowerGuide");
-			TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
-			{
-				TowerController.Instance.OpenTowerGuide();
-				EventSystem.Instance.Emit(EEventName.OnShowTowerGuideButton);
-			}, (float)TowerModel.Instance.TowerGuideDelayTime, null, null, true, 1f);
-		}
 	}
 
-	// Token: 0x060174B5 RID: 95413 RVA: 0x005EBD3C File Offset: 0x005E9F3C
+	// Token: 0x06014EE6 RID: 85734 RVA: 0x0061887C File Offset: 0x00616A7C
 	[NullableContext(0)]
 	public UniTask<bool> RefreshTower(int timeoutMs = 0)
 	{
@@ -117,7 +107,7 @@ public class TowerController : ControllerBase
 		return <RefreshTower>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060174B6 RID: 95414 RVA: 0x005EBD80 File Offset: 0x005E9F80
+	// Token: 0x06014EE7 RID: 85735 RVA: 0x006188C0 File Offset: 0x00616AC0
 	[NullableContext(1)]
 	public UniTask TowerStartRequest(int towerConfigId, List<int> formation, bool checkCost = true)
 	{
@@ -131,7 +121,7 @@ public class TowerController : ControllerBase
 		return <TowerStartRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060174B7 RID: 95415 RVA: 0x005EBDD4 File Offset: 0x005E9FD4
+	// Token: 0x06014EE8 RID: 85736 RVA: 0x00618914 File Offset: 0x00616B14
 	public void TowerResetRequest(int towerConfigId)
 	{
 		TowerResetRequest towerResetRequest = Aki.Protocol.TowerResetRequest.Create();
@@ -152,12 +142,12 @@ public class TowerController : ControllerBase
 			}
 			if (towerResetResponse != null)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(towerResetResponse.ErrorCode, 22328, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(towerResetResponse.ErrorCode, 26793, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060174B8 RID: 95416 RVA: 0x005EBE20 File Offset: 0x005EA020
+	// Token: 0x06014EE9 RID: 85737 RVA: 0x00618960 File Offset: 0x00616B60
 	[NullableContext(1)]
 	public void TowerRewardRequest(int difficulty, int rewardIndex, List<int> rewardIndexList)
 	{
@@ -183,12 +173,12 @@ public class TowerController : ControllerBase
 			}
 			if (towerRewardResponse != null)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(towerRewardResponse.ErrorCode, 20230, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(towerRewardResponse.ErrorCode, 16113, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060174B9 RID: 95417 RVA: 0x005EBE7C File Offset: 0x005EA07C
+	// Token: 0x06014EEA RID: 85738 RVA: 0x006189BC File Offset: 0x00616BBC
 	public UniTask TowerFormationRecommendRequest(int towerConfigId)
 	{
 		TowerController.<TowerFormationRecommendRequest>d__14 <TowerFormationRecommendRequest>d__;
@@ -199,7 +189,7 @@ public class TowerController : ControllerBase
 		return <TowerFormationRecommendRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060174BA RID: 95418 RVA: 0x005EBEC0 File Offset: 0x005EA0C0
+	// Token: 0x06014EEB RID: 85739 RVA: 0x00618A00 File Offset: 0x00616C00
 	public void TowerApplyFloorDataRequest(bool apply)
 	{
 		TowerApplyFloorDataRequest towerApplyFloorDataRequest = Aki.Protocol.TowerApplyFloorDataRequest.Create();
@@ -219,12 +209,12 @@ public class TowerController : ControllerBase
 			}
 			if (towerApplyFloorDataResponse != null)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(towerApplyFloorDataResponse.ErrorCode, 29629, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(towerApplyFloorDataResponse.ErrorCode, 18513, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060174BB RID: 95419 RVA: 0x005EBF0C File Offset: 0x005EA10C
+	// Token: 0x06014EEC RID: 85740 RVA: 0x00618A4C File Offset: 0x00616C4C
 	private void TowerInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		TowerInfoUpdateNotify towerInfoUpdateNotify = (TowerInfoUpdateNotify)msg;
@@ -234,14 +224,14 @@ public class TowerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060174BC RID: 95420 RVA: 0x005EBF38 File Offset: 0x005EA138
+	// Token: 0x06014EED RID: 85741 RVA: 0x00618A78 File Offset: 0x00616C78
 	private void TowerFloorUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		TowerFloorUpdateNotify towerFloorUpdateNotify = (TowerFloorUpdateNotify)msg;
 		TowerModel.Instance.RefreshTowerInfoByFloor(towerFloorUpdateNotify.TowerFloors);
 	}
 
-	// Token: 0x060174BD RID: 95421 RVA: 0x005EBF5C File Offset: 0x005EA15C
+	// Token: 0x06014EEE RID: 85742 RVA: 0x00618A9C File Offset: 0x00616C9C
 	private void TowerDifficultyUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		TowerDifficultyUpdateNotify towerDifficultyUpdateNotify = (TowerDifficultyUpdateNotify)msg;
@@ -249,7 +239,7 @@ public class TowerController : ControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, 100300002);
 	}
 
-	// Token: 0x060174BE RID: 95422 RVA: 0x005EBF98 File Offset: 0x005EA198
+	// Token: 0x06014EEF RID: 85743 RVA: 0x00618AD8 File Offset: 0x00616CD8
 	private void TowerEndNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		TowerEndNotify towerEndNotify = (TowerEndNotify)msg;
@@ -269,7 +259,7 @@ public class TowerController : ControllerBase
 			TowerFloorPb currentFloorData = towerEndNotify.CurrentFloorData;
 			if (currentFloorData != null)
 			{
-				TowerModel.Instance.CurrentNotConfirmedFloor = new TowerFloorInfo(currentFloorData.TowerConfigId, currentFloorData.Star, currentFloorData.Formation.ToList<TowerRolePb>(), currentFloorData.StarIndex.ToList<int>(), currentFloorData.IsQuickPass);
+				TowerModel.Instance.CurrentNotConfirmedFloor = new TowerFloorInfo(currentFloorData.TowerConfigId, currentFloorData.Star, new List<TowerRolePb>(currentFloorData.Formation), new List<int>(currentFloorData.StarIndex), currentFloorData.IsQuickPass);
 			}
 		}
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("TowerGuide");
@@ -277,7 +267,7 @@ public class TowerController : ControllerBase
 		TowerController.Instance.OpenTowerSettlementView(towerEndNotify.Success);
 	}
 
-	// Token: 0x060174BF RID: 95423 RVA: 0x005EC060 File Offset: 0x005EA260
+	// Token: 0x06014EF0 RID: 85744 RVA: 0x00618BA0 File Offset: 0x00616DA0
 	private void TowerRequest()
 	{
 		TowerRequest message = Aki.Protocol.TowerRequest.Create();
@@ -292,7 +282,7 @@ public class TowerController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060174C0 RID: 95424 RVA: 0x005EC0A4 File Offset: 0x005EA2A4
+	// Token: 0x06014EF1 RID: 85745 RVA: 0x00618BE4 File Offset: 0x00616DE4
 	public unsafe void OpenTowerSettlementView(bool isSuccess)
 	{
 		TowerController.<>c__DisplayClass21_0 CS$<>8__locals1 = new TowerController.<>c__DisplayClass21_0();
@@ -410,7 +400,7 @@ public class TowerController : ControllerBase
 							bool isReached = starIndex.Contains(j);
 							RewardExploreTargetReachedData item = new RewardExploreTargetReachedData
 							{
-								Target = list2.ToList<string>(),
+								Target = list2,
 								DescriptionTextId = targetConfig.Value.DesText,
 								IsReached = isReached
 							};
@@ -445,7 +435,7 @@ public class TowerController : ControllerBase
 		}, (float)TowerModel.Instance.TowerSettlementDelayTime, null, null, true, 1f);
 	}
 
-	// Token: 0x060174C1 RID: 95425 RVA: 0x005EC568 File Offset: 0x005EA768
+	// Token: 0x06014EF2 RID: 85746 RVA: 0x006190A4 File Offset: 0x006172A4
 	private void CloseTowerView()
 	{
 		UiManager.Instance.ResetToBattleView(delegate(bool _)
@@ -457,7 +447,7 @@ public class TowerController : ControllerBase
 		});
 	}
 
-	// Token: 0x060174C2 RID: 95426 RVA: 0x005EC594 File Offset: 0x005EA794
+	// Token: 0x06014EF3 RID: 85747 RVA: 0x006190D0 File Offset: 0x006172D0
 	public UniTask LeaveTower()
 	{
 		TowerController.<LeaveTower>d__23 <LeaveTower>d__;
@@ -467,20 +457,20 @@ public class TowerController : ControllerBase
 		return <LeaveTower>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060174C3 RID: 95427 RVA: 0x005EC5D0 File Offset: 0x005EA7D0
+	// Token: 0x06014EF4 RID: 85748 RVA: 0x0061910C File Offset: 0x0061730C
 	private void OpenTowerFormation(int? nextFloor = null)
 	{
 		TowerModel.Instance.OpenTowerFormationView(nextFloor ?? TowerModel.Instance.CurrentTowerId);
 	}
 
-	// Token: 0x060174C4 RID: 95428 RVA: 0x005EC605 File Offset: 0x005EA805
+	// Token: 0x06014EF5 RID: 85749 RVA: 0x00619141 File Offset: 0x00617341
 	public void ReChallengeTower()
 	{
 		TowerModel.Instance.IsWaitTowerStart = true;
 		TowerController.Instance.TowerStartRequest(TowerModel.Instance.CurrentTowerId, TowerModel.Instance.CurrentTowerFormation, false);
 	}
 
-	// Token: 0x060174C5 RID: 95429 RVA: 0x005EC634 File Offset: 0x005EA834
+	// Token: 0x06014EF6 RID: 85750 RVA: 0x00619170 File Offset: 0x00617370
 	private void ConfirmResult(bool isFormLeave, bool isSuccess)
 	{
 		if (isSuccess)
@@ -498,7 +488,7 @@ public class TowerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060174C6 RID: 95430 RVA: 0x005EC694 File Offset: 0x005EA894
+	// Token: 0x06014EF7 RID: 85751 RVA: 0x006191D0 File Offset: 0x006173D0
 	public void BackToTowerView(Action callBack = null)
 	{
 		TowerController.Instance.OpenTowerView(true).ContinueWith(delegate(bool _)
@@ -512,7 +502,7 @@ public class TowerController : ControllerBase
 		});
 	}
 
-	// Token: 0x060174C7 RID: 95431 RVA: 0x005EC6CC File Offset: 0x005EA8CC
+	// Token: 0x06014EF8 RID: 85752 RVA: 0x00619208 File Offset: 0x00617408
 	[NullableContext(0)]
 	public UniTask<bool> OpenTowerView(bool openCurrentFloor = false)
 	{
@@ -524,7 +514,7 @@ public class TowerController : ControllerBase
 		return <OpenTowerView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060174C8 RID: 95432 RVA: 0x005EC710 File Offset: 0x005EA910
+	// Token: 0x06014EF9 RID: 85753 RVA: 0x0061924C File Offset: 0x0061744C
 	[NullableContext(0)]
 	private UniTask<bool> OpenTowerViewInternal(bool openCurrentFloor = false)
 	{
@@ -536,7 +526,7 @@ public class TowerController : ControllerBase
 		return <OpenTowerViewInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060174C9 RID: 95433 RVA: 0x005EC754 File Offset: 0x005EA954
+	// Token: 0x06014EFA RID: 85754 RVA: 0x00619290 File Offset: 0x00617490
 	public void OpenSeasonUpdateConfirm()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CycleTowerSeasonRefresh);
@@ -549,13 +539,13 @@ public class TowerController : ControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060174CA RID: 95434 RVA: 0x005EC7AF File Offset: 0x005EA9AF
+	// Token: 0x06014EFB RID: 85755 RVA: 0x006192EB File Offset: 0x006174EB
 	public void OpenTowerGuide()
 	{
 		UiManager.Instance.OpenView(EUiViewName.TowerGuideView, null, null);
 	}
 
-	// Token: 0x060174CB RID: 95435 RVA: 0x005EC7C4 File Offset: 0x005EA9C4
+	// Token: 0x06014EFC RID: 85756 RVA: 0x00619300 File Offset: 0x00617500
 	public void ClearAllHatredInTower()
 	{
 		foreach (int id in FormationDataModel.Instance.PlayerAggroSet)
@@ -580,8 +570,8 @@ public class TowerController : ControllerBase
 		}
 	}
 
-	// Token: 0x17001F65 RID: 8037
-	// (get) Token: 0x060174CC RID: 95436 RVA: 0x005EC84C File Offset: 0x005EAA4C
+	// Token: 0x17001FBD RID: 8125
+	// (get) Token: 0x06014EFD RID: 85757 RVA: 0x00619388 File Offset: 0x00617588
 	[Nullable(1)]
 	public static TowerController Instance
 	{
@@ -592,7 +582,7 @@ public class TowerController : ControllerBase
 		}
 	}
 
-	// Token: 0x060174CD RID: 95437 RVA: 0x005EC853 File Offset: 0x005EAA53
+	// Token: 0x06014EFE RID: 85758 RVA: 0x0061938F File Offset: 0x0061758F
 	[NullableContext(1)]
 	public static TowerController GetOrCreateInstance()
 	{
@@ -603,7 +593,7 @@ public class TowerController : ControllerBase
 		return TowerController._Instance;
 	}
 
-	// Token: 0x060174CE RID: 95438 RVA: 0x005EC867 File Offset: 0x005EAA67
+	// Token: 0x06014EFF RID: 85759 RVA: 0x006193A3 File Offset: 0x006175A3
 	public static bool CreateInstance()
 	{
 		if (TowerController._Instance != null)
@@ -614,29 +604,29 @@ public class TowerController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060174CF RID: 95439 RVA: 0x005EC87D File Offset: 0x005EAA7D
+	// Token: 0x06014F00 RID: 85760 RVA: 0x006193B9 File Offset: 0x006175B9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060174D0 RID: 95440 RVA: 0x005EC87F File Offset: 0x005EAA7F
+	// Token: 0x06014F01 RID: 85761 RVA: 0x006193BB File Offset: 0x006175BB
 	public static void ResetStaticDefaultValue()
 	{
 		TowerController._Instance = null;
 	}
 
-	// Token: 0x060174D1 RID: 95441 RVA: 0x005EC887 File Offset: 0x005EAA87
+	// Token: 0x06014F02 RID: 85762 RVA: 0x006193C3 File Offset: 0x006175C3
 	static TowerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TowerController.CreateStaticDefaultValue), new Action(TowerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AE4A RID: 44618
+	// Token: 0x0400B24F RID: 45647
 	private const int TOWER_SUCCESS_NO_REWARD = 3008;
 
-	// Token: 0x0400AE4B RID: 44619
+	// Token: 0x0400B250 RID: 45648
 	private const int TOWER_FAIL = 3009;
 
-	// Token: 0x0400AE4C RID: 44620
+	// Token: 0x0400B251 RID: 45649
 	private static TowerController _Instance;
 }

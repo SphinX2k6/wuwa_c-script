@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E7 RID: 487
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000210 RID: 528
 	public class IBaseShapeElementalRange : IElementalRangeTypeBase
 	{
-		// Token: 0x060007DE RID: 2014 RVA: 0x00025B08 File Offset: 0x00023D08
+		// Token: 0x0600085E RID: 2142 RVA: 0x0002745C File Offset: 0x0002565C
 		private IBaseShapeElementalRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007DF RID: 2015 RVA: 0x00025B40 File Offset: 0x00023D40
+		// Token: 0x0600085F RID: 2143 RVA: 0x00027494 File Offset: 0x00025694
 		public static IBaseShapeElementalRange Create([Nullable(2)] IBaseShapeElementalRange instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007E0 RID: 2016 RVA: 0x00025B53 File Offset: 0x00023D53
+		// Token: 0x06000860 RID: 2144 RVA: 0x000274A7 File Offset: 0x000256A7
 		public static IBaseShapeElementalRange CreateFromSetValue([Nullable(2)] IBaseShapeElementalRange_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007E1 RID: 2017 RVA: 0x00025B66 File Offset: 0x00023D66
+		// Token: 0x06000861 RID: 2145 RVA: 0x000274BA File Offset: 0x000256BA
 		public new IBaseShapeElementalRange_SetValue ToSetValue()
 		{
 			return new IBaseShapeElementalRange_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000272 RID: 626
-		// (get) Token: 0x060007E2 RID: 2018 RVA: 0x00025B85 File Offset: 0x00023D85
-		// (set) Token: 0x060007E3 RID: 2019 RVA: 0x00025BB0 File Offset: 0x00023DB0
+		// Token: 0x17000294 RID: 660
+		// (get) Token: 0x06000862 RID: 2146 RVA: 0x000274D9 File Offset: 0x000256D9
+		// (set) Token: 0x06000863 RID: 2147 RVA: 0x00027504 File Offset: 0x00025704
 		public override EElementalRangeType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000273 RID: 627
-		// (get) Token: 0x060007E4 RID: 2020 RVA: 0x00025BBE File Offset: 0x00023DBE
-		// (set) Token: 0x060007E5 RID: 2021 RVA: 0x00025BE5 File Offset: 0x00023DE5
+		// Token: 0x17000295 RID: 661
+		// (get) Token: 0x06000864 RID: 2148 RVA: 0x00027512 File Offset: 0x00025712
+		// (set) Token: 0x06000865 RID: 2149 RVA: 0x00027539 File Offset: 0x00025739
 		public virtual ITriggerShape Shape
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008D6 RID: 2262
+		// Token: 0x04000967 RID: 2407
 		[Nullable(2)]
 		protected new IBaseShapeElementalRange FbInstance;
 
-		// Token: 0x040008D7 RID: 2263
+		// Token: 0x04000968 RID: 2408
 		[Nullable(2)]
 		protected new IBaseShapeElementalRange_SetValue PocoInterface;
 	}

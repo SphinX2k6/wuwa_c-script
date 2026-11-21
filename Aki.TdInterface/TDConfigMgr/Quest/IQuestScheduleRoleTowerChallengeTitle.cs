@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010AF RID: 4271
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011DD RID: 4573
 	public class IQuestScheduleRoleTowerChallengeTitle : IQuestScheduleType
 	{
-		// Token: 0x0600605C RID: 24668 RVA: 0x000E9054 File Offset: 0x000E7254
+		// Token: 0x06006655 RID: 26197 RVA: 0x000F6174 File Offset: 0x000F4374
 		private IQuestScheduleRoleTowerChallengeTitle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600605D RID: 24669 RVA: 0x000E908C File Offset: 0x000E728C
+		// Token: 0x06006656 RID: 26198 RVA: 0x000F61AC File Offset: 0x000F43AC
 		public static IQuestScheduleRoleTowerChallengeTitle Create([Nullable(2)] IQuestScheduleRoleTowerChallengeTitle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600605E RID: 24670 RVA: 0x000E909F File Offset: 0x000E729F
+		// Token: 0x06006657 RID: 26199 RVA: 0x000F61BF File Offset: 0x000F43BF
 		public static IQuestScheduleRoleTowerChallengeTitle CreateFromSetValue([Nullable(2)] IQuestScheduleRoleTowerChallengeTitle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600605F RID: 24671 RVA: 0x000E90B2 File Offset: 0x000E72B2
+		// Token: 0x06006658 RID: 26200 RVA: 0x000F61D2 File Offset: 0x000F43D2
 		public new IQuestScheduleRoleTowerChallengeTitle_SetValue ToSetValue()
 		{
 			return new IQuestScheduleRoleTowerChallengeTitle_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FAB RID: 8107
-		// (get) Token: 0x06006060 RID: 24672 RVA: 0x000E90D1 File Offset: 0x000E72D1
-		// (set) Token: 0x06006061 RID: 24673 RVA: 0x000E90FC File Offset: 0x000E72FC
+		// Token: 0x1700215D RID: 8541
+		// (get) Token: 0x06006659 RID: 26201 RVA: 0x000F61F1 File Offset: 0x000F43F1
+		// (set) Token: 0x0600665A RID: 26202 RVA: 0x000F621C File Offset: 0x000F441C
 		public override EQuestScheduleType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FAC RID: 8108
-		// (get) Token: 0x06006062 RID: 24674 RVA: 0x000E910A File Offset: 0x000E730A
-		// (set) Token: 0x06006063 RID: 24675 RVA: 0x000E9131 File Offset: 0x000E7331
+		// Token: 0x1700215E RID: 8542
+		// (get) Token: 0x0600665B RID: 26203 RVA: 0x000F622A File Offset: 0x000F442A
+		// (set) Token: 0x0600665C RID: 26204 RVA: 0x000F6251 File Offset: 0x000F4451
 		public virtual IRoleTowerChallengeTitleTypeBase TitleType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A14 RID: 14868
+		// Token: 0x04003D61 RID: 15713
 		[Nullable(2)]
 		protected new IQuestScheduleRoleTowerChallengeTitle FbInstance;
 
-		// Token: 0x04003A15 RID: 14869
+		// Token: 0x04003D62 RID: 15714
 		[Nullable(2)]
 		protected new IQuestScheduleRoleTowerChallengeTitle_SetValue PocoInterface;
 	}

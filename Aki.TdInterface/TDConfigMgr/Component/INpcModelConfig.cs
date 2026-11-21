@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000562 RID: 1378
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005C9 RID: 1481
 	public class INpcModelConfig
 	{
-		// Token: 0x06001C3C RID: 7228 RVA: 0x00050EC8 File Offset: 0x0004F0C8
+		// Token: 0x06001E38 RID: 7736 RVA: 0x00055C84 File Offset: 0x00053E84
 		private INpcModelConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C3D RID: 7229 RVA: 0x00050F00 File Offset: 0x0004F100
+		// Token: 0x06001E39 RID: 7737 RVA: 0x00055CBC File Offset: 0x00053EBC
 		public static INpcModelConfig Create([Nullable(2)] INpcModelConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C3E RID: 7230 RVA: 0x00050F13 File Offset: 0x0004F113
+		// Token: 0x06001E3A RID: 7738 RVA: 0x00055CCF File Offset: 0x00053ECF
 		public static INpcModelConfig CreateFromSetValue([Nullable(2)] INpcModelConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C3F RID: 7231 RVA: 0x00050F26 File Offset: 0x0004F126
+		// Token: 0x06001E3B RID: 7739 RVA: 0x00055CE2 File Offset: 0x00053EE2
 		public INpcModelConfig_SetValue ToSetValue()
 		{
 			return new INpcModelConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700076A RID: 1898
-		// (get) Token: 0x06001C40 RID: 7232 RVA: 0x00050F39 File Offset: 0x0004F139
-		// (set) Token: 0x06001C41 RID: 7233 RVA: 0x00050F64 File Offset: 0x0004F164
+		// Token: 0x170007ED RID: 2029
+		// (get) Token: 0x06001E3C RID: 7740 RVA: 0x00055CF5 File Offset: 0x00053EF5
+		// (set) Token: 0x06001E3D RID: 7741 RVA: 0x00055D20 File Offset: 0x00053F20
 		public virtual ENpcModelType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400142E RID: 5166
+		// Token: 0x04001598 RID: 5528
 		[Nullable(2)]
 		protected INpcModelConfig FbInstance;
 
-		// Token: 0x0400142F RID: 5167
+		// Token: 0x04001599 RID: 5529
 		[Nullable(2)]
 		protected INpcModelConfig_SetValue PocoInterface;
 	}

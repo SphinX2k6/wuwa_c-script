@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B50 RID: 23376
+	// Token: 0x02006166 RID: 24934
 	public struct IWaterElementalMatch : IFlatbufferObject
 	{
-		// Token: 0x1700B088 RID: 45192
-		// (get) Token: 0x06027FAB RID: 163755 RVA: 0x0057F429 File Offset: 0x0057D629
+		// Token: 0x1700B9D0 RID: 47568
+		// (get) Token: 0x0602A56F RID: 173423 RVA: 0x005C6EB9 File Offset: 0x005C50B9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027FAC RID: 163756 RVA: 0x0057F436 File Offset: 0x0057D636
+		// Token: 0x0602A570 RID: 173424 RVA: 0x005C6EC6 File Offset: 0x005C50C6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027FAD RID: 163757 RVA: 0x0057F440 File Offset: 0x0057D640
+		// Token: 0x0602A571 RID: 173425 RVA: 0x005C6ED0 File Offset: 0x005C50D0
 		public static IWaterElementalMatch GetRootAsIWaterElementalMatch(ByteBuffer _bb)
 		{
 			return IWaterElementalMatch.GetRootAsIWaterElementalMatch(_bb, default(IWaterElementalMatch));
 		}
 
-		// Token: 0x06027FAE RID: 163758 RVA: 0x0057F45C File Offset: 0x0057D65C
+		// Token: 0x0602A572 RID: 173426 RVA: 0x005C6EEC File Offset: 0x005C50EC
 		public static IWaterElementalMatch GetRootAsIWaterElementalMatch(ByteBuffer _bb, IWaterElementalMatch obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027FAF RID: 163759 RVA: 0x0057F479 File Offset: 0x0057D679
+		// Token: 0x0602A573 RID: 173427 RVA: 0x005C6F09 File Offset: 0x005C5109
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027FB0 RID: 163760 RVA: 0x0057F488 File Offset: 0x0057D688
+		// Token: 0x0602A574 RID: 173428 RVA: 0x005C6F18 File Offset: 0x005C5118
 		public IWaterElementalMatch __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B089 RID: 45193
-		// (get) Token: 0x06027FB1 RID: 163761 RVA: 0x0057F498 File Offset: 0x0057D698
+		// Token: 0x1700B9D1 RID: 47569
+		// (get) Token: 0x0602A575 RID: 173429 RVA: 0x005C6F28 File Offset: 0x005C5128
 		public EElementalType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B08A RID: 45194
-		// (get) Token: 0x06027FB2 RID: 163762 RVA: 0x0057F4D4 File Offset: 0x0057D6D4
+		// Token: 0x1700B9D2 RID: 47570
+		// (get) Token: 0x0602A576 RID: 173430 RVA: 0x005C6F64 File Offset: 0x005C5164
 		public bool CanStagnate
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B08B RID: 45195
-		// (get) Token: 0x06027FB3 RID: 163763 RVA: 0x0057F514 File Offset: 0x0057D714
+		// Token: 0x1700B9D3 RID: 47571
+		// (get) Token: 0x0602A577 RID: 173431 RVA: 0x005C6FA4 File Offset: 0x005C51A4
 		public IWaterStagnationActorConfig? StagnationActorConfig
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B08C RID: 45196
-		// (get) Token: 0x06027FB4 RID: 163764 RVA: 0x0057F574 File Offset: 0x0057D774
+		// Token: 0x1700B9D4 RID: 47572
+		// (get) Token: 0x0602A578 RID: 173432 RVA: 0x005C7004 File Offset: 0x005C5204
 		public float StagnationImmuneDurationAfterHit
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B08D RID: 45197
-		// (get) Token: 0x06027FB5 RID: 163765 RVA: 0x0057F5B8 File Offset: 0x0057D7B8
+		// Token: 0x1700B9D5 RID: 47573
+		// (get) Token: 0x0602A579 RID: 173433 RVA: 0x005C7048 File Offset: 0x005C5248
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027FB6 RID: 163766 RVA: 0x0057F5F5 File Offset: 0x0057D7F5
+		// Token: 0x0602A57A RID: 173434 RVA: 0x005C7085 File Offset: 0x005C5285
 		public static Offset<IWaterElementalMatch> CreateIWaterElementalMatch(FlatBufferBuilder builder, EElementalType Type = EElementalType.Fire, bool CanStagnate = false, Offset<IWaterStagnationActorConfig> StagnationActorConfigOffset = default(Offset<IWaterStagnationActorConfig>), float StagnationImmuneDurationAfterHit = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaterElementalMatch.EndIWaterElementalMatch(builder);
 		}
 
-		// Token: 0x06027FB7 RID: 163767 RVA: 0x0057F629 File Offset: 0x0057D829
+		// Token: 0x0602A57B RID: 173435 RVA: 0x005C70B9 File Offset: 0x005C52B9
 		public static void StartIWaterElementalMatch(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06027FB8 RID: 163768 RVA: 0x0057F632 File Offset: 0x0057D832
+		// Token: 0x0602A57C RID: 173436 RVA: 0x005C70C2 File Offset: 0x005C52C2
 		public static void AddType(FlatBufferBuilder builder, EElementalType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027FB9 RID: 163769 RVA: 0x0057F63D File Offset: 0x0057D83D
+		// Token: 0x0602A57D RID: 173437 RVA: 0x005C70CD File Offset: 0x005C52CD
 		public static void AddCanStagnate(FlatBufferBuilder builder, bool canStagnate)
 		{
 			builder.AddBool(1, canStagnate, false);
 		}
 
-		// Token: 0x06027FBA RID: 163770 RVA: 0x0057F648 File Offset: 0x0057D848
+		// Token: 0x0602A57E RID: 173438 RVA: 0x005C70D8 File Offset: 0x005C52D8
 		public static void AddStagnationActorConfig(FlatBufferBuilder builder, Offset<IWaterStagnationActorConfig> stagnationActorConfigOffset)
 		{
 			builder.AddOffset(2, stagnationActorConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06027FBB RID: 163771 RVA: 0x0057F658 File Offset: 0x0057D858
+		// Token: 0x0602A57F RID: 173439 RVA: 0x005C70E8 File Offset: 0x005C52E8
 		public static void AddStagnationImmuneDurationAfterHit(FlatBufferBuilder builder, float stagnationImmuneDurationAfterHit)
 		{
 			builder.AddFloat(3, stagnationImmuneDurationAfterHit, 0.0);
 		}
 
-		// Token: 0x06027FBC RID: 163772 RVA: 0x0057F66B File Offset: 0x0057D86B
+		// Token: 0x0602A580 RID: 173440 RVA: 0x005C70FB File Offset: 0x005C52FB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06027FBD RID: 163773 RVA: 0x0057F676 File Offset: 0x0057D876
+		// Token: 0x0602A581 RID: 173441 RVA: 0x005C7106 File Offset: 0x005C5306
 		public static Offset<IWaterElementalMatch> EndIWaterElementalMatch(FlatBufferBuilder builder)
 		{
 			return new Offset<IWaterElementalMatch>(builder.EndTable());
 		}
 
-		// Token: 0x06027FBE RID: 163774 RVA: 0x0057F684 File Offset: 0x0057D884
+		// Token: 0x0602A582 RID: 173442 RVA: 0x005C7114 File Offset: 0x005C5314
 		public IWaterElementalMatchT UnPack()
 		{
 			IWaterElementalMatchT waterElementalMatchT = new IWaterElementalMatchT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return waterElementalMatchT;
 		}
 
-		// Token: 0x06027FBF RID: 163775 RVA: 0x0057F6A0 File Offset: 0x0057D8A0
+		// Token: 0x0602A583 RID: 173443 RVA: 0x005C7130 File Offset: 0x005C5330
 		public void UnPackTo(IWaterElementalMatchT _o)
 		{
 			_o.Type = this.Type;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027FC0 RID: 163776 RVA: 0x0057F70C File Offset: 0x0057D90C
+		// Token: 0x0602A584 RID: 173444 RVA: 0x005C719C File Offset: 0x005C539C
 		public static Offset<IWaterElementalMatch> Pack(FlatBufferBuilder builder, IWaterElementalMatchT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaterElementalMatch.CreateIWaterElementalMatch(builder, _o.Type, _o.CanStagnate, stagnationActorConfigOffset, _o.StagnationImmuneDurationAfterHit, _o.NullMask);
 		}
 
-		// Token: 0x0400F28D RID: 62093
+		// Token: 0x0400FF93 RID: 65427
 		private Table __p;
 	}
 }

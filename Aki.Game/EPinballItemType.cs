@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001404 RID: 5124
+// Token: 0x020008B8 RID: 2232
 public enum EPinballItemType
 {
-	// Token: 0x04004008 RID: 16392
+	// Token: 0x040040A0 RID: 16544
 	Weapon,
-	// Token: 0x04004009 RID: 16393
+	// Token: 0x040040A1 RID: 16545
 	Role,
-	// Token: 0x0400400A RID: 16394
+	// Token: 0x040040A2 RID: 16546
 	Item,
-	// Token: 0x0400400B RID: 16395
+	// Token: 0x040040A3 RID: 16547
 	Monster
 }

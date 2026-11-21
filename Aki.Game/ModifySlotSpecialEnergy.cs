@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F9F RID: 12191
+// Token: 0x020024F3 RID: 9459
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifySlotSpecialEnergy : PeriodExecution
 {
-	// Token: 0x06019DD8 RID: 105944 RVA: 0x006C21FE File Offset: 0x006C03FE
+	// Token: 0x060176EA RID: 95978 RVA: 0x006E8AC6 File Offset: 0x006E6CC6
 	public ModifySlotSpecialEnergy(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DD9 RID: 105945 RVA: 0x006C2214 File Offset: 0x006C0414
+	// Token: 0x060176EB RID: 95979 RVA: 0x006E8ADC File Offset: 0x006E6CDC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -28,7 +27,7 @@ public class ModifySlotSpecialEnergy : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DDA RID: 105946 RVA: 0x006C2264 File Offset: 0x006C0464
+	// Token: 0x060176EC RID: 95980 RVA: 0x006E8B2C File Offset: 0x006E6D2C
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -40,26 +39,16 @@ public class ModifySlotSpecialEnergy : PeriodExecution
 				return null;
 			}
 			CharacterSpecialSkillComponent component = base.OwnerEntity.GetComponent<CharacterSpecialSkillComponent>();
-			SpecialSkillBase specialSkillBase = (component != null) ? component.SpecialSkill : null;
-			if (specialSkillBase != null)
+			SpecialSkillBuling specialSkillBuling = ((component != null) ? component.SpecialSkill : null) as SpecialSkillBuling;
+			if (specialSkillBuling != null)
 			{
-				MethodInfo method = specialSkillBase.GetType().GetMethod("ModifySlotSpecialEnergy", new Type[]
-				{
-					typeof(int[])
-				});
-				if (method != null)
-				{
-					method.Invoke(specialSkillBase, new object[]
-					{
-						this.NumberParams
-					});
-				}
+				specialSkillBuling.ModifySlotSpecialEnergy(this.NumberParams);
 			}
 		}
 		return null;
 	}
 
-	// Token: 0x06019DDB RID: 105947 RVA: 0x006C22F4 File Offset: 0x006C04F4
+	// Token: 0x060176ED RID: 95981 RVA: 0x006E8B90 File Offset: 0x006E6D90
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(15, 2);
@@ -70,6 +59,6 @@ public class ModifySlotSpecialEnergy : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C37C RID: 50044
+	// Token: 0x0400C725 RID: 50981
 	private int[] NumberParams = Array.Empty<int>();
 }

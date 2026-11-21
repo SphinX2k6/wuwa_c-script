@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005D6 RID: 1494
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000667 RID: 1639
 	public class IPathDrivenActorInitialSpawnConfig
 	{
-		// Token: 0x06001FA2 RID: 8098 RVA: 0x000589B0 File Offset: 0x00056BB0
+		// Token: 0x0600226E RID: 8814 RVA: 0x0005F03C File Offset: 0x0005D23C
 		private IPathDrivenActorInitialSpawnConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001FA3 RID: 8099 RVA: 0x000589E8 File Offset: 0x00056BE8
+		// Token: 0x0600226F RID: 8815 RVA: 0x0005F074 File Offset: 0x0005D274
 		public static IPathDrivenActorInitialSpawnConfig Create([Nullable(2)] IPathDrivenActorInitialSpawnConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FA4 RID: 8100 RVA: 0x000589FB File Offset: 0x00056BFB
+		// Token: 0x06002270 RID: 8816 RVA: 0x0005F087 File Offset: 0x0005D287
 		public static IPathDrivenActorInitialSpawnConfig CreateFromSetValue([Nullable(2)] IPathDrivenActorInitialSpawnConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001FA5 RID: 8101 RVA: 0x00058A0E File Offset: 0x00056C0E
+		// Token: 0x06002271 RID: 8817 RVA: 0x0005F09A File Offset: 0x0005D29A
 		public IPathDrivenActorInitialSpawnConfig_SetValue ToSetValue()
 		{
 			return new IPathDrivenActorInitialSpawnConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700086F RID: 2159
-		// (get) Token: 0x06001FA6 RID: 8102 RVA: 0x00058A2D File Offset: 0x00056C2D
-		// (set) Token: 0x06001FA7 RID: 8103 RVA: 0x00058A58 File Offset: 0x00056C58
+		// Token: 0x1700091B RID: 2331
+		// (get) Token: 0x06002272 RID: 8818 RVA: 0x0005F0B9 File Offset: 0x0005D2B9
+		// (set) Token: 0x06002273 RID: 8819 RVA: 0x0005F0E4 File Offset: 0x0005D2E4
 		public virtual bool EnableInitialSpawn
 		{
 			get
@@ -80,20 +78,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000870 RID: 2160
-		// (get) Token: 0x06001FA8 RID: 8104 RVA: 0x00058A68 File Offset: 0x00056C68
-		// (set) Token: 0x06001FA9 RID: 8105 RVA: 0x00058AFB File Offset: 0x00056CFB
+		// Token: 0x1700091C RID: 2332
+		// (get) Token: 0x06002274 RID: 8820 RVA: 0x0005F0F4 File Offset: 0x0005D2F4
+		// (set) Token: 0x06002275 RID: 8821 RVA: 0x0005F187 File Offset: 0x0005D387
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPathDrivenActorInitialSpawnHandle> InitialSpawnHandles
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -124,7 +122,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -133,23 +131,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001651 RID: 5713
+		// Token: 0x04001828 RID: 6184
 		[Nullable(2)]
 		protected IPathDrivenActorInitialSpawnConfig FbInstance;
 
-		// Token: 0x04001652 RID: 5714
+		// Token: 0x04001829 RID: 6185
 		[Nullable(2)]
 		protected IPathDrivenActorInitialSpawnConfig_SetValue PocoInterface;
 
-		// Token: 0x04001653 RID: 5715
+		// Token: 0x0400182A RID: 6186
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IPathDrivenActorInitialSpawnHandle> _InitialSpawnHandlesCache;
 
-		// Token: 0x04001654 RID: 5716
+		// Token: 0x0400182B RID: 6187
 		private bool _InitialSpawnHandlesInited;
 	}
 }

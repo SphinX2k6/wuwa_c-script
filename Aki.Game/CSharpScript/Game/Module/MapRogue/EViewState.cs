@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055FB RID: 22011
+	// Token: 0x020045D1 RID: 17873
 	public enum EViewState
 	{
-		// Token: 0x0401D71B RID: 120603
+		// Token: 0x040181A6 RID: 98726
 		Forbidden,
-		// Token: 0x0401D71C RID: 120604
+		// Token: 0x040181A7 RID: 98727
 		Wait,
-		// Token: 0x0401D71D RID: 120605
+		// Token: 0x040181A8 RID: 98728
 		Anim,
-		// Token: 0x0401D71E RID: 120606
+		// Token: 0x040181A9 RID: 98729
 		CanInteract
 	}
 }

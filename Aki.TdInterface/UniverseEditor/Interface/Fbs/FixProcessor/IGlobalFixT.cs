@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x0200475B RID: 18267
+	// Token: 0x02004BC3 RID: 19395
 	public class IGlobalFixT
 	{
-		// Token: 0x1700830F RID: 33551
-		// (get) Token: 0x0601C1E7 RID: 115175 RVA: 0x003FBEFB File Offset: 0x003FA0FB
-		// (set) Token: 0x0601C1E8 RID: 115176 RVA: 0x003FBF03 File Offset: 0x003FA103
+		// Token: 0x17008950 RID: 35152
+		// (get) Token: 0x0601D9BC RID: 121276 RVA: 0x00428197 File Offset: 0x00426397
+		// (set) Token: 0x0601D9BD RID: 121277 RVA: 0x0042819F File Offset: 0x0042639F
 		public int Id { get; set; }
 
-		// Token: 0x17008310 RID: 33552
-		// (get) Token: 0x0601C1E9 RID: 115177 RVA: 0x003FBF0C File Offset: 0x003FA10C
-		// (set) Token: 0x0601C1EA RID: 115178 RVA: 0x003FBF14 File Offset: 0x003FA114
+		// Token: 0x17008951 RID: 35153
+		// (get) Token: 0x0601D9BE RID: 121278 RVA: 0x004281A8 File Offset: 0x004263A8
+		// (set) Token: 0x0601D9BF RID: 121279 RVA: 0x004281B0 File Offset: 0x004263B0
 		public int DungeonId { get; set; }
 
-		// Token: 0x17008311 RID: 33553
-		// (get) Token: 0x0601C1EB RID: 115179 RVA: 0x003FBF1D File Offset: 0x003FA11D
-		// (set) Token: 0x0601C1EC RID: 115180 RVA: 0x003FBF25 File Offset: 0x003FA125
+		// Token: 0x17008952 RID: 35154
+		// (get) Token: 0x0601D9C0 RID: 121280 RVA: 0x004281B9 File Offset: 0x004263B9
+		// (set) Token: 0x0601D9C1 RID: 121281 RVA: 0x004281C1 File Offset: 0x004263C1
 		public int ExecuteCount { get; set; }
 
-		// Token: 0x17008312 RID: 33554
-		// (get) Token: 0x0601C1ED RID: 115181 RVA: 0x003FBF2E File Offset: 0x003FA12E
-		// (set) Token: 0x0601C1EE RID: 115182 RVA: 0x003FBF36 File Offset: 0x003FA136
+		// Token: 0x17008953 RID: 35155
+		// (get) Token: 0x0601D9C2 RID: 121282 RVA: 0x004281CA File Offset: 0x004263CA
+		// (set) Token: 0x0601D9C3 RID: 121283 RVA: 0x004281D2 File Offset: 0x004263D2
 		public int ExecuteCycle { get; set; }
 
-		// Token: 0x17008313 RID: 33555
-		// (get) Token: 0x0601C1EF RID: 115183 RVA: 0x003FBF3F File Offset: 0x003FA13F
-		// (set) Token: 0x0601C1F0 RID: 115184 RVA: 0x003FBF47 File Offset: 0x003FA147
+		// Token: 0x17008954 RID: 35156
+		// (get) Token: 0x0601D9C4 RID: 121284 RVA: 0x004281DB File Offset: 0x004263DB
+		// (set) Token: 0x0601D9C5 RID: 121285 RVA: 0x004281E3 File Offset: 0x004263E3
 		public IConditionGroupT Conditions { get; set; }
 
-		// Token: 0x17008314 RID: 33556
-		// (get) Token: 0x0601C1F1 RID: 115185 RVA: 0x003FBF50 File Offset: 0x003FA150
-		// (set) Token: 0x0601C1F2 RID: 115186 RVA: 0x003FBF58 File Offset: 0x003FA158
+		// Token: 0x17008955 RID: 35157
+		// (get) Token: 0x0601D9C6 RID: 121286 RVA: 0x004281EC File Offset: 0x004263EC
+		// (set) Token: 0x0601D9C7 RID: 121287 RVA: 0x004281F4 File Offset: 0x004263F4
 		public IGlobalFixActionsT Actions { get; set; }
 
-		// Token: 0x0601C1F3 RID: 115187 RVA: 0x003FBF61 File Offset: 0x003FA161
+		// Token: 0x0601D9C8 RID: 121288 RVA: 0x004281FD File Offset: 0x004263FD
 		public IGlobalFixT()
 		{
 			this.Id = 0;

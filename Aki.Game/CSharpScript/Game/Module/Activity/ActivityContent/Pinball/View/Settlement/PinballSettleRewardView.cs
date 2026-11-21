@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062FA RID: 25338
+	// Token: 0x02005278 RID: 21112
 	public class PinballSettleRewardView : UiPanelBase
 	{
-		// Token: 0x0603FC44 RID: 261188 RVA: 0x00F6DEF0 File Offset: 0x00F6C0F0
+		// Token: 0x06034905 RID: 215301 RVA: 0x00EB4E4C File Offset: 0x00EB304C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FC45 RID: 261189 RVA: 0x00F6DF59 File Offset: 0x00F6C159
+		// Token: 0x06034906 RID: 215302 RVA: 0x00EB4EB5 File Offset: 0x00EB30B5
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603FC46 RID: 261190 RVA: 0x00F6DF60 File Offset: 0x00F6C160
+		// Token: 0x06034907 RID: 215303 RVA: 0x00EB4EBC File Offset: 0x00EB30BC
 		public void ShowRewardGot()
 		{
 			UUIText text = base.GetText(0);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			scrollViewWithScrollbar.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0603FC47 RID: 261191 RVA: 0x00F6DFA0 File Offset: 0x00F6C1A0
+		// Token: 0x06034908 RID: 215304 RVA: 0x00EB4EFC File Offset: 0x00EB30FC
 		[NullableContext(1)]
 		public void ShowRewardList(List<TItem> items)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.RewardScroll.RefreshByData(items, null, false);
 		}
 
-		// Token: 0x04021497 RID: 136343
+		// Token: 0x0401BDC6 RID: 114118
 		[Nullable(new byte[]
 		{
 			2,
@@ -74,12 +74,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x0200C4F4 RID: 50420
+		// Token: 0x0200AEDB RID: 44763
 		private enum EComponent
 		{
-			// Token: 0x0403B705 RID: 243461
+			// Token: 0x04036067 RID: 221287
 			TextRewardGot,
-			// Token: 0x0403B706 RID: 243462
+			// Token: 0x04036068 RID: 221288
 			ScrollReward
 		}
 	}

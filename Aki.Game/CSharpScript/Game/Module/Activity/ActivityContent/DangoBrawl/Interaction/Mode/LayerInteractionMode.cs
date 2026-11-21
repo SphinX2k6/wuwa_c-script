@@ -10,13 +10,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Mode
 {
-	// Token: 0x0200687D RID: 26749
+	// Token: 0x020057CD RID: 22477
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class LayerInteractionMode : IInteractionMode
 	{
-		// Token: 0x170097AE RID: 38830
-		// (get) Token: 0x06042C8E RID: 273550 RVA: 0x0104111E File Offset: 0x0103F31E
+		// Token: 0x17006AEF RID: 27375
+		// (get) Token: 0x060377E5 RID: 227301 RVA: 0x00F825FE File Offset: 0x00F807FE
 		public EInteractionModeKind Kind
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x170097AF RID: 38831
-		// (get) Token: 0x06042C8F RID: 273551 RVA: 0x01041121 File Offset: 0x0103F321
+		// Token: 0x17006AF0 RID: 27376
+		// (get) Token: 0x060377E6 RID: 227302 RVA: 0x00F82601 File Offset: 0x00F80801
 		public bool IsActive
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x170097B0 RID: 38832
-		// (get) Token: 0x06042C90 RID: 273552 RVA: 0x01041129 File Offset: 0x0103F329
+		// Token: 0x17006AF1 RID: 27377
+		// (get) Token: 0x060377E7 RID: 227303 RVA: 0x00F82609 File Offset: 0x00F80809
 		public ICommitStrategy CommitStrategy
 		{
 			get
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042C91 RID: 273553 RVA: 0x01041131 File Offset: 0x0103F331
+		// Token: 0x060377E8 RID: 227304 RVA: 0x00F82611 File Offset: 0x00F80811
 		public LayerInteractionMode(ActivityDangoBrawlData data, InteractionStateMachine interactionFsm, DropResolver resolver)
 		{
 			this.Data = data;
@@ -54,25 +54,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.Batched = new BatchedCommitStrategy(data);
 		}
 
-		// Token: 0x06042C92 RID: 273554 RVA: 0x0104115A File Offset: 0x0103F35A
+		// Token: 0x060377E9 RID: 227305 RVA: 0x00F8263A File Offset: 0x00F8083A
 		public bool AllowInteract(int configId)
 		{
 			return !this.IsActive || this.IsBagConfig(configId);
 		}
 
-		// Token: 0x06042C93 RID: 273555 RVA: 0x0104116D File Offset: 0x0103F36D
+		// Token: 0x060377EA RID: 227306 RVA: 0x00F8264D File Offset: 0x00F8084D
 		public bool AllowBuyShopSlot()
 		{
 			return false;
 		}
 
-		// Token: 0x06042C94 RID: 273556 RVA: 0x01041170 File Offset: 0x0103F370
+		// Token: 0x060377EB RID: 227307 RVA: 0x00F82650 File Offset: 0x00F80850
 		private bool IsBagConfig(int configId)
 		{
 			return DangoBrawlConfig.Instance.GetItemConfigTypeById(configId) == EDangoBrawlItemType.Bag;
 		}
 
-		// Token: 0x06042C95 RID: 273557 RVA: 0x01041180 File Offset: 0x0103F380
+		// Token: 0x060377EC RID: 227308 RVA: 0x00F82660 File Offset: 0x00F80860
 		public bool TryEnter()
 		{
 			if (this.IsActive)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return true;
 		}
 
-		// Token: 0x06042C96 RID: 273558 RVA: 0x01041234 File Offset: 0x0103F434
+		// Token: 0x060377ED RID: 227309 RVA: 0x00F82714 File Offset: 0x00F80914
 		[NullableContext(0)]
 		public UniTask<bool> TryExit()
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <TryExit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C97 RID: 273559 RVA: 0x01041278 File Offset: 0x0103F478
+		// Token: 0x060377EE RID: 227310 RVA: 0x00F82758 File Offset: 0x00F80958
 		public void Discard()
 		{
 			if (!this.m_IsActive)
@@ -137,13 +137,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			EventSystem.Instance.Emit<bool>(EEventName.OnDangoBrawlLayerModeChanged, false);
 		}
 
-		// Token: 0x06042C98 RID: 273560 RVA: 0x010412CD File Offset: 0x0103F4CD
+		// Token: 0x060377EF RID: 227311 RVA: 0x00F827AD File Offset: 0x00F809AD
 		public void EnqueueBagToBench(int uid)
 		{
 			this.Batched.EnqueueBagToBench(uid);
 		}
 
-		// Token: 0x06042C99 RID: 273561 RVA: 0x010412DC File Offset: 0x0103F4DC
+		// Token: 0x060377F0 RID: 227312 RVA: 0x00F827BC File Offset: 0x00F809BC
+		private static int CountByTemplateType(List<DangoBrawlBackpackItemData> items, EDangoBrawlTemplateType templateType)
+		{
+			int num = 0;
+			using (List<DangoBrawlBackpackItemData>.Enumerator enumerator = items.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.MyTemplateType == templateType)
+					{
+						num++;
+					}
+				}
+			}
+			return num;
+		}
+
+		// Token: 0x060377F1 RID: 227313 RVA: 0x00F82814 File Offset: 0x00F80A14
 		private DangoBrawlBagOpInfo[] CleanupUnplaceableBags(List<DangoBrawlBackpackItemData> cleanedItems)
 		{
 			DangoBrawlBackpackData bagpackData = this.Data.BagpackData;
@@ -152,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			{
 				return Array.Empty<DangoBrawlBagOpInfo>();
 			}
-			LayerInteractionMode.<>c__DisplayClass19_0 CS$<>8__locals1;
+			LayerInteractionMode.<>c__DisplayClass20_0 CS$<>8__locals1;
 			CS$<>8__locals1.toRemove = cleanedItems;
 			CS$<>8__locals1.seenUids = new HashSet<int>();
 			foreach (DangoBrawlBackpackItemData dangoBrawlBackpackItemData in bagpackData.GetItemList())
@@ -166,10 +183,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 					});
 					if (overlapItems == null || overlapItems.Count > 0)
 					{
-						LayerInteractionMode.<CleanupUnplaceableBags>g__TryAdd|19_0(dangoBrawlBackpackItemData, ref CS$<>8__locals1);
+						LayerInteractionMode.<CleanupUnplaceableBags>g__TryAdd|20_0(dangoBrawlBackpackItemData, ref CS$<>8__locals1);
 						foreach (DangoBrawlBackpackItemData item in bagpackData.GetBagFollowerItems(dangoBrawlBackpackItemData.MyUid))
 						{
-							LayerInteractionMode.<CleanupUnplaceableBags>g__TryAdd|19_0(item, ref CS$<>8__locals1);
+							LayerInteractionMode.<CleanupUnplaceableBags>g__TryAdd|20_0(item, ref CS$<>8__locals1);
 						}
 					}
 				}
@@ -185,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 					});
 					if (overlapItems2 == null || overlapItems2.Count > 0 || !bagpackData.AreAllCellsHaveBag(dangoBrawlBackpackItemData2.MyLeftTopPos, panelPosList2))
 					{
-						LayerInteractionMode.<CleanupUnplaceableBags>g__TryAdd|19_0(dangoBrawlBackpackItemData2, ref CS$<>8__locals1);
+						LayerInteractionMode.<CleanupUnplaceableBags>g__TryAdd|20_0(dangoBrawlBackpackItemData2, ref CS$<>8__locals1);
 					}
 				}
 			}
@@ -209,9 +226,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return list.ToArray();
 		}
 
-		// Token: 0x06042C9A RID: 273562 RVA: 0x010415CC File Offset: 0x0103F7CC
+		// Token: 0x060377F2 RID: 227314 RVA: 0x00F82B04 File Offset: 0x00F80D04
 		[CompilerGenerated]
-		internal static void <CleanupUnplaceableBags>g__TryAdd|19_0(DangoBrawlBackpackItemData item, ref LayerInteractionMode.<>c__DisplayClass19_0 A_1)
+		internal static void <CleanupUnplaceableBags>g__TryAdd|20_0(DangoBrawlBackpackItemData item, ref LayerInteractionMode.<>c__DisplayClass20_0 A_1)
 		{
 			if (A_1.seenUids.Add(item.MyUid))
 			{
@@ -219,19 +236,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x04022C22 RID: 142370
+		// Token: 0x0401D47F RID: 119935
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022C23 RID: 142371
+		// Token: 0x0401D480 RID: 119936
 		private readonly BatchedCommitStrategy Batched;
 
-		// Token: 0x04022C24 RID: 142372
+		// Token: 0x0401D481 RID: 119937
 		private readonly InteractionStateMachine InteractionFsm;
 
-		// Token: 0x04022C25 RID: 142373
+		// Token: 0x0401D482 RID: 119938
 		private readonly DropResolver Resolver;
 
-		// Token: 0x04022C26 RID: 142374
+		// Token: 0x0401D483 RID: 119939
 		private bool m_IsActive;
 	}
 }

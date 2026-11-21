@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001504 RID: 5380
+// Token: 0x020009BC RID: 2492
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewShipTower : ActivitySubViewBase
 {
-	// Token: 0x0600997A RID: 39290 RVA: 0x00213650 File Offset: 0x00211850
+	// Token: 0x06006D54 RID: 27988 RVA: 0x0021D36C File Offset: 0x0021B56C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -44,19 +44,19 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600997B RID: 39291 RVA: 0x0021379B File Offset: 0x0021199B
+	// Token: 0x06006D55 RID: 27989 RVA: 0x0021D4B7 File Offset: 0x0021B6B7
 	private void OnBtnReward()
 	{
 		this.PlaySubViewSequence("HideInfo", false);
 		ShipTowerModel.Instance.OpenViewReward(null);
 	}
 
-	// Token: 0x0600997C RID: 39292 RVA: 0x002137B4 File Offset: 0x002119B4
+	// Token: 0x06006D56 RID: 27990 RVA: 0x0021D4D0 File Offset: 0x0021B6D0
 	protected override void OnSetData()
 	{
 	}
 
-	// Token: 0x0600997D RID: 39293 RVA: 0x002137B8 File Offset: 0x002119B8
+	// Token: 0x06006D57 RID: 27991 RVA: 0x0021D4D4 File Offset: 0x0021B6D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewShipTower.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600997E RID: 39294 RVA: 0x002137FB File Offset: 0x002119FB
+	// Token: 0x06006D58 RID: 27992 RVA: 0x0021D517 File Offset: 0x0021B717
 	protected override void OnStart()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -78,33 +78,33 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityBaseData.Id);
 	}
 
-	// Token: 0x0600997F RID: 39295 RVA: 0x00213833 File Offset: 0x00211A33
+	// Token: 0x06006D59 RID: 27993 RVA: 0x0021D54F File Offset: 0x0021B74F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06009980 RID: 39296 RVA: 0x0021386A File Offset: 0x00211A6A
+	// Token: 0x06006D5A RID: 27994 RVA: 0x0021D586 File Offset: 0x0021B786
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06009981 RID: 39297 RVA: 0x002138A1 File Offset: 0x00211AA1
+	// Token: 0x06006D5B RID: 27995 RVA: 0x0021D5BD File Offset: 0x0021B7BD
 	protected override void OnBeforeShow()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.ShipTowerReward, base.GetItem(3), null, 0);
 	}
 
-	// Token: 0x06009982 RID: 39298 RVA: 0x002138B8 File Offset: 0x00211AB8
+	// Token: 0x06006D5C RID: 27996 RVA: 0x0021D5D4 File Offset: 0x0021B7D4
 	protected override void OnBeforeHide()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.ShipTowerReward, base.GetItem(3), 0);
 	}
 
-	// Token: 0x06009983 RID: 39299 RVA: 0x002138D0 File Offset: 0x00211AD0
+	// Token: 0x06006D5D RID: 27997 RVA: 0x0021D5EC File Offset: 0x0021B7EC
 	protected override void OnRefreshView()
 	{
 		this.UpdateOpenState();
@@ -123,13 +123,13 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		commonInfoPanel2.SetPanelTipVisible(flag);
 	}
 
-	// Token: 0x06009984 RID: 39300 RVA: 0x00213920 File Offset: 0x00211B20
+	// Token: 0x06006D5E RID: 27998 RVA: 0x0021D63C File Offset: 0x0021B83C
 	private void SetRewardBtnVisible(bool isVisible)
 	{
 		base.GetButton(1).RootUIComp.Get().SetUIActive(isVisible);
 	}
 
-	// Token: 0x06009985 RID: 39301 RVA: 0x00213948 File Offset: 0x00211B48
+	// Token: 0x06006D5F RID: 27999 RVA: 0x0021D664 File Offset: 0x0021B864
 	private void UpdateOpenState()
 	{
 		string rewardProgressText = ShipTowerModel.Instance.GetRewardProgressText(true);
@@ -139,7 +139,7 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		this.SetRewardBtnVisible(true);
 	}
 
-	// Token: 0x06009986 RID: 39302 RVA: 0x00213990 File Offset: 0x00211B90
+	// Token: 0x06006D60 RID: 28000 RVA: 0x0021D6AC File Offset: 0x0021B8AC
 	private void UpdateRewardProgress()
 	{
 		List<ShipTowerAreaItemData> areaList = ShipTowerModel.Instance.GetAreaList();
@@ -156,7 +156,7 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		this.RewardProgressItem2.SetData(list[1]);
 	}
 
-	// Token: 0x06009987 RID: 39303 RVA: 0x00213A40 File Offset: 0x00211C40
+	// Token: 0x06006D61 RID: 28001 RVA: 0x0021D75C File Offset: 0x0021B95C
 	[NullableContext(1)]
 	private void ClickCommonInfo(ActivityBaseData data)
 	{
@@ -174,7 +174,7 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06009988 RID: 39304 RVA: 0x00213A5E File Offset: 0x00211C5E
+	// Token: 0x06006D62 RID: 28002 RVA: 0x0021D77A File Offset: 0x0021B97A
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.ShipTowerRewardView)
@@ -185,7 +185,7 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009989 RID: 39305 RVA: 0x00213A9C File Offset: 0x00211C9C
+	// Token: 0x06006D63 RID: 28003 RVA: 0x0021D7B8 File Offset: 0x0021B9B8
 	private void OnRefreshCommonActivityRedDot(int i)
 	{
 		bool flag = ((ActivityShipTowerData)this.ActivityBaseData).HasNewCycle();
@@ -202,7 +202,7 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		commonInfoPanel2.SetPanelTipVisible(flag);
 	}
 
-	// Token: 0x0600998A RID: 39306 RVA: 0x00213AE0 File Offset: 0x00211CE0
+	// Token: 0x06006D64 RID: 28004 RVA: 0x0021D7FC File Offset: 0x0021B9FC
 	protected override void OnTimer(float gap)
 	{
 		if (this.IsNeedUpdate)
@@ -219,41 +219,41 @@ public class ActivitySubViewShipTower : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600998B RID: 39307 RVA: 0x00213B2E File Offset: 0x00211D2E
+	// Token: 0x06006D65 RID: 28005 RVA: 0x0021D84A File Offset: 0x0021BA4A
 	private void OnConfirmSeasonUpdate()
 	{
 		UiManager.Instance.ResetToBattleView(null);
 	}
 
-	// Token: 0x04004370 RID: 17264
+	// Token: 0x04004415 RID: 17429
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04004371 RID: 17265
+	// Token: 0x04004416 RID: 17430
 	private ActivitySubViewShipTowerRewardProgress RewardProgressItem1;
 
-	// Token: 0x04004372 RID: 17266
+	// Token: 0x04004417 RID: 17431
 	private ActivitySubViewShipTowerRewardProgress RewardProgressItem2;
 
-	// Token: 0x04004373 RID: 17267
+	// Token: 0x04004418 RID: 17432
 	private bool IsNeedUpdate;
 
-	// Token: 0x02007B3C RID: 31548
+	// Token: 0x02006CC7 RID: 27847
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04028874 RID: 166004
+		// Token: 0x04023BB0 RID: 146352
 		ItemCommonPanel,
-		// Token: 0x04028875 RID: 166005
+		// Token: 0x04023BB1 RID: 146353
 		BtnReward,
-		// Token: 0x04028876 RID: 166006
+		// Token: 0x04023BB2 RID: 146354
 		TxtNum,
-		// Token: 0x04028877 RID: 166007
+		// Token: 0x04023BB3 RID: 146355
 		ItemRedDot,
-		// Token: 0x04028878 RID: 166008
+		// Token: 0x04023BB4 RID: 146356
 		TxtRewardTitle,
-		// Token: 0x04028879 RID: 166009
+		// Token: 0x04023BB5 RID: 146357
 		RewardProgressItem1,
-		// Token: 0x0402887A RID: 166010
+		// Token: 0x04023BB6 RID: 146358
 		RewardProgressItem2
 	}
 }

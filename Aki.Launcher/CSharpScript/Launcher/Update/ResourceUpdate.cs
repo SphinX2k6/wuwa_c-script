@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x02000097 RID: 151
+	// Token: 0x0200009A RID: 154
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResourceUpdate
 	{
-		// Token: 0x06000542 RID: 1346 RVA: 0x000304AC File Offset: 0x0002E6AC
+		// Token: 0x06000559 RID: 1369 RVA: 0x00031A14 File Offset: 0x0002FC14
 		[NullableContext(2)]
 		public ResourceUpdate(UObject worldContext = null, UrlPrefixDownload downloader = null, AppVersionMisc versionMisc = null, AppPathMisc pathMisc = null, bool updateIndexOnly = false)
 		{
@@ -29,13 +29,13 @@ namespace CSharpScript.Launcher.Update
 			this.ResType = this.VersionMisc.GetResType();
 		}
 
-		// Token: 0x06000543 RID: 1347 RVA: 0x00030500 File Offset: 0x0002E700
+		// Token: 0x0600055A RID: 1370 RVA: 0x00031A68 File Offset: 0x0002FC68
 		public void ResetWorldContext(UObject worldContext)
 		{
 			this.WorldContext = worldContext;
 		}
 
-		// Token: 0x06000544 RID: 1348 RVA: 0x0003050C File Offset: 0x0002E70C
+		// Token: 0x0600055B RID: 1371 RVA: 0x00031A74 File Offset: 0x0002FC74
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -153,7 +153,7 @@ namespace CSharpScript.Launcher.Update
 			return new ValueTuple<bool, List<PatchFileInfo>>(true, list);
 		}
 
-		// Token: 0x06000545 RID: 1349 RVA: 0x000309B0 File Offset: 0x0002EBB0
+		// Token: 0x0600055C RID: 1372 RVA: 0x00031F18 File Offset: 0x00030118
 		private Dictionary<string, PatchFileInfo> ReadMountFileInfo()
 		{
 			Dictionary<string, PatchFileInfo> dictionary = new Dictionary<string, PatchFileInfo>();
@@ -182,7 +182,7 @@ namespace CSharpScript.Launcher.Update
 			return dictionary;
 		}
 
-		// Token: 0x06000546 RID: 1350 RVA: 0x00030AA4 File Offset: 0x0002ECA4
+		// Token: 0x0600055D RID: 1373 RVA: 0x0003200C File Offset: 0x0003020C
 		private void SaveMountFile()
 		{
 			string text = "";
@@ -214,7 +214,7 @@ namespace CSharpScript.Launcher.Update
 			UKuroStaticLibrary.SaveStringToFile(text, this.VersionMisc.GetMountFilePath(), false);
 		}
 
-		// Token: 0x06000547 RID: 1351 RVA: 0x00030C00 File Offset: 0x0002EE00
+		// Token: 0x0600055E RID: 1374 RVA: 0x00032168 File Offset: 0x00030368
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -237,7 +237,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000548 RID: 1352 RVA: 0x00030C90 File Offset: 0x0002EE90
+		// Token: 0x0600055F RID: 1375 RVA: 0x000321F8 File Offset: 0x000303F8
 		private long CheckFileNeedUpdate(PatchFileInfo info, List<RequestFileInfo> requestList, Dictionary<string, DownloadViewInfo> viewInfoList, EResFile fileType)
 		{
 			ValueTuple<long, string> patchFileInfo = this.GetPatchFileInfo(info, fileType);
@@ -324,13 +324,13 @@ namespace CSharpScript.Launcher.Update
 			}
 			if (hotPatchCheckResHashLogInfo.Infos.Count > 0)
 			{
-				hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(value, null);
+				hotPatchLog.s_step_result = LauncherJson.Stringify(value, null);
 				HotPatchLogReport.Instance.Report(hotPatchLog);
 			}
 			return num;
 		}
 
-		// Token: 0x06000549 RID: 1353 RVA: 0x00030EA4 File Offset: 0x0002F0A4
+		// Token: 0x06000560 RID: 1376 RVA: 0x0003240C File Offset: 0x0003060C
 		private long CheckFilesNeedUpdate(PatchFileInfo info, List<RequestFileInfo> requestList, Dictionary<string, DownloadViewInfo> viewInfoList)
 		{
 			long num = 0L;
@@ -345,7 +345,7 @@ namespace CSharpScript.Launcher.Update
 			return num;
 		}
 
-		// Token: 0x0600054A RID: 1354 RVA: 0x00030F04 File Offset: 0x0002F104
+		// Token: 0x06000561 RID: 1377 RVA: 0x0003246C File Offset: 0x0003066C
 		public unsafe bool CheckResourceVersion()
 		{
 			bool flag = this.VersionMisc.HasNewResourceVersionBaseOnPackage();
@@ -389,7 +389,7 @@ namespace CSharpScript.Launcher.Update
 						flag2
 					}
 				};
-				hotPatchLog.s_step_result = LauncherJson.Stringify<Dictionary<string, object>>(value, null);
+				hotPatchLog.s_step_result = LauncherJson.Stringify(value, null);
 				HotPatchLogReport.Instance.Report(hotPatchLog);
 			}
 			Dictionary<string, object> value2 = new Dictionary<string, object>
@@ -411,12 +411,12 @@ namespace CSharpScript.Launcher.Update
 					flag2
 				}
 			};
-			hotPatchLog.s_step_result = LauncherJson.Stringify<Dictionary<string, object>>(value2, null);
+			hotPatchLog.s_step_result = LauncherJson.Stringify(value2, null);
 			HotPatchLogReport.Instance.Report(hotPatchLog);
 			return flag || flag2;
 		}
 
-		// Token: 0x0600054B RID: 1355 RVA: 0x000310EC File Offset: 0x0002F2EC
+		// Token: 0x06000562 RID: 1378 RVA: 0x00032654 File Offset: 0x00030854
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -432,7 +432,7 @@ namespace CSharpScript.Launcher.Update
 			return <DownloadIndexFile>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600054C RID: 1356 RVA: 0x00031130 File Offset: 0x0002F330
+		// Token: 0x06000563 RID: 1379 RVA: 0x00032698 File Offset: 0x00030898
 		public bool ResolveIndexFile()
 		{
 			if (this.UpdateIndexOnly)
@@ -452,7 +452,7 @@ namespace CSharpScript.Launcher.Update
 			return item;
 		}
 
-		// Token: 0x0600054D RID: 1357 RVA: 0x000311CC File Offset: 0x0002F3CC
+		// Token: 0x06000564 RID: 1380 RVA: 0x00032734 File Offset: 0x00030934
 		[NullableContext(0)]
 		public UniTask<bool> CheckResourceFiles([Nullable(2)] Func<float, UniTask> progressCb = null)
 		{
@@ -465,7 +465,7 @@ namespace CSharpScript.Launcher.Update
 			return <CheckResourceFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600054E RID: 1358 RVA: 0x00031218 File Offset: 0x0002F418
+		// Token: 0x06000565 RID: 1381 RVA: 0x00032780 File Offset: 0x00030980
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -488,7 +488,7 @@ namespace CSharpScript.Launcher.Update
 			return <DownloadResourceFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600054F RID: 1359 RVA: 0x0003126C File Offset: 0x0002F46C
+		// Token: 0x06000566 RID: 1382 RVA: 0x000327D4 File Offset: 0x000309D4
 		public unsafe bool CheckNeedRestartApp()
 		{
 			this.NeedReMount = (this.RequestList.Count > 0);
@@ -520,7 +520,7 @@ namespace CSharpScript.Launcher.Update
 			return true;
 		}
 
-		// Token: 0x06000550 RID: 1360 RVA: 0x000313CC File Offset: 0x0002F5CC
+		// Token: 0x06000567 RID: 1383 RVA: 0x00032934 File Offset: 0x00030B34
 		public IRevertVersionInfo GetRevertInfo()
 		{
 			bool flag = this.VersionMisc.NeedRevert();
@@ -580,13 +580,13 @@ namespace CSharpScript.Launcher.Update
 			return result;
 		}
 
-		// Token: 0x06000551 RID: 1361 RVA: 0x000315E2 File Offset: 0x0002F7E2
+		// Token: 0x06000568 RID: 1384 RVA: 0x00032B4A File Offset: 0x00030D4A
 		public long GetUpdateSize()
 		{
 			return this.UpdateSize;
 		}
 
-		// Token: 0x06000552 RID: 1362 RVA: 0x000315EA File Offset: 0x0002F7EA
+		// Token: 0x06000569 RID: 1385 RVA: 0x00032B52 File Offset: 0x00030D52
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -597,7 +597,7 @@ namespace CSharpScript.Launcher.Update
 			return this.PakList;
 		}
 
-		// Token: 0x06000553 RID: 1363 RVA: 0x000315F2 File Offset: 0x0002F7F2
+		// Token: 0x0600056A RID: 1386 RVA: 0x00032B5A File Offset: 0x00030D5A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -609,7 +609,7 @@ namespace CSharpScript.Launcher.Update
 			return this.ViewInfoList;
 		}
 
-		// Token: 0x06000554 RID: 1364 RVA: 0x000315FA File Offset: 0x0002F7FA
+		// Token: 0x0600056B RID: 1387 RVA: 0x00032B62 File Offset: 0x00030D62
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -620,49 +620,49 @@ namespace CSharpScript.Launcher.Update
 			return this.RequestList;
 		}
 
-		// Token: 0x06000555 RID: 1365 RVA: 0x00031602 File Offset: 0x0002F802
+		// Token: 0x0600056C RID: 1388 RVA: 0x00032B6A File Offset: 0x00030D6A
 		public bool GetNeedRemount()
 		{
 			return this.NeedReMount;
 		}
 
-		// Token: 0x06000556 RID: 1366 RVA: 0x0003160A File Offset: 0x0002F80A
+		// Token: 0x0600056D RID: 1389 RVA: 0x00032B72 File Offset: 0x00030D72
 		public bool GetNeedRestart()
 		{
 			return UKuroLauncherLibrary.NeedRestartApp() > 0;
 		}
 
-		// Token: 0x06000557 RID: 1367 RVA: 0x00031614 File Offset: 0x0002F814
+		// Token: 0x0600056E RID: 1390 RVA: 0x00032B7C File Offset: 0x00030D7C
 		public string GetResType()
 		{
 			return this.ResType;
 		}
 
-		// Token: 0x06000558 RID: 1368 RVA: 0x0003161C File Offset: 0x0002F81C
+		// Token: 0x0600056F RID: 1391 RVA: 0x00032B84 File Offset: 0x00030D84
 		public long GetNeedSpace()
 		{
 			return this.NeedSpace;
 		}
 
-		// Token: 0x0400033B RID: 827
+		// Token: 0x04000369 RID: 873
 		private const float HUNDRED_PERCENT = 1f;
 
-		// Token: 0x0400033C RID: 828
+		// Token: 0x0400036A RID: 874
 		private readonly UrlPrefixDownload DownloadProxy;
 
-		// Token: 0x0400033D RID: 829
+		// Token: 0x0400036B RID: 875
 		private readonly string ResType = "";
 
-		// Token: 0x0400033E RID: 830
+		// Token: 0x0400036C RID: 876
 		private readonly AppVersionMisc VersionMisc;
 
-		// Token: 0x0400033F RID: 831
+		// Token: 0x0400036D RID: 877
 		private readonly AppPathMisc PathMisc;
 
-		// Token: 0x04000340 RID: 832
+		// Token: 0x0400036E RID: 878
 		private bool ShouldRestart;
 
-		// Token: 0x04000341 RID: 833
+		// Token: 0x0400036F RID: 879
 		[Nullable(new byte[]
 		{
 			2,
@@ -670,19 +670,19 @@ namespace CSharpScript.Launcher.Update
 		})]
 		private List<PatchFileInfo> PakList;
 
-		// Token: 0x04000342 RID: 834
+		// Token: 0x04000370 RID: 880
 		private UObject WorldContext;
 
-		// Token: 0x04000343 RID: 835
+		// Token: 0x04000371 RID: 881
 		private bool NeedReMount;
 
-		// Token: 0x04000344 RID: 836
+		// Token: 0x04000372 RID: 882
 		private ERestartType? RestartType;
 
-		// Token: 0x04000345 RID: 837
+		// Token: 0x04000373 RID: 883
 		private readonly bool UpdateIndexOnly;
 
-		// Token: 0x04000346 RID: 838
+		// Token: 0x04000374 RID: 884
 		[Nullable(new byte[]
 		{
 			2,
@@ -690,7 +690,7 @@ namespace CSharpScript.Launcher.Update
 		})]
 		private List<RequestFileInfo> RequestList;
 
-		// Token: 0x04000347 RID: 839
+		// Token: 0x04000375 RID: 885
 		[Nullable(new byte[]
 		{
 			2,
@@ -699,10 +699,10 @@ namespace CSharpScript.Launcher.Update
 		})]
 		private Dictionary<string, DownloadViewInfo> ViewInfoList;
 
-		// Token: 0x04000348 RID: 840
+		// Token: 0x04000376 RID: 886
 		private long UpdateSize;
 
-		// Token: 0x04000349 RID: 841
+		// Token: 0x04000377 RID: 887
 		private long NeedSpace;
 	}
 }

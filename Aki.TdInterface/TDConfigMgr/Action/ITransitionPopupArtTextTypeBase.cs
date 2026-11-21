@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FE2 RID: 8162
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002229 RID: 8745
 	public class ITransitionPopupArtTextTypeBase
 	{
-		// Token: 0x0600B392 RID: 45970 RVA: 0x001A208C File Offset: 0x001A028C
+		// Token: 0x0600BEA8 RID: 48808 RVA: 0x001B85F8 File Offset: 0x001B67F8
 		private ITransitionPopupArtTextTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B393 RID: 45971 RVA: 0x001A20C4 File Offset: 0x001A02C4
+		// Token: 0x0600BEA9 RID: 48809 RVA: 0x001B8630 File Offset: 0x001B6830
 		public static ITransitionPopupArtTextTypeBase Create([Nullable(2)] ITransitionPopupArtTextTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B394 RID: 45972 RVA: 0x001A20D7 File Offset: 0x001A02D7
+		// Token: 0x0600BEAA RID: 48810 RVA: 0x001B8643 File Offset: 0x001B6843
 		public static ITransitionPopupArtTextTypeBase CreateFromSetValue([Nullable(2)] ITransitionPopupArtTextTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B395 RID: 45973 RVA: 0x001A20EA File Offset: 0x001A02EA
+		// Token: 0x0600BEAB RID: 48811 RVA: 0x001B8656 File Offset: 0x001B6856
 		public ITransitionPopupArtTextTypeBase_SetValue ToSetValue()
 		{
 			return new ITransitionPopupArtTextTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700374E RID: 14158
-		// (get) Token: 0x0600B396 RID: 45974 RVA: 0x001A20FD File Offset: 0x001A02FD
-		// (set) Token: 0x0600B397 RID: 45975 RVA: 0x001A2128 File Offset: 0x001A0328
+		// Token: 0x17003A26 RID: 14886
+		// (get) Token: 0x0600BEAC RID: 48812 RVA: 0x001B8669 File Offset: 0x001B6869
+		// (set) Token: 0x0600BEAD RID: 48813 RVA: 0x001B8694 File Offset: 0x001B6894
 		public virtual ETransitionPopupArtTextType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C57 RID: 27735
+		// Token: 0x04007259 RID: 29273
 		[Nullable(2)]
 		protected ITransitionPopupArtTextTypeBase FbInstance;
 
-		// Token: 0x04006C58 RID: 27736
+		// Token: 0x0400725A RID: 29274
 		[Nullable(2)]
 		protected ITransitionPopupArtTextTypeBase_SetValue PocoInterface;
 	}

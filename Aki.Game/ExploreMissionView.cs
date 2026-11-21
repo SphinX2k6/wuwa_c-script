@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ABB RID: 6843
+// Token: 0x02000F7A RID: 3962
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreMissionView : UiViewBase
 {
-	// Token: 0x0600CADC RID: 51932 RVA: 0x002E37FF File Offset: 0x002E19FF
+	// Token: 0x06009EED RID: 40685 RVA: 0x002EE95F File Offset: 0x002ECB5F
 	public ExploreMissionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CADD RID: 51933 RVA: 0x002E3814 File Offset: 0x002E1A14
+	// Token: 0x06009EEE RID: 40686 RVA: 0x002EE974 File Offset: 0x002ECB74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -35,7 +34,7 @@ public class ExploreMissionView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CADE RID: 51934 RVA: 0x002E38A0 File Offset: 0x002E1AA0
+	// Token: 0x06009EEF RID: 40687 RVA: 0x002EEA00 File Offset: 0x002ECC00
 	protected override void OnStart()
 	{
 		object openParam = this.OpenParam;
@@ -100,7 +99,17 @@ public class ExploreMissionView : UiViewBase
 		UUIItem item2 = base.GetItem(1);
 		this.MissionLoopScrollView = new LoopScrollView<ExploreMissionItem, ExploreAreaMissionData>(loopScrollViewComponent, ((item2 != null) ? item2.GetOwner() : null) as AUIBaseActor, new Func<ExploreMissionItem>(this.OnGridProxyCreate), false);
 		this.MissionLoopScrollView.RefreshByData(this.ExploreAreaMissionDataList, false, null, false);
-		int num = this.ExploreAreaMissionDataList.Count((ExploreAreaMissionData data) => data.QuestStatus.GetValueOrDefault() == EQuestState.Finish);
+		int num = 0;
+		using (List<ExploreAreaMissionData>.Enumerator enumerator2 = this.ExploreAreaMissionDataList.GetEnumerator())
+		{
+			while (enumerator2.MoveNext())
+			{
+				if (enumerator2.Current.QuestStatus.GetValueOrDefault() == EQuestState.Finish)
+				{
+					num++;
+				}
+			}
+		}
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "ExploreMissionProgress", new <>z__ReadOnlyArray<object>(new object[]
 		{
 			num,
@@ -108,26 +117,26 @@ public class ExploreMissionView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600CADF RID: 51935 RVA: 0x002E3A08 File Offset: 0x002E1C08
+	// Token: 0x06009EF0 RID: 40688 RVA: 0x002EEB8C File Offset: 0x002ECD8C
 	protected override void OnBeforeDestroy()
 	{
 		this.AreaId = 0;
 		this.ExploreAreaMissionDataList.Clear();
 	}
 
-	// Token: 0x0600CAE0 RID: 51936 RVA: 0x002E3A1C File Offset: 0x002E1C1C
+	// Token: 0x06009EF1 RID: 40689 RVA: 0x002EEBA0 File Offset: 0x002ECDA0
 	private ExploreMissionItem OnGridProxyCreate()
 	{
 		return new ExploreMissionItem();
 	}
 
-	// Token: 0x04005D5E RID: 23902
+	// Token: 0x04005E2D RID: 24109
 	private int AreaId;
 
-	// Token: 0x04005D5F RID: 23903
+	// Token: 0x04005E2E RID: 24110
 	private readonly List<ExploreAreaMissionData> ExploreAreaMissionDataList = new List<ExploreAreaMissionData>();
 
-	// Token: 0x04005D60 RID: 23904
+	// Token: 0x04005E2F RID: 24111
 	[Nullable(new byte[]
 	{
 		2,
@@ -136,15 +145,15 @@ public class ExploreMissionView : UiViewBase
 	})]
 	private LoopScrollView<ExploreMissionItem, ExploreAreaMissionData> MissionLoopScrollView;
 
-	// Token: 0x02008012 RID: 32786
+	// Token: 0x020071A1 RID: 29089
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029CF3 RID: 171251
+		// Token: 0x0402502D RID: 151597
 		MissionLoopScrollView,
-		// Token: 0x04029CF4 RID: 171252
+		// Token: 0x0402502E RID: 151598
 		MissionItem,
-		// Token: 0x04029CF5 RID: 171253
+		// Token: 0x0402502F RID: 151599
 		CountText
 	}
 }

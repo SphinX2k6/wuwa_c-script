@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004873 RID: 18547
+	// Token: 0x020037EA RID: 14314
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VillageInfrBuildInfoView : UiViewBase
 	{
-		// Token: 0x0603089A RID: 198810 RVA: 0x00B4586C File Offset: 0x00B43A6C
+		// Token: 0x060253C6 RID: 152518 RVA: 0x00A80608 File Offset: 0x00A7E808
 		public VillageInfrBuildInfoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603089B RID: 198811 RVA: 0x00B45898 File Offset: 0x00B43A98
+		// Token: 0x060253C7 RID: 152519 RVA: 0x00A80634 File Offset: 0x00A7E834
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x0603089C RID: 198812 RVA: 0x00B45970 File Offset: 0x00B43B70
+		// Token: 0x060253C8 RID: 152520 RVA: 0x00A8070C File Offset: 0x00A7E90C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IVillageInfrBuildInfoParam>(EEventName.VillageInfrMainViewOnSelect, new Action<IVillageInfrBuildInfoParam>(this.OnSelect));
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Add(EEventName.VillageInfrMissionItemClick, new Action(this.OnClickMaskClose));
 		}
 
-		// Token: 0x0603089D RID: 198813 RVA: 0x00B459D4 File Offset: 0x00B43BD4
+		// Token: 0x060253C9 RID: 152521 RVA: 0x00A80770 File Offset: 0x00A7E970
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.VillageInfrMainViewOnSelect, new Action<IVillageInfrBuildInfoParam>(this.OnSelect));
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			EventSystem.Instance.Remove(EEventName.VillageInfrMissionItemClick, new Action(this.OnClickMaskClose));
 		}
 
-		// Token: 0x0603089E RID: 198814 RVA: 0x00B45A38 File Offset: 0x00B43C38
+		// Token: 0x060253CA RID: 152522 RVA: 0x00A807D4 File Offset: 0x00A7E9D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VillageInfrBuildInfoView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603089F RID: 198815 RVA: 0x00B45A7C File Offset: 0x00B43C7C
+		// Token: 0x060253CB RID: 152523 RVA: 0x00A80818 File Offset: 0x00A7EA18
 		private void SetOpenParam()
 		{
 			IVillageInfrBuildInfoParam villageInfrBuildInfoParam = this.OpenParam as IVillageInfrBuildInfoParam;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.CloseCb = villageInfrBuildInfoParam.CloseCb;
 		}
 
-		// Token: 0x060308A0 RID: 198816 RVA: 0x00B45ABC File Offset: 0x00B43CBC
+		// Token: 0x060253CC RID: 152524 RVA: 0x00A80858 File Offset: 0x00A7EA58
 		private UniTask CreateCaption()
 		{
 			VillageInfrBuildInfoView.<CreateCaption>d__12 <CreateCaption>d__;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060308A1 RID: 198817 RVA: 0x00B45B00 File Offset: 0x00B43D00
+		// Token: 0x060253CD RID: 152525 RVA: 0x00A8089C File Offset: 0x00A7EA9C
 		private UniTask RefreshCurrencyList()
 		{
 			VillageInfrBuildInfoView.<RefreshCurrencyList>d__13 <RefreshCurrencyList>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RefreshCurrencyList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060308A2 RID: 198818 RVA: 0x00B45B44 File Offset: 0x00B43D44
+		// Token: 0x060253CE RID: 152526 RVA: 0x00A808E0 File Offset: 0x00A7EAE0
 		private UniTask CreateBuildPanel()
 		{
 			VillageInfrBuildInfoView.<CreateBuildPanel>d__14 <CreateBuildPanel>d__;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateBuildPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060308A3 RID: 198819 RVA: 0x00B45B88 File Offset: 0x00B43D88
+		// Token: 0x060253CF RID: 152527 RVA: 0x00A80924 File Offset: 0x00A7EB24
 		private UniTask CreateChatItem()
 		{
 			VillageInfrBuildInfoView.<CreateChatItem>d__15 <CreateChatItem>d__;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateChatItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060308A4 RID: 198820 RVA: 0x00B45BCC File Offset: 0x00B43DCC
+		// Token: 0x060253D0 RID: 152528 RVA: 0x00A80968 File Offset: 0x00A7EB68
 		protected override void OnStart()
 		{
 			base.GetButton(0).RootUIComp.Get().SetUIActive(false);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshChat(false);
 		}
 
-		// Token: 0x060308A5 RID: 198821 RVA: 0x00B45C00 File Offset: 0x00B43E00
+		// Token: 0x060253D1 RID: 152529 RVA: 0x00A8099C File Offset: 0x00A7EB9C
 		private void RefreshBuildInfo()
 		{
 			VillageInfrModel modelData = VillageInfrModel.Instance;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			});
 		}
 
-		// Token: 0x060308A6 RID: 198822 RVA: 0x00B45C3C File Offset: 0x00B43E3C
+		// Token: 0x060253D2 RID: 152530 RVA: 0x00A809D8 File Offset: 0x00A7EBD8
 		private void RefreshChat(bool isStart = false)
 		{
 			IReadOnlyList<InfrV2PopupMsg> popupMsgAll = VillageInfrConfig.Instance.GetPopupMsgAll();
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			});
 		}
 
-		// Token: 0x060308A7 RID: 198823 RVA: 0x00B45D80 File Offset: 0x00B43F80
+		// Token: 0x060253D3 RID: 152531 RVA: 0x00A80B1C File Offset: 0x00A7ED1C
 		private EVillageInfrPopupMsgType GetPopupMsgType()
 		{
 			VillageInfrModel instance = VillageInfrModel.Instance;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x060308A8 RID: 198824 RVA: 0x00B45E03 File Offset: 0x00B44003
+		// Token: 0x060253D4 RID: 152532 RVA: 0x00A80B9F File Offset: 0x00A7ED9F
 		private void OnClickMaskClose()
 		{
 			Action closeCb = this.CloseCb;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060308A9 RID: 198825 RVA: 0x00B45E1D File Offset: 0x00B4401D
+		// Token: 0x060253D5 RID: 152533 RVA: 0x00A80BB9 File Offset: 0x00A7EDB9
 		private void OnClickBack()
 		{
 			Action closeCb = this.CloseCb;
@@ -269,13 +269,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060308AA RID: 198826 RVA: 0x00B45E37 File Offset: 0x00B44037
+		// Token: 0x060253D6 RID: 152534 RVA: 0x00A80BD3 File Offset: 0x00A7EDD3
 		public void SetCloseCallBack(Action cb)
 		{
 			this.CloseCb = cb;
 		}
 
-		// Token: 0x060308AB RID: 198827 RVA: 0x00B45E40 File Offset: 0x00B44040
+		// Token: 0x060253D7 RID: 152535 RVA: 0x00A80BDC File Offset: 0x00A7EDDC
 		private void OnSelect(IVillageInfrBuildInfoParam param)
 		{
 			this.OpenParam = param;
@@ -286,22 +286,22 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.BuildPanel.Refresh(param);
 		}
 
-		// Token: 0x0401A129 RID: 106793
+		// Token: 0x0401499C RID: 84380
 		private int SelectId;
 
-		// Token: 0x0401A12A RID: 106794
+		// Token: 0x0401499D RID: 84381
 		private EVillageInfrSelectType SelectType;
 
-		// Token: 0x0401A12B RID: 106795
+		// Token: 0x0401499E RID: 84382
 		private readonly PopupCaptionItem Caption = new PopupCaptionItem(null);
 
-		// Token: 0x0401A12C RID: 106796
+		// Token: 0x0401499F RID: 84383
 		private readonly VillageInfrBuildPanel BuildPanel = new VillageInfrBuildPanel();
 
-		// Token: 0x0401A12D RID: 106797
+		// Token: 0x040149A0 RID: 84384
 		private readonly ChatItem ChatItem = new ChatItem();
 
-		// Token: 0x0401A12E RID: 106798
+		// Token: 0x040149A1 RID: 84385
 		[Nullable(2)]
 		private Action CloseCb;
 	}

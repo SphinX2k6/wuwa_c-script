@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020D0 RID: 8400
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200232D RID: 9005
 	public class Log_SetValue
 	{
-		// Token: 0x04006E9A RID: 28314
+		// Token: 0x040074C4 RID: 29892
 		public string Level;
 
-		// Token: 0x04006E9B RID: 28315
+		// Token: 0x040074C5 RID: 29893
 		public string Content;
 	}
 }

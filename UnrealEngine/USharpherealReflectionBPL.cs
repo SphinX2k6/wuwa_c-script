@@ -7,32 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002768 RID: 10088
+	// Token: 0x02000811 RID: 2065
 	[UnrealObjectPath("/Script/Sharphereal.SharpherealReflectionBPL")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class USharpherealReflectionBPL : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06025B88 RID: 154504 RVA: 0x00392D49 File Offset: 0x00390F49
+		// Token: 0x0600B55F RID: 46431 RVA: 0x00120901 File Offset: 0x0011EB01
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USharpherealReflectionBPL._ClassPtr;
 		}
 
-		// Token: 0x06025B89 RID: 154505 RVA: 0x00392D58 File Offset: 0x00390F58
+		// Token: 0x0600B560 RID: 46432 RVA: 0x00120910 File Offset: 0x0011EB10
 		public USharpherealReflectionBPL() : this(BuiltinUtils.AllocNativeUObject(USharpherealReflectionBPL.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06025B8A RID: 154506 RVA: 0x00392D80 File Offset: 0x00390F80
+		// Token: 0x0600B561 RID: 46433 RVA: 0x00120938 File Offset: 0x0011EB38
 		[NullableContext(1)]
 		public USharpherealReflectionBPL(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USharpherealReflectionBPL.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06025B8B RID: 154507 RVA: 0x00392DB4 File Offset: 0x00390FB4
+		// Token: 0x0600B562 RID: 46434 RVA: 0x0012096C File Offset: 0x0011EB6C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetStructDefine(UStruct Struct, ref FSharpherealReflectionStructGenerateDefine OutDefine)
 		{
 			USharpherealReflectionBPL.__GetStructDefine_FunctionParams* ptr = stackalloc USharpherealReflectionBPL.__GetStructDefine_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(USharpherealReflectionBPL.__GetStructDefine_FunctionParams) & -16L;
@@ -42,7 +41,7 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealReflectionStructGenerateDefine.StaticStruct(), &ptr->OutDefine, OutDefine.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(USharpherealReflectionBPL._ClassDefaultObjectPtr, USharpherealReflectionBPL.__GetStructDefine_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(USharpherealReflectionBPL._ClassDefaultObjectPtr, USharpherealReflectionBPL.__GetStructDefine_NativeFunctionPtr, (void*)ptr);
 			if (OutDefine != null)
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealReflectionStructGenerateDefine.StaticStruct(), OutDefine.NativePtr, &ptr->OutDefine, 1, false);
@@ -52,10 +51,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06025B8C RID: 154508 RVA: 0x00392E68 File Offset: 0x00391068
+		// Token: 0x0600B563 RID: 46435 RVA: 0x00120A20 File Offset: 0x0011EC20
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool GetClassDefine(UClassStackOnlyPtr Class, ref FSharpherealReflectionClassGenerateDefine OutDefine)
 		{
 			USharpherealReflectionBPL.__GetClassDefine_FunctionParams* ptr = stackalloc USharpherealReflectionBPL.__GetClassDefine_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(USharpherealReflectionBPL.__GetClassDefine_FunctionParams) & -16L;
@@ -65,7 +63,7 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealReflectionClassGenerateDefine.StaticStruct(), &ptr->OutDefine, OutDefine.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(USharpherealReflectionBPL._ClassDefaultObjectPtr, USharpherealReflectionBPL.__GetClassDefine_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(USharpherealReflectionBPL._ClassDefaultObjectPtr, USharpherealReflectionBPL.__GetClassDefine_NativeFunctionPtr, (void*)ptr);
 			if (OutDefine != null)
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealReflectionClassGenerateDefine.StaticStruct(), OutDefine.NativePtr, &ptr->OutDefine, 1, false);
@@ -75,9 +73,8 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06025B8D RID: 154509 RVA: 0x00392F10 File Offset: 0x00391110
+		// Token: 0x0600B564 RID: 46436 RVA: 0x00120AC4 File Offset: 0x0011ECC4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void GetAllBlueprintProxy([Nullable(new byte[]
 		{
 			2,
@@ -91,7 +88,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->Classes);
 			}
-			UnrealReflectionUtils.CallUFunction(USharpherealReflectionBPL._ClassDefaultObjectPtr, USharpherealReflectionBPL.__GetAllBlueprintProxy_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(USharpherealReflectionBPL._ClassDefaultObjectPtr, USharpherealReflectionBPL.__GetAllBlueprintProxy_NativeFunctionPtr, (void*)ptr);
 			TArray<UClass> tarray2 = Classes;
 			if (tarray2 != null)
 			{
@@ -100,78 +97,78 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USharpherealReflectionBPL.__GetAllBlueprintProxy_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025B8E RID: 154510 RVA: 0x00392F88 File Offset: 0x00391188
+		// Token: 0x0600B565 RID: 46437 RVA: 0x00120B3B File Offset: 0x0011ED3B
 		static USharpherealReflectionBPL()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Sharphereal.SharpherealReflectionBPL");
 		}
 
-		// Token: 0x06025B8F RID: 154511 RVA: 0x00392F96 File Offset: 0x00391196
+		// Token: 0x0600B566 RID: 46438 RVA: 0x00120B49 File Offset: 0x0011ED49
 		protected USharpherealReflectionBPL(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401488A RID: 84106
+		// Token: 0x040051D8 RID: 20952
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Sharphereal.SharpherealReflectionBPL";
 
-		// Token: 0x0401488B RID: 84107
+		// Token: 0x040051D9 RID: 20953
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401488C RID: 84108
+		// Token: 0x040051DA RID: 20954
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401488D RID: 84109
+		// Token: 0x040051DB RID: 20955
 		private static IntPtr __GetStructDefine_NativeFunctionPtr;
 
-		// Token: 0x0401488E RID: 84110
+		// Token: 0x040051DC RID: 20956
 		private static IntPtr __GetClassDefine_NativeFunctionPtr;
 
-		// Token: 0x0401488F RID: 84111
+		// Token: 0x040051DD RID: 20957
 		private static IntPtr __GetAllBlueprintProxy_NativeFunctionPtr;
 
-		// Token: 0x02003A62 RID: 14946
+		// Token: 0x02001334 RID: 4916
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __GetStructDefine_FunctionParams
 		{
-			// Token: 0x04017BBB RID: 97211
+			// Token: 0x0400676E RID: 26478
 			[FieldOffset(0)]
 			public IntPtr Struct;
 
-			// Token: 0x04017BBC RID: 97212
+			// Token: 0x0400676F RID: 26479
 			[FieldOffset(8)]
 			public byte OutDefine;
 
-			// Token: 0x04017BBD RID: 97213
+			// Token: 0x04006770 RID: 26480
 			[FieldOffset(56)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003A63 RID: 14947
+		// Token: 0x02001335 RID: 4917
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetClassDefine_FunctionParams
 		{
-			// Token: 0x04017BBE RID: 97214
+			// Token: 0x04006771 RID: 26481
 			[FieldOffset(0)]
 			public UClassStackOnlyPtr Class;
 
-			// Token: 0x04017BBF RID: 97215
+			// Token: 0x04006772 RID: 26482
 			[FieldOffset(8)]
 			public byte OutDefine;
 
-			// Token: 0x04017BC0 RID: 97216
+			// Token: 0x04006773 RID: 26483
 			[FieldOffset(72)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003A64 RID: 14948
+		// Token: 0x02001336 RID: 4918
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllBlueprintProxy_FunctionParams
 		{
-			// Token: 0x04017BC1 RID: 97217
+			// Token: 0x04006774 RID: 26484
 			[FieldOffset(0)]
 			public byte Classes;
 		}

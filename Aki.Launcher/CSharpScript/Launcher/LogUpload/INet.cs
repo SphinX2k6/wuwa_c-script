@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.LogUpload
 {
-	// Token: 0x020001C1 RID: 449
+	// Token: 0x020001C5 RID: 453
 	[NullableContext(1)]
 	public interface INet
 	{
-		// Token: 0x1700012A RID: 298
-		// (get) Token: 0x06000C14 RID: 3092
-		// (set) Token: 0x06000C15 RID: 3093
+		// Token: 0x17000130 RID: 304
+		// (get) Token: 0x06000C4B RID: 3147
+		// (set) Token: 0x06000C4C RID: 3148
 		Func<bool> IsServerConnected { get; set; }
 	}
 }

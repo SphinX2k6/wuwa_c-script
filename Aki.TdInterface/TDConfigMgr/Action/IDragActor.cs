@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019C0 RID: 6592
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B4D RID: 6989
 	public class IDragActor : IUiGame
 	{
-		// Token: 0x06008D39 RID: 36153 RVA: 0x0014B090 File Offset: 0x00149290
+		// Token: 0x0600947B RID: 38011 RVA: 0x0015AB9C File Offset: 0x00158D9C
 		private IDragActor_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008D3A RID: 36154 RVA: 0x0014B0C8 File Offset: 0x001492C8
+		// Token: 0x0600947C RID: 38012 RVA: 0x0015ABD4 File Offset: 0x00158DD4
 		public static IDragActor Create([Nullable(2)] IDragActor instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D3B RID: 36155 RVA: 0x0014B0DB File Offset: 0x001492DB
+		// Token: 0x0600947D RID: 38013 RVA: 0x0015ABE7 File Offset: 0x00158DE7
 		public static IDragActor CreateFromSetValue([Nullable(2)] IDragActor_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D3C RID: 36156 RVA: 0x0014B0EE File Offset: 0x001492EE
+		// Token: 0x0600947E RID: 38014 RVA: 0x0015ABFA File Offset: 0x00158DFA
 		public new IDragActor_SetValue ToSetValue()
 		{
 			return new IDragActor_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D51 RID: 11601
-		// (get) Token: 0x06008D3D RID: 36157 RVA: 0x0014B10D File Offset: 0x0014930D
-		// (set) Token: 0x06008D3E RID: 36158 RVA: 0x0014B138 File Offset: 0x00149338
+		// Token: 0x17002F56 RID: 12118
+		// (get) Token: 0x0600947F RID: 38015 RVA: 0x0015AC19 File Offset: 0x00158E19
+		// (set) Token: 0x06009480 RID: 38016 RVA: 0x0015AC44 File Offset: 0x00158E44
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D52 RID: 11602
-		// (get) Token: 0x06008D3F RID: 36159 RVA: 0x0014B146 File Offset: 0x00149346
-		// (set) Token: 0x06008D40 RID: 36160 RVA: 0x0014B171 File Offset: 0x00149371
+		// Token: 0x17002F57 RID: 12119
+		// (get) Token: 0x06009481 RID: 38017 RVA: 0x0015AC52 File Offset: 0x00158E52
+		// (set) Token: 0x06009482 RID: 38018 RVA: 0x0015AC7D File Offset: 0x00158E7D
 		public virtual int TargetEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057C6 RID: 22470
+		// Token: 0x04005C1B RID: 23579
 		[Nullable(2)]
 		protected new IDragActor FbInstance;
 
-		// Token: 0x040057C7 RID: 22471
+		// Token: 0x04005C1C RID: 23580
 		[Nullable(2)]
 		protected new IDragActor_SetValue PocoInterface;
 	}

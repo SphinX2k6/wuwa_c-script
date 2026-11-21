@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
@@ -9,18 +8,18 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016D8 RID: 5848
+// Token: 0x02000B90 RID: 2960
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceSelectMotionItem : UiPanelBase
 {
-	// Token: 0x0600A778 RID: 42872 RVA: 0x002593E4 File Offset: 0x002575E4
+	// Token: 0x06007B58 RID: 31576 RVA: 0x002637F0 File Offset: 0x002619F0
 	public AdviceSelectMotionItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A779 RID: 42873 RVA: 0x002593FC File Offset: 0x002575FC
+	// Token: 0x06007B59 RID: 31577 RVA: 0x00263808 File Offset: 0x00261A08
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +34,7 @@ public class AdviceSelectMotionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A77A RID: 42874 RVA: 0x00259479 File Offset: 0x00257679
+	// Token: 0x06007B5A RID: 31578 RVA: 0x00263885 File Offset: 0x00261A85
 	private void OnBtnClick()
 	{
 		Action onClickBtnBtnCall = this.OnClickBtnBtnCall;
@@ -46,19 +45,19 @@ public class AdviceSelectMotionItem : UiPanelBase
 		onClickBtnBtnCall();
 	}
 
-	// Token: 0x0600A77B RID: 42875 RVA: 0x0025948B File Offset: 0x0025768B
+	// Token: 0x06007B5B RID: 31579 RVA: 0x00263897 File Offset: 0x00261A97
 	public void SetClickChangeRoleCall(Action call)
 	{
 		this.OnClickBtnBtnCall = call;
 	}
 
-	// Token: 0x0600A77C RID: 42876 RVA: 0x00259494 File Offset: 0x00257694
+	// Token: 0x06007B5C RID: 31580 RVA: 0x002638A0 File Offset: 0x00261AA0
 	protected override void OnStart()
 	{
 		this.Scroller = new GenericScrollView<AdviceSelectMotionContent>(base.GetScrollViewWithScrollbar(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<AdviceSelectMotionContent>(this.CreateItem), null);
 	}
 
-	// Token: 0x0600A77D RID: 42877 RVA: 0x002594B8 File Offset: 0x002576B8
+	// Token: 0x06007B5D RID: 31581 RVA: 0x002638C4 File Offset: 0x00261AC4
 	private ILayoutItem<AdviceSelectMotionContent> CreateItem(object data, UUIItem uiItem, int index)
 	{
 		AdviceSelectMotionContent adviceSelectMotionContent = new AdviceSelectMotionContent(uiItem);
@@ -70,18 +69,18 @@ public class AdviceSelectMotionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A77E RID: 42878 RVA: 0x002594F0 File Offset: 0x002576F0
+	// Token: 0x06007B5E RID: 31582 RVA: 0x002638FC File Offset: 0x00261AFC
 	public void RefreshView(AdviceMotionSelectData[] data)
 	{
 		GenericScrollView<AdviceSelectMotionContent> scroller = this.Scroller;
 		if (scroller != null)
 		{
-			scroller.RefreshByData<AdviceMotionSelectData>(data.ToList<AdviceMotionSelectData>(), null);
+			scroller.RefreshByData<AdviceMotionSelectData>(data, null);
 		}
 		this.RefreshRoleName();
 	}
 
-	// Token: 0x0600A77F RID: 42879 RVA: 0x00259524 File Offset: 0x00257724
+	// Token: 0x06007B5F RID: 31583 RVA: 0x0026392C File Offset: 0x00261B2C
 	private void RefreshRoleName()
 	{
 		if (AdviceModel.Instance.PreSelectRoleId > 0)
@@ -110,7 +109,7 @@ public class AdviceSelectMotionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A780 RID: 42880 RVA: 0x002595AA File Offset: 0x002577AA
+	// Token: 0x06007B60 RID: 31584 RVA: 0x002639B2 File Offset: 0x00261BB2
 	protected override void OnBeforeDestroy()
 	{
 		GenericScrollView<AdviceSelectMotionContent> scroller = this.Scroller;
@@ -121,7 +120,7 @@ public class AdviceSelectMotionItem : UiPanelBase
 		scroller.ClearChildren();
 	}
 
-	// Token: 0x04004B8C RID: 19340
+	// Token: 0x04004C33 RID: 19507
 	[Nullable(new byte[]
 	{
 		2,
@@ -129,21 +128,21 @@ public class AdviceSelectMotionItem : UiPanelBase
 	})]
 	private GenericScrollView<AdviceSelectMotionContent> Scroller;
 
-	// Token: 0x04004B8D RID: 19341
+	// Token: 0x04004C34 RID: 19508
 	[Nullable(2)]
 	protected Action OnClickBtnBtnCall;
 
-	// Token: 0x02007CAC RID: 31916
+	// Token: 0x02006E31 RID: 28209
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028E54 RID: 167508
+		// Token: 0x0402417D RID: 147837
 		public const int MoreBtn = 0;
 
-		// Token: 0x04028E55 RID: 167509
+		// Token: 0x0402417E RID: 147838
 		public const int RoleName = 1;
 
-		// Token: 0x04028E56 RID: 167510
+		// Token: 0x0402417F RID: 147839
 		public const int Scroller = 2;
 	}
 }

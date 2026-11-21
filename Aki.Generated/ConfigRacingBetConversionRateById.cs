@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000799 RID: 1945
+	// Token: 0x020007B3 RID: 1971
 	public class ConfigRacingBetConversionRateById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002DA8 RID: 11688 RVA: 0x0015B364 File Offset: 0x00159564
+		// Token: 0x06002E44 RID: 11844 RVA: 0x00162270 File Offset: 0x00160470
 		static ConfigRacingBetConversionRateById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRacingBetConversionRateById.CreateStaticDefaultValue), new Action(ConfigRacingBetConversionRateById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002DA9 RID: 11689 RVA: 0x0015B384 File Offset: 0x00159584
+		// Token: 0x06002E45 RID: 11845 RVA: 0x00162290 File Offset: 0x00160490
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRacingBetConversionRateById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002DAA RID: 11690 RVA: 0x0015B403 File Offset: 0x00159603
+		// Token: 0x06002E46 RID: 11846 RVA: 0x0016230F File Offset: 0x0016050F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRacingBetConversionRateById.LogPair = null;
 			ConfigRacingBetConversionRateById.HandleId = 0;
 		}
 
-		// Token: 0x06002DAB RID: 11691 RVA: 0x0015B411 File Offset: 0x00159611
+		// Token: 0x06002E47 RID: 11847 RVA: 0x0016231D File Offset: 0x0016051D
 		public static void Init()
 		{
 			ConfigRacingBetConversionRateById.HandleId = ConfigCommon.InitDataStatement(ConfigRacingBetConversionRateById.HandleId, "db_racingbets.db", "select BinData from `RacingBetConversionRate` where Id=?");
 		}
 
-		// Token: 0x06002DAC RID: 11692 RVA: 0x0015B42C File Offset: 0x0015962C
+		// Token: 0x06002E48 RID: 11848 RVA: 0x00162338 File Offset: 0x00160538
 		public static RacingBetConversionRate? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRacingBetConversionRateById.HandleId, ConfigRacingBetConversionRateById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RacingBetConversionRate?(rootAsRacingBetConversionRate);
 		}
 
-		// Token: 0x04003515 RID: 13589
+		// Token: 0x040035CB RID: 13771
 		private const string DB = "db_racingbets.db";
 
-		// Token: 0x04003516 RID: 13590
+		// Token: 0x040035CC RID: 13772
 		private const string FILE = "q.全服赌马.xlsx";
 
-		// Token: 0x04003517 RID: 13591
+		// Token: 0x040035CD RID: 13773
 		private const string TABLE = "RacingBetConversionRate";
 
-		// Token: 0x04003518 RID: 13592
+		// Token: 0x040035CE RID: 13774
 		private const string COMMAND = "select BinData from `RacingBetConversionRate` where Id=?";
 
-		// Token: 0x04003519 RID: 13593
+		// Token: 0x040035CF RID: 13775
 		private const string KEY_PREFIX = "RacingBetConversionRateById";
 
-		// Token: 0x0400351A RID: 13594
+		// Token: 0x040035D0 RID: 13776
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400351B RID: 13595
+		// Token: 0x040035D1 RID: 13777
 		private static int HandleId;
 	}
 }

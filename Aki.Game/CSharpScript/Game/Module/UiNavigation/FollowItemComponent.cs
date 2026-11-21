@@ -4,32 +4,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200495E RID: 18782
+	// Token: 0x020038D6 RID: 14550
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FollowItemComponent : HotKeyComponent
 	{
-		// Token: 0x0603101C RID: 200732 RVA: 0x00B610F1 File Offset: 0x00B5F2F1
+		// Token: 0x06025B4C RID: 154444 RVA: 0x00A9BFD1 File Offset: 0x00A9A1D1
 		public FollowItemComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603101D RID: 200733 RVA: 0x00B610FA File Offset: 0x00B5F2FA
+		// Token: 0x06025B4D RID: 154445 RVA: 0x00A9BFDA File Offset: 0x00A9A1DA
 		public void ResetFollowItem()
 		{
 		}
 
-		// Token: 0x0603101E RID: 200734 RVA: 0x00B610FC File Offset: 0x00B5F2FC
+		// Token: 0x06025B4E RID: 154446 RVA: 0x00A9BFDC File Offset: 0x00A9A1DC
 		public void FollowItem(UUIItem item, int length)
 		{
 		}
 
-		// Token: 0x0603101F RID: 200735 RVA: 0x00B610FE File Offset: 0x00B5F2FE
+		// Token: 0x06025B4F RID: 154447 RVA: 0x00A9BFDE File Offset: 0x00A9A1DE
 		public void OnInteractionHintChangeItemCountEvent(int length)
 		{
 		}
 
-		// Token: 0x06031020 RID: 200736 RVA: 0x00B61100 File Offset: 0x00B5F300
+		// Token: 0x06025B50 RID: 154448 RVA: 0x00A9BFE0 File Offset: 0x00A9A1E0
 		protected override void OnInputAxis(string axisName, float value)
 		{
 		}

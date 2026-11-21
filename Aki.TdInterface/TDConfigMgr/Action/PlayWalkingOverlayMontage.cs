@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002121 RID: 8481
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002382 RID: 9090
 	public class PlayWalkingOverlayMontage : ActionParams
 	{
-		// Token: 0x0600BAC6 RID: 47814 RVA: 0x001AF9AC File Offset: 0x001ADBAC
+		// Token: 0x0600C654 RID: 50772 RVA: 0x001C6B60 File Offset: 0x001C4D60
 		private PlayWalkingOverlayMontage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BAC7 RID: 47815 RVA: 0x001AF9E4 File Offset: 0x001ADBE4
+		// Token: 0x0600C655 RID: 50773 RVA: 0x001C6B98 File Offset: 0x001C4D98
 		public static PlayWalkingOverlayMontage Create([Nullable(2)] PlayWalkingOverlayMontage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BAC8 RID: 47816 RVA: 0x001AF9F7 File Offset: 0x001ADBF7
+		// Token: 0x0600C656 RID: 50774 RVA: 0x001C6BAB File Offset: 0x001C4DAB
 		public static PlayWalkingOverlayMontage CreateFromSetValue([Nullable(2)] PlayWalkingOverlayMontage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BAC9 RID: 47817 RVA: 0x001AFA0A File Offset: 0x001ADC0A
+		// Token: 0x0600C657 RID: 50775 RVA: 0x001C6BBE File Offset: 0x001C4DBE
 		public PlayWalkingOverlayMontage_SetValue ToSetValue()
 		{
 			return new PlayWalkingOverlayMontage_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700390B RID: 14603
-		// (get) Token: 0x0600BACA RID: 47818 RVA: 0x001AFA41 File Offset: 0x001ADC41
-		// (set) Token: 0x0600BACB RID: 47819 RVA: 0x001AFA6C File Offset: 0x001ADC6C
+		// Token: 0x17003BF8 RID: 15352
+		// (get) Token: 0x0600C658 RID: 50776 RVA: 0x001C6BF5 File Offset: 0x001C4DF5
+		// (set) Token: 0x0600C659 RID: 50777 RVA: 0x001C6C20 File Offset: 0x001C4E20
 		public virtual int EntityId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700390C RID: 14604
-		// (get) Token: 0x0600BACC RID: 47820 RVA: 0x001AFA7A File Offset: 0x001ADC7A
-		// (set) Token: 0x0600BACD RID: 47821 RVA: 0x001AFAA5 File Offset: 0x001ADCA5
+		// Token: 0x17003BF9 RID: 15353
+		// (get) Token: 0x0600C65A RID: 50778 RVA: 0x001C6C2E File Offset: 0x001C4E2E
+		// (set) Token: 0x0600C65B RID: 50779 RVA: 0x001C6C59 File Offset: 0x001C4E59
 		public virtual int OverlapMontageId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700390D RID: 14605
-		// (get) Token: 0x0600BACE RID: 47822 RVA: 0x001AFAB4 File Offset: 0x001ADCB4
-		// (set) Token: 0x0600BACF RID: 47823 RVA: 0x001AFAEE File Offset: 0x001ADCEE
+		// Token: 0x17003BFA RID: 15354
+		// (get) Token: 0x0600C65C RID: 50780 RVA: 0x001C6C68 File Offset: 0x001C4E68
+		// (set) Token: 0x0600C65D RID: 50781 RVA: 0x001C6CA2 File Offset: 0x001C4EA2
 		public virtual float? LoopDuration
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700390E RID: 14606
-		// (get) Token: 0x0600BAD0 RID: 47824 RVA: 0x001AFAFC File Offset: 0x001ADCFC
-		// (set) Token: 0x0600BAD1 RID: 47825 RVA: 0x001AFB36 File Offset: 0x001ADD36
+		// Token: 0x17003BFB RID: 15355
+		// (get) Token: 0x0600C65E RID: 50782 RVA: 0x001C6CB0 File Offset: 0x001C4EB0
+		// (set) Token: 0x0600C65F RID: 50783 RVA: 0x001C6CEA File Offset: 0x001C4EEA
 		public virtual int? RepeatTimes
 		{
 			get
@@ -156,11 +154,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FCC RID: 28620
+		// Token: 0x04007601 RID: 30209
 		[Nullable(2)]
 		protected new PlayWalkingOverlayMontage FbInstance;
 
-		// Token: 0x04006FCD RID: 28621
+		// Token: 0x04007602 RID: 30210
 		[Nullable(2)]
 		protected PlayWalkingOverlayMontage_SetValue PocoInterface;
 	}

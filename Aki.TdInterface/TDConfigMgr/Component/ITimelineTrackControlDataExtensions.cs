@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000778 RID: 1912
+	// Token: 0x02000819 RID: 2073
 	public static class ITimelineTrackControlDataExtensions
 	{
-		// Token: 0x06002977 RID: 10615 RVA: 0x0006D648 File Offset: 0x0006B848
-		[NullableContext(1)]
+		// Token: 0x06002C9B RID: 11419 RVA: 0x000747F0 File Offset: 0x000729F0
 		public static IReadOnlyList<object> GetControlPoints(this ITimelineTrackControlData p)
 		{
 			ISequenceTrackControl sequenceTrackControl = p as ISequenceTrackControl;

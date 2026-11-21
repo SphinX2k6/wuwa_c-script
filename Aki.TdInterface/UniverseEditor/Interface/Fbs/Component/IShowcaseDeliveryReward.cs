@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200590B RID: 22795
+	// Token: 0x02005F18 RID: 24344
 	public struct IShowcaseDeliveryReward : IFlatbufferObject
 	{
-		// Token: 0x1700AADD RID: 43741
-		// (get) Token: 0x06026860 RID: 157792 RVA: 0x0054EA68 File Offset: 0x0054CC68
+		// Token: 0x1700B411 RID: 46097
+		// (get) Token: 0x06028DCA RID: 167370 RVA: 0x005956D4 File Offset: 0x005938D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026861 RID: 157793 RVA: 0x0054EA75 File Offset: 0x0054CC75
+		// Token: 0x06028DCB RID: 167371 RVA: 0x005956E1 File Offset: 0x005938E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026862 RID: 157794 RVA: 0x0054EA7C File Offset: 0x0054CC7C
+		// Token: 0x06028DCC RID: 167372 RVA: 0x005956E8 File Offset: 0x005938E8
 		public static IShowcaseDeliveryReward GetRootAsIShowcaseDeliveryReward(ByteBuffer _bb)
 		{
 			return IShowcaseDeliveryReward.GetRootAsIShowcaseDeliveryReward(_bb, default(IShowcaseDeliveryReward));
 		}
 
-		// Token: 0x06026863 RID: 157795 RVA: 0x0054EA98 File Offset: 0x0054CC98
+		// Token: 0x06028DCD RID: 167373 RVA: 0x00595704 File Offset: 0x00593904
 		public static IShowcaseDeliveryReward GetRootAsIShowcaseDeliveryReward(ByteBuffer _bb, IShowcaseDeliveryReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026864 RID: 157796 RVA: 0x0054EAB5 File Offset: 0x0054CCB5
+		// Token: 0x06028DCE RID: 167374 RVA: 0x00595721 File Offset: 0x00593921
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026865 RID: 157797 RVA: 0x0054EAC4 File Offset: 0x0054CCC4
+		// Token: 0x06028DCF RID: 167375 RVA: 0x00595730 File Offset: 0x00593930
 		public IShowcaseDeliveryReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AADE RID: 43742
-		// (get) Token: 0x06026866 RID: 157798 RVA: 0x0054EAD4 File Offset: 0x0054CCD4
+		// Token: 0x1700B412 RID: 46098
+		// (get) Token: 0x06028DD0 RID: 167376 RVA: 0x00595740 File Offset: 0x00593940
 		public int AchievedDollCount
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AADF RID: 43743
-		// (get) Token: 0x06026867 RID: 157799 RVA: 0x0054EB10 File Offset: 0x0054CD10
+		// Token: 0x1700B413 RID: 46099
+		// (get) Token: 0x06028DD1 RID: 167377 RVA: 0x0059577C File Offset: 0x0059397C
 		public int DropId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026868 RID: 157800 RVA: 0x0054EB4C File Offset: 0x0054CD4C
+		// Token: 0x06028DD2 RID: 167378 RVA: 0x005957B8 File Offset: 0x005939B8
 		public static Offset<IShowcaseDeliveryReward> CreateIShowcaseDeliveryReward(FlatBufferBuilder builder, int AchievedDollCount = 0, int DropId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IShowcaseDeliveryReward.EndIShowcaseDeliveryReward(builder);
 		}
 
-		// Token: 0x06026869 RID: 157801 RVA: 0x0054EB69 File Offset: 0x0054CD69
+		// Token: 0x06028DD3 RID: 167379 RVA: 0x005957D5 File Offset: 0x005939D5
 		public static void StartIShowcaseDeliveryReward(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602686A RID: 157802 RVA: 0x0054EB72 File Offset: 0x0054CD72
+		// Token: 0x06028DD4 RID: 167380 RVA: 0x005957DE File Offset: 0x005939DE
 		public static void AddAchievedDollCount(FlatBufferBuilder builder, int achievedDollCount)
 		{
 			builder.AddInt(0, achievedDollCount, 0);
 		}
 
-		// Token: 0x0602686B RID: 157803 RVA: 0x0054EB7D File Offset: 0x0054CD7D
+		// Token: 0x06028DD5 RID: 167381 RVA: 0x005957E9 File Offset: 0x005939E9
 		public static void AddDropId(FlatBufferBuilder builder, int dropId)
 		{
 			builder.AddInt(1, dropId, 0);
 		}
 
-		// Token: 0x0602686C RID: 157804 RVA: 0x0054EB88 File Offset: 0x0054CD88
+		// Token: 0x06028DD6 RID: 167382 RVA: 0x005957F4 File Offset: 0x005939F4
 		public static Offset<IShowcaseDeliveryReward> EndIShowcaseDeliveryReward(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowcaseDeliveryReward>(builder.EndTable());
 		}
 
-		// Token: 0x0602686D RID: 157805 RVA: 0x0054EB98 File Offset: 0x0054CD98
+		// Token: 0x06028DD7 RID: 167383 RVA: 0x00595804 File Offset: 0x00593A04
 		public IShowcaseDeliveryRewardT UnPack()
 		{
 			IShowcaseDeliveryRewardT showcaseDeliveryRewardT = new IShowcaseDeliveryRewardT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return showcaseDeliveryRewardT;
 		}
 
-		// Token: 0x0602686E RID: 157806 RVA: 0x0054EBB3 File Offset: 0x0054CDB3
+		// Token: 0x06028DD8 RID: 167384 RVA: 0x0059581F File Offset: 0x00593A1F
 		public void UnPackTo(IShowcaseDeliveryRewardT _o)
 		{
 			_o.AchievedDollCount = this.AchievedDollCount;
 			_o.DropId = this.DropId;
 		}
 
-		// Token: 0x0602686F RID: 157807 RVA: 0x0054EBD0 File Offset: 0x0054CDD0
+		// Token: 0x06028DD9 RID: 167385 RVA: 0x0059583C File Offset: 0x00593A3C
 		public static Offset<IShowcaseDeliveryReward> Pack(FlatBufferBuilder builder, IShowcaseDeliveryRewardT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IShowcaseDeliveryReward.CreateIShowcaseDeliveryReward(builder, _o.AchievedDollCount, _o.DropId);
 		}
 
-		// Token: 0x0400EEAD RID: 61101
+		// Token: 0x0400FBA2 RID: 64418
 		private Table __p;
 	}
 }

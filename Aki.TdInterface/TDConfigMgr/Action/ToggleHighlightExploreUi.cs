@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002246 RID: 8774
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024B1 RID: 9393
 	public class ToggleHighlightExploreUi : ActionParams
 	{
-		// Token: 0x0600C08C RID: 49292 RVA: 0x001BA464 File Offset: 0x001B8664
+		// Token: 0x0600CC4A RID: 52298 RVA: 0x001D1B30 File Offset: 0x001CFD30
 		private ToggleHighlightExploreUi_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C08D RID: 49293 RVA: 0x001BA49C File Offset: 0x001B869C
+		// Token: 0x0600CC4B RID: 52299 RVA: 0x001D1B68 File Offset: 0x001CFD68
 		public static ToggleHighlightExploreUi Create([Nullable(2)] ToggleHighlightExploreUi instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C08E RID: 49294 RVA: 0x001BA4AF File Offset: 0x001B86AF
+		// Token: 0x0600CC4C RID: 52300 RVA: 0x001D1B7B File Offset: 0x001CFD7B
 		public static ToggleHighlightExploreUi CreateFromSetValue([Nullable(2)] ToggleHighlightExploreUi_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C08F RID: 49295 RVA: 0x001BA4C2 File Offset: 0x001B86C2
+		// Token: 0x0600CC4D RID: 52301 RVA: 0x001D1B8E File Offset: 0x001CFD8E
 		public ToggleHighlightExploreUi_SetValue ToSetValue()
 		{
 			return new ToggleHighlightExploreUi_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A48 RID: 14920
-		// (get) Token: 0x0600C090 RID: 49296 RVA: 0x001BA4E1 File Offset: 0x001B86E1
-		// (set) Token: 0x0600C091 RID: 49297 RVA: 0x001BA50C File Offset: 0x001B870C
+		// Token: 0x17003D3E RID: 15678
+		// (get) Token: 0x0600CC4E RID: 52302 RVA: 0x001D1BAD File Offset: 0x001CFDAD
+		// (set) Token: 0x0600CC4F RID: 52303 RVA: 0x001D1BD8 File Offset: 0x001CFDD8
 		public virtual EHighlightExploreSkillIconType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A49 RID: 14921
-		// (get) Token: 0x0600C092 RID: 49298 RVA: 0x001BA51C File Offset: 0x001B871C
-		// (set) Token: 0x0600C093 RID: 49299 RVA: 0x001BA556 File Offset: 0x001B8756
+		// Token: 0x17003D3F RID: 15679
+		// (get) Token: 0x0600CC50 RID: 52304 RVA: 0x001D1BE8 File Offset: 0x001CFDE8
+		// (set) Token: 0x0600CC51 RID: 52305 RVA: 0x001D1C22 File Offset: 0x001CFE22
 		public virtual EHighlightType? HighlightType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072CA RID: 29386
+		// Token: 0x04007914 RID: 30996
 		[Nullable(2)]
 		protected new ToggleHighlightExploreUi FbInstance;
 
-		// Token: 0x040072CB RID: 29387
+		// Token: 0x04007915 RID: 30997
 		[Nullable(2)]
 		protected ToggleHighlightExploreUi_SetValue PocoInterface;
 	}

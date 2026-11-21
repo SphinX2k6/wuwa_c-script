@@ -9,11 +9,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EFB RID: 24315
+	// Token: 0x02004EE2 RID: 20194
 	public class GuQinActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x17008EED RID: 36589
-		// (get) Token: 0x0603DC7C RID: 253052 RVA: 0x00EEF783 File Offset: 0x00EED983
+		// Token: 0x170062BF RID: 25279
+		// (get) Token: 0x06032C17 RID: 207895 RVA: 0x00E41447 File Offset: 0x00E3F647
 		[Nullable(1)]
 		protected new GuQinActivityData ActivityBaseData
 		{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC7D RID: 253053 RVA: 0x00EEF790 File Offset: 0x00EED990
+		// Token: 0x06032C18 RID: 207896 RVA: 0x00E41454 File Offset: 0x00E3F654
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DC7E RID: 253054 RVA: 0x00EEF880 File Offset: 0x00EEDA80
+		// Token: 0x06032C19 RID: 207897 RVA: 0x00E41544 File Offset: 0x00E3F744
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GuQinActivitySubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DC7F RID: 253055 RVA: 0x00EEF8C4 File Offset: 0x00EEDAC4
+		// Token: 0x06032C1A RID: 207898 RVA: 0x00E41588 File Offset: 0x00E3F788
 		protected override void OnRefreshView()
 		{
 			this.RefreshCondition();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.RefreshRecommendQuestTips();
 		}
 
-		// Token: 0x0603DC80 RID: 253056 RVA: 0x00EEF99C File Offset: 0x00EEDB9C
+		// Token: 0x06032C1B RID: 207899 RVA: 0x00E41660 File Offset: 0x00E3F860
 		private void RefreshCondition()
 		{
 			ActivityFunctionalTypeA functional = this.CommonInfoPanel.GetFunctional();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity
 			functional.RefreshGeneralPerformance(parameters);
 		}
 
-		// Token: 0x0603DC81 RID: 253057 RVA: 0x00EEF9DD File Offset: 0x00EEDBDD
+		// Token: 0x06032C1C RID: 207900 RVA: 0x00E416A1 File Offset: 0x00E3F8A1
 		private void OnConfirmBtnClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity
 			});
 		}
 
-		// Token: 0x0603DC82 RID: 253058 RVA: 0x00EEF9FC File Offset: 0x00EEDBFC
+		// Token: 0x06032C1D RID: 207901 RVA: 0x00E416C0 File Offset: 0x00E3F8C0
 		private void RefreshRecommendQuestTips()
 		{
 			bool flag = !this.ActivityBaseData.IsRecommendQuestFinished();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC83 RID: 253059 RVA: 0x00EEFA4C File Offset: 0x00EEDC4C
+		// Token: 0x06032C1E RID: 207902 RVA: 0x00E41710 File Offset: 0x00E3F910
 		private void OnRecommendBtnClick()
 		{
 			int? recommendQuestLinkId = this.ActivityBaseData.GetRecommendQuestLinkId();
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity
 			UiManager.Instance.OpenView(EUiViewName.QuestView, recommendQuestLinkId, null);
 		}
 
-		// Token: 0x0603DC84 RID: 253060 RVA: 0x00EEFAAB File Offset: 0x00EEDCAB
+		// Token: 0x06032C1F RID: 207903 RVA: 0x00E4176F File Offset: 0x00E3F96F
 		private void ExtraButtonFunction()
 		{
 			if (!this.ActivityBaseData.SaveFirstCheckRedDotState(EGuQinActivityCheckSaveFlag.PreOpen, 0))
@@ -149,33 +149,33 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0402047A RID: 132218
+		// Token: 0x0401AF4C RID: 110412
 		[Nullable(2)]
 		private ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0402047B RID: 132219
+		// Token: 0x0401AF4D RID: 110413
 		[Nullable(2)]
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 
-		// Token: 0x0200C22D RID: 49709
+		// Token: 0x0200AC3B RID: 44091
 		private class EComponent
 		{
-			// Token: 0x0403AAB4 RID: 240308
+			// Token: 0x040354A8 RID: 218280
 			public const int UiItemComActivityInfo = 0;
 
-			// Token: 0x0403AAB5 RID: 240309
+			// Token: 0x040354A9 RID: 218281
 			public const int PnlProgress = 1;
 
-			// Token: 0x0403AAB6 RID: 240310
+			// Token: 0x040354AA RID: 218282
 			public const int TextProgress = 2;
 
-			// Token: 0x0403AAB7 RID: 240311
+			// Token: 0x040354AB RID: 218283
 			public const int PreOpenTipsItem = 3;
 
-			// Token: 0x0403AAB8 RID: 240312
+			// Token: 0x040354AC RID: 218284
 			public const int PnlUnlockTips = 4;
 
-			// Token: 0x0403AAB9 RID: 240313
+			// Token: 0x040354AD RID: 218285
 			public const int TextUnlockTips = 5;
 		}
 	}

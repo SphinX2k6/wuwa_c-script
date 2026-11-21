@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BAE RID: 2990
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C7C RID: 3196
 	public class IIgnoreEntityIdsCollision
 	{
-		// Token: 0x06004496 RID: 17558 RVA: 0x000AE259 File Offset: 0x000AC459
+		// Token: 0x060048EF RID: 18671 RVA: 0x000B831D File Offset: 0x000B651D
 		public static IIgnoreEntityIdsCollision Create(IIgnoreEntityIdsCollision? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012F7 RID: 4855
-		// (get) Token: 0x06004497 RID: 17559 RVA: 0x000AE278 File Offset: 0x000AC478
+		// Token: 0x170013F2 RID: 5106
+		// (get) Token: 0x060048F0 RID: 18672 RVA: 0x000B833C File Offset: 0x000B653C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026C3 RID: 9923
+		// Token: 0x0400290B RID: 10507
 		private IIgnoreEntityIdsCollision Instance;
 
-		// Token: 0x040026C4 RID: 9924
+		// Token: 0x0400290C RID: 10508
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x040026C5 RID: 9925
+		// Token: 0x0400290D RID: 10509
 		private bool _EntityIdsInited;
 	}
 }

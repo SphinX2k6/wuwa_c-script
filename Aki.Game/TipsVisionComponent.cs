@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018F6 RID: 6390
+// Token: 0x02000DAF RID: 3503
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsVisionComponent : TipsBaseSubComponent
 {
-	// Token: 0x0600BB48 RID: 47944 RVA: 0x002A69F4 File Offset: 0x002A4BF4
+	// Token: 0x06008F32 RID: 36658 RVA: 0x002B1154 File Offset: 0x002AF354
 	public TipsVisionComponent(UUIItem rootUiItem) : base(rootUiItem)
 	{
 		base.CreateThenShowByResourceIdAsync("UiItem_TipsVision", rootUiItem, false);
 	}
 
-	// Token: 0x0600BB49 RID: 47945 RVA: 0x002A6A0C File Offset: 0x002A4C0C
+	// Token: 0x06008F33 RID: 36659 RVA: 0x002B116C File Offset: 0x002AF36C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -61,7 +61,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BB4A RID: 47946 RVA: 0x002A6C2C File Offset: 0x002A4E2C
+	// Token: 0x06008F34 RID: 36660 RVA: 0x002B138C File Offset: 0x002AF58C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TipsVisionComponent.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BB4B RID: 47947 RVA: 0x002A6C70 File Offset: 0x002A4E70
+	// Token: 0x06008F35 RID: 36661 RVA: 0x002B13D0 File Offset: 0x002AF5D0
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(2);
@@ -83,7 +83,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		this.TipsGetWayPanel = new TipsGetWayPanel(item2);
 	}
 
-	// Token: 0x0600BB4C RID: 47948 RVA: 0x002A6CE4 File Offset: 0x002A4EE4
+	// Token: 0x06008F36 RID: 36662 RVA: 0x002B1444 File Offset: 0x002AF644
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Data != null)
@@ -93,7 +93,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB4D RID: 47949 RVA: 0x002A6D00 File Offset: 0x002A4F00
+	// Token: 0x06008F37 RID: 36663 RVA: 0x002B1460 File Offset: 0x002AF660
 	public override void Refresh(ItemTipsData data)
 	{
 		TipsVisionData tipsVisionData = (TipsVisionData)data;
@@ -168,7 +168,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x0600BB4E RID: 47950 RVA: 0x002A6D54 File Offset: 0x002A4F54
+	// Token: 0x06008F38 RID: 36664 RVA: 0x002B14B4 File Offset: 0x002AF6B4
 	private ILayoutItem<global::VisionDetailDescItem> CreateInfoItem(object data, UUIItem uiItem, int index)
 	{
 		global::VisionDetailDescItem descItem = new global::VisionDetailDescItem(uiItem);
@@ -184,7 +184,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		};
 	}
 
-	// Token: 0x0600BB4F RID: 47951 RVA: 0x002A6DB4 File Offset: 0x002A4FB4
+	// Token: 0x06008F39 RID: 36665 RVA: 0x002B1514 File Offset: 0x002AF714
 	private ILayoutItem<TipsAttributeItem> CreateAttributeItem(object data, UUIItem uiItem, int index)
 	{
 		TipsAttributeItem value = new TipsAttributeItem(uiItem, (ITipsAttributeItemData)data);
@@ -195,13 +195,13 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		};
 	}
 
-	// Token: 0x0600BB50 RID: 47952 RVA: 0x002A6DE8 File Offset: 0x002A4FE8
+	// Token: 0x06008F3A RID: 36666 RVA: 0x002B1548 File Offset: 0x002AF748
 	private void DescLayout(VisionDetailInfoComponentData data)
 	{
 		this.Layout.RebuildLayoutByDataNew<VisionDetailDesc>(data.DescData, null);
 	}
 
-	// Token: 0x0600BB51 RID: 47953 RVA: 0x002A6E0F File Offset: 0x002A500F
+	// Token: 0x06008F3B RID: 36667 RVA: 0x002B156F File Offset: 0x002AF76F
 	private void RefreshGetWayPanel(IGetWayItemData[] getWayData)
 	{
 		base.GetItem(5).SetUIActive(getWayData != null && getWayData.Length != 0);
@@ -211,7 +211,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB52 RID: 47954 RVA: 0x002A6E37 File Offset: 0x002A5037
+	// Token: 0x06008F3C RID: 36668 RVA: 0x002B1597 File Offset: 0x002AF797
 	private void RefreshLimitTimePanel(string limitTimeTxt)
 	{
 		base.GetItem(6).SetUIActive(limitTimeTxt != null);
@@ -221,7 +221,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB53 RID: 47955 RVA: 0x002A6E60 File Offset: 0x002A5060
+	// Token: 0x06008F3D RID: 36669 RVA: 0x002B15C0 File Offset: 0x002AF7C0
 	private unsafe void RefreshEquipPanel(TipsVisionData data)
 	{
 		int? equippedId = data.EquippedId;
@@ -258,7 +258,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB54 RID: 47956 RVA: 0x002A6FB8 File Offset: 0x002A51B8
+	// Token: 0x06008F3E RID: 36670 RVA: 0x002B1718 File Offset: 0x002AF918
 	public override void SetLockButtonShow(bool isShow)
 	{
 		Action action = delegate()
@@ -273,15 +273,15 @@ public class TipsVisionComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x04005503 RID: 21763
+	// Token: 0x040055AE RID: 21934
 	[Nullable(2)]
 	private TipsVisionData Data;
 
-	// Token: 0x04005504 RID: 21764
+	// Token: 0x040055AF RID: 21935
 	[Nullable(2)]
 	private TipsLockButton TipsLockButton;
 
-	// Token: 0x04005505 RID: 21765
+	// Token: 0x040055B0 RID: 21936
 	[Nullable(new byte[]
 	{
 		2,
@@ -289,7 +289,7 @@ public class TipsVisionComponent : TipsBaseSubComponent
 	})]
 	private GenericLayoutNew<TipsAttributeItem> TipsAttributePanel;
 
-	// Token: 0x04005506 RID: 21766
+	// Token: 0x040055B1 RID: 21937
 	[Nullable(new byte[]
 	{
 		2,
@@ -297,61 +297,61 @@ public class TipsVisionComponent : TipsBaseSubComponent
 	})]
 	private GenericLayoutNew<global::VisionDetailDescItem> Layout;
 
-	// Token: 0x04005507 RID: 21767
+	// Token: 0x040055B2 RID: 21938
 	[Nullable(2)]
 	private TipsGetWayPanel TipsGetWayPanel;
 
-	// Token: 0x04005508 RID: 21768
+	// Token: 0x040055B3 RID: 21939
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02007E6C RID: 32364
+	// Token: 0x02006FF3 RID: 28659
 	[NullableContext(0)]
 	private class ETipsVisionNode
 	{
-		// Token: 0x040295D9 RID: 169433
+		// Token: 0x04024905 RID: 149765
 		public const int CostText = 0;
 
-		// Token: 0x040295DA RID: 169434
+		// Token: 0x04024906 RID: 149766
 		public const int TxtUpgrade = 1;
 
-		// Token: 0x040295DB RID: 169435
+		// Token: 0x04024907 RID: 149767
 		public const int BtnLock = 2;
 
-		// Token: 0x040295DC RID: 169436
+		// Token: 0x04024908 RID: 149768
 		public const int PanelProperty = 3;
 
-		// Token: 0x040295DD RID: 169437
+		// Token: 0x04024909 RID: 149769
 		public const int PanelPropertyItem = 4;
 
-		// Token: 0x040295DE RID: 169438
+		// Token: 0x0402490A RID: 149770
 		public const int PanelPath = 5;
 
-		// Token: 0x040295DF RID: 169439
+		// Token: 0x0402490B RID: 149771
 		public const int PanelLimitTime = 6;
 
-		// Token: 0x040295E0 RID: 169440
+		// Token: 0x0402490C RID: 149772
 		public const int TxtLimitTime = 7;
 
-		// Token: 0x040295E1 RID: 169441
+		// Token: 0x0402490D RID: 149773
 		public const int PanelEquip = 8;
 
-		// Token: 0x040295E2 RID: 169442
+		// Token: 0x0402490E RID: 149774
 		public const int TextureEquipIcon = 9;
 
-		// Token: 0x040295E3 RID: 169443
+		// Token: 0x0402490F RID: 149775
 		public const int TxtEquip = 10;
 
-		// Token: 0x040295E4 RID: 169444
+		// Token: 0x04024910 RID: 149776
 		public const int SuitElementItem = 11;
 
-		// Token: 0x040295E5 RID: 169445
+		// Token: 0x04024911 RID: 149777
 		public const int DetailVerticalScroller = 12;
 
-		// Token: 0x040295E6 RID: 169446
+		// Token: 0x04024912 RID: 149778
 		public const int PnlEchoStack = 13;
 
-		// Token: 0x040295E7 RID: 169447
+		// Token: 0x04024913 RID: 149779
 		public const int TextNum = 14;
 	}
 }

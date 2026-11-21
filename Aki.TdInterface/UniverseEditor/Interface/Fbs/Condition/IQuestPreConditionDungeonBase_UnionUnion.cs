@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CA4 RID: 19620
+	// Token: 0x0200519D RID: 20893
 	public class IQuestPreConditionDungeonBase_UnionUnion
 	{
-		// Token: 0x17008E70 RID: 36464
-		// (get) Token: 0x0601F1ED RID: 127469 RVA: 0x00458E25 File Offset: 0x00457025
-		// (set) Token: 0x0601F1EE RID: 127470 RVA: 0x00458E2D File Offset: 0x0045702D
+		// Token: 0x1700959E RID: 38302
+		// (get) Token: 0x06020E0F RID: 134671 RVA: 0x0048C975 File Offset: 0x0048AB75
+		// (set) Token: 0x06020E10 RID: 134672 RVA: 0x0048C97D File Offset: 0x0048AB7D
 		public IQuestPreConditionDungeonBase_Union Type { get; set; }
 
-		// Token: 0x17008E71 RID: 36465
-		// (get) Token: 0x0601F1EF RID: 127471 RVA: 0x00458E36 File Offset: 0x00457036
-		// (set) Token: 0x0601F1F0 RID: 127472 RVA: 0x00458E3E File Offset: 0x0045703E
+		// Token: 0x1700959F RID: 38303
+		// (get) Token: 0x06020E11 RID: 134673 RVA: 0x0048C986 File Offset: 0x0048AB86
+		// (set) Token: 0x06020E12 RID: 134674 RVA: 0x0048C98E File Offset: 0x0048AB8E
 		public object Value { get; set; }
 
-		// Token: 0x0601F1F1 RID: 127473 RVA: 0x00458E47 File Offset: 0x00457047
+		// Token: 0x06020E13 RID: 134675 RVA: 0x0048C997 File Offset: 0x0048AB97
 		public IQuestPreConditionDungeonBase_UnionUnion()
 		{
 			this.Type = IQuestPreConditionDungeonBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F1F2 RID: 127474 RVA: 0x00458E5D File Offset: 0x0045705D
+		// Token: 0x06020E14 RID: 134676 RVA: 0x0048C9AD File Offset: 0x0048ABAD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F1F3 RID: 127475 RVA: 0x00458E6F File Offset: 0x0045706F
+		// Token: 0x06020E15 RID: 134677 RVA: 0x0048C9BF File Offset: 0x0048ABBF
 		public IQuestPreConditionDungeonBaseT AsIQuestPreConditionDungeonBase()
 		{
 			return this.As<IQuestPreConditionDungeonBaseT>();
 		}
 
-		// Token: 0x0601F1F4 RID: 127476 RVA: 0x00458E77 File Offset: 0x00457077
+		// Token: 0x06020E16 RID: 134678 RVA: 0x0048C9C7 File Offset: 0x0048ABC7
 		public static IQuestPreConditionDungeonBase_UnionUnion FromIQuestPreConditionDungeonBase(IQuestPreConditionDungeonBaseT _iquestpreconditiondungeonbase)
 		{
 			return new IQuestPreConditionDungeonBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F1F5 RID: 127477 RVA: 0x00458E8C File Offset: 0x0045708C
+		// Token: 0x06020E17 RID: 134679 RVA: 0x0048C9DC File Offset: 0x0048ABDC
 		public IQuestPreConditionDungeonIdT AsIQuestPreConditionDungeonId()
 		{
 			return this.As<IQuestPreConditionDungeonIdT>();
 		}
 
-		// Token: 0x0601F1F6 RID: 127478 RVA: 0x00458E94 File Offset: 0x00457094
+		// Token: 0x06020E18 RID: 134680 RVA: 0x0048C9E4 File Offset: 0x0048ABE4
 		public static IQuestPreConditionDungeonBase_UnionUnion FromIQuestPreConditionDungeonId(IQuestPreConditionDungeonIdT _iquestpreconditiondungeonid)
 		{
 			return new IQuestPreConditionDungeonBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F1F7 RID: 127479 RVA: 0x00458EAC File Offset: 0x004570AC
+		// Token: 0x06020E19 RID: 134681 RVA: 0x0048C9FC File Offset: 0x0048ABFC
 		public static int Pack(FlatBufferBuilder builder, IQuestPreConditionDungeonBase_UnionUnion _o)
 		{
 			IQuestPreConditionDungeonBase_Union type = _o.Type;

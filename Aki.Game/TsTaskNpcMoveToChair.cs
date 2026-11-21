@@ -18,9 +18,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskNpcMoveToChair.TsTaskNpcMoveToChair_C")]
 public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000BA RID: 186
-	// (get) Token: 0x0600049F RID: 1183 RVA: 0x00015F75 File Offset: 0x00014175
-	// (set) Token: 0x060004A0 RID: 1184 RVA: 0x00015F85 File Offset: 0x00014185
+	// Token: 0x170000BB RID: 187
+	// (get) Token: 0x060004A1 RID: 1185 RVA: 0x00016905 File Offset: 0x00014B05
+	// (set) Token: 0x060004A2 RID: 1186 RVA: 0x00016915 File Offset: 0x00014B15
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int ChairEntityId
 	{
@@ -34,9 +34,9 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x170000BB RID: 187
-	// (get) Token: 0x060004A1 RID: 1185 RVA: 0x00015F96 File Offset: 0x00014196
-	// (set) Token: 0x060004A2 RID: 1186 RVA: 0x00015FA6 File Offset: 0x000141A6
+	// Token: 0x170000BC RID: 188
+	// (get) Token: 0x060004A3 RID: 1187 RVA: 0x00016926 File Offset: 0x00014B26
+	// (set) Token: 0x060004A4 RID: 1188 RVA: 0x00016936 File Offset: 0x00014B36
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool QuickFinish
 	{
@@ -50,9 +50,9 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x170000BC RID: 188
-	// (get) Token: 0x060004A3 RID: 1187 RVA: 0x00015FB7 File Offset: 0x000141B7
-	// (set) Token: 0x060004A4 RID: 1188 RVA: 0x00015FBF File Offset: 0x000141BF
+	// Token: 0x170000BD RID: 189
+	// (get) Token: 0x060004A5 RID: 1189 RVA: 0x00016947 File Offset: 0x00014B47
+	// (set) Token: 0x060004A6 RID: 1190 RVA: 0x0001694F File Offset: 0x00014B4F
 	private TsTaskNpcMoveToChair.ETaskPhase Phase
 	{
 		get
@@ -69,7 +69,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x060004A5 RID: 1189 RVA: 0x00015FD4 File Offset: 0x000141D4
+	// Token: 0x060004A7 RID: 1191 RVA: 0x00016964 File Offset: 0x00014B64
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -84,7 +84,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x060004A6 RID: 1190 RVA: 0x0001603C File Offset: 0x0001423C
+	// Token: 0x060004A8 RID: 1192 RVA: 0x000169CC File Offset: 0x00014BCC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
@@ -174,7 +174,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.Phase = TsTaskNpcMoveToChair.ETaskPhase.Execute;
 	}
 
-	// Token: 0x060004A7 RID: 1191 RVA: 0x000162DC File Offset: 0x000144DC
+	// Token: 0x060004A9 RID: 1193 RVA: 0x00016C6C File Offset: 0x00014E6C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -214,7 +214,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x060004A8 RID: 1192 RVA: 0x0001637C File Offset: 0x0001457C
+	// Token: 0x060004AA RID: 1194 RVA: 0x00016D0C File Offset: 0x00014F0C
 	protected override void OnAbort()
 	{
 		if (this.Phase == TsTaskNpcMoveToChair.ETaskPhase.MoveNearby || this.Phase == TsTaskNpcMoveToChair.ETaskPhase.MoveClose)
@@ -236,7 +236,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.ReleaseChair();
 	}
 
-	// Token: 0x060004A9 RID: 1193 RVA: 0x000163D1 File Offset: 0x000145D1
+	// Token: 0x060004AB RID: 1195 RVA: 0x00016D61 File Offset: 0x00014F61
 	protected override void OnClear()
 	{
 		this.Character = null;
@@ -246,7 +246,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.IsExecuteTurnTo = false;
 	}
 
-	// Token: 0x060004AA RID: 1194 RVA: 0x000163F6 File Offset: 0x000145F6
+	// Token: 0x060004AC RID: 1196 RVA: 0x00016D86 File Offset: 0x00014F86
 	private void ReleaseChair()
 	{
 		if (this.IsPossessed && this.ChairController != null)
@@ -257,7 +257,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x060004AB RID: 1195 RVA: 0x0001642C File Offset: 0x0001462C
+	// Token: 0x060004AD RID: 1197 RVA: 0x00016DBC File Offset: 0x00014FBC
 	private void ExecuteMoveNearby()
 	{
 		if (this.IsExecuteMoveNearby)
@@ -301,7 +301,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.MoveComp.MoveAlongPath(config, null);
 	}
 
-	// Token: 0x060004AC RID: 1196 RVA: 0x00016524 File Offset: 0x00014724
+	// Token: 0x060004AE RID: 1198 RVA: 0x00016EB4 File Offset: 0x000150B4
 	private void ExecuteMoveClose()
 	{
 		if (this.IsExecuteMoveClose)
@@ -345,7 +345,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.MoveComp.MoveAlongPath(config, null);
 	}
 
-	// Token: 0x060004AD RID: 1197 RVA: 0x0001661C File Offset: 0x0001481C
+	// Token: 0x060004AF RID: 1199 RVA: 0x00016FAC File Offset: 0x000151AC
 	private void ExecuteTurnTo()
 	{
 		if (GravityUtils.Instance.GetAngleOffsetFromCurrentToInputAbs(this.Character) < 10f)
@@ -366,7 +366,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		AiControllerLibrary.TurnToTarget(this.Character, this.TempVec, 200f, false, 0f);
 	}
 
-	// Token: 0x060004AE RID: 1198 RVA: 0x000166F2 File Offset: 0x000148F2
+	// Token: 0x060004B0 RID: 1200 RVA: 0x00017082 File Offset: 0x00015282
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskNpcMoveToChair._ClassPtr == IntPtr.Zero)
@@ -376,23 +376,23 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		return TsTaskNpcMoveToChair._ClassPtr;
 	}
 
-	// Token: 0x060004AF RID: 1199 RVA: 0x00016718 File Offset: 0x00014918
+	// Token: 0x060004B1 RID: 1201 RVA: 0x000170A8 File Offset: 0x000152A8
 	public TsTaskNpcMoveToChair() : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcMoveToChair.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060004B0 RID: 1200 RVA: 0x00016740 File Offset: 0x00014940
+	// Token: 0x060004B2 RID: 1202 RVA: 0x000170D0 File Offset: 0x000152D0
 	[NullableContext(1)]
 	public TsTaskNpcMoveToChair(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcMoveToChair.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060004B1 RID: 1201 RVA: 0x00016773 File Offset: 0x00014973
+	// Token: 0x060004B3 RID: 1203 RVA: 0x00017103 File Offset: 0x00015303
 	protected TsTaskNpcMoveToChair(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060004B2 RID: 1202 RVA: 0x0001677C File Offset: 0x0001497C
+	// Token: 0x060004B4 RID: 1204 RVA: 0x0001710C File Offset: 0x0001530C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -401,7 +401,7 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.ReceiveExecuteAI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060004B3 RID: 1203 RVA: 0x000167AC File Offset: 0x000149AC
+	// Token: 0x060004B5 RID: 1205 RVA: 0x0001713C File Offset: 0x0001533C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -410,106 +410,106 @@ public class TsTaskNpcMoveToChair : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.ReceiveTickAI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x0400032F RID: 815
+	// Token: 0x04000331 RID: 817
 	private const int TOLERANCE = 10;
 
-	// Token: 0x04000330 RID: 816
+	// Token: 0x04000332 RID: 818
 	private const int TURN_SPEED = 200;
 
-	// Token: 0x04000331 RID: 817
+	// Token: 0x04000333 RID: 819
 	private const int NEARBY_CHAIR_OFFSET = 70;
 
-	// Token: 0x04000332 RID: 818
+	// Token: 0x04000334 RID: 820
 	private const int MOVE_TO_CHAIR_SPEED = 70;
 
-	// Token: 0x04000333 RID: 819
+	// Token: 0x04000335 RID: 821
 	private const int MOVE_TO_NEARBY_CHAIR_SPEED = 100;
 
-	// Token: 0x04000334 RID: 820
+	// Token: 0x04000336 RID: 822
 	private const int MOVE_TO_CHAIR_DISTANCE_TOLERANCE = 5;
 
-	// Token: 0x04000335 RID: 821
+	// Token: 0x04000337 RID: 823
 	private EMovementMode MovementMode;
 
-	// Token: 0x04000336 RID: 822
+	// Token: 0x04000338 RID: 824
 	private TsTaskNpcMoveToChair.ETaskPhase PhaseInternal;
 
-	// Token: 0x04000337 RID: 823
+	// Token: 0x04000339 RID: 825
 	private bool IsExecuteMoveNearby;
 
-	// Token: 0x04000338 RID: 824
+	// Token: 0x0400033A RID: 826
 	private bool IsExecuteMoveClose;
 
-	// Token: 0x04000339 RID: 825
+	// Token: 0x0400033B RID: 827
 	private bool IsExecuteTurnTo;
 
-	// Token: 0x0400033A RID: 826
+	// Token: 0x0400033C RID: 828
 	private bool IsPossessed;
 
-	// Token: 0x0400033B RID: 827
+	// Token: 0x0400033D RID: 829
 	private Entity Entity;
 
-	// Token: 0x0400033C RID: 828
+	// Token: 0x0400033E RID: 830
 	private CharacterActorComponent Character;
 
-	// Token: 0x0400033D RID: 829
+	// Token: 0x0400033F RID: 831
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400033E RID: 830
+	// Token: 0x04000340 RID: 832
 	private PawnChairController ChairController;
 
-	// Token: 0x0400033F RID: 831
+	// Token: 0x04000341 RID: 833
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000340 RID: 832
+	// Token: 0x04000342 RID: 834
 	private int TsChairEntityId;
 
-	// Token: 0x04000341 RID: 833
+	// Token: 0x04000343 RID: 835
 	private bool TsQuickFinish;
 
-	// Token: 0x04000342 RID: 834
+	// Token: 0x04000344 RID: 836
 	private Vector ChairNearbyPos;
 
-	// Token: 0x04000343 RID: 835
+	// Token: 0x04000345 RID: 837
 	private Vector ChairSitPos;
 
-	// Token: 0x04000344 RID: 836
+	// Token: 0x04000346 RID: 838
 	private Vector TempVec;
 
-	// Token: 0x04000345 RID: 837
+	// Token: 0x04000347 RID: 839
 	private Rotator TempRotator;
 
-	// Token: 0x04000346 RID: 838
+	// Token: 0x04000348 RID: 840
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/LevelAiTask/TsTaskNpcMoveToChair.TsTaskNpcMoveToChair_C";
 
-	// Token: 0x04000347 RID: 839
+	// Token: 0x04000349 RID: 841
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000348 RID: 840
+	// Token: 0x0400034A RID: 842
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000349 RID: 841
+	// Token: 0x0400034B RID: 843
 	private static int __PropertyOffset_ChairEntityId;
 
-	// Token: 0x0400034A RID: 842
+	// Token: 0x0400034C RID: 844
 	private static int __PropertyOffset_QuickFinish;
 
-	// Token: 0x02007373 RID: 29555
+	// Token: 0x020064F6 RID: 25846
 	[NullableContext(0)]
 	private enum ETaskPhase
 	{
-		// Token: 0x040265D7 RID: 157143
+		// Token: 0x040218CD RID: 137421
 		None,
-		// Token: 0x040265D8 RID: 157144
+		// Token: 0x040218CE RID: 137422
 		Execute,
-		// Token: 0x040265D9 RID: 157145
+		// Token: 0x040218CF RID: 137423
 		MoveNearby,
-		// Token: 0x040265DA RID: 157146
+		// Token: 0x040218D0 RID: 137424
 		MoveClose,
-		// Token: 0x040265DB RID: 157147
+		// Token: 0x040218D1 RID: 137425
 		TurnTo,
-		// Token: 0x040265DC RID: 157148
+		// Token: 0x040218D2 RID: 137426
 		Finish
 	}
 }

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A9B RID: 19099
+	// Token: 0x02003A43 RID: 14915
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,14 +15,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBuildingDevelopTypeGridItem : LoopScrollMediumItemGrid<TrapDefenseBuildingDevelopItemData>
 	{
-		// Token: 0x06031805 RID: 202757 RVA: 0x00B7993C File Offset: 0x00B77B3C
+		// Token: 0x06026595 RID: 157077 RVA: 0x00ABD8F0 File Offset: 0x00ABBAF0
 		protected override void OnStart()
 		{
 			base.BindOnExtendTogglePress(new Action<MediumItemGridExtendCallback>(this.OnToggleDown));
 			base.BindOnExtendToggleRelease(new Action<MediumItemGridExtendCallback>(this.OnToggleUp));
 		}
 
-		// Token: 0x06031806 RID: 202758 RVA: 0x00B79962 File Offset: 0x00B77B62
+		// Token: 0x06026596 RID: 157078 RVA: 0x00ABD916 File Offset: 0x00ABBB16
 		protected override void OnRefresh(TrapDefenseBuildingDevelopItemData data, bool isSelected, int gridIndex)
 		{
 			this.TrapData = data;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateInfo();
 		}
 
-		// Token: 0x06031807 RID: 202759 RVA: 0x00B7997C File Offset: 0x00B77B7C
+		// Token: 0x06026597 RID: 157079 RVA: 0x00ABD930 File Offset: 0x00ABBB30
 		public void UpdateInfo()
 		{
 			string bottomTextId = this.TrapData.GetIsUnlock() ? "TowerDefense_Building_BdLv_Text" : "TowerDefense_Building_BdLock_Text";
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06031808 RID: 202760 RVA: 0x00B79B5B File Offset: 0x00B77D5B
+		// Token: 0x06026598 RID: 157080 RVA: 0x00ABDB0F File Offset: 0x00ABBD0F
 		public void OnForceSelected()
 		{
 			if (TrapDefenseModel.Instance.ViewModelBuildingDevelop.SetOrganClicked(this.TrapData))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetSelected(true, true);
 		}
 
-		// Token: 0x06031809 RID: 202761 RVA: 0x00B79B82 File Offset: 0x00B77D82
+		// Token: 0x06026599 RID: 157081 RVA: 0x00ABDB36 File Offset: 0x00ABBD36
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
@@ -108,24 +108,24 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603180A RID: 202762 RVA: 0x00B79BC2 File Offset: 0x00B77DC2
+		// Token: 0x0602659A RID: 157082 RVA: 0x00ABDB76 File Offset: 0x00ABBD76
 		protected override bool OnCanExecuteChange()
 		{
 			return this.CanExecuteChangeCb == null || this.CanExecuteChangeCb(this.TrapData);
 		}
 
-		// Token: 0x0603180B RID: 202763 RVA: 0x00B79BDF File Offset: 0x00B77DDF
+		// Token: 0x0602659B RID: 157083 RVA: 0x00ABDB93 File Offset: 0x00ABBD93
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0603180C RID: 202764 RVA: 0x00B79BE9 File Offset: 0x00B77DE9
+		// Token: 0x0602659C RID: 157084 RVA: 0x00ABDB9D File Offset: 0x00ABBD9D
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603180D RID: 202765 RVA: 0x00B79BEB File Offset: 0x00B77DEB
+		// Token: 0x0602659D RID: 157085 RVA: 0x00ABDB9F File Offset: 0x00ABBD9F
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603180E RID: 202766 RVA: 0x00B79C0E File Offset: 0x00B77E0E
+		// Token: 0x0602659E RID: 157086 RVA: 0x00ABDBC2 File Offset: 0x00ABBDC2
 		private void OnToggleDown(MediumItemGridExtendCallback _)
 		{
 			Action<TrapDefenseBuildingDevelopTypeGridItem, TrapDefenseBuildingDevelopItemData> onPointDownCb = this.OnPointDownCb;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			onPointDownCb(this, this.TrapData);
 		}
 
-		// Token: 0x0603180F RID: 202767 RVA: 0x00B79C27 File Offset: 0x00B77E27
+		// Token: 0x0602659F RID: 157087 RVA: 0x00ABDBDB File Offset: 0x00ABBDDB
 		private void OnToggleUp(MediumItemGridExtendCallback _)
 		{
 			Action<TrapDefenseBuildingDevelopTypeGridItem, TrapDefenseBuildingDevelopItemData> onPointUpCb = this.OnPointUpCb;
@@ -161,25 +161,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			onPointUpCb(this, this.TrapData);
 		}
 
-		// Token: 0x06031810 RID: 202768 RVA: 0x00B79C40 File Offset: 0x00B77E40
+		// Token: 0x060265A0 RID: 157088 RVA: 0x00ABDBF4 File Offset: 0x00ABBDF4
 		public void UpdateState()
 		{
 			this.UpdateInfo();
 		}
 
-		// Token: 0x0401A767 RID: 108391
+		// Token: 0x040150B9 RID: 86201
 		private TrapDefenseBuildingDevelopItemData TrapData;
 
-		// Token: 0x0401A768 RID: 108392
+		// Token: 0x040150BA RID: 86202
 		public Action<TrapDefenseBuildingDevelopItemData> OnItemClickCallback;
 
-		// Token: 0x0401A769 RID: 108393
+		// Token: 0x040150BB RID: 86203
 		public Func<TrapDefenseBuildingDevelopItemData, bool> CanExecuteChangeCb;
 
-		// Token: 0x0401A76A RID: 108394
+		// Token: 0x040150BC RID: 86204
 		public Action<TrapDefenseBuildingDevelopTypeGridItem, TrapDefenseBuildingDevelopItemData> OnPointDownCb;
 
-		// Token: 0x0401A76B RID: 108395
+		// Token: 0x040150BD RID: 86205
 		public Action<TrapDefenseBuildingDevelopTypeGridItem, TrapDefenseBuildingDevelopItemData> OnPointUpCb;
 	}
 }

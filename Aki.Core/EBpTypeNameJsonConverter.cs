@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 // Token: 0x02000111 RID: 273
 public class EBpTypeNameJsonConverter : JsonConverter<EBpTypeName>
 {
-	// Token: 0x06000A0D RID: 2573 RVA: 0x00033714 File Offset: 0x00031914
+	// Token: 0x06000A5E RID: 2654 RVA: 0x000340F0 File Offset: 0x000322F0
 	public override EBpTypeName Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		string @string = reader.GetString();
@@ -16,7 +16,7 @@ public class EBpTypeNameJsonConverter : JsonConverter<EBpTypeName>
 		return EBpTypeNameExtensions.FromString(@string);
 	}
 
-	// Token: 0x06000A0E RID: 2574 RVA: 0x00033738 File Offset: 0x00031938
+	// Token: 0x06000A5F RID: 2655 RVA: 0x00034114 File Offset: 0x00032314
 	public override void Write(Utf8JsonWriter writer, EBpTypeName value, JsonSerializerOptions options)
 	{
 		writer.WriteStringValue(value.ToEnumString());

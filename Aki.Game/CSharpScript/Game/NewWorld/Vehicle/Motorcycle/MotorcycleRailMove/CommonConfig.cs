@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007036 RID: 28726
+	// Token: 0x020061B7 RID: 25015
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonConfig
 	{
-		// Token: 0x06045F3A RID: 286522 RVA: 0x0116DA88 File Offset: 0x0116BC88
+		// Token: 0x0603C120 RID: 246048 RVA: 0x011177D0 File Offset: 0x011159D0
 		public void UpdateFromUeData(SMotorRailMove_CommonConfig data)
 		{
 			this.ModifyVehicleTagsOnEnter.Clear();
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.MaxBlockingTimeOut = data.MaxBlockingTimeOut;
 		}
 
-		// Token: 0x06045F3B RID: 286523 RVA: 0x0116DB7C File Offset: 0x0116BD7C
+		// Token: 0x0603C121 RID: 246049 RVA: 0x011178D0 File Offset: 0x01115AD0
 		public void DeepCopy(CommonConfig other)
 		{
 			this.ModifyVehicleTagsOnEnter.Clear();
@@ -65,16 +65,16 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.MaxBlockingTimeOut = other.MaxBlockingTimeOut;
 		}
 
-		// Token: 0x0402497C RID: 149884
+		// Token: 0x0401FC32 RID: 130098
 		public readonly Dictionary<int, bool> ModifyVehicleTagsOnEnter = new Dictionary<int, bool>();
 
-		// Token: 0x0402497D RID: 149885
+		// Token: 0x0401FC33 RID: 130099
 		public readonly Dictionary<int, bool> ModifyVehicleTagsOnExit = new Dictionary<int, bool>();
 
-		// Token: 0x0402497E RID: 149886
+		// Token: 0x0401FC34 RID: 130100
 		public bool EnableBlockingCheck;
 
-		// Token: 0x0402497F RID: 149887
+		// Token: 0x0401FC35 RID: 130101
 		public float MaxBlockingTimeOut;
 	}
 }

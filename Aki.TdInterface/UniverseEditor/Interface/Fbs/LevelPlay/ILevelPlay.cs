@@ -9,11 +9,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044E8 RID: 17640
+	// Token: 0x02004950 RID: 18768
 	public struct ILevelPlay : IFlatbufferObject
 	{
-		// Token: 0x17007C99 RID: 31897
-		// (get) Token: 0x0601A650 RID: 108112 RVA: 0x003C4877 File Offset: 0x003C2A77
+		// Token: 0x170082D8 RID: 33496
+		// (get) Token: 0x0601BE21 RID: 114209 RVA: 0x003F0A83 File Offset: 0x003EEC83
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -22,39 +22,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A651 RID: 108113 RVA: 0x003C4884 File Offset: 0x003C2A84
+		// Token: 0x0601BE22 RID: 114210 RVA: 0x003F0A90 File Offset: 0x003EEC90
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A652 RID: 108114 RVA: 0x003C488C File Offset: 0x003C2A8C
+		// Token: 0x0601BE23 RID: 114211 RVA: 0x003F0A98 File Offset: 0x003EEC98
 		public static ILevelPlay GetRootAsILevelPlay(ByteBuffer _bb)
 		{
 			return ILevelPlay.GetRootAsILevelPlay(_bb, default(ILevelPlay));
 		}
 
-		// Token: 0x0601A653 RID: 108115 RVA: 0x003C48A8 File Offset: 0x003C2AA8
+		// Token: 0x0601BE24 RID: 114212 RVA: 0x003F0AB4 File Offset: 0x003EECB4
 		public static ILevelPlay GetRootAsILevelPlay(ByteBuffer _bb, ILevelPlay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A654 RID: 108116 RVA: 0x003C48C5 File Offset: 0x003C2AC5
+		// Token: 0x0601BE25 RID: 114213 RVA: 0x003F0AD1 File Offset: 0x003EECD1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A655 RID: 108117 RVA: 0x003C48D4 File Offset: 0x003C2AD4
+		// Token: 0x0601BE26 RID: 114214 RVA: 0x003F0AE0 File Offset: 0x003EECE0
 		public ILevelPlay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007C9A RID: 31898
-		// (get) Token: 0x0601A656 RID: 108118 RVA: 0x003C48E4 File Offset: 0x003C2AE4
+		// Token: 0x170082D9 RID: 33497
+		// (get) Token: 0x0601BE27 RID: 114215 RVA: 0x003F0AF0 File Offset: 0x003EECF0
 		public string ObjType
 		{
 			get
@@ -68,19 +68,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A657 RID: 108119 RVA: 0x003C491B File Offset: 0x003C2B1B
+		// Token: 0x0601BE28 RID: 114216 RVA: 0x003F0B27 File Offset: 0x003EED27
 		public Span<byte> GetObjTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601A658 RID: 108120 RVA: 0x003C492A File Offset: 0x003C2B2A
+		// Token: 0x0601BE29 RID: 114217 RVA: 0x003F0B36 File Offset: 0x003EED36
 		public byte[] GetObjTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x0601A659 RID: 108121 RVA: 0x003C4938 File Offset: 0x003C2B38
+		// Token: 0x0601BE2A RID: 114218 RVA: 0x003F0B44 File Offset: 0x003EED44
 		public string Children(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007C9B RID: 31899
-		// (get) Token: 0x0601A65A RID: 108122 RVA: 0x003C4974 File Offset: 0x003C2B74
+		// Token: 0x170082DA RID: 33498
+		// (get) Token: 0x0601BE2B RID: 114219 RVA: 0x003F0B80 File Offset: 0x003EED80
 		public int ChildrenLength
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A65B RID: 108123 RVA: 0x003C49A0 File Offset: 0x003C2BA0
+		// Token: 0x0601BE2C RID: 114220 RVA: 0x003F0BAC File Offset: 0x003EEDAC
 		public string Reference(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007C9C RID: 31900
-		// (get) Token: 0x0601A65C RID: 108124 RVA: 0x003C49DC File Offset: 0x003C2BDC
+		// Token: 0x170082DB RID: 33499
+		// (get) Token: 0x0601BE2D RID: 114221 RVA: 0x003F0BE8 File Offset: 0x003EEDE8
 		public int ReferenceLength
 		{
 			get
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A65D RID: 108125 RVA: 0x003C4A08 File Offset: 0x003C2C08
+		// Token: 0x0601BE2E RID: 114222 RVA: 0x003F0C14 File Offset: 0x003EEE14
 		public string WeakReference(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -143,8 +143,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007C9D RID: 31901
-		// (get) Token: 0x0601A65E RID: 108126 RVA: 0x003C4A44 File Offset: 0x003C2C44
+		// Token: 0x170082DC RID: 33500
+		// (get) Token: 0x0601BE2F RID: 114223 RVA: 0x003F0C50 File Offset: 0x003EEE50
 		public int WeakReferenceLength
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C9E RID: 31902
-		// (get) Token: 0x0601A65F RID: 108127 RVA: 0x003C4A70 File Offset: 0x003C2C70
+		// Token: 0x170082DD RID: 33501
+		// (get) Token: 0x0601BE30 RID: 114224 RVA: 0x003F0C7C File Offset: 0x003EEE7C
 		public int Id
 		{
 			get
@@ -173,8 +173,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C9F RID: 31903
-		// (get) Token: 0x0601A660 RID: 108128 RVA: 0x003C4AB0 File Offset: 0x003C2CB0
+		// Token: 0x170082DE RID: 33502
+		// (get) Token: 0x0601BE31 RID: 114225 RVA: 0x003F0CBC File Offset: 0x003EEEBC
 		public string Key
 		{
 			get
@@ -188,20 +188,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A661 RID: 108129 RVA: 0x003C4AE8 File Offset: 0x003C2CE8
+		// Token: 0x0601BE32 RID: 114226 RVA: 0x003F0CF4 File Offset: 0x003EEEF4
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0601A662 RID: 108130 RVA: 0x003C4AF8 File Offset: 0x003C2CF8
+		// Token: 0x0601BE33 RID: 114227 RVA: 0x003F0D04 File Offset: 0x003EEF04
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(14);
 		}
 
-		// Token: 0x17007CA0 RID: 31904
-		// (get) Token: 0x0601A663 RID: 108131 RVA: 0x003C4B08 File Offset: 0x003C2D08
+		// Token: 0x170082DF RID: 33503
+		// (get) Token: 0x0601BE34 RID: 114228 RVA: 0x003F0D14 File Offset: 0x003EEF14
 		public ELevelPlayType Type
 		{
 			get
@@ -215,8 +215,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CA1 RID: 31905
-		// (get) Token: 0x0601A664 RID: 108132 RVA: 0x003C4B48 File Offset: 0x003C2D48
+		// Token: 0x170082E0 RID: 33504
+		// (get) Token: 0x0601BE35 RID: 114229 RVA: 0x003F0D54 File Offset: 0x003EEF54
 		public EDecisionBtType DecisionBtType
 		{
 			get
@@ -230,20 +230,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A665 RID: 108133 RVA: 0x003C4B88 File Offset: 0x003C2D88
-		public ESystemModuleName BindSystems(int j)
-		{
-			int num = this.__p.__offset(20);
-			if (num == 0)
-			{
-				return ESystemModuleName.Common;
-			}
-			return (ESystemModuleName)this.__p.bb.Get(this.__p.__vector(num) + j);
-		}
-
-		// Token: 0x17007CA2 RID: 31906
-		// (get) Token: 0x0601A666 RID: 108134 RVA: 0x003C4BC8 File Offset: 0x003C2DC8
-		public int BindSystemsLength
+		// Token: 0x170082E1 RID: 33505
+		// (get) Token: 0x0601BE36 RID: 114230 RVA: 0x003F0D94 File Offset: 0x003EEF94
+		public int PrefabId
 		{
 			get
 			{
@@ -252,20 +241,46 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 				{
 					return 0;
 				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x0601BE37 RID: 114231 RVA: 0x003F0DD4 File Offset: 0x003EEFD4
+		public ESystemModuleName BindSystems(int j)
+		{
+			int num = this.__p.__offset(22);
+			if (num == 0)
+			{
+				return ESystemModuleName.Common;
+			}
+			return (ESystemModuleName)this.__p.bb.Get(this.__p.__vector(num) + j);
+		}
+
+		// Token: 0x170082E2 RID: 33506
+		// (get) Token: 0x0601BE38 RID: 114232 RVA: 0x003F0E14 File Offset: 0x003EF014
+		public int BindSystemsLength
+		{
+			get
+			{
+				int num = this.__p.__offset(22);
+				if (num == 0)
+				{
+					return 0;
+				}
 				return this.__p.__vector_len(num);
 			}
 		}
 
-		// Token: 0x0601A667 RID: 108135 RVA: 0x003C4BF4 File Offset: 0x003C2DF4
+		// Token: 0x0601BE39 RID: 114233 RVA: 0x003F0E40 File Offset: 0x003EF040
 		public Span<ESystemModuleName> GetBindSystemsBytes()
 		{
-			return this.__p.__vector_as_span<ESystemModuleName>(20, 1);
+			return this.__p.__vector_as_span<ESystemModuleName>(22, 1);
 		}
 
-		// Token: 0x0601A668 RID: 108136 RVA: 0x003C4C04 File Offset: 0x003C2E04
+		// Token: 0x0601BE3A RID: 114234 RVA: 0x003F0E50 File Offset: 0x003EF050
 		public ESystemModuleName[] GetBindSystemsArray()
 		{
-			int num = this.__p.__offset(20);
+			int num = this.__p.__offset(22);
 			if (num == 0)
 			{
 				return null;
@@ -280,13 +295,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return array;
 		}
 
-		// Token: 0x17007CA3 RID: 31907
-		// (get) Token: 0x0601A669 RID: 108137 RVA: 0x003C4C70 File Offset: 0x003C2E70
+		// Token: 0x170082E3 RID: 33507
+		// (get) Token: 0x0601BE3B RID: 114235 RVA: 0x003F0EBC File Offset: 0x003EF0BC
 		public string TidName
 		{
 			get
 			{
-				int num = this.__p.__offset(22);
+				int num = this.__p.__offset(24);
 				if (num == 0)
 				{
 					return null;
@@ -295,36 +310,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A66A RID: 108138 RVA: 0x003C4CA8 File Offset: 0x003C2EA8
+		// Token: 0x0601BE3C RID: 114236 RVA: 0x003F0EF4 File Offset: 0x003EF0F4
 		public Span<byte> GetTidNameBytes()
 		{
-			return this.__p.__vector_as_span<byte>(22, 1);
+			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x0601A66B RID: 108139 RVA: 0x003C4CB8 File Offset: 0x003C2EB8
+		// Token: 0x0601BE3D RID: 114237 RVA: 0x003F0F04 File Offset: 0x003EF104
 		public byte[] GetTidNameArray()
 		{
-			return this.__p.__vector_as_array<byte>(22);
+			return this.__p.__vector_as_array<byte>(24);
 		}
 
-		// Token: 0x17007CA4 RID: 31908
-		// (get) Token: 0x0601A66C RID: 108140 RVA: 0x003C4CC8 File Offset: 0x003C2EC8
+		// Token: 0x170082E4 RID: 33508
+		// (get) Token: 0x0601BE3E RID: 114238 RVA: 0x003F0F14 File Offset: 0x003EF114
 		public int LevelId
-		{
-			get
-			{
-				int num = this.__p.__offset(24);
-				if (num == 0)
-				{
-					return 0;
-				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x17007CA5 RID: 31909
-		// (get) Token: 0x0601A66D RID: 108141 RVA: 0x003C4D08 File Offset: 0x003C2F08
-		public int PackId
 		{
 			get
 			{
@@ -337,9 +337,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CA6 RID: 31910
-		// (get) Token: 0x0601A66E RID: 108142 RVA: 0x003C4D48 File Offset: 0x003C2F48
-		public int InstanceId
+		// Token: 0x170082E5 RID: 33509
+		// (get) Token: 0x0601BE3F RID: 114239 RVA: 0x003F0F54 File Offset: 0x003EF154
+		public int PackId
 		{
 			get
 			{
@@ -352,92 +352,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CA7 RID: 31911
-		// (get) Token: 0x0601A66F RID: 108143 RVA: 0x003C4D88 File Offset: 0x003C2F88
-		public bool IsOnlineStandalone
+		// Token: 0x170082E6 RID: 33510
+		// (get) Token: 0x0601BE40 RID: 114240 RVA: 0x003F0F94 File Offset: 0x003EF194
+		public int InstanceId
 		{
 			get
 			{
 				int num = this.__p.__offset(30);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
-			}
-		}
-
-		// Token: 0x0601A670 RID: 108144 RVA: 0x003C4DC8 File Offset: 0x003C2FC8
-		public string SpecifiedOnlineStandaloneParentUids(int j)
-		{
-			int num = this.__p.__offset(32);
-			if (num == 0)
-			{
-				return null;
-			}
-			return this.__p.__string(this.__p.__vector(num) + j * 4);
-		}
-
-		// Token: 0x17007CA8 RID: 31912
-		// (get) Token: 0x0601A671 RID: 108145 RVA: 0x003C4E04 File Offset: 0x003C3004
-		public int SpecifiedOnlineStandaloneParentUidsLength
-		{
-			get
-			{
-				int num = this.__p.__offset(32);
-				if (num == 0)
-				{
-					return 0;
-				}
-				return this.__p.__vector_len(num);
-			}
-		}
-
-		// Token: 0x17007CA9 RID: 31913
-		// (get) Token: 0x0601A672 RID: 108146 RVA: 0x003C4E30 File Offset: 0x003C3030
-		public ELevelPlayOnlineType OnlineType
-		{
-			get
-			{
-				int num = this.__p.__offset(34);
-				if (num == 0)
-				{
-					return ELevelPlayOnlineType.Local;
-				}
-				return (ELevelPlayOnlineType)this.__p.bb.Get(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x17007CAA RID: 31914
-		// (get) Token: 0x0601A673 RID: 108147 RVA: 0x003C4E70 File Offset: 0x003C3070
-		public string InternalDest
-		{
-			get
-			{
-				int num = this.__p.__offset(36);
-				if (num == 0)
-				{
-					return null;
-				}
-				return this.__p.__string(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x0601A674 RID: 108148 RVA: 0x003C4EA8 File Offset: 0x003C30A8
-		public Span<byte> GetInternalDestBytes()
-		{
-			return this.__p.__vector_as_span<byte>(36, 1);
-		}
-
-		// Token: 0x0601A675 RID: 108149 RVA: 0x003C4EB8 File Offset: 0x003C30B8
-		public byte[] GetInternalDestArray()
-		{
-			return this.__p.__vector_as_array<byte>(36);
-		}
-
-		// Token: 0x17007CAB RID: 31915
-		// (get) Token: 0x0601A676 RID: 108150 RVA: 0x003C4EC8 File Offset: 0x003C30C8
-		public int LevelAdditiveId
-		{
-			get
-			{
-				int num = this.__p.__offset(38);
 				if (num == 0)
 				{
 					return 0;
@@ -446,9 +367,88 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CAC RID: 31916
-		// (get) Token: 0x0601A677 RID: 108151 RVA: 0x003C4F08 File Offset: 0x003C3108
-		public int LevelAiTeamLevelId
+		// Token: 0x170082E7 RID: 33511
+		// (get) Token: 0x0601BE41 RID: 114241 RVA: 0x003F0FD4 File Offset: 0x003EF1D4
+		public bool IsOnlineStandalone
+		{
+			get
+			{
+				int num = this.__p.__offset(32);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x0601BE42 RID: 114242 RVA: 0x003F1014 File Offset: 0x003EF214
+		public string SpecifiedOnlineStandaloneParentUids(int j)
+		{
+			int num = this.__p.__offset(34);
+			if (num == 0)
+			{
+				return null;
+			}
+			return this.__p.__string(this.__p.__vector(num) + j * 4);
+		}
+
+		// Token: 0x170082E8 RID: 33512
+		// (get) Token: 0x0601BE43 RID: 114243 RVA: 0x003F1050 File Offset: 0x003EF250
+		public int SpecifiedOnlineStandaloneParentUidsLength
+		{
+			get
+			{
+				int num = this.__p.__offset(34);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x170082E9 RID: 33513
+		// (get) Token: 0x0601BE44 RID: 114244 RVA: 0x003F107C File Offset: 0x003EF27C
+		public ELevelPlayOnlineType OnlineType
+		{
+			get
+			{
+				int num = this.__p.__offset(36);
+				if (num == 0)
+				{
+					return ELevelPlayOnlineType.Local;
+				}
+				return (ELevelPlayOnlineType)this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x170082EA RID: 33514
+		// (get) Token: 0x0601BE45 RID: 114245 RVA: 0x003F10BC File Offset: 0x003EF2BC
+		public string InternalDest
+		{
+			get
+			{
+				int num = this.__p.__offset(38);
+				if (num == 0)
+				{
+					return null;
+				}
+				return this.__p.__string(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x0601BE46 RID: 114246 RVA: 0x003F10F4 File Offset: 0x003EF2F4
+		public Span<byte> GetInternalDestBytes()
+		{
+			return this.__p.__vector_as_span<byte>(38, 1);
+		}
+
+		// Token: 0x0601BE47 RID: 114247 RVA: 0x003F1104 File Offset: 0x003EF304
+		public byte[] GetInternalDestArray()
+		{
+			return this.__p.__vector_as_array<byte>(38);
+		}
+
+		// Token: 0x170082EB RID: 33515
+		// (get) Token: 0x0601BE48 RID: 114248 RVA: 0x003F1114 File Offset: 0x003EF314
+		public int LevelAdditiveId
 		{
 			get
 			{
@@ -461,28 +461,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CAD RID: 31917
-		// (get) Token: 0x0601A678 RID: 108152 RVA: 0x003C4F48 File Offset: 0x003C3148
-		public ILevelPlayZaxis? LevelPlayZaxis
+		// Token: 0x170082EC RID: 33516
+		// (get) Token: 0x0601BE49 RID: 114249 RVA: 0x003F1154 File Offset: 0x003EF354
+		public int LevelAiTeamLevelId
 		{
 			get
 			{
 				int num = this.__p.__offset(42);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new ILevelPlayZaxis?(default(ILevelPlayZaxis).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x17007CAE RID: 31918
-		// (get) Token: 0x0601A679 RID: 108153 RVA: 0x003C4FA8 File Offset: 0x003C31A8
-		public int LevelPlayEntityId
-		{
-			get
-			{
-				int num = this.__p.__offset(44);
 				if (num == 0)
 				{
 					return 0;
@@ -491,9 +476,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CAF RID: 31919
-		// (get) Token: 0x0601A67A RID: 108154 RVA: 0x003C4FE8 File Offset: 0x003C31E8
-		public int EnterRadius
+		// Token: 0x170082ED RID: 33517
+		// (get) Token: 0x0601BE4A RID: 114250 RVA: 0x003F1194 File Offset: 0x003EF394
+		public ILevelPlayZaxis? LevelPlayZaxis
+		{
+			get
+			{
+				int num = this.__p.__offset(44);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ILevelPlayZaxis?(default(ILevelPlayZaxis).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x170082EE RID: 33518
+		// (get) Token: 0x0601BE4B RID: 114251 RVA: 0x003F11F4 File Offset: 0x003EF3F4
+		public int LevelPlayEntityId
 		{
 			get
 			{
@@ -506,9 +506,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CB0 RID: 31920
-		// (get) Token: 0x0601A67B RID: 108155 RVA: 0x003C5028 File Offset: 0x003C3228
-		public int LeaveRadius
+		// Token: 0x170082EF RID: 33519
+		// (get) Token: 0x0601BE4C RID: 114252 RVA: 0x003F1234 File Offset: 0x003EF434
+		public int EnterRadius
 		{
 			get
 			{
@@ -521,20 +521,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CB1 RID: 31921
-		// (get) Token: 0x0601A67C RID: 108156 RVA: 0x003C5068 File Offset: 0x003C3268
-		public bool DelayRefresh
+		// Token: 0x170082F0 RID: 33520
+		// (get) Token: 0x0601BE4D RID: 114253 RVA: 0x003F1274 File Offset: 0x003EF474
+		public int LeaveRadius
 		{
 			get
 			{
 				int num = this.__p.__offset(50);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x17007CB2 RID: 31922
-		// (get) Token: 0x0601A67D RID: 108157 RVA: 0x003C50A8 File Offset: 0x003C32A8
-		public bool DelayDestroy
+		// Token: 0x170082F1 RID: 33521
+		// (get) Token: 0x0601BE4E RID: 114254 RVA: 0x003F12B4 File Offset: 0x003EF4B4
+		public bool DelayRefresh
 		{
 			get
 			{
@@ -543,9 +547,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CB3 RID: 31923
-		// (get) Token: 0x0601A67E RID: 108158 RVA: 0x003C50E8 File Offset: 0x003C32E8
-		public bool NotAllowHidedByGroup
+		// Token: 0x170082F2 RID: 33522
+		// (get) Token: 0x0601BE4F RID: 114255 RVA: 0x003F12F4 File Offset: 0x003EF4F4
+		public bool DelayDestroy
 		{
 			get
 			{
@@ -554,9 +558,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CB4 RID: 31924
-		// (get) Token: 0x0601A67F RID: 108159 RVA: 0x003C5128 File Offset: 0x003C3328
-		public bool AutoRestoreTreeAddedPlayerBuff
+		// Token: 0x170082F3 RID: 33523
+		// (get) Token: 0x0601BE50 RID: 114256 RVA: 0x003F1334 File Offset: 0x003EF534
+		public bool NotAllowHidedByGroup
 		{
 			get
 			{
@@ -565,34 +569,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A680 RID: 108160 RVA: 0x003C5168 File Offset: 0x003C3368
-		public IActionInfo? EnterInRangeActions(int j)
-		{
-			int num = this.__p.__offset(58);
-			if (num == 0)
-			{
-				return null;
-			}
-			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
-		}
-
-		// Token: 0x17007CB5 RID: 31925
-		// (get) Token: 0x0601A681 RID: 108161 RVA: 0x003C51CC File Offset: 0x003C33CC
-		public int EnterInRangeActionsLength
+		// Token: 0x170082F4 RID: 33524
+		// (get) Token: 0x0601BE51 RID: 114257 RVA: 0x003F1374 File Offset: 0x003EF574
+		public bool AutoRestoreTreeAddedPlayerBuff
 		{
 			get
 			{
 				int num = this.__p.__offset(58);
-				if (num == 0)
-				{
-					return 0;
-				}
-				return this.__p.__vector_len(num);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
 			}
 		}
 
-		// Token: 0x0601A682 RID: 108162 RVA: 0x003C51F8 File Offset: 0x003C33F8
-		public IActionInfo? LevelPlayCloseActions(int j)
+		// Token: 0x0601BE52 RID: 114258 RVA: 0x003F13B4 File Offset: 0x003EF5B4
+		public IActionInfo? EnterInRangeActions(int j)
 		{
 			int num = this.__p.__offset(60);
 			if (num == 0)
@@ -602,9 +591,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007CB6 RID: 31926
-		// (get) Token: 0x0601A683 RID: 108163 RVA: 0x003C525C File Offset: 0x003C345C
-		public int LevelPlayCloseActionsLength
+		// Token: 0x170082F5 RID: 33525
+		// (get) Token: 0x0601BE53 RID: 114259 RVA: 0x003F1418 File Offset: 0x003EF618
+		public int EnterInRangeActionsLength
 		{
 			get
 			{
@@ -617,188 +606,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CB7 RID: 31927
-		// (get) Token: 0x0601A684 RID: 108164 RVA: 0x003C5288 File Offset: 0x003C3488
-		public ILevelPlayMark? LevelPlayMark
+		// Token: 0x0601BE54 RID: 114260 RVA: 0x003F1444 File Offset: 0x003EF644
+		public IActionInfo? LevelPlayCloseActions(int j)
 		{
-			get
-			{
-				int num = this.__p.__offset(62);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new ILevelPlayMark?(default(ILevelPlayMark).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x17007CB8 RID: 31928
-		// (get) Token: 0x0601A685 RID: 108165 RVA: 0x003C52E8 File Offset: 0x003C34E8
-		public ILevelPlayTrack? LevelPlayTrack
-		{
-			get
-			{
-				int num = this.__p.__offset(64);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new ILevelPlayTrack?(default(ILevelPlayTrack).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x17007CB9 RID: 31929
-		// (get) Token: 0x0601A686 RID: 108166 RVA: 0x003C5348 File Offset: 0x003C3548
-		public TLevelPlayReward LevelPlayRewardConfigType
-		{
-			get
-			{
-				int num = this.__p.__offset(66);
-				if (num == 0)
-				{
-					return TLevelPlayReward.NONE;
-				}
-				return (TLevelPlayReward)this.__p.bb.Get(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x0601A687 RID: 108167 RVA: 0x003C5388 File Offset: 0x003C3588
-		public TTable? LevelPlayRewardConfig<TTable>() where TTable : struct, IFlatbufferObject
-		{
-			int num = this.__p.__offset(68);
-			if (num == 0)
-			{
-				return null;
-			}
-			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
-		}
-
-		// Token: 0x0601A688 RID: 108168 RVA: 0x003C53D0 File Offset: 0x003C35D0
-		public IAutomaticRewardParam LevelPlayRewardConfigAsIAutomaticRewardParam()
-		{
-			return this.LevelPlayRewardConfig<IAutomaticRewardParam>().Value;
-		}
-
-		// Token: 0x0601A689 RID: 108169 RVA: 0x003C53EC File Offset: 0x003C35EC
-		public IInteractRewardParam LevelPlayRewardConfigAsIInteractRewardParam()
-		{
-			return this.LevelPlayRewardConfig<IInteractRewardParam>().Value;
-		}
-
-		// Token: 0x0601A68A RID: 108170 RVA: 0x003C5408 File Offset: 0x003C3608
-		public INoneRewardParam LevelPlayRewardConfigAsINoneRewardParam()
-		{
-			return this.LevelPlayRewardConfig<INoneRewardParam>().Value;
-		}
-
-		// Token: 0x0601A68B RID: 108171 RVA: 0x003C5424 File Offset: 0x003C3624
-		public IVariableRewardParam LevelPlayRewardConfigAsIVariableRewardParam()
-		{
-			return this.LevelPlayRewardConfig<IVariableRewardParam>().Value;
-		}
-
-		// Token: 0x17007CBA RID: 31930
-		// (get) Token: 0x0601A68C RID: 108172 RVA: 0x003C5440 File Offset: 0x003C3640
-		public TLevelPlayRefresh LevelPlayRefreshConfigType
-		{
-			get
-			{
-				int num = this.__p.__offset(70);
-				if (num == 0)
-				{
-					return TLevelPlayRefresh.NONE;
-				}
-				return (TLevelPlayRefresh)this.__p.bb.Get(num + this.__p.bb_pos);
-			}
-		}
-
-		// Token: 0x0601A68D RID: 108173 RVA: 0x003C5480 File Offset: 0x003C3680
-		public TTable? LevelPlayRefreshConfig<TTable>() where TTable : struct, IFlatbufferObject
-		{
-			int num = this.__p.__offset(72);
-			if (num == 0)
-			{
-				return null;
-			}
-			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
-		}
-
-		// Token: 0x0601A68E RID: 108174 RVA: 0x003C54C8 File Offset: 0x003C36C8
-		public IChildDestroyOrAwardedRefresh LevelPlayRefreshConfigAsIChildDestroyOrAwardedRefresh()
-		{
-			return this.LevelPlayRefreshConfig<IChildDestroyOrAwardedRefresh>().Value;
-		}
-
-		// Token: 0x0601A68F RID: 108175 RVA: 0x003C54E4 File Offset: 0x003C36E4
-		public IChildDestroyRefresh LevelPlayRefreshConfigAsIChildDestroyRefresh()
-		{
-			return this.LevelPlayRefreshConfig<IChildDestroyRefresh>().Value;
-		}
-
-		// Token: 0x0601A690 RID: 108176 RVA: 0x003C5500 File Offset: 0x003C3700
-		public ICompletedRefresh LevelPlayRefreshConfigAsICompletedRefresh()
-		{
-			return this.LevelPlayRefreshConfig<ICompletedRefresh>().Value;
-		}
-
-		// Token: 0x0601A691 RID: 108177 RVA: 0x003C551C File Offset: 0x003C371C
-		public ICustomOnlineRefresh LevelPlayRefreshConfigAsICustomOnlineRefresh()
-		{
-			return this.LevelPlayRefreshConfig<ICustomOnlineRefresh>().Value;
-		}
-
-		// Token: 0x0601A692 RID: 108178 RVA: 0x003C5538 File Offset: 0x003C3738
-		public ICustomRefresh LevelPlayRefreshConfigAsICustomRefresh()
-		{
-			return this.LevelPlayRefreshConfig<ICustomRefresh>().Value;
-		}
-
-		// Token: 0x0601A693 RID: 108179 RVA: 0x003C5554 File Offset: 0x003C3754
-		public IFixedDateTimeRefresh LevelPlayRefreshConfigAsIFixedDateTimeRefresh()
-		{
-			return this.LevelPlayRefreshConfig<IFixedDateTimeRefresh>().Value;
-		}
-
-		// Token: 0x0601A694 RID: 108180 RVA: 0x003C5570 File Offset: 0x003C3770
-		public INoneRefresh LevelPlayRefreshConfigAsINoneRefresh()
-		{
-			return this.LevelPlayRefreshConfig<INoneRefresh>().Value;
-		}
-
-		// Token: 0x17007CBB RID: 31931
-		// (get) Token: 0x0601A695 RID: 108181 RVA: 0x003C558C File Offset: 0x003C378C
-		public ILevelPlayOpenCondition? LevelPlayOpenCondition
-		{
-			get
-			{
-				int num = this.__p.__offset(74);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new ILevelPlayOpenCondition?(default(ILevelPlayOpenCondition).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x17007CBC RID: 31932
-		// (get) Token: 0x0601A696 RID: 108182 RVA: 0x003C55EC File Offset: 0x003C37EC
-		public ILevelPlayActive? LevelPlayActive
-		{
-			get
-			{
-				int num = this.__p.__offset(76);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new ILevelPlayActive?(default(ILevelPlayActive).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x0601A697 RID: 108183 RVA: 0x003C564C File Offset: 0x003C384C
-		public IActionInfo? LevelPlayOpenActions(int j)
-		{
-			int num = this.__p.__offset(78);
+			int num = this.__p.__offset(62);
 			if (num == 0)
 			{
 				return null;
@@ -806,13 +617,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007CBD RID: 31933
-		// (get) Token: 0x0601A698 RID: 108184 RVA: 0x003C56B0 File Offset: 0x003C38B0
-		public int LevelPlayOpenActionsLength
+		// Token: 0x170082F6 RID: 33526
+		// (get) Token: 0x0601BE55 RID: 114261 RVA: 0x003F14A8 File Offset: 0x003EF6A8
+		public int LevelPlayCloseActionsLength
 		{
 			get
 			{
-				int num = this.__p.__offset(78);
+				int num = this.__p.__offset(62);
 				if (num == 0)
 				{
 					return 0;
@@ -821,8 +632,186 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A699 RID: 108185 RVA: 0x003C56DC File Offset: 0x003C38DC
-		public IActionInfo? EscActionsAfterDungeonCompletion(int j)
+		// Token: 0x170082F7 RID: 33527
+		// (get) Token: 0x0601BE56 RID: 114262 RVA: 0x003F14D4 File Offset: 0x003EF6D4
+		public ILevelPlayMark? LevelPlayMark
+		{
+			get
+			{
+				int num = this.__p.__offset(64);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ILevelPlayMark?(default(ILevelPlayMark).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x170082F8 RID: 33528
+		// (get) Token: 0x0601BE57 RID: 114263 RVA: 0x003F1534 File Offset: 0x003EF734
+		public ILevelPlayTrack? LevelPlayTrack
+		{
+			get
+			{
+				int num = this.__p.__offset(66);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ILevelPlayTrack?(default(ILevelPlayTrack).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x170082F9 RID: 33529
+		// (get) Token: 0x0601BE58 RID: 114264 RVA: 0x003F1594 File Offset: 0x003EF794
+		public TLevelPlayReward LevelPlayRewardConfigType
+		{
+			get
+			{
+				int num = this.__p.__offset(68);
+				if (num == 0)
+				{
+					return TLevelPlayReward.NONE;
+				}
+				return (TLevelPlayReward)this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x0601BE59 RID: 114265 RVA: 0x003F15D4 File Offset: 0x003EF7D4
+		public TTable? LevelPlayRewardConfig<TTable>() where TTable : struct, IFlatbufferObject
+		{
+			int num = this.__p.__offset(70);
+			if (num == 0)
+			{
+				return null;
+			}
+			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
+		}
+
+		// Token: 0x0601BE5A RID: 114266 RVA: 0x003F161C File Offset: 0x003EF81C
+		public IAutomaticRewardParam LevelPlayRewardConfigAsIAutomaticRewardParam()
+		{
+			return this.LevelPlayRewardConfig<IAutomaticRewardParam>().Value;
+		}
+
+		// Token: 0x0601BE5B RID: 114267 RVA: 0x003F1638 File Offset: 0x003EF838
+		public IInteractRewardParam LevelPlayRewardConfigAsIInteractRewardParam()
+		{
+			return this.LevelPlayRewardConfig<IInteractRewardParam>().Value;
+		}
+
+		// Token: 0x0601BE5C RID: 114268 RVA: 0x003F1654 File Offset: 0x003EF854
+		public INoneRewardParam LevelPlayRewardConfigAsINoneRewardParam()
+		{
+			return this.LevelPlayRewardConfig<INoneRewardParam>().Value;
+		}
+
+		// Token: 0x0601BE5D RID: 114269 RVA: 0x003F1670 File Offset: 0x003EF870
+		public IVariableRewardParam LevelPlayRewardConfigAsIVariableRewardParam()
+		{
+			return this.LevelPlayRewardConfig<IVariableRewardParam>().Value;
+		}
+
+		// Token: 0x170082FA RID: 33530
+		// (get) Token: 0x0601BE5E RID: 114270 RVA: 0x003F168C File Offset: 0x003EF88C
+		public TLevelPlayRefresh LevelPlayRefreshConfigType
+		{
+			get
+			{
+				int num = this.__p.__offset(72);
+				if (num == 0)
+				{
+					return TLevelPlayRefresh.NONE;
+				}
+				return (TLevelPlayRefresh)this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x0601BE5F RID: 114271 RVA: 0x003F16CC File Offset: 0x003EF8CC
+		public TTable? LevelPlayRefreshConfig<TTable>() where TTable : struct, IFlatbufferObject
+		{
+			int num = this.__p.__offset(74);
+			if (num == 0)
+			{
+				return null;
+			}
+			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
+		}
+
+		// Token: 0x0601BE60 RID: 114272 RVA: 0x003F1714 File Offset: 0x003EF914
+		public IChildDestroyOrAwardedRefresh LevelPlayRefreshConfigAsIChildDestroyOrAwardedRefresh()
+		{
+			return this.LevelPlayRefreshConfig<IChildDestroyOrAwardedRefresh>().Value;
+		}
+
+		// Token: 0x0601BE61 RID: 114273 RVA: 0x003F1730 File Offset: 0x003EF930
+		public IChildDestroyRefresh LevelPlayRefreshConfigAsIChildDestroyRefresh()
+		{
+			return this.LevelPlayRefreshConfig<IChildDestroyRefresh>().Value;
+		}
+
+		// Token: 0x0601BE62 RID: 114274 RVA: 0x003F174C File Offset: 0x003EF94C
+		public ICompletedRefresh LevelPlayRefreshConfigAsICompletedRefresh()
+		{
+			return this.LevelPlayRefreshConfig<ICompletedRefresh>().Value;
+		}
+
+		// Token: 0x0601BE63 RID: 114275 RVA: 0x003F1768 File Offset: 0x003EF968
+		public ICustomOnlineRefresh LevelPlayRefreshConfigAsICustomOnlineRefresh()
+		{
+			return this.LevelPlayRefreshConfig<ICustomOnlineRefresh>().Value;
+		}
+
+		// Token: 0x0601BE64 RID: 114276 RVA: 0x003F1784 File Offset: 0x003EF984
+		public ICustomRefresh LevelPlayRefreshConfigAsICustomRefresh()
+		{
+			return this.LevelPlayRefreshConfig<ICustomRefresh>().Value;
+		}
+
+		// Token: 0x0601BE65 RID: 114277 RVA: 0x003F17A0 File Offset: 0x003EF9A0
+		public IFixedDateTimeRefresh LevelPlayRefreshConfigAsIFixedDateTimeRefresh()
+		{
+			return this.LevelPlayRefreshConfig<IFixedDateTimeRefresh>().Value;
+		}
+
+		// Token: 0x0601BE66 RID: 114278 RVA: 0x003F17BC File Offset: 0x003EF9BC
+		public INoneRefresh LevelPlayRefreshConfigAsINoneRefresh()
+		{
+			return this.LevelPlayRefreshConfig<INoneRefresh>().Value;
+		}
+
+		// Token: 0x170082FB RID: 33531
+		// (get) Token: 0x0601BE67 RID: 114279 RVA: 0x003F17D8 File Offset: 0x003EF9D8
+		public ILevelPlayOpenCondition? LevelPlayOpenCondition
+		{
+			get
+			{
+				int num = this.__p.__offset(76);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ILevelPlayOpenCondition?(default(ILevelPlayOpenCondition).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x170082FC RID: 33532
+		// (get) Token: 0x0601BE68 RID: 114280 RVA: 0x003F1838 File Offset: 0x003EFA38
+		public ILevelPlayActive? LevelPlayActive
+		{
+			get
+			{
+				int num = this.__p.__offset(78);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ILevelPlayActive?(default(ILevelPlayActive).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x0601BE69 RID: 114281 RVA: 0x003F1898 File Offset: 0x003EFA98
+		public IActionInfo? LevelPlayOpenActions(int j)
 		{
 			int num = this.__p.__offset(80);
 			if (num == 0)
@@ -832,9 +821,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007CBE RID: 31934
-		// (get) Token: 0x0601A69A RID: 108186 RVA: 0x003C5740 File Offset: 0x003C3940
-		public int EscActionsAfterDungeonCompletionLength
+		// Token: 0x170082FD RID: 33533
+		// (get) Token: 0x0601BE6A RID: 114282 RVA: 0x003F18FC File Offset: 0x003EFAFC
+		public int LevelPlayOpenActionsLength
 		{
 			get
 			{
@@ -847,9 +836,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CBF RID: 31935
-		// (get) Token: 0x0601A69B RID: 108187 RVA: 0x003C576C File Offset: 0x003C396C
-		public int ExploratoryDegree
+		// Token: 0x0601BE6B RID: 114283 RVA: 0x003F1928 File Offset: 0x003EFB28
+		public IActionInfo? EscActionsAfterDungeonCompletion(int j)
+		{
+			int num = this.__p.__offset(82);
+			if (num == 0)
+			{
+				return null;
+			}
+			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
+		}
+
+		// Token: 0x170082FE RID: 33534
+		// (get) Token: 0x0601BE6C RID: 114284 RVA: 0x003F198C File Offset: 0x003EFB8C
+		public int EscActionsAfterDungeonCompletionLength
 		{
 			get
 			{
@@ -858,17 +858,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 				{
 					return 0;
 				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+				return this.__p.__vector_len(num);
 			}
 		}
 
-		// Token: 0x17007CC0 RID: 31936
-		// (get) Token: 0x0601A69C RID: 108188 RVA: 0x003C57AC File Offset: 0x003C39AC
-		public ILevelPlayExploratoryConfig? ExploratoryConfig
+		// Token: 0x170082FF RID: 33535
+		// (get) Token: 0x0601BE6D RID: 114285 RVA: 0x003F19B8 File Offset: 0x003EFBB8
+		public int ExploratoryDegree
 		{
 			get
 			{
 				int num = this.__p.__offset(84);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x17008300 RID: 33536
+		// (get) Token: 0x0601BE6E RID: 114286 RVA: 0x003F19F8 File Offset: 0x003EFBF8
+		public ILevelPlayExploratoryConfig? ExploratoryConfig
+		{
+			get
+			{
+				int num = this.__p.__offset(86);
 				if (num == 0)
 				{
 					return null;
@@ -877,10 +892,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A69D RID: 108189 RVA: 0x003C580C File Offset: 0x003C3A0C
+		// Token: 0x0601BE6F RID: 114287 RVA: 0x003F1A58 File Offset: 0x003EFC58
 		public int ReferenceAllEntity(int j)
 		{
-			int num = this.__p.__offset(86);
+			int num = this.__p.__offset(88);
 			if (num == 0)
 			{
 				return 0;
@@ -888,13 +903,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007CC1 RID: 31937
-		// (get) Token: 0x0601A69E RID: 108190 RVA: 0x003C584C File Offset: 0x003C3A4C
+		// Token: 0x17008301 RID: 33537
+		// (get) Token: 0x0601BE70 RID: 114288 RVA: 0x003F1A98 File Offset: 0x003EFC98
 		public int ReferenceAllEntityLength
 		{
 			get
 			{
-				int num = this.__p.__offset(86);
+				int num = this.__p.__offset(88);
 				if (num == 0)
 				{
 					return 0;
@@ -903,36 +918,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A69F RID: 108191 RVA: 0x003C5878 File Offset: 0x003C3A78
+		// Token: 0x0601BE71 RID: 114289 RVA: 0x003F1AC4 File Offset: 0x003EFCC4
 		public Span<int> GetReferenceAllEntityBytes()
 		{
-			return this.__p.__vector_as_span<int>(86, 4);
+			return this.__p.__vector_as_span<int>(88, 4);
 		}
 
-		// Token: 0x0601A6A0 RID: 108192 RVA: 0x003C5888 File Offset: 0x003C3A88
+		// Token: 0x0601BE72 RID: 114290 RVA: 0x003F1AD4 File Offset: 0x003EFCD4
 		public int[] GetReferenceAllEntityArray()
 		{
-			return this.__p.__vector_as_array<int>(86);
+			return this.__p.__vector_as_array<int>(88);
 		}
 
-		// Token: 0x17007CC2 RID: 31938
-		// (get) Token: 0x0601A6A1 RID: 108193 RVA: 0x003C5898 File Offset: 0x003C3A98
+		// Token: 0x17008302 RID: 33538
+		// (get) Token: 0x0601BE73 RID: 114291 RVA: 0x003F1AE4 File Offset: 0x003EFCE4
 		public IBehaviorTree? Tree
-		{
-			get
-			{
-				int num = this.__p.__offset(88);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new IBehaviorTree?(default(IBehaviorTree).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
-			}
-		}
-
-		// Token: 0x17007CC3 RID: 31939
-		// (get) Token: 0x0601A6A2 RID: 108194 RVA: 0x003C58F8 File Offset: 0x003C3AF8
-		public ILevelPlayFixProcessor? FixProcessor
 		{
 			get
 			{
@@ -941,28 +941,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 				{
 					return null;
 				}
-				return new ILevelPlayFixProcessor?(default(ILevelPlayFixProcessor).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new IBehaviorTree?(default(IBehaviorTree).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x17007CC4 RID: 31940
-		// (get) Token: 0x0601A6A3 RID: 108195 RVA: 0x003C5958 File Offset: 0x003C3B58
-		public int CustomIcon
+		// Token: 0x17008303 RID: 33539
+		// (get) Token: 0x0601BE74 RID: 114292 RVA: 0x003F1B44 File Offset: 0x003EFD44
+		public ILevelPlayFixProcessor? FixProcessor
 		{
 			get
 			{
 				int num = this.__p.__offset(92);
 				if (num == 0)
 				{
-					return 0;
+					return null;
 				}
-				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+				return new ILevelPlayFixProcessor?(default(ILevelPlayFixProcessor).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x17007CC5 RID: 31941
-		// (get) Token: 0x0601A6A4 RID: 108196 RVA: 0x003C5998 File Offset: 0x003C3B98
-		public int CustomTrackUiIcon
+		// Token: 0x17008304 RID: 33540
+		// (get) Token: 0x0601BE75 RID: 114293 RVA: 0x003F1BA4 File Offset: 0x003EFDA4
+		public int CustomIcon
 		{
 			get
 			{
@@ -975,24 +975,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CC6 RID: 31942
-		// (get) Token: 0x0601A6A5 RID: 108197 RVA: 0x003C59D8 File Offset: 0x003C3BD8
-		public IRangeAbsorbPhantom? RangeAbsorbPhantom
+		// Token: 0x17008305 RID: 33541
+		// (get) Token: 0x0601BE76 RID: 114294 RVA: 0x003F1BE4 File Offset: 0x003EFDE4
+		public int CustomTrackUiIcon
 		{
 			get
 			{
 				int num = this.__p.__offset(96);
 				if (num == 0)
 				{
-					return null;
+					return 0;
 				}
-				return new IRangeAbsorbPhantom?(default(IRangeAbsorbPhantom).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x17007CC7 RID: 31943
-		// (get) Token: 0x0601A6A6 RID: 108198 RVA: 0x003C5A38 File Offset: 0x003C3C38
-		public IRewardConfig? RewardConfig
+		// Token: 0x17008306 RID: 33542
+		// (get) Token: 0x0601BE77 RID: 114295 RVA: 0x003F1C24 File Offset: 0x003EFE24
+		public IRangeAbsorbPhantom? RangeAbsorbPhantom
 		{
 			get
 			{
@@ -1001,39 +1001,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 				{
 					return null;
 				}
-				return new IRewardConfig?(default(IRewardConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new IRangeAbsorbPhantom?(default(IRangeAbsorbPhantom).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x17007CC8 RID: 31944
-		// (get) Token: 0x0601A6A7 RID: 108199 RVA: 0x003C5A98 File Offset: 0x003C3C98
-		public bool IsTrackOnlyWhenQuestBind
+		// Token: 0x17008307 RID: 33543
+		// (get) Token: 0x0601BE78 RID: 114296 RVA: 0x003F1C84 File Offset: 0x003EFE84
+		public IRewardConfig? RewardConfig
 		{
 			get
 			{
 				int num = this.__p.__offset(100);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
-			}
-		}
-
-		// Token: 0x17007CC9 RID: 31945
-		// (get) Token: 0x0601A6A8 RID: 108200 RVA: 0x003C5AD8 File Offset: 0x003C3CD8
-		public ILevelPlayRecallConfig? RecallConfig
-		{
-			get
-			{
-				int num = this.__p.__offset(102);
 				if (num == 0)
 				{
 					return null;
 				}
-				return new ILevelPlayRecallConfig?(default(ILevelPlayRecallConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return new IRewardConfig?(default(IRewardConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x17007CCA RID: 31946
-		// (get) Token: 0x0601A6A9 RID: 108201 RVA: 0x003C5B38 File Offset: 0x003C3D38
-		public IEntityRefSearchProp? _EntityRefSearch
+		// Token: 0x17008308 RID: 33544
+		// (get) Token: 0x0601BE79 RID: 114297 RVA: 0x003F1CE4 File Offset: 0x003EFEE4
+		public bool IsTrackOnlyWhenQuestBind
+		{
+			get
+			{
+				int num = this.__p.__offset(102);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x17008309 RID: 33545
+		// (get) Token: 0x0601BE7A RID: 114298 RVA: 0x003F1D24 File Offset: 0x003EFF24
+		public ILevelPlayRecallConfig? RecallConfig
 		{
 			get
 			{
@@ -1042,14 +1042,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 				{
 					return null;
 				}
+				return new ILevelPlayRecallConfig?(default(ILevelPlayRecallConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x1700830A RID: 33546
+		// (get) Token: 0x0601BE7B RID: 114299 RVA: 0x003F1D84 File Offset: 0x003EFF84
+		public IEntityRefSearchProp? _EntityRefSearch
+		{
+			get
+			{
+				int num = this.__p.__offset(106);
+				if (num == 0)
+				{
+					return null;
+				}
 				return new IEntityRefSearchProp?(default(IEntityRefSearchProp).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x0601A6AA RID: 108202 RVA: 0x003C5B98 File Offset: 0x003C3D98
+		// Token: 0x0601BE7C RID: 114300 RVA: 0x003F1DE4 File Offset: 0x003EFFE4
 		public string _HighlightDataPaths(int j)
 		{
-			int num = this.__p.__offset(106);
+			int num = this.__p.__offset(108);
 			if (num == 0)
 			{
 				return null;
@@ -1057,13 +1072,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007CCB RID: 31947
-		// (get) Token: 0x0601A6AB RID: 108203 RVA: 0x003C5BD4 File Offset: 0x003C3DD4
+		// Token: 0x1700830B RID: 33547
+		// (get) Token: 0x0601BE7D RID: 114301 RVA: 0x003F1E20 File Offset: 0x003F0020
 		public int _HighlightDataPathsLength
 		{
 			get
 			{
-				int num = this.__p.__offset(106);
+				int num = this.__p.__offset(108);
 				if (num == 0)
 				{
 					return 0;
@@ -1072,13 +1087,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007CCC RID: 31948
-		// (get) Token: 0x0601A6AC RID: 108204 RVA: 0x003C5C00 File Offset: 0x003C3E00
+		// Token: 0x1700830C RID: 33548
+		// (get) Token: 0x0601BE7E RID: 114302 RVA: 0x003F1E4C File Offset: 0x003F004C
 		public string _FocusDataPath
 		{
 			get
 			{
-				int num = this.__p.__offset(108);
+				int num = this.__p.__offset(110);
 				if (num == 0)
 				{
 					return null;
@@ -1087,25 +1102,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A6AD RID: 108205 RVA: 0x003C5C38 File Offset: 0x003C3E38
+		// Token: 0x0601BE7F RID: 114303 RVA: 0x003F1E84 File Offset: 0x003F0084
 		public Span<byte> Get_FocusDataPathBytes()
 		{
-			return this.__p.__vector_as_span<byte>(108, 1);
+			return this.__p.__vector_as_span<byte>(110, 1);
 		}
 
-		// Token: 0x0601A6AE RID: 108206 RVA: 0x003C5C48 File Offset: 0x003C3E48
+		// Token: 0x0601BE80 RID: 114304 RVA: 0x003F1E94 File Offset: 0x003F0094
 		public byte[] Get_FocusDataPathArray()
 		{
-			return this.__p.__vector_as_array<byte>(108);
+			return this.__p.__vector_as_array<byte>(110);
 		}
 
-		// Token: 0x17007CCD RID: 31949
-		// (get) Token: 0x0601A6AF RID: 108207 RVA: 0x003C5C58 File Offset: 0x003C3E58
+		// Token: 0x1700830D RID: 33549
+		// (get) Token: 0x0601BE81 RID: 114305 RVA: 0x003F1EA4 File Offset: 0x003F00A4
 		public uint NullMask
 		{
 			get
 			{
-				int num = this.__p.__offset(110);
+				int num = this.__p.__offset(112);
 				if (num == 0)
 				{
 					return 0U;
@@ -1114,10 +1129,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A6B0 RID: 108208 RVA: 0x003C5C98 File Offset: 0x003C3E98
-		public static Offset<ILevelPlay> CreateILevelPlay(FlatBufferBuilder builder, StringOffset ObjTypeOffset = default(StringOffset), VectorOffset ChildrenOffset = default(VectorOffset), VectorOffset ReferenceOffset = default(VectorOffset), VectorOffset WeakReferenceOffset = default(VectorOffset), int Id = 0, StringOffset KeyOffset = default(StringOffset), ELevelPlayType Type = ELevelPlayType.SilentArea, EDecisionBtType DecisionBtType = EDecisionBtType.Bvb, VectorOffset BindSystemsOffset = default(VectorOffset), StringOffset TidNameOffset = default(StringOffset), int LevelId = 0, int PackId = 0, int InstanceId = 0, bool IsOnlineStandalone = false, VectorOffset SpecifiedOnlineStandaloneParentUidsOffset = default(VectorOffset), ELevelPlayOnlineType OnlineType = ELevelPlayOnlineType.Local, StringOffset InternalDestOffset = default(StringOffset), int LevelAdditiveId = 0, int LevelAiTeamLevelId = 0, Offset<ILevelPlayZaxis> LevelPlayZaxisOffset = default(Offset<ILevelPlayZaxis>), int LevelPlayEntityId = 0, int EnterRadius = 0, int LeaveRadius = 0, bool DelayRefresh = false, bool DelayDestroy = false, bool NotAllowHidedByGroup = false, bool AutoRestoreTreeAddedPlayerBuff = false, VectorOffset EnterInRangeActionsOffset = default(VectorOffset), VectorOffset LevelPlayCloseActionsOffset = default(VectorOffset), Offset<ILevelPlayMark> LevelPlayMarkOffset = default(Offset<ILevelPlayMark>), Offset<ILevelPlayTrack> LevelPlayTrackOffset = default(Offset<ILevelPlayTrack>), TLevelPlayReward LevelPlayRewardConfig_type = TLevelPlayReward.NONE, int LevelPlayRewardConfigOffset = 0, TLevelPlayRefresh LevelPlayRefreshConfig_type = TLevelPlayRefresh.NONE, int LevelPlayRefreshConfigOffset = 0, Offset<ILevelPlayOpenCondition> LevelPlayOpenConditionOffset = default(Offset<ILevelPlayOpenCondition>), Offset<ILevelPlayActive> LevelPlayActiveOffset = default(Offset<ILevelPlayActive>), VectorOffset LevelPlayOpenActionsOffset = default(VectorOffset), VectorOffset EscActionsAfterDungeonCompletionOffset = default(VectorOffset), int ExploratoryDegree = 0, Offset<ILevelPlayExploratoryConfig> ExploratoryConfigOffset = default(Offset<ILevelPlayExploratoryConfig>), VectorOffset ReferenceAllEntityOffset = default(VectorOffset), Offset<IBehaviorTree> TreeOffset = default(Offset<IBehaviorTree>), Offset<ILevelPlayFixProcessor> FixProcessorOffset = default(Offset<ILevelPlayFixProcessor>), int CustomIcon = 0, int CustomTrackUiIcon = 0, Offset<IRangeAbsorbPhantom> RangeAbsorbPhantomOffset = default(Offset<IRangeAbsorbPhantom>), Offset<IRewardConfig> RewardConfigOffset = default(Offset<IRewardConfig>), bool IsTrackOnlyWhenQuestBind = false, Offset<ILevelPlayRecallConfig> RecallConfigOffset = default(Offset<ILevelPlayRecallConfig>), Offset<IEntityRefSearchProp> _entityRefSearchOffset = default(Offset<IEntityRefSearchProp>), VectorOffset _highlightDataPathsOffset = default(VectorOffset), StringOffset _focusDataPathOffset = default(StringOffset), uint NullMask = 0U)
+		// Token: 0x0601BE82 RID: 114306 RVA: 0x003F1EE4 File Offset: 0x003F00E4
+		public static Offset<ILevelPlay> CreateILevelPlay(FlatBufferBuilder builder, StringOffset ObjTypeOffset = default(StringOffset), VectorOffset ChildrenOffset = default(VectorOffset), VectorOffset ReferenceOffset = default(VectorOffset), VectorOffset WeakReferenceOffset = default(VectorOffset), int Id = 0, StringOffset KeyOffset = default(StringOffset), ELevelPlayType Type = ELevelPlayType.SilentArea, EDecisionBtType DecisionBtType = EDecisionBtType.Bvb, int PrefabId = 0, VectorOffset BindSystemsOffset = default(VectorOffset), StringOffset TidNameOffset = default(StringOffset), int LevelId = 0, int PackId = 0, int InstanceId = 0, bool IsOnlineStandalone = false, VectorOffset SpecifiedOnlineStandaloneParentUidsOffset = default(VectorOffset), ELevelPlayOnlineType OnlineType = ELevelPlayOnlineType.Local, StringOffset InternalDestOffset = default(StringOffset), int LevelAdditiveId = 0, int LevelAiTeamLevelId = 0, Offset<ILevelPlayZaxis> LevelPlayZaxisOffset = default(Offset<ILevelPlayZaxis>), int LevelPlayEntityId = 0, int EnterRadius = 0, int LeaveRadius = 0, bool DelayRefresh = false, bool DelayDestroy = false, bool NotAllowHidedByGroup = false, bool AutoRestoreTreeAddedPlayerBuff = false, VectorOffset EnterInRangeActionsOffset = default(VectorOffset), VectorOffset LevelPlayCloseActionsOffset = default(VectorOffset), Offset<ILevelPlayMark> LevelPlayMarkOffset = default(Offset<ILevelPlayMark>), Offset<ILevelPlayTrack> LevelPlayTrackOffset = default(Offset<ILevelPlayTrack>), TLevelPlayReward LevelPlayRewardConfig_type = TLevelPlayReward.NONE, int LevelPlayRewardConfigOffset = 0, TLevelPlayRefresh LevelPlayRefreshConfig_type = TLevelPlayRefresh.NONE, int LevelPlayRefreshConfigOffset = 0, Offset<ILevelPlayOpenCondition> LevelPlayOpenConditionOffset = default(Offset<ILevelPlayOpenCondition>), Offset<ILevelPlayActive> LevelPlayActiveOffset = default(Offset<ILevelPlayActive>), VectorOffset LevelPlayOpenActionsOffset = default(VectorOffset), VectorOffset EscActionsAfterDungeonCompletionOffset = default(VectorOffset), int ExploratoryDegree = 0, Offset<ILevelPlayExploratoryConfig> ExploratoryConfigOffset = default(Offset<ILevelPlayExploratoryConfig>), VectorOffset ReferenceAllEntityOffset = default(VectorOffset), Offset<IBehaviorTree> TreeOffset = default(Offset<IBehaviorTree>), Offset<ILevelPlayFixProcessor> FixProcessorOffset = default(Offset<ILevelPlayFixProcessor>), int CustomIcon = 0, int CustomTrackUiIcon = 0, Offset<IRangeAbsorbPhantom> RangeAbsorbPhantomOffset = default(Offset<IRangeAbsorbPhantom>), Offset<IRewardConfig> RewardConfigOffset = default(Offset<IRewardConfig>), bool IsTrackOnlyWhenQuestBind = false, Offset<ILevelPlayRecallConfig> RecallConfigOffset = default(Offset<ILevelPlayRecallConfig>), Offset<IEntityRefSearchProp> _entityRefSearchOffset = default(Offset<IEntityRefSearchProp>), VectorOffset _highlightDataPathsOffset = default(VectorOffset), StringOffset _focusDataPathOffset = default(StringOffset), uint NullMask = 0U)
 		{
-			builder.StartTable(54);
+			builder.StartTable(55);
 			ILevelPlay.AddNullMask(builder, NullMask);
 			ILevelPlay.Add_FocusDataPath(builder, _focusDataPathOffset);
 			ILevelPlay.Add_HighlightDataPaths(builder, _highlightDataPathsOffset);
@@ -1155,6 +1170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			ILevelPlay.AddLevelId(builder, LevelId);
 			ILevelPlay.AddTidName(builder, TidNameOffset);
 			ILevelPlay.AddBindSystems(builder, BindSystemsOffset);
+			ILevelPlay.AddPrefabId(builder, PrefabId);
 			ILevelPlay.AddKey(builder, KeyOffset);
 			ILevelPlay.AddId(builder, Id);
 			ILevelPlay.AddWeakReference(builder, WeakReferenceOffset);
@@ -1175,25 +1191,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelPlay.EndILevelPlay(builder);
 		}
 
-		// Token: 0x0601A6B1 RID: 108209 RVA: 0x003C5E60 File Offset: 0x003C4060
+		// Token: 0x0601BE83 RID: 114307 RVA: 0x003F20B4 File Offset: 0x003F02B4
 		public static void StartILevelPlay(FlatBufferBuilder builder)
 		{
-			builder.StartTable(54);
+			builder.StartTable(55);
 		}
 
-		// Token: 0x0601A6B2 RID: 108210 RVA: 0x003C5E6A File Offset: 0x003C406A
+		// Token: 0x0601BE84 RID: 114308 RVA: 0x003F20BE File Offset: 0x003F02BE
 		public static void AddObjType(FlatBufferBuilder builder, StringOffset objTypeOffset)
 		{
 			builder.AddOffset(0, objTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6B3 RID: 108211 RVA: 0x003C5E7A File Offset: 0x003C407A
+		// Token: 0x0601BE85 RID: 114309 RVA: 0x003F20CE File Offset: 0x003F02CE
 		public static void AddChildren(FlatBufferBuilder builder, VectorOffset childrenOffset)
 		{
 			builder.AddOffset(1, childrenOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6B4 RID: 108212 RVA: 0x003C5E8C File Offset: 0x003C408C
+		// Token: 0x0601BE86 RID: 114310 RVA: 0x003F20E0 File Offset: 0x003F02E0
 		public static VectorOffset CreateChildrenVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1204,7 +1220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6B5 RID: 108213 RVA: 0x003C5ECC File Offset: 0x003C40CC
+		// Token: 0x0601BE87 RID: 114311 RVA: 0x003F2120 File Offset: 0x003F0320
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1212,7 +1228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6B6 RID: 108214 RVA: 0x003C5EE6 File Offset: 0x003C40E6
+		// Token: 0x0601BE88 RID: 114312 RVA: 0x003F213A File Offset: 0x003F033A
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1220,7 +1236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6B7 RID: 108215 RVA: 0x003C5F04 File Offset: 0x003C4104
+		// Token: 0x0601BE89 RID: 114313 RVA: 0x003F2158 File Offset: 0x003F0358
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1228,19 +1244,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6B8 RID: 108216 RVA: 0x003C5F1D File Offset: 0x003C411D
+		// Token: 0x0601BE8A RID: 114314 RVA: 0x003F2171 File Offset: 0x003F0371
 		public static void StartChildrenVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A6B9 RID: 108217 RVA: 0x003C5F28 File Offset: 0x003C4128
+		// Token: 0x0601BE8B RID: 114315 RVA: 0x003F217C File Offset: 0x003F037C
 		public static void AddReference(FlatBufferBuilder builder, VectorOffset referenceOffset)
 		{
 			builder.AddOffset(2, referenceOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6BA RID: 108218 RVA: 0x003C5F38 File Offset: 0x003C4138
+		// Token: 0x0601BE8C RID: 114316 RVA: 0x003F218C File Offset: 0x003F038C
 		public static VectorOffset CreateReferenceVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1251,7 +1267,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6BB RID: 108219 RVA: 0x003C5F78 File Offset: 0x003C4178
+		// Token: 0x0601BE8D RID: 114317 RVA: 0x003F21CC File Offset: 0x003F03CC
 		public static VectorOffset CreateReferenceVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1259,7 +1275,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6BC RID: 108220 RVA: 0x003C5F92 File Offset: 0x003C4192
+		// Token: 0x0601BE8E RID: 114318 RVA: 0x003F21E6 File Offset: 0x003F03E6
 		public static VectorOffset CreateReferenceVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1267,7 +1283,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6BD RID: 108221 RVA: 0x003C5FB0 File Offset: 0x003C41B0
+		// Token: 0x0601BE8F RID: 114319 RVA: 0x003F2204 File Offset: 0x003F0404
 		public static VectorOffset CreateReferenceVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1275,19 +1291,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6BE RID: 108222 RVA: 0x003C5FC9 File Offset: 0x003C41C9
+		// Token: 0x0601BE90 RID: 114320 RVA: 0x003F221D File Offset: 0x003F041D
 		public static void StartReferenceVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A6BF RID: 108223 RVA: 0x003C5FD4 File Offset: 0x003C41D4
+		// Token: 0x0601BE91 RID: 114321 RVA: 0x003F2228 File Offset: 0x003F0428
 		public static void AddWeakReference(FlatBufferBuilder builder, VectorOffset weakReferenceOffset)
 		{
 			builder.AddOffset(3, weakReferenceOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6C0 RID: 108224 RVA: 0x003C5FE4 File Offset: 0x003C41E4
+		// Token: 0x0601BE92 RID: 114322 RVA: 0x003F2238 File Offset: 0x003F0438
 		public static VectorOffset CreateWeakReferenceVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1298,7 +1314,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6C1 RID: 108225 RVA: 0x003C6024 File Offset: 0x003C4224
+		// Token: 0x0601BE93 RID: 114323 RVA: 0x003F2278 File Offset: 0x003F0478
 		public static VectorOffset CreateWeakReferenceVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1306,7 +1322,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6C2 RID: 108226 RVA: 0x003C603E File Offset: 0x003C423E
+		// Token: 0x0601BE94 RID: 114324 RVA: 0x003F2292 File Offset: 0x003F0492
 		public static VectorOffset CreateWeakReferenceVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1314,7 +1330,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6C3 RID: 108227 RVA: 0x003C605C File Offset: 0x003C425C
+		// Token: 0x0601BE95 RID: 114325 RVA: 0x003F22B0 File Offset: 0x003F04B0
 		public static VectorOffset CreateWeakReferenceVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1322,43 +1338,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6C4 RID: 108228 RVA: 0x003C6075 File Offset: 0x003C4275
+		// Token: 0x0601BE96 RID: 114326 RVA: 0x003F22C9 File Offset: 0x003F04C9
 		public static void StartWeakReferenceVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A6C5 RID: 108229 RVA: 0x003C6080 File Offset: 0x003C4280
+		// Token: 0x0601BE97 RID: 114327 RVA: 0x003F22D4 File Offset: 0x003F04D4
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(4, id, 0);
 		}
 
-		// Token: 0x0601A6C6 RID: 108230 RVA: 0x003C608B File Offset: 0x003C428B
+		// Token: 0x0601BE98 RID: 114328 RVA: 0x003F22DF File Offset: 0x003F04DF
 		public static void AddKey(FlatBufferBuilder builder, StringOffset keyOffset)
 		{
 			builder.AddOffset(5, keyOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6C7 RID: 108231 RVA: 0x003C609B File Offset: 0x003C429B
+		// Token: 0x0601BE99 RID: 114329 RVA: 0x003F22EF File Offset: 0x003F04EF
 		public static void AddType(FlatBufferBuilder builder, ELevelPlayType type)
 		{
 			builder.AddByte(6, (byte)type, 0);
 		}
 
-		// Token: 0x0601A6C8 RID: 108232 RVA: 0x003C60A6 File Offset: 0x003C42A6
+		// Token: 0x0601BE9A RID: 114330 RVA: 0x003F22FA File Offset: 0x003F04FA
 		public static void AddDecisionBtType(FlatBufferBuilder builder, EDecisionBtType decisionBtType)
 		{
 			builder.AddByte(7, (byte)decisionBtType, 0);
 		}
 
-		// Token: 0x0601A6C9 RID: 108233 RVA: 0x003C60B1 File Offset: 0x003C42B1
-		public static void AddBindSystems(FlatBufferBuilder builder, VectorOffset bindSystemsOffset)
+		// Token: 0x0601BE9B RID: 114331 RVA: 0x003F2305 File Offset: 0x003F0505
+		public static void AddPrefabId(FlatBufferBuilder builder, int prefabId)
 		{
-			builder.AddOffset(8, bindSystemsOffset.Value, 0);
+			builder.AddInt(8, prefabId, 0);
 		}
 
-		// Token: 0x0601A6CA RID: 108234 RVA: 0x003C60C4 File Offset: 0x003C42C4
+		// Token: 0x0601BE9C RID: 114332 RVA: 0x003F2310 File Offset: 0x003F0510
+		public static void AddBindSystems(FlatBufferBuilder builder, VectorOffset bindSystemsOffset)
+		{
+			builder.AddOffset(9, bindSystemsOffset.Value, 0);
+		}
+
+		// Token: 0x0601BE9D RID: 114333 RVA: 0x003F2324 File Offset: 0x003F0524
 		public static VectorOffset CreateBindSystemsVector(FlatBufferBuilder builder, ESystemModuleName[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -1369,7 +1391,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6CB RID: 108235 RVA: 0x003C60FB File Offset: 0x003C42FB
+		// Token: 0x0601BE9E RID: 114334 RVA: 0x003F235B File Offset: 0x003F055B
 		public static VectorOffset CreateBindSystemsVectorBlock(FlatBufferBuilder builder, ESystemModuleName[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -1377,7 +1399,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6CC RID: 108236 RVA: 0x003C6115 File Offset: 0x003C4315
+		// Token: 0x0601BE9F RID: 114335 RVA: 0x003F2375 File Offset: 0x003F0575
 		public static VectorOffset CreateBindSystemsVectorBlock(FlatBufferBuilder builder, ArraySegment<ESystemModuleName> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -1385,7 +1407,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6CD RID: 108237 RVA: 0x003C6133 File Offset: 0x003C4333
+		// Token: 0x0601BEA0 RID: 114336 RVA: 0x003F2393 File Offset: 0x003F0593
 		public static VectorOffset CreateBindSystemsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1393,49 +1415,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6CE RID: 108238 RVA: 0x003C614C File Offset: 0x003C434C
+		// Token: 0x0601BEA1 RID: 114337 RVA: 0x003F23AC File Offset: 0x003F05AC
 		public static void StartBindSystemsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601A6CF RID: 108239 RVA: 0x003C6157 File Offset: 0x003C4357
+		// Token: 0x0601BEA2 RID: 114338 RVA: 0x003F23B7 File Offset: 0x003F05B7
 		public static void AddTidName(FlatBufferBuilder builder, StringOffset tidNameOffset)
 		{
-			builder.AddOffset(9, tidNameOffset.Value, 0);
+			builder.AddOffset(10, tidNameOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6D0 RID: 108240 RVA: 0x003C6168 File Offset: 0x003C4368
+		// Token: 0x0601BEA3 RID: 114339 RVA: 0x003F23C8 File Offset: 0x003F05C8
 		public static void AddLevelId(FlatBufferBuilder builder, int levelId)
 		{
-			builder.AddInt(10, levelId, 0);
+			builder.AddInt(11, levelId, 0);
 		}
 
-		// Token: 0x0601A6D1 RID: 108241 RVA: 0x003C6174 File Offset: 0x003C4374
+		// Token: 0x0601BEA4 RID: 114340 RVA: 0x003F23D4 File Offset: 0x003F05D4
 		public static void AddPackId(FlatBufferBuilder builder, int packId)
 		{
-			builder.AddInt(11, packId, 0);
+			builder.AddInt(12, packId, 0);
 		}
 
-		// Token: 0x0601A6D2 RID: 108242 RVA: 0x003C6180 File Offset: 0x003C4380
+		// Token: 0x0601BEA5 RID: 114341 RVA: 0x003F23E0 File Offset: 0x003F05E0
 		public static void AddInstanceId(FlatBufferBuilder builder, int instanceId)
 		{
-			builder.AddInt(12, instanceId, 0);
+			builder.AddInt(13, instanceId, 0);
 		}
 
-		// Token: 0x0601A6D3 RID: 108243 RVA: 0x003C618C File Offset: 0x003C438C
+		// Token: 0x0601BEA6 RID: 114342 RVA: 0x003F23EC File Offset: 0x003F05EC
 		public static void AddIsOnlineStandalone(FlatBufferBuilder builder, bool isOnlineStandalone)
 		{
-			builder.AddBool(13, isOnlineStandalone, false);
+			builder.AddBool(14, isOnlineStandalone, false);
 		}
 
-		// Token: 0x0601A6D4 RID: 108244 RVA: 0x003C6198 File Offset: 0x003C4398
+		// Token: 0x0601BEA7 RID: 114343 RVA: 0x003F23F8 File Offset: 0x003F05F8
 		public static void AddSpecifiedOnlineStandaloneParentUids(FlatBufferBuilder builder, VectorOffset specifiedOnlineStandaloneParentUidsOffset)
 		{
-			builder.AddOffset(14, specifiedOnlineStandaloneParentUidsOffset.Value, 0);
+			builder.AddOffset(15, specifiedOnlineStandaloneParentUidsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6D5 RID: 108245 RVA: 0x003C61AC File Offset: 0x003C43AC
+		// Token: 0x0601BEA8 RID: 114344 RVA: 0x003F240C File Offset: 0x003F060C
 		public static VectorOffset CreateSpecifiedOnlineStandaloneParentUidsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1446,7 +1468,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6D6 RID: 108246 RVA: 0x003C61EC File Offset: 0x003C43EC
+		// Token: 0x0601BEA9 RID: 114345 RVA: 0x003F244C File Offset: 0x003F064C
 		public static VectorOffset CreateSpecifiedOnlineStandaloneParentUidsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1454,7 +1476,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6D7 RID: 108247 RVA: 0x003C6206 File Offset: 0x003C4406
+		// Token: 0x0601BEAA RID: 114346 RVA: 0x003F2466 File Offset: 0x003F0666
 		public static VectorOffset CreateSpecifiedOnlineStandaloneParentUidsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1462,7 +1484,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6D8 RID: 108248 RVA: 0x003C6224 File Offset: 0x003C4424
+		// Token: 0x0601BEAB RID: 114347 RVA: 0x003F2484 File Offset: 0x003F0684
 		public static VectorOffset CreateSpecifiedOnlineStandaloneParentUidsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1470,91 +1492,91 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6D9 RID: 108249 RVA: 0x003C623D File Offset: 0x003C443D
+		// Token: 0x0601BEAC RID: 114348 RVA: 0x003F249D File Offset: 0x003F069D
 		public static void StartSpecifiedOnlineStandaloneParentUidsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A6DA RID: 108250 RVA: 0x003C6248 File Offset: 0x003C4448
+		// Token: 0x0601BEAD RID: 114349 RVA: 0x003F24A8 File Offset: 0x003F06A8
 		public static void AddOnlineType(FlatBufferBuilder builder, ELevelPlayOnlineType onlineType)
 		{
-			builder.AddByte(15, (byte)onlineType, 0);
+			builder.AddByte(16, (byte)onlineType, 0);
 		}
 
-		// Token: 0x0601A6DB RID: 108251 RVA: 0x003C6254 File Offset: 0x003C4454
+		// Token: 0x0601BEAE RID: 114350 RVA: 0x003F24B4 File Offset: 0x003F06B4
 		public static void AddInternalDest(FlatBufferBuilder builder, StringOffset internalDestOffset)
 		{
-			builder.AddOffset(16, internalDestOffset.Value, 0);
+			builder.AddOffset(17, internalDestOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6DC RID: 108252 RVA: 0x003C6265 File Offset: 0x003C4465
+		// Token: 0x0601BEAF RID: 114351 RVA: 0x003F24C5 File Offset: 0x003F06C5
 		public static void AddLevelAdditiveId(FlatBufferBuilder builder, int levelAdditiveId)
 		{
-			builder.AddInt(17, levelAdditiveId, 0);
+			builder.AddInt(18, levelAdditiveId, 0);
 		}
 
-		// Token: 0x0601A6DD RID: 108253 RVA: 0x003C6271 File Offset: 0x003C4471
+		// Token: 0x0601BEB0 RID: 114352 RVA: 0x003F24D1 File Offset: 0x003F06D1
 		public static void AddLevelAiTeamLevelId(FlatBufferBuilder builder, int levelAiTeamLevelId)
 		{
-			builder.AddInt(18, levelAiTeamLevelId, 0);
+			builder.AddInt(19, levelAiTeamLevelId, 0);
 		}
 
-		// Token: 0x0601A6DE RID: 108254 RVA: 0x003C627D File Offset: 0x003C447D
+		// Token: 0x0601BEB1 RID: 114353 RVA: 0x003F24DD File Offset: 0x003F06DD
 		public static void AddLevelPlayZaxis(FlatBufferBuilder builder, Offset<ILevelPlayZaxis> levelPlayZaxisOffset)
 		{
-			builder.AddOffset(19, levelPlayZaxisOffset.Value, 0);
+			builder.AddOffset(20, levelPlayZaxisOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6DF RID: 108255 RVA: 0x003C628E File Offset: 0x003C448E
+		// Token: 0x0601BEB2 RID: 114354 RVA: 0x003F24EE File Offset: 0x003F06EE
 		public static void AddLevelPlayEntityId(FlatBufferBuilder builder, int levelPlayEntityId)
 		{
-			builder.AddInt(20, levelPlayEntityId, 0);
+			builder.AddInt(21, levelPlayEntityId, 0);
 		}
 
-		// Token: 0x0601A6E0 RID: 108256 RVA: 0x003C629A File Offset: 0x003C449A
+		// Token: 0x0601BEB3 RID: 114355 RVA: 0x003F24FA File Offset: 0x003F06FA
 		public static void AddEnterRadius(FlatBufferBuilder builder, int enterRadius)
 		{
-			builder.AddInt(21, enterRadius, 0);
+			builder.AddInt(22, enterRadius, 0);
 		}
 
-		// Token: 0x0601A6E1 RID: 108257 RVA: 0x003C62A6 File Offset: 0x003C44A6
+		// Token: 0x0601BEB4 RID: 114356 RVA: 0x003F2506 File Offset: 0x003F0706
 		public static void AddLeaveRadius(FlatBufferBuilder builder, int leaveRadius)
 		{
-			builder.AddInt(22, leaveRadius, 0);
+			builder.AddInt(23, leaveRadius, 0);
 		}
 
-		// Token: 0x0601A6E2 RID: 108258 RVA: 0x003C62B2 File Offset: 0x003C44B2
+		// Token: 0x0601BEB5 RID: 114357 RVA: 0x003F2512 File Offset: 0x003F0712
 		public static void AddDelayRefresh(FlatBufferBuilder builder, bool delayRefresh)
 		{
-			builder.AddBool(23, delayRefresh, false);
+			builder.AddBool(24, delayRefresh, false);
 		}
 
-		// Token: 0x0601A6E3 RID: 108259 RVA: 0x003C62BE File Offset: 0x003C44BE
+		// Token: 0x0601BEB6 RID: 114358 RVA: 0x003F251E File Offset: 0x003F071E
 		public static void AddDelayDestroy(FlatBufferBuilder builder, bool delayDestroy)
 		{
-			builder.AddBool(24, delayDestroy, false);
+			builder.AddBool(25, delayDestroy, false);
 		}
 
-		// Token: 0x0601A6E4 RID: 108260 RVA: 0x003C62CA File Offset: 0x003C44CA
+		// Token: 0x0601BEB7 RID: 114359 RVA: 0x003F252A File Offset: 0x003F072A
 		public static void AddNotAllowHidedByGroup(FlatBufferBuilder builder, bool notAllowHidedByGroup)
 		{
-			builder.AddBool(25, notAllowHidedByGroup, false);
+			builder.AddBool(26, notAllowHidedByGroup, false);
 		}
 
-		// Token: 0x0601A6E5 RID: 108261 RVA: 0x003C62D6 File Offset: 0x003C44D6
+		// Token: 0x0601BEB8 RID: 114360 RVA: 0x003F2536 File Offset: 0x003F0736
 		public static void AddAutoRestoreTreeAddedPlayerBuff(FlatBufferBuilder builder, bool autoRestoreTreeAddedPlayerBuff)
 		{
-			builder.AddBool(26, autoRestoreTreeAddedPlayerBuff, false);
+			builder.AddBool(27, autoRestoreTreeAddedPlayerBuff, false);
 		}
 
-		// Token: 0x0601A6E6 RID: 108262 RVA: 0x003C62E2 File Offset: 0x003C44E2
+		// Token: 0x0601BEB9 RID: 114361 RVA: 0x003F2542 File Offset: 0x003F0742
 		public static void AddEnterInRangeActions(FlatBufferBuilder builder, VectorOffset enterInRangeActionsOffset)
 		{
-			builder.AddOffset(27, enterInRangeActionsOffset.Value, 0);
+			builder.AddOffset(28, enterInRangeActionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6E7 RID: 108263 RVA: 0x003C62F4 File Offset: 0x003C44F4
+		// Token: 0x0601BEBA RID: 114362 RVA: 0x003F2554 File Offset: 0x003F0754
 		public static VectorOffset CreateEnterInRangeActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1565,7 +1587,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6E8 RID: 108264 RVA: 0x003C6334 File Offset: 0x003C4534
+		// Token: 0x0601BEBB RID: 114363 RVA: 0x003F2594 File Offset: 0x003F0794
 		public static VectorOffset CreateEnterInRangeActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1573,7 +1595,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6E9 RID: 108265 RVA: 0x003C634E File Offset: 0x003C454E
+		// Token: 0x0601BEBC RID: 114364 RVA: 0x003F25AE File Offset: 0x003F07AE
 		public static VectorOffset CreateEnterInRangeActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1581,7 +1603,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6EA RID: 108266 RVA: 0x003C636C File Offset: 0x003C456C
+		// Token: 0x0601BEBD RID: 114365 RVA: 0x003F25CC File Offset: 0x003F07CC
 		public static VectorOffset CreateEnterInRangeActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1589,19 +1611,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6EB RID: 108267 RVA: 0x003C6385 File Offset: 0x003C4585
+		// Token: 0x0601BEBE RID: 114366 RVA: 0x003F25E5 File Offset: 0x003F07E5
 		public static void StartEnterInRangeActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A6EC RID: 108268 RVA: 0x003C6390 File Offset: 0x003C4590
+		// Token: 0x0601BEBF RID: 114367 RVA: 0x003F25F0 File Offset: 0x003F07F0
 		public static void AddLevelPlayCloseActions(FlatBufferBuilder builder, VectorOffset levelPlayCloseActionsOffset)
 		{
-			builder.AddOffset(28, levelPlayCloseActionsOffset.Value, 0);
+			builder.AddOffset(29, levelPlayCloseActionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6ED RID: 108269 RVA: 0x003C63A4 File Offset: 0x003C45A4
+		// Token: 0x0601BEC0 RID: 114368 RVA: 0x003F2604 File Offset: 0x003F0804
 		public static VectorOffset CreateLevelPlayCloseActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1612,7 +1634,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6EE RID: 108270 RVA: 0x003C63E4 File Offset: 0x003C45E4
+		// Token: 0x0601BEC1 RID: 114369 RVA: 0x003F2644 File Offset: 0x003F0844
 		public static VectorOffset CreateLevelPlayCloseActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1620,7 +1642,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6EF RID: 108271 RVA: 0x003C63FE File Offset: 0x003C45FE
+		// Token: 0x0601BEC2 RID: 114370 RVA: 0x003F265E File Offset: 0x003F085E
 		public static VectorOffset CreateLevelPlayCloseActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1628,7 +1650,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6F0 RID: 108272 RVA: 0x003C641C File Offset: 0x003C461C
+		// Token: 0x0601BEC3 RID: 114371 RVA: 0x003F267C File Offset: 0x003F087C
 		public static VectorOffset CreateLevelPlayCloseActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1636,67 +1658,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6F1 RID: 108273 RVA: 0x003C6435 File Offset: 0x003C4635
+		// Token: 0x0601BEC4 RID: 114372 RVA: 0x003F2695 File Offset: 0x003F0895
 		public static void StartLevelPlayCloseActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A6F2 RID: 108274 RVA: 0x003C6440 File Offset: 0x003C4640
+		// Token: 0x0601BEC5 RID: 114373 RVA: 0x003F26A0 File Offset: 0x003F08A0
 		public static void AddLevelPlayMark(FlatBufferBuilder builder, Offset<ILevelPlayMark> levelPlayMarkOffset)
 		{
-			builder.AddOffset(29, levelPlayMarkOffset.Value, 0);
+			builder.AddOffset(30, levelPlayMarkOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6F3 RID: 108275 RVA: 0x003C6451 File Offset: 0x003C4651
+		// Token: 0x0601BEC6 RID: 114374 RVA: 0x003F26B1 File Offset: 0x003F08B1
 		public static void AddLevelPlayTrack(FlatBufferBuilder builder, Offset<ILevelPlayTrack> levelPlayTrackOffset)
 		{
-			builder.AddOffset(30, levelPlayTrackOffset.Value, 0);
+			builder.AddOffset(31, levelPlayTrackOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6F4 RID: 108276 RVA: 0x003C6462 File Offset: 0x003C4662
+		// Token: 0x0601BEC7 RID: 114375 RVA: 0x003F26C2 File Offset: 0x003F08C2
 		public static void AddLevelPlayRewardConfigType(FlatBufferBuilder builder, TLevelPlayReward levelPlayRewardConfigType)
 		{
-			builder.AddByte(31, (byte)levelPlayRewardConfigType, 0);
+			builder.AddByte(32, (byte)levelPlayRewardConfigType, 0);
 		}
 
-		// Token: 0x0601A6F5 RID: 108277 RVA: 0x003C646E File Offset: 0x003C466E
+		// Token: 0x0601BEC8 RID: 114376 RVA: 0x003F26CE File Offset: 0x003F08CE
 		public static void AddLevelPlayRewardConfig(FlatBufferBuilder builder, int levelPlayRewardConfigOffset)
 		{
-			builder.AddOffset(32, levelPlayRewardConfigOffset, 0);
+			builder.AddOffset(33, levelPlayRewardConfigOffset, 0);
 		}
 
-		// Token: 0x0601A6F6 RID: 108278 RVA: 0x003C647A File Offset: 0x003C467A
+		// Token: 0x0601BEC9 RID: 114377 RVA: 0x003F26DA File Offset: 0x003F08DA
 		public static void AddLevelPlayRefreshConfigType(FlatBufferBuilder builder, TLevelPlayRefresh levelPlayRefreshConfigType)
 		{
-			builder.AddByte(33, (byte)levelPlayRefreshConfigType, 0);
+			builder.AddByte(34, (byte)levelPlayRefreshConfigType, 0);
 		}
 
-		// Token: 0x0601A6F7 RID: 108279 RVA: 0x003C6486 File Offset: 0x003C4686
+		// Token: 0x0601BECA RID: 114378 RVA: 0x003F26E6 File Offset: 0x003F08E6
 		public static void AddLevelPlayRefreshConfig(FlatBufferBuilder builder, int levelPlayRefreshConfigOffset)
 		{
-			builder.AddOffset(34, levelPlayRefreshConfigOffset, 0);
+			builder.AddOffset(35, levelPlayRefreshConfigOffset, 0);
 		}
 
-		// Token: 0x0601A6F8 RID: 108280 RVA: 0x003C6492 File Offset: 0x003C4692
+		// Token: 0x0601BECB RID: 114379 RVA: 0x003F26F2 File Offset: 0x003F08F2
 		public static void AddLevelPlayOpenCondition(FlatBufferBuilder builder, Offset<ILevelPlayOpenCondition> levelPlayOpenConditionOffset)
 		{
-			builder.AddOffset(35, levelPlayOpenConditionOffset.Value, 0);
+			builder.AddOffset(36, levelPlayOpenConditionOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6F9 RID: 108281 RVA: 0x003C64A3 File Offset: 0x003C46A3
+		// Token: 0x0601BECC RID: 114380 RVA: 0x003F2703 File Offset: 0x003F0903
 		public static void AddLevelPlayActive(FlatBufferBuilder builder, Offset<ILevelPlayActive> levelPlayActiveOffset)
 		{
-			builder.AddOffset(36, levelPlayActiveOffset.Value, 0);
+			builder.AddOffset(37, levelPlayActiveOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6FA RID: 108282 RVA: 0x003C64B4 File Offset: 0x003C46B4
+		// Token: 0x0601BECD RID: 114381 RVA: 0x003F2714 File Offset: 0x003F0914
 		public static void AddLevelPlayOpenActions(FlatBufferBuilder builder, VectorOffset levelPlayOpenActionsOffset)
 		{
-			builder.AddOffset(37, levelPlayOpenActionsOffset.Value, 0);
+			builder.AddOffset(38, levelPlayOpenActionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A6FB RID: 108283 RVA: 0x003C64C8 File Offset: 0x003C46C8
+		// Token: 0x0601BECE RID: 114382 RVA: 0x003F2728 File Offset: 0x003F0928
 		public static VectorOffset CreateLevelPlayOpenActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1707,7 +1729,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6FC RID: 108284 RVA: 0x003C6508 File Offset: 0x003C4708
+		// Token: 0x0601BECF RID: 114383 RVA: 0x003F2768 File Offset: 0x003F0968
 		public static VectorOffset CreateLevelPlayOpenActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1715,7 +1737,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6FD RID: 108285 RVA: 0x003C6522 File Offset: 0x003C4722
+		// Token: 0x0601BED0 RID: 114384 RVA: 0x003F2782 File Offset: 0x003F0982
 		public static VectorOffset CreateLevelPlayOpenActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1723,7 +1745,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6FE RID: 108286 RVA: 0x003C6540 File Offset: 0x003C4740
+		// Token: 0x0601BED1 RID: 114385 RVA: 0x003F27A0 File Offset: 0x003F09A0
 		public static VectorOffset CreateLevelPlayOpenActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1731,19 +1753,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A6FF RID: 108287 RVA: 0x003C6559 File Offset: 0x003C4759
+		// Token: 0x0601BED2 RID: 114386 RVA: 0x003F27B9 File Offset: 0x003F09B9
 		public static void StartLevelPlayOpenActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A700 RID: 108288 RVA: 0x003C6564 File Offset: 0x003C4764
+		// Token: 0x0601BED3 RID: 114387 RVA: 0x003F27C4 File Offset: 0x003F09C4
 		public static void AddEscActionsAfterDungeonCompletion(FlatBufferBuilder builder, VectorOffset escActionsAfterDungeonCompletionOffset)
 		{
-			builder.AddOffset(38, escActionsAfterDungeonCompletionOffset.Value, 0);
+			builder.AddOffset(39, escActionsAfterDungeonCompletionOffset.Value, 0);
 		}
 
-		// Token: 0x0601A701 RID: 108289 RVA: 0x003C6578 File Offset: 0x003C4778
+		// Token: 0x0601BED4 RID: 114388 RVA: 0x003F27D8 File Offset: 0x003F09D8
 		public static VectorOffset CreateEscActionsAfterDungeonCompletionVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1754,7 +1776,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A702 RID: 108290 RVA: 0x003C65B8 File Offset: 0x003C47B8
+		// Token: 0x0601BED5 RID: 114389 RVA: 0x003F2818 File Offset: 0x003F0A18
 		public static VectorOffset CreateEscActionsAfterDungeonCompletionVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1762,7 +1784,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A703 RID: 108291 RVA: 0x003C65D2 File Offset: 0x003C47D2
+		// Token: 0x0601BED6 RID: 114390 RVA: 0x003F2832 File Offset: 0x003F0A32
 		public static VectorOffset CreateEscActionsAfterDungeonCompletionVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1770,7 +1792,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A704 RID: 108292 RVA: 0x003C65F0 File Offset: 0x003C47F0
+		// Token: 0x0601BED7 RID: 114391 RVA: 0x003F2850 File Offset: 0x003F0A50
 		public static VectorOffset CreateEscActionsAfterDungeonCompletionVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1778,31 +1800,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A705 RID: 108293 RVA: 0x003C6609 File Offset: 0x003C4809
+		// Token: 0x0601BED8 RID: 114392 RVA: 0x003F2869 File Offset: 0x003F0A69
 		public static void StartEscActionsAfterDungeonCompletionVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A706 RID: 108294 RVA: 0x003C6614 File Offset: 0x003C4814
+		// Token: 0x0601BED9 RID: 114393 RVA: 0x003F2874 File Offset: 0x003F0A74
 		public static void AddExploratoryDegree(FlatBufferBuilder builder, int exploratoryDegree)
 		{
-			builder.AddInt(39, exploratoryDegree, 0);
+			builder.AddInt(40, exploratoryDegree, 0);
 		}
 
-		// Token: 0x0601A707 RID: 108295 RVA: 0x003C6620 File Offset: 0x003C4820
+		// Token: 0x0601BEDA RID: 114394 RVA: 0x003F2880 File Offset: 0x003F0A80
 		public static void AddExploratoryConfig(FlatBufferBuilder builder, Offset<ILevelPlayExploratoryConfig> exploratoryConfigOffset)
 		{
-			builder.AddOffset(40, exploratoryConfigOffset.Value, 0);
+			builder.AddOffset(41, exploratoryConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0601A708 RID: 108296 RVA: 0x003C6631 File Offset: 0x003C4831
+		// Token: 0x0601BEDB RID: 114395 RVA: 0x003F2891 File Offset: 0x003F0A91
 		public static void AddReferenceAllEntity(FlatBufferBuilder builder, VectorOffset referenceAllEntityOffset)
 		{
-			builder.AddOffset(41, referenceAllEntityOffset.Value, 0);
+			builder.AddOffset(42, referenceAllEntityOffset.Value, 0);
 		}
 
-		// Token: 0x0601A709 RID: 108297 RVA: 0x003C6644 File Offset: 0x003C4844
+		// Token: 0x0601BEDC RID: 114396 RVA: 0x003F28A4 File Offset: 0x003F0AA4
 		public static VectorOffset CreateReferenceAllEntityVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1813,7 +1835,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A70A RID: 108298 RVA: 0x003C667B File Offset: 0x003C487B
+		// Token: 0x0601BEDD RID: 114397 RVA: 0x003F28DB File Offset: 0x003F0ADB
 		public static VectorOffset CreateReferenceAllEntityVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1821,7 +1843,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A70B RID: 108299 RVA: 0x003C6695 File Offset: 0x003C4895
+		// Token: 0x0601BEDE RID: 114398 RVA: 0x003F28F5 File Offset: 0x003F0AF5
 		public static VectorOffset CreateReferenceAllEntityVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1829,7 +1851,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A70C RID: 108300 RVA: 0x003C66B3 File Offset: 0x003C48B3
+		// Token: 0x0601BEDF RID: 114399 RVA: 0x003F2913 File Offset: 0x003F0B13
 		public static VectorOffset CreateReferenceAllEntityVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1837,73 +1859,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A70D RID: 108301 RVA: 0x003C66CC File Offset: 0x003C48CC
+		// Token: 0x0601BEE0 RID: 114400 RVA: 0x003F292C File Offset: 0x003F0B2C
 		public static void StartReferenceAllEntityVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A70E RID: 108302 RVA: 0x003C66D7 File Offset: 0x003C48D7
+		// Token: 0x0601BEE1 RID: 114401 RVA: 0x003F2937 File Offset: 0x003F0B37
 		public static void AddTree(FlatBufferBuilder builder, Offset<IBehaviorTree> treeOffset)
 		{
-			builder.AddOffset(42, treeOffset.Value, 0);
+			builder.AddOffset(43, treeOffset.Value, 0);
 		}
 
-		// Token: 0x0601A70F RID: 108303 RVA: 0x003C66E8 File Offset: 0x003C48E8
+		// Token: 0x0601BEE2 RID: 114402 RVA: 0x003F2948 File Offset: 0x003F0B48
 		public static void AddFixProcessor(FlatBufferBuilder builder, Offset<ILevelPlayFixProcessor> fixProcessorOffset)
 		{
-			builder.AddOffset(43, fixProcessorOffset.Value, 0);
+			builder.AddOffset(44, fixProcessorOffset.Value, 0);
 		}
 
-		// Token: 0x0601A710 RID: 108304 RVA: 0x003C66F9 File Offset: 0x003C48F9
+		// Token: 0x0601BEE3 RID: 114403 RVA: 0x003F2959 File Offset: 0x003F0B59
 		public static void AddCustomIcon(FlatBufferBuilder builder, int customIcon)
 		{
-			builder.AddInt(44, customIcon, 0);
+			builder.AddInt(45, customIcon, 0);
 		}
 
-		// Token: 0x0601A711 RID: 108305 RVA: 0x003C6705 File Offset: 0x003C4905
+		// Token: 0x0601BEE4 RID: 114404 RVA: 0x003F2965 File Offset: 0x003F0B65
 		public static void AddCustomTrackUiIcon(FlatBufferBuilder builder, int customTrackUiIcon)
 		{
-			builder.AddInt(45, customTrackUiIcon, 0);
+			builder.AddInt(46, customTrackUiIcon, 0);
 		}
 
-		// Token: 0x0601A712 RID: 108306 RVA: 0x003C6711 File Offset: 0x003C4911
+		// Token: 0x0601BEE5 RID: 114405 RVA: 0x003F2971 File Offset: 0x003F0B71
 		public static void AddRangeAbsorbPhantom(FlatBufferBuilder builder, Offset<IRangeAbsorbPhantom> rangeAbsorbPhantomOffset)
 		{
-			builder.AddOffset(46, rangeAbsorbPhantomOffset.Value, 0);
+			builder.AddOffset(47, rangeAbsorbPhantomOffset.Value, 0);
 		}
 
-		// Token: 0x0601A713 RID: 108307 RVA: 0x003C6722 File Offset: 0x003C4922
+		// Token: 0x0601BEE6 RID: 114406 RVA: 0x003F2982 File Offset: 0x003F0B82
 		public static void AddRewardConfig(FlatBufferBuilder builder, Offset<IRewardConfig> rewardConfigOffset)
 		{
-			builder.AddOffset(47, rewardConfigOffset.Value, 0);
+			builder.AddOffset(48, rewardConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0601A714 RID: 108308 RVA: 0x003C6733 File Offset: 0x003C4933
+		// Token: 0x0601BEE7 RID: 114407 RVA: 0x003F2993 File Offset: 0x003F0B93
 		public static void AddIsTrackOnlyWhenQuestBind(FlatBufferBuilder builder, bool isTrackOnlyWhenQuestBind)
 		{
-			builder.AddBool(48, isTrackOnlyWhenQuestBind, false);
+			builder.AddBool(49, isTrackOnlyWhenQuestBind, false);
 		}
 
-		// Token: 0x0601A715 RID: 108309 RVA: 0x003C673F File Offset: 0x003C493F
+		// Token: 0x0601BEE8 RID: 114408 RVA: 0x003F299F File Offset: 0x003F0B9F
 		public static void AddRecallConfig(FlatBufferBuilder builder, Offset<ILevelPlayRecallConfig> recallConfigOffset)
 		{
-			builder.AddOffset(49, recallConfigOffset.Value, 0);
+			builder.AddOffset(50, recallConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0601A716 RID: 108310 RVA: 0x003C6750 File Offset: 0x003C4950
+		// Token: 0x0601BEE9 RID: 114409 RVA: 0x003F29B0 File Offset: 0x003F0BB0
 		public static void Add_EntityRefSearch(FlatBufferBuilder builder, Offset<IEntityRefSearchProp> _EntityRefSearchOffset)
 		{
-			builder.AddOffset(50, _EntityRefSearchOffset.Value, 0);
+			builder.AddOffset(51, _EntityRefSearchOffset.Value, 0);
 		}
 
-		// Token: 0x0601A717 RID: 108311 RVA: 0x003C6761 File Offset: 0x003C4961
+		// Token: 0x0601BEEA RID: 114410 RVA: 0x003F29C1 File Offset: 0x003F0BC1
 		public static void Add_HighlightDataPaths(FlatBufferBuilder builder, VectorOffset _HighlightDataPathsOffset)
 		{
-			builder.AddOffset(51, _HighlightDataPathsOffset.Value, 0);
+			builder.AddOffset(52, _HighlightDataPathsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A718 RID: 108312 RVA: 0x003C6774 File Offset: 0x003C4974
+		// Token: 0x0601BEEB RID: 114411 RVA: 0x003F29D4 File Offset: 0x003F0BD4
 		public static VectorOffset Create_HighlightDataPathsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1914,7 +1936,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A719 RID: 108313 RVA: 0x003C67B4 File Offset: 0x003C49B4
+		// Token: 0x0601BEEC RID: 114412 RVA: 0x003F2A14 File Offset: 0x003F0C14
 		public static VectorOffset Create_HighlightDataPathsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -1922,7 +1944,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A71A RID: 108314 RVA: 0x003C67CE File Offset: 0x003C49CE
+		// Token: 0x0601BEED RID: 114413 RVA: 0x003F2A2E File Offset: 0x003F0C2E
 		public static VectorOffset Create_HighlightDataPathsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -1930,7 +1952,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A71B RID: 108315 RVA: 0x003C67EC File Offset: 0x003C49EC
+		// Token: 0x0601BEEE RID: 114414 RVA: 0x003F2A4C File Offset: 0x003F0C4C
 		public static VectorOffset Create_HighlightDataPathsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -1938,31 +1960,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A71C RID: 108316 RVA: 0x003C6805 File Offset: 0x003C4A05
+		// Token: 0x0601BEEF RID: 114415 RVA: 0x003F2A65 File Offset: 0x003F0C65
 		public static void Start_HighlightDataPathsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A71D RID: 108317 RVA: 0x003C6810 File Offset: 0x003C4A10
+		// Token: 0x0601BEF0 RID: 114416 RVA: 0x003F2A70 File Offset: 0x003F0C70
 		public static void Add_FocusDataPath(FlatBufferBuilder builder, StringOffset _FocusDataPathOffset)
 		{
-			builder.AddOffset(52, _FocusDataPathOffset.Value, 0);
+			builder.AddOffset(53, _FocusDataPathOffset.Value, 0);
 		}
 
-		// Token: 0x0601A71E RID: 108318 RVA: 0x003C6821 File Offset: 0x003C4A21
+		// Token: 0x0601BEF1 RID: 114417 RVA: 0x003F2A81 File Offset: 0x003F0C81
 		public static void AddNullMask(FlatBufferBuilder builder, uint nullMask)
 		{
-			builder.AddUint(53, nullMask, 0U);
+			builder.AddUint(54, nullMask, 0U);
 		}
 
-		// Token: 0x0601A71F RID: 108319 RVA: 0x003C682D File Offset: 0x003C4A2D
+		// Token: 0x0601BEF2 RID: 114418 RVA: 0x003F2A8D File Offset: 0x003F0C8D
 		public static Offset<ILevelPlay> EndILevelPlay(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlay>(builder.EndTable());
 		}
 
-		// Token: 0x0601A720 RID: 108320 RVA: 0x003C683C File Offset: 0x003C4A3C
+		// Token: 0x0601BEF3 RID: 114419 RVA: 0x003F2A9C File Offset: 0x003F0C9C
 		public ILevelPlayT UnPack()
 		{
 			ILevelPlayT levelPlayT = new ILevelPlayT();
@@ -1970,7 +1992,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return levelPlayT;
 		}
 
-		// Token: 0x0601A721 RID: 108321 RVA: 0x003C6858 File Offset: 0x003C4A58
+		// Token: 0x0601BEF4 RID: 114420 RVA: 0x003F2AB8 File Offset: 0x003F0CB8
 		public void UnPackTo(ILevelPlayT _o)
 		{
 			_o.ObjType = this.ObjType;
@@ -1993,6 +2015,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.Key = this.Key;
 			_o.Type = this.Type;
 			_o.DecisionBtType = this.DecisionBtType;
+			_o.PrefabId = this.PrefabId;
 			_o.BindSystems = new List<ESystemModuleName>();
 			for (int l = 0; l < this.BindSystemsLength; l++)
 			{
@@ -2112,7 +2135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601A722 RID: 108322 RVA: 0x003C71CC File Offset: 0x003C53CC
+		// Token: 0x0601BEF5 RID: 114421 RVA: 0x003F3438 File Offset: 0x003F1638
 		public static Offset<ILevelPlay> Pack(FlatBufferBuilder builder, ILevelPlayT _o)
 		{
 			if (_o == null)
@@ -2242,10 +2265,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 				highlightDataPathsOffset = ILevelPlay.Create_HighlightDataPathsVector(builder, array9);
 			}
 			StringOffset focusDataPathOffset = (_o._FocusDataPath == null) ? default(StringOffset) : builder.CreateString(_o._FocusDataPath);
-			return ILevelPlay.CreateILevelPlay(builder, objTypeOffset, childrenOffset, referenceOffset, weakReferenceOffset, _o.Id, keyOffset, _o.Type, _o.DecisionBtType, bindSystemsOffset, tidNameOffset, _o.LevelId, _o.PackId, _o.InstanceId, _o.IsOnlineStandalone, specifiedOnlineStandaloneParentUidsOffset, _o.OnlineType, internalDestOffset, _o.LevelAdditiveId, _o.LevelAiTeamLevelId, levelPlayZaxisOffset, _o.LevelPlayEntityId, _o.EnterRadius, _o.LeaveRadius, _o.DelayRefresh, _o.DelayDestroy, _o.NotAllowHidedByGroup, _o.AutoRestoreTreeAddedPlayerBuff, enterInRangeActionsOffset, levelPlayCloseActionsOffset, levelPlayMarkOffset, levelPlayTrackOffset, levelPlayRewardConfig_type, levelPlayRewardConfigOffset, levelPlayRefreshConfig_type, levelPlayRefreshConfigOffset, levelPlayOpenConditionOffset, levelPlayActiveOffset, levelPlayOpenActionsOffset, escActionsAfterDungeonCompletionOffset, _o.ExploratoryDegree, exploratoryConfigOffset, referenceAllEntityOffset, treeOffset, fixProcessorOffset, _o.CustomIcon, _o.CustomTrackUiIcon, rangeAbsorbPhantomOffset, rewardConfigOffset, _o.IsTrackOnlyWhenQuestBind, recallConfigOffset, entityRefSearchOffset, highlightDataPathsOffset, focusDataPathOffset, _o.NullMask);
+			return ILevelPlay.CreateILevelPlay(builder, objTypeOffset, childrenOffset, referenceOffset, weakReferenceOffset, _o.Id, keyOffset, _o.Type, _o.DecisionBtType, _o.PrefabId, bindSystemsOffset, tidNameOffset, _o.LevelId, _o.PackId, _o.InstanceId, _o.IsOnlineStandalone, specifiedOnlineStandaloneParentUidsOffset, _o.OnlineType, internalDestOffset, _o.LevelAdditiveId, _o.LevelAiTeamLevelId, levelPlayZaxisOffset, _o.LevelPlayEntityId, _o.EnterRadius, _o.LeaveRadius, _o.DelayRefresh, _o.DelayDestroy, _o.NotAllowHidedByGroup, _o.AutoRestoreTreeAddedPlayerBuff, enterInRangeActionsOffset, levelPlayCloseActionsOffset, levelPlayMarkOffset, levelPlayTrackOffset, levelPlayRewardConfig_type, levelPlayRewardConfigOffset, levelPlayRefreshConfig_type, levelPlayRefreshConfigOffset, levelPlayOpenConditionOffset, levelPlayActiveOffset, levelPlayOpenActionsOffset, escActionsAfterDungeonCompletionOffset, _o.ExploratoryDegree, exploratoryConfigOffset, referenceAllEntityOffset, treeOffset, fixProcessorOffset, _o.CustomIcon, _o.CustomTrackUiIcon, rangeAbsorbPhantomOffset, rewardConfigOffset, _o.IsTrackOnlyWhenQuestBind, recallConfigOffset, entityRefSearchOffset, highlightDataPathsOffset, focusDataPathOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400C50D RID: 50445
+		// Token: 0x0400CF3B RID: 53051
 		private Table __p;
 	}
 }

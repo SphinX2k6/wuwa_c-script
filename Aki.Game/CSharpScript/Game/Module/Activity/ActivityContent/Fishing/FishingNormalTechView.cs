@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006621 RID: 26145
+	// Token: 0x0200559F RID: 21919
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingNormalTechView : UiTabViewBase
 	{
-		// Token: 0x060418C9 RID: 268489 RVA: 0x00FE48F4 File Offset: 0x00FE2AF4
+		// Token: 0x0603658E RID: 222606 RVA: 0x00F2B9A8 File Offset: 0x00F29BA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060418CA RID: 268490 RVA: 0x00FE4A68 File Offset: 0x00FE2C68
+		// Token: 0x0603658F RID: 222607 RVA: 0x00F2BB1C File Offset: 0x00F29D1C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingNormalTechView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060418CB RID: 268491 RVA: 0x00FE4AAC File Offset: 0x00FE2CAC
+		// Token: 0x06036590 RID: 222608 RVA: 0x00F2BB60 File Offset: 0x00F29D60
 		protected override void OnStart()
 		{
 			this.NodeAreaOneItem.OnClickToggleBack = new Action<IFishingTechNode, UUIExtendToggle>(this.OnClickItem);
@@ -164,13 +164,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418CC RID: 268492 RVA: 0x00FE4CB0 File Offset: 0x00FE2EB0
+		// Token: 0x06036591 RID: 222609 RVA: 0x00F2BD64 File Offset: 0x00F29F64
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x060418CD RID: 268493 RVA: 0x00FE4CB8 File Offset: 0x00FE2EB8
+		// Token: 0x06036592 RID: 222610 RVA: 0x00F2BD6C File Offset: 0x00F29F6C
 		private void RefreshView()
 		{
 			GenericLayout<FishingNormalTechCostItem, int> costLayout = this.CostLayout;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}), null, false);
 		}
 
-		// Token: 0x060418CE RID: 268494 RVA: 0x00FE4CE4 File Offset: 0x00FE2EE4
+		// Token: 0x06036593 RID: 222611 RVA: 0x00F2BD98 File Offset: 0x00F29F98
 		private void OnClickItem(IFishingTechNode node, UUIExtendToggle toggle)
 		{
 			if (this.LastSelectNodeId != 0)
@@ -233,80 +233,80 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			levelUpItem2.RefreshView(node);
 		}
 
-		// Token: 0x060418CF RID: 268495 RVA: 0x00FE4D87 File Offset: 0x00FE2F87
+		// Token: 0x06036594 RID: 222612 RVA: 0x00F2BE3B File Offset: 0x00F2A03B
 		private FishingNormalTechCostItem InitItem()
 		{
 			return new FishingNormalTechCostItem();
 		}
 
-		// Token: 0x040221A6 RID: 139686
+		// Token: 0x0401CAD7 RID: 117463
 		public const int TECH_NODE_AREA_ONE = 1;
 
-		// Token: 0x040221A7 RID: 139687
+		// Token: 0x0401CAD8 RID: 117464
 		public const int TECH_NODE_AREA_TWO = 2;
 
-		// Token: 0x040221A8 RID: 139688
+		// Token: 0x0401CAD9 RID: 117465
 		public const int TECH_NODE_AREA_THREE = 3;
 
-		// Token: 0x040221A9 RID: 139689
+		// Token: 0x0401CADA RID: 117466
 		private FishingTechNodeItem FirstNodeItem;
 
-		// Token: 0x040221AA RID: 139690
+		// Token: 0x0401CADB RID: 117467
 		private FishingTechAreaItem NodeAreaOneItem;
 
-		// Token: 0x040221AB RID: 139691
+		// Token: 0x0401CADC RID: 117468
 		private FishingTechAreaItem NodeAreaTwoItem;
 
-		// Token: 0x040221AC RID: 139692
+		// Token: 0x0401CADD RID: 117469
 		private FishingTechAreaItem NodeAreaThreeItem;
 
-		// Token: 0x040221AD RID: 139693
+		// Token: 0x0401CADE RID: 117470
 		private FishingTechNodeItem LastNodeItem;
 
-		// Token: 0x040221AE RID: 139694
+		// Token: 0x0401CADF RID: 117471
 		private FishingNormalTechViewLevelUpItem LevelUpItem;
 
-		// Token: 0x040221AF RID: 139695
+		// Token: 0x0401CAE0 RID: 117472
 		private GenericLayout<FishingNormalTechCostItem, int> CostLayout;
 
-		// Token: 0x040221B0 RID: 139696
+		// Token: 0x0401CAE1 RID: 117473
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x040221B1 RID: 139697
+		// Token: 0x0401CAE2 RID: 117474
 		private int LastSelectNodeId;
 
-		// Token: 0x0200C838 RID: 51256
+		// Token: 0x0200B21A RID: 45594
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C79A RID: 247706
+			// Token: 0x040370DF RID: 225503
 			public const int FirstNodeItem = 0;
 
-			// Token: 0x0403C79B RID: 247707
+			// Token: 0x040370E0 RID: 225504
 			public const int NodeAreaOneItem = 1;
 
-			// Token: 0x0403C79C RID: 247708
+			// Token: 0x040370E1 RID: 225505
 			public const int NodeAreaTwoItem = 2;
 
-			// Token: 0x0403C79D RID: 247709
+			// Token: 0x040370E2 RID: 225506
 			public const int NodeAreaThreeItem = 3;
 
-			// Token: 0x0403C79E RID: 247710
+			// Token: 0x040370E3 RID: 225507
 			public const int LastNodeItem = 4;
 
-			// Token: 0x0403C79F RID: 247711
+			// Token: 0x040370E4 RID: 225508
 			public const int CostListLayout = 5;
 
-			// Token: 0x0403C7A0 RID: 247712
+			// Token: 0x040370E5 RID: 225509
 			public const int CostItem = 6;
 
-			// Token: 0x0403C7A1 RID: 247713
+			// Token: 0x040370E6 RID: 225510
 			public const int NodeLevelUpItem = 7;
 
-			// Token: 0x0403C7A2 RID: 247714
+			// Token: 0x040370E7 RID: 225511
 			public const int ScrollView = 8;
 
-			// Token: 0x0403C7A3 RID: 247715
+			// Token: 0x040370E8 RID: 225512
 			public const int ScrollViewContentItem = 9;
 		}
 	}

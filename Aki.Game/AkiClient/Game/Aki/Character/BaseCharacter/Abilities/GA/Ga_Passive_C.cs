@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Abilities.GA
 {
-	// Token: 0x0200442A RID: 17450
+	// Token: 0x020033FB RID: 13307
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Abilities/GA/Ga_Passive.Ga_Passive_C")]
 	[UnrealStructLayout(1512, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1512)]
 	public class Ga_Passive_C : GA_Base_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602D20C RID: 184844 RVA: 0x00A33FE0 File Offset: 0x00A321E0
+		// Token: 0x06021C75 RID: 138357 RVA: 0x0096AC73 File Offset: 0x00968E73
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (Ga_Passive_C._ClassPtr == IntPtr.Zero)
@@ -23,36 +23,33 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Abilities.GA
 			return Ga_Passive_C._ClassPtr;
 		}
 
-		// Token: 0x0602D20D RID: 184845 RVA: 0x00A34004 File Offset: 0x00A32204
+		// Token: 0x06021C76 RID: 138358 RVA: 0x0096AC98 File Offset: 0x00968E98
 		public Ga_Passive_C() : this(BuiltinUtils.AllocNativeUObject(Ga_Passive_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602D20E RID: 184846 RVA: 0x00A3402C File Offset: 0x00A3222C
+		// Token: 0x06021C77 RID: 138359 RVA: 0x0096ACC0 File Offset: 0x00968EC0
 		[NullableContext(1)]
 		public Ga_Passive_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(Ga_Passive_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0602D20F RID: 184847 RVA: 0x00A3405F File Offset: 0x00A3225F
+		// Token: 0x06021C78 RID: 138360 RVA: 0x0096ACF3 File Offset: 0x00968EF3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void K2_ActivateAbility()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, Ga_Passive_C.__K2_ActivateAbility_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602D210 RID: 184848 RVA: 0x00A34073 File Offset: 0x00A32273
+		// Token: 0x06021C79 RID: 138361 RVA: 0x0096AD07 File Offset: 0x00968F07
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected override void K2_ActivateAbility_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, Ga_Passive_C.__K2_ActivateAbility_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, Ga_Passive_C.__K2_ActivateAbility_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602D211 RID: 184849 RVA: 0x00A34088 File Offset: 0x00A32288
+		// Token: 0x06021C7A RID: 138362 RVA: 0x0096AD1C File Offset: 0x00968F1C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void K2_OnEndAbility(bool bWasCancelled)
 		{
 			Ga_Passive_C.__K2_OnEndAbility_FunctionParams* ptr = stackalloc Ga_Passive_C.__K2_OnEndAbility_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(Ga_Passive_C.__K2_OnEndAbility_FunctionParams) & -16L;
@@ -61,44 +58,43 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Abilities.GA
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, Ga_Passive_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602D212 RID: 184850 RVA: 0x00A340D0 File Offset: 0x00A322D0
+		// Token: 0x06021C7B RID: 138363 RVA: 0x0096AD64 File Offset: 0x00968F64
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe override void K2_OnEndAbility_Implementation(bool bWasCancelled)
 		{
 			Ga_Passive_C.__K2_OnEndAbility_FunctionParams* ptr = stackalloc Ga_Passive_C.__K2_OnEndAbility_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(Ga_Passive_C.__K2_OnEndAbility_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(Ga_Passive_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bWasCancelled = bWasCancelled;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, Ga_Passive_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, Ga_Passive_C.__K2_OnEndAbility_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602D213 RID: 184851 RVA: 0x00A34117 File Offset: 0x00A32317
+		// Token: 0x06021C7C RID: 138364 RVA: 0x0096ADAA File Offset: 0x00968FAA
 		protected Ga_Passive_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017F95 RID: 98197
+		// Token: 0x040129E9 RID: 76265
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Abilities/GA/Ga_Passive.Ga_Passive_C";
 
-		// Token: 0x04017F96 RID: 98198
+		// Token: 0x040129EA RID: 76266
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017F97 RID: 98199
+		// Token: 0x040129EB RID: 76267
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017F98 RID: 98200
+		// Token: 0x040129EC RID: 76268
 		private static IntPtr __K2_ActivateAbility_NativeFunctionPtr;
 
-		// Token: 0x04017F99 RID: 98201
+		// Token: 0x040129ED RID: 76269
 		private static IntPtr __K2_OnEndAbility_NativeFunctionPtr;
 
-		// Token: 0x0200A6D8 RID: 42712
+		// Token: 0x020090E3 RID: 37091
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected new ref struct __K2_OnEndAbility_FunctionParams
 		{
-			// Token: 0x040326BF RID: 206527
+			// Token: 0x0402CF91 RID: 184209
 			[FieldOffset(0)]
 			public bool bWasCancelled;
 		}

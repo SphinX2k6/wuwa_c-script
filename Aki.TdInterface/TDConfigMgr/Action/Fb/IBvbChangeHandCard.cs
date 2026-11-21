@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A24 RID: 10788
+	// Token: 0x02002D11 RID: 11537
 	public class IBvbChangeHandCard : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDC2 RID: 60866 RVA: 0x0022A5B5 File Offset: 0x002287B5
-		[NullableContext(1)]
+		// Token: 0x0600FC5A RID: 64602 RVA: 0x00247F69 File Offset: 0x00246169
 		public static IBvbChangeHandCard Create(IBvbChangeHandCard? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B3C RID: 19260
-		// (get) Token: 0x0600EDC3 RID: 60867 RVA: 0x0022A5D4 File Offset: 0x002287D4
+		// Token: 0x17004EE6 RID: 20198
+		// (get) Token: 0x0600FC5B RID: 64603 RVA: 0x00247F88 File Offset: 0x00246188
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B3D RID: 19261
-		// (get) Token: 0x0600EDC4 RID: 60868 RVA: 0x0022A5E4 File Offset: 0x002287E4
+		// Token: 0x17004EE7 RID: 20199
+		// (get) Token: 0x0600FC5C RID: 64604 RVA: 0x00247F98 File Offset: 0x00246198
 		public virtual int? HandCardIndex
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082DE RID: 33502
+		// Token: 0x040089D1 RID: 35281
 		private IBvbChangeHandCard Instance;
 	}
 }

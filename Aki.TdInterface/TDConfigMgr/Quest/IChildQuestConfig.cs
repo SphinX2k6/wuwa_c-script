@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F0E RID: 3854
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001024 RID: 4132
 	public class IChildQuestConfig
 	{
-		// Token: 0x0600553A RID: 21818 RVA: 0x000D102C File Offset: 0x000CF22C
+		// Token: 0x06005AB6 RID: 23222 RVA: 0x000DD1D4 File Offset: 0x000DB3D4
 		private IChildQuestConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600553B RID: 21819 RVA: 0x000D1064 File Offset: 0x000CF264
+		// Token: 0x06005AB7 RID: 23223 RVA: 0x000DD20C File Offset: 0x000DB40C
 		public static IChildQuestConfig Create([Nullable(2)] IChildQuestConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600553C RID: 21820 RVA: 0x000D1077 File Offset: 0x000CF277
+		// Token: 0x06005AB8 RID: 23224 RVA: 0x000DD21F File Offset: 0x000DB41F
 		public static IChildQuestConfig CreateFromSetValue([Nullable(2)] IChildQuestConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600553D RID: 21821 RVA: 0x000D108A File Offset: 0x000CF28A
+		// Token: 0x06005AB9 RID: 23225 RVA: 0x000DD232 File Offset: 0x000DB432
 		public IChildQuestConfig_SetValue ToSetValue()
 		{
 			return new IChildQuestConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C89 RID: 7305
-		// (get) Token: 0x0600553E RID: 21822 RVA: 0x000D10A0 File Offset: 0x000CF2A0
-		// (set) Token: 0x0600553F RID: 21823 RVA: 0x000D10DA File Offset: 0x000CF2DA
+		// Token: 0x17001E21 RID: 7713
+		// (get) Token: 0x06005ABA RID: 23226 RVA: 0x000DD248 File Offset: 0x000DB448
+		// (set) Token: 0x06005ABB RID: 23227 RVA: 0x000DD282 File Offset: 0x000DB482
 		public virtual EOnlineParticipateRule? OnlineParticipateRule
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400339A RID: 13210
+		// Token: 0x040036A7 RID: 13991
 		[Nullable(2)]
 		protected IChildQuestConfig FbInstance;
 
-		// Token: 0x0400339B RID: 13211
+		// Token: 0x040036A8 RID: 13992
 		[Nullable(2)]
 		protected IChildQuestConfig_SetValue PocoInterface;
 	}

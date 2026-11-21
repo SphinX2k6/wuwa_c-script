@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B5E RID: 2910
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C2C RID: 3116
 	public class ICategoryMatchingConfig
 	{
-		// Token: 0x06004307 RID: 17159 RVA: 0x000AAF4A File Offset: 0x000A914A
+		// Token: 0x06004760 RID: 18272 RVA: 0x000B500E File Offset: 0x000B320E
 		public static ICategoryMatchingConfig Create(ICategoryMatchingConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001208 RID: 4616
-		// (get) Token: 0x06004308 RID: 17160 RVA: 0x000AAF69 File Offset: 0x000A9169
+		// Token: 0x17001303 RID: 4867
+		// (get) Token: 0x06004761 RID: 18273 RVA: 0x000B502D File Offset: 0x000B322D
 		public virtual ICategoryMatchingCondition Condition
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001209 RID: 4617
-		// (get) Token: 0x06004309 RID: 17161 RVA: 0x000AAF9D File Offset: 0x000A919D
+		// Token: 0x17001304 RID: 4868
+		// (get) Token: 0x06004762 RID: 18274 RVA: 0x000B5061 File Offset: 0x000B3261
 		public virtual ICategoryMatchingAnimation Animation
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700120A RID: 4618
-		// (get) Token: 0x0600430A RID: 17162 RVA: 0x000AAFD1 File Offset: 0x000A91D1
+		// Token: 0x17001305 RID: 4869
+		// (get) Token: 0x06004763 RID: 18275 RVA: 0x000B5095 File Offset: 0x000B3295
 		public virtual ICategoryMatchingSucceed Callback
 		{
 			get
@@ -70,8 +68,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700120B RID: 4619
-		// (get) Token: 0x0600430B RID: 17163 RVA: 0x000AB005 File Offset: 0x000A9205
+		// Token: 0x17001306 RID: 4870
+		// (get) Token: 0x06004764 RID: 18276 RVA: 0x000B50C9 File Offset: 0x000B32C9
 		[Nullable(2)]
 		public virtual IItemLockingConfig ItemLockingConfig
 		{
@@ -88,35 +86,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025CF RID: 9679
+		// Token: 0x04002817 RID: 10263
 		private ICategoryMatchingConfig Instance;
 
-		// Token: 0x040025D0 RID: 9680
+		// Token: 0x04002818 RID: 10264
 		[Nullable(2)]
 		private ICategoryMatchingCondition _ConditionCache;
 
-		// Token: 0x040025D1 RID: 9681
+		// Token: 0x04002819 RID: 10265
 		private bool _ConditionInited;
 
-		// Token: 0x040025D2 RID: 9682
+		// Token: 0x0400281A RID: 10266
 		[Nullable(2)]
 		private ICategoryMatchingAnimation _AnimationCache;
 
-		// Token: 0x040025D3 RID: 9683
+		// Token: 0x0400281B RID: 10267
 		private bool _AnimationInited;
 
-		// Token: 0x040025D4 RID: 9684
+		// Token: 0x0400281C RID: 10268
 		[Nullable(2)]
 		private ICategoryMatchingSucceed _CallbackCache;
 
-		// Token: 0x040025D5 RID: 9685
+		// Token: 0x0400281D RID: 10269
 		private bool _CallbackInited;
 
-		// Token: 0x040025D6 RID: 9686
+		// Token: 0x0400281E RID: 10270
 		[Nullable(2)]
 		private IItemLockingConfig _ItemLockingConfigCache;
 
-		// Token: 0x040025D7 RID: 9687
+		// Token: 0x0400281F RID: 10271
 		private bool _ItemLockingConfigInited;
 	}
 }

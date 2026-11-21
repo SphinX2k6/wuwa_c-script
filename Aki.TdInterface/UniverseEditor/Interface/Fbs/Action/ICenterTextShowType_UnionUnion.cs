@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062BE RID: 25278
+	// Token: 0x0200692F RID: 26927
 	public class ICenterTextShowType_UnionUnion
 	{
-		// Token: 0x1700BCB4 RID: 48308
-		// (get) Token: 0x0602BAEF RID: 178927 RVA: 0x00603301 File Offset: 0x00601501
-		// (set) Token: 0x0602BAF0 RID: 178928 RVA: 0x00603309 File Offset: 0x00601509
+		// Token: 0x1700C63E RID: 50750
+		// (get) Token: 0x0602E258 RID: 189016 RVA: 0x0064E30D File Offset: 0x0064C50D
+		// (set) Token: 0x0602E259 RID: 189017 RVA: 0x0064E315 File Offset: 0x0064C515
 		public ICenterTextShowType_Union Type { get; set; }
 
-		// Token: 0x1700BCB5 RID: 48309
-		// (get) Token: 0x0602BAF1 RID: 178929 RVA: 0x00603312 File Offset: 0x00601512
-		// (set) Token: 0x0602BAF2 RID: 178930 RVA: 0x0060331A File Offset: 0x0060151A
+		// Token: 0x1700C63F RID: 50751
+		// (get) Token: 0x0602E25A RID: 189018 RVA: 0x0064E31E File Offset: 0x0064C51E
+		// (set) Token: 0x0602E25B RID: 189019 RVA: 0x0064E326 File Offset: 0x0064C526
 		public object Value { get; set; }
 
-		// Token: 0x0602BAF3 RID: 178931 RVA: 0x00603323 File Offset: 0x00601523
+		// Token: 0x0602E25C RID: 189020 RVA: 0x0064E32F File Offset: 0x0064C52F
 		public ICenterTextShowType_UnionUnion()
 		{
 			this.Type = ICenterTextShowType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602BAF4 RID: 178932 RVA: 0x00603339 File Offset: 0x00601539
+		// Token: 0x0602E25D RID: 189021 RVA: 0x0064E345 File Offset: 0x0064C545
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602BAF5 RID: 178933 RVA: 0x0060334B File Offset: 0x0060154B
+		// Token: 0x0602E25E RID: 189022 RVA: 0x0064E357 File Offset: 0x0064C557
 		public ICenterTextShowTypeT AsICenterTextShowType()
 		{
 			return this.As<ICenterTextShowTypeT>();
 		}
 
-		// Token: 0x0602BAF6 RID: 178934 RVA: 0x00603353 File Offset: 0x00601553
+		// Token: 0x0602E25F RID: 189023 RVA: 0x0064E35F File Offset: 0x0064C55F
 		public static ICenterTextShowType_UnionUnion FromICenterTextShowType(ICenterTextShowTypeT _icentertextshowtype)
 		{
 			return new ICenterTextShowType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BAF7 RID: 178935 RVA: 0x00603368 File Offset: 0x00601568
+		// Token: 0x0602E260 RID: 189024 RVA: 0x0064E374 File Offset: 0x0064C574
 		public IICenterTextShowAllT AsIICenterTextShowAll()
 		{
 			return this.As<IICenterTextShowAllT>();
 		}
 
-		// Token: 0x0602BAF8 RID: 178936 RVA: 0x00603370 File Offset: 0x00601570
+		// Token: 0x0602E261 RID: 189025 RVA: 0x0064E37C File Offset: 0x0064C57C
 		public static ICenterTextShowType_UnionUnion FromIICenterTextShowAll(IICenterTextShowAllT _iicentertextshowall)
 		{
 			return new ICenterTextShowType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BAF9 RID: 178937 RVA: 0x00603385 File Offset: 0x00601585
+		// Token: 0x0602E262 RID: 189026 RVA: 0x0064E391 File Offset: 0x0064C591
 		public IICenterTextFadeOutT AsIICenterTextFadeOut()
 		{
 			return this.As<IICenterTextFadeOutT>();
 		}
 
-		// Token: 0x0602BAFA RID: 178938 RVA: 0x0060338D File Offset: 0x0060158D
+		// Token: 0x0602E263 RID: 189027 RVA: 0x0064E399 File Offset: 0x0064C599
 		public static ICenterTextShowType_UnionUnion FromIICenterTextFadeOut(IICenterTextFadeOutT _iicentertextfadeout)
 		{
 			return new ICenterTextShowType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BAFB RID: 178939 RVA: 0x006033A2 File Offset: 0x006015A2
+		// Token: 0x0602E264 RID: 189028 RVA: 0x0064E3AE File Offset: 0x0064C5AE
 		public IICenterTextTypeWriterT AsIICenterTextTypeWriter()
 		{
 			return this.As<IICenterTextTypeWriterT>();
 		}
 
-		// Token: 0x0602BAFC RID: 178940 RVA: 0x006033AA File Offset: 0x006015AA
+		// Token: 0x0602E265 RID: 189029 RVA: 0x0064E3B6 File Offset: 0x0064C5B6
 		public static ICenterTextShowType_UnionUnion FromIICenterTextTypeWriter(IICenterTextTypeWriterT _iicentertexttypewriter)
 		{
 			return new ICenterTextShowType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602BAFD RID: 178941 RVA: 0x006033C0 File Offset: 0x006015C0
+		// Token: 0x0602E266 RID: 189030 RVA: 0x0064E3CC File Offset: 0x0064C5CC
 		public static int Pack(FlatBufferBuilder builder, ICenterTextShowType_UnionUnion _o)
 		{
 			switch (_o.Type)

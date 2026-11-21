@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A6 RID: 18086
+	// Token: 0x020035D7 RID: 13783
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Input : Singleton
 	{
-		// Token: 0x0602EA1C RID: 191004 RVA: 0x00ACBCF4 File Offset: 0x00AC9EF4
+		// Token: 0x06023168 RID: 143720 RVA: 0x009FA5C8 File Offset: 0x009F87C8
 		public void Initialize(LGUIEventSystemActor_C eventActor)
 		{
 			if (eventActor == null)
@@ -25,26 +25,26 @@ namespace CSharpScript.Game.Ui
 			eventActor.OnTouchMove.Add(new Action<int, FVector>(this.OnTouchMove));
 		}
 
-		// Token: 0x0602EA1D RID: 191005 RVA: 0x00ACBD64 File Offset: 0x00AC9F64
+		// Token: 0x06023169 RID: 143721 RVA: 0x009FA638 File Offset: 0x009F8838
 		public bool IsKeyPress(string key)
 		{
 			bool flag;
 			return this.KeyMap.TryGetValue(key, out flag) && flag;
 		}
 
-		// Token: 0x0602EA1E RID: 191006 RVA: 0x00ACBD84 File Offset: 0x00AC9F84
+		// Token: 0x0602316A RID: 143722 RVA: 0x009FA658 File Offset: 0x009F8858
 		public float GetAxisValue()
 		{
 			return this.AxisValue;
 		}
 
-		// Token: 0x0602EA1F RID: 191007 RVA: 0x00ACBD8C File Offset: 0x00AC9F8C
+		// Token: 0x0602316B RID: 143723 RVA: 0x009FA660 File Offset: 0x009F8860
 		public IReadOnlyDictionary<int, TouchData> GetTouchMap()
 		{
 			return this.TouchMap;
 		}
 
-		// Token: 0x0602EA20 RID: 191008 RVA: 0x00ACBD94 File Offset: 0x00AC9F94
+		// Token: 0x0602316C RID: 143724 RVA: 0x009FA668 File Offset: 0x009F8868
 		private void OnKeyClick(FKey key, bool isPress)
 		{
 			string text = key.KeyName.ToString();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA21 RID: 191009 RVA: 0x00ACBE0E File Offset: 0x00ACA00E
+		// Token: 0x0602316D RID: 143725 RVA: 0x009FA6E2 File Offset: 0x009F88E2
 		private void OnMiddleMouseScroll(float axisValue)
 		{
 			if (this.Enable)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA22 RID: 191010 RVA: 0x00ACBE20 File Offset: 0x00ACA020
+		// Token: 0x0602316E RID: 143726 RVA: 0x009FA6F4 File Offset: 0x009F88F4
 		private void OnTouch(bool isPress, int touchId, FVector touchPosition)
 		{
 			TouchData value;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA23 RID: 191011 RVA: 0x00ACBE5C File Offset: 0x00ACA05C
+		// Token: 0x0602316F RID: 143727 RVA: 0x009FA730 File Offset: 0x009F8930
 		private void OnTouchMove(int touchId, FVector touchPosition)
 		{
 			TouchData touchData;
@@ -86,8 +86,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x1700763A RID: 30266
-		// (get) Token: 0x0602EA24 RID: 191012 RVA: 0x00ACBE88 File Offset: 0x00ACA088
+		// Token: 0x170048F6 RID: 18678
+		// (get) Token: 0x06023170 RID: 143728 RVA: 0x009FA75C File Offset: 0x009F895C
 		public static Input Instance
 		{
 			get
@@ -101,12 +101,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA25 RID: 191013 RVA: 0x00ACBEAB File Offset: 0x00ACA0AB
+		// Token: 0x06023171 RID: 143729 RVA: 0x009FA77F File Offset: 0x009F897F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EA26 RID: 191014 RVA: 0x00ACBEAD File Offset: 0x00ACA0AD
+		// Token: 0x06023172 RID: 143730 RVA: 0x009FA781 File Offset: 0x009F8981
 		public static void ResetStaticDefaultValue()
 		{
 			Input instance = Input._instance;
@@ -117,28 +117,28 @@ namespace CSharpScript.Game.Ui
 			Input._instance = null;
 		}
 
-		// Token: 0x0602EA27 RID: 191015 RVA: 0x00ACBEC6 File Offset: 0x00ACA0C6
+		// Token: 0x06023173 RID: 143731 RVA: 0x009FA79A File Offset: 0x009F899A
 		static Input()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(Input.CreateStaticDefaultValue), new Action(Input.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019672 RID: 104050
+		// Token: 0x04013D17 RID: 81175
 		private readonly Dictionary<string, bool> KeyMap = new Dictionary<string, bool>();
 
-		// Token: 0x04019673 RID: 104051
+		// Token: 0x04013D18 RID: 81176
 		private readonly Dictionary<int, TouchData> TouchMap = new Dictionary<int, TouchData>();
 
-		// Token: 0x04019674 RID: 104052
+		// Token: 0x04013D19 RID: 81177
 		private float AxisValue;
 
-		// Token: 0x04019675 RID: 104053
+		// Token: 0x04013D1A RID: 81178
 		public string OnlyRespondToKey = "";
 
-		// Token: 0x04019676 RID: 104054
+		// Token: 0x04013D1B RID: 81179
 		public bool Enable = true;
 
-		// Token: 0x04019677 RID: 104055
+		// Token: 0x04013D1C RID: 81180
 		[Nullable(2)]
 		private static Input _instance;
 	}

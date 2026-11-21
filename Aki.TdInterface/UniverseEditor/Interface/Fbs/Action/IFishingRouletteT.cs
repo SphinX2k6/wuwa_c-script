@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067C9 RID: 26569
+	// Token: 0x02006E49 RID: 28233
 	public class IFishingRouletteT
 	{
-		// Token: 0x1700C537 RID: 50487
-		// (get) Token: 0x0602E3FF RID: 189439 RVA: 0x00650E06 File Offset: 0x0064F006
-		// (set) Token: 0x0602E400 RID: 189440 RVA: 0x00650E0E File Offset: 0x0064F00E
+		// Token: 0x1700CEED RID: 52973
+		// (get) Token: 0x06030C45 RID: 199749 RVA: 0x0069E54A File Offset: 0x0069C74A
+		// (set) Token: 0x06030C46 RID: 199750 RVA: 0x0069E552 File Offset: 0x0069C752
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x0602E401 RID: 189441 RVA: 0x00650E17 File Offset: 0x0064F017
+		// Token: 0x06030C47 RID: 199751 RVA: 0x0069E55B File Offset: 0x0069C75B
 		public IFishingRouletteT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

@@ -11,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001769 RID: 5993
+// Token: 0x02000C22 RID: 3106
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRefineChoosePanel : UiPanelBase
 {
-	// Token: 0x17000E6B RID: 3691
-	// (get) Token: 0x0600ADA4 RID: 44452 RVA: 0x00271768 File Offset: 0x0026F968
+	// Token: 0x17000E8E RID: 3726
+	// (get) Token: 0x0600818B RID: 33163 RVA: 0x0027BC2C File Offset: 0x00279E2C
 	private PhantomItemData SelectedData
 	{
 		get
@@ -31,8 +31,8 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x17000E6C RID: 3692
-	// (get) Token: 0x0600ADA5 RID: 44453 RVA: 0x002717A4 File Offset: 0x0026F9A4
+	// Token: 0x17000E8F RID: 3727
+	// (get) Token: 0x0600818C RID: 33164 RVA: 0x0027BC68 File Offset: 0x00279E68
 	public EFilterSortGroupId FilterSortGroupId
 	{
 		get
@@ -62,8 +62,8 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x17000E6D RID: 3693
-	// (get) Token: 0x0600ADA6 RID: 44454 RVA: 0x00271800 File Offset: 0x0026FA00
+	// Token: 0x17000E90 RID: 3728
+	// (get) Token: 0x0600818D RID: 33165 RVA: 0x0027BCC4 File Offset: 0x00279EC4
 	[Nullable(new byte[]
 	{
 		2,
@@ -97,9 +97,9 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x17000E6E RID: 3694
-	// (get) Token: 0x0600ADA7 RID: 44455 RVA: 0x00271887 File Offset: 0x0026FA87
-	// (set) Token: 0x0600ADA8 RID: 44456 RVA: 0x0027188F File Offset: 0x0026FA8F
+	// Token: 0x17000E91 RID: 3729
+	// (get) Token: 0x0600818E RID: 33166 RVA: 0x0027BD4B File Offset: 0x00279F4B
+	// (set) Token: 0x0600818F RID: 33167 RVA: 0x0027BD53 File Offset: 0x00279F53
 	public EVisionRefineRefineType CurrentRefineType
 	{
 		get
@@ -118,8 +118,8 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x17000E6F RID: 3695
-	// (get) Token: 0x0600ADA9 RID: 44457 RVA: 0x002718B4 File Offset: 0x0026FAB4
+	// Token: 0x17000E92 RID: 3730
+	// (get) Token: 0x06008190 RID: 33168 RVA: 0x0027BD78 File Offset: 0x00279F78
 	public EVisionRefineCostType? CurrentCostType
 	{
 		get
@@ -133,7 +133,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADAA RID: 44458 RVA: 0x00271900 File Offset: 0x0026FB00
+	// Token: 0x06008191 RID: 33169 RVA: 0x0027BDC4 File Offset: 0x00279FC4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -158,14 +158,14 @@ public class VisionRefineChoosePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600ADAB RID: 44459 RVA: 0x00271A5F File Offset: 0x0026FC5F
+	// Token: 0x06008192 RID: 33170 RVA: 0x0027BF23 File Offset: 0x0027A123
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiViewSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiViewSequence);
 	}
 
-	// Token: 0x0600ADAC RID: 44460 RVA: 0x00271A7C File Offset: 0x0026FC7C
+	// Token: 0x06008193 RID: 33171 RVA: 0x0027BF40 File Offset: 0x0027A140
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRefineChoosePanel.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -176,14 +176,14 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600ADAD RID: 44461 RVA: 0x00271ABF File Offset: 0x0026FCBF
+	// Token: 0x06008194 RID: 33172 RVA: 0x0027BF83 File Offset: 0x0027A183
 	protected override void OnStart()
 	{
 		this.FilterEntrance = new FilterEntrance<PhantomItemData>(base.GetItem(7), new TUpdateDataListFunction<PhantomItemData>(this.OnFilterSortRefresh));
 		this.SortEntrance = new SortEntrance<PhantomItemData>(base.GetItem(8), new TUpdateDataListFunction<PhantomItemData>(this.OnFilterSortRefresh));
 	}
 
-	// Token: 0x0600ADAE RID: 44462 RVA: 0x00271B00 File Offset: 0x0026FD00
+	// Token: 0x06008195 RID: 33173 RVA: 0x0027BFC4 File Offset: 0x0027A1C4
 	[NullableContext(1)]
 	private VisionRefineMediumItemGrid InitItem()
 	{
@@ -201,7 +201,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return visionRefineMediumItemGrid;
 	}
 
-	// Token: 0x0600ADAF RID: 44463 RVA: 0x00271BBC File Offset: 0x0026FDBC
+	// Token: 0x06008196 RID: 33174 RVA: 0x0027C080 File Offset: 0x0027A280
 	[NullableContext(1)]
 	private void OnItemClicked(MediumItemGridExtendCallback callbackData)
 	{
@@ -227,14 +227,14 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.TryOpenStackCountPopup(phantomItemData);
 	}
 
-	// Token: 0x0600ADB0 RID: 44464 RVA: 0x00271C1D File Offset: 0x0026FE1D
+	// Token: 0x06008197 RID: 33175 RVA: 0x0027C0E1 File Offset: 0x0027A2E1
 	[NullableContext(1)]
 	private VisionRefineTabCostItem InitCostTabItem()
 	{
 		return new VisionRefineTabCostItem();
 	}
 
-	// Token: 0x0600ADB1 RID: 44465 RVA: 0x00271C24 File Offset: 0x0026FE24
+	// Token: 0x06008198 RID: 33176 RVA: 0x0027C0E8 File Offset: 0x0027A2E8
 	public void ClearSelection()
 	{
 		this.RefreshChangeSelect(null);
@@ -244,7 +244,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADB2 RID: 44466 RVA: 0x00271C48 File Offset: 0x0026FE48
+	// Token: 0x06008199 RID: 33177 RVA: 0x0027C10C File Offset: 0x0027A30C
 	public void ClearCurrentCostMultiChoose()
 	{
 		if (this.CurrentCostType == null)
@@ -268,7 +268,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADB3 RID: 44467 RVA: 0x00271CC4 File Offset: 0x0026FEC4
+	// Token: 0x0600819A RID: 33178 RVA: 0x0027C188 File Offset: 0x0027A388
 	public void RemoveInvalidSelections()
 	{
 		this.ShowTipsComponent(null);
@@ -304,7 +304,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADB4 RID: 44468 RVA: 0x00271DC0 File Offset: 0x0026FFC0
+	// Token: 0x0600819B RID: 33179 RVA: 0x0027C284 File Offset: 0x0027A484
 	public void RedirectSelectionOnStackMerge(int mergedIncId, int representativeIncId)
 	{
 		PhantomItemData phantomItemData = InventoryModel.Instance.GetPhantomItemData(representativeIncId);
@@ -355,19 +355,19 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADB5 RID: 44469 RVA: 0x00271F2C File Offset: 0x0027012C
+	// Token: 0x0600819C RID: 33180 RVA: 0x0027C3F0 File Offset: 0x0027A5F0
 	public PhantomItemData GetSelection()
 	{
 		return this.SelectedData;
 	}
 
-	// Token: 0x0600ADB6 RID: 44470 RVA: 0x00271F34 File Offset: 0x00270134
+	// Token: 0x0600819D RID: 33181 RVA: 0x0027C3F8 File Offset: 0x0027A5F8
 	public void SetSelection(PhantomItemData data)
 	{
 		this.SelectedDataInternal = data;
 	}
 
-	// Token: 0x0600ADB7 RID: 44471 RVA: 0x00271F40 File Offset: 0x00270140
+	// Token: 0x0600819E RID: 33182 RVA: 0x0027C404 File Offset: 0x0027A604
 	[NullableContext(1)]
 	private bool CostFilter(PhantomItemData value)
 	{
@@ -388,7 +388,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0600ADB8 RID: 44472 RVA: 0x00271FE8 File Offset: 0x002701E8
+	// Token: 0x0600819F RID: 33183 RVA: 0x0027C4AC File Offset: 0x0027A6AC
 	[NullableContext(1)]
 	public void SetSelectionDummy(PhantomItemData data)
 	{
@@ -414,7 +414,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		list.Add(this.BuildSelectedEntry(data, 1));
 	}
 
-	// Token: 0x0600ADB9 RID: 44473 RVA: 0x00272094 File Offset: 0x00270294
+	// Token: 0x060081A0 RID: 33184 RVA: 0x0027C558 File Offset: 0x0027A758
 	[NullableContext(1)]
 	public void RefreshList(List<PhantomItemData> data)
 	{
@@ -441,7 +441,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.FilterEntrance.SetSortUniqueId(uniqueIdByGroupId2);
 	}
 
-	// Token: 0x0600ADBA RID: 44474 RVA: 0x00272180 File Offset: 0x00270380
+	// Token: 0x060081A1 RID: 33185 RVA: 0x0027C644 File Offset: 0x0027A844
 	public void ShowTipsComponent(PhantomItemData itemData)
 	{
 		if (itemData == null || this.CurrentRefineType == EVisionRefineRefineType.Sub)
@@ -482,7 +482,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADBB RID: 44475 RVA: 0x00272254 File Offset: 0x00270454
+	// Token: 0x060081A2 RID: 33186 RVA: 0x0027C718 File Offset: 0x0027A918
 	private void RefreshTipsByIncId(int incId)
 	{
 		if (this.CurrentTipsIncId != incId)
@@ -492,7 +492,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.ShowTipsComponent(InventoryModel.Instance.GetPhantomItemData(incId));
 	}
 
-	// Token: 0x0600ADBC RID: 44476 RVA: 0x00272271 File Offset: 0x00270471
+	// Token: 0x060081A3 RID: 33187 RVA: 0x0027C735 File Offset: 0x0027A935
 	public void RefreshCurrency(int[] itemIdList)
 	{
 		if (itemIdList == null)
@@ -522,7 +522,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADBD RID: 44477 RVA: 0x002722B0 File Offset: 0x002704B0
+	// Token: 0x060081A4 RID: 33188 RVA: 0x0027C774 File Offset: 0x0027A974
 	protected void OnClickMask()
 	{
 		base.GetItem(2).SetUIActive(false);
@@ -534,7 +534,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		button.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600ADBE RID: 44478 RVA: 0x002722E9 File Offset: 0x002704E9
+	// Token: 0x060081A5 RID: 33189 RVA: 0x0027C7AD File Offset: 0x0027A9AD
 	protected void OnClickClose()
 	{
 		if (this.OnClickCloseCallBack != null)
@@ -545,7 +545,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.SetActive(false);
 	}
 
-	// Token: 0x0600ADBF RID: 44479 RVA: 0x00272308 File Offset: 0x00270508
+	// Token: 0x060081A6 RID: 33190 RVA: 0x0027C7CC File Offset: 0x0027A9CC
 	[NullableContext(1)]
 	private void OnItemToggleStateChanged(MediumItemGridExtendCallback callbackData)
 	{
@@ -553,7 +553,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.RefreshSelectionByItemData(itemData);
 	}
 
-	// Token: 0x0600ADC0 RID: 44480 RVA: 0x00272328 File Offset: 0x00270528
+	// Token: 0x060081A7 RID: 33191 RVA: 0x0027C7EC File Offset: 0x0027A9EC
 	[NullableContext(1)]
 	public void RefreshSelectionByItemData(PhantomItemData itemData)
 	{
@@ -600,7 +600,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADC1 RID: 44481 RVA: 0x002723F0 File Offset: 0x002705F0
+	// Token: 0x060081A8 RID: 33192 RVA: 0x0027C8B4 File Offset: 0x0027AAB4
 	public void OnItemFuncValueChange(int uniqueId)
 	{
 		if (InventoryModel.Instance.GetAttributeItemData(uniqueId) == null)
@@ -617,7 +617,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADC2 RID: 44482 RVA: 0x00272444 File Offset: 0x00270644
+	// Token: 0x060081A9 RID: 33193 RVA: 0x0027C908 File Offset: 0x0027AB08
 	[NullableContext(1)]
 	private bool OnItemCanExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
@@ -665,7 +665,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600ADC3 RID: 44483 RVA: 0x00272510 File Offset: 0x00270710
+	// Token: 0x060081AA RID: 33194 RVA: 0x0027C9D4 File Offset: 0x0027ABD4
 	[NullableContext(1)]
 	private void OnItemReduceButtonClicked(MediumItemGridButtonCallback args)
 	{
@@ -685,7 +685,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.ShowTipsComponent(null);
 	}
 
-	// Token: 0x0600ADC4 RID: 44484 RVA: 0x00272560 File Offset: 0x00270760
+	// Token: 0x060081AB RID: 33195 RVA: 0x0027CA24 File Offset: 0x0027AC24
 	[NullableContext(1)]
 	private void OnFilterSortRefresh(List<PhantomItemData> list, bool _1, EFilterSortType _2)
 	{
@@ -705,7 +705,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.ShowTipsComponent(null);
 	}
 
-	// Token: 0x0600ADC5 RID: 44485 RVA: 0x002725FC File Offset: 0x002707FC
+	// Token: 0x060081AC RID: 33196 RVA: 0x0027CAC0 File Offset: 0x0027ACC0
 	private bool CheckItemSelect(PhantomItemData data)
 	{
 		if (this.CurrentRefineType == EVisionRefineRefineType.Main)
@@ -721,7 +721,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return uniqueId == uniqueId2;
 	}
 
-	// Token: 0x0600ADC6 RID: 44486 RVA: 0x00272650 File Offset: 0x00270850
+	// Token: 0x060081AD RID: 33197 RVA: 0x0027CB14 File Offset: 0x0027AD14
 	private bool CheckItemFocus(PhantomItemData data)
 	{
 		if (data == null)
@@ -735,7 +735,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return this.CheckItemSelect(data);
 	}
 
-	// Token: 0x0600ADC7 RID: 44487 RVA: 0x00272680 File Offset: 0x00270880
+	// Token: 0x060081AE RID: 33198 RVA: 0x0027CB44 File Offset: 0x0027AD44
 	private void MoveFocusTo(PhantomItemData data)
 	{
 		if (this.CurrentRefineType != EVisionRefineRefineType.Main)
@@ -756,7 +756,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.RefreshGridByData(data);
 	}
 
-	// Token: 0x0600ADC8 RID: 44488 RVA: 0x002726D8 File Offset: 0x002708D8
+	// Token: 0x060081AF RID: 33199 RVA: 0x0027CB9C File Offset: 0x0027AD9C
 	private bool CheckItemWarning(PhantomItemData data)
 	{
 		int? num = (data != null) ? new int?(data.GetUniqueId()) : null;
@@ -777,7 +777,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return num2 != null && num2.Value == phantomDataBase.GetPhantomFirstMainProp().PhantomPropId;
 	}
 
-	// Token: 0x0600ADC9 RID: 44489 RVA: 0x00272758 File Offset: 0x00270958
+	// Token: 0x060081B0 RID: 33200 RVA: 0x0027CC1C File Offset: 0x0027AE1C
 	private void RefreshChangeSelect(PhantomItemData newData)
 	{
 		PhantomItemData selectedData = this.SelectedData;
@@ -787,7 +787,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.RefreshGridByData(newData);
 	}
 
-	// Token: 0x0600ADCA RID: 44490 RVA: 0x00272788 File Offset: 0x00270988
+	// Token: 0x060081B1 RID: 33201 RVA: 0x0027CC4C File Offset: 0x0027AE4C
 	[NullableContext(1)]
 	private void RefreshChangeMultiSelect(PhantomItemData newData)
 	{
@@ -799,7 +799,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.RefreshGridByData(newData);
 	}
 
-	// Token: 0x0600ADCB RID: 44491 RVA: 0x002727B8 File Offset: 0x002709B8
+	// Token: 0x060081B2 RID: 33202 RVA: 0x0027CC7C File Offset: 0x0027AE7C
 	[NullableContext(1)]
 	private bool TryOpenStackCountPopup(PhantomItemData itemData)
 	{
@@ -833,7 +833,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600ADCC RID: 44492 RVA: 0x0027289C File Offset: 0x00270A9C
+	// Token: 0x060081B3 RID: 33203 RVA: 0x0027CD60 File Offset: 0x0027AF60
 	private void SetStackSelectedCount(int incId, int count)
 	{
 		if (this.CurrentSelectedList == null)
@@ -869,7 +869,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.RefreshTipsByIncId(incId);
 	}
 
-	// Token: 0x0600ADCD RID: 44493 RVA: 0x00272918 File Offset: 0x00270B18
+	// Token: 0x060081B4 RID: 33204 RVA: 0x0027CDDC File Offset: 0x0027AFDC
 	public void ReduceSelectionByIncId(int incId)
 	{
 		if (this.CurrentSelectedList == null)
@@ -898,7 +898,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		this.RefreshTipsByIncId(incId);
 	}
 
-	// Token: 0x0600ADCE RID: 44494 RVA: 0x00272983 File Offset: 0x00270B83
+	// Token: 0x060081B5 RID: 33205 RVA: 0x0027CE47 File Offset: 0x0027B047
 	[NullableContext(1)]
 	private ISelectedData BuildSelectedEntry(PhantomItemData itemData, int selectedCount)
 	{
@@ -911,7 +911,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600ADCF RID: 44495 RVA: 0x002729B8 File Offset: 0x00270BB8
+	// Token: 0x060081B6 RID: 33206 RVA: 0x0027CE7C File Offset: 0x0027B07C
 	public ISelectedData GetSelectedEntry(int incId)
 	{
 		if (this.CurrentSelectedList == null)
@@ -928,13 +928,13 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600ADD0 RID: 44496 RVA: 0x00272A20 File Offset: 0x00270C20
+	// Token: 0x060081B7 RID: 33207 RVA: 0x0027CEE4 File Offset: 0x0027B0E4
 	public int GetSelectedUnitCount()
 	{
 		return PhantomStackUtil.GetSelectedUnitCount(this.CurrentSelectedList);
 	}
 
-	// Token: 0x0600ADD1 RID: 44497 RVA: 0x00272A2D File Offset: 0x00270C2D
+	// Token: 0x060081B8 RID: 33208 RVA: 0x0027CEF1 File Offset: 0x0027B0F1
 	private int GetSelectedUnitCountByData(PhantomItemData data)
 	{
 		if (data == null || this.CurrentRefineType != EVisionRefineRefineType.Main)
@@ -949,7 +949,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return selectedEntry.SelectedCount;
 	}
 
-	// Token: 0x0600ADD2 RID: 44498 RVA: 0x00272A54 File Offset: 0x00270C54
+	// Token: 0x060081B9 RID: 33209 RVA: 0x0027CF18 File Offset: 0x0027B118
 	private void NotifyMultiSelectionChange()
 	{
 		if (this.OnChangeMultiCallback == null || this.CurrentCostType == null)
@@ -963,14 +963,14 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADD3 RID: 44499 RVA: 0x00272AA4 File Offset: 0x00270CA4
+	// Token: 0x060081BA RID: 33210 RVA: 0x0027CF68 File Offset: 0x0027B168
 	private void OnEventClickItem(int configId, int incId)
 	{
 		PhantomItemData phantomItemData = InventoryModel.Instance.GetPhantomItemData(incId);
 		this.ShowTipsComponent(phantomItemData);
 	}
 
-	// Token: 0x0600ADD4 RID: 44500 RVA: 0x00272AC4 File Offset: 0x00270CC4
+	// Token: 0x060081BB RID: 33211 RVA: 0x0027CF88 File Offset: 0x0027B188
 	private void RefreshGridByData(PhantomItemData itemData)
 	{
 		if (itemData == null)
@@ -998,7 +998,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		visionRefineMediumItemGrid.RefreshByView(itemData);
 	}
 
-	// Token: 0x0600ADD5 RID: 44501 RVA: 0x00272B34 File Offset: 0x00270D34
+	// Token: 0x060081BC RID: 33212 RVA: 0x0027CFF8 File Offset: 0x0027B1F8
 	[NullableContext(1)]
 	private List<VisionRefineTabCostItemData> BuildCostTabData()
 	{
@@ -1033,7 +1033,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x0600ADD6 RID: 44502 RVA: 0x00272C18 File Offset: 0x00270E18
+	// Token: 0x060081BD RID: 33213 RVA: 0x0027D0DC File Offset: 0x0027B2DC
 	private void OnClickRefreshCostTab(EVisionRefineCostType current)
 	{
 		if (this.CostTabLayout == null)
@@ -1053,61 +1053,61 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600ADD7 RID: 44503 RVA: 0x00272C8C File Offset: 0x00270E8C
+	// Token: 0x060081BE RID: 33214 RVA: 0x0027D150 File Offset: 0x0027B350
 	protected override void OnAfterShow()
 	{
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x0600ADD8 RID: 44504 RVA: 0x00272C94 File Offset: 0x00270E94
+	// Token: 0x060081BF RID: 33215 RVA: 0x0027D158 File Offset: 0x0027B358
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600ADD9 RID: 44505 RVA: 0x00272C9C File Offset: 0x00270E9C
+	// Token: 0x060081C0 RID: 33216 RVA: 0x0027D160 File Offset: 0x0027B360
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnEventClickItem));
 	}
 
-	// Token: 0x0600ADDA RID: 44506 RVA: 0x00272CBA File Offset: 0x00270EBA
+	// Token: 0x060081C1 RID: 33217 RVA: 0x0027D17E File Offset: 0x0027B37E
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnEventClickItem));
 	}
 
-	// Token: 0x0600ADDB RID: 44507 RVA: 0x00272CD8 File Offset: 0x00270ED8
+	// Token: 0x060081C2 RID: 33218 RVA: 0x0027D19C File Offset: 0x0027B39C
 	[NullableContext(1)]
 	public UUIItem GetFilterToggleItem()
 	{
 		return this.FilterEntrance.GetFilterToggleItem();
 	}
 
-	// Token: 0x04004EEE RID: 20206
+	// Token: 0x04004F98 RID: 20376
 	[Nullable(1)]
 	private List<PhantomItemData> AllData = new List<PhantomItemData>();
 
-	// Token: 0x04004EEF RID: 20207
+	// Token: 0x04004F99 RID: 20377
 	[Nullable(1)]
 	private List<PhantomItemData> MetaAllDataCache = new List<PhantomItemData>();
 
-	// Token: 0x04004EF0 RID: 20208
+	// Token: 0x04004F9A RID: 20378
 	private PhantomItemData SelectedDataInternal;
 
-	// Token: 0x04004EF1 RID: 20209
+	// Token: 0x04004F9B RID: 20379
 	private int FocusedIncId;
 
-	// Token: 0x04004EF2 RID: 20210
+	// Token: 0x04004F9C RID: 20380
 	public UiBehaviorLevelSequence UiViewSequence;
 
-	// Token: 0x04004EF3 RID: 20211
+	// Token: 0x04004F9D RID: 20381
 	private ItemTipsComponentContentComponent TipsComponent;
 
-	// Token: 0x04004EF4 RID: 20212
+	// Token: 0x04004F9E RID: 20382
 	private int CurrentTipsIncId;
 
-	// Token: 0x04004EF5 RID: 20213
+	// Token: 0x04004F9F RID: 20383
 	[Nullable(new byte[]
 	{
 		2,
@@ -1116,7 +1116,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 	})]
 	private LoopScrollView<VisionRefineMediumItemGrid, PhantomItemData> ItemScroll;
 
-	// Token: 0x04004EF6 RID: 20214
+	// Token: 0x04004FA0 RID: 20384
 	[Nullable(new byte[]
 	{
 		2,
@@ -1124,7 +1124,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 	})]
 	private FilterEntrance<PhantomItemData> FilterEntrance;
 
-	// Token: 0x04004EF7 RID: 20215
+	// Token: 0x04004FA1 RID: 20385
 	[Nullable(new byte[]
 	{
 		2,
@@ -1132,7 +1132,7 @@ public class VisionRefineChoosePanel : UiPanelBase
 	})]
 	private SortEntrance<PhantomItemData> SortEntrance;
 
-	// Token: 0x04004EF8 RID: 20216
+	// Token: 0x04004FA2 RID: 20386
 	[Nullable(1)]
 	private readonly Dictionary<EVisionRefineCostType, List<ISelectedData>> MultiSelectedData = new Dictionary<EVisionRefineCostType, List<ISelectedData>>
 	{
@@ -1150,10 +1150,10 @@ public class VisionRefineChoosePanel : UiPanelBase
 		}
 	};
 
-	// Token: 0x04004EF9 RID: 20217
+	// Token: 0x04004FA3 RID: 20387
 	private EVisionRefineRefineType CurrentRefineTypeInternal;
 
-	// Token: 0x04004EFA RID: 20218
+	// Token: 0x04004FA4 RID: 20388
 	[Nullable(new byte[]
 	{
 		2,
@@ -1162,19 +1162,19 @@ public class VisionRefineChoosePanel : UiPanelBase
 	})]
 	private GenericLayout<VisionRefineTabCostItem, VisionRefineTabCostItemData> CostTabLayout;
 
-	// Token: 0x04004EFB RID: 20219
+	// Token: 0x04004FA5 RID: 20389
 	private EVisionRefineCostType CurrentCostTypeInternal;
 
-	// Token: 0x04004EFC RID: 20220
+	// Token: 0x04004FA6 RID: 20390
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004EFD RID: 20221
+	// Token: 0x04004FA7 RID: 20391
 	public Action OnClickCloseCallBack;
 
-	// Token: 0x04004EFE RID: 20222
+	// Token: 0x04004FA8 RID: 20392
 	public Action<PhantomItemData> OnChangeCallBack;
 
-	// Token: 0x04004EFF RID: 20223
+	// Token: 0x04004FA9 RID: 20393
 	[Nullable(new byte[]
 	{
 		2,
@@ -1183,41 +1183,41 @@ public class VisionRefineChoosePanel : UiPanelBase
 	})]
 	public Action<List<ISelectedData>> OnChangeMultiCallback;
 
-	// Token: 0x04004F00 RID: 20224
+	// Token: 0x04004FAA RID: 20394
 	public Action OnCostTabChangeCallback;
 
-	// Token: 0x04004F01 RID: 20225
+	// Token: 0x04004FAB RID: 20395
 	public Func<int?> OnGetMainPropItemIdCallback;
 
-	// Token: 0x02007D5D RID: 32093
+	// Token: 0x02006EE3 RID: 28387
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040290D2 RID: 168146
+		// Token: 0x040243FD RID: 148477
 		RootTips,
-		// Token: 0x040290D3 RID: 168147
+		// Token: 0x040243FE RID: 148478
 		BtnMask,
-		// Token: 0x040290D4 RID: 168148
+		// Token: 0x040243FF RID: 148479
 		ItemTips,
-		// Token: 0x040290D5 RID: 168149
+		// Token: 0x04024400 RID: 148480
 		BtnClose,
-		// Token: 0x040290D6 RID: 168150
+		// Token: 0x04024401 RID: 148481
 		ItemScrollView,
-		// Token: 0x040290D7 RID: 168151
+		// Token: 0x04024402 RID: 148482
 		ItemBase,
-		// Token: 0x040290D8 RID: 168152
+		// Token: 0x04024403 RID: 148483
 		EmptyItem,
-		// Token: 0x040290D9 RID: 168153
+		// Token: 0x04024404 RID: 148484
 		FilterItem,
-		// Token: 0x040290DA RID: 168154
+		// Token: 0x04024405 RID: 148485
 		SortItem,
-		// Token: 0x040290DB RID: 168155
+		// Token: 0x04024406 RID: 148486
 		CostTabRootItem,
-		// Token: 0x040290DC RID: 168156
+		// Token: 0x04024407 RID: 148487
 		CostTabLayout,
-		// Token: 0x040290DD RID: 168157
+		// Token: 0x04024408 RID: 148488
 		CostTabLayoutItem,
-		// Token: 0x040290DE RID: 168158
+		// Token: 0x04024409 RID: 148489
 		CurrencyCaptionItem
 	}
 }

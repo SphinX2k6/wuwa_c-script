@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071AA RID: 29098
+	// Token: 0x0200625F RID: 25183
 	[RequiredMember]
 	public class StepSpringResult : IStepSpringResult
 	{
-		// Token: 0x17009DAA RID: 40362
-		// (get) Token: 0x06047345 RID: 291653 RVA: 0x01218A26 File Offset: 0x01216C26
-		// (set) Token: 0x06047346 RID: 291654 RVA: 0x01218A2E File Offset: 0x01216C2E
+		// Token: 0x170072FA RID: 29434
+		// (get) Token: 0x0603CC40 RID: 248896 RVA: 0x0117292A File Offset: 0x01170B2A
+		// (set) Token: 0x0603CC41 RID: 248897 RVA: 0x01172932 File Offset: 0x01170B32
 		[RequiredMember]
 		public float NewPosition { get; set; }
 
-		// Token: 0x17009DAB RID: 40363
-		// (get) Token: 0x06047347 RID: 291655 RVA: 0x01218A37 File Offset: 0x01216C37
-		// (set) Token: 0x06047348 RID: 291656 RVA: 0x01218A3F File Offset: 0x01216C3F
+		// Token: 0x170072FB RID: 29435
+		// (get) Token: 0x0603CC42 RID: 248898 RVA: 0x0117293B File Offset: 0x01170B3B
+		// (set) Token: 0x0603CC43 RID: 248899 RVA: 0x01172943 File Offset: 0x01170B43
 		[RequiredMember]
 		public float NewVelocity { get; set; }
 
-		// Token: 0x17009DAC RID: 40364
-		// (get) Token: 0x06047349 RID: 291657 RVA: 0x01218A48 File Offset: 0x01216C48
-		// (set) Token: 0x0604734A RID: 291658 RVA: 0x01218A50 File Offset: 0x01216C50
+		// Token: 0x170072FC RID: 29436
+		// (get) Token: 0x0603CC44 RID: 248900 RVA: 0x0117294C File Offset: 0x01170B4C
+		// (set) Token: 0x0603CC45 RID: 248901 RVA: 0x01172954 File Offset: 0x01170B54
 		[RequiredMember]
 		public bool Converged { get; set; }
 
-		// Token: 0x0604734B RID: 291659 RVA: 0x01218A59 File Offset: 0x01216C59
+		// Token: 0x0603CC46 RID: 248902 RVA: 0x0117295D File Offset: 0x01170B5D
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public StepSpringResult()

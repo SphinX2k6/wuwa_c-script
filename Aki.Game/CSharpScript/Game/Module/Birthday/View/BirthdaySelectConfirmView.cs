@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Birthday.View
 {
-	// Token: 0x02005C30 RID: 23600
+	// Token: 0x02004C10 RID: 19472
 	public class BirthdaySelectConfirmView : UiViewBase, IUiViewResource
 	{
-		// Token: 0x0603B9D3 RID: 244179 RVA: 0x00E39615 File Offset: 0x00E37815
+		// Token: 0x0603091E RID: 198942 RVA: 0x00D89985 File Offset: 0x00D87B85
 		[NullableContext(1)]
 		public BirthdaySelectConfirmView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B9D4 RID: 244180 RVA: 0x00E39620 File Offset: 0x00E37820
+		// Token: 0x0603091F RID: 198943 RVA: 0x00D89990 File Offset: 0x00D87B90
 		[NullableContext(1)]
 		public string GetExtraResourceId([Nullable(2)] object param = null)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			return BirthdayModel.Instance.GetSelectConfirmViewResource(birthdayInfo.Year);
 		}
 
-		// Token: 0x0603B9D5 RID: 244181 RVA: 0x00E39650 File Offset: 0x00E37850
+		// Token: 0x06030920 RID: 198944 RVA: 0x00D899C0 File Offset: 0x00D87BC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B9D6 RID: 244182 RVA: 0x00E3977C File Offset: 0x00E3797C
+		// Token: 0x06030921 RID: 198945 RVA: 0x00D89AEC File Offset: 0x00D87CEC
 		protected override void OnBeforeShow()
 		{
 			this.BirthdayInfo = (this.OpenParam as BirthdayInfo);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "BirthdaySelected_GO", new <>z__ReadOnlySingleElementList<object>(localTextNew));
 		}
 
-		// Token: 0x0603B9D7 RID: 244183 RVA: 0x00E398F0 File Offset: 0x00E37AF0
+		// Token: 0x06030922 RID: 198946 RVA: 0x00D89C60 File Offset: 0x00D87E60
 		private void RecordBirthdaySelectRole()
 		{
 			int value = this.BirthdayInfo.RoleId.Value;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			LogReportController.Instance.LogReport(birthdaySelectRoleEvent);
 		}
 
-		// Token: 0x0603B9D8 RID: 244184 RVA: 0x00E3997D File Offset: 0x00E37B7D
+		// Token: 0x06030923 RID: 198947 RVA: 0x00D89CED File Offset: 0x00D87EED
 		private void OnReturnBtnClick()
 		{
 			if (!this.IsClickBtn)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			}
 		}
 
-		// Token: 0x0603B9D9 RID: 244185 RVA: 0x00E39998 File Offset: 0x00E37B98
+		// Token: 0x06030924 RID: 198948 RVA: 0x00D89D08 File Offset: 0x00D87F08
 		private void OnClickGotoButton()
 		{
 			if (!this.IsClickBtn)
@@ -126,29 +126,29 @@ namespace CSharpScript.Game.Module.Birthday.View
 			}
 		}
 
-		// Token: 0x0401F092 RID: 127122
+		// Token: 0x04019B43 RID: 105283
 		[Nullable(2)]
 		private BirthdayInfo BirthdayInfo;
 
-		// Token: 0x0401F093 RID: 127123
+		// Token: 0x04019B44 RID: 105284
 		private bool IsClickBtn;
 
-		// Token: 0x0200BE20 RID: 48672
+		// Token: 0x0200A828 RID: 43048
 		private class EComponents
 		{
-			// Token: 0x04039554 RID: 234836
+			// Token: 0x04033F17 RID: 212759
 			public const int TextureRole = 0;
 
-			// Token: 0x04039555 RID: 234837
+			// Token: 0x04033F18 RID: 212760
 			public const int ButtonReturn = 1;
 
-			// Token: 0x04039556 RID: 234838
+			// Token: 0x04033F19 RID: 212761
 			public const int ButtonGoto = 2;
 
-			// Token: 0x04039557 RID: 234839
+			// Token: 0x04033F1A RID: 212762
 			public const int TextConfirm = 3;
 
-			// Token: 0x04039558 RID: 234840
+			// Token: 0x04033F1B RID: 212763
 			public const int TextGo = 4;
 		}
 	}

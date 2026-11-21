@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D60 RID: 28000
+	// Token: 0x020074DB RID: 29915
 	public class IPlotVoiceFadeOutOnInterruptT
 	{
-		// Token: 0x1700D0CD RID: 53453
-		// (get) Token: 0x06031708 RID: 202504 RVA: 0x006B410E File Offset: 0x006B230E
-		// (set) Token: 0x06031709 RID: 202505 RVA: 0x006B4116 File Offset: 0x006B2316
+		// Token: 0x1700DC15 RID: 56341
+		// (get) Token: 0x06034704 RID: 214788 RVA: 0x0070F7F6 File Offset: 0x0070D9F6
+		// (set) Token: 0x06034705 RID: 214789 RVA: 0x0070F7FE File Offset: 0x0070D9FE
 		public float FadeDuration { get; set; }
 
-		// Token: 0x1700D0CE RID: 53454
-		// (get) Token: 0x0603170A RID: 202506 RVA: 0x006B411F File Offset: 0x006B231F
-		// (set) Token: 0x0603170B RID: 202507 RVA: 0x006B4127 File Offset: 0x006B2327
+		// Token: 0x1700DC16 RID: 56342
+		// (get) Token: 0x06034706 RID: 214790 RVA: 0x0070F807 File Offset: 0x0070DA07
+		// (set) Token: 0x06034707 RID: 214791 RVA: 0x0070F80F File Offset: 0x0070DA0F
 		public EAudioFadeCurveType FadeCurve { get; set; }
 
-		// Token: 0x1700D0CF RID: 53455
-		// (get) Token: 0x0603170C RID: 202508 RVA: 0x006B4130 File Offset: 0x006B2330
-		// (set) Token: 0x0603170D RID: 202509 RVA: 0x006B4138 File Offset: 0x006B2338
+		// Token: 0x1700DC17 RID: 56343
+		// (get) Token: 0x06034708 RID: 214792 RVA: 0x0070F818 File Offset: 0x0070DA18
+		// (set) Token: 0x06034709 RID: 214793 RVA: 0x0070F820 File Offset: 0x0070DA20
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603170E RID: 202510 RVA: 0x006B4141 File Offset: 0x006B2341
+		// Token: 0x0603470A RID: 214794 RVA: 0x0070F829 File Offset: 0x0070DA29
 		public IPlotVoiceFadeOutOnInterruptT()
 		{
 			this.FadeDuration = 0f;

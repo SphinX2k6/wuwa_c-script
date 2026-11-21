@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EF5 RID: 12021
+// Token: 0x02002448 RID: 9288
 [NullableContext(1)]
 [Nullable(0)]
 public class AddBuffTrigger : PassiveEffects
 {
-	// Token: 0x06019AED RID: 105197 RVA: 0x006AF24E File Offset: 0x006AD44E
+	// Token: 0x060173F8 RID: 95224 RVA: 0x006D5542 File Offset: 0x006D3742
 	public AddBuffTrigger(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019AEE RID: 105198 RVA: 0x006AF270 File Offset: 0x006AD470
+	// Token: 0x060173F9 RID: 95225 RVA: 0x006D5564 File Offset: 0x006D3764
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -26,7 +26,7 @@ public class AddBuffTrigger : PassiveEffects
 		this.InstigatorType = (EPassiveEffectTargetType)((extraEffectParameters_.Length > 3) ? int.Parse(extraEffectParameters_[3]) : 2);
 	}
 
-	// Token: 0x06019AEF RID: 105199 RVA: 0x006AF2F0 File Offset: 0x006AD4F0
+	// Token: 0x060173FA RID: 95226 RVA: 0x006D55E4 File Offset: 0x006D37E4
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -60,15 +60,15 @@ public class AddBuffTrigger : PassiveEffects
 		return null;
 	}
 
-	// Token: 0x06019AF0 RID: 105200 RVA: 0x006AF3D8 File Offset: 0x006AD5D8
+	// Token: 0x060173FB RID: 95227 RVA: 0x006D56CC File Offset: 0x006D38CC
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C0AF RID: 49327
+	// Token: 0x0400C450 RID: 50256
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C0B0 RID: 49328
+	// Token: 0x0400C451 RID: 50257
 	private EPassiveEffectTargetType InstigatorType = EPassiveEffectTargetType.ForBuffInstigator;
 }

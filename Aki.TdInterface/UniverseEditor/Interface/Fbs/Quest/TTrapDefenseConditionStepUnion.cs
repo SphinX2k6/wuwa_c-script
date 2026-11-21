@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200432D RID: 17197
+	// Token: 0x0200478F RID: 18319
 	public class TTrapDefenseConditionStepUnion
 	{
-		// Token: 0x17007980 RID: 31104
-		// (get) Token: 0x060197FD RID: 104445 RVA: 0x003A712C File Offset: 0x003A532C
-		// (set) Token: 0x060197FE RID: 104446 RVA: 0x003A7134 File Offset: 0x003A5334
+		// Token: 0x17007FB5 RID: 32693
+		// (get) Token: 0x0601AF8B RID: 110475 RVA: 0x003D2B54 File Offset: 0x003D0D54
+		// (set) Token: 0x0601AF8C RID: 110476 RVA: 0x003D2B5C File Offset: 0x003D0D5C
 		public TTrapDefenseConditionStep Type { get; set; }
 
-		// Token: 0x17007981 RID: 31105
-		// (get) Token: 0x060197FF RID: 104447 RVA: 0x003A713D File Offset: 0x003A533D
-		// (set) Token: 0x06019800 RID: 104448 RVA: 0x003A7145 File Offset: 0x003A5345
+		// Token: 0x17007FB6 RID: 32694
+		// (get) Token: 0x0601AF8D RID: 110477 RVA: 0x003D2B65 File Offset: 0x003D0D65
+		// (set) Token: 0x0601AF8E RID: 110478 RVA: 0x003D2B6D File Offset: 0x003D0D6D
 		public object Value { get; set; }
 
-		// Token: 0x06019801 RID: 104449 RVA: 0x003A714E File Offset: 0x003A534E
+		// Token: 0x0601AF8F RID: 110479 RVA: 0x003D2B76 File Offset: 0x003D0D76
 		public TTrapDefenseConditionStepUnion()
 		{
 			this.Type = TTrapDefenseConditionStep.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019802 RID: 104450 RVA: 0x003A7164 File Offset: 0x003A5364
+		// Token: 0x0601AF90 RID: 110480 RVA: 0x003D2B8C File Offset: 0x003D0D8C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019803 RID: 104451 RVA: 0x003A7176 File Offset: 0x003A5376
+		// Token: 0x0601AF91 RID: 110481 RVA: 0x003D2B9E File Offset: 0x003D0D9E
 		public ITrapDefenseConditionStepLoadAndRestoreMapT AsITrapDefenseConditionStepLoadAndRestoreMap()
 		{
 			return this.As<ITrapDefenseConditionStepLoadAndRestoreMapT>();
 		}
 
-		// Token: 0x06019804 RID: 104452 RVA: 0x003A717E File Offset: 0x003A537E
+		// Token: 0x0601AF92 RID: 110482 RVA: 0x003D2BA6 File Offset: 0x003D0DA6
 		public static TTrapDefenseConditionStepUnion FromITrapDefenseConditionStepLoadAndRestoreMap(ITrapDefenseConditionStepLoadAndRestoreMapT _itrapdefenseconditionsteploadandrestoremap)
 		{
 			return new TTrapDefenseConditionStepUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019805 RID: 104453 RVA: 0x003A7193 File Offset: 0x003A5393
+		// Token: 0x0601AF93 RID: 110483 RVA: 0x003D2BBB File Offset: 0x003D0DBB
 		public ITrapDefenseConditionStepMapChangeT AsITrapDefenseConditionStepMapChange()
 		{
 			return this.As<ITrapDefenseConditionStepMapChangeT>();
 		}
 
-		// Token: 0x06019806 RID: 104454 RVA: 0x003A719B File Offset: 0x003A539B
+		// Token: 0x0601AF94 RID: 110484 RVA: 0x003D2BC3 File Offset: 0x003D0DC3
 		public static TTrapDefenseConditionStepUnion FromITrapDefenseConditionStepMapChange(ITrapDefenseConditionStepMapChangeT _itrapdefenseconditionstepmapchange)
 		{
 			return new TTrapDefenseConditionStepUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019807 RID: 104455 RVA: 0x003A71B0 File Offset: 0x003A53B0
+		// Token: 0x0601AF95 RID: 110485 RVA: 0x003D2BD8 File Offset: 0x003D0DD8
 		public ITrapDefenseConditionStepPreviewT AsITrapDefenseConditionStepPreview()
 		{
 			return this.As<ITrapDefenseConditionStepPreviewT>();
 		}
 
-		// Token: 0x06019808 RID: 104456 RVA: 0x003A71B8 File Offset: 0x003A53B8
+		// Token: 0x0601AF96 RID: 110486 RVA: 0x003D2BE0 File Offset: 0x003D0DE0
 		public static TTrapDefenseConditionStepUnion FromITrapDefenseConditionStepPreview(ITrapDefenseConditionStepPreviewT _itrapdefenseconditionsteppreview)
 		{
 			return new TTrapDefenseConditionStepUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019809 RID: 104457 RVA: 0x003A71CD File Offset: 0x003A53CD
+		// Token: 0x0601AF97 RID: 110487 RVA: 0x003D2BF5 File Offset: 0x003D0DF5
 		public ITrapDefenseConditionStepRewardT AsITrapDefenseConditionStepReward()
 		{
 			return this.As<ITrapDefenseConditionStepRewardT>();
 		}
 
-		// Token: 0x0601980A RID: 104458 RVA: 0x003A71D5 File Offset: 0x003A53D5
+		// Token: 0x0601AF98 RID: 110488 RVA: 0x003D2BFD File Offset: 0x003D0DFD
 		public static TTrapDefenseConditionStepUnion FromITrapDefenseConditionStepReward(ITrapDefenseConditionStepRewardT _itrapdefenseconditionstepreward)
 		{
 			return new TTrapDefenseConditionStepUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601980B RID: 104459 RVA: 0x003A71EA File Offset: 0x003A53EA
+		// Token: 0x0601AF99 RID: 110489 RVA: 0x003D2C12 File Offset: 0x003D0E12
 		public ITrapDefenseConditionStepSpawnMonsterT AsITrapDefenseConditionStepSpawnMonster()
 		{
 			return this.As<ITrapDefenseConditionStepSpawnMonsterT>();
 		}
 
-		// Token: 0x0601980C RID: 104460 RVA: 0x003A71F2 File Offset: 0x003A53F2
+		// Token: 0x0601AF9A RID: 110490 RVA: 0x003D2C1A File Offset: 0x003D0E1A
 		public static TTrapDefenseConditionStepUnion FromITrapDefenseConditionStepSpawnMonster(ITrapDefenseConditionStepSpawnMonsterT _itrapdefenseconditionstepspawnmonster)
 		{
 			return new TTrapDefenseConditionStepUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601980D RID: 104461 RVA: 0x003A7208 File Offset: 0x003A5408
+		// Token: 0x0601AF9B RID: 110491 RVA: 0x003D2C30 File Offset: 0x003D0E30
 		public static int Pack(FlatBufferBuilder builder, TTrapDefenseConditionStepUnion _o)
 		{
 			switch (_o.Type)

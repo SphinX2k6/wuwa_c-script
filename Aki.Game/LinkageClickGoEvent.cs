@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020FF RID: 8447
+// Token: 0x020015D7 RID: 5591
 [NullableContext(1)]
 [Nullable(0)]
 public class LinkageClickGoEvent : PlayerCommonLogData
 {
-	// Token: 0x170014A5 RID: 5285
-	// (get) Token: 0x06010939 RID: 67897 RVA: 0x0040B1D5 File Offset: 0x004093D5
-	// (set) Token: 0x0601093A RID: 67898 RVA: 0x0040B1DD File Offset: 0x004093DD
+	// Token: 0x170014D3 RID: 5331
+	// (get) Token: 0x0600DDAC RID: 56748 RVA: 0x00417909 File Offset: 0x00415B09
+	// (set) Token: 0x0600DDAD RID: 56749 RVA: 0x00417911 File Offset: 0x00415B11
 	public override string event_id { get; set; } = "1059";
 
-	// Token: 0x04007C65 RID: 31845
+	// Token: 0x04007D67 RID: 32103
 	public int i_activity_id;
 
-	// Token: 0x04007C66 RID: 31846
+	// Token: 0x04007D68 RID: 32104
 	public int i_activity_type;
 
-	// Token: 0x04007C67 RID: 31847
+	// Token: 0x04007D69 RID: 32105
 	public int i_id;
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F2D RID: 24365
+	// Token: 0x02006571 RID: 25969
 	public enum ECameraOperationType : byte
 	{
-		// Token: 0x0400FC64 RID: 64612
+		// Token: 0x040109DA RID: 68058
 		Enable,
-		// Token: 0x0400FC65 RID: 64613
+		// Token: 0x040109DB RID: 68059
 		EnableSection,
-		// Token: 0x0400FC66 RID: 64614
+		// Token: 0x040109DC RID: 68060
 		Disable
 	}
 }

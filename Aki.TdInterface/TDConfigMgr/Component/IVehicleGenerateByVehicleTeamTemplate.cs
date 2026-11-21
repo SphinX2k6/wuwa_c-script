@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007B7 RID: 1975
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200085A RID: 2138
 	public class IVehicleGenerateByVehicleTeamTemplate : IVehicleGenerationType
 	{
-		// Token: 0x06002ACD RID: 10957 RVA: 0x00070038 File Offset: 0x0006E238
+		// Token: 0x06002DFD RID: 11773 RVA: 0x0007739C File Offset: 0x0007559C
 		private IVehicleGenerateByVehicleTeamTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002ACE RID: 10958 RVA: 0x00070070 File Offset: 0x0006E270
+		// Token: 0x06002DFE RID: 11774 RVA: 0x000773D4 File Offset: 0x000755D4
 		public static IVehicleGenerateByVehicleTeamTemplate Create([Nullable(2)] IVehicleGenerateByVehicleTeamTemplate instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002ACF RID: 10959 RVA: 0x00070083 File Offset: 0x0006E283
+		// Token: 0x06002DFF RID: 11775 RVA: 0x000773E7 File Offset: 0x000755E7
 		public static IVehicleGenerateByVehicleTeamTemplate CreateFromSetValue([Nullable(2)] IVehicleGenerateByVehicleTeamTemplate_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AD0 RID: 10960 RVA: 0x00070096 File Offset: 0x0006E296
+		// Token: 0x06002E00 RID: 11776 RVA: 0x000773FA File Offset: 0x000755FA
 		public new IVehicleGenerateByVehicleTeamTemplate_SetValue ToSetValue()
 		{
 			return new IVehicleGenerateByVehicleTeamTemplate_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B37 RID: 2871
-		// (get) Token: 0x06002AD1 RID: 10961 RVA: 0x000700C1 File Offset: 0x0006E2C1
-		// (set) Token: 0x06002AD2 RID: 10962 RVA: 0x000700EC File Offset: 0x0006E2EC
+		// Token: 0x17000BFA RID: 3066
+		// (get) Token: 0x06002E01 RID: 11777 RVA: 0x00077425 File Offset: 0x00075625
+		// (set) Token: 0x06002E02 RID: 11778 RVA: 0x00077450 File Offset: 0x00075650
 		public override EVehicleGenerationType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B38 RID: 2872
-		// (get) Token: 0x06002AD3 RID: 10963 RVA: 0x000700FA File Offset: 0x0006E2FA
-		// (set) Token: 0x06002AD4 RID: 10964 RVA: 0x00070125 File Offset: 0x0006E325
+		// Token: 0x17000BFB RID: 3067
+		// (get) Token: 0x06002E03 RID: 11779 RVA: 0x0007745E File Offset: 0x0007565E
+		// (set) Token: 0x06002E04 RID: 11780 RVA: 0x00077489 File Offset: 0x00075689
 		public override int Id
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B39 RID: 2873
-		// (get) Token: 0x06002AD5 RID: 10965 RVA: 0x00070133 File Offset: 0x0006E333
-		// (set) Token: 0x06002AD6 RID: 10966 RVA: 0x0007015E File Offset: 0x0006E35E
+		// Token: 0x17000BFC RID: 3068
+		// (get) Token: 0x06002E05 RID: 11781 RVA: 0x00077497 File Offset: 0x00075697
+		// (set) Token: 0x06002E06 RID: 11782 RVA: 0x000774C2 File Offset: 0x000756C2
 		public override int Weight
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C81 RID: 7297
+		// Token: 0x04001E8D RID: 7821
 		[Nullable(2)]
 		protected new IVehicleGenerateByVehicleTeamTemplate FbInstance;
 
-		// Token: 0x04001C82 RID: 7298
+		// Token: 0x04001E8E RID: 7822
 		[Nullable(2)]
 		protected new IVehicleGenerateByVehicleTeamTemplate_SetValue PocoInterface;
 	}

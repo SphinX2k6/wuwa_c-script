@@ -10,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 {
-	// Token: 0x02005686 RID: 22150
+	// Token: 0x0200465C RID: 18012
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MainTypeItem : UiPanelBase, IGridProxy<EComposeListType>
 	{
-		// Token: 0x1700877A RID: 34682
-		// (get) Token: 0x060385D7 RID: 230871 RVA: 0x00D61D1B File Offset: 0x00D5FF1B
-		// (set) Token: 0x060385D8 RID: 230872 RVA: 0x00D61D23 File Offset: 0x00D5FF23
+		// Token: 0x17005B41 RID: 23361
+		// (get) Token: 0x0602D4D4 RID: 185556 RVA: 0x00CAFE6B File Offset: 0x00CAE06B
+		// (set) Token: 0x0602D4D5 RID: 185557 RVA: 0x00CAFE73 File Offset: 0x00CAE073
 		[Nullable(new byte[]
 		{
 			2,
@@ -33,17 +33,17 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			1
 		})] set; }
 
-		// Token: 0x1700877B RID: 34683
-		// (get) Token: 0x060385D9 RID: 230873 RVA: 0x00D61D2C File Offset: 0x00D5FF2C
-		// (set) Token: 0x060385DA RID: 230874 RVA: 0x00D61D34 File Offset: 0x00D5FF34
+		// Token: 0x17005B42 RID: 23362
+		// (get) Token: 0x0602D4D6 RID: 185558 RVA: 0x00CAFE7C File Offset: 0x00CAE07C
+		// (set) Token: 0x0602D4D7 RID: 185559 RVA: 0x00CAFE84 File Offset: 0x00CAE084
 		public int GridIndex { get; set; }
 
-		// Token: 0x1700877C RID: 34684
-		// (get) Token: 0x060385DB RID: 230875 RVA: 0x00D61D3D File Offset: 0x00D5FF3D
-		// (set) Token: 0x060385DC RID: 230876 RVA: 0x00D61D45 File Offset: 0x00D5FF45
+		// Token: 0x17005B43 RID: 23363
+		// (get) Token: 0x0602D4D8 RID: 185560 RVA: 0x00CAFE8D File Offset: 0x00CAE08D
+		// (set) Token: 0x0602D4D9 RID: 185561 RVA: 0x00CAFE95 File Offset: 0x00CAE095
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x060385DD RID: 230877 RVA: 0x00D61D50 File Offset: 0x00D5FF50
+		// Token: 0x0602D4DA RID: 185562 RVA: 0x00CAFEA0 File Offset: 0x00CAE0A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060385DE RID: 230878 RVA: 0x00D61DF8 File Offset: 0x00D5FFF8
+		// Token: 0x0602D4DB RID: 185563 RVA: 0x00CAFF48 File Offset: 0x00CAE148
 		public void Refresh(EComposeListType data, bool isSelected, int gridIndex)
 		{
 			this.MainType = data;
@@ -84,12 +84,12 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			this.SetSpriteByPath(path, base.GetSprite(0), false, null, null);
 		}
 
-		// Token: 0x060385DF RID: 230879 RVA: 0x00D61E7C File Offset: 0x00D6007C
+		// Token: 0x0602D4DC RID: 185564 RVA: 0x00CAFFCC File Offset: 0x00CAE1CC
 		public void Clear()
 		{
 		}
 
-		// Token: 0x060385E0 RID: 230880 RVA: 0x00D61E7E File Offset: 0x00D6007E
+		// Token: 0x0602D4DD RID: 185565 RVA: 0x00CAFFCE File Offset: 0x00CAE1CE
 		public void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
@@ -101,19 +101,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			onClickedCallback((int)this.MainType);
 		}
 
-		// Token: 0x060385E1 RID: 230881 RVA: 0x00D61EA7 File Offset: 0x00D600A7
+		// Token: 0x0602D4DE RID: 185566 RVA: 0x00CAFFF7 File Offset: 0x00CAE1F7
 		public void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060385E2 RID: 230882 RVA: 0x00D61EBA File Offset: 0x00D600BA
+		// Token: 0x0602D4DF RID: 185567 RVA: 0x00CB000A File Offset: 0x00CAE20A
 		public void CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x060385E3 RID: 230883 RVA: 0x00D61EC4 File Offset: 0x00D600C4
+		// Token: 0x0602D4E0 RID: 185568 RVA: 0x00CB0014 File Offset: 0x00CAE214
 		public UniTask CreateThenShowByActorAsync(AActor actor)
 		{
 			MainTypeItem.<CreateThenShowByActorAsync>d__21 <CreateThenShowByActorAsync>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			return <CreateThenShowByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060385E4 RID: 230884 RVA: 0x00D61F10 File Offset: 0x00D60110
+		// Token: 0x0602D4E1 RID: 185569 RVA: 0x00CB0060 File Offset: 0x00CAE260
 		public UniTask CreateByActorAsync(AActor actor)
 		{
 			MainTypeItem.<CreateByActorAsync>d__22 <CreateByActorAsync>d__;
@@ -137,25 +137,25 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			return <CreateByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060385E5 RID: 230885 RVA: 0x00D61F5B File Offset: 0x00D6015B
+		// Token: 0x0602D4E2 RID: 185570 RVA: 0x00CB00AB File Offset: 0x00CAE2AB
 		public object GetKey(EComposeListType data, int gridIndex)
 		{
 			return this.MainType;
 		}
 
-		// Token: 0x060385E6 RID: 230886 RVA: 0x00D61F68 File Offset: 0x00D60168
+		// Token: 0x0602D4E3 RID: 185571 RVA: 0x00CB00B8 File Offset: 0x00CAE2B8
 		public EComposeListType GetMainType()
 		{
 			return this.MainType;
 		}
 
-		// Token: 0x060385E7 RID: 230887 RVA: 0x00D61F70 File Offset: 0x00D60170
+		// Token: 0x0602D4E4 RID: 185572 RVA: 0x00CB00C0 File Offset: 0x00CAE2C0
 		public void SetMainTypeCallback(Action<int> mainTypeCallback)
 		{
 			this.OnClickedCallback = mainTypeCallback;
 		}
 
-		// Token: 0x060385E8 RID: 230888 RVA: 0x00D61F79 File Offset: 0x00D60179
+		// Token: 0x0602D4E5 RID: 185573 RVA: 0x00CB00C9 File Offset: 0x00CAE2C9
 		public void SelectedItem()
 		{
 			if (this.OnClickedCallback != null)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			}
 		}
 
-		// Token: 0x060385E9 RID: 230889 RVA: 0x00D61F94 File Offset: 0x00D60194
+		// Token: 0x0602D4E6 RID: 185574 RVA: 0x00CB00E4 File Offset: 0x00CAE2E4
 		private void OnItemButtonClicked(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -173,21 +173,21 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.Item
 			}
 		}
 
-		// Token: 0x0401D9E5 RID: 121317
+		// Token: 0x04018470 RID: 99440
 		private EComposeListType MainType = EComposeListType.Purification;
 
-		// Token: 0x0401D9E6 RID: 121318
+		// Token: 0x04018471 RID: 99441
 		[Nullable(2)]
 		private Action<int> OnClickedCallback;
 
-		// Token: 0x0200B850 RID: 47184
+		// Token: 0x0200A278 RID: 41592
 		[NullableContext(0)]
 		public class EMainTypeDefine
 		{
-			// Token: 0x04037C99 RID: 228505
+			// Token: 0x040326B6 RID: 206518
 			public const int IconSprite = 0;
 
-			// Token: 0x04037C9A RID: 228506
+			// Token: 0x040326B7 RID: 206519
 			public const int MainTypeExtendToggle = 1;
 		}
 	}

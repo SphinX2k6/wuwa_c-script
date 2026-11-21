@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AC2 RID: 6850
+// Token: 0x02000F81 RID: 3969
 public class MapAreaShowCountryItem : CommonTabItem
 {
-	// Token: 0x0600CB1A RID: 51994 RVA: 0x002E4CC8 File Offset: 0x002E2EC8
+	// Token: 0x06009F2B RID: 40747 RVA: 0x002EFE4C File Offset: 0x002EE04C
 	[NullableContext(1)]
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
@@ -14,7 +14,7 @@ public class MapAreaShowCountryItem : CommonTabItem
 		this.UpdateRedDot((data3 != null) ? data3.GetTitleData() : null);
 	}
 
-	// Token: 0x0600CB1B RID: 51995 RVA: 0x002E4D04 File Offset: 0x002E2F04
+	// Token: 0x06009F2C RID: 40748 RVA: 0x002EFE88 File Offset: 0x002EE088
 	[NullableContext(2)]
 	private void UpdateRedDot(CommonTabTitleData titleData = null)
 	{

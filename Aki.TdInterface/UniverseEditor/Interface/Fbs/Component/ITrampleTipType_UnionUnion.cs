@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AD3 RID: 23251
+	// Token: 0x020060E0 RID: 24800
 	public class ITrampleTipType_UnionUnion
 	{
-		// Token: 0x1700AF38 RID: 44856
-		// (get) Token: 0x06027A60 RID: 162400 RVA: 0x00574335 File Offset: 0x00572535
-		// (set) Token: 0x06027A61 RID: 162401 RVA: 0x0057433D File Offset: 0x0057253D
+		// Token: 0x1700B874 RID: 47220
+		// (get) Token: 0x06029FEA RID: 172010 RVA: 0x005BB765 File Offset: 0x005B9965
+		// (set) Token: 0x06029FEB RID: 172011 RVA: 0x005BB76D File Offset: 0x005B996D
 		public ITrampleTipType_Union Type { get; set; }
 
-		// Token: 0x1700AF39 RID: 44857
-		// (get) Token: 0x06027A62 RID: 162402 RVA: 0x00574346 File Offset: 0x00572546
-		// (set) Token: 0x06027A63 RID: 162403 RVA: 0x0057434E File Offset: 0x0057254E
+		// Token: 0x1700B875 RID: 47221
+		// (get) Token: 0x06029FEC RID: 172012 RVA: 0x005BB776 File Offset: 0x005B9976
+		// (set) Token: 0x06029FED RID: 172013 RVA: 0x005BB77E File Offset: 0x005B997E
 		public object Value { get; set; }
 
-		// Token: 0x06027A64 RID: 162404 RVA: 0x00574357 File Offset: 0x00572557
+		// Token: 0x06029FEE RID: 172014 RVA: 0x005BB787 File Offset: 0x005B9987
 		public ITrampleTipType_UnionUnion()
 		{
 			this.Type = ITrampleTipType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06027A65 RID: 162405 RVA: 0x0057436D File Offset: 0x0057256D
+		// Token: 0x06029FEF RID: 172015 RVA: 0x005BB79D File Offset: 0x005B999D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06027A66 RID: 162406 RVA: 0x0057437F File Offset: 0x0057257F
+		// Token: 0x06029FF0 RID: 172016 RVA: 0x005BB7AF File Offset: 0x005B99AF
 		public ITrampleTipTypeT AsITrampleTipType()
 		{
 			return this.As<ITrampleTipTypeT>();
 		}
 
-		// Token: 0x06027A67 RID: 162407 RVA: 0x00574387 File Offset: 0x00572587
+		// Token: 0x06029FF1 RID: 172017 RVA: 0x005BB7B7 File Offset: 0x005B99B7
 		public static ITrampleTipType_UnionUnion FromITrampleTipType(ITrampleTipTypeT _itrampletiptype)
 		{
 			return new ITrampleTipType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06027A68 RID: 162408 RVA: 0x0057439C File Offset: 0x0057259C
+		// Token: 0x06029FF2 RID: 172018 RVA: 0x005BB7CC File Offset: 0x005B99CC
 		public ICountDownTextTipT AsICountDownTextTip()
 		{
 			return this.As<ICountDownTextTipT>();
 		}
 
-		// Token: 0x06027A69 RID: 162409 RVA: 0x005743A4 File Offset: 0x005725A4
+		// Token: 0x06029FF3 RID: 172019 RVA: 0x005BB7D4 File Offset: 0x005B99D4
 		public static ITrampleTipType_UnionUnion FromICountDownTextTip(ICountDownTextTipT _icountdowntexttip)
 		{
 			return new ITrampleTipType_UnionUnion
@@ -61,19 +61,36 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06027A6A RID: 162410 RVA: 0x005743BC File Offset: 0x005725BC
+		// Token: 0x06029FF4 RID: 172020 RVA: 0x005BB7E9 File Offset: 0x005B99E9
+		public IMechaTrackCountDownTipT AsIMechaTrackCountDownTip()
+		{
+			return this.As<IMechaTrackCountDownTipT>();
+		}
+
+		// Token: 0x06029FF5 RID: 172021 RVA: 0x005BB7F1 File Offset: 0x005B99F1
+		public static ITrampleTipType_UnionUnion FromIMechaTrackCountDownTip(IMechaTrackCountDownTipT _imechatrackcountdowntip)
+		{
+			return new ITrampleTipType_UnionUnion
+			{
+				Type = ITrampleTipType_Union.IMechaTrackCountDownTip,
+				Value = _imechatrackcountdowntip
+			};
+		}
+
+		// Token: 0x06029FF6 RID: 172022 RVA: 0x005BB808 File Offset: 0x005B9A08
 		public static int Pack(FlatBufferBuilder builder, ITrampleTipType_UnionUnion _o)
 		{
-			ITrampleTipType_Union type = _o.Type;
-			if (type == ITrampleTipType_Union.ITrampleTipType)
+			switch (_o.Type)
 			{
+			case ITrampleTipType_Union.ITrampleTipType:
 				return ITrampleTipType.Pack(builder, _o.AsITrampleTipType()).Value;
-			}
-			if (type != ITrampleTipType_Union.ICountDownTextTip)
-			{
+			case ITrampleTipType_Union.ICountDownTextTip:
+				return ICountDownTextTip.Pack(builder, _o.AsICountDownTextTip()).Value;
+			case ITrampleTipType_Union.IMechaTrackCountDownTip:
+				return IMechaTrackCountDownTip.Pack(builder, _o.AsIMechaTrackCountDownTip()).Value;
+			default:
 				return 0;
 			}
-			return ICountDownTextTip.Pack(builder, _o.AsICountDownTextTip()).Value;
 		}
 	}
 }

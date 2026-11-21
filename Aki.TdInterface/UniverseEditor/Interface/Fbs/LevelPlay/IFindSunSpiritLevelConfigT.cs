@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044C8 RID: 17608
+	// Token: 0x02004930 RID: 18736
 	public class IFindSunSpiritLevelConfigT
 	{
-		// Token: 0x17007C48 RID: 31816
-		// (get) Token: 0x0601A50C RID: 107788 RVA: 0x003C1EF7 File Offset: 0x003C00F7
-		// (set) Token: 0x0601A50D RID: 107789 RVA: 0x003C1EFF File Offset: 0x003C00FF
+		// Token: 0x17008287 RID: 33415
+		// (get) Token: 0x0601BCDD RID: 113885 RVA: 0x003EE103 File Offset: 0x003EC303
+		// (set) Token: 0x0601BCDE RID: 113886 RVA: 0x003EE10B File Offset: 0x003EC30B
 		public IFindSunSpiritGridConfigT GridConfig { get; set; }
 
-		// Token: 0x17007C49 RID: 31817
-		// (get) Token: 0x0601A50E RID: 107790 RVA: 0x003C1F08 File Offset: 0x003C0108
-		// (set) Token: 0x0601A50F RID: 107791 RVA: 0x003C1F10 File Offset: 0x003C0110
+		// Token: 0x17008288 RID: 33416
+		// (get) Token: 0x0601BCDF RID: 113887 RVA: 0x003EE114 File Offset: 0x003EC314
+		// (set) Token: 0x0601BCE0 RID: 113888 RVA: 0x003EE11C File Offset: 0x003EC31C
 		public int MaxJumpHeight { get; set; }
 
-		// Token: 0x17007C4A RID: 31818
-		// (get) Token: 0x0601A510 RID: 107792 RVA: 0x003C1F19 File Offset: 0x003C0119
-		// (set) Token: 0x0601A511 RID: 107793 RVA: 0x003C1F21 File Offset: 0x003C0121
+		// Token: 0x17008289 RID: 33417
+		// (get) Token: 0x0601BCE1 RID: 113889 RVA: 0x003EE125 File Offset: 0x003EC325
+		// (set) Token: 0x0601BCE2 RID: 113890 RVA: 0x003EE12D File Offset: 0x003EC32D
 		public int MaxTimes { get; set; }
 
-		// Token: 0x17007C4B RID: 31819
-		// (get) Token: 0x0601A512 RID: 107794 RVA: 0x003C1F2A File Offset: 0x003C012A
-		// (set) Token: 0x0601A513 RID: 107795 RVA: 0x003C1F32 File Offset: 0x003C0132
+		// Token: 0x1700828A RID: 33418
+		// (get) Token: 0x0601BCE3 RID: 113891 RVA: 0x003EE136 File Offset: 0x003EC336
+		// (set) Token: 0x0601BCE4 RID: 113892 RVA: 0x003EE13E File Offset: 0x003EC33E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A514 RID: 107796 RVA: 0x003C1F3B File Offset: 0x003C013B
+		// Token: 0x0601BCE5 RID: 113893 RVA: 0x003EE147 File Offset: 0x003EC347
 		public IFindSunSpiritLevelConfigT()
 		{
 			this.GridConfig = null;

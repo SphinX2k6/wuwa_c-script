@@ -5,14 +5,14 @@ using CSharpScript.Game;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02003284 RID: 12932
+// Token: 0x020027F4 RID: 10228
 [NullableContext(1)]
 [Nullable(0)]
-public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependency
+public class UeSkeletalTickManageComponent : EntityComponent
 {
-	// Token: 0x170026A4 RID: 9892
-	// (get) Token: 0x0601BFB3 RID: 114611 RVA: 0x007C5CE1 File Offset: 0x007C3EE1
-	// (set) Token: 0x0601BFB4 RID: 114612 RVA: 0x007C5CEC File Offset: 0x007C3EEC
+	// Token: 0x1700294C RID: 10572
+	// (get) Token: 0x06019B9C RID: 105372 RVA: 0x007ECEF0 File Offset: 0x007EB0F0
+	// (set) Token: 0x06019B9D RID: 105373 RVA: 0x007ECEF8 File Offset: 0x007EB0F8
 	public ESkeletalMeshTickMode TickMode
 	{
 		get
@@ -27,16 +27,16 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 			}
 			ESkeletalMeshTickMode tickModeInternal = this.TickModeInternal;
 			this.TickModeInternal = value;
-			if (value == ESkeletalMeshTickMode.TsProxy)
+			if (value == ESkeletalMeshTickMode.TsProxy || value == ESkeletalMeshTickMode.TsProxyEvaluateOnTick)
 			{
 				if (tickModeInternal == ESkeletalMeshTickMode.TsProxyMainMeshNotParallel)
 				{
 					if (this.SkeletalComps.Count > 0)
 					{
 						TickSystem.Instance.SetSkeletalMeshProxyTickFunction(ETickingGroup.TG_PrePhysics, this.SkeletalComps[0], 0);
-						goto IL_33E;
+						goto IL_346;
 					}
-					goto IL_33E;
+					goto IL_346;
 				}
 				else
 				{
@@ -51,20 +51,20 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 							USkeletalMeshComponent comp2 = enumerator.Current;
 							TickSystem.Instance.SetSkeletalMeshProxyTickFunction(ETickingGroup.TG_PostPhysics, comp2, 0);
 						}
-						goto IL_33E;
+						goto IL_346;
 					}
 				}
 			}
 			if (value == ESkeletalMeshTickMode.TsProxyMainMeshNotParallel)
 			{
-				if (tickModeInternal == ESkeletalMeshTickMode.TsProxy)
+				if (tickModeInternal == ESkeletalMeshTickMode.TsProxy || tickModeInternal == ESkeletalMeshTickMode.TsProxyEvaluateOnTick)
 				{
 					if (this.SkeletalComps.Count > 0)
 					{
 						TickSystem.Instance.CleanSkeletalMeshProxyTickFunction(this.SkeletalComps[0]);
-						goto IL_33E;
+						goto IL_346;
 					}
-					goto IL_33E;
+					goto IL_346;
 				}
 				else
 				{
@@ -84,7 +84,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 							USkeletalMeshComponent comp4 = enumerator.Current;
 							TickSystem.Instance.SetSkeletalMeshProxyTickFunction(ETickingGroup.TG_PostPhysics, comp4, 0);
 						}
-						goto IL_33E;
+						goto IL_346;
 					}
 				}
 			}
@@ -130,9 +130,9 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 				}
 				TickSystem.Instance.CleanSkeletalMeshProxyTickFunction(uskeletalMeshComponent2);
 			}
-			IL_33E:
+			IL_346:
 			UeSkeletalTickController.DeleteManager(this);
-			if (value == ESkeletalMeshTickMode.TsProxy || value == ESkeletalMeshTickMode.TsProxyMainMeshNotParallel)
+			if (value == ESkeletalMeshTickMode.TsProxy || value == ESkeletalMeshTickMode.TsProxyMainMeshNotParallel || value == ESkeletalMeshTickMode.TsProxyEvaluateOnTick)
 			{
 				UeSkeletalTickController.AddManager(this);
 			}
@@ -171,20 +171,10 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x170026A5 RID: 9893
-	// (get) Token: 0x0601BFB5 RID: 114613 RVA: 0x007C621C File Offset: 0x007C441C
-	[Nullable(new byte[]
+	// Token: 0x1700294D RID: 10573
+	// (get) Token: 0x06019B9E RID: 105374 RVA: 0x007ED434 File Offset: 0x007EB634
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public static Type[] Dependencies
-	{
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
 		get
 		{
 			return new Type[]
@@ -194,13 +184,13 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFB6 RID: 114614 RVA: 0x007C6231 File Offset: 0x007C4431
+	// Token: 0x06019B9F RID: 105375 RVA: 0x007ED449 File Offset: 0x007EB649
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601BFB7 RID: 114615 RVA: 0x007C6234 File Offset: 0x007C4434
+	// Token: 0x06019BA0 RID: 105376 RVA: 0x007ED44C File Offset: 0x007EB64C
 	protected override void OnActivate()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -255,7 +245,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		this.TickType = ESkeletalMeshTickType.AlwaysTick;
 	}
 
-	// Token: 0x0601BFB8 RID: 114616 RVA: 0x007C6384 File Offset: 0x007C4584
+	// Token: 0x06019BA1 RID: 105377 RVA: 0x007ED59C File Offset: 0x007EB79C
 	protected override bool OnEnd()
 	{
 		this.TickMode = ESkeletalMeshTickMode.None;
@@ -267,7 +257,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		return true;
 	}
 
-	// Token: 0x0601BFB9 RID: 114617 RVA: 0x007C63E4 File Offset: 0x007C45E4
+	// Token: 0x06019BA2 RID: 105378 RVA: 0x007ED5FC File Offset: 0x007EB7FC
 	protected override void OnTick(float delta)
 	{
 		float num = delta * 0.001f;
@@ -301,6 +291,10 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 				}
 			}
 		}
+		if (this.TickMode == ESkeletalMeshTickMode.TsProxyEvaluateOnTick)
+		{
+			this.UnlockEvaluation();
+		}
 		if (this.TickMode == ESkeletalMeshTickMode.TsTakeOver)
 		{
 			this.TakeOverModeTick(num2);
@@ -308,7 +302,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		this.RefreshTickMode();
 	}
 
-	// Token: 0x0601BFBA RID: 114618 RVA: 0x007C64C8 File Offset: 0x007C46C8
+	// Token: 0x06019BA3 RID: 105379 RVA: 0x007ED6F0 File Offset: 0x007EB8F0
 	protected void TakeOverModeTick(float realTimeSeconds)
 	{
 		if (this.TickMode != ESkeletalMeshTickMode.TsTakeOver)
@@ -341,8 +335,8 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFBB RID: 114619 RVA: 0x007C65C8 File Offset: 0x007C47C8
-	public void ProxyTick(float deltaSeconds, bool delayCompleteParallel = false)
+	// Token: 0x06019BA4 RID: 105380 RVA: 0x007ED7F0 File Offset: 0x007EB9F0
+	public void TickStep1(float deltaSeconds, bool delayCompleteParallel = false)
 	{
 		if (this.TickType != ESkeletalMeshTickType.AlwaysTick && this.TickType != ESkeletalMeshTickType.OnlyMainMeshTick)
 		{
@@ -392,7 +386,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFBC RID: 114620 RVA: 0x007C6714 File Offset: 0x007C4914
+	// Token: 0x06019BA5 RID: 105381 RVA: 0x007ED93C File Offset: 0x007EBB3C
 	public void UnlockEvaluation()
 	{
 		foreach (USkeletalMeshComponent uskeletalMeshComponent in this.TickedComps)
@@ -401,7 +395,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFBD RID: 114621 RVA: 0x007C6764 File Offset: 0x007C4964
+	// Token: 0x06019BA6 RID: 105382 RVA: 0x007ED98C File Offset: 0x007EBB8C
 	public void DealComplete()
 	{
 		foreach (USkeletalMeshComponent uskeletalMeshComponent in this.TickedComps)
@@ -410,7 +404,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFBE RID: 114622 RVA: 0x007C67B4 File Offset: 0x007C49B4
+	// Token: 0x06019BA7 RID: 105383 RVA: 0x007ED9DC File Offset: 0x007EBBDC
 	public void AfterProxyTick(float deltaSeconds)
 	{
 		if (this.TickType != ESkeletalMeshTickType.AlwaysTick)
@@ -464,7 +458,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFBF RID: 114623 RVA: 0x007C690C File Offset: 0x007C4B0C
+	// Token: 0x06019BA8 RID: 105384 RVA: 0x007EDB34 File Offset: 0x007EBD34
 	protected override void OnEnable()
 	{
 		if (this.TickMode != ESkeletalMeshTickMode.TsTakeOver)
@@ -480,7 +474,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFC0 RID: 114624 RVA: 0x007C6978 File Offset: 0x007C4B78
+	// Token: 0x06019BA9 RID: 105385 RVA: 0x007EDBA0 File Offset: 0x007EBDA0
 	protected override void OnDisable(string reason)
 	{
 		if (this.TickMode == ESkeletalMeshTickMode.UeUpdate)
@@ -498,14 +492,14 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		mainAnimInstance.SetDelayAnimTime(0f, 2f);
 	}
 
-	// Token: 0x0601BFC1 RID: 114625 RVA: 0x007C69EC File Offset: 0x007C4BEC
+	// Token: 0x06019BAA RID: 105386 RVA: 0x007EDC14 File Offset: 0x007EBE14
 	public void SetTakeOverTick(bool takeOver)
 	{
 		this.IsTakeOver = takeOver;
 		this.RefreshTickMode();
 	}
 
-	// Token: 0x0601BFC2 RID: 114626 RVA: 0x007C69FC File Offset: 0x007C4BFC
+	// Token: 0x06019BAB RID: 105387 RVA: 0x007EDC24 File Offset: 0x007EBE24
 	public void SetLodBias(int lodBias)
 	{
 		foreach (USkeletalMeshComponent uskeletalMeshComponent in this.SkeletalComps)
@@ -514,7 +508,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFC3 RID: 114627 RVA: 0x007C6A50 File Offset: 0x007C4C50
+	// Token: 0x06019BAC RID: 105388 RVA: 0x007EDC78 File Offset: 0x007EBE78
 	public unsafe bool SetSkeletalMeshTickType(ESkeletalMeshTickType type)
 	{
 		if (this.TickType == type)
@@ -536,13 +530,13 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		return true;
 	}
 
-	// Token: 0x0601BFC4 RID: 114628 RVA: 0x007C6B15 File Offset: 0x007C4D15
+	// Token: 0x06019BAD RID: 105389 RVA: 0x007EDD3D File Offset: 0x007EBF3D
 	protected bool CheckMainMesh(USkeletalMeshComponent skeletalComp)
 	{
 		return skeletalComp.IsValid() && skeletalComp.GetFName() == UeSkeletalTickManageComponent.MainMeshName;
 	}
 
-	// Token: 0x0601BFC5 RID: 114629 RVA: 0x007C6B31 File Offset: 0x007C4D31
+	// Token: 0x06019BAE RID: 105390 RVA: 0x007EDD59 File Offset: 0x007EBF59
 	private void RefreshTickMode()
 	{
 		if (this.IsTakeOver)
@@ -550,7 +544,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 			this.TickMode = ESkeletalMeshTickMode.TsTakeOver;
 			return;
 		}
-		if (!UeSkeletalTickController.MainRoleParallel && this.IsMainRole())
+		if (!UeTickManageDefine.MainRoleParallel && this.IsMainRole())
 		{
 			this.TickMode = ESkeletalMeshTickMode.TsProxyMainMeshNotParallel;
 			return;
@@ -558,14 +552,14 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		this.TickMode = ESkeletalMeshTickMode.TsProxy;
 	}
 
-	// Token: 0x0601BFC6 RID: 114630 RVA: 0x007C6B61 File Offset: 0x007C4D61
+	// Token: 0x06019BAF RID: 105391 RVA: 0x007EDD89 File Offset: 0x007EBF89
 	protected bool IsMainRole()
 	{
 		BaseActorComponent actorComp = this.ActorComp;
 		return ((actorComp != null) ? actorComp.Owner : null) == Global.BaseCharacter;
 	}
 
-	// Token: 0x0601BFC7 RID: 114631 RVA: 0x007C6B7C File Offset: 0x007C4D7C
+	// Token: 0x06019BB0 RID: 105392 RVA: 0x007EDDA4 File Offset: 0x007EBFA4
 	public bool StartForceDisableAnimDelay(EForceDisableAnimDelayReason reason)
 	{
 		if (this.ForceDisableAnimDelaySet.Contains(reason))
@@ -582,13 +576,13 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		return true;
 	}
 
-	// Token: 0x0601BFC8 RID: 114632 RVA: 0x007C6BD3 File Offset: 0x007C4DD3
+	// Token: 0x06019BB1 RID: 105393 RVA: 0x007EDDFB File Offset: 0x007EBFFB
 	public void CancelForceDisableAnimDelay(EForceDisableAnimDelayReason reason)
 	{
 		this.ForceDisableAnimDelaySet.Remove(reason);
 	}
 
-	// Token: 0x0601BFC9 RID: 114633 RVA: 0x007C6BE2 File Offset: 0x007C4DE2
+	// Token: 0x06019BB2 RID: 105394 RVA: 0x007EDE0A File Offset: 0x007EC00A
 	public void RefreshCharacterAnimInstance()
 	{
 		BaseActorComponent actorComp = this.ActorComp;
@@ -611,7 +605,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		mainAnimInstance2.SetDelayAnimTime(0f, 0f);
 	}
 
-	// Token: 0x0601BFCA RID: 114634 RVA: 0x007C6C24 File Offset: 0x007C4E24
+	// Token: 0x06019BB3 RID: 105395 RVA: 0x007EDE4C File Offset: 0x007EC04C
 	public void AddOrRefreshSkeletalMeshComponent(USkeletalMeshComponent component)
 	{
 		if (this.ActorComp == null)
@@ -668,7 +662,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		component.SetKuroOnlyTickOutside(true);
 	}
 
-	// Token: 0x0601BFCB RID: 114635 RVA: 0x007C6DDC File Offset: 0x007C4FDC
+	// Token: 0x06019BB4 RID: 105396 RVA: 0x007EE004 File Offset: 0x007EC204
 	public void EnableOrDisableSkelTick(USkeletalMeshComponent component, bool enable = true)
 	{
 		if (enable)
@@ -685,7 +679,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFCC RID: 114636 RVA: 0x007C6E34 File Offset: 0x007C5034
+	// Token: 0x06019BB5 RID: 105397 RVA: 0x007EE05C File Offset: 0x007EC25C
 	private void CleanupInvalidSkeletalComps()
 	{
 		for (int i = this.SkeletalComps.Count - 1; i >= 0; i--)
@@ -714,7 +708,7 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 		}
 	}
 
-	// Token: 0x0601BFCD RID: 114637 RVA: 0x007C6F40 File Offset: 0x007C5140
+	// Token: 0x06019BB6 RID: 105398 RVA: 0x007EE168 File Offset: 0x007EC368
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -722,144 +716,174 @@ public class UeSkeletalTickManageComponent : EntityComponent, IComponentDependen
 			return false;
 		}
 		UeSkeletalTickManageComponent ueSkeletalTickManageComponent = (UeSkeletalTickManageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("EnableFirstFrame"))
+		this.EnableFirstFrame = ueSkeletalTickManageComponent.EnableFirstFrame;
+		if (ueSkeletalTickManageComponent.ActorComp == null)
 		{
-			this.EnableFirstFrame = ueSkeletalTickManageComponent.EnableFirstFrame;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (ueSkeletalTickManageComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
-		{
-			if (ueSkeletalTickManageComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastTickFrame"))
-		{
-			this.LastTickFrame = ueSkeletalTickManageComponent.LastTickFrame;
-		}
-		if (base.CanResetComponentProperty("IsTakeOver"))
-		{
-			this.IsTakeOver = ueSkeletalTickManageComponent.IsTakeOver;
-		}
-		if (base.CanResetComponentProperty("TickModeInternal"))
-		{
-			this.TickModeInternal = ueSkeletalTickManageComponent.TickModeInternal;
-		}
-		if (base.CanResetComponentProperty("ProxyTickStat"))
-		{
-			if (ueSkeletalTickManageComponent.ProxyTickStat == null)
-			{
-				this.ProxyTickStat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.ProxyTickStat), "ProxyTickStat"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MainSkelComp"))
-		{
-			if (ueSkeletalTickManageComponent.MainSkelComp == null)
-			{
-				this.MainSkelComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.MainSkelComp), "MainSkelComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MainAnimInstance"))
-		{
-			if (ueSkeletalTickManageComponent.MainAnimInstance == null)
-			{
-				this.MainAnimInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.MainAnimInstance), "MainAnimInstance"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ForceDisableAnimDelaySet") && ueSkeletalTickManageComponent.ForceDisableAnimDelaySet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForceDisableAnimDelayReason>(this.ForceDisableAnimDelaySet), "ForceDisableAnimDelaySet"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TickType"))
+		if (ueSkeletalTickManageComponent.UnifiedStateComp == null)
 		{
-			this.TickType = ueSkeletalTickManageComponent.TickType;
+			this.UnifiedStateComp = null;
 		}
-		return (!base.CanResetComponentProperty("SkeletalComps") || ueSkeletalTickManageComponent.SkeletalComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<USkeletalMeshComponent>>(this.SkeletalComps), "SkeletalComps")) && (!base.CanResetComponentProperty("FollowSkeletalComps") || ueSkeletalTickManageComponent.FollowSkeletalComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<USkeletalMeshComponent>>(this.FollowSkeletalComps), "FollowSkeletalComps")) && (!base.CanResetComponentProperty("TickedComps") || ueSkeletalTickManageComponent.TickedComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<USkeletalMeshComponent>>(this.TickedComps), "TickedComps")) && (!base.CanResetComponentProperty("DisabledSet") || ueSkeletalTickManageComponent.DisabledSet == null || base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.DisabledSet), "DisabledSet"));
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
+		{
+			return false;
+		}
+		this.LastTickFrame = ueSkeletalTickManageComponent.LastTickFrame;
+		this.IsTakeOver = ueSkeletalTickManageComponent.IsTakeOver;
+		this.TickModeInternal = ueSkeletalTickManageComponent.TickModeInternal;
+		if (ueSkeletalTickManageComponent.ProxyTickStat == null)
+		{
+			this.ProxyTickStat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProxyTickStat), "ProxyTickStat"))
+		{
+			return false;
+		}
+		if (ueSkeletalTickManageComponent.MainSkelComp == null)
+		{
+			this.MainSkelComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainSkelComp), "MainSkelComp"))
+		{
+			return false;
+		}
+		if (ueSkeletalTickManageComponent.MainAnimInstance == null)
+		{
+			this.MainAnimInstance = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainAnimInstance), "MainAnimInstance"))
+		{
+			return false;
+		}
+		if (ueSkeletalTickManageComponent.ForceDisableAnimDelaySet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForceDisableAnimDelayReason>(this.ForceDisableAnimDelaySet), "ForceDisableAnimDelaySet"))
+		{
+			return false;
+		}
+		this.TickType = ueSkeletalTickManageComponent.TickType;
+		return (ueSkeletalTickManageComponent.SkeletalComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkeletalComps), "SkeletalComps")) && (ueSkeletalTickManageComponent.FollowSkeletalComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowSkeletalComps), "FollowSkeletalComps")) && (ueSkeletalTickManageComponent.TickedComps == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TickedComps), "TickedComps")) && (ueSkeletalTickManageComponent.DisabledSet == null || base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.DisabledSet), "DisabledSet"));
 	}
 
-	// Token: 0x0400DD2B RID: 56619
+	// Token: 0x1700294E RID: 10574
+	// (get) Token: 0x06019BB7 RID: 105399 RVA: 0x007EE345 File Offset: 0x007EC545
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700294F RID: 10575
+	// (get) Token: 0x06019BB8 RID: 105400 RVA: 0x007EE348 File Offset: 0x007EC548
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002950 RID: 10576
+	// (get) Token: 0x06019BB9 RID: 105401 RVA: 0x007EE34B File Offset: 0x007EC54B
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002951 RID: 10577
+	// (get) Token: 0x06019BBA RID: 105402 RVA: 0x007EE34E File Offset: 0x007EC54E
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002952 RID: 10578
+	// (get) Token: 0x06019BBB RID: 105403 RVA: 0x007EE351 File Offset: 0x007EC551
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002953 RID: 10579
+	// (get) Token: 0x06019BBC RID: 105404 RVA: 0x007EE354 File Offset: 0x007EC554
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E1C8 RID: 57800
 	public const float MAX_TIME_DELAY_ANIM = 2f;
 
-	// Token: 0x0400DD2C RID: 56620
+	// Token: 0x0400E1C9 RID: 57801
 	public const float MAX_COLLECT_PERIOD_DELAY_ANIM = 0.125f;
 
-	// Token: 0x0400DD2D RID: 56621
+	// Token: 0x0400E1CA RID: 57802
 	private bool EnableFirstFrame;
 
-	// Token: 0x0400DD2E RID: 56622
+	// Token: 0x0400E1CB RID: 57803
 	[Nullable(2)]
 	private BaseActorComponent ActorComp;
 
-	// Token: 0x0400DD2F RID: 56623
+	// Token: 0x0400E1CC RID: 57804
 	[Nullable(2)]
 	private BaseUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400DD30 RID: 56624
+	// Token: 0x0400E1CD RID: 57805
 	private int LastTickFrame = -1;
 
-	// Token: 0x0400DD31 RID: 56625
+	// Token: 0x0400E1CE RID: 57806
 	private bool IsTakeOver;
 
-	// Token: 0x0400DD32 RID: 56626
+	// Token: 0x0400E1CF RID: 57807
 	private ESkeletalMeshTickMode TickModeInternal;
 
-	// Token: 0x0400DD33 RID: 56627
+	// Token: 0x0400E1D0 RID: 57808
 	[Nullable(2)]
 	private Stat ProxyTickStat;
 
-	// Token: 0x0400DD34 RID: 56628
+	// Token: 0x0400E1D1 RID: 57809
 	[Nullable(2)]
 	public USkeletalMeshComponent MainSkelComp;
 
-	// Token: 0x0400DD35 RID: 56629
+	// Token: 0x0400E1D2 RID: 57810
 	[Nullable(2)]
 	private UAnimInstance MainAnimInstance;
 
-	// Token: 0x0400DD36 RID: 56630
+	// Token: 0x0400E1D3 RID: 57811
 	protected readonly HashSet<EForceDisableAnimDelayReason> ForceDisableAnimDelaySet = new HashSet<EForceDisableAnimDelayReason>();
 
-	// Token: 0x0400DD37 RID: 56631
+	// Token: 0x0400E1D4 RID: 57812
 	protected ESkeletalMeshTickType TickType;
 
-	// Token: 0x0400DD38 RID: 56632
+	// Token: 0x0400E1D5 RID: 57813
 	public readonly List<USkeletalMeshComponent> SkeletalComps = new List<USkeletalMeshComponent>();
 
-	// Token: 0x0400DD39 RID: 56633
+	// Token: 0x0400E1D6 RID: 57814
 	private readonly List<USkeletalMeshComponent> FollowSkeletalComps = new List<USkeletalMeshComponent>();
 
-	// Token: 0x0400DD3A RID: 56634
+	// Token: 0x0400E1D7 RID: 57815
 	private readonly List<USkeletalMeshComponent> TickedComps = new List<USkeletalMeshComponent>();
 
-	// Token: 0x0400DD3B RID: 56635
+	// Token: 0x0400E1D8 RID: 57816
 	private readonly HashSet<USkeletalMeshComponent> DisabledSet = new HashSet<USkeletalMeshComponent>();
 
-	// Token: 0x0400DD3C RID: 56636
+	// Token: 0x0400E1D9 RID: 57817
 	private static readonly FName MainMeshName = new FName("CharacterMesh0");
 }

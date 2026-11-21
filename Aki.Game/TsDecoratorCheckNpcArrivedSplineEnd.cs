@@ -11,32 +11,28 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Decorator/Npc/LevelAiDecorator/TsDecoratorCheckNpcArrivedSplineEnd.TsDecoratorCheckNpcArrivedSplineEnd_C")]
 public class TsDecoratorCheckNpcArrivedSplineEnd : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06000085 RID: 133 RVA: 0x00003D34 File Offset: 0x00001F34
+	// Token: 0x06000085 RID: 133 RVA: 0x00003DF0 File Offset: 0x00001FF0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorCheckNpcArrivedSplineEnd) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorCheckNpcArrivedSplineEnd.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000086 RID: 134 RVA: 0x00003DD4 File Offset: 0x00001FD4
+	// Token: 0x06000086 RID: 134 RVA: 0x00003EA8 File Offset: 0x000020A8
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -55,7 +51,7 @@ public class TsDecoratorCheckNpcArrivedSplineEnd : UBTDecorator_BlueprintBase, I
 		return charActorComp != null && NpcVehicleRiderController.Instance.GetNpcVehicleRideState(charActorComp.Entity.Id) == ENpcVehicleRideState.WaitingToDismount;
 	}
 
-	// Token: 0x06000087 RID: 135 RVA: 0x00003E4A File Offset: 0x0000204A
+	// Token: 0x06000087 RID: 135 RVA: 0x00003F1E File Offset: 0x0000211E
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorCheckNpcArrivedSplineEnd._ClassPtr == IntPtr.Zero)
@@ -65,23 +61,23 @@ public class TsDecoratorCheckNpcArrivedSplineEnd : UBTDecorator_BlueprintBase, I
 		return TsDecoratorCheckNpcArrivedSplineEnd._ClassPtr;
 	}
 
-	// Token: 0x06000088 RID: 136 RVA: 0x00003E70 File Offset: 0x00002070
+	// Token: 0x06000088 RID: 136 RVA: 0x00003F44 File Offset: 0x00002144
 	public TsDecoratorCheckNpcArrivedSplineEnd() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckNpcArrivedSplineEnd.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000089 RID: 137 RVA: 0x00003E98 File Offset: 0x00002098
+	// Token: 0x06000089 RID: 137 RVA: 0x00003F6C File Offset: 0x0000216C
 	[NullableContext(1)]
 	public TsDecoratorCheckNpcArrivedSplineEnd(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckNpcArrivedSplineEnd.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600008A RID: 138 RVA: 0x00003ECB File Offset: 0x000020CB
+	// Token: 0x0600008A RID: 138 RVA: 0x00003F9F File Offset: 0x0000219F
 	protected TsDecoratorCheckNpcArrivedSplineEnd(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600008B RID: 139 RVA: 0x00003ED4 File Offset: 0x000020D4
+	// Token: 0x0600008B RID: 139 RVA: 0x00003FA8 File Offset: 0x000021A8
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

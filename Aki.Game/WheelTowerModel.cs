@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,34 +7,34 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x0200165A RID: 5722
+// Token: 0x02000B12 RID: 2834
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class WheelTowerModel : ModelBase
 {
-	// Token: 0x0600A0E0 RID: 41184 RVA: 0x00237731 File Offset: 0x00235931
+	// Token: 0x060074BE RID: 29886 RVA: 0x002415CD File Offset: 0x0023F7CD
 	protected override bool OnInit()
 	{
 		this.BuildRoleData();
 		return true;
 	}
 
-	// Token: 0x0600A0E1 RID: 41185 RVA: 0x0023773A File Offset: 0x0023593A
+	// Token: 0x060074BF RID: 29887 RVA: 0x002415D6 File Offset: 0x0023F7D6
 	protected override bool OnClear()
 	{
 		this.ClearRoleData();
 		return true;
 	}
 
-	// Token: 0x0600A0E2 RID: 41186 RVA: 0x00237743 File Offset: 0x00235943
+	// Token: 0x060074C0 RID: 29888 RVA: 0x002415DF File Offset: 0x0023F7DF
 	public void SetActivityId(int id)
 	{
 		this.ActivityDataIdInternal = id;
 	}
 
-	// Token: 0x17000D95 RID: 3477
-	// (get) Token: 0x0600A0E3 RID: 41187 RVA: 0x0023774C File Offset: 0x0023594C
+	// Token: 0x17000DB6 RID: 3510
+	// (get) Token: 0x060074C1 RID: 29889 RVA: 0x002415E8 File Offset: 0x0023F7E8
 	[Nullable(2)]
 	public WheelTowerData ActivityData
 	{
@@ -46,19 +45,19 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A0E4 RID: 41188 RVA: 0x00237764 File Offset: 0x00235964
+	// Token: 0x060074C2 RID: 29890 RVA: 0x00241600 File Offset: 0x0023F800
 	public NewTowerParam GetTowerConfig()
 	{
 		return WheelTowerConfig.Instance.GetTowerConfig(this.ActivityData.CycleId).Value;
 	}
 
-	// Token: 0x0600A0E5 RID: 41189 RVA: 0x00237790 File Offset: 0x00235990
+	// Token: 0x060074C3 RID: 29891 RVA: 0x0024162C File Offset: 0x0023F82C
 	public int GetTeamMaxRoleCount()
 	{
 		return this.GetTowerConfig().RoleCount;
 	}
 
-	// Token: 0x0600A0E6 RID: 41190 RVA: 0x002377AC File Offset: 0x002359AC
+	// Token: 0x060074C4 RID: 29892 RVA: 0x00241648 File Offset: 0x0023F848
 	public int GetRoleCost(int roleId)
 	{
 		if (this.RoleCostMap == null)
@@ -73,7 +72,7 @@ public class WheelTowerModel : ModelBase
 		return this.RoleCostMap.GetValueOrDefault(roleId, this.DefaultRoleCost);
 	}
 
-	// Token: 0x0600A0E7 RID: 41191 RVA: 0x0023784C File Offset: 0x00235A4C
+	// Token: 0x060074C5 RID: 29893 RVA: 0x002416E8 File Offset: 0x0023F8E8
 	public CommonDefine.ICountDown GetSeasonCountDownData()
 	{
 		long endOpenTime = this.ActivityData.EndOpenTime;
@@ -87,7 +86,7 @@ public class WheelTowerModel : ModelBase
 		return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2));
 	}
 
-	// Token: 0x0600A0E8 RID: 41192 RVA: 0x002378EA File Offset: 0x00235AEA
+	// Token: 0x060074C6 RID: 29894 RVA: 0x00241786 File Offset: 0x0023F986
 	public NewTowerClimbingLevelRecord GetCurrentLevelRecord(bool? endless = null)
 	{
 		if (endless == null)
@@ -97,33 +96,33 @@ public class WheelTowerModel : ModelBase
 		return this.ActivityData.GetLevelRecord(endless.Value);
 	}
 
-	// Token: 0x0600A0E9 RID: 41193 RVA: 0x00237919 File Offset: 0x00235B19
+	// Token: 0x060074C7 RID: 29895 RVA: 0x002417B5 File Offset: 0x0023F9B5
 	public int GetTotalScore()
 	{
 		return this.ActivityData.GetTotalScore(this.EndlessMode);
 	}
 
-	// Token: 0x0600A0EA RID: 41194 RVA: 0x0023792C File Offset: 0x00235B2C
+	// Token: 0x060074C8 RID: 29896 RVA: 0x002417C8 File Offset: 0x0023F9C8
 	public int GetBestTotalScore()
 	{
 		return this.ActivityData.GetHistoryBestScore(this.EndlessMode);
 	}
 
-	// Token: 0x0600A0EB RID: 41195 RVA: 0x00237940 File Offset: 0x00235B40
+	// Token: 0x060074C9 RID: 29897 RVA: 0x002417DC File Offset: 0x0023F9DC
 	public List<int> GetLevelBuffList()
 	{
 		int levelId = this.GetCurrentLevelRecord(null).LevelId;
-		return WheelTowerConfig.Instance.GetLevelConfigById(levelId).Value.GetNewTowerBuffsArray().ToList<int>();
+		return new List<int>(WheelTowerConfig.Instance.GetLevelConfigById(levelId).Value.GetNewTowerBuffsArray());
 	}
 
-	// Token: 0x0600A0EC RID: 41196 RVA: 0x00237984 File Offset: 0x00235B84
+	// Token: 0x060074CA RID: 29898 RVA: 0x00241820 File Offset: 0x0023FA20
 	public int GetLevelCanSelectBuffCount()
 	{
 		int levelId = this.GetCurrentLevelRecord(null).LevelId;
 		return WheelTowerConfig.Instance.GetLevelConfigById(levelId).Value.NewTowerBuffCount;
 	}
 
-	// Token: 0x0600A0ED RID: 41197 RVA: 0x002379C4 File Offset: 0x00235BC4
+	// Token: 0x060074CB RID: 29899 RVA: 0x00241860 File Offset: 0x0023FA60
 	public bool IsLevelCompleted(bool endless)
 	{
 		if (endless)
@@ -134,20 +133,20 @@ public class WheelTowerModel : ModelBase
 		return nextMonsterInfoPreview != null && this.GetBossHpPercentage(nextMonsterInfoPreview) <= 0.0;
 	}
 
-	// Token: 0x0600A0EE RID: 41198 RVA: 0x00237A00 File Offset: 0x00235C00
+	// Token: 0x060074CC RID: 29900 RVA: 0x0024189C File Offset: 0x0023FA9C
 	public int GetLastChallengeRound(bool? endless = null)
 	{
 		return this.GetCurrentLevelRecord(endless).TeamChallengeInfos.Count - 1;
 	}
 
-	// Token: 0x0600A0EF RID: 41199 RVA: 0x00237A18 File Offset: 0x00235C18
+	// Token: 0x060074CD RID: 29901 RVA: 0x002418B4 File Offset: 0x0023FAB4
 	public bool IsRoundChallenged(int round, bool? endless = null)
 	{
 		int lastChallengeRound = this.GetLastChallengeRound(endless);
 		return lastChallengeRound != -1 && round <= lastChallengeRound;
 	}
 
-	// Token: 0x0600A0F0 RID: 41200 RVA: 0x00237A38 File Offset: 0x00235C38
+	// Token: 0x060074CE RID: 29902 RVA: 0x002418D4 File Offset: 0x0023FAD4
 	public bool IsTeamRoundCanChallenge(int round)
 	{
 		if (this.IsRoundChallenged(round, null))
@@ -158,13 +157,13 @@ public class WheelTowerModel : ModelBase
 		return round <= maxChallengeRound;
 	}
 
-	// Token: 0x0600A0F1 RID: 41201 RVA: 0x00237A70 File Offset: 0x00235C70
+	// Token: 0x060074CF RID: 29903 RVA: 0x0024190C File Offset: 0x0023FB0C
 	public bool HasChallengeAnyRound(bool? isEndless = null)
 	{
 		return this.GetLastChallengeRound(isEndless) >= 0;
 	}
 
-	// Token: 0x0600A0F2 RID: 41202 RVA: 0x00237A80 File Offset: 0x00235C80
+	// Token: 0x060074D0 RID: 29904 RVA: 0x0024191C File Offset: 0x0023FB1C
 	public int GetMaxChallengeRound(bool? isEndless = null)
 	{
 		int lastChallengeRound = this.GetLastChallengeRound(isEndless);
@@ -175,7 +174,7 @@ public class WheelTowerModel : ModelBase
 		return lastChallengeRound + 1;
 	}
 
-	// Token: 0x0600A0F3 RID: 41203 RVA: 0x00237AA4 File Offset: 0x00235CA4
+	// Token: 0x060074D1 RID: 29905 RVA: 0x00241940 File Offset: 0x0023FB40
 	public bool IsLastRound(int round, bool? isEndless = null)
 	{
 		bool flag = isEndless ?? this.EndlessMode;
@@ -202,14 +201,14 @@ public class WheelTowerModel : ModelBase
 		return num < 0 || this.IsLastRoundCheckLimit(currentLevelRecord.LevelId, round);
 	}
 
-	// Token: 0x0600A0F4 RID: 41204 RVA: 0x00237B58 File Offset: 0x00235D58
+	// Token: 0x060074D2 RID: 29906 RVA: 0x002419F4 File Offset: 0x0023FBF4
 	public bool IsLastRoundCheckLimit(int levelId, int round)
 	{
 		int teamLimit = WheelTowerConfig.Instance.GetLevelConfigById(levelId).Value.TeamLimit;
 		return teamLimit != 0 && round == teamLimit - 1;
 	}
 
-	// Token: 0x0600A0F5 RID: 41205 RVA: 0x00237B8C File Offset: 0x00235D8C
+	// Token: 0x060074D3 RID: 29907 RVA: 0x00241A28 File Offset: 0x0023FC28
 	public int GetRoundBossRound(int round)
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = this.GetCurrentLevelRecord(null);
@@ -225,7 +224,7 @@ public class WheelTowerModel : ModelBase
 		return monsterInfoPreview.Round;
 	}
 
-	// Token: 0x0600A0F6 RID: 41206 RVA: 0x00237BE0 File Offset: 0x00235DE0
+	// Token: 0x060074D4 RID: 29908 RVA: 0x00241A7C File Offset: 0x0023FC7C
 	public MonsterInfoPreview GetBossInfoByRound(int round, bool? isEndless = null)
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = this.GetCurrentLevelRecord(isEndless);
@@ -241,14 +240,14 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A0F7 RID: 41207 RVA: 0x00237C20 File Offset: 0x00235E20
+	// Token: 0x060074D5 RID: 29909 RVA: 0x00241ABC File Offset: 0x0023FCBC
 	public MonsterInfoPreview GetLastBossInfo(bool isEndless)
 	{
 		int lastChallengeRound = this.GetLastChallengeRound(new bool?(isEndless));
 		return this.GetBossInfoByRound(lastChallengeRound, new bool?(isEndless));
 	}
 
-	// Token: 0x0600A0F8 RID: 41208 RVA: 0x00237C48 File Offset: 0x00235E48
+	// Token: 0x060074D6 RID: 29910 RVA: 0x00241AE4 File Offset: 0x0023FCE4
 	public List<IBossInfo> GetRoundBossInfo(int round, bool? isEndless = null)
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = this.GetCurrentLevelRecord(isEndless);
@@ -297,7 +296,7 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A0F9 RID: 41209 RVA: 0x00237D4C File Offset: 0x00235F4C
+	// Token: 0x060074D7 RID: 29911 RVA: 0x00241BE8 File Offset: 0x0023FDE8
 	public int GetCurrentWaveId(int? round = null, bool? isEndless = null)
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = this.GetCurrentLevelRecord(isEndless);
@@ -314,7 +313,7 @@ public class WheelTowerModel : ModelBase
 		return monsterInfoPreview.WaveConfigId;
 	}
 
-	// Token: 0x0600A0FA RID: 41210 RVA: 0x00237DB4 File Offset: 0x00235FB4
+	// Token: 0x060074D8 RID: 29912 RVA: 0x00241C50 File Offset: 0x0023FE50
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetBossProgress(int round, bool? isEndless = null)
 	{
@@ -330,7 +329,7 @@ public class WheelTowerModel : ModelBase
 		return new ValueTuple<int, int>((num == roundBossInfo.Count) ? num : (num + 1), roundBossInfo.Count);
 	}
 
-	// Token: 0x0600A0FB RID: 41211 RVA: 0x00237E14 File Offset: 0x00236014
+	// Token: 0x060074D9 RID: 29913 RVA: 0x00241CB0 File Offset: 0x0023FEB0
 	public List<IBossInfo> GetTeamKillBossInfo(int teamRound, bool? isEndlessMode = null)
 	{
 		bool flag = isEndlessMode ?? this.EndlessMode;
@@ -413,7 +412,7 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A0FC RID: 41212 RVA: 0x00238070 File Offset: 0x00236270
+	// Token: 0x060074DA RID: 29914 RVA: 0x00241F0C File Offset: 0x0024010C
 	public List<IBossInfo> GetPrevRoundBossInfo(int round)
 	{
 		List<IBossInfo> roundBossInfo = this.GetRoundBossInfo(round, null);
@@ -439,7 +438,7 @@ public class WheelTowerModel : ModelBase
 		return roundBossInfo;
 	}
 
-	// Token: 0x0600A0FD RID: 41213 RVA: 0x0023811C File Offset: 0x0023631C
+	// Token: 0x060074DB RID: 29915 RVA: 0x00241FB8 File Offset: 0x002401B8
 	public double GetRecordPrevBossHpPercentage(int round, int waveConfigId, int bossRound)
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = this.GetCurrentLevelRecord(null);
@@ -454,7 +453,7 @@ public class WheelTowerModel : ModelBase
 		return 100.0;
 	}
 
-	// Token: 0x0600A0FE RID: 41214 RVA: 0x00238190 File Offset: 0x00236390
+	// Token: 0x060074DC RID: 29916 RVA: 0x0024202C File Offset: 0x0024022C
 	public double GetBossHpPercentage(MonsterInfoPreview bossPreview)
 	{
 		if (bossPreview.IsDead)
@@ -465,7 +464,7 @@ public class WheelTowerModel : ModelBase
 		return MathUtils.Instance.Clamp(num / 100.0, 0.01, 100.0);
 	}
 
-	// Token: 0x0600A0FF RID: 41215 RVA: 0x002381E0 File Offset: 0x002363E0
+	// Token: 0x060074DD RID: 29917 RVA: 0x0024207C File Offset: 0x0024027C
 	public List<int> GetWaveBatch(int levelId, int waveConfigId)
 	{
 		int round = WheelTowerConfig.Instance.GetWaveConfigById(waveConfigId).Value.Round;
@@ -481,13 +480,13 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A100 RID: 41216 RVA: 0x00238274 File Offset: 0x00236474
+	// Token: 0x060074DE RID: 29918 RVA: 0x00242110 File Offset: 0x00240310
 	public List<int> GetRoundSelectBuffList(int round)
 	{
-		return this.GetCurrentLevelRecord(null).TeamChallengeInfos[round].BuffIds.ToList<int>();
+		return new List<int>(this.GetCurrentLevelRecord(null).TeamChallengeInfos[round].BuffIds);
 	}
 
-	// Token: 0x0600A101 RID: 41217 RVA: 0x002382A8 File Offset: 0x002364A8
+	// Token: 0x060074DF RID: 29919 RVA: 0x00242144 File Offset: 0x00240344
 	public List<int> GetRoundSelectRoleIdList(int round)
 	{
 		NewTowerClimbingLevelRecord currentLevelRecord = this.GetCurrentLevelRecord(null);
@@ -499,25 +498,25 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A102 RID: 41218 RVA: 0x0023831C File Offset: 0x0023651C
+	// Token: 0x060074E0 RID: 29920 RVA: 0x002421B8 File Offset: 0x002403B8
 	public int GetRoundScore(int round)
 	{
 		return this.ActivityData.GetRoundScore(this.EndlessMode, round);
 	}
 
-	// Token: 0x0600A103 RID: 41219 RVA: 0x00238330 File Offset: 0x00236530
+	// Token: 0x060074E1 RID: 29921 RVA: 0x002421CC File Offset: 0x002403CC
 	public int GetRoundTotalScore(int round)
 	{
 		return this.ActivityData.GetRoundTotalScore(this.EndlessMode, round);
 	}
 
-	// Token: 0x0600A104 RID: 41220 RVA: 0x00238344 File Offset: 0x00236544
+	// Token: 0x060074E2 RID: 29922 RVA: 0x002421E0 File Offset: 0x002403E0
 	public int GetSelectedRoundTotalScore()
 	{
 		return this.GetRoundTotalScore(this.SelectedRound);
 	}
 
-	// Token: 0x0600A105 RID: 41221 RVA: 0x00238352 File Offset: 0x00236552
+	// Token: 0x060074E3 RID: 29923 RVA: 0x002421EE File Offset: 0x002403EE
 	public void SetEndlessMode(bool endless)
 	{
 		if (this.EndlessMode == endless)
@@ -528,7 +527,7 @@ public class WheelTowerModel : ModelBase
 		this.ResetSelectedData();
 	}
 
-	// Token: 0x0600A106 RID: 41222 RVA: 0x0023836C File Offset: 0x0023656C
+	// Token: 0x060074E4 RID: 29924 RVA: 0x00242208 File Offset: 0x00240408
 	public void UpdateSelectRound(int round, bool force = false)
 	{
 		if (this.SelectedRound == round && !force)
@@ -545,7 +544,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A107 RID: 41223 RVA: 0x002383DD File Offset: 0x002365DD
+	// Token: 0x060074E5 RID: 29925 RVA: 0x00242279 File Offset: 0x00240479
 	public void ResetSelectedData()
 	{
 		this.SelectedRound = -1;
@@ -553,13 +552,13 @@ public class WheelTowerModel : ModelBase
 		this.SelectedRoleList.Clear();
 	}
 
-	// Token: 0x0600A108 RID: 41224 RVA: 0x002383F8 File Offset: 0x002365F8
+	// Token: 0x060074E6 RID: 29926 RVA: 0x00242294 File Offset: 0x00240494
 	public bool CheckSelectTeamIsFull()
 	{
 		return this.SelectedRoleList.Count >= this.GetTeamMaxRoleCount();
 	}
 
-	// Token: 0x0600A109 RID: 41225 RVA: 0x00238410 File Offset: 0x00236610
+	// Token: 0x060074E7 RID: 29927 RVA: 0x002422AC File Offset: 0x002404AC
 	public bool CheckSelectedRoleEnergyEnough()
 	{
 		CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.EnergyInfo selectedEnergyInfo = this.SelectedEnergyInfo;
@@ -574,25 +573,25 @@ public class WheelTowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600A10A RID: 41226 RVA: 0x00238454 File Offset: 0x00236654
+	// Token: 0x060074E8 RID: 29928 RVA: 0x002422F0 File Offset: 0x002404F0
 	public bool CheckBuffIsSelected()
 	{
 		return this.SelectedBuff > 0;
 	}
 
-	// Token: 0x0600A10B RID: 41227 RVA: 0x0023845F File Offset: 0x0023665F
+	// Token: 0x060074E9 RID: 29929 RVA: 0x002422FB File Offset: 0x002404FB
 	public bool CheckSelectedIsConflict()
 	{
 		return this.CheckCurrentSelectConflict().Count != 0;
 	}
 
-	// Token: 0x0600A10C RID: 41228 RVA: 0x0023846F File Offset: 0x0023666F
+	// Token: 0x060074EA RID: 29930 RVA: 0x0024230B File Offset: 0x0024050B
 	public List<IConflictInfo> CheckCurrentSelectConflict()
 	{
 		return this.CheckConflictList(this.SelectedRoleList);
 	}
 
-	// Token: 0x0600A10D RID: 41229 RVA: 0x00238480 File Offset: 0x00236680
+	// Token: 0x060074EB RID: 29931 RVA: 0x0024231C File Offset: 0x0024051C
 	public List<IConflictInfo> CheckConflictList(List<int> roleIdList)
 	{
 		List<IConflictInfo> list = new List<IConflictInfo>();
@@ -608,7 +607,7 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A10E RID: 41230 RVA: 0x002384C0 File Offset: 0x002366C0
+	// Token: 0x060074EC RID: 29932 RVA: 0x0024235C File Offset: 0x0024055C
 	[NullableContext(2)]
 	public IConflictInfo CheckConflict(int roleId)
 	{
@@ -644,14 +643,14 @@ public class WheelTowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600A10F RID: 41231 RVA: 0x00238574 File Offset: 0x00236774
+	// Token: 0x060074ED RID: 29933 RVA: 0x00242410 File Offset: 0x00240610
 	public int GetConflictWeaponRoleId(int roleId)
 	{
 		int value = (WeaponModel.Instance.GetWeaponDataByRoleDataId(roleId, true) as WeaponInstance).GetIncId().Value;
 		return this.SelectedEnergyInfo.GetWeaponOccupyRoleId(value, roleId);
 	}
 
-	// Token: 0x0600A110 RID: 41232 RVA: 0x002385B0 File Offset: 0x002367B0
+	// Token: 0x060074EE RID: 29934 RVA: 0x0024244C File Offset: 0x0024064C
 	public IRoleInfo GetRoleInfo(int roleId)
 	{
 		int value = (WeaponModel.Instance.GetWeaponDataByRoleDataId(roleId, true) as WeaponInstance).GetIncId().Value;
@@ -664,7 +663,7 @@ public class WheelTowerModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600A111 RID: 41233 RVA: 0x0023860C File Offset: 0x0023680C
+	// Token: 0x060074EF RID: 29935 RVA: 0x002424A8 File Offset: 0x002406A8
 	public void TmpToSelect()
 	{
 		this.SelectedRoleList.Clear();
@@ -680,7 +679,7 @@ public class WheelTowerModel : ModelBase
 		this.SelectedRoleList.AddRange(list);
 	}
 
-	// Token: 0x0600A112 RID: 41234 RVA: 0x00238660 File Offset: 0x00236860
+	// Token: 0x060074F0 RID: 29936 RVA: 0x002424FC File Offset: 0x002406FC
 	public void SelectToTmp()
 	{
 		this.TmpSelectedRoleMap.Clear();
@@ -691,7 +690,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A113 RID: 41235 RVA: 0x002386A8 File Offset: 0x002368A8
+	// Token: 0x060074F1 RID: 29937 RVA: 0x00242544 File Offset: 0x00240744
 	public void SetTmpSelectRoleList(List<int> roleList)
 	{
 		this.TmpSelectedRoleMap.Clear();
@@ -701,7 +700,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A114 RID: 41236 RVA: 0x002386E4 File Offset: 0x002368E4
+	// Token: 0x060074F2 RID: 29938 RVA: 0x00242580 File Offset: 0x00240780
 	public void TryAddOrDeleteRole(int roleId)
 	{
 		int roleSlot = this.GetRoleSlot(roleId);
@@ -719,7 +718,7 @@ public class WheelTowerModel : ModelBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("WheelTower_TeamSelectFullTips", Array.Empty<object>());
 	}
 
-	// Token: 0x0600A115 RID: 41237 RVA: 0x00238738 File Offset: 0x00236938
+	// Token: 0x060074F3 RID: 29939 RVA: 0x002425D4 File Offset: 0x002407D4
 	public int GetRoleSlot(int roleId)
 	{
 		if (roleId <= 0)
@@ -737,19 +736,19 @@ public class WheelTowerModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x0600A116 RID: 41238 RVA: 0x00238773 File Offset: 0x00236973
+	// Token: 0x060074F4 RID: 29940 RVA: 0x0024260F File Offset: 0x0024080F
 	public bool IsSelectRole(int roleId)
 	{
 		return this.GetRoleSlot(roleId) >= 0;
 	}
 
-	// Token: 0x0600A117 RID: 41239 RVA: 0x00238782 File Offset: 0x00236982
+	// Token: 0x060074F5 RID: 29941 RVA: 0x0024261E File Offset: 0x0024081E
 	public bool IsTempHasAnyEmptySlot()
 	{
 		return this.GetFirstEmptySlot() >= 0;
 	}
 
-	// Token: 0x0600A118 RID: 41240 RVA: 0x00238790 File Offset: 0x00236990
+	// Token: 0x060074F6 RID: 29942 RVA: 0x0024262C File Offset: 0x0024082C
 	private int GetFirstEmptySlot()
 	{
 		for (int i = 0; i < this.GetTeamMaxRoleCount(); i++)
@@ -762,7 +761,7 @@ public class WheelTowerModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x0600A119 RID: 41241 RVA: 0x002387C0 File Offset: 0x002369C0
+	// Token: 0x060074F7 RID: 29943 RVA: 0x0024265C File Offset: 0x0024085C
 	[NullableContext(2)]
 	public IWheelTowerCoverRecordViewData GetRecordPopupData()
 	{
@@ -774,19 +773,19 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A11A RID: 41242 RVA: 0x002387E5 File Offset: 0x002369E5
+	// Token: 0x060074F8 RID: 29944 RVA: 0x00242681 File Offset: 0x00240881
 	public void SetRecordPopupData(IWheelTowerCoverRecordViewData data)
 	{
 		this.LevelRecordPopupDataMap[this.EndlessMode] = data;
 	}
 
-	// Token: 0x0600A11B RID: 41243 RVA: 0x002387F9 File Offset: 0x002369F9
+	// Token: 0x060074F9 RID: 29945 RVA: 0x00242695 File Offset: 0x00240895
 	public void DeleteRecordPopupData()
 	{
 		this.LevelRecordPopupDataMap.Remove(this.EndlessMode);
 	}
 
-	// Token: 0x0600A11C RID: 41244 RVA: 0x00238810 File Offset: 0x00236A10
+	// Token: 0x060074FA RID: 29946 RVA: 0x002426AC File Offset: 0x002408AC
 	public string GetScoreResourceIdByLevel(EScoreLevel level)
 	{
 		string result;
@@ -797,13 +796,13 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A11D RID: 41245 RVA: 0x00238833 File Offset: 0x00236A33
+	// Token: 0x060074FB RID: 29947 RVA: 0x002426CF File Offset: 0x002408CF
 	public EScoreLevel GetRoundScoreLevel(int score)
 	{
 		return EScoreLevel.None;
 	}
 
-	// Token: 0x0600A11E RID: 41246 RVA: 0x00238838 File Offset: 0x00236A38
+	// Token: 0x060074FC RID: 29948 RVA: 0x002426D4 File Offset: 0x002408D4
 	public EScoreLevel GetTotalScoreLevel(int score, bool? isEndless = null, int? levelId = null)
 	{
 		int levelId2 = (levelId != null && levelId.Value != 0) ? levelId.Value : this.GetCurrentLevelRecord(isEndless).LevelId;
@@ -822,7 +821,7 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A11F RID: 41247 RVA: 0x002388DC File Offset: 0x00236ADC
+	// Token: 0x060074FD RID: 29949 RVA: 0x00242778 File Offset: 0x00240978
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetScoreRange(int score)
 	{
@@ -843,7 +842,7 @@ public class WheelTowerModel : ModelBase
 		return new ValueTuple<int, int>(item, num);
 	}
 
-	// Token: 0x0600A120 RID: 41248 RVA: 0x00238984 File Offset: 0x00236B84
+	// Token: 0x060074FE RID: 29950 RVA: 0x00242820 File Offset: 0x00240A20
 	public List<WheelTowerScoreLevelTargetData> GetScoreLevelList()
 	{
 		int levelId = this.GetCurrentLevelRecord(null).LevelId;
@@ -867,7 +866,7 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A121 RID: 41249 RVA: 0x00238A50 File Offset: 0x00236C50
+	// Token: 0x060074FF RID: 29951 RVA: 0x002428EC File Offset: 0x00240AEC
 	public bool CheckInInstanceDungeon()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -879,7 +878,7 @@ public class WheelTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A122 RID: 41250 RVA: 0x00238AA0 File Offset: 0x00236CA0
+	// Token: 0x06007500 RID: 29952 RVA: 0x0024293C File Offset: 0x00240B3C
 	public bool GetIsEndlessUnlockedInInstance()
 	{
 		if (this.IsEndlessUnlockedInInstance)
@@ -890,13 +889,13 @@ public class WheelTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A123 RID: 41251 RVA: 0x00238AB4 File Offset: 0x00236CB4
+	// Token: 0x06007501 RID: 29953 RVA: 0x00242950 File Offset: 0x00240B50
 	public void SetIsEndlessUnlockedInInstance(bool value)
 	{
 		this.IsEndlessUnlockedInInstance = value;
 	}
 
-	// Token: 0x0600A124 RID: 41252 RVA: 0x00238AC0 File Offset: 0x00236CC0
+	// Token: 0x06007502 RID: 29954 RVA: 0x0024295C File Offset: 0x00240B5C
 	[NullableContext(2)]
 	public string GetNextCycleRemainTime()
 	{
@@ -909,7 +908,7 @@ public class WheelTowerModel : ModelBase
 		return this.RemainTimeToText(cycleBeginTime - serverTime);
 	}
 
-	// Token: 0x0600A125 RID: 41253 RVA: 0x00238AFC File Offset: 0x00236CFC
+	// Token: 0x06007503 RID: 29955 RVA: 0x00242998 File Offset: 0x00240B98
 	[NullableContext(2)]
 	public string GetCycleEndRemainTime()
 	{
@@ -922,7 +921,7 @@ public class WheelTowerModel : ModelBase
 		return this.RemainTimeToText(cycleEndTime - serverTime);
 	}
 
-	// Token: 0x0600A126 RID: 41254 RVA: 0x00238B38 File Offset: 0x00236D38
+	// Token: 0x06007504 RID: 29956 RVA: 0x002429D4 File Offset: 0x00240BD4
 	private string RemainTimeToText(double remainingTime)
 	{
 		if (remainingTime <= 1.0)
@@ -934,7 +933,7 @@ public class WheelTowerModel : ModelBase
 		return TimeUtil.Instance.GetCountDownDataFormat2(remainingTime, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2)).CountDownText;
 	}
 
-	// Token: 0x0600A127 RID: 41255 RVA: 0x00238BB8 File Offset: 0x00236DB8
+	// Token: 0x06007505 RID: 29957 RVA: 0x00242A54 File Offset: 0x00240C54
 	private void BuildRoleData()
 	{
 		IReadOnlyList<NewTowerRole> roleConfigList = WheelTowerConfig.Instance.GetRoleConfigList();
@@ -952,7 +951,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A128 RID: 41256 RVA: 0x00238C44 File Offset: 0x00236E44
+	// Token: 0x06007506 RID: 29958 RVA: 0x00242AE0 File Offset: 0x00240CE0
 	private void ClearRoleData()
 	{
 		this.RoleToTemplate.Clear();
@@ -960,13 +959,13 @@ public class WheelTowerModel : ModelBase
 		this.EnhancedRoleSetInterval.Clear();
 	}
 
-	// Token: 0x0600A129 RID: 41257 RVA: 0x00238C67 File Offset: 0x00236E67
+	// Token: 0x06007507 RID: 29959 RVA: 0x00242B03 File Offset: 0x00240D03
 	public bool IsTemplateRole(int roleId)
 	{
 		return this.TemplateToRole.ContainsKey(roleId);
 	}
 
-	// Token: 0x0600A12A RID: 41258 RVA: 0x00238C78 File Offset: 0x00236E78
+	// Token: 0x06007508 RID: 29960 RVA: 0x00242B14 File Offset: 0x00240D14
 	public int GetTemplateRoleId(int roleId)
 	{
 		int result;
@@ -977,7 +976,7 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A12B RID: 41259 RVA: 0x00238C98 File Offset: 0x00236E98
+	// Token: 0x06007509 RID: 29961 RVA: 0x00242B34 File Offset: 0x00240D34
 	public int GetRealRoleId(int templateRoleId)
 	{
 		int result;
@@ -988,7 +987,7 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A12C RID: 41260 RVA: 0x00238CB8 File Offset: 0x00236EB8
+	// Token: 0x0600750A RID: 29962 RVA: 0x00242B54 File Offset: 0x00240D54
 	public int TryGetRealRoleId(int roleId)
 	{
 		if (!this.IsTemplateRole(roleId))
@@ -998,15 +997,15 @@ public class WheelTowerModel : ModelBase
 		return this.GetRealRoleId(roleId);
 	}
 
-	// Token: 0x0600A12D RID: 41261 RVA: 0x00238CCC File Offset: 0x00236ECC
+	// Token: 0x0600750B RID: 29963 RVA: 0x00242B68 File Offset: 0x00240D68
 	public string GetTemplateRoleDesc(int roleId)
 	{
 		int roleId2 = this.TryGetRealRoleId(roleId);
 		return WheelTowerConfig.Instance.GetRoleConfigByRoleId(roleId2).Value.TemplateDesc;
 	}
 
-	// Token: 0x17000D96 RID: 3478
-	// (get) Token: 0x0600A12E RID: 41262 RVA: 0x00238CFC File Offset: 0x00236EFC
+	// Token: 0x17000DB7 RID: 3511
+	// (get) Token: 0x0600750C RID: 29964 RVA: 0x00242B98 File Offset: 0x00240D98
 	public HashSet<int> EnhancedRoleSet
 	{
 		get
@@ -1019,7 +1018,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A12F RID: 41263 RVA: 0x00238D38 File Offset: 0x00236F38
+	// Token: 0x0600750D RID: 29965 RVA: 0x00242BD4 File Offset: 0x00240DD4
 	public List<int> GetEnhanceRoleIdList()
 	{
 		List<int> list = new List<int>();
@@ -1030,7 +1029,7 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A130 RID: 41264 RVA: 0x00238D94 File Offset: 0x00236F94
+	// Token: 0x0600750E RID: 29966 RVA: 0x00242C30 File Offset: 0x00240E30
 	public unsafe List<WheelTowerRoleEnhanceSkillData> GetEnhanceSkillInfoList(int roleId)
 	{
 		NewTowerRole? roleConfigByRoleId = WheelTowerConfig.Instance.GetRoleConfigByRoleId(roleId);
@@ -1079,14 +1078,14 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A131 RID: 41265 RVA: 0x00238F2C File Offset: 0x0023712C
+	// Token: 0x0600750F RID: 29967 RVA: 0x00242DC8 File Offset: 0x00240FC8
 	public bool IsEnhanceRole(int roleId)
 	{
 		int item = this.TryGetRealRoleId(roleId);
 		return this.EnhancedRoleSet.Contains(item);
 	}
 
-	// Token: 0x0600A132 RID: 41266 RVA: 0x00238F50 File Offset: 0x00237150
+	// Token: 0x06007510 RID: 29968 RVA: 0x00242DEC File Offset: 0x00240FEC
 	public List<string> GetRoleEnhanceDesc(int roleId)
 	{
 		NewTowerRole? roleConfigByRoleId = WheelTowerConfig.Instance.GetRoleConfigByRoleId(roleId);
@@ -1109,13 +1108,13 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A133 RID: 41267 RVA: 0x00238FE8 File Offset: 0x002371E8
+	// Token: 0x06007511 RID: 29969 RVA: 0x00242E84 File Offset: 0x00241084
 	private string GetLocalDesc(string textId, string[] param)
 	{
 		return StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew(textId, null), param);
 	}
 
-	// Token: 0x0600A134 RID: 41268 RVA: 0x00238FF8 File Offset: 0x002371F8
+	// Token: 0x06007512 RID: 29970 RVA: 0x00242E94 File Offset: 0x00241094
 	public bool IsEnhanceSkill(int roleId, int skillId)
 	{
 		if (!this.IsEnhanceRole(roleId))
@@ -1126,7 +1125,7 @@ public class WheelTowerModel : ModelBase
 		return this.GetRoleSkillEnhanceDescAndParam(roleId, skillType) != null;
 	}
 
-	// Token: 0x0600A135 RID: 41269 RVA: 0x0023903C File Offset: 0x0023723C
+	// Token: 0x06007513 RID: 29971 RVA: 0x00242ED8 File Offset: 0x002410D8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1150,8 +1149,8 @@ public class WheelTowerModel : ModelBase
 		return new ValueTuple<string, string[]>?(new ValueTuple<string, string[]>(enhanceSkillDesc, enhanceSkillDescParam.Value.ArrayString()));
 	}
 
-	// Token: 0x17000D97 RID: 3479
-	// (get) Token: 0x0600A136 RID: 41270 RVA: 0x002390B4 File Offset: 0x002372B4
+	// Token: 0x17000DB8 RID: 3512
+	// (get) Token: 0x06007514 RID: 29972 RVA: 0x00242F50 File Offset: 0x00241150
 	public Dictionary<int, int> SpecialUpRoleMap
 	{
 		get
@@ -1175,7 +1174,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A137 RID: 41271 RVA: 0x00239130 File Offset: 0x00237330
+	// Token: 0x06007515 RID: 29973 RVA: 0x00242FCC File Offset: 0x002411CC
 	public int GetSpecialUpRoleAddEnergy(int roleId)
 	{
 		int result;
@@ -1186,14 +1185,14 @@ public class WheelTowerModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600A138 RID: 41272 RVA: 0x00239150 File Offset: 0x00237350
+	// Token: 0x06007516 RID: 29974 RVA: 0x00242FEC File Offset: 0x002411EC
 	[NullableContext(2)]
 	public IWheelTowerMedalGroupData GetMedalGroupData(int groupId)
 	{
 		return this.ActivityData.GetMedalGroupData(groupId);
 	}
 
-	// Token: 0x0600A139 RID: 41273 RVA: 0x00239160 File Offset: 0x00237360
+	// Token: 0x06007517 RID: 29975 RVA: 0x00242FFC File Offset: 0x002411FC
 	public List<IWheelTowerMedalGroupData> GetSeasonMedalGroupList(int seasonId, EWheelTowerMedalType medalType)
 	{
 		IReadOnlyList<NewTowerMedal> medalConfigListBySeasonId = WheelTowerConfig.Instance.GetMedalConfigListBySeasonId(seasonId);
@@ -1221,7 +1220,7 @@ public class WheelTowerModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600A13A RID: 41274 RVA: 0x00239254 File Offset: 0x00237454
+	// Token: 0x06007518 RID: 29976 RVA: 0x002430F0 File Offset: 0x002412F0
 	public List<IWheelTowerMedalGroupData> GetAllSeasonMedalGroupList(int seasonId)
 	{
 		List<IWheelTowerMedalGroupData> seasonMedalGroupList = this.GetSeasonMedalGroupList(seasonId, EWheelTowerMedalType.Season);
@@ -1229,7 +1228,7 @@ public class WheelTowerModel : ModelBase
 		return seasonMedalGroupList;
 	}
 
-	// Token: 0x0600A13B RID: 41275 RVA: 0x0023926C File Offset: 0x0023746C
+	// Token: 0x06007519 RID: 29977 RVA: 0x00243108 File Offset: 0x00241308
 	public int GetSeasonMedalReadId(int groupId)
 	{
 		if (groupId == 0)
@@ -1244,7 +1243,7 @@ public class WheelTowerModel : ModelBase
 		return serverStorageMap.Get(groupId).GetValueOrDefault();
 	}
 
-	// Token: 0x0600A13C RID: 41276 RVA: 0x002392A4 File Offset: 0x002374A4
+	// Token: 0x0600751A RID: 29978 RVA: 0x00243140 File Offset: 0x00241340
 	public bool HasUnreadSeasonMedalRedDot(int seasonId)
 	{
 		if (seasonId == 0)
@@ -1271,7 +1270,7 @@ public class WheelTowerModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600A13D RID: 41277 RVA: 0x00239350 File Offset: 0x00237550
+	// Token: 0x0600751B RID: 29979 RVA: 0x002431EC File Offset: 0x002413EC
 	public void MarkSeasonMedalsRead(int seasonId)
 	{
 		if (seasonId == 0)
@@ -1297,7 +1296,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A13E RID: 41278 RVA: 0x002393E8 File Offset: 0x002375E8
+	// Token: 0x0600751C RID: 29980 RVA: 0x00243284 File Offset: 0x00241484
 	public void CleanOldSeasonMedalsStorage(int currentSeasonId)
 	{
 		IReadOnlyList<NewTowerSeason> allSeasonConfigs = WheelTowerConfig.Instance.GetAllSeasonConfigs();
@@ -1329,8 +1328,8 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000D98 RID: 3480
-	// (get) Token: 0x0600A13F RID: 41279 RVA: 0x002394C8 File Offset: 0x002376C8
+	// Token: 0x17000DB9 RID: 3513
+	// (get) Token: 0x0600751D RID: 29981 RVA: 0x00243364 File Offset: 0x00241564
 	public static WheelTowerModel Instance
 	{
 		get
@@ -1339,7 +1338,7 @@ public class WheelTowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600A140 RID: 41280 RVA: 0x002394CF File Offset: 0x002376CF
+	// Token: 0x0600751E RID: 29982 RVA: 0x0024336B File Offset: 0x0024156B
 	public static WheelTowerModel GetOrCreateInstance()
 	{
 		if (WheelTowerModel._Instance == null)
@@ -1349,7 +1348,7 @@ public class WheelTowerModel : ModelBase
 		return WheelTowerModel._Instance;
 	}
 
-	// Token: 0x0600A141 RID: 41281 RVA: 0x002394E3 File Offset: 0x002376E3
+	// Token: 0x0600751F RID: 29983 RVA: 0x0024337F File Offset: 0x0024157F
 	public static bool CreateInstance()
 	{
 		if (WheelTowerModel._Instance != null)
@@ -1360,90 +1359,90 @@ public class WheelTowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600A142 RID: 41282 RVA: 0x002394F9 File Offset: 0x002376F9
+	// Token: 0x06007520 RID: 29984 RVA: 0x00243395 File Offset: 0x00241595
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A143 RID: 41283 RVA: 0x002394FB File Offset: 0x002376FB
+	// Token: 0x06007521 RID: 29985 RVA: 0x00243397 File Offset: 0x00241597
 	public static void ResetStaticDefaultValue()
 	{
 		WheelTowerModel._Instance = null;
 	}
 
-	// Token: 0x0600A144 RID: 41284 RVA: 0x00239503 File Offset: 0x00237703
+	// Token: 0x06007522 RID: 29986 RVA: 0x0024339F File Offset: 0x0024159F
 	static WheelTowerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WheelTowerModel.CreateStaticDefaultValue), new Action(WheelTowerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004947 RID: 18759
+	// Token: 0x040049ED RID: 18925
 	private int ActivityDataIdInternal = -1;
 
-	// Token: 0x04004948 RID: 18760
+	// Token: 0x040049EE RID: 18926
 	[Nullable(2)]
 	private Dictionary<int, int> RoleCostMap;
 
-	// Token: 0x04004949 RID: 18761
+	// Token: 0x040049EF RID: 18927
 	private int DefaultRoleCost = -1;
 
-	// Token: 0x0400494A RID: 18762
+	// Token: 0x040049F0 RID: 18928
 	public bool EndlessMode;
 
-	// Token: 0x0400494B RID: 18763
+	// Token: 0x040049F1 RID: 18929
 	public int SelectedRound = -1;
 
-	// Token: 0x0400494C RID: 18764
+	// Token: 0x040049F2 RID: 18930
 	public int SelectedBuff = -1;
 
-	// Token: 0x0400494D RID: 18765
+	// Token: 0x040049F3 RID: 18931
 	public int SelectedBossId = -1;
 
-	// Token: 0x0400494E RID: 18766
+	// Token: 0x040049F4 RID: 18932
 	public List<int> SelectedRoleList = new List<int>();
 
-	// Token: 0x0400494F RID: 18767
+	// Token: 0x040049F5 RID: 18933
 	[Nullable(2)]
 	public CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.EnergyInfo SelectedEnergyInfo;
 
-	// Token: 0x04004950 RID: 18768
+	// Token: 0x040049F6 RID: 18934
 	public readonly Dictionary<int, int> TmpSelectedRoleMap = new Dictionary<int, int>();
 
-	// Token: 0x04004951 RID: 18769
+	// Token: 0x040049F7 RID: 18935
 	private readonly Dictionary<bool, IWheelTowerCoverRecordViewData> LevelRecordPopupDataMap = new Dictionary<bool, IWheelTowerCoverRecordViewData>();
 
-	// Token: 0x04004952 RID: 18770
+	// Token: 0x040049F8 RID: 18936
 	private readonly Dictionary<int, List<WheelTowerScoreLevelTargetData>> LevelIdToScoreLevelTargetDataList = new Dictionary<int, List<WheelTowerScoreLevelTargetData>>();
 
-	// Token: 0x04004953 RID: 18771
+	// Token: 0x040049F9 RID: 18937
 	public bool BlockEndlessUnlockTips = true;
 
-	// Token: 0x04004954 RID: 18772
+	// Token: 0x040049FA RID: 18938
 	private bool IsEndlessUnlockedInInstance;
 
-	// Token: 0x04004955 RID: 18773
+	// Token: 0x040049FB RID: 18939
 	public int CachedRoundInProgress = -1;
 
-	// Token: 0x04004956 RID: 18774
+	// Token: 0x040049FC RID: 18940
 	public bool IsTimeStopBanned;
 
-	// Token: 0x04004957 RID: 18775
+	// Token: 0x040049FD RID: 18941
 	private readonly Dictionary<int, int> RoleToTemplate = new Dictionary<int, int>();
 
-	// Token: 0x04004958 RID: 18776
+	// Token: 0x040049FE RID: 18942
 	private readonly Dictionary<int, int> TemplateToRole = new Dictionary<int, int>();
 
-	// Token: 0x04004959 RID: 18777
+	// Token: 0x040049FF RID: 18943
 	private HashSet<int> EnhancedRoleSetInterval = new HashSet<int>();
 
-	// Token: 0x0400495A RID: 18778
+	// Token: 0x04004A00 RID: 18944
 	public int TmpSelectRoleId;
 
-	// Token: 0x0400495B RID: 18779
+	// Token: 0x04004A01 RID: 18945
 	[Nullable(2)]
 	private Dictionary<int, int> SpecialUpRoleMapInternal;
 
-	// Token: 0x0400495C RID: 18780
+	// Token: 0x04004A02 RID: 18946
 	[Nullable(2)]
 	private static WheelTowerModel _Instance;
 }

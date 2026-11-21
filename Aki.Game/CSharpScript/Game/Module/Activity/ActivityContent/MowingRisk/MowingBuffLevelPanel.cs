@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063D8 RID: 25560
+	// Token: 0x02005356 RID: 21334
 	public class MowingBuffLevelPanel : UiPanelBase
 	{
-		// Token: 0x060404A3 RID: 263331 RVA: 0x00F8C78C File Offset: 0x00F8A98C
+		// Token: 0x06035164 RID: 217444 RVA: 0x00ED3724 File Offset: 0x00ED1924
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060404A4 RID: 263332 RVA: 0x00F8C879 File Offset: 0x00F8AA79
+		// Token: 0x06035165 RID: 217445 RVA: 0x00ED3811 File Offset: 0x00ED1A11
 		protected override void OnStart()
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060404A5 RID: 263333 RVA: 0x00F8C8B4 File Offset: 0x00F8AAB4
+		// Token: 0x06035166 RID: 217446 RVA: 0x00ED384C File Offset: 0x00ED1A4C
 		[NullableContext(2)]
 		public void RefreshByLevelContent(string content)
 		{
@@ -78,25 +78,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			text.SetText(content, true);
 		}
 
-		// Token: 0x0200C5D8 RID: 50648
+		// Token: 0x0200AFBF RID: 44991
 		private class ELevelComponent
 		{
-			// Token: 0x0403BBC2 RID: 244674
+			// Token: 0x04036521 RID: 222497
 			public const int LockSprite = 0;
 
-			// Token: 0x0403BBC3 RID: 244675
+			// Token: 0x04036522 RID: 222498
 			public const int LevelItem = 1;
 
-			// Token: 0x0403BBC4 RID: 244676
+			// Token: 0x04036523 RID: 222499
 			public const int LevelText = 2;
 
-			// Token: 0x0403BBC5 RID: 244677
+			// Token: 0x04036524 RID: 222500
 			public const int VisionLevelItem = 3;
 
-			// Token: 0x0403BBC6 RID: 244678
+			// Token: 0x04036525 RID: 222501
 			public const int VisionLevelText = 4;
 
-			// Token: 0x0403BBC7 RID: 244679
+			// Token: 0x04036526 RID: 222502
 			public const int DeprecateSprite = 5;
 		}
 	}

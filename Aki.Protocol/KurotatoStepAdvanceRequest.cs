@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020008CF RID: 2255
+	// Token: 0x020008BE RID: 2238
 	[NetMessage(EMessageId.KurotatoStepAdvanceRequest)]
 	public sealed class KurotatoStepAdvanceRequest : IMessage<KurotatoStepAdvanceRequest>, IMessage, IEquatable<KurotatoStepAdvanceRequest>, IDeepCloneable<KurotatoStepAdvanceRequest>, IBufferMessage
 	{
-		// Token: 0x0600C7CC RID: 51148 RVA: 0x001D8A88 File Offset: 0x001D6C88
+		// Token: 0x0600C6B0 RID: 50864 RVA: 0x001D679C File Offset: 0x001D499C
 		[NullableContext(1)]
 		public static KurotatoStepAdvanceRequest Create()
 		{
 			return new KurotatoStepAdvanceRequest();
 		}
 
-		// Token: 0x1700285F RID: 10335
-		// (get) Token: 0x0600C7CD RID: 51149 RVA: 0x001D8A8F File Offset: 0x001D6C8F
+		// Token: 0x17002820 RID: 10272
+		// (get) Token: 0x0600C6B1 RID: 50865 RVA: 0x001D67A3 File Offset: 0x001D49A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002860 RID: 10336
-		// (get) Token: 0x0600C7CE RID: 51150 RVA: 0x001D8A92 File Offset: 0x001D6C92
+		// Token: 0x17002821 RID: 10273
+		// (get) Token: 0x0600C6B2 RID: 50866 RVA: 0x001D67A6 File Offset: 0x001D49A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C7CF RID: 51151 RVA: 0x001D8A99 File Offset: 0x001D6C99
+		// Token: 0x0600C6B3 RID: 50867 RVA: 0x001D67AD File Offset: 0x001D49AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepAdvanceRequest()
 		{
 		}
 
-		// Token: 0x0600C7D0 RID: 51152 RVA: 0x001D8AA1 File Offset: 0x001D6CA1
+		// Token: 0x0600C6B4 RID: 50868 RVA: 0x001D67B5 File Offset: 0x001D49B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepAdvanceRequest(KurotatoStepAdvanceRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C7D1 RID: 51153 RVA: 0x001D8AD4 File Offset: 0x001D6CD4
+		// Token: 0x0600C6B5 RID: 50869 RVA: 0x001D67E9 File Offset: 0x001D49E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepAdvanceRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new KurotatoStepAdvanceRequest(this);
 		}
 
-		// Token: 0x17002861 RID: 10337
-		// (get) Token: 0x0600C7D2 RID: 51154 RVA: 0x001D8ADC File Offset: 0x001D6CDC
-		// (set) Token: 0x0600C7D3 RID: 51155 RVA: 0x001D8AF4 File Offset: 0x001D6CF4
+		// Token: 0x17002822 RID: 10274
+		// (get) Token: 0x0600C6B6 RID: 50870 RVA: 0x001D67F1 File Offset: 0x001D49F1
+		// (set) Token: 0x0600C6B7 RID: 50871 RVA: 0x001D680A File Offset: 0x001D4A0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoEndStepPbData EndStepPbData
@@ -91,8 +91,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002862 RID: 10338
-		// (get) Token: 0x0600C7D4 RID: 51156 RVA: 0x001D8B0A File Offset: 0x001D6D0A
+		// Token: 0x17002823 RID: 10275
+		// (get) Token: 0x0600C6B8 RID: 50872 RVA: 0x001D6821 File Offset: 0x001D4A21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoStepAdvanceRequest.StepPbDataOneofCase StepPbDataCase
@@ -103,7 +103,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C7D5 RID: 51157 RVA: 0x001D8B12 File Offset: 0x001D6D12
+		// Token: 0x0600C6B9 RID: 50873 RVA: 0x001D6829 File Offset: 0x001D4A29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearStepPbData()
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			this.stepPbData_ = null;
 		}
 
-		// Token: 0x0600C7D6 RID: 51158 RVA: 0x001D8B22 File Offset: 0x001D6D22
+		// Token: 0x0600C6BA RID: 50874 RVA: 0x001D6839 File Offset: 0x001D4A39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoStepAdvanceRequest);
 		}
 
-		// Token: 0x0600C7D7 RID: 51159 RVA: 0x001D8B30 File Offset: 0x001D6D30
+		// Token: 0x0600C6BB RID: 50875 RVA: 0x001D6848 File Offset: 0x001D4A48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoStepAdvanceRequest other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.EndStepPbData, other.EndStepPbData) && this.StepPbDataCase == other.StepPbDataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C7D8 RID: 51160 RVA: 0x001D8B80 File Offset: 0x001D6D80
+		// Token: 0x0600C6BC RID: 50876 RVA: 0x001D6898 File Offset: 0x001D4A98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C7D9 RID: 51161 RVA: 0x001D8BC6 File Offset: 0x001D6DC6
+		// Token: 0x0600C6BD RID: 50877 RVA: 0x001D68DF File Offset: 0x001D4ADF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C7DA RID: 51162 RVA: 0x001D8BD3 File Offset: 0x001D6DD3
+		// Token: 0x0600C6BE RID: 50878 RVA: 0x001D68EC File Offset: 0x001D4AEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -162,14 +162,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C7DB RID: 51163 RVA: 0x001D8BDC File Offset: 0x001D6DDC
+		// Token: 0x0600C6BF RID: 50879 RVA: 0x001D68F5 File Offset: 0x001D4AF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.stepPbDataCase_ == KurotatoStepAdvanceRequest.StepPbDataOneofCase.EndStepPbData)
 			{
-				output.WriteRawTag(18);
+				output.WriteRawTag(98);
 				output.WriteMessage(this.EndStepPbData);
 			}
 			if (this._unknownFields != null)
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C7DC RID: 51164 RVA: 0x001D8C10 File Offset: 0x001D6E10
+		// Token: 0x0600C6C0 RID: 50880 RVA: 0x001D692C File Offset: 0x001D4B2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C7DD RID: 51165 RVA: 0x001D8C50 File Offset: 0x001D6E50
+		// Token: 0x0600C6C1 RID: 50881 RVA: 0x001D696C File Offset: 0x001D4B6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoStepAdvanceRequest other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C7DE RID: 51166 RVA: 0x001D8CA5 File Offset: 0x001D6EA5
+		// Token: 0x0600C6C2 RID: 50882 RVA: 0x001D69C2 File Offset: 0x001D4BC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C7DF RID: 51167 RVA: 0x001D8CB0 File Offset: 0x001D6EB0
+		// Token: 0x0600C6C3 RID: 50883 RVA: 0x001D69CC File Offset: 0x001D4BCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 18U)
+				if (num != 98U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -252,25 +252,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005590 RID: 21904
+		// Token: 0x04005597 RID: 21911
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005591 RID: 21905
-		public const int EndStepPbDataFieldNumber = 2;
+		// Token: 0x04005598 RID: 21912
+		public const int EndStepPbDataFieldNumber = 12;
 
-		// Token: 0x04005592 RID: 21906
+		// Token: 0x04005599 RID: 21913
 		private object stepPbData_;
 
-		// Token: 0x04005593 RID: 21907
+		// Token: 0x0400559A RID: 21914
 		private KurotatoStepAdvanceRequest.StepPbDataOneofCase stepPbDataCase_;
 
-		// Token: 0x02001814 RID: 6164
+		// Token: 0x0200188C RID: 6284
 		public enum StepPbDataOneofCase
 		{
-			// Token: 0x0400C7C8 RID: 51144
+			// Token: 0x0400CCF3 RID: 52467
 			None,
-			// Token: 0x0400C7C9 RID: 51145
-			EndStepPbData = 2
+			// Token: 0x0400CCF4 RID: 52468
+			EndStepPbData = 12
 		}
 	}
 }

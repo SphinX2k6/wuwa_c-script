@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018B7 RID: 6327
+// Token: 0x02000D70 RID: 3440
 [NullableContext(2)]
 [Nullable(0)]
 public class ItemGridComponent : UiPanelBase
 {
-	// Token: 0x0600B95A RID: 47450 RVA: 0x002A0C0F File Offset: 0x0029EE0F
+	// Token: 0x06008D43 RID: 36163 RVA: 0x002AB363 File Offset: 0x002A9563
 	[NullableContext(1)]
 	public void Initialize(UUIItem parentItem, bool useFixedAsync)
 	{
@@ -25,7 +25,7 @@ public class ItemGridComponent : UiPanelBase
 		this.IsInitialized = true;
 	}
 
-	// Token: 0x0600B95B RID: 47451 RVA: 0x002A0C44 File Offset: 0x0029EE44
+	// Token: 0x06008D44 RID: 36164 RVA: 0x002AB398 File Offset: 0x002A9598
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -41,7 +41,7 @@ public class ItemGridComponent : UiPanelBase
 		return <Load>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B95C RID: 47452 RVA: 0x002A0C88 File Offset: 0x0029EE88
+	// Token: 0x06008D45 RID: 36165 RVA: 0x002AB3DC File Offset: 0x002A95DC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -57,7 +57,7 @@ public class ItemGridComponent : UiPanelBase
 		return <GetAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B95D RID: 47453 RVA: 0x002A0CCB File Offset: 0x0029EECB
+	// Token: 0x06008D46 RID: 36166 RVA: 0x002AB41F File Offset: 0x002A961F
 	protected override void OnStartImplement()
 	{
 		this.IsBegin = true;
@@ -68,7 +68,7 @@ public class ItemGridComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B95E RID: 47454 RVA: 0x002A0CEE File Offset: 0x0029EEEE
+	// Token: 0x06008D47 RID: 36167 RVA: 0x002AB442 File Offset: 0x002A9642
 	public void Refresh(object @params = null)
 	{
 		this.Params = @params;
@@ -87,7 +87,7 @@ public class ItemGridComponent : UiPanelBase
 		this.OnRefresh(@params);
 	}
 
-	// Token: 0x0600B95F RID: 47455 RVA: 0x002A0D24 File Offset: 0x0029EF24
+	// Token: 0x06008D48 RID: 36168 RVA: 0x002AB478 File Offset: 0x002A9678
 	protected override void OnBeforeDestroyImplement()
 	{
 		if (this.IsBegin)
@@ -99,22 +99,22 @@ public class ItemGridComponent : UiPanelBase
 		this.Params = null;
 	}
 
-	// Token: 0x0600B960 RID: 47456 RVA: 0x002A0D49 File Offset: 0x0029EF49
+	// Token: 0x06008D49 RID: 36169 RVA: 0x002AB49D File Offset: 0x002A969D
 	protected virtual void OnInitialize()
 	{
 	}
 
-	// Token: 0x0600B961 RID: 47457 RVA: 0x002A0D4B File Offset: 0x0029EF4B
+	// Token: 0x06008D4A RID: 36170 RVA: 0x002AB49F File Offset: 0x002A969F
 	protected virtual void OnActivate()
 	{
 	}
 
-	// Token: 0x0600B962 RID: 47458 RVA: 0x002A0D4D File Offset: 0x0029EF4D
+	// Token: 0x06008D4B RID: 36171 RVA: 0x002AB4A1 File Offset: 0x002A96A1
 	protected virtual void OnDeactivate()
 	{
 	}
 
-	// Token: 0x0600B963 RID: 47459 RVA: 0x002A0D50 File Offset: 0x0029EF50
+	// Token: 0x06008D4C RID: 36172 RVA: 0x002AB4A4 File Offset: 0x002A96A4
 	protected virtual void OnRefresh(object @params = null)
 	{
 		Log instance = Log.Instance;
@@ -125,7 +125,7 @@ public class ItemGridComponent : UiPanelBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600B964 RID: 47460 RVA: 0x002A0D90 File Offset: 0x0029EF90
+	// Token: 0x06008D4D RID: 36173 RVA: 0x002AB4E4 File Offset: 0x002A96E4
 	protected virtual string GetResourceId()
 	{
 		Log instance = Log.Instance;
@@ -137,13 +137,13 @@ public class ItemGridComponent : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600B965 RID: 47461 RVA: 0x002A0DCF File Offset: 0x0029EFCF
+	// Token: 0x06008D4E RID: 36174 RVA: 0x002AB523 File Offset: 0x002A9723
 	public virtual EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Top;
 	}
 
-	// Token: 0x0600B966 RID: 47462 RVA: 0x002A0DD2 File Offset: 0x0029EFD2
+	// Token: 0x06008D4F RID: 36175 RVA: 0x002AB526 File Offset: 0x002A9726
 	public override void SetActive(bool visibility)
 	{
 		if (this.UseFixedAsync)
@@ -168,7 +168,7 @@ public class ItemGridComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B967 RID: 47463 RVA: 0x002A0E09 File Offset: 0x0029F009
+	// Token: 0x06008D50 RID: 36176 RVA: 0x002AB55D File Offset: 0x002A975D
 	public void SetHierarchyIndex(int hierarchyIndex)
 	{
 		if (this.RootItem.GetHierarchyIndex() == hierarchyIndex)
@@ -178,22 +178,22 @@ public class ItemGridComponent : UiPanelBase
 		this.RootItem.SetHierarchyIndex(hierarchyIndex);
 	}
 
-	// Token: 0x0400541B RID: 21531
+	// Token: 0x040054C6 RID: 21702
 	private UUIItem ParentItem;
 
-	// Token: 0x0400541C RID: 21532
+	// Token: 0x040054C7 RID: 21703
 	private string ResourceId;
 
-	// Token: 0x0400541D RID: 21533
+	// Token: 0x040054C8 RID: 21704
 	private object Params;
 
-	// Token: 0x0400541E RID: 21534
+	// Token: 0x040054C9 RID: 21705
 	private bool IsInitialized;
 
-	// Token: 0x0400541F RID: 21535
+	// Token: 0x040054CA RID: 21706
 	private bool IsBegin;
 
-	// Token: 0x04005420 RID: 21536
+	// Token: 0x040054CB RID: 21707
 	[Nullable(new byte[]
 	{
 		2,
@@ -201,7 +201,7 @@ public class ItemGridComponent : UiPanelBase
 	})]
 	private CustomPromise<ItemGridComponent> WaitLoadPromise;
 
-	// Token: 0x04005421 RID: 21537
+	// Token: 0x040054CC RID: 21708
 	[Nullable(new byte[]
 	{
 		2,
@@ -209,6 +209,6 @@ public class ItemGridComponent : UiPanelBase
 	})]
 	public Action<ItemGridComponent, bool> OnComponentVisibleChanged;
 
-	// Token: 0x04005422 RID: 21538
+	// Token: 0x040054CD RID: 21709
 	private bool UseFixedAsync;
 }

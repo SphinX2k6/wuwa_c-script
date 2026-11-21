@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DC7 RID: 3527
+	// Token: 0x02000EAC RID: 3756
 	public struct LifePointEntrance : IFlatbufferObject
 	{
-		// Token: 0x17001CDB RID: 7387
-		// (get) Token: 0x06008DE1 RID: 36321 RVA: 0x00277504 File Offset: 0x00275704
+		// Token: 0x17001D3F RID: 7487
+		// (get) Token: 0x060093FD RID: 37885 RVA: 0x00295A8C File Offset: 0x00293C8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008DE2 RID: 36322 RVA: 0x00277511 File Offset: 0x00275711
+		// Token: 0x060093FE RID: 37886 RVA: 0x00295A99 File Offset: 0x00293C99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008DE3 RID: 36323 RVA: 0x00277518 File Offset: 0x00275718
+		// Token: 0x060093FF RID: 37887 RVA: 0x00295AA0 File Offset: 0x00293CA0
 		public static LifePointEntrance GetRootAsLifePointEntrance(ByteBuffer _bb)
 		{
 			return LifePointEntrance.GetRootAsLifePointEntrance(_bb, default(LifePointEntrance));
 		}
 
-		// Token: 0x06008DE4 RID: 36324 RVA: 0x00277534 File Offset: 0x00275734
+		// Token: 0x06009400 RID: 37888 RVA: 0x00295ABC File Offset: 0x00293CBC
 		public static LifePointEntrance GetRootAsLifePointEntrance(ByteBuffer _bb, LifePointEntrance obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008DE5 RID: 36325 RVA: 0x00277551 File Offset: 0x00275751
+		// Token: 0x06009401 RID: 37889 RVA: 0x00295AD9 File Offset: 0x00293CD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008DE6 RID: 36326 RVA: 0x00277560 File Offset: 0x00275760
+		// Token: 0x06009402 RID: 37890 RVA: 0x00295AE8 File Offset: 0x00293CE8
 		public LifePointEntrance __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001CDC RID: 7388
-		// (get) Token: 0x06008DE7 RID: 36327 RVA: 0x00277570 File Offset: 0x00275770
+		// Token: 0x17001D40 RID: 7488
+		// (get) Token: 0x06009403 RID: 37891 RVA: 0x00295AF8 File Offset: 0x00293CF8
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008DE8 RID: 36328 RVA: 0x002775AC File Offset: 0x002757AC
+		// Token: 0x06009404 RID: 37892 RVA: 0x00295B34 File Offset: 0x00293D34
 		public int GroupList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001CDD RID: 7389
-		// (get) Token: 0x06008DE9 RID: 36329 RVA: 0x002775EC File Offset: 0x002757EC
+		// Token: 0x17001D41 RID: 7489
+		// (get) Token: 0x06009405 RID: 37893 RVA: 0x00295B74 File Offset: 0x00293D74
 		public int GroupListLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008DEA RID: 36330 RVA: 0x00277617 File Offset: 0x00275817
+		// Token: 0x06009406 RID: 37894 RVA: 0x00295B9F File Offset: 0x00293D9F
 		public Span<int> GetGroupListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06008DEB RID: 36331 RVA: 0x00277626 File Offset: 0x00275826
+		// Token: 0x06009407 RID: 37895 RVA: 0x00295BAE File Offset: 0x00293DAE
 		public int[] GetGroupListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008DEC RID: 36332 RVA: 0x00277640 File Offset: 0x00275840
+		// Token: 0x06009408 RID: 37896 RVA: 0x00295BC5 File Offset: 0x00293DC5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupListIter()或GetGroupListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupList()
+		public int[] GroupList()
 		{
-			LifePointEntrance lifePointEntrance = this;
-			return lifePointEntrance.GetGroupListArray() ?? Array.Empty<int>();
+			return this.GetGroupListArray();
 		}
 
-		// Token: 0x06008DED RID: 36333 RVA: 0x00277664 File Offset: 0x00275864
+		// Token: 0x06009409 RID: 37897 RVA: 0x00295BCD File Offset: 0x00293DCD
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupListIter()
+		public IEnumerable<int> GroupListIter()
 		{
 			LifePointEntrance.<GroupListIter>d__16 <GroupListIter>d__ = new LifePointEntrance.<GroupListIter>d__16(-2);
 			<GroupListIter>d__.<>3__<>4__this = this;
 			return <GroupListIter>d__;
 		}
 
-		// Token: 0x04004E5D RID: 20061
+		// Token: 0x04005442 RID: 21570
 		private Table __p;
 	}
 }

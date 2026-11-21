@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000805 RID: 2053
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008A8 RID: 2216
 	public class IWuWaGoHintStepMove : IWuWaGoHintStepBase
 	{
-		// Token: 0x06002C8F RID: 11407 RVA: 0x000739D8 File Offset: 0x00071BD8
+		// Token: 0x06002FBF RID: 12223 RVA: 0x0007AD3C File Offset: 0x00078F3C
 		private IWuWaGoHintStepMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C90 RID: 11408 RVA: 0x00073A10 File Offset: 0x00071C10
+		// Token: 0x06002FC0 RID: 12224 RVA: 0x0007AD74 File Offset: 0x00078F74
 		public static IWuWaGoHintStepMove Create([Nullable(2)] IWuWaGoHintStepMove instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C91 RID: 11409 RVA: 0x00073A23 File Offset: 0x00071C23
+		// Token: 0x06002FC1 RID: 12225 RVA: 0x0007AD87 File Offset: 0x00078F87
 		public static IWuWaGoHintStepMove CreateFromSetValue([Nullable(2)] IWuWaGoHintStepMove_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C92 RID: 11410 RVA: 0x00073A36 File Offset: 0x00071C36
+		// Token: 0x06002FC2 RID: 12226 RVA: 0x0007AD9A File Offset: 0x00078F9A
 		public new IWuWaGoHintStepMove_SetValue ToSetValue()
 		{
 			return new IWuWaGoHintStepMove_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BA3 RID: 2979
-		// (get) Token: 0x06002C93 RID: 11411 RVA: 0x00073A55 File Offset: 0x00071C55
-		// (set) Token: 0x06002C94 RID: 11412 RVA: 0x00073A80 File Offset: 0x00071C80
+		// Token: 0x17000C66 RID: 3174
+		// (get) Token: 0x06002FC3 RID: 12227 RVA: 0x0007ADB9 File Offset: 0x00078FB9
+		// (set) Token: 0x06002FC4 RID: 12228 RVA: 0x0007ADE4 File Offset: 0x00078FE4
 		public override EWuWaGoHintStepType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BA4 RID: 2980
-		// (get) Token: 0x06002C95 RID: 11413 RVA: 0x00073A90 File Offset: 0x00071C90
-		// (set) Token: 0x06002C96 RID: 11414 RVA: 0x00073AF1 File Offset: 0x00071CF1
+		// Token: 0x17000C67 RID: 3175
+		// (get) Token: 0x06002FC5 RID: 12229 RVA: 0x0007ADF4 File Offset: 0x00078FF4
+		// (set) Token: 0x06002FC6 RID: 12230 RVA: 0x0007AE55 File Offset: 0x00079055
 		public virtual VectorInfo Position
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D7D RID: 7549
+		// Token: 0x04001F89 RID: 8073
 		[Nullable(2)]
 		protected new IWuWaGoHintStepMove FbInstance;
 
-		// Token: 0x04001D7E RID: 7550
+		// Token: 0x04001F8A RID: 8074
 		[Nullable(2)]
 		protected new IWuWaGoHintStepMove_SetValue PocoInterface;
 
-		// Token: 0x04001D7F RID: 7551
+		// Token: 0x04001F8B RID: 8075
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04001D80 RID: 7552
+		// Token: 0x04001F8C RID: 8076
 		private bool _PositionInited;
 	}
 }

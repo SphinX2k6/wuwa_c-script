@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001680 RID: 5760
+	// Token: 0x020017F5 RID: 6133
 	[EnumExtensions]
 	public enum EPromptStyle
 	{
-		// Token: 0x04004D30 RID: 19760
+		// Token: 0x0400513B RID: 20795
 		Default,
-		// Token: 0x04004D31 RID: 19761
+		// Token: 0x0400513C RID: 20796
 		Photo,
-		// Token: 0x04004D32 RID: 19762
+		// Token: 0x0400513D RID: 20797
 		Battle,
-		// Token: 0x04004D33 RID: 19763
+		// Token: 0x0400513E RID: 20798
 		Battle2
 	}
 }

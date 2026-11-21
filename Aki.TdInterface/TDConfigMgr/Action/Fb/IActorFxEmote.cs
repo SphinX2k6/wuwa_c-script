@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002535 RID: 9525
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027DC RID: 10204
 	public class IActorFxEmote
 	{
-		// Token: 0x0600D44E RID: 54350 RVA: 0x001F6E9E File Offset: 0x001F509E
+		// Token: 0x0600E1AE RID: 57774 RVA: 0x002128FE File Offset: 0x00210AFE
 		public static IActorFxEmote Create(IActorFxEmote? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BA6 RID: 15270
-		// (get) Token: 0x0600D44F RID: 54351 RVA: 0x001F6EBD File Offset: 0x001F50BD
+		// Token: 0x17003EA4 RID: 16036
+		// (get) Token: 0x0600E1AF RID: 57775 RVA: 0x0021291D File Offset: 0x00210B1D
 		public virtual int ActorIndex
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BA7 RID: 15271
-		// (get) Token: 0x0600D450 RID: 54352 RVA: 0x001F6ECA File Offset: 0x001F50CA
+		// Token: 0x17003EA5 RID: 16037
+		// (get) Token: 0x0600E1B0 RID: 57776 RVA: 0x0021292A File Offset: 0x00210B2A
 		public virtual IActorFxEmoteType FxEmote
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400744D RID: 29773
+		// Token: 0x04007AA2 RID: 31394
 		private IActorFxEmote Instance;
 
-		// Token: 0x0400744E RID: 29774
+		// Token: 0x04007AA3 RID: 31395
 		private IActorFxEmoteType _FxEmoteCache;
 
-		// Token: 0x0400744F RID: 29775
+		// Token: 0x04007AA4 RID: 31396
 		private bool _FxEmoteInited;
 	}
 }

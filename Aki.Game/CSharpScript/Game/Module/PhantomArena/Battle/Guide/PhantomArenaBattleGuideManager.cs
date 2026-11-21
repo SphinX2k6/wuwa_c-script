@@ -5,24 +5,24 @@ using CSharpScript.Game.Module.PhantomArena.Battle.View;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 {
-	// Token: 0x020052AF RID: 21167
+	// Token: 0x0200427F RID: 17023
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleGuideManager
 	{
-		// Token: 0x0603626E RID: 221806 RVA: 0x00CCFB8E File Offset: 0x00CCDD8E
+		// Token: 0x0602B169 RID: 176489 RVA: 0x00C1D2B6 File Offset: 0x00C1B4B6
 		public PhantomArenaBattleGuideManager(PhantomArenaBattleProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x0603626F RID: 221807 RVA: 0x00CCFB9D File Offset: 0x00CCDD9D
+		// Token: 0x0602B16A RID: 176490 RVA: 0x00C1D2C5 File Offset: 0x00C1B4C5
 		public void RegisterGuideInterface(IPhantomArenaGuideFunc guideInterface)
 		{
 			this.GuideInterface = guideInterface;
 		}
 
-		// Token: 0x06036270 RID: 221808 RVA: 0x00CCFBA8 File Offset: 0x00CCDDA8
+		// Token: 0x0602B16B RID: 176491 RVA: 0x00C1D2D0 File Offset: 0x00C1B4D0
 		public unsafe void RegisterBehaviorTreeGuideData(BvbPlayerOperationConstraint param)
 		{
 			EBvbPlayerOperationType type = param.EnableOperation.Type;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06036271 RID: 221809 RVA: 0x00CCFC4C File Offset: 0x00CCDE4C
+		// Token: 0x0602B16C RID: 176492 RVA: 0x00C1D374 File Offset: 0x00C1B574
 		public bool CheckCanExecuteAndShowFailTips(EBvbPlayerOperationType type, params object[] params_)
 		{
 			if (this.CurrentGuideData == null && !this.HasNextGuide)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			return true;
 		}
 
-		// Token: 0x06036272 RID: 221810 RVA: 0x00CCFCB0 File Offset: 0x00CCDEB0
+		// Token: 0x0602B16D RID: 176493 RVA: 0x00C1D3D8 File Offset: 0x00C1B5D8
 		public bool CheckInGuideAndShowTips()
 		{
 			if (this.InGuiding)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			return false;
 		}
 
-		// Token: 0x06036273 RID: 221811 RVA: 0x00CCFCC4 File Offset: 0x00CCDEC4
+		// Token: 0x0602B16E RID: 176494 RVA: 0x00C1D3EC File Offset: 0x00C1B5EC
 		public unsafe void FinishCurrentGuide()
 		{
 			if (this.CurrentGuideData != null)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			}
 		}
 
-		// Token: 0x06036274 RID: 221812 RVA: 0x00CCFD6C File Offset: 0x00CCDF6C
+		// Token: 0x0602B16F RID: 176495 RVA: 0x00C1D494 File Offset: 0x00C1B694
 		public void TryExitCurrentGuide()
 		{
 			if (this.CurrentGuideData == null)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			}
 		}
 
-		// Token: 0x06036275 RID: 221813 RVA: 0x00CCFD91 File Offset: 0x00CCDF91
+		// Token: 0x0602B170 RID: 176496 RVA: 0x00C1D4B9 File Offset: 0x00C1B6B9
 		public void TryCacheGuideData(EBvbPlayerOperationType type, params object[] params_)
 		{
 			if (this.CurrentGuideData == null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			this.CurrentGuideData.CacheGuideData(params_);
 		}
 
-		// Token: 0x06036276 RID: 221814 RVA: 0x00CCFDB7 File Offset: 0x00CCDFB7
+		// Token: 0x0602B171 RID: 176497 RVA: 0x00C1D4DF File Offset: 0x00C1B6DF
 		public void TryFinishGuideByType(EBvbPlayerOperationType type, params object[] params_)
 		{
 			if (this.CurrentGuideData == null)
@@ -142,8 +142,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			this.FinishCurrentGuide();
 		}
 
-		// Token: 0x170082EE RID: 33518
-		// (get) Token: 0x06036277 RID: 221815 RVA: 0x00CCFDE6 File Offset: 0x00CCDFE6
+		// Token: 0x170056AE RID: 22190
+		// (get) Token: 0x0602B172 RID: 176498 RVA: 0x00C1D50E File Offset: 0x00C1B70E
 		public bool InGuiding
 		{
 			get
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			}
 		}
 
-		// Token: 0x06036278 RID: 221816 RVA: 0x00CCFDF8 File Offset: 0x00CCDFF8
+		// Token: 0x0602B173 RID: 176499 RVA: 0x00C1D520 File Offset: 0x00C1B720
 		public void ShowGuideTips()
 		{
 			if (this.CurrentGuideData != null)
@@ -166,16 +166,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			}
 		}
 
-		// Token: 0x0401CA73 RID: 117363
+		// Token: 0x040174A8 RID: 95400
 		private IPhantomArenaTabViewModelBase CurrentGuideData;
 
-		// Token: 0x0401CA74 RID: 117364
+		// Token: 0x040174A9 RID: 95401
 		private IPhantomArenaGuideFunc GuideInterface;
 
-		// Token: 0x0401CA75 RID: 117365
+		// Token: 0x040174AA RID: 95402
 		private bool HasNextGuide;
 
-		// Token: 0x0401CA76 RID: 117366
+		// Token: 0x040174AB RID: 95403
 		protected PhantomArenaBattleProxy Proxy;
 	}
 }

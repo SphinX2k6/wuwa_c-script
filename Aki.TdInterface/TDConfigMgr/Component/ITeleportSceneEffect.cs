@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000758 RID: 1880
+	// Token: 0x020007F9 RID: 2041
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportSceneEffect
 	{
-		// Token: 0x06002891 RID: 10385 RVA: 0x0006B564 File Offset: 0x00069764
-		[NullableContext(1)]
+		// Token: 0x06002BB5 RID: 11189 RVA: 0x0007270C File Offset: 0x0007090C
+		[NullableContext(0)]
 		private ITeleportSceneEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002892 RID: 10386 RVA: 0x0006B59C File Offset: 0x0006979C
-		[NullableContext(1)]
+		// Token: 0x06002BB6 RID: 11190 RVA: 0x00072744 File Offset: 0x00070944
+		[NullableContext(0)]
 		public static ITeleportSceneEffect Create([Nullable(2)] ITeleportSceneEffect instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002893 RID: 10387 RVA: 0x0006B5AF File Offset: 0x000697AF
-		[NullableContext(1)]
+		// Token: 0x06002BB7 RID: 11191 RVA: 0x00072757 File Offset: 0x00070957
+		[NullableContext(0)]
 		public static ITeleportSceneEffect CreateFromSetValue([Nullable(2)] ITeleportSceneEffect_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002894 RID: 10388 RVA: 0x0006B5C2 File Offset: 0x000697C2
-		[NullableContext(1)]
+		// Token: 0x06002BB8 RID: 11192 RVA: 0x0007276A File Offset: 0x0007096A
+		[NullableContext(0)]
 		public ITeleportSceneEffect_SetValue ToSetValue()
 		{
 			return new ITeleportSceneEffect_SetValue
@@ -64,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AA5 RID: 2725
-		// (get) Token: 0x06002895 RID: 10389 RVA: 0x0006B5E1 File Offset: 0x000697E1
-		// (set) Token: 0x06002896 RID: 10390 RVA: 0x0006B608 File Offset: 0x00069808
+		// Token: 0x17000B65 RID: 2917
+		// (get) Token: 0x06002BB9 RID: 11193 RVA: 0x00072789 File Offset: 0x00070989
+		// (set) Token: 0x06002BBA RID: 11194 RVA: 0x000727B0 File Offset: 0x000709B0
 		public virtual string WorldEffectPath
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AA6 RID: 2726
-		// (get) Token: 0x06002897 RID: 10391 RVA: 0x0006B616 File Offset: 0x00069816
-		// (set) Token: 0x06002898 RID: 10392 RVA: 0x0006B63D File Offset: 0x0006983D
+		// Token: 0x17000B66 RID: 2918
+		// (get) Token: 0x06002BBB RID: 11195 RVA: 0x000727BE File Offset: 0x000709BE
+		// (set) Token: 0x06002BBC RID: 11196 RVA: 0x000727E5 File Offset: 0x000709E5
 		public virtual string ScreenEffectPath
 		{
 			get
@@ -112,10 +112,10 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B42 RID: 6978
+		// Token: 0x04001D47 RID: 7495
 		protected ITeleportSceneEffect FbInstance;
 
-		// Token: 0x04001B43 RID: 6979
+		// Token: 0x04001D48 RID: 7496
 		protected ITeleportSceneEffect_SetValue PocoInterface;
 	}
 }

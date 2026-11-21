@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200022C RID: 556
+// Token: 0x02000230 RID: 560
 [NullableContext(1)]
 public interface ICapabilityConfig
 {
-	// Token: 0x1700050D RID: 1293
-	// (get) Token: 0x0600227D RID: 8829
-	// (set) Token: 0x0600227E RID: 8830
+	// Token: 0x17000534 RID: 1332
+	// (get) Token: 0x06002335 RID: 9013
+	// (set) Token: 0x06002336 RID: 9014
 	List<int> Tags { get; set; }
 
-	// Token: 0x1700050E RID: 1294
-	// (get) Token: 0x0600227F RID: 8831
-	// (set) Token: 0x06002280 RID: 8832
+	// Token: 0x17000535 RID: 1333
+	// (get) Token: 0x06002337 RID: 9015
+	// (set) Token: 0x06002338 RID: 9016
 	ETickingGroup? TickGroup { get; set; }
 
-	// Token: 0x1700050F RID: 1295
-	// (get) Token: 0x06002281 RID: 8833
-	// (set) Token: 0x06002282 RID: 8834
+	// Token: 0x17000536 RID: 1334
+	// (get) Token: 0x06002339 RID: 9017
+	// (set) Token: 0x0600233A RID: 9018
 	int TickGroupOrder { get; set; }
 
-	// Token: 0x17000510 RID: 1296
-	// (get) Token: 0x06002283 RID: 8835
-	// (set) Token: 0x06002284 RID: 8836
+	// Token: 0x17000537 RID: 1335
+	// (get) Token: 0x0600233B RID: 9019
+	// (set) Token: 0x0600233C RID: 9020
 	ETickingGroup? InactiveTickGroup { get; set; }
 
-	// Token: 0x17000511 RID: 1297
-	// (get) Token: 0x06002285 RID: 8837
-	// (set) Token: 0x06002286 RID: 8838
+	// Token: 0x17000538 RID: 1336
+	// (get) Token: 0x0600233D RID: 9021
+	// (set) Token: 0x0600233E RID: 9022
 	int? InactiveTickGroupOrder { get; set; }
 
-	// Token: 0x17000512 RID: 1298
-	// (get) Token: 0x06002287 RID: 8839
-	// (set) Token: 0x06002288 RID: 8840
+	// Token: 0x17000539 RID: 1337
+	// (get) Token: 0x0600233F RID: 9023
+	// (set) Token: 0x06002340 RID: 9024
 	List<int> InterruptsTags { get; set; }
 }

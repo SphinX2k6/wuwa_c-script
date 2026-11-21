@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CE9 RID: 3305
+	// Token: 0x02000DE1 RID: 3553
 	public class IOverrideCollisionChannel
 	{
-		// Token: 0x06004B7B RID: 19323 RVA: 0x000BC766 File Offset: 0x000BA966
-		[NullableContext(1)]
+		// Token: 0x06005088 RID: 20616 RVA: 0x000C7C1A File Offset: 0x000C5E1A
 		public static IOverrideCollisionChannel Create(IOverrideCollisionChannel? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001766 RID: 5990
-		// (get) Token: 0x06004B7C RID: 19324 RVA: 0x000BC788 File Offset: 0x000BA988
+		// Token: 0x170018C1 RID: 6337
+		// (get) Token: 0x06005089 RID: 20617 RVA: 0x000C7C3C File Offset: 0x000C5E3C
 		public virtual ECollisionChannelPreset? CollisionChannelPreset
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001767 RID: 5991
-		// (get) Token: 0x06004B7D RID: 19325 RVA: 0x000BC7C0 File Offset: 0x000BA9C0
+		// Token: 0x170018C2 RID: 6338
+		// (get) Token: 0x0600508A RID: 20618 RVA: 0x000C7C74 File Offset: 0x000C5E74
 		public virtual float? BlurResponseRadius
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B28 RID: 11048
+		// Token: 0x04002DE0 RID: 11744
 		private IOverrideCollisionChannel Instance;
 	}
 }

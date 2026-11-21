@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200124E RID: 4686
+	// Token: 0x0200138E RID: 5006
 	public static class EKurotatoConditionStepExtensions
 	{
-		// Token: 0x06006A06 RID: 27142 RVA: 0x000FDED4 File Offset: 0x000FC0D4
+		// Token: 0x06007059 RID: 28761 RVA: 0x0010BB00 File Offset: 0x00109D00
 		public static string ToEnumString(this EKurotatoConditionStep value)
 		{
 			string result;
@@ -42,7 +42,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A07 RID: 27143 RVA: 0x000FDF58 File Offset: 0x000FC158
+		// Token: 0x0600705A RID: 28762 RVA: 0x0010BB84 File Offset: 0x00109D84
 		public static EKurotatoConditionStep FromString(string name)
 		{
 			EKurotatoConditionStep result;
@@ -53,7 +53,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A08 RID: 27144 RVA: 0x000FDF84 File Offset: 0x000FC184
+		// Token: 0x0600705B RID: 28763 RVA: 0x0010BBB0 File Offset: 0x00109DB0
 		public static bool TryFromString(string name, out EKurotatoConditionStep value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -141,7 +141,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006A09 RID: 27145 RVA: 0x000FE0BC File Offset: 0x000FC2BC
+		// Token: 0x0600705C RID: 28764 RVA: 0x0010BCE8 File Offset: 0x00109EE8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -157,7 +157,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A0A RID: 27146 RVA: 0x000FE10F File Offset: 0x000FC30F
+		// Token: 0x0600705D RID: 28765 RVA: 0x0010BD3B File Offset: 0x00109F3B
 		public static EKurotatoConditionStep[] GetValues()
 		{
 			return new EKurotatoConditionStep[]
@@ -173,7 +173,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A0B RID: 27147 RVA: 0x000FE124 File Offset: 0x000FC324
+		// Token: 0x0600705E RID: 28766 RVA: 0x0010BD50 File Offset: 0x00109F50
 		public static string[] GetNames()
 		{
 			return new string[]

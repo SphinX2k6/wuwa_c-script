@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015EA RID: 5610
+	// Token: 0x0200174B RID: 5963
 	[EnumExtensions]
 	public enum EGamepadShakeAttenuationFunction
 	{
-		// Token: 0x04004AD8 RID: 19160
+		// Token: 0x04004E9B RID: 20123
 		Linear,
-		// Token: 0x04004AD9 RID: 19161
+		// Token: 0x04004E9C RID: 20124
 		Logarithmic,
-		// Token: 0x04004ADA RID: 19162
+		// Token: 0x04004E9D RID: 20125
 		Inverse,
-		// Token: 0x04004ADB RID: 19163
+		// Token: 0x04004E9E RID: 20126
 		LogReverse
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002398 RID: 9112
+// Token: 0x0200187D RID: 6269
 public class GiftPackageData : UiPopViewData
 {
-	// Token: 0x040089AB RID: 35243
+	// Token: 0x04008AF2 RID: 35570
 	public int GoodsId;
 }

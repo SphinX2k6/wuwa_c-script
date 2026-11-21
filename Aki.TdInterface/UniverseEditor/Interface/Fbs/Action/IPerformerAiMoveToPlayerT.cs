@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C88 RID: 27784
+	// Token: 0x020073EF RID: 29679
 	public class IPerformerAiMoveToPlayerT
 	{
-		// Token: 0x1700CEE9 RID: 52969
-		// (get) Token: 0x06030F5F RID: 200543 RVA: 0x006A5C2E File Offset: 0x006A3E2E
-		// (set) Token: 0x06030F60 RID: 200544 RVA: 0x006A5C36 File Offset: 0x006A3E36
+		// Token: 0x1700DA04 RID: 55812
+		// (get) Token: 0x06033EBA RID: 212666 RVA: 0x0070012E File Offset: 0x006FE32E
+		// (set) Token: 0x06033EBB RID: 212667 RVA: 0x00700136 File Offset: 0x006FE336
 		public EPerformerAiMoveToType Type { get; set; }
 
-		// Token: 0x06030F61 RID: 200545 RVA: 0x006A5C3F File Offset: 0x006A3E3F
+		// Token: 0x06033EBC RID: 212668 RVA: 0x0070013F File Offset: 0x006FE33F
 		public IPerformerAiMoveToPlayerT()
 		{
 			this.Type = EPerformerAiMoveToType.Position;

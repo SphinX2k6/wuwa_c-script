@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B6F RID: 11119
+// Token: 0x020020EB RID: 8427
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeaponGridData>
 {
-	// Token: 0x0601707F RID: 94335 RVA: 0x005D8C08 File Offset: 0x005D6E08
+	// Token: 0x06014AB0 RID: 84656 RVA: 0x00605770 File Offset: 0x00603970
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		};
 	}
 
-	// Token: 0x06017080 RID: 94336 RVA: 0x005D8CE8 File Offset: 0x005D6EE8
+	// Token: 0x06014AB1 RID: 84657 RVA: 0x00605850 File Offset: 0x00603A50
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueWeaponSettleItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,27 +44,27 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017081 RID: 94337 RVA: 0x005D8D2B File Offset: 0x005D6F2B
+	// Token: 0x06014AB2 RID: 84658 RVA: 0x00605893 File Offset: 0x00603A93
 	protected override void OnStart()
 	{
 		this.EvolveItemList = new GenericLayout<SurvivorsRogueWeaponEvolveItem, IWeaponEvolveData>(base.GetHorizontalLayout(10), new Func<SurvivorsRogueWeaponEvolveItem>(this.CreateEvolveItem), null, false, true);
 		this.RootActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnEventSequence));
 	}
 
-	// Token: 0x06017082 RID: 94338 RVA: 0x005D8D6B File Offset: 0x005D6F6B
+	// Token: 0x06014AB3 RID: 84659 RVA: 0x006058D3 File Offset: 0x00603AD3
 	protected override void OnBeforeDestroy()
 	{
 		this.ScrollingNumberTool.Clear();
 		this.RootActor.OnSequencePlayEvent.Unbind();
 	}
 
-	// Token: 0x06017083 RID: 94339 RVA: 0x005D8D88 File Offset: 0x005D6F88
+	// Token: 0x06014AB4 RID: 84660 RVA: 0x006058F0 File Offset: 0x00603AF0
 	private SurvivorsRogueWeaponEvolveItem CreateEvolveItem()
 	{
 		return new SurvivorsRogueWeaponEvolveItem();
 	}
 
-	// Token: 0x06017084 RID: 94340 RVA: 0x005D8D8F File Offset: 0x005D6F8F
+	// Token: 0x06014AB5 RID: 84661 RVA: 0x006058F7 File Offset: 0x00603AF7
 	public override void Refresh(ISurvivorsWeaponGridData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -81,7 +81,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		this.SetStateNormal();
 	}
 
-	// Token: 0x06017085 RID: 94341 RVA: 0x005D8DBC File Offset: 0x005D6FBC
+	// Token: 0x06014AB6 RID: 84662 RVA: 0x00605924 File Offset: 0x00603B24
 	private void OnEventSequence(string sequenceName, string eventName)
 	{
 		if (sequenceName == "Start" && eventName == "Got")
@@ -90,7 +90,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		}
 	}
 
-	// Token: 0x06017086 RID: 94342 RVA: 0x005D8DE0 File Offset: 0x005D6FE0
+	// Token: 0x06014AB7 RID: 84663 RVA: 0x00605948 File Offset: 0x00603B48
 	public void PlayAnim()
 	{
 		if (this.AnimPlayState)
@@ -110,7 +110,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		this.ScrollingNumberTool.StartScrolling();
 	}
 
-	// Token: 0x06017087 RID: 94343 RVA: 0x005D8E32 File Offset: 0x005D7032
+	// Token: 0x06014AB8 RID: 84664 RVA: 0x0060599A File Offset: 0x00603B9A
 	private void SetStateDisable()
 	{
 		base.GetItem(0).SetUIActive(true);
@@ -118,7 +118,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x06017088 RID: 94344 RVA: 0x005D8E5B File Offset: 0x005D705B
+	// Token: 0x06014AB9 RID: 84665 RVA: 0x006059C3 File Offset: 0x00603BC3
 	private void SetStateLock()
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -126,7 +126,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x06017089 RID: 94345 RVA: 0x005D8E84 File Offset: 0x005D7084
+	// Token: 0x06014ABA RID: 84666 RVA: 0x006059EC File Offset: 0x00603BEC
 	private void SetStateNormal()
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -144,14 +144,14 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		}
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), "SurvivorsCombat_Lv", new <>z__ReadOnlySingleElementList<object>(weaponData.Data.Level));
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), survivorsWeapon.Value.Name, Array.Empty<object>());
-		this.ScrollingNumberTool.Init(0, weaponData.Data.KillMonsterCount, delegate(float value)
+		this.ScrollingNumberTool.Init(0f, (float)weaponData.Data.KillMonsterCount, delegate(float value)
 		{
 			base.GetText(8).SetText(MathF.Round(value).ToString(), true);
-		}, 1000);
+		}, 1000, null);
 		base.SetTextureShowUntilLoaded(survivorsWeapon.Value.Icon, base.GetTexture(4), null);
 	}
 
-	// Token: 0x0601708A RID: 94346 RVA: 0x005D8F78 File Offset: 0x005D7178
+	// Token: 0x06014ABB RID: 84667 RVA: 0x00605AE8 File Offset: 0x00603CE8
 	private void RefreshEvolveItemList()
 	{
 		SurvivorsWeaponGainData weaponData = this.Data.WeaponData;
@@ -202,7 +202,7 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 		this.EvolveItemList.RefreshByData(list, null, true);
 	}
 
-	// Token: 0x0400AC43 RID: 44099
+	// Token: 0x0400B049 RID: 45129
 	[Nullable(new byte[]
 	{
 		2,
@@ -211,12 +211,12 @@ public class SurvivorsRogueWeaponSettleItem : GridProxyAbstract<ISurvivorsWeapon
 	})]
 	private GenericLayout<SurvivorsRogueWeaponEvolveItem, IWeaponEvolveData> EvolveItemList;
 
-	// Token: 0x0400AC44 RID: 44100
+	// Token: 0x0400B04A RID: 45130
 	protected ISurvivorsWeaponGridData Data;
 
-	// Token: 0x0400AC45 RID: 44101
+	// Token: 0x0400B04B RID: 45131
 	private readonly ScrollingNumberTool ScrollingNumberTool = new ScrollingNumberTool();
 
-	// Token: 0x0400AC46 RID: 44102
+	// Token: 0x0400B04C RID: 45132
 	private bool AnimPlayState;
 }

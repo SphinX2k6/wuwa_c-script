@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
@@ -10,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E4C RID: 7756
+// Token: 0x0200130E RID: 4878
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponHandBookView : UiViewBase
 {
-	// Token: 0x0600EBD3 RID: 60371 RVA: 0x0037F513 File Offset: 0x0037D713
+	// Token: 0x0600BFF2 RID: 49138 RVA: 0x0038B1A3 File Offset: 0x003893A3
 	public WeaponHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 		this.WeaponIdList = new List<int>();
 		this.WeaponSkinIdList = new List<int>();
 	}
 
-	// Token: 0x0600EBD4 RID: 60372 RVA: 0x0037F540 File Offset: 0x0037D740
+	// Token: 0x0600BFF3 RID: 49139 RVA: 0x0038B1D0 File Offset: 0x003893D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +52,7 @@ public class WeaponHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EBD5 RID: 60373 RVA: 0x0037F72C File Offset: 0x0037D92C
+	// Token: 0x0600BFF4 RID: 49140 RVA: 0x0038B3BC File Offset: 0x003895BC
 	private UniTask InitCaptionItemAsync()
 	{
 		WeaponHandBookView.<InitCaptionItemAsync>d__18 <InitCaptionItemAsync>d__;
@@ -64,7 +63,7 @@ public class WeaponHandBookView : UiViewBase
 		return <InitCaptionItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBD6 RID: 60374 RVA: 0x0037F770 File Offset: 0x0037D970
+	// Token: 0x0600BFF5 RID: 49141 RVA: 0x0038B400 File Offset: 0x00389600
 	private UniTask InitWeaponDetailTipsViewAsync()
 	{
 		WeaponHandBookView.<InitWeaponDetailTipsViewAsync>d__19 <InitWeaponDetailTipsViewAsync>d__;
@@ -75,7 +74,7 @@ public class WeaponHandBookView : UiViewBase
 		return <InitWeaponDetailTipsViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBD7 RID: 60375 RVA: 0x0037F7B4 File Offset: 0x0037D9B4
+	// Token: 0x0600BFF6 RID: 49142 RVA: 0x0038B444 File Offset: 0x00389644
 	private UniTask InitWeaponGenericLayoutAsync()
 	{
 		WeaponHandBookView.<InitWeaponGenericLayoutAsync>d__20 <InitWeaponGenericLayoutAsync>d__;
@@ -86,7 +85,7 @@ public class WeaponHandBookView : UiViewBase
 		return <InitWeaponGenericLayoutAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBD8 RID: 60376 RVA: 0x0037F7F8 File Offset: 0x0037D9F8
+	// Token: 0x0600BFF7 RID: 49143 RVA: 0x0038B488 File Offset: 0x00389688
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeaponHandBookView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -97,12 +96,12 @@ public class WeaponHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBD9 RID: 60377 RVA: 0x0037F83C File Offset: 0x0037DA3C
+	// Token: 0x0600BFF8 RID: 49144 RVA: 0x0038B4CC File Offset: 0x003896CC
 	protected override void OnStart()
 	{
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.WeaponLevelUpView);
-		this.WeaponIdList = HandBookModel.Instance.GetAllHandBookWeaponIdList().ToList<int>();
-		this.WeaponSkinIdList = HandBookModel.Instance.GetAllHandBookWeaponSkinIdList().ToList<int>();
+		this.WeaponIdList = new List<int>(HandBookModel.Instance.GetAllHandBookWeaponIdList());
+		this.WeaponSkinIdList = new List<int>(HandBookModel.Instance.GetAllHandBookWeaponSkinIdList());
 		GenericScrollViewNew<HandBookTab, int> tabScrollview = this.TabScrollview;
 		if (tabScrollview == null)
 		{
@@ -128,7 +127,7 @@ public class WeaponHandBookView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600EBDA RID: 60378 RVA: 0x0037F8AE File Offset: 0x0037DAAE
+	// Token: 0x0600BFF9 RID: 49145 RVA: 0x0038B53E File Offset: 0x0038973E
 	private WeaponHandBookItem CreateNodeGrid(WeaponHandBookDynamicData data, UUIItem uiItem, int index)
 	{
 		return new WeaponHandBookItem
@@ -137,7 +136,7 @@ public class WeaponHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EBDB RID: 60379 RVA: 0x0037F8C7 File Offset: 0x0037DAC7
+	// Token: 0x0600BFFA RID: 49146 RVA: 0x0038B557 File Offset: 0x00389757
 	private HandBookTab InitTabItem()
 	{
 		return new HandBookTab
@@ -146,7 +145,7 @@ public class WeaponHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EBDC RID: 60380 RVA: 0x0037F8E0 File Offset: 0x0037DAE0
+	// Token: 0x0600BFFB RID: 49147 RVA: 0x0038B570 File Offset: 0x00389770
 	private void OnFilterUpdate(List<int> list, bool isOutSideChange, EFilterSortType OperationType)
 	{
 		if (list == null || list.Count <= 0)
@@ -211,28 +210,20 @@ public class WeaponHandBookView : UiViewBase
 			this.RefeshView();
 			return;
 		}
+		WeaponHandBookDynamicData weaponHandBookDynamicData3 = (list2.Count > 1) ? list2[1] : null;
+		List<WeaponHandBookDynamicLayoutItemData> list6 = (weaponHandBookDynamicData3 != null) ? weaponHandBookDynamicData3.ItemData : null;
 		HandBookModel instance = HandBookModel.Instance;
-		WeaponHandBookDynamicData weaponHandBookDynamicData3 = list2.ElementAtOrDefault(1);
-		int? num2;
-		if (weaponHandBookDynamicData3 == null)
+		int currentSelectWeaponHandBookId;
+		if (list6 == null || list6.Count <= 0)
 		{
-			num2 = null;
+			currentSelectWeaponHandBookId = 0;
 		}
 		else
 		{
-			List<WeaponHandBookDynamicLayoutItemData> itemData = weaponHandBookDynamicData3.ItemData;
-			if (itemData == null)
-			{
-				num2 = null;
-			}
-			else
-			{
-				WeaponHandBookDynamicLayoutItemData weaponHandBookDynamicLayoutItemData = itemData.ElementAtOrDefault(0);
-				num2 = ((weaponHandBookDynamicLayoutItemData != null) ? weaponHandBookDynamicLayoutItemData.ItemId : null);
-			}
+			WeaponHandBookDynamicLayoutItemData weaponHandBookDynamicLayoutItemData = list6[0];
+			currentSelectWeaponHandBookId = ((weaponHandBookDynamicLayoutItemData != null) ? weaponHandBookDynamicLayoutItemData.ItemId : null).GetValueOrDefault();
 		}
-		int? num3 = num2;
-		instance.CurrentSelectWeaponHandBookId = num3.GetValueOrDefault();
+		instance.CurrentSelectWeaponHandBookId = currentSelectWeaponHandBookId;
 		DynamicScrollView<WeaponHandBookItem, WeaponHandBookDynamicItem, WeaponHandBookDynamicData> weaponGenericLayout = this.WeaponGenericLayout;
 		if (weaponGenericLayout == null)
 		{
@@ -241,7 +232,7 @@ public class WeaponHandBookView : UiViewBase
 		weaponGenericLayout.RefreshByData(list2.ToArray(), false, false);
 	}
 
-	// Token: 0x0600EBDD RID: 60381 RVA: 0x0037FC30 File Offset: 0x0037DE30
+	// Token: 0x0600BFFC RID: 49148 RVA: 0x0038B8C8 File Offset: 0x00389AC8
 	private void RefeshView()
 	{
 		if (this.CurrentShowType == 0)
@@ -258,7 +249,7 @@ public class WeaponHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EBDE RID: 60382 RVA: 0x0037FC94 File Offset: 0x0037DE94
+	// Token: 0x0600BFFD RID: 49149 RVA: 0x0038B92C File Offset: 0x00389B2C
 	private void RefeshWeaponView()
 	{
 		if (this.CurrentId == 0)
@@ -281,13 +272,13 @@ public class WeaponHandBookView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "WeaponHandBook_Weapon_Name", Array.Empty<object>());
 	}
 
-	// Token: 0x0600EBDF RID: 60383 RVA: 0x0037FD4D File Offset: 0x0037DF4D
+	// Token: 0x0600BFFE RID: 49150 RVA: 0x0038B9E5 File Offset: 0x00389BE5
 	private void UpdateWeaponDetail(WeaponTrialData curData)
 	{
 		this.WeaponDetailTipsView.UpdateComponent(curData);
 	}
 
-	// Token: 0x0600EBE0 RID: 60384 RVA: 0x0037FD5C File Offset: 0x0037DF5C
+	// Token: 0x0600BFFF RID: 49151 RVA: 0x0038B9F4 File Offset: 0x00389BF4
 	private void RefeshWeaponSkinView()
 	{
 		if (this.CurrentId == 0)
@@ -307,7 +298,7 @@ public class WeaponHandBookView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "WeaponHandBook_WeaponSkin_Name", Array.Empty<object>());
 	}
 
-	// Token: 0x0600EBE1 RID: 60385 RVA: 0x0037FE10 File Offset: 0x0037E010
+	// Token: 0x0600C000 RID: 49152 RVA: 0x0038BAA8 File Offset: 0x00389CA8
 	private void OnClickWeaponItemCallBack(UUIExtendToggle toggle, int id)
 	{
 		if (this.CurrentWeaponToggle != toggle)
@@ -330,7 +321,7 @@ public class WeaponHandBookView : UiViewBase
 		this.ReadWeaponHandBook(id);
 	}
 
-	// Token: 0x0600EBE2 RID: 60386 RVA: 0x0037FE78 File Offset: 0x0037E078
+	// Token: 0x0600C001 RID: 49153 RVA: 0x0038BB10 File Offset: 0x00389D10
 	private void ChangeWeapon(int? id = null)
 	{
 		int skinId = -1;
@@ -349,7 +340,7 @@ public class WeaponHandBookView : UiViewBase
 		WeaponController.Instance.OnSelectedWeaponChange(weaponInstance, this.WeaponObserver, this.WeaponScabbardObserver, skinId, this.NeedMeshStreaming);
 	}
 
-	// Token: 0x0600EBE3 RID: 60387 RVA: 0x0037FF68 File Offset: 0x0037E168
+	// Token: 0x0600C002 RID: 49154 RVA: 0x0038BC00 File Offset: 0x00389E00
 	private void OnClickTabCallBack(UUIExtendToggle toggle, int type)
 	{
 		UUIExtendToggle currentTabToggle = this.CurrentTabToggle;
@@ -388,7 +379,7 @@ public class WeaponHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EBE4 RID: 60388 RVA: 0x00380000 File Offset: 0x0037E200
+	// Token: 0x0600C003 RID: 49155 RVA: 0x0038BC98 File Offset: 0x00389E98
 	private void EnterInternalView(EToggleState toggleState)
 	{
 		if (this.IsInternal)
@@ -426,14 +417,14 @@ public class WeaponHandBookView : UiViewBase
 		this.IsInternal = true;
 	}
 
-	// Token: 0x0600EBE5 RID: 60389 RVA: 0x003800E0 File Offset: 0x0037E2E0
+	// Token: 0x0600C004 RID: 49156 RVA: 0x0038BD78 File Offset: 0x00389F78
 	private void OnFullToggleClick(EToggleState toggleState)
 	{
 		this.ChangeWeapon(null);
 		this.RefeshView();
 	}
 
-	// Token: 0x0600EBE6 RID: 60390 RVA: 0x00380104 File Offset: 0x0037E304
+	// Token: 0x0600C005 RID: 49157 RVA: 0x0038BD9C File Offset: 0x00389F9C
 	protected override void OnBeforeDestroy()
 	{
 		UiSceneManager.Instance.DestroyWeaponObserver(this.WeaponObserver);
@@ -454,7 +445,7 @@ public class WeaponHandBookView : UiViewBase
 		filterBtn2.ClearData(EFilterSortGroupId.WeaponSkinHandBook);
 	}
 
-	// Token: 0x0600EBE7 RID: 60391 RVA: 0x00380170 File Offset: 0x0037E370
+	// Token: 0x0600C006 RID: 49158 RVA: 0x0038BE08 File Offset: 0x0038A008
 	private void ReadWeaponHandBook(int handBookId)
 	{
 		HandBookEntry handBookInfo = HandBookModel.Instance.GetHandBookInfo(EHandBookTabType.Weapon, handBookId);
@@ -468,11 +459,11 @@ public class WeaponHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x04006D58 RID: 27992
+	// Token: 0x04006E39 RID: 28217
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04006D59 RID: 27993
+	// Token: 0x04006E3A RID: 28218
 	[Nullable(new byte[]
 	{
 		2,
@@ -482,11 +473,11 @@ public class WeaponHandBookView : UiViewBase
 	})]
 	private DynamicScrollView<WeaponHandBookItem, WeaponHandBookDynamicItem, WeaponHandBookDynamicData> WeaponGenericLayout;
 
-	// Token: 0x04006D5A RID: 27994
+	// Token: 0x04006E3B RID: 28219
 	[Nullable(2)]
 	private WeaponHandBookDynamicItem WeaponBaseItem;
 
-	// Token: 0x04006D5B RID: 27995
+	// Token: 0x04006E3C RID: 28220
 	[Nullable(new byte[]
 	{
 		2,
@@ -494,107 +485,107 @@ public class WeaponHandBookView : UiViewBase
 	})]
 	private GenericScrollViewNew<HandBookTab, int> TabScrollview;
 
-	// Token: 0x04006D5C RID: 27996
+	// Token: 0x04006E3D RID: 28221
 	[Nullable(2)]
 	private FilterSortEntrance<int> FilterBtn;
 
-	// Token: 0x04006D5D RID: 27997
+	// Token: 0x04006E3E RID: 28222
 	private List<int> WeaponIdList;
 
-	// Token: 0x04006D5E RID: 27998
+	// Token: 0x04006E3F RID: 28223
 	private List<int> WeaponSkinIdList;
 
-	// Token: 0x04006D5F RID: 27999
+	// Token: 0x04006E40 RID: 28224
 	[Nullable(2)]
 	private UUIExtendToggle CurrentTabToggle;
 
-	// Token: 0x04006D60 RID: 28000
+	// Token: 0x04006E41 RID: 28225
 	[Nullable(2)]
 	private UUIExtendToggle CurrentWeaponToggle;
 
-	// Token: 0x04006D61 RID: 28001
+	// Token: 0x04006E42 RID: 28226
 	private int CurrentShowType;
 
-	// Token: 0x04006D62 RID: 28002
+	// Token: 0x04006E43 RID: 28227
 	[Nullable(2)]
 	private SkeletalObserverHandle WeaponObserver;
 
-	// Token: 0x04006D63 RID: 28003
+	// Token: 0x04006E44 RID: 28228
 	[Nullable(2)]
 	private SkeletalObserverHandle WeaponScabbardObserver;
 
-	// Token: 0x04006D64 RID: 28004
+	// Token: 0x04006E45 RID: 28229
 	[Nullable(2)]
 	private WeaponDetailTipsComponent WeaponDetailTipsView;
 
-	// Token: 0x04006D65 RID: 28005
+	// Token: 0x04006E46 RID: 28230
 	private int CurrentId;
 
-	// Token: 0x04006D66 RID: 28006
+	// Token: 0x04006E47 RID: 28231
 	private readonly bool NeedMeshStreaming;
 
-	// Token: 0x04006D67 RID: 28007
+	// Token: 0x04006E48 RID: 28232
 	private readonly WeaponTrialData TrialWeaponData = new WeaponTrialData();
 
-	// Token: 0x04006D68 RID: 28008
+	// Token: 0x04006E49 RID: 28233
 	private bool IsInternal;
 
-	// Token: 0x020083FC RID: 33788
+	// Token: 0x02007581 RID: 30081
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402AF64 RID: 175972
+		// Token: 0x04026288 RID: 156296
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402AF65 RID: 175973
+		// Token: 0x04026289 RID: 156297
 		public const int TabScrollView = 1;
 
-		// Token: 0x0402AF66 RID: 175974
+		// Token: 0x0402628A RID: 156298
 		public const int TabItem = 2;
 
-		// Token: 0x0402AF67 RID: 175975
+		// Token: 0x0402628B RID: 156299
 		public const int DragItem = 3;
 
-		// Token: 0x0402AF68 RID: 175976
+		// Token: 0x0402628C RID: 156300
 		public const int CollectText = 4;
 
-		// Token: 0x0402AF69 RID: 175977
+		// Token: 0x0402628D RID: 156301
 		public const int CollectNumText = 5;
 
-		// Token: 0x0402AF6A RID: 175978
+		// Token: 0x0402628E RID: 156302
 		public const int WeaponScrollView = 6;
 
-		// Token: 0x0402AF6B RID: 175979
+		// Token: 0x0402628F RID: 156303
 		public const int WeaponScrollItem = 7;
 
-		// Token: 0x0402AF6C RID: 175980
+		// Token: 0x04026290 RID: 156304
 		public const int SortFilterItem = 8;
 
-		// Token: 0x0402AF6D RID: 175981
+		// Token: 0x04026291 RID: 156305
 		public const int WeaponDetailsItem = 9;
 
-		// Token: 0x0402AF6E RID: 175982
+		// Token: 0x04026292 RID: 156306
 		public const int SkinDetailsItem = 10;
 
-		// Token: 0x0402AF6F RID: 175983
+		// Token: 0x04026293 RID: 156307
 		public const int SkinTitleText = 11;
 
-		// Token: 0x0402AF70 RID: 175984
+		// Token: 0x04026294 RID: 156308
 		public const int SkinDesText = 12;
 
-		// Token: 0x0402AF71 RID: 175985
+		// Token: 0x04026295 RID: 156309
 		public const int CheckToggle = 13;
 
-		// Token: 0x0402AF72 RID: 175986
+		// Token: 0x04026296 RID: 156310
 		public const int FullLevelToggle = 14;
 
-		// Token: 0x0402AF73 RID: 175987
+		// Token: 0x04026297 RID: 156311
 		public const int LeftItem = 15;
 
-		// Token: 0x0402AF74 RID: 175988
+		// Token: 0x04026298 RID: 156312
 		public const int RightItem = 16;
 
-		// Token: 0x0402AF75 RID: 175989
+		// Token: 0x04026299 RID: 156313
 		public const int FullLevelToggleRootItem = 17;
 	}
 }

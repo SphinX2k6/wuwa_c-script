@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200136B RID: 4971
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020014BB RID: 5307
 	public class IPlayFlowQuestCondition : IQuestCondition
 	{
-		// Token: 0x060071BD RID: 29117 RVA: 0x00111E44 File Offset: 0x00110044
-		[NullableContext(1)]
+		// Token: 0x0600785D RID: 30813 RVA: 0x001203B0 File Offset: 0x0011E5B0
 		public static IPlayFlowQuestCondition Create(IPlayFlowQuestCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024BA RID: 9402
-		// (get) Token: 0x060071BE RID: 29118 RVA: 0x00111E63 File Offset: 0x00110063
+		// Token: 0x17002689 RID: 9865
+		// (get) Token: 0x0600785E RID: 30814 RVA: 0x001203CF File Offset: 0x0011E5CF
 		public override EChildQuest Type
 		{
 			get
@@ -35,10 +32,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024BB RID: 9403
-		// (get) Token: 0x060071BF RID: 29119 RVA: 0x00111E70 File Offset: 0x00110070
+		// Token: 0x1700268A RID: 9866
+		// (get) Token: 0x0600785F RID: 30815 RVA: 0x001203DC File Offset: 0x0011E5DC
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -51,12 +50,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024BC RID: 9404
-		// (get) Token: 0x060071C0 RID: 29120 RVA: 0x00111EA4 File Offset: 0x001100A4
-		[Nullable(1)]
+		// Token: 0x1700268B RID: 9867
+		// (get) Token: 0x06007860 RID: 30816 RVA: 0x00120410 File Offset: 0x0011E610
 		public virtual PlayFlow Flow
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._FlowInited)
@@ -69,19 +66,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041B1 RID: 16817
+		// Token: 0x0400452D RID: 17709
 		private IPlayFlowQuestCondition Instance;
 
-		// Token: 0x040041B2 RID: 16818
+		// Token: 0x0400452E RID: 17710
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040041B3 RID: 16819
+		// Token: 0x0400452F RID: 17711
 		private bool _PreConditionsInited;
 
-		// Token: 0x040041B4 RID: 16820
+		// Token: 0x04004530 RID: 17712
+		[Nullable(2)]
 		private PlayFlow _FlowCache;
 
-		// Token: 0x040041B5 RID: 16821
+		// Token: 0x04004531 RID: 17713
 		private bool _FlowInited;
 	}
 }

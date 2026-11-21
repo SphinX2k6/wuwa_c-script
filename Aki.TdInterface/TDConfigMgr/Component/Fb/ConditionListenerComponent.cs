@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C7A RID: 3194
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D59 RID: 3417
 	public class ConditionListenerComponent : IComponentBase
 	{
-		// Token: 0x0600492E RID: 18734 RVA: 0x000B7AA6 File Offset: 0x000B5CA6
+		// Token: 0x06004DCD RID: 19917 RVA: 0x000C22AA File Offset: 0x000C04AA
 		public static ConditionListenerComponent Create(IConditionListenerComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015F7 RID: 5623
-		// (get) Token: 0x0600492F RID: 18735 RVA: 0x000B7AC8 File Offset: 0x000B5CC8
+		// Token: 0x17001716 RID: 5910
+		// (get) Token: 0x06004DCE RID: 19918 RVA: 0x000C22CC File Offset: 0x000C04CC
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015F8 RID: 5624
-		// (get) Token: 0x06004930 RID: 18736 RVA: 0x000B7B00 File Offset: 0x000B5D00
+		// Token: 0x17001717 RID: 5911
+		// (get) Token: 0x06004DCF RID: 19919 RVA: 0x000C2304 File Offset: 0x000C0504
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015F9 RID: 5625
-		// (get) Token: 0x06004931 RID: 18737 RVA: 0x000B7B18 File Offset: 0x000B5D18
+		// Token: 0x17001718 RID: 5912
+		// (get) Token: 0x06004DD0 RID: 19920 RVA: 0x000C231C File Offset: 0x000C051C
 		public virtual List<ICondtionListener> Listeners
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029C1 RID: 10689
+		// Token: 0x04002C2E RID: 11310
 		private IConditionListenerComponent Instance;
 
-		// Token: 0x040029C2 RID: 10690
+		// Token: 0x04002C2F RID: 11311
 		private List<ICondtionListener> _ListenersCache;
 
-		// Token: 0x040029C3 RID: 10691
+		// Token: 0x04002C30 RID: 11312
 		private bool _ListenersInited;
 	}
 }

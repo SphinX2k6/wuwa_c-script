@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B54 RID: 19284
+	// Token: 0x02003AFC RID: 15100
 	public class TowerDefenseRewardEntranceItem : UiPanelBase
 	{
-		// Token: 0x06031EFD RID: 204541 RVA: 0x00B96734 File Offset: 0x00B94934
+		// Token: 0x06026C8C RID: 158860 RVA: 0x00ADA970 File Offset: 0x00AD8B70
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031EFE RID: 204542 RVA: 0x00B96840 File Offset: 0x00B94A40
+		// Token: 0x06026C8D RID: 158861 RVA: 0x00ADAA7C File Offset: 0x00AD8C7C
 		public void RefreshItem()
 		{
 			UUIItem item = base.GetItem(4);
@@ -58,28 +58,28 @@ namespace CSharpScript.Game.Module.TowerDefence
 			sprite.SetFillAmount((float)TowerDefenseController.Instance.GetTotalScoreProgress());
 		}
 
-		// Token: 0x06031EFF RID: 204543 RVA: 0x00B968BD File Offset: 0x00B94ABD
+		// Token: 0x06026C8E RID: 158862 RVA: 0x00ADAAF9 File Offset: 0x00AD8CF9
 		private void OnClickBtnReward()
 		{
 			TowerDefenseController.Instance.HandleOnClickReward();
 		}
 
-		// Token: 0x0200ACD8 RID: 44248
+		// Token: 0x020096F7 RID: 38647
 		private class ERewardEntranceComponent
 		{
-			// Token: 0x0403484B RID: 215115
+			// Token: 0x0402F1F4 RID: 193012
 			public const int RewardBtn = 0;
 
-			// Token: 0x0403484C RID: 215116
+			// Token: 0x0402F1F5 RID: 193013
 			public const int ProgressSpr = 1;
 
-			// Token: 0x0403484D RID: 215117
+			// Token: 0x0402F1F6 RID: 193014
 			public const int TitleTxt = 2;
 
-			// Token: 0x0403484E RID: 215118
+			// Token: 0x0402F1F7 RID: 193015
 			public const int ProgressTxt = 3;
 
-			// Token: 0x0403484F RID: 215119
+			// Token: 0x0402F1F8 RID: 193016
 			public const int RedDotItem = 4;
 		}
 	}

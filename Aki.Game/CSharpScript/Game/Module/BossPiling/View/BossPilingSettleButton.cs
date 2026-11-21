@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C15 RID: 23573
+	// Token: 0x02004BF5 RID: 19445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingSettleButton : UiPanelBase
 	{
-		// Token: 0x0603B917 RID: 243991 RVA: 0x00E34C40 File Offset: 0x00E32E40
+		// Token: 0x06030862 RID: 198754 RVA: 0x00D84F9C File Offset: 0x00D8319C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B918 RID: 243992 RVA: 0x00E34D28 File Offset: 0x00E32F28
+		// Token: 0x06030863 RID: 198755 RVA: 0x00D85084 File Offset: 0x00D83284
 		protected override void OnBeforeShow()
 		{
 			base.GetText(0).SetText("", true);
 			base.GetText(2).SetText("", true);
 		}
 
-		// Token: 0x0603B919 RID: 243993 RVA: 0x00E34D50 File Offset: 0x00E32F50
+		// Token: 0x06030864 RID: 198756 RVA: 0x00D850AC File Offset: 0x00D832AC
 		public UniTask InitializeAsync(AActor rootActor, Action onClickCall)
 		{
 			BossPilingSettleButton.<InitializeAsync>d__4 <InitializeAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B91A RID: 243994 RVA: 0x00E34DA3 File Offset: 0x00E32FA3
+		// Token: 0x06030865 RID: 198757 RVA: 0x00D850FF File Offset: 0x00D832FF
 		private void OnClickedButton()
 		{
 			Action onClickEvent = this.OnClickEvent;
@@ -70,34 +70,34 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			onClickEvent();
 		}
 
-		// Token: 0x0603B91B RID: 243995 RVA: 0x00E34DB5 File Offset: 0x00E32FB5
+		// Token: 0x06030866 RID: 198758 RVA: 0x00D85111 File Offset: 0x00D83311
 		public void SetFloatText(string textId, params string[] args)
 		{
 			base.GetText(2).SetUIActive(true);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, args);
 		}
 
-		// Token: 0x0603B91C RID: 243996 RVA: 0x00E34DD7 File Offset: 0x00E32FD7
+		// Token: 0x06030867 RID: 198759 RVA: 0x00D85133 File Offset: 0x00D83333
 		public void SetBtnTextNew(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x0401F04A RID: 127050
+		// Token: 0x04019AFB RID: 105211
 		[Nullable(2)]
 		private Action OnClickEvent;
 
-		// Token: 0x0200BDFF RID: 48639
+		// Token: 0x0200A807 RID: 43015
 		[NullableContext(0)]
 		private enum EBossPilingButton
 		{
-			// Token: 0x0403949E RID: 234654
+			// Token: 0x04033E61 RID: 212577
 			ButtonText,
-			// Token: 0x0403949F RID: 234655
+			// Token: 0x04033E62 RID: 212578
 			DescriptionItem,
-			// Token: 0x040394A0 RID: 234656
+			// Token: 0x04033E63 RID: 212579
 			DescriptionText,
-			// Token: 0x040394A1 RID: 234657
+			// Token: 0x04033E64 RID: 212580
 			Button
 		}
 	}

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005638 RID: 22072
+	// Token: 0x0200460E RID: 17934
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupComponentRewardList : UiPanelBase
 	{
-		// Token: 0x060381F3 RID: 229875 RVA: 0x00D4B463 File Offset: 0x00D49663
+		// Token: 0x0602D0F1 RID: 184561 RVA: 0x00C991AB File Offset: 0x00C973AB
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381F4 RID: 229876 RVA: 0x00D4B49C File Offset: 0x00D4969C
+		// Token: 0x0602D0F2 RID: 184562 RVA: 0x00C991E4 File Offset: 0x00C973E4
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(0), new Func<CommonItemSmallItemGrid>(this.OnCreateRewardItem), null, false, true);
 		}
 
-		// Token: 0x060381F5 RID: 229877 RVA: 0x00D4B4C0 File Offset: 0x00D496C0
+		// Token: 0x0602D0F3 RID: 184563 RVA: 0x00C99208 File Offset: 0x00C97408
 		public void Refresh(MapGridData gridData)
 		{
 			if (gridData.RewardItemIdList.Count == 0 || gridData.IsExplore)
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.ItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060381F6 RID: 229878 RVA: 0x00D4B554 File Offset: 0x00D49754
+		// Token: 0x0602D0F4 RID: 184564 RVA: 0x00C9929C File Offset: 0x00C9749C
 		private CommonItemSmallItemGrid OnCreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0401D867 RID: 120935
+		// Token: 0x040182F2 RID: 99058
 		[Nullable(new byte[]
 		{
 			2,

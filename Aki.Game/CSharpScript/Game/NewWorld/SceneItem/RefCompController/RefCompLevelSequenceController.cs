@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B7 RID: 29111
+	// Token: 0x0200626C RID: 25196
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RefCompLevelSequenceController : RefCompControllerBase
 	{
-		// Token: 0x060473CF RID: 291791 RVA: 0x0121C6A5 File Offset: 0x0121A8A5
+		// Token: 0x0603CCCA RID: 249034 RVA: 0x011765B1 File Offset: 0x011747B1
 		public RefCompLevelSequenceController(Entity entity, long creatureDataId, int pbDataId) : base(entity, creatureDataId, pbDataId)
 		{
 		}
 
-		// Token: 0x17009DB9 RID: 40377
-		// (get) Token: 0x060473D0 RID: 291792 RVA: 0x0121C6C2 File Offset: 0x0121A8C2
+		// Token: 0x17007309 RID: 29449
+		// (get) Token: 0x0603CCCB RID: 249035 RVA: 0x011765CE File Offset: 0x011747CE
 		public override RefCompDefine.ERefCompControllerType Type
 		{
 			get
@@ -32,14 +32,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473D1 RID: 291793 RVA: 0x0121C6C5 File Offset: 0x0121A8C5
+		// Token: 0x0603CCCC RID: 249036 RVA: 0x011765D1 File Offset: 0x011747D1
 		public override void OnStart()
 		{
 			this.EventComp = this.Entity.GetComponent<LevelSequenceFrameEventComponent>();
 			this.HostComponent = this.Entity.GetComponent<SceneItemReferenceComponent>();
 		}
 
-		// Token: 0x060473D2 RID: 291794 RVA: 0x0121C6E9 File Offset: 0x0121A8E9
+		// Token: 0x0603CCCD RID: 249037 RVA: 0x011765F5 File Offset: 0x011747F5
 		private void ManualTickPreMove(float deltaMs)
 		{
 			ManualTickSequenceDriver manualTickDriver = this.ManualTickDriver;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			manualTickDriver.Tick(deltaMs);
 		}
 
-		// Token: 0x060473D3 RID: 291795 RVA: 0x0121C6FC File Offset: 0x0121A8FC
+		// Token: 0x0603CCCE RID: 249038 RVA: 0x01176608 File Offset: 0x01174808
 		public override void OnEnd()
 		{
 			this.SubtitleCloseGuard.Stop();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.ReleaseManualTickDriver();
 		}
 
-		// Token: 0x060473D4 RID: 291796 RVA: 0x0121C775 File Offset: 0x0121A975
+		// Token: 0x0603CCCF RID: 249039 RVA: 0x01176681 File Offset: 0x01174881
 		public void OnActorRemove()
 		{
 			this.SubtitleCloseGuard.Stop();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.ReleaseManualTickDriver();
 		}
 
-		// Token: 0x060473D5 RID: 291797 RVA: 0x0121C7A7 File Offset: 0x0121A9A7
+		// Token: 0x0603CCD0 RID: 249040 RVA: 0x011766B3 File Offset: 0x011748B3
 		private void ReleaseManualTickDriver()
 		{
 			this.ManualTickLoadRequestId++;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473D6 RID: 291798 RVA: 0x0121C7D8 File Offset: 0x0121A9D8
+		// Token: 0x0603CCD1 RID: 249041 RVA: 0x011766E4 File Offset: 0x011748E4
 		private void RegisterManualTickPreMove()
 		{
 			if (this.ManualTickRegistered)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.ManualTickRegistered = true;
 		}
 
-		// Token: 0x060473D7 RID: 291799 RVA: 0x0121C84B File Offset: 0x0121AA4B
+		// Token: 0x0603CCD2 RID: 249042 RVA: 0x01176757 File Offset: 0x01174957
 		private void UnregisterManualTickPreMove()
 		{
 			if (!this.ManualTickRegistered || this.HostComponent == null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.ManualTickRegistered = false;
 		}
 
-		// Token: 0x060473D8 RID: 291800 RVA: 0x0121C875 File Offset: 0x0121AA75
+		// Token: 0x0603CCD3 RID: 249043 RVA: 0x01176781 File Offset: 0x01174981
 		public void OnHostEnable()
 		{
 			ManualTickSequenceDriver manualTickDriver = this.ManualTickDriver;
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.RegisterManualTickPreMove();
 		}
 
-		// Token: 0x060473D9 RID: 291801 RVA: 0x0121C895 File Offset: 0x0121AA95
+		// Token: 0x0603CCD4 RID: 249044 RVA: 0x011767A1 File Offset: 0x011749A1
 		public void OnHostDisable()
 		{
 			this.UnregisterManualTickPreMove();
 		}
 
-		// Token: 0x060473DA RID: 291802 RVA: 0x0121C8A0 File Offset: 0x0121AAA0
+		// Token: 0x0603CCD5 RID: 249045 RVA: 0x011767AC File Offset: 0x011749AC
 		public void HandleSequence(PlayLevelSequence inSequenceConfig)
 		{
 			RefCompLevelSequenceController.<>c__DisplayClass23_0 CS$<>8__locals1 = new RefCompLevelSequenceController.<>c__DisplayClass23_0();
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}, ResourceSystem.EResourceLoadPriority.Default);
 		}
 
-		// Token: 0x060473DB RID: 291803 RVA: 0x0121CE94 File Offset: 0x0121B094
+		// Token: 0x0603CCD6 RID: 249046 RVA: 0x01176DA0 File Offset: 0x01174FA0
 		private unsafe bool CheckAndDispatchDriveMode(PlayLevelSequence inSequenceConfig)
 		{
 			string levelSequencePath = inSequenceConfig.LevelSequencePath;
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return true;
 		}
 
-		// Token: 0x060473DC RID: 291804 RVA: 0x0121CFCC File Offset: 0x0121B1CC
+		// Token: 0x0603CCD7 RID: 249047 RVA: 0x01176ED8 File Offset: 0x011750D8
 		private unsafe void WarnUnsupportedManualTickOptions(PlayLevelSequence inSequenceConfig)
 		{
 			List<string> list = new List<string>();
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060473DD RID: 291805 RVA: 0x0121D0BC File Offset: 0x0121B2BC
+		// Token: 0x0603CCD8 RID: 249048 RVA: 0x01176FC8 File Offset: 0x011751C8
 		private void HandleSequenceByManualTick(PlayLevelSequence inSequenceConfig)
 		{
 			string path = inSequenceConfig.LevelSequencePath;
@@ -552,7 +552,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}, ResourceSystem.EResourceLoadPriority.Default);
 		}
 
-		// Token: 0x060473DE RID: 291806 RVA: 0x0121D144 File Offset: 0x0121B344
+		// Token: 0x0603CCD9 RID: 249049 RVA: 0x01177050 File Offset: 0x01175250
 		private int LoadResourceAsyncWithQueue<[Nullable(0)] T>(string path, [Nullable(new byte[]
 		{
 			1,
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return handle.ResourceSystemId;
 		}
 
-		// Token: 0x060473DF RID: 291807 RVA: 0x0121D1C4 File Offset: 0x0121B3C4
+		// Token: 0x0603CCDA RID: 249050 RVA: 0x011770D0 File Offset: 0x011752D0
 		private void OnResourceLoadAsyncCallback(RefCompLevelSequenceController.ResourceLoadCallbackHandle handle, [Nullable(2)] UObject asset)
 		{
 			handle.Asset = asset;
@@ -619,7 +619,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473E0 RID: 291808 RVA: 0x0121D290 File Offset: 0x0121B490
+		// Token: 0x0603CCDB RID: 249051 RVA: 0x0117719C File Offset: 0x0117539C
 		public bool ForceSwitchSceneCamera(bool bEnable)
 		{
 			if (this.SimpleSequenceActor == null)
@@ -633,7 +633,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return this.SimpleSequenceActor.ForceSwitchSceneCamera(bEnable);
 		}
 
-		// Token: 0x060473E1 RID: 291809 RVA: 0x0121D2D2 File Offset: 0x0121B4D2
+		// Token: 0x0603CCDC RID: 249052 RVA: 0x011771DE File Offset: 0x011753DE
 		public void OnChangeTimeDilation(float timeDilation)
 		{
 			SimpleLevelSequenceActor simpleSequenceActor = this.SimpleSequenceActor;
@@ -649,7 +649,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			manualTickDriver.SetTimeDilation(timeDilation);
 		}
 
-		// Token: 0x060473E2 RID: 291810 RVA: 0x0121D2F7 File Offset: 0x0121B4F7
+		// Token: 0x0603CCDD RID: 249053 RVA: 0x01177203 File Offset: 0x01175403
 		public bool IsPlaying()
 		{
 			if (this.LockedDriveMode.GetValueOrDefault() == RefCompLevelSequenceController.ESequenceTickMode.ManualTick)
@@ -661,7 +661,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return simpleSequenceActor != null && simpleSequenceActor.IsPlaying();
 		}
 
-		// Token: 0x060473E3 RID: 291811 RVA: 0x0121D32A File Offset: 0x0121B52A
+		// Token: 0x0603CCDE RID: 249054 RVA: 0x01177236 File Offset: 0x01175436
 		[NullableContext(2)]
 		public ALevelSequenceActor GetPlayingSequenceActor()
 		{
@@ -679,7 +679,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return result;
 		}
 
-		// Token: 0x060473E4 RID: 291812 RVA: 0x0121D354 File Offset: 0x0121B554
+		// Token: 0x0603CCDF RID: 249055 RVA: 0x01177260 File Offset: 0x01175460
 		public bool IsPlayToMarkFinished(string mark)
 		{
 			if (this.LockedDriveMode.GetValueOrDefault() == RefCompLevelSequenceController.ESequenceTickMode.ManualTick)
@@ -703,7 +703,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473E5 RID: 291813 RVA: 0x0121D424 File Offset: 0x0121B624
+		// Token: 0x0603CCE0 RID: 249056 RVA: 0x01177330 File Offset: 0x01175530
 		public bool IsPlayBetweenMarks(string startMark, string endMark)
 		{
 			if (this.LockedDriveMode.GetValueOrDefault() == RefCompLevelSequenceController.ESequenceTickMode.ManualTick)
@@ -742,7 +742,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473E6 RID: 291814 RVA: 0x0121D544 File Offset: 0x0121B744
+		// Token: 0x0603CCE1 RID: 249057 RVA: 0x01177450 File Offset: 0x01175650
 		[return: Nullable(2)]
 		public ISequenceProgressController CreateSequenceProgressController(string sequencePath)
 		{
@@ -758,38 +758,38 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return controller;
 		}
 
-		// Token: 0x04025772 RID: 153458
+		// Token: 0x040203E1 RID: 132065
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatInstance = Stat.Create("RefCompLevelSequenceController", "", "");
 
-		// Token: 0x04025773 RID: 153459
+		// Token: 0x040203E2 RID: 132066
 		[Nullable(2)]
 		private LevelSequenceFrameEventComponent EventComp;
 
-		// Token: 0x04025774 RID: 153460
+		// Token: 0x040203E3 RID: 132067
 		private readonly FloatingSubtitle2dCloseGuard SubtitleCloseGuard = new FloatingSubtitle2dCloseGuard();
 
-		// Token: 0x04025775 RID: 153461
+		// Token: 0x040203E4 RID: 132068
 		[Nullable(2)]
 		private EntityComponent HostComponent;
 
-		// Token: 0x04025776 RID: 153462
+		// Token: 0x040203E5 RID: 132069
 		private RefCompLevelSequenceController.ESequenceTickMode? LockedDriveMode;
 
-		// Token: 0x04025777 RID: 153463
+		// Token: 0x040203E6 RID: 132070
 		[Nullable(2)]
 		private ManualTickSequenceDriver ManualTickDriver;
 
-		// Token: 0x04025778 RID: 153464
+		// Token: 0x040203E7 RID: 132071
 		private int ManualTickLoadRequestId;
 
-		// Token: 0x04025779 RID: 153465
+		// Token: 0x040203E8 RID: 132072
 		private bool ManualTickRegistered;
 
-		// Token: 0x0402577A RID: 153466
+		// Token: 0x040203E9 RID: 132073
 		public bool NextSequenceJumpToEnd = true;
 
-		// Token: 0x0402577B RID: 153467
+		// Token: 0x040203EA RID: 132074
 		[Nullable(new byte[]
 		{
 			2,
@@ -797,15 +797,15 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 		})]
 		private Queue<RefCompLevelSequenceController.ResourceLoadCallbackHandle> ResourceLoadCallbackHandleQueue;
 
-		// Token: 0x0402577C RID: 153468
+		// Token: 0x040203EB RID: 132075
 		[Nullable(2)]
 		public SimpleLevelSequenceActor SimpleSequenceActor;
 
-		// Token: 0x0200CF10 RID: 53008
+		// Token: 0x0200BAA5 RID: 47781
 		[Nullable(0)]
 		private class ResourceLoadCallbackHandle
 		{
-			// Token: 0x06052028 RID: 335912 RVA: 0x01648D4C File Offset: 0x01646F4C
+			// Token: 0x060487D2 RID: 296914 RVA: 0x0161AE74 File Offset: 0x01619074
 			public ResourceLoadCallbackHandle(string path, [Nullable(new byte[]
 			{
 				1,
@@ -815,7 +815,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			{
 			}
 
-			// Token: 0x0403E455 RID: 255061
+			// Token: 0x0403977A RID: 235386
 			[Nullable(new byte[]
 			{
 				1,
@@ -824,27 +824,27 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			})]
 			public readonly Action<UObject, string> Callback = callback;
 
-			// Token: 0x0403E456 RID: 255062
+			// Token: 0x0403977B RID: 235387
 			public readonly string Path = path;
 
-			// Token: 0x0403E457 RID: 255063
+			// Token: 0x0403977C RID: 235388
 			[Nullable(2)]
 			public UObject Asset;
 
-			// Token: 0x0403E458 RID: 255064
+			// Token: 0x0403977D RID: 235389
 			public bool LoadAsyncFinished;
 
-			// Token: 0x0403E459 RID: 255065
+			// Token: 0x0403977E RID: 235390
 			public int ResourceSystemId = -1;
 		}
 
-		// Token: 0x0200CF11 RID: 53009
+		// Token: 0x0200BAA6 RID: 47782
 		[NullableContext(0)]
 		private enum ESequenceTickMode
 		{
-			// Token: 0x0403E45B RID: 255067
+			// Token: 0x04039780 RID: 235392
 			Engine,
-			// Token: 0x0403E45C RID: 255068
+			// Token: 0x04039781 RID: 235393
 			ManualTick
 		}
 	}

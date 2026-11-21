@@ -1,31 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020017D5 RID: 6101
+// Token: 0x02000C8E RID: 3214
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckSkillIdFailCondition : BaseCheckCondition
 {
-	// Token: 0x0600B25F RID: 45663 RVA: 0x00284CA8 File Offset: 0x00282EA8
-	public CheckSkillIdFailCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
+	// Token: 0x06008648 RID: 34376 RVA: 0x0028F288 File Offset: 0x0028D488
+	public CheckSkillIdFailCondition(string paramsString, bool isSuccessNode, EComboTeachingFailCondition failType) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Event;
-		this.FailType = EComboTeachingFailCondition.SkillIdChecker;
+		this.FailType = failType;
 	}
 
-	// Token: 0x17000F03 RID: 3843
-	// (get) Token: 0x0600B260 RID: 45664 RVA: 0x00284CC0 File Offset: 0x00282EC0
-	// (set) Token: 0x0600B261 RID: 45665 RVA: 0x00284CC8 File Offset: 0x00282EC8
+	// Token: 0x17000F26 RID: 3878
+	// (get) Token: 0x06008649 RID: 34377 RVA: 0x0028F2A0 File Offset: 0x0028D4A0
+	// (set) Token: 0x0600864A RID: 34378 RVA: 0x0028F2A8 File Offset: 0x0028D4A8
 	public override EComboTeachingCheckType Type { get; set; }
 
-	// Token: 0x17000F04 RID: 3844
-	// (get) Token: 0x0600B262 RID: 45666 RVA: 0x00284CD1 File Offset: 0x00282ED1
-	// (set) Token: 0x0600B263 RID: 45667 RVA: 0x00284CD9 File Offset: 0x00282ED9
+	// Token: 0x17000F27 RID: 3879
+	// (get) Token: 0x0600864B RID: 34379 RVA: 0x0028F2B1 File Offset: 0x0028D4B1
+	// (set) Token: 0x0600864C RID: 34380 RVA: 0x0028F2B9 File Offset: 0x0028D4B9
 	protected override EComboTeachingFailCondition FailType { get; set; }
 
-	// Token: 0x0600B264 RID: 45668 RVA: 0x00284CE4 File Offset: 0x00282EE4
+	// Token: 0x0600864D RID: 34381 RVA: 0x0028F2C4 File Offset: 0x0028D4C4
 	public override bool Check(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
-		return this.ParamsArray != null && (ComboTeachingModel.Instance.UseSkillId != 0L && !this.OriginString.Contains(ComboTeachingModel.Instance.UseSkillId.ToString()));
+		bool flag = this.FailType == EComboTeachingFailCondition.HoldSkillIdChecker;
+		return data.IsHoldAction == flag && this.ParamsArray != null && (ComboTeachingModel.Instance.UseSkillId != 0L && !this.OriginString.Contains(ComboTeachingModel.Instance.UseSkillId.ToString()));
 	}
 }

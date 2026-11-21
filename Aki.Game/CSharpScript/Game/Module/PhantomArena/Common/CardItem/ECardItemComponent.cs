@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem
 {
-	// Token: 0x020051CC RID: 20940
+	// Token: 0x0200419C RID: 16796
 	public enum ECardItemComponent
 	{
-		// Token: 0x0401C734 RID: 116532
+		// Token: 0x04017169 RID: 94569
 		CommonBaseCardComponent,
-		// Token: 0x0401C735 RID: 116533
+		// Token: 0x0401716A RID: 94570
 		NewCommonBaseCardComponent,
-		// Token: 0x0401C736 RID: 116534
+		// Token: 0x0401716B RID: 94571
 		CardLockComponent,
-		// Token: 0x0401C737 RID: 116535
+		// Token: 0x0401716C RID: 94572
 		BattleCardComponent,
-		// Token: 0x0401C738 RID: 116536
+		// Token: 0x0401716D RID: 94573
 		NewBattleCardComponent,
-		// Token: 0x0401C739 RID: 116537
+		// Token: 0x0401716E RID: 94574
 		CardReplaceComponent,
-		// Token: 0x0401C73A RID: 116538
+		// Token: 0x0401716F RID: 94575
 		CardChooseComponent,
-		// Token: 0x0401C73B RID: 116539
+		// Token: 0x04017170 RID: 94576
 		CardCheckComponent,
-		// Token: 0x0401C73C RID: 116540
+		// Token: 0x04017171 RID: 94577
 		CardSelectedComponent,
-		// Token: 0x0401C73D RID: 116541
+		// Token: 0x04017172 RID: 94578
 		CardSpineComponent,
-		// Token: 0x0401C73E RID: 116542
+		// Token: 0x04017173 RID: 94579
 		CardAllInDeckComponent,
-		// Token: 0x0401C73F RID: 116543
+		// Token: 0x04017174 RID: 94580
 		CardDisabledComponent,
-		// Token: 0x0401C740 RID: 116544
+		// Token: 0x04017175 RID: 94581
 		CardSkillComponent,
-		// Token: 0x0401C741 RID: 116545
+		// Token: 0x04017176 RID: 94582
 		CardEffectCountComponent
 	}
 }

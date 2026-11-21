@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E9 RID: 9193
+	// Token: 0x02002680 RID: 9856
 	public static class ERemovePreloadResourceObjectTypeExtensions
 	{
-		// Token: 0x0600C817 RID: 51223 RVA: 0x001D4AA8 File Offset: 0x001D2CA8
+		// Token: 0x0600D49A RID: 54426 RVA: 0x001EE254 File Offset: 0x001EC454
 		public static string ToEnumString(this ERemovePreloadResourceObjectType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C818 RID: 51224 RVA: 0x001D4AFC File Offset: 0x001D2CFC
+		// Token: 0x0600D49B RID: 54427 RVA: 0x001EE2A8 File Offset: 0x001EC4A8
 		public static ERemovePreloadResourceObjectType FromString(string name)
 		{
 			ERemovePreloadResourceObjectType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C819 RID: 51225 RVA: 0x001D4B28 File Offset: 0x001D2D28
+		// Token: 0x0600D49C RID: 54428 RVA: 0x001EE2D4 File Offset: 0x001EC4D4
 		public static bool TryFromString(string name, out ERemovePreloadResourceObjectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C81A RID: 51226 RVA: 0x001D4B90 File Offset: 0x001D2D90
+		// Token: 0x0600D49D RID: 54429 RVA: 0x001EE33C File Offset: 0x001EC53C
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C81B RID: 51227 RVA: 0x001D4BB8 File Offset: 0x001D2DB8
+		// Token: 0x0600D49E RID: 54430 RVA: 0x001EE364 File Offset: 0x001EC564
 		public static ERemovePreloadResourceObjectType[] GetValues()
 		{
 			return new ERemovePreloadResourceObjectType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C81C RID: 51228 RVA: 0x001D4BCB File Offset: 0x001D2DCB
+		// Token: 0x0600D49F RID: 54431 RVA: 0x001EE377 File Offset: 0x001EC577
 		public static string[] GetNames()
 		{
 			return new string[]

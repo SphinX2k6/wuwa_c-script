@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018CA RID: 6346
+// Token: 0x02000D83 RID: 3459
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemInteractionPanel : UiPanelBase
 {
-	// Token: 0x0600BA1D RID: 47645 RVA: 0x002A259C File Offset: 0x002A079C
+	// Token: 0x06008E06 RID: 36358 RVA: 0x002ACCF4 File Offset: 0x002AAEF4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,13 +30,13 @@ public class ItemInteractionPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BA1E RID: 47646 RVA: 0x002A264E File Offset: 0x002A084E
+	// Token: 0x06008E07 RID: 36359 RVA: 0x002ACDA6 File Offset: 0x002AAFA6
 	protected override void OnStart()
 	{
 		this.ItemScrollView = new LoopScrollView<ItemInteractionMediumItemGrid, ItemInteractionPanelItemData>(base.GetLoopScrollViewComponent(5), base.GetItem(6).GetOwner() as AUIBaseActor, new Func<ItemInteractionMediumItemGrid>(this.OnGridProxyCreate), false);
 	}
 
-	// Token: 0x0600BA1F RID: 47647 RVA: 0x002A2680 File Offset: 0x002A0880
+	// Token: 0x06008E08 RID: 36360 RVA: 0x002ACDD8 File Offset: 0x002AAFD8
 	public UniTask Refresh(IItemInteractionPanel itemInteractionPanelInfo)
 	{
 		ItemInteractionPanel.<Refresh>d__15 <Refresh>d__;
@@ -48,7 +48,7 @@ public class ItemInteractionPanel : UiPanelBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BA20 RID: 47648 RVA: 0x002A26CB File Offset: 0x002A08CB
+	// Token: 0x06008E09 RID: 36361 RVA: 0x002ACE23 File Offset: 0x002AB023
 	private ItemInteractionMediumItemGrid OnGridProxyCreate()
 	{
 		ItemInteractionMediumItemGrid itemInteractionMediumItemGrid = new ItemInteractionMediumItemGrid();
@@ -58,7 +58,7 @@ public class ItemInteractionPanel : UiPanelBase
 		return itemInteractionMediumItemGrid;
 	}
 
-	// Token: 0x0600BA21 RID: 47649 RVA: 0x002A2708 File Offset: 0x002A0908
+	// Token: 0x06008E0A RID: 36362 RVA: 0x002ACE60 File Offset: 0x002AB060
 	private void OnReduceButtonLongPress(bool isShortPress, MediumItemGrid mediumItemGrid, [Nullable(2)] object data)
 	{
 		if (data == null)
@@ -72,7 +72,7 @@ public class ItemInteractionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA22 RID: 47650 RVA: 0x002A2734 File Offset: 0x002A0934
+	// Token: 0x06008E0B RID: 36363 RVA: 0x002ACE8C File Offset: 0x002AB08C
 	private void OnItemExtendToggleStateChanged(MediumItemGridExtendCallback callbackParameter)
 	{
 		ItemInteractionPanelItemData itemInteractionPanelItemData = callbackParameter.Data as ItemInteractionPanelItemData;
@@ -83,7 +83,7 @@ public class ItemInteractionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA23 RID: 47651 RVA: 0x002A276C File Offset: 0x002A096C
+	// Token: 0x06008E0C RID: 36364 RVA: 0x002ACEC4 File Offset: 0x002AB0C4
 	[NullableContext(2)]
 	private bool OnCanExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
@@ -91,25 +91,25 @@ public class ItemInteractionPanel : UiPanelBase
 		return (this.CurrentSelectedData == null || !this.CurrentSelectedData.IsSelected || itemInteractionPanelItemData != this.CurrentSelectedData) && this.CurrentItemDataList.IndexOf(itemInteractionPanelItemData) >= 0 && (this.OnCanExecuteChangeCallback == null || this.OnCanExecuteChangeCallback(itemInteractionPanelItemData));
 	}
 
-	// Token: 0x0600BA24 RID: 47652 RVA: 0x002A27C7 File Offset: 0x002A09C7
+	// Token: 0x06008E0D RID: 36365 RVA: 0x002ACF1F File Offset: 0x002AB11F
 	public void BindOnReduceButtonTrigger(Action<ItemInteractionPanelItemData> onReduceButtonTriggerCallback)
 	{
 		this.OnReduceButtonTriggerCallback = onReduceButtonTriggerCallback;
 	}
 
-	// Token: 0x0600BA25 RID: 47653 RVA: 0x002A27D0 File Offset: 0x002A09D0
+	// Token: 0x06008E0E RID: 36366 RVA: 0x002ACF28 File Offset: 0x002AB128
 	public void BindOnItemExtendToggleStateChanged(Action<ItemInteractionPanelItemData> onItemExtendToggleStateChangedCallback)
 	{
 		this.OnItemExtendToggleStateChangedCallback = onItemExtendToggleStateChangedCallback;
 	}
 
-	// Token: 0x0600BA26 RID: 47654 RVA: 0x002A27D9 File Offset: 0x002A09D9
+	// Token: 0x06008E0F RID: 36367 RVA: 0x002ACF31 File Offset: 0x002AB131
 	public void BindOnCanExecuteChange(Func<ItemInteractionPanelItemData, bool> onCanExecuteChangeCallback)
 	{
 		this.OnCanExecuteChangeCallback = onCanExecuteChangeCallback;
 	}
 
-	// Token: 0x0600BA27 RID: 47655 RVA: 0x002A27E4 File Offset: 0x002A09E4
+	// Token: 0x06008E10 RID: 36368 RVA: 0x002ACF3C File Offset: 0x002AB13C
 	protected override void OnBeforeDestroy()
 	{
 		this.MainTypeIdList.Clear();
@@ -123,7 +123,7 @@ public class ItemInteractionPanel : UiPanelBase
 		this.ClearMainTypeItem();
 	}
 
-	// Token: 0x0600BA28 RID: 47656 RVA: 0x002A2840 File Offset: 0x002A0A40
+	// Token: 0x06008E11 RID: 36369 RVA: 0x002ACF98 File Offset: 0x002AB198
 	private void RefreshItemDataMap()
 	{
 		this.ItemDataMainTypeMap.Clear();
@@ -179,7 +179,7 @@ public class ItemInteractionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA29 RID: 47657 RVA: 0x002A29C4 File Offset: 0x002A0BC4
+	// Token: 0x06008E12 RID: 36370 RVA: 0x002AD11C File Offset: 0x002AB31C
 	private UniTask RefreshMainTypeExtendToggle()
 	{
 		ItemInteractionPanel.<RefreshMainTypeExtendToggle>d__25 <RefreshMainTypeExtendToggle>d__;
@@ -190,13 +190,13 @@ public class ItemInteractionPanel : UiPanelBase
 		return <RefreshMainTypeExtendToggle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BA2A RID: 47658 RVA: 0x002A2A07 File Offset: 0x002A0C07
+	// Token: 0x06008E13 RID: 36371 RVA: 0x002AD15F File Offset: 0x002AB35F
 	private void OnMainTypeExtendToggleStateChanged(int mainTypeId)
 	{
 		this.SelectedMainType(mainTypeId);
 	}
 
-	// Token: 0x0600BA2B RID: 47659 RVA: 0x002A2A10 File Offset: 0x002A0C10
+	// Token: 0x06008E14 RID: 36372 RVA: 0x002AD168 File Offset: 0x002AB368
 	public void SelectedMainType(int mainTypeId)
 	{
 		this.RefreshItemPanel(this.ItemDataMainTypeMap[mainTypeId]);
@@ -214,7 +214,7 @@ public class ItemInteractionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA2C RID: 47660 RVA: 0x002A2A68 File Offset: 0x002A0C68
+	// Token: 0x06008E15 RID: 36373 RVA: 0x002AD1C0 File Offset: 0x002AB3C0
 	public void SetMainTypeRedDotVisible(int mainTypeId, bool bVisible)
 	{
 		ItemInteractionPanelMainTypeItem itemInteractionPanelMainTypeItem;
@@ -224,7 +224,7 @@ public class ItemInteractionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600BA2D RID: 47661 RVA: 0x002A2A8C File Offset: 0x002A0C8C
+	// Token: 0x06008E16 RID: 36374 RVA: 0x002AD1E4 File Offset: 0x002AB3E4
 	private void ClearMainTypeItem()
 	{
 		foreach (ItemInteractionPanelMainTypeItem itemInteractionPanelMainTypeItem in this.MainTypeItemMap.Values)
@@ -234,7 +234,7 @@ public class ItemInteractionPanel : UiPanelBase
 		this.MainTypeItemMap.Clear();
 	}
 
-	// Token: 0x0600BA2E RID: 47662 RVA: 0x002A2AF0 File Offset: 0x002A0CF0
+	// Token: 0x06008E17 RID: 36375 RVA: 0x002AD248 File Offset: 0x002AB448
 	public void RefreshItemPanel(List<ItemInteractionPanelItemData> itemDataList)
 	{
 		LoopScrollView<ItemInteractionMediumItemGrid, ItemInteractionPanelItemData> itemScrollView = this.ItemScrollView;
@@ -246,7 +246,7 @@ public class ItemInteractionPanel : UiPanelBase
 		this.CurrentSelectedData = null;
 	}
 
-	// Token: 0x0600BA2F RID: 47663 RVA: 0x002A2B18 File Offset: 0x002A0D18
+	// Token: 0x06008E18 RID: 36376 RVA: 0x002AD270 File Offset: 0x002AB470
 	public void RefreshItemGrid(ItemInteractionPanelItemData data)
 	{
 		int num = this.CurrentItemDataList.IndexOf(data);
@@ -262,7 +262,7 @@ public class ItemInteractionPanel : UiPanelBase
 		itemScrollView.RefreshGridProxy(num);
 	}
 
-	// Token: 0x0600BA30 RID: 47664 RVA: 0x002A2B48 File Offset: 0x002A0D48
+	// Token: 0x06008E19 RID: 36377 RVA: 0x002AD2A0 File Offset: 0x002AB4A0
 	public void SetItemGridSelected(bool bSelected, ItemInteractionPanelItemData data)
 	{
 		int num = this.CurrentItemDataList.IndexOf(data);
@@ -287,13 +287,13 @@ public class ItemInteractionPanel : UiPanelBase
 		itemScrollView.RefreshGridProxy(num);
 	}
 
-	// Token: 0x0600BA31 RID: 47665 RVA: 0x002A2B92 File Offset: 0x002A0D92
+	// Token: 0x06008E1A RID: 36378 RVA: 0x002AD2EA File Offset: 0x002AB4EA
 	public List<ItemInteractionPanelItemData> GetCurrentItemDataList()
 	{
 		return this.CurrentItemDataList;
 	}
 
-	// Token: 0x0600BA32 RID: 47666 RVA: 0x002A2B9C File Offset: 0x002A0D9C
+	// Token: 0x06008E1B RID: 36379 RVA: 0x002AD2F4 File Offset: 0x002AB4F4
 	[NullableContext(2)]
 	public ItemInteractionPanelItemData GetItemData(int itemConfigId)
 	{
@@ -305,38 +305,38 @@ public class ItemInteractionPanel : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x0600BA33 RID: 47667 RVA: 0x002A2BBC File Offset: 0x002A0DBC
+	// Token: 0x06008E1C RID: 36380 RVA: 0x002AD314 File Offset: 0x002AB514
 	public IReadOnlyDictionary<int, List<ItemInteractionPanelItemData>> GetItemDataMainTypeMap()
 	{
 		return this.ItemDataMainTypeMap;
 	}
 
-	// Token: 0x0600BA34 RID: 47668 RVA: 0x002A2BC4 File Offset: 0x002A0DC4
+	// Token: 0x06008E1D RID: 36381 RVA: 0x002AD31C File Offset: 0x002AB51C
 	public IReadOnlyList<int> GetMainTypeIdList()
 	{
 		return this.MainTypeIdList;
 	}
 
-	// Token: 0x04005450 RID: 21584
+	// Token: 0x040054FB RID: 21755
 	[Nullable(2)]
 	private IItemInteractionPanel ItemInteractionPanelInfo;
 
-	// Token: 0x04005451 RID: 21585
+	// Token: 0x040054FC RID: 21756
 	private readonly Dictionary<int, List<ItemInteractionPanelItemData>> ItemDataMainTypeMap = new Dictionary<int, List<ItemInteractionPanelItemData>>();
 
-	// Token: 0x04005452 RID: 21586
+	// Token: 0x040054FD RID: 21757
 	private readonly Dictionary<int, ItemInteractionPanelItemData> ItemDataMap = new Dictionary<int, ItemInteractionPanelItemData>();
 
-	// Token: 0x04005453 RID: 21587
+	// Token: 0x040054FE RID: 21758
 	private readonly List<int> MainTypeIdList = new List<int>();
 
-	// Token: 0x04005454 RID: 21588
+	// Token: 0x040054FF RID: 21759
 	private List<ItemInteractionPanelItemData> CurrentItemDataList = new List<ItemInteractionPanelItemData>();
 
-	// Token: 0x04005455 RID: 21589
+	// Token: 0x04005500 RID: 21760
 	private readonly Dictionary<int, ItemInteractionPanelMainTypeItem> MainTypeItemMap = new Dictionary<int, ItemInteractionPanelMainTypeItem>();
 
-	// Token: 0x04005456 RID: 21590
+	// Token: 0x04005501 RID: 21761
 	[Nullable(new byte[]
 	{
 		2,
@@ -345,7 +345,7 @@ public class ItemInteractionPanel : UiPanelBase
 	})]
 	private LoopScrollView<ItemInteractionMediumItemGrid, ItemInteractionPanelItemData> ItemScrollView;
 
-	// Token: 0x04005457 RID: 21591
+	// Token: 0x04005502 RID: 21762
 	[Nullable(new byte[]
 	{
 		2,
@@ -353,7 +353,7 @@ public class ItemInteractionPanel : UiPanelBase
 	})]
 	private Action<ItemInteractionPanelItemData> OnItemExtendToggleStateChangedCallback;
 
-	// Token: 0x04005458 RID: 21592
+	// Token: 0x04005503 RID: 21763
 	[Nullable(new byte[]
 	{
 		2,
@@ -361,7 +361,7 @@ public class ItemInteractionPanel : UiPanelBase
 	})]
 	private Action<ItemInteractionPanelItemData> OnReduceButtonTriggerCallback;
 
-	// Token: 0x04005459 RID: 21593
+	// Token: 0x04005504 RID: 21764
 	[Nullable(new byte[]
 	{
 		2,
@@ -369,31 +369,31 @@ public class ItemInteractionPanel : UiPanelBase
 	})]
 	private Func<ItemInteractionPanelItemData, bool> OnCanExecuteChangeCallback;
 
-	// Token: 0x0400545A RID: 21594
+	// Token: 0x04005505 RID: 21765
 	[Nullable(2)]
 	private ItemInteractionPanelMainTypeItem SelectedMainTypeItem;
 
-	// Token: 0x0400545B RID: 21595
+	// Token: 0x04005506 RID: 21766
 	[Nullable(2)]
 	private ItemInteractionPanelItemData CurrentSelectedData;
 
-	// Token: 0x02007E4E RID: 32334
+	// Token: 0x02006FD5 RID: 28629
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402955A RID: 169306
+		// Token: 0x04024887 RID: 149639
 		TitleSprite,
-		// Token: 0x0402955B RID: 169307
+		// Token: 0x04024888 RID: 149640
 		TitleText,
-		// Token: 0x0402955C RID: 169308
+		// Token: 0x04024889 RID: 149641
 		ContentSprite,
-		// Token: 0x0402955D RID: 169309
+		// Token: 0x0402488A RID: 149642
 		TitleHorizontalItem,
-		// Token: 0x0402955E RID: 169310
+		// Token: 0x0402488B RID: 149643
 		MainTypeItem,
-		// Token: 0x0402955F RID: 169311
+		// Token: 0x0402488C RID: 149644
 		LoopScrollView,
-		// Token: 0x04029560 RID: 169312
+		// Token: 0x0402488D RID: 149645
 		SourceItemGridItem
 	}
 }

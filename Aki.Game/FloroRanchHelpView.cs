@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -8,16 +7,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E56 RID: 7766
+// Token: 0x02001318 RID: 4888
 public class FloroRanchHelpView : UiViewBase, IExtraUiPopFrameType
 {
-	// Token: 0x0600EC18 RID: 60440 RVA: 0x00380C2C File Offset: 0x0037EE2C
+	// Token: 0x0600C037 RID: 49207 RVA: 0x0038C8DC File Offset: 0x0038AADC
 	[NullableContext(1)]
 	public FloroRanchHelpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EC19 RID: 60441 RVA: 0x00380C38 File Offset: 0x0037EE38
+	// Token: 0x0600C038 RID: 49208 RVA: 0x0038C8E8 File Offset: 0x0038AAE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +32,7 @@ public class FloroRanchHelpView : UiViewBase, IExtraUiPopFrameType
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600EC1A RID: 60442 RVA: 0x00380CC4 File Offset: 0x0037EEC4
+	// Token: 0x0600C039 RID: 49209 RVA: 0x0038C974 File Offset: 0x0038AB74
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<FloroRanchHelpItem, HelpText>(base.GetVerticalLayout(1), () => new FloroRanchHelpItem(), null, false, true);
@@ -41,7 +40,7 @@ public class FloroRanchHelpView : UiViewBase, IExtraUiPopFrameType
 		IReadOnlyList<HelpText> helpContentInfoByGroupId = HelpConfig.Instance.GetHelpContentInfoByGroupId(groupId);
 		if (helpContentInfoByGroupId != null)
 		{
-			this.Layout.RefreshByData(helpContentInfoByGroupId.ToList<HelpText>(), null, false);
+			this.Layout.RefreshByData(helpContentInfoByGroupId, null, false);
 			if (helpContentInfoByGroupId.Count > 0)
 			{
 				LguiUtil.Instance.SetLocalTextNew(base.GetText(0), helpContentInfoByGroupId[0].Title, Array.Empty<object>());
@@ -49,14 +48,14 @@ public class FloroRanchHelpView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x0600EC1B RID: 60443 RVA: 0x00380D61 File Offset: 0x0037EF61
+	// Token: 0x0600C03A RID: 49210 RVA: 0x0038CA0C File Offset: 0x0038AC0C
 	[NullableContext(2)]
 	public EUiBehaviourPopType? GetExtraPopFrameType(object param)
 	{
 		return new EUiBehaviourPopType?(EUiBehaviourPopType.FloroRanchHelp);
 	}
 
-	// Token: 0x04006D77 RID: 28023
+	// Token: 0x04006E58 RID: 28248
 	[Nullable(new byte[]
 	{
 		2,
@@ -64,14 +63,14 @@ public class FloroRanchHelpView : UiViewBase, IExtraUiPopFrameType
 	})]
 	private GenericLayout<FloroRanchHelpItem, HelpText> Layout;
 
-	// Token: 0x02008409 RID: 33801
+	// Token: 0x0200758E RID: 30094
 	private enum EComponents
 	{
-		// Token: 0x0402AFA1 RID: 176033
+		// Token: 0x040262C5 RID: 156357
 		TextTitle,
-		// Token: 0x0402AFA2 RID: 176034
+		// Token: 0x040262C6 RID: 156358
 		ItemContent,
-		// Token: 0x0402AFA3 RID: 176035
+		// Token: 0x040262C7 RID: 156359
 		ItemText
 	}
 }

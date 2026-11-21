@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A90 RID: 19088
+	// Token: 0x02003A38 RID: 14904
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingDevelopBottomDragItem : UiPanelBase
 	{
-		// Token: 0x060317A6 RID: 202662 RVA: 0x00B77CE8 File Offset: 0x00B75EE8
+		// Token: 0x06026536 RID: 156982 RVA: 0x00ABBC9C File Offset: 0x00AB9E9C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060317A7 RID: 202663 RVA: 0x00B77D94 File Offset: 0x00B75F94
+		// Token: 0x06026537 RID: 156983 RVA: 0x00ABBD48 File Offset: 0x00AB9F48
 		public void Refresh(TrapDefenseBuildingDevelopItemData data)
 		{
 			this.Data = data;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.SetTextureByPath(data.GetIconPath(), base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x060317A8 RID: 202664 RVA: 0x00B77E05 File Offset: 0x00B76005
+		// Token: 0x06026538 RID: 156984 RVA: 0x00ABBDB9 File Offset: 0x00AB9FB9
 		public UUIDraggableComponent GetDraggableComp()
 		{
 			return base.GetDraggable(0);
 		}
 
-		// Token: 0x060317A9 RID: 202665 RVA: 0x00B77E0E File Offset: 0x00B7600E
+		// Token: 0x06026539 RID: 156985 RVA: 0x00ABBDC2 File Offset: 0x00AB9FC2
 		public void OnStartDrag()
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			sprite.SetUIActive(true);
 		}
 
-		// Token: 0x060317AA RID: 202666 RVA: 0x00B77E22 File Offset: 0x00B76022
+		// Token: 0x0602653A RID: 156986 RVA: 0x00ABBDD6 File Offset: 0x00AB9FD6
 		public void OnEndDrag()
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -84,23 +84,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x0401A744 RID: 108356
+		// Token: 0x04015096 RID: 86166
 		protected TrapDefenseBuildingDevelopItemData Data;
 
-		// Token: 0x0200ABE2 RID: 44002
+		// Token: 0x02009602 RID: 38402
 		[NullableContext(0)]
 		private class EDefine
 		{
-			// Token: 0x040343BD RID: 213949
+			// Token: 0x0402ED6E RID: 191854
 			public const int Item = 0;
 
-			// Token: 0x040343BE RID: 213950
+			// Token: 0x0402ED6F RID: 191855
 			public const int SpriteBg = 1;
 
-			// Token: 0x040343BF RID: 213951
+			// Token: 0x0402ED70 RID: 191856
 			public const int TextureIcon = 2;
 
-			// Token: 0x040343C0 RID: 213952
+			// Token: 0x0402ED71 RID: 191857
 			public const int Txt = 3;
 		}
 	}

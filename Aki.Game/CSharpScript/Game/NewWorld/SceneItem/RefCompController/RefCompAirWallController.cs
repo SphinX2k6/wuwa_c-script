@@ -18,36 +18,36 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B3 RID: 29107
+	// Token: 0x02006268 RID: 25192
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RefCompAirWallController : RefCompControllerBase, IStaticVariableResetter
 	{
-		// Token: 0x060473AA RID: 291754 RVA: 0x0121AD94 File Offset: 0x01218F94
+		// Token: 0x0603CCA5 RID: 248997 RVA: 0x01174C98 File Offset: 0x01172E98
 		public RefCompAirWallController(Entity entity, long creatureDataId, int pbDataId) : base(entity, creatureDataId, pbDataId)
 		{
 		}
 
-		// Token: 0x060473AB RID: 291755 RVA: 0x0121ADC0 File Offset: 0x01218FC0
+		// Token: 0x0603CCA6 RID: 248998 RVA: 0x01174CC4 File Offset: 0x01172EC4
 		static RefCompAirWallController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RefCompAirWallController.CreateStaticDefaultValue), new Action(RefCompAirWallController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060473AC RID: 291756 RVA: 0x0121AEF3 File Offset: 0x012190F3
+		// Token: 0x0603CCA7 RID: 248999 RVA: 0x01174DF7 File Offset: 0x01172FF7
 		public static void CreateStaticDefaultValue()
 		{
 			RefCompAirWallController.EnableTeleportIntoAirWall = false;
 		}
 
-		// Token: 0x060473AD RID: 291757 RVA: 0x0121AEFB File Offset: 0x012190FB
+		// Token: 0x0603CCA8 RID: 249000 RVA: 0x01174DFF File Offset: 0x01172FFF
 		public static void ResetStaticDefaultValue()
 		{
 			RefCompAirWallController.EnableTeleportIntoAirWall = false;
 		}
 
-		// Token: 0x17009DB4 RID: 40372
-		// (get) Token: 0x060473AE RID: 291758 RVA: 0x0121AF03 File Offset: 0x01219103
+		// Token: 0x17007304 RID: 29444
+		// (get) Token: 0x0603CCA9 RID: 249001 RVA: 0x01174E07 File Offset: 0x01173007
 		public override RefCompDefine.ERefCompControllerType Type
 		{
 			get
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x17009DB5 RID: 40373
-		// (get) Token: 0x060473AF RID: 291759 RVA: 0x0121AF06 File Offset: 0x01219106
+		// Token: 0x17007305 RID: 29445
+		// (get) Token: 0x0603CCAA RID: 249002 RVA: 0x01174E0A File Offset: 0x0117300A
 		public Dictionary<string, int> AirWallEffectViewHandles
 		{
 			get
@@ -70,8 +70,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x17009DB6 RID: 40374
-		// (get) Token: 0x060473B0 RID: 291760 RVA: 0x0121AF21 File Offset: 0x01219121
+		// Token: 0x17007306 RID: 29446
+		// (get) Token: 0x0603CCAB RID: 249003 RVA: 0x01174E25 File Offset: 0x01173025
 		public List<FName> AirWallRefs
 		{
 			get
@@ -84,8 +84,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x17009DB7 RID: 40375
-		// (get) Token: 0x060473B1 RID: 291761 RVA: 0x0121AF3C File Offset: 0x0121913C
+		// Token: 0x17007307 RID: 29447
+		// (get) Token: 0x0603CCAC RID: 249004 RVA: 0x01174E40 File Offset: 0x01173040
 		public RefCompAirWallController.AirWallEffectHandler AirWallEffectChain
 		{
 			get
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473B2 RID: 291762 RVA: 0x0121AF74 File Offset: 0x01219174
+		// Token: 0x0603CCAD RID: 249005 RVA: 0x01174E78 File Offset: 0x01173078
 		public override void OnStart()
 		{
 			this.TraceLineElement = new UTraceLineElement();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.TraceLineElement.SetTraceTypeQuery(KuroTraceTypeQuery.AcrossBlock);
 		}
 
-		// Token: 0x060473B3 RID: 291763 RVA: 0x0121AFD4 File Offset: 0x012191D4
+		// Token: 0x0603CCAE RID: 249006 RVA: 0x01174ED8 File Offset: 0x011730D8
 		public override void OnEnd()
 		{
 			this.ClearAirWall();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.TraceLineElement = null;
 		}
 
-		// Token: 0x060473B4 RID: 291764 RVA: 0x0121B074 File Offset: 0x01219274
+		// Token: 0x0603CCAF RID: 249007 RVA: 0x01174F78 File Offset: 0x01173178
 		private static void ClearHitDelegate(AActor wall)
 		{
 			wall.OnActorHit.Clear();
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473B5 RID: 291765 RVA: 0x0121B0B0 File Offset: 0x012192B0
+		// Token: 0x0603CCB0 RID: 249008 RVA: 0x01174FB4 File Offset: 0x011731B4
 		private void ClearOverlapDelegate(AActor wall)
 		{
 			wall.OnActorBeginOverlap.Remove(new Action<AActor, AActor>(this.ExecutePlayerOverlapAirWall));
 		}
 
-		// Token: 0x060473B6 RID: 291766 RVA: 0x0121B0CC File Offset: 0x012192CC
+		// Token: 0x0603CCB1 RID: 249009 RVA: 0x01174FD0 File Offset: 0x011731D0
 		private void ClearAirWall()
 		{
 			if (this.AirWallRefs.Count == 0)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.NextHitTime.Clear();
 		}
 
-		// Token: 0x060473B7 RID: 291767 RVA: 0x0121B1C0 File Offset: 0x012193C0
+		// Token: 0x0603CCB2 RID: 249010 RVA: 0x011750C4 File Offset: 0x011732C4
 		[NullableContext(2)]
 		private static void OnBrushComponentHit(int? centerEntityId, UPrimitiveComponent hitComp, AActor otherActor, UPrimitiveComponent otherComp, FVector? normalImpulse, [Nullable(1)] FHitResult hitResult)
 		{
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473B8 RID: 291768 RVA: 0x0121B39C File Offset: 0x0121959C
+		// Token: 0x0603CCB3 RID: 249011 RVA: 0x011752A0 File Offset: 0x011734A0
 		private bool CheckNoAirWallBetweenSceneTeamItemAndManager(global::Vector startLocation, global::Vector endLocation)
 		{
 			if (this.TraceLineElement == null)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return false;
 		}
 
-		// Token: 0x060473B9 RID: 291769 RVA: 0x0121B458 File Offset: 0x01219658
+		// Token: 0x0603CCB4 RID: 249012 RVA: 0x0117535C File Offset: 0x0117355C
 		private void JudgeSceneTeamItemNotControlledInAirWall(FBoxSphereBounds? bounds, GeneralContext context)
 		{
 			if (bounds == null)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473BA RID: 291770 RVA: 0x0121B6B8 File Offset: 0x012198B8
+		// Token: 0x0603CCB5 RID: 249013 RVA: 0x011755BC File Offset: 0x011737BC
 		public void HandleAirWall(ToggleAirWall config, GeneralContext context)
 		{
 			IOpenAirWall openAirWall = null;
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.JudgeSceneTeamItemNotControlledInAirWall(bounds, context);
 		}
 
-		// Token: 0x060473BB RID: 291771 RVA: 0x0121B980 File Offset: 0x01219B80
+		// Token: 0x0603CCB6 RID: 249014 RVA: 0x01175884 File Offset: 0x01173A84
 		private void ClearOneAirWall(AActor wall, string sPath, FName path)
 		{
 			RefCompAirWallController.ClearHitDelegate(wall);
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			airWallEffectViewHandles2.Remove(sPath);
 		}
 
-		// Token: 0x060473BC RID: 291772 RVA: 0x0121BAB0 File Offset: 0x01219CB0
+		// Token: 0x0603CCB7 RID: 249015 RVA: 0x011759B4 File Offset: 0x01173BB4
 		private void SpawnAirWallEffect(string inActorRef, ABrush inAirWall, IOpenAirWall config)
 		{
 			string name = inAirWall.GetName();
@@ -511,7 +511,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473BD RID: 291773 RVA: 0x0121BC00 File Offset: 0x01219E00
+		// Token: 0x0603CCB8 RID: 249016 RVA: 0x01175B04 File Offset: 0x01173D04
 		[NullableContext(2)]
 		protected void ExecuteHitWall(AActor selfActor, AActor otherActor, FVector? normalImpulse, [Nullable(1)] FHitResult hit)
 		{
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SpawnHitEffect(selfActor, this.TempQuat1.ToUeQuat(), hitEffectPosition);
 		}
 
-		// Token: 0x060473BE RID: 291774 RVA: 0x0121BDF0 File Offset: 0x01219FF0
+		// Token: 0x0603CCB9 RID: 249017 RVA: 0x01175CF4 File Offset: 0x01173EF4
 		private void ExecuteBulletHitWall(AActor airWall, global::Vector impactPoint, global::Vector normal)
 		{
 			double? num = this.AirWallHitCd.ContainsKey(airWall.GetName()) ? new double?((double)this.AirWallHitCd[airWall.GetName()]) : null;
@@ -627,7 +627,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SpawnHitEffect(airWall, this.TempQuat1.ToUeQuat(), impactPoint.ToUeVector(false));
 		}
 
-		// Token: 0x060473BF RID: 291775 RVA: 0x0121BFAC File Offset: 0x0121A1AC
+		// Token: 0x0603CCBA RID: 249018 RVA: 0x01175EB0 File Offset: 0x011740B0
 		[NullableContext(2)]
 		private void ExecutePlayerOverlapAirWall(AActor overlappedActor, AActor otherActor)
 		{
@@ -708,7 +708,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SpawnHitEffect(overlappedActor, this.TempQuat1.ToUeQuat(), fvectorDouble2);
 		}
 
-		// Token: 0x060473C0 RID: 291776 RVA: 0x0121C1FC File Offset: 0x0121A3FC
+		// Token: 0x0603CCBB RID: 249019 RVA: 0x01176100 File Offset: 0x01174300
 		private void SpawnHitEffect(AActor selfActor, FQuat hitEffectRotation, FVectorDouble hitEffectPosition)
 		{
 			FVector fvector = global::Vector.OneVectorDouble;
@@ -721,7 +721,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			instance.SpawnUnloopedEffect(world, ftransformDouble, path, "[SceneItemReferenceComponent.ExecuteHitWall]", null, global::EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x060473C1 RID: 291777 RVA: 0x0121C25C File Offset: 0x0121A45C
+		// Token: 0x0603CCBC RID: 249020 RVA: 0x01176160 File Offset: 0x01174360
 		public List<AActor> GetAirWallActors()
 		{
 			List<AActor> list = new List<AActor>();
@@ -740,28 +740,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return list;
 		}
 
-		// Token: 0x0402574F RID: 153423
+		// Token: 0x040203BE RID: 132030
 		public static readonly FName WALL_COMMON_COLLISION_NAME = new FName("InvisibleWallCommon");
 
-		// Token: 0x04025750 RID: 153424
+		// Token: 0x040203BF RID: 132031
 		public static readonly FName WALL_HUGE_BOSS_COLLISION_NAME = new FName("InvisibleWallHugeBoss");
 
-		// Token: 0x04025751 RID: 153425
+		// Token: 0x040203C0 RID: 132032
 		public static readonly FName WALL_ONLY_BULLET_COLLISION_NAME = new FName("InvisibleWallBulletOnly");
 
-		// Token: 0x04025752 RID: 153426
+		// Token: 0x040203C1 RID: 132033
 		public static readonly FName WALL_ONLY_MONSTER_COLLISION_NAME = new FName("InvisibleWallMonsterOnly");
 
-		// Token: 0x04025753 RID: 153427
+		// Token: 0x040203C2 RID: 132034
 		public static readonly FName WALL_ONLY_BLOCK_PLAYER_COLLISION_NAME = new FName("InvisibleWallBlockPlayer");
 
-		// Token: 0x04025754 RID: 153428
+		// Token: 0x040203C3 RID: 132035
 		public static readonly FName WALL_OVERLAP_PLAYER_COLLISION_NAME = new FName("InvisibleWallOverlapPlayer");
 
-		// Token: 0x04025755 RID: 153429
+		// Token: 0x040203C4 RID: 132036
 		public static readonly FName WALL_OVERLAP_PLAYER_BLOCK_PAWN_MONSTER_COLLISION_NAME = new FName("InvisibleWallOverlapPlayerBlockPawnMonster");
 
-		// Token: 0x04025756 RID: 153430
+		// Token: 0x040203C5 RID: 132037
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EAirWallCollisionPreset, FName> AirWallCollisionPresetToFName = new Dictionary<EAirWallCollisionPreset, FName>
 		{
@@ -795,34 +795,34 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		};
 
-		// Token: 0x04025757 RID: 153431
+		// Token: 0x040203C6 RID: 132038
 		public static readonly FName AIR_WALL = new FName("AirWall");
 
-		// Token: 0x04025758 RID: 153432
+		// Token: 0x040203C7 RID: 132039
 		public static readonly FName PLANEWIDTH = new FName("PlaneWidth");
 
-		// Token: 0x04025759 RID: 153433
+		// Token: 0x040203C8 RID: 132040
 		public static readonly FName CIRCLERADIUS = new FName("CircleRadius");
 
-		// Token: 0x0402575A RID: 153434
+		// Token: 0x040203C9 RID: 132041
 		public static readonly FName PLANEHEIGHT = new FName("PlaneHeight");
 
-		// Token: 0x0402575B RID: 153435
+		// Token: 0x040203CA RID: 132042
 		public const float DEFAULT_HIT_CD = 1f;
 
-		// Token: 0x0402575C RID: 153436
+		// Token: 0x040203CB RID: 132043
 		public const int DEFAULT_THICKNESS = 100;
 
-		// Token: 0x0402575D RID: 153437
+		// Token: 0x040203CC RID: 132044
 		public const int DEBUG_DRAW_TIME = 5;
 
-		// Token: 0x0402575E RID: 153438
+		// Token: 0x040203CD RID: 132045
 		public const string LOG_CATEGORY = "AirWallController";
 
-		// Token: 0x0402575F RID: 153439
+		// Token: 0x040203CE RID: 132046
 		public static bool EnableTeleportIntoAirWall = false;
 
-		// Token: 0x04025760 RID: 153440
+		// Token: 0x040203CF RID: 132047
 		[Nullable(new byte[]
 		{
 			2,
@@ -830,45 +830,45 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 		})]
 		private Dictionary<string, int> AirWallEffectViewHandlesInternal;
 
-		// Token: 0x04025761 RID: 153441
+		// Token: 0x040203D0 RID: 132048
 		[Nullable(2)]
 		private List<FName> AirWallRefsInternal;
 
-		// Token: 0x04025762 RID: 153442
+		// Token: 0x040203D1 RID: 132049
 		private readonly Dictionary<string, float> AirWallHitCd = new Dictionary<string, float>();
 
-		// Token: 0x04025763 RID: 153443
+		// Token: 0x040203D2 RID: 132050
 		private readonly Dictionary<string, string> AirWallHitEffectRef = new Dictionary<string, string>();
 
-		// Token: 0x04025764 RID: 153444
+		// Token: 0x040203D3 RID: 132051
 		private readonly Dictionary<string, double> NextHitTime = new Dictionary<string, double>();
 
-		// Token: 0x04025765 RID: 153445
+		// Token: 0x040203D4 RID: 132052
 		[Nullable(2)]
 		private global::Vector TempVector1;
 
-		// Token: 0x04025766 RID: 153446
+		// Token: 0x040203D5 RID: 132053
 		[Nullable(2)]
 		private Quat TempQuat1;
 
-		// Token: 0x04025767 RID: 153447
+		// Token: 0x040203D6 RID: 132054
 		[Nullable(2)]
 		private UTraceLineElement TraceLineElement;
 
-		// Token: 0x04025768 RID: 153448
+		// Token: 0x040203D7 RID: 132055
 		[Nullable(2)]
 		private RefCompAirWallController.AirWallEffectHandler AirWallEffectChainInternal;
 
-		// Token: 0x0200CF07 RID: 52999
+		// Token: 0x0200BA9C RID: 47772
 		[Nullable(0)]
 		public class AirWallEffectParameterContext : IParameterContext
 		{
-			// Token: 0x0605200C RID: 335884 RVA: 0x01648614 File Offset: 0x01646814
+			// Token: 0x060487B6 RID: 296886 RVA: 0x0161A73C File Offset: 0x0161893C
 			public AirWallEffectParameterContext(string actorRef, ABrush airWall, IOpenAirWall config, FTransformDouble transform, Dictionary<string, int> airWallEffectViewHandles, List<FName> airWallRefs, int entityId, int pbDataId)
 			{
 			}
 
-			// Token: 0x0605200D RID: 335885 RVA: 0x01648664 File Offset: 0x01646864
+			// Token: 0x060487B7 RID: 296887 RVA: 0x0161A78C File Offset: 0x0161898C
 			public bool IsValid()
 			{
 				if (!StringUtils.IsNothing(this.ActorRef))
@@ -879,32 +879,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 				return false;
 			}
 
-			// Token: 0x0403E43B RID: 255035
+			// Token: 0x04039760 RID: 235360
 			public string ActorRef = actorRef;
 
-			// Token: 0x0403E43C RID: 255036
+			// Token: 0x04039761 RID: 235361
 			public ABrush AirWall = airWall;
 
-			// Token: 0x0403E43D RID: 255037
+			// Token: 0x04039762 RID: 235362
 			public IOpenAirWall Config = config;
 
-			// Token: 0x0403E43E RID: 255038
+			// Token: 0x04039763 RID: 235363
 			public FTransformDouble Transform = transform;
 
-			// Token: 0x0403E43F RID: 255039
+			// Token: 0x04039764 RID: 235364
 			public Dictionary<string, int> AirWallEffectViewHandles = airWallEffectViewHandles;
 
-			// Token: 0x0403E440 RID: 255040
+			// Token: 0x04039765 RID: 235365
 			public List<FName> AirWallRefs = airWallRefs;
 
-			// Token: 0x0403E441 RID: 255041
+			// Token: 0x04039766 RID: 235366
 			public int EntityId = entityId;
 
-			// Token: 0x0403E442 RID: 255042
+			// Token: 0x04039767 RID: 235367
 			public int PbDataId = pbDataId;
 		}
 
-		// Token: 0x0200CF08 RID: 53000
+		// Token: 0x0200BA9D RID: 47773
 		[Nullable(new byte[]
 		{
 			0,
@@ -912,31 +912,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 		})]
 		public abstract class AirWallEffectHandler : AbstractHandler<RefCompAirWallController.AirWallEffectParameterContext>
 		{
-			// Token: 0x0605200E RID: 335886
+			// Token: 0x060487B8 RID: 296888
 			protected abstract string GetEffectPath(RefCompAirWallController.AirWallEffectParameterContext context);
 
-			// Token: 0x0605200F RID: 335887
+			// Token: 0x060487B9 RID: 296889
 			protected abstract void SetNiagaraParam(RefCompAirWallController.AirWallEffectParameterContext context, int effectHandle);
 
-			// Token: 0x06052010 RID: 335888 RVA: 0x01648686 File Offset: 0x01646886
+			// Token: 0x060487BA RID: 296890 RVA: 0x0161A7AE File Offset: 0x016189AE
 			protected Dictionary<string, int> GetEffectHandleMap(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				return context.AirWallEffectViewHandles;
 			}
 
-			// Token: 0x06052011 RID: 335889 RVA: 0x0164868E File Offset: 0x0164688E
+			// Token: 0x060487BB RID: 296891 RVA: 0x0161A7B6 File Offset: 0x016189B6
 			protected string GetEffectHandleKey(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				return context.ActorRef;
 			}
 
-			// Token: 0x06052012 RID: 335890 RVA: 0x01648696 File Offset: 0x01646896
+			// Token: 0x060487BC RID: 296892 RVA: 0x0161A7BE File Offset: 0x016189BE
 			protected ABrush GetAirWallActor(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				return context.AirWall;
 			}
 
-			// Token: 0x06052013 RID: 335891 RVA: 0x016486A0 File Offset: 0x016468A0
+			// Token: 0x060487BD RID: 296893 RVA: 0x0161A7C8 File Offset: 0x016189C8
 			protected unsafe void SpawnEffectCallback(RefCompAirWallController.AirWallEffectParameterContext context, ELoadEffectResult result, int handle)
 			{
 				switch (result)
@@ -979,7 +979,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 				}
 			}
 
-			// Token: 0x06052014 RID: 335892 RVA: 0x016487D4 File Offset: 0x016469D4
+			// Token: 0x060487BE RID: 296894 RVA: 0x0161A8FC File Offset: 0x01618AFC
 			protected override bool CanHandle(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				bool flag = !StringUtils.IsNothing(this.GetEffectPath(context));
@@ -987,7 +987,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 				return flag && valueOrNull == null;
 			}
 
-			// Token: 0x06052015 RID: 335893 RVA: 0x01648814 File Offset: 0x01646A14
+			// Token: 0x060487BF RID: 296895 RVA: 0x0161A93C File Offset: 0x01618B3C
 			protected override void ExecuteProcessing(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				string effectPath = this.GetEffectPath(context);
@@ -1001,14 +1001,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 				this.GetEffectHandleMap(context)[this.GetEffectHandleKey(context)] = value;
 			}
 
-			// Token: 0x06052016 RID: 335894 RVA: 0x016488B4 File Offset: 0x01646AB4
+			// Token: 0x060487C0 RID: 296896 RVA: 0x0161A9DC File Offset: 0x01618BDC
 			protected override bool ShouldStop(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				int? valueOrNull = this.GetEffectHandleMap(context).GetValueOrNull(this.GetEffectHandleKey(context));
 				return !StringUtils.IsNothing(this.GetEffectPath(context)) && valueOrNull != null;
 			}
 
-			// Token: 0x06052017 RID: 335895 RVA: 0x016488EC File Offset: 0x01646AEC
+			// Token: 0x060487C1 RID: 296897 RVA: 0x0161AA14 File Offset: 0x01618C14
 			protected override void ExecuteStopping(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				Dictionary<string, int> effectHandleMap = this.GetEffectHandleMap(context);
@@ -1022,17 +1022,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x0200CF09 RID: 53001
+		// Token: 0x0200BA9E RID: 47774
 		[Nullable(0)]
 		private class AirWallEffectCommonHandler : RefCompAirWallController.AirWallEffectHandler
 		{
-			// Token: 0x06052019 RID: 335897 RVA: 0x0164895C File Offset: 0x01646B5C
+			// Token: 0x060487C3 RID: 296899 RVA: 0x0161AA84 File Offset: 0x01618C84
 			protected override string GetEffectPath(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				return context.Config.AirWallEffectData ?? "";
 			}
 
-			// Token: 0x0605201A RID: 335898 RVA: 0x01648974 File Offset: 0x01646B74
+			// Token: 0x060487C4 RID: 296900 RVA: 0x0161AA9C File Offset: 0x01618C9C
 			protected override void SetNiagaraParam(RefCompAirWallController.AirWallEffectParameterContext context, int effectHandle)
 			{
 				ABrush airWallActor = base.GetAirWallActor(context);
@@ -1071,17 +1071,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x0200CF0A RID: 53002
+		// Token: 0x0200BA9F RID: 47775
 		[Nullable(0)]
 		private class AirWallEffectSplineHandler : RefCompAirWallController.AirWallEffectHandler
 		{
-			// Token: 0x0605201C RID: 335900 RVA: 0x01648B1D File Offset: 0x01646D1D
+			// Token: 0x060487C6 RID: 296902 RVA: 0x0161AC45 File Offset: 0x01618E45
 			protected override string GetEffectPath(RefCompAirWallController.AirWallEffectParameterContext context)
 			{
 				return context.Config.VectorArrayAirWallEffectData ?? "";
 			}
 
-			// Token: 0x0605201D RID: 335901 RVA: 0x01648B34 File Offset: 0x01646D34
+			// Token: 0x060487C7 RID: 296903 RVA: 0x0161AC5C File Offset: 0x01618E5C
 			protected override void SetNiagaraParam(RefCompAirWallController.AirWallEffectParameterContext context, int effectHandle)
 			{
 				IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(context.PbDataId), null);

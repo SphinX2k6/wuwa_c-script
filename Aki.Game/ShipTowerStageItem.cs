@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029D4 RID: 10708
+// Token: 0x02001F4F RID: 8015
 public class ShipTowerStageItem : UiPanelBase
 {
-	// Token: 0x0601630B RID: 90891 RVA: 0x0059CC94 File Offset: 0x0059AE94
+	// Token: 0x06013D11 RID: 81169 RVA: 0x005C7C4C File Offset: 0x005C5E4C
 	[NullableContext(1)]
 	public UniTask Init(UUIItem item, int data)
 	{
@@ -23,7 +23,7 @@ public class ShipTowerStageItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601630C RID: 90892 RVA: 0x0059CCE8 File Offset: 0x0059AEE8
+	// Token: 0x06013D12 RID: 81170 RVA: 0x005C7CA0 File Offset: 0x005C5EA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,13 +39,13 @@ public class ShipTowerStageItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601630D RID: 90893 RVA: 0x0059CDB0 File Offset: 0x0059AFB0
+	// Token: 0x06013D13 RID: 81171 RVA: 0x005C7D68 File Offset: 0x005C5F68
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x0601630E RID: 90894 RVA: 0x0059CDB8 File Offset: 0x0059AFB8
+	// Token: 0x06013D14 RID: 81172 RVA: 0x005C7D70 File Offset: 0x005C5F70
 	public void UpdateData()
 	{
 		ShipTowerStageData stageDataById = ShipTowerModel.Instance.GetStageDataById(this.ItemDataId);
@@ -84,34 +84,34 @@ public class ShipTowerStageItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A533 RID: 42291
+	// Token: 0x0400A91D RID: 43293
 	protected int ItemDataId;
 
-	// Token: 0x02008FFE RID: 36862
+	// Token: 0x02008245 RID: 33349
 	private static class EChildType
 	{
-		// Token: 0x0402EA02 RID: 190978
+		// Token: 0x0402A0FA RID: 172282
 		public const int ItemLocked = 0;
 
-		// Token: 0x0402EA03 RID: 190979
+		// Token: 0x0402A0FB RID: 172283
 		public const int ItemUnlocked = 1;
 
-		// Token: 0x0402EA04 RID: 190980
+		// Token: 0x0402A0FC RID: 172284
 		public const int ItemPassed = 2;
 
-		// Token: 0x0402EA05 RID: 190981
+		// Token: 0x0402A0FD RID: 172285
 		public const int TxtStageOrderId = 3;
 
-		// Token: 0x0402EA06 RID: 190982
+		// Token: 0x0402A0FE RID: 172286
 		public const int TxtScore = 4;
 
-		// Token: 0x0402EA07 RID: 190983
+		// Token: 0x0402A0FF RID: 172287
 		public const int TxtTitle = 5;
 
-		// Token: 0x0402EA08 RID: 190984
+		// Token: 0x0402A100 RID: 172288
 		public const int SpriteCurrent = 6;
 
-		// Token: 0x0402EA09 RID: 190985
+		// Token: 0x0402A101 RID: 172289
 		public const int TexScoreGrade = 7;
 	}
 }

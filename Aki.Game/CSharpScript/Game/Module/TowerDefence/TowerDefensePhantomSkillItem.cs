@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B58 RID: 19288
+	// Token: 0x02003B00 RID: 15104
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefensePhantomSkillItem : GridProxyAbstract<ITowerDefensePhantomSkillItemData>
 	{
-		// Token: 0x06031F16 RID: 204566 RVA: 0x00B96C40 File Offset: 0x00B94E40
+		// Token: 0x06026CA5 RID: 158885 RVA: 0x00ADAE7C File Offset: 0x00AD907C
 		[NullableContext(1)]
 		public override void Refresh(ITowerDefensePhantomSkillItemData data, bool isSelected, int gridIndex)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), data.DescriptionTextId, data.DescriptionArgs);
 		}
 
-		// Token: 0x06031F17 RID: 204567 RVA: 0x00B96CD4 File Offset: 0x00B94ED4
+		// Token: 0x06026CA6 RID: 158886 RVA: 0x00ADAF10 File Offset: 0x00AD9110
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -55,16 +55,16 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0200ACDD RID: 44253
+		// Token: 0x020096FC RID: 38652
 		private class EComponent
 		{
-			// Token: 0x04034867 RID: 215143
+			// Token: 0x0402F210 RID: 193040
 			public const int SkillText = 0;
 
-			// Token: 0x04034868 RID: 215144
+			// Token: 0x0402F211 RID: 193041
 			public const int LevelText = 1;
 
-			// Token: 0x04034869 RID: 215145
+			// Token: 0x0402F212 RID: 193042
 			public const int DescriptionText = 2;
 		}
 	}

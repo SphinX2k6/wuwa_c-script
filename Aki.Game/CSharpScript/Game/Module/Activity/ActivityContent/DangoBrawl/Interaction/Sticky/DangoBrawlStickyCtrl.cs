@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Sticky
 {
-	// Token: 0x0200686C RID: 26732
+	// Token: 0x020057BC RID: 22460
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlStickyCtrl
 	{
-		// Token: 0x06042C19 RID: 273433 RVA: 0x0103F4EB File Offset: 0x0103D6EB
+		// Token: 0x06037770 RID: 227184 RVA: 0x00F809CB File Offset: 0x00F7EBCB
 		public DangoBrawlStickyCtrl(ActivityDangoBrawlData data, DropResolver resolver, InteractionStateMachine fsm, DangoBrawlPlatformState platformState, DangoBrawlInteractionModeCtrl modes, DangoBrawlSourceAdapterRegistry dangoBrawlSourceAdapters, BagHighlightPresenter highlight)
 		{
 			this.Fsm = fsm;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.PlatformState = platformState;
 		}
 
-		// Token: 0x06042C1A RID: 273434 RVA: 0x0103F528 File Offset: 0x0103D728
+		// Token: 0x06037771 RID: 227185 RVA: 0x00F80A08 File Offset: 0x00F7EC08
 		public void TryEnterReplaceSticky([Nullable(new byte[]
 		{
 			2,
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.BeginStickyCore(dragSourceAdapter, dangoBrawlBackpackItemData.MyUid, currentPointerPos, new EDangoBrawlRotate?(dangoBrawlBackpackItemData.MyRotation)).Forget<bool>();
 		}
 
-		// Token: 0x06042C1B RID: 273435 RVA: 0x0103F5C0 File Offset: 0x0103D7C0
+		// Token: 0x06037772 RID: 227186 RVA: 0x00F80AA0 File Offset: 0x00F7ECA0
 		public void UpdateMove(FVector pointerPos)
 		{
 			if (!this.Fsm.IsSticky())
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			this.Highlight.UpdateFromPointer(payLoad.Visual, pointerPos);
 		}
 
-		// Token: 0x06042C1C RID: 273436 RVA: 0x0103F618 File Offset: 0x0103D818
+		// Token: 0x06037773 RID: 227187 RVA: 0x00F80AF8 File Offset: 0x00F7ECF8
 		public UniTask Place(FVector pointerPos)
 		{
 			DangoBrawlStickyCtrl.<Place>d__11 <Place>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <Place>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C1D RID: 273437 RVA: 0x0103F664 File Offset: 0x0103D864
+		// Token: 0x06037774 RID: 227188 RVA: 0x00F80B44 File Offset: 0x00F7ED44
 		public void RotateVisual()
 		{
 			if (!this.Fsm.IsSticky())
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			draggableItem.SetDraggableRotation(edangoBrawlRotate);
 		}
 
-		// Token: 0x06042C1E RID: 273438 RVA: 0x0103F6C4 File Offset: 0x0103D8C4
+		// Token: 0x06037775 RID: 227189 RVA: 0x00F80BA4 File Offset: 0x00F7EDA4
 		[NullableContext(0)]
 		private UniTask<bool> BeginStickyCore([Nullable(1)] IDragSourceAdapter adapter, int uid, FVector pointerPos, EDangoBrawlRotate? forceRotate = null)
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <BeginStickyCore>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C1F RID: 273439 RVA: 0x0103F728 File Offset: 0x0103D928
+		// Token: 0x06037776 RID: 227190 RVA: 0x00F80C08 File Offset: 0x00F7EE08
 		[NullableContext(0)]
 		private UniTask<bool> PlaceAtPointer(FVector pointerPos)
 		{
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <PlaceAtPointer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042C20 RID: 273440 RVA: 0x0103F774 File Offset: 0x0103D974
+		// Token: 0x06037777 RID: 227191 RVA: 0x00F80C54 File Offset: 0x00F7EE54
 		private void SnapHoldingVisualToGrid(IDragVisual visual, FVector2D pointerLguiPos)
 		{
 			DangoBrawlDropZone zone = this.Resolver.GetZone(EDragTargetKind.Bag);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			visual.MoveTo(valueTuple.Item3);
 		}
 
-		// Token: 0x06042C21 RID: 273441 RVA: 0x0103F7D4 File Offset: 0x0103D9D4
+		// Token: 0x06037778 RID: 227192 RVA: 0x00F80CB4 File Offset: 0x00F7EEB4
 		private static FVector GetCurrentPointerPos()
 		{
 			ULGUIPointerEventData pointerEventData = LguiEventSystemManager.Instance.GetPointerEventData(0, false);
@@ -187,28 +187,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return new FVector((float)vector2D.X, (float)vector2D.Y, 0f);
 		}
 
-		// Token: 0x04022C01 RID: 142337
+		// Token: 0x0401D45E RID: 119902
 		private readonly InteractionStateMachine Fsm;
 
-		// Token: 0x04022C02 RID: 142338
+		// Token: 0x0401D45F RID: 119903
 		private readonly DropResolver Resolver;
 
-		// Token: 0x04022C03 RID: 142339
+		// Token: 0x0401D460 RID: 119904
 		private readonly DangoBrawlSourceAdapterRegistry DangoBrawlSourceAdapters;
 
-		// Token: 0x04022C04 RID: 142340
+		// Token: 0x0401D461 RID: 119905
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022C05 RID: 142341
+		// Token: 0x0401D462 RID: 119906
 		private readonly BagHighlightPresenter Highlight;
 
-		// Token: 0x04022C06 RID: 142342
+		// Token: 0x0401D463 RID: 119907
 		private readonly DangoBrawlInteractionModeCtrl Modes;
 
-		// Token: 0x04022C07 RID: 142343
+		// Token: 0x0401D464 RID: 119908
 		private readonly DangoBrawlPlatformState PlatformState;
 
-		// Token: 0x04022C08 RID: 142344
+		// Token: 0x0401D465 RID: 119909
 		private bool Placing;
 	}
 }

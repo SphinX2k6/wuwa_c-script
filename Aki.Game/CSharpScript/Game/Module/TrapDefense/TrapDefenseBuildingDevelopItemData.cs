@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A27 RID: 18983
+	// Token: 0x020039CF RID: 14799
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingDevelopItemData
 	{
-		// Token: 0x0603147B RID: 201851 RVA: 0x00B6DB9A File Offset: 0x00B6BD9A
+		// Token: 0x0602620B RID: 156171 RVA: 0x00AB1B96 File Offset: 0x00AAFD96
 		public static TrapDefenseBuildingDevelopItemData Create(int id, ETrapDefenseMachineType type)
 		{
 			TrapDefenseBuildingDevelopItemData trapDefenseBuildingDevelopItemData = new TrapDefenseBuildingDevelopItemData(id, type);
@@ -20,14 +19,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseBuildingDevelopItemData;
 		}
 
-		// Token: 0x0603147C RID: 201852 RVA: 0x00B6DBAC File Offset: 0x00B6BDAC
+		// Token: 0x0602620C RID: 156172 RVA: 0x00AB1BA8 File Offset: 0x00AAFDA8
 		private TrapDefenseBuildingDevelopItemData(int id, ETrapDefenseMachineType type)
 		{
 			this.Id = id;
 			this.Type = type;
 		}
 
-		// Token: 0x0603147D RID: 201853 RVA: 0x00B6DBFC File Offset: 0x00B6BDFC
+		// Token: 0x0602620D RID: 156173 RVA: 0x00AB1BF8 File Offset: 0x00AAFDF8
 		private void UpdateConfig()
 		{
 			if (this.IsBuilding)
@@ -40,7 +39,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.AuxiliaryTypeConfig = TrapDefenseConfig.Instance.GetAuxiliaryTypeById(this.AuxiliaryConfig.Value.AuxiliaryType);
 		}
 
-		// Token: 0x0603147E RID: 201854 RVA: 0x00B6DC84 File Offset: 0x00B6BE84
+		// Token: 0x0602620E RID: 156174 RVA: 0x00AB1C80 File Offset: 0x00AAFE80
 		public string GetIconPath()
 		{
 			if (!this.IsBuilding)
@@ -50,7 +49,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingTypeConfig.Value.Icon;
 		}
 
-		// Token: 0x0603147F RID: 201855 RVA: 0x00B6DCC0 File Offset: 0x00B6BEC0
+		// Token: 0x0602620F RID: 156175 RVA: 0x00AB1CBC File Offset: 0x00AAFEBC
 		public string GetName()
 		{
 			if (!this.IsBuilding)
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingTypeConfig.Value.Name;
 		}
 
-		// Token: 0x06031480 RID: 201856 RVA: 0x00B6DCFC File Offset: 0x00B6BEFC
+		// Token: 0x06026210 RID: 156176 RVA: 0x00AB1CF8 File Offset: 0x00AAFEF8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -77,7 +76,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<string, string[]>(this.AuxiliaryConfig.Value.Desc, this.AuxiliaryConfig.Value.DescArgs());
 		}
 
-		// Token: 0x06031481 RID: 201857 RVA: 0x00B6DD68 File Offset: 0x00B6BF68
+		// Token: 0x06026211 RID: 156177 RVA: 0x00AB1D64 File Offset: 0x00AAFF64
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -93,19 +92,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<string, string>(this.AuxiliaryTypeConfig.Value.VideoName, this.AuxiliaryTypeConfig.Value.VideoPath);
 		}
 
-		// Token: 0x06031482 RID: 201858 RVA: 0x00B6DDD4 File Offset: 0x00B6BFD4
+		// Token: 0x06026212 RID: 156178 RVA: 0x00AB1DD0 File Offset: 0x00AAFFD0
 		public void SetIsUnLock(bool isUnlock)
 		{
 			this.IsUnlock = isUnlock;
 		}
 
-		// Token: 0x06031483 RID: 201859 RVA: 0x00B6DDDD File Offset: 0x00B6BFDD
+		// Token: 0x06026213 RID: 156179 RVA: 0x00AB1DD9 File Offset: 0x00AAFFD9
 		public int GetLevel()
 		{
 			return TrapDefenseModel.Instance.DecomposeMachineId(this.Id).Level;
 		}
 
-		// Token: 0x06031484 RID: 201860 RVA: 0x00B6DDF4 File Offset: 0x00B6BFF4
+		// Token: 0x06026214 RID: 156180 RVA: 0x00AB1DF0 File Offset: 0x00AAFFF0
 		public ETrapDefensePlacementType GetPlacementType()
 		{
 			if (!this.IsBuilding)
@@ -115,7 +114,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return (ETrapDefensePlacementType)this.BuildingTypeConfig.Value.PlacementType;
 		}
 
-		// Token: 0x06031485 RID: 201861 RVA: 0x00B6DE20 File Offset: 0x00B6C020
+		// Token: 0x06026215 RID: 156181 RVA: 0x00AB1E1C File Offset: 0x00AB001C
 		public int GetUpgradeCost()
 		{
 			if (!this.IsBuilding)
@@ -125,7 +124,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingConfig.Value.UpgradeCost;
 		}
 
-		// Token: 0x06031486 RID: 201862 RVA: 0x00B6DE5C File Offset: 0x00B6C05C
+		// Token: 0x06026216 RID: 156182 RVA: 0x00AB1E58 File Offset: 0x00AB0058
 		public int GetBuildingCost(bool isDynamic)
 		{
 			if (!this.IsBuilding)
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingConfig.Value.ConstructDefaultCost;
 		}
 
-		// Token: 0x06031487 RID: 201863 RVA: 0x00B6DE99 File Offset: 0x00B6C099
+		// Token: 0x06026217 RID: 156183 RVA: 0x00AB1E95 File Offset: 0x00AB0095
 		public float GetCoolDown()
 		{
 			if (!this.IsBuilding)
@@ -149,7 +148,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return 0f;
 		}
 
-		// Token: 0x06031488 RID: 201864 RVA: 0x00B6DEB4 File Offset: 0x00B6C0B4
+		// Token: 0x06026218 RID: 156184 RVA: 0x00AB1EB0 File Offset: 0x00AB00B0
 		public float GetRemainCd()
 		{
 			if (this.IsBuilding)
@@ -168,7 +167,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return 0f;
 		}
 
-		// Token: 0x06031489 RID: 201865 RVA: 0x00B6DF10 File Offset: 0x00B6C110
+		// Token: 0x06026219 RID: 156185 RVA: 0x00AB1F0C File Offset: 0x00AB010C
 		public bool GetIsMaxLevel(bool needCur)
 		{
 			int num = needCur ? this.CurMaxLevel : this.GetMaxLevel();
@@ -176,25 +175,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return num == level;
 		}
 
-		// Token: 0x0603148A RID: 201866 RVA: 0x00B6DF38 File Offset: 0x00B6C138
+		// Token: 0x0602621A RID: 156186 RVA: 0x00AB1F34 File Offset: 0x00AB0134
 		public void SetBuildingPrice(int origin, int discount)
 		{
 			this.BuildingCostPriceDiscount = discount;
 		}
 
-		// Token: 0x0603148B RID: 201867 RVA: 0x00B6DF41 File Offset: 0x00B6C141
+		// Token: 0x0602621B RID: 156187 RVA: 0x00AB1F3D File Offset: 0x00AB013D
 		public void SetCurMaxLevel(int max)
 		{
 			this.CurMaxLevel = max;
 		}
 
-		// Token: 0x0603148C RID: 201868 RVA: 0x00B6DF4A File Offset: 0x00B6C14A
+		// Token: 0x0602621C RID: 156188 RVA: 0x00AB1F46 File Offset: 0x00AB0146
 		public int GetCurMaxLevel()
 		{
 			return this.CurMaxLevel;
 		}
 
-		// Token: 0x0603148D RID: 201869 RVA: 0x00B6DF54 File Offset: 0x00B6C154
+		// Token: 0x0602621D RID: 156189 RVA: 0x00AB1F50 File Offset: 0x00AB0150
 		public int GetMaxLevel()
 		{
 			if (this.MaxLevel >= 0)
@@ -210,13 +209,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.MaxLevel;
 		}
 
-		// Token: 0x0603148E RID: 201870 RVA: 0x00B6DFB8 File Offset: 0x00B6C1B8
+		// Token: 0x0602621E RID: 156190 RVA: 0x00AB1FB4 File Offset: 0x00AB01B4
 		public bool GetIsUnlock()
 		{
 			return this.IsUnlock;
 		}
 
-		// Token: 0x0603148F RID: 201871 RVA: 0x00B6DFC0 File Offset: 0x00B6C1C0
+		// Token: 0x0602621F RID: 156191 RVA: 0x00AB1FBC File Offset: 0x00AB01BC
 		public bool GetHasBranch()
 		{
 			if (this.IsBuilding)
@@ -230,7 +229,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return auxiliaryConfig.Value.Level == auxiliaryTypeConfig.Value.MaxLevel && auxiliaryTypeConfig.Value.BranchCount > 1;
 		}
 
-		// Token: 0x06031490 RID: 201872 RVA: 0x00B6E060 File Offset: 0x00B6C260
+		// Token: 0x06026220 RID: 156192 RVA: 0x00AB205C File Offset: 0x00AB025C
 		public int GetBranchCount()
 		{
 			if (!this.IsBuilding)
@@ -240,7 +239,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingTypeConfig.Value.BranchCount;
 		}
 
-		// Token: 0x06031491 RID: 201873 RVA: 0x00B6E09C File Offset: 0x00B6C29C
+		// Token: 0x06026221 RID: 156193 RVA: 0x00AB2098 File Offset: 0x00AB0298
 		public unsafe List<ITrapDefenseBuildingDevelopAttrInfo> GetAttrItem()
 		{
 			if (this.AttrItems.Count > 0)
@@ -284,6 +283,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 					instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 					return this.AttrItems;
 				}
+				KSCBaseProperty valueOrDefault = buffData.GetValueOrDefault();
 				using (IEnumerator<int> enumerator = buildingTypeConfig.Value.AttrShowIter().GetEnumerator())
 				{
 					while (enumerator.MoveNext())
@@ -301,11 +301,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 						}
 						else
 						{
-							PropertyInfo property = buffData.GetType().GetProperty(attrShow.Value.Key, BindingFlags.Instance | BindingFlags.Public);
-							int num2 = 0;
-							if (property != null)
+							int num2;
+							if (!valueOrDefault.TryGetMember(attrShow.Value.Key, out num2))
 							{
-								num2 = (int)property.GetValue(buffData);
+								num2 = 0;
 							}
 							string value = string.Empty;
 							if (attrShow.Value.Key == "SkillCoolDown")
@@ -328,18 +327,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 							}
 							else
 							{
-								string text2;
-								if (!float.IsNaN((float)num2))
-								{
-									DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
-									defaultInterpolatedStringHandler.AppendFormatted<int>(num2);
-									text2 = defaultInterpolatedStringHandler.ToStringAndClear();
-								}
-								else
-								{
-									text2 = attrShow.Value.Key + "Error";
-								}
-								value = text2;
+								value = num2.ToString();
 							}
 							ITrapDefenseBuildingDevelopAttrInfo item3 = new ITrapDefenseBuildingDevelopAttrInfo
 							{
@@ -350,7 +338,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 							this.AttrItems.Add(item3);
 						}
 					}
-					goto IL_57A;
+					goto IL_524;
 				}
 			}
 			TrapDefenseAuxiliaryType? auxiliaryTypeConfig = this.AuxiliaryTypeConfig;
@@ -394,20 +382,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 					if (attrShow2.Value.Key == "SkillCoolDown")
 					{
 						float num7 = num6 / 10000f;
-						string text3;
+						string text2;
 						if (num7 % 1f != 0f)
 						{
 							DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 							defaultInterpolatedStringHandler.AppendFormatted<float>(num7, "F1");
-							text3 = defaultInterpolatedStringHandler.ToStringAndClear();
+							text2 = defaultInterpolatedStringHandler.ToStringAndClear();
 						}
 						else
 						{
 							DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
 							defaultInterpolatedStringHandler.AppendFormatted<float>(num7, "F0");
-							text3 = defaultInterpolatedStringHandler.ToStringAndClear();
+							text2 = defaultInterpolatedStringHandler.ToStringAndClear();
 						}
-						value2 = text3;
+						value2 = text2;
 					}
 					else
 					{
@@ -424,11 +412,11 @@ namespace CSharpScript.Game.Module.TrapDefense
 					this.AttrItems.Add(item4);
 				}
 			}
-			IL_57A:
+			IL_524:
 			return this.AttrItems;
 		}
 
-		// Token: 0x06031492 RID: 201874 RVA: 0x00B6E660 File Offset: 0x00B6C860
+		// Token: 0x06026222 RID: 156194 RVA: 0x00AB2604 File Offset: 0x00AB0804
 		public int GetBranch()
 		{
 			if (!this.IsBuilding)
@@ -438,7 +426,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingConfig.Value.Branch;
 		}
 
-		// Token: 0x06031493 RID: 201875 RVA: 0x00B6E69C File Offset: 0x00B6C89C
+		// Token: 0x06026223 RID: 156195 RVA: 0x00AB2640 File Offset: 0x00AB0840
 		public string GetBranchDesc()
 		{
 			if (!this.IsBuilding)
@@ -448,7 +436,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingConfig.Value.BranchDesc;
 		}
 
-		// Token: 0x06031494 RID: 201876 RVA: 0x00B6E6D8 File Offset: 0x00B6C8D8
+		// Token: 0x06026224 RID: 156196 RVA: 0x00AB267C File Offset: 0x00AB087C
 		public string[] GetBranchDescArgs()
 		{
 			if (!this.IsBuilding)
@@ -458,14 +446,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingConfig.Value.BranchDescArgs();
 		}
 
-		// Token: 0x06031495 RID: 201877 RVA: 0x00B6E714 File Offset: 0x00B6C914
+		// Token: 0x06026225 RID: 156197 RVA: 0x00AB26B8 File Offset: 0x00AB08B8
 		public bool CheckNeedRedDot()
 		{
 			return this.GetIsMaxLevel(false) && this.GetBranchCount() > 1 && TrapDefenseModel.Instance.DecomposeMachineId(this.Id).Branch == 0;
 		}
 
-		// Token: 0x17007A2D RID: 31277
-		// (get) Token: 0x06031496 RID: 201878 RVA: 0x00B6E744 File Offset: 0x00B6C944
+		// Token: 0x17004DDA RID: 19930
+		// (get) Token: 0x06026226 RID: 156198 RVA: 0x00AB26E8 File Offset: 0x00AB08E8
 		public bool IsBuilding
 		{
 			get
@@ -474,7 +462,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031497 RID: 201879 RVA: 0x00B6E74F File Offset: 0x00B6C94F
+		// Token: 0x06026227 RID: 156199 RVA: 0x00AB26F3 File Offset: 0x00AB08F3
 		public void UpdateId(int newId)
 		{
 			this.Id = newId;
@@ -482,7 +470,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateConfig();
 		}
 
-		// Token: 0x06031498 RID: 201880 RVA: 0x00B6E76C File Offset: 0x00B6C96C
+		// Token: 0x06026228 RID: 156200 RVA: 0x00AB2710 File Offset: 0x00AB0910
 		public int GetDataType()
 		{
 			if (this.DataType != -1)
@@ -494,7 +482,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.DataType;
 		}
 
-		// Token: 0x06031499 RID: 201881 RVA: 0x00B6E7AC File Offset: 0x00B6C9AC
+		// Token: 0x06026229 RID: 156201 RVA: 0x00AB2750 File Offset: 0x00AB0950
 		public int GetSortId()
 		{
 			if (!this.IsBuilding)
@@ -504,7 +492,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.BuildingTypeConfig.Value.SortId;
 		}
 
-		// Token: 0x0603149A RID: 201882 RVA: 0x00B6E7E8 File Offset: 0x00B6C9E8
+		// Token: 0x0602622A RID: 156202 RVA: 0x00AB278C File Offset: 0x00AB098C
 		public string GetPlacementId()
 		{
 			if (this.Type == ETrapDefenseMachineType.Auxiliary)
@@ -523,73 +511,73 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return "TowerDefense_Building_TopBuildingType_Text";
 		}
 
-		// Token: 0x0603149B RID: 201883 RVA: 0x00B6E824 File Offset: 0x00B6CA24
+		// Token: 0x0602622B RID: 156203 RVA: 0x00AB27C8 File Offset: 0x00AB09C8
 		public void SetLockInBattle(bool isLocked)
 		{
 			this.NeedLockInBattle = isLocked;
 		}
 
-		// Token: 0x0603149C RID: 201884 RVA: 0x00B6E82D File Offset: 0x00B6CA2D
+		// Token: 0x0602622C RID: 156204 RVA: 0x00AB27D1 File Offset: 0x00AB09D1
 		public bool GetLockInBattle()
 		{
 			return this.NeedLockInBattle;
 		}
 
-		// Token: 0x0603149D RID: 201885 RVA: 0x00B6E835 File Offset: 0x00B6CA35
+		// Token: 0x0602622D RID: 156205 RVA: 0x00AB27D9 File Offset: 0x00AB09D9
 		public void SetSellPrice(int price)
 		{
 			this.SellPrice = price;
 		}
 
-		// Token: 0x0603149E RID: 201886 RVA: 0x00B6E83E File Offset: 0x00B6CA3E
+		// Token: 0x0602622E RID: 156206 RVA: 0x00AB27E2 File Offset: 0x00AB09E2
 		public int GetSellPrice()
 		{
 			return this.SellPrice;
 		}
 
-		// Token: 0x0401A580 RID: 107904
+		// Token: 0x04014ED7 RID: 85719
 		public int Id;
 
-		// Token: 0x0401A581 RID: 107905
+		// Token: 0x04014ED8 RID: 85720
 		public ETrapDefenseMachineType Type;
 
-		// Token: 0x0401A582 RID: 107906
+		// Token: 0x04014ED9 RID: 85721
 		public bool IsInDungeon;
 
-		// Token: 0x0401A583 RID: 107907
+		// Token: 0x04014EDA RID: 85722
 		private int DataType = -1;
 
-		// Token: 0x0401A584 RID: 107908
+		// Token: 0x04014EDB RID: 85723
 		private int MaxLevel = -1;
 
-		// Token: 0x0401A585 RID: 107909
+		// Token: 0x04014EDC RID: 85724
 		private int CurMaxLevel = -1;
 
-		// Token: 0x0401A586 RID: 107910
+		// Token: 0x04014EDD RID: 85725
 		private int SellPrice;
 
-		// Token: 0x0401A587 RID: 107911
+		// Token: 0x04014EDE RID: 85726
 		private readonly List<ITrapDefenseBuildingDevelopAttrInfo> AttrItems = new List<ITrapDefenseBuildingDevelopAttrInfo>();
 
-		// Token: 0x0401A588 RID: 107912
+		// Token: 0x04014EDF RID: 85727
 		private bool IsUnlock = true;
 
-		// Token: 0x0401A589 RID: 107913
+		// Token: 0x04014EE0 RID: 85728
 		private bool NeedLockInBattle;
 
-		// Token: 0x0401A58A RID: 107914
+		// Token: 0x04014EE1 RID: 85729
 		private TrapDefenseAuxiliary? AuxiliaryConfig;
 
-		// Token: 0x0401A58B RID: 107915
+		// Token: 0x04014EE2 RID: 85730
 		private TrapDefenseAuxiliaryType? AuxiliaryTypeConfig;
 
-		// Token: 0x0401A58C RID: 107916
+		// Token: 0x04014EE3 RID: 85731
 		private TrapDefenseBuilding? BuildingConfig;
 
-		// Token: 0x0401A58D RID: 107917
+		// Token: 0x04014EE4 RID: 85732
 		private TrapDefenseBuildingType? BuildingTypeConfig;
 
-		// Token: 0x0401A58E RID: 107918
+		// Token: 0x04014EE5 RID: 85733
 		private int BuildingCostPriceDiscount = -1;
 	}
 }

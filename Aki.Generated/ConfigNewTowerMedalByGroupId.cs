@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005FF RID: 1535
+	// Token: 0x02000617 RID: 1559
 	public class ConfigNewTowerMedalByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600240A RID: 9226 RVA: 0x00125528 File Offset: 0x00123728
+		// Token: 0x0600249A RID: 9370 RVA: 0x0012BFA4 File Offset: 0x0012A1A4
 		static ConfigNewTowerMedalByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewTowerMedalByGroupId.CreateStaticDefaultValue), new Action(ConfigNewTowerMedalByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600240B RID: 9227 RVA: 0x00125548 File Offset: 0x00123748
+		// Token: 0x0600249B RID: 9371 RVA: 0x0012BFC4 File Offset: 0x0012A1C4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewTowerMedalByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600240C RID: 9228 RVA: 0x001255C7 File Offset: 0x001237C7
+		// Token: 0x0600249C RID: 9372 RVA: 0x0012C043 File Offset: 0x0012A243
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewTowerMedalByGroupId.LogPair = null;
 			ConfigNewTowerMedalByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x0600240D RID: 9229 RVA: 0x001255D5 File Offset: 0x001237D5
+		// Token: 0x0600249D RID: 9373 RVA: 0x0012C051 File Offset: 0x0012A251
 		public static void Init()
 		{
 			ConfigNewTowerMedalByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigNewTowerMedalByGroupId.HandleId, "db_newtower.db", "select BinData from `NewTowerMedal` where GroupId=?");
 		}
 
-		// Token: 0x0600240E RID: 9230 RVA: 0x001255F0 File Offset: 0x001237F0
+		// Token: 0x0600249E RID: 9374 RVA: 0x0012C06C File Offset: 0x0012A26C
 		[NullableContext(2)]
 		public static IReadOnlyList<NewTowerMedal> GetConfigList(int p0GroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040029DF RID: 10719
+		// Token: 0x04002A87 RID: 10887
 		private const string DB = "db_newtower.db";
 
-		// Token: 0x040029E0 RID: 10720
+		// Token: 0x04002A88 RID: 10888
 		private const string FILE = "x.3.0新爬塔.xlsx";
 
-		// Token: 0x040029E1 RID: 10721
+		// Token: 0x04002A89 RID: 10889
 		private const string TABLE = "NewTowerMedal";
 
-		// Token: 0x040029E2 RID: 10722
+		// Token: 0x04002A8A RID: 10890
 		private const string COMMAND = "select BinData from `NewTowerMedal` where GroupId=?";
 
-		// Token: 0x040029E3 RID: 10723
+		// Token: 0x04002A8B RID: 10891
 		private const string KEY_PREFIX = "NewTowerMedalByGroupId";
 
-		// Token: 0x040029E4 RID: 10724
+		// Token: 0x04002A8C RID: 10892
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040029E5 RID: 10725
+		// Token: 0x04002A8D RID: 10893
 		private static int HandleId;
 	}
 }

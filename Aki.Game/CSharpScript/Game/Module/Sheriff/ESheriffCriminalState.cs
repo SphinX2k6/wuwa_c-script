@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C2E RID: 19502
+	// Token: 0x02003BDF RID: 15327
 	public enum ESheriffCriminalState
 	{
-		// Token: 0x0401ADC1 RID: 110017
+		// Token: 0x0401571E RID: 87838
 		Unconfirmed,
-		// Token: 0x0401ADC2 RID: 110018
+		// Token: 0x0401571F RID: 87839
 		Confirmed,
-		// Token: 0x0401ADC3 RID: 110019
+		// Token: 0x04015720 RID: 87840
 		Arrested
 	}
 }

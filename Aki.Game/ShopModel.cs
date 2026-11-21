@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x020029F0 RID: 10736
+// Token: 0x02001F6B RID: 8043
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ShopModel : ModelBase
 {
-	// Token: 0x17001DBD RID: 7613
-	// (get) Token: 0x06016440 RID: 91200 RVA: 0x005A1990 File Offset: 0x0059FB90
-	// (set) Token: 0x06016441 RID: 91201 RVA: 0x005A1998 File Offset: 0x0059FB98
+	// Token: 0x17001E16 RID: 7702
+	// (get) Token: 0x06013E47 RID: 81479 RVA: 0x005CC97C File Offset: 0x005CAB7C
+	// (set) Token: 0x06013E48 RID: 81480 RVA: 0x005CC984 File Offset: 0x005CAB84
 	public string VersionId
 	{
 		get
@@ -28,14 +27,14 @@ public class ShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016442 RID: 91202 RVA: 0x005A19A1 File Offset: 0x0059FBA1
+	// Token: 0x06013E49 RID: 81481 RVA: 0x005CC98D File Offset: 0x005CAB8D
 	protected override bool OnInit()
 	{
 		this.ShopList = new Dictionary<int, Shop>();
 		return true;
 	}
 
-	// Token: 0x06016443 RID: 91203 RVA: 0x005A19B0 File Offset: 0x0059FBB0
+	// Token: 0x06013E4A RID: 81482 RVA: 0x005CC99C File Offset: 0x005CAB9C
 	[NullableContext(2)]
 	public Shop GetShopInfo(int shopId)
 	{
@@ -51,7 +50,7 @@ public class ShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06016444 RID: 91204 RVA: 0x005A19DC File Offset: 0x0059FBDC
+	// Token: 0x06013E4B RID: 81483 RVA: 0x005CC9C8 File Offset: 0x005CABC8
 	[NullableContext(2)]
 	public ShopItemInfoNew GetShopItem(int shopId, int id)
 	{
@@ -63,14 +62,14 @@ public class ShopModel : ModelBase
 		return shopInfo.GetItemInfo(id);
 	}
 
-	// Token: 0x06016445 RID: 91205 RVA: 0x005A19FD File Offset: 0x0059FBFD
+	// Token: 0x06013E4C RID: 81484 RVA: 0x005CC9E9 File Offset: 0x005CABE9
 	public Aki.Config.ShopInfo? GetShopConfig(int shopId)
 	{
 		return new Aki.Config.ShopInfo?(ShopConfig.Instance.GetShopInfoConfig(shopId));
 	}
 
-	// Token: 0x06016446 RID: 91206 RVA: 0x005A1A10 File Offset: 0x0059FC10
-	public void UpdateShopListData(List<Aki.Protocol.ShopInfo> shopInfoList)
+	// Token: 0x06013E4D RID: 81485 RVA: 0x005CC9FC File Offset: 0x005CABFC
+	public void UpdateShopListData(IEnumerable<Aki.Protocol.ShopInfo> shopInfoList)
 	{
 		foreach (Aki.Protocol.ShopInfo shopInfo in shopInfoList)
 		{
@@ -78,7 +77,7 @@ public class ShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016447 RID: 91207 RVA: 0x005A1A60 File Offset: 0x0059FC60
+	// Token: 0x06013E4E RID: 81486 RVA: 0x005CCA44 File Offset: 0x005CAC44
 	public void UpdateShopData(Aki.Protocol.ShopInfo shopInfo)
 	{
 		Shop shop = this.GetShopInfo(shopInfo.ShopId);
@@ -90,12 +89,12 @@ public class ShopModel : ModelBase
 		else
 		{
 			shop.UpdateRefreshTime(shopInfo.UpdateTime);
-			shop.UpdateShopItemList(shopInfo.ItemInfoList.ToList<ShopItemInfoNew>());
+			shop.UpdateShopItemList(shopInfo.ItemInfoList);
 		}
 		EventSystem.Instance.Emit<int?>(EEventName.ShopUpdate, new int?(shopInfo.ShopId));
 	}
 
-	// Token: 0x06016448 RID: 91208 RVA: 0x005A1AD0 File Offset: 0x0059FCD0
+	// Token: 0x06013E4F RID: 81487 RVA: 0x005CCAB0 File Offset: 0x005CACB0
 	public void UpdateItemData(ShopBuyResponse shopBuyResponse)
 	{
 		ShopItemInfoNew shopItem = this.GetShopItem(shopBuyResponse.ShopId, shopBuyResponse.Id);
@@ -106,14 +105,14 @@ public class ShopModel : ModelBase
 		shopItem.BoughtCount = shopBuyResponse.BoughtCount;
 	}
 
-	// Token: 0x06016449 RID: 91209 RVA: 0x005A1B00 File Offset: 0x0059FD00
+	// Token: 0x06013E50 RID: 81488 RVA: 0x005CCAE0 File Offset: 0x005CACE0
 	public bool IsOpen(int shopId)
 	{
 		Aki.Config.ShopInfo? shopConfig = this.GetShopConfig(shopId);
 		return shopConfig != null && FunctionModel.Instance.IsOpen(shopConfig.Value.OpenId);
 	}
 
-	// Token: 0x0601644A RID: 91210 RVA: 0x005A1B3C File Offset: 0x0059FD3C
+	// Token: 0x06013E51 RID: 81489 RVA: 0x005CCB1C File Offset: 0x005CAD1C
 	public List<ShopItemFullInfo> GetShopItemList(int shopId)
 	{
 		this.GetShopInfo(shopId);
@@ -171,7 +170,7 @@ public class ShopModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601644B RID: 91211 RVA: 0x005A1C00 File Offset: 0x0059FE00
+	// Token: 0x06013E52 RID: 81490 RVA: 0x005CCBE0 File Offset: 0x005CADE0
 	[NullableContext(2)]
 	public ShopItemFullInfo GetShopItemFullInfoByShopIdAndItemId(int shopId, int itemId)
 	{
@@ -185,8 +184,8 @@ public class ShopModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17001DBE RID: 7614
-	// (get) Token: 0x0601644C RID: 91212 RVA: 0x005A1C60 File Offset: 0x0059FE60
+	// Token: 0x17001E17 RID: 7703
+	// (get) Token: 0x06013E53 RID: 81491 RVA: 0x005CCC40 File Offset: 0x005CAE40
 	public static ShopModel Instance
 	{
 		get
@@ -195,7 +194,7 @@ public class ShopModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601644D RID: 91213 RVA: 0x005A1C67 File Offset: 0x0059FE67
+	// Token: 0x06013E54 RID: 81492 RVA: 0x005CCC47 File Offset: 0x005CAE47
 	public static ShopModel GetOrCreateInstance()
 	{
 		if (ShopModel._Instance == null)
@@ -205,7 +204,7 @@ public class ShopModel : ModelBase
 		return ShopModel._Instance;
 	}
 
-	// Token: 0x0601644E RID: 91214 RVA: 0x005A1C7B File Offset: 0x0059FE7B
+	// Token: 0x06013E55 RID: 81493 RVA: 0x005CCC5B File Offset: 0x005CAE5B
 	public static bool CreateInstance()
 	{
 		if (ShopModel._Instance != null)
@@ -216,28 +215,28 @@ public class ShopModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601644F RID: 91215 RVA: 0x005A1C91 File Offset: 0x0059FE91
+	// Token: 0x06013E56 RID: 81494 RVA: 0x005CCC71 File Offset: 0x005CAE71
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016450 RID: 91216 RVA: 0x005A1C93 File Offset: 0x0059FE93
+	// Token: 0x06013E57 RID: 81495 RVA: 0x005CCC73 File Offset: 0x005CAE73
 	public static void ResetStaticDefaultValue()
 	{
 		ShopModel._Instance = null;
 	}
 
-	// Token: 0x06016451 RID: 91217 RVA: 0x005A1C9B File Offset: 0x0059FE9B
+	// Token: 0x06013E58 RID: 81496 RVA: 0x005CCC7B File Offset: 0x005CAE7B
 	static ShopModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ShopModel.CreateStaticDefaultValue), new Action(ShopModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A59C RID: 42396
+	// Token: 0x0400A986 RID: 43398
 	[Nullable(2)]
 	public ShopItemFullInfo OpenItemInfo;
 
-	// Token: 0x0400A59D RID: 42397
+	// Token: 0x0400A987 RID: 43399
 	[Nullable(new byte[]
 	{
 		2,
@@ -245,16 +244,16 @@ public class ShopModel : ModelBase
 	})]
 	private Dictionary<int, Shop> ShopList;
 
-	// Token: 0x0400A59E RID: 42398
+	// Token: 0x0400A988 RID: 43400
 	private string Version = "";
 
-	// Token: 0x0400A59F RID: 42399
+	// Token: 0x0400A989 RID: 43401
 	public int InteractTarget;
 
-	// Token: 0x0400A5A0 RID: 42400
+	// Token: 0x0400A98A RID: 43402
 	public long? CurrentInteractCreatureDataLongId;
 
-	// Token: 0x0400A5A1 RID: 42401
+	// Token: 0x0400A98B RID: 43403
 	[Nullable(2)]
 	private static ShopModel _Instance;
 }

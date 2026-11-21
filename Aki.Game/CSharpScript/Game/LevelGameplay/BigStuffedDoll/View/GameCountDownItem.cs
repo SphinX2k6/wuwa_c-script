@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F5E RID: 28510
+	// Token: 0x020060DF RID: 24799
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameCountDownItem : UiPanelBase
 	{
-		// Token: 0x060455A7 RID: 284071 RVA: 0x0112A670 File Offset: 0x01128870
+		// Token: 0x0603B755 RID: 243541 RVA: 0x010D4450 File Offset: 0x010D2650
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060455A8 RID: 284072 RVA: 0x0112A73C File Offset: 0x0112893C
+		// Token: 0x0603B756 RID: 243542 RVA: 0x010D451C File Offset: 0x010D271C
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.WhiteColor = new FColor?(FColor.FromHex("FFFFFFFF"));
 		}
 
-		// Token: 0x060455A9 RID: 284073 RVA: 0x0112A790 File Offset: 0x01128990
+		// Token: 0x0603B757 RID: 243543 RVA: 0x010D4570 File Offset: 0x010D2770
 		public UniTask StartCountDown(float time)
 		{
 			GameCountDownItem.<StartCountDown>d__13 <StartCountDown>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return <StartCountDown>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060455AA RID: 284074 RVA: 0x0112A7DC File Offset: 0x011289DC
+		// Token: 0x0603B758 RID: 243544 RVA: 0x010D45BC File Offset: 0x010D27BC
 		public void OnTick(float delta)
 		{
 			if (BigStuffedDollModel.Instance.GetGameStage() != EGameStage.GamePlaying || !this.EnableCountDown)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.UpdateCountDown(this.RemainTime);
 		}
 
-		// Token: 0x060455AB RID: 284075 RVA: 0x0112A8F0 File Offset: 0x01128AF0
+		// Token: 0x0603B759 RID: 243545 RVA: 0x010D46D0 File Offset: 0x010D28D0
 		public void UpdateCountDown(float remainTime)
 		{
 			if (remainTime <= 0f)
@@ -148,56 +148,56 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			timeText2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x040242DF RID: 148191
+		// Token: 0x0401F594 RID: 128404
 		private const int ONE_HUNDRED = 100;
 
-		// Token: 0x040242E0 RID: 148192
+		// Token: 0x0401F595 RID: 128405
 		private bool EnableCountDown;
 
-		// Token: 0x040242E1 RID: 148193
+		// Token: 0x0401F596 RID: 128406
 		private float RemainTime;
 
-		// Token: 0x040242E2 RID: 148194
+		// Token: 0x0401F597 RID: 128407
 		private string Millisecond = "";
 
-		// Token: 0x040242E3 RID: 148195
+		// Token: 0x0401F598 RID: 128408
 		private string MinuteText = "";
 
-		// Token: 0x040242E4 RID: 148196
+		// Token: 0x0401F599 RID: 128409
 		private string SecondText = "";
 
-		// Token: 0x040242E5 RID: 148197
+		// Token: 0x0401F59A RID: 128410
 		private FColor? WhiteColor;
 
-		// Token: 0x040242E6 RID: 148198
+		// Token: 0x0401F59B RID: 128411
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040242E7 RID: 148199
+		// Token: 0x0401F59C RID: 128412
 		[Nullable(2)]
 		private UUIText TitleText;
 
-		// Token: 0x040242E8 RID: 148200
+		// Token: 0x0401F59D RID: 128413
 		[Nullable(2)]
 		private UUIText TimeText;
 
-		// Token: 0x0200CD94 RID: 52628
+		// Token: 0x0200B986 RID: 47494
 		[NullableContext(0)]
 		private class EViewComponent
 		{
-			// Token: 0x0403DF16 RID: 253718
+			// Token: 0x04039345 RID: 234309
 			public const int TitleText = 0;
 
-			// Token: 0x0403DF17 RID: 253719
+			// Token: 0x04039346 RID: 234310
 			public const int TimeText = 1;
 
-			// Token: 0x0403DF18 RID: 253720
+			// Token: 0x04039347 RID: 234311
 			public const int RedBar = 2;
 
-			// Token: 0x0403DF19 RID: 253721
+			// Token: 0x04039348 RID: 234312
 			public const int BlueBar = 3;
 
-			// Token: 0x0403DF1A RID: 253722
+			// Token: 0x04039349 RID: 234313
 			public const int TextAddTime = 4;
 		}
 	}

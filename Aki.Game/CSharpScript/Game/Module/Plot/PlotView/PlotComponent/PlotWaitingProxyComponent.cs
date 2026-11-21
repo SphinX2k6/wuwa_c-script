@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200508F RID: 20623
+	// Token: 0x0200405F RID: 16479
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotWaitingProxyComponent
 	{
-		// Token: 0x06034D5B RID: 216411 RVA: 0x00C7EEAE File Offset: 0x00C7D0AE
+		// Token: 0x06029C54 RID: 171092 RVA: 0x00BCC45E File Offset: 0x00BCA65E
 		[NullableContext(1)]
 		public void Init(PlotWaitingProxyComponentContext context)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.OnWaitingStartDelegate = context.OnWaitingStartDelegate;
 		}
 
-		// Token: 0x06034D5C RID: 216412 RVA: 0x00C7EED4 File Offset: 0x00C7D0D4
+		// Token: 0x06029C55 RID: 171093 RVA: 0x00BCC484 File Offset: 0x00BCA684
 		public void Wait(float duration)
 		{
 			if (this.IsWaiting)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			onWaitingStartDelegate();
 		}
 
-		// Token: 0x06034D5D RID: 216413 RVA: 0x00C7EF0F File Offset: 0x00C7D10F
+		// Token: 0x06029C56 RID: 171094 RVA: 0x00BCC4BF File Offset: 0x00BCA6BF
 		public void Cancel()
 		{
 			if (!this.IsWaiting)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.ElapsedTime = 0f;
 		}
 
-		// Token: 0x06034D5E RID: 216414 RVA: 0x00C7EF44 File Offset: 0x00C7D144
+		// Token: 0x06029C57 RID: 171095 RVA: 0x00BCC4F4 File Offset: 0x00BCA6F4
 		public void Pause()
 		{
 			if (!this.IsWaiting)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.IsPaused = true;
 		}
 
-		// Token: 0x06034D5F RID: 216415 RVA: 0x00C7EF56 File Offset: 0x00C7D156
+		// Token: 0x06029C58 RID: 171096 RVA: 0x00BCC506 File Offset: 0x00BCA706
 		public void Resume()
 		{
 			if (!this.IsWaiting)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.IsPaused = false;
 		}
 
-		// Token: 0x06034D60 RID: 216416 RVA: 0x00C7EF68 File Offset: 0x00C7D168
+		// Token: 0x06029C59 RID: 171097 RVA: 0x00BCC518 File Offset: 0x00BCA718
 		public void OnTick(float delta)
 		{
 			if (!this.IsWaiting || this.IsPaused)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034D61 RID: 216417 RVA: 0x00C7EF9D File Offset: 0x00C7D19D
+		// Token: 0x06029C5A RID: 171098 RVA: 0x00BCC54D File Offset: 0x00BCA74D
 		private void OnWaitingComplete()
 		{
 			this.IsWaiting = false;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			onWaitingCompleteDelegate();
 		}
 
-		// Token: 0x06034D62 RID: 216418 RVA: 0x00C7EFC8 File Offset: 0x00C7D1C8
+		// Token: 0x06029C5B RID: 171099 RVA: 0x00BCC578 File Offset: 0x00BCA778
 		public void Clear()
 		{
 			this.IsWaiting = false;
@@ -109,43 +109,43 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.ElapsedTime = 0f;
 		}
 
-		// Token: 0x06034D63 RID: 216419 RVA: 0x00C7EFE3 File Offset: 0x00C7D1E3
+		// Token: 0x06029C5C RID: 171100 RVA: 0x00BCC593 File Offset: 0x00BCA793
 		public bool GetIsWaiting()
 		{
 			return this.IsWaiting;
 		}
 
-		// Token: 0x06034D64 RID: 216420 RVA: 0x00C7EFEB File Offset: 0x00C7D1EB
+		// Token: 0x06029C5D RID: 171101 RVA: 0x00BCC59B File Offset: 0x00BCA79B
 		public float GetWaitDuration()
 		{
 			return this.WaitDuration;
 		}
 
-		// Token: 0x06034D65 RID: 216421 RVA: 0x00C7EFF3 File Offset: 0x00C7D1F3
+		// Token: 0x06029C5E RID: 171102 RVA: 0x00BCC5A3 File Offset: 0x00BCA7A3
 		public bool GetIsPaused()
 		{
 			return this.IsPaused;
 		}
 
-		// Token: 0x0401C262 RID: 115298
+		// Token: 0x04016C91 RID: 93329
 		private bool IsWaiting;
 
-		// Token: 0x0401C263 RID: 115299
+		// Token: 0x04016C92 RID: 93330
 		private float WaitDuration;
 
-		// Token: 0x0401C264 RID: 115300
+		// Token: 0x04016C93 RID: 93331
 		private float ElapsedTime;
 
-		// Token: 0x0401C265 RID: 115301
+		// Token: 0x04016C94 RID: 93332
 		private bool IsPaused;
 
-		// Token: 0x0401C266 RID: 115302
+		// Token: 0x04016C95 RID: 93333
 		private Action OnWaitingStartDelegate;
 
-		// Token: 0x0401C267 RID: 115303
+		// Token: 0x04016C96 RID: 93334
 		private Action OnWaitingCompleteDelegate;
 
-		// Token: 0x0401C268 RID: 115304
+		// Token: 0x04016C97 RID: 93335
 		private Action OnWaitingCancelDelegate;
 	}
 }

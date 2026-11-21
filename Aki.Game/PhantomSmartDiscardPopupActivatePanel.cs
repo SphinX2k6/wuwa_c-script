@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001FE3 RID: 8163
+// Token: 0x020014B6 RID: 5302
 public class PhantomSmartDiscardPopupActivatePanel : UiPanelBase
 {
-	// Token: 0x0600FFDB RID: 65499 RVA: 0x003E51E4 File Offset: 0x003E33E4
+	// Token: 0x0600D443 RID: 54339 RVA: 0x003F17E4 File Offset: 0x003EF9E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -23,7 +23,7 @@ public class PhantomSmartDiscardPopupActivatePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FFDC RID: 65500 RVA: 0x003E5270 File Offset: 0x003E3470
+	// Token: 0x0600D444 RID: 54340 RVA: 0x003F1870 File Offset: 0x003EFA70
 	protected override void OnStart()
 	{
 		string key = FunctionModel.Instance.IsOpen(10096) ? "PrefabTextItem_18455432_Text" : "PhantomManagementLocked_Tips";
@@ -35,14 +35,14 @@ public class PhantomSmartDiscardPopupActivatePanel : UiPanelBase
 		text.ShowTextNew(key);
 	}
 
-	// Token: 0x020085F7 RID: 34295
+	// Token: 0x0200777E RID: 30590
 	private enum EPanel
 	{
-		// Token: 0x0402B9A5 RID: 178597
+		// Token: 0x04026CB4 RID: 158900
 		SpriteLock,
-		// Token: 0x0402B9A6 RID: 178598
+		// Token: 0x04026CB5 RID: 158901
 		TxtActivate,
-		// Token: 0x0402B9A7 RID: 178599
+		// Token: 0x04026CB6 RID: 158902
 		BtnFunctionA
 	}
 }

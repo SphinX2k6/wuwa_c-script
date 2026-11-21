@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E08 RID: 3592
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F04 RID: 3844
 	public class IWuWaGoMovableFloor : IWuWaGoEntityBase
 	{
-		// Token: 0x06005150 RID: 20816 RVA: 0x000C89AB File Offset: 0x000C6BAB
+		// Token: 0x06005677 RID: 22135 RVA: 0x000D4273 File Offset: 0x000D2473
 		public static IWuWaGoMovableFloor Create(IWuWaGoMovableFloor? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AFD RID: 6909
-		// (get) Token: 0x06005151 RID: 20817 RVA: 0x000C89CA File Offset: 0x000C6BCA
+		// Token: 0x17001C6A RID: 7274
+		// (get) Token: 0x06005678 RID: 22136 RVA: 0x000D4292 File Offset: 0x000D2492
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AFE RID: 6910
-		// (get) Token: 0x06005152 RID: 20818 RVA: 0x000C89D7 File Offset: 0x000C6BD7
+		// Token: 0x17001C6B RID: 7275
+		// (get) Token: 0x06005679 RID: 22137 RVA: 0x000D429F File Offset: 0x000D249F
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AFF RID: 6911
-		// (get) Token: 0x06005153 RID: 20819 RVA: 0x000C8A0B File Offset: 0x000C6C0B
+		// Token: 0x17001C6C RID: 7276
+		// (get) Token: 0x0600567A RID: 22138 RVA: 0x000D42D3 File Offset: 0x000D24D3
 		[Nullable(2)]
 		public virtual IWuWaGoGridLinkData GearLinkData
 		{
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B00 RID: 6912
-		// (get) Token: 0x06005154 RID: 20820 RVA: 0x000C8A40 File Offset: 0x000C6C40
+		// Token: 0x17001C6D RID: 7277
+		// (get) Token: 0x0600567B RID: 22139 RVA: 0x000D4308 File Offset: 0x000D2508
 		public virtual List<IWuWaGoMovableGridStatePos> MoveData
 		{
 			get
@@ -88,27 +86,27 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002ECB RID: 11979
+		// Token: 0x04003193 RID: 12691
 		private IWuWaGoMovableFloor Instance;
 
-		// Token: 0x04002ECC RID: 11980
+		// Token: 0x04003194 RID: 12692
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04002ECD RID: 11981
+		// Token: 0x04003195 RID: 12693
 		private bool _LinkDataInited;
 
-		// Token: 0x04002ECE RID: 11982
+		// Token: 0x04003196 RID: 12694
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _GearLinkDataCache;
 
-		// Token: 0x04002ECF RID: 11983
+		// Token: 0x04003197 RID: 12695
 		private bool _GearLinkDataInited;
 
-		// Token: 0x04002ED0 RID: 11984
+		// Token: 0x04003198 RID: 12696
 		private List<IWuWaGoMovableGridStatePos> _MoveDataCache;
 
-		// Token: 0x04002ED1 RID: 11985
+		// Token: 0x04003199 RID: 12697
 		private bool _MoveDataInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056E0 RID: 22240
+	// Token: 0x02005CCC RID: 23756
 	public struct IPasserbyNpcSpline : IFlatbufferObject
 	{
-		// Token: 0x1700A58A RID: 42378
-		// (get) Token: 0x06025284 RID: 152196 RVA: 0x00521034 File Offset: 0x0051F234
+		// Token: 0x1700AE88 RID: 44680
+		// (get) Token: 0x060276D5 RID: 161493 RVA: 0x005657F0 File Offset: 0x005639F0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025285 RID: 152197 RVA: 0x00521041 File Offset: 0x0051F241
+		// Token: 0x060276D6 RID: 161494 RVA: 0x005657FD File Offset: 0x005639FD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025286 RID: 152198 RVA: 0x00521048 File Offset: 0x0051F248
+		// Token: 0x060276D7 RID: 161495 RVA: 0x00565804 File Offset: 0x00563A04
 		public static IPasserbyNpcSpline GetRootAsIPasserbyNpcSpline(ByteBuffer _bb)
 		{
 			return IPasserbyNpcSpline.GetRootAsIPasserbyNpcSpline(_bb, default(IPasserbyNpcSpline));
 		}
 
-		// Token: 0x06025287 RID: 152199 RVA: 0x00521064 File Offset: 0x0051F264
+		// Token: 0x060276D8 RID: 161496 RVA: 0x00565820 File Offset: 0x00563A20
 		public static IPasserbyNpcSpline GetRootAsIPasserbyNpcSpline(ByteBuffer _bb, IPasserbyNpcSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025288 RID: 152200 RVA: 0x00521081 File Offset: 0x0051F281
+		// Token: 0x060276D9 RID: 161497 RVA: 0x0056583D File Offset: 0x00563A3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025289 RID: 152201 RVA: 0x00521090 File Offset: 0x0051F290
+		// Token: 0x060276DA RID: 161498 RVA: 0x0056584C File Offset: 0x00563A4C
 		public IPasserbyNpcSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A58B RID: 42379
-		// (get) Token: 0x0602528A RID: 152202 RVA: 0x005210A0 File Offset: 0x0051F2A0
+		// Token: 0x1700AE89 RID: 44681
+		// (get) Token: 0x060276DB RID: 161499 RVA: 0x0056585C File Offset: 0x00563A5C
 		public int SplineEntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A58C RID: 42380
-		// (get) Token: 0x0602528B RID: 152203 RVA: 0x005210DC File Offset: 0x0051F2DC
+		// Token: 0x1700AE8A RID: 44682
+		// (get) Token: 0x060276DC RID: 161500 RVA: 0x00565898 File Offset: 0x00563A98
 		public int SpawnWeight
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A58D RID: 42381
-		// (get) Token: 0x0602528C RID: 152204 RVA: 0x00521118 File Offset: 0x0051F318
+		// Token: 0x1700AE8B RID: 44683
+		// (get) Token: 0x060276DD RID: 161501 RVA: 0x005658D4 File Offset: 0x00563AD4
 		public bool IsLoop
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A58E RID: 42382
-		// (get) Token: 0x0602528D RID: 152205 RVA: 0x00521158 File Offset: 0x0051F358
+		// Token: 0x1700AE8C RID: 44684
+		// (get) Token: 0x060276DE RID: 161502 RVA: 0x00565914 File Offset: 0x00563B14
 		public IPasserbyNpcMoveState? MoveState
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A58F RID: 42383
-		// (get) Token: 0x0602528E RID: 152206 RVA: 0x005211B8 File Offset: 0x0051F3B8
+		// Token: 0x1700AE8D RID: 44685
+		// (get) Token: 0x060276DF RID: 161503 RVA: 0x00565974 File Offset: 0x00563B74
 		public bool IsIkEnabled
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A590 RID: 42384
-		// (get) Token: 0x0602528F RID: 152207 RVA: 0x005211F8 File Offset: 0x0051F3F8
+		// Token: 0x1700AE8E RID: 44686
+		// (get) Token: 0x060276E0 RID: 161504 RVA: 0x005659B4 File Offset: 0x00563BB4
 		public byte NullMask
 		{
 			get
@@ -129,7 +129,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025290 RID: 152208 RVA: 0x00521235 File Offset: 0x0051F435
+		// Token: 0x060276E1 RID: 161505 RVA: 0x005659F1 File Offset: 0x00563BF1
 		public static Offset<IPasserbyNpcSpline> CreateIPasserbyNpcSpline(FlatBufferBuilder builder, int SplineEntityId = 0, int SpawnWeight = 0, bool IsLoop = false, Offset<IPasserbyNpcMoveState> MoveStateOffset = default(Offset<IPasserbyNpcMoveState>), bool IsIkEnabled = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -142,55 +142,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcSpline.EndIPasserbyNpcSpline(builder);
 		}
 
-		// Token: 0x06025291 RID: 152209 RVA: 0x00521271 File Offset: 0x0051F471
+		// Token: 0x060276E2 RID: 161506 RVA: 0x00565A2D File Offset: 0x00563C2D
 		public static void StartIPasserbyNpcSpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06025292 RID: 152210 RVA: 0x0052127A File Offset: 0x0051F47A
+		// Token: 0x060276E3 RID: 161507 RVA: 0x00565A36 File Offset: 0x00563C36
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(0, splineEntityId, 0);
 		}
 
-		// Token: 0x06025293 RID: 152211 RVA: 0x00521285 File Offset: 0x0051F485
+		// Token: 0x060276E4 RID: 161508 RVA: 0x00565A41 File Offset: 0x00563C41
 		public static void AddSpawnWeight(FlatBufferBuilder builder, int spawnWeight)
 		{
 			builder.AddInt(1, spawnWeight, 0);
 		}
 
-		// Token: 0x06025294 RID: 152212 RVA: 0x00521290 File Offset: 0x0051F490
+		// Token: 0x060276E5 RID: 161509 RVA: 0x00565A4C File Offset: 0x00563C4C
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(2, isLoop, false);
 		}
 
-		// Token: 0x06025295 RID: 152213 RVA: 0x0052129B File Offset: 0x0051F49B
+		// Token: 0x060276E6 RID: 161510 RVA: 0x00565A57 File Offset: 0x00563C57
 		public static void AddMoveState(FlatBufferBuilder builder, Offset<IPasserbyNpcMoveState> moveStateOffset)
 		{
 			builder.AddOffset(3, moveStateOffset.Value, 0);
 		}
 
-		// Token: 0x06025296 RID: 152214 RVA: 0x005212AB File Offset: 0x0051F4AB
+		// Token: 0x060276E7 RID: 161511 RVA: 0x00565A67 File Offset: 0x00563C67
 		public static void AddIsIkEnabled(FlatBufferBuilder builder, bool isIkEnabled)
 		{
 			builder.AddBool(4, isIkEnabled, false);
 		}
 
-		// Token: 0x06025297 RID: 152215 RVA: 0x005212B6 File Offset: 0x0051F4B6
+		// Token: 0x060276E8 RID: 161512 RVA: 0x00565A72 File Offset: 0x00563C72
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06025298 RID: 152216 RVA: 0x005212C1 File Offset: 0x0051F4C1
+		// Token: 0x060276E9 RID: 161513 RVA: 0x00565A7D File Offset: 0x00563C7D
 		public static Offset<IPasserbyNpcSpline> EndIPasserbyNpcSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<IPasserbyNpcSpline>(builder.EndTable());
 		}
 
-		// Token: 0x06025299 RID: 152217 RVA: 0x005212D0 File Offset: 0x0051F4D0
+		// Token: 0x060276EA RID: 161514 RVA: 0x00565A8C File Offset: 0x00563C8C
 		public IPasserbyNpcSplineT UnPack()
 		{
 			IPasserbyNpcSplineT passerbyNpcSplineT = new IPasserbyNpcSplineT();
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return passerbyNpcSplineT;
 		}
 
-		// Token: 0x0602529A RID: 152218 RVA: 0x005212EC File Offset: 0x0051F4EC
+		// Token: 0x060276EB RID: 161515 RVA: 0x00565AA8 File Offset: 0x00563CA8
 		public void UnPackTo(IPasserbyNpcSplineT _o)
 		{
 			_o.SplineEntityId = this.SplineEntityId;
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602529B RID: 152219 RVA: 0x00521364 File Offset: 0x0051F564
+		// Token: 0x060276EC RID: 161516 RVA: 0x00565B20 File Offset: 0x00563D20
 		public static Offset<IPasserbyNpcSpline> Pack(FlatBufferBuilder builder, IPasserbyNpcSplineT _o)
 		{
 			if (_o == null)
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcSpline.CreateIPasserbyNpcSpline(builder, _o.SplineEntityId, _o.SpawnWeight, _o.IsLoop, moveStateOffset, _o.IsIkEnabled, _o.NullMask);
 		}
 
-		// Token: 0x0400EB2C RID: 60204
+		// Token: 0x0400F7F6 RID: 63478
 		private Table __p;
 	}
 }

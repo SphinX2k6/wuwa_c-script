@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006056 RID: 24662
+	// Token: 0x02004FD4 RID: 20436
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpringManorWeaponSlotToggle : UiPanelBase
 	{
-		// Token: 0x0603E67B RID: 255611 RVA: 0x00F12F02 File Offset: 0x00F11102
+		// Token: 0x0603333F RID: 209727 RVA: 0x00E59CC6 File Offset: 0x00E57EC6
 		private void OnClickWeaponTog(EToggleState state)
 		{
 			if (this.SlotIndex < 0)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			onSelectedCallback(this.SlotIndex);
 		}
 
-		// Token: 0x0603E67C RID: 255612 RVA: 0x00F12F24 File Offset: 0x00F11124
+		// Token: 0x06033340 RID: 209728 RVA: 0x00E59CE8 File Offset: 0x00E57EE8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E67D RID: 255613 RVA: 0x00F12FA4 File Offset: 0x00F111A4
+		// Token: 0x06033341 RID: 209729 RVA: 0x00E59D68 File Offset: 0x00E57F68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorWeaponSlotToggle.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E67E RID: 255614 RVA: 0x00F12FE7 File Offset: 0x00F111E7
+		// Token: 0x06033342 RID: 209730 RVA: 0x00E59DAB File Offset: 0x00E57FAB
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603E67F RID: 255615 RVA: 0x00F13001 File Offset: 0x00F11201
+		// Token: 0x06033343 RID: 209731 RVA: 0x00E59DC5 File Offset: 0x00E57FC5
 		[NullableContext(1)]
 		public void Setup(int index, Action<int> callback)
 		{
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.OnSelectedCallback = callback;
 		}
 
-		// Token: 0x0603E680 RID: 255616 RVA: 0x00F13014 File Offset: 0x00F11214
+		// Token: 0x06033344 RID: 209732 RVA: 0x00E59DD8 File Offset: 0x00E57FD8
 		public void SetSelected(bool isSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -85,20 +85,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x0603E681 RID: 255617 RVA: 0x00F1303F File Offset: 0x00F1123F
+		// Token: 0x06033345 RID: 209733 RVA: 0x00E59E03 File Offset: 0x00E58003
 		public void SetWeaponItemId(int itemId)
 		{
 			this.AssignedWeaponItemId = itemId;
 			this.RefreshSlotState();
 		}
 
-		// Token: 0x0603E682 RID: 255618 RVA: 0x00F1304E File Offset: 0x00F1124E
+		// Token: 0x06033346 RID: 209734 RVA: 0x00E59E12 File Offset: 0x00E58012
 		public int GetWeaponItemId()
 		{
 			return this.AssignedWeaponItemId;
 		}
 
-		// Token: 0x0603E683 RID: 255619 RVA: 0x00F13058 File Offset: 0x00F11258
+		// Token: 0x06033347 RID: 209735 RVA: 0x00E59E1C File Offset: 0x00E5801C
 		private void RefreshSlotState()
 		{
 			bool flag = this.AssignedWeaponItemId != 0;
@@ -127,19 +127,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item2.SetUIActive(flag);
 		}
 
-		// Token: 0x040209B4 RID: 133556
+		// Token: 0x0401B2E1 RID: 111329
 		private int SlotIndex = -1;
 
-		// Token: 0x040209B5 RID: 133557
+		// Token: 0x0401B2E2 RID: 111330
 		private Action<int> OnSelectedCallback;
 
-		// Token: 0x040209B6 RID: 133558
+		// Token: 0x0401B2E3 RID: 111331
 		private int AssignedWeaponItemId;
 
-		// Token: 0x040209B7 RID: 133559
+		// Token: 0x0401B2E4 RID: 111332
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x040209B8 RID: 133560
+		// Token: 0x0401B2E5 RID: 111333
 		private bool? PreviousHasWeapon;
 	}
 }

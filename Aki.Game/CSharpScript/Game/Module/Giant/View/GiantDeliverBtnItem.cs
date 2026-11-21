@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x0200597D RID: 22909
+	// Token: 0x02004956 RID: 18774
 	public class GiantDeliverBtnItem : UiPanelBase
 	{
-		// Token: 0x0603A23D RID: 238141 RVA: 0x00DD3000 File Offset: 0x00DD1200
+		// Token: 0x0602F163 RID: 192867 RVA: 0x00D22490 File Offset: 0x00D20690
 		[NullableContext(1)]
 		public UniTask Init(UUIButtonComponent button)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A23E RID: 238142 RVA: 0x00DD304C File Offset: 0x00DD124C
+		// Token: 0x0602F164 RID: 192868 RVA: 0x00D224DC File Offset: 0x00D206DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,21 +41,21 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A23F RID: 238143 RVA: 0x00DD30D6 File Offset: 0x00DD12D6
+		// Token: 0x0602F165 RID: 192869 RVA: 0x00D22566 File Offset: 0x00D20766
 		[NullableContext(2)]
 		public UUIItem GetRedDotItem()
 		{
 			return base.GetItem(2);
 		}
 
-		// Token: 0x0200BC09 RID: 48137
+		// Token: 0x0200A614 RID: 42516
 		private enum EComponents
 		{
-			// Token: 0x04038C24 RID: 232484
+			// Token: 0x040335F3 RID: 210419
 			Root,
-			// Token: 0x04038C25 RID: 232485
+			// Token: 0x040335F4 RID: 210420
 			TxtConfirm,
-			// Token: 0x04038C26 RID: 232486
+			// Token: 0x040335F5 RID: 210421
 			RedDot
 		}
 	}

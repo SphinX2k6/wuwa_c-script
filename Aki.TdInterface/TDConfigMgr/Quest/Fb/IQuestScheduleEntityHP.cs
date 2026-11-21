@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200131B RID: 4891
+	// Token: 0x0200146B RID: 5227
 	public class IQuestScheduleEntityHP : IQuestScheduleType
 	{
-		// Token: 0x06007048 RID: 28744 RVA: 0x0010F43E File Offset: 0x0010D63E
-		[NullableContext(1)]
+		// Token: 0x060076E8 RID: 30440 RVA: 0x0011D9AA File Offset: 0x0011BBAA
 		public static IQuestScheduleEntityHP Create(IQuestScheduleEntityHP? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023E5 RID: 9189
-		// (get) Token: 0x06007049 RID: 28745 RVA: 0x0010F45D File Offset: 0x0010D65D
+		// Token: 0x170025B4 RID: 9652
+		// (get) Token: 0x060076E9 RID: 30441 RVA: 0x0011D9C9 File Offset: 0x0011BBC9
 		public override EQuestScheduleType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023E6 RID: 9190
-		// (get) Token: 0x0600704A RID: 28746 RVA: 0x0010F46A File Offset: 0x0010D66A
+		// Token: 0x170025B5 RID: 9653
+		// (get) Token: 0x060076EA RID: 30442 RVA: 0x0011D9D6 File Offset: 0x0011BBD6
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040C7 RID: 16583
+		// Token: 0x04004443 RID: 17475
 		private IQuestScheduleEntityHP Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E87 RID: 7815
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020BC RID: 8380
 	public class ISlideRailEndType
 	{
-		// Token: 0x0600A736 RID: 42806 RVA: 0x0017A09C File Offset: 0x0017829C
+		// Token: 0x0600B1EE RID: 45550 RVA: 0x0018FD9C File Offset: 0x0018DF9C
 		private ISlideRailEndType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A737 RID: 42807 RVA: 0x0017A0D4 File Offset: 0x001782D4
+		// Token: 0x0600B1EF RID: 45551 RVA: 0x0018FDD4 File Offset: 0x0018DFD4
 		public static ISlideRailEndType Create([Nullable(2)] ISlideRailEndType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A738 RID: 42808 RVA: 0x0017A0E7 File Offset: 0x001782E7
+		// Token: 0x0600B1F0 RID: 45552 RVA: 0x0018FDE7 File Offset: 0x0018DFE7
 		public static ISlideRailEndType CreateFromSetValue([Nullable(2)] ISlideRailEndType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A739 RID: 42809 RVA: 0x0017A0FA File Offset: 0x001782FA
+		// Token: 0x0600B1F1 RID: 45553 RVA: 0x0018FDFA File Offset: 0x0018DFFA
 		public ISlideRailEndType_SetValue ToSetValue()
 		{
 			return new ISlideRailEndType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003328 RID: 13096
-		// (get) Token: 0x0600A73A RID: 42810 RVA: 0x0017A10D File Offset: 0x0017830D
-		// (set) Token: 0x0600A73B RID: 42811 RVA: 0x0017A138 File Offset: 0x00178338
+		// Token: 0x170035EC RID: 13804
+		// (get) Token: 0x0600B1F2 RID: 45554 RVA: 0x0018FE0D File Offset: 0x0018E00D
+		// (set) Token: 0x0600B1F3 RID: 45555 RVA: 0x0018FE38 File Offset: 0x0018E038
 		public virtual ESlideRailEndType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063C7 RID: 25543
+		// Token: 0x040069AB RID: 27051
 		[Nullable(2)]
 		protected ISlideRailEndType FbInstance;
 
-		// Token: 0x040063C8 RID: 25544
+		// Token: 0x040069AC RID: 27052
 		[Nullable(2)]
 		protected ISlideRailEndType_SetValue PocoInterface;
 	}

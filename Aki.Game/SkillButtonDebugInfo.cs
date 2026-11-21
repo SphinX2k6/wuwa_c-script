@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020034E1 RID: 13537
+// Token: 0x02002A55 RID: 10837
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillButtonDebugInfo
 {
-	// Token: 0x0601DA57 RID: 121431 RVA: 0x0084C058 File Offset: 0x0084A258
+	// Token: 0x0601B761 RID: 112481 RVA: 0x00874264 File Offset: 0x00872464
 	public SkillButtonDebugInfo(int entityHandleId, List<string> button)
 	{
 		this.EntityHandleId = entityHandleId;
 		this.Button = button;
 	}
 
-	// Token: 0x0400E8A6 RID: 59558
+	// Token: 0x0400ED5D RID: 60765
 	public int EntityHandleId;
 
-	// Token: 0x0400E8A7 RID: 59559
+	// Token: 0x0400ED5E RID: 60766
 	public List<string> Button;
 }

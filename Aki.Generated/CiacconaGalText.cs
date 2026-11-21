@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B7C RID: 2940
+	// Token: 0x02000C5D RID: 3165
 	public struct CiacconaGalText : IFlatbufferObject
 	{
-		// Token: 0x17000827 RID: 2087
-		// (get) Token: 0x060055A5 RID: 21925 RVA: 0x001F641C File Offset: 0x001F461C
+		// Token: 0x1700086A RID: 2154
+		// (get) Token: 0x06005B73 RID: 23411 RVA: 0x002161F0 File Offset: 0x002143F0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060055A6 RID: 21926 RVA: 0x001F6429 File Offset: 0x001F4629
+		// Token: 0x06005B74 RID: 23412 RVA: 0x002161FD File Offset: 0x002143FD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060055A7 RID: 21927 RVA: 0x001F6430 File Offset: 0x001F4630
+		// Token: 0x06005B75 RID: 23413 RVA: 0x00216204 File Offset: 0x00214404
 		public static CiacconaGalText GetRootAsCiacconaGalText(ByteBuffer _bb)
 		{
 			return CiacconaGalText.GetRootAsCiacconaGalText(_bb, default(CiacconaGalText));
 		}
 
-		// Token: 0x060055A8 RID: 21928 RVA: 0x001F644C File Offset: 0x001F464C
+		// Token: 0x06005B76 RID: 23414 RVA: 0x00216220 File Offset: 0x00214420
 		public static CiacconaGalText GetRootAsCiacconaGalText(ByteBuffer _bb, CiacconaGalText obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060055A9 RID: 21929 RVA: 0x001F6469 File Offset: 0x001F4669
+		// Token: 0x06005B77 RID: 23415 RVA: 0x0021623D File Offset: 0x0021443D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060055AA RID: 21930 RVA: 0x001F6478 File Offset: 0x001F4678
+		// Token: 0x06005B78 RID: 23416 RVA: 0x0021624C File Offset: 0x0021444C
 		public CiacconaGalText __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000828 RID: 2088
-		// (get) Token: 0x060055AB RID: 21931 RVA: 0x001F6488 File Offset: 0x001F4688
+		// Token: 0x1700086B RID: 2155
+		// (get) Token: 0x06005B79 RID: 23417 RVA: 0x0021625C File Offset: 0x0021445C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000829 RID: 2089
-		// (get) Token: 0x060055AC RID: 21932 RVA: 0x001F64C4 File Offset: 0x001F46C4
+		// Token: 0x1700086C RID: 2156
+		// (get) Token: 0x06005B7A RID: 23418 RVA: 0x00216298 File Offset: 0x00214498
 		public string TextId
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060055AD RID: 21933 RVA: 0x001F64FB File Offset: 0x001F46FB
+		// Token: 0x06005B7B RID: 23419 RVA: 0x002162CF File Offset: 0x002144CF
 		public Span<byte> GetTextIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060055AE RID: 21934 RVA: 0x001F650A File Offset: 0x001F470A
+		// Token: 0x06005B7C RID: 23420 RVA: 0x002162DE File Offset: 0x002144DE
 		public byte[] GetTextIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B80 RID: 19328
+		// Token: 0x04005161 RID: 20833
 		private Table __p;
 	}
 }

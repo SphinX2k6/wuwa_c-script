@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068A4 RID: 26788
+	// Token: 0x02006F45 RID: 28485
 	public class IGroupAiCommunicateAddTagT
 	{
-		// Token: 0x1700C6E2 RID: 50914
-		// (get) Token: 0x0602EBA0 RID: 191392 RVA: 0x0065EB17 File Offset: 0x0065CD17
-		// (set) Token: 0x0602EBA1 RID: 191393 RVA: 0x0065EB1F File Offset: 0x0065CD1F
+		// Token: 0x1700D0C8 RID: 53448
+		// (get) Token: 0x060314DA RID: 201946 RVA: 0x006ADB97 File Offset: 0x006ABD97
+		// (set) Token: 0x060314DB RID: 201947 RVA: 0x006ADB9F File Offset: 0x006ABD9F
 		public EGroupAiCommunicateType Type { get; set; }
 
-		// Token: 0x1700C6E3 RID: 50915
-		// (get) Token: 0x0602EBA2 RID: 191394 RVA: 0x0065EB28 File Offset: 0x0065CD28
-		// (set) Token: 0x0602EBA3 RID: 191395 RVA: 0x0065EB30 File Offset: 0x0065CD30
+		// Token: 0x1700D0C9 RID: 53449
+		// (get) Token: 0x060314DC RID: 201948 RVA: 0x006ADBA8 File Offset: 0x006ABDA8
+		// (set) Token: 0x060314DD RID: 201949 RVA: 0x006ADBB0 File Offset: 0x006ABDB0
 		public List<string> Tags { get; set; }
 
-		// Token: 0x0602EBA4 RID: 191396 RVA: 0x0065EB39 File Offset: 0x0065CD39
+		// Token: 0x060314DE RID: 201950 RVA: 0x006ADBB9 File Offset: 0x006ABDB9
 		public IGroupAiCommunicateAddTagT()
 		{
 			this.Type = EGroupAiCommunicateType.AddTag;

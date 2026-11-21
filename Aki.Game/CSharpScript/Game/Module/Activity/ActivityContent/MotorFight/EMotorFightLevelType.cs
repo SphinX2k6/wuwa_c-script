@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006407 RID: 25607
+	// Token: 0x02005385 RID: 21381
 	public enum EMotorFightLevelType
 	{
-		// Token: 0x040217F1 RID: 137201
+		// Token: 0x0401C120 RID: 114976
 		Easy,
-		// Token: 0x040217F2 RID: 137202
+		// Token: 0x0401C121 RID: 114977
 		Difficulty,
-		// Token: 0x040217F3 RID: 137203
+		// Token: 0x0401C122 RID: 114978
 		Endless,
-		// Token: 0x040217F4 RID: 137204
+		// Token: 0x0401C123 RID: 114979
 		Lock
 	}
 }

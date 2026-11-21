@@ -14,16 +14,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200569C RID: 22172
+	// Token: 0x02004672 RID: 18034
 	public class RewardPopView : UiViewBase
 	{
-		// Token: 0x060386B8 RID: 231096 RVA: 0x00D64F9E File Offset: 0x00D6319E
+		// Token: 0x0602D5B5 RID: 185781 RVA: 0x00CB30EE File Offset: 0x00CB12EE
 		[NullableContext(1)]
 		public RewardPopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060386B9 RID: 231097 RVA: 0x00D64FA8 File Offset: 0x00D631A8
+		// Token: 0x0602D5B6 RID: 185782 RVA: 0x00CB30F8 File Offset: 0x00CB12F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060386BA RID: 231098 RVA: 0x00D651C4 File Offset: 0x00D633C4
+		// Token: 0x0602D5B7 RID: 185783 RVA: 0x00CB3314 File Offset: 0x00CB1514
 		protected override void OnStart()
 		{
 			RewardPopViewData rewardPopViewData = this.OpenParam as RewardPopViewData;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			(base.GetButton(8).GetOwner() as AUIBaseActor).GetUIItem().SetUIActive(this.Type > ERewardPopType.Unlock);
 		}
 
-		// Token: 0x060386BB RID: 231099 RVA: 0x00D652AC File Offset: 0x00D634AC
+		// Token: 0x0602D5B8 RID: 185784 RVA: 0x00CB33FC File Offset: 0x00CB15FC
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -110,19 +110,19 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			};
 		}
 
-		// Token: 0x060386BC RID: 231100 RVA: 0x00D652EB File Offset: 0x00D634EB
+		// Token: 0x0602D5B9 RID: 185785 RVA: 0x00CB343B File Offset: 0x00CB163B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FixSuccess, new Action(this.OnClose));
 		}
 
-		// Token: 0x060386BD RID: 231101 RVA: 0x00D65309 File Offset: 0x00D63509
+		// Token: 0x0602D5BA RID: 185786 RVA: 0x00CB3459 File Offset: 0x00CB1659
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FixSuccess, new Action(this.OnClose));
 		}
 
-		// Token: 0x060386BE RID: 231102 RVA: 0x00D65327 File Offset: 0x00D63527
+		// Token: 0x0602D5BB RID: 185787 RVA: 0x00CB3477 File Offset: 0x00CB1677
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RewardPopScroll != null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x060386BF RID: 231103 RVA: 0x00D65360 File Offset: 0x00D63560
+		// Token: 0x0602D5BC RID: 185788 RVA: 0x00CB34B0 File Offset: 0x00CB16B0
 		protected override void OnAfterShow()
 		{
 			this.SetTitle();
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x060386C0 RID: 231104 RVA: 0x00D653D4 File Offset: 0x00D635D4
+		// Token: 0x0602D5BD RID: 185789 RVA: 0x00CB3524 File Offset: 0x00CB1724
 		private void SetTitle()
 		{
 			switch (this.Type)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x060386C1 RID: 231105 RVA: 0x00D654B0 File Offset: 0x00D636B0
+		// Token: 0x0602D5BE RID: 185790 RVA: 0x00CB3600 File Offset: 0x00CB1800
 		private void SetItemScroll()
 		{
 			if (this.Type == ERewardPopType.Unlock)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RewardPopScroll.RefreshByData<ICommonPopItemData>(CommonManager.Instance.GetCommonItemList(), null);
 		}
 
-		// Token: 0x060386C2 RID: 231106 RVA: 0x00D65584 File Offset: 0x00D63784
+		// Token: 0x0602D5BF RID: 185791 RVA: 0x00CB36D4 File Offset: 0x00CB18D4
 		private void SetInfoText()
 		{
 			if (this.Type == ERewardPopType.Unlock)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			LguiUtil.Instance.SetLocalText(base.GetText(3), "MaciningStudyFail", Array.Empty<object>());
 		}
 
-		// Token: 0x060386C3 RID: 231107 RVA: 0x00D65694 File Offset: 0x00D63894
+		// Token: 0x0602D5C0 RID: 185792 RVA: 0x00CB37E4 File Offset: 0x00CB19E4
 		private void SetExpItem()
 		{
 			int? sumExpByLevel = CommonManager.Instance.GetSumExpByLevel(CommonManager.Instance.GetCurrentRewardLevel().Value);
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.ExpItem.SetSumText(sumExpByLevel.Value);
 		}
 
-		// Token: 0x060386C4 RID: 231108 RVA: 0x00D65724 File Offset: 0x00D63924
+		// Token: 0x0602D5C1 RID: 185793 RVA: 0x00CB3874 File Offset: 0x00CB1A74
 		private void RefreshDoubleConfirmButton()
 		{
 			UUIInteractionGroup uuiinteractionGroup = (base.GetButton(6).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup;
@@ -273,32 +273,32 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			(base.GetButton(9).GetOwner() as AUIBaseActor).GetUIItem().SetUIActive(!flag);
 		}
 
-		// Token: 0x060386C5 RID: 231109 RVA: 0x00D65787 File Offset: 0x00D63987
+		// Token: 0x0602D5C2 RID: 185794 RVA: 0x00CB38D7 File Offset: 0x00CB1AD7
 		private void OnClose()
 		{
 			this.DoClose();
 		}
 
-		// Token: 0x060386C6 RID: 231110 RVA: 0x00D6578F File Offset: 0x00D6398F
+		// Token: 0x0602D5C3 RID: 185795 RVA: 0x00CB38DF File Offset: 0x00CB1ADF
 		private void OnCancel()
 		{
 			this.DoClose();
 		}
 
-		// Token: 0x060386C7 RID: 231111 RVA: 0x00D65797 File Offset: 0x00D63997
+		// Token: 0x0602D5C4 RID: 185796 RVA: 0x00CB38E7 File Offset: 0x00CB1AE7
 		private void OnConfirm()
 		{
 			CommonManager.Instance.SendFixToolRequest();
 			this.DoClose();
 		}
 
-		// Token: 0x060386C8 RID: 231112 RVA: 0x00D657A9 File Offset: 0x00D639A9
+		// Token: 0x0602D5C5 RID: 185797 RVA: 0x00CB38F9 File Offset: 0x00CB1AF9
 		private void OnSingleConfirm()
 		{
 			this.DoClose();
 		}
 
-		// Token: 0x060386C9 RID: 231113 RVA: 0x00D657B4 File Offset: 0x00D639B4
+		// Token: 0x0602D5C6 RID: 185798 RVA: 0x00CB3904 File Offset: 0x00CB1B04
 		private void DoClose()
 		{
 			ERewardPopType type = this.Type;
@@ -320,13 +320,13 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			UiManager.Instance.CloseView(EUiViewName.RewardPopView, null);
 		}
 
-		// Token: 0x060386CA RID: 231114 RVA: 0x00D65818 File Offset: 0x00D63A18
+		// Token: 0x0602D5C7 RID: 185799 RVA: 0x00CB3968 File Offset: 0x00CB1B68
 		private void OnDisable()
 		{
 			GenericPromptController.Instance.ShowPromptByCode("MaterialShort", Array.Empty<object>());
 		}
 
-		// Token: 0x0401DA2A RID: 121386
+		// Token: 0x040184B5 RID: 99509
 		[Nullable(new byte[]
 		{
 			2,
@@ -334,44 +334,44 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private GenericScrollView<RewardPopItem> RewardPopScroll;
 
-		// Token: 0x0401DA2B RID: 121387
+		// Token: 0x040184B6 RID: 99510
 		[Nullable(2)]
 		private ExpItem ExpItem;
 
-		// Token: 0x0401DA2C RID: 121388
+		// Token: 0x040184B7 RID: 99511
 		private ERewardPopType Type;
 
-		// Token: 0x0200B860 RID: 47200
+		// Token: 0x0200A288 RID: 41608
 		private class ERewardPopDefine
 		{
-			// Token: 0x04037CE2 RID: 228578
+			// Token: 0x040326FF RID: 206591
 			public const int TitleText = 0;
 
-			// Token: 0x04037CE3 RID: 228579
+			// Token: 0x04032700 RID: 206592
 			public const int ItemScrollView = 1;
 
-			// Token: 0x04037CE4 RID: 228580
+			// Token: 0x04032701 RID: 206593
 			public const int InfoTextItem = 2;
 
-			// Token: 0x04037CE5 RID: 228581
+			// Token: 0x04032702 RID: 206594
 			public const int InfoText = 3;
 
-			// Token: 0x04037CE6 RID: 228582
+			// Token: 0x04032703 RID: 206595
 			public const int DoubleButtonItem = 4;
 
-			// Token: 0x04037CE7 RID: 228583
+			// Token: 0x04032704 RID: 206596
 			public const int CancelButton = 5;
 
-			// Token: 0x04037CE8 RID: 228584
+			// Token: 0x04032705 RID: 206597
 			public const int ConfirmButton = 6;
 
-			// Token: 0x04037CE9 RID: 228585
+			// Token: 0x04032706 RID: 206598
 			public const int ExpItem = 7;
 
-			// Token: 0x04037CEA RID: 228586
+			// Token: 0x04032707 RID: 206599
 			public const int SingleConfirmButton = 8;
 
-			// Token: 0x04037CEB RID: 228587
+			// Token: 0x04032708 RID: 206600
 			public const int DisableButton = 9;
 		}
 	}

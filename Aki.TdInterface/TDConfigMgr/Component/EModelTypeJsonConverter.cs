@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200099D RID: 2461
+	// Token: 0x02000A50 RID: 2640
 	public class EModelTypeJsonConverter : JsonConverter<EModelType>
 	{
-		// Token: 0x060036F5 RID: 14069 RVA: 0x0008EFCC File Offset: 0x0008D1CC
+		// Token: 0x06003A7C RID: 14972 RVA: 0x00096F7C File Offset: 0x0009517C
 		public override EModelType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EModelTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060036F6 RID: 14070 RVA: 0x0008EFF0 File Offset: 0x0008D1F0
+		// Token: 0x06003A7D RID: 14973 RVA: 0x00096FA0 File Offset: 0x000951A0
 		public override void Write(Utf8JsonWriter writer, EModelType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

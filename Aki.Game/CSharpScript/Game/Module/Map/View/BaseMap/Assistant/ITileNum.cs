@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant
 {
-	// Token: 0x02005496 RID: 21654
+	// Token: 0x02004479 RID: 17529
 	public interface ITileNum
 	{
-		// Token: 0x17008490 RID: 33936
-		// (get) Token: 0x0603752B RID: 226603
-		// (set) Token: 0x0603752C RID: 226604
+		// Token: 0x1700585C RID: 22620
+		// (get) Token: 0x0602C481 RID: 181377
+		// (set) Token: 0x0602C482 RID: 181378
 		int MaxX { get; set; }
 
-		// Token: 0x17008491 RID: 33937
-		// (get) Token: 0x0603752D RID: 226605
-		// (set) Token: 0x0603752E RID: 226606
+		// Token: 0x1700585D RID: 22621
+		// (get) Token: 0x0602C483 RID: 181379
+		// (set) Token: 0x0602C484 RID: 181380
 		int MinX { get; set; }
 
-		// Token: 0x17008492 RID: 33938
-		// (get) Token: 0x0603752F RID: 226607
-		// (set) Token: 0x06037530 RID: 226608
+		// Token: 0x1700585E RID: 22622
+		// (get) Token: 0x0602C485 RID: 181381
+		// (set) Token: 0x0602C486 RID: 181382
 		int MaxY { get; set; }
 
-		// Token: 0x17008493 RID: 33939
-		// (get) Token: 0x06037531 RID: 226609
-		// (set) Token: 0x06037532 RID: 226610
+		// Token: 0x1700585F RID: 22623
+		// (get) Token: 0x0602C487 RID: 181383
+		// (set) Token: 0x0602C488 RID: 181384
 		int MinY { get; set; }
 	}
 }

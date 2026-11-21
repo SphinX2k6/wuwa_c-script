@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A7D RID: 2685
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B47 RID: 2887
 	public class IInteractEntityPartPrefabOptionPoint
 	{
-		// Token: 0x06003DCB RID: 15819 RVA: 0x0009E602 File Offset: 0x0009C802
+		// Token: 0x060041F4 RID: 16884 RVA: 0x000A7BBA File Offset: 0x000A5DBA
 		public static IInteractEntityPartPrefabOptionPoint Create(IInteractEntityPartPrefabOptionPoint? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E8E RID: 3726
-		// (get) Token: 0x06003DCC RID: 15820 RVA: 0x0009E621 File Offset: 0x0009C821
+		// Token: 0x17000F61 RID: 3937
+		// (get) Token: 0x060041F5 RID: 16885 RVA: 0x000A7BD9 File Offset: 0x000A5DD9
 		public virtual string UiStyle
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E8F RID: 3727
-		// (get) Token: 0x06003DCD RID: 15821 RVA: 0x0009E62E File Offset: 0x0009C82E
+		// Token: 0x17000F62 RID: 3938
+		// (get) Token: 0x060041F6 RID: 16886 RVA: 0x000A7BE6 File Offset: 0x000A5DE6
 		public virtual string BindName
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002266 RID: 8806
+		// Token: 0x04002482 RID: 9346
 		private IInteractEntityPartPrefabOptionPoint Instance;
 	}
 }

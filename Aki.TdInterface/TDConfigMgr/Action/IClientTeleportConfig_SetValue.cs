@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018CB RID: 6347
+	// Token: 0x02001A5C RID: 6748
 	public class IClientTeleportConfig_SetValue
 	{
-		// Token: 0x04005588 RID: 21896
+		// Token: 0x040059E2 RID: 23010
 		public EClientTeleportType Type;
 	}
 }

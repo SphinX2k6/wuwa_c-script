@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061D0 RID: 25040
+	// Token: 0x0200514E RID: 20814
 	internal enum <RoadBookLevelTipsView>FD84CFD885680D50DD41721C1D06CC10FCBCFD424AFABCA14254AD203119AC642__ELevelItemComponents
 	{
-		// Token: 0x04020F58 RID: 135000
+		// Token: 0x0401B887 RID: 112775
 		PanelActiveLevel,
-		// Token: 0x04020F59 RID: 135001
+		// Token: 0x0401B888 RID: 112776
 		ArtActiveLevel,
-		// Token: 0x04020F5A RID: 135002
+		// Token: 0x0401B889 RID: 112777
 		PanelTargetLevel,
-		// Token: 0x04020F5B RID: 135003
+		// Token: 0x0401B88A RID: 112778
 		ArtTargetLevel
 	}
 }

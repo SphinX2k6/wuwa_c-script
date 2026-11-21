@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EFE RID: 7934
+// Token: 0x020013C0 RID: 5056
 public class HonamiStoryQuestPanel : UiPanelBase
 {
-	// Token: 0x0600F453 RID: 62547 RVA: 0x003AEE54 File Offset: 0x003AD054
+	// Token: 0x0600C872 RID: 51314 RVA: 0x003BA948 File Offset: 0x003B8B48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -45,7 +45,7 @@ public class HonamiStoryQuestPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F454 RID: 62548 RVA: 0x003AEFC0 File Offset: 0x003AD1C0
+	// Token: 0x0600C873 RID: 51315 RVA: 0x003BAAB4 File Offset: 0x003B8CB4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryQuestPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -56,14 +56,14 @@ public class HonamiStoryQuestPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F455 RID: 62549 RVA: 0x003AF003 File Offset: 0x003AD203
+	// Token: 0x0600C874 RID: 51316 RVA: 0x003BAAF7 File Offset: 0x003B8CF7
 	[NullableContext(1)]
 	private HonamiStoryQuestPanelQuestItem CreateQuestItem()
 	{
 		return new HonamiStoryQuestPanelQuestItem();
 	}
 
-	// Token: 0x0600F456 RID: 62550 RVA: 0x003AF00C File Offset: 0x003AD20C
+	// Token: 0x0600C875 RID: 51317 RVA: 0x003BAB00 File Offset: 0x003B8D00
 	public void Refresh(bool showSubQuest = true)
 	{
 		bool flag = HonamiStoryUtil.CheckInActivityQuest();
@@ -99,13 +99,13 @@ public class HonamiStoryQuestPanel : UiPanelBase
 		base.GetItem(5).SetUIActive(flag3);
 	}
 
-	// Token: 0x0600F457 RID: 62551 RVA: 0x003AF0E5 File Offset: 0x003AD2E5
+	// Token: 0x0600C876 RID: 51318 RVA: 0x003BABD9 File Offset: 0x003B8DD9
 	private void OnBtnQuestView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.HonamiStoryQuestView, null, null);
 	}
 
-	// Token: 0x04007115 RID: 28949
+	// Token: 0x040071F6 RID: 29174
 	[Nullable(new byte[]
 	{
 		2,
@@ -114,7 +114,7 @@ public class HonamiStoryQuestPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<HonamiStoryQuestPanelQuestItem, HonamiStoryQuestDataBase> MainQuestLayout;
 
-	// Token: 0x04007116 RID: 28950
+	// Token: 0x040071F7 RID: 29175
 	[Nullable(new byte[]
 	{
 		2,
@@ -123,24 +123,24 @@ public class HonamiStoryQuestPanel : UiPanelBase
 	})]
 	private GenericLayout<HonamiStoryQuestPanelQuestItem, HonamiStoryQuestDataBase> SubQuestLayout;
 
-	// Token: 0x020084FE RID: 34046
+	// Token: 0x02007683 RID: 30339
 	private enum EHonamiStoryQuestPanelComponent
 	{
-		// Token: 0x0402B47C RID: 177276
+		// Token: 0x040267A0 RID: 157600
 		MainContent,
-		// Token: 0x0402B47D RID: 177277
+		// Token: 0x040267A1 RID: 157601
 		QuestViewButton,
-		// Token: 0x0402B47E RID: 177278
+		// Token: 0x040267A2 RID: 157602
 		MainQuestTitleText,
-		// Token: 0x0402B47F RID: 177279
+		// Token: 0x040267A3 RID: 157603
 		MainQuestVerticalLayout,
-		// Token: 0x0402B480 RID: 177280
+		// Token: 0x040267A4 RID: 157604
 		MainQuestItem,
-		// Token: 0x0402B481 RID: 177281
+		// Token: 0x040267A5 RID: 157605
 		SubContent,
-		// Token: 0x0402B482 RID: 177282
+		// Token: 0x040267A6 RID: 157606
 		SubQuestVerticalLayout,
-		// Token: 0x0402B483 RID: 177283
+		// Token: 0x040267A7 RID: 157607
 		SubQuestItem
 	}
 }

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000567 RID: 1383
+	// Token: 0x020005CE RID: 1486
 	public class INpcPerformOnInteract_SetValue
 	{
-		// Token: 0x04001439 RID: 5177
-		[Nullable(1)]
+		// Token: 0x040015A3 RID: 5539
 		public string Montage;
 
-		// Token: 0x0400143A RID: 5178
+		// Token: 0x040015A4 RID: 5540
 		public bool? NotInterruptMontageWhenFinishedInteract;
 	}
 }

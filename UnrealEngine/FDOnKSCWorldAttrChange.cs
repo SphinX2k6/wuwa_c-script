@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CB3 RID: 7347
+	// Token: 0x0200054C RID: 1356
 	public sealed class FDOnKSCWorldAttrChange : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C7D8 RID: 116696 RVA: 0x002A20BA File Offset: 0x002A02BA
+		// Token: 0x06007D15 RID: 32021 RVA: 0x000B9A6E File Offset: 0x000B7C6E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FDOnKSCWorldAttrChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C7D9 RID: 116697 RVA: 0x002A20C6 File Offset: 0x002A02C6
+		// Token: 0x06007D16 RID: 32022 RVA: 0x000B9A7A File Offset: 0x000B7C7A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FDOnKSCWorldAttrChange._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FDOnKSCWorldAttrChange._FunctionPtr;
 		}
 
-		// Token: 0x0601C7DA RID: 116698 RVA: 0x002A20E9 File Offset: 0x002A02E9
+		// Token: 0x06007D17 RID: 32023 RVA: 0x000B9A9D File Offset: 0x000B7C9D
 		public FDOnKSCWorldAttrChange()
 		{
 		}
 
-		// Token: 0x0601C7DB RID: 116699 RVA: 0x002A20F1 File Offset: 0x002A02F1
+		// Token: 0x06007D18 RID: 32024 RVA: 0x000B9AA5 File Offset: 0x000B7CA5
 		[NullableContext(2)]
 		public FDOnKSCWorldAttrChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C7DC RID: 116700 RVA: 0x002A20FB File Offset: 0x002A02FB
+		// Token: 0x06007D19 RID: 32025 RVA: 0x000B9AAF File Offset: 0x000B7CAF
 		public FDOnKSCWorldAttrChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C7DD RID: 116701 RVA: 0x002A2106 File Offset: 0x002A0306
+		// Token: 0x06007D1A RID: 32026 RVA: 0x000B9ABA File Offset: 0x000B7CBA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<EKSC_WorldAttrType, int, int>) ?? ((Action<EKSC_WorldAttrType, int, int>)Delegate.CreateDelegate(typeof(Action<EKSC_WorldAttrType, int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C7DE RID: 116702 RVA: 0x002A2138 File Offset: 0x002A0338
+		// Token: 0x06007D1B RID: 32027 RVA: 0x000B9AEC File Offset: 0x000B7CEC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<EKSC_WorldAttrType, int, int> Callback)
 		{
 			if (FDOnKSCWorldAttrChange.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FDOnKSCWorldAttrChange.RegisterId);
 		}
 
-		// Token: 0x0601C7DF RID: 116703 RVA: 0x002A2174 File Offset: 0x002A0374
+		// Token: 0x06007D1C RID: 32028 RVA: 0x000B9B28 File Offset: 0x000B7D28
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(EKSC_WorldAttrType AttrType, int OldValue, int NewValue)
 		{
 			FDOnKSCWorldAttrChange.__FDOnKSCWorldAttrChange_DelegateParams* ptr = stackalloc FDOnKSCWorldAttrChange.__FDOnKSCWorldAttrChange_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FDOnKSCWorldAttrChange.__FDOnKSCWorldAttrChange_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C7E0 RID: 116704 RVA: 0x002A21C0 File Offset: 0x002A03C0
+		// Token: 0x06007D1D RID: 32029 RVA: 0x000B9B74 File Offset: 0x000B7D74
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<EKSC_WorldAttrType, int, int> action = target as Action<EKSC_WorldAttrType, int, int>;
@@ -92,39 +89,39 @@ namespace UnrealEngine
 			action(((FDOnKSCWorldAttrChange.__FDOnKSCWorldAttrChange_DelegateParams*)__Parameters)->AttrType, ((FDOnKSCWorldAttrChange.__FDOnKSCWorldAttrChange_DelegateParams*)__Parameters)->OldValue, ((FDOnKSCWorldAttrChange.__FDOnKSCWorldAttrChange_DelegateParams*)__Parameters)->NewValue);
 		}
 
-		// Token: 0x0400F50B RID: 62731
+		// Token: 0x04003575 RID: 13685
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F50C RID: 62732
+		// Token: 0x04003576 RID: 13686
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.DOnKSCWorldAttrChange__DelegateSignature";
 
-		// Token: 0x0400F50D RID: 62733
+		// Token: 0x04003577 RID: 13687
 		private static int RegisterId;
 
-		// Token: 0x02003294 RID: 12948
+		// Token: 0x02000D09 RID: 3337
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FDOnKSCWorldAttrChange_DelegateParams
+		private ref struct __FDOnKSCWorldAttrChange_DelegateParams
 		{
-			// Token: 0x04017121 RID: 94497
+			// Token: 0x04005F95 RID: 24469
 			[FieldOffset(0)]
 			public EKSC_WorldAttrType AttrType;
 
-			// Token: 0x04017122 RID: 94498
+			// Token: 0x04005F96 RID: 24470
 			[FieldOffset(4)]
 			public int OldValue;
 
-			// Token: 0x04017123 RID: 94499
+			// Token: 0x04005F97 RID: 24471
 			[FieldOffset(8)]
 			public int NewValue;
 		}
 
-		// Token: 0x02003295 RID: 12949
+		// Token: 0x02000D0A RID: 3338
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017124 RID: 94500
+			// Token: 0x04005F98 RID: 24472
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

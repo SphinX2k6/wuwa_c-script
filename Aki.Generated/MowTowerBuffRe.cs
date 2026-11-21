@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E71 RID: 3697
+	// Token: 0x02000F56 RID: 3926
 	public struct MowTowerBuffRe : IFlatbufferObject
 	{
-		// Token: 0x1700227E RID: 8830
-		// (get) Token: 0x06009CF7 RID: 40183 RVA: 0x00299229 File Offset: 0x00297429
+		// Token: 0x170022E3 RID: 8931
+		// (get) Token: 0x0600A317 RID: 41751 RVA: 0x002B6A85 File Offset: 0x002B4C85
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009CF8 RID: 40184 RVA: 0x00299236 File Offset: 0x00297436
+		// Token: 0x0600A318 RID: 41752 RVA: 0x002B6A92 File Offset: 0x002B4C92
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009CF9 RID: 40185 RVA: 0x00299240 File Offset: 0x00297440
+		// Token: 0x0600A319 RID: 41753 RVA: 0x002B6A9C File Offset: 0x002B4C9C
 		public static MowTowerBuffRe GetRootAsMowTowerBuffRe(ByteBuffer _bb)
 		{
 			return MowTowerBuffRe.GetRootAsMowTowerBuffRe(_bb, default(MowTowerBuffRe));
 		}
 
-		// Token: 0x06009CFA RID: 40186 RVA: 0x0029925C File Offset: 0x0029745C
+		// Token: 0x0600A31A RID: 41754 RVA: 0x002B6AB8 File Offset: 0x002B4CB8
 		public static MowTowerBuffRe GetRootAsMowTowerBuffRe(ByteBuffer _bb, MowTowerBuffRe obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009CFB RID: 40187 RVA: 0x00299279 File Offset: 0x00297479
+		// Token: 0x0600A31B RID: 41755 RVA: 0x002B6AD5 File Offset: 0x002B4CD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009CFC RID: 40188 RVA: 0x00299288 File Offset: 0x00297488
+		// Token: 0x0600A31C RID: 41756 RVA: 0x002B6AE4 File Offset: 0x002B4CE4
 		public MowTowerBuffRe __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700227F RID: 8831
-		// (get) Token: 0x06009CFD RID: 40189 RVA: 0x00299298 File Offset: 0x00297498
+		// Token: 0x170022E4 RID: 8932
+		// (get) Token: 0x0600A31D RID: 41757 RVA: 0x002B6AF4 File Offset: 0x002B4CF4
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009CFE RID: 40190 RVA: 0x002992D4 File Offset: 0x002974D4
+		// Token: 0x0600A31E RID: 41758 RVA: 0x002B6B30 File Offset: 0x002B4D30
 		public long BuffId(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x17002280 RID: 8832
-		// (get) Token: 0x06009CFF RID: 40191 RVA: 0x00299314 File Offset: 0x00297514
+		// Token: 0x170022E5 RID: 8933
+		// (get) Token: 0x0600A31F RID: 41759 RVA: 0x002B6B70 File Offset: 0x002B4D70
 		public int BuffIdLength
 		{
 			get
@@ -91,20 +91,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D00 RID: 40192 RVA: 0x0029933F File Offset: 0x0029753F
+		// Token: 0x0600A320 RID: 41760 RVA: 0x002B6B9B File Offset: 0x002B4D9B
 		public Span<long> GetBuffIdBytes()
 		{
 			return this.__p.__vector_as_span<long>(6, 8);
 		}
 
-		// Token: 0x06009D01 RID: 40193 RVA: 0x0029934E File Offset: 0x0029754E
+		// Token: 0x0600A321 RID: 41761 RVA: 0x002B6BAA File Offset: 0x002B4DAA
 		public long[] GetBuffIdArray()
 		{
 			return this.__p.__vector_as_array<long>(6) ?? Array.Empty<long>();
 		}
 
-		// Token: 0x17002281 RID: 8833
-		// (get) Token: 0x06009D02 RID: 40194 RVA: 0x00299368 File Offset: 0x00297568
+		// Token: 0x170022E6 RID: 8934
+		// (get) Token: 0x0600A322 RID: 41762 RVA: 0x002B6BC4 File Offset: 0x002B4DC4
 		public string Texture
 		{
 			get
@@ -118,20 +118,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D03 RID: 40195 RVA: 0x0029939F File Offset: 0x0029759F
+		// Token: 0x0600A323 RID: 41763 RVA: 0x002B6BFB File Offset: 0x002B4DFB
 		public Span<byte> GetTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06009D04 RID: 40196 RVA: 0x002993AE File Offset: 0x002975AE
+		// Token: 0x0600A324 RID: 41764 RVA: 0x002B6C0A File Offset: 0x002B4E0A
 		public byte[] GetTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002282 RID: 8834
-		// (get) Token: 0x06009D05 RID: 40197 RVA: 0x002993C8 File Offset: 0x002975C8
+		// Token: 0x170022E7 RID: 8935
+		// (get) Token: 0x0600A325 RID: 41765 RVA: 0x002B6C24 File Offset: 0x002B4E24
 		public string Name
 		{
 			get
@@ -145,20 +145,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D06 RID: 40198 RVA: 0x00299400 File Offset: 0x00297600
+		// Token: 0x0600A326 RID: 41766 RVA: 0x002B6C5C File Offset: 0x002B4E5C
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06009D07 RID: 40199 RVA: 0x00299410 File Offset: 0x00297610
+		// Token: 0x0600A327 RID: 41767 RVA: 0x002B6C6C File Offset: 0x002B4E6C
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002283 RID: 8835
-		// (get) Token: 0x06009D08 RID: 40200 RVA: 0x00299428 File Offset: 0x00297628
+		// Token: 0x170022E8 RID: 8936
+		// (get) Token: 0x0600A328 RID: 41768 RVA: 0x002B6C84 File Offset: 0x002B4E84
 		public string Description
 		{
 			get
@@ -172,19 +172,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D09 RID: 40201 RVA: 0x00299460 File Offset: 0x00297660
+		// Token: 0x0600A329 RID: 41769 RVA: 0x002B6CBC File Offset: 0x002B4EBC
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06009D0A RID: 40202 RVA: 0x00299470 File Offset: 0x00297670
+		// Token: 0x0600A32A RID: 41770 RVA: 0x002B6CCC File Offset: 0x002B4ECC
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009D0B RID: 40203 RVA: 0x00299488 File Offset: 0x00297688
+		// Token: 0x0600A32B RID: 41771 RVA: 0x002B6CE4 File Offset: 0x002B4EE4
 		public string DescriptionParam(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -195,8 +195,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002284 RID: 8836
-		// (get) Token: 0x06009D0C RID: 40204 RVA: 0x002994C4 File Offset: 0x002976C4
+		// Token: 0x170022E9 RID: 8937
+		// (get) Token: 0x0600A32C RID: 41772 RVA: 0x002B6D20 File Offset: 0x002B4F20
 		public int DescriptionParamLength
 		{
 			get
@@ -210,42 +210,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D0D RID: 40205 RVA: 0x002994F0 File Offset: 0x002976F0
+		// Token: 0x0600A32D RID: 41773 RVA: 0x002B6D4C File Offset: 0x002B4F4C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BuffIdIter()或GetBuffIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly long[] BuffId()
+		public long[] BuffId()
 		{
-			MowTowerBuffRe mowTowerBuffRe = this;
-			return mowTowerBuffRe.GetBuffIdArray() ?? Array.Empty<long>();
+			return this.GetBuffIdArray();
 		}
 
-		// Token: 0x06009D0E RID: 40206 RVA: 0x00299514 File Offset: 0x00297714
+		// Token: 0x0600A32E RID: 41774 RVA: 0x002B6D54 File Offset: 0x002B4F54
 		[NullableContext(1)]
-		public readonly IEnumerable<long> BuffIdIter()
+		public IEnumerable<long> BuffIdIter()
 		{
 			MowTowerBuffRe.<BuffIdIter>d__31 <BuffIdIter>d__ = new MowTowerBuffRe.<BuffIdIter>d__31(-2);
 			<BuffIdIter>d__.<>3__<>4__this = this;
 			return <BuffIdIter>d__;
 		}
 
-		// Token: 0x06009D0F RID: 40207 RVA: 0x00299529 File Offset: 0x00297729
+		// Token: 0x0600A32F RID: 41775 RVA: 0x002B6D69 File Offset: 0x002B4F69
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DescriptionParamIter()或GetDescriptionParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] DescriptionParam()
+		public string[] DescriptionParam()
 		{
 			return this.DescriptionParamIter().ToArray<string>();
 		}
 
-		// Token: 0x06009D10 RID: 40208 RVA: 0x00299536 File Offset: 0x00297736
+		// Token: 0x0600A330 RID: 41776 RVA: 0x002B6D76 File Offset: 0x002B4F76
 		[NullableContext(1)]
-		public readonly IEnumerable<string> DescriptionParamIter()
+		public IEnumerable<string> DescriptionParamIter()
 		{
 			MowTowerBuffRe.<DescriptionParamIter>d__33 <DescriptionParamIter>d__ = new MowTowerBuffRe.<DescriptionParamIter>d__33(-2);
 			<DescriptionParamIter>d__.<>3__<>4__this = this;
 			return <DescriptionParamIter>d__;
 		}
 
-		// Token: 0x04004F1F RID: 20255
+		// Token: 0x04005504 RID: 21764
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E85 RID: 28293
+	// Token: 0x02007609 RID: 30217
 	public struct IResetEntityPos : IFlatbufferObject
 	{
-		// Token: 0x1700D2B1 RID: 53937
-		// (get) Token: 0x06032009 RID: 204809 RVA: 0x006C3804 File Offset: 0x006C1A04
+		// Token: 0x1700DE08 RID: 56840
+		// (get) Token: 0x06035049 RID: 217161 RVA: 0x0071F538 File Offset: 0x0071D738
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603200A RID: 204810 RVA: 0x006C3811 File Offset: 0x006C1A11
+		// Token: 0x0603504A RID: 217162 RVA: 0x0071F545 File Offset: 0x0071D745
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603200B RID: 204811 RVA: 0x006C3818 File Offset: 0x006C1A18
+		// Token: 0x0603504B RID: 217163 RVA: 0x0071F54C File Offset: 0x0071D74C
 		public static IResetEntityPos GetRootAsIResetEntityPos(ByteBuffer _bb)
 		{
 			return IResetEntityPos.GetRootAsIResetEntityPos(_bb, default(IResetEntityPos));
 		}
 
-		// Token: 0x0603200C RID: 204812 RVA: 0x006C3834 File Offset: 0x006C1A34
+		// Token: 0x0603504C RID: 217164 RVA: 0x0071F568 File Offset: 0x0071D768
 		public static IResetEntityPos GetRootAsIResetEntityPos(ByteBuffer _bb, IResetEntityPos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603200D RID: 204813 RVA: 0x006C3851 File Offset: 0x006C1A51
+		// Token: 0x0603504D RID: 217165 RVA: 0x0071F585 File Offset: 0x0071D785
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603200E RID: 204814 RVA: 0x006C3860 File Offset: 0x006C1A60
+		// Token: 0x0603504E RID: 217166 RVA: 0x0071F594 File Offset: 0x0071D794
 		public IResetEntityPos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2B2 RID: 53938
-		// (get) Token: 0x0603200F RID: 204815 RVA: 0x006C3870 File Offset: 0x006C1A70
+		// Token: 0x1700DE09 RID: 56841
+		// (get) Token: 0x0603504F RID: 217167 RVA: 0x0071F5A4 File Offset: 0x0071D7A4
 		public int EntityId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032010 RID: 204816 RVA: 0x006C38AC File Offset: 0x006C1AAC
+		// Token: 0x06035050 RID: 217168 RVA: 0x0071F5E0 File Offset: 0x0071D7E0
 		public static Offset<IResetEntityPos> CreateIResetEntityPos(FlatBufferBuilder builder, int EntityId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetEntityPos.EndIResetEntityPos(builder);
 		}
 
-		// Token: 0x06032011 RID: 204817 RVA: 0x006C38C2 File Offset: 0x006C1AC2
+		// Token: 0x06035051 RID: 217169 RVA: 0x0071F5F6 File Offset: 0x0071D7F6
 		public static void StartIResetEntityPos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06032012 RID: 204818 RVA: 0x006C38CB File Offset: 0x006C1ACB
+		// Token: 0x06035052 RID: 217170 RVA: 0x0071F5FF File Offset: 0x0071D7FF
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x06032013 RID: 204819 RVA: 0x006C38D6 File Offset: 0x006C1AD6
+		// Token: 0x06035053 RID: 217171 RVA: 0x0071F60A File Offset: 0x0071D80A
 		public static Offset<IResetEntityPos> EndIResetEntityPos(FlatBufferBuilder builder)
 		{
 			return new Offset<IResetEntityPos>(builder.EndTable());
 		}
 
-		// Token: 0x06032014 RID: 204820 RVA: 0x006C38E4 File Offset: 0x006C1AE4
+		// Token: 0x06035054 RID: 217172 RVA: 0x0071F618 File Offset: 0x0071D818
 		public IResetEntityPosT UnPack()
 		{
 			IResetEntityPosT resetEntityPosT = new IResetEntityPosT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return resetEntityPosT;
 		}
 
-		// Token: 0x06032015 RID: 204821 RVA: 0x006C38FF File Offset: 0x006C1AFF
+		// Token: 0x06035055 RID: 217173 RVA: 0x0071F633 File Offset: 0x0071D833
 		public void UnPackTo(IResetEntityPosT _o)
 		{
 			_o.EntityId = this.EntityId;
 		}
 
-		// Token: 0x06032016 RID: 204822 RVA: 0x006C3910 File Offset: 0x006C1B10
+		// Token: 0x06035056 RID: 217174 RVA: 0x0071F644 File Offset: 0x0071D844
 		public static Offset<IResetEntityPos> Pack(FlatBufferBuilder builder, IResetEntityPosT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetEntityPos.CreateIResetEntityPos(builder, _o.EntityId);
 		}
 
-		// Token: 0x04011873 RID: 71795
+		// Token: 0x040127F8 RID: 75768
 		private Table __p;
 	}
 }

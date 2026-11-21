@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A7 RID: 22695
+	// Token: 0x0200487F RID: 18559
 	public class InstanceDungeonRecommendLevelItem : UiPanelBase
 	{
-		// Token: 0x06039BB8 RID: 236472 RVA: 0x00DB864C File Offset: 0x00DB684C
+		// Token: 0x0602EADB RID: 191195 RVA: 0x00D07564 File Offset: 0x00D05764
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BB9 RID: 236473 RVA: 0x00DB8694 File Offset: 0x00DB6894
+		// Token: 0x0602EADC RID: 191196 RVA: 0x00D075AC File Offset: 0x00D057AC
 		protected override void OnStart()
 		{
 			if (this.ItemDataHandle != null)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BBA RID: 236474 RVA: 0x00DB86B0 File Offset: 0x00DB68B0
+		// Token: 0x0602EADD RID: 191197 RVA: 0x00D075C8 File Offset: 0x00D057C8
 		[NullableContext(1)]
 		public void RefreshItem(TowerDefenseRecommendLevel level)
 		{
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), level.TextId, new <>z__ReadOnlySingleElementList<object>(level.Level));
 		}
 
-		// Token: 0x0401E275 RID: 123509
+		// Token: 0x04018D12 RID: 101650
 		[Nullable(2)]
 		private InstanceDungeonRecommendLevelItemData ItemDataHandle;
 
-		// Token: 0x0200BB0E RID: 47886
+		// Token: 0x0200A527 RID: 42279
 		private enum EChildType
 		{
-			// Token: 0x04038822 RID: 231458
+			// Token: 0x04033223 RID: 209443
 			RecommendLevelText
 		}
 	}

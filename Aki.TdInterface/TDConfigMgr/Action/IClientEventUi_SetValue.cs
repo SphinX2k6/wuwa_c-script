@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018B3 RID: 6323
+	// Token: 0x02001A3E RID: 6718
 	public class IClientEventUi_SetValue
 	{
-		// Token: 0x0400555C RID: 21852
+		// Token: 0x040059A9 RID: 22953
 		public EClientEventUiType Type;
 	}
 }

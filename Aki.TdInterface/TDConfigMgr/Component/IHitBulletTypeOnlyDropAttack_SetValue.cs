@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000417 RID: 1047
+	// Token: 0x02000470 RID: 1136
 	public class IHitBulletTypeOnlyDropAttack_SetValue
 	{
-		// Token: 0x04001069 RID: 4201
+		// Token: 0x0400118B RID: 4491
 		public EHitBulletType Type;
 	}
 }

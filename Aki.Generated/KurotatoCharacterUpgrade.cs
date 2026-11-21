@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D98 RID: 3480
+	// Token: 0x02000E7D RID: 3709
 	public struct KurotatoCharacterUpgrade : IFlatbufferObject
 	{
-		// Token: 0x17001B3B RID: 6971
-		// (get) Token: 0x06008905 RID: 35077 RVA: 0x0026CB5F File Offset: 0x0026AD5F
+		// Token: 0x17001B9F RID: 7071
+		// (get) Token: 0x06008F21 RID: 36641 RVA: 0x0028B791 File Offset: 0x00289991
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008906 RID: 35078 RVA: 0x0026CB6C File Offset: 0x0026AD6C
+		// Token: 0x06008F22 RID: 36642 RVA: 0x0028B79E File Offset: 0x0028999E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008907 RID: 35079 RVA: 0x0026CB74 File Offset: 0x0026AD74
+		// Token: 0x06008F23 RID: 36643 RVA: 0x0028B7A8 File Offset: 0x002899A8
 		public static KurotatoCharacterUpgrade GetRootAsKurotatoCharacterUpgrade(ByteBuffer _bb)
 		{
 			return KurotatoCharacterUpgrade.GetRootAsKurotatoCharacterUpgrade(_bb, default(KurotatoCharacterUpgrade));
 		}
 
-		// Token: 0x06008908 RID: 35080 RVA: 0x0026CB90 File Offset: 0x0026AD90
+		// Token: 0x06008F24 RID: 36644 RVA: 0x0028B7C4 File Offset: 0x002899C4
 		public static KurotatoCharacterUpgrade GetRootAsKurotatoCharacterUpgrade(ByteBuffer _bb, KurotatoCharacterUpgrade obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008909 RID: 35081 RVA: 0x0026CBAD File Offset: 0x0026ADAD
+		// Token: 0x06008F25 RID: 36645 RVA: 0x0028B7E1 File Offset: 0x002899E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600890A RID: 35082 RVA: 0x0026CBBC File Offset: 0x0026ADBC
+		// Token: 0x06008F26 RID: 36646 RVA: 0x0028B7F0 File Offset: 0x002899F0
 		public KurotatoCharacterUpgrade __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001B3C RID: 6972
-		// (get) Token: 0x0600890B RID: 35083 RVA: 0x0026CBCC File Offset: 0x0026ADCC
+		// Token: 0x17001BA0 RID: 7072
+		// (get) Token: 0x06008F27 RID: 36647 RVA: 0x0028B800 File Offset: 0x00289A00
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600890C RID: 35084 RVA: 0x0026CC08 File Offset: 0x0026AE08
+		// Token: 0x06008F28 RID: 36648 RVA: 0x0028B83C File Offset: 0x00289A3C
 		public int RewardItem(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001B3D RID: 6973
-		// (get) Token: 0x0600890D RID: 35085 RVA: 0x0026CC48 File Offset: 0x0026AE48
+		// Token: 0x17001BA1 RID: 7073
+		// (get) Token: 0x06008F29 RID: 36649 RVA: 0x0028B87C File Offset: 0x00289A7C
 		public int RewardItemLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600890E RID: 35086 RVA: 0x0026CC73 File Offset: 0x0026AE73
+		// Token: 0x06008F2A RID: 36650 RVA: 0x0028B8A7 File Offset: 0x00289AA7
 		public Span<int> GetRewardItemBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600890F RID: 35087 RVA: 0x0026CC82 File Offset: 0x0026AE82
+		// Token: 0x06008F2B RID: 36651 RVA: 0x0028B8B6 File Offset: 0x00289AB6
 		public int[] GetRewardItemArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008910 RID: 35088 RVA: 0x0026CC9C File Offset: 0x0026AE9C
+		// Token: 0x06008F2C RID: 36652 RVA: 0x0028B8D0 File Offset: 0x00289AD0
 		public int RewardEffect(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001B3E RID: 6974
-		// (get) Token: 0x06008911 RID: 35089 RVA: 0x0026CCDC File Offset: 0x0026AEDC
+		// Token: 0x17001BA2 RID: 7074
+		// (get) Token: 0x06008F2D RID: 36653 RVA: 0x0028B910 File Offset: 0x00289B10
 		public int RewardEffectLength
 		{
 			get
@@ -128,55 +128,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008912 RID: 35090 RVA: 0x0026CD07 File Offset: 0x0026AF07
+		// Token: 0x06008F2E RID: 36654 RVA: 0x0028B93B File Offset: 0x00289B3B
 		public Span<int> GetRewardEffectBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06008913 RID: 35091 RVA: 0x0026CD16 File Offset: 0x0026AF16
+		// Token: 0x06008F2F RID: 36655 RVA: 0x0028B94A File Offset: 0x00289B4A
 		public int[] GetRewardEffectArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008914 RID: 35092 RVA: 0x0026CD30 File Offset: 0x0026AF30
+		// Token: 0x06008F30 RID: 36656 RVA: 0x0028B961 File Offset: 0x00289B61
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RewardEffectIter()或GetRewardEffectBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RewardEffect()
+		public int[] RewardEffect()
 		{
-			KurotatoCharacterUpgrade kurotatoCharacterUpgrade = this;
-			return kurotatoCharacterUpgrade.GetRewardEffectArray() ?? Array.Empty<int>();
+			return this.GetRewardEffectArray();
 		}
 
-		// Token: 0x06008915 RID: 35093 RVA: 0x0026CD54 File Offset: 0x0026AF54
+		// Token: 0x06008F31 RID: 36657 RVA: 0x0028B969 File Offset: 0x00289B69
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RewardEffectIter()
+		public IEnumerable<int> RewardEffectIter()
 		{
 			KurotatoCharacterUpgrade.<RewardEffectIter>d__21 <RewardEffectIter>d__ = new KurotatoCharacterUpgrade.<RewardEffectIter>d__21(-2);
 			<RewardEffectIter>d__.<>3__<>4__this = this;
 			return <RewardEffectIter>d__;
 		}
 
-		// Token: 0x06008916 RID: 35094 RVA: 0x0026CD6C File Offset: 0x0026AF6C
+		// Token: 0x06008F32 RID: 36658 RVA: 0x0028B97E File Offset: 0x00289B7E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RewardItemIter()或GetRewardItemBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RewardItem()
+		public int[] RewardItem()
 		{
-			KurotatoCharacterUpgrade kurotatoCharacterUpgrade = this;
-			return kurotatoCharacterUpgrade.GetRewardItemArray() ?? Array.Empty<int>();
+			return this.GetRewardItemArray();
 		}
 
-		// Token: 0x06008917 RID: 35095 RVA: 0x0026CD90 File Offset: 0x0026AF90
+		// Token: 0x06008F33 RID: 36659 RVA: 0x0028B986 File Offset: 0x00289B86
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RewardItemIter()
+		public IEnumerable<int> RewardItemIter()
 		{
 			KurotatoCharacterUpgrade.<RewardItemIter>d__23 <RewardItemIter>d__ = new KurotatoCharacterUpgrade.<RewardItemIter>d__23(-2);
 			<RewardItemIter>d__.<>3__<>4__this = this;
 			return <RewardItemIter>d__;
 		}
 
-		// Token: 0x04004E28 RID: 20008
+		// Token: 0x0400540D RID: 21517
 		private Table __p;
 	}
 }

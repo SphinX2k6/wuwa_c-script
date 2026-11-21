@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200683B RID: 26683
+	// Token: 0x02006EC1 RID: 28353
 	public class IFocusObjectCameraConfigT
 	{
-		// Token: 0x1700C63B RID: 50747
-		// (get) Token: 0x0602E865 RID: 190565 RVA: 0x00659339 File Offset: 0x00657539
-		// (set) Token: 0x0602E866 RID: 190566 RVA: 0x00659341 File Offset: 0x00657541
+		// Token: 0x1700CFFF RID: 53247
+		// (get) Token: 0x060310ED RID: 200941 RVA: 0x006A7279 File Offset: 0x006A5479
+		// (set) Token: 0x060310EE RID: 200942 RVA: 0x006A7281 File Offset: 0x006A5481
 		public ICameraParamsT CameraConfig { get; set; }
 
-		// Token: 0x1700C63C RID: 50748
-		// (get) Token: 0x0602E867 RID: 190567 RVA: 0x0065934A File Offset: 0x0065754A
-		// (set) Token: 0x0602E868 RID: 190568 RVA: 0x00659352 File Offset: 0x00657552
+		// Token: 0x1700D000 RID: 53248
+		// (get) Token: 0x060310EF RID: 200943 RVA: 0x006A728A File Offset: 0x006A548A
+		// (set) Token: 0x060310F0 RID: 200944 RVA: 0x006A7292 File Offset: 0x006A5492
 		public float BlendInTime { get; set; }
 
-		// Token: 0x1700C63D RID: 50749
-		// (get) Token: 0x0602E869 RID: 190569 RVA: 0x0065935B File Offset: 0x0065755B
-		// (set) Token: 0x0602E86A RID: 190570 RVA: 0x00659363 File Offset: 0x00657563
+		// Token: 0x1700D001 RID: 53249
+		// (get) Token: 0x060310F1 RID: 200945 RVA: 0x006A729B File Offset: 0x006A549B
+		// (set) Token: 0x060310F2 RID: 200946 RVA: 0x006A72A3 File Offset: 0x006A54A3
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E86B RID: 190571 RVA: 0x0065936C File Offset: 0x0065756C
+		// Token: 0x060310F3 RID: 200947 RVA: 0x006A72AC File Offset: 0x006A54AC
 		public IFocusObjectCameraConfigT()
 		{
 			this.CameraConfig = null;

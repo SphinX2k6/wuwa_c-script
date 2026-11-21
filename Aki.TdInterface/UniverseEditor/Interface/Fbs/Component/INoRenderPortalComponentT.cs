@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200560F RID: 22031
+	// Token: 0x02005BAD RID: 23469
 	public class INoRenderPortalComponentT
 	{
-		// Token: 0x1700A309 RID: 41737
-		// (get) Token: 0x06024909 RID: 149769 RVA: 0x0050BB29 File Offset: 0x00509D29
-		// (set) Token: 0x0602490A RID: 149770 RVA: 0x0050BB31 File Offset: 0x00509D31
+		// Token: 0x1700AB91 RID: 43921
+		// (get) Token: 0x06026B19 RID: 158489 RVA: 0x0054C141 File Offset: 0x0054A341
+		// (set) Token: 0x06026B1A RID: 158490 RVA: 0x0054C149 File Offset: 0x0054A349
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A30A RID: 41738
-		// (get) Token: 0x0602490B RID: 149771 RVA: 0x0050BB3A File Offset: 0x00509D3A
-		// (set) Token: 0x0602490C RID: 149772 RVA: 0x0050BB42 File Offset: 0x00509D42
+		// Token: 0x1700AB92 RID: 43922
+		// (get) Token: 0x06026B1B RID: 158491 RVA: 0x0054C152 File Offset: 0x0054A352
+		// (set) Token: 0x06026B1C RID: 158492 RVA: 0x0054C15A File Offset: 0x0054A35A
 		public IStaticNoRenderPortalT Config { get; set; }
 
-		// Token: 0x1700A30B RID: 41739
-		// (get) Token: 0x0602490D RID: 149773 RVA: 0x0050BB4B File Offset: 0x00509D4B
-		// (set) Token: 0x0602490E RID: 149774 RVA: 0x0050BB53 File Offset: 0x00509D53
+		// Token: 0x1700AB93 RID: 43923
+		// (get) Token: 0x06026B1D RID: 158493 RVA: 0x0054C163 File Offset: 0x0054A363
+		// (set) Token: 0x06026B1E RID: 158494 RVA: 0x0054C16B File Offset: 0x0054A36B
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602490F RID: 149775 RVA: 0x0050BB5C File Offset: 0x00509D5C
+		// Token: 0x06026B1F RID: 158495 RVA: 0x0054C174 File Offset: 0x0054A374
 		public INoRenderPortalComponentT()
 		{
 			this.Disabled = false;

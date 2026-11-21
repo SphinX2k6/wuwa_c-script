@@ -5,24 +5,24 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F95 RID: 24469
+	// Token: 0x02004F7C RID: 20348
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class TotalTopUpDefine
 	{
-		// Token: 0x0603E12B RID: 254251 RVA: 0x00EFCB7D File Offset: 0x00EFAD7D
+		// Token: 0x060330C5 RID: 209093 RVA: 0x00E4E835 File Offset: 0x00E4CA35
 		private static bool CheckIsOrnament(int id, ItemConfig itemConfig)
 		{
 			return itemConfig != null && itemConfig.ItemType.GetValueOrDefault() == InventoryDefine.EItemType.Ornament;
 		}
 
-		// Token: 0x0603E12C RID: 254252 RVA: 0x00EFCB94 File Offset: 0x00EFAD94
+		// Token: 0x060330C6 RID: 209094 RVA: 0x00E4E84C File Offset: 0x00E4CA4C
 		private static void ShowOrnamentPreview(int id, ItemConfig itemConfig)
 		{
 			RoleController.Instance.OpenOrnamentPreviewView(id, null);
 		}
 
-		// Token: 0x040206B3 RID: 132787
+		// Token: 0x0401B185 RID: 110981
 		[Nullable(new byte[]
 		{
 			1,

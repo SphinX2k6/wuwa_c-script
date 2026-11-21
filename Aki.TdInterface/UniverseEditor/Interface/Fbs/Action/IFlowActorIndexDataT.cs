@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067F0 RID: 26608
+	// Token: 0x02006E70 RID: 28272
 	public class IFlowActorIndexDataT
 	{
-		// Token: 0x1700C57D RID: 50557
-		// (get) Token: 0x0602E53D RID: 189757 RVA: 0x006530A3 File Offset: 0x006512A3
-		// (set) Token: 0x0602E53E RID: 189758 RVA: 0x006530AB File Offset: 0x006512AB
+		// Token: 0x1700CF33 RID: 53043
+		// (get) Token: 0x06030D83 RID: 200067 RVA: 0x006A07E7 File Offset: 0x0069E9E7
+		// (set) Token: 0x06030D84 RID: 200068 RVA: 0x006A07EF File Offset: 0x0069E9EF
 		public int Index { get; set; }
 
-		// Token: 0x1700C57E RID: 50558
-		// (get) Token: 0x0602E53F RID: 189759 RVA: 0x006530B4 File Offset: 0x006512B4
-		// (set) Token: 0x0602E540 RID: 189760 RVA: 0x006530BC File Offset: 0x006512BC
+		// Token: 0x1700CF34 RID: 53044
+		// (get) Token: 0x06030D85 RID: 200069 RVA: 0x006A07F8 File Offset: 0x0069E9F8
+		// (set) Token: 0x06030D86 RID: 200070 RVA: 0x006A0800 File Offset: 0x0069EA00
 		public IPosAndRotT Offset { get; set; }
 
-		// Token: 0x1700C57F RID: 50559
-		// (get) Token: 0x0602E541 RID: 189761 RVA: 0x006530C5 File Offset: 0x006512C5
-		// (set) Token: 0x0602E542 RID: 189762 RVA: 0x006530CD File Offset: 0x006512CD
+		// Token: 0x1700CF35 RID: 53045
+		// (get) Token: 0x06030D87 RID: 200071 RVA: 0x006A0809 File Offset: 0x0069EA09
+		// (set) Token: 0x06030D88 RID: 200072 RVA: 0x006A0811 File Offset: 0x0069EA11
 		public bool IsUseFixedPosition { get; set; }
 
-		// Token: 0x1700C580 RID: 50560
-		// (get) Token: 0x0602E543 RID: 189763 RVA: 0x006530D6 File Offset: 0x006512D6
-		// (set) Token: 0x0602E544 RID: 189764 RVA: 0x006530DE File Offset: 0x006512DE
+		// Token: 0x1700CF36 RID: 53046
+		// (get) Token: 0x06030D89 RID: 200073 RVA: 0x006A081A File Offset: 0x0069EA1A
+		// (set) Token: 0x06030D8A RID: 200074 RVA: 0x006A0822 File Offset: 0x0069EA22
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E545 RID: 189765 RVA: 0x006530E7 File Offset: 0x006512E7
+		// Token: 0x06030D8B RID: 200075 RVA: 0x006A082B File Offset: 0x0069EA2B
 		public IFlowActorIndexDataT()
 		{
 			this.Index = 0;

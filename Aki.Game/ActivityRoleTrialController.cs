@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,32 +12,32 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020014CB RID: 5323
+// Token: 0x02000983 RID: 2435
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityRoleTrialController : ActivityControllerBase
 {
-	// Token: 0x0600971B RID: 38683 RVA: 0x0020A129 File Offset: 0x00208329
+	// Token: 0x06006AF5 RID: 27381 RVA: 0x00213E13 File Offset: 0x00212013
 	protected override bool OnClear()
 	{
 		this.ClearAllRefreshTimer();
 		return base.OnClear();
 	}
 
-	// Token: 0x0600971C RID: 38684 RVA: 0x0020A137 File Offset: 0x00208337
+	// Token: 0x06006AF6 RID: 27382 RVA: 0x00213E21 File Offset: 0x00212021
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.RoleTrialSettleNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRoleTrialSettleNotify));
 	}
 
-	// Token: 0x0600971D RID: 38685 RVA: 0x0020A155 File Offset: 0x00208355
+	// Token: 0x06006AF7 RID: 27383 RVA: 0x00213E3F File Offset: 0x0021203F
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.RoleTrialSettleNotify);
 	}
 
-	// Token: 0x0600971E RID: 38686 RVA: 0x0020A168 File Offset: 0x00208368
+	// Token: 0x06006AF8 RID: 27384 RVA: 0x00213E54 File Offset: 0x00212054
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.OnRoleSystemChangeRole));
@@ -46,7 +45,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		EventSystem.Instance.Add(EEventName.CrossDayZone, new Action(this.OnCrossDayZone));
 	}
 
-	// Token: 0x0600971F RID: 38687 RVA: 0x0020A1CC File Offset: 0x002083CC
+	// Token: 0x06006AF9 RID: 27385 RVA: 0x00213EB8 File Offset: 0x002120B8
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.OnRoleSystemChangeRole));
@@ -54,7 +53,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		EventSystem.Instance.Remove(EEventName.CrossDayZone, new Action(this.OnCrossDayZone));
 	}
 
-	// Token: 0x06009720 RID: 38688 RVA: 0x0020A230 File Offset: 0x00208430
+	// Token: 0x06006AFA RID: 27386 RVA: 0x00213F1C File Offset: 0x0021211C
 	private void OnRoleSystemChangeRole(int trialRoleId)
 	{
 		if (trialRoleId.Equals(0))
@@ -76,7 +75,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009721 RID: 38689 RVA: 0x0020A2BC File Offset: 0x002084BC
+	// Token: 0x06006AFB RID: 27387 RVA: 0x00213FA8 File Offset: 0x002121A8
 	private void OnWorldDone()
 	{
 		foreach (int num in this.CurrentActivityIdList)
@@ -94,7 +93,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009722 RID: 38690 RVA: 0x0020A35C File Offset: 0x0020855C
+	// Token: 0x06006AFC RID: 27388 RVA: 0x00214048 File Offset: 0x00212248
 	private void OnCrossDayZone()
 	{
 		foreach (int id in this.CurrentActivityIdList)
@@ -107,7 +106,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009723 RID: 38691 RVA: 0x0020A3C4 File Offset: 0x002085C4
+	// Token: 0x06006AFD RID: 27389 RVA: 0x002140B0 File Offset: 0x002122B0
 	public void TryRefreshIsNewMap(ActivityRoleTrialData data)
 	{
 		this.ClearSingleRefreshTimer(data.Id);
@@ -140,7 +139,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009724 RID: 38692 RVA: 0x0020A510 File Offset: 0x00208710
+	// Token: 0x06006AFE RID: 27390 RVA: 0x002141FC File Offset: 0x002123FC
 	private void OnTimerRefresh(ActivityRoleTrialData data, double refreshTime)
 	{
 		if (TimeUtil.Instance.GetServerTime() >= refreshTime)
@@ -154,7 +153,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009725 RID: 38693 RVA: 0x0020A578 File Offset: 0x00208778
+	// Token: 0x06006AFF RID: 27391 RVA: 0x00214264 File Offset: 0x00212464
 	private void ClearSingleRefreshTimer(int activityId)
 	{
 		TimerHandle timerHandle;
@@ -165,7 +164,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009726 RID: 38694 RVA: 0x0020A5C8 File Offset: 0x002087C8
+	// Token: 0x06006B00 RID: 27392 RVA: 0x002142B4 File Offset: 0x002124B4
 	private void ClearAllRefreshTimer()
 	{
 		if (this.RefreshTimerHandle.Count > 0)
@@ -181,49 +180,55 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009727 RID: 38695 RVA: 0x0020A64C File Offset: 0x0020884C
+	// Token: 0x06006B01 RID: 27393 RVA: 0x00214338 File Offset: 0x00212538
 	public List<ActivityRoleTrialData> GetCurrentActivityDataList()
 	{
-		return ActivityModel.Instance.GetCurrentActivitiesByType(8).Cast<ActivityRoleTrialData>().ToList<ActivityRoleTrialData>();
+		List<ActivityBaseData> currentActivitiesByType = ActivityModel.Instance.GetCurrentActivitiesByType(8);
+		List<ActivityRoleTrialData> list = new List<ActivityRoleTrialData>(currentActivitiesByType.Count);
+		foreach (ActivityBaseData activityBaseData in currentActivitiesByType)
+		{
+			list.Add((ActivityRoleTrialData)activityBaseData);
+		}
+		return list;
 	}
 
-	// Token: 0x06009728 RID: 38696 RVA: 0x0020A663 File Offset: 0x00208863
+	// Token: 0x06006B02 RID: 27394 RVA: 0x002143A4 File Offset: 0x002125A4
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityRoleTrial";
 	}
 
-	// Token: 0x06009729 RID: 38697 RVA: 0x0020A66A File Offset: 0x0020886A
+	// Token: 0x06006B03 RID: 27395 RVA: 0x002143AB File Offset: 0x002125AB
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewRoleTrial();
 	}
 
-	// Token: 0x0600972A RID: 38698 RVA: 0x0020A671 File Offset: 0x00208871
+	// Token: 0x06006B04 RID: 27396 RVA: 0x002143B2 File Offset: 0x002125B2
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new ActivityRoleTrialData();
 	}
 
-	// Token: 0x0600972B RID: 38699 RVA: 0x0020A678 File Offset: 0x00208878
+	// Token: 0x06006B05 RID: 27397 RVA: 0x002143B9 File Offset: 0x002125B9
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x0600972C RID: 38700 RVA: 0x0020A67A File Offset: 0x0020887A
+	// Token: 0x06006B06 RID: 27398 RVA: 0x002143BB File Offset: 0x002125BB
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x0600972D RID: 38701 RVA: 0x0020A680 File Offset: 0x00208880
+	// Token: 0x06006B07 RID: 27399 RVA: 0x002143C0 File Offset: 0x002125C0
 	[NullableContext(2)]
 	private void OnRoleTrialSettleNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		RoleTrialSettleNotify roleTrialSettleNotify = (RoleTrialSettleNotify)msg;
 		if (roleTrialSettleNotify.ErrorCode > Aki.Protocol.ErrorCode.Success)
 		{
-			ErrorCodeController.Instance.OpenErrorCodeTipView(roleTrialSettleNotify.ErrorCode, 25527, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(roleTrialSettleNotify.ErrorCode, 22045, null, true, true);
 			Action<int> onClickedCallback = delegate(int _)
 			{
 				InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
@@ -244,7 +249,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600972E RID: 38702 RVA: 0x0020A744 File Offset: 0x00208944
+	// Token: 0x06006B08 RID: 27400 RVA: 0x00214484 File Offset: 0x00212684
 	public void RequestRoleInstanceReward(int roleId, int activityId)
 	{
 		TrialRoleRewardRequest trialRoleRewardRequest = TrialRoleRewardRequest.Create();
@@ -258,7 +263,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 			}
 			if (trialRoleRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trialRoleRewardResponse.ErrorCode, 23104, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trialRoleRewardResponse.ErrorCode, 26824, null, true, true);
 			}
 			ActivityRoleTrialData activityRoleTrialData = ActivityModel.Instance.GetActivityById(activityId) as ActivityRoleTrialData;
 			if (activityRoleTrialData == null)
@@ -276,7 +281,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600972F RID: 38703 RVA: 0x0020A794 File Offset: 0x00208994
+	// Token: 0x06006B09 RID: 27401 RVA: 0x002144D4 File Offset: 0x002126D4
 	[NullableContext(0)]
 	public UniTask<bool> EnterRoleTrialDungeonDirectly(int instanceId, int activityId, int roleId)
 	{
@@ -290,15 +295,15 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		return <EnterRoleTrialDungeonDirectly>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009730 RID: 38704 RVA: 0x0020A7E8 File Offset: 0x002089E8
+	// Token: 0x06006B0A RID: 27402 RVA: 0x00214528 File Offset: 0x00212728
 	public void PushRoleIntroductionViewDone()
 	{
 		RoleTrialUiEndPush message = RoleTrialUiEndPush.Create();
 		Net.Instance.Send(EPushMessageId.RoleTrialUiEndPush, message);
 	}
 
-	// Token: 0x17000D0F RID: 3343
-	// (get) Token: 0x06009731 RID: 38705 RVA: 0x0020A80B File Offset: 0x00208A0B
+	// Token: 0x17000D30 RID: 3376
+	// (get) Token: 0x06006B0B RID: 27403 RVA: 0x0021454B File Offset: 0x0021274B
 	public static ActivityRoleTrialController Instance
 	{
 		get
@@ -307,7 +312,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009732 RID: 38706 RVA: 0x0020A812 File Offset: 0x00208A12
+	// Token: 0x06006B0C RID: 27404 RVA: 0x00214552 File Offset: 0x00212752
 	public static ActivityRoleTrialController GetOrCreateInstance()
 	{
 		if (ActivityRoleTrialController._Instance == null)
@@ -317,7 +322,7 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		return ActivityRoleTrialController._Instance;
 	}
 
-	// Token: 0x06009733 RID: 38707 RVA: 0x0020A826 File Offset: 0x00208A26
+	// Token: 0x06006B0D RID: 27405 RVA: 0x00214566 File Offset: 0x00212766
 	public static bool CreateInstance()
 	{
 		if (ActivityRoleTrialController._Instance != null)
@@ -328,24 +333,24 @@ public class ActivityRoleTrialController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009734 RID: 38708 RVA: 0x0020A83C File Offset: 0x00208A3C
+	// Token: 0x06006B0E RID: 27406 RVA: 0x0021457C File Offset: 0x0021277C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009735 RID: 38709 RVA: 0x0020A83E File Offset: 0x00208A3E
+	// Token: 0x06006B0F RID: 27407 RVA: 0x0021457E File Offset: 0x0021277E
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRoleTrialController._Instance = null;
 	}
 
-	// Token: 0x06009736 RID: 38710 RVA: 0x0020A846 File Offset: 0x00208A46
+	// Token: 0x06006B10 RID: 27408 RVA: 0x00214586 File Offset: 0x00212786
 	static ActivityRoleTrialController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRoleTrialController.CreateStaticDefaultValue), new Action(ActivityRoleTrialController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400428E RID: 17038
+	// Token: 0x04004333 RID: 17203
 	[Nullable(new byte[]
 	{
 		1,
@@ -353,10 +358,10 @@ public class ActivityRoleTrialController : ActivityControllerBase
 	})]
 	private readonly Dictionary<int, TimerHandle> RefreshTimerHandle = new Dictionary<int, TimerHandle>();
 
-	// Token: 0x0400428F RID: 17039
+	// Token: 0x04004334 RID: 17204
 	public List<int> CurrentActivityIdList = new List<int>();
 
-	// Token: 0x04004290 RID: 17040
+	// Token: 0x04004335 RID: 17205
 	[Nullable(2)]
 	private static ActivityRoleTrialController _Instance;
 }

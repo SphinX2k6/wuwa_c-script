@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B5A RID: 2906
+	// Token: 0x020001F9 RID: 505
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ESceneCapturePrimitiveRenderMode")]
 	public enum ESceneCapturePrimitiveRenderMode : byte
 	{
-		// Token: 0x04004FF5 RID: 20469
+		// Token: 0x04000C90 RID: 3216
 		PRM_LegacySceneCapture,
-		// Token: 0x04004FF6 RID: 20470
+		// Token: 0x04000C91 RID: 3217
 		PRM_RenderScenePrimitives,
-		// Token: 0x04004FF7 RID: 20471
+		// Token: 0x04000C92 RID: 3218
 		PRM_UseShowOnlyList,
-		// Token: 0x04004FF8 RID: 20472
+		// Token: 0x04000C93 RID: 3219
 		PRM_MAX
 	}
 }

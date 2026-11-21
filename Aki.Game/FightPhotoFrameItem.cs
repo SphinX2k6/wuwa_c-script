@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020025B7 RID: 9655
+// Token: 0x02001AA2 RID: 6818
 public class FightPhotoFrameItem : GridProxyAbstract<FightPhotoFrameStyle>
 {
-	// Token: 0x06013933 RID: 80179 RVA: 0x004E4B84 File Offset: 0x004E2D84
+	// Token: 0x06010E13 RID: 69139 RVA: 0x004F3784 File Offset: 0x004F1984
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class FightPhotoFrameItem : GridProxyAbstract<FightPhotoFrameStyle>
 		};
 	}
 
-	// Token: 0x06013934 RID: 80180 RVA: 0x004E4C18 File Offset: 0x004E2E18
+	// Token: 0x06010E14 RID: 69140 RVA: 0x004F3818 File Offset: 0x004F1A18
 	public override void Refresh(FightPhotoFrameStyle data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -39,7 +39,7 @@ public class FightPhotoFrameItem : GridProxyAbstract<FightPhotoFrameStyle>
 		sprite.SetUIActive(cameraConditionRecommend.FrameIds.Contains(data.Id));
 	}
 
-	// Token: 0x06013935 RID: 80181 RVA: 0x004E4C95 File Offset: 0x004E2E95
+	// Token: 0x06010E15 RID: 69141 RVA: 0x004F3895 File Offset: 0x004F1A95
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -50,7 +50,7 @@ public class FightPhotoFrameItem : GridProxyAbstract<FightPhotoFrameStyle>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06013936 RID: 80182 RVA: 0x004E4CAC File Offset: 0x004E2EAC
+	// Token: 0x06010E16 RID: 69142 RVA: 0x004F38AC File Offset: 0x004F1AAC
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -61,38 +61,38 @@ public class FightPhotoFrameItem : GridProxyAbstract<FightPhotoFrameStyle>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06013937 RID: 80183 RVA: 0x004E4CC3 File Offset: 0x004E2EC3
+	// Token: 0x06010E17 RID: 69143 RVA: 0x004F38C3 File Offset: 0x004F1AC3
 	[NullableContext(1)]
 	public override object GetKey(FightPhotoFrameStyle data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x06013938 RID: 80184 RVA: 0x004E4CD1 File Offset: 0x004E2ED1
+	// Token: 0x06010E18 RID: 69144 RVA: 0x004F38D1 File Offset: 0x004F1AD1
 	private void OnClickToggle(EToggleState state)
 	{
 		this.OnToggleClick(this.Data);
 	}
 
-	// Token: 0x040093C0 RID: 37824
+	// Token: 0x04009516 RID: 38166
 	private FightPhotoFrameStyle Data;
 
-	// Token: 0x040093C1 RID: 37825
+	// Token: 0x04009517 RID: 38167
 	[Nullable(1)]
 	public Action<FightPhotoFrameStyle> OnToggleClick = delegate(FightPhotoFrameStyle data)
 	{
 	};
 
-	// Token: 0x02008BBE RID: 35774
+	// Token: 0x02007D46 RID: 32070
 	private enum EFrameItemComponents
 	{
-		// Token: 0x0402D5B9 RID: 185785
+		// Token: 0x040288CE RID: 166094
 		TogRoot,
-		// Token: 0x0402D5BA RID: 185786
+		// Token: 0x040288CF RID: 166095
 		TexPreview,
-		// Token: 0x0402D5BB RID: 185787
+		// Token: 0x040288D0 RID: 166096
 		TextName,
-		// Token: 0x0402D5BC RID: 185788
+		// Token: 0x040288D1 RID: 166097
 		SpriteRecommend
 	}
 }

@@ -2,33 +2,33 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 
-// Token: 0x0200262B RID: 9771
+// Token: 0x02001B16 RID: 6934
 [NullableContext(2)]
 [Nullable(0)]
 public class TCommonQteUiConfig
 {
-	// Token: 0x1700196E RID: 6510
-	// (get) Token: 0x06013F72 RID: 81778 RVA: 0x00505401 File Offset: 0x00503601
-	// (set) Token: 0x06013F73 RID: 81779 RVA: 0x00505409 File Offset: 0x00503609
+	// Token: 0x170019A6 RID: 6566
+	// (get) Token: 0x06011454 RID: 70740 RVA: 0x005142C5 File Offset: 0x005124C5
+	// (set) Token: 0x06011455 RID: 70741 RVA: 0x005142CD File Offset: 0x005124CD
 	public SCommonQte_ContinuousClick ContinuousClick { get; set; }
 
-	// Token: 0x1700196F RID: 6511
-	// (get) Token: 0x06013F74 RID: 81780 RVA: 0x00505412 File Offset: 0x00503612
-	// (set) Token: 0x06013F75 RID: 81781 RVA: 0x0050541A File Offset: 0x0050361A
+	// Token: 0x170019A7 RID: 6567
+	// (get) Token: 0x06011456 RID: 70742 RVA: 0x005142D6 File Offset: 0x005124D6
+	// (set) Token: 0x06011457 RID: 70743 RVA: 0x005142DE File Offset: 0x005124DE
 	public SCommonQte_Drag Drag { get; set; }
 
-	// Token: 0x17001970 RID: 6512
-	// (get) Token: 0x06013F76 RID: 81782 RVA: 0x00505423 File Offset: 0x00503623
-	// (set) Token: 0x06013F77 RID: 81783 RVA: 0x0050542B File Offset: 0x0050362B
+	// Token: 0x170019A8 RID: 6568
+	// (get) Token: 0x06011458 RID: 70744 RVA: 0x005142E7 File Offset: 0x005124E7
+	// (set) Token: 0x06011459 RID: 70745 RVA: 0x005142EF File Offset: 0x005124EF
 	public SCommonQte_LongPress LongPress { get; set; }
 
-	// Token: 0x17001971 RID: 6513
-	// (get) Token: 0x06013F78 RID: 81784 RVA: 0x00505434 File Offset: 0x00503634
-	// (set) Token: 0x06013F79 RID: 81785 RVA: 0x0050543C File Offset: 0x0050363C
+	// Token: 0x170019A9 RID: 6569
+	// (get) Token: 0x0601145A RID: 70746 RVA: 0x005142F8 File Offset: 0x005124F8
+	// (set) Token: 0x0601145B RID: 70747 RVA: 0x00514300 File Offset: 0x00512500
 	public SCommonQte_SelectOption SelectOption { get; set; }
 
-	// Token: 0x17001972 RID: 6514
-	// (get) Token: 0x06013F7A RID: 81786 RVA: 0x00505445 File Offset: 0x00503645
-	// (set) Token: 0x06013F7B RID: 81787 RVA: 0x0050544D File Offset: 0x0050364D
+	// Token: 0x170019AA RID: 6570
+	// (get) Token: 0x0601145C RID: 70748 RVA: 0x00514309 File Offset: 0x00512509
+	// (set) Token: 0x0601145D RID: 70749 RVA: 0x00514311 File Offset: 0x00512511
 	public SCommonQte_SingleClick SingleClick { get; set; }
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005921 RID: 22817
+	// Token: 0x02005F2E RID: 24366
 	public class ISkyboxGlobalTriggerT
 	{
-		// Token: 0x1700AB26 RID: 43814
-		// (get) Token: 0x06026958 RID: 158040 RVA: 0x005507AA File Offset: 0x0054E9AA
-		// (set) Token: 0x06026959 RID: 158041 RVA: 0x005507B2 File Offset: 0x0054E9B2
+		// Token: 0x1700B45A RID: 46170
+		// (get) Token: 0x06028EC2 RID: 167618 RVA: 0x00597416 File Offset: 0x00595616
+		// (set) Token: 0x06028EC3 RID: 167619 RVA: 0x0059741E File Offset: 0x0059561E
 		public ETriggerMode Type { get; set; }
 
-		// Token: 0x0602695A RID: 158042 RVA: 0x005507BB File Offset: 0x0054E9BB
+		// Token: 0x06028EC4 RID: 167620 RVA: 0x00597427 File Offset: 0x00595627
 		public ISkyboxGlobalTriggerT()
 		{
 			this.Type = ETriggerMode.Distance;

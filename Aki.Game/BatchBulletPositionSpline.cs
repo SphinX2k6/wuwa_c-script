@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DE8 RID: 11752
+// Token: 0x02002343 RID: 9027
 [NullableContext(2)]
 [Nullable(0)]
 public class BatchBulletPositionSpline : IBatchBulletPositionShape
 {
-	// Token: 0x06018AB6 RID: 101046 RVA: 0x006538E9 File Offset: 0x00651AE9
+	// Token: 0x06016363 RID: 90979 RVA: 0x006799C9 File Offset: 0x00677BC9
 	[NullableContext(1)]
 	public static BatchBulletPositionSpline Create(CharacterCustomValueComponent customValueComp, SBatchBulletPositionSpline config, SkillBehaviorBatchBulletTask taskContext)
 	{
@@ -25,12 +25,12 @@ public class BatchBulletPositionSpline : IBatchBulletPositionShape
 		return batchBulletPositionSpline;
 	}
 
-	// Token: 0x06018AB7 RID: 101047 RVA: 0x0065390B File Offset: 0x00651B0B
+	// Token: 0x06016364 RID: 90980 RVA: 0x006799EB File Offset: 0x00677BEB
 	private BatchBulletPositionSpline()
 	{
 	}
 
-	// Token: 0x06018AB8 RID: 101048 RVA: 0x00653914 File Offset: 0x00651B14
+	// Token: 0x06016365 RID: 90981 RVA: 0x006799F4 File Offset: 0x00677BF4
 	[NullableContext(1)]
 	private void FromUeConfig(CharacterCustomValueComponent customValueComp, SBatchBulletPositionSpline spline)
 	{
@@ -57,7 +57,7 @@ public class BatchBulletPositionSpline : IBatchBulletPositionShape
 		this.SummonChildBullet = spline.DestroySummonBullet;
 	}
 
-	// Token: 0x06018AB9 RID: 101049 RVA: 0x00653A4C File Offset: 0x00651C4C
+	// Token: 0x06016366 RID: 90982 RVA: 0x00679B2C File Offset: 0x00677D2C
 	public UniTask Load()
 	{
 		BatchBulletPositionSpline.<Load>d__19 <Load>d__;
@@ -68,19 +68,19 @@ public class BatchBulletPositionSpline : IBatchBulletPositionShape
 		return <Load>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018ABA RID: 101050 RVA: 0x00653A8F File Offset: 0x00651C8F
+	// Token: 0x06016367 RID: 90983 RVA: 0x00679B6F File Offset: 0x00677D6F
 	public void OnBreak()
 	{
 		this.OnSplineFinish(this.PathEffectOnBreak, this.BulletIdOnBreak);
 	}
 
-	// Token: 0x06018ABB RID: 101051 RVA: 0x00653AA3 File Offset: 0x00651CA3
+	// Token: 0x06016368 RID: 90984 RVA: 0x00679B83 File Offset: 0x00677D83
 	public void OnEnd()
 	{
 		this.OnSplineFinish(this.PathEffectOnEnd, this.BulletIdOnEnd);
 	}
 
-	// Token: 0x06018ABC RID: 101052 RVA: 0x00653AB8 File Offset: 0x00651CB8
+	// Token: 0x06016369 RID: 90985 RVA: 0x00679B98 File Offset: 0x00677D98
 	private void OnSplineFinish(string pathEffect, string bulletId)
 	{
 		bool flag = StringUtils.IsBlank(pathEffect);
@@ -113,82 +113,82 @@ public class BatchBulletPositionSpline : IBatchBulletPositionShape
 		this.SplineComp = null;
 	}
 
-	// Token: 0x06018ABD RID: 101053 RVA: 0x00653C30 File Offset: 0x00651E30
+	// Token: 0x0601636A RID: 90986 RVA: 0x00679D10 File Offset: 0x00677F10
 	public Transform ToTransform(int index)
 	{
 		float time = this.Delay + this.Intervals * (float)index;
 		return Transform.Create(this.SplineComp.D_GetTransformAtTime(time, ESplineCoordinateSpace.World, true, true));
 	}
 
-	// Token: 0x06018ABE RID: 101054 RVA: 0x00653C67 File Offset: 0x00651E67
+	// Token: 0x0601636B RID: 90987 RVA: 0x00679D47 File Offset: 0x00677F47
 	public Vector ToTargetLocation(Transform transform)
 	{
 		return null;
 	}
 
-	// Token: 0x06018ABF RID: 101055 RVA: 0x00653C6A File Offset: 0x00651E6A
+	// Token: 0x0601636C RID: 90988 RVA: 0x00679D4A File Offset: 0x00677F4A
 	public float GetDelay()
 	{
 		return this.Delay;
 	}
 
-	// Token: 0x06018AC0 RID: 101056 RVA: 0x00653C72 File Offset: 0x00651E72
+	// Token: 0x0601636D RID: 90989 RVA: 0x00679D52 File Offset: 0x00677F52
 	public bool IsDestroyOnEnd()
 	{
 		return this.DestroyOnEnd;
 	}
 
-	// Token: 0x06018AC1 RID: 101057 RVA: 0x00653C7A File Offset: 0x00651E7A
+	// Token: 0x0601636E RID: 90990 RVA: 0x00679D5A File Offset: 0x00677F5A
 	public bool IsSummonChildBullet()
 	{
 		return this.SummonChildBullet;
 	}
 
-	// Token: 0x0400B7CE RID: 47054
+	// Token: 0x0400BB54 RID: 47956
 	private string SplineClassPath;
 
-	// Token: 0x0400B7CF RID: 47055
+	// Token: 0x0400BB55 RID: 47957
 	private BP_BasePathLineBullet_C Spline;
 
-	// Token: 0x0400B7D0 RID: 47056
+	// Token: 0x0400BB56 RID: 47958
 	private USplineComponent SplineComp;
 
-	// Token: 0x0400B7D1 RID: 47057
+	// Token: 0x0400BB57 RID: 47959
 	private Vector Start;
 
-	// Token: 0x0400B7D2 RID: 47058
+	// Token: 0x0400BB58 RID: 47960
 	private Vector End;
 
-	// Token: 0x0400B7D3 RID: 47059
+	// Token: 0x0400BB59 RID: 47961
 	private Rotator Rotator;
 
-	// Token: 0x0400B7D4 RID: 47060
+	// Token: 0x0400BB5A RID: 47962
 	private float Duration;
 
-	// Token: 0x0400B7D5 RID: 47061
+	// Token: 0x0400BB5B RID: 47963
 	private float Delay;
 
-	// Token: 0x0400B7D6 RID: 47062
+	// Token: 0x0400BB5C RID: 47964
 	private float Intervals;
 
-	// Token: 0x0400B7D7 RID: 47063
+	// Token: 0x0400BB5D RID: 47965
 	private string PathEffectOnEnd;
 
-	// Token: 0x0400B7D8 RID: 47064
+	// Token: 0x0400BB5E RID: 47966
 	private string BulletIdOnEnd;
 
-	// Token: 0x0400B7D9 RID: 47065
+	// Token: 0x0400BB5F RID: 47967
 	private string PathEffectOnBreak;
 
-	// Token: 0x0400B7DA RID: 47066
+	// Token: 0x0400BB60 RID: 47968
 	private string BulletIdOnBreak;
 
-	// Token: 0x0400B7DB RID: 47067
+	// Token: 0x0400BB61 RID: 47969
 	private SkillBehaviorBatchBulletTask Context;
 
-	// Token: 0x0400B7DC RID: 47068
+	// Token: 0x0400BB62 RID: 47970
 	private bool DestroyOnEnd;
 
-	// Token: 0x0400B7DD RID: 47069
+	// Token: 0x0400BB63 RID: 47971
 	private bool SummonChildBullet;
 }

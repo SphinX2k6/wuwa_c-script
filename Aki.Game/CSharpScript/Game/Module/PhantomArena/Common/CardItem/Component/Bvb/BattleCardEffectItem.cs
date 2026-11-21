@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 {
-	// Token: 0x020051FD RID: 20989
+	// Token: 0x020041CD RID: 16845
 	public class BattleCardEffectItem : UiPanelBase
 	{
-		// Token: 0x06035B22 RID: 219938 RVA: 0x00CB7085 File Offset: 0x00CB5285
+		// Token: 0x0602AA1D RID: 174621 RVA: 0x00C046C1 File Offset: 0x00C028C1
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			};
 		}
 
-		// Token: 0x06035B23 RID: 219939 RVA: 0x00CB70C0 File Offset: 0x00CB52C0
+		// Token: 0x0602AA1E RID: 174622 RVA: 0x00C046FC File Offset: 0x00C028FC
 		[NullableContext(1)]
 		protected UniTask RefreshNiagara(string path, UUINiagara niagara)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B24 RID: 219940 RVA: 0x00CB7114 File Offset: 0x00CB5314
+		// Token: 0x0602AA1F RID: 174623 RVA: 0x00C04750 File Offset: 0x00C02950
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleCardEffectItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B25 RID: 219941 RVA: 0x00CB7158 File Offset: 0x00CB5358
+		// Token: 0x0602AA20 RID: 174624 RVA: 0x00C04794 File Offset: 0x00C02994
 		private UniTask RefreshEffect(int configId)
 		{
 			BattleCardEffectItem.<RefreshEffect>d__5 <RefreshEffect>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B26 RID: 219942 RVA: 0x00CB71A4 File Offset: 0x00CB53A4
+		// Token: 0x0602AA21 RID: 174625 RVA: 0x00C047E0 File Offset: 0x00C029E0
 		public UniTask RefreshEffectById(int configId)
 		{
 			BattleCardEffectItem.<RefreshEffectById>d__6 <RefreshEffectById>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshEffectById>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B27 RID: 219943 RVA: 0x00CB71F0 File Offset: 0x00CB53F0
+		// Token: 0x0602AA22 RID: 174626 RVA: 0x00C0482C File Offset: 0x00C02A2C
 		public void PlayStartEffect()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(0);
@@ -86,22 +86,22 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			}
 		}
 
-		// Token: 0x06035B28 RID: 219944 RVA: 0x00CB7238 File Offset: 0x00CB5438
+		// Token: 0x0602AA23 RID: 174627 RVA: 0x00C04874 File Offset: 0x00C02A74
 		public void SetCardConfigId(int cardConfigId)
 		{
 			this.CardConfigId = cardConfigId;
 		}
 
-		// Token: 0x0401C799 RID: 116633
+		// Token: 0x040171CE RID: 94670
 		protected int CardConfigId;
 
-		// Token: 0x0200B390 RID: 45968
+		// Token: 0x02009DC8 RID: 40392
 		private static class EBattleCardEffectItem
 		{
-			// Token: 0x040366CB RID: 222923
+			// Token: 0x0403111E RID: 200990
 			public const int StartOneNiagara = 0;
 
-			// Token: 0x040366CC RID: 222924
+			// Token: 0x0403111F RID: 200991
 			public const int StartTwoNiagara = 1;
 		}
 	}

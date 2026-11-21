@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C6A RID: 27754
+	// Token: 0x02005DE4 RID: 24036
 	public class LevelConditionCheckDangoBrawlLevelRound : LevelConditionBase
 	{
-		// Token: 0x0604455C RID: 279900 RVA: 0x010D88B4 File Offset: 0x010D6AB4
+		// Token: 0x0603A6B6 RID: 239286 RVA: 0x0108284C File Offset: 0x01080A4C
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

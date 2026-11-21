@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D7A RID: 23930
+	// Token: 0x020063B7 RID: 25527
 	public class IConstraintValueMaxT
 	{
-		// Token: 0x1700B33D RID: 45885
-		// (get) Token: 0x06028F0A RID: 167690 RVA: 0x0059F7E4 File Offset: 0x0059D9E4
-		// (set) Token: 0x06028F0B RID: 167691 RVA: 0x0059F7EC File Offset: 0x0059D9EC
+		// Token: 0x1700BCA3 RID: 48291
+		// (get) Token: 0x0602B594 RID: 177556 RVA: 0x005E8514 File Offset: 0x005E6714
+		// (set) Token: 0x0602B595 RID: 177557 RVA: 0x005E851C File Offset: 0x005E671C
 		public EConstraintValueType Type { get; set; }
 
-		// Token: 0x1700B33E RID: 45886
-		// (get) Token: 0x06028F0C RID: 167692 RVA: 0x0059F7F5 File Offset: 0x0059D9F5
-		// (set) Token: 0x06028F0D RID: 167693 RVA: 0x0059F7FD File Offset: 0x0059D9FD
+		// Token: 0x1700BCA4 RID: 48292
+		// (get) Token: 0x0602B596 RID: 177558 RVA: 0x005E8525 File Offset: 0x005E6725
+		// (set) Token: 0x0602B597 RID: 177559 RVA: 0x005E852D File Offset: 0x005E672D
 		public float MaxValue { get; set; }
 
-		// Token: 0x06028F0E RID: 167694 RVA: 0x0059F806 File Offset: 0x0059DA06
+		// Token: 0x0602B598 RID: 177560 RVA: 0x005E8536 File Offset: 0x005E6736
 		public IConstraintValueMaxT()
 		{
 			this.Type = EConstraintValueType.Max;

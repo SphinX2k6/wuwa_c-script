@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D1C RID: 3356
+	// Token: 0x02000E01 RID: 3585
 	public struct GuideTips : IFlatbufferObject
 	{
-		// Token: 0x17001698 RID: 5784
-		// (get) Token: 0x06007D39 RID: 32057 RVA: 0x0025157C File Offset: 0x0024F77C
+		// Token: 0x170016FB RID: 5883
+		// (get) Token: 0x06008353 RID: 33619 RVA: 0x0026FEE8 File Offset: 0x0026E0E8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D3A RID: 32058 RVA: 0x00251589 File Offset: 0x0024F789
+		// Token: 0x06008354 RID: 33620 RVA: 0x0026FEF5 File Offset: 0x0026E0F5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007D3B RID: 32059 RVA: 0x00251590 File Offset: 0x0024F790
+		// Token: 0x06008355 RID: 33621 RVA: 0x0026FEFC File Offset: 0x0026E0FC
 		public static GuideTips GetRootAsGuideTips(ByteBuffer _bb)
 		{
 			return GuideTips.GetRootAsGuideTips(_bb, default(GuideTips));
 		}
 
-		// Token: 0x06007D3C RID: 32060 RVA: 0x002515AC File Offset: 0x0024F7AC
+		// Token: 0x06008356 RID: 33622 RVA: 0x0026FF18 File Offset: 0x0026E118
 		public static GuideTips GetRootAsGuideTips(ByteBuffer _bb, GuideTips obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007D3D RID: 32061 RVA: 0x002515C9 File Offset: 0x0024F7C9
+		// Token: 0x06008357 RID: 33623 RVA: 0x0026FF35 File Offset: 0x0026E135
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007D3E RID: 32062 RVA: 0x002515D8 File Offset: 0x0024F7D8
+		// Token: 0x06008358 RID: 33624 RVA: 0x0026FF44 File Offset: 0x0026E144
 		public GuideTips __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001699 RID: 5785
-		// (get) Token: 0x06007D3F RID: 32063 RVA: 0x002515E8 File Offset: 0x0024F7E8
+		// Token: 0x170016FC RID: 5884
+		// (get) Token: 0x06008359 RID: 33625 RVA: 0x0026FF54 File Offset: 0x0026E154
 		public int GuideId
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700169A RID: 5786
-		// (get) Token: 0x06007D40 RID: 32064 RVA: 0x00251624 File Offset: 0x0024F824
+		// Token: 0x170016FD RID: 5885
+		// (get) Token: 0x0600835A RID: 33626 RVA: 0x0026FF90 File Offset: 0x0026E190
 		public string Content
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D41 RID: 32065 RVA: 0x0025165B File Offset: 0x0024F85B
+		// Token: 0x0600835B RID: 33627 RVA: 0x0026FFC7 File Offset: 0x0026E1C7
 		public Span<byte> GetContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06007D42 RID: 32066 RVA: 0x0025166A File Offset: 0x0024F86A
+		// Token: 0x0600835C RID: 33628 RVA: 0x0026FFD6 File Offset: 0x0026E1D6
 		public byte[] GetContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007D43 RID: 32067 RVA: 0x00251684 File Offset: 0x0024F884
+		// Token: 0x0600835D RID: 33629 RVA: 0x0026FFF0 File Offset: 0x0026E1F0
 		public string Button(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700169B RID: 5787
-		// (get) Token: 0x06007D44 RID: 32068 RVA: 0x002516C0 File Offset: 0x0024F8C0
+		// Token: 0x170016FE RID: 5886
+		// (get) Token: 0x0600835E RID: 33630 RVA: 0x0027002C File Offset: 0x0026E22C
 		public int ButtonLength
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D45 RID: 32069 RVA: 0x002516EC File Offset: 0x0024F8EC
+		// Token: 0x0600835F RID: 33631 RVA: 0x00270058 File Offset: 0x0026E258
 		public string InputEnums(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -129,8 +129,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700169C RID: 5788
-		// (get) Token: 0x06007D46 RID: 32070 RVA: 0x00251728 File Offset: 0x0024F928
+		// Token: 0x170016FF RID: 5887
+		// (get) Token: 0x06008360 RID: 33632 RVA: 0x00270094 File Offset: 0x0026E294
 		public int InputEnumsLength
 		{
 			get
@@ -144,7 +144,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D47 RID: 32071 RVA: 0x00251754 File Offset: 0x0024F954
+		// Token: 0x06008361 RID: 33633 RVA: 0x002700C0 File Offset: 0x0026E2C0
 		public string LimitInputEnums(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -155,8 +155,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700169D RID: 5789
-		// (get) Token: 0x06007D48 RID: 32072 RVA: 0x00251790 File Offset: 0x0024F990
+		// Token: 0x17001700 RID: 5888
+		// (get) Token: 0x06008362 RID: 33634 RVA: 0x002700FC File Offset: 0x0026E2FC
 		public int LimitInputEnumsLength
 		{
 			get
@@ -170,8 +170,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700169E RID: 5790
-		// (get) Token: 0x06007D49 RID: 32073 RVA: 0x002517BC File Offset: 0x0024F9BC
+		// Token: 0x17001701 RID: 5889
+		// (get) Token: 0x06008363 RID: 33635 RVA: 0x00270128 File Offset: 0x0026E328
 		public bool UseLoopAnim
 		{
 			get
@@ -181,8 +181,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700169F RID: 5791
-		// (get) Token: 0x06007D4A RID: 32074 RVA: 0x002517FC File Offset: 0x0024F9FC
+		// Token: 0x17001702 RID: 5890
+		// (get) Token: 0x06008364 RID: 33636 RVA: 0x00270168 File Offset: 0x0026E368
 		public int UseMask
 		{
 			get
@@ -196,58 +196,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007D4B RID: 32075 RVA: 0x00251839 File Offset: 0x0024FA39
+		// Token: 0x06008365 RID: 33637 RVA: 0x002701A5 File Offset: 0x0026E3A5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ButtonIter()或GetButtonBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Button()
+		public string[] Button()
 		{
 			return this.ButtonIter().ToArray<string>();
 		}
 
-		// Token: 0x06007D4C RID: 32076 RVA: 0x00251846 File Offset: 0x0024FA46
+		// Token: 0x06008366 RID: 33638 RVA: 0x002701B2 File Offset: 0x0026E3B2
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ButtonIter()
+		public IEnumerable<string> ButtonIter()
 		{
 			GuideTips.<ButtonIter>d__28 <ButtonIter>d__ = new GuideTips.<ButtonIter>d__28(-2);
 			<ButtonIter>d__.<>3__<>4__this = this;
 			return <ButtonIter>d__;
 		}
 
-		// Token: 0x06007D4D RID: 32077 RVA: 0x0025185B File Offset: 0x0024FA5B
+		// Token: 0x06008367 RID: 33639 RVA: 0x002701C7 File Offset: 0x0026E3C7
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InputEnumsIter()或GetInputEnumsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] InputEnums()
+		public string[] InputEnums()
 		{
 			return this.InputEnumsIter().ToArray<string>();
 		}
 
-		// Token: 0x06007D4E RID: 32078 RVA: 0x00251868 File Offset: 0x0024FA68
+		// Token: 0x06008368 RID: 33640 RVA: 0x002701D4 File Offset: 0x0026E3D4
 		[NullableContext(1)]
-		public readonly IEnumerable<string> InputEnumsIter()
+		public IEnumerable<string> InputEnumsIter()
 		{
 			GuideTips.<InputEnumsIter>d__30 <InputEnumsIter>d__ = new GuideTips.<InputEnumsIter>d__30(-2);
 			<InputEnumsIter>d__.<>3__<>4__this = this;
 			return <InputEnumsIter>d__;
 		}
 
-		// Token: 0x06007D4F RID: 32079 RVA: 0x0025187D File Offset: 0x0024FA7D
+		// Token: 0x06008369 RID: 33641 RVA: 0x002701E9 File Offset: 0x0026E3E9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LimitInputEnumsIter()或GetLimitInputEnumsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] LimitInputEnums()
+		public string[] LimitInputEnums()
 		{
 			return this.LimitInputEnumsIter().ToArray<string>();
 		}
 
-		// Token: 0x06007D50 RID: 32080 RVA: 0x0025188A File Offset: 0x0024FA8A
+		// Token: 0x0600836A RID: 33642 RVA: 0x002701F6 File Offset: 0x0026E3F6
 		[NullableContext(1)]
-		public readonly IEnumerable<string> LimitInputEnumsIter()
+		public IEnumerable<string> LimitInputEnumsIter()
 		{
 			GuideTips.<LimitInputEnumsIter>d__32 <LimitInputEnumsIter>d__ = new GuideTips.<LimitInputEnumsIter>d__32(-2);
 			<LimitInputEnumsIter>d__.<>3__<>4__this = this;
 			return <LimitInputEnumsIter>d__;
 		}
 
-		// Token: 0x04004D94 RID: 19860
+		// Token: 0x04005379 RID: 21369
 		private Table __p;
 	}
 }

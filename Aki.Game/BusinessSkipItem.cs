@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001300 RID: 4864
+// Token: 0x020007B4 RID: 1972
 public class BusinessSkipItem : UiPanelBase
 {
-	// Token: 0x060086C9 RID: 34505 RVA: 0x001CC4E0 File Offset: 0x001CA6E0
+	// Token: 0x06005A64 RID: 23140 RVA: 0x001D534C File Offset: 0x001D354C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class BusinessSkipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060086CA RID: 34506 RVA: 0x001CC560 File Offset: 0x001CA760
+	// Token: 0x06005A65 RID: 23141 RVA: 0x001D53CC File Offset: 0x001D35CC
 	private void OnSkipToOther()
 	{
 		if (this.UnlockData.Item1 != EMoonChasingUnlockType.Building)
@@ -41,14 +41,14 @@ public class BusinessSkipItem : UiPanelBase
 		vc.SkipToBuild();
 	}
 
-	// Token: 0x060086CB RID: 34507 RVA: 0x001CC5B0 File Offset: 0x001CA7B0
+	// Token: 0x06005A66 RID: 23142 RVA: 0x001D541C File Offset: 0x001D361C
 	[NullableContext(1)]
 	public void RegisterViewController(BusinessViewController vc)
 	{
 		this.Vc = vc;
 	}
 
-	// Token: 0x060086CC RID: 34508 RVA: 0x001CC5BC File Offset: 0x001CA7BC
+	// Token: 0x06005A67 RID: 23143 RVA: 0x001D5428 File Offset: 0x001D3628
 	public void Refresh()
 	{
 		ValueTuple<EMoonChasingUnlockType, int>? firstUnlockData = MoonChasingModel.Instance.GetFirstUnlockData();
@@ -69,23 +69,23 @@ public class BusinessSkipItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x04003C3E RID: 15422
+	// Token: 0x04003CD6 RID: 15574
 	[Nullable(2)]
 	private BusinessViewController Vc;
 
-	// Token: 0x04003C3F RID: 15423
+	// Token: 0x04003CD7 RID: 15575
 	private ValueTuple<EMoonChasingUnlockType, int> UnlockData;
 
-	// Token: 0x02007938 RID: 31032
+	// Token: 0x02006AC2 RID: 27330
 	private static class EComponentDefine
 	{
-		// Token: 0x04027EF9 RID: 163577
+		// Token: 0x04023226 RID: 143910
 		public const int Tips = 0;
 
-		// Token: 0x04027EFA RID: 163578
+		// Token: 0x04023227 RID: 143911
 		public const int RoleIcon = 1;
 
-		// Token: 0x04027EFB RID: 163579
+		// Token: 0x04023228 RID: 143912
 		public const int Button = 2;
 	}
 }

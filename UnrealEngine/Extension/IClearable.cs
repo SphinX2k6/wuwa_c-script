@@ -2,10 +2,10 @@
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002ADE RID: 10974
+	// Token: 0x0200088D RID: 2189
 	public interface IClearable
 	{
-		// Token: 0x060283DC RID: 164828
+		// Token: 0x0600BD8F RID: 48527
 		void Clear();
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB0 RID: 3248
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D92 RID: 3474
 	public class IExploreSkillPullStatue : IExploreSkillInteractType
 	{
-		// Token: 0x06004A58 RID: 19032 RVA: 0x000BA218 File Offset: 0x000B8418
+		// Token: 0x06004F06 RID: 20230 RVA: 0x000C4C28 File Offset: 0x000C2E28
 		public static IExploreSkillPullStatue Create(IExploreSkillPullStatue? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016B5 RID: 5813
-		// (get) Token: 0x06004A59 RID: 19033 RVA: 0x000BA237 File Offset: 0x000B8437
+		// Token: 0x170017DD RID: 6109
+		// (get) Token: 0x06004F07 RID: 20231 RVA: 0x000C4C47 File Offset: 0x000C2E47
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016B6 RID: 5814
-		// (get) Token: 0x06004A5A RID: 19034 RVA: 0x000BA244 File Offset: 0x000B8444
+		// Token: 0x170017DE RID: 6110
+		// (get) Token: 0x06004F08 RID: 20232 RVA: 0x000C4C54 File Offset: 0x000C2E54
 		public virtual ICategoryMatchingCondition Condition
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016B7 RID: 5815
-		// (get) Token: 0x06004A5B RID: 19035 RVA: 0x000BA278 File Offset: 0x000B8478
+		// Token: 0x170017DF RID: 6111
+		// (get) Token: 0x06004F09 RID: 20233 RVA: 0x000C4C88 File Offset: 0x000C2E88
 		public virtual int StatueInteractPointId
 		{
 			get
@@ -58,14 +56,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A6D RID: 10861
+		// Token: 0x04002CE7 RID: 11495
 		private IExploreSkillPullStatue Instance;
 
-		// Token: 0x04002A6E RID: 10862
+		// Token: 0x04002CE8 RID: 11496
 		[Nullable(2)]
 		private ICategoryMatchingCondition _ConditionCache;
 
-		// Token: 0x04002A6F RID: 10863
+		// Token: 0x04002CE9 RID: 11497
 		private bool _ConditionInited;
 	}
 }

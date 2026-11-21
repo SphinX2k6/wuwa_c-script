@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B40 RID: 2880
+	// Token: 0x02000C0E RID: 3086
 	public class ITeleControlDestroyCondition
 	{
-		// Token: 0x0600426A RID: 17002 RVA: 0x000A9E6C File Offset: 0x000A806C
-		[NullableContext(1)]
+		// Token: 0x060046C3 RID: 18115 RVA: 0x000B3F30 File Offset: 0x000B2130
 		public static ITeleControlDestroyCondition Create(ITeleControlDestroyCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011A7 RID: 4519
-		// (get) Token: 0x0600426B RID: 17003 RVA: 0x000A9E8B File Offset: 0x000A808B
+		// Token: 0x170012A2 RID: 4770
+		// (get) Token: 0x060046C4 RID: 18116 RVA: 0x000B3F4F File Offset: 0x000B214F
 		public virtual ETeleControlDestroyCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400256D RID: 9581
+		// Token: 0x040027B5 RID: 10165
 		private ITeleControlDestroyCondition Instance;
 	}
 }

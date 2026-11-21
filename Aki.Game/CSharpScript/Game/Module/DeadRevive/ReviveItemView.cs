@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005ACA RID: 23242
+	// Token: 0x02004AAB RID: 19115
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ReviveItemView : UiViewBase
 	{
-		// Token: 0x0603ADCB RID: 241099 RVA: 0x00E07FC5 File Offset: 0x00E061C5
+		// Token: 0x0602FD3D RID: 195901 RVA: 0x00D58CA5 File Offset: 0x00D56EA5
 		public ReviveItemView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603ADCC RID: 241100 RVA: 0x00E07FDC File Offset: 0x00E061DC
+		// Token: 0x0602FD3E RID: 195902 RVA: 0x00D58CBC File Offset: 0x00D56EBC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ADCD RID: 241101 RVA: 0x00E080A3 File Offset: 0x00E062A3
+		// Token: 0x0602FD3F RID: 195903 RVA: 0x00D58D83 File Offset: 0x00D56F83
 		private void OnClose()
 		{
 			this.ConfirmBoxButtonClick();
 		}
 
-		// Token: 0x0603ADCE RID: 241102 RVA: 0x00E080AC File Offset: 0x00E062AC
+		// Token: 0x0602FD40 RID: 195904 RVA: 0x00D58D8C File Offset: 0x00D56F8C
 		protected override void OnStart()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.InitPropItem();
 		}
 
-		// Token: 0x0603ADCF RID: 241103 RVA: 0x00E08188 File Offset: 0x00E06388
+		// Token: 0x0602FD41 RID: 195905 RVA: 0x00D58E68 File Offset: 0x00D57068
 		protected void InitPropItem()
 		{
 			ULGUIBehaviour scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(2);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.SetSelectedItemGrid(reviveSmallItemGrid);
 		}
 
-		// Token: 0x0603ADD0 RID: 241104 RVA: 0x00E08278 File Offset: 0x00E06478
+		// Token: 0x0602FD42 RID: 195906 RVA: 0x00D58F58 File Offset: 0x00D57158
 		private ILayoutItem<ReviveSmallItemGrid> CreatePropItem(object tempData, UUIItem uiItem, int index)
 		{
 			ValueTuple<int, int>? valueTuple = tempData as ValueTuple<int, int>?;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			};
 		}
 
-		// Token: 0x0603ADD1 RID: 241105 RVA: 0x00E082EB File Offset: 0x00E064EB
+		// Token: 0x0602FD43 RID: 195907 RVA: 0x00D58FCB File Offset: 0x00D571CB
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ItemIdMap != null)
@@ -129,20 +129,20 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.PropScrollView.ClearChildren();
 		}
 
-		// Token: 0x0603ADD2 RID: 241106 RVA: 0x00E08319 File Offset: 0x00E06519
+		// Token: 0x0602FD44 RID: 195908 RVA: 0x00D58FF9 File Offset: 0x00D571F9
 		protected void ConfirmBoxButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603ADD3 RID: 241107 RVA: 0x00E08324 File Offset: 0x00E06524
+		// Token: 0x0602FD45 RID: 195909 RVA: 0x00D59004 File Offset: 0x00D57204
 		private void OnItemExtendToggleStateChanged(MediumItemGridExtendCallback callbackParameter)
 		{
 			ReviveSmallItemGrid selectedItemGrid = callbackParameter.MediumItemGrid as ReviveSmallItemGrid;
 			this.SetSelectedItemGrid(selectedItemGrid);
 		}
 
-		// Token: 0x0603ADD4 RID: 241108 RVA: 0x00E08344 File Offset: 0x00E06544
+		// Token: 0x0602FD46 RID: 195910 RVA: 0x00D59024 File Offset: 0x00D57224
 		private void SetSelectedItemGrid(ReviveSmallItemGrid itemGrid)
 		{
 			if (itemGrid == null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), itemConfigData.AttributesDescription, Array.Empty<object>());
 		}
 
-		// Token: 0x0603ADD5 RID: 241109 RVA: 0x00E083AD File Offset: 0x00E065AD
+		// Token: 0x0602FD47 RID: 195911 RVA: 0x00D5908D File Offset: 0x00D5728D
 		private void ButtonOnClick()
 		{
 			if (this.SelectedItemId == -1)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401EB7C RID: 125820
+		// Token: 0x04019638 RID: 103992
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,31 +180,31 @@ namespace CSharpScript.Game.Module.DeadRevive
 		})]
 		protected GenericScrollView<ReviveSmallItemGrid> PropScrollView;
 
-		// Token: 0x0401EB7D RID: 125821
+		// Token: 0x04019639 RID: 103993
 		[Nullable(2)]
 		protected Dictionary<int, int> ItemIdMap;
 
-		// Token: 0x0401EB7E RID: 125822
+		// Token: 0x0401963A RID: 103994
 		protected int SelectedItemId = -1;
 
-		// Token: 0x0401EB7F RID: 125823
+		// Token: 0x0401963B RID: 103995
 		private int RoleId = -1;
 
-		// Token: 0x0401EB80 RID: 125824
+		// Token: 0x0401963C RID: 103996
 		[Nullable(2)]
 		private ReviveSmallItemGrid SelectedItemGrid;
 
-		// Token: 0x0200BD1C RID: 48412
+		// Token: 0x0200A724 RID: 42788
 		[NullableContext(0)]
 		private class EConfirmBoxViewDefine
 		{
-			// Token: 0x04039094 RID: 233620
+			// Token: 0x04033A5E RID: 211550
 			public const int SecondaryContentText = 0;
 
-			// Token: 0x04039095 RID: 233621
+			// Token: 0x04033A5F RID: 211551
 			public const int ConfirmButton = 1;
 
-			// Token: 0x04039096 RID: 233622
+			// Token: 0x04033A60 RID: 211552
 			public const int PropScrollView = 2;
 		}
 	}

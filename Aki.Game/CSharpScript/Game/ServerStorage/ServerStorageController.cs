@@ -6,27 +6,27 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.ServerStorage
 {
-	// Token: 0x02004581 RID: 17793
+	// Token: 0x020034A9 RID: 13481
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ServerStorageController : ControllerBase
 	{
-		// Token: 0x0602DE8A RID: 188042 RVA: 0x00A8DE0B File Offset: 0x00A8C00B
+		// Token: 0x0602256C RID: 140652 RVA: 0x009B9523 File Offset: 0x009B7723
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.StorageInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnStorageInfoInitNotify));
 			return true;
 		}
 
-		// Token: 0x0602DE8B RID: 188043 RVA: 0x00A8DE2A File Offset: 0x00A8C02A
+		// Token: 0x0602256D RID: 140653 RVA: 0x009B9542 File Offset: 0x009B7742
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.StorageInfoNotify);
 			return true;
 		}
 
-		// Token: 0x0602DE8C RID: 188044 RVA: 0x00A8DE40 File Offset: 0x00A8C040
+		// Token: 0x0602256E RID: 140654 RVA: 0x009B9558 File Offset: 0x009B7758
 		[NullableContext(2)]
 		private void OnStorageInfoInitNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -39,25 +39,48 @@ namespace CSharpScript.Game.ServerStorage
 			EventSystem.Instance.Emit(EEventName.OnServerStorageInfoInited);
 		}
 
-		// Token: 0x0602DE8D RID: 188045 RVA: 0x00A8DE78 File Offset: 0x00A8C078
-		public void SendStorageInfoUpdateRequest(StorageInfoUpdateRequest request)
+		// Token: 0x0602256F RID: 140655 RVA: 0x009B9590 File Offset: 0x009B7790
+		public void SendStorageInfoUpdateRequest(StorageInfoUpdateRequest request, Action<bool> onResult)
 		{
 			Net.Instance.Call(ERequestMessageId.StorageInfoUpdateRequest, request, delegate(IMessage msg, Net.CallbackStatus _)
 			{
 				StorageInfoUpdateResponse storageInfoUpdateResponse = (StorageInfoUpdateResponse)msg;
 				if (storageInfoUpdateResponse == null)
 				{
+					Action<bool> onResult2 = onResult;
+					if (onResult2 == null)
+					{
+						return;
+					}
+					onResult2(false);
 					return;
 				}
-				if (storageInfoUpdateResponse.ErrorCode != ErrorCode.Success)
+				else if (storageInfoUpdateResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(storageInfoUpdateResponse.ErrorCode, 15571, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(storageInfoUpdateResponse.ErrorCode, 24640, null, true, true);
+					Action<bool> onResult3 = onResult;
+					if (onResult3 == null)
+					{
+						return;
+					}
+					onResult3(false);
+					return;
+				}
+				else
+				{
+					Action<bool> onResult4 = onResult;
+					if (onResult4 == null)
+					{
+						return;
+					}
+					onResult4(true);
+					return;
 				}
 			}, 0);
 		}
 
-		// Token: 0x17007595 RID: 30101
-		// (get) Token: 0x0602DE8E RID: 188046 RVA: 0x00A8DEAA File Offset: 0x00A8C0AA
+		// Token: 0x1700484C RID: 18508
+		// (get) Token: 0x06022570 RID: 140656 RVA: 0x009B95C7 File Offset: 0x009B77C7
 		public static ServerStorageController Instance
 		{
 			get
@@ -66,7 +89,7 @@ namespace CSharpScript.Game.ServerStorage
 			}
 		}
 
-		// Token: 0x0602DE8F RID: 188047 RVA: 0x00A8DEB1 File Offset: 0x00A8C0B1
+		// Token: 0x06022571 RID: 140657 RVA: 0x009B95CE File Offset: 0x009B77CE
 		public static ServerStorageController GetOrCreateInstance()
 		{
 			if (ServerStorageController._Instance == null)
@@ -76,7 +99,7 @@ namespace CSharpScript.Game.ServerStorage
 			return ServerStorageController._Instance;
 		}
 
-		// Token: 0x0602DE90 RID: 188048 RVA: 0x00A8DEC5 File Offset: 0x00A8C0C5
+		// Token: 0x06022572 RID: 140658 RVA: 0x009B95E2 File Offset: 0x009B77E2
 		public static bool CreateInstance()
 		{
 			if (ServerStorageController._Instance != null)
@@ -87,24 +110,24 @@ namespace CSharpScript.Game.ServerStorage
 			return true;
 		}
 
-		// Token: 0x0602DE91 RID: 188049 RVA: 0x00A8DEDB File Offset: 0x00A8C0DB
+		// Token: 0x06022573 RID: 140659 RVA: 0x009B95F8 File Offset: 0x009B77F8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DE92 RID: 188050 RVA: 0x00A8DEDD File Offset: 0x00A8C0DD
+		// Token: 0x06022574 RID: 140660 RVA: 0x009B95FA File Offset: 0x009B77FA
 		public static void ResetStaticDefaultValue()
 		{
 			ServerStorageController._Instance = null;
 		}
 
-		// Token: 0x0602DE93 RID: 188051 RVA: 0x00A8DEE5 File Offset: 0x00A8C0E5
+		// Token: 0x06022575 RID: 140661 RVA: 0x009B9602 File Offset: 0x009B7802
 		static ServerStorageController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ServerStorageController.CreateStaticDefaultValue), new Action(ServerStorageController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018841 RID: 100417
+		// Token: 0x04012E7B RID: 77435
 		[Nullable(2)]
 		private static ServerStorageController _Instance;
 	}

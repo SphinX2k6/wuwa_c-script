@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001334 RID: 4916
+// Token: 0x020007E8 RID: 2024
 public class HandbookGridData : IHandbookGridData
 {
-	// Token: 0x17000BA4 RID: 2980
-	// (get) Token: 0x060088EB RID: 35051 RVA: 0x001D41D0 File Offset: 0x001D23D0
-	// (set) Token: 0x060088EC RID: 35052 RVA: 0x001D41D8 File Offset: 0x001D23D8
+	// Token: 0x17000BC4 RID: 3012
+	// (get) Token: 0x06005C86 RID: 23686 RVA: 0x001DD03C File Offset: 0x001DB23C
+	// (set) Token: 0x06005C87 RID: 23687 RVA: 0x001DD044 File Offset: 0x001DB244
 	public int Id { get; set; }
 
-	// Token: 0x17000BA5 RID: 2981
-	// (get) Token: 0x060088ED RID: 35053 RVA: 0x001D41E1 File Offset: 0x001D23E1
-	// (set) Token: 0x060088EE RID: 35054 RVA: 0x001D41E9 File Offset: 0x001D23E9
+	// Token: 0x17000BC5 RID: 3013
+	// (get) Token: 0x06005C88 RID: 23688 RVA: 0x001DD04D File Offset: 0x001DB24D
+	// (set) Token: 0x06005C89 RID: 23689 RVA: 0x001DD055 File Offset: 0x001DB255
 	public bool IsUnlock { get; set; }
 }

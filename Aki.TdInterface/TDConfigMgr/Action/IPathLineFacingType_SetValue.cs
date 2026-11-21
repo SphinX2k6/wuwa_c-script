@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CC7 RID: 7367
+	// Token: 0x02001ECE RID: 7886
 	public class IPathLineFacingType_SetValue
 	{
-		// Token: 0x04005F9E RID: 24478
+		// Token: 0x040064FA RID: 25850
 		public EPathLineFacingType Type;
 	}
 }

@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A18 RID: 18968
+	// Token: 0x020039C0 RID: 14784
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseRewardItemData
 	{
-		// Token: 0x060313E4 RID: 201700 RVA: 0x00B6B5FD File Offset: 0x00B697FD
+		// Token: 0x06026174 RID: 156020 RVA: 0x00AAF5F9 File Offset: 0x00AAD7F9
 		public static TrapDefenseRewardItemData Create(TrapDefenseReward config)
 		{
 			TrapDefenseRewardItemData trapDefenseRewardItemData = new TrapDefenseRewardItemData();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseRewardItemData;
 		}
 
-		// Token: 0x060313E5 RID: 201701 RVA: 0x00B6B624 File Offset: 0x00B69824
+		// Token: 0x06026175 RID: 156021 RVA: 0x00AAF620 File Offset: 0x00AAD820
 		public void UpdateByServerData(TrapDefenseRewardInfo serverData)
 		{
 			ConditionTask taskInfo = serverData.TaskInfo;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.Target = ((taskInfo != null) ? taskInfo.Target : 0);
 		}
 
-		// Token: 0x060313E6 RID: 201702 RVA: 0x00B6B6F0 File Offset: 0x00B698F0
+		// Token: 0x06026176 RID: 156022 RVA: 0x00AAF6EC File Offset: 0x00AAD8EC
 		public string GetUnlockRemainTimeStr()
 		{
 			if (this.State != ETrapDefenseRewardState.Lock)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return ((remainTimeDataFormat != null) ? remainTimeDataFormat.CountDownText : null) ?? "";
 		}
 
-		// Token: 0x060313E7 RID: 201703 RVA: 0x00B6B754 File Offset: 0x00B69954
+		// Token: 0x06026177 RID: 156023 RVA: 0x00AAF750 File Offset: 0x00AAD950
 		private void Init()
 		{
 			if (this.Config == null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.InitRewardItemList();
 		}
 
-		// Token: 0x060313E8 RID: 201704 RVA: 0x00B6B7A8 File Offset: 0x00B699A8
+		// Token: 0x06026178 RID: 156024 RVA: 0x00AAF7A4 File Offset: 0x00AAD9A4
 		private void InitRewardItemList()
 		{
 			this.ItemList.Clear();
@@ -94,31 +94,31 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A539 RID: 107833
+		// Token: 0x04014E90 RID: 85648
 		private TrapDefenseReward? Config;
 
-		// Token: 0x0401A53A RID: 107834
+		// Token: 0x04014E91 RID: 85649
 		public int Id;
 
-		// Token: 0x0401A53B RID: 107835
+		// Token: 0x04014E92 RID: 85650
 		public ETrapDefenseRewardType Type;
 
-		// Token: 0x0401A53C RID: 107836
+		// Token: 0x04014E93 RID: 85651
 		public string Desc = "";
 
-		// Token: 0x0401A53D RID: 107837
+		// Token: 0x04014E94 RID: 85652
 		public List<TItem> ItemList = new List<TItem>();
 
-		// Token: 0x0401A53E RID: 107838
+		// Token: 0x04014E95 RID: 85653
 		public ETrapDefenseRewardState State;
 
-		// Token: 0x0401A53F RID: 107839
+		// Token: 0x04014E96 RID: 85654
 		public double StartTime;
 
-		// Token: 0x0401A540 RID: 107840
+		// Token: 0x04014E97 RID: 85655
 		public int CurProgress;
 
-		// Token: 0x0401A541 RID: 107841
+		// Token: 0x04014E98 RID: 85656
 		public int Target;
 	}
 }

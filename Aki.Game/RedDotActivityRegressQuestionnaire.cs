@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200334A RID: 13130
+// Token: 0x020028BC RID: 10428
 public class RedDotActivityRegressQuestionnaire : RedDotBase
 {
-	// Token: 0x0601C99C RID: 117148 RVA: 0x00804930 File Offset: 0x00802B30
+	// Token: 0x0601A694 RID: 108180 RVA: 0x0082AEF4 File Offset: 0x008290F4
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C99D RID: 117149 RVA: 0x0080494E File Offset: 0x00802B4E
+	// Token: 0x0601A695 RID: 108181 RVA: 0x0082AF12 File Offset: 0x00829112
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RecallActivityInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C99E RID: 117150 RVA: 0x0080496C File Offset: 0x00802B6C
+	// Token: 0x0601A696 RID: 108182 RVA: 0x0082AF30 File Offset: 0x00829130
 	protected override bool OnCheck(int uId = 0)
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;

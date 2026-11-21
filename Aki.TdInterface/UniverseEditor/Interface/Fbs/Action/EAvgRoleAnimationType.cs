@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F1B RID: 24347
+	// Token: 0x0200655F RID: 25951
 	public enum EAvgRoleAnimationType : byte
 	{
-		// Token: 0x0400FC10 RID: 64528
+		// Token: 0x04010986 RID: 67974
 		Idle,
-		// Token: 0x0400FC11 RID: 64529
+		// Token: 0x04010987 RID: 67975
 		Victory,
-		// Token: 0x0400FC12 RID: 64530
+		// Token: 0x04010988 RID: 67976
 		TouchFeedback,
-		// Token: 0x0400FC13 RID: 64531
+		// Token: 0x04010989 RID: 67977
 		Skill,
-		// Token: 0x0400FC14 RID: 64532
+		// Token: 0x0401098A RID: 67978
 		HumanToBall,
-		// Token: 0x0400FC15 RID: 64533
+		// Token: 0x0401098B RID: 67979
 		BallToHuman,
-		// Token: 0x0400FC16 RID: 64534
+		// Token: 0x0401098C RID: 67980
 		AvgPlaySkill
 	}
 }

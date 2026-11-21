@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001FB9 RID: 8121
+// Token: 0x0200147B RID: 5243
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,27 +14,27 @@ using UnrealEngine;
 })]
 public class PhantomManageConfigItem : GridProxyAbstract<PhantomManageConfigData>, IStaticVariableResetter
 {
-	// Token: 0x0600FDE6 RID: 64998 RVA: 0x003D97B4 File Offset: 0x003D79B4
+	// Token: 0x0600D20C RID: 53772 RVA: 0x003E5190 File Offset: 0x003E3390
 	static PhantomManageConfigItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomManageConfigItem.CreateStaticDefaultValue), new Action(PhantomManageConfigItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600FDE7 RID: 64999 RVA: 0x003D97D3 File Offset: 0x003D79D3
+	// Token: 0x0600D20D RID: 53773 RVA: 0x003E51AF File Offset: 0x003E33AF
 	public static void CreateStaticDefaultValue()
 	{
 		PhantomManageConfigItem.CallbackBtnSelect = null;
 		PhantomManageConfigItem.ViewModel = null;
 	}
 
-	// Token: 0x0600FDE8 RID: 65000 RVA: 0x003D97E1 File Offset: 0x003D79E1
+	// Token: 0x0600D20E RID: 53774 RVA: 0x003E51BD File Offset: 0x003E33BD
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomManageConfigItem.CallbackBtnSelect = null;
 		PhantomManageConfigItem.ViewModel = null;
 	}
 
-	// Token: 0x0600FDE9 RID: 65001 RVA: 0x003D97F0 File Offset: 0x003D79F0
+	// Token: 0x0600D20F RID: 53775 RVA: 0x003E51CC File Offset: 0x003E33CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -59,14 +59,14 @@ public class PhantomManageConfigItem : GridProxyAbstract<PhantomManageConfigData
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FDEA RID: 65002 RVA: 0x003D98D8 File Offset: 0x003D7AD8
+	// Token: 0x0600D210 RID: 53776 RVA: 0x003E52B4 File Offset: 0x003E34B4
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(3).CanExecuteChange.Bind(() => base.GetExtendToggle(3).GetToggleState() != EToggleState.ETT_Checked || !this.GetSelectState());
 		this.Canvas = (base.GetRootActor().GetComponentByClass(ULGUICanvas.StaticClass()) as ULGUICanvas);
 	}
 
-	// Token: 0x0600FDEB RID: 65003 RVA: 0x003D9918 File Offset: 0x003D7B18
+	// Token: 0x0600D211 RID: 53777 RVA: 0x003E52F4 File Offset: 0x003E34F4
 	[NullableContext(1)]
 	public override void Refresh(PhantomManageConfigData data, bool isSelected, int gridIndex)
 	{
@@ -85,14 +85,14 @@ public class PhantomManageConfigItem : GridProxyAbstract<PhantomManageConfigData
 		this.Canvas.SetSortOrder((selectState && editState) ? 1 : 0, true);
 	}
 
-	// Token: 0x0600FDEC RID: 65004 RVA: 0x003D99CD File Offset: 0x003D7BCD
+	// Token: 0x0600D212 RID: 53778 RVA: 0x003E53A9 File Offset: 0x003E35A9
 	[NullableContext(1)]
 	public override object GetKey(PhantomManageConfigData data, int displayIndex)
 	{
 		return data.GetIndex();
 	}
 
-	// Token: 0x0600FDED RID: 65005 RVA: 0x003D99DA File Offset: 0x003D7BDA
+	// Token: 0x0600D213 RID: 53779 RVA: 0x003E53B6 File Offset: 0x003E35B6
 	private void OnClickedBtnSelect(EToggleState toggleState)
 	{
 		if (this.Data != null && PhantomManageConfigItem.CallbackBtnSelect != null)
@@ -101,7 +101,7 @@ public class PhantomManageConfigItem : GridProxyAbstract<PhantomManageConfigData
 		}
 	}
 
-	// Token: 0x0600FDEE RID: 65006 RVA: 0x003D99FC File Offset: 0x003D7BFC
+	// Token: 0x0600D214 RID: 53780 RVA: 0x003E53D8 File Offset: 0x003E35D8
 	private bool GetSelectState()
 	{
 		if (this.Data != null && PhantomManageConfigItem.ViewModel != null)
@@ -112,16 +112,16 @@ public class PhantomManageConfigItem : GridProxyAbstract<PhantomManageConfigData
 		return false;
 	}
 
-	// Token: 0x0600FDEF RID: 65007 RVA: 0x003D9A4D File Offset: 0x003D7C4D
+	// Token: 0x0600D215 RID: 53781 RVA: 0x003E5429 File Offset: 0x003E3629
 	private bool GetEditState()
 	{
 		return this.Data != null && PhantomManageConfigItem.ViewModel != null && PhantomManageConfigItem.ViewModel.GetEditState();
 	}
 
-	// Token: 0x04007597 RID: 30103
+	// Token: 0x04007679 RID: 30329
 	private PhantomManageConfigData Data;
 
-	// Token: 0x04007598 RID: 30104
+	// Token: 0x0400767A RID: 30330
 	[Nullable(new byte[]
 	{
 		2,
@@ -129,23 +129,23 @@ public class PhantomManageConfigItem : GridProxyAbstract<PhantomManageConfigData
 	})]
 	public static Action<PhantomManageConfigData> CallbackBtnSelect;
 
-	// Token: 0x04007599 RID: 30105
+	// Token: 0x0400767B RID: 30331
 	public static PhantomManageConfigViewModel ViewModel;
 
-	// Token: 0x0400759A RID: 30106
+	// Token: 0x0400767C RID: 30332
 	private ULGUICanvas Canvas;
 
-	// Token: 0x020085C1 RID: 34241
+	// Token: 0x02007743 RID: 30531
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B8B3 RID: 178355
+		// Token: 0x04026BBB RID: 158651
 		TextNumber,
-		// Token: 0x0402B8B4 RID: 178356
+		// Token: 0x04026BBC RID: 158652
 		TextName,
-		// Token: 0x0402B8B5 RID: 178357
+		// Token: 0x04026BBD RID: 158653
 		SpriteOn,
-		// Token: 0x0402B8B6 RID: 178358
+		// Token: 0x04026BBE RID: 158654
 		BtnItem
 	}
 }

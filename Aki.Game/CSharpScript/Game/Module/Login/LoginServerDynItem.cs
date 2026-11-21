@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B5 RID: 22197
+	// Token: 0x0200468B RID: 18059
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginServerDynItem : UiPanelBase, IDynamicScrollBaseItem<ILoginServersData>
 	{
-		// Token: 0x06038765 RID: 231269 RVA: 0x00D67B78 File Offset: 0x00D65D78
+		// Token: 0x0602D662 RID: 185954 RVA: 0x00CB5D3C File Offset: 0x00CB3F3C
 		public UniTask Init(UUIItem actor)
 		{
 			LoginServerDynItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Login
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038766 RID: 231270 RVA: 0x00D67BC4 File Offset: 0x00D65DC4
+		// Token: 0x0602D663 RID: 185955 RVA: 0x00CB5D88 File Offset: 0x00CB3F88
 		public FVector2D GetItemSize(ILoginServersData data)
 		{
 			if (this.ItemSizeVector == null)
@@ -38,18 +38,18 @@ namespace CSharpScript.Game.Module.Login
 			return this.ItemSizeVector.ToUeVector2D(true);
 		}
 
-		// Token: 0x06038767 RID: 231271 RVA: 0x00D67C10 File Offset: 0x00D65E10
+		// Token: 0x0602D664 RID: 185956 RVA: 0x00CB5DD4 File Offset: 0x00CB3FD4
 		public AUIBaseActor GetUsingItem()
 		{
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x06038768 RID: 231272 RVA: 0x00D67C22 File Offset: 0x00D65E22
+		// Token: 0x0602D665 RID: 185957 RVA: 0x00CB5DE6 File Offset: 0x00CB3FE6
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401DA71 RID: 121457
+		// Token: 0x040184FC RID: 99580
 		[Nullable(2)]
 		private Vector2D ItemSizeVector;
 	}

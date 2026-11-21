@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D97 RID: 7575
+	// Token: 0x02001FAC RID: 8108
 	public class IRemovePreloadFlows_SetValue
 	{
-		// Token: 0x04006188 RID: 24968
+		// Token: 0x0400670C RID: 26380
 		public ERemovePreloadResourceObjectType Type;
 
-		// Token: 0x04006189 RID: 24969
-		[Nullable(1)]
+		// Token: 0x0400670D RID: 26381
 		public PlayFlow FlowId;
 	}
 }

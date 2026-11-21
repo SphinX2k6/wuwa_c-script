@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019F3 RID: 6643
+// Token: 0x02000EB2 RID: 3762
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPanelDataAdapter
 {
-	// Token: 0x17001045 RID: 4165
-	// (get) Token: 0x0600C26C RID: 49772 RVA: 0x002BE1E4 File Offset: 0x002BC3E4
+	// Token: 0x1700106A RID: 4202
+	// (get) Token: 0x06009679 RID: 38521 RVA: 0x002C91BC File Offset: 0x002C73BC
 	public double CurrentValue
 	{
 		get
@@ -17,8 +17,8 @@ public class WeeklyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPa
 		}
 	}
 
-	// Token: 0x17001046 RID: 4166
-	// (get) Token: 0x0600C26D RID: 49773 RVA: 0x002BE1F1 File Offset: 0x002BC3F1
+	// Token: 0x1700106B RID: 4203
+	// (get) Token: 0x0600967A RID: 38522 RVA: 0x002C91C9 File Offset: 0x002C73C9
 	public double MaxValue
 	{
 		get
@@ -27,8 +27,8 @@ public class WeeklyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPa
 		}
 	}
 
-	// Token: 0x17001047 RID: 4167
-	// (get) Token: 0x0600C26E RID: 49774 RVA: 0x002BE1FE File Offset: 0x002BC3FE
+	// Token: 0x1700106C RID: 4204
+	// (get) Token: 0x0600967B RID: 38523 RVA: 0x002C91D6 File Offset: 0x002C73D6
 	public IReadOnlyDictionary<int, DailyActivityDefine.IActivityGoalData> GoalMap
 	{
 		get
@@ -37,20 +37,20 @@ public class WeeklyActivityRewardAdapter : DailyActivityDefine.IActivityRewardPa
 		}
 	}
 
-	// Token: 0x0600C26F RID: 49775 RVA: 0x002BE20A File Offset: 0x002BC40A
+	// Token: 0x0600967C RID: 38524 RVA: 0x002C91E2 File Offset: 0x002C73E2
 	public List<int> GetCanRewardIdList()
 	{
 		return WeeklyChallengeModel.Instance.GetCanRewardIdList();
 	}
 
-	// Token: 0x0600C270 RID: 49776 RVA: 0x002BE216 File Offset: 0x002BC416
+	// Token: 0x0600967D RID: 38525 RVA: 0x002C91EE File Offset: 0x002C73EE
 	public void RequestReward(List<int> idList, Action onClose)
 	{
 		WeeklyChallengeController.Instance.RequestWeeklyFrameworkScoreReward(idList);
 		onClose();
 	}
 
-	// Token: 0x0600C271 RID: 49777 RVA: 0x002BE229 File Offset: 0x002BC429
+	// Token: 0x0600967E RID: 38526 RVA: 0x002C9201 File Offset: 0x002C7401
 	public List<TItem> GetRewardById(int id)
 	{
 		return WeeklyChallengeModel.Instance.GetRewardById(id);

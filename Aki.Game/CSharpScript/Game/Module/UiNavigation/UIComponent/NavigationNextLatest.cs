@@ -4,21 +4,21 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x02004A05 RID: 18949
+	// Token: 0x02003981 RID: 14721
 	public class NavigationNextLatest : HotKeyComponent
 	{
-		// Token: 0x060312E2 RID: 201442 RVA: 0x00B6824A File Offset: 0x00B6644A
+		// Token: 0x06025E30 RID: 155184 RVA: 0x00AA39B2 File Offset: 0x00AA1BB2
 		public NavigationNextLatest(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312E3 RID: 201443 RVA: 0x00B68253 File Offset: 0x00B66453
+		// Token: 0x06025E31 RID: 155185 RVA: 0x00AA39BB File Offset: 0x00AA1BBB
 		protected override void OnRelease(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.HandleCommonConsumeNavigationToLast(config.BindButtonTag);
 		}
 
-		// Token: 0x060312E4 RID: 201444 RVA: 0x00B68268 File Offset: 0x00B66468
+		// Token: 0x06025E32 RID: 155186 RVA: 0x00AA39D0 File Offset: 0x00AA1BD0
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

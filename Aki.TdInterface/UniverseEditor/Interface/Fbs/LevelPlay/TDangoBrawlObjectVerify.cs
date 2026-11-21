@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045FB RID: 17915
+	// Token: 0x02004A63 RID: 19043
 	public static class TDangoBrawlObjectVerify
 	{
-		// Token: 0x0601B23E RID: 111166 RVA: 0x003DE0EC File Offset: 0x003DC2EC
+		// Token: 0x0601CA13 RID: 117267 RVA: 0x0040A388 File Offset: 0x00408588
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

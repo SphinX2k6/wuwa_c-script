@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026D9 RID: 9945
+// Token: 0x02001BC4 RID: 7108
 public class RacingBetsRoundStartCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A72 RID: 6770
-	// (get) Token: 0x06014646 RID: 83526 RVA: 0x0052853E File Offset: 0x0052673E
+	// Token: 0x17001AAA RID: 6826
+	// (get) Token: 0x06011B28 RID: 72488 RVA: 0x00537276 File Offset: 0x00535476
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -14,7 +14,7 @@ public class RacingBetsRoundStartCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014647 RID: 83527 RVA: 0x00528541 File Offset: 0x00526741
+	// Token: 0x06011B29 RID: 72489 RVA: 0x00537279 File Offset: 0x00535479
 	[NullableContext(1)]
 	public override string LogInfo()
 	{

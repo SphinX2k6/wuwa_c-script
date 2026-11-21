@@ -6,16 +6,16 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001FC4 RID: 8132
+// Token: 0x02001497 RID: 5271
 public class AccessPathPcView : UiViewBase
 {
-	// Token: 0x0600FE58 RID: 65112 RVA: 0x003DBAE1 File Offset: 0x003D9CE1
+	// Token: 0x0600D2C0 RID: 53952 RVA: 0x003E80BD File Offset: 0x003E62BD
 	[NullableContext(1)]
 	public AccessPathPcView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FE59 RID: 65113 RVA: 0x003DBAF8 File Offset: 0x003D9CF8
+	// Token: 0x0600D2C1 RID: 53953 RVA: 0x003E80D4 File Offset: 0x003E62D4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -72,7 +72,7 @@ public class AccessPathPcView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FE5A RID: 65114 RVA: 0x003DBDFD File Offset: 0x003D9FFD
+	// Token: 0x0600D2C2 RID: 53954 RVA: 0x003E83D9 File Offset: 0x003E65D9
 	protected override void OnStart()
 	{
 		this.RefreshShortcutKey();
@@ -80,7 +80,7 @@ public class AccessPathPcView : UiViewBase
 		this.AddEvents();
 	}
 
-	// Token: 0x0600FE5B RID: 65115 RVA: 0x003DBE14 File Offset: 0x003DA014
+	// Token: 0x0600D2C3 RID: 53955 RVA: 0x003E83F0 File Offset: 0x003E65F0
 	protected override void OnBeforeDestroy()
 	{
 		foreach (AccessPathPcButton accessPathPcButton in this.AccessPathButtonList)
@@ -91,28 +91,28 @@ public class AccessPathPcView : UiViewBase
 		this.RemoveEvents();
 	}
 
-	// Token: 0x0600FE5C RID: 65116 RVA: 0x003DBE78 File Offset: 0x003DA078
+	// Token: 0x0600D2C4 RID: 53956 RVA: 0x003E8454 File Offset: 0x003E6654
 	public void AddEvents()
 	{
 	}
 
-	// Token: 0x0600FE5D RID: 65117 RVA: 0x003DBE7A File Offset: 0x003DA07A
+	// Token: 0x0600D2C5 RID: 53957 RVA: 0x003E8456 File Offset: 0x003E6656
 	public void RemoveEvents()
 	{
 	}
 
-	// Token: 0x0600FE5E RID: 65118 RVA: 0x003DBE7C File Offset: 0x003DA07C
+	// Token: 0x0600D2C6 RID: 53958 RVA: 0x003E8458 File Offset: 0x003E6658
 	private void OnClickedCheckButton()
 	{
 	}
 
-	// Token: 0x0600FE5F RID: 65119 RVA: 0x003DBE7E File Offset: 0x003DA07E
+	// Token: 0x0600D2C7 RID: 53959 RVA: 0x003E845A File Offset: 0x003E665A
 	private void OnClickedLeaveButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.AccessPathPcView, null);
 	}
 
-	// Token: 0x0600FE60 RID: 65120 RVA: 0x003DBE90 File Offset: 0x003DA090
+	// Token: 0x0600D2C8 RID: 53960 RVA: 0x003E846C File Offset: 0x003E666C
 	private unsafe void RefreshAccessPathButtons()
 	{
 		Span<int> itemAccess = InventoryModel.Instance.GetSelectedItemData().GetItemDataBase().GetItemAccess();
@@ -126,14 +126,14 @@ public class AccessPathPcView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600FE61 RID: 65121 RVA: 0x003DBEEC File Offset: 0x003DA0EC
+	// Token: 0x0600D2C9 RID: 53961 RVA: 0x003E84C8 File Offset: 0x003E66C8
 	private void RefreshShortcutKey()
 	{
 		bool shortcutKeyDisplay = Info.Instance.IsInKeyBoard();
 		this.SetShortcutKeyDisplay(shortcutKeyDisplay);
 	}
 
-	// Token: 0x0600FE62 RID: 65122 RVA: 0x003DBF0C File Offset: 0x003DA10C
+	// Token: 0x0600D2CA RID: 53962 RVA: 0x003E84E8 File Offset: 0x003E66E8
 	private void SetShortcutKeyDisplay(bool bPc)
 	{
 		UUISprite sprite = base.GetSprite(3);
@@ -170,50 +170,50 @@ public class AccessPathPcView : UiViewBase
 		item8.SetUIActive(!bPc);
 	}
 
-	// Token: 0x040075AF RID: 30127
+	// Token: 0x04007698 RID: 30360
 	[Nullable(1)]
 	private readonly List<AccessPathPcButton> AccessPathButtonList = new List<AccessPathPcButton>();
 
-	// Token: 0x020085D5 RID: 34261
+	// Token: 0x0200775C RID: 30556
 	private enum EChildComponentType
 	{
-		// Token: 0x0402B8F7 RID: 178423
+		// Token: 0x04026C06 RID: 158726
 		AccessPathButtonItem,
-		// Token: 0x0402B8F8 RID: 178424
+		// Token: 0x04026C07 RID: 158727
 		CheckButton,
-		// Token: 0x0402B8F9 RID: 178425
+		// Token: 0x04026C08 RID: 158728
 		LeaveButton,
-		// Token: 0x0402B8FA RID: 178426
+		// Token: 0x04026C09 RID: 158729
 		CheckButtonDisJs,
-		// Token: 0x0402B8FB RID: 178427
+		// Token: 0x04026C0A RID: 158730
 		CheckButtonDisSb,
-		// Token: 0x0402B8FC RID: 178428
+		// Token: 0x04026C0B RID: 158731
 		CheckButtonHlJs,
-		// Token: 0x0402B8FD RID: 178429
+		// Token: 0x04026C0C RID: 158732
 		CheckButtonHlSb,
-		// Token: 0x0402B8FE RID: 178430
+		// Token: 0x04026C0D RID: 158733
 		CheckButtonNorJs,
-		// Token: 0x0402B8FF RID: 178431
+		// Token: 0x04026C0E RID: 158734
 		CheckButtonNorSb,
-		// Token: 0x0402B900 RID: 178432
+		// Token: 0x04026C0F RID: 158735
 		CheckButtonPreJs,
-		// Token: 0x0402B901 RID: 178433
+		// Token: 0x04026C10 RID: 158736
 		CheckButtonPreSb,
-		// Token: 0x0402B902 RID: 178434
+		// Token: 0x04026C11 RID: 158737
 		LeaveButtonDisJs,
-		// Token: 0x0402B903 RID: 178435
+		// Token: 0x04026C12 RID: 158738
 		LeaveButtonDisSb,
-		// Token: 0x0402B904 RID: 178436
+		// Token: 0x04026C13 RID: 158739
 		LeaveButtonHlJs,
-		// Token: 0x0402B905 RID: 178437
+		// Token: 0x04026C14 RID: 158740
 		LeaveButtonHlSb,
-		// Token: 0x0402B906 RID: 178438
+		// Token: 0x04026C15 RID: 158741
 		LeaveButtonNorJs,
-		// Token: 0x0402B907 RID: 178439
+		// Token: 0x04026C16 RID: 158742
 		LeaveButtonNorSb,
-		// Token: 0x0402B908 RID: 178440
+		// Token: 0x04026C17 RID: 158743
 		LeaveButtonPreJs,
-		// Token: 0x0402B909 RID: 178441
+		// Token: 0x04026C18 RID: 158744
 		LeaveButtonPreSb
 	}
 }

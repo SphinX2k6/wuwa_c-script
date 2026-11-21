@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02000FB0 RID: 4016
+// Token: 0x02000465 RID: 1125
 public class FurnitureGroupEntityItem : FurnitureSceneItemBase
 {
-	// Token: 0x060066DC RID: 26332 RVA: 0x00145A71 File Offset: 0x00143C71
+	// Token: 0x06003A74 RID: 14964 RVA: 0x0014E335 File Offset: 0x0014C535
 	public FurnitureGroupEntityItem(int furnitureConfigId) : base(furnitureConfigId)
 	{
 		this.SceneItemType = EFurnitureSceneItemType.GroupEntity;
 	}
 
-	// Token: 0x060066DD RID: 26333 RVA: 0x00145A8C File Offset: 0x00143C8C
+	// Token: 0x06003A75 RID: 14965 RVA: 0x0014E350 File Offset: 0x0014C550
 	protected override UniTask<bool> LoadAsyncImplement([Nullable(1)] Transform rootTransform)
 	{
 		FurnitureGroupEntityItem.<LoadAsyncImplement>d__2 <LoadAsyncImplement>d__;
@@ -25,7 +25,7 @@ public class FurnitureGroupEntityItem : FurnitureSceneItemBase
 		return <LoadAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060066DE RID: 26334 RVA: 0x00145AD8 File Offset: 0x00143CD8
+	// Token: 0x06003A76 RID: 14966 RVA: 0x0014E39C File Offset: 0x0014C59C
 	protected override void ShowImplement()
 	{
 		for (int i = 0; i < this.LevelContextList.Count; i++)
@@ -35,7 +35,7 @@ public class FurnitureGroupEntityItem : FurnitureSceneItemBase
 		}
 	}
 
-	// Token: 0x060066DF RID: 26335 RVA: 0x00145B10 File Offset: 0x00143D10
+	// Token: 0x06003A77 RID: 14967 RVA: 0x0014E3D4 File Offset: 0x0014C5D4
 	protected override void HideImplement()
 	{
 		for (int i = 0; i < this.LevelContextList.Count; i++)
@@ -45,7 +45,7 @@ public class FurnitureGroupEntityItem : FurnitureSceneItemBase
 		}
 	}
 
-	// Token: 0x060066E0 RID: 26336 RVA: 0x00145B48 File Offset: 0x00143D48
+	// Token: 0x06003A78 RID: 14968 RVA: 0x0014E40C File Offset: 0x0014C60C
 	protected override void UnloadImplement()
 	{
 		for (int i = 0; i < this.LevelContextList.Count; i++)
@@ -56,7 +56,7 @@ public class FurnitureGroupEntityItem : FurnitureSceneItemBase
 		this.LevelContextList.Clear();
 	}
 
-	// Token: 0x04002EA4 RID: 11940
+	// Token: 0x04002F3D RID: 12093
 	[Nullable(1)]
 	private readonly List<FurnitureLevelContext> LevelContextList = new List<FurnitureLevelContext>();
 }

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015B8 RID: 5560
+	// Token: 0x020002CE RID: 718
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/JsEnv.KuroProxyBpAsyncCallBack")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public class UKuroProxyBpAsyncCallBack : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601411A RID: 82202 RVA: 0x001D7336 File Offset: 0x001D5536
+		// Token: 0x06004DF8 RID: 19960 RVA: 0x0006CED4 File Offset: 0x0006B0D4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroProxyBpAsyncCallBack._ClassPtr;
 		}
 
-		// Token: 0x0601411B RID: 82203 RVA: 0x001D7344 File Offset: 0x001D5544
+		// Token: 0x06004DF9 RID: 19961 RVA: 0x0006CEE0 File Offset: 0x0006B0E0
 		public UKuroProxyBpAsyncCallBack() : this(BuiltinUtils.AllocNativeUObject(UKuroProxyBpAsyncCallBack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601411C RID: 82204 RVA: 0x001D736C File Offset: 0x001D556C
+		// Token: 0x06004DFA RID: 19962 RVA: 0x0006CF08 File Offset: 0x0006B108
 		public UKuroProxyBpAsyncCallBack(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroProxyBpAsyncCallBack.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004EAD RID: 20141
-		// (get) Token: 0x0601411D RID: 82205 RVA: 0x001D73A0 File Offset: 0x001D55A0
-		// (set) Token: 0x0601411E RID: 82206 RVA: 0x001D73D9 File Offset: 0x001D55D9
+		// Token: 0x17000EF5 RID: 3829
+		// (get) Token: 0x06004DFB RID: 19963 RVA: 0x0006CF3C File Offset: 0x0006B13C
+		// (set) Token: 0x06004DFC RID: 19964 RVA: 0x0006CF75 File Offset: 0x0006B175
 		public FOnProxyBpAsyncResolve OnResolve
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004EAE RID: 20142
-		// (get) Token: 0x0601411F RID: 82207 RVA: 0x001D73FC File Offset: 0x001D55FC
-		// (set) Token: 0x06014120 RID: 82208 RVA: 0x001D7435 File Offset: 0x001D5635
+		// Token: 0x17000EF6 RID: 3830
+		// (get) Token: 0x06004DFD RID: 19965 RVA: 0x0006CF98 File Offset: 0x0006B198
+		// (set) Token: 0x06004DFE RID: 19966 RVA: 0x0006CFD1 File Offset: 0x0006B1D1
 		public FOnProxyBpAsyncReject OnReject
 		{
 			get
@@ -71,37 +71,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014121 RID: 82209 RVA: 0x001D7456 File Offset: 0x001D5656
+		// Token: 0x06004DFF RID: 19967 RVA: 0x0006CFF2 File Offset: 0x0006B1F2
 		static UKuroProxyBpAsyncCallBack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/JsEnv.KuroProxyBpAsyncCallBack");
 		}
 
-		// Token: 0x06014122 RID: 82210 RVA: 0x001D7464 File Offset: 0x001D5664
+		// Token: 0x06004E00 RID: 19968 RVA: 0x0006D000 File Offset: 0x0006B200
 		protected UKuroProxyBpAsyncCallBack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400AE91 RID: 44689
+		// Token: 0x04001F34 RID: 7988
 		public new const string __ObjectPath = "/Script/JsEnv.KuroProxyBpAsyncCallBack";
 
-		// Token: 0x0400AE92 RID: 44690
+		// Token: 0x04001F35 RID: 7989
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400AE93 RID: 44691
+		// Token: 0x04001F36 RID: 7990
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400AE94 RID: 44692
+		// Token: 0x04001F37 RID: 7991
 		internal static int __PropertyOffset_OnResolve;
 
-		// Token: 0x0400AE95 RID: 44693
+		// Token: 0x04001F38 RID: 7992
 		[Nullable(2)]
 		private FOnProxyBpAsyncResolve _OnResolve;
 
-		// Token: 0x0400AE96 RID: 44694
+		// Token: 0x04001F39 RID: 7993
 		internal static int __PropertyOffset_OnReject;
 
-		// Token: 0x0400AE97 RID: 44695
+		// Token: 0x04001F3A RID: 7994
 		[Nullable(2)]
 		private FOnProxyBpAsyncReject _OnReject;
 	}

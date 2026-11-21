@@ -2,120 +2,120 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004623 RID: 17955
+	// Token: 0x02004A8B RID: 19083
 	public enum EGmCommand : byte
 	{
-		// Token: 0x0400C755 RID: 51029
+		// Token: 0x0400D184 RID: 53636
 		SkipToLevelPlayNode,
-		// Token: 0x0400C756 RID: 51030
+		// Token: 0x0400D185 RID: 53637
 		FinishCurrentLevelPlayNode,
-		// Token: 0x0400C757 RID: 51031
+		// Token: 0x0400D186 RID: 53638
 		TeleportToCurLevelPlayTrackPosition,
-		// Token: 0x0400C758 RID: 51032
+		// Token: 0x0400D187 RID: 53639
 		GmSetLevelPlaySwitchForce,
-		// Token: 0x0400C759 RID: 51033
+		// Token: 0x0400D188 RID: 53640
 		GmSetLevelPlayUpdateForce,
-		// Token: 0x0400C75A RID: 51034
+		// Token: 0x0400D189 RID: 53641
 		TeleportToLevelPlayCenter,
-		// Token: 0x0400C75B RID: 51035
+		// Token: 0x0400D18A RID: 53642
 		SkipToQuestNode,
-		// Token: 0x0400C75C RID: 51036
+		// Token: 0x0400D18B RID: 53643
 		FinishCurrentTrackQuestNode,
-		// Token: 0x0400C75D RID: 51037
+		// Token: 0x0400D18C RID: 53644
 		TeleportToCurQuestTrackPosition,
-		// Token: 0x0400C75E RID: 51038
+		// Token: 0x0400D18D RID: 53645
 		AcceptQuest,
-		// Token: 0x0400C75F RID: 51039
+		// Token: 0x0400D18E RID: 53646
 		UnlockQuest,
-		// Token: 0x0400C760 RID: 51040
+		// Token: 0x0400D18F RID: 53647
 		PlayFlowForGm,
-		// Token: 0x0400C761 RID: 51041
+		// Token: 0x0400D190 RID: 53648
 		SkipToInstanceDungeonNode,
-		// Token: 0x0400C762 RID: 51042
+		// Token: 0x0400D191 RID: 53649
 		FinishCurTrackDungeonNode,
-		// Token: 0x0400C763 RID: 51043
+		// Token: 0x0400D192 RID: 53650
 		TeleportToCurDungeonTrackPosition,
-		// Token: 0x0400C764 RID: 51044
+		// Token: 0x0400D193 RID: 53651
 		ResetCurrentDungeon,
-		// Token: 0x0400C765 RID: 51045
+		// Token: 0x0400D194 RID: 53652
 		ExitDungeon,
-		// Token: 0x0400C766 RID: 51046
+		// Token: 0x0400D195 RID: 53653
 		GmRoguelikeStart,
-		// Token: 0x0400C767 RID: 51047
+		// Token: 0x0400D196 RID: 53654
 		GmGotoRogueRoom,
-		// Token: 0x0400C768 RID: 51048
+		// Token: 0x0400D197 RID: 53655
 		UnlockEntityForGm,
-		// Token: 0x0400C769 RID: 51049
+		// Token: 0x0400D198 RID: 53656
 		TeleportToEntity,
-		// Token: 0x0400C76A RID: 51050
+		// Token: 0x0400D199 RID: 53657
 		GmTeleportToEntity,
-		// Token: 0x0400C76B RID: 51051
+		// Token: 0x0400D19A RID: 53658
 		OpenDungeonEntrance,
-		// Token: 0x0400C76C RID: 51052
+		// Token: 0x0400D19B RID: 53659
 		ShowTipsView,
-		// Token: 0x0400C76D RID: 51053
+		// Token: 0x0400D19C RID: 53660
 		ShieldGuide,
-		// Token: 0x0400C76E RID: 51054
+		// Token: 0x0400D19D RID: 53661
 		OpenFunc,
-		// Token: 0x0400C76F RID: 51055
+		// Token: 0x0400D19E RID: 53662
 		SetTime,
-		// Token: 0x0400C770 RID: 51056
+		// Token: 0x0400D19F RID: 53663
 		UnlockAllExploreSkill,
-		// Token: 0x0400C771 RID: 51057
+		// Token: 0x0400D1A0 RID: 53664
 		ActivateTeleport,
-		// Token: 0x0400C772 RID: 51058
+		// Token: 0x0400D1A1 RID: 53665
 		SetUnopenedAreaPullback,
-		// Token: 0x0400C773 RID: 51059
+		// Token: 0x0400D1A2 RID: 53666
 		TeleportToPos,
-		// Token: 0x0400C774 RID: 51060
+		// Token: 0x0400D1A3 RID: 53667
 		TeleportToPosInWorld,
-		// Token: 0x0400C775 RID: 51061
+		// Token: 0x0400D1A4 RID: 53668
 		UnfreezeInstanceLimit,
-		// Token: 0x0400C776 RID: 51062
+		// Token: 0x0400D1A5 RID: 53669
 		UpdateSceneRoles,
-		// Token: 0x0400C777 RID: 51063
+		// Token: 0x0400D1A6 RID: 53670
 		AddAllRole,
-		// Token: 0x0400C778 RID: 51064
+		// Token: 0x0400D1A7 RID: 53671
 		AddNewRole,
-		// Token: 0x0400C779 RID: 51065
+		// Token: 0x0400D1A8 RID: 53672
 		SetAllRoleToGraduate,
-		// Token: 0x0400C77A RID: 51066
+		// Token: 0x0400D1A9 RID: 53673
 		AddAllItem,
-		// Token: 0x0400C77B RID: 51067
+		// Token: 0x0400D1AA RID: 53674
 		AddItem,
-		// Token: 0x0400C77C RID: 51068
+		// Token: 0x0400D1AB RID: 53675
 		AddAllPhantom,
-		// Token: 0x0400C77D RID: 51069
+		// Token: 0x0400D1AC RID: 53676
 		GetAllGraduatedPhantom,
-		// Token: 0x0400C77E RID: 51070
+		// Token: 0x0400D1AD RID: 53677
 		GetAllGraduatedWeapon,
-		// Token: 0x0400C77F RID: 51071
+		// Token: 0x0400D1AE RID: 53678
 		SetEquippedWeaponToGraduate,
-		// Token: 0x0400C780 RID: 51072
+		// Token: 0x0400D1AF RID: 53679
 		EquipGraduatedWeaponToTeam,
-		// Token: 0x0400C781 RID: 51073
+		// Token: 0x0400D1B0 RID: 53680
 		ExecuteActionList,
-		// Token: 0x0400C782 RID: 51074
+		// Token: 0x0400D1B1 RID: 53681
 		OpenBackLoginView,
-		// Token: 0x0400C783 RID: 51075
+		// Token: 0x0400D1B2 RID: 53682
 		SavePlayerData,
-		// Token: 0x0400C784 RID: 51076
+		// Token: 0x0400D1B3 RID: 53683
 		BrokenRockHotFix,
-		// Token: 0x0400C785 RID: 51077
+		// Token: 0x0400D1B4 RID: 53684
 		SetVar,
-		// Token: 0x0400C786 RID: 51078
+		// Token: 0x0400D1B5 RID: 53685
 		GoToNode,
-		// Token: 0x0400C787 RID: 51079
+		// Token: 0x0400D1B6 RID: 53686
 		CustomText,
-		// Token: 0x0400C788 RID: 51080
+		// Token: 0x0400D1B7 RID: 53687
 		StartCombatOperationCapture,
-		// Token: 0x0400C789 RID: 51081
+		// Token: 0x0400D1B8 RID: 53688
 		StopCombatOperationCapture,
-		// Token: 0x0400C78A RID: 51082
+		// Token: 0x0400D1B9 RID: 53689
 		RecordCombatOperationCaptureCheckpoint,
-		// Token: 0x0400C78B RID: 51083
+		// Token: 0x0400D1BA RID: 53690
 		StartCombatOperationReplay,
-		// Token: 0x0400C78C RID: 51084
+		// Token: 0x0400D1BB RID: 53691
 		StopCombatOperationReplay
 	}
 }

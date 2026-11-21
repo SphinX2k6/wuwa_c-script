@@ -9,30 +9,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E9 RID: 29161
+	// Token: 0x0200629E RID: 25246
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemManipulableLevitateCastState : SceneItemManipulableCastState, IStaticVariableResetter
 	{
-		// Token: 0x06047604 RID: 292356 RVA: 0x012282EC File Offset: 0x012264EC
+		// Token: 0x0603CF06 RID: 249606 RVA: 0x01182124 File Offset: 0x01180324
 		static SceneItemManipulableLevitateCastState()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemManipulableLevitateCastState.CreateStaticDefaultValue), new Action(SceneItemManipulableLevitateCastState.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047605 RID: 292357 RVA: 0x0122830B File Offset: 0x0122650B
+		// Token: 0x0603CF07 RID: 249607 RVA: 0x01182143 File Offset: 0x01180343
 		public static void CreateStaticDefaultValue()
 		{
 			SceneItemManipulableLevitateCastState._sphereTrace = null;
 		}
 
-		// Token: 0x06047606 RID: 292358 RVA: 0x01228313 File Offset: 0x01226513
+		// Token: 0x0603CF08 RID: 249608 RVA: 0x0118214B File Offset: 0x0118034B
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemManipulableLevitateCastState._sphereTrace = null;
 		}
 
-		// Token: 0x06047607 RID: 292359 RVA: 0x0122831C File Offset: 0x0122651C
+		// Token: 0x0603CF09 RID: 249609 RVA: 0x01182154 File Offset: 0x01180354
 		public SceneItemManipulableLevitateCastState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
 			0,
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047608 RID: 292360 RVA: 0x0122846C File Offset: 0x0122666C
+		// Token: 0x0603CF0A RID: 249610 RVA: 0x011822A4 File Offset: 0x011804A4
 		protected override void OnEnter()
 		{
 			base.OnEnter();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ForceMoving = true;
 		}
 
-		// Token: 0x06047609 RID: 292361 RVA: 0x012284DE File Offset: 0x012266DE
+		// Token: 0x0603CF0B RID: 249611 RVA: 0x01182316 File Offset: 0x01180516
 		protected override void OnExit()
 		{
 			this.SceneItem.ActorComp.Owner.OnActorHit.Remove(new Action<AActor, AActor, FVector, FHitResult>(this.StopOnHit));
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.RequestToLevitate();
 		}
 
-		// Token: 0x0604760A RID: 292362 RVA: 0x01228518 File Offset: 0x01226718
+		// Token: 0x0603CF0C RID: 249612 RVA: 0x01182350 File Offset: 0x01180550
 		private void RequestToLevitate()
 		{
 			BeControlledEntityHoverRequest beControlledEntityHoverRequest = BeControlledEntityHoverRequest.Create();
@@ -95,20 +95,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}, 0);
 		}
 
-		// Token: 0x0604760B RID: 292363 RVA: 0x01228580 File Offset: 0x01226780
+		// Token: 0x0603CF0D RID: 249613 RVA: 0x011823B8 File Offset: 0x011805B8
 		public void SetVelocityDirection(global::Vector dire)
 		{
 			this.VelocityDirection.DeepCopy(dire);
 		}
 
-		// Token: 0x0604760C RID: 292364 RVA: 0x0122858E File Offset: 0x0122678E
+		// Token: 0x0603CF0E RID: 249614 RVA: 0x011823C6 File Offset: 0x011805C6
 		protected override void OnTick(float delta)
 		{
 			this.UpdateLocation(delta);
 			this.UpdateRotationAccordingToVelocity();
 		}
 
-		// Token: 0x0604760D RID: 292365 RVA: 0x012285A0 File Offset: 0x012267A0
+		// Token: 0x0603CF0F RID: 249615 RVA: 0x011823D8 File Offset: 0x011805D8
 		protected override void UpdateLocation(float delta)
 		{
 			this.SimulationTimer += delta;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x0604760E RID: 292366 RVA: 0x01228684 File Offset: 0x01226884
+		// Token: 0x0603CF10 RID: 249616 RVA: 0x011824BC File Offset: 0x011806BC
 		private global::Vector GetLocation(global::Vector startLoc, float timeStep)
 		{
 			global::Vector vector = global::Vector.Create();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return vector;
 		}
 
-		// Token: 0x0604760F RID: 292367 RVA: 0x01228754 File Offset: 0x01226954
+		// Token: 0x0603CF11 RID: 249617 RVA: 0x0118258C File Offset: 0x0118078C
 		public List<global::Vector> GetCastPath(bool ignoreTrace = false)
 		{
 			if (!ignoreTrace)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return list;
 		}
 
-		// Token: 0x06047610 RID: 292368 RVA: 0x01228830 File Offset: 0x01226A30
+		// Token: 0x0603CF12 RID: 249618 RVA: 0x01182668 File Offset: 0x01180868
 		private void InitTraceInfo()
 		{
 			SceneItemManipulableLevitateCastState._sphereTrace = new UTraceSphereElement();
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			SceneItemManipulableLevitateCastState._sphereTrace.DrawTime = 5f;
 		}
 
-		// Token: 0x06047611 RID: 292369 RVA: 0x0122894C File Offset: 0x01226B4C
+		// Token: 0x0603CF13 RID: 249619 RVA: 0x01182784 File Offset: 0x01180984
 		private void GetTraceResult()
 		{
 			global::Vector moveStartLocation = this.MoveStartLocation;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.MoveDirection.Normalize(9.99999993922529E-09);
 		}
 
-		// Token: 0x06047612 RID: 292370 RVA: 0x01228AA8 File Offset: 0x01226CA8
+		// Token: 0x0603CF14 RID: 249620 RVA: 0x011828E0 File Offset: 0x01180AE0
 		[NullableContext(2)]
 		private void StopOnHit(AActor selfActor, AActor otherActor, FVector vector, [Nullable(1)] FHitResult hitResult)
 		{
@@ -263,62 +263,62 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			sceneItem.SetState(SceneItemManipulatableComponent.EManipulatableState.Reset, "LevitateCastState OnHit");
 		}
 
-		// Token: 0x06047613 RID: 292371 RVA: 0x01228AC0 File Offset: 0x01226CC0
+		// Token: 0x0603CF15 RID: 249621 RVA: 0x011828F8 File Offset: 0x01180AF8
 		public override bool IsNoLockCasting()
 		{
 			return true;
 		}
 
-		// Token: 0x0402588C RID: 153740
+		// Token: 0x040204FB RID: 132347
 		private const float SPHERE_TRACE_RADIUS = 50f;
 
-		// Token: 0x0402588D RID: 153741
+		// Token: 0x040204FC RID: 132348
 		private const string PROFILE_KEY = "[SceneItemManipulableLevitateCastState.GetTraceResult]";
 
-		// Token: 0x0402588E RID: 153742
+		// Token: 0x040204FD RID: 132349
 		[Nullable(2)]
 		private readonly IThrowMotionLevitate LevitateConfig;
 
-		// Token: 0x0402588F RID: 153743
+		// Token: 0x040204FE RID: 132350
 		[Nullable(2)]
 		private static UTraceSphereElement _sphereTrace;
 
-		// Token: 0x04025890 RID: 153744
+		// Token: 0x040204FF RID: 132351
 		private readonly float Velocity;
 
-		// Token: 0x04025891 RID: 153745
+		// Token: 0x04020500 RID: 132352
 		[Nullable(2)]
 		private readonly global::Vector VelocityDirection;
 
-		// Token: 0x04025892 RID: 153746
+		// Token: 0x04020501 RID: 132353
 		[Nullable(2)]
 		private UCurveFloat VelocityCurve;
 
-		// Token: 0x04025893 RID: 153747
+		// Token: 0x04020502 RID: 132354
 		private readonly float LifeTime;
 
-		// Token: 0x04025894 RID: 153748
+		// Token: 0x04020503 RID: 132355
 		private readonly float TimeStepLimit = 0.033f;
 
-		// Token: 0x04025895 RID: 153749
+		// Token: 0x04020504 RID: 132356
 		private float SimulationTimer;
 
-		// Token: 0x04025896 RID: 153750
+		// Token: 0x04020505 RID: 132357
 		private global::Vector PrevLoc = global::Vector.Create();
 
-		// Token: 0x04025897 RID: 153751
+		// Token: 0x04020506 RID: 132358
 		private float MaxDistance;
 
-		// Token: 0x04025898 RID: 153752
+		// Token: 0x04020507 RID: 132359
 		private float TotalDistance;
 
-		// Token: 0x04025899 RID: 153753
+		// Token: 0x04020508 RID: 132360
 		private readonly global::Vector MoveStartLocation = global::Vector.Create();
 
-		// Token: 0x0402589A RID: 153754
+		// Token: 0x04020509 RID: 132361
 		private readonly global::Vector MoveEndLocation = global::Vector.Create();
 
-		// Token: 0x0402589B RID: 153755
+		// Token: 0x0402050A RID: 132362
 		private readonly global::Vector MoveDirection = global::Vector.Create();
 	}
 }

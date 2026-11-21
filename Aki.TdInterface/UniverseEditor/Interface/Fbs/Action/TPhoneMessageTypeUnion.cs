@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200774D RID: 30541
+	// Token: 0x02007F76 RID: 32630
 	public class TPhoneMessageTypeUnion
 	{
-		// Token: 0x1700E677 RID: 58999
-		// (get) Token: 0x060377BE RID: 227262 RVA: 0x00782AD0 File Offset: 0x00780CD0
-		// (set) Token: 0x060377BF RID: 227263 RVA: 0x00782AD8 File Offset: 0x00780CD8
+		// Token: 0x1700F2C7 RID: 62151
+		// (get) Token: 0x0603ACFB RID: 240891 RVA: 0x007E7AA4 File Offset: 0x007E5CA4
+		// (set) Token: 0x0603ACFC RID: 240892 RVA: 0x007E7AAC File Offset: 0x007E5CAC
 		public TPhoneMessageType Type { get; set; }
 
-		// Token: 0x1700E678 RID: 59000
-		// (get) Token: 0x060377C0 RID: 227264 RVA: 0x00782AE1 File Offset: 0x00780CE1
-		// (set) Token: 0x060377C1 RID: 227265 RVA: 0x00782AE9 File Offset: 0x00780CE9
+		// Token: 0x1700F2C8 RID: 62152
+		// (get) Token: 0x0603ACFD RID: 240893 RVA: 0x007E7AB5 File Offset: 0x007E5CB5
+		// (set) Token: 0x0603ACFE RID: 240894 RVA: 0x007E7ABD File Offset: 0x007E5CBD
 		public object Value { get; set; }
 
-		// Token: 0x060377C2 RID: 227266 RVA: 0x00782AF2 File Offset: 0x00780CF2
+		// Token: 0x0603ACFF RID: 240895 RVA: 0x007E7AC6 File Offset: 0x007E5CC6
 		public TPhoneMessageTypeUnion()
 		{
 			this.Type = TPhoneMessageType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060377C3 RID: 227267 RVA: 0x00782B08 File Offset: 0x00780D08
+		// Token: 0x0603AD00 RID: 240896 RVA: 0x007E7ADC File Offset: 0x007E5CDC
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060377C4 RID: 227268 RVA: 0x00782B1A File Offset: 0x00780D1A
+		// Token: 0x0603AD01 RID: 240897 RVA: 0x007E7AEE File Offset: 0x007E5CEE
 		public ITalkItemPhoneMessageAttachmentT AsITalkItemPhoneMessageAttachment()
 		{
 			return this.As<ITalkItemPhoneMessageAttachmentT>();
 		}
 
-		// Token: 0x060377C5 RID: 227269 RVA: 0x00782B22 File Offset: 0x00780D22
+		// Token: 0x0603AD02 RID: 240898 RVA: 0x007E7AF6 File Offset: 0x007E5CF6
 		public static TPhoneMessageTypeUnion FromITalkItemPhoneMessageAttachment(ITalkItemPhoneMessageAttachmentT _italkitemphonemessageattachment)
 		{
 			return new TPhoneMessageTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377C6 RID: 227270 RVA: 0x00782B37 File Offset: 0x00780D37
+		// Token: 0x0603AD03 RID: 240899 RVA: 0x007E7B0B File Offset: 0x007E5D0B
 		public ITalkItemPhoneMessageEmojiT AsITalkItemPhoneMessageEmoji()
 		{
 			return this.As<ITalkItemPhoneMessageEmojiT>();
 		}
 
-		// Token: 0x060377C7 RID: 227271 RVA: 0x00782B3F File Offset: 0x00780D3F
+		// Token: 0x0603AD04 RID: 240900 RVA: 0x007E7B13 File Offset: 0x007E5D13
 		public static TPhoneMessageTypeUnion FromITalkItemPhoneMessageEmoji(ITalkItemPhoneMessageEmojiT _italkitemphonemessageemoji)
 		{
 			return new TPhoneMessageTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377C8 RID: 227272 RVA: 0x00782B54 File Offset: 0x00780D54
+		// Token: 0x0603AD05 RID: 240901 RVA: 0x007E7B28 File Offset: 0x007E5D28
 		public ITalkItemPhoneMessageSystemTipT AsITalkItemPhoneMessageSystemTip()
 		{
 			return this.As<ITalkItemPhoneMessageSystemTipT>();
 		}
 
-		// Token: 0x060377C9 RID: 227273 RVA: 0x00782B5C File Offset: 0x00780D5C
+		// Token: 0x0603AD06 RID: 240902 RVA: 0x007E7B30 File Offset: 0x007E5D30
 		public static TPhoneMessageTypeUnion FromITalkItemPhoneMessageSystemTip(ITalkItemPhoneMessageSystemTipT _italkitemphonemessagesystemtip)
 		{
 			return new TPhoneMessageTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377CA RID: 227274 RVA: 0x00782B71 File Offset: 0x00780D71
+		// Token: 0x0603AD07 RID: 240903 RVA: 0x007E7B45 File Offset: 0x007E5D45
 		public ITalkItemPhoneMessageVoiceT AsITalkItemPhoneMessageVoice()
 		{
 			return this.As<ITalkItemPhoneMessageVoiceT>();
 		}
 
-		// Token: 0x060377CB RID: 227275 RVA: 0x00782B79 File Offset: 0x00780D79
+		// Token: 0x0603AD08 RID: 240904 RVA: 0x007E7B4D File Offset: 0x007E5D4D
 		public static TPhoneMessageTypeUnion FromITalkItemPhoneMessageVoice(ITalkItemPhoneMessageVoiceT _italkitemphonemessagevoice)
 		{
 			return new TPhoneMessageTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060377CC RID: 227276 RVA: 0x00782B90 File Offset: 0x00780D90
+		// Token: 0x0603AD09 RID: 240905 RVA: 0x007E7B64 File Offset: 0x007E5D64
 		public static int Pack(FlatBufferBuilder builder, TPhoneMessageTypeUnion _o)
 		{
 			switch (_o.Type)

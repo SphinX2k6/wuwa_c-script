@@ -7,7 +7,7 @@ namespace Aki.TDConfigMgr.Component
 	[EnumExtensions]
 	public enum EAffectionDegreeSourceType
 	{
-		// Token: 0x0400021B RID: 539
+		// Token: 0x04000220 RID: 544
 		CyberpunkCollaboration
 	}
 }

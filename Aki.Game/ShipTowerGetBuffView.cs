@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029B0 RID: 10672
+// Token: 0x02001F2B RID: 7979
 public class ShipTowerGetBuffView : UiViewBase
 {
-	// Token: 0x0601621C RID: 90652 RVA: 0x005990A1 File Offset: 0x005972A1
+	// Token: 0x06013C22 RID: 80930 RVA: 0x005C402D File Offset: 0x005C222D
 	[NullableContext(1)]
 	public ShipTowerGetBuffView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601621D RID: 90653 RVA: 0x005990AC File Offset: 0x005972AC
+	// Token: 0x06013C23 RID: 80931 RVA: 0x005C4038 File Offset: 0x005C2238
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,12 +30,12 @@ public class ShipTowerGetBuffView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601621E RID: 90654 RVA: 0x00599114 File Offset: 0x00597314
+	// Token: 0x06013C24 RID: 80932 RVA: 0x005C40A0 File Offset: 0x005C22A0
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x0601621F RID: 90655 RVA: 0x00599118 File Offset: 0x00597318
+	// Token: 0x06013C25 RID: 80933 RVA: 0x005C40A4 File Offset: 0x005C22A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerGetBuffView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class ShipTowerGetBuffView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016220 RID: 90656 RVA: 0x0059915C File Offset: 0x0059735C
+	// Token: 0x06013C26 RID: 80934 RVA: 0x005C40E8 File Offset: 0x005C22E8
 	protected override void OnBeforeShow()
 	{
 		List<TItem> itemDataList = (this.OpenParam as ShipTowerGetBuffViewParams).ItemDataList;
@@ -70,7 +70,7 @@ public class ShipTowerGetBuffView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06016221 RID: 90657 RVA: 0x00599198 File Offset: 0x00597398
+	// Token: 0x06013C27 RID: 80935 RVA: 0x005C4124 File Offset: 0x005C2324
 	protected override void OnBeforeDestroy()
 	{
 		ShipTowerGetBuffViewParams shipTowerGetBuffViewParams = this.OpenParam as ShipTowerGetBuffViewParams;
@@ -85,7 +85,7 @@ public class ShipTowerGetBuffView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400A4EC RID: 42220
+	// Token: 0x0400A8D6 RID: 43222
 	[Nullable(new byte[]
 	{
 		2,
@@ -93,13 +93,13 @@ public class ShipTowerGetBuffView : UiViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x02008FC4 RID: 36804
+	// Token: 0x0200820C RID: 33292
 	private static class EChildType
 	{
-		// Token: 0x0402E909 RID: 190729
+		// Token: 0x0402A006 RID: 172038
 		public const int ScrollBarReward = 0;
 
-		// Token: 0x0402E90A RID: 190730
+		// Token: 0x0402A007 RID: 172039
 		public const int BtnClose = 1;
 	}
 }

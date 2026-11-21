@@ -13,8 +13,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorCheckAnimalState : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000004 RID: 4
-	// (get) Token: 0x06000036 RID: 54 RVA: 0x0000271B File Offset: 0x0000091B
-	// (set) Token: 0x06000037 RID: 55 RVA: 0x0000272B File Offset: 0x0000092B
+	// (get) Token: 0x06000036 RID: 54 RVA: 0x00002737 File Offset: 0x00000937
+	// (set) Token: 0x06000037 RID: 55 RVA: 0x00002747 File Offset: 0x00000947
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EAnimalEcologicalState State
 	{
@@ -29,8 +29,8 @@ public class TsDecoratorCheckAnimalState : UBTDecorator_BlueprintBase, IUnrealUO
 	}
 
 	// Token: 0x17000005 RID: 5
-	// (get) Token: 0x06000038 RID: 56 RVA: 0x0000273C File Offset: 0x0000093C
-	// (set) Token: 0x06000039 RID: 57 RVA: 0x0000274C File Offset: 0x0000094C
+	// (get) Token: 0x06000038 RID: 56 RVA: 0x00002758 File Offset: 0x00000958
+	// (set) Token: 0x06000039 RID: 57 RVA: 0x00002768 File Offset: 0x00000968
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool Inverse
 	{
@@ -44,7 +44,7 @@ public class TsDecoratorCheckAnimalState : UBTDecorator_BlueprintBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x0600003A RID: 58 RVA: 0x0000275D File Offset: 0x0000095D
+	// Token: 0x0600003A RID: 58 RVA: 0x00002779 File Offset: 0x00000979
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -55,32 +55,28 @@ public class TsDecoratorCheckAnimalState : UBTDecorator_BlueprintBase, IUnrealUO
 		}
 	}
 
-	// Token: 0x0600003B RID: 59 RVA: 0x00002790 File Offset: 0x00000990
+	// Token: 0x0600003B RID: 59 RVA: 0x000027AC File Offset: 0x000009AC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorCheckAnimalState) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorCheckAnimalState.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600003C RID: 60 RVA: 0x00002830 File Offset: 0x00000A30
+	// Token: 0x0600003C RID: 60 RVA: 0x00002864 File Offset: 0x00000A64
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -104,7 +100,7 @@ public class TsDecoratorCheckAnimalState : UBTDecorator_BlueprintBase, IUnrealUO
 		return component.CurrentState() == this.TsState;
 	}
 
-	// Token: 0x0600003D RID: 61 RVA: 0x000028C0 File Offset: 0x00000AC0
+	// Token: 0x0600003D RID: 61 RVA: 0x000028F4 File Offset: 0x00000AF4
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorCheckAnimalState._ClassPtr == IntPtr.Zero)
@@ -114,23 +110,23 @@ public class TsDecoratorCheckAnimalState : UBTDecorator_BlueprintBase, IUnrealUO
 		return TsDecoratorCheckAnimalState._ClassPtr;
 	}
 
-	// Token: 0x0600003E RID: 62 RVA: 0x000028E4 File Offset: 0x00000AE4
+	// Token: 0x0600003E RID: 62 RVA: 0x00002918 File Offset: 0x00000B18
 	public TsDecoratorCheckAnimalState() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckAnimalState.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600003F RID: 63 RVA: 0x0000290C File Offset: 0x00000B0C
+	// Token: 0x0600003F RID: 63 RVA: 0x00002940 File Offset: 0x00000B40
 	[NullableContext(1)]
 	public TsDecoratorCheckAnimalState(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckAnimalState.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000040 RID: 64 RVA: 0x0000293F File Offset: 0x00000B3F
+	// Token: 0x06000040 RID: 64 RVA: 0x00002973 File Offset: 0x00000B73
 	protected TsDecoratorCheckAnimalState(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000041 RID: 65 RVA: 0x00002948 File Offset: 0x00000B48
+	// Token: 0x06000041 RID: 65 RVA: 0x0000297C File Offset: 0x00000B7C
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

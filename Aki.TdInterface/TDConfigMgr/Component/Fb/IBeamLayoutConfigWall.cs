@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF0 RID: 3312
+	// Token: 0x02000DE8 RID: 3560
 	public class IBeamLayoutConfigWall : IBeamLayoutConfig
 	{
-		// Token: 0x06004BA3 RID: 19363 RVA: 0x000BCCB6 File Offset: 0x000BAEB6
-		[NullableContext(1)]
+		// Token: 0x060050B1 RID: 20657 RVA: 0x000C81E6 File Offset: 0x000C63E6
 		public static IBeamLayoutConfigWall Create(IBeamLayoutConfigWall? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001780 RID: 6016
-		// (get) Token: 0x06004BA4 RID: 19364 RVA: 0x000BCCD5 File Offset: 0x000BAED5
+		// Token: 0x170018DC RID: 6364
+		// (get) Token: 0x060050B2 RID: 20658 RVA: 0x000C8205 File Offset: 0x000C6405
 		public override EBeamLayoutType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001781 RID: 6017
-		// (get) Token: 0x06004BA5 RID: 19365 RVA: 0x000BCCE2 File Offset: 0x000BAEE2
+		// Token: 0x170018DD RID: 6365
+		// (get) Token: 0x060050B3 RID: 20659 RVA: 0x000C8212 File Offset: 0x000C6412
 		public virtual int Count
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001782 RID: 6018
-		// (get) Token: 0x06004BA6 RID: 19366 RVA: 0x000BCCEF File Offset: 0x000BAEEF
+		// Token: 0x170018DE RID: 6366
+		// (get) Token: 0x060050B4 RID: 20660 RVA: 0x000C821F File Offset: 0x000C641F
 		public virtual float Distance
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B3B RID: 11067
+		// Token: 0x04002DF5 RID: 11765
 		private IBeamLayoutConfigWall Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200062C RID: 1580
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006C9 RID: 1737
 	public class IProgressBarControl
 	{
-		// Token: 0x060021BC RID: 8636 RVA: 0x0005D26C File Offset: 0x0005B46C
+		// Token: 0x060024C2 RID: 9410 RVA: 0x00063F80 File Offset: 0x00062180
 		private IProgressBarControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060021BD RID: 8637 RVA: 0x0005D2A4 File Offset: 0x0005B4A4
+		// Token: 0x060024C3 RID: 9411 RVA: 0x00063FB8 File Offset: 0x000621B8
 		public static IProgressBarControl Create([Nullable(2)] IProgressBarControl instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021BE RID: 8638 RVA: 0x0005D2B7 File Offset: 0x0005B4B7
+		// Token: 0x060024C4 RID: 9412 RVA: 0x00063FCB File Offset: 0x000621CB
 		public static IProgressBarControl CreateFromSetValue([Nullable(2)] IProgressBarControl_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021BF RID: 8639 RVA: 0x0005D2CA File Offset: 0x0005B4CA
+		// Token: 0x060024C5 RID: 9413 RVA: 0x00063FDE File Offset: 0x000621DE
 		public IProgressBarControl_SetValue ToSetValue()
 		{
 			return new IProgressBarControl_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008FB RID: 2299
-		// (get) Token: 0x060021C0 RID: 8640 RVA: 0x0005D301 File Offset: 0x0005B501
-		// (set) Token: 0x060021C1 RID: 8641 RVA: 0x0005D32C File Offset: 0x0005B52C
+		// Token: 0x170009B2 RID: 2482
+		// (get) Token: 0x060024C6 RID: 9414 RVA: 0x00064015 File Offset: 0x00062215
+		// (set) Token: 0x060024C7 RID: 9415 RVA: 0x00064040 File Offset: 0x00062240
 		public virtual EProgressBarControlType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008FC RID: 2300
-		// (get) Token: 0x060021C2 RID: 8642 RVA: 0x0005D33A File Offset: 0x0005B53A
-		// (set) Token: 0x060021C3 RID: 8643 RVA: 0x0005D365 File Offset: 0x0005B565
+		// Token: 0x170009B3 RID: 2483
+		// (get) Token: 0x060024C8 RID: 9416 RVA: 0x0006404E File Offset: 0x0006224E
+		// (set) Token: 0x060024C9 RID: 9417 RVA: 0x00064079 File Offset: 0x00062279
 		public virtual int MaxValue
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008FD RID: 2301
-		// (get) Token: 0x060021C4 RID: 8644 RVA: 0x0005D373 File Offset: 0x0005B573
-		// (set) Token: 0x060021C5 RID: 8645 RVA: 0x0005D39E File Offset: 0x0005B59E
+		// Token: 0x170009B4 RID: 2484
+		// (get) Token: 0x060024CA RID: 9418 RVA: 0x00064087 File Offset: 0x00062287
+		// (set) Token: 0x060024CB RID: 9419 RVA: 0x000640B2 File Offset: 0x000622B2
 		public virtual int InitValue
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008FE RID: 2302
-		// (get) Token: 0x060021C6 RID: 8646 RVA: 0x0005D3AC File Offset: 0x0005B5AC
-		// (set) Token: 0x060021C7 RID: 8647 RVA: 0x0005D3E6 File Offset: 0x0005B5E6
+		// Token: 0x170009B5 RID: 2485
+		// (get) Token: 0x060024CC RID: 9420 RVA: 0x000640C0 File Offset: 0x000622C0
+		// (set) Token: 0x060024CD RID: 9421 RVA: 0x000640FA File Offset: 0x000622FA
 		public virtual int? ProgressPerformanceAttribute
 		{
 			get
@@ -155,11 +153,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001785 RID: 6021
+		// Token: 0x04001977 RID: 6519
 		[Nullable(2)]
 		protected IProgressBarControl FbInstance;
 
-		// Token: 0x04001786 RID: 6022
+		// Token: 0x04001978 RID: 6520
 		[Nullable(2)]
 		protected IProgressBarControl_SetValue PocoInterface;
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002FB3 RID: 12211
+// Token: 0x02002507 RID: 9479
 public enum ECueAttachType
 {
-	// Token: 0x0400C3D2 RID: 50130
+	// Token: 0x0400C77B RID: 51067
 	NotAttached,
-	// Token: 0x0400C3D3 RID: 50131
+	// Token: 0x0400C77C RID: 51068
 	AttachedToComponent,
-	// Token: 0x0400C3D4 RID: 50132
+	// Token: 0x0400C77D RID: 51069
 	AttachedToWeapon
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074FA RID: 29946
+	// Token: 0x02007CF0 RID: 31984
 	public class IVehicleControlTypeT
 	{
-		// Token: 0x1700E338 RID: 58168
-		// (get) Token: 0x06036745 RID: 223045 RVA: 0x00765CC6 File Offset: 0x00763EC6
-		// (set) Token: 0x06036746 RID: 223046 RVA: 0x00765CCE File Offset: 0x00763ECE
+		// Token: 0x1700EF62 RID: 61282
+		// (get) Token: 0x06039B5A RID: 236378 RVA: 0x007C8F16 File Offset: 0x007C7116
+		// (set) Token: 0x06039B5B RID: 236379 RVA: 0x007C8F1E File Offset: 0x007C711E
 		public EVehicleControlType Type { get; set; }
 
-		// Token: 0x06036747 RID: 223047 RVA: 0x00765CD7 File Offset: 0x00763ED7
+		// Token: 0x06039B5C RID: 236380 RVA: 0x007C8F27 File Offset: 0x007C7127
 		public IVehicleControlTypeT()
 		{
 			this.Type = EVehicleControlType.EnterPathMoving;

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200049F RID: 1183
+	// Token: 0x020004B5 RID: 1205
 	public class ConfigKurotatoLevelGroupByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001BC5 RID: 7109 RVA: 0x000F6593 File Offset: 0x000F4793
+		// Token: 0x06001C49 RID: 7241 RVA: 0x000FCCE7 File Offset: 0x000FAEE7
 		static ConfigKurotatoLevelGroupByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKurotatoLevelGroupByGroupId.CreateStaticDefaultValue), new Action(ConfigKurotatoLevelGroupByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001BC6 RID: 7110 RVA: 0x000F65B4 File Offset: 0x000F47B4
+		// Token: 0x06001C4A RID: 7242 RVA: 0x000FCD08 File Offset: 0x000FAF08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKurotatoLevelGroupByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001BC7 RID: 7111 RVA: 0x000F6633 File Offset: 0x000F4833
+		// Token: 0x06001C4B RID: 7243 RVA: 0x000FCD87 File Offset: 0x000FAF87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKurotatoLevelGroupByGroupId.LogPair = null;
 			ConfigKurotatoLevelGroupByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x06001BC8 RID: 7112 RVA: 0x000F6641 File Offset: 0x000F4841
+		// Token: 0x06001C4C RID: 7244 RVA: 0x000FCD95 File Offset: 0x000FAF95
 		public static void Init()
 		{
 			ConfigKurotatoLevelGroupByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigKurotatoLevelGroupByGroupId.HandleId, "db_kurotato.db", "select BinData from `KurotatoLevelGroup` where GroupId=?");
 		}
 
-		// Token: 0x06001BC9 RID: 7113 RVA: 0x000F665C File Offset: 0x000F485C
+		// Token: 0x06001C4D RID: 7245 RVA: 0x000FCDB0 File Offset: 0x000FAFB0
 		public static KurotatoLevelGroup? GetConfig(int p0GroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKurotatoLevelGroupByGroupId.HandleId, ConfigKurotatoLevelGroupByGroupId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KurotatoLevelGroup?(rootAsKurotatoLevelGroup);
 		}
 
-		// Token: 0x0400203D RID: 8253
+		// Token: 0x040020D7 RID: 8407
 		private const string DB = "db_kurotato.db";
 
-		// Token: 0x0400203E RID: 8254
+		// Token: 0x040020D8 RID: 8408
 		private const string FILE = "t.土豆兄弟_关卡.xlsx";
 
-		// Token: 0x0400203F RID: 8255
+		// Token: 0x040020D9 RID: 8409
 		private const string TABLE = "KurotatoLevelGroup";
 
-		// Token: 0x04002040 RID: 8256
+		// Token: 0x040020DA RID: 8410
 		private const string COMMAND = "select BinData from `KurotatoLevelGroup` where GroupId=?";
 
-		// Token: 0x04002041 RID: 8257
+		// Token: 0x040020DB RID: 8411
 		private const string KEY_PREFIX = "KurotatoLevelGroupByGroupId";
 
-		// Token: 0x04002042 RID: 8258
+		// Token: 0x040020DC RID: 8412
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002043 RID: 8259
+		// Token: 0x040020DD RID: 8413
 		private static int HandleId;
 	}
 }

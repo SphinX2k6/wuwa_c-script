@@ -4,10 +4,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200675E RID: 26462
+	// Token: 0x020056AE RID: 22190
 	public class BuffInfo
 	{
-		// Token: 0x060421D4 RID: 270804 RVA: 0x0100A130 File Offset: 0x01008330
+		// Token: 0x06036D2A RID: 224554 RVA: 0x00F4B514 File Offset: 0x00F49714
 		[NullableContext(1)]
 		public void CopyFromChangeInfo(DangoBrawlFightActionBuffChangeInfo info)
 		{
@@ -20,25 +20,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SourceItemUId = info.SourceItemUId;
 		}
 
-		// Token: 0x040226A0 RID: 140960
+		// Token: 0x0401CEFD RID: 118525
 		public int BuffUId;
 
-		// Token: 0x040226A1 RID: 140961
+		// Token: 0x0401CEFE RID: 118526
 		public int SourceFighterUId;
 
-		// Token: 0x040226A2 RID: 140962
+		// Token: 0x0401CEFF RID: 118527
 		public int TargetFighterUId;
 
-		// Token: 0x040226A3 RID: 140963
+		// Token: 0x0401CF00 RID: 118528
 		public int BuffConfigId;
 
-		// Token: 0x040226A4 RID: 140964
+		// Token: 0x0401CF01 RID: 118529
 		public int Stack;
 
-		// Token: 0x040226A5 RID: 140965
+		// Token: 0x0401CF02 RID: 118530
 		public int RemainingMs;
 
-		// Token: 0x040226A6 RID: 140966
+		// Token: 0x0401CF03 RID: 118531
 		public int SourceItemUId;
 	}
 }

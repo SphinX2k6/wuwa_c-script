@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200717C RID: 29052
+	// Token: 0x0200794B RID: 31051
 	public class ISpecificScanEffect_UnionUnion
 	{
-		// Token: 0x1700D7CF RID: 55247
-		// (get) Token: 0x06033817 RID: 210967 RVA: 0x006F02DD File Offset: 0x006EE4DD
-		// (set) Token: 0x06033818 RID: 210968 RVA: 0x006F02E5 File Offset: 0x006EE4E5
+		// Token: 0x1700E3C1 RID: 58305
+		// (get) Token: 0x06036AF1 RID: 223985 RVA: 0x0075126D File Offset: 0x0074F46D
+		// (set) Token: 0x06036AF2 RID: 223986 RVA: 0x00751275 File Offset: 0x0074F475
 		public ISpecificScanEffect_Union Type { get; set; }
 
-		// Token: 0x1700D7D0 RID: 55248
-		// (get) Token: 0x06033819 RID: 210969 RVA: 0x006F02EE File Offset: 0x006EE4EE
-		// (set) Token: 0x0603381A RID: 210970 RVA: 0x006F02F6 File Offset: 0x006EE4F6
+		// Token: 0x1700E3C2 RID: 58306
+		// (get) Token: 0x06036AF3 RID: 223987 RVA: 0x0075127E File Offset: 0x0074F47E
+		// (set) Token: 0x06036AF4 RID: 223988 RVA: 0x00751286 File Offset: 0x0074F486
 		public object Value { get; set; }
 
-		// Token: 0x0603381B RID: 210971 RVA: 0x006F02FF File Offset: 0x006EE4FF
+		// Token: 0x06036AF5 RID: 223989 RVA: 0x0075128F File Offset: 0x0074F48F
 		public ISpecificScanEffect_UnionUnion()
 		{
 			this.Type = ISpecificScanEffect_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603381C RID: 210972 RVA: 0x006F0315 File Offset: 0x006EE515
+		// Token: 0x06036AF6 RID: 223990 RVA: 0x007512A5 File Offset: 0x0074F4A5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603381D RID: 210973 RVA: 0x006F0327 File Offset: 0x006EE527
+		// Token: 0x06036AF7 RID: 223991 RVA: 0x007512B7 File Offset: 0x0074F4B7
 		public ISpecificScanEffectT AsISpecificScanEffect()
 		{
 			return this.As<ISpecificScanEffectT>();
 		}
 
-		// Token: 0x0603381E RID: 210974 RVA: 0x006F032F File Offset: 0x006EE52F
+		// Token: 0x06036AF8 RID: 223992 RVA: 0x007512BF File Offset: 0x0074F4BF
 		public static ISpecificScanEffect_UnionUnion FromISpecificScanEffect(ISpecificScanEffectT _ispecificscaneffect)
 		{
 			return new ISpecificScanEffect_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603381F RID: 210975 RVA: 0x006F0344 File Offset: 0x006EE544
+		// Token: 0x06036AF9 RID: 223993 RVA: 0x007512D4 File Offset: 0x0074F4D4
 		public IChargeSlashScanEffectT AsIChargeSlashScanEffect()
 		{
 			return this.As<IChargeSlashScanEffectT>();
 		}
 
-		// Token: 0x06033820 RID: 210976 RVA: 0x006F034C File Offset: 0x006EE54C
+		// Token: 0x06036AFA RID: 223994 RVA: 0x007512DC File Offset: 0x0074F4DC
 		public static ISpecificScanEffect_UnionUnion FromIChargeSlashScanEffect(IChargeSlashScanEffectT _ichargeslashscaneffect)
 		{
 			return new ISpecificScanEffect_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033821 RID: 210977 RVA: 0x006F0361 File Offset: 0x006EE561
+		// Token: 0x06036AFB RID: 223995 RVA: 0x007512F1 File Offset: 0x0074F4F1
 		public IFlyingFeatherScanEffectT AsIFlyingFeatherScanEffect()
 		{
 			return this.As<IFlyingFeatherScanEffectT>();
 		}
 
-		// Token: 0x06033822 RID: 210978 RVA: 0x006F0369 File Offset: 0x006EE569
+		// Token: 0x06036AFC RID: 223996 RVA: 0x007512F9 File Offset: 0x0074F4F9
 		public static ISpecificScanEffect_UnionUnion FromIFlyingFeatherScanEffect(IFlyingFeatherScanEffectT _iflyingfeatherscaneffect)
 		{
 			return new ISpecificScanEffect_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033823 RID: 210979 RVA: 0x006F0380 File Offset: 0x006EE580
+		// Token: 0x06036AFD RID: 223997 RVA: 0x00751310 File Offset: 0x0074F510
 		public static int Pack(FlatBufferBuilder builder, ISpecificScanEffect_UnionUnion _o)
 		{
 			switch (_o.Type)

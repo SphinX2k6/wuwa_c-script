@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023D9 RID: 9177
+// Token: 0x020018BE RID: 6334
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalOptionView : UiViewBase
 {
-	// Token: 0x06012577 RID: 75127 RVA: 0x00484B47 File Offset: 0x00482D47
+	// Token: 0x0600FA29 RID: 64041 RVA: 0x00492053 File Offset: 0x00490253
 	public PersonalOptionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012578 RID: 75128 RVA: 0x00484B50 File Offset: 0x00482D50
+	// Token: 0x0600FA2A RID: 64042 RVA: 0x0049205C File Offset: 0x0049025C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ public class PersonalOptionView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012579 RID: 75129 RVA: 0x00484D50 File Offset: 0x00482F50
+	// Token: 0x0600FA2B RID: 64043 RVA: 0x0049225C File Offset: 0x0049045C
 	private void OnClickXboxButton()
 	{
 		string thirdPartyUserId = PlayerInfoModel.Instance.GetThirdPartyUserId();
@@ -64,7 +64,7 @@ public class PersonalOptionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601257A RID: 75130 RVA: 0x00484D7C File Offset: 0x00482F7C
+	// Token: 0x0600FA2C RID: 64044 RVA: 0x00492288 File Offset: 0x00490488
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnBirthChange, new Action(this.OnBirthChange));
@@ -75,7 +75,7 @@ public class PersonalOptionView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnCardChange, new Action(this.OnCardChange));
 	}
 
-	// Token: 0x0601257B RID: 75131 RVA: 0x00484E34 File Offset: 0x00483034
+	// Token: 0x0600FA2D RID: 64045 RVA: 0x00492340 File Offset: 0x00490540
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnBirthChange, new Action(this.OnBirthChange));
@@ -86,7 +86,7 @@ public class PersonalOptionView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnCardChange, new Action(this.OnCardChange));
 	}
 
-	// Token: 0x0601257C RID: 75132 RVA: 0x00484EEC File Offset: 0x004830EC
+	// Token: 0x0600FA2E RID: 64046 RVA: 0x004923F8 File Offset: 0x004905F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PersonalOptionView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -97,7 +97,7 @@ public class PersonalOptionView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601257D RID: 75133 RVA: 0x00484F30 File Offset: 0x00483130
+	// Token: 0x0600FA2F RID: 64047 RVA: 0x0049243C File Offset: 0x0049063C
 	protected override void OnStart()
 	{
 		this.HeadPhotoItem = new PlayerHeadItem(base.GetItem(0).GetOwner());
@@ -116,7 +116,7 @@ public class PersonalOptionView : UiViewBase
 		this.RefreshCard();
 	}
 
-	// Token: 0x0601257E RID: 75134 RVA: 0x00484FD4 File Offset: 0x004831D4
+	// Token: 0x0600FA30 RID: 64048 RVA: 0x004924E0 File Offset: 0x004906E0
 	private ILayoutItem<PersonalOptionItem> InitPersonalOptionItem(object optionId, UUIItem uiItem, int index)
 	{
 		PersonalOptionItem personalOptionItem = new PersonalOptionItem(uiItem);
@@ -128,19 +128,19 @@ public class PersonalOptionView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601257F RID: 75135 RVA: 0x0048500E File Offset: 0x0048320E
+	// Token: 0x0600FA31 RID: 64049 RVA: 0x0049251A File Offset: 0x0049071A
 	protected override void OnAfterShow()
 	{
 	}
 
-	// Token: 0x06012580 RID: 75136 RVA: 0x00485010 File Offset: 0x00483210
+	// Token: 0x0600FA32 RID: 64050 RVA: 0x0049251C File Offset: 0x0049071C
 	private void RefreshIcon()
 	{
 		int headIconId = PlayerInfoModel.Instance.GetHeadIconId();
 		this.HeadPhotoItem.RefreshByRoleId(headIconId);
 	}
 
-	// Token: 0x06012581 RID: 75137 RVA: 0x00485034 File Offset: 0x00483234
+	// Token: 0x0600FA33 RID: 64051 RVA: 0x00492540 File Offset: 0x00490740
 	private void RefreshPlayStationItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -213,7 +213,7 @@ public class PersonalOptionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012582 RID: 75138 RVA: 0x00485188 File Offset: 0x00483388
+	// Token: 0x0600FA34 RID: 64052 RVA: 0x00492694 File Offset: 0x00490894
 	private void RefreshPlayerName()
 	{
 		string playerName = FunctionModel.Instance.GetPlayerName();
@@ -223,7 +223,7 @@ public class PersonalOptionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012583 RID: 75139 RVA: 0x004851B4 File Offset: 0x004833B4
+	// Token: 0x0600FA35 RID: 64053 RVA: 0x004926C0 File Offset: 0x004908C0
 	private void RefreshSign()
 	{
 		string signature = PersonalModel.Instance.GetSignature();
@@ -236,7 +236,7 @@ public class PersonalOptionView : UiViewBase
 		LguiUtil.Instance.SetLocalText(text, "EmptySign", Array.Empty<object>());
 	}
 
-	// Token: 0x06012584 RID: 75140 RVA: 0x00485204 File Offset: 0x00483404
+	// Token: 0x0600FA36 RID: 64054 RVA: 0x00492710 File Offset: 0x00490910
 	private void RefreshCard()
 	{
 		int curCardId = PersonalModel.Instance.GetCurCardId();
@@ -247,31 +247,31 @@ public class PersonalOptionView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012585 RID: 75141 RVA: 0x00485254 File Offset: 0x00483454
+	// Token: 0x0600FA37 RID: 64055 RVA: 0x00492760 File Offset: 0x00490960
 	private void OnBirthChange()
 	{
 		this.RefreshOptions();
 	}
 
-	// Token: 0x06012586 RID: 75142 RVA: 0x0048525C File Offset: 0x0048345C
+	// Token: 0x0600FA38 RID: 64056 RVA: 0x00492768 File Offset: 0x00490968
 	private void OnHeadIconChange(int roleId)
 	{
 		this.RefreshIcon();
 	}
 
-	// Token: 0x06012587 RID: 75143 RVA: 0x00485264 File Offset: 0x00483464
+	// Token: 0x0600FA39 RID: 64057 RVA: 0x00492770 File Offset: 0x00490970
 	private void OnNameChange()
 	{
 		this.RefreshPlayerName();
 	}
 
-	// Token: 0x06012588 RID: 75144 RVA: 0x0048526C File Offset: 0x0048346C
+	// Token: 0x0600FA3A RID: 64058 RVA: 0x00492778 File Offset: 0x00490978
 	private void OnSignChange()
 	{
 		this.RefreshSign();
 	}
 
-	// Token: 0x06012589 RID: 75145 RVA: 0x00485274 File Offset: 0x00483474
+	// Token: 0x0600FA3B RID: 64059 RVA: 0x00492780 File Offset: 0x00490980
 	private void RefreshPlayerTitle()
 	{
 		PlayerTitleItem titleItem = this.TitleItem;
@@ -282,13 +282,13 @@ public class PersonalOptionView : UiViewBase
 		titleItem.Refresh(new int?(PersonalModel.Instance.GetDressedPlayerTitleId()), new int?(PersonalModel.Instance.GetDressedPlayerTitleLevel()), new int?(PersonalModel.Instance.GetSex()));
 	}
 
-	// Token: 0x0601258A RID: 75146 RVA: 0x004852B3 File Offset: 0x004834B3
+	// Token: 0x0600FA3C RID: 64060 RVA: 0x004927BF File Offset: 0x004909BF
 	private void OnCardChange()
 	{
 		this.RefreshCard();
 	}
 
-	// Token: 0x0601258B RID: 75147 RVA: 0x004852BC File Offset: 0x004834BC
+	// Token: 0x0600FA3D RID: 64061 RVA: 0x004927C8 File Offset: 0x004909C8
 	protected void RefreshOptions()
 	{
 		List<int> list = new List<int>();
@@ -326,7 +326,7 @@ public class PersonalOptionView : UiViewBase
 		this.PersonalOptionItemLayout.RebuildLayoutByDataNew<int>(list, null);
 	}
 
-	// Token: 0x0601258C RID: 75148 RVA: 0x004853B8 File Offset: 0x004835B8
+	// Token: 0x0600FA3E RID: 64062 RVA: 0x004928C4 File Offset: 0x00490AC4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.PersonalOptionItemLayout != null)
@@ -341,7 +341,7 @@ public class PersonalOptionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601258D RID: 75149 RVA: 0x004853F0 File Offset: 0x004835F0
+	// Token: 0x0600FA3F RID: 64063 RVA: 0x004928FC File Offset: 0x00490AFC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -374,7 +374,7 @@ public class PersonalOptionView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x04008AC6 RID: 35526
+	// Token: 0x04008C0D RID: 35853
 	[Nullable(new byte[]
 	{
 		2,
@@ -382,11 +382,11 @@ public class PersonalOptionView : UiViewBase
 	})]
 	private GenericLayoutNew<PersonalOptionItem> PersonalOptionItemLayout;
 
-	// Token: 0x04008AC7 RID: 35527
+	// Token: 0x04008C0E RID: 35854
 	[Nullable(2)]
 	private PlayerHeadItem HeadPhotoItem;
 
-	// Token: 0x04008AC8 RID: 35528
+	// Token: 0x04008C0F RID: 35855
 	[Nullable(2)]
 	private PlayerTitleItem TitleItem;
 }

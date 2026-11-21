@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026AF RID: 9903
+// Token: 0x02001B9A RID: 7066
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeChapterStartNodeItem : UiPanelBase
 {
-	// Token: 0x0601448E RID: 83086 RVA: 0x0051FFA0 File Offset: 0x0051E1A0
+	// Token: 0x06011970 RID: 72048 RVA: 0x0052ECD8 File Offset: 0x0052CED8
 	public QuestTreeChapterStartNodeItem(QuestTreeChapterData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0601448F RID: 83087 RVA: 0x0051FFB8 File Offset: 0x0051E1B8
+	// Token: 0x06011971 RID: 72049 RVA: 0x0052ECF0 File Offset: 0x0052CEF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,7 +41,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014490 RID: 83088 RVA: 0x005200A8 File Offset: 0x0051E2A8
+	// Token: 0x06011972 RID: 72050 RVA: 0x0052EDE0 File Offset: 0x0052CFE0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestTreeChapterStartNodeItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014491 RID: 83089 RVA: 0x005200EC File Offset: 0x0051E2EC
+	// Token: 0x06011973 RID: 72051 RVA: 0x0052EE24 File Offset: 0x0052D024
 	protected override void OnStart()
 	{
 		this.OriginalAdditionalHeight = base.GetUiSizeControlByOther(5).GetAdditionalHeight();
@@ -62,7 +62,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		this.TickId = ((ticker != null) ? ticker.Id : -1);
 	}
 
-	// Token: 0x06014492 RID: 83090 RVA: 0x00520176 File Offset: 0x0051E376
+	// Token: 0x06011974 RID: 72052 RVA: 0x0052EEAE File Offset: 0x0052D0AE
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TickId != -1)
@@ -73,7 +73,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		QuestTreeModel.Instance.ViewModelChapter.RemoveHeightBalanceValue(this.Data.Id);
 	}
 
-	// Token: 0x06014493 RID: 83091 RVA: 0x005201B4 File Offset: 0x0051E3B4
+	// Token: 0x06011975 RID: 72053 RVA: 0x0052EEEC File Offset: 0x0052D0EC
 	public UniTask RefreshByData(QuestTreeChapterData data)
 	{
 		QuestTreeChapterStartNodeItem.<RefreshByData>d__10 <RefreshByData>d__;
@@ -85,7 +85,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		return <RefreshByData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014494 RID: 83092 RVA: 0x00520200 File Offset: 0x0051E400
+	// Token: 0x06011976 RID: 72054 RVA: 0x0052EF38 File Offset: 0x0052D138
 	private UniTask RefreshInfo()
 	{
 		QuestTreeChapterStartNodeItem.<RefreshInfo>d__11 <RefreshInfo>d__;
@@ -96,7 +96,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		return <RefreshInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014495 RID: 83093 RVA: 0x00520244 File Offset: 0x0051E444
+	// Token: 0x06011977 RID: 72055 RVA: 0x0052EF7C File Offset: 0x0052D17C
 	private void RefreshChildren()
 	{
 		List<List<QuestTreeNodeData>> noParentNodeGroupList = this.Data.GetNoParentNodeGroupList();
@@ -104,7 +104,7 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		base.GetItem(3).SetUIActive(noParentNodeGroupList.Count > 0);
 	}
 
-	// Token: 0x06014496 RID: 83094 RVA: 0x00520280 File Offset: 0x0051E480
+	// Token: 0x06011978 RID: 72056 RVA: 0x0052EFB8 File Offset: 0x0052D1B8
 	private void OnTick(float deltaTime)
 	{
 		UUIVerticalLayout verticalLayout = base.GetVerticalLayout(4);
@@ -132,38 +132,38 @@ public class QuestTreeChapterStartNodeItem : UiPanelBase
 		uiSizeControlByOther.SetAdditionalHeight(this.OriginalAdditionalHeight - layoutItemByIndex.GetAdditionalHeight());
 	}
 
-	// Token: 0x04009890 RID: 39056
+	// Token: 0x040099E8 RID: 39400
 	private GenericLayout<QuestTreeNodeItemBase<List<QuestTreeNodeData>>, List<QuestTreeNodeData>> LayoutChildren;
 
-	// Token: 0x04009891 RID: 39057
+	// Token: 0x040099E9 RID: 39401
 	private int TickId = -1;
 
-	// Token: 0x04009892 RID: 39058
+	// Token: 0x040099EA RID: 39402
 	private float OriginalAdditionalHeight;
 
-	// Token: 0x04009893 RID: 39059
+	// Token: 0x040099EB RID: 39403
 	private QuestTreeChapterData Data;
 
-	// Token: 0x02008CEE RID: 36078
+	// Token: 0x02007E77 RID: 32375
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DB98 RID: 187288
+		// Token: 0x04028EAF RID: 167599
 		public const int TextureArea = 0;
 
-		// Token: 0x0402DB99 RID: 187289
+		// Token: 0x04028EB0 RID: 167600
 		public const int TextArea = 1;
 
-		// Token: 0x0402DB9A RID: 187290
+		// Token: 0x04028EB1 RID: 167601
 		public const int TextAreaSub = 2;
 
-		// Token: 0x0402DB9B RID: 187291
+		// Token: 0x04028EB2 RID: 167602
 		public const int ItemChildrenAreaRoot = 3;
 
-		// Token: 0x0402DB9C RID: 187292
+		// Token: 0x04028EB3 RID: 167603
 		public const int LayoutChildrenArea = 4;
 
-		// Token: 0x0402DB9D RID: 187293
+		// Token: 0x04028EB4 RID: 167604
 		public const int SizeLine = 5;
 	}
 }

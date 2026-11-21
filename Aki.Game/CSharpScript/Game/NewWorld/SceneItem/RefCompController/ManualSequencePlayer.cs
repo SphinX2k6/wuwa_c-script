@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B1 RID: 29105
+	// Token: 0x02006266 RID: 25190
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ManualSequencePlayer
 	{
-		// Token: 0x06047389 RID: 291721 RVA: 0x01219FF8 File Offset: 0x012181F8
+		// Token: 0x0603CC84 RID: 248964 RVA: 0x01173EFC File Offset: 0x011720FC
 		[NullableContext(1)]
 		public bool Init(ULevelSequence sequence, bool enableCenterOffset, [Nullable(2)] IFloatingSubtitleLanguageDiff preprocessOperation = null)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return true;
 		}
 
-		// Token: 0x0604738A RID: 291722 RVA: 0x0121A0DC File Offset: 0x012182DC
+		// Token: 0x0603CC85 RID: 248965 RVA: 0x01173FE0 File Offset: 0x011721E0
 		public void SetPositionBySeconds(float seconds, EUpdatePositionMethod method)
 		{
 			ALevelSequenceActor sequenceActor = this.SequenceActor;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			ulevelSequencePlayer.SetPlaybackPosition(playbackPosition);
 		}
 
-		// Token: 0x0604738B RID: 291723 RVA: 0x0121A124 File Offset: 0x01218324
+		// Token: 0x0603CC86 RID: 248966 RVA: 0x01174028 File Offset: 0x01172228
 		[NullableContext(1)]
 		public float? GetMarkTimeInSeconds(string mark)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return SequenceDriveHelper.GetMarkTimeInSeconds(this.Sequence, mark);
 		}
 
-		// Token: 0x0604738C RID: 291724 RVA: 0x0121A150 File Offset: 0x01218350
+		// Token: 0x0603CC87 RID: 248967 RVA: 0x01174054 File Offset: 0x01172254
 		public float GetCurrentSeconds()
 		{
 			ALevelSequenceActor sequenceActor = this.SequenceActor;
@@ -99,19 +99,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return ((float)currentTime.Time.FrameNumber.Value + currentTime.Time.SubFrame) * (float)currentTime.Rate.Denominator / (float)currentTime.Rate.Numerator;
 		}
 
-		// Token: 0x0604738D RID: 291725 RVA: 0x0121A1B7 File Offset: 0x012183B7
+		// Token: 0x0603CC88 RID: 248968 RVA: 0x011740BB File Offset: 0x011722BB
 		public float GetStartSeconds()
 		{
 			return this.CachedStartSeconds;
 		}
 
-		// Token: 0x0604738E RID: 291726 RVA: 0x0121A1BF File Offset: 0x012183BF
+		// Token: 0x0603CC89 RID: 248969 RVA: 0x011740C3 File Offset: 0x011722C3
 		public float GetEndSeconds()
 		{
 			return this.CachedEndSeconds;
 		}
 
-		// Token: 0x0604738F RID: 291727 RVA: 0x0121A1C7 File Offset: 0x012183C7
+		// Token: 0x0603CC8A RID: 248970 RVA: 0x011740CB File Offset: 0x011722CB
 		public UMovieSceneSequencePlayer GetPlayer()
 		{
 			ALevelSequenceActor sequenceActor = this.SequenceActor;
@@ -122,19 +122,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return sequenceActor.SequencePlayer;
 		}
 
-		// Token: 0x06047390 RID: 291728 RVA: 0x0121A1DA File Offset: 0x012183DA
+		// Token: 0x0603CC8B RID: 248971 RVA: 0x011740DE File Offset: 0x011722DE
 		public ALevelSequenceActor GetSequenceActor()
 		{
 			return this.SequenceActor;
 		}
 
-		// Token: 0x06047391 RID: 291729 RVA: 0x0121A1E2 File Offset: 0x012183E2
+		// Token: 0x0603CC8C RID: 248972 RVA: 0x011740E6 File Offset: 0x011722E6
 		public bool HasActor()
 		{
 			return this.SequenceActor != null;
 		}
 
-		// Token: 0x06047392 RID: 291730 RVA: 0x0121A1F0 File Offset: 0x012183F0
+		// Token: 0x0603CC8D RID: 248973 RVA: 0x011740F4 File Offset: 0x011722F4
 		public void Release()
 		{
 			if (this.SequenceActor != null)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.Sequence = null;
 		}
 
-		// Token: 0x06047393 RID: 291731 RVA: 0x0121A254 File Offset: 0x01218454
+		// Token: 0x0603CC8E RID: 248974 RVA: 0x01174158 File Offset: 0x01172358
 		private void CacheStartEndSeconds()
 		{
 			ALevelSequenceActor sequenceActor = this.SequenceActor;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.CachedEndSeconds = ((float)endTime.Time.FrameNumber.Value + endTime.Time.SubFrame) * (float)endTime.Rate.Denominator / (float)endTime.Rate.Numerator;
 		}
 
-		// Token: 0x06047394 RID: 291732 RVA: 0x0121A318 File Offset: 0x01218518
+		// Token: 0x0603CC8F RID: 248975 RVA: 0x0117421C File Offset: 0x0117241C
 		private void ApplyCenterOffset()
 		{
 			if (this.SequenceActor == null)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			global::Log.Instance.Warn(ELogModule.SceneItem, ELogAuthor.CK, "[ManualSequencePlayer] DefaultInstanceData 缺失或类型不符, 中心偏移未写入", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06047395 RID: 291733 RVA: 0x0121A3F4 File Offset: 0x012185F4
+		// Token: 0x0603CC90 RID: 248976 RVA: 0x011742F8 File Offset: 0x011724F8
 		private void ClearCenterOffset()
 		{
 			if (this.SequenceActor == null)
@@ -215,16 +215,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x0402573D RID: 153405
+		// Token: 0x040203AC RID: 132012
 		private float CachedEndSeconds;
 
-		// Token: 0x0402573E RID: 153406
+		// Token: 0x040203AD RID: 132013
 		private float CachedStartSeconds;
 
-		// Token: 0x0402573F RID: 153407
+		// Token: 0x040203AE RID: 132014
 		private ULevelSequence Sequence;
 
-		// Token: 0x04025740 RID: 153408
+		// Token: 0x040203AF RID: 132015
 		private ALevelSequenceActor SequenceActor;
 	}
 }

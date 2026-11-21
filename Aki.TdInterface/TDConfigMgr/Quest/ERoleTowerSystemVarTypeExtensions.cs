@@ -2,32 +2,41 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001284 RID: 4740
+	// Token: 0x020013C4 RID: 5060
 	public static class ERoleTowerSystemVarTypeExtensions
 	{
-		// Token: 0x06006AF9 RID: 27385 RVA: 0x00100A68 File Offset: 0x000FEC68
+		// Token: 0x0600714C RID: 29004 RVA: 0x0010E694 File Offset: 0x0010C894
 		public static string ToEnumString(this ERoleTowerSystemVarType value)
 		{
 			string result;
-			if (value != ERoleTowerSystemVarType.Batch)
+			switch (value)
 			{
-				if (value != ERoleTowerSystemVarType.MaxBatch)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "MaxBatch";
-				}
-			}
-			else
-			{
+			case ERoleTowerSystemVarType.Batch:
 				result = "Batch";
+				break;
+			case ERoleTowerSystemVarType.MaxBatch:
+				result = "MaxBatch";
+				break;
+			case ERoleTowerSystemVarType.IsLastFloor:
+				result = "IsLastFloor";
+				break;
+			case ERoleTowerSystemVarType.CurrentFloorId:
+				result = "CurrentFloorId";
+				break;
+			case ERoleTowerSystemVarType.IsMainRoleDead:
+				result = "IsMainRoleDead";
+				break;
+			case ERoleTowerSystemVarType.IsChallengeTimeExhausted:
+				result = "IsChallengeTimeExhausted";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x06006AFA RID: 27386 RVA: 0x00100AA0 File Offset: 0x000FECA0
+		// Token: 0x0600714D RID: 29005 RVA: 0x0010E700 File Offset: 0x0010C900
 		public static ERoleTowerSystemVarType FromString(string name)
 		{
 			ERoleTowerSystemVarType result;
@@ -38,7 +47,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AFB RID: 27387 RVA: 0x00100AC9 File Offset: 0x000FECC9
+		// Token: 0x0600714E RID: 29006 RVA: 0x0010E72C File Offset: 0x0010C92C
 		public static bool TryFromString(string name, out ERoleTowerSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +60,74 @@ namespace Aki.TDConfigMgr.Quest
 				value = ERoleTowerSystemVarType.Batch;
 				return true;
 			}
-			if (!(name == "MaxBatch"))
+			if (name == "MaxBatch")
+			{
+				value = ERoleTowerSystemVarType.MaxBatch;
+				return true;
+			}
+			if (name == "IsLastFloor")
+			{
+				value = ERoleTowerSystemVarType.IsLastFloor;
+				return true;
+			}
+			if (name == "CurrentFloorId")
+			{
+				value = ERoleTowerSystemVarType.CurrentFloorId;
+				return true;
+			}
+			if (name == "IsMainRoleDead")
+			{
+				value = ERoleTowerSystemVarType.IsMainRoleDead;
+				return true;
+			}
+			if (!(name == "IsChallengeTimeExhausted"))
 			{
 				value = ERoleTowerSystemVarType.Batch;
 				return false;
 			}
-			value = ERoleTowerSystemVarType.MaxBatch;
+			value = ERoleTowerSystemVarType.IsChallengeTimeExhausted;
 			return true;
 		}
 
-		// Token: 0x06006AFC RID: 27388 RVA: 0x00100B02 File Offset: 0x000FED02
+		// Token: 0x0600714F RID: 29007 RVA: 0x0010E7B8 File Offset: 0x0010C9B8
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"Batch",
-				"MaxBatch"
+				"MaxBatch",
+				"IsLastFloor",
+				"CurrentFloorId",
+				"IsMainRoleDead",
+				"IsChallengeTimeExhausted"
 			};
 		}
 
-		// Token: 0x06006AFD RID: 27389 RVA: 0x00100B1A File Offset: 0x000FED1A
+		// Token: 0x06007150 RID: 29008 RVA: 0x0010E7F0 File Offset: 0x0010C9F0
 		public static ERoleTowerSystemVarType[] GetValues()
 		{
 			return new ERoleTowerSystemVarType[]
 			{
 				ERoleTowerSystemVarType.Batch,
-				ERoleTowerSystemVarType.MaxBatch
+				ERoleTowerSystemVarType.MaxBatch,
+				ERoleTowerSystemVarType.IsLastFloor,
+				ERoleTowerSystemVarType.CurrentFloorId,
+				ERoleTowerSystemVarType.IsMainRoleDead,
+				ERoleTowerSystemVarType.IsChallengeTimeExhausted
 			};
 		}
 
-		// Token: 0x06006AFE RID: 27390 RVA: 0x00100B26 File Offset: 0x000FED26
+		// Token: 0x06007151 RID: 29009 RVA: 0x0010E803 File Offset: 0x0010CA03
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"Batch",
-				"MaxBatch"
+				"MaxBatch",
+				"IsLastFloor",
+				"CurrentFloorId",
+				"IsMainRoleDead",
+				"IsChallengeTimeExhausted"
 			};
 		}
 	}

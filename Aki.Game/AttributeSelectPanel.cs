@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001762 RID: 5986
+// Token: 0x02000C1B RID: 3099
 [NullableContext(1)]
 [Nullable(0)]
 public class AttributeSelectPanel : UiPanelBase
 {
-	// Token: 0x0600AD70 RID: 44400 RVA: 0x00270AB4 File Offset: 0x0026ECB4
+	// Token: 0x06008157 RID: 33111 RVA: 0x0027AF74 File Offset: 0x00279174
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,14 +23,14 @@ public class AttributeSelectPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AD71 RID: 44401 RVA: 0x00270B10 File Offset: 0x0026ED10
+	// Token: 0x06008158 RID: 33112 RVA: 0x0027AFD0 File Offset: 0x002791D0
 	protected override void OnStart()
 	{
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(2), "VisionRefineAttributeSelect", Array.Empty<object>());
 		this.Layout = new GenericLayout<AttributeSelectGrid, IRefineAttrItemData>(base.GetGridLayout(0), new Func<AttributeSelectGrid>(this.InitAttributeItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600AD72 RID: 44402 RVA: 0x00270B69 File Offset: 0x0026ED69
+	// Token: 0x06008159 RID: 33113 RVA: 0x0027B029 File Offset: 0x00279229
 	private AttributeSelectGrid InitAttributeItem()
 	{
 		return new AttributeSelectGrid
@@ -39,13 +39,13 @@ public class AttributeSelectPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AD73 RID: 44403 RVA: 0x00270B82 File Offset: 0x0026ED82
+	// Token: 0x0600815A RID: 33114 RVA: 0x0027B042 File Offset: 0x00279242
 	public void RefreshByData(IRefineAttrItemData[] dataList, int? chosenIndex = null)
 	{
 		this.RefreshByDataAsync(dataList, chosenIndex).Forget();
 	}
 
-	// Token: 0x0600AD74 RID: 44404 RVA: 0x00270B94 File Offset: 0x0026ED94
+	// Token: 0x0600815B RID: 33115 RVA: 0x0027B054 File Offset: 0x00279254
 	private UniTask RefreshByDataAsync(IRefineAttrItemData[] dataList, int? chosenIndex = null)
 	{
 		AttributeSelectPanel.<RefreshByDataAsync>d__7 <RefreshByDataAsync>d__;
@@ -58,7 +58,7 @@ public class AttributeSelectPanel : UiPanelBase
 		return <RefreshByDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AD75 RID: 44405 RVA: 0x00270BE7 File Offset: 0x0026EDE7
+	// Token: 0x0600815C RID: 33116 RVA: 0x0027B0A7 File Offset: 0x002792A7
 	private void OnClickAttributeItem(IRefineAttrItemData data, int index)
 	{
 		if (this.CallBackClick != null)
@@ -69,7 +69,7 @@ public class AttributeSelectPanel : UiPanelBase
 		this.Layout.SelectGridProxy(index, false);
 	}
 
-	// Token: 0x04004ED2 RID: 20178
+	// Token: 0x04004F7C RID: 20348
 	[Nullable(new byte[]
 	{
 		2,
@@ -78,7 +78,7 @@ public class AttributeSelectPanel : UiPanelBase
 	})]
 	private GenericLayout<AttributeSelectGrid, IRefineAttrItemData> Layout;
 
-	// Token: 0x04004ED3 RID: 20179
+	// Token: 0x04004F7D RID: 20349
 	[Nullable(new byte[]
 	{
 		2,
@@ -86,15 +86,15 @@ public class AttributeSelectPanel : UiPanelBase
 	})]
 	public Action<IRefineAttrItemData> CallBackClick;
 
-	// Token: 0x02007D52 RID: 32082
+	// Token: 0x02006ED8 RID: 28376
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029099 RID: 168089
+		// Token: 0x040243C4 RID: 148420
 		Layout,
-		// Token: 0x0402909A RID: 168090
+		// Token: 0x040243C5 RID: 148421
 		LayoutItem,
-		// Token: 0x0402909B RID: 168091
+		// Token: 0x040243C6 RID: 148422
 		TextTitle
 	}
 }

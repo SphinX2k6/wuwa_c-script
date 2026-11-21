@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020028A5 RID: 10405
+// Token: 0x02001E20 RID: 7712
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RoleSkillBranchTipsContentItem : GridProxyAbstract<IRoleSkillBranchTipsContentItemData>
 {
-	// Token: 0x06015792 RID: 87954 RVA: 0x0056A570 File Offset: 0x00568770
+	// Token: 0x06013192 RID: 78226 RVA: 0x005953B8 File Offset: 0x005935B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -33,7 +33,7 @@ public class RoleSkillBranchTipsContentItem : GridProxyAbstract<IRoleSkillBranch
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015793 RID: 87955 RVA: 0x0056A63C File Offset: 0x0056883C
+	// Token: 0x06013193 RID: 78227 RVA: 0x00595484 File Offset: 0x00593684
 	[NullableContext(1)]
 	public override void Refresh(IRoleSkillBranchTipsContentItemData data, bool isSelected, int gridIndex)
 	{
@@ -44,18 +44,18 @@ public class RoleSkillBranchTipsContentItem : GridProxyAbstract<IRoleSkillBranch
 		base.GetText(4).ShowTextNew(data.DescKey);
 	}
 
-	// Token: 0x02008EAD RID: 36525
+	// Token: 0x020080F4 RID: 33012
 	private enum EComponent
 	{
-		// Token: 0x0402E435 RID: 189493
+		// Token: 0x04029B32 RID: 170802
 		ArrowSprite,
-		// Token: 0x0402E436 RID: 189494
+		// Token: 0x04029B33 RID: 170803
 		TagBgSprite,
-		// Token: 0x0402E437 RID: 189495
+		// Token: 0x04029B34 RID: 170804
 		TagIconSprite,
-		// Token: 0x0402E438 RID: 189496
+		// Token: 0x04029B35 RID: 170805
 		TitleTxt,
-		// Token: 0x0402E439 RID: 189497
+		// Token: 0x04029B36 RID: 170806
 		DescTxt
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AE2 RID: 15074
+	// Token: 0x02003EE4 RID: 16100
 	public class ITargetLevelEntityT
 	{
-		// Token: 0x1700676B RID: 26475
-		// (get) Token: 0x0601489C RID: 84124 RVA: 0x002FDD44 File Offset: 0x002FBF44
-		// (set) Token: 0x0601489D RID: 84125 RVA: 0x002FDD4C File Offset: 0x002FBF4C
+		// Token: 0x17006D06 RID: 27910
+		// (get) Token: 0x06015D46 RID: 89414 RVA: 0x00323FD4 File Offset: 0x003221D4
+		// (set) Token: 0x06015D47 RID: 89415 RVA: 0x00323FDC File Offset: 0x003221DC
 		public ETargetType Type { get; set; }
 
-		// Token: 0x1700676C RID: 26476
-		// (get) Token: 0x0601489E RID: 84126 RVA: 0x002FDD55 File Offset: 0x002FBF55
-		// (set) Token: 0x0601489F RID: 84127 RVA: 0x002FDD5D File Offset: 0x002FBF5D
+		// Token: 0x17006D07 RID: 27911
+		// (get) Token: 0x06015D48 RID: 89416 RVA: 0x00323FE5 File Offset: 0x003221E5
+		// (set) Token: 0x06015D49 RID: 89417 RVA: 0x00323FED File Offset: 0x003221ED
 		public int Id { get; set; }
 
-		// Token: 0x060148A0 RID: 84128 RVA: 0x002FDD66 File Offset: 0x002FBF66
+		// Token: 0x06015D4A RID: 89418 RVA: 0x00323FF6 File Offset: 0x003221F6
 		public ITargetLevelEntityT()
 		{
 			this.Type = ETargetType.Player;

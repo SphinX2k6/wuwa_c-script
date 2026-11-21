@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BA5 RID: 7077
+// Token: 0x02001064 RID: 4196
 internal class FloroRanchTechLine : UiPanelBase
 {
-	// Token: 0x0600D2BB RID: 53947 RVA: 0x0030722C File Offset: 0x0030542C
+	// Token: 0x0600A6CC RID: 42700 RVA: 0x0031230C File Offset: 0x0031050C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ internal class FloroRanchTechLine : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D2BC RID: 53948 RVA: 0x00307274 File Offset: 0x00305474
+	// Token: 0x0600A6CD RID: 42701 RVA: 0x00312354 File Offset: 0x00310554
 	public void Refresh(bool isUnlock)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -29,10 +29,10 @@ internal class FloroRanchTechLine : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x02008146 RID: 33094
+	// Token: 0x020072D4 RID: 29396
 	private class EFloroRanchTechLineDefine
 	{
-		// Token: 0x0402A31E RID: 172830
+		// Token: 0x04025652 RID: 153170
 		public const int SpriteLine = 0;
 	}
 }

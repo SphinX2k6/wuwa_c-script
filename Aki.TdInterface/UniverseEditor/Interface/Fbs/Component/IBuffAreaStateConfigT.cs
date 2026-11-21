@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F2C RID: 20268
+	// Token: 0x0200545E RID: 21598
 	public class IBuffAreaStateConfigT
 	{
-		// Token: 0x17009211 RID: 37393
-		// (get) Token: 0x06020138 RID: 131384 RVA: 0x0047690B File Offset: 0x00474B0B
-		// (set) Token: 0x06020139 RID: 131385 RVA: 0x00476913 File Offset: 0x00474B13
+		// Token: 0x17009993 RID: 39315
+		// (get) Token: 0x06021EA8 RID: 138920 RVA: 0x004ACC9F File Offset: 0x004AAE9F
+		// (set) Token: 0x06021EA9 RID: 138921 RVA: 0x004ACCA7 File Offset: 0x004AAEA7
 		public string State { get; set; }
 
-		// Token: 0x17009212 RID: 37394
-		// (get) Token: 0x0602013A RID: 131386 RVA: 0x0047691C File Offset: 0x00474B1C
-		// (set) Token: 0x0602013B RID: 131387 RVA: 0x00476924 File Offset: 0x00474B24
+		// Token: 0x17009994 RID: 39316
+		// (get) Token: 0x06021EAA RID: 138922 RVA: 0x004ACCB0 File Offset: 0x004AAEB0
+		// (set) Token: 0x06021EAB RID: 138923 RVA: 0x004ACCB8 File Offset: 0x004AAEB8
 		public List<long> BuffIds { get; set; }
 
-		// Token: 0x17009213 RID: 37395
-		// (get) Token: 0x0602013C RID: 131388 RVA: 0x0047692D File Offset: 0x00474B2D
-		// (set) Token: 0x0602013D RID: 131389 RVA: 0x00476935 File Offset: 0x00474B35
+		// Token: 0x17009995 RID: 39317
+		// (get) Token: 0x06021EAC RID: 138924 RVA: 0x004ACCC1 File Offset: 0x004AAEC1
+		// (set) Token: 0x06021EAD RID: 138925 RVA: 0x004ACCC9 File Offset: 0x004AAEC9
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x0602013E RID: 131390 RVA: 0x0047693E File Offset: 0x00474B3E
+		// Token: 0x06021EAE RID: 138926 RVA: 0x004ACCD2 File Offset: 0x004AAED2
 		public IBuffAreaStateConfigT()
 		{
 			this.State = null;

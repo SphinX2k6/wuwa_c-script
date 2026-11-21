@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200595D RID: 22877
+	// Token: 0x02005F6A RID: 24426
 	public class ISpawnMonsterPreConditonType_UnionUnion
 	{
-		// Token: 0x1700ABB8 RID: 43960
-		// (get) Token: 0x06026B8D RID: 158605 RVA: 0x00554FFD File Offset: 0x005531FD
-		// (set) Token: 0x06026B8E RID: 158606 RVA: 0x00555005 File Offset: 0x00553205
+		// Token: 0x1700B4EC RID: 46316
+		// (get) Token: 0x060290F7 RID: 168183 RVA: 0x0059BC69 File Offset: 0x00599E69
+		// (set) Token: 0x060290F8 RID: 168184 RVA: 0x0059BC71 File Offset: 0x00599E71
 		public ISpawnMonsterPreConditonType_Union Type { get; set; }
 
-		// Token: 0x1700ABB9 RID: 43961
-		// (get) Token: 0x06026B8F RID: 158607 RVA: 0x0055500E File Offset: 0x0055320E
-		// (set) Token: 0x06026B90 RID: 158608 RVA: 0x00555016 File Offset: 0x00553216
+		// Token: 0x1700B4ED RID: 46317
+		// (get) Token: 0x060290F9 RID: 168185 RVA: 0x0059BC7A File Offset: 0x00599E7A
+		// (set) Token: 0x060290FA RID: 168186 RVA: 0x0059BC82 File Offset: 0x00599E82
 		public object Value { get; set; }
 
-		// Token: 0x06026B91 RID: 158609 RVA: 0x0055501F File Offset: 0x0055321F
+		// Token: 0x060290FB RID: 168187 RVA: 0x0059BC8B File Offset: 0x00599E8B
 		public ISpawnMonsterPreConditonType_UnionUnion()
 		{
 			this.Type = ISpawnMonsterPreConditonType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06026B92 RID: 158610 RVA: 0x00555035 File Offset: 0x00553235
+		// Token: 0x060290FC RID: 168188 RVA: 0x0059BCA1 File Offset: 0x00599EA1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06026B93 RID: 158611 RVA: 0x00555047 File Offset: 0x00553247
+		// Token: 0x060290FD RID: 168189 RVA: 0x0059BCB3 File Offset: 0x00599EB3
 		public ISpawnMonsterPreConditonTypeT AsISpawnMonsterPreConditonType()
 		{
 			return this.As<ISpawnMonsterPreConditonTypeT>();
 		}
 
-		// Token: 0x06026B94 RID: 158612 RVA: 0x0055504F File Offset: 0x0055324F
+		// Token: 0x060290FE RID: 168190 RVA: 0x0059BCBB File Offset: 0x00599EBB
 		public static ISpawnMonsterPreConditonType_UnionUnion FromISpawnMonsterPreConditonType(ISpawnMonsterPreConditonTypeT _ispawnmonsterpreconditontype)
 		{
 			return new ISpawnMonsterPreConditonType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026B95 RID: 158613 RVA: 0x00555064 File Offset: 0x00553264
+		// Token: 0x060290FF RID: 168191 RVA: 0x0059BCD0 File Offset: 0x00599ED0
 		public ISpawnMonsterPreDependOnPrecedingT AsISpawnMonsterPreDependOnPreceding()
 		{
 			return this.As<ISpawnMonsterPreDependOnPrecedingT>();
 		}
 
-		// Token: 0x06026B96 RID: 158614 RVA: 0x0055506C File Offset: 0x0055326C
+		// Token: 0x06029100 RID: 168192 RVA: 0x0059BCD8 File Offset: 0x00599ED8
 		public static ISpawnMonsterPreConditonType_UnionUnion FromISpawnMonsterPreDependOnPreceding(ISpawnMonsterPreDependOnPrecedingT _ispawnmonsterpredependonpreceding)
 		{
 			return new ISpawnMonsterPreConditonType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026B97 RID: 158615 RVA: 0x00555084 File Offset: 0x00553284
+		// Token: 0x06029101 RID: 168193 RVA: 0x0059BCF0 File Offset: 0x00599EF0
 		public static int Pack(FlatBufferBuilder builder, ISpawnMonsterPreConditonType_UnionUnion _o)
 		{
 			ISpawnMonsterPreConditonType_Union type = _o.Type;

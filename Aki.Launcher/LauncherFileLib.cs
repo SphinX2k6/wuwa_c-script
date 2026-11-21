@@ -11,25 +11,25 @@ using UnrealEngine;
 [Nullable(0)]
 public class LauncherFileLib : IStaticVariableResetter
 {
-	// Token: 0x06000096 RID: 150 RVA: 0x00006CEB File Offset: 0x00004EEB
+	// Token: 0x06000096 RID: 150 RVA: 0x00006D23 File Offset: 0x00004F23
 	static LauncherFileLib()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LauncherFileLib.CreateStaticDefaultValue), new Action(LauncherFileLib.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000097 RID: 151 RVA: 0x00006D0A File Offset: 0x00004F0A
+	// Token: 0x06000097 RID: 151 RVA: 0x00006D42 File Offset: 0x00004F42
 	public static void CreateStaticDefaultValue()
 	{
 		LauncherFileLib.HadDeletion = false;
 	}
 
-	// Token: 0x06000098 RID: 152 RVA: 0x00006D12 File Offset: 0x00004F12
+	// Token: 0x06000098 RID: 152 RVA: 0x00006D4A File Offset: 0x00004F4A
 	public static void ResetStaticDefaultValue()
 	{
 		LauncherFileLib.HadDeletion = false;
 	}
 
-	// Token: 0x06000099 RID: 153 RVA: 0x00006D1C File Offset: 0x00004F1C
+	// Token: 0x06000099 RID: 153 RVA: 0x00006D54 File Offset: 0x00004F54
 	public unsafe static void ClearOldPackageResDir(string oldVer = "")
 	{
 		string appVersion = UKuroLauncherLibrary.GetAppVersion();
@@ -67,7 +67,7 @@ public class LauncherFileLib : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600009A RID: 154 RVA: 0x00006E88 File Offset: 0x00005088
+	// Token: 0x0600009A RID: 154 RVA: 0x00006EC0 File Offset: 0x000050C0
 	public static void ClearResDirs(string resDir, ISet<string> retainVersions)
 	{
 		TArray<string> directories = UKuroStaticLibrary.GetDirectories(resDir);
@@ -83,7 +83,7 @@ public class LauncherFileLib : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600009B RID: 155 RVA: 0x00006ED4 File Offset: 0x000050D4
+	// Token: 0x0600009B RID: 155 RVA: 0x00006F0C File Offset: 0x0000510C
 	public static void RemoveDownloadFile(string filePath)
 	{
 		if (!string.IsNullOrEmpty(filePath) && UBlueprintPathsLibrary.FileExists(filePath))
@@ -97,6 +97,6 @@ public class LauncherFileLib : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x04000050 RID: 80
+	// Token: 0x04000051 RID: 81
 	public static bool HadDeletion;
 }

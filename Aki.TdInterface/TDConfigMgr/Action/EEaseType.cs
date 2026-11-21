@@ -2,18 +2,18 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015CC RID: 5580
+	// Token: 0x0200172B RID: 5931
 	public enum EEaseType
 	{
-		// Token: 0x04004A5B RID: 19035
+		// Token: 0x04004E15 RID: 19989
 		Linear,
-		// Token: 0x04004A5C RID: 19036
+		// Token: 0x04004E16 RID: 19990
 		Transient,
-		// Token: 0x04004A5D RID: 19037
+		// Token: 0x04004E17 RID: 19991
 		InOutCubic,
-		// Token: 0x04004A5E RID: 19038
+		// Token: 0x04004E18 RID: 19992
 		OutSine,
-		// Token: 0x04004A5F RID: 19039
+		// Token: 0x04004E19 RID: 19993
 		OutQuart
 	}
 }

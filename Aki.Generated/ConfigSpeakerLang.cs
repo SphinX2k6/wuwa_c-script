@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x0200096C RID: 2412
+	// Token: 0x02000A41 RID: 2625
 	public class ConfigSpeakerLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600389C RID: 14492 RVA: 0x0019996C File Offset: 0x00197B6C
+		// Token: 0x06003D9A RID: 15770 RVA: 0x001B8D00 File Offset: 0x001B6F00
 		static ConfigSpeakerLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpeakerLang.CreateStaticDefaultValue), new Action(ConfigSpeakerLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600389D RID: 14493 RVA: 0x0019998C File Offset: 0x00197B8C
+		// Token: 0x06003D9B RID: 15771 RVA: 0x001B8D20 File Offset: 0x001B6F20
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpeakerLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigSpeakerLang.LangCache = new Dictionary<int, Dictionary<string, string>>();
 		}
 
-		// Token: 0x0600389E RID: 14494 RVA: 0x001999FF File Offset: 0x00197BFF
+		// Token: 0x06003D9C RID: 15772 RVA: 0x001B8D93 File Offset: 0x001B6F93
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpeakerLang.LogPair = null;
@@ -35,13 +35,13 @@ namespace Aki.Config
 			ConfigSpeakerLang.HandleId = 0;
 		}
 
-		// Token: 0x0600389F RID: 14495 RVA: 0x00199A13 File Offset: 0x00197C13
+		// Token: 0x06003D9D RID: 15773 RVA: 0x001B8DA7 File Offset: 0x001B6FA7
 		public static void Init()
 		{
 			ConfigSpeakerLang.HandleId = ConfigCommon.GetLangStatementId("Speaker", "lang_speaker.db", "select content from `Speaker` where id = ?", "");
 		}
 
-		// Token: 0x060038A0 RID: 14496 RVA: 0x00199A34 File Offset: 0x00197C34
+		// Token: 0x06003D9E RID: 15774 RVA: 0x001B8DC8 File Offset: 0x001B6FC8
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
@@ -107,19 +107,19 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x040041DA RID: 16858
+		// Token: 0x040047AD RID: 18349
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x040041DB RID: 16859
+		// Token: 0x040047AE RID: 18350
 		private const string DB = "lang_speaker.db";
 
-		// Token: 0x040041DC RID: 16860
+		// Token: 0x040047AF RID: 18351
 		private const string TABLE = "Speaker";
 
-		// Token: 0x040041DD RID: 16861
+		// Token: 0x040047B0 RID: 18352
 		private const string COMMAND = "select content from `Speaker` where id = ?";
 
-		// Token: 0x040041DE RID: 16862
+		// Token: 0x040047B1 RID: 18353
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041DF RID: 16863
+		// Token: 0x040047B2 RID: 18354
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<int, Dictionary<string, string>> LangCache;
 
-		// Token: 0x040041E0 RID: 16864
+		// Token: 0x040047B3 RID: 18355
 		private static int HandleId;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200414B RID: 16715
+	// Token: 0x0200458F RID: 17807
 	public struct ISubBehaviorTreeFile : IFlatbufferObject
 	{
-		// Token: 0x1700766A RID: 30314
-		// (get) Token: 0x06018882 RID: 100482 RVA: 0x00389487 File Offset: 0x00387687
+		// Token: 0x17007C79 RID: 31865
+		// (get) Token: 0x06019F4A RID: 106314 RVA: 0x003B3A43 File Offset: 0x003B1C43
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018883 RID: 100483 RVA: 0x00389494 File Offset: 0x00387694
+		// Token: 0x06019F4B RID: 106315 RVA: 0x003B3A50 File Offset: 0x003B1C50
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018884 RID: 100484 RVA: 0x0038949C File Offset: 0x0038769C
+		// Token: 0x06019F4C RID: 106316 RVA: 0x003B3A58 File Offset: 0x003B1C58
 		public static ISubBehaviorTreeFile GetRootAsISubBehaviorTreeFile(ByteBuffer _bb)
 		{
 			return ISubBehaviorTreeFile.GetRootAsISubBehaviorTreeFile(_bb, default(ISubBehaviorTreeFile));
 		}
 
-		// Token: 0x06018885 RID: 100485 RVA: 0x003894B8 File Offset: 0x003876B8
+		// Token: 0x06019F4D RID: 106317 RVA: 0x003B3A74 File Offset: 0x003B1C74
 		public static ISubBehaviorTreeFile GetRootAsISubBehaviorTreeFile(ByteBuffer _bb, ISubBehaviorTreeFile obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018886 RID: 100486 RVA: 0x003894D5 File Offset: 0x003876D5
+		// Token: 0x06019F4E RID: 106318 RVA: 0x003B3A91 File Offset: 0x003B1C91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018887 RID: 100487 RVA: 0x003894E4 File Offset: 0x003876E4
+		// Token: 0x06019F4F RID: 106319 RVA: 0x003B3AA0 File Offset: 0x003B1CA0
 		public ISubBehaviorTreeFile __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700766B RID: 30315
-		// (get) Token: 0x06018888 RID: 100488 RVA: 0x003894F4 File Offset: 0x003876F4
+		// Token: 0x17007C7A RID: 31866
+		// (get) Token: 0x06019F50 RID: 106320 RVA: 0x003B3AB0 File Offset: 0x003B1CB0
 		public int Id
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700766C RID: 30316
-		// (get) Token: 0x06018889 RID: 100489 RVA: 0x00389530 File Offset: 0x00387730
+		// Token: 0x17007C7B RID: 31867
+		// (get) Token: 0x06019F51 RID: 106321 RVA: 0x003B3AEC File Offset: 0x003B1CEC
 		public string ParentUid
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601888A RID: 100490 RVA: 0x00389567 File Offset: 0x00387767
+		// Token: 0x06019F52 RID: 106322 RVA: 0x003B3B23 File Offset: 0x003B1D23
 		public Span<byte> GetParentUidBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601888B RID: 100491 RVA: 0x00389576 File Offset: 0x00387776
+		// Token: 0x06019F53 RID: 106323 RVA: 0x003B3B32 File Offset: 0x003B1D32
 		public byte[] GetParentUidArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700766D RID: 30317
-		// (get) Token: 0x0601888C RID: 100492 RVA: 0x00389584 File Offset: 0x00387784
+		// Token: 0x17007C7C RID: 31868
+		// (get) Token: 0x06019F54 RID: 106324 RVA: 0x003B3B40 File Offset: 0x003B1D40
 		public IBehaviorTree? Tree
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601888D RID: 100493 RVA: 0x003895E4 File Offset: 0x003877E4
+		// Token: 0x06019F55 RID: 106325 RVA: 0x003B3BA0 File Offset: 0x003B1DA0
 		public string Children(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700766E RID: 30318
-		// (get) Token: 0x0601888E RID: 100494 RVA: 0x00389620 File Offset: 0x00387820
+		// Token: 0x17007C7D RID: 31869
+		// (get) Token: 0x06019F56 RID: 106326 RVA: 0x003B3BDC File Offset: 0x003B1DDC
 		public int ChildrenLength
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601888F RID: 100495 RVA: 0x0038964C File Offset: 0x0038784C
+		// Token: 0x06019F57 RID: 106327 RVA: 0x003B3C08 File Offset: 0x003B1E08
 		public string Reference(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -142,8 +142,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700766F RID: 30319
-		// (get) Token: 0x06018890 RID: 100496 RVA: 0x00389688 File Offset: 0x00387888
+		// Token: 0x17007C7E RID: 31870
+		// (get) Token: 0x06019F58 RID: 106328 RVA: 0x003B3C44 File Offset: 0x003B1E44
 		public int ReferenceLength
 		{
 			get
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018891 RID: 100497 RVA: 0x003896B4 File Offset: 0x003878B4
+		// Token: 0x06019F59 RID: 106329 RVA: 0x003B3C70 File Offset: 0x003B1E70
 		public string WeakReference(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -168,8 +168,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007670 RID: 30320
-		// (get) Token: 0x06018892 RID: 100498 RVA: 0x003896F0 File Offset: 0x003878F0
+		// Token: 0x17007C7F RID: 31871
+		// (get) Token: 0x06019F5A RID: 106330 RVA: 0x003B3CAC File Offset: 0x003B1EAC
 		public int WeakReferenceLength
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007671 RID: 30321
-		// (get) Token: 0x06018893 RID: 100499 RVA: 0x0038971C File Offset: 0x0038791C
+		// Token: 0x17007C80 RID: 31872
+		// (get) Token: 0x06019F5B RID: 106331 RVA: 0x003B3CD8 File Offset: 0x003B1ED8
 		public string _Name
 		{
 			get
@@ -198,20 +198,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018894 RID: 100500 RVA: 0x00389754 File Offset: 0x00387954
+		// Token: 0x06019F5C RID: 106332 RVA: 0x003B3D10 File Offset: 0x003B1F10
 		public Span<byte> Get_NameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06018895 RID: 100501 RVA: 0x00389764 File Offset: 0x00387964
+		// Token: 0x06019F5D RID: 106333 RVA: 0x003B3D20 File Offset: 0x003B1F20
 		public byte[] Get_NameArray()
 		{
 			return this.__p.__vector_as_array<byte>(16);
 		}
 
-		// Token: 0x17007672 RID: 30322
-		// (get) Token: 0x06018896 RID: 100502 RVA: 0x00389774 File Offset: 0x00387974
+		// Token: 0x17007C81 RID: 31873
+		// (get) Token: 0x06019F5E RID: 106334 RVA: 0x003B3D30 File Offset: 0x003B1F30
 		public string _Path
 		{
 			get
@@ -225,20 +225,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018897 RID: 100503 RVA: 0x003897AC File Offset: 0x003879AC
+		// Token: 0x06019F5F RID: 106335 RVA: 0x003B3D68 File Offset: 0x003B1F68
 		public Span<byte> Get_PathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06018898 RID: 100504 RVA: 0x003897BC File Offset: 0x003879BC
+		// Token: 0x06019F60 RID: 106336 RVA: 0x003B3D78 File Offset: 0x003B1F78
 		public byte[] Get_PathArray()
 		{
 			return this.__p.__vector_as_array<byte>(18);
 		}
 
-		// Token: 0x17007673 RID: 30323
-		// (get) Token: 0x06018899 RID: 100505 RVA: 0x003897CC File Offset: 0x003879CC
+		// Token: 0x17007C82 RID: 31874
+		// (get) Token: 0x06019F61 RID: 106337 RVA: 0x003B3D88 File Offset: 0x003B1F88
 		public byte NullMask
 		{
 			get
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601889A RID: 100506 RVA: 0x0038980C File Offset: 0x00387A0C
+		// Token: 0x06019F62 RID: 106338 RVA: 0x003B3DC8 File Offset: 0x003B1FC8
 		public static Offset<ISubBehaviorTreeFile> CreateISubBehaviorTreeFile(FlatBufferBuilder builder, int Id = 0, StringOffset ParentUidOffset = default(StringOffset), Offset<IBehaviorTree> TreeOffset = default(Offset<IBehaviorTree>), VectorOffset ChildrenOffset = default(VectorOffset), VectorOffset ReferenceOffset = default(VectorOffset), VectorOffset WeakReferenceOffset = default(VectorOffset), StringOffset _nameOffset = default(StringOffset), StringOffset _pathOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -268,37 +268,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISubBehaviorTreeFile.EndISubBehaviorTreeFile(builder);
 		}
 
-		// Token: 0x0601889B RID: 100507 RVA: 0x0038986C File Offset: 0x00387A6C
+		// Token: 0x06019F63 RID: 106339 RVA: 0x003B3E28 File Offset: 0x003B2028
 		public static void StartISubBehaviorTreeFile(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x0601889C RID: 100508 RVA: 0x00389876 File Offset: 0x00387A76
+		// Token: 0x06019F64 RID: 106340 RVA: 0x003B3E32 File Offset: 0x003B2032
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601889D RID: 100509 RVA: 0x00389881 File Offset: 0x00387A81
+		// Token: 0x06019F65 RID: 106341 RVA: 0x003B3E3D File Offset: 0x003B203D
 		public static void AddParentUid(FlatBufferBuilder builder, StringOffset parentUidOffset)
 		{
 			builder.AddOffset(1, parentUidOffset.Value, 0);
 		}
 
-		// Token: 0x0601889E RID: 100510 RVA: 0x00389891 File Offset: 0x00387A91
+		// Token: 0x06019F66 RID: 106342 RVA: 0x003B3E4D File Offset: 0x003B204D
 		public static void AddTree(FlatBufferBuilder builder, Offset<IBehaviorTree> treeOffset)
 		{
 			builder.AddOffset(2, treeOffset.Value, 0);
 		}
 
-		// Token: 0x0601889F RID: 100511 RVA: 0x003898A1 File Offset: 0x00387AA1
+		// Token: 0x06019F67 RID: 106343 RVA: 0x003B3E5D File Offset: 0x003B205D
 		public static void AddChildren(FlatBufferBuilder builder, VectorOffset childrenOffset)
 		{
 			builder.AddOffset(3, childrenOffset.Value, 0);
 		}
 
-		// Token: 0x060188A0 RID: 100512 RVA: 0x003898B4 File Offset: 0x00387AB4
+		// Token: 0x06019F68 RID: 106344 RVA: 0x003B3E70 File Offset: 0x003B2070
 		public static VectorOffset CreateChildrenVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -309,7 +309,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A1 RID: 100513 RVA: 0x003898F4 File Offset: 0x00387AF4
+		// Token: 0x06019F69 RID: 106345 RVA: 0x003B3EB0 File Offset: 0x003B20B0
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A2 RID: 100514 RVA: 0x0038990E File Offset: 0x00387B0E
+		// Token: 0x06019F6A RID: 106346 RVA: 0x003B3ECA File Offset: 0x003B20CA
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A3 RID: 100515 RVA: 0x0038992C File Offset: 0x00387B2C
+		// Token: 0x06019F6B RID: 106347 RVA: 0x003B3EE8 File Offset: 0x003B20E8
 		public static VectorOffset CreateChildrenVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -333,19 +333,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A4 RID: 100516 RVA: 0x00389945 File Offset: 0x00387B45
+		// Token: 0x06019F6C RID: 106348 RVA: 0x003B3F01 File Offset: 0x003B2101
 		public static void StartChildrenVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060188A5 RID: 100517 RVA: 0x00389950 File Offset: 0x00387B50
+		// Token: 0x06019F6D RID: 106349 RVA: 0x003B3F0C File Offset: 0x003B210C
 		public static void AddReference(FlatBufferBuilder builder, VectorOffset referenceOffset)
 		{
 			builder.AddOffset(4, referenceOffset.Value, 0);
 		}
 
-		// Token: 0x060188A6 RID: 100518 RVA: 0x00389960 File Offset: 0x00387B60
+		// Token: 0x06019F6E RID: 106350 RVA: 0x003B3F1C File Offset: 0x003B211C
 		public static VectorOffset CreateReferenceVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -356,7 +356,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A7 RID: 100519 RVA: 0x003899A0 File Offset: 0x00387BA0
+		// Token: 0x06019F6F RID: 106351 RVA: 0x003B3F5C File Offset: 0x003B215C
 		public static VectorOffset CreateReferenceVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -364,7 +364,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A8 RID: 100520 RVA: 0x003899BA File Offset: 0x00387BBA
+		// Token: 0x06019F70 RID: 106352 RVA: 0x003B3F76 File Offset: 0x003B2176
 		public static VectorOffset CreateReferenceVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -372,7 +372,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188A9 RID: 100521 RVA: 0x003899D8 File Offset: 0x00387BD8
+		// Token: 0x06019F71 RID: 106353 RVA: 0x003B3F94 File Offset: 0x003B2194
 		public static VectorOffset CreateReferenceVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -380,19 +380,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188AA RID: 100522 RVA: 0x003899F1 File Offset: 0x00387BF1
+		// Token: 0x06019F72 RID: 106354 RVA: 0x003B3FAD File Offset: 0x003B21AD
 		public static void StartReferenceVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060188AB RID: 100523 RVA: 0x003899FC File Offset: 0x00387BFC
+		// Token: 0x06019F73 RID: 106355 RVA: 0x003B3FB8 File Offset: 0x003B21B8
 		public static void AddWeakReference(FlatBufferBuilder builder, VectorOffset weakReferenceOffset)
 		{
 			builder.AddOffset(5, weakReferenceOffset.Value, 0);
 		}
 
-		// Token: 0x060188AC RID: 100524 RVA: 0x00389A0C File Offset: 0x00387C0C
+		// Token: 0x06019F74 RID: 106356 RVA: 0x003B3FC8 File Offset: 0x003B21C8
 		public static VectorOffset CreateWeakReferenceVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -403,7 +403,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188AD RID: 100525 RVA: 0x00389A4C File Offset: 0x00387C4C
+		// Token: 0x06019F75 RID: 106357 RVA: 0x003B4008 File Offset: 0x003B2208
 		public static VectorOffset CreateWeakReferenceVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -411,7 +411,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188AE RID: 100526 RVA: 0x00389A66 File Offset: 0x00387C66
+		// Token: 0x06019F76 RID: 106358 RVA: 0x003B4022 File Offset: 0x003B2222
 		public static VectorOffset CreateWeakReferenceVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -419,7 +419,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188AF RID: 100527 RVA: 0x00389A84 File Offset: 0x00387C84
+		// Token: 0x06019F77 RID: 106359 RVA: 0x003B4040 File Offset: 0x003B2240
 		public static VectorOffset CreateWeakReferenceVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -427,37 +427,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060188B0 RID: 100528 RVA: 0x00389A9D File Offset: 0x00387C9D
+		// Token: 0x06019F78 RID: 106360 RVA: 0x003B4059 File Offset: 0x003B2259
 		public static void StartWeakReferenceVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060188B1 RID: 100529 RVA: 0x00389AA8 File Offset: 0x00387CA8
+		// Token: 0x06019F79 RID: 106361 RVA: 0x003B4064 File Offset: 0x003B2264
 		public static void Add_Name(FlatBufferBuilder builder, StringOffset _NameOffset)
 		{
 			builder.AddOffset(6, _NameOffset.Value, 0);
 		}
 
-		// Token: 0x060188B2 RID: 100530 RVA: 0x00389AB8 File Offset: 0x00387CB8
+		// Token: 0x06019F7A RID: 106362 RVA: 0x003B4074 File Offset: 0x003B2274
 		public static void Add_Path(FlatBufferBuilder builder, StringOffset _PathOffset)
 		{
 			builder.AddOffset(7, _PathOffset.Value, 0);
 		}
 
-		// Token: 0x060188B3 RID: 100531 RVA: 0x00389AC8 File Offset: 0x00387CC8
+		// Token: 0x06019F7B RID: 106363 RVA: 0x003B4084 File Offset: 0x003B2284
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x060188B4 RID: 100532 RVA: 0x00389AD3 File Offset: 0x00387CD3
+		// Token: 0x06019F7C RID: 106364 RVA: 0x003B408F File Offset: 0x003B228F
 		public static Offset<ISubBehaviorTreeFile> EndISubBehaviorTreeFile(FlatBufferBuilder builder)
 		{
 			return new Offset<ISubBehaviorTreeFile>(builder.EndTable());
 		}
 
-		// Token: 0x060188B5 RID: 100533 RVA: 0x00389AE0 File Offset: 0x00387CE0
+		// Token: 0x06019F7D RID: 106365 RVA: 0x003B409C File Offset: 0x003B229C
 		public ISubBehaviorTreeFileT UnPack()
 		{
 			ISubBehaviorTreeFileT subBehaviorTreeFileT = new ISubBehaviorTreeFileT();
@@ -465,7 +465,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return subBehaviorTreeFileT;
 		}
 
-		// Token: 0x060188B6 RID: 100534 RVA: 0x00389AFC File Offset: 0x00387CFC
+		// Token: 0x06019F7E RID: 106366 RVA: 0x003B40B8 File Offset: 0x003B22B8
 		public void UnPackTo(ISubBehaviorTreeFileT _o)
 		{
 			_o.Id = this.Id;
@@ -491,7 +491,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060188B7 RID: 100535 RVA: 0x00389C04 File Offset: 0x00387E04
+		// Token: 0x06019F7F RID: 106367 RVA: 0x003B41C0 File Offset: 0x003B23C0
 		public static Offset<ISubBehaviorTreeFile> Pack(FlatBufferBuilder builder, ISubBehaviorTreeFileT _o)
 		{
 			if (_o == null)
@@ -535,7 +535,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISubBehaviorTreeFile.CreateISubBehaviorTreeFile(builder, _o.Id, parentUidOffset, treeOffset, childrenOffset, referenceOffset, weakReferenceOffset, nameOffset, pathOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400BD5D RID: 48477
+		// Token: 0x0400C74B RID: 51019
 		private Table __p;
 	}
 }

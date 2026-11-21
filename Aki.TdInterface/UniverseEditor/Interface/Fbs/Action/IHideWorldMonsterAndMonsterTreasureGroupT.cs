@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006916 RID: 26902
+	// Token: 0x02006FC9 RID: 28617
 	public class IHideWorldMonsterAndMonsterTreasureGroupT
 	{
-		// Token: 0x1700C7A0 RID: 51104
-		// (get) Token: 0x0602EF74 RID: 192372 RVA: 0x006679D7 File Offset: 0x00665BD7
-		// (set) Token: 0x0602EF75 RID: 192373 RVA: 0x006679DF File Offset: 0x00665BDF
+		// Token: 0x1700D1A3 RID: 53667
+		// (get) Token: 0x06031944 RID: 203076 RVA: 0x006B7EBF File Offset: 0x006B60BF
+		// (set) Token: 0x06031945 RID: 203077 RVA: 0x006B7EC7 File Offset: 0x006B60C7
 		public EHideType Type { get; set; }
 
-		// Token: 0x1700C7A1 RID: 51105
-		// (get) Token: 0x0602EF76 RID: 192374 RVA: 0x006679E8 File Offset: 0x00665BE8
-		// (set) Token: 0x0602EF77 RID: 192375 RVA: 0x006679F0 File Offset: 0x00665BF0
+		// Token: 0x1700D1A4 RID: 53668
+		// (get) Token: 0x06031946 RID: 203078 RVA: 0x006B7ED0 File Offset: 0x006B60D0
+		// (set) Token: 0x06031947 RID: 203079 RVA: 0x006B7ED8 File Offset: 0x006B60D8
 		public List<int> HideRangeEntities { get; set; }
 
-		// Token: 0x0602EF78 RID: 192376 RVA: 0x006679F9 File Offset: 0x00665BF9
+		// Token: 0x06031948 RID: 203080 RVA: 0x006B7EE1 File Offset: 0x006B60E1
 		public IHideWorldMonsterAndMonsterTreasureGroupT()
 		{
 			this.Type = EHideType.WorldMonsterAndMonsterTreasure;

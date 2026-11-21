@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E7 RID: 29159
+	// Token: 0x0200629C RID: 25244
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemManipulableDropState : SceneItemManipulableBaseState
 	{
-		// Token: 0x060475EC RID: 292332 RVA: 0x01226AEA File Offset: 0x01224CEA
+		// Token: 0x0603CEEE RID: 249582 RVA: 0x01180922 File Offset: 0x0117EB22
 		public SceneItemManipulableDropState(SceneItemManipulatableComponent sceneItem) : base(sceneItem)
 		{
 		}
 
-		// Token: 0x060475ED RID: 292333 RVA: 0x01226AF4 File Offset: 0x01224CF4
+		// Token: 0x0603CEEF RID: 249583 RVA: 0x0118092C File Offset: 0x0117EB2C
 		[NullableContext(2)]
 		private void HitCallbackWrapper(AActor selfActor, AActor otherActor, FVector normalImpulse, [Nullable(1)] FHitResult hit)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475EE RID: 292334 RVA: 0x01226B4E File Offset: 0x01224D4E
+		// Token: 0x0603CEF0 RID: 249584 RVA: 0x01180986 File Offset: 0x0117EB86
 		public void SetHitCallback([Nullable(new byte[]
 		{
 			1,
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.HitCallback = callback;
 		}
 
-		// Token: 0x060475EF RID: 292335 RVA: 0x01226B57 File Offset: 0x01224D57
+		// Token: 0x0603CEF1 RID: 249585 RVA: 0x0118098F File Offset: 0x0117EB8F
 		[NullableContext(2)]
 		public void SetEnterCallback(Action callback)
 		{
 			this.EnterCallback = callback;
 		}
 
-		// Token: 0x060475F0 RID: 292336 RVA: 0x01226B60 File Offset: 0x01224D60
+		// Token: 0x0603CEF2 RID: 249586 RVA: 0x01180998 File Offset: 0x0117EB98
 		protected override void OnEnter()
 		{
 			this.SceneItem.ForceMoving = true;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475F1 RID: 292337 RVA: 0x01226C6C File Offset: 0x01224E6C
+		// Token: 0x0603CEF3 RID: 249587 RVA: 0x01180AA4 File Offset: 0x0117ECA4
 		private void SetLinearVelocity(UPrimitiveComponent primitiveComp, IThrowMotionFreeFall config)
 		{
 			VectorInfo vectorInfo = (config != null) ? config.Velocity : null;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			primitiveComp.SetPhysicsLinearVelocity(global::Vector.Create((double)vectorInfo.X.GetValueOrDefault(), (double)vectorInfo.Y.GetValueOrDefault(), (double)vectorInfo.Z.GetValueOrDefault()).ToUeVectorOld(), false, default(FName));
 		}
 
-		// Token: 0x060475F2 RID: 292338 RVA: 0x01226CD4 File Offset: 0x01224ED4
+		// Token: 0x0603CEF4 RID: 249588 RVA: 0x01180B0C File Offset: 0x0117ED0C
 		private void SetAngularVelocity(UPrimitiveComponent primitiveComp, IThrowMotionFreeFall config)
 		{
 			IAngularVelocityConfig angularVelocityConfig = (config != null) ? config.AngularVelocity : null;
@@ -116,17 +116,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			primitiveComp.SetPhysicsAngularVelocity(vector.ToUeVectorOld(), false, default(FName));
 		}
 
-		// Token: 0x060475F3 RID: 292339 RVA: 0x01226DB6 File Offset: 0x01224FB6
+		// Token: 0x0603CEF5 RID: 249589 RVA: 0x01180BEE File Offset: 0x0117EDEE
 		protected override void OnExit()
 		{
 			this.SceneItem.ForceMoving = false;
 			this.SceneItem.ActorComp.Owner.OnActorHit.Clear();
 		}
 
-		// Token: 0x04025871 RID: 153713
+		// Token: 0x040204E0 RID: 132320
 		protected bool HitCallbackFlag;
 
-		// Token: 0x04025872 RID: 153714
+		// Token: 0x040204E1 RID: 132321
 		[Nullable(new byte[]
 		{
 			2,

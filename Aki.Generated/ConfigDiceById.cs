@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000207 RID: 519
+	// Token: 0x02000219 RID: 537
 	public class ConfigDiceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C2D RID: 3117 RVA: 0x0009E7A3 File Offset: 0x0009C9A3
+		// Token: 0x06000C99 RID: 3225 RVA: 0x000A46DB File Offset: 0x000A28DB
 		static ConfigDiceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDiceById.CreateStaticDefaultValue), new Action(ConfigDiceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C2E RID: 3118 RVA: 0x0009E7C4 File Offset: 0x0009C9C4
+		// Token: 0x06000C9A RID: 3226 RVA: 0x000A46FC File Offset: 0x000A28FC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDiceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C2F RID: 3119 RVA: 0x0009E843 File Offset: 0x0009CA43
+		// Token: 0x06000C9B RID: 3227 RVA: 0x000A477B File Offset: 0x000A297B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDiceById.LogPair = null;
 			ConfigDiceById.HandleId = 0;
 		}
 
-		// Token: 0x06000C30 RID: 3120 RVA: 0x0009E851 File Offset: 0x0009CA51
+		// Token: 0x06000C9C RID: 3228 RVA: 0x000A4789 File Offset: 0x000A2989
 		public static void Init()
 		{
 			ConfigDiceById.HandleId = ConfigCommon.InitDataStatement(ConfigDiceById.HandleId, "db_dango.db", "select BinData from `Dice` where Id=?");
 		}
 
-		// Token: 0x06000C31 RID: 3121 RVA: 0x0009E86C File Offset: 0x0009CA6C
+		// Token: 0x06000C9D RID: 3229 RVA: 0x000A47A4 File Offset: 0x000A29A4
 		public static Dice? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDiceById.HandleId, ConfigDiceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Dice?(rootAsDice);
 		}
 
-		// Token: 0x04000E15 RID: 3605
+		// Token: 0x04000E93 RID: 3731
 		private const string DB = "db_dango.db";
 
-		// Token: 0x04000E16 RID: 3606
+		// Token: 0x04000E94 RID: 3732
 		private const string FILE = "t.团子.xlsx";
 
-		// Token: 0x04000E17 RID: 3607
+		// Token: 0x04000E95 RID: 3733
 		private const string TABLE = "Dice";
 
-		// Token: 0x04000E18 RID: 3608
+		// Token: 0x04000E96 RID: 3734
 		private const string COMMAND = "select BinData from `Dice` where Id=?";
 
-		// Token: 0x04000E19 RID: 3609
+		// Token: 0x04000E97 RID: 3735
 		private const string KEY_PREFIX = "DiceById";
 
-		// Token: 0x04000E1A RID: 3610
+		// Token: 0x04000E98 RID: 3736
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E1B RID: 3611
+		// Token: 0x04000E99 RID: 3737
 		private static int HandleId;
 	}
 }

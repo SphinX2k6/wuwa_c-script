@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C0E RID: 23566
+	// Token: 0x02004BEE RID: 19438
 	public class BossPilingKeyBuffFloatView : UiViewBase
 	{
-		// Token: 0x0603B8D0 RID: 243920 RVA: 0x00E32B79 File Offset: 0x00E30D79
+		// Token: 0x0603081B RID: 198683 RVA: 0x00D82EB9 File Offset: 0x00D810B9
 		[NullableContext(1)]
 		public BossPilingKeyBuffFloatView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B8D1 RID: 243921 RVA: 0x00E32B84 File Offset: 0x00E30D84
+		// Token: 0x0603081C RID: 198684 RVA: 0x00D82EC4 File Offset: 0x00D810C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B8D2 RID: 243922 RVA: 0x00E32BED File Offset: 0x00E30DED
+		// Token: 0x0603081D RID: 198685 RVA: 0x00D82F2D File Offset: 0x00D8112D
 		protected override void OnStart()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.RefreshBuffInfo();
 		}
 
-		// Token: 0x0603B8D3 RID: 243923 RVA: 0x00E32C1C File Offset: 0x00E30E1C
+		// Token: 0x0603081E RID: 198686 RVA: 0x00D82F5C File Offset: 0x00D8115C
 		protected bool RefreshBuffInfo()
 		{
 			if (BossPilingModel.Instance.InstKeyBuffList.Count == 0)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return true;
 		}
 
-		// Token: 0x0603B8D4 RID: 243924 RVA: 0x00E32CB0 File Offset: 0x00E30EB0
+		// Token: 0x0603081F RID: 198687 RVA: 0x00D82FF0 File Offset: 0x00D811F0
 		[NullableContext(1)]
 		private void OnStartAnimEnd(string _)
 		{
@@ -77,12 +77,12 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			}
 		}
 
-		// Token: 0x0200BDED RID: 48621
+		// Token: 0x0200A7F5 RID: 42997
 		private enum EDefine
 		{
-			// Token: 0x04039439 RID: 234553
+			// Token: 0x04033DFC RID: 212476
 			Tex,
-			// Token: 0x0403943A RID: 234554
+			// Token: 0x04033DFD RID: 212477
 			Txt
 		}
 	}

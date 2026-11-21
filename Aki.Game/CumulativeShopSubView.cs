@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001203 RID: 4611
+// Token: 0x020006B7 RID: 1719
 [NullableContext(1)]
 [Nullable(0)]
 public class CumulativeShopSubView : ActivitySubViewBase
 {
-	// Token: 0x06007B6B RID: 31595 RVA: 0x001A0568 File Offset: 0x0019E768
+	// Token: 0x06004F01 RID: 20225 RVA: 0x001A9220 File Offset: 0x001A7420
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,13 +31,13 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06007B6C RID: 31596 RVA: 0x001A065D File Offset: 0x0019E85D
+	// Token: 0x06004F02 RID: 20226 RVA: 0x001A9315 File Offset: 0x001A7515
 	protected override void OnSetData()
 	{
 		this.CumulativeShopData = (this.ActivityBaseData as CumulativeShopData);
 	}
 
-	// Token: 0x06007B6D RID: 31597 RVA: 0x001A0670 File Offset: 0x0019E870
+	// Token: 0x06004F03 RID: 20227 RVA: 0x001A9328 File Offset: 0x001A7528
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CumulativeShopSubView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007B6E RID: 31598 RVA: 0x001A06B4 File Offset: 0x0019E8B4
+	// Token: 0x06004F04 RID: 20228 RVA: 0x001A936C File Offset: 0x001A756C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
@@ -56,7 +56,7 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		EventSystem.Instance.Add(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x06007B6F RID: 31599 RVA: 0x001A0718 File Offset: 0x0019E918
+	// Token: 0x06004F05 RID: 20229 RVA: 0x001A93D0 File Offset: 0x001A75D0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GoodsSoldOut, new Action<int>(this.OnGoodsSoldOut));
@@ -64,7 +64,7 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		EventSystem.Instance.Remove(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x06007B70 RID: 31600 RVA: 0x001A077C File Offset: 0x0019E97C
+	// Token: 0x06004F06 RID: 20230 RVA: 0x001A9434 File Offset: 0x001A7634
 	protected override void OnStart()
 	{
 		this.RemainTimeText = (TextConfig.Instance.GetMultiTextByKey("LeiXiao_GetScore_prompt") ?? "");
@@ -79,7 +79,7 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		this.RefreshBottomShow();
 	}
 
-	// Token: 0x06007B71 RID: 31601 RVA: 0x001A0850 File Offset: 0x0019EA50
+	// Token: 0x06004F07 RID: 20231 RVA: 0x001A9508 File Offset: 0x001A7708
 	protected override void OnRefreshView()
 	{
 		CumulativeShopData cumulativeShopData = this.CumulativeShopData;
@@ -100,13 +100,13 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, "LeiXiao_AllScore", new <>z__ReadOnlySingleElementList<object>(num2));
 	}
 
-	// Token: 0x06007B72 RID: 31602 RVA: 0x001A08E7 File Offset: 0x0019EAE7
+	// Token: 0x06004F08 RID: 20232 RVA: 0x001A959F File Offset: 0x001A779F
 	protected override void OnAfterShow()
 	{
 		this.AddTimer();
 	}
 
-	// Token: 0x06007B73 RID: 31603 RVA: 0x001A08EF File Offset: 0x0019EAEF
+	// Token: 0x06004F09 RID: 20233 RVA: 0x001A95A7 File Offset: 0x001A77A7
 	private void OnClickTaskBtn()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -115,13 +115,13 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06007B74 RID: 31604 RVA: 0x001A0920 File Offset: 0x0019EB20
+	// Token: 0x06004F0A RID: 20234 RVA: 0x001A95D8 File Offset: 0x001A77D8
 	private PayShopItem InitItem()
 	{
 		return new PayShopItem();
 	}
 
-	// Token: 0x06007B75 RID: 31605 RVA: 0x001A0928 File Offset: 0x0019EB28
+	// Token: 0x06004F0B RID: 20235 RVA: 0x001A95E0 File Offset: 0x001A77E0
 	protected void RefreshLoopScroll()
 	{
 		CumulativeShopData cumulativeShopData = this.CumulativeShopData;
@@ -131,13 +131,13 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		this.LoopScrollView.GetUiAnimController().Play("", -1, false);
 	}
 
-	// Token: 0x06007B76 RID: 31606 RVA: 0x001A099B File Offset: 0x0019EB9B
+	// Token: 0x06004F0C RID: 20236 RVA: 0x001A9653 File Offset: 0x001A7853
 	protected IPayShopUnionData GetProxyData(int gridIndex)
 	{
 		return this.PayShopGoodsList[gridIndex];
 	}
 
-	// Token: 0x06007B77 RID: 31607 RVA: 0x001A09A9 File Offset: 0x0019EBA9
+	// Token: 0x06004F0D RID: 20237 RVA: 0x001A9661 File Offset: 0x001A7861
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		if (shopId == PayShopDefine.EPayShopTabType.CumulativeShop)
@@ -146,19 +146,19 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007B78 RID: 31608 RVA: 0x001A09BE File Offset: 0x0019EBBE
+	// Token: 0x06004F0E RID: 20238 RVA: 0x001A9676 File Offset: 0x001A7876
 	private void OnGoodsSoldOut(int goodsId)
 	{
 		this.RefreshLoopScroll();
 	}
 
-	// Token: 0x06007B79 RID: 31609 RVA: 0x001A09C6 File Offset: 0x0019EBC6
+	// Token: 0x06004F0F RID: 20239 RVA: 0x001A967E File Offset: 0x001A787E
 	private void OnShopVersionCodeChange()
 	{
 		ActivityController.Instance.ShowActivityRefreshAndBackToBattleView();
 	}
 
-	// Token: 0x06007B7A RID: 31610 RVA: 0x001A09D2 File Offset: 0x0019EBD2
+	// Token: 0x06004F10 RID: 20240 RVA: 0x001A968A File Offset: 0x001A788A
 	private void AddTimer()
 	{
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(delegate(float delta)
@@ -168,7 +168,7 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06007B7B RID: 31611 RVA: 0x001A09FD File Offset: 0x0019EBFD
+	// Token: 0x06004F11 RID: 20241 RVA: 0x001A96B5 File Offset: 0x001A78B5
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -178,13 +178,13 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007B7C RID: 31612 RVA: 0x001A0A1F File Offset: 0x0019EC1F
+	// Token: 0x06004F12 RID: 20242 RVA: 0x001A96D7 File Offset: 0x001A78D7
 	protected override void OnBeforeHide()
 	{
 		this.RemoveTimer();
 	}
 
-	// Token: 0x06007B7D RID: 31613 RVA: 0x001A0A28 File Offset: 0x0019EC28
+	// Token: 0x06004F13 RID: 20243 RVA: 0x001A96E0 File Offset: 0x001A78E0
 	private void OnRefreshTimer()
 	{
 		this.TitleComponent.SetTimeTextVisible(true);
@@ -193,7 +193,7 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		EventSystem.Instance.Emit(EEventName.DiscountShopTimerRefresh);
 	}
 
-	// Token: 0x06007B7E RID: 31614 RVA: 0x001A0A84 File Offset: 0x0019EC84
+	// Token: 0x06004F14 RID: 20244 RVA: 0x001A973C File Offset: 0x001A793C
 	private void RefreshBottomShow()
 	{
 		long endOpenTime = this.CumulativeShopData.EndOpenTime;
@@ -207,29 +207,29 @@ public class CumulativeShopSubView : ActivitySubViewBase
 		base.GetText(9).SetText(remainTimeText, true);
 	}
 
-	// Token: 0x06007B7F RID: 31615 RVA: 0x001A0AFC File Offset: 0x0019ECFC
+	// Token: 0x06004F15 RID: 20245 RVA: 0x001A97B4 File Offset: 0x001A79B4
 	private void RefreshRedDot()
 	{
 		bool anyTaskRedDot = this.CumulativeShopData.GetAnyTaskRedDot();
 		this.BottomComponent.SetFunctionRedDotVisible(anyTaskRedDot);
 	}
 
-	// Token: 0x04003878 RID: 14456
+	// Token: 0x04003911 RID: 14609
 	private const int TIMEGAP = 1000;
 
-	// Token: 0x04003879 RID: 14457
+	// Token: 0x04003912 RID: 14610
 	[Nullable(2)]
 	private CumulativeShopData CumulativeShopData;
 
-	// Token: 0x0400387A RID: 14458
+	// Token: 0x04003913 RID: 14611
 	[Nullable(2)]
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x0400387B RID: 14459
+	// Token: 0x04003914 RID: 14612
 	[Nullable(2)]
 	private ActivityFunctionalTypeA BottomComponent;
 
-	// Token: 0x0400387C RID: 14460
+	// Token: 0x04003915 RID: 14613
 	[Nullable(new byte[]
 	{
 		2,
@@ -238,16 +238,16 @@ public class CumulativeShopSubView : ActivitySubViewBase
 	})]
 	private LoopScrollView<PayShopItem, IPayShopUnionData> LoopScrollView;
 
-	// Token: 0x0400387D RID: 14461
+	// Token: 0x04003916 RID: 14614
 	protected List<IPayShopUnionData> PayShopGoodsList = new List<IPayShopUnionData>();
 
-	// Token: 0x0400387E RID: 14462
+	// Token: 0x04003917 RID: 14615
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x0400387F RID: 14463
+	// Token: 0x04003918 RID: 14616
 	private string RemainTimeText = "";
 
-	// Token: 0x04003880 RID: 14464
+	// Token: 0x04003919 RID: 14617
 	private string TitleRemainTimeText = "";
 }

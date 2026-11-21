@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002896 RID: 10390
+// Token: 0x02001E11 RID: 7697
 public class StrengthUpgradeBarItem : UiPanelBase
 {
-	// Token: 0x06015646 RID: 87622 RVA: 0x00564B45 File Offset: 0x00562D45
+	// Token: 0x06013044 RID: 77892 RVA: 0x0058F8A1 File Offset: 0x0058DAA1
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,14 +17,14 @@ public class StrengthUpgradeBarItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015647 RID: 87623 RVA: 0x00564B7E File Offset: 0x00562D7E
+	// Token: 0x06013045 RID: 77893 RVA: 0x0058F8DA File Offset: 0x0058DADA
 	protected override void OnStart()
 	{
 		this.LineItemList = new List<UUIItem>();
 		this.LineItemList.Add(base.GetItem(1));
 	}
 
-	// Token: 0x06015648 RID: 87624 RVA: 0x00564B9D File Offset: 0x00562D9D
+	// Token: 0x06013046 RID: 77894 RVA: 0x0058F8F9 File Offset: 0x0058DAF9
 	[NullableContext(1)]
 	public void Update(IStrengthUpgradeData data)
 	{
@@ -32,7 +32,7 @@ public class StrengthUpgradeBarItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x06015649 RID: 87625 RVA: 0x00564BAC File Offset: 0x00562DAC
+	// Token: 0x06013047 RID: 77895 RVA: 0x0058F908 File Offset: 0x0058DB08
 	public void Refresh()
 	{
 		if (this.Data == null)
@@ -46,7 +46,7 @@ public class StrengthUpgradeBarItem : UiPanelBase
 		base.GetSprite(0).SetFillAmount(1f / (float)num);
 	}
 
-	// Token: 0x0601564A RID: 87626 RVA: 0x00564C0C File Offset: 0x00562E0C
+	// Token: 0x06013048 RID: 77896 RVA: 0x0058F968 File Offset: 0x0058DB68
 	private void RefreshLineItem(int count)
 	{
 		if (this.LineItemList == null)
@@ -70,11 +70,11 @@ public class StrengthUpgradeBarItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009FC8 RID: 40904
+	// Token: 0x0400A3B1 RID: 41905
 	[Nullable(2)]
 	private IStrengthUpgradeData Data;
 
-	// Token: 0x04009FC9 RID: 40905
+	// Token: 0x0400A3B2 RID: 41906
 	[Nullable(new byte[]
 	{
 		2,
@@ -82,6 +82,6 @@ public class StrengthUpgradeBarItem : UiPanelBase
 	})]
 	private List<UUIItem> LineItemList;
 
-	// Token: 0x04009FCA RID: 40906
+	// Token: 0x0400A3B3 RID: 41907
 	private FRotator RotationCache = new FRotator(0f, 0f, 0f);
 }

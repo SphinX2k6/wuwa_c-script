@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.Common.Proxy
 {
-	// Token: 0x02000026 RID: 38
+	// Token: 0x02000027 RID: 39
 	public class Stat
 	{
-		// Token: 0x060000FB RID: 251 RVA: 0x0000B415 File Offset: 0x00009615
+		// Token: 0x06000168 RID: 360 RVA: 0x0000EBE1 File Offset: 0x0000CDE1
 		[NullableContext(1)]
 		public static IStat CreateNoFlameGraph(string name, string desc = "", string group = "")
 		{
@@ -18,7 +18,7 @@ namespace Aki.Common.Proxy
 			return createNoFlameGraphFunc(name, desc, group);
 		}
 
-		// Token: 0x04000237 RID: 567
+		// Token: 0x0400023C RID: 572
 		[Nullable(new byte[]
 		{
 			2,

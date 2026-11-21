@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A9F RID: 19103
+	// Token: 0x02004F6E RID: 20334
 	public struct ICheckIsTargetHoldElementalBox : IFlatbufferObject
 	{
-		// Token: 0x17008A69 RID: 35433
-		// (get) Token: 0x0601DF7A RID: 122746 RVA: 0x00435112 File Offset: 0x00433312
+		// Token: 0x17009156 RID: 37206
+		// (get) Token: 0x0601FA63 RID: 129635 RVA: 0x00466932 File Offset: 0x00464B32
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF7B RID: 122747 RVA: 0x0043511F File Offset: 0x0043331F
+		// Token: 0x0601FA64 RID: 129636 RVA: 0x0046693F File Offset: 0x00464B3F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DF7C RID: 122748 RVA: 0x00435128 File Offset: 0x00433328
+		// Token: 0x0601FA65 RID: 129637 RVA: 0x00466948 File Offset: 0x00464B48
 		public static ICheckIsTargetHoldElementalBox GetRootAsICheckIsTargetHoldElementalBox(ByteBuffer _bb)
 		{
 			return ICheckIsTargetHoldElementalBox.GetRootAsICheckIsTargetHoldElementalBox(_bb, default(ICheckIsTargetHoldElementalBox));
 		}
 
-		// Token: 0x0601DF7D RID: 122749 RVA: 0x00435144 File Offset: 0x00433344
+		// Token: 0x0601FA66 RID: 129638 RVA: 0x00466964 File Offset: 0x00464B64
 		public static ICheckIsTargetHoldElementalBox GetRootAsICheckIsTargetHoldElementalBox(ByteBuffer _bb, ICheckIsTargetHoldElementalBox obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DF7E RID: 122750 RVA: 0x00435161 File Offset: 0x00433361
+		// Token: 0x0601FA67 RID: 129639 RVA: 0x00466981 File Offset: 0x00464B81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DF7F RID: 122751 RVA: 0x00435170 File Offset: 0x00433370
+		// Token: 0x0601FA68 RID: 129640 RVA: 0x00466990 File Offset: 0x00464B90
 		public ICheckIsTargetHoldElementalBox __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A6A RID: 35434
-		// (get) Token: 0x0601DF80 RID: 122752 RVA: 0x00435180 File Offset: 0x00433380
+		// Token: 0x17009157 RID: 37207
+		// (get) Token: 0x0601FA69 RID: 129641 RVA: 0x004669A0 File Offset: 0x00464BA0
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A6B RID: 35435
-		// (get) Token: 0x0601DF81 RID: 122753 RVA: 0x004351BC File Offset: 0x004333BC
+		// Token: 0x17009158 RID: 37208
+		// (get) Token: 0x0601FA6A RID: 129642 RVA: 0x004669DC File Offset: 0x00464BDC
 		public TTargetEntity TargetType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF82 RID: 122754 RVA: 0x004351F8 File Offset: 0x004333F8
+		// Token: 0x0601FA6B RID: 129643 RVA: 0x00466A18 File Offset: 0x00464C18
 		public TTable? Target<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,32 +89,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601DF83 RID: 122755 RVA: 0x0043523C File Offset: 0x0043343C
+		// Token: 0x0601FA6C RID: 129644 RVA: 0x00466A5C File Offset: 0x00464C5C
 		public IPlayerEntity TargetAsIPlayerEntity()
 		{
 			return this.Target<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0601DF84 RID: 122756 RVA: 0x00435258 File Offset: 0x00433458
+		// Token: 0x0601FA6D RID: 129645 RVA: 0x00466A78 File Offset: 0x00464C78
 		public ISelfEntity TargetAsISelfEntity()
 		{
 			return this.Target<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0601DF85 RID: 122757 RVA: 0x00435274 File Offset: 0x00433474
+		// Token: 0x0601FA6E RID: 129646 RVA: 0x00466A94 File Offset: 0x00464C94
 		public ITargetEntity TargetAsITargetEntity()
 		{
 			return this.Target<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0601DF86 RID: 122758 RVA: 0x00435290 File Offset: 0x00433490
+		// Token: 0x0601FA6F RID: 129647 RVA: 0x00466AB0 File Offset: 0x00464CB0
 		public ITriggeredEntity TargetAsITriggeredEntity()
 		{
 			return this.Target<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x17008A6C RID: 35436
-		// (get) Token: 0x0601DF87 RID: 122759 RVA: 0x004352AC File Offset: 0x004334AC
+		// Token: 0x17009159 RID: 37209
+		// (get) Token: 0x0601FA70 RID: 129648 RVA: 0x00466ACC File Offset: 0x00464CCC
 		public bool IsHolding
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A6D RID: 35437
-		// (get) Token: 0x0601DF88 RID: 122760 RVA: 0x004352EC File Offset: 0x004334EC
+		// Token: 0x1700915A RID: 37210
+		// (get) Token: 0x0601FA71 RID: 129649 RVA: 0x00466B0C File Offset: 0x00464D0C
 		public EElementalType TargetElementalType
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A6E RID: 35438
-		// (get) Token: 0x0601DF89 RID: 122761 RVA: 0x0043532C File Offset: 0x0043352C
+		// Token: 0x1700915B RID: 37211
+		// (get) Token: 0x0601FA72 RID: 129650 RVA: 0x00466B4C File Offset: 0x00464D4C
 		public int ElementalBoxId
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A6F RID: 35439
-		// (get) Token: 0x0601DF8A RID: 122762 RVA: 0x0043536C File Offset: 0x0043356C
+		// Token: 0x1700915C RID: 37212
+		// (get) Token: 0x0601FA73 RID: 129651 RVA: 0x00466B8C File Offset: 0x00464D8C
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF8B RID: 122763 RVA: 0x004353AC File Offset: 0x004335AC
+		// Token: 0x0601FA74 RID: 129652 RVA: 0x00466BCC File Offset: 0x00464DCC
 		public static Offset<ICheckIsTargetHoldElementalBox> CreateICheckIsTargetHoldElementalBox(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TTargetEntity Target_type = TTargetEntity.NONE, int TargetOffset = 0, bool IsHolding = false, EElementalType TargetElementalType = EElementalType.Fire, int ElementalBoxId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -183,61 +183,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsTargetHoldElementalBox.EndICheckIsTargetHoldElementalBox(builder);
 		}
 
-		// Token: 0x0601DF8C RID: 122764 RVA: 0x004353FB File Offset: 0x004335FB
+		// Token: 0x0601FA75 RID: 129653 RVA: 0x00466C1B File Offset: 0x00464E1B
 		public static void StartICheckIsTargetHoldElementalBox(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0601DF8D RID: 122765 RVA: 0x00435404 File Offset: 0x00433604
+		// Token: 0x0601FA76 RID: 129654 RVA: 0x00466C24 File Offset: 0x00464E24
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DF8E RID: 122766 RVA: 0x0043540F File Offset: 0x0043360F
+		// Token: 0x0601FA77 RID: 129655 RVA: 0x00466C2F File Offset: 0x00464E2F
 		public static void AddTargetType(FlatBufferBuilder builder, TTargetEntity targetType)
 		{
 			builder.AddByte(1, (byte)targetType, 0);
 		}
 
-		// Token: 0x0601DF8F RID: 122767 RVA: 0x0043541A File Offset: 0x0043361A
+		// Token: 0x0601FA78 RID: 129656 RVA: 0x00466C3A File Offset: 0x00464E3A
 		public static void AddTarget(FlatBufferBuilder builder, int targetOffset)
 		{
 			builder.AddOffset(2, targetOffset, 0);
 		}
 
-		// Token: 0x0601DF90 RID: 122768 RVA: 0x00435425 File Offset: 0x00433625
+		// Token: 0x0601FA79 RID: 129657 RVA: 0x00466C45 File Offset: 0x00464E45
 		public static void AddIsHolding(FlatBufferBuilder builder, bool isHolding)
 		{
 			builder.AddBool(3, isHolding, false);
 		}
 
-		// Token: 0x0601DF91 RID: 122769 RVA: 0x00435430 File Offset: 0x00433630
+		// Token: 0x0601FA7A RID: 129658 RVA: 0x00466C50 File Offset: 0x00464E50
 		public static void AddTargetElementalType(FlatBufferBuilder builder, EElementalType targetElementalType)
 		{
 			builder.AddByte(4, (byte)targetElementalType, 0);
 		}
 
-		// Token: 0x0601DF92 RID: 122770 RVA: 0x0043543B File Offset: 0x0043363B
+		// Token: 0x0601FA7B RID: 129659 RVA: 0x00466C5B File Offset: 0x00464E5B
 		public static void AddElementalBoxId(FlatBufferBuilder builder, int elementalBoxId)
 		{
 			builder.AddInt(5, elementalBoxId, 0);
 		}
 
-		// Token: 0x0601DF93 RID: 122771 RVA: 0x00435446 File Offset: 0x00433646
+		// Token: 0x0601FA7C RID: 129660 RVA: 0x00466C66 File Offset: 0x00464E66
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x0601DF94 RID: 122772 RVA: 0x00435451 File Offset: 0x00433651
+		// Token: 0x0601FA7D RID: 129661 RVA: 0x00466C71 File Offset: 0x00464E71
 		public static Offset<ICheckIsTargetHoldElementalBox> EndICheckIsTargetHoldElementalBox(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsTargetHoldElementalBox>(builder.EndTable());
 		}
 
-		// Token: 0x0601DF95 RID: 122773 RVA: 0x00435460 File Offset: 0x00433660
+		// Token: 0x0601FA7E RID: 129662 RVA: 0x00466C80 File Offset: 0x00464E80
 		public ICheckIsTargetHoldElementalBoxT UnPack()
 		{
 			ICheckIsTargetHoldElementalBoxT checkIsTargetHoldElementalBoxT = new ICheckIsTargetHoldElementalBoxT();
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsTargetHoldElementalBoxT;
 		}
 
-		// Token: 0x0601DF96 RID: 122774 RVA: 0x0043547C File Offset: 0x0043367C
+		// Token: 0x0601FA7F RID: 129663 RVA: 0x00466C9C File Offset: 0x00464E9C
 		public void UnPackTo(ICheckIsTargetHoldElementalBoxT _o)
 		{
 			_o.Type = this.Type;
@@ -272,7 +272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601DF97 RID: 122775 RVA: 0x004355E8 File Offset: 0x004337E8
+		// Token: 0x0601FA80 RID: 129664 RVA: 0x00466E08 File Offset: 0x00465008
 		public static Offset<ICheckIsTargetHoldElementalBox> Pack(FlatBufferBuilder builder, ICheckIsTargetHoldElementalBoxT _o)
 		{
 			if (_o == null)
@@ -284,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsTargetHoldElementalBox.CreateICheckIsTargetHoldElementalBox(builder, _o.Type, target_type, targetOffset, _o.IsHolding, _o.TargetElementalType, _o.ElementalBoxId, _o.NullMask);
 		}
 
-		// Token: 0x0400D312 RID: 54034
+		// Token: 0x0400DDF7 RID: 56823
 		private Table __p;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F0E RID: 24334
+	// Token: 0x02006551 RID: 25937
 	public enum EActorVisibilityPlayMode : byte
 	{
-		// Token: 0x0400FBD7 RID: 64471
+		// Token: 0x0401094A RID: 67914
 		FadeIn,
-		// Token: 0x0400FBD8 RID: 64472
+		// Token: 0x0401094B RID: 67915
 		FadeOut
 	}
 }

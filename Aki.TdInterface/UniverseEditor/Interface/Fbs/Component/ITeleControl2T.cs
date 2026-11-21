@@ -4,65 +4,65 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A3B RID: 23099
+	// Token: 0x02006048 RID: 24648
 	public class ITeleControl2T
 	{
-		// Token: 0x1700ADC0 RID: 44480
-		// (get) Token: 0x0602746A RID: 160874 RVA: 0x00567C9D File Offset: 0x00565E9D
-		// (set) Token: 0x0602746B RID: 160875 RVA: 0x00567CA5 File Offset: 0x00565EA5
+		// Token: 0x1700B6F8 RID: 46840
+		// (get) Token: 0x060299E2 RID: 170466 RVA: 0x005AECA9 File Offset: 0x005ACEA9
+		// (set) Token: 0x060299E3 RID: 170467 RVA: 0x005AECB1 File Offset: 0x005ACEB1
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700ADC1 RID: 44481
-		// (get) Token: 0x0602746C RID: 160876 RVA: 0x00567CAE File Offset: 0x00565EAE
-		// (set) Token: 0x0602746D RID: 160877 RVA: 0x00567CB6 File Offset: 0x00565EB6
+		// Token: 0x1700B6F9 RID: 46841
+		// (get) Token: 0x060299E4 RID: 170468 RVA: 0x005AECBA File Offset: 0x005ACEBA
+		// (set) Token: 0x060299E5 RID: 170469 RVA: 0x005AECC2 File Offset: 0x005ACEC2
 		public ITeleControlBaseCfgT BaseCfg { get; set; }
 
-		// Token: 0x1700ADC2 RID: 44482
-		// (get) Token: 0x0602746E RID: 160878 RVA: 0x00567CBF File Offset: 0x00565EBF
-		// (set) Token: 0x0602746F RID: 160879 RVA: 0x00567CC7 File Offset: 0x00565EC7
+		// Token: 0x1700B6FA RID: 46842
+		// (get) Token: 0x060299E6 RID: 170470 RVA: 0x005AECCB File Offset: 0x005ACECB
+		// (set) Token: 0x060299E7 RID: 170471 RVA: 0x005AECD3 File Offset: 0x005ACED3
 		public ISearchTargetCfgT SearchTargetCfg { get; set; }
 
-		// Token: 0x1700ADC3 RID: 44483
-		// (get) Token: 0x06027470 RID: 160880 RVA: 0x00567CD0 File Offset: 0x00565ED0
-		// (set) Token: 0x06027471 RID: 160881 RVA: 0x00567CD8 File Offset: 0x00565ED8
+		// Token: 0x1700B6FB RID: 46843
+		// (get) Token: 0x060299E8 RID: 170472 RVA: 0x005AECDC File Offset: 0x005ACEDC
+		// (set) Token: 0x060299E9 RID: 170473 RVA: 0x005AECE4 File Offset: 0x005ACEE4
 		public IBulletCfgT BulletCfg { get; set; }
 
-		// Token: 0x1700ADC4 RID: 44484
-		// (get) Token: 0x06027472 RID: 160882 RVA: 0x00567CE1 File Offset: 0x00565EE1
-		// (set) Token: 0x06027473 RID: 160883 RVA: 0x00567CE9 File Offset: 0x00565EE9
+		// Token: 0x1700B6FC RID: 46844
+		// (get) Token: 0x060299EA RID: 170474 RVA: 0x005AECED File Offset: 0x005ACEED
+		// (set) Token: 0x060299EB RID: 170475 RVA: 0x005AECF5 File Offset: 0x005ACEF5
 		public IDestroyCfgT DestroyCfg { get; set; }
 
-		// Token: 0x1700ADC5 RID: 44485
-		// (get) Token: 0x06027474 RID: 160884 RVA: 0x00567CF2 File Offset: 0x00565EF2
-		// (set) Token: 0x06027475 RID: 160885 RVA: 0x00567CFA File Offset: 0x00565EFA
+		// Token: 0x1700B6FD RID: 46845
+		// (get) Token: 0x060299EC RID: 170476 RVA: 0x005AECFE File Offset: 0x005ACEFE
+		// (set) Token: 0x060299ED RID: 170477 RVA: 0x005AED06 File Offset: 0x005ACF06
 		public IHoldCfgT HoldCfg { get; set; }
 
-		// Token: 0x1700ADC6 RID: 44486
-		// (get) Token: 0x06027476 RID: 160886 RVA: 0x00567D03 File Offset: 0x00565F03
-		// (set) Token: 0x06027477 RID: 160887 RVA: 0x00567D0B File Offset: 0x00565F0B
+		// Token: 0x1700B6FE RID: 46846
+		// (get) Token: 0x060299EE RID: 170478 RVA: 0x005AED0F File Offset: 0x005ACF0F
+		// (set) Token: 0x060299EF RID: 170479 RVA: 0x005AED17 File Offset: 0x005ACF17
 		public IThrowCfgT ThrowCfg { get; set; }
 
-		// Token: 0x1700ADC7 RID: 44487
-		// (get) Token: 0x06027478 RID: 160888 RVA: 0x00567D14 File Offset: 0x00565F14
-		// (set) Token: 0x06027479 RID: 160889 RVA: 0x00567D1C File Offset: 0x00565F1C
+		// Token: 0x1700B6FF RID: 46847
+		// (get) Token: 0x060299F0 RID: 170480 RVA: 0x005AED20 File Offset: 0x005ACF20
+		// (set) Token: 0x060299F1 RID: 170481 RVA: 0x005AED28 File Offset: 0x005ACF28
 		public int PlayerStateRestritionId { get; set; }
 
-		// Token: 0x1700ADC8 RID: 44488
-		// (get) Token: 0x0602747A RID: 160890 RVA: 0x00567D25 File Offset: 0x00565F25
-		// (set) Token: 0x0602747B RID: 160891 RVA: 0x00567D2D File Offset: 0x00565F2D
+		// Token: 0x1700B700 RID: 46848
+		// (get) Token: 0x060299F2 RID: 170482 RVA: 0x005AED31 File Offset: 0x005ACF31
+		// (set) Token: 0x060299F3 RID: 170483 RVA: 0x005AED39 File Offset: 0x005ACF39
 		public List<TMatchRoleOptionUnion> MatchRoleOption { get; set; }
 
-		// Token: 0x1700ADC9 RID: 44489
-		// (get) Token: 0x0602747C RID: 160892 RVA: 0x00567D36 File Offset: 0x00565F36
-		// (set) Token: 0x0602747D RID: 160893 RVA: 0x00567D3E File Offset: 0x00565F3E
+		// Token: 0x1700B701 RID: 46849
+		// (get) Token: 0x060299F4 RID: 170484 RVA: 0x005AED42 File Offset: 0x005ACF42
+		// (set) Token: 0x060299F5 RID: 170485 RVA: 0x005AED4A File Offset: 0x005ACF4A
 		public TTeleCtrlTriggerConfigUnion TriggerCfg { get; set; }
 
-		// Token: 0x1700ADCA RID: 44490
-		// (get) Token: 0x0602747E RID: 160894 RVA: 0x00567D47 File Offset: 0x00565F47
-		// (set) Token: 0x0602747F RID: 160895 RVA: 0x00567D4F File Offset: 0x00565F4F
+		// Token: 0x1700B702 RID: 46850
+		// (get) Token: 0x060299F6 RID: 170486 RVA: 0x005AED53 File Offset: 0x005ACF53
+		// (set) Token: 0x060299F7 RID: 170487 RVA: 0x005AED5B File Offset: 0x005ACF5B
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027480 RID: 160896 RVA: 0x00567D58 File Offset: 0x00565F58
+		// Token: 0x060299F8 RID: 170488 RVA: 0x005AED64 File Offset: 0x005ACF64
 		public ITeleControl2T()
 		{
 			this.Disabled = false;

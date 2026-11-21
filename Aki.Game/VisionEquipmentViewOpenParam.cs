@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020024FF RID: 9471
+// Token: 0x020019E6 RID: 6630
 public class VisionEquipmentViewOpenParam : IVisionEquipmentViewOpenParam
 {
-	// Token: 0x170018CA RID: 6346
-	// (get) Token: 0x0601309C RID: 77980 RVA: 0x004B6B22 File Offset: 0x004B4D22
-	// (set) Token: 0x0601309D RID: 77981 RVA: 0x004B6B2A File Offset: 0x004B4D2A
+	// Token: 0x17001904 RID: 6404
+	// (get) Token: 0x0601055B RID: 66907 RVA: 0x004C47B2 File Offset: 0x004C29B2
+	// (set) Token: 0x0601055C RID: 66908 RVA: 0x004C47BA File Offset: 0x004C29BA
 	public int RoleId { get; set; }
 
-	// Token: 0x170018CB RID: 6347
-	// (get) Token: 0x0601309E RID: 77982 RVA: 0x004B6B33 File Offset: 0x004B4D33
-	// (set) Token: 0x0601309F RID: 77983 RVA: 0x004B6B3B File Offset: 0x004B4D3B
+	// Token: 0x17001905 RID: 6405
+	// (get) Token: 0x0601055D RID: 66909 RVA: 0x004C47C3 File Offset: 0x004C29C3
+	// (set) Token: 0x0601055E RID: 66910 RVA: 0x004C47CB File Offset: 0x004C29CB
 	public int SelectIndex { get; set; }
 
-	// Token: 0x170018CC RID: 6348
-	// (get) Token: 0x060130A0 RID: 77984 RVA: 0x004B6B44 File Offset: 0x004B4D44
-	// (set) Token: 0x060130A1 RID: 77985 RVA: 0x004B6B4C File Offset: 0x004B4D4C
+	// Token: 0x17001906 RID: 6406
+	// (get) Token: 0x0601055F RID: 66911 RVA: 0x004C47D4 File Offset: 0x004C29D4
+	// (set) Token: 0x06010560 RID: 66912 RVA: 0x004C47DC File Offset: 0x004C29DC
 	public ERoleViewSource? Source { get; set; }
 }

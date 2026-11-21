@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E7 RID: 8679
+	// Token: 0x02002452 RID: 9298
 	public class SetTimeScale_SetValue
 	{
-		// Token: 0x040071C1 RID: 29121
-		[Nullable(1)]
+		// Token: 0x0400780A RID: 30730
 		public ISetGlobalTimeScale Config;
 	}
 }

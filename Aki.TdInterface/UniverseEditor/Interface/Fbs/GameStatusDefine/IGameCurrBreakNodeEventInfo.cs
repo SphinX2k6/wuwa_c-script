@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046EE RID: 18158
+	// Token: 0x02004B56 RID: 19286
 	public struct IGameCurrBreakNodeEventInfo : IFlatbufferObject
 	{
-		// Token: 0x170081CA RID: 33226
-		// (get) Token: 0x0601BC93 RID: 113811 RVA: 0x003F0684 File Offset: 0x003EE884
+		// Token: 0x1700880B RID: 34827
+		// (get) Token: 0x0601D468 RID: 119912 RVA: 0x0041C920 File Offset: 0x0041AB20
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BC94 RID: 113812 RVA: 0x003F0691 File Offset: 0x003EE891
+		// Token: 0x0601D469 RID: 119913 RVA: 0x0041C92D File Offset: 0x0041AB2D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601BC95 RID: 113813 RVA: 0x003F0698 File Offset: 0x003EE898
+		// Token: 0x0601D46A RID: 119914 RVA: 0x0041C934 File Offset: 0x0041AB34
 		public static IGameCurrBreakNodeEventInfo GetRootAsIGameCurrBreakNodeEventInfo(ByteBuffer _bb)
 		{
 			return IGameCurrBreakNodeEventInfo.GetRootAsIGameCurrBreakNodeEventInfo(_bb, default(IGameCurrBreakNodeEventInfo));
 		}
 
-		// Token: 0x0601BC96 RID: 113814 RVA: 0x003F06B4 File Offset: 0x003EE8B4
+		// Token: 0x0601D46B RID: 119915 RVA: 0x0041C950 File Offset: 0x0041AB50
 		public static IGameCurrBreakNodeEventInfo GetRootAsIGameCurrBreakNodeEventInfo(ByteBuffer _bb, IGameCurrBreakNodeEventInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601BC97 RID: 113815 RVA: 0x003F06D1 File Offset: 0x003EE8D1
+		// Token: 0x0601D46C RID: 119916 RVA: 0x0041C96D File Offset: 0x0041AB6D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601BC98 RID: 113816 RVA: 0x003F06E0 File Offset: 0x003EE8E0
+		// Token: 0x0601D46D RID: 119917 RVA: 0x0041C97C File Offset: 0x0041AB7C
 		public IGameCurrBreakNodeEventInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170081CB RID: 33227
-		// (get) Token: 0x0601BC99 RID: 113817 RVA: 0x003F06F0 File Offset: 0x003EE8F0
+		// Token: 0x1700880C RID: 34828
+		// (get) Token: 0x0601D46E RID: 119918 RVA: 0x0041C98C File Offset: 0x0041AB8C
 		public long BtConfigId
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x170081CC RID: 33228
-		// (get) Token: 0x0601BC9A RID: 113818 RVA: 0x003F0730 File Offset: 0x003EE930
+		// Token: 0x1700880D RID: 34829
+		// (get) Token: 0x0601D46F RID: 119919 RVA: 0x0041C9CC File Offset: 0x0041ABCC
 		public TBehaviorTreeType BtEditorType
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x170081CD RID: 33229
-		// (get) Token: 0x0601BC9B RID: 113819 RVA: 0x003F076C File Offset: 0x003EE96C
+		// Token: 0x1700880E RID: 34830
+		// (get) Token: 0x0601D470 RID: 119920 RVA: 0x0041CA08 File Offset: 0x0041AC08
 		public int NodeId
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x170081CE RID: 33230
-		// (get) Token: 0x0601BC9C RID: 113820 RVA: 0x003F07A8 File Offset: 0x003EE9A8
+		// Token: 0x1700880F RID: 34831
+		// (get) Token: 0x0601D471 RID: 119921 RVA: 0x0041CA44 File Offset: 0x0041AC44
 		public ENodeBreakMoment BreakMoment
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BC9D RID: 113821 RVA: 0x003F07E5 File Offset: 0x003EE9E5
+		// Token: 0x0601D472 RID: 119922 RVA: 0x0041CA81 File Offset: 0x0041AC81
 		public static Offset<IGameCurrBreakNodeEventInfo> CreateIGameCurrBreakNodeEventInfo(FlatBufferBuilder builder, long BtConfigId = 0L, TBehaviorTreeType BtEditorType = TBehaviorTreeType.BehaviorTreeFragment, int NodeId = 0, ENodeBreakMoment BreakMoment = ENodeBreakMoment.Null)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return IGameCurrBreakNodeEventInfo.EndIGameCurrBreakNodeEventInfo(builder);
 		}
 
-		// Token: 0x0601BC9E RID: 113822 RVA: 0x003F0811 File Offset: 0x003EEA11
+		// Token: 0x0601D473 RID: 119923 RVA: 0x0041CAAD File Offset: 0x0041ACAD
 		public static void StartIGameCurrBreakNodeEventInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601BC9F RID: 113823 RVA: 0x003F081A File Offset: 0x003EEA1A
+		// Token: 0x0601D474 RID: 119924 RVA: 0x0041CAB6 File Offset: 0x0041ACB6
 		public static void AddBtConfigId(FlatBufferBuilder builder, long btConfigId)
 		{
 			builder.AddLong(0, btConfigId, 0L);
 		}
 
-		// Token: 0x0601BCA0 RID: 113824 RVA: 0x003F0826 File Offset: 0x003EEA26
+		// Token: 0x0601D475 RID: 119925 RVA: 0x0041CAC2 File Offset: 0x0041ACC2
 		public static void AddBtEditorType(FlatBufferBuilder builder, TBehaviorTreeType btEditorType)
 		{
 			builder.AddByte(1, (byte)btEditorType, 0);
 		}
 
-		// Token: 0x0601BCA1 RID: 113825 RVA: 0x003F0831 File Offset: 0x003EEA31
+		// Token: 0x0601D476 RID: 119926 RVA: 0x0041CACD File Offset: 0x0041ACCD
 		public static void AddNodeId(FlatBufferBuilder builder, int nodeId)
 		{
 			builder.AddInt(2, nodeId, 0);
 		}
 
-		// Token: 0x0601BCA2 RID: 113826 RVA: 0x003F083C File Offset: 0x003EEA3C
+		// Token: 0x0601D477 RID: 119927 RVA: 0x0041CAD8 File Offset: 0x0041ACD8
 		public static void AddBreakMoment(FlatBufferBuilder builder, ENodeBreakMoment breakMoment)
 		{
 			builder.AddByte(3, (byte)breakMoment, 0);
 		}
 
-		// Token: 0x0601BCA3 RID: 113827 RVA: 0x003F0847 File Offset: 0x003EEA47
+		// Token: 0x0601D478 RID: 119928 RVA: 0x0041CAE3 File Offset: 0x0041ACE3
 		public static Offset<IGameCurrBreakNodeEventInfo> EndIGameCurrBreakNodeEventInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<IGameCurrBreakNodeEventInfo>(builder.EndTable());
 		}
 
-		// Token: 0x0601BCA4 RID: 113828 RVA: 0x003F0854 File Offset: 0x003EEA54
+		// Token: 0x0601D479 RID: 119929 RVA: 0x0041CAF0 File Offset: 0x0041ACF0
 		public IGameCurrBreakNodeEventInfoT UnPack()
 		{
 			IGameCurrBreakNodeEventInfoT gameCurrBreakNodeEventInfoT = new IGameCurrBreakNodeEventInfoT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return gameCurrBreakNodeEventInfoT;
 		}
 
-		// Token: 0x0601BCA5 RID: 113829 RVA: 0x003F086F File Offset: 0x003EEA6F
+		// Token: 0x0601D47A RID: 119930 RVA: 0x0041CB0B File Offset: 0x0041AD0B
 		public void UnPackTo(IGameCurrBreakNodeEventInfoT _o)
 		{
 			_o.BtConfigId = this.BtConfigId;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			_o.BreakMoment = this.BreakMoment;
 		}
 
-		// Token: 0x0601BCA6 RID: 113830 RVA: 0x003F08A4 File Offset: 0x003EEAA4
+		// Token: 0x0601D47B RID: 119931 RVA: 0x0041CB40 File Offset: 0x0041AD40
 		public static Offset<IGameCurrBreakNodeEventInfo> Pack(FlatBufferBuilder builder, IGameCurrBreakNodeEventInfoT _o)
 		{
 			if (_o == null)
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return IGameCurrBreakNodeEventInfo.CreateIGameCurrBreakNodeEventInfo(builder, _o.BtConfigId, _o.BtEditorType, _o.NodeId, _o.BreakMoment);
 		}
 
-		// Token: 0x0400C995 RID: 51605
+		// Token: 0x0400D3C4 RID: 54212
 		private Table __p;
 	}
 }

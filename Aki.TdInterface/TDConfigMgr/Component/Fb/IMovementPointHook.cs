@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AF3 RID: 2803
+	// Token: 0x02000BBF RID: 3007
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMovementPointHook : IHookInteractType
 	{
-		// Token: 0x06004085 RID: 16517 RVA: 0x000A4DC2 File Offset: 0x000A2FC2
-		[NullableContext(1)]
+		// Token: 0x060044BC RID: 17596 RVA: 0x000AE60A File Offset: 0x000AC80A
+		[NullableContext(0)]
 		public static IMovementPointHook Create(IMovementPointHook? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700105C RID: 4188
-		// (get) Token: 0x06004086 RID: 16518 RVA: 0x000A4DE1 File Offset: 0x000A2FE1
+		// Token: 0x17001139 RID: 4409
+		// (get) Token: 0x060044BD RID: 17597 RVA: 0x000AE629 File Offset: 0x000AC829
 		public override EHookInteractType Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700105D RID: 4189
-		// (get) Token: 0x06004087 RID: 16519 RVA: 0x000A4DF0 File Offset: 0x000A2FF0
+		// Token: 0x1700113A RID: 4410
+		// (get) Token: 0x060044BE RID: 17598 RVA: 0x000AE638 File Offset: 0x000AC838
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700105E RID: 4190
-		// (get) Token: 0x06004088 RID: 16520 RVA: 0x000A4E6C File Offset: 0x000A306C
+		// Token: 0x1700113B RID: 4411
+		// (get) Token: 0x060044BF RID: 17599 RVA: 0x000AE6B4 File Offset: 0x000AC8B4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700105F RID: 4191
-		// (get) Token: 0x06004089 RID: 16521 RVA: 0x000A4EE8 File Offset: 0x000A30E8
+		// Token: 0x1700113C RID: 4412
+		// (get) Token: 0x060044C0 RID: 17600 RVA: 0x000AE730 File Offset: 0x000AC930
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001060 RID: 4192
-		// (get) Token: 0x0600408A RID: 16522 RVA: 0x000A4F62 File Offset: 0x000A3162
+		// Token: 0x1700113D RID: 4413
+		// (get) Token: 0x060044C1 RID: 17601 RVA: 0x000AE7AA File Offset: 0x000AC9AA
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -156,46 +156,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002406 RID: 9222
+		// Token: 0x0400262C RID: 9772
 		private IMovementPointHook Instance;
 
-		// Token: 0x04002407 RID: 9223
+		// Token: 0x0400262D RID: 9773
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x04002408 RID: 9224
+		// Token: 0x0400262E RID: 9774
 		private bool _HookActionsInited;
 
-		// Token: 0x04002409 RID: 9225
+		// Token: 0x0400262F RID: 9775
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x0400240A RID: 9226
+		// Token: 0x04002630 RID: 9776
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x0400240B RID: 9227
+		// Token: 0x04002631 RID: 9777
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x0400240C RID: 9228
+		// Token: 0x04002632 RID: 9778
 		private bool _FinishActionsInited;
 
-		// Token: 0x0400240D RID: 9229
+		// Token: 0x04002633 RID: 9779
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x0400240E RID: 9230
+		// Token: 0x04002634 RID: 9780
 		private bool _ClientHookActionConfigInited;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001463 RID: 5219
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015BC RID: 5564
 	public class IPlotHandBookNode
 	{
-		// Token: 0x060076C8 RID: 30408 RVA: 0x0011BF32 File Offset: 0x0011A132
+		// Token: 0x06007D96 RID: 32150 RVA: 0x0012AB4A File Offset: 0x00128D4A
 		public static IPlotHandBookNode Create(IPlotHandBookNode? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170027D5 RID: 10197
-		// (get) Token: 0x060076C9 RID: 30409 RVA: 0x0011BF51 File Offset: 0x0011A151
+		// Token: 0x170029C0 RID: 10688
+		// (get) Token: 0x06007D97 RID: 32151 RVA: 0x0012AB69 File Offset: 0x00128D69
 		public virtual string TidTip
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027D6 RID: 10198
-		// (get) Token: 0x060076CA RID: 30410 RVA: 0x0011BF5E File Offset: 0x0011A15E
+		// Token: 0x170029C1 RID: 10689
+		// (get) Token: 0x06007D98 RID: 32152 RVA: 0x0012AB76 File Offset: 0x00128D76
 		public virtual IFlowStateIndex Flow
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170027D7 RID: 10199
-		// (get) Token: 0x060076CB RID: 30411 RVA: 0x0011BF92 File Offset: 0x0011A192
+		// Token: 0x170029C2 RID: 10690
+		// (get) Token: 0x06007D99 RID: 32153 RVA: 0x0012ABAA File Offset: 0x00128DAA
 		public virtual bool IsHideUi
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400450B RID: 17675
+		// Token: 0x040048A6 RID: 18598
 		private IPlotHandBookNode Instance;
 
-		// Token: 0x0400450C RID: 17676
+		// Token: 0x040048A7 RID: 18599
 		[Nullable(2)]
 		private IFlowStateIndex _FlowCache;
 
-		// Token: 0x0400450D RID: 17677
+		// Token: 0x040048A8 RID: 18600
 		private bool _FlowInited;
 	}
 }

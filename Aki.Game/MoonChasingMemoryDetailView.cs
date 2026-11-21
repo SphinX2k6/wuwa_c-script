@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001345 RID: 4933
+// Token: 0x020007F9 RID: 2041
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonChasingMemoryDetailView : UiViewBase
 {
-	// Token: 0x06008956 RID: 35158 RVA: 0x001D5308 File Offset: 0x001D3508
+	// Token: 0x06005CF1 RID: 23793 RVA: 0x001DE174 File Offset: 0x001DC374
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,12 +23,12 @@ public class MoonChasingMemoryDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008957 RID: 35159 RVA: 0x001D538E File Offset: 0x001D358E
+	// Token: 0x06005CF2 RID: 23794 RVA: 0x001DE1FA File Offset: 0x001DC3FA
 	public MoonChasingMemoryDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008958 RID: 35160 RVA: 0x001D5398 File Offset: 0x001D3598
+	// Token: 0x06005CF3 RID: 23795 RVA: 0x001DE204 File Offset: 0x001DC404
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -37,7 +37,7 @@ public class MoonChasingMemoryDetailView : UiViewBase
 		this.ContentLayoutB = new GenericLayout<MemoryContentItemB, IMemoryItemData>(base.GetHorizontalLayout(3), new Func<MemoryContentItemB>(this.OnCreateContentB), null, false, true);
 	}
 
-	// Token: 0x06008959 RID: 35161 RVA: 0x001D5414 File Offset: 0x001D3614
+	// Token: 0x06005CF4 RID: 23796 RVA: 0x001DE280 File Offset: 0x001DC480
 	protected override void OnBeforeShow()
 	{
 		List<IMemoryItemData> list = this.OpenParam as List<IMemoryItemData>;
@@ -65,23 +65,23 @@ public class MoonChasingMemoryDetailView : UiViewBase
 		this.ContentLayoutB.RefreshByData(list3, null, false);
 	}
 
-	// Token: 0x0600895A RID: 35162 RVA: 0x001D54F0 File Offset: 0x001D36F0
+	// Token: 0x06005CF5 RID: 23797 RVA: 0x001DE35C File Offset: 0x001DC55C
 	private MemoryContentItemA OnCreateContentA()
 	{
 		return new MemoryContentItemA();
 	}
 
-	// Token: 0x0600895B RID: 35163 RVA: 0x001D54F7 File Offset: 0x001D36F7
+	// Token: 0x06005CF6 RID: 23798 RVA: 0x001DE363 File Offset: 0x001DC563
 	private MemoryContentItemB OnCreateContentB()
 	{
 		return new MemoryContentItemB();
 	}
 
-	// Token: 0x04003D41 RID: 15681
+	// Token: 0x04003DD9 RID: 15833
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003D42 RID: 15682
+	// Token: 0x04003DDA RID: 15834
 	[Nullable(new byte[]
 	{
 		2,
@@ -90,7 +90,7 @@ public class MoonChasingMemoryDetailView : UiViewBase
 	})]
 	private GenericLayout<MemoryContentItemA, IMemoryItemData> ContentLayoutA;
 
-	// Token: 0x04003D43 RID: 15683
+	// Token: 0x04003DDB RID: 15835
 	[Nullable(new byte[]
 	{
 		2,
@@ -99,23 +99,23 @@ public class MoonChasingMemoryDetailView : UiViewBase
 	})]
 	private GenericLayout<MemoryContentItemB, IMemoryItemData> ContentLayoutB;
 
-	// Token: 0x020079A7 RID: 31143
+	// Token: 0x02006B31 RID: 27441
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x040280EE RID: 164078
+		// Token: 0x0402341B RID: 144411
 		public const int Caption = 0;
 
-		// Token: 0x040280EF RID: 164079
+		// Token: 0x0402341C RID: 144412
 		public const int ContentLayoutA = 1;
 
-		// Token: 0x040280F0 RID: 164080
+		// Token: 0x0402341D RID: 144413
 		public const int ContentA = 2;
 
-		// Token: 0x040280F1 RID: 164081
+		// Token: 0x0402341E RID: 144414
 		public const int ContentLayoutB = 3;
 
-		// Token: 0x040280F2 RID: 164082
+		// Token: 0x0402341F RID: 144415
 		public const int ContentB = 4;
 	}
 }

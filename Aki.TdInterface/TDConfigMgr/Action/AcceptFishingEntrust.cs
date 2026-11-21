@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001480 RID: 5248
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015D9 RID: 5593
 	public class AcceptFishingEntrust : ActionParams
 	{
-		// Token: 0x0600776B RID: 30571 RVA: 0x0011EB58 File Offset: 0x0011CD58
+		// Token: 0x06007E38 RID: 32312 RVA: 0x0012D7A4 File Offset: 0x0012B9A4
 		private AcceptFishingEntrust_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600776C RID: 30572 RVA: 0x0011EB90 File Offset: 0x0011CD90
+		// Token: 0x06007E39 RID: 32313 RVA: 0x0012D7DC File Offset: 0x0012B9DC
 		public static AcceptFishingEntrust Create([Nullable(2)] AcceptFishingEntrust instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600776D RID: 30573 RVA: 0x0011EBA3 File Offset: 0x0011CDA3
+		// Token: 0x06007E3A RID: 32314 RVA: 0x0012D7EF File Offset: 0x0012B9EF
 		public static AcceptFishingEntrust CreateFromSetValue([Nullable(2)] AcceptFishingEntrust_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600776E RID: 30574 RVA: 0x0011EBB6 File Offset: 0x0011CDB6
+		// Token: 0x06007E3B RID: 32315 RVA: 0x0012D802 File Offset: 0x0012BA02
 		public AcceptFishingEntrust_SetValue ToSetValue()
 		{
 			return new AcceptFishingEntrust_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002829 RID: 10281
-		// (get) Token: 0x0600776F RID: 30575 RVA: 0x0011EBD5 File Offset: 0x0011CDD5
-		// (set) Token: 0x06007770 RID: 30576 RVA: 0x0011EC00 File Offset: 0x0011CE00
+		// Token: 0x17002A13 RID: 10771
+		// (get) Token: 0x06007E3C RID: 32316 RVA: 0x0012D821 File Offset: 0x0012BA21
+		// (set) Token: 0x06007E3D RID: 32317 RVA: 0x0012D84C File Offset: 0x0012BA4C
 		public virtual int EntrustId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700282A RID: 10282
-		// (get) Token: 0x06007771 RID: 30577 RVA: 0x0011EC10 File Offset: 0x0011CE10
-		// (set) Token: 0x06007772 RID: 30578 RVA: 0x0011EC4A File Offset: 0x0011CE4A
+		// Token: 0x17002A14 RID: 10772
+		// (get) Token: 0x06007E3E RID: 32318 RVA: 0x0012D85C File Offset: 0x0012BA5C
+		// (set) Token: 0x06007E3F RID: 32319 RVA: 0x0012D896 File Offset: 0x0012BA96
 		public virtual bool? IsAutoTracking
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400457D RID: 17789
+		// Token: 0x04004918 RID: 18712
 		[Nullable(2)]
 		protected new AcceptFishingEntrust FbInstance;
 
-		// Token: 0x0400457E RID: 17790
+		// Token: 0x04004919 RID: 18713
 		[Nullable(2)]
 		protected AcceptFishingEntrust_SetValue PocoInterface;
 	}

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF2 RID: 12274
+// Token: 0x02002547 RID: 9543
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffStackInstigatorTrigger : Trigger
 {
-	// Token: 0x0601A029 RID: 106537 RVA: 0x006CF4FA File Offset: 0x006CD6FA
+	// Token: 0x0601795D RID: 96605 RVA: 0x006F7396 File Offset: 0x006F5596
 	[NullableContext(2)]
 	public BuffStackInstigatorTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A02A RID: 106538 RVA: 0x006CF520 File Offset: 0x006CD720
+	// Token: 0x0601795E RID: 96606 RVA: 0x006F73BC File Offset: 0x006F55BC
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.HasValidConfig = true;
@@ -48,7 +48,7 @@ public class BuffStackInstigatorTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A02B RID: 106539 RVA: 0x006CF5E8 File Offset: 0x006CD7E8
+	// Token: 0x0601795F RID: 96607 RVA: 0x006F7484 File Offset: 0x006F5684
 	private unsafe void SetInvalidConfig(string[] triggerParams)
 	{
 		this.HasValidConfig = false;
@@ -64,7 +64,7 @@ public class BuffStackInstigatorTrigger : Trigger
 		instance.Error(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601A02C RID: 106540 RVA: 0x006CF670 File Offset: 0x006CD870
+	// Token: 0x06017960 RID: 96608 RVA: 0x006F750C File Offset: 0x006F570C
 	protected override void OnActive()
 	{
 		if (!this.HasValidConfig)
@@ -82,7 +82,7 @@ public class BuffStackInstigatorTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A02D RID: 106541 RVA: 0x006CF700 File Offset: 0x006CD900
+	// Token: 0x06017961 RID: 96609 RVA: 0x006F759C File Offset: 0x006F579C
 	protected override void OnInactive()
 	{
 		if (!this.HasValidConfig)
@@ -100,7 +100,7 @@ public class BuffStackInstigatorTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A02E RID: 106542 RVA: 0x006CF790 File Offset: 0x006CD990
+	// Token: 0x06017962 RID: 96610 RVA: 0x006F762C File Offset: 0x006F582C
 	private void OnEvent(long buffId, int oldStack, int newStack, Entity victim, Entity attacker)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -116,18 +116,18 @@ public class BuffStackInstigatorTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A02F RID: 106543 RVA: 0x006CF815 File Offset: 0x006CDA15
+	// Token: 0x06017963 RID: 96611 RVA: 0x006F76B1 File Offset: 0x006F58B1
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4D6 RID: 50390
+	// Token: 0x0400C89E RID: 51358
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4D7 RID: 50391
+	// Token: 0x0400C89F RID: 51359
 	protected readonly HashSet<long> ListenBuffIds = new HashSet<long>();
 
-	// Token: 0x0400C4D8 RID: 50392
+	// Token: 0x0400C8A0 RID: 51360
 	protected bool HasValidConfig = true;
 }

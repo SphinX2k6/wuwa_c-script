@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020007B4 RID: 1972
+	// Token: 0x020007A0 RID: 1952
 	[NetMessage(EMessageId.HookLockPointExitRequest)]
 	public sealed class HookLockPointExitRequest : IMessage<HookLockPointExitRequest>, IMessage, IEquatable<HookLockPointExitRequest>, IDeepCloneable<HookLockPointExitRequest>, IBufferMessage
 	{
-		// Token: 0x0600B19B RID: 45467 RVA: 0x001A9B68 File Offset: 0x001A7D68
+		// Token: 0x0600B045 RID: 45125 RVA: 0x001A7138 File Offset: 0x001A5338
 		[NullableContext(1)]
 		public static HookLockPointExitRequest Create()
 		{
 			return new HookLockPointExitRequest();
 		}
 
-		// Token: 0x170023D7 RID: 9175
-		// (get) Token: 0x0600B19C RID: 45468 RVA: 0x001A9B6F File Offset: 0x001A7D6F
+		// Token: 0x1700238D RID: 9101
+		// (get) Token: 0x0600B046 RID: 45126 RVA: 0x001A713F File Offset: 0x001A533F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170023D8 RID: 9176
-		// (get) Token: 0x0600B19D RID: 45469 RVA: 0x001A9B72 File Offset: 0x001A7D72
+		// Token: 0x1700238E RID: 9102
+		// (get) Token: 0x0600B047 RID: 45127 RVA: 0x001A7142 File Offset: 0x001A5342
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B19E RID: 45470 RVA: 0x001A9B79 File Offset: 0x001A7D79
+		// Token: 0x0600B048 RID: 45128 RVA: 0x001A7149 File Offset: 0x001A5349
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HookLockPointExitRequest()
 		{
 		}
 
-		// Token: 0x0600B19F RID: 45471 RVA: 0x001A9B81 File Offset: 0x001A7D81
+		// Token: 0x0600B049 RID: 45129 RVA: 0x001A7151 File Offset: 0x001A5351
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HookLockPointExitRequest(HookLockPointExitRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600B1A0 RID: 45472 RVA: 0x001A9BB2 File Offset: 0x001A7DB2
+		// Token: 0x0600B04A RID: 45130 RVA: 0x001A7182 File Offset: 0x001A5382
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HookLockPointExitRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new HookLockPointExitRequest(this);
 		}
 
-		// Token: 0x170023D9 RID: 9177
-		// (get) Token: 0x0600B1A1 RID: 45473 RVA: 0x001A9BBA File Offset: 0x001A7DBA
-		// (set) Token: 0x0600B1A2 RID: 45474 RVA: 0x001A9BC2 File Offset: 0x001A7DC2
+		// Token: 0x1700238F RID: 9103
+		// (get) Token: 0x0600B04B RID: 45131 RVA: 0x001A718A File Offset: 0x001A538A
+		// (set) Token: 0x0600B04C RID: 45132 RVA: 0x001A7192 File Offset: 0x001A5392
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170023DA RID: 9178
-		// (get) Token: 0x0600B1A3 RID: 45475 RVA: 0x001A9BCB File Offset: 0x001A7DCB
-		// (set) Token: 0x0600B1A4 RID: 45476 RVA: 0x001A9BD3 File Offset: 0x001A7DD3
+		// Token: 0x17002390 RID: 9104
+		// (get) Token: 0x0600B04D RID: 45133 RVA: 0x001A719B File Offset: 0x001A539B
+		// (set) Token: 0x0600B04E RID: 45134 RVA: 0x001A71A3 File Offset: 0x001A53A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HookLockPointExitWay HookLockPointExitWay
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B1A5 RID: 45477 RVA: 0x001A9BDC File Offset: 0x001A7DDC
+		// Token: 0x0600B04F RID: 45135 RVA: 0x001A71AC File Offset: 0x001A53AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as HookLockPointExitRequest);
 		}
 
-		// Token: 0x0600B1A6 RID: 45478 RVA: 0x001A9BEA File Offset: 0x001A7DEA
+		// Token: 0x0600B050 RID: 45136 RVA: 0x001A71BA File Offset: 0x001A53BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(HookLockPointExitRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.EntityId == other.EntityId && this.HookLockPointExitWay == other.HookLockPointExitWay && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600B1A7 RID: 45479 RVA: 0x001A9C28 File Offset: 0x001A7E28
+		// Token: 0x0600B051 RID: 45137 RVA: 0x001A71F8 File Offset: 0x001A53F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B1A8 RID: 45480 RVA: 0x001A9C86 File Offset: 0x001A7E86
+		// Token: 0x0600B052 RID: 45138 RVA: 0x001A7256 File Offset: 0x001A5456
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600B1A9 RID: 45481 RVA: 0x001A9C93 File Offset: 0x001A7E93
+		// Token: 0x0600B053 RID: 45139 RVA: 0x001A7263 File Offset: 0x001A5463
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600B1AA RID: 45482 RVA: 0x001A9C9C File Offset: 0x001A7E9C
+		// Token: 0x0600B054 RID: 45140 RVA: 0x001A726C File Offset: 0x001A546C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.HookLockPointExitWay != HookLockPointExitWay.Midway)
-			{
-				output.WriteRawTag(16);
-				output.WriteEnum((int)this.HookLockPointExitWay);
-			}
 			if (this.EntityId != 0L)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(24);
 				output.WriteInt64(this.EntityId);
+			}
+			if (this.HookLockPointExitWay != HookLockPointExitWay.Midway)
+			{
+				output.WriteRawTag(32);
+				output.WriteEnum((int)this.HookLockPointExitWay);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B1AB RID: 45483 RVA: 0x001A9CF8 File Offset: 0x001A7EF8
+		// Token: 0x0600B055 RID: 45141 RVA: 0x001A72C8 File Offset: 0x001A54C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B1AC RID: 45484 RVA: 0x001A9D50 File Offset: 0x001A7F50
+		// Token: 0x0600B056 RID: 45142 RVA: 0x001A7320 File Offset: 0x001A5520
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(HookLockPointExitRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600B1AD RID: 45485 RVA: 0x001A9DA0 File Offset: 0x001A7FA0
+		// Token: 0x0600B057 RID: 45143 RVA: 0x001A7370 File Offset: 0x001A5570
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600B1AE RID: 45486 RVA: 0x001A9DAC File Offset: 0x001A7FAC
+		// Token: 0x0600B058 RID: 45144 RVA: 0x001A737C File Offset: 0x001A557C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 16U)
+				if (num != 24U)
 				{
-					if (num != 56U)
+					if (num != 32U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.EntityId = input.ReadInt64();
+						this.HookLockPointExitWay = (HookLockPointExitWay)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.HookLockPointExitWay = (HookLockPointExitWay)input.ReadEnum();
+					this.EntityId = input.ReadInt64();
 				}
 			}
 		}
 
-		// Token: 0x04004F98 RID: 20376
+		// Token: 0x04004F91 RID: 20369
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004F99 RID: 20377
-		public const int EntityIdFieldNumber = 7;
+		// Token: 0x04004F92 RID: 20370
+		public const int EntityIdFieldNumber = 3;
 
-		// Token: 0x04004F9A RID: 20378
+		// Token: 0x04004F93 RID: 20371
 		private long entityId_;
 
-		// Token: 0x04004F9B RID: 20379
-		public const int HookLockPointExitWayFieldNumber = 2;
+		// Token: 0x04004F94 RID: 20372
+		public const int HookLockPointExitWayFieldNumber = 4;
 
-		// Token: 0x04004F9C RID: 20380
+		// Token: 0x04004F95 RID: 20373
 		private HookLockPointExitWay hookLockPointExitWay_;
 	}
 }

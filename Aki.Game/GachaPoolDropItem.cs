@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C85 RID: 7301
+// Token: 0x02001144 RID: 4420
 public class GachaPoolDropItem : UiPanelBase
 {
-	// Token: 0x0600DC49 RID: 56393 RVA: 0x00335B54 File Offset: 0x00333D54
+	// Token: 0x0600B05F RID: 45151 RVA: 0x00341080 File Offset: 0x0033F280
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -23,7 +23,7 @@ public class GachaPoolDropItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DC4A RID: 56394 RVA: 0x00335B9C File Offset: 0x00333D9C
+	// Token: 0x0600B060 RID: 45152 RVA: 0x003410C8 File Offset: 0x0033F2C8
 	protected override void OnStart()
 	{
 		InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(this.Data.ItemId));
@@ -41,14 +41,14 @@ public class GachaPoolDropItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400650F RID: 25871
+	// Token: 0x040065E1 RID: 26081
 	[Nullable(2)]
 	public GachaPoolDrop Data;
 
-	// Token: 0x0200825B RID: 33371
+	// Token: 0x020073E3 RID: 29667
 	private enum EGachaPoolDropItemDefine
 	{
-		// Token: 0x0402A887 RID: 174215
+		// Token: 0x04025BA8 RID: 154536
 		TxtName
 	}
 }

@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001195 RID: 4501
+// Token: 0x02000649 RID: 1609
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleSelectItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600771B RID: 30491 RVA: 0x0018D704 File Offset: 0x0018B904
+	// Token: 0x06004AB2 RID: 19122 RVA: 0x001962EC File Offset: 0x001944EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600771C RID: 30492 RVA: 0x0018D834 File Offset: 0x0018BA34
+	// Token: 0x06004AB3 RID: 19123 RVA: 0x0019641C File Offset: 0x0019461C
 	private void OnToggleClick(EToggleState _)
 	{
 		Action<int, int> toggleCallBack = this.ToggleCallBack;
@@ -45,7 +45,7 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		toggleCallBack(base.GridIndex, this.RoleId);
 	}
 
-	// Token: 0x0600771D RID: 30493 RVA: 0x0018D854 File Offset: 0x0018BA54
+	// Token: 0x06004AB4 RID: 19124 RVA: 0x0019643C File Offset: 0x0019463C
 	private void OnPreviewBtnClick()
 	{
 		NewbieCarnivalRole? newbieCarnivalRole = BeginnerCarnivalConfig.Instance.GetNewbieCarnivalRole(this.RoleId);
@@ -56,7 +56,7 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, roleIdList, null, null);
 	}
 
-	// Token: 0x0600771E RID: 30494 RVA: 0x0018D8B0 File Offset: 0x0018BAB0
+	// Token: 0x06004AB5 RID: 19125 RVA: 0x00196498 File Offset: 0x00194698
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetHorizontalLayout(4));
@@ -68,7 +68,7 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		base.GetText(6).SetUIActive(false);
 	}
 
-	// Token: 0x0600771F RID: 30495 RVA: 0x0018D900 File Offset: 0x0018BB00
+	// Token: 0x06004AB6 RID: 19126 RVA: 0x001964E8 File Offset: 0x001946E8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.RoleId = data;
@@ -117,7 +117,7 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007720 RID: 30496 RVA: 0x0018DA6C File Offset: 0x0018BC6C
+	// Token: 0x06004AB7 RID: 19127 RVA: 0x00196654 File Offset: 0x00194854
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -128,7 +128,7 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06007721 RID: 30497 RVA: 0x0018DA84 File Offset: 0x0018BC84
+	// Token: 0x06004AB8 RID: 19128 RVA: 0x0019666C File Offset: 0x0019486C
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -139,15 +139,15 @@ public class RoleSelectItem : GridProxyAbstract<int>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x040036AC RID: 13996
+	// Token: 0x04003745 RID: 14149
 	private int RoleId;
 
-	// Token: 0x040036AD RID: 13997
+	// Token: 0x04003746 RID: 14150
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x040036AE RID: 13998
+	// Token: 0x04003747 RID: 14151
 	public Action<int, int> ToggleCallBack;
 
-	// Token: 0x040036AF RID: 13999
+	// Token: 0x04003748 RID: 14152
 	public Func<int, bool> CanToggleChange;
 }

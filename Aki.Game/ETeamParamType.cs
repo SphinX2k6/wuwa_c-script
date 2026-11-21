@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200294E RID: 10574
+// Token: 0x02001EC9 RID: 7881
 public enum ETeamParamType
 {
-	// Token: 0x0400A297 RID: 41623
+	// Token: 0x0400A681 RID: 42625
 	ConfigId,
-	// Token: 0x0400A298 RID: 41624
+	// Token: 0x0400A682 RID: 42626
 	EntityId,
-	// Token: 0x0400A299 RID: 41625
+	// Token: 0x0400A683 RID: 42627
 	PlayerId,
-	// Token: 0x0400A29A RID: 41626
+	// Token: 0x0400A684 RID: 42628
 	CreatureDataId
 }

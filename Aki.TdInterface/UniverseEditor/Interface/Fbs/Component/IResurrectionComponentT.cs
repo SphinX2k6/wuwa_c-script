@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005865 RID: 22629
+	// Token: 0x02005E72 RID: 24178
 	public class IResurrectionComponentT
 	{
-		// Token: 0x1700A935 RID: 43317
-		// (get) Token: 0x060261DF RID: 156127 RVA: 0x00541890 File Offset: 0x0053FA90
-		// (set) Token: 0x060261E0 RID: 156128 RVA: 0x00541898 File Offset: 0x0053FA98
+		// Token: 0x1700B265 RID: 45669
+		// (get) Token: 0x06028741 RID: 165697 RVA: 0x005883DC File Offset: 0x005865DC
+		// (set) Token: 0x06028742 RID: 165698 RVA: 0x005883E4 File Offset: 0x005865E4
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A936 RID: 43318
-		// (get) Token: 0x060261E1 RID: 156129 RVA: 0x005418A1 File Offset: 0x0053FAA1
-		// (set) Token: 0x060261E2 RID: 156130 RVA: 0x005418A9 File Offset: 0x0053FAA9
+		// Token: 0x1700B266 RID: 45670
+		// (get) Token: 0x06028743 RID: 165699 RVA: 0x005883ED File Offset: 0x005865ED
+		// (set) Token: 0x06028744 RID: 165700 RVA: 0x005883F5 File Offset: 0x005865F5
 		public IPosAT TeleportPos { get; set; }
 
-		// Token: 0x1700A937 RID: 43319
-		// (get) Token: 0x060261E3 RID: 156131 RVA: 0x005418B2 File Offset: 0x0053FAB2
-		// (set) Token: 0x060261E4 RID: 156132 RVA: 0x005418BA File Offset: 0x0053FABA
+		// Token: 0x1700B267 RID: 45671
+		// (get) Token: 0x06028745 RID: 165701 RVA: 0x005883FE File Offset: 0x005865FE
+		// (set) Token: 0x06028746 RID: 165702 RVA: 0x00588406 File Offset: 0x00586606
 		public TTriggerShapeUnion TriggerShape { get; set; }
 
-		// Token: 0x1700A938 RID: 43320
-		// (get) Token: 0x060261E5 RID: 156133 RVA: 0x005418C3 File Offset: 0x0053FAC3
-		// (set) Token: 0x060261E6 RID: 156134 RVA: 0x005418CB File Offset: 0x0053FACB
+		// Token: 0x1700B268 RID: 45672
+		// (get) Token: 0x06028747 RID: 165703 RVA: 0x0058840F File Offset: 0x0058660F
+		// (set) Token: 0x06028748 RID: 165704 RVA: 0x00588417 File Offset: 0x00586617
 		public EReviveType ReviveId { get; set; }
 
-		// Token: 0x1700A939 RID: 43321
-		// (get) Token: 0x060261E7 RID: 156135 RVA: 0x005418D4 File Offset: 0x0053FAD4
-		// (set) Token: 0x060261E8 RID: 156136 RVA: 0x005418DC File Offset: 0x0053FADC
+		// Token: 0x1700B269 RID: 45673
+		// (get) Token: 0x06028749 RID: 165705 RVA: 0x00588420 File Offset: 0x00586620
+		// (set) Token: 0x0602874A RID: 165706 RVA: 0x00588428 File Offset: 0x00586628
 		public IGravityFlipTeleportConfigT GravityConfig { get; set; }
 
-		// Token: 0x1700A93A RID: 43322
-		// (get) Token: 0x060261E9 RID: 156137 RVA: 0x005418E5 File Offset: 0x0053FAE5
-		// (set) Token: 0x060261EA RID: 156138 RVA: 0x005418ED File Offset: 0x0053FAED
+		// Token: 0x1700B26A RID: 45674
+		// (get) Token: 0x0602874B RID: 165707 RVA: 0x00588431 File Offset: 0x00586631
+		// (set) Token: 0x0602874C RID: 165708 RVA: 0x00588439 File Offset: 0x00586639
 		public byte NullMask { get; set; }
 
-		// Token: 0x060261EB RID: 156139 RVA: 0x005418F6 File Offset: 0x0053FAF6
+		// Token: 0x0602874D RID: 165709 RVA: 0x00588442 File Offset: 0x00586642
 		public IResurrectionComponentT()
 		{
 			this.Disabled = false;

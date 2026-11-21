@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023CC RID: 9164
+// Token: 0x020018B1 RID: 6321
 public class PersonalCardItem : PersonalCardBaseItem
 {
-	// Token: 0x0601252B RID: 75051 RVA: 0x004834FC File Offset: 0x004816FC
+	// Token: 0x0600F9DD RID: 63965 RVA: 0x004909FC File Offset: 0x0048EBFC
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -13,7 +13,7 @@ public class PersonalCardItem : PersonalCardBaseItem
 		this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(4, typeof(UUIItem)));
 	}
 
-	// Token: 0x0601252C RID: 75052 RVA: 0x0048353C File Offset: 0x0048173C
+	// Token: 0x0600F9DE RID: 63966 RVA: 0x00490A3C File Offset: 0x0048EC3C
 	[NullableContext(1)]
 	public override void Refresh(PersonalCardData data, bool isSelected, int gridIndex)
 	{
@@ -25,12 +25,12 @@ public class PersonalCardItem : PersonalCardBaseItem
 		item2.SetUIActive(!data.IsUnLock);
 	}
 
-	// Token: 0x0601252D RID: 75053 RVA: 0x004835A2 File Offset: 0x004817A2
+	// Token: 0x0600F9DF RID: 63967 RVA: 0x00490AA2 File Offset: 0x0048ECA2
 	public void SetIsOtherCardItem(bool isOther)
 	{
 		this.IsOtherCardItem = isOther;
 	}
 
-	// Token: 0x04008A7D RID: 35453
+	// Token: 0x04008BC4 RID: 35780
 	private bool IsOtherCardItem;
 }

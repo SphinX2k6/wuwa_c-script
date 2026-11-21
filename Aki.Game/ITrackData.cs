@@ -2,108 +2,108 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Map.MapDefine;
 
-// Token: 0x02002C13 RID: 11283
+// Token: 0x0200218E RID: 8590
 [NullableContext(2)]
 public interface ITrackData
 {
-	// Token: 0x17001F6A RID: 8042
-	// (get) Token: 0x060176D0 RID: 95952
-	// (set) Token: 0x060176D1 RID: 95953
+	// Token: 0x17001FC2 RID: 8130
+	// (get) Token: 0x06015102 RID: 86274
+	// (set) Token: 0x06015103 RID: 86275
 	ETrackSource TrackSource { get; set; }
 
-	// Token: 0x17001F6B RID: 8043
-	// (get) Token: 0x060176D2 RID: 95954
-	// (set) Token: 0x060176D3 RID: 95955
+	// Token: 0x17001FC3 RID: 8131
+	// (get) Token: 0x06015104 RID: 86276
+	// (set) Token: 0x06015105 RID: 86277
 	EMarkType? MarkType { get; set; }
 
-	// Token: 0x17001F6C RID: 8044
-	// (get) Token: 0x060176D4 RID: 95956
-	// (set) Token: 0x060176D5 RID: 95957
+	// Token: 0x17001FC4 RID: 8132
+	// (get) Token: 0x06015106 RID: 86278
+	// (set) Token: 0x06015107 RID: 86279
 	int Id { get; set; }
 
-	// Token: 0x17001F6D RID: 8045
-	// (get) Token: 0x060176D6 RID: 95958
-	// (set) Token: 0x060176D7 RID: 95959
+	// Token: 0x17001FC5 RID: 8133
+	// (get) Token: 0x06015108 RID: 86280
+	// (set) Token: 0x06015109 RID: 86281
 	[Nullable(1)]
 	string IconPath { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001F6E RID: 8046
-	// (get) Token: 0x060176D8 RID: 95960
-	// (set) Token: 0x060176D9 RID: 95961
+	// Token: 0x17001FC6 RID: 8134
+	// (get) Token: 0x0601510A RID: 86282
+	// (set) Token: 0x0601510B RID: 86283
 	TTrackTarget TrackTarget { get; set; }
 
-	// Token: 0x17001F6F RID: 8047
-	// (get) Token: 0x060176DA RID: 95962
-	// (set) Token: 0x060176DB RID: 95963
+	// Token: 0x17001FC7 RID: 8135
+	// (get) Token: 0x0601510C RID: 86284
+	// (set) Token: 0x0601510D RID: 86285
 	int? TrackInstanceId { get; set; }
 
-	// Token: 0x17001F70 RID: 8048
-	// (get) Token: 0x060176DC RID: 95964
-	// (set) Token: 0x060176DD RID: 95965
+	// Token: 0x17001FC8 RID: 8136
+	// (get) Token: 0x0601510E RID: 86286
+	// (set) Token: 0x0601510F RID: 86287
 	bool? TrackHudEnable { get; set; }
 
-	// Token: 0x17001F71 RID: 8049
-	// (get) Token: 0x060176DE RID: 95966
-	// (set) Token: 0x060176DF RID: 95967
+	// Token: 0x17001FC9 RID: 8137
+	// (get) Token: 0x06015110 RID: 86288
+	// (set) Token: 0x06015111 RID: 86289
 	float? TrackAutoCancelDistance { get; set; }
 
-	// Token: 0x17001F72 RID: 8050
-	// (get) Token: 0x060176E0 RID: 95968
-	// (set) Token: 0x060176E1 RID: 95969
+	// Token: 0x17001FCA RID: 8138
+	// (get) Token: 0x06015112 RID: 86290
+	// (set) Token: 0x06015113 RID: 86291
 	bool? IsSubTrack { get; set; }
 
-	// Token: 0x17001F73 RID: 8051
-	// (get) Token: 0x060176E2 RID: 95970
-	// (set) Token: 0x060176E3 RID: 95971
+	// Token: 0x17001FCB RID: 8139
+	// (get) Token: 0x06015114 RID: 86292
+	// (set) Token: 0x06015115 RID: 86293
 	float? TrackHideDis { get; set; }
 
-	// Token: 0x17001F74 RID: 8052
-	// (get) Token: 0x060176E4 RID: 95972
-	// (set) Token: 0x060176E5 RID: 95973
+	// Token: 0x17001FCC RID: 8140
+	// (get) Token: 0x06015116 RID: 86294
+	// (set) Token: 0x06015117 RID: 86295
 	int? ShowGroupId { get; set; }
 
-	// Token: 0x17001F75 RID: 8053
-	// (get) Token: 0x060176E6 RID: 95974
-	// (set) Token: 0x060176E7 RID: 95975
+	// Token: 0x17001FCD RID: 8141
+	// (get) Token: 0x06015118 RID: 86296
+	// (set) Token: 0x06015119 RID: 86297
 	ETrackType? TrackType { get; set; }
 
-	// Token: 0x17001F76 RID: 8054
-	// (get) Token: 0x060176E8 RID: 95976
-	// (set) Token: 0x060176E9 RID: 95977
+	// Token: 0x17001FCE RID: 8142
+	// (get) Token: 0x0601511A RID: 86298
+	// (set) Token: 0x0601511B RID: 86299
 	bool? AutoHideTrack { get; set; }
 
-	// Token: 0x17001F77 RID: 8055
-	// (get) Token: 0x060176EA RID: 95978
-	// (set) Token: 0x060176EB RID: 95979
+	// Token: 0x17001FCF RID: 8143
+	// (get) Token: 0x0601511C RID: 86300
+	// (set) Token: 0x0601511D RID: 86301
 	string PrefabPath { get; set; }
 
-	// Token: 0x17001F78 RID: 8056
-	// (get) Token: 0x060176EC RID: 95980
-	// (set) Token: 0x060176ED RID: 95981
+	// Token: 0x17001FD0 RID: 8144
+	// (get) Token: 0x0601511E RID: 86302
+	// (set) Token: 0x0601511F RID: 86303
 	Vector Offset { get; set; }
 
-	// Token: 0x17001F79 RID: 8057
-	// (get) Token: 0x060176EE RID: 95982
-	// (set) Token: 0x060176EF RID: 95983
+	// Token: 0x17001FD1 RID: 8145
+	// (get) Token: 0x06015120 RID: 86304
+	// (set) Token: 0x06015121 RID: 86305
 	bool? IsInTrackRange { get; set; }
 
-	// Token: 0x17001F7A RID: 8058
-	// (get) Token: 0x060176F0 RID: 95984
-	// (set) Token: 0x060176F1 RID: 95985
+	// Token: 0x17001FD2 RID: 8146
+	// (get) Token: 0x06015122 RID: 86306
+	// (set) Token: 0x06015123 RID: 86307
 	int? AreaId { get; set; }
 
-	// Token: 0x17001F7B RID: 8059
-	// (get) Token: 0x060176F2 RID: 95986
-	// (set) Token: 0x060176F3 RID: 95987
+	// Token: 0x17001FD3 RID: 8147
+	// (get) Token: 0x06015124 RID: 86308
+	// (set) Token: 0x06015125 RID: 86309
 	int? MultiMapId { get; set; }
 
-	// Token: 0x17001F7C RID: 8060
-	// (get) Token: 0x060176F4 RID: 95988
-	// (set) Token: 0x060176F5 RID: 95989
+	// Token: 0x17001FD4 RID: 8148
+	// (get) Token: 0x06015126 RID: 86310
+	// (set) Token: 0x06015127 RID: 86311
 	int? TaskMarkConfigId { get; set; }
 
-	// Token: 0x17001F7D RID: 8061
-	// (get) Token: 0x060176F6 RID: 95990
-	// (set) Token: 0x060176F7 RID: 95991
+	// Token: 0x17001FD5 RID: 8149
+	// (get) Token: 0x06015128 RID: 86312
+	// (set) Token: 0x06015129 RID: 86313
 	bool? WeakTrack { get; set; }
 }

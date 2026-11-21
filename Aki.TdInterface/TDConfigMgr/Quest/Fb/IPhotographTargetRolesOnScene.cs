@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001400 RID: 5120
+	// Token: 0x02001557 RID: 5463
 	public class IPhotographTargetRolesOnScene : IPhotographTarget
 	{
-		// Token: 0x06007475 RID: 29813 RVA: 0x00116913 File Offset: 0x00114B13
-		[NullableContext(1)]
+		// Token: 0x06007B36 RID: 31542 RVA: 0x001252F7 File Offset: 0x001234F7
 		public static IPhotographTargetRolesOnScene Create(IPhotographTargetRolesOnScene? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002648 RID: 9800
-		// (get) Token: 0x06007476 RID: 29814 RVA: 0x00116932 File Offset: 0x00114B32
+		// Token: 0x1700282A RID: 10282
+		// (get) Token: 0x06007B37 RID: 31543 RVA: 0x00125316 File Offset: 0x00123516
 		public override EPhotographTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004364 RID: 17252
+		// Token: 0x040046F5 RID: 18165
 		private IPhotographTargetRolesOnScene Instance;
 	}
 }

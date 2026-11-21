@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B91 RID: 19345
+	// Token: 0x02003B3B RID: 15163
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NextTetrominoItem : UiPanelBase
 	{
-		// Token: 0x06032213 RID: 205331 RVA: 0x00BA5300 File Offset: 0x00BA3500
+		// Token: 0x06026FA3 RID: 159651 RVA: 0x00AE944C File Offset: 0x00AE764C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032214 RID: 205332 RVA: 0x00BA536C File Offset: 0x00BA356C
+		// Token: 0x06026FA4 RID: 159652 RVA: 0x00AE94B8 File Offset: 0x00AE76B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			NextTetrominoItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032215 RID: 205333 RVA: 0x00BA53B0 File Offset: 0x00BA35B0
+		// Token: 0x06026FA5 RID: 159653 RVA: 0x00AE94FC File Offset: 0x00AE76FC
 		public void OnTick(float delta)
 		{
 			SlidingBlocksGameData gameData = SlidingBlocksModel.Instance.GameData;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ChangePreviewTetromino(tetrominoConfig).Forget();
 		}
 
-		// Token: 0x06032216 RID: 205334 RVA: 0x00BA5454 File Offset: 0x00BA3654
+		// Token: 0x06026FA6 RID: 159654 RVA: 0x00AE95A0 File Offset: 0x00AE77A0
 		private UniTask ChangePreviewTetromino(ITetrominoConfig nextTetromino)
 		{
 			NextTetrominoItem.<ChangePreviewTetromino>d__7 <ChangePreviewTetromino>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <ChangePreviewTetromino>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032217 RID: 205335 RVA: 0x00BA54A0 File Offset: 0x00BA36A0
+		// Token: 0x06026FA7 RID: 159655 RVA: 0x00AE95EC File Offset: 0x00AE77EC
 		private UniTask AddMinoItem(string styleName, double x, double y)
 		{
 			NextTetrominoItem.<AddMinoItem>d__8 <AddMinoItem>d__;
@@ -89,22 +89,22 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <AddMinoItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401AB4B RID: 109387
+		// Token: 0x0401549F RID: 87199
 		private SlidingBlocksDefine.ETetrominoType? CurShowTetromino;
 
-		// Token: 0x0401AB4C RID: 109388
+		// Token: 0x040154A0 RID: 87200
 		private SlidingBlocksDefine.ETetrominoBorad? CurShowTetrominoBoard;
 
-		// Token: 0x0401AB4D RID: 109389
+		// Token: 0x040154A1 RID: 87201
 		private readonly List<PreviewMinoItem> PreviewMinoItems = new List<PreviewMinoItem>();
 
-		// Token: 0x0200AD9A RID: 44442
+		// Token: 0x020097B9 RID: 38841
 		[NullableContext(0)]
 		private enum EViewComponent
 		{
-			// Token: 0x04034B9F RID: 215967
+			// Token: 0x0402F546 RID: 193862
 			GridNode,
-			// Token: 0x04034BA0 RID: 215968
+			// Token: 0x0402F547 RID: 193863
 			GridItem
 		}
 	}

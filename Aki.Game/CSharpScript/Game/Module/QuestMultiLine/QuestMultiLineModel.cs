@@ -10,19 +10,19 @@ using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004FA8 RID: 20392
+	// Token: 0x02003F71 RID: 16241
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class QuestMultiLineModel : ModelBase
 	{
-		// Token: 0x0603432E RID: 213806 RVA: 0x00C40B9C File Offset: 0x00C3ED9C
+		// Token: 0x0602919C RID: 168348 RVA: 0x00B8A348 File Offset: 0x00B88548
 		public bool IsBranchTimePoint()
 		{
 			return this.CurSelectLineId != 0;
 		}
 
-		// Token: 0x0603432F RID: 213807 RVA: 0x00C40BA8 File Offset: 0x00C3EDA8
+		// Token: 0x0602919D RID: 168349 RVA: 0x00B8A354 File Offset: 0x00B88554
 		public void SetData(QuestBranchInfo branchInfo)
 		{
 			this.BranchInfoMap.Clear();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x06034330 RID: 213808 RVA: 0x00C40D0C File Offset: 0x00C3EF0C
+		// Token: 0x0602919E RID: 168350 RVA: 0x00B8A4B8 File Offset: 0x00B886B8
 		public void AddData(QuestBranchInfo branchInfo)
 		{
 			if (branchInfo.QuestBranchInfos != null)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x06034331 RID: 213809 RVA: 0x00C40E50 File Offset: 0x00C3F050
+		// Token: 0x0602919F RID: 168351 RVA: 0x00B8A5FC File Offset: 0x00B887FC
 		private void RefreshTimePoints()
 		{
 			foreach (QuestMultiLineTimePointData questMultiLineTimePointData in this.TimePointDataArray)
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x06034332 RID: 213810 RVA: 0x00C40EC0 File Offset: 0x00C3F0C0
+		// Token: 0x060291A0 RID: 168352 RVA: 0x00B8A66C File Offset: 0x00B8886C
 		public List<QuestMultiLineTimePointData> GetQuestTimePoints()
 		{
 			return this.TimePointDataArray;
 		}
 
-		// Token: 0x06034333 RID: 213811 RVA: 0x00C40EC8 File Offset: 0x00C3F0C8
+		// Token: 0x060291A1 RID: 168353 RVA: 0x00B8A674 File Offset: 0x00B88874
 		[NullableContext(2)]
 		public QuestMultiLineTimePointData GetLastUnlockTimePoint()
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return null;
 		}
 
-		// Token: 0x06034334 RID: 213812 RVA: 0x00C40F08 File Offset: 0x00C3F108
+		// Token: 0x060291A2 RID: 168354 RVA: 0x00B8A6B4 File Offset: 0x00B888B4
 		public void RefreshOneBranchPage(OneQuestBranchPageInfo branchPageInfo)
 		{
 			this.BranchInfoMap[branchPageInfo.Id] = branchPageInfo;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			EventSystem.Instance.Emit<List<QuestMultiLineTimePointData>>(EEventName.QuestMultiLineTimePointChange, this.TimePointDataArray);
 		}
 
-		// Token: 0x06034335 RID: 213813 RVA: 0x00C40F5C File Offset: 0x00C3F15C
+		// Token: 0x060291A3 RID: 168355 RVA: 0x00B8A708 File Offset: 0x00B88908
 		[NullableContext(2)]
 		private QuestMultiLineTimePointData FindTimePointByBranchPageId(int branchPageId)
 		{
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return null;
 		}
 
-		// Token: 0x06034336 RID: 213814 RVA: 0x00C40FB8 File Offset: 0x00C3F1B8
+		// Token: 0x060291A4 RID: 168356 RVA: 0x00B8A764 File Offset: 0x00B88964
 		private void InitData()
 		{
 			this.TimePointDataArray = new List<QuestMultiLineTimePointData>();
@@ -161,14 +161,14 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			this.TimePointDataArray.Sort((QuestMultiLineTimePointData a, QuestMultiLineTimePointData b) => a.Sort - b.Sort);
 		}
 
-		// Token: 0x06034337 RID: 213815 RVA: 0x00C4104C File Offset: 0x00C3F24C
+		// Token: 0x060291A5 RID: 168357 RVA: 0x00B8A7F8 File Offset: 0x00B889F8
 		protected override bool OnInit()
 		{
 			this.InitData();
 			return true;
 		}
 
-		// Token: 0x06034338 RID: 213816 RVA: 0x00C41058 File Offset: 0x00C3F258
+		// Token: 0x060291A6 RID: 168358 RVA: 0x00B8A804 File Offset: 0x00B88A04
 		public bool GetTimePointRedDot(int configId)
 		{
 			ServerStorageMap serverStorageMap = (ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.QuestBranchSystem);
@@ -180,13 +180,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return serverStorageMap.Get(configId).GetValueOrDefault() == 1;
 		}
 
-		// Token: 0x06034339 RID: 213817 RVA: 0x00C4109C File Offset: 0x00C3F29C
+		// Token: 0x060291A7 RID: 168359 RVA: 0x00B8A848 File Offset: 0x00B88A48
 		public void ClearTimePointRedDot(int configId)
 		{
 			((ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.QuestBranchSystem)).Set(configId, 0);
 		}
 
-		// Token: 0x0603433A RID: 213818 RVA: 0x00C410B8 File Offset: 0x00C3F2B8
+		// Token: 0x060291A8 RID: 168360 RVA: 0x00B8A864 File Offset: 0x00B88A64
 		public bool GetComponentRedDot(int componentId, EQuestMultiLineRoleType type)
 		{
 			if (type != EQuestMultiLineRoleType.MainRole)
@@ -202,14 +202,14 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return serverStorageMap.Get(componentId).GetValueOrDefault() == 1;
 		}
 
-		// Token: 0x0603433B RID: 213819 RVA: 0x00C41102 File Offset: 0x00C3F302
+		// Token: 0x060291A9 RID: 168361 RVA: 0x00B8A8AE File Offset: 0x00B88AAE
 		public void ClearComponentRedDot(int componentId)
 		{
 			((ServerStorageMap)ServerStorageModel.Instance.Get(EClientStorageSystemIdType.QuestBranchSystem)).Set(componentId, 0);
 		}
 
-		// Token: 0x17007F77 RID: 32631
-		// (get) Token: 0x0603433C RID: 213820 RVA: 0x00C4111C File Offset: 0x00C3F31C
+		// Token: 0x17005327 RID: 21287
+		// (get) Token: 0x060291AA RID: 168362 RVA: 0x00B8A8C8 File Offset: 0x00B88AC8
 		public static QuestMultiLineModel Instance
 		{
 			get
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x0603433D RID: 213821 RVA: 0x00C41123 File Offset: 0x00C3F323
+		// Token: 0x060291AB RID: 168363 RVA: 0x00B8A8CF File Offset: 0x00B88ACF
 		public static QuestMultiLineModel GetOrCreateInstance()
 		{
 			if (QuestMultiLineModel._Instance == null)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return QuestMultiLineModel._Instance;
 		}
 
-		// Token: 0x0603433E RID: 213822 RVA: 0x00C41137 File Offset: 0x00C3F337
+		// Token: 0x060291AC RID: 168364 RVA: 0x00B8A8E3 File Offset: 0x00B88AE3
 		public static bool CreateInstance()
 		{
 			if (QuestMultiLineModel._Instance != null)
@@ -239,39 +239,39 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return true;
 		}
 
-		// Token: 0x0603433F RID: 213823 RVA: 0x00C4114D File Offset: 0x00C3F34D
+		// Token: 0x060291AD RID: 168365 RVA: 0x00B8A8F9 File Offset: 0x00B88AF9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034340 RID: 213824 RVA: 0x00C4114F File Offset: 0x00C3F34F
+		// Token: 0x060291AE RID: 168366 RVA: 0x00B8A8FB File Offset: 0x00B88AFB
 		public static void ResetStaticDefaultValue()
 		{
 			QuestMultiLineModel._Instance = null;
 		}
 
-		// Token: 0x06034341 RID: 213825 RVA: 0x00C41157 File Offset: 0x00C3F357
+		// Token: 0x060291AF RID: 168367 RVA: 0x00B8A903 File Offset: 0x00B88B03
 		static QuestMultiLineModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(QuestMultiLineModel.CreateStaticDefaultValue), new Action(QuestMultiLineModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BC21 RID: 113697
+		// Token: 0x040165F6 RID: 91638
 		private List<QuestMultiLineTimePointData> TimePointDataArray = new List<QuestMultiLineTimePointData>();
 
-		// Token: 0x0401BC22 RID: 113698
+		// Token: 0x040165F7 RID: 91639
 		private readonly Dictionary<int, OneQuestBranchPageInfo> BranchInfoMap = new Dictionary<int, OneQuestBranchPageInfo>();
 
-		// Token: 0x0401BC23 RID: 113699
+		// Token: 0x040165F8 RID: 91640
 		private readonly Dictionary<int, bool> UnlockTimePointMap = new Dictionary<int, bool>();
 
-		// Token: 0x0401BC24 RID: 113700
+		// Token: 0x040165F9 RID: 91641
 		private readonly Dictionary<int, bool> UnlockComponentsGroupMap = new Dictionary<int, bool>();
 
-		// Token: 0x0401BC25 RID: 113701
+		// Token: 0x040165FA RID: 91642
 		private readonly int CurSelectLineId;
 
-		// Token: 0x0401BC26 RID: 113702
+		// Token: 0x040165FB RID: 91643
 		[Nullable(2)]
 		private static QuestMultiLineModel _Instance;
 	}

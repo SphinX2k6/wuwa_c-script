@@ -3,40 +3,40 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A63 RID: 19043
+	// Token: 0x02003A0B RID: 14859
 	[NullableContext(1)]
 	public interface ITrapDefenseDifficultyLevelInfo
 	{
-		// Token: 0x17007A92 RID: 31378
-		// (get) Token: 0x06031622 RID: 202274
+		// Token: 0x17004E3F RID: 20031
+		// (get) Token: 0x060263B2 RID: 156594
 		ETrapDefenseDifficultyLevel DifficultyLevel { get; }
 
-		// Token: 0x17007A93 RID: 31379
-		// (get) Token: 0x06031623 RID: 202275
+		// Token: 0x17004E40 RID: 20032
+		// (get) Token: 0x060263B3 RID: 156595
 		string NameKey { get; }
 
-		// Token: 0x17007A94 RID: 31380
-		// (get) Token: 0x06031624 RID: 202276
+		// Token: 0x17004E41 RID: 20033
+		// (get) Token: 0x060263B4 RID: 156596
 		string NameBgKey { get; }
 
-		// Token: 0x17007A95 RID: 31381
-		// (get) Token: 0x06031625 RID: 202277
+		// Token: 0x17004E42 RID: 20034
+		// (get) Token: 0x060263B5 RID: 156597
 		string BgKey { get; }
 
-		// Token: 0x17007A96 RID: 31382
-		// (get) Token: 0x06031626 RID: 202278
+		// Token: 0x17004E43 RID: 20035
+		// (get) Token: 0x060263B6 RID: 156598
 		string BgLightKey { get; }
 
-		// Token: 0x17007A97 RID: 31383
-		// (get) Token: 0x06031627 RID: 202279
+		// Token: 0x17004E44 RID: 20036
+		// (get) Token: 0x060263B7 RID: 156599
 		string BgTitleKey { get; }
 
-		// Token: 0x17007A98 RID: 31384
-		// (get) Token: 0x06031628 RID: 202280
+		// Token: 0x17004E45 RID: 20037
+		// (get) Token: 0x060263B8 RID: 156600
 		string BgFlowerColor { get; }
 
-		// Token: 0x17007A99 RID: 31385
-		// (get) Token: 0x06031629 RID: 202281
+		// Token: 0x17004E46 RID: 20038
+		// (get) Token: 0x060263B9 RID: 156601
 		string ArtTextShadowColor { get; }
 	}
 }

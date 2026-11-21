@@ -5,52 +5,52 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.StaticScene
 {
-	// Token: 0x02006A0C RID: 27148
+	// Token: 0x02005B69 RID: 23401
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BindTargetSetting
 	{
-		// Token: 0x17009892 RID: 39058
-		// (get) Token: 0x0604386F RID: 276591 RVA: 0x010841DC File Offset: 0x010823DC
-		// (set) Token: 0x06043870 RID: 276592 RVA: 0x010841E4 File Offset: 0x010823E4
+		// Token: 0x17006D77 RID: 28023
+		// (get) Token: 0x060398BB RID: 235707 RVA: 0x01028800 File Offset: 0x01026A00
+		// (set) Token: 0x060398BC RID: 235708 RVA: 0x01028808 File Offset: 0x01026A08
 		public EMovieCameraSequenceSettingBindTargetType BindTargetType { get; set; }
 
-		// Token: 0x17009893 RID: 39059
-		// (get) Token: 0x06043871 RID: 276593 RVA: 0x010841ED File Offset: 0x010823ED
-		// (set) Token: 0x06043872 RID: 276594 RVA: 0x010841F5 File Offset: 0x010823F5
+		// Token: 0x17006D78 RID: 28024
+		// (get) Token: 0x060398BD RID: 235709 RVA: 0x01028811 File Offset: 0x01026A11
+		// (set) Token: 0x060398BE RID: 235710 RVA: 0x01028819 File Offset: 0x01026A19
 		public FName AttachSocketName { get; set; }
 
-		// Token: 0x17009894 RID: 39060
-		// (get) Token: 0x06043873 RID: 276595 RVA: 0x010841FE File Offset: 0x010823FE
-		// (set) Token: 0x06043874 RID: 276596 RVA: 0x01084206 File Offset: 0x01082406
+		// Token: 0x17006D79 RID: 28025
+		// (get) Token: 0x060398BF RID: 235711 RVA: 0x01028822 File Offset: 0x01026A22
+		// (set) Token: 0x060398C0 RID: 235712 RVA: 0x0102882A File Offset: 0x01026A2A
 		public Vector AttachLocationOffset { get; set; }
 
-		// Token: 0x17009895 RID: 39061
-		// (get) Token: 0x06043875 RID: 276597 RVA: 0x0108420F File Offset: 0x0108240F
-		// (set) Token: 0x06043876 RID: 276598 RVA: 0x01084217 File Offset: 0x01082417
+		// Token: 0x17006D7A RID: 28026
+		// (get) Token: 0x060398C1 RID: 235713 RVA: 0x01028833 File Offset: 0x01026A33
+		// (set) Token: 0x060398C2 RID: 235714 RVA: 0x0102883B File Offset: 0x01026A3B
 		public Rotator AttachRotatorOffset { get; set; }
 
-		// Token: 0x17009896 RID: 39062
-		// (get) Token: 0x06043877 RID: 276599 RVA: 0x01084220 File Offset: 0x01082420
-		// (set) Token: 0x06043878 RID: 276600 RVA: 0x01084228 File Offset: 0x01082428
+		// Token: 0x17006D7B RID: 28027
+		// (get) Token: 0x060398C3 RID: 235715 RVA: 0x01028844 File Offset: 0x01026A44
+		// (set) Token: 0x060398C4 RID: 235716 RVA: 0x0102884C File Offset: 0x01026A4C
 		public Vector SpecificLocationOffset { get; set; }
 
-		// Token: 0x17009897 RID: 39063
-		// (get) Token: 0x06043879 RID: 276601 RVA: 0x01084231 File Offset: 0x01082431
-		// (set) Token: 0x0604387A RID: 276602 RVA: 0x01084239 File Offset: 0x01082439
+		// Token: 0x17006D7C RID: 28028
+		// (get) Token: 0x060398C5 RID: 235717 RVA: 0x01028855 File Offset: 0x01026A55
+		// (set) Token: 0x060398C6 RID: 235718 RVA: 0x0102885D File Offset: 0x01026A5D
 		public Rotator SpecificRotatorOffset { get; set; }
 
-		// Token: 0x17009898 RID: 39064
-		// (get) Token: 0x0604387B RID: 276603 RVA: 0x01084242 File Offset: 0x01082442
-		// (set) Token: 0x0604387C RID: 276604 RVA: 0x0108424A File Offset: 0x0108244A
+		// Token: 0x17006D7D RID: 28029
+		// (get) Token: 0x060398C7 RID: 235719 RVA: 0x01028866 File Offset: 0x01026A66
+		// (set) Token: 0x060398C8 RID: 235720 RVA: 0x0102886E File Offset: 0x01026A6E
 		public Vector WorldLocation { get; set; }
 
-		// Token: 0x17009899 RID: 39065
-		// (get) Token: 0x0604387D RID: 276605 RVA: 0x01084253 File Offset: 0x01082453
-		// (set) Token: 0x0604387E RID: 276606 RVA: 0x0108425B File Offset: 0x0108245B
+		// Token: 0x17006D7E RID: 28030
+		// (get) Token: 0x060398C9 RID: 235721 RVA: 0x01028877 File Offset: 0x01026A77
+		// (set) Token: 0x060398CA RID: 235722 RVA: 0x0102887F File Offset: 0x01026A7F
 		public Rotator WorldRotation { get; set; }
 
-		// Token: 0x0604387F RID: 276607 RVA: 0x01084264 File Offset: 0x01082464
+		// Token: 0x060398CB RID: 235723 RVA: 0x01028888 File Offset: 0x01026A88
 		public BindTargetSetting(EMovieCameraSequenceSettingBindTargetType bindTargetType, FName attachSocketName, Vector attachLocationOffset, Rotator attachRotatorOffset, Vector specificLocationOffset, Rotator specificRotatorOffset, Vector worldLocation, Rotator worldRotation)
 		{
 			this.BindTargetType = bindTargetType;
@@ -63,19 +63,19 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			this.WorldRotation = worldRotation;
 		}
 
-		// Token: 0x06043880 RID: 276608 RVA: 0x010842B4 File Offset: 0x010824B4
+		// Token: 0x060398CC RID: 235724 RVA: 0x010288D8 File Offset: 0x01026AD8
 		public bool IsBindToTarget()
 		{
 			return this.BindTargetType == EMovieCameraSequenceSettingBindTargetType.绑定到目标身上;
 		}
 
-		// Token: 0x06043881 RID: 276609 RVA: 0x010842BF File Offset: 0x010824BF
+		// Token: 0x060398CD RID: 235725 RVA: 0x010288E3 File Offset: 0x01026AE3
 		public bool IsBindToTargetAndPutWorld()
 		{
 			return this.BindTargetType == EMovieCameraSequenceSettingBindTargetType.根据目标位置放置到世界;
 		}
 
-		// Token: 0x06043882 RID: 276610 RVA: 0x010842CA File Offset: 0x010824CA
+		// Token: 0x060398CE RID: 235726 RVA: 0x010288EE File Offset: 0x01026AEE
 		public bool IsBindToWorld()
 		{
 			return this.BindTargetType == EMovieCameraSequenceSettingBindTargetType.放置到世界;

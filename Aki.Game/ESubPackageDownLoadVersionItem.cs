@@ -1,62 +1,62 @@
 ﻿using System;
 
-// Token: 0x02002AA6 RID: 10918
+// Token: 0x02002022 RID: 8226
 internal static class ESubPackageDownLoadVersionItem
 {
-	// Token: 0x0400A8A0 RID: 43168
+	// Token: 0x0400ACA6 RID: 44198
 	public const int BgTexture = 0;
 
-	// Token: 0x0400A8A1 RID: 43169
+	// Token: 0x0400ACA7 RID: 44199
 	public const int TitleText = 1;
 
-	// Token: 0x0400A8A2 RID: 43170
+	// Token: 0x0400ACA8 RID: 44200
 	public const int HelpBtn = 2;
 
-	// Token: 0x0400A8A3 RID: 43171
+	// Token: 0x0400ACA9 RID: 44201
 	public const int ProgressText = 3;
 
-	// Token: 0x0400A8A4 RID: 43172
+	// Token: 0x0400ACAA RID: 44202
 	public const int TipsText = 4;
 
-	// Token: 0x0400A8A5 RID: 43173
+	// Token: 0x0400ACAB RID: 44203
 	public const int ProgressBarSprite = 5;
 
-	// Token: 0x0400A8A6 RID: 43174
+	// Token: 0x0400ACAC RID: 44204
 	public const int ArrowItem = 6;
 
-	// Token: 0x0400A8A7 RID: 43175
+	// Token: 0x0400ACAD RID: 44205
 	public const int RecommendItem = 7;
 
-	// Token: 0x0400A8A8 RID: 43176
+	// Token: 0x0400ACAE RID: 44206
 	public const int SpeedText = 8;
 
-	// Token: 0x0400A8A9 RID: 43177
+	// Token: 0x0400ACAF RID: 44207
 	public const int StartBtn = 9;
 
-	// Token: 0x0400A8AA RID: 43178
+	// Token: 0x0400ACB0 RID: 44208
 	public const int DownLoadBtn = 10;
 
-	// Token: 0x0400A8AB RID: 43179
+	// Token: 0x0400ACB1 RID: 44209
 	public const int StopBtn = 11;
 
-	// Token: 0x0400A8AC RID: 43180
+	// Token: 0x0400ACB2 RID: 44210
 	public const int CancelBtn = 12;
 
-	// Token: 0x0400A8AD RID: 43181
+	// Token: 0x0400ACB3 RID: 44211
 	public const int PriorityBtn = 13;
 
-	// Token: 0x0400A8AE RID: 43182
+	// Token: 0x0400ACB4 RID: 44212
 	public const int WaitItem = 14;
 
-	// Token: 0x0400A8AF RID: 43183
+	// Token: 0x0400ACB5 RID: 44213
 	public const int DoneItem = 15;
 
-	// Token: 0x0400A8B0 RID: 43184
+	// Token: 0x0400ACB6 RID: 44214
 	public const int LockItem = 16;
 
-	// Token: 0x0400A8B1 RID: 43185
+	// Token: 0x0400ACB7 RID: 44215
 	public const int Toggle = 17;
 
-	// Token: 0x0400A8B2 RID: 43186
+	// Token: 0x0400ACB8 RID: 44216
 	public const int BarBgItem = 18;
 }

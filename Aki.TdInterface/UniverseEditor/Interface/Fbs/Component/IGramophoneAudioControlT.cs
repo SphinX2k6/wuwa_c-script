@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052FE RID: 21246
+	// Token: 0x02005884 RID: 22660
 	public class IGramophoneAudioControlT
 	{
-		// Token: 0x17009C04 RID: 39940
-		// (get) Token: 0x06022B42 RID: 142146 RVA: 0x004CF2B2 File Offset: 0x004CD4B2
-		// (set) Token: 0x06022B43 RID: 142147 RVA: 0x004CF2BA File Offset: 0x004CD4BA
+		// Token: 0x1700A43C RID: 42044
+		// (get) Token: 0x06024BF6 RID: 150518 RVA: 0x0050C186 File Offset: 0x0050A386
+		// (set) Token: 0x06024BF7 RID: 150519 RVA: 0x0050C18E File Offset: 0x0050A38E
 		public EAudioControlType Type { get; set; }
 
-		// Token: 0x06022B44 RID: 142148 RVA: 0x004CF2C3 File Offset: 0x004CD4C3
+		// Token: 0x06024BF8 RID: 150520 RVA: 0x0050C197 File Offset: 0x0050A397
 		public IGramophoneAudioControlT()
 		{
 			this.Type = EAudioControlType.Gramophone;

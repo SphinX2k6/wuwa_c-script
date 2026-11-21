@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004546 RID: 17734
+	// Token: 0x020049AE RID: 18862
 	public class IRewardConfigT
 	{
-		// Token: 0x17007DC9 RID: 32201
-		// (get) Token: 0x0601AAF5 RID: 109301 RVA: 0x003CE74F File Offset: 0x003CC94F
-		// (set) Token: 0x0601AAF6 RID: 109302 RVA: 0x003CE757 File Offset: 0x003CC957
+		// Token: 0x1700840A RID: 33802
+		// (get) Token: 0x0601C2CA RID: 115402 RVA: 0x003FA9EB File Offset: 0x003F8BEB
+		// (set) Token: 0x0601C2CB RID: 115403 RVA: 0x003FA9F3 File Offset: 0x003F8BF3
 		public List<int> RewardNodeIds { get; set; }
 
-		// Token: 0x17007DCA RID: 32202
-		// (get) Token: 0x0601AAF7 RID: 109303 RVA: 0x003CE760 File Offset: 0x003CC960
-		// (set) Token: 0x0601AAF8 RID: 109304 RVA: 0x003CE768 File Offset: 0x003CC968
+		// Token: 0x1700840B RID: 33803
+		// (get) Token: 0x0601C2CC RID: 115404 RVA: 0x003FA9FC File Offset: 0x003F8BFC
+		// (set) Token: 0x0601C2CD RID: 115405 RVA: 0x003FAA04 File Offset: 0x003F8C04
 		public List<int> TreasureBoxIds { get; set; }
 
-		// Token: 0x17007DCB RID: 32203
-		// (get) Token: 0x0601AAF9 RID: 109305 RVA: 0x003CE771 File Offset: 0x003CC971
-		// (set) Token: 0x0601AAFA RID: 109306 RVA: 0x003CE779 File Offset: 0x003CC979
+		// Token: 0x1700840C RID: 33804
+		// (get) Token: 0x0601C2CE RID: 115406 RVA: 0x003FAA0D File Offset: 0x003F8C0D
+		// (set) Token: 0x0601C2CF RID: 115407 RVA: 0x003FAA15 File Offset: 0x003F8C15
 		public List<int> CompleteRewardIds { get; set; }
 
-		// Token: 0x17007DCC RID: 32204
-		// (get) Token: 0x0601AAFB RID: 109307 RVA: 0x003CE782 File Offset: 0x003CC982
-		// (set) Token: 0x0601AAFC RID: 109308 RVA: 0x003CE78A File Offset: 0x003CC98A
+		// Token: 0x1700840D RID: 33805
+		// (get) Token: 0x0601C2D0 RID: 115408 RVA: 0x003FAA1E File Offset: 0x003F8C1E
+		// (set) Token: 0x0601C2D1 RID: 115409 RVA: 0x003FAA26 File Offset: 0x003F8C26
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601AAFD RID: 109309 RVA: 0x003CE793 File Offset: 0x003CC993
+		// Token: 0x0601C2D2 RID: 115410 RVA: 0x003FAA2F File Offset: 0x003F8C2F
 		public IRewardConfigT()
 		{
 			this.RewardNodeIds = null;

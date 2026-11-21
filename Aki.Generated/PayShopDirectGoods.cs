@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EB2 RID: 3762
+	// Token: 0x02000F97 RID: 3991
 	public struct PayShopDirectGoods : IFlatbufferObject
 	{
-		// Token: 0x170024BD RID: 9405
-		// (get) Token: 0x0600A31D RID: 41757 RVA: 0x002A6A7D File Offset: 0x002A4C7D
+		// Token: 0x17002522 RID: 9506
+		// (get) Token: 0x0600A93D RID: 43325 RVA: 0x002C3DD9 File Offset: 0x002C1FD9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A31E RID: 41758 RVA: 0x002A6A8A File Offset: 0x002A4C8A
+		// Token: 0x0600A93E RID: 43326 RVA: 0x002C3DE6 File Offset: 0x002C1FE6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A31F RID: 41759 RVA: 0x002A6A94 File Offset: 0x002A4C94
+		// Token: 0x0600A93F RID: 43327 RVA: 0x002C3DF0 File Offset: 0x002C1FF0
 		public static PayShopDirectGoods GetRootAsPayShopDirectGoods(ByteBuffer _bb)
 		{
 			return PayShopDirectGoods.GetRootAsPayShopDirectGoods(_bb, default(PayShopDirectGoods));
 		}
 
-		// Token: 0x0600A320 RID: 41760 RVA: 0x002A6AB0 File Offset: 0x002A4CB0
+		// Token: 0x0600A940 RID: 43328 RVA: 0x002C3E0C File Offset: 0x002C200C
 		public static PayShopDirectGoods GetRootAsPayShopDirectGoods(ByteBuffer _bb, PayShopDirectGoods obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A321 RID: 41761 RVA: 0x002A6ACD File Offset: 0x002A4CCD
+		// Token: 0x0600A941 RID: 43329 RVA: 0x002C3E29 File Offset: 0x002C2029
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A322 RID: 41762 RVA: 0x002A6ADC File Offset: 0x002A4CDC
+		// Token: 0x0600A942 RID: 43330 RVA: 0x002C3E38 File Offset: 0x002C2038
 		public PayShopDirectGoods __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170024BE RID: 9406
-		// (get) Token: 0x0600A323 RID: 41763 RVA: 0x002A6AEC File Offset: 0x002A4CEC
+		// Token: 0x17002523 RID: 9507
+		// (get) Token: 0x0600A943 RID: 43331 RVA: 0x002C3E48 File Offset: 0x002C2048
 		public int GoodsId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170024BF RID: 9407
-		// (get) Token: 0x0600A324 RID: 41764 RVA: 0x002A6B28 File Offset: 0x002A4D28
+		// Token: 0x17002524 RID: 9508
+		// (get) Token: 0x0600A944 RID: 43332 RVA: 0x002C3E84 File Offset: 0x002C2084
 		public int PayId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004F68 RID: 20328
+		// Token: 0x0400554D RID: 21837
 		private Table __p;
 	}
 }

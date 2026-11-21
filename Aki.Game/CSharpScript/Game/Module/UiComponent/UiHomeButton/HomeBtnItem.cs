@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 {
-	// Token: 0x02004A0B RID: 18955
+	// Token: 0x02003987 RID: 14727
 	public class HomeBtnItem : UiPanelBase
 	{
-		// Token: 0x06031309 RID: 201481 RVA: 0x00B68988 File Offset: 0x00B66B88
+		// Token: 0x06025E59 RID: 155225 RVA: 0x00AA4190 File Offset: 0x00AA2390
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603130A RID: 201482 RVA: 0x00B68A30 File Offset: 0x00B66C30
+		// Token: 0x06025E5A RID: 155226 RVA: 0x00AA4238 File Offset: 0x00AA2438
 		protected override UniTask OnBeforeStartAsync()
 		{
 			HomeBtnItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603130B RID: 201483 RVA: 0x00B68A73 File Offset: 0x00B66C73
+		// Token: 0x06025E5B RID: 155227 RVA: 0x00AA427B File Offset: 0x00AA247B
 		[NullableContext(1)]
 		public void SetFunction(Action callback)
 		{
 			this.CallBack = callback;
 		}
 
-		// Token: 0x0603130C RID: 201484 RVA: 0x00B68A7C File Offset: 0x00B66C7C
+		// Token: 0x06025E5C RID: 155228 RVA: 0x00AA4284 File Offset: 0x00AA2484
 		private void OnButtonClick()
 		{
 			Action callBack = this.CallBack;
@@ -62,34 +62,34 @@ namespace CSharpScript.Game.Module.UiComponent.UiHomeButton
 			callBack();
 		}
 
-		// Token: 0x0603130D RID: 201485 RVA: 0x00B68A8E File Offset: 0x00B66C8E
+		// Token: 0x06025E5D RID: 155229 RVA: 0x00AA4296 File Offset: 0x00AA2496
 		public void SetHomeBtnStyle(int id)
 		{
 			this.HomeBtnStyle = new int?(id);
 		}
 
-		// Token: 0x0603130E RID: 201486 RVA: 0x00B68A9C File Offset: 0x00B66C9C
+		// Token: 0x06025E5E RID: 155230 RVA: 0x00AA42A4 File Offset: 0x00AA24A4
 		public void SetSnapSize(bool snap)
 		{
 			this.SnapSize = snap;
 		}
 
-		// Token: 0x0401A4F2 RID: 107762
+		// Token: 0x04014D78 RID: 85368
 		[Nullable(2)]
 		private Action CallBack;
 
-		// Token: 0x0401A4F3 RID: 107763
+		// Token: 0x04014D79 RID: 85369
 		private int? HomeBtnStyle;
 
-		// Token: 0x0401A4F4 RID: 107764
+		// Token: 0x04014D7A RID: 85370
 		private bool SnapSize;
 
-		// Token: 0x0200ABC7 RID: 43975
+		// Token: 0x020095D6 RID: 38358
 		private enum EComponent
 		{
-			// Token: 0x04034363 RID: 213859
+			// Token: 0x0402ECE6 RID: 191718
 			Btn,
-			// Token: 0x04034364 RID: 213860
+			// Token: 0x0402ECE7 RID: 191719
 			Img
 		}
 	}

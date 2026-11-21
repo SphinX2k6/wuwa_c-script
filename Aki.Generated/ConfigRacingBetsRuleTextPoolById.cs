@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007A9 RID: 1961
+	// Token: 0x020007C3 RID: 1987
 	public class ConfigRacingBetsRuleTextPoolById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E08 RID: 11784 RVA: 0x0015D773 File Offset: 0x0015B973
+		// Token: 0x06002EA4 RID: 11940 RVA: 0x0016467F File Offset: 0x0016287F
 		static ConfigRacingBetsRuleTextPoolById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRacingBetsRuleTextPoolById.CreateStaticDefaultValue), new Action(ConfigRacingBetsRuleTextPoolById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E09 RID: 11785 RVA: 0x0015D794 File Offset: 0x0015B994
+		// Token: 0x06002EA5 RID: 11941 RVA: 0x001646A0 File Offset: 0x001628A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRacingBetsRuleTextPoolById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E0A RID: 11786 RVA: 0x0015D813 File Offset: 0x0015BA13
+		// Token: 0x06002EA6 RID: 11942 RVA: 0x0016471F File Offset: 0x0016291F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRacingBetsRuleTextPoolById.LogPair = null;
 			ConfigRacingBetsRuleTextPoolById.HandleId = 0;
 		}
 
-		// Token: 0x06002E0B RID: 11787 RVA: 0x0015D821 File Offset: 0x0015BA21
+		// Token: 0x06002EA7 RID: 11943 RVA: 0x0016472D File Offset: 0x0016292D
 		public static void Init()
 		{
 			ConfigRacingBetsRuleTextPoolById.HandleId = ConfigCommon.InitDataStatement(ConfigRacingBetsRuleTextPoolById.HandleId, "db_racingbets.db", "select BinData from `RacingBetsRuleTextPool` where Id=?");
 		}
 
-		// Token: 0x06002E0C RID: 11788 RVA: 0x0015D83C File Offset: 0x0015BA3C
+		// Token: 0x06002EA8 RID: 11944 RVA: 0x00164748 File Offset: 0x00162948
 		public static RacingBetsRuleTextPool? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRacingBetsRuleTextPoolById.HandleId, ConfigRacingBetsRuleTextPoolById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RacingBetsRuleTextPool?(rootAsRacingBetsRuleTextPool);
 		}
 
-		// Token: 0x04003585 RID: 13701
+		// Token: 0x0400363B RID: 13883
 		private const string DB = "db_racingbets.db";
 
-		// Token: 0x04003586 RID: 13702
+		// Token: 0x0400363C RID: 13884
 		private const string FILE = "q.全服赌马.xlsx";
 
-		// Token: 0x04003587 RID: 13703
+		// Token: 0x0400363D RID: 13885
 		private const string TABLE = "RacingBetsRuleTextPool";
 
-		// Token: 0x04003588 RID: 13704
+		// Token: 0x0400363E RID: 13886
 		private const string COMMAND = "select BinData from `RacingBetsRuleTextPool` where Id=?";
 
-		// Token: 0x04003589 RID: 13705
+		// Token: 0x0400363F RID: 13887
 		private const string KEY_PREFIX = "RacingBetsRuleTextPoolById";
 
-		// Token: 0x0400358A RID: 13706
+		// Token: 0x04003640 RID: 13888
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400358B RID: 13707
+		// Token: 0x04003641 RID: 13889
 		private static int HandleId;
 	}
 }

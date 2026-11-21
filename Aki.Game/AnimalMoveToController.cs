@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.NPC.Animal;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02002E25 RID: 11813
+// Token: 0x02002381 RID: 9089
 [NullableContext(1)]
 [Nullable(0)]
 public class AnimalMoveToController
 {
-	// Token: 0x06018E2D RID: 101933 RVA: 0x00669A78 File Offset: 0x00667C78
+	// Token: 0x060166FA RID: 91898 RVA: 0x0068F95C File Offset: 0x0068DB5C
 	public AnimalMoveToController(Entity entity)
 	{
 		this.ActorComp = entity.GetComponent<CharacterActorComponent>();
@@ -28,7 +28,7 @@ public class AnimalMoveToController
 		this.MaxAccelerationConfigCache = this.MoveComp.CharacterMovement.MaxAcceleration;
 	}
 
-	// Token: 0x06018E2E RID: 101934 RVA: 0x00669B17 File Offset: 0x00667D17
+	// Token: 0x060166FB RID: 91899 RVA: 0x0068F9FB File Offset: 0x0068DBFB
 	public void Init(ECharMoveState moveState, bool rootMotion)
 	{
 		this.MoveState = moveState;
@@ -37,7 +37,7 @@ public class AnimalMoveToController
 		this.IsInited = true;
 	}
 
-	// Token: 0x06018E2F RID: 101935 RVA: 0x00669B3C File Offset: 0x00667D3C
+	// Token: 0x060166FC RID: 91900 RVA: 0x0068FA20 File Offset: 0x0068DC20
 	public void Start(Vector targetLocation, bool isNavigation, float turnSpeed, double distanceErrorThreshold = 100.0)
 	{
 		if (!this.IsInited)
@@ -79,7 +79,7 @@ public class AnimalMoveToController
 		this.CurrentMoveIndex = 1;
 	}
 
-	// Token: 0x06018E30 RID: 101936 RVA: 0x00669C4C File Offset: 0x00667E4C
+	// Token: 0x060166FD RID: 91901 RVA: 0x0068FB30 File Offset: 0x0068DD30
 	public EAnimalMoveToState Update(float delta)
 	{
 		if (this.ForceStop)
@@ -114,13 +114,13 @@ public class AnimalMoveToController
 		}
 	}
 
-	// Token: 0x06018E31 RID: 101937 RVA: 0x00669D14 File Offset: 0x00667F14
+	// Token: 0x060166FE RID: 91902 RVA: 0x0068FBF8 File Offset: 0x0068DDF8
 	public void Stop()
 	{
 		this.ForceStop = true;
 	}
 
-	// Token: 0x06018E32 RID: 101938 RVA: 0x00669D20 File Offset: 0x00667F20
+	// Token: 0x060166FF RID: 91903 RVA: 0x0068FC04 File Offset: 0x0068DE04
 	public void Finish()
 	{
 		if (this.MoveState == ECharMoveState.NormalSwim && !this.RootMotion)
@@ -135,10 +135,10 @@ public class AnimalMoveToController
 		this.IsInited = false;
 	}
 
-	// Token: 0x06018E33 RID: 101939 RVA: 0x00669D70 File Offset: 0x00667F70
+	// Token: 0x06016700 RID: 91904 RVA: 0x0068FC54 File Offset: 0x0068DE54
 	private void ExecuteInputMoveLogic(Vector direction)
 	{
-		this.ActorComp.SetInputDirect(direction, false);
+		this.ActorComp.SetInputDirect(direction, false, EInputDirectSpace.World);
 		float turnSpeed = this.RobustTurnSpeed;
 		if (this.AngularVelocityCurve != null)
 		{
@@ -149,35 +149,35 @@ public class AnimalMoveToController
 		AiControllerLibrary.TurnToDirect(this.ActorComp, direction, turnSpeed, false, 0f);
 	}
 
-	// Token: 0x0400BAAD RID: 47789
+	// Token: 0x0400BE3B RID: 48699
 	private const int DISTANCE_ERROR_THRESHOLD = 100;
 
-	// Token: 0x0400BAAE RID: 47790
+	// Token: 0x0400BE3C RID: 48700
 	private const float MAX_TURN_SPEED = 360f;
 
-	// Token: 0x0400BAAF RID: 47791
+	// Token: 0x0400BE3D RID: 48701
 	private readonly CharacterActorComponent ActorComp;
 
-	// Token: 0x0400BAB0 RID: 47792
+	// Token: 0x0400BE3E RID: 48702
 	private readonly BaseUnifiedStateComponent StateComp;
 
-	// Token: 0x0400BAB1 RID: 47793
+	// Token: 0x0400BE3F RID: 48703
 	private readonly CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400BAB2 RID: 47794
+	// Token: 0x0400BE40 RID: 48704
 	[Nullable(2)]
 	private readonly UCurveFloat AngularVelocityCurve;
 
-	// Token: 0x0400BAB3 RID: 47795
+	// Token: 0x0400BE41 RID: 48705
 	private ECharMoveState MoveState;
 
-	// Token: 0x0400BAB4 RID: 47796
+	// Token: 0x0400BE42 RID: 48706
 	private bool RootMotion;
 
-	// Token: 0x0400BAB5 RID: 47797
+	// Token: 0x0400BE43 RID: 48707
 	private bool NavigationOn;
 
-	// Token: 0x0400BAB6 RID: 47798
+	// Token: 0x0400BE44 RID: 48708
 	[Nullable(new byte[]
 	{
 		2,
@@ -185,24 +185,24 @@ public class AnimalMoveToController
 	})]
 	private List<Vector> MovePath;
 
-	// Token: 0x0400BAB7 RID: 47799
+	// Token: 0x0400BE45 RID: 48709
 	private int CurrentMoveIndex;
 
-	// Token: 0x0400BAB8 RID: 47800
+	// Token: 0x0400BE46 RID: 48710
 	private float RobustTurnSpeed;
 
-	// Token: 0x0400BAB9 RID: 47801
+	// Token: 0x0400BE47 RID: 48711
 	private bool IsInited;
 
-	// Token: 0x0400BABA RID: 47802
+	// Token: 0x0400BE48 RID: 48712
 	private bool ForceStop;
 
-	// Token: 0x0400BABB RID: 47803
+	// Token: 0x0400BE49 RID: 48713
 	private readonly Vector CacheVector = Vector.Create();
 
-	// Token: 0x0400BABC RID: 47804
+	// Token: 0x0400BE4A RID: 48714
 	private double DistanceErrorThreshold;
 
-	// Token: 0x0400BABD RID: 47805
+	// Token: 0x0400BE4B RID: 48715
 	private readonly float MaxAccelerationConfigCache;
 }

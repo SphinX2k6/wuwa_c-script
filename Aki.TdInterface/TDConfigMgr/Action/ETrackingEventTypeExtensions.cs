@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200247F RID: 9343
+	// Token: 0x02002722 RID: 10018
 	public static class ETrackingEventTypeExtensions
 	{
-		// Token: 0x0600CABA RID: 51898 RVA: 0x001DD764 File Offset: 0x001DB964
+		// Token: 0x0600D773 RID: 55155 RVA: 0x001F792C File Offset: 0x001F5B2C
 		public static string ToEnumString(this ETrackingEventType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CABB RID: 51899 RVA: 0x001DD79C File Offset: 0x001DB99C
+		// Token: 0x0600D774 RID: 55156 RVA: 0x001F7964 File Offset: 0x001F5B64
 		public static ETrackingEventType FromString(string name)
 		{
 			ETrackingEventType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CABC RID: 51900 RVA: 0x001DD7C5 File Offset: 0x001DB9C5
+		// Token: 0x0600D775 RID: 55157 RVA: 0x001F798D File Offset: 0x001F5B8D
 		public static bool TryFromString(string name, out ETrackingEventType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CABD RID: 51901 RVA: 0x001DD7FE File Offset: 0x001DB9FE
+		// Token: 0x0600D776 RID: 55158 RVA: 0x001F79C6 File Offset: 0x001F5BC6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CABE RID: 51902 RVA: 0x001DD816 File Offset: 0x001DBA16
+		// Token: 0x0600D777 RID: 55159 RVA: 0x001F79DE File Offset: 0x001F5BDE
 		public static ETrackingEventType[] GetValues()
 		{
 			return new ETrackingEventType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CABF RID: 51903 RVA: 0x001DD822 File Offset: 0x001DBA22
+		// Token: 0x0600D778 RID: 55160 RVA: 0x001F79EA File Offset: 0x001F5BEA
 		public static string[] GetNames()
 		{
 			return new string[]

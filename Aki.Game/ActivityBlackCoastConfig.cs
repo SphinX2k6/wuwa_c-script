@@ -3,56 +3,56 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020011A7 RID: 4519
+// Token: 0x0200065B RID: 1627
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityBlackCoastConfig : ConfigBase
 {
-	// Token: 0x060077A3 RID: 30627 RVA: 0x001907FE File Offset: 0x0018E9FE
+	// Token: 0x06004B3A RID: 19258 RVA: 0x001993E2 File Offset: 0x001975E2
 	public BlackCoastThemeConfig? GetActivityConfig(int activityId)
 	{
 		return ConfigBlackCoastThemeConfigByActivityId.GetConfig(activityId, true);
 	}
 
-	// Token: 0x060077A4 RID: 30628 RVA: 0x00190807 File Offset: 0x0018EA07
+	// Token: 0x06004B3B RID: 19259 RVA: 0x001993EB File Offset: 0x001975EB
 	public BlackCoastThemeStageRe? GetStageConfig(int stageId)
 	{
 		return ConfigBlackCoastThemeStageReById.GetConfig(stageId, true);
 	}
 
-	// Token: 0x060077A5 RID: 30629 RVA: 0x00190810 File Offset: 0x0018EA10
+	// Token: 0x06004B3C RID: 19260 RVA: 0x001993F4 File Offset: 0x001975F4
 	public IReadOnlyList<BlackCoastThemeStageRe> GetAllStageConfigByActivityId(int activityId)
 	{
 		return ConfigBlackCoastThemeStageReByActivityId.GetConfigList(activityId, true) ?? Array.Empty<BlackCoastThemeStageRe>();
 	}
 
-	// Token: 0x060077A6 RID: 30630 RVA: 0x00190822 File Offset: 0x0018EA22
+	// Token: 0x06004B3D RID: 19261 RVA: 0x00199406 File Offset: 0x00197606
 	public BlackCoastThemeTaskRe? GetTaskConfig(int taskId)
 	{
 		return ConfigBlackCoastThemeTaskReByTaskId.GetConfig(taskId, true);
 	}
 
-	// Token: 0x060077A7 RID: 30631 RVA: 0x0019082B File Offset: 0x0018EA2B
+	// Token: 0x06004B3E RID: 19262 RVA: 0x0019940F File Offset: 0x0019760F
 	public IReadOnlyList<BlackCoastThemeTaskRe> GetAllTaskConfigByStageId(int stageId)
 	{
 		return ConfigBlackCoastThemeTaskReByStageId.GetConfigList(stageId, true) ?? Array.Empty<BlackCoastThemeTaskRe>();
 	}
 
-	// Token: 0x060077A8 RID: 30632 RVA: 0x0019083D File Offset: 0x0018EA3D
+	// Token: 0x06004B3F RID: 19263 RVA: 0x00199421 File Offset: 0x00197621
 	public BlackCoastThemeRewardRe? GetRewardConfig(int id)
 	{
 		return ConfigBlackCoastThemeRewardReById.GetConfig(id, true);
 	}
 
-	// Token: 0x060077A9 RID: 30633 RVA: 0x00190846 File Offset: 0x0018EA46
+	// Token: 0x06004B40 RID: 19264 RVA: 0x0019942A File Offset: 0x0019762A
 	public IReadOnlyList<BlackCoastThemeRewardRe> GetAllRewardConfigByActivityId(int activityId)
 	{
 		return ConfigBlackCoastThemeRewardReByActivityId.GetConfigList(activityId, true) ?? Array.Empty<BlackCoastThemeRewardRe>();
 	}
 
-	// Token: 0x17000A41 RID: 2625
-	// (get) Token: 0x060077AA RID: 30634 RVA: 0x00190858 File Offset: 0x0018EA58
+	// Token: 0x17000A61 RID: 2657
+	// (get) Token: 0x06004B41 RID: 19265 RVA: 0x0019943C File Offset: 0x0019763C
 	public static ActivityBlackCoastConfig Instance
 	{
 		get
@@ -61,7 +61,7 @@ public class ActivityBlackCoastConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060077AB RID: 30635 RVA: 0x0019085F File Offset: 0x0018EA5F
+	// Token: 0x06004B42 RID: 19266 RVA: 0x00199443 File Offset: 0x00197643
 	public static ActivityBlackCoastConfig GetOrCreateInstance()
 	{
 		if (ActivityBlackCoastConfig._Instance == null)
@@ -71,7 +71,7 @@ public class ActivityBlackCoastConfig : ConfigBase
 		return ActivityBlackCoastConfig._Instance;
 	}
 
-	// Token: 0x060077AC RID: 30636 RVA: 0x00190873 File Offset: 0x0018EA73
+	// Token: 0x06004B43 RID: 19267 RVA: 0x00199457 File Offset: 0x00197657
 	public static bool CreateInstance()
 	{
 		if (ActivityBlackCoastConfig._Instance != null)
@@ -82,24 +82,24 @@ public class ActivityBlackCoastConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060077AD RID: 30637 RVA: 0x00190889 File Offset: 0x0018EA89
+	// Token: 0x06004B44 RID: 19268 RVA: 0x0019946D File Offset: 0x0019766D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060077AE RID: 30638 RVA: 0x0019088B File Offset: 0x0018EA8B
+	// Token: 0x06004B45 RID: 19269 RVA: 0x0019946F File Offset: 0x0019766F
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityBlackCoastConfig._Instance = null;
 	}
 
-	// Token: 0x060077AF RID: 30639 RVA: 0x00190893 File Offset: 0x0018EA93
+	// Token: 0x06004B46 RID: 19270 RVA: 0x00199477 File Offset: 0x00197677
 	static ActivityBlackCoastConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityBlackCoastConfig.CreateStaticDefaultValue), new Action(ActivityBlackCoastConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400371F RID: 14111
+	// Token: 0x040037B8 RID: 14264
 	[Nullable(2)]
 	private static ActivityBlackCoastConfig _Instance;
 }

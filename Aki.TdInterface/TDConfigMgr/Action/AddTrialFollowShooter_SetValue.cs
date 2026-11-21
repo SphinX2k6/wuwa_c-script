@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200149A RID: 5274
+	// Token: 0x020015F3 RID: 5619
 	public class AddTrialFollowShooter_SetValue
 	{
-		// Token: 0x040045D8 RID: 17880
+		// Token: 0x04004973 RID: 18803
 		public int Id;
 
-		// Token: 0x040045D9 RID: 17881
-		[Nullable(1)]
+		// Token: 0x04004974 RID: 18804
 		public IActiveRange ActiveRange;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014C9 RID: 5321
+	// Token: 0x02001622 RID: 5666
 	public class ChangeBehaviorState_SetValue
 	{
-		// Token: 0x0400465B RID: 18011
+		// Token: 0x040049F6 RID: 18934
 		public int StateId;
 
-		// Token: 0x0400465C RID: 18012
+		// Token: 0x040049F7 RID: 18935
 		public bool IsInstant;
 	}
 }

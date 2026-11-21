@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A70 RID: 6768
+	// Token: 0x02001C05 RID: 7173
 	public class IFixedPos_SetValue
 	{
-		// Token: 0x04005975 RID: 22901
+		// Token: 0x04005DDA RID: 24026
 		public ETeleportType Type;
 
-		// Token: 0x04005976 RID: 22902
-		[Nullable(1)]
+		// Token: 0x04005DDB RID: 24027
 		public PosA TargetPos;
 	}
 }

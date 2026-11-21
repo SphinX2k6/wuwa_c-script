@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064FF RID: 25855
+	// Token: 0x0200547D RID: 21629
 	public struct ItemSequence
 	{
-		// Token: 0x06040E7F RID: 265855 RVA: 0x00FBB084 File Offset: 0x00FB9284
+		// Token: 0x06035B43 RID: 219971 RVA: 0x00F020B4 File Offset: 0x00F002B4
 		[NullableContext(1)]
 		public void ForEachCell(Action<int, int> action)
 		{
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E80 RID: 265856 RVA: 0x00FBB114 File Offset: 0x00FB9314
+		// Token: 0x06035B44 RID: 219972 RVA: 0x00F02144 File Offset: 0x00F00344
 		public bool Covers(int row, int col)
 		{
 			return (this.HLen > 0 && row == this.HStartRow && col >= this.HStartCol && col < this.HStartCol + this.HLen) || (this.VLen > 0 && col == this.VStartCol && row >= this.VStartRow && row < this.VStartRow + this.VLen);
 		}
 
-		// Token: 0x17009509 RID: 38153
-		// (get) Token: 0x06040E81 RID: 265857 RVA: 0x00FBB17C File Offset: 0x00FB937C
+		// Token: 0x1700686B RID: 26731
+		// (get) Token: 0x06035B45 RID: 219973 RVA: 0x00F021AC File Offset: 0x00F003AC
 		public int CellCount
 		{
 			get
@@ -45,40 +45,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x04021D47 RID: 138567
+		// Token: 0x0401C678 RID: 116344
 		public int HStartRow;
 
-		// Token: 0x04021D48 RID: 138568
+		// Token: 0x0401C679 RID: 116345
 		public int HStartCol;
 
-		// Token: 0x04021D49 RID: 138569
+		// Token: 0x0401C67A RID: 116346
 		public int HLen;
 
-		// Token: 0x04021D4A RID: 138570
+		// Token: 0x0401C67B RID: 116347
 		public int VStartRow;
 
-		// Token: 0x04021D4B RID: 138571
+		// Token: 0x0401C67C RID: 116348
 		public int VStartCol;
 
-		// Token: 0x04021D4C RID: 138572
+		// Token: 0x0401C67D RID: 116349
 		public int VLen;
 
-		// Token: 0x04021D4D RID: 138573
+		// Token: 0x0401C67E RID: 116350
 		public EMatchShape Shape;
 
-		// Token: 0x04021D4E RID: 138574
+		// Token: 0x0401C67F RID: 116351
 		public EPieceType Type;
 
-		// Token: 0x04021D4F RID: 138575
+		// Token: 0x0401C680 RID: 116352
 		public int CenterRow;
 
-		// Token: 0x04021D50 RID: 138576
+		// Token: 0x0401C681 RID: 116353
 		public int CenterCol;
 
-		// Token: 0x04021D51 RID: 138577
+		// Token: 0x0401C682 RID: 116354
 		public int Score;
 
-		// Token: 0x04021D52 RID: 138578
+		// Token: 0x0401C683 RID: 116355
 		public int Charge;
 	}
 }

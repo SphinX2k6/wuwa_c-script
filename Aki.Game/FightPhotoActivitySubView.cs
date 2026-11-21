@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001278 RID: 4728
+// Token: 0x0200072C RID: 1836
 public class FightPhotoActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x060080F5 RID: 33013 RVA: 0x001B5130 File Offset: 0x001B3330
+	// Token: 0x0600548C RID: 21644 RVA: 0x001BDE00 File Offset: 0x001BC000
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class FightPhotoActivitySubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x060080F6 RID: 33014 RVA: 0x001B51F0 File Offset: 0x001B33F0
+	// Token: 0x0600548D RID: 21645 RVA: 0x001BDEC0 File Offset: 0x001BC0C0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoActivitySubView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class FightPhotoActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060080F7 RID: 33015 RVA: 0x001B5234 File Offset: 0x001B3434
+	// Token: 0x0600548E RID: 21646 RVA: 0x001BDF04 File Offset: 0x001BC104
 	protected override void OnRefreshView()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -76,13 +76,13 @@ public class FightPhotoActivitySubView : ActivitySubViewBase
 		commonInfoPanel2.SetFunctionRedDotVisible(((FightPhotoActivityData)this.ActivityBaseData).IsLevelHasRedDot());
 	}
 
-	// Token: 0x060080F8 RID: 33016 RVA: 0x001B5341 File Offset: 0x001B3541
+	// Token: 0x0600548F RID: 21647 RVA: 0x001BE011 File Offset: 0x001BC211
 	private void OnRewardBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.FightPhotoRewardView, this.ActivityBaseData, null);
 	}
 
-	// Token: 0x060080F9 RID: 33017 RVA: 0x001B5359 File Offset: 0x001B3559
+	// Token: 0x06005490 RID: 21648 RVA: 0x001BE029 File Offset: 0x001BC229
 	[NullableContext(1)]
 	private void OnConfirmBtnClick(ActivityBaseData _)
 	{
@@ -104,29 +104,29 @@ public class FightPhotoActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04003A7D RID: 14973
+	// Token: 0x04003B15 RID: 15125
 	[Nullable(1)]
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x02007889 RID: 30857
+	// Token: 0x02006A14 RID: 27156
 	private class EComponents
 	{
-		// Token: 0x04027B63 RID: 162659
+		// Token: 0x04022E94 RID: 142996
 		public const int CommonActivityInfo = 0;
 
-		// Token: 0x04027B64 RID: 162660
+		// Token: 0x04022E95 RID: 142997
 		public const int TextFinishedLevelNum = 1;
 
-		// Token: 0x04027B65 RID: 162661
+		// Token: 0x04022E96 RID: 142998
 		public const int TextTotalLevelNum = 2;
 
-		// Token: 0x04027B66 RID: 162662
+		// Token: 0x04022E97 RID: 142999
 		public const int BtnReward = 3;
 
-		// Token: 0x04027B67 RID: 162663
+		// Token: 0x04022E98 RID: 143000
 		public const int TextRewardProgress = 4;
 
-		// Token: 0x04027B68 RID: 162664
+		// Token: 0x04022E99 RID: 143001
 		public const int ItemRedDot = 5;
 	}
 }

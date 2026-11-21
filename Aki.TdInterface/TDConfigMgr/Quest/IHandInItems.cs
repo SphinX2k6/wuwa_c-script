@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FB1 RID: 4017
+	// Token: 0x020010DB RID: 4315
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHandInItems
 	{
-		// Token: 0x06005982 RID: 22914 RVA: 0x000DA02C File Offset: 0x000D822C
-		[NullableContext(1)]
+		// Token: 0x06005F58 RID: 24408 RVA: 0x000E6AEC File Offset: 0x000E4CEC
+		[NullableContext(0)]
 		private IHandInItems_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005983 RID: 22915 RVA: 0x000DA064 File Offset: 0x000D8264
-		[NullableContext(1)]
+		// Token: 0x06005F59 RID: 24409 RVA: 0x000E6B24 File Offset: 0x000E4D24
+		[NullableContext(0)]
 		public static IHandInItems Create([Nullable(2)] IHandInItems instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005984 RID: 22916 RVA: 0x000DA077 File Offset: 0x000D8277
-		[NullableContext(1)]
+		// Token: 0x06005F5A RID: 24410 RVA: 0x000E6B37 File Offset: 0x000E4D37
+		[NullableContext(0)]
 		public static IHandInItems CreateFromSetValue([Nullable(2)] IHandInItems_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005985 RID: 22917 RVA: 0x000DA08C File Offset: 0x000D828C
-		[NullableContext(1)]
+		// Token: 0x06005F5B RID: 24411 RVA: 0x000E6B4C File Offset: 0x000E4D4C
+		[NullableContext(0)]
 		public IHandInItems_SetValue ToSetValue()
 		{
 			return new IHandInItems_SetValue
@@ -70,20 +70,20 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DB9 RID: 7609
-		// (get) Token: 0x06005986 RID: 22918 RVA: 0x000DA0F4 File Offset: 0x000D82F4
-		// (set) Token: 0x06005987 RID: 22919 RVA: 0x000DA187 File Offset: 0x000D8387
+		// Token: 0x17001F60 RID: 8032
+		// (get) Token: 0x06005F5C RID: 24412 RVA: 0x000E6BB4 File Offset: 0x000E4DB4
+		// (set) Token: 0x06005F5D RID: 24413 RVA: 0x000E6C47 File Offset: 0x000E4E47
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHandInItem> Items
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -114,7 +114,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -123,9 +123,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DBA RID: 7610
-		// (get) Token: 0x06005988 RID: 22920 RVA: 0x000DA19C File Offset: 0x000D839C
-		// (set) Token: 0x06005989 RID: 22921 RVA: 0x000DA1FD File Offset: 0x000D83FD
+		// Token: 0x17001F61 RID: 8033
+		// (get) Token: 0x06005F5E RID: 24414 RVA: 0x000E6C5C File Offset: 0x000E4E5C
+		// (set) Token: 0x06005F5F RID: 24415 RVA: 0x000E6CBD File Offset: 0x000E4EBD
 		public virtual IHandInGroup GroupConfig
 		{
 			get
@@ -153,9 +153,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DBB RID: 7611
-		// (get) Token: 0x0600598A RID: 22922 RVA: 0x000DA212 File Offset: 0x000D8412
-		// (set) Token: 0x0600598B RID: 22923 RVA: 0x000DA239 File Offset: 0x000D8439
+		// Token: 0x17001F62 RID: 8034
+		// (get) Token: 0x06005F60 RID: 24416 RVA: 0x000E6CD2 File Offset: 0x000E4ED2
+		// (set) Token: 0x06005F61 RID: 24417 RVA: 0x000E6CF9 File Offset: 0x000E4EF9
 		public virtual string TidTitleText
 		{
 			get
@@ -177,13 +177,13 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DBC RID: 7612
-		// (get) Token: 0x0600598C RID: 22924 RVA: 0x000DA247 File Offset: 0x000D8447
-		// (set) Token: 0x0600598D RID: 22925 RVA: 0x000DA272 File Offset: 0x000D8472
-		[Nullable(1)]
+		// Token: 0x17001F63 RID: 8035
+		// (get) Token: 0x06005F62 RID: 24418 RVA: 0x000E6D07 File Offset: 0x000E4F07
+		// (set) Token: 0x06005F63 RID: 24419 RVA: 0x000E6D32 File Offset: 0x000E4F32
+		[Nullable(0)]
 		public virtual string TidDescText
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -196,16 +196,16 @@ namespace Aki.TDConfigMgr.Quest
 				}
 				return this.PocoInterface.TidDescText;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().TidDescText = value;
 			}
 		}
 
-		// Token: 0x17001DBD RID: 7613
-		// (get) Token: 0x0600598E RID: 22926 RVA: 0x000DA280 File Offset: 0x000D8480
-		// (set) Token: 0x0600598F RID: 22927 RVA: 0x000DA2AB File Offset: 0x000D84AB
+		// Token: 0x17001F64 RID: 8036
+		// (get) Token: 0x06005F64 RID: 24420 RVA: 0x000E6D40 File Offset: 0x000E4F40
+		// (set) Token: 0x06005F65 RID: 24421 RVA: 0x000E6D6B File Offset: 0x000E4F6B
 		public virtual bool RepeatItems
 		{
 			get
@@ -222,9 +222,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DBE RID: 7614
-		// (get) Token: 0x06005990 RID: 22928 RVA: 0x000DA2B9 File Offset: 0x000D84B9
-		// (set) Token: 0x06005991 RID: 22929 RVA: 0x000DA2D0 File Offset: 0x000D84D0
+		// Token: 0x17001F65 RID: 8037
+		// (get) Token: 0x06005F66 RID: 24422 RVA: 0x000E6D79 File Offset: 0x000E4F79
+		// (set) Token: 0x06005F67 RID: 24423 RVA: 0x000E6D90 File Offset: 0x000E4F90
 		public virtual string EdTidTitleText
 		{
 			get
@@ -241,9 +241,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DBF RID: 7615
-		// (get) Token: 0x06005992 RID: 22930 RVA: 0x000DA2DE File Offset: 0x000D84DE
-		// (set) Token: 0x06005993 RID: 22931 RVA: 0x000DA2F5 File Offset: 0x000D84F5
+		// Token: 0x17001F66 RID: 8038
+		// (get) Token: 0x06005F68 RID: 24424 RVA: 0x000E6D9E File Offset: 0x000E4F9E
+		// (set) Token: 0x06005F69 RID: 24425 RVA: 0x000E6DB5 File Offset: 0x000E4FB5
 		public virtual string EdTidDescText
 		{
 			get
@@ -260,28 +260,28 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003602 RID: 13826
+		// Token: 0x04003934 RID: 14644
 		protected IHandInItems FbInstance;
 
-		// Token: 0x04003603 RID: 13827
+		// Token: 0x04003935 RID: 14645
 		protected IHandInItems_SetValue PocoInterface;
 
-		// Token: 0x04003604 RID: 13828
+		// Token: 0x04003936 RID: 14646
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHandInItem> _ItemsCache;
 
-		// Token: 0x04003605 RID: 13829
+		// Token: 0x04003937 RID: 14647
 		private bool _ItemsInited;
 
-		// Token: 0x04003606 RID: 13830
-		[Nullable(1)]
+		// Token: 0x04003938 RID: 14648
+		[Nullable(0)]
 		private IHandInGroup _GroupConfigCache;
 
-		// Token: 0x04003607 RID: 13831
+		// Token: 0x04003939 RID: 14649
 		private bool _GroupConfigInited;
 	}
 }

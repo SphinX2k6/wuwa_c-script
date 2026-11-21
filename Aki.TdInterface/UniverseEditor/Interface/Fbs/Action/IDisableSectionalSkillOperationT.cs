@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065F2 RID: 26098
+	// Token: 0x02006C63 RID: 27747
 	public class IDisableSectionalSkillOperationT
 	{
-		// Token: 0x1700C1E2 RID: 49634
-		// (get) Token: 0x0602D4D3 RID: 185555 RVA: 0x006358A7 File Offset: 0x00633AA7
-		// (set) Token: 0x0602D4D4 RID: 185556 RVA: 0x006358AF File Offset: 0x00633AAF
+		// Token: 0x1700CB80 RID: 52096
+		// (get) Token: 0x0602FCA4 RID: 195748 RVA: 0x0068240F File Offset: 0x0068060F
+		// (set) Token: 0x0602FCA5 RID: 195749 RVA: 0x00682417 File Offset: 0x00680617
 		public ESkillOperationType Type { get; set; }
 
-		// Token: 0x1700C1E3 RID: 49635
-		// (get) Token: 0x0602D4D5 RID: 185557 RVA: 0x006358B8 File Offset: 0x00633AB8
-		// (set) Token: 0x0602D4D6 RID: 185558 RVA: 0x006358C0 File Offset: 0x00633AC0
+		// Token: 0x1700CB81 RID: 52097
+		// (get) Token: 0x0602FCA6 RID: 195750 RVA: 0x00682420 File Offset: 0x00680620
+		// (set) Token: 0x0602FCA7 RID: 195751 RVA: 0x00682428 File Offset: 0x00680628
 		public EDisplayModeInSkillOp DisplayMode { get; set; }
 
-		// Token: 0x1700C1E4 RID: 49636
-		// (get) Token: 0x0602D4D7 RID: 185559 RVA: 0x006358C9 File Offset: 0x00633AC9
-		// (set) Token: 0x0602D4D8 RID: 185560 RVA: 0x006358D1 File Offset: 0x00633AD1
+		// Token: 0x1700CB82 RID: 52098
+		// (get) Token: 0x0602FCA8 RID: 195752 RVA: 0x00682431 File Offset: 0x00680631
+		// (set) Token: 0x0602FCA9 RID: 195753 RVA: 0x00682439 File Offset: 0x00680639
 		public IDisableExploreSkillT DisableExploreSkill { get; set; }
 
-		// Token: 0x1700C1E5 RID: 49637
-		// (get) Token: 0x0602D4D9 RID: 185561 RVA: 0x006358DA File Offset: 0x00633ADA
-		// (set) Token: 0x0602D4DA RID: 185562 RVA: 0x006358E2 File Offset: 0x00633AE2
+		// Token: 0x1700CB83 RID: 52099
+		// (get) Token: 0x0602FCAA RID: 195754 RVA: 0x00682442 File Offset: 0x00680642
+		// (set) Token: 0x0602FCAB RID: 195755 RVA: 0x0068244A File Offset: 0x0068064A
 		public bool DisableSkillWheel { get; set; }
 
-		// Token: 0x1700C1E6 RID: 49638
-		// (get) Token: 0x0602D4DB RID: 185563 RVA: 0x006358EB File Offset: 0x00633AEB
-		// (set) Token: 0x0602D4DC RID: 185564 RVA: 0x006358F3 File Offset: 0x00633AF3
+		// Token: 0x1700CB84 RID: 52100
+		// (get) Token: 0x0602FCAC RID: 195756 RVA: 0x00682453 File Offset: 0x00680653
+		// (set) Token: 0x0602FCAD RID: 195757 RVA: 0x0068245B File Offset: 0x0068065B
 		public IDisableBattleSkillOptionsT DisableBattleSkill { get; set; }
 
-		// Token: 0x1700C1E7 RID: 49639
-		// (get) Token: 0x0602D4DD RID: 185565 RVA: 0x006358FC File Offset: 0x00633AFC
-		// (set) Token: 0x0602D4DE RID: 185566 RVA: 0x00635904 File Offset: 0x00633B04
+		// Token: 0x1700CB85 RID: 52101
+		// (get) Token: 0x0602FCAE RID: 195758 RVA: 0x00682464 File Offset: 0x00680664
+		// (set) Token: 0x0602FCAF RID: 195759 RVA: 0x0068246C File Offset: 0x0068066C
 		public bool DisableSwitchRole { get; set; }
 
-		// Token: 0x1700C1E8 RID: 49640
-		// (get) Token: 0x0602D4DF RID: 185567 RVA: 0x0063590D File Offset: 0x00633B0D
-		// (set) Token: 0x0602D4E0 RID: 185568 RVA: 0x00635915 File Offset: 0x00633B15
+		// Token: 0x1700CB86 RID: 52102
+		// (get) Token: 0x0602FCB0 RID: 195760 RVA: 0x00682475 File Offset: 0x00680675
+		// (set) Token: 0x0602FCB1 RID: 195761 RVA: 0x0068247D File Offset: 0x0068067D
 		public ETeamDisplayModeInSkillOp TeamDisplayMode { get; set; }
 
-		// Token: 0x1700C1E9 RID: 49641
-		// (get) Token: 0x0602D4E1 RID: 185569 RVA: 0x0063591E File Offset: 0x00633B1E
-		// (set) Token: 0x0602D4E2 RID: 185570 RVA: 0x00635926 File Offset: 0x00633B26
+		// Token: 0x1700CB87 RID: 52103
+		// (get) Token: 0x0602FCB2 RID: 195762 RVA: 0x00682486 File Offset: 0x00680686
+		// (set) Token: 0x0602FCB3 RID: 195763 RVA: 0x0068248E File Offset: 0x0068068E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602D4E3 RID: 185571 RVA: 0x0063592F File Offset: 0x00633B2F
+		// Token: 0x0602FCB4 RID: 195764 RVA: 0x00682497 File Offset: 0x00680697
 		public IDisableSectionalSkillOperationT()
 		{
 			this.Type = ESkillOperationType.Enable;

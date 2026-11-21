@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044F1 RID: 17649
+	// Token: 0x02003413 RID: 13331
 	public interface IBooleanNode
 	{
-		// Token: 0x170073B2 RID: 29618
-		// (get) Token: 0x0602D75A RID: 186202
-		// (set) Token: 0x0602D75B RID: 186203
+		// Token: 0x1700466A RID: 18026
+		// (get) Token: 0x06021E2A RID: 138794
+		// (set) Token: 0x06021E2B RID: 138795
 		EAstNodeType NodeType { get; set; }
 
-		// Token: 0x170073B3 RID: 29619
-		// (get) Token: 0x0602D75C RID: 186204
-		// (set) Token: 0x0602D75D RID: 186205
+		// Token: 0x1700466B RID: 18027
+		// (get) Token: 0x06021E2C RID: 138796
+		// (set) Token: 0x06021E2D RID: 138797
 		bool Value { get; set; }
 	}
 }

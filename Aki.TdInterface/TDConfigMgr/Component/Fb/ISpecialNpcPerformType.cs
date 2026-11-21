@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BCD RID: 3021
+	// Token: 0x02000C9B RID: 3227
 	public class ISpecialNpcPerformType
 	{
-		// Token: 0x06004575 RID: 17781 RVA: 0x000AFE7D File Offset: 0x000AE07D
-		[NullableContext(1)]
+		// Token: 0x060049CE RID: 18894 RVA: 0x000B9F41 File Offset: 0x000B8141
 		public static ISpecialNpcPerformType Create(ISpecialNpcPerformType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001398 RID: 5016
-		// (get) Token: 0x06004576 RID: 17782 RVA: 0x000AFE9C File Offset: 0x000AE09C
+		// Token: 0x17001493 RID: 5267
+		// (get) Token: 0x060049CF RID: 18895 RVA: 0x000B9F60 File Offset: 0x000B8160
 		public virtual ESpecialNpcType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002784 RID: 10116
+		// Token: 0x040029CC RID: 10700
 		private ISpecialNpcPerformType Instance;
 	}
 }

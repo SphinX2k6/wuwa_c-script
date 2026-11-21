@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200134B RID: 4939
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200149B RID: 5275
 	public class IQuestMonsterHealthScore : IQuestStatisticsType
 	{
-		// Token: 0x0600712C RID: 28972 RVA: 0x00110DF3 File Offset: 0x0010EFF3
+		// Token: 0x060077CC RID: 30668 RVA: 0x0011F35F File Offset: 0x0011D55F
 		public static IQuestMonsterHealthScore Create(IQuestMonsterHealthScore? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002469 RID: 9321
-		// (get) Token: 0x0600712D RID: 28973 RVA: 0x00110E12 File Offset: 0x0010F012
+		// Token: 0x17002638 RID: 9784
+		// (get) Token: 0x060077CD RID: 30669 RVA: 0x0011F37E File Offset: 0x0011D57E
 		public override EStatisticsEventType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700246A RID: 9322
-		// (get) Token: 0x0600712E RID: 28974 RVA: 0x00110E1F File Offset: 0x0010F01F
+		// Token: 0x17002639 RID: 9785
+		// (get) Token: 0x060077CE RID: 30670 RVA: 0x0011F38B File Offset: 0x0011D58B
 		public override VarRef Var
 		{
 			get
@@ -50,19 +48,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700246B RID: 9323
-		// (get) Token: 0x0600712F RID: 28975 RVA: 0x00110E50 File Offset: 0x0010F050
+		// Token: 0x1700263A RID: 9786
+		// (get) Token: 0x060077CF RID: 30671 RVA: 0x0011F3BC File Offset: 0x0011D5BC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMonsterHpPointTypeConfig> TypeConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -85,19 +83,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700246C RID: 9324
-		// (get) Token: 0x06007130 RID: 28976 RVA: 0x00110ECC File Offset: 0x0010F0CC
+		// Token: 0x1700263B RID: 9787
+		// (get) Token: 0x060077D0 RID: 30672 RVA: 0x0011F438 File Offset: 0x0011D638
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMonsterHpPointEntityConfig> EntityConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -120,8 +118,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700246D RID: 9325
-		// (get) Token: 0x06007131 RID: 28977 RVA: 0x00110F46 File Offset: 0x0010F146
+		// Token: 0x1700263C RID: 9788
+		// (get) Token: 0x060077D1 RID: 30673 RVA: 0x0011F4B2 File Offset: 0x0011D6B2
 		public virtual bool IsStatisticsRecoveredHp
 		{
 			get
@@ -130,35 +128,35 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004157 RID: 16727
+		// Token: 0x040044D3 RID: 17619
 		private IQuestMonsterHealthScore Instance;
 
-		// Token: 0x04004158 RID: 16728
+		// Token: 0x040044D4 RID: 17620
 		private VarRef _VarCache;
 
-		// Token: 0x04004159 RID: 16729
+		// Token: 0x040044D5 RID: 17621
 		private bool _VarInited;
 
-		// Token: 0x0400415A RID: 16730
+		// Token: 0x040044D6 RID: 17622
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMonsterHpPointTypeConfig> _TypeConfigsCache;
 
-		// Token: 0x0400415B RID: 16731
+		// Token: 0x040044D7 RID: 17623
 		private bool _TypeConfigsInited;
 
-		// Token: 0x0400415C RID: 16732
+		// Token: 0x040044D8 RID: 17624
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMonsterHpPointEntityConfig> _EntityConfigsCache;
 
-		// Token: 0x0400415D RID: 16733
+		// Token: 0x040044D9 RID: 17625
 		private bool _EntityConfigsInited;
 	}
 }

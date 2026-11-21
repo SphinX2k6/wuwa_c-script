@@ -6,38 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021CE RID: 8654
+	// Token: 0x02000730 RID: 1840
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UITextInputComponent")]
 	[UnrealStructLayout(1808, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1808)]
-	public class UUITextInputComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject, ILGUIPointerDragInterface, IUnrealNativeInterface, IUnrealInterface
+	public class UUITextInputComponent : UUISelectableComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020F62 RID: 135010 RVA: 0x0030A467 File Offset: 0x00308667
+		// Token: 0x0600A056 RID: 41046 RVA: 0x000ED681 File Offset: 0x000EB881
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUITextInputComponent._ClassPtr;
 		}
 
-		// Token: 0x06020F63 RID: 135011 RVA: 0x0030A473 File Offset: 0x00308673
-		int ILGUIPointerDragInterface.InterfaceOffset()
-		{
-			return UUITextInputComponent.__InterfaceOffset_ILGUIPointerDragInterface;
-		}
-
-		// Token: 0x06020F64 RID: 135012 RVA: 0x0030A47C File Offset: 0x0030867C
+		// Token: 0x0600A057 RID: 41047 RVA: 0x000ED690 File Offset: 0x000EB890
 		public UUITextInputComponent() : this(BuiltinUtils.AllocNativeUObject(UUITextInputComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020F65 RID: 135013 RVA: 0x0030A4A4 File Offset: 0x003086A4
+		// Token: 0x0600A058 RID: 41048 RVA: 0x000ED6B8 File Offset: 0x000EB8B8
 		public UUITextInputComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUITextInputComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170080AA RID: 32938
-		// (get) Token: 0x06020F66 RID: 135014 RVA: 0x0030A4D7 File Offset: 0x003086D7
-		// (set) Token: 0x06020F67 RID: 135015 RVA: 0x0030A4EB File Offset: 0x003086EB
+		// Token: 0x17001DCE RID: 7630
+		// (get) Token: 0x0600A059 RID: 41049 RVA: 0x000ED6EB File Offset: 0x000EB8EB
+		// (set) Token: 0x0600A05A RID: 41050 RVA: 0x000ED6FF File Offset: 0x000EB8FF
 		[Nullable(new byte[]
 		{
 			0,
@@ -65,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080AB RID: 32939
-		// (get) Token: 0x06020F68 RID: 135016 RVA: 0x0030A500 File Offset: 0x00308700
-		// (set) Token: 0x06020F69 RID: 135017 RVA: 0x0030A514 File Offset: 0x00308714
+		// Token: 0x17001DCF RID: 7631
+		// (get) Token: 0x0600A05B RID: 41051 RVA: 0x000ED714 File Offset: 0x000EB914
+		// (set) Token: 0x0600A05C RID: 41052 RVA: 0x000ED728 File Offset: 0x000EB928
 		public unsafe string Text
 		{
 			get
@@ -80,24 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080AC RID: 32940
-		// (get) Token: 0x06020F6A RID: 135018 RVA: 0x0030A529 File Offset: 0x00308729
-		// (set) Token: 0x06020F6B RID: 135019 RVA: 0x0030A539 File Offset: 0x00308739
-		public unsafe ELGUITextInputType InputType
-		{
-			get
-			{
-				return (ELGUITextInputType)(*(base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_InputType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_InputType) = (byte)value;
-			}
-		}
-
-		// Token: 0x170080AD RID: 32941
-		// (get) Token: 0x06020F6C RID: 135020 RVA: 0x0030A54A File Offset: 0x0030874A
-		// (set) Token: 0x06020F6D RID: 135021 RVA: 0x0030A55E File Offset: 0x0030875E
+		// Token: 0x17001DD0 RID: 7632
+		// (get) Token: 0x0600A05D RID: 41053 RVA: 0x000ED73D File Offset: 0x000EB93D
+		// (set) Token: 0x0600A05E RID: 41054 RVA: 0x000ED751 File Offset: 0x000EB951
 		public unsafe string PasswordChar
 		{
 			get
@@ -110,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080AE RID: 32942
-		// (get) Token: 0x06020F6E RID: 135022 RVA: 0x0030A573 File Offset: 0x00308773
-		// (set) Token: 0x06020F6F RID: 135023 RVA: 0x0030A583 File Offset: 0x00308783
+		// Token: 0x17001DD1 RID: 7633
+		// (get) Token: 0x0600A05F RID: 41055 RVA: 0x000ED766 File Offset: 0x000EB966
+		// (set) Token: 0x0600A060 RID: 41056 RVA: 0x000ED776 File Offset: 0x000EB976
 		public unsafe bool bAllowMultiLine
 		{
 			get
@@ -125,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080AF RID: 32943
-		// (get) Token: 0x06020F70 RID: 135024 RVA: 0x0030A594 File Offset: 0x00308794
-		// (set) Token: 0x06020F71 RID: 135025 RVA: 0x0030A5A8 File Offset: 0x003087A8
+		// Token: 0x17001DD2 RID: 7634
+		// (get) Token: 0x0600A061 RID: 41057 RVA: 0x000ED787 File Offset: 0x000EB987
+		// (set) Token: 0x0600A062 RID: 41058 RVA: 0x000ED79B File Offset: 0x000EB99B
 		[Nullable(new byte[]
 		{
 			0,
@@ -155,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B0 RID: 32944
-		// (get) Token: 0x06020F72 RID: 135026 RVA: 0x0030A5BD File Offset: 0x003087BD
-		// (set) Token: 0x06020F73 RID: 135027 RVA: 0x0030A5CD File Offset: 0x003087CD
+		// Token: 0x17001DD3 RID: 7635
+		// (get) Token: 0x0600A063 RID: 41059 RVA: 0x000ED7B0 File Offset: 0x000EB9B0
+		// (set) Token: 0x0600A064 RID: 41060 RVA: 0x000ED7C0 File Offset: 0x000EB9C0
 		public unsafe float CaretBlinkRate
 		{
 			get
@@ -170,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B1 RID: 32945
-		// (get) Token: 0x06020F74 RID: 135028 RVA: 0x0030A5DE File Offset: 0x003087DE
-		// (set) Token: 0x06020F75 RID: 135029 RVA: 0x0030A5EE File Offset: 0x003087EE
+		// Token: 0x17001DD4 RID: 7636
+		// (get) Token: 0x0600A065 RID: 41061 RVA: 0x000ED7D1 File Offset: 0x000EB9D1
+		// (set) Token: 0x0600A066 RID: 41062 RVA: 0x000ED7E1 File Offset: 0x000EB9E1
 		public unsafe float CaretWidth
 		{
 			get
@@ -185,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B2 RID: 32946
-		// (get) Token: 0x06020F76 RID: 135030 RVA: 0x0030A5FF File Offset: 0x003087FF
-		// (set) Token: 0x06020F77 RID: 135031 RVA: 0x0030A60F File Offset: 0x0030880F
+		// Token: 0x17001DD5 RID: 7637
+		// (get) Token: 0x0600A067 RID: 41063 RVA: 0x000ED7F2 File Offset: 0x000EB9F2
+		// (set) Token: 0x0600A068 RID: 41064 RVA: 0x000ED802 File Offset: 0x000EBA02
 		public unsafe bool IsShowDefaultText
 		{
 			get
@@ -200,9 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B3 RID: 32947
-		// (get) Token: 0x06020F78 RID: 135032 RVA: 0x0030A620 File Offset: 0x00308820
-		// (set) Token: 0x06020F79 RID: 135033 RVA: 0x0030A634 File Offset: 0x00308834
+		// Token: 0x17001DD6 RID: 7638
+		// (get) Token: 0x0600A069 RID: 41065 RVA: 0x000ED813 File Offset: 0x000EBA13
+		// (set) Token: 0x0600A06A RID: 41066 RVA: 0x000ED827 File Offset: 0x000EBA27
 		public unsafe FColor CaretColor
 		{
 			get
@@ -215,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B4 RID: 32948
-		// (get) Token: 0x06020F7A RID: 135034 RVA: 0x0030A649 File Offset: 0x00308849
-		// (set) Token: 0x06020F7B RID: 135035 RVA: 0x0030A65D File Offset: 0x0030885D
+		// Token: 0x17001DD7 RID: 7639
+		// (get) Token: 0x0600A06B RID: 41067 RVA: 0x000ED83C File Offset: 0x000EBA3C
+		// (set) Token: 0x0600A06C RID: 41068 RVA: 0x000ED850 File Offset: 0x000EBA50
 		public unsafe FColor SelectionColor
 		{
 			get
@@ -230,30 +209,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B5 RID: 32949
-		// (get) Token: 0x06020F7C RID: 135036 RVA: 0x0030A674 File Offset: 0x00308874
-		// (set) Token: 0x06020F7D RID: 135037 RVA: 0x0030A6AD File Offset: 0x003088AD
-		public FVirtualKeyboardOptions VirtualKeyboradOptions
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FVirtualKeyboardOptions result;
-				if ((result = this._VirtualKeyboradOptions) == null)
-				{
-					result = (this._VirtualKeyboradOptions = new FVirtualKeyboardOptions(base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_VirtualKeyboradOptions, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FVirtualKeyboardOptions.StaticStruct(), base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_VirtualKeyboradOptions, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170080B6 RID: 32950
-		// (get) Token: 0x06020F7E RID: 135038 RVA: 0x0030A6D0 File Offset: 0x003088D0
-		// (set) Token: 0x06020F7F RID: 135039 RVA: 0x0030A709 File Offset: 0x00308909
+		// Token: 0x17001DD8 RID: 7640
+		// (get) Token: 0x0600A06D RID: 41069 RVA: 0x000ED868 File Offset: 0x000EBA68
+		// (set) Token: 0x0600A06E RID: 41070 RVA: 0x000ED8A1 File Offset: 0x000EBAA1
 		public TArray<FKey> IgnoreKeys
 		{
 			get
@@ -272,72 +230,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080B7 RID: 32951
-		// (get) Token: 0x06020F80 RID: 135040 RVA: 0x0030A718 File Offset: 0x00308918
-		// (set) Token: 0x06020F81 RID: 135041 RVA: 0x0030A751 File Offset: 0x00308951
-		public FLGUIDrawableEvent OnValueChange
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUIDrawableEvent result;
-				if ((result = this._OnValueChange) == null)
-				{
-					result = (this._OnValueChange = new FLGUIDrawableEvent(base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_OnValueChange, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUIDrawableEvent.StaticStruct(), base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_OnValueChange, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170080B8 RID: 32952
-		// (get) Token: 0x06020F82 RID: 135042 RVA: 0x0030A774 File Offset: 0x00308974
-		// (set) Token: 0x06020F83 RID: 135043 RVA: 0x0030A7AD File Offset: 0x003089AD
-		public FLGUIDrawableEvent OnSubmit
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUIDrawableEvent result;
-				if ((result = this._OnSubmit) == null)
-				{
-					result = (this._OnSubmit = new FLGUIDrawableEvent(base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_OnSubmit, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUIDrawableEvent.StaticStruct(), base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_OnSubmit, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170080B9 RID: 32953
-		// (get) Token: 0x06020F84 RID: 135044 RVA: 0x0030A7D0 File Offset: 0x003089D0
-		// (set) Token: 0x06020F85 RID: 135045 RVA: 0x0030A809 File Offset: 0x00308A09
-		public FLGUIDrawableEvent OnInputActivate
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FLGUIDrawableEvent result;
-				if ((result = this._OnInputActivate) == null)
-				{
-					result = (this._OnInputActivate = new FLGUIDrawableEvent(base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_OnInputActivate, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FLGUIDrawableEvent.StaticStruct(), base.NativePtr + (IntPtr)UUITextInputComponent.__PropertyOffset_OnInputActivate, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170080BA RID: 32954
-		// (get) Token: 0x06020F86 RID: 135046 RVA: 0x0030A82C File Offset: 0x00308A2C
-		// (set) Token: 0x06020F87 RID: 135047 RVA: 0x0030A865 File Offset: 0x00308A65
+		// Token: 0x17001DD9 RID: 7641
+		// (get) Token: 0x0600A06F RID: 41071 RVA: 0x000ED8B0 File Offset: 0x000EBAB0
+		// (set) Token: 0x0600A070 RID: 41072 RVA: 0x000ED8E9 File Offset: 0x000EBAE9
 		public FCheckTextInputDelegate OnCheckTextInputDelegate
 		{
 			get
@@ -356,9 +251,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080BB RID: 32955
-		// (get) Token: 0x06020F88 RID: 135048 RVA: 0x0030A886 File Offset: 0x00308A86
-		// (set) Token: 0x06020F89 RID: 135049 RVA: 0x0030A896 File Offset: 0x00308A96
+		// Token: 0x17001DDA RID: 7642
+		// (get) Token: 0x0600A071 RID: 41073 RVA: 0x000ED90A File Offset: 0x000EBB0A
+		// (set) Token: 0x0600A072 RID: 41074 RVA: 0x000ED91A File Offset: 0x000EBB1A
 		public unsafe uint MaxInput
 		{
 			get
@@ -371,9 +266,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080BC RID: 32956
-		// (get) Token: 0x06020F8A RID: 135050 RVA: 0x0030A8A7 File Offset: 0x00308AA7
-		// (set) Token: 0x06020F8B RID: 135051 RVA: 0x0030A8BB File Offset: 0x00308ABB
+		// Token: 0x17001DDB RID: 7643
+		// (get) Token: 0x0600A073 RID: 41075 RVA: 0x000ED92B File Offset: 0x000EBB2B
+		// (set) Token: 0x0600A074 RID: 41076 RVA: 0x000ED93F File Offset: 0x000EBB3F
 		[Nullable(2)]
 		public unsafe APlayerController PlayerController
 		{
@@ -389,9 +284,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080BD RID: 32957
-		// (get) Token: 0x06020F8C RID: 135052 RVA: 0x0030A8D0 File Offset: 0x00308AD0
-		// (set) Token: 0x06020F8D RID: 135053 RVA: 0x0030A8E4 File Offset: 0x00308AE4
+		// Token: 0x17001DDC RID: 7644
+		// (get) Token: 0x0600A075 RID: 41077 RVA: 0x000ED954 File Offset: 0x000EBB54
+		// (set) Token: 0x0600A076 RID: 41078 RVA: 0x000ED968 File Offset: 0x000EBB68
 		[Nullable(new byte[]
 		{
 			0,
@@ -419,9 +314,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080BE RID: 32958
-		// (get) Token: 0x06020F8E RID: 135054 RVA: 0x0030A8FC File Offset: 0x00308AFC
-		// (set) Token: 0x06020F8F RID: 135055 RVA: 0x0030A935 File Offset: 0x00308B35
+		// Token: 0x17001DDD RID: 7645
+		// (get) Token: 0x0600A077 RID: 41079 RVA: 0x000ED980 File Offset: 0x000EBB80
+		// (set) Token: 0x0600A078 RID: 41080 RVA: 0x000ED9B9 File Offset: 0x000EBBB9
 		[Nullable(new byte[]
 		{
 			1,
@@ -458,9 +353,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080BF RID: 32959
-		// (get) Token: 0x06020F90 RID: 135056 RVA: 0x0030A944 File Offset: 0x00308B44
-		// (set) Token: 0x06020F91 RID: 135057 RVA: 0x0030A97D File Offset: 0x00308B7D
+		// Token: 0x17001DDE RID: 7646
+		// (get) Token: 0x0600A079 RID: 41081 RVA: 0x000ED9C8 File Offset: 0x000EBBC8
+		// (set) Token: 0x0600A07A RID: 41082 RVA: 0x000EDA01 File Offset: 0x000EBC01
 		public FLGUITextInputDynamicDelegate OnTextChange
 		{
 			get
@@ -479,9 +374,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080C0 RID: 32960
-		// (get) Token: 0x06020F92 RID: 135058 RVA: 0x0030A9A0 File Offset: 0x00308BA0
-		// (set) Token: 0x06020F93 RID: 135059 RVA: 0x0030A9D9 File Offset: 0x00308BD9
+		// Token: 0x17001DDF RID: 7647
+		// (get) Token: 0x0600A07B RID: 41083 RVA: 0x000EDA24 File Offset: 0x000EBC24
+		// (set) Token: 0x0600A07C RID: 41084 RVA: 0x000EDA5D File Offset: 0x000EBC5D
 		public FLGUITextInputDynamicDelegate OnTextSubmit
 		{
 			get
@@ -500,9 +395,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080C1 RID: 32961
-		// (get) Token: 0x06020F94 RID: 135060 RVA: 0x0030A9FC File Offset: 0x00308BFC
-		// (set) Token: 0x06020F95 RID: 135061 RVA: 0x0030AA35 File Offset: 0x00308C35
+		// Token: 0x17001DE0 RID: 7648
+		// (get) Token: 0x0600A07D RID: 41085 RVA: 0x000EDA80 File Offset: 0x000EBC80
+		// (set) Token: 0x0600A07E RID: 41086 RVA: 0x000EDAB9 File Offset: 0x000EBCB9
 		public FLGUITextInputDynamicDelegate OnTextClip
 		{
 			get
@@ -521,9 +416,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170080C2 RID: 32962
-		// (get) Token: 0x06020F96 RID: 135062 RVA: 0x0030AA58 File Offset: 0x00308C58
-		// (set) Token: 0x06020F97 RID: 135063 RVA: 0x0030AA91 File Offset: 0x00308C91
+		// Token: 0x17001DE1 RID: 7649
+		// (get) Token: 0x0600A07F RID: 41087 RVA: 0x000EDADC File Offset: 0x000EBCDC
+		// (set) Token: 0x0600A080 RID: 41088 RVA: 0x000EDB15 File Offset: 0x000EBD15
 		public FLGUIInputActivateDynamicDelegate OnInputActivateDelegate
 		{
 			get
@@ -542,28 +437,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020F98 RID: 135064 RVA: 0x0030AAB2 File Offset: 0x00308CB2
+		// Token: 0x0600A081 RID: 41089 RVA: 0x000EDB36 File Offset: 0x000EBD36
 		[NullableContext(2)]
 		public void UnregisterValueChangeEvent(in FLGUIDelegateHandleWrapper InDelegateHandle)
 		{
 			UUITextInputComponent.__UnregisterValueChangeEvent_Internal(base.NativePtr, (InDelegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x06020F99 RID: 135065 RVA: 0x0030AACF File Offset: 0x00308CCF
+		// Token: 0x0600A082 RID: 41090 RVA: 0x000EDB53 File Offset: 0x000EBD53
 		[NullableContext(2)]
 		public void UnregisterSubmitEvent(in FLGUIDelegateHandleWrapper InDelegateHandle)
 		{
 			UUITextInputComponent.__UnregisterSubmitEvent_Internal(base.NativePtr, (InDelegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x06020F9A RID: 135066 RVA: 0x0030AAEC File Offset: 0x00308CEC
+		// Token: 0x0600A083 RID: 41091 RVA: 0x000EDB70 File Offset: 0x000EBD70
 		[NullableContext(2)]
 		public void UnregisterInputActivateEvent(in FLGUIDelegateHandleWrapper InDelegateHandle)
 		{
 			UUITextInputComponent.__UnregisterInputActivateEvent_Internal(base.NativePtr, (InDelegateHandle ?? new FLGUIDelegateHandleWrapper()).NativePtr);
 		}
 
-		// Token: 0x06020F9B RID: 135067 RVA: 0x0030AB0C File Offset: 0x00308D0C
+		// Token: 0x0600A084 RID: 41092 RVA: 0x000EDB90 File Offset: 0x000EBD90
 		public unsafe void SetText(string InText, bool InFireEvent = false)
 		{
 			FString fstring = FString.AllocTemp(InText);
@@ -571,7 +466,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06020F9C RID: 135068 RVA: 0x0030AB37 File Offset: 0x00308D37
+		// Token: 0x0600A085 RID: 41093 RVA: 0x000EDBBB File Offset: 0x000EBDBB
 		[NullableContext(2)]
 		public static void SetShowKeyboardDelegate(in FLGUIShowVirtualKeyboard InDelegate)
 		{
@@ -579,13 +474,7 @@ namespace UnrealEngine
 			UUITextInputComponent.__SetShowKeyboardDelegate_Internal((flguishowVirtualKeyboard != null) ? flguishowVirtualKeyboard.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06020F9D RID: 135069 RVA: 0x0030AB4D File Offset: 0x00308D4D
-		public void SetInputType(ELGUITextInputType newValue)
-		{
-			UUITextInputComponent.__SetInputType_Internal(base.NativePtr, newValue);
-		}
-
-		// Token: 0x06020F9E RID: 135070 RVA: 0x0030AB5B File Offset: 0x00308D5B
+		// Token: 0x0600A086 RID: 41094 RVA: 0x000EDBD1 File Offset: 0x000EBDD1
 		[NullableContext(2)]
 		public void SetCustomInputTypeFunction(in FLGUITextInputCustomInputTypeDynamicDelegate InFunction)
 		{
@@ -594,7 +483,7 @@ namespace UnrealEngine
 			UUITextInputComponent.__SetCustomInputTypeFunction_Internal(nativePtr, (flguitextInputCustomInputTypeDynamicDelegate != null) ? flguitextInputCustomInputTypeDynamicDelegate.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06020F9F RID: 135071 RVA: 0x0030AB77 File Offset: 0x00308D77
+		// Token: 0x0600A087 RID: 41095 RVA: 0x000EDBED File Offset: 0x000EBDED
 		public FLGUIDelegateHandleWrapper RegisterValueChangeEvent([Nullable(2)] in FLGUITextInputDynamicDelegate InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -602,7 +491,7 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(UUITextInputComponent.__RegisterValueChangeEvent_Internal(nativePtr, (flguitextInputDynamicDelegate != null) ? flguitextInputDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x06020FA0 RID: 135072 RVA: 0x0030AB99 File Offset: 0x00308D99
+		// Token: 0x0600A088 RID: 41096 RVA: 0x000EDC0F File Offset: 0x000EBE0F
 		public FLGUIDelegateHandleWrapper RegisterSubmitEvent([Nullable(2)] in FLGUITextInputDynamicDelegate InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -610,7 +499,7 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(UUITextInputComponent.__RegisterSubmitEvent_Internal(nativePtr, (flguitextInputDynamicDelegate != null) ? flguitextInputDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x06020FA1 RID: 135073 RVA: 0x0030ABBB File Offset: 0x00308DBB
+		// Token: 0x0600A089 RID: 41097 RVA: 0x000EDC31 File Offset: 0x000EBE31
 		public FLGUIDelegateHandleWrapper RegisterInputActivateEvent([Nullable(2)] in FLGUIInputActivateDynamicDelegate InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -618,185 +507,158 @@ namespace UnrealEngine
 			return new FLGUIDelegateHandleWrapper(UUITextInputComponent.__RegisterInputActivateEvent_Internal(nativePtr, (flguiinputActivateDynamicDelegate != null) ? flguiinputActivateDynamicDelegate.NativePtr : ((IntPtr)0)), null);
 		}
 
-		// Token: 0x06020FA2 RID: 135074 RVA: 0x0030ABDD File Offset: 0x00308DDD
+		// Token: 0x0600A08A RID: 41098 RVA: 0x000EDC53 File Offset: 0x000EBE53
 		public bool IsInputActive()
 		{
 			return UUITextInputComponent.__IsInputActive_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020FA3 RID: 135075 RVA: 0x0030ABEA File Offset: 0x00308DEA
+		// Token: 0x0600A08B RID: 41099 RVA: 0x000EDC60 File Offset: 0x000EBE60
 		[NullableContext(2)]
 		public UUIText GetTextComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIText>(UUITextInputComponent.__GetTextComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020FA4 RID: 135076 RVA: 0x0030ABFC File Offset: 0x00308DFC
+		// Token: 0x0600A08C RID: 41100 RVA: 0x000EDC72 File Offset: 0x000EBE72
 		public string GetText()
 		{
 			return FString.ToStringAndDeleteNativePtr(UUITextInputComponent.__GetText_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020FA5 RID: 135077 RVA: 0x0030AC0E File Offset: 0x00308E0E
-		public ELGUITextInputType GetInputType()
-		{
-			return UUITextInputComponent.__GetInputType_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06020FA6 RID: 135078 RVA: 0x0030AC1B File Offset: 0x00308E1B
+		// Token: 0x0600A08D RID: 41101 RVA: 0x000EDC84 File Offset: 0x000EBE84
 		public void DeactivateInputText()
 		{
 			UUITextInputComponent.__DeactivateInputText_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020FA7 RID: 135079 RVA: 0x0030AC28 File Offset: 0x00308E28
+		// Token: 0x0600A08E RID: 41102 RVA: 0x000EDC91 File Offset: 0x000EBE91
 		public void ClearCustomInputTypeEvent()
 		{
 			UUITextInputComponent.__ClearCustomInputTypeEvent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020FA8 RID: 135080 RVA: 0x0030AC35 File Offset: 0x00308E35
+		// Token: 0x0600A08F RID: 41103 RVA: 0x000EDC9E File Offset: 0x000EBE9E
 		public void ActivateInputText()
 		{
 			UUITextInputComponent.__ActivateInputText_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020FA9 RID: 135081
+		// Token: 0x0600A090 RID: 41104
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterValueChangeEvent_Internal(IntPtr @this, IntPtr InDelegateHandle);
 
-		// Token: 0x06020FAA RID: 135082
+		// Token: 0x0600A091 RID: 41105
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterSubmitEvent_Internal(IntPtr @this, IntPtr InDelegateHandle);
 
-		// Token: 0x06020FAB RID: 135083
+		// Token: 0x0600A092 RID: 41106
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterInputActivateEvent_Internal(IntPtr @this, IntPtr InDelegateHandle);
 
-		// Token: 0x06020FAC RID: 135084
+		// Token: 0x0600A093 RID: 41107
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetText_Internal(IntPtr @this, in FString InText, bool InFireEvent);
 
-		// Token: 0x06020FAD RID: 135085
+		// Token: 0x0600A094 RID: 41108
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShowKeyboardDelegate_Internal(IntPtr InDelegate);
 
-		// Token: 0x06020FAE RID: 135086
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetInputType_Internal(IntPtr @this, ELGUITextInputType newValue);
-
-		// Token: 0x06020FAF RID: 135087
+		// Token: 0x0600A095 RID: 41109
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomInputTypeFunction_Internal(IntPtr @this, IntPtr InFunction);
 
-		// Token: 0x06020FB0 RID: 135088
+		// Token: 0x0600A096 RID: 41110
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterValueChangeEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x06020FB1 RID: 135089
+		// Token: 0x0600A097 RID: 41111
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterSubmitEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x06020FB2 RID: 135090
+		// Token: 0x0600A098 RID: 41112
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RegisterInputActivateEvent_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x06020FB3 RID: 135091
+		// Token: 0x0600A099 RID: 41113
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsInputActive_Internal(IntPtr @this);
 
-		// Token: 0x06020FB4 RID: 135092
+		// Token: 0x0600A09A RID: 41114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetTextComponent_Internal(IntPtr @this);
 
-		// Token: 0x06020FB5 RID: 135093
+		// Token: 0x0600A09B RID: 41115
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetText_Internal(IntPtr @this);
 
-		// Token: 0x06020FB6 RID: 135094
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern ELGUITextInputType __GetInputType_Internal(IntPtr @this);
-
-		// Token: 0x06020FB7 RID: 135095
+		// Token: 0x0600A09C RID: 41116
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DeactivateInputText_Internal(IntPtr @this);
 
-		// Token: 0x06020FB8 RID: 135096
+		// Token: 0x0600A09D RID: 41117
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearCustomInputTypeEvent_Internal(IntPtr @this);
 
-		// Token: 0x06020FB9 RID: 135097
+		// Token: 0x0600A09E RID: 41118
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ActivateInputText_Internal(IntPtr @this);
 
-		// Token: 0x06020FBA RID: 135098 RVA: 0x0030AC42 File Offset: 0x00308E42
+		// Token: 0x0600A09F RID: 41119 RVA: 0x000EDCAB File Offset: 0x000EBEAB
 		static UUITextInputComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UITextInputComponent");
 		}
 
-		// Token: 0x06020FBB RID: 135099 RVA: 0x0030AC50 File Offset: 0x00308E50
+		// Token: 0x0600A0A0 RID: 41120 RVA: 0x000EDCB9 File Offset: 0x000EBEB9
 		protected UUITextInputComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401197B RID: 72059
-		internal static int __InterfaceOffset_ILGUIPointerDragInterface;
-
-		// Token: 0x0401197C RID: 72060
+		// Token: 0x040044A6 RID: 17574
 		public new const string __ObjectPath = "/Script/LGUI.UITextInputComponent";
 
-		// Token: 0x0401197D RID: 72061
+		// Token: 0x040044A7 RID: 17575
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401197E RID: 72062
+		// Token: 0x040044A8 RID: 17576
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401197F RID: 72063
+		// Token: 0x040044A9 RID: 17577
 		internal static int __PropertyOffset_TextActor;
 
-		// Token: 0x04011980 RID: 72064
+		// Token: 0x040044AA RID: 17578
 		internal static int __PropertyOffset_Text;
 
-		// Token: 0x04011981 RID: 72065
-		internal static int __PropertyOffset_InputType;
-
-		// Token: 0x04011982 RID: 72066
+		// Token: 0x040044AB RID: 17579
 		internal static int __PropertyOffset_PasswordChar;
 
-		// Token: 0x04011983 RID: 72067
+		// Token: 0x040044AC RID: 17580
 		internal static int __PropertyOffset_bAllowMultiLine;
 
-		// Token: 0x04011984 RID: 72068
+		// Token: 0x040044AD RID: 17581
 		internal static int __PropertyOffset_PlaceHolderActor;
 
-		// Token: 0x04011985 RID: 72069
+		// Token: 0x040044AE RID: 17582
 		internal static int __PropertyOffset_CaretBlinkRate;
 
-		// Token: 0x04011986 RID: 72070
+		// Token: 0x040044AF RID: 17583
 		internal static int __PropertyOffset_CaretWidth;
 
-		// Token: 0x04011987 RID: 72071
+		// Token: 0x040044B0 RID: 17584
 		internal static int __PropertyOffset_IsShowDefaultText;
 
-		// Token: 0x04011988 RID: 72072
+		// Token: 0x040044B1 RID: 17585
 		internal static int __PropertyOffset_CaretColor;
 
-		// Token: 0x04011989 RID: 72073
+		// Token: 0x040044B2 RID: 17586
 		internal static int __PropertyOffset_SelectionColor;
 
-		// Token: 0x0401198A RID: 72074
-		internal static int __PropertyOffset_VirtualKeyboradOptions;
-
-		// Token: 0x0401198B RID: 72075
-		[Nullable(2)]
-		private FVirtualKeyboardOptions _VirtualKeyboradOptions;
-
-		// Token: 0x0401198C RID: 72076
+		// Token: 0x040044B3 RID: 17587
 		internal static int __PropertyOffset_IgnoreKeys;
 
-		// Token: 0x0401198D RID: 72077
+		// Token: 0x040044B4 RID: 17588
 		[Nullable(new byte[]
 		{
 			2,
@@ -804,47 +666,26 @@ namespace UnrealEngine
 		})]
 		private TArray<FKey> _IgnoreKeys;
 
-		// Token: 0x0401198E RID: 72078
-		internal static int __PropertyOffset_OnValueChange;
-
-		// Token: 0x0401198F RID: 72079
-		[Nullable(2)]
-		private FLGUIDrawableEvent _OnValueChange;
-
-		// Token: 0x04011990 RID: 72080
-		internal static int __PropertyOffset_OnSubmit;
-
-		// Token: 0x04011991 RID: 72081
-		[Nullable(2)]
-		private FLGUIDrawableEvent _OnSubmit;
-
-		// Token: 0x04011992 RID: 72082
-		internal static int __PropertyOffset_OnInputActivate;
-
-		// Token: 0x04011993 RID: 72083
-		[Nullable(2)]
-		private FLGUIDrawableEvent _OnInputActivate;
-
-		// Token: 0x04011994 RID: 72084
+		// Token: 0x040044B5 RID: 17589
 		internal static int __PropertyOffset_OnCheckTextInputDelegate;
 
-		// Token: 0x04011995 RID: 72085
+		// Token: 0x040044B6 RID: 17590
 		[Nullable(2)]
 		private FCheckTextInputDelegate _OnCheckTextInputDelegate;
 
-		// Token: 0x04011996 RID: 72086
+		// Token: 0x040044B7 RID: 17591
 		internal static int __PropertyOffset_MaxInput;
 
-		// Token: 0x04011997 RID: 72087
+		// Token: 0x040044B8 RID: 17592
 		internal static int __PropertyOffset_PlayerController;
 
-		// Token: 0x04011998 RID: 72088
+		// Token: 0x040044B9 RID: 17593
 		internal static int __PropertyOffset_CaretObject;
 
-		// Token: 0x04011999 RID: 72089
+		// Token: 0x040044BA RID: 17594
 		internal static int __PropertyOffset_SelectionMaskObjectArray;
 
-		// Token: 0x0401199A RID: 72090
+		// Token: 0x040044BB RID: 17595
 		[Nullable(new byte[]
 		{
 			2,
@@ -853,31 +694,31 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<UUISprite>> _SelectionMaskObjectArray;
 
-		// Token: 0x0401199B RID: 72091
+		// Token: 0x040044BC RID: 17596
 		internal static int __PropertyOffset_OnTextChange;
 
-		// Token: 0x0401199C RID: 72092
+		// Token: 0x040044BD RID: 17597
 		[Nullable(2)]
 		private FLGUITextInputDynamicDelegate _OnTextChange;
 
-		// Token: 0x0401199D RID: 72093
+		// Token: 0x040044BE RID: 17598
 		internal static int __PropertyOffset_OnTextSubmit;
 
-		// Token: 0x0401199E RID: 72094
+		// Token: 0x040044BF RID: 17599
 		[Nullable(2)]
 		private FLGUITextInputDynamicDelegate _OnTextSubmit;
 
-		// Token: 0x0401199F RID: 72095
+		// Token: 0x040044C0 RID: 17600
 		internal static int __PropertyOffset_OnTextClip;
 
-		// Token: 0x040119A0 RID: 72096
+		// Token: 0x040044C1 RID: 17601
 		[Nullable(2)]
 		private FLGUITextInputDynamicDelegate _OnTextClip;
 
-		// Token: 0x040119A1 RID: 72097
+		// Token: 0x040044C2 RID: 17602
 		internal static int __PropertyOffset_OnInputActivateDelegate;
 
-		// Token: 0x040119A2 RID: 72098
+		// Token: 0x040044C3 RID: 17603
 		[Nullable(2)]
 		private FLGUIInputActivateDynamicDelegate _OnInputActivateDelegate;
 	}

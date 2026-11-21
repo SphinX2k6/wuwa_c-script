@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027F3 RID: 10227
+	// Token: 0x02002AC6 RID: 10950
 	public class ISwingGetUp : ILeisureInteractType
 	{
-		// Token: 0x0600E321 RID: 58145 RVA: 0x00218065 File Offset: 0x00216265
-		[NullableContext(1)]
+		// Token: 0x0600F146 RID: 61766 RVA: 0x00234EC8 File Offset: 0x002330C8
 		public static ISwingGetUp Create(ISwingGetUp? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044FD RID: 17661
-		// (get) Token: 0x0600E322 RID: 58146 RVA: 0x00218084 File Offset: 0x00216284
+		// Token: 0x17004868 RID: 18536
+		// (get) Token: 0x0600F147 RID: 61767 RVA: 0x00234EE7 File Offset: 0x002330E7
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DD7 RID: 32215
+		// Token: 0x04008494 RID: 33940
 		private ISwingGetUp Instance;
 	}
 }

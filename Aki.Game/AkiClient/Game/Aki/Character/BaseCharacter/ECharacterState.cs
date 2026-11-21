@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042A0 RID: 17056
+	// Token: 0x020032FB RID: 13051
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ECharacterState.ECharacterState")]
 	public enum ECharacterState : byte
 	{
-		// Token: 0x04017301 RID: 94977
+		// Token: 0x04011FFF RID: 73727
 		None,
-		// Token: 0x04017302 RID: 94978
+		// Token: 0x04012000 RID: 73728
 		休眠,
-		// Token: 0x04017303 RID: 94979
+		// Token: 0x04012001 RID: 73729
 		出生,
-		// Token: 0x04017304 RID: 94980
+		// Token: 0x04012002 RID: 73730
 		其他,
-		// Token: 0x04017305 RID: 94981
+		// Token: 0x04012003 RID: 73731
 		ECharacterState_MAX
 	}
 }

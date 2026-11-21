@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BB3 RID: 15283
+	// Token: 0x02003FBB RID: 16315
 	public struct IShowTimelineCheckpoint : IFlatbufferObject
 	{
-		// Token: 0x170068BE RID: 26814
-		// (get) Token: 0x06014F43 RID: 85827 RVA: 0x00309CDA File Offset: 0x00307EDA
+		// Token: 0x17006E61 RID: 28257
+		// (get) Token: 0x0601641B RID: 91163 RVA: 0x00330536 File Offset: 0x0032E736
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014F44 RID: 85828 RVA: 0x00309CE7 File Offset: 0x00307EE7
+		// Token: 0x0601641C RID: 91164 RVA: 0x00330543 File Offset: 0x0032E743
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014F45 RID: 85829 RVA: 0x00309CF0 File Offset: 0x00307EF0
+		// Token: 0x0601641D RID: 91165 RVA: 0x0033054C File Offset: 0x0032E74C
 		public static IShowTimelineCheckpoint GetRootAsIShowTimelineCheckpoint(ByteBuffer _bb)
 		{
 			return IShowTimelineCheckpoint.GetRootAsIShowTimelineCheckpoint(_bb, default(IShowTimelineCheckpoint));
 		}
 
-		// Token: 0x06014F46 RID: 85830 RVA: 0x00309D0C File Offset: 0x00307F0C
+		// Token: 0x0601641E RID: 91166 RVA: 0x00330568 File Offset: 0x0032E768
 		public static IShowTimelineCheckpoint GetRootAsIShowTimelineCheckpoint(ByteBuffer _bb, IShowTimelineCheckpoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014F47 RID: 85831 RVA: 0x00309D29 File Offset: 0x00307F29
+		// Token: 0x0601641F RID: 91167 RVA: 0x00330585 File Offset: 0x0032E785
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014F48 RID: 85832 RVA: 0x00309D38 File Offset: 0x00307F38
+		// Token: 0x06016420 RID: 91168 RVA: 0x00330594 File Offset: 0x0032E794
 		public IShowTimelineCheckpoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170068BF RID: 26815
-		// (get) Token: 0x06014F49 RID: 85833 RVA: 0x00309D48 File Offset: 0x00307F48
+		// Token: 0x17006E62 RID: 28258
+		// (get) Token: 0x06016421 RID: 91169 RVA: 0x003305A4 File Offset: 0x0032E7A4
 		public EShowTimelineType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x170068C0 RID: 26816
-		// (get) Token: 0x06014F4A RID: 85834 RVA: 0x00309D84 File Offset: 0x00307F84
+		// Token: 0x17006E63 RID: 28259
+		// (get) Token: 0x06016422 RID: 91170 RVA: 0x003305E0 File Offset: 0x0032E7E0
 		public bool IsEnabled
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x170068C1 RID: 26817
-		// (get) Token: 0x06014F4B RID: 85835 RVA: 0x00309DC4 File Offset: 0x00307FC4
+		// Token: 0x17006E64 RID: 28260
+		// (get) Token: 0x06016423 RID: 91171 RVA: 0x00330620 File Offset: 0x0032E820
 		public int CheckpointId
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x170068C2 RID: 26818
-		// (get) Token: 0x06014F4C RID: 85836 RVA: 0x00309E00 File Offset: 0x00308000
+		// Token: 0x17006E65 RID: 28261
+		// (get) Token: 0x06016424 RID: 91172 RVA: 0x0033065C File Offset: 0x0032E85C
 		public int ActiveRoleId
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014F4D RID: 85837 RVA: 0x00309E40 File Offset: 0x00308040
+		// Token: 0x06016425 RID: 91173 RVA: 0x0033069C File Offset: 0x0032E89C
 		public IShowTimelineRoleState? RoleStates(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return new IShowTimelineRoleState?(default(IShowTimelineRoleState).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170068C3 RID: 26819
-		// (get) Token: 0x06014F4E RID: 85838 RVA: 0x00309EA4 File Offset: 0x003080A4
+		// Token: 0x17006E66 RID: 28262
+		// (get) Token: 0x06016426 RID: 91174 RVA: 0x00330700 File Offset: 0x0032E900
 		public int RoleStatesLength
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014F4F RID: 85839 RVA: 0x00309ED0 File Offset: 0x003080D0
+		// Token: 0x06016427 RID: 91175 RVA: 0x0033072C File Offset: 0x0032E92C
 		public IShowTimelineMonsterState? MonsterStates(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -141,8 +141,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return new IShowTimelineMonsterState?(default(IShowTimelineMonsterState).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170068C4 RID: 26820
-		// (get) Token: 0x06014F50 RID: 85840 RVA: 0x00309F34 File Offset: 0x00308134
+		// Token: 0x17006E67 RID: 28263
+		// (get) Token: 0x06016428 RID: 91176 RVA: 0x00330790 File Offset: 0x0032E990
 		public int MonsterStatesLength
 		{
 			get
@@ -156,8 +156,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x170068C5 RID: 26821
-		// (get) Token: 0x06014F51 RID: 85841 RVA: 0x00309F60 File Offset: 0x00308160
+		// Token: 0x17006E68 RID: 28264
+		// (get) Token: 0x06016429 RID: 91177 RVA: 0x003307BC File Offset: 0x0032E9BC
 		public ICheckpointDisplay_Union DisplayConfigType
 		{
 			get
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014F52 RID: 85842 RVA: 0x00309FA0 File Offset: 0x003081A0
+		// Token: 0x0601642A RID: 91178 RVA: 0x003307FC File Offset: 0x0032E9FC
 		public TTable? DisplayConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(18);
@@ -182,20 +182,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06014F53 RID: 85843 RVA: 0x00309FE8 File Offset: 0x003081E8
+		// Token: 0x0601642B RID: 91179 RVA: 0x00330844 File Offset: 0x0032EA44
 		public ICheckpointDisplay DisplayConfigAsICheckpointDisplay()
 		{
 			return this.DisplayConfig<ICheckpointDisplay>().Value;
 		}
 
-		// Token: 0x06014F54 RID: 85844 RVA: 0x0030A004 File Offset: 0x00308204
+		// Token: 0x0601642C RID: 91180 RVA: 0x00330860 File Offset: 0x0032EA60
 		public ICheckpointDisplayRole DisplayConfigAsICheckpointDisplayRole()
 		{
 			return this.DisplayConfig<ICheckpointDisplayRole>().Value;
 		}
 
-		// Token: 0x170068C6 RID: 26822
-		// (get) Token: 0x06014F55 RID: 85845 RVA: 0x0030A020 File Offset: 0x00308220
+		// Token: 0x17006E69 RID: 28265
+		// (get) Token: 0x0601642D RID: 91181 RVA: 0x0033087C File Offset: 0x0032EA7C
 		public string CustomName
 		{
 			get
@@ -209,20 +209,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014F56 RID: 85846 RVA: 0x0030A058 File Offset: 0x00308258
+		// Token: 0x0601642E RID: 91182 RVA: 0x003308B4 File Offset: 0x0032EAB4
 		public Span<byte> GetCustomNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x06014F57 RID: 85847 RVA: 0x0030A068 File Offset: 0x00308268
+		// Token: 0x0601642F RID: 91183 RVA: 0x003308C4 File Offset: 0x0032EAC4
 		public byte[] GetCustomNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(20);
 		}
 
-		// Token: 0x170068C7 RID: 26823
-		// (get) Token: 0x06014F58 RID: 85848 RVA: 0x0030A078 File Offset: 0x00308278
+		// Token: 0x17006E6A RID: 28266
+		// (get) Token: 0x06016430 RID: 91184 RVA: 0x003308D4 File Offset: 0x0032EAD4
 		public IPosA? PlayerPosition
 		{
 			get
@@ -236,8 +236,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x170068C8 RID: 26824
-		// (get) Token: 0x06014F59 RID: 85849 RVA: 0x0030A0D8 File Offset: 0x003082D8
+		// Token: 0x17006E6B RID: 28267
+		// (get) Token: 0x06016431 RID: 91185 RVA: 0x00330934 File Offset: 0x0032EB34
 		public IPosA? MonsterPosition
 		{
 			get
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014F5A RID: 85850 RVA: 0x0030A138 File Offset: 0x00308338
+		// Token: 0x06016432 RID: 91186 RVA: 0x00330994 File Offset: 0x0032EB94
 		public static Offset<IShowTimelineCheckpoint> CreateIShowTimelineCheckpoint(FlatBufferBuilder builder, EShowTimelineType Type = EShowTimelineType.Checkpoint, bool IsEnabled = false, int CheckpointId = 0, int ActiveRoleId = 0, VectorOffset RoleStatesOffset = default(VectorOffset), VectorOffset MonsterStatesOffset = default(VectorOffset), ICheckpointDisplay_Union DisplayConfig_type = ICheckpointDisplay_Union.NONE, int DisplayConfigOffset = 0, StringOffset CustomNameOffset = default(StringOffset), Offset<IPosA> PlayerPositionOffset = default(Offset<IPosA>), Offset<IPosA> MonsterPositionOffset = default(Offset<IPosA>))
 		{
 			builder.StartTable(11);
@@ -269,43 +269,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return IShowTimelineCheckpoint.EndIShowTimelineCheckpoint(builder);
 		}
 
-		// Token: 0x06014F5B RID: 85851 RVA: 0x0030A1A8 File Offset: 0x003083A8
+		// Token: 0x06016433 RID: 91187 RVA: 0x00330A04 File Offset: 0x0032EC04
 		public static void StartIShowTimelineCheckpoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x06014F5C RID: 85852 RVA: 0x0030A1B2 File Offset: 0x003083B2
+		// Token: 0x06016434 RID: 91188 RVA: 0x00330A0E File Offset: 0x0032EC0E
 		public static void AddType(FlatBufferBuilder builder, EShowTimelineType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014F5D RID: 85853 RVA: 0x0030A1BD File Offset: 0x003083BD
+		// Token: 0x06016435 RID: 91189 RVA: 0x00330A19 File Offset: 0x0032EC19
 		public static void AddIsEnabled(FlatBufferBuilder builder, bool isEnabled)
 		{
 			builder.AddBool(1, isEnabled, false);
 		}
 
-		// Token: 0x06014F5E RID: 85854 RVA: 0x0030A1C8 File Offset: 0x003083C8
+		// Token: 0x06016436 RID: 91190 RVA: 0x00330A24 File Offset: 0x0032EC24
 		public static void AddCheckpointId(FlatBufferBuilder builder, int checkpointId)
 		{
 			builder.AddInt(2, checkpointId, 0);
 		}
 
-		// Token: 0x06014F5F RID: 85855 RVA: 0x0030A1D3 File Offset: 0x003083D3
+		// Token: 0x06016437 RID: 91191 RVA: 0x00330A2F File Offset: 0x0032EC2F
 		public static void AddActiveRoleId(FlatBufferBuilder builder, int activeRoleId)
 		{
 			builder.AddInt(3, activeRoleId, 0);
 		}
 
-		// Token: 0x06014F60 RID: 85856 RVA: 0x0030A1DE File Offset: 0x003083DE
+		// Token: 0x06016438 RID: 91192 RVA: 0x00330A3A File Offset: 0x0032EC3A
 		public static void AddRoleStates(FlatBufferBuilder builder, VectorOffset roleStatesOffset)
 		{
 			builder.AddOffset(4, roleStatesOffset.Value, 0);
 		}
 
-		// Token: 0x06014F61 RID: 85857 RVA: 0x0030A1F0 File Offset: 0x003083F0
+		// Token: 0x06016439 RID: 91193 RVA: 0x00330A4C File Offset: 0x0032EC4C
 		public static VectorOffset CreateRoleStatesVector(FlatBufferBuilder builder, Offset<IShowTimelineRoleState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -316,7 +316,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F62 RID: 85858 RVA: 0x0030A230 File Offset: 0x00308430
+		// Token: 0x0601643A RID: 91194 RVA: 0x00330A8C File Offset: 0x0032EC8C
 		public static VectorOffset CreateRoleStatesVectorBlock(FlatBufferBuilder builder, Offset<IShowTimelineRoleState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -324,7 +324,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F63 RID: 85859 RVA: 0x0030A24A File Offset: 0x0030844A
+		// Token: 0x0601643B RID: 91195 RVA: 0x00330AA6 File Offset: 0x0032ECA6
 		public static VectorOffset CreateRoleStatesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IShowTimelineRoleState>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -332,7 +332,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F64 RID: 85860 RVA: 0x0030A268 File Offset: 0x00308468
+		// Token: 0x0601643C RID: 91196 RVA: 0x00330AC4 File Offset: 0x0032ECC4
 		public static VectorOffset CreateRoleStatesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -340,19 +340,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F65 RID: 85861 RVA: 0x0030A281 File Offset: 0x00308481
+		// Token: 0x0601643D RID: 91197 RVA: 0x00330ADD File Offset: 0x0032ECDD
 		public static void StartRoleStatesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06014F66 RID: 85862 RVA: 0x0030A28C File Offset: 0x0030848C
+		// Token: 0x0601643E RID: 91198 RVA: 0x00330AE8 File Offset: 0x0032ECE8
 		public static void AddMonsterStates(FlatBufferBuilder builder, VectorOffset monsterStatesOffset)
 		{
 			builder.AddOffset(5, monsterStatesOffset.Value, 0);
 		}
 
-		// Token: 0x06014F67 RID: 85863 RVA: 0x0030A29C File Offset: 0x0030849C
+		// Token: 0x0601643F RID: 91199 RVA: 0x00330AF8 File Offset: 0x0032ECF8
 		public static VectorOffset CreateMonsterStatesVector(FlatBufferBuilder builder, Offset<IShowTimelineMonsterState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -363,7 +363,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F68 RID: 85864 RVA: 0x0030A2DC File Offset: 0x003084DC
+		// Token: 0x06016440 RID: 91200 RVA: 0x00330B38 File Offset: 0x0032ED38
 		public static VectorOffset CreateMonsterStatesVectorBlock(FlatBufferBuilder builder, Offset<IShowTimelineMonsterState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -371,7 +371,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F69 RID: 85865 RVA: 0x0030A2F6 File Offset: 0x003084F6
+		// Token: 0x06016441 RID: 91201 RVA: 0x00330B52 File Offset: 0x0032ED52
 		public static VectorOffset CreateMonsterStatesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IShowTimelineMonsterState>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -379,7 +379,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F6A RID: 85866 RVA: 0x0030A314 File Offset: 0x00308514
+		// Token: 0x06016442 RID: 91202 RVA: 0x00330B70 File Offset: 0x0032ED70
 		public static VectorOffset CreateMonsterStatesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -387,49 +387,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return builder.EndVector();
 		}
 
-		// Token: 0x06014F6B RID: 85867 RVA: 0x0030A32D File Offset: 0x0030852D
+		// Token: 0x06016443 RID: 91203 RVA: 0x00330B89 File Offset: 0x0032ED89
 		public static void StartMonsterStatesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06014F6C RID: 85868 RVA: 0x0030A338 File Offset: 0x00308538
+		// Token: 0x06016444 RID: 91204 RVA: 0x00330B94 File Offset: 0x0032ED94
 		public static void AddDisplayConfigType(FlatBufferBuilder builder, ICheckpointDisplay_Union displayConfigType)
 		{
 			builder.AddByte(6, (byte)displayConfigType, 0);
 		}
 
-		// Token: 0x06014F6D RID: 85869 RVA: 0x0030A343 File Offset: 0x00308543
+		// Token: 0x06016445 RID: 91205 RVA: 0x00330B9F File Offset: 0x0032ED9F
 		public static void AddDisplayConfig(FlatBufferBuilder builder, int displayConfigOffset)
 		{
 			builder.AddOffset(7, displayConfigOffset, 0);
 		}
 
-		// Token: 0x06014F6E RID: 85870 RVA: 0x0030A34E File Offset: 0x0030854E
+		// Token: 0x06016446 RID: 91206 RVA: 0x00330BAA File Offset: 0x0032EDAA
 		public static void AddCustomName(FlatBufferBuilder builder, StringOffset customNameOffset)
 		{
 			builder.AddOffset(8, customNameOffset.Value, 0);
 		}
 
-		// Token: 0x06014F6F RID: 85871 RVA: 0x0030A35E File Offset: 0x0030855E
+		// Token: 0x06016447 RID: 91207 RVA: 0x00330BBA File Offset: 0x0032EDBA
 		public static void AddPlayerPosition(FlatBufferBuilder builder, Offset<IPosA> playerPositionOffset)
 		{
 			builder.AddOffset(9, playerPositionOffset.Value, 0);
 		}
 
-		// Token: 0x06014F70 RID: 85872 RVA: 0x0030A36F File Offset: 0x0030856F
+		// Token: 0x06016448 RID: 91208 RVA: 0x00330BCB File Offset: 0x0032EDCB
 		public static void AddMonsterPosition(FlatBufferBuilder builder, Offset<IPosA> monsterPositionOffset)
 		{
 			builder.AddOffset(10, monsterPositionOffset.Value, 0);
 		}
 
-		// Token: 0x06014F71 RID: 85873 RVA: 0x0030A380 File Offset: 0x00308580
+		// Token: 0x06016449 RID: 91209 RVA: 0x00330BDC File Offset: 0x0032EDDC
 		public static Offset<IShowTimelineCheckpoint> EndIShowTimelineCheckpoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowTimelineCheckpoint>(builder.EndTable());
 		}
 
-		// Token: 0x06014F72 RID: 85874 RVA: 0x0030A390 File Offset: 0x00308590
+		// Token: 0x0601644A RID: 91210 RVA: 0x00330BEC File Offset: 0x0032EDEC
 		public IShowTimelineCheckpointT UnPack()
 		{
 			IShowTimelineCheckpointT showTimelineCheckpointT = new IShowTimelineCheckpointT();
@@ -437,7 +437,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return showTimelineCheckpointT;
 		}
 
-		// Token: 0x06014F73 RID: 85875 RVA: 0x0030A3AC File Offset: 0x003085AC
+		// Token: 0x0601644B RID: 91211 RVA: 0x00330C08 File Offset: 0x0032EE08
 		public void UnPackTo(IShowTimelineCheckpointT _o)
 		{
 			_o.Type = this.Type;
@@ -473,7 +473,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			_o.MonsterPosition = ((this.MonsterPosition != null) ? this.MonsterPosition.Value.UnPack() : null);
 		}
 
-		// Token: 0x06014F74 RID: 85876 RVA: 0x0030A5A0 File Offset: 0x003087A0
+		// Token: 0x0601644C RID: 91212 RVA: 0x00330DFC File Offset: 0x0032EFFC
 		public static Offset<IShowTimelineCheckpoint> Pack(FlatBufferBuilder builder, IShowTimelineCheckpointT _o)
 		{
 			if (_o == null)
@@ -508,7 +508,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return IShowTimelineCheckpoint.CreateIShowTimelineCheckpoint(builder, _o.Type, _o.IsEnabled, _o.CheckpointId, _o.ActiveRoleId, roleStatesOffset, monsterStatesOffset, displayConfig_type, displayConfigOffset, customNameOffset, playerPositionOffset, monsterPositionOffset);
 		}
 
-		// Token: 0x0400B130 RID: 45360
+		// Token: 0x0400BAAF RID: 47791
 		private Table __p;
 	}
 }

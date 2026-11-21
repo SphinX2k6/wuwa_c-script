@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE4 RID: 3044
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CB3 RID: 3251
 	public class FollowTrackComponent : IComponentBase
 	{
-		// Token: 0x060045E9 RID: 17897 RVA: 0x000B0C3F File Offset: 0x000AEE3F
+		// Token: 0x06004A47 RID: 19015 RVA: 0x000BADBB File Offset: 0x000B8FBB
 		public static FollowTrackComponent Create(IFollowTrackComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013DE RID: 5086
-		// (get) Token: 0x060045EA RID: 17898 RVA: 0x000B0C60 File Offset: 0x000AEE60
+		// Token: 0x170014DC RID: 5340
+		// (get) Token: 0x06004A48 RID: 19016 RVA: 0x000BADDC File Offset: 0x000B8FDC
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013DF RID: 5087
-		// (get) Token: 0x060045EB RID: 17899 RVA: 0x000B0C98 File Offset: 0x000AEE98
+		// Token: 0x170014DD RID: 5341
+		// (get) Token: 0x06004A49 RID: 19017 RVA: 0x000BAE14 File Offset: 0x000B9014
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013E0 RID: 5088
-		// (get) Token: 0x060045EC RID: 17900 RVA: 0x000B0CAE File Offset: 0x000AEEAE
+		// Token: 0x170014DE RID: 5342
+		// (get) Token: 0x06004A4A RID: 19018 RVA: 0x000BAE2A File Offset: 0x000B902A
 		public virtual float Range
 		{
 			get
@@ -56,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013E1 RID: 5089
-		// (get) Token: 0x060045ED RID: 17901 RVA: 0x000B0CBB File Offset: 0x000AEEBB
+		// Token: 0x170014DF RID: 5343
+		// (get) Token: 0x06004A4B RID: 19019 RVA: 0x000BAE37 File Offset: 0x000B9037
 		public virtual int SplineEntityId
 		{
 			get
@@ -66,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013E2 RID: 5090
-		// (get) Token: 0x060045EE RID: 17902 RVA: 0x000B0CC8 File Offset: 0x000AEEC8
+		// Token: 0x170014E0 RID: 5344
+		// (get) Token: 0x06004A4C RID: 19020 RVA: 0x000BAE44 File Offset: 0x000B9044
 		public virtual IFollowTrackEndType EndType
 		{
 			get
@@ -82,13 +79,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027CD RID: 10189
+		// Token: 0x04002A18 RID: 10776
 		private IFollowTrackComponent Instance;
 
-		// Token: 0x040027CE RID: 10190
+		// Token: 0x04002A19 RID: 10777
 		private IFollowTrackEndType _EndTypeCache;
 
-		// Token: 0x040027CF RID: 10191
+		// Token: 0x04002A1A RID: 10778
 		private bool _EndTypeInited;
 	}
 }

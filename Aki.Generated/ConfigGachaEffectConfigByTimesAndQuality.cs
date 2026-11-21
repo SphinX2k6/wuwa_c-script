@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200036E RID: 878
+	// Token: 0x02000383 RID: 899
 	public class ConfigGachaEffectConfigByTimesAndQuality : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600149A RID: 5274 RVA: 0x000CDF53 File Offset: 0x000CC153
+		// Token: 0x06001518 RID: 5400 RVA: 0x000D445F File Offset: 0x000D265F
 		static ConfigGachaEffectConfigByTimesAndQuality()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaEffectConfigByTimesAndQuality.CreateStaticDefaultValue), new Action(ConfigGachaEffectConfigByTimesAndQuality.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600149B RID: 5275 RVA: 0x000CDF74 File Offset: 0x000CC174
+		// Token: 0x06001519 RID: 5401 RVA: 0x000D4480 File Offset: 0x000D2680
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaEffectConfigByTimesAndQuality.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600149C RID: 5276 RVA: 0x000CDFF3 File Offset: 0x000CC1F3
+		// Token: 0x0600151A RID: 5402 RVA: 0x000D44FF File Offset: 0x000D26FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaEffectConfigByTimesAndQuality.LogPair = null;
 			ConfigGachaEffectConfigByTimesAndQuality.HandleId = 0;
 		}
 
-		// Token: 0x0600149D RID: 5277 RVA: 0x000CE001 File Offset: 0x000CC201
+		// Token: 0x0600151B RID: 5403 RVA: 0x000D450D File Offset: 0x000D270D
 		public static void Init()
 		{
 			ConfigGachaEffectConfigByTimesAndQuality.HandleId = ConfigCommon.InitDataStatement(ConfigGachaEffectConfigByTimesAndQuality.HandleId, "db_gacha.db", "select BinData from `GachaEffectConfig` where Times=? AND Quality=?");
 		}
 
-		// Token: 0x0600149E RID: 5278 RVA: 0x000CE01C File Offset: 0x000CC21C
+		// Token: 0x0600151C RID: 5404 RVA: 0x000D4528 File Offset: 0x000D2728
 		public static GachaEffectConfig? GetConfig(int p0Times, int p1Quality, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGachaEffectConfigByTimesAndQuality.HandleId, ConfigGachaEffectConfigByTimesAndQuality.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new GachaEffectConfig?(rootAsGachaEffectConfig);
 		}
 
-		// Token: 0x040017E6 RID: 6118
+		// Token: 0x04001879 RID: 6265
 		private const string DB = "db_gacha.db";
 
-		// Token: 0x040017E7 RID: 6119
+		// Token: 0x0400187A RID: 6266
 		private const string FILE = "c.抽卡.xlsx";
 
-		// Token: 0x040017E8 RID: 6120
+		// Token: 0x0400187B RID: 6267
 		private const string TABLE = "GachaEffectConfig";
 
-		// Token: 0x040017E9 RID: 6121
+		// Token: 0x0400187C RID: 6268
 		private const string COMMAND = "select BinData from `GachaEffectConfig` where Times=? AND Quality=?";
 
-		// Token: 0x040017EA RID: 6122
+		// Token: 0x0400187D RID: 6269
 		private const string KEY_PREFIX = "GachaEffectConfigByTimesAndQuality";
 
-		// Token: 0x040017EB RID: 6123
+		// Token: 0x0400187E RID: 6270
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040017EC RID: 6124
+		// Token: 0x0400187F RID: 6271
 		private static int HandleId;
 	}
 }

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Command
 {
-	// Token: 0x02004573 RID: 17779
+	// Token: 0x0200349B RID: 13467
 	[NullableContext(1)]
 	public interface IReceiver<[Nullable(0)] T> where T : ICommandType
 	{
-		// Token: 0x17007587 RID: 30087
-		// (get) Token: 0x0602DE53 RID: 187987
-		// (set) Token: 0x0602DE54 RID: 187988
+		// Token: 0x1700483E RID: 18494
+		// (get) Token: 0x06022535 RID: 140597
+		// (set) Token: 0x06022536 RID: 140598
 		Action<TCommandHandleParams<T>> ReceiveExecute { get; set; }
 
-		// Token: 0x17007588 RID: 30088
-		// (get) Token: 0x0602DE55 RID: 187989
-		// (set) Token: 0x0602DE56 RID: 187990
+		// Token: 0x1700483F RID: 18495
+		// (get) Token: 0x06022537 RID: 140599
+		// (set) Token: 0x06022538 RID: 140600
 		[Nullable(new byte[]
 		{
 			2,

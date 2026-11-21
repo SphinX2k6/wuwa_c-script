@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C26 RID: 19494
+	// Token: 0x02005119 RID: 20761
 	public class IFeatureCollectionLevelPreConditionT
 	{
-		// Token: 0x17008DA1 RID: 36257
-		// (get) Token: 0x0601EE37 RID: 126519 RVA: 0x00452B34 File Offset: 0x00450D34
-		// (set) Token: 0x0601EE38 RID: 126520 RVA: 0x00452B3C File Offset: 0x00450D3C
+		// Token: 0x170094CA RID: 38090
+		// (get) Token: 0x06020A3B RID: 133691 RVA: 0x00486410 File Offset: 0x00484610
+		// (set) Token: 0x06020A3C RID: 133692 RVA: 0x00486418 File Offset: 0x00484618
 		public EAccessQuestCondition Type { get; set; }
 
-		// Token: 0x17008DA2 RID: 36258
-		// (get) Token: 0x0601EE39 RID: 126521 RVA: 0x00452B45 File Offset: 0x00450D45
-		// (set) Token: 0x0601EE3A RID: 126522 RVA: 0x00452B4D File Offset: 0x00450D4D
+		// Token: 0x170094CB RID: 38091
+		// (get) Token: 0x06020A3D RID: 133693 RVA: 0x00486421 File Offset: 0x00484621
+		// (set) Token: 0x06020A3E RID: 133694 RVA: 0x00486429 File Offset: 0x00484629
 		public int Id { get; set; }
 
-		// Token: 0x17008DA3 RID: 36259
-		// (get) Token: 0x0601EE3B RID: 126523 RVA: 0x00452B56 File Offset: 0x00450D56
-		// (set) Token: 0x0601EE3C RID: 126524 RVA: 0x00452B5E File Offset: 0x00450D5E
+		// Token: 0x170094CC RID: 38092
+		// (get) Token: 0x06020A3F RID: 133695 RVA: 0x00486432 File Offset: 0x00484632
+		// (set) Token: 0x06020A40 RID: 133696 RVA: 0x0048643A File Offset: 0x0048463A
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008DA4 RID: 36260
-		// (get) Token: 0x0601EE3D RID: 126525 RVA: 0x00452B67 File Offset: 0x00450D67
-		// (set) Token: 0x0601EE3E RID: 126526 RVA: 0x00452B6F File Offset: 0x00450D6F
+		// Token: 0x170094CD RID: 38093
+		// (get) Token: 0x06020A41 RID: 133697 RVA: 0x00486443 File Offset: 0x00484643
+		// (set) Token: 0x06020A42 RID: 133698 RVA: 0x0048644B File Offset: 0x0048464B
 		public int Level { get; set; }
 
-		// Token: 0x0601EE3F RID: 126527 RVA: 0x00452B78 File Offset: 0x00450D78
+		// Token: 0x06020A43 RID: 133699 RVA: 0x00486454 File Offset: 0x00484654
 		public IFeatureCollectionLevelPreConditionT()
 		{
 			this.Type = EAccessQuestCondition.ExploreLevel;

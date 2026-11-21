@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D08 RID: 23816
+	// Token: 0x02004CEA RID: 19690
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonBossStateDoubleView : BossStateViewBase
 	{
-		// Token: 0x0603C552 RID: 247122 RVA: 0x00E73828 File Offset: 0x00E71A28
+		// Token: 0x060314AB RID: 201899 RVA: 0x00DC3E90 File Offset: 0x00DC2090
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C553 RID: 247123 RVA: 0x00E73918 File Offset: 0x00E71B18
+		// Token: 0x060314AC RID: 201900 RVA: 0x00DC3F80 File Offset: 0x00DC2180
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			CommonBossStateDoubleView.<InitializeAsync>d__17 <InitializeAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C554 RID: 247124 RVA: 0x00E7395C File Offset: 0x00E71B5C
+		// Token: 0x060314AD RID: 201901 RVA: 0x00DC3FC4 File Offset: 0x00DC21C4
 		[return: TupleElementNames(new string[]
 		{
 			"entity1",
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.GetSummonerRelationEntities();
 		}
 
-		// Token: 0x0603C555 RID: 247125 RVA: 0x00E73988 File Offset: 0x00E71B88
+		// Token: 0x060314AE RID: 201902 RVA: 0x00DC3FF0 File Offset: 0x00DC21F0
 		[return: TupleElementNames(new string[]
 		{
 			"entity1",
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<Entity, Entity>?(new ValueTuple<Entity, Entity>(entity, worldEntity));
 		}
 
-		// Token: 0x0603C556 RID: 247126 RVA: 0x00E73A34 File Offset: 0x00E71C34
+		// Token: 0x060314AF RID: 201903 RVA: 0x00DC409C File Offset: 0x00DC229C
 		[return: TupleElementNames(new string[]
 		{
 			"entity1",
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<Entity, Entity>(entity, entity4);
 		}
 
-		// Token: 0x0603C557 RID: 247127 RVA: 0x00E73BA4 File Offset: 0x00E71DA4
+		// Token: 0x060314B0 RID: 201904 RVA: 0x00DC420C File Offset: 0x00DC240C
 		private void OnEntityCreated(EAddEntityType addType, EntityHandle handle, AActor actor)
 		{
 			if (handle == null)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C558 RID: 247128 RVA: 0x00E73BCC File Offset: 0x00E71DCC
+		// Token: 0x060314B1 RID: 201905 RVA: 0x00DC4234 File Offset: 0x00DC2434
 		private void OnBindMonsterEntityCreated()
 		{
 			ValueTuple<Entity, Entity> entities = this.GetEntities();
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C559 RID: 247129 RVA: 0x00E73C90 File Offset: 0x00E71E90
+		// Token: 0x060314B2 RID: 201906 RVA: 0x00DC42F8 File Offset: 0x00DC24F8
 		private void OnSummonerRelationEntityCreated()
 		{
 			ValueTuple<Entity, Entity> entities = this.GetEntities();
@@ -246,14 +246,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C55A RID: 247130 RVA: 0x00E73D71 File Offset: 0x00E71F71
+		// Token: 0x060314B3 RID: 201907 RVA: 0x00DC43D9 File Offset: 0x00DC25D9
 		[NullableContext(1)]
 		private bool IsNewEntityByBindMonsterEntityId(EntityHandle handle)
 		{
 			return this.BindMonsterEntityId > 0 && handle.PbDataId == this.BindMonsterEntityId;
 		}
 
-		// Token: 0x0603C55B RID: 247131 RVA: 0x00E73D8C File Offset: 0x00E71F8C
+		// Token: 0x060314B4 RID: 201908 RVA: 0x00DC43F4 File Offset: 0x00DC25F4
 		[NullableContext(1)]
 		private bool IsNewEntityBySummonerRelation(EntityHandle handle)
 		{
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return creatureDataComponent != null && (handle.CreatureDataId == creatureDataComponent.GetSummonerId() || creatureDataComponent.CustomServerEntityIds.Contains(handle.CreatureDataId));
 		}
 
-		// Token: 0x0603C55C RID: 247132 RVA: 0x00E73DD4 File Offset: 0x00E71FD4
+		// Token: 0x060314B5 RID: 201909 RVA: 0x00DC443C File Offset: 0x00DC263C
 		public override void UpdateStyle(IDoubleViewBossStateViewStyle bossStateViewStyle = null)
 		{
 			if (bossStateViewStyle != null)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BindMonsterEntityId = 0;
 		}
 
-		// Token: 0x0603C55D RID: 247133 RVA: 0x00E73E18 File Offset: 0x00E72018
+		// Token: 0x060314B6 RID: 201910 RVA: 0x00DC4480 File Offset: 0x00DC2680
 		protected override void OnActivate()
 		{
 			if (!base.CheckEntityValid())
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBossName();
 		}
 
-		// Token: 0x0603C55E RID: 247134 RVA: 0x00E73F0C File Offset: 0x00E7210C
+		// Token: 0x060314B7 RID: 201911 RVA: 0x00DC4574 File Offset: 0x00DC2774
 		protected override void OnDeactivate()
 		{
 			this.IsDeactivating = true;
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsDeactivating = false;
 		}
 
-		// Token: 0x0603C55F RID: 247135 RVA: 0x00E73FE4 File Offset: 0x00E721E4
+		// Token: 0x060314B8 RID: 201912 RVA: 0x00DC464C File Offset: 0x00DC284C
 		private void OnLeftEntityDead()
 		{
 			VisibleAnimMachine lockedVisibleMachineL = this.LockedVisibleMachineL;
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			lockedVisibleMachineL.SetVisible(false, 167f);
 		}
 
-		// Token: 0x0603C560 RID: 247136 RVA: 0x00E73FFC File Offset: 0x00E721FC
+		// Token: 0x060314B9 RID: 201913 RVA: 0x00DC4664 File Offset: 0x00DC2864
 		private void OnRightEntityDead()
 		{
 			VisibleAnimMachine lockedVisibleMachineR = this.LockedVisibleMachineR;
@@ -368,12 +368,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			lockedVisibleMachineR.SetVisible(false, 167f);
 		}
 
-		// Token: 0x0603C561 RID: 247137 RVA: 0x00E74014 File Offset: 0x00E72214
+		// Token: 0x060314BA RID: 201914 RVA: 0x00DC467C File Offset: 0x00DC287C
 		public override void Reset()
 		{
 		}
 
-		// Token: 0x0603C562 RID: 247138 RVA: 0x00E74018 File Offset: 0x00E72218
+		// Token: 0x060314BB RID: 201915 RVA: 0x00DC4680 File Offset: 0x00DC2880
 		protected override void OnBeforeDestroy()
 		{
 			if (EventSystem.Instance.Has(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnEntityCreated)))
@@ -410,13 +410,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RightBarLogic = null;
 		}
 
-		// Token: 0x0603C563 RID: 247139 RVA: 0x00E7412B File Offset: 0x00E7232B
+		// Token: 0x060314BC RID: 201916 RVA: 0x00DC4793 File Offset: 0x00DC2993
 		protected override bool DestroyOverride()
 		{
 			return false;
 		}
 
-		// Token: 0x0603C564 RID: 247140 RVA: 0x00E74130 File Offset: 0x00E72330
+		// Token: 0x060314BD RID: 201917 RVA: 0x00DC4798 File Offset: 0x00DC2998
 		[NullableContext(1)]
 		private void OnCharSetShowTarget(int targetId, string targetSocket, bool isHardLock)
 		{
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			lockedVisibleMachineR.SetVisible(flag2, flag2 ? 167f : 167f);
 		}
 
-		// Token: 0x0603C565 RID: 247141 RVA: 0x00E741E4 File Offset: 0x00E723E4
+		// Token: 0x060314BE RID: 201918 RVA: 0x00DC484C File Offset: 0x00DC2A4C
 		private void RefreshBossName()
 		{
 			string level = string.Empty;
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rightBarLogic.SetNameAndLevel(text2, text3, level);
 		}
 
-		// Token: 0x0603C566 RID: 247142 RVA: 0x00E742AC File Offset: 0x00E724AC
+		// Token: 0x060314BF RID: 201919 RVA: 0x00DC4914 File Offset: 0x00DC2B14
 		public override void Tick(float delta)
 		{
 			CommonBossStateView leftBarLogic = this.LeftBarLogic;
@@ -488,7 +488,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Tick(delta);
 		}
 
-		// Token: 0x0603C567 RID: 247143 RVA: 0x00E742DC File Offset: 0x00E724DC
+		// Token: 0x060314C0 RID: 201920 RVA: 0x00DC4944 File Offset: 0x00DC2B44
 		public override void ChangeBuff(in GameplayCue cueConfig, bool isAdd, int handleId, int entityId = 0)
 		{
 			CommonBossStateView leftBarLogic = this.LeftBarLogic;
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C568 RID: 247144 RVA: 0x00E74368 File Offset: 0x00E72568
+		// Token: 0x060314C1 RID: 201921 RVA: 0x00DC49D0 File Offset: 0x00DC2BD0
 		public override void HideBossName(bool bVisible)
 		{
 			CommonBossStateView leftBarLogic = this.LeftBarLogic;
@@ -522,14 +522,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rightBarLogic.HideBossName(bVisible);
 		}
 
-		// Token: 0x0603C569 RID: 247145 RVA: 0x00E7438D File Offset: 0x00E7258D
+		// Token: 0x060314C2 RID: 201922 RVA: 0x00DC49F5 File Offset: 0x00DC2BF5
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_BossStateDouble_Prefab";
 		}
 
-		// Token: 0x0603C56F RID: 247151 RVA: 0x00E74454 File Offset: 0x00E72654
+		// Token: 0x060314C8 RID: 201928 RVA: 0x00DC4ABC File Offset: 0x00DC2CBC
 		[NullableContext(1)]
 		[CompilerGenerated]
 		internal static string <RefreshBossName>g__GetBossStateName|35_0([Nullable(2)] CommonBossStateView bossBarLogic)
@@ -559,7 +559,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return PublicUtil.Instance.GetConfigTextByKey(text2);
 		}
 
-		// Token: 0x0603C570 RID: 247152 RVA: 0x00E744CC File Offset: 0x00E726CC
+		// Token: 0x060314C9 RID: 201929 RVA: 0x00DC4B34 File Offset: 0x00DC2D34
 		[NullableContext(1)]
 		[CompilerGenerated]
 		internal static string <RefreshBossName>g__GetBossEntityName|35_1([Nullable(2)] CommonBossStateView bossBarLogic)
@@ -586,66 +586,66 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return string.Empty;
 		}
 
-		// Token: 0x0401F6DB RID: 128731
+		// Token: 0x0401A194 RID: 106900
 		private const float SHOW_LOCKED_ANIM_TIME = 167f;
 
-		// Token: 0x0401F6DC RID: 128732
+		// Token: 0x0401A195 RID: 106901
 		private const float CLOSE_LOCKED_ANIM_TIME = 167f;
 
-		// Token: 0x0401F6DD RID: 128733
+		// Token: 0x0401A196 RID: 106902
 		private CommonBossStateView LeftBarLogic;
 
-		// Token: 0x0401F6DE RID: 128734
+		// Token: 0x0401A197 RID: 106903
 		private CommonBossStateView RightBarLogic;
 
-		// Token: 0x0401F6DF RID: 128735
+		// Token: 0x0401A198 RID: 106904
 		private UUIItem LockedMarkerL;
 
-		// Token: 0x0401F6E0 RID: 128736
+		// Token: 0x0401A199 RID: 106905
 		private UUIItem LockedMarkerR;
 
-		// Token: 0x0401F6E1 RID: 128737
+		// Token: 0x0401A19A RID: 106906
 		private BattleUiTweenAnimPlayer TweenAnim;
 
-		// Token: 0x0401F6E2 RID: 128738
+		// Token: 0x0401A19B RID: 106907
 		private LevelSequencePlayer LockedSeqPlayerL;
 
-		// Token: 0x0401F6E3 RID: 128739
+		// Token: 0x0401A19C RID: 106908
 		private LevelSequencePlayer LockedSeqPlayerR;
 
-		// Token: 0x0401F6E4 RID: 128740
+		// Token: 0x0401A19D RID: 106909
 		private VisibleAnimMachine LockedVisibleMachineL;
 
-		// Token: 0x0401F6E5 RID: 128741
+		// Token: 0x0401A19E RID: 106910
 		private VisibleAnimMachine LockedVisibleMachineR;
 
-		// Token: 0x0401F6E6 RID: 128742
+		// Token: 0x0401A19F RID: 106911
 		private bool IsFromSummoner = true;
 
-		// Token: 0x0401F6E7 RID: 128743
+		// Token: 0x0401A1A0 RID: 106912
 		private bool IsShowInLeftSlot = true;
 
-		// Token: 0x0401F6E8 RID: 128744
+		// Token: 0x0401A1A1 RID: 106913
 		private int BindMonsterEntityId;
 
-		// Token: 0x0401F6E9 RID: 128745
+		// Token: 0x0401A1A2 RID: 106914
 		private bool IsDeactivating;
 
-		// Token: 0x0200BF7F RID: 49023
+		// Token: 0x0200A985 RID: 43397
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x04039BEF RID: 236527
+			// Token: 0x040345B1 RID: 214449
 			PanelBossStateA,
-			// Token: 0x04039BF0 RID: 236528
+			// Token: 0x040345B2 RID: 214450
 			PanelBossStateB,
-			// Token: 0x04039BF1 RID: 236529
+			// Token: 0x040345B3 RID: 214451
 			LockedMarkerL,
-			// Token: 0x04039BF2 RID: 236530
+			// Token: 0x040345B4 RID: 214452
 			LockedMarkerR,
-			// Token: 0x04039BF3 RID: 236531
+			// Token: 0x040345B5 RID: 214453
 			LockedMarkerAnimL,
-			// Token: 0x04039BF4 RID: 236532
+			// Token: 0x040345B6 RID: 214454
 			LockedMarkerAnimR
 		}
 	}

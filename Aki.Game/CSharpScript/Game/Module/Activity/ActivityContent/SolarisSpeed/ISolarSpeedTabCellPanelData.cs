@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060B4 RID: 24756
+	// Token: 0x02005032 RID: 20530
 	[NullableContext(2)]
 	public interface ISolarSpeedTabCellPanelData
 	{
-		// Token: 0x170090C7 RID: 37063
-		// (get) Token: 0x0603E96E RID: 256366
-		// (set) Token: 0x0603E96F RID: 256367
+		// Token: 0x17006429 RID: 25641
+		// (get) Token: 0x06033632 RID: 210482
+		// (set) Token: 0x06033633 RID: 210483
 		int LevelId { get; set; }
 
-		// Token: 0x170090C8 RID: 37064
-		// (get) Token: 0x0603E970 RID: 256368
-		// (set) Token: 0x0603E971 RID: 256369
+		// Token: 0x1700642A RID: 25642
+		// (get) Token: 0x06033634 RID: 210484
+		// (set) Token: 0x06033635 RID: 210485
 		string RomeNumberPath { get; set; }
 
-		// Token: 0x170090C9 RID: 37065
-		// (get) Token: 0x0603E972 RID: 256370
-		// (set) Token: 0x0603E973 RID: 256371
+		// Token: 0x1700642B RID: 25643
+		// (get) Token: 0x06033636 RID: 210486
+		// (set) Token: 0x06033637 RID: 210487
 		string TitleTextId { get; set; }
 
-		// Token: 0x170090CA RID: 37066
-		// (get) Token: 0x0603E974 RID: 256372
-		// (set) Token: 0x0603E975 RID: 256373
+		// Token: 0x1700642C RID: 25644
+		// (get) Token: 0x06033638 RID: 210488
+		// (set) Token: 0x06033639 RID: 210489
 		bool IsChosen { get; set; }
 
-		// Token: 0x170090CB RID: 37067
-		// (get) Token: 0x0603E976 RID: 256374
-		// (set) Token: 0x0603E977 RID: 256375
+		// Token: 0x1700642D RID: 25645
+		// (get) Token: 0x0603363A RID: 210490
+		// (set) Token: 0x0603363B RID: 210491
 		bool IsRedDot { get; set; }
 	}
 }

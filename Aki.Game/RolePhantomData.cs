@@ -2,35 +2,35 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027B4 RID: 10164
+// Token: 0x02001D2F RID: 7471
 [NullableContext(1)]
 [Nullable(0)]
 public class RolePhantomData : RoleModuleDataBase
 {
-	// Token: 0x06014E6C RID: 85612 RVA: 0x0054EB45 File Offset: 0x0054CD45
+	// Token: 0x0601286B RID: 75883 RVA: 0x0057986D File Offset: 0x00577A6D
 	public RolePhantomData(int roleId) : base(roleId)
 	{
 	}
 
-	// Token: 0x06014E6D RID: 85613 RVA: 0x0054EB6F File Offset: 0x0054CD6F
+	// Token: 0x0601286C RID: 75884 RVA: 0x00579897 File Offset: 0x00577A97
 	public void RefreshPhantom(int key, int value)
 	{
 		this.PhantomMap[key] = value;
 	}
 
-	// Token: 0x06014E6E RID: 85614 RVA: 0x0054EB7E File Offset: 0x0054CD7E
+	// Token: 0x0601286D RID: 75885 RVA: 0x005798A6 File Offset: 0x00577AA6
 	public void SetIsTrial(bool isTrial)
 	{
 		this.IsTrial = isTrial;
 	}
 
-	// Token: 0x06014E6F RID: 85615 RVA: 0x0054EB87 File Offset: 0x0054CD87
+	// Token: 0x0601286E RID: 75886 RVA: 0x005798AF File Offset: 0x00577AAF
 	public void SetDataMap(int position, PhantomDataBase data)
 	{
 		this.DataMap[position] = data;
 	}
 
-	// Token: 0x06014E70 RID: 85616 RVA: 0x0054EB98 File Offset: 0x0054CD98
+	// Token: 0x0601286F RID: 75887 RVA: 0x005798C0 File Offset: 0x00577AC0
 	public Dictionary<int, PhantomDataBase> GetDataMap()
 	{
 		if (this.IsTrial)
@@ -54,13 +54,13 @@ public class RolePhantomData : RoleModuleDataBase
 		return this.DataMap;
 	}
 
-	// Token: 0x06014E71 RID: 85617 RVA: 0x0054EC10 File Offset: 0x0054CE10
+	// Token: 0x06012870 RID: 75888 RVA: 0x00579938 File Offset: 0x00577B38
 	public List<int> GetIncrIdList()
 	{
 		return PhantomBattleModel.Instance.GetBattleDataById(this.RoleId).GetIncrIdList();
 	}
 
-	// Token: 0x06014E72 RID: 85618 RVA: 0x0054EC28 File Offset: 0x0054CE28
+	// Token: 0x06012871 RID: 75889 RVA: 0x00579950 File Offset: 0x00577B50
 	[NullableContext(2)]
 	public PhantomDataBase GetDataByIndex(int index)
 	{
@@ -72,7 +72,7 @@ public class RolePhantomData : RoleModuleDataBase
 		return result;
 	}
 
-	// Token: 0x06014E73 RID: 85619 RVA: 0x0054EC48 File Offset: 0x0054CE48
+	// Token: 0x06012872 RID: 75890 RVA: 0x00579970 File Offset: 0x00577B70
 	public VisionFetterData[] GetPhantomFettersData()
 	{
 		List<VisionFetterData> list = new List<VisionFetterData>();
@@ -96,14 +96,14 @@ public class RolePhantomData : RoleModuleDataBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06014E74 RID: 85620 RVA: 0x0054ED38 File Offset: 0x0054CF38
+	// Token: 0x06012873 RID: 75891 RVA: 0x00579A60 File Offset: 0x00577C60
 	public Dictionary<int, Dictionary<int, int>> GetPhantomFetterMap()
 	{
 		Dictionary<int, int> fetterGroupSuitMap = this.GetFetterGroupSuitMap();
 		return PhantomBattleConfig.Instance.GetFetterMapResultBySuitMap(fetterGroupSuitMap);
 	}
 
-	// Token: 0x06014E75 RID: 85621 RVA: 0x0054ED58 File Offset: 0x0054CF58
+	// Token: 0x06012874 RID: 75892 RVA: 0x00579A80 File Offset: 0x00577C80
 	public List<int> GetPhantomFettersList()
 	{
 		Dictionary<int, int> fetterGroupSuitMap = this.GetFetterGroupSuitMap();
@@ -111,7 +111,7 @@ public class RolePhantomData : RoleModuleDataBase
 		return this.FettersList;
 	}
 
-	// Token: 0x06014E76 RID: 85622 RVA: 0x0054ED84 File Offset: 0x0054CF84
+	// Token: 0x06012875 RID: 75893 RVA: 0x00579AAC File Offset: 0x00577CAC
 	private Dictionary<int, int> GetFetterGroupSuitMap()
 	{
 		Dictionary<int, PhantomDataBase> dataMap = this.GetDataMap();
@@ -128,21 +128,21 @@ public class RolePhantomData : RoleModuleDataBase
 		return PhantomDataBase.CalculateFetterByPhantomBattleData(list);
 	}
 
-	// Token: 0x06014E77 RID: 85623 RVA: 0x0054EDF8 File Offset: 0x0054CFF8
+	// Token: 0x06012876 RID: 75894 RVA: 0x00579B20 File Offset: 0x00577D20
 	public void ClearPhantomFettersList()
 	{
 		this.FettersList.Clear();
 	}
 
-	// Token: 0x04009D06 RID: 40198
+	// Token: 0x0400A0E9 RID: 41193
 	protected Dictionary<int, int> PhantomMap = new Dictionary<int, int>();
 
-	// Token: 0x04009D07 RID: 40199
+	// Token: 0x0400A0EA RID: 41194
 	private bool IsTrial;
 
-	// Token: 0x04009D08 RID: 40200
+	// Token: 0x0400A0EB RID: 41195
 	private readonly Dictionary<int, PhantomDataBase> DataMap = new Dictionary<int, PhantomDataBase>();
 
-	// Token: 0x04009D09 RID: 40201
+	// Token: 0x0400A0EC RID: 41196
 	private List<int> FettersList = new List<int>();
 }

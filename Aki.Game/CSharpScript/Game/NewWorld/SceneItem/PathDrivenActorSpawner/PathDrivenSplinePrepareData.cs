@@ -5,24 +5,24 @@ using CSharpScript.Game.LevelGamePlay.SplineMoveTask;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071CE RID: 29134
+	// Token: 0x02006283 RID: 25219
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PathDrivenSplinePrepareData : IPathDrivenSplinePrepareData
 	{
-		// Token: 0x17009DE6 RID: 40422
-		// (get) Token: 0x060474D9 RID: 292057 RVA: 0x01221CBE File Offset: 0x0121FEBE
-		// (set) Token: 0x060474DA RID: 292058 RVA: 0x01221CC6 File Offset: 0x0121FEC6
+		// Token: 0x1700733D RID: 29501
+		// (get) Token: 0x0603CDDB RID: 249307 RVA: 0x0117BAF5 File Offset: 0x01179CF5
+		// (set) Token: 0x0603CDDC RID: 249308 RVA: 0x0117BAFD File Offset: 0x01179CFD
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x17009DE7 RID: 40423
-		// (get) Token: 0x060474DB RID: 292059 RVA: 0x01221CCF File Offset: 0x0121FECF
-		// (set) Token: 0x060474DC RID: 292060 RVA: 0x01221CD7 File Offset: 0x0121FED7
+		// Token: 0x1700733E RID: 29502
+		// (get) Token: 0x0603CDDD RID: 249309 RVA: 0x0117BB06 File Offset: 0x01179D06
+		// (set) Token: 0x0603CDDE RID: 249310 RVA: 0x0117BB0E File Offset: 0x01179D0E
 		public ISceneItemSplineMoveConfig SplineMoveConfig { get; set; }
 
-		// Token: 0x17009DE8 RID: 40424
-		// (get) Token: 0x060474DD RID: 292061 RVA: 0x01221CE0 File Offset: 0x0121FEE0
-		// (set) Token: 0x060474DE RID: 292062 RVA: 0x01221CE8 File Offset: 0x0121FEE8
+		// Token: 0x1700733F RID: 29503
+		// (get) Token: 0x0603CDDF RID: 249311 RVA: 0x0117BB17 File Offset: 0x01179D17
+		// (set) Token: 0x0603CDE0 RID: 249312 RVA: 0x0117BB1F File Offset: 0x01179D1F
 		public List<string> CurvePaths { get; set; }
 	}
 }

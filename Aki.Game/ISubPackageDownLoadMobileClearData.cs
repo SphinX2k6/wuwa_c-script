@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A99 RID: 10905
+// Token: 0x02002015 RID: 8213
 [NullableContext(2)]
 public interface ISubPackageDownLoadMobileClearData
 {
-	// Token: 0x17001E39 RID: 7737
-	// (get) Token: 0x06016B2B RID: 92971
-	// (set) Token: 0x06016B2C RID: 92972
+	// Token: 0x17001E91 RID: 7825
+	// (get) Token: 0x06014555 RID: 83285
+	// (set) Token: 0x06014556 RID: 83286
 	int TitleId { get; set; }
 
-	// Token: 0x17001E3A RID: 7738
-	// (get) Token: 0x06016B2D RID: 92973
-	// (set) Token: 0x06016B2E RID: 92974
+	// Token: 0x17001E92 RID: 7826
+	// (get) Token: 0x06014557 RID: 83287
+	// (set) Token: 0x06014558 RID: 83288
 	List<int> SceneIdList { get; set; }
 
-	// Token: 0x17001E3B RID: 7739
-	// (get) Token: 0x06016B2F RID: 92975
-	// (set) Token: 0x06016B30 RID: 92976
+	// Token: 0x17001E93 RID: 7827
+	// (get) Token: 0x06014559 RID: 83289
+	// (set) Token: 0x0601455A RID: 83290
 	bool? HaveVideoCanClear { get; set; }
 
-	// Token: 0x17001E3C RID: 7740
-	// (get) Token: 0x06016B31 RID: 92977
-	// (set) Token: 0x06016B32 RID: 92978
+	// Token: 0x17001E94 RID: 7828
+	// (get) Token: 0x0601455B RID: 83291
+	// (set) Token: 0x0601455C RID: 83292
 	[Nullable(new byte[]
 	{
 		2,

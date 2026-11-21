@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B62 RID: 19298
+	// Token: 0x02003B0A RID: 15114
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseRewardMenuItem : GridProxyAbstract<TowerDefenseRewardMenuItemData>
 	{
-		// Token: 0x06031F6C RID: 204652 RVA: 0x00B98750 File Offset: 0x00B96950
+		// Token: 0x06026CFB RID: 158971 RVA: 0x00ADC98C File Offset: 0x00ADAB8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031F6D RID: 204653 RVA: 0x00B98818 File Offset: 0x00B96A18
+		// Token: 0x06026CFC RID: 158972 RVA: 0x00ADCA54 File Offset: 0x00ADAC54
 		[NullableContext(1)]
 		public override void Refresh(TowerDefenseRewardMenuItemData data, bool isSelected, int gridIndex)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.GetItem(2).SetUIActive(data.HasRedDot);
 		}
 
-		// Token: 0x06031F6E RID: 204654 RVA: 0x00B9887B File Offset: 0x00B96A7B
+		// Token: 0x06026CFD RID: 158973 RVA: 0x00ADCAB7 File Offset: 0x00ADACB7
 		public void SetSelected(bool isSelected)
 		{
 			if (this.Data != null)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			extendToggle.SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06031F6F RID: 204655 RVA: 0x00B988AD File Offset: 0x00B96AAD
+		// Token: 0x06026CFE RID: 158974 RVA: 0x00ADCAE9 File Offset: 0x00ADACE9
 		public void SetRedDot(bool hasRedDot)
 		{
 			if (this.Data != null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			item.SetUIActive(hasRedDot);
 		}
 
-		// Token: 0x06031F70 RID: 204656 RVA: 0x00B988D5 File Offset: 0x00B96AD5
+		// Token: 0x06026CFF RID: 158975 RVA: 0x00ADCB11 File Offset: 0x00ADAD11
 		private void OnClickToggle(EToggleState state)
 		{
 			if (this.Data != null)
@@ -93,23 +93,23 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401AA3B RID: 109115
+		// Token: 0x0401538D RID: 86925
 		public Action<int> OnClick;
 
-		// Token: 0x0401AA3C RID: 109116
+		// Token: 0x0401538E RID: 86926
 		private TowerDefenseRewardMenuItemData Data;
 
-		// Token: 0x0200ACF3 RID: 44275
+		// Token: 0x02009712 RID: 38674
 		[NullableContext(0)]
 		private class EMenuComponent
 		{
-			// Token: 0x040348CD RID: 215245
+			// Token: 0x0402F276 RID: 193142
 			public const int Toggle = 0;
 
-			// Token: 0x040348CE RID: 215246
+			// Token: 0x0402F277 RID: 193143
 			public const int Text = 1;
 
-			// Token: 0x040348CF RID: 215247
+			// Token: 0x0402F278 RID: 193144
 			public const int RedDotItem = 2;
 		}
 	}

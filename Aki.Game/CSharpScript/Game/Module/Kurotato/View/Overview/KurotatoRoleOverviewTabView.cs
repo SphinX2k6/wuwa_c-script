@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
 using Aki.Protocol;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
@@ -15,10 +14,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005748 RID: 22344
+	// Token: 0x0200471F RID: 18207
 	public class KurotatoRoleOverviewTabView : UiTabViewBase
 	{
-		// Token: 0x06038CCF RID: 232655 RVA: 0x00D7D28C File Offset: 0x00D7B48C
+		// Token: 0x0602DBDF RID: 187359 RVA: 0x00CCBB48 File Offset: 0x00CC9D48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -42,7 +41,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CD0 RID: 232656 RVA: 0x00D7D39C File Offset: 0x00D7B59C
+		// Token: 0x0602DBE0 RID: 187360 RVA: 0x00CCBC58 File Offset: 0x00CC9E58
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoRoleOverviewTabView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -53,7 +52,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CD1 RID: 232657 RVA: 0x00D7D3E0 File Offset: 0x00D7B5E0
+		// Token: 0x0602DBE1 RID: 187361 RVA: 0x00CCBC9C File Offset: 0x00CC9E9C
 		private UniTask CreateAttributePanelAsync()
 		{
 			KurotatoRoleOverviewTabView.<CreateAttributePanelAsync>d__5 <CreateAttributePanelAsync>d__;
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateAttributePanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CD2 RID: 232658 RVA: 0x00D7D424 File Offset: 0x00D7B624
+		// Token: 0x0602DBE2 RID: 187362 RVA: 0x00CCBCE0 File Offset: 0x00CC9EE0
 		protected override void OnShowUiTabViewFromToggle()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -77,13 +76,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.RefreshRoleInfo(kurotatoInstInfo);
 			if (kurotatoInstInfo != null)
 			{
-				this.AttributePanel.SetSavePropertyMap(kurotatoInstInfo.PropertyMap.ToDictionary<int, int>());
+				this.AttributePanel.SetSavePropertyMap(new Dictionary<int, int>(kurotatoInstInfo.PropertyMap));
 				return;
 			}
 			this.AttributePanel.SetSavePropertyMap(null);
 		}
 
-		// Token: 0x06038CD3 RID: 232659 RVA: 0x00D7D488 File Offset: 0x00D7B688
+		// Token: 0x0602DBE3 RID: 187363 RVA: 0x00CCBD44 File Offset: 0x00CC9F44
 		[NullableContext(2)]
 		private void RefreshExp(KurotatoInstInfo saveInstInfo)
 		{
@@ -113,12 +112,12 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.GetText(1).SetText(num.ToString(), true);
 			List<string> data = new List<string>
 			{
-				KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false)
+				KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false)
 			};
 			this.SkillInfoLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038CD4 RID: 232660 RVA: 0x00D7D5D8 File Offset: 0x00D7B7D8
+		// Token: 0x0602DBE4 RID: 187364 RVA: 0x00CCBE94 File Offset: 0x00CCA094
 		[NullableContext(2)]
 		private void RefreshRoleInfo(KurotatoInstInfo saveInstInfo)
 		{
@@ -129,7 +128,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			RoleSkin value2 = SkinConfig.Instance.GetRoleSkinConfig(roleDataByKurotatoRoleId.GetRoleSkinId()).Value;
 			USpineSkeletonAnimationComponent roleSpine = base.GetSpine(3);
 			UUIItem roleItem = roleSpine.GetOwner().GetComponentByClass(UUIItem.StaticClass()) as UUIItem;
-			List<float> param = value2.SpineParamIter().ToList<float>();
+			List<float> param = new List<float>(value2.SpineParamIter());
 			base.SetSpineAssetByPath(value2.FormationSpineAtlas, value2.FormationSpineSkeletonData, roleSpine).ContinueWith(delegate()
 			{
 				roleSpine.SetAnimation(0, ESpineAnimation.Idle.ToEnumString(), true);
@@ -140,11 +139,11 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.GetText(4).ShowTextNew(value.Name);
 		}
 
-		// Token: 0x0401DCA6 RID: 122022
+		// Token: 0x0401873C RID: 100156
 		[Nullable(1)]
 		private readonly KurotatoAttributePanel AttributePanel = new KurotatoAttributePanel();
 
-		// Token: 0x0401DCA7 RID: 122023
+		// Token: 0x0401873D RID: 100157
 		[Nullable(new byte[]
 		{
 			2,
@@ -153,22 +152,22 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		private GenericLayout<SkillInfoItem, string> SkillInfoLayout;
 
-		// Token: 0x0200B937 RID: 47415
+		// Token: 0x0200A356 RID: 41814
 		private enum EChildComp
 		{
-			// Token: 0x04038059 RID: 229465
+			// Token: 0x04032A63 RID: 207459
 			SpriteBar,
-			// Token: 0x0403805A RID: 229466
+			// Token: 0x04032A64 RID: 207460
 			TextLevel,
-			// Token: 0x0403805B RID: 229467
+			// Token: 0x04032A65 RID: 207461
 			AttributeViewItem,
-			// Token: 0x0403805C RID: 229468
+			// Token: 0x04032A66 RID: 207462
 			SpineRole,
-			// Token: 0x0403805D RID: 229469
+			// Token: 0x04032A67 RID: 207463
 			TextRoleName,
-			// Token: 0x0403805E RID: 229470
+			// Token: 0x04032A68 RID: 207464
 			VerticalLayoutSkill,
-			// Token: 0x0403805F RID: 229471
+			// Token: 0x04032A69 RID: 207465
 			PanelSkillInfo
 		}
 	}

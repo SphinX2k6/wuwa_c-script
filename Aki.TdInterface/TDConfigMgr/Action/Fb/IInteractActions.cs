@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002609 RID: 9737
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028C9 RID: 10441
 	public class IInteractActions : IInteractType
 	{
-		// Token: 0x0600DAAC RID: 55980 RVA: 0x00209449 File Offset: 0x00207649
+		// Token: 0x0600E879 RID: 59513 RVA: 0x00225B9D File Offset: 0x00223D9D
 		public static IInteractActions Create(IInteractActions? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700405C RID: 16476
-		// (get) Token: 0x0600DAAD RID: 55981 RVA: 0x00209468 File Offset: 0x00207668
+		// Token: 0x17004395 RID: 17301
+		// (get) Token: 0x0600E87A RID: 59514 RVA: 0x00225BBC File Offset: 0x00223DBC
 		public override EInteractOption Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700405D RID: 16477
-		// (get) Token: 0x0600DAAE RID: 55982 RVA: 0x00209478 File Offset: 0x00207678
+		// Token: 0x17004396 RID: 17302
+		// (get) Token: 0x0600E87B RID: 59515 RVA: 0x00225BCC File Offset: 0x00223DCC
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007977 RID: 31095
+		// Token: 0x04008011 RID: 32785
 		private IInteractActions Instance;
 
-		// Token: 0x04007978 RID: 31096
+		// Token: 0x04008012 RID: 32786
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04007979 RID: 31097
+		// Token: 0x04008013 RID: 32787
 		private bool _ActionsInited;
 	}
 }

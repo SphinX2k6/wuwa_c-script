@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C76 RID: 19574
+	// Token: 0x0200516F RID: 20847
 	public struct IPhotographCameraCheckTemplate : IFlatbufferObject
 	{
-		// Token: 0x17008E2C RID: 36396
-		// (get) Token: 0x0601F0A5 RID: 127141 RVA: 0x00456D00 File Offset: 0x00454F00
+		// Token: 0x1700955A RID: 38234
+		// (get) Token: 0x06020CC7 RID: 134343 RVA: 0x0048A850 File Offset: 0x00488A50
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F0A6 RID: 127142 RVA: 0x00456D0D File Offset: 0x00454F0D
+		// Token: 0x06020CC8 RID: 134344 RVA: 0x0048A85D File Offset: 0x00488A5D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F0A7 RID: 127143 RVA: 0x00456D14 File Offset: 0x00454F14
+		// Token: 0x06020CC9 RID: 134345 RVA: 0x0048A864 File Offset: 0x00488A64
 		public static IPhotographCameraCheckTemplate GetRootAsIPhotographCameraCheckTemplate(ByteBuffer _bb)
 		{
 			return IPhotographCameraCheckTemplate.GetRootAsIPhotographCameraCheckTemplate(_bb, default(IPhotographCameraCheckTemplate));
 		}
 
-		// Token: 0x0601F0A8 RID: 127144 RVA: 0x00456D30 File Offset: 0x00454F30
+		// Token: 0x06020CCA RID: 134346 RVA: 0x0048A880 File Offset: 0x00488A80
 		public static IPhotographCameraCheckTemplate GetRootAsIPhotographCameraCheckTemplate(ByteBuffer _bb, IPhotographCameraCheckTemplate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F0A9 RID: 127145 RVA: 0x00456D4D File Offset: 0x00454F4D
+		// Token: 0x06020CCB RID: 134347 RVA: 0x0048A89D File Offset: 0x00488A9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F0AA RID: 127146 RVA: 0x00456D5C File Offset: 0x00454F5C
+		// Token: 0x06020CCC RID: 134348 RVA: 0x0048A8AC File Offset: 0x00488AAC
 		public IPhotographCameraCheckTemplate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E2D RID: 36397
-		// (get) Token: 0x0601F0AB RID: 127147 RVA: 0x00456D6C File Offset: 0x00454F6C
+		// Token: 0x1700955B RID: 38235
+		// (get) Token: 0x06020CCD RID: 134349 RVA: 0x0048A8BC File Offset: 0x00488ABC
 		public EPhotographCameraCheckType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E2E RID: 36398
-		// (get) Token: 0x0601F0AC RID: 127148 RVA: 0x00456DA8 File Offset: 0x00454FA8
+		// Token: 0x1700955C RID: 38236
+		// (get) Token: 0x06020CCE RID: 134350 RVA: 0x0048A8F8 File Offset: 0x00488AF8
 		public int TemplateId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F0AD RID: 127149 RVA: 0x00456DE4 File Offset: 0x00454FE4
+		// Token: 0x06020CCF RID: 134351 RVA: 0x0048A934 File Offset: 0x00488B34
 		public static Offset<IPhotographCameraCheckTemplate> CreateIPhotographCameraCheckTemplate(FlatBufferBuilder builder, EPhotographCameraCheckType Type = EPhotographCameraCheckType.CameraTemplate, int TemplateId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPhotographCameraCheckTemplate.EndIPhotographCameraCheckTemplate(builder);
 		}
 
-		// Token: 0x0601F0AE RID: 127150 RVA: 0x00456E01 File Offset: 0x00455001
+		// Token: 0x06020CD0 RID: 134352 RVA: 0x0048A951 File Offset: 0x00488B51
 		public static void StartIPhotographCameraCheckTemplate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F0AF RID: 127151 RVA: 0x00456E0A File Offset: 0x0045500A
+		// Token: 0x06020CD1 RID: 134353 RVA: 0x0048A95A File Offset: 0x00488B5A
 		public static void AddType(FlatBufferBuilder builder, EPhotographCameraCheckType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F0B0 RID: 127152 RVA: 0x00456E15 File Offset: 0x00455015
+		// Token: 0x06020CD2 RID: 134354 RVA: 0x0048A965 File Offset: 0x00488B65
 		public static void AddTemplateId(FlatBufferBuilder builder, int templateId)
 		{
 			builder.AddInt(1, templateId, 0);
 		}
 
-		// Token: 0x0601F0B1 RID: 127153 RVA: 0x00456E20 File Offset: 0x00455020
+		// Token: 0x06020CD3 RID: 134355 RVA: 0x0048A970 File Offset: 0x00488B70
 		public static Offset<IPhotographCameraCheckTemplate> EndIPhotographCameraCheckTemplate(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotographCameraCheckTemplate>(builder.EndTable());
 		}
 
-		// Token: 0x0601F0B2 RID: 127154 RVA: 0x00456E30 File Offset: 0x00455030
+		// Token: 0x06020CD4 RID: 134356 RVA: 0x0048A980 File Offset: 0x00488B80
 		public IPhotographCameraCheckTemplateT UnPack()
 		{
 			IPhotographCameraCheckTemplateT photographCameraCheckTemplateT = new IPhotographCameraCheckTemplateT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return photographCameraCheckTemplateT;
 		}
 
-		// Token: 0x0601F0B3 RID: 127155 RVA: 0x00456E4B File Offset: 0x0045504B
+		// Token: 0x06020CD5 RID: 134357 RVA: 0x0048A99B File Offset: 0x00488B9B
 		public void UnPackTo(IPhotographCameraCheckTemplateT _o)
 		{
 			_o.Type = this.Type;
 			_o.TemplateId = this.TemplateId;
 		}
 
-		// Token: 0x0601F0B4 RID: 127156 RVA: 0x00456E68 File Offset: 0x00455068
+		// Token: 0x06020CD6 RID: 134358 RVA: 0x0048A9B8 File Offset: 0x00488BB8
 		public static Offset<IPhotographCameraCheckTemplate> Pack(FlatBufferBuilder builder, IPhotographCameraCheckTemplateT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IPhotographCameraCheckTemplate.CreateIPhotographCameraCheckTemplate(builder, _o.Type, _o.TemplateId);
 		}
 
-		// Token: 0x0400D628 RID: 54824
+		// Token: 0x0400E14F RID: 57679
 		private Table __p;
 	}
 }

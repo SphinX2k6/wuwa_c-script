@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041ED RID: 16877
+	// Token: 0x02004646 RID: 17990
 	public struct ITrackCustomBoard : IFlatbufferObject
 	{
-		// Token: 0x170077BC RID: 30652
-		// (get) Token: 0x06018E3A RID: 101946 RVA: 0x00394B5A File Offset: 0x00392D5A
+		// Token: 0x17007DE8 RID: 32232
+		// (get) Token: 0x0601A590 RID: 107920 RVA: 0x003BFFAE File Offset: 0x003BE1AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018E3B RID: 101947 RVA: 0x00394B67 File Offset: 0x00392D67
+		// Token: 0x0601A591 RID: 107921 RVA: 0x003BFFBB File Offset: 0x003BE1BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018E3C RID: 101948 RVA: 0x00394B70 File Offset: 0x00392D70
+		// Token: 0x0601A592 RID: 107922 RVA: 0x003BFFC4 File Offset: 0x003BE1C4
 		public static ITrackCustomBoard GetRootAsITrackCustomBoard(ByteBuffer _bb)
 		{
 			return ITrackCustomBoard.GetRootAsITrackCustomBoard(_bb, default(ITrackCustomBoard));
 		}
 
-		// Token: 0x06018E3D RID: 101949 RVA: 0x00394B8C File Offset: 0x00392D8C
+		// Token: 0x0601A593 RID: 107923 RVA: 0x003BFFE0 File Offset: 0x003BE1E0
 		public static ITrackCustomBoard GetRootAsITrackCustomBoard(ByteBuffer _bb, ITrackCustomBoard obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018E3E RID: 101950 RVA: 0x00394BA9 File Offset: 0x00392DA9
+		// Token: 0x0601A594 RID: 107924 RVA: 0x003BFFFD File Offset: 0x003BE1FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018E3F RID: 101951 RVA: 0x00394BB8 File Offset: 0x00392DB8
+		// Token: 0x0601A595 RID: 107925 RVA: 0x003C000C File Offset: 0x003BE20C
 		public ITrackCustomBoard __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170077BD RID: 30653
-		// (get) Token: 0x06018E40 RID: 101952 RVA: 0x00394BC8 File Offset: 0x00392DC8
+		// Token: 0x17007DE9 RID: 32233
+		// (get) Token: 0x0601A596 RID: 107926 RVA: 0x003C001C File Offset: 0x003BE21C
 		public IPhoneMessageBoardConfig? TrackPhoneMessageBoard
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077BE RID: 30654
-		// (get) Token: 0x06018E41 RID: 101953 RVA: 0x00394C28 File Offset: 0x00392E28
+		// Token: 0x17007DEA RID: 32234
+		// (get) Token: 0x0601A597 RID: 107927 RVA: 0x003C007C File Offset: 0x003BE27C
 		public ITrackQuestBranchBoardConfig? TrackQuestBranchBoard
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077BF RID: 30655
-		// (get) Token: 0x06018E42 RID: 101954 RVA: 0x00394C88 File Offset: 0x00392E88
+		// Token: 0x17007DEB RID: 32235
+		// (get) Token: 0x0601A598 RID: 107928 RVA: 0x003C00DC File Offset: 0x003BE2DC
 		public ISheriffAnomalyProgressBoardConfig? SheriffAnomalyProgressBoard
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077C0 RID: 30656
-		// (get) Token: 0x06018E43 RID: 101955 RVA: 0x00394CE8 File Offset: 0x00392EE8
+		// Token: 0x17007DEC RID: 32236
+		// (get) Token: 0x0601A599 RID: 107929 RVA: 0x003C013C File Offset: 0x003BE33C
 		public ISheriffReasoningBoardConfig? SheriffReasoningBoard
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077C1 RID: 30657
-		// (get) Token: 0x06018E44 RID: 101956 RVA: 0x00394D48 File Offset: 0x00392F48
+		// Token: 0x17007DED RID: 32237
+		// (get) Token: 0x0601A59A RID: 107930 RVA: 0x003C019C File Offset: 0x003BE39C
 		public ISheriffMainBoardConfig? SheriffMainBoard
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077C2 RID: 30658
-		// (get) Token: 0x06018E45 RID: 101957 RVA: 0x00394DA8 File Offset: 0x00392FA8
+		// Token: 0x17007DEE RID: 32238
+		// (get) Token: 0x0601A59B RID: 107931 RVA: 0x003C01FC File Offset: 0x003BE3FC
 		public ISheriffClueDetailBoardConfig? SheriffClueDetailBoard
 		{
 			get
@@ -138,8 +138,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077C3 RID: 30659
-		// (get) Token: 0x06018E46 RID: 101958 RVA: 0x00394E08 File Offset: 0x00393008
+		// Token: 0x17007DEF RID: 32239
+		// (get) Token: 0x0601A59C RID: 107932 RVA: 0x003C025C File Offset: 0x003BE45C
 		public ITrackReturnDungeon? TrackReturnDungeon
 		{
 			get
@@ -153,10 +153,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018E47 RID: 101959 RVA: 0x00394E68 File Offset: 0x00393068
-		public static Offset<ITrackCustomBoard> CreateITrackCustomBoard(FlatBufferBuilder builder, Offset<IPhoneMessageBoardConfig> TrackPhoneMessageBoardOffset = default(Offset<IPhoneMessageBoardConfig>), Offset<ITrackQuestBranchBoardConfig> TrackQuestBranchBoardOffset = default(Offset<ITrackQuestBranchBoardConfig>), Offset<ISheriffAnomalyProgressBoardConfig> SheriffAnomalyProgressBoardOffset = default(Offset<ISheriffAnomalyProgressBoardConfig>), Offset<ISheriffReasoningBoardConfig> SheriffReasoningBoardOffset = default(Offset<ISheriffReasoningBoardConfig>), Offset<ISheriffMainBoardConfig> SheriffMainBoardOffset = default(Offset<ISheriffMainBoardConfig>), Offset<ISheriffClueDetailBoardConfig> SheriffClueDetailBoardOffset = default(Offset<ISheriffClueDetailBoardConfig>), Offset<ITrackReturnDungeon> TrackReturnDungeonOffset = default(Offset<ITrackReturnDungeon>))
+		// Token: 0x17007DF0 RID: 32240
+		// (get) Token: 0x0601A59D RID: 107933 RVA: 0x003C02BC File Offset: 0x003BE4BC
+		public ITrackHandBookBoardConfig? TrackHandBookBoard
 		{
-			builder.StartTable(7);
+			get
+			{
+				int num = this.__p.__offset(18);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ITrackHandBookBoardConfig?(default(ITrackHandBookBoardConfig).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x0601A59E RID: 107934 RVA: 0x003C031C File Offset: 0x003BE51C
+		public static Offset<ITrackCustomBoard> CreateITrackCustomBoard(FlatBufferBuilder builder, Offset<IPhoneMessageBoardConfig> TrackPhoneMessageBoardOffset = default(Offset<IPhoneMessageBoardConfig>), Offset<ITrackQuestBranchBoardConfig> TrackQuestBranchBoardOffset = default(Offset<ITrackQuestBranchBoardConfig>), Offset<ISheriffAnomalyProgressBoardConfig> SheriffAnomalyProgressBoardOffset = default(Offset<ISheriffAnomalyProgressBoardConfig>), Offset<ISheriffReasoningBoardConfig> SheriffReasoningBoardOffset = default(Offset<ISheriffReasoningBoardConfig>), Offset<ISheriffMainBoardConfig> SheriffMainBoardOffset = default(Offset<ISheriffMainBoardConfig>), Offset<ISheriffClueDetailBoardConfig> SheriffClueDetailBoardOffset = default(Offset<ISheriffClueDetailBoardConfig>), Offset<ITrackReturnDungeon> TrackReturnDungeonOffset = default(Offset<ITrackReturnDungeon>), Offset<ITrackHandBookBoardConfig> TrackHandBookBoardOffset = default(Offset<ITrackHandBookBoardConfig>))
+		{
+			builder.StartTable(8);
+			ITrackCustomBoard.AddTrackHandBookBoard(builder, TrackHandBookBoardOffset);
 			ITrackCustomBoard.AddTrackReturnDungeon(builder, TrackReturnDungeonOffset);
 			ITrackCustomBoard.AddSheriffClueDetailBoard(builder, SheriffClueDetailBoardOffset);
 			ITrackCustomBoard.AddSheriffMainBoard(builder, SheriffMainBoardOffset);
@@ -167,61 +183,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackCustomBoard.EndITrackCustomBoard(builder);
 		}
 
-		// Token: 0x06018E48 RID: 101960 RVA: 0x00394EB7 File Offset: 0x003930B7
+		// Token: 0x0601A59F RID: 107935 RVA: 0x003C0373 File Offset: 0x003BE573
 		public static void StartITrackCustomBoard(FlatBufferBuilder builder)
 		{
-			builder.StartTable(7);
+			builder.StartTable(8);
 		}
 
-		// Token: 0x06018E49 RID: 101961 RVA: 0x00394EC0 File Offset: 0x003930C0
+		// Token: 0x0601A5A0 RID: 107936 RVA: 0x003C037C File Offset: 0x003BE57C
 		public static void AddTrackPhoneMessageBoard(FlatBufferBuilder builder, Offset<IPhoneMessageBoardConfig> trackPhoneMessageBoardOffset)
 		{
 			builder.AddOffset(0, trackPhoneMessageBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E4A RID: 101962 RVA: 0x00394ED0 File Offset: 0x003930D0
+		// Token: 0x0601A5A1 RID: 107937 RVA: 0x003C038C File Offset: 0x003BE58C
 		public static void AddTrackQuestBranchBoard(FlatBufferBuilder builder, Offset<ITrackQuestBranchBoardConfig> trackQuestBranchBoardOffset)
 		{
 			builder.AddOffset(1, trackQuestBranchBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E4B RID: 101963 RVA: 0x00394EE0 File Offset: 0x003930E0
+		// Token: 0x0601A5A2 RID: 107938 RVA: 0x003C039C File Offset: 0x003BE59C
 		public static void AddSheriffAnomalyProgressBoard(FlatBufferBuilder builder, Offset<ISheriffAnomalyProgressBoardConfig> sheriffAnomalyProgressBoardOffset)
 		{
 			builder.AddOffset(2, sheriffAnomalyProgressBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E4C RID: 101964 RVA: 0x00394EF0 File Offset: 0x003930F0
+		// Token: 0x0601A5A3 RID: 107939 RVA: 0x003C03AC File Offset: 0x003BE5AC
 		public static void AddSheriffReasoningBoard(FlatBufferBuilder builder, Offset<ISheriffReasoningBoardConfig> sheriffReasoningBoardOffset)
 		{
 			builder.AddOffset(3, sheriffReasoningBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E4D RID: 101965 RVA: 0x00394F00 File Offset: 0x00393100
+		// Token: 0x0601A5A4 RID: 107940 RVA: 0x003C03BC File Offset: 0x003BE5BC
 		public static void AddSheriffMainBoard(FlatBufferBuilder builder, Offset<ISheriffMainBoardConfig> sheriffMainBoardOffset)
 		{
 			builder.AddOffset(4, sheriffMainBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E4E RID: 101966 RVA: 0x00394F10 File Offset: 0x00393110
+		// Token: 0x0601A5A5 RID: 107941 RVA: 0x003C03CC File Offset: 0x003BE5CC
 		public static void AddSheriffClueDetailBoard(FlatBufferBuilder builder, Offset<ISheriffClueDetailBoardConfig> sheriffClueDetailBoardOffset)
 		{
 			builder.AddOffset(5, sheriffClueDetailBoardOffset.Value, 0);
 		}
 
-		// Token: 0x06018E4F RID: 101967 RVA: 0x00394F20 File Offset: 0x00393120
+		// Token: 0x0601A5A6 RID: 107942 RVA: 0x003C03DC File Offset: 0x003BE5DC
 		public static void AddTrackReturnDungeon(FlatBufferBuilder builder, Offset<ITrackReturnDungeon> trackReturnDungeonOffset)
 		{
 			builder.AddOffset(6, trackReturnDungeonOffset.Value, 0);
 		}
 
-		// Token: 0x06018E50 RID: 101968 RVA: 0x00394F30 File Offset: 0x00393130
+		// Token: 0x0601A5A7 RID: 107943 RVA: 0x003C03EC File Offset: 0x003BE5EC
+		public static void AddTrackHandBookBoard(FlatBufferBuilder builder, Offset<ITrackHandBookBoardConfig> trackHandBookBoardOffset)
+		{
+			builder.AddOffset(7, trackHandBookBoardOffset.Value, 0);
+		}
+
+		// Token: 0x0601A5A8 RID: 107944 RVA: 0x003C03FC File Offset: 0x003BE5FC
 		public static Offset<ITrackCustomBoard> EndITrackCustomBoard(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrackCustomBoard>(builder.EndTable());
 		}
 
-		// Token: 0x06018E51 RID: 101969 RVA: 0x00394F40 File Offset: 0x00393140
+		// Token: 0x0601A5A9 RID: 107945 RVA: 0x003C040C File Offset: 0x003BE60C
 		public ITrackCustomBoardT UnPack()
 		{
 			ITrackCustomBoardT trackCustomBoardT = new ITrackCustomBoardT();
@@ -229,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return trackCustomBoardT;
 		}
 
-		// Token: 0x06018E52 RID: 101970 RVA: 0x00394F5C File Offset: 0x0039315C
+		// Token: 0x0601A5AA RID: 107946 RVA: 0x003C0428 File Offset: 0x003BE628
 		public void UnPackTo(ITrackCustomBoardT _o)
 		{
 			_o.TrackPhoneMessageBoard = ((this.TrackPhoneMessageBoard != null) ? this.TrackPhoneMessageBoard.Value.UnPack() : null);
@@ -239,9 +261,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.SheriffMainBoard = ((this.SheriffMainBoard != null) ? this.SheriffMainBoard.Value.UnPack() : null);
 			_o.SheriffClueDetailBoard = ((this.SheriffClueDetailBoard != null) ? this.SheriffClueDetailBoard.Value.UnPack() : null);
 			_o.TrackReturnDungeon = ((this.TrackReturnDungeon != null) ? this.TrackReturnDungeon.Value.UnPack() : null);
+			_o.TrackHandBookBoard = ((this.TrackHandBookBoard != null) ? this.TrackHandBookBoard.Value.UnPack() : null);
 		}
 
-		// Token: 0x06018E53 RID: 101971 RVA: 0x003950C4 File Offset: 0x003932C4
+		// Token: 0x0601A5AB RID: 107947 RVA: 0x003C05C0 File Offset: 0x003BE7C0
 		public static Offset<ITrackCustomBoard> Pack(FlatBufferBuilder builder, ITrackCustomBoardT _o)
 		{
 			if (_o == null)
@@ -255,10 +278,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			Offset<ISheriffMainBoardConfig> sheriffMainBoardOffset = (_o.SheriffMainBoard == null) ? default(Offset<ISheriffMainBoardConfig>) : ISheriffMainBoardConfig.Pack(builder, _o.SheriffMainBoard);
 			Offset<ISheriffClueDetailBoardConfig> sheriffClueDetailBoardOffset = (_o.SheriffClueDetailBoard == null) ? default(Offset<ISheriffClueDetailBoardConfig>) : ISheriffClueDetailBoardConfig.Pack(builder, _o.SheriffClueDetailBoard);
 			Offset<ITrackReturnDungeon> trackReturnDungeonOffset = (_o.TrackReturnDungeon == null) ? default(Offset<ITrackReturnDungeon>) : ITrackReturnDungeon.Pack(builder, _o.TrackReturnDungeon);
-			return ITrackCustomBoard.CreateITrackCustomBoard(builder, trackPhoneMessageBoardOffset, trackQuestBranchBoardOffset, sheriffAnomalyProgressBoardOffset, sheriffReasoningBoardOffset, sheriffMainBoardOffset, sheriffClueDetailBoardOffset, trackReturnDungeonOffset);
+			Offset<ITrackHandBookBoardConfig> trackHandBookBoardOffset = (_o.TrackHandBookBoard == null) ? default(Offset<ITrackHandBookBoardConfig>) : ITrackHandBookBoardConfig.Pack(builder, _o.TrackHandBookBoard);
+			return ITrackCustomBoard.CreateITrackCustomBoard(builder, trackPhoneMessageBoardOffset, trackQuestBranchBoardOffset, sheriffAnomalyProgressBoardOffset, sheriffReasoningBoardOffset, sheriffMainBoardOffset, sheriffClueDetailBoardOffset, trackReturnDungeonOffset, trackHandBookBoardOffset);
 		}
 
-		// Token: 0x0400BE43 RID: 48707
+		// Token: 0x0400C84D RID: 51277
 		private Table __p;
 	}
 }

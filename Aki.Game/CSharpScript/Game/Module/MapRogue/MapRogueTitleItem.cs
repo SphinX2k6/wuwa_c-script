@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055E9 RID: 21993
+	// Token: 0x020045BF RID: 17855
 	public class MapRogueTitleItem : UiPanelBase
 	{
-		// Token: 0x06038045 RID: 229445 RVA: 0x00D4489C File Offset: 0x00D42A9C
+		// Token: 0x0602CF43 RID: 184131 RVA: 0x00C925E4 File Offset: 0x00C907E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038046 RID: 229446 RVA: 0x00D4491C File Offset: 0x00D42B1C
+		// Token: 0x0602CF44 RID: 184132 RVA: 0x00C92664 File Offset: 0x00C90864
 		protected override void OnStart()
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.RefreshProgress();
 		}
 
-		// Token: 0x06038047 RID: 229447 RVA: 0x00D44980 File Offset: 0x00D42B80
+		// Token: 0x0602CF45 RID: 184133 RVA: 0x00C926C8 File Offset: 0x00C908C8
 		public void RefreshProgress()
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "RogueResExplore_3", new <>z__ReadOnlySingleElementList<object>(num));
 		}
 
-		// Token: 0x06038048 RID: 229448 RVA: 0x00D449C4 File Offset: 0x00D42BC4
+		// Token: 0x0602CF46 RID: 184134 RVA: 0x00C9270C File Offset: 0x00C9090C
 		private void OnBtnClick()
 		{
 			if (this.CheckCanBtnClick != null && !this.CheckCanBtnClick())
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueController.Instance.OpenExplore();
 		}
 
-		// Token: 0x0401D6EF RID: 120559
+		// Token: 0x0401817A RID: 98682
 		[Nullable(2)]
 		public Func<bool> CheckCanBtnClick;
 	}

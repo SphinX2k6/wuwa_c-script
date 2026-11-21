@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001695 RID: 5781
+	// Token: 0x0200180E RID: 6158
 	[EnumExtensions]
 	public enum ESetBattleStateType
 	{
-		// Token: 0x04004D78 RID: 19832
+		// Token: 0x0400518F RID: 20879
 		SetBattleTag,
-		// Token: 0x04004D79 RID: 19833
+		// Token: 0x04005190 RID: 20880
 		NotifyMonsterPerception,
-		// Token: 0x04004D7A RID: 19834
+		// Token: 0x04005191 RID: 20881
 		NotifyMonsterPlayStandbyTags
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B34 RID: 2868
+	// Token: 0x02000C14 RID: 3092
 	public struct BlackboardWhiteList : IFlatbufferObject
 	{
-		// Token: 0x17000534 RID: 1332
-		// (get) Token: 0x06004D66 RID: 19814 RVA: 0x001E3F54 File Offset: 0x001E2154
+		// Token: 0x17000574 RID: 1396
+		// (get) Token: 0x06005328 RID: 21288 RVA: 0x002042B8 File Offset: 0x002024B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D67 RID: 19815 RVA: 0x001E3F61 File Offset: 0x001E2161
+		// Token: 0x06005329 RID: 21289 RVA: 0x002042C5 File Offset: 0x002024C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004D68 RID: 19816 RVA: 0x001E3F68 File Offset: 0x001E2168
+		// Token: 0x0600532A RID: 21290 RVA: 0x002042CC File Offset: 0x002024CC
 		public static BlackboardWhiteList GetRootAsBlackboardWhiteList(ByteBuffer _bb)
 		{
 			return BlackboardWhiteList.GetRootAsBlackboardWhiteList(_bb, default(BlackboardWhiteList));
 		}
 
-		// Token: 0x06004D69 RID: 19817 RVA: 0x001E3F84 File Offset: 0x001E2184
+		// Token: 0x0600532B RID: 21291 RVA: 0x002042E8 File Offset: 0x002024E8
 		public static BlackboardWhiteList GetRootAsBlackboardWhiteList(ByteBuffer _bb, BlackboardWhiteList obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004D6A RID: 19818 RVA: 0x001E3FA1 File Offset: 0x001E21A1
+		// Token: 0x0600532C RID: 21292 RVA: 0x00204305 File Offset: 0x00202505
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004D6B RID: 19819 RVA: 0x001E3FB0 File Offset: 0x001E21B0
+		// Token: 0x0600532D RID: 21293 RVA: 0x00204314 File Offset: 0x00202514
 		public BlackboardWhiteList __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000535 RID: 1333
-		// (get) Token: 0x06004D6C RID: 19820 RVA: 0x001E3FC0 File Offset: 0x001E21C0
+		// Token: 0x17000575 RID: 1397
+		// (get) Token: 0x0600532E RID: 21294 RVA: 0x00204324 File Offset: 0x00202524
 		public string Key
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D6D RID: 19821 RVA: 0x001E3FF7 File Offset: 0x001E21F7
+		// Token: 0x0600532F RID: 21295 RVA: 0x0020435B File Offset: 0x0020255B
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06004D6E RID: 19822 RVA: 0x001E4006 File Offset: 0x001E2206
+		// Token: 0x06005330 RID: 21296 RVA: 0x0020436A File Offset: 0x0020256A
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B2F RID: 19247
+		// Token: 0x0400510F RID: 20751
 		private Table __p;
 	}
 }

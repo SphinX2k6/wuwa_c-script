@@ -2,26 +2,26 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020013DA RID: 5082
+// Token: 0x0200088E RID: 2190
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityPhantomCollectConfig : ConfigBase
 {
-	// Token: 0x06008F76 RID: 36726 RVA: 0x001F020E File Offset: 0x001EE40E
+	// Token: 0x0600630B RID: 25355 RVA: 0x001F8D46 File Offset: 0x001F6F46
 	public PhantomCollectActivity? GetPhantomCollectConfig(int activityId)
 	{
 		return ConfigPhantomCollectActivityById.GetConfig(activityId, true);
 	}
 
-	// Token: 0x06008F77 RID: 36727 RVA: 0x001F0217 File Offset: 0x001EE417
+	// Token: 0x0600630C RID: 25356 RVA: 0x001F8D4F File Offset: 0x001F6F4F
 	public PhantomCollectTaskDesc? GetPhantomCollectTaskDesc(int taskType)
 	{
 		return ConfigPhantomCollectTaskDescById.GetConfig(taskType, true);
 	}
 
-	// Token: 0x17000C04 RID: 3076
-	// (get) Token: 0x06008F78 RID: 36728 RVA: 0x001F0220 File Offset: 0x001EE420
+	// Token: 0x17000C24 RID: 3108
+	// (get) Token: 0x0600630D RID: 25357 RVA: 0x001F8D58 File Offset: 0x001F6F58
 	public static ActivityPhantomCollectConfig Instance
 	{
 		get
@@ -30,7 +30,7 @@ public class ActivityPhantomCollectConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06008F79 RID: 36729 RVA: 0x001F0227 File Offset: 0x001EE427
+	// Token: 0x0600630E RID: 25358 RVA: 0x001F8D5F File Offset: 0x001F6F5F
 	public static ActivityPhantomCollectConfig GetOrCreateInstance()
 	{
 		if (ActivityPhantomCollectConfig._Instance == null)
@@ -40,7 +40,7 @@ public class ActivityPhantomCollectConfig : ConfigBase
 		return ActivityPhantomCollectConfig._Instance;
 	}
 
-	// Token: 0x06008F7A RID: 36730 RVA: 0x001F023B File Offset: 0x001EE43B
+	// Token: 0x0600630F RID: 25359 RVA: 0x001F8D73 File Offset: 0x001F6F73
 	public static bool CreateInstance()
 	{
 		if (ActivityPhantomCollectConfig._Instance != null)
@@ -51,24 +51,24 @@ public class ActivityPhantomCollectConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06008F7B RID: 36731 RVA: 0x001F0251 File Offset: 0x001EE451
+	// Token: 0x06006310 RID: 25360 RVA: 0x001F8D89 File Offset: 0x001F6F89
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008F7C RID: 36732 RVA: 0x001F0253 File Offset: 0x001EE453
+	// Token: 0x06006311 RID: 25361 RVA: 0x001F8D8B File Offset: 0x001F6F8B
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityPhantomCollectConfig._Instance = null;
 	}
 
-	// Token: 0x06008F7D RID: 36733 RVA: 0x001F025B File Offset: 0x001EE45B
+	// Token: 0x06006312 RID: 25362 RVA: 0x001F8D93 File Offset: 0x001F6F93
 	static ActivityPhantomCollectConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityPhantomCollectConfig.CreateStaticDefaultValue), new Action(ActivityPhantomCollectConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003F73 RID: 16243
+	// Token: 0x0400400B RID: 16395
 	[Nullable(2)]
 	private static ActivityPhantomCollectConfig _Instance;
 }

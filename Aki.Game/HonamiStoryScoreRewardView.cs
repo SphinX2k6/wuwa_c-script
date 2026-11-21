@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EE9 RID: 7913
+// Token: 0x020013AB RID: 5035
 public class HonamiStoryScoreRewardView : UiViewBase
 {
-	// Token: 0x0600F3A0 RID: 62368 RVA: 0x003ABEE5 File Offset: 0x003AA0E5
+	// Token: 0x0600C7BF RID: 51135 RVA: 0x003B79E1 File Offset: 0x003B5BE1
 	[NullableContext(1)]
 	public HonamiStoryScoreRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F3A1 RID: 62369 RVA: 0x003ABEF0 File Offset: 0x003AA0F0
+	// Token: 0x0600C7C0 RID: 51136 RVA: 0x003B79EC File Offset: 0x003B5BEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,10 +26,10 @@ public class HonamiStoryScoreRewardView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x020084E2 RID: 34018
+	// Token: 0x02007667 RID: 30311
 	private enum EHonamiStoryScoreRewardComponent
 	{
-		// Token: 0x0402B3EC RID: 177132
+		// Token: 0x04026710 RID: 157456
 		ItemCaption
 	}
 }

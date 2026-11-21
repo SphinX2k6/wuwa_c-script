@@ -6,12 +6,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x0200477C RID: 18300
+	// Token: 0x020036AD RID: 13997
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapAxisInteractValidation
 	{
-		// Token: 0x0602FDBC RID: 196028 RVA: 0x00B178A0 File Offset: 0x00B15AA0
+		// Token: 0x06024586 RID: 148870 RVA: 0x00A47900 File Offset: 0x00A45B00
 		public void Reset()
 		{
 			this.ViewOpened = false;
@@ -21,20 +21,20 @@ namespace CSharpScript.Game.Module.WorldMap
 			}
 		}
 
-		// Token: 0x0602FDBD RID: 196029 RVA: 0x00B17904 File Offset: 0x00B15B04
+		// Token: 0x06024587 RID: 148871 RVA: 0x00A47964 File Offset: 0x00A45B64
 		public void InitAxisLock(string axisName)
 		{
 			bool value = InputDistributeModel.Instance.GetAxisValue(axisName) != 0f;
 			this.AxisInValidationMap[axisName] = value;
 		}
 
-		// Token: 0x0602FDBE RID: 196030 RVA: 0x00B17934 File Offset: 0x00B15B34
+		// Token: 0x06024588 RID: 148872 RVA: 0x00A47994 File Offset: 0x00A45B94
 		public void Init()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x0602FDBF RID: 196031 RVA: 0x00B1793C File Offset: 0x00B15B3C
+		// Token: 0x06024589 RID: 148873 RVA: 0x00A4799C File Offset: 0x00A45B9C
 		public void Clear()
 		{
 			this.RemoveEventListener();
@@ -42,19 +42,19 @@ namespace CSharpScript.Game.Module.WorldMap
 			this.ViewOpened = false;
 		}
 
-		// Token: 0x0602FDC0 RID: 196032 RVA: 0x00B17956 File Offset: 0x00B15B56
+		// Token: 0x0602458A RID: 148874 RVA: 0x00A479B6 File Offset: 0x00A45BB6
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.WorldMapViewOpened, new Action(this.OnMapViewOpened));
 		}
 
-		// Token: 0x0602FDC1 RID: 196033 RVA: 0x00B17974 File Offset: 0x00B15B74
+		// Token: 0x0602458B RID: 148875 RVA: 0x00A479D4 File Offset: 0x00A45BD4
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapViewOpened, new Action(this.OnMapViewOpened));
 		}
 
-		// Token: 0x0602FDC2 RID: 196034 RVA: 0x00B17994 File Offset: 0x00B15B94
+		// Token: 0x0602458C RID: 148876 RVA: 0x00A479F4 File Offset: 0x00A45BF4
 		public void InputAxis(string axisName, float value)
 		{
 			if (this.IsAxisInValid(axisName) && this.ViewOpened && value == 0f)
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.Module.WorldMap
 			}
 		}
 
-		// Token: 0x1700777C RID: 30588
-		// (get) Token: 0x0602FDC3 RID: 196035 RVA: 0x00B17A10 File Offset: 0x00B15C10
+		// Token: 0x17004A38 RID: 19000
+		// (get) Token: 0x0602458D RID: 148877 RVA: 0x00A47A70 File Offset: 0x00A45C70
 		public bool IsInValid
 		{
 			get
@@ -86,22 +86,22 @@ namespace CSharpScript.Game.Module.WorldMap
 			}
 		}
 
-		// Token: 0x0602FDC4 RID: 196036 RVA: 0x00B17A6C File Offset: 0x00B15C6C
+		// Token: 0x0602458E RID: 148878 RVA: 0x00A47ACC File Offset: 0x00A45CCC
 		public bool IsAxisInValid(string axisName)
 		{
 			return this.AxisInValidationMap.GetValueOrDefault(axisName, false);
 		}
 
-		// Token: 0x0602FDC5 RID: 196037 RVA: 0x00B17A7B File Offset: 0x00B15C7B
+		// Token: 0x0602458F RID: 148879 RVA: 0x00A47ADB File Offset: 0x00A45CDB
 		private void OnMapViewOpened()
 		{
 			this.ViewOpened = true;
 		}
 
-		// Token: 0x04019CFC RID: 105724
+		// Token: 0x040143AC RID: 82860
 		private bool ViewOpened;
 
-		// Token: 0x04019CFD RID: 105725
+		// Token: 0x040143AD RID: 82861
 		private readonly Dictionary<string, bool> AxisInValidationMap = new Dictionary<string, bool>();
 	}
 }

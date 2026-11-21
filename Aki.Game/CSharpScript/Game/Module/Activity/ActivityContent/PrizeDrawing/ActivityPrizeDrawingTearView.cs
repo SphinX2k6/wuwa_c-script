@@ -13,13 +13,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 {
-	// Token: 0x020062A2 RID: 25250
+	// Token: 0x02005220 RID: 21024
 	[NullableContext(2)]
 	[Nullable(0)]
-	public class ActivityPrizeDrawingTearView : UiTickViewBase
+	public class ActivityPrizeDrawingTearView : UiTickViewBase, IKujiTearGamepadHandler
 	{
-		// Token: 0x1700926F RID: 37487
-		// (get) Token: 0x0603F858 RID: 260184 RVA: 0x00F5C1F8 File Offset: 0x00F5A3F8
+		// Token: 0x170065D1 RID: 26065
+		// (get) Token: 0x06034519 RID: 214297 RVA: 0x00EA3154 File Offset: 0x00EA1354
 		[Nullable(1)]
 		private ActivityPrizeDrawingData ActivityData
 		{
@@ -30,26 +30,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F859 RID: 260185 RVA: 0x00F5C204 File Offset: 0x00F5A404
+		// Token: 0x0603451A RID: 214298 RVA: 0x00EA3160 File Offset: 0x00EA1360
 		public bool GetGamepadCanPress()
 		{
 			return this.GamepadCanPress;
 		}
 
-		// Token: 0x0603F85A RID: 260186 RVA: 0x00F5C20C File Offset: 0x00F5A40C
+		// Token: 0x0603451B RID: 214299 RVA: 0x00EA3168 File Offset: 0x00EA1368
 		public void SetGamepadCanPress(bool value)
 		{
 			this.GamepadCanPress = value;
 			UiNavigationViewManager.Instance.RefreshCurrentHotKey();
 		}
 
-		// Token: 0x0603F85B RID: 260187 RVA: 0x00F5C21F File Offset: 0x00F5A41F
+		// Token: 0x0603451C RID: 214300 RVA: 0x00EA317B File Offset: 0x00EA137B
 		[NullableContext(1)]
 		public ActivityPrizeDrawingTearView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F85C RID: 260188 RVA: 0x00F5C228 File Offset: 0x00F5A428
+		// Token: 0x0603451D RID: 214301 RVA: 0x00EA3184 File Offset: 0x00EA1384
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F85D RID: 260189 RVA: 0x00F5C3FC File Offset: 0x00F5A5FC
+		// Token: 0x0603451E RID: 214302 RVA: 0x00EA3358 File Offset: 0x00EA1558
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityPrizeDrawingTearView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F85E RID: 260190 RVA: 0x00F5C440 File Offset: 0x00F5A640
+		// Token: 0x0603451F RID: 214303 RVA: 0x00EA339C File Offset: 0x00EA159C
 		protected override void OnStart()
 		{
 			this.ContentItem = base.GetItem(4);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.FirstGacha();
 		}
 
-		// Token: 0x0603F85F RID: 260191 RVA: 0x00F5C500 File Offset: 0x00F5A700
+		// Token: 0x06034520 RID: 214304 RVA: 0x00EA345C File Offset: 0x00EA165C
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -137,21 +137,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F860 RID: 260192 RVA: 0x00F5C53E File Offset: 0x00F5A73E
+		// Token: 0x06034521 RID: 214305 RVA: 0x00EA349A File Offset: 0x00EA169A
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnOpenAnimationEvent));
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChanged));
 		}
 
-		// Token: 0x0603F861 RID: 260193 RVA: 0x00F5C578 File Offset: 0x00F5A778
+		// Token: 0x06034522 RID: 214306 RVA: 0x00EA34D4 File Offset: 0x00EA16D4
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnOpenAnimationEvent));
 			EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChanged));
 		}
 
-		// Token: 0x0603F862 RID: 260194 RVA: 0x00F5C5B4 File Offset: 0x00F5A7B4
+		// Token: 0x06034523 RID: 214307 RVA: 0x00EA3510 File Offset: 0x00EA1710
 		private void OnInputControllerChanged(EInputControllerType oldController, EInputControllerType newController)
 		{
 			this.IsGamepad = Info.Instance.IsInGamepad();
@@ -176,21 +176,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603F863 RID: 260195 RVA: 0x00F5C606 File Offset: 0x00F5A806
+		// Token: 0x06034524 RID: 214308 RVA: 0x00EA3562 File Offset: 0x00EA1762
 		public void OnGamepadPress()
 		{
 			this.IsGamepadHolding = true;
 			this.OnStartDragging(null);
 		}
 
-		// Token: 0x0603F864 RID: 260196 RVA: 0x00F5C617 File Offset: 0x00F5A817
+		// Token: 0x06034525 RID: 214309 RVA: 0x00EA3573 File Offset: 0x00EA1773
 		public void OnGamepadRelease()
 		{
 			this.IsGamepadHolding = false;
 			this.OnStopDragging(null);
 		}
 
-		// Token: 0x0603F865 RID: 260197 RVA: 0x00F5C628 File Offset: 0x00F5A828
+		// Token: 0x06034526 RID: 214310 RVA: 0x00EA3584 File Offset: 0x00EA1784
 		public void OnGamepadHold(float percent)
 		{
 			float num = (percent >= 1f) ? 1f : MathUtils.Instance.Lerp(this.CachedProgress, percent, 0.2f);
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			fadeInTearItem.OnTick(num);
 		}
 
-		// Token: 0x0603F866 RID: 260198 RVA: 0x00F5C698 File Offset: 0x00F5A898
+		// Token: 0x06034527 RID: 214311 RVA: 0x00EA35F4 File Offset: 0x00EA17F4
 		protected override void OnTick(float delta)
 		{
 			if (this.IsGamepadHolding)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			fadeInTearItem.OnTick(Math.Max(val, this.CachedProgress));
 		}
 
-		// Token: 0x0603F867 RID: 260199 RVA: 0x00F5C740 File Offset: 0x00F5A940
+		// Token: 0x06034528 RID: 214312 RVA: 0x00EA369C File Offset: 0x00EA189C
 		private void RotationTick(float offsetX, float offsetY)
 		{
 			FRotator relativeRotation = this.ContentItem.RelativeRotation;
@@ -248,14 +248,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.ContentItem.SetUIRelativeRotation(relativeRotation);
 		}
 
-		// Token: 0x0603F868 RID: 260200 RVA: 0x00F5C7F7 File Offset: 0x00F5A9F7
+		// Token: 0x06034529 RID: 214313 RVA: 0x00EA3753 File Offset: 0x00EA1953
 		private void FirstGacha()
 		{
 			this.BeforeGachaRequest();
 			this.RefreshTearItemAsync().ContinueWith(new Action(this.AfterGachaRequest));
 		}
 
-		// Token: 0x0603F869 RID: 260201 RVA: 0x00F5C818 File Offset: 0x00F5AA18
+		// Token: 0x0603452A RID: 214314 RVA: 0x00EA3774 File Offset: 0x00EA1974
 		private UniTask GachaRequest()
 		{
 			ActivityPrizeDrawingTearView.<GachaRequest>d__33 <GachaRequest>d__;
@@ -266,13 +266,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return <GachaRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F86A RID: 260202 RVA: 0x00F5C85B File Offset: 0x00F5AA5B
+		// Token: 0x0603452B RID: 214315 RVA: 0x00EA37B7 File Offset: 0x00EA19B7
 		private void BeforeGachaRequest()
 		{
 			this.RefreshByState(ActivityPrizeDrawingTearView.EState.Ready, false);
 		}
 
-		// Token: 0x0603F86B RID: 260203 RVA: 0x00F5C865 File Offset: 0x00F5AA65
+		// Token: 0x0603452C RID: 214316 RVA: 0x00EA37C1 File Offset: 0x00EA19C1
 		private void AfterGachaRequest()
 		{
 			this.SetGamepadCanPress(true);
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603F86C RID: 260204 RVA: 0x00F5C888 File Offset: 0x00F5AA88
+		// Token: 0x0603452D RID: 214317 RVA: 0x00EA37E4 File Offset: 0x00EA19E4
 		private UniTask RefreshTearItemAsync()
 		{
 			ActivityPrizeDrawingTearView.<RefreshTearItemAsync>d__36 <RefreshTearItemAsync>d__;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return <RefreshTearItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F86D RID: 260205 RVA: 0x00F5C8CB File Offset: 0x00F5AACB
+		// Token: 0x0603452E RID: 214318 RVA: 0x00EA3827 File Offset: 0x00EA1A27
 		private void OnClickFunctionButton()
 		{
 			PrizeDrawingTearCoverItem fadeInTearItem = this.FadeInTearItem;
@@ -312,13 +312,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.GachaRequest();
 		}
 
-		// Token: 0x0603F86E RID: 260206 RVA: 0x00F5C90B File Offset: 0x00F5AB0B
+		// Token: 0x0603452F RID: 214319 RVA: 0x00EA3867 File Offset: 0x00EA1A67
 		private void OnClickBack()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603F86F RID: 260207 RVA: 0x00F5C914 File Offset: 0x00F5AB14
+		// Token: 0x06034530 RID: 214320 RVA: 0x00EA3870 File Offset: 0x00EA1A70
 		private void OnClickSkip()
 		{
 			PrizeDrawingTearCoverItem fadeInTearItem = this.FadeInTearItem;
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			levelSequencePlayer.PlaySequencePurely(animName, true, false, null, null, false);
 		}
 
-		// Token: 0x0603F870 RID: 260208 RVA: 0x00F5C976 File Offset: 0x00F5AB76
+		// Token: 0x06034531 RID: 214321 RVA: 0x00EA38D2 File Offset: 0x00EA1AD2
 		[NullableContext(1)]
 		private void OnSequenceClose(string sequenceName)
 		{
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F871 RID: 260209 RVA: 0x00F5C9B0 File Offset: 0x00F5ABB0
+		// Token: 0x06034532 RID: 214322 RVA: 0x00EA390C File Offset: 0x00EA1B0C
 		[NullableContext(1)]
 		private void OnOpenAnimationEvent(string param)
 		{
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F872 RID: 260210 RVA: 0x00F5C9CF File Offset: 0x00F5ABCF
+		// Token: 0x06034533 RID: 214323 RVA: 0x00EA392B File Offset: 0x00EA1B2B
 		private bool OnStartDragging(ULGUIPointerEventData data)
 		{
 			this.IsDragging = true;
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return true;
 		}
 
-		// Token: 0x0603F873 RID: 260211 RVA: 0x00F5CA06 File Offset: 0x00F5AC06
+		// Token: 0x06034534 RID: 214324 RVA: 0x00EA3962 File Offset: 0x00EA1B62
 		private bool OnStopDragging(ULGUIPointerEventData data)
 		{
 			this.IsDragging = false;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return true;
 		}
 
-		// Token: 0x0603F874 RID: 260212 RVA: 0x00F5CA40 File Offset: 0x00F5AC40
+		// Token: 0x06034535 RID: 214325 RVA: 0x00EA399C File Offset: 0x00EA1B9C
 		private void OnTearOpened()
 		{
 			this.SetGamepadCanPress(false);
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.AfterEndAnimationDelay();
 		}
 
-		// Token: 0x0603F875 RID: 260213 RVA: 0x00F5CB08 File Offset: 0x00F5AD08
+		// Token: 0x06034536 RID: 214326 RVA: 0x00EA3A64 File Offset: 0x00EA1C64
 		private void RefreshButtonText()
 		{
 			if (this.ActivityData.IsAllFinished())
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F876 RID: 260214 RVA: 0x00F5CB70 File Offset: 0x00F5AD70
+		// Token: 0x06034537 RID: 214327 RVA: 0x00EA3ACC File Offset: 0x00EA1CCC
 		private void AfterEndAnimationDelay()
 		{
 			this.EndDelayTimerHandle = null;
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			levelSequencePlayer2.StopCurrentSequence(false, false);
 		}
 
-		// Token: 0x0603F877 RID: 260215 RVA: 0x00F5CC0C File Offset: 0x00F5AE0C
+		// Token: 0x06034538 RID: 214328 RVA: 0x00EA3B68 File Offset: 0x00EA1D68
 		private void RefreshByState(ActivityPrizeDrawingTearView.EState state, bool controlAlpha = true)
 		{
 			this.State = state;
@@ -508,7 +508,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.SetUiActiveNew(base.GetItem(5), state != ActivityPrizeDrawingTearView.EState.InProgress, controlAlpha, null);
 		}
 
-		// Token: 0x0603F878 RID: 260216 RVA: 0x00F5CCD4 File Offset: 0x00F5AED4
+		// Token: 0x06034539 RID: 214329 RVA: 0x00EA3C30 File Offset: 0x00EA1E30
 		[NullableContext(1)]
 		private void SetUiActiveNew(UUIItem uiItem, bool active, bool controlAlpha, float? overrideDuration = null)
 		{
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			uiItem.SetRaycastTarget(active);
 		}
 
-		// Token: 0x0603F879 RID: 260217 RVA: 0x00F5CD54 File Offset: 0x00F5AF54
+		// Token: 0x0603453A RID: 214330 RVA: 0x00EA3CB0 File Offset: 0x00EA1EB0
 		private EFxLevel GetFxLevel()
 		{
 			EFxLevel result;
@@ -555,80 +555,80 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return result;
 		}
 
-		// Token: 0x04021352 RID: 136018
+		// Token: 0x0401BC81 RID: 113793
 		private bool IsDragging;
 
-		// Token: 0x04021353 RID: 136019
+		// Token: 0x0401BC82 RID: 113794
 		private ETearType LastTearType;
 
-		// Token: 0x04021354 RID: 136020
+		// Token: 0x0401BC83 RID: 113795
 		private float CachedProgress;
 
-		// Token: 0x04021355 RID: 136021
+		// Token: 0x0401BC84 RID: 113796
 		private TimerHandle EndDelayTimerHandle;
 
-		// Token: 0x04021356 RID: 136022
+		// Token: 0x0401BC85 RID: 113797
 		private ActivityButtonItem FunctionButton;
 
-		// Token: 0x04021357 RID: 136023
+		// Token: 0x0401BC86 RID: 113798
 		private UUIItem ContentItem;
 
-		// Token: 0x04021358 RID: 136024
+		// Token: 0x0401BC87 RID: 113799
 		private PrizeDrawingTearCoverItemBase FadeOutTearItem;
 
-		// Token: 0x04021359 RID: 136025
+		// Token: 0x0401BC88 RID: 113800
 		private PrizeDrawingTearCoverItem FadeInTearItem;
 
-		// Token: 0x0402135A RID: 136026
+		// Token: 0x0401BC89 RID: 113801
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0402135B RID: 136027
+		// Token: 0x0401BC8A RID: 113802
 		private ActivityPrizeDrawingTearView.EState State;
 
-		// Token: 0x0402135C RID: 136028
+		// Token: 0x0401BC8B RID: 113803
 		private bool IsGamepad;
 
-		// Token: 0x0402135D RID: 136029
+		// Token: 0x0401BC8C RID: 113804
 		private bool GamepadCanPress;
 
-		// Token: 0x0402135E RID: 136030
+		// Token: 0x0401BC8D RID: 113805
 		private bool IsGamepadHolding;
 
-		// Token: 0x0200C47C RID: 50300
+		// Token: 0x0200AE63 RID: 44643
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x0403B484 RID: 242820
+			// Token: 0x04035DE6 RID: 220646
 			BtnBack,
-			// Token: 0x0403B485 RID: 242821
+			// Token: 0x04035DE7 RID: 220647
 			BtnSkip,
-			// Token: 0x0403B486 RID: 242822
+			// Token: 0x04035DE8 RID: 220648
 			BtnAgain,
-			// Token: 0x0403B487 RID: 242823
+			// Token: 0x04035DE9 RID: 220649
 			ScrollTear,
-			// Token: 0x0403B488 RID: 242824
+			// Token: 0x04035DEA RID: 220650
 			TearRoot,
-			// Token: 0x0403B489 RID: 242825
+			// Token: 0x04035DEB RID: 220651
 			PnlCoin,
-			// Token: 0x0403B48A RID: 242826
+			// Token: 0x04035DEC RID: 220652
 			ActionTips,
-			// Token: 0x0403B48B RID: 242827
+			// Token: 0x04035DED RID: 220653
 			FadeInItem,
-			// Token: 0x0403B48C RID: 242828
+			// Token: 0x04035DEE RID: 220654
 			FadeOutItem,
-			// Token: 0x0403B48D RID: 242829
+			// Token: 0x04035DEF RID: 220655
 			NiagaraStand
 		}
 
-		// Token: 0x0200C47D RID: 50301
+		// Token: 0x0200AE64 RID: 44644
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403B48F RID: 242831
+			// Token: 0x04035DF1 RID: 220657
 			Ready,
-			// Token: 0x0403B490 RID: 242832
+			// Token: 0x04035DF2 RID: 220658
 			InProgress,
-			// Token: 0x0403B491 RID: 242833
+			// Token: 0x04035DF3 RID: 220659
 			End
 		}
 	}

@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.RoleDevelopWorldDropEnoughTips
 {
-	// Token: 0x02004D5A RID: 19802
+	// Token: 0x02003D23 RID: 15651
 	public class RoleDevelopWorldDropEnoughTipsView : UiTickViewBase
 	{
-		// Token: 0x060332AF RID: 209583 RVA: 0x00BEF71A File Offset: 0x00BED91A
+		// Token: 0x06028119 RID: 164121 RVA: 0x00B3884E File Offset: 0x00B36A4E
 		[NullableContext(1)]
 		public RoleDevelopWorldDropEnoughTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060332B0 RID: 209584 RVA: 0x00BEF724 File Offset: 0x00BED924
+		// Token: 0x0602811A RID: 164122 RVA: 0x00B38858 File Offset: 0x00B36A58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.RoleDevelopWorldDropEnough
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060332B1 RID: 209585 RVA: 0x00BEF76C File Offset: 0x00BED96C
+		// Token: 0x0602811B RID: 164123 RVA: 0x00B388A0 File Offset: 0x00B36AA0
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060332B2 RID: 209586 RVA: 0x00BEF774 File Offset: 0x00BED974
+		// Token: 0x0602811C RID: 164124 RVA: 0x00B388A8 File Offset: 0x00B36AA8
 		protected override void OnAfterDestroy()
 		{
 			RoleDevelopWorldDropEnoughTipsController.TryShowNext();
 		}
 
-		// Token: 0x060332B3 RID: 209587 RVA: 0x00BEF77C File Offset: 0x00BED97C
+		// Token: 0x0602811D RID: 164125 RVA: 0x00B388B0 File Offset: 0x00B36AB0
 		private void Refresh()
 		{
 			int? currentDisplayItemId = RoleDevelopWorldDropEnoughTipsController.GetCurrentDisplayItemId();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.RoleDevelopWorldDropEnough
 			}
 		}
 
-		// Token: 0x060332B4 RID: 209588 RVA: 0x00BEF7CB File Offset: 0x00BED9CB
+		// Token: 0x0602811E RID: 164126 RVA: 0x00B388FF File Offset: 0x00B36AFF
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.PlaySequenceStream().ContinueWith(delegate()
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.RoleDevelopWorldDropEnough
 			}).Forget();
 		}
 
-		// Token: 0x060332B5 RID: 209589 RVA: 0x00BEF7EC File Offset: 0x00BED9EC
+		// Token: 0x0602811F RID: 164127 RVA: 0x00B38920 File Offset: 0x00B36B20
 		private UniTask PlaySequenceStream()
 		{
 			RoleDevelopWorldDropEnoughTipsView.<PlaySequenceStream>d__7 <PlaySequenceStream>d__;
@@ -77,11 +77,11 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.RoleDevelopWorldDropEnough
 			return <PlaySequenceStream>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200AED1 RID: 44753
-		private class EComponent
+		// Token: 0x02009904 RID: 39172
+		private enum EComponentType
 		{
-			// Token: 0x0403518B RID: 217483
-			public const int TexIcon = 0;
+			// Token: 0x0402FBBC RID: 195516
+			TexIcon
 		}
 	}
 }

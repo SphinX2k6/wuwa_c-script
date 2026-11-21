@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007161 RID: 29025
+	// Token: 0x02006215 RID: 25109
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GamePlayWalkingPatternComponent : EntityComponent
 	{
-		// Token: 0x06046DAA RID: 290218 RVA: 0x011DE2AC File Offset: 0x011DC4AC
+		// Token: 0x0603C5F3 RID: 247283 RVA: 0x01139EA4 File Offset: 0x011380A4
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreateEntityData p = args.GetP1<CreateEntityData>();
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DAB RID: 290219 RVA: 0x011DE2D4 File Offset: 0x011DC4D4
+		// Token: 0x0603C5F4 RID: 247284 RVA: 0x01139ECC File Offset: 0x011380CC
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DAC RID: 290220 RVA: 0x011DE388 File Offset: 0x011DC588
+		// Token: 0x0603C5F5 RID: 247285 RVA: 0x01139F80 File Offset: 0x01138180
 		private void InitEffect()
 		{
 			this.SplineActor = (ActorSystem.Instance.Get(TsGameSplineActor.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true) as TsGameSplineActor);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PlaybackEffectPath = this.Config.ReplaySpineEffect;
 		}
 
-		// Token: 0x06046DAD RID: 290221 RVA: 0x011DE500 File Offset: 0x011DC700
+		// Token: 0x0603C5F6 RID: 247286 RVA: 0x0113A0F8 File Offset: 0x011382F8
 		private void InitEndEntity()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.Config.EndEntityId);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06046DAE RID: 290222 RVA: 0x011DE5B0 File Offset: 0x011DC7B0
+		// Token: 0x0603C5F7 RID: 247287 RVA: 0x0113A1A8 File Offset: 0x011383A8
 		private void InitParamsFromTable()
 		{
 			GlobalConfigFromCsv? config = ConfigGlobalConfigFromCsvByName.GetConfig("WalkingPattern.MinDist", true);
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DAF RID: 290223 RVA: 0x011DE6AC File Offset: 0x011DC8AC
+		// Token: 0x0603C5F8 RID: 247288 RVA: 0x0113A2A4 File Offset: 0x011384A4
 		private void AddEvent()
 		{
 			EventSystem.Instance.AddWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
 		}
 
-		// Token: 0x06046DB0 RID: 290224 RVA: 0x011DE6D0 File Offset: 0x011DC8D0
+		// Token: 0x0603C5F9 RID: 247289 RVA: 0x0113A2C8 File Offset: 0x011384C8
 		protected override void OnTick(float delta)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CheckAwaySplineFail(delta);
 		}
 
-		// Token: 0x06046DB1 RID: 290225 RVA: 0x011DE75C File Offset: 0x011DC95C
+		// Token: 0x0603C5FA RID: 247290 RVA: 0x0113A354 File Offset: 0x01138554
 		private void CheckPoint()
 		{
 			if (this.SplineComp == null)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DB2 RID: 290226 RVA: 0x011DE7E4 File Offset: 0x011DC9E4
+		// Token: 0x0603C5FB RID: 247291 RVA: 0x0113A3DC File Offset: 0x011385DC
 		private void CheckDistToSpline()
 		{
 			if (this.SplineComp == null)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CheckNum++;
 		}
 
-		// Token: 0x06046DB3 RID: 290227 RVA: 0x011DE85C File Offset: 0x011DCA5C
+		// Token: 0x0603C5FC RID: 247292 RVA: 0x0113A454 File Offset: 0x01138654
 		private void RecordLocationInfo()
 		{
 			if (Global.BaseCharacter == null || this.ActorComp == null)
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.StepQueue.Push(vector);
 		}
 
-		// Token: 0x06046DB4 RID: 290228 RVA: 0x011DE904 File Offset: 0x011DCB04
+		// Token: 0x0603C5FD RID: 247293 RVA: 0x0113A4FC File Offset: 0x011386FC
 		private void CheckAwaySplineFail(float delta)
 		{
 			if (this.AwaySplineFailDistance < 0.0)
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DB5 RID: 290229 RVA: 0x011DE971 File Offset: 0x011DCB71
+		// Token: 0x0603C5FE RID: 247294 RVA: 0x0113A569 File Offset: 0x01138769
 		protected override bool OnEnd()
 		{
 			this.StopPreviewEffect();
@@ -264,19 +264,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DB6 RID: 290230 RVA: 0x011DE986 File Offset: 0x011DCB86
+		// Token: 0x0603C5FF RID: 247295 RVA: 0x0113A57E File Offset: 0x0113877E
 		private void RemoveEvent()
 		{
 			EventSystem.Instance.RemoveWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
 		}
 
-		// Token: 0x06046DB7 RID: 290231 RVA: 0x011DE9AA File Offset: 0x011DCBAA
+		// Token: 0x0603C600 RID: 247296 RVA: 0x0113A5A2 File Offset: 0x011387A2
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.HandleStateChange(stateId);
 		}
 
-		// Token: 0x06046DB8 RID: 290232 RVA: 0x011DE9B4 File Offset: 0x011DCBB4
+		// Token: 0x0603C601 RID: 247297 RVA: 0x0113A5AC File Offset: 0x011387AC
 		private void HandleStateChange(int stateId)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.打击机关.状态3"])
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DB9 RID: 290233 RVA: 0x011DEB4E File Offset: 0x011DCD4E
+		// Token: 0x0603C602 RID: 247298 RVA: 0x0113A746 File Offset: 0x01138946
 		private void ResetCheckParams()
 		{
 			this.CheckNum = 0;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CurCheckPointIndex = 0;
 		}
 
-		// Token: 0x06046DBA RID: 290234 RVA: 0x011DEB8C File Offset: 0x011DCD8C
+		// Token: 0x0603C603 RID: 247299 RVA: 0x0113A784 File Offset: 0x01138984
 		private void StartPreviewEffect(bool isReStart = true, float? duration = null)
 		{
 			if (this.PreviewEffectStopTimerHandle != null)
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DBB RID: 290235 RVA: 0x011DED18 File Offset: 0x011DCF18
+		// Token: 0x0603C604 RID: 247300 RVA: 0x0113A910 File Offset: 0x01138B10
 		private void StopPreviewEffect()
 		{
 			if (this.PreviewEffectHandle == null)
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PreviewEffectHandle = null;
 		}
 
-		// Token: 0x06046DBC RID: 290236 RVA: 0x011DED64 File Offset: 0x011DCF64
+		// Token: 0x0603C605 RID: 247301 RVA: 0x0113A95C File Offset: 0x01138B5C
 		private void StartPlaybackEffect()
 		{
 			if (this.PlaybackEffectPath == null)
@@ -428,7 +428,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PlaybackEffectHandle = ((guideEffectSpline != null) ? new int?(guideEffectSpline.EffectHandle) : null);
 		}
 
-		// Token: 0x06046DBD RID: 290237 RVA: 0x011DEDF4 File Offset: 0x011DCFF4
+		// Token: 0x0603C606 RID: 247302 RVA: 0x0113A9EC File Offset: 0x01138BEC
 		private void StopPlaybackEffect()
 		{
 			if (this.PlaybackEffectHandle == null)
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PlaybackEffectHandle = null;
 		}
 
-		// Token: 0x06046DBE RID: 290238 RVA: 0x011DEE40 File Offset: 0x011DD040
+		// Token: 0x0603C607 RID: 247303 RVA: 0x0113AA38 File Offset: 0x01138C38
 		private void OnMyPlayerInOutRangeLocal(bool isEnter)
 		{
 			if (!isEnter || this.IsFinish)
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DBF RID: 290239 RVA: 0x011DEF18 File Offset: 0x011DD118
+		// Token: 0x0603C608 RID: 247304 RVA: 0x0113AB10 File Offset: 0x01138D10
 		private void RequestFinish(float? score = null)
 		{
 			EntityWalkingPatternFinishRequest entityWalkingPatternFinishRequest = EntityWalkingPatternFinishRequest.Create();
@@ -489,7 +489,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DC0 RID: 290240 RVA: 0x011DEFC8 File Offset: 0x011DD1C8
+		// Token: 0x0603C609 RID: 247305 RVA: 0x0113ABC0 File Offset: 0x01138DC0
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -498,290 +498,233 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			GamePlayWalkingPatternComponent gamePlayWalkingPatternComponent = (GamePlayWalkingPatternComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (gamePlayWalkingPatternComponent.Config == null)
 			{
-				if (gamePlayWalkingPatternComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WalkingPatternComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (gamePlayWalkingPatternComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (gamePlayWalkingPatternComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SelfDisableHandle"))
-			{
-				this.SelfDisableHandle = gamePlayWalkingPatternComponent.SelfDisableHandle;
-			}
-			if (base.CanResetComponentProperty("SplineActor"))
-			{
-				if (gamePlayWalkingPatternComponent.SplineActor == null)
-				{
-					this.SplineActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsGameSplineActor>(this.SplineActor), "SplineActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SplineComp"))
-			{
-				if (gamePlayWalkingPatternComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PreviewEffectPath"))
-			{
-				this.PreviewEffectPath = gamePlayWalkingPatternComponent.PreviewEffectPath;
-			}
-			if (base.CanResetComponentProperty("PreviewEffectDuration"))
-			{
-				this.PreviewEffectDuration = gamePlayWalkingPatternComponent.PreviewEffectDuration;
-			}
-			if (base.CanResetComponentProperty("PreviewEffectStopTimerHandle"))
-			{
-				if (gamePlayWalkingPatternComponent.PreviewEffectStopTimerHandle == null)
-				{
-					this.PreviewEffectStopTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.PreviewEffectStopTimerHandle), "PreviewEffectStopTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PreviewEffectHandle"))
-			{
-				this.PreviewEffectHandle = gamePlayWalkingPatternComponent.PreviewEffectHandle;
-			}
-			if (base.CanResetComponentProperty("EndEntity"))
-			{
-				if (gamePlayWalkingPatternComponent.EndEntity == null)
-				{
-					this.EndEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.EndEntity), "EndEntity"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MinDist"))
-			{
-				this.MinDist = gamePlayWalkingPatternComponent.MinDist;
-			}
-			if (base.CanResetComponentProperty("MaxDist"))
-			{
-				this.MaxDist = gamePlayWalkingPatternComponent.MaxDist;
-			}
-			if (base.CanResetComponentProperty("CheckDist"))
-			{
-				this.CheckDist = gamePlayWalkingPatternComponent.CheckDist;
-			}
-			if (base.CanResetComponentProperty("StepNum"))
-			{
-				this.StepNum = gamePlayWalkingPatternComponent.StepNum;
-			}
-			if (base.CanResetComponentProperty("RecordMinDist"))
-			{
-				this.RecordMinDist = gamePlayWalkingPatternComponent.RecordMinDist;
-			}
-			if (base.CanResetComponentProperty("LastRecordLocation"))
-			{
-				if (gamePlayWalkingPatternComponent.LastRecordLocation == null)
-				{
-					this.LastRecordLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastRecordLocation), "LastRecordLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StepQueue") && gamePlayWalkingPatternComponent.StepQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Queue<global::Vector>>(this.StepQueue), "StepQueue"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PlaybackEffectPath"))
+			if (gamePlayWalkingPatternComponent.ActorComp == null)
 			{
-				this.PlaybackEffectPath = gamePlayWalkingPatternComponent.PlaybackEffectPath;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("PlaybackEffectHandle"))
-			{
-				this.PlaybackEffectHandle = gamePlayWalkingPatternComponent.PlaybackEffectHandle;
-			}
-			if (base.CanResetComponentProperty("FinalScore"))
-			{
-				this.FinalScore = gamePlayWalkingPatternComponent.FinalScore;
-			}
-			if (base.CanResetComponentProperty("IsFinish"))
-			{
-				this.IsFinish = gamePlayWalkingPatternComponent.IsFinish;
-			}
-			if (base.CanResetComponentProperty("CheckNum"))
-			{
-				this.CheckNum = gamePlayWalkingPatternComponent.CheckNum;
-			}
-			if (base.CanResetComponentProperty("TotalDist"))
-			{
-				this.TotalDist = gamePlayWalkingPatternComponent.TotalDist;
-			}
-			if (base.CanResetComponentProperty("TotalPointNum"))
-			{
-				this.TotalPointNum = gamePlayWalkingPatternComponent.TotalPointNum;
-			}
-			if (base.CanResetComponentProperty("CurCheckPointIndex"))
-			{
-				this.CurCheckPointIndex = gamePlayWalkingPatternComponent.CurCheckPointIndex;
-			}
-			if (base.CanResetComponentProperty("PlayerLocation") && gamePlayWalkingPatternComponent.PlayerLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerLocation), "PlayerLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ClosestPoint") && gamePlayWalkingPatternComponent.ClosestPoint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ClosestPoint), "ClosestPoint"))
+			if (gamePlayWalkingPatternComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("AwaySplineFailDistance"))
+			this.SelfDisableHandle = gamePlayWalkingPatternComponent.SelfDisableHandle;
+			if (gamePlayWalkingPatternComponent.SplineActor == null)
 			{
-				this.AwaySplineFailDistance = gamePlayWalkingPatternComponent.AwaySplineFailDistance;
+				this.SplineActor = null;
 			}
-			if (base.CanResetComponentProperty("StayAwayTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineActor), "SplineActor"))
 			{
-				this.StayAwayTime = gamePlayWalkingPatternComponent.StayAwayTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("StayAwayTimer"))
+			if (gamePlayWalkingPatternComponent.SplineComp == null)
 			{
-				this.StayAwayTimer = gamePlayWalkingPatternComponent.StayAwayTimer;
+				this.SplineComp = null;
 			}
-			if (base.CanResetComponentProperty("PlayerDistanceToSpline"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
 			{
-				this.PlayerDistanceToSpline = gamePlayWalkingPatternComponent.PlayerDistanceToSpline;
+				return false;
 			}
+			this.PreviewEffectPath = gamePlayWalkingPatternComponent.PreviewEffectPath;
+			this.PreviewEffectDuration = gamePlayWalkingPatternComponent.PreviewEffectDuration;
+			if (gamePlayWalkingPatternComponent.PreviewEffectStopTimerHandle == null)
+			{
+				this.PreviewEffectStopTimerHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PreviewEffectStopTimerHandle), "PreviewEffectStopTimerHandle"))
+			{
+				return false;
+			}
+			this.PreviewEffectHandle = gamePlayWalkingPatternComponent.PreviewEffectHandle;
+			if (gamePlayWalkingPatternComponent.EndEntity == null)
+			{
+				this.EndEntity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndEntity), "EndEntity"))
+			{
+				return false;
+			}
+			this.MinDist = gamePlayWalkingPatternComponent.MinDist;
+			this.MaxDist = gamePlayWalkingPatternComponent.MaxDist;
+			this.CheckDist = gamePlayWalkingPatternComponent.CheckDist;
+			this.StepNum = gamePlayWalkingPatternComponent.StepNum;
+			this.RecordMinDist = gamePlayWalkingPatternComponent.RecordMinDist;
+			if (gamePlayWalkingPatternComponent.LastRecordLocation == null)
+			{
+				this.LastRecordLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastRecordLocation), "LastRecordLocation"))
+			{
+				return false;
+			}
+			if (gamePlayWalkingPatternComponent.StepQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StepQueue), "StepQueue"))
+			{
+				return false;
+			}
+			this.PlaybackEffectPath = gamePlayWalkingPatternComponent.PlaybackEffectPath;
+			this.PlaybackEffectHandle = gamePlayWalkingPatternComponent.PlaybackEffectHandle;
+			this.FinalScore = gamePlayWalkingPatternComponent.FinalScore;
+			this.IsFinish = gamePlayWalkingPatternComponent.IsFinish;
+			this.CheckNum = gamePlayWalkingPatternComponent.CheckNum;
+			this.TotalDist = gamePlayWalkingPatternComponent.TotalDist;
+			this.TotalPointNum = gamePlayWalkingPatternComponent.TotalPointNum;
+			this.CurCheckPointIndex = gamePlayWalkingPatternComponent.CurCheckPointIndex;
+			if (gamePlayWalkingPatternComponent.PlayerLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerLocation), "PlayerLocation"))
+			{
+				return false;
+			}
+			if (gamePlayWalkingPatternComponent.ClosestPoint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClosestPoint), "ClosestPoint"))
+			{
+				return false;
+			}
+			this.AwaySplineFailDistance = gamePlayWalkingPatternComponent.AwaySplineFailDistance;
+			this.StayAwayTime = gamePlayWalkingPatternComponent.StayAwayTime;
+			this.StayAwayTimer = gamePlayWalkingPatternComponent.StayAwayTimer;
+			this.PlayerDistanceToSpline = gamePlayWalkingPatternComponent.PlayerDistanceToSpline;
 			return true;
 		}
 
-		// Token: 0x04025301 RID: 152321
+		// Token: 0x170071FB RID: 29179
+		// (get) Token: 0x0603C60A RID: 247306 RVA: 0x0113AE9A File Offset: 0x0113909A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071FC RID: 29180
+		// (get) Token: 0x0603C60B RID: 247307 RVA: 0x0113AE9D File Offset: 0x0113909D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071FD RID: 29181
+		// (get) Token: 0x0603C60C RID: 247308 RVA: 0x0113AEA0 File Offset: 0x011390A0
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF68 RID: 130920
 		private WalkingPatternComponent Config;
 
-		// Token: 0x04025302 RID: 152322
+		// Token: 0x0401FF69 RID: 130921
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025303 RID: 152323
+		// Token: 0x0401FF6A RID: 130922
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025304 RID: 152324
+		// Token: 0x0401FF6B RID: 130923
 		private int? SelfDisableHandle;
 
-		// Token: 0x04025305 RID: 152325
+		// Token: 0x0401FF6C RID: 130924
 		private TsGameSplineActor SplineActor;
 
-		// Token: 0x04025306 RID: 152326
+		// Token: 0x0401FF6D RID: 130925
 		private USplineComponent SplineComp;
 
-		// Token: 0x04025307 RID: 152327
+		// Token: 0x0401FF6E RID: 130926
 		private string PreviewEffectPath;
 
-		// Token: 0x04025308 RID: 152328
+		// Token: 0x0401FF6F RID: 130927
 		private float? PreviewEffectDuration;
 
-		// Token: 0x04025309 RID: 152329
+		// Token: 0x0401FF70 RID: 130928
 		private TimerHandle PreviewEffectStopTimerHandle;
 
-		// Token: 0x0402530A RID: 152330
+		// Token: 0x0401FF71 RID: 130929
 		private int? PreviewEffectHandle;
 
-		// Token: 0x0402530B RID: 152331
+		// Token: 0x0401FF72 RID: 130930
 		private Entity EndEntity;
 
-		// Token: 0x0402530C RID: 152332
+		// Token: 0x0401FF73 RID: 130931
 		private double MinDist;
 
-		// Token: 0x0402530D RID: 152333
+		// Token: 0x0401FF74 RID: 130932
 		private double MaxDist;
 
-		// Token: 0x0402530E RID: 152334
+		// Token: 0x0401FF75 RID: 130933
 		private double CheckDist;
 
-		// Token: 0x0402530F RID: 152335
+		// Token: 0x0401FF76 RID: 130934
 		private int StepNum;
 
-		// Token: 0x04025310 RID: 152336
+		// Token: 0x0401FF77 RID: 130935
 		private double RecordMinDist;
 
-		// Token: 0x04025311 RID: 152337
+		// Token: 0x0401FF78 RID: 130936
 		private global::Vector LastRecordLocation;
 
-		// Token: 0x04025312 RID: 152338
+		// Token: 0x0401FF79 RID: 130937
 		[Nullable(1)]
 		private readonly Queue<global::Vector> StepQueue = new Queue<global::Vector>(4);
 
-		// Token: 0x04025313 RID: 152339
+		// Token: 0x0401FF7A RID: 130938
 		private string PlaybackEffectPath;
 
-		// Token: 0x04025314 RID: 152340
+		// Token: 0x0401FF7B RID: 130939
 		private int? PlaybackEffectHandle;
 
-		// Token: 0x04025315 RID: 152341
+		// Token: 0x0401FF7C RID: 130940
 		private float FinalScore;
 
-		// Token: 0x04025316 RID: 152342
+		// Token: 0x0401FF7D RID: 130941
 		private bool IsFinish;
 
-		// Token: 0x04025317 RID: 152343
+		// Token: 0x0401FF7E RID: 130942
 		private int CheckNum;
 
-		// Token: 0x04025318 RID: 152344
+		// Token: 0x0401FF7F RID: 130943
 		private double TotalDist;
 
-		// Token: 0x04025319 RID: 152345
+		// Token: 0x0401FF80 RID: 130944
 		private int TotalPointNum = -1;
 
-		// Token: 0x0402531A RID: 152346
+		// Token: 0x0401FF81 RID: 130945
 		private int CurCheckPointIndex = -1;
 
-		// Token: 0x0402531B RID: 152347
+		// Token: 0x0401FF82 RID: 130946
 		[Nullable(1)]
 		private readonly global::Vector PlayerLocation = global::Vector.Create();
 
-		// Token: 0x0402531C RID: 152348
+		// Token: 0x0401FF83 RID: 130947
 		[Nullable(1)]
 		private readonly global::Vector ClosestPoint = global::Vector.Create();
 
-		// Token: 0x0402531D RID: 152349
+		// Token: 0x0401FF84 RID: 130948
 		private double AwaySplineFailDistance = -1.0;
 
-		// Token: 0x0402531E RID: 152350
+		// Token: 0x0401FF85 RID: 130949
 		private float StayAwayTime = -1f;
 
-		// Token: 0x0402531F RID: 152351
+		// Token: 0x0401FF86 RID: 130950
 		private float StayAwayTimer;
 
-		// Token: 0x04025320 RID: 152352
+		// Token: 0x0401FF87 RID: 130951
 		private double PlayerDistanceToSpline;
 	}
 }

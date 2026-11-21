@@ -6,125 +6,110 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043CF RID: 17359
+	// Token: 0x020033E8 RID: 13288
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/SFreeCamera.SFreeCamera")]
 	[UnrealStructLayout(120, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 120)]
 	public class SFreeCamera : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602CF62 RID: 184162 RVA: 0x00A2D450 File Offset: 0x00A2B650
+		// Token: 0x06021B35 RID: 138037 RVA: 0x009673DB File Offset: 0x009655DB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFreeCamera._ScriptStructPtr != 0) ? SFreeCamera._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/Camera/SFreeCamera.SFreeCamera", ref SFreeCamera._ScriptStructPtr);
 		}
 
-		// Token: 0x170071CF RID: 29135
-		// (get) Token: 0x0602CF63 RID: 184163 RVA: 0x00A2D474 File Offset: 0x00A2B674
-		// (set) Token: 0x0602CF64 RID: 184164 RVA: 0x00A2D484 File Offset: 0x00A2B684
+		// Token: 0x170045C1 RID: 17857
+		// (get) Token: 0x06021B36 RID: 138038 RVA: 0x009673FF File Offset: 0x009655FF
+		// (set) Token: 0x06021B37 RID: 138039 RVA: 0x0096740F File Offset: 0x0096560F
 		public unsafe bool PC生效
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_PC生效) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_PC生效) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071D0 RID: 29136
-		// (get) Token: 0x0602CF65 RID: 184165 RVA: 0x00A2D495 File Offset: 0x00A2B695
-		// (set) Token: 0x0602CF66 RID: 184166 RVA: 0x00A2D4A5 File Offset: 0x00A2B6A5
+		// Token: 0x170045C2 RID: 17858
+		// (get) Token: 0x06021B38 RID: 138040 RVA: 0x00967420 File Offset: 0x00965620
+		// (set) Token: 0x06021B39 RID: 138041 RVA: 0x00967430 File Offset: 0x00965630
 		public unsafe bool 手机生效
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_手机生效) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_手机生效) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170071D1 RID: 29137
-		// (get) Token: 0x0602CF67 RID: 184167 RVA: 0x00A2D4B6 File Offset: 0x00A2B6B6
-		// (set) Token: 0x0602CF68 RID: 184168 RVA: 0x00A2D4CA File Offset: 0x00A2B6CA
+		// Token: 0x170045C3 RID: 17859
+		// (get) Token: 0x06021B3A RID: 138042 RVA: 0x00967441 File Offset: 0x00965641
+		// (set) Token: 0x06021B3B RID: 138043 RVA: 0x00967455 File Offset: 0x00965655
 		public unsafe FVector 初始位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始位置) = value;
 			}
 		}
 
-		// Token: 0x170071D2 RID: 29138
-		// (get) Token: 0x0602CF69 RID: 184169 RVA: 0x00A2D4DF File Offset: 0x00A2B6DF
-		// (set) Token: 0x0602CF6A RID: 184170 RVA: 0x00A2D4F3 File Offset: 0x00A2B6F3
+		// Token: 0x170045C4 RID: 17860
+		// (get) Token: 0x06021B3C RID: 138044 RVA: 0x0096746A File Offset: 0x0096566A
+		// (set) Token: 0x06021B3D RID: 138045 RVA: 0x0096747E File Offset: 0x0096567E
 		public unsafe FRotator 初始旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始旋转);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始旋转) = value;
 			}
 		}
 
-		// Token: 0x170071D3 RID: 29139
-		// (get) Token: 0x0602CF6B RID: 184171 RVA: 0x00A2D508 File Offset: 0x00A2B708
-		// (set) Token: 0x0602CF6C RID: 184172 RVA: 0x00A2D518 File Offset: 0x00A2B718
+		// Token: 0x170045C5 RID: 17861
+		// (get) Token: 0x06021B3E RID: 138046 RVA: 0x00967493 File Offset: 0x00965693
+		// (set) Token: 0x06021B3F RID: 138047 RVA: 0x009674A3 File Offset: 0x009656A3
 		public unsafe float 初始FOV
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始FOV);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始FOV) = value;
 			}
 		}
 
-		// Token: 0x170071D4 RID: 29140
-		// (get) Token: 0x0602CF6D RID: 184173 RVA: 0x00A2D529 File Offset: 0x00A2B729
-		// (set) Token: 0x0602CF6E RID: 184174 RVA: 0x00A2D53D File Offset: 0x00A2B73D
+		// Token: 0x170045C6 RID: 17862
+		// (get) Token: 0x06021B40 RID: 138048 RVA: 0x009674B4 File Offset: 0x009656B4
+		// (set) Token: 0x06021B41 RID: 138049 RVA: 0x009674C8 File Offset: 0x009656C8
 		public unsafe TEnumAsByte<EFreeCameraInputMode> 初始输入模式
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始输入模式);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_初始输入模式) = value;
 			}
 		}
 
-		// Token: 0x170071D5 RID: 29141
-		// (get) Token: 0x0602CF6F RID: 184175 RVA: 0x00A2D552 File Offset: 0x00A2B752
-		// (set) Token: 0x0602CF70 RID: 184176 RVA: 0x00A2D566 File Offset: 0x00A2B766
-		public unsafe SFreeCameraDragInput 拖动输入
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_6);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_6) = value;
-			}
-		}
-
-		// Token: 0x170071D6 RID: 29142
-		// (get) Token: 0x0602CF71 RID: 184177 RVA: 0x00A2D57C File Offset: 0x00A2B77C
-		// (set) Token: 0x0602CF72 RID: 184178 RVA: 0x00A2D5BF File Offset: 0x00A2B7BF
+		// Token: 0x170045C7 RID: 17863
+		// (get) Token: 0x06021B42 RID: 138050 RVA: 0x009674E0 File Offset: 0x009656E0
+		// (set) Token: 0x06021B43 RID: 138051 RVA: 0x00967523 File Offset: 0x00965723
 		[Nullable(new byte[]
 		{
 			1,
@@ -143,7 +128,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 				TMap<TEnumAsByte<EFreeCameraLimit>, float> result;
 				if ((result = this._限制) == null)
 				{
-					result = (this._限制 = new TMap<TEnumAsByte<EFreeCameraLimit>, float>(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._限制 = new TMap<TEnumAsByte<EFreeCameraLimit>, float>(base.NativePtr + (IntPtr)SFreeCamera.__PropertyOffset_限制, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -158,91 +143,71 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			}
 		}
 
-		// Token: 0x0602CF73 RID: 184179 RVA: 0x00A2D5CD File Offset: 0x00A2B7CD
+		// Token: 0x06021B44 RID: 138052 RVA: 0x00967531 File Offset: 0x00965731
 		public SFreeCamera()
 		{
 		}
 
-		// Token: 0x0602CF74 RID: 184180 RVA: 0x00A2D5D8 File Offset: 0x00A2B7D8
-		public SFreeCamera(bool PC生效, bool 手机生效, FVector 初始位置, FRotator 初始旋转, float 初始FOV, TEnumAsByte<EFreeCameraInputMode> 初始输入模式, SFreeCameraDragInput 拖动输入, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TMap<TEnumAsByte<EFreeCameraLimit>, float> 限制)
-		{
-			this.PC生效 = PC生效;
-			this.手机生效 = 手机生效;
-			this.初始位置 = 初始位置;
-			this.初始旋转 = 初始旋转;
-			this.初始FOV = 初始FOV;
-			this.初始输入模式 = 初始输入模式;
-			this.拖动输入 = 拖动输入;
-			this.限制 = 限制;
-		}
-
-		// Token: 0x0602CF75 RID: 184181 RVA: 0x00A2D628 File Offset: 0x00A2B828
+		// Token: 0x06021B45 RID: 138053 RVA: 0x00967539 File Offset: 0x00965739
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFreeCamera.StaticStruct();
 		}
 
-		// Token: 0x0602CF76 RID: 184182 RVA: 0x00A2D634 File Offset: 0x00A2B834
+		// Token: 0x06021B46 RID: 138054 RVA: 0x00967545 File Offset: 0x00965745
 		[NullableContext(2)]
 		public SFreeCamera(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CF77 RID: 184183 RVA: 0x00A2D63E File Offset: 0x00A2B83E
+		// Token: 0x06021B47 RID: 138055 RVA: 0x0096754F File Offset: 0x0096574F
 		public SFreeCamera(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CF78 RID: 184184 RVA: 0x00A2D649 File Offset: 0x00A2B849
+		// Token: 0x06021B48 RID: 138056 RVA: 0x0096755A File Offset: 0x0096575A
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFreeCamera(Pointer, false, true);
 		}
 
-		// Token: 0x0602CF79 RID: 184185 RVA: 0x00A2D653 File Offset: 0x00A2B853
+		// Token: 0x06021B49 RID: 138057 RVA: 0x00967564 File Offset: 0x00965764
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFreeCamera(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017DBB RID: 97723
+		// Token: 0x04012906 RID: 76038
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/SFreeCamera.SFreeCamera";
 
-		// Token: 0x04017DBC RID: 97724
+		// Token: 0x04012907 RID: 76039
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017DBD RID: 97725
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012908 RID: 76040
+		internal static int __PropertyOffset_PC生效;
 
-		// Token: 0x04017DBE RID: 97726
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012909 RID: 76041
+		internal static int __PropertyOffset_手机生效;
 
-		// Token: 0x04017DBF RID: 97727
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401290A RID: 76042
+		internal static int __PropertyOffset_初始位置;
 
-		// Token: 0x04017DC0 RID: 97728
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401290B RID: 76043
+		internal static int __PropertyOffset_初始旋转;
 
-		// Token: 0x04017DC1 RID: 97729
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401290C RID: 76044
+		internal static int __PropertyOffset_初始FOV;
 
-		// Token: 0x04017DC2 RID: 97730
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401290D RID: 76045
+		internal static int __PropertyOffset_初始输入模式;
 
-		// Token: 0x04017DC3 RID: 97731
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401290E RID: 76046
+		internal static int __PropertyOffset_限制;
 
-		// Token: 0x04017DC4 RID: 97732
-		internal static int __PropertyOffset_7;
-
-		// Token: 0x04017DC5 RID: 97733
+		// Token: 0x0401290F RID: 76047
 		[Nullable(new byte[]
 		{
 			2,

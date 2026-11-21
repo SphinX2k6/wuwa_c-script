@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -21,14 +20,14 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Map
 {
-	// Token: 0x02005487 RID: 21639
+	// Token: 0x0200446A RID: 17514
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapModel : ModelBase
 	{
-		// Token: 0x17008472 RID: 33906
-		// (get) Token: 0x06037388 RID: 226184 RVA: 0x00D18538 File Offset: 0x00D16738
-		// (set) Token: 0x06037389 RID: 226185 RVA: 0x00D18540 File Offset: 0x00D16740
+		// Token: 0x1700583E RID: 22590
+		// (get) Token: 0x0602C2D1 RID: 180945 RVA: 0x00C679F1 File Offset: 0x00C65BF1
+		// (set) Token: 0x0602C2D2 RID: 180946 RVA: 0x00C679F9 File Offset: 0x00C65BF9
 		public int? LastHighLevelArea
 		{
 			get
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x0603738A RID: 226186 RVA: 0x00D1854C File Offset: 0x00D1674C
+		// Token: 0x0602C2D3 RID: 180947 RVA: 0x00C67A04 File Offset: 0x00C65C04
 		protected override bool OnInit()
 		{
 			this.DynamicMarks = new Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>>();
@@ -69,7 +68,7 @@ namespace CSharpScript.Game.Module.Map
 			return true;
 		}
 
-		// Token: 0x0603738B RID: 226187 RVA: 0x00D18647 File Offset: 0x00D16847
+		// Token: 0x0602C2D4 RID: 180948 RVA: 0x00C67AFF File Offset: 0x00C65CFF
 		protected override bool OnChangeMode()
 		{
 			TrackModel.Instance.ClearTrackData();
@@ -77,7 +76,7 @@ namespace CSharpScript.Game.Module.Map
 			return true;
 		}
 
-		// Token: 0x0603738C RID: 226188 RVA: 0x00D1865C File Offset: 0x00D1685C
+		// Token: 0x0602C2D5 RID: 180949 RVA: 0x00C67B14 File Offset: 0x00C65D14
 		protected override bool OnClear()
 		{
 			Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> dynamicMarks = this.DynamicMarks;
@@ -162,14 +161,14 @@ namespace CSharpScript.Game.Module.Map
 			return true;
 		}
 
-		// Token: 0x0603738D RID: 226189 RVA: 0x00D187B1 File Offset: 0x00D169B1
+		// Token: 0x0602C2D6 RID: 180950 RVA: 0x00C67C69 File Offset: 0x00C65E69
 		[NullableContext(2)]
 		public Dictionary<int, bool> GetUnlockedTeleportMap()
 		{
 			return this.UnlockedTeleports;
 		}
 
-		// Token: 0x0603738E RID: 226190 RVA: 0x00D187B9 File Offset: 0x00D169B9
+		// Token: 0x0602C2D7 RID: 180951 RVA: 0x00C67C71 File Offset: 0x00C65E71
 		[NullableContext(2)]
 		public DynamicMarkCreateInfo GetDynamicMark(int markId)
 		{
@@ -181,7 +180,7 @@ namespace CSharpScript.Game.Module.Map
 			return dynamicMarksSearchMap.GetValueOrDefault(markId);
 		}
 
-		// Token: 0x0603738F RID: 226191 RVA: 0x00D187D0 File Offset: 0x00D169D0
+		// Token: 0x0602C2D8 RID: 180952 RVA: 0x00C67C88 File Offset: 0x00C65E88
 		[NullableContext(2)]
 		public DynamicMarkCreateInfo GetMark(EMarkType markType, int markId)
 		{
@@ -196,7 +195,7 @@ namespace CSharpScript.Game.Module.Map
 			return null;
 		}
 
-		// Token: 0x06037390 RID: 226192 RVA: 0x00D18801 File Offset: 0x00D16A01
+		// Token: 0x0602C2D9 RID: 180953 RVA: 0x00C67CB9 File Offset: 0x00C65EB9
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -207,7 +206,7 @@ namespace CSharpScript.Game.Module.Map
 			return this.DynamicMarks.GetValueOrDefault(markType);
 		}
 
-		// Token: 0x06037391 RID: 226193 RVA: 0x00D18810 File Offset: 0x00D16A10
+		// Token: 0x0602C2DA RID: 180954 RVA: 0x00C67CC8 File Offset: 0x00C65EC8
 		public int GetMarkCountByType(EMarkType markType)
 		{
 			Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> dynamicMarks = this.DynamicMarks;
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.Map
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x06037392 RID: 226194 RVA: 0x00D1885C File Offset: 0x00D16A5C
+		// Token: 0x0602C2DB RID: 180955 RVA: 0x00C67D14 File Offset: 0x00C65F14
 		public TTrackTarget GetConfigMarkTrackTarget(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -243,7 +242,7 @@ namespace CSharpScript.Game.Module.Map
 			return 0;
 		}
 
-		// Token: 0x06037393 RID: 226195 RVA: 0x00D188E0 File Offset: 0x00D16AE0
+		// Token: 0x0602C2DC RID: 180956 RVA: 0x00C67D98 File Offset: 0x00C65F98
 		[NullableContext(2)]
 		public QuestMarkCreateInfo GetMarkByQuestId(int questId)
 		{
@@ -271,7 +270,7 @@ namespace CSharpScript.Game.Module.Map
 			return null;
 		}
 
-		// Token: 0x06037394 RID: 226196 RVA: 0x00D18988 File Offset: 0x00D16B88
+		// Token: 0x0602C2DD RID: 180957 RVA: 0x00C67E40 File Offset: 0x00C66040
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -283,7 +282,7 @@ namespace CSharpScript.Game.Module.Map
 			return this.DynamicMarks;
 		}
 
-		// Token: 0x06037395 RID: 226197 RVA: 0x00D18990 File Offset: 0x00D16B90
+		// Token: 0x0602C2DE RID: 180958 RVA: 0x00C67E48 File Offset: 0x00C66048
 		[NullableContext(2)]
 		public DynamicMarkCreateInfo GetDynamicMarkInfoById(int markId)
 		{
@@ -306,14 +305,14 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x06037396 RID: 226198 RVA: 0x00D189FC File Offset: 0x00D16BFC
+		// Token: 0x0602C2DF RID: 180959 RVA: 0x00C67EB4 File Offset: 0x00C660B4
 		[NullableContext(2)]
 		public void SetCurTrackMark(TrackMapMarkParams trackMark)
 		{
 			this.CurTrackParams = trackMark;
 		}
 
-		// Token: 0x06037397 RID: 226199 RVA: 0x00D18A08 File Offset: 0x00D16C08
+		// Token: 0x0602C2E0 RID: 180960 RVA: 0x00C67EC0 File Offset: 0x00C660C0
 		[NullableContext(2)]
 		public bool IsEqualToCurTrack(TrackMapMarkParams trackMark)
 		{
@@ -339,26 +338,34 @@ namespace CSharpScript.Game.Module.Map
 			return false;
 		}
 
-		// Token: 0x06037398 RID: 226200 RVA: 0x00D18B39 File Offset: 0x00D16D39
+		// Token: 0x0602C2E1 RID: 180961 RVA: 0x00C67FF1 File Offset: 0x00C661F1
 		[NullableContext(2)]
 		public TrackMapMarkParams GetCurTrackMark()
 		{
 			return this.CurTrackParams;
 		}
 
-		// Token: 0x06037399 RID: 226201 RVA: 0x00D18B41 File Offset: 0x00D16D41
+		// Token: 0x0602C2E2 RID: 180962 RVA: 0x00C67FF9 File Offset: 0x00C661F9
 		public void CreateServerSaveMark(DynamicMarkCreateInfo info)
 		{
 			this.CreateDynamicMark(info);
 		}
 
-		// Token: 0x0603739A RID: 226202 RVA: 0x00D18B4C File Offset: 0x00D16D4C
+		// Token: 0x0602C2E3 RID: 180963 RVA: 0x00C68004 File Offset: 0x00C66204
 		public int CreateDyMarkByEntity(int entityId, EMarkType markType, int configId, int mapId)
 		{
 			Dictionary<int, DynamicMarkCreateInfo> valueOrDefault = this.DynamicMarks.GetValueOrDefault(markType);
 			if (valueOrDefault != null)
 			{
-				DynamicMarkCreateInfo dynamicMarkCreateInfo = valueOrDefault.Values.FirstOrDefault((DynamicMarkCreateInfo mark) => (TTrackTarget_Int)mark.TrackTarget == entityId);
+				DynamicMarkCreateInfo dynamicMarkCreateInfo = null;
+				foreach (DynamicMarkCreateInfo dynamicMarkCreateInfo2 in valueOrDefault.Values)
+				{
+					if ((TTrackTarget_Int)dynamicMarkCreateInfo2.TrackTarget == entityId)
+					{
+						dynamicMarkCreateInfo = dynamicMarkCreateInfo2;
+						break;
+					}
+				}
 				if (dynamicMarkCreateInfo != null)
 				{
 					return dynamicMarkCreateInfo.MarkId.Value;
@@ -379,20 +386,20 @@ namespace CSharpScript.Game.Module.Map
 			return this.CreateMapMark(info);
 		}
 
-		// Token: 0x0603739B RID: 226203 RVA: 0x00D18C07 File Offset: 0x00D16E07
+		// Token: 0x0602C2E4 RID: 180964 RVA: 0x00C680EC File Offset: 0x00C662EC
 		public void CreateTempMapMark(int mapMarkId)
 		{
 			this.AddPendingTempMapMarkList(mapMarkId);
 			EventSystem.Instance.Emit<int>(EEventName.CreateTempMapMark, mapMarkId);
 		}
 
-		// Token: 0x0603739C RID: 226204 RVA: 0x00D18C21 File Offset: 0x00D16E21
+		// Token: 0x0602C2E5 RID: 180965 RVA: 0x00C68106 File Offset: 0x00C66306
 		public HashSet<int> GetPendingAddTempMapMarkList()
 		{
 			return this.PendingAddTempMapMarkList;
 		}
 
-		// Token: 0x0603739D RID: 226205 RVA: 0x00D18C29 File Offset: 0x00D16E29
+		// Token: 0x0602C2E6 RID: 180966 RVA: 0x00C6810E File Offset: 0x00C6630E
 		public void ClearPendingAddTempMapMarkList()
 		{
 			HashSet<int> pendingAddTempMapMarkList = this.PendingAddTempMapMarkList;
@@ -403,7 +410,7 @@ namespace CSharpScript.Game.Module.Map
 			pendingAddTempMapMarkList.Clear();
 		}
 
-		// Token: 0x0603739E RID: 226206 RVA: 0x00D18C3B File Offset: 0x00D16E3B
+		// Token: 0x0602C2E7 RID: 180967 RVA: 0x00C68120 File Offset: 0x00C66320
 		public void AddPendingTempMapMarkList(int mapMarkId)
 		{
 			HashSet<int> pendingAddTempMapMarkList = this.PendingAddTempMapMarkList;
@@ -414,7 +421,7 @@ namespace CSharpScript.Game.Module.Map
 			pendingAddTempMapMarkList.Add(mapMarkId);
 		}
 
-		// Token: 0x0603739F RID: 226207 RVA: 0x00D18C50 File Offset: 0x00D16E50
+		// Token: 0x0602C2E8 RID: 180968 RVA: 0x00C68134 File Offset: 0x00C66334
 		public int CreateMapMark(DynamicMarkCreateInfo info)
 		{
 			info.MarkId = new int?(this.SpawnDynamicMarkId());
@@ -422,7 +429,7 @@ namespace CSharpScript.Game.Module.Map
 			return info.MarkId.Value;
 		}
 
-		// Token: 0x060373A0 RID: 226208 RVA: 0x00D18C84 File Offset: 0x00D16E84
+		// Token: 0x0602C2E9 RID: 180969 RVA: 0x00C68168 File Offset: 0x00C66368
 		public void CacheMapFishingShipMark(EntityMapMarkInfoPb[] entityMapMarkInfo)
 		{
 			this.CacheEntityMapMarkInfo.Clear();
@@ -447,7 +454,7 @@ namespace CSharpScript.Game.Module.Map
 			this.TryRecreateShipMark();
 		}
 
-		// Token: 0x060373A1 RID: 226209 RVA: 0x00D18D5C File Offset: 0x00D16F5C
+		// Token: 0x0602C2EA RID: 180970 RVA: 0x00C68240 File Offset: 0x00C66440
 		public void TryRecreateShipMark()
 		{
 			if (this.GetMarkCountByType(EMarkType.FishingShip) > 0)
@@ -472,71 +479,70 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373A2 RID: 226210 RVA: 0x00D18E38 File Offset: 0x00D17038
+		// Token: 0x0602C2EB RID: 180971 RVA: 0x00C6831C File Offset: 0x00C6651C
 		public void RemoveFishingShipMarkAndCache()
 		{
 			this.CacheEntityMapMarkInfo.Clear();
 			this.RemoveMapMarkByType(EMarkType.FishingShip);
 		}
 
-		// Token: 0x060373A3 RID: 226211 RVA: 0x00D18E50 File Offset: 0x00D17050
+		// Token: 0x0602C2EC RID: 180972 RVA: 0x00C68334 File Offset: 0x00C66534
 		public void SyncLocalShipLocationToCacheInfo()
 		{
 			Dictionary<int, DynamicMarkCreateInfo> markByType = this.GetMarkByType(EMarkType.FishingShip);
 			if (markByType != null)
 			{
-				using (Dictionary<int, DynamicMarkCreateInfo>.ValueCollection.Enumerator enumerator = markByType.Values.GetEnumerator())
+				foreach (DynamicMarkCreateInfo dynamicMarkCreateInfo in markByType.Values)
 				{
-					while (enumerator.MoveNext())
+					List<MarkDefine.FishingShipMarkCacheInfo> list = new List<MarkDefine.FishingShipMarkCacheInfo>();
+					foreach (MarkDefine.FishingShipMarkCacheInfo fishingShipMarkCacheInfo in this.CacheEntityMapMarkInfo)
 					{
-						DynamicMarkCreateInfo markInfo = enumerator.Current;
-						List<MarkDefine.FishingShipMarkCacheInfo> list = this.CacheEntityMapMarkInfo.Where(delegate(MarkDefine.FishingShipMarkCacheInfo value)
+						int templateId = fishingShipMarkCacheInfo.TemplateId;
+						int? num = dynamicMarkCreateInfo.EntityConfigId;
+						if (templateId == num.GetValueOrDefault() & num != null)
 						{
-							int templateId = value.TemplateId;
-							int? num = markInfo.EntityConfigId;
-							if (templateId == num.GetValueOrDefault() & num != null)
+							int instanceId = fishingShipMarkCacheInfo.InstanceId;
+							num = dynamicMarkCreateInfo.InstanceDungeonId;
+							if (instanceId == num.GetValueOrDefault() & num != null)
 							{
-								int instanceId = value.InstanceId;
-								num = markInfo.InstanceDungeonId;
-								return instanceId == num.GetValueOrDefault() & num != null;
-							}
-							return false;
-						}).ToList<MarkDefine.FishingShipMarkCacheInfo>();
-						global::Vector trackPositionByTrackTargetConfig = MapUtil.GetTrackPositionByTrackTargetConfig(markInfo.TrackTarget, markInfo.MapId, null);
-						if (list.Count > 0)
-						{
-							using (List<MarkDefine.FishingShipMarkCacheInfo>.Enumerator enumerator2 = list.GetEnumerator())
-							{
-								while (enumerator2.MoveNext())
-								{
-									MarkDefine.FishingShipMarkCacheInfo fishingShipMarkCacheInfo = enumerator2.Current;
-									fishingShipMarkCacheInfo.PositionX = trackPositionByTrackTargetConfig.X;
-									fishingShipMarkCacheInfo.PositionY = trackPositionByTrackTargetConfig.Y;
-									fishingShipMarkCacheInfo.PositionZ = trackPositionByTrackTargetConfig.Z;
-								}
-								continue;
+								list.Add(fishingShipMarkCacheInfo);
 							}
 						}
-						this.CacheEntityMapMarkInfo.Add(new MarkDefine.FishingShipMarkCacheInfo
-						{
-							InstanceId = markInfo.InstanceDungeonId.GetValueOrDefault(),
-							TemplateId = markInfo.EntityConfigId.GetValueOrDefault(),
-							PositionX = trackPositionByTrackTargetConfig.X,
-							PositionY = trackPositionByTrackTargetConfig.Y,
-							PositionZ = trackPositionByTrackTargetConfig.Z
-						});
 					}
+					global::Vector trackPositionByTrackTargetConfig = MapUtil.GetTrackPositionByTrackTargetConfig(dynamicMarkCreateInfo.TrackTarget, dynamicMarkCreateInfo.MapId, null);
+					if (list.Count > 0)
+					{
+						using (List<MarkDefine.FishingShipMarkCacheInfo>.Enumerator enumerator2 = list.GetEnumerator())
+						{
+							while (enumerator2.MoveNext())
+							{
+								MarkDefine.FishingShipMarkCacheInfo fishingShipMarkCacheInfo2 = enumerator2.Current;
+								fishingShipMarkCacheInfo2.PositionX = trackPositionByTrackTargetConfig.X;
+								fishingShipMarkCacheInfo2.PositionY = trackPositionByTrackTargetConfig.Y;
+								fishingShipMarkCacheInfo2.PositionZ = trackPositionByTrackTargetConfig.Z;
+							}
+							continue;
+						}
+					}
+					this.CacheEntityMapMarkInfo.Add(new MarkDefine.FishingShipMarkCacheInfo
+					{
+						InstanceId = dynamicMarkCreateInfo.InstanceDungeonId.GetValueOrDefault(),
+						TemplateId = dynamicMarkCreateInfo.EntityConfigId.GetValueOrDefault(),
+						PositionX = trackPositionByTrackTargetConfig.X,
+						PositionY = trackPositionByTrackTargetConfig.Y,
+						PositionZ = trackPositionByTrackTargetConfig.Z
+					});
 				}
 			}
 		}
 
-		// Token: 0x060373A4 RID: 226212 RVA: 0x00D18FE0 File Offset: 0x00D171E0
+		// Token: 0x0602C2ED RID: 180973 RVA: 0x00C68524 File Offset: 0x00C66724
 		private bool IsNeedCheckSamePosition(DynamicMarkCreateInfo markInfo)
 		{
 			return markInfo.MarkType != EMarkType.Quest && markInfo.MarkType != EMarkType.TemporaryTeleport && markInfo.MarkType != EMarkType.TreasureBoxDetector && markInfo.MarkType != EMarkType.Custom;
 		}
 
-		// Token: 0x060373A5 RID: 226213 RVA: 0x00D19010 File Offset: 0x00D17210
+		// Token: 0x0602C2EE RID: 180974 RVA: 0x00C68554 File Offset: 0x00C66754
 		public void ResetDynamicMarkData()
 		{
 			Dictionary<int, IMarkShowState> markExtraShowStateReference = this.MarkExtraShowStateReference;
@@ -568,7 +574,7 @@ namespace CSharpScript.Game.Module.Map
 			this.AddExploreEntityDynamicMarks(exploreEntityDynamicMarks);
 		}
 
-		// Token: 0x060373A6 RID: 226214 RVA: 0x00D190A4 File Offset: 0x00D172A4
+		// Token: 0x0602C2EF RID: 180975 RVA: 0x00C685E8 File Offset: 0x00C667E8
 		private void AddDynamicMarkDataList(EMarkType markType, [Nullable(new byte[]
 		{
 			2,
@@ -585,7 +591,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373A7 RID: 226215 RVA: 0x00D1911C File Offset: 0x00D1731C
+		// Token: 0x0602C2F0 RID: 180976 RVA: 0x00C68660 File Offset: 0x00C66860
 		private void AddExploreEntityDynamicMarks(Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> exploreEntityDynamicMarks)
 		{
 			foreach (KeyValuePair<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> keyValuePair in exploreEntityDynamicMarks)
@@ -598,7 +604,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373A8 RID: 226216 RVA: 0x00D191D8 File Offset: 0x00D173D8
+		// Token: 0x0602C2F1 RID: 180977 RVA: 0x00C6871C File Offset: 0x00C6691C
 		private Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> GetExploreEntityDynamicMarks()
 		{
 			Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> dictionary = new Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>>();
@@ -620,7 +626,7 @@ namespace CSharpScript.Game.Module.Map
 			return dictionary;
 		}
 
-		// Token: 0x060373A9 RID: 226217 RVA: 0x00D1923C File Offset: 0x00D1743C
+		// Token: 0x0602C2F2 RID: 180978 RVA: 0x00C68780 File Offset: 0x00C66980
 		private void CreateDynamicMark(DynamicMarkCreateInfo info)
 		{
 			if (this.DynamicMarks == null)
@@ -672,7 +678,7 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit<DynamicMarkCreateInfo>(EEventName.CreateMapMark, info);
 		}
 
-		// Token: 0x060373AA RID: 226218 RVA: 0x00D193CC File Offset: 0x00D175CC
+		// Token: 0x0602C2F3 RID: 180979 RVA: 0x00C68910 File Offset: 0x00C66B10
 		public void SetTrackMark(EMarkType markType, int markId, bool value)
 		{
 			EventSystem.Instance.Emit<EMarkType, int, bool>(EEventName.TrackMapMark, markType, markId, value);
@@ -696,7 +702,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373AB RID: 226219 RVA: 0x00D19434 File Offset: 0x00D17634
+		// Token: 0x0602C2F4 RID: 180980 RVA: 0x00C68978 File Offset: 0x00C66B78
 		public bool IsMarkIdExist(EMarkType type, int markId)
 		{
 			if (this.DynamicMarks == null || type == EMarkType.None || markId == 0)
@@ -723,7 +729,7 @@ namespace CSharpScript.Game.Module.Map
 			return false;
 		}
 
-		// Token: 0x060373AC RID: 226220 RVA: 0x00D194D8 File Offset: 0x00D176D8
+		// Token: 0x0602C2F5 RID: 180981 RVA: 0x00C68A1C File Offset: 0x00C66C1C
 		public EMarkType? GetMarkTypeByMarkId(int markId)
 		{
 			DynamicMarkCreateInfo dynamicMark = this.GetDynamicMark(markId);
@@ -746,26 +752,40 @@ namespace CSharpScript.Game.Module.Map
 			return null;
 		}
 
-		// Token: 0x060373AD RID: 226221 RVA: 0x00D19578 File Offset: 0x00D17778
+		// Token: 0x0602C2F6 RID: 180982 RVA: 0x00C68ABC File Offset: 0x00C66CBC
 		[NullableContext(0)]
 		public ValueTuple<int, EMarkType>? GetSoundBoxDetectMark()
 		{
 			Dictionary<int, DynamicMarkCreateInfo> markByType = this.GetMarkByType(EMarkType.SoundBox);
 			if (markByType != null && markByType.Count > 0)
 			{
-				DynamicMarkCreateInfo dynamicMarkCreateInfo = markByType.Values.First<DynamicMarkCreateInfo>();
+				DynamicMarkCreateInfo dynamicMarkCreateInfo = null;
+				using (Dictionary<int, DynamicMarkCreateInfo>.ValueCollection.Enumerator enumerator = markByType.Values.GetEnumerator())
+				{
+					if (enumerator.MoveNext())
+					{
+						dynamicMarkCreateInfo = enumerator.Current;
+					}
+				}
 				return new ValueTuple<int, EMarkType>?(new ValueTuple<int, EMarkType>(dynamicMarkCreateInfo.MarkId.Value, dynamicMarkCreateInfo.MarkType));
 			}
 			Dictionary<int, DynamicMarkCreateInfo> markByType2 = this.GetMarkByType(EMarkType.CalmingWindBell);
 			if (markByType2 != null && markByType2.Count > 0)
 			{
-				DynamicMarkCreateInfo dynamicMarkCreateInfo2 = markByType2.Values.First<DynamicMarkCreateInfo>();
+				DynamicMarkCreateInfo dynamicMarkCreateInfo2 = null;
+				using (Dictionary<int, DynamicMarkCreateInfo>.ValueCollection.Enumerator enumerator = markByType2.Values.GetEnumerator())
+				{
+					if (enumerator.MoveNext())
+					{
+						dynamicMarkCreateInfo2 = enumerator.Current;
+					}
+				}
 				return new ValueTuple<int, EMarkType>?(new ValueTuple<int, EMarkType>(dynamicMarkCreateInfo2.MarkId.Value, dynamicMarkCreateInfo2.MarkType));
 			}
 			return null;
 		}
 
-		// Token: 0x060373AE RID: 226222 RVA: 0x00D19614 File Offset: 0x00D17814
+		// Token: 0x0602C2F7 RID: 180983 RVA: 0x00C68BC4 File Offset: 0x00C66DC4
 		[NullableContext(0)]
 		public ValueTuple<int, EMarkType>? GetSoundBoxDetectMarkCalc()
 		{
@@ -817,7 +837,7 @@ namespace CSharpScript.Game.Module.Map
 			return this.GetSoundBoxDetectMark();
 		}
 
-		// Token: 0x060373AF RID: 226223 RVA: 0x00D197C8 File Offset: 0x00D179C8
+		// Token: 0x0602C2F8 RID: 180984 RVA: 0x00C68D78 File Offset: 0x00C66F78
 		public bool IsConfigMarkIdUnlock(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -834,13 +854,13 @@ namespace CSharpScript.Game.Module.Map
 			return flag && flag2;
 		}
 
-		// Token: 0x060373B0 RID: 226224 RVA: 0x00D19824 File Offset: 0x00D17A24
+		// Token: 0x0602C2F9 RID: 180985 RVA: 0x00C68DD4 File Offset: 0x00C66FD4
 		private bool IsFogUnlock(MapMark markConfig)
 		{
 			return markConfig.FogShow == 1 || this.CheckFogUnlocked(markConfig.FogHide, null);
 		}
 
-		// Token: 0x060373B1 RID: 226225 RVA: 0x00D19854 File Offset: 0x00D17A54
+		// Token: 0x0602C2FA RID: 180986 RVA: 0x00C68E04 File Offset: 0x00C67004
 		private bool IsConditionUnlock(MapMark markConfig)
 		{
 			int showCondition = markConfig.ShowCondition;
@@ -852,7 +872,7 @@ namespace CSharpScript.Game.Module.Map
 			return showCondition == 0 || this.IsMarkUnlockedByServer(markId);
 		}
 
-		// Token: 0x060373B2 RID: 226226 RVA: 0x00D19894 File Offset: 0x00D17A94
+		// Token: 0x0602C2FB RID: 180987 RVA: 0x00C68E44 File Offset: 0x00C67044
 		public unsafe void RemoveMapMark(EMarkType? markType, int? markId)
 		{
 			if (this.DynamicMarks == null || markType == null || markId == null)
@@ -884,7 +904,7 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit<EMarkType, int>(EEventName.RemoveMapMark, markType.Value, markId.Value);
 		}
 
-		// Token: 0x060373B3 RID: 226227 RVA: 0x00D19980 File Offset: 0x00D17B80
+		// Token: 0x0602C2FC RID: 180988 RVA: 0x00C68F30 File Offset: 0x00C67130
 		public void RemoveMapMarkByType(EMarkType markType)
 		{
 			Dictionary<int, DynamicMarkCreateInfo> markByType = this.GetMarkByType(markType);
@@ -905,7 +925,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373B4 RID: 226228 RVA: 0x00D19A60 File Offset: 0x00D17C60
+		// Token: 0x0602C2FD RID: 180989 RVA: 0x00C69010 File Offset: 0x00C67210
 		public void RemoveMapMarksByConfigId(EMarkType? markType, int? markConfigId)
 		{
 			if (this.DynamicMarks == null || markType == null || markConfigId == null)
@@ -933,7 +953,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373B5 RID: 226229 RVA: 0x00D19B58 File Offset: 0x00D17D58
+		// Token: 0x0602C2FE RID: 180990 RVA: 0x00C69108 File Offset: 0x00C67308
 		public void RemoveDynamicMapMark(int? markId)
 		{
 			if (markId != null)
@@ -954,7 +974,7 @@ namespace CSharpScript.Game.Module.Map
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060373B6 RID: 226230 RVA: 0x00D19BF0 File Offset: 0x00D17DF0
+		// Token: 0x0602C2FF RID: 180991 RVA: 0x00C691A0 File Offset: 0x00C673A0
 		public void UpdateCustomMarkInfo(int markId, global::Vector newVector)
 		{
 			if (this.DynamicMarks == null)
@@ -974,7 +994,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373B7 RID: 226231 RVA: 0x00D19C4C File Offset: 0x00D17E4C
+		// Token: 0x0602C300 RID: 180992 RVA: 0x00C691FC File Offset: 0x00C673FC
 		public void ReplaceCustomMarkIcon(int markId, int newConfigId)
 		{
 			if (this.DynamicMarks == null)
@@ -995,7 +1015,7 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit<EMarkType, int, int>(EEventName.MapReplaceMarkResponse, EMarkType.Custom, markId, newConfigId);
 		}
 
-		// Token: 0x060373B8 RID: 226232 RVA: 0x00D19C9C File Offset: 0x00D17E9C
+		// Token: 0x0602C301 RID: 180993 RVA: 0x00C6924C File Offset: 0x00C6744C
 		public int SpawnDynamicMarkId()
 		{
 			int num = this.DynamicMarkId - 1;
@@ -1003,7 +1023,7 @@ namespace CSharpScript.Game.Module.Map
 			return num;
 		}
 
-		// Token: 0x060373B9 RID: 226233 RVA: 0x00D19CBC File Offset: 0x00D17EBC
+		// Token: 0x0602C302 RID: 180994 RVA: 0x00C6926C File Offset: 0x00C6746C
 		public void UnlockTeleports(int[] ids, bool clearCache = false)
 		{
 			if (clearCache)
@@ -1038,7 +1058,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373BA RID: 226234 RVA: 0x00D19DA8 File Offset: 0x00D17FA8
+		// Token: 0x0602C303 RID: 180995 RVA: 0x00C69358 File Offset: 0x00C67558
 		public bool CheckTeleportUnlocked(int id)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(id);
@@ -1053,13 +1073,19 @@ namespace CSharpScript.Game.Module.Map
 			return this.UnlockedTeleports.GetValueOrDefault(id, false);
 		}
 
-		// Token: 0x060373BB RID: 226235 RVA: 0x00D19E20 File Offset: 0x00D18020
+		// Token: 0x0602C304 RID: 180996 RVA: 0x00C693D0 File Offset: 0x00C675D0
 		public bool IsTeleportLocked(int markId)
 		{
 			return this.GetMarkExtraShowState(markId).ShowFlag == MapMarkShowFlag.ShowDisable || !this.CheckTeleportUnlocked(markId);
 		}
 
-		// Token: 0x060373BC RID: 226236 RVA: 0x00D19E40 File Offset: 0x00D18040
+		// Token: 0x0602C305 RID: 180997 RVA: 0x00C693EF File Offset: 0x00C675EF
+		public bool IsMarkDisable(int markId, bool isGamePlayHide)
+		{
+			return markId == 0 || this.GetMarkExtraShowState(markId).ShowFlag == MapMarkShowFlag.ShowDisable || isGamePlayHide;
+		}
+
+		// Token: 0x0602C306 RID: 180998 RVA: 0x00C69408 File Offset: 0x00C67608
 		public bool IsInstanceTeleportUnlock(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -1097,28 +1123,28 @@ namespace CSharpScript.Game.Module.Map
 			return num2.GetValueOrDefault() == num3 & num2 != null;
 		}
 
-		// Token: 0x060373BD RID: 226237 RVA: 0x00D19F16 File Offset: 0x00D18116
+		// Token: 0x0602C307 RID: 180999 RVA: 0x00C694DE File Offset: 0x00C676DE
 		[NullableContext(2)]
 		public Dictionary<int, bool> GetAllUnlockedFogs()
 		{
 			return this.UnlockedFogs;
 		}
 
-		// Token: 0x060373BE RID: 226238 RVA: 0x00D19F1E File Offset: 0x00D1811E
+		// Token: 0x0602C308 RID: 181000 RVA: 0x00C694E6 File Offset: 0x00C676E6
 		public bool GetFogIsUnlocked(int fogId)
 		{
 			Dictionary<int, bool> unlockedFogs = this.UnlockedFogs;
 			return unlockedFogs != null && unlockedFogs.GetValueOrDefault(fogId);
 		}
 
-		// Token: 0x060373BF RID: 226239 RVA: 0x00D19F32 File Offset: 0x00D18132
+		// Token: 0x0602C309 RID: 181001 RVA: 0x00C694FA File Offset: 0x00C676FA
 		[NullableContext(2)]
 		public Dictionary<int, bool> GetAllUnlockedAreas()
 		{
 			return this.UnlockedAreas;
 		}
 
-		// Token: 0x060373C0 RID: 226240 RVA: 0x00D19F3A File Offset: 0x00D1813A
+		// Token: 0x0602C30A RID: 181002 RVA: 0x00C69502 File Offset: 0x00C67702
 		public void AddUnlockedFogs(int fogId)
 		{
 			this.UnlockedFogs[fogId] = true;
@@ -1127,7 +1153,7 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit<int>(EEventName.MapOpenFogChange, fogId);
 		}
 
-		// Token: 0x060373C1 RID: 226241 RVA: 0x00D19F6C File Offset: 0x00D1816C
+		// Token: 0x0602C30B RID: 181003 RVA: 0x00C69534 File Offset: 0x00C67734
 		public void FullUpdateUnlockedFogs(RepeatedField<int> unlockFogIds)
 		{
 			this.UnlockedFogs.Clear();
@@ -1140,7 +1166,7 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit<IReadOnlyDictionary<int, bool>>(EEventName.MapOpenFogFullUpdate, this.UnlockedFogs);
 		}
 
-		// Token: 0x060373C2 RID: 226242 RVA: 0x00D19FF0 File Offset: 0x00D181F0
+		// Token: 0x0602C30C RID: 181004 RVA: 0x00C695B8 File Offset: 0x00C677B8
 		private void AddUnlockedAreaByFog(int fogId)
 		{
 			MapFog? mapFogConfig = WorldMapConfig.Instance.GetMapFogConfig(fogId);
@@ -1150,7 +1176,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373C3 RID: 226243 RVA: 0x00D1A02D File Offset: 0x00D1822D
+		// Token: 0x0602C30D RID: 181005 RVA: 0x00C695F5 File Offset: 0x00C677F5
 		public bool CheckAreasUnlocked(int areaId, bool zeroAsUnlock = true)
 		{
 			if (areaId == 0 && zeroAsUnlock)
@@ -1161,7 +1187,7 @@ namespace CSharpScript.Game.Module.Map
 			return unlockedAreas != null && unlockedAreas.GetValueOrDefault(areaId);
 		}
 
-		// Token: 0x060373C4 RID: 226244 RVA: 0x00D1A04C File Offset: 0x00D1824C
+		// Token: 0x0602C30E RID: 181006 RVA: 0x00C69614 File Offset: 0x00C67814
 		public bool CheckFogUnlocked(int fogId, int? dungeonId = null)
 		{
 			if (fogId == 0)
@@ -1177,7 +1203,7 @@ namespace CSharpScript.Game.Module.Map
 			return unlockedFogs != null && unlockedFogs.GetValueOrDefault(fogId);
 		}
 
-		// Token: 0x060373C5 RID: 226245 RVA: 0x00D1A0BC File Offset: 0x00D182BC
+		// Token: 0x0602C30F RID: 181007 RVA: 0x00C69684 File Offset: 0x00C67884
 		public bool IsMarkFogUnlock(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -1189,42 +1215,42 @@ namespace CSharpScript.Game.Module.Map
 			return value.FogShow == 1 || this.CheckFogUnlocked(value.FogHide, new int?(value.RelativeDungeonId));
 		}
 
-		// Token: 0x060373C6 RID: 226246 RVA: 0x00D1A10D File Offset: 0x00D1830D
+		// Token: 0x0602C310 RID: 181008 RVA: 0x00C696D5 File Offset: 0x00C678D5
 		public void SetUnlockMultiMapIds(List<int> ids)
 		{
 			this.UnlockMultiMapIds = ids;
 			EventSystem.Instance.Emit(EEventName.MultiMapUnlockChanged);
 		}
 
-		// Token: 0x060373C7 RID: 226247 RVA: 0x00D1A126 File Offset: 0x00D18326
-		public void AddUnlockMultiMapIds(List<int> ids)
+		// Token: 0x0602C311 RID: 181009 RVA: 0x00C696EE File Offset: 0x00C678EE
+		public void AddUnlockMultiMapIds(IEnumerable<int> ids)
 		{
-			this.UnlockMultiMapIds = this.UnlockMultiMapIds.Union(ids).ToList<int>();
+			this.UnlockMultiMapIds = NoLinq.UnionToList<int>(this.UnlockMultiMapIds, ids, null);
 			EventSystem.Instance.Emit(EEventName.MultiMapUnlockChanged);
 		}
 
-		// Token: 0x060373C8 RID: 226248 RVA: 0x00D1A14F File Offset: 0x00D1834F
+		// Token: 0x0602C312 RID: 181010 RVA: 0x00C69713 File Offset: 0x00C67913
 		public void SetUnlockMapBlockIds(List<int> ids)
 		{
 			this.UnlockMapBlockIds = ids;
 			EventSystem.Instance.Emit(EEventName.MiniMapForceUpdate);
 		}
 
-		// Token: 0x060373C9 RID: 226249 RVA: 0x00D1A168 File Offset: 0x00D18368
-		public void AddUnlockMapBlockIds(List<int> ids)
+		// Token: 0x0602C313 RID: 181011 RVA: 0x00C6972C File Offset: 0x00C6792C
+		public void AddUnlockMapBlockIds(IEnumerable<int> ids)
 		{
-			this.UnlockMapBlockIds = this.UnlockMapBlockIds.Union(ids).ToList<int>();
+			this.UnlockMapBlockIds = NoLinq.UnionToList<int>(this.UnlockMapBlockIds, ids, null);
 			EventSystem.Instance.Emit(EEventName.MiniMapForceUpdate);
 		}
 
-		// Token: 0x060373CA RID: 226250 RVA: 0x00D1A191 File Offset: 0x00D18391
+		// Token: 0x0602C314 RID: 181012 RVA: 0x00C69751 File Offset: 0x00C67951
 		public bool CheckUnlockMultiMapIds(int id)
 		{
 			List<int> unlockMultiMapIds = this.UnlockMultiMapIds;
 			return unlockMultiMapIds != null && unlockMultiMapIds.Contains(id);
 		}
 
-		// Token: 0x060373CB RID: 226251 RVA: 0x00D1A1A8 File Offset: 0x00D183A8
+		// Token: 0x0602C315 RID: 181013 RVA: 0x00C69768 File Offset: 0x00C67968
 		public int CheckUnlockMapBlockIds(string block, EMapGravityDirection gravity, int mapId)
 		{
 			int result = 0;
@@ -1245,7 +1271,7 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x060373CC RID: 226252 RVA: 0x00D1A2A0 File Offset: 0x00D184A0
+		// Token: 0x0602C316 RID: 181014 RVA: 0x00C69860 File Offset: 0x00C67A60
 		public int CheckIsInMultiMapWithAreaId(int areaId)
 		{
 			int result = 0;
@@ -1260,26 +1286,26 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x060373CD RID: 226253 RVA: 0x00D1A30C File Offset: 0x00D1850C
+		// Token: 0x0602C317 RID: 181015 RVA: 0x00C698CC File Offset: 0x00C67ACC
 		public void AddEntityIdToPendingList(int entityId, int markId)
 		{
 			this.PendingAddEntityList[entityId] = markId;
 		}
 
-		// Token: 0x060373CE RID: 226254 RVA: 0x00D1A31B File Offset: 0x00D1851B
+		// Token: 0x0602C318 RID: 181016 RVA: 0x00C698DB File Offset: 0x00C67ADB
 		public void RemoveEntityIdToPendingList(int entityId)
 		{
 			this.PendingAddEntityList.Remove(entityId);
 		}
 
-		// Token: 0x060373CF RID: 226255 RVA: 0x00D1A32A File Offset: 0x00D1852A
+		// Token: 0x0602C319 RID: 181017 RVA: 0x00C698EA File Offset: 0x00C67AEA
 		[NullableContext(2)]
 		public Dictionary<int, int> GetEntityPendingList()
 		{
 			return this.PendingAddEntityList;
 		}
 
-		// Token: 0x060373D0 RID: 226256 RVA: 0x00D1A334 File Offset: 0x00D18534
+		// Token: 0x0602C31A RID: 181018 RVA: 0x00C698F4 File Offset: 0x00C67AF4
 		public bool IsInMapPolygon(global::Vector playerPosition)
 		{
 			if (!this.CurrentInWorld)
@@ -1302,20 +1328,20 @@ namespace CSharpScript.Game.Module.Map
 			return flag;
 		}
 
-		// Token: 0x060373D1 RID: 226257 RVA: 0x00D1A3D7 File Offset: 0x00D185D7
+		// Token: 0x0602C31B RID: 181019 RVA: 0x00C69997 File Offset: 0x00C67B97
 		public global::Vector GetLastSafeLocation()
 		{
 			return this.LastSafeLocation;
 		}
 
-		// Token: 0x060373D2 RID: 226258 RVA: 0x00D1A3DF File Offset: 0x00D185DF
+		// Token: 0x0602C31C RID: 181020 RVA: 0x00C6999F File Offset: 0x00C67B9F
 		public bool IsInUnopenedAreaPullback()
 		{
 			return GameModeModel.Instance.WorldDone && !GameModeModel.Instance.IsTeleport && this.CurrentInWorld && UnopenedAreaController.Instance.CheckInPullback();
 		}
 
-		// Token: 0x060373D3 RID: 226259 RVA: 0x00D1A411 File Offset: 0x00D18611
-		public bool SetMarkExtraShowState(int markId, bool needFocus, MapMarkShowFlag showFlag)
+		// Token: 0x0602C31D RID: 181021 RVA: 0x00C699D1 File Offset: 0x00C67BD1
+		public void SetMarkExtraShowState(int markId, bool needFocus, MapMarkShowFlag showFlag)
 		{
 			this.MarkExtraShowStateReference[markId] = new MarkShowState
 			{
@@ -1324,10 +1350,9 @@ namespace CSharpScript.Game.Module.Map
 				ShowFlag = showFlag
 			};
 			EventSystem.Instance.Emit<int>(EEventName.OnMarkItemShowStateChange, markId);
-			return needFocus;
 		}
 
-		// Token: 0x060373D4 RID: 226260 RVA: 0x00D1A44C File Offset: 0x00D1864C
+		// Token: 0x0602C31E RID: 181022 RVA: 0x00C69A0C File Offset: 0x00C67C0C
 		public IMarkShowState GetMarkExtraShowState(int markId)
 		{
 			Dictionary<int, IMarkShowState> markExtraShowStateReference = this.MarkExtraShowStateReference;
@@ -1349,7 +1374,7 @@ namespace CSharpScript.Game.Module.Map
 			return markShowState;
 		}
 
-		// Token: 0x060373D5 RID: 226261 RVA: 0x00D1A4B4 File Offset: 0x00D186B4
+		// Token: 0x0602C31F RID: 181023 RVA: 0x00C69A74 File Offset: 0x00C67C74
 		public void UpdateCompleteMarks(int[] markIdList)
 		{
 			this.CompleteMarks.Clear();
@@ -1359,7 +1384,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373D6 RID: 226262 RVA: 0x00D1A4F0 File Offset: 0x00D186F0
+		// Token: 0x0602C320 RID: 181024 RVA: 0x00C69AB0 File Offset: 0x00C67CB0
 		public void SetCompleteMarkState(int[] markIdList)
 		{
 			foreach (int item in markIdList)
@@ -1368,19 +1393,19 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373D7 RID: 226263 RVA: 0x00D1A51E File Offset: 0x00D1871E
+		// Token: 0x0602C321 RID: 181025 RVA: 0x00C69ADE File Offset: 0x00C67CDE
 		public bool IsCompleteMark(int markId)
 		{
 			return this.CompleteMarks.Contains(markId);
 		}
 
-		// Token: 0x060373D8 RID: 226264 RVA: 0x00D1A52C File Offset: 0x00D1872C
+		// Token: 0x0602C322 RID: 181026 RVA: 0x00C69AEC File Offset: 0x00C67CEC
 		public bool IsMarkForbidGravityTeleport(int markId, EMarkType markType)
 		{
 			return OnlineModel.Instance.GetIsTeamModel() && this.GetMarkMapGravity(markId, markType) == EMapGravityDirection.Up && WorldMapModel.Instance.IsGravityMap(this.GetMarkMapConfigId(markId, markType)) && this.MapMarkConfigIsCanTeleport(markId);
 		}
 
-		// Token: 0x060373D9 RID: 226265 RVA: 0x00D1A568 File Offset: 0x00D18768
+		// Token: 0x0602C323 RID: 181027 RVA: 0x00C69B28 File Offset: 0x00C67D28
 		public bool MapMarkConfigIsCanTeleport(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -1392,13 +1417,13 @@ namespace CSharpScript.Game.Module.Map
 			return value.ObjectType == 6 || value.ObjectType == 5 || value.EnableQuickTransfer == 1;
 		}
 
-		// Token: 0x060373DA RID: 226266 RVA: 0x00D1A5B4 File Offset: 0x00D187B4
+		// Token: 0x0602C324 RID: 181028 RVA: 0x00C69B74 File Offset: 0x00C67D74
 		public bool MapMarkIsCanTeleport(int markId)
 		{
 			return this.MapMarkConfigIsCanTeleport(markId) && !this.IsTeleportLocked(markId);
 		}
 
-		// Token: 0x060373DB RID: 226267 RVA: 0x00D1A5CC File Offset: 0x00D187CC
+		// Token: 0x0602C325 RID: 181029 RVA: 0x00C69B8C File Offset: 0x00C67D8C
 		public MapBorder? GetCurMapBorderConfig(int mapId, int instanceDungeonId, EMapType mapType, EMapGravityDirection gravity)
 		{
 			MapBorder? curMapBorderByFilterFunc = this.GetCurMapBorderByFilterFunc(delegate(MapBorder config)
@@ -1423,7 +1448,7 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x060373DC RID: 226268 RVA: 0x00D1A658 File Offset: 0x00D18858
+		// Token: 0x0602C326 RID: 181030 RVA: 0x00C69C18 File Offset: 0x00C67E18
 		public MapBorder? GetCurMapBorderByFilterFunc(Func<MapBorder, bool> filterFunc)
 		{
 			MapBorder? result = null;
@@ -1447,7 +1472,7 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x060373DD RID: 226269 RVA: 0x00D1A6F0 File Offset: 0x00D188F0
+		// Token: 0x0602C327 RID: 181031 RVA: 0x00C69CB0 File Offset: 0x00C67EB0
 		public void ForceSetMarkVisible(EMarkType markType, int markId, bool visible)
 		{
 			Dictionary<int, bool> dictionary;
@@ -1459,7 +1484,7 @@ namespace CSharpScript.Game.Module.Map
 			dictionary[markId] = visible;
 		}
 
-		// Token: 0x060373DE RID: 226270 RVA: 0x00D1A728 File Offset: 0x00D18928
+		// Token: 0x0602C328 RID: 181032 RVA: 0x00C69CE8 File Offset: 0x00C67EE8
 		public bool GetMarkForceVisible(EMarkType markType, int markId)
 		{
 			bool result = true;
@@ -1472,7 +1497,7 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x060373DF RID: 226271 RVA: 0x00D1A758 File Offset: 0x00D18958
+		// Token: 0x0602C329 RID: 181033 RVA: 0x00C69D18 File Offset: 0x00C67F18
 		public void AddOccupationInfo(OccupationPbInfo info)
 		{
 			NewOccupationConfig? newOccupationConfig = QuestNewConfig.Instance.GetNewOccupationConfig(info.ResourceName);
@@ -1493,7 +1518,7 @@ namespace CSharpScript.Game.Module.Map
 			this.OccupationResourceRefPlayMap[info.ResourceName] = levelPlayIds;
 		}
 
-		// Token: 0x060373E0 RID: 226272 RVA: 0x00D1A814 File Offset: 0x00D18A14
+		// Token: 0x0602C32A RID: 181034 RVA: 0x00C69DD4 File Offset: 0x00C67FD4
 		public void RemoveOccupationInfo(string resource)
 		{
 			Dictionary<string, int[]> occupationResourceRefPlayMap = this.OccupationResourceRefPlayMap;
@@ -1517,7 +1542,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373E1 RID: 226273 RVA: 0x00D1A880 File Offset: 0x00D18A80
+		// Token: 0x0602C32B RID: 181035 RVA: 0x00C69E40 File Offset: 0x00C68040
 		public WorldLevelPlayOccupationResult IsLevelPlayOccupied(int levelPlayId)
 		{
 			Dictionary<int, long> sceneGamePlayRefQuestMap = this.SceneGamePlayRefQuestMap;
@@ -1529,20 +1554,20 @@ namespace CSharpScript.Game.Module.Map
 			};
 		}
 
-		// Token: 0x060373E2 RID: 226274 RVA: 0x00D1A8D2 File Offset: 0x00D18AD2
+		// Token: 0x0602C32C RID: 181036 RVA: 0x00C69E92 File Offset: 0x00C68092
 		public bool IsMarkUnlockedByServer(int markId)
 		{
 			Dictionary<int, bool> serverUnlockedMarksMap = this.ServerUnlockedMarksMap;
 			return serverUnlockedMarksMap != null && serverUnlockedMarksMap.GetValueOrDefault(markId);
 		}
 
-		// Token: 0x060373E3 RID: 226275 RVA: 0x00D1A8E6 File Offset: 0x00D18AE6
+		// Token: 0x0602C32D RID: 181037 RVA: 0x00C69EA6 File Offset: 0x00C680A6
 		public void SetMarkServerOpenState(int markId, bool state)
 		{
 			this.ServerUnlockedMarksMap[markId] = state;
 		}
 
-		// Token: 0x060373E4 RID: 226276 RVA: 0x00D1A8F8 File Offset: 0x00D18AF8
+		// Token: 0x0602C32E RID: 181038 RVA: 0x00C69EB8 File Offset: 0x00C680B8
 		public string GetMarkAreaText(int mapId, int entityId)
 		{
 			LevelEntityConfig? levelEntityConfig;
@@ -1550,7 +1575,7 @@ namespace CSharpScript.Game.Module.Map
 			return this.GetMarkAreaTextByAreaId(areaId);
 		}
 
-		// Token: 0x060373E5 RID: 226277 RVA: 0x00D1A938 File Offset: 0x00D18B38
+		// Token: 0x0602C32F RID: 181039 RVA: 0x00C69EF8 File Offset: 0x00C680F8
 		public string GetMarkAreaTextByAreaId(int areaId)
 		{
 			int parentAreaId = AreaConfig.Instance.GetParentAreaId(areaId);
@@ -1573,20 +1598,20 @@ namespace CSharpScript.Game.Module.Map
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060373E6 RID: 226278 RVA: 0x00D1AA80 File Offset: 0x00D18C80
+		// Token: 0x0602C330 RID: 181040 RVA: 0x00C6A040 File Offset: 0x00C68240
 		public void UpdateBoxSlotInfo(TreasureBoxSlotInfo treasureBoxSlotInfo)
 		{
 			this.TreasureBoxSlotRawDataMap[treasureBoxSlotInfo.MarkId] = treasureBoxSlotInfo;
 		}
 
-		// Token: 0x060373E7 RID: 226279 RVA: 0x00D1AA94 File Offset: 0x00D18C94
+		// Token: 0x0602C331 RID: 181041 RVA: 0x00C6A054 File Offset: 0x00C68254
 		public void RemoveBoxSlotInfo(long slotId)
 		{
 			if (this.TreasureBoxSlotRawDataMap == null)
 			{
 				return;
 			}
-			foreach (TreasureBoxSlotInfo treasureBoxSlotInfo in this.TreasureBoxSlotRawDataMap.Values.ToList<TreasureBoxSlotInfo>())
+			foreach (TreasureBoxSlotInfo treasureBoxSlotInfo in this.TreasureBoxSlotRawDataMap.Values)
 			{
 				if (treasureBoxSlotInfo.DetectionSlotId == slotId)
 				{
@@ -1596,7 +1621,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373E8 RID: 226280 RVA: 0x00D1AB10 File Offset: 0x00D18D10
+		// Token: 0x0602C332 RID: 181042 RVA: 0x00C6A0CC File Offset: 0x00C682CC
 		public void FullUpdateBoxSlotInfo(RepeatedField<TreasureBoxSlotInfo> allTreasureBoxSlotInfo)
 		{
 			this.TreasureBoxSlotRawDataMap.Clear();
@@ -1606,7 +1631,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373E9 RID: 226281 RVA: 0x00D1AB64 File Offset: 0x00D18D64
+		// Token: 0x0602C333 RID: 181043 RVA: 0x00C6A120 File Offset: 0x00C68320
 		[NullableContext(2)]
 		public TreasureBoxSlotInfo GetBoxSlotInfoByMarkId(int markId)
 		{
@@ -1614,10 +1639,19 @@ namespace CSharpScript.Game.Module.Map
 			{
 				return null;
 			}
-			return this.TreasureBoxSlotRawDataMap.Values.FirstOrDefault((TreasureBoxSlotInfo slotInfo) => slotInfo.MarkId == markId);
+			TreasureBoxSlotInfo result = null;
+			foreach (TreasureBoxSlotInfo treasureBoxSlotInfo in this.TreasureBoxSlotRawDataMap.Values)
+			{
+				if (treasureBoxSlotInfo.MarkId == markId)
+				{
+					result = treasureBoxSlotInfo;
+					break;
+				}
+			}
+			return result;
 		}
 
-		// Token: 0x060373EA RID: 226282 RVA: 0x00D1ABA4 File Offset: 0x00D18DA4
+		// Token: 0x0602C334 RID: 181044 RVA: 0x00C6A18C File Offset: 0x00C6838C
 		public void FullUpdateTreasureChestCount(IEnumerable<TreasureChestCountData> infoList)
 		{
 			this.TreasureChestCountMap.Clear();
@@ -1628,13 +1662,19 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit<TreasureChestStatType?>(EEventName.OnTreasureChestCountChanged, null);
 		}
 
-		// Token: 0x060373EB RID: 226283 RVA: 0x00D1AC2C File Offset: 0x00D18E2C
+		// Token: 0x0602C335 RID: 181045 RVA: 0x00C6A214 File Offset: 0x00C68414
 		public void IncrementTreasureChestCount(TreasureChestStatType statType, IEnumerable<int> instanceIds, IEnumerable<int> areaIds)
 		{
-			HashSet<ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>> keys = (from id in instanceIds
-			select new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(TreasureChestCountTargetType.Instance, id, statType)).Concat(from id in areaIds
-			select new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(TreasureChestCountTargetType.Area, id, statType)).ToHashSet<ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>>();
-			foreach (ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType> key in keys)
+			HashSet<ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>> hashSet = new HashSet<ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>>();
+			foreach (int item in instanceIds)
+			{
+				hashSet.Add(new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(TreasureChestCountTargetType.Instance, item, statType));
+			}
+			foreach (int item2 in areaIds)
+			{
+				hashSet.Add(new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(TreasureChestCountTargetType.Area, item2, statType));
+			}
+			foreach (ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType> key in hashSet)
 			{
 				TreasureChestCountData treasureChestCountData;
 				if (this.TreasureChestCountMap.TryGetValue(key, out treasureChestCountData))
@@ -1644,42 +1684,62 @@ namespace CSharpScript.Game.Module.Map
 					treasureChestCountData2.CurrentCount = currentCount + 1;
 				}
 			}
-			bool flag = this.GetCurTreasureChestCountList().Any((TreasureChestCountData info) => keys.Contains(new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(info.TargetType, info.TargetId, info.StatType)));
+			bool flag = false;
+			foreach (TreasureChestCountData treasureChestCountData3 in this.GetCurTreasureChestCountList())
+			{
+				if (hashSet.Contains(new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(treasureChestCountData3.TargetType, treasureChestCountData3.TargetId, treasureChestCountData3.StatType)))
+				{
+					flag = true;
+					break;
+				}
+			}
 			EventSystem.Instance.Emit<TreasureChestStatType?>(EEventName.OnTreasureChestCountChanged, flag ? new TreasureChestStatType?(statType) : null);
 		}
 
-		// Token: 0x060373EC RID: 226284 RVA: 0x00D1AD20 File Offset: 0x00D18F20
+		// Token: 0x0602C336 RID: 181046 RVA: 0x00C6A394 File Offset: 0x00C68594
 		[NullableContext(2)]
 		public TreasureChestCountData GetTreasureChestCount(TreasureChestCountTargetType targetType, int targetId, TreasureChestStatType statType)
 		{
 			return this.TreasureChestCountMap.GetValueOrDefault(new ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>(targetType, targetId, statType));
 		}
 
-		// Token: 0x060373ED RID: 226285 RVA: 0x00D1AD38 File Offset: 0x00D18F38
+		// Token: 0x0602C337 RID: 181047 RVA: 0x00C6A3AC File Offset: 0x00C685AC
 		public List<TreasureChestCountData> GetTreasureChestCountList(TreasureChestCountTargetType targetType, int targetId)
 		{
-			return (from statType in MapDefine.TreasureChestStatTypeDisplayOrder
-			select this.GetTreasureChestCount(targetType, targetId, statType) into info
-			where info != null
-			select info).ToList<TreasureChestCountData>();
+			List<TreasureChestCountData> list = new List<TreasureChestCountData>();
+			foreach (TreasureChestStatType statType in MapDefine.TreasureChestStatTypeDisplayOrder)
+			{
+				TreasureChestCountData treasureChestCount = this.GetTreasureChestCount(targetType, targetId, statType);
+				if (treasureChestCount != null)
+				{
+					list.Add(treasureChestCount);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x060373EE RID: 226286 RVA: 0x00D1ADC4 File Offset: 0x00D18FC4
+		// Token: 0x0602C338 RID: 181048 RVA: 0x00C6A414 File Offset: 0x00C68614
 		public List<TreasureChestCountData> GetCurTreasureChestCountList()
 		{
-			int[] statTypes;
 			TreasureChestCountTargetType targetType;
 			int targetId;
-			if (!this.TryGetCurTreasureChestTarget(out targetType, out targetId, out statTypes))
+			int[] array;
+			if (!this.TryGetCurTreasureChestTarget(out targetType, out targetId, out array))
 			{
 				return new List<TreasureChestCountData>();
 			}
-			return (from info in this.GetTreasureChestCountList(targetType, targetId)
-			where statTypes.Contains((int)info.StatType)
-			select info).ToList<TreasureChestCountData>();
+			List<TreasureChestCountData> list = new List<TreasureChestCountData>();
+			foreach (TreasureChestCountData treasureChestCountData in this.GetTreasureChestCountList(targetType, targetId))
+			{
+				if (Array.IndexOf<int>(array, (int)treasureChestCountData.StatType) >= 0)
+				{
+					list.Add(treasureChestCountData);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x060373EF RID: 226287 RVA: 0x00D1AE10 File Offset: 0x00D19010
+		// Token: 0x0602C339 RID: 181049 RVA: 0x00C6A498 File Offset: 0x00C68698
 		private bool TryGetCurTreasureChestTarget(out TreasureChestCountTargetType targetType, out int targetId, out int[] statTypes)
 		{
 			if (WorldMapModel.Instance.IsPlayerInInstanceDungeon())
@@ -1712,7 +1772,7 @@ namespace CSharpScript.Game.Module.Map
 			return false;
 		}
 
-		// Token: 0x060373F0 RID: 226288 RVA: 0x00D1AF40 File Offset: 0x00D19140
+		// Token: 0x0602C33A RID: 181050 RVA: 0x00C6A5C8 File Offset: 0x00C687C8
 		public void UpdateTemporaryTeleportInfo(TemporaryTeleportInfo temporaryTeleportInfo)
 		{
 			this.TemporaryTeleportInfoRawDataMap[temporaryTeleportInfo.MarkId] = temporaryTeleportInfo;
@@ -1727,14 +1787,14 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373F1 RID: 226289 RVA: 0x00D1AF9C File Offset: 0x00D1919C
+		// Token: 0x0602C33B RID: 181051 RVA: 0x00C6A624 File Offset: 0x00C68824
 		public void RemoveTemporaryTeleportInfo(int markId)
 		{
 			if (this.TemporaryTeleportInfoRawDataMap == null)
 			{
 				return;
 			}
-			foreach (TemporaryTeleportInfo temporaryTeleportInfo in this.TemporaryTeleportInfoRawDataMap.Values.ToList<TemporaryTeleportInfo>())
+			foreach (TemporaryTeleportInfo temporaryTeleportInfo in this.TemporaryTeleportInfoRawDataMap.Values)
 			{
 				if (temporaryTeleportInfo.MarkId == markId)
 				{
@@ -1744,7 +1804,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373F2 RID: 226290 RVA: 0x00D1B018 File Offset: 0x00D19218
+		// Token: 0x0602C33C RID: 181052 RVA: 0x00C6A69C File Offset: 0x00C6889C
 		public void FullUpdateTemporaryTeleportInfo(RepeatedField<TemporaryTeleportInfo> allTemporaryTeleportInfo)
 		{
 			Dictionary<int, TemporaryTeleportInfo> temporaryTeleportInfoRawDataMap = this.TemporaryTeleportInfoRawDataMap;
@@ -1758,7 +1818,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x060373F3 RID: 226291 RVA: 0x00D1B074 File Offset: 0x00D19274
+		// Token: 0x0602C33D RID: 181053 RVA: 0x00C6A6F8 File Offset: 0x00C688F8
 		public int GetDungeonMapConfigId(int dungeonId)
 		{
 			if (dungeonId == 0)
@@ -1773,7 +1833,7 @@ namespace CSharpScript.Game.Module.Map
 			return dungeonConfig.Value.MapConfigId;
 		}
 
-		// Token: 0x060373F4 RID: 226292 RVA: 0x00D1B0AC File Offset: 0x00D192AC
+		// Token: 0x0602C33E RID: 181054 RVA: 0x00C6A730 File Offset: 0x00C68930
 		public int? GetDungeonLocateWorldMapId(int dungeonId)
 		{
 			if (dungeonId == 0)
@@ -1796,7 +1856,7 @@ namespace CSharpScript.Game.Module.Map
 			return new int?(dungeonConfig.Value.MapConfigId);
 		}
 
-		// Token: 0x060373F5 RID: 226293 RVA: 0x00D1B138 File Offset: 0x00D19338
+		// Token: 0x0602C33F RID: 181055 RVA: 0x00C6A7BC File Offset: 0x00C689BC
 		[NullableContext(2)]
 		public global::Vector GetDungeonLocateWorldMapLocation(int dungeonId)
 		{
@@ -1817,12 +1877,12 @@ namespace CSharpScript.Game.Module.Map
 			if (dungeonEntranceConfig != null)
 			{
 				int entranceEntityId = dungeonConfig.Value.EntranceEntities(0).Value.EntranceEntityId;
-				return WorldMapModel.Instance.GetEntityPosition(entranceEntityId, dungeonEntranceConfig.Value.MapConfigId);
+				return WorldMapModel.Instance.GetEntityPosition(entranceEntityId, dungeonEntranceConfig.Value.MapConfigId, false);
 			}
 			return null;
 		}
 
-		// Token: 0x060373F6 RID: 226294 RVA: 0x00D1B1CC File Offset: 0x00D193CC
+		// Token: 0x0602C340 RID: 181056 RVA: 0x00C6A854 File Offset: 0x00C68A54
 		[NullableContext(2)]
 		public global::Vector GetDungeonExitLocation(int dungeonId)
 		{
@@ -1840,10 +1900,10 @@ namespace CSharpScript.Game.Module.Map
 				return null;
 			}
 			int pbDataId = dungeonConfig.Value.ExitEntities(0);
-			return WorldMapModel.Instance.GetEntityPosition(pbDataId, dungeonConfig.Value.MapConfigId);
+			return WorldMapModel.Instance.GetEntityPosition(pbDataId, dungeonConfig.Value.MapConfigId, false);
 		}
 
-		// Token: 0x060373F7 RID: 226295 RVA: 0x00D1B238 File Offset: 0x00D19438
+		// Token: 0x0602C341 RID: 181057 RVA: 0x00C6A8C0 File Offset: 0x00C68AC0
 		public unsafe InstanceDungeon? GetDungeonEntranceConfig(InstanceDungeon config)
 		{
 			if (config.EntranceEntitiesLength < 1)
@@ -1870,7 +1930,7 @@ namespace CSharpScript.Game.Module.Map
 			return dungeonConfig;
 		}
 
-		// Token: 0x060373F8 RID: 226296 RVA: 0x00D1B32C File Offset: 0x00D1952C
+		// Token: 0x0602C342 RID: 181058 RVA: 0x00C6A9B4 File Offset: 0x00C68BB4
 		public int GetMarkMapConfigId(int markId, EMarkType markType)
 		{
 			DynamicMarkCreateInfo mark = this.GetMark(markType, markId);
@@ -1890,7 +1950,7 @@ namespace CSharpScript.Game.Module.Map
 			return 8;
 		}
 
-		// Token: 0x060373F9 RID: 226297 RVA: 0x00D1B3C4 File Offset: 0x00D195C4
+		// Token: 0x0602C343 RID: 181059 RVA: 0x00C6AA4C File Offset: 0x00C68C4C
 		public EMapGravityDirection GetMarkMapGravity(int markId, EMarkType markType)
 		{
 			DynamicMarkCreateInfo mark = this.GetMark(markType, markId);
@@ -1907,7 +1967,7 @@ namespace CSharpScript.Game.Module.Map
 			return EMapGravityDirection.Down;
 		}
 
-		// Token: 0x060373FA RID: 226298 RVA: 0x00D1B42C File Offset: 0x00D1962C
+		// Token: 0x0602C344 RID: 181060 RVA: 0x00C6AAB4 File Offset: 0x00C68CB4
 		public int GetMarkAreaId(int markId, EMarkType markType)
 		{
 			DynamicMarkCreateInfo mark = this.GetMark(markType, markId);
@@ -1941,7 +2001,7 @@ namespace CSharpScript.Game.Module.Map
 			return MapModel.GetEntityConfigAreaId(mark.MapId, mark.EntityConfigId.GetValueOrDefault()).GetValueOrDefault();
 		}
 
-		// Token: 0x060373FB RID: 226299 RVA: 0x00D1B534 File Offset: 0x00D19734
+		// Token: 0x0602C345 RID: 181061 RVA: 0x00C6ABBC File Offset: 0x00C68DBC
 		[NullableContext(2)]
 		public int ResolveWorldMapMarkAreaId(int mapId, int areaId, TTrackTarget trackTarget)
 		{
@@ -1995,7 +2055,7 @@ namespace CSharpScript.Game.Module.Map
 			return tileLoadFilterByAreaArray[0];
 		}
 
-		// Token: 0x060373FC RID: 226300 RVA: 0x00D1B63C File Offset: 0x00D1983C
+		// Token: 0x0602C346 RID: 181062 RVA: 0x00C6ACC4 File Offset: 0x00C68EC4
 		public int? GetPlayerMarkAreaId(int playerId)
 		{
 			ScenePlayerData scenePlayerData = CreatureModel.Instance.GetScenePlayerData(playerId);
@@ -2011,7 +2071,7 @@ namespace CSharpScript.Game.Module.Map
 			return new int?(otherScenePlayerDataByPlayerId.Area);
 		}
 
-		// Token: 0x060373FD RID: 226301 RVA: 0x00D1B688 File Offset: 0x00D19888
+		// Token: 0x0602C347 RID: 181063 RVA: 0x00C6AD10 File Offset: 0x00C68F10
 		public int GetWorldMapMarkAreaId(int markId, EMarkType markType)
 		{
 			if (markType == EMarkType.OtherPlayers)
@@ -2068,7 +2128,7 @@ namespace CSharpScript.Game.Module.Map
 			return this.ResolveWorldMapMarkAreaId(markMapConfigId, 0, trackTarget);
 		}
 
-		// Token: 0x060373FE RID: 226302 RVA: 0x00D1B7F0 File Offset: 0x00D199F0
+		// Token: 0x0602C348 RID: 181064 RVA: 0x00C6AE78 File Offset: 0x00C69078
 		public static int? GetEntityConfigAreaId(int mapId, int entityId)
 		{
 			if (MapConfig.Instance.GetEntityConfigByMapIdAndEntityId(mapId, entityId) == null)
@@ -2079,8 +2139,8 @@ namespace CSharpScript.Game.Module.Map
 			return new int?(levelEntityConfig.GetValueOrDefault().AreaId);
 		}
 
-		// Token: 0x17008473 RID: 33907
-		// (get) Token: 0x060373FF RID: 226303 RVA: 0x00D1B834 File Offset: 0x00D19A34
+		// Token: 0x1700583F RID: 22591
+		// (get) Token: 0x0602C349 RID: 181065 RVA: 0x00C6AEBC File Offset: 0x00C690BC
 		public int CurrentMapConfigId
 		{
 			get
@@ -2098,7 +2158,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x06037400 RID: 226304 RVA: 0x00D1B898 File Offset: 0x00D19A98
+		// Token: 0x0602C34A RID: 181066 RVA: 0x00C6AF20 File Offset: 0x00C69120
 		public int GetDungeonWorldMapConfigId(int instanceDungeonId)
 		{
 			InstanceDungeon? dungeonConfig = WorldMapConfig.Instance.GetDungeonConfig(instanceDungeonId);
@@ -2118,8 +2178,8 @@ namespace CSharpScript.Game.Module.Map
 			return dungeonConfig.GetValueOrDefault().MapConfigId;
 		}
 
-		// Token: 0x17008474 RID: 33908
-		// (get) Token: 0x06037401 RID: 226305 RVA: 0x00D1B910 File Offset: 0x00D19B10
+		// Token: 0x17005840 RID: 22592
+		// (get) Token: 0x0602C34B RID: 181067 RVA: 0x00C6AF98 File Offset: 0x00C69198
 		public int CurrentWorldMapConfigId
 		{
 			get
@@ -2142,8 +2202,8 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x17008475 RID: 33909
-		// (get) Token: 0x06037402 RID: 226306 RVA: 0x00D1B99C File Offset: 0x00D19B9C
+		// Token: 0x17005841 RID: 22593
+		// (get) Token: 0x0602C34C RID: 181068 RVA: 0x00C6B024 File Offset: 0x00C69224
 		public bool CurrentInWorld
 		{
 			get
@@ -2153,8 +2213,8 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x17008476 RID: 33910
-		// (get) Token: 0x06037403 RID: 226307 RVA: 0x00D1B9C0 File Offset: 0x00D19BC0
+		// Token: 0x17005842 RID: 22594
+		// (get) Token: 0x0602C34D RID: 181069 RVA: 0x00C6B048 File Offset: 0x00C69248
 		public EMapGravityDirection CurrentPlayerGravity
 		{
 			get
@@ -2180,8 +2240,8 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x17008477 RID: 33911
-		// (get) Token: 0x06037404 RID: 226308 RVA: 0x00D1BA18 File Offset: 0x00D19C18
+		// Token: 0x17005843 RID: 22595
+		// (get) Token: 0x0602C34E RID: 181070 RVA: 0x00C6B0A0 File Offset: 0x00C692A0
 		[Nullable(2)]
 		public global::Vector CurrentPlayerGravityDirection
 		{
@@ -2203,8 +2263,8 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x17008478 RID: 33912
-		// (get) Token: 0x06037405 RID: 226309 RVA: 0x00D1BA41 File Offset: 0x00D19C41
+		// Token: 0x17005844 RID: 22596
+		// (get) Token: 0x0602C34F RID: 181071 RVA: 0x00C6B0C9 File Offset: 0x00C692C9
 		public bool IsPlayerInStandardGravity
 		{
 			get
@@ -2213,7 +2273,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x06037406 RID: 226310 RVA: 0x00D1BA4C File Offset: 0x00D19C4C
+		// Token: 0x0602C350 RID: 181072 RVA: 0x00C6B0D4 File Offset: 0x00C692D4
 		public int GetInstanceIdByWorldMapId(int worldMapInstanceId)
 		{
 			if (worldMapInstanceId == this.CurrentWorldMapConfigId || !WorldMapConfig.Instance.IsMapInWorld(worldMapInstanceId))
@@ -2223,31 +2283,31 @@ namespace CSharpScript.Game.Module.Map
 			return worldMapInstanceId;
 		}
 
-		// Token: 0x06037407 RID: 226311 RVA: 0x00D1BA70 File Offset: 0x00D19C70
+		// Token: 0x0602C351 RID: 181073 RVA: 0x00C6B0F8 File Offset: 0x00C692F8
 		public void AddTrackMarkId(int markId)
 		{
 			this.RemoteTrackingMarkSet.Add(markId);
 		}
 
-		// Token: 0x06037408 RID: 226312 RVA: 0x00D1BA7F File Offset: 0x00D19C7F
+		// Token: 0x0602C352 RID: 181074 RVA: 0x00C6B107 File Offset: 0x00C69307
 		public void RemoveTrackMarkId(int markId)
 		{
 			this.RemoteTrackingMarkSet.Remove(markId);
 		}
 
-		// Token: 0x06037409 RID: 226313 RVA: 0x00D1BA8E File Offset: 0x00D19C8E
+		// Token: 0x0602C353 RID: 181075 RVA: 0x00C6B116 File Offset: 0x00C69316
 		public void ClearTrackMarkId()
 		{
 			this.RemoteTrackingMarkSet.Clear();
 		}
 
-		// Token: 0x0603740A RID: 226314 RVA: 0x00D1BA9B File Offset: 0x00D19C9B
+		// Token: 0x0602C354 RID: 181076 RVA: 0x00C6B123 File Offset: 0x00C69323
 		public bool IsMarkTracking(int markId)
 		{
 			return this.RemoteTrackingMarkSet.Contains(markId);
 		}
 
-		// Token: 0x0603740B RID: 226315 RVA: 0x00D1BAAC File Offset: 0x00D19CAC
+		// Token: 0x0602C355 RID: 181077 RVA: 0x00C6B134 File Offset: 0x00C69334
 		public void UpdateMarkHideInfo(SystemMarkHideInfoPb hideInfo)
 		{
 			string markHideInfoKey = this.GetMarkHideInfoKey(hideInfo.MapId, hideInfo.EntityConfigId);
@@ -2262,13 +2322,13 @@ namespace CSharpScript.Game.Module.Map
 			EventSystem.Instance.Emit(EEventName.OnMarkItemUpdateMarkHideInfo);
 		}
 
-		// Token: 0x0603740C RID: 226316 RVA: 0x00D1BB05 File Offset: 0x00D19D05
+		// Token: 0x0602C356 RID: 181078 RVA: 0x00C6B18D File Offset: 0x00C6938D
 		public void ClearMarkHideInfo()
 		{
 			this.SystemMarkHideInfoMap.Clear();
 		}
 
-		// Token: 0x0603740D RID: 226317 RVA: 0x00D1BB14 File Offset: 0x00D19D14
+		// Token: 0x0602C357 RID: 181079 RVA: 0x00C6B19C File Offset: 0x00C6939C
 		public string GetMarkHideInfoKey(int mapId, int entityId)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -2278,27 +2338,27 @@ namespace CSharpScript.Game.Module.Map
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603740E RID: 226318 RVA: 0x00D1BB50 File Offset: 0x00D19D50
+		// Token: 0x0602C358 RID: 181080 RVA: 0x00C6B1D8 File Offset: 0x00C693D8
 		public bool IsMarkHideByServer(int mapId, int entityId)
 		{
 			string markHideInfoKey = this.GetMarkHideInfoKey(mapId, entityId);
 			return this.SystemMarkHideInfoMap.ContainsKey(markHideInfoKey);
 		}
 
-		// Token: 0x0603740F RID: 226319 RVA: 0x00D1BB74 File Offset: 0x00D19D74
+		// Token: 0x0602C359 RID: 181081 RVA: 0x00C6B1FC File Offset: 0x00C693FC
 		[NullableContext(2)]
 		public string GetMarkHideReason(int mapId, int entityId)
 		{
 			string markHideInfoKey = this.GetMarkHideInfoKey(mapId, entityId);
 			SystemMarkHideInfoPb systemMarkHideInfoPb;
-			if (this.SystemMarkHideInfoMap.TryGetValue(markHideInfoKey, out systemMarkHideInfoPb) && systemMarkHideInfoPb != null && systemMarkHideInfoPb.HideInfo != null)
+			if (this.SystemMarkHideInfoMap.TryGetValue(markHideInfoKey, out systemMarkHideInfoPb) && systemMarkHideInfoPb.HideInfo != null)
 			{
 				return this.ParseHideReason(systemMarkHideInfoPb.HideInfo);
 			}
 			return null;
 		}
 
-		// Token: 0x06037410 RID: 226320 RVA: 0x00D1BBB4 File Offset: 0x00D19DB4
+		// Token: 0x0602C35A RID: 181082 RVA: 0x00C6B238 File Offset: 0x00C69438
 		[return: Nullable(2)]
 		public string ParseHideReason(string hideInfo)
 		{
@@ -2336,7 +2396,7 @@ namespace CSharpScript.Game.Module.Map
 			return null;
 		}
 
-		// Token: 0x06037411 RID: 226321 RVA: 0x00D1BC94 File Offset: 0x00D19E94
+		// Token: 0x0602C35B RID: 181083 RVA: 0x00C6B318 File Offset: 0x00C69518
 		public void InitTeleportMarkQueryCache()
 		{
 			foreach (MapMark mapMark in MapConfig.Instance.GetConfigMarkMap().Values)
@@ -2344,7 +2404,7 @@ namespace CSharpScript.Game.Module.Map
 				if (mapMark.ObjectType == 15 || mapMark.ObjectType == 5 || mapMark.ObjectType == 6 || mapMark.ObjectType == 10 || mapMark.ObjectType == 19 || mapMark.EnableQuickTransfer == 1)
 				{
 					global::Vector vector = global::Vector.Create();
-					MapUtil.GetConfigPosition(mapMark.EntityConfigId, vector, mapMark.RelativeDungeonId);
+					MapUtil.GetConfigPosition(mapMark.EntityConfigId, vector, mapMark.RelativeDungeonId, false);
 					MapTeleportQueryInfo item = new MapTeleportQueryInfo
 					{
 						MarkId = mapMark.MarkId,
@@ -2374,13 +2434,13 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x06037412 RID: 226322 RVA: 0x00D1BE0C File Offset: 0x00D1A00C
+		// Token: 0x0602C35C RID: 181084 RVA: 0x00C6B490 File Offset: 0x00C69690
 		public QueryNearestTeleporterResult QueryNearestTeleporter(int targetMarkId, EMarkType targetMarkType, global::Vector playerPosition)
 		{
-			MapModel.<>c__DisplayClass180_0 CS$<>8__locals1 = new MapModel.<>c__DisplayClass180_0();
+			MapModel.<>c__DisplayClass181_0 CS$<>8__locals1 = new MapModel.<>c__DisplayClass181_0();
 			CS$<>8__locals1.targetMarkId = targetMarkId;
 			CS$<>8__locals1.<>4__this = this;
-			MapModel.<>c__DisplayClass180_0 CS$<>8__locals2 = CS$<>8__locals1;
+			MapModel.<>c__DisplayClass181_0 CS$<>8__locals2 = CS$<>8__locals1;
 			DynamicMarkCreateInfo mark = this.GetMark(targetMarkType, CS$<>8__locals1.targetMarkId);
 			int? num = (mark != null) ? mark.InstanceDungeonId : null;
 			int targetDungeonId;
@@ -2394,7 +2454,7 @@ namespace CSharpScript.Game.Module.Map
 				targetDungeonId = num.GetValueOrDefault();
 			}
 			CS$<>8__locals2.targetDungeonId = targetDungeonId;
-			MapModel.<>c__DisplayClass180_0 CS$<>8__locals3 = CS$<>8__locals1;
+			MapModel.<>c__DisplayClass181_0 CS$<>8__locals3 = CS$<>8__locals1;
 			DynamicMarkCreateInfo mark2 = this.GetMark(targetMarkType, CS$<>8__locals1.targetMarkId);
 			EMapGravityDirection targetGravity;
 			if (mark2 == null)
@@ -2448,7 +2508,7 @@ namespace CSharpScript.Game.Module.Map
 			});
 		}
 
-		// Token: 0x06037413 RID: 226323 RVA: 0x00D1BF08 File Offset: 0x00D1A108
+		// Token: 0x0602C35D RID: 181085 RVA: 0x00C6B58C File Offset: 0x00C6978C
 		private unsafe TTrackTarget GetMarkTrackTarget(int targetMarkId, EMarkType targetMarkType)
 		{
 			DynamicMarkCreateInfo mark = this.GetMark(targetMarkType, targetMarkId);
@@ -2476,7 +2536,7 @@ namespace CSharpScript.Game.Module.Map
 			return result;
 		}
 
-		// Token: 0x06037414 RID: 226324 RVA: 0x00D1BFF0 File Offset: 0x00D1A1F0
+		// Token: 0x0602C35E RID: 181086 RVA: 0x00C6B674 File Offset: 0x00C69874
 		private QueryNearestTeleporterResult QueryNearestTeleporterInternal(int targetMarkId, EMarkType targetMarkType, global::Vector playerPosition, [Nullable(new byte[]
 		{
 			2,
@@ -2577,7 +2637,7 @@ namespace CSharpScript.Game.Module.Map
 			};
 		}
 
-		// Token: 0x06037415 RID: 226325 RVA: 0x00D1C2B0 File Offset: 0x00D1A4B0
+		// Token: 0x0602C35F RID: 181087 RVA: 0x00C6B934 File Offset: 0x00C69B34
 		private static int GetEffectiveMultiMapId(int multiMapId, int[] connectMultiMapIds)
 		{
 			if (multiMapId == 0 && connectMultiMapIds.Length != 0)
@@ -2587,7 +2647,7 @@ namespace CSharpScript.Game.Module.Map
 			return multiMapId;
 		}
 
-		// Token: 0x06037416 RID: 226326 RVA: 0x00D1C2C0 File Offset: 0x00D1A4C0
+		// Token: 0x0602C360 RID: 181088 RVA: 0x00C6B944 File Offset: 0x00C69B44
 		public EMarkType? GetEntityIdToMarkType(int entityId)
 		{
 			Dictionary<int, EMarkType> entityIdToMarkType = this.EntityIdToMarkType;
@@ -2598,13 +2658,13 @@ namespace CSharpScript.Game.Module.Map
 			return new EMarkType?(entityIdToMarkType.GetValueOrDefault(entityId));
 		}
 
-		// Token: 0x06037417 RID: 226327 RVA: 0x00D1C2EC File Offset: 0x00D1A4EC
+		// Token: 0x0602C361 RID: 181089 RVA: 0x00C6B970 File Offset: 0x00C69B70
 		public void AddEntityIdToMarkType(int entityId, EMarkType markType)
 		{
 			this.EntityIdToMarkType[entityId] = markType;
 		}
 
-		// Token: 0x06037418 RID: 226328 RVA: 0x00D1C2FB File Offset: 0x00D1A4FB
+		// Token: 0x0602C362 RID: 181090 RVA: 0x00C6B97F File Offset: 0x00C69B7F
 		public void RemoveEntityIdToMarkType(int entityId)
 		{
 			Dictionary<int, EMarkType> entityIdToMarkType = this.EntityIdToMarkType;
@@ -2615,26 +2675,26 @@ namespace CSharpScript.Game.Module.Map
 			entityIdToMarkType.Remove(entityId);
 		}
 
-		// Token: 0x06037419 RID: 226329 RVA: 0x00D1C30F File Offset: 0x00D1A50F
+		// Token: 0x0602C363 RID: 181091 RVA: 0x00C6B993 File Offset: 0x00C69B93
 		public void UpdateHonamiScanMarkInfo(int markId, MarkState state)
 		{
 			this.HonamiScanMarkInfo[markId] = state;
 			EventSystem.Instance.Emit<int>(EEventName.OnHonamiScanMarkInfoUpdate, markId);
 		}
 
-		// Token: 0x0603741A RID: 226330 RVA: 0x00D1C32F File Offset: 0x00D1A52F
+		// Token: 0x0602C364 RID: 181092 RVA: 0x00C6B9B3 File Offset: 0x00C69BB3
 		public MarkState GetHonamiScanMarkInfo(int markId)
 		{
 			return this.HonamiScanMarkInfo.GetValueOrDefault(markId, MarkState.MarkDisable);
 		}
 
-		// Token: 0x0603741B RID: 226331 RVA: 0x00D1C33E File Offset: 0x00D1A53E
+		// Token: 0x0602C365 RID: 181093 RVA: 0x00C6B9C2 File Offset: 0x00C69BC2
 		public void ClearHonamiScanMarkInfo()
 		{
 			this.HonamiScanMarkInfo.Clear();
 		}
 
-		// Token: 0x0603741C RID: 226332 RVA: 0x00D1C34B File Offset: 0x00D1A54B
+		// Token: 0x0602C366 RID: 181094 RVA: 0x00C6B9CF File Offset: 0x00C69BCF
 		public void InitExtraUiMarkType(EMapType mapType)
 		{
 			if (this.ExtraMarkTypeMap != null)
@@ -2643,7 +2703,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x0603741D RID: 226333 RVA: 0x00D1C366 File Offset: 0x00D1A566
+		// Token: 0x0602C367 RID: 181095 RVA: 0x00C6B9EA File Offset: 0x00C69BEA
 		public void AddExtraUiMarkType(EMapType mapType, EMarkType markType)
 		{
 			if (this.ExtraMarkTypeMap != null && !this.ExtraMarkTypeMap.ContainsKey(mapType))
@@ -2663,14 +2723,14 @@ namespace CSharpScript.Game.Module.Map
 			valueOrDefault.Add(markType);
 		}
 
-		// Token: 0x0603741E RID: 226334 RVA: 0x00D1C3A2 File Offset: 0x00D1A5A2
+		// Token: 0x0602C368 RID: 181096 RVA: 0x00C6BA26 File Offset: 0x00C69C26
 		public bool HasExtraUiMarkType(EMapType mapType)
 		{
 			Dictionary<EMapType, HashSet<EMarkType>> extraMarkTypeMap = this.ExtraMarkTypeMap;
 			return ((extraMarkTypeMap != null) ? extraMarkTypeMap.GetValueOrDefault(mapType) : null) != null;
 		}
 
-		// Token: 0x0603741F RID: 226335 RVA: 0x00D1C3BC File Offset: 0x00D1A5BC
+		// Token: 0x0602C369 RID: 181097 RVA: 0x00C6BA40 File Offset: 0x00C69C40
 		public bool IsExtraUiMarkType(EMapType mapType, EMarkType markType)
 		{
 			Dictionary<EMapType, HashSet<EMarkType>> extraMarkTypeMap = this.ExtraMarkTypeMap;
@@ -2688,7 +2748,7 @@ namespace CSharpScript.Game.Module.Map
 			return flag2.GetValueOrDefault();
 		}
 
-		// Token: 0x06037420 RID: 226336 RVA: 0x00D1C406 File Offset: 0x00D1A606
+		// Token: 0x0602C36A RID: 181098 RVA: 0x00C6BA8A File Offset: 0x00C69C8A
 		public void ClearExtraUiMarkType(EMapType mapType)
 		{
 			Dictionary<EMapType, HashSet<EMarkType>> extraMarkTypeMap = this.ExtraMarkTypeMap;
@@ -2699,7 +2759,7 @@ namespace CSharpScript.Game.Module.Map
 			extraMarkTypeMap.Remove(mapType);
 		}
 
-		// Token: 0x06037421 RID: 226337 RVA: 0x00D1C41A File Offset: 0x00D1A61A
+		// Token: 0x0602C36B RID: 181099 RVA: 0x00C6BA9E File Offset: 0x00C69C9E
 		public void InitExtraUiMarkId(EMapType mapType)
 		{
 			if (this.ExtraMarkIdMap != null)
@@ -2708,7 +2768,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x06037422 RID: 226338 RVA: 0x00D1C435 File Offset: 0x00D1A635
+		// Token: 0x0602C36C RID: 181100 RVA: 0x00C6BAB9 File Offset: 0x00C69CB9
 		public void AddExtraUiMarkId(EMapType mapType, int markId)
 		{
 			if (this.ExtraMarkIdMap != null && !this.ExtraMarkIdMap.ContainsKey(mapType))
@@ -2728,14 +2788,14 @@ namespace CSharpScript.Game.Module.Map
 			valueOrDefault.Add(markId);
 		}
 
-		// Token: 0x06037423 RID: 226339 RVA: 0x00D1C471 File Offset: 0x00D1A671
+		// Token: 0x0602C36D RID: 181101 RVA: 0x00C6BAF5 File Offset: 0x00C69CF5
 		public bool HasExtraUiMarkId(EMapType mapType)
 		{
 			Dictionary<EMapType, HashSet<int>> extraMarkIdMap = this.ExtraMarkIdMap;
 			return ((extraMarkIdMap != null) ? extraMarkIdMap.GetValueOrDefault(mapType) : null) != null;
 		}
 
-		// Token: 0x06037424 RID: 226340 RVA: 0x00D1C48C File Offset: 0x00D1A68C
+		// Token: 0x0602C36E RID: 181102 RVA: 0x00C6BB10 File Offset: 0x00C69D10
 		public bool IsExtraUiMarkId(EMapType mapType, int markId)
 		{
 			Dictionary<EMapType, HashSet<int>> extraMarkIdMap = this.ExtraMarkIdMap;
@@ -2753,7 +2813,7 @@ namespace CSharpScript.Game.Module.Map
 			return flag2.GetValueOrDefault();
 		}
 
-		// Token: 0x06037425 RID: 226341 RVA: 0x00D1C4D6 File Offset: 0x00D1A6D6
+		// Token: 0x0602C36F RID: 181103 RVA: 0x00C6BB5A File Offset: 0x00C69D5A
 		public void ClearExtraUiMarkId(EMapType mapType)
 		{
 			Dictionary<EMapType, HashSet<int>> extraMarkIdMap = this.ExtraMarkIdMap;
@@ -2764,7 +2824,7 @@ namespace CSharpScript.Game.Module.Map
 			extraMarkIdMap.Remove(mapType);
 		}
 
-		// Token: 0x06037426 RID: 226342 RVA: 0x00D1C4EA File Offset: 0x00D1A6EA
+		// Token: 0x0602C370 RID: 181104 RVA: 0x00C6BB6E File Offset: 0x00C69D6E
 		public void SetExtraUiTileRange(EMapType mapType, ITileNum tileRange)
 		{
 			if (this.ExtraUiTileRange != null)
@@ -2773,7 +2833,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x06037427 RID: 226343 RVA: 0x00D1C501 File Offset: 0x00D1A701
+		// Token: 0x0602C371 RID: 181105 RVA: 0x00C6BB85 File Offset: 0x00C69D85
 		public void ClearExtraUiTileRange(EMapType mapType)
 		{
 			Dictionary<EMapType, ITileNum> extraUiTileRange = this.ExtraUiTileRange;
@@ -2784,14 +2844,14 @@ namespace CSharpScript.Game.Module.Map
 			extraUiTileRange.Remove(mapType);
 		}
 
-		// Token: 0x06037428 RID: 226344 RVA: 0x00D1C515 File Offset: 0x00D1A715
+		// Token: 0x0602C372 RID: 181106 RVA: 0x00C6BB99 File Offset: 0x00C69D99
 		public bool HasExtraUiTileRange(EMapType mapType)
 		{
 			Dictionary<EMapType, ITileNum> extraUiTileRange = this.ExtraUiTileRange;
 			return extraUiTileRange != null && extraUiTileRange.ContainsKey(mapType);
 		}
 
-		// Token: 0x06037429 RID: 226345 RVA: 0x00D1C52C File Offset: 0x00D1A72C
+		// Token: 0x0602C373 RID: 181107 RVA: 0x00C6BBB0 File Offset: 0x00C69DB0
 		public bool IsInExtraUiTileRange(EMapType mapType, global::Vector uiPosition)
 		{
 			ITileNum tileNum;
@@ -2804,8 +2864,8 @@ namespace CSharpScript.Game.Module.Map
 			return num >= tileNum.MinX && num <= tileNum.MaxX && num2 >= tileNum.MinY && num2 <= tileNum.MaxY;
 		}
 
-		// Token: 0x17008479 RID: 33913
-		// (get) Token: 0x0603742A RID: 226346 RVA: 0x00D1C5AA File Offset: 0x00D1A7AA
+		// Token: 0x17005845 RID: 22597
+		// (get) Token: 0x0602C374 RID: 181108 RVA: 0x00C6BC2E File Offset: 0x00C69E2E
 		public static MapModel Instance
 		{
 			get
@@ -2814,7 +2874,7 @@ namespace CSharpScript.Game.Module.Map
 			}
 		}
 
-		// Token: 0x0603742B RID: 226347 RVA: 0x00D1C5B1 File Offset: 0x00D1A7B1
+		// Token: 0x0602C375 RID: 181109 RVA: 0x00C6BC35 File Offset: 0x00C69E35
 		public static MapModel GetOrCreateInstance()
 		{
 			if (MapModel._Instance == null)
@@ -2824,7 +2884,7 @@ namespace CSharpScript.Game.Module.Map
 			return MapModel._Instance;
 		}
 
-		// Token: 0x0603742C RID: 226348 RVA: 0x00D1C5C5 File Offset: 0x00D1A7C5
+		// Token: 0x0602C376 RID: 181110 RVA: 0x00C6BC49 File Offset: 0x00C69E49
 		public static bool CreateInstance()
 		{
 			if (MapModel._Instance != null)
@@ -2835,27 +2895,27 @@ namespace CSharpScript.Game.Module.Map
 			return true;
 		}
 
-		// Token: 0x0603742D RID: 226349 RVA: 0x00D1C5DB File Offset: 0x00D1A7DB
+		// Token: 0x0602C377 RID: 181111 RVA: 0x00C6BC5F File Offset: 0x00C69E5F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603742E RID: 226350 RVA: 0x00D1C5DD File Offset: 0x00D1A7DD
+		// Token: 0x0602C378 RID: 181112 RVA: 0x00C6BC61 File Offset: 0x00C69E61
 		public static void ResetStaticDefaultValue()
 		{
 			MapModel._Instance = null;
 		}
 
-		// Token: 0x0603742F RID: 226351 RVA: 0x00D1C5E5 File Offset: 0x00D1A7E5
+		// Token: 0x0602C379 RID: 181113 RVA: 0x00C6BC69 File Offset: 0x00C69E69
 		static MapModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MapModel.CreateStaticDefaultValue), new Action(MapModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D1DB RID: 119259
+		// Token: 0x04017C74 RID: 97396
 		private int DynamicMarkId;
 
-		// Token: 0x0401D1DC RID: 119260
+		// Token: 0x04017C75 RID: 97397
 		[Nullable(new byte[]
 		{
 			2,
@@ -2864,7 +2924,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<EMarkType, Dictionary<int, DynamicMarkCreateInfo>> DynamicMarks;
 
-		// Token: 0x0401D1DD RID: 119261
+		// Token: 0x04017C76 RID: 97398
 		[Nullable(new byte[]
 		{
 			2,
@@ -2872,11 +2932,11 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<int, Dictionary<int, bool>> MarkVisibleStateRecord;
 
-		// Token: 0x0401D1DE RID: 119262
+		// Token: 0x04017C77 RID: 97399
 		[Nullable(2)]
 		private Dictionary<int, long> SceneGamePlayRefQuestMap;
 
-		// Token: 0x0401D1DF RID: 119263
+		// Token: 0x04017C78 RID: 97400
 		[Nullable(new byte[]
 		{
 			2,
@@ -2885,7 +2945,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<string, int[]> OccupationResourceRefPlayMap;
 
-		// Token: 0x0401D1E0 RID: 119264
+		// Token: 0x04017C79 RID: 97401
 		[Nullable(new byte[]
 		{
 			2,
@@ -2893,23 +2953,23 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<int, DynamicMarkCreateInfo> DynamicMarksSearchMap;
 
-		// Token: 0x0401D1E1 RID: 119265
+		// Token: 0x04017C7A RID: 97402
 		[Nullable(2)]
 		private Dictionary<int, bool> UnlockedTeleports;
 
-		// Token: 0x0401D1E2 RID: 119266
+		// Token: 0x04017C7B RID: 97403
 		[Nullable(2)]
 		private Dictionary<int, bool> UnlockedFogs;
 
-		// Token: 0x0401D1E3 RID: 119267
+		// Token: 0x04017C7C RID: 97404
 		[Nullable(2)]
 		private Dictionary<int, bool> UnlockedAreas;
 
-		// Token: 0x0401D1E4 RID: 119268
+		// Token: 0x04017C7D RID: 97405
 		[Nullable(2)]
 		private TrackMapMarkParams CurTrackParams;
 
-		// Token: 0x0401D1E5 RID: 119269
+		// Token: 0x04017C7E RID: 97406
 		[Nullable(new byte[]
 		{
 			2,
@@ -2917,41 +2977,41 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<int, IMarkShowState> MarkExtraShowStateReference;
 
-		// Token: 0x0401D1E6 RID: 119270
+		// Token: 0x04017C7F RID: 97407
 		private HashSet<int> CompleteMarks = new HashSet<int>();
 
-		// Token: 0x0401D1E7 RID: 119271
+		// Token: 0x04017C80 RID: 97408
 		[Nullable(2)]
 		private Dictionary<int, int> PendingAddEntityList;
 
-		// Token: 0x0401D1E8 RID: 119272
+		// Token: 0x04017C81 RID: 97409
 		[Nullable(2)]
 		private HashSet<int> PendingAddTempMapMarkList;
 
-		// Token: 0x0401D1E9 RID: 119273
+		// Token: 0x04017C82 RID: 97410
 		[Nullable(2)]
 		private Dictionary<int, bool> ServerUnlockedMarksMap;
 
-		// Token: 0x0401D1EA RID: 119274
+		// Token: 0x04017C83 RID: 97411
 		private List<int> UnlockMultiMapIds = new List<int>();
 
-		// Token: 0x0401D1EB RID: 119275
+		// Token: 0x04017C84 RID: 97412
 		public List<int> UnlockMapBlockIds = new List<int>();
 
-		// Token: 0x0401D1EC RID: 119276
+		// Token: 0x04017C85 RID: 97413
 		public readonly global::Vector LastSafeLocation = global::Vector.Create();
 
-		// Token: 0x0401D1ED RID: 119277
+		// Token: 0x04017C86 RID: 97414
 		[Nullable(2)]
 		public Circle CacheEnrichmentAreaWorldMapCircle;
 
-		// Token: 0x0401D1EE RID: 119278
+		// Token: 0x04017C87 RID: 97415
 		public int CacheEnrichmentAreaEntityId;
 
-		// Token: 0x0401D1EF RID: 119279
+		// Token: 0x04017C88 RID: 97416
 		public Dictionary<int, MarkState> HonamiScanMarkInfo = new Dictionary<int, MarkState>();
 
-		// Token: 0x0401D1F0 RID: 119280
+		// Token: 0x04017C89 RID: 97417
 		[Nullable(new byte[]
 		{
 			2,
@@ -2959,7 +3019,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<int, TreasureBoxSlotInfo> TreasureBoxSlotRawDataMap;
 
-		// Token: 0x0401D1F1 RID: 119281
+		// Token: 0x04017C8A RID: 97418
 		[Nullable(new byte[]
 		{
 			2,
@@ -2967,7 +3027,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<int, TemporaryTeleportInfo> TemporaryTeleportInfoRawDataMap;
 
-		// Token: 0x0401D1F2 RID: 119282
+		// Token: 0x04017C8B RID: 97419
 		[Nullable(new byte[]
 		{
 			1,
@@ -2976,7 +3036,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private readonly Dictionary<ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>, TreasureChestCountData> TreasureChestCountMap = new Dictionary<ValueTuple<TreasureChestCountTargetType, int, TreasureChestStatType>, TreasureChestCountData>();
 
-		// Token: 0x0401D1F3 RID: 119283
+		// Token: 0x04017C8C RID: 97420
 		[Nullable(new byte[]
 		{
 			2,
@@ -2984,23 +3044,23 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		public Dictionary<EMapLifeEventListenerType, IMapLifeEventTriggerParam> MapLifeEventListenerTriggerMap;
 
-		// Token: 0x0401D1F4 RID: 119284
+		// Token: 0x04017C8D RID: 97421
 		private readonly List<MarkDefine.FishingShipMarkCacheInfo> CacheEntityMapMarkInfo = new List<MarkDefine.FishingShipMarkCacheInfo>();
 
-		// Token: 0x0401D1F5 RID: 119285
+		// Token: 0x04017C8E RID: 97422
 		private readonly HashSet<int> RemoteTrackingMarkSet = new HashSet<int>();
 
-		// Token: 0x0401D1F6 RID: 119286
+		// Token: 0x04017C8F RID: 97423
 		private Dictionary<string, SystemMarkHideInfoPb> SystemMarkHideInfoMap = new Dictionary<string, SystemMarkHideInfoPb>();
 
-		// Token: 0x0401D1F7 RID: 119287
+		// Token: 0x04017C90 RID: 97424
 		[Nullable(2)]
 		private Dictionary<int, EMarkType> EntityIdToMarkType;
 
-		// Token: 0x0401D1F8 RID: 119288
+		// Token: 0x04017C91 RID: 97425
 		public int? LastHighLevelAreaInner;
 
-		// Token: 0x0401D1F9 RID: 119289
+		// Token: 0x04017C92 RID: 97426
 		[Nullable(new byte[]
 		{
 			2,
@@ -3008,7 +3068,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<EMapType, HashSet<EMarkType>> ExtraMarkTypeMap;
 
-		// Token: 0x0401D1FA RID: 119290
+		// Token: 0x04017C93 RID: 97427
 		[Nullable(new byte[]
 		{
 			2,
@@ -3016,7 +3076,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<EMapType, HashSet<int>> ExtraMarkIdMap;
 
-		// Token: 0x0401D1FB RID: 119291
+		// Token: 0x04017C94 RID: 97428
 		[Nullable(new byte[]
 		{
 			2,
@@ -3024,10 +3084,10 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private Dictionary<EMapType, ITileNum> ExtraUiTileRange;
 
-		// Token: 0x0401D1FC RID: 119292
+		// Token: 0x04017C95 RID: 97429
 		private readonly Dictionary<int, HashSet<MapTeleportQueryInfo>> MarkQueryInfoInGrid = new Dictionary<int, HashSet<MapTeleportQueryInfo>>();
 
-		// Token: 0x0401D1FD RID: 119293
+		// Token: 0x04017C96 RID: 97430
 		[Nullable(new byte[]
 		{
 			1,
@@ -3037,7 +3097,7 @@ namespace CSharpScript.Game.Module.Map
 		})]
 		private readonly TrimLru<int, List<ValueTuple<MapTeleportQueryInfo, double>>> MarkQueryInfoCache = new TrimLru<int, List<ValueTuple<MapTeleportQueryInfo, double>>>(3, false);
 
-		// Token: 0x0401D1FE RID: 119294
+		// Token: 0x04017C97 RID: 97431
 		[Nullable(2)]
 		private static MapModel _Instance;
 	}

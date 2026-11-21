@@ -1,24 +1,26 @@
 ﻿using System;
 
-// Token: 0x020019D7 RID: 6615
+// Token: 0x02000E96 RID: 3734
 public enum EConfirmBoxType
 {
-	// Token: 0x040058EB RID: 22763
+	// Token: 0x040059B9 RID: 22969
 	Small,
-	// Token: 0x040058EC RID: 22764
+	// Token: 0x040059BA RID: 22970
 	Middle,
-	// Token: 0x040058ED RID: 22765
+	// Token: 0x040059BB RID: 22971
 	MiddleWithoutItem,
-	// Token: 0x040058EE RID: 22766
+	// Token: 0x040059BC RID: 22972
 	RacingBets,
-	// Token: 0x040058EF RID: 22767
+	// Token: 0x040059BD RID: 22973
 	FloroRanch,
-	// Token: 0x040058F0 RID: 22768
+	// Token: 0x040059BE RID: 22974
 	MatchThree = 9,
-	// Token: 0x040058F1 RID: 22769
+	// Token: 0x040059BF RID: 22975
 	Cyberpunk = 5,
-	// Token: 0x040058F2 RID: 22770
+	// Token: 0x040059C0 RID: 22976
 	KurotatoSave,
-	// Token: 0x040058F3 RID: 22771
-	DangoBrawl
+	// Token: 0x040059C1 RID: 22977
+	DangoBrawl,
+	// Token: 0x040059C2 RID: 22978
+	SolarSchool
 }

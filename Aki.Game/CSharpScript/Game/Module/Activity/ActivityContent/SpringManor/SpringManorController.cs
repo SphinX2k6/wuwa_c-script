@@ -15,42 +15,42 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006036 RID: 24630
+	// Token: 0x02004FB4 RID: 20404
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SpringManorController : ActivityControllerBase
 	{
-		// Token: 0x0603E546 RID: 255302 RVA: 0x00F0D4E5 File Offset: 0x00F0B6E5
+		// Token: 0x0603320A RID: 209418 RVA: 0x00E542A9 File Offset: 0x00E524A9
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0603E547 RID: 255303 RVA: 0x00F0D4E7 File Offset: 0x00F0B6E7
+		// Token: 0x0603320B RID: 209419 RVA: 0x00E542AB File Offset: 0x00E524AB
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_Spring26ActivityEntry";
 		}
 
-		// Token: 0x0603E548 RID: 255304 RVA: 0x00F0D4EE File Offset: 0x00F0B6EE
+		// Token: 0x0603320C RID: 209420 RVA: 0x00E542B2 File Offset: 0x00E524B2
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new SpringManorSubView();
 		}
 
-		// Token: 0x0603E549 RID: 255305 RVA: 0x00F0D4F5 File Offset: 0x00F0B6F5
+		// Token: 0x0603320D RID: 209421 RVA: 0x00E542B9 File Offset: 0x00E524B9
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new SpringManorData();
 		}
 
-		// Token: 0x0603E54A RID: 255306 RVA: 0x00F0D4FC File Offset: 0x00F0B6FC
+		// Token: 0x0603320E RID: 209422 RVA: 0x00E542C0 File Offset: 0x00E524C0
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603E54B RID: 255307 RVA: 0x00F0D500 File Offset: 0x00F0B700
+		// Token: 0x0603320F RID: 209423 RVA: 0x00E542C4 File Offset: 0x00E524C4
 		public void RequestExhibitionSave(List<EntityItemBundleInfo> bundleInfos)
 		{
 			ExhibitionItemSaveRequest exhibitionItemSaveRequest = ExhibitionItemSaveRequest.Create();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 0);
 		}
 
-		// Token: 0x0603E54C RID: 255308 RVA: 0x00F0D550 File Offset: 0x00F0B750
+		// Token: 0x06033210 RID: 209424 RVA: 0x00E54314 File Offset: 0x00E52514
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.SpringFestivalUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSpringFestivalUpdateNotify));
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			Net.Instance.Register(ENotifyMessageId.BookItemUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnBookItemUpdateNotify));
 		}
 
-		// Token: 0x0603E54D RID: 255309 RVA: 0x00F0D5B1 File Offset: 0x00F0B7B1
+		// Token: 0x06033211 RID: 209425 RVA: 0x00E54375 File Offset: 0x00E52575
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SpringFestivalUpdateNotify);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			Net.Instance.UnRegister(ENotifyMessageId.BookItemUpdateNotify);
 		}
 
-		// Token: 0x0603E54E RID: 255310 RVA: 0x00F0D5E4 File Offset: 0x00F0B7E4
+		// Token: 0x06033212 RID: 209426 RVA: 0x00E543A8 File Offset: 0x00E525A8
 		[NullableContext(2)]
 		private void OnAtmosphereUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit(EEventName.SpringManorAtmosphereUpdate);
 		}
 
-		// Token: 0x0603E54F RID: 255311 RVA: 0x00F0D760 File Offset: 0x00F0B960
+		// Token: 0x06033213 RID: 209427 RVA: 0x00E54524 File Offset: 0x00E52724
 		[NullableContext(2)]
 		private void OnSpringFestivalUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E550 RID: 255312 RVA: 0x00F0D7C7 File Offset: 0x00F0B9C7
+		// Token: 0x06033214 RID: 209428 RVA: 0x00E5458B File Offset: 0x00E5278B
 		private void OnSkipEntryUpdateNotify(SpringSkipEntry skipEntry)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.ActivityData.OnSkipEntryUpdateNotify(skipEntry);
 		}
 
-		// Token: 0x0603E551 RID: 255313 RVA: 0x00F0D7DE File Offset: 0x00F0B9DE
+		// Token: 0x06033215 RID: 209429 RVA: 0x00E545A2 File Offset: 0x00E527A2
 		private void OnJokerLevelUpdateNotify(GuessJokerLevelInfoArray jokerLevelInfos)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.ActivityData.UpdateGuessJokerGameData(jokerLevelInfos.GuessJokerLevelInfos);
 		}
 
-		// Token: 0x0603E552 RID: 255314 RVA: 0x00F0D7FC File Offset: 0x00F0B9FC
+		// Token: 0x06033216 RID: 209430 RVA: 0x00E545C0 File Offset: 0x00E527C0
 		private void OnFunctionOpenNotify(int functionId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E553 RID: 255315 RVA: 0x00F0D84D File Offset: 0x00F0BA4D
+		// Token: 0x06033217 RID: 209431 RVA: 0x00E54611 File Offset: 0x00E52811
 		private void OnTaskUpdateNotify(ConditionTask task)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit(EEventName.SpringManorTaskUpdateNotify);
 		}
 
-		// Token: 0x0603E554 RID: 255316 RVA: 0x00F0D87C File Offset: 0x00F0BA7C
+		// Token: 0x06033218 RID: 209432 RVA: 0x00E54640 File Offset: 0x00E52840
 		[NullableContext(2)]
 		public void RequestTaskRewardReceive(int tabId, Action finishCallback = null)
 		{
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 0);
 		}
 
-		// Token: 0x0603E555 RID: 255317 RVA: 0x00F0D8F8 File Offset: 0x00F0BAF8
+		// Token: 0x06033219 RID: 209433 RVA: 0x00E546BC File Offset: 0x00E528BC
 		[NullableContext(2)]
 		public void RequestScoreRewardReceive(Action finishCallback = null)
 		{
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 0);
 		}
 
-		// Token: 0x0603E556 RID: 255318 RVA: 0x00F0D970 File Offset: 0x00F0BB70
+		// Token: 0x0603321A RID: 209434 RVA: 0x00E54734 File Offset: 0x00E52934
 		[NullableContext(2)]
 		public void RequestAtmosphereRewardReceive(Action finishCallback = null)
 		{
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 0);
 		}
 
-		// Token: 0x0603E557 RID: 255319 RVA: 0x00F0D9E3 File Offset: 0x00F0BBE3
+		// Token: 0x0603321B RID: 209435 RVA: 0x00E547A7 File Offset: 0x00E529A7
 		public void RequestTrackQuest(int questId, bool isTrack)
 		{
 			if (SpringManorModel.Instance.IsMainQuest(questId))
@@ -331,27 +331,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.StopTrackSubQuest(questId);
 		}
 
-		// Token: 0x0603E558 RID: 255320 RVA: 0x00F0DA15 File Offset: 0x00F0BC15
+		// Token: 0x0603321C RID: 209436 RVA: 0x00E547D9 File Offset: 0x00E529D9
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 			EventSystem.Instance.Add(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603E559 RID: 255321 RVA: 0x00F0DA4F File Offset: 0x00F0BC4F
+		// Token: 0x0603321D RID: 209437 RVA: 0x00E54813 File Offset: 0x00E52A13
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 			EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603E55A RID: 255322 RVA: 0x00F0DA89 File Offset: 0x00F0BC89
+		// Token: 0x0603321E RID: 209438 RVA: 0x00E5484D File Offset: 0x00E52A4D
 		public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.SpringManorActivityOpenView, null, null);
 		}
 
-		// Token: 0x0603E55B RID: 255323 RVA: 0x00F0DA9C File Offset: 0x00F0BC9C
+		// Token: 0x0603321F RID: 209439 RVA: 0x00E54860 File Offset: 0x00E52A60
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			if (state != QuestState.Finish && state != QuestState.Delete)
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.StopTrackSubQuest(questId);
 		}
 
-		// Token: 0x0603E55C RID: 255324 RVA: 0x00F0DAAE File Offset: 0x00F0BCAE
+		// Token: 0x06033220 RID: 209440 RVA: 0x00E54872 File Offset: 0x00E52A72
 		private void OnWorldDone()
 		{
 			if (SpringManorModel.Instance.CheckInInstance())
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E55D RID: 255325 RVA: 0x00F0DAC3 File Offset: 0x00F0BCC3
+		// Token: 0x06033221 RID: 209441 RVA: 0x00E54887 File Offset: 0x00E52A87
 		public void LeaveInstanceDungeonRequest()
 		{
 			this.SetLimitTag(false);
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x0603E55E RID: 255326 RVA: 0x00F0DAE0 File Offset: 0x00F0BCE0
+		// Token: 0x06033222 RID: 209442 RVA: 0x00E548A4 File Offset: 0x00E52AA4
 		private void SetLimitTag(bool enable)
 		{
 			this.SetPlayerTag(GameplayTagDefine.EGameplayTagId["战斗状态.行为限制.快速攀爬禁止"], enable);
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetPlayerTag(GameplayTagDefine.EGameplayTagId["角色.Common.探索技能.禁用探索工具轮盘"], enable);
 		}
 
-		// Token: 0x0603E55F RID: 255327 RVA: 0x00F0DB48 File Offset: 0x00F0BD48
+		// Token: 0x06033223 RID: 209443 RVA: 0x00E5490C File Offset: 0x00E52B0C
 		private unsafe void SetPlayerTag(int tagId, bool enable)
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -417,7 +417,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E560 RID: 255328 RVA: 0x00F0DC10 File Offset: 0x00F0BE10
+		// Token: 0x06033224 RID: 209444 RVA: 0x00E549D4 File Offset: 0x00E52BD4
 		public void EnterBigWorldInstRequestAndUnTrackQuest()
 		{
 			global::Quest curTrackedQuest = QuestNewModel.Instance.GetCurTrackedQuest();
@@ -429,7 +429,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.EnterBigWorldInstRequest();
 		}
 
-		// Token: 0x0603E561 RID: 255329 RVA: 0x00F0DC64 File Offset: 0x00F0BE64
+		// Token: 0x06033225 RID: 209445 RVA: 0x00E54A28 File Offset: 0x00E52C28
 		public void EnterBigWorldInstRequest()
 		{
 			EnterBigWorldInstRequest enterBigWorldInstRequest = Aki.Protocol.EnterBigWorldInstRequest.Create();
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 0);
 		}
 
-		// Token: 0x0603E562 RID: 255330 RVA: 0x00F0DCDC File Offset: 0x00F0BEDC
+		// Token: 0x06033226 RID: 209446 RVA: 0x00E54AA0 File Offset: 0x00E52CA0
 		public void SpringManorInputHandler(string actionName)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E563 RID: 255331 RVA: 0x00F0DD6C File Offset: 0x00F0BF6C
+		// Token: 0x06033227 RID: 209447 RVA: 0x00E54B30 File Offset: 0x00E52D30
 		[NullableContext(2)]
 		private void OnBookItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit(EEventName.OnBrochureBookItemStateUpdate);
 		}
 
-		// Token: 0x0603E564 RID: 255332 RVA: 0x00F0DE28 File Offset: 0x00F0C028
+		// Token: 0x06033228 RID: 209448 RVA: 0x00E54BEC File Offset: 0x00E52DEC
 		private void OpenPropView(int activityId, int brochureId, int configId)
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -577,7 +577,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E565 RID: 255333 RVA: 0x00F0DF0C File Offset: 0x00F0C10C
+		// Token: 0x06033229 RID: 209449 RVA: 0x00E54CD0 File Offset: 0x00E52ED0
 		private bool IsUnlockBrochureType(EBrochureType type)
 		{
 			if (type > EBrochureType.EasterEggBook)
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return SpringManorModel.Instance.ActivityData.IsFunctionUnlocked(ESpringFunctionType.Draw);
 		}
 
-		// Token: 0x0603E566 RID: 255334 RVA: 0x00F0DF3C File Offset: 0x00F0C13C
+		// Token: 0x0603322A RID: 209450 RVA: 0x00E54D00 File Offset: 0x00E52F00
 		public void RequestBrochureReward(int activityId, EBrochureType brochureType, int bookItemId, bool isAllReward = false)
 		{
 			SpringManorConfig instance = SpringManorConfig.Instance;
@@ -651,7 +651,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 0);
 		}
 
-		// Token: 0x0603E567 RID: 255335 RVA: 0x00F0E060 File Offset: 0x00F0C260
+		// Token: 0x0603322B RID: 209451 RVA: 0x00E54E24 File Offset: 0x00E53024
 		public void ClearCustomTrack()
 		{
 			this.StopTrackRewardTask();
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E568 RID: 255336 RVA: 0x00F0E090 File Offset: 0x00F0C290
+		// Token: 0x0603322C RID: 209452 RVA: 0x00E54E54 File Offset: 0x00E53054
 		public void TryStartTrackCheckTimer()
 		{
 			if (this.TrackCheckTimerHandle != null)
@@ -699,7 +699,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, 500f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603E569 RID: 255337 RVA: 0x00F0E0F8 File Offset: 0x00F0C2F8
+		// Token: 0x0603322D RID: 209453 RVA: 0x00E54EBC File Offset: 0x00E530BC
 		[NullableContext(2)]
 		public void ExecuteSkipEntry(int skipEntryId, Action onTrackPositionCallback = null)
 		{
@@ -742,7 +742,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E56A RID: 255338 RVA: 0x00F0E248 File Offset: 0x00F0C448
+		// Token: 0x0603322E RID: 209454 RVA: 0x00E5500C File Offset: 0x00E5320C
 		public void TrackSkipEntry(int skipEntryId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -772,7 +772,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.TryStartTrackCheckTimer();
 		}
 
-		// Token: 0x0603E56B RID: 255339 RVA: 0x00F0E328 File Offset: 0x00F0C528
+		// Token: 0x0603322F RID: 209455 RVA: 0x00E550EC File Offset: 0x00E532EC
 		public void StopTrackSkipEntry()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -785,7 +785,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			TrackController.Instance.EndTrack(ETrackSource.None, currentTrackGetWayId);
 		}
 
-		// Token: 0x0603E56C RID: 255340 RVA: 0x00F0E35C File Offset: 0x00F0C55C
+		// Token: 0x06033230 RID: 209456 RVA: 0x00E55120 File Offset: 0x00E53320
 		public void TrackRewardTask(int rewardTaskId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -816,7 +816,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.TryStartTrackCheckTimer();
 		}
 
-		// Token: 0x0603E56D RID: 255341 RVA: 0x00F0E448 File Offset: 0x00F0C648
+		// Token: 0x06033231 RID: 209457 RVA: 0x00E5520C File Offset: 0x00E5340C
 		public void StopTrackRewardTask()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -829,7 +829,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			TrackController.Instance.EndTrack(ETrackSource.None, currentTrackRewardId);
 		}
 
-		// Token: 0x0603E56E RID: 255342 RVA: 0x00F0E47C File Offset: 0x00F0C67C
+		// Token: 0x06033232 RID: 209458 RVA: 0x00E55240 File Offset: 0x00E53440
 		public void UpdateRewardTrack()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -856,7 +856,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E56F RID: 255343 RVA: 0x00F0E4E0 File Offset: 0x00F0C6E0
+		// Token: 0x06033233 RID: 209459 RVA: 0x00E552A4 File Offset: 0x00E534A4
 		public void TrackSubQuest(int questId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -878,14 +878,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.SetTrackingSubQuestId(questId);
 		}
 
-		// Token: 0x0603E570 RID: 255344 RVA: 0x00F0E534 File Offset: 0x00F0C734
+		// Token: 0x06033234 RID: 209460 RVA: 0x00E552F8 File Offset: 0x00E534F8
 		public void StopCurrentTrackSubQuest()
 		{
 			int trackingSubQuestId = SpringManorModel.Instance.GetTrackingSubQuestId();
 			this.StopTrackSubQuest(trackingSubQuestId);
 		}
 
-		// Token: 0x0603E571 RID: 255345 RVA: 0x00F0E554 File Offset: 0x00F0C754
+		// Token: 0x06033235 RID: 209461 RVA: 0x00E55318 File Offset: 0x00E53518
 		public void StopTrackSubQuest(int questId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -898,7 +898,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.ClearTrackingSubQuest();
 		}
 
-		// Token: 0x0603E572 RID: 255346 RVA: 0x00F0E584 File Offset: 0x00F0C784
+		// Token: 0x06033236 RID: 209462 RVA: 0x00E55348 File Offset: 0x00E53548
 		private void StartShowSubQuestTrackIcon(int questId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -918,7 +918,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, true);
 		}
 
-		// Token: 0x0603E573 RID: 255347 RVA: 0x00F0E5FC File Offset: 0x00F0C7FC
+		// Token: 0x06033237 RID: 209463 RVA: 0x00E553C0 File Offset: 0x00E535C0
 		private void EndShowSubQuestTrackIcon()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -929,7 +929,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			TrackController.Instance.EndTrack(ETrackSource.Quest, instance.GetTrackingSubQuestId());
 		}
 
-		// Token: 0x0603E574 RID: 255348 RVA: 0x00F0E62C File Offset: 0x00F0C82C
+		// Token: 0x06033238 RID: 209464 RVA: 0x00E553F0 File Offset: 0x00E535F0
 		private void StartShowTrackText(int questId)
 		{
 			global::Quest quest = QuestNewModel.Instance.GetQuest(questId);
@@ -956,7 +956,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit<BehaviorTreeViewShowData, ETreeTextExpressReason, bool>(EEventName.GeneralLogicTreeStartShowTrackText, behaviorTreeViewShowData2, ETreeTextExpressReason.None, false);
 		}
 
-		// Token: 0x0603E575 RID: 255349 RVA: 0x00F0E688 File Offset: 0x00F0C888
+		// Token: 0x06033239 RID: 209465 RVA: 0x00E5544C File Offset: 0x00E5364C
 		private void EndShowTrackText()
 		{
 			int trackingSubQuestId = SpringManorModel.Instance.GetTrackingSubQuestId();
@@ -968,7 +968,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			EventSystem.Instance.Emit<long, ETreeTextExpressReason, bool>(EEventName.GeneralLogicTreeEndShowTrackText, quest.TreeId.Value, ETreeTextExpressReason.None, false);
 		}
 
-		// Token: 0x0603E576 RID: 255350 RVA: 0x00F0E6D8 File Offset: 0x00F0C8D8
+		// Token: 0x0603323A RID: 209466 RVA: 0x00E5549C File Offset: 0x00E5369C
 		public UniTask ChangeRoleRequest(int targetRoleId)
 		{
 			SpringManorController.<ChangeRoleRequest>d__51 <ChangeRoleRequest>d__;
@@ -979,8 +979,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <ChangeRoleRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x1700906D RID: 36973
-		// (get) Token: 0x0603E577 RID: 255351 RVA: 0x00F0E71B File Offset: 0x00F0C91B
+		// Token: 0x170063CF RID: 25551
+		// (get) Token: 0x0603323B RID: 209467 RVA: 0x00E554DF File Offset: 0x00E536DF
 		public static SpringManorController Instance
 		{
 			get
@@ -989,7 +989,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E578 RID: 255352 RVA: 0x00F0E722 File Offset: 0x00F0C922
+		// Token: 0x0603323C RID: 209468 RVA: 0x00E554E6 File Offset: 0x00E536E6
 		public static SpringManorController GetOrCreateInstance()
 		{
 			if (SpringManorController._Instance == null)
@@ -999,7 +999,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return SpringManorController._Instance;
 		}
 
-		// Token: 0x0603E579 RID: 255353 RVA: 0x00F0E736 File Offset: 0x00F0C936
+		// Token: 0x0603323D RID: 209469 RVA: 0x00E554FA File Offset: 0x00E536FA
 		public static bool CreateInstance()
 		{
 			if (SpringManorController._Instance != null)
@@ -1010,40 +1010,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return true;
 		}
 
-		// Token: 0x0603E57A RID: 255354 RVA: 0x00F0E74C File Offset: 0x00F0C94C
+		// Token: 0x0603323E RID: 209470 RVA: 0x00E55510 File Offset: 0x00E53710
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E57B RID: 255355 RVA: 0x00F0E74E File Offset: 0x00F0C94E
+		// Token: 0x0603323F RID: 209471 RVA: 0x00E55512 File Offset: 0x00E53712
 		public static void ResetStaticDefaultValue()
 		{
 			SpringManorController._Instance = null;
 		}
 
-		// Token: 0x0603E57C RID: 255356 RVA: 0x00F0E756 File Offset: 0x00F0C956
+		// Token: 0x06033240 RID: 209472 RVA: 0x00E5551A File Offset: 0x00E5371A
 		static SpringManorController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SpringManorController.CreateStaticDefaultValue), new Action(SpringManorController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402090C RID: 133388
+		// Token: 0x0401B239 RID: 111161
 		public int LatestUnlockBookItemId;
 
-		// Token: 0x0402090D RID: 133389
+		// Token: 0x0401B23A RID: 111162
 		public int LatestUnlockBrochureId;
 
-		// Token: 0x0402090E RID: 133390
+		// Token: 0x0401B23B RID: 111163
 		[Nullable(2)]
 		private TimerHandle TrackCheckTimerHandle;
 
-		// Token: 0x0402090F RID: 133391
+		// Token: 0x0401B23C RID: 111164
 		private const int AUTO_CHECK_TRACK_RANGE_INTERVAL = 500;
 
-		// Token: 0x04020910 RID: 133392
+		// Token: 0x0401B23D RID: 111165
 		private const int VECTOR_DIMENSION = 3;
 
-		// Token: 0x04020911 RID: 133393
+		// Token: 0x0401B23E RID: 111166
 		[Nullable(2)]
 		private static SpringManorController _Instance;
 	}

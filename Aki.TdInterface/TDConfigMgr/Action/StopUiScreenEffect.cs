@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002224 RID: 8740
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200248F RID: 9359
 	public class StopUiScreenEffect : ActionParams
 	{
-		// Token: 0x0600BFDA RID: 49114 RVA: 0x001B8F64 File Offset: 0x001B7164
+		// Token: 0x0600CB98 RID: 52120 RVA: 0x001D0630 File Offset: 0x001CE830
 		private StopUiScreenEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFDB RID: 49115 RVA: 0x001B8F9C File Offset: 0x001B719C
+		// Token: 0x0600CB99 RID: 52121 RVA: 0x001D0668 File Offset: 0x001CE868
 		public static StopUiScreenEffect Create([Nullable(2)] StopUiScreenEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFDC RID: 49116 RVA: 0x001B8FAF File Offset: 0x001B71AF
+		// Token: 0x0600CB9A RID: 52122 RVA: 0x001D067B File Offset: 0x001CE87B
 		public static StopUiScreenEffect CreateFromSetValue([Nullable(2)] StopUiScreenEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFDD RID: 49117 RVA: 0x001B8FC2 File Offset: 0x001B71C2
+		// Token: 0x0600CB9B RID: 52123 RVA: 0x001D068E File Offset: 0x001CE88E
 		public StopUiScreenEffect_SetValue ToSetValue()
 		{
 			return new StopUiScreenEffect_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A1C RID: 14876
-		// (get) Token: 0x0600BFDE RID: 49118 RVA: 0x001B8FD5 File Offset: 0x001B71D5
-		// (set) Token: 0x0600BFDF RID: 49119 RVA: 0x001B9000 File Offset: 0x001B7200
+		// Token: 0x17003D12 RID: 15634
+		// (get) Token: 0x0600CB9C RID: 52124 RVA: 0x001D06A1 File Offset: 0x001CE8A1
+		// (set) Token: 0x0600CB9D RID: 52125 RVA: 0x001D06CC File Offset: 0x001CE8CC
 		public virtual string EffectDaPath
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007266 RID: 29286
+		// Token: 0x040078B0 RID: 30896
 		[Nullable(2)]
 		protected new StopUiScreenEffect FbInstance;
 
-		// Token: 0x04007267 RID: 29287
+		// Token: 0x040078B1 RID: 30897
 		[Nullable(2)]
 		protected StopUiScreenEffect_SetValue PocoInterface;
 	}

@@ -5,42 +5,42 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Backpack
 {
-	// Token: 0x0200684B RID: 26699
+	// Token: 0x0200579B RID: 22427
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlBackpackHotKeyProxy
 	{
-		// Token: 0x06042A52 RID: 272978 RVA: 0x01034980 File Offset: 0x01032B80
+		// Token: 0x060375A7 RID: 226727 RVA: 0x00F75EA8 File Offset: 0x00F740A8
 		public DangoBrawlBackpackHotKeyProxy(UUIItem pnlHotKey)
 		{
 			this.PnlHotKey = pnlHotKey;
 		}
 
-		// Token: 0x06042A53 RID: 272979 RVA: 0x0103498F File Offset: 0x01032B8F
+		// Token: 0x060375A8 RID: 226728 RVA: 0x00F75EB7 File Offset: 0x00F740B7
 		public void Start()
 		{
 			this.BindEvents();
 			this.TickHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTick), 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x06042A54 RID: 272980 RVA: 0x010349C0 File Offset: 0x01032BC0
+		// Token: 0x060375A9 RID: 226729 RVA: 0x00F75EE8 File Offset: 0x00F740E8
 		public void Destroy()
 		{
 			this.UnBindEvents();
 			this.ClearTickHandle();
 		}
 
-		// Token: 0x06042A55 RID: 272981 RVA: 0x010349CE File Offset: 0x01032BCE
+		// Token: 0x060375AA RID: 226730 RVA: 0x00F75EF6 File Offset: 0x00F740F6
 		private void BindEvents()
 		{
 		}
 
-		// Token: 0x06042A56 RID: 272982 RVA: 0x010349D0 File Offset: 0x01032BD0
+		// Token: 0x060375AB RID: 226731 RVA: 0x00F75EF8 File Offset: 0x00F740F8
 		private void UnBindEvents()
 		{
 		}
 
-		// Token: 0x06042A57 RID: 272983 RVA: 0x010349D2 File Offset: 0x01032BD2
+		// Token: 0x060375AC RID: 226732 RVA: 0x00F75EFA File Offset: 0x00F740FA
 		private void ClearTickHandle()
 		{
 			if (this.TickHandle != null)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			}
 		}
 
-		// Token: 0x06042A58 RID: 272984 RVA: 0x010349F4 File Offset: 0x01032BF4
+		// Token: 0x060375AD RID: 226733 RVA: 0x00F75F1C File Offset: 0x00F7411C
 		private void OnTick(float delta)
 		{
 			if (this.PnlHotKey == null || !this.PnlHotKey.IsValid())
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			this.PnlHotKey.SetUIRelativeLocation(new FVector(fvector2D.X - lguispaceAbsolutePosition.X, fvector2D.Y - lguispaceAbsolutePosition.Y, 0f));
 		}
 
-		// Token: 0x06042A59 RID: 272985 RVA: 0x01034A68 File Offset: 0x01032C68
+		// Token: 0x060375AE RID: 226734 RVA: 0x00F75F90 File Offset: 0x00F74190
 		private static FVector GetCurrentPointerPos()
 		{
 			ULGUIPointerEventData pointerEventData = LguiEventSystemManager.Instance.GetPointerEventData(0, false);
@@ -86,10 +86,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Bac
 			return new FVector((float)vector2D.X, (float)vector2D.Y, 0f);
 		}
 
-		// Token: 0x04022B51 RID: 142161
+		// Token: 0x0401D3AE RID: 119726
 		private readonly UUIItem PnlHotKey;
 
-		// Token: 0x04022B52 RID: 142162
+		// Token: 0x0401D3AF RID: 119727
 		private TimerHandle TickHandle;
 	}
 }

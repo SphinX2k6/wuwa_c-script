@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001282 RID: 4738
+	// Token: 0x020013C2 RID: 5058
 	public static class ERoleTowerConditionStepExtensions
 	{
-		// Token: 0x06006AF0 RID: 27376 RVA: 0x001008B0 File Offset: 0x000FEAB0
+		// Token: 0x06007143 RID: 28995 RVA: 0x0010E4DC File Offset: 0x0010C6DC
 		public static string ToEnumString(this ERoleTowerConditionStep value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AF1 RID: 27377 RVA: 0x00100910 File Offset: 0x000FEB10
+		// Token: 0x06007144 RID: 28996 RVA: 0x0010E53C File Offset: 0x0010C73C
 		public static ERoleTowerConditionStep FromString(string name)
 		{
 			ERoleTowerConditionStep result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AF2 RID: 27378 RVA: 0x0010093C File Offset: 0x000FEB3C
+		// Token: 0x06007145 RID: 28997 RVA: 0x0010E568 File Offset: 0x0010C768
 		public static bool TryFromString(string name, out ERoleTowerConditionStep value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006AF3 RID: 27379 RVA: 0x001009B6 File Offset: 0x000FEBB6
+		// Token: 0x06007146 RID: 28998 RVA: 0x0010E5E2 File Offset: 0x0010C7E2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AF4 RID: 27380 RVA: 0x001009E6 File Offset: 0x000FEBE6
+		// Token: 0x06007147 RID: 28999 RVA: 0x0010E612 File Offset: 0x0010C812
 		public static ERoleTowerConditionStep[] GetValues()
 		{
 			return new ERoleTowerConditionStep[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AF5 RID: 27381 RVA: 0x001009F9 File Offset: 0x000FEBF9
+		// Token: 0x06007148 RID: 29000 RVA: 0x0010E625 File Offset: 0x0010C825
 		public static string[] GetNames()
 		{
 			return new string[]

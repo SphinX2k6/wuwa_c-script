@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023EF RID: 9199
+	// Token: 0x02002686 RID: 9862
 	public static class EResetPosTypeExtensions
 	{
-		// Token: 0x0600C832 RID: 51250 RVA: 0x001D4E58 File Offset: 0x001D3058
+		// Token: 0x0600D4B5 RID: 54453 RVA: 0x001EE604 File Offset: 0x001EC804
 		public static string ToEnumString(this EResetPosType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C833 RID: 51251 RVA: 0x001D4E90 File Offset: 0x001D3090
+		// Token: 0x0600D4B6 RID: 54454 RVA: 0x001EE63C File Offset: 0x001EC83C
 		public static EResetPosType FromString(string name)
 		{
 			EResetPosType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C834 RID: 51252 RVA: 0x001D4EB9 File Offset: 0x001D30B9
+		// Token: 0x0600D4B7 RID: 54455 RVA: 0x001EE665 File Offset: 0x001EC865
 		public static bool TryFromString(string name, out EResetPosType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C835 RID: 51253 RVA: 0x001D4EF2 File Offset: 0x001D30F2
+		// Token: 0x0600D4B8 RID: 54456 RVA: 0x001EE69E File Offset: 0x001EC89E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C836 RID: 51254 RVA: 0x001D4F0A File Offset: 0x001D310A
+		// Token: 0x0600D4B9 RID: 54457 RVA: 0x001EE6B6 File Offset: 0x001EC8B6
 		public static EResetPosType[] GetValues()
 		{
 			return new EResetPosType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C837 RID: 51255 RVA: 0x001D4F16 File Offset: 0x001D3116
+		// Token: 0x0600D4BA RID: 54458 RVA: 0x001EE6C2 File Offset: 0x001EC8C2
 		public static string[] GetNames()
 		{
 			return new string[]

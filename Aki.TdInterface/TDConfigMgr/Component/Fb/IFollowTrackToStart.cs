@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE1 RID: 3041
+	// Token: 0x02000CB0 RID: 3248
 	public class IFollowTrackToStart : IFollowTrackEndType
 	{
-		// Token: 0x060045DD RID: 17885 RVA: 0x000B0B55 File Offset: 0x000AED55
-		[NullableContext(1)]
+		// Token: 0x06004A3B RID: 19003 RVA: 0x000BACD1 File Offset: 0x000B8ED1
 		public static IFollowTrackToStart Create(IFollowTrackToStart? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013D8 RID: 5080
-		// (get) Token: 0x060045DE RID: 17886 RVA: 0x000B0B74 File Offset: 0x000AED74
+		// Token: 0x170014D6 RID: 5334
+		// (get) Token: 0x06004A3C RID: 19004 RVA: 0x000BACF0 File Offset: 0x000B8EF0
 		public override EFollowTrackEndType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027C8 RID: 10184
+		// Token: 0x04002A13 RID: 10771
 		private IFollowTrackToStart Instance;
 	}
 }

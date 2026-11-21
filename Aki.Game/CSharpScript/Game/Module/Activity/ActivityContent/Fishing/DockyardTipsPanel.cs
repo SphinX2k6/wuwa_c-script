@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065CB RID: 26059
+	// Token: 0x02005549 RID: 21833
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardTipsPanel : UiPanelBase, IDockyardLeftTipsInterface
 	{
-		// Token: 0x17009594 RID: 38292
-		// (get) Token: 0x060415C7 RID: 267719 RVA: 0x00FD6C5F File Offset: 0x00FD4E5F
-		// (set) Token: 0x060415C8 RID: 267720 RVA: 0x00FD6C67 File Offset: 0x00FD4E67
+		// Token: 0x170068F6 RID: 26870
+		// (get) Token: 0x0603628C RID: 221836 RVA: 0x00F1DC9F File Offset: 0x00F1BE9F
+		// (set) Token: 0x0603628D RID: 221837 RVA: 0x00F1DCA7 File Offset: 0x00F1BEA7
 		public bool LockState { get; set; }
 
-		// Token: 0x060415C9 RID: 267721 RVA: 0x00FD6C70 File Offset: 0x00FD4E70
+		// Token: 0x0603628E RID: 221838 RVA: 0x00F1DCB0 File Offset: 0x00F1BEB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060415CA RID: 267722 RVA: 0x00FD6E8C File Offset: 0x00FD508C
+		// Token: 0x0603628F RID: 221839 RVA: 0x00F1DECC File Offset: 0x00F1C0CC
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item2.SetUIActive(true);
 		}
 
-		// Token: 0x060415CB RID: 267723 RVA: 0x00FD6EE1 File Offset: 0x00FD50E1
+		// Token: 0x06036290 RID: 221840 RVA: 0x00F1DF21 File Offset: 0x00F1C121
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer.Clear();
 		}
 
-		// Token: 0x060415CC RID: 267724 RVA: 0x00FD6EF0 File Offset: 0x00FD50F0
+		// Token: 0x06036291 RID: 221841 RVA: 0x00F1DF30 File Offset: 0x00F1C130
 		private void RefreshQuality(bool isActive, int quality)
 		{
 			base.GetLayoutBase(5).RootUIComp.Get().SetUIActive(isActive);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060415CD RID: 267725 RVA: 0x00FD6F28 File Offset: 0x00FD5128
+		// Token: 0x06036292 RID: 221842 RVA: 0x00F1DF68 File Offset: 0x00F1C168
 		private void RefreshSize(bool isActive, int size, int cup)
 		{
 			base.GetItem(7).SetUIActive(isActive);
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060415CE RID: 267726 RVA: 0x00FD6FB0 File Offset: 0x00FD51B0
+		// Token: 0x06036293 RID: 221843 RVA: 0x00F1DFF0 File Offset: 0x00F1C1F0
 		private void RefreshPrice(int price)
 		{
 			bool flag = price > 0;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.SetItemIcon(base.GetTexture(12), 27, null, null);
 		}
 
-		// Token: 0x060415CF RID: 267727 RVA: 0x00FD7004 File Offset: 0x00FD5204
+		// Token: 0x06036294 RID: 221844 RVA: 0x00F1E044 File Offset: 0x00F1C244
 		public void Refresh(DockyardItemBlockOriginalData data)
 		{
 			this.Id = data.IncId;
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshPrice(data.Price);
 		}
 
-		// Token: 0x060415D0 RID: 267728 RVA: 0x00FD7120 File Offset: 0x00FD5320
+		// Token: 0x06036295 RID: 221845 RVA: 0x00F1E160 File Offset: 0x00F1C360
 		public void SetPanelVisible(bool bVisible)
 		{
 			this.SetPanelVisible(bVisible, true);
 		}
 
-		// Token: 0x060415D1 RID: 267729 RVA: 0x00FD712A File Offset: 0x00FD532A
+		// Token: 0x06036296 RID: 221846 RVA: 0x00F1E16A File Offset: 0x00F1C36A
 		public void SetPanelVisible(bool bVisible, bool needAnim)
 		{
 			if (this.LockState)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.HideTipsPanel(needAnim);
 		}
 
-		// Token: 0x060415D2 RID: 267730 RVA: 0x00FD7148 File Offset: 0x00FD5348
+		// Token: 0x06036297 RID: 221847 RVA: 0x00F1E188 File Offset: 0x00F1C388
 		private void ShowTipsPanel(bool needAnim = true)
 		{
 			if (needAnim)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<bool>(EEventName.FishingDockyardItemTipsShown, true);
 		}
 
-		// Token: 0x060415D3 RID: 267731 RVA: 0x00FD719C File Offset: 0x00FD539C
+		// Token: 0x06036298 RID: 221848 RVA: 0x00F1E1DC File Offset: 0x00F1C3DC
 		private void HideTipsPanel(bool needAnim = true)
 		{
 			if (needAnim)
@@ -189,62 +189,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<bool>(EEventName.FishingDockyardItemTipsShown, false);
 		}
 
-		// Token: 0x0402201D RID: 139293
+		// Token: 0x0401C94E RID: 117070
 		protected int Id;
 
-		// Token: 0x0402201E RID: 139294
+		// Token: 0x0401C94F RID: 117071
 		protected SimpleGenericLayout StarLayout;
 
-		// Token: 0x0402201F RID: 139295
+		// Token: 0x0401C950 RID: 117072
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04022020 RID: 139296
+		// Token: 0x0401C951 RID: 117073
 		protected Action<int> SellClick;
 
-		// Token: 0x0200C7F2 RID: 51186
+		// Token: 0x0200B1D5 RID: 45525
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C62E RID: 247342
+			// Token: 0x04036F7C RID: 225148
 			public const int TipsItem = 0;
 
-			// Token: 0x0403C62F RID: 247343
+			// Token: 0x04036F7D RID: 225149
 			public const int EmptyItem = 1;
 
-			// Token: 0x0403C630 RID: 247344
+			// Token: 0x04036F7E RID: 225150
 			public const int Title = 2;
 
-			// Token: 0x0403C631 RID: 247345
+			// Token: 0x04036F7F RID: 225151
 			public const int Tag = 3;
 
-			// Token: 0x0403C632 RID: 247346
+			// Token: 0x04036F80 RID: 225152
 			public const int TagBg = 4;
 
-			// Token: 0x0403C633 RID: 247347
+			// Token: 0x04036F81 RID: 225153
 			public const int StarRoot = 5;
 
-			// Token: 0x0403C634 RID: 247348
+			// Token: 0x04036F82 RID: 225154
 			public const int ContentRoot = 6;
 
-			// Token: 0x0403C635 RID: 247349
+			// Token: 0x04036F83 RID: 225155
 			public const int SizeItem = 7;
 
-			// Token: 0x0403C636 RID: 247350
+			// Token: 0x04036F84 RID: 225156
 			public const int CupIcon = 8;
 
-			// Token: 0x0403C637 RID: 247351
+			// Token: 0x04036F85 RID: 225157
 			public const int SizeText = 9;
 
-			// Token: 0x0403C638 RID: 247352
+			// Token: 0x04036F86 RID: 225158
 			public const int PriceItem = 10;
 
-			// Token: 0x0403C639 RID: 247353
+			// Token: 0x04036F87 RID: 225159
 			public const int PriceText = 11;
 
-			// Token: 0x0403C63A RID: 247354
+			// Token: 0x04036F88 RID: 225160
 			public const int PriceIcon = 12;
 
-			// Token: 0x0403C63B RID: 247355
+			// Token: 0x04036F89 RID: 225161
 			public const int Description = 13;
 		}
 	}

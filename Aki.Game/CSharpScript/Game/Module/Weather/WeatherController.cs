@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Teleport;
+using CSharpScript.Game.Render;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -10,13 +11,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Weather
 {
-	// Token: 0x02004862 RID: 18530
+	// Token: 0x02003793 RID: 14227
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class WeatherController : ControllerBase
 	{
-		// Token: 0x060307F1 RID: 198641 RVA: 0x00B42F8D File Offset: 0x00B4118D
+		// Token: 0x06024FC1 RID: 151489 RVA: 0x00A73209 File Offset: 0x00A71409
 		protected override bool OnInit()
 		{
 			this.OnAddEvents();
@@ -25,7 +26,7 @@ namespace CSharpScript.Game.Module.Weather
 			return true;
 		}
 
-		// Token: 0x060307F2 RID: 198642 RVA: 0x00B42FA2 File Offset: 0x00B411A2
+		// Token: 0x06024FC2 RID: 151490 RVA: 0x00A7321E File Offset: 0x00A7141E
 		protected override bool OnClear()
 		{
 			this.OnRemoveEvents();
@@ -35,7 +36,7 @@ namespace CSharpScript.Game.Module.Weather
 			return true;
 		}
 
-		// Token: 0x060307F3 RID: 198643 RVA: 0x00B42FC0 File Offset: 0x00B411C0
+		// Token: 0x06024FC3 RID: 151491 RVA: 0x00A7323C File Offset: 0x00A7143C
 		protected void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.EnterGameSuccess, new Action(this.OnEnterGame));
@@ -47,7 +48,7 @@ namespace CSharpScript.Game.Module.Weather
 			EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFuncOpenSet));
 		}
 
-		// Token: 0x060307F4 RID: 198644 RVA: 0x00B43090 File Offset: 0x00B41290
+		// Token: 0x06024FC4 RID: 151492 RVA: 0x00A7330C File Offset: 0x00A7150C
 		protected void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.EnterGameSuccess, new Action(this.OnEnterGame));
@@ -59,13 +60,13 @@ namespace CSharpScript.Game.Module.Weather
 			EventSystem.Instance.Remove<EFunctionType, bool>(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFuncOpenSet));
 		}
 
-		// Token: 0x060307F5 RID: 198645 RVA: 0x00B4315E File Offset: 0x00B4135E
+		// Token: 0x06024FC5 RID: 151493 RVA: 0x00A733DA File Offset: 0x00A715DA
 		private void InitTimer()
 		{
 			this.CheckUiSceneTimer = TimerSystem.Instance.Forever(new TTimerAction(this.CheckActiveState), 300f, 1f, null, null, true);
 		}
 
-		// Token: 0x060307F6 RID: 198646 RVA: 0x00B43189 File Offset: 0x00B41389
+		// Token: 0x06024FC6 RID: 151494 RVA: 0x00A73405 File Offset: 0x00A71605
 		private void CancelTimer()
 		{
 			if (this.CheckUiSceneTimer != null)
@@ -75,13 +76,13 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307F7 RID: 198647 RVA: 0x00B431AB File Offset: 0x00B413AB
+		// Token: 0x06024FC7 RID: 151495 RVA: 0x00A73427 File Offset: 0x00A71627
 		private void CheckActiveState(float _)
 		{
 			WeatherModel.Instance.GetWorldWeatherActor().SetActorState(!GlobalData.IsUiSceneOpen);
 		}
 
-		// Token: 0x060307F8 RID: 198648 RVA: 0x00B431C4 File Offset: 0x00B413C4
+		// Token: 0x06024FC8 RID: 151496 RVA: 0x00A73440 File Offset: 0x00A71640
 		protected void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.WeatherNotify, new Action<IMessage, Net.CallbackStatus>(this.OnWeatherNotify));
@@ -92,37 +93,38 @@ namespace CSharpScript.Game.Module.Weather
 			});
 		}
 
-		// Token: 0x060307F9 RID: 198649 RVA: 0x00B431FE File Offset: 0x00B413FE
+		// Token: 0x06024FC9 RID: 151497 RVA: 0x00A7347A File Offset: 0x00A7167A
 		protected void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.WeatherNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.WeatherControlUnlockNotify);
 		}
 
-		// Token: 0x060307FA RID: 198650 RVA: 0x00B43220 File Offset: 0x00B41420
+		// Token: 0x06024FCA RID: 151498 RVA: 0x00A7349C File Offset: 0x00A7169C
 		private void OnEnterGame()
 		{
 		}
 
-		// Token: 0x060307FB RID: 198651 RVA: 0x00B43222 File Offset: 0x00B41422
+		// Token: 0x06024FCB RID: 151499 RVA: 0x00A7349E File Offset: 0x00A7169E
 		private void OnBeforeLoadMap()
 		{
 			WeatherModel.Instance.GetWorldWeatherActor().Destroy();
 		}
 
-		// Token: 0x060307FC RID: 198652 RVA: 0x00B43233 File Offset: 0x00B41433
+		// Token: 0x06024FCC RID: 151500 RVA: 0x00A734AF File Offset: 0x00A716AF
 		private void OnWorldDone()
 		{
 			this.BackToWorldWeather();
+			RenderDataManager.Instance.SyncForbidWeather();
 		}
 
-		// Token: 0x060307FD RID: 198653 RVA: 0x00B4323B File Offset: 0x00B4143B
+		// Token: 0x06024FCD RID: 151501 RVA: 0x00A734C1 File Offset: 0x00A716C1
 		private void OnTeleportComplete(TeleportContext teleportContext)
 		{
 			this.BackToWorldWeather();
 		}
 
-		// Token: 0x060307FE RID: 198654 RVA: 0x00B43243 File Offset: 0x00B41443
+		// Token: 0x06024FCE RID: 151502 RVA: 0x00A734C9 File Offset: 0x00A716C9
 		private void BackToWorldWeather()
 		{
 			if (!GameModeController.Instance.IsInInstance() && WeatherModel.Instance.CurrentWeatherId != 0)
@@ -131,13 +133,13 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x060307FF RID: 198655 RVA: 0x00B4327B File Offset: 0x00B4147B
+		// Token: 0x06024FCF RID: 151503 RVA: 0x00A73501 File Offset: 0x00A71701
 		private void DestroyWeatherActor()
 		{
 			WeatherModel.Instance.GetWorldWeatherActor().Destroy();
 		}
 
-		// Token: 0x06030800 RID: 198656 RVA: 0x00B4328C File Offset: 0x00B4148C
+		// Token: 0x06024FD0 RID: 151504 RVA: 0x00A73514 File Offset: 0x00A71714
 		public void RequestChangeWeather(int weatherId, ChangeWeatherReason? reason = null)
 		{
 			ChangeWeatherRequest changeWeatherRequest = ChangeWeatherRequest.Create();
@@ -165,12 +167,12 @@ namespace CSharpScript.Game.Module.Weather
 						instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 						return;
 					}
-					ErrorCodeController.Instance.OpenErrorCodeTipView(changeWeatherResponse.ErrorCode, 21042, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(changeWeatherResponse.ErrorCode, 19397, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06030801 RID: 198657 RVA: 0x00B432EE File Offset: 0x00B414EE
+		// Token: 0x06024FD1 RID: 151505 RVA: 0x00A73576 File Offset: 0x00A71776
 		public void ChangeCurrentWeather(int weatherId, float changeTime)
 		{
 			if (WeatherModel.Instance.CurrentWeatherId != weatherId)
@@ -181,7 +183,7 @@ namespace CSharpScript.Game.Module.Weather
 			EventSystem.Instance.Emit(EEventName.WeatherChange);
 		}
 
-		// Token: 0x06030802 RID: 198658 RVA: 0x00B4332C File Offset: 0x00B4152C
+		// Token: 0x06024FD2 RID: 151506 RVA: 0x00A735B4 File Offset: 0x00A717B4
 		private void OnWeatherNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			WeatherNotify weatherNotify = (WeatherNotify)msg;
@@ -199,26 +201,26 @@ namespace CSharpScript.Game.Module.Weather
 			this.ChangeCurrentWeather(weatherNotify.WeatherId, 10f);
 		}
 
-		// Token: 0x06030803 RID: 198659 RVA: 0x00B43395 File Offset: 0x00B41595
+		// Token: 0x06024FD3 RID: 151507 RVA: 0x00A7361D File Offset: 0x00A7181D
 		public void TestChangeWeather(int weatherId)
 		{
 			WeatherModel.Instance.SetCurrentWeatherId(weatherId);
 			WeatherModel.Instance.GetWorldWeatherActor().ChangeWeather(weatherId, 10f);
 		}
 
-		// Token: 0x06030804 RID: 198660 RVA: 0x00B433B7 File Offset: 0x00B415B7
+		// Token: 0x06024FD4 RID: 151508 RVA: 0x00A7363F File Offset: 0x00A7183F
 		public void StopWeather()
 		{
 			WeatherModel.Instance.GetWorldWeatherActor().Destroy();
 		}
 
-		// Token: 0x06030805 RID: 198661 RVA: 0x00B433C8 File Offset: 0x00B415C8
+		// Token: 0x06024FD5 RID: 151509 RVA: 0x00A73650 File Offset: 0x00A71850
 		public void BanWeather()
 		{
 			WeatherModel.Instance.GetWorldWeatherActor().BanWeather();
 		}
 
-		// Token: 0x06030806 RID: 198662 RVA: 0x00B433DC File Offset: 0x00B415DC
+		// Token: 0x06024FD6 RID: 151510 RVA: 0x00A73664 File Offset: 0x00A71864
 		public void TryOpenWeatherCentralMainView(int? weatherConfigId = null)
 		{
 			if (!TimeOfDayController.Instance.CanOpenView(EUiViewName.TimeOfDayView))
@@ -234,7 +236,7 @@ namespace CSharpScript.Game.Module.Weather
 			}).Forget();
 		}
 
-		// Token: 0x06030807 RID: 198663 RVA: 0x00B43424 File Offset: 0x00B41624
+		// Token: 0x06024FD7 RID: 151511 RVA: 0x00A736AC File Offset: 0x00A718AC
 		[NullableContext(0)]
 		public UniTask<bool> RequestWeatherControlInfoAsync()
 		{
@@ -245,7 +247,7 @@ namespace CSharpScript.Game.Module.Weather
 			return <RequestWeatherControlInfoAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030808 RID: 198664 RVA: 0x00B43460 File Offset: 0x00B41660
+		// Token: 0x06024FD8 RID: 151512 RVA: 0x00A736E8 File Offset: 0x00A718E8
 		[NullableContext(0)]
 		public UniTask<bool> RequestWeatherControlInfoWithoutCheckAsync()
 		{
@@ -256,7 +258,7 @@ namespace CSharpScript.Game.Module.Weather
 			return <RequestWeatherControlInfoWithoutCheckAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030809 RID: 198665 RVA: 0x00B4349C File Offset: 0x00B4169C
+		// Token: 0x06024FD9 RID: 151513 RVA: 0x00A73724 File Offset: 0x00A71924
 		public UniTask RequestSwitchWeather(int weatherSwitchConfigId)
 		{
 			WeatherController.<RequestSwitchWeather>d__28 <RequestSwitchWeather>d__;
@@ -267,7 +269,7 @@ namespace CSharpScript.Game.Module.Weather
 			return <RequestSwitchWeather>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603080A RID: 198666 RVA: 0x00B434DF File Offset: 0x00B416DF
+		// Token: 0x06024FDA RID: 151514 RVA: 0x00A73767 File Offset: 0x00A71967
 		private void OnFunctionOpenUpdate(EFunctionType funcId, bool isOpen)
 		{
 			if (!isOpen)
@@ -283,13 +285,13 @@ namespace CSharpScript.Game.Module.Weather
 			EventSystem.Instance.Emit(EEventName.OnWeatherCentralRedDotUpdate);
 		}
 
-		// Token: 0x0603080B RID: 198667 RVA: 0x00B4350F File Offset: 0x00B4170F
+		// Token: 0x06024FDB RID: 151515 RVA: 0x00A73797 File Offset: 0x00A71997
 		private void TryOpenWeatherUnlockTips()
 		{
 			UiManager.Instance.OpenView(EUiViewName.WeatherUnlockTips, null, null);
 		}
 
-		// Token: 0x0603080C RID: 198668 RVA: 0x00B43522 File Offset: 0x00B41722
+		// Token: 0x06024FDC RID: 151516 RVA: 0x00A737AA File Offset: 0x00A719AA
 		private void OnFuncOpenSet(EFunctionType funcType, bool isOpen)
 		{
 			if (!isOpen)
@@ -304,13 +306,13 @@ namespace CSharpScript.Game.Module.Weather
 			EventSystem.Instance.Emit(EEventName.OnWeatherCentralRedDotUpdate);
 		}
 
-		// Token: 0x0603080D RID: 198669 RVA: 0x00B4354C File Offset: 0x00B4174C
+		// Token: 0x06024FDD RID: 151517 RVA: 0x00A737D4 File Offset: 0x00A719D4
 		private void OnWeatherSwitchUnlock(int weatherSwitchConfigId)
 		{
 			WeatherModel.Instance.AddUnlockedWeatherSwitchConfigId(weatherSwitchConfigId);
 		}
 
-		// Token: 0x0603080E RID: 198670 RVA: 0x00B4355C File Offset: 0x00B4175C
+		// Token: 0x06024FDE RID: 151518 RVA: 0x00A737E4 File Offset: 0x00A719E4
 		private void OnWorldDoneAndCloseLoading()
 		{
 			int? targetWeatherSwitchConfigId = WeatherModel.Instance.TargetWeatherSwitchConfigId;
@@ -320,8 +322,8 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x17007923 RID: 31011
-		// (get) Token: 0x0603080F RID: 198671 RVA: 0x00B43584 File Offset: 0x00B41784
+		// Token: 0x17004BE0 RID: 19424
+		// (get) Token: 0x06024FDF RID: 151519 RVA: 0x00A7380C File Offset: 0x00A71A0C
 		[Nullable(1)]
 		public static WeatherController Instance
 		{
@@ -332,7 +334,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x06030810 RID: 198672 RVA: 0x00B4358B File Offset: 0x00B4178B
+		// Token: 0x06024FE0 RID: 151520 RVA: 0x00A73813 File Offset: 0x00A71A13
 		[NullableContext(1)]
 		public static WeatherController GetOrCreateInstance()
 		{
@@ -343,7 +345,7 @@ namespace CSharpScript.Game.Module.Weather
 			return WeatherController._Instance;
 		}
 
-		// Token: 0x06030811 RID: 198673 RVA: 0x00B4359F File Offset: 0x00B4179F
+		// Token: 0x06024FE1 RID: 151521 RVA: 0x00A73827 File Offset: 0x00A71A27
 		public static bool CreateInstance()
 		{
 			if (WeatherController._Instance != null)
@@ -354,36 +356,36 @@ namespace CSharpScript.Game.Module.Weather
 			return true;
 		}
 
-		// Token: 0x06030812 RID: 198674 RVA: 0x00B435B5 File Offset: 0x00B417B5
+		// Token: 0x06024FE2 RID: 151522 RVA: 0x00A7383D File Offset: 0x00A71A3D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030813 RID: 198675 RVA: 0x00B435B7 File Offset: 0x00B417B7
+		// Token: 0x06024FE3 RID: 151523 RVA: 0x00A7383F File Offset: 0x00A71A3F
 		public static void ResetStaticDefaultValue()
 		{
 			WeatherController._Instance = null;
 		}
 
-		// Token: 0x06030814 RID: 198676 RVA: 0x00B435BF File Offset: 0x00B417BF
+		// Token: 0x06024FE4 RID: 151524 RVA: 0x00A73847 File Offset: 0x00A71A47
 		static WeatherController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WeatherController.CreateStaticDefaultValue), new Action(WeatherController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A0D9 RID: 106713
+		// Token: 0x0401478D RID: 83853
 		public const int CHANGE_WEATHER_SMOOTH_TIME = 10;
 
-		// Token: 0x0401A0DA RID: 106714
+		// Token: 0x0401478E RID: 83854
 		public const int CHANGE_WEATHER_SMOOTH_TIME_QUICK = 1;
 
-		// Token: 0x0401A0DB RID: 106715
+		// Token: 0x0401478F RID: 83855
 		public const int CHECKGAP = 300;
 
-		// Token: 0x0401A0DC RID: 106716
+		// Token: 0x04014790 RID: 83856
 		private TimerHandle CheckUiSceneTimer;
 
-		// Token: 0x0401A0DD RID: 106717
+		// Token: 0x04014791 RID: 83857
 		private static WeatherController _Instance;
 	}
 }

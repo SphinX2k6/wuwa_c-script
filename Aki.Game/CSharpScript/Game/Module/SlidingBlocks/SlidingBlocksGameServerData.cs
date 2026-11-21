@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B7F RID: 19327
+	// Token: 0x02003B29 RID: 15145
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SlidingBlocksGameServerData
 	{
-		// Token: 0x06032162 RID: 205154 RVA: 0x00BA1628 File Offset: 0x00B9F828
+		// Token: 0x06026EF3 RID: 159475 RVA: 0x00AE57B8 File Offset: 0x00AE39B8
 		public void Init(int instanceId, int historyScore, int[] historyReceivedRewardIds)
 		{
 			this.InstanceId = instanceId;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.RewardTitleTextKey = config.Value.RewardTitleText;
 		}
 
-		// Token: 0x06032163 RID: 205155 RVA: 0x00BA169B File Offset: 0x00B9F89B
+		// Token: 0x06026EF4 RID: 159476 RVA: 0x00AE582B File Offset: 0x00AE3A2B
 		public void Reset()
 		{
 			this.InstanceId = 0;
@@ -35,31 +35,31 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.HistoryScore = 0;
 		}
 
-		// Token: 0x0401AAE0 RID: 109280
+		// Token: 0x04015434 RID: 87092
 		[Nullable(2)]
 		public string MainTitleTextKey;
 
-		// Token: 0x0401AAE1 RID: 109281
+		// Token: 0x04015435 RID: 87093
 		[Nullable(2)]
 		public string AchieveTextKey;
 
-		// Token: 0x0401AAE2 RID: 109282
+		// Token: 0x04015436 RID: 87094
 		[Nullable(2)]
 		public string RewardTitleTextKey;
 
-		// Token: 0x0401AAE3 RID: 109283
+		// Token: 0x04015437 RID: 87095
 		public bool IsWin;
 
-		// Token: 0x0401AAE4 RID: 109284
+		// Token: 0x04015438 RID: 87096
 		public int HistoryScore;
 
-		// Token: 0x0401AAE5 RID: 109285
+		// Token: 0x04015439 RID: 87097
 		public List<TItem> RewardList = new List<TItem>();
 
-		// Token: 0x0401AAE6 RID: 109286
+		// Token: 0x0401543A RID: 87098
 		public int InstanceId;
 
-		// Token: 0x0401AAE7 RID: 109287
+		// Token: 0x0401543B RID: 87099
 		public int[] HistoryReceivedRewardIds = Array.Empty<int>();
 	}
 }

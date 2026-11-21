@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001C5 RID: 453
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001E8 RID: 488
 	public class IAnimalEmotionBubbleEntry
 	{
-		// Token: 0x06000736 RID: 1846 RVA: 0x000248CC File Offset: 0x00022ACC
+		// Token: 0x0600078A RID: 1930 RVA: 0x00025BD0 File Offset: 0x00023DD0
 		private IAnimalEmotionBubbleEntry_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000737 RID: 1847 RVA: 0x00024904 File Offset: 0x00022B04
+		// Token: 0x0600078B RID: 1931 RVA: 0x00025C08 File Offset: 0x00023E08
 		public static IAnimalEmotionBubbleEntry Create([Nullable(2)] IAnimalEmotionBubbleEntry instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000738 RID: 1848 RVA: 0x00024917 File Offset: 0x00022B17
+		// Token: 0x0600078C RID: 1932 RVA: 0x00025C1B File Offset: 0x00023E1B
 		public static IAnimalEmotionBubbleEntry CreateFromSetValue([Nullable(2)] IAnimalEmotionBubbleEntry_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000739 RID: 1849 RVA: 0x0002492A File Offset: 0x00022B2A
+		// Token: 0x0600078D RID: 1933 RVA: 0x00025C2E File Offset: 0x00023E2E
 		public IAnimalEmotionBubbleEntry_SetValue ToSetValue()
 		{
 			return new IAnimalEmotionBubbleEntry_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000251 RID: 593
-		// (get) Token: 0x0600073A RID: 1850 RVA: 0x00024949 File Offset: 0x00022B49
-		// (set) Token: 0x0600073B RID: 1851 RVA: 0x00024974 File Offset: 0x00022B74
+		// Token: 0x17000266 RID: 614
+		// (get) Token: 0x0600078E RID: 1934 RVA: 0x00025C4D File Offset: 0x00023E4D
+		// (set) Token: 0x0600078F RID: 1935 RVA: 0x00025C78 File Offset: 0x00023E78
 		public virtual string MontagePath
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000252 RID: 594
-		// (get) Token: 0x0600073C RID: 1852 RVA: 0x00024982 File Offset: 0x00022B82
-		// (set) Token: 0x0600073D RID: 1853 RVA: 0x000249AD File Offset: 0x00022BAD
+		// Token: 0x17000267 RID: 615
+		// (get) Token: 0x06000790 RID: 1936 RVA: 0x00025C86 File Offset: 0x00023E86
+		// (set) Token: 0x06000791 RID: 1937 RVA: 0x00025CB1 File Offset: 0x00023EB1
 		public virtual string EmotionName
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000887 RID: 2183
+		// Token: 0x040008FB RID: 2299
 		[Nullable(2)]
 		protected IAnimalEmotionBubbleEntry FbInstance;
 
-		// Token: 0x04000888 RID: 2184
+		// Token: 0x040008FC RID: 2300
 		[Nullable(2)]
 		protected IAnimalEmotionBubbleEntry_SetValue PocoInterface;
 	}

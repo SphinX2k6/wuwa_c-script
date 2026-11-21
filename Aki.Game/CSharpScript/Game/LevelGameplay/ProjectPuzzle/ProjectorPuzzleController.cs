@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 {
-	// Token: 0x02006AB7 RID: 27319
+	// Token: 0x02005C14 RID: 23572
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ProjectorPuzzleController
 	{
-		// Token: 0x06043DED RID: 277997 RVA: 0x010A25E8 File Offset: 0x010A07E8
+		// Token: 0x06039E47 RID: 237127 RVA: 0x01046C74 File Offset: 0x01044E74
 		public static void StartProjectorPuzzle(int entityId, Action<bool> finishCallback)
 		{
 			ProjectorComponent projectorComponent = ProjectorPuzzleController.ValidateAndGetProjectorComponent(entityId, finishCallback);
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.StartGameplayAsync(projectorComponent);
 		}
 
-		// Token: 0x06043DEE RID: 277998 RVA: 0x010A2650 File Offset: 0x010A0850
+		// Token: 0x06039E48 RID: 237128 RVA: 0x01046CDC File Offset: 0x01044EDC
 		private static UniTask StartGameplayAsync(ProjectorComponent projectorComponent)
 		{
 			ProjectorPuzzleController.<StartGameplayAsync>d__9 <StartGameplayAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return <StartGameplayAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043DEF RID: 277999 RVA: 0x010A2694 File Offset: 0x010A0894
+		// Token: 0x06039E49 RID: 237129 RVA: 0x01046D20 File Offset: 0x01044F20
 		[return: Nullable(2)]
 		private unsafe static ProjectorComponent ValidateAndGetProjectorComponent(int entityId, Action<bool> finishCallback)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return component;
 		}
 
-		// Token: 0x06043DF0 RID: 278000 RVA: 0x010A2804 File Offset: 0x010A0A04
+		// Token: 0x06039E4A RID: 237130 RVA: 0x01046E90 File Offset: 0x01045090
 		public static void CloseGameplay(bool callFinishCallback = false, bool closeView = true, bool result = false)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			obj2(result);
 		}
 
-		// Token: 0x06043DF1 RID: 278001 RVA: 0x010A288C File Offset: 0x010A0A8C
+		// Token: 0x06039E4B RID: 237131 RVA: 0x01046F18 File Offset: 0x01045118
 		public static void ResetGameplay()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.ResetAttachActorRotation(aactor, instance.InitialAttachRelativeRotator);
 		}
 
-		// Token: 0x06043DF2 RID: 278002 RVA: 0x010A28E4 File Offset: 0x010A0AE4
+		// Token: 0x06039E4C RID: 237132 RVA: 0x01046F70 File Offset: 0x01045170
 		public static void BeginInput(float localX, float localY, double width, double height)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			instance.HasLastArcballVector = true;
 		}
 
-		// Token: 0x06043DF3 RID: 278003 RVA: 0x010A293C File Offset: 0x010A0B3C
+		// Token: 0x06039E4D RID: 237133 RVA: 0x01046FC8 File Offset: 0x010451C8
 		public static void UpdateInput(float localX, float localY, double width, double height)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			instance.LastArcballVector.DeepCopy(instance.TempArcballVector);
 		}
 
-		// Token: 0x06043DF4 RID: 278004 RVA: 0x010A2A04 File Offset: 0x010A0C04
+		// Token: 0x06039E4E RID: 237134 RVA: 0x01047090 File Offset: 0x01045290
 		public static void EndInput()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			instance.HasLastArcballVector = false;
 		}
 
-		// Token: 0x06043DF5 RID: 278005 RVA: 0x010A2A2C File Offset: 0x010A0C2C
+		// Token: 0x06039E4F RID: 237135 RVA: 0x010470B8 File Offset: 0x010452B8
 		public static void Update(float delta, float rollInput = 0f)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.UpdateRotationAudio(delta);
 		}
 
-		// Token: 0x06043DF6 RID: 278006 RVA: 0x010A2A7C File Offset: 0x010A0C7C
+		// Token: 0x06039E50 RID: 237136 RVA: 0x01047108 File Offset: 0x01045308
 		public static void UpdateStickRotation(float inputX, float inputY, float delta)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x06043DF7 RID: 278007 RVA: 0x010A2D98 File Offset: 0x010A0F98
+		// Token: 0x06039E51 RID: 237137 RVA: 0x01047424 File Offset: 0x01045624
 		private unsafe static bool SetupBackgroundDecal(int backgroundEntityId, string decalPath)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043DF8 RID: 278008 RVA: 0x010A2FD4 File Offset: 0x010A11D4
+		// Token: 0x06039E52 RID: 237138 RVA: 0x01047660 File Offset: 0x01045860
 		private static void CheckRotationMatch()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x06043DF9 RID: 278009 RVA: 0x010A3068 File Offset: 0x010A1268
+		// Token: 0x06039E53 RID: 237139 RVA: 0x010476F4 File Offset: 0x010458F4
 		private static void OnRotationCompleted()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.FinishGameplay();
 		}
 
-		// Token: 0x06043DFA RID: 278010 RVA: 0x010A3094 File Offset: 0x010A1294
+		// Token: 0x06039E54 RID: 237140 RVA: 0x01047720 File Offset: 0x01045920
 		private static void FinishGameplay()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			ProjectorPuzzleController.CloseGameplay(true, true, true);
 		}
 
-		// Token: 0x06043DFB RID: 278011 RVA: 0x010A30BC File Offset: 0x010A12BC
+		// Token: 0x06039E55 RID: 237141 RVA: 0x01047748 File Offset: 0x01045948
 		private static void ApplyArcballRotation(Vector from, Vector to)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			instance.FrameDragAngle += Math.Abs(num);
 		}
 
-		// Token: 0x06043DFC RID: 278012 RVA: 0x010A3264 File Offset: 0x010A1464
+		// Token: 0x06039E56 RID: 237142 RVA: 0x010478F0 File Offset: 0x01045AF0
 		private static void ApplyRollRotation(float rollInput, float delta)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			instance.FrameStickAngle += Math.Abs(num2);
 		}
 
-		// Token: 0x06043DFD RID: 278013 RVA: 0x010A3404 File Offset: 0x010A1604
+		// Token: 0x06039E57 RID: 237143 RVA: 0x01047A90 File Offset: 0x01045C90
 		private static void GetArcballVector(float localX, float localY, double width, double height, float centerX, float centerY, Vector outValue)
 		{
 			double num = width * 0.5;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			outValue.Set(inX, num3, num4);
 		}
 
-		// Token: 0x06043DFE RID: 278014 RVA: 0x010A3500 File Offset: 0x010A1700
+		// Token: 0x06039E58 RID: 237144 RVA: 0x01047B8C File Offset: 0x01045D8C
 		private static bool ShouldRecenterArcball(float localX, float localY, double width, double height, float centerX, float centerY)
 		{
 			double num = width * 0.5;
@@ -527,7 +527,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return num3 * num3 + num4 * num4 >= 1.0;
 		}
 
-		// Token: 0x06043DFF RID: 278015 RVA: 0x010A3564 File Offset: 0x010A1764
+		// Token: 0x06039E59 RID: 237145 RVA: 0x01047BF0 File Offset: 0x01045DF0
 		private static bool TryGetReferenceRotation(Rotator outValue)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return false;
 		}
 
-		// Token: 0x06043E00 RID: 278016 RVA: 0x010A35A0 File Offset: 0x010A17A0
+		// Token: 0x06039E5A RID: 237146 RVA: 0x01047C2C File Offset: 0x01045E2C
 		private static void CacheInitialAttachRelativeRotation(AActor actor, Rotator outValue)
 		{
 			USceneComponent usceneComponent = actor.K2_GetRootComponent();
@@ -555,14 +555,14 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			Log.Instance.Warn(ELogModule.ProjectorPuzzle, ELogAuthor.WRY, "ProjectorPuzzle缓存挂点初始相对旋转失败，RootComponent无效", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06043E01 RID: 278017 RVA: 0x010A3604 File Offset: 0x010A1804
+		// Token: 0x06039E5B RID: 237147 RVA: 0x01047C90 File Offset: 0x01045E90
 		private static void ResetAttachActorRotation(AActor actor, Rotator initialRotator)
 		{
 			FHitResult fhitResult = new FHitResult();
 			actor.K2_SetActorRelativeRotation(initialRotator.ToUeRotator(), false, ref fhitResult, false);
 		}
 
-		// Token: 0x06043E02 RID: 278018 RVA: 0x010A3628 File Offset: 0x010A1828
+		// Token: 0x06039E5C RID: 237148 RVA: 0x01047CB4 File Offset: 0x01045EB4
 		private static void UpdateRotationAudio(float delta)
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -603,7 +603,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x06043E03 RID: 278019 RVA: 0x010A37A0 File Offset: 0x010A19A0
+		// Token: 0x06039E5D RID: 237149 RVA: 0x01047E2C File Offset: 0x0104602C
 		private static void StopRotationAudio()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -628,7 +628,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x06043E04 RID: 278020 RVA: 0x010A3834 File Offset: 0x010A1A34
+		// Token: 0x06039E5E RID: 237150 RVA: 0x01047EC0 File Offset: 0x010460C0
 		private static bool SetupShadowCompensationActor(ProjectorComponent projectorComponent, ProjectorModel model)
 		{
 			AStaticMeshActor projectedActor = projectorComponent.ProjectedActor;
@@ -734,7 +734,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043E05 RID: 278021 RVA: 0x010A3984 File Offset: 0x010A1B84
+		// Token: 0x06039E5F RID: 237151 RVA: 0x01048010 File Offset: 0x01046210
 		private static void UpdateShadowCompensation()
 		{
 			ProjectorModel instance = ProjectorModel.Instance;
@@ -756,7 +756,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			shadowCompensationActor.K2_SetActorRotation(newRotation, false);
 		}
 
-		// Token: 0x06043E06 RID: 278022 RVA: 0x010A39DC File Offset: 0x010A1BDC
+		// Token: 0x06039E60 RID: 237152 RVA: 0x01048068 File Offset: 0x01046268
 		private static void ReleaseShadowCompensationActor(ProjectorModel model)
 		{
 			AStaticMeshActor shadowCompensationActor = model.ShadowCompensationActor;
@@ -767,7 +767,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			model.ShadowCompensationActor = null;
 		}
 
-		// Token: 0x06043E09 RID: 278025 RVA: 0x010A3A2D File Offset: 0x010A1C2D
+		// Token: 0x06039E63 RID: 237155 RVA: 0x010480B9 File Offset: 0x010462B9
 		[CompilerGenerated]
 		[return: Nullable(2)]
 		internal static ProjectorComponent <ValidateAndGetProjectorComponent>g__Fail|10_0(string message, [ScopedRef] [Nullable(new byte[]
@@ -783,28 +783,28 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return null;
 		}
 
-		// Token: 0x0402379B RID: 145307
+		// Token: 0x0401E98D RID: 125325
 		private const string BACKGROUND_DECAL_ATTACH_ACTOR_KEY = "ProjectorDecalAttachActor";
 
-		// Token: 0x0402379C RID: 145308
+		// Token: 0x0401E98E RID: 125326
 		private const string SPOT_LIGHT_KEY = "SpotLight";
 
-		// Token: 0x0402379D RID: 145309
+		// Token: 0x0401E98F RID: 125327
 		private const float SHADOW_COMPENSATION_SCALE = 3.3f;
 
-		// Token: 0x0402379E RID: 145310
+		// Token: 0x0401E990 RID: 125328
 		private const string SHADOW_COMPENSATION_MATERIAL_PATH = "/Game/Aki/Render/Shaders/Scene/Interaction/MaterialInstance/MI_SceneInteraction_PlaneShadow.MI_SceneInteraction_PlaneShadow";
 
-		// Token: 0x0402379F RID: 145311
+		// Token: 0x0401E991 RID: 125329
 		private static readonly FName SHADOW_COMPENSATION_LIGHT_POINT_POS_NAME = new FName("LightPointPos");
 
-		// Token: 0x040237A0 RID: 145312
+		// Token: 0x0401E992 RID: 125330
 		private const string ROTATION_LOOP_AUDIO_EVENT = "play_sfx_gp_projectorpuzzle_stonerotate_loop";
 
-		// Token: 0x040237A1 RID: 145313
+		// Token: 0x0401E993 RID: 125331
 		private const string ROTATION_RTPC_NAME = "projectorpuzzle_rotation";
 
-		// Token: 0x040237A2 RID: 145314
+		// Token: 0x0401E994 RID: 125332
 		private const float DRAG_RTPC_MAX_ANGULAR_VELOCITY = 6.2831855f;
 	}
 }

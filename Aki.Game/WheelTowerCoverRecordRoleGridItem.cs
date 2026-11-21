@@ -1,16 +1,16 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02001580 RID: 5504
+// Token: 0x02000A38 RID: 2616
 public class WheelTowerCoverRecordRoleGridItem : LoopScrollSmallItemGrid<int>
 {
-	// Token: 0x06009D41 RID: 40257 RVA: 0x002213F7 File Offset: 0x0021F5F7
+	// Token: 0x0600711F RID: 28959 RVA: 0x0022B1A7 File Offset: 0x002293A7
 	protected override void OnStart()
 	{
 		base.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 	}
 
-	// Token: 0x06009D42 RID: 40258 RVA: 0x00221420 File Offset: 0x0021F620
+	// Token: 0x06007120 RID: 28960 RVA: 0x0022B1D0 File Offset: 0x002293D0
 	protected override void OnRefresh(int roleId, bool isSelected, int gridIndex)
 	{
 		int num = WheelTowerModel.Instance.TryGetRealRoleId(roleId);

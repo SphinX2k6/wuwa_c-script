@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleDev;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002816 RID: 10262
+// Token: 0x02001D91 RID: 7569
 [NullableContext(1)]
 [Nullable(0)]
 public class NotObtainedRoleDevRoleDetailItemData
 {
-	// Token: 0x06015147 RID: 86343 RVA: 0x005564A0 File Offset: 0x005546A0
+	// Token: 0x06012B47 RID: 76615 RVA: 0x005812A0 File Offset: 0x0057F4A0
 	public void InitByRoleId(int roleId)
 	{
 		this.DetailItemsInternal.Clear();
@@ -28,7 +28,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		this.CollectBreachItems(roleId, currentBreachLevel, roleBreachLevel);
 	}
 
-	// Token: 0x06015148 RID: 86344 RVA: 0x00556504 File Offset: 0x00554704
+	// Token: 0x06012B48 RID: 76616 RVA: 0x00581304 File Offset: 0x0057F504
 	private void CollectUpgradeItems(int roleId, int currentLevel, int targetLevel)
 	{
 		global::IRoleDevDetailItemData roleDevDetailItemData = this.CreateRoleExpItemDetailData(roleId, currentLevel, targetLevel);
@@ -38,7 +38,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x06015149 RID: 86345 RVA: 0x0055652C File Offset: 0x0055472C
+	// Token: 0x06012B49 RID: 76617 RVA: 0x0058132C File Offset: 0x0057F52C
 	private void CollectBreachItems(int roleId, int currentBreachLevel, int targetBreachLevel)
 	{
 		List<global::IRoleDevDetailItemData> list = this.CreateRoleBreachItemDetailData(roleId, currentBreachLevel, targetBreachLevel);
@@ -51,7 +51,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x0601514A RID: 86346 RVA: 0x0055658C File Offset: 0x0055478C
+	// Token: 0x06012B4A RID: 76618 RVA: 0x0058138C File Offset: 0x0057F58C
 	[NullableContext(2)]
 	private global::IRoleDevDetailItemData CreateRoleExpItemDetailData(int roleId, int currentLevel, int targetLevel)
 	{
@@ -65,7 +65,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return this.BuildExpItemDetailData(roleId, totalMaterials);
 	}
 
-	// Token: 0x0601514B RID: 86347 RVA: 0x005565C4 File Offset: 0x005547C4
+	// Token: 0x06012B4B RID: 76619 RVA: 0x005813C4 File Offset: 0x0057F5C4
 	private int CalculateTotalNeedExp(int roleId, int currentLevel, int targetLevel)
 	{
 		int num = 0;
@@ -76,7 +76,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return num;
 	}
 
-	// Token: 0x0601514C RID: 86348 RVA: 0x005565F0 File Offset: 0x005547F0
+	// Token: 0x06012B4C RID: 76620 RVA: 0x005813F0 File Offset: 0x0057F5F0
 	[return: TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -98,7 +98,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return this.SortExpItemsByQuality(list);
 	}
 
-	// Token: 0x0601514D RID: 86349 RVA: 0x00556653 File Offset: 0x00554853
+	// Token: 0x06012B4D RID: 76621 RVA: 0x00581453 File Offset: 0x0057F653
 	[return: TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -138,14 +138,14 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return expItemList;
 	}
 
-	// Token: 0x0601514E RID: 86350 RVA: 0x0055667C File Offset: 0x0055487C
+	// Token: 0x06012B4E RID: 76622 RVA: 0x0058147C File Offset: 0x0057F67C
 	private global::IRoleDevDetailItemData BuildExpItemDetailData(int roleId, List<global::IItemMaterial> totalMaterials)
 	{
 		List<global::IMaterialGroup> materialGroups = RoleDevUtils.GroupMaterialsByType(totalMaterials);
 		return RoleDevUtils.BuildDetailItemData(roleId, materialGroups, ERoleDevMainPage.Role)[0];
 	}
 
-	// Token: 0x0601514F RID: 86351 RVA: 0x005566A0 File Offset: 0x005548A0
+	// Token: 0x06012B4F RID: 76623 RVA: 0x005814A0 File Offset: 0x0057F6A0
 	private List<global::IItemMaterial> CalcRoleExpMaterials([TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -163,7 +163,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x06015150 RID: 86352 RVA: 0x005566CC File Offset: 0x005548CC
+	// Token: 0x06012B50 RID: 76624 RVA: 0x005814CC File Offset: 0x0057F6CC
 	private int UseExistingExpItems([TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -200,7 +200,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return num;
 	}
 
-	// Token: 0x06015151 RID: 86353 RVA: 0x00556790 File Offset: 0x00554990
+	// Token: 0x06012B51 RID: 76625 RVA: 0x00581590 File Offset: 0x0057F790
 	private void AddHighestQualityExpItemsIfNeeded([TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -234,7 +234,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		});
 	}
 
-	// Token: 0x06015152 RID: 86354 RVA: 0x0055680C File Offset: 0x00554A0C
+	// Token: 0x06012B52 RID: 76626 RVA: 0x0058160C File Offset: 0x0057F80C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -254,7 +254,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return this.BuildBreachDetailItems(roleId, list);
 	}
 
-	// Token: 0x06015153 RID: 86355 RVA: 0x0055683C File Offset: 0x00554A3C
+	// Token: 0x06012B53 RID: 76627 RVA: 0x0058163C File Offset: 0x0057F83C
 	private List<global::IItemMaterial> CalculateBreachMaterials(int roleId, int currentBreachLevel, int targetBreachLevel)
 	{
 		List<global::IItemMaterial> list = new List<global::IItemMaterial>();
@@ -269,7 +269,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x06015154 RID: 86356 RVA: 0x00556884 File Offset: 0x00554A84
+	// Token: 0x06012B54 RID: 76628 RVA: 0x00581684 File Offset: 0x0057F884
 	private void AddBreachLevelMaterials(RoleBreach breakConfig, List<global::IItemMaterial> totalMaterials)
 	{
 		Dictionary<int, int> dictionary = breakConfig.BreachConsume();
@@ -288,7 +288,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x06015155 RID: 86357 RVA: 0x005568F8 File Offset: 0x00554AF8
+	// Token: 0x06012B55 RID: 76629 RVA: 0x005816F8 File Offset: 0x0057F8F8
 	private void AddOrUpdateMaterial(List<global::IItemMaterial> totalMaterials, int itemId, int count)
 	{
 		global::IItemMaterial itemMaterial = totalMaterials.Find((global::IItemMaterial m) => m.ItemId == itemId);
@@ -304,7 +304,7 @@ public class NotObtainedRoleDevRoleDetailItemData
 		});
 	}
 
-	// Token: 0x06015156 RID: 86358 RVA: 0x00556958 File Offset: 0x00554B58
+	// Token: 0x06012B56 RID: 76630 RVA: 0x00581758 File Offset: 0x0057F958
 	private List<global::IRoleDevDetailItemData> BuildBreachDetailItems(int roleId, List<global::IItemMaterial> totalMaterials)
 	{
 		List<global::IMaterialGroup> materialGroups = RoleDevUtils.GroupMaterialsByType(totalMaterials);
@@ -316,8 +316,8 @@ public class NotObtainedRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x17001BD9 RID: 7129
-	// (get) Token: 0x06015157 RID: 86359 RVA: 0x00556985 File Offset: 0x00554B85
+	// Token: 0x17001C31 RID: 7217
+	// (get) Token: 0x06012B57 RID: 76631 RVA: 0x00581785 File Offset: 0x0057F985
 	public List<global::IRoleDevDetailItemData> DetailItems
 	{
 		get
@@ -326,6 +326,6 @@ public class NotObtainedRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x04009E37 RID: 40503
+	// Token: 0x0400A220 RID: 41504
 	private List<global::IRoleDevDetailItemData> DetailItemsInternal = new List<global::IRoleDevDetailItemData>();
 }

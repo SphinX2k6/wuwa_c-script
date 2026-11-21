@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048E2 RID: 18658
+	// Token: 0x02003859 RID: 14425
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiComponentUtil
 	{
-		// Token: 0x06030C75 RID: 199797 RVA: 0x00B53A08 File Offset: 0x00B51C08
+		// Token: 0x060257A2 RID: 153506 RVA: 0x00A8E878 File Offset: 0x00A8CA78
 		[return: Nullable(2)]
 		public static CSharpScript.Game.Module.RoleUi.StarItem SetStarActiveNew(CSharpScript.Game.Module.RoleUi.StarItem[] starList, int currentCount, int? maxCount = null, bool showNextStar = true)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030C76 RID: 199798 RVA: 0x00B53A98 File Offset: 0x00B51C98
+		// Token: 0x060257A3 RID: 153507 RVA: 0x00A8E908 File Offset: 0x00A8CB08
 		public static bool SetMoneyState(UUIText costText, UUIText ownText, int costNumber, int ownNumber)
 		{
 			costText.SetText(costNumber.ToString(), true);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Util
 			return flag;
 		}
 
-		// Token: 0x06030C77 RID: 199799 RVA: 0x00B53AEC File Offset: 0x00B51CEC
+		// Token: 0x060257A4 RID: 153508 RVA: 0x00A8E95C File Offset: 0x00A8CB5C
 		public static void BindAudioEvent(UUISelectableComponent selectable)
 		{
 			UUIButtonComponent uuibuttonComponent = selectable as UUIButtonComponent;
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C78 RID: 199800 RVA: 0x00B53B53 File Offset: 0x00B51D53
+		// Token: 0x060257A5 RID: 153509 RVA: 0x00A8E9C3 File Offset: 0x00A8CBC3
 		public static void UnBindAudioEventByName(string name)
 		{
 			AudioController.Instance.StopSelectableAudioEventByName(name);
 		}
 
-		// Token: 0x06030C79 RID: 199801 RVA: 0x00B53B60 File Offset: 0x00B51D60
+		// Token: 0x060257A6 RID: 153510 RVA: 0x00A8E9D0 File Offset: 0x00A8CBD0
 		public static void UnBindAudioEvent(UUISelectableComponent selectable)
 		{
 			AudioController.Instance.StopSelectableAudioEvent(selectable.GetOwner());

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C14 RID: 3092
+	// Token: 0x02000CE4 RID: 3300
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDoubleViewBossStateViewStyle : IBossStateViewStyle
 	{
-		// Token: 0x060046EC RID: 18156 RVA: 0x000B2D29 File Offset: 0x000B0F29
-		[NullableContext(1)]
+		// Token: 0x06004B4F RID: 19279 RVA: 0x000BCEF5 File Offset: 0x000BB0F5
+		[NullableContext(0)]
 		public static IDoubleViewBossStateViewStyle Create(IDoubleViewBossStateViewStyle? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001481 RID: 5249
-		// (get) Token: 0x060046ED RID: 18157 RVA: 0x000B2D48 File Offset: 0x000B0F48
+		// Token: 0x17001582 RID: 5506
+		// (get) Token: 0x06004B50 RID: 19280 RVA: 0x000BCF14 File Offset: 0x000BB114
 		public override EBossStateViewStyle Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001482 RID: 5250
-		// (get) Token: 0x060046EE RID: 18158 RVA: 0x000B2D55 File Offset: 0x000B0F55
+		// Token: 0x17001583 RID: 5507
+		// (get) Token: 0x06004B51 RID: 19281 RVA: 0x000BCF21 File Offset: 0x000BB121
 		public virtual EDoubleViewSlot Slot
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001483 RID: 5251
-		// (get) Token: 0x060046EF RID: 18159 RVA: 0x000B2D62 File Offset: 0x000B0F62
+		// Token: 0x17001584 RID: 5508
+		// (get) Token: 0x06004B52 RID: 19282 RVA: 0x000BCF2E File Offset: 0x000BB12E
 		public virtual IMarkMainStateTextTarget MainStateTextTarget
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001484 RID: 5252
-		// (get) Token: 0x060046F0 RID: 18160 RVA: 0x000B2D98 File Offset: 0x000B0F98
+		// Token: 0x17001585 RID: 5509
+		// (get) Token: 0x06004B53 RID: 19283 RVA: 0x000BCF64 File Offset: 0x000BB164
 		public virtual int? BindMonsterEntityId
 		{
 			get
@@ -73,13 +73,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002849 RID: 10313
+		// Token: 0x04002A95 RID: 10901
 		private IDoubleViewBossStateViewStyle Instance;
 
-		// Token: 0x0400284A RID: 10314
+		// Token: 0x04002A96 RID: 10902
 		private IMarkMainStateTextTarget _MainStateTextTargetCache;
 
-		// Token: 0x0400284B RID: 10315
+		// Token: 0x04002A97 RID: 10903
 		private bool _MainStateTextTargetInited;
 	}
 }

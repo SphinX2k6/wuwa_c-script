@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 {
-	// Token: 0x02006AAF RID: 27311
+	// Token: 0x02005C0C RID: 23564
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RbBreakableObstacleItemLogic : RbItemLogicBase
 	{
-		// Token: 0x06043D8D RID: 277901 RVA: 0x010A00CE File Offset: 0x0109E2CE
+		// Token: 0x06039DE4 RID: 237028 RVA: 0x010447D9 File Offset: 0x010429D9
 		public RbBreakableObstacleItemLogic(RbItemComponent owner) : base(owner)
 		{
 		}
 
-		// Token: 0x06043D8E RID: 277902 RVA: 0x010A0100 File Offset: 0x0109E300
+		// Token: 0x06039DE5 RID: 237029 RVA: 0x01044808 File Offset: 0x01042A08
 		public unsafe override void Start([Nullable(new byte[]
 		{
 			0,
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043D8F RID: 277903 RVA: 0x010A02C4 File Offset: 0x0109E4C4
+		// Token: 0x06039DE6 RID: 237030 RVA: 0x010449CC File Offset: 0x01042BCC
 		public override void End()
 		{
 			if (this.EffectHandle != null)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x06043D90 RID: 277904 RVA: 0x010A0310 File Offset: 0x0109E510
+		// Token: 0x06039DE7 RID: 237031 RVA: 0x01044A18 File Offset: 0x01042C18
 		public unsafe override void OnStateChange(int stateId)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.销毁"] || stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.激活"])
@@ -138,14 +138,14 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			}
 		}
 
-		// Token: 0x04023757 RID: 145239
+		// Token: 0x0401E949 RID: 125257
 		private int? EffectHandle;
 
-		// Token: 0x04023758 RID: 145240
+		// Token: 0x0401E94A RID: 125258
 		[Nullable(2)]
 		private TArray<FVectorDouble> Points;
 
-		// Token: 0x04023759 RID: 145241
+		// Token: 0x0401E94B RID: 125259
 		private readonly global::Vector Location = global::Vector.Create(0.0, 0.0, 0.0);
 	}
 }

@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200625F RID: 25183
+	// Token: 0x020051DD RID: 20957
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ActivityRealmBetweenConfig : ConfigBase
 	{
-		// Token: 0x0603F6B0 RID: 259760 RVA: 0x00F54F38 File Offset: 0x00F53138
+		// Token: 0x06034371 RID: 213873 RVA: 0x00E9BE94 File Offset: 0x00E9A094
 		public RealmBetweenConfig? GetActivityConfig(int activityId)
 		{
 			RealmBetweenConfig? config = ConfigRealmBetweenConfigByActivityId.GetConfig(activityId, true);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return null;
 		}
 
-		// Token: 0x0603F6B1 RID: 259761 RVA: 0x00F54F6C File Offset: 0x00F5316C
+		// Token: 0x06034372 RID: 213874 RVA: 0x00E9BEC8 File Offset: 0x00E9A0C8
 		public RealmBetweenLevelExp? GetLevelExpConfig(int id)
 		{
 			RealmBetweenLevelExp? config = ConfigRealmBetweenLevelExpById.GetConfig(id, true);
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return null;
 		}
 
-		// Token: 0x0603F6B2 RID: 259762 RVA: 0x00F54FA0 File Offset: 0x00F531A0
+		// Token: 0x06034373 RID: 213875 RVA: 0x00E9BEFC File Offset: 0x00E9A0FC
 		public IReadOnlyList<RealmBetweenLevelExp> GetAllLevelExpConfig(int activityId)
 		{
 			return ConfigRealmBetweenLevelExpByActivityId.GetConfigList(activityId, true) ?? new List<RealmBetweenLevelExp>();
 		}
 
-		// Token: 0x0603F6B3 RID: 259763 RVA: 0x00F54FB4 File Offset: 0x00F531B4
+		// Token: 0x06034374 RID: 213876 RVA: 0x00E9BF10 File Offset: 0x00E9A110
 		public RealmBetweenTask? GetRealmBetweenTaskConfig(int taskId)
 		{
 			RealmBetweenTask? config = ConfigRealmBetweenTaskByTaskId.GetConfig(taskId, true);
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return null;
 		}
 
-		// Token: 0x0603F6B4 RID: 259764 RVA: 0x00F54FE8 File Offset: 0x00F531E8
+		// Token: 0x06034375 RID: 213877 RVA: 0x00E9BF44 File Offset: 0x00E9A144
 		public IReadOnlyList<RealmBetweenTask> GetAllRealmBetweenTaskConfig(int activityId)
 		{
 			return ConfigRealmBetweenTaskByActivityId.GetConfigList(activityId, true) ?? new List<RealmBetweenTask>();
 		}
 
-		// Token: 0x0603F6B5 RID: 259765 RVA: 0x00F54FFC File Offset: 0x00F531FC
+		// Token: 0x06034376 RID: 213878 RVA: 0x00E9BF58 File Offset: 0x00E9A158
 		public RealmBetweenArea? GetAreaConfig(int id)
 		{
 			RealmBetweenArea? config = ConfigRealmBetweenAreaById.GetConfig(id, true);
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return null;
 		}
 
-		// Token: 0x0603F6B6 RID: 259766 RVA: 0x00F55030 File Offset: 0x00F53230
+		// Token: 0x06034377 RID: 213879 RVA: 0x00E9BF8C File Offset: 0x00E9A18C
 		public IReadOnlyList<RealmBetweenArea> GetAllAreaConfig(int activityId)
 		{
 			return ConfigRealmBetweenAreaByActivityId.GetConfigList(activityId, true) ?? new List<RealmBetweenArea>();
 		}
 
-		// Token: 0x0603F6B7 RID: 259767 RVA: 0x00F55044 File Offset: 0x00F53244
+		// Token: 0x06034378 RID: 213880 RVA: 0x00E9BFA0 File Offset: 0x00E9A1A0
 		public RealmBetweenPhantomGain? GetPhantomConfig(int id)
 		{
 			RealmBetweenPhantomGain? config = ConfigRealmBetweenPhantomGainById.GetConfig(id, true);
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return null;
 		}
 
-		// Token: 0x0603F6B8 RID: 259768 RVA: 0x00F55078 File Offset: 0x00F53278
+		// Token: 0x06034379 RID: 213881 RVA: 0x00E9BFD4 File Offset: 0x00E9A1D4
 		public IReadOnlyList<RealmBetweenPhantomGain> GetAllPhantomConfig(int activityId)
 		{
 			return ConfigRealmBetweenPhantomGainByActivityId.GetConfigList(activityId, true) ?? new List<RealmBetweenPhantomGain>();
 		}
 
-		// Token: 0x0603F6B9 RID: 259769 RVA: 0x00F5508A File Offset: 0x00F5328A
+		// Token: 0x0603437A RID: 213882 RVA: 0x00E9BFE6 File Offset: 0x00E9A1E6
 		public IReadOnlyList<RealmBetweenChallenge> GetAllMotorChallengeConfig()
 		{
 			return ConfigRealmBetweenChallengeAll.GetConfigList(true) ?? new List<RealmBetweenChallenge>();
 		}
 
-		// Token: 0x0603F6BA RID: 259770 RVA: 0x00F5509C File Offset: 0x00F5329C
+		// Token: 0x0603437B RID: 213883 RVA: 0x00E9BFF8 File Offset: 0x00E9A1F8
 		public RealmBetweenChallenge? GetMotorChallengeConfig(int id)
 		{
 			RealmBetweenChallenge? config = ConfigRealmBetweenChallengeById.GetConfig(id, true);
@@ -107,8 +107,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return null;
 		}
 
-		// Token: 0x1700925B RID: 37467
-		// (get) Token: 0x0603F6BB RID: 259771 RVA: 0x00F550D0 File Offset: 0x00F532D0
+		// Token: 0x170065BD RID: 26045
+		// (get) Token: 0x0603437C RID: 213884 RVA: 0x00E9C02C File Offset: 0x00E9A22C
 		public static ActivityRealmBetweenConfig Instance
 		{
 			get
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F6BC RID: 259772 RVA: 0x00F550D7 File Offset: 0x00F532D7
+		// Token: 0x0603437D RID: 213885 RVA: 0x00E9C033 File Offset: 0x00E9A233
 		public static ActivityRealmBetweenConfig GetOrCreateInstance()
 		{
 			if (ActivityRealmBetweenConfig._Instance == null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return ActivityRealmBetweenConfig._Instance;
 		}
 
-		// Token: 0x0603F6BD RID: 259773 RVA: 0x00F550EB File Offset: 0x00F532EB
+		// Token: 0x0603437E RID: 213886 RVA: 0x00E9C047 File Offset: 0x00E9A247
 		public static bool CreateInstance()
 		{
 			if (ActivityRealmBetweenConfig._Instance != null)
@@ -138,24 +138,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return true;
 		}
 
-		// Token: 0x0603F6BE RID: 259774 RVA: 0x00F55101 File Offset: 0x00F53301
+		// Token: 0x0603437F RID: 213887 RVA: 0x00E9C05D File Offset: 0x00E9A25D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F6BF RID: 259775 RVA: 0x00F55103 File Offset: 0x00F53303
+		// Token: 0x06034380 RID: 213888 RVA: 0x00E9C05F File Offset: 0x00E9A25F
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityRealmBetweenConfig._Instance = null;
 		}
 
-		// Token: 0x0603F6C0 RID: 259776 RVA: 0x00F5510B File Offset: 0x00F5330B
+		// Token: 0x06034381 RID: 213889 RVA: 0x00E9C067 File Offset: 0x00E9A267
 		static ActivityRealmBetweenConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityRealmBetweenConfig.CreateStaticDefaultValue), new Action(ActivityRealmBetweenConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021214 RID: 135700
+		// Token: 0x0401BB43 RID: 113475
 		[Nullable(2)]
 		private static ActivityRealmBetweenConfig _Instance;
 	}

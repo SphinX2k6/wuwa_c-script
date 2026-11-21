@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CB2 RID: 23730
+	// Token: 0x020062E3 RID: 25315
 	public class TStreamingSourceConfigUnion
 	{
-		// Token: 0x1700B254 RID: 45652
-		// (get) Token: 0x06028A0D RID: 166413 RVA: 0x005954F0 File Offset: 0x005936F0
-		// (set) Token: 0x06028A0E RID: 166414 RVA: 0x005954F8 File Offset: 0x005936F8
+		// Token: 0x1700BBAE RID: 48046
+		// (get) Token: 0x0602B055 RID: 176213 RVA: 0x005DDC64 File Offset: 0x005DBE64
+		// (set) Token: 0x0602B056 RID: 176214 RVA: 0x005DDC6C File Offset: 0x005DBE6C
 		public TStreamingSourceConfig Type { get; set; }
 
-		// Token: 0x1700B255 RID: 45653
-		// (get) Token: 0x06028A0F RID: 166415 RVA: 0x00595501 File Offset: 0x00593701
-		// (set) Token: 0x06028A10 RID: 166416 RVA: 0x00595509 File Offset: 0x00593709
+		// Token: 0x1700BBAF RID: 48047
+		// (get) Token: 0x0602B057 RID: 176215 RVA: 0x005DDC75 File Offset: 0x005DBE75
+		// (set) Token: 0x0602B058 RID: 176216 RVA: 0x005DDC7D File Offset: 0x005DBE7D
 		public object Value { get; set; }
 
-		// Token: 0x06028A11 RID: 166417 RVA: 0x00595512 File Offset: 0x00593712
+		// Token: 0x0602B059 RID: 176217 RVA: 0x005DDC86 File Offset: 0x005DBE86
 		public TStreamingSourceConfigUnion()
 		{
 			this.Type = TStreamingSourceConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028A12 RID: 166418 RVA: 0x00595528 File Offset: 0x00593728
+		// Token: 0x0602B05A RID: 176218 RVA: 0x005DDC9C File Offset: 0x005DBE9C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028A13 RID: 166419 RVA: 0x0059553A File Offset: 0x0059373A
+		// Token: 0x0602B05B RID: 176219 RVA: 0x005DDCAE File Offset: 0x005DBEAE
 		public IConditionalStreamingSourceT AsIConditionalStreamingSource()
 		{
 			return this.As<IConditionalStreamingSourceT>();
 		}
 
-		// Token: 0x06028A14 RID: 166420 RVA: 0x00595542 File Offset: 0x00593742
+		// Token: 0x0602B05C RID: 176220 RVA: 0x005DDCB6 File Offset: 0x005DBEB6
 		public static TStreamingSourceConfigUnion FromIConditionalStreamingSource(IConditionalStreamingSourceT _iconditionalstreamingsource)
 		{
 			return new TStreamingSourceConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A15 RID: 166421 RVA: 0x00595557 File Offset: 0x00593757
+		// Token: 0x0602B05D RID: 176221 RVA: 0x005DDCCB File Offset: 0x005DBECB
 		public IFixedStreamingSourceT AsIFixedStreamingSource()
 		{
 			return this.As<IFixedStreamingSourceT>();
 		}
 
-		// Token: 0x06028A16 RID: 166422 RVA: 0x0059555F File Offset: 0x0059375F
+		// Token: 0x0602B05E RID: 176222 RVA: 0x005DDCD3 File Offset: 0x005DBED3
 		public static TStreamingSourceConfigUnion FromIFixedStreamingSource(IFixedStreamingSourceT _ifixedstreamingsource)
 		{
 			return new TStreamingSourceConfigUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A17 RID: 166423 RVA: 0x00595574 File Offset: 0x00593774
+		// Token: 0x0602B05F RID: 176223 RVA: 0x005DDCE8 File Offset: 0x005DBEE8
 		public static int Pack(FlatBufferBuilder builder, TStreamingSourceConfigUnion _o)
 		{
 			TStreamingSourceConfig type = _o.Type;

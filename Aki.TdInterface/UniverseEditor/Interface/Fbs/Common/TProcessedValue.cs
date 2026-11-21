@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E93 RID: 24211
+	// Token: 0x020064D6 RID: 25814
 	public enum TProcessedValue : byte
 	{
-		// Token: 0x0400F8E0 RID: 63712
+		// Token: 0x04010643 RID: 67139
 		NONE,
-		// Token: 0x0400F8E1 RID: 63713
+		// Token: 0x04010644 RID: 67140
 		IProcessedValueConstant,
-		// Token: 0x0400F8E2 RID: 63714
+		// Token: 0x04010645 RID: 67141
 		IProcessedValueConstraint
 	}
 }

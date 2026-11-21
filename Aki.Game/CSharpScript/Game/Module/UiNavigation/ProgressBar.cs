@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048EC RID: 18668
+	// Token: 0x02003863 RID: 14435
 	public class ProgressBar : UiPanelBase
 	{
-		// Token: 0x06030D17 RID: 199959 RVA: 0x00B5601F File Offset: 0x00B5421F
+		// Token: 0x06025844 RID: 153668 RVA: 0x00A90E8F File Offset: 0x00A8F08F
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x06030D18 RID: 199960 RVA: 0x00B56042 File Offset: 0x00B54242
+		// Token: 0x06025845 RID: 153669 RVA: 0x00A90EB2 File Offset: 0x00A8F0B2
 		protected override void OnStart()
 		{
 			this.SetPercent(0f);
 		}
 
-		// Token: 0x06030D19 RID: 199961 RVA: 0x00B5604F File Offset: 0x00B5424F
+		// Token: 0x06025846 RID: 153670 RVA: 0x00A90EBF File Offset: 0x00A8F0BF
 		public void SetPercent(float value)
 		{
 			UUISprite sprite = base.GetSprite(0);

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DBC RID: 7612
+// Token: 0x0200127E RID: 4734
 [NullableContext(1)]
 [Nullable(0)]
 public class GuideTestParam
 {
-	// Token: 0x0600E729 RID: 59177 RVA: 0x003673CC File Offset: 0x003655CC
+	// Token: 0x0600BB47 RID: 47943 RVA: 0x0037302C File Offset: 0x0037122C
 	public void Clear()
 	{
 		this.ViewName = "";
@@ -17,21 +17,21 @@ public class GuideTestParam
 		this.ExtraParams = Array.Empty<string>();
 	}
 
-	// Token: 0x04006AEC RID: 27372
+	// Token: 0x04006BCD RID: 27597
 	public string ViewName = "";
 
-	// Token: 0x04006AED RID: 27373
+	// Token: 0x04006BCE RID: 27598
 	public string HookName = "";
 
-	// Token: 0x04006AEE RID: 27374
+	// Token: 0x04006BCF RID: 27599
 	public string HookNameForShow = "";
 
-	// Token: 0x04006AEF RID: 27375
+	// Token: 0x04006BD0 RID: 27600
 	public string MarkName = "";
 
-	// Token: 0x04006AF0 RID: 27376
+	// Token: 0x04006BD1 RID: 27601
 	public string MarkNameForShow = "";
 
-	// Token: 0x04006AF1 RID: 27377
+	// Token: 0x04006BD2 RID: 27602
 	public string[] ExtraParams = Array.Empty<string>();
 }

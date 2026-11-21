@@ -4,31 +4,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004776 RID: 18294
+	// Token: 0x020036A7 RID: 13991
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class PullRodPresentationWaitInfo : IPullRodPresentationWaitInfo
 	{
-		// Token: 0x17007772 RID: 30578
-		// (get) Token: 0x0602FD38 RID: 195896 RVA: 0x00B14FAB File Offset: 0x00B131AB
-		// (set) Token: 0x0602FD39 RID: 195897 RVA: 0x00B14FB3 File Offset: 0x00B131B3
+		// Token: 0x17004A2E RID: 18990
+		// (get) Token: 0x06024502 RID: 148738 RVA: 0x00A4500B File Offset: 0x00A4320B
+		// (set) Token: 0x06024503 RID: 148739 RVA: 0x00A45013 File Offset: 0x00A43213
 		[RequiredMember]
 		public SceneInteractionActor SceneActor { get; set; }
 
-		// Token: 0x17007773 RID: 30579
-		// (get) Token: 0x0602FD3A RID: 195898 RVA: 0x00B14FBC File Offset: 0x00B131BC
-		// (set) Token: 0x0602FD3B RID: 195899 RVA: 0x00B14FC4 File Offset: 0x00B131C4
+		// Token: 0x17004A2F RID: 18991
+		// (get) Token: 0x06024504 RID: 148740 RVA: 0x00A4501C File Offset: 0x00A4321C
+		// (set) Token: 0x06024505 RID: 148741 RVA: 0x00A45024 File Offset: 0x00A43224
 		[RequiredMember]
 		public ULevelSequence Sequence { get; set; }
 
-		// Token: 0x17007774 RID: 30580
-		// (get) Token: 0x0602FD3C RID: 195900 RVA: 0x00B14FCD File Offset: 0x00B131CD
-		// (set) Token: 0x0602FD3D RID: 195901 RVA: 0x00B14FD5 File Offset: 0x00B131D5
+		// Token: 0x17004A30 RID: 18992
+		// (get) Token: 0x06024506 RID: 148742 RVA: 0x00A4502D File Offset: 0x00A4322D
+		// (set) Token: 0x06024507 RID: 148743 RVA: 0x00A45035 File Offset: 0x00A43235
 		[RequiredMember]
 		public float PlayRate { get; set; }
 
-		// Token: 0x0602FD3E RID: 195902 RVA: 0x00B14FDE File Offset: 0x00B131DE
+		// Token: 0x06024508 RID: 148744 RVA: 0x00A4503E File Offset: 0x00A4323E
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public PullRodPresentationWaitInfo()

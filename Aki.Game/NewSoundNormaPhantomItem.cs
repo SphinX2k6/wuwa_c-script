@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020016A3 RID: 5795
+// Token: 0x02000B5B RID: 2907
 public class NewSoundNormaPhantomItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600A566 RID: 42342 RVA: 0x0024F524 File Offset: 0x0024D724
+	// Token: 0x06007946 RID: 31046 RVA: 0x0025993C File Offset: 0x00257B3C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,15 +19,15 @@ public class NewSoundNormaPhantomItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A567 RID: 42343 RVA: 0x0024F56C File Offset: 0x0024D76C
+	// Token: 0x06007947 RID: 31047 RVA: 0x00259984 File Offset: 0x00257B84
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 	}
 
-	// Token: 0x02007C7A RID: 31866
+	// Token: 0x02006DFF RID: 28159
 	private enum EChildType
 	{
-		// Token: 0x04028D79 RID: 167289
+		// Token: 0x040240A2 RID: 147618
 		IconTexture
 	}
 }

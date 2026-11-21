@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054B0 RID: 21680
+	// Token: 0x02004493 RID: 17555
 	public class CreateMarkViewParams
 	{
-		// Token: 0x0401D2D4 RID: 119508
+		// Token: 0x04017D70 RID: 97648
 		public EMapType MapType = EMapType.WorldMap;
 
-		// Token: 0x0401D2D5 RID: 119509
+		// Token: 0x04017D71 RID: 97649
 		public float MarkScale = 1f;
 
-		// Token: 0x0401D2D6 RID: 119510
+		// Token: 0x04017D72 RID: 97650
 		[Nullable(2)]
 		public UUIItem ViewParent;
 	}

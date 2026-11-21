@@ -4,13 +4,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C8D RID: 19597
+	// Token: 0x02003C3E RID: 15422
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SeamlessTravelPostProcess
 	{
-		// Token: 0x17007CFD RID: 31997
-		// (get) Token: 0x06032A6C RID: 207468 RVA: 0x00BCFE9C File Offset: 0x00BCE09C
+		// Token: 0x170050A7 RID: 20647
+		// (get) Token: 0x0602781F RID: 161823 RVA: 0x00B14B00 File Offset: 0x00B12D00
 		public bool IsInit
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x17007CFE RID: 31998
-		// (get) Token: 0x06032A6D RID: 207469 RVA: 0x00BCFEA4 File Offset: 0x00BCE0A4
+		// Token: 0x170050A8 RID: 20648
+		// (get) Token: 0x06027820 RID: 161824 RVA: 0x00B14B08 File Offset: 0x00B12D08
 		public bool IsActive
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A6E RID: 207470 RVA: 0x00BCFEB0 File Offset: 0x00BCE0B0
+		// Token: 0x06027821 RID: 161825 RVA: 0x00B14B14 File Offset: 0x00B12D14
 		[NullableContext(1)]
 		public void Init(SeamlessTravelContext config, Action<bool> callback)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			});
 		}
 
-		// Token: 0x06032A6F RID: 207471 RVA: 0x00BCFF94 File Offset: 0x00BCE194
+		// Token: 0x06027822 RID: 161826 RVA: 0x00B14BF8 File Offset: 0x00B12DF8
 		[NullableContext(1)]
 		private unsafe void CreatePPV(Action<bool> callback)
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}, ResourceSystem.EResourceLoadPriority.Default, "SeamlessTravel.PostProcess");
 		}
 
-		// Token: 0x06032A70 RID: 207472 RVA: 0x00BD00B8 File Offset: 0x00BCE2B8
+		// Token: 0x06027823 RID: 161827 RVA: 0x00B14D1C File Offset: 0x00B12F1C
 		public void Tick(float delta)
 		{
 			if (this.IsInit)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A71 RID: 207473 RVA: 0x00BD0270 File Offset: 0x00BCE470
+		// Token: 0x06027824 RID: 161828 RVA: 0x00B14ED4 File Offset: 0x00B130D4
 		public void Destroy()
 		{
 			AKuroPostProcessVolume postProcessVolume = this.PostProcessVolume;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.BlendOutCallback = null;
 		}
 
-		// Token: 0x06032A72 RID: 207474 RVA: 0x00BD030A File Offset: 0x00BCE50A
+		// Token: 0x06027825 RID: 161829 RVA: 0x00B14F6E File Offset: 0x00B1316E
 		[NullableContext(1)]
 		public void AppearEffect(Action<bool> callback)
 		{
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			callback(false);
 		}
 
-		// Token: 0x06032A73 RID: 207475 RVA: 0x00BD0341 File Offset: 0x00BCE541
+		// Token: 0x06027826 RID: 161830 RVA: 0x00B14FA5 File Offset: 0x00B131A5
 		[NullableContext(1)]
 		public void DisappearEffect(Action<bool> callback)
 		{
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			callback(false);
 		}
 
-		// Token: 0x06032A74 RID: 207476 RVA: 0x00BD0378 File Offset: 0x00BCE578
+		// Token: 0x06027827 RID: 161831 RVA: 0x00B14FDC File Offset: 0x00B131DC
 		[NullableContext(1)]
 		public TArray<AActor> GetSeamlessTravelActors(TArray<AActor> arr)
 		{
@@ -244,50 +244,50 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return arr;
 		}
 
-		// Token: 0x0401AF4C RID: 110412
+		// Token: 0x040158A9 RID: 88233
 		private const int DEFAULT_TRANSITION_POSTPROCESS_PRIORITY = 9999;
 
-		// Token: 0x0401AF4D RID: 110413
+		// Token: 0x040158AA RID: 88234
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x0401AF4E RID: 110414
+		// Token: 0x040158AB RID: 88235
 		private SeamlessTravelContext Context;
 
-		// Token: 0x0401AF4F RID: 110415
+		// Token: 0x040158AC RID: 88236
 		private AKuroPostProcessVolume PostProcessVolume;
 
-		// Token: 0x0401AF50 RID: 110416
+		// Token: 0x040158AD RID: 88237
 		private string TransitionWeatherDaPath;
 
-		// Token: 0x0401AF51 RID: 110417
+		// Token: 0x040158AE RID: 88238
 		private bool IsInitInternal;
 
-		// Token: 0x0401AF52 RID: 110418
+		// Token: 0x040158AF RID: 88239
 		public SeamlessTravelPostProcess.EPostProcessBlendStatus CurrentBlendStatus;
 
-		// Token: 0x0401AF53 RID: 110419
+		// Token: 0x040158B0 RID: 88240
 		private float BlendInTimeMs;
 
-		// Token: 0x0401AF54 RID: 110420
+		// Token: 0x040158B1 RID: 88241
 		private float BlendOutTimeMs;
 
-		// Token: 0x0401AF55 RID: 110421
+		// Token: 0x040158B2 RID: 88242
 		private Action<bool> BlendInCallback;
 
-		// Token: 0x0401AF56 RID: 110422
+		// Token: 0x040158B3 RID: 88243
 		private Action<bool> BlendOutCallback;
 
-		// Token: 0x0200AE37 RID: 44599
+		// Token: 0x02009855 RID: 38997
 		[NullableContext(0)]
 		public enum EPostProcessBlendStatus
 		{
-			// Token: 0x04034E98 RID: 216728
+			// Token: 0x0402F83D RID: 194621
 			FullHide,
-			// Token: 0x04034E99 RID: 216729
+			// Token: 0x0402F83E RID: 194622
 			FullShow,
-			// Token: 0x04034E9A RID: 216730
+			// Token: 0x0402F83F RID: 194623
 			BlendIn,
-			// Token: 0x04034E9B RID: 216731
+			// Token: 0x0402F840 RID: 194624
 			BlendOut
 		}
 	}

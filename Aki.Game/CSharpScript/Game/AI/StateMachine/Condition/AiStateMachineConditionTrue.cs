@@ -5,24 +5,24 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007349 RID: 29513
+	// Token: 0x020064CC RID: 25804
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionTrue : AiStateMachineCondition
 	{
-		// Token: 0x0604868C RID: 296588 RVA: 0x012A0795 File Offset: 0x0129E995
+		// Token: 0x0603EAD9 RID: 256729 RVA: 0x0124321D File Offset: 0x0124141D
 		public AiStateMachineConditionTrue(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x0604868D RID: 296589 RVA: 0x012A07A0 File Offset: 0x0129E9A0
+		// Token: 0x0603EADA RID: 256730 RVA: 0x01243228 File Offset: 0x01241428
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.ResultSelf = true;
 			return true;
 		}
 
-		// Token: 0x0604868E RID: 296590 RVA: 0x012A07AA File Offset: 0x0129E9AA
+		// Token: 0x0603EADB RID: 256731 RVA: 0x01243232 File Offset: 0x01241432
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);

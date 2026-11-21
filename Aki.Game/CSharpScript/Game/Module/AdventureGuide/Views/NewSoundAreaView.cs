@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
+using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.InstanceDungeon.ExchangeReward;
 using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop.View;
+using CSharpScript.Game.Module.UiNavigation;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -15,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005ED2 RID: 24274
+	// Token: 0x02004EB9 RID: 20153
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NewSoundAreaView : UiTabViewBase
 	{
-		// Token: 0x0603DB4C RID: 252748 RVA: 0x00EE5ED8 File Offset: 0x00EE40D8
+		// Token: 0x06032ADC RID: 207580 RVA: 0x00E37424 File Offset: 0x00E35624
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 33;
@@ -103,19 +104,19 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DB4D RID: 252749 RVA: 0x00EE6397 File Offset: 0x00EE4597
+		// Token: 0x06032ADD RID: 207581 RVA: 0x00E378E3 File Offset: 0x00E35AE3
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RedDotAdventureSecondaryUpdate, new Action<int>(this.OnRedDotAdventureSecondaryUpdate));
 		}
 
-		// Token: 0x0603DB4E RID: 252750 RVA: 0x00EE63B5 File Offset: 0x00EE45B5
+		// Token: 0x06032ADE RID: 207582 RVA: 0x00E37901 File Offset: 0x00E35B01
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RedDotAdventureSecondaryUpdate, new Action<int>(this.OnRedDotAdventureSecondaryUpdate));
 		}
 
-		// Token: 0x0603DB4F RID: 252751 RVA: 0x00EE63D4 File Offset: 0x00EE45D4
+		// Token: 0x06032ADF RID: 207583 RVA: 0x00E37920 File Offset: 0x00E35B20
 		private void OnRedDotAdventureSecondaryUpdate(int secondary)
 		{
 			if (this.TypeList == null)
@@ -136,7 +137,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB50 RID: 252752 RVA: 0x00EE6432 File Offset: 0x00EE4632
+		// Token: 0x06032AE0 RID: 207584 RVA: 0x00E3797E File Offset: 0x00E35B7E
 		private void OnRoleDevTargetRoleIdChange()
 		{
 			if (this.HasRoleDevTab)
@@ -158,7 +159,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB51 RID: 252753 RVA: 0x00EE6470 File Offset: 0x00EE4670
+		// Token: 0x06032AE1 RID: 207585 RVA: 0x00E379BC File Offset: 0x00E35BBC
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer startLevelSequencePlayer = this.StartLevelSequencePlayer;
@@ -191,43 +192,43 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			EventSystem.Instance.Remove(EEventName.RoleDevTargetRoleIdChange, new Action(this.OnRoleDevTargetRoleIdChange));
 		}
 
-		// Token: 0x0603DB52 RID: 252754 RVA: 0x00EE64FF File Offset: 0x00EE46FF
+		// Token: 0x06032AE2 RID: 207586 RVA: 0x00E37A4B File Offset: 0x00E35C4B
 		private OneTextTitleItem CreateLevelTitleItem(UUIItem uiItem)
 		{
 			return new OneTextTitleItem(uiItem);
 		}
 
-		// Token: 0x0603DB53 RID: 252755 RVA: 0x00EE6507 File Offset: 0x00EE4707
+		// Token: 0x06032AE3 RID: 207587 RVA: 0x00E37A53 File Offset: 0x00E35C53
 		private OneTextDropDownItem CreateLevelDropDownItem(UUIItem uiItem, int data)
 		{
 			return new OneTextDropDownItem(uiItem);
 		}
 
-		// Token: 0x0603DB54 RID: 252756 RVA: 0x00EE650F File Offset: 0x00EE470F
+		// Token: 0x06032AE4 RID: 207588 RVA: 0x00E37A5B File Offset: 0x00E35C5B
 		private NewSoundSuitDropDownTitle CreateSuitTitleItem(UUIItem uiItem)
 		{
 			return new NewSoundSuitDropDownTitle(uiItem);
 		}
 
-		// Token: 0x0603DB55 RID: 252757 RVA: 0x00EE6517 File Offset: 0x00EE4717
+		// Token: 0x06032AE5 RID: 207589 RVA: 0x00E37A63 File Offset: 0x00E35C63
 		private NewSoundSuitDropDownItem CreateSuitDropDownItem(UUIItem uiItem, int data)
 		{
 			return new NewSoundSuitDropDownItem(uiItem);
 		}
 
-		// Token: 0x0603DB56 RID: 252758 RVA: 0x00EE651F File Offset: 0x00EE471F
+		// Token: 0x06032AE6 RID: 207590 RVA: 0x00E37A6B File Offset: 0x00E35C6B
 		private WeaponTitleItem CreateWeaponTitleItem(UUIItem uiItem)
 		{
 			return new WeaponTitleItem(uiItem);
 		}
 
-		// Token: 0x0603DB57 RID: 252759 RVA: 0x00EE6527 File Offset: 0x00EE4727
+		// Token: 0x06032AE7 RID: 207591 RVA: 0x00E37A73 File Offset: 0x00E35C73
 		private NewSoundWeaponDropDownItem CreateWeaponDropDownItem(UUIItem uiItem, int data)
 		{
 			return new NewSoundWeaponDropDownItem(uiItem);
 		}
 
-		// Token: 0x0603DB58 RID: 252760 RVA: 0x00EE6530 File Offset: 0x00EE4730
+		// Token: 0x06032AE8 RID: 207592 RVA: 0x00E37A7C File Offset: 0x00E35C7C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			NewSoundAreaView.<OnBeforeStartAsync>d__41 <OnBeforeStartAsync>d__;
@@ -238,18 +239,34 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DB59 RID: 252761 RVA: 0x00EE6574 File Offset: 0x00EE4774
+		// Token: 0x06032AE9 RID: 207593 RVA: 0x00E37AC0 File Offset: 0x00E35CC0
 		protected override void OnStart()
 		{
 			Action<int, UUIExtendToggle> typeToggleFunc = delegate(int currentType, UUIExtendToggle toggle)
 			{
 				if (this.CurrentType == EDungeonType.Tutorial || this.CurrentType == EDungeonType.SkillTeach)
 				{
-					foreach (SoundAreaDetectionRecord soundAreaDetectionRecord in AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true).Item2)
+					using (List<SoundAreaDetectionRecord>.Enumerator enumerator3 = AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true).Item2.GetEnumerator())
 					{
-						AdventureGuideModel.Instance.SetRoleTutorialNew(soundAreaDetectionRecord.Id);
+						while (enumerator3.MoveNext())
+						{
+							SoundAreaDetectionRecord soundAreaDetectionRecord = enumerator3.Current;
+							AdventureGuideModel.Instance.SetRoleTutorialNew(soundAreaDetectionRecord.Id);
+						}
+						goto IL_F4;
 					}
 				}
+				if (this.CurrentType == EDungeonType.LordGym)
+				{
+					foreach (SoundAreaDetectionRecord soundAreaDetectionRecord2 in AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true).Item2)
+					{
+						if (!AdventureGuideModel.Instance.GetIsDetectionPreOpenByData(soundAreaDetectionRecord2) && AdventureGuideModel.Instance.IsDetectionNewContentOpen(soundAreaDetectionRecord2))
+						{
+							AdventureGuideModel.Instance.SetAdventureItemNew(soundAreaDetectionRecord2.Id);
+						}
+					}
+				}
+				IL_F4:
 				this.CurrentType = (EDungeonType)currentType;
 				this.HasUserSelectedType = true;
 				if (currentType == -1)
@@ -325,11 +342,11 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 						if (regressPanel2 == null || !regressPanel2.CanShowV2Activity())
 						{
 							flag = false;
-							goto IL_1B2;
+							goto IL_237;
 						}
 					}
 					flag = (this.CurrentType == EDungeonType.NoSoundArea);
-					IL_1B2:
+					IL_237:
 					bool uiActive = flag;
 					RegressPanel regressPanel3 = this.RegressPanel;
 					if (regressPanel3 != null)
@@ -468,7 +485,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			EventSystem.Instance.Add(EEventName.RoleDevTargetRoleIdChange, new Action(this.OnRoleDevTargetRoleIdChange));
 		}
 
-		// Token: 0x0603DB5A RID: 252762 RVA: 0x00EE686C File Offset: 0x00EE4A6C
+		// Token: 0x06032AEA RID: 207594 RVA: 0x00E37DB8 File Offset: 0x00E35FB8
 		private void InitNavigationParam()
 		{
 			AdventureGuideViewOpenData adventureGuideViewOpenData = this.ExtraParams as AdventureGuideViewOpenData;
@@ -483,60 +500,101 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB5B RID: 252763 RVA: 0x00EE6918 File Offset: 0x00EE4B18
+		// Token: 0x06032AEB RID: 207595 RVA: 0x00E37E64 File Offset: 0x00E36064
 		private void RefreshSoundAreaScroll(List<IMultiTemplateGridData> dataList)
 		{
-			int jumpGridIndex = this.GetJumpGridIndex(dataList);
+			int num = this.FindJumpGridIndex(dataList);
 			MultiTemplateScrollViewRefreshContext multiTemplateScrollViewRefreshContext = new MultiTemplateScrollViewRefreshContext(dataList);
-			multiTemplateScrollViewRefreshContext.ScrollToGridIndex = jumpGridIndex;
+			multiTemplateScrollViewRefreshContext.ScrollToGridIndex = ((num >= 0) ? num : 0);
 			MultiTemplateScrollView soundAreaScroll = this.SoundAreaScroll;
-			if (soundAreaScroll == null)
+			if (soundAreaScroll != null)
 			{
-				return;
+				soundAreaScroll.RefreshByData(multiTemplateScrollViewRefreshContext);
 			}
-			soundAreaScroll.RefreshByData(multiTemplateScrollViewRefreshContext);
+			if (num >= 0 && Info.Instance.IsInGamepad())
+			{
+				this.FocusJumpGridAsync(num).Forget();
+			}
 		}
 
-		// Token: 0x0603DB5C RID: 252764 RVA: 0x00EE694C File Offset: 0x00EE4B4C
-		private int GetJumpGridIndex(List<IMultiTemplateGridData> dataList)
+		// Token: 0x06032AEC RID: 207596 RVA: 0x00E37EBC File Offset: 0x00E360BC
+		private int FindJumpGridIndex(List<IMultiTemplateGridData> dataList)
 		{
 			if (!this.IsNavigationJumpToGrid || this.JumpToGridId == null)
 			{
-				return 0;
+				return -1;
 			}
-			int num = dataList.FindIndex(delegate(IMultiTemplateGridData d)
+			return dataList.FindIndex(delegate(IMultiTemplateGridData d)
 			{
 				NewSoundDetectTabItemData newSoundDetectTabItemData = d.Data as NewSoundDetectTabItemData;
-				int? num2;
+				int? num;
 				if (newSoundDetectTabItemData == null)
 				{
-					num2 = null;
+					num = null;
 				}
 				else
 				{
 					NewSoundDetectItemData dungeon = newSoundDetectTabItemData.Dungeon;
 					if (dungeon == null)
 					{
-						num2 = null;
+						num = null;
 					}
 					else
 					{
 						SoundAreaDetectionRecord detectRecordData = dungeon.DetectRecordData;
-						num2 = ((detectRecordData != null) ? new int?(detectRecordData.Id) : null);
+						num = ((detectRecordData != null) ? new int?(detectRecordData.Id) : null);
 					}
 				}
-				int? num3 = num2;
+				int? num2 = num;
 				int value = this.JumpToGridId.Value;
-				return num3.GetValueOrDefault() == value & num3 != null;
+				return num2.GetValueOrDefault() == value & num2 != null;
 			});
-			if (num < 0)
-			{
-				return 0;
-			}
-			return num;
 		}
 
-		// Token: 0x0603DB5D RID: 252765 RVA: 0x00EE698C File Offset: 0x00EE4B8C
+		// Token: 0x06032AED RID: 207597 RVA: 0x00E37EE8 File Offset: 0x00E360E8
+		private UniTask FocusJumpGridAsync(int gridIndex)
+		{
+			NewSoundAreaView.<FocusJumpGridAsync>d__46 <FocusJumpGridAsync>d__;
+			<FocusJumpGridAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<FocusJumpGridAsync>d__.<>4__this = this;
+			<FocusJumpGridAsync>d__.gridIndex = gridIndex;
+			<FocusJumpGridAsync>d__.<>1__state = -1;
+			<FocusJumpGridAsync>d__.<>t__builder.Start<NewSoundAreaView.<FocusJumpGridAsync>d__46>(ref <FocusJumpGridAsync>d__);
+			return <FocusJumpGridAsync>d__.<>t__builder.Task;
+		}
+
+		// Token: 0x06032AEE RID: 207598 RVA: 0x00E37F34 File Offset: 0x00E36134
+		[NullableContext(2)]
+		private static UUIItem GetNavigationItemInChildren(UUIItem rootItem)
+		{
+			if (rootItem == null || !rootItem.IsValid())
+			{
+				return null;
+			}
+			TArray<UActorComponent> componentsInChildren = ULGUIBPLibrary.GetComponentsInChildren(rootItem.GetOwner(), TsUiNavigationBehaviorListener.StaticClass(), true);
+			if (componentsInChildren == null)
+			{
+				return null;
+			}
+			int i = 0;
+			int num = componentsInChildren.Num();
+			while (i < num)
+			{
+				TsUiNavigationBehaviorListener tsUiNavigationBehaviorListener = componentsInChildren.Get(i) as TsUiNavigationBehaviorListener;
+				if (tsUiNavigationBehaviorListener != null && !StringUtils.IsBlank(tsUiNavigationBehaviorListener.GroupName))
+				{
+					NavigationGroup navigationGroup = tsUiNavigationBehaviorListener.GetNavigationGroup();
+					if (navigationGroup != null && navigationGroup.GroupType != 2)
+					{
+						return tsUiNavigationBehaviorListener.RootUIComp.Get();
+					}
+				}
+				i++;
+			}
+			return null;
+		}
+
+		// Token: 0x06032AEF RID: 207599 RVA: 0x00E37FC4 File Offset: 0x00E361C4
 		private void LevelDropDownCall(int index)
 		{
 			AdventureGuideModel.Instance.CurrentShowLevel = index;
@@ -564,7 +622,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB5E RID: 252766 RVA: 0x00EE6A00 File Offset: 0x00EE4C00
+		// Token: 0x06032AF0 RID: 207600 RVA: 0x00E38038 File Offset: 0x00E36238
 		private void SuitDropDownCall(int index)
 		{
 			AdventureGuideModel.Instance.CurrentSelectSuitIndex = index;
@@ -592,31 +650,31 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB5F RID: 252767 RVA: 0x00EE6A68 File Offset: 0x00EE4C68
+		// Token: 0x06032AF1 RID: 207601 RVA: 0x00E380A0 File Offset: 0x00E362A0
 		private void OnLevelDropDownSelectCall(int index, int data)
 		{
 			this.LevelDropDownCall(data);
 		}
 
-		// Token: 0x0603DB60 RID: 252768 RVA: 0x00EE6A71 File Offset: 0x00EE4C71
+		// Token: 0x06032AF2 RID: 207602 RVA: 0x00E380A9 File Offset: 0x00E362A9
 		private void OnSuitDropDownSelectCall(int index, int data)
 		{
 			this.SuitDropDownCall(data);
 		}
 
-		// Token: 0x0603DB61 RID: 252769 RVA: 0x00EE6A7A File Offset: 0x00EE4C7A
+		// Token: 0x06032AF3 RID: 207603 RVA: 0x00E380B2 File Offset: 0x00E362B2
 		private TableTextArgNew GetLevelDropDownTextId(int data)
 		{
 			return new TableTextArgNew((data == WorldLevelModel.Instance.CurWorldLevel) ? "Text_WorldCurrentLevelTag_Text" : "Text_WorldLevelTag_Text", new <>z__ReadOnlySingleElementList<object>(data));
 		}
 
-		// Token: 0x0603DB62 RID: 252770 RVA: 0x00EE6AA5 File Offset: 0x00EE4CA5
+		// Token: 0x06032AF4 RID: 207604 RVA: 0x00E380DD File Offset: 0x00E362DD
 		private int GetSuitDropDownTextId(int data)
 		{
 			return data;
 		}
 
-		// Token: 0x0603DB63 RID: 252771 RVA: 0x00EE6AA8 File Offset: 0x00EE4CA8
+		// Token: 0x06032AF5 RID: 207605 RVA: 0x00E380E0 File Offset: 0x00E362E0
 		private void WeaponDropDownCall(int weaponId)
 		{
 			this.CurrentSelectWeaponIndex = weaponId;
@@ -644,19 +702,19 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB64 RID: 252772 RVA: 0x00EE6B0C File Offset: 0x00EE4D0C
+		// Token: 0x06032AF6 RID: 207606 RVA: 0x00E38144 File Offset: 0x00E36344
 		private void OnWeaponDropDownSelectCall(int index, int data)
 		{
 			this.WeaponDropDownCall(data);
 		}
 
-		// Token: 0x0603DB65 RID: 252773 RVA: 0x00EE6B15 File Offset: 0x00EE4D15
+		// Token: 0x06032AF7 RID: 207607 RVA: 0x00E3814D File Offset: 0x00E3634D
 		private int GetWeaponDropDownTextId(int data)
 		{
 			return data;
 		}
 
-		// Token: 0x0603DB66 RID: 252774 RVA: 0x00EE6B18 File Offset: 0x00EE4D18
+		// Token: 0x06032AF8 RID: 207608 RVA: 0x00E38150 File Offset: 0x00E36350
 		private void BuildDungeonList()
 		{
 			ValueTuple<bool, List<SoundAreaDetectionRecord>> canShowDungeonRecordsByType = AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true);
@@ -664,43 +722,49 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			List<SoundAreaDetectionRecord> item2 = canShowDungeonRecordsByType.Item2;
 			if (!item)
 			{
-				this.BuildDungeonNormalList(item2.ToList<SoundAreaDetectionRecord>());
+				this.BuildDungeonNormalList(new List<SoundAreaDetectionRecord>(item2));
 			}
 			else
 			{
-				this.BuildDungeonTabList(item2.ToList<SoundAreaDetectionRecord>());
+				this.BuildDungeonTabList(new List<SoundAreaDetectionRecord>(item2));
 			}
 			this.CurrentData = null;
 		}
 
-		// Token: 0x0603DB67 RID: 252775 RVA: 0x00EE6B70 File Offset: 0x00EE4D70
+		// Token: 0x06032AF9 RID: 207609 RVA: 0x00E381A8 File Offset: 0x00E363A8
 		private void BuildDungeonNormalList(List<SoundAreaDetectionRecord> records)
 		{
-			NewSoundAreaView.<>c__DisplayClass56_0 CS$<>8__locals1 = new NewSoundAreaView.<>c__DisplayClass56_0();
 			int count = records.Count;
 			base.GetItem(26).SetUIActive(true);
 			if (count != 0)
 			{
-				NewSoundAreaView.<>c__DisplayClass56_0 CS$<>8__locals2 = CS$<>8__locals1;
 				AdventureGuideViewOpenData currentData = this.CurrentData;
-				CS$<>8__locals2.currentTracingId = ((currentData != null) ? currentData.NewSoundDetectTracingIdList : null);
-				List<SoundAreaDetectionRecord> list = records.OrderByDescending(delegate(SoundAreaDetectionRecord r)
+				int[] array = (currentData != null) ? currentData.NewSoundDetectTracingIdList : null;
+				List<SoundAreaDetectionRecord> list = new List<SoundAreaDetectionRecord>(records.Count);
+				for (int i = 0; i < records.Count; i++)
 				{
-					int[] currentTracingId2 = CS$<>8__locals1.currentTracingId;
-					return currentTracingId2 != null && currentTracingId2.Contains(r.Id);
-				}).ToList<SoundAreaDetectionRecord>();
+					if (array != null && Array.IndexOf<int>(array, records[i].Id) >= 0)
+					{
+						list.Add(records[i]);
+					}
+				}
+				for (int j = 0; j < records.Count; j++)
+				{
+					if (array == null || Array.IndexOf<int>(array, records[j].Id) < 0)
+					{
+						list.Add(records[j]);
+					}
+				}
 				List<IMultiTemplateGridData> list2 = new List<IMultiTemplateGridData>();
 				int cycleId = WeeklyRogueModel.Instance.CycleId;
-				for (int i = 0; i < count; i++)
+				for (int k = 0; k < count; k++)
 				{
-					SoundAreaDetectionRecord soundAreaDetectionRecord = list[i];
+					SoundAreaDetectionRecord soundAreaDetectionRecord = list[k];
 					if (soundAreaDetectionRecord == null || soundAreaDetectionRecord.Secondary != 29 || cycleId != 0)
 					{
 						NewSoundDetectItemData newSoundDetectItemData = new NewSoundDetectItemData();
-						newSoundDetectItemData.DetectRecordData = list[i];
-						NewSoundDetectItemData newSoundDetectItemData2 = newSoundDetectItemData;
-						int[] currentTracingId = CS$<>8__locals1.currentTracingId;
-						newSoundDetectItemData2.TracingList = ((currentTracingId != null) ? currentTracingId.ToList<int>() : null);
+						newSoundDetectItemData.DetectRecordData = list[k];
+						newSoundDetectItemData.TracingList = ((array == null) ? null : new List<int>(array));
 						newSoundDetectItemData.JumpToGridId = (this.IsNavigationJumpToGrid ? this.JumpToGridId : new int?(0));
 						newSoundDetectItemData.JumpToGridSquenceStartTimeSecond = new double?(0.0);
 						list2.Add(new NewSoundDetectTabItemDungeonData(new NewSoundDetectTabItemData
@@ -722,23 +786,31 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			soundAreaScroll.RefreshByData(context);
 		}
 
-		// Token: 0x0603DB68 RID: 252776 RVA: 0x00EE6CBC File Offset: 0x00EE4EBC
+		// Token: 0x06032AFA RID: 207610 RVA: 0x00E38350 File Offset: 0x00E36550
 		private void BuildDungeonTabList(List<SoundAreaDetectionRecord> records)
 		{
-			NewSoundAreaView.<>c__DisplayClass57_0 CS$<>8__locals1 = new NewSoundAreaView.<>c__DisplayClass57_0();
 			base.GetItem(26).SetUIActive(true);
 			Dictionary<int, IMultiTemplateGridData> dictionary = new Dictionary<int, IMultiTemplateGridData>();
 			List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>();
-			NewSoundAreaView.<>c__DisplayClass57_0 CS$<>8__locals2 = CS$<>8__locals1;
 			AdventureGuideViewOpenData currentData = this.CurrentData;
-			CS$<>8__locals2.currentTracingId = ((currentData != null) ? currentData.NewSoundDetectTracingIdList : null);
+			int[] array = (currentData != null) ? currentData.NewSoundDetectTracingIdList : null;
 			int handleShowNightMareParam = AdventureGuideModel.Instance.HandleShowNightMareParam;
 			AdventureGuideModel.Instance.HandleShowNightMareParam = 0;
-			List<SoundAreaDetectionRecord> list2 = records.OrderByDescending(delegate(SoundAreaDetectionRecord r)
+			List<SoundAreaDetectionRecord> list2 = new List<SoundAreaDetectionRecord>(records.Count);
+			for (int i = 0; i < records.Count; i++)
 			{
-				int[] currentTracingId3 = CS$<>8__locals1.currentTracingId;
-				return currentTracingId3 != null && currentTracingId3.Contains(r.Id);
-			}).ToList<SoundAreaDetectionRecord>();
+				if (array != null && Array.IndexOf<int>(array, records[i].Id) >= 0)
+				{
+					list2.Add(records[i]);
+				}
+			}
+			for (int j = 0; j < records.Count; j++)
+			{
+				if (array == null || Array.IndexOf<int>(array, records[j].Id) < 0)
+				{
+					list2.Add(records[j]);
+				}
+			}
 			List<SoundAreaDetectionRecord> list3 = new List<SoundAreaDetectionRecord>();
 			List<SoundAreaDetectionRecord> list4 = new List<SoundAreaDetectionRecord>();
 			foreach (SoundAreaDetectionRecord soundAreaDetectionRecord in list2)
@@ -769,9 +841,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 				{
 					NewSoundDetectItemData newSoundDetectItemData = new NewSoundDetectItemData();
 					newSoundDetectItemData.DetectRecordData = soundAreaDetectionRecord2;
-					NewSoundDetectItemData newSoundDetectItemData2 = newSoundDetectItemData;
-					int[] currentTracingId = CS$<>8__locals1.currentTracingId;
-					newSoundDetectItemData2.TracingList = ((currentTracingId != null) ? currentTracingId.ToList<int>() : null);
+					newSoundDetectItemData.TracingList = ((array == null) ? null : new List<int>(array));
 					newSoundDetectItemData.NightMareParam = new int?(handleShowNightMareParam);
 					newSoundDetectItemData.JumpToGridId = (this.IsNavigationJumpToGrid ? this.JumpToGridId : new int?(0));
 					newSoundDetectItemData.JumpToGridSquenceStartTimeSecond = new double?(0.0);
@@ -819,18 +889,16 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 						list.Add(newSoundDetectTabItemTitleData);
 					}
 					int sort = ((NewSoundDetectTabItemData)dictionary[num2].Data).Sort;
-					NewSoundDetectItemData newSoundDetectItemData3 = new NewSoundDetectItemData();
-					newSoundDetectItemData3.DetectRecordData = soundAreaDetectionRecord3;
-					NewSoundDetectItemData newSoundDetectItemData4 = newSoundDetectItemData3;
-					int[] currentTracingId2 = CS$<>8__locals1.currentTracingId;
-					newSoundDetectItemData4.TracingList = ((currentTracingId2 != null) ? currentTracingId2.ToList<int>() : null);
-					newSoundDetectItemData3.NightMareParam = new int?(handleShowNightMareParam);
-					newSoundDetectItemData3.JumpToGridId = (this.IsNavigationJumpToGrid ? this.JumpToGridId : new int?(0));
-					newSoundDetectItemData3.JumpToGridSquenceStartTimeSecond = new double?(0.0);
+					NewSoundDetectItemData newSoundDetectItemData2 = new NewSoundDetectItemData();
+					newSoundDetectItemData2.DetectRecordData = soundAreaDetectionRecord3;
+					newSoundDetectItemData2.TracingList = ((array == null) ? null : new List<int>(array));
+					newSoundDetectItemData2.NightMareParam = new int?(handleShowNightMareParam);
+					newSoundDetectItemData2.JumpToGridId = (this.IsNavigationJumpToGrid ? this.JumpToGridId : new int?(0));
+					newSoundDetectItemData2.JumpToGridSquenceStartTimeSecond = new double?(0.0);
 					NewSoundDetectTabItemDungeonData newSoundDetectTabItemDungeonData = new NewSoundDetectTabItemDungeonData(new NewSoundDetectTabItemData
 					{
 						Area = num2,
-						Dungeon = newSoundDetectItemData3,
+						Dungeon = newSoundDetectItemData2,
 						Sort = sort,
 						IsVisible = true
 					});
@@ -838,13 +906,23 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 					list.Add(newSoundDetectTabItemDungeonData);
 				}
 			}
-			this.ScrollDataList = (from d in list
-			orderby ((NewSoundDetectTabItemData)d.Data).Sort descending
-			select d).ToList<IMultiTemplateGridData>();
+			List<IMultiTemplateGridData> list5 = new List<IMultiTemplateGridData>(list.Count);
+			for (int k = 0; k < list.Count; k++)
+			{
+				IMultiTemplateGridData multiTemplateGridData = list[k];
+				int sort2 = ((NewSoundDetectTabItemData)multiTemplateGridData.Data).Sort;
+				int num3 = list5.Count;
+				while (num3 > 0 && ((NewSoundDetectTabItemData)list5[num3 - 1].Data).Sort < sort2)
+				{
+					num3--;
+				}
+				list5.Insert(num3, multiTemplateGridData);
+			}
+			this.ScrollDataList = list5;
 			this.RefreshSoundAreaScroll(this.ScrollDataList);
 		}
 
-		// Token: 0x0603DB69 RID: 252777 RVA: 0x00EE717C File Offset: 0x00EE537C
+		// Token: 0x06032AFB RID: 207611 RVA: 0x00E388C0 File Offset: 0x00E36AC0
 		private void OnClickNewSoundDetectTabItemTitleItemCallBack(int area, bool isVisible)
 		{
 			List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>();
@@ -880,11 +958,12 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			soundAreaScroll.RefreshByData(context);
 		}
 
-		// Token: 0x0603DB6A RID: 252778 RVA: 0x00EE7250 File Offset: 0x00EE5450
+		// Token: 0x06032AFC RID: 207612 RVA: 0x00E38994 File Offset: 0x00E36B94
 		protected override void OnBeforeShow()
 		{
 			if (!this.HaveRefreshTypeScroll || this.HasNavigationParam())
 			{
+				this.InitNavigationParam();
 				this.RefreshType();
 				this.HaveRefreshTypeScroll = true;
 			}
@@ -896,14 +975,14 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			EventSystem.Instance.Emit<int>(EEventName.AdventureHelpBtn, this.HelpId);
 		}
 
-		// Token: 0x0603DB6B RID: 252779 RVA: 0x00EE72B4 File Offset: 0x00EE54B4
+		// Token: 0x06032AFD RID: 207613 RVA: 0x00E389FC File Offset: 0x00E36BFC
 		private bool HasNavigationParam()
 		{
 			AdventureGuideViewOpenData adventureGuideViewOpenData = this.ExtraParams as AdventureGuideViewOpenData;
 			return (((adventureGuideViewOpenData != null) ? adventureGuideViewOpenData.OpenTabViewName : null) == EUiTabViewName.NewSoundAreaView || ((adventureGuideViewOpenData != null) ? adventureGuideViewOpenData.OpenTabViewName : null) == EUiTabViewName.DisposableChallengeView) && ((adventureGuideViewOpenData != null) ? adventureGuideViewOpenData.OpenParam : null).GetValueOrDefault() > 0;
 		}
 
-		// Token: 0x0603DB6C RID: 252780 RVA: 0x00EE7360 File Offset: 0x00EE5560
+		// Token: 0x06032AFE RID: 207614 RVA: 0x00E38AA8 File Offset: 0x00E36CA8
 		private void RefreshType()
 		{
 			this.CurrentData = (this.ExtraParams as AdventureGuideViewOpenData);
@@ -973,7 +1052,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB6D RID: 252781 RVA: 0x00EE758C File Offset: 0x00EE578C
+		// Token: 0x06032AFF RID: 207615 RVA: 0x00E38CD4 File Offset: 0x00E36ED4
 		private void RefreshTypeScroll(List<INewSoundTypeItemData> dataList, int dungeonIndex, bool isSelectingRoleDev)
 		{
 			List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>();
@@ -1003,20 +1082,20 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.SelectToggleAfterRefreshAsync(selectIndex, isSelectingRoleDev).Forget();
 		}
 
-		// Token: 0x0603DB6E RID: 252782 RVA: 0x00EE7688 File Offset: 0x00EE5888
+		// Token: 0x06032B00 RID: 207616 RVA: 0x00E38DD0 File Offset: 0x00E36FD0
 		private UniTask SelectToggleAfterRefreshAsync(int selectIndex, bool isSelectingRoleDev)
 		{
-			NewSoundAreaView.<SelectToggleAfterRefreshAsync>d__64 <SelectToggleAfterRefreshAsync>d__;
+			NewSoundAreaView.<SelectToggleAfterRefreshAsync>d__66 <SelectToggleAfterRefreshAsync>d__;
 			<SelectToggleAfterRefreshAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SelectToggleAfterRefreshAsync>d__.<>4__this = this;
 			<SelectToggleAfterRefreshAsync>d__.selectIndex = selectIndex;
 			<SelectToggleAfterRefreshAsync>d__.isSelectingRoleDev = isSelectingRoleDev;
 			<SelectToggleAfterRefreshAsync>d__.<>1__state = -1;
-			<SelectToggleAfterRefreshAsync>d__.<>t__builder.Start<NewSoundAreaView.<SelectToggleAfterRefreshAsync>d__64>(ref <SelectToggleAfterRefreshAsync>d__);
+			<SelectToggleAfterRefreshAsync>d__.<>t__builder.Start<NewSoundAreaView.<SelectToggleAfterRefreshAsync>d__66>(ref <SelectToggleAfterRefreshAsync>d__);
 			return <SelectToggleAfterRefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DB6F RID: 252783 RVA: 0x00EE76DC File Offset: 0x00EE58DC
+		// Token: 0x06032B01 RID: 207617 RVA: 0x00E38E24 File Offset: 0x00E37024
 		protected void RefreshDungeonType()
 		{
 			base.GetItem(3).SetUIActive(false);
@@ -1088,7 +1167,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB70 RID: 252784 RVA: 0x00EE77F8 File Offset: 0x00EE59F8
+		// Token: 0x06032B02 RID: 207618 RVA: 0x00E38F40 File Offset: 0x00E37140
 		private void ShowWeeklyRoguePart()
 		{
 			base.GetItem(9).SetUIActive(true);
@@ -1098,7 +1177,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(21), rogueWeeklyCycle.Value.CycleName, Array.Empty<object>());
 		}
 
-		// Token: 0x0603DB71 RID: 252785 RVA: 0x00EE7868 File Offset: 0x00EE5A68
+		// Token: 0x06032B03 RID: 207619 RVA: 0x00E38FB0 File Offset: 0x00E371B0
 		private void ShowRoguePart()
 		{
 			base.GetItem(3).SetUIActive(true);
@@ -1111,7 +1190,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}));
 		}
 
-		// Token: 0x0603DB72 RID: 252786 RVA: 0x00EE78F4 File Offset: 0x00EE5AF4
+		// Token: 0x06032B04 RID: 207620 RVA: 0x00E3903C File Offset: 0x00E3723C
 		private void ShowTowerPart()
 		{
 			base.GetItem(9).SetUIActive(true);
@@ -1126,7 +1205,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.SetTowerBg("T_DevelopmentFrame7");
 		}
 
-		// Token: 0x0603DB73 RID: 252787 RVA: 0x00EE7954 File Offset: 0x00EE5B54
+		// Token: 0x06032B05 RID: 207621 RVA: 0x00E3909C File Offset: 0x00E3729C
 		private void ShowShipTowerPart()
 		{
 			base.GetItem(9).SetUIActive(true);
@@ -1140,7 +1219,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.SetTowerBg("T_DevelopmentTitle6");
 		}
 
-		// Token: 0x0603DB74 RID: 252788 RVA: 0x00EE79A8 File Offset: 0x00EE5BA8
+		// Token: 0x06032B06 RID: 207622 RVA: 0x00E390F0 File Offset: 0x00E372F0
 		public void SetTowerBg(string res)
 		{
 			UUITexture texture = base.GetTexture(22);
@@ -1148,28 +1227,28 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			base.SetTextureShowUntilLoaded(resourcePath, texture, null);
 		}
 
-		// Token: 0x0603DB75 RID: 252789 RVA: 0x00EE79D3 File Offset: 0x00EE5BD3
+		// Token: 0x06032B07 RID: 207623 RVA: 0x00E3911B File Offset: 0x00E3731B
 		private void ShowLordGymPart()
 		{
 			base.GetItem(9).SetUIActive(true);
 			base.GetItem(12).SetUIActive(true);
 		}
 
-		// Token: 0x0603DB76 RID: 252790 RVA: 0x00EE79F1 File Offset: 0x00EE5BF1
+		// Token: 0x06032B08 RID: 207624 RVA: 0x00E39139 File Offset: 0x00E37339
 		private void ShowTeachSkillPart()
 		{
 			base.GetItem(9).SetUIActive(true);
 			base.GetItem(18).SetUIActive(true);
 		}
 
-		// Token: 0x0603DB77 RID: 252791 RVA: 0x00EE7A0F File Offset: 0x00EE5C0F
+		// Token: 0x06032B09 RID: 207625 RVA: 0x00E39157 File Offset: 0x00E37357
 		private void ShowTeachPart()
 		{
 			base.GetItem(9).SetUIActive(true);
 			base.GetItem(14).SetUIActive(true);
 		}
 
-		// Token: 0x0603DB78 RID: 252792 RVA: 0x00EE7A30 File Offset: 0x00EE5C30
+		// Token: 0x06032B0A RID: 207626 RVA: 0x00E39178 File Offset: 0x00E37378
 		private void ShowTimeAndCountPart()
 		{
 			UUIItem item = base.GetItem(6);
@@ -1266,7 +1345,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB79 RID: 252793 RVA: 0x00EE7D52 File Offset: 0x00EE5F52
+		// Token: 0x06032B0B RID: 207627 RVA: 0x00E3949A File Offset: 0x00E3769A
 		protected override void OnBeforeHide()
 		{
 			if (UiManager.Instance.IsViewShow(EUiViewName.PowerView))
@@ -1276,13 +1355,13 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			base.SetExtraParams(null);
 		}
 
-		// Token: 0x0603DB7A RID: 252794 RVA: 0x00EE7D7C File Offset: 0x00EE5F7C
+		// Token: 0x06032B0C RID: 207628 RVA: 0x00E394C4 File Offset: 0x00E376C4
 		private void OnClickLordGymBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.LordGymChallengeRecordView, null, null);
 		}
 
-		// Token: 0x0603DB7B RID: 252795 RVA: 0x00EE7D90 File Offset: 0x00EE5F90
+		// Token: 0x06032B0D RID: 207629 RVA: 0x00E394D8 File Offset: 0x00E376D8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1346,7 +1425,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			};
 		}
 
-		// Token: 0x0603DB7C RID: 252796 RVA: 0x00EE7E80 File Offset: 0x00EE6080
+		// Token: 0x06032B0E RID: 207630 RVA: 0x00E395C8 File Offset: 0x00E377C8
 		private void RefreshCommonDropDown()
 		{
 			if (this.CurrentDropDownType == EDetectionDropDownType.None)
@@ -1380,7 +1459,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(28), ((AdventureGuideConfig.Instance.GetDropDownConfig((int)this.CurrentDropDownType) != null) ? detectionDropDownType.GetValueOrDefault().Text : null) ?? "", Array.Empty<object>());
 		}
 
-		// Token: 0x0603DB7D RID: 252797 RVA: 0x00EE7F68 File Offset: 0x00EE6168
+		// Token: 0x06032B0F RID: 207631 RVA: 0x00E396B0 File Offset: 0x00E378B0
 		private void RefreshSuitDropDownItems()
 		{
 			List<SoundAreaDetectionRecord> item = AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true).Item2;
@@ -1412,7 +1491,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.SuitDropDown.InitScroll(list, new Func<int, int>(this.GetSuitDropDownTextId), (num2 >= 0) ? num2 : 0, false);
 		}
 
-		// Token: 0x0603DB7E RID: 252798 RVA: 0x00EE80B4 File Offset: 0x00EE62B4
+		// Token: 0x06032B10 RID: 207632 RVA: 0x00E397FC File Offset: 0x00E379FC
 		private void BuildListBySuitData()
 		{
 			ValueTuple<bool, List<SoundAreaDetectionRecord>> canShowDungeonRecordsByType = AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true);
@@ -1426,16 +1505,16 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 					while (enumerator.MoveNext())
 					{
 						SoundAreaDetectionRecord soundAreaDetectionRecord = enumerator.Current;
-						if (soundAreaDetectionRecord.PhantomFetterGroup.Contains(AdventureGuideModel.Instance.CurrentSelectSuitIndex))
+						if (Array.IndexOf<int>(soundAreaDetectionRecord.PhantomFetterGroup, AdventureGuideModel.Instance.CurrentSelectSuitIndex) >= 0)
 						{
 							list.Add(soundAreaDetectionRecord);
 						}
 					}
-					goto IL_8C;
+					goto IL_8D;
 				}
 			}
-			list = item2.ToList<SoundAreaDetectionRecord>();
-			IL_8C:
+			list = new List<SoundAreaDetectionRecord>(item2);
+			IL_8D:
 			if (!item)
 			{
 				this.BuildDungeonNormalList(list);
@@ -1447,7 +1526,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.CurrentData = null;
 		}
 
-		// Token: 0x0603DB7F RID: 252799 RVA: 0x00EE8178 File Offset: 0x00EE6378
+		// Token: 0x06032B11 RID: 207633 RVA: 0x00E398C0 File Offset: 0x00E37AC0
 		private void BuildListByWeaponData()
 		{
 			ValueTuple<bool, List<SoundAreaDetectionRecord>> canShowDungeonRecordsByType = AdventureGuideModel.Instance.GetCanShowDungeonRecordsByType(this.CurrentType, null, true);
@@ -1461,16 +1540,16 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 					while (enumerator.MoveNext())
 					{
 						SoundAreaDetectionRecord soundAreaDetectionRecord = enumerator.Current;
-						if (soundAreaDetectionRecord.WeaponFetterGroup.Contains(this.CurrentSelectWeaponIndex))
+						if (Array.IndexOf<int>(soundAreaDetectionRecord.WeaponFetterGroup, this.CurrentSelectWeaponIndex) >= 0)
 						{
 							list.Add(soundAreaDetectionRecord);
 						}
 					}
-					goto IL_84;
+					goto IL_85;
 				}
 			}
-			list = item2.ToList<SoundAreaDetectionRecord>();
-			IL_84:
+			list = new List<SoundAreaDetectionRecord>(item2);
+			IL_85:
 			if (!item)
 			{
 				this.BuildDungeonNormalList(list);
@@ -1482,41 +1561,41 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.CurrentData = null;
 		}
 
-		// Token: 0x04020388 RID: 131976
+		// Token: 0x0401AE57 RID: 110167
 		private const int ROLE_DEVELOP_TYPE = -1;
 
-		// Token: 0x04020389 RID: 131977
+		// Token: 0x0401AE58 RID: 110168
 		private const int PRE_OPEN_TAB_AREA = -1;
 
-		// Token: 0x0402038A RID: 131978
+		// Token: 0x0401AE59 RID: 110169
 		private const int PRE_OPEN_TAB_SORT = 9999;
 
-		// Token: 0x0402038B RID: 131979
+		// Token: 0x0401AE5A RID: 110170
 		[Nullable(2)]
 		private AdventureGuideViewOpenData CurrentData;
 
-		// Token: 0x0402038C RID: 131980
+		// Token: 0x0401AE5B RID: 110171
 		[Nullable(2)]
 		private MultiTemplateScrollView TypeScroll;
 
-		// Token: 0x0402038D RID: 131981
+		// Token: 0x0401AE5C RID: 110172
 		[Nullable(2)]
 		private MultiTemplateScrollView SoundAreaScroll;
 
-		// Token: 0x0402038E RID: 131982
+		// Token: 0x0401AE5D RID: 110173
 		private List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0402038F RID: 131983
+		// Token: 0x0401AE5E RID: 110174
 		private IReadOnlyList<int> TypeList = Array.Empty<int>();
 
-		// Token: 0x04020390 RID: 131984
+		// Token: 0x0401AE5F RID: 110175
 		private EDungeonType CurrentType = EDungeonType.Mat;
 
-		// Token: 0x04020391 RID: 131985
+		// Token: 0x0401AE60 RID: 110176
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectedToggle;
 
-		// Token: 0x04020392 RID: 131986
+		// Token: 0x0401AE61 RID: 110177
 		[Nullable(new byte[]
 		{
 			2,
@@ -1524,53 +1603,53 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private CommonDropDown<TableTextArgNew, int> LevelDropDown;
 
-		// Token: 0x04020393 RID: 131987
+		// Token: 0x0401AE62 RID: 110178
 		[Nullable(2)]
 		private CommonDropDown<int, int> SuitDropDown;
 
-		// Token: 0x04020394 RID: 131988
+		// Token: 0x0401AE63 RID: 110179
 		[Nullable(2)]
 		private CommonDropDown<int, int> WeaponDropDown;
 
-		// Token: 0x04020395 RID: 131989
+		// Token: 0x0401AE64 RID: 110180
 		private EDetectionDropDownType CurrentDropDownType;
 
-		// Token: 0x04020396 RID: 131990
+		// Token: 0x0401AE65 RID: 110181
 		private int CurrentSelectWeaponIndex;
 
-		// Token: 0x04020397 RID: 131991
+		// Token: 0x0401AE66 RID: 110182
 		private readonly List<int> WeaponFilterArray = new List<int>();
 
-		// Token: 0x04020398 RID: 131992
+		// Token: 0x0401AE67 RID: 110183
 		[Nullable(2)]
 		private LevelSequencePlayer StartLevelSequencePlayer;
 
-		// Token: 0x04020399 RID: 131993
+		// Token: 0x0401AE68 RID: 110184
 		[Nullable(2)]
 		private LevelSequencePlayer SwitchLevelSequencePlayer;
 
-		// Token: 0x0402039A RID: 131994
+		// Token: 0x0401AE69 RID: 110185
 		private int DefaultDropDownSelectIndex;
 
-		// Token: 0x0402039B RID: 131995
+		// Token: 0x0401AE6A RID: 110186
 		private int HelpId;
 
-		// Token: 0x0402039C RID: 131996
+		// Token: 0x0401AE6B RID: 110187
 		private readonly List<int> FetterSuitFilterArray = new List<int>();
 
-		// Token: 0x0402039D RID: 131997
+		// Token: 0x0401AE6C RID: 110188
 		private bool IsNavigationJumpToGrid;
 
-		// Token: 0x0402039E RID: 131998
+		// Token: 0x0401AE6D RID: 110189
 		private int? JumpToGridId;
 
-		// Token: 0x0402039F RID: 131999
+		// Token: 0x0401AE6E RID: 110190
 		private bool HasRoleDevTab;
 
-		// Token: 0x040203A0 RID: 132000
+		// Token: 0x0401AE6F RID: 110191
 		private bool HasUserSelectedType;
 
-		// Token: 0x040203A1 RID: 132001
+		// Token: 0x0401AE70 RID: 110192
 		[Nullable(new byte[]
 		{
 			2,
@@ -1578,19 +1657,19 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private Action<int, UUIExtendToggle> TypeToggleFunc;
 
-		// Token: 0x040203A2 RID: 132002
+		// Token: 0x0401AE71 RID: 110193
 		[Nullable(2)]
 		private Func<int, bool> TypeCanToggleChange;
 
-		// Token: 0x040203A3 RID: 132003
+		// Token: 0x0401AE72 RID: 110194
 		[Nullable(2)]
 		private RegressPanel RegressPanel;
 
-		// Token: 0x040203A4 RID: 132004
+		// Token: 0x0401AE73 RID: 110195
 		[Nullable(2)]
 		private RoleDevelopOverviewPanel RoleDevelopPanel;
 
-		// Token: 0x040203A5 RID: 132005
+		// Token: 0x0401AE74 RID: 110196
 		private bool HaveRefreshTypeScroll;
 	}
 }

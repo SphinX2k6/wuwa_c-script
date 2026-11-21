@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001978 RID: 6520
+// Token: 0x02000E35 RID: 3637
 public class SmallItemGridEmptySlotComponent : SmallItemGridVisibleComponent
 {
-	// Token: 0x0600BEDE RID: 48862 RVA: 0x002B2E24 File Offset: 0x002B1024
+	// Token: 0x060092E6 RID: 37606 RVA: 0x002BDDA8 File Offset: 0x002BBFA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,39 +26,39 @@ public class SmallItemGridEmptySlotComponent : SmallItemGridVisibleComponent
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BEDF RID: 48863 RVA: 0x002B2EA9 File Offset: 0x002B10A9
+	// Token: 0x060092E7 RID: 37607 RVA: 0x002BDE2D File Offset: 0x002BC02D
 	[NullableContext(2)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBStateAdd";
 	}
 
-	// Token: 0x0600BEE0 RID: 48864 RVA: 0x002B2EB0 File Offset: 0x002B10B0
+	// Token: 0x060092E8 RID: 37608 RVA: 0x002BDE34 File Offset: 0x002BC034
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x0600BEE1 RID: 48865 RVA: 0x002B2EB3 File Offset: 0x002B10B3
+	// Token: 0x060092E9 RID: 37609 RVA: 0x002BDE37 File Offset: 0x002BC037
 	protected override void OnDeactivate()
 	{
 		this.OnClickedCallback = null;
 	}
 
-	// Token: 0x0600BEE2 RID: 48866 RVA: 0x002B2EBC File Offset: 0x002B10BC
+	// Token: 0x060092EA RID: 37610 RVA: 0x002BDE40 File Offset: 0x002BC040
 	[NullableContext(1)]
 	public void BindEmptySlotButtonCallback(Action onClickedEmptySlotButton)
 	{
 		this.OnClickedCallback = onClickedEmptySlotButton;
 	}
 
-	// Token: 0x0600BEE3 RID: 48867 RVA: 0x002B2EC5 File Offset: 0x002B10C5
+	// Token: 0x060092EB RID: 37611 RVA: 0x002BDE49 File Offset: 0x002BC049
 	public void UnBindEmptySlotButtonCallback()
 	{
 		this.OnClickedCallback = null;
 	}
 
-	// Token: 0x0600BEE4 RID: 48868 RVA: 0x002B2ECE File Offset: 0x002B10CE
+	// Token: 0x060092EC RID: 37612 RVA: 0x002BDE52 File Offset: 0x002BC052
 	private void OnClickedEmptySlotButton()
 	{
 		if (this.OnClickedCallback != null)
@@ -67,14 +67,14 @@ public class SmallItemGridEmptySlotComponent : SmallItemGridVisibleComponent
 		}
 	}
 
-	// Token: 0x040055C8 RID: 21960
+	// Token: 0x04005675 RID: 22133
 	[Nullable(2)]
 	private Action OnClickedCallback;
 
-	// Token: 0x02007EC4 RID: 32452
+	// Token: 0x02007053 RID: 28755
 	private enum EChildType
 	{
-		// Token: 0x04029701 RID: 169729
+		// Token: 0x04024A3E RID: 150078
 		AddButton
 	}
 }

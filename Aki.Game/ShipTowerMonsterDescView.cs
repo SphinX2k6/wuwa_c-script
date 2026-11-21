@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029B7 RID: 10679
+// Token: 0x02001F32 RID: 7986
 [NullableContext(2)]
 [Nullable(0)]
 public class ShipTowerMonsterDescView : UiViewBase
 {
-	// Token: 0x06016247 RID: 90695 RVA: 0x005999B3 File Offset: 0x00597BB3
+	// Token: 0x06013C4D RID: 80973 RVA: 0x005C493F File Offset: 0x005C2B3F
 	[NullableContext(1)]
 	public ShipTowerMonsterDescView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016248 RID: 90696 RVA: 0x005999BC File Offset: 0x00597BBC
+	// Token: 0x06013C4E RID: 80974 RVA: 0x005C4948 File Offset: 0x005C2B48
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,12 +29,12 @@ public class ShipTowerMonsterDescView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016249 RID: 90697 RVA: 0x00599A2C File Offset: 0x00597C2C
+	// Token: 0x06013C4F RID: 80975 RVA: 0x005C49B8 File Offset: 0x005C2BB8
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x0601624A RID: 90698 RVA: 0x00599A30 File Offset: 0x00597C30
+	// Token: 0x06013C50 RID: 80976 RVA: 0x005C49BC File Offset: 0x005C2BBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerMonsterDescView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class ShipTowerMonsterDescView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601624B RID: 90699 RVA: 0x00599A74 File Offset: 0x00597C74
+	// Token: 0x06013C51 RID: 80977 RVA: 0x005C4A00 File Offset: 0x005C2C00
 	private void TeamTabFinish()
 	{
 		if (this.TabComponent == null)
@@ -90,20 +90,20 @@ public class ShipTowerMonsterDescView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(index, true, true);
 	}
 
-	// Token: 0x0601624C RID: 90700 RVA: 0x00599B9C File Offset: 0x00597D9C
+	// Token: 0x06013C52 RID: 80978 RVA: 0x005C4B28 File Offset: 0x005C2D28
 	protected override void OnBeforeShow()
 	{
 		this.TeamTabFinish();
 	}
 
-	// Token: 0x0601624D RID: 90701 RVA: 0x00599BA4 File Offset: 0x00597DA4
+	// Token: 0x06013C53 RID: 80979 RVA: 0x005C4B30 File Offset: 0x005C2D30
 	[NullableContext(1)]
 	private ShipTowerTeamTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new ShipTowerTeamTabItem();
 	}
 
-	// Token: 0x0601624E RID: 90702 RVA: 0x00599BAC File Offset: 0x00597DAC
+	// Token: 0x06013C54 RID: 80980 RVA: 0x005C4B38 File Offset: 0x005C2D38
 	private void ToggleTwoTabCallBack(int index)
 	{
 		this.CurSelectTabIndex = index;
@@ -130,7 +130,7 @@ public class ShipTowerMonsterDescView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601624F RID: 90703 RVA: 0x00599C18 File Offset: 0x00597E18
+	// Token: 0x06013C55 RID: 80981 RVA: 0x005C4BA4 File Offset: 0x005C2DA4
 	[NullableContext(1)]
 	private void UpdateTeamInfo(ShipTowerTeamData data)
 	{
@@ -161,7 +161,7 @@ public class ShipTowerMonsterDescView : UiViewBase
 		monsterListPanel.UpdateData(data.GetMonsterListItemData());
 	}
 
-	// Token: 0x0400A4F4 RID: 42228
+	// Token: 0x0400A8DE RID: 43230
 	[Nullable(new byte[]
 	{
 		2,
@@ -169,38 +169,38 @@ public class ShipTowerMonsterDescView : UiViewBase
 	})]
 	private TabComponent<ShipTowerTeamTabItem> TabComponent;
 
-	// Token: 0x0400A4F5 RID: 42229
+	// Token: 0x0400A8DF RID: 43231
 	private int CurSelectTabIndex;
 
-	// Token: 0x0400A4F6 RID: 42230
+	// Token: 0x0400A8E0 RID: 43232
 	private ShipTowerMonsterWordItem InfoAttrPanel;
 
-	// Token: 0x0400A4F7 RID: 42231
+	// Token: 0x0400A8E1 RID: 43233
 	private ShipTowerMonsterWordItem InfoWordPanel;
 
-	// Token: 0x0400A4F8 RID: 42232
+	// Token: 0x0400A8E2 RID: 43234
 	private ShipTowerMonsterListItem MonsterListPanel;
 
-	// Token: 0x0400A4F9 RID: 42233
+	// Token: 0x0400A8E3 RID: 43235
 	private UUIItem ItemAttr;
 
-	// Token: 0x0400A4FA RID: 42234
+	// Token: 0x0400A8E4 RID: 43236
 	private UUIItem ItemMonster;
 
-	// Token: 0x02008FCA RID: 36810
+	// Token: 0x02008212 RID: 33298
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E923 RID: 190755
+		// Token: 0x0402A020 RID: 172064
 		public const int ItemRoot = 0;
 
-		// Token: 0x0402E924 RID: 190756
+		// Token: 0x0402A021 RID: 172065
 		public const int ItemAttr = 1;
 
-		// Token: 0x0402E925 RID: 190757
+		// Token: 0x0402A022 RID: 172066
 		public const int ItemMonster = 2;
 
-		// Token: 0x0402E926 RID: 190758
+		// Token: 0x0402A023 RID: 172067
 		public const int ItemTabComponent = 3;
 	}
 }

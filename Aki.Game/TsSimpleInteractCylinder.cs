@@ -8,16 +8,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032AF RID: 12975
+// Token: 0x02002820 RID: 10272
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractCylinder.TsSimpleInteractCylinder_C")]
 public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170026D2 RID: 9938
-	// (get) Token: 0x0601C1CA RID: 115146 RVA: 0x007D1AE8 File Offset: 0x007CFCE8
-	// (set) Token: 0x0601C1CB RID: 115147 RVA: 0x007D1AF8 File Offset: 0x007CFCF8
+	// Token: 0x170029BF RID: 10687
+	// (get) Token: 0x06019E0B RID: 105995 RVA: 0x007F8BE4 File Offset: 0x007F6DE4
+	// (set) Token: 0x06019E0C RID: 105996 RVA: 0x007F8BF4 File Offset: 0x007F6DF4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CylinderHalfHeight
 	{
@@ -31,9 +31,9 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170026D3 RID: 9939
-	// (get) Token: 0x0601C1CC RID: 115148 RVA: 0x007D1B09 File Offset: 0x007CFD09
-	// (set) Token: 0x0601C1CD RID: 115149 RVA: 0x007D1B19 File Offset: 0x007CFD19
+	// Token: 0x170029C0 RID: 10688
+	// (get) Token: 0x06019E0D RID: 105997 RVA: 0x007F8C05 File Offset: 0x007F6E05
+	// (set) Token: 0x06019E0E RID: 105998 RVA: 0x007F8C15 File Offset: 0x007F6E15
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CylinderRadius
 	{
@@ -47,9 +47,9 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170026D4 RID: 9940
-	// (get) Token: 0x0601C1CE RID: 115150 RVA: 0x007D1B2A File Offset: 0x007CFD2A
-	// (set) Token: 0x0601C1CF RID: 115151 RVA: 0x007D1B3A File Offset: 0x007CFD3A
+	// Token: 0x170029C1 RID: 10689
+	// (get) Token: 0x06019E0F RID: 105999 RVA: 0x007F8C26 File Offset: 0x007F6E26
+	// (set) Token: 0x06019E10 RID: 106000 RVA: 0x007F8C36 File Offset: 0x007F6E36
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool Intro
 	{
@@ -63,9 +63,9 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170026D5 RID: 9941
-	// (get) Token: 0x0601C1D0 RID: 115152 RVA: 0x007D1B4B File Offset: 0x007CFD4B
-	// (set) Token: 0x0601C1D1 RID: 115153 RVA: 0x007D1B5B File Offset: 0x007CFD5B
+	// Token: 0x170029C2 RID: 10690
+	// (get) Token: 0x06019E11 RID: 106001 RVA: 0x007F8C47 File Offset: 0x007F6E47
+	// (set) Token: 0x06019E12 RID: 106002 RVA: 0x007F8C57 File Offset: 0x007F6E57
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Angle
 	{
@@ -79,7 +79,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x0601C1D2 RID: 115154 RVA: 0x007D1B6C File Offset: 0x007CFD6C
+	// Token: 0x06019E13 RID: 106003 RVA: 0x007F8C68 File Offset: 0x007F6E68
 	protected override void OnBeginPlay()
 	{
 		this.SelfForward = Vector.Create();
@@ -95,7 +95,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		base.OnBeginPlay();
 	}
 
-	// Token: 0x0601C1D3 RID: 115155 RVA: 0x007D1BF0 File Offset: 0x007CFDF0
+	// Token: 0x06019E14 RID: 106004 RVA: 0x007F8CEC File Offset: 0x007F6EEC
 	protected override void UpdateData()
 	{
 		base.UpdateData();
@@ -111,7 +111,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		this.ActorFinalUp.Set(this.SelfUp.X, this.SelfUp.Y, this.SelfUp.Z);
 	}
 
-	// Token: 0x0601C1D4 RID: 115156 RVA: 0x007D1CB8 File Offset: 0x007CFEB8
+	// Token: 0x06019E15 RID: 106005 RVA: 0x007F8DB4 File Offset: 0x007F6FB4
 	protected override bool CheckLegal()
 	{
 		if (this.TmpLocation == null)
@@ -155,7 +155,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x0601C1D5 RID: 115157 RVA: 0x007D1E58 File Offset: 0x007D0058
+	// Token: 0x06019E16 RID: 106006 RVA: 0x007F8F54 File Offset: 0x007F7154
 	protected override void OnDraw()
 	{
 		if (this.LineTrace == null)
@@ -214,7 +214,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x0601C1D6 RID: 115158 RVA: 0x007D21B8 File Offset: 0x007D03B8
+	// Token: 0x06019E17 RID: 106007 RVA: 0x007F92B4 File Offset: 0x007F74B4
 	protected override void SetText(FVector offset)
 	{
 		base.Text.HorizontalAlignment = EHorizTextAligment.EHTA_Center;
@@ -227,7 +227,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		text.Text = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0601C1D7 RID: 115159 RVA: 0x007D2230 File Offset: 0x007D0430
+	// Token: 0x06019E18 RID: 106008 RVA: 0x007F932C File Offset: 0x007F752C
 	[NullableContext(1)]
 	protected override SSimpleInteractResult OnGetBestTransform(AActor actor, FVector moveOffset, float halfHeight, float radius)
 	{
@@ -324,7 +324,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		return tmpResult;
 	}
 
-	// Token: 0x0601C1D8 RID: 115160 RVA: 0x007D2678 File Offset: 0x007D0878
+	// Token: 0x06019E19 RID: 106009 RVA: 0x007F9774 File Offset: 0x007F7974
 	private bool CalAngleLimit(float cylinderRadius)
 	{
 		this.AngleLimit.Limits.Clear();
@@ -444,7 +444,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x0601C1D9 RID: 115161 RVA: 0x007D2942 File Offset: 0x007D0B42
+	// Token: 0x06019E1A RID: 106010 RVA: 0x007F9A3E File Offset: 0x007F7C3E
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSimpleInteractCylinder._ClassPtr == IntPtr.Zero)
@@ -454,129 +454,129 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 		return TsSimpleInteractCylinder._ClassPtr;
 	}
 
-	// Token: 0x0601C1DA RID: 115162 RVA: 0x007D2968 File Offset: 0x007D0B68
+	// Token: 0x06019E1B RID: 106011 RVA: 0x007F9A64 File Offset: 0x007F7C64
 	public TsSimpleInteractCylinder() : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractCylinder.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C1DB RID: 115163 RVA: 0x007D2990 File Offset: 0x007D0B90
+	// Token: 0x06019E1C RID: 106012 RVA: 0x007F9A8C File Offset: 0x007F7C8C
 	[NullableContext(1)]
 	public TsSimpleInteractCylinder(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSimpleInteractCylinder.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C1DC RID: 115164 RVA: 0x007D29C3 File Offset: 0x007D0BC3
+	// Token: 0x06019E1D RID: 106013 RVA: 0x007F9ABF File Offset: 0x007F7CBF
 	protected TsSimpleInteractCylinder(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400DE26 RID: 56870
+	// Token: 0x0400E2CC RID: 58060
 	private static readonly FLinearColor redColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400DE27 RID: 56871
+	// Token: 0x0400E2CD RID: 58061
 	private static readonly FLinearColor yellowColor = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x0400DE28 RID: 56872
+	// Token: 0x0400E2CE RID: 58062
 	private static readonly FLinearColor greenColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x0400DE29 RID: 56873
+	// Token: 0x0400E2CF RID: 58063
 	private const float DRAW_TIME = 0.05f;
 
-	// Token: 0x0400DE2A RID: 56874
+	// Token: 0x0400E2D0 RID: 58064
 	private const float DEFAULT_THICKNESS = 4f;
 
-	// Token: 0x0400DE2B RID: 56875
+	// Token: 0x0400E2D1 RID: 58065
 	private const float DEFAULT_ARROW_SIZE = 50f;
 
-	// Token: 0x0400DE2C RID: 56876
+	// Token: 0x0400E2D2 RID: 58066
 	private const float NOT_INTRO_SIZE = 1.5f;
 
-	// Token: 0x0400DE2D RID: 56877
+	// Token: 0x0400E2D3 RID: 58067
 	private const float DRAW_ANGLE_PERIOD = 10f;
 
-	// Token: 0x0400DE2E RID: 56878
+	// Token: 0x0400E2D4 RID: 58068
 	private static readonly FColor textColor = new FColor(byte.MaxValue, 128, 128, byte.MaxValue);
 
-	// Token: 0x0400DE2F RID: 56879
+	// Token: 0x0400E2D5 RID: 58069
 	private const float TEXT_SIZE = 200f;
 
-	// Token: 0x0400DE30 RID: 56880
+	// Token: 0x0400E2D6 RID: 58070
 	private const float CHECK_ANGLE_PERIODIC = 1f;
 
-	// Token: 0x0400DE31 RID: 56881
+	// Token: 0x0400E2D7 RID: 58071
 	private const float MINUS_180 = -180f;
 
-	// Token: 0x0400DE32 RID: 56882
+	// Token: 0x0400E2D8 RID: 58072
 	private const float TRY_GET_ANGLE_PERIODIC = 15f;
 
-	// Token: 0x0400DE33 RID: 56883
+	// Token: 0x0400E2D9 RID: 58073
 	[Nullable(1)]
 	private const string PROFILE_KEY_CEHCK_LEGAL = "TsSimpleInteractCylinder_CheckLegal";
 
-	// Token: 0x0400DE34 RID: 56884
+	// Token: 0x0400E2DA RID: 58074
 	[Nullable(1)]
 	private const string PROFILE_KEY = "TsSimpleInteractCylindere_GetBestTransform";
 
-	// Token: 0x0400DE35 RID: 56885
+	// Token: 0x0400E2DB RID: 58075
 	private Vector SelfForward;
 
-	// Token: 0x0400DE36 RID: 56886
+	// Token: 0x0400E2DC RID: 58076
 	private Vector SelfRight;
 
-	// Token: 0x0400DE37 RID: 56887
+	// Token: 0x0400E2DD RID: 58077
 	private Vector SelfUp;
 
-	// Token: 0x0400DE38 RID: 56888
+	// Token: 0x0400E2DE RID: 58078
 	private TsSimpleInteractCylinder.AngleLimitClass AngleLimit;
 
-	// Token: 0x0400DE39 RID: 56889
+	// Token: 0x0400E2DF RID: 58079
 	private float? ActorAngleInSelf;
 
-	// Token: 0x0400DE3A RID: 56890
+	// Token: 0x0400E2E0 RID: 58080
 	private Vector TmpResultLocation;
 
-	// Token: 0x0400DE3B RID: 56891
+	// Token: 0x0400E2E1 RID: 58081
 	private Vector ActorFinalUp;
 
-	// Token: 0x0400DE3C RID: 56892
+	// Token: 0x0400E2E2 RID: 58082
 	private Vector TmpLocation;
 
-	// Token: 0x0400DE3D RID: 56893
+	// Token: 0x0400E2E3 RID: 58083
 	private Rotator TmpRotator;
 
-	// Token: 0x0400DE3E RID: 56894
+	// Token: 0x0400E2E4 RID: 58084
 	private Vector StartLocation;
 
-	// Token: 0x0400DE3F RID: 56895
+	// Token: 0x0400E2E5 RID: 58085
 	private Vector EndLocation;
 
-	// Token: 0x0400DE40 RID: 56896
+	// Token: 0x0400E2E6 RID: 58086
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/SceneItem/SimpleBlueprintItem/TsSimpleInteractCylinder.TsSimpleInteractCylinder_C";
 
-	// Token: 0x0400DE41 RID: 56897
+	// Token: 0x0400E2E7 RID: 58087
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DE42 RID: 56898
+	// Token: 0x0400E2E8 RID: 58088
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400DE43 RID: 56899
+	// Token: 0x0400E2E9 RID: 58089
 	private static int __PropertyOffset_CylinderHalfHeight;
 
-	// Token: 0x0400DE44 RID: 56900
+	// Token: 0x0400E2EA RID: 58090
 	private static int __PropertyOffset_CylinderRadius;
 
-	// Token: 0x0400DE45 RID: 56901
+	// Token: 0x0400E2EB RID: 58091
 	private static int __PropertyOffset_Intro;
 
-	// Token: 0x0400DE46 RID: 56902
+	// Token: 0x0400E2EC RID: 58092
 	private static int __PropertyOffset_Angle;
 
-	// Token: 0x0200974A RID: 38730
+	// Token: 0x02008971 RID: 35185
 	[NullableContext(0)]
 	private class AngleLimitClass
 	{
-		// Token: 0x0604C506 RID: 312582 RVA: 0x0141C974 File Offset: 0x0141AB74
+		// Token: 0x06042994 RID: 272788 RVA: 0x013C75D8 File Offset: 0x013C57D8
 		public ValueTuple<float, float> GetAngleFromLimits(float angle)
 		{
 			if (this.Limits.Count == 0)
@@ -644,7 +644,7 @@ public class TsSimpleInteractCylinder : TsSimpleInteractBase, IUnrealUObject, IU
 			return new ValueTuple<float, float>(item, num);
 		}
 
-		// Token: 0x04030674 RID: 198260
+		// Token: 0x0402BD0B RID: 179467
 		[Nullable(1)]
 		public readonly List<float[]> Limits = new List<float[]>();
 	}

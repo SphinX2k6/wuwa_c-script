@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Manufacture.Common.Item
 {
-	// Token: 0x020056A1 RID: 22177
+	// Token: 0x02004677 RID: 18039
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common.Item
 	})]
 	public class ManufactureMaterialItem : LoopScrollMediumItemGrid<ISingleItemInfo>
 	{
-		// Token: 0x060386E0 RID: 231136 RVA: 0x00D65CA4 File Offset: 0x00D63EA4
+		// Token: 0x0602D5DD RID: 185821 RVA: 0x00CB3DF4 File Offset: 0x00CB1FF4
 		protected override void OnRefresh(ISingleItemInfo data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common.Item
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x060386E1 RID: 231137 RVA: 0x00D65D4C File Offset: 0x00D63F4C
+		// Token: 0x0602D5DE RID: 185822 RVA: 0x00CB3E9C File Offset: 0x00CB209C
 		private string GetBottomShowText(int? need = null)
 		{
 			if (this.ItemData == null)
@@ -72,36 +72,36 @@ namespace CSharpScript.Game.Module.Manufacture.Common.Item
 			return ConfigMultiTextLang.GetLocalTextNew("Text_ItemSelectCookUnlock_text", null);
 		}
 
-		// Token: 0x060386E2 RID: 231138 RVA: 0x00D65E18 File Offset: 0x00D64018
+		// Token: 0x0602D5DF RID: 185823 RVA: 0x00CB3F68 File Offset: 0x00CB2168
 		public void SetTimes(int times)
 		{
 			this.Times = times;
 			base.SetBottomText(this.GetBottomShowText(null));
 		}
 
-		// Token: 0x060386E3 RID: 231139 RVA: 0x00D65E41 File Offset: 0x00D64041
+		// Token: 0x0602D5E0 RID: 185824 RVA: 0x00CB3F91 File Offset: 0x00CB2191
 		public void SetNeedNum(int needNum)
 		{
 			base.SetBottomText(this.GetBottomShowText(new int?(needNum)));
 		}
 
-		// Token: 0x060386E4 RID: 231140 RVA: 0x00D65E55 File Offset: 0x00D64055
+		// Token: 0x0602D5E1 RID: 185825 RVA: 0x00CB3FA5 File Offset: 0x00CB21A5
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x060386E5 RID: 231141 RVA: 0x00D65E5F File Offset: 0x00D6405F
+		// Token: 0x0602D5E2 RID: 185826 RVA: 0x00CB3FAF File Offset: 0x00CB21AF
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0401DA30 RID: 121392
+		// Token: 0x040184BB RID: 99515
 		[Nullable(2)]
 		private ISingleItemInfo ItemData;
 
-		// Token: 0x0401DA31 RID: 121393
+		// Token: 0x040184BC RID: 99516
 		private int Times;
 	}
 }

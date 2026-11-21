@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006952 RID: 26962
+	// Token: 0x02007005 RID: 28677
 	public class IInfrActivityRoadProcessT
 	{
-		// Token: 0x1700C801 RID: 51201
-		// (get) Token: 0x0602F13E RID: 192830 RVA: 0x0066A7BC File Offset: 0x006689BC
-		// (set) Token: 0x0602F13F RID: 192831 RVA: 0x0066A7C4 File Offset: 0x006689C4
+		// Token: 0x1700D204 RID: 53764
+		// (get) Token: 0x06031B0E RID: 203534 RVA: 0x006BACA4 File Offset: 0x006B8EA4
+		// (set) Token: 0x06031B0F RID: 203535 RVA: 0x006BACAC File Offset: 0x006B8EAC
 		public EInfrActivityBuildStageType Type { get; set; }
 
-		// Token: 0x1700C802 RID: 51202
-		// (get) Token: 0x0602F140 RID: 192832 RVA: 0x0066A7CD File Offset: 0x006689CD
-		// (set) Token: 0x0602F141 RID: 192833 RVA: 0x0066A7D5 File Offset: 0x006689D5
+		// Token: 0x1700D205 RID: 53765
+		// (get) Token: 0x06031B10 RID: 203536 RVA: 0x006BACB5 File Offset: 0x006B8EB5
+		// (set) Token: 0x06031B11 RID: 203537 RVA: 0x006BACBD File Offset: 0x006B8EBD
 		public int Id { get; set; }
 
-		// Token: 0x0602F142 RID: 192834 RVA: 0x0066A7DE File Offset: 0x006689DE
+		// Token: 0x06031B12 RID: 203538 RVA: 0x006BACC6 File Offset: 0x006B8EC6
 		public IInfrActivityRoadProcessT()
 		{
 			this.Type = EInfrActivityBuildStageType.Infrastructure;

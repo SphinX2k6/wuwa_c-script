@@ -3,29 +3,29 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200159E RID: 5534
+	// Token: 0x020016FD RID: 5885
 	[EnumExtensions]
 	public enum EBvbPlayerOperationType
 	{
-		// Token: 0x040049A8 RID: 18856
+		// Token: 0x04004D5A RID: 19802
 		BvbDeploy,
-		// Token: 0x040049A9 RID: 18857
+		// Token: 0x04004D5B RID: 19803
 		BvbEvolution,
-		// Token: 0x040049AA RID: 18858
+		// Token: 0x04004D5C RID: 19804
 		BvbChangeHandCard,
-		// Token: 0x040049AB RID: 18859
+		// Token: 0x04004D5D RID: 19805
 		BvbChangeBoardCard,
-		// Token: 0x040049AC RID: 18860
+		// Token: 0x04004D5E RID: 19806
 		BvbRecycleHandCard,
-		// Token: 0x040049AD RID: 18861
+		// Token: 0x04004D5F RID: 19807
 		BvbRecycleBoardCard,
-		// Token: 0x040049AE RID: 18862
+		// Token: 0x04004D60 RID: 19808
 		BvbEndTurn,
-		// Token: 0x040049AF RID: 18863
+		// Token: 0x04004D61 RID: 19809
 		BvbUseItemCardSkill,
-		// Token: 0x040049B0 RID: 18864
+		// Token: 0x04004D62 RID: 19810
 		BvbUseFieldCardSkill,
-		// Token: 0x040049B1 RID: 18865
+		// Token: 0x04004D63 RID: 19811
 		BvbSelectCard
 	}
 }

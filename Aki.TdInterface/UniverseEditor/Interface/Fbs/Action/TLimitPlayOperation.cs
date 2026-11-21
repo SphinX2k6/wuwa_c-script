@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200770A RID: 30474
+	// Token: 0x02007F1E RID: 32542
 	public enum TLimitPlayOperation : byte
 	{
-		// Token: 0x04012801 RID: 75777
+		// Token: 0x0401385F RID: 79967
 		NONE,
-		// Token: 0x04012802 RID: 75778
+		// Token: 0x04013860 RID: 79968
 		ILimitPlayerAction,
-		// Token: 0x04012803 RID: 75779
+		// Token: 0x04013861 RID: 79969
 		ILimitPlayerBlockAll,
-		// Token: 0x04012804 RID: 75780
+		// Token: 0x04013862 RID: 79970
 		ILimitPlayerCamera,
-		// Token: 0x04012805 RID: 75781
+		// Token: 0x04013863 RID: 79971
 		ILimitPlayerMouse,
-		// Token: 0x04012806 RID: 75782
+		// Token: 0x04013864 RID: 79972
 		ILimitPlayerMove,
-		// Token: 0x04012807 RID: 75783
+		// Token: 0x04013865 RID: 79973
 		ILimitPlayerMoveNew,
-		// Token: 0x04012808 RID: 75784
+		// Token: 0x04013866 RID: 79974
 		ILimitPlayerUI
 	}
 }

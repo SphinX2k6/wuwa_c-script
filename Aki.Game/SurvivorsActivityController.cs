@@ -8,36 +8,36 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002AB6 RID: 10934
+// Token: 0x02002032 RID: 8242
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class SurvivorsActivityController : ActivityControllerBase
 {
-	// Token: 0x06016C34 RID: 93236 RVA: 0x005C7484 File Offset: 0x005C5684
+	// Token: 0x06014665 RID: 83557 RVA: 0x005F3FD8 File Offset: 0x005F21D8
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06016C35 RID: 93237 RVA: 0x005C7486 File Offset: 0x005C5686
+	// Token: 0x06014666 RID: 83558 RVA: 0x005F3FDA File Offset: 0x005F21DA
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_SurvivorsActivity";
 	}
 
-	// Token: 0x06016C36 RID: 93238 RVA: 0x005C748D File Offset: 0x005C568D
+	// Token: 0x06014667 RID: 83559 RVA: 0x005F3FE1 File Offset: 0x005F21E1
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new SurvivorsActivitySubView();
 	}
 
-	// Token: 0x06016C37 RID: 93239 RVA: 0x005C7494 File Offset: 0x005C5694
+	// Token: 0x06014668 RID: 83560 RVA: 0x005F3FE8 File Offset: 0x005F21E8
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new global::SurvivorsActivityData();
 	}
 
-	// Token: 0x06016C38 RID: 93240 RVA: 0x005C749C File Offset: 0x005C569C
+	// Token: 0x06014669 RID: 83561 RVA: 0x005F3FF0 File Offset: 0x005F21F0
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.SurvivorsHandBooskUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSurvivorsHandBookUnlockNotify));
@@ -46,7 +46,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.SurvivorsTalentUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSurvivorsTalentUnlockNotify));
 	}
 
-	// Token: 0x06016C39 RID: 93241 RVA: 0x005C751C File Offset: 0x005C571C
+	// Token: 0x0601466A RID: 83562 RVA: 0x005F4070 File Offset: 0x005F2270
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SurvivorsHandBooskUnlockNotify);
@@ -55,21 +55,21 @@ public class SurvivorsActivityController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.SurvivorsTalentUnlockNotify);
 	}
 
-	// Token: 0x06016C3A RID: 93242 RVA: 0x005C7569 File Offset: 0x005C5769
+	// Token: 0x0601466B RID: 83563 RVA: 0x005F40BD File Offset: 0x005F22BD
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		EventSystem.Instance.Add(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 	}
 
-	// Token: 0x06016C3B RID: 93243 RVA: 0x005C75A3 File Offset: 0x005C57A3
+	// Token: 0x0601466C RID: 83564 RVA: 0x005F40F7 File Offset: 0x005F22F7
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 	}
 
-	// Token: 0x06016C3C RID: 93244 RVA: 0x005C75E0 File Offset: 0x005C57E0
+	// Token: 0x0601466D RID: 83565 RVA: 0x005F4134 File Offset: 0x005F2334
 	[NullableContext(2)]
 	private void OnSurvivorsHandBookUnlockNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -93,7 +93,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06016C3D RID: 93245 RVA: 0x005C76D4 File Offset: 0x005C58D4
+	// Token: 0x0601466E RID: 83566 RVA: 0x005F4228 File Offset: 0x005F2428
 	[NullableContext(2)]
 	private void OnSurvivorsTaskDataUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -116,7 +116,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06016C3E RID: 93246 RVA: 0x005C7754 File Offset: 0x005C5954
+	// Token: 0x0601466F RID: 83567 RVA: 0x005F42A8 File Offset: 0x005F24A8
 	[NullableContext(2)]
 	private void OnSurvivorsChallengeInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -133,7 +133,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		activityData.RefreshActivityRedDot();
 	}
 
-	// Token: 0x06016C3F RID: 93247 RVA: 0x005C77C8 File Offset: 0x005C59C8
+	// Token: 0x06014670 RID: 83568 RVA: 0x005F431C File Offset: 0x005F251C
 	[NullableContext(2)]
 	private void OnSurvivorsTalentUnlockNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -147,7 +147,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.SurvivorsRogueTalentNodeUpdate, survivorsTalentUnlockNotify.SkillId);
 	}
 
-	// Token: 0x06016C40 RID: 93248 RVA: 0x005C7810 File Offset: 0x005C5A10
+	// Token: 0x06014671 RID: 83569 RVA: 0x005F4364 File Offset: 0x005F2564
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		global::SurvivorsActivityData activityData = SurvivorsRogueModel.Instance.ActivityData;
@@ -158,7 +158,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		activityData.OnQuestStateChange(questId, state);
 	}
 
-	// Token: 0x06016C41 RID: 93249 RVA: 0x005C7834 File Offset: 0x005C5A34
+	// Token: 0x06014672 RID: 83570 RVA: 0x005F4388 File Offset: 0x005F2588
 	public void RequestGetRewardTask(int[] taskIdList)
 	{
 		SurvivorsNormalAwardRequest survivorsNormalAwardRequest = SurvivorsNormalAwardRequest.Create();
@@ -188,7 +188,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06016C42 RID: 93250 RVA: 0x005C7884 File Offset: 0x005C5A84
+	// Token: 0x06014673 RID: 83571 RVA: 0x005F43D8 File Offset: 0x005F25D8
 	public void RequestGetRewardScore(int[] scoreIdList)
 	{
 		SurvivorsScoreAwardRequest survivorsScoreAwardRequest = SurvivorsScoreAwardRequest.Create();
@@ -218,7 +218,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06016C43 RID: 93251 RVA: 0x005C78D4 File Offset: 0x005C5AD4
+	// Token: 0x06014674 RID: 83572 RVA: 0x005F4428 File Offset: 0x005F2628
 	public void SurvivorsTalentLevelUpRequest(int nodeId, Action callback)
 	{
 		SurvivorsTalentLevelUpRequest survivorsTalentLevelUpRequest = Aki.Protocol.SurvivorsTalentLevelUpRequest.Create();
@@ -246,7 +246,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06016C44 RID: 93252 RVA: 0x005C7924 File Offset: 0x005C5B24
+	// Token: 0x06014675 RID: 83573 RVA: 0x005F4478 File Offset: 0x005F2678
 	public void CheckIsActivityClose()
 	{
 		global::SurvivorsActivityData activityData = SurvivorsRogueModel.Instance.ActivityData;
@@ -260,7 +260,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06016C45 RID: 93253 RVA: 0x005C7954 File Offset: 0x005C5B54
+	// Token: 0x06014676 RID: 83574 RVA: 0x005F44A8 File Offset: 0x005F26A8
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		SurvivorsActivityConfig? rogueActivityConfig = SurvivorsRogueModel.Instance.GetRogueActivityConfig();
@@ -275,7 +275,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		SurvivorsRogueModel.Instance.ActivityData.RefreshActivityRedDot();
 	}
 
-	// Token: 0x06016C46 RID: 93254 RVA: 0x005C7998 File Offset: 0x005C5B98
+	// Token: 0x06014677 RID: 83575 RVA: 0x005F44EC File Offset: 0x005F26EC
 	[NullableContext(0)]
 	protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 	{
@@ -287,7 +287,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		return <OnOpenSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016C47 RID: 93255 RVA: 0x005C79DC File Offset: 0x005C5BDC
+	// Token: 0x06014678 RID: 83576 RVA: 0x005F4530 File Offset: 0x005F2730
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		if (SurvivorsRogueModel.Instance.ActivityData == null)
@@ -311,14 +311,14 @@ public class SurvivorsActivityController : ActivityControllerBase
 		return false;
 	}
 
-	// Token: 0x06016C48 RID: 93256 RVA: 0x005C7A60 File Offset: 0x005C5C60
+	// Token: 0x06014679 RID: 83577 RVA: 0x005F45B4 File Offset: 0x005F27B4
 	public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsRogueActivityUnlockView, null, null);
 	}
 
-	// Token: 0x17001E4C RID: 7756
-	// (get) Token: 0x06016C49 RID: 93257 RVA: 0x005C7A73 File Offset: 0x005C5C73
+	// Token: 0x17001EA4 RID: 7844
+	// (get) Token: 0x0601467A RID: 83578 RVA: 0x005F45C7 File Offset: 0x005F27C7
 	public static SurvivorsActivityController Instance
 	{
 		get
@@ -327,7 +327,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06016C4A RID: 93258 RVA: 0x005C7A7A File Offset: 0x005C5C7A
+	// Token: 0x0601467B RID: 83579 RVA: 0x005F45CE File Offset: 0x005F27CE
 	public static SurvivorsActivityController GetOrCreateInstance()
 	{
 		if (SurvivorsActivityController._Instance == null)
@@ -337,7 +337,7 @@ public class SurvivorsActivityController : ActivityControllerBase
 		return SurvivorsActivityController._Instance;
 	}
 
-	// Token: 0x06016C4B RID: 93259 RVA: 0x005C7A8E File Offset: 0x005C5C8E
+	// Token: 0x0601467C RID: 83580 RVA: 0x005F45E2 File Offset: 0x005F27E2
 	public static bool CreateInstance()
 	{
 		if (SurvivorsActivityController._Instance != null)
@@ -348,24 +348,24 @@ public class SurvivorsActivityController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06016C4C RID: 93260 RVA: 0x005C7AA4 File Offset: 0x005C5CA4
+	// Token: 0x0601467D RID: 83581 RVA: 0x005F45F8 File Offset: 0x005F27F8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016C4D RID: 93261 RVA: 0x005C7AA6 File Offset: 0x005C5CA6
+	// Token: 0x0601467E RID: 83582 RVA: 0x005F45FA File Offset: 0x005F27FA
 	public static void ResetStaticDefaultValue()
 	{
 		SurvivorsActivityController._Instance = null;
 	}
 
-	// Token: 0x06016C4E RID: 93262 RVA: 0x005C7AAE File Offset: 0x005C5CAE
+	// Token: 0x0601467F RID: 83583 RVA: 0x005F4602 File Offset: 0x005F2802
 	static SurvivorsActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SurvivorsActivityController.CreateStaticDefaultValue), new Action(SurvivorsActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A90B RID: 43275
+	// Token: 0x0400AD11 RID: 44305
 	[Nullable(2)]
 	private static SurvivorsActivityController _Instance;
 }

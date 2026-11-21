@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043B6 RID: 17334
+	// Token: 0x020033D4 RID: 13268
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/EFightCameraSocketOverrideType.EFightCameraSocketOverrideType")]
 	public enum EFightCameraSocketOverrideType : byte
 	{
-		// Token: 0x04017C4D RID: 97357
+		// Token: 0x040127C0 RID: 75712
 		骨骼有效才覆盖,
-		// Token: 0x04017C4E RID: 97358
+		// Token: 0x040127C1 RID: 75713
 		骨骼无条件覆盖,
-		// Token: 0x04017C4F RID: 97359
+		// Token: 0x040127C2 RID: 75714
 		EFightCameraSocketOverrideType_MAX
 	}
 }

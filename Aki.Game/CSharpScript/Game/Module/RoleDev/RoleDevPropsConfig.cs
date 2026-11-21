@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CA9 RID: 19625
+	// Token: 0x02003C5A RID: 15450
 	public class RoleDevPropsConfig : IRoleDevPropsConfig
 	{
-		// Token: 0x17007D10 RID: 32016
-		// (get) Token: 0x06032B58 RID: 207704 RVA: 0x00BD4F9E File Offset: 0x00BD319E
-		// (set) Token: 0x06032B59 RID: 207705 RVA: 0x00BD4FA6 File Offset: 0x00BD31A6
+		// Token: 0x170050BA RID: 20666
+		// (get) Token: 0x0602790C RID: 162060 RVA: 0x00B19D36 File Offset: 0x00B17F36
+		// (set) Token: 0x0602790D RID: 162061 RVA: 0x00B19D3E File Offset: 0x00B17F3E
 		public int Id { get; set; }
 
-		// Token: 0x17007D11 RID: 32017
-		// (get) Token: 0x06032B5A RID: 207706 RVA: 0x00BD4FAF File Offset: 0x00BD31AF
-		// (set) Token: 0x06032B5B RID: 207707 RVA: 0x00BD4FB7 File Offset: 0x00BD31B7
+		// Token: 0x170050BB RID: 20667
+		// (get) Token: 0x0602790E RID: 162062 RVA: 0x00B19D47 File Offset: 0x00B17F47
+		// (set) Token: 0x0602790F RID: 162063 RVA: 0x00B19D4F File Offset: 0x00B17F4F
 		public long ProspectBeginTime { get; set; }
 
-		// Token: 0x17007D12 RID: 32018
-		// (get) Token: 0x06032B5C RID: 207708 RVA: 0x00BD4FC0 File Offset: 0x00BD31C0
-		// (set) Token: 0x06032B5D RID: 207709 RVA: 0x00BD4FC8 File Offset: 0x00BD31C8
+		// Token: 0x170050BC RID: 20668
+		// (get) Token: 0x06027910 RID: 162064 RVA: 0x00B19D58 File Offset: 0x00B17F58
+		// (set) Token: 0x06027911 RID: 162065 RVA: 0x00B19D60 File Offset: 0x00B17F60
 		public long ProspectEndTime { get; set; }
 	}
 }

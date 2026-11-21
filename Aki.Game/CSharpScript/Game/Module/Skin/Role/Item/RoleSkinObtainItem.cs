@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Role.Item
 {
-	// Token: 0x02004BF8 RID: 19448
+	// Token: 0x02003BA9 RID: 15273
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 	})]
 	public class RoleSkinObtainItem : GridProxyAbstract<IGetWayItemData>
 	{
-		// Token: 0x060324AE RID: 205998 RVA: 0x00BAF724 File Offset: 0x00BAD924
+		// Token: 0x06027254 RID: 160340 RVA: 0x00AF3D24 File Offset: 0x00AF1F24
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			};
 		}
 
-		// Token: 0x060324AF RID: 205999 RVA: 0x00BAF7CD File Offset: 0x00BAD9CD
+		// Token: 0x06027255 RID: 160341 RVA: 0x00AF3DCD File Offset: 0x00AF1FCD
 		private void OnClick()
 		{
 			if (this.Data.Type == EGetWayItemType.CanJump)
@@ -42,11 +42,16 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			}
 		}
 
-		// Token: 0x060324B0 RID: 206000 RVA: 0x00BAF800 File Offset: 0x00BADA00
+		// Token: 0x06027256 RID: 160342 RVA: 0x00AF3E00 File Offset: 0x00AF2000
 		public override void Refresh(IGetWayItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			bool flag = this.Data.Type == EGetWayItemType.CanJump;
+			UUIButtonComponent button = base.GetButton(0);
+			if (button != null)
+			{
+				button.SetSelfInteractive(flag);
+			}
 			UUIItem item = base.GetItem(1);
 			if (item != null)
 			{
@@ -61,22 +66,22 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), this.Data.Text, Array.Empty<object>());
 		}
 
-		// Token: 0x0401ABF7 RID: 109559
+		// Token: 0x04015551 RID: 87377
 		private IGetWayItemData Data;
 
-		// Token: 0x0200ADF0 RID: 44528
+		// Token: 0x0200980F RID: 38927
 		[NullableContext(0)]
 		private enum EComponentDefine
 		{
-			// Token: 0x04034D4F RID: 216399
+			// Token: 0x0402F6F6 RID: 194294
 			Button,
-			// Token: 0x04034D50 RID: 216400
+			// Token: 0x0402F6F7 RID: 194295
 			UnlockItem,
-			// Token: 0x04034D51 RID: 216401
+			// Token: 0x0402F6F8 RID: 194296
 			LockItem,
-			// Token: 0x04034D52 RID: 216402
+			// Token: 0x0402F6F9 RID: 194297
 			Name,
-			// Token: 0x04034D53 RID: 216403
+			// Token: 0x0402F6FA RID: 194298
 			LockName
 		}
 	}

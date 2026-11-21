@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020025CD RID: 9677
+// Token: 0x02001AB8 RID: 6840
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotographEntityPanel : UiPanelBase
 {
-	// Token: 0x06013A13 RID: 80403 RVA: 0x004E87F8 File Offset: 0x004E69F8
+	// Token: 0x06010EF3 RID: 69363 RVA: 0x004F73F8 File Offset: 0x004F55F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class PhotographEntityPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013A14 RID: 80404 RVA: 0x004E8894 File Offset: 0x004E6A94
+	// Token: 0x06010EF4 RID: 69364 RVA: 0x004F7494 File Offset: 0x004F5694
 	protected override void OnStart()
 	{
 		this.InfoLayout = new GenericLayoutNew<EntityInfoItem>(base.GetVerticalLayout(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<EntityInfoItem>(this.CreateInfoItem), null);
@@ -35,7 +35,7 @@ public class PhotographEntityPanel : UiPanelBase
 		PhotographController.Instance.CloseBlackScreen().Forget();
 	}
 
-	// Token: 0x06013A15 RID: 80405 RVA: 0x004E88D4 File Offset: 0x004E6AD4
+	// Token: 0x06010EF5 RID: 69365 RVA: 0x004F74D4 File Offset: 0x004F56D4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.InfoLayout != null)
@@ -49,7 +49,7 @@ public class PhotographEntityPanel : UiPanelBase
 		this.FatherIcon = null;
 	}
 
-	// Token: 0x06013A16 RID: 80406 RVA: 0x004E8924 File Offset: 0x004E6B24
+	// Token: 0x06010EF6 RID: 69366 RVA: 0x004F7524 File Offset: 0x004F5724
 	public void Refresh(List<IInfoData> infoList)
 	{
 		this.MissionsInfoMap.Clear();
@@ -61,13 +61,13 @@ public class PhotographEntityPanel : UiPanelBase
 		this.InfoLayout.RebuildLayoutByDataNew<IInfoData>(infoList, null);
 	}
 
-	// Token: 0x06013A17 RID: 80407 RVA: 0x004E897C File Offset: 0x004E6B7C
+	// Token: 0x06010EF7 RID: 69367 RVA: 0x004F757C File Offset: 0x004F577C
 	public void SetInfoPanelVisible(bool bVisible)
 	{
 		base.GetVerticalLayout(1).RootUIComp.Get().SetUIActive(bVisible);
 	}
 
-	// Token: 0x06013A18 RID: 80408 RVA: 0x004E89A4 File Offset: 0x004E6BA4
+	// Token: 0x06010EF8 RID: 69368 RVA: 0x004F75A4 File Offset: 0x004F57A4
 	public void UpdateIcons(List<IPositionData> positionList, [Nullable(2)] EntityPhotoBehaviorNode node)
 	{
 		HashSet<string> hashSet = new HashSet<string>();
@@ -132,7 +132,7 @@ public class PhotographEntityPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013A19 RID: 80409 RVA: 0x004E8C5C File Offset: 0x004E6E5C
+	// Token: 0x06010EF9 RID: 69369 RVA: 0x004F785C File Offset: 0x004F5A5C
 	public void Move(EntityIconItem entityIcon, FVector2D? vector2D, bool bNotShow, bool bIsOptional, bool bIsOptionalFinished, EntityPhotoBehaviorNode node)
 	{
 		UUIItem itsItem = entityIcon.GetItsItem();
@@ -160,7 +160,7 @@ public class PhotographEntityPanel : UiPanelBase
 		entityIcon.UpdateNowIcon(ESprColor.Yellow);
 	}
 
-	// Token: 0x06013A1A RID: 80410 RVA: 0x004E8CE4 File Offset: 0x004E6EE4
+	// Token: 0x06010EFA RID: 69370 RVA: 0x004F78E4 File Offset: 0x004F5AE4
 	[return: Nullable(2)]
 	public EntityInfoItem GetInfoItemByDesc(string id)
 	{
@@ -172,7 +172,7 @@ public class PhotographEntityPanel : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x06013A1B RID: 80411 RVA: 0x004E8D10 File Offset: 0x004E6F10
+	// Token: 0x06010EFB RID: 69371 RVA: 0x004F7910 File Offset: 0x004F5B10
 	private ILayoutItem<EntityInfoItem> CreateInfoItem(object data, UUIItem uiItem, int index)
 	{
 		EntityInfoItem entityInfoItem = new EntityInfoItem();
@@ -186,7 +186,7 @@ public class PhotographEntityPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x04009402 RID: 37890
+	// Token: 0x04009558 RID: 38232
 	[Nullable(new byte[]
 	{
 		2,
@@ -194,34 +194,34 @@ public class PhotographEntityPanel : UiPanelBase
 	})]
 	private GenericLayoutNew<EntityInfoItem> InfoLayout;
 
-	// Token: 0x04009403 RID: 37891
+	// Token: 0x04009559 RID: 38233
 	[Nullable(2)]
 	private UUIItem FatherIcon;
 
-	// Token: 0x04009404 RID: 37892
+	// Token: 0x0400955A RID: 38234
 	private readonly Dictionary<string, int> MissionsInfoMap = new Dictionary<string, int>();
 
-	// Token: 0x04009405 RID: 37893
+	// Token: 0x0400955B RID: 38235
 	private readonly Dictionary<EntityPhotoBehaviorNode, List<EntityIconItem>> NodeIconMap = new Dictionary<EntityPhotoBehaviorNode, List<EntityIconItem>>();
 
-	// Token: 0x04009406 RID: 37894
+	// Token: 0x0400955C RID: 38236
 	private readonly Dictionary<string, EntityIconItem> InfoIconMap = new Dictionary<string, EntityIconItem>();
 
-	// Token: 0x02008BDC RID: 35804
+	// Token: 0x02007D64 RID: 32100
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D66D RID: 185965
+		// Token: 0x04028982 RID: 166274
 		Panel,
-		// Token: 0x0402D66E RID: 185966
+		// Token: 0x04028983 RID: 166275
 		PanelInfoLayout,
-		// Token: 0x0402D66F RID: 185967
+		// Token: 0x04028984 RID: 166276
 		ItemInfo,
-		// Token: 0x0402D670 RID: 185968
+		// Token: 0x04028985 RID: 166277
 		PanelArea,
-		// Token: 0x0402D671 RID: 185969
+		// Token: 0x04028986 RID: 166278
 		PanelAreaGreen,
-		// Token: 0x0402D672 RID: 185970
+		// Token: 0x04028987 RID: 166279
 		TargetIcon
 	}
 }

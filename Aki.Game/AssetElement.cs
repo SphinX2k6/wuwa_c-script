@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x0200330F RID: 13071
+// Token: 0x02002881 RID: 10369
 [NullableContext(1)]
 [Nullable(0)]
 public class AssetElement
 {
-	// Token: 0x0601C78E RID: 116622 RVA: 0x007FCCB0 File Offset: 0x007FAEB0
+	// Token: 0x0601A487 RID: 107655 RVA: 0x0082321C File Offset: 0x0082141C
 	public Dictionary<string, string> SetupReplaceEffect(string replaceTablePath)
 	{
 		List<SReplaceEffect> dataTableAllRowFromTable = DataTableUtil.GetDataTableAllRowFromTable<SReplaceEffect>(ResourceSystem.Instance.Load<UDataTable>(replaceTablePath, "js_undefined"));
@@ -33,7 +33,7 @@ public class AssetElement
 		return this.ReplaceEffectMap;
 	}
 
-	// Token: 0x0601C78F RID: 116623 RVA: 0x007FCD84 File Offset: 0x007FAF84
+	// Token: 0x0601A488 RID: 107656 RVA: 0x008232F0 File Offset: 0x008214F0
 	public Dictionary<string, string> SetupReplaceMontage(string replaceTablePath)
 	{
 		List<SReplaceMontage> dataTableAllRowFromTable = DataTableUtil.GetDataTableAllRowFromTable<SReplaceMontage>(ResourceSystem.Instance.Load<UDataTable>(replaceTablePath, "js_undefined"));
@@ -51,7 +51,7 @@ public class AssetElement
 		return this.ReplaceMontageMap;
 	}
 
-	// Token: 0x0601C790 RID: 116624 RVA: 0x007FCE34 File Offset: 0x007FB034
+	// Token: 0x0601A489 RID: 107657 RVA: 0x008233A0 File Offset: 0x008215A0
 	[NullableContext(2)]
 	public AssetElement(EntityAssetElement entityAssetElement)
 	{
@@ -86,14 +86,14 @@ public class AssetElement
 		}
 	}
 
-	// Token: 0x0601C791 RID: 116625 RVA: 0x007FCF04 File Offset: 0x007FB104
+	// Token: 0x0601A48A RID: 107658 RVA: 0x00823470 File Offset: 0x00821670
 	[NullableContext(2)]
 	public EntityAssetElement GetEntityAssetElement()
 	{
 		return this.EntityAssetElement;
 	}
 
-	// Token: 0x0601C792 RID: 116626 RVA: 0x007FCF0C File Offset: 0x007FB10C
+	// Token: 0x0601A48B RID: 107659 RVA: 0x00823478 File Offset: 0x00821678
 	[NullableContext(2)]
 	public void AddPromise(object promise)
 	{
@@ -108,7 +108,7 @@ public class AssetElement
 		this.PromiseSet.Add(promise);
 	}
 
-	// Token: 0x0601C793 RID: 116627 RVA: 0x007FCF34 File Offset: 0x007FB134
+	// Token: 0x0601A48C RID: 107660 RVA: 0x008234A0 File Offset: 0x008216A0
 	public void SetPromiseResult(object result)
 	{
 		if (this.PromiseSet == null)
@@ -164,14 +164,14 @@ public class AssetElement
 		}
 	}
 
-	// Token: 0x0601C794 RID: 116628 RVA: 0x007FD04C File Offset: 0x007FB24C
+	// Token: 0x0601A48D RID: 107661 RVA: 0x008235B8 File Offset: 0x008217B8
 	[NullableContext(2)]
 	public void SetCallback(Action<bool> value)
 	{
 		this.Callback = value;
 	}
 
-	// Token: 0x0601C795 RID: 116629 RVA: 0x007FD055 File Offset: 0x007FB255
+	// Token: 0x0601A48E RID: 107662 RVA: 0x008235C1 File Offset: 0x008217C1
 	public void ExecuteCallback()
 	{
 		Action<bool> callback = this.Callback;
@@ -183,7 +183,7 @@ public class AssetElement
 		callback(!this.HasError);
 	}
 
-	// Token: 0x0601C796 RID: 116630 RVA: 0x007FD078 File Offset: 0x007FB278
+	// Token: 0x0601A48F RID: 107663 RVA: 0x008235E4 File Offset: 0x008217E4
 	protected bool CheckPath(string asset)
 	{
 		if (string.IsNullOrEmpty(asset))
@@ -194,7 +194,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C797 RID: 116631 RVA: 0x007FD0AB File Offset: 0x007FB2AB
+	// Token: 0x0601A490 RID: 107664 RVA: 0x00823617 File Offset: 0x00821817
 	protected bool AddPath(string asset)
 	{
 		if (this.AssetPathSet.Contains(asset))
@@ -205,7 +205,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C798 RID: 116632 RVA: 0x007FD0CB File Offset: 0x007FB2CB
+	// Token: 0x0601A491 RID: 107665 RVA: 0x00823637 File Offset: 0x00821837
 	public virtual bool AddObject(string path, UObject @object)
 	{
 		if (this.LoadedSet.Contains(path))
@@ -221,7 +221,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C799 RID: 116633 RVA: 0x007FD0FE File Offset: 0x007FB2FE
+	// Token: 0x0601A492 RID: 107666 RVA: 0x0082366A File Offset: 0x0082186A
 	public bool AddActorClass(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -237,7 +237,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C79A RID: 116634 RVA: 0x007FD130 File Offset: 0x007FB330
+	// Token: 0x0601A493 RID: 107667 RVA: 0x0082369C File Offset: 0x0082189C
 	public bool AddAnimation(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -254,7 +254,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C79B RID: 116635 RVA: 0x007FD17C File Offset: 0x007FB37C
+	// Token: 0x0601A494 RID: 107668 RVA: 0x008236E8 File Offset: 0x008218E8
 	public bool AddEffect(string asset)
 	{
 		if (GlobalData.IsPlayInEditor && (GameModeModel.Instance.MapId < 3000 || GameModeModel.Instance.MapId > 4000 || GameModeModel.Instance.MapId == 1))
@@ -275,7 +275,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C79C RID: 116636 RVA: 0x007FD1FE File Offset: 0x007FB3FE
+	// Token: 0x0601A495 RID: 107669 RVA: 0x0082376A File Offset: 0x0082196A
 	public bool AddAudio(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -291,7 +291,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C79D RID: 116637 RVA: 0x007FD22F File Offset: 0x007FB42F
+	// Token: 0x0601A496 RID: 107670 RVA: 0x0082379B File Offset: 0x0082199B
 	public bool AddMesh(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -307,7 +307,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C79E RID: 116638 RVA: 0x007FD260 File Offset: 0x007FB460
+	// Token: 0x0601A497 RID: 107671 RVA: 0x008237CC File Offset: 0x008219CC
 	public bool AddMaterial(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -323,7 +323,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C79F RID: 116639 RVA: 0x007FD294 File Offset: 0x007FB494
+	// Token: 0x0601A498 RID: 107672 RVA: 0x00823800 File Offset: 0x00821A00
 	public bool AddOther(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -340,7 +340,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C7A0 RID: 116640 RVA: 0x007FD2DE File Offset: 0x007FB4DE
+	// Token: 0x0601A499 RID: 107673 RVA: 0x0082384A File Offset: 0x00821A4A
 	public bool AddAnimationBlueprint(string asset)
 	{
 		if (!this.CheckPath(asset))
@@ -356,7 +356,7 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C7A1 RID: 116641 RVA: 0x007FD310 File Offset: 0x007FB510
+	// Token: 0x0601A49A RID: 107674 RVA: 0x0082387C File Offset: 0x00821A7C
 	public bool AddAsset(EAssetType type, string asset)
 	{
 		switch (type)
@@ -382,13 +382,13 @@ public class AssetElement
 		}
 	}
 
-	// Token: 0x0601C7A2 RID: 116642 RVA: 0x007FD386 File Offset: 0x007FB586
+	// Token: 0x0601A49B RID: 107675 RVA: 0x008238F2 File Offset: 0x00821AF2
 	public int NeedLoadCount()
 	{
 		return this.NeedLoadAssets.Count;
 	}
 
-	// Token: 0x0601C7A3 RID: 116643 RVA: 0x007FD393 File Offset: 0x007FB593
+	// Token: 0x0601A49C RID: 107676 RVA: 0x008238FF File Offset: 0x00821AFF
 	public bool AddLoading(string path)
 	{
 		if (this.LoadedSet.Contains(path))
@@ -403,25 +403,25 @@ public class AssetElement
 		return true;
 	}
 
-	// Token: 0x0601C7A4 RID: 116644 RVA: 0x007FD3C3 File Offset: 0x007FB5C3
+	// Token: 0x0601A49D RID: 107677 RVA: 0x0082392F File Offset: 0x00821B2F
 	public bool RemoveLoading(string path)
 	{
 		return this.LoadingSet.Remove(path);
 	}
 
-	// Token: 0x0601C7A5 RID: 116645 RVA: 0x007FD3D1 File Offset: 0x007FB5D1
+	// Token: 0x0601A49E RID: 107678 RVA: 0x0082393D File Offset: 0x00821B3D
 	public bool RemoveLoaded(string path)
 	{
 		return this.LoadedSet.Remove(path);
 	}
 
-	// Token: 0x0601C7A6 RID: 116646 RVA: 0x007FD3DF File Offset: 0x007FB5DF
+	// Token: 0x0601A49F RID: 107679 RVA: 0x0082394B File Offset: 0x00821B4B
 	public bool Loading()
 	{
 		return this.NeedLoadAssets.Count > 0 || this.LoadingSet.Count > 0;
 	}
 
-	// Token: 0x0601C7A7 RID: 116647 RVA: 0x007FD3FF File Offset: 0x007FB5FF
+	// Token: 0x0601A4A0 RID: 107680 RVA: 0x0082396B File Offset: 0x00821B6B
 	public virtual void Clear()
 	{
 		this.AssetForIndexMap.Clear();
@@ -430,37 +430,37 @@ public class AssetElement
 		this.LoadingSet.Clear();
 	}
 
-	// Token: 0x0601C7A8 RID: 116648 RVA: 0x007FD42D File Offset: 0x007FB62D
+	// Token: 0x0601A4A1 RID: 107681 RVA: 0x00823999 File Offset: 0x00821B99
 	public virtual void PrintDebugInfo()
 	{
 	}
 
-	// Token: 0x0400E224 RID: 57892
+	// Token: 0x0400E6D5 RID: 59093
 	[Nullable(2)]
 	private readonly EntityAssetElement EntityAssetElement;
 
-	// Token: 0x0400E225 RID: 57893
+	// Token: 0x0400E6D6 RID: 59094
 	protected readonly Dictionary<string, int> AssetForIndexMap = new Dictionary<string, int>();
 
-	// Token: 0x0400E226 RID: 57894
+	// Token: 0x0400E6D7 RID: 59095
 	public bool HasError;
 
-	// Token: 0x0400E227 RID: 57895
+	// Token: 0x0400E6D8 RID: 59096
 	public readonly HashSet<string> AssetPathSet = new HashSet<string>();
 
-	// Token: 0x0400E228 RID: 57896
+	// Token: 0x0400E6D9 RID: 59097
 	public readonly List<string> NeedLoadAssets = new List<string>();
 
-	// Token: 0x0400E229 RID: 57897
+	// Token: 0x0400E6DA RID: 59098
 	public readonly List<EAssetType> NeedLoadAssetTypes = new List<EAssetType>();
 
-	// Token: 0x0400E22A RID: 57898
+	// Token: 0x0400E6DB RID: 59099
 	public readonly HashSet<string> LoadingSet = new HashSet<string>();
 
-	// Token: 0x0400E22B RID: 57899
+	// Token: 0x0400E6DC RID: 59100
 	public readonly HashSet<string> LoadedSet = new HashSet<string>();
 
-	// Token: 0x0400E22C RID: 57900
+	// Token: 0x0400E6DD RID: 59101
 	[Nullable(new byte[]
 	{
 		2,
@@ -469,16 +469,16 @@ public class AssetElement
 	})]
 	public Action<UObject, string> AddObjectCallback;
 
-	// Token: 0x0400E22D RID: 57901
+	// Token: 0x0400E6DE RID: 59102
 	public readonly ResourceSystem.EResourceLoadPriority LoadPriority = ResourceSystem.EResourceLoadPriority.Default;
 
-	// Token: 0x0400E22E RID: 57902
+	// Token: 0x0400E6DF RID: 59103
 	public Dictionary<string, string> ReplaceEffectMap = new Dictionary<string, string>();
 
-	// Token: 0x0400E22F RID: 57903
+	// Token: 0x0400E6E0 RID: 59104
 	public Dictionary<string, string> ReplaceMontageMap = new Dictionary<string, string>();
 
-	// Token: 0x0400E230 RID: 57904
+	// Token: 0x0400E6E1 RID: 59105
 	[Nullable(new byte[]
 	{
 		2,
@@ -486,7 +486,7 @@ public class AssetElement
 	})]
 	private HashSet<object> PromiseSet;
 
-	// Token: 0x0400E231 RID: 57905
+	// Token: 0x0400E6E2 RID: 59106
 	[Nullable(2)]
 	private Action<bool> Callback;
 }

@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019FC RID: 6652
+	// Token: 0x02000481 RID: 1153
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FKuroNetworkChangeDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018A94 RID: 101012 RVA: 0x00245E86 File Offset: 0x00244086
+		// Token: 0x06006D06 RID: 27910 RVA: 0x0009F47A File Offset: 0x0009D67A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroNetworkChangeDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018A95 RID: 101013 RVA: 0x00245E92 File Offset: 0x00244092
+		// Token: 0x06006D07 RID: 27911 RVA: 0x0009F486 File Offset: 0x0009D686
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroNetworkChangeDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FKuroNetworkChangeDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018A96 RID: 101014 RVA: 0x00245EB5 File Offset: 0x002440B5
+		// Token: 0x06006D08 RID: 27912 RVA: 0x0009F4A9 File Offset: 0x0009D6A9
 		public FKuroNetworkChangeDelegate()
 		{
 		}
 
-		// Token: 0x06018A97 RID: 101015 RVA: 0x00245EBD File Offset: 0x002440BD
+		// Token: 0x06006D09 RID: 27913 RVA: 0x0009F4B1 File Offset: 0x0009D6B1
 		[NullableContext(2)]
 		public FKuroNetworkChangeDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018A98 RID: 101016 RVA: 0x00245EC7 File Offset: 0x002440C7
+		// Token: 0x06006D0A RID: 27914 RVA: 0x0009F4BB File Offset: 0x0009D6BB
 		public FKuroNetworkChangeDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018A99 RID: 101017 RVA: 0x00245ED2 File Offset: 0x002440D2
+		// Token: 0x06006D0B RID: 27915 RVA: 0x0009F4C6 File Offset: 0x0009D6C6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<byte>) ?? ((Action<byte>)Delegate.CreateDelegate(typeof(Action<byte>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018A9A RID: 101018 RVA: 0x00245F04 File Offset: 0x00244104
+		// Token: 0x06006D0C RID: 27916 RVA: 0x0009F4F8 File Offset: 0x0009D6F8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<byte> Callback)
 		{
 			if (FKuroNetworkChangeDelegate.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FKuroNetworkChangeDelegate.RegisterId);
 		}
 
-		// Token: 0x06018A9B RID: 101019 RVA: 0x00245F3E File Offset: 0x0024413E
+		// Token: 0x06006D0D RID: 27917 RVA: 0x0009F532 File Offset: 0x0009D732
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<byte> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018A9C RID: 101020 RVA: 0x00245F48 File Offset: 0x00244148
+		// Token: 0x06006D0E RID: 27918 RVA: 0x0009F53C File Offset: 0x0009D73C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(byte NetworkTransportType)
 		{
 			FKuroNetworkChangeDelegate.__FKuroNetworkChangeDelegate_DelegateParams* ptr = stackalloc FKuroNetworkChangeDelegate.__FKuroNetworkChangeDelegate_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FKuroNetworkChangeDelegate.__FKuroNetworkChangeDelegate_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06018A9D RID: 101021 RVA: 0x00245F84 File Offset: 0x00244184
+		// Token: 0x06006D0F RID: 27919 RVA: 0x0009F578 File Offset: 0x0009D778
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<byte> action = target as Action<byte>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FKuroNetworkChangeDelegate.__FKuroNetworkChangeDelegate_DelegateParams*)__Parameters)->NetworkTransportType);
 		}
 
-		// Token: 0x0400D53A RID: 54586
+		// Token: 0x04002E94 RID: 11924
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D53B RID: 54587
+		// Token: 0x04002E95 RID: 11925
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.KuroNetworkChangeDelegate__DelegateSignature";
 
-		// Token: 0x0400D53C RID: 54588
+		// Token: 0x04002E96 RID: 11926
 		private static int RegisterId;
 
-		// Token: 0x020030B0 RID: 12464
+		// Token: 0x02000B8D RID: 2957
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FKuroNetworkChangeDelegate_DelegateParams
+		private ref struct __FKuroNetworkChangeDelegate_DelegateParams
 		{
-			// Token: 0x04016DFC RID: 93692
+			// Token: 0x04005D02 RID: 23810
 			[FieldOffset(0)]
 			public byte NetworkTransportType;
 		}
 
-		// Token: 0x020030B1 RID: 12465
+		// Token: 0x02000B8E RID: 2958
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016DFD RID: 93693
+			// Token: 0x04005D03 RID: 23811
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree
 {
-	// Token: 0x0200648C RID: 25740
+	// Token: 0x0200540A RID: 21514
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MatchThreeDefine
 	{
-		// Token: 0x06040A72 RID: 264818 RVA: 0x00FA5AE0 File Offset: 0x00FA3CE0
+		// Token: 0x06035736 RID: 218934 RVA: 0x00EECB28 File Offset: 0x00EEAD28
 		public static bool TryGetInitialGuideGroupId(int levelId, out int guideGroupId)
 		{
 			if (levelId <= 100021)
@@ -41,133 +41,133 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree
 			return false;
 		}
 
-		// Token: 0x040219DF RID: 137695
+		// Token: 0x0401C310 RID: 115472
 		public const int ENDLESS_CHAPTER = 8;
 
-		// Token: 0x040219E0 RID: 137696
+		// Token: 0x0401C311 RID: 115473
 		public const int MATCH_THREE_LEVEL_CLICKED_KEY = 1;
 
-		// Token: 0x040219E1 RID: 137697
+		// Token: 0x0401C312 RID: 115474
 		public const int MATCH_THREE_SELECTED_ROLE_KEY = 2;
 
-		// Token: 0x040219E2 RID: 137698
+		// Token: 0x0401C313 RID: 115475
 		public const int MATCH_THREE_ROLE_UNLOCK_TIP_KEY = 3;
 
-		// Token: 0x040219E3 RID: 137699
+		// Token: 0x0401C314 RID: 115476
 		public const int MATCH_THREE_ROLE_NEW_RED_DOT_KEY = 4;
 
-		// Token: 0x040219E4 RID: 137700
+		// Token: 0x0401C315 RID: 115477
 		public const int MATCH_THREE_ROLE_SWITCH_BTN_RED_DOT_KEY = 5;
 
-		// Token: 0x040219E5 RID: 137701
+		// Token: 0x0401C316 RID: 115478
 		public const int MATCH_THREE_GAMEPLAY_HELP_ID = 683;
 
-		// Token: 0x040219E6 RID: 137702
+		// Token: 0x0401C317 RID: 115479
 		public const int BASIC_GUIDE_LEVEL_ID = 100011;
 
-		// Token: 0x040219E7 RID: 137703
+		// Token: 0x0401C318 RID: 115480
 		public const int BOTTLE_GUIDE_LEVEL_ID = 100021;
 
-		// Token: 0x040219E8 RID: 137704
+		// Token: 0x0401C319 RID: 115481
 		public const int ICE_GUIDE_LEVEL_ID = 100031;
 
-		// Token: 0x040219E9 RID: 137705
+		// Token: 0x0401C31A RID: 115482
 		public const int HOURGLASS_GUIDE_LEVEL_ID = 100051;
 
-		// Token: 0x040219EA RID: 137706
+		// Token: 0x0401C31B RID: 115483
 		public const int BASIC_GUIDE_GROUP_ID = 20602;
 
-		// Token: 0x040219EB RID: 137707
+		// Token: 0x0401C31C RID: 115484
 		public const int BOTTLE_GUIDE_GROUP_ID = 20605;
 
-		// Token: 0x040219EC RID: 137708
+		// Token: 0x0401C31D RID: 115485
 		public const int ICE_GUIDE_GROUP_ID = 20607;
 
-		// Token: 0x040219ED RID: 137709
+		// Token: 0x0401C31E RID: 115486
 		public const int HOURGLASS_GUIDE_GROUP_ID = 20608;
 
-		// Token: 0x040219EE RID: 137710
+		// Token: 0x0401C31F RID: 115487
 		public const int SETTLE_REASON_NORMAL = 1;
 
-		// Token: 0x040219EF RID: 137711
+		// Token: 0x0401C320 RID: 115488
 		public const int SETTLE_REASON_QUIT = 2;
 
-		// Token: 0x040219F0 RID: 137712
+		// Token: 0x0401C321 RID: 115489
 		public const string LOCK_TIME_TEXT_ID = "MatchThree_TimeCountdown";
 
-		// Token: 0x040219F1 RID: 137713
+		// Token: 0x0401C322 RID: 115490
 		public const string LOCK_PRE_TEXT_ID = "MatchThree_FinishPrestage";
 
-		// Token: 0x040219F2 RID: 137714
+		// Token: 0x0401C323 RID: 115491
 		public const string CHAPTER_DONE_TEXT_ID = "MatchThree_Completed";
 
-		// Token: 0x040219F3 RID: 137715
+		// Token: 0x0401C324 RID: 115492
 		public const string CHAPTER_PROGRESS_TEXT_ID = "MatchThree_Ongoing";
 
-		// Token: 0x040219F4 RID: 137716
+		// Token: 0x0401C325 RID: 115493
 		public const string ENDLESS_SCORE_TEXT_ID = "MatchThree_BestRecord";
 
-		// Token: 0x040219F5 RID: 137717
+		// Token: 0x0401C326 RID: 115494
 		public const string ENDLESS_NO_SCORE_TEXT_ID = "MatchThree_NoRecord";
 
-		// Token: 0x040219F6 RID: 137718
+		// Token: 0x0401C327 RID: 115495
 		public const string STAGE_GOAL_POINTS_TEXT_ID = "MatchThree_StageGoal_Points";
 
-		// Token: 0x040219F7 RID: 137719
+		// Token: 0x0401C328 RID: 115496
 		public const string STAGE_GOAL_GEM_NUM_TEXT_ID = "MatchThree_StageGoal_GemNum";
 
-		// Token: 0x040219F8 RID: 137720
+		// Token: 0x0401C329 RID: 115497
 		public const string STAGE_GOAL_ENDLESS_TEXT_ID = "MatchThree_StageGoal_Endless";
 
-		// Token: 0x040219F9 RID: 137721
+		// Token: 0x0401C32A RID: 115498
 		public const string STAGE_GOAL_PIECE_HOURGLASS_TEXT_ID = "PieceName_2004";
 
-		// Token: 0x040219FA RID: 137722
+		// Token: 0x0401C32B RID: 115499
 		public const string STAGE_GOAL_PIECE_BOTTLE_TEXT_ID = "PieceName_2003";
 
-		// Token: 0x040219FB RID: 137723
+		// Token: 0x0401C32C RID: 115500
 		public const string DIFFICULTY_NORMAL_TEXT_ID = "Tetristext_06";
 
-		// Token: 0x040219FC RID: 137724
+		// Token: 0x0401C32D RID: 115501
 		public const string DIFFICULTY_HARD_TEXT_ID = "Tetristext_07";
 
-		// Token: 0x040219FD RID: 137725
+		// Token: 0x0401C32E RID: 115502
 		public const string LEVEL_DETAIL_TITLE_TEXT_ID = "MatchThree_LevelDetailTitle";
 
-		// Token: 0x040219FE RID: 137726
+		// Token: 0x0401C32F RID: 115503
 		public const string HARD_LOCK_TIPS_TEXT_ID = "Tetristext_14";
 
-		// Token: 0x040219FF RID: 137727
+		// Token: 0x0401C330 RID: 115504
 		public const string ENV_NO_EFFECT_TEXT_ID = "Weather_NoEffect";
 
-		// Token: 0x04021A00 RID: 137728
+		// Token: 0x0401C331 RID: 115505
 		public const string ROLE_SELECT_CONFIRM_TEXT_ID = "RolePanel_Confirm";
 
-		// Token: 0x04021A01 RID: 137729
+		// Token: 0x0401C332 RID: 115506
 		public const string ROLE_LOCK_BUTTON_TEXT_ID = "RolePanel_Locked";
 
-		// Token: 0x04021A02 RID: 137730
+		// Token: 0x0401C333 RID: 115507
 		public const string ROLE_SKILL_ENERGY_TEXT_ID = "MatchThreeRoleRecharge";
 
-		// Token: 0x04021A03 RID: 137731
+		// Token: 0x0401C334 RID: 115508
 		public const string ROLE_SPINE_IDLE_ANIM = "idle";
 
-		// Token: 0x04021A04 RID: 137732
+		// Token: 0x0401C335 RID: 115509
 		public const string ROLE_SPINE_POSE_ANIM = "pose";
 
-		// Token: 0x04021A05 RID: 137733
+		// Token: 0x0401C336 RID: 115510
 		public const string LEVEL_DETAIL_BG_NORMAL = "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/Activity/Activity37/Match3Game/T_LevelDetailBg1.T_LevelDetailBg1";
 
-		// Token: 0x04021A06 RID: 137734
+		// Token: 0x0401C337 RID: 115511
 		public const string LEVEL_DETAIL_BG_ENDLESS = "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/Activity/Activity37/Match3Game/T_LevelDetailBg2.T_LevelDetailBg2";
 
-		// Token: 0x04021A07 RID: 137735
+		// Token: 0x0401C338 RID: 115512
 		public const string LEVEL_DETAIL_INFO_TITLE_BG_NORMAL = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity37/Match3Game/LevelDetail/SP_InfoTitleBg1.SP_InfoTitleBg1";
 
-		// Token: 0x04021A08 RID: 137736
+		// Token: 0x0401C339 RID: 115513
 		public const string LEVEL_DETAIL_INFO_TITLE_BG_ENDLESS = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity37/Match3Game/LevelDetail/SP_InfoTitleBg2.SP_InfoTitleBg2";
 
-		// Token: 0x04021A09 RID: 137737
+		// Token: 0x0401C33A RID: 115514
 		public const string ROLE_SELECT_SWITCH_SEQUENCE = "Swtich";
 	}
 }

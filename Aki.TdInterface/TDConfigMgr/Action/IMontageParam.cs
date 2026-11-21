@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C08 RID: 7176
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DF7 RID: 7671
 	public class IMontageParam
 	{
-		// Token: 0x060099CB RID: 39371 RVA: 0x00161E5C File Offset: 0x0016005C
+		// Token: 0x0600A2FB RID: 41723 RVA: 0x00174DA8 File Offset: 0x00172FA8
 		private IMontageParam_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060099CC RID: 39372 RVA: 0x00161E94 File Offset: 0x00160094
+		// Token: 0x0600A2FC RID: 41724 RVA: 0x00174DE0 File Offset: 0x00172FE0
 		public static IMontageParam Create([Nullable(2)] IMontageParam instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099CD RID: 39373 RVA: 0x00161EA7 File Offset: 0x001600A7
+		// Token: 0x0600A2FD RID: 41725 RVA: 0x00174DF3 File Offset: 0x00172FF3
 		public static IMontageParam CreateFromSetValue([Nullable(2)] IMontageParam_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099CE RID: 39374 RVA: 0x00161EBA File Offset: 0x001600BA
+		// Token: 0x0600A2FE RID: 41726 RVA: 0x00174E06 File Offset: 0x00173006
 		public IMontageParam_SetValue ToSetValue()
 		{
 			return new IMontageParam_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003030 RID: 12336
-		// (get) Token: 0x060099CF RID: 39375 RVA: 0x00161EF4 File Offset: 0x001600F4
-		// (set) Token: 0x060099D0 RID: 39376 RVA: 0x00161F55 File Offset: 0x00160155
+		// Token: 0x17003299 RID: 12953
+		// (get) Token: 0x0600A2FF RID: 41727 RVA: 0x00174E40 File Offset: 0x00173040
+		// (set) Token: 0x0600A300 RID: 41728 RVA: 0x00174EA1 File Offset: 0x001730A1
 		public virtual IMontageId MontageId
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003031 RID: 12337
-		// (get) Token: 0x060099D1 RID: 39377 RVA: 0x00161F6C File Offset: 0x0016016C
-		// (set) Token: 0x060099D2 RID: 39378 RVA: 0x00161FA6 File Offset: 0x001601A6
+		// Token: 0x1700329A RID: 12954
+		// (get) Token: 0x0600A301 RID: 41729 RVA: 0x00174EB8 File Offset: 0x001730B8
+		// (set) Token: 0x0600A302 RID: 41730 RVA: 0x00174EF2 File Offset: 0x001730F2
 		public virtual bool? IsLoop
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003032 RID: 12338
-		// (get) Token: 0x060099D3 RID: 39379 RVA: 0x00161FB4 File Offset: 0x001601B4
-		// (set) Token: 0x060099D4 RID: 39380 RVA: 0x00161FEE File Offset: 0x001601EE
+		// Token: 0x1700329B RID: 12955
+		// (get) Token: 0x0600A303 RID: 41731 RVA: 0x00174F00 File Offset: 0x00173100
+		// (set) Token: 0x0600A304 RID: 41732 RVA: 0x00174F3A File Offset: 0x0017313A
 		public virtual bool? KeepPose
 		{
 			get
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003033 RID: 12339
-		// (get) Token: 0x060099D5 RID: 39381 RVA: 0x00161FFC File Offset: 0x001601FC
-		// (set) Token: 0x060099D6 RID: 39382 RVA: 0x00162036 File Offset: 0x00160236
+		// Token: 0x1700329C RID: 12956
+		// (get) Token: 0x0600A305 RID: 41733 RVA: 0x00174F48 File Offset: 0x00173148
+		// (set) Token: 0x0600A306 RID: 41734 RVA: 0x00174F82 File Offset: 0x00173182
 		public virtual float? DelayTime
 		{
 			get
@@ -164,18 +162,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D9B RID: 23963
+		// Token: 0x040062C2 RID: 25282
 		[Nullable(2)]
 		protected IMontageParam FbInstance;
 
-		// Token: 0x04005D9C RID: 23964
+		// Token: 0x040062C3 RID: 25283
 		[Nullable(2)]
 		protected IMontageParam_SetValue PocoInterface;
 
-		// Token: 0x04005D9D RID: 23965
+		// Token: 0x040062C4 RID: 25284
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x04005D9E RID: 23966
+		// Token: 0x040062C5 RID: 25285
 		private bool _MontageIdInited;
 	}
 }

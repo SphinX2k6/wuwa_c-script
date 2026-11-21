@@ -4,77 +4,77 @@ using UnrealEngine;
 
 namespace CSharpScript.Typing
 {
-	// Token: 0x02000120 RID: 288
+	// Token: 0x02000121 RID: 289
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FKuroPerfSightHelper
 	{
-		// Token: 0x06000A4C RID: 2636
+		// Token: 0x06000AA3 RID: 2723
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void UnRegisterTickGroupEvent_Internal();
 
-		// Token: 0x06000A4D RID: 2637 RVA: 0x00033B7A File Offset: 0x00031D7A
+		// Token: 0x06000AA4 RID: 2724 RVA: 0x000345EE File Offset: 0x000327EE
 		public static void UnRegisterTickGroupEvent()
 		{
 			FKuroPerfSightHelper.UnRegisterTickGroupEvent_Internal();
 		}
 
-		// Token: 0x06000A4E RID: 2638
+		// Token: 0x06000AA5 RID: 2725
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void UnRegisterOnFrameBegin_Internal();
 
-		// Token: 0x06000A4F RID: 2639 RVA: 0x00033B81 File Offset: 0x00031D81
+		// Token: 0x06000AA6 RID: 2726 RVA: 0x000345F5 File Offset: 0x000327F5
 		public static void UnRegisterOnFrameBegin()
 		{
 			FKuroPerfSightHelper.UnRegisterOnFrameBegin_Internal();
 		}
 
-		// Token: 0x06000A50 RID: 2640
+		// Token: 0x06000AA7 RID: 2727
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetStrategyById_Internal(int strategyId, int strategyValue);
 
-		// Token: 0x06000A51 RID: 2641 RVA: 0x00033B88 File Offset: 0x00031D88
+		// Token: 0x06000AA8 RID: 2728 RVA: 0x000345FC File Offset: 0x000327FC
 		public static void SetStrategyById(int strategyId, int strategyValue)
 		{
 			FKuroPerfSightHelper.SetStrategyById_Internal(strategyId, strategyValue);
 		}
 
-		// Token: 0x06000A52 RID: 2642
+		// Token: 0x06000AA9 RID: 2729
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetFlameGraphStrMapSize_Internal(int inSize);
 
-		// Token: 0x06000A53 RID: 2643 RVA: 0x00033B91 File Offset: 0x00031D91
+		// Token: 0x06000AAA RID: 2730 RVA: 0x00034605 File Offset: 0x00032805
 		public static void SetFlameGraphStrMapSize(int inSize)
 		{
 			FKuroPerfSightHelper.SetFlameGraphStrMapSize_Internal(inSize);
 		}
 
-		// Token: 0x06000A54 RID: 2644
+		// Token: 0x06000AAB RID: 2731
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetFlameGraphQueueSize_Internal(int length);
 
-		// Token: 0x06000A55 RID: 2645 RVA: 0x00033B99 File Offset: 0x00031D99
+		// Token: 0x06000AAC RID: 2732 RVA: 0x0003460D File Offset: 0x0003280D
 		public static void SetFlameGraphQueueSize(int length)
 		{
 			FKuroPerfSightHelper.SetFlameGraphQueueSize_Internal(length);
 		}
 
-		// Token: 0x06000A56 RID: 2646
+		// Token: 0x06000AAD RID: 2733
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetFlameGraphDropThresholds_Internal(int threshold);
 
-		// Token: 0x06000A57 RID: 2647 RVA: 0x00033BA1 File Offset: 0x00031DA1
+		// Token: 0x06000AAE RID: 2734 RVA: 0x00034615 File Offset: 0x00032815
 		public static void SetFlameGraphDropThresholds(int threshold)
 		{
 			FKuroPerfSightHelper.SetFlameGraphDropThresholds_Internal(threshold);
 		}
 
-		// Token: 0x06000A58 RID: 2648
+		// Token: 0x06000AAF RID: 2735
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void SafePushCall_Internal(char* callGraphName);
 
-		// Token: 0x06000A59 RID: 2649 RVA: 0x00033BAC File Offset: 0x00031DAC
+		// Token: 0x06000AB0 RID: 2736 RVA: 0x00034620 File Offset: 0x00032820
 		[NullableContext(2)]
 		public unsafe static void SafePushCall(string callGraphName)
 		{
@@ -98,12 +98,12 @@ namespace CSharpScript.Typing
 			char* ptr = null;
 		}
 
-		// Token: 0x06000A5A RID: 2650
+		// Token: 0x06000AB1 RID: 2737
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void SafePopCall_Internal(char* callGraphName);
 
-		// Token: 0x06000A5B RID: 2651 RVA: 0x00033BDC File Offset: 0x00031DDC
+		// Token: 0x06000AB2 RID: 2738 RVA: 0x00034650 File Offset: 0x00032850
 		[NullableContext(2)]
 		public unsafe static void SafePopCall(string callGraphName)
 		{
@@ -127,21 +127,21 @@ namespace CSharpScript.Typing
 			char* ptr = null;
 		}
 
-		// Token: 0x06000A5C RID: 2652
+		// Token: 0x06000AB3 RID: 2739
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void RegisterTickGroupEvent_Internal();
 
-		// Token: 0x06000A5D RID: 2653 RVA: 0x00033C0B File Offset: 0x00031E0B
+		// Token: 0x06000AB4 RID: 2740 RVA: 0x0003467F File Offset: 0x0003287F
 		public static void RegisterTickGroupEvent()
 		{
 			FKuroPerfSightHelper.RegisterTickGroupEvent_Internal();
 		}
 
-		// Token: 0x06000A5E RID: 2654
+		// Token: 0x06000AB5 RID: 2741
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void RegisterOnFrameBegin_Internal(in FString callGraphName);
 
-		// Token: 0x06000A5F RID: 2655 RVA: 0x00033C14 File Offset: 0x00031E14
+		// Token: 0x06000AB6 RID: 2742 RVA: 0x00034688 File Offset: 0x00032888
 		public unsafe static void RegisterOnFrameBegin(string callGraphName)
 		{
 			FString fstring = FString.AllocTemp(callGraphName);
@@ -149,11 +149,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06000A60 RID: 2656
+		// Token: 0x06000AB7 RID: 2743
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueString_Internal(in FString category, in FString key, in FString value);
 
-		// Token: 0x06000A61 RID: 2657 RVA: 0x00033C38 File Offset: 0x00031E38
+		// Token: 0x06000AB8 RID: 2744 RVA: 0x000346AC File Offset: 0x000328AC
 		public unsafe static void PostValueString(string category, string key, string value)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -165,11 +165,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring3, 1);
 		}
 
-		// Token: 0x06000A62 RID: 2658
+		// Token: 0x06000AB9 RID: 2745
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueInteger3_Internal(in FString category, in FString key, int valueA, int valueB, int valueC);
 
-		// Token: 0x06000A63 RID: 2659 RVA: 0x00033C80 File Offset: 0x00031E80
+		// Token: 0x06000ABA RID: 2746 RVA: 0x000346F4 File Offset: 0x000328F4
 		public unsafe static void PostValueInteger3(string category, string key, int valueA, int valueB, int valueC)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -179,11 +179,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06000A64 RID: 2660
+		// Token: 0x06000ABB RID: 2747
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueInteger2_Internal(in FString category, in FString key, int valueA, int valueB);
 
-		// Token: 0x06000A65 RID: 2661 RVA: 0x00033CBC File Offset: 0x00031EBC
+		// Token: 0x06000ABC RID: 2748 RVA: 0x00034730 File Offset: 0x00032930
 		public unsafe static void PostValueInteger2(string category, string key, int valueA, int valueB)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -193,11 +193,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06000A66 RID: 2662
+		// Token: 0x06000ABD RID: 2749
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueInteger1_Internal(in FString category, in FString key, int valueA);
 
-		// Token: 0x06000A67 RID: 2663 RVA: 0x00033CF4 File Offset: 0x00031EF4
+		// Token: 0x06000ABE RID: 2750 RVA: 0x00034768 File Offset: 0x00032968
 		public unsafe static void PostValueInteger1(string category, string key, int valueA)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -207,11 +207,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06000A68 RID: 2664
+		// Token: 0x06000ABF RID: 2751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueFloat3_Internal(in FString category, in FString key, float valueA, float valueB, float valueC);
 
-		// Token: 0x06000A69 RID: 2665 RVA: 0x00033D2C File Offset: 0x00031F2C
+		// Token: 0x06000AC0 RID: 2752 RVA: 0x000347A0 File Offset: 0x000329A0
 		public unsafe static void PostValueFloat3(string category, string key, float valueA, float valueB, float valueC)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -221,11 +221,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06000A6A RID: 2666
+		// Token: 0x06000AC1 RID: 2753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueFloat2_Internal(in FString category, in FString key, float valueA, float valueB);
 
-		// Token: 0x06000A6B RID: 2667 RVA: 0x00033D68 File Offset: 0x00031F68
+		// Token: 0x06000AC2 RID: 2754 RVA: 0x000347DC File Offset: 0x000329DC
 		public unsafe static void PostValueFloat2(string category, string key, float valueA, float valueB)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -235,11 +235,11 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06000A6C RID: 2668
+		// Token: 0x06000AC3 RID: 2755
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostValueFloat1_Internal(in FString category, in FString key, float valueA);
 
-		// Token: 0x06000A6D RID: 2669 RVA: 0x00033DA0 File Offset: 0x00031FA0
+		// Token: 0x06000AC4 RID: 2756 RVA: 0x00034814 File Offset: 0x00032A14
 		public unsafe static void PostValueFloat1(string category, string key, float valueA)
 		{
 			FString fstring = FString.AllocTemp(category);
@@ -249,51 +249,51 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring2, 1);
 		}
 
-		// Token: 0x06000A6E RID: 2670
+		// Token: 0x06000AC5 RID: 2757
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PostFrame_Internal(float deltaTime);
 
-		// Token: 0x06000A6F RID: 2671 RVA: 0x00033DD7 File Offset: 0x00031FD7
+		// Token: 0x06000AC6 RID: 2758 RVA: 0x0003484B File Offset: 0x00032A4B
 		public static void PostFrame(float deltaTime)
 		{
 			FKuroPerfSightHelper.PostFrame_Internal(deltaTime);
 		}
 
-		// Token: 0x06000A70 RID: 2672
+		// Token: 0x06000AC7 RID: 2759
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void MarkStartUpFinish_Internal();
 
-		// Token: 0x06000A71 RID: 2673 RVA: 0x00033DDF File Offset: 0x00031FDF
+		// Token: 0x06000AC8 RID: 2760 RVA: 0x00034853 File Offset: 0x00032A53
 		public static void MarkStartUpFinish()
 		{
 			FKuroPerfSightHelper.MarkStartUpFinish_Internal();
 		}
 
-		// Token: 0x06000A72 RID: 2674
+		// Token: 0x06000AC9 RID: 2761
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsOnFrameBeginRegistered_Internal();
 
-		// Token: 0x06000A73 RID: 2675 RVA: 0x00033DE6 File Offset: 0x00031FE6
+		// Token: 0x06000ACA RID: 2762 RVA: 0x0003485A File Offset: 0x00032A5A
 		public static bool IsOnFrameBeginRegistered()
 		{
 			return FKuroPerfSightHelper.IsOnFrameBeginRegistered_Internal();
 		}
 
-		// Token: 0x06000A74 RID: 2676
+		// Token: 0x06000ACB RID: 2763
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool IsBeginCallGraphCalled_Internal();
 
-		// Token: 0x06000A75 RID: 2677 RVA: 0x00033DED File Offset: 0x00031FED
+		// Token: 0x06000ACC RID: 2764 RVA: 0x00034861 File Offset: 0x00032A61
 		public static bool IsBeginCallGraphCalled()
 		{
 			return FKuroPerfSightHelper.IsBeginCallGraphCalled_Internal();
 		}
 
-		// Token: 0x06000A76 RID: 2678
+		// Token: 0x06000ACD RID: 2765
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void EndExtTag_Internal(in FString tagName);
 
-		// Token: 0x06000A77 RID: 2679 RVA: 0x00033DF4 File Offset: 0x00031FF4
+		// Token: 0x06000ACE RID: 2766 RVA: 0x00034868 File Offset: 0x00032A68
 		public unsafe static void EndExtTag(string tagName)
 		{
 			FString fstring = FString.AllocTemp(tagName);
@@ -301,12 +301,12 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06000A78 RID: 2680
+		// Token: 0x06000ACF RID: 2767
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void EndCallGraph_Internal(char* name);
 
-		// Token: 0x06000A79 RID: 2681 RVA: 0x00033E18 File Offset: 0x00032018
+		// Token: 0x06000AD0 RID: 2768 RVA: 0x0003488C File Offset: 0x00032A8C
 		[NullableContext(2)]
 		public unsafe static void EndCallGraph(string name)
 		{
@@ -330,21 +330,21 @@ namespace CSharpScript.Typing
 			char* ptr = null;
 		}
 
-		// Token: 0x06000A7A RID: 2682
+		// Token: 0x06000AD1 RID: 2769
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void EnableTimedReport_Internal();
 
-		// Token: 0x06000A7B RID: 2683 RVA: 0x00033E47 File Offset: 0x00032047
+		// Token: 0x06000AD2 RID: 2770 RVA: 0x000348BB File Offset: 0x00032ABB
 		public static void EnableTimedReport()
 		{
 			FKuroPerfSightHelper.EnableTimedReport_Internal();
 		}
 
-		// Token: 0x06000A7C RID: 2684
+		// Token: 0x06000AD3 RID: 2771
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void BeginExtTag_Internal(in FString tagName);
 
-		// Token: 0x06000A7D RID: 2685 RVA: 0x00033E50 File Offset: 0x00032050
+		// Token: 0x06000AD4 RID: 2772 RVA: 0x000348C4 File Offset: 0x00032AC4
 		public unsafe static void BeginExtTag(string tagName)
 		{
 			FString fstring = FString.AllocTemp(tagName);
@@ -352,12 +352,12 @@ namespace CSharpScript.Typing
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06000A7E RID: 2686
+		// Token: 0x06000AD5 RID: 2773
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void BeginCallGraph_Internal(char* name);
 
-		// Token: 0x06000A7F RID: 2687 RVA: 0x00033E74 File Offset: 0x00032074
+		// Token: 0x06000AD6 RID: 2774 RVA: 0x000348E8 File Offset: 0x00032AE8
 		[NullableContext(2)]
 		public unsafe static void BeginCallGraph(string name)
 		{

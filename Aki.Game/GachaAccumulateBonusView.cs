@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C62 RID: 7266
+// Token: 0x02001121 RID: 4385
 public class GachaAccumulateBonusView : UiViewBase
 {
-	// Token: 0x0600DB1A RID: 56090 RVA: 0x0032E7F1 File Offset: 0x0032C9F1
+	// Token: 0x0600AF30 RID: 44848 RVA: 0x00339C3D File Offset: 0x00337E3D
 	[NullableContext(1)]
 	public GachaAccumulateBonusView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DB1B RID: 56091 RVA: 0x0032E7FC File Offset: 0x0032C9FC
+	// Token: 0x0600AF31 RID: 44849 RVA: 0x00339C48 File Offset: 0x00337E48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -38,13 +38,13 @@ public class GachaAccumulateBonusView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DB1C RID: 56092 RVA: 0x0032E8A2 File Offset: 0x0032CAA2
+	// Token: 0x0600AF32 RID: 44850 RVA: 0x00339CEE File Offset: 0x00337EEE
 	private void OnMaskButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600DB1D RID: 56093 RVA: 0x0032E8AC File Offset: 0x0032CAAC
+	// Token: 0x0600AF33 RID: 44851 RVA: 0x00339CF8 File Offset: 0x00337EF8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaAccumulateBonusView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -55,19 +55,19 @@ public class GachaAccumulateBonusView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB1E RID: 56094 RVA: 0x0032E8EF File Offset: 0x0032CAEF
+	// Token: 0x0600AF34 RID: 44852 RVA: 0x00339D3B File Offset: 0x00337F3B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.GachaAccumulateRewardClaimed, new Action<int>(this.OnGachaAccumulateRewardClaimed));
 	}
 
-	// Token: 0x0600DB1F RID: 56095 RVA: 0x0032E90D File Offset: 0x0032CB0D
+	// Token: 0x0600AF35 RID: 44853 RVA: 0x00339D59 File Offset: 0x00337F59
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GachaAccumulateRewardClaimed, new Action<int>(this.OnGachaAccumulateRewardClaimed));
 	}
 
-	// Token: 0x0600DB20 RID: 56096 RVA: 0x0032E92B File Offset: 0x0032CB2B
+	// Token: 0x0600AF36 RID: 44854 RVA: 0x00339D77 File Offset: 0x00337F77
 	private void OnGachaAccumulateRewardClaimed(int accumulateId)
 	{
 		if (accumulateId == this.CurrentAccumulateId)
@@ -76,7 +76,7 @@ public class GachaAccumulateBonusView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DB21 RID: 56097 RVA: 0x0032E944 File Offset: 0x0032CB44
+	// Token: 0x0600AF37 RID: 44855 RVA: 0x00339D90 File Offset: 0x00337F90
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		GachaAccumulateBonusView.<OnPlayingStartSequenceAsync>d__9 <OnPlayingStartSequenceAsync>d__;
@@ -87,7 +87,7 @@ public class GachaAccumulateBonusView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB22 RID: 56098 RVA: 0x0032E988 File Offset: 0x0032CB88
+	// Token: 0x0600AF38 RID: 44856 RVA: 0x00339DD4 File Offset: 0x00337FD4
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		GachaAccumulateBonusView.<OnPlayingCloseSequenceAsync>d__10 <OnPlayingCloseSequenceAsync>d__;
@@ -98,7 +98,7 @@ public class GachaAccumulateBonusView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DB23 RID: 56099 RVA: 0x0032E9CC File Offset: 0x0032CBCC
+	// Token: 0x0600AF39 RID: 44857 RVA: 0x00339E18 File Offset: 0x00338018
 	protected override void OnBeforeShow()
 	{
 		object openParam = this.OpenParam;
@@ -116,16 +116,16 @@ public class GachaAccumulateBonusView : UiViewBase
 		this.Content.RefreshView(accumulateId);
 	}
 
-	// Token: 0x0600DB24 RID: 56100 RVA: 0x0032EA02 File Offset: 0x0032CC02
+	// Token: 0x0600AF3A RID: 44858 RVA: 0x00339E4E File Offset: 0x0033804E
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04006446 RID: 25670
+	// Token: 0x04006518 RID: 25880
 	[Nullable(2)]
 	private GachaAccumulateBonusContentBase Content;
 
-	// Token: 0x04006447 RID: 25671
+	// Token: 0x04006519 RID: 25881
 	private int CurrentAccumulateId;
 }

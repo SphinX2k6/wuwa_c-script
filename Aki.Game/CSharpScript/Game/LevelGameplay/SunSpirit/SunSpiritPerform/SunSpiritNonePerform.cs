@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 {
-	// Token: 0x02006A05 RID: 27141
+	// Token: 0x02005B62 RID: 23394
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritNonePerform : SunSpiritBasePerform, ISunSpiritScenePerform
 	{
-		// Token: 0x06043828 RID: 276520 RVA: 0x01082D4E File Offset: 0x01080F4E
+		// Token: 0x06039874 RID: 235636 RVA: 0x01027372 File Offset: 0x01025572
 		public SunSpiritNonePerform(SunSpiritData sunSpiritData, Transform initTransform) : base(sunSpiritData)
 		{
 			this.SavedTransform.Set(initTransform.GetLocation(), initTransform.GetRotation(), initTransform.GetScale3D());
 		}
 
-		// Token: 0x06043829 RID: 276521 RVA: 0x01082D80 File Offset: 0x01080F80
+		// Token: 0x06039875 RID: 235637 RVA: 0x010273A4 File Offset: 0x010255A4
 		[NullableContext(2)]
 		public bool GetTransformData(Vector outLocation = null, object outRotation = null, Vector outScale = null)
 		{
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x0604382A RID: 276522 RVA: 0x01082DEF File Offset: 0x01080FEF
+		// Token: 0x06039876 RID: 235638 RVA: 0x01027413 File Offset: 0x01025613
 		public bool GetTransform(Transform outTransform)
 		{
 			outTransform.Set(this.SavedTransform.GetLocation(), this.SavedTransform.GetRotation(), this.SavedTransform.GetScale3D());
 			return true;
 		}
 
-		// Token: 0x0604382B RID: 276523 RVA: 0x01082E1C File Offset: 0x0108101C
+		// Token: 0x06039877 RID: 235639 RVA: 0x01027440 File Offset: 0x01025640
 		[NullableContext(2)]
 		public bool SetTransformData(Vector inLocation = null, object inRotation = null, Vector inScale = null)
 		{
@@ -77,14 +77,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x0604382C RID: 276524 RVA: 0x01082E7C File Offset: 0x0108107C
+		// Token: 0x06039878 RID: 235640 RVA: 0x010274A0 File Offset: 0x010256A0
 		public bool SetTransform(Transform inTransform)
 		{
 			this.SavedTransform.Set(inTransform.GetLocation(), inTransform.GetRotation(), inTransform.GetScale3D());
 			return true;
 		}
 
-		// Token: 0x040233DB RID: 144347
+		// Token: 0x0401E5CD RID: 124365
 		private readonly Transform SavedTransform = Transform.Create();
 	}
 }

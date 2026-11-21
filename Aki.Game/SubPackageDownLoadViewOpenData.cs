@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A96 RID: 10902
+// Token: 0x02002012 RID: 8210
 public class SubPackageDownLoadViewOpenData
 {
-	// Token: 0x0400A872 RID: 43122
+	// Token: 0x0400AC78 RID: 44152
 	[Nullable(2)]
 	public int[] SubPackageIdList;
 
-	// Token: 0x0400A873 RID: 43123
+	// Token: 0x0400AC79 RID: 44153
 	public bool IsShowCloseBtn = true;
 }

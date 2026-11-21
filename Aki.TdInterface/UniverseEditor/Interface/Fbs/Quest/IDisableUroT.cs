@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DDA RID: 15834
+	// Token: 0x02004215 RID: 16917
 	public class IDisableUroT
 	{
-		// Token: 0x17006D58 RID: 27992
-		// (get) Token: 0x060161D7 RID: 90583 RVA: 0x0033240B File Offset: 0x0033060B
-		// (set) Token: 0x060161D8 RID: 90584 RVA: 0x00332413 File Offset: 0x00330613
+		// Token: 0x17007338 RID: 29496
+		// (get) Token: 0x060177F6 RID: 96246 RVA: 0x0035AE0F File Offset: 0x0035900F
+		// (set) Token: 0x060177F7 RID: 96247 RVA: 0x0035AE17 File Offset: 0x00359017
 		public ELogicProgramSpecialProcess Type { get; set; }
 
-		// Token: 0x17006D59 RID: 27993
-		// (get) Token: 0x060161D9 RID: 90585 RVA: 0x0033241C File Offset: 0x0033061C
-		// (set) Token: 0x060161DA RID: 90586 RVA: 0x00332424 File Offset: 0x00330624
+		// Token: 0x17007339 RID: 29497
+		// (get) Token: 0x060177F8 RID: 96248 RVA: 0x0035AE20 File Offset: 0x00359020
+		// (set) Token: 0x060177F9 RID: 96249 RVA: 0x0035AE28 File Offset: 0x00359028
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x060161DB RID: 90587 RVA: 0x0033242D File Offset: 0x0033062D
+		// Token: 0x060177FA RID: 96250 RVA: 0x0035AE31 File Offset: 0x00359031
 		public IDisableUroT()
 		{
 			this.Type = ELogicProgramSpecialProcess.DisableURO;

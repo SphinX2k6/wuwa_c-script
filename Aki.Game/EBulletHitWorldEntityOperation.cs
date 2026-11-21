@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002DBF RID: 11711
+// Token: 0x02002319 RID: 8985
 public enum EBulletHitWorldEntityOperation
 {
-	// Token: 0x0400B70F RID: 46863
+	// Token: 0x0400BA8A RID: 47754
 	AddBuff,
-	// Token: 0x0400B710 RID: 46864
+	// Token: 0x0400BA8B RID: 47755
 	Hit,
-	// Token: 0x0400B711 RID: 46865
+	// Token: 0x0400BA8C RID: 47756
 	DodgeBullet,
-	// Token: 0x0400B712 RID: 46866
+	// Token: 0x0400BA8D RID: 47757
 	AddBuffWithRef,
-	// Token: 0x0400B713 RID: 46867
+	// Token: 0x0400BA8E RID: 47758
 	RemoveBuffWithRef
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A48 RID: 19016
+	// Token: 0x02004F0E RID: 20238
 	public struct ICheckHcMusicBeats : IFlatbufferObject
 	{
-		// Token: 0x170089AB RID: 35243
-		// (get) Token: 0x0601DC70 RID: 121968 RVA: 0x0042FC60 File Offset: 0x0042DE60
+		// Token: 0x17009087 RID: 36999
+		// (get) Token: 0x0601F713 RID: 128787 RVA: 0x00460DEC File Offset: 0x0045EFEC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DC71 RID: 121969 RVA: 0x0042FC6D File Offset: 0x0042DE6D
+		// Token: 0x0601F714 RID: 128788 RVA: 0x00460DF9 File Offset: 0x0045EFF9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DC72 RID: 121970 RVA: 0x0042FC74 File Offset: 0x0042DE74
+		// Token: 0x0601F715 RID: 128789 RVA: 0x00460E00 File Offset: 0x0045F000
 		public static ICheckHcMusicBeats GetRootAsICheckHcMusicBeats(ByteBuffer _bb)
 		{
 			return ICheckHcMusicBeats.GetRootAsICheckHcMusicBeats(_bb, default(ICheckHcMusicBeats));
 		}
 
-		// Token: 0x0601DC73 RID: 121971 RVA: 0x0042FC90 File Offset: 0x0042DE90
+		// Token: 0x0601F716 RID: 128790 RVA: 0x00460E1C File Offset: 0x0045F01C
 		public static ICheckHcMusicBeats GetRootAsICheckHcMusicBeats(ByteBuffer _bb, ICheckHcMusicBeats obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DC74 RID: 121972 RVA: 0x0042FCAD File Offset: 0x0042DEAD
+		// Token: 0x0601F717 RID: 128791 RVA: 0x00460E39 File Offset: 0x0045F039
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DC75 RID: 121973 RVA: 0x0042FCBC File Offset: 0x0042DEBC
+		// Token: 0x0601F718 RID: 128792 RVA: 0x00460E48 File Offset: 0x0045F048
 		public ICheckHcMusicBeats __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170089AC RID: 35244
-		// (get) Token: 0x0601DC76 RID: 121974 RVA: 0x0042FCCC File Offset: 0x0042DECC
+		// Token: 0x17009088 RID: 37000
+		// (get) Token: 0x0601F719 RID: 128793 RVA: 0x00460E58 File Offset: 0x0045F058
 		public EMusicEventType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x170089AD RID: 35245
-		// (get) Token: 0x0601DC77 RID: 121975 RVA: 0x0042FD08 File Offset: 0x0042DF08
+		// Token: 0x17009089 RID: 37001
+		// (get) Token: 0x0601F71A RID: 128794 RVA: 0x00460E94 File Offset: 0x0045F094
 		public string BeatType
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DC78 RID: 121976 RVA: 0x0042FD3F File Offset: 0x0042DF3F
+		// Token: 0x0601F71B RID: 128795 RVA: 0x00460ECB File Offset: 0x0045F0CB
 		public Span<byte> GetBeatTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601DC79 RID: 121977 RVA: 0x0042FD4E File Offset: 0x0042DF4E
+		// Token: 0x0601F71C RID: 128796 RVA: 0x00460EDA File Offset: 0x0045F0DA
 		public byte[] GetBeatTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601DC7A RID: 121978 RVA: 0x0042FD5C File Offset: 0x0042DF5C
+		// Token: 0x0601F71D RID: 128797 RVA: 0x00460EE8 File Offset: 0x0045F0E8
 		public static Offset<ICheckHcMusicBeats> CreateICheckHcMusicBeats(FlatBufferBuilder builder, EMusicEventType Type = EMusicEventType.HcMusicBattle, StringOffset BeatTypeOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckHcMusicBeats.EndICheckHcMusicBeats(builder);
 		}
 
-		// Token: 0x0601DC7B RID: 121979 RVA: 0x0042FD79 File Offset: 0x0042DF79
+		// Token: 0x0601F71E RID: 128798 RVA: 0x00460F05 File Offset: 0x0045F105
 		public static void StartICheckHcMusicBeats(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DC7C RID: 121980 RVA: 0x0042FD82 File Offset: 0x0042DF82
+		// Token: 0x0601F71F RID: 128799 RVA: 0x00460F0E File Offset: 0x0045F10E
 		public static void AddType(FlatBufferBuilder builder, EMusicEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DC7D RID: 121981 RVA: 0x0042FD8D File Offset: 0x0042DF8D
+		// Token: 0x0601F720 RID: 128800 RVA: 0x00460F19 File Offset: 0x0045F119
 		public static void AddBeatType(FlatBufferBuilder builder, StringOffset beatTypeOffset)
 		{
 			builder.AddOffset(1, beatTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601DC7E RID: 121982 RVA: 0x0042FD9D File Offset: 0x0042DF9D
+		// Token: 0x0601F721 RID: 128801 RVA: 0x00460F29 File Offset: 0x0045F129
 		public static Offset<ICheckHcMusicBeats> EndICheckHcMusicBeats(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckHcMusicBeats>(builder.EndTable());
 		}
 
-		// Token: 0x0601DC7F RID: 121983 RVA: 0x0042FDAC File Offset: 0x0042DFAC
+		// Token: 0x0601F722 RID: 128802 RVA: 0x00460F38 File Offset: 0x0045F138
 		public ICheckHcMusicBeatsT UnPack()
 		{
 			ICheckHcMusicBeatsT checkHcMusicBeatsT = new ICheckHcMusicBeatsT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkHcMusicBeatsT;
 		}
 
-		// Token: 0x0601DC80 RID: 121984 RVA: 0x0042FDC7 File Offset: 0x0042DFC7
+		// Token: 0x0601F723 RID: 128803 RVA: 0x00460F53 File Offset: 0x0045F153
 		public void UnPackTo(ICheckHcMusicBeatsT _o)
 		{
 			_o.Type = this.Type;
 			_o.BeatType = this.BeatType;
 		}
 
-		// Token: 0x0601DC81 RID: 121985 RVA: 0x0042FDE4 File Offset: 0x0042DFE4
+		// Token: 0x0601F724 RID: 128804 RVA: 0x00460F70 File Offset: 0x0045F170
 		public static Offset<ICheckHcMusicBeats> Pack(FlatBufferBuilder builder, ICheckHcMusicBeatsT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckHcMusicBeats.CreateICheckHcMusicBeats(builder, _o.Type, beatTypeOffset);
 		}
 
-		// Token: 0x0400D29F RID: 53919
+		// Token: 0x0400DD7A RID: 56698
 		private Table __p;
 	}
 }

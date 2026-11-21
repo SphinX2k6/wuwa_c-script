@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F73 RID: 28531
+	// Token: 0x02007739 RID: 30521
 	public class ISendNpcMailT
 	{
-		// Token: 0x1700D3F2 RID: 54258
-		// (get) Token: 0x06032687 RID: 206471 RVA: 0x006CDF3E File Offset: 0x006CC13E
-		// (set) Token: 0x06032688 RID: 206472 RVA: 0x006CDF46 File Offset: 0x006CC146
+		// Token: 0x1700DFC1 RID: 57281
+		// (get) Token: 0x060358D7 RID: 219351 RVA: 0x0072D8F6 File Offset: 0x0072BAF6
+		// (set) Token: 0x060358D8 RID: 219352 RVA: 0x0072D8FE File Offset: 0x0072BAFE
 		public int MailId { get; set; }
 
-		// Token: 0x06032689 RID: 206473 RVA: 0x006CDF4F File Offset: 0x006CC14F
+		// Token: 0x060358D9 RID: 219353 RVA: 0x0072D907 File Offset: 0x0072BB07
 		public ISendNpcMailT()
 		{
 			this.MailId = 0;

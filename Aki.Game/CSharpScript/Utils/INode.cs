@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004510 RID: 17680
+	// Token: 0x02003432 RID: 13362
 	[NullableContext(1)]
 	public interface INode
 	{
-		// Token: 0x170073E7 RID: 29671
-		// (get) Token: 0x0602D80C RID: 186380
-		// (set) Token: 0x0602D80D RID: 186381
+		// Token: 0x1700469F RID: 18079
+		// (get) Token: 0x06021EDC RID: 138972
+		// (set) Token: 0x06021EDD RID: 138973
 		ENodeType NodeType { get; set; }
 
-		// Token: 0x170073E8 RID: 29672
-		// (get) Token: 0x0602D80E RID: 186382
-		// (set) Token: 0x0602D80F RID: 186383
+		// Token: 0x170046A0 RID: 18080
+		// (get) Token: 0x06021EDE RID: 138974
+		// (set) Token: 0x06021EDF RID: 138975
 		string Name { get; set; }
 
-		// Token: 0x170073E9 RID: 29673
-		// (get) Token: 0x0602D810 RID: 186384
-		// (set) Token: 0x0602D811 RID: 186385
+		// Token: 0x170046A1 RID: 18081
+		// (get) Token: 0x06021EE0 RID: 138976
+		// (set) Token: 0x06021EE1 RID: 138977
 		TFormulaValue Value { get; set; }
 
-		// Token: 0x170073EA RID: 29674
-		// (get) Token: 0x0602D812 RID: 186386
-		// (set) Token: 0x0602D813 RID: 186387
+		// Token: 0x170046A2 RID: 18082
+		// (get) Token: 0x06021EE2 RID: 138978
+		// (set) Token: 0x06021EE3 RID: 138979
 		[Nullable(new byte[]
 		{
 			2,

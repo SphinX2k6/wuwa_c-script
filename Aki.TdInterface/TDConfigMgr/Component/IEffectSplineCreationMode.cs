@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002F5 RID: 757
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200033C RID: 828
 	public class IEffectSplineCreationMode
 	{
-		// Token: 0x06000E9D RID: 3741 RVA: 0x00034AFC File Offset: 0x00032CFC
+		// Token: 0x06000FCD RID: 4045 RVA: 0x00037A30 File Offset: 0x00035C30
 		private IEffectSplineCreationMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E9E RID: 3742 RVA: 0x00034B34 File Offset: 0x00032D34
+		// Token: 0x06000FCE RID: 4046 RVA: 0x00037A68 File Offset: 0x00035C68
 		public static IEffectSplineCreationMode Create([Nullable(2)] IEffectSplineCreationMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E9F RID: 3743 RVA: 0x00034B47 File Offset: 0x00032D47
+		// Token: 0x06000FCF RID: 4047 RVA: 0x00037A7B File Offset: 0x00035C7B
 		public static IEffectSplineCreationMode CreateFromSetValue([Nullable(2)] IEffectSplineCreationMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000EA0 RID: 3744 RVA: 0x00034B5A File Offset: 0x00032D5A
+		// Token: 0x06000FD0 RID: 4048 RVA: 0x00037A8E File Offset: 0x00035C8E
 		public IEffectSplineCreationMode_SetValue ToSetValue()
 		{
 			return new IEffectSplineCreationMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700043C RID: 1084
-		// (get) Token: 0x06000EA1 RID: 3745 RVA: 0x00034B6D File Offset: 0x00032D6D
-		// (set) Token: 0x06000EA2 RID: 3746 RVA: 0x00034B98 File Offset: 0x00032D98
+		// Token: 0x17000489 RID: 1161
+		// (get) Token: 0x06000FD1 RID: 4049 RVA: 0x00037AA1 File Offset: 0x00035CA1
+		// (set) Token: 0x06000FD2 RID: 4050 RVA: 0x00037ACC File Offset: 0x00035CCC
 		public virtual EEffectSplineCreateMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CDF RID: 3295
+		// Token: 0x04000DC9 RID: 3529
 		[Nullable(2)]
 		protected IEffectSplineCreationMode FbInstance;
 
-		// Token: 0x04000CE0 RID: 3296
+		// Token: 0x04000DCA RID: 3530
 		[Nullable(2)]
 		protected IEffectSplineCreationMode_SetValue PocoInterface;
 	}

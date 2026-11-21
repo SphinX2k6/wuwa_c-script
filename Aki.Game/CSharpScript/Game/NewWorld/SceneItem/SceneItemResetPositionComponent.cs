@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007190 RID: 29072
+	// Token: 0x02006244 RID: 25156
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemResetPositionComponent : EntityComponent
 	{
-		// Token: 0x060471E8 RID: 291304 RVA: 0x0120CF44 File Offset: 0x0120B144
+		// Token: 0x0603CAAC RID: 248492 RVA: 0x01166BD0 File Offset: 0x01164DD0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			ResetEntitiesPosComponent resetEntitiesPosComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemResetPositionComponent>() as ResetEntitiesPosComponent;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471E9 RID: 291305 RVA: 0x0120CF84 File Offset: 0x0120B184
+		// Token: 0x0603CAAD RID: 248493 RVA: 0x01166C10 File Offset: 0x01164E10
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.InitTrigger();
 		}
 
-		// Token: 0x060471EA RID: 291306 RVA: 0x0120D018 File Offset: 0x0120B218
+		// Token: 0x0603CAAE RID: 248494 RVA: 0x01166CA4 File Offset: 0x01164EA4
 		private unsafe bool InitTrigger()
 		{
 			SceneItemResetPositionComponent.<>c__DisplayClass13_0 CS$<>8__locals1 = new SceneItemResetPositionComponent.<>c__DisplayClass13_0();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x060471EB RID: 291307 RVA: 0x0120D1FC File Offset: 0x0120B3FC
+		// Token: 0x0603CAAF RID: 248495 RVA: 0x01166E88 File Offset: 0x01165088
 		protected override bool OnClear()
 		{
 			this.RemoveEvent();
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471EC RID: 291308 RVA: 0x0120D260 File Offset: 0x0120B460
+		// Token: 0x0603CAB0 RID: 248496 RVA: 0x01166EEC File Offset: 0x011650EC
 		private void AddEvent()
 		{
 			EventSystem.Instance.Add<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnAddEntity));
@@ -139,14 +139,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.AddWithTargetUseHoldKey<ERemoveEntityType, EntityHandle>(this, entityByPbDataId2, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x060471ED RID: 291309 RVA: 0x0120D32C File Offset: 0x0120B52C
+		// Token: 0x0603CAB1 RID: 248497 RVA: 0x01166FB8 File Offset: 0x011651B8
 		private void RemoveEvent()
 		{
 			EventSystem.Instance.Remove<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnAddEntity));
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
 		}
 
-		// Token: 0x060471EE RID: 291310 RVA: 0x0120D358 File Offset: 0x0120B558
+		// Token: 0x0603CAB2 RID: 248498 RVA: 0x01166FE4 File Offset: 0x011651E4
 		[NullableContext(1)]
 		public void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.RemoveWithTargetUseKey(this, handle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x060471EF RID: 291311 RVA: 0x0120D3CC File Offset: 0x0120B5CC
+		// Token: 0x0603CAB3 RID: 248499 RVA: 0x01167058 File Offset: 0x01165258
 		[NullableContext(1)]
 		private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DestroyedEntities.RemoveAt(index);
 		}
 
-		// Token: 0x060471F0 RID: 291312 RVA: 0x0120D470 File Offset: 0x0120B670
+		// Token: 0x0603CAB4 RID: 248500 RVA: 0x011670FC File Offset: 0x011652FC
 		[NullableContext(1)]
 		private void InitBoxShape(IBoxTriggerShape shape)
 		{
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ShapeComp.K2_SetRelativeRotation(rotator.ToUeRotator(), false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x060471F1 RID: 291313 RVA: 0x0120D680 File Offset: 0x0120B880
+		// Token: 0x0603CAB5 RID: 248501 RVA: 0x0116730C File Offset: 0x0116550C
 		[NullableContext(1)]
 		private void InitSphereShape(ISphereTriggerShape shape)
 		{
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ShapeComp.D_K2_SetWorldLocation(vector.ToUeVector(false), false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x060471F2 RID: 291314 RVA: 0x0120D7BC File Offset: 0x0120B9BC
+		// Token: 0x0603CAB6 RID: 248502 RVA: 0x01167448 File Offset: 0x01165648
 		[NullableContext(1)]
 		private void InitTriggerVolume(IVolumeTriggerShape shape)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TriggerItem = kuroTriggerVolume;
 		}
 
-		// Token: 0x060471F3 RID: 291315 RVA: 0x0120D829 File Offset: 0x0120BA29
+		// Token: 0x0603CAB7 RID: 248503 RVA: 0x011674B5 File Offset: 0x011656B5
 		private EntityHandle ExtractEntity(AActor actor)
 		{
 			if (!(actor is IBPI_CreatureInterface_C))
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return ActorUtils.GetEntityByActor(actor, true);
 		}
 
-		// Token: 0x060471F4 RID: 291316 RVA: 0x0120D83C File Offset: 0x0120BA3C
+		// Token: 0x0603CAB8 RID: 248504 RVA: 0x011674C8 File Offset: 0x011656C8
 		private void OnActorEndOverlap(AActor overlapped, AActor otherActor)
 		{
 			if (this.Deleting)
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGamePlayController.Instance.OnManipulatableItemExitAreaInternal(entityHandle, null, base.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId());
 		}
 
-		// Token: 0x060471F5 RID: 291317 RVA: 0x0120D8E8 File Offset: 0x0120BAE8
+		// Token: 0x0603CAB9 RID: 248505 RVA: 0x01167574 File Offset: 0x01165774
 		private void OnComponentEndOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex)
 		{
 			if (this.Deleting)
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGamePlayController.Instance.OnManipulatableItemExitAreaInternal(entityHandle, null, base.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId());
 		}
 
-		// Token: 0x060471F6 RID: 291318 RVA: 0x0120D994 File Offset: 0x0120BB94
+		// Token: 0x0603CABA RID: 248506 RVA: 0x01167620 File Offset: 0x01165820
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -380,129 +380,119 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemResetPositionComponent sceneItemResetPositionComponent = (SceneItemResetPositionComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TriggerItem"))
+			if (sceneItemResetPositionComponent.TriggerItem == null)
 			{
-				if (sceneItemResetPositionComponent.TriggerItem == null)
-				{
-					this.TriggerItem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.TriggerItem), "TriggerItem"))
-				{
-					return false;
-				}
+				this.TriggerItem = null;
 			}
-			if (base.CanResetComponentProperty("IsTriggerItemDynamic"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TriggerItem), "TriggerItem"))
 			{
-				this.IsTriggerItemDynamic = sceneItemResetPositionComponent.IsTriggerItemDynamic;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ShapeComp"))
+			this.IsTriggerItemDynamic = sceneItemResetPositionComponent.IsTriggerItemDynamic;
+			if (sceneItemResetPositionComponent.ShapeComp == null)
 			{
-				if (sceneItemResetPositionComponent.ShapeComp == null)
-				{
-					this.ShapeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UShapeComponent>(this.ShapeComp), "ShapeComp"))
-				{
-					return false;
-				}
+				this.ShapeComp = null;
 			}
-			if (base.CanResetComponentProperty("Entities"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShapeComp), "ShapeComp"))
 			{
-				if (sceneItemResetPositionComponent.Entities == null)
-				{
-					this.Entities = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.Entities), "Entities"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("InitTransform"))
+			if (sceneItemResetPositionComponent.Entities == null)
 			{
-				this.InitTransform = sceneItemResetPositionComponent.InitTransform;
+				this.Entities = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Entities), "Entities"))
 			{
-				if (sceneItemResetPositionComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ResetEntitiesPosComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DestroyedEntities"))
+			this.InitTransform = sceneItemResetPositionComponent.InitTransform;
+			if (sceneItemResetPositionComponent.Config == null)
 			{
-				if (sceneItemResetPositionComponent.DestroyedEntities == null)
-				{
-					this.DestroyedEntities = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.DestroyedEntities), "DestroyedEntities"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemResetPositionComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Deleting"))
+			if (sceneItemResetPositionComponent.DestroyedEntities == null)
 			{
-				this.Deleting = sceneItemResetPositionComponent.Deleting;
+				this.DestroyedEntities = null;
 			}
-			if (base.CanResetComponentProperty("TriggerVolumeManager"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DestroyedEntities), "DestroyedEntities"))
 			{
-				if (sceneItemResetPositionComponent.TriggerVolumeManager == null)
-				{
-					this.TriggerVolumeManager = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroTriggerVolumeManager>(this.TriggerVolumeManager), "TriggerVolumeManager"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemResetPositionComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+			{
+				return false;
+			}
+			this.Deleting = sceneItemResetPositionComponent.Deleting;
+			if (sceneItemResetPositionComponent.TriggerVolumeManager == null)
+			{
+				this.TriggerVolumeManager = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TriggerVolumeManager), "TriggerVolumeManager"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025635 RID: 153141
+		// Token: 0x170072BF RID: 29375
+		// (get) Token: 0x0603CABB RID: 248507 RVA: 0x01167791 File Offset: 0x01165991
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072C0 RID: 29376
+		// (get) Token: 0x0603CABC RID: 248508 RVA: 0x01167794 File Offset: 0x01165994
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402029C RID: 131740
 		private static readonly FName TRIGGER_COMPONENT_TAG = new FName("TriggerComponent");
 
-		// Token: 0x04025636 RID: 153142
+		// Token: 0x0402029D RID: 131741
 		private AActor TriggerItem;
 
-		// Token: 0x04025637 RID: 153143
+		// Token: 0x0402029E RID: 131742
 		private bool IsTriggerItemDynamic;
 
-		// Token: 0x04025638 RID: 153144
+		// Token: 0x0402029F RID: 131743
 		private UShapeComponent ShapeComp;
 
-		// Token: 0x04025639 RID: 153145
+		// Token: 0x040202A0 RID: 131744
 		private List<int> Entities;
 
-		// Token: 0x0402563A RID: 153146
+		// Token: 0x040202A1 RID: 131745
 		private FTransformDouble? InitTransform;
 
-		// Token: 0x0402563B RID: 153147
+		// Token: 0x040202A2 RID: 131746
 		private ResetEntitiesPosComponent Config;
 
-		// Token: 0x0402563C RID: 153148
+		// Token: 0x040202A3 RID: 131747
 		private List<int> DestroyedEntities;
 
-		// Token: 0x0402563D RID: 153149
+		// Token: 0x040202A4 RID: 131748
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x0402563E RID: 153150
+		// Token: 0x040202A5 RID: 131749
 		private bool Deleting;
 
-		// Token: 0x0402563F RID: 153151
+		// Token: 0x040202A6 RID: 131750
 		private UKuroTriggerVolumeManager TriggerVolumeManager;
 	}
 }

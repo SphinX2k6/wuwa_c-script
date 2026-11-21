@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200256A RID: 9578
+// Token: 0x02001A55 RID: 6741
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 {
-	// Token: 0x06013558 RID: 79192 RVA: 0x004CFAD4 File Offset: 0x004CDCD4
+	// Token: 0x06010A3A RID: 68154 RVA: 0x004DE70C File Offset: 0x004DC90C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,13 +30,13 @@ public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 		};
 	}
 
-	// Token: 0x06013559 RID: 79193 RVA: 0x004CFBC1 File Offset: 0x004CDDC1
+	// Token: 0x06010A3B RID: 68155 RVA: 0x004DE7F9 File Offset: 0x004DC9F9
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x0601355A RID: 79194 RVA: 0x004CFBD0 File Offset: 0x004CDDD0
+	// Token: 0x06010A3C RID: 68156 RVA: 0x004DE808 File Offset: 0x004DCA08
 	public override void Refresh(FilterSetting data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -47,7 +47,7 @@ public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 		this.SetToggleState(isSelected, false);
 	}
 
-	// Token: 0x0601355B RID: 79195 RVA: 0x004CFC35 File Offset: 0x004CDE35
+	// Token: 0x06010A3D RID: 68157 RVA: 0x004DE86D File Offset: 0x004DCA6D
 	public void SetToggleState(bool isSelect, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -58,27 +58,27 @@ public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x0601355C RID: 79196 RVA: 0x004CFC52 File Offset: 0x004CDE52
+	// Token: 0x06010A3E RID: 68158 RVA: 0x004DE88A File Offset: 0x004DCA8A
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 		this.SetEditBtnActive(true);
 	}
 
-	// Token: 0x0601355D RID: 79197 RVA: 0x004CFC63 File Offset: 0x004CDE63
+	// Token: 0x06010A3F RID: 68159 RVA: 0x004DE89B File Offset: 0x004DCA9B
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 		this.SetEditBtnActive(false);
 	}
 
-	// Token: 0x0601355E RID: 79198 RVA: 0x004CFC74 File Offset: 0x004CDE74
+	// Token: 0x06010A40 RID: 68160 RVA: 0x004DE8AC File Offset: 0x004DCAAC
 	public override object GetKey(FilterSetting data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0601355F RID: 79199 RVA: 0x004CFC84 File Offset: 0x004CDE84
+	// Token: 0x06010A41 RID: 68161 RVA: 0x004DE8BC File Offset: 0x004DCABC
 	private void RefreshRedDot(FilterSetting data)
 	{
 		bool flag;
@@ -91,7 +91,7 @@ public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 		sprite.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06013560 RID: 79200 RVA: 0x004CFCC0 File Offset: 0x004CDEC0
+	// Token: 0x06010A42 RID: 68162 RVA: 0x004DE8F8 File Offset: 0x004DCAF8
 	private void SetEditBtnActive(bool active)
 	{
 		UUIButtonComponent button = base.GetButton(5);
@@ -107,7 +107,7 @@ public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 		uuiitem.SetUIActive(active);
 	}
 
-	// Token: 0x06013561 RID: 79201 RVA: 0x004CFCF1 File Offset: 0x004CDEF1
+	// Token: 0x06010A43 RID: 68163 RVA: 0x004DE929 File Offset: 0x004DCB29
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -117,42 +117,42 @@ public class PhotoFilterSetItem : GridProxyAbstract<FilterSetting>
 		this.OnFilterClick(this.Data);
 	}
 
-	// Token: 0x06013562 RID: 79202 RVA: 0x004CFD09 File Offset: 0x004CDF09
+	// Token: 0x06010A44 RID: 68164 RVA: 0x004DE941 File Offset: 0x004DCB41
 	private void OnEditHoldClick()
 	{
 		this.OnEditClick(this.Data);
 	}
 
-	// Token: 0x040091C3 RID: 37315
+	// Token: 0x0400931C RID: 37660
 	private FilterSetting Data;
 
-	// Token: 0x040091C4 RID: 37316
+	// Token: 0x0400931D RID: 37661
 	public Action<FilterSetting> OnFilterClick = delegate(FilterSetting data)
 	{
 	};
 
-	// Token: 0x040091C5 RID: 37317
+	// Token: 0x0400931E RID: 37662
 	public Action<FilterSetting> OnEditClick = delegate(FilterSetting data)
 	{
 	};
 
-	// Token: 0x02008B4D RID: 35661
+	// Token: 0x02007CD3 RID: 31955
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D3B1 RID: 185265
+		// Token: 0x040286BE RID: 165566
 		ToggleItem,
-		// Token: 0x0402D3B2 RID: 185266
+		// Token: 0x040286BF RID: 165567
 		ItemNormalState,
-		// Token: 0x0402D3B3 RID: 185267
+		// Token: 0x040286C0 RID: 165568
 		ItemContent,
-		// Token: 0x0402D3B4 RID: 185268
+		// Token: 0x040286C1 RID: 165569
 		TextureBg,
-		// Token: 0x0402D3B5 RID: 185269
+		// Token: 0x040286C2 RID: 165570
 		TextTitle,
-		// Token: 0x0402D3B6 RID: 185270
+		// Token: 0x040286C3 RID: 165571
 		BtnEditHold,
-		// Token: 0x0402D3B7 RID: 185271
+		// Token: 0x040286C4 RID: 165572
 		SpriteRedDot
 	}
 }

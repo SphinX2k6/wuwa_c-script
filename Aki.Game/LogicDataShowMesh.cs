@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E00 RID: 11776
+// Token: 0x0200235B RID: 9051
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataShowMesh.LogicDataShowMesh_C")]
 public class LogicDataShowMesh : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002222 RID: 8738
-	// (get) Token: 0x06018C1D RID: 101405 RVA: 0x00659634 File Offset: 0x00657834
-	// (set) Token: 0x06018C1E RID: 101406 RVA: 0x0065966D File Offset: 0x0065786D
+	// Token: 0x17002286 RID: 8838
+	// (get) Token: 0x060164D2 RID: 91346 RVA: 0x0067F6B8 File Offset: 0x0067D8B8
+	// (set) Token: 0x060164D3 RID: 91347 RVA: 0x0067F6F1 File Offset: 0x0067D8F1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath MaterialEffect
 	{
@@ -35,7 +35,7 @@ public class LogicDataShowMesh : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018C1F RID: 101407 RVA: 0x00659695 File Offset: 0x00657895
+	// Token: 0x060164D4 RID: 91348 RVA: 0x0067F719 File Offset: 0x0067D919
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataShowMesh._ClassPtr == IntPtr.Zero)
@@ -45,34 +45,34 @@ public class LogicDataShowMesh : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataShowMesh._ClassPtr;
 	}
 
-	// Token: 0x06018C20 RID: 101408 RVA: 0x006596BC File Offset: 0x006578BC
+	// Token: 0x060164D5 RID: 91349 RVA: 0x0067F740 File Offset: 0x0067D940
 	public LogicDataShowMesh() : this(BuiltinUtils.AllocNativeUObject(LogicDataShowMesh.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018C21 RID: 101409 RVA: 0x006596E4 File Offset: 0x006578E4
+	// Token: 0x060164D6 RID: 91350 RVA: 0x0067F768 File Offset: 0x0067D968
 	public LogicDataShowMesh(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataShowMesh.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018C22 RID: 101410 RVA: 0x00659717 File Offset: 0x00657917
+	// Token: 0x060164D7 RID: 91351 RVA: 0x0067F79B File Offset: 0x0067D99B
 	protected LogicDataShowMesh(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B8CF RID: 47311
+	// Token: 0x0400BC55 RID: 48213
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataShowMesh.LogicDataShowMesh_C";
 
-	// Token: 0x0400B8D0 RID: 47312
+	// Token: 0x0400BC56 RID: 48214
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B8D1 RID: 47313
+	// Token: 0x0400BC57 RID: 48215
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B8D2 RID: 47314
+	// Token: 0x0400BC58 RID: 48216
 	private static int __PropertyOffset_MaterialEffect;
 
-	// Token: 0x0400B8D3 RID: 47315
+	// Token: 0x0400BC59 RID: 48217
 	[Nullable(2)]
 	private FSoftObjectPath _MaterialEffect;
 }

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x0200195E RID: 6494
+// Token: 0x02000E1B RID: 3611
 public class SelectablePropVisionRecoveryItemGrid : SelectablePropMediumItemGrid
 {
-	// Token: 0x0600BDEE RID: 48622 RVA: 0x002AF28A File Offset: 0x002AD48A
+	// Token: 0x060091F1 RID: 37361 RVA: 0x002BA0CE File Offset: 0x002B82CE
 	public override void RefreshCostCount()
 	{
 		if (this.SelectablePropData == null)
@@ -16,7 +16,7 @@ public class SelectablePropVisionRecoveryItemGrid : SelectablePropMediumItemGrid
 		this.RefreshUi(this.SelectablePropData);
 	}
 
-	// Token: 0x0600BDEF RID: 48623 RVA: 0x002AF2A4 File Offset: 0x002AD4A4
+	// Token: 0x060091F2 RID: 37362 RVA: 0x002BA0E8 File Offset: 0x002B82E8
 	[NullableContext(1)]
 	public override void RefreshUi(SelectablePropData data)
 	{

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001852 RID: 6226
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019DD RID: 6621
 	public class ICameraShakeConfig
 	{
-		// Token: 0x060085C7 RID: 34247 RVA: 0x0013E1F0 File Offset: 0x0013C3F0
+		// Token: 0x06008CED RID: 36077 RVA: 0x0014D9E4 File Offset: 0x0014BBE4
 		private ICameraShakeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060085C8 RID: 34248 RVA: 0x0013E228 File Offset: 0x0013C428
+		// Token: 0x06008CEE RID: 36078 RVA: 0x0014DA1C File Offset: 0x0014BC1C
 		public static ICameraShakeConfig Create([Nullable(2)] ICameraShakeConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060085C9 RID: 34249 RVA: 0x0013E23B File Offset: 0x0013C43B
+		// Token: 0x06008CEF RID: 36079 RVA: 0x0014DA2F File Offset: 0x0014BC2F
 		public static ICameraShakeConfig CreateFromSetValue([Nullable(2)] ICameraShakeConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060085CA RID: 34250 RVA: 0x0013E24E File Offset: 0x0013C44E
+		// Token: 0x06008CF0 RID: 36080 RVA: 0x0014DA42 File Offset: 0x0014BC42
 		public ICameraShakeConfig_SetValue ToSetValue()
 		{
 			return new ICameraShakeConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BBD RID: 11197
-		// (get) Token: 0x060085CB RID: 34251 RVA: 0x0013E261 File Offset: 0x0013C461
-		// (set) Token: 0x060085CC RID: 34252 RVA: 0x0013E28C File Offset: 0x0013C48C
+		// Token: 0x17002DB7 RID: 11703
+		// (get) Token: 0x06008CF1 RID: 36081 RVA: 0x0014DA55 File Offset: 0x0014BC55
+		// (set) Token: 0x06008CF2 RID: 36082 RVA: 0x0014DA80 File Offset: 0x0014BC80
 		public virtual ECameraShakeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400547A RID: 21626
+		// Token: 0x040058C6 RID: 22726
 		[Nullable(2)]
 		protected ICameraShakeConfig FbInstance;
 
-		// Token: 0x0400547B RID: 21627
+		// Token: 0x040058C7 RID: 22727
 		[Nullable(2)]
 		protected ICameraShakeConfig_SetValue PocoInterface;
 	}

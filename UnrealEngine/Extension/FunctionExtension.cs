@@ -5,10 +5,10 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002ADD RID: 10973
+	// Token: 0x0200088C RID: 2188
 	public static class FunctionExtension
 	{
-		// Token: 0x060283DA RID: 164826 RVA: 0x003D3458 File Offset: 0x003D1658
+		// Token: 0x0600BD8D RID: 48525 RVA: 0x0012E748 File Offset: 0x0012C948
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[return: Nullable(new byte[]
 		{
@@ -20,7 +20,7 @@ namespace UnrealEngine.Extension
 			return new TWeakObjectPtr<UFunction>(BuiltinUtils.GetOrCreateUObjectByNativePointer<UFunction>(Ptr.FunctionPtr));
 		}
 
-		// Token: 0x060283DB RID: 164827 RVA: 0x003D346B File Offset: 0x003D166B
+		// Token: 0x0600BD8E RID: 48526 RVA: 0x0012E75B File Offset: 0x0012C95B
 		[NullableContext(1)]
 		[SecurityCritical]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]

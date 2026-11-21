@@ -10,18 +10,18 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C73 RID: 7283
+// Token: 0x02001132 RID: 4402
 [NullableContext(2)]
 [Nullable(0)]
 public class DrawMainView : GachaSceneView
 {
-	// Token: 0x0600DB77 RID: 56183 RVA: 0x00330C46 File Offset: 0x0032EE46
+	// Token: 0x0600AF8D RID: 44941 RVA: 0x0033C092 File Offset: 0x0033A292
 	[NullableContext(1)]
 	public DrawMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DB78 RID: 56184 RVA: 0x00330C68 File Offset: 0x0032EE68
+	// Token: 0x0600AF8E RID: 44942 RVA: 0x0033C0B4 File Offset: 0x0033A2B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -42,7 +42,7 @@ public class DrawMainView : GachaSceneView
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DB79 RID: 56185 RVA: 0x00330D0E File Offset: 0x0032EF0E
+	// Token: 0x0600AF8F RID: 44943 RVA: 0x0033C15A File Offset: 0x0033A35A
 	private void OnClickSkipBtn()
 	{
 		this.IsSkip = true;
@@ -52,7 +52,7 @@ public class DrawMainView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DB7A RID: 56186 RVA: 0x00330D28 File Offset: 0x0032EF28
+	// Token: 0x0600AF90 RID: 44944 RVA: 0x0033C174 File Offset: 0x0033A374
 	protected override void OnAfterOpenUiScene()
 	{
 		this.OriginCameraActor = CameraController.Instance.MainModel.CurrentCameraActor;
@@ -100,7 +100,7 @@ public class DrawMainView : GachaSceneView
 		});
 	}
 
-	// Token: 0x0600DB7B RID: 56187 RVA: 0x00330F20 File Offset: 0x0032F120
+	// Token: 0x0600AF91 RID: 44945 RVA: 0x0033C36C File Offset: 0x0033A56C
 	protected void InitLevelSequence()
 	{
 		int times = GachaModel.Instance.CurGachaResult.Length;
@@ -138,7 +138,7 @@ public class DrawMainView : GachaSceneView
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x0600DB7C RID: 56188 RVA: 0x0033106C File Offset: 0x0032F26C
+	// Token: 0x0600AF92 RID: 44946 RVA: 0x0033C4B8 File Offset: 0x0033A6B8
 	protected override void OnStart()
 	{
 		this.InitLevelSequence();
@@ -149,7 +149,7 @@ public class DrawMainView : GachaSceneView
 		this.ScreenX = (float)num;
 	}
 
-	// Token: 0x0600DB7D RID: 56189 RVA: 0x003310AA File Offset: 0x0032F2AA
+	// Token: 0x0600AF93 RID: 44947 RVA: 0x0033C4F6 File Offset: 0x0033A6F6
 	protected override void OnBeforeDestroy()
 	{
 		TimerSystem.GameplayTimeInstance.Next(delegate(float _)
@@ -160,7 +160,7 @@ public class DrawMainView : GachaSceneView
 		this.LevelSequencePlayer.Clear();
 	}
 
-	// Token: 0x0600DB7E RID: 56190 RVA: 0x003310D8 File Offset: 0x0032F2D8
+	// Token: 0x0600AF94 RID: 44948 RVA: 0x0033C524 File Offset: 0x0033A724
 	protected override void OnTick(float deltaTime)
 	{
 		BP_GachaArt_C gachaArtBP = this.GachaArtBP;
@@ -179,7 +179,7 @@ public class DrawMainView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DB7F RID: 56191 RVA: 0x003311B8 File Offset: 0x0032F3B8
+	// Token: 0x0600AF95 RID: 44949 RVA: 0x0033C604 File Offset: 0x0033A804
 	public void OnDragBeginCallBack(ULGUIPointerEventData eventData)
 	{
 		this.BeginDragPosition = new FVector?(eventData.pointerPosition);
@@ -190,7 +190,7 @@ public class DrawMainView : GachaSceneView
 		this.IsShowTips = false;
 	}
 
-	// Token: 0x0600DB80 RID: 56192 RVA: 0x00331218 File Offset: 0x0032F418
+	// Token: 0x0600AF96 RID: 44950 RVA: 0x0033C664 File Offset: 0x0033A864
 	public void OnDragCallBack(ULGUIPointerEventData eventData)
 	{
 		this.MousePosition.X = eventData.pointerPosition.X;
@@ -216,13 +216,13 @@ public class DrawMainView : GachaSceneView
 		gachaArtBP.TSUpdateParameters(this.Value, colorChangeProcess, this.MousePosition);
 	}
 
-	// Token: 0x0600DB81 RID: 56193 RVA: 0x00331321 File Offset: 0x0032F521
+	// Token: 0x0600AF97 RID: 44951 RVA: 0x0033C76D File Offset: 0x0033A96D
 	public void OnDragEndCallBack(ULGUIPointerEventData eventData)
 	{
 		this.IsDrag = false;
 	}
 
-	// Token: 0x0600DB82 RID: 56194 RVA: 0x0033132C File Offset: 0x0032F52C
+	// Token: 0x0600AF98 RID: 44952 RVA: 0x0033C778 File Offset: 0x0033A978
 	public void PlayShowSequence()
 	{
 		this.GachaArtBP.SetActorHiddenInGame(true);
@@ -236,7 +236,7 @@ public class DrawMainView : GachaSceneView
 		showSequence.SequencePlayer.Play();
 	}
 
-	// Token: 0x0600DB83 RID: 56195 RVA: 0x0033139C File Offset: 0x0032F59C
+	// Token: 0x0600AF99 RID: 44953 RVA: 0x0033C7E8 File Offset: 0x0033A9E8
 	public void ShowNextView()
 	{
 		ULevelSequencePlayer showSequencePlayer = this.ShowSequencePlayer;
@@ -249,89 +249,89 @@ public class DrawMainView : GachaSceneView
 		UiManager.Instance.OpenView(EUiViewName.GachaScanView, null, null);
 	}
 
-	// Token: 0x040064A1 RID: 25761
+	// Token: 0x04006573 RID: 25971
 	private ALevelSequenceActor ShowSequence;
 
-	// Token: 0x040064A2 RID: 25762
+	// Token: 0x04006574 RID: 25972
 	private readonly ULevelSequencePlayer ShowSequencePlayer;
 
-	// Token: 0x040064A3 RID: 25763
+	// Token: 0x04006575 RID: 25973
 	[Nullable(1)]
 	private string ShowSequencePath = "";
 
-	// Token: 0x040064A4 RID: 25764
+	// Token: 0x04006576 RID: 25974
 	private AActor OriginCameraActor;
 
-	// Token: 0x040064A5 RID: 25765
+	// Token: 0x04006577 RID: 25975
 	private BP_GachaArt_C GachaArtBP;
 
-	// Token: 0x040064A6 RID: 25766
+	// Token: 0x04006578 RID: 25976
 	private float Value;
 
-	// Token: 0x040064A7 RID: 25767
+	// Token: 0x04006579 RID: 25977
 	private float PlaySequenceProcess;
 
-	// Token: 0x040064A8 RID: 25768
+	// Token: 0x0400657A RID: 25978
 	private float DefaultProcess;
 
-	// Token: 0x040064A9 RID: 25769
+	// Token: 0x0400657B RID: 25979
 	private float ChangeColorProcess;
 
-	// Token: 0x040064AA RID: 25770
+	// Token: 0x0400657C RID: 25980
 	private FVector? BeginDragPosition;
 
-	// Token: 0x040064AB RID: 25771
+	// Token: 0x0400657D RID: 25981
 	private float CompleteChangeColorProcess;
 
-	// Token: 0x040064AC RID: 25772
+	// Token: 0x0400657E RID: 25982
 	private FLinearColor? FinalColor;
 
-	// Token: 0x040064AD RID: 25773
+	// Token: 0x0400657F RID: 25983
 	private FVector2D MousePosition = new FVector2D();
 
-	// Token: 0x040064AE RID: 25774
+	// Token: 0x04006580 RID: 25984
 	private float ScreenX;
 
-	// Token: 0x040064AF RID: 25775
+	// Token: 0x04006581 RID: 25985
 	private bool IsPlay;
 
-	// Token: 0x040064B0 RID: 25776
+	// Token: 0x04006582 RID: 25986
 	public UCurveFloat SlideCurve;
 
-	// Token: 0x040064B1 RID: 25777
+	// Token: 0x04006583 RID: 25987
 	private float StartValue;
 
-	// Token: 0x040064B2 RID: 25778
+	// Token: 0x04006584 RID: 25988
 	private float BeginValue;
 
-	// Token: 0x040064B3 RID: 25779
+	// Token: 0x04006585 RID: 25989
 	private bool IsLoadComplete;
 
-	// Token: 0x040064B4 RID: 25780
+	// Token: 0x04006586 RID: 25990
 	private bool IsDone;
 
-	// Token: 0x040064B5 RID: 25781
+	// Token: 0x04006587 RID: 25991
 	private bool IsSkip;
 
-	// Token: 0x040064B6 RID: 25782
+	// Token: 0x04006588 RID: 25992
 	private float TipWaitTime;
 
-	// Token: 0x040064B7 RID: 25783
+	// Token: 0x04006589 RID: 25993
 	private bool IsDrag;
 
-	// Token: 0x040064B8 RID: 25784
+	// Token: 0x0400658A RID: 25994
 	private bool IsShowTips;
 
-	// Token: 0x040064B9 RID: 25785
+	// Token: 0x0400658B RID: 25995
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0200822A RID: 33322
+	// Token: 0x020073B3 RID: 29619
 	[NullableContext(0)]
 	private enum EDrawMainViewDefine
 	{
-		// Token: 0x0402A798 RID: 173976
+		// Token: 0x04025ABE RID: 154302
 		DragArea,
-		// Token: 0x0402A799 RID: 173977
+		// Token: 0x04025ABF RID: 154303
 		SkipBtn
 	}
 }

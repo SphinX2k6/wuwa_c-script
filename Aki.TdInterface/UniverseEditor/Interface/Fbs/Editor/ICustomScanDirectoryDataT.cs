@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004845 RID: 18501
+	// Token: 0x02004CAD RID: 19629
 	public class ICustomScanDirectoryDataT
 	{
-		// Token: 0x170084CC RID: 33996
-		// (get) Token: 0x0601C9D1 RID: 117201 RVA: 0x0040B788 File Offset: 0x00409988
-		// (set) Token: 0x0601C9D2 RID: 117202 RVA: 0x0040B790 File Offset: 0x00409990
+		// Token: 0x17008B17 RID: 35607
+		// (get) Token: 0x0601E1CE RID: 123342 RVA: 0x004380D8 File Offset: 0x004362D8
+		// (set) Token: 0x0601E1CF RID: 123343 RVA: 0x004380E0 File Offset: 0x004362E0
 		public bool IsEnable { get; set; }
 
-		// Token: 0x170084CD RID: 33997
-		// (get) Token: 0x0601C9D3 RID: 117203 RVA: 0x0040B799 File Offset: 0x00409999
-		// (set) Token: 0x0601C9D4 RID: 117204 RVA: 0x0040B7A1 File Offset: 0x004099A1
+		// Token: 0x17008B18 RID: 35608
+		// (get) Token: 0x0601E1D0 RID: 123344 RVA: 0x004380E9 File Offset: 0x004362E9
+		// (set) Token: 0x0601E1D1 RID: 123345 RVA: 0x004380F1 File Offset: 0x004362F1
 		public bool IsEnableBaseDirs { get; set; }
 
-		// Token: 0x170084CE RID: 33998
-		// (get) Token: 0x0601C9D5 RID: 117205 RVA: 0x0040B7AA File Offset: 0x004099AA
-		// (set) Token: 0x0601C9D6 RID: 117206 RVA: 0x0040B7B2 File Offset: 0x004099B2
+		// Token: 0x17008B19 RID: 35609
+		// (get) Token: 0x0601E1D2 RID: 123346 RVA: 0x004380FA File Offset: 0x004362FA
+		// (set) Token: 0x0601E1D3 RID: 123347 RVA: 0x00438102 File Offset: 0x00436302
 		public List<string> DisabledBaseDirs { get; set; }
 
-		// Token: 0x170084CF RID: 33999
-		// (get) Token: 0x0601C9D7 RID: 117207 RVA: 0x0040B7BB File Offset: 0x004099BB
-		// (set) Token: 0x0601C9D8 RID: 117208 RVA: 0x0040B7C3 File Offset: 0x004099C3
+		// Token: 0x17008B1A RID: 35610
+		// (get) Token: 0x0601E1D4 RID: 123348 RVA: 0x0043810B File Offset: 0x0043630B
+		// (set) Token: 0x0601E1D5 RID: 123349 RVA: 0x00438113 File Offset: 0x00436313
 		public List<IScanDirectoryT> AppendDirs { get; set; }
 
-		// Token: 0x170084D0 RID: 34000
-		// (get) Token: 0x0601C9D9 RID: 117209 RVA: 0x0040B7CC File Offset: 0x004099CC
-		// (set) Token: 0x0601C9DA RID: 117210 RVA: 0x0040B7D4 File Offset: 0x004099D4
+		// Token: 0x17008B1B RID: 35611
+		// (get) Token: 0x0601E1D6 RID: 123350 RVA: 0x0043811C File Offset: 0x0043631C
+		// (set) Token: 0x0601E1D7 RID: 123351 RVA: 0x00438124 File Offset: 0x00436324
 		public bool IsSwarmDirs { get; set; }
 
-		// Token: 0x0601C9DB RID: 117211 RVA: 0x0040B7DD File Offset: 0x004099DD
+		// Token: 0x0601E1D8 RID: 123352 RVA: 0x0043812D File Offset: 0x0043632D
 		public ICustomScanDirectoryDataT()
 		{
 			this.IsEnable = false;

@@ -7,15 +7,22 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.RecallQuest.Model
 {
-	// Token: 0x02004F21 RID: 20257
+	// Token: 0x02003EEA RID: 16106
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RecallQuestModel : ModelBase
 	{
-		// Token: 0x06033F05 RID: 212741 RVA: 0x00C2C7D4 File Offset: 0x00C2A9D4
+		// Token: 0x06028D70 RID: 167280 RVA: 0x00B75E48 File Offset: 0x00B74048
+		public void ClearCachedExploreSkill()
+		{
+			this.CacheRecallExploreSkillId = null;
+		}
+
+		// Token: 0x06028D71 RID: 167281 RVA: 0x00B75E58 File Offset: 0x00B74058
 		protected override bool OnInit()
 		{
+			this.ClearCachedExploreSkill();
 			this.RecallDataMap.Clear();
 			this.InstanceIdsWithSaveDataMap.Clear();
 			this.InventoryData.Clear();
@@ -25,9 +32,10 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return true;
 		}
 
-		// Token: 0x06033F06 RID: 212742 RVA: 0x00C2C811 File Offset: 0x00C2AA11
+		// Token: 0x06028D72 RID: 167282 RVA: 0x00B75EA8 File Offset: 0x00B740A8
 		protected override bool OnClear()
 		{
+			this.ClearCachedExploreSkill();
 			this.RecallDataMap.Clear();
 			this.InstanceIdsWithSaveDataMap.Clear();
 			this.InventoryData.Clear();
@@ -37,9 +45,10 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return true;
 		}
 
-		// Token: 0x06033F07 RID: 212743 RVA: 0x00C2C850 File Offset: 0x00C2AA50
+		// Token: 0x06028D73 RID: 167283 RVA: 0x00B75EF8 File Offset: 0x00B740F8
 		protected override bool OnLeaveLevel()
 		{
+			this.ClearCachedExploreSkill();
 			if (this.CurrentRecallId > 0 && this.CurrentRecallTrackQuestId == 0)
 			{
 				if (this.HasQueriedItemBag)
@@ -67,7 +76,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return true;
 		}
 
-		// Token: 0x06033F08 RID: 212744 RVA: 0x00C2C904 File Offset: 0x00C2AB04
+		// Token: 0x06028D74 RID: 167284 RVA: 0x00B75FB0 File Offset: 0x00B741B0
 		public void TryReTrackRecallQuest()
 		{
 			if (this.CurrentRecallTrackQuestId > 0)
@@ -87,7 +96,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033F09 RID: 212745 RVA: 0x00C2C970 File Offset: 0x00C2AB70
+		// Token: 0x06028D75 RID: 167285 RVA: 0x00B7601C File Offset: 0x00B7421C
 		public void SetPastRecallIds(IReadOnlyList<RecallInfo> data)
 		{
 			this.RecallDataMap.Clear();
@@ -99,21 +108,21 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033F0A RID: 212746 RVA: 0x00C2C9DC File Offset: 0x00C2ABDC
+		// Token: 0x06028D76 RID: 167286 RVA: 0x00B76088 File Offset: 0x00B74288
 		public bool IsRecallCanContinue(int recallId)
 		{
 			RecallData recallData;
 			return this.RecallDataMap.TryGetValue(recallId, out recallData) && recallData.Status == ERecallStatus.InProgress;
 		}
 
-		// Token: 0x06033F0B RID: 212747 RVA: 0x00C2CA08 File Offset: 0x00C2AC08
+		// Token: 0x06028D77 RID: 167287 RVA: 0x00B760B4 File Offset: 0x00B742B4
 		public bool IsRecallHasData(int recallId)
 		{
 			RecallData recallData;
 			return this.RecallDataMap.TryGetValue(recallId, out recallData) && (recallData.Status == ERecallStatus.Finished || recallData.Status == ERecallStatus.InProgress);
 		}
 
-		// Token: 0x06033F0C RID: 212748 RVA: 0x00C2CA3C File Offset: 0x00C2AC3C
+		// Token: 0x06028D78 RID: 167288 RVA: 0x00B760E8 File Offset: 0x00B742E8
 		public ERecallStatus GetRecallStatus(int recallId)
 		{
 			RecallData recallData;
@@ -124,19 +133,19 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return ERecallStatus.InActive;
 		}
 
-		// Token: 0x06033F0D RID: 212749 RVA: 0x00C2CA61 File Offset: 0x00C2AC61
+		// Token: 0x06028D79 RID: 167289 RVA: 0x00B7610D File Offset: 0x00B7430D
 		public RecallInventoryData GetInventoryData()
 		{
 			return this.InventoryData;
 		}
 
-		// Token: 0x06033F0E RID: 212750 RVA: 0x00C2CA69 File Offset: 0x00C2AC69
+		// Token: 0x06028D7A RID: 167290 RVA: 0x00B76115 File Offset: 0x00B74315
 		public void ClearInventoryData()
 		{
 			this.InventoryData.Clear();
 		}
 
-		// Token: 0x06033F0F RID: 212751 RVA: 0x00C2CA78 File Offset: 0x00C2AC78
+		// Token: 0x06028D7B RID: 167291 RVA: 0x00B76124 File Offset: 0x00B74324
 		public void SetCurrentRecallId(int recallId)
 		{
 			this.CurrentRecallId = recallId;
@@ -151,32 +160,32 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033F10 RID: 212752 RVA: 0x00C2CAF7 File Offset: 0x00C2ACF7
+		// Token: 0x06028D7C RID: 167292 RVA: 0x00B761A3 File Offset: 0x00B743A3
 		public int GetCurrentRecallId()
 		{
 			return this.CurrentRecallId;
 		}
 
-		// Token: 0x06033F11 RID: 212753 RVA: 0x00C2CAFF File Offset: 0x00C2ACFF
+		// Token: 0x06028D7D RID: 167293 RVA: 0x00B761AB File Offset: 0x00B743AB
 		public void SetInstanceIdsWithSaveData(int recallId, IEnumerable<int> instanceIds)
 		{
 			this.InstanceIdsWithSaveDataMap[recallId] = new HashSet<int>(instanceIds);
 		}
 
-		// Token: 0x06033F12 RID: 212754 RVA: 0x00C2CB14 File Offset: 0x00C2AD14
+		// Token: 0x06028D7E RID: 167294 RVA: 0x00B761C0 File Offset: 0x00B743C0
 		public bool GetIfInstanceHasSaveData(int instanceId)
 		{
 			HashSet<int> hashSet;
 			return this.InstanceIdsWithSaveDataMap.TryGetValue(this.CurrentRecallId, out hashSet) && hashSet.Contains(instanceId);
 		}
 
-		// Token: 0x06033F13 RID: 212755 RVA: 0x00C2CB3F File Offset: 0x00C2AD3F
+		// Token: 0x06028D7F RID: 167295 RVA: 0x00B761EB File Offset: 0x00B743EB
 		public void RecordCurrentRecallQuestId(int questId)
 		{
 			this.CurrentRecallQuestIds.Add(questId);
 		}
 
-		// Token: 0x06033F14 RID: 212756 RVA: 0x00C2CB50 File Offset: 0x00C2AD50
+		// Token: 0x06028D80 RID: 167296 RVA: 0x00B761FC File Offset: 0x00B743FC
 		public void RecordCurrentRecallQuestIds(IReadOnlyList<int> questIds)
 		{
 			foreach (int item in questIds)
@@ -185,7 +194,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033F15 RID: 212757 RVA: 0x00C2CBA0 File Offset: 0x00C2ADA0
+		// Token: 0x06028D81 RID: 167297 RVA: 0x00B7624C File Offset: 0x00B7444C
 		public List<int> TakeCurrentRecallQuestIds()
 		{
 			List<int> result = new List<int>(this.CurrentRecallQuestIds);
@@ -193,7 +202,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return result;
 		}
 
-		// Token: 0x06033F16 RID: 212758 RVA: 0x00C2CBB8 File Offset: 0x00C2ADB8
+		// Token: 0x06028D82 RID: 167298 RVA: 0x00B76264 File Offset: 0x00B74464
 		public int TryGetRecallQuestIdByQuestId(int questId)
 		{
 			if (!this.IsInRecallInstance())
@@ -209,14 +218,37 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return num;
 		}
 
-		// Token: 0x06033F17 RID: 212759 RVA: 0x00C2CBE4 File Offset: 0x00C2ADE4
+		// Token: 0x06028D83 RID: 167299 RVA: 0x00B76290 File Offset: 0x00B74490
+		public int TryGetRecallLevelPlayIdByLevelPlayId(int levelPlayId)
+		{
+			if (!this.IsInRecallInstance())
+			{
+				return levelPlayId;
+			}
+			RecallConfig? currentRecallQuestConfig = this.GetCurrentRecallQuestConfig();
+			if (currentRecallQuestConfig == null)
+			{
+				return levelPlayId;
+			}
+			for (int i = 0; i < currentRecallQuestConfig.Value.RecallLevelsLength; i++)
+			{
+				DicIntInt? dicIntInt = currentRecallQuestConfig.Value.RecallLevels(i);
+				if (dicIntInt != null && dicIntInt.Value.Value == levelPlayId)
+				{
+					return dicIntInt.Value.Key;
+				}
+			}
+			return levelPlayId;
+		}
+
+		// Token: 0x06028D84 RID: 167300 RVA: 0x00B76314 File Offset: 0x00B74514
 		public bool IsInRecallInstance()
 		{
 			InstanceDungeon? instanceDungeon;
 			return ((GameModeModel.Instance.InstanceDungeon != null) ? new int?(instanceDungeon.GetValueOrDefault().InstType) : null).GetValueOrDefault() == 6;
 		}
 
-		// Token: 0x06033F18 RID: 212760 RVA: 0x00C2CC30 File Offset: 0x00C2AE30
+		// Token: 0x06028D85 RID: 167301 RVA: 0x00B76360 File Offset: 0x00B74560
 		public int GetMapId(int? mapId = null)
 		{
 			if (mapId != null)
@@ -245,7 +277,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return CreatureModel.Instance.GetInstanceId();
 		}
 
-		// Token: 0x06033F19 RID: 212761 RVA: 0x00C2CD10 File Offset: 0x00C2AF10
+		// Token: 0x06028D86 RID: 167302 RVA: 0x00B76440 File Offset: 0x00B74640
 		public bool CanMissionShowFirstRow()
 		{
 			if (this.IsInRecallInstance())
@@ -257,7 +289,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return false;
 		}
 
-		// Token: 0x06033F1A RID: 212762 RVA: 0x00C2CD78 File Offset: 0x00C2AF78
+		// Token: 0x06028D87 RID: 167303 RVA: 0x00B764A8 File Offset: 0x00B746A8
 		public bool CheckIfRecallEntity(int? entityId)
 		{
 			if (entityId != null)
@@ -273,7 +305,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return false;
 		}
 
-		// Token: 0x06033F1B RID: 212763 RVA: 0x00C2CDD0 File Offset: 0x00C2AFD0
+		// Token: 0x06028D88 RID: 167304 RVA: 0x00B76500 File Offset: 0x00B74700
 		public HashSet<int> GetCurrentRecallDungeonIdSet()
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -293,7 +325,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return hashSet;
 		}
 
-		// Token: 0x06033F1C RID: 212764 RVA: 0x00C2CE3B File Offset: 0x00C2B03B
+		// Token: 0x06028D89 RID: 167305 RVA: 0x00B7656B File Offset: 0x00B7476B
 		public List<int> GetCurrentRecallFunctionIds()
 		{
 			if (this.CurrentRecallId == 0)
@@ -303,7 +335,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return this.GetRecallFunctionIds(this.CurrentRecallId);
 		}
 
-		// Token: 0x06033F1D RID: 212765 RVA: 0x00C2CE58 File Offset: 0x00C2B058
+		// Token: 0x06028D8A RID: 167306 RVA: 0x00B76588 File Offset: 0x00B74788
 		public List<int> GetRecallFunctionIds(int recallId)
 		{
 			RecallConfig? recallQuestConfig = RecallQuestConfig.Instance.GetRecallQuestConfig(recallId);
@@ -343,7 +375,32 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return list;
 		}
 
-		// Token: 0x06033F1E RID: 212766 RVA: 0x00C2CF48 File Offset: 0x00C2B148
+		// Token: 0x06028D8B RID: 167307 RVA: 0x00B76678 File Offset: 0x00B74878
+		public bool CheckRecallRouletteFunction(int functionId)
+		{
+			IReadOnlyList<RecallRouletteFunc> configList = ConfigRecallRouletteFuncAll.GetConfigList(true);
+			if (configList == null)
+			{
+				return true;
+			}
+			foreach (RecallRouletteFunc recallRouletteFunc in configList)
+			{
+				if (recallRouletteFunc.FunctionId == functionId)
+				{
+					for (int i = 0; i < recallRouletteFunc.NeedFinishQuestIdsLength; i++)
+					{
+						if (!QuestNewModel.Instance.CheckQuestFinished(recallRouletteFunc.NeedFinishQuestIds(i)))
+						{
+							return false;
+						}
+					}
+					return true;
+				}
+			}
+			return true;
+		}
+
+		// Token: 0x06028D8C RID: 167308 RVA: 0x00B76704 File Offset: 0x00B74904
 		public int GetLoadingId()
 		{
 			if (this.CurrentRecallId == 0)
@@ -353,7 +410,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return RecallQuestConfig.Instance.GetRecallQuestConfig(this.CurrentRecallId).Value.LoadingId;
 		}
 
-		// Token: 0x06033F1F RID: 212767 RVA: 0x00C2CF80 File Offset: 0x00C2B180
+		// Token: 0x06028D8D RID: 167309 RVA: 0x00B7673C File Offset: 0x00B7493C
 		public string GetBgTexturePath()
 		{
 			RecallConfig? currentRecallQuestConfig = this.GetCurrentRecallQuestConfig();
@@ -369,7 +426,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return currentRecallQuestConfig.Value.FunctionViewTexture(j);
 		}
 
-		// Token: 0x06033F20 RID: 212768 RVA: 0x00C2CFD8 File Offset: 0x00C2B1D8
+		// Token: 0x06028D8E RID: 167310 RVA: 0x00B76794 File Offset: 0x00B74994
 		public RecallConfig? GetCurrentRecallQuestConfig()
 		{
 			if (this.CurrentRecallId == 0)
@@ -379,8 +436,8 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return RecallQuestConfig.Instance.GetRecallQuestConfig(this.CurrentRecallId);
 		}
 
-		// Token: 0x17007F40 RID: 32576
-		// (get) Token: 0x06033F21 RID: 212769 RVA: 0x00C2D007 File Offset: 0x00C2B207
+		// Token: 0x170052F0 RID: 21232
+		// (get) Token: 0x06028D8F RID: 167311 RVA: 0x00B767C3 File Offset: 0x00B749C3
 		public static RecallQuestModel Instance
 		{
 			get
@@ -389,7 +446,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033F22 RID: 212770 RVA: 0x00C2D00E File Offset: 0x00C2B20E
+		// Token: 0x06028D90 RID: 167312 RVA: 0x00B767CA File Offset: 0x00B749CA
 		public static RecallQuestModel GetOrCreateInstance()
 		{
 			if (RecallQuestModel._Instance == null)
@@ -399,7 +456,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return RecallQuestModel._Instance;
 		}
 
-		// Token: 0x06033F23 RID: 212771 RVA: 0x00C2D022 File Offset: 0x00C2B222
+		// Token: 0x06028D91 RID: 167313 RVA: 0x00B767DE File Offset: 0x00B749DE
 		public static bool CreateInstance()
 		{
 			if (RecallQuestModel._Instance != null)
@@ -410,52 +467,58 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			return true;
 		}
 
-		// Token: 0x06033F24 RID: 212772 RVA: 0x00C2D038 File Offset: 0x00C2B238
+		// Token: 0x06028D92 RID: 167314 RVA: 0x00B767F4 File Offset: 0x00B749F4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033F25 RID: 212773 RVA: 0x00C2D03A File Offset: 0x00C2B23A
+		// Token: 0x06028D93 RID: 167315 RVA: 0x00B767F6 File Offset: 0x00B749F6
 		public static void ResetStaticDefaultValue()
 		{
 			RecallQuestModel._Instance = null;
 		}
 
-		// Token: 0x06033F26 RID: 212774 RVA: 0x00C2D042 File Offset: 0x00C2B242
+		// Token: 0x06028D94 RID: 167316 RVA: 0x00B767FE File Offset: 0x00B749FE
 		static RecallQuestModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RecallQuestModel.CreateStaticDefaultValue), new Action(RecallQuestModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B98D RID: 113037
+		// Token: 0x04016360 RID: 90976
 		private readonly Dictionary<int, RecallData> RecallDataMap = new Dictionary<int, RecallData>();
 
-		// Token: 0x0401B98E RID: 113038
+		// Token: 0x04016361 RID: 90977
 		private readonly Dictionary<int, HashSet<int>> InstanceIdsWithSaveDataMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0401B98F RID: 113039
+		// Token: 0x04016362 RID: 90978
 		private readonly RecallInventoryData InventoryData = new RecallInventoryData();
 
-		// Token: 0x0401B990 RID: 113040
+		// Token: 0x04016363 RID: 90979
 		public bool HasQueriedItemBag;
 
-		// Token: 0x0401B991 RID: 113041
+		// Token: 0x04016364 RID: 90980
 		private int CurrentRecallId;
 
-		// Token: 0x0401B992 RID: 113042
+		// Token: 0x04016365 RID: 90981
 		private readonly Dictionary<int, int> CurrentRecallQuestMap = new Dictionary<int, int>();
 
-		// Token: 0x0401B993 RID: 113043
+		// Token: 0x04016366 RID: 90982
 		private readonly HashSet<int> CurrentRecallQuestIds = new HashSet<int>();
 
-		// Token: 0x0401B994 RID: 113044
+		// Token: 0x04016367 RID: 90983
 		public int CurrentRecallTrackQuestId;
 
-		// Token: 0x0401B995 RID: 113045
+		// Token: 0x04016368 RID: 90984
 		[Nullable(2)]
 		public RecallExploreSkillRouletteNotify CacheRecallExploreSkillRouletteData;
 
-		// Token: 0x0401B996 RID: 113046
+		// Token: 0x04016369 RID: 90985
+		public int? CacheRecallExploreSkillId;
+
+		// Token: 0x0401636A RID: 90986
+		public int RecallExploreSkillRevision;
+
+		// Token: 0x0401636B RID: 90987
 		[Nullable(2)]
 		private static RecallQuestModel _Instance;
 	}

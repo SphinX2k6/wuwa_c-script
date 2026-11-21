@@ -2,55 +2,55 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D0E RID: 23822
+	// Token: 0x02006342 RID: 25410
 	public class IAirCurrentDataT
 	{
-		// Token: 0x1700B27E RID: 45694
-		// (get) Token: 0x06028B11 RID: 166673 RVA: 0x00596F35 File Offset: 0x00595135
-		// (set) Token: 0x06028B12 RID: 166674 RVA: 0x00596F3D File Offset: 0x0059513D
+		// Token: 0x1700BBDA RID: 48090
+		// (get) Token: 0x0602B165 RID: 176485 RVA: 0x005DF7A5 File Offset: 0x005DD9A5
+		// (set) Token: 0x0602B166 RID: 176486 RVA: 0x005DF7AD File Offset: 0x005DD9AD
 		public EAreaFunctionType Type { get; set; }
 
-		// Token: 0x1700B27F RID: 45695
-		// (get) Token: 0x06028B13 RID: 166675 RVA: 0x00596F46 File Offset: 0x00595146
-		// (set) Token: 0x06028B14 RID: 166676 RVA: 0x00596F4E File Offset: 0x0059514E
+		// Token: 0x1700BBDB RID: 48091
+		// (get) Token: 0x0602B167 RID: 176487 RVA: 0x005DF7B6 File Offset: 0x005DD9B6
+		// (set) Token: 0x0602B168 RID: 176488 RVA: 0x005DF7BE File Offset: 0x005DD9BE
 		public float ExitEffectHeight { get; set; }
 
-		// Token: 0x1700B280 RID: 45696
-		// (get) Token: 0x06028B15 RID: 166677 RVA: 0x00596F57 File Offset: 0x00595157
-		// (set) Token: 0x06028B16 RID: 166678 RVA: 0x00596F5F File Offset: 0x0059515F
+		// Token: 0x1700BBDC RID: 48092
+		// (get) Token: 0x0602B169 RID: 176489 RVA: 0x005DF7C7 File Offset: 0x005DD9C7
+		// (set) Token: 0x0602B16A RID: 176490 RVA: 0x005DF7CF File Offset: 0x005DD9CF
 		public float EffectiveHeight { get; set; }
 
-		// Token: 0x1700B281 RID: 45697
-		// (get) Token: 0x06028B17 RID: 166679 RVA: 0x00596F68 File Offset: 0x00595168
-		// (set) Token: 0x06028B18 RID: 166680 RVA: 0x00596F70 File Offset: 0x00595170
+		// Token: 0x1700BBDD RID: 48093
+		// (get) Token: 0x0602B16B RID: 176491 RVA: 0x005DF7D8 File Offset: 0x005DD9D8
+		// (set) Token: 0x0602B16C RID: 176492 RVA: 0x005DF7E0 File Offset: 0x005DD9E0
 		public float FallTeleportHeight { get; set; }
 
-		// Token: 0x1700B282 RID: 45698
-		// (get) Token: 0x06028B19 RID: 166681 RVA: 0x00596F79 File Offset: 0x00595179
-		// (set) Token: 0x06028B1A RID: 166682 RVA: 0x00596F81 File Offset: 0x00595181
+		// Token: 0x1700BBDE RID: 48094
+		// (get) Token: 0x0602B16D RID: 176493 RVA: 0x005DF7E9 File Offset: 0x005DD9E9
+		// (set) Token: 0x0602B16E RID: 176494 RVA: 0x005DF7F1 File Offset: 0x005DD9F1
 		public int FallTeleportTransitionConfigId { get; set; }
 
-		// Token: 0x1700B283 RID: 45699
-		// (get) Token: 0x06028B1B RID: 166683 RVA: 0x00596F8A File Offset: 0x0059518A
-		// (set) Token: 0x06028B1C RID: 166684 RVA: 0x00596F92 File Offset: 0x00595192
+		// Token: 0x1700BBDF RID: 48095
+		// (get) Token: 0x0602B16F RID: 176495 RVA: 0x005DF7FA File Offset: 0x005DD9FA
+		// (set) Token: 0x0602B170 RID: 176496 RVA: 0x005DF802 File Offset: 0x005DDA02
 		public float TopTeleportHeight { get; set; }
 
-		// Token: 0x1700B284 RID: 45700
-		// (get) Token: 0x06028B1D RID: 166685 RVA: 0x00596F9B File Offset: 0x0059519B
-		// (set) Token: 0x06028B1E RID: 166686 RVA: 0x00596FA3 File Offset: 0x005951A3
+		// Token: 0x1700BBE0 RID: 48096
+		// (get) Token: 0x0602B171 RID: 176497 RVA: 0x005DF80B File Offset: 0x005DDA0B
+		// (set) Token: 0x0602B172 RID: 176498 RVA: 0x005DF813 File Offset: 0x005DDA13
 		public IMotorAirCurrentConfigT Motor { get; set; }
 
-		// Token: 0x1700B285 RID: 45701
-		// (get) Token: 0x06028B1F RID: 166687 RVA: 0x00596FAC File Offset: 0x005951AC
-		// (set) Token: 0x06028B20 RID: 166688 RVA: 0x00596FB4 File Offset: 0x005951B4
+		// Token: 0x1700BBE1 RID: 48097
+		// (get) Token: 0x0602B173 RID: 176499 RVA: 0x005DF81C File Offset: 0x005DDA1C
+		// (set) Token: 0x0602B174 RID: 176500 RVA: 0x005DF824 File Offset: 0x005DDA24
 		public ICharacterAirCurrentConfigT Character { get; set; }
 
-		// Token: 0x1700B286 RID: 45702
-		// (get) Token: 0x06028B21 RID: 166689 RVA: 0x00596FBD File Offset: 0x005951BD
-		// (set) Token: 0x06028B22 RID: 166690 RVA: 0x00596FC5 File Offset: 0x005951C5
+		// Token: 0x1700BBE2 RID: 48098
+		// (get) Token: 0x0602B175 RID: 176501 RVA: 0x005DF82D File Offset: 0x005DDA2D
+		// (set) Token: 0x0602B176 RID: 176502 RVA: 0x005DF835 File Offset: 0x005DDA35
 		public byte NullMask { get; set; }
 
-		// Token: 0x06028B23 RID: 166691 RVA: 0x00596FD0 File Offset: 0x005951D0
+		// Token: 0x0602B177 RID: 176503 RVA: 0x005DF840 File Offset: 0x005DDA40
 		public IAirCurrentDataT()
 		{
 			this.Type = EAreaFunctionType.AirCurrent;

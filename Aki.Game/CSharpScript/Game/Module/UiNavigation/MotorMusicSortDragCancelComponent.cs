@@ -5,15 +5,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004996 RID: 18838
+	// Token: 0x02003910 RID: 14608
 	public class MotorMusicSortDragCancelComponent : HotKeyComponent
 	{
-		// Token: 0x06031130 RID: 201008 RVA: 0x00B6391E File Offset: 0x00B61B1E
+		// Token: 0x06025C66 RID: 154726 RVA: 0x00A9E86E File Offset: 0x00A9CA6E
 		public MotorMusicSortDragCancelComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031131 RID: 201009 RVA: 0x00B63927 File Offset: 0x00B61B27
+		// Token: 0x06025C67 RID: 154727 RVA: 0x00A9E877 File Offset: 0x00A9CA77
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (UiNavigationNewController.Instance.IsNavigationMousePositionDragging())
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031132 RID: 201010 RVA: 0x00B6395B File Offset: 0x00B61B5B
+		// Token: 0x06025C68 RID: 154728 RVA: 0x00A9E8AB File Offset: 0x00A9CAAB
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

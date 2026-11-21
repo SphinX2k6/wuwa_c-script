@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B52 RID: 19282
+	// Token: 0x02003AFA RID: 15098
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +17,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseLevelItem : GridProxyAbstract<TowerDefenseGroupData>
 	{
-		// Token: 0x06031ED7 RID: 204503 RVA: 0x00B95180 File Offset: 0x00B93380
+		// Token: 0x06026C67 RID: 158823 RVA: 0x00AD91EC File Offset: 0x00AD73EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031ED8 RID: 204504 RVA: 0x00B95440 File Offset: 0x00B93640
+		// Token: 0x06026C68 RID: 158824 RVA: 0x00AD94AC File Offset: 0x00AD76AC
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -86,7 +85,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			extendToggle.OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 		}
 
-		// Token: 0x06031ED9 RID: 204505 RVA: 0x00B9548C File Offset: 0x00B9368C
+		// Token: 0x06026C69 RID: 158825 RVA: 0x00AD94F8 File Offset: 0x00AD76F8
 		public override void Refresh(TowerDefenseGroupData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -106,7 +105,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshSelectionVisual();
 		}
 
-		// Token: 0x06031EDA RID: 204506 RVA: 0x00B95534 File Offset: 0x00B93734
+		// Token: 0x06026C6A RID: 158826 RVA: 0x00AD95A0 File Offset: 0x00AD77A0
 		public void RefreshSelectionVisual()
 		{
 			bool flag = this.IsGroupLocked();
@@ -153,19 +152,24 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EDB RID: 204507 RVA: 0x00B95620 File Offset: 0x00B93820
+		// Token: 0x06026C6B RID: 158827 RVA: 0x00AD968C File Offset: 0x00AD788C
 		public void RefreshRedDot()
 		{
 			if (this.Data == null)
 			{
 				return;
 			}
-			bool uiactive = this.Data.SubStageIds.Any(delegate(int id)
+			bool uiactive = false;
+			foreach (int id in this.Data.SubStageIds)
 			{
 				TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(id);
 				int instanceId = (towerDefenseConfigById != null) ? towerDefenseConfigById.Value.InstanceId : 0;
-				return TowerDefenseModel.Instance.CheckTowerDefenseInstanceHasRedDot(instanceId);
-			});
+				if (TowerDefenseModel.Instance.CheckTowerDefenseInstanceHasRedDot(instanceId))
+				{
+					uiactive = true;
+					break;
+				}
+			}
 			UUIItem item = base.GetItem(10);
 			if (item != null)
 			{
@@ -180,23 +184,45 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EDC RID: 204508 RVA: 0x00B956CC File Offset: 0x00B938CC
+		// Token: 0x06026C6C RID: 158828 RVA: 0x00AD9788 File Offset: 0x00AD7988
 		private bool IsGroupLocked()
 		{
 			if (this.Data == null)
 			{
 				return true;
 			}
-			return !this.Data.SubStageIds.Any((int id) => TowerDefenseController.Instance.CheckStageUnlockById(id));
+			bool flag = false;
+			foreach (int id in this.Data.SubStageIds)
+			{
+				if (TowerDefenseController.Instance.CheckStageUnlockById(id))
+				{
+					flag = true;
+					break;
+				}
+			}
+			return !flag;
 		}
 
-		// Token: 0x06031EDD RID: 204509 RVA: 0x00B9570A File Offset: 0x00B9390A
+		// Token: 0x06026C6D RID: 158829 RVA: 0x00AD97FC File Offset: 0x00AD79FC
 		private bool IsGroupSelected()
 		{
-			return this.Data != null && this.Data.SubStageIds.Any((int id) => this.Data.IsSelectedGetter(id));
+			if (this.Data == null)
+			{
+				return false;
+			}
+			bool result = false;
+			foreach (int arg in this.Data.SubStageIds)
+			{
+				if (this.Data.IsSelectedGetter(arg))
+				{
+					result = true;
+					break;
+				}
+			}
+			return result;
 		}
 
-		// Token: 0x06031EDE RID: 204510 RVA: 0x00B95734 File Offset: 0x00B93934
+		// Token: 0x06026C6E RID: 158830 RVA: 0x00AD9874 File Offset: 0x00AD7A74
 		public void RefreshOnTick()
 		{
 			if (this.Data == null || this.IsBossRush)
@@ -204,7 +230,15 @@ namespace CSharpScript.Game.Module.TowerDefence
 				return;
 			}
 			List<int> subStageIds = this.Data.SubStageIds;
-			bool flag = subStageIds.Any((int id) => TowerDefenseController.Instance.CheckStageUnlockById(id));
+			bool flag = false;
+			foreach (int id in subStageIds)
+			{
+				if (TowerDefenseController.Instance.CheckStageUnlockById(id))
+				{
+					flag = true;
+					break;
+				}
+			}
 			if (flag != this.CanExpand)
 			{
 				this.Refresh(this.Data, false, 0);
@@ -216,7 +250,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EDF RID: 204511 RVA: 0x00B957A8 File Offset: 0x00B939A8
+		// Token: 0x06026C6F RID: 158831 RVA: 0x00AD9910 File Offset: 0x00AD7B10
 		private void RefreshGroupInfo(TowerDefenseGroupData data)
 		{
 			List<int> subStageIds = data.SubStageIds;
@@ -254,7 +288,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshNormalGroupInfo(subStageIds);
 		}
 
-		// Token: 0x06031EE0 RID: 204512 RVA: 0x00B958FC File Offset: 0x00B93AFC
+		// Token: 0x06026C70 RID: 158832 RVA: 0x00AD9A64 File Offset: 0x00AD7C64
 		private void RefreshTransitionColors()
 		{
 			bool isBossRush = this.IsBossRush;
@@ -275,7 +309,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EE1 RID: 204513 RVA: 0x00B959AC File Offset: 0x00B93BAC
+		// Token: 0x06026C71 RID: 158833 RVA: 0x00AD9B14 File Offset: 0x00AD7D14
 		private void SetTextureTransitionColor(UUIExtendToggleTextureTransition transition, string uncheckedHex, string checkedHex)
 		{
 			FExtendToggleColorTransition transitionColors = transition.TransitionColors;
@@ -290,7 +324,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			transition.TransitionColors = transitionColors;
 		}
 
-		// Token: 0x06031EE2 RID: 204514 RVA: 0x00B95A00 File Offset: 0x00B93C00
+		// Token: 0x06026C72 RID: 158834 RVA: 0x00AD9B68 File Offset: 0x00AD7D68
 		private void SetTextTransitionColor(UUIExtendToggleTextTransition transition, string uncheckedHex, string checkedHex)
 		{
 			FExtendToggleTextTransitionState transitionState = transition.TransitionState;
@@ -303,7 +337,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			transition.TransitionState = transitionState;
 		}
 
-		// Token: 0x06031EE3 RID: 204515 RVA: 0x00B95A8D File Offset: 0x00B93C8D
+		// Token: 0x06026C73 RID: 158835 RVA: 0x00AD9BF5 File Offset: 0x00AD7DF5
 		private FTextTransitionInfoOfState BuildTextStateColor(FTextTransitionInfoOfState state, string hex)
 		{
 			state.bSetFontColor = true;
@@ -311,16 +345,29 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return state;
 		}
 
-		// Token: 0x06031EE4 RID: 204516 RVA: 0x00B95AA4 File Offset: 0x00B93CA4
+		// Token: 0x06026C74 RID: 158836 RVA: 0x00AD9C0C File Offset: 0x00AD7E0C
 		private void RefreshNormalGroupInfo(List<int> ids)
 		{
-			bool flag = ids.Any((int id) => TowerDefenseController.Instance.CheckStageUnlockById(id));
-			bool uiactive = ids.Any(delegate(int id)
+			bool flag = false;
+			foreach (int id in ids)
 			{
-				TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(id);
+				if (TowerDefenseController.Instance.CheckStageUnlockById(id))
+				{
+					flag = true;
+					break;
+				}
+			}
+			bool uiactive = false;
+			foreach (int id2 in ids)
+			{
+				TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(id2);
 				int instanceId = (towerDefenseConfigById != null) ? towerDefenseConfigById.Value.InstanceId : 0;
-				return TowerDefenseModel.Instance.CheckTowerDefenseInstanceHasRedDot(instanceId);
-			});
+				if (TowerDefenseModel.Instance.CheckTowerDefenseInstanceHasRedDot(instanceId))
+				{
+					uiactive = true;
+					break;
+				}
+			}
 			this.CanExpand = flag;
 			bool flag2 = !flag;
 			UUIItem item = base.GetItem(8);
@@ -346,7 +393,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshDescText(ids, flag);
 		}
 
-		// Token: 0x06031EE5 RID: 204517 RVA: 0x00B95B64 File Offset: 0x00B93D64
+		// Token: 0x06026C75 RID: 158837 RVA: 0x00AD9D44 File Offset: 0x00AD7F44
 		private void RefreshBossRushGroupInfo(int stageId)
 		{
 			this.CanExpand = false;
@@ -398,7 +445,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			LguiUtil.Instance.SetLocalTextNew(text, towerDefenseLockedHint.TextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06031EE6 RID: 204518 RVA: 0x00B95CA8 File Offset: 0x00B93EA8
+		// Token: 0x06026C76 RID: 158838 RVA: 0x00AD9E88 File Offset: 0x00AD8088
 		private void RefreshDescText(List<int> ids, bool anyUnlock)
 		{
 			UUIText text = base.GetText(6);
@@ -408,26 +455,33 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 			if (anyUnlock)
 			{
-				int value = ids.Count((int id) => TowerDefenseController.Instance.CheckStagePassedById(id));
+				int num = 0;
+				foreach (int id in ids)
+				{
+					if (TowerDefenseController.Instance.CheckStagePassedById(id))
+					{
+						num++;
+					}
+				}
 				UUIText uuitext = text;
 				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-				defaultInterpolatedStringHandler.AppendFormatted<int>(value);
+				defaultInterpolatedStringHandler.AppendFormatted<int>(num);
 				defaultInterpolatedStringHandler.AppendLiteral("/");
 				defaultInterpolatedStringHandler.AppendFormatted<int>(ids.Count);
 				uuitext.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 				return;
 			}
-			int num = 0;
+			int num2 = 0;
 			if (ids.Count > 0)
 			{
 				TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(ids[0]);
-				num = ((towerDefenseConfigById != null) ? towerDefenseConfigById.Value.InstanceId : 0);
+				num2 = ((towerDefenseConfigById != null) ? towerDefenseConfigById.Value.InstanceId : 0);
 			}
-			string text2 = (num > 0) ? TowerDefenseController.Instance.BuildInstanceCountDownText(num) : null;
+			string text2 = (num2 > 0) ? TowerDefenseController.Instance.BuildInstanceCountDownText(num2) : null;
 			text.SetText(text2 ?? "", true);
 		}
 
-		// Token: 0x06031EE7 RID: 204519 RVA: 0x00B95D84 File Offset: 0x00B93F84
+		// Token: 0x06026C77 RID: 158839 RVA: 0x00AD9F90 File Offset: 0x00AD8190
 		private static string BuildRomeTextureName(int index)
 		{
 			int num = Math.Max(1, index);
@@ -449,19 +503,23 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return "T_ComRomeText_" + str;
 		}
 
-		// Token: 0x06031EE8 RID: 204520 RVA: 0x00B95DE8 File Offset: 0x00B93FE8
+		// Token: 0x06026C78 RID: 158840 RVA: 0x00AD9FF4 File Offset: 0x00AD81F4
 		private List<TowerDefenseSubLevelData> BuildSubDataList(TowerDefenseGroupData group)
 		{
-			return (from id in @group.SubStageIds
-			select new TowerDefenseSubLevelData
+			List<TowerDefenseSubLevelData> list = new List<TowerDefenseSubLevelData>();
+			foreach (int stageId in group.SubStageIds)
 			{
-				StageId = id,
-				OnClickCb = @group.OnClickSubLevel,
-				IsSelectedGetter = @group.IsSelectedGetter
-			}).ToList<TowerDefenseSubLevelData>();
+				list.Add(new TowerDefenseSubLevelData
+				{
+					StageId = stageId,
+					OnClickCb = group.OnClickSubLevel,
+					IsSelectedGetter = group.IsSelectedGetter
+				});
+			}
+			return list;
 		}
 
-		// Token: 0x06031EE9 RID: 204521 RVA: 0x00B95E24 File Offset: 0x00B94024
+		// Token: 0x06026C79 RID: 158841 RVA: 0x00ADA074 File Offset: 0x00AD8274
 		private void OnClickToggle(EToggleState state)
 		{
 			if (this.IsGroupLocked())
@@ -508,7 +566,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EEA RID: 204522 RVA: 0x00B95F0C File Offset: 0x00B9410C
+		// Token: 0x06026C7A RID: 158842 RVA: 0x00ADA15C File Offset: 0x00AD835C
 		private int PickDefaultSubInstance()
 		{
 			if (this.Data == null)
@@ -530,13 +588,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return subStageIds[0];
 		}
 
-		// Token: 0x06031EEB RID: 204523 RVA: 0x00B95FA4 File Offset: 0x00B941A4
+		// Token: 0x06026C7B RID: 158843 RVA: 0x00ADA1F4 File Offset: 0x00AD83F4
 		private bool OnCanExecuteChange()
 		{
 			return !this.IsGroupLocked();
 		}
 
-		// Token: 0x06031EEC RID: 204524 RVA: 0x00B95FB0 File Offset: 0x00B941B0
+		// Token: 0x06026C7C RID: 158844 RVA: 0x00ADA200 File Offset: 0x00AD8400
 		private void OnUndeterminedClicked()
 		{
 			if (this.IsGroupLocked())
@@ -546,7 +604,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EED RID: 204525 RVA: 0x00B95FEC File Offset: 0x00B941EC
+		// Token: 0x06026C7D RID: 158845 RVA: 0x00ADA23C File Offset: 0x00AD843C
 		private void SetSubLayoutActive(bool active)
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(11);
@@ -562,43 +620,43 @@ namespace CSharpScript.Game.Module.TowerDefence
 			uuiitem.SetUIActive(active);
 		}
 
-		// Token: 0x0401AA04 RID: 109060
+		// Token: 0x04015356 RID: 86870
 		private const string NormalIndexUncheckedColor = "a6bdca";
 
-		// Token: 0x0401AA05 RID: 109061
+		// Token: 0x04015357 RID: 86871
 		private const string NormalIndexCheckedColor = "182b34";
 
-		// Token: 0x0401AA06 RID: 109062
+		// Token: 0x04015358 RID: 86872
 		private const string NormalTitleUncheckedColor = "adc2cd";
 
-		// Token: 0x0401AA07 RID: 109063
+		// Token: 0x04015359 RID: 86873
 		private const string NormalTitleCheckedColor = "182b34";
 
-		// Token: 0x0401AA08 RID: 109064
+		// Token: 0x0401535A RID: 86874
 		private const string NormalDescUncheckedColor = "5d6e77";
 
-		// Token: 0x0401AA09 RID: 109065
+		// Token: 0x0401535B RID: 86875
 		private const string NormalDescCheckedColor = "6a7b84";
 
-		// Token: 0x0401AA0A RID: 109066
+		// Token: 0x0401535C RID: 86876
 		private const string HardIndexUncheckedColor = "e9d7da";
 
-		// Token: 0x0401AA0B RID: 109067
+		// Token: 0x0401535D RID: 86877
 		private const string HardIndexCheckedColor = "e9d7da";
 
-		// Token: 0x0401AA0C RID: 109068
+		// Token: 0x0401535E RID: 86878
 		private const string HardTitleUncheckedColor = "ddc7cb";
 
-		// Token: 0x0401AA0D RID: 109069
+		// Token: 0x0401535F RID: 86879
 		private const string HardTitleCheckedColor = "ffffff";
 
-		// Token: 0x0401AA0E RID: 109070
+		// Token: 0x04015360 RID: 86880
 		private const string HardDescUncheckedColor = "dfe8ec66";
 
-		// Token: 0x0401AA0F RID: 109071
+		// Token: 0x04015361 RID: 86881
 		private const string HardDescCheckedColor = "ffffff7f";
 
-		// Token: 0x0401AA10 RID: 109072
+		// Token: 0x04015362 RID: 86882
 		[Nullable(new byte[]
 		{
 			2,
@@ -607,75 +665,75 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericLayout<TowerDefenseSubLevelItem, TowerDefenseSubLevelData> SubLayout;
 
-		// Token: 0x0401AA11 RID: 109073
+		// Token: 0x04015363 RID: 86883
 		private bool CanExpand;
 
-		// Token: 0x0401AA12 RID: 109074
+		// Token: 0x04015364 RID: 86884
 		private bool IsBossRush;
 
-		// Token: 0x0401AA13 RID: 109075
+		// Token: 0x04015365 RID: 86885
 		private bool Expanded;
 
-		// Token: 0x0401AA14 RID: 109076
+		// Token: 0x04015366 RID: 86886
 		[Nullable(2)]
 		private TowerDefenseGroupData Data;
 
-		// Token: 0x0200ACD4 RID: 44244
+		// Token: 0x020096F4 RID: 38644
 		[NullableContext(0)]
 		private class ELevelItemComponent
 		{
-			// Token: 0x04034826 RID: 215078
+			// Token: 0x0402F1D6 RID: 192982
 			public const int Toggle = 0;
 
-			// Token: 0x04034827 RID: 215079
+			// Token: 0x0402F1D7 RID: 192983
 			public const int NormalPnl = 1;
 
-			// Token: 0x04034828 RID: 215080
+			// Token: 0x0402F1D8 RID: 192984
 			public const int DifficultPnl = 2;
 
-			// Token: 0x04034829 RID: 215081
+			// Token: 0x0402F1D9 RID: 192985
 			public const int IndexIconPnl = 3;
 
-			// Token: 0x0403482A RID: 215082
+			// Token: 0x0402F1DA RID: 192986
 			public const int IndexIconTex = 4;
 
-			// Token: 0x0403482B RID: 215083
+			// Token: 0x0402F1DB RID: 192987
 			public const int TitleTxt = 5;
 
-			// Token: 0x0403482C RID: 215084
+			// Token: 0x0402F1DC RID: 192988
 			public const int DescTxt = 6;
 
-			// Token: 0x0403482D RID: 215085
+			// Token: 0x0402F1DD RID: 192989
 			public const int DropdownPnl = 7;
 
-			// Token: 0x0403482E RID: 215086
+			// Token: 0x0402F1DE RID: 192990
 			public const int LockPnl = 8;
 
-			// Token: 0x0403482F RID: 215087
+			// Token: 0x0402F1DF RID: 192991
 			public const int FinishPnl = 9;
 
-			// Token: 0x04034830 RID: 215088
+			// Token: 0x0402F1E0 RID: 192992
 			public const int RedDotItem = 10;
 
-			// Token: 0x04034831 RID: 215089
+			// Token: 0x0402F1E1 RID: 192993
 			public const int SubLevelLayout = 11;
 
-			// Token: 0x04034832 RID: 215090
+			// Token: 0x0402F1E2 RID: 192994
 			public const int SubLevelItem = 12;
 
-			// Token: 0x04034833 RID: 215091
+			// Token: 0x0402F1E3 RID: 192995
 			public const int IndexIconTransition = 13;
 
-			// Token: 0x04034834 RID: 215092
+			// Token: 0x0402F1E4 RID: 192996
 			public const int TitleTransition = 14;
 
-			// Token: 0x04034835 RID: 215093
+			// Token: 0x0402F1E5 RID: 192997
 			public const int DescTransition = 15;
 
-			// Token: 0x04034836 RID: 215094
+			// Token: 0x0402F1E6 RID: 192998
 			public const int BossIndexTex = 16;
 
-			// Token: 0x04034837 RID: 215095
+			// Token: 0x0402F1E7 RID: 192999
 			public const int BossIndexIconTransition = 17;
 		}
 	}

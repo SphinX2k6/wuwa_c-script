@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 {
-	// Token: 0x02003F44 RID: 16196
+	// Token: 0x020031F0 RID: 12784
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 16)]
@@ -16,7 +16,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 16)]
 	public struct SMotorRailMove_ParabolaMove : IEqualityOperators<SMotorRailMove_ParabolaMove, SMotorRailMove_ParabolaMove, bool>, IEquatable<SMotorRailMove_ParabolaMove>, IUnrealScriptStruct
 	{
-		// Token: 0x06029394 RID: 168852 RVA: 0x009BED68 File Offset: 0x009BCF68
+		// Token: 0x0601FCB7 RID: 130231 RVA: 0x00935E38 File Offset: 0x00934038
 		public SMotorRailMove_ParabolaMove(float GravityAccelerationAbs, float Duration, float MinSpeedAlongRail, float MaxSpeedAlongRail)
 		{
 			this.GravityAccelerationAbs = GravityAccelerationAbs;
@@ -25,25 +25,25 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			this.MaxSpeedAlongRail = MaxSpeedAlongRail;
 		}
 
-		// Token: 0x06029395 RID: 168853 RVA: 0x009BED87 File Offset: 0x009BCF87
+		// Token: 0x0601FCB8 RID: 130232 RVA: 0x00935E57 File Offset: 0x00934057
 		public static bool operator ==(SMotorRailMove_ParabolaMove left, SMotorRailMove_ParabolaMove right)
 		{
 			return left.GravityAccelerationAbs == right.GravityAccelerationAbs && left.Duration == right.Duration && left.MinSpeedAlongRail == right.MinSpeedAlongRail && left.MaxSpeedAlongRail == right.MaxSpeedAlongRail;
 		}
 
-		// Token: 0x06029396 RID: 168854 RVA: 0x009BEDC3 File Offset: 0x009BCFC3
+		// Token: 0x0601FCB9 RID: 130233 RVA: 0x00935E93 File Offset: 0x00934093
 		public static bool operator !=(SMotorRailMove_ParabolaMove left, SMotorRailMove_ParabolaMove right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06029397 RID: 168855 RVA: 0x009BEDCF File Offset: 0x009BCFCF
+		// Token: 0x0601FCBA RID: 130234 RVA: 0x00935E9F File Offset: 0x0093409F
 		public bool Equals(SMotorRailMove_ParabolaMove other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06029398 RID: 168856 RVA: 0x009BEDE0 File Offset: 0x009BCFE0
+		// Token: 0x0601FCBB RID: 130235 RVA: 0x00935EB0 File Offset: 0x009340B0
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -55,38 +55,38 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			return false;
 		}
 
-		// Token: 0x06029399 RID: 168857 RVA: 0x009BEE05 File Offset: 0x009BD005
+		// Token: 0x0601FCBC RID: 130236 RVA: 0x00935ED5 File Offset: 0x009340D5
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<float, float, float, float>(this.GravityAccelerationAbs, this.Duration, this.MinSpeedAlongRail, this.MaxSpeedAlongRail);
 		}
 
-		// Token: 0x0602939A RID: 168858 RVA: 0x009BEE24 File Offset: 0x009BD024
+		// Token: 0x0601FCBD RID: 130237 RVA: 0x00935EF4 File Offset: 0x009340F4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMotorRailMove_ParabolaMove._ScriptStructPtr != 0) ? SMotorRailMove_ParabolaMove._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMove_ParabolaMove.SMotorRailMove_ParabolaMove", ref SMotorRailMove_ParabolaMove._ScriptStructPtr);
 		}
 
-		// Token: 0x040151C2 RID: 86466
+		// Token: 0x040110FE RID: 69886
 		[FieldOffset(0)]
 		public float GravityAccelerationAbs;
 
-		// Token: 0x040151C3 RID: 86467
+		// Token: 0x040110FF RID: 69887
 		[FieldOffset(4)]
 		public float Duration;
 
-		// Token: 0x040151C4 RID: 86468
+		// Token: 0x04011100 RID: 69888
 		[FieldOffset(8)]
 		public float MinSpeedAlongRail;
 
-		// Token: 0x040151C5 RID: 86469
+		// Token: 0x04011101 RID: 69889
 		[FieldOffset(12)]
 		public float MaxSpeedAlongRail;
 
-		// Token: 0x040151C6 RID: 86470
+		// Token: 0x04011102 RID: 69890
 		public const string __ObjectPath = "/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMove_ParabolaMove.SMotorRailMove_ParabolaMove";
 
-		// Token: 0x040151C7 RID: 86471
+		// Token: 0x04011103 RID: 69891
 		private static IntPtr _ScriptStructPtr;
 	}
 }

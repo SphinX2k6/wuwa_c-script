@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02002397 RID: 9111
+// Token: 0x0200187C RID: 6268
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class GiftPackageConfig : ConfigBase
 {
-	// Token: 0x06012381 RID: 74625 RVA: 0x0047C946 File Offset: 0x0047AB46
+	// Token: 0x0600F833 RID: 63539 RVA: 0x00489D86 File Offset: 0x00487F86
 	public GiftPackage? GetGiftPackageConfig(int id)
 	{
 		return ConfigGiftPackageById.GetConfig(id, true);
 	}
 
-	// Token: 0x06012382 RID: 74626 RVA: 0x0047C950 File Offset: 0x0047AB50
+	// Token: 0x0600F834 RID: 63540 RVA: 0x00489D90 File Offset: 0x00487F90
 	public void GetGiftItemList(int id, List<TItem> outList)
 	{
 		outList.Clear();
@@ -45,8 +45,8 @@ public class GiftPackageConfig : ConfigBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x170017A2 RID: 6050
-	// (get) Token: 0x06012383 RID: 74627 RVA: 0x0047CA1C File Offset: 0x0047AC1C
+	// Token: 0x170017DC RID: 6108
+	// (get) Token: 0x0600F835 RID: 63541 RVA: 0x00489E5C File Offset: 0x0048805C
 	public static GiftPackageConfig Instance
 	{
 		get
@@ -55,7 +55,7 @@ public class GiftPackageConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06012384 RID: 74628 RVA: 0x0047CA23 File Offset: 0x0047AC23
+	// Token: 0x0600F836 RID: 63542 RVA: 0x00489E63 File Offset: 0x00488063
 	public static GiftPackageConfig GetOrCreateInstance()
 	{
 		if (GiftPackageConfig._Instance == null)
@@ -65,7 +65,7 @@ public class GiftPackageConfig : ConfigBase
 		return GiftPackageConfig._Instance;
 	}
 
-	// Token: 0x06012385 RID: 74629 RVA: 0x0047CA37 File Offset: 0x0047AC37
+	// Token: 0x0600F837 RID: 63543 RVA: 0x00489E77 File Offset: 0x00488077
 	public static bool CreateInstance()
 	{
 		if (GiftPackageConfig._Instance != null)
@@ -76,24 +76,24 @@ public class GiftPackageConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06012386 RID: 74630 RVA: 0x0047CA4D File Offset: 0x0047AC4D
+	// Token: 0x0600F838 RID: 63544 RVA: 0x00489E8D File Offset: 0x0048808D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012387 RID: 74631 RVA: 0x0047CA4F File Offset: 0x0047AC4F
+	// Token: 0x0600F839 RID: 63545 RVA: 0x00489E8F File Offset: 0x0048808F
 	public static void ResetStaticDefaultValue()
 	{
 		GiftPackageConfig._Instance = null;
 	}
 
-	// Token: 0x06012388 RID: 74632 RVA: 0x0047CA57 File Offset: 0x0047AC57
+	// Token: 0x0600F83A RID: 63546 RVA: 0x00489E97 File Offset: 0x00488097
 	static GiftPackageConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GiftPackageConfig.CreateStaticDefaultValue), new Action(GiftPackageConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040089AA RID: 35242
+	// Token: 0x04008AF1 RID: 35569
 	[Nullable(2)]
 	private static GiftPackageConfig _Instance;
 }

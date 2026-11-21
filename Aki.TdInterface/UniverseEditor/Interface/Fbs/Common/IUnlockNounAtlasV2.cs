@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E63 RID: 24163
+	// Token: 0x020064A3 RID: 25763
 	public struct IUnlockNounAtlasV2 : IFlatbufferObject
 	{
-		// Token: 0x1700B4AB RID: 46251
-		// (get) Token: 0x06029615 RID: 169493 RVA: 0x005AC12E File Offset: 0x005AA32E
+		// Token: 0x1700BE14 RID: 48660
+		// (get) Token: 0x0602BCB1 RID: 179377 RVA: 0x005F4FD6 File Offset: 0x005F31D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029616 RID: 169494 RVA: 0x005AC13B File Offset: 0x005AA33B
+		// Token: 0x0602BCB2 RID: 179378 RVA: 0x005F4FE3 File Offset: 0x005F31E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029617 RID: 169495 RVA: 0x005AC144 File Offset: 0x005AA344
+		// Token: 0x0602BCB3 RID: 179379 RVA: 0x005F4FEC File Offset: 0x005F31EC
 		public static IUnlockNounAtlasV2 GetRootAsIUnlockNounAtlasV2(ByteBuffer _bb)
 		{
 			return IUnlockNounAtlasV2.GetRootAsIUnlockNounAtlasV2(_bb, default(IUnlockNounAtlasV2));
 		}
 
-		// Token: 0x06029618 RID: 169496 RVA: 0x005AC160 File Offset: 0x005AA360
+		// Token: 0x0602BCB4 RID: 179380 RVA: 0x005F5008 File Offset: 0x005F3208
 		public static IUnlockNounAtlasV2 GetRootAsIUnlockNounAtlasV2(ByteBuffer _bb, IUnlockNounAtlasV2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029619 RID: 169497 RVA: 0x005AC17D File Offset: 0x005AA37D
+		// Token: 0x0602BCB5 RID: 179381 RVA: 0x005F5025 File Offset: 0x005F3225
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602961A RID: 169498 RVA: 0x005AC18C File Offset: 0x005AA38C
+		// Token: 0x0602BCB6 RID: 179382 RVA: 0x005F5034 File Offset: 0x005F3234
 		public IUnlockNounAtlasV2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B4AC RID: 46252
-		// (get) Token: 0x0602961B RID: 169499 RVA: 0x005AC19C File Offset: 0x005AA39C
+		// Token: 0x1700BE15 RID: 48661
+		// (get) Token: 0x0602BCB7 RID: 179383 RVA: 0x005F5044 File Offset: 0x005F3244
 		public EUnlockAtlasSystemTypeV2 Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B4AD RID: 46253
-		// (get) Token: 0x0602961C RID: 169500 RVA: 0x005AC1D8 File Offset: 0x005AA3D8
+		// Token: 0x1700BE16 RID: 48662
+		// (get) Token: 0x0602BCB8 RID: 179384 RVA: 0x005F5080 File Offset: 0x005F3280
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602961D RID: 169501 RVA: 0x005AC214 File Offset: 0x005AA414
+		// Token: 0x0602BCB9 RID: 179385 RVA: 0x005F50BC File Offset: 0x005F32BC
 		public static Offset<IUnlockNounAtlasV2> CreateIUnlockNounAtlasV2(FlatBufferBuilder builder, EUnlockAtlasSystemTypeV2 Type = EUnlockAtlasSystemTypeV2.GeographicalAtlas, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IUnlockNounAtlasV2.EndIUnlockNounAtlasV2(builder);
 		}
 
-		// Token: 0x0602961E RID: 169502 RVA: 0x005AC231 File Offset: 0x005AA431
+		// Token: 0x0602BCBA RID: 179386 RVA: 0x005F50D9 File Offset: 0x005F32D9
 		public static void StartIUnlockNounAtlasV2(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602961F RID: 169503 RVA: 0x005AC23A File Offset: 0x005AA43A
+		// Token: 0x0602BCBB RID: 179387 RVA: 0x005F50E2 File Offset: 0x005F32E2
 		public static void AddType(FlatBufferBuilder builder, EUnlockAtlasSystemTypeV2 type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029620 RID: 169504 RVA: 0x005AC245 File Offset: 0x005AA445
+		// Token: 0x0602BCBC RID: 179388 RVA: 0x005F50ED File Offset: 0x005F32ED
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06029621 RID: 169505 RVA: 0x005AC250 File Offset: 0x005AA450
+		// Token: 0x0602BCBD RID: 179389 RVA: 0x005F50F8 File Offset: 0x005F32F8
 		public static Offset<IUnlockNounAtlasV2> EndIUnlockNounAtlasV2(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnlockNounAtlasV2>(builder.EndTable());
 		}
 
-		// Token: 0x06029622 RID: 169506 RVA: 0x005AC260 File Offset: 0x005AA460
+		// Token: 0x0602BCBE RID: 179390 RVA: 0x005F5108 File Offset: 0x005F3308
 		public IUnlockNounAtlasV2T UnPack()
 		{
 			IUnlockNounAtlasV2T unlockNounAtlasV2T = new IUnlockNounAtlasV2T();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return unlockNounAtlasV2T;
 		}
 
-		// Token: 0x06029623 RID: 169507 RVA: 0x005AC27B File Offset: 0x005AA47B
+		// Token: 0x0602BCBF RID: 179391 RVA: 0x005F5123 File Offset: 0x005F3323
 		public void UnPackTo(IUnlockNounAtlasV2T _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06029624 RID: 169508 RVA: 0x005AC298 File Offset: 0x005AA498
+		// Token: 0x0602BCC0 RID: 179392 RVA: 0x005F5140 File Offset: 0x005F3340
 		public static Offset<IUnlockNounAtlasV2> Pack(FlatBufferBuilder builder, IUnlockNounAtlasV2T _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IUnlockNounAtlasV2.CreateIUnlockNounAtlasV2(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400F874 RID: 63604
+		// Token: 0x040105D1 RID: 67025
 		private Table __p;
 	}
 }

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x02006908 RID: 26888
+	// Token: 0x02005858 RID: 22616
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossRushMainView : UiViewBase
 	{
-		// Token: 0x060430C2 RID: 274626 RVA: 0x01055EBE File Offset: 0x010540BE
+		// Token: 0x06037C1A RID: 228378 RVA: 0x00F974F2 File Offset: 0x00F956F2
 		public BossRushMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060430C3 RID: 274627 RVA: 0x01055ED4 File Offset: 0x010540D4
+		// Token: 0x06037C1B RID: 228379 RVA: 0x00F97508 File Offset: 0x00F95708
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060430C4 RID: 274628 RVA: 0x01055F40 File Offset: 0x01054140
+		// Token: 0x06037C1C RID: 228380 RVA: 0x00F97574 File Offset: 0x00F95774
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossRushMainView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060430C5 RID: 274629 RVA: 0x01055F83 File Offset: 0x01054183
+		// Token: 0x06037C1D RID: 228381 RVA: 0x00F975B7 File Offset: 0x00F957B7
 		protected override void OnBeforeDestroy()
 		{
 			TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -60,19 +60,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			BossRushModel.Instance.PlayBackAnimation = false;
 		}
 
-		// Token: 0x060430C6 RID: 274630 RVA: 0x01055FB3 File Offset: 0x010541B3
+		// Token: 0x06037C1E RID: 228382 RVA: 0x00F975E7 File Offset: 0x00F957E7
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<EUiTabViewName>(EEventName.RequestChangeBossRushView, new Action<EUiTabViewName>(this.OnRequestChangeBossRushView));
 		}
 
-		// Token: 0x060430C7 RID: 274631 RVA: 0x01055FD1 File Offset: 0x010541D1
+		// Token: 0x06037C1F RID: 228383 RVA: 0x00F97605 File Offset: 0x00F95805
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<EUiTabViewName>(EEventName.RequestChangeBossRushView, new Action<EUiTabViewName>(this.OnRequestChangeBossRushView));
 		}
 
-		// Token: 0x060430C8 RID: 274632 RVA: 0x01055FEF File Offset: 0x010541EF
+		// Token: 0x06037C20 RID: 228384 RVA: 0x00F97623 File Offset: 0x00F95823
 		private void OnRequestChangeBossRushView(EUiTabViewName viewName)
 		{
 			TabComponentWithCaptionItem<CommonTabItem> tabComponent = this.TabComponent;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			EventSystem.Instance.Emit<EUiTabViewName>(EEventName.BossRushSubViewChanged, viewName);
 		}
 
-		// Token: 0x060430C9 RID: 274633 RVA: 0x0105601B File Offset: 0x0105421B
+		// Token: 0x06037C21 RID: 228385 RVA: 0x00F9764F File Offset: 0x00F9584F
 		protected override void OnStart()
 		{
 			TabComponentWithCaptionItem<CommonTabItem> tabComponent = this.TabComponent;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			tabComponent.SelectToggleByIndex(this.GetViewIndex(BossRushModel.Instance.OnlyOpenRewardView ? EUiTabViewName.BossRushRewardView : EUiTabViewName.BossRushSelectView), true);
 		}
 
-		// Token: 0x060430CA RID: 274634 RVA: 0x0105604C File Offset: 0x0105424C
+		// Token: 0x06037C22 RID: 228386 RVA: 0x00F97680 File Offset: 0x00F95880
 		private UniTask InitTab()
 		{
 			BossRushMainView.<InitTab>d__13 <InitTab>d__;
@@ -105,13 +105,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return <InitTab>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060430CB RID: 274635 RVA: 0x0105608F File Offset: 0x0105428F
+		// Token: 0x06037C23 RID: 228387 RVA: 0x00F976C3 File Offset: 0x00F958C3
 		private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x060430CC RID: 274636 RVA: 0x01056098 File Offset: 0x01054298
+		// Token: 0x06037C24 RID: 228388 RVA: 0x00F976CC File Offset: 0x00F958CC
 		private void ToggleCallBack(int index)
 		{
 			this.CurrentSelectIndex = index;
@@ -121,13 +121,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.TabViewComponent.ToggleCallBack(data, viewName, tabItemByIndex, null, null);
 		}
 
-		// Token: 0x060430CD RID: 274637 RVA: 0x010560EB File Offset: 0x010542EB
+		// Token: 0x06037C25 RID: 228389 RVA: 0x00F9771F File Offset: 0x00F9591F
 		private CommonTabData GetCommonData(int index)
 		{
 			return new CommonTabData("", null, null);
 		}
 
-		// Token: 0x060430CE RID: 274638 RVA: 0x010560FC File Offset: 0x010542FC
+		// Token: 0x06037C26 RID: 228390 RVA: 0x00F97730 File Offset: 0x00F95930
 		private int GetViewIndex(EUiTabViewName tabName)
 		{
 			for (int i = 0; i < this.TabDataList.Count; i++)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return 0;
 		}
 
-		// Token: 0x060430CF RID: 274639 RVA: 0x01056144 File Offset: 0x01054344
+		// Token: 0x06037C27 RID: 228391 RVA: 0x00F97778 File Offset: 0x00F95978
 		private void BackClick()
 		{
 			if (this.CurrentSelectIndex != 0)
@@ -174,26 +174,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x04022E7A RID: 142970
+		// Token: 0x0401D6D6 RID: 120534
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04022E7B RID: 142971
+		// Token: 0x0401D6D7 RID: 120535
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x04022E7C RID: 142972
+		// Token: 0x0401D6D8 RID: 120536
 		protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x04022E7D RID: 142973
+		// Token: 0x0401D6D9 RID: 120537
 		private int CurrentSelectIndex;
 
-		// Token: 0x0200CAB6 RID: 51894
+		// Token: 0x0200B47E RID: 46206
 		[NullableContext(0)]
 		public class EComponent
 		{
-			// Token: 0x0403D43F RID: 250943
+			// Token: 0x04037D19 RID: 228633
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403D440 RID: 250944
+			// Token: 0x04037D1A RID: 228634
 			public const int ContentItem = 1;
 		}
 	}

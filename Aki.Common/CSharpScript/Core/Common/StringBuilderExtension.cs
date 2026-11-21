@@ -5,12 +5,12 @@ using System.Text;
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x02000015 RID: 21
+	// Token: 0x02000016 RID: 22
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class StringBuilderExtension
 	{
-		// Token: 0x060000A9 RID: 169 RVA: 0x0000A9FC File Offset: 0x00008BFC
+		// Token: 0x06000116 RID: 278 RVA: 0x0000E1A4 File Offset: 0x0000C3A4
 		public static void AppendObject(this StringBuilder sb, [Nullable(2)] object o)
 		{
 			if (o != null)
@@ -41,7 +41,7 @@ namespace CSharpScript.Core.Common
 			}
 		}
 
-		// Token: 0x060000AA RID: 170 RVA: 0x0000AAB8 File Offset: 0x00008CB8
+		// Token: 0x06000117 RID: 279 RVA: 0x0000E260 File Offset: 0x0000C460
 		public unsafe static void AppendParams(this StringBuilder sb, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,

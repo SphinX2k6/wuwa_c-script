@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200184B RID: 6219
+	// Token: 0x0200038B RID: 907
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FKuroPhysicsConeRotateConstraintHit : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06016EC6 RID: 93894 RVA: 0x0021723D File Offset: 0x0021543D
+		// Token: 0x06005AEC RID: 23276 RVA: 0x0008063B File Offset: 0x0007E83B
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroPhysicsConeRotateConstraintHit.StaticFunctionPtr();
 		}
 
-		// Token: 0x06016EC7 RID: 93895 RVA: 0x00217249 File Offset: 0x00215449
+		// Token: 0x06005AED RID: 23277 RVA: 0x00080647 File Offset: 0x0007E847
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroPhysicsConeRotateConstraintHit._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FKuroPhysicsConeRotateConstraintHit._FunctionPtr;
 		}
 
-		// Token: 0x06016EC8 RID: 93896 RVA: 0x0021726C File Offset: 0x0021546C
+		// Token: 0x06005AEE RID: 23278 RVA: 0x0008066A File Offset: 0x0007E86A
 		public FKuroPhysicsConeRotateConstraintHit()
 		{
 		}
 
-		// Token: 0x06016EC9 RID: 93897 RVA: 0x00217274 File Offset: 0x00215474
+		// Token: 0x06005AEF RID: 23279 RVA: 0x00080672 File Offset: 0x0007E872
 		[NullableContext(2)]
 		public FKuroPhysicsConeRotateConstraintHit(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016ECA RID: 93898 RVA: 0x0021727E File Offset: 0x0021547E
+		// Token: 0x06005AF0 RID: 23280 RVA: 0x0008067C File Offset: 0x0007E87C
 		public FKuroPhysicsConeRotateConstraintHit(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016ECB RID: 93899 RVA: 0x00217289 File Offset: 0x00215489
+		// Token: 0x06005AF1 RID: 23281 RVA: 0x00080687 File Offset: 0x0007E887
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06016ECC RID: 93900 RVA: 0x002172BB File Offset: 0x002154BB
+		// Token: 0x06005AF2 RID: 23282 RVA: 0x000806B9 File Offset: 0x0007E8B9
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<float> Callback)
 		{
 			if (FKuroPhysicsConeRotateConstraintHit.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FKuroPhysicsConeRotateConstraintHit.RegisterId);
 		}
 
-		// Token: 0x06016ECD RID: 93901 RVA: 0x002172F5 File Offset: 0x002154F5
+		// Token: 0x06005AF3 RID: 23283 RVA: 0x000806F3 File Offset: 0x0007E8F3
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<float> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06016ECE RID: 93902 RVA: 0x00217300 File Offset: 0x00215500
+		// Token: 0x06005AF4 RID: 23284 RVA: 0x000806FC File Offset: 0x0007E8FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(float Strength)
 		{
 			FKuroPhysicsConeRotateConstraintHit.__FKuroPhysicsConeRotateConstraintHit_DelegateParams* ptr = stackalloc FKuroPhysicsConeRotateConstraintHit.__FKuroPhysicsConeRotateConstraintHit_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FKuroPhysicsConeRotateConstraintHit.__FKuroPhysicsConeRotateConstraintHit_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06016ECF RID: 93903 RVA: 0x0021733C File Offset: 0x0021553C
+		// Token: 0x06005AF5 RID: 23285 RVA: 0x00080738 File Offset: 0x0007E938
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FKuroPhysicsConeRotateConstraintHit.__FKuroPhysicsConeRotateConstraintHit_DelegateParams*)__Parameters)->Strength);
 		}
 
-		// Token: 0x0400C74B RID: 51019
+		// Token: 0x040025CB RID: 9675
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C74C RID: 51020
+		// Token: 0x040025CC RID: 9676
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroFauxPhysics.KuroPhysicsConeRotateConstraintHit__DelegateSignature";
 
-		// Token: 0x0400C74D RID: 51021
+		// Token: 0x040025CD RID: 9677
 		private static int RegisterId;
 
-		// Token: 0x02002F6C RID: 12140
+		// Token: 0x02000A95 RID: 2709
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FKuroPhysicsConeRotateConstraintHit_DelegateParams
+		private ref struct __FKuroPhysicsConeRotateConstraintHit_DelegateParams
 		{
-			// Token: 0x04016B27 RID: 92967
+			// Token: 0x04005AE9 RID: 23273
 			[FieldOffset(0)]
 			public float Strength;
 		}
 
-		// Token: 0x02002F6D RID: 12141
+		// Token: 0x02000A96 RID: 2710
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B28 RID: 92968
+			// Token: 0x04005AEA RID: 23274
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

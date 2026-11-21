@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018DE RID: 6366
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A6B RID: 6763
 	public class ICloseMotorcycleTrackMove : ICloseSplineMovePattern
 	{
-		// Token: 0x0600887F RID: 34943 RVA: 0x00142D4C File Offset: 0x00140F4C
+		// Token: 0x06008FB5 RID: 36789 RVA: 0x00152708 File Offset: 0x00150908
 		private ICloseMotorcycleTrackMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008880 RID: 34944 RVA: 0x00142D84 File Offset: 0x00140F84
+		// Token: 0x06008FB6 RID: 36790 RVA: 0x00152740 File Offset: 0x00150940
 		public static ICloseMotorcycleTrackMove Create([Nullable(2)] ICloseMotorcycleTrackMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008881 RID: 34945 RVA: 0x00142D97 File Offset: 0x00140F97
+		// Token: 0x06008FB7 RID: 36791 RVA: 0x00152753 File Offset: 0x00150953
 		public static ICloseMotorcycleTrackMove CreateFromSetValue([Nullable(2)] ICloseMotorcycleTrackMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008882 RID: 34946 RVA: 0x00142DAA File Offset: 0x00140FAA
+		// Token: 0x06008FB8 RID: 36792 RVA: 0x00152766 File Offset: 0x00150966
 		public new ICloseMotorcycleTrackMove_SetValue ToSetValue()
 		{
 			return new ICloseMotorcycleTrackMove_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C47 RID: 11335
-		// (get) Token: 0x06008883 RID: 34947 RVA: 0x00142DC9 File Offset: 0x00140FC9
-		// (set) Token: 0x06008884 RID: 34948 RVA: 0x00142DF4 File Offset: 0x00140FF4
+		// Token: 0x17002E46 RID: 11846
+		// (get) Token: 0x06008FB9 RID: 36793 RVA: 0x00152785 File Offset: 0x00150985
+		// (set) Token: 0x06008FBA RID: 36794 RVA: 0x001527B0 File Offset: 0x001509B0
 		public override ESplineMovePattern Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C48 RID: 11336
-		// (get) Token: 0x06008885 RID: 34949 RVA: 0x00142E04 File Offset: 0x00141004
-		// (set) Token: 0x06008886 RID: 34950 RVA: 0x00142E3E File Offset: 0x0014103E
+		// Token: 0x17002E47 RID: 11847
+		// (get) Token: 0x06008FBB RID: 36795 RVA: 0x001527C0 File Offset: 0x001509C0
+		// (set) Token: 0x06008FBC RID: 36796 RVA: 0x001527FA File Offset: 0x001509FA
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055B4 RID: 21940
+		// Token: 0x04005A07 RID: 23047
 		[Nullable(2)]
 		protected new ICloseMotorcycleTrackMove FbInstance;
 
-		// Token: 0x040055B5 RID: 21941
+		// Token: 0x04005A08 RID: 23048
 		[Nullable(2)]
 		protected new ICloseMotorcycleTrackMove_SetValue PocoInterface;
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E68 RID: 20072
+	// Token: 0x02005379 RID: 21369
 	public struct IAdsortTransform : IFlatbufferObject
 	{
-		// Token: 0x17008FAF RID: 36783
-		// (get) Token: 0x0601F852 RID: 129106 RVA: 0x00463D6A File Offset: 0x00461F6A
+		// Token: 0x170096E8 RID: 38632
+		// (get) Token: 0x0602149D RID: 136349 RVA: 0x00497D82 File Offset: 0x00495F82
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F853 RID: 129107 RVA: 0x00463D77 File Offset: 0x00461F77
+		// Token: 0x0602149E RID: 136350 RVA: 0x00497D8F File Offset: 0x00495F8F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F854 RID: 129108 RVA: 0x00463D80 File Offset: 0x00461F80
+		// Token: 0x0602149F RID: 136351 RVA: 0x00497D98 File Offset: 0x00495F98
 		public static IAdsortTransform GetRootAsIAdsortTransform(ByteBuffer _bb)
 		{
 			return IAdsortTransform.GetRootAsIAdsortTransform(_bb, default(IAdsortTransform));
 		}
 
-		// Token: 0x0601F855 RID: 129109 RVA: 0x00463D9C File Offset: 0x00461F9C
+		// Token: 0x060214A0 RID: 136352 RVA: 0x00497DB4 File Offset: 0x00495FB4
 		public static IAdsortTransform GetRootAsIAdsortTransform(ByteBuffer _bb, IAdsortTransform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F856 RID: 129110 RVA: 0x00463DB9 File Offset: 0x00461FB9
+		// Token: 0x060214A1 RID: 136353 RVA: 0x00497DD1 File Offset: 0x00495FD1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F857 RID: 129111 RVA: 0x00463DC8 File Offset: 0x00461FC8
+		// Token: 0x060214A2 RID: 136354 RVA: 0x00497DE0 File Offset: 0x00495FE0
 		public IAdsortTransform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FB0 RID: 36784
-		// (get) Token: 0x0601F858 RID: 129112 RVA: 0x00463DD8 File Offset: 0x00461FD8
+		// Token: 0x170096E9 RID: 38633
+		// (get) Token: 0x060214A3 RID: 136355 RVA: 0x00497DF0 File Offset: 0x00495FF0
 		public IVectorInfo? Pos
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FB1 RID: 36785
-		// (get) Token: 0x0601F859 RID: 129113 RVA: 0x00463E38 File Offset: 0x00462038
+		// Token: 0x170096EA RID: 38634
+		// (get) Token: 0x060214A4 RID: 136356 RVA: 0x00497E50 File Offset: 0x00496050
 		public IVectorInfo? Rot
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F85A RID: 129114 RVA: 0x00463E95 File Offset: 0x00462095
+		// Token: 0x060214A5 RID: 136357 RVA: 0x00497EAD File Offset: 0x004960AD
 		public static Offset<IAdsortTransform> CreateIAdsortTransform(FlatBufferBuilder builder, Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAdsortTransform.EndIAdsortTransform(builder);
 		}
 
-		// Token: 0x0601F85B RID: 129115 RVA: 0x00463EB2 File Offset: 0x004620B2
+		// Token: 0x060214A6 RID: 136358 RVA: 0x00497ECA File Offset: 0x004960CA
 		public static void StartIAdsortTransform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F85C RID: 129116 RVA: 0x00463EBB File Offset: 0x004620BB
+		// Token: 0x060214A7 RID: 136359 RVA: 0x00497ED3 File Offset: 0x004960D3
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(0, posOffset.Value, 0);
 		}
 
-		// Token: 0x0601F85D RID: 129117 RVA: 0x00463ECB File Offset: 0x004620CB
+		// Token: 0x060214A8 RID: 136360 RVA: 0x00497EE3 File Offset: 0x004960E3
 		public static void AddRot(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffset)
 		{
 			builder.AddOffset(1, rotOffset.Value, 0);
 		}
 
-		// Token: 0x0601F85E RID: 129118 RVA: 0x00463EDB File Offset: 0x004620DB
+		// Token: 0x060214A9 RID: 136361 RVA: 0x00497EF3 File Offset: 0x004960F3
 		public static Offset<IAdsortTransform> EndIAdsortTransform(FlatBufferBuilder builder)
 		{
 			return new Offset<IAdsortTransform>(builder.EndTable());
 		}
 
-		// Token: 0x0601F85F RID: 129119 RVA: 0x00463EE8 File Offset: 0x004620E8
+		// Token: 0x060214AA RID: 136362 RVA: 0x00497F00 File Offset: 0x00496100
 		public IAdsortTransformT UnPack()
 		{
 			IAdsortTransformT adsortTransformT = new IAdsortTransformT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return adsortTransformT;
 		}
 
-		// Token: 0x0601F860 RID: 129120 RVA: 0x00463F04 File Offset: 0x00462104
+		// Token: 0x060214AB RID: 136363 RVA: 0x00497F1C File Offset: 0x0049611C
 		public void UnPackTo(IAdsortTransformT _o)
 		{
 			_o.Pos = ((this.Pos != null) ? this.Pos.Value.UnPack() : null);
 			_o.Rot = ((this.Rot != null) ? this.Rot.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601F861 RID: 129121 RVA: 0x00463F70 File Offset: 0x00462170
+		// Token: 0x060214AC RID: 136364 RVA: 0x00497F88 File Offset: 0x00496188
 		public static Offset<IAdsortTransform> Pack(FlatBufferBuilder builder, IAdsortTransformT _o)
 		{
 			if (_o == null)
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAdsortTransform.CreateIAdsortTransform(builder, posOffset, rotOffset);
 		}
 
-		// Token: 0x0400DC11 RID: 56337
+		// Token: 0x0400E78B RID: 59275
 		private Table __p;
 	}
 }

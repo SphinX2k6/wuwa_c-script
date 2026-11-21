@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055F0 RID: 22000
+	// Token: 0x02005B8E RID: 23438
 	public struct INearbyTracking : IFlatbufferObject
 	{
-		// Token: 0x1700A2C7 RID: 41671
-		// (get) Token: 0x060247F1 RID: 149489 RVA: 0x00509936 File Offset: 0x00507B36
+		// Token: 0x1700AB4F RID: 43855
+		// (get) Token: 0x060269FE RID: 158206 RVA: 0x00549EAE File Offset: 0x005480AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060247F2 RID: 149490 RVA: 0x00509943 File Offset: 0x00507B43
+		// Token: 0x060269FF RID: 158207 RVA: 0x00549EBB File Offset: 0x005480BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060247F3 RID: 149491 RVA: 0x0050994C File Offset: 0x00507B4C
+		// Token: 0x06026A00 RID: 158208 RVA: 0x00549EC4 File Offset: 0x005480C4
 		public static INearbyTracking GetRootAsINearbyTracking(ByteBuffer _bb)
 		{
 			return INearbyTracking.GetRootAsINearbyTracking(_bb, default(INearbyTracking));
 		}
 
-		// Token: 0x060247F4 RID: 149492 RVA: 0x00509968 File Offset: 0x00507B68
+		// Token: 0x06026A01 RID: 158209 RVA: 0x00549EE0 File Offset: 0x005480E0
 		public static INearbyTracking GetRootAsINearbyTracking(ByteBuffer _bb, INearbyTracking obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060247F5 RID: 149493 RVA: 0x00509985 File Offset: 0x00507B85
+		// Token: 0x06026A02 RID: 158210 RVA: 0x00549EFD File Offset: 0x005480FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060247F6 RID: 149494 RVA: 0x00509994 File Offset: 0x00507B94
+		// Token: 0x06026A03 RID: 158211 RVA: 0x00549F0C File Offset: 0x0054810C
 		public INearbyTracking __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A2C8 RID: 41672
-		// (get) Token: 0x060247F7 RID: 149495 RVA: 0x005099A4 File Offset: 0x00507BA4
+		// Token: 0x1700AB50 RID: 43856
+		// (get) Token: 0x06026A04 RID: 158212 RVA: 0x00549F1C File Offset: 0x0054811C
 		public ENearbyTrackingType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060247F8 RID: 149496 RVA: 0x005099E0 File Offset: 0x00507BE0
+		// Token: 0x06026A05 RID: 158213 RVA: 0x00549F58 File Offset: 0x00548158
 		public static Offset<INearbyTracking> CreateINearbyTracking(FlatBufferBuilder builder, ENearbyTrackingType Type = ENearbyTrackingType.Icon)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INearbyTracking.EndINearbyTracking(builder);
 		}
 
-		// Token: 0x060247F9 RID: 149497 RVA: 0x005099F6 File Offset: 0x00507BF6
+		// Token: 0x06026A06 RID: 158214 RVA: 0x00549F6E File Offset: 0x0054816E
 		public static void StartINearbyTracking(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060247FA RID: 149498 RVA: 0x005099FF File Offset: 0x00507BFF
+		// Token: 0x06026A07 RID: 158215 RVA: 0x00549F77 File Offset: 0x00548177
 		public static void AddType(FlatBufferBuilder builder, ENearbyTrackingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060247FB RID: 149499 RVA: 0x00509A0A File Offset: 0x00507C0A
+		// Token: 0x06026A08 RID: 158216 RVA: 0x00549F82 File Offset: 0x00548182
 		public static Offset<INearbyTracking> EndINearbyTracking(FlatBufferBuilder builder)
 		{
 			return new Offset<INearbyTracking>(builder.EndTable());
 		}
 
-		// Token: 0x060247FC RID: 149500 RVA: 0x00509A18 File Offset: 0x00507C18
+		// Token: 0x06026A09 RID: 158217 RVA: 0x00549F90 File Offset: 0x00548190
 		public INearbyTrackingT UnPack()
 		{
 			INearbyTrackingT nearbyTrackingT = new INearbyTrackingT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return nearbyTrackingT;
 		}
 
-		// Token: 0x060247FD RID: 149501 RVA: 0x00509A33 File Offset: 0x00507C33
+		// Token: 0x06026A0A RID: 158218 RVA: 0x00549FAB File Offset: 0x005481AB
 		public void UnPackTo(INearbyTrackingT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060247FE RID: 149502 RVA: 0x00509A44 File Offset: 0x00507C44
+		// Token: 0x06026A0B RID: 158219 RVA: 0x00549FBC File Offset: 0x005481BC
 		public static Offset<INearbyTracking> Pack(FlatBufferBuilder builder, INearbyTrackingT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INearbyTracking.CreateINearbyTracking(builder, _o.Type);
 		}
 
-		// Token: 0x0400E95D RID: 59741
+		// Token: 0x0400F5BF RID: 62911
 		private Table __p;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200711F RID: 28959
+	// Token: 0x020078EB RID: 30955
 	public class ISkiConfigT
 	{
-		// Token: 0x1700D748 RID: 55112
-		// (get) Token: 0x0603358A RID: 210314 RVA: 0x006EBD67 File Offset: 0x006E9F67
-		// (set) Token: 0x0603358B RID: 210315 RVA: 0x006EBD6F File Offset: 0x006E9F6F
+		// Token: 0x1700E32B RID: 58155
+		// (get) Token: 0x0603682C RID: 223276 RVA: 0x0074C373 File Offset: 0x0074A573
+		// (set) Token: 0x0603682D RID: 223277 RVA: 0x0074C37B File Offset: 0x0074A57B
 		public ESportStateType Type { get; set; }
 
-		// Token: 0x1700D749 RID: 55113
-		// (get) Token: 0x0603358C RID: 210316 RVA: 0x006EBD78 File Offset: 0x006E9F78
-		// (set) Token: 0x0603358D RID: 210317 RVA: 0x006EBD80 File Offset: 0x006E9F80
+		// Token: 0x1700E32C RID: 58156
+		// (get) Token: 0x0603682E RID: 223278 RVA: 0x0074C384 File Offset: 0x0074A584
+		// (set) Token: 0x0603682F RID: 223279 RVA: 0x0074C38C File Offset: 0x0074A58C
 		public TSkiConfigUnion Config { get; set; }
 
-		// Token: 0x0603358E RID: 210318 RVA: 0x006EBD89 File Offset: 0x006E9F89
+		// Token: 0x06036830 RID: 223280 RVA: 0x0074C395 File Offset: 0x0074A595
 		public ISkiConfigT()
 		{
 			this.Type = ESportStateType.Slide;

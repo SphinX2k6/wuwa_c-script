@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200150B RID: 5387
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001666 RID: 5734
 	public class ClientUnlockAchievementSystemItem : ActionParams
 	{
-		// Token: 0x06007A70 RID: 31344 RVA: 0x001245A8 File Offset: 0x001227A8
+		// Token: 0x06008143 RID: 33091 RVA: 0x00133288 File Offset: 0x00131488
 		private ClientUnlockAchievementSystemItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A71 RID: 31345 RVA: 0x001245E0 File Offset: 0x001227E0
+		// Token: 0x06008144 RID: 33092 RVA: 0x001332C0 File Offset: 0x001314C0
 		public static ClientUnlockAchievementSystemItem Create([Nullable(2)] ClientUnlockAchievementSystemItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A72 RID: 31346 RVA: 0x001245F3 File Offset: 0x001227F3
+		// Token: 0x06008145 RID: 33093 RVA: 0x001332D3 File Offset: 0x001314D3
 		public static ClientUnlockAchievementSystemItem CreateFromSetValue([Nullable(2)] ClientUnlockAchievementSystemItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A73 RID: 31347 RVA: 0x00124606 File Offset: 0x00122806
+		// Token: 0x06008146 RID: 33094 RVA: 0x001332E6 File Offset: 0x001314E6
 		public ClientUnlockAchievementSystemItem_SetValue ToSetValue()
 		{
 			return new ClientUnlockAchievementSystemItem_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028DF RID: 10463
-		// (get) Token: 0x06007A74 RID: 31348 RVA: 0x00124619 File Offset: 0x00122819
-		// (set) Token: 0x06007A75 RID: 31349 RVA: 0x00124644 File Offset: 0x00122844
+		// Token: 0x17002AC9 RID: 10953
+		// (get) Token: 0x06008147 RID: 33095 RVA: 0x001332F9 File Offset: 0x001314F9
+		// (set) Token: 0x06008148 RID: 33096 RVA: 0x00133324 File Offset: 0x00131524
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046ED RID: 18157
+		// Token: 0x04004A8C RID: 19084
 		[Nullable(2)]
 		protected new ClientUnlockAchievementSystemItem FbInstance;
 
-		// Token: 0x040046EE RID: 18158
+		// Token: 0x04004A8D RID: 19085
 		[Nullable(2)]
 		protected ClientUnlockAchievementSystemItem_SetValue PocoInterface;
 	}

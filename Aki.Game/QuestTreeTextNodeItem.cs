@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026B7 RID: 9911
+// Token: 0x02001BA2 RID: 7074
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,8 +16,8 @@ using UnrealEngine;
 })]
 public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 {
-	// Token: 0x17001A55 RID: 6741
-	// (get) Token: 0x06014507 RID: 83207 RVA: 0x00523208 File Offset: 0x00521408
+	// Token: 0x17001A8D RID: 6797
+	// (get) Token: 0x060119E9 RID: 72169 RVA: 0x00531F40 File Offset: 0x00530140
 	public override EQuestTreeNodeType Type
 	{
 		get
@@ -26,7 +26,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		}
 	}
 
-	// Token: 0x06014508 RID: 83208 RVA: 0x0052320C File Offset: 0x0052140C
+	// Token: 0x060119EA RID: 72170 RVA: 0x00531F44 File Offset: 0x00530144
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 25;
@@ -93,7 +93,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014509 RID: 83209 RVA: 0x005235BC File Offset: 0x005217BC
+	// Token: 0x060119EB RID: 72171 RVA: 0x005322F4 File Offset: 0x005304F4
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
@@ -104,7 +104,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		EventSystem.Instance.Add(EEventName.QuestTreeNodeDataUpdate, new Action<QuestTreeNodeData>(this.OnDataUpdate));
 	}
 
-	// Token: 0x0601450A RID: 83210 RVA: 0x00523654 File Offset: 0x00521854
+	// Token: 0x060119EC RID: 72172 RVA: 0x0053238C File Offset: 0x0053058C
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.QuestTreeNodeDataUpdate, new Action<QuestTreeNodeData>(this.OnDataUpdate));
@@ -113,7 +113,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		QuestTreeModel.Instance.ViewModelChapter.RemoveOnSelectedDataChange(new Action<QuestTreeNodeData>(this.OnSelectedDataChange));
 	}
 
-	// Token: 0x0601450B RID: 83211 RVA: 0x005236D0 File Offset: 0x005218D0
+	// Token: 0x060119ED RID: 72173 RVA: 0x00532408 File Offset: 0x00530608
 	public override UniTask CreateSelf(UUIItem parent)
 	{
 		QuestTreeTextNodeItem.<CreateSelf>d__9 <CreateSelf>d__;
@@ -125,7 +125,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		return <CreateSelf>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601450C RID: 83212 RVA: 0x0052371B File Offset: 0x0052191B
+	// Token: 0x060119EE RID: 72174 RVA: 0x00532453 File Offset: 0x00530653
 	public override void UpdateData(QuestTreeNodeData data)
 	{
 		this.Data = data;
@@ -134,13 +134,13 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		this.RefreshChildren(data);
 	}
 
-	// Token: 0x0601450D RID: 83213 RVA: 0x0052373A File Offset: 0x0052193A
+	// Token: 0x060119EF RID: 72175 RVA: 0x00532472 File Offset: 0x00530672
 	public override void Refresh(QuestTreeNodeData data, bool isSelected, int gridIndex)
 	{
 		this.UpdateData(data);
 	}
 
-	// Token: 0x0601450E RID: 83214 RVA: 0x00523744 File Offset: 0x00521944
+	// Token: 0x060119F0 RID: 72176 RVA: 0x0053247C File Offset: 0x0053067C
 	public override float GetAdditionalHeight()
 	{
 		QuestTreeNodeData nextQuestNode = this.Data.NextQuestNode;
@@ -151,7 +151,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		return 0f;
 	}
 
-	// Token: 0x0601450F RID: 83215 RVA: 0x005237A8 File Offset: 0x005219A8
+	// Token: 0x060119F1 RID: 72177 RVA: 0x005324E0 File Offset: 0x005306E0
 	protected override void LocateSelf(bool tween = true)
 	{
 		UUIItem rootComponent = base.GetExtendToggle(0).GetRootComponent();
@@ -166,7 +166,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		}
 	}
 
-	// Token: 0x06014510 RID: 83216 RVA: 0x00523815 File Offset: 0x00521A15
+	// Token: 0x060119F2 RID: 72178 RVA: 0x0053254D File Offset: 0x0053074D
 	[NullableContext(2)]
 	public override UUIItem GetGuideFocusUiItem()
 	{
@@ -178,7 +178,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		return extendToggle.GetRootComponent();
 	}
 
-	// Token: 0x06014511 RID: 83217 RVA: 0x0052382C File Offset: 0x00521A2C
+	// Token: 0x060119F3 RID: 72179 RVA: 0x00532564 File Offset: 0x00530764
 	private void RefreshInfo(QuestTreeNodeData data)
 	{
 		EQuestTreeNodeState displayState = data.DisplayState;
@@ -191,7 +191,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), data.Config.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x06014512 RID: 83218 RVA: 0x00523900 File Offset: 0x00521B00
+	// Token: 0x060119F4 RID: 72180 RVA: 0x00532638 File Offset: 0x00530838
 	private UniTask RefreshChildren(QuestTreeNodeData data)
 	{
 		QuestTreeTextNodeItem.<RefreshChildren>d__16 <RefreshChildren>d__;
@@ -203,7 +203,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		return <RefreshChildren>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014513 RID: 83219 RVA: 0x0052394C File Offset: 0x00521B4C
+	// Token: 0x060119F5 RID: 72181 RVA: 0x00532684 File Offset: 0x00530884
 	private void RefreshLines(QuestTreeNodeData data)
 	{
 		this.HideAllLines();
@@ -252,7 +252,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		item2.SetUIActive(uiactive2);
 	}
 
-	// Token: 0x06014514 RID: 83220 RVA: 0x00523A8C File Offset: 0x00521C8C
+	// Token: 0x060119F6 RID: 72182 RVA: 0x005327C4 File Offset: 0x005309C4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -269,7 +269,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		return <AttachNextNodeParallel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014515 RID: 83221 RVA: 0x00523AD8 File Offset: 0x00521CD8
+	// Token: 0x060119F7 RID: 72183 RVA: 0x00532810 File Offset: 0x00530A10
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -286,7 +286,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		return <AttachNextNodeDown>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014516 RID: 83222 RVA: 0x00523B24 File Offset: 0x00521D24
+	// Token: 0x060119F8 RID: 72184 RVA: 0x0053285C File Offset: 0x00530A5C
 	private void HideAllLines()
 	{
 		base.GetItem(10).SetUIActive(false);
@@ -306,7 +306,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		base.GetItem(22).SetUIActive(false);
 	}
 
-	// Token: 0x06014517 RID: 83223 RVA: 0x00523C03 File Offset: 0x00521E03
+	// Token: 0x060119F9 RID: 72185 RVA: 0x0053293B File Offset: 0x00530B3B
 	private void OnClickToggle(EToggleState _)
 	{
 		QuestTreeModel.Instance.ViewModelChapter.SelectData(this.Data);
@@ -314,7 +314,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		QuestTreeController.Instance.OpenNodeDetailView(this.Data);
 	}
 
-	// Token: 0x06014518 RID: 83224 RVA: 0x00523C3A File Offset: 0x00521E3A
+	// Token: 0x060119FA RID: 72186 RVA: 0x00532972 File Offset: 0x00530B72
 	[NullableContext(2)]
 	private void OnSelectedDataChange(QuestTreeNodeData data)
 	{
@@ -327,7 +327,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		this.LocateSelf(true);
 	}
 
-	// Token: 0x06014519 RID: 83225 RVA: 0x00523C6F File Offset: 0x00521E6F
+	// Token: 0x060119FB RID: 72187 RVA: 0x005329A7 File Offset: 0x00530BA7
 	private void OnDataUpdate(QuestTreeNodeData data)
 	{
 		if (data != this.Data)
@@ -337,7 +337,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		this.RefreshInfo(data);
 	}
 
-	// Token: 0x0601451A RID: 83226 RVA: 0x00523C82 File Offset: 0x00521E82
+	// Token: 0x060119FC RID: 72188 RVA: 0x005329BA File Offset: 0x00530BBA
 	[NullableContext(2)]
 	private void OnLocateToNode(QuestTreeNodeData data, bool tween)
 	{
@@ -353,7 +353,7 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		UiNavigationNewController.Instance.SetNavigationFocusForView(this.RootItem, true, false, false);
 	}
 
-	// Token: 0x0601451B RID: 83227 RVA: 0x00523CB7 File Offset: 0x00521EB7
+	// Token: 0x060119FD RID: 72189 RVA: 0x005329EF File Offset: 0x00530BEF
 	private void OnUpdateNode()
 	{
 		if (this.Data != null)
@@ -362,93 +362,93 @@ public class QuestTreeTextNodeItem : QuestTreeNodeItemBase<QuestTreeNodeData>
 		}
 	}
 
-	// Token: 0x040098CA RID: 39114
+	// Token: 0x04009A22 RID: 39458
 	private QuestTreeNodeData Data;
 
-	// Token: 0x040098CB RID: 39115
+	// Token: 0x04009A23 RID: 39459
 	[Nullable(2)]
 	private IQuestTreeNodeItem Child;
 
-	// Token: 0x040098CC RID: 39116
+	// Token: 0x04009A24 RID: 39460
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x02008D09 RID: 36105
+	// Token: 0x02007E92 RID: 32402
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DC53 RID: 187475
+		// Token: 0x04028F6A RID: 167786
 		public const int Toggle = 0;
 
-		// Token: 0x0402DC54 RID: 187476
+		// Token: 0x04028F6B RID: 167787
 		public const int ItemFinish = 1;
 
-		// Token: 0x0402DC55 RID: 187477
+		// Token: 0x04028F6C RID: 167788
 		public const int ItemAvailable = 2;
 
-		// Token: 0x0402DC56 RID: 187478
+		// Token: 0x04028F6D RID: 167789
 		public const int ItemTracking = 3;
 
-		// Token: 0x0402DC57 RID: 187479
+		// Token: 0x04028F6E RID: 167790
 		public const int ItemLock = 4;
 
-		// Token: 0x0402DC58 RID: 187480
+		// Token: 0x04028F6F RID: 167791
 		public const int ItemInProgress = 5;
 
-		// Token: 0x0402DC59 RID: 187481
+		// Token: 0x04028F70 RID: 167792
 		public const int SpriteTypeIcon = 6;
 
-		// Token: 0x0402DC5A RID: 187482
+		// Token: 0x04028F71 RID: 167793
 		public const int TextName = 7;
 
-		// Token: 0x0402DC5B RID: 187483
+		// Token: 0x04028F72 RID: 167794
 		public const int ItemNew = 8;
 
-		// Token: 0x0402DC5C RID: 187484
+		// Token: 0x04028F73 RID: 167795
 		public const int ItemLeftLineRoot = 9;
 
-		// Token: 0x0402DC5D RID: 187485
+		// Token: 0x04028F74 RID: 167796
 		public const int ItemLeftLineDown = 10;
 
-		// Token: 0x0402DC5E RID: 187486
+		// Token: 0x04028F75 RID: 167797
 		public const int ItemLeftLineUpLong = 11;
 
-		// Token: 0x0402DC5F RID: 187487
+		// Token: 0x04028F76 RID: 167798
 		public const int ItemLeftLineUpShort = 12;
 
-		// Token: 0x0402DC60 RID: 187488
+		// Token: 0x04028F77 RID: 167799
 		public const int ItemNextNodeAreaDownForSeries = 13;
 
-		// Token: 0x0402DC61 RID: 187489
+		// Token: 0x04028F78 RID: 167800
 		public const int ItemNextNodeParentDownForSeries = 14;
 
-		// Token: 0x0402DC62 RID: 187490
+		// Token: 0x04028F79 RID: 167801
 		public const int ItemNextNodeAreaDownForPicture = 15;
 
-		// Token: 0x0402DC63 RID: 187491
+		// Token: 0x04028F7A RID: 167802
 		public const int ItemNextNodeParentDownForPicture = 16;
 
-		// Token: 0x0402DC64 RID: 187492
+		// Token: 0x04028F7B RID: 167803
 		public const int ItemNextNodeAreaDownForText = 17;
 
-		// Token: 0x0402DC65 RID: 187493
+		// Token: 0x04028F7C RID: 167804
 		public const int ItemNextNodeParentDownForText = 18;
 
-		// Token: 0x0402DC66 RID: 187494
+		// Token: 0x04028F7D RID: 167805
 		public const int ItemNextNodeAreaParallelForPicture = 19;
 
-		// Token: 0x0402DC67 RID: 187495
+		// Token: 0x04028F7E RID: 167806
 		public const int ItemNextNodeParentParallelForPicture = 20;
 
-		// Token: 0x0402DC68 RID: 187496
+		// Token: 0x04028F7F RID: 167807
 		public const int ItemNextNodeAreaParallelForNonPicture = 21;
 
-		// Token: 0x0402DC69 RID: 187497
+		// Token: 0x04028F80 RID: 167808
 		public const int ItemNextNodeParentParallelForNonPicture = 22;
 
-		// Token: 0x0402DC6A RID: 187498
+		// Token: 0x04028F81 RID: 167809
 		public const int ItemRightLineInGroup = 23;
 
-		// Token: 0x0402DC6B RID: 187499
+		// Token: 0x04028F82 RID: 167810
 		public const int ItemRightLineUpLast = 24;
 	}
 }

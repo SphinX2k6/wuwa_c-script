@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C14 RID: 19476
+	// Token: 0x02005101 RID: 20737
 	public class IEntityEventConditionT
 	{
-		// Token: 0x17008D78 RID: 36216
-		// (get) Token: 0x0601ED95 RID: 126357 RVA: 0x00451A75 File Offset: 0x0044FC75
-		// (set) Token: 0x0601ED96 RID: 126358 RVA: 0x00451A7D File Offset: 0x0044FC7D
+		// Token: 0x1700949C RID: 38044
+		// (get) Token: 0x0602097B RID: 133499 RVA: 0x004850DD File Offset: 0x004832DD
+		// (set) Token: 0x0602097C RID: 133500 RVA: 0x004850E5 File Offset: 0x004832E5
 		public int EntityId { get; set; }
 
-		// Token: 0x17008D79 RID: 36217
-		// (get) Token: 0x0601ED97 RID: 126359 RVA: 0x00451A86 File Offset: 0x0044FC86
-		// (set) Token: 0x0601ED98 RID: 126360 RVA: 0x00451A8E File Offset: 0x0044FC8E
+		// Token: 0x1700949D RID: 38045
+		// (get) Token: 0x0602097D RID: 133501 RVA: 0x004850EE File Offset: 0x004832EE
+		// (set) Token: 0x0602097E RID: 133502 RVA: 0x004850F6 File Offset: 0x004832F6
 		public string State { get; set; }
 
-		// Token: 0x17008D7A RID: 36218
-		// (get) Token: 0x0601ED99 RID: 126361 RVA: 0x00451A97 File Offset: 0x0044FC97
-		// (set) Token: 0x0601ED9A RID: 126362 RVA: 0x00451A9F File Offset: 0x0044FC9F
+		// Token: 0x1700949E RID: 38046
+		// (get) Token: 0x0602097F RID: 133503 RVA: 0x004850FF File Offset: 0x004832FF
+		// (set) Token: 0x06020980 RID: 133504 RVA: 0x00485107 File Offset: 0x00483307
 		public bool IsDead { get; set; }
 
-		// Token: 0x17008D7B RID: 36219
-		// (get) Token: 0x0601ED9B RID: 126363 RVA: 0x00451AA8 File Offset: 0x0044FCA8
-		// (set) Token: 0x0601ED9C RID: 126364 RVA: 0x00451AB0 File Offset: 0x0044FCB0
+		// Token: 0x1700949F RID: 38047
+		// (get) Token: 0x06020981 RID: 133505 RVA: 0x00485110 File Offset: 0x00483310
+		// (set) Token: 0x06020982 RID: 133506 RVA: 0x00485118 File Offset: 0x00483318
 		public bool IsLocked { get; set; }
 
-		// Token: 0x17008D7C RID: 36220
-		// (get) Token: 0x0601ED9D RID: 126365 RVA: 0x00451AB9 File Offset: 0x0044FCB9
-		// (set) Token: 0x0601ED9E RID: 126366 RVA: 0x00451AC1 File Offset: 0x0044FCC1
+		// Token: 0x170094A0 RID: 38048
+		// (get) Token: 0x06020983 RID: 133507 RVA: 0x00485121 File Offset: 0x00483321
+		// (set) Token: 0x06020984 RID: 133508 RVA: 0x00485129 File Offset: 0x00483329
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601ED9F RID: 126367 RVA: 0x00451ACA File Offset: 0x0044FCCA
+		// Token: 0x06020985 RID: 133509 RVA: 0x00485132 File Offset: 0x00483332
 		public IEntityEventConditionT()
 		{
 			this.EntityId = 0;

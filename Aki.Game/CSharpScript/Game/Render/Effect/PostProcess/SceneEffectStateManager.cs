@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render.Effect.PostProcess
 {
-	// Token: 0x020045F2 RID: 17906
+	// Token: 0x0200351B RID: 13595
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneEffectStateManager : Singleton
 	{
-		// Token: 0x0602E2F6 RID: 189174 RVA: 0x00AAD778 File Offset: 0x00AAB978
+		// Token: 0x060229EB RID: 141803 RVA: 0x009D9F14 File Offset: 0x009D8114
 		public SceneEffectStatePostVolume_C GetPostProcessVolume()
 		{
 			if (this.PostProcessVolume == null)
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Render.Effect.PostProcess
 			return this.PostProcessVolume;
 		}
 
-		// Token: 0x0602E2F7 RID: 189175 RVA: 0x00AAD7A9 File Offset: 0x00AAB9A9
+		// Token: 0x060229EC RID: 141804 RVA: 0x009D9F45 File Offset: 0x009D8145
 		public void SetSceneEffectState(ESceneEffectStateType stateType, float value)
 		{
 			if (stateType == ESceneEffectStateType.AirWall)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Render.Effect.PostProcess
 			this.SetToxicFog(value);
 		}
 
-		// Token: 0x0602E2F8 RID: 189176 RVA: 0x00AAD7C2 File Offset: 0x00AAB9C2
+		// Token: 0x060229ED RID: 141805 RVA: 0x009D9F5E File Offset: 0x009D815E
 		public void SetAirWall(float value)
 		{
 			SceneEffectStatePostVolume_C postProcessVolume = this.GetPostProcessVolume();
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Render.Effect.PostProcess
 			this.GetPostProcessVolume().SetAirWall(value);
 		}
 
-		// Token: 0x0602E2F9 RID: 189177 RVA: 0x00AAD7E8 File Offset: 0x00AAB9E8
+		// Token: 0x060229EE RID: 141806 RVA: 0x009D9F84 File Offset: 0x009D8184
 		public void SetToxicFog(float value)
 		{
 			SceneEffectStatePostVolume_C postProcessVolume = this.GetPostProcessVolume();
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Render.Effect.PostProcess
 			this.GetPostProcessVolume().SetToxicFog(value);
 		}
 
-		// Token: 0x170075B0 RID: 30128
-		// (get) Token: 0x0602E2FA RID: 189178 RVA: 0x00AAD80E File Offset: 0x00AABA0E
+		// Token: 0x17004868 RID: 18536
+		// (get) Token: 0x060229EF RID: 141807 RVA: 0x009D9FAA File Offset: 0x009D81AA
 		public static SceneEffectStateManager Instance
 		{
 			get
@@ -72,12 +72,12 @@ namespace CSharpScript.Game.Render.Effect.PostProcess
 			}
 		}
 
-		// Token: 0x0602E2FB RID: 189179 RVA: 0x00AAD831 File Offset: 0x00AABA31
+		// Token: 0x060229F0 RID: 141808 RVA: 0x009D9FCD File Offset: 0x009D81CD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E2FC RID: 189180 RVA: 0x00AAD833 File Offset: 0x00AABA33
+		// Token: 0x060229F1 RID: 141809 RVA: 0x009D9FCF File Offset: 0x009D81CF
 		public static void ResetStaticDefaultValue()
 		{
 			SceneEffectStateManager instance = SceneEffectStateManager._instance;
@@ -88,17 +88,17 @@ namespace CSharpScript.Game.Render.Effect.PostProcess
 			SceneEffectStateManager._instance = null;
 		}
 
-		// Token: 0x0602E2FD RID: 189181 RVA: 0x00AAD84C File Offset: 0x00AABA4C
+		// Token: 0x060229F2 RID: 141810 RVA: 0x009D9FE8 File Offset: 0x009D81E8
 		static SceneEffectStateManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneEffectStateManager.CreateStaticDefaultValue), new Action(SceneEffectStateManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018C82 RID: 101506
+		// Token: 0x040132C1 RID: 78529
 		[Nullable(2)]
 		public SceneEffectStatePostVolume_C PostProcessVolume;
 
-		// Token: 0x04018C83 RID: 101507
+		// Token: 0x040132C2 RID: 78530
 		[Nullable(2)]
 		private static SceneEffectStateManager _instance;
 	}

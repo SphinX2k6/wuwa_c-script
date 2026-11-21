@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000B6 RID: 182
+	// Token: 0x020000BE RID: 190
 	[EnumExtensions]
 	public enum EGroupAiMode
 	{
-		// Token: 0x04000413 RID: 1043
+		// Token: 0x04000437 RID: 1079
 		Default,
-		// Token: 0x04000414 RID: 1044
+		// Token: 0x04000438 RID: 1080
 		Patrol,
-		// Token: 0x04000415 RID: 1045
+		// Token: 0x04000439 RID: 1081
 		MonsterEcology
 	}
 }

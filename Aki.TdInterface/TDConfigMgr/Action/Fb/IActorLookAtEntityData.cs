@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200259F RID: 9631
+	// Token: 0x0200284E RID: 10318
 	public class IActorLookAtEntityData : IActorLookAtLockable
 	{
-		// Token: 0x0600D8C1 RID: 55489 RVA: 0x00205B0A File Offset: 0x00203D0A
-		[NullableContext(1)]
+		// Token: 0x0600E63B RID: 58939 RVA: 0x002217DE File Offset: 0x0021F9DE
 		public static IActorLookAtEntityData Create(IActorLookAtEntityData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F45 RID: 16197
-		// (get) Token: 0x0600D8C2 RID: 55490 RVA: 0x00205B29 File Offset: 0x00203D29
+		// Token: 0x1700424D RID: 16973
+		// (get) Token: 0x0600E63C RID: 58940 RVA: 0x002217FD File Offset: 0x0021F9FD
 		public override EActorLookAtMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F46 RID: 16198
-		// (get) Token: 0x0600D8C3 RID: 55491 RVA: 0x00205B38 File Offset: 0x00203D38
+		// Token: 0x1700424E RID: 16974
+		// (get) Token: 0x0600E63D RID: 58941 RVA: 0x0022180C File Offset: 0x0021FA0C
 		public override bool? Lock
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F47 RID: 16199
-		// (get) Token: 0x0600D8C4 RID: 55492 RVA: 0x00205B6E File Offset: 0x00203D6E
+		// Token: 0x1700424F RID: 16975
+		// (get) Token: 0x0600E63E RID: 58942 RVA: 0x00221842 File Offset: 0x0021FA42
 		public virtual int EntityId
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007875 RID: 30837
+		// Token: 0x04007EDC RID: 32476
 		private IActorLookAtEntityData Instance;
 	}
 }

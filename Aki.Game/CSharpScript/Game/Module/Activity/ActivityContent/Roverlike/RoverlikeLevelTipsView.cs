@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006149 RID: 24905
+	// Token: 0x020050C7 RID: 20679
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLevelTipsView : UiViewBase
 	{
-		// Token: 0x0603EF4C RID: 257868 RVA: 0x00F3543F File Offset: 0x00F3363F
+		// Token: 0x06033C0C RID: 211980 RVA: 0x00E7C31F File Offset: 0x00E7A51F
 		public RoverlikeLevelTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EF4D RID: 257869 RVA: 0x00F35448 File Offset: 0x00F33648
+		// Token: 0x06033C0D RID: 211981 RVA: 0x00E7C328 File Offset: 0x00E7A528
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EF4E RID: 257870 RVA: 0x00F35490 File Offset: 0x00F33690
+		// Token: 0x06033C0E RID: 211982 RVA: 0x00E7C370 File Offset: 0x00E7A570
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeLevelTipsView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EF4F RID: 257871 RVA: 0x00F354D4 File Offset: 0x00F336D4
+		// Token: 0x06033C0F RID: 211983 RVA: 0x00E7C3B4 File Offset: 0x00E7A5B4
 		protected override void OnBeforeShow()
 		{
 			RoverlikeInstanceData instanceData = RoverlikeModel.Instance.InstanceData;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshLevelTips(instanceData);
 		}
 
-		// Token: 0x0603EF50 RID: 257872 RVA: 0x00F354F7 File Offset: 0x00F336F7
+		// Token: 0x06033C10 RID: 211984 RVA: 0x00E7C3D7 File Offset: 0x00E7A5D7
 		protected override void OnFinishShow()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603EF51 RID: 257873 RVA: 0x00F35500 File Offset: 0x00F33700
+		// Token: 0x06033C11 RID: 211985 RVA: 0x00E7C3E0 File Offset: 0x00E7A5E0
 		private void OnSequencePlayEvent(string sequenceName, string eventName)
 		{
 			RoverlikeLevelTipsItem levelTips = this.LevelTips;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelTips.PlayCurrentLevelSequence("Get");
 		}
 
-		// Token: 0x0603EF52 RID: 257874 RVA: 0x00F35518 File Offset: 0x00F33718
+		// Token: 0x06033C12 RID: 211986 RVA: 0x00E7C3F8 File Offset: 0x00E7A5F8
 		private void RefreshLevelTips(RoverlikeInstanceData instanceData)
 		{
 			RoverlikeLevelTipsItem levelTips = this.LevelTips;
@@ -91,15 +91,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelTips2.SetEffectPanelVisible(effectPanelVisible);
 		}
 
-		// Token: 0x04020DB8 RID: 134584
+		// Token: 0x0401B6E5 RID: 112357
 		[Nullable(2)]
 		private RoverlikeLevelTipsItem LevelTips;
 
-		// Token: 0x0200C3A7 RID: 50087
+		// Token: 0x0200AD8E RID: 44430
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B09D RID: 241821
+			// Token: 0x040359FE RID: 219646
 			public const int ItemLevelTips = 0;
 		}
 	}

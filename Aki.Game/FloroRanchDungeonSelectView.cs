@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -11,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B61 RID: 7009
+// Token: 0x02001020 RID: 4128
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDungeonSelectView : UiViewBase
 {
-	// Token: 0x0600CFFC RID: 53244 RVA: 0x002F69D1 File Offset: 0x002F4BD1
+	// Token: 0x0600A40D RID: 41997 RVA: 0x00301AA9 File Offset: 0x002FFCA9
 	public FloroRanchDungeonSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600CFFD RID: 53245 RVA: 0x002F69E8 File Offset: 0x002F4BE8
+	// Token: 0x0600A40E RID: 41998 RVA: 0x00301AC0 File Offset: 0x002FFCC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -64,7 +63,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CFFE RID: 53246 RVA: 0x002F6C00 File Offset: 0x002F4E00
+	// Token: 0x0600A40F RID: 41999 RVA: 0x00301CD8 File Offset: 0x002FFED8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchDungeonSelectView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -75,7 +74,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CFFF RID: 53247 RVA: 0x002F6C44 File Offset: 0x002F4E44
+	// Token: 0x0600A410 RID: 42000 RVA: 0x00301D1C File Offset: 0x002FFF1C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.FloroRanchRaceRedDot, new Action<IReadOnlyList<int>>(this.RefreshRaceList));
@@ -83,7 +82,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		EventSystem.Instance.Add<EFloroRanchActivityDataType>(EEventName.FloroRanchSkillRedDotRefresh, new Action<EFloroRanchActivityDataType>(this.OnSkillRedDotRefresh));
 	}
 
-	// Token: 0x0600D000 RID: 53248 RVA: 0x002F6CA8 File Offset: 0x002F4EA8
+	// Token: 0x0600A411 RID: 42001 RVA: 0x00301D80 File Offset: 0x002FFF80
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.FloroRanchRaceRedDot, new Action<IReadOnlyList<int>>(this.RefreshRaceList));
@@ -91,13 +90,13 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.FloroRanchSkillRedDotRefresh, new Action<EFloroRanchActivityDataType>(this.OnSkillRedDotRefresh));
 	}
 
-	// Token: 0x0600D001 RID: 53249 RVA: 0x002F6D09 File Offset: 0x002F4F09
+	// Token: 0x0600A412 RID: 42002 RVA: 0x00301DE1 File Offset: 0x002FFFE1
 	private void RefreshView(FloroRanchDungeonData dungeonData)
 	{
 		this.RefreshView(dungeonData, null);
 	}
 
-	// Token: 0x0600D002 RID: 53250 RVA: 0x002F6D14 File Offset: 0x002F4F14
+	// Token: 0x0600A413 RID: 42003 RVA: 0x00301DEC File Offset: 0x002FFFEC
 	private void RefreshView(FloroRanchDungeonData dungeonData, [Nullable(2)] FloroRanchSubDungeonData subDungeonData = null)
 	{
 		this.DungeonScrollLayout.LateScrollTo(this.DungeonScrollLayout.GetItemByKey(dungeonData.Id), null, false);
@@ -130,10 +129,10 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D003 RID: 53251 RVA: 0x002F6DDD File Offset: 0x002F4FDD
+	// Token: 0x0600A414 RID: 42004 RVA: 0x00301EB5 File Offset: 0x003000B5
 	public void RefreshRaceList(IReadOnlyList<int> raceIds)
 	{
-		this.RaceIds = raceIds.ToList<int>();
+		this.RaceIds = new List<int>(raceIds);
 		FloroRanchDungeonSelectRightPanel rightPanel = this.RightPanel;
 		if (rightPanel == null)
 		{
@@ -142,7 +141,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		rightPanel.RefreshRaceList(raceIds);
 	}
 
-	// Token: 0x0600D004 RID: 53252 RVA: 0x002F6DFC File Offset: 0x002F4FFC
+	// Token: 0x0600A415 RID: 42005 RVA: 0x00301ED4 File Offset: 0x003000D4
 	public void RefreshSkillItem(int skillId)
 	{
 		this.SkillId = skillId;
@@ -154,7 +153,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		skillItem.Refresh(skillId);
 	}
 
-	// Token: 0x0600D005 RID: 53253 RVA: 0x002F6E16 File Offset: 0x002F5016
+	// Token: 0x0600A416 RID: 42006 RVA: 0x00301EEE File Offset: 0x003000EE
 	public void RefreshSkillItemRedDot()
 	{
 		FloroRanchSkillItem skillItem = this.SkillItem;
@@ -165,7 +164,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		skillItem.RefreshRedDot();
 	}
 
-	// Token: 0x0600D006 RID: 53254 RVA: 0x002F6E28 File Offset: 0x002F5028
+	// Token: 0x0600A417 RID: 42007 RVA: 0x00301F00 File Offset: 0x00300100
 	private void OnSkillChange(EFloroRanchActivityDataType activityDataType, int skillId)
 	{
 		if (activityDataType != EFloroRanchActivityDataType.Normal)
@@ -175,7 +174,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		this.RefreshSkillItem(skillId);
 	}
 
-	// Token: 0x0600D007 RID: 53255 RVA: 0x002F6E35 File Offset: 0x002F5035
+	// Token: 0x0600A418 RID: 42008 RVA: 0x00301F0D File Offset: 0x0030010D
 	private void OnSkillRedDotRefresh(EFloroRanchActivityDataType activityDataType)
 	{
 		if (activityDataType != EFloroRanchActivityDataType.Normal)
@@ -185,7 +184,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		this.RefreshSkillItemRedDot();
 	}
 
-	// Token: 0x0600D008 RID: 53256 RVA: 0x002F6E44 File Offset: 0x002F5044
+	// Token: 0x0600A419 RID: 42009 RVA: 0x00301F1C File Offset: 0x0030011C
 	private void SetSubDungeonId(int subDungeonId)
 	{
 		this.SubDungeonId = subDungeonId;
@@ -226,7 +225,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D009 RID: 53257 RVA: 0x002F6F43 File Offset: 0x002F5143
+	// Token: 0x0600A41A RID: 42010 RVA: 0x0030201B File Offset: 0x0030021B
 	private FloroRanchDungeonItem CreateDungeonItem()
 	{
 		FloroRanchDungeonItem floroRanchDungeonItem = new FloroRanchDungeonItem();
@@ -234,7 +233,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		return floroRanchDungeonItem;
 	}
 
-	// Token: 0x0600D00A RID: 53258 RVA: 0x002F6F5C File Offset: 0x002F515C
+	// Token: 0x0600A41B RID: 42011 RVA: 0x00302034 File Offset: 0x00300234
 	private void OnCloseBtnClick()
 	{
 		if (this.IsStartClick)
@@ -244,7 +243,7 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D00B RID: 53259 RVA: 0x002F6F70 File Offset: 0x002F5170
+	// Token: 0x0600A41C RID: 42012 RVA: 0x00302048 File Offset: 0x00300248
 	private void OnStartBtnClick()
 	{
 		if (this.IsStartClick)
@@ -294,81 +293,81 @@ public class FloroRanchDungeonSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D00C RID: 53260 RVA: 0x002F705F File Offset: 0x002F525F
+	// Token: 0x0600A41D RID: 42013 RVA: 0x00302137 File Offset: 0x00300337
 	protected override void OnBeforeDestroy()
 	{
 		this.IsStartClick = false;
 	}
 
-	// Token: 0x04005F91 RID: 24465
+	// Token: 0x04006060 RID: 24672
 	[Nullable(2)]
 	private global::FloroRanchActivityData ActivityData;
 
-	// Token: 0x04005F92 RID: 24466
+	// Token: 0x04006061 RID: 24673
 	private int SubDungeonId;
 
-	// Token: 0x04005F93 RID: 24467
+	// Token: 0x04006062 RID: 24674
 	private int SkillId;
 
-	// Token: 0x04005F94 RID: 24468
+	// Token: 0x04006063 RID: 24675
 	private List<int> RaceIds = new List<int>();
 
-	// Token: 0x04005F95 RID: 24469
+	// Token: 0x04006064 RID: 24676
 	private GenericScrollViewNew<FloroRanchDungeonItem, FloroRanchDungeonData> DungeonScrollLayout;
 
-	// Token: 0x04005F96 RID: 24470
+	// Token: 0x04006065 RID: 24677
 	[Nullable(2)]
 	private FloroRanchDungeonSelectRightPanel RightPanel;
 
-	// Token: 0x04005F97 RID: 24471
+	// Token: 0x04006066 RID: 24678
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x04005F98 RID: 24472
+	// Token: 0x04006067 RID: 24679
 	[Nullable(2)]
 	private FloroRanchSkillItem SkillItem;
 
-	// Token: 0x04005F99 RID: 24473
+	// Token: 0x04006068 RID: 24680
 	private bool IsStartClick;
 
-	// Token: 0x020080B9 RID: 32953
+	// Token: 0x02007247 RID: 29255
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04029FBB RID: 171963
+		// Token: 0x040252EF RID: 152303
 		public const int TextTitle = 0;
 
-		// Token: 0x04029FBC RID: 171964
+		// Token: 0x040252F0 RID: 152304
 		public const int BtnClose = 1;
 
-		// Token: 0x04029FBD RID: 171965
+		// Token: 0x040252F1 RID: 152305
 		public const int BtnStart = 2;
 
-		// Token: 0x04029FBE RID: 171966
+		// Token: 0x040252F2 RID: 152306
 		public const int ItemRightPanel = 3;
 
-		// Token: 0x04029FBF RID: 171967
+		// Token: 0x040252F3 RID: 152307
 		public const int ItemHistoryPanel = 4;
 
-		// Token: 0x04029FC0 RID: 171968
+		// Token: 0x040252F4 RID: 152308
 		public const int TextHistoryDay = 5;
 
-		// Token: 0x04029FC1 RID: 171969
+		// Token: 0x040252F5 RID: 152309
 		public const int TextHistoryCoin = 6;
 
-		// Token: 0x04029FC2 RID: 171970
+		// Token: 0x040252F6 RID: 152310
 		public const int SpineRole = 7;
 
-		// Token: 0x04029FC3 RID: 171971
+		// Token: 0x040252F7 RID: 152311
 		public const int ItemSKill = 8;
 
-		// Token: 0x04029FC4 RID: 171972
+		// Token: 0x040252F8 RID: 152312
 		public const int ScrollLayoutDungeon = 9;
 
-		// Token: 0x04029FC5 RID: 171973
+		// Token: 0x040252F9 RID: 152313
 		public const int ItemLockPanel = 10;
 
-		// Token: 0x04029FC6 RID: 171974
+		// Token: 0x040252FA RID: 152314
 		public const int MaskPanel = 11;
 	}
 }

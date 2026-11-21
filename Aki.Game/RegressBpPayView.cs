@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001482 RID: 5250
+// Token: 0x02000936 RID: 2358
 [NullableContext(1)]
 [Nullable(0)]
 public class RegressBpPayView : UiViewBase
 {
-	// Token: 0x06009494 RID: 38036 RVA: 0x001FFF9C File Offset: 0x001FE19C
+	// Token: 0x06006829 RID: 26665 RVA: 0x00208F00 File Offset: 0x00207100
 	public RegressBpPayView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009495 RID: 38037 RVA: 0x001FFFA8 File Offset: 0x001FE1A8
+	// Token: 0x0600682A RID: 26666 RVA: 0x00208F0C File Offset: 0x0020710C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ public class RegressBpPayView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009496 RID: 38038 RVA: 0x002000F0 File Offset: 0x001FE2F0
+	// Token: 0x0600682B RID: 26667 RVA: 0x00209054 File Offset: 0x00207254
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RegressBpPayView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -56,25 +56,25 @@ public class RegressBpPayView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009497 RID: 38039 RVA: 0x00200133 File Offset: 0x001FE333
+	// Token: 0x0600682C RID: 26668 RVA: 0x00209097 File Offset: 0x00207297
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06009498 RID: 38040 RVA: 0x00200151 File Offset: 0x001FE351
+	// Token: 0x0600682D RID: 26669 RVA: 0x002090B5 File Offset: 0x002072B5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06009499 RID: 38041 RVA: 0x0020016F File Offset: 0x001FE36F
+	// Token: 0x0600682E RID: 26670 RVA: 0x002090D3 File Offset: 0x002072D3
 	private void OnPayItemSuccess(PayItemSuccess notify)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600949A RID: 38042 RVA: 0x00200178 File Offset: 0x001FE378
+	// Token: 0x0600682F RID: 26671 RVA: 0x002090DC File Offset: 0x002072DC
 	protected override void OnBeforeShow()
 	{
 		this.StartTimer();
@@ -84,39 +84,39 @@ public class RegressBpPayView : UiViewBase
 		base.GetItem(10).SetUIActive(false);
 	}
 
-	// Token: 0x0600949B RID: 38043 RVA: 0x002001A0 File Offset: 0x001FE3A0
+	// Token: 0x06006830 RID: 26672 RVA: 0x00209104 File Offset: 0x00207304
 	protected override void OnBeforeHide()
 	{
 		this.ClearTimer();
 	}
 
-	// Token: 0x0600949C RID: 38044 RVA: 0x002001A8 File Offset: 0x001FE3A8
+	// Token: 0x06006831 RID: 26673 RVA: 0x0020910C File Offset: 0x0020730C
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimer();
 		this.RewardLayout = null;
 	}
 
-	// Token: 0x0600949D RID: 38045 RVA: 0x002001B7 File Offset: 0x001FE3B7
+	// Token: 0x06006832 RID: 26674 RVA: 0x0020911B File Offset: 0x0020731B
 	private void OnClickBtnClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600949E RID: 38046 RVA: 0x002001C0 File Offset: 0x001FE3C0
+	// Token: 0x06006833 RID: 26675 RVA: 0x00209124 File Offset: 0x00207324
 	private void OnClickBtnGold()
 	{
 		int payGiftId = 46;
 		PayGiftController.Instance.SdkPay(payGiftId);
 	}
 
-	// Token: 0x0600949F RID: 38047 RVA: 0x002001DB File Offset: 0x001FE3DB
+	// Token: 0x06006834 RID: 26676 RVA: 0x0020913F File Offset: 0x0020733F
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x060094A0 RID: 38048 RVA: 0x002001E4 File Offset: 0x001FE3E4
+	// Token: 0x06006835 RID: 26677 RVA: 0x00209148 File Offset: 0x00207348
 	private void RefreshRewardLayout()
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;
@@ -139,7 +139,7 @@ public class RegressBpPayView : UiViewBase
 		rewardLayout.RefreshByData(dropPackagePreviewItemList, null, false);
 	}
 
-	// Token: 0x060094A1 RID: 38049 RVA: 0x0020026C File Offset: 0x001FE46C
+	// Token: 0x06006836 RID: 26678 RVA: 0x002091D0 File Offset: 0x002073D0
 	private void RefreshPayInfo()
 	{
 		UUIText text = base.GetText(7);
@@ -177,14 +177,14 @@ public class RegressBpPayView : UiViewBase
 		text2.SetText("<s>" + originalPrice.Value.ToString() + "</s>", true);
 	}
 
-	// Token: 0x060094A2 RID: 38050 RVA: 0x0020033F File Offset: 0x001FE53F
+	// Token: 0x06006837 RID: 26679 RVA: 0x002092A3 File Offset: 0x002074A3
 	private void StartTimer()
 	{
 		this.ClearTimer();
 		this.TimerHandle = TimerSystem.Instance.Forever(new TTimerAction(this.OnTimerRefresh), (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 	}
 
-	// Token: 0x060094A3 RID: 38051 RVA: 0x00200378 File Offset: 0x001FE578
+	// Token: 0x06006838 RID: 26680 RVA: 0x002092DC File Offset: 0x002074DC
 	private void RefreshTitle()
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;
@@ -198,13 +198,13 @@ public class RegressBpPayView : UiViewBase
 		}
 	}
 
-	// Token: 0x060094A4 RID: 38052 RVA: 0x002003C7 File Offset: 0x001FE5C7
+	// Token: 0x06006839 RID: 26681 RVA: 0x0020932B File Offset: 0x0020752B
 	private void OnTimerRefresh(float gap)
 	{
 		this.RefreshTitle();
 	}
 
-	// Token: 0x060094A5 RID: 38053 RVA: 0x002003CF File Offset: 0x001FE5CF
+	// Token: 0x0600683A RID: 26682 RVA: 0x00209333 File Offset: 0x00207533
 	private void ClearTimer()
 	{
 		if (TimerSystem.Instance.Has(this.TimerHandle))
@@ -214,11 +214,11 @@ public class RegressBpPayView : UiViewBase
 		}
 	}
 
-	// Token: 0x040041D9 RID: 16857
+	// Token: 0x04004271 RID: 17009
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040041DA RID: 16858
+	// Token: 0x04004272 RID: 17010
 	[Nullable(new byte[]
 	{
 		2,
@@ -226,41 +226,41 @@ public class RegressBpPayView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x02007AA8 RID: 31400
+	// Token: 0x02006C2C RID: 27692
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040285B5 RID: 165301
+		// Token: 0x040238CF RID: 145615
 		public const int BtnMask = 0;
 
-		// Token: 0x040285B6 RID: 165302
+		// Token: 0x040238D0 RID: 145616
 		public const int BtnClose = 1;
 
-		// Token: 0x040285B7 RID: 165303
+		// Token: 0x040238D1 RID: 145617
 		public const int TxtTime = 2;
 
-		// Token: 0x040285B8 RID: 165304
+		// Token: 0x040238D2 RID: 145618
 		public const int TxtTitle = 3;
 
-		// Token: 0x040285B9 RID: 165305
+		// Token: 0x040238D3 RID: 145619
 		public const int TxtDesc = 4;
 
-		// Token: 0x040285BA RID: 165306
+		// Token: 0x040238D4 RID: 145620
 		public const int PanelGrid = 5;
 
-		// Token: 0x040285BB RID: 165307
+		// Token: 0x040238D5 RID: 145621
 		public const int ItemReward = 6;
 
-		// Token: 0x040285BC RID: 165308
+		// Token: 0x040238D6 RID: 145622
 		public const int TxtCost = 7;
 
-		// Token: 0x040285BD RID: 165309
+		// Token: 0x040238D7 RID: 145623
 		public const int TxtDiscount = 8;
 
-		// Token: 0x040285BE RID: 165310
+		// Token: 0x040238D8 RID: 145624
 		public const int BtnGold = 9;
 
-		// Token: 0x040285BF RID: 165311
+		// Token: 0x040238D9 RID: 145625
 		public const int PanelRedDot = 10;
 	}
 }

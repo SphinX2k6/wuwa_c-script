@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B61 RID: 19297
+	// Token: 0x02003B09 RID: 15113
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseRewardView : UiTickViewBase
 	{
-		// Token: 0x06031F5B RID: 204635 RVA: 0x00B981FC File Offset: 0x00B963FC
+		// Token: 0x06026CEA RID: 158954 RVA: 0x00ADC438 File Offset: 0x00ADA638
 		public TowerDefenseRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031F5C RID: 204636 RVA: 0x00B98208 File Offset: 0x00B96408
+		// Token: 0x06026CEB RID: 158955 RVA: 0x00ADC444 File Offset: 0x00ADA644
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F5D RID: 204637 RVA: 0x00B982F8 File Offset: 0x00B964F8
+		// Token: 0x06026CEC RID: 158956 RVA: 0x00ADC534 File Offset: 0x00ADA734
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseRewardView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F5E RID: 204638 RVA: 0x00B9833B File Offset: 0x00B9653B
+		// Token: 0x06026CED RID: 158957 RVA: 0x00ADC577 File Offset: 0x00ADA777
 		private void OnClickBackBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031F5F RID: 204639 RVA: 0x00B98344 File Offset: 0x00B96544
+		// Token: 0x06026CEE RID: 158958 RVA: 0x00ADC580 File Offset: 0x00ADA780
 		protected override void OnStart()
 		{
 			this.MenuLayout = new GenericScrollViewNew<TowerDefenseRewardMenuItem, TowerDefenseRewardMenuItemData>(base.GetScrollViewWithScrollbar(1), new Func<TowerDefenseRewardMenuItem>(this.InitMenuItem), null, false, null);
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			EventSystem.Instance.Add<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.OnRefreshByData));
 		}
 
-		// Token: 0x06031F60 RID: 204640 RVA: 0x00B983BE File Offset: 0x00B965BE
+		// Token: 0x06026CEF RID: 158959 RVA: 0x00ADC5FA File Offset: 0x00ADA7FA
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, new Action<IActivityRewardViewData>(this.OnRefreshByData));
 		}
 
-		// Token: 0x06031F61 RID: 204641 RVA: 0x00B983DC File Offset: 0x00B965DC
+		// Token: 0x06026CF0 RID: 158960 RVA: 0x00ADC618 File Offset: 0x00ADA818
 		protected override void OnBeforeShow()
 		{
 			if (this.Data == null)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.LeftTimeAccumulator = 0f;
 		}
 
-		// Token: 0x06031F62 RID: 204642 RVA: 0x00B98404 File Offset: 0x00B96604
+		// Token: 0x06026CF1 RID: 158961 RVA: 0x00ADC640 File Offset: 0x00ADA840
 		protected override void OnTick(float delta)
 		{
 			if (!this.LeftTimeActive)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.LeftTimeActive = this.RefreshLeftTime();
 		}
 
-		// Token: 0x06031F63 RID: 204643 RVA: 0x00B98442 File Offset: 0x00B96642
+		// Token: 0x06026CF2 RID: 158962 RVA: 0x00ADC67E File Offset: 0x00ADA87E
 		private TowerDefenseRewardMenuItem InitMenuItem()
 		{
 			return new TowerDefenseRewardMenuItem
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			};
 		}
 
-		// Token: 0x06031F64 RID: 204644 RVA: 0x00B9845B File Offset: 0x00B9665B
+		// Token: 0x06026CF3 RID: 158963 RVA: 0x00ADC697 File Offset: 0x00ADA897
 		private TowerDefenseRewardItem InitRewardItem()
 		{
 			return new TowerDefenseRewardItem();
 		}
 
-		// Token: 0x06031F65 RID: 204645 RVA: 0x00B98462 File Offset: 0x00B96662
+		// Token: 0x06026CF4 RID: 158964 RVA: 0x00ADC69E File Offset: 0x00ADA89E
 		private void OnRefreshByData(IActivityRewardViewData data)
 		{
 			if (this.Data != null && data.Source != this.Data.Source)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshRewardListByTabIndex(this.SelectedTabIndex);
 		}
 
-		// Token: 0x06031F66 RID: 204646 RVA: 0x00B984A0 File Offset: 0x00B966A0
+		// Token: 0x06026CF5 RID: 158965 RVA: 0x00ADC6DC File Offset: 0x00ADA8DC
 		private void Refresh()
 		{
 			List<IActivityRewardDataPage> dataPageList = this.Data.DataPageList;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshRewardListByTabIndex(this.SelectedTabIndex);
 		}
 
-		// Token: 0x06031F67 RID: 204647 RVA: 0x00B98548 File Offset: 0x00B96748
+		// Token: 0x06026CF6 RID: 158966 RVA: 0x00ADC784 File Offset: 0x00ADA984
 		private void RefreshMenuRedDots()
 		{
 			List<IActivityRewardDataPage> dataPageList = this.Data.DataPageList;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F68 RID: 204648 RVA: 0x00B985A0 File Offset: 0x00B967A0
+		// Token: 0x06026CF7 RID: 158967 RVA: 0x00ADC7DC File Offset: 0x00ADA9DC
 		private void SelectTab(int index)
 		{
 			if (index == this.SelectedTabIndex)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshRewardListByTabIndex(index);
 		}
 
-		// Token: 0x06031F69 RID: 204649 RVA: 0x00B98608 File Offset: 0x00B96808
+		// Token: 0x06026CF8 RID: 158968 RVA: 0x00ADC844 File Offset: 0x00ADAA44
 		private void RefreshRewardListByTabIndex(int index)
 		{
 			if (index < 0 || index >= this.Data.DataPageList.Count)
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F6A RID: 204650 RVA: 0x00B98670 File Offset: 0x00B96870
+		// Token: 0x06026CF9 RID: 158969 RVA: 0x00ADC8AC File Offset: 0x00ADAAAC
 		private bool CheckPageHasRedDot(IActivityRewardDataPage page)
 		{
 			using (List<IActivityRewardData>.Enumerator enumerator = page.DataList.GetEnumerator())
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return false;
 		}
 
-		// Token: 0x06031F6B RID: 204651 RVA: 0x00B986CC File Offset: 0x00B968CC
+		// Token: 0x06026CFA RID: 158970 RVA: 0x00ADC908 File Offset: 0x00ADAB08
 		private bool RefreshLeftTime()
 		{
 			UUIItem item = base.GetItem(3);
@@ -272,15 +272,15 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return true;
 		}
 
-		// Token: 0x0401AA34 RID: 109108
+		// Token: 0x04015386 RID: 86918
 		[Nullable(2)]
 		private IActivityRewardViewData Data;
 
-		// Token: 0x0401AA35 RID: 109109
+		// Token: 0x04015387 RID: 86919
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401AA36 RID: 109110
+		// Token: 0x04015388 RID: 86920
 		[Nullable(new byte[]
 		{
 			2,
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericScrollViewNew<TowerDefenseRewardMenuItem, TowerDefenseRewardMenuItemData> MenuLayout;
 
-		// Token: 0x0401AA37 RID: 109111
+		// Token: 0x04015389 RID: 86921
 		[Nullable(new byte[]
 		{
 			2,
@@ -298,35 +298,35 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private LoopScrollView<TowerDefenseRewardItem, IActivityRewardData> RewardLayout;
 
-		// Token: 0x0401AA38 RID: 109112
+		// Token: 0x0401538A RID: 86922
 		private int SelectedTabIndex;
 
-		// Token: 0x0401AA39 RID: 109113
+		// Token: 0x0401538B RID: 86923
 		private float LeftTimeAccumulator;
 
-		// Token: 0x0401AA3A RID: 109114
+		// Token: 0x0401538C RID: 86924
 		private bool LeftTimeActive;
 
-		// Token: 0x0200ACF1 RID: 44273
+		// Token: 0x02009710 RID: 38672
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040348C3 RID: 215235
+			// Token: 0x0402F26C RID: 193132
 			public const int CaptionItem = 0;
 
-			// Token: 0x040348C4 RID: 215236
+			// Token: 0x0402F26D RID: 193133
 			public const int MenuScroll = 1;
 
-			// Token: 0x040348C5 RID: 215237
+			// Token: 0x0402F26E RID: 193134
 			public const int MenuItem = 2;
 
-			// Token: 0x040348C6 RID: 215238
+			// Token: 0x0402F26F RID: 193135
 			public const int LeftTimeItem = 3;
 
-			// Token: 0x040348C7 RID: 215239
+			// Token: 0x0402F270 RID: 193136
 			public const int LeftTimeTxt = 4;
 
-			// Token: 0x040348C8 RID: 215240
+			// Token: 0x0402F271 RID: 193137
 			public const int RewardScroll = 5;
 		}
 	}

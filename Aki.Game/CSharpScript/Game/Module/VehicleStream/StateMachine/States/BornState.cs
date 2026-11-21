@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 {
-	// Token: 0x020048B9 RID: 18617
+	// Token: 0x02003830 RID: 14384
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BornState : VehicleStateBase
 	{
-		// Token: 0x06030A7C RID: 199292 RVA: 0x00B4BC8B File Offset: 0x00B49E8B
+		// Token: 0x060255A8 RID: 153000 RVA: 0x00A86A93 File Offset: 0x00A84C93
 		public BornState(VehicleSmBlackBoard blackBoard) : base(EVehicleStateType.Born, blackBoard)
 		{
 		}
 
-		// Token: 0x06030A7D RID: 199293 RVA: 0x00B4BC98 File Offset: 0x00B49E98
+		// Token: 0x060255A9 RID: 153001 RVA: 0x00A86AA0 File Offset: 0x00A84CA0
 		[NullableContext(2)]
 		protected unsafe override void OnEnter(EVehicleStateType lastState, string reason = null)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A7E RID: 199294 RVA: 0x00B4BD3C File Offset: 0x00B49F3C
+		// Token: 0x060255AA RID: 153002 RVA: 0x00A86B44 File Offset: 0x00A84D44
 		protected unsafe override void OnUpdate(float delta)
 		{
 			EVehicleStateType evehicleStateType = this.CheckGetNextState();
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A7F RID: 199295 RVA: 0x00B4BDE7 File Offset: 0x00B49FE7
+		// Token: 0x060255AB RID: 153003 RVA: 0x00A86BEF File Offset: 0x00A84DEF
 		protected override void OnExit(EVehicleStateType nextState)
 		{
 			this.InitAudio();
 		}
 
-		// Token: 0x06030A80 RID: 199296 RVA: 0x00B4BDEF File Offset: 0x00B49FEF
+		// Token: 0x060255AC RID: 153004 RVA: 0x00A86BF7 File Offset: 0x00A84DF7
 		protected override EVehicleStateType CheckGetNextState()
 		{
 			if (!this.BlackBoard.IsLaunch)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return EVehicleStateType.Running;
 		}
 
-		// Token: 0x06030A81 RID: 199297 RVA: 0x00B4BE04 File Offset: 0x00B4A004
+		// Token: 0x060255AD RID: 153005 RVA: 0x00A86C0C File Offset: 0x00A84E0C
 		[NullableContext(2)]
 		private List<long> CheckSameRoadwayVehicleOverlap(float currentFrameRootDistance)
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return list;
 		}
 
-		// Token: 0x06030A82 RID: 199298 RVA: 0x00B4BF18 File Offset: 0x00B4A118
+		// Token: 0x060255AE RID: 153006 RVA: 0x00A86D20 File Offset: 0x00A84F20
 		private void CalculateStartPointInfo()
 		{
 			UKuroRoadway startRoadway = this.BlackBoard.StartRoadway;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.BlackBoard.CurrentRootDistance = startRoadway.RoadSpline.GetDistanceAlongSplineAtSplineInputKey(inKey);
 		}
 
-		// Token: 0x06030A83 RID: 199299 RVA: 0x00B4C014 File Offset: 0x00B4A214
+		// Token: 0x060255AF RID: 153007 RVA: 0x00A86E1C File Offset: 0x00A8501C
 		private void CalculateEndPointInfo()
 		{
 			UKuroRoadway endRoadway = this.BlackBoard.EndRoadway;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			this.BlackBoard.EndPointInSplineDistance = endRoadway.RoadSpline.GetDistanceAlongSplineAtSplineInputKey(inKey);
 		}
 
-		// Token: 0x06030A84 RID: 199300 RVA: 0x00B4C074 File Offset: 0x00B4A274
+		// Token: 0x060255B0 RID: 153008 RVA: 0x00A86E7C File Offset: 0x00A8507C
 		private void InitAudio()
 		{
 			Entity entity = this.BlackBoard.RoadNetworkNavigationComponent.Entity;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030A85 RID: 199301 RVA: 0x00B4C134 File Offset: 0x00B4A334
+		// Token: 0x060255B1 RID: 153009 RVA: 0x00A86F3C File Offset: 0x00A8513C
 		private void CheckAndSetZero(Vector relativeLocation)
 		{
 			if (Math.Abs(relativeLocation.X) < 9.999999747378752E-05)

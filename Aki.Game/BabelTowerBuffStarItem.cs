@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200111E RID: 4382
+// Token: 0x020005D2 RID: 1490
 public class BabelTowerBuffStarItem : UiPanelBase
 {
-	// Token: 0x060072A6 RID: 29350 RVA: 0x00178568 File Offset: 0x00176768
+	// Token: 0x0600463C RID: 17980 RVA: 0x00180F24 File Offset: 0x0017F124
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,17 +20,17 @@ public class BabelTowerBuffStarItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060072A7 RID: 29351 RVA: 0x001785B0 File Offset: 0x001767B0
+	// Token: 0x0600463D RID: 17981 RVA: 0x00180F6C File Offset: 0x0017F16C
 	[NullableContext(1)]
 	public void SetText(string text)
 	{
 		base.GetText(0).SetText(text, true);
 	}
 
-	// Token: 0x020076E5 RID: 30437
+	// Token: 0x02006879 RID: 26745
 	private class EComponents
 	{
-		// Token: 0x040273B9 RID: 160697
+		// Token: 0x04022702 RID: 141058
 		public const int StarNumText = 0;
 	}
 }

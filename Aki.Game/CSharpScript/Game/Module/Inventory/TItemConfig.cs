@@ -1,132 +1,131 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
 namespace CSharpScript.Game.Module.Inventory
 {
-	// Token: 0x02005836 RID: 22582
+	// Token: 0x0200480D RID: 18445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TItemConfig
 	{
-		// Token: 0x06039620 RID: 235040 RVA: 0x00D9DF56 File Offset: 0x00D9C156
+		// Token: 0x0602E534 RID: 189748 RVA: 0x00CECE16 File Offset: 0x00CEB016
 		private TItemConfig(object value)
 		{
 			this._value = value;
 		}
 
-		// Token: 0x06039621 RID: 235041 RVA: 0x00D9DF65 File Offset: 0x00D9C165
+		// Token: 0x0602E535 RID: 189749 RVA: 0x00CECE25 File Offset: 0x00CEB025
 		public static implicit operator TItemConfig(AbyssItem value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039622 RID: 235042 RVA: 0x00D9DF72 File Offset: 0x00D9C172
+		// Token: 0x0602E536 RID: 189750 RVA: 0x00CECE32 File Offset: 0x00CEB032
 		public static implicit operator TItemConfig(BackgroundCard value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039623 RID: 235043 RVA: 0x00D9DF7F File Offset: 0x00D9C17F
+		// Token: 0x0602E537 RID: 189751 RVA: 0x00CECE3F File Offset: 0x00CEB03F
 		public static implicit operator TItemConfig(CalabashSkin value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039624 RID: 235044 RVA: 0x00D9DF8C File Offset: 0x00D9C18C
+		// Token: 0x0602E538 RID: 189752 RVA: 0x00CECE4C File Offset: 0x00CEB04C
 		public static implicit operator TItemConfig(FlySkinConfig value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039625 RID: 235045 RVA: 0x00D9DF99 File Offset: 0x00D9C199
+		// Token: 0x0602E539 RID: 189753 RVA: 0x00CECE59 File Offset: 0x00CEB059
 		public static implicit operator TItemConfig(ItemInfo value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039626 RID: 235046 RVA: 0x00D9DFA6 File Offset: 0x00D9C1A6
+		// Token: 0x0602E53A RID: 189754 RVA: 0x00CECE66 File Offset: 0x00CEB066
 		public static implicit operator TItemConfig(PhantomBattleBadge value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039627 RID: 235047 RVA: 0x00D9DFB3 File Offset: 0x00D9C1B3
+		// Token: 0x0602E53B RID: 189755 RVA: 0x00CECE73 File Offset: 0x00CEB073
 		public static implicit operator TItemConfig(PhantomBattleCard value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039628 RID: 235048 RVA: 0x00D9DFC0 File Offset: 0x00D9C1C0
+		// Token: 0x0602E53C RID: 189756 RVA: 0x00CECE80 File Offset: 0x00CEB080
 		public static implicit operator TItemConfig(PhantomItem value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039629 RID: 235049 RVA: 0x00D9DFCD File Offset: 0x00D9C1CD
+		// Token: 0x0602E53D RID: 189757 RVA: 0x00CECE8D File Offset: 0x00CEB08D
 		public static implicit operator TItemConfig(PlayerHeadRe value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x0603962A RID: 235050 RVA: 0x00D9DFDA File Offset: 0x00D9C1DA
+		// Token: 0x0602E53E RID: 189758 RVA: 0x00CECE9A File Offset: 0x00CEB09A
 		public static implicit operator TItemConfig(PreviewItem value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x0603962B RID: 235051 RVA: 0x00D9DFE7 File Offset: 0x00D9C1E7
+		// Token: 0x0602E53F RID: 189759 RVA: 0x00CECEA7 File Offset: 0x00CEB0A7
 		public static implicit operator TItemConfig(RogueCurrency value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x0603962C RID: 235052 RVA: 0x00D9DFF4 File Offset: 0x00D9C1F4
+		// Token: 0x0602E540 RID: 189760 RVA: 0x00CECEB4 File Offset: 0x00CEB0B4
 		public static implicit operator TItemConfig(RogueResCurrency value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x0603962D RID: 235053 RVA: 0x00D9E001 File Offset: 0x00D9C201
+		// Token: 0x0602E541 RID: 189761 RVA: 0x00CECEC1 File Offset: 0x00CEB0C1
 		public static implicit operator TItemConfig(RoleInfo value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x0603962E RID: 235054 RVA: 0x00D9E00E File Offset: 0x00D9C20E
+		// Token: 0x0602E542 RID: 189762 RVA: 0x00CECECE File Offset: 0x00CEB0CE
 		public static implicit operator TItemConfig(RoleSkin value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x0603962F RID: 235055 RVA: 0x00D9E01B File Offset: 0x00D9C21B
+		// Token: 0x0602E543 RID: 189763 RVA: 0x00CECEDB File Offset: 0x00CEB0DB
 		public static implicit operator TItemConfig(WeaponConf value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039630 RID: 235056 RVA: 0x00D9E028 File Offset: 0x00D9C228
+		// Token: 0x0602E544 RID: 189764 RVA: 0x00CECEE8 File Offset: 0x00CEB0E8
 		public static implicit operator TItemConfig(WeaponSkin value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039631 RID: 235057 RVA: 0x00D9E035 File Offset: 0x00D9C235
+		// Token: 0x0602E545 RID: 189765 RVA: 0x00CECEF5 File Offset: 0x00CEB0F5
 		public static implicit operator TItemConfig(Ornament value)
 		{
 			return new TItemConfig(value);
 		}
 
-		// Token: 0x06039632 RID: 235058 RVA: 0x00D9E042 File Offset: 0x00D9C242
+		// Token: 0x0602E546 RID: 189766 RVA: 0x00CECF02 File Offset: 0x00CEB102
 		[NullableContext(2)]
 		public bool Is<T>()
 		{
 			return this._value is T;
 		}
 
-		// Token: 0x06039633 RID: 235059 RVA: 0x00D9E054 File Offset: 0x00D9C254
+		// Token: 0x0602E547 RID: 189767 RVA: 0x00CECF14 File Offset: 0x00CEB114
 		[NullableContext(0)]
 		public T? As<T>() where T : struct
 		{
@@ -139,30 +138,15 @@ namespace CSharpScript.Game.Module.Inventory
 			return null;
 		}
 
-		// Token: 0x06039634 RID: 235060 RVA: 0x00D9E089 File Offset: 0x00D9C289
+		// Token: 0x0602E548 RID: 189768 RVA: 0x00CECF49 File Offset: 0x00CEB149
+		[return: Nullable(2)]
 		public T AsClass<T>() where T : class
 		{
 			return this._value as T;
 		}
 
-		// Token: 0x17008A2E RID: 35374
-		[Nullable(2)]
-		public object this[string propertyName]
-		{
-			[return: Nullable(2)]
-			get
-			{
-				PropertyInfo property = this._value.GetType().GetProperty(propertyName);
-				if (property == null)
-				{
-					return null;
-				}
-				return property.GetValue(this._value);
-			}
-		}
-
-		// Token: 0x17008A2F RID: 35375
-		// (get) Token: 0x06039636 RID: 235062 RVA: 0x00D9E0C0 File Offset: 0x00D9C2C0
+		// Token: 0x17005DF8 RID: 24056
+		// (get) Token: 0x0602E549 RID: 189769 RVA: 0x00CECF5C File Offset: 0x00CEB15C
 		public int[] ShowTypes
 		{
 			get
@@ -181,8 +165,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A30 RID: 35376
-		// (get) Token: 0x06039637 RID: 235063 RVA: 0x00D9E110 File Offset: 0x00D9C310
+		// Token: 0x17005DF9 RID: 24057
+		// (get) Token: 0x0602E54A RID: 189770 RVA: 0x00CECFAC File Offset: 0x00CEB1AC
 		public Dictionary<int, int> Parameters
 		{
 			get
@@ -206,7 +190,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x0401E03F RID: 122943
+		// Token: 0x04018AD8 RID: 101080
 		private readonly object _value;
 	}
 }

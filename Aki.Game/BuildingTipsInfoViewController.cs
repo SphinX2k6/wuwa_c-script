@@ -7,12 +7,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020012FC RID: 4860
+// Token: 0x020007B0 RID: 1968
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingTipsInfoViewController
 {
-	// Token: 0x0600867E RID: 34430 RVA: 0x001CB568 File Offset: 0x001C9768
+	// Token: 0x06005A19 RID: 23065 RVA: 0x001D43D4 File Offset: 0x001D25D4
 	private void SwitchBuildingId(bool isPrev)
 	{
 		int buildingDataSize = MoonChasingBuildingModel.Instance.GetBuildingDataSize();
@@ -24,14 +24,14 @@ public class BuildingTipsInfoViewController
 		this.Model.BuildingId = ((this.Model.BuildingId + 1 <= buildingDataSize) ? (this.Model.BuildingId + 1) : 1);
 	}
 
-	// Token: 0x0600867F RID: 34431 RVA: 0x001CB5DA File Offset: 0x001C97DA
+	// Token: 0x06005A1A RID: 23066 RVA: 0x001D4446 File Offset: 0x001D2646
 	public void RegisterView(BuildingTipsInfoView view)
 	{
 		this.View = view;
 		this.Model = (BuildingTipsInfoViewModel)view.OpenParam;
 	}
 
-	// Token: 0x06008680 RID: 34432 RVA: 0x001CB5F4 File Offset: 0x001C97F4
+	// Token: 0x06005A1B RID: 23067 RVA: 0x001D4460 File Offset: 0x001D2660
 	public UniTask Refresh()
 	{
 		BuildingTipsInfoViewController.<Refresh>d__4 <Refresh>d__;
@@ -42,7 +42,7 @@ public class BuildingTipsInfoViewController
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008681 RID: 34433 RVA: 0x001CB638 File Offset: 0x001C9838
+	// Token: 0x06005A1C RID: 23068 RVA: 0x001D44A4 File Offset: 0x001D26A4
 	public void SwitchPrev()
 	{
 		this.SwitchBuildingId(true);
@@ -51,7 +51,7 @@ public class BuildingTipsInfoViewController
 		this.Refresh().Forget();
 	}
 
-	// Token: 0x06008682 RID: 34434 RVA: 0x001CB688 File Offset: 0x001C9888
+	// Token: 0x06005A1D RID: 23069 RVA: 0x001D44F4 File Offset: 0x001D26F4
 	public void SwitchNext()
 	{
 		this.SwitchBuildingId(false);
@@ -60,7 +60,7 @@ public class BuildingTipsInfoViewController
 		this.Refresh().Forget();
 	}
 
-	// Token: 0x06008683 RID: 34435 RVA: 0x001CB6D8 File Offset: 0x001C98D8
+	// Token: 0x06005A1E RID: 23070 RVA: 0x001D4544 File Offset: 0x001D2744
 	public void JumpToMap()
 	{
 		Building buildingById = BuildingConfig.Instance.GetBuildingById(this.Model.BuildingId);
@@ -75,7 +75,7 @@ public class BuildingTipsInfoViewController
 		}
 	}
 
-	// Token: 0x06008684 RID: 34436 RVA: 0x001CB734 File Offset: 0x001C9934
+	// Token: 0x06005A1F RID: 23071 RVA: 0x001D45A0 File Offset: 0x001D27A0
 	public void JumpToConditionTip()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.MoonChasingBuildingJumpToTask);
@@ -87,7 +87,7 @@ public class BuildingTipsInfoViewController
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06008685 RID: 34437 RVA: 0x001CB770 File Offset: 0x001C9970
+	// Token: 0x06005A20 RID: 23072 RVA: 0x001D45DC File Offset: 0x001D27DC
 	public void CloseSelf()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.MoonChasingMainView);
@@ -99,7 +99,7 @@ public class BuildingTipsInfoViewController
 		this.View.CloseMe(null);
 	}
 
-	// Token: 0x06008686 RID: 34438 RVA: 0x001CB7C0 File Offset: 0x001C99C0
+	// Token: 0x06005A21 RID: 23073 RVA: 0x001D462C File Offset: 0x001D282C
 	public void UnlockOrLevelUp(int _)
 	{
 		BuildingData buildingDataById = MoonChasingBuildingModel.Instance.GetBuildingDataById(this.Model.BuildingId);
@@ -123,9 +123,9 @@ public class BuildingTipsInfoViewController
 		MoonChasingController.Instance.BuildingLevelUpRequest(this.Model.BuildingId);
 	}
 
-	// Token: 0x04003C31 RID: 15409
+	// Token: 0x04003CC9 RID: 15561
 	private BuildingTipsInfoView View;
 
-	// Token: 0x04003C32 RID: 15410
+	// Token: 0x04003CCA RID: 15562
 	private BuildingTipsInfoViewModel Model;
 }

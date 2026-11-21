@@ -12,12 +12,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E41 RID: 11841
+// Token: 0x0200239D RID: 9117
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsManipulateInteractBlueprintFunctionLibrary.TsManipulateInteractBlueprintFunctionLibrary_C")]
 public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060192C3 RID: 103107 RVA: 0x0067AB00 File Offset: 0x00678D00
+	// Token: 0x06016B94 RID: 93076 RVA: 0x006A09D4 File Offset: 0x0069EBD4
 	[NullableContext(2)]
 	private static CharacterManipulateInteractComponent GetManipulateInteractComp(int entityId)
 	{
@@ -29,7 +29,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return component;
 	}
 
-	// Token: 0x060192C4 RID: 103108 RVA: 0x0067AB28 File Offset: 0x00678D28
+	// Token: 0x06016B95 RID: 93077 RVA: 0x006A09FC File Offset: 0x0069EBFC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType GetMechascoutDragInteractType(int entityId)
 	{
@@ -46,7 +46,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return sceneItemExploreInteractComponent.GetUeDragType();
 	}
 
-	// Token: 0x060192C5 RID: 103109 RVA: 0x0067AB60 File Offset: 0x00678D60
+	// Token: 0x06016B96 RID: 93078 RVA: 0x006A0A34 File Offset: 0x0069EC34
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool StartMechascoutDragInteract(int entityId)
 	{
@@ -126,7 +126,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return true;
 	}
 
-	// Token: 0x060192C6 RID: 103110 RVA: 0x0067AD28 File Offset: 0x00678F28
+	// Token: 0x06016B97 RID: 93079 RVA: 0x006A0BFC File Offset: 0x0069EDFC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool AttachMechascoutInteractActorToSocket(int entityId)
 	{
@@ -164,7 +164,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return false;
 	}
 
-	// Token: 0x060192C7 RID: 103111 RVA: 0x0067AE60 File Offset: 0x00679060
+	// Token: 0x06016B98 RID: 93080 RVA: 0x006A0D34 File Offset: 0x0069EF34
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool DetachMechascoutInteractActor(int entityId)
 	{
@@ -192,7 +192,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return true;
 	}
 
-	// Token: 0x060192C8 RID: 103112 RVA: 0x0067AF2C File Offset: 0x0067912C
+	// Token: 0x06016B99 RID: 93081 RVA: 0x006A0E00 File Offset: 0x0069F000
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool AttachMechascoutManipulateActorToSocket(int entityId)
 	{
@@ -242,7 +242,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return false;
 	}
 
-	// Token: 0x060192C9 RID: 103113 RVA: 0x0067B0D0 File Offset: 0x006792D0
+	// Token: 0x06016B9A RID: 93082 RVA: 0x006A0FA4 File Offset: 0x0069F1A4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool DetachMechascoutManipulateActor(int entityId)
 	{
@@ -277,7 +277,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return true;
 	}
 
-	// Token: 0x060192CA RID: 103114 RVA: 0x0067B1D4 File Offset: 0x006793D4
+	// Token: 0x06016B9B RID: 93083 RVA: 0x006A10A8 File Offset: 0x0069F2A8
 	private static void TryBeginDragSkill(int entityId, AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType dragType)
 	{
 		int num;
@@ -295,7 +295,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		}
 	}
 
-	// Token: 0x060192CB RID: 103115 RVA: 0x0067B224 File Offset: 0x00679424
+	// Token: 0x06016B9C RID: 93084 RVA: 0x006A10F8 File Offset: 0x0069F2F8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void EndMechascoutDragInteract(int entityId, AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType dragType)
 	{
@@ -308,7 +308,7 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		manipulateInteractComp.EndMechascoutDragInteract();
 	}
 
-	// Token: 0x060192CC RID: 103116 RVA: 0x0067B25E File Offset: 0x0067945E
+	// Token: 0x06016B9D RID: 93085 RVA: 0x006A1132 File Offset: 0x0069F332
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsManipulateInteractBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -318,66 +318,66 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		return TsManipulateInteractBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x060192CD RID: 103117 RVA: 0x0067B284 File Offset: 0x00679484
+	// Token: 0x06016B9E RID: 93086 RVA: 0x006A1158 File Offset: 0x0069F358
 	public TsManipulateInteractBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(TsManipulateInteractBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060192CE RID: 103118 RVA: 0x0067B2AC File Offset: 0x006794AC
+	// Token: 0x06016B9F RID: 93087 RVA: 0x006A1180 File Offset: 0x0069F380
 	[NullableContext(1)]
 	public TsManipulateInteractBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsManipulateInteractBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060192CF RID: 103119 RVA: 0x0067B2DF File Offset: 0x006794DF
+	// Token: 0x06016BA0 RID: 93088 RVA: 0x006A11B3 File Offset: 0x0069F3B3
 	protected TsManipulateInteractBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060192D0 RID: 103120 RVA: 0x0067B2E8 File Offset: 0x006794E8
+	// Token: 0x06016BA1 RID: 93089 RVA: 0x006A11BC File Offset: 0x0069F3BC
 	protected unsafe static void __CPPCALL_GetMechascoutDragInteractType_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__GetMechascoutDragInteractType_FunctionParams* __Params)
 	{
 		*(&__Params->__Result) = (byte)TsManipulateInteractBlueprintFunctionLibrary.GetMechascoutDragInteractType(__Params->entityId);
 	}
 
-	// Token: 0x060192D1 RID: 103121 RVA: 0x0067B2FD File Offset: 0x006794FD
+	// Token: 0x06016BA2 RID: 93090 RVA: 0x006A11D1 File Offset: 0x0069F3D1
 	protected unsafe static void __CPPCALL_StartMechascoutDragInteract_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__StartMechascoutDragInteract_FunctionParams* __Params)
 	{
 		__Params->__Result = TsManipulateInteractBlueprintFunctionLibrary.StartMechascoutDragInteract(__Params->entityId);
 	}
 
-	// Token: 0x060192D2 RID: 103122 RVA: 0x0067B310 File Offset: 0x00679510
+	// Token: 0x06016BA3 RID: 93091 RVA: 0x006A11E4 File Offset: 0x0069F3E4
 	protected unsafe static void __CPPCALL_AttachMechascoutInteractActorToSocket_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__AttachMechascoutInteractActorToSocket_FunctionParams* __Params)
 	{
 		__Params->__Result = TsManipulateInteractBlueprintFunctionLibrary.AttachMechascoutInteractActorToSocket(__Params->entityId);
 	}
 
-	// Token: 0x060192D3 RID: 103123 RVA: 0x0067B323 File Offset: 0x00679523
+	// Token: 0x06016BA4 RID: 93092 RVA: 0x006A11F7 File Offset: 0x0069F3F7
 	protected unsafe static void __CPPCALL_DetachMechascoutInteractActor_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__DetachMechascoutInteractActor_FunctionParams* __Params)
 	{
 		__Params->__Result = TsManipulateInteractBlueprintFunctionLibrary.DetachMechascoutInteractActor(__Params->entityId);
 	}
 
-	// Token: 0x060192D4 RID: 103124 RVA: 0x0067B336 File Offset: 0x00679536
+	// Token: 0x06016BA5 RID: 93093 RVA: 0x006A120A File Offset: 0x0069F40A
 	protected unsafe static void __CPPCALL_AttachMechascoutManipulateActorToSocket_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__AttachMechascoutManipulateActorToSocket_FunctionParams* __Params)
 	{
 		__Params->__Result = TsManipulateInteractBlueprintFunctionLibrary.AttachMechascoutManipulateActorToSocket(__Params->entityId);
 	}
 
-	// Token: 0x060192D5 RID: 103125 RVA: 0x0067B349 File Offset: 0x00679549
+	// Token: 0x06016BA6 RID: 93094 RVA: 0x006A121D File Offset: 0x0069F41D
 	protected unsafe static void __CPPCALL_DetachMechascoutManipulateActor_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__DetachMechascoutManipulateActor_FunctionParams* __Params)
 	{
 		__Params->__Result = TsManipulateInteractBlueprintFunctionLibrary.DetachMechascoutManipulateActor(__Params->entityId);
 	}
 
-	// Token: 0x060192D6 RID: 103126 RVA: 0x0067B35C File Offset: 0x0067955C
+	// Token: 0x06016BA7 RID: 93095 RVA: 0x006A1230 File Offset: 0x0069F430
 	protected unsafe static void __CPPCALL_EndMechascoutDragInteract_Implementation(TsManipulateInteractBlueprintFunctionLibrary.__EndMechascoutDragInteract_FunctionParams* __Params)
 	{
 		AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType dragType = (AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType)__Params->dragType;
 		TsManipulateInteractBlueprintFunctionLibrary.EndMechascoutDragInteract(__Params->entityId, dragType);
 	}
 
-	// Token: 0x0400BB98 RID: 48024
+	// Token: 0x0400BF26 RID: 48934
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType, int> SkillIdMap = new Dictionary<AkiClient.Game.Aki.Data.Gameplay.MechascoutDrag.EMechascoutDragType, int>
@@ -392,146 +392,146 @@ public class TsManipulateInteractBlueprintFunctionLibrary : UBlueprintFunctionLi
 		}
 	};
 
-	// Token: 0x0400BB99 RID: 48025
+	// Token: 0x0400BF27 RID: 48935
 	[StaticVariableRuleIgnore]
 	private static readonly FName? MechascoutAttachSocket = FNameUtil.GetDynamicFName("WeaponProp04");
 
-	// Token: 0x0400BB9A RID: 48026
+	// Token: 0x0400BF28 RID: 48936
 	[StaticVariableRuleIgnore]
 	private static readonly FName? MechascoutManipulateAttachSocket = FNameUtil.GetDynamicFName("WeaponProp05");
 
-	// Token: 0x0400BB9B RID: 48027
+	// Token: 0x0400BF29 RID: 48937
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsManipulateInteractBlueprintFunctionLibrary.TsManipulateInteractBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400BB9C RID: 48028
+	// Token: 0x0400BF2A RID: 48938
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400BB9D RID: 48029
+	// Token: 0x0400BF2B RID: 48939
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x020094FF RID: 38143
+	// Token: 0x02008727 RID: 34599
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMechascoutDragInteractType_FunctionParams
 	{
-		// Token: 0x0402FEA7 RID: 196263
+		// Token: 0x0402B535 RID: 177461
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEA8 RID: 196264
+		// Token: 0x0402B536 RID: 177462
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FEA9 RID: 196265
+		// Token: 0x0402B537 RID: 177463
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009500 RID: 38144
+	// Token: 0x02008728 RID: 34600
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __StartMechascoutDragInteract_FunctionParams
 	{
-		// Token: 0x0402FEAA RID: 196266
+		// Token: 0x0402B538 RID: 177464
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEAB RID: 196267
+		// Token: 0x0402B539 RID: 177465
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FEAC RID: 196268
+		// Token: 0x0402B53A RID: 177466
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009501 RID: 38145
+	// Token: 0x02008729 RID: 34601
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __AttachMechascoutInteractActorToSocket_FunctionParams
 	{
-		// Token: 0x0402FEAD RID: 196269
+		// Token: 0x0402B53B RID: 177467
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEAE RID: 196270
+		// Token: 0x0402B53C RID: 177468
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FEAF RID: 196271
+		// Token: 0x0402B53D RID: 177469
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009502 RID: 38146
+	// Token: 0x0200872A RID: 34602
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __DetachMechascoutInteractActor_FunctionParams
 	{
-		// Token: 0x0402FEB0 RID: 196272
+		// Token: 0x0402B53E RID: 177470
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEB1 RID: 196273
+		// Token: 0x0402B53F RID: 177471
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FEB2 RID: 196274
+		// Token: 0x0402B540 RID: 177472
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009503 RID: 38147
+	// Token: 0x0200872B RID: 34603
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __AttachMechascoutManipulateActorToSocket_FunctionParams
 	{
-		// Token: 0x0402FEB3 RID: 196275
+		// Token: 0x0402B541 RID: 177473
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEB4 RID: 196276
+		// Token: 0x0402B542 RID: 177474
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FEB5 RID: 196277
+		// Token: 0x0402B543 RID: 177475
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009504 RID: 38148
+	// Token: 0x0200872C RID: 34604
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __DetachMechascoutManipulateActor_FunctionParams
 	{
-		// Token: 0x0402FEB6 RID: 196278
+		// Token: 0x0402B544 RID: 177476
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEB7 RID: 196279
+		// Token: 0x0402B545 RID: 177477
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FEB8 RID: 196280
+		// Token: 0x0402B546 RID: 177478
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009505 RID: 38149
+	// Token: 0x0200872D RID: 34605
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __EndMechascoutDragInteract_FunctionParams
 	{
-		// Token: 0x0402FEB9 RID: 196281
+		// Token: 0x0402B547 RID: 177479
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FEBA RID: 196282
+		// Token: 0x0402B548 RID: 177480
 		[FieldOffset(4)]
 		public byte dragType;
 
-		// Token: 0x0402FEBB RID: 196283
+		// Token: 0x0402B549 RID: 177481
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}

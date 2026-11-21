@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001807 RID: 6151
+// Token: 0x02000CC0 RID: 3264
 public class CommonConditionFilterItem : UiPanelBase
 {
-	// Token: 0x0600B467 RID: 46183 RVA: 0x0028BB0D File Offset: 0x00289D0D
+	// Token: 0x06008852 RID: 34898 RVA: 0x0029622D File Offset: 0x0029442D
 	[NullableContext(1)]
 	public CommonConditionFilterItem(UUIItem uiItem, QualityInfo qualityInfo)
 	{
@@ -17,7 +17,7 @@ public class CommonConditionFilterItem : UiPanelBase
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B468 RID: 46184 RVA: 0x0028BB2C File Offset: 0x00289D2C
+	// Token: 0x06008853 RID: 34899 RVA: 0x0029624C File Offset: 0x0029444C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -38,7 +38,7 @@ public class CommonConditionFilterItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B469 RID: 46185 RVA: 0x0028BBD2 File Offset: 0x00289DD2
+	// Token: 0x06008854 RID: 34900 RVA: 0x002962F2 File Offset: 0x002944F2
 	private void ToggleClick(EToggleState state)
 	{
 		if (this.ToggleFunction != null)
@@ -47,46 +47,46 @@ public class CommonConditionFilterItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B46A RID: 46186 RVA: 0x0028BBFD File Offset: 0x00289DFD
+	// Token: 0x06008855 RID: 34901 RVA: 0x0029631D File Offset: 0x0029451D
 	protected override void OnStart()
 	{
 		base.GetText(1).ShowTextNew(this.QualityInfo.ConsumeFilterText);
 	}
 
-	// Token: 0x0600B46B RID: 46187 RVA: 0x0028BC18 File Offset: 0x00289E18
+	// Token: 0x06008856 RID: 34902 RVA: 0x00296338 File Offset: 0x00294538
 	public void SetToggleState(bool bSelected, bool bFire = true)
 	{
 		EToggleState state = bSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600B46C RID: 46188 RVA: 0x0028BC3E File Offset: 0x00289E3E
+	// Token: 0x06008857 RID: 34903 RVA: 0x0029635E File Offset: 0x0029455E
 	[NullableContext(1)]
 	public void SetToggleFunction(TCommonConditionFilterItemFunction toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x0600B46D RID: 46189 RVA: 0x0028BC47 File Offset: 0x00289E47
+	// Token: 0x06008858 RID: 34904 RVA: 0x00296367 File Offset: 0x00294567
 	public QualityInfo GetQualityInfo()
 	{
 		return this.QualityInfo;
 	}
 
-	// Token: 0x0400516E RID: 20846
+	// Token: 0x04005219 RID: 21017
 	[Nullable(2)]
 	protected TCommonConditionFilterItemFunction ToggleFunction;
 
-	// Token: 0x0400516F RID: 20847
+	// Token: 0x0400521A RID: 21018
 	protected QualityInfo QualityInfo;
 
-	// Token: 0x02007DFD RID: 32253
+	// Token: 0x02006F83 RID: 28547
 	private class ECommonConditionFilterItem
 	{
-		// Token: 0x040293A8 RID: 168872
+		// Token: 0x040246D3 RID: 149203
 		public const int Toggle = 0;
 
-		// Token: 0x040293A9 RID: 168873
+		// Token: 0x040246D4 RID: 149204
 		public const int Text = 1;
 	}
 }

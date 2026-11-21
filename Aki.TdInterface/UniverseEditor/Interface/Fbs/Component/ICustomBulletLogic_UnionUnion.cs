@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005058 RID: 20568
+	// Token: 0x020055BA RID: 21946
 	public class ICustomBulletLogic_UnionUnion
 	{
-		// Token: 0x17009538 RID: 38200
-		// (get) Token: 0x06020F53 RID: 134995 RVA: 0x00494AFD File Offset: 0x00492CFD
-		// (set) Token: 0x06020F54 RID: 134996 RVA: 0x00494B05 File Offset: 0x00492D05
+		// Token: 0x17009D1E RID: 40222
+		// (get) Token: 0x06022E8D RID: 142989 RVA: 0x004CE7B1 File Offset: 0x004CC9B1
+		// (set) Token: 0x06022E8E RID: 142990 RVA: 0x004CE7B9 File Offset: 0x004CC9B9
 		public ICustomBulletLogic_Union Type { get; set; }
 
-		// Token: 0x17009539 RID: 38201
-		// (get) Token: 0x06020F55 RID: 134997 RVA: 0x00494B0E File Offset: 0x00492D0E
-		// (set) Token: 0x06020F56 RID: 134998 RVA: 0x00494B16 File Offset: 0x00492D16
+		// Token: 0x17009D1F RID: 40223
+		// (get) Token: 0x06022E8F RID: 142991 RVA: 0x004CE7C2 File Offset: 0x004CC9C2
+		// (set) Token: 0x06022E90 RID: 142992 RVA: 0x004CE7CA File Offset: 0x004CC9CA
 		public object Value { get; set; }
 
-		// Token: 0x06020F57 RID: 134999 RVA: 0x00494B1F File Offset: 0x00492D1F
+		// Token: 0x06022E91 RID: 142993 RVA: 0x004CE7D3 File Offset: 0x004CC9D3
 		public ICustomBulletLogic_UnionUnion()
 		{
 			this.Type = ICustomBulletLogic_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06020F58 RID: 135000 RVA: 0x00494B35 File Offset: 0x00492D35
+		// Token: 0x06022E92 RID: 142994 RVA: 0x004CE7E9 File Offset: 0x004CC9E9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06020F59 RID: 135001 RVA: 0x00494B47 File Offset: 0x00492D47
+		// Token: 0x06022E93 RID: 142995 RVA: 0x004CE7FB File Offset: 0x004CC9FB
 		public ICustomBulletLogicT AsICustomBulletLogic()
 		{
 			return this.As<ICustomBulletLogicT>();
 		}
 
-		// Token: 0x06020F5A RID: 135002 RVA: 0x00494B4F File Offset: 0x00492D4F
+		// Token: 0x06022E94 RID: 142996 RVA: 0x004CE803 File Offset: 0x004CCA03
 		public static ICustomBulletLogic_UnionUnion FromICustomBulletLogic(ICustomBulletLogicT _icustombulletlogic)
 		{
 			return new ICustomBulletLogic_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020F5B RID: 135003 RVA: 0x00494B64 File Offset: 0x00492D64
+		// Token: 0x06022E95 RID: 142997 RVA: 0x004CE818 File Offset: 0x004CCA18
 		public ITrafficBulletLogicT AsITrafficBulletLogic()
 		{
 			return this.As<ITrafficBulletLogicT>();
 		}
 
-		// Token: 0x06020F5C RID: 135004 RVA: 0x00494B6C File Offset: 0x00492D6C
+		// Token: 0x06022E96 RID: 142998 RVA: 0x004CE820 File Offset: 0x004CCA20
 		public static ICustomBulletLogic_UnionUnion FromITrafficBulletLogic(ITrafficBulletLogicT _itrafficbulletlogic)
 		{
 			return new ICustomBulletLogic_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020F5D RID: 135005 RVA: 0x00494B84 File Offset: 0x00492D84
+		// Token: 0x06022E97 RID: 142999 RVA: 0x004CE838 File Offset: 0x004CCA38
 		public static int Pack(FlatBufferBuilder builder, ICustomBulletLogic_UnionUnion _o)
 		{
 			ICustomBulletLogic_Union type = _o.Type;

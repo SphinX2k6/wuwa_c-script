@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews
 {
-	// Token: 0x020047C1 RID: 18369
+	// Token: 0x020036F2 RID: 14066
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TipsListView
 	{
-		// Token: 0x060301E1 RID: 197089 RVA: 0x00B27542 File Offset: 0x00B25742
+		// Token: 0x060249B1 RID: 149937 RVA: 0x00A5734E File Offset: 0x00A5554E
 		public void Initialize(UUILayoutBase rootLayout)
 		{
 			this.InstanceCostTipView = new GenericLayoutAdd<InstanceDungeonCostTip>(rootLayout, new TLayoutRefresh<InstanceDungeonCostTip>(this.OnInstanceRefresh));
 		}
 
-		// Token: 0x060301E2 RID: 197090 RVA: 0x00B2755C File Offset: 0x00B2575C
+		// Token: 0x060249B2 RID: 149938 RVA: 0x00A57368 File Offset: 0x00A55568
 		private ILayoutItem<InstanceDungeonCostTip> OnInstanceRefresh(object data, UUIItem uiItem, int index, int originalItemIndex)
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = new InstanceDungeonCostTip();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			};
 		}
 
-		// Token: 0x060301E3 RID: 197091 RVA: 0x00B27590 File Offset: 0x00B25790
+		// Token: 0x060249B3 RID: 149939 RVA: 0x00A5739C File Offset: 0x00A5559C
 		public InstanceDungeonCostTip AddItemByKey(string key)
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = this.InstanceCostTipView.GetLayoutItemByKey(key, 0) as InstanceDungeonCostTip;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			return instanceDungeonCostTip;
 		}
 
-		// Token: 0x060301E4 RID: 197092 RVA: 0x00B27603 File Offset: 0x00B25803
+		// Token: 0x060249B4 RID: 149940 RVA: 0x00A5740F File Offset: 0x00A5560F
 		public void Clear()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			instanceCostTipView.ClearChildren();
 		}
 
-		// Token: 0x04019ED6 RID: 106198
+		// Token: 0x04014587 RID: 83335
 		[Nullable(new byte[]
 		{
 			2,

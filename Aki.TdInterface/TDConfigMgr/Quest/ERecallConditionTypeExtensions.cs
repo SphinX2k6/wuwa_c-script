@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001276 RID: 4726
+	// Token: 0x020013B6 RID: 5046
 	public static class ERecallConditionTypeExtensions
 	{
-		// Token: 0x06006ABA RID: 27322 RVA: 0x000FFF8C File Offset: 0x000FE18C
+		// Token: 0x0600710D RID: 28941 RVA: 0x0010DBB8 File Offset: 0x0010BDB8
 		public static string ToEnumString(this ERecallConditionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006ABB RID: 27323 RVA: 0x000FFFD4 File Offset: 0x000FE1D4
+		// Token: 0x0600710E RID: 28942 RVA: 0x0010DC00 File Offset: 0x0010BE00
 		public static ERecallConditionType FromString(string name)
 		{
 			ERecallConditionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006ABC RID: 27324 RVA: 0x00100000 File Offset: 0x000FE200
+		// Token: 0x0600710F RID: 28943 RVA: 0x0010DC2C File Offset: 0x0010BE2C
 		public static bool TryFromString(string name, out ERecallConditionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006ABD RID: 27325 RVA: 0x00100056 File Offset: 0x000FE256
+		// Token: 0x06007110 RID: 28944 RVA: 0x0010DC82 File Offset: 0x0010BE82
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006ABE RID: 27326 RVA: 0x00100076 File Offset: 0x000FE276
+		// Token: 0x06007111 RID: 28945 RVA: 0x0010DCA2 File Offset: 0x0010BEA2
 		public static ERecallConditionType[] GetValues()
 		{
 			return new ERecallConditionType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006ABF RID: 27327 RVA: 0x00100086 File Offset: 0x000FE286
+		// Token: 0x06007112 RID: 28946 RVA: 0x0010DCB2 File Offset: 0x0010BEB2
 		public static string[] GetNames()
 		{
 			return new string[]

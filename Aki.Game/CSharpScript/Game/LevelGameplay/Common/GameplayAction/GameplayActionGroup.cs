@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 {
-	// Token: 0x02006F24 RID: 28452
+	// Token: 0x020060A5 RID: 24741
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameplayActionGroup
 	{
-		// Token: 0x060453C1 RID: 283585 RVA: 0x01121CEA File Offset: 0x0111FEEA
+		// Token: 0x0603B56F RID: 243055 RVA: 0x010CBC96 File Offset: 0x010C9E96
 		public void PushAction(GameplayAction task)
 		{
 			this.ActionList.Add(task);
 		}
 
-		// Token: 0x060453C2 RID: 283586 RVA: 0x01121CF8 File Offset: 0x0111FEF8
+		// Token: 0x0603B570 RID: 243056 RVA: 0x010CBCA4 File Offset: 0x010C9EA4
 		[NullableContext(2)]
 		public void ExecuteActionGroup(GameplayActionTicker ticker = null, Action<int> onFinish = null)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			this.CheckGroupFinish();
 		}
 
-		// Token: 0x060453C3 RID: 283587 RVA: 0x01121D7C File Offset: 0x0111FF7C
+		// Token: 0x0603B571 RID: 243057 RVA: 0x010CBD28 File Offset: 0x010C9F28
 		public void InterruptActionGroup()
 		{
 			foreach (GameplayAction gameplayAction in this.ActionList)
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			this.State = EActionGroupState.Finish;
 		}
 
-		// Token: 0x060453C4 RID: 283588 RVA: 0x01121DD4 File Offset: 0x0111FFD4
+		// Token: 0x0603B572 RID: 243058 RVA: 0x010CBD80 File Offset: 0x010C9F80
 		public EActionGroupState GetState()
 		{
 			return this.State;
 		}
 
-		// Token: 0x060453C5 RID: 283589 RVA: 0x01121DDC File Offset: 0x0111FFDC
+		// Token: 0x0603B573 RID: 243059 RVA: 0x010CBD88 File Offset: 0x010C9F88
 		private void CheckGroupFinish()
 		{
 			foreach (GameplayAction gameplayAction in this.ActionList)
@@ -74,16 +74,16 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			onActionGroupFinish(this.OwnerId);
 		}
 
-		// Token: 0x04024190 RID: 147856
+		// Token: 0x0401F445 RID: 128069
 		public int OwnerId;
 
-		// Token: 0x04024191 RID: 147857
+		// Token: 0x0401F446 RID: 128070
 		private readonly List<GameplayAction> ActionList = new List<GameplayAction>();
 
-		// Token: 0x04024192 RID: 147858
+		// Token: 0x0401F447 RID: 128071
 		private EActionGroupState State;
 
-		// Token: 0x04024193 RID: 147859
+		// Token: 0x0401F448 RID: 128072
 		[Nullable(2)]
 		private Action<int> OnActionGroupFinish;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004004 RID: 16388
+	// Token: 0x02004445 RID: 17477
 	public struct IQuestPlayerHitStatisticsType : IFlatbufferObject
 	{
-		// Token: 0x1700732C RID: 29484
-		// (get) Token: 0x06017A62 RID: 96866 RVA: 0x0036966C File Offset: 0x0036786C
+		// Token: 0x1700792E RID: 31022
+		// (get) Token: 0x060190FB RID: 102651 RVA: 0x00393460 File Offset: 0x00391660
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A63 RID: 96867 RVA: 0x00369679 File Offset: 0x00367879
+		// Token: 0x060190FC RID: 102652 RVA: 0x0039346D File Offset: 0x0039166D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017A64 RID: 96868 RVA: 0x00369680 File Offset: 0x00367880
+		// Token: 0x060190FD RID: 102653 RVA: 0x00393474 File Offset: 0x00391674
 		public static IQuestPlayerHitStatisticsType GetRootAsIQuestPlayerHitStatisticsType(ByteBuffer _bb)
 		{
 			return IQuestPlayerHitStatisticsType.GetRootAsIQuestPlayerHitStatisticsType(_bb, default(IQuestPlayerHitStatisticsType));
 		}
 
-		// Token: 0x06017A65 RID: 96869 RVA: 0x0036969C File Offset: 0x0036789C
+		// Token: 0x060190FE RID: 102654 RVA: 0x00393490 File Offset: 0x00391690
 		public static IQuestPlayerHitStatisticsType GetRootAsIQuestPlayerHitStatisticsType(ByteBuffer _bb, IQuestPlayerHitStatisticsType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017A66 RID: 96870 RVA: 0x003696B9 File Offset: 0x003678B9
+		// Token: 0x060190FF RID: 102655 RVA: 0x003934AD File Offset: 0x003916AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017A67 RID: 96871 RVA: 0x003696C8 File Offset: 0x003678C8
+		// Token: 0x06019100 RID: 102656 RVA: 0x003934BC File Offset: 0x003916BC
 		public IQuestPlayerHitStatisticsType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700732D RID: 29485
-		// (get) Token: 0x06017A68 RID: 96872 RVA: 0x003696D8 File Offset: 0x003678D8
+		// Token: 0x1700792F RID: 31023
+		// (get) Token: 0x06019101 RID: 102657 RVA: 0x003934CC File Offset: 0x003916CC
 		public EPlayerHitStatisticsType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A69 RID: 96873 RVA: 0x00369714 File Offset: 0x00367914
+		// Token: 0x06019102 RID: 102658 RVA: 0x00393508 File Offset: 0x00391708
 		public static Offset<IQuestPlayerHitStatisticsType> CreateIQuestPlayerHitStatisticsType(FlatBufferBuilder builder, EPlayerHitStatisticsType Type = EPlayerHitStatisticsType.HitCount)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestPlayerHitStatisticsType.EndIQuestPlayerHitStatisticsType(builder);
 		}
 
-		// Token: 0x06017A6A RID: 96874 RVA: 0x0036972A File Offset: 0x0036792A
+		// Token: 0x06019103 RID: 102659 RVA: 0x0039351E File Offset: 0x0039171E
 		public static void StartIQuestPlayerHitStatisticsType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06017A6B RID: 96875 RVA: 0x00369733 File Offset: 0x00367933
+		// Token: 0x06019104 RID: 102660 RVA: 0x00393527 File Offset: 0x00391727
 		public static void AddType(FlatBufferBuilder builder, EPlayerHitStatisticsType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017A6C RID: 96876 RVA: 0x0036973E File Offset: 0x0036793E
+		// Token: 0x06019105 RID: 102661 RVA: 0x00393532 File Offset: 0x00391732
 		public static Offset<IQuestPlayerHitStatisticsType> EndIQuestPlayerHitStatisticsType(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestPlayerHitStatisticsType>(builder.EndTable());
 		}
 
-		// Token: 0x06017A6D RID: 96877 RVA: 0x0036974C File Offset: 0x0036794C
+		// Token: 0x06019106 RID: 102662 RVA: 0x00393540 File Offset: 0x00391740
 		public IQuestPlayerHitStatisticsTypeT UnPack()
 		{
 			IQuestPlayerHitStatisticsTypeT questPlayerHitStatisticsTypeT = new IQuestPlayerHitStatisticsTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questPlayerHitStatisticsTypeT;
 		}
 
-		// Token: 0x06017A6E RID: 96878 RVA: 0x00369767 File Offset: 0x00367967
+		// Token: 0x06019107 RID: 102663 RVA: 0x0039355B File Offset: 0x0039175B
 		public void UnPackTo(IQuestPlayerHitStatisticsTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06017A6F RID: 96879 RVA: 0x00369778 File Offset: 0x00367978
+		// Token: 0x06019108 RID: 102664 RVA: 0x0039356C File Offset: 0x0039176C
 		public static Offset<IQuestPlayerHitStatisticsType> Pack(FlatBufferBuilder builder, IQuestPlayerHitStatisticsTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestPlayerHitStatisticsType.CreateIQuestPlayerHitStatisticsType(builder, _o.Type);
 		}
 
-		// Token: 0x0400BB1B RID: 47899
+		// Token: 0x0400C502 RID: 50434
 		private Table __p;
 	}
 }

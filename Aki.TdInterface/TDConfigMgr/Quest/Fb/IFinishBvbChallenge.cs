@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013CA RID: 5066
+	// Token: 0x02001521 RID: 5409
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFinishBvbChallenge : IQuestCondition
 	{
-		// Token: 0x060073B0 RID: 29616 RVA: 0x00115863 File Offset: 0x00113A63
-		[NullableContext(1)]
+		// Token: 0x06007A71 RID: 31345 RVA: 0x00124247 File Offset: 0x00122447
+		[NullableContext(0)]
 		public static IFinishBvbChallenge Create(IFinishBvbChallenge? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025EF RID: 9711
-		// (get) Token: 0x060073B1 RID: 29617 RVA: 0x00115882 File Offset: 0x00113A82
+		// Token: 0x170027D1 RID: 10193
+		// (get) Token: 0x06007A72 RID: 31346 RVA: 0x00124266 File Offset: 0x00122466
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025F0 RID: 9712
-		// (get) Token: 0x060073B2 RID: 29618 RVA: 0x0011588F File Offset: 0x00113A8F
+		// Token: 0x170027D2 RID: 10194
+		// (get) Token: 0x06007A73 RID: 31347 RVA: 0x00124273 File Offset: 0x00122473
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025F1 RID: 9713
-		// (get) Token: 0x060073B3 RID: 29619 RVA: 0x001158C3 File Offset: 0x00113AC3
+		// Token: 0x170027D3 RID: 10195
+		// (get) Token: 0x06007A74 RID: 31348 RVA: 0x001242A7 File Offset: 0x001224A7
 		public virtual int BvbChallengeId
 		{
 			get
@@ -60,13 +60,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042FC RID: 17148
+		// Token: 0x0400468D RID: 18061
 		private IFinishBvbChallenge Instance;
 
-		// Token: 0x040042FD RID: 17149
+		// Token: 0x0400468E RID: 18062
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042FE RID: 17150
+		// Token: 0x0400468F RID: 18063
 		private bool _PreConditionsInited;
 	}
 }

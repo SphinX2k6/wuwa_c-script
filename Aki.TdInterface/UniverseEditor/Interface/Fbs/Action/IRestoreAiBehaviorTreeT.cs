@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EB3 RID: 28339
+	// Token: 0x02007637 RID: 30263
 	public class IRestoreAiBehaviorTreeT
 	{
-		// Token: 0x1700D2F8 RID: 54008
-		// (get) Token: 0x06032173 RID: 205171 RVA: 0x006C5E71 File Offset: 0x006C4071
-		// (set) Token: 0x06032174 RID: 205172 RVA: 0x006C5E79 File Offset: 0x006C4079
+		// Token: 0x1700DE4F RID: 56911
+		// (get) Token: 0x060351B3 RID: 217523 RVA: 0x00721BA5 File Offset: 0x0071FDA5
+		// (set) Token: 0x060351B4 RID: 217524 RVA: 0x00721BAD File Offset: 0x0071FDAD
 		public string Key { get; set; }
 
-		// Token: 0x06032175 RID: 205173 RVA: 0x006C5E82 File Offset: 0x006C4082
+		// Token: 0x060351B5 RID: 217525 RVA: 0x00721BB6 File Offset: 0x0071FDB6
 		public IRestoreAiBehaviorTreeT()
 		{
 			this.Key = null;

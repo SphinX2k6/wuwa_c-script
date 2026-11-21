@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EEE RID: 7918
+	// Token: 0x020005FB RID: 1531
 	public sealed class FOnStreamedMeshesCompBundleAllMips : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E167 RID: 123239 RVA: 0x002CAED9 File Offset: 0x002C90D9
+		// Token: 0x060087B2 RID: 34738 RVA: 0x000CBEDD File Offset: 0x000CA0DD
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnStreamedMeshesCompBundleAllMips.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E168 RID: 123240 RVA: 0x002CAEE5 File Offset: 0x002C90E5
+		// Token: 0x060087B3 RID: 34739 RVA: 0x000CBEE9 File Offset: 0x000CA0E9
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnStreamedMeshesCompBundleAllMips._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnStreamedMeshesCompBundleAllMips._FunctionPtr;
 		}
 
-		// Token: 0x0601E169 RID: 123241 RVA: 0x002CAF08 File Offset: 0x002C9108
+		// Token: 0x060087B4 RID: 34740 RVA: 0x000CBF0C File Offset: 0x000CA10C
 		public FOnStreamedMeshesCompBundleAllMips()
 		{
 		}
 
-		// Token: 0x0601E16A RID: 123242 RVA: 0x002CAF10 File Offset: 0x002C9110
+		// Token: 0x060087B5 RID: 34741 RVA: 0x000CBF14 File Offset: 0x000CA114
 		[NullableContext(2)]
 		public FOnStreamedMeshesCompBundleAllMips(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E16B RID: 123243 RVA: 0x002CAF1A File Offset: 0x002C911A
+		// Token: 0x060087B6 RID: 34742 RVA: 0x000CBF1E File Offset: 0x000CA11E
 		public FOnStreamedMeshesCompBundleAllMips(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E16C RID: 123244 RVA: 0x002CAF25 File Offset: 0x002C9125
+		// Token: 0x060087B7 RID: 34743 RVA: 0x000CBF29 File Offset: 0x000CA129
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FOnStreamedMeshesCompBundleAllMips.FOnStreamedMeshesCompBundleAllMips_ScriptDelegate) ?? ((FOnStreamedMeshesCompBundleAllMips.FOnStreamedMeshesCompBundleAllMips_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnStreamedMeshesCompBundleAllMips.FOnStreamedMeshesCompBundleAllMips_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E16D RID: 123245 RVA: 0x002CAF57 File Offset: 0x002C9157
+		// Token: 0x060087B8 RID: 34744 RVA: 0x000CBF5B File Offset: 0x000CA15B
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FOnStreamedMeshesCompBundleAllMips.FOnStreamedMeshesCompBundleAllMips_ScriptDelegate Callback)
 		{
 			if (FOnStreamedMeshesCompBundleAllMips.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnStreamedMeshesCompBundleAllMips.RegisterId);
 		}
 
-		// Token: 0x0601E16E RID: 123246 RVA: 0x002CAF94 File Offset: 0x002C9194
+		// Token: 0x060087B9 RID: 34745 RVA: 0x000CBF98 File Offset: 0x000CA198
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute([Nullable(new byte[]
 		{
 			2,
@@ -104,10 +102,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnStreamedMeshesCompBundleAllMips._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E16F RID: 123247 RVA: 0x002CB02C File Offset: 0x002C922C
+		// Token: 0x060087BA RID: 34746 RVA: 0x000CC030 File Offset: 0x000CA230
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnStreamedMeshesCompBundleAllMips.FOnStreamedMeshesCompBundleAllMips_ScriptDelegate fonStreamedMeshesCompBundleAllMips_ScriptDelegate = target as FOnStreamedMeshesCompBundleAllMips.FOnStreamedMeshesCompBundleAllMips_ScriptDelegate;
@@ -128,18 +125,18 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04010424 RID: 66596
+		// Token: 0x04003AFC RID: 15100
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010425 RID: 66597
+		// Token: 0x04003AFD RID: 15101
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnStreamedMeshesCompBundleAllMips__DelegateSignature";
 
-		// Token: 0x04010426 RID: 66598
+		// Token: 0x04003AFE RID: 15102
 		private static int RegisterId;
 
-		// Token: 0x020033C7 RID: 13255
-		// (Invoke) Token: 0x060285B6 RID: 165302
+		// Token: 0x02000E14 RID: 3604
+		// (Invoke) Token: 0x0600BF1F RID: 48927
 		public delegate void FOnStreamedMeshesCompBundleAllMips_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
@@ -150,25 +147,25 @@ namespace UnrealEngine
 			1
 		})] in TArray<UStaticMesh> StaticMeshes);
 
-		// Token: 0x020033C8 RID: 13256
+		// Token: 0x02000E15 RID: 3605
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FOnStreamedMeshesCompBundleAllMips_DelegateParams
+		private ref struct __FOnStreamedMeshesCompBundleAllMips_DelegateParams
 		{
-			// Token: 0x0401737C RID: 95100
+			// Token: 0x040061A9 RID: 25001
 			[FieldOffset(0)]
 			public byte SkeletalMeshes;
 
-			// Token: 0x0401737D RID: 95101
+			// Token: 0x040061AA RID: 25002
 			[FieldOffset(16)]
 			public byte StaticMeshes;
 		}
 
-		// Token: 0x020033C9 RID: 13257
+		// Token: 0x02000E16 RID: 3606
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401737E RID: 95102
+			// Token: 0x040061AB RID: 25003
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

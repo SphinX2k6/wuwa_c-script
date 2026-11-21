@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200096E RID: 2414
+	// Token: 0x02000A21 RID: 2593
 	public static class EInhaledPerResultTypeExtensions
 	{
-		// Token: 0x06003620 RID: 13856 RVA: 0x0008D40C File Offset: 0x0008B60C
+		// Token: 0x060039A7 RID: 14759 RVA: 0x00095378 File Offset: 0x00093578
 		public static string ToEnumString(this EInhaledPerResultType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003621 RID: 13857 RVA: 0x0008D444 File Offset: 0x0008B644
+		// Token: 0x060039A8 RID: 14760 RVA: 0x000953B0 File Offset: 0x000935B0
 		public static EInhaledPerResultType FromString(string name)
 		{
 			EInhaledPerResultType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003622 RID: 13858 RVA: 0x0008D46D File Offset: 0x0008B66D
+		// Token: 0x060039A9 RID: 14761 RVA: 0x000953D9 File Offset: 0x000935D9
 		public static bool TryFromString(string name, out EInhaledPerResultType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003623 RID: 13859 RVA: 0x0008D4A6 File Offset: 0x0008B6A6
+		// Token: 0x060039AA RID: 14762 RVA: 0x00095412 File Offset: 0x00093612
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003624 RID: 13860 RVA: 0x0008D4BE File Offset: 0x0008B6BE
+		// Token: 0x060039AB RID: 14763 RVA: 0x0009542A File Offset: 0x0009362A
 		public static EInhaledPerResultType[] GetValues()
 		{
 			return new EInhaledPerResultType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003625 RID: 13861 RVA: 0x0008D4CA File Offset: 0x0008B6CA
+		// Token: 0x060039AC RID: 14764 RVA: 0x00095436 File Offset: 0x00093636
 		public static string[] GetNames()
 		{
 			return new string[]

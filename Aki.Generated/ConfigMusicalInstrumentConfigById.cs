@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005DC RID: 1500
+	// Token: 0x020005F4 RID: 1524
 	public class ConfigMusicalInstrumentConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002337 RID: 9015 RVA: 0x00120A36 File Offset: 0x0011EC36
+		// Token: 0x060023C7 RID: 9159 RVA: 0x001274B2 File Offset: 0x001256B2
 		static ConfigMusicalInstrumentConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMusicalInstrumentConfigById.CreateStaticDefaultValue), new Action(ConfigMusicalInstrumentConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002338 RID: 9016 RVA: 0x00120A58 File Offset: 0x0011EC58
+		// Token: 0x060023C8 RID: 9160 RVA: 0x001274D4 File Offset: 0x001256D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMusicalInstrumentConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002339 RID: 9017 RVA: 0x00120AD7 File Offset: 0x0011ECD7
+		// Token: 0x060023C9 RID: 9161 RVA: 0x00127553 File Offset: 0x00125753
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMusicalInstrumentConfigById.LogPair = null;
 			ConfigMusicalInstrumentConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600233A RID: 9018 RVA: 0x00120AE5 File Offset: 0x0011ECE5
+		// Token: 0x060023CA RID: 9162 RVA: 0x00127561 File Offset: 0x00125761
 		public static void Init()
 		{
 			ConfigMusicalInstrumentConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigMusicalInstrumentConfigById.HandleId, "db_musicalinstrumentconfig.db", "select BinData from `MusicalInstrumentConfig` where Id=?");
 		}
 
-		// Token: 0x0600233B RID: 9019 RVA: 0x00120B00 File Offset: 0x0011ED00
+		// Token: 0x060023CB RID: 9163 RVA: 0x0012757C File Offset: 0x0012577C
 		public static MusicalInstrumentConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMusicalInstrumentConfigById.HandleId, ConfigMusicalInstrumentConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MusicalInstrumentConfig?(rootAsMusicalInstrumentConfig);
 		}
 
-		// Token: 0x040028EA RID: 10474
+		// Token: 0x04002992 RID: 10642
 		private const string DB = "db_musicalinstrumentconfig.db";
 
-		// Token: 0x040028EB RID: 10475
+		// Token: 0x04002993 RID: 10643
 		private const string FILE = "k.可视化编辑/c.Csv/y.乐器/*.csv*";
 
-		// Token: 0x040028EC RID: 10476
+		// Token: 0x04002994 RID: 10644
 		private const string TABLE = "MusicalInstrumentConfig";
 
-		// Token: 0x040028ED RID: 10477
+		// Token: 0x04002995 RID: 10645
 		private const string COMMAND = "select BinData from `MusicalInstrumentConfig` where Id=?";
 
-		// Token: 0x040028EE RID: 10478
+		// Token: 0x04002996 RID: 10646
 		private const string KEY_PREFIX = "MusicalInstrumentConfigById";
 
-		// Token: 0x040028EF RID: 10479
+		// Token: 0x04002997 RID: 10647
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040028F0 RID: 10480
+		// Token: 0x04002998 RID: 10648
 		private static int HandleId;
 	}
 }

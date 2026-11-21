@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C22 RID: 11298
+// Token: 0x0200219D RID: 8605
 [NullableContext(1)]
 [Nullable(0)]
 public class TutorialDynItem : UiPanelBase, IDynamicScrollBaseItem<TutorialItemData>
 {
-	// Token: 0x060178AC RID: 96428 RVA: 0x005FC7D4 File Offset: 0x005FA9D4
+	// Token: 0x060152DE RID: 86750 RVA: 0x006291F8 File Offset: 0x006273F8
 	public UniTask Init(UUIItem actor)
 	{
 		TutorialDynItem.<Init>d__1 <Init>d__;
@@ -24,7 +24,7 @@ public class TutorialDynItem : UiPanelBase, IDynamicScrollBaseItem<TutorialItemD
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060178AD RID: 96429 RVA: 0x005FC820 File Offset: 0x005FAA20
+	// Token: 0x060152DF RID: 86751 RVA: 0x00629244 File Offset: 0x00627444
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class TutorialDynItem : UiPanelBase, IDynamicScrollBaseItem<TutorialItemD
 		};
 	}
 
-	// Token: 0x060178AE RID: 96430 RVA: 0x005FC8A8 File Offset: 0x005FAAA8
+	// Token: 0x060152E0 RID: 86752 RVA: 0x006292CC File Offset: 0x006274CC
 	public FVector2D GetItemSize(TutorialItemData data)
 	{
 		if (this.ItemSizeVector == null)
@@ -55,12 +55,12 @@ public class TutorialDynItem : UiPanelBase, IDynamicScrollBaseItem<TutorialItemD
 		return this.ItemSizeVector.ToUeVector2D(false);
 	}
 
-	// Token: 0x060178AF RID: 96431 RVA: 0x005FC92A File Offset: 0x005FAB2A
+	// Token: 0x060152E1 RID: 86753 RVA: 0x0062934E File Offset: 0x0062754E
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x0400AFA1 RID: 44961
+	// Token: 0x0400B3A6 RID: 45990
 	[Nullable(2)]
 	private Vector2D ItemSizeVector;
 }

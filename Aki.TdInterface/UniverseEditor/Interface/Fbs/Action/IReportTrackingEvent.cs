@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E76 RID: 28278
+	// Token: 0x020075FA RID: 30202
 	public struct IReportTrackingEvent : IFlatbufferObject
 	{
-		// Token: 0x1700D2A3 RID: 53923
-		// (get) Token: 0x06031FAB RID: 204715 RVA: 0x006C2D58 File Offset: 0x006C0F58
+		// Token: 0x1700DDFA RID: 56826
+		// (get) Token: 0x06034FEB RID: 217067 RVA: 0x0071EA8C File Offset: 0x0071CC8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031FAC RID: 204716 RVA: 0x006C2D65 File Offset: 0x006C0F65
+		// Token: 0x06034FEC RID: 217068 RVA: 0x0071EA99 File Offset: 0x0071CC99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031FAD RID: 204717 RVA: 0x006C2D6C File Offset: 0x006C0F6C
+		// Token: 0x06034FED RID: 217069 RVA: 0x0071EAA0 File Offset: 0x0071CCA0
 		public static IReportTrackingEvent GetRootAsIReportTrackingEvent(ByteBuffer _bb)
 		{
 			return IReportTrackingEvent.GetRootAsIReportTrackingEvent(_bb, default(IReportTrackingEvent));
 		}
 
-		// Token: 0x06031FAE RID: 204718 RVA: 0x006C2D88 File Offset: 0x006C0F88
+		// Token: 0x06034FEE RID: 217070 RVA: 0x0071EABC File Offset: 0x0071CCBC
 		public static IReportTrackingEvent GetRootAsIReportTrackingEvent(ByteBuffer _bb, IReportTrackingEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031FAF RID: 204719 RVA: 0x006C2DA5 File Offset: 0x006C0FA5
+		// Token: 0x06034FEF RID: 217071 RVA: 0x0071EAD9 File Offset: 0x0071CCD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031FB0 RID: 204720 RVA: 0x006C2DB4 File Offset: 0x006C0FB4
+		// Token: 0x06034FF0 RID: 217072 RVA: 0x0071EAE8 File Offset: 0x0071CCE8
 		public IReportTrackingEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2A4 RID: 53924
-		// (get) Token: 0x06031FB1 RID: 204721 RVA: 0x006C2DC4 File Offset: 0x006C0FC4
+		// Token: 0x1700DDFB RID: 56827
+		// (get) Token: 0x06034FF1 RID: 217073 RVA: 0x0071EAF8 File Offset: 0x0071CCF8
 		public TTrackingEventType TrackingEventTypeType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031FB2 RID: 204722 RVA: 0x006C2E00 File Offset: 0x006C1000
+		// Token: 0x06034FF2 RID: 217074 RVA: 0x0071EB34 File Offset: 0x0071CD34
 		public TTable? TrackingEventType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06031FB3 RID: 204723 RVA: 0x006C2E44 File Offset: 0x006C1044
+		// Token: 0x06034FF3 RID: 217075 RVA: 0x0071EB78 File Offset: 0x0071CD78
 		public IEasterEggTrackingEvent TrackingEventTypeAsIEasterEggTrackingEvent()
 		{
 			return this.TrackingEventType<IEasterEggTrackingEvent>().Value;
 		}
 
-		// Token: 0x06031FB4 RID: 204724 RVA: 0x006C2E60 File Offset: 0x006C1060
+		// Token: 0x06034FF4 RID: 217076 RVA: 0x0071EB94 File Offset: 0x0071CD94
 		public IMotorParkourTrackingEvent TrackingEventTypeAsIMotorParkourTrackingEvent()
 		{
 			return this.TrackingEventType<IMotorParkourTrackingEvent>().Value;
 		}
 
-		// Token: 0x06031FB5 RID: 204725 RVA: 0x006C2E7B File Offset: 0x006C107B
+		// Token: 0x06034FF5 RID: 217077 RVA: 0x0071EBAF File Offset: 0x0071CDAF
 		public static Offset<IReportTrackingEvent> CreateIReportTrackingEvent(FlatBufferBuilder builder, TTrackingEventType TrackingEventType_type = TTrackingEventType.NONE, int TrackingEventTypeOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReportTrackingEvent.EndIReportTrackingEvent(builder);
 		}
 
-		// Token: 0x06031FB6 RID: 204726 RVA: 0x006C2E98 File Offset: 0x006C1098
+		// Token: 0x06034FF6 RID: 217078 RVA: 0x0071EBCC File Offset: 0x0071CDCC
 		public static void StartIReportTrackingEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031FB7 RID: 204727 RVA: 0x006C2EA1 File Offset: 0x006C10A1
+		// Token: 0x06034FF7 RID: 217079 RVA: 0x0071EBD5 File Offset: 0x0071CDD5
 		public static void AddTrackingEventTypeType(FlatBufferBuilder builder, TTrackingEventType trackingEventTypeType)
 		{
 			builder.AddByte(0, (byte)trackingEventTypeType, 0);
 		}
 
-		// Token: 0x06031FB8 RID: 204728 RVA: 0x006C2EAC File Offset: 0x006C10AC
+		// Token: 0x06034FF8 RID: 217080 RVA: 0x0071EBE0 File Offset: 0x0071CDE0
 		public static void AddTrackingEventType(FlatBufferBuilder builder, int trackingEventTypeOffset)
 		{
 			builder.AddOffset(1, trackingEventTypeOffset, 0);
 		}
 
-		// Token: 0x06031FB9 RID: 204729 RVA: 0x006C2EB7 File Offset: 0x006C10B7
+		// Token: 0x06034FF9 RID: 217081 RVA: 0x0071EBEB File Offset: 0x0071CDEB
 		public static Offset<IReportTrackingEvent> EndIReportTrackingEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<IReportTrackingEvent>(builder.EndTable());
 		}
 
-		// Token: 0x06031FBA RID: 204730 RVA: 0x006C2EC4 File Offset: 0x006C10C4
+		// Token: 0x06034FFA RID: 217082 RVA: 0x0071EBF8 File Offset: 0x0071CDF8
 		public IReportTrackingEventT UnPack()
 		{
 			IReportTrackingEventT reportTrackingEventT = new IReportTrackingEventT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return reportTrackingEventT;
 		}
 
-		// Token: 0x06031FBB RID: 204731 RVA: 0x006C2EE0 File Offset: 0x006C10E0
+		// Token: 0x06034FFB RID: 217083 RVA: 0x0071EC14 File Offset: 0x0071CE14
 		public void UnPackTo(IReportTrackingEventT _o)
 		{
 			_o.TrackingEventType = new TTrackingEventTypeUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TrackingEventType.Value = ((this.TrackingEventType<IMotorParkourTrackingEvent>() != null) ? this.TrackingEventType<IMotorParkourTrackingEvent>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06031FBC RID: 204732 RVA: 0x006C2F84 File Offset: 0x006C1184
+		// Token: 0x06034FFC RID: 217084 RVA: 0x0071ECB8 File Offset: 0x0071CEB8
 		public static Offset<IReportTrackingEvent> Pack(FlatBufferBuilder builder, IReportTrackingEventT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReportTrackingEvent.CreateIReportTrackingEvent(builder, trackingEventType_type, trackingEventTypeOffset);
 		}
 
-		// Token: 0x04011864 RID: 71780
+		// Token: 0x040127E9 RID: 75753
 		private Table __p;
 	}
 }

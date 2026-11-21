@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005ED6 RID: 24278
+	// Token: 0x02004EBD RID: 20157
 	public class RoleItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603DB8F RID: 252815 RVA: 0x00EE8B08 File Offset: 0x00EE6D08
+		// Token: 0x06032B21 RID: 207649 RVA: 0x00E3A2E0 File Offset: 0x00E384E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DB90 RID: 252816 RVA: 0x00EE8B50 File Offset: 0x00EE6D50
+		// Token: 0x06032B22 RID: 207650 RVA: 0x00E3A328 File Offset: 0x00E38528
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(data);

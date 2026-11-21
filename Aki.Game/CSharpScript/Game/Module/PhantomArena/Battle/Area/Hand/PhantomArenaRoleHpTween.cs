@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 {
-	// Token: 0x020052CC RID: 21196
+	// Token: 0x0200429C RID: 17052
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaRoleHpTween
 	{
-		// Token: 0x060363C0 RID: 222144 RVA: 0x00CD4DCA File Offset: 0x00CD2FCA
+		// Token: 0x0602B2BB RID: 176827 RVA: 0x00C224F2 File Offset: 0x00C206F2
 		public PhantomArenaRoleHpTween()
 		{
 			this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.TweenCall));
 		}
 
-		// Token: 0x060363C1 RID: 222145 RVA: 0x00CD4DE9 File Offset: 0x00CD2FE9
+		// Token: 0x0602B2BC RID: 176828 RVA: 0x00C22511 File Offset: 0x00C20711
 		private void TweenCall(float value)
 		{
 			this.RoleItem.RefreshLifeNumTween(value, this.MaxLifeNum);
 		}
 
-		// Token: 0x060363C2 RID: 222146 RVA: 0x00CD4DFD File Offset: 0x00CD2FFD
+		// Token: 0x0602B2BD RID: 176829 RVA: 0x00C22525 File Offset: 0x00C20725
 		private void OnTweenerEnd()
 		{
 			if (this.Tweener != null)
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 			}
 		}
 
-		// Token: 0x060363C3 RID: 222147 RVA: 0x00CD4E0E File Offset: 0x00CD300E
+		// Token: 0x0602B2BE RID: 176830 RVA: 0x00C22536 File Offset: 0x00C20736
 		public void SetRoleItem(PhantomArenaRoleItem roleItem)
 		{
 			this.RoleItem = roleItem;
 		}
 
-		// Token: 0x060363C4 RID: 222148 RVA: 0x00CD4E18 File Offset: 0x00CD3018
+		// Token: 0x0602B2BF RID: 176831 RVA: 0x00C22540 File Offset: 0x00C20740
 		public UniTask InitCurveDamage()
 		{
 			PhantomArenaRoleHpTween.<InitCurveDamage>d__9 <InitCurveDamage>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 			return <InitCurveDamage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363C5 RID: 222149 RVA: 0x00CD4E5C File Offset: 0x00CD305C
+		// Token: 0x0602B2C0 RID: 176832 RVA: 0x00C22584 File Offset: 0x00C20784
 		public void PlayHpTween(int oldLife, int lifeNum, int maxLifeNum)
 		{
 			this.MaxLifeNum = maxLifeNum;
@@ -65,26 +65,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Hand
 			}
 		}
 
-		// Token: 0x060363C6 RID: 222150 RVA: 0x00CD4EF9 File Offset: 0x00CD30F9
+		// Token: 0x0602B2C1 RID: 176833 RVA: 0x00C22621 File Offset: 0x00C20821
 		public void Clear()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.TweenCall));
 			this.CurveDamage = null;
 		}
 
-		// Token: 0x0401CAD1 RID: 117457
+		// Token: 0x04017506 RID: 95494
 		protected PhantomArenaRoleItem RoleItem;
 
-		// Token: 0x0401CAD2 RID: 117458
+		// Token: 0x04017507 RID: 95495
 		protected int MaxLifeNum;
 
-		// Token: 0x0401CAD3 RID: 117459
+		// Token: 0x04017508 RID: 95496
 		protected UCurveFloat CurveDamage;
 
-		// Token: 0x0401CAD4 RID: 117460
+		// Token: 0x04017509 RID: 95497
 		protected ULTweener Tweener;
 
-		// Token: 0x0401CAD5 RID: 117461
+		// Token: 0x0401750A RID: 95498
 		protected FLTweenFloatSetterDynamic Delegate;
 	}
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020012BF RID: 4799
+// Token: 0x02000773 RID: 1907
 public class LordGymPageDot : GridProxyAbstract<int>
 {
-	// Token: 0x060083D3 RID: 33747 RVA: 0x001C138A File Offset: 0x001BF58A
+	// Token: 0x0600576E RID: 22382 RVA: 0x001CA1E6 File Offset: 0x001C83E6
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,7 +15,7 @@ public class LordGymPageDot : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x060083D4 RID: 33748 RVA: 0x001C13AD File Offset: 0x001BF5AD
+	// Token: 0x0600576F RID: 22383 RVA: 0x001CA209 File Offset: 0x001C8409
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -26,7 +26,7 @@ public class LordGymPageDot : GridProxyAbstract<int>
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060083D5 RID: 33749 RVA: 0x001C13CA File Offset: 0x001BF5CA
+	// Token: 0x06005770 RID: 22384 RVA: 0x001CA226 File Offset: 0x001C8426
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -37,7 +37,7 @@ public class LordGymPageDot : GridProxyAbstract<int>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x060083D6 RID: 33750 RVA: 0x001C13E1 File Offset: 0x001BF5E1
+	// Token: 0x06005771 RID: 22385 RVA: 0x001CA23D File Offset: 0x001C843D
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);

@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F75 RID: 12149
+// Token: 0x020024C9 RID: 9417
 [NullableContext(1)]
 [Nullable(0)]
 public class ShieldSnapshotModify : SnapModifyBuffEffect
 {
-	// Token: 0x06019D1D RID: 105757 RVA: 0x006BC496 File Offset: 0x006BA696
+	// Token: 0x0601762F RID: 95791 RVA: 0x006E2D9E File Offset: 0x006E0F9E
 	public ShieldSnapshotModify(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019D1E RID: 105758 RVA: 0x006BC4A8 File Offset: 0x006BA6A8
+	// Token: 0x06017630 RID: 95792 RVA: 0x006E2DB0 File Offset: 0x006E0FB0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -29,10 +28,18 @@ public class ShieldSnapshotModify : SnapModifyBuffEffect
 		this.ConvertLimit = float.Parse(extraEffectParameters_[6]);
 		this.ConvertMagnitude = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters, this.Level, 0f);
 		this.ConvertRatio = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters2, this.Level, 0f);
-		this.NeedCheckCritical = this.RequireAndLimits.Requirements.Any((IRequirement require) => require.Type == EExtraEffectRequire.ShouldCritical);
+		this.NeedCheckCritical = false;
+		for (int i = 0; i < this.RequireAndLimits.Requirements.Length; i++)
+		{
+			if (this.RequireAndLimits.Requirements[i].Type == EExtraEffectRequire.ShouldCritical)
+			{
+				this.NeedCheckCritical = true;
+				return;
+			}
+		}
 	}
 
-	// Token: 0x06019D1F RID: 105759 RVA: 0x006BC599 File Offset: 0x006BA799
+	// Token: 0x06017631 RID: 95793 RVA: 0x006E2EA8 File Offset: 0x006E10A8
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -44,7 +51,7 @@ public class ShieldSnapshotModify : SnapModifyBuffEffect
 		return true;
 	}
 
-	// Token: 0x06019D20 RID: 105760 RVA: 0x006BC5C4 File Offset: 0x006BA7C4
+	// Token: 0x06017632 RID: 95794 RVA: 0x006E2ED4 File Offset: 0x006E10D4
 	protected override void OnExecuteSnap(Dictionary<EAttributeType, float> resultMap, SnapshotPayload snapshots)
 	{
 		float num2;
@@ -92,27 +99,27 @@ public class ShieldSnapshotModify : SnapModifyBuffEffect
 		}
 	}
 
-	// Token: 0x0400C2E8 RID: 49896
+	// Token: 0x0400C691 RID: 50833
 	public int? BuffHolderType;
 
-	// Token: 0x0400C2E9 RID: 49897
+	// Token: 0x0400C692 RID: 50834
 	public int ShieldId;
 
-	// Token: 0x0400C2EA RID: 49898
+	// Token: 0x0400C693 RID: 50835
 	public EAttributeType AttributeId;
 
-	// Token: 0x0400C2EB RID: 49899
+	// Token: 0x0400C694 RID: 50836
 	public int CompareFactor;
 
-	// Token: 0x0400C2EC RID: 49900
+	// Token: 0x0400C695 RID: 50837
 	public float ConvertThreshold;
 
-	// Token: 0x0400C2ED RID: 49901
+	// Token: 0x0400C696 RID: 50838
 	public float ConvertLimit;
 
-	// Token: 0x0400C2EE RID: 49902
+	// Token: 0x0400C697 RID: 50839
 	public float ConvertMagnitude;
 
-	// Token: 0x0400C2EF RID: 49903
+	// Token: 0x0400C698 RID: 50840
 	public float ConvertRatio;
 }

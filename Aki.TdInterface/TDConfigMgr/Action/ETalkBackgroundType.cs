@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C3 RID: 5827
+	// Token: 0x0200183D RID: 6205
 	[EnumExtensions]
 	public enum ETalkBackgroundType
 	{
-		// Token: 0x04004EA9 RID: 20137
+		// Token: 0x040052CE RID: 21198
 		Clean,
-		// Token: 0x04004EAA RID: 20138
+		// Token: 0x040052CF RID: 21199
 		Image,
-		// Token: 0x04004EAB RID: 20139
+		// Token: 0x040052D0 RID: 21200
 		ImageByMcGender,
-		// Token: 0x04004EAC RID: 20140
+		// Token: 0x040052D1 RID: 21201
 		Icon,
-		// Token: 0x04004EAD RID: 20141
+		// Token: 0x040052D2 RID: 21202
 		SpineImage
 	}
 }

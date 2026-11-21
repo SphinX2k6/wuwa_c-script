@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C31 RID: 7217
+	// Token: 0x02001E28 RID: 7720
 	public class IMoveJigsawItem_SetValue
 	{
-		// Token: 0x04005E20 RID: 24096
+		// Token: 0x04006357 RID: 25431
 		public ESetJigsawItemType Type;
 
-		// Token: 0x04005E21 RID: 24097
+		// Token: 0x04006358 RID: 25432
 		public int ItemEntityId;
 
-		// Token: 0x04005E22 RID: 24098
+		// Token: 0x04006359 RID: 25433
 		public int FoundationEntityId;
 
-		// Token: 0x04005E23 RID: 24099
-		[Nullable(1)]
+		// Token: 0x0400635A RID: 25434
 		public IPieceIndex Destination;
 	}
 }

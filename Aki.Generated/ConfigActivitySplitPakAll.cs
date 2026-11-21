@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000052 RID: 82
+	// Token: 0x0200005A RID: 90
 	public class ConfigActivitySplitPakAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060001EC RID: 492 RVA: 0x000649A0 File Offset: 0x00062BA0
+		// Token: 0x0600021C RID: 540 RVA: 0x00069254 File Offset: 0x00067454
 		static ConfigActivitySplitPakAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivitySplitPakAll.CreateStaticDefaultValue), new Action(ConfigActivitySplitPakAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060001ED RID: 493 RVA: 0x000649C0 File Offset: 0x00062BC0
+		// Token: 0x0600021D RID: 541 RVA: 0x00069274 File Offset: 0x00067474
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivitySplitPakAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060001EE RID: 494 RVA: 0x00064A3F File Offset: 0x00062C3F
+		// Token: 0x0600021E RID: 542 RVA: 0x000692F3 File Offset: 0x000674F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivitySplitPakAll.LogPair = null;
 			ConfigActivitySplitPakAll.HandleId = 0;
 		}
 
-		// Token: 0x060001EF RID: 495 RVA: 0x00064A4D File Offset: 0x00062C4D
+		// Token: 0x0600021F RID: 543 RVA: 0x00069301 File Offset: 0x00067501
 		public static void Init()
 		{
 			ConfigActivitySplitPakAll.HandleId = ConfigCommon.InitDataStatement(ConfigActivitySplitPakAll.HandleId, "db_activity.db", "select BinData from `ActivitySplitPak`");
 		}
 
-		// Token: 0x060001F0 RID: 496 RVA: 0x00064A68 File Offset: 0x00062C68
+		// Token: 0x06000220 RID: 544 RVA: 0x0006931C File Offset: 0x0006751C
 		[NullableContext(2)]
 		public static IReadOnlyList<ActivitySplitPak> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000222 RID: 546
+		// Token: 0x0400025A RID: 602
 		private const string DB = "db_activity.db";
 
-		// Token: 0x04000223 RID: 547
+		// Token: 0x0400025B RID: 603
 		private const string FILE = "h.活动.xlsx";
 
-		// Token: 0x04000224 RID: 548
+		// Token: 0x0400025C RID: 604
 		private const string TABLE = "ActivitySplitPak";
 
-		// Token: 0x04000225 RID: 549
+		// Token: 0x0400025D RID: 605
 		private const string COMMAND = "select BinData from `ActivitySplitPak`";
 
-		// Token: 0x04000226 RID: 550
+		// Token: 0x0400025E RID: 606
 		private const string KEY_PREFIX = "ActivitySplitPakAll";
 
-		// Token: 0x04000227 RID: 551
+		// Token: 0x0400025F RID: 607
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000228 RID: 552
+		// Token: 0x04000260 RID: 608
 		private static int HandleId;
 	}
 }

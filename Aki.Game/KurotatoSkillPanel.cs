@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CBE RID: 7358
+// Token: 0x02001180 RID: 4480
 public class KurotatoSkillPanel : BattleChildViewPanel
 {
-	// Token: 0x0600DE8E RID: 56974 RVA: 0x0034152A File Offset: 0x0033F72A
+	// Token: 0x0600B2AB RID: 45739 RVA: 0x0034CF52 File Offset: 0x0034B152
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class KurotatoSkillPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600DE8F RID: 56975 RVA: 0x00341550 File Offset: 0x0033F750
+	// Token: 0x0600B2AC RID: 45740 RVA: 0x0034CF78 File Offset: 0x0034B178
 	public override UniTask InitializeAsync()
 	{
 		KurotatoSkillPanel.<InitializeAsync>d__3 <InitializeAsync>d__;
@@ -32,26 +32,26 @@ public class KurotatoSkillPanel : BattleChildViewPanel
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DE90 RID: 56976 RVA: 0x00341593 File Offset: 0x0033F793
+	// Token: 0x0600B2AD RID: 45741 RVA: 0x0034CFBB File Offset: 0x0034B1BB
 	protected override void OnStart()
 	{
 		KurotatoModel.Instance.BattleData.InitBattleSkillData();
 		this.RefreshDodgeSkillItem();
 	}
 
-	// Token: 0x0600DE91 RID: 56977 RVA: 0x003415AA File Offset: 0x0033F7AA
+	// Token: 0x0600B2AE RID: 45742 RVA: 0x0034CFD2 File Offset: 0x0034B1D2
 	private void RefreshDodgeSkillItem()
 	{
 		this.DodgeSkillItem.Refresh(KurotatoModel.Instance.BattleData.GetBattleSkillData("闪避"));
 	}
 
-	// Token: 0x0600DE92 RID: 56978 RVA: 0x003415CB File Offset: 0x0033F7CB
+	// Token: 0x0600B2AF RID: 45743 RVA: 0x0034CFF3 File Offset: 0x0034B1F3
 	protected override void OnHideBattleChildViewPanel()
 	{
 		this.DodgeSkillItem.TryReleaseButton();
 	}
 
-	// Token: 0x0600DE93 RID: 56979 RVA: 0x003415D8 File Offset: 0x0033F7D8
+	// Token: 0x0600B2B0 RID: 45744 RVA: 0x0034D000 File Offset: 0x0034B200
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		if (!this.Visible)
@@ -61,7 +61,7 @@ public class KurotatoSkillPanel : BattleChildViewPanel
 		this.DodgeSkillItem.Tick(delta);
 	}
 
-	// Token: 0x0600DE94 RID: 56980 RVA: 0x003415F0 File Offset: 0x0033F7F0
+	// Token: 0x0600B2B1 RID: 45745 RVA: 0x0034D018 File Offset: 0x0034B218
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -69,7 +69,7 @@ public class KurotatoSkillPanel : BattleChildViewPanel
 		EventSystem.Instance.Add<ESkillButtonType>(EEventName.OnSkillButtonCdRefresh, new Action<ESkillButtonType>(this.OnSkillButtonCdRefresh));
 	}
 
-	// Token: 0x0600DE95 RID: 56981 RVA: 0x00341650 File Offset: 0x0033F850
+	// Token: 0x0600B2B2 RID: 45746 RVA: 0x0034D078 File Offset: 0x0034B278
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnChangedTimeScale));
@@ -77,19 +77,19 @@ public class KurotatoSkillPanel : BattleChildViewPanel
 		EventSystem.Instance.Remove<ESkillButtonType>(EEventName.OnSkillButtonCdRefresh, new Action<ESkillButtonType>(this.OnSkillButtonCdRefresh));
 	}
 
-	// Token: 0x0600DE96 RID: 56982 RVA: 0x003416AE File Offset: 0x0033F8AE
+	// Token: 0x0600B2B3 RID: 45747 RVA: 0x0034D0D6 File Offset: 0x0034B2D6
 	private void OnChangedTimeScale()
 	{
 		this.DodgeSkillItem.RefreshTimeDilation();
 	}
 
-	// Token: 0x0600DE97 RID: 56983 RVA: 0x003416BB File Offset: 0x0033F8BB
+	// Token: 0x0600B2B4 RID: 45748 RVA: 0x0034D0E3 File Offset: 0x0034B2E3
 	private void OnPauseGame(int flag)
 	{
 		this.DodgeSkillItem.PauseGame(flag);
 	}
 
-	// Token: 0x0600DE98 RID: 56984 RVA: 0x003416C9 File Offset: 0x0033F8C9
+	// Token: 0x0600B2B5 RID: 45749 RVA: 0x0034D0F1 File Offset: 0x0034B2F1
 	private void OnSkillButtonCdRefresh(ESkillButtonType buttonType)
 	{
 		if (buttonType == ESkillButtonType.闪避)
@@ -98,14 +98,14 @@ public class KurotatoSkillPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0400663A RID: 26170
+	// Token: 0x04006719 RID: 26393
 	[Nullable(2)]
 	protected BattleSkillItem DodgeSkillItem;
 
-	// Token: 0x020082AD RID: 33453
+	// Token: 0x02007436 RID: 29750
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AA1C RID: 174620
+		// Token: 0x04025D44 RID: 154948
 		public const int Dodge = 0;
 	}
 }

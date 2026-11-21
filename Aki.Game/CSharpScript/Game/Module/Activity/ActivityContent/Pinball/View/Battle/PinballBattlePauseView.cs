@@ -13,19 +13,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x02006375 RID: 25461
+	// Token: 0x020052F3 RID: 21235
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballBattlePauseView : UiViewBase
 	{
-		// Token: 0x060400AA RID: 262314 RVA: 0x00F7E402 File Offset: 0x00F7C602
+		// Token: 0x06034D6B RID: 216427 RVA: 0x00EC5362 File Offset: 0x00EC3562
 		[NullableContext(1)]
 		public PinballBattlePauseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x1700934D RID: 37709
-		// (get) Token: 0x060400AB RID: 262315 RVA: 0x00F7E40B File Offset: 0x00F7C60B
+		// Token: 0x170066AF RID: 26287
+		// (get) Token: 0x06034D6C RID: 216428 RVA: 0x00EC536B File Offset: 0x00EC356B
 		public new IPinballBattlePauseViewParam OpenParam
 		{
 			get
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			}
 		}
 
-		// Token: 0x060400AC RID: 262316 RVA: 0x00F7E418 File Offset: 0x00F7C618
+		// Token: 0x06034D6D RID: 216429 RVA: 0x00EC5378 File Offset: 0x00EC3578
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060400AD RID: 262317 RVA: 0x00F7E5EC File Offset: 0x00F7C7EC
+		// Token: 0x06034D6E RID: 216430 RVA: 0x00EC554C File Offset: 0x00EC374C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballBattlePauseView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060400AE RID: 262318 RVA: 0x00F7E630 File Offset: 0x00F7C830
+		// Token: 0x06034D6F RID: 216431 RVA: 0x00EC5590 File Offset: 0x00EC3790
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			item.SetUIActive(!flag);
 		}
 
-		// Token: 0x060400AF RID: 262319 RVA: 0x00F7E6D0 File Offset: 0x00F7C8D0
+		// Token: 0x06034D70 RID: 216432 RVA: 0x00EC5630 File Offset: 0x00EC3830
 		private void OnClickToggleRoleInfo(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			captionItem.SetTitleLocalText("Pinaball_inside_CharacterInformation");
 		}
 
-		// Token: 0x060400B0 RID: 262320 RVA: 0x00F7E7CC File Offset: 0x00F7C9CC
+		// Token: 0x06034D71 RID: 216433 RVA: 0x00EC572C File Offset: 0x00EC392C
 		private void OnClickToggleLevelInfo(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			captionItem.SetTitleLocalText("Pinaball_inside_LevelInformation");
 		}
 
-		// Token: 0x060400B1 RID: 262321 RVA: 0x00F7E8F8 File Offset: 0x00F7CAF8
+		// Token: 0x06034D72 RID: 216434 RVA: 0x00EC5858 File Offset: 0x00EC3A58
 		private void OnClickExitButton()
 		{
 			PinballLevelConfig? pinballLevelConfig;
@@ -216,20 +216,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			PinballController.Instance.OpenPinballSmallConfirmBoxView(confirmBoxDataNew);
 		}
 
-		// Token: 0x060400B2 RID: 262322 RVA: 0x00F7E988 File Offset: 0x00F7CB88
+		// Token: 0x06034D73 RID: 216435 RVA: 0x00EC58E8 File Offset: 0x00EC3AE8
 		private void LeaveBattle()
 		{
 			(KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController).RequestQuit();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060400B3 RID: 262323 RVA: 0x00F7E9A5 File Offset: 0x00F7CBA5
+		// Token: 0x06034D74 RID: 216436 RVA: 0x00EC5905 File Offset: 0x00EC3B05
 		private void OnClickContinueButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060400B4 RID: 262324 RVA: 0x00F7E9B0 File Offset: 0x00F7CBB0
+		// Token: 0x06034D75 RID: 216437 RVA: 0x00EC5910 File Offset: 0x00EC3B10
 		private void OnClickRestartButton()
 		{
 			PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -252,47 +252,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021600 RID: 136704
+		// Token: 0x0401BF2F RID: 114479
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021601 RID: 136705
+		// Token: 0x0401BF30 RID: 114480
 		private PinballBattleRoleInfoView RoleInfoView;
 
-		// Token: 0x04021602 RID: 136706
+		// Token: 0x0401BF31 RID: 114481
 		private PinballBattleLevelInfoView LevelInfoView;
 
-		// Token: 0x04021603 RID: 136707
+		// Token: 0x0401BF32 RID: 114482
 		private ButtonItem ExitButton;
 
-		// Token: 0x04021604 RID: 136708
+		// Token: 0x0401BF33 RID: 114483
 		private ButtonItem ContinueButton;
 
-		// Token: 0x04021605 RID: 136709
+		// Token: 0x0401BF34 RID: 114484
 		private ButtonItem RestartButton;
 
-		// Token: 0x0200C58E RID: 50574
+		// Token: 0x0200AF75 RID: 44917
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403BA20 RID: 244256
+			// Token: 0x04036382 RID: 222082
 			Caption,
-			// Token: 0x0403BA21 RID: 244257
+			// Token: 0x04036383 RID: 222083
 			ToggleRoleInfo,
-			// Token: 0x0403BA22 RID: 244258
+			// Token: 0x04036384 RID: 222084
 			ToggleLevelInfo,
-			// Token: 0x0403BA23 RID: 244259
+			// Token: 0x04036385 RID: 222085
 			BtnExit,
-			// Token: 0x0403BA24 RID: 244260
+			// Token: 0x04036386 RID: 222086
 			BtnContinue,
-			// Token: 0x0403BA25 RID: 244261
+			// Token: 0x04036387 RID: 222087
 			BtnRestart,
-			// Token: 0x0403BA26 RID: 244262
+			// Token: 0x04036388 RID: 222088
 			ToggleFormation,
-			// Token: 0x0403BA27 RID: 244263
+			// Token: 0x04036389 RID: 222089
 			PnlRoleInfo,
-			// Token: 0x0403BA28 RID: 244264
+			// Token: 0x0403638A RID: 222090
 			PnlLevelInfo,
-			// Token: 0x0403BA29 RID: 244265
+			// Token: 0x0403638B RID: 222091
 			FormationItem
 		}
 	}

@@ -12,19 +12,19 @@ using System.Text.Json.Serialization;
 })]
 public class OneOfJsonConvertor : JsonConverter<IOneOfObject>
 {
-	// Token: 0x06000096 RID: 150 RVA: 0x00004684 File Offset: 0x00002884
+	// Token: 0x06000096 RID: 150 RVA: 0x000046BC File Offset: 0x000028BC
 	public override bool CanConvert(Type typeToConvert)
 	{
 		return true;
 	}
 
-	// Token: 0x06000097 RID: 151 RVA: 0x00004687 File Offset: 0x00002887
+	// Token: 0x06000097 RID: 151 RVA: 0x000046BF File Offset: 0x000028BF
 	public override IOneOfObject Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		throw new NotSupportedException();
 	}
 
-	// Token: 0x06000098 RID: 152 RVA: 0x0000468E File Offset: 0x0000288E
+	// Token: 0x06000098 RID: 152 RVA: 0x000046C6 File Offset: 0x000028C6
 	public override void Write(Utf8JsonWriter writer, IOneOfObject value, JsonSerializerOptions options)
 	{
 		writer.WriteStringValue(value.ToString());

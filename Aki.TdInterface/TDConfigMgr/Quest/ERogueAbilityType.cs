@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E8B RID: 3723
+	// Token: 0x02000F9E RID: 3998
 	public enum ERogueAbilityType
 	{
-		// Token: 0x04003149 RID: 12617
+		// Token: 0x0400344B RID: 13387
 		Vision = 1,
-		// Token: 0x0400314A RID: 12618
+		// Token: 0x0400344C RID: 13388
 		Role = 3,
-		// Token: 0x0400314B RID: 12619
+		// Token: 0x0400344D RID: 13389
 		CommonBuff,
-		// Token: 0x0400314C RID: 12620
+		// Token: 0x0400344E RID: 13390
 		RoleBuff,
-		// Token: 0x0400314D RID: 12621
+		// Token: 0x0400344F RID: 13391
 		BranchBuff = 7,
-		// Token: 0x0400314E RID: 12622
+		// Token: 0x04003450 RID: 13392
 		MiracleCreation,
-		// Token: 0x0400314F RID: 12623
+		// Token: 0x04003451 RID: 13393
 		Token
 	}
 }

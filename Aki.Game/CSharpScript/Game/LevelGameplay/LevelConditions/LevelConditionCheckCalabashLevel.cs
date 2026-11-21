@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C55 RID: 27733
+	// Token: 0x02005DCF RID: 24015
 	public class LevelConditionCheckCalabashLevel : LevelConditionBase
 	{
-		// Token: 0x06044516 RID: 279830 RVA: 0x010D6DBC File Offset: 0x010D4FBC
+		// Token: 0x0603A670 RID: 239216 RVA: 0x01080D54 File Offset: 0x0107EF54
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{

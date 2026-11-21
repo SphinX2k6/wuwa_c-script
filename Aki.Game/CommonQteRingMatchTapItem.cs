@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002618 RID: 9752
+// Token: 0x02001B03 RID: 6915
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickContext>
 {
-	// Token: 0x06013EC5 RID: 81605 RVA: 0x00501F14 File Offset: 0x00500114
+	// Token: 0x060113A7 RID: 70567 RVA: 0x00510DD8 File Offset: 0x0050EFD8
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -34,7 +34,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		}
 	}
 
-	// Token: 0x06013EC6 RID: 81606 RVA: 0x00501FB4 File Offset: 0x005001B4
+	// Token: 0x060113A8 RID: 70568 RVA: 0x00510E78 File Offset: 0x0050F078
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteRingMatchTapItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013EC7 RID: 81607 RVA: 0x00501FF8 File Offset: 0x005001F8
+	// Token: 0x060113A9 RID: 70569 RVA: 0x00510EBC File Offset: 0x0050F0BC
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -63,7 +63,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x06013EC8 RID: 81608 RVA: 0x0050206A File Offset: 0x0050026A
+	// Token: 0x060113AA RID: 70570 RVA: 0x00510F2E File Offset: 0x0050F12E
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -80,7 +80,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		levelSequencePlayer.Clear();
 	}
 
-	// Token: 0x06013EC9 RID: 81609 RVA: 0x00502098 File Offset: 0x00500298
+	// Token: 0x060113AB RID: 70571 RVA: 0x00510F5C File Offset: 0x0050F15C
 	protected override void OnRefreshActionUi(string action)
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -99,13 +99,13 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		keyItem2.Show(null);
 	}
 
-	// Token: 0x06013ECA RID: 81610 RVA: 0x005020C9 File Offset: 0x005002C9
+	// Token: 0x060113AC RID: 70572 RVA: 0x00510F8D File Offset: 0x0050F18D
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteSingleClickContext;
 	}
 
-	// Token: 0x06013ECB RID: 81611 RVA: 0x005020D4 File Offset: 0x005002D4
+	// Token: 0x060113AD RID: 70573 RVA: 0x00510F98 File Offset: 0x0050F198
 	[NullableContext(2)]
 	protected override void TryApplyQteUiConfig(object uiConfig)
 	{
@@ -117,7 +117,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		}
 	}
 
-	// Token: 0x06013ECC RID: 81612 RVA: 0x0050210C File Offset: 0x0050030C
+	// Token: 0x060113AE RID: 70574 RVA: 0x00510FD0 File Offset: 0x0050F1D0
 	protected override void OnPlayQteStart()
 	{
 		base.SetUiActive(true);
@@ -137,7 +137,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		}
 	}
 
-	// Token: 0x06013ECD RID: 81613 RVA: 0x00502164 File Offset: 0x00500364
+	// Token: 0x060113AF RID: 70575 RVA: 0x00511028 File Offset: 0x0050F228
 	private void OnSequenceEndEvent(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -171,7 +171,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		}
 	}
 
-	// Token: 0x06013ECE RID: 81614 RVA: 0x0050223C File Offset: 0x0050043C
+	// Token: 0x060113B0 RID: 70576 RVA: 0x00511100 File Offset: 0x0050F300
 	protected override void OnInputPress()
 	{
 		CommonQteSingleClickContext commonQteContext = this.CommonQteContext;
@@ -189,7 +189,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		this.CommonQteContext.QteFail();
 	}
 
-	// Token: 0x06013ECF RID: 81615 RVA: 0x005022B4 File Offset: 0x005004B4
+	// Token: 0x060113B1 RID: 70577 RVA: 0x00511178 File Offset: 0x0050F378
 	protected override void OnHandleQteEnd()
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -230,7 +230,7 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		}
 	}
 
-	// Token: 0x06013ED0 RID: 81616 RVA: 0x00502354 File Offset: 0x00500554
+	// Token: 0x060113B2 RID: 70578 RVA: 0x00511218 File Offset: 0x0050F418
 	protected override void RefreshUiOffset()
 	{
 		if (this.CommonQteContext != null)
@@ -263,40 +263,40 @@ public class CommonQteRingMatchTapItem : CommonQteItemBase<CommonQteSingleClickC
 		}
 	}
 
-	// Token: 0x0400962A RID: 38442
+	// Token: 0x04009781 RID: 38785
 	private const string OPPORTUNITY_SEQUENCE = "Opportunity";
 
-	// Token: 0x0400962B RID: 38443
+	// Token: 0x04009782 RID: 38786
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400962C RID: 38444
+	// Token: 0x04009783 RID: 38787
 	[Nullable(2)]
 	private UUIButtonComponent PrefabItem;
 
-	// Token: 0x0400962D RID: 38445
+	// Token: 0x04009784 RID: 38788
 	private float WindowStart = 0.7f;
 
-	// Token: 0x0400962E RID: 38446
+	// Token: 0x04009785 RID: 38789
 	private float WindowEnd = 0.9f;
 
-	// Token: 0x0400962F RID: 38447
+	// Token: 0x04009786 RID: 38790
 	[Nullable(2)]
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x02008C5F RID: 35935
+	// Token: 0x02007DE8 RID: 32232
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D90A RID: 186634
+		// Token: 0x04028C21 RID: 166945
 		PrefabItem,
-		// Token: 0x0402D90B RID: 186635
+		// Token: 0x04028C22 RID: 166946
 		HitZoneItem,
-		// Token: 0x0402D90C RID: 186636
+		// Token: 0x04028C23 RID: 166947
 		SuccessItem,
-		// Token: 0x0402D90D RID: 186637
+		// Token: 0x04028C24 RID: 166948
 		FailItem,
-		// Token: 0x0402D90E RID: 186638
+		// Token: 0x04028C25 RID: 166949
 		KeyItem
 	}
 }

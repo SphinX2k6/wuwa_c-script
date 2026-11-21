@@ -4,15 +4,15 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.UiNavigation;
 
-// Token: 0x02000EE9 RID: 3817
+// Token: 0x0200039E RID: 926
 public class ProjectionPhotoItemDragCancelComponent : HotKeyComponent
 {
-	// Token: 0x06005FAB RID: 24491 RVA: 0x0011E792 File Offset: 0x0011C992
+	// Token: 0x06003341 RID: 13121 RVA: 0x001265EA File Offset: 0x001247EA
 	public ProjectionPhotoItemDragCancelComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 	{
 	}
 
-	// Token: 0x06005FAC RID: 24492 RVA: 0x0011E79B File Offset: 0x0011C99B
+	// Token: 0x06003342 RID: 13122 RVA: 0x001265F3 File Offset: 0x001247F3
 	protected override void OnPress(HotKeyMap config)
 	{
 		if (UiNavigationNewController.Instance.IsNavigationMousePositionDragging())
@@ -23,7 +23,7 @@ public class ProjectionPhotoItemDragCancelComponent : HotKeyComponent
 		}
 	}
 
-	// Token: 0x06005FAD RID: 24493 RVA: 0x0011E7CF File Offset: 0x0011C9CF
+	// Token: 0x06003343 RID: 13123 RVA: 0x00126627 File Offset: 0x00124827
 	[NullableContext(1)]
 	protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 	{

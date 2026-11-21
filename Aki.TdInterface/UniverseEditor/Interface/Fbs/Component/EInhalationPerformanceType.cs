@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DB6 RID: 19894
+	// Token: 0x020052BA RID: 21178
 	public enum EInhalationPerformanceType : byte
 	{
-		// Token: 0x0400D9E6 RID: 55782
+		// Token: 0x0400E535 RID: 58677
 		Role,
-		// Token: 0x0400D9E7 RID: 55783
+		// Token: 0x0400E536 RID: 58678
 		SceneItem
 	}
 }

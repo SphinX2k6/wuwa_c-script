@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005EA3 RID: 24227
+	// Token: 0x020064E6 RID: 25830
 	public class ICommonBtAlwaysFalseDecoratorT
 	{
-		// Token: 0x1700B50B RID: 46347
-		// (get) Token: 0x06029814 RID: 170004 RVA: 0x005AFD6A File Offset: 0x005ADF6A
-		// (set) Token: 0x06029815 RID: 170005 RVA: 0x005AFD72 File Offset: 0x005ADF72
+		// Token: 0x1700BE76 RID: 48758
+		// (get) Token: 0x0602BEBC RID: 179900 RVA: 0x005F8D0E File Offset: 0x005F6F0E
+		// (set) Token: 0x0602BEBD RID: 179901 RVA: 0x005F8D16 File Offset: 0x005F6F16
 		public ECommonBtDecoratorType Type { get; set; }
 
-		// Token: 0x06029816 RID: 170006 RVA: 0x005AFD7B File Offset: 0x005ADF7B
+		// Token: 0x0602BEBE RID: 179902 RVA: 0x005F8D1F File Offset: 0x005F6F1F
 		public ICommonBtAlwaysFalseDecoratorT()
 		{
 			this.Type = ECommonBtDecoratorType.Condition;

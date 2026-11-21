@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.DropDownLogic
 {
-	// Token: 0x0200546E RID: 21614
+	// Token: 0x02004451 RID: 17489
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class DropDownLogicBase
 	{
-		// Token: 0x060372B7 RID: 225975
+		// Token: 0x0602C200 RID: 180736
 		public abstract IReadOnlyList<object> GetDropDownDataList();
 
-		// Token: 0x060372B8 RID: 225976
+		// Token: 0x0602C201 RID: 180737
 		public abstract TableTextArgNew GetDataTextId(object data, MenuData menuData);
 
-		// Token: 0x060372B9 RID: 225977
+		// Token: 0x0602C202 RID: 180738
 		public abstract void TriggerSelectChange(object data, MenuData menuData);
 
-		// Token: 0x060372BA RID: 225978
+		// Token: 0x0602C203 RID: 180739
 		public abstract int GetDefaultIndex(MenuData menuData);
 
-		// Token: 0x060372BB RID: 225979 RVA: 0x00D15A66 File Offset: 0x00D13C66
+		// Token: 0x0602C204 RID: 180740 RVA: 0x00C64E7E File Offset: 0x00C6307E
 		public virtual bool CanSelectChange(int curIndex, int newIndex, MenuData menuData)
 		{
 			return curIndex != newIndex;

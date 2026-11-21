@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053A8 RID: 21416
+	// Token: 0x0200592E RID: 22830
 	public class IHitTimeScaleRatioT
 	{
-		// Token: 0x17009D57 RID: 40279
-		// (get) Token: 0x06023148 RID: 143688 RVA: 0x004DB3BC File Offset: 0x004D95BC
-		// (set) Token: 0x06023149 RID: 143689 RVA: 0x004DB3C4 File Offset: 0x004D95C4
+		// Token: 0x1700A58F RID: 42383
+		// (get) Token: 0x060251FC RID: 152060 RVA: 0x00518290 File Offset: 0x00516490
+		// (set) Token: 0x060251FD RID: 152061 RVA: 0x00518298 File Offset: 0x00516498
 		public float TimeRatio { get; set; }
 
-		// Token: 0x17009D58 RID: 40280
-		// (get) Token: 0x0602314A RID: 143690 RVA: 0x004DB3CD File Offset: 0x004D95CD
-		// (set) Token: 0x0602314B RID: 143691 RVA: 0x004DB3D5 File Offset: 0x004D95D5
+		// Token: 0x1700A590 RID: 42384
+		// (get) Token: 0x060251FE RID: 152062 RVA: 0x005182A1 File Offset: 0x005164A1
+		// (set) Token: 0x060251FF RID: 152063 RVA: 0x005182A9 File Offset: 0x005164A9
 		public float MaxExtraTime { get; set; }
 
-		// Token: 0x17009D59 RID: 40281
-		// (get) Token: 0x0602314C RID: 143692 RVA: 0x004DB3DE File Offset: 0x004D95DE
-		// (set) Token: 0x0602314D RID: 143693 RVA: 0x004DB3E6 File Offset: 0x004D95E6
+		// Token: 0x1700A591 RID: 42385
+		// (get) Token: 0x06025200 RID: 152064 RVA: 0x005182B2 File Offset: 0x005164B2
+		// (set) Token: 0x06025201 RID: 152065 RVA: 0x005182BA File Offset: 0x005164BA
 		public float ValueRatio { get; set; }
 
-		// Token: 0x17009D5A RID: 40282
-		// (get) Token: 0x0602314E RID: 143694 RVA: 0x004DB3EF File Offset: 0x004D95EF
-		// (set) Token: 0x0602314F RID: 143695 RVA: 0x004DB3F7 File Offset: 0x004D95F7
+		// Token: 0x1700A592 RID: 42386
+		// (get) Token: 0x06025202 RID: 152066 RVA: 0x005182C3 File Offset: 0x005164C3
+		// (set) Token: 0x06025203 RID: 152067 RVA: 0x005182CB File Offset: 0x005164CB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023150 RID: 143696 RVA: 0x004DB400 File Offset: 0x004D9600
+		// Token: 0x06025204 RID: 152068 RVA: 0x005182D4 File Offset: 0x005164D4
 		public IHitTimeScaleRatioT()
 		{
 			this.TimeRatio = 0f;

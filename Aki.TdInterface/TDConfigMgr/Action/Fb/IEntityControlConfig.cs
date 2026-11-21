@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025C9 RID: 9673
+	// Token: 0x02002878 RID: 10360
 	public class IEntityControlConfig
 	{
-		// Token: 0x0600D971 RID: 55665 RVA: 0x00206DC6 File Offset: 0x00204FC6
-		[NullableContext(1)]
+		// Token: 0x0600E6EB RID: 59115 RVA: 0x00222A9A File Offset: 0x00220C9A
 		public static IEntityControlConfig Create(IEntityControlConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FA1 RID: 16289
-		// (get) Token: 0x0600D972 RID: 55666 RVA: 0x00206DE8 File Offset: 0x00204FE8
+		// Token: 0x170042A9 RID: 17065
+		// (get) Token: 0x0600E6EC RID: 59116 RVA: 0x00222ABC File Offset: 0x00220CBC
 		public virtual bool? IsControlPlayer
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FA2 RID: 16290
-		// (get) Token: 0x0600D973 RID: 55667 RVA: 0x00206E20 File Offset: 0x00205020
+		// Token: 0x170042AA RID: 17066
+		// (get) Token: 0x0600E6ED RID: 59117 RVA: 0x00222AF4 File Offset: 0x00220CF4
 		public virtual bool? HideSkipButton
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FA3 RID: 16291
-		// (get) Token: 0x0600D974 RID: 55668 RVA: 0x00206E58 File Offset: 0x00205058
+		// Token: 0x170042AB RID: 17067
+		// (get) Token: 0x0600E6EE RID: 59118 RVA: 0x00222B2C File Offset: 0x00220D2C
 		public virtual EEntityControlCameraMode? CameraMode
 		{
 			get
@@ -63,7 +61,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078C1 RID: 30913
+		// Token: 0x04007F28 RID: 32552
 		private IEntityControlConfig Instance;
 	}
 }

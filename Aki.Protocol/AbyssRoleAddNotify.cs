@@ -12,7 +12,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AbyssRoleAddNotify)]
 	public sealed class AbyssRoleAddNotify : IMessage<AbyssRoleAddNotify>, IMessage, IEquatable<AbyssRoleAddNotify>, IDeepCloneable<AbyssRoleAddNotify>, IBufferMessage
 	{
-		// Token: 0x060013CE RID: 5070 RVA: 0x00035815 File Offset: 0x00033A15
+		// Token: 0x060013F9 RID: 5113 RVA: 0x00035DCD File Offset: 0x00033FCD
 		[NullableContext(1)]
 		public static AbyssRoleAddNotify Create()
 		{
@@ -20,7 +20,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700010B RID: 267
-		// (get) Token: 0x060013CF RID: 5071 RVA: 0x0003581C File Offset: 0x00033A1C
+		// (get) Token: 0x060013FA RID: 5114 RVA: 0x00035DD4 File Offset: 0x00033FD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,7 +32,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700010C RID: 268
-		// (get) Token: 0x060013D0 RID: 5072 RVA: 0x0003581F File Offset: 0x00033A1F
+		// (get) Token: 0x060013FB RID: 5115 RVA: 0x00035DD7 File Offset: 0x00033FD7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060013D1 RID: 5073 RVA: 0x00035826 File Offset: 0x00033A26
+		// Token: 0x060013FC RID: 5116 RVA: 0x00035DDE File Offset: 0x00033FDE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssRoleAddNotify()
 		{
 		}
 
-		// Token: 0x060013D2 RID: 5074 RVA: 0x00035839 File Offset: 0x00033A39
+		// Token: 0x060013FD RID: 5117 RVA: 0x00035DF1 File Offset: 0x00033FF1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssRoleAddNotify(AbyssRoleAddNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060013D3 RID: 5075 RVA: 0x00035863 File Offset: 0x00033A63
+		// Token: 0x060013FE RID: 5118 RVA: 0x00035E1B File Offset: 0x0003401B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssRoleAddNotify Clone()
@@ -68,7 +68,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700010D RID: 269
-		// (get) Token: 0x060013D4 RID: 5076 RVA: 0x0003586B File Offset: 0x00033A6B
+		// (get) Token: 0x060013FF RID: 5119 RVA: 0x00035E23 File Offset: 0x00034023
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AbyssRoleInfo> RoleList
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060013D5 RID: 5077 RVA: 0x00035873 File Offset: 0x00033A73
+		// Token: 0x06001400 RID: 5120 RVA: 0x00035E2B File Offset: 0x0003402B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssRoleAddNotify);
 		}
 
-		// Token: 0x060013D6 RID: 5078 RVA: 0x00035881 File Offset: 0x00033A81
+		// Token: 0x06001401 RID: 5121 RVA: 0x00035E39 File Offset: 0x00034039
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssRoleAddNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.roleList_.Equals(other.roleList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060013D7 RID: 5079 RVA: 0x000358B4 File Offset: 0x00033AB4
+		// Token: 0x06001402 RID: 5122 RVA: 0x00035E6C File Offset: 0x0003406C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060013D8 RID: 5080 RVA: 0x000358E8 File Offset: 0x00033AE8
+		// Token: 0x06001403 RID: 5123 RVA: 0x00035EA0 File Offset: 0x000340A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060013D9 RID: 5081 RVA: 0x000358F5 File Offset: 0x00033AF5
+		// Token: 0x06001404 RID: 5124 RVA: 0x00035EAD File Offset: 0x000340AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060013DA RID: 5082 RVA: 0x000358FE File Offset: 0x00033AFE
+		// Token: 0x06001405 RID: 5125 RVA: 0x00035EB6 File Offset: 0x000340B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060013DB RID: 5083 RVA: 0x00035928 File Offset: 0x00033B28
+		// Token: 0x06001406 RID: 5126 RVA: 0x00035EE0 File Offset: 0x000340E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060013DC RID: 5084 RVA: 0x00035961 File Offset: 0x00033B61
+		// Token: 0x06001407 RID: 5127 RVA: 0x00035F19 File Offset: 0x00034119
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssRoleAddNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060013DD RID: 5085 RVA: 0x0003598F File Offset: 0x00033B8F
+		// Token: 0x06001408 RID: 5128 RVA: 0x00035F47 File Offset: 0x00034147
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060013DE RID: 5086 RVA: 0x00035998 File Offset: 0x00033B98
+		// Token: 0x06001409 RID: 5129 RVA: 0x00035F50 File Offset: 0x00034150
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 10U)
+				if (num != 18U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400202B RID: 8235
+		// Token: 0x04002081 RID: 8321
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400202C RID: 8236
-		public const int RoleListFieldNumber = 1;
+		// Token: 0x04002082 RID: 8322
+		public const int RoleListFieldNumber = 2;
 
-		// Token: 0x0400202D RID: 8237
-		private static readonly FieldCodec<AbyssRoleInfo> _repeated_roleList_codec = FieldCodec.ForMessage<AbyssRoleInfo>(10U, AbyssRoleInfo.Parser);
+		// Token: 0x04002083 RID: 8323
+		private static readonly FieldCodec<AbyssRoleInfo> _repeated_roleList_codec = FieldCodec.ForMessage<AbyssRoleInfo>(18U, AbyssRoleInfo.Parser);
 
-		// Token: 0x0400202E RID: 8238
+		// Token: 0x04002084 RID: 8324
 		private readonly RepeatedField<AbyssRoleInfo> roleList_ = new RepeatedField<AbyssRoleInfo>();
 	}
 }

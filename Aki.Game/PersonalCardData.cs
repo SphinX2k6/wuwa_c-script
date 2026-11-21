@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020023B4 RID: 9140
+// Token: 0x02001899 RID: 6297
 public class PersonalCardData
 {
-	// Token: 0x060124A1 RID: 74913 RVA: 0x004812E9 File Offset: 0x0047F4E9
+	// Token: 0x0600F953 RID: 63827 RVA: 0x0048E7D1 File Offset: 0x0048C9D1
 	public PersonalCardData(int cardId, bool isRead, bool isUnLock)
 	{
 		this.CardId = cardId;
@@ -11,19 +11,19 @@ public class PersonalCardData
 		this.IsUnLock = isUnLock;
 	}
 
-	// Token: 0x060124A2 RID: 74914 RVA: 0x00481306 File Offset: 0x0047F506
+	// Token: 0x0600F954 RID: 63828 RVA: 0x0048E7EE File Offset: 0x0048C9EE
 	public void RefreshData(bool isRead, bool isUnLock)
 	{
 		this.IsRead = isRead;
 		this.IsUnLock = isUnLock;
 	}
 
-	// Token: 0x040089FB RID: 35323
+	// Token: 0x04008B42 RID: 35650
 	public int CardId;
 
-	// Token: 0x040089FC RID: 35324
+	// Token: 0x04008B43 RID: 35651
 	public bool IsRead;
 
-	// Token: 0x040089FD RID: 35325
+	// Token: 0x04008B44 RID: 35652
 	public bool IsUnLock;
 }

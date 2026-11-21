@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B5 RID: 9909
+	// Token: 0x02002978 RID: 10616
 	public class ITeleportConfig
 	{
-		// Token: 0x0600DDB4 RID: 56756 RVA: 0x0020EBDE File Offset: 0x0020CDDE
-		[NullableContext(1)]
+		// Token: 0x0600EB8B RID: 60299 RVA: 0x0022B37E File Offset: 0x0022957E
 		public static ITeleportConfig Create(ITeleportConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700420C RID: 16908
-		// (get) Token: 0x0600DDB5 RID: 56757 RVA: 0x0020EBFD File Offset: 0x0020CDFD
+		// Token: 0x17004549 RID: 17737
+		// (get) Token: 0x0600EB8C RID: 60300 RVA: 0x0022B39D File Offset: 0x0022959D
 		public virtual ETeleportType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B17 RID: 31511
+		// Token: 0x040081B4 RID: 33204
 		private ITeleportConfig Instance;
 	}
 }

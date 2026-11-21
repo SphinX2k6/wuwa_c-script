@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DCB RID: 3531
+	// Token: 0x02000EB0 RID: 3760
 	public struct LineCrossEntrance : IFlatbufferObject
 	{
-		// Token: 0x17001CF7 RID: 7415
-		// (get) Token: 0x06008E31 RID: 36401 RVA: 0x00277F18 File Offset: 0x00276118
+		// Token: 0x17001D5B RID: 7515
+		// (get) Token: 0x0600944D RID: 37965 RVA: 0x00296464 File Offset: 0x00294664
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E32 RID: 36402 RVA: 0x00277F25 File Offset: 0x00276125
+		// Token: 0x0600944E RID: 37966 RVA: 0x00296471 File Offset: 0x00294671
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008E33 RID: 36403 RVA: 0x00277F2C File Offset: 0x0027612C
+		// Token: 0x0600944F RID: 37967 RVA: 0x00296478 File Offset: 0x00294678
 		public static LineCrossEntrance GetRootAsLineCrossEntrance(ByteBuffer _bb)
 		{
 			return LineCrossEntrance.GetRootAsLineCrossEntrance(_bb, default(LineCrossEntrance));
 		}
 
-		// Token: 0x06008E34 RID: 36404 RVA: 0x00277F48 File Offset: 0x00276148
+		// Token: 0x06009450 RID: 37968 RVA: 0x00296494 File Offset: 0x00294694
 		public static LineCrossEntrance GetRootAsLineCrossEntrance(ByteBuffer _bb, LineCrossEntrance obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008E35 RID: 36405 RVA: 0x00277F65 File Offset: 0x00276165
+		// Token: 0x06009451 RID: 37969 RVA: 0x002964B1 File Offset: 0x002946B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008E36 RID: 36406 RVA: 0x00277F74 File Offset: 0x00276174
+		// Token: 0x06009452 RID: 37970 RVA: 0x002964C0 File Offset: 0x002946C0
 		public LineCrossEntrance __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001CF8 RID: 7416
-		// (get) Token: 0x06008E37 RID: 36407 RVA: 0x00277F84 File Offset: 0x00276184
+		// Token: 0x17001D5C RID: 7516
+		// (get) Token: 0x06009453 RID: 37971 RVA: 0x002964D0 File Offset: 0x002946D0
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E38 RID: 36408 RVA: 0x00277FC0 File Offset: 0x002761C0
+		// Token: 0x06009454 RID: 37972 RVA: 0x0029650C File Offset: 0x0029470C
 		public int GroupList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001CF9 RID: 7417
-		// (get) Token: 0x06008E39 RID: 36409 RVA: 0x00278000 File Offset: 0x00276200
+		// Token: 0x17001D5D RID: 7517
+		// (get) Token: 0x06009455 RID: 37973 RVA: 0x0029654C File Offset: 0x0029474C
 		public int GroupListLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008E3A RID: 36410 RVA: 0x0027802B File Offset: 0x0027622B
+		// Token: 0x06009456 RID: 37974 RVA: 0x00296577 File Offset: 0x00294777
 		public Span<int> GetGroupListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06008E3B RID: 36411 RVA: 0x0027803A File Offset: 0x0027623A
+		// Token: 0x06009457 RID: 37975 RVA: 0x00296586 File Offset: 0x00294786
 		public int[] GetGroupListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008E3C RID: 36412 RVA: 0x00278054 File Offset: 0x00276254
+		// Token: 0x06009458 RID: 37976 RVA: 0x0029659D File Offset: 0x0029479D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupListIter()或GetGroupListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupList()
+		public int[] GroupList()
 		{
-			LineCrossEntrance lineCrossEntrance = this;
-			return lineCrossEntrance.GetGroupListArray() ?? Array.Empty<int>();
+			return this.GetGroupListArray();
 		}
 
-		// Token: 0x06008E3D RID: 36413 RVA: 0x00278078 File Offset: 0x00276278
+		// Token: 0x06009459 RID: 37977 RVA: 0x002965A5 File Offset: 0x002947A5
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupListIter()
+		public IEnumerable<int> GroupListIter()
 		{
 			LineCrossEntrance.<GroupListIter>d__16 <GroupListIter>d__ = new LineCrossEntrance.<GroupListIter>d__16(-2);
 			<GroupListIter>d__.<>3__<>4__this = this;
 			return <GroupListIter>d__;
 		}
 
-		// Token: 0x04004E61 RID: 20065
+		// Token: 0x04005446 RID: 21574
 		private Table __p;
 	}
 }

@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A45 RID: 2629
+	// Token: 0x020001DB RID: 475
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EDetachmentRule")]
 	public enum EDetachmentRule : byte
 	{
-		// Token: 0x04004662 RID: 18018
+		// Token: 0x04000BA8 RID: 2984
 		KeepRelative,
-		// Token: 0x04004663 RID: 18019
+		// Token: 0x04000BA9 RID: 2985
 		KeepWorld,
-		// Token: 0x04004664 RID: 18020
+		// Token: 0x04000BAA RID: 2986
 		EDetachmentRule_MAX
 	}
 }

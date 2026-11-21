@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x0200307F RID: 12415
+// Token: 0x020025D6 RID: 9686
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterPartScanComponent : EntityComponent
 {
-	// Token: 0x0601A84D RID: 108621 RVA: 0x007190CD File Offset: 0x007172CD
+	// Token: 0x06018226 RID: 98854 RVA: 0x0073F6E4 File Offset: 0x0073D8E4
 	protected override bool OnInit()
 	{
 		this.PartComponent = base.Entity.GetComponent<CharacterPartComponent>();
@@ -17,7 +17,7 @@ public class CharacterPartScanComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A84E RID: 108622 RVA: 0x00719108 File Offset: 0x00717308
+	// Token: 0x06018227 RID: 98855 RVA: 0x0073F720 File Offset: 0x0073D920
 	public void ShowScanEffect()
 	{
 		if (!this.PartComponent.IsMultiPart)
@@ -48,7 +48,7 @@ public class CharacterPartScanComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A84F RID: 108623 RVA: 0x0071922C File Offset: 0x0071742C
+	// Token: 0x06018228 RID: 98856 RVA: 0x0073F844 File Offset: 0x0073DA44
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -57,48 +57,49 @@ public class CharacterPartScanComponent : EntityComponent
 			return false;
 		}
 		CharacterPartScanComponent characterPartScanComponent = (CharacterPartScanComponent)componentTemplate;
-		if (base.CanResetComponentProperty("PartComponent"))
+		if (characterPartScanComponent.PartComponent == null)
 		{
-			if (characterPartScanComponent.PartComponent == null)
-			{
-				this.PartComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPartComponent>(this.PartComponent), "PartComponent"))
-			{
-				return false;
-			}
+			this.PartComponent = null;
 		}
-		if (base.CanResetComponentProperty("ActorComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartComponent), "PartComponent"))
 		{
-			if (characterPartScanComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("RenderingComponent"))
+		if (characterPartScanComponent.ActorComponent == null)
 		{
-			if (characterPartScanComponent.RenderingComponent == null)
-			{
-				this.RenderingComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharRenderingComponent>(this.RenderingComponent), "RenderingComponent"))
-			{
-				return false;
-			}
+			this.ActorComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
+		{
+			return false;
+		}
+		if (characterPartScanComponent.RenderingComponent == null)
+		{
+			this.RenderingComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RenderingComponent), "RenderingComponent"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CB9E RID: 52126
+	// Token: 0x170025C9 RID: 9673
+	// (get) Token: 0x06018229 RID: 98857 RVA: 0x0073F8E5 File Offset: 0x0073DAE5
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CF81 RID: 53121
 	private CharacterPartComponent PartComponent;
 
-	// Token: 0x0400CB9F RID: 52127
+	// Token: 0x0400CF82 RID: 53122
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400CBA0 RID: 52128
+	// Token: 0x0400CF83 RID: 53123
 	private CharRenderingComponent RenderingComponent;
 }

@@ -6,41 +6,41 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000754 RID: 1876
+	// Token: 0x0200013A RID: 314
 	[UnrealObjectPath("/Script/CoreUObject.ObjectPropertyBase")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public abstract class UObjectPropertyBase : UProperty, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06006321 RID: 25377 RVA: 0x0008E4F6 File Offset: 0x0008C6F6
+		// Token: 0x0600127D RID: 4733 RVA: 0x0001D476 File Offset: 0x0001B676
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UObjectPropertyBase._ClassPtr;
 		}
 
-		// Token: 0x06006322 RID: 25378 RVA: 0x0008E502 File Offset: 0x0008C702
+		// Token: 0x0600127E RID: 4734 RVA: 0x0001D482 File Offset: 0x0001B682
 		static UObjectPropertyBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.ObjectPropertyBase");
 		}
 
-		// Token: 0x06006323 RID: 25379 RVA: 0x0008E510 File Offset: 0x0008C710
+		// Token: 0x0600127F RID: 4735 RVA: 0x0001D490 File Offset: 0x0001B690
 		protected UObjectPropertyBase() : this(BuiltinUtils.AllocNativeUObject(UObjectPropertyBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06006324 RID: 25380 RVA: 0x0008E538 File Offset: 0x0008C738
+		// Token: 0x06001280 RID: 4736 RVA: 0x0001D4B8 File Offset: 0x0001B6B8
 		protected UObjectPropertyBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002F7B RID: 12155
+		// Token: 0x040005B1 RID: 1457
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/CoreUObject.ObjectPropertyBase";
 
-		// Token: 0x04002F7C RID: 12156
+		// Token: 0x040005B2 RID: 1458
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002F7D RID: 12157
+		// Token: 0x040005B3 RID: 1459
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

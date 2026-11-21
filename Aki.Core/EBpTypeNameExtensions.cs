@@ -3,7 +3,7 @@
 // Token: 0x02000110 RID: 272
 public static class EBpTypeNameExtensions
 {
-	// Token: 0x06000A07 RID: 2567 RVA: 0x00032DB0 File Offset: 0x00030FB0
+	// Token: 0x06000A58 RID: 2648 RVA: 0x0003370C File Offset: 0x0003190C
 	public static string ToEnumString(this EBpTypeName value)
 	{
 		string result;
@@ -96,8 +96,14 @@ public static class EBpTypeNameExtensions
 		case EBpTypeName.ABP_GhostTitan_C:
 			result = "ABP_GhostTitan_C";
 			break;
+		case EBpTypeName.BP_PianoGameplaySetting_C:
+			result = "BP_PianoGameplaySetting_C";
+			break;
 		case EBpTypeName.BP_SplineScatter_C:
 			result = "BP_SplineScatter_C";
+			break;
+		case EBpTypeName.BP_SceneUiAnchor_C:
+			result = "BP_SceneUiAnchor_C";
 			break;
 		case EBpTypeName.BP_PlayerFollowerChairConfig_C:
 			result = "BP_PlayerFollowerChairConfig_C";
@@ -109,7 +115,7 @@ public static class EBpTypeNameExtensions
 		return result;
 	}
 
-	// Token: 0x06000A08 RID: 2568 RVA: 0x00032F7C File Offset: 0x0003117C
+	// Token: 0x06000A59 RID: 2649 RVA: 0x000338F8 File Offset: 0x00031AF8
 	public static EBpTypeName FromString(string name)
 	{
 		EBpTypeName result;
@@ -120,7 +126,7 @@ public static class EBpTypeNameExtensions
 		return result;
 	}
 
-	// Token: 0x06000A09 RID: 2569 RVA: 0x00032FA8 File Offset: 0x000311A8
+	// Token: 0x06000A5A RID: 2650 RVA: 0x00033924 File Offset: 0x00031B24
 	public static bool TryFromString(string name, out EBpTypeName value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -247,21 +253,29 @@ public static class EBpTypeNameExtensions
 			}
 			case 18:
 			{
-				char c = name[3];
-				if (c != 'F')
+				char c = name[4];
+				if (c != 'c')
 				{
-					if (c == 'S')
+					if (c != 'p')
 					{
-						if (name == "BP_SplineScatter_C")
+						if (c == 'x')
 						{
-							value = EBpTypeName.BP_SplineScatter_C;
-							return true;
+							if (name == "BP_Fx_WayFinding_C")
+							{
+								value = EBpTypeName.BP_Fx_WayFinding_C;
+								return true;
+							}
 						}
 					}
+					else if (name == "BP_SplineScatter_C")
+					{
+						value = EBpTypeName.BP_SplineScatter_C;
+						return true;
+					}
 				}
-				else if (name == "BP_Fx_WayFinding_C")
+				else if (name == "BP_SceneUiAnchor_C")
 				{
-					value = EBpTypeName.BP_Fx_WayFinding_C;
+					value = EBpTypeName.BP_SceneUiAnchor_C;
 					return true;
 				}
 				break;
@@ -313,6 +327,13 @@ public static class EBpTypeNameExtensions
 				if (name == "EffectModelPostProcess_C")
 				{
 					value = EBpTypeName.EffectModelPostProcess_C;
+					return true;
+				}
+				break;
+			case 25:
+				if (name == "BP_PianoGameplaySetting_C")
+				{
+					value = EBpTypeName.BP_PianoGameplaySetting_C;
 					return true;
 				}
 				break;
@@ -422,7 +443,7 @@ public static class EBpTypeNameExtensions
 		return false;
 	}
 
-	// Token: 0x06000A0A RID: 2570 RVA: 0x000334B8 File Offset: 0x000316B8
+	// Token: 0x06000A5B RID: 2651 RVA: 0x00033E74 File Offset: 0x00032074
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -456,12 +477,14 @@ public static class EBpTypeNameExtensions
 			"BP_PlayerElementalCasketConfig_C",
 			"BP_GiantSystem_C",
 			"ABP_GhostTitan_C",
+			"BP_PianoGameplaySetting_C",
 			"BP_SplineScatter_C",
+			"BP_SceneUiAnchor_C",
 			"BP_PlayerFollowerChairConfig_C"
 		};
 	}
 
-	// Token: 0x06000A0B RID: 2571 RVA: 0x000335DA File Offset: 0x000317DA
+	// Token: 0x06000A5C RID: 2652 RVA: 0x00033FA8 File Offset: 0x000321A8
 	public static EBpTypeName[] GetValues()
 	{
 		return new EBpTypeName[]
@@ -495,12 +518,14 @@ public static class EBpTypeNameExtensions
 			EBpTypeName.BP_PlayerElementalCasketConfig_C,
 			EBpTypeName.BP_GiantSystem_C,
 			EBpTypeName.ABP_GhostTitan_C,
+			EBpTypeName.BP_PianoGameplaySetting_C,
 			EBpTypeName.BP_SplineScatter_C,
+			EBpTypeName.BP_SceneUiAnchor_C,
 			EBpTypeName.BP_PlayerFollowerChairConfig_C
 		};
 	}
 
-	// Token: 0x06000A0C RID: 2572 RVA: 0x000335F0 File Offset: 0x000317F0
+	// Token: 0x06000A5D RID: 2653 RVA: 0x00033FBC File Offset: 0x000321BC
 	public static string[] GetNames()
 	{
 		return new string[]
@@ -534,7 +559,9 @@ public static class EBpTypeNameExtensions
 			"BP_PlayerElementalCasketConfig_C",
 			"BP_GiantSystem_C",
 			"ABP_GhostTitan_C",
+			"BP_PianoGameplaySetting_C",
 			"BP_SplineScatter_C",
+			"BP_SceneUiAnchor_C",
 			"BP_PlayerFollowerChairConfig_C"
 		};
 	}

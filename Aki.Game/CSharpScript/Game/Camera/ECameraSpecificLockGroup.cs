@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B1 RID: 29361
+	// Token: 0x02006433 RID: 25651
 	public enum ECameraSpecificLockGroup
 	{
-		// Token: 0x04025FBE RID: 155582
+		// Token: 0x0402129E RID: 135838
 		Normal,
-		// Token: 0x04025FBF RID: 155583
+		// Token: 0x0402129F RID: 135839
 		LevelEvent = 10
 	}
 }

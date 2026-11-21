@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E8F RID: 28303
+	// Token: 0x02007613 RID: 30227
 	public class IResetPlayerCameraFocusT
 	{
-		// Token: 0x1700D2C2 RID: 53954
-		// (get) Token: 0x06032065 RID: 204901 RVA: 0x006C42E5 File Offset: 0x006C24E5
-		// (set) Token: 0x06032066 RID: 204902 RVA: 0x006C42ED File Offset: 0x006C24ED
+		// Token: 0x1700DE19 RID: 56857
+		// (get) Token: 0x060350A5 RID: 217253 RVA: 0x00720019 File Offset: 0x0071E219
+		// (set) Token: 0x060350A6 RID: 217254 RVA: 0x00720021 File Offset: 0x0071E221
 		public TResetPlayerFocusTypeUnion ResetType { get; set; }
 
-		// Token: 0x1700D2C3 RID: 53955
-		// (get) Token: 0x06032067 RID: 204903 RVA: 0x006C42F6 File Offset: 0x006C24F6
-		// (set) Token: 0x06032068 RID: 204904 RVA: 0x006C42FE File Offset: 0x006C24FE
+		// Token: 0x1700DE1A RID: 56858
+		// (get) Token: 0x060350A7 RID: 217255 RVA: 0x0072002A File Offset: 0x0071E22A
+		// (set) Token: 0x060350A8 RID: 217256 RVA: 0x00720032 File Offset: 0x0071E232
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700D2C4 RID: 53956
-		// (get) Token: 0x06032069 RID: 204905 RVA: 0x006C4307 File Offset: 0x006C2507
-		// (set) Token: 0x0603206A RID: 204906 RVA: 0x006C430F File Offset: 0x006C250F
+		// Token: 0x1700DE1B RID: 56859
+		// (get) Token: 0x060350A9 RID: 217257 RVA: 0x0072003B File Offset: 0x0071E23B
+		// (set) Token: 0x060350AA RID: 217258 RVA: 0x00720043 File Offset: 0x0071E243
 		public bool CannotInterrupt { get; set; }
 
-		// Token: 0x1700D2C5 RID: 53957
-		// (get) Token: 0x0603206B RID: 204907 RVA: 0x006C4318 File Offset: 0x006C2518
-		// (set) Token: 0x0603206C RID: 204908 RVA: 0x006C4320 File Offset: 0x006C2520
+		// Token: 0x1700DE1C RID: 56860
+		// (get) Token: 0x060350AB RID: 217259 RVA: 0x0072004C File Offset: 0x0071E24C
+		// (set) Token: 0x060350AC RID: 217260 RVA: 0x00720054 File Offset: 0x0071E254
 		public float Duration { get; set; }
 
-		// Token: 0x1700D2C6 RID: 53958
-		// (get) Token: 0x0603206D RID: 204909 RVA: 0x006C4329 File Offset: 0x006C2529
-		// (set) Token: 0x0603206E RID: 204910 RVA: 0x006C4331 File Offset: 0x006C2531
+		// Token: 0x1700DE1D RID: 56861
+		// (get) Token: 0x060350AD RID: 217261 RVA: 0x0072005D File Offset: 0x0071E25D
+		// (set) Token: 0x060350AE RID: 217262 RVA: 0x00720065 File Offset: 0x0071E265
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603206F RID: 204911 RVA: 0x006C433A File Offset: 0x006C253A
+		// Token: 0x060350AF RID: 217263 RVA: 0x0072006E File Offset: 0x0071E26E
 		public IResetPlayerCameraFocusT()
 		{
 			this.ResetType = null;

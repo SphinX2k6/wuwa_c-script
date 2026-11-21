@@ -2,32 +2,32 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025CA RID: 9674
+// Token: 0x02001AB5 RID: 6837
 [NullableContext(1)]
 public interface IPositionData
 {
-	// Token: 0x17001934 RID: 6452
-	// (get) Token: 0x060139FE RID: 80382
-	// (set) Token: 0x060139FF RID: 80383
+	// Token: 0x1700196C RID: 6508
+	// (get) Token: 0x06010EDE RID: 69342
+	// (set) Token: 0x06010EDF RID: 69343
 	string Id { get; set; }
 
-	// Token: 0x17001935 RID: 6453
-	// (get) Token: 0x06013A00 RID: 80384
-	// (set) Token: 0x06013A01 RID: 80385
+	// Token: 0x1700196D RID: 6509
+	// (get) Token: 0x06010EE0 RID: 69344
+	// (set) Token: 0x06010EE1 RID: 69345
 	FVector2D Vector { get; set; }
 
-	// Token: 0x17001936 RID: 6454
-	// (get) Token: 0x06013A02 RID: 80386
-	// (set) Token: 0x06013A03 RID: 80387
+	// Token: 0x1700196E RID: 6510
+	// (get) Token: 0x06010EE2 RID: 69346
+	// (set) Token: 0x06010EE3 RID: 69347
 	bool NotShow { get; set; }
 
-	// Token: 0x17001937 RID: 6455
-	// (get) Token: 0x06013A04 RID: 80388
-	// (set) Token: 0x06013A05 RID: 80389
+	// Token: 0x1700196F RID: 6511
+	// (get) Token: 0x06010EE4 RID: 69348
+	// (set) Token: 0x06010EE5 RID: 69349
 	bool IsOptional { get; set; }
 
-	// Token: 0x17001938 RID: 6456
-	// (get) Token: 0x06013A06 RID: 80390
-	// (set) Token: 0x06013A07 RID: 80391
+	// Token: 0x17001970 RID: 6512
+	// (get) Token: 0x06010EE6 RID: 69350
+	// (set) Token: 0x06010EE7 RID: 69351
 	bool IsOptionalFinished { get; set; }
 }

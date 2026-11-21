@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B71 RID: 23409
+	// Token: 0x02006187 RID: 24967
 	public struct IWellStreamingRenderConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B0E4 RID: 45284
-		// (get) Token: 0x06028101 RID: 164097 RVA: 0x00581F32 File Offset: 0x00580132
+		// Token: 0x1700BA2C RID: 47660
+		// (get) Token: 0x0602A6C5 RID: 173765 RVA: 0x005C99C2 File Offset: 0x005C7BC2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028102 RID: 164098 RVA: 0x00581F3F File Offset: 0x0058013F
+		// Token: 0x0602A6C6 RID: 173766 RVA: 0x005C99CF File Offset: 0x005C7BCF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028103 RID: 164099 RVA: 0x00581F48 File Offset: 0x00580148
+		// Token: 0x0602A6C7 RID: 173767 RVA: 0x005C99D8 File Offset: 0x005C7BD8
 		public static IWellStreamingRenderConfig GetRootAsIWellStreamingRenderConfig(ByteBuffer _bb)
 		{
 			return IWellStreamingRenderConfig.GetRootAsIWellStreamingRenderConfig(_bb, default(IWellStreamingRenderConfig));
 		}
 
-		// Token: 0x06028104 RID: 164100 RVA: 0x00581F64 File Offset: 0x00580164
+		// Token: 0x0602A6C8 RID: 173768 RVA: 0x005C99F4 File Offset: 0x005C7BF4
 		public static IWellStreamingRenderConfig GetRootAsIWellStreamingRenderConfig(ByteBuffer _bb, IWellStreamingRenderConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028105 RID: 164101 RVA: 0x00581F81 File Offset: 0x00580181
+		// Token: 0x0602A6C9 RID: 173769 RVA: 0x005C9A11 File Offset: 0x005C7C11
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028106 RID: 164102 RVA: 0x00581F90 File Offset: 0x00580190
+		// Token: 0x0602A6CA RID: 173770 RVA: 0x005C9A20 File Offset: 0x005C7C20
 		public IWellStreamingRenderConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0E5 RID: 45285
-		// (get) Token: 0x06028107 RID: 164103 RVA: 0x00581FA0 File Offset: 0x005801A0
+		// Token: 0x1700BA2D RID: 47661
+		// (get) Token: 0x0602A6CB RID: 173771 RVA: 0x005C9A30 File Offset: 0x005C7C30
 		public IWellStreamingRenderSelfConfig? SelfConfig
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0E6 RID: 45286
-		// (get) Token: 0x06028108 RID: 164104 RVA: 0x00582000 File Offset: 0x00580200
+		// Token: 0x1700BA2E RID: 47662
+		// (get) Token: 0x0602A6CC RID: 173772 RVA: 0x005C9A90 File Offset: 0x005C7C90
 		public IWellStreamingRenderPointConfig? AsStreamPointConfig
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028109 RID: 164105 RVA: 0x0058205D File Offset: 0x0058025D
+		// Token: 0x0602A6CD RID: 173773 RVA: 0x005C9AED File Offset: 0x005C7CED
 		public static Offset<IWellStreamingRenderConfig> CreateIWellStreamingRenderConfig(FlatBufferBuilder builder, Offset<IWellStreamingRenderSelfConfig> SelfConfigOffset = default(Offset<IWellStreamingRenderSelfConfig>), Offset<IWellStreamingRenderPointConfig> AsStreamPointConfigOffset = default(Offset<IWellStreamingRenderPointConfig>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWellStreamingRenderConfig.EndIWellStreamingRenderConfig(builder);
 		}
 
-		// Token: 0x0602810A RID: 164106 RVA: 0x0058207A File Offset: 0x0058027A
+		// Token: 0x0602A6CE RID: 173774 RVA: 0x005C9B0A File Offset: 0x005C7D0A
 		public static void StartIWellStreamingRenderConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602810B RID: 164107 RVA: 0x00582083 File Offset: 0x00580283
+		// Token: 0x0602A6CF RID: 173775 RVA: 0x005C9B13 File Offset: 0x005C7D13
 		public static void AddSelfConfig(FlatBufferBuilder builder, Offset<IWellStreamingRenderSelfConfig> selfConfigOffset)
 		{
 			builder.AddOffset(0, selfConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602810C RID: 164108 RVA: 0x00582093 File Offset: 0x00580293
+		// Token: 0x0602A6D0 RID: 173776 RVA: 0x005C9B23 File Offset: 0x005C7D23
 		public static void AddAsStreamPointConfig(FlatBufferBuilder builder, Offset<IWellStreamingRenderPointConfig> asStreamPointConfigOffset)
 		{
 			builder.AddOffset(1, asStreamPointConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602810D RID: 164109 RVA: 0x005820A3 File Offset: 0x005802A3
+		// Token: 0x0602A6D1 RID: 173777 RVA: 0x005C9B33 File Offset: 0x005C7D33
 		public static Offset<IWellStreamingRenderConfig> EndIWellStreamingRenderConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IWellStreamingRenderConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602810E RID: 164110 RVA: 0x005820B0 File Offset: 0x005802B0
+		// Token: 0x0602A6D2 RID: 173778 RVA: 0x005C9B40 File Offset: 0x005C7D40
 		public IWellStreamingRenderConfigT UnPack()
 		{
 			IWellStreamingRenderConfigT wellStreamingRenderConfigT = new IWellStreamingRenderConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wellStreamingRenderConfigT;
 		}
 
-		// Token: 0x0602810F RID: 164111 RVA: 0x005820CC File Offset: 0x005802CC
+		// Token: 0x0602A6D3 RID: 173779 RVA: 0x005C9B5C File Offset: 0x005C7D5C
 		public void UnPackTo(IWellStreamingRenderConfigT _o)
 		{
 			_o.SelfConfig = ((this.SelfConfig != null) ? this.SelfConfig.Value.UnPack() : null);
 			_o.AsStreamPointConfig = ((this.AsStreamPointConfig != null) ? this.AsStreamPointConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x06028110 RID: 164112 RVA: 0x00582138 File Offset: 0x00580338
+		// Token: 0x0602A6D4 RID: 173780 RVA: 0x005C9BC8 File Offset: 0x005C7DC8
 		public static Offset<IWellStreamingRenderConfig> Pack(FlatBufferBuilder builder, IWellStreamingRenderConfigT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWellStreamingRenderConfig.CreateIWellStreamingRenderConfig(builder, selfConfigOffset, asStreamPointConfigOffset);
 		}
 
-		// Token: 0x0400F2C6 RID: 62150
+		// Token: 0x0400FFCC RID: 65484
 		private Table __p;
 	}
 }

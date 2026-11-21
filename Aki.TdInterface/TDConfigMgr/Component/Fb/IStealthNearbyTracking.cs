@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF3 RID: 3059
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CC3 RID: 3267
 	public class IStealthNearbyTracking : INearbyTracking
 	{
-		// Token: 0x06004644 RID: 17988 RVA: 0x000B18ED File Offset: 0x000AFAED
+		// Token: 0x06004AA7 RID: 19111 RVA: 0x000BBAB7 File Offset: 0x000B9CB7
 		public static IStealthNearbyTracking Create(IStealthNearbyTracking? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700141B RID: 5147
-		// (get) Token: 0x06004645 RID: 17989 RVA: 0x000B190C File Offset: 0x000AFB0C
+		// Token: 0x1700151C RID: 5404
+		// (get) Token: 0x06004AA8 RID: 19112 RVA: 0x000BBAD6 File Offset: 0x000B9CD6
 		public override ENearbyTrackingType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700141C RID: 5148
-		// (get) Token: 0x06004646 RID: 17990 RVA: 0x000B1919 File Offset: 0x000AFB19
+		// Token: 0x1700151D RID: 5405
+		// (get) Token: 0x06004AA9 RID: 19113 RVA: 0x000BBAE3 File Offset: 0x000B9CE3
 		public virtual int ShowRange
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700141D RID: 5149
-		// (get) Token: 0x06004647 RID: 17991 RVA: 0x000B1926 File Offset: 0x000AFB26
+		// Token: 0x1700151E RID: 5406
+		// (get) Token: 0x06004AAA RID: 19114 RVA: 0x000BBAF0 File Offset: 0x000B9CF0
 		public virtual int HideRange
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700141E RID: 5150
-		// (get) Token: 0x06004648 RID: 17992 RVA: 0x000B1933 File Offset: 0x000AFB33
+		// Token: 0x1700151F RID: 5407
+		// (get) Token: 0x06004AAB RID: 19115 RVA: 0x000BBAFD File Offset: 0x000B9CFD
 		public virtual string Icon
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700141F RID: 5151
-		// (get) Token: 0x06004649 RID: 17993 RVA: 0x000B1940 File Offset: 0x000AFB40
+		// Token: 0x17001520 RID: 5408
+		// (get) Token: 0x06004AAC RID: 19116 RVA: 0x000BBB0A File Offset: 0x000B9D0A
 		[Nullable(2)]
 		public virtual VectorInfo IconOffset
 		{
@@ -81,14 +79,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002802 RID: 10242
+		// Token: 0x04002A4E RID: 10830
 		private IStealthNearbyTracking Instance;
 
-		// Token: 0x04002803 RID: 10243
+		// Token: 0x04002A4F RID: 10831
 		[Nullable(2)]
 		private VectorInfo _IconOffsetCache;
 
-		// Token: 0x04002804 RID: 10244
+		// Token: 0x04002A50 RID: 10832
 		private bool _IconOffsetInited;
 	}
 }

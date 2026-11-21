@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E7 RID: 25831
+	// Token: 0x02005465 RID: 21605
 	public class MatchThreeTargetPopView : UiViewBase
 	{
-		// Token: 0x06040D75 RID: 265589 RVA: 0x00FB4F54 File Offset: 0x00FB3154
+		// Token: 0x06035A39 RID: 219705 RVA: 0x00EFBF84 File Offset: 0x00EFA184
 		[NullableContext(1)]
 		public MatchThreeTargetPopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06040D76 RID: 265590 RVA: 0x00FB4F60 File Offset: 0x00FB3160
+		// Token: 0x06035A3A RID: 219706 RVA: 0x00EFBF90 File Offset: 0x00EFA190
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040D77 RID: 265591 RVA: 0x00FB4FA8 File Offset: 0x00FB31A8
+		// Token: 0x06035A3B RID: 219707 RVA: 0x00EFBFD8 File Offset: 0x00EFA1D8
 		protected override void OnStart()
 		{
 			this.Parameter = (this.OpenParam as MatchThreeTargetPopParam);
@@ -79,13 +79,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040D78 RID: 265592 RVA: 0x00FB5093 File Offset: 0x00FB3293
+		// Token: 0x06035A3C RID: 219708 RVA: 0x00EFC0C3 File Offset: 0x00EFA2C3
 		protected override void OnFinishShow()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06040D79 RID: 265593 RVA: 0x00FB509C File Offset: 0x00FB329C
+		// Token: 0x06035A3D RID: 219709 RVA: 0x00EFC0CC File Offset: 0x00EFA2CC
 		protected override void OnAfterDestroy()
 		{
 			MatchThreeTargetPopParam parameter = this.Parameter;
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Parameter = null;
 		}
 
-		// Token: 0x04021C7E RID: 138366
+		// Token: 0x0401C5AF RID: 116143
 		[Nullable(2)]
 		private MatchThreeTargetPopParam Parameter;
 
-		// Token: 0x0200C727 RID: 50983
+		// Token: 0x0200B10D RID: 45325
 		private enum EComponent
 		{
-			// Token: 0x0403C2AD RID: 246445
+			// Token: 0x04036C08 RID: 224264
 			TxtTargetNum
 		}
 	}

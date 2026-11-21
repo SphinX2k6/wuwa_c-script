@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200248B RID: 9355
+	// Token: 0x0200272E RID: 10030
 	public static class ETuningStandGridTypeExtensions
 	{
-		// Token: 0x0600CAF0 RID: 51952 RVA: 0x001DDFA0 File Offset: 0x001DC1A0
+		// Token: 0x0600D7A9 RID: 55209 RVA: 0x001F8168 File Offset: 0x001F6368
 		public static string ToEnumString(this ETuningStandGridType value)
 		{
 			string result;
@@ -45,7 +45,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAF1 RID: 51953 RVA: 0x001DE030 File Offset: 0x001DC230
+		// Token: 0x0600D7AA RID: 55210 RVA: 0x001F81F8 File Offset: 0x001F63F8
 		public static ETuningStandGridType FromString(string name)
 		{
 			ETuningStandGridType result;
@@ -56,7 +56,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAF2 RID: 51954 RVA: 0x001DE05C File Offset: 0x001DC25C
+		// Token: 0x0600D7AB RID: 55211 RVA: 0x001F8224 File Offset: 0x001F6424
 		public static bool TryFromString(string name, out ETuningStandGridType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -156,7 +156,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CAF3 RID: 51955 RVA: 0x001DE1B8 File Offset: 0x001DC3B8
+		// Token: 0x0600D7AC RID: 55212 RVA: 0x001F8380 File Offset: 0x001F6580
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -173,7 +173,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAF4 RID: 51956 RVA: 0x001DE214 File Offset: 0x001DC414
+		// Token: 0x0600D7AD RID: 55213 RVA: 0x001F83DC File Offset: 0x001F65DC
 		public static ETuningStandGridType[] GetValues()
 		{
 			return new ETuningStandGridType[]
@@ -190,7 +190,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAF5 RID: 51957 RVA: 0x001DE228 File Offset: 0x001DC428
+		// Token: 0x0600D7AE RID: 55214 RVA: 0x001F83F0 File Offset: 0x001F65F0
 		public static string[] GetNames()
 		{
 			return new string[]

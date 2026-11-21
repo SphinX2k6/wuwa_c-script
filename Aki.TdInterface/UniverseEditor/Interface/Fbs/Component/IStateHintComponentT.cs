@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059AB RID: 22955
+	// Token: 0x02005FB8 RID: 24504
 	public class IStateHintComponentT
 	{
-		// Token: 0x1700AC48 RID: 44104
-		// (get) Token: 0x06026E42 RID: 159298 RVA: 0x0055A051 File Offset: 0x00558251
-		// (set) Token: 0x06026E43 RID: 159299 RVA: 0x0055A059 File Offset: 0x00558259
+		// Token: 0x1700B57C RID: 46460
+		// (get) Token: 0x060293AC RID: 168876 RVA: 0x005A0CBD File Offset: 0x0059EEBD
+		// (set) Token: 0x060293AD RID: 168877 RVA: 0x005A0CC5 File Offset: 0x0059EEC5
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AC49 RID: 44105
-		// (get) Token: 0x06026E44 RID: 159300 RVA: 0x0055A062 File Offset: 0x00558262
-		// (set) Token: 0x06026E45 RID: 159301 RVA: 0x0055A06A File Offset: 0x0055826A
+		// Token: 0x1700B57D RID: 46461
+		// (get) Token: 0x060293AE RID: 168878 RVA: 0x005A0CCE File Offset: 0x0059EECE
+		// (set) Token: 0x060293AF RID: 168879 RVA: 0x005A0CD6 File Offset: 0x0059EED6
 		public List<IEntityStateConditionT> ActiveConditions { get; set; }
 
-		// Token: 0x1700AC4A RID: 44106
-		// (get) Token: 0x06026E46 RID: 159302 RVA: 0x0055A073 File Offset: 0x00558273
-		// (set) Token: 0x06026E47 RID: 159303 RVA: 0x0055A07B File Offset: 0x0055827B
+		// Token: 0x1700B57E RID: 46462
+		// (get) Token: 0x060293B0 RID: 168880 RVA: 0x005A0CDF File Offset: 0x0059EEDF
+		// (set) Token: 0x060293B1 RID: 168881 RVA: 0x005A0CE7 File Offset: 0x0059EEE7
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026E48 RID: 159304 RVA: 0x0055A084 File Offset: 0x00558284
+		// Token: 0x060293B2 RID: 168882 RVA: 0x005A0CF0 File Offset: 0x0059EEF0
 		public IStateHintComponentT()
 		{
 			this.Disabled = false;

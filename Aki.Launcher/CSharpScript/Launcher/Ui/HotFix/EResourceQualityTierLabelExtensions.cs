@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000EE RID: 238
+	// Token: 0x020000F2 RID: 242
 	public static class EResourceQualityTierLabelExtensions
 	{
-		// Token: 0x060007E5 RID: 2021 RVA: 0x0003CC54 File Offset: 0x0003AE54
+		// Token: 0x06000819 RID: 2073 RVA: 0x0003EFF4 File Offset: 0x0003D1F4
 		public static string ToEnumString(this EResourceQualityTierLabel value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return result;
 		}
 
-		// Token: 0x060007E6 RID: 2022 RVA: 0x0003CC9C File Offset: 0x0003AE9C
+		// Token: 0x0600081A RID: 2074 RVA: 0x0003F03C File Offset: 0x0003D23C
 		public static EResourceQualityTierLabel FromString(string name)
 		{
 			EResourceQualityTierLabel result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return result;
 		}
 
-		// Token: 0x060007E7 RID: 2023 RVA: 0x0003CCC8 File Offset: 0x0003AEC8
+		// Token: 0x0600081B RID: 2075 RVA: 0x0003F068 File Offset: 0x0003D268
 		public static bool TryFromString(string name, out EResourceQualityTierLabel value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return true;
 		}
 
-		// Token: 0x060007E8 RID: 2024 RVA: 0x0003CD1E File Offset: 0x0003AF1E
+		// Token: 0x0600081C RID: 2076 RVA: 0x0003F0BE File Offset: 0x0003D2BE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			};
 		}
 
-		// Token: 0x060007E9 RID: 2025 RVA: 0x0003CD3E File Offset: 0x0003AF3E
+		// Token: 0x0600081D RID: 2077 RVA: 0x0003F0DE File Offset: 0x0003D2DE
 		public static EResourceQualityTierLabel[] GetValues()
 		{
 			return new EResourceQualityTierLabel[]
@@ -87,7 +87,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			};
 		}
 
-		// Token: 0x060007EA RID: 2026 RVA: 0x0003CD4E File Offset: 0x0003AF4E
+		// Token: 0x0600081E RID: 2078 RVA: 0x0003F0EE File Offset: 0x0003D2EE
 		public static string[] GetNames()
 		{
 			return new string[]

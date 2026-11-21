@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066A1 RID: 26273
+	// Token: 0x020055F1 RID: 22001
 	public class TimeCommands
 	{
-		// Token: 0x040223CE RID: 140238
+		// Token: 0x0401CC27 RID: 117799
 		public float Time;
 
-		// Token: 0x040223CF RID: 140239
+		// Token: 0x0401CC28 RID: 117800
 		[Nullable(1)]
 		public CommandData[] Commands;
 	}

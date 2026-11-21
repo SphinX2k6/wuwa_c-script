@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000447 RID: 1095
+	// Token: 0x02000430 RID: 1072
 	[NetMessage(EMessageId.EnergySyncResponse)]
 	public sealed class EnergySyncResponse : IMessage<EnergySyncResponse>, IMessage, IEquatable<EnergySyncResponse>, IDeepCloneable<EnergySyncResponse>, IBufferMessage
 	{
-		// Token: 0x060068BF RID: 26815 RVA: 0x000FB919 File Offset: 0x000F9B19
+		// Token: 0x0600672F RID: 26415 RVA: 0x000F878D File Offset: 0x000F698D
 		[NullableContext(1)]
 		public static EnergySyncResponse Create()
 		{
 			return new EnergySyncResponse();
 		}
 
-		// Token: 0x170013BC RID: 5052
-		// (get) Token: 0x060068C0 RID: 26816 RVA: 0x000FB920 File Offset: 0x000F9B20
+		// Token: 0x17001367 RID: 4967
+		// (get) Token: 0x06006730 RID: 26416 RVA: 0x000F8794 File Offset: 0x000F6994
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013BD RID: 5053
-		// (get) Token: 0x060068C1 RID: 26817 RVA: 0x000FB923 File Offset: 0x000F9B23
+		// Token: 0x17001368 RID: 4968
+		// (get) Token: 0x06006731 RID: 26417 RVA: 0x000F8797 File Offset: 0x000F6997
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060068C2 RID: 26818 RVA: 0x000FB92A File Offset: 0x000F9B2A
+		// Token: 0x06006732 RID: 26418 RVA: 0x000F879E File Offset: 0x000F699E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnergySyncResponse()
 		{
 		}
 
-		// Token: 0x060068C3 RID: 26819 RVA: 0x000FB93D File Offset: 0x000F9B3D
+		// Token: 0x06006733 RID: 26419 RVA: 0x000F87B1 File Offset: 0x000F69B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnergySyncResponse(EnergySyncResponse other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060068C4 RID: 26820 RVA: 0x000FB973 File Offset: 0x000F9B73
+		// Token: 0x06006734 RID: 26420 RVA: 0x000F87E7 File Offset: 0x000F69E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnergySyncResponse Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new EnergySyncResponse(this);
 		}
 
-		// Token: 0x170013BE RID: 5054
-		// (get) Token: 0x060068C5 RID: 26821 RVA: 0x000FB97B File Offset: 0x000F9B7B
-		// (set) Token: 0x060068C6 RID: 26822 RVA: 0x000FB983 File Offset: 0x000F9B83
+		// Token: 0x17001369 RID: 4969
+		// (get) Token: 0x06006735 RID: 26421 RVA: 0x000F87EF File Offset: 0x000F69EF
+		// (set) Token: 0x06006736 RID: 26422 RVA: 0x000F87F7 File Offset: 0x000F69F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrCode
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170013BF RID: 5055
-		// (get) Token: 0x060068C7 RID: 26823 RVA: 0x000FB98C File Offset: 0x000F9B8C
+		// Token: 0x1700136A RID: 4970
+		// (get) Token: 0x06006737 RID: 26423 RVA: 0x000F8800 File Offset: 0x000F6A00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<EnergyInfo> SyncInfoList
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060068C8 RID: 26824 RVA: 0x000FB994 File Offset: 0x000F9B94
+		// Token: 0x06006738 RID: 26424 RVA: 0x000F8808 File Offset: 0x000F6A08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EnergySyncResponse);
 		}
 
-		// Token: 0x060068C9 RID: 26825 RVA: 0x000FB9A4 File Offset: 0x000F9BA4
+		// Token: 0x06006739 RID: 26425 RVA: 0x000F8818 File Offset: 0x000F6A18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EnergySyncResponse other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrCode == other.ErrCode && this.syncInfoList_.Equals(other.syncInfoList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060068CA RID: 26826 RVA: 0x000FB9F4 File Offset: 0x000F9BF4
+		// Token: 0x0600673A RID: 26426 RVA: 0x000F8868 File Offset: 0x000F6A68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060068CB RID: 26827 RVA: 0x000FBA47 File Offset: 0x000F9C47
+		// Token: 0x0600673B RID: 26427 RVA: 0x000F88BB File Offset: 0x000F6ABB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060068CC RID: 26828 RVA: 0x000FBA54 File Offset: 0x000F9C54
+		// Token: 0x0600673C RID: 26428 RVA: 0x000F88C8 File Offset: 0x000F6AC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060068CD RID: 26829 RVA: 0x000FBA60 File Offset: 0x000F9C60
+		// Token: 0x0600673D RID: 26429 RVA: 0x000F88D4 File Offset: 0x000F6AD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			this.syncInfoList_.WriteTo(ref output, EnergySyncResponse._repeated_syncInfoList_codec);
 			if (this.ErrCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(56);
 				output.WriteEnum((int)this.ErrCode);
 			}
 			if (this._unknownFields != null)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060068CE RID: 26830 RVA: 0x000FBAB0 File Offset: 0x000F9CB0
+		// Token: 0x0600673E RID: 26430 RVA: 0x000F8924 File Offset: 0x000F6B24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060068CF RID: 26831 RVA: 0x000FBB04 File Offset: 0x000F9D04
+		// Token: 0x0600673F RID: 26431 RVA: 0x000F8978 File Offset: 0x000F6B78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EnergySyncResponse other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060068D0 RID: 26832 RVA: 0x000FBB51 File Offset: 0x000F9D51
+		// Token: 0x06006740 RID: 26432 RVA: 0x000F89C5 File Offset: 0x000F6BC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060068D1 RID: 26833 RVA: 0x000FBB5C File Offset: 0x000F9D5C
+		// Token: 0x06006741 RID: 26433 RVA: 0x000F89D0 File Offset: 0x000F6BD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 42U)
+				if (num != 26U)
 				{
-					if (num != 104U)
+					if (num != 56U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040039CC RID: 14796
+		// Token: 0x040039B9 RID: 14777
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040039CD RID: 14797
-		public const int ErrCodeFieldNumber = 13;
+		// Token: 0x040039BA RID: 14778
+		public const int ErrCodeFieldNumber = 7;
 
-		// Token: 0x040039CE RID: 14798
+		// Token: 0x040039BB RID: 14779
 		private ErrorCode errCode_;
 
-		// Token: 0x040039CF RID: 14799
-		public const int SyncInfoListFieldNumber = 5;
+		// Token: 0x040039BC RID: 14780
+		public const int SyncInfoListFieldNumber = 3;
 
-		// Token: 0x040039D0 RID: 14800
-		private static readonly FieldCodec<EnergyInfo> _repeated_syncInfoList_codec = FieldCodec.ForMessage<EnergyInfo>(42U, EnergyInfo.Parser);
+		// Token: 0x040039BD RID: 14781
+		private static readonly FieldCodec<EnergyInfo> _repeated_syncInfoList_codec = FieldCodec.ForMessage<EnergyInfo>(26U, EnergyInfo.Parser);
 
-		// Token: 0x040039D1 RID: 14801
+		// Token: 0x040039BE RID: 14782
 		private readonly RepeatedField<EnergyInfo> syncInfoList_ = new RepeatedField<EnergyInfo>();
 	}
 }

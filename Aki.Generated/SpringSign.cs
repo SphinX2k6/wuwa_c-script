@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010F1 RID: 4337
+	// Token: 0x02001227 RID: 4647
 	public struct SpringSign : IFlatbufferObject
 	{
-		// Token: 0x17003865 RID: 14437
-		// (get) Token: 0x0600D95A RID: 55642 RVA: 0x003213FC File Offset: 0x0031F5FC
+		// Token: 0x17003BBB RID: 15291
+		// (get) Token: 0x0600E6A5 RID: 59045 RVA: 0x0034C964 File Offset: 0x0034AB64
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D95B RID: 55643 RVA: 0x00321409 File Offset: 0x0031F609
+		// Token: 0x0600E6A6 RID: 59046 RVA: 0x0034C971 File Offset: 0x0034AB71
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D95C RID: 55644 RVA: 0x00321410 File Offset: 0x0031F610
+		// Token: 0x0600E6A7 RID: 59047 RVA: 0x0034C978 File Offset: 0x0034AB78
 		public static SpringSign GetRootAsSpringSign(ByteBuffer _bb)
 		{
 			return SpringSign.GetRootAsSpringSign(_bb, default(SpringSign));
 		}
 
-		// Token: 0x0600D95D RID: 55645 RVA: 0x0032142C File Offset: 0x0031F62C
+		// Token: 0x0600E6A8 RID: 59048 RVA: 0x0034C994 File Offset: 0x0034AB94
 		public static SpringSign GetRootAsSpringSign(ByteBuffer _bb, SpringSign obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D95E RID: 55646 RVA: 0x00321449 File Offset: 0x0031F649
+		// Token: 0x0600E6A9 RID: 59049 RVA: 0x0034C9B1 File Offset: 0x0034ABB1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D95F RID: 55647 RVA: 0x00321458 File Offset: 0x0031F658
+		// Token: 0x0600E6AA RID: 59050 RVA: 0x0034C9C0 File Offset: 0x0034ABC0
 		public SpringSign __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003866 RID: 14438
-		// (get) Token: 0x0600D960 RID: 55648 RVA: 0x00321468 File Offset: 0x0031F668
+		// Token: 0x17003BBC RID: 15292
+		// (get) Token: 0x0600E6AB RID: 59051 RVA: 0x0034C9D0 File Offset: 0x0034ABD0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003867 RID: 14439
-		// (get) Token: 0x0600D961 RID: 55649 RVA: 0x003214A4 File Offset: 0x0031F6A4
+		// Token: 0x17003BBD RID: 15293
+		// (get) Token: 0x0600E6AC RID: 59052 RVA: 0x0034CA0C File Offset: 0x0034AC0C
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003868 RID: 14440
-		// (get) Token: 0x0600D962 RID: 55650 RVA: 0x003214E0 File Offset: 0x0031F6E0
+		// Token: 0x17003BBE RID: 15294
+		// (get) Token: 0x0600E6AD RID: 59053 RVA: 0x0034CA48 File Offset: 0x0034AC48
 		public int ResourceTypeId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005225 RID: 21029
+		// Token: 0x04005868 RID: 22632
 		private Table __p;
 	}
 }

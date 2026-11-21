@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020013C5 RID: 5061
+// Token: 0x02000879 RID: 2169
 public class NewPlayerSupportRoleCommonItem : NewPlayerSupportRoleBaseItem
 {
-	// Token: 0x06008EDA RID: 36570 RVA: 0x001ED754 File Offset: 0x001EB954
+	// Token: 0x0600626F RID: 25199 RVA: 0x001F6274 File Offset: 0x001F4474
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -26,7 +26,7 @@ public class NewPlayerSupportRoleCommonItem : NewPlayerSupportRoleBaseItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06008EDB RID: 36571 RVA: 0x001ED820 File Offset: 0x001EBA20
+	// Token: 0x06006270 RID: 25200 RVA: 0x001F6340 File Offset: 0x001F4540
 	public override void Refresh()
 	{
 		UUIItem item = base.GetItem(1);
@@ -47,22 +47,22 @@ public class NewPlayerSupportRoleCommonItem : NewPlayerSupportRoleBaseItem
 		base.SetTextureByPath(this.TrialRoleInfo.Value.ContentTexturePath, base.GetTexture(4), null, null);
 	}
 
-	// Token: 0x02007A46 RID: 31302
+	// Token: 0x02006BCC RID: 27596
 	private class EComponentType
 	{
-		// Token: 0x040283F2 RID: 164850
+		// Token: 0x0402370F RID: 145167
 		public const int ContentTexture = 0;
 
-		// Token: 0x040283F3 RID: 164851
+		// Token: 0x04023710 RID: 145168
 		public const int DescItem1 = 1;
 
-		// Token: 0x040283F4 RID: 164852
+		// Token: 0x04023711 RID: 145169
 		public const int DescItem2 = 2;
 
-		// Token: 0x040283F5 RID: 164853
+		// Token: 0x04023712 RID: 145170
 		public const int DescItem3 = 3;
 
-		// Token: 0x040283F6 RID: 164854
+		// Token: 0x04023713 RID: 145171
 		public const int ThemeTextTexture = 4;
 	}
 }

@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x02007243 RID: 29251
+	// Token: 0x020063C2 RID: 25538
 	[NullableContext(1)]
 	public interface IActionInfo
 	{
-		// Token: 0x17009E47 RID: 40519
-		// (get) Token: 0x06047B70 RID: 293744
-		// (set) Token: 0x06047B71 RID: 293745
+		// Token: 0x1700759F RID: 30111
+		// (get) Token: 0x0603DF28 RID: 253736
+		// (set) Token: 0x0603DF29 RID: 253737
 		string Name { get; set; }
 
-		// Token: 0x17009E48 RID: 40520
-		// (get) Token: 0x06047B72 RID: 293746
-		// (set) Token: 0x06047B73 RID: 293747
+		// Token: 0x170075A0 RID: 30112
+		// (get) Token: 0x0603DF2A RID: 253738
+		// (set) Token: 0x0603DF2B RID: 253739
 		bool? Async { get; set; }
 
-		// Token: 0x17009E49 RID: 40521
-		// (get) Token: 0x06047B74 RID: 293748
-		// (set) Token: 0x06047B75 RID: 293749
+		// Token: 0x170075A1 RID: 30113
+		// (get) Token: 0x0603DF2C RID: 253740
+		// (set) Token: 0x0603DF2D RID: 253741
 		[Nullable(2)]
 		object Params { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

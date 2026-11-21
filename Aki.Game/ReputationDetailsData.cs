@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001F79 RID: 8057
+// Token: 0x0200143B RID: 5179
 public class ReputationDetailsData : IReputationDetailsData
 {
-	// Token: 0x1700133F RID: 4927
-	// (get) Token: 0x0600F9FE RID: 63998 RVA: 0x003C923D File Offset: 0x003C743D
-	// (set) Token: 0x0600F9FF RID: 63999 RVA: 0x003C9245 File Offset: 0x003C7445
+	// Token: 0x17001369 RID: 4969
+	// (get) Token: 0x0600CE1D RID: 52765 RVA: 0x003D4D59 File Offset: 0x003D2F59
+	// (set) Token: 0x0600CE1E RID: 52766 RVA: 0x003D4D61 File Offset: 0x003D2F61
 	public int InfluenceId { get; set; }
 
-	// Token: 0x17001340 RID: 4928
-	// (get) Token: 0x0600FA00 RID: 64000 RVA: 0x003C924E File Offset: 0x003C744E
-	// (set) Token: 0x0600FA01 RID: 64001 RVA: 0x003C9256 File Offset: 0x003C7456
+	// Token: 0x1700136A RID: 4970
+	// (get) Token: 0x0600CE1F RID: 52767 RVA: 0x003D4D6A File Offset: 0x003D2F6A
+	// (set) Token: 0x0600CE20 RID: 52768 RVA: 0x003D4D72 File Offset: 0x003D2F72
 	public int CountryId { get; set; }
 }

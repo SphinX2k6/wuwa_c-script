@@ -5,72 +5,71 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005FF RID: 1535
+	// Token: 0x0200069C RID: 1692
 	public class IPilotThrow_SetValue
 	{
-		// Token: 0x040016EA RID: 5866
+		// Token: 0x040018DC RID: 6364
 		public EHookInteractType Type;
 
-		// Token: 0x040016EB RID: 5867
+		// Token: 0x040018DD RID: 6365
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x040016EC RID: 5868
+		// Token: 0x040018DE RID: 6366
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x040016ED RID: 5869
+		// Token: 0x040018DF RID: 6367
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x040016EE RID: 5870
+		// Token: 0x040018E0 RID: 6368
 		[Nullable(2)]
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x040016EF RID: 5871
+		// Token: 0x040018E1 RID: 6369
 		public int TitanEntityId;
 
-		// Token: 0x040016F0 RID: 5872
+		// Token: 0x040018E2 RID: 6370
 		public float MinPitchAngle;
 
-		// Token: 0x040016F1 RID: 5873
+		// Token: 0x040018E3 RID: 6371
 		public float DefaultPitchAngle;
 
-		// Token: 0x040016F2 RID: 5874
+		// Token: 0x040018E4 RID: 6372
 		public float MaxPitchAngle;
 
-		// Token: 0x040016F3 RID: 5875
+		// Token: 0x040018E5 RID: 6373
 		public float MaxYawAngleDelta;
 
-		// Token: 0x040016F4 RID: 5876
+		// Token: 0x040018E6 RID: 6374
 		public float FlySpeed;
 
-		// Token: 0x040016F5 RID: 5877
+		// Token: 0x040018E7 RID: 6375
 		public float? Gravity;
 
-		// Token: 0x040016F6 RID: 5878
-		[Nullable(1)]
+		// Token: 0x040018E8 RID: 6376
 		public List<IPilotThrowTarget> TargetList;
 
-		// Token: 0x040016F7 RID: 5879
+		// Token: 0x040018E9 RID: 6377
 		public EPilotThrowAutoThrowType? AutoThrowType;
 
-		// Token: 0x040016F8 RID: 5880
+		// Token: 0x040018EA RID: 6378
 		public bool? IsAutoRide;
 
-		// Token: 0x040016F9 RID: 5881
+		// Token: 0x040018EB RID: 6379
 		public bool? DisableInterrupt;
 	}
 }

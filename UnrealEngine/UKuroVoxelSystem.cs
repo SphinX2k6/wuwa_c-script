@@ -6,73 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F46 RID: 8006
-	[NullableContext(1)]
+	// Token: 0x0200063B RID: 1595
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVoxelRuntime.KuroVoxelSystem")]
 	[UnrealStructLayout(304, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 304)]
 	public class UKuroVoxelSystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601E738 RID: 124728 RVA: 0x002D4534 File Offset: 0x002D2734
+		// Token: 0x06008BD1 RID: 35793 RVA: 0x000D25FB File Offset: 0x000D07FB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroVoxelSystem._ClassPtr;
 		}
 
-		// Token: 0x0601E739 RID: 124729 RVA: 0x002D4540 File Offset: 0x002D2740
+		// Token: 0x06008BD2 RID: 35794 RVA: 0x000D2608 File Offset: 0x000D0808
 		public UKuroVoxelSystem() : this(BuiltinUtils.AllocNativeUObject(UKuroVoxelSystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601E73A RID: 124730 RVA: 0x002D4568 File Offset: 0x002D2768
+		// Token: 0x06008BD3 RID: 35795 RVA: 0x000D2630 File Offset: 0x000D0830
+		[NullableContext(1)]
 		public UKuroVoxelSystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroVoxelSystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007921 RID: 31009
-		// (get) Token: 0x0601E73B RID: 124731 RVA: 0x002D459C File Offset: 0x002D279C
-		// (set) Token: 0x0601E73C RID: 124732 RVA: 0x002D45D5 File Offset: 0x002D27D5
-		public TMap<FIntPoint, AKuroVoxelPartitionActor> LoadedPartitionActorsMap
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<FIntPoint, AKuroVoxelPartitionActor> result;
-				if ((result = this._LoadedPartitionActorsMap) == null)
-				{
-					result = (this._LoadedPartitionActorsMap = new TMap<FIntPoint, AKuroVoxelPartitionActor>(base.NativePtr + (IntPtr)UKuroVoxelSystem.__PropertyOffset_LoadedPartitionActorsMap, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.LoadedPartitionActorsMap.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17007922 RID: 31010
-		// (get) Token: 0x0601E73D RID: 124733 RVA: 0x002D45E4 File Offset: 0x002D27E4
-		// (set) Token: 0x0601E73E RID: 124734 RVA: 0x002D461D File Offset: 0x002D281D
-		public TSet<AKuroVoxelPartitionActor> ToAddActorSet
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TSet<AKuroVoxelPartitionActor> result;
-				if ((result = this._ToAddActorSet) == null)
-				{
-					result = (this._ToAddActorSet = new TSet<AKuroVoxelPartitionActor>(base.NativePtr + (IntPtr)UKuroVoxelSystem.__PropertyOffset_ToAddActorSet, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ToAddActorSet.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x0601E73F RID: 124735 RVA: 0x002D462C File Offset: 0x002D282C
-		[NullableContext(2)]
+		// Token: 0x06008BD4 RID: 35796 RVA: 0x000D2664 File Offset: 0x000D0864
 		public unsafe static bool TryGetVoxelInfoAtPos(UWorld World, FVector UEPos, ref FKuroVoxelInfo OutVoxelInfo, ref int ErrorCode, float SearchStep = -1f)
 		{
 			fixed (int* ptr = &ErrorCode)
@@ -82,21 +40,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E740 RID: 124736 RVA: 0x002D4667 File Offset: 0x002D2867
-		[NullableContext(2)]
+		// Token: 0x06008BD5 RID: 35797 RVA: 0x000D269F File Offset: 0x000D089F
 		public static bool IsVoxelSystemInitialized(UWorld World)
 		{
 			return UKuroVoxelSystem.__IsVoxelSystemInitialized_Internal((World != null) ? World.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601E741 RID: 124737 RVA: 0x002D467E File Offset: 0x002D287E
-		[NullableContext(2)]
+		// Token: 0x06008BD6 RID: 35798 RVA: 0x000D26B6 File Offset: 0x000D08B6
 		public static bool IsCavernAtPos(UWorld World, FVector UEPos)
 		{
 			return UKuroVoxelSystem.__IsCavernAtPos_Internal((World != null) ? World.NativePtr : IntPtr.Zero, UEPos);
 		}
 
-		// Token: 0x0601E742 RID: 124738 RVA: 0x002D4698 File Offset: 0x002D2898
+		// Token: 0x06008BD7 RID: 35799 RVA: 0x000D26D0 File Offset: 0x000D08D0
+		[NullableContext(1)]
 		public unsafe static FKuroVoxelInfo GetVoxelInfoAtPos([Nullable(2)] UWorld World, FVector UEPos, ref int ErrorCode, float SearchStep = -1f)
 		{
 			fixed (int* ptr = &ErrorCode)
@@ -106,21 +63,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E743 RID: 124739 RVA: 0x002D46C8 File Offset: 0x002D28C8
+		// Token: 0x06008BD8 RID: 35800 RVA: 0x000D2700 File Offset: 0x000D0900
+		[NullableContext(1)]
 		public static string GetMtlNameByID(byte MtlID)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKuroVoxelSystem.__GetMtlNameByID_Internal(MtlID));
 		}
 
-		// Token: 0x0601E744 RID: 124740 RVA: 0x002D46D5 File Offset: 0x002D28D5
-		[NullableContext(2)]
+		// Token: 0x06008BD9 RID: 35801 RVA: 0x000D270D File Offset: 0x000D090D
 		public static byte GetMaterialIDAtPos(UWorld World, FVector UEPos)
 		{
 			return UKuroVoxelSystem.__GetMaterialIDAtPos_Internal((World != null) ? World.NativePtr : IntPtr.Zero, UEPos);
 		}
 
-		// Token: 0x0601E745 RID: 124741 RVA: 0x002D46F0 File Offset: 0x002D28F0
-		[NullableContext(2)]
+		// Token: 0x06008BDA RID: 35802 RVA: 0x000D2728 File Offset: 0x000D0928
 		public unsafe static bool D_TryGetVoxelInfoAtPos(UWorld World, FVectorDouble UEPos, ref FKuroVoxelInfo OutVoxelInfo, ref int ErrorCode, double SearchStep = -1.0)
 		{
 			fixed (int* ptr = &ErrorCode)
@@ -130,14 +86,14 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E746 RID: 124742 RVA: 0x002D472B File Offset: 0x002D292B
-		[NullableContext(2)]
+		// Token: 0x06008BDB RID: 35803 RVA: 0x000D2763 File Offset: 0x000D0963
 		public static bool D_IsCavernAtPos(UWorld World, FVectorDouble UEPos)
 		{
 			return UKuroVoxelSystem.__D_IsCavernAtPos_Internal((World != null) ? World.NativePtr : IntPtr.Zero, UEPos);
 		}
 
-		// Token: 0x0601E747 RID: 124743 RVA: 0x002D4744 File Offset: 0x002D2944
+		// Token: 0x06008BDC RID: 35804 RVA: 0x000D277C File Offset: 0x000D097C
+		[NullableContext(1)]
 		public unsafe static FKuroVoxelInfo D_GetVoxelInfoAtPos([Nullable(2)] UWorld World, FVectorDouble UEPos, ref int ErrorCode, double SearchStep = -1.0)
 		{
 			fixed (int* ptr = &ErrorCode)
@@ -147,94 +103,72 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E748 RID: 124744 RVA: 0x002D4774 File Offset: 0x002D2974
-		[NullableContext(2)]
+		// Token: 0x06008BDD RID: 35805 RVA: 0x000D27AC File Offset: 0x000D09AC
 		public static byte D_GetMaterialIDAtPos(UWorld World, FVectorDouble UEPos)
 		{
 			return UKuroVoxelSystem.__D_GetMaterialIDAtPos_Internal((World != null) ? World.NativePtr : IntPtr.Zero, UEPos);
 		}
 
-		// Token: 0x0601E749 RID: 124745
+		// Token: 0x06008BDE RID: 35806
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TryGetVoxelInfoAtPos_Internal(IntPtr World, FVector UEPos, IntPtr OutVoxelInfo, ref int ErrorCode, float SearchStep);
 
-		// Token: 0x0601E74A RID: 124746
+		// Token: 0x06008BDF RID: 35807
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsVoxelSystemInitialized_Internal(IntPtr World);
 
-		// Token: 0x0601E74B RID: 124747
+		// Token: 0x06008BE0 RID: 35808
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsCavernAtPos_Internal(IntPtr World, FVector UEPos);
 
-		// Token: 0x0601E74C RID: 124748
+		// Token: 0x06008BE1 RID: 35809
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetVoxelInfoAtPos_Internal(IntPtr World, FVector UEPos, ref int ErrorCode, float SearchStep);
 
-		// Token: 0x0601E74D RID: 124749
+		// Token: 0x06008BE2 RID: 35810
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetMtlNameByID_Internal(byte MtlID);
 
-		// Token: 0x0601E74E RID: 124750
+		// Token: 0x06008BE3 RID: 35811
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern byte __GetMaterialIDAtPos_Internal(IntPtr World, FVector UEPos);
 
-		// Token: 0x0601E74F RID: 124751
+		// Token: 0x06008BE4 RID: 35812
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_TryGetVoxelInfoAtPos_Internal(IntPtr World, FVectorDouble UEPos, IntPtr OutVoxelInfo, ref int ErrorCode, double SearchStep);
 
-		// Token: 0x0601E750 RID: 124752
+		// Token: 0x06008BE5 RID: 35813
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_IsCavernAtPos_Internal(IntPtr World, FVectorDouble UEPos);
 
-		// Token: 0x0601E751 RID: 124753
+		// Token: 0x06008BE6 RID: 35814
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __D_GetVoxelInfoAtPos_Internal(IntPtr World, FVectorDouble UEPos, ref int ErrorCode, double SearchStep);
 
-		// Token: 0x0601E752 RID: 124754
+		// Token: 0x06008BE7 RID: 35815
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern byte __D_GetMaterialIDAtPos_Internal(IntPtr World, FVectorDouble UEPos);
 
-		// Token: 0x0601E753 RID: 124755 RVA: 0x002D478C File Offset: 0x002D298C
+		// Token: 0x06008BE8 RID: 35816 RVA: 0x000D27C4 File Offset: 0x000D09C4
 		static UKuroVoxelSystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroVoxelRuntime.KuroVoxelSystem");
 		}
 
-		// Token: 0x0601E754 RID: 124756 RVA: 0x002D479A File Offset: 0x002D299A
+		// Token: 0x06008BE9 RID: 35817 RVA: 0x000D27D2 File Offset: 0x000D09D2
 		protected UKuroVoxelSystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040106E0 RID: 67296
+		// Token: 0x04003CCA RID: 15562
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroVoxelRuntime.KuroVoxelSystem";
 
-		// Token: 0x040106E1 RID: 67297
+		// Token: 0x04003CCB RID: 15563
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040106E2 RID: 67298
+		// Token: 0x04003CCC RID: 15564
 		private static IntPtr _ClassDefaultObjectPtr;
-
-		// Token: 0x040106E3 RID: 67299
-		internal static int __PropertyOffset_LoadedPartitionActorsMap;
-
-		// Token: 0x040106E4 RID: 67300
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TMap<FIntPoint, AKuroVoxelPartitionActor> _LoadedPartitionActorsMap;
-
-		// Token: 0x040106E5 RID: 67301
-		internal static int __PropertyOffset_ToAddActorSet;
-
-		// Token: 0x040106E6 RID: 67302
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TSet<AKuroVoxelPartitionActor> _ToAddActorSet;
 	}
 }

@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004C4 RID: 1220
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200051D RID: 1309
 	public class ILevelSequenceSectionInfo
 	{
-		// Token: 0x060018C2 RID: 6338 RVA: 0x00049DF4 File Offset: 0x00047FF4
+		// Token: 0x06001A5C RID: 6748 RVA: 0x0004DB3C File Offset: 0x0004BD3C
 		private ILevelSequenceSectionInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018C3 RID: 6339 RVA: 0x00049E2C File Offset: 0x0004802C
+		// Token: 0x06001A5D RID: 6749 RVA: 0x0004DB74 File Offset: 0x0004BD74
 		public static ILevelSequenceSectionInfo Create([Nullable(2)] ILevelSequenceSectionInfo instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018C4 RID: 6340 RVA: 0x00049E3F File Offset: 0x0004803F
+		// Token: 0x06001A5E RID: 6750 RVA: 0x0004DB87 File Offset: 0x0004BD87
 		public static ILevelSequenceSectionInfo CreateFromSetValue([Nullable(2)] ILevelSequenceSectionInfo_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018C5 RID: 6341 RVA: 0x00049E54 File Offset: 0x00048054
+		// Token: 0x06001A5F RID: 6751 RVA: 0x0004DB9C File Offset: 0x0004BD9C
 		public ILevelSequenceSectionInfo_SetValue ToSetValue()
 		{
 			return new ILevelSequenceSectionInfo_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700069A RID: 1690
-		// (get) Token: 0x060018C6 RID: 6342 RVA: 0x00049EAE File Offset: 0x000480AE
-		// (set) Token: 0x060018C7 RID: 6343 RVA: 0x00049ED9 File Offset: 0x000480D9
+		// Token: 0x17000701 RID: 1793
+		// (get) Token: 0x06001A60 RID: 6752 RVA: 0x0004DBF6 File Offset: 0x0004BDF6
+		// (set) Token: 0x06001A61 RID: 6753 RVA: 0x0004DC21 File Offset: 0x0004BE21
 		public virtual ELevelSequenceSectionType Type
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700069B RID: 1691
-		// (get) Token: 0x060018C8 RID: 6344 RVA: 0x00049EE7 File Offset: 0x000480E7
-		// (set) Token: 0x060018C9 RID: 6345 RVA: 0x00049F12 File Offset: 0x00048112
+		// Token: 0x17000702 RID: 1794
+		// (get) Token: 0x06001A62 RID: 6754 RVA: 0x0004DC2F File Offset: 0x0004BE2F
+		// (set) Token: 0x06001A63 RID: 6755 RVA: 0x0004DC5A File Offset: 0x0004BE5A
 		public virtual string Key
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700069C RID: 1692
-		// (get) Token: 0x060018CA RID: 6346 RVA: 0x00049F20 File Offset: 0x00048120
-		// (set) Token: 0x060018CB RID: 6347 RVA: 0x00049F4B File Offset: 0x0004814B
+		// Token: 0x17000703 RID: 1795
+		// (get) Token: 0x06001A64 RID: 6756 RVA: 0x0004DC68 File Offset: 0x0004BE68
+		// (set) Token: 0x06001A65 RID: 6757 RVA: 0x0004DC93 File Offset: 0x0004BE93
 		public virtual int FrameId
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700069D RID: 1693
-		// (get) Token: 0x060018CC RID: 6348 RVA: 0x00049F59 File Offset: 0x00048159
-		// (set) Token: 0x060018CD RID: 6349 RVA: 0x00049F80 File Offset: 0x00048180
+		// Token: 0x17000704 RID: 1796
+		// (get) Token: 0x06001A66 RID: 6758 RVA: 0x0004DCA1 File Offset: 0x0004BEA1
+		// (set) Token: 0x06001A67 RID: 6759 RVA: 0x0004DCC8 File Offset: 0x0004BEC8
 		[Nullable(2)]
 		public virtual string State
 		{
@@ -163,20 +161,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700069E RID: 1694
-		// (get) Token: 0x060018CE RID: 6350 RVA: 0x00049F8E File Offset: 0x0004818E
-		// (set) Token: 0x060018CF RID: 6351 RVA: 0x00049FB5 File Offset: 0x000481B5
+		// Token: 0x17000705 RID: 1797
+		// (get) Token: 0x06001A68 RID: 6760 RVA: 0x0004DCD6 File Offset: 0x0004BED6
+		// (set) Token: 0x06001A69 RID: 6761 RVA: 0x0004DCFD File Offset: 0x0004BEFD
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> LoopStates
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -194,7 +192,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -202,20 +200,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700069F RID: 1695
-		// (get) Token: 0x060018D0 RID: 6352 RVA: 0x00049FC4 File Offset: 0x000481C4
-		// (set) Token: 0x060018D1 RID: 6353 RVA: 0x0004A057 File Offset: 0x00048257
+		// Token: 0x17000706 RID: 1798
+		// (get) Token: 0x06001A6A RID: 6762 RVA: 0x0004DD0C File Offset: 0x0004BF0C
+		// (set) Token: 0x06001A6B RID: 6763 RVA: 0x0004DD9F File Offset: 0x0004BF9F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ActionList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -246,7 +244,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -255,23 +253,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001254 RID: 4692
+		// Token: 0x04001376 RID: 4982
 		[Nullable(2)]
 		protected ILevelSequenceSectionInfo FbInstance;
 
-		// Token: 0x04001255 RID: 4693
+		// Token: 0x04001377 RID: 4983
 		[Nullable(2)]
 		protected ILevelSequenceSectionInfo_SetValue PocoInterface;
 
-		// Token: 0x04001256 RID: 4694
+		// Token: 0x04001378 RID: 4984
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionListCache;
 
-		// Token: 0x04001257 RID: 4695
+		// Token: 0x04001379 RID: 4985
 		private bool _ActionListInited;
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F41 RID: 20289
+	// Token: 0x02005473 RID: 21619
 	public class IBulletHitConfigT
 	{
-		// Token: 0x1700923A RID: 37434
-		// (get) Token: 0x060201FD RID: 131581 RVA: 0x0047837E File Offset: 0x0047657E
-		// (set) Token: 0x060201FE RID: 131582 RVA: 0x00478386 File Offset: 0x00476586
+		// Token: 0x170099BC RID: 39356
+		// (get) Token: 0x06021F6D RID: 139117 RVA: 0x004AE712 File Offset: 0x004AC912
+		// (set) Token: 0x06021F6E RID: 139118 RVA: 0x004AE71A File Offset: 0x004AC91A
 		public THitBulletTypeUnion HitBullet { get; set; }
 
-		// Token: 0x1700923B RID: 37435
-		// (get) Token: 0x060201FF RID: 131583 RVA: 0x0047838F File Offset: 0x0047658F
-		// (set) Token: 0x06020200 RID: 131584 RVA: 0x00478397 File Offset: 0x00476597
+		// Token: 0x170099BD RID: 39357
+		// (get) Token: 0x06021F6F RID: 139119 RVA: 0x004AE723 File Offset: 0x004AC923
+		// (set) Token: 0x06021F70 RID: 139120 RVA: 0x004AE72B File Offset: 0x004AC92B
 		public IHitTimeScaleRatioT AttackerHitTimeScaleRatio { get; set; }
 
-		// Token: 0x1700923C RID: 37436
-		// (get) Token: 0x06020201 RID: 131585 RVA: 0x004783A0 File Offset: 0x004765A0
-		// (set) Token: 0x06020202 RID: 131586 RVA: 0x004783A8 File Offset: 0x004765A8
+		// Token: 0x170099BE RID: 39358
+		// (get) Token: 0x06021F71 RID: 139121 RVA: 0x004AE734 File Offset: 0x004AC934
+		// (set) Token: 0x06021F72 RID: 139122 RVA: 0x004AE73C File Offset: 0x004AC93C
 		public IHitTimeScaleRatioT VictimHitTimeScaleRatio { get; set; }
 
-		// Token: 0x06020203 RID: 131587 RVA: 0x004783B1 File Offset: 0x004765B1
+		// Token: 0x06021F73 RID: 139123 RVA: 0x004AE745 File Offset: 0x004AC945
 		public IBulletHitConfigT()
 		{
 			this.HitBullet = null;

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054F5 RID: 21749
+	// Token: 0x02005A7B RID: 23163
 	public class ILevitateMagnetComponentT
 	{
-		// Token: 0x1700A07F RID: 41087
-		// (get) Token: 0x06023E71 RID: 147057 RVA: 0x004F6CC0 File Offset: 0x004F4EC0
-		// (set) Token: 0x06023E72 RID: 147058 RVA: 0x004F6CC8 File Offset: 0x004F4EC8
+		// Token: 0x1700A8B9 RID: 43193
+		// (get) Token: 0x06025F2B RID: 155435 RVA: 0x00533DE4 File Offset: 0x00531FE4
+		// (set) Token: 0x06025F2C RID: 155436 RVA: 0x00533DEC File Offset: 0x00531FEC
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A080 RID: 41088
-		// (get) Token: 0x06023E73 RID: 147059 RVA: 0x004F6CD1 File Offset: 0x004F4ED1
-		// (set) Token: 0x06023E74 RID: 147060 RVA: 0x004F6CD9 File Offset: 0x004F4ED9
+		// Token: 0x1700A8BA RID: 43194
+		// (get) Token: 0x06025F2D RID: 155437 RVA: 0x00533DF5 File Offset: 0x00531FF5
+		// (set) Token: 0x06025F2E RID: 155438 RVA: 0x00533DFD File Offset: 0x00531FFD
 		public int MoveSpeed { get; set; }
 
-		// Token: 0x1700A081 RID: 41089
-		// (get) Token: 0x06023E75 RID: 147061 RVA: 0x004F6CE2 File Offset: 0x004F4EE2
-		// (set) Token: 0x06023E76 RID: 147062 RVA: 0x004F6CEA File Offset: 0x004F4EEA
+		// Token: 0x1700A8BB RID: 43195
+		// (get) Token: 0x06025F2F RID: 155439 RVA: 0x00533E06 File Offset: 0x00532006
+		// (set) Token: 0x06025F30 RID: 155440 RVA: 0x00533E0E File Offset: 0x0053200E
 		public int Test { get; set; }
 
-		// Token: 0x1700A082 RID: 41090
-		// (get) Token: 0x06023E77 RID: 147063 RVA: 0x004F6CF3 File Offset: 0x004F4EF3
-		// (set) Token: 0x06023E78 RID: 147064 RVA: 0x004F6CFB File Offset: 0x004F4EFB
+		// Token: 0x1700A8BC RID: 43196
+		// (get) Token: 0x06025F31 RID: 155441 RVA: 0x00533E17 File Offset: 0x00532017
+		// (set) Token: 0x06025F32 RID: 155442 RVA: 0x00533E1F File Offset: 0x0053201F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023E79 RID: 147065 RVA: 0x004F6D04 File Offset: 0x004F4F04
+		// Token: 0x06025F33 RID: 155443 RVA: 0x00533E28 File Offset: 0x00532028
 		public ILevitateMagnetComponentT()
 		{
 			this.Disabled = false;

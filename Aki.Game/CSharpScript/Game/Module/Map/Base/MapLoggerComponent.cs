@@ -4,12 +4,12 @@ using CSharpScript.Game.Module.Map.Misc;
 
 namespace CSharpScript.Game.Module.Map.Base
 {
-	// Token: 0x02005599 RID: 21913
+	// Token: 0x0200456F RID: 17775
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapLoggerComponent : MapComponent
 	{
-		// Token: 0x06037DB7 RID: 228791 RVA: 0x00D3CCAD File Offset: 0x00D3AEAD
+		// Token: 0x0602CCB5 RID: 183477 RVA: 0x00C8A9F5 File Offset: 0x00C88BF5
 		public MapLoggerComponent([Nullable(new byte[]
 		{
 			0,
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.Map.Base
 		{
 		}
 
-		// Token: 0x1700867B RID: 34427
-		// (get) Token: 0x06037DB8 RID: 228792 RVA: 0x00D3CCB6 File Offset: 0x00D3AEB6
+		// Token: 0x17005A42 RID: 23106
+		// (get) Token: 0x0602CCB6 RID: 183478 RVA: 0x00C8A9FE File Offset: 0x00C88BFE
 		public override EMapComponent ComponentType
 		{
 			get
@@ -30,9 +30,9 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x1700867C RID: 34428
-		// (get) Token: 0x06037DB9 RID: 228793 RVA: 0x00D3CCBC File Offset: 0x00D3AEBC
-		// (set) Token: 0x06037DBA RID: 228794 RVA: 0x00D3CCED File Offset: 0x00D3AEED
+		// Token: 0x17005A43 RID: 23107
+		// (get) Token: 0x0602CCB7 RID: 183479 RVA: 0x00C8AA04 File Offset: 0x00C88C04
+		// (set) Token: 0x0602CCB8 RID: 183480 RVA: 0x00C8AA35 File Offset: 0x00C88C35
 		public bool EnableLog
 		{
 			get
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037DBB RID: 228795 RVA: 0x00D3CD0B File Offset: 0x00D3AF0B
+		// Token: 0x0602CCB9 RID: 183481 RVA: 0x00C8AA53 File Offset: 0x00C88C53
 		public new void LogInfo(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037DBC RID: 228796 RVA: 0x00D3CD1D File Offset: 0x00D3AF1D
+		// Token: 0x0602CCBA RID: 183482 RVA: 0x00C8AA65 File Offset: 0x00C88C65
 		public new void LogWarn(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037DBD RID: 228797 RVA: 0x00D3CD2F File Offset: 0x00D3AF2F
+		// Token: 0x0602CCBB RID: 183483 RVA: 0x00C8AA77 File Offset: 0x00C88C77
 		public new void LogError(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x0401D581 RID: 120193
+		// Token: 0x0401800C RID: 98316
 		private const string EnableLogKey = "EnableLog";
 	}
 }

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062E7 RID: 25319
+	// Token: 0x02005265 RID: 21093
 	public class PinballWeaponTipsTopView : UiPanelBase
 	{
-		// Token: 0x0603FB49 RID: 260937 RVA: 0x00F69C3C File Offset: 0x00F67E3C
+		// Token: 0x0603480A RID: 215050 RVA: 0x00EB0B98 File Offset: 0x00EAED98
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FB4A RID: 260938 RVA: 0x00F69D45 File Offset: 0x00F67F45
+		// Token: 0x0603480B RID: 215051 RVA: 0x00EB0CA1 File Offset: 0x00EAEEA1
 		[NullableContext(1)]
 		public void Refresh(PinballWeaponData data)
 		{
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603FB4B RID: 260939 RVA: 0x00F69D54 File Offset: 0x00F67F54
+		// Token: 0x0603480C RID: 215052 RVA: 0x00EB0CB0 File Offset: 0x00EAEEB0
 		public void SetLockToggleShowState(bool bShow)
 		{
 			this.LockToggleShowState = bShow;
 		}
 
-		// Token: 0x0603FB4C RID: 260940 RVA: 0x00F69D60 File Offset: 0x00F67F60
+		// Token: 0x0603480D RID: 215053 RVA: 0x00EB0CBC File Offset: 0x00EAEEBC
 		private void RefreshUi()
 		{
 			if (this.Data == null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			extendToggle.SetToggleStateForce(this.Data.GetIsLock() ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603FB4D RID: 260941 RVA: 0x00F69E58 File Offset: 0x00F68058
+		// Token: 0x0603480E RID: 215054 RVA: 0x00EB0DB4 File Offset: 0x00EAEFB4
 		public void RefreshLockToggleShowState()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			extendToggle.RootUIComp.Get().SetUIActive(this.LockToggleShowState);
 		}
 
-		// Token: 0x0603FB4E RID: 260942 RVA: 0x00F69E8C File Offset: 0x00F6808C
+		// Token: 0x0603480F RID: 215055 RVA: 0x00EB0DE8 File Offset: 0x00EAEFE8
 		private void OnClickLockToggle(EToggleState state)
 		{
 			if (this.Data == null)
@@ -98,25 +98,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			pinballController.RequestWeaponLock(this.Data.IncId, bLock);
 		}
 
-		// Token: 0x04021465 RID: 136293
+		// Token: 0x0401BD94 RID: 114068
 		[Nullable(1)]
 		private PinballWeaponData Data;
 
-		// Token: 0x04021466 RID: 136294
+		// Token: 0x0401BD95 RID: 114069
 		private bool LockToggleShowState = true;
 
-		// Token: 0x0200C4D4 RID: 50388
+		// Token: 0x0200AEBB RID: 44731
 		private enum EComponent
 		{
-			// Token: 0x0403B657 RID: 243287
+			// Token: 0x04035FB9 RID: 221113
 			TexQuality,
-			// Token: 0x0403B658 RID: 243288
+			// Token: 0x04035FBA RID: 221114
 			TexWeaponIcon,
-			// Token: 0x0403B659 RID: 243289
+			// Token: 0x04035FBB RID: 221115
 			TextName,
-			// Token: 0x0403B65A RID: 243290
+			// Token: 0x04035FBC RID: 221116
 			TextType,
-			// Token: 0x0403B65B RID: 243291
+			// Token: 0x04035FBD RID: 221117
 			LockToggle
 		}
 	}

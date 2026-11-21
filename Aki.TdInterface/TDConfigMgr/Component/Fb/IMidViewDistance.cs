@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF8 RID: 3320
+	// Token: 0x02000DF0 RID: 3568
 	public class IMidViewDistance : IViewDistanceMode
 	{
-		// Token: 0x06004BD5 RID: 19413 RVA: 0x000BD3F0 File Offset: 0x000BB5F0
-		[NullableContext(1)]
+		// Token: 0x060050E3 RID: 20707 RVA: 0x000C8920 File Offset: 0x000C6B20
 		public static IMidViewDistance Create(IMidViewDistance? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017A2 RID: 6050
-		// (get) Token: 0x06004BD6 RID: 19414 RVA: 0x000BD40F File Offset: 0x000BB60F
+		// Token: 0x170018FE RID: 6398
+		// (get) Token: 0x060050E4 RID: 20708 RVA: 0x000C893F File Offset: 0x000C6B3F
 		public override EViewDistanceType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B5B RID: 11099
+		// Token: 0x04002E15 RID: 11797
 		private IMidViewDistance Instance;
 	}
 }

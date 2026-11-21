@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002576 RID: 9590
+// Token: 0x02001A61 RID: 6753
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoSubTabPanel : UiPanelBase
 {
-	// Token: 0x060135E8 RID: 79336 RVA: 0x004D1EA4 File Offset: 0x004D00A4
+	// Token: 0x06010ACB RID: 68299 RVA: 0x004E0B0C File Offset: 0x004DED0C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,17 +26,17 @@ public class PhotoSubTabPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060135E9 RID: 79337 RVA: 0x004D1F14 File Offset: 0x004D0114
+	// Token: 0x06010ACC RID: 68300 RVA: 0x004E0B7C File Offset: 0x004DED7C
 	protected override void OnStart()
 	{
 		this.TabLayout = new GenericLayout<PhotoSettingTabItem, PhotoSubTab>(base.GetVerticalLayout(2), new Func<PhotoSettingTabItem>(this.CreateTabItem), base.GetItem(3).GetOwner() as AUIBaseActor, false, true);
 		this.RefreshDecoration();
 	}
 
-	// Token: 0x060135EA RID: 79338 RVA: 0x004D1F50 File Offset: 0x004D0150
+	// Token: 0x06010ACD RID: 68301 RVA: 0x004E0BB8 File Offset: 0x004DEDB8
 	private void RefreshDecoration()
 	{
-		bool flag = Info.Instance.IsMobilePlatform();
+		bool flag = Info.Instance.IsInTouch();
 		UUISprite sprite = base.GetSprite(0);
 		if (sprite != null)
 		{
@@ -50,7 +50,7 @@ public class PhotoSubTabPanel : UiPanelBase
 		sprite2.SetUIActive(!flag);
 	}
 
-	// Token: 0x060135EB RID: 79339 RVA: 0x004D1F90 File Offset: 0x004D0190
+	// Token: 0x06010ACE RID: 68302 RVA: 0x004E0BF8 File Offset: 0x004DEDF8
 	public UniTask RefreshByDataAsync(IReadOnlyList<PhotoSubTab> dataList, bool playGridAnim = false)
 	{
 		PhotoSubTabPanel.<RefreshByDataAsync>d__6 <RefreshByDataAsync>d__;
@@ -63,7 +63,7 @@ public class PhotoSubTabPanel : UiPanelBase
 		return <RefreshByDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060135EC RID: 79340 RVA: 0x004D1FE3 File Offset: 0x004D01E3
+	// Token: 0x06010ACF RID: 68303 RVA: 0x004E0C4B File Offset: 0x004DEE4B
 	public void SelectByKey(object key, bool fireEvent = false)
 	{
 		GenericLayout<PhotoSettingTabItem, PhotoSubTab> tabLayout = this.TabLayout;
@@ -74,7 +74,7 @@ public class PhotoSubTabPanel : UiPanelBase
 		tabLayout.SelectGridProxyByKey(key, fireEvent);
 	}
 
-	// Token: 0x060135ED RID: 79341 RVA: 0x004D1FF7 File Offset: 0x004D01F7
+	// Token: 0x06010AD0 RID: 68304 RVA: 0x004E0C5F File Offset: 0x004DEE5F
 	private PhotoSettingTabItem CreateTabItem()
 	{
 		return new PhotoSettingTabItem
@@ -83,18 +83,18 @@ public class PhotoSubTabPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060135EE RID: 79342 RVA: 0x004D2010 File Offset: 0x004D0210
+	// Token: 0x06010AD1 RID: 68305 RVA: 0x004E0C78 File Offset: 0x004DEE78
 	private void OnSubTabItemClick(PhotoSubTab data)
 	{
 		this.OnSubTabClick(data);
 	}
 
-	// Token: 0x040091E2 RID: 37346
+	// Token: 0x0400933B RID: 37691
 	public Action<PhotoSubTab> OnSubTabClick = delegate(PhotoSubTab data)
 	{
 	};
 
-	// Token: 0x040091E3 RID: 37347
+	// Token: 0x0400933C RID: 37692
 	[Nullable(new byte[]
 	{
 		2,
@@ -102,17 +102,17 @@ public class PhotoSubTabPanel : UiPanelBase
 	})]
 	private GenericLayout<PhotoSettingTabItem, PhotoSubTab> TabLayout;
 
-	// Token: 0x02008B68 RID: 35688
+	// Token: 0x02007CEE RID: 31982
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D447 RID: 185415
+		// Token: 0x04028754 RID: 165716
 		SpriteDecoTop,
-		// Token: 0x0402D448 RID: 185416
+		// Token: 0x04028755 RID: 165717
 		SpriteDecoBottom,
-		// Token: 0x0402D449 RID: 185417
+		// Token: 0x04028756 RID: 165718
 		LayoutItemMenu,
-		// Token: 0x0402D44A RID: 185418
+		// Token: 0x04028757 RID: 165719
 		ItemTabTemplate
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001AF RID: 431
+	// Token: 0x020001C1 RID: 449
 	public class ConfigCustomerServiceAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A1D RID: 2589 RVA: 0x00092BB4 File Offset: 0x00090DB4
+		// Token: 0x06000A89 RID: 2697 RVA: 0x00098AEC File Offset: 0x00096CEC
 		static ConfigCustomerServiceAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCustomerServiceAll.CreateStaticDefaultValue), new Action(ConfigCustomerServiceAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A1E RID: 2590 RVA: 0x00092BD4 File Offset: 0x00090DD4
+		// Token: 0x06000A8A RID: 2698 RVA: 0x00098B0C File Offset: 0x00096D0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCustomerServiceAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A1F RID: 2591 RVA: 0x00092C53 File Offset: 0x00090E53
+		// Token: 0x06000A8B RID: 2699 RVA: 0x00098B8B File Offset: 0x00096D8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCustomerServiceAll.LogPair = null;
 			ConfigCustomerServiceAll.HandleId = 0;
 		}
 
-		// Token: 0x06000A20 RID: 2592 RVA: 0x00092C61 File Offset: 0x00090E61
+		// Token: 0x06000A8C RID: 2700 RVA: 0x00098B99 File Offset: 0x00096D99
 		public static void Init()
 		{
 			ConfigCustomerServiceAll.HandleId = ConfigCommon.InitDataStatement(ConfigCustomerServiceAll.HandleId, "db_platformchannel.db", "select BinData from `CustomerService` where PackageType!=?");
 		}
 
-		// Token: 0x06000A21 RID: 2593 RVA: 0x00092C7C File Offset: 0x00090E7C
+		// Token: 0x06000A8D RID: 2701 RVA: 0x00098BB4 File Offset: 0x00096DB4
 		[NullableContext(2)]
 		public static IReadOnlyList<CustomerService> GetConfigList(int p0PackageType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000BAD RID: 2989
+		// Token: 0x04000C2B RID: 3115
 		private const string DB = "db_platformchannel.db";
 
-		// Token: 0x04000BAE RID: 2990
+		// Token: 0x04000C2C RID: 3116
 		private const string FILE = "p.平台渠道.xlsx";
 
-		// Token: 0x04000BAF RID: 2991
+		// Token: 0x04000C2D RID: 3117
 		private const string TABLE = "CustomerService";
 
-		// Token: 0x04000BB0 RID: 2992
+		// Token: 0x04000C2E RID: 3118
 		private const string COMMAND = "select BinData from `CustomerService` where PackageType!=?";
 
-		// Token: 0x04000BB1 RID: 2993
+		// Token: 0x04000C2F RID: 3119
 		private const string KEY_PREFIX = "CustomerServiceAll";
 
-		// Token: 0x04000BB2 RID: 2994
+		// Token: 0x04000C30 RID: 3120
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BB3 RID: 2995
+		// Token: 0x04000C31 RID: 3121
 		private static int HandleId;
 	}
 }

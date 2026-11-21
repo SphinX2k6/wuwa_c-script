@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DDB RID: 11739
+// Token: 0x02002336 RID: 9014
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,14 +13,14 @@ using UnrealEngine;
 })]
 public class BulletLogicSuiGuang : BulletLogicController<LogicDataSuiGuang, object>
 {
-	// Token: 0x06018A4D RID: 100941 RVA: 0x0064F213 File Offset: 0x0064D413
+	// Token: 0x060162FA RID: 90874 RVA: 0x00675350 File Offset: 0x00673550
 	public BulletLogicSuiGuang(LogicDataSuiGuang bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A4E RID: 100942 RVA: 0x0064F238 File Offset: 0x0064D438
+	// Token: 0x060162FB RID: 90875 RVA: 0x00675374 File Offset: 0x00673574
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -61,7 +61,7 @@ public class BulletLogicSuiGuang : BulletLogicController<LogicDataSuiGuang, obje
 		}
 	}
 
-	// Token: 0x06018A4F RID: 100943 RVA: 0x0064F320 File Offset: 0x0064D520
+	// Token: 0x060162FC RID: 90876 RVA: 0x0067545C File Offset: 0x0067365C
 	private void BuildBullet(string bulletId, int victimId)
 	{
 		FTransformDouble actorTransform = this.Bullet.GetComponent<BulletActorComponent>().ActorTransform;
@@ -82,9 +82,9 @@ public class BulletLogicSuiGuang : BulletLogicController<LogicDataSuiGuang, obje
 		BulletController.Instance.DestroyBullet(this.Bullet.Id, false, EBulletDestroyReason.Normal, false);
 	}
 
-	// Token: 0x0400B795 RID: 46997
+	// Token: 0x0400BB1B RID: 47899
 	private readonly LogicDataSuiGuang Parameter;
 
-	// Token: 0x0400B796 RID: 46998
+	// Token: 0x0400BB1C RID: 47900
 	private readonly BulletInfo BulletInfo;
 }

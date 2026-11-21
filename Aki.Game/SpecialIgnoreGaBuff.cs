@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EAE RID: 11950
+// Token: 0x02002401 RID: 9217
 public static class SpecialIgnoreGaBuff
 {
-	// Token: 0x0400BE9D RID: 48797
+	// Token: 0x0400C238 RID: 49720
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly long[] Values = new long[]

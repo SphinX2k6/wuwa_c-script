@@ -6,17 +6,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007335 RID: 29493
+	// Token: 0x020064B8 RID: 25784
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionAttribute : AiStateMachineCondition
 	{
-		// Token: 0x0604860A RID: 296458 RVA: 0x0129E2D6 File Offset: 0x0129C4D6
+		// Token: 0x0603EA57 RID: 256599 RVA: 0x01240D5E File Offset: 0x0123EF5E
 		public AiStateMachineConditionAttribute(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x0604860B RID: 296459 RVA: 0x0129E2E4 File Offset: 0x0129C4E4
+		// Token: 0x0603EA58 RID: 256600 RVA: 0x01240D6C File Offset: 0x0123EF6C
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.AttributeId = (EAttributeType)condition.CondAttribute.AttributeId;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x0604860C RID: 296460 RVA: 0x0129E384 File Offset: 0x0129C584
+		// Token: 0x0603EA59 RID: 256601 RVA: 0x01240E0C File Offset: 0x0123F00C
 		private void OnAttrChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.ResultSelf = (newValue >= this.Min && newValue <= this.Max);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604860D RID: 296461 RVA: 0x0129E3E9 File Offset: 0x0129C5E9
+		// Token: 0x0603EA5A RID: 256602 RVA: 0x01240E71 File Offset: 0x0123F071
 		protected override void OnClear()
 		{
 			BaseAttributeComponent attributeComponent = this.Node.AttributeComponent;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			attributeComponent.RemoveListener(this.AttributeId, new Action<EAttributeType, float, float>(this.OnAttrChanged));
 		}
 
-		// Token: 0x0604860E RID: 296462 RVA: 0x0129E414 File Offset: 0x0129C614
+		// Token: 0x0603EA5B RID: 256603 RVA: 0x01240E9C File Offset: 0x0123F09C
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x0402644F RID: 156751
+		// Token: 0x0402173C RID: 137020
 		private EAttributeType AttributeId;
 
-		// Token: 0x04026450 RID: 156752
+		// Token: 0x0402173D RID: 137021
 		private float Min;
 
-		// Token: 0x04026451 RID: 156753
+		// Token: 0x0402173E RID: 137022
 		private float Max;
 	}
 }

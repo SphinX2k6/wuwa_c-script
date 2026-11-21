@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004886 RID: 18566
+	// Token: 0x02004CEB RID: 19691
 	public struct ILevelPlaySyncBlockContext : IFlatbufferObject
 	{
-		// Token: 0x170086A4 RID: 34468
-		// (get) Token: 0x0601CF56 RID: 118614 RVA: 0x004178C8 File Offset: 0x00415AC8
+		// Token: 0x17008CEC RID: 36076
+		// (get) Token: 0x0601E743 RID: 124739 RVA: 0x00444064 File Offset: 0x00442264
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CF57 RID: 118615 RVA: 0x004178D5 File Offset: 0x00415AD5
+		// Token: 0x0601E744 RID: 124740 RVA: 0x00444071 File Offset: 0x00442271
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CF58 RID: 118616 RVA: 0x004178DC File Offset: 0x00415ADC
+		// Token: 0x0601E745 RID: 124741 RVA: 0x00444078 File Offset: 0x00442278
 		public static ILevelPlaySyncBlockContext GetRootAsILevelPlaySyncBlockContext(ByteBuffer _bb)
 		{
 			return ILevelPlaySyncBlockContext.GetRootAsILevelPlaySyncBlockContext(_bb, default(ILevelPlaySyncBlockContext));
 		}
 
-		// Token: 0x0601CF59 RID: 118617 RVA: 0x004178F8 File Offset: 0x00415AF8
+		// Token: 0x0601E746 RID: 124742 RVA: 0x00444094 File Offset: 0x00442294
 		public static ILevelPlaySyncBlockContext GetRootAsILevelPlaySyncBlockContext(ByteBuffer _bb, ILevelPlaySyncBlockContext obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CF5A RID: 118618 RVA: 0x00417915 File Offset: 0x00415B15
+		// Token: 0x0601E747 RID: 124743 RVA: 0x004440B1 File Offset: 0x004422B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CF5B RID: 118619 RVA: 0x00417924 File Offset: 0x00415B24
+		// Token: 0x0601E748 RID: 124744 RVA: 0x004440C0 File Offset: 0x004422C0
 		public ILevelPlaySyncBlockContext __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170086A5 RID: 34469
-		// (get) Token: 0x0601CF5C RID: 118620 RVA: 0x00417934 File Offset: 0x00415B34
+		// Token: 0x17008CED RID: 36077
+		// (get) Token: 0x0601E749 RID: 124745 RVA: 0x004440D0 File Offset: 0x004422D0
 		public ESyncBlockContext Type
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CF5D RID: 118621 RVA: 0x00417970 File Offset: 0x00415B70
+		// Token: 0x0601E74A RID: 124746 RVA: 0x0044410C File Offset: 0x0044230C
 		public ISyncBlockGroup? SyncBlockGroups(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return new ISyncBlockGroup?(default(ISyncBlockGroup).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170086A6 RID: 34470
-		// (get) Token: 0x0601CF5E RID: 118622 RVA: 0x004179D0 File Offset: 0x00415BD0
+		// Token: 0x17008CEE RID: 36078
+		// (get) Token: 0x0601E74B RID: 124747 RVA: 0x0044416C File Offset: 0x0044236C
 		public int SyncBlockGroupsLength
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CF5F RID: 118623 RVA: 0x004179FB File Offset: 0x00415BFB
+		// Token: 0x0601E74C RID: 124748 RVA: 0x00444197 File Offset: 0x00442397
 		public static Offset<ILevelPlaySyncBlockContext> CreateILevelPlaySyncBlockContext(FlatBufferBuilder builder, ESyncBlockContext Type = ESyncBlockContext.Quest, VectorOffset SyncBlockGroupsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -99,25 +99,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ILevelPlaySyncBlockContext.EndILevelPlaySyncBlockContext(builder);
 		}
 
-		// Token: 0x0601CF60 RID: 118624 RVA: 0x00417A18 File Offset: 0x00415C18
+		// Token: 0x0601E74D RID: 124749 RVA: 0x004441B4 File Offset: 0x004423B4
 		public static void StartILevelPlaySyncBlockContext(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601CF61 RID: 118625 RVA: 0x00417A21 File Offset: 0x00415C21
+		// Token: 0x0601E74E RID: 124750 RVA: 0x004441BD File Offset: 0x004423BD
 		public static void AddType(FlatBufferBuilder builder, ESyncBlockContext type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601CF62 RID: 118626 RVA: 0x00417A2C File Offset: 0x00415C2C
+		// Token: 0x0601E74F RID: 124751 RVA: 0x004441C8 File Offset: 0x004423C8
 		public static void AddSyncBlockGroups(FlatBufferBuilder builder, VectorOffset syncBlockGroupsOffset)
 		{
 			builder.AddOffset(1, syncBlockGroupsOffset.Value, 0);
 		}
 
-		// Token: 0x0601CF63 RID: 118627 RVA: 0x00417A3C File Offset: 0x00415C3C
+		// Token: 0x0601E750 RID: 124752 RVA: 0x004441D8 File Offset: 0x004423D8
 		public static VectorOffset CreateSyncBlockGroupsVector(FlatBufferBuilder builder, Offset<ISyncBlockGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CF64 RID: 118628 RVA: 0x00417A7C File Offset: 0x00415C7C
+		// Token: 0x0601E751 RID: 124753 RVA: 0x00444218 File Offset: 0x00442418
 		public static VectorOffset CreateSyncBlockGroupsVectorBlock(FlatBufferBuilder builder, Offset<ISyncBlockGroup>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CF65 RID: 118629 RVA: 0x00417A96 File Offset: 0x00415C96
+		// Token: 0x0601E752 RID: 124754 RVA: 0x00444232 File Offset: 0x00442432
 		public static VectorOffset CreateSyncBlockGroupsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ISyncBlockGroup>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CF66 RID: 118630 RVA: 0x00417AB4 File Offset: 0x00415CB4
+		// Token: 0x0601E753 RID: 124755 RVA: 0x00444250 File Offset: 0x00442450
 		public static VectorOffset CreateSyncBlockGroupsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -152,19 +152,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CF67 RID: 118631 RVA: 0x00417ACD File Offset: 0x00415CCD
+		// Token: 0x0601E754 RID: 124756 RVA: 0x00444269 File Offset: 0x00442469
 		public static void StartSyncBlockGroupsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601CF68 RID: 118632 RVA: 0x00417AD8 File Offset: 0x00415CD8
+		// Token: 0x0601E755 RID: 124757 RVA: 0x00444274 File Offset: 0x00442474
 		public static Offset<ILevelPlaySyncBlockContext> EndILevelPlaySyncBlockContext(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlaySyncBlockContext>(builder.EndTable());
 		}
 
-		// Token: 0x0601CF69 RID: 118633 RVA: 0x00417AE8 File Offset: 0x00415CE8
+		// Token: 0x0601E756 RID: 124758 RVA: 0x00444284 File Offset: 0x00442484
 		public ILevelPlaySyncBlockContextT UnPack()
 		{
 			ILevelPlaySyncBlockContextT levelPlaySyncBlockContextT = new ILevelPlaySyncBlockContextT();
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return levelPlaySyncBlockContextT;
 		}
 
-		// Token: 0x0601CF6A RID: 118634 RVA: 0x00417B04 File Offset: 0x00415D04
+		// Token: 0x0601E757 RID: 124759 RVA: 0x004442A0 File Offset: 0x004424A0
 		public void UnPackTo(ILevelPlaySyncBlockContextT _o)
 		{
 			_o.Type = this.Type;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CF6B RID: 118635 RVA: 0x00417B70 File Offset: 0x00415D70
+		// Token: 0x0601E758 RID: 124760 RVA: 0x0044430C File Offset: 0x0044250C
 		public static Offset<ILevelPlaySyncBlockContext> Pack(FlatBufferBuilder builder, ILevelPlaySyncBlockContextT _o)
 		{
 			if (_o == null)
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ILevelPlaySyncBlockContext.CreateILevelPlaySyncBlockContext(builder, _o.Type, syncBlockGroupsOffset);
 		}
 
-		// Token: 0x0400CE6C RID: 52844
+		// Token: 0x0400D8A5 RID: 55461
 		private Table __p;
 	}
 }

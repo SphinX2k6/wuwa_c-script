@@ -5,51 +5,51 @@ using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x02000200 RID: 512
+// Token: 0x02000204 RID: 516
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraGravityController : CameraControllerBase, ICanGetConfigMapValue, IStaticVariableResetter
 {
-	// Token: 0x06002036 RID: 8246 RVA: 0x000ABE3F File Offset: 0x000AA03F
+	// Token: 0x060020E4 RID: 8420 RVA: 0x000B3193 File Offset: 0x000B1393
 	public CameraGravityController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06002037 RID: 8247 RVA: 0x000ABE74 File Offset: 0x000AA074
+	// Token: 0x060020E5 RID: 8421 RVA: 0x000B31C8 File Offset: 0x000B13C8
 	static CameraGravityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CameraGravityController.CreateStaticDefaultValue), new Action(CameraGravityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06002038 RID: 8248 RVA: 0x000ABF22 File Offset: 0x000AA122
+	// Token: 0x060020E6 RID: 8422 RVA: 0x000B3276 File Offset: 0x000B1476
 	public override string Name()
 	{
 		return "GravityController";
 	}
 
-	// Token: 0x06002039 RID: 8249 RVA: 0x000ABF29 File Offset: 0x000AA129
+	// Token: 0x060020E7 RID: 8423 RVA: 0x000B327D File Offset: 0x000B147D
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraGravity.开启过渡到指定重力方向, "EnableGravityLerp");
 		base.SetConfigMap(EFightCameraGravity.过渡角速度, "GravityLerpAngleVelocity");
 	}
 
-	// Token: 0x0600203A RID: 8250 RVA: 0x000ABF4D File Offset: 0x000AA14D
+	// Token: 0x060020E8 RID: 8424 RVA: 0x000B32A1 File Offset: 0x000B14A1
 	public override void PostProcessConfig(Dictionary<int, float> config, Dictionary<int, CurveBase> curveConfig)
 	{
 		base.PostProcessConfig(config, curveConfig);
 		this.RefreshDefaultCameraGravityLerpConfig();
 	}
 
-	// Token: 0x0600203B RID: 8251 RVA: 0x000ABF5D File Offset: 0x000AA15D
+	// Token: 0x060020E9 RID: 8425 RVA: 0x000B32B1 File Offset: 0x000B14B1
 	protected override bool UpdateCustomEnableCondition()
 	{
 		BaseCameraGravityLerpExecutor baseCameraGravityLerpExecutor = this.BaseCameraGravityLerpExecutor;
 		return baseCameraGravityLerpExecutor != null && baseCameraGravityLerpExecutor.EnableUpdate();
 	}
 
-	// Token: 0x0600203C RID: 8252 RVA: 0x000ABF70 File Offset: 0x000AA170
+	// Token: 0x060020EA RID: 8426 RVA: 0x000B32C4 File Offset: 0x000B14C4
 	protected override void UpdateInternal(float deltaTime)
 	{
 		BaseCameraGravityLerpExecutor baseCameraGravityLerpExecutor = this.BaseCameraGravityLerpExecutor;
@@ -64,17 +64,17 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		}
 	}
 
-	// Token: 0x0600203D RID: 8253 RVA: 0x000ABFA7 File Offset: 0x000AA1A7
+	// Token: 0x060020EB RID: 8427 RVA: 0x000B32FB File Offset: 0x000B14FB
 	public void DrawCameraGravityDebugArrow(Vector direction, FLinearColor color)
 	{
 	}
 
-	// Token: 0x0600203E RID: 8254 RVA: 0x000ABFA9 File Offset: 0x000AA1A9
+	// Token: 0x060020EC RID: 8428 RVA: 0x000B32FD File Offset: 0x000B14FD
 	public void DrawCameraGravityDebugLine(Vector direction, FLinearColor color)
 	{
 	}
 
-	// Token: 0x0600203F RID: 8255 RVA: 0x000ABFAC File Offset: 0x000AA1AC
+	// Token: 0x060020ED RID: 8429 RVA: 0x000B3300 File Offset: 0x000B1500
 	private void RefreshDefaultCameraGravityLerpConfig()
 	{
 		this.DefaultCameraGravityLerpConfig.LerpTime = 0f;
@@ -85,21 +85,13 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		{
 			this.DefaultCameraGravityLerpConfig.LerpMode = ECameraGravityLerpMode.AngleVelocity;
 			this.DefaultCameraGravityLerpConfig.LerpAngleVelocity = lerpAngleVelocity;
+			return;
 		}
-		else
-		{
-			this.DefaultCameraGravityLerpConfig.LerpMode = ECameraGravityLerpMode.None;
-			this.DefaultCameraGravityLerpConfig.LerpAngleVelocity = 0f;
-		}
-		Log instance = Log.Instance;
-		ELogModule module = ELogModule.Camera;
-		ELogAuthor author = ELogAuthor.LJM;
-		string message = "[CameraGravity]刷新默认的重力方向插值配置";
-		ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("DefaultCameraGravityLerpConfig", this.DefaultCameraGravityLerpConfig.ToString());
-		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+		this.DefaultCameraGravityLerpConfig.LerpMode = ECameraGravityLerpMode.None;
+		this.DefaultCameraGravityLerpConfig.LerpAngleVelocity = 0f;
 	}
 
-	// Token: 0x06002040 RID: 8256 RVA: 0x000AC078 File Offset: 0x000AA278
+	// Token: 0x060020EE RID: 8430 RVA: 0x000B3398 File Offset: 0x000B1598
 	private void SetOverrideCameraGravityLerpConfig(CameraGravityConfig config)
 	{
 		if (this.OverrideCameraGravityLerpConfig == null)
@@ -113,7 +105,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		this.OverrideCameraGravityLerpConfig.LerpAngleWhenFinish = config.LerpAngleWhenFinish;
 	}
 
-	// Token: 0x06002041 RID: 8257 RVA: 0x000AC0ED File Offset: 0x000AA2ED
+	// Token: 0x060020EF RID: 8431 RVA: 0x000B340D File Offset: 0x000B160D
 	private void SetCameraGravityDirConfig(CameraGravityConfig config)
 	{
 		this.CameraGravityDirConfig.GravityMode = config.GravityMode;
@@ -122,7 +114,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		this.RebuildBaseCameraGravityLerpExecutor();
 	}
 
-	// Token: 0x06002042 RID: 8258 RVA: 0x000AC124 File Offset: 0x000AA324
+	// Token: 0x060020F0 RID: 8432 RVA: 0x000B3444 File Offset: 0x000B1644
 	private void RebuildBaseCameraGravity()
 	{
 		Type type;
@@ -140,7 +132,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		this.BaseCameraGravity.Init(this, this.CameraGravityDirConfig);
 	}
 
-	// Token: 0x06002043 RID: 8259 RVA: 0x000AC19C File Offset: 0x000AA39C
+	// Token: 0x060020F1 RID: 8433 RVA: 0x000B34BC File Offset: 0x000B16BC
 	private void RebuildBaseCameraGravityLerpExecutor()
 	{
 		CameraGravityLerpConfig cameraGravityLerpConfig = this.OverrideCameraGravityLerpConfig ?? this.DefaultCameraGravityLerpConfig;
@@ -159,27 +151,27 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		this.BaseCameraGravityLerpExecutor.Init(this, cameraGravityLerpConfig);
 	}
 
-	// Token: 0x06002044 RID: 8260 RVA: 0x000AC21E File Offset: 0x000AA41E
+	// Token: 0x060020F2 RID: 8434 RVA: 0x000B353E File Offset: 0x000B173E
 	public ECameraGravityMode GetCurrentCameraGravityMode()
 	{
 		return this.CameraGravityDirConfig.GravityMode;
 	}
 
-	// Token: 0x06002045 RID: 8261 RVA: 0x000AC22B File Offset: 0x000AA42B
+	// Token: 0x060020F3 RID: 8435 RVA: 0x000B354B File Offset: 0x000B174B
 	public Vector GetGravityStartLerpVector()
 	{
 		BaseCameraGravity baseCameraGravity = this.BaseCameraGravity;
 		return ((baseCameraGravity != null) ? baseCameraGravity.GravityStartLerpVector() : null) ?? Vector.DownVectorProxy;
 	}
 
-	// Token: 0x06002046 RID: 8262 RVA: 0x000AC248 File Offset: 0x000AA448
+	// Token: 0x060020F4 RID: 8436 RVA: 0x000B3568 File Offset: 0x000B1768
 	public Vector GetGravityEndLerpVector()
 	{
 		BaseCameraGravity baseCameraGravity = this.BaseCameraGravity;
 		return ((baseCameraGravity != null) ? baseCameraGravity.GravityEndLerpVector() : null) ?? Vector.DownVectorProxy;
 	}
 
-	// Token: 0x06002047 RID: 8263 RVA: 0x000AC265 File Offset: 0x000AA465
+	// Token: 0x060020F5 RID: 8437 RVA: 0x000B3585 File Offset: 0x000B1785
 	public Vector GetGravityDirectForActor()
 	{
 		GravityUtils instance = GravityUtils.Instance;
@@ -187,13 +179,13 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		return instance.GetGravityDirectForActor((character != null) ? character.CharacterActorComponent : null);
 	}
 
-	// Token: 0x06002048 RID: 8264 RVA: 0x000AC288 File Offset: 0x000AA488
+	// Token: 0x060020F6 RID: 8438 RVA: 0x000B35A8 File Offset: 0x000B17A8
 	public Vector GetCurrentCameraGravityDirect()
 	{
 		return this.Camera.GravityDirect;
 	}
 
-	// Token: 0x06002049 RID: 8265 RVA: 0x000AC298 File Offset: 0x000AA498
+	// Token: 0x060020F7 RID: 8439 RVA: 0x000B35B8 File Offset: 0x000B17B8
 	public void SetCurrentCameraGravityMode(ECameraGravityMode cameraGravityMode)
 	{
 		this.Camera.GravityMode = cameraGravityMode;
@@ -205,7 +197,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600204A RID: 8266 RVA: 0x000AC2E0 File Offset: 0x000AA4E0
+	// Token: 0x060020F8 RID: 8440 RVA: 0x000B3600 File Offset: 0x000B1800
 	[NullableContext(2)]
 	public void SetCameraGravityMode(ECameraGravityMode cameraGravityMode, Vector gravityDirect = null)
 	{
@@ -256,7 +248,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		Log.Instance.Info(ELogModule.Camera, ELogAuthor.LJM, "[CameraGravity]SetCameraGravityMode", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600204B RID: 8267 RVA: 0x000AC417 File Offset: 0x000AA617
+	// Token: 0x060020F9 RID: 8441 RVA: 0x000B3737 File Offset: 0x000B1937
 	public void SetCameraGravityModeByUeConfig(SCamera_ChangeGravity config)
 	{
 		CameraGravityController.TempCameraGravityConfig.SetConfig(config);
@@ -264,14 +256,14 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		this.SetCameraGravityDirConfig(CameraGravityController.TempCameraGravityConfig);
 	}
 
-	// Token: 0x0600204C RID: 8268 RVA: 0x000AC43A File Offset: 0x000AA63A
+	// Token: 0x060020FA RID: 8442 RVA: 0x000B375A File Offset: 0x000B195A
 	public void SetCameraGravityModeByConfig(CameraGravityConfig config)
 	{
 		this.SetOverrideCameraGravityLerpConfig(config);
 		this.SetCameraGravityDirConfig(config);
 	}
 
-	// Token: 0x0600204D RID: 8269 RVA: 0x000AC44C File Offset: 0x000AA64C
+	// Token: 0x060020FB RID: 8443 RVA: 0x000B376C File Offset: 0x000B196C
 	public void UpdateCharacterGravity()
 	{
 		if (this.Camera.GravityMode != ECameraGravityMode.CameraTargetGravityDirect)
@@ -286,23 +278,23 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		Log.Instance.Info(ELogModule.Camera, ELogAuthor.LJM, "[CameraGravity]CharGravityDirectChanged", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600204E RID: 8270 RVA: 0x000AC4A0 File Offset: 0x000AA6A0
+	// Token: 0x060020FC RID: 8444 RVA: 0x000B37C0 File Offset: 0x000B19C0
 	public bool IsInNormalGravityMode()
 	{
 		return this.Camera.GravityMode == ECameraGravityMode.None || MathUtils.Instance.IsNearlyEqual(this.Camera.GravityDirect.Z, -1.0, new double?((double)1E-08f));
 	}
 
-	// Token: 0x0600204F RID: 8271 RVA: 0x000AC4DF File Offset: 0x000AA6DF
+	// Token: 0x060020FD RID: 8445 RVA: 0x000B37FF File Offset: 0x000B19FF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06002050 RID: 8272 RVA: 0x000AC4E1 File Offset: 0x000AA6E1
+	// Token: 0x060020FE RID: 8446 RVA: 0x000B3801 File Offset: 0x000B1A01
 	public static void ResetStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06002051 RID: 8273 RVA: 0x000AC4E4 File Offset: 0x000AA6E4
+	// Token: 0x060020FF RID: 8447 RVA: 0x000B3804 File Offset: 0x000B1A04
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -395,7 +387,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06002052 RID: 8274 RVA: 0x000AC668 File Offset: 0x000AA868
+	// Token: 0x06002100 RID: 8448 RVA: 0x000B3988 File Offset: 0x000B1B88
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -477,7 +469,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		this.BaseCameraGravity = (BaseCameraGravity)value;
 	}
 
-	// Token: 0x06002053 RID: 8275 RVA: 0x000AC7D8 File Offset: 0x000AA9D8
+	// Token: 0x06002101 RID: 8449 RVA: 0x000B3AF8 File Offset: 0x000B1CF8
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -486,41 +478,41 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x04001436 RID: 5174
+	// Token: 0x04001478 RID: 5240
 	[StaticVariableRuleIgnore]
 	public static CameraGravityConfig TempCameraGravityConfig = new CameraGravityConfig();
 
-	// Token: 0x04001437 RID: 5175
+	// Token: 0x04001479 RID: 5241
 	public float EnableGravityLerp;
 
-	// Token: 0x04001438 RID: 5176
+	// Token: 0x0400147A RID: 5242
 	public float GravityLerpAngleVelocity;
 
-	// Token: 0x04001439 RID: 5177
+	// Token: 0x0400147B RID: 5243
 	private readonly CameraGravityLerpConfig DefaultCameraGravityLerpConfig = new CameraGravityLerpConfig();
 
-	// Token: 0x0400143A RID: 5178
+	// Token: 0x0400147C RID: 5244
 	[Nullable(2)]
 	private CameraGravityLerpConfig OverrideCameraGravityLerpConfig;
 
-	// Token: 0x0400143B RID: 5179
+	// Token: 0x0400147D RID: 5245
 	[Nullable(2)]
 	private BaseCameraGravityLerpExecutor BaseCameraGravityLerpExecutor;
 
-	// Token: 0x0400143C RID: 5180
+	// Token: 0x0400147E RID: 5246
 	private readonly CameraGravityDirectionConfig CameraGravityDirConfig = new CameraGravityDirectionConfig();
 
-	// Token: 0x0400143D RID: 5181
+	// Token: 0x0400147F RID: 5247
 	[Nullable(2)]
 	private BaseCameraGravity BaseCameraGravity;
 
-	// Token: 0x0400143E RID: 5182
+	// Token: 0x04001480 RID: 5248
 	private readonly Vector DebugLineDirection = Vector.Create();
 
-	// Token: 0x0400143F RID: 5183
+	// Token: 0x04001481 RID: 5249
 	private readonly Vector DebugLineEnd = Vector.Create();
 
-	// Token: 0x04001440 RID: 5184
+	// Token: 0x04001482 RID: 5250
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ECameraGravityLerpMode, Type> ECameraGravityLerpExecutorMap = new Dictionary<ECameraGravityLerpMode, Type>
 	{
@@ -538,7 +530,7 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		}
 	};
 
-	// Token: 0x04001441 RID: 5185
+	// Token: 0x04001483 RID: 5251
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ECameraGravityMode, Type> ECameraGravityMap = new Dictionary<ECameraGravityMode, Type>
 	{
@@ -556,12 +548,12 @@ public class CameraGravityController : CameraControllerBase, ICanGetConfigMapVal
 		}
 	};
 
-	// Token: 0x04001442 RID: 5186
+	// Token: 0x04001484 RID: 5252
 	private const float CAMERA_GRAVITY_DEBUG_LINE_LENGTH = 1800f;
 
-	// Token: 0x04001443 RID: 5187
+	// Token: 0x04001485 RID: 5253
 	private const float CAMERA_GRAVITY_DEBUG_LINE_SIZE = 6f;
 
-	// Token: 0x04001444 RID: 5188
+	// Token: 0x04001486 RID: 5254
 	private const float CAMERA_GRAVITY_DEBUG_GRAVITY_FORWARD_ARROW_SIZE = 300f;
 }

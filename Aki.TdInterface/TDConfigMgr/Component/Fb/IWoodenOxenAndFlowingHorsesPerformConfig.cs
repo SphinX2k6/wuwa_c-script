@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BB8 RID: 3000
+	// Token: 0x02000C86 RID: 3206
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IWoodenOxenAndFlowingHorsesPerformConfig
 	{
-		// Token: 0x060044CB RID: 17611 RVA: 0x000AE967 File Offset: 0x000ACB67
-		[NullableContext(1)]
+		// Token: 0x06004924 RID: 18724 RVA: 0x000B8A2B File Offset: 0x000B6C2B
+		[NullableContext(0)]
 		public static IWoodenOxenAndFlowingHorsesPerformConfig Create(IWoodenOxenAndFlowingHorsesPerformConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001318 RID: 4888
-		// (get) Token: 0x060044CC RID: 17612 RVA: 0x000AE986 File Offset: 0x000ACB86
+		// Token: 0x17001413 RID: 5139
+		// (get) Token: 0x06004925 RID: 18725 RVA: 0x000B8A4A File Offset: 0x000B6C4A
 		public virtual VectorInfo Offset
 		{
 			get
@@ -40,20 +40,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001319 RID: 4889
-		// (get) Token: 0x060044CD RID: 17613 RVA: 0x000AE9BA File Offset: 0x000ACBBA
-		[Nullable(1)]
+		// Token: 0x17001414 RID: 5140
+		// (get) Token: 0x06004926 RID: 18726 RVA: 0x000B8A7E File Offset: 0x000B6C7E
+		[Nullable(0)]
 		public virtual string Montage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.Montage;
 			}
 		}
 
-		// Token: 0x1700131A RID: 4890
-		// (get) Token: 0x060044CE RID: 17614 RVA: 0x000AE9C7 File Offset: 0x000ACBC7
+		// Token: 0x17001415 RID: 5141
+		// (get) Token: 0x06004927 RID: 18727 RVA: 0x000B8A8B File Offset: 0x000B6C8B
 		public virtual VectorInfo RelativeRot
 		{
 			get
@@ -68,19 +68,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026E3 RID: 9955
+		// Token: 0x0400292B RID: 10539
 		private IWoodenOxenAndFlowingHorsesPerformConfig Instance;
 
-		// Token: 0x040026E4 RID: 9956
+		// Token: 0x0400292C RID: 10540
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x040026E5 RID: 9957
+		// Token: 0x0400292D RID: 10541
 		private bool _OffsetInited;
 
-		// Token: 0x040026E6 RID: 9958
+		// Token: 0x0400292E RID: 10542
 		private VectorInfo _RelativeRotCache;
 
-		// Token: 0x040026E7 RID: 9959
+		// Token: 0x0400292F RID: 10543
 		private bool _RelativeRotInited;
 	}
 }

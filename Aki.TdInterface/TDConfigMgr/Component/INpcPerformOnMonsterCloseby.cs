@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000568 RID: 1384
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005CF RID: 1487
 	public class INpcPerformOnMonsterCloseby
 	{
-		// Token: 0x06001C58 RID: 7256 RVA: 0x000511D4 File Offset: 0x0004F3D4
+		// Token: 0x06001E54 RID: 7764 RVA: 0x00055F90 File Offset: 0x00054190
 		private INpcPerformOnMonsterCloseby_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C59 RID: 7257 RVA: 0x0005120C File Offset: 0x0004F40C
+		// Token: 0x06001E55 RID: 7765 RVA: 0x00055FC8 File Offset: 0x000541C8
 		public static INpcPerformOnMonsterCloseby Create([Nullable(2)] INpcPerformOnMonsterCloseby instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C5A RID: 7258 RVA: 0x0005121F File Offset: 0x0004F41F
+		// Token: 0x06001E56 RID: 7766 RVA: 0x00055FDB File Offset: 0x000541DB
 		public static INpcPerformOnMonsterCloseby CreateFromSetValue([Nullable(2)] INpcPerformOnMonsterCloseby_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C5B RID: 7259 RVA: 0x00051232 File Offset: 0x0004F432
+		// Token: 0x06001E57 RID: 7767 RVA: 0x00055FEE File Offset: 0x000541EE
 		public INpcPerformOnMonsterCloseby_SetValue ToSetValue()
 		{
 			return new INpcPerformOnMonsterCloseby_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700076F RID: 1903
-		// (get) Token: 0x06001C5C RID: 7260 RVA: 0x00051269 File Offset: 0x0004F469
-		// (set) Token: 0x06001C5D RID: 7261 RVA: 0x00051298 File Offset: 0x0004F498
+		// Token: 0x170007F2 RID: 2034
+		// (get) Token: 0x06001E58 RID: 7768 RVA: 0x00056025 File Offset: 0x00054225
+		// (set) Token: 0x06001E59 RID: 7769 RVA: 0x00056054 File Offset: 0x00054254
 		public virtual float Range
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000770 RID: 1904
-		// (get) Token: 0x06001C5E RID: 7262 RVA: 0x000512A8 File Offset: 0x0004F4A8
-		// (set) Token: 0x06001C5F RID: 7263 RVA: 0x00051309 File Offset: 0x0004F509
+		// Token: 0x170007F3 RID: 2035
+		// (get) Token: 0x06001E5A RID: 7770 RVA: 0x00056064 File Offset: 0x00054264
+		// (set) Token: 0x06001E5B RID: 7771 RVA: 0x000560C5 File Offset: 0x000542C5
 		public virtual IMontageId Montage
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000771 RID: 1905
-		// (get) Token: 0x06001C60 RID: 7264 RVA: 0x00051320 File Offset: 0x0004F520
-		// (set) Token: 0x06001C61 RID: 7265 RVA: 0x00051381 File Offset: 0x0004F581
+		// Token: 0x170007F4 RID: 2036
+		// (get) Token: 0x06001E5C RID: 7772 RVA: 0x000560DC File Offset: 0x000542DC
+		// (set) Token: 0x06001E5D RID: 7773 RVA: 0x0005613D File Offset: 0x0005433D
 		public virtual IBubbleIndex Bubble
 		{
 			get
@@ -146,9 +144,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000772 RID: 1906
-		// (get) Token: 0x06001C62 RID: 7266 RVA: 0x00051396 File Offset: 0x0004F596
-		// (set) Token: 0x06001C63 RID: 7267 RVA: 0x000513C1 File Offset: 0x0004F5C1
+		// Token: 0x170007F5 RID: 2037
+		// (get) Token: 0x06001E5E RID: 7774 RVA: 0x00056152 File Offset: 0x00054352
+		// (set) Token: 0x06001E5F RID: 7775 RVA: 0x0005617D File Offset: 0x0005437D
 		public virtual int BubbleRate
 		{
 			get
@@ -169,24 +167,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400143B RID: 5179
+		// Token: 0x040015A5 RID: 5541
 		[Nullable(2)]
 		protected INpcPerformOnMonsterCloseby FbInstance;
 
-		// Token: 0x0400143C RID: 5180
+		// Token: 0x040015A6 RID: 5542
 		[Nullable(2)]
 		protected INpcPerformOnMonsterCloseby_SetValue PocoInterface;
 
-		// Token: 0x0400143D RID: 5181
+		// Token: 0x040015A7 RID: 5543
 		private IMontageId _MontageCache;
 
-		// Token: 0x0400143E RID: 5182
+		// Token: 0x040015A8 RID: 5544
 		private bool _MontageInited;
 
-		// Token: 0x0400143F RID: 5183
+		// Token: 0x040015A9 RID: 5545
 		private IBubbleIndex _BubbleCache;
 
-		// Token: 0x04001440 RID: 5184
+		// Token: 0x040015AA RID: 5546
 		private bool _BubbleInited;
 	}
 }

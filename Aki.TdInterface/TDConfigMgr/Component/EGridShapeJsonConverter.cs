@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000957 RID: 2391
+	// Token: 0x02000A0A RID: 2570
 	public class EGridShapeJsonConverter : JsonConverter<EGridShape>
 	{
-		// Token: 0x060035BA RID: 13754 RVA: 0x0008C0A8 File Offset: 0x0008A2A8
+		// Token: 0x06003941 RID: 14657 RVA: 0x00093FFC File Offset: 0x000921FC
 		public override EGridShape Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EGridShapeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060035BB RID: 13755 RVA: 0x0008C0CC File Offset: 0x0008A2CC
+		// Token: 0x06003942 RID: 14658 RVA: 0x00094020 File Offset: 0x00092220
 		public override void Write(Utf8JsonWriter writer, EGridShape value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -10,14 +10,14 @@ namespace CSharpScript.Game.Module.Launcher.Action
 	// Token: 0x02000032 RID: 50
 	public class SubPackageDownLoadMobileClearItem : LaunchComponentsAction, IHotFixLayoutItem
 	{
-		// Token: 0x060001DD RID: 477 RVA: 0x0000A710 File Offset: 0x00008910
+		// Token: 0x060001DD RID: 477 RVA: 0x0000A748 File Offset: 0x00008948
 		[NullableContext(1)]
 		public void SetRootActor(AActor actor)
 		{
 			base.SetRootActorLaunchComponentsAction(actor);
 		}
 
-		// Token: 0x060001DE RID: 478 RVA: 0x0000A71C File Offset: 0x0000891C
+		// Token: 0x060001DE RID: 478 RVA: 0x0000A754 File Offset: 0x00008954
 		protected override void OnStart()
 		{
 			this.TitleItem = new SubPackageDownLoadMobileClearTitleItem();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			}, gridActor);
 		}
 
-		// Token: 0x060001DF RID: 479 RVA: 0x0000A790 File Offset: 0x00008990
+		// Token: 0x060001DF RID: 479 RVA: 0x0000A7C8 File Offset: 0x000089C8
 		[NullableContext(1)]
 		public virtual void Refresh(IHotFixLayoutData data)
 		{
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			infoItemLayout.RefreshByData(list);
 		}
 
-		// Token: 0x060001E0 RID: 480 RVA: 0x0000A8F4 File Offset: 0x00008AF4
+		// Token: 0x060001E0 RID: 480 RVA: 0x0000A92C File Offset: 0x00008B2C
 		public void UnSelectItem()
 		{
 			SubPackageDownLoadMobileClearTitleItem titleItem = this.TitleItem;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			}
 		}
 
-		// Token: 0x060001E1 RID: 481 RVA: 0x0000A96C File Offset: 0x00008B6C
+		// Token: 0x060001E1 RID: 481 RVA: 0x0000A9A4 File Offset: 0x00008BA4
 		public void SelectItem(int subIndex)
 		{
 			if (subIndex == 0)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			subPackageDownLoadMobileClearInfoItem2.SelectItem();
 		}
 
-		// Token: 0x060001E2 RID: 482 RVA: 0x0000AA1C File Offset: 0x00008C1C
+		// Token: 0x060001E2 RID: 482 RVA: 0x0000AA54 File Offset: 0x00008C54
 		public void OnClickItem(int subIndex)
 		{
 			if (subIndex == 0)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			subPackageDownLoadMobileClearInfoItem.ClickItemOnGamePad();
 		}
 
-		// Token: 0x040000DD RID: 221
+		// Token: 0x040000DE RID: 222
 		[Nullable(new byte[]
 		{
 			2,
@@ -181,15 +181,15 @@ namespace CSharpScript.Game.Module.Launcher.Action
 		})]
 		public Action<int, UUIItem> OnClickHelpBtnCallBack;
 
-		// Token: 0x040000DE RID: 222
+		// Token: 0x040000DF RID: 223
 		[Nullable(2)]
 		public Action<int?, bool, EToggleState, string> OnClickToggleCallBack;
 
-		// Token: 0x040000DF RID: 223
+		// Token: 0x040000E0 RID: 224
 		[Nullable(2)]
 		private SubPackageDownLoadMobileClearTitleItem TitleItem;
 
-		// Token: 0x040000E0 RID: 224
+		// Token: 0x040000E1 RID: 225
 		[Nullable(new byte[]
 		{
 			2,
@@ -198,16 +198,16 @@ namespace CSharpScript.Game.Module.Launcher.Action
 		})]
 		private HotFixLayout<SubPackageDownLoadMobileClearInfoItem, SubPackageDownLoadMobileClearInfoItemData> InfoItemLayout;
 
-		// Token: 0x020002AD RID: 685
+		// Token: 0x020002B6 RID: 694
 		private static class ESubPackageDownLoadMobileClearItem
 		{
-			// Token: 0x04000A86 RID: 2694
+			// Token: 0x04000AD6 RID: 2774
 			public const int TitleItem = 0;
 
-			// Token: 0x04000A87 RID: 2695
+			// Token: 0x04000AD7 RID: 2775
 			public const int Layout = 1;
 
-			// Token: 0x04000A88 RID: 2696
+			// Token: 0x04000AD8 RID: 2776
 			public const int InfoItem = 2;
 		}
 	}

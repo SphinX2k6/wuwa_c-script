@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000344 RID: 836
+	// Token: 0x0200034C RID: 844
 	[NetMessage(EMessageId.DangoBrawlEventSelectRequest)]
 	public sealed class DangoBrawlEventSelectRequest : IMessage<DangoBrawlEventSelectRequest>, IMessage, IEquatable<DangoBrawlEventSelectRequest>, IDeepCloneable<DangoBrawlEventSelectRequest>, IBufferMessage
 	{
-		// Token: 0x060053B3 RID: 21427 RVA: 0x000CC0C5 File Offset: 0x000CA2C5
+		// Token: 0x060054A0 RID: 21664 RVA: 0x000CE74E File Offset: 0x000CC94E
 		[NullableContext(1)]
 		public static DangoBrawlEventSelectRequest Create()
 		{
 			return new DangoBrawlEventSelectRequest();
 		}
 
-		// Token: 0x17000F35 RID: 3893
-		// (get) Token: 0x060053B4 RID: 21428 RVA: 0x000CC0CC File Offset: 0x000CA2CC
+		// Token: 0x17000F66 RID: 3942
+		// (get) Token: 0x060054A1 RID: 21665 RVA: 0x000CE755 File Offset: 0x000CC955
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000F36 RID: 3894
-		// (get) Token: 0x060053B5 RID: 21429 RVA: 0x000CC0CF File Offset: 0x000CA2CF
+		// Token: 0x17000F67 RID: 3943
+		// (get) Token: 0x060054A2 RID: 21666 RVA: 0x000CE758 File Offset: 0x000CC958
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060053B6 RID: 21430 RVA: 0x000CC0D6 File Offset: 0x000CA2D6
+		// Token: 0x060054A3 RID: 21667 RVA: 0x000CE75F File Offset: 0x000CC95F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEventSelectRequest()
 		{
 		}
 
-		// Token: 0x060053B7 RID: 21431 RVA: 0x000CC0DE File Offset: 0x000CA2DE
+		// Token: 0x060054A4 RID: 21668 RVA: 0x000CE767 File Offset: 0x000CC967
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEventSelectRequest(DangoBrawlEventSelectRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060053B8 RID: 21432 RVA: 0x000CC103 File Offset: 0x000CA303
+		// Token: 0x060054A5 RID: 21669 RVA: 0x000CE78C File Offset: 0x000CC98C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlEventSelectRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new DangoBrawlEventSelectRequest(this);
 		}
 
-		// Token: 0x17000F37 RID: 3895
-		// (get) Token: 0x060053B9 RID: 21433 RVA: 0x000CC10B File Offset: 0x000CA30B
-		// (set) Token: 0x060053BA RID: 21434 RVA: 0x000CC113 File Offset: 0x000CA313
+		// Token: 0x17000F68 RID: 3944
+		// (get) Token: 0x060054A6 RID: 21670 RVA: 0x000CE794 File Offset: 0x000CC994
+		// (set) Token: 0x060054A7 RID: 21671 RVA: 0x000CE79C File Offset: 0x000CC99C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SlotIndex
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060053BB RID: 21435 RVA: 0x000CC11C File Offset: 0x000CA31C
+		// Token: 0x060054A8 RID: 21672 RVA: 0x000CE7A5 File Offset: 0x000CC9A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlEventSelectRequest);
 		}
 
-		// Token: 0x060053BC RID: 21436 RVA: 0x000CC12A File Offset: 0x000CA32A
+		// Token: 0x060054A9 RID: 21673 RVA: 0x000CE7B3 File Offset: 0x000CC9B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlEventSelectRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.SlotIndex == other.SlotIndex && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060053BD RID: 21437 RVA: 0x000CC158 File Offset: 0x000CA358
+		// Token: 0x060054AA RID: 21674 RVA: 0x000CE7E4 File Offset: 0x000CC9E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060053BE RID: 21438 RVA: 0x000CC197 File Offset: 0x000CA397
+		// Token: 0x060054AB RID: 21675 RVA: 0x000CE823 File Offset: 0x000CCA23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060053BF RID: 21439 RVA: 0x000CC1A4 File Offset: 0x000CA3A4
+		// Token: 0x060054AC RID: 21676 RVA: 0x000CE830 File Offset: 0x000CCA30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060053C0 RID: 21440 RVA: 0x000CC1AD File Offset: 0x000CA3AD
+		// Token: 0x060054AD RID: 21677 RVA: 0x000CE839 File Offset: 0x000CCA39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.SlotIndex != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(104);
 				output.WriteInt32(this.SlotIndex);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060053C1 RID: 21441 RVA: 0x000CC1E0 File Offset: 0x000CA3E0
+		// Token: 0x060054AE RID: 21678 RVA: 0x000CE86C File Offset: 0x000CCA6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060053C2 RID: 21442 RVA: 0x000CC21E File Offset: 0x000CA41E
+		// Token: 0x060054AF RID: 21679 RVA: 0x000CE8AA File Offset: 0x000CCAAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlEventSelectRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060053C3 RID: 21443 RVA: 0x000CC24F File Offset: 0x000CA44F
+		// Token: 0x060054B0 RID: 21680 RVA: 0x000CE8DB File Offset: 0x000CCADB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060053C4 RID: 21444 RVA: 0x000CC258 File Offset: 0x000CA458
+		// Token: 0x060054B1 RID: 21681 RVA: 0x000CE8E4 File Offset: 0x000CCAE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 48U)
+				if (num != 104U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400338F RID: 13199
+		// Token: 0x0400342B RID: 13355
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003390 RID: 13200
-		public const int SlotIndexFieldNumber = 6;
+		// Token: 0x0400342C RID: 13356
+		public const int SlotIndexFieldNumber = 13;
 
-		// Token: 0x04003391 RID: 13201
+		// Token: 0x0400342D RID: 13357
 		private int slotIndex_;
 	}
 }

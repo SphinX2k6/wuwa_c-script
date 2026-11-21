@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076F5 RID: 30453
+	// Token: 0x02007F09 RID: 32521
 	public enum TInfrastructureItemDeliveryOption : byte
 	{
-		// Token: 0x0401279E RID: 75678
+		// Token: 0x040137FC RID: 79868
 		NONE,
-		// Token: 0x0401279F RID: 75679
+		// Token: 0x040137FD RID: 79869
 		IInfrastructureItemDeliveryObservatory,
-		// Token: 0x040127A0 RID: 75680
+		// Token: 0x040137FE RID: 79870
 		IInfrastructureItemDeliveryRoadBuild
 	}
 }

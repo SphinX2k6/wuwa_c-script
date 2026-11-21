@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004676 RID: 18038
+	// Token: 0x02004ADE RID: 19166
 	public class IOpenBackLoginViewT
 	{
-		// Token: 0x17008019 RID: 32793
-		// (get) Token: 0x0601B625 RID: 112165 RVA: 0x003E4733 File Offset: 0x003E2933
-		// (set) Token: 0x0601B626 RID: 112166 RVA: 0x003E473B File Offset: 0x003E293B
+		// Token: 0x1700865A RID: 34394
+		// (get) Token: 0x0601CDFA RID: 118266 RVA: 0x004109CF File Offset: 0x0040EBCF
+		// (set) Token: 0x0601CDFB RID: 118267 RVA: 0x004109D7 File Offset: 0x0040EBD7
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x1700801A RID: 32794
-		// (get) Token: 0x0601B627 RID: 112167 RVA: 0x003E4744 File Offset: 0x003E2944
-		// (set) Token: 0x0601B628 RID: 112168 RVA: 0x003E474C File Offset: 0x003E294C
+		// Token: 0x1700865B RID: 34395
+		// (get) Token: 0x0601CDFC RID: 118268 RVA: 0x004109E0 File Offset: 0x0040EBE0
+		// (set) Token: 0x0601CDFD RID: 118269 RVA: 0x004109E8 File Offset: 0x0040EBE8
 		public string Account { get; set; }
 
-		// Token: 0x0601B629 RID: 112169 RVA: 0x003E4755 File Offset: 0x003E2955
+		// Token: 0x0601CDFE RID: 118270 RVA: 0x004109F1 File Offset: 0x0040EBF1
 		public IOpenBackLoginViewT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

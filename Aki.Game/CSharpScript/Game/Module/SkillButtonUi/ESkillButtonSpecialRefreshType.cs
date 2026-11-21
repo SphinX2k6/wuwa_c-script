@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C02 RID: 19458
+	// Token: 0x02003BB3 RID: 15283
 	public enum ESkillButtonSpecialRefreshType
 	{
-		// Token: 0x0401AC31 RID: 109617
+		// Token: 0x0401558B RID: 87435
 		None = 100,
-		// Token: 0x0401AC32 RID: 109618
+		// Token: 0x0401558C RID: 87436
 		HoldRingFx
 	}
 }

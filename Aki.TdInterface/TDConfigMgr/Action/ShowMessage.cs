@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002204 RID: 8708
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200246F RID: 9327
 	public class ShowMessage : ActionParams
 	{
-		// Token: 0x0600BF3B RID: 48955 RVA: 0x001B7C44 File Offset: 0x001B5E44
+		// Token: 0x0600CAF7 RID: 51959 RVA: 0x001CF2D0 File Offset: 0x001CD4D0
 		private ShowMessage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF3C RID: 48956 RVA: 0x001B7C7C File Offset: 0x001B5E7C
+		// Token: 0x0600CAF8 RID: 51960 RVA: 0x001CF308 File Offset: 0x001CD508
 		public static ShowMessage Create([Nullable(2)] ShowMessage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF3D RID: 48957 RVA: 0x001B7C8F File Offset: 0x001B5E8F
+		// Token: 0x0600CAF9 RID: 51961 RVA: 0x001CF31B File Offset: 0x001CD51B
 		public static ShowMessage CreateFromSetValue([Nullable(2)] ShowMessage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF3E RID: 48958 RVA: 0x001B7CA2 File Offset: 0x001B5EA2
+		// Token: 0x0600CAFA RID: 51962 RVA: 0x001CF32E File Offset: 0x001CD52E
 		public ShowMessage_SetValue ToSetValue()
 		{
 			return new ShowMessage_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039FA RID: 14842
-		// (get) Token: 0x0600BF3F RID: 48959 RVA: 0x001B7CB5 File Offset: 0x001B5EB5
-		// (set) Token: 0x0600BF40 RID: 48960 RVA: 0x001B7CE0 File Offset: 0x001B5EE0
+		// Token: 0x17003CEF RID: 15599
+		// (get) Token: 0x0600CAFB RID: 51963 RVA: 0x001CF341 File Offset: 0x001CD541
+		// (set) Token: 0x0600CAFC RID: 51964 RVA: 0x001CF36C File Offset: 0x001CD56C
 		public virtual string Content
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071FE RID: 29182
+		// Token: 0x04007847 RID: 30791
 		[Nullable(2)]
 		protected new ShowMessage FbInstance;
 
-		// Token: 0x040071FF RID: 29183
+		// Token: 0x04007848 RID: 30792
 		[Nullable(2)]
 		protected ShowMessage_SetValue PocoInterface;
 	}

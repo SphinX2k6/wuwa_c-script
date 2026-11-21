@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071C7 RID: 29127
+	// Token: 0x0200799C RID: 31132
 	public class IStateProgramSpecialProcessChangeTeamOptimizationT
 	{
-		// Token: 0x1700D86E RID: 55406
-		// (get) Token: 0x06033AC4 RID: 211652 RVA: 0x006F55AA File Offset: 0x006F37AA
-		// (set) Token: 0x06033AC5 RID: 211653 RVA: 0x006F55B2 File Offset: 0x006F37B2
+		// Token: 0x1700E467 RID: 58471
+		// (get) Token: 0x06036DC6 RID: 224710 RVA: 0x0075690A File Offset: 0x00754B0A
+		// (set) Token: 0x06036DC7 RID: 224711 RVA: 0x00756912 File Offset: 0x00754B12
 		public ELogicProgramSpecialProcess Type { get; set; }
 
-		// Token: 0x1700D86F RID: 55407
-		// (get) Token: 0x06033AC6 RID: 211654 RVA: 0x006F55BB File Offset: 0x006F37BB
-		// (set) Token: 0x06033AC7 RID: 211655 RVA: 0x006F55C3 File Offset: 0x006F37C3
+		// Token: 0x1700E468 RID: 58472
+		// (get) Token: 0x06036DC8 RID: 224712 RVA: 0x0075691B File Offset: 0x00754B1B
+		// (set) Token: 0x06036DC9 RID: 224713 RVA: 0x00756923 File Offset: 0x00754B23
 		public bool IsOpenBlackScreen { get; set; }
 
-		// Token: 0x1700D870 RID: 55408
-		// (get) Token: 0x06033AC8 RID: 211656 RVA: 0x006F55CC File Offset: 0x006F37CC
-		// (set) Token: 0x06033AC9 RID: 211657 RVA: 0x006F55D4 File Offset: 0x006F37D4
+		// Token: 0x1700E469 RID: 58473
+		// (get) Token: 0x06036DCA RID: 224714 RVA: 0x0075692C File Offset: 0x00754B2C
+		// (set) Token: 0x06036DCB RID: 224715 RVA: 0x00756934 File Offset: 0x00754B34
 		public byte NullMask { get; set; }
 
-		// Token: 0x06033ACA RID: 211658 RVA: 0x006F55DD File Offset: 0x006F37DD
+		// Token: 0x06036DCC RID: 224716 RVA: 0x0075693D File Offset: 0x00754B3D
 		public IStateProgramSpecialProcessChangeTeamOptimizationT()
 		{
 			this.Type = ELogicProgramSpecialProcess.ChangeTeamOptimization;

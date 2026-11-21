@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001966 RID: 6502
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AF1 RID: 6897
 	public class IDartChampionOwnerInteractType : IDartInteractTypeBase
 	{
-		// Token: 0x06008B49 RID: 35657 RVA: 0x00147980 File Offset: 0x00145B80
+		// Token: 0x0600927F RID: 37503 RVA: 0x001573BC File Offset: 0x001555BC
 		private IDartChampionOwnerInteractType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B4A RID: 35658 RVA: 0x001479B8 File Offset: 0x00145BB8
+		// Token: 0x06009280 RID: 37504 RVA: 0x001573F4 File Offset: 0x001555F4
 		public static IDartChampionOwnerInteractType Create([Nullable(2)] IDartChampionOwnerInteractType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B4B RID: 35659 RVA: 0x001479CB File Offset: 0x00145BCB
+		// Token: 0x06009281 RID: 37505 RVA: 0x00157407 File Offset: 0x00155607
 		public static IDartChampionOwnerInteractType CreateFromSetValue([Nullable(2)] IDartChampionOwnerInteractType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B4C RID: 35660 RVA: 0x001479DE File Offset: 0x00145BDE
+		// Token: 0x06009282 RID: 37506 RVA: 0x0015741A File Offset: 0x0015561A
 		public new IDartChampionOwnerInteractType_SetValue ToSetValue()
 		{
 			return new IDartChampionOwnerInteractType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CE0 RID: 11488
-		// (get) Token: 0x06008B4D RID: 35661 RVA: 0x001479FD File Offset: 0x00145BFD
-		// (set) Token: 0x06008B4E RID: 35662 RVA: 0x00147A28 File Offset: 0x00145C28
+		// Token: 0x17002EE2 RID: 12002
+		// (get) Token: 0x06009283 RID: 37507 RVA: 0x00157439 File Offset: 0x00155639
+		// (set) Token: 0x06009284 RID: 37508 RVA: 0x00157464 File Offset: 0x00155664
 		public override EDartInteractType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CE1 RID: 11489
-		// (get) Token: 0x06008B4F RID: 35663 RVA: 0x00147A36 File Offset: 0x00145C36
-		// (set) Token: 0x06008B50 RID: 35664 RVA: 0x00147A61 File Offset: 0x00145C61
+		// Token: 0x17002EE3 RID: 12003
+		// (get) Token: 0x06009285 RID: 37509 RVA: 0x00157472 File Offset: 0x00155672
+		// (set) Token: 0x06009286 RID: 37510 RVA: 0x0015749D File Offset: 0x0015569D
 		public virtual int CompetitorId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056ED RID: 22253
+		// Token: 0x04005B41 RID: 23361
 		[Nullable(2)]
 		protected new IDartChampionOwnerInteractType FbInstance;
 
-		// Token: 0x040056EE RID: 22254
+		// Token: 0x04005B42 RID: 23362
 		[Nullable(2)]
 		protected new IDartChampionOwnerInteractType_SetValue PocoInterface;
 	}

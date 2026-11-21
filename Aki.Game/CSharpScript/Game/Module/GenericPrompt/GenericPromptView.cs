@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt
 {
-	// Token: 0x02005998 RID: 22936
+	// Token: 0x02004971 RID: 18801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GenericPromptView : UiTickViewBase
 	{
-		// Token: 0x0603A343 RID: 238403 RVA: 0x00DD50D8 File Offset: 0x00DD32D8
+		// Token: 0x0602F269 RID: 193129 RVA: 0x00D24568 File Offset: 0x00D22768
 		private int Compare(IPromptParamHub prompt1, IPromptParamHub prompt2)
 		{
 			GenericPromptConfig instance = GenericPromptConfig.Instance;
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return instance.GetPriority(prompt2) - priority;
 		}
 
-		// Token: 0x0603A344 RID: 238404 RVA: 0x00DD50FA File Offset: 0x00DD32FA
+		// Token: 0x0602F26A RID: 193130 RVA: 0x00D2458A File Offset: 0x00D2278A
 		public GenericPromptView(UiViewInfo info) : base(info)
 		{
 			this.WaitingTipsList = new PriorityQueue<IPromptParamHub>(new Comparison<IPromptParamHub>(this.Compare));
 		}
 
-		// Token: 0x0603A345 RID: 238405 RVA: 0x00DD5128 File Offset: 0x00DD3328
+		// Token: 0x0602F26B RID: 193131 RVA: 0x00D245B8 File Offset: 0x00D227B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A346 RID: 238406 RVA: 0x00DD5194 File Offset: 0x00DD3394
+		// Token: 0x0602F26C RID: 193132 RVA: 0x00D24624 File Offset: 0x00D22824
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GenericPromptView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A347 RID: 238407 RVA: 0x00DD51D7 File Offset: 0x00DD33D7
+		// Token: 0x0602F26D RID: 193133 RVA: 0x00D24667 File Offset: 0x00D22867
 		protected override void OnTick(float delta)
 		{
 			this.PromptView.Tick(delta);
 		}
 
-		// Token: 0x0603A348 RID: 238408 RVA: 0x00DD51E5 File Offset: 0x00DD33E5
+		// Token: 0x0602F26E RID: 193134 RVA: 0x00D24675 File Offset: 0x00D22875
 		protected override void OnBeforeDestroy()
 		{
 			this.PromptView.SetHideCallback(null);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.CanCancelPromptMap.Clear();
 		}
 
-		// Token: 0x0603A349 RID: 238409 RVA: 0x00DD520C File Offset: 0x00DD340C
+		// Token: 0x0602F26F RID: 193135 RVA: 0x00D2469C File Offset: 0x00D2289C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IPromptParamHub>(EEventName.InsertFloatTips, new Action<IPromptParamHub>(this.InsertFloatTips));
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			EventSystem.Instance.Add<bool>(EEventName.OnPreparePhotoScreenShot, new Action<bool>(this.OnPreparePhotoScreenShot));
 		}
 
-		// Token: 0x0603A34A RID: 238410 RVA: 0x00DD5270 File Offset: 0x00DD3470
+		// Token: 0x0602F270 RID: 193136 RVA: 0x00D24700 File Offset: 0x00D22900
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IPromptParamHub>(EEventName.InsertFloatTips, new Action<IPromptParamHub>(this.InsertFloatTips));
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			EventSystem.Instance.Remove<bool>(EEventName.OnPreparePhotoScreenShot, new Action<bool>(this.OnPreparePhotoScreenShot));
 		}
 
-		// Token: 0x0603A34B RID: 238411 RVA: 0x00DD52D1 File Offset: 0x00DD34D1
+		// Token: 0x0602F271 RID: 193137 RVA: 0x00D24761 File Offset: 0x00D22961
 		private void InsertFloatTips(IPromptParamHub promptParamHub)
 		{
 			if (!string.IsNullOrEmpty(promptParamHub.PromptKey))
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.InvokeShow();
 		}
 
-		// Token: 0x0603A34C RID: 238412 RVA: 0x00DD5304 File Offset: 0x00DD3504
+		// Token: 0x0602F272 RID: 193138 RVA: 0x00D24794 File Offset: 0x00D22994
 		private void RemoveFloatTips(string promptKey)
 		{
 			IPromptParamHub item;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			}
 		}
 
-		// Token: 0x0603A34D RID: 238413 RVA: 0x00DD5384 File Offset: 0x00DD3584
+		// Token: 0x0602F273 RID: 193139 RVA: 0x00D24814 File Offset: 0x00D22A14
 		private void SetVerticalOffset()
 		{
 			GenericPromptTypes? promptTypeInfo = GenericPromptConfig.Instance.GetPromptTypeInfo(9);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			item.SetAnchorOffsetY(item.GetAnchorOffsetY() + promptTypeInfo.Value.OffsetY);
 		}
 
-		// Token: 0x0603A34E RID: 238414 RVA: 0x00DD53D8 File Offset: 0x00DD35D8
+		// Token: 0x0602F274 RID: 193140 RVA: 0x00D24868 File Offset: 0x00D22A68
 		private void HidePromptViewCallback(PromptForFloatLineView promptView)
 		{
 			if (this.WaitingTipsList.Empty)
@@ -147,14 +147,14 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.InvokeShow();
 		}
 
-		// Token: 0x0603A34F RID: 238415 RVA: 0x00DD5415 File Offset: 0x00DD3615
+		// Token: 0x0602F275 RID: 193141 RVA: 0x00D248A5 File Offset: 0x00D22AA5
 		private void ShowByType(IPromptParamHub promptParamHub)
 		{
 			this.PromptView.SetPromptHub(promptParamHub);
 			this.PromptView.ShowView();
 		}
 
-		// Token: 0x0603A350 RID: 238416 RVA: 0x00DD5430 File Offset: 0x00DD3630
+		// Token: 0x0602F276 RID: 193142 RVA: 0x00D248C0 File Offset: 0x00D22AC0
 		private void InvokeShow()
 		{
 			IPromptParamHub promptParamHub = this.WaitingTipsList.Pop();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			this.ShowByType(promptParamHub);
 		}
 
-		// Token: 0x0603A351 RID: 238417 RVA: 0x00DD5470 File Offset: 0x00DD3670
+		// Token: 0x0602F277 RID: 193143 RVA: 0x00D24900 File Offset: 0x00D22B00
 		private void OnPreparePhotoScreenShot(bool _)
 		{
 			PromptForFloatLineView promptView = this.PromptView;
@@ -189,24 +189,24 @@ namespace CSharpScript.Game.Module.GenericPrompt
 			}
 		}
 
-		// Token: 0x0401E5DB RID: 124379
+		// Token: 0x04019079 RID: 102521
 		public Dictionary<string, IPromptParamHub> CanCancelPromptMap = new Dictionary<string, IPromptParamHub>();
 
-		// Token: 0x0401E5DC RID: 124380
+		// Token: 0x0401907A RID: 102522
 		private readonly PriorityQueue<IPromptParamHub> WaitingTipsList;
 
-		// Token: 0x0401E5DD RID: 124381
+		// Token: 0x0401907B RID: 102523
 		[Nullable(2)]
 		private PromptForFloatLineView PromptView;
 
-		// Token: 0x0200BC14 RID: 48148
+		// Token: 0x0200A61F RID: 42527
 		[NullableContext(0)]
 		private class ECompDefine
 		{
-			// Token: 0x04038C4E RID: 232526
+			// Token: 0x0403361D RID: 210461
 			public const int FloatTipsParentItem = 0;
 
-			// Token: 0x04038C4F RID: 232527
+			// Token: 0x0403361E RID: 210462
 			public const int FloatTipsItem = 1;
 		}
 	}

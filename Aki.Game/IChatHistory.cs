@@ -2,58 +2,58 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001792 RID: 6034
+// Token: 0x02000C4B RID: 3147
 [NullableContext(2)]
 public interface IChatHistory
 {
-	// Token: 0x17000E93 RID: 3731
-	// (get) Token: 0x0600AF92 RID: 44946
-	// (set) Token: 0x0600AF93 RID: 44947
+	// Token: 0x17000EB6 RID: 3766
+	// (get) Token: 0x0600837A RID: 33658
+	// (set) Token: 0x0600837B RID: 33659
 	long? UtcTime { get; set; }
 
-	// Token: 0x17000E94 RID: 3732
-	// (get) Token: 0x0600AF94 RID: 44948
-	// (set) Token: 0x0600AF95 RID: 44949
+	// Token: 0x17000EB7 RID: 3767
+	// (get) Token: 0x0600837C RID: 33660
+	// (set) Token: 0x0600837D RID: 33661
 	string MsgId { get; set; }
 
-	// Token: 0x17000E95 RID: 3733
-	// (get) Token: 0x0600AF96 RID: 44950
-	// (set) Token: 0x0600AF97 RID: 44951
+	// Token: 0x17000EB8 RID: 3768
+	// (get) Token: 0x0600837E RID: 33662
+	// (set) Token: 0x0600837F RID: 33663
 	int? SenderUid { get; set; }
 
-	// Token: 0x17000E96 RID: 3734
-	// (get) Token: 0x0600AF98 RID: 44952
-	// (set) Token: 0x0600AF99 RID: 44953
+	// Token: 0x17000EB9 RID: 3769
+	// (get) Token: 0x06008380 RID: 33664
+	// (set) Token: 0x06008381 RID: 33665
 	int? SenderPlayerId { get; set; }
 
-	// Token: 0x17000E97 RID: 3735
-	// (get) Token: 0x0600AF9A RID: 44954
-	// (set) Token: 0x0600AF9B RID: 44955
+	// Token: 0x17000EBA RID: 3770
+	// (get) Token: 0x06008382 RID: 33666
+	// (set) Token: 0x06008383 RID: 33667
 	string SenderPlayerName { get; set; }
 
-	// Token: 0x17000E98 RID: 3736
-	// (get) Token: 0x0600AF9C RID: 44956
-	// (set) Token: 0x0600AF9D RID: 44957
+	// Token: 0x17000EBB RID: 3771
+	// (get) Token: 0x06008384 RID: 33668
+	// (set) Token: 0x06008385 RID: 33669
 	int? SenderIcon { get; set; }
 
-	// Token: 0x17000E99 RID: 3737
-	// (get) Token: 0x0600AF9E RID: 44958
-	// (set) Token: 0x0600AF9F RID: 44959
+	// Token: 0x17000EBC RID: 3772
+	// (get) Token: 0x06008386 RID: 33670
+	// (set) Token: 0x06008387 RID: 33671
 	[Nullable(1)]
 	string Content { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000E9A RID: 3738
-	// (get) Token: 0x0600AFA0 RID: 44960
-	// (set) Token: 0x0600AFA1 RID: 44961
+	// Token: 0x17000EBD RID: 3773
+	// (get) Token: 0x06008388 RID: 33672
+	// (set) Token: 0x06008389 RID: 33673
 	ChatContentType ChatContentType { get; set; }
 
-	// Token: 0x17000E9B RID: 3739
-	// (get) Token: 0x0600AFA2 RID: 44962
-	// (set) Token: 0x0600AFA3 RID: 44963
+	// Token: 0x17000EBE RID: 3774
+	// (get) Token: 0x0600838A RID: 33674
+	// (set) Token: 0x0600838B RID: 33675
 	ChatChannelNoticeType? NoticeType { get; set; }
 
-	// Token: 0x17000E9C RID: 3740
-	// (get) Token: 0x0600AFA4 RID: 44964
-	// (set) Token: 0x0600AFA5 RID: 44965
+	// Token: 0x17000EBF RID: 3775
+	// (get) Token: 0x0600838C RID: 33676
+	// (set) Token: 0x0600838D RID: 33677
 	bool? OfflineMsg { get; set; }
 }

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200186F RID: 6255
+// Token: 0x02000D28 RID: 3368
 public class PinballFilterIconView : UiPanelBase
 {
-	// Token: 0x0600B79F RID: 47007 RVA: 0x00298A48 File Offset: 0x00296C48
+	// Token: 0x06008B88 RID: 35720 RVA: 0x002A3164 File Offset: 0x002A1364
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class PinballFilterIconView : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B7A0 RID: 47008 RVA: 0x00298AB4 File Offset: 0x00296CB4
+	// Token: 0x06008B89 RID: 35721 RVA: 0x002A31D0 File Offset: 0x002A13D0
 	[NullableContext(1)]
 	public void SetIcon(bool bVisible, string iconPath = "")
 	{
@@ -37,7 +37,7 @@ public class PinballFilterIconView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B7A1 RID: 47009 RVA: 0x00298AF4 File Offset: 0x00296CF4
+	// Token: 0x06008B8A RID: 35722 RVA: 0x002A3210 File Offset: 0x002A1410
 	public void SetBgChangeColor(bool needChangeColor, FColor? changeColor = null)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -48,12 +48,12 @@ public class PinballFilterIconView : UiPanelBase
 		sprite.SetChangeColor(needChangeColor, changeColor);
 	}
 
-	// Token: 0x02007E34 RID: 32308
+	// Token: 0x02006FBB RID: 28603
 	private enum EPinballFilterIconComponent
 	{
-		// Token: 0x040294DC RID: 169180
+		// Token: 0x04024809 RID: 149513
 		SprBg,
-		// Token: 0x040294DD RID: 169181
+		// Token: 0x0402480A RID: 149514
 		TexIcon
 	}
 }

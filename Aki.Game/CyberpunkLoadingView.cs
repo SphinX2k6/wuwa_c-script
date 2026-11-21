@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200207C RID: 8316
+// Token: 0x0200154F RID: 5455
 public class CyberpunkLoadingView : LoadingViewBase
 {
-	// Token: 0x06010604 RID: 67076 RVA: 0x003FE4B4 File Offset: 0x003FC6B4
+	// Token: 0x0600DA6C RID: 55916 RVA: 0x0040A8FC File Offset: 0x00408AFC
 	[NullableContext(1)]
 	public CyberpunkLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010605 RID: 67077 RVA: 0x003FE4D8 File Offset: 0x003FC6D8
+	// Token: 0x0600DA6D RID: 55917 RVA: 0x0040A920 File Offset: 0x00408B20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class CyberpunkLoadingView : LoadingViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06010606 RID: 67078 RVA: 0x003FE541 File Offset: 0x003FC741
+	// Token: 0x0600DA6E RID: 55918 RVA: 0x0040A989 File Offset: 0x00408B89
 	protected override void UpdateProgressRate(float rate)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -39,19 +39,19 @@ public class CyberpunkLoadingView : LoadingViewBase
 		sprite.SetFillAmount(rate);
 	}
 
-	// Token: 0x06010607 RID: 67079 RVA: 0x003FE555 File Offset: 0x003FC755
+	// Token: 0x0600DA6F RID: 55919 RVA: 0x0040A99D File Offset: 0x00408B9D
 	protected override void UpdateProgressValue(float value)
 	{
 	}
 
-	// Token: 0x06010608 RID: 67080 RVA: 0x003FE557 File Offset: 0x003FC757
+	// Token: 0x0600DA70 RID: 55920 RVA: 0x0040A99F File Offset: 0x00408B9F
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
 		this.TickIconRotation(delta);
 	}
 
-	// Token: 0x06010609 RID: 67081 RVA: 0x003FE568 File Offset: 0x003FC768
+	// Token: 0x0600DA71 RID: 55921 RVA: 0x0040A9B0 File Offset: 0x00408BB0
 	private void TickIconRotation(float delta)
 	{
 		this.IconRotationAngle = (this.IconRotationAngle + 90f * delta / 1000f) % 360f;
@@ -66,23 +66,23 @@ public class CyberpunkLoadingView : LoadingViewBase
 		uuiitem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x040078F6 RID: 30966
+	// Token: 0x040079DF RID: 31199
 	private const float ICON_ROTATION_SPEED = 90f;
 
-	// Token: 0x040078F7 RID: 30967
+	// Token: 0x040079E0 RID: 31200
 	private float IconRotationAngle;
 
-	// Token: 0x040078F8 RID: 30968
+	// Token: 0x040079E1 RID: 31201
 	[Nullable(1)]
 	private readonly Rotator IconRotator = Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x02008664 RID: 34404
+	// Token: 0x020077EB RID: 30699
 	private class ECyberpunkLoadingDefine
 	{
-		// Token: 0x0402BB9A RID: 179098
+		// Token: 0x04026EA9 RID: 159401
 		public const int TextureProgress = 0;
 
-		// Token: 0x0402BB9B RID: 179099
+		// Token: 0x04026EAA RID: 159402
 		public const int SpriteIcon = 1;
 	}
 }

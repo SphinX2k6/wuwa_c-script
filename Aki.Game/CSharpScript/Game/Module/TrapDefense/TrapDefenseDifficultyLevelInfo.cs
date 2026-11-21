@@ -3,49 +3,49 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A64 RID: 19044
+	// Token: 0x02003A0C RID: 14860
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseDifficultyLevelInfo : ITrapDefenseDifficultyLevelInfo
 	{
-		// Token: 0x17007A9A RID: 31386
-		// (get) Token: 0x0603162A RID: 202282 RVA: 0x00B725ED File Offset: 0x00B707ED
-		// (set) Token: 0x0603162B RID: 202283 RVA: 0x00B725F5 File Offset: 0x00B707F5
+		// Token: 0x17004E47 RID: 20039
+		// (get) Token: 0x060263BA RID: 156602 RVA: 0x00AB6571 File Offset: 0x00AB4771
+		// (set) Token: 0x060263BB RID: 156603 RVA: 0x00AB6579 File Offset: 0x00AB4779
 		public ETrapDefenseDifficultyLevel DifficultyLevel { get; set; }
 
-		// Token: 0x17007A9B RID: 31387
-		// (get) Token: 0x0603162C RID: 202284 RVA: 0x00B725FE File Offset: 0x00B707FE
-		// (set) Token: 0x0603162D RID: 202285 RVA: 0x00B72606 File Offset: 0x00B70806
+		// Token: 0x17004E48 RID: 20040
+		// (get) Token: 0x060263BC RID: 156604 RVA: 0x00AB6582 File Offset: 0x00AB4782
+		// (set) Token: 0x060263BD RID: 156605 RVA: 0x00AB658A File Offset: 0x00AB478A
 		public string NameKey { get; set; } = "";
 
-		// Token: 0x17007A9C RID: 31388
-		// (get) Token: 0x0603162E RID: 202286 RVA: 0x00B7260F File Offset: 0x00B7080F
-		// (set) Token: 0x0603162F RID: 202287 RVA: 0x00B72617 File Offset: 0x00B70817
+		// Token: 0x17004E49 RID: 20041
+		// (get) Token: 0x060263BE RID: 156606 RVA: 0x00AB6593 File Offset: 0x00AB4793
+		// (set) Token: 0x060263BF RID: 156607 RVA: 0x00AB659B File Offset: 0x00AB479B
 		public string NameBgKey { get; set; } = "";
 
-		// Token: 0x17007A9D RID: 31389
-		// (get) Token: 0x06031630 RID: 202288 RVA: 0x00B72620 File Offset: 0x00B70820
-		// (set) Token: 0x06031631 RID: 202289 RVA: 0x00B72628 File Offset: 0x00B70828
+		// Token: 0x17004E4A RID: 20042
+		// (get) Token: 0x060263C0 RID: 156608 RVA: 0x00AB65A4 File Offset: 0x00AB47A4
+		// (set) Token: 0x060263C1 RID: 156609 RVA: 0x00AB65AC File Offset: 0x00AB47AC
 		public string BgKey { get; set; } = "";
 
-		// Token: 0x17007A9E RID: 31390
-		// (get) Token: 0x06031632 RID: 202290 RVA: 0x00B72631 File Offset: 0x00B70831
-		// (set) Token: 0x06031633 RID: 202291 RVA: 0x00B72639 File Offset: 0x00B70839
+		// Token: 0x17004E4B RID: 20043
+		// (get) Token: 0x060263C2 RID: 156610 RVA: 0x00AB65B5 File Offset: 0x00AB47B5
+		// (set) Token: 0x060263C3 RID: 156611 RVA: 0x00AB65BD File Offset: 0x00AB47BD
 		public string BgLightKey { get; set; } = "";
 
-		// Token: 0x17007A9F RID: 31391
-		// (get) Token: 0x06031634 RID: 202292 RVA: 0x00B72642 File Offset: 0x00B70842
-		// (set) Token: 0x06031635 RID: 202293 RVA: 0x00B7264A File Offset: 0x00B7084A
+		// Token: 0x17004E4C RID: 20044
+		// (get) Token: 0x060263C4 RID: 156612 RVA: 0x00AB65C6 File Offset: 0x00AB47C6
+		// (set) Token: 0x060263C5 RID: 156613 RVA: 0x00AB65CE File Offset: 0x00AB47CE
 		public string BgTitleKey { get; set; } = "";
 
-		// Token: 0x17007AA0 RID: 31392
-		// (get) Token: 0x06031636 RID: 202294 RVA: 0x00B72653 File Offset: 0x00B70853
-		// (set) Token: 0x06031637 RID: 202295 RVA: 0x00B7265B File Offset: 0x00B7085B
+		// Token: 0x17004E4D RID: 20045
+		// (get) Token: 0x060263C6 RID: 156614 RVA: 0x00AB65D7 File Offset: 0x00AB47D7
+		// (set) Token: 0x060263C7 RID: 156615 RVA: 0x00AB65DF File Offset: 0x00AB47DF
 		public string BgFlowerColor { get; set; } = "";
 
-		// Token: 0x17007AA1 RID: 31393
-		// (get) Token: 0x06031638 RID: 202296 RVA: 0x00B72664 File Offset: 0x00B70864
-		// (set) Token: 0x06031639 RID: 202297 RVA: 0x00B7266C File Offset: 0x00B7086C
+		// Token: 0x17004E4E RID: 20046
+		// (get) Token: 0x060263C8 RID: 156616 RVA: 0x00AB65E8 File Offset: 0x00AB47E8
+		// (set) Token: 0x060263C9 RID: 156617 RVA: 0x00AB65F0 File Offset: 0x00AB47F0
 		public string ArtTextShadowColor { get; set; } = "";
 	}
 }

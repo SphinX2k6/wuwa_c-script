@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002EFB RID: 12027
+// Token: 0x0200244E RID: 9294
 [NullableContext(1)]
 [Nullable(0)]
 public class AttributeConvert : BuffEffect
 {
-	// Token: 0x06019B0A RID: 105226 RVA: 0x006B0358 File Offset: 0x006AE558
+	// Token: 0x06017415 RID: 95253 RVA: 0x006D664C File Offset: 0x006D484C
 	public AttributeConvert(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019B0B RID: 105227 RVA: 0x006B037C File Offset: 0x006AE57C
+	// Token: 0x06017416 RID: 95254 RVA: 0x006D6670 File Offset: 0x006D4870
 	protected unsafe override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -61,7 +61,7 @@ public class AttributeConvert : BuffEffect
 		this.Offset = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters2, level, -1f);
 	}
 
-	// Token: 0x06019B0C RID: 105228 RVA: 0x006B0514 File Offset: 0x006AE714
+	// Token: 0x06017417 RID: 95255 RVA: 0x006D6808 File Offset: 0x006D4A08
 	public override void OnCreated()
 	{
 		if (this.IsPerTenThousand && this.ListenAttrMaxId == EAttributeType.None)
@@ -85,7 +85,7 @@ public class AttributeConvert : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B0D RID: 105229 RVA: 0x006B0610 File Offset: 0x006AE810
+	// Token: 0x06017418 RID: 95256 RVA: 0x006D6904 File Offset: 0x006D4B04
 	public override void OnRemoved(bool bPremature)
 	{
 		BaseBuffComponent baseBuffComponent = base.ExactOwnerEntity.CheckGetComponent<BaseBuffComponent>();
@@ -120,7 +120,7 @@ public class AttributeConvert : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B0E RID: 105230 RVA: 0x006B078C File Offset: 0x006AE98C
+	// Token: 0x06017419 RID: 95257 RVA: 0x006D6A80 File Offset: 0x006D4C80
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] parameters)
 	{
@@ -176,7 +176,7 @@ public class AttributeConvert : BuffEffect
 		return null;
 	}
 
-	// Token: 0x06019B0F RID: 105231 RVA: 0x006B08C8 File Offset: 0x006AEAC8
+	// Token: 0x0601741A RID: 95258 RVA: 0x006D6BBC File Offset: 0x006D4DBC
 	private unsafe void OnAttributeChanged(Entity entity, EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (this.OwnerBuffComponent == null)
@@ -207,7 +207,7 @@ public class AttributeConvert : BuffEffect
 		});
 	}
 
-	// Token: 0x06019B10 RID: 105232 RVA: 0x006B0998 File Offset: 0x006AEB98
+	// Token: 0x0601741B RID: 95259 RVA: 0x006D6C8C File Offset: 0x006D4E8C
 	private void OnChangeTeam()
 	{
 		List<int> list = new List<int>();
@@ -283,36 +283,36 @@ public class AttributeConvert : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B11 RID: 105233 RVA: 0x006B0B6C File Offset: 0x006AED6C
+	// Token: 0x0601741C RID: 95260 RVA: 0x006D6E60 File Offset: 0x006D5060
 	public override string GetDebugEffectString()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C0C8 RID: 49352
+	// Token: 0x0400C469 RID: 50281
 	private EAttributeType ListenAttrId;
 
-	// Token: 0x0400C0C9 RID: 49353
+	// Token: 0x0400C46A RID: 50282
 	private EAttributeType ListenAttrMaxId;
 
-	// Token: 0x0400C0CA RID: 49354
+	// Token: 0x0400C46B RID: 50283
 	private EAttributeType TargetAttrId;
 
-	// Token: 0x0400C0CB RID: 49355
+	// Token: 0x0400C46C RID: 50284
 	private bool IsPerTenThousand;
 
-	// Token: 0x0400C0CC RID: 49356
+	// Token: 0x0400C46D RID: 50285
 	private EAttributeConvertListenType ListenType = EAttributeConvertListenType.All;
 
-	// Token: 0x0400C0CD RID: 49357
+	// Token: 0x0400C46E RID: 50286
 	private bool ListenAbsoluteValue;
 
-	// Token: 0x0400C0CE RID: 49358
+	// Token: 0x0400C46F RID: 50287
 	private float Rate;
 
-	// Token: 0x0400C0CF RID: 49359
+	// Token: 0x0400C470 RID: 50288
 	private float Offset;
 
-	// Token: 0x0400C0D0 RID: 49360
+	// Token: 0x0400C471 RID: 50289
 	private readonly Dictionary<Entity, Action<EAttributeType, float, float>> EntityListenerMap = new Dictionary<Entity, Action<EAttributeType, float, float>>();
 }

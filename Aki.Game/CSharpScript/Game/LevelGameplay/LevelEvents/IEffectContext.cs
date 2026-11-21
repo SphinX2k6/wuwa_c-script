@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B89 RID: 27529
+	// Token: 0x02005D01 RID: 23809
 	[NullableContext(1)]
 	internal interface IEffectContext
 	{
-		// Token: 0x17009990 RID: 39312
-		// (get) Token: 0x06044287 RID: 279175
-		// (set) Token: 0x06044288 RID: 279176
+		// Token: 0x17006E93 RID: 28307
+		// (get) Token: 0x0603A3D9 RID: 238553
+		// (set) Token: 0x0603A3DA RID: 238554
 		string AssetPath { get; set; }
 	}
 }

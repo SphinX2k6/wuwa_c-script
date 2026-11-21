@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061DA RID: 25050
+	// Token: 0x02006848 RID: 26696
 	public class IAxisLockScreenConfigT
 	{
-		// Token: 0x1700BAC7 RID: 47815
-		// (get) Token: 0x0602B2D3 RID: 176851 RVA: 0x005F38EE File Offset: 0x005F1AEE
-		// (set) Token: 0x0602B2D4 RID: 176852 RVA: 0x005F38F6 File Offset: 0x005F1AF6
+		// Token: 0x1700C44A RID: 50250
+		// (get) Token: 0x0602DA1A RID: 186906 RVA: 0x0063E362 File Offset: 0x0063C562
+		// (set) Token: 0x0602DA1B RID: 186907 RVA: 0x0063E36A File Offset: 0x0063C56A
 		public float TriggerAngle { get; set; }
 
-		// Token: 0x1700BAC8 RID: 47816
-		// (get) Token: 0x0602B2D5 RID: 176853 RVA: 0x005F38FF File Offset: 0x005F1AFF
-		// (set) Token: 0x0602B2D6 RID: 176854 RVA: 0x005F3907 File Offset: 0x005F1B07
+		// Token: 0x1700C44B RID: 50251
+		// (get) Token: 0x0602DA1C RID: 186908 RVA: 0x0063E373 File Offset: 0x0063C573
+		// (set) Token: 0x0602DA1D RID: 186909 RVA: 0x0063E37B File Offset: 0x0063C57B
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700BAC9 RID: 47817
-		// (get) Token: 0x0602B2D7 RID: 176855 RVA: 0x005F3910 File Offset: 0x005F1B10
-		// (set) Token: 0x0602B2D8 RID: 176856 RVA: 0x005F3918 File Offset: 0x005F1B18
+		// Token: 0x1700C44C RID: 50252
+		// (get) Token: 0x0602DA1E RID: 186910 RVA: 0x0063E384 File Offset: 0x0063C584
+		// (set) Token: 0x0602DA1F RID: 186911 RVA: 0x0063E38C File Offset: 0x0063C58C
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x0602B2D9 RID: 176857 RVA: 0x005F3921 File Offset: 0x005F1B21
+		// Token: 0x0602DA20 RID: 186912 RVA: 0x0063E395 File Offset: 0x0063C595
 		public IAxisLockScreenConfigT()
 		{
 			this.TriggerAngle = 0f;

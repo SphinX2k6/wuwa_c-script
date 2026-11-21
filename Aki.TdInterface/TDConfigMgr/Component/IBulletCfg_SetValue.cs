@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000206 RID: 518
+	// Token: 0x0200022F RID: 559
 	public class IBulletCfg_SetValue
 	{
-		// Token: 0x04000936 RID: 2358
-		[Nullable(1)]
+		// Token: 0x040009C7 RID: 2503
 		public List<IBulletCreateCondition> CreateConditions;
 	}
 }

@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FAB RID: 8107
+// Token: 0x0200146D RID: 5229
 [NullableContext(2)]
 [Nullable(0)]
 public class InteractionTipsComponent : EntityComponent
 {
-	// Token: 0x0600FBF8 RID: 64504 RVA: 0x003D115C File Offset: 0x003CF35C
+	// Token: 0x0600D01A RID: 53274 RVA: 0x003DCDD8 File Offset: 0x003DAFD8
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -59,7 +59,7 @@ public class InteractionTipsComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0600FBF9 RID: 64505 RVA: 0x003D11F6 File Offset: 0x003CF3F6
+	// Token: 0x0600D01B RID: 53275 RVA: 0x003DCE72 File Offset: 0x003DB072
 	protected override bool OnEnd()
 	{
 		this.RemoveEventListeners();
@@ -67,14 +67,14 @@ public class InteractionTipsComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0600FBFA RID: 64506 RVA: 0x003D1205 File Offset: 0x003CF405
+	// Token: 0x0600D01C RID: 53276 RVA: 0x003DCE81 File Offset: 0x003DB081
 	private void AddEventListeners()
 	{
 		EventSystem.Instance.Add<bool, string>(EEventName.ShowItemTips, new Action<bool, string>(this.OnShowItemTips));
 		EventSystem.Instance.AddWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
 	}
 
-	// Token: 0x0600FBFB RID: 64507 RVA: 0x003D1248 File Offset: 0x003CF448
+	// Token: 0x0600D01D RID: 53277 RVA: 0x003DCEC4 File Offset: 0x003DB0C4
 	private void RemoveEventListeners()
 	{
 		if (EventSystem.Instance.Has(EEventName.ShowItemTips, new Action<bool, string>(this.OnShowItemTips)))
@@ -87,7 +87,7 @@ public class InteractionTipsComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0600FBFC RID: 64508 RVA: 0x003D12D3 File Offset: 0x003CF4D3
+	// Token: 0x0600D01E RID: 53278 RVA: 0x003DCF4F File Offset: 0x003DB14F
 	protected void OnSceneItemStateChange(int stateId, bool isReady)
 	{
 		if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.销毁"])
@@ -97,7 +97,7 @@ public class InteractionTipsComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0600FBFD RID: 64509 RVA: 0x003D12F4 File Offset: 0x003CF4F4
+	// Token: 0x0600D01F RID: 53279 RVA: 0x003DCF70 File Offset: 0x003DB170
 	[NullableContext(1)]
 	private void OnShowItemTips(bool show, string type)
 	{
@@ -140,7 +140,7 @@ public class InteractionTipsComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0600FBFE RID: 64510 RVA: 0x003D13BD File Offset: 0x003CF5BD
+	// Token: 0x0600D020 RID: 53280 RVA: 0x003DD039 File Offset: 0x003DB239
 	private void TryCreateSpot()
 	{
 		if (this.TipsView != null || this.CreatedPromise != null)
@@ -151,7 +151,7 @@ public class InteractionTipsComponent : EntityComponent
 		this.CreateSpot().Forget();
 	}
 
-	// Token: 0x0600FBFF RID: 64511 RVA: 0x003D13E8 File Offset: 0x003CF5E8
+	// Token: 0x0600D021 RID: 53281 RVA: 0x003DD064 File Offset: 0x003DB264
 	private UniTask CreateSpot()
 	{
 		InteractionTipsComponent.<CreateSpot>d__19 <CreateSpot>d__;
@@ -162,7 +162,7 @@ public class InteractionTipsComponent : EntityComponent
 		return <CreateSpot>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC00 RID: 64512 RVA: 0x003D142C File Offset: 0x003CF62C
+	// Token: 0x0600D022 RID: 53282 RVA: 0x003DD0A8 File Offset: 0x003DB2A8
 	[NullableContext(0)]
 	private UniTask<bool> AddViewAsync()
 	{
@@ -174,7 +174,7 @@ public class InteractionTipsComponent : EntityComponent
 		return <AddViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC01 RID: 64513 RVA: 0x003D1470 File Offset: 0x003CF670
+	// Token: 0x0600D023 RID: 53283 RVA: 0x003DD0EC File Offset: 0x003DB2EC
 	[NullableContext(0)]
 	private UniTask<bool> CreateTipsView()
 	{
@@ -186,7 +186,7 @@ public class InteractionTipsComponent : EntityComponent
 		return <CreateTipsView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FC02 RID: 64514 RVA: 0x003D14B3 File Offset: 0x003CF6B3
+	// Token: 0x0600D024 RID: 53284 RVA: 0x003DD12F File Offset: 0x003DB32F
 	private void Destroy()
 	{
 		this.IsDestroy = true;
@@ -210,7 +210,7 @@ public class InteractionTipsComponent : EntityComponent
 		this.CreatedPromise = null;
 	}
 
-	// Token: 0x0600FC03 RID: 64515 RVA: 0x003D14E4 File Offset: 0x003CF6E4
+	// Token: 0x0600D025 RID: 53285 RVA: 0x003DD160 File Offset: 0x003DB360
 	private UPrimitiveComponent GetAttachToMeshComponent()
 	{
 		BaseActorComponent actorComp = this.ActorComp;
@@ -241,7 +241,7 @@ public class InteractionTipsComponent : EntityComponent
 		return sceneItemActorComponent.GetStaticMeshComponent();
 	}
 
-	// Token: 0x0600FC04 RID: 64516 RVA: 0x003D155C File Offset: 0x003CF75C
+	// Token: 0x0600D026 RID: 53286 RVA: 0x003DD1D8 File Offset: 0x003DB3D8
 	[NullableContext(1)]
 	private global::Vector GetAttachToLocation()
 	{
@@ -270,7 +270,7 @@ public class InteractionTipsComponent : EntityComponent
 		return vector;
 	}
 
-	// Token: 0x0600FC05 RID: 64517 RVA: 0x003D160F File Offset: 0x003CF80F
+	// Token: 0x0600D027 RID: 53287 RVA: 0x003DD28B File Offset: 0x003DB48B
 	private void SetOffsetToView()
 	{
 		InteractionTipsView tipsView = this.TipsView;
@@ -281,7 +281,7 @@ public class InteractionTipsComponent : EntityComponent
 		tipsView.SetOffset(this.GetOffset());
 	}
 
-	// Token: 0x0600FC06 RID: 64518 RVA: 0x003D1628 File Offset: 0x003CF828
+	// Token: 0x0600D028 RID: 53288 RVA: 0x003DD2A4 File Offset: 0x003DB4A4
 	[NullableContext(1)]
 	private global::Vector GetOffset()
 	{
@@ -317,13 +317,13 @@ public class InteractionTipsComponent : EntityComponent
 		return this.Offset;
 	}
 
-	// Token: 0x0600FC07 RID: 64519 RVA: 0x003D172F File Offset: 0x003CF92F
+	// Token: 0x0600D029 RID: 53289 RVA: 0x003DD3AB File Offset: 0x003DB5AB
 	public bool IsTipsViewShow()
 	{
 		return this.TipsView != null && this.IsViewShow;
 	}
 
-	// Token: 0x0600FC08 RID: 64520 RVA: 0x003D1744 File Offset: 0x003CF944
+	// Token: 0x0600D02A RID: 53290 RVA: 0x003DD3C0 File Offset: 0x003DB5C0
 	public EEntity? GetEntityModelType()
 	{
 		if (this.EntityModelType != null)
@@ -339,7 +339,7 @@ public class InteractionTipsComponent : EntityComponent
 		return this.EntityModelType;
 	}
 
-	// Token: 0x0600FC09 RID: 64521 RVA: 0x003D1798 File Offset: 0x003CF998
+	// Token: 0x0600D02B RID: 53291 RVA: 0x003DD414 File Offset: 0x003DB614
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -348,155 +348,139 @@ public class InteractionTipsComponent : EntityComponent
 			return false;
 		}
 		InteractionTipsComponent interactionTipsComponent = (InteractionTipsComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (interactionTipsComponent.ActorComp == null)
 		{
-			if (interactionTipsComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("PawnInfoManageComp"))
-		{
-			if (interactionTipsComponent.PawnInfoManageComp == null)
-			{
-				this.PawnInfoManageComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInfoManageComponent>(this.PawnInfoManageComp), "PawnInfoManageComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UiPoolActor"))
-		{
-			if (interactionTipsComponent.UiPoolActor == null)
-			{
-				this.UiPoolActor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UiPoolActor>(this.UiPoolActor), "UiPoolActor"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Path"))
-		{
-			this.Path = interactionTipsComponent.Path;
-		}
-		if (base.CanResetComponentProperty("TipsView"))
-		{
-			if (interactionTipsComponent.TipsView == null)
-			{
-				this.TipsView = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InteractionTipsView>(this.TipsView), "TipsView"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CustomPromise"))
-		{
-			if (interactionTipsComponent.CustomPromise == null)
-			{
-				this.CustomPromise = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.CustomPromise), "CustomPromise"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ReCreateView"))
-		{
-			if (interactionTipsComponent.ReCreateView == null)
-			{
-				this.ReCreateView = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.ReCreateView), "ReCreateView"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CreatedPromise"))
-		{
-			if (interactionTipsComponent.CreatedPromise == null)
-			{
-				this.CreatedPromise = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.CreatedPromise), "CreatedPromise"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TmpVector") && interactionTipsComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsDestroy"))
+		if (interactionTipsComponent.PawnInfoManageComp == null)
 		{
-			this.IsDestroy = interactionTipsComponent.IsDestroy;
+			this.PawnInfoManageComp = null;
 		}
-		if (base.CanResetComponentProperty("IsViewShow"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnInfoManageComp), "PawnInfoManageComp"))
 		{
-			this.IsViewShow = interactionTipsComponent.IsViewShow;
+			return false;
 		}
-		if (base.CanResetComponentProperty("Offset"))
+		if (interactionTipsComponent.UiPoolActor == null)
 		{
-			if (interactionTipsComponent.Offset == null)
-			{
-				this.Offset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.Offset), "Offset"))
-			{
-				return false;
-			}
+			this.UiPoolActor = null;
 		}
-		if (base.CanResetComponentProperty("EntityModelType"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UiPoolActor), "UiPoolActor"))
 		{
-			this.EntityModelType = interactionTipsComponent.EntityModelType;
+			return false;
 		}
+		this.Path = interactionTipsComponent.Path;
+		if (interactionTipsComponent.TipsView == null)
+		{
+			this.TipsView = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TipsView), "TipsView"))
+		{
+			return false;
+		}
+		if (interactionTipsComponent.CustomPromise == null)
+		{
+			this.CustomPromise = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomPromise), "CustomPromise"))
+		{
+			return false;
+		}
+		if (interactionTipsComponent.ReCreateView == null)
+		{
+			this.ReCreateView = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReCreateView), "ReCreateView"))
+		{
+			return false;
+		}
+		if (interactionTipsComponent.CreatedPromise == null)
+		{
+			this.CreatedPromise = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatedPromise), "CreatedPromise"))
+		{
+			return false;
+		}
+		if (interactionTipsComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
+		{
+			return false;
+		}
+		this.IsDestroy = interactionTipsComponent.IsDestroy;
+		this.IsViewShow = interactionTipsComponent.IsViewShow;
+		if (interactionTipsComponent.Offset == null)
+		{
+			this.Offset = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Offset), "Offset"))
+		{
+			return false;
+		}
+		this.EntityModelType = interactionTipsComponent.EntityModelType;
 		return true;
 	}
 
-	// Token: 0x04007527 RID: 29991
+	// Token: 0x1700137C RID: 4988
+	// (get) Token: 0x0600D02C RID: 53292 RVA: 0x003DD5DE File Offset: 0x003DB7DE
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700137D RID: 4989
+	// (get) Token: 0x0600D02D RID: 53293 RVA: 0x003DD5E1 File Offset: 0x003DB7E1
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400760A RID: 30218
 	private BaseActorComponent ActorComp;
 
-	// Token: 0x04007528 RID: 29992
+	// Token: 0x0400760B RID: 30219
 	private PawnInfoManageComponent PawnInfoManageComp;
 
-	// Token: 0x04007529 RID: 29993
+	// Token: 0x0400760C RID: 30220
 	private UiPoolActor UiPoolActor;
 
-	// Token: 0x0400752A RID: 29994
+	// Token: 0x0400760D RID: 30221
 	[Nullable(1)]
 	private string Path = string.Empty;
 
-	// Token: 0x0400752B RID: 29995
+	// Token: 0x0400760E RID: 30222
 	protected InteractionTipsView TipsView;
 
-	// Token: 0x0400752C RID: 29996
+	// Token: 0x0400760F RID: 30223
 	private CustomPromise CustomPromise;
 
-	// Token: 0x0400752D RID: 29997
+	// Token: 0x04007610 RID: 30224
 	private Action ReCreateView;
 
-	// Token: 0x0400752E RID: 29998
+	// Token: 0x04007611 RID: 30225
 	private CustomPromise CreatedPromise;
 
-	// Token: 0x0400752F RID: 29999
+	// Token: 0x04007612 RID: 30226
 	[Nullable(1)]
 	private readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x04007530 RID: 30000
+	// Token: 0x04007613 RID: 30227
 	private bool IsDestroy;
 
-	// Token: 0x04007531 RID: 30001
+	// Token: 0x04007614 RID: 30228
 	private bool IsViewShow = true;
 
-	// Token: 0x04007532 RID: 30002
+	// Token: 0x04007615 RID: 30229
 	private global::Vector Offset;
 
-	// Token: 0x04007533 RID: 30003
+	// Token: 0x04007616 RID: 30230
 	private EEntity? EntityModelType;
 }

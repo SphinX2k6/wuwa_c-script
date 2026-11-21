@@ -9,25 +9,25 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x02006432 RID: 25650
+	// Token: 0x020053B0 RID: 21424
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MotorDecalLinkController : ActivityControllerBase
 	{
-		// Token: 0x060407DF RID: 264159 RVA: 0x00F9BC9A File Offset: 0x00F99E9A
+		// Token: 0x060354A0 RID: 218272 RVA: 0x00EE2C16 File Offset: 0x00EE0E16
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MotorDecalUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMotorDecalUpdateNotify));
 		}
 
-		// Token: 0x060407E0 RID: 264160 RVA: 0x00F9BCB8 File Offset: 0x00F99EB8
+		// Token: 0x060354A1 RID: 218273 RVA: 0x00EE2C34 File Offset: 0x00EE0E34
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MotorDecalUpdateNotify);
 		}
 
-		// Token: 0x060407E1 RID: 264161 RVA: 0x00F9BCCC File Offset: 0x00F99ECC
+		// Token: 0x060354A2 RID: 218274 RVA: 0x00EE2C48 File Offset: 0x00EE0E48
 		[NullableContext(2)]
 		private void OnMotorDecalUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -56,36 +56,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x060407E2 RID: 264162 RVA: 0x00F9BD8C File Offset: 0x00F99F8C
+		// Token: 0x060354A3 RID: 218275 RVA: 0x00EE2D08 File Offset: 0x00EE0F08
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x060407E3 RID: 264163 RVA: 0x00F9BD8E File Offset: 0x00F99F8E
+		// Token: 0x060354A4 RID: 218276 RVA: 0x00EE2D0A File Offset: 0x00EE0F0A
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiView_MotoLinkageActivityMain33";
 		}
 
-		// Token: 0x060407E4 RID: 264164 RVA: 0x00F9BD95 File Offset: 0x00F99F95
+		// Token: 0x060354A5 RID: 218277 RVA: 0x00EE2D11 File Offset: 0x00EE0F11
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new MotorDecalLinkView();
 		}
 
-		// Token: 0x060407E5 RID: 264165 RVA: 0x00F9BD9C File Offset: 0x00F99F9C
+		// Token: 0x060354A6 RID: 218278 RVA: 0x00EE2D18 File Offset: 0x00EE0F18
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new MotorDecalLinkData(data.Id);
 		}
 
-		// Token: 0x060407E6 RID: 264166 RVA: 0x00F9BDA9 File Offset: 0x00F99FA9
+		// Token: 0x060354A7 RID: 218279 RVA: 0x00EE2D25 File Offset: 0x00EE0F25
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x060407E7 RID: 264167 RVA: 0x00F9BDAC File Offset: 0x00F99FAC
+		// Token: 0x060354A8 RID: 218280 RVA: 0x00EE2D28 File Offset: 0x00EE0F28
 		public UniTask RequestRandomMotorIpAndRefreshView(int activityId)
 		{
 			MotorDecalLinkController.<RequestRandomMotorIpAndRefreshView>d__8 <RequestRandomMotorIpAndRefreshView>d__;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return <RequestRandomMotorIpAndRefreshView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060407E8 RID: 264168 RVA: 0x00F9BDF0 File Offset: 0x00F99FF0
+		// Token: 0x060354A9 RID: 218281 RVA: 0x00EE2D6C File Offset: 0x00EE0F6C
 		public UniTask ReceiveRewardByIpRequest(int activityId, int ipId)
 		{
 			MotorDecalLinkController.<ReceiveRewardByIpRequest>d__9 <ReceiveRewardByIpRequest>d__;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return <ReceiveRewardByIpRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060407E9 RID: 264169 RVA: 0x00F9BE3C File Offset: 0x00F9A03C
+		// Token: 0x060354AA RID: 218282 RVA: 0x00EE2DB8 File Offset: 0x00EE0FB8
 		public void OnFirstRead(int activityId)
 		{
 			MotorDecalLinkData motorDecalLinkData = ActivityModel.Instance.GetActivityById(activityId) as MotorDecalLinkData;
@@ -120,8 +120,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, activityId);
 		}
 
-		// Token: 0x1700947D RID: 38013
-		// (get) Token: 0x060407EA RID: 264170 RVA: 0x00F9BE75 File Offset: 0x00F9A075
+		// Token: 0x170067DF RID: 26591
+		// (get) Token: 0x060354AB RID: 218283 RVA: 0x00EE2DF1 File Offset: 0x00EE0FF1
 		public static MotorDecalLinkController Instance
 		{
 			get
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x060407EB RID: 264171 RVA: 0x00F9BE7C File Offset: 0x00F9A07C
+		// Token: 0x060354AC RID: 218284 RVA: 0x00EE2DF8 File Offset: 0x00EE0FF8
 		public static MotorDecalLinkController GetOrCreateInstance()
 		{
 			if (MotorDecalLinkController._Instance == null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return MotorDecalLinkController._Instance;
 		}
 
-		// Token: 0x060407EC RID: 264172 RVA: 0x00F9BE90 File Offset: 0x00F9A090
+		// Token: 0x060354AD RID: 218285 RVA: 0x00EE2E0C File Offset: 0x00EE100C
 		public static bool CreateInstance()
 		{
 			if (MotorDecalLinkController._Instance != null)
@@ -151,24 +151,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return true;
 		}
 
-		// Token: 0x060407ED RID: 264173 RVA: 0x00F9BEA6 File Offset: 0x00F9A0A6
+		// Token: 0x060354AE RID: 218286 RVA: 0x00EE2E22 File Offset: 0x00EE1022
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060407EE RID: 264174 RVA: 0x00F9BEA8 File Offset: 0x00F9A0A8
+		// Token: 0x060354AF RID: 218287 RVA: 0x00EE2E24 File Offset: 0x00EE1024
 		public static void ResetStaticDefaultValue()
 		{
 			MotorDecalLinkController._Instance = null;
 		}
 
-		// Token: 0x060407EF RID: 264175 RVA: 0x00F9BEB0 File Offset: 0x00F9A0B0
+		// Token: 0x060354B0 RID: 218288 RVA: 0x00EE2E2C File Offset: 0x00EE102C
 		static MotorDecalLinkController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorDecalLinkController.CreateStaticDefaultValue), new Action(MotorDecalLinkController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402186A RID: 137322
+		// Token: 0x0401C199 RID: 115097
 		[Nullable(2)]
 		private static MotorDecalLinkController _Instance;
 	}

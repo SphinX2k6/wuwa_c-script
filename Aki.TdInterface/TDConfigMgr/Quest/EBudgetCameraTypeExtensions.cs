@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200122C RID: 4652
+	// Token: 0x02001368 RID: 4968
 	public static class EBudgetCameraTypeExtensions
 	{
-		// Token: 0x0600696D RID: 26989 RVA: 0x000FB5A4 File Offset: 0x000F97A4
+		// Token: 0x06006FAE RID: 28590 RVA: 0x00108EB0 File Offset: 0x001070B0
 		public static string ToEnumString(this EBudgetCameraType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600696E RID: 26990 RVA: 0x000FB5CC File Offset: 0x000F97CC
+		// Token: 0x06006FAF RID: 28591 RVA: 0x00108ED8 File Offset: 0x001070D8
 		public static EBudgetCameraType FromString(string name)
 		{
 			EBudgetCameraType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600696F RID: 26991 RVA: 0x000FB5F5 File Offset: 0x000F97F5
+		// Token: 0x06006FB0 RID: 28592 RVA: 0x00108F01 File Offset: 0x00107101
 		public static bool TryFromString(string name, out EBudgetCameraType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006970 RID: 26992 RVA: 0x000FB61A File Offset: 0x000F981A
+		// Token: 0x06006FB1 RID: 28593 RVA: 0x00108F26 File Offset: 0x00107126
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006971 RID: 26993 RVA: 0x000FB62A File Offset: 0x000F982A
+		// Token: 0x06006FB2 RID: 28594 RVA: 0x00108F36 File Offset: 0x00107136
 		public static EBudgetCameraType[] GetValues()
 		{
 			return new EBudgetCameraType[1];
 		}
 
-		// Token: 0x06006972 RID: 26994 RVA: 0x000FB632 File Offset: 0x000F9832
+		// Token: 0x06006FB3 RID: 28595 RVA: 0x00108F3E File Offset: 0x0010713E
 		public static string[] GetNames()
 		{
 			return new string[]

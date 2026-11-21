@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E6C RID: 24172
+	// Token: 0x02004E51 RID: 20049
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AutoPilotFindPathResult
 	{
-		// Token: 0x0603D764 RID: 251748 RVA: 0x00ED4568 File Offset: 0x00ED2768
+		// Token: 0x060326F4 RID: 206580 RVA: 0x00E25AD8 File Offset: 0x00E23CD8
 		public AutoPilotFindPathResult()
 		{
 			this.CheckFindPathAutoPilotConditions = delegate(float? _)
@@ -60,8 +60,8 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotController.Instance.AddTick(this.CheckFindPathAutoPilotConditions);
 		}
 
-		// Token: 0x17008E79 RID: 36473
-		// (get) Token: 0x0603D765 RID: 251749 RVA: 0x00ED45F5 File Offset: 0x00ED27F5
+		// Token: 0x1700624B RID: 25163
+		// (get) Token: 0x060326F5 RID: 206581 RVA: 0x00E25B65 File Offset: 0x00E23D65
 		public Vector PlayerPoint
 		{
 			get
@@ -81,44 +81,44 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D766 RID: 251750 RVA: 0x00ED461D File Offset: 0x00ED281D
+		// Token: 0x060326F6 RID: 206582 RVA: 0x00E25B8D File Offset: 0x00E23D8D
 		public bool GetIsShowStartPoint()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
 			return (instance == null || !instance.GetIsInAutoPilot()) && !this.HasArriveStartPoint && !this.GetIsShowPlayerToTargetLine();
 		}
 
-		// Token: 0x0603D767 RID: 251751 RVA: 0x00ED4645 File Offset: 0x00ED2845
+		// Token: 0x060326F7 RID: 206583 RVA: 0x00E25BB5 File Offset: 0x00E23DB5
 		public bool GetIsShowEndPoint()
 		{
 			return !this.GetIsShowPlayerToTargetLine();
 		}
 
-		// Token: 0x0603D768 RID: 251752 RVA: 0x00ED4652 File Offset: 0x00ED2852
+		// Token: 0x060326F8 RID: 206584 RVA: 0x00E25BC2 File Offset: 0x00E23DC2
 		public bool GetIsShowHighLightLine()
 		{
 			return !this.GetIsShowPlayerToTargetLine();
 		}
 
-		// Token: 0x0603D769 RID: 251753 RVA: 0x00ED465F File Offset: 0x00ED285F
+		// Token: 0x060326F9 RID: 206585 RVA: 0x00E25BCF File Offset: 0x00E23DCF
 		public bool GetIsShowPlayerToStartLine()
 		{
 			return this.GetIsShowStartPoint() && !this.GetIsShowPlayerToTargetLine();
 		}
 
-		// Token: 0x0603D76A RID: 251754 RVA: 0x00ED4674 File Offset: 0x00ED2874
+		// Token: 0x060326FA RID: 206586 RVA: 0x00E25BE4 File Offset: 0x00E23DE4
 		public bool GetIsShowEndToTargetLine()
 		{
 			return this.GetIsShowEndPoint() && !this.GetIsShowPlayerToTargetLine();
 		}
 
-		// Token: 0x0603D76B RID: 251755 RVA: 0x00ED4689 File Offset: 0x00ED2889
+		// Token: 0x060326FB RID: 206587 RVA: 0x00E25BF9 File Offset: 0x00E23DF9
 		public bool GetIsShowPlayerToTargetLine()
 		{
 			return this.IsShowPlayerToTargetLine;
 		}
 
-		// Token: 0x0603D76C RID: 251756 RVA: 0x00ED4691 File Offset: 0x00ED2891
+		// Token: 0x060326FC RID: 206588 RVA: 0x00E25C01 File Offset: 0x00E23E01
 		[NullableContext(2)]
 		public Vector GetTrackingPoint()
 		{
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return null;
 		}
 
-		// Token: 0x0603D76D RID: 251757 RVA: 0x00ED46B4 File Offset: 0x00ED28B4
+		// Token: 0x060326FD RID: 206589 RVA: 0x00E25C24 File Offset: 0x00E23E24
 		public void RefreshSplinePoints()
 		{
 			this.ClearRoadWaySplinePointsMap();
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.SplineDistance = AutoPilotUtil.GenerateAllSplinePoints(this.Roadways, this.SplinePoints, this.StartPoint, this.EndPoint, this.RoadWaySplinePointsMap);
 		}
 
-		// Token: 0x0603D76E RID: 251758 RVA: 0x00ED4700 File Offset: 0x00ED2900
+		// Token: 0x060326FE RID: 206590 RVA: 0x00E25C70 File Offset: 0x00E23E70
 		private void ClearRoadWaySplinePointsMap()
 		{
 			foreach (List<double> list in this.RoadWaySplinePointsMap.Values)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.RoadWaySplinePointsMap.Clear();
 		}
 
-		// Token: 0x0603D76F RID: 251759 RVA: 0x00ED4770 File Offset: 0x00ED2970
+		// Token: 0x060326FF RID: 206591 RVA: 0x00E25CE0 File Offset: 0x00E23EE0
 		private void RefreshRoadWaySplinePointsMap()
 		{
 			foreach (UKuroRoadway ukuroRoadway in this.Roadways)
@@ -165,13 +165,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D770 RID: 251760 RVA: 0x00ED47BB File Offset: 0x00ED29BB
+		// Token: 0x06032700 RID: 206592 RVA: 0x00E25D2B File Offset: 0x00E23F2B
 		public double GetDistSquaredPlayerToEndPoint()
 		{
 			return this.DistSquaredPlayerToEndPointInner;
 		}
 
-		// Token: 0x0603D771 RID: 251761 RVA: 0x00ED47C4 File Offset: 0x00ED29C4
+		// Token: 0x06032701 RID: 206593 RVA: 0x00E25D34 File Offset: 0x00E23F34
 		public void RefreshHasArriveStartPoint()
 		{
 			if (this.Roadways.Length == 0)
@@ -194,13 +194,13 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.HasArriveStartPoint = false;
 		}
 
-		// Token: 0x0603D772 RID: 251762 RVA: 0x00ED4837 File Offset: 0x00ED2A37
+		// Token: 0x06032702 RID: 206594 RVA: 0x00E25DA7 File Offset: 0x00E23FA7
 		public bool GetHasArriveStartPoint()
 		{
 			return this.HasArriveStartPoint;
 		}
 
-		// Token: 0x0603D773 RID: 251763 RVA: 0x00ED4840 File Offset: 0x00ED2A40
+		// Token: 0x06032703 RID: 206595 RVA: 0x00E25DB0 File Offset: 0x00E23FB0
 		[NullableContext(2)]
 		public void SetIsShowPlayerToTargetLine(bool value, string reason = null)
 		{
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D774 RID: 251764 RVA: 0x00ED488C File Offset: 0x00ED2A8C
+		// Token: 0x06032704 RID: 206596 RVA: 0x00E25DFC File Offset: 0x00E23FFC
 		public void RefreshData(int mapId, Vector source, Vector desc, ITransportFindPathResult findPathResult)
 		{
 			this.MapId = mapId;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.DistSquaredPlayerToEndPointInner = Vector.DistSquared(this.PlayerPoint, this.EndPoint);
 		}
 
-		// Token: 0x0603D775 RID: 251765 RVA: 0x00ED49B0 File Offset: 0x00ED2BB0
+		// Token: 0x06032705 RID: 206597 RVA: 0x00E25F20 File Offset: 0x00E24120
 		public void RefreshDataInAutoPilot()
 		{
 			this.IsNeedForceRefresh = true;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			AutoPilotUtil.ProcessSplinePointsForAutoPilotRoute(this.Roadways[num2.Value], this.SplinePoints, this.StartPoint, this.RoadWaySplinePointsMap);
 		}
 
-		// Token: 0x0603D776 RID: 251766 RVA: 0x00ED4AC4 File Offset: 0x00ED2CC4
+		// Token: 0x06032706 RID: 206598 RVA: 0x00E26034 File Offset: 0x00E24234
 		[NullableContext(2)]
 		public UKuroRoadway GetLastRoadWay()
 		{
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return this.Roadways[this.Roadways.Length - 1];
 		}
 
-		// Token: 0x0603D777 RID: 251767 RVA: 0x00ED4AE4 File Offset: 0x00ED2CE4
+		// Token: 0x06032707 RID: 206599 RVA: 0x00E26054 File Offset: 0x00E24254
 		[NullableContext(2)]
 		public UAutopilotRoute GenerateAutopilotRoute()
 		{
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return instance.GetAssembleAutopilotRoute(idList, isLoop, instance2 != null && instance2.IsDebugMode);
 		}
 
-		// Token: 0x0603D778 RID: 251768 RVA: 0x00ED4B44 File Offset: 0x00ED2D44
+		// Token: 0x06032708 RID: 206600 RVA: 0x00E260B4 File Offset: 0x00E242B4
 		public bool IsNeedRefreshByFindPath(Vector location)
 		{
 			if (this.IsNeedForceRefresh)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return num > num4;
 		}
 
-		// Token: 0x0603D779 RID: 251769 RVA: 0x00ED4BA8 File Offset: 0x00ED2DA8
+		// Token: 0x06032709 RID: 206601 RVA: 0x00E26118 File Offset: 0x00E24318
 		public FRotator? GetStartRotator()
 		{
 			if (this.Roadways.Length == 0)
@@ -359,55 +359,55 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return new FRotator?(roadSpline.GetRotationAtDistanceAlongSpline((float)distanceAlongSplineAtWorldLocation, ESplineCoordinateSpace.World));
 		}
 
-		// Token: 0x0603D77A RID: 251770 RVA: 0x00ED4C09 File Offset: 0x00ED2E09
+		// Token: 0x0603270A RID: 206602 RVA: 0x00E26179 File Offset: 0x00E24379
 		public void Clear()
 		{
 			AutoPilotController.Instance.RemoveTick(this.CheckFindPathAutoPilotConditions);
 		}
 
-		// Token: 0x0402012B RID: 131371
+		// Token: 0x0401ABF2 RID: 109554
 		public int MapId;
 
-		// Token: 0x0402012C RID: 131372
+		// Token: 0x0401ABF3 RID: 109555
 		public Vector TargetPoint = Vector.Create();
 
-		// Token: 0x0402012D RID: 131373
+		// Token: 0x0401ABF4 RID: 109556
 		public Vector StartPoint = Vector.Create();
 
-		// Token: 0x0402012E RID: 131374
+		// Token: 0x0401ABF5 RID: 109557
 		public Vector EndPoint = Vector.Create();
 
-		// Token: 0x0402012F RID: 131375
+		// Token: 0x0401ABF6 RID: 109558
 		private readonly Vector LastFindPathPoint = Vector.Create();
 
-		// Token: 0x04020130 RID: 131376
+		// Token: 0x0401ABF7 RID: 109559
 		public UKuroRoadway[] Roadways = Array.Empty<UKuroRoadway>();
 
-		// Token: 0x04020131 RID: 131377
+		// Token: 0x0401ABF8 RID: 109560
 		public readonly TArray<FVector2D> SplinePoints = new TArray<FVector2D>();
 
-		// Token: 0x04020132 RID: 131378
+		// Token: 0x0401ABF9 RID: 109561
 		private double SplineDistance;
 
-		// Token: 0x04020133 RID: 131379
+		// Token: 0x0401ABFA RID: 109562
 		private bool IsShowPlayerToTargetLine;
 
-		// Token: 0x04020134 RID: 131380
+		// Token: 0x0401ABFB RID: 109563
 		private readonly Dictionary<int, List<double>> RoadWaySplinePointsMap = new Dictionary<int, List<double>>();
 
-		// Token: 0x04020135 RID: 131381
+		// Token: 0x0401ABFC RID: 109564
 		private readonly global::Stack<List<double>> RoadWaySplinePointsPool = new global::Stack<List<double>>();
 
-		// Token: 0x04020136 RID: 131382
+		// Token: 0x0401ABFD RID: 109565
 		private bool IsNeedForceRefresh;
 
-		// Token: 0x04020137 RID: 131383
+		// Token: 0x0401ABFE RID: 109566
 		private bool HasArriveStartPoint;
 
-		// Token: 0x04020138 RID: 131384
+		// Token: 0x0401ABFF RID: 109567
 		private double DistSquaredPlayerToEndPointInner;
 
-		// Token: 0x04020139 RID: 131385
+		// Token: 0x0401AC00 RID: 109568
 		public readonly Action<float?> CheckFindPathAutoPilotConditions;
 	}
 }

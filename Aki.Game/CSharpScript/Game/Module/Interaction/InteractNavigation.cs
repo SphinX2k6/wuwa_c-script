@@ -3,10 +3,10 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200585F RID: 22623
+	// Token: 0x02004837 RID: 18487
 	public class InteractNavigation
 	{
-		// Token: 0x0603984F RID: 235599 RVA: 0x00DA81A8 File Offset: 0x00DA63A8
+		// Token: 0x0602E76C RID: 190316 RVA: 0x00CF6ED0 File Offset: 0x00CF50D0
 		public unsafe InteractNavigation(float lookUpThreshold, float zoomThreshold, bool allowLoop)
 		{
 			if (lookUpThreshold < 0f || zoomThreshold < 0f)
@@ -25,9 +25,9 @@ namespace CSharpScript.Game.Module.Interaction
 			this.AllowLoop = allowLoop;
 		}
 
-		// Token: 0x17008A58 RID: 35416
-		// (get) Token: 0x06039850 RID: 235600 RVA: 0x00DA823F File Offset: 0x00DA643F
-		// (set) Token: 0x06039851 RID: 235601 RVA: 0x00DA8247 File Offset: 0x00DA6447
+		// Token: 0x17005E24 RID: 24100
+		// (get) Token: 0x0602E76D RID: 190317 RVA: 0x00CF6F67 File Offset: 0x00CF5167
+		// (set) Token: 0x0602E76E RID: 190318 RVA: 0x00CF6F6F File Offset: 0x00CF516F
 		public int Index
 		{
 			get
@@ -40,8 +40,8 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x17008A59 RID: 35417
-		// (get) Token: 0x06039852 RID: 235602 RVA: 0x00DA8250 File Offset: 0x00DA6450
+		// Token: 0x17005E25 RID: 24101
+		// (get) Token: 0x0602E76F RID: 190319 RVA: 0x00CF6F78 File Offset: 0x00CF5178
 		public int TotalNum
 		{
 			get
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039853 RID: 235603 RVA: 0x00DA8258 File Offset: 0x00DA6458
+		// Token: 0x0602E770 RID: 190320 RVA: 0x00CF6F80 File Offset: 0x00CF5180
 		public bool UpdateValue(EInputAxis axisType, float value, int? totalNum = null)
 		{
 			int indexInternal = this.IndexInternal;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return this.IndexInternal != indexInternal;
 		}
 
-		// Token: 0x06039854 RID: 235604 RVA: 0x00DA83CC File Offset: 0x00DA65CC
+		// Token: 0x0602E771 RID: 190321 RVA: 0x00CF70F4 File Offset: 0x00CF52F4
 		public bool UpdateIndex(int totalNum)
 		{
 			int indexInternal = this.IndexInternal;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return this.IndexInternal != indexInternal;
 		}
 
-		// Token: 0x06039855 RID: 235605 RVA: 0x00DA83F8 File Offset: 0x00DA65F8
+		// Token: 0x0602E772 RID: 190322 RVA: 0x00CF7120 File Offset: 0x00CF5320
 		private void UpdateIndexInternal(int? totalNum)
 		{
 			if (totalNum != null)
@@ -128,25 +128,25 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0401E132 RID: 123186
+		// Token: 0x04018BCF RID: 101327
 		private int TotalNumInternal;
 
-		// Token: 0x0401E133 RID: 123187
+		// Token: 0x04018BD0 RID: 101328
 		private int IndexInternal;
 
-		// Token: 0x0401E134 RID: 123188
+		// Token: 0x04018BD1 RID: 101329
 		private float LookUpValue;
 
-		// Token: 0x0401E135 RID: 123189
+		// Token: 0x04018BD2 RID: 101330
 		private float ZoomValue;
 
-		// Token: 0x0401E136 RID: 123190
+		// Token: 0x04018BD3 RID: 101331
 		private readonly float LookUpThreshold;
 
-		// Token: 0x0401E137 RID: 123191
+		// Token: 0x04018BD4 RID: 101332
 		private readonly float ZoomThreshold;
 
-		// Token: 0x0401E138 RID: 123192
+		// Token: 0x04018BD5 RID: 101333
 		private readonly bool AllowLoop;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000EB RID: 235
+// Token: 0x020000ED RID: 237
 public class SquaredCurve : CurveBase
 {
-	// Token: 0x06000737 RID: 1847 RVA: 0x00027BD0 File Offset: 0x00025DD0
+	// Token: 0x06000779 RID: 1913 RVA: 0x000281D0 File Offset: 0x000263D0
 	[NullableContext(1)]
 	public SquaredCurve(params float[] @params) : base(Array.Empty<float>())
 	{
@@ -24,15 +24,15 @@ public class SquaredCurve : CurveBase
 		this.B = @params[0];
 	}
 
-	// Token: 0x06000738 RID: 1848 RVA: 0x00027C62 File Offset: 0x00025E62
+	// Token: 0x0600077A RID: 1914 RVA: 0x00028262 File Offset: 0x00026462
 	public override float GetCurrentValueInternal(float key)
 	{
 		return (this.A * key + this.B) * key;
 	}
 
-	// Token: 0x040005BF RID: 1471
+	// Token: 0x040005CE RID: 1486
 	private readonly float A;
 
-	// Token: 0x040005C0 RID: 1472
+	// Token: 0x040005CF RID: 1487
 	private readonly float B = 1f;
 }

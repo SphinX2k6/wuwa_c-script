@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200660E RID: 26126
+	// Token: 0x0200558C RID: 21900
 	public class FishingPermanentRewardButton : UiPanelBase
 	{
-		// Token: 0x06041791 RID: 268177 RVA: 0x00FDB440 File Offset: 0x00FD9640
+		// Token: 0x06036456 RID: 222294 RVA: 0x00F224C0 File Offset: 0x00F206C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,20 +32,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041792 RID: 268178 RVA: 0x00FDB507 File Offset: 0x00FD9707
+		// Token: 0x06036457 RID: 222295 RVA: 0x00F22587 File Offset: 0x00F20787
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06041793 RID: 268179 RVA: 0x00FDB50F File Offset: 0x00FD970F
+		// Token: 0x06036458 RID: 222296 RVA: 0x00F2258F File Offset: 0x00F2078F
 		public void Refresh()
 		{
 			this.RefreshRedDot();
 			this.RefreshProgress();
 		}
 
-		// Token: 0x06041794 RID: 268180 RVA: 0x00FDB520 File Offset: 0x00FD9720
+		// Token: 0x06036459 RID: 222297 RVA: 0x00F225A0 File Offset: 0x00F207A0
 		private void RefreshRedDot()
 		{
 			bool handBookRewardRedDotState = FishingModel.Instance.GetHandBookRewardRedDotState();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item.SetUIActive(handBookRewardRedDotState);
 		}
 
-		// Token: 0x06041795 RID: 268181 RVA: 0x00FDB54C File Offset: 0x00FD974C
+		// Token: 0x0603645A RID: 222298 RVA: 0x00F225CC File Offset: 0x00F207CC
 		private void RefreshProgress()
 		{
 			int handBookRewardHaveTakenCount = FishingModel.Instance.GetHandBookRewardHaveTakenCount();
@@ -70,22 +70,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			text.SetText(handBookRewardHaveTakenCount.ToString() + "/" + count.ToString(), true);
 		}
 
-		// Token: 0x06041796 RID: 268182 RVA: 0x00FDB59E File Offset: 0x00FD979E
+		// Token: 0x0603645B RID: 222299 RVA: 0x00F2261E File Offset: 0x00F2081E
 		private void OnClickedButton()
 		{
 			UiManager.Instance.OpenView(EUiViewName.FishingHandBookRewardView, null, null);
 		}
 
-		// Token: 0x0200C81B RID: 51227
+		// Token: 0x0200B1FE RID: 45566
 		private class EComponents
 		{
-			// Token: 0x0403C6E6 RID: 247526
+			// Token: 0x0403702E RID: 225326
 			public const int Button = 0;
 
-			// Token: 0x0403C6E7 RID: 247527
+			// Token: 0x0403702F RID: 225327
 			public const int TxtProgress = 1;
 
-			// Token: 0x0403C6E8 RID: 247528
+			// Token: 0x04037030 RID: 225328
 			public const int RedDot = 2;
 		}
 	}

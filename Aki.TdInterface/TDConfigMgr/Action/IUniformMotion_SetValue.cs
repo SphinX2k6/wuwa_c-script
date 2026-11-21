@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200201A RID: 8218
+	// Token: 0x02002263 RID: 8803
 	public class IUniformMotion_SetValue
 	{
-		// Token: 0x04006CDD RID: 27869
+		// Token: 0x040072E6 RID: 29414
 		public EMoveMotion Type;
 
-		// Token: 0x04006CDE RID: 27870
+		// Token: 0x040072E7 RID: 29415
 		public float Time;
 	}
 }

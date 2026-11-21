@@ -7,32 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000E9D RID: 3741
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200023F RID: 575
 	[UnrealObjectPath("/Script/Engine.MatineeCameraShake")]
 	[UnrealStructLayout(416, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 416)]
 	public class UMatineeCameraShake : UCameraShakeBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600C9AF RID: 51631 RVA: 0x00125ACB File Offset: 0x00123CCB
+		// Token: 0x06003141 RID: 12609 RVA: 0x000462DF File Offset: 0x000444DF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMatineeCameraShake._ClassPtr;
 		}
 
-		// Token: 0x0600C9B0 RID: 51632 RVA: 0x00125AD8 File Offset: 0x00123CD8
+		// Token: 0x06003142 RID: 12610 RVA: 0x000462EC File Offset: 0x000444EC
 		public UMatineeCameraShake() : this(BuiltinUtils.AllocNativeUObject(UMatineeCameraShake.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600C9B1 RID: 51633 RVA: 0x00125B00 File Offset: 0x00123D00
+		// Token: 0x06003143 RID: 12611 RVA: 0x00046314 File Offset: 0x00044514
+		[NullableContext(1)]
 		public UMatineeCameraShake(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMatineeCameraShake.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002F45 RID: 12101
-		// (get) Token: 0x0600C9B2 RID: 51634 RVA: 0x00125B33 File Offset: 0x00123D33
-		// (set) Token: 0x0600C9B3 RID: 51635 RVA: 0x00125B43 File Offset: 0x00123D43
+		// Token: 0x170006B8 RID: 1720
+		// (get) Token: 0x06003144 RID: 12612 RVA: 0x00046347 File Offset: 0x00044547
+		// (set) Token: 0x06003145 RID: 12613 RVA: 0x00046357 File Offset: 0x00044557
 		public unsafe float OscillationDuration
 		{
 			get
@@ -45,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F46 RID: 12102
-		// (get) Token: 0x0600C9B4 RID: 51636 RVA: 0x00125B54 File Offset: 0x00123D54
-		// (set) Token: 0x0600C9B5 RID: 51637 RVA: 0x00125B64 File Offset: 0x00123D64
+		// Token: 0x170006B9 RID: 1721
+		// (get) Token: 0x06003146 RID: 12614 RVA: 0x00046368 File Offset: 0x00044568
+		// (set) Token: 0x06003147 RID: 12615 RVA: 0x00046378 File Offset: 0x00044578
 		public unsafe float OscillationBlendInTime
 		{
 			get
@@ -60,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F47 RID: 12103
-		// (get) Token: 0x0600C9B6 RID: 51638 RVA: 0x00125B75 File Offset: 0x00123D75
-		// (set) Token: 0x0600C9B7 RID: 51639 RVA: 0x00125B85 File Offset: 0x00123D85
+		// Token: 0x170006BA RID: 1722
+		// (get) Token: 0x06003148 RID: 12616 RVA: 0x00046389 File Offset: 0x00044589
+		// (set) Token: 0x06003149 RID: 12617 RVA: 0x00046399 File Offset: 0x00044599
 		public unsafe float OscillationBlendOutTime
 		{
 			get
@@ -75,72 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F48 RID: 12104
-		// (get) Token: 0x0600C9B8 RID: 51640 RVA: 0x00125B98 File Offset: 0x00123D98
-		// (set) Token: 0x0600C9B9 RID: 51641 RVA: 0x00125BD1 File Offset: 0x00123DD1
-		public FROscillator RotOscillation
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FROscillator result;
-				if ((result = this._RotOscillation) == null)
-				{
-					result = (this._RotOscillation = new FROscillator(base.NativePtr + (IntPtr)UMatineeCameraShake.__PropertyOffset_RotOscillation, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FROscillator.StaticStruct(), base.NativePtr + (IntPtr)UMatineeCameraShake.__PropertyOffset_RotOscillation, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002F49 RID: 12105
-		// (get) Token: 0x0600C9BA RID: 51642 RVA: 0x00125BF4 File Offset: 0x00123DF4
-		// (set) Token: 0x0600C9BB RID: 51643 RVA: 0x00125C2D File Offset: 0x00123E2D
-		public FVOscillator LocOscillation
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FVOscillator result;
-				if ((result = this._LocOscillation) == null)
-				{
-					result = (this._LocOscillation = new FVOscillator(base.NativePtr + (IntPtr)UMatineeCameraShake.__PropertyOffset_LocOscillation, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FVOscillator.StaticStruct(), base.NativePtr + (IntPtr)UMatineeCameraShake.__PropertyOffset_LocOscillation, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002F4A RID: 12106
-		// (get) Token: 0x0600C9BC RID: 51644 RVA: 0x00125C50 File Offset: 0x00123E50
-		// (set) Token: 0x0600C9BD RID: 51645 RVA: 0x00125C89 File Offset: 0x00123E89
-		public FFOscillator FOVOscillation
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FFOscillator result;
-				if ((result = this._FOVOscillation) == null)
-				{
-					result = (this._FOVOscillation = new FFOscillator(base.NativePtr + (IntPtr)UMatineeCameraShake.__PropertyOffset_FOVOscillation, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FFOscillator.StaticStruct(), base.NativePtr + (IntPtr)UMatineeCameraShake.__PropertyOffset_FOVOscillation, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17002F4B RID: 12107
-		// (get) Token: 0x0600C9BE RID: 51646 RVA: 0x00125CAA File Offset: 0x00123EAA
-		// (set) Token: 0x0600C9BF RID: 51647 RVA: 0x00125CBA File Offset: 0x00123EBA
+		// Token: 0x170006BB RID: 1723
+		// (get) Token: 0x0600314A RID: 12618 RVA: 0x000463AA File Offset: 0x000445AA
+		// (set) Token: 0x0600314B RID: 12619 RVA: 0x000463BA File Offset: 0x000445BA
 		public unsafe int Priority
 		{
 			get
@@ -153,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F4C RID: 12108
-		// (get) Token: 0x0600C9C0 RID: 51648 RVA: 0x00125CCB File Offset: 0x00123ECB
-		// (set) Token: 0x0600C9C1 RID: 51649 RVA: 0x00125CDB File Offset: 0x00123EDB
+		// Token: 0x170006BC RID: 1724
+		// (get) Token: 0x0600314C RID: 12620 RVA: 0x000463CB File Offset: 0x000445CB
+		// (set) Token: 0x0600314D RID: 12621 RVA: 0x000463DB File Offset: 0x000445DB
 		public unsafe int Group
 		{
 			get
@@ -168,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F4D RID: 12109
-		// (get) Token: 0x0600C9C2 RID: 51650 RVA: 0x00125CEC File Offset: 0x00123EEC
-		// (set) Token: 0x0600C9C3 RID: 51651 RVA: 0x00125CFC File Offset: 0x00123EFC
+		// Token: 0x170006BD RID: 1725
+		// (get) Token: 0x0600314E RID: 12622 RVA: 0x000463EC File Offset: 0x000445EC
+		// (set) Token: 0x0600314F RID: 12623 RVA: 0x000463FC File Offset: 0x000445FC
 		public unsafe float AnimPlayRate
 		{
 			get
@@ -183,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F4E RID: 12110
-		// (get) Token: 0x0600C9C4 RID: 51652 RVA: 0x00125D0D File Offset: 0x00123F0D
-		// (set) Token: 0x0600C9C5 RID: 51653 RVA: 0x00125D1D File Offset: 0x00123F1D
+		// Token: 0x170006BE RID: 1726
+		// (get) Token: 0x06003150 RID: 12624 RVA: 0x0004640D File Offset: 0x0004460D
+		// (set) Token: 0x06003151 RID: 12625 RVA: 0x0004641D File Offset: 0x0004461D
 		public unsafe float AnimScale
 		{
 			get
@@ -198,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F4F RID: 12111
-		// (get) Token: 0x0600C9C6 RID: 51654 RVA: 0x00125D2E File Offset: 0x00123F2E
-		// (set) Token: 0x0600C9C7 RID: 51655 RVA: 0x00125D3E File Offset: 0x00123F3E
+		// Token: 0x170006BF RID: 1727
+		// (get) Token: 0x06003152 RID: 12626 RVA: 0x0004642E File Offset: 0x0004462E
+		// (set) Token: 0x06003153 RID: 12627 RVA: 0x0004643E File Offset: 0x0004463E
 		public unsafe float AnimBlendInTime
 		{
 			get
@@ -213,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F50 RID: 12112
-		// (get) Token: 0x0600C9C8 RID: 51656 RVA: 0x00125D4F File Offset: 0x00123F4F
-		// (set) Token: 0x0600C9C9 RID: 51657 RVA: 0x00125D5F File Offset: 0x00123F5F
+		// Token: 0x170006C0 RID: 1728
+		// (get) Token: 0x06003154 RID: 12628 RVA: 0x0004644F File Offset: 0x0004464F
+		// (set) Token: 0x06003155 RID: 12629 RVA: 0x0004645F File Offset: 0x0004465F
 		public unsafe float AnimBlendOutTime
 		{
 			get
@@ -228,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F51 RID: 12113
-		// (get) Token: 0x0600C9CA RID: 51658 RVA: 0x00125D70 File Offset: 0x00123F70
-		// (set) Token: 0x0600C9CB RID: 51659 RVA: 0x00125D80 File Offset: 0x00123F80
+		// Token: 0x170006C1 RID: 1729
+		// (get) Token: 0x06003156 RID: 12630 RVA: 0x00046470 File Offset: 0x00044670
+		// (set) Token: 0x06003157 RID: 12631 RVA: 0x00046480 File Offset: 0x00044680
 		public unsafe float RandomAnimSegmentDuration
 		{
 			get
@@ -243,27 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F52 RID: 12114
-		// (get) Token: 0x0600C9CC RID: 51660 RVA: 0x00125D91 File Offset: 0x00123F91
-		// (set) Token: 0x0600C9CD RID: 51661 RVA: 0x00125DA5 File Offset: 0x00123FA5
-		[Nullable(2)]
-		public unsafe UCameraAnim Anim
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UCameraAnim>(base.NativePtr / (IntPtr)sizeof(void*) + UMatineeCameraShake.__PropertyOffset_Anim);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UMatineeCameraShake.__PropertyOffset_Anim, value);
-			}
-		}
-
-		// Token: 0x17002F53 RID: 12115
-		// (get) Token: 0x0600C9CE RID: 51662 RVA: 0x00125DBA File Offset: 0x00123FBA
-		// (set) Token: 0x0600C9CF RID: 51663 RVA: 0x00125DD3 File Offset: 0x00123FD3
+		// Token: 0x170006C2 RID: 1730
+		// (get) Token: 0x06003158 RID: 12632 RVA: 0x00046491 File Offset: 0x00044691
+		// (set) Token: 0x06003159 RID: 12633 RVA: 0x000464AA File Offset: 0x000446AA
 		public unsafe bool bRandomAnimSegment
 		{
 			get
@@ -276,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F54 RID: 12116
-		// (get) Token: 0x0600C9D0 RID: 51664 RVA: 0x00125E03 File Offset: 0x00124003
-		// (set) Token: 0x0600C9D1 RID: 51665 RVA: 0x00125E13 File Offset: 0x00124013
+		// Token: 0x170006C3 RID: 1731
+		// (get) Token: 0x0600315A RID: 12634 RVA: 0x000464DA File Offset: 0x000446DA
+		// (set) Token: 0x0600315B RID: 12635 RVA: 0x000464EA File Offset: 0x000446EA
 		public unsafe float OscillatorTimeRemaining
 		{
 			get
@@ -291,9 +209,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F55 RID: 12117
-		// (get) Token: 0x0600C9D2 RID: 51666 RVA: 0x00125E24 File Offset: 0x00124024
-		// (set) Token: 0x0600C9D3 RID: 51667 RVA: 0x00125E34 File Offset: 0x00124034
+		// Token: 0x170006C4 RID: 1732
+		// (get) Token: 0x0600315C RID: 12636 RVA: 0x000464FB File Offset: 0x000446FB
+		// (set) Token: 0x0600315D RID: 12637 RVA: 0x0004650B File Offset: 0x0004470B
 		public unsafe float OscillatorEplasedTime
 		{
 			get
@@ -306,218 +224,137 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F56 RID: 12118
-		// (get) Token: 0x0600C9D4 RID: 51668 RVA: 0x00125E45 File Offset: 0x00124045
-		// (set) Token: 0x0600C9D5 RID: 51669 RVA: 0x00125E59 File Offset: 0x00124059
-		[Nullable(2)]
-		public unsafe UCameraAnimInst AnimInst
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UCameraAnimInst>(base.NativePtr / (IntPtr)sizeof(void*) + UMatineeCameraShake.__PropertyOffset_AnimInst);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UMatineeCameraShake.__PropertyOffset_AnimInst, value);
-			}
-		}
-
-		// Token: 0x0600C9D6 RID: 51670 RVA: 0x00125E6E File Offset: 0x0012406E
+		// Token: 0x0600315E RID: 12638 RVA: 0x0004651C File Offset: 0x0004471C
 		public virtual void ReceiveStopShake(bool bImmediately)
 		{
 			UMatineeCameraShake.__ReceiveStopShake_Internal(base.NativePtr, bImmediately);
 		}
 
-		// Token: 0x0600C9D7 RID: 51671 RVA: 0x00125E7C File Offset: 0x0012407C
+		// Token: 0x0600315F RID: 12639 RVA: 0x0004652A File Offset: 0x0004472A
 		public virtual void ReceivePlayShake(float Scale)
 		{
 			UMatineeCameraShake.__ReceivePlayShake_Internal(base.NativePtr, Scale);
 		}
 
-		// Token: 0x0600C9D8 RID: 51672 RVA: 0x00125E8A File Offset: 0x0012408A
+		// Token: 0x06003160 RID: 12640 RVA: 0x00046538 File Offset: 0x00044738
 		public virtual bool ReceiveIsFinished()
 		{
 			return UMatineeCameraShake.__ReceiveIsFinished_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600C9D9 RID: 51673 RVA: 0x00125E97 File Offset: 0x00124097
+		// Token: 0x06003161 RID: 12641 RVA: 0x00046545 File Offset: 0x00044745
 		protected virtual bool ReceiveIsFinished_Implementation()
 		{
 			return UMatineeCameraShake.__ReceiveIsFinished_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600C9DA RID: 51674 RVA: 0x00125EA4 File Offset: 0x001240A4
-		[NullableContext(2)]
-		public virtual void BlueprintUpdateCameraShake(float DeltaTime, float Alpha, in FMinimalViewInfo POV, ref FMinimalViewInfo ModifiedPOV)
-		{
-			UMatineeCameraShake.__BlueprintUpdateCameraShake_Internal(base.NativePtr, DeltaTime, Alpha, (POV ?? new FMinimalViewInfo()).NativePtr, (ModifiedPOV ?? new FMinimalViewInfo()).NativePtr);
-		}
-
-		// Token: 0x0600C9DB RID: 51675
+		// Token: 0x06003162 RID: 12642
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveStopShake_Internal(IntPtr @this, bool bImmediately);
 
-		// Token: 0x0600C9DC RID: 51676
+		// Token: 0x06003163 RID: 12643
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceivePlayShake_Internal(IntPtr @this, float Scale);
 
-		// Token: 0x0600C9DD RID: 51677
+		// Token: 0x06003164 RID: 12644
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ReceiveIsFinished_Internal(IntPtr @this);
 
-		// Token: 0x0600C9DE RID: 51678
+		// Token: 0x06003165 RID: 12645
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ReceiveIsFinished_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x0600C9DF RID: 51679
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __BlueprintUpdateCameraShake_Internal(IntPtr @this, float DeltaTime, float Alpha, IntPtr POV, IntPtr ModifiedPOV);
-
-		// Token: 0x0600C9E0 RID: 51680 RVA: 0x00125ED4 File Offset: 0x001240D4
+		// Token: 0x06003166 RID: 12646 RVA: 0x00046552 File Offset: 0x00044752
 		static UMatineeCameraShake()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.MatineeCameraShake");
 		}
 
-		// Token: 0x0600C9E1 RID: 51681 RVA: 0x00125EE2 File Offset: 0x001240E2
+		// Token: 0x06003167 RID: 12647 RVA: 0x00046560 File Offset: 0x00044760
 		protected UMatineeCameraShake(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04006C91 RID: 27793
+		// Token: 0x040010DF RID: 4319
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.MatineeCameraShake";
 
-		// Token: 0x04006C92 RID: 27794
+		// Token: 0x040010E0 RID: 4320
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04006C93 RID: 27795
+		// Token: 0x040010E1 RID: 4321
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04006C94 RID: 27796
+		// Token: 0x040010E2 RID: 4322
 		internal static int __PropertyOffset_OscillationDuration;
 
-		// Token: 0x04006C95 RID: 27797
+		// Token: 0x040010E3 RID: 4323
 		internal static int __PropertyOffset_OscillationBlendInTime;
 
-		// Token: 0x04006C96 RID: 27798
+		// Token: 0x040010E4 RID: 4324
 		internal static int __PropertyOffset_OscillationBlendOutTime;
 
-		// Token: 0x04006C97 RID: 27799
-		internal static int __PropertyOffset_RotOscillation;
-
-		// Token: 0x04006C98 RID: 27800
-		[Nullable(2)]
-		private FROscillator _RotOscillation;
-
-		// Token: 0x04006C99 RID: 27801
-		internal static int __PropertyOffset_LocOscillation;
-
-		// Token: 0x04006C9A RID: 27802
-		[Nullable(2)]
-		private FVOscillator _LocOscillation;
-
-		// Token: 0x04006C9B RID: 27803
-		internal static int __PropertyOffset_FOVOscillation;
-
-		// Token: 0x04006C9C RID: 27804
-		[Nullable(2)]
-		private FFOscillator _FOVOscillation;
-
-		// Token: 0x04006C9D RID: 27805
+		// Token: 0x040010E5 RID: 4325
 		internal static int __PropertyOffset_Priority;
 
-		// Token: 0x04006C9E RID: 27806
+		// Token: 0x040010E6 RID: 4326
 		internal static int __PropertyOffset_Group;
 
-		// Token: 0x04006C9F RID: 27807
+		// Token: 0x040010E7 RID: 4327
 		internal static int __PropertyOffset_AnimPlayRate;
 
-		// Token: 0x04006CA0 RID: 27808
+		// Token: 0x040010E8 RID: 4328
 		internal static int __PropertyOffset_AnimScale;
 
-		// Token: 0x04006CA1 RID: 27809
+		// Token: 0x040010E9 RID: 4329
 		internal static int __PropertyOffset_AnimBlendInTime;
 
-		// Token: 0x04006CA2 RID: 27810
+		// Token: 0x040010EA RID: 4330
 		internal static int __PropertyOffset_AnimBlendOutTime;
 
-		// Token: 0x04006CA3 RID: 27811
+		// Token: 0x040010EB RID: 4331
 		internal static int __PropertyOffset_RandomAnimSegmentDuration;
 
-		// Token: 0x04006CA4 RID: 27812
-		internal static int __PropertyOffset_Anim;
-
-		// Token: 0x04006CA5 RID: 27813
+		// Token: 0x040010EC RID: 4332
 		internal static int __PropertyOffset_bRandomAnimSegment;
 
-		// Token: 0x04006CA6 RID: 27814
+		// Token: 0x040010ED RID: 4333
 		internal static byte __PropertyMask_bRandomAnimSegment;
 
-		// Token: 0x04006CA7 RID: 27815
+		// Token: 0x040010EE RID: 4334
 		internal static int __PropertyOffset_OscillatorTimeRemaining;
 
-		// Token: 0x04006CA8 RID: 27816
+		// Token: 0x040010EF RID: 4335
 		internal static int __PropertyOffset_OscillatorEplasedTime;
 
-		// Token: 0x04006CA9 RID: 27817
-		internal static int __PropertyOffset_AnimInst;
-
-		// Token: 0x02002D46 RID: 11590
-		[NullableContext(0)]
+		// Token: 0x020009BF RID: 2495
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveStopShake_FunctionParams
 		{
-			// Token: 0x0401674E RID: 91982
+			// Token: 0x0400594A RID: 22858
 			[FieldOffset(0)]
 			public bool bImmediately;
 		}
 
-		// Token: 0x02002D47 RID: 11591
-		[NullableContext(0)]
+		// Token: 0x020009C0 RID: 2496
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __ReceivePlayShake_FunctionParams
 		{
-			// Token: 0x0401674F RID: 91983
+			// Token: 0x0400594B RID: 22859
 			[FieldOffset(0)]
 			public float Scale;
 		}
 
-		// Token: 0x02002D48 RID: 11592
-		[NullableContext(0)]
+		// Token: 0x020009C1 RID: 2497
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ReceiveIsFinished_FunctionParams
 		{
-			// Token: 0x04016750 RID: 91984
+			// Token: 0x0400594C RID: 22860
 			[FieldOffset(0)]
 			public bool __Result;
-		}
-
-		// Token: 0x02002D49 RID: 11593
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 5488)]
-		protected ref struct __BlueprintUpdateCameraShake_FunctionParams
-		{
-			// Token: 0x04016751 RID: 91985
-			[FieldOffset(0)]
-			public float DeltaTime;
-
-			// Token: 0x04016752 RID: 91986
-			[FieldOffset(4)]
-			public float Alpha;
-
-			// Token: 0x04016753 RID: 91987
-			[FieldOffset(16)]
-			public byte POV;
-
-			// Token: 0x04016754 RID: 91988
-			[FieldOffset(2752)]
-			public byte ModifiedPOV;
 		}
 	}
 }

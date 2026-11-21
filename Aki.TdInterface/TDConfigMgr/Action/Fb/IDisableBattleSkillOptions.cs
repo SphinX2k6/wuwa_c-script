@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002947 RID: 10567
+	// Token: 0x02002C29 RID: 11305
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDisableBattleSkillOptions
 	{
-		// Token: 0x0600EA5E RID: 59998 RVA: 0x002252E6 File Offset: 0x002234E6
-		[NullableContext(1)]
+		// Token: 0x0600F8C9 RID: 63689 RVA: 0x002428C6 File Offset: 0x00240AC6
+		[NullableContext(0)]
 		public static IDisableBattleSkillOptions Create(IDisableBattleSkillOptions? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004992 RID: 18834
-		// (get) Token: 0x0600EA5F RID: 59999 RVA: 0x00225308 File Offset: 0x00223508
+		// Token: 0x17004D25 RID: 19749
+		// (get) Token: 0x0600F8CA RID: 63690 RVA: 0x002428E8 File Offset: 0x00240AE8
 		public virtual bool? IsDisablePhantomSkill
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004993 RID: 18835
-		// (get) Token: 0x0600EA60 RID: 60000 RVA: 0x00225340 File Offset: 0x00223540
+		// Token: 0x17004D26 RID: 19750
+		// (get) Token: 0x0600F8CB RID: 63691 RVA: 0x00242920 File Offset: 0x00240B20
 		public virtual bool? IsDisableCharacterSkill
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004994 RID: 18836
-		// (get) Token: 0x0600EA61 RID: 60001 RVA: 0x00225376 File Offset: 0x00223576
+		// Token: 0x17004D27 RID: 19751
+		// (get) Token: 0x0600F8CC RID: 63692 RVA: 0x00242956 File Offset: 0x00240B56
 		public virtual IDisableCharacterSectionalSkillOption IsDisableCharacterSectionalSkill
 		{
 			get
@@ -67,13 +67,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008131 RID: 33073
+		// Token: 0x0400880D RID: 34829
 		private IDisableBattleSkillOptions Instance;
 
-		// Token: 0x04008132 RID: 33074
+		// Token: 0x0400880E RID: 34830
 		private IDisableCharacterSectionalSkillOption _IsDisableCharacterSectionalSkillCache;
 
-		// Token: 0x04008133 RID: 33075
+		// Token: 0x0400880F RID: 34831
 		private bool _IsDisableCharacterSectionalSkillInited;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004DA RID: 1242
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000533 RID: 1331
 	public class IMatchCastConfig
 	{
-		// Token: 0x06001930 RID: 6448 RVA: 0x0004A9E8 File Offset: 0x00048BE8
+		// Token: 0x06001ACA RID: 6858 RVA: 0x0004E730 File Offset: 0x0004C930
 		private IMatchCastConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001931 RID: 6449 RVA: 0x0004AA20 File Offset: 0x00048C20
+		// Token: 0x06001ACB RID: 6859 RVA: 0x0004E768 File Offset: 0x0004C968
 		public static IMatchCastConfig Create([Nullable(2)] IMatchCastConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001932 RID: 6450 RVA: 0x0004AA33 File Offset: 0x00048C33
+		// Token: 0x06001ACC RID: 6860 RVA: 0x0004E77B File Offset: 0x0004C97B
 		public static IMatchCastConfig CreateFromSetValue([Nullable(2)] IMatchCastConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001933 RID: 6451 RVA: 0x0004AA46 File Offset: 0x00048C46
+		// Token: 0x06001ACD RID: 6861 RVA: 0x0004E78E File Offset: 0x0004C98E
 		public IMatchCastConfig_SetValue ToSetValue()
 		{
 			return new IMatchCastConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006B0 RID: 1712
-		// (get) Token: 0x06001934 RID: 6452 RVA: 0x0004AA7D File Offset: 0x00048C7D
-		// (set) Token: 0x06001935 RID: 6453 RVA: 0x0004AAA8 File Offset: 0x00048CA8
+		// Token: 0x17000717 RID: 1815
+		// (get) Token: 0x06001ACE RID: 6862 RVA: 0x0004E7C5 File Offset: 0x0004C9C5
+		// (set) Token: 0x06001ACF RID: 6863 RVA: 0x0004E7F0 File Offset: 0x0004C9F0
 		public virtual int Time
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006B1 RID: 1713
-		// (get) Token: 0x06001936 RID: 6454 RVA: 0x0004AAB6 File Offset: 0x00048CB6
-		// (set) Token: 0x06001937 RID: 6455 RVA: 0x0004AAE1 File Offset: 0x00048CE1
+		// Token: 0x17000718 RID: 1816
+		// (get) Token: 0x06001AD0 RID: 6864 RVA: 0x0004E7FE File Offset: 0x0004C9FE
+		// (set) Token: 0x06001AD1 RID: 6865 RVA: 0x0004E829 File Offset: 0x0004CA29
 		public virtual string Spline
 		{
 			get
@@ -109,20 +107,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006B2 RID: 1714
-		// (get) Token: 0x06001938 RID: 6456 RVA: 0x0004AAF0 File Offset: 0x00048CF0
-		// (set) Token: 0x06001939 RID: 6457 RVA: 0x0004AB83 File Offset: 0x00048D83
+		// Token: 0x17000719 RID: 1817
+		// (get) Token: 0x06001AD2 RID: 6866 RVA: 0x0004E838 File Offset: 0x0004CA38
+		// (set) Token: 0x06001AD3 RID: 6867 RVA: 0x0004E8CB File Offset: 0x0004CACB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchSequence> MatchSequence
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -153,7 +151,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -162,9 +160,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006B3 RID: 1715
-		// (get) Token: 0x0600193A RID: 6458 RVA: 0x0004AB98 File Offset: 0x00048D98
-		// (set) Token: 0x0600193B RID: 6459 RVA: 0x0004ABBF File Offset: 0x00048DBF
+		// Token: 0x1700071A RID: 1818
+		// (get) Token: 0x06001AD4 RID: 6868 RVA: 0x0004E8E0 File Offset: 0x0004CAE0
+		// (set) Token: 0x06001AD5 RID: 6869 RVA: 0x0004E907 File Offset: 0x0004CB07
 		[Nullable(2)]
 		public virtual string SpeedCurve
 		{
@@ -189,23 +187,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001284 RID: 4740
+		// Token: 0x040013A6 RID: 5030
 		[Nullable(2)]
 		protected IMatchCastConfig FbInstance;
 
-		// Token: 0x04001285 RID: 4741
+		// Token: 0x040013A7 RID: 5031
 		[Nullable(2)]
 		protected IMatchCastConfig_SetValue PocoInterface;
 
-		// Token: 0x04001286 RID: 4742
+		// Token: 0x040013A8 RID: 5032
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMatchSequence> _MatchSequenceCache;
 
-		// Token: 0x04001287 RID: 4743
+		// Token: 0x040013A9 RID: 5033
 		private bool _MatchSequenceInited;
 	}
 }

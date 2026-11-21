@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x0200120E RID: 4622
+// Token: 0x020006C2 RID: 1730
 public class DailyAdventureTaskData
 {
-	// Token: 0x040038B0 RID: 14512
+	// Token: 0x04003949 RID: 14665
 	public int TaskId;
 
-	// Token: 0x040038B1 RID: 14513
+	// Token: 0x0400394A RID: 14666
 	public ERewardState TaskState = ERewardState.Progress;
 
-	// Token: 0x040038B2 RID: 14514
+	// Token: 0x0400394B RID: 14667
 	public int CurrentProgress;
 
-	// Token: 0x040038B3 RID: 14515
+	// Token: 0x0400394C RID: 14668
 	public int TargetProgress;
 }

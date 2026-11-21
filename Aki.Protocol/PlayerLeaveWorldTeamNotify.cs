@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D97 RID: 3479
+	// Token: 0x02000D87 RID: 3463
 	[NetMessage(EMessageId.PlayerLeaveWorldTeamNotify)]
 	public sealed class PlayerLeaveWorldTeamNotify : IMessage<PlayerLeaveWorldTeamNotify>, IMessage, IEquatable<PlayerLeaveWorldTeamNotify>, IDeepCloneable<PlayerLeaveWorldTeamNotify>, IBufferMessage
 	{
-		// Token: 0x06012C12 RID: 76818 RVA: 0x002BC961 File Offset: 0x002BAB61
+		// Token: 0x06012B16 RID: 76566 RVA: 0x002BAD3D File Offset: 0x002B8F3D
 		[NullableContext(1)]
 		public static PlayerLeaveWorldTeamNotify Create()
 		{
 			return new PlayerLeaveWorldTeamNotify();
 		}
 
-		// Token: 0x17003E3C RID: 15932
-		// (get) Token: 0x06012C13 RID: 76819 RVA: 0x002BC968 File Offset: 0x002BAB68
+		// Token: 0x17003E07 RID: 15879
+		// (get) Token: 0x06012B17 RID: 76567 RVA: 0x002BAD44 File Offset: 0x002B8F44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E3D RID: 15933
-		// (get) Token: 0x06012C14 RID: 76820 RVA: 0x002BC96B File Offset: 0x002BAB6B
+		// Token: 0x17003E08 RID: 15880
+		// (get) Token: 0x06012B18 RID: 76568 RVA: 0x002BAD47 File Offset: 0x002B8F47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012C15 RID: 76821 RVA: 0x002BC972 File Offset: 0x002BAB72
+		// Token: 0x06012B19 RID: 76569 RVA: 0x002BAD4E File Offset: 0x002B8F4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerLeaveWorldTeamNotify()
 		{
 		}
 
-		// Token: 0x06012C16 RID: 76822 RVA: 0x002BC97A File Offset: 0x002BAB7A
+		// Token: 0x06012B1A RID: 76570 RVA: 0x002BAD56 File Offset: 0x002B8F56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerLeaveWorldTeamNotify(PlayerLeaveWorldTeamNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012C17 RID: 76823 RVA: 0x002BC9AB File Offset: 0x002BABAB
+		// Token: 0x06012B1B RID: 76571 RVA: 0x002BAD87 File Offset: 0x002B8F87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerLeaveWorldTeamNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new PlayerLeaveWorldTeamNotify(this);
 		}
 
-		// Token: 0x17003E3E RID: 15934
-		// (get) Token: 0x06012C18 RID: 76824 RVA: 0x002BC9B3 File Offset: 0x002BABB3
-		// (set) Token: 0x06012C19 RID: 76825 RVA: 0x002BC9BB File Offset: 0x002BABBB
+		// Token: 0x17003E09 RID: 15881
+		// (get) Token: 0x06012B1C RID: 76572 RVA: 0x002BAD8F File Offset: 0x002B8F8F
+		// (set) Token: 0x06012B1D RID: 76573 RVA: 0x002BAD97 File Offset: 0x002B8F97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E3F RID: 15935
-		// (get) Token: 0x06012C1A RID: 76826 RVA: 0x002BC9C4 File Offset: 0x002BABC4
-		// (set) Token: 0x06012C1B RID: 76827 RVA: 0x002BC9CC File Offset: 0x002BABCC
+		// Token: 0x17003E0A RID: 15882
+		// (get) Token: 0x06012B1E RID: 76574 RVA: 0x002BADA0 File Offset: 0x002B8FA0
+		// (set) Token: 0x06012B1F RID: 76575 RVA: 0x002BADA8 File Offset: 0x002B8FA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public WorldTeamLeaveReason Reason
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012C1C RID: 76828 RVA: 0x002BC9D5 File Offset: 0x002BABD5
+		// Token: 0x06012B20 RID: 76576 RVA: 0x002BADB1 File Offset: 0x002B8FB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PlayerLeaveWorldTeamNotify);
 		}
 
-		// Token: 0x06012C1D RID: 76829 RVA: 0x002BC9E3 File Offset: 0x002BABE3
+		// Token: 0x06012B21 RID: 76577 RVA: 0x002BADBF File Offset: 0x002B8FBF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PlayerLeaveWorldTeamNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && this.Reason == other.Reason && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012C1E RID: 76830 RVA: 0x002BCA24 File Offset: 0x002BAC24
+		// Token: 0x06012B22 RID: 76578 RVA: 0x002BAE00 File Offset: 0x002B9000
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012C1F RID: 76831 RVA: 0x002BCA82 File Offset: 0x002BAC82
+		// Token: 0x06012B23 RID: 76579 RVA: 0x002BAE5E File Offset: 0x002B905E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012C20 RID: 76832 RVA: 0x002BCA8F File Offset: 0x002BAC8F
+		// Token: 0x06012B24 RID: 76580 RVA: 0x002BAE6B File Offset: 0x002B906B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012C21 RID: 76833 RVA: 0x002BCA98 File Offset: 0x002BAC98
+		// Token: 0x06012B25 RID: 76581 RVA: 0x002BAE74 File Offset: 0x002B9074
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.Reason != WorldTeamLeaveReason.Initiative)
-			{
-				output.WriteRawTag(24);
-				output.WriteEnum((int)this.Reason);
-			}
 			if (this.PlayerId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(96);
 				output.WriteInt32(this.PlayerId);
+			}
+			if (this.Reason != WorldTeamLeaveReason.Initiative)
+			{
+				output.WriteRawTag(120);
+				output.WriteEnum((int)this.Reason);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012C22 RID: 76834 RVA: 0x002BCAF4 File Offset: 0x002BACF4
+		// Token: 0x06012B26 RID: 76582 RVA: 0x002BAED0 File Offset: 0x002B90D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012C23 RID: 76835 RVA: 0x002BCB4C File Offset: 0x002BAD4C
+		// Token: 0x06012B27 RID: 76583 RVA: 0x002BAF28 File Offset: 0x002B9128
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PlayerLeaveWorldTeamNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012C24 RID: 76836 RVA: 0x002BCB9C File Offset: 0x002BAD9C
+		// Token: 0x06012B28 RID: 76584 RVA: 0x002BAF78 File Offset: 0x002B9178
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012C25 RID: 76837 RVA: 0x002BCBA8 File Offset: 0x002BADA8
+		// Token: 0x06012B29 RID: 76585 RVA: 0x002BAF84 File Offset: 0x002B9184
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 96U)
 				{
-					if (num != 72U)
+					if (num != 120U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.PlayerId = input.ReadInt32();
+						this.Reason = (WorldTeamLeaveReason)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.Reason = (WorldTeamLeaveReason)input.ReadEnum();
+					this.PlayerId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x04007443 RID: 29763
+		// Token: 0x0400745B RID: 29787
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007444 RID: 29764
-		public const int PlayerIdFieldNumber = 9;
+		// Token: 0x0400745C RID: 29788
+		public const int PlayerIdFieldNumber = 12;
 
-		// Token: 0x04007445 RID: 29765
+		// Token: 0x0400745D RID: 29789
 		private int playerId_;
 
-		// Token: 0x04007446 RID: 29766
-		public const int ReasonFieldNumber = 3;
+		// Token: 0x0400745E RID: 29790
+		public const int ReasonFieldNumber = 15;
 
-		// Token: 0x04007447 RID: 29767
+		// Token: 0x0400745F RID: 29791
 		private WorldTeamLeaveReason reason_;
 	}
 }

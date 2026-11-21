@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003549 RID: 13641
+// Token: 0x02002ABE RID: 10942
 [NullableContext(1)]
 [Nullable(0)]
 public class CompositeError : Exception
 {
-	// Token: 0x0601DF55 RID: 122709 RVA: 0x00865554 File Offset: 0x00863754
+	// Token: 0x0601BC7D RID: 113789 RVA: 0x0088D18C File Offset: 0x0088B38C
 	public CompositeError(List<Exception> errors, [Nullable(2)] string message = null)
 	{
 		string message2 = message;
@@ -37,6 +37,6 @@ public class CompositeError : Exception
 		this.Data["FullStackTrace"] = this.StackTrace + " " + text;
 	}
 
-	// Token: 0x0400EB51 RID: 60241
+	// Token: 0x0400F00E RID: 61454
 	public readonly List<Exception> Errors = new List<Exception>();
 }

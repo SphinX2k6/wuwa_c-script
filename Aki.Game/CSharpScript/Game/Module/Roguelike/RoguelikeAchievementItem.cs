@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E02 RID: 19970
+	// Token: 0x02003DCB RID: 15819
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeAchievementItem : GridProxyAbstract<AchievementData>
 	{
-		// Token: 0x0603386C RID: 211052 RVA: 0x00C0A600 File Offset: 0x00C08800
+		// Token: 0x060286D7 RID: 165591 RVA: 0x00B53B10 File Offset: 0x00B51D10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603386D RID: 211053 RVA: 0x00C0A74B File Offset: 0x00C0894B
+		// Token: 0x060286D8 RID: 165592 RVA: 0x00B53C5B File Offset: 0x00B51E5B
 		protected void OnBtnRewardClickInternal()
 		{
 			Action onBtnRewardClick = this.OnBtnRewardClick;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onBtnRewardClick();
 		}
 
-		// Token: 0x0603386E RID: 211054 RVA: 0x00C0A75D File Offset: 0x00C0895D
+		// Token: 0x060286D9 RID: 165593 RVA: 0x00B53C6D File Offset: 0x00B51E6D
 		protected override void OnStart()
 		{
 			if (this.CommonGridItem == null)
@@ -69,21 +69,21 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.CommonGridItem.SetActive(false);
 		}
 
-		// Token: 0x0603386F RID: 211055 RVA: 0x00C0A795 File Offset: 0x00C08995
+		// Token: 0x060286DA RID: 165594 RVA: 0x00B53CA5 File Offset: 0x00B51EA5
 		[NullableContext(1)]
 		public override object GetKey(AchievementData data, int displayIndex)
 		{
 			return data.GetId();
 		}
 
-		// Token: 0x06033870 RID: 211056 RVA: 0x00C0A7A2 File Offset: 0x00C089A2
+		// Token: 0x060286DB RID: 165595 RVA: 0x00B53CB2 File Offset: 0x00B51EB2
 		[NullableContext(1)]
 		public override void Refresh(AchievementData data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x06033871 RID: 211057 RVA: 0x00C0A7AC File Offset: 0x00C089AC
+		// Token: 0x060286DC RID: 165596 RVA: 0x00B53CBC File Offset: 0x00B51EBC
 		public void Update(AchievementData data = null)
 		{
 			this.Data = ((data != null) ? data : this.Data);
@@ -119,38 +119,38 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B561 RID: 111969
+		// Token: 0x04015F34 RID: 89908
 		public CommonItemSmallItemGrid CommonGridItem;
 
-		// Token: 0x0401B562 RID: 111970
+		// Token: 0x04015F35 RID: 89909
 		public AchievementData Data;
 
-		// Token: 0x0401B563 RID: 111971
+		// Token: 0x04015F36 RID: 89910
 		public Action OnBtnRewardClick;
 
-		// Token: 0x0200AF90 RID: 44944
+		// Token: 0x020099C5 RID: 39365
 		[NullableContext(0)]
 		private class ERoguelikeAchievementItemDefine
 		{
-			// Token: 0x040354D7 RID: 218327
+			// Token: 0x0402FF0A RID: 196362
 			public const int TxtTitle = 0;
 
-			// Token: 0x040354D8 RID: 218328
+			// Token: 0x0402FF0B RID: 196363
 			public const int TxtProgress = 1;
 
-			// Token: 0x040354D9 RID: 218329
+			// Token: 0x0402FF0C RID: 196364
 			public const int RewardedItem = 2;
 
-			// Token: 0x040354DA RID: 218330
+			// Token: 0x0402FF0D RID: 196365
 			public const int CommonGridItem = 3;
 
-			// Token: 0x040354DB RID: 218331
+			// Token: 0x0402FF0E RID: 196366
 			public const int BtnReward = 4;
 
-			// Token: 0x040354DC RID: 218332
+			// Token: 0x0402FF0F RID: 196367
 			public const int TxtConfirm = 5;
 
-			// Token: 0x040354DD RID: 218333
+			// Token: 0x0402FF10 RID: 196368
 			public const int DoingItem = 6;
 		}
 	}

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006331 RID: 25393
+	// Token: 0x020052AF RID: 21167
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballMainChapterItem : UiPanelBase, IPinballChapterItem
 	{
-		// Token: 0x0603FE27 RID: 261671 RVA: 0x00F74734 File Offset: 0x00F72934
+		// Token: 0x06034AE8 RID: 215784 RVA: 0x00EBB690 File Offset: 0x00EB9890
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FE28 RID: 261672 RVA: 0x00F748C4 File Offset: 0x00F72AC4
+		// Token: 0x06034AE9 RID: 215785 RVA: 0x00EBB820 File Offset: 0x00EB9A20
 		protected override void OnStart()
 		{
 			this.ProgressLayout = new GenericLayout<PinballMainChapterProgressItem, PinballLevelRecordData>(base.GetHorizontalLayout(7), new Func<PinballMainChapterProgressItem>(this.InitProgressItem), base.GetItem(8).GetOwner() as AUIBaseActor, false, true);
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.GetButton(0).OnPointEnterCallBack.Bind(new Action(this.OnPointerEnter));
 		}
 
-		// Token: 0x0603FE29 RID: 261673 RVA: 0x00F74958 File Offset: 0x00F72B58
+		// Token: 0x06034AEA RID: 215786 RVA: 0x00EBB8B4 File Offset: 0x00EB9AB4
 		protected override void OnBeforeDestroy()
 		{
 			base.GetButton(0).OnPointEnterCallBack.Unbind();
 		}
 
-		// Token: 0x0603FE2A RID: 261674 RVA: 0x00F7496C File Offset: 0x00F72B6C
+		// Token: 0x06034AEB RID: 215787 RVA: 0x00EBB8C8 File Offset: 0x00EB9AC8
 		[NullableContext(2)]
 		public UUIItem GetChapterButtonUiItem()
 		{
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return auibaseActor.GetUIItem();
 		}
 
-		// Token: 0x0603FE2B RID: 261675 RVA: 0x00F7499C File Offset: 0x00F72B9C
+		// Token: 0x06034AEC RID: 215788 RVA: 0x00EBB8F8 File Offset: 0x00EB9AF8
 		private EPinballChapterLevelLockStatus GetChapterLockStatus(int chapterId)
 		{
 			return PinballModel.Instance.ActivityData.GetChapterLockStatus(chapterId);
 		}
 
-		// Token: 0x0603FE2C RID: 261676 RVA: 0x00F749AE File Offset: 0x00F72BAE
+		// Token: 0x06034AED RID: 215789 RVA: 0x00EBB90A File Offset: 0x00EB9B0A
 		void IPinballChapterItem.Refresh(PinballChapterData data)
 		{
 			this.Refresh(data, false);
 		}
 
-		// Token: 0x0603FE2D RID: 261677 RVA: 0x00F749B8 File Offset: 0x00F72BB8
+		// Token: 0x06034AEE RID: 215790 RVA: 0x00EBB914 File Offset: 0x00EB9B14
 		public void Refresh(PinballChapterData data, bool defaultGray = false)
 		{
 			PinballChapterConfig? pinballChapterConfigById = PinballConfig.Instance.GetPinballChapterConfigById(data.ChapterId);
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.LevelDataList = list;
 		}
 
-		// Token: 0x0603FE2E RID: 261678 RVA: 0x00F74BF0 File Offset: 0x00F72DF0
+		// Token: 0x06034AEF RID: 215791 RVA: 0x00EBBB4C File Offset: 0x00EB9D4C
 		public void SetProgressActive(bool isActive)
 		{
 			GenericLayout<PinballMainChapterProgressItem, PinballLevelRecordData> progressLayout = this.ProgressLayout;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			progressLayout.SetActive(isActive);
 		}
 
-		// Token: 0x0603FE2F RID: 261679 RVA: 0x00F74C03 File Offset: 0x00F72E03
+		// Token: 0x06034AF0 RID: 215792 RVA: 0x00EBBB5F File Offset: 0x00EB9D5F
 		public void SetRedDotVisible(bool isVisible)
 		{
 			UUIItem item = base.GetItem(9);
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			item.SetUIActive(isVisible);
 		}
 
-		// Token: 0x0603FE30 RID: 261680 RVA: 0x00F74C18 File Offset: 0x00F72E18
+		// Token: 0x06034AF1 RID: 215793 RVA: 0x00EBBB74 File Offset: 0x00EB9D74
 		public void SetGray(bool isSetGray)
 		{
 			UUITexture texture = base.GetTexture(2);
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.GetItem(5).SetUIActive(isSetGray);
 		}
 
-		// Token: 0x0603FE31 RID: 261681 RVA: 0x00F74C6C File Offset: 0x00F72E6C
+		// Token: 0x06034AF2 RID: 215794 RVA: 0x00EBBBC8 File Offset: 0x00EB9DC8
 		public UniTask PlayUnlockTweenAsync()
 		{
 			PinballMainChapterItem.<PlayUnlockTweenAsync>d__18 <PlayUnlockTweenAsync>d__;
@@ -221,13 +221,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <PlayUnlockTweenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE32 RID: 261682 RVA: 0x00F74CAF File Offset: 0x00F72EAF
+		// Token: 0x06034AF3 RID: 215795 RVA: 0x00EBBC0B File Offset: 0x00EB9E0B
 		private PinballMainChapterProgressItem InitProgressItem()
 		{
 			return new PinballMainChapterProgressItem();
 		}
 
-		// Token: 0x0603FE33 RID: 261683 RVA: 0x00F74CB8 File Offset: 0x00F72EB8
+		// Token: 0x06034AF4 RID: 215796 RVA: 0x00EBBC14 File Offset: 0x00EB9E14
 		private void OnBtnChapterClick()
 		{
 			if (this.ChapterData == null || this.LevelDataList.Count == 0)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			onClickChapterBack(this.ChapterData, this.LevelDataList);
 		}
 
-		// Token: 0x0603FE34 RID: 261684 RVA: 0x00F74D90 File Offset: 0x00F72F90
+		// Token: 0x06034AF5 RID: 215797 RVA: 0x00EBBCEC File Offset: 0x00EB9EEC
 		private void OnPointerEnter()
 		{
 			if (this.ChapterData == null)
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			onPointerEnterChapterBack(pinballChapterConfigById.Value.PlanetBg, pinballChapterConfigById.Value.PlanetMaskBg, chapterId);
 		}
 
-		// Token: 0x04021539 RID: 136505
+		// Token: 0x0401BE68 RID: 114280
 		[Nullable(new byte[]
 		{
 			2,
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<PinballChapterData, List<PinballLevelRecordData>> OnClickChapterBack;
 
-		// Token: 0x0402153A RID: 136506
+		// Token: 0x0401BE69 RID: 114281
 		[Nullable(new byte[]
 		{
 			2,
@@ -300,22 +300,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string, string, int> OnPointerEnterChapterBack;
 
-		// Token: 0x0402153B RID: 136507
+		// Token: 0x0401BE6A RID: 114282
 		[Nullable(2)]
 		private PinballChapterData ChapterData;
 
-		// Token: 0x0402153C RID: 136508
+		// Token: 0x0401BE6B RID: 114283
 		private List<PinballLevelRecordData> LevelDataList = new List<PinballLevelRecordData>();
 
-		// Token: 0x0402153D RID: 136509
+		// Token: 0x0401BE6C RID: 114284
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0402153E RID: 136510
+		// Token: 0x0401BE6D RID: 114285
 		[Nullable(2)]
 		private UUIEffectOutline ExtraEffectOutline;
 
-		// Token: 0x0402153F RID: 136511
+		// Token: 0x0401BE6E RID: 114286
 		[Nullable(new byte[]
 		{
 			2,
@@ -324,29 +324,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		private GenericLayout<PinballMainChapterProgressItem, PinballLevelRecordData> ProgressLayout;
 
-		// Token: 0x0200C52B RID: 50475
+		// Token: 0x0200AF12 RID: 44818
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B825 RID: 243749
+			// Token: 0x04036187 RID: 221575
 			BtnChapter,
-			// Token: 0x0403B826 RID: 243750
+			// Token: 0x04036188 RID: 221576
 			BgIcon,
-			// Token: 0x0403B827 RID: 243751
+			// Token: 0x04036189 RID: 221577
 			TexBg,
-			// Token: 0x0403B828 RID: 243752
+			// Token: 0x0403618A RID: 221578
 			TexDecoration,
-			// Token: 0x0403B829 RID: 243753
+			// Token: 0x0403618B RID: 221579
 			TexArtName,
-			// Token: 0x0403B82A RID: 243754
+			// Token: 0x0403618C RID: 221580
 			LockItem,
-			// Token: 0x0403B82B RID: 243755
+			// Token: 0x0403618D RID: 221581
 			TxtName,
-			// Token: 0x0403B82C RID: 243756
+			// Token: 0x0403618E RID: 221582
 			ProgressLayout,
-			// Token: 0x0403B82D RID: 243757
+			// Token: 0x0403618F RID: 221583
 			ProgressItem,
-			// Token: 0x0403B82E RID: 243758
+			// Token: 0x04036190 RID: 221584
 			RedDotItem
 		}
 	}

@@ -6,13 +6,13 @@ using CSharpScript.Game.Module.TowerDefenseUi.HeadState;
 
 namespace CSharpScript.Game.Module.TowerDefenseUi
 {
-	// Token: 0x02004AFC RID: 19196
+	// Token: 0x02003AA4 RID: 15012
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class TowerDefenseUiController : ControllerBase
 	{
-		// Token: 0x06031B64 RID: 203620 RVA: 0x00B8B7E1 File Offset: 0x00B899E1
+		// Token: 0x060268F4 RID: 157940 RVA: 0x00ACF83D File Offset: 0x00ACDA3D
 		protected override bool OnInit()
 		{
 			this.HeadStateManager = new TowerDefenseHeadStateManager();
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			return true;
 		}
 
-		// Token: 0x06031B65 RID: 203621 RVA: 0x00B8B816 File Offset: 0x00B89A16
+		// Token: 0x060268F5 RID: 157941 RVA: 0x00ACF872 File Offset: 0x00ACDA72
 		protected override bool OnLeaveLevel()
 		{
 			TowerDefenseHeadStateManager headStateManager = this.HeadStateManager;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			return true;
 		}
 
-		// Token: 0x06031B66 RID: 203622 RVA: 0x00B8B831 File Offset: 0x00B89A31
+		// Token: 0x060268F6 RID: 157942 RVA: 0x00ACF88D File Offset: 0x00ACDA8D
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			return true;
 		}
 
-		// Token: 0x06031B67 RID: 203623 RVA: 0x00B8B871 File Offset: 0x00B89A71
+		// Token: 0x060268F7 RID: 157943 RVA: 0x00ACF8CD File Offset: 0x00ACDACD
 		private void OnWorldDone()
 		{
 			this.IsEnable = (KuroSimpleCombatController.Instance.CurSubController != null);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			headStateManager.OnWorldDone();
 		}
 
-		// Token: 0x06031B68 RID: 203624 RVA: 0x00B8B89F File Offset: 0x00B89A9F
+		// Token: 0x060268F8 RID: 157944 RVA: 0x00ACF8FB File Offset: 0x00ACDAFB
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsEnable)
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			headStateManager.Tick(delta);
 		}
 
-		// Token: 0x17007AF6 RID: 31478
-		// (get) Token: 0x06031B69 RID: 203625 RVA: 0x00B8B8BB File Offset: 0x00B89ABB
+		// Token: 0x17004EA3 RID: 20131
+		// (get) Token: 0x060268F9 RID: 157945 RVA: 0x00ACF917 File Offset: 0x00ACDB17
 		public static TowerDefenseUiController Instance
 		{
 			get
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			}
 		}
 
-		// Token: 0x06031B6A RID: 203626 RVA: 0x00B8B8C2 File Offset: 0x00B89AC2
+		// Token: 0x060268FA RID: 157946 RVA: 0x00ACF91E File Offset: 0x00ACDB1E
 		public static TowerDefenseUiController GetOrCreateInstance()
 		{
 			if (TowerDefenseUiController._Instance == null)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			return TowerDefenseUiController._Instance;
 		}
 
-		// Token: 0x06031B6B RID: 203627 RVA: 0x00B8B8D6 File Offset: 0x00B89AD6
+		// Token: 0x060268FB RID: 157947 RVA: 0x00ACF932 File Offset: 0x00ACDB32
 		public static bool CreateInstance()
 		{
 			if (TowerDefenseUiController._Instance != null)
@@ -108,34 +108,34 @@ namespace CSharpScript.Game.Module.TowerDefenseUi
 			return true;
 		}
 
-		// Token: 0x06031B6C RID: 203628 RVA: 0x00B8B8EC File Offset: 0x00B89AEC
+		// Token: 0x060268FC RID: 157948 RVA: 0x00ACF948 File Offset: 0x00ACDB48
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031B6D RID: 203629 RVA: 0x00B8B8EE File Offset: 0x00B89AEE
+		// Token: 0x060268FD RID: 157949 RVA: 0x00ACF94A File Offset: 0x00ACDB4A
 		public static void ResetStaticDefaultValue()
 		{
 			TowerDefenseUiController._Instance = null;
 		}
 
-		// Token: 0x06031B6E RID: 203630 RVA: 0x00B8B8F6 File Offset: 0x00B89AF6
+		// Token: 0x060268FE RID: 157950 RVA: 0x00ACF952 File Offset: 0x00ACDB52
 		static TowerDefenseUiController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TowerDefenseUiController.CreateStaticDefaultValue), new Action(TowerDefenseUiController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A8B6 RID: 108726
+		// Token: 0x04015208 RID: 86536
 		private Stat TickStat = Stat.Create("TowerDefenseUiController.OnTick", "", "");
 
-		// Token: 0x0401A8B7 RID: 108727
+		// Token: 0x04015209 RID: 86537
 		[Nullable(2)]
 		public TowerDefenseHeadStateManager HeadStateManager;
 
-		// Token: 0x0401A8B8 RID: 108728
+		// Token: 0x0401520A RID: 86538
 		public bool IsEnable;
 
-		// Token: 0x0401A8B9 RID: 108729
+		// Token: 0x0401520B RID: 86539
 		[Nullable(2)]
 		private static TowerDefenseUiController _Instance;
 	}

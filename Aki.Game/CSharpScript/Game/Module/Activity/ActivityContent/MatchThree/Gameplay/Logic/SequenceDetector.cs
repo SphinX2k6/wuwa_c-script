@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F9 RID: 25849
+	// Token: 0x02005477 RID: 21623
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequenceDetector
 	{
-		// Token: 0x06040E4E RID: 265806 RVA: 0x00FBA492 File Offset: 0x00FB8692
+		// Token: 0x06035B12 RID: 219922 RVA: 0x00F014C2 File Offset: 0x00EFF6C2
 		public void DetectInto(Board board, int rowStart, int rowEnd, HashSet<int> cols, List<ItemSequence> result)
 		{
 			this.HRuns.Clear();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.MergeAndClassify(board, result);
 		}
 
-		// Token: 0x06040E4F RID: 265807 RVA: 0x00FBA4D0 File Offset: 0x00FB86D0
+		// Token: 0x06035B13 RID: 219923 RVA: 0x00F01500 File Offset: 0x00EFF700
 		public void DetectAll(Board board, List<ItemSequence> result)
 		{
 			this.HRuns.Clear();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.MergeAndClassify(board, result);
 		}
 
-		// Token: 0x06040E50 RID: 265808 RVA: 0x00FBA524 File Offset: 0x00FB8724
+		// Token: 0x06035B14 RID: 219924 RVA: 0x00F01554 File Offset: 0x00EFF754
 		private void ScanHorizontal(Board board, int rowStart, int rowEnd)
 		{
 			rowStart = ((rowStart < 0) ? 0 : rowStart);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E51 RID: 265809 RVA: 0x00FBA5A8 File Offset: 0x00FB87A8
+		// Token: 0x06035B15 RID: 219925 RVA: 0x00F015D8 File Offset: 0x00EFF7D8
 		private void ScanVertical(Board board, HashSet<int> cols)
 		{
 			foreach (int num in cols)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E52 RID: 265810 RVA: 0x00FBA600 File Offset: 0x00FB8800
+		// Token: 0x06035B16 RID: 219926 RVA: 0x00F01630 File Offset: 0x00EFF830
 		private void ScanVerticalColumn(Board board, int c)
 		{
 			int i = 0;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E53 RID: 265811 RVA: 0x00FBA660 File Offset: 0x00FB8860
+		// Token: 0x06035B17 RID: 219927 RVA: 0x00F01690 File Offset: 0x00EFF890
 		private bool TryMatchType(Board board, int r, int c, out EPieceType type)
 		{
 			Piece piece = board.GetPiece(r, c);
@@ -122,14 +122,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return true;
 		}
 
-		// Token: 0x06040E54 RID: 265812 RVA: 0x00FBA694 File Offset: 0x00FB8894
+		// Token: 0x06035B18 RID: 219928 RVA: 0x00F016C4 File Offset: 0x00EFF8C4
 		private bool SameMatch(Board board, int r, int c, EPieceType type)
 		{
 			Piece piece = board.GetPiece(r, c);
 			return piece != null && piece.IsMatchable && piece.Type == type;
 		}
 
-		// Token: 0x06040E55 RID: 265813 RVA: 0x00FBA6C4 File Offset: 0x00FB88C4
+		// Token: 0x06035B19 RID: 219929 RVA: 0x00F016F4 File Offset: 0x00EFF8F4
 		private void MergeAndClassify(Board board, List<ItemSequence> result)
 		{
 			this.UsedH.Clear();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E56 RID: 265814 RVA: 0x00FBA720 File Offset: 0x00FB8920
+		// Token: 0x06035B1A RID: 219930 RVA: 0x00F01750 File Offset: 0x00EFF950
 		private void ExtractLines(Board board, List<ItemSequence> result, EMatchShape shape)
 		{
 			for (int i = 0; i < this.HRuns.Count; i++)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E57 RID: 265815 RVA: 0x00FBA808 File Offset: 0x00FB8A08
+		// Token: 0x06035B1B RID: 219931 RVA: 0x00F01838 File Offset: 0x00EFFA38
 		private void ExtractCrosses(Board board, List<ItemSequence> result, EMatchShape shape)
 		{
 			for (int i = 0; i < this.HRuns.Count; i++)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E58 RID: 265816 RVA: 0x00FBA914 File Offset: 0x00FB8B14
+		// Token: 0x06035B1C RID: 219932 RVA: 0x00F01944 File Offset: 0x00EFFB44
 		private ItemSequence BuildLineSequence(Board board, int row, int col, int len, bool isHorizontal)
 		{
 			ItemSequence result = new ItemSequence
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result;
 		}
 
-		// Token: 0x06040E59 RID: 265817 RVA: 0x00FBA9B8 File Offset: 0x00FB8BB8
+		// Token: 0x06035B1D RID: 219933 RVA: 0x00F019E8 File Offset: 0x00EFFBE8
 		[NullableContext(0)]
 		private ItemSequence BuildLTSequence([Nullable(1)] Board board, [TupleElementNames(new string[]
 		{
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			};
 		}
 
-		// Token: 0x06040E5A RID: 265818 RVA: 0x00FBAA64 File Offset: 0x00FB8C64
+		// Token: 0x06035B1E RID: 219934 RVA: 0x00F01A94 File Offset: 0x00EFFC94
 		[NullableContext(0)]
 		private EMatchShape ClassifyLT([TupleElementNames(new string[]
 		{
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return EMatchShape.L;
 		}
 
-		// Token: 0x06040E5B RID: 265819 RVA: 0x00FBAAC9 File Offset: 0x00FB8CC9
+		// Token: 0x06035B1F RID: 219935 RVA: 0x00F01AF9 File Offset: 0x00EFFCF9
 		private EMatchShape ClassifyLineShape(int len)
 		{
 			if (len >= 5)
@@ -300,20 +300,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return EMatchShape.Line3;
 		}
 
-		// Token: 0x06040E5C RID: 265820 RVA: 0x00FBAAD8 File Offset: 0x00FB8CD8
+		// Token: 0x06035B20 RID: 219936 RVA: 0x00F01B08 File Offset: 0x00EFFD08
 		public bool HasAnyValidMove(Board board)
 		{
 			return this.ScanValidMoves(board, null);
 		}
 
-		// Token: 0x06040E5D RID: 265821 RVA: 0x00FBAAE2 File Offset: 0x00FB8CE2
+		// Token: 0x06035B21 RID: 219937 RVA: 0x00F01B12 File Offset: 0x00EFFD12
 		public void CollectValidMoves(Board board, List<ValidMove> buffer)
 		{
 			buffer.Clear();
 			this.ScanValidMoves(board, buffer);
 		}
 
-		// Token: 0x06040E5E RID: 265822 RVA: 0x00FBAAF4 File Offset: 0x00FB8CF4
+		// Token: 0x06035B22 RID: 219938 RVA: 0x00F01B24 File Offset: 0x00EFFD24
 		private bool ScanValidMoves(Board board, [Nullable(2)] List<ValidMove> buffer)
 		{
 			bool result = false;
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result;
 		}
 
-		// Token: 0x06040E5F RID: 265823 RVA: 0x00FBABB0 File Offset: 0x00FB8DB0
+		// Token: 0x06035B23 RID: 219939 RVA: 0x00F01BE0 File Offset: 0x00EFFDE0
 		private bool TrySwapMakesMatch(Board board, Piece pa, int r1, int c1, int r2, int c2)
 		{
 			Piece piece = board.GetPiece(r2, c2);
@@ -381,20 +381,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return result;
 		}
 
-		// Token: 0x06040E60 RID: 265824 RVA: 0x00FBACD0 File Offset: 0x00FB8ED0
+		// Token: 0x06035B24 RID: 219940 RVA: 0x00F01D00 File Offset: 0x00EFFF00
 		public bool HasMatchAt(Board board, int r, int c, EPieceType type)
 		{
 			return this.WouldFormLineAt(board, r, c, type, true) || this.WouldFormLineAt(board, r, c, type, false);
 		}
 
-		// Token: 0x06040E61 RID: 265825 RVA: 0x00FBACF0 File Offset: 0x00FB8EF0
+		// Token: 0x06035B25 RID: 219941 RVA: 0x00F01D20 File Offset: 0x00EFFF20
 		private bool HasMatchAt(Board board, int r, int c)
 		{
 			EPieceType type;
 			return this.TryMatchType(board, r, c, out type) && this.HasMatchAt(board, r, c, type);
 		}
 
-		// Token: 0x06040E62 RID: 265826 RVA: 0x00FBAD18 File Offset: 0x00FB8F18
+		// Token: 0x06035B26 RID: 219942 RVA: 0x00F01D48 File Offset: 0x00EFFF48
 		public bool WouldFormLineAt(Board board, int row, int col, EPieceType type, bool horizontal)
 		{
 			int num = 1;
@@ -433,10 +433,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return num >= 3;
 		}
 
-		// Token: 0x04021D39 RID: 138553
+		// Token: 0x0401C66A RID: 116330
 		private const int MinMatch = 3;
 
-		// Token: 0x04021D3A RID: 138554
+		// Token: 0x0401C66B RID: 116331
 		[TupleElementNames(new string[]
 		{
 			"Row",
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		private readonly List<ValueTuple<int, int, int>> HRuns = new List<ValueTuple<int, int, int>>();
 
-		// Token: 0x04021D3B RID: 138555
+		// Token: 0x0401C66C RID: 116332
 		[TupleElementNames(new string[]
 		{
 			"Row",
@@ -464,10 +464,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		private readonly List<ValueTuple<int, int, int>> VRuns = new List<ValueTuple<int, int, int>>();
 
-		// Token: 0x04021D3C RID: 138556
+		// Token: 0x0401C66D RID: 116333
 		private readonly HashSet<int> UsedH = new HashSet<int>();
 
-		// Token: 0x04021D3D RID: 138557
+		// Token: 0x0401C66E RID: 116334
 		private readonly HashSet<int> UsedV = new HashSet<int>();
 	}
 }

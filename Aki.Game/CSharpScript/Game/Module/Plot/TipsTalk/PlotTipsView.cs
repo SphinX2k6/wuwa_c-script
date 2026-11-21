@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.TipsTalk
 {
-	// Token: 0x0200500F RID: 20495
+	// Token: 0x02003FD9 RID: 16345
 	public class PlotTipsView : PlotTipsViewBase
 	{
-		// Token: 0x06034716 RID: 214806 RVA: 0x00C59B27 File Offset: 0x00C57D27
+		// Token: 0x060295B9 RID: 169401 RVA: 0x00BA5027 File Offset: 0x00BA3227
 		public PlotTipsView()
 		{
 			this.ResourceId = "UiView_MascotTips";
 		}
 
-		// Token: 0x06034717 RID: 214807 RVA: 0x00C59B3C File Offset: 0x00C57D3C
+		// Token: 0x060295BA RID: 169402 RVA: 0x00BA503C File Offset: 0x00BA323C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,20 +28,20 @@ namespace CSharpScript.Game.Module.Plot.TipsTalk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034718 RID: 214808 RVA: 0x00C59BA5 File Offset: 0x00C57DA5
+		// Token: 0x060295BB RID: 169403 RVA: 0x00BA50A5 File Offset: 0x00BA32A5
 		protected override void OnInit()
 		{
 			this.IconItem = base.GetTexture(0);
 			this.SubtitleItem = base.GetText(1);
 		}
 
-		// Token: 0x0200B142 RID: 45378
+		// Token: 0x02009B7A RID: 39802
 		private static class EChildCom
 		{
-			// Token: 0x04035CA0 RID: 220320
+			// Token: 0x040306E8 RID: 198376
 			public const int Icon = 0;
 
-			// Token: 0x04035CA1 RID: 220321
+			// Token: 0x040306E9 RID: 198377
 			public const int Text = 1;
 		}
 	}

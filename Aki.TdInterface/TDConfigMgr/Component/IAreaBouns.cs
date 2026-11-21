@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001CD RID: 461
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001F0 RID: 496
 	public class IAreaBouns : IWorldLevelBonusType
 	{
-		// Token: 0x06000764 RID: 1892 RVA: 0x00024E1C File Offset: 0x0002301C
+		// Token: 0x060007B8 RID: 1976 RVA: 0x00026120 File Offset: 0x00024320
 		private IAreaBouns_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000765 RID: 1893 RVA: 0x00024E54 File Offset: 0x00023054
+		// Token: 0x060007B9 RID: 1977 RVA: 0x00026158 File Offset: 0x00024358
 		public static IAreaBouns Create([Nullable(2)] IAreaBouns instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000766 RID: 1894 RVA: 0x00024E67 File Offset: 0x00023067
+		// Token: 0x060007BA RID: 1978 RVA: 0x0002616B File Offset: 0x0002436B
 		public static IAreaBouns CreateFromSetValue([Nullable(2)] IAreaBouns_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000767 RID: 1895 RVA: 0x00024E7A File Offset: 0x0002307A
+		// Token: 0x060007BB RID: 1979 RVA: 0x0002617E File Offset: 0x0002437E
 		public new IAreaBouns_SetValue ToSetValue()
 		{
 			return new IAreaBouns_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700025C RID: 604
-		// (get) Token: 0x06000768 RID: 1896 RVA: 0x00024E8D File Offset: 0x0002308D
-		// (set) Token: 0x06000769 RID: 1897 RVA: 0x00024EB8 File Offset: 0x000230B8
+		// Token: 0x17000271 RID: 625
+		// (get) Token: 0x060007BC RID: 1980 RVA: 0x00026191 File Offset: 0x00024391
+		// (set) Token: 0x060007BD RID: 1981 RVA: 0x000261BC File Offset: 0x000243BC
 		public override EWorldLevelBonus Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400089E RID: 2206
+		// Token: 0x04000912 RID: 2322
 		[Nullable(2)]
 		protected new IAreaBouns FbInstance;
 
-		// Token: 0x0400089F RID: 2207
+		// Token: 0x04000913 RID: 2323
 		[Nullable(2)]
 		protected new IAreaBouns_SetValue PocoInterface;
 	}

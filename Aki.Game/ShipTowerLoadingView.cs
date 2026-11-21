@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029B4 RID: 10676
+// Token: 0x02001F2F RID: 7983
 public class ShipTowerLoadingView : LoadingViewBase
 {
-	// Token: 0x06016235 RID: 90677 RVA: 0x005995D1 File Offset: 0x005977D1
+	// Token: 0x06013C3B RID: 80955 RVA: 0x005C455D File Offset: 0x005C275D
 	[NullableContext(1)]
 	public ShipTowerLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016236 RID: 90678 RVA: 0x005995DA File Offset: 0x005977DA
+	// Token: 0x06013C3C RID: 80956 RVA: 0x005C4566 File Offset: 0x005C2766
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,21 +22,21 @@ public class ShipTowerLoadingView : LoadingViewBase
 		};
 	}
 
-	// Token: 0x06016237 RID: 90679 RVA: 0x005995FD File Offset: 0x005977FD
+	// Token: 0x06013C3D RID: 80957 RVA: 0x005C4589 File Offset: 0x005C2789
 	protected override void UpdateProgressRate(float rate)
 	{
 	}
 
-	// Token: 0x06016238 RID: 90680 RVA: 0x005995FF File Offset: 0x005977FF
+	// Token: 0x06013C3E RID: 80958 RVA: 0x005C458B File Offset: 0x005C278B
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(0, value, "%");
 	}
 
-	// Token: 0x02008FC9 RID: 36809
+	// Token: 0x02008211 RID: 33297
 	private static class EChildType
 	{
-		// Token: 0x0402E922 RID: 190754
+		// Token: 0x0402A01F RID: 172063
 		public const int TxtProgress = 0;
 	}
 }

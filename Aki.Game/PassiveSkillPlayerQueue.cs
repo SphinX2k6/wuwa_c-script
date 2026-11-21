@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FD9 RID: 12249
+// Token: 0x0200252E RID: 9518
 [NullableContext(1)]
 [Nullable(0)]
 public class PassiveSkillPlayerQueue
 {
-	// Token: 0x06019F75 RID: 106357 RVA: 0x006CBBFE File Offset: 0x006C9DFE
+	// Token: 0x060178A8 RID: 96424 RVA: 0x006F3A3E File Offset: 0x006F1C3E
 	public bool DoActionCheckCd(TPassiveSkillQueueCallback func)
 	{
 		if (this.NextActionTimer != null)
@@ -18,7 +18,7 @@ public class PassiveSkillPlayerQueue
 		return true;
 	}
 
-	// Token: 0x06019F76 RID: 106358 RVA: 0x006CBC1E File Offset: 0x006C9E1E
+	// Token: 0x060178A9 RID: 96425 RVA: 0x006F3A5E File Offset: 0x006F1C5E
 	private void ClearTimer()
 	{
 		if (this.NextActionTimer == null)
@@ -32,7 +32,7 @@ public class PassiveSkillPlayerQueue
 		this.NextActionTimer = null;
 	}
 
-	// Token: 0x06019F77 RID: 106359 RVA: 0x006CBC54 File Offset: 0x006C9E54
+	// Token: 0x060178AA RID: 96426 RVA: 0x006F3A94 File Offset: 0x006F1C94
 	private void DoNextAction(float _)
 	{
 		this.ClearTimer();
@@ -47,7 +47,7 @@ public class PassiveSkillPlayerQueue
 		}
 	}
 
-	// Token: 0x06019F78 RID: 106360 RVA: 0x006CBC8C File Offset: 0x006C9E8C
+	// Token: 0x060178AB RID: 96427 RVA: 0x006F3ACC File Offset: 0x006F1CCC
 	private void DoAction(TPassiveSkillQueueCallback func)
 	{
 		this.ClearTimer();
@@ -60,17 +60,17 @@ public class PassiveSkillPlayerQueue
 		this.NextActionTimer = TimerSystem.Instance.Next(new TTimerAction(this.DoNextAction), null, null);
 	}
 
-	// Token: 0x06019F79 RID: 106361 RVA: 0x006CBCF0 File Offset: 0x006C9EF0
+	// Token: 0x060178AC RID: 96428 RVA: 0x006F3B30 File Offset: 0x006F1D30
 	public void Clear()
 	{
 		this.ClearTimer();
 		this.ActionQueue.Clear();
 	}
 
-	// Token: 0x0400C49A RID: 50330
+	// Token: 0x0400C862 RID: 51298
 	private readonly Queue<TPassiveSkillQueueCallback> ActionQueue = new Queue<TPassiveSkillQueueCallback>(4);
 
-	// Token: 0x0400C49B RID: 50331
+	// Token: 0x0400C863 RID: 51299
 	[Nullable(2)]
 	private TimerHandle NextActionTimer;
 }

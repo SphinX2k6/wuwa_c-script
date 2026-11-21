@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006189 RID: 24969
+	// Token: 0x020067F4 RID: 26612
 	public class IAlertSystemOptionT
 	{
-		// Token: 0x1700BA2C RID: 47660
-		// (get) Token: 0x0602B02C RID: 176172 RVA: 0x005EEF40 File Offset: 0x005ED140
-		// (set) Token: 0x0602B02D RID: 176173 RVA: 0x005EEF48 File Offset: 0x005ED148
+		// Token: 0x1700C3AA RID: 50090
+		// (get) Token: 0x0602D75D RID: 186205 RVA: 0x006397B4 File Offset: 0x006379B4
+		// (set) Token: 0x0602D75E RID: 186206 RVA: 0x006397BC File Offset: 0x006379BC
 		public EAlertSystemOption Type { get; set; }
 
-		// Token: 0x1700BA2D RID: 47661
-		// (get) Token: 0x0602B02E RID: 176174 RVA: 0x005EEF51 File Offset: 0x005ED151
-		// (set) Token: 0x0602B02F RID: 176175 RVA: 0x005EEF59 File Offset: 0x005ED159
+		// Token: 0x1700C3AB RID: 50091
+		// (get) Token: 0x0602D75F RID: 186207 RVA: 0x006397C5 File Offset: 0x006379C5
+		// (set) Token: 0x0602D760 RID: 186208 RVA: 0x006397CD File Offset: 0x006379CD
 		public int AreaId { get; set; }
 
-		// Token: 0x0602B030 RID: 176176 RVA: 0x005EEF62 File Offset: 0x005ED162
+		// Token: 0x0602D761 RID: 186209 RVA: 0x006397D6 File Offset: 0x006379D6
 		public IAlertSystemOptionT()
 		{
 			this.Type = EAlertSystemOption.EnableAlertArea;

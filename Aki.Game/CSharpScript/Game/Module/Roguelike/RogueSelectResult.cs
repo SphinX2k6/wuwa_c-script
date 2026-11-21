@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA3 RID: 19875
+	// Token: 0x02003D6C RID: 15724
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueSelectResult
 	{
-		// Token: 0x06033520 RID: 210208 RVA: 0x00BFA84C File Offset: 0x00BF8A4C
+		// Token: 0x0602838D RID: 164749 RVA: 0x00B43E48 File Offset: 0x00B42048
 		public RogueSelectResult([Nullable(1)] RogueGainEntry newRogueGainEntry, RogueGainEntry oldRogueGainEntry, RogueGainEntry selectRogueGainEntry, bool isShowCommon = false)
 		{
 			this.NewRogueGainEntry = newRogueGainEntry;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.IsShowCommon = isShowCommon;
 		}
 
-		// Token: 0x06033521 RID: 210209 RVA: 0x00BFA874 File Offset: 0x00BF8A74
+		// Token: 0x0602838E RID: 164750 RVA: 0x00B43E70 File Offset: 0x00B42070
 		[NullableContext(1)]
 		public HashSet<long> GetNewUnlockAffixEntry()
 		{
@@ -41,23 +41,23 @@ namespace CSharpScript.Game.Module.Roguelike
 			return hashSet;
 		}
 
-		// Token: 0x0401B44B RID: 111691
+		// Token: 0x04015E1E RID: 89630
 		[Nullable(1)]
 		public RogueGainEntry NewRogueGainEntry;
 
-		// Token: 0x0401B44C RID: 111692
+		// Token: 0x04015E1F RID: 89631
 		public RogueGainEntry OldRogueGainEntry;
 
-		// Token: 0x0401B44D RID: 111693
+		// Token: 0x04015E20 RID: 89632
 		public RogueGainEntry SelectRogueGainEntry;
 
-		// Token: 0x0401B44E RID: 111694
+		// Token: 0x04015E21 RID: 89633
 		public RogueGainEntry ExtraRogueGainEntry;
 
-		// Token: 0x0401B44F RID: 111695
+		// Token: 0x04015E22 RID: 89634
 		public bool IsShowCommon;
 
-		// Token: 0x0401B450 RID: 111696
+		// Token: 0x04015E23 RID: 89635
 		public Action CallBack;
 	}
 }

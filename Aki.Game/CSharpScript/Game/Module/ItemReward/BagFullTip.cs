@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057EF RID: 22511
+	// Token: 0x020047C6 RID: 18374
 	public class BagFullTip : UiPanelBase
 	{
-		// Token: 0x0603937A RID: 234362 RVA: 0x00D915B8 File Offset: 0x00D8F7B8
+		// Token: 0x0602E28E RID: 189070 RVA: 0x00CE0400 File Offset: 0x00CDE600
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603937B RID: 234363 RVA: 0x00D91600 File Offset: 0x00D8F800
+		// Token: 0x0602E28F RID: 189071 RVA: 0x00CE0448 File Offset: 0x00CDE648
 		public void SetAdjustPanelVisible(bool isShow)
 		{
 			UUIItem item = base.GetItem(0);
@@ -32,10 +32,10 @@ namespace CSharpScript.Game.Module.ItemReward
 			item.SetUIActive(isShow);
 		}
 
-		// Token: 0x0200B9CA RID: 47562
+		// Token: 0x0200A3E0 RID: 41952
 		private class EChildType
 		{
-			// Token: 0x040382B7 RID: 230071
+			// Token: 0x04032CA4 RID: 208036
 			public const int ItemAdjustPanel = 0;
 		}
 	}

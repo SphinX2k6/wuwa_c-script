@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200606E RID: 24686
+	// Token: 0x020066D0 RID: 26320
 	public struct IAcceptFishingEntrust : IFlatbufferObject
 	{
-		// Token: 0x1700B5E7 RID: 46567
-		// (get) Token: 0x06029CCC RID: 171212 RVA: 0x005BC42A File Offset: 0x005BA62A
+		// Token: 0x1700BF52 RID: 48978
+		// (get) Token: 0x0602C380 RID: 181120 RVA: 0x0060590E File Offset: 0x00603B0E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06029CCD RID: 171213 RVA: 0x005BC437 File Offset: 0x005BA637
+		// Token: 0x0602C381 RID: 181121 RVA: 0x0060591B File Offset: 0x00603B1B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029CCE RID: 171214 RVA: 0x005BC440 File Offset: 0x005BA640
+		// Token: 0x0602C382 RID: 181122 RVA: 0x00605924 File Offset: 0x00603B24
 		public static IAcceptFishingEntrust GetRootAsIAcceptFishingEntrust(ByteBuffer _bb)
 		{
 			return IAcceptFishingEntrust.GetRootAsIAcceptFishingEntrust(_bb, default(IAcceptFishingEntrust));
 		}
 
-		// Token: 0x06029CCF RID: 171215 RVA: 0x005BC45C File Offset: 0x005BA65C
+		// Token: 0x0602C383 RID: 181123 RVA: 0x00605940 File Offset: 0x00603B40
 		public static IAcceptFishingEntrust GetRootAsIAcceptFishingEntrust(ByteBuffer _bb, IAcceptFishingEntrust obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029CD0 RID: 171216 RVA: 0x005BC479 File Offset: 0x005BA679
+		// Token: 0x0602C384 RID: 181124 RVA: 0x0060595D File Offset: 0x00603B5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029CD1 RID: 171217 RVA: 0x005BC488 File Offset: 0x005BA688
+		// Token: 0x0602C385 RID: 181125 RVA: 0x0060596C File Offset: 0x00603B6C
 		public IAcceptFishingEntrust __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B5E8 RID: 46568
-		// (get) Token: 0x06029CD2 RID: 171218 RVA: 0x005BC498 File Offset: 0x005BA698
+		// Token: 0x1700BF53 RID: 48979
+		// (get) Token: 0x0602C386 RID: 181126 RVA: 0x0060597C File Offset: 0x00603B7C
 		public int EntrustId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B5E9 RID: 46569
-		// (get) Token: 0x06029CD3 RID: 171219 RVA: 0x005BC4D4 File Offset: 0x005BA6D4
+		// Token: 0x1700BF54 RID: 48980
+		// (get) Token: 0x0602C387 RID: 181127 RVA: 0x006059B8 File Offset: 0x00603BB8
 		public bool IsAutoTracking
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B5EA RID: 46570
-		// (get) Token: 0x06029CD4 RID: 171220 RVA: 0x005BC514 File Offset: 0x005BA714
+		// Token: 0x1700BF55 RID: 48981
+		// (get) Token: 0x0602C388 RID: 181128 RVA: 0x006059F8 File Offset: 0x00603BF8
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06029CD5 RID: 171221 RVA: 0x005BC550 File Offset: 0x005BA750
+		// Token: 0x0602C389 RID: 181129 RVA: 0x00605A34 File Offset: 0x00603C34
 		public static Offset<IAcceptFishingEntrust> CreateIAcceptFishingEntrust(FlatBufferBuilder builder, int EntrustId = 0, bool IsAutoTracking = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAcceptFishingEntrust.EndIAcceptFishingEntrust(builder);
 		}
 
-		// Token: 0x06029CD6 RID: 171222 RVA: 0x005BC574 File Offset: 0x005BA774
+		// Token: 0x0602C38A RID: 181130 RVA: 0x00605A58 File Offset: 0x00603C58
 		public static void StartIAcceptFishingEntrust(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06029CD7 RID: 171223 RVA: 0x005BC57D File Offset: 0x005BA77D
+		// Token: 0x0602C38B RID: 181131 RVA: 0x00605A61 File Offset: 0x00603C61
 		public static void AddEntrustId(FlatBufferBuilder builder, int entrustId)
 		{
 			builder.AddInt(0, entrustId, 0);
 		}
 
-		// Token: 0x06029CD8 RID: 171224 RVA: 0x005BC588 File Offset: 0x005BA788
+		// Token: 0x0602C38C RID: 181132 RVA: 0x00605A6C File Offset: 0x00603C6C
 		public static void AddIsAutoTracking(FlatBufferBuilder builder, bool isAutoTracking)
 		{
 			builder.AddBool(1, isAutoTracking, false);
 		}
 
-		// Token: 0x06029CD9 RID: 171225 RVA: 0x005BC593 File Offset: 0x005BA793
+		// Token: 0x0602C38D RID: 181133 RVA: 0x00605A77 File Offset: 0x00603C77
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06029CDA RID: 171226 RVA: 0x005BC59E File Offset: 0x005BA79E
+		// Token: 0x0602C38E RID: 181134 RVA: 0x00605A82 File Offset: 0x00603C82
 		public static Offset<IAcceptFishingEntrust> EndIAcceptFishingEntrust(FlatBufferBuilder builder)
 		{
 			return new Offset<IAcceptFishingEntrust>(builder.EndTable());
 		}
 
-		// Token: 0x06029CDB RID: 171227 RVA: 0x005BC5AC File Offset: 0x005BA7AC
+		// Token: 0x0602C38F RID: 181135 RVA: 0x00605A90 File Offset: 0x00603C90
 		public IAcceptFishingEntrustT UnPack()
 		{
 			IAcceptFishingEntrustT acceptFishingEntrustT = new IAcceptFishingEntrustT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return acceptFishingEntrustT;
 		}
 
-		// Token: 0x06029CDC RID: 171228 RVA: 0x005BC5C7 File Offset: 0x005BA7C7
+		// Token: 0x0602C390 RID: 181136 RVA: 0x00605AAB File Offset: 0x00603CAB
 		public void UnPackTo(IAcceptFishingEntrustT _o)
 		{
 			_o.EntrustId = this.EntrustId;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06029CDD RID: 171229 RVA: 0x005BC5F0 File Offset: 0x005BA7F0
+		// Token: 0x0602C391 RID: 181137 RVA: 0x00605AD4 File Offset: 0x00603CD4
 		public static Offset<IAcceptFishingEntrust> Pack(FlatBufferBuilder builder, IAcceptFishingEntrustT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAcceptFishingEntrust.CreateIAcceptFishingEntrust(builder, _o.EntrustId, _o.IsAutoTracking, _o.NullMask);
 		}
 
-		// Token: 0x04010231 RID: 66097
+		// Token: 0x04011026 RID: 69670
 		private Table __p;
 	}
 }

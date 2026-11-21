@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E08 RID: 3592
+	// Token: 0x02000EED RID: 3821
 	public struct MenuDetailPop : IFlatbufferObject
 	{
-		// Token: 0x17001F03 RID: 7939
-		// (get) Token: 0x060093FA RID: 37882 RVA: 0x0028540A File Offset: 0x0028360A
+		// Token: 0x17001F68 RID: 8040
+		// (get) Token: 0x06009A1A RID: 39450 RVA: 0x002A322A File Offset: 0x002A142A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060093FB RID: 37883 RVA: 0x00285417 File Offset: 0x00283617
+		// Token: 0x06009A1B RID: 39451 RVA: 0x002A3237 File Offset: 0x002A1437
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060093FC RID: 37884 RVA: 0x00285420 File Offset: 0x00283620
+		// Token: 0x06009A1C RID: 39452 RVA: 0x002A3240 File Offset: 0x002A1440
 		public static MenuDetailPop GetRootAsMenuDetailPop(ByteBuffer _bb)
 		{
 			return MenuDetailPop.GetRootAsMenuDetailPop(_bb, default(MenuDetailPop));
 		}
 
-		// Token: 0x060093FD RID: 37885 RVA: 0x0028543C File Offset: 0x0028363C
+		// Token: 0x06009A1D RID: 39453 RVA: 0x002A325C File Offset: 0x002A145C
 		public static MenuDetailPop GetRootAsMenuDetailPop(ByteBuffer _bb, MenuDetailPop obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060093FE RID: 37886 RVA: 0x00285459 File Offset: 0x00283659
+		// Token: 0x06009A1E RID: 39454 RVA: 0x002A3279 File Offset: 0x002A1479
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060093FF RID: 37887 RVA: 0x00285468 File Offset: 0x00283668
+		// Token: 0x06009A1F RID: 39455 RVA: 0x002A3288 File Offset: 0x002A1488
 		public MenuDetailPop __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001F04 RID: 7940
-		// (get) Token: 0x06009400 RID: 37888 RVA: 0x00285478 File Offset: 0x00283678
+		// Token: 0x17001F69 RID: 8041
+		// (get) Token: 0x06009A20 RID: 39456 RVA: 0x002A3298 File Offset: 0x002A1498
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009401 RID: 37889 RVA: 0x002854B4 File Offset: 0x002836B4
+		// Token: 0x06009A21 RID: 39457 RVA: 0x002A32D4 File Offset: 0x002A14D4
 		public int ItemList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001F05 RID: 7941
-		// (get) Token: 0x06009402 RID: 37890 RVA: 0x002854F4 File Offset: 0x002836F4
+		// Token: 0x17001F6A RID: 8042
+		// (get) Token: 0x06009A22 RID: 39458 RVA: 0x002A3314 File Offset: 0x002A1514
 		public int ItemListLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009403 RID: 37891 RVA: 0x0028551F File Offset: 0x0028371F
+		// Token: 0x06009A23 RID: 39459 RVA: 0x002A333F File Offset: 0x002A153F
 		public Span<int> GetItemListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06009404 RID: 37892 RVA: 0x0028552E File Offset: 0x0028372E
+		// Token: 0x06009A24 RID: 39460 RVA: 0x002A334E File Offset: 0x002A154E
 		public int[] GetItemListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001F06 RID: 7942
-		// (get) Token: 0x06009405 RID: 37893 RVA: 0x00285548 File Offset: 0x00283748
+		// Token: 0x17001F6B RID: 8043
+		// (get) Token: 0x06009A25 RID: 39461 RVA: 0x002A3368 File Offset: 0x002A1568
 		public string Title
 		{
 			get
@@ -117,20 +117,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009406 RID: 37894 RVA: 0x0028557F File Offset: 0x0028377F
+		// Token: 0x06009A26 RID: 39462 RVA: 0x002A339F File Offset: 0x002A159F
 		public Span<byte> GetTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06009407 RID: 37895 RVA: 0x0028558E File Offset: 0x0028378E
+		// Token: 0x06009A27 RID: 39463 RVA: 0x002A33AE File Offset: 0x002A15AE
 		public byte[] GetTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001F07 RID: 7943
-		// (get) Token: 0x06009408 RID: 37896 RVA: 0x002855A8 File Offset: 0x002837A8
+		// Token: 0x17001F6C RID: 8044
+		// (get) Token: 0x06009A28 RID: 39464 RVA: 0x002A33C8 File Offset: 0x002A15C8
 		public string Description
 		{
 			get
@@ -144,37 +144,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009409 RID: 37897 RVA: 0x002855E0 File Offset: 0x002837E0
+		// Token: 0x06009A29 RID: 39465 RVA: 0x002A3400 File Offset: 0x002A1600
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600940A RID: 37898 RVA: 0x002855F0 File Offset: 0x002837F0
+		// Token: 0x06009A2A RID: 39466 RVA: 0x002A3410 File Offset: 0x002A1610
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600940B RID: 37899 RVA: 0x00285608 File Offset: 0x00283808
+		// Token: 0x06009A2B RID: 39467 RVA: 0x002A3428 File Offset: 0x002A1628
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ItemListIter()或GetItemListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ItemList()
+		public int[] ItemList()
 		{
-			MenuDetailPop menuDetailPop = this;
-			return menuDetailPop.GetItemListArray() ?? Array.Empty<int>();
+			return this.GetItemListArray();
 		}
 
-		// Token: 0x0600940C RID: 37900 RVA: 0x0028562C File Offset: 0x0028382C
+		// Token: 0x06009A2C RID: 39468 RVA: 0x002A3430 File Offset: 0x002A1630
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ItemListIter()
+		public IEnumerable<int> ItemListIter()
 		{
 			MenuDetailPop.<ItemListIter>d__24 <ItemListIter>d__ = new MenuDetailPop.<ItemListIter>d__24(-2);
 			<ItemListIter>d__.<>3__<>4__this = this;
 			return <ItemListIter>d__;
 		}
 
-		// Token: 0x04004EAD RID: 20141
+		// Token: 0x04005492 RID: 21650
 		private Table __p;
 	}
 }

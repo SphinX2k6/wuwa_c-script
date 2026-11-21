@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049F1 RID: 18929
+	// Token: 0x0200396B RID: 14699
 	internal enum ENormalHotKeyType
 	{
-		// Token: 0x0401A4E1 RID: 107745
+		// Token: 0x04014D53 RID: 85331
 		HotKey
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E2C RID: 20012
+	// Token: 0x0200533B RID: 21307
 	public enum EThrowMotion : byte
 	{
-		// Token: 0x0400DB85 RID: 56197
+		// Token: 0x0400E6F7 RID: 59127
 		Projectile,
-		// Token: 0x0400DB86 RID: 56198
+		// Token: 0x0400E6F8 RID: 59128
 		Circumnutation,
-		// Token: 0x0400DB87 RID: 56199
+		// Token: 0x0400E6F9 RID: 59129
 		TrackTarget,
-		// Token: 0x0400DB88 RID: 56200
+		// Token: 0x0400E6FA RID: 59130
 		Levitate,
-		// Token: 0x0400DB89 RID: 56201
+		// Token: 0x0400E6FB RID: 59131
 		FreeFall
 	}
 }

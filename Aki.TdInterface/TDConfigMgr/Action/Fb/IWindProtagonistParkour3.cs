@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027EE RID: 10222
+	// Token: 0x02002AC1 RID: 10945
 	public class IWindProtagonistParkour3 : ILeisureInteractType
 	{
-		// Token: 0x0600E310 RID: 58128 RVA: 0x00217F47 File Offset: 0x00216147
-		[NullableContext(1)]
+		// Token: 0x0600F135 RID: 61749 RVA: 0x00234DAA File Offset: 0x00232FAA
 		public static IWindProtagonistParkour3 Create(IWindProtagonistParkour3? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044F6 RID: 17654
-		// (get) Token: 0x0600E311 RID: 58129 RVA: 0x00217F66 File Offset: 0x00216166
+		// Token: 0x17004861 RID: 18529
+		// (get) Token: 0x0600F136 RID: 61750 RVA: 0x00234DC9 File Offset: 0x00232FC9
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DD2 RID: 32210
+		// Token: 0x0400848F RID: 33935
 		private IWindProtagonistParkour3 Instance;
 	}
 }

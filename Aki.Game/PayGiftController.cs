@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Common;
@@ -13,37 +12,37 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002352 RID: 9042
+// Token: 0x02001837 RID: 6199
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PayGiftController : UiControllerBase
 {
-	// Token: 0x06012010 RID: 73744 RVA: 0x0046A311 File Offset: 0x00468511
+	// Token: 0x0600F4C0 RID: 62656 RVA: 0x004773D9 File Offset: 0x004755D9
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PayGiftSuccessNotify, new Action<IMessage, Net.CallbackStatus>(this.PayGiftSuccessNotify));
 	}
 
-	// Token: 0x06012011 RID: 73745 RVA: 0x0046A32F File Offset: 0x0046852F
+	// Token: 0x0600F4C1 RID: 62657 RVA: 0x004773F7 File Offset: 0x004755F7
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PayGiftSuccessNotify);
 	}
 
-	// Token: 0x06012012 RID: 73746 RVA: 0x0046A341 File Offset: 0x00468541
+	// Token: 0x0600F4C2 RID: 62658 RVA: 0x00477409 File Offset: 0x00475609
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<ESdkDialogResult>(EEventName.SdkPayEnd, new Action<ESdkDialogResult>(this.OnSdkPayEnd));
 	}
 
-	// Token: 0x06012013 RID: 73747 RVA: 0x0046A35C File Offset: 0x0046855C
+	// Token: 0x0600F4C3 RID: 62659 RVA: 0x00477424 File Offset: 0x00475624
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<ESdkDialogResult>(EEventName.SdkPayEnd, new Action<ESdkDialogResult>(this.OnSdkPayEnd));
 	}
 
-	// Token: 0x06012014 RID: 73748 RVA: 0x0046A377 File Offset: 0x00468577
+	// Token: 0x0600F4C4 RID: 62660 RVA: 0x0047743F File Offset: 0x0047563F
 	private void OnSdkPayEnd(ESdkDialogResult result)
 	{
 		if (result == ESdkDialogResult.No)
@@ -52,25 +51,25 @@ public class PayGiftController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012015 RID: 73749 RVA: 0x0046A387 File Offset: 0x00468587
+	// Token: 0x0600F4C5 RID: 62661 RVA: 0x0047744F File Offset: 0x0047564F
 	public void OnShopInfoNotify(PayShopInfoNotify message)
 	{
 		PayGiftModel.Instance.Version = message.PayGiftShopInfo.Version;
-		PayGiftModel.Instance.InitDataByServer(message.PayGiftShopInfo.Gifts.ToList<PayGiftInfo>(), false);
+		PayGiftModel.Instance.InitDataByServer(message.PayGiftShopInfo.Gifts, false);
 	}
 
-	// Token: 0x06012016 RID: 73750 RVA: 0x0046A3B9 File Offset: 0x004685B9
+	// Token: 0x0600F4C6 RID: 62662 RVA: 0x0047747C File Offset: 0x0047567C
 	[NullableContext(2)]
 	public void OnShopInfoReceive(PayGiftShopInfo message)
 	{
 		if (message != null)
 		{
 			PayGiftModel.Instance.Version = message.Version;
-			PayGiftModel.Instance.InitDataByServer(message.Gifts.ToList<PayGiftInfo>(), false);
+			PayGiftModel.Instance.InitDataByServer(message.Gifts, false);
 		}
 	}
 
-	// Token: 0x06012017 RID: 73751 RVA: 0x0046A3E4 File Offset: 0x004685E4
+	// Token: 0x0600F4C7 RID: 62663 RVA: 0x004774A4 File Offset: 0x004756A4
 	[NullableContext(2)]
 	private void PayGiftSuccessNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -88,7 +87,7 @@ public class PayGiftController : UiControllerBase
 		EventSystem.Instance.Emit<PayItemSuccess>(EEventName.OnPayItemSuccess, p);
 	}
 
-	// Token: 0x06012018 RID: 73752 RVA: 0x0046A47C File Offset: 0x0046867C
+	// Token: 0x0600F4C8 RID: 62664 RVA: 0x0047753C File Offset: 0x0047573C
 	public UniTask QueryPayGiftInfoAsync()
 	{
 		PayGiftController.<QueryPayGiftInfoAsync>d__8 <QueryPayGiftInfoAsync>d__;
@@ -98,7 +97,7 @@ public class PayGiftController : UiControllerBase
 		return <QueryPayGiftInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012019 RID: 73753 RVA: 0x0046A4B8 File Offset: 0x004686B8
+	// Token: 0x0600F4C9 RID: 62665 RVA: 0x00477578 File Offset: 0x00475778
 	[NullableContext(0)]
 	public UniTask<bool> SendPayGiftInfoRequestAsync()
 	{
@@ -109,7 +108,7 @@ public class PayGiftController : UiControllerBase
 		return <SendPayGiftInfoRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601201A RID: 73754 RVA: 0x0046A4F4 File Offset: 0x004686F4
+	// Token: 0x0600F4CA RID: 62666 RVA: 0x004775B4 File Offset: 0x004757B4
 	public void SendPayGiftInfoRequest(bool needRefreshEvent = false)
 	{
 		PayGiftInfoRequest payGiftInfoRequest = PayGiftInfoRequest.Create();
@@ -121,14 +120,14 @@ public class PayGiftController : UiControllerBase
 			{
 				if (payGiftInfoResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(payGiftInfoResponse.ErrorCode, 25815, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(payGiftInfoResponse.ErrorCode, 21829, null, true, true);
 				}
 				if (payGiftInfoResponse.Version == "" || payGiftInfoResponse.Infos == null)
 				{
 					return;
 				}
 				PayGiftModel.Instance.Version = payGiftInfoResponse.Version;
-				PayGiftModel.Instance.InitDataByServer(payGiftInfoResponse.Infos.ToList<PayGiftInfo>(), needRefreshEvent);
+				PayGiftModel.Instance.InitDataByServer(payGiftInfoResponse.Infos, needRefreshEvent);
 				List<PayPackageData> dataList = PayGiftModel.Instance.GetDataList();
 				List<string> list = new List<string>();
 				foreach (PayPackageData payPackageData in dataList)
@@ -140,7 +139,7 @@ public class PayGiftController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0601201B RID: 73755 RVA: 0x0046A544 File Offset: 0x00468744
+	// Token: 0x0600F4CB RID: 62667 RVA: 0x00477604 File Offset: 0x00475804
 	private void SendPayGiftRequest(int payGiftId)
 	{
 		PayGiftRequest payGiftRequest = PayGiftRequest.Create();
@@ -165,11 +164,11 @@ public class PayGiftController : UiControllerBase
 				this.SendPayGiftInfoRequest(false);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(payGiftResponse.ErrorCode, 20285, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(payGiftResponse.ErrorCode, 29388, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0601201C RID: 73756 RVA: 0x0046A5A4 File Offset: 0x004687A4
+	// Token: 0x0600F4CC RID: 62668 RVA: 0x00477664 File Offset: 0x00475864
 	public void SdkPay(int payGiftId)
 	{
 		if (PayItemController.Instance.CurrentBlockBetaState && CommonConfig.Instance.GetBetaBlockRecharge().GetValueOrDefault())
@@ -235,8 +234,8 @@ public class PayGiftController : UiControllerBase
 		PayItemController.Instance.SdkPayNew(text2);
 	}
 
-	// Token: 0x1700178C RID: 6028
-	// (get) Token: 0x0601201D RID: 73757 RVA: 0x0046A775 File Offset: 0x00468975
+	// Token: 0x170017C6 RID: 6086
+	// (get) Token: 0x0600F4CD RID: 62669 RVA: 0x00477835 File Offset: 0x00475A35
 	public static PayGiftController Instance
 	{
 		get
@@ -245,7 +244,7 @@ public class PayGiftController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601201E RID: 73758 RVA: 0x0046A77C File Offset: 0x0046897C
+	// Token: 0x0600F4CE RID: 62670 RVA: 0x0047783C File Offset: 0x00475A3C
 	public static PayGiftController GetOrCreateInstance()
 	{
 		if (PayGiftController._Instance == null)
@@ -255,7 +254,7 @@ public class PayGiftController : UiControllerBase
 		return PayGiftController._Instance;
 	}
 
-	// Token: 0x0601201F RID: 73759 RVA: 0x0046A790 File Offset: 0x00468990
+	// Token: 0x0600F4CF RID: 62671 RVA: 0x00477850 File Offset: 0x00475A50
 	public static bool CreateInstance()
 	{
 		if (PayGiftController._Instance != null)
@@ -266,24 +265,24 @@ public class PayGiftController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06012020 RID: 73760 RVA: 0x0046A7A6 File Offset: 0x004689A6
+	// Token: 0x0600F4D0 RID: 62672 RVA: 0x00477866 File Offset: 0x00475A66
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012021 RID: 73761 RVA: 0x0046A7A8 File Offset: 0x004689A8
+	// Token: 0x0600F4D1 RID: 62673 RVA: 0x00477868 File Offset: 0x00475A68
 	public static void ResetStaticDefaultValue()
 	{
 		PayGiftController._Instance = null;
 	}
 
-	// Token: 0x06012022 RID: 73762 RVA: 0x0046A7B0 File Offset: 0x004689B0
+	// Token: 0x0600F4D2 RID: 62674 RVA: 0x00477870 File Offset: 0x00475A70
 	static PayGiftController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayGiftController.CreateStaticDefaultValue), new Action(PayGiftController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040087F8 RID: 34808
+	// Token: 0x0400893B RID: 35131
 	[Nullable(2)]
 	private static PayGiftController _Instance;
 }

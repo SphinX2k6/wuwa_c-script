@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002996 RID: 10646
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C81 RID: 11393
 	public class IClientFollowShooterPlayAnimation : IClientFollowShooterLeisureInteractType
 	{
-		// Token: 0x0600EBAA RID: 60330 RVA: 0x0022759B File Offset: 0x0022579B
+		// Token: 0x0600FA35 RID: 64053 RVA: 0x00244E26 File Offset: 0x00243026
 		public static IClientFollowShooterPlayAnimation Create(IClientFollowShooterPlayAnimation? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A40 RID: 19008
-		// (get) Token: 0x0600EBAB RID: 60331 RVA: 0x002275BA File Offset: 0x002257BA
+		// Token: 0x17004DE1 RID: 19937
+		// (get) Token: 0x0600FA36 RID: 64054 RVA: 0x00244E45 File Offset: 0x00243045
 		public override EClientFollowShooterLeisureInteractType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A41 RID: 19009
-		// (get) Token: 0x0600EBAC RID: 60332 RVA: 0x002275C7 File Offset: 0x002257C7
+		// Token: 0x17004DE2 RID: 19938
+		// (get) Token: 0x0600FA37 RID: 64055 RVA: 0x00244E52 File Offset: 0x00243052
 		public virtual string Montage
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081C8 RID: 33224
+		// Token: 0x040088B3 RID: 34995
 		private IClientFollowShooterPlayAnimation Instance;
 	}
 }

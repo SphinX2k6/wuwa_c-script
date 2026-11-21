@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 {
-	// Token: 0x0200632A RID: 25386
+	// Token: 0x020052A8 RID: 21160
 	[NullableContext(1)]
 	public interface IPinballMonsterSkillTabItemData
 	{
-		// Token: 0x170092F4 RID: 37620
-		// (get) Token: 0x0603FDEA RID: 261610
-		// (set) Token: 0x0603FDEB RID: 261611
+		// Token: 0x17006656 RID: 26198
+		// (get) Token: 0x06034AAB RID: 215723
+		// (set) Token: 0x06034AAC RID: 215724
 		bool IsSelected { get; set; }
 
-		// Token: 0x170092F5 RID: 37621
-		// (get) Token: 0x0603FDEC RID: 261612
-		// (set) Token: 0x0603FDED RID: 261613
+		// Token: 0x17006657 RID: 26199
+		// (get) Token: 0x06034AAD RID: 215725
+		// (set) Token: 0x06034AAE RID: 215726
 		string Name { get; set; }
 
-		// Token: 0x170092F6 RID: 37622
-		// (get) Token: 0x0603FDEE RID: 261614
-		// (set) Token: 0x0603FDEF RID: 261615
+		// Token: 0x17006658 RID: 26200
+		// (get) Token: 0x06034AAF RID: 215727
+		// (set) Token: 0x06034AB0 RID: 215728
 		Action<int> OnSelected { get; set; }
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061C5 RID: 25029
+	// Token: 0x02006833 RID: 26675
 	public class IAvgPlayRoleActionT
 	{
-		// Token: 0x1700BA9B RID: 47771
-		// (get) Token: 0x0602B21C RID: 176668 RVA: 0x005F23D1 File Offset: 0x005F05D1
-		// (set) Token: 0x0602B21D RID: 176669 RVA: 0x005F23D9 File Offset: 0x005F05D9
+		// Token: 0x1700C41E RID: 50206
+		// (get) Token: 0x0602D963 RID: 186723 RVA: 0x0063CE45 File Offset: 0x0063B045
+		// (set) Token: 0x0602D964 RID: 186724 RVA: 0x0063CE4D File Offset: 0x0063B04D
 		public List<IAvgPlayRoleActionItemT> RoleActionList { get; set; }
 
-		// Token: 0x0602B21E RID: 176670 RVA: 0x005F23E2 File Offset: 0x005F05E2
+		// Token: 0x0602D965 RID: 186725 RVA: 0x0063CE56 File Offset: 0x0063B056
 		public IAvgPlayRoleActionT()
 		{
 			this.RoleActionList = null;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F6 RID: 2550
+	// Token: 0x02000ABB RID: 2747
 	public static class ERewardDropTypeExtensions
 	{
-		// Token: 0x06003884 RID: 14468 RVA: 0x000925E8 File Offset: 0x000907E8
+		// Token: 0x06003C5C RID: 15452 RVA: 0x0009AED8 File Offset: 0x000990D8
 		public static string ToEnumString(this ERewardDropType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003885 RID: 14469 RVA: 0x00092620 File Offset: 0x00090820
+		// Token: 0x06003C5D RID: 15453 RVA: 0x0009AF10 File Offset: 0x00099110
 		public static ERewardDropType FromString(string name)
 		{
 			ERewardDropType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003886 RID: 14470 RVA: 0x00092649 File Offset: 0x00090849
+		// Token: 0x06003C5E RID: 15454 RVA: 0x0009AF39 File Offset: 0x00099139
 		public static bool TryFromString(string name, out ERewardDropType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003887 RID: 14471 RVA: 0x00092682 File Offset: 0x00090882
+		// Token: 0x06003C5F RID: 15455 RVA: 0x0009AF72 File Offset: 0x00099172
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003888 RID: 14472 RVA: 0x0009269A File Offset: 0x0009089A
+		// Token: 0x06003C60 RID: 15456 RVA: 0x0009AF8A File Offset: 0x0009918A
 		public static ERewardDropType[] GetValues()
 		{
 			return new ERewardDropType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003889 RID: 14473 RVA: 0x000926A6 File Offset: 0x000908A6
+		// Token: 0x06003C61 RID: 15457 RVA: 0x0009AF96 File Offset: 0x00099196
 		public static string[] GetNames()
 		{
 			return new string[]

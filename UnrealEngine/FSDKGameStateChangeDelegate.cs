@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C9E RID: 7326
+	// Token: 0x02000537 RID: 1335
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSDKGameStateChangeDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C710 RID: 116496 RVA: 0x002A0532 File Offset: 0x0029E732
+		// Token: 0x06007C4D RID: 31821 RVA: 0x000B7EE6 File Offset: 0x000B60E6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSDKGameStateChangeDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C711 RID: 116497 RVA: 0x002A053E File Offset: 0x0029E73E
+		// Token: 0x06007C4E RID: 31822 RVA: 0x000B7EF2 File Offset: 0x000B60F2
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSDKGameStateChangeDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FSDKGameStateChangeDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601C712 RID: 116498 RVA: 0x002A0561 File Offset: 0x0029E761
+		// Token: 0x06007C4F RID: 31823 RVA: 0x000B7F15 File Offset: 0x000B6115
 		public FSDKGameStateChangeDelegate()
 		{
 		}
 
-		// Token: 0x0601C713 RID: 116499 RVA: 0x002A0569 File Offset: 0x0029E769
+		// Token: 0x06007C50 RID: 31824 RVA: 0x000B7F1D File Offset: 0x000B611D
 		[NullableContext(2)]
 		public FSDKGameStateChangeDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C714 RID: 116500 RVA: 0x002A0573 File Offset: 0x0029E773
+		// Token: 0x06007C51 RID: 31825 RVA: 0x000B7F27 File Offset: 0x000B6127
 		public FSDKGameStateChangeDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C715 RID: 116501 RVA: 0x002A057E File Offset: 0x0029E77E
+		// Token: 0x06007C52 RID: 31826 RVA: 0x000B7F32 File Offset: 0x000B6132
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C716 RID: 116502 RVA: 0x002A05B0 File Offset: 0x0029E7B0
+		// Token: 0x06007C53 RID: 31827 RVA: 0x000B7F64 File Offset: 0x000B6164
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<string> Callback)
 		{
 			if (FSDKGameStateChangeDelegate.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FSDKGameStateChangeDelegate.RegisterId);
 		}
 
-		// Token: 0x0601C717 RID: 116503 RVA: 0x002A05EA File Offset: 0x0029E7EA
+		// Token: 0x06007C54 RID: 31828 RVA: 0x000B7F9E File Offset: 0x000B619E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<string> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C718 RID: 116504 RVA: 0x002A05F4 File Offset: 0x0029E7F4
+		// Token: 0x06007C55 RID: 31829 RVA: 0x000B7FA8 File Offset: 0x000B61A8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(string data)
 		{
 			FSDKGameStateChangeDelegate.__FSDKGameStateChangeDelegate_DelegateParams* ptr = stackalloc FSDKGameStateChangeDelegate.__FSDKGameStateChangeDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FSDKGameStateChangeDelegate.__FSDKGameStateChangeDelegate_DelegateParams) & -16L;
@@ -88,10 +85,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FSDKGameStateChangeDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C719 RID: 116505 RVA: 0x002A0648 File Offset: 0x0029E848
+		// Token: 0x06007C56 RID: 31830 RVA: 0x000B7FFC File Offset: 0x000B61FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -103,31 +99,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400F4BB RID: 62651
+		// Token: 0x04003525 RID: 13605
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F4BC RID: 62652
+		// Token: 0x04003526 RID: 13606
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSDK.SDKGameStateChangeDelegate__DelegateSignature";
 
-		// Token: 0x0400F4BD RID: 62653
+		// Token: 0x04003527 RID: 13607
 		private static int RegisterId;
 
-		// Token: 0x0200326F RID: 12911
+		// Token: 0x02000CE4 RID: 3300
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FSDKGameStateChangeDelegate_DelegateParams
+		private ref struct __FSDKGameStateChangeDelegate_DelegateParams
 		{
-			// Token: 0x040170F3 RID: 94451
+			// Token: 0x04005F67 RID: 24423
 			[FieldOffset(0)]
 			public FString data;
 		}
 
-		// Token: 0x02003270 RID: 12912
+		// Token: 0x02000CE5 RID: 3301
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040170F4 RID: 94452
+			// Token: 0x04005F68 RID: 24424
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

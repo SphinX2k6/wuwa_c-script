@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D5F RID: 23903
+	// Token: 0x02004D41 RID: 19777
 	public class JoystickStatic : Joystick, IBattleUiCenterPanelOtherMovePanel
 	{
-		// Token: 0x0603CAEF RID: 248559 RVA: 0x00E91E9C File Offset: 0x00E9009C
+		// Token: 0x06031A4A RID: 203338 RVA: 0x00DE2689 File Offset: 0x00DE0889
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(9, typeof(UUIItem)));
 		}
 
-		// Token: 0x0603CAF0 RID: 248560 RVA: 0x00E91EDC File Offset: 0x00E900DC
+		// Token: 0x06031A4B RID: 203339 RVA: 0x00DE26C8 File Offset: 0x00DE08C8
 		protected override void OnAfterShow()
 		{
 			this.TagIdVisible = BattleUiModel.Instance.GetTagIdJoystickStaticVisible();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAF1 RID: 248561 RVA: 0x00E91FBC File Offset: 0x00E901BC
+		// Token: 0x06031A4C RID: 203340 RVA: 0x00DE27A8 File Offset: 0x00DE09A8
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsDynamicJoystick = false;
 		}
 
-		// Token: 0x0603CAF2 RID: 248562 RVA: 0x00E920DC File Offset: 0x00E902DC
+		// Token: 0x06031A4D RID: 203341 RVA: 0x00DE28C8 File Offset: 0x00DE0AC8
 		protected override void OnHideBattleChildView()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAF3 RID: 248563 RVA: 0x00E9217C File Offset: 0x00E9037C
+		// Token: 0x06031A4E RID: 203342 RVA: 0x00DE2968 File Offset: 0x00DE0B68
 		private void OnTagAddOrRemove(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -156,12 +156,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAF4 RID: 248564 RVA: 0x00E921E1 File Offset: 0x00E903E1
+		// Token: 0x06031A4F RID: 203343 RVA: 0x00DE29CD File Offset: 0x00DE0BCD
 		public override void OnDynamicChanged(bool isDynamic)
 		{
 		}
 
-		// Token: 0x0603CAF5 RID: 248565 RVA: 0x00E921E4 File Offset: 0x00E903E4
+		// Token: 0x06031A50 RID: 203344 RVA: 0x00DE29D0 File Offset: 0x00DE0BD0
 		protected override void OnWalk()
 		{
 			if (this.CurrentJoystickType == EJoystickType.Walk)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentJoystickType = EJoystickType.Walk;
 		}
 
-		// Token: 0x0603CAF6 RID: 248566 RVA: 0x00E92234 File Offset: 0x00E90434
+		// Token: 0x06031A51 RID: 203345 RVA: 0x00DE2A20 File Offset: 0x00DE0C20
 		protected override void OnRun()
 		{
 			if (this.CurrentJoystickType == EJoystickType.Run)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentJoystickType = EJoystickType.Run;
 		}
 
-		// Token: 0x0603CAF7 RID: 248567 RVA: 0x00E92284 File Offset: 0x00E90484
+		// Token: 0x06031A52 RID: 203346 RVA: 0x00DE2A70 File Offset: 0x00DE0C70
 		protected override void OnStand()
 		{
 			if (this.CurrentJoystickType != EJoystickType.Stand)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAF8 RID: 248568 RVA: 0x00E922D8 File Offset: 0x00E904D8
+		// Token: 0x06031A53 RID: 203347 RVA: 0x00DE2AC4 File Offset: 0x00DE0CC4
 		protected override void OnStandInTouch()
 		{
 			if (this.CurrentJoystickType != EJoystickType.StandInTouch)
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAF9 RID: 248569 RVA: 0x00E9232C File Offset: 0x00E9052C
+		// Token: 0x06031A54 RID: 203348 RVA: 0x00DE2B18 File Offset: 0x00DE0D18
 		protected void SetUiOnDrag(bool onDrag)
 		{
 			if (onDrag)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAFA RID: 248570 RVA: 0x00E9243C File Offset: 0x00E9063C
+		// Token: 0x06031A55 RID: 203349 RVA: 0x00DE2C28 File Offset: 0x00DE0E28
 		[NullableContext(1)]
 		protected override void SetHandleOffset(Vector targetVector)
 		{
@@ -268,21 +268,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			walkBgItem.SetUIRelativeRotation(value);
 		}
 
-		// Token: 0x0603CAFB RID: 248571 RVA: 0x00E92470 File Offset: 0x00E90670
+		// Token: 0x06031A56 RID: 203350 RVA: 0x00DE2C5C File Offset: 0x00DE0E5C
 		public override void SetVisible(EBattleUiVisibleReason visibleReason, bool bVisible)
 		{
 			this.JoystickVisible = bVisible;
 		}
 
-		// Token: 0x0603CAFC RID: 248572 RVA: 0x00E92479 File Offset: 0x00E90679
+		// Token: 0x06031A57 RID: 203351 RVA: 0x00DE2C65 File Offset: 0x00DE0E65
 		protected override void UpdateJoystickVisible()
 		{
 		}
 
-		// Token: 0x0401F9D8 RID: 129496
+		// Token: 0x0401A490 RID: 107664
 		private const float INIT_TARGET_VECTOR_Y = 200f;
 
-		// Token: 0x0401F9D9 RID: 129497
+		// Token: 0x0401A491 RID: 107665
 		[Nullable(new byte[]
 		{
 			2,
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private List<ULGUIPlayTweenComponent> AnimHoverItem;
 
-		// Token: 0x0401F9DA RID: 129498
+		// Token: 0x0401A492 RID: 107666
 		[Nullable(new byte[]
 		{
 			2,
@@ -298,16 +298,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private List<ULGUIPlayTweenComponent> AnimNormalItem;
 
-		// Token: 0x0401F9DB RID: 129499
+		// Token: 0x0401A493 RID: 107667
 		[Nullable(2)]
 		private int[] TagIdVisible;
 
-		// Token: 0x0200C00E RID: 49166
+		// Token: 0x0200AA14 RID: 43540
 		private enum EChildType
 		{
-			// Token: 0x04039F4B RID: 237387
+			// Token: 0x0403490D RID: 215309
 			AnimOnHover = 8,
-			// Token: 0x04039F4C RID: 237388
+			// Token: 0x0403490E RID: 215310
 			AnimNormal
 		}
 	}

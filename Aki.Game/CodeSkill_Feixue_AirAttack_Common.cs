@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200317A RID: 12666
+// Token: 0x020026E7 RID: 9959
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 {
-	// Token: 0x0601B3D2 RID: 111570 RVA: 0x0076E059 File Offset: 0x0076C259
+	// Token: 0x06018ED7 RID: 102103 RVA: 0x007959BD File Offset: 0x00793BBD
 	public CodeSkill_Feixue_AirAttack_Common(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B3D3 RID: 111571 RVA: 0x0076E064 File Offset: 0x0076C264
+	// Token: 0x06018ED8 RID: 102104 RVA: 0x007959C8 File Offset: 0x00793BC8
 	public override void OnBegin(Skill skill)
 	{
 		this.Phase = CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase.None;
@@ -36,7 +36,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		this.RegisterFallAttackEventListeners();
 	}
 
-	// Token: 0x0601B3D4 RID: 111572 RVA: 0x0076E104 File Offset: 0x0076C304
+	// Token: 0x06018ED9 RID: 102105 RVA: 0x00795A68 File Offset: 0x00793C68
 	public override void OnTick(float delta, Skill skill)
 	{
 		if (this.Phase != CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase.SlopeAttack && this.Phase != CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase.VerticalAttack)
@@ -73,7 +73,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B3D5 RID: 111573 RVA: 0x0076E1B3 File Offset: 0x0076C3B3
+	// Token: 0x06018EDA RID: 102106 RVA: 0x00795B17 File Offset: 0x00793D17
 	public override void OnEnd(Skill skill)
 	{
 		this.RemoveFallAttackEventListeners();
@@ -96,7 +96,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		capsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Block);
 	}
 
-	// Token: 0x0601B3D6 RID: 111574 RVA: 0x0076E1ED File Offset: 0x0076C3ED
+	// Token: 0x06018EDB RID: 102107 RVA: 0x00795B51 File Offset: 0x00793D51
 	private void OnInitialMontageEnd(Skill skill)
 	{
 		if (this.ReceivedNotify)
@@ -106,7 +106,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		base.EndSelf(skill);
 	}
 
-	// Token: 0x0601B3D7 RID: 111575 RVA: 0x0076E200 File Offset: 0x0076C400
+	// Token: 0x06018EDC RID: 102108 RVA: 0x00795B64 File Offset: 0x00793D64
 	private void RegisterFallAttackEventListeners()
 	{
 		BaseAbilityComponent component = base.Entity.GetComponent<BaseAbilityComponent>();
@@ -119,7 +119,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		this.ListenersActive = true;
 	}
 
-	// Token: 0x0601B3D8 RID: 111576 RVA: 0x0076E268 File Offset: 0x0076C468
+	// Token: 0x06018EDD RID: 102109 RVA: 0x00795BCC File Offset: 0x00793DCC
 	private void RemoveFallAttackEventListeners()
 	{
 		if (!this.ListenersActive)
@@ -139,19 +139,19 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		component.RemoveGameplayEventListener(GameplayTagDefine.EGameplayTagId["角色.Common.下落攻击状态.垂直下落攻击"], new TGameplayEventCallback(this.OnVerticalAttackEvent));
 	}
 
-	// Token: 0x0601B3D9 RID: 111577 RVA: 0x0076E2DC File Offset: 0x0076C4DC
+	// Token: 0x06018EDE RID: 102110 RVA: 0x00795C40 File Offset: 0x00793E40
 	private void OnSlopeAttackEvent(int tagId, FGameplayEventData payload)
 	{
 		this.OnFallAttackEventReceived(CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase.SlopeAttack, 1);
 	}
 
-	// Token: 0x0601B3DA RID: 111578 RVA: 0x0076E2E6 File Offset: 0x0076C4E6
+	// Token: 0x06018EDF RID: 102111 RVA: 0x00795C4A File Offset: 0x00793E4A
 	private void OnVerticalAttackEvent(int tagId, FGameplayEventData payload)
 	{
 		this.OnFallAttackEventReceived(CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase.VerticalAttack, 2);
 	}
 
-	// Token: 0x0601B3DB RID: 111579 RVA: 0x0076E2F0 File Offset: 0x0076C4F0
+	// Token: 0x06018EE0 RID: 102112 RVA: 0x00795C54 File Offset: 0x00793E54
 	private void OnFallAttackEventReceived(CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase phase, int montageIndex)
 	{
 		Skill skill = this.ActiveSkill;
@@ -178,7 +178,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B3DC RID: 111580 RVA: 0x0076E378 File Offset: 0x0076C578
+	// Token: 0x06018EE1 RID: 102113 RVA: 0x00795CDC File Offset: 0x00793EDC
 	private void OnFallMontageCompleted(Skill skill, bool isInterrupted)
 	{
 		if (!isInterrupted)
@@ -193,7 +193,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		base.EndSelf(skill);
 	}
 
-	// Token: 0x0601B3DD RID: 111581 RVA: 0x0076E395 File Offset: 0x0076C595
+	// Token: 0x06018EE2 RID: 102114 RVA: 0x00795CF9 File Offset: 0x00793EF9
 	private void OnFallMontageBlendOut(Skill skill)
 	{
 		if (this.LandAttack)
@@ -203,7 +203,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		base.EndSelf(skill);
 	}
 
-	// Token: 0x0601B3DE RID: 111582 RVA: 0x0076E3A8 File Offset: 0x0076C5A8
+	// Token: 0x06018EE3 RID: 102115 RVA: 0x00795D0C File Offset: 0x00793F0C
 	private void StartLandAttackMontage(Skill skill)
 	{
 		this.Phase = CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase.LandAttack;
@@ -219,7 +219,7 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B3DF RID: 111583 RVA: 0x0076E40C File Offset: 0x0076C60C
+	// Token: 0x06018EE4 RID: 102116 RVA: 0x00795D70 File Offset: 0x00793F70
 	private void UpdateBlockTime(Skill skill)
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -248,56 +248,56 @@ public class CodeSkill_Feixue_AirAttack_Common : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0400D483 RID: 54403
+	// Token: 0x0400D8E6 RID: 55526
 	private const int INITIAL_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D484 RID: 54404
+	// Token: 0x0400D8E7 RID: 55527
 	private const int SLOPE_MONTAGE_INDEX = 1;
 
-	// Token: 0x0400D485 RID: 54405
+	// Token: 0x0400D8E8 RID: 55528
 	private const int VERTICAL_MONTAGE_INDEX = 2;
 
-	// Token: 0x0400D486 RID: 54406
+	// Token: 0x0400D8E9 RID: 55529
 	private const int LAND_ATTACK_MONTAGE_INDEX = 3;
 
-	// Token: 0x0400D487 RID: 54407
+	// Token: 0x0400D8EA RID: 55530
 	private const float MAX_BLOCK_TIME = 1f;
 
-	// Token: 0x0400D488 RID: 54408
+	// Token: 0x0400D8EB RID: 55531
 	private CodeSkill_Feixue_AirAttack_Common.EAirAttackPhase Phase;
 
-	// Token: 0x0400D489 RID: 54409
+	// Token: 0x0400D8EC RID: 55532
 	private bool ReceivedNotify;
 
-	// Token: 0x0400D48A RID: 54410
+	// Token: 0x0400D8ED RID: 55533
 	private bool LandAttack;
 
-	// Token: 0x0400D48B RID: 54411
+	// Token: 0x0400D8EE RID: 55534
 	private float BlockTime;
 
-	// Token: 0x0400D48C RID: 54412
+	// Token: 0x0400D8EF RID: 55535
 	private bool LandCheckDone;
 
-	// Token: 0x0400D48D RID: 54413
+	// Token: 0x0400D8F0 RID: 55536
 	private bool ListenersActive;
 
-	// Token: 0x0400D48E RID: 54414
+	// Token: 0x0400D8F1 RID: 55537
 	[Nullable(2)]
 	private Skill ActiveSkill;
 
-	// Token: 0x020096C1 RID: 38593
+	// Token: 0x020088E7 RID: 35047
 	[NullableContext(0)]
 	private enum EAirAttackPhase
 	{
-		// Token: 0x0403050B RID: 197899
+		// Token: 0x0402BBA0 RID: 179104
 		None,
-		// Token: 0x0403050C RID: 197900
+		// Token: 0x0402BBA1 RID: 179105
 		Initial,
-		// Token: 0x0403050D RID: 197901
+		// Token: 0x0402BBA2 RID: 179106
 		SlopeAttack,
-		// Token: 0x0403050E RID: 197902
+		// Token: 0x0402BBA3 RID: 179107
 		VerticalAttack,
-		// Token: 0x0403050F RID: 197903
+		// Token: 0x0402BBA4 RID: 179108
 		LandAttack
 	}
 }

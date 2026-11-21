@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F1F RID: 7967
+// Token: 0x020013E1 RID: 5089
 [NullableContext(2)]
 [Nullable(0)]
 public class StrengthUnitData
 {
-	// Token: 0x0600F56E RID: 62830 RVA: 0x003B3378 File Offset: 0x003B1578
+	// Token: 0x0600C98D RID: 51597 RVA: 0x003BEE64 File Offset: 0x003BD064
 	public StrengthItemInfo EnableStrengthItem(EStrengthItemType itemType)
 	{
 		StrengthItemInfo strengthItemInfo;
@@ -36,7 +36,7 @@ public class StrengthUnitData
 		}
 	}
 
-	// Token: 0x0600F56F RID: 62831 RVA: 0x003B33D8 File Offset: 0x003B15D8
+	// Token: 0x0600C98E RID: 51598 RVA: 0x003BEEC4 File Offset: 0x003BD0C4
 	public StrengthItemInfo DisableStrengthItem(EStrengthItemType itemType)
 	{
 		StrengthItemInfo strengthItemInfo;
@@ -52,7 +52,7 @@ public class StrengthUnitData
 		return strengthItemInfo;
 	}
 
-	// Token: 0x0600F570 RID: 62832 RVA: 0x003B340C File Offset: 0x003B160C
+	// Token: 0x0600C98F RID: 51599 RVA: 0x003BEEF8 File Offset: 0x003BD0F8
 	public StrengthItemInfo DestroyStrengthItem(EStrengthItemType itemType)
 	{
 		StrengthItemInfo result;
@@ -64,7 +64,7 @@ public class StrengthUnitData
 		return result;
 	}
 
-	// Token: 0x0400717A RID: 29050
+	// Token: 0x0400725B RID: 29275
 	[Nullable(1)]
 	public readonly Dictionary<EStrengthItemType, StrengthItemConfig> ConfigMap = new Dictionary<EStrengthItemType, StrengthItemConfig>
 	{
@@ -94,7 +94,7 @@ public class StrengthUnitData
 		}
 	};
 
-	// Token: 0x0400717B RID: 29051
+	// Token: 0x0400725C RID: 29276
 	[Nullable(1)]
 	public readonly Dictionary<EStrengthItemType, StrengthItemInfo> InfoMap = new Dictionary<EStrengthItemType, StrengthItemInfo>();
 }

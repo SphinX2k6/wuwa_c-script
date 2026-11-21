@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076B7 RID: 30391
+	// Token: 0x02007EC2 RID: 32450
 	public class TEnterMovieCameraTypeUnion
 	{
-		// Token: 0x1700E613 RID: 58899
-		// (get) Token: 0x0603747A RID: 226426 RVA: 0x0077D984 File Offset: 0x0077BB84
-		// (set) Token: 0x0603747B RID: 226427 RVA: 0x0077D98C File Offset: 0x0077BB8C
+		// Token: 0x1700F24F RID: 62031
+		// (get) Token: 0x0603A91D RID: 239901 RVA: 0x007E1AD8 File Offset: 0x007DFCD8
+		// (set) Token: 0x0603A91E RID: 239902 RVA: 0x007E1AE0 File Offset: 0x007DFCE0
 		public TEnterMovieCameraType Type { get; set; }
 
-		// Token: 0x1700E614 RID: 58900
-		// (get) Token: 0x0603747C RID: 226428 RVA: 0x0077D995 File Offset: 0x0077BB95
-		// (set) Token: 0x0603747D RID: 226429 RVA: 0x0077D99D File Offset: 0x0077BB9D
+		// Token: 0x1700F250 RID: 62032
+		// (get) Token: 0x0603A91F RID: 239903 RVA: 0x007E1AE9 File Offset: 0x007DFCE9
+		// (set) Token: 0x0603A920 RID: 239904 RVA: 0x007E1AF1 File Offset: 0x007DFCF1
 		public object Value { get; set; }
 
-		// Token: 0x0603747E RID: 226430 RVA: 0x0077D9A6 File Offset: 0x0077BBA6
+		// Token: 0x0603A921 RID: 239905 RVA: 0x007E1AFA File Offset: 0x007DFCFA
 		public TEnterMovieCameraTypeUnion()
 		{
 			this.Type = TEnterMovieCameraType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603747F RID: 226431 RVA: 0x0077D9BC File Offset: 0x0077BBBC
+		// Token: 0x0603A922 RID: 239906 RVA: 0x007E1B10 File Offset: 0x007DFD10
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037480 RID: 226432 RVA: 0x0077D9CE File Offset: 0x0077BBCE
+		// Token: 0x0603A923 RID: 239907 RVA: 0x007E1B22 File Offset: 0x007DFD22
 		public IEnterCommonMovieCameraT AsIEnterCommonMovieCamera()
 		{
 			return this.As<IEnterCommonMovieCameraT>();
 		}
 
-		// Token: 0x06037481 RID: 226433 RVA: 0x0077D9D6 File Offset: 0x0077BBD6
+		// Token: 0x0603A924 RID: 239908 RVA: 0x007E1B2A File Offset: 0x007DFD2A
 		public static TEnterMovieCameraTypeUnion FromIEnterCommonMovieCamera(IEnterCommonMovieCameraT _ientercommonmoviecamera)
 		{
 			return new TEnterMovieCameraTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037482 RID: 226434 RVA: 0x0077D9EB File Offset: 0x0077BBEB
+		// Token: 0x0603A925 RID: 239909 RVA: 0x007E1B3F File Offset: 0x007DFD3F
 		public IEnterRandomMovieCameraT AsIEnterRandomMovieCamera()
 		{
 			return this.As<IEnterRandomMovieCameraT>();
 		}
 
-		// Token: 0x06037483 RID: 226435 RVA: 0x0077D9F3 File Offset: 0x0077BBF3
+		// Token: 0x0603A926 RID: 239910 RVA: 0x007E1B47 File Offset: 0x007DFD47
 		public static TEnterMovieCameraTypeUnion FromIEnterRandomMovieCamera(IEnterRandomMovieCameraT _ienterrandommoviecamera)
 		{
 			return new TEnterMovieCameraTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037484 RID: 226436 RVA: 0x0077DA08 File Offset: 0x0077BC08
+		// Token: 0x0603A927 RID: 239911 RVA: 0x007E1B5C File Offset: 0x007DFD5C
 		public IEnterSpecMovieCameraT AsIEnterSpecMovieCamera()
 		{
 			return this.As<IEnterSpecMovieCameraT>();
 		}
 
-		// Token: 0x06037485 RID: 226437 RVA: 0x0077DA10 File Offset: 0x0077BC10
+		// Token: 0x0603A928 RID: 239912 RVA: 0x007E1B64 File Offset: 0x007DFD64
 		public static TEnterMovieCameraTypeUnion FromIEnterSpecMovieCamera(IEnterSpecMovieCameraT _ienterspecmoviecamera)
 		{
 			return new TEnterMovieCameraTypeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037486 RID: 226438 RVA: 0x0077DA28 File Offset: 0x0077BC28
+		// Token: 0x0603A929 RID: 239913 RVA: 0x007E1B7C File Offset: 0x007DFD7C
 		public static int Pack(FlatBufferBuilder builder, TEnterMovieCameraTypeUnion _o)
 		{
 			switch (_o.Type)

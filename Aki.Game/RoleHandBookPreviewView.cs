@@ -1,10 +1,10 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x0200277F RID: 10111
+// Token: 0x02001C6A RID: 7274
 public class RoleHandBookPreviewView : RolePreviewDescribeTabView
 {
-	// Token: 0x06014BEF RID: 84975 RVA: 0x00540360 File Offset: 0x0053E560
+	// Token: 0x060120D2 RID: 73938 RVA: 0x0054F1EC File Offset: 0x0054D3EC
 	protected override void SetCharacterVoiceInfo()
 	{
 		RoleInfo roleConfig = RoleModel.Instance.GetCurSelectMainRoleInstance().GetRoleConfig();
@@ -14,7 +14,7 @@ public class RoleHandBookPreviewView : RolePreviewDescribeTabView
 		this.CharacterVoiceNameText.ShowTextNew(roleConfig.CharacterVoice);
 	}
 
-	// Token: 0x06014BF0 RID: 84976 RVA: 0x005403C4 File Offset: 0x0053E5C4
+	// Token: 0x060120D3 RID: 73939 RVA: 0x0054F250 File Offset: 0x0054D450
 	protected override void SetAttributeInfo()
 	{
 		int elementId = RoleModel.Instance.GetCurSelectMainRoleInstance().GetRoleConfig().ElementId;

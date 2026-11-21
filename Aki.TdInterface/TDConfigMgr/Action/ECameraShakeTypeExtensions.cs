@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022CD RID: 8909
+	// Token: 0x0200253C RID: 9532
 	public static class ECameraShakeTypeExtensions
 	{
-		// Token: 0x0600C319 RID: 49945 RVA: 0x001C82F0 File Offset: 0x001C64F0
+		// Token: 0x0600CEE8 RID: 52968 RVA: 0x001E00F8 File Offset: 0x001DE2F8
 		public static string ToEnumString(this ECameraShakeType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C31A RID: 49946 RVA: 0x001C8328 File Offset: 0x001C6528
+		// Token: 0x0600CEE9 RID: 52969 RVA: 0x001E0130 File Offset: 0x001DE330
 		public static ECameraShakeType FromString(string name)
 		{
 			ECameraShakeType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C31B RID: 49947 RVA: 0x001C8351 File Offset: 0x001C6551
+		// Token: 0x0600CEEA RID: 52970 RVA: 0x001E0159 File Offset: 0x001DE359
 		public static bool TryFromString(string name, out ECameraShakeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C31C RID: 49948 RVA: 0x001C838A File Offset: 0x001C658A
+		// Token: 0x0600CEEB RID: 52971 RVA: 0x001E0192 File Offset: 0x001DE392
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C31D RID: 49949 RVA: 0x001C83A2 File Offset: 0x001C65A2
+		// Token: 0x0600CEEC RID: 52972 RVA: 0x001E01AA File Offset: 0x001DE3AA
 		public static ECameraShakeType[] GetValues()
 		{
 			return new ECameraShakeType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C31E RID: 49950 RVA: 0x001C83AE File Offset: 0x001C65AE
+		// Token: 0x0600CEED RID: 52973 RVA: 0x001E01B6 File Offset: 0x001DE3B6
 		public static string[] GetNames()
 		{
 			return new string[]

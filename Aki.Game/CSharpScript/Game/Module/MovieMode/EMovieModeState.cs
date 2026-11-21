@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x02005388 RID: 21384
+	// Token: 0x0200436B RID: 17259
 	public enum EMovieModeState
 	{
-		// Token: 0x0401CDE9 RID: 118249
+		// Token: 0x04017881 RID: 96385
 		Idle,
-		// Token: 0x0401CDEA RID: 118250
+		// Token: 0x04017882 RID: 96386
 		Entering,
-		// Token: 0x0401CDEB RID: 118251
+		// Token: 0x04017883 RID: 96387
 		CancelEnter,
-		// Token: 0x0401CDEC RID: 118252
+		// Token: 0x04017884 RID: 96388
 		Active,
-		// Token: 0x0401CDED RID: 118253
+		// Token: 0x04017885 RID: 96389
 		Exiting
 	}
 }

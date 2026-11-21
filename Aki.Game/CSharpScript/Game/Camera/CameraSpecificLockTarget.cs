@@ -2,37 +2,37 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B2 RID: 29362
+	// Token: 0x02006434 RID: 25652
 	public abstract class CameraSpecificLockTarget
 	{
-		// Token: 0x06048085 RID: 295045 RVA: 0x01277553 File Offset: 0x01275753
+		// Token: 0x0603E476 RID: 255094 RVA: 0x0121986C File Offset: 0x01217A6C
 		protected CameraSpecificLockTarget(ECameraSpecificLockType type, int id, int priority, ECameraSpecificLockGroup group = ECameraSpecificLockGroup.Normal)
 		{
 		}
 
-		// Token: 0x17009F07 RID: 40711
-		// (get) Token: 0x06048086 RID: 295046 RVA: 0x01277578 File Offset: 0x01275778
+		// Token: 0x1700766E RID: 30318
+		// (get) Token: 0x0603E477 RID: 255095 RVA: 0x01219891 File Offset: 0x01217A91
 		public ECameraSpecificLockType Type { get; } = type;
 
-		// Token: 0x17009F08 RID: 40712
-		// (get) Token: 0x06048087 RID: 295047 RVA: 0x01277580 File Offset: 0x01275780
+		// Token: 0x1700766F RID: 30319
+		// (get) Token: 0x0603E478 RID: 255096 RVA: 0x01219899 File Offset: 0x01217A99
 		public int Id { get; } = id;
 
-		// Token: 0x17009F09 RID: 40713
-		// (get) Token: 0x06048088 RID: 295048 RVA: 0x01277588 File Offset: 0x01275788
+		// Token: 0x17007670 RID: 30320
+		// (get) Token: 0x0603E479 RID: 255097 RVA: 0x012198A1 File Offset: 0x01217AA1
 		public int Priority { get; } = priority;
 
-		// Token: 0x17009F0A RID: 40714
-		// (get) Token: 0x06048089 RID: 295049 RVA: 0x01277590 File Offset: 0x01275790
+		// Token: 0x17007671 RID: 30321
+		// (get) Token: 0x0603E47A RID: 255098 RVA: 0x012198A9 File Offset: 0x01217AA9
 		public ECameraSpecificLockGroup Group { get; } = group;
 
-		// Token: 0x0604808A RID: 295050 RVA: 0x01277598 File Offset: 0x01275798
+		// Token: 0x0603E47B RID: 255099 RVA: 0x012198B1 File Offset: 0x01217AB1
 		public virtual bool IsValid()
 		{
 			return true;
 		}
 
-		// Token: 0x04025FC4 RID: 155588
+		// Token: 0x040212A4 RID: 135844
 		public bool MarkDelete;
 	}
 }

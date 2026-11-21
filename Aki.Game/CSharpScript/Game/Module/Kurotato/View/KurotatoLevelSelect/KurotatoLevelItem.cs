@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x02005757 RID: 22359
+	// Token: 0x0200472E RID: 18222
 	public class KurotatoLevelItem : SyncGridProxyAbstract<int>
 	{
-		// Token: 0x06038D1A RID: 232730 RVA: 0x00D7EC6C File Offset: 0x00D7CE6C
+		// Token: 0x0602DC2A RID: 187434 RVA: 0x00CCD644 File Offset: 0x00CCB844
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038D1B RID: 232731 RVA: 0x00D7ED98 File Offset: 0x00D7CF98
+		// Token: 0x0602DC2B RID: 187435 RVA: 0x00CCD770 File Offset: 0x00CCB970
 		public override void Refresh(int data)
 		{
 			this.Id = data;
@@ -75,39 +75,39 @@ namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 			item3.SetUIActive(kurotatoLevelData.HasRedDot);
 		}
 
-		// Token: 0x06038D1C RID: 232732 RVA: 0x00D7EE73 File Offset: 0x00D7D073
+		// Token: 0x0602DC2C RID: 187436 RVA: 0x00CCD84B File Offset: 0x00CCBA4B
 		private void OnToggleClick(EToggleState state)
 		{
 			this.OnClickCb(this.Id);
 		}
 
-		// Token: 0x0401DCC1 RID: 122049
+		// Token: 0x04018757 RID: 100183
 		public int Id;
 
-		// Token: 0x0401DCC2 RID: 122050
+		// Token: 0x04018758 RID: 100184
 		[Nullable(1)]
 		public Action<int> OnClickCb = delegate(int _)
 		{
 		};
 
-		// Token: 0x0401DCC3 RID: 122051
+		// Token: 0x04018759 RID: 100185
 		[Nullable(1)]
 		public Func<int, bool> IsSelected = (int _) => false;
 
-		// Token: 0x0200B94F RID: 47439
+		// Token: 0x0200A36D RID: 41837
 		private enum EComponents
 		{
-			// Token: 0x040380B3 RID: 229555
+			// Token: 0x04032AB9 RID: 207545
 			ToggleRoot,
-			// Token: 0x040380B4 RID: 229556
+			// Token: 0x04032ABA RID: 207546
 			TextLevelNum,
-			// Token: 0x040380B5 RID: 229557
+			// Token: 0x04032ABB RID: 207547
 			TextLevelName,
-			// Token: 0x040380B6 RID: 229558
+			// Token: 0x04032ABC RID: 207548
 			ItemFinishPanel,
-			// Token: 0x040380B7 RID: 229559
+			// Token: 0x04032ABD RID: 207549
 			ItemLockPanel,
-			// Token: 0x040380B8 RID: 229560
+			// Token: 0x04032ABE RID: 207550
 			ItemRedDot
 		}
 	}

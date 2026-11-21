@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020010E5 RID: 4325
+// Token: 0x02000599 RID: 1433
 [NullableContext(1)]
 [Nullable(0)]
 public class ArtemisActivityCertificationView : UiViewBase
 {
-	// Token: 0x06007097 RID: 28823 RVA: 0x0016F9F9 File Offset: 0x0016DBF9
+	// Token: 0x0600442D RID: 17453 RVA: 0x001783B5 File Offset: 0x001765B5
 	public ArtemisActivityCertificationView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007098 RID: 28824 RVA: 0x0016FA04 File Offset: 0x0016DC04
+	// Token: 0x0600442E RID: 17454 RVA: 0x001783C0 File Offset: 0x001765C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class ArtemisActivityCertificationView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007099 RID: 28825 RVA: 0x0016FAF0 File Offset: 0x0016DCF0
+	// Token: 0x0600442F RID: 17455 RVA: 0x001784AC File Offset: 0x001766AC
 	protected override void OnStart()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -65,7 +65,7 @@ public class ArtemisActivityCertificationView : UiViewBase
 		artText.SetText("100");
 	}
 
-	// Token: 0x0600709A RID: 28826 RVA: 0x0016FB7A File Offset: 0x0016DD7A
+	// Token: 0x06004430 RID: 17456 RVA: 0x00178536 File Offset: 0x00176736
 	protected override void OnAddEventListener()
 	{
 		UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -76,13 +76,13 @@ public class ArtemisActivityCertificationView : UiViewBase
 		uiViewSequence.AddSequenceFinishEvent("Fix_Done_02", new Action<string>(this.OnFixDone2End), false);
 	}
 
-	// Token: 0x0600709B RID: 28827 RVA: 0x0016FB9E File Offset: 0x0016DD9E
+	// Token: 0x06004431 RID: 17457 RVA: 0x0017855A File Offset: 0x0017675A
 	protected override void OnRemoveEventListener()
 	{
 		this.UiViewSequence.RemoveSequenceFinishEvent("Fix_Done_02", new Action<string>(this.OnFixDone2End));
 	}
 
-	// Token: 0x0600709C RID: 28828 RVA: 0x0016FBBC File Offset: 0x0016DDBC
+	// Token: 0x06004432 RID: 17458 RVA: 0x00178578 File Offset: 0x00176778
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
 		if (eventName == "Sequence_Bottom_In")
@@ -91,7 +91,7 @@ public class ArtemisActivityCertificationView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600709D RID: 28829 RVA: 0x0016FBD4 File Offset: 0x0016DDD4
+	// Token: 0x06004433 RID: 17459 RVA: 0x00178590 File Offset: 0x00176790
 	protected override void OnBeforeShow()
 	{
 		ArtemisActivityCertificationViewParams artemisActivityCertificationViewParams = this.OpenParam as ArtemisActivityCertificationViewParams;
@@ -120,7 +120,7 @@ public class ArtemisActivityCertificationView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600709E RID: 28830 RVA: 0x0016FC5F File Offset: 0x0016DE5F
+	// Token: 0x06004434 RID: 17460 RVA: 0x0017861B File Offset: 0x0017681B
 	private void StartVerification()
 	{
 		if (!this.IsCanClickFingerprintBtn)
@@ -135,7 +135,7 @@ public class ArtemisActivityCertificationView : UiViewBase
 		finishCallback();
 	}
 
-	// Token: 0x0600709F RID: 28831 RVA: 0x0016FC7A File Offset: 0x0016DE7A
+	// Token: 0x06004435 RID: 17461 RVA: 0x00178636 File Offset: 0x00176836
 	private void OnFixDone2End(string _)
 	{
 		Action finishCallback = this.FinishCallback;
@@ -146,42 +146,42 @@ public class ArtemisActivityCertificationView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400343E RID: 13374
+	// Token: 0x040034D7 RID: 13527
 	private bool IsPlayFixedDone;
 
-	// Token: 0x0400343F RID: 13375
+	// Token: 0x040034D8 RID: 13528
 	private bool IsCanClickFingerprintBtn;
 
-	// Token: 0x04003440 RID: 13376
+	// Token: 0x040034D9 RID: 13529
 	[Nullable(2)]
 	private Action FinishCallback;
 
-	// Token: 0x020076AA RID: 30378
+	// Token: 0x0200683E RID: 26686
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027299 RID: 160409
+		// Token: 0x040225E2 RID: 140770
 		public const int FingerprintBtn = 0;
 
-		// Token: 0x0402729A RID: 160410
+		// Token: 0x040225E3 RID: 140771
 		public const int CircularProgressBar = 1;
 
-		// Token: 0x0402729B RID: 160411
+		// Token: 0x040225E4 RID: 140772
 		public const int ProgressText = 2;
 
-		// Token: 0x0402729C RID: 160412
+		// Token: 0x040225E5 RID: 140773
 		public const int PnlFixProgress = 3;
 
-		// Token: 0x0402729D RID: 160413
+		// Token: 0x040225E6 RID: 140774
 		public const int PnlPopupTip = 4;
 
-		// Token: 0x0402729E RID: 160414
+		// Token: 0x040225E7 RID: 140775
 		public const int ClickTipsText = 5;
 
-		// Token: 0x0402729F RID: 160415
+		// Token: 0x040225E8 RID: 140776
 		public const int WarningTipsText = 6;
 
-		// Token: 0x040272A0 RID: 160416
+		// Token: 0x040225E9 RID: 140777
 		public const int FixedTipsText = 7;
 	}
 }

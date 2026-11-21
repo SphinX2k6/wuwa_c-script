@@ -4,28 +4,28 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Audio
 {
-	// Token: 0x02004436 RID: 17462
+	// Token: 0x020033FF RID: 13311
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Audio/E_FootstepVariant.E_FootstepVariant")]
 	public enum E_FootstepVariant : byte
 	{
-		// Token: 0x04018057 RID: 98391
+		// Token: 0x04012A0C RID: 76300
 		land,
-		// Token: 0x04018058 RID: 98392
+		// Token: 0x04012A0D RID: 76301
 		run,
-		// Token: 0x04018059 RID: 98393
+		// Token: 0x04012A0E RID: 76302
 		runstop,
-		// Token: 0x0401805A RID: 98394
+		// Token: 0x04012A0F RID: 76303
 		sprint,
-		// Token: 0x0401805B RID: 98395
+		// Token: 0x04012A10 RID: 76304
 		sprintstop,
-		// Token: 0x0401805C RID: 98396
+		// Token: 0x04012A11 RID: 76305
 		walk,
-		// Token: 0x0401805D RID: 98397
+		// Token: 0x04012A12 RID: 76306
 		walkstop,
-		// Token: 0x0401805E RID: 98398
+		// Token: 0x04012A13 RID: 76307
 		turnback,
-		// Token: 0x0401805F RID: 98399
+		// Token: 0x04012A14 RID: 76308
 		E_MAX
 	}
 }

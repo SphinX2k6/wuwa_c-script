@@ -5,55 +5,55 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051E4 RID: 20964
+	// Token: 0x0200574C RID: 22348
 	public class IExploreSkillInteractT
 	{
-		// Token: 0x1700997B RID: 39291
-		// (get) Token: 0x06022050 RID: 139344 RVA: 0x004B880D File Offset: 0x004B6A0D
-		// (set) Token: 0x06022051 RID: 139345 RVA: 0x004B8815 File Offset: 0x004B6A15
+		// Token: 0x1700A177 RID: 41335
+		// (get) Token: 0x06023FE3 RID: 147427 RVA: 0x004F31E9 File Offset: 0x004F13E9
+		// (set) Token: 0x06023FE4 RID: 147428 RVA: 0x004F31F1 File Offset: 0x004F13F1
 		public string ExploreSkillUiResource { get; set; }
 
-		// Token: 0x1700997C RID: 39292
-		// (get) Token: 0x06022052 RID: 139346 RVA: 0x004B881E File Offset: 0x004B6A1E
-		// (set) Token: 0x06022053 RID: 139347 RVA: 0x004B8826 File Offset: 0x004B6A26
+		// Token: 0x1700A178 RID: 41336
+		// (get) Token: 0x06023FE5 RID: 147429 RVA: 0x004F31FA File Offset: 0x004F13FA
+		// (set) Token: 0x06023FE6 RID: 147430 RVA: 0x004F3202 File Offset: 0x004F1402
 		public TExploreSkillInteractOptionUnion Option { get; set; }
 
-		// Token: 0x1700997D RID: 39293
-		// (get) Token: 0x06022054 RID: 139348 RVA: 0x004B882F File Offset: 0x004B6A2F
-		// (set) Token: 0x06022055 RID: 139349 RVA: 0x004B8837 File Offset: 0x004B6A37
+		// Token: 0x1700A179 RID: 41337
+		// (get) Token: 0x06023FE7 RID: 147431 RVA: 0x004F320B File Offset: 0x004F140B
+		// (set) Token: 0x06023FE8 RID: 147432 RVA: 0x004F3213 File Offset: 0x004F1413
 		public int PlayerStateRestritionId { get; set; }
 
-		// Token: 0x1700997E RID: 39294
-		// (get) Token: 0x06022056 RID: 139350 RVA: 0x004B8840 File Offset: 0x004B6A40
-		// (set) Token: 0x06022057 RID: 139351 RVA: 0x004B8848 File Offset: 0x004B6A48
+		// Token: 0x1700A17A RID: 41338
+		// (get) Token: 0x06023FE9 RID: 147433 RVA: 0x004F321C File Offset: 0x004F141C
+		// (set) Token: 0x06023FEA RID: 147434 RVA: 0x004F3224 File Offset: 0x004F1424
 		public List<TMatchRoleOptionUnion> MatchRoleOption { get; set; }
 
-		// Token: 0x1700997F RID: 39295
-		// (get) Token: 0x06022058 RID: 139352 RVA: 0x004B8851 File Offset: 0x004B6A51
-		// (set) Token: 0x06022059 RID: 139353 RVA: 0x004B8859 File Offset: 0x004B6A59
+		// Token: 0x1700A17B RID: 41339
+		// (get) Token: 0x06023FEB RID: 147435 RVA: 0x004F322D File Offset: 0x004F142D
+		// (set) Token: 0x06023FEC RID: 147436 RVA: 0x004F3235 File Offset: 0x004F1435
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17009980 RID: 39296
-		// (get) Token: 0x0602205A RID: 139354 RVA: 0x004B8862 File Offset: 0x004B6A62
-		// (set) Token: 0x0602205B RID: 139355 RVA: 0x004B886A File Offset: 0x004B6A6A
+		// Token: 0x1700A17C RID: 41340
+		// (get) Token: 0x06023FED RID: 147437 RVA: 0x004F323E File Offset: 0x004F143E
+		// (set) Token: 0x06023FEE RID: 147438 RVA: 0x004F3246 File Offset: 0x004F1446
 		public TExploreSkillSearchTargetCfgUnion SearchTargetCfg { get; set; }
 
-		// Token: 0x17009981 RID: 39297
-		// (get) Token: 0x0602205C RID: 139356 RVA: 0x004B8873 File Offset: 0x004B6A73
-		// (set) Token: 0x0602205D RID: 139357 RVA: 0x004B887B File Offset: 0x004B6A7B
+		// Token: 0x1700A17D RID: 41341
+		// (get) Token: 0x06023FEF RID: 147439 RVA: 0x004F324F File Offset: 0x004F144F
+		// (set) Token: 0x06023FF0 RID: 147440 RVA: 0x004F3257 File Offset: 0x004F1457
 		public IIgnoresCollisionCfgT IgnoresCollisionCfg { get; set; }
 
-		// Token: 0x17009982 RID: 39298
-		// (get) Token: 0x0602205E RID: 139358 RVA: 0x004B8884 File Offset: 0x004B6A84
-		// (set) Token: 0x0602205F RID: 139359 RVA: 0x004B888C File Offset: 0x004B6A8C
+		// Token: 0x1700A17E RID: 41342
+		// (get) Token: 0x06023FF1 RID: 147441 RVA: 0x004F3260 File Offset: 0x004F1460
+		// (set) Token: 0x06023FF2 RID: 147442 RVA: 0x004F3268 File Offset: 0x004F1468
 		public List<string> SelfInteractBlockDetectionKeys { get; set; }
 
-		// Token: 0x17009983 RID: 39299
-		// (get) Token: 0x06022060 RID: 139360 RVA: 0x004B8895 File Offset: 0x004B6A95
-		// (set) Token: 0x06022061 RID: 139361 RVA: 0x004B889D File Offset: 0x004B6A9D
+		// Token: 0x1700A17F RID: 41343
+		// (get) Token: 0x06023FF3 RID: 147443 RVA: 0x004F3271 File Offset: 0x004F1471
+		// (set) Token: 0x06023FF4 RID: 147444 RVA: 0x004F3279 File Offset: 0x004F1479
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022062 RID: 139362 RVA: 0x004B88A8 File Offset: 0x004B6AA8
+		// Token: 0x06023FF5 RID: 147445 RVA: 0x004F3284 File Offset: 0x004F1484
 		public IExploreSkillInteractT()
 		{
 			this.ExploreSkillUiResource = null;

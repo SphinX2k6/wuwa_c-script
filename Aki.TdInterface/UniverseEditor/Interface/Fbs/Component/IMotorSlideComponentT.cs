@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055CA RID: 21962
+	// Token: 0x02005B68 RID: 23400
 	public class IMotorSlideComponentT
 	{
-		// Token: 0x1700A25F RID: 41567
-		// (get) Token: 0x0602465F RID: 149087 RVA: 0x00506541 File Offset: 0x00504741
-		// (set) Token: 0x06024660 RID: 149088 RVA: 0x00506549 File Offset: 0x00504749
+		// Token: 0x1700AAE7 RID: 43751
+		// (get) Token: 0x0602686C RID: 157804 RVA: 0x00546AB9 File Offset: 0x00544CB9
+		// (set) Token: 0x0602686D RID: 157805 RVA: 0x00546AC1 File Offset: 0x00544CC1
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A260 RID: 41568
-		// (get) Token: 0x06024661 RID: 149089 RVA: 0x00506552 File Offset: 0x00504752
-		// (set) Token: 0x06024662 RID: 149090 RVA: 0x0050655A File Offset: 0x0050475A
+		// Token: 0x1700AAE8 RID: 43752
+		// (get) Token: 0x0602686E RID: 157806 RVA: 0x00546ACA File Offset: 0x00544CCA
+		// (set) Token: 0x0602686F RID: 157807 RVA: 0x00546AD2 File Offset: 0x00544CD2
 		public IConditionGroupT EnableConditions { get; set; }
 
-		// Token: 0x1700A261 RID: 41569
-		// (get) Token: 0x06024663 RID: 149091 RVA: 0x00506563 File Offset: 0x00504763
-		// (set) Token: 0x06024664 RID: 149092 RVA: 0x0050656B File Offset: 0x0050476B
+		// Token: 0x1700AAE9 RID: 43753
+		// (get) Token: 0x06026870 RID: 157808 RVA: 0x00546ADB File Offset: 0x00544CDB
+		// (set) Token: 0x06026871 RID: 157809 RVA: 0x00546AE3 File Offset: 0x00544CE3
 		public float MaxAngle { get; set; }
 
-		// Token: 0x1700A262 RID: 41570
-		// (get) Token: 0x06024665 RID: 149093 RVA: 0x00506574 File Offset: 0x00504774
-		// (set) Token: 0x06024666 RID: 149094 RVA: 0x0050657C File Offset: 0x0050477C
+		// Token: 0x1700AAEA RID: 43754
+		// (get) Token: 0x06026872 RID: 157810 RVA: 0x00546AEC File Offset: 0x00544CEC
+		// (set) Token: 0x06026873 RID: 157811 RVA: 0x00546AF4 File Offset: 0x00544CF4
 		public string MotorSlideDtName { get; set; }
 
-		// Token: 0x1700A263 RID: 41571
-		// (get) Token: 0x06024667 RID: 149095 RVA: 0x00506585 File Offset: 0x00504785
-		// (set) Token: 0x06024668 RID: 149096 RVA: 0x0050658D File Offset: 0x0050478D
+		// Token: 0x1700AAEB RID: 43755
+		// (get) Token: 0x06026874 RID: 157812 RVA: 0x00546AFD File Offset: 0x00544CFD
+		// (set) Token: 0x06026875 RID: 157813 RVA: 0x00546B05 File Offset: 0x00544D05
 		public byte NullMask { get; set; }
 
-		// Token: 0x06024669 RID: 149097 RVA: 0x00506596 File Offset: 0x00504796
+		// Token: 0x06026876 RID: 157814 RVA: 0x00546B0E File Offset: 0x00544D0E
 		public IMotorSlideComponentT()
 		{
 			this.Disabled = false;

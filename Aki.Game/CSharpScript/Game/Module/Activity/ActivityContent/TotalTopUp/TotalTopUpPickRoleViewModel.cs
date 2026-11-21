@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F9B RID: 24475
+	// Token: 0x02004F82 RID: 20354
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPickRoleViewModel
 	{
-		// Token: 0x17008FF3 RID: 36851
-		// (get) Token: 0x0603E14F RID: 254287 RVA: 0x00EFDAA3 File Offset: 0x00EFBCA3
+		// Token: 0x170063C5 RID: 25541
+		// (get) Token: 0x060330E9 RID: 209129 RVA: 0x00E4F75B File Offset: 0x00E4D95B
 		public bool IsFromActivity
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E150 RID: 254288 RVA: 0x00EFDAAC File Offset: 0x00EFBCAC
+		// Token: 0x060330EA RID: 209130 RVA: 0x00E4F764 File Offset: 0x00E4D964
 		public unsafe void LoadFromActivityData(TotalTopUpData actData, int rewardIndex)
 		{
 			this.IsLoadedFromActivity = true;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ClaimHandler = new Action<int, int>(this.ClaimInActivity);
 		}
 
-		// Token: 0x0603E151 RID: 254289 RVA: 0x00EFDB70 File Offset: 0x00EFBD70
+		// Token: 0x060330EB RID: 209131 RVA: 0x00E4F828 File Offset: 0x00E4DA28
 		public void LoadFromGiftPackageInBag(TotalTopUpRolePackageData packageData)
 		{
 			this.IsLoadedFromActivity = false;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ClaimHandler = new Action<int, int>(this.ClaimInBag);
 		}
 
-		// Token: 0x0603E152 RID: 254290 RVA: 0x00EFDB94 File Offset: 0x00EFBD94
+		// Token: 0x060330EC RID: 209132 RVA: 0x00E4F84C File Offset: 0x00E4DA4C
 		private void LoadContentDataFromGiftPackageData(TotalTopUpRolePackageData packageData)
 		{
 			this.ItemConfigDataMap.Clear();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E153 RID: 254291 RVA: 0x00EFDD4C File Offset: 0x00EFBF4C
+		// Token: 0x060330ED RID: 209133 RVA: 0x00E4FA04 File Offset: 0x00E4DC04
 		public void SelectItem(int index)
 		{
 			this.SelectedIndex = index;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.CurrentRoleBackgroundPath = (((instance != null) ? ((instance.GetRoleViewConfigByRoleIdOrItemId(num) != null) ? totalTopUpRoleViewConfig.GetValueOrDefault().RoleBackgroundPath : null) : null) ?? "");
 		}
 
-		// Token: 0x0603E154 RID: 254292 RVA: 0x00EFDE40 File Offset: 0x00EFC040
+		// Token: 0x060330EE RID: 209134 RVA: 0x00E4FAF8 File Offset: 0x00E4DCF8
 		public void Claim(Action callback)
 		{
 			TotalTopUpPickRoleViewModel.<>c__DisplayClass24_0 CS$<>8__locals1 = new TotalTopUpPickRoleViewModel.<>c__DisplayClass24_0();
@@ -160,13 +160,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603E155 RID: 254293 RVA: 0x00EFDF5C File Offset: 0x00EFC15C
+		// Token: 0x060330EF RID: 209135 RVA: 0x00E4FC14 File Offset: 0x00E4DE14
 		private void ClaimInActivity(int rewardId, int selectId)
 		{
 			TotalTopUpController.Instance.RequestClaim(rewardId, new int?(selectId));
 		}
 
-		// Token: 0x0603E156 RID: 254294 RVA: 0x00EFDF6F File Offset: 0x00EFC16F
+		// Token: 0x060330F0 RID: 209136 RVA: 0x00E4FC27 File Offset: 0x00E4DE27
 		private void ClaimInBag(int rewardId, int selectId)
 		{
 			InventoryGiftController.Instance.SendItemGiftUseRequest(this.GiftBagItemId, 1, new int[]
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			});
 		}
 
-		// Token: 0x0603E157 RID: 254295 RVA: 0x00EFDF8C File Offset: 0x00EFC18C
+		// Token: 0x060330F1 RID: 209137 RVA: 0x00E4FC44 File Offset: 0x00E4DE44
 		private int GetRoleChainNum(int roleId)
 		{
 			RoleModel instance = RoleModel.Instance;
@@ -191,13 +191,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return RoleResonanceConfig.Instance.GetResonanceMaxLevel() - roleLeftResonantCountWithInventoryItem;
 		}
 
-		// Token: 0x0603E158 RID: 254296 RVA: 0x00EFDFCD File Offset: 0x00EFC1CD
+		// Token: 0x060330F2 RID: 209138 RVA: 0x00E4FC85 File Offset: 0x00E4DE85
 		private bool GetRoleOwned(int roleId)
 		{
 			return RoleModel.Instance.IsRoleOwned(roleId);
 		}
 
-		// Token: 0x0603E159 RID: 254297 RVA: 0x00EFDFDC File Offset: 0x00EFC1DC
+		// Token: 0x060330F3 RID: 209139 RVA: 0x00E4FC94 File Offset: 0x00E4DE94
 		public void PreviewAllRoles()
 		{
 			if (this.CurrentRoleId <= 0)
@@ -240,103 +240,103 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, selectRoleId, list2, null, null);
 		}
 
-		// Token: 0x040206C8 RID: 132808
+		// Token: 0x0401B19A RID: 111002
 		[Nullable(2)]
 		private TotalTopUpRewardData RewardData;
 
-		// Token: 0x040206C9 RID: 132809
+		// Token: 0x0401B19B RID: 111003
 		private readonly Dictionary<int, ItemConfig> ItemConfigDataMap = new Dictionary<int, ItemConfig>();
 
-		// Token: 0x040206CA RID: 132810
+		// Token: 0x0401B19C RID: 111004
 		private int GiftBagItemId;
 
-		// Token: 0x040206CB RID: 132811
+		// Token: 0x0401B19D RID: 111005
 		public readonly List<ITotalTopUpPickRoleRewardItemData> ItemDataList = new List<ITotalTopUpPickRoleRewardItemData>();
 
-		// Token: 0x040206CC RID: 132812
+		// Token: 0x0401B19E RID: 111006
 		public int SelectedIndex = -1;
 
-		// Token: 0x040206CD RID: 132813
+		// Token: 0x0401B19F RID: 111007
 		public bool CanClaim;
 
-		// Token: 0x040206CE RID: 132814
+		// Token: 0x0401B1A0 RID: 111008
 		public bool IsRole;
 
-		// Token: 0x040206CF RID: 132815
+		// Token: 0x0401B1A1 RID: 111009
 		public int CurrentRoleId;
 
-		// Token: 0x040206D0 RID: 132816
+		// Token: 0x0401B1A2 RID: 111010
 		public bool CurrentRoleOwned;
 
-		// Token: 0x040206D1 RID: 132817
+		// Token: 0x0401B1A3 RID: 111011
 		public int CurrentRoleChainNum;
 
-		// Token: 0x040206D2 RID: 132818
+		// Token: 0x0401B1A4 RID: 111012
 		public bool CurrentIsFullChain;
 
-		// Token: 0x040206D3 RID: 132819
+		// Token: 0x0401B1A5 RID: 111013
 		public int CurrentItemId;
 
-		// Token: 0x040206D4 RID: 132820
+		// Token: 0x0401B1A6 RID: 111014
 		public int CurrentItemCount;
 
-		// Token: 0x040206D5 RID: 132821
+		// Token: 0x0401B1A7 RID: 111015
 		public string CurrentRoleBackgroundPath = "";
 
-		// Token: 0x040206D6 RID: 132822
+		// Token: 0x0401B1A8 RID: 111016
 		[Nullable(2)]
 		public ItemConfig CurrentSelectItemConfigData;
 
-		// Token: 0x040206D7 RID: 132823
+		// Token: 0x0401B1A9 RID: 111017
 		public int FirstCanClaimIndex = -1;
 
-		// Token: 0x040206D8 RID: 132824
+		// Token: 0x0401B1AA RID: 111018
 		[Nullable(2)]
 		private Action<int, int> ClaimHandler;
 
-		// Token: 0x040206D9 RID: 132825
+		// Token: 0x0401B1AB RID: 111019
 		private bool IsLoadedFromActivity;
 
-		// Token: 0x040206DA RID: 132826
+		// Token: 0x0401B1AC RID: 111020
 		private const int FULL_CHAIN = 6;
 
-		// Token: 0x0200C27D RID: 49789
+		// Token: 0x0200AC88 RID: 44168
 		[NullableContext(0)]
 		private class TotalTopUpPickRoleRewardItemData : ITotalTopUpPickRoleRewardItemData
 		{
-			// Token: 0x1700A27B RID: 41595
-			// (get) Token: 0x06050655 RID: 329301 RVA: 0x015A08D7 File Offset: 0x0159EAD7
-			// (set) Token: 0x06050656 RID: 329302 RVA: 0x015A08DF File Offset: 0x0159EADF
+			// Token: 0x17007A18 RID: 31256
+			// (get) Token: 0x06046B89 RID: 289673 RVA: 0x01559F47 File Offset: 0x01558147
+			// (set) Token: 0x06046B8A RID: 289674 RVA: 0x01559F4F File Offset: 0x0155814F
 			public int Index { get; set; }
 
-			// Token: 0x1700A27C RID: 41596
-			// (get) Token: 0x06050657 RID: 329303 RVA: 0x015A08E8 File Offset: 0x0159EAE8
-			// (set) Token: 0x06050658 RID: 329304 RVA: 0x015A08F0 File Offset: 0x0159EAF0
+			// Token: 0x17007A19 RID: 31257
+			// (get) Token: 0x06046B8B RID: 289675 RVA: 0x01559F58 File Offset: 0x01558158
+			// (set) Token: 0x06046B8C RID: 289676 RVA: 0x01559F60 File Offset: 0x01558160
 			public int ItemId { get; set; }
 
-			// Token: 0x1700A27D RID: 41597
-			// (get) Token: 0x06050659 RID: 329305 RVA: 0x015A08F9 File Offset: 0x0159EAF9
-			// (set) Token: 0x0605065A RID: 329306 RVA: 0x015A0901 File Offset: 0x0159EB01
+			// Token: 0x17007A1A RID: 31258
+			// (get) Token: 0x06046B8D RID: 289677 RVA: 0x01559F69 File Offset: 0x01558169
+			// (set) Token: 0x06046B8E RID: 289678 RVA: 0x01559F71 File Offset: 0x01558171
 			public int ItemCount { get; set; }
 
-			// Token: 0x1700A27E RID: 41598
-			// (get) Token: 0x0605065B RID: 329307 RVA: 0x015A090A File Offset: 0x0159EB0A
-			// (set) Token: 0x0605065C RID: 329308 RVA: 0x015A0912 File Offset: 0x0159EB12
+			// Token: 0x17007A1B RID: 31259
+			// (get) Token: 0x06046B8F RID: 289679 RVA: 0x01559F7A File Offset: 0x0155817A
+			// (set) Token: 0x06046B90 RID: 289680 RVA: 0x01559F82 File Offset: 0x01558182
 			public int RoleId { get; set; }
 
-			// Token: 0x1700A27F RID: 41599
-			// (get) Token: 0x0605065D RID: 329309 RVA: 0x015A091B File Offset: 0x0159EB1B
-			// (set) Token: 0x0605065E RID: 329310 RVA: 0x015A0923 File Offset: 0x0159EB23
+			// Token: 0x17007A1C RID: 31260
+			// (get) Token: 0x06046B91 RID: 289681 RVA: 0x01559F8B File Offset: 0x0155818B
+			// (set) Token: 0x06046B92 RID: 289682 RVA: 0x01559F93 File Offset: 0x01558193
 			public int RoleChain { get; set; }
 
-			// Token: 0x1700A280 RID: 41600
-			// (get) Token: 0x0605065F RID: 329311 RVA: 0x015A092C File Offset: 0x0159EB2C
-			// (set) Token: 0x06050660 RID: 329312 RVA: 0x015A0934 File Offset: 0x0159EB34
+			// Token: 0x17007A1D RID: 31261
+			// (get) Token: 0x06046B93 RID: 289683 RVA: 0x01559F9C File Offset: 0x0155819C
+			// (set) Token: 0x06046B94 RID: 289684 RVA: 0x01559FA4 File Offset: 0x015581A4
 			public bool RoleOwned { get; set; }
 
-			// Token: 0x1700A281 RID: 41601
-			// (get) Token: 0x06050661 RID: 329313 RVA: 0x015A093D File Offset: 0x0159EB3D
-			// (set) Token: 0x06050662 RID: 329314 RVA: 0x015A0945 File Offset: 0x0159EB45
+			// Token: 0x17007A1E RID: 31262
+			// (get) Token: 0x06046B95 RID: 289685 RVA: 0x01559FAD File Offset: 0x015581AD
+			// (set) Token: 0x06046B96 RID: 289686 RVA: 0x01559FB5 File Offset: 0x015581B5
 			public bool CanClaim { get; set; }
 		}
 	}

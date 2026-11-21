@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200756E RID: 30062
+	// Token: 0x02007D64 RID: 32100
 	public struct IVisualNovelCgLoadImage : IFlatbufferObject
 	{
-		// Token: 0x1700E3FB RID: 58363
-		// (get) Token: 0x06036AF6 RID: 223990 RVA: 0x0076D0C5 File Offset: 0x0076B2C5
+		// Token: 0x1700F025 RID: 61477
+		// (get) Token: 0x06039F0C RID: 237324 RVA: 0x007D036D File Offset: 0x007CE56D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036AF7 RID: 223991 RVA: 0x0076D0D2 File Offset: 0x0076B2D2
+		// Token: 0x06039F0D RID: 237325 RVA: 0x007D037A File Offset: 0x007CE57A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036AF8 RID: 223992 RVA: 0x0076D0DC File Offset: 0x0076B2DC
+		// Token: 0x06039F0E RID: 237326 RVA: 0x007D0384 File Offset: 0x007CE584
 		public static IVisualNovelCgLoadImage GetRootAsIVisualNovelCgLoadImage(ByteBuffer _bb)
 		{
 			return IVisualNovelCgLoadImage.GetRootAsIVisualNovelCgLoadImage(_bb, default(IVisualNovelCgLoadImage));
 		}
 
-		// Token: 0x06036AF9 RID: 223993 RVA: 0x0076D0F8 File Offset: 0x0076B2F8
+		// Token: 0x06039F0F RID: 237327 RVA: 0x007D03A0 File Offset: 0x007CE5A0
 		public static IVisualNovelCgLoadImage GetRootAsIVisualNovelCgLoadImage(ByteBuffer _bb, IVisualNovelCgLoadImage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036AFA RID: 223994 RVA: 0x0076D115 File Offset: 0x0076B315
+		// Token: 0x06039F10 RID: 237328 RVA: 0x007D03BD File Offset: 0x007CE5BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036AFB RID: 223995 RVA: 0x0076D124 File Offset: 0x0076B324
+		// Token: 0x06039F11 RID: 237329 RVA: 0x007D03CC File Offset: 0x007CE5CC
 		public IVisualNovelCgLoadImage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E3FC RID: 58364
-		// (get) Token: 0x06036AFC RID: 223996 RVA: 0x0076D134 File Offset: 0x0076B334
+		// Token: 0x1700F026 RID: 61478
+		// (get) Token: 0x06039F12 RID: 237330 RVA: 0x007D03DC File Offset: 0x007CE5DC
 		public EVisualNovelCgType Type
 		{
 			get
@@ -56,14 +56,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				int num = this.__p.__offset(4);
 				if (num == 0)
 				{
-					return EVisualNovelCgType.LoadSpine;
+					return EVisualNovelCgType.LoadPrefab;
 				}
 				return (EVisualNovelCgType)this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x1700E3FD RID: 58365
-		// (get) Token: 0x06036AFD RID: 223997 RVA: 0x0076D170 File Offset: 0x0076B370
+		// Token: 0x1700F027 RID: 61479
+		// (get) Token: 0x06039F13 RID: 237331 RVA: 0x007D0418 File Offset: 0x007CE618
 		public int ImageId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036AFE RID: 223998 RVA: 0x0076D1AC File Offset: 0x0076B3AC
-		public static Offset<IVisualNovelCgLoadImage> CreateIVisualNovelCgLoadImage(FlatBufferBuilder builder, EVisualNovelCgType Type = EVisualNovelCgType.LoadSpine, int ImageId = 0)
+		// Token: 0x06039F14 RID: 237332 RVA: 0x007D0454 File Offset: 0x007CE654
+		public static Offset<IVisualNovelCgLoadImage> CreateIVisualNovelCgLoadImage(FlatBufferBuilder builder, EVisualNovelCgType Type = EVisualNovelCgType.LoadPrefab, int ImageId = 0)
 		{
 			builder.StartTable(2);
 			IVisualNovelCgLoadImage.AddImageId(builder, ImageId);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelCgLoadImage.EndIVisualNovelCgLoadImage(builder);
 		}
 
-		// Token: 0x06036AFF RID: 223999 RVA: 0x0076D1C9 File Offset: 0x0076B3C9
+		// Token: 0x06039F15 RID: 237333 RVA: 0x007D0471 File Offset: 0x007CE671
 		public static void StartIVisualNovelCgLoadImage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036B00 RID: 224000 RVA: 0x0076D1D2 File Offset: 0x0076B3D2
+		// Token: 0x06039F16 RID: 237334 RVA: 0x007D047A File Offset: 0x007CE67A
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelCgType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036B01 RID: 224001 RVA: 0x0076D1DD File Offset: 0x0076B3DD
+		// Token: 0x06039F17 RID: 237335 RVA: 0x007D0485 File Offset: 0x007CE685
 		public static void AddImageId(FlatBufferBuilder builder, int imageId)
 		{
 			builder.AddInt(1, imageId, 0);
 		}
 
-		// Token: 0x06036B02 RID: 224002 RVA: 0x0076D1E8 File Offset: 0x0076B3E8
+		// Token: 0x06039F18 RID: 237336 RVA: 0x007D0490 File Offset: 0x007CE690
 		public static Offset<IVisualNovelCgLoadImage> EndIVisualNovelCgLoadImage(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelCgLoadImage>(builder.EndTable());
 		}
 
-		// Token: 0x06036B03 RID: 224003 RVA: 0x0076D1F8 File Offset: 0x0076B3F8
+		// Token: 0x06039F19 RID: 237337 RVA: 0x007D04A0 File Offset: 0x007CE6A0
 		public IVisualNovelCgLoadImageT UnPack()
 		{
 			IVisualNovelCgLoadImageT visualNovelCgLoadImageT = new IVisualNovelCgLoadImageT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelCgLoadImageT;
 		}
 
-		// Token: 0x06036B04 RID: 224004 RVA: 0x0076D213 File Offset: 0x0076B413
+		// Token: 0x06039F1A RID: 237338 RVA: 0x007D04BB File Offset: 0x007CE6BB
 		public void UnPackTo(IVisualNovelCgLoadImageT _o)
 		{
 			_o.Type = this.Type;
 			_o.ImageId = this.ImageId;
 		}
 
-		// Token: 0x06036B05 RID: 224005 RVA: 0x0076D230 File Offset: 0x0076B430
+		// Token: 0x06039F1B RID: 237339 RVA: 0x007D04D8 File Offset: 0x007CE6D8
 		public static Offset<IVisualNovelCgLoadImage> Pack(FlatBufferBuilder builder, IVisualNovelCgLoadImageT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelCgLoadImage.CreateIVisualNovelCgLoadImage(builder, _o.Type, _o.ImageId);
 		}
 
-		// Token: 0x0401246D RID: 74861
+		// Token: 0x0401349E RID: 79006
 		private Table __p;
 	}
 }

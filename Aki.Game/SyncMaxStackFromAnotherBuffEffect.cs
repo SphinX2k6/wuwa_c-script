@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F5A RID: 12122
+// Token: 0x020024AD RID: 9389
 [NullableContext(1)]
 [Nullable(0)]
 public class SyncMaxStackFromAnotherBuffEffect : BuffEffect
 {
-	// Token: 0x06019CC1 RID: 105665 RVA: 0x006BA6A8 File Offset: 0x006B88A8
+	// Token: 0x060175CC RID: 95692 RVA: 0x006E09C4 File Offset: 0x006DEBC4
 	public SyncMaxStackFromAnotherBuffEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CC2 RID: 105666 RVA: 0x006BA6B8 File Offset: 0x006B88B8
+	// Token: 0x060175CD RID: 95693 RVA: 0x006E09D4 File Offset: 0x006DEBD4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -21,7 +21,7 @@ public class SyncMaxStackFromAnotherBuffEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CC3 RID: 105667 RVA: 0x006BA6E1 File Offset: 0x006B88E1
+	// Token: 0x060175CE RID: 95694 RVA: 0x006E09FD File Offset: 0x006DEBFD
 	public override void OnCreated()
 	{
 		if (base.OwnerEntity != null)
@@ -31,7 +31,7 @@ public class SyncMaxStackFromAnotherBuffEffect : BuffEffect
 		this.SyncMaxStack();
 	}
 
-	// Token: 0x06019CC4 RID: 105668 RVA: 0x006BA714 File Offset: 0x006B8914
+	// Token: 0x060175CF RID: 95695 RVA: 0x006E0A30 File Offset: 0x006DEC30
 	public override void OnRemoved(bool bPremature)
 	{
 		if (base.OwnerEntity != null)
@@ -46,13 +46,13 @@ public class SyncMaxStackFromAnotherBuffEffect : BuffEffect
 		ownerBuffComponent.RemoveBuffStackModifier(this.BuffId, this.ActiveHandleId);
 	}
 
-	// Token: 0x06019CC5 RID: 105669 RVA: 0x006BA768 File Offset: 0x006B8968
+	// Token: 0x060175D0 RID: 95696 RVA: 0x006E0A84 File Offset: 0x006DEC84
 	protected void OnBuffMaxStackModifier(long buffId)
 	{
 		this.SyncMaxStack();
 	}
 
-	// Token: 0x06019CC6 RID: 105670 RVA: 0x006BA770 File Offset: 0x006B8970
+	// Token: 0x060175D1 RID: 95697 RVA: 0x006E0A8C File Offset: 0x006DEC8C
 	private void SyncMaxStack()
 	{
 		if (this.OwnerBuffComponent == null)
@@ -67,14 +67,14 @@ public class SyncMaxStackFromAnotherBuffEffect : BuffEffect
 		this.OwnerBuffComponent.AddBuffStackModifier(this.BuffId, this.ActiveHandleId, num.Value, EBuffStackModifierType.Override);
 	}
 
-	// Token: 0x06019CC7 RID: 105671 RVA: 0x006BA7C1 File Offset: 0x006B89C1
+	// Token: 0x060175D2 RID: 95698 RVA: 0x006E0ADD File Offset: 0x006DECDD
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019CC8 RID: 105672 RVA: 0x006BA7C4 File Offset: 0x006B89C4
+	// Token: 0x060175D3 RID: 95699 RVA: 0x006E0AE0 File Offset: 0x006DECE0
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(13, 1);
@@ -84,6 +84,6 @@ public class SyncMaxStackFromAnotherBuffEffect : BuffEffect
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C271 RID: 49777
+	// Token: 0x0400C613 RID: 50707
 	private long SourceBuffId;
 }

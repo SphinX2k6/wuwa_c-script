@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DCD RID: 24013
+	// Token: 0x02004DB1 RID: 19889
 	public class SpecialEnergyBarBuLanTe : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D070 RID: 249968 RVA: 0x00EAD068 File Offset: 0x00EAB268
+		// Token: 0x06031FE7 RID: 204775 RVA: 0x00DFDF5C File Offset: 0x00DFC15C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D071 RID: 249969 RVA: 0x00EAD220 File Offset: 0x00EAB420
+		// Token: 0x06031FE8 RID: 204776 RVA: 0x00DFE114 File Offset: 0x00DFC314
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarBuLanTe.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D072 RID: 249970 RVA: 0x00EAD264 File Offset: 0x00EAB464
+		// Token: 0x06031FE9 RID: 204777 RVA: 0x00DFE158 File Offset: 0x00DFC358
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarBuLanTe.<InitBarItem>d__10 <InitBarItem>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D073 RID: 249971 RVA: 0x00EAD2A8 File Offset: 0x00EAB4A8
+		// Token: 0x06031FEA RID: 204778 RVA: 0x00DFE19C File Offset: 0x00DFC39C
 		private UniTask InitStarItems(int index)
 		{
 			SpecialEnergyBarBuLanTe.<InitStarItems>d__11 <InitStarItems>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitStarItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D074 RID: 249972 RVA: 0x00EAD2F4 File Offset: 0x00EAB4F4
+		// Token: 0x06031FEB RID: 204779 RVA: 0x00DFE1E8 File Offset: 0x00DFC3E8
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(6);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshStarEffectItem(true);
 		}
 
-		// Token: 0x0603D075 RID: 249973 RVA: 0x00EAD367 File Offset: 0x00EAB567
+		// Token: 0x06031FEC RID: 204780 RVA: 0x00DFE25B File Offset: 0x00DFC45B
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshFullEffect(false);
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshStarEffectItem(false);
 		}
 
-		// Token: 0x0603D076 RID: 249974 RVA: 0x00EAD380 File Offset: 0x00EAB580
+		// Token: 0x06031FED RID: 204781 RVA: 0x00DFE274 File Offset: 0x00DFC474
 		private void RefreshFullEffect(bool isStart = false)
 		{
 			bool flag = this.PercentMachine.GetCurPercent() >= this.Config.DisableKeyOnPercent;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			texture2.SetAlpha(1f);
 		}
 
-		// Token: 0x0603D077 RID: 249975 RVA: 0x00EAD418 File Offset: 0x00EAB618
+		// Token: 0x06031FEE RID: 204782 RVA: 0x00DFE30C File Offset: 0x00DFC50C
 		private void RefreshBottomBar(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D078 RID: 249976 RVA: 0x00EAD4DC File Offset: 0x00EAB6DC
+		// Token: 0x06031FEF RID: 204783 RVA: 0x00DFE3D0 File Offset: 0x00DFC5D0
 		private void RefreshStarEffectItem(bool isStart = false)
 		{
 			int num = Math.Min((int)MathF.Floor(this.PercentMachine.GetCurPercent() * 4f), 3);
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StarCount = num;
 		}
 
-		// Token: 0x0603D079 RID: 249977 RVA: 0x00EAD546 File Offset: 0x00EAB746
+		// Token: 0x06031FF0 RID: 204784 RVA: 0x00DFE43A File Offset: 0x00DFC63A
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -202,63 +202,63 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItem.Tick(delta);
 		}
 
-		// Token: 0x0603D07A RID: 249978 RVA: 0x00EAD560 File Offset: 0x00EAB760
+		// Token: 0x06031FF1 RID: 204785 RVA: 0x00DFE454 File Offset: 0x00DFC654
 		protected override void OnBeforeDestroy()
 		{
 			this.IconHandle.OnBeforeDestroy();
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0401FCB7 RID: 130231
+		// Token: 0x0401A774 RID: 108404
 		private const int NUM = 3;
 
-		// Token: 0x0401FCB8 RID: 130232
+		// Token: 0x0401A775 RID: 108405
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarItem;
 
-		// Token: 0x0401FCB9 RID: 130233
+		// Token: 0x0401A776 RID: 108406
 		[Nullable(1)]
 		private readonly SpecialEnergyBaIconHandle IconHandle = new SpecialEnergyBaIconHandle();
 
-		// Token: 0x0401FCBA RID: 130234
+		// Token: 0x0401A777 RID: 108407
 		[Nullable(1)]
 		private readonly List<SpecialEnergyBarBuLanTeStarItem> StarItemList = new List<SpecialEnergyBarBuLanTeStarItem>();
 
-		// Token: 0x0401FCBB RID: 130235
+		// Token: 0x0401A778 RID: 108408
 		private bool IsEmpty;
 
-		// Token: 0x0401FCBC RID: 130236
+		// Token: 0x0401A779 RID: 108409
 		private bool IsFull;
 
-		// Token: 0x0401FCBD RID: 130237
+		// Token: 0x0401A77A RID: 108410
 		private int StarCount;
 
-		// Token: 0x0200C0DD RID: 49373
+		// Token: 0x0200AAE6 RID: 43750
 		private enum EChildType
 		{
-			// Token: 0x0403A321 RID: 238369
+			// Token: 0x04034CF3 RID: 216307
 			SlotBarItem,
-			// Token: 0x0403A322 RID: 238370
+			// Token: 0x04034CF4 RID: 216308
 			BarSprite,
-			// Token: 0x0403A323 RID: 238371
+			// Token: 0x04034CF5 RID: 216309
 			BarBgTexture,
-			// Token: 0x0403A324 RID: 238372
+			// Token: 0x04034CF6 RID: 216310
 			StarItem1,
-			// Token: 0x0403A325 RID: 238373
+			// Token: 0x04034CF7 RID: 216311
 			StarItem2,
-			// Token: 0x0403A326 RID: 238374
+			// Token: 0x04034CF8 RID: 216312
 			StarItem3,
-			// Token: 0x0403A327 RID: 238375
+			// Token: 0x04034CF9 RID: 216313
 			AniFull,
-			// Token: 0x0403A328 RID: 238376
+			// Token: 0x04034CFA RID: 216314
 			AniUse,
-			// Token: 0x0403A329 RID: 238377
+			// Token: 0x04034CFB RID: 216315
 			AniStar1,
-			// Token: 0x0403A32A RID: 238378
+			// Token: 0x04034CFC RID: 216316
 			AniStar2,
-			// Token: 0x0403A32B RID: 238379
+			// Token: 0x04034CFD RID: 216317
 			AniStar3,
-			// Token: 0x0403A32C RID: 238380
+			// Token: 0x04034CFE RID: 216318
 			AniDefault
 		}
 	}

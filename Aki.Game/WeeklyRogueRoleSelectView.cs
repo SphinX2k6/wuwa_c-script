@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D55 RID: 11605
+// Token: 0x020022AF RID: 8879
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyRogueRoleSelectView : UiViewBase
 {
-	// Token: 0x06018624 RID: 99876 RVA: 0x006352D4 File Offset: 0x006334D4
+	// Token: 0x06015EC6 RID: 89798 RVA: 0x0065B2E4 File Offset: 0x006594E4
 	public WeeklyRogueRoleSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06018625 RID: 99877 RVA: 0x006352E8 File Offset: 0x006334E8
+	// Token: 0x06015EC7 RID: 89799 RVA: 0x0065B2F8 File Offset: 0x006594F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018626 RID: 99878 RVA: 0x00635450 File Offset: 0x00633650
+	// Token: 0x06015EC8 RID: 89800 RVA: 0x0065B460 File Offset: 0x00659660
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueRoleSelectView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018627 RID: 99879 RVA: 0x00635494 File Offset: 0x00633694
+	// Token: 0x06015EC9 RID: 89801 RVA: 0x0065B4A4 File Offset: 0x006596A4
 	protected override void OnStart()
 	{
 		WeeklyRogueData activityDataNew = WeeklyRogueModel.Instance.ActivityDataNew;
@@ -63,7 +63,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		this.FilterSortEntrance.UpdateData(EFilterSortGroupId.WeeklyRogueEditFormation, this.RoleList, Array.Empty<object>());
 	}
 
-	// Token: 0x06018628 RID: 99880 RVA: 0x00635518 File Offset: 0x00633718
+	// Token: 0x06015ECA RID: 89802 RVA: 0x0065B528 File Offset: 0x00659728
 	protected override void OnBeforeDestroy()
 	{
 		if (EventSystem.Instance.Has<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView)))
@@ -79,7 +79,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		this.FilterSortEntrance = null;
 	}
 
-	// Token: 0x06018629 RID: 99881 RVA: 0x00635580 File Offset: 0x00633780
+	// Token: 0x06015ECB RID: 89803 RVA: 0x0065B590 File Offset: 0x00659790
 	private void OnClickConfirm(int _)
 	{
 		List<int> currentSelectRoleList = this.GetCurrentSelectRoleList();
@@ -96,7 +96,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x0601862A RID: 99882 RVA: 0x00635600 File Offset: 0x00633800
+	// Token: 0x06015ECC RID: 89804 RVA: 0x0065B610 File Offset: 0x00659810
 	private void OnClickRoleDetail(int _)
 	{
 		if (this.CurSelectRole == null)
@@ -134,7 +134,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		RoleModel.Instance.StartRecordRoleSkillBranchChangeRequest();
 	}
 
-	// Token: 0x0601862B RID: 99883 RVA: 0x00635720 File Offset: 0x00633920
+	// Token: 0x06015ECD RID: 89805 RVA: 0x0065B730 File Offset: 0x00659930
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.RoleRootView)
@@ -159,7 +159,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		this.RefreshTeamSelect();
 	}
 
-	// Token: 0x0601862C RID: 99884 RVA: 0x006357E4 File Offset: 0x006339E4
+	// Token: 0x06015ECE RID: 89806 RVA: 0x0065B7F4 File Offset: 0x006599F4
 	private void OnBtnHelpBtn()
 	{
 		WeeklyRogueData activityDataNew = WeeklyRogueModel.Instance.ActivityDataNew;
@@ -167,7 +167,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		HelpController.Instance.OpenHelpById(rogueWeeklyCycle.Value.HelpId);
 	}
 
-	// Token: 0x0601862D RID: 99885 RVA: 0x0063582C File Offset: 0x00633A2C
+	// Token: 0x06015ECF RID: 89807 RVA: 0x0065B83C File Offset: 0x00659A3C
 	private UniTask InitRoleGroupLayout()
 	{
 		WeeklyRogueRoleSelectView.<InitRoleGroupLayout>d__18 <InitRoleGroupLayout>d__;
@@ -178,7 +178,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		return <InitRoleGroupLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601862E RID: 99886 RVA: 0x00635870 File Offset: 0x00633A70
+	// Token: 0x06015ED0 RID: 89808 RVA: 0x0065B880 File Offset: 0x00659A80
 	private List<IWeeklyRogueRoleGroupInfo> GenerateAllRoleGroupInfo([Nullable(new byte[]
 	{
 		2,
@@ -237,7 +237,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0601862F RID: 99887 RVA: 0x006359A8 File Offset: 0x00633BA8
+	// Token: 0x06015ED1 RID: 89809 RVA: 0x0065B9B8 File Offset: 0x00659BB8
 	private List<RoleDataBase> GetClassifiedRoleList(List<RoleDataBase> wholeRoleList, bool needRecommend)
 	{
 		List<RoleDataBase> list = new List<RoleDataBase>();
@@ -289,7 +289,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06018630 RID: 99888 RVA: 0x00635AB4 File Offset: 0x00633CB4
+	// Token: 0x06015ED2 RID: 89810 RVA: 0x0065BAC4 File Offset: 0x00659CC4
 	private void UpdateRoleList(List<RoleDataBase> list, bool _1, EFilterSortType _2)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -311,7 +311,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		this.DynamicRoleGroupLayout.RefreshByData(this.GenerateAllRoleGroupInfo(list2).ToArray(), false, false);
 	}
 
-	// Token: 0x06018631 RID: 99889 RVA: 0x00635B60 File Offset: 0x00633D60
+	// Token: 0x06015ED3 RID: 89811 RVA: 0x0065BB70 File Offset: 0x00659D70
 	private WeeklyRogueRoleDynamicContainer OnCreateRoleGroup(IWeeklyRogueRoleGroupInfo _1, UUIItem _2, int _3)
 	{
 		return new WeeklyRogueRoleDynamicContainer
@@ -320,14 +320,14 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018632 RID: 99890 RVA: 0x00635B79 File Offset: 0x00633D79
+	// Token: 0x06015ED4 RID: 89812 RVA: 0x0065BB89 File Offset: 0x00659D89
 	private void RefreshRoleSelect(RoleDataBase roleData)
 	{
 		this.CurSelectRole = roleData;
 		this.RefreshTeamSelect();
 	}
 
-	// Token: 0x06018633 RID: 99891 RVA: 0x00635B88 File Offset: 0x00633D88
+	// Token: 0x06015ED5 RID: 89813 RVA: 0x0065BB98 File Offset: 0x00659D98
 	private WeeklyRogueRolePosItem OnCreatePos()
 	{
 		return new WeeklyRogueRolePosItem
@@ -336,7 +336,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018634 RID: 99892 RVA: 0x00635BA4 File Offset: 0x00633DA4
+	// Token: 0x06015ED6 RID: 89814 RVA: 0x0065BBB4 File Offset: 0x00659DB4
 	[NullableContext(2)]
 	private void OnBtnRolePosClick(RoleDataBase data)
 	{
@@ -363,7 +363,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		this.RefreshTeamSelect();
 	}
 
-	// Token: 0x06018635 RID: 99893 RVA: 0x00635C64 File Offset: 0x00633E64
+	// Token: 0x06015ED7 RID: 89815 RVA: 0x0065BC74 File Offset: 0x00659E74
 	private List<int> GetCurrentSelectRoleList()
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -380,7 +380,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06018636 RID: 99894 RVA: 0x00635CAC File Offset: 0x00633EAC
+	// Token: 0x06015ED8 RID: 89816 RVA: 0x0065BCBC File Offset: 0x00659EBC
 	private void RefreshTeamSelect()
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -405,7 +405,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		this.SetUpState(flag);
 	}
 
-	// Token: 0x06018637 RID: 99895 RVA: 0x00635D4C File Offset: 0x00633F4C
+	// Token: 0x06015ED9 RID: 89817 RVA: 0x0065BD5C File Offset: 0x00659F5C
 	private void SetUpState(bool bUp)
 	{
 		WeeklyRogueData activityDataNew = WeeklyRogueModel.Instance.ActivityDataNew;
@@ -434,19 +434,19 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 		base.GetItem(4).SetUIActive(bUp);
 	}
 
-	// Token: 0x0400B4EC RID: 46316
+	// Token: 0x0400B861 RID: 47201
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400B4ED RID: 46317
+	// Token: 0x0400B862 RID: 47202
 	[Nullable(2)]
 	private ButtonItem ButtonConfirm;
 
-	// Token: 0x0400B4EE RID: 46318
+	// Token: 0x0400B863 RID: 47203
 	[Nullable(2)]
 	private ButtonItem ButtonRoleDetail;
 
-	// Token: 0x0400B4EF RID: 46319
+	// Token: 0x0400B864 RID: 47204
 	[Nullable(new byte[]
 	{
 		2,
@@ -456,7 +456,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 	})]
 	protected DynamicScrollView<WeeklyRogueRoleDynamicContainer, WeeklyRogueRoleDynamicItem, IWeeklyRogueRoleGroupInfo> DynamicRoleGroupLayout;
 
-	// Token: 0x0400B4F0 RID: 46320
+	// Token: 0x0400B865 RID: 47205
 	[Nullable(new byte[]
 	{
 		2,
@@ -465,7 +465,7 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 	})]
 	private GenericLayout<WeeklyRogueRolePosItem, IWeeklyRogueRolePosInfo> TeamPosLayout;
 
-	// Token: 0x0400B4F1 RID: 46321
+	// Token: 0x0400B866 RID: 47206
 	[Nullable(new byte[]
 	{
 		2,
@@ -473,46 +473,46 @@ public class WeeklyRogueRoleSelectView : UiViewBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-	// Token: 0x0400B4F2 RID: 46322
+	// Token: 0x0400B867 RID: 47207
 	private List<RoleDataBase> RoleList = new List<RoleDataBase>();
 
-	// Token: 0x0400B4F3 RID: 46323
+	// Token: 0x0400B868 RID: 47208
 	[Nullable(2)]
 	private RoleDataBase CurSelectRole;
 
-	// Token: 0x020092EB RID: 37611
+	// Token: 0x02008512 RID: 34066
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402F7C4 RID: 194500
+		// Token: 0x0402AE4C RID: 175692
 		CaptionItem,
-		// Token: 0x0402F7C5 RID: 194501
+		// Token: 0x0402AE4D RID: 175693
 		DynamicGroupLayout,
-		// Token: 0x0402F7C6 RID: 194502
+		// Token: 0x0402AE4E RID: 175694
 		DynamicGroupItem,
-		// Token: 0x0402F7C7 RID: 194503
+		// Token: 0x0402AE4F RID: 175695
 		TxtScore,
-		// Token: 0x0402F7C8 RID: 194504
+		// Token: 0x0402AE50 RID: 175696
 		ScoreUpItem,
-		// Token: 0x0402F7C9 RID: 194505
+		// Token: 0x0402AE51 RID: 175697
 		TxtEnvironmentLv,
-		// Token: 0x0402F7CA RID: 194506
+		// Token: 0x0402AE52 RID: 175698
 		TxtEnvironment,
-		// Token: 0x0402F7CB RID: 194507
+		// Token: 0x0402AE53 RID: 175699
 		RoleLayout,
-		// Token: 0x0402F7CC RID: 194508
+		// Token: 0x0402AE54 RID: 175700
 		RolePosItem,
-		// Token: 0x0402F7CD RID: 194509
+		// Token: 0x0402AE55 RID: 175701
 		PanelTag,
-		// Token: 0x0402F7CE RID: 194510
+		// Token: 0x0402AE56 RID: 175702
 		SpriteTag,
-		// Token: 0x0402F7CF RID: 194511
+		// Token: 0x0402AE57 RID: 175703
 		TxtTag,
-		// Token: 0x0402F7D0 RID: 194512
+		// Token: 0x0402AE58 RID: 175704
 		BtnDetail,
-		// Token: 0x0402F7D1 RID: 194513
+		// Token: 0x0402AE59 RID: 175705
 		BtnConfirm,
-		// Token: 0x0402F7D2 RID: 194514
+		// Token: 0x0402AE5A RID: 175706
 		FilterSortItem
 	}
 }

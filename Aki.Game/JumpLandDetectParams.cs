@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200013F RID: 319
+// Token: 0x02000143 RID: 323
 public class JumpLandDetectParams
 {
-	// Token: 0x04000E36 RID: 3638
+	// Token: 0x04000E79 RID: 3705
 	public float TotalTime;
 
-	// Token: 0x04000E37 RID: 3639
+	// Token: 0x04000E7A RID: 3706
 	public float NowTime;
 
-	// Token: 0x04000E38 RID: 3640
+	// Token: 0x04000E7B RID: 3707
 	[Nullable(2)]
 	public Entity Entity;
 
-	// Token: 0x04000E39 RID: 3641
+	// Token: 0x04000E7C RID: 3708
 	[Nullable(1)]
 	public Vector HeightOffset = Vector.Create();
 
-	// Token: 0x04000E3A RID: 3642
+	// Token: 0x04000E7D RID: 3709
 	public bool SetGoThrough;
 }

@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001485 RID: 5253
+// Token: 0x02000939 RID: 2361
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 internal class RegressBpRewardItem : GridProxyAbstract<ActivityRegressTaskScoreRewardGridData>
 {
-	// Token: 0x060094B3 RID: 38067 RVA: 0x002006B4 File Offset: 0x001FE8B4
+	// Token: 0x06006848 RID: 26696 RVA: 0x00209618 File Offset: 0x00207818
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ internal class RegressBpRewardItem : GridProxyAbstract<ActivityRegressTaskScoreR
 		};
 	}
 
-	// Token: 0x060094B4 RID: 38068 RVA: 0x00200724 File Offset: 0x001FE924
+	// Token: 0x06006849 RID: 26697 RVA: 0x00209688 File Offset: 0x00207888
 	protected override void OnStart()
 	{
 		SmallItemGrid smallItemGrid = new SmallItemGrid();
@@ -55,7 +55,7 @@ internal class RegressBpRewardItem : GridProxyAbstract<ActivityRegressTaskScoreR
 		}
 	}
 
-	// Token: 0x060094B5 RID: 38069 RVA: 0x00200824 File Offset: 0x001FEA24
+	// Token: 0x0600684A RID: 26698 RVA: 0x00209788 File Offset: 0x00207988
 	private void OnExtendToggleClicked(int index)
 	{
 		IRegressRewardItemInfo regressRewardItemInfo = (this.RewardDataList.Count > index) ? this.RewardDataList[index] : default(IRegressRewardItemInfo);
@@ -69,10 +69,10 @@ internal class RegressBpRewardItem : GridProxyAbstract<ActivityRegressTaskScoreR
 			return;
 		}
 		int id = regressRewardItemInfo.ItemInfo.Value.Id;
-		ItemController.Instance.OpenItemTipsByItemId(id, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(id, true, null, false);
 	}
 
-	// Token: 0x060094B6 RID: 38070 RVA: 0x002008A4 File Offset: 0x001FEAA4
+	// Token: 0x0600684B RID: 26699 RVA: 0x0020980C File Offset: 0x00207A0C
 	public override void Refresh(ActivityRegressTaskScoreRewardGridData data, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(0);
@@ -147,9 +147,9 @@ internal class RegressBpRewardItem : GridProxyAbstract<ActivityRegressTaskScoreR
 		this.RewardDataList = list;
 	}
 
-	// Token: 0x040041E1 RID: 16865
+	// Token: 0x04004279 RID: 17017
 	private List<IRegressRewardItemInfo> RewardDataList = new List<IRegressRewardItemInfo>();
 
-	// Token: 0x040041E2 RID: 16866
+	// Token: 0x0400427A RID: 17018
 	private List<SmallItemGrid> ItemGrids = new List<SmallItemGrid>();
 }

@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x02002E6A RID: 11882
+// Token: 0x020023BC RID: 9148
 public interface IExtraDamageResult
 {
-	// Token: 0x170022CD RID: 8909
-	// (get) Token: 0x06019637 RID: 103991
-	// (set) Token: 0x06019638 RID: 103992
+	// Token: 0x1700234C RID: 9036
+	// (get) Token: 0x06016EFE RID: 93950
+	// (set) Token: 0x06016EFF RID: 93951
 	float HardnessResult { get; set; }
 
-	// Token: 0x170022CE RID: 8910
-	// (get) Token: 0x06019639 RID: 103993
-	// (set) Token: 0x0601963A RID: 103994
+	// Token: 0x1700234D RID: 9037
+	// (get) Token: 0x06016F00 RID: 93952
+	// (set) Token: 0x06016F01 RID: 93953
 	float RageResult { get; set; }
 
-	// Token: 0x170022CF RID: 8911
-	// (get) Token: 0x0601963B RID: 103995
-	// (set) Token: 0x0601963C RID: 103996
+	// Token: 0x1700234E RID: 9038
+	// (get) Token: 0x06016F02 RID: 93954
+	// (set) Token: 0x06016F03 RID: 93955
 	bool HitWeakness { get; set; }
 
-	// Token: 0x170022D0 RID: 8912
-	// (get) Token: 0x0601963D RID: 103997
-	// (set) Token: 0x0601963E RID: 103998
+	// Token: 0x1700234F RID: 9039
+	// (get) Token: 0x06016F04 RID: 93956
+	// (set) Token: 0x06016F05 RID: 93957
 	bool PartDestroyed { get; set; }
 
-	// Token: 0x170022D1 RID: 8913
-	// (get) Token: 0x0601963F RID: 103999
-	// (set) Token: 0x06019640 RID: 104000
+	// Token: 0x17002350 RID: 9040
+	// (get) Token: 0x06016F06 RID: 93958
+	// (set) Token: 0x06016F07 RID: 93959
 	float EnergyResult { get; set; }
 
-	// Token: 0x170022D2 RID: 8914
-	// (get) Token: 0x06019641 RID: 104001
-	// (set) Token: 0x06019642 RID: 104002
+	// Token: 0x17002351 RID: 9041
+	// (get) Token: 0x06016F08 RID: 93960
+	// (set) Token: 0x06016F09 RID: 93961
 	long CounterSkillId { get; set; }
 }

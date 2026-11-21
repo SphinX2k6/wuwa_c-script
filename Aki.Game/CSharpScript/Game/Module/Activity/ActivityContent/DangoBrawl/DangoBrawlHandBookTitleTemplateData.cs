@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200680D RID: 26637
+	// Token: 0x0200575D RID: 22365
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookTitleTemplateData : IMultiTemplateGridData<DangBrawlHandBookTitleData, DangoBrawlHandBookTitleItem>, IMultiTemplateGridData
 	{
-		// Token: 0x17009733 RID: 38707
-		// (get) Token: 0x060426F9 RID: 272121 RVA: 0x01022E8A File Offset: 0x0102108A
-		// (set) Token: 0x060426FA RID: 272122 RVA: 0x01022E92 File Offset: 0x01021092
+		// Token: 0x17006A74 RID: 27252
+		// (get) Token: 0x0603724E RID: 225870 RVA: 0x00F643CE File Offset: 0x00F625CE
+		// (set) Token: 0x0603724F RID: 225871 RVA: 0x00F643D6 File Offset: 0x00F625D6
 		public DangBrawlHandBookTitleData Data { get; set; }
 
-		// Token: 0x17009734 RID: 38708
-		// (get) Token: 0x060426FB RID: 272123 RVA: 0x01022E9B File Offset: 0x0102109B
+		// Token: 0x17006A75 RID: 27253
+		// (get) Token: 0x06037250 RID: 225872 RVA: 0x00F643DF File Offset: 0x00F625DF
 		object IMultiTemplateGridData.Data
 		{
 			get
@@ -23,25 +23,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060426FC RID: 272124 RVA: 0x01022EA8 File Offset: 0x010210A8
+		// Token: 0x06037251 RID: 225873 RVA: 0x00F643EC File Offset: 0x00F625EC
 		public int GetTemplateIndex()
 		{
 			return 0;
 		}
 
-		// Token: 0x060426FD RID: 272125 RVA: 0x01022EAB File Offset: 0x010210AB
+		// Token: 0x06037252 RID: 225874 RVA: 0x00F643EF File Offset: 0x00F625EF
 		public DangoBrawlHandBookTitleItem CreateProxy()
 		{
 			return new DangoBrawlHandBookTitleItem();
 		}
 
-		// Token: 0x060426FE RID: 272126 RVA: 0x01022EB2 File Offset: 0x010210B2
+		// Token: 0x06037253 RID: 225875 RVA: 0x00F643F6 File Offset: 0x00F625F6
 		ISyncGridProxy IMultiTemplateGridData.CreateProxy()
 		{
 			return this.CreateProxy();
 		}
 
-		// Token: 0x04022A03 RID: 141827
+		// Token: 0x0401D260 RID: 119392
 		private const int TitleTemplateIndex = 0;
 	}
 }

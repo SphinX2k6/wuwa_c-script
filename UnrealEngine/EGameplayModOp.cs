@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001346 RID: 4934
+	// Token: 0x020002C0 RID: 704
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/GameplayAbilities.EGameplayModOp")]
 	public enum EGameplayModOp
 	{
-		// Token: 0x04009B05 RID: 39685
+		// Token: 0x04001EBB RID: 7867
 		Additive,
-		// Token: 0x04009B06 RID: 39686
+		// Token: 0x04001EBC RID: 7868
 		Multiplicitive,
-		// Token: 0x04009B07 RID: 39687
+		// Token: 0x04001EBD RID: 7869
 		AdvancedMultiply,
-		// Token: 0x04009B08 RID: 39688
+		// Token: 0x04001EBE RID: 7870
 		Override,
-		// Token: 0x04009B09 RID: 39689
+		// Token: 0x04001EBF RID: 7871
 		Max,
-		// Token: 0x04009B0A RID: 39690
+		// Token: 0x04001EC0 RID: 7872
 		EGameplayModOp_MAX
 	}
 }

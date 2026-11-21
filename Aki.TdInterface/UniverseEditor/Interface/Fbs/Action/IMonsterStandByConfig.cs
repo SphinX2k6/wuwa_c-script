@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AEB RID: 27371
+	// Token: 0x02007222 RID: 29218
 	public struct IMonsterStandByConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CB09 RID: 51977
-		// (get) Token: 0x0602FF94 RID: 196500 RVA: 0x00685E42 File Offset: 0x00684042
+		// Token: 0x1700D5D8 RID: 54744
+		// (get) Token: 0x06032D68 RID: 208232 RVA: 0x006DD4FA File Offset: 0x006DB6FA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FF95 RID: 196501 RVA: 0x00685E4F File Offset: 0x0068404F
+		// Token: 0x06032D69 RID: 208233 RVA: 0x006DD507 File Offset: 0x006DB707
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FF96 RID: 196502 RVA: 0x00685E58 File Offset: 0x00684058
+		// Token: 0x06032D6A RID: 208234 RVA: 0x006DD510 File Offset: 0x006DB710
 		public static IMonsterStandByConfig GetRootAsIMonsterStandByConfig(ByteBuffer _bb)
 		{
 			return IMonsterStandByConfig.GetRootAsIMonsterStandByConfig(_bb, default(IMonsterStandByConfig));
 		}
 
-		// Token: 0x0602FF97 RID: 196503 RVA: 0x00685E74 File Offset: 0x00684074
+		// Token: 0x06032D6B RID: 208235 RVA: 0x006DD52C File Offset: 0x006DB72C
 		public static IMonsterStandByConfig GetRootAsIMonsterStandByConfig(ByteBuffer _bb, IMonsterStandByConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FF98 RID: 196504 RVA: 0x00685E91 File Offset: 0x00684091
+		// Token: 0x06032D6C RID: 208236 RVA: 0x006DD549 File Offset: 0x006DB749
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FF99 RID: 196505 RVA: 0x00685EA0 File Offset: 0x006840A0
+		// Token: 0x06032D6D RID: 208237 RVA: 0x006DD558 File Offset: 0x006DB758
 		public IMonsterStandByConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CB0A RID: 51978
-		// (get) Token: 0x0602FF9A RID: 196506 RVA: 0x00685EB0 File Offset: 0x006840B0
+		// Token: 0x1700D5D9 RID: 54745
+		// (get) Token: 0x06032D6E RID: 208238 RVA: 0x006DD568 File Offset: 0x006DB768
 		public string Tag
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FF9B RID: 196507 RVA: 0x00685EE7 File Offset: 0x006840E7
+		// Token: 0x06032D6F RID: 208239 RVA: 0x006DD59F File Offset: 0x006DB79F
 		public Span<byte> GetTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602FF9C RID: 196508 RVA: 0x00685EF6 File Offset: 0x006840F6
+		// Token: 0x06032D70 RID: 208240 RVA: 0x006DD5AE File Offset: 0x006DB7AE
 		public byte[] GetTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700CB0B RID: 51979
-		// (get) Token: 0x0602FF9D RID: 196509 RVA: 0x00685F04 File Offset: 0x00684104
+		// Token: 0x1700D5DA RID: 54746
+		// (get) Token: 0x06032D71 RID: 208241 RVA: 0x006DD5BC File Offset: 0x006DB7BC
 		public float Duration
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB0C RID: 51980
-		// (get) Token: 0x0602FF9E RID: 196510 RVA: 0x00685F44 File Offset: 0x00684144
+		// Token: 0x1700D5DB RID: 54747
+		// (get) Token: 0x06032D72 RID: 208242 RVA: 0x006DD5FC File Offset: 0x006DB7FC
 		public int RepeatTimes
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB0D RID: 51981
-		// (get) Token: 0x0602FF9F RID: 196511 RVA: 0x00685F80 File Offset: 0x00684180
+		// Token: 0x1700D5DC RID: 54748
+		// (get) Token: 0x06032D73 RID: 208243 RVA: 0x006DD638 File Offset: 0x006DB838
 		public int EmotionId
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB0E RID: 51982
-		// (get) Token: 0x0602FFA0 RID: 196512 RVA: 0x00685FC0 File Offset: 0x006841C0
+		// Token: 0x1700D5DD RID: 54749
+		// (get) Token: 0x06032D74 RID: 208244 RVA: 0x006DD678 File Offset: 0x006DB878
 		public byte NullMask
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FFA1 RID: 196513 RVA: 0x00685FFD File Offset: 0x006841FD
+		// Token: 0x06032D75 RID: 208245 RVA: 0x006DD6B5 File Offset: 0x006DB8B5
 		public static Offset<IMonsterStandByConfig> CreateIMonsterStandByConfig(FlatBufferBuilder builder, StringOffset TagOffset = default(StringOffset), float Duration = 0f, int RepeatTimes = 0, int EmotionId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -146,49 +146,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMonsterStandByConfig.EndIMonsterStandByConfig(builder);
 		}
 
-		// Token: 0x0602FFA2 RID: 196514 RVA: 0x00686031 File Offset: 0x00684231
+		// Token: 0x06032D76 RID: 208246 RVA: 0x006DD6E9 File Offset: 0x006DB8E9
 		public static void StartIMonsterStandByConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602FFA3 RID: 196515 RVA: 0x0068603A File Offset: 0x0068423A
+		// Token: 0x06032D77 RID: 208247 RVA: 0x006DD6F2 File Offset: 0x006DB8F2
 		public static void AddTag(FlatBufferBuilder builder, StringOffset tagOffset)
 		{
 			builder.AddOffset(0, tagOffset.Value, 0);
 		}
 
-		// Token: 0x0602FFA4 RID: 196516 RVA: 0x0068604A File Offset: 0x0068424A
+		// Token: 0x06032D78 RID: 208248 RVA: 0x006DD702 File Offset: 0x006DB902
 		public static void AddDuration(FlatBufferBuilder builder, float duration)
 		{
 			builder.AddFloat(1, duration, 0.0);
 		}
 
-		// Token: 0x0602FFA5 RID: 196517 RVA: 0x0068605D File Offset: 0x0068425D
+		// Token: 0x06032D79 RID: 208249 RVA: 0x006DD715 File Offset: 0x006DB915
 		public static void AddRepeatTimes(FlatBufferBuilder builder, int repeatTimes)
 		{
 			builder.AddInt(2, repeatTimes, 0);
 		}
 
-		// Token: 0x0602FFA6 RID: 196518 RVA: 0x00686068 File Offset: 0x00684268
+		// Token: 0x06032D7A RID: 208250 RVA: 0x006DD720 File Offset: 0x006DB920
 		public static void AddEmotionId(FlatBufferBuilder builder, int emotionId)
 		{
 			builder.AddInt(3, emotionId, 0);
 		}
 
-		// Token: 0x0602FFA7 RID: 196519 RVA: 0x00686073 File Offset: 0x00684273
+		// Token: 0x06032D7B RID: 208251 RVA: 0x006DD72B File Offset: 0x006DB92B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602FFA8 RID: 196520 RVA: 0x0068607E File Offset: 0x0068427E
+		// Token: 0x06032D7C RID: 208252 RVA: 0x006DD736 File Offset: 0x006DB936
 		public static Offset<IMonsterStandByConfig> EndIMonsterStandByConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterStandByConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602FFA9 RID: 196521 RVA: 0x0068608C File Offset: 0x0068428C
+		// Token: 0x06032D7D RID: 208253 RVA: 0x006DD744 File Offset: 0x006DB944
 		public IMonsterStandByConfigT UnPack()
 		{
 			IMonsterStandByConfigT monsterStandByConfigT = new IMonsterStandByConfigT();
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return monsterStandByConfigT;
 		}
 
-		// Token: 0x0602FFAA RID: 196522 RVA: 0x006860A7 File Offset: 0x006842A7
+		// Token: 0x06032D7E RID: 208254 RVA: 0x006DD75F File Offset: 0x006DB95F
 		public void UnPackTo(IMonsterStandByConfigT _o)
 		{
 			_o.Tag = this.Tag;
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602FFAB RID: 196523 RVA: 0x006860E8 File Offset: 0x006842E8
+		// Token: 0x06032D7F RID: 208255 RVA: 0x006DD7A0 File Offset: 0x006DB9A0
 		public static Offset<IMonsterStandByConfig> Pack(FlatBufferBuilder builder, IMonsterStandByConfigT _o)
 		{
 			if (_o == null)
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMonsterStandByConfig.CreateIMonsterStandByConfig(builder, tagOffset, _o.Duration, _o.RepeatTimes, _o.EmotionId, _o.NullMask);
 		}
 
-		// Token: 0x0401133D RID: 70461
+		// Token: 0x04012250 RID: 74320
 		private Table __p;
 	}
 }

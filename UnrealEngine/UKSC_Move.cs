@@ -6,79 +6,62 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E01 RID: 7681
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200057E RID: 1406
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Move")]
 	[UnrealStructLayout(488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 488)]
 	public abstract class UKSC_Move : UKSC_BaseObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D572 RID: 120178 RVA: 0x002B506E File Offset: 0x002B326E
+		// Token: 0x06007FD3 RID: 32723 RVA: 0x000BD038 File Offset: 0x000BB238
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_Move._ClassPtr;
 		}
 
-		// Token: 0x17007671 RID: 30321
-		// (get) Token: 0x0601D573 RID: 120179 RVA: 0x002B507A File Offset: 0x002B327A
-		// (set) Token: 0x0601D574 RID: 120180 RVA: 0x002B508E File Offset: 0x002B328E
+		// Token: 0x170018E4 RID: 6372
+		// (get) Token: 0x06007FD4 RID: 32724 RVA: 0x000BD044 File Offset: 0x000BB244
+		// (set) Token: 0x06007FD5 RID: 32725 RVA: 0x000BD058 File Offset: 0x000BB258
+		[Nullable(2)]
 		public unsafe AKSC_Entity Owner_
 		{
+			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<AKSC_Entity>(base.NativePtr / (IntPtr)sizeof(void*) + UKSC_Move.__PropertyOffset_Owner_);
 			}
+			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKSC_Move.__PropertyOffset_Owner_, value);
 			}
 		}
 
-		// Token: 0x17007672 RID: 30322
-		// (get) Token: 0x0601D575 RID: 120181 RVA: 0x002B50A3 File Offset: 0x002B32A3
-		// (set) Token: 0x0601D576 RID: 120182 RVA: 0x002B50B7 File Offset: 0x002B32B7
-		public unsafe UKSC_DA_Move Move_
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKSC_DA_Move>(base.NativePtr / (IntPtr)sizeof(void*) + UKSC_Move.__PropertyOffset_Move_);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKSC_Move.__PropertyOffset_Move_, value);
-			}
-		}
-
-		// Token: 0x0601D577 RID: 120183 RVA: 0x002B50CC File Offset: 0x002B32CC
+		// Token: 0x06007FD6 RID: 32726 RVA: 0x000BD06D File Offset: 0x000BB26D
 		static UKSC_Move()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Move");
 		}
 
-		// Token: 0x0601D578 RID: 120184 RVA: 0x002B50DC File Offset: 0x002B32DC
+		// Token: 0x06007FD7 RID: 32727 RVA: 0x000BD07C File Offset: 0x000BB27C
 		protected UKSC_Move() : this(BuiltinUtils.AllocNativeUObject(UKSC_Move.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D579 RID: 120185 RVA: 0x002B5104 File Offset: 0x002B3304
+		// Token: 0x06007FD8 RID: 32728 RVA: 0x000BD0A4 File Offset: 0x000BB2A4
 		protected UKSC_Move(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FEA8 RID: 65192
+		// Token: 0x040037D2 RID: 14290
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Move";
 
-		// Token: 0x0400FEA9 RID: 65193
+		// Token: 0x040037D3 RID: 14291
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FEAA RID: 65194
+		// Token: 0x040037D4 RID: 14292
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FEAB RID: 65195
+		// Token: 0x040037D5 RID: 14293
 		internal static int __PropertyOffset_Owner_;
-
-		// Token: 0x0400FEAC RID: 65196
-		internal static int __PropertyOffset_Move_;
 	}
 }

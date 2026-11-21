@@ -8,48 +8,48 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061BE RID: 25022
+	// Token: 0x0200513C RID: 20796
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityRoadBookController : ActivityControllerBase
 	{
-		// Token: 0x0603F34C RID: 258892 RVA: 0x00F45A96 File Offset: 0x00F43C96
+		// Token: 0x0603400D RID: 213005 RVA: 0x00E8C9EE File Offset: 0x00E8ABEE
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0603F34D RID: 258893 RVA: 0x00F45A98 File Offset: 0x00F43C98
+		// Token: 0x0603400E RID: 213006 RVA: 0x00E8C9F0 File Offset: 0x00E8ABF0
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RoadBookInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRoadBookInfoUpdateNotify));
 		}
 
-		// Token: 0x0603F34E RID: 258894 RVA: 0x00F45AB6 File Offset: 0x00F43CB6
+		// Token: 0x0603400F RID: 213007 RVA: 0x00E8CA0E File Offset: 0x00E8AC0E
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RoadBookInfoUpdateNotify);
 		}
 
-		// Token: 0x0603F34F RID: 258895 RVA: 0x00F45AC8 File Offset: 0x00F43CC8
+		// Token: 0x06034010 RID: 213008 RVA: 0x00E8CA20 File Offset: 0x00E8AC20
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x0603F350 RID: 258896 RVA: 0x00F45AE6 File Offset: 0x00F43CE6
+		// Token: 0x06034011 RID: 213009 RVA: 0x00E8CA3E File Offset: 0x00E8AC3E
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x0603F351 RID: 258897 RVA: 0x00F45B04 File Offset: 0x00F43D04
+		// Token: 0x06034012 RID: 213010 RVA: 0x00E8CA5C File Offset: 0x00E8AC5C
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_MapThemeHall30";
 		}
 
-		// Token: 0x0603F352 RID: 258898 RVA: 0x00F45B0C File Offset: 0x00F43D0C
+		// Token: 0x06034013 RID: 213011 RVA: 0x00E8CA64 File Offset: 0x00E8AC64
 		private void OnCommonItemCountAnyChange(int configId, int count)
 		{
 			ActivityRoadBookData roadBookData = this.GetRoadBookData();
@@ -68,25 +68,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.TryOpenLevelTipsView(roadBookData);
 		}
 
-		// Token: 0x0603F353 RID: 258899 RVA: 0x00F45B5B File Offset: 0x00F43D5B
+		// Token: 0x06034014 RID: 213012 RVA: 0x00E8CAB3 File Offset: 0x00E8ACB3
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySubViewRoadBook();
 		}
 
-		// Token: 0x0603F354 RID: 258900 RVA: 0x00F45B62 File Offset: 0x00F43D62
+		// Token: 0x06034015 RID: 213013 RVA: 0x00E8CABA File Offset: 0x00E8ACBA
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new ActivityRoadBookData();
 		}
 
-		// Token: 0x0603F355 RID: 258901 RVA: 0x00F45B69 File Offset: 0x00F43D69
+		// Token: 0x06034016 RID: 213014 RVA: 0x00E8CAC1 File Offset: 0x00E8ACC1
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603F356 RID: 258902 RVA: 0x00F45B6C File Offset: 0x00F43D6C
+		// Token: 0x06034017 RID: 213015 RVA: 0x00E8CAC4 File Offset: 0x00E8ACC4
 		[NullableContext(2)]
 		public ActivityRoadBookData GetRoadBookData()
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return result;
 		}
 
-		// Token: 0x0603F357 RID: 258903 RVA: 0x00F45BA4 File Offset: 0x00F43DA4
+		// Token: 0x06034018 RID: 213016 RVA: 0x00E8CAFC File Offset: 0x00E8ACFC
 		[NullableContext(2)]
 		private void OnRoadBookInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, roadBookData.Id);
 		}
 
-		// Token: 0x0603F358 RID: 258904 RVA: 0x00F45C2C File Offset: 0x00F43E2C
+		// Token: 0x06034019 RID: 213017 RVA: 0x00E8CB84 File Offset: 0x00E8AD84
 		[NullableContext(2)]
 		public void RequestRoadBookLevelUp(Action<bool> callback = null)
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 				}
 				else if (roadBookLevelUpResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookLevelUpResponse.ErrorCode, 16518, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookLevelUpResponse.ErrorCode, 19714, null, true, true);
 					Action<bool> callback3 = callback;
 					if (callback3 == null)
 					{
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}, 0);
 		}
 
-		// Token: 0x0603F359 RID: 258905 RVA: 0x00F45C70 File Offset: 0x00F43E70
+		// Token: 0x0603401A RID: 213018 RVA: 0x00E8CBC8 File Offset: 0x00E8ADC8
 		public void RequestMultiRoadBookTaskReward(int[] ids)
 		{
 			if (ids == null || ids.Length == 0)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 				}
 				if (roadBookTaskRewardResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookTaskRewardResponse.ErrorCode, 27039, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookTaskRewardResponse.ErrorCode, 24523, null, true, true);
 					return;
 				}
 				ActivityRoadBookData roadBookData = this.GetRoadBookData();
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}, 0);
 		}
 
-		// Token: 0x0603F35A RID: 258906 RVA: 0x00F45CD8 File Offset: 0x00F43ED8
+		// Token: 0x0603401B RID: 213019 RVA: 0x00E8CC30 File Offset: 0x00E8AE30
 		public void RequestTakeTaskFinalReward()
 		{
 			RoadBookFullRewardRequest message = RoadBookFullRewardRequest.Create();
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 				}
 				if (roadBookFullRewardResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookFullRewardResponse.ErrorCode, 25470, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookFullRewardResponse.ErrorCode, 26687, null, true, true);
 					return;
 				}
 				ActivityRoadBookData roadBookData = this.GetRoadBookData();
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}, 0);
 		}
 
-		// Token: 0x0603F35B RID: 258907 RVA: 0x00F45D08 File Offset: 0x00F43F08
+		// Token: 0x0603401C RID: 213020 RVA: 0x00E8CC60 File Offset: 0x00E8AE60
 		public void RequestMultiTakeMotorChallengeReward(int[] rewardIds)
 		{
 			if (rewardIds == null || rewardIds.Length == 0)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 				}
 				if (roadBookMotorRewardResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookMotorRewardResponse.ErrorCode, 15914, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roadBookMotorRewardResponse.ErrorCode, 23361, null, true, true);
 					return;
 				}
 				ActivityRoadBookData roadBookData = this.GetRoadBookData();
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}, 0);
 		}
 
-		// Token: 0x0603F35C RID: 258908 RVA: 0x00F45D6F File Offset: 0x00F43F6F
+		// Token: 0x0603401D RID: 213021 RVA: 0x00E8CCC7 File Offset: 0x00E8AEC7
 		private void TryOpenLevelTipsView(ActivityRoadBookData data)
 		{
 			if (!UiManager.Instance.IsViewOpen(EUiViewName.RoadBookLevelTipsView))
@@ -289,14 +289,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F35D RID: 258909 RVA: 0x00F45D93 File Offset: 0x00F43F93
+		// Token: 0x0603401E RID: 213022 RVA: 0x00E8CCEB File Offset: 0x00E8AEEB
 		public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.ActivityUnlockTipRoadBookView, null, null);
 		}
 
-		// Token: 0x17009219 RID: 37401
-		// (get) Token: 0x0603F35E RID: 258910 RVA: 0x00F45DA6 File Offset: 0x00F43FA6
+		// Token: 0x1700657B RID: 25979
+		// (get) Token: 0x0603401F RID: 213023 RVA: 0x00E8CCFE File Offset: 0x00E8AEFE
 		public static ActivityRoadBookController Instance
 		{
 			get
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F35F RID: 258911 RVA: 0x00F45DAD File Offset: 0x00F43FAD
+		// Token: 0x06034020 RID: 213024 RVA: 0x00E8CD05 File Offset: 0x00E8AF05
 		public static ActivityRoadBookController GetOrCreateInstance()
 		{
 			if (ActivityRoadBookController._Instance == null)
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return ActivityRoadBookController._Instance;
 		}
 
-		// Token: 0x0603F360 RID: 258912 RVA: 0x00F45DC1 File Offset: 0x00F43FC1
+		// Token: 0x06034021 RID: 213025 RVA: 0x00E8CD19 File Offset: 0x00E8AF19
 		public static bool CreateInstance()
 		{
 			if (ActivityRoadBookController._Instance != null)
@@ -326,24 +326,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return true;
 		}
 
-		// Token: 0x0603F361 RID: 258913 RVA: 0x00F45DD7 File Offset: 0x00F43FD7
+		// Token: 0x06034022 RID: 213026 RVA: 0x00E8CD2F File Offset: 0x00E8AF2F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F362 RID: 258914 RVA: 0x00F45DD9 File Offset: 0x00F43FD9
+		// Token: 0x06034023 RID: 213027 RVA: 0x00E8CD31 File Offset: 0x00E8AF31
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityRoadBookController._Instance = null;
 		}
 
-		// Token: 0x0603F363 RID: 258915 RVA: 0x00F45DE1 File Offset: 0x00F43FE1
+		// Token: 0x06034024 RID: 213028 RVA: 0x00E8CD39 File Offset: 0x00E8AF39
 		static ActivityRoadBookController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityRoadBookController.CreateStaticDefaultValue), new Action(ActivityRoadBookController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020F0B RID: 134923
+		// Token: 0x0401B83A RID: 112698
 		[Nullable(2)]
 		private static ActivityRoadBookController _Instance;
 	}

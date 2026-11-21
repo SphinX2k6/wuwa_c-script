@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005094 RID: 20628
+	// Token: 0x020055F9 RID: 22009
 	public class IDollComboCameraConfigT
 	{
-		// Token: 0x170095D1 RID: 38353
-		// (get) Token: 0x060211CB RID: 135627 RVA: 0x00499D87 File Offset: 0x00497F87
-		// (set) Token: 0x060211CC RID: 135628 RVA: 0x00499D8F File Offset: 0x00497F8F
+		// Token: 0x17009DBE RID: 40382
+		// (get) Token: 0x0602311F RID: 143647 RVA: 0x004D3D13 File Offset: 0x004D1F13
+		// (set) Token: 0x06023120 RID: 143648 RVA: 0x004D3D1B File Offset: 0x004D1F1B
 		public int ComboId { get; set; }
 
-		// Token: 0x170095D2 RID: 38354
-		// (get) Token: 0x060211CD RID: 135629 RVA: 0x00499D98 File Offset: 0x00497F98
-		// (set) Token: 0x060211CE RID: 135630 RVA: 0x00499DA0 File Offset: 0x00497FA0
+		// Token: 0x17009DBF RID: 40383
+		// (get) Token: 0x06023121 RID: 143649 RVA: 0x004D3D24 File Offset: 0x004D1F24
+		// (set) Token: 0x06023122 RID: 143650 RVA: 0x004D3D2C File Offset: 0x004D1F2C
 		public IPosAndRotT PosAndRot { get; set; }
 
-		// Token: 0x060211CF RID: 135631 RVA: 0x00499DA9 File Offset: 0x00497FA9
+		// Token: 0x06023123 RID: 143651 RVA: 0x004D3D35 File Offset: 0x004D1F35
 		public IDollComboCameraConfigT()
 		{
 			this.ComboId = 0;

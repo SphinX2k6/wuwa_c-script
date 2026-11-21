@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001AC RID: 428
+// Token: 0x020001B0 RID: 432
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyDestroySpecBullet.TsAnimNotifyDestroySpecBullet_C")]
 public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000461 RID: 1121
-	// (get) Token: 0x06001B0F RID: 6927 RVA: 0x0008C127 File Offset: 0x0008A327
-	// (set) Token: 0x06001B10 RID: 6928 RVA: 0x0008C13B File Offset: 0x0008A33B
+	// Token: 0x17000483 RID: 1155
+	// (get) Token: 0x06001BAC RID: 7084 RVA: 0x00092927 File Offset: 0x00090B27
+	// (set) Token: 0x06001BAD RID: 7085 RVA: 0x0009293B File Offset: 0x00090B3B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName bulletName
 	{
@@ -30,9 +30,9 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17000462 RID: 1122
-	// (get) Token: 0x06001B11 RID: 6929 RVA: 0x0008C150 File Offset: 0x0008A350
-	// (set) Token: 0x06001B12 RID: 6930 RVA: 0x0008C160 File Offset: 0x0008A360
+	// Token: 0x17000484 RID: 1156
+	// (get) Token: 0x06001BAE RID: 7086 RVA: 0x00092950 File Offset: 0x00090B50
+	// (set) Token: 0x06001BAF RID: 7087 RVA: 0x00092960 File Offset: 0x00090B60
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否召唤子子弹
 	{
@@ -46,9 +46,9 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17000463 RID: 1123
-	// (get) Token: 0x06001B13 RID: 6931 RVA: 0x0008C171 File Offset: 0x0008A371
-	// (set) Token: 0x06001B14 RID: 6932 RVA: 0x0008C181 File Offset: 0x0008A381
+	// Token: 0x17000485 RID: 1157
+	// (get) Token: 0x06001BB0 RID: 7088 RVA: 0x00092971 File Offset: 0x00090B71
+	// (set) Token: 0x06001BB1 RID: 7089 RVA: 0x00092981 File Offset: 0x00090B81
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 立即销毁子弹特效
 	{
@@ -62,9 +62,9 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x17000464 RID: 1124
-	// (get) Token: 0x06001B15 RID: 6933 RVA: 0x0008C194 File Offset: 0x0008A394
-	// (set) Token: 0x06001B16 RID: 6934 RVA: 0x0008C1CD File Offset: 0x0008A3CD
+	// Token: 0x17000486 RID: 1158
+	// (get) Token: 0x06001BB2 RID: 7090 RVA: 0x00092994 File Offset: 0x00090B94
+	// (set) Token: 0x06001BB3 RID: 7091 RVA: 0x000929CD File Offset: 0x00090BCD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer 角色拥有标签执行判定
 	{
@@ -84,32 +84,28 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x06001B17 RID: 6935 RVA: 0x0008C1F8 File Offset: 0x0008A3F8
+	// Token: 0x06001BB4 RID: 7092 RVA: 0x000929F8 File Offset: 0x00090BF8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyDestroySpecBullet) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyDestroySpecBullet.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001B18 RID: 6936 RVA: 0x0008C298 File Offset: 0x0008A498
+	// Token: 0x06001BB5 RID: 7093 RVA: 0x00092AB0 File Offset: 0x00090CB0
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -158,35 +154,31 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		return true;
 	}
 
-	// Token: 0x06001B19 RID: 6937 RVA: 0x0008C3D4 File Offset: 0x0008A5D4
+	// Token: 0x06001BB6 RID: 7094 RVA: 0x00092BEC File Offset: 0x00090DEC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyDestroySpecBullet) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyDestroySpecBullet.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001B1A RID: 6938 RVA: 0x0008C44F File Offset: 0x0008A64F
+	// Token: 0x06001BB7 RID: 7095 RVA: 0x00092C7C File Offset: 0x00090E7C
 	protected override string GetNotifyName_Implementation()
 	{
 		return "销毁子弹";
 	}
 
-	// Token: 0x06001B1B RID: 6939 RVA: 0x0008C456 File Offset: 0x0008A656
+	// Token: 0x06001BB8 RID: 7096 RVA: 0x00092C83 File Offset: 0x00090E83
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyDestroySpecBullet._ClassPtr == IntPtr.Zero)
@@ -196,22 +188,22 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		return TsAnimNotifyDestroySpecBullet._ClassPtr;
 	}
 
-	// Token: 0x06001B1C RID: 6940 RVA: 0x0008C47C File Offset: 0x0008A67C
+	// Token: 0x06001BB9 RID: 7097 RVA: 0x00092CA8 File Offset: 0x00090EA8
 	public TsAnimNotifyDestroySpecBullet() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyDestroySpecBullet.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001B1D RID: 6941 RVA: 0x0008C4A4 File Offset: 0x0008A6A4
+	// Token: 0x06001BBA RID: 7098 RVA: 0x00092CD0 File Offset: 0x00090ED0
 	public TsAnimNotifyDestroySpecBullet(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyDestroySpecBullet.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001B1E RID: 6942 RVA: 0x0008C4D7 File Offset: 0x0008A6D7
+	// Token: 0x06001BBB RID: 7099 RVA: 0x00092D03 File Offset: 0x00090F03
 	protected TsAnimNotifyDestroySpecBullet(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001B1F RID: 6943 RVA: 0x0008C4E0 File Offset: 0x0008A6E0
+	// Token: 0x06001BBC RID: 7100 RVA: 0x00092D0C File Offset: 0x00090F0C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
@@ -220,35 +212,35 @@ public class TsAnimNotifyDestroySpecBullet : TsAnimNotifyBase, IUnrealUObject, I
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001B20 RID: 6944 RVA: 0x0008C513 File Offset: 0x0008A713
+	// Token: 0x06001BBD RID: 7101 RVA: 0x00092D3F File Offset: 0x00090F3F
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001164 RID: 4452
+	// Token: 0x040011A7 RID: 4519
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyDestroySpecBullet.TsAnimNotifyDestroySpecBullet_C";
 
-	// Token: 0x04001165 RID: 4453
+	// Token: 0x040011A8 RID: 4520
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001166 RID: 4454
+	// Token: 0x040011A9 RID: 4521
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001167 RID: 4455
+	// Token: 0x040011AA RID: 4522
 	private static int __PropertyOffset_bulletName;
 
-	// Token: 0x04001168 RID: 4456
+	// Token: 0x040011AB RID: 4523
 	private static int __PropertyOffset_是否召唤子子弹;
 
-	// Token: 0x04001169 RID: 4457
+	// Token: 0x040011AC RID: 4524
 	private static int __PropertyOffset_立即销毁子弹特效;
 
-	// Token: 0x0400116A RID: 4458
+	// Token: 0x040011AD RID: 4525
 	private static int __PropertyOffset_角色拥有标签执行判定;
 
-	// Token: 0x0400116B RID: 4459
+	// Token: 0x040011AE RID: 4526
 	[Nullable(2)]
 	private FGameplayTagContainer _角色拥有标签执行判定;
 }

@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Reflection;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C1F RID: 19487
+	// Token: 0x02003BD0 RID: 15312
 	public class SkillButtonCustomHandleKeLaiTaUltimate : SkillButtonCustomHandleBase
 	{
-		// Token: 0x0603270E RID: 206606 RVA: 0x00BC0EFD File Offset: 0x00BBF0FD
+		// Token: 0x060274C1 RID: 160961 RVA: 0x00B05B89 File Offset: 0x00B03D89
 		protected override void OnInit()
 		{
 			if (this.SkillButtonData == null)
@@ -16,7 +15,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.SkillButtonData.HideCoolDownTextCustom = true;
 		}
 
-		// Token: 0x0603270F RID: 206607 RVA: 0x00BC0F14 File Offset: 0x00BBF114
+		// Token: 0x060274C2 RID: 160962 RVA: 0x00B05BA0 File Offset: 0x00B03DA0
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null)
@@ -51,18 +50,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 					}
 				}
 				ActiveBuffInternal buffById = buffComponent.GetBuffById(this.BuffIds[0]);
-				object obj;
-				if (buffById == null)
-				{
-					obj = null;
-				}
-				else
-				{
-					PropertyInfo property = buffById.GetType().GetProperty("Duration");
-					obj = ((property != null) ? property.GetValue(buffById) : null);
-				}
-				int? num = obj as int?;
-				this.SkillButtonData.TotalCoolDownCustom = num.GetValueOrDefault();
+				this.SkillButtonData.TotalCoolDownCustom = (int)((buffById != null) ? buffById.Duration : 0f);
 				return;
 			}
 			this.SkillButtonData.TotalCoolDownCustom = 0;
@@ -73,7 +61,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			}
 		}
 
-		// Token: 0x06032710 RID: 206608 RVA: 0x00BC1068 File Offset: 0x00BBF268
+		// Token: 0x060274C3 RID: 160963 RVA: 0x00B05CD0 File Offset: 0x00B03ED0
 		public override float GetCustomRemainingCoolDown()
 		{
 			if (this.SkillButtonData == null)
@@ -94,11 +82,10 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			{
 				return 0f;
 			}
-			MethodInfo method = buffById.GetType().GetMethod("GetRemainDuration");
-			return (((method != null) ? method.Invoke(buffById, null) : null) as float?).GetValueOrDefault();
+			return buffById.GetRemainDuration();
 		}
 
-		// Token: 0x06032711 RID: 206609 RVA: 0x00BC10F8 File Offset: 0x00BBF2F8
+		// Token: 0x060274C4 RID: 160964 RVA: 0x00B05D36 File Offset: 0x00B03F36
 		public override void RefreshByTagChanged()
 		{
 			this.Refresh();

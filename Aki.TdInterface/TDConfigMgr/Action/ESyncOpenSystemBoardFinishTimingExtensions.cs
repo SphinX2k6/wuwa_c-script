@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002447 RID: 9287
+	// Token: 0x020026E8 RID: 9960
 	public static class ESyncOpenSystemBoardFinishTimingExtensions
 	{
-		// Token: 0x0600C9BE RID: 51646 RVA: 0x001D8880 File Offset: 0x001D6A80
+		// Token: 0x0600D66E RID: 54894 RVA: 0x001F2748 File Offset: 0x001F0948
 		public static string ToEnumString(this ESyncOpenSystemBoardFinishTiming value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9BF RID: 51647 RVA: 0x001D88A8 File Offset: 0x001D6AA8
+		// Token: 0x0600D66F RID: 54895 RVA: 0x001F2770 File Offset: 0x001F0970
 		public static ESyncOpenSystemBoardFinishTiming FromString(string name)
 		{
 			ESyncOpenSystemBoardFinishTiming result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9C0 RID: 51648 RVA: 0x001D88D1 File Offset: 0x001D6AD1
+		// Token: 0x0600D670 RID: 54896 RVA: 0x001F2799 File Offset: 0x001F0999
 		public static bool TryFromString(string name, out ESyncOpenSystemBoardFinishTiming value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C9C1 RID: 51649 RVA: 0x001D88F6 File Offset: 0x001D6AF6
+		// Token: 0x0600D671 RID: 54897 RVA: 0x001F27BE File Offset: 0x001F09BE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9C2 RID: 51650 RVA: 0x001D8906 File Offset: 0x001D6B06
+		// Token: 0x0600D672 RID: 54898 RVA: 0x001F27CE File Offset: 0x001F09CE
 		public static ESyncOpenSystemBoardFinishTiming[] GetValues()
 		{
 			return new ESyncOpenSystemBoardFinishTiming[1];
 		}
 
-		// Token: 0x0600C9C3 RID: 51651 RVA: 0x001D890E File Offset: 0x001D6B0E
+		// Token: 0x0600D673 RID: 54899 RVA: 0x001F27D6 File Offset: 0x001F09D6
 		public static string[] GetNames()
 		{
 			return new string[]

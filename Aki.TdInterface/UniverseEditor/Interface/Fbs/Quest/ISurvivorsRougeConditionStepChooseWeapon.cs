@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004160 RID: 16736
+	// Token: 0x020045A4 RID: 17828
 	public struct ISurvivorsRougeConditionStepChooseWeapon : IFlatbufferObject
 	{
-		// Token: 0x17007692 RID: 30354
-		// (get) Token: 0x06018946 RID: 100678 RVA: 0x0038AA75 File Offset: 0x00388C75
+		// Token: 0x17007CA1 RID: 31905
+		// (get) Token: 0x0601A00E RID: 106510 RVA: 0x003B5031 File Offset: 0x003B3231
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018947 RID: 100679 RVA: 0x0038AA82 File Offset: 0x00388C82
+		// Token: 0x0601A00F RID: 106511 RVA: 0x003B503E File Offset: 0x003B323E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018948 RID: 100680 RVA: 0x0038AA8C File Offset: 0x00388C8C
+		// Token: 0x0601A010 RID: 106512 RVA: 0x003B5048 File Offset: 0x003B3248
 		public static ISurvivorsRougeConditionStepChooseWeapon GetRootAsISurvivorsRougeConditionStepChooseWeapon(ByteBuffer _bb)
 		{
 			return ISurvivorsRougeConditionStepChooseWeapon.GetRootAsISurvivorsRougeConditionStepChooseWeapon(_bb, default(ISurvivorsRougeConditionStepChooseWeapon));
 		}
 
-		// Token: 0x06018949 RID: 100681 RVA: 0x0038AAA8 File Offset: 0x00388CA8
+		// Token: 0x0601A011 RID: 106513 RVA: 0x003B5064 File Offset: 0x003B3264
 		public static ISurvivorsRougeConditionStepChooseWeapon GetRootAsISurvivorsRougeConditionStepChooseWeapon(ByteBuffer _bb, ISurvivorsRougeConditionStepChooseWeapon obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601894A RID: 100682 RVA: 0x0038AAC5 File Offset: 0x00388CC5
+		// Token: 0x0601A012 RID: 106514 RVA: 0x003B5081 File Offset: 0x003B3281
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601894B RID: 100683 RVA: 0x0038AAD4 File Offset: 0x00388CD4
+		// Token: 0x0601A013 RID: 106515 RVA: 0x003B5090 File Offset: 0x003B3290
 		public ISurvivorsRougeConditionStepChooseWeapon __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007693 RID: 30355
-		// (get) Token: 0x0601894C RID: 100684 RVA: 0x0038AAE4 File Offset: 0x00388CE4
+		// Token: 0x17007CA2 RID: 31906
+		// (get) Token: 0x0601A014 RID: 106516 RVA: 0x003B50A0 File Offset: 0x003B32A0
 		public ESurvivorsRougeConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601894D RID: 100685 RVA: 0x0038AB20 File Offset: 0x00388D20
+		// Token: 0x0601A015 RID: 106517 RVA: 0x003B50DC File Offset: 0x003B32DC
 		public static Offset<ISurvivorsRougeConditionStepChooseWeapon> CreateISurvivorsRougeConditionStepChooseWeapon(FlatBufferBuilder builder, ESurvivorsRougeConditionStep Type = ESurvivorsRougeConditionStep.Prepare)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISurvivorsRougeConditionStepChooseWeapon.EndISurvivorsRougeConditionStepChooseWeapon(builder);
 		}
 
-		// Token: 0x0601894E RID: 100686 RVA: 0x0038AB36 File Offset: 0x00388D36
+		// Token: 0x0601A016 RID: 106518 RVA: 0x003B50F2 File Offset: 0x003B32F2
 		public static void StartISurvivorsRougeConditionStepChooseWeapon(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601894F RID: 100687 RVA: 0x0038AB3F File Offset: 0x00388D3F
+		// Token: 0x0601A017 RID: 106519 RVA: 0x003B50FB File Offset: 0x003B32FB
 		public static void AddType(FlatBufferBuilder builder, ESurvivorsRougeConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018950 RID: 100688 RVA: 0x0038AB4A File Offset: 0x00388D4A
+		// Token: 0x0601A018 RID: 106520 RVA: 0x003B5106 File Offset: 0x003B3306
 		public static Offset<ISurvivorsRougeConditionStepChooseWeapon> EndISurvivorsRougeConditionStepChooseWeapon(FlatBufferBuilder builder)
 		{
 			return new Offset<ISurvivorsRougeConditionStepChooseWeapon>(builder.EndTable());
 		}
 
-		// Token: 0x06018951 RID: 100689 RVA: 0x0038AB58 File Offset: 0x00388D58
+		// Token: 0x0601A019 RID: 106521 RVA: 0x003B5114 File Offset: 0x003B3314
 		public ISurvivorsRougeConditionStepChooseWeaponT UnPack()
 		{
 			ISurvivorsRougeConditionStepChooseWeaponT survivorsRougeConditionStepChooseWeaponT = new ISurvivorsRougeConditionStepChooseWeaponT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return survivorsRougeConditionStepChooseWeaponT;
 		}
 
-		// Token: 0x06018952 RID: 100690 RVA: 0x0038AB73 File Offset: 0x00388D73
+		// Token: 0x0601A01A RID: 106522 RVA: 0x003B512F File Offset: 0x003B332F
 		public void UnPackTo(ISurvivorsRougeConditionStepChooseWeaponT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06018953 RID: 100691 RVA: 0x0038AB84 File Offset: 0x00388D84
+		// Token: 0x0601A01B RID: 106523 RVA: 0x003B5140 File Offset: 0x003B3340
 		public static Offset<ISurvivorsRougeConditionStepChooseWeapon> Pack(FlatBufferBuilder builder, ISurvivorsRougeConditionStepChooseWeaponT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISurvivorsRougeConditionStepChooseWeapon.CreateISurvivorsRougeConditionStepChooseWeapon(builder, _o.Type);
 		}
 
-		// Token: 0x0400BD7F RID: 48511
+		// Token: 0x0400C76D RID: 51053
 		private Table __p;
 	}
 }

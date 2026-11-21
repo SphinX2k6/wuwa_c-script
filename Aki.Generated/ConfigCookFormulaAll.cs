@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200019B RID: 411
+	// Token: 0x020001AD RID: 429
 	public class ConfigCookFormulaAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060009A5 RID: 2469 RVA: 0x000900AC File Offset: 0x0008E2AC
+		// Token: 0x06000A11 RID: 2577 RVA: 0x00095FE4 File Offset: 0x000941E4
 		static ConfigCookFormulaAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCookFormulaAll.CreateStaticDefaultValue), new Action(ConfigCookFormulaAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060009A6 RID: 2470 RVA: 0x000900CC File Offset: 0x0008E2CC
+		// Token: 0x06000A12 RID: 2578 RVA: 0x00096004 File Offset: 0x00094204
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCookFormulaAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060009A7 RID: 2471 RVA: 0x0009014B File Offset: 0x0008E34B
+		// Token: 0x06000A13 RID: 2579 RVA: 0x00096083 File Offset: 0x00094283
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCookFormulaAll.LogPair = null;
 			ConfigCookFormulaAll.HandleId = 0;
 		}
 
-		// Token: 0x060009A8 RID: 2472 RVA: 0x00090159 File Offset: 0x0008E359
+		// Token: 0x06000A14 RID: 2580 RVA: 0x00096091 File Offset: 0x00094291
 		public static void Init()
 		{
 			ConfigCookFormulaAll.HandleId = ConfigCommon.InitDataStatement(ConfigCookFormulaAll.HandleId, "db_cook.db", "select BinData from `CookFormula`");
 		}
 
-		// Token: 0x060009A9 RID: 2473 RVA: 0x00090174 File Offset: 0x0008E374
+		// Token: 0x06000A15 RID: 2581 RVA: 0x000960AC File Offset: 0x000942AC
 		[NullableContext(2)]
 		public static IReadOnlyList<CookFormula> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000B21 RID: 2849
+		// Token: 0x04000B9F RID: 2975
 		private const string DB = "db_cook.db";
 
-		// Token: 0x04000B22 RID: 2850
+		// Token: 0x04000BA0 RID: 2976
 		private const string FILE = "p.烹饪.xlsx";
 
-		// Token: 0x04000B23 RID: 2851
+		// Token: 0x04000BA1 RID: 2977
 		private const string TABLE = "CookFormula";
 
-		// Token: 0x04000B24 RID: 2852
+		// Token: 0x04000BA2 RID: 2978
 		private const string COMMAND = "select BinData from `CookFormula`";
 
-		// Token: 0x04000B25 RID: 2853
+		// Token: 0x04000BA3 RID: 2979
 		private const string KEY_PREFIX = "CookFormulaAll";
 
-		// Token: 0x04000B26 RID: 2854
+		// Token: 0x04000BA4 RID: 2980
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000B27 RID: 2855
+		// Token: 0x04000BA5 RID: 2981
 		private static int HandleId;
 	}
 }

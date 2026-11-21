@@ -1,41 +1,41 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020017B0 RID: 6064
+// Token: 0x02000C69 RID: 3177
 [NullableContext(1)]
 public interface IAutoAttachExhibitionItem
 {
-	// Token: 0x0600B0F8 RID: 45304
+	// Token: 0x060084E0 RID: 34016
 	void OnSelect();
 
-	// Token: 0x0600B0F9 RID: 45305
+	// Token: 0x060084E1 RID: 34017
 	void OnUnSelect();
 
-	// Token: 0x0600B0FA RID: 45306
+	// Token: 0x060084E2 RID: 34018
 	void SetData(object param);
 
-	// Token: 0x0600B0FB RID: 45307
+	// Token: 0x060084E3 RID: 34019
 	void RefreshItem(int showItemIndex);
 
-	// Token: 0x0600B0FC RID: 45308
+	// Token: 0x060084E4 RID: 34020
 	void OnMoveItem(float offset);
 
-	// Token: 0x0600B0FD RID: 45309
+	// Token: 0x060084E5 RID: 34021
 	void OnChangeDirection(int direction);
 
-	// Token: 0x0600B0FE RID: 45310
+	// Token: 0x060084E6 RID: 34022
 	void SetShowItemIndex(int showIndex);
 
-	// Token: 0x0600B0FF RID: 45311
+	// Token: 0x060084E7 RID: 34023
 	int GetShowItemIndex();
 
-	// Token: 0x0600B100 RID: 45312
+	// Token: 0x060084E8 RID: 34024
 	void SetAttachItem(AutoAttachExhibitionItem item);
 
-	// Token: 0x0600B101 RID: 45313
+	// Token: 0x060084E9 RID: 34025
 	[NullableContext(2)]
 	AutoAttachExhibitionItem GetAttachItem();
 
-	// Token: 0x0600B102 RID: 45314
+	// Token: 0x060084EA RID: 34026
 	void Clear();
 }

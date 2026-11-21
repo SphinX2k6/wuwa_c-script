@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000277 RID: 631
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002BA RID: 698
 	public class IConnectorPathAdvanceReceiver
 	{
-		// Token: 0x06000B91 RID: 2961 RVA: 0x0002E348 File Offset: 0x0002C548
+		// Token: 0x06000CAB RID: 3243 RVA: 0x00031038 File Offset: 0x0002F238
 		private IConnectorPathAdvanceReceiver_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B92 RID: 2962 RVA: 0x0002E380 File Offset: 0x0002C580
+		// Token: 0x06000CAC RID: 3244 RVA: 0x00031070 File Offset: 0x0002F270
 		public static IConnectorPathAdvanceReceiver Create([Nullable(2)] IConnectorPathAdvanceReceiver instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B93 RID: 2963 RVA: 0x0002E393 File Offset: 0x0002C593
+		// Token: 0x06000CAD RID: 3245 RVA: 0x00031083 File Offset: 0x0002F283
 		public static IConnectorPathAdvanceReceiver CreateFromSetValue([Nullable(2)] IConnectorPathAdvanceReceiver_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B94 RID: 2964 RVA: 0x0002E3A6 File Offset: 0x0002C5A6
+		// Token: 0x06000CAE RID: 3246 RVA: 0x00031096 File Offset: 0x0002F296
 		public IConnectorPathAdvanceReceiver_SetValue ToSetValue()
 		{
 			return new IConnectorPathAdvanceReceiver_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000373 RID: 883
-		// (get) Token: 0x06000B95 RID: 2965 RVA: 0x0002E3C5 File Offset: 0x0002C5C5
-		// (set) Token: 0x06000B96 RID: 2966 RVA: 0x0002E3F0 File Offset: 0x0002C5F0
+		// Token: 0x170003BB RID: 955
+		// (get) Token: 0x06000CAF RID: 3247 RVA: 0x000310B5 File Offset: 0x0002F2B5
+		// (set) Token: 0x06000CB0 RID: 3248 RVA: 0x000310E0 File Offset: 0x0002F2E0
 		public virtual string ConnectedState
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000374 RID: 884
-		// (get) Token: 0x06000B97 RID: 2967 RVA: 0x0002E3FE File Offset: 0x0002C5FE
-		// (set) Token: 0x06000B98 RID: 2968 RVA: 0x0002E429 File Offset: 0x0002C629
+		// Token: 0x170003BC RID: 956
+		// (get) Token: 0x06000CB1 RID: 3249 RVA: 0x000310EE File Offset: 0x0002F2EE
+		// (set) Token: 0x06000CB2 RID: 3250 RVA: 0x00031119 File Offset: 0x0002F319
 		public virtual string DisconnectedState
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B24 RID: 2852
+		// Token: 0x04000C05 RID: 3077
 		[Nullable(2)]
 		protected IConnectorPathAdvanceReceiver FbInstance;
 
-		// Token: 0x04000B25 RID: 2853
+		// Token: 0x04000C06 RID: 3078
 		[Nullable(2)]
 		protected IConnectorPathAdvanceReceiver_SetValue PocoInterface;
 	}

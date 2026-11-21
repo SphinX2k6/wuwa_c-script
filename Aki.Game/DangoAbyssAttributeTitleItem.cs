@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001A27 RID: 6695
+// Token: 0x02000EE6 RID: 3814
 public class DangoAbyssAttributeTitleItem : UiPanelBase
 {
-	// Token: 0x0600C4F7 RID: 50423 RVA: 0x002CACF3 File Offset: 0x002C8EF3
+	// Token: 0x06009907 RID: 39175 RVA: 0x002D5E13 File Offset: 0x002D4013
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,14 +18,14 @@ public class DangoAbyssAttributeTitleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600C4F8 RID: 50424 RVA: 0x002CAD2C File Offset: 0x002C8F2C
+	// Token: 0x06009908 RID: 39176 RVA: 0x002D5E4C File Offset: 0x002D404C
 	[NullableContext(1)]
 	public void Initialize(UUIItem uiItem)
 	{
 		base.CreateByActorAsync(uiItem.GetOwner(), null, false).Forget();
 	}
 
-	// Token: 0x0600C4F9 RID: 50425 RVA: 0x002CAD44 File Offset: 0x002C8F44
+	// Token: 0x06009909 RID: 39177 RVA: 0x002D5E64 File Offset: 0x002D4064
 	[NullableContext(1)]
 	public void Refresh(DangoAbyssDefine.EquipViewAttributeData data)
 	{
@@ -44,12 +44,12 @@ public class DangoAbyssAttributeTitleItem : UiPanelBase
 		base.SetUiActive(true);
 	}
 
-	// Token: 0x02007F6C RID: 32620
+	// Token: 0x020070FB RID: 28923
 	private enum ETitleItemComponent
 	{
-		// Token: 0x04029994 RID: 170388
+		// Token: 0x04024CD1 RID: 150737
 		TextTitle,
-		// Token: 0x04029995 RID: 170389
+		// Token: 0x04024CD2 RID: 150738
 		SpriteTitle
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A19 RID: 10777
+	// Token: 0x02002D06 RID: 11526
 	public class IAiFollowerSlideRailEnd : ISlideRailEndType
 	{
-		// Token: 0x0600ED98 RID: 60824 RVA: 0x0022A0F6 File Offset: 0x002282F6
-		[NullableContext(1)]
+		// Token: 0x0600FC2F RID: 64559 RVA: 0x00247A7A File Offset: 0x00245C7A
 		public static IAiFollowerSlideRailEnd Create(IAiFollowerSlideRailEnd? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B28 RID: 19240
-		// (get) Token: 0x0600ED99 RID: 60825 RVA: 0x0022A115 File Offset: 0x00228315
+		// Token: 0x17004ED1 RID: 20177
+		// (get) Token: 0x0600FC30 RID: 64560 RVA: 0x00247A99 File Offset: 0x00245C99
 		public override ESlideRailEndType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B29 RID: 19241
-		// (get) Token: 0x0600ED9A RID: 60826 RVA: 0x0022A122 File Offset: 0x00228322
+		// Token: 0x17004ED2 RID: 20178
+		// (get) Token: 0x0600FC31 RID: 64561 RVA: 0x00247AA6 File Offset: 0x00245CA6
 		public virtual int AiEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082C7 RID: 33479
+		// Token: 0x040089B8 RID: 35256
 		private IAiFollowerSlideRailEnd Instance;
 	}
 }

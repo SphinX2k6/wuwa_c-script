@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001151 RID: 4433
+	// Token: 0x02001287 RID: 4743
 	public struct TransitionPopup : IFlatbufferObject
 	{
-		// Token: 0x17003B5E RID: 15198
-		// (get) Token: 0x0600E155 RID: 57685 RVA: 0x003338C4 File Offset: 0x00331AC4
+		// Token: 0x17003EC2 RID: 16066
+		// (get) Token: 0x0600EEC3 RID: 61123 RVA: 0x0035EC74 File Offset: 0x0035CE74
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E156 RID: 57686 RVA: 0x003338D1 File Offset: 0x00331AD1
+		// Token: 0x0600EEC4 RID: 61124 RVA: 0x0035EC81 File Offset: 0x0035CE81
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E157 RID: 57687 RVA: 0x003338D8 File Offset: 0x00331AD8
+		// Token: 0x0600EEC5 RID: 61125 RVA: 0x0035EC88 File Offset: 0x0035CE88
 		public static TransitionPopup GetRootAsTransitionPopup(ByteBuffer _bb)
 		{
 			return TransitionPopup.GetRootAsTransitionPopup(_bb, default(TransitionPopup));
 		}
 
-		// Token: 0x0600E158 RID: 57688 RVA: 0x003338F4 File Offset: 0x00331AF4
+		// Token: 0x0600EEC6 RID: 61126 RVA: 0x0035ECA4 File Offset: 0x0035CEA4
 		public static TransitionPopup GetRootAsTransitionPopup(ByteBuffer _bb, TransitionPopup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E159 RID: 57689 RVA: 0x00333911 File Offset: 0x00331B11
+		// Token: 0x0600EEC7 RID: 61127 RVA: 0x0035ECC1 File Offset: 0x0035CEC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E15A RID: 57690 RVA: 0x00333920 File Offset: 0x00331B20
+		// Token: 0x0600EEC8 RID: 61128 RVA: 0x0035ECD0 File Offset: 0x0035CED0
 		public TransitionPopup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B5F RID: 15199
-		// (get) Token: 0x0600E15B RID: 57691 RVA: 0x00333930 File Offset: 0x00331B30
+		// Token: 0x17003EC3 RID: 16067
+		// (get) Token: 0x0600EEC9 RID: 61129 RVA: 0x0035ECE0 File Offset: 0x0035CEE0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B60 RID: 15200
-		// (get) Token: 0x0600E15C RID: 57692 RVA: 0x0033396C File Offset: 0x00331B6C
+		// Token: 0x17003EC4 RID: 16068
+		// (get) Token: 0x0600EECA RID: 61130 RVA: 0x0035ED1C File Offset: 0x0035CF1C
 		public int Style
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B61 RID: 15201
-		// (get) Token: 0x0600E15D RID: 57693 RVA: 0x003339A8 File Offset: 0x00331BA8
+		// Token: 0x17003EC5 RID: 16069
+		// (get) Token: 0x0600EECB RID: 61131 RVA: 0x0035ED58 File Offset: 0x0035CF58
 		public string Title
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E15E RID: 57694 RVA: 0x003339DF File Offset: 0x00331BDF
+		// Token: 0x0600EECC RID: 61132 RVA: 0x0035ED8F File Offset: 0x0035CF8F
 		public Span<byte> GetTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600E15F RID: 57695 RVA: 0x003339EE File Offset: 0x00331BEE
+		// Token: 0x0600EECD RID: 61133 RVA: 0x0035ED9E File Offset: 0x0035CF9E
 		public byte[] GetTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003B62 RID: 15202
-		// (get) Token: 0x0600E160 RID: 57696 RVA: 0x00333A08 File Offset: 0x00331C08
+		// Token: 0x17003EC6 RID: 16070
+		// (get) Token: 0x0600EECE RID: 61134 RVA: 0x0035EDB8 File Offset: 0x0035CFB8
 		public string ContentText
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E161 RID: 57697 RVA: 0x00333A40 File Offset: 0x00331C40
+		// Token: 0x0600EECF RID: 61135 RVA: 0x0035EDF0 File Offset: 0x0035CFF0
 		public Span<byte> GetContentTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600E162 RID: 57698 RVA: 0x00333A50 File Offset: 0x00331C50
+		// Token: 0x0600EED0 RID: 61136 RVA: 0x0035EE00 File Offset: 0x0035D000
 		public byte[] GetContentTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005296 RID: 21142
+		// Token: 0x040058D9 RID: 22745
 		private Table __p;
 	}
 }

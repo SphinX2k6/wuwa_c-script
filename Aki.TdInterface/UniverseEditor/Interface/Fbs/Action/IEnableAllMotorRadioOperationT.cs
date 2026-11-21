@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006649 RID: 26185
+	// Token: 0x02006CBA RID: 27834
 	public class IEnableAllMotorRadioOperationT
 	{
-		// Token: 0x1700C291 RID: 49809
-		// (get) Token: 0x0602D7C5 RID: 186309 RVA: 0x0063AD42 File Offset: 0x00638F42
-		// (set) Token: 0x0602D7C6 RID: 186310 RVA: 0x0063AD4A File Offset: 0x00638F4A
+		// Token: 0x1700CC2F RID: 52271
+		// (get) Token: 0x0602FF96 RID: 196502 RVA: 0x006878AA File Offset: 0x00685AAA
+		// (set) Token: 0x0602FF97 RID: 196503 RVA: 0x006878B2 File Offset: 0x00685AB2
 		public EMotorRadioOperationType Type { get; set; }
 
-		// Token: 0x0602D7C7 RID: 186311 RVA: 0x0063AD53 File Offset: 0x00638F53
+		// Token: 0x0602FF98 RID: 196504 RVA: 0x006878BB File Offset: 0x00685ABB
 		public IEnableAllMotorRadioOperationT()
 		{
 			this.Type = EMotorRadioOperationType.EnableAll;

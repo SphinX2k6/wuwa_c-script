@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DB0 RID: 3504
+	// Token: 0x02000EAC RID: 3756
 	public class IPointChooseType
 	{
-		// Token: 0x06004F94 RID: 20372 RVA: 0x000C5065 File Offset: 0x000C3265
-		[NullableContext(1)]
+		// Token: 0x060054B9 RID: 21689 RVA: 0x000D08B5 File Offset: 0x000CEAB5
 		public static IPointChooseType Create(IPointChooseType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019F1 RID: 6641
-		// (get) Token: 0x06004F95 RID: 20373 RVA: 0x000C5084 File Offset: 0x000C3284
+		// Token: 0x17001B5C RID: 7004
+		// (get) Token: 0x060054BA RID: 21690 RVA: 0x000D08D4 File Offset: 0x000CEAD4
 		public virtual EPointChooseType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DA7 RID: 11687
+		// Token: 0x0400306D RID: 12397
 		private IPointChooseType Instance;
 	}
 }

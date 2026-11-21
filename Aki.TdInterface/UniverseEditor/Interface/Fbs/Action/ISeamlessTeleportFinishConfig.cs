@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F4E RID: 28494
+	// Token: 0x02007708 RID: 30472
 	public struct ISeamlessTeleportFinishConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D3B9 RID: 54201
-		// (get) Token: 0x06032569 RID: 206185 RVA: 0x006CC1C4 File Offset: 0x006CA3C4
+		// Token: 0x1700DF78 RID: 57208
+		// (get) Token: 0x06035769 RID: 218985 RVA: 0x0072B480 File Offset: 0x00729680
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603256A RID: 206186 RVA: 0x006CC1D1 File Offset: 0x006CA3D1
+		// Token: 0x0603576A RID: 218986 RVA: 0x0072B48D File Offset: 0x0072968D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603256B RID: 206187 RVA: 0x006CC1D8 File Offset: 0x006CA3D8
+		// Token: 0x0603576B RID: 218987 RVA: 0x0072B494 File Offset: 0x00729694
 		public static ISeamlessTeleportFinishConfig GetRootAsISeamlessTeleportFinishConfig(ByteBuffer _bb)
 		{
 			return ISeamlessTeleportFinishConfig.GetRootAsISeamlessTeleportFinishConfig(_bb, default(ISeamlessTeleportFinishConfig));
 		}
 
-		// Token: 0x0603256C RID: 206188 RVA: 0x006CC1F4 File Offset: 0x006CA3F4
+		// Token: 0x0603576C RID: 218988 RVA: 0x0072B4B0 File Offset: 0x007296B0
 		public static ISeamlessTeleportFinishConfig GetRootAsISeamlessTeleportFinishConfig(ByteBuffer _bb, ISeamlessTeleportFinishConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603256D RID: 206189 RVA: 0x006CC211 File Offset: 0x006CA411
+		// Token: 0x0603576D RID: 218989 RVA: 0x0072B4CD File Offset: 0x007296CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603256E RID: 206190 RVA: 0x006CC220 File Offset: 0x006CA420
+		// Token: 0x0603576E RID: 218990 RVA: 0x0072B4DC File Offset: 0x007296DC
 		public ISeamlessTeleportFinishConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D3BA RID: 54202
-		// (get) Token: 0x0603256F RID: 206191 RVA: 0x006CC230 File Offset: 0x006CA430
+		// Token: 0x1700DF79 RID: 57209
+		// (get) Token: 0x0603576F RID: 218991 RVA: 0x0072B4EC File Offset: 0x007296EC
 		public bool IsNotStopScreenEffect
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D3BB RID: 54203
-		// (get) Token: 0x06032570 RID: 206192 RVA: 0x006CC270 File Offset: 0x006CA470
+		// Token: 0x1700DF7A RID: 57210
+		// (get) Token: 0x06035770 RID: 218992 RVA: 0x0072B52C File Offset: 0x0072972C
 		public int EffectExtraState
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D3BC RID: 54204
-		// (get) Token: 0x06032571 RID: 206193 RVA: 0x006CC2AC File Offset: 0x006CA4AC
+		// Token: 0x1700DF7B RID: 57211
+		// (get) Token: 0x06035771 RID: 218993 RVA: 0x0072B568 File Offset: 0x00729768
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032572 RID: 206194 RVA: 0x006CC2E8 File Offset: 0x006CA4E8
+		// Token: 0x06035772 RID: 218994 RVA: 0x0072B5A4 File Offset: 0x007297A4
 		public static Offset<ISeamlessTeleportFinishConfig> CreateISeamlessTeleportFinishConfig(FlatBufferBuilder builder, bool IsNotStopScreenEffect = false, int EffectExtraState = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISeamlessTeleportFinishConfig.EndISeamlessTeleportFinishConfig(builder);
 		}
 
-		// Token: 0x06032573 RID: 206195 RVA: 0x006CC30C File Offset: 0x006CA50C
+		// Token: 0x06035773 RID: 218995 RVA: 0x0072B5C8 File Offset: 0x007297C8
 		public static void StartISeamlessTeleportFinishConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06032574 RID: 206196 RVA: 0x006CC315 File Offset: 0x006CA515
+		// Token: 0x06035774 RID: 218996 RVA: 0x0072B5D1 File Offset: 0x007297D1
 		public static void AddIsNotStopScreenEffect(FlatBufferBuilder builder, bool isNotStopScreenEffect)
 		{
 			builder.AddBool(0, isNotStopScreenEffect, false);
 		}
 
-		// Token: 0x06032575 RID: 206197 RVA: 0x006CC320 File Offset: 0x006CA520
+		// Token: 0x06035775 RID: 218997 RVA: 0x0072B5DC File Offset: 0x007297DC
 		public static void AddEffectExtraState(FlatBufferBuilder builder, int effectExtraState)
 		{
 			builder.AddInt(1, effectExtraState, 0);
 		}
 
-		// Token: 0x06032576 RID: 206198 RVA: 0x006CC32B File Offset: 0x006CA52B
+		// Token: 0x06035776 RID: 218998 RVA: 0x0072B5E7 File Offset: 0x007297E7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06032577 RID: 206199 RVA: 0x006CC336 File Offset: 0x006CA536
+		// Token: 0x06035777 RID: 218999 RVA: 0x0072B5F2 File Offset: 0x007297F2
 		public static Offset<ISeamlessTeleportFinishConfig> EndISeamlessTeleportFinishConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISeamlessTeleportFinishConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06032578 RID: 206200 RVA: 0x006CC344 File Offset: 0x006CA544
+		// Token: 0x06035778 RID: 219000 RVA: 0x0072B600 File Offset: 0x00729800
 		public ISeamlessTeleportFinishConfigT UnPack()
 		{
 			ISeamlessTeleportFinishConfigT seamlessTeleportFinishConfigT = new ISeamlessTeleportFinishConfigT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return seamlessTeleportFinishConfigT;
 		}
 
-		// Token: 0x06032579 RID: 206201 RVA: 0x006CC35F File Offset: 0x006CA55F
+		// Token: 0x06035779 RID: 219001 RVA: 0x0072B61B File Offset: 0x0072981B
 		public void UnPackTo(ISeamlessTeleportFinishConfigT _o)
 		{
 			_o.IsNotStopScreenEffect = this.IsNotStopScreenEffect;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603257A RID: 206202 RVA: 0x006CC388 File Offset: 0x006CA588
+		// Token: 0x0603577A RID: 219002 RVA: 0x0072B644 File Offset: 0x00729844
 		public static Offset<ISeamlessTeleportFinishConfig> Pack(FlatBufferBuilder builder, ISeamlessTeleportFinishConfigT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISeamlessTeleportFinishConfig.CreateISeamlessTeleportFinishConfig(builder, _o.IsNotStopScreenEffect, _o.EffectExtraState, _o.NullMask);
 		}
 
-		// Token: 0x04011948 RID: 72008
+		// Token: 0x04012920 RID: 76064
 		private Table __p;
 	}
 }

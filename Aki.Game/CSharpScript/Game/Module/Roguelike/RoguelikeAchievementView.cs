@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E03 RID: 19971
+	// Token: 0x02003DCC RID: 15820
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeAchievementView : UiViewBase
 	{
-		// Token: 0x06033873 RID: 211059 RVA: 0x00C0A928 File Offset: 0x00C08B28
+		// Token: 0x060286DE RID: 165598 RVA: 0x00B53E38 File Offset: 0x00B52038
 		public RoguelikeAchievementView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033874 RID: 211060 RVA: 0x00C0A93C File Offset: 0x00C08B3C
+		// Token: 0x060286DF RID: 165599 RVA: 0x00B53E4C File Offset: 0x00B5204C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033875 RID: 211061 RVA: 0x00C0A9C8 File Offset: 0x00C08BC8
+		// Token: 0x060286E0 RID: 165600 RVA: 0x00B53ED8 File Offset: 0x00B520D8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeAchievementView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -48,25 +48,25 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033876 RID: 211062 RVA: 0x00C0AA0B File Offset: 0x00C08C0B
+		// Token: 0x060286E1 RID: 165601 RVA: 0x00B53F1B File Offset: 0x00B5211B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 		}
 
-		// Token: 0x06033877 RID: 211063 RVA: 0x00C0AA29 File Offset: 0x00C08C29
+		// Token: 0x060286E2 RID: 165602 RVA: 0x00B53F39 File Offset: 0x00B52139
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 		}
 
-		// Token: 0x06033878 RID: 211064 RVA: 0x00C0AA47 File Offset: 0x00C08C47
+		// Token: 0x060286E3 RID: 165603 RVA: 0x00B53F57 File Offset: 0x00B52157
 		protected void OnAchievementDataWithIdNotify(int id)
 		{
 			this.ToggleCallBack(this.TabComponent.GetSelectedIndex());
 		}
 
-		// Token: 0x06033879 RID: 211065 RVA: 0x00C0AA5A File Offset: 0x00C08C5A
+		// Token: 0x060286E4 RID: 165604 RVA: 0x00B53F6A File Offset: 0x00B5216A
 		private RoguelikeAchievementItem CreateAchievementItem()
 		{
 			return new RoguelikeAchievementItem
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x0603387A RID: 211066 RVA: 0x00C0AA74 File Offset: 0x00C08C74
+		// Token: 0x060286E5 RID: 165605 RVA: 0x00B53F84 File Offset: 0x00B52184
 		private void OnBtnRewardClick()
 		{
 			List<int> list = new List<int>();
@@ -93,33 +93,33 @@ namespace CSharpScript.Game.Module.Roguelike
 			AchievementController.Instance.RequestGetMultiAchievementReward(list.ToArray(), Array.Empty<int>());
 		}
 
-		// Token: 0x0603387B RID: 211067 RVA: 0x00C0AB14 File Offset: 0x00C08D14
+		// Token: 0x060286E6 RID: 165606 RVA: 0x00B54024 File Offset: 0x00B52224
 		protected void CloseClick()
 		{
 			UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 		}
 
-		// Token: 0x0603387C RID: 211068 RVA: 0x00C0AB2C File Offset: 0x00C08D2C
+		// Token: 0x060286E7 RID: 165607 RVA: 0x00B5403C File Offset: 0x00B5223C
 		private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x0603387D RID: 211069 RVA: 0x00C0AB34 File Offset: 0x00C08D34
+		// Token: 0x060286E8 RID: 165608 RVA: 0x00B54044 File Offset: 0x00B52244
 		private void ToggleCallBack(int index)
 		{
 			AchievementGroupData groupData = this.AchievementGroupDataList[index];
 			this.RefreshAchievementList(groupData);
 		}
 
-		// Token: 0x0603387E RID: 211070 RVA: 0x00C0AB58 File Offset: 0x00C08D58
+		// Token: 0x060286E9 RID: 165609 RVA: 0x00B54068 File Offset: 0x00B52268
 		private CommonTabData GetCommonData(int index)
 		{
 			AchievementGroupData groupData = this.AchievementGroupDataList[index];
 			return this.CreateCommonTabData(groupData);
 		}
 
-		// Token: 0x0603387F RID: 211071 RVA: 0x00C0AB79 File Offset: 0x00C08D79
+		// Token: 0x060286EA RID: 165610 RVA: 0x00B54089 File Offset: 0x00B52289
 		private CommonTabItemData CreateTabItemData(AchievementGroupData groupData)
 		{
 			return new CommonTabItemData
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			};
 		}
 
-		// Token: 0x06033880 RID: 211072 RVA: 0x00C0ABAB File Offset: 0x00C08DAB
+		// Token: 0x060286EB RID: 165611 RVA: 0x00B540BB File Offset: 0x00B522BB
 		private CommonTabData CreateCommonTabData(AchievementGroupData groupData)
 		{
 			return new CommonTabData(groupData.GetTexture(), new CommonTabTitleData(groupData.GetTitleId(), Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06033881 RID: 211073 RVA: 0x00C0ABCC File Offset: 0x00C08DCC
+		// Token: 0x060286EC RID: 165612 RVA: 0x00B540DC File Offset: 0x00B522DC
 		public void RefreshAchievementList(AchievementGroupData groupData)
 		{
 			this.CurrentGroupId = groupData.GetId();
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, false);
 		}
 
-		// Token: 0x0401B564 RID: 111972
+		// Token: 0x04015F37 RID: 89911
 		[Nullable(new byte[]
 		{
 			2,
@@ -160,10 +160,10 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401B565 RID: 111973
+		// Token: 0x04015F38 RID: 89912
 		public List<AchievementGroupData> AchievementGroupDataList = new List<AchievementGroupData>();
 
-		// Token: 0x0401B566 RID: 111974
+		// Token: 0x04015F39 RID: 89913
 		[Nullable(new byte[]
 		{
 			2,
@@ -172,20 +172,20 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public GenericScrollViewNew<RoguelikeAchievementItem, AchievementData> AchievementScrollView;
 
-		// Token: 0x0401B567 RID: 111975
+		// Token: 0x04015F3A RID: 89914
 		private int CurrentGroupId;
 
-		// Token: 0x0200AF91 RID: 44945
+		// Token: 0x020099C6 RID: 39366
 		[NullableContext(0)]
 		private class ERoguelikeAchievementViewDefine
 		{
-			// Token: 0x040354DE RID: 218334
+			// Token: 0x0402FF11 RID: 196369
 			public const int CaptionItem = 0;
 
-			// Token: 0x040354DF RID: 218335
+			// Token: 0x0402FF12 RID: 196370
 			public const int PanelContent = 1;
 
-			// Token: 0x040354E0 RID: 218336
+			// Token: 0x0402FF13 RID: 196371
 			public const int ScrollViewItem = 2;
 		}
 	}

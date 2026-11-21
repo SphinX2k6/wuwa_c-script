@@ -7,11 +7,11 @@ using System.Runtime.CompilerServices;
 public class AudioFilterState : IFilterState
 {
 	// Token: 0x1700000B RID: 11
-	// (get) Token: 0x06000096 RID: 150 RVA: 0x00005D43 File Offset: 0x00003F43
-	// (set) Token: 0x06000097 RID: 151 RVA: 0x00005D4B File Offset: 0x00003F4B
+	// (get) Token: 0x06000096 RID: 150 RVA: 0x00005A3F File Offset: 0x00003C3F
+	// (set) Token: 0x06000097 RID: 151 RVA: 0x00005A47 File Offset: 0x00003C47
 	public string State { get; set; } = "none";
 
-	// Token: 0x06000098 RID: 152 RVA: 0x00005D54 File Offset: 0x00003F54
+	// Token: 0x06000098 RID: 152 RVA: 0x00005A50 File Offset: 0x00003C50
 	public AudioFilterState(int uid, string state, int? priority = null)
 	{
 		this.Uid = uid;
@@ -19,7 +19,7 @@ public class AudioFilterState : IFilterState
 		this.Priority = priority.GetValueOrDefault();
 	}
 
-	// Token: 0x06000099 RID: 153 RVA: 0x00005D84 File Offset: 0x00003F84
+	// Token: 0x06000099 RID: 153 RVA: 0x00005A80 File Offset: 0x00003C80
 	public static int Compare(AudioFilterState a, AudioFilterState b)
 	{
 		int num = b.Priority - a.Priority;

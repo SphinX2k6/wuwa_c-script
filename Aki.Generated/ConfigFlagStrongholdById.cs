@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000305 RID: 773
+	// Token: 0x0200031A RID: 794
 	public class ConfigFlagStrongholdById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001223 RID: 4643 RVA: 0x000C0208 File Offset: 0x000BE408
+		// Token: 0x060012A1 RID: 4769 RVA: 0x000C6714 File Offset: 0x000C4914
 		static ConfigFlagStrongholdById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlagStrongholdById.CreateStaticDefaultValue), new Action(ConfigFlagStrongholdById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001224 RID: 4644 RVA: 0x000C0228 File Offset: 0x000BE428
+		// Token: 0x060012A2 RID: 4770 RVA: 0x000C6734 File Offset: 0x000C4934
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlagStrongholdById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001225 RID: 4645 RVA: 0x000C02A7 File Offset: 0x000BE4A7
+		// Token: 0x060012A3 RID: 4771 RVA: 0x000C67B3 File Offset: 0x000C49B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlagStrongholdById.LogPair = null;
 			ConfigFlagStrongholdById.HandleId = 0;
 		}
 
-		// Token: 0x06001226 RID: 4646 RVA: 0x000C02B5 File Offset: 0x000BE4B5
+		// Token: 0x060012A4 RID: 4772 RVA: 0x000C67C1 File Offset: 0x000C49C1
 		public static void Init()
 		{
 			ConfigFlagStrongholdById.HandleId = ConfigCommon.InitDataStatement(ConfigFlagStrongholdById.HandleId, "db_flagchallenge.db", "select BinData from `FlagStronghold` where Id=?");
 		}
 
-		// Token: 0x06001227 RID: 4647 RVA: 0x000C02D0 File Offset: 0x000BE4D0
+		// Token: 0x060012A5 RID: 4773 RVA: 0x000C67DC File Offset: 0x000C49DC
 		public static FlagStronghold? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFlagStrongholdById.HandleId, ConfigFlagStrongholdById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FlagStronghold?(rootAsFlagStronghold);
 		}
 
-		// Token: 0x04001507 RID: 5383
+		// Token: 0x0400159A RID: 5530
 		private const string DB = "db_flagchallenge.db";
 
-		// Token: 0x04001508 RID: 5384
+		// Token: 0x0400159B RID: 5531
 		private const string FILE = "c.插旗活动局外.xlsx";
 
-		// Token: 0x04001509 RID: 5385
+		// Token: 0x0400159C RID: 5532
 		private const string TABLE = "FlagStronghold";
 
-		// Token: 0x0400150A RID: 5386
+		// Token: 0x0400159D RID: 5533
 		private const string COMMAND = "select BinData from `FlagStronghold` where Id=?";
 
-		// Token: 0x0400150B RID: 5387
+		// Token: 0x0400159E RID: 5534
 		private const string KEY_PREFIX = "FlagStrongholdById";
 
-		// Token: 0x0400150C RID: 5388
+		// Token: 0x0400159F RID: 5535
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400150D RID: 5389
+		// Token: 0x040015A0 RID: 5536
 		private static int HandleId;
 	}
 }

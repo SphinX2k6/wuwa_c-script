@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.HotPatchProcedure
 {
-	// Token: 0x020001D6 RID: 470
+	// Token: 0x020001DA RID: 474
 	public class IosHotPatchProcedure : MobileHotPatchProcedure
 	{
-		// Token: 0x06000C7C RID: 3196 RVA: 0x0004C8E7 File Offset: 0x0004AAE7
+		// Token: 0x06000CB3 RID: 3251 RVA: 0x0004F0FB File Offset: 0x0004D2FB
 		[NullableContext(1)]
 		public IosHotPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 		}
 
-		// Token: 0x06000C7D RID: 3197 RVA: 0x0004C8F4 File Offset: 0x0004AAF4
+		// Token: 0x06000CB4 RID: 3252 RVA: 0x0004F108 File Offset: 0x0004D308
 		protected override UniTask<bool> DownloadFiles(bool bUseBgDownload, [Nullable(1)] params ResourceUpdate[] updates)
 		{
 			IosHotPatchProcedure.<DownloadFiles>d__1 <DownloadFiles>d__;

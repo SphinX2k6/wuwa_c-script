@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D67 RID: 28007
+	// Token: 0x02005EE5 RID: 24293
 	public class LevelConditionOnSkillButtonDataRefresh : LevelConditionBase
 	{
-		// Token: 0x06044774 RID: 280436 RVA: 0x010E2A90 File Offset: 0x010E0C90
+		// Token: 0x0603A8D6 RID: 239830 RVA: 0x0108CC48 File Offset: 0x0108AE48
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -50,20 +50,20 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return false;
 		}
 
-		// Token: 0x040239D8 RID: 145880
+		// Token: 0x0401EC7A RID: 126074
 		private int LastIndex = -1;
 
-		// Token: 0x040239D9 RID: 145881
+		// Token: 0x0401EC7B RID: 126075
 		private int LastSkillId = -1;
 
-		// Token: 0x040239DA RID: 145882
+		// Token: 0x0401EC7C RID: 126076
 		private int LastViewId = -1;
 
-		// Token: 0x0200CCA0 RID: 52384
+		// Token: 0x0200B890 RID: 47248
 		[EnumExtensions]
 		public enum EArgsType
 		{
-			// Token: 0x0403DB7C RID: 252796
+			// Token: 0x04038F9E RID: 233374
 			[EnumStringMember("skillId")]
 			ActionType
 		}

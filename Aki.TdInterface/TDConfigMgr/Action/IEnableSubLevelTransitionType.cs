@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019F2 RID: 6642
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B85 RID: 7045
 	public class IEnableSubLevelTransitionType
 	{
-		// Token: 0x06008E4F RID: 36431 RVA: 0x0014CF64 File Offset: 0x0014B164
+		// Token: 0x060095B1 RID: 38321 RVA: 0x0015CDD4 File Offset: 0x0015AFD4
 		private IEnableSubLevelTransitionType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E50 RID: 36432 RVA: 0x0014CF9C File Offset: 0x0014B19C
+		// Token: 0x060095B2 RID: 38322 RVA: 0x0015CE0C File Offset: 0x0015B00C
 		public static IEnableSubLevelTransitionType Create([Nullable(2)] IEnableSubLevelTransitionType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E51 RID: 36433 RVA: 0x0014CFAF File Offset: 0x0014B1AF
+		// Token: 0x060095B3 RID: 38323 RVA: 0x0015CE1F File Offset: 0x0015B01F
 		public static IEnableSubLevelTransitionType CreateFromSetValue([Nullable(2)] IEnableSubLevelTransitionType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E52 RID: 36434 RVA: 0x0014CFC2 File Offset: 0x0014B1C2
+		// Token: 0x060095B4 RID: 38324 RVA: 0x0015CE32 File Offset: 0x0015B032
 		public IEnableSubLevelTransitionType_SetValue ToSetValue()
 		{
 			return new IEnableSubLevelTransitionType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D91 RID: 11665
-		// (get) Token: 0x06008E53 RID: 36435 RVA: 0x0014CFD5 File Offset: 0x0014B1D5
-		// (set) Token: 0x06008E54 RID: 36436 RVA: 0x0014D000 File Offset: 0x0014B200
+		// Token: 0x17002F9D RID: 12189
+		// (get) Token: 0x060095B5 RID: 38325 RVA: 0x0015CE45 File Offset: 0x0015B045
+		// (set) Token: 0x060095B6 RID: 38326 RVA: 0x0015CE70 File Offset: 0x0015B070
 		public virtual EEnableSubLevelTransitionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400583E RID: 22590
+		// Token: 0x04005CA0 RID: 23712
 		[Nullable(2)]
 		protected IEnableSubLevelTransitionType FbInstance;
 
-		// Token: 0x0400583F RID: 22591
+		// Token: 0x04005CA1 RID: 23713
 		[Nullable(2)]
 		protected IEnableSubLevelTransitionType_SetValue PocoInterface;
 	}

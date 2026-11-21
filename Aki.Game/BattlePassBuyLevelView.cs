@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200231D RID: 8989
+// Token: 0x02001802 RID: 6146
 [NullableContext(1)]
 [Nullable(0)]
 public class BattlePassBuyLevelView : UiViewBase
 {
-	// Token: 0x06011C4A RID: 72778 RVA: 0x0045FA1A File Offset: 0x0045DC1A
+	// Token: 0x0600F0FA RID: 61690 RVA: 0x0046CAC2 File Offset: 0x0046ACC2
 	public BattlePassBuyLevelView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011C4B RID: 72779 RVA: 0x0045FA24 File Offset: 0x0045DC24
+	// Token: 0x0600F0FB RID: 61691 RVA: 0x0046CACC File Offset: 0x0046ACCC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -61,20 +61,20 @@ public class BattlePassBuyLevelView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011C4C RID: 72780 RVA: 0x0045FBF7 File Offset: 0x0045DDF7
+	// Token: 0x0600F0FC RID: 61692 RVA: 0x0046CC9F File Offset: 0x0046AE9F
 	private void OnClickCancel()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011C4D RID: 72781 RVA: 0x0045FC00 File Offset: 0x0045DE00
+	// Token: 0x0600F0FD RID: 61693 RVA: 0x0046CCA8 File Offset: 0x0046AEA8
 	private void OnClickBuy()
 	{
 		BattlePassController.Instance.RequestBuyBattlePassLevel(this.NumberSelect.GetSelectNumber());
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011C4E RID: 72782 RVA: 0x0045FC20 File Offset: 0x0045DE20
+	// Token: 0x0600F0FE RID: 61694 RVA: 0x0046CCC8 File Offset: 0x0046AEC8
 	protected override void OnStart()
 	{
 		this.CurrentLevel = BattlePassModel.Instance.BattlePassLevel;
@@ -88,25 +88,25 @@ public class BattlePassBuyLevelView : UiViewBase
 		this.RewardList = new List<TItem>();
 	}
 
-	// Token: 0x06011C4F RID: 72783 RVA: 0x0045FD01 File Offset: 0x0045DF01
+	// Token: 0x0600F0FF RID: 61695 RVA: 0x0046CDA9 File Offset: 0x0046AFA9
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BattlePassMainViewHide, new Action(this.OnMainViewHide));
 	}
 
-	// Token: 0x06011C50 RID: 72784 RVA: 0x0045FD1F File Offset: 0x0045DF1F
+	// Token: 0x0600F100 RID: 61696 RVA: 0x0046CDC7 File Offset: 0x0046AFC7
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BattlePassMainViewHide, new Action(this.OnMainViewHide));
 	}
 
-	// Token: 0x06011C51 RID: 72785 RVA: 0x0045FD3D File Offset: 0x0045DF3D
+	// Token: 0x0600F101 RID: 61697 RVA: 0x0046CDE5 File Offset: 0x0046AFE5
 	private void OnMainViewHide()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011C52 RID: 72786 RVA: 0x0045FD48 File Offset: 0x0045DF48
+	// Token: 0x0600F102 RID: 61698 RVA: 0x0046CDF0 File Offset: 0x0046AFF0
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -131,31 +131,31 @@ public class BattlePassBuyLevelView : UiViewBase
 		this.NumberSelect.Init(data);
 	}
 
-	// Token: 0x06011C53 RID: 72787 RVA: 0x0045FE0C File Offset: 0x0045E00C
+	// Token: 0x0600F103 RID: 61699 RVA: 0x0046CEB4 File Offset: 0x0046B0B4
 	private void BeforeEnterPayShop()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011C54 RID: 72788 RVA: 0x0045FE15 File Offset: 0x0045E015
+	// Token: 0x0600F104 RID: 61700 RVA: 0x0046CEBD File Offset: 0x0046B0BD
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06011C55 RID: 72789 RVA: 0x0045FE1C File Offset: 0x0045E01C
+	// Token: 0x0600F105 RID: 61701 RVA: 0x0046CEC4 File Offset: 0x0046B0C4
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew("Text_BattlePassLevelBuy2_Text", new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x06011C56 RID: 72790 RVA: 0x0045FE33 File Offset: 0x0045E033
+	// Token: 0x0600F106 RID: 61702 RVA: 0x0046CEDB File Offset: 0x0046B0DB
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.Refresh(selectValue);
 	}
 
-	// Token: 0x06011C57 RID: 72791 RVA: 0x0045FE3C File Offset: 0x0045E03C
+	// Token: 0x0600F107 RID: 61703 RVA: 0x0046CEE4 File Offset: 0x0046B0E4
 	private void Refresh(int buyLevel)
 	{
 		int num = this.CurrentLevel + buyLevel;
@@ -177,7 +177,7 @@ public class BattlePassBuyLevelView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011C58 RID: 72792 RVA: 0x0045FEF8 File Offset: 0x0045E0F8
+	// Token: 0x0600F108 RID: 61704 RVA: 0x0046CFA0 File Offset: 0x0046B1A0
 	private void RefreshGrids()
 	{
 		int targetLevel = this.TargetLevel;
@@ -188,7 +188,7 @@ public class BattlePassBuyLevelView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011C59 RID: 72793 RVA: 0x0045FF34 File Offset: 0x0045E134
+	// Token: 0x0600F109 RID: 61705 RVA: 0x0046CFDC File Offset: 0x0046B1DC
 	private UniTask RefreshingGrids(int targetLevel)
 	{
 		BattlePassBuyLevelView.<RefreshingGrids>d__24 <RefreshingGrids>d__;
@@ -200,7 +200,7 @@ public class BattlePassBuyLevelView : UiViewBase
 		return <RefreshingGrids>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011C5A RID: 72794 RVA: 0x0045FF7F File Offset: 0x0045E17F
+	// Token: 0x0600F10A RID: 61706 RVA: 0x0046D027 File Offset: 0x0046B227
 	protected override void OnDestroy()
 	{
 		this.TargetLevel = 0;
@@ -211,7 +211,7 @@ public class BattlePassBuyLevelView : UiViewBase
 		this.NumberSelect = null;
 	}
 
-	// Token: 0x040086D0 RID: 34512
+	// Token: 0x04008813 RID: 34835
 	[Nullable(new byte[]
 	{
 		2,
@@ -219,52 +219,52 @@ public class BattlePassBuyLevelView : UiViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x040086D1 RID: 34513
+	// Token: 0x04008814 RID: 34836
 	[Nullable(2)]
 	private List<TItem> RewardList;
 
-	// Token: 0x040086D2 RID: 34514
+	// Token: 0x04008815 RID: 34837
 	[Nullable(2)]
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x040086D3 RID: 34515
+	// Token: 0x04008816 RID: 34838
 	private int CurrentLevel;
 
-	// Token: 0x040086D4 RID: 34516
+	// Token: 0x04008817 RID: 34839
 	private int CostId;
 
-	// Token: 0x040086D5 RID: 34517
+	// Token: 0x04008818 RID: 34840
 	private int CostCount;
 
-	// Token: 0x040086D6 RID: 34518
+	// Token: 0x04008819 RID: 34841
 	private int TargetLevel;
 
-	// Token: 0x040086D7 RID: 34519
+	// Token: 0x0400881A RID: 34842
 	private bool IsRefreshingGrids;
 
-	// Token: 0x0200889A RID: 34970
+	// Token: 0x02007A23 RID: 31267
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402C657 RID: 181847
+		// Token: 0x0402796B RID: 162155
 		ItemScrollView,
-		// Token: 0x0402C658 RID: 181848
+		// Token: 0x0402796C RID: 162156
 		TxtTitle,
-		// Token: 0x0402C659 RID: 181849
+		// Token: 0x0402796D RID: 162157
 		BtnCancel,
-		// Token: 0x0402C65A RID: 181850
+		// Token: 0x0402796E RID: 162158
 		BtnBuy,
-		// Token: 0x0402C65B RID: 181851
+		// Token: 0x0402796F RID: 162159
 		TxtDescribe,
-		// Token: 0x0402C65C RID: 181852
+		// Token: 0x04027970 RID: 162160
 		NumberControlItem,
-		// Token: 0x0402C65D RID: 181853
+		// Token: 0x04027971 RID: 162161
 		TxtCost,
-		// Token: 0x0402C65E RID: 181854
+		// Token: 0x04027972 RID: 162162
 		InsufficientTip,
-		// Token: 0x0402C65F RID: 181855
+		// Token: 0x04027973 RID: 162163
 		IconCost,
-		// Token: 0x0402C660 RID: 181856
+		// Token: 0x04027974 RID: 162164
 		TxtInsufficient
 	}
 }

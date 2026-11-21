@@ -4,54 +4,54 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058E4 RID: 22756
+	// Token: 0x020048BC RID: 18620
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PrewarFormationData
 	{
-		// Token: 0x06039CE0 RID: 236768 RVA: 0x00DBB4B4 File Offset: 0x00DB96B4
+		// Token: 0x0602EC03 RID: 191491 RVA: 0x00D0A40C File Offset: 0x00D0860C
 		public int GetPlayerId()
 		{
 			return this.PlayerId;
 		}
 
-		// Token: 0x06039CE1 RID: 236769 RVA: 0x00DBB4BC File Offset: 0x00DB96BC
+		// Token: 0x0602EC04 RID: 191492 RVA: 0x00D0A414 File Offset: 0x00D08614
 		public void SetPlayerId(int value)
 		{
 			this.PlayerId = value;
 		}
 
-		// Token: 0x06039CE2 RID: 236770 RVA: 0x00DBB4C5 File Offset: 0x00DB96C5
+		// Token: 0x0602EC05 RID: 191493 RVA: 0x00D0A41D File Offset: 0x00D0861D
 		public int GetConfigId()
 		{
 			return this.ConfigId;
 		}
 
-		// Token: 0x06039CE3 RID: 236771 RVA: 0x00DBB4CD File Offset: 0x00DB96CD
+		// Token: 0x0602EC06 RID: 191494 RVA: 0x00D0A425 File Offset: 0x00D08625
 		public void SetConfigId(int value)
 		{
 			this.ConfigId = value;
 		}
 
-		// Token: 0x06039CE4 RID: 236772 RVA: 0x00DBB4D6 File Offset: 0x00DB96D6
+		// Token: 0x0602EC07 RID: 191495 RVA: 0x00D0A42E File Offset: 0x00D0862E
 		public int GetSkinId()
 		{
 			return this.SkinId;
 		}
 
-		// Token: 0x06039CE5 RID: 236773 RVA: 0x00DBB4DE File Offset: 0x00DB96DE
+		// Token: 0x0602EC08 RID: 191496 RVA: 0x00D0A436 File Offset: 0x00D08636
 		public void SetSkinId(int value)
 		{
 			this.SkinId = value;
 		}
 
-		// Token: 0x06039CE6 RID: 236774 RVA: 0x00DBB4E7 File Offset: 0x00DB96E7
+		// Token: 0x0602EC09 RID: 191497 RVA: 0x00D0A43F File Offset: 0x00D0863F
 		public bool IsEmpty()
 		{
 			return this.ConfigId == 0;
 		}
 
-		// Token: 0x06039CE7 RID: 236775 RVA: 0x00DBB4F4 File Offset: 0x00DB96F4
+		// Token: 0x0602EC0A RID: 191498 RVA: 0x00D0A44C File Offset: 0x00D0864C
 		public bool IsLeader()
 		{
 			int playerId = this.PlayerId;
@@ -60,136 +60,136 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			return playerId == num.GetValueOrDefault() & num != null;
 		}
 
-		// Token: 0x06039CE8 RID: 236776 RVA: 0x00DBB53C File Offset: 0x00DB973C
+		// Token: 0x0602EC0B RID: 191499 RVA: 0x00D0A494 File Offset: 0x00D08694
 		public bool IsSelf()
 		{
 			return this.PlayerId == CreatureModel.Instance.GetPlayerId();
 		}
 
-		// Token: 0x06039CE9 RID: 236777 RVA: 0x00DBB550 File Offset: 0x00DB9750
+		// Token: 0x0602EC0C RID: 191500 RVA: 0x00D0A4A8 File Offset: 0x00D086A8
 		public int GetLevel()
 		{
 			return this.Level;
 		}
 
-		// Token: 0x06039CEA RID: 236778 RVA: 0x00DBB558 File Offset: 0x00DB9758
+		// Token: 0x0602EC0D RID: 191501 RVA: 0x00D0A4B0 File Offset: 0x00D086B0
 		public void SetLevel(int value)
 		{
 			this.Level = value;
 		}
 
-		// Token: 0x06039CEB RID: 236779 RVA: 0x00DBB561 File Offset: 0x00DB9761
+		// Token: 0x0602EC0E RID: 191502 RVA: 0x00D0A4B9 File Offset: 0x00D086B9
 		public bool GetIsReady()
 		{
 			return this.IsReady;
 		}
 
-		// Token: 0x06039CEC RID: 236780 RVA: 0x00DBB569 File Offset: 0x00DB9769
+		// Token: 0x0602EC0F RID: 191503 RVA: 0x00D0A4C1 File Offset: 0x00D086C1
 		public void SetIsReady(bool value)
 		{
 			this.IsReady = value;
 		}
 
-		// Token: 0x06039CED RID: 236781 RVA: 0x00DBB572 File Offset: 0x00DB9772
+		// Token: 0x0602EC10 RID: 191504 RVA: 0x00D0A4CA File Offset: 0x00D086CA
 		public string GetPlayerName()
 		{
 			return InstanceDungeonModel.Instance.GetMatchTeamName(this.PlayerId) ?? "";
 		}
 
-		// Token: 0x06039CEE RID: 236782 RVA: 0x00DBB58D File Offset: 0x00DB978D
+		// Token: 0x0602EC11 RID: 191505 RVA: 0x00D0A4E5 File Offset: 0x00D086E5
 		public string GetPlayerOnlineId()
 		{
 			return InstanceDungeonModel.Instance.GetMatchTeamOnlineId(this.PlayerId) ?? "";
 		}
 
-		// Token: 0x06039CEF RID: 236783 RVA: 0x00DBB5A8 File Offset: 0x00DB97A8
+		// Token: 0x0602EC12 RID: 191506 RVA: 0x00D0A500 File Offset: 0x00D08700
 		public void SetOnlineNumber(int onlineNumber)
 		{
 			this.OnlineNumber = onlineNumber;
 		}
 
-		// Token: 0x06039CF0 RID: 236784 RVA: 0x00DBB5B1 File Offset: 0x00DB97B1
+		// Token: 0x0602EC13 RID: 191507 RVA: 0x00D0A509 File Offset: 0x00D08709
 		public int GetOnlineNumber()
 		{
 			return this.OnlineNumber;
 		}
 
-		// Token: 0x06039CF1 RID: 236785 RVA: 0x00DBB5B9 File Offset: 0x00DB97B9
+		// Token: 0x0602EC14 RID: 191508 RVA: 0x00D0A511 File Offset: 0x00D08711
 		public int GetLife()
 		{
 			return this.Life;
 		}
 
-		// Token: 0x06039CF2 RID: 236786 RVA: 0x00DBB5C1 File Offset: 0x00DB97C1
+		// Token: 0x0602EC15 RID: 191509 RVA: 0x00D0A519 File Offset: 0x00D08719
 		public void SetLife(int value)
 		{
 			this.Life = value;
 		}
 
-		// Token: 0x06039CF3 RID: 236787 RVA: 0x00DBB5CA File Offset: 0x00DB97CA
+		// Token: 0x0602EC16 RID: 191510 RVA: 0x00D0A522 File Offset: 0x00D08722
 		public int GetMaxLife()
 		{
 			return this.MaxLife;
 		}
 
-		// Token: 0x06039CF4 RID: 236788 RVA: 0x00DBB5D2 File Offset: 0x00DB97D2
+		// Token: 0x0602EC17 RID: 191511 RVA: 0x00D0A52A File Offset: 0x00D0872A
 		public void SetMaxLife(int value)
 		{
 			this.MaxLife = value;
 		}
 
-		// Token: 0x06039CF5 RID: 236789 RVA: 0x00DBB5DB File Offset: 0x00DB97DB
+		// Token: 0x0602EC18 RID: 191512 RVA: 0x00D0A533 File Offset: 0x00D08733
 		public int GetIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x06039CF6 RID: 236790 RVA: 0x00DBB5E3 File Offset: 0x00DB97E3
+		// Token: 0x0602EC19 RID: 191513 RVA: 0x00D0A53B File Offset: 0x00D0873B
 		public void SetIndex(int value)
 		{
 			this.Index = value;
 		}
 
-		// Token: 0x06039CF7 RID: 236791 RVA: 0x00DBB5EC File Offset: 0x00DB97EC
+		// Token: 0x0602EC1A RID: 191514 RVA: 0x00D0A544 File Offset: 0x00D08744
 		public int GetMultiSkillBranchId()
 		{
 			return this.MultiSkillBranchId;
 		}
 
-		// Token: 0x06039CF8 RID: 236792 RVA: 0x00DBB5F4 File Offset: 0x00DB97F4
+		// Token: 0x0602EC1B RID: 191515 RVA: 0x00D0A54C File Offset: 0x00D0874C
 		public void SetMultiSkillBranchId(int value)
 		{
 			this.MultiSkillBranchId = value;
 		}
 
-		// Token: 0x0401E2C9 RID: 123593
+		// Token: 0x04018D66 RID: 101734
 		private int PlayerId;
 
-		// Token: 0x0401E2CA RID: 123594
+		// Token: 0x04018D67 RID: 101735
 		private int ConfigId;
 
-		// Token: 0x0401E2CB RID: 123595
+		// Token: 0x04018D68 RID: 101736
 		private int SkinId;
 
-		// Token: 0x0401E2CC RID: 123596
+		// Token: 0x04018D69 RID: 101737
 		private int Level;
 
-		// Token: 0x0401E2CD RID: 123597
+		// Token: 0x04018D6A RID: 101738
 		private bool IsReady;
 
-		// Token: 0x0401E2CE RID: 123598
+		// Token: 0x04018D6B RID: 101739
 		private int OnlineNumber = -1;
 
-		// Token: 0x0401E2CF RID: 123599
+		// Token: 0x04018D6C RID: 101740
 		private int Life;
 
-		// Token: 0x0401E2D0 RID: 123600
+		// Token: 0x04018D6D RID: 101741
 		private int MaxLife = 1;
 
-		// Token: 0x0401E2D1 RID: 123601
+		// Token: 0x04018D6E RID: 101742
 		private int Index;
 
-		// Token: 0x0401E2D2 RID: 123602
+		// Token: 0x04018D6F RID: 101743
 		private int MultiSkillBranchId;
 	}
 }

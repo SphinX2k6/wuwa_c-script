@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 {
-	// Token: 0x020070AA RID: 28842
+	// Token: 0x02006309 RID: 25353
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DungeonEntranceComponent : EntityComponent
 	{
-		// Token: 0x06046467 RID: 287847 RVA: 0x01197488 File Offset: 0x01195688
+		// Token: 0x0603D537 RID: 251191 RVA: 0x011B97D4 File Offset: 0x011B79D4
 		protected override bool OnStart()
 		{
 			this.StateComponent = base.Entity.GetComponent<SceneItemStateComponent>();
@@ -22,12 +22,12 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x06046468 RID: 287848 RVA: 0x01197505 File Offset: 0x01195705
+		// Token: 0x0603D538 RID: 251192 RVA: 0x011B9851 File Offset: 0x011B7A51
 		protected override void OnActivate()
 		{
 		}
 
-		// Token: 0x06046469 RID: 287849 RVA: 0x01197508 File Offset: 0x01195708
+		// Token: 0x0603D539 RID: 251193 RVA: 0x011B9854 File Offset: 0x011B7A54
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnEntityStateChange));
@@ -36,25 +36,25 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604646A RID: 287850 RVA: 0x01197564 File Offset: 0x01195764
+		// Token: 0x0603D53A RID: 251194 RVA: 0x011B98B0 File Offset: 0x011B7AB0
 		private void OnEntityStateChange(int stateId, bool isReady)
 		{
 			this.HandlePerformanceState(null);
 		}
 
-		// Token: 0x0604646B RID: 287851 RVA: 0x01197580 File Offset: 0x01195780
+		// Token: 0x0603D53B RID: 251195 RVA: 0x011B98CC File Offset: 0x011B7ACC
 		private void OnEntityStatePrechangeInSequence(int stateId)
 		{
 			this.HandlePerformanceState(new int?(stateId));
 		}
 
-		// Token: 0x0604646C RID: 287852 RVA: 0x0119758E File Offset: 0x0119578E
+		// Token: 0x0603D53C RID: 251196 RVA: 0x011B98DA File Offset: 0x011B7ADA
 		public void RegisterRestoreCb(Action cb)
 		{
 			this.RestoreCbList.Add(cb);
 		}
 
-		// Token: 0x0604646D RID: 287853 RVA: 0x0119759C File Offset: 0x0119579C
+		// Token: 0x0603D53D RID: 251197 RVA: 0x011B98E8 File Offset: 0x011B7AE8
 		public void Restore()
 		{
 			if (this.RestoreCbList == null || this.RestoreCbList.Count == 0)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.RestoreCbList.Clear();
 		}
 
-		// Token: 0x0604646E RID: 287854 RVA: 0x01197610 File Offset: 0x01195810
+		// Token: 0x0603D53E RID: 251198 RVA: 0x011B995C File Offset: 0x011B7B5C
 		private void HandlePerformanceState(int? stateId = null)
 		{
 			if (stateId != null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x0604646F RID: 287855 RVA: 0x011976D0 File Offset: 0x011958D0
+		// Token: 0x0603D53F RID: 251199 RVA: 0x011B9A1C File Offset: 0x011B7C1C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -101,36 +101,60 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 				return false;
 			}
 			DungeonEntranceComponent dungeonEntranceComponent = (DungeonEntranceComponent)componentTemplate;
-			if (base.CanResetComponentProperty("StateComponent"))
+			if (dungeonEntranceComponent.StateComponent == null)
 			{
-				if (dungeonEntranceComponent.StateComponent == null)
-				{
-					this.StateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComponent), "StateComponent"))
-				{
-					return false;
-				}
+				this.StateComponent = null;
 			}
-			if (base.CanResetComponentProperty("RestoreCbList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComponent), "StateComponent"))
 			{
-				if (dungeonEntranceComponent.RestoreCbList == null)
-				{
-					this.RestoreCbList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<Action>>(this.RestoreCbList), "RestoreCbList"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (dungeonEntranceComponent.RestoreCbList == null)
+			{
+				this.RestoreCbList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RestoreCbList), "RestoreCbList"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024D3A RID: 150842
+		// Token: 0x17007417 RID: 29719
+		// (get) Token: 0x0603D540 RID: 251200 RVA: 0x011B9A92 File Offset: 0x011B7C92
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007418 RID: 29720
+		// (get) Token: 0x0603D541 RID: 251201 RVA: 0x011B9A95 File Offset: 0x011B7C95
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007419 RID: 29721
+		// (get) Token: 0x0603D542 RID: 251202 RVA: 0x011B9A98 File Offset: 0x011B7C98
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402087E RID: 133246
 		[Nullable(2)]
 		private SceneItemStateComponent StateComponent;
 
-		// Token: 0x04024D3B RID: 150843
+		// Token: 0x0402087F RID: 133247
 		[Nullable(new byte[]
 		{
 			2,

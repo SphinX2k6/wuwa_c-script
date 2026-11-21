@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006146 RID: 24902
+	// Token: 0x020050C4 RID: 20676
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeBattleTopPanel : UiPanelBase
 	{
-		// Token: 0x0603EF26 RID: 257830 RVA: 0x00F34800 File Offset: 0x00F32A00
+		// Token: 0x06033BE6 RID: 211942 RVA: 0x00E7B6E0 File Offset: 0x00E798E0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -53,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EF27 RID: 257831 RVA: 0x00F34994 File Offset: 0x00F32B94
+		// Token: 0x06033BE7 RID: 211943 RVA: 0x00E7B874 File Offset: 0x00E79A74
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeBattleTopPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EF28 RID: 257832 RVA: 0x00F349D8 File Offset: 0x00F32BD8
+		// Token: 0x06033BE8 RID: 211944 RVA: 0x00E7B8B8 File Offset: 0x00E79AB8
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshBlessingLayout();
 		}
 
-		// Token: 0x0603EF29 RID: 257833 RVA: 0x00F34A48 File Offset: 0x00F32C48
+		// Token: 0x06033BE9 RID: 211945 RVA: 0x00E7B928 File Offset: 0x00E79B28
 		public void SetCurrencyEnableClick(bool bEnable)
 		{
 			RoverlikeTopCurrencyItem currencyItem = this.CurrencyItem;
@@ -84,13 +83,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			currencyItem.SetBtnEnable(bEnable);
 		}
 
-		// Token: 0x0603EF2A RID: 257834 RVA: 0x00F34A5B File Offset: 0x00F32C5B
+		// Token: 0x06033BEA RID: 211946 RVA: 0x00E7B93B File Offset: 0x00E79B3B
 		public void SetRefreshEnabled(bool bEnable)
 		{
 			this.RefreshEnabled = bEnable;
 		}
 
-		// Token: 0x0603EF2B RID: 257835 RVA: 0x00F34A64 File Offset: 0x00F32C64
+		// Token: 0x06033BEB RID: 211947 RVA: 0x00E7B944 File Offset: 0x00E79B44
 		public void StartShow()
 		{
 			this.RefreshBlessingLayout();
@@ -106,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Add(EEventName.ActivityDataInitComplete, new Action(this.OnActivityDataInitComplete));
 		}
 
-		// Token: 0x0603EF2C RID: 257836 RVA: 0x00F34AC8 File Offset: 0x00F32CC8
+		// Token: 0x06033BEC RID: 211948 RVA: 0x00E7B9A8 File Offset: 0x00E79BA8
 		public void EndShow()
 		{
 			RoverlikeTopCurrencyItem currencyItem = this.CurrencyItem;
@@ -121,16 +120,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Remove(EEventName.ActivityDataInitComplete, new Action(this.OnActivityDataInitComplete));
 		}
 
-		// Token: 0x0603EF2D RID: 257837 RVA: 0x00F34B28 File Offset: 0x00F32D28
+		// Token: 0x06033BED RID: 211949 RVA: 0x00E7BA08 File Offset: 0x00E79C08
 		private void InitBlessingSlot()
 		{
 			RoverlikeActivityController instance = RoverlikeActivityController.Instance;
 			RoverlikeActivityData roverlikeActivityData = (instance != null) ? instance.GetCurrentActivityData() : null;
 			RoverRogueActivity? roverRogueActivity = (roverlikeActivityData != null) ? roverlikeActivityData.GetParamConfig() : null;
-			this.BlessSlotIds = ((roverRogueActivity != null) ? roverRogueActivity.Value.SlotList().ToList<int>() : new List<int>());
+			this.BlessSlotIds = ((roverRogueActivity != null) ? new List<int>(roverRogueActivity.Value.SlotList()) : new List<int>());
 		}
 
-		// Token: 0x0603EF2E RID: 257838 RVA: 0x00F34B88 File Offset: 0x00F32D88
+		// Token: 0x06033BEE RID: 211950 RVA: 0x00E7BA68 File Offset: 0x00E79C68
 		private void RefreshBlessingLayout()
 		{
 			IBlessingDisplayDiff blessingDisplayDiff = this.ComputeDisplayDiff();
@@ -153,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.AnimInitialized = true;
 		}
 
-		// Token: 0x0603EF2F RID: 257839 RVA: 0x00F34C18 File Offset: 0x00F32E18
+		// Token: 0x06033BEF RID: 211951 RVA: 0x00E7BAF8 File Offset: 0x00E79CF8
 		private void ApplyDisplay(bool playAnim)
 		{
 			IBlessingDisplayDiff blessingDisplayDiff = this.ComputeDisplayDiff();
@@ -202,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.CachedPassiveCount = blessingDisplayDiff.Count;
 		}
 
-		// Token: 0x0603EF30 RID: 257840 RVA: 0x00F34D8C File Offset: 0x00F32F8C
+		// Token: 0x06033BF0 RID: 211952 RVA: 0x00E7BC6C File Offset: 0x00E79E6C
 		private IBlessingDisplayDiff ComputeDisplayDiff()
 		{
 			RoverlikeInstanceData instanceData = RoverlikeModel.Instance.InstanceData;
@@ -243,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603EF31 RID: 257841 RVA: 0x00F34F10 File Offset: 0x00F33110
+		// Token: 0x06033BF1 RID: 211953 RVA: 0x00E7BDF0 File Offset: 0x00E79FF0
 		private int ComputePassiveCount()
 		{
 			RoverlikeInstanceData instanceData = RoverlikeModel.Instance.InstanceData;
@@ -270,7 +269,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return num;
 		}
 
-		// Token: 0x0603EF32 RID: 257842 RVA: 0x00F35020 File Offset: 0x00F33220
+		// Token: 0x06033BF2 RID: 211954 RVA: 0x00E7BF00 File Offset: 0x00E7A100
 		private void OnPanelSequenceClose(string sequenceName)
 		{
 			if (sequenceName != "Trail")
@@ -281,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.AnimInitialized = true;
 		}
 
-		// Token: 0x0603EF33 RID: 257843 RVA: 0x00F3503E File Offset: 0x00F3323E
+		// Token: 0x06033BF3 RID: 211955 RVA: 0x00E7BF1E File Offset: 0x00E7A11E
 		private void OnActivityDataInitComplete()
 		{
 			RoverlikeTopCurrencyItem currencyItem = this.CurrencyItem;
@@ -293,31 +292,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshBlessingLayout();
 		}
 
-		// Token: 0x0603EF34 RID: 257844 RVA: 0x00F3505D File Offset: 0x00F3325D
+		// Token: 0x06033BF4 RID: 211956 RVA: 0x00E7BF3D File Offset: 0x00E7A13D
 		private void OnGainDataUpdate()
 		{
 			this.RefreshBlessingLayout();
 		}
 
-		// Token: 0x0603EF35 RID: 257845 RVA: 0x00F35068 File Offset: 0x00F33268
+		// Token: 0x06033BF5 RID: 211957 RVA: 0x00E7BF48 File Offset: 0x00E7A148
 		private void OnDetailClick()
 		{
 			RoverlikeController.Instance.OpenGameInfoView(null);
 		}
 
-		// Token: 0x0603EF36 RID: 257846 RVA: 0x00F35088 File Offset: 0x00F33288
+		// Token: 0x06033BF6 RID: 211958 RVA: 0x00E7BF68 File Offset: 0x00E7A168
 		private void OnBlessClick()
 		{
 			RoverlikeController.Instance.OpenGameInfoView(new EUiTabViewName?(EUiTabViewName.RoverlikeDetailBlessTabView));
 		}
 
-		// Token: 0x0603EF37 RID: 257847 RVA: 0x00F3509E File Offset: 0x00F3329E
+		// Token: 0x06033BF7 RID: 211959 RVA: 0x00E7BF7E File Offset: 0x00E7A17E
 		private void OnBtnBackClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoverlikePauseView, null, null);
 		}
 
-		// Token: 0x0603EF38 RID: 257848 RVA: 0x00F350B4 File Offset: 0x00F332B4
+		// Token: 0x06033BF8 RID: 211960 RVA: 0x00E7BF94 File Offset: 0x00E7A194
 		public void SetHighlightByBlessId(int blessId)
 		{
 			this.ClearHighlight();
@@ -339,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			layoutItemByKey.SetSelectOn(true);
 		}
 
-		// Token: 0x0603EF39 RID: 257849 RVA: 0x00F3510C File Offset: 0x00F3330C
+		// Token: 0x06033BF9 RID: 211961 RVA: 0x00E7BFEC File Offset: 0x00E7A1EC
 		public void ClearHighlight()
 		{
 			GenericLayout<RoverlikeBlessingSlotItem, IRoverlikeBlessingSlotItemData> blessingLayout = this.BlessingLayout;
@@ -349,7 +348,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020DA9 RID: 134569
+		// Token: 0x0401B6D6 RID: 112342
 		[Nullable(new byte[]
 		{
 			2,
@@ -358,52 +357,52 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeBlessingSlotItem, IRoverlikeBlessingSlotItemData> BlessingLayout;
 
-		// Token: 0x04020DAA RID: 134570
+		// Token: 0x0401B6D7 RID: 112343
 		[Nullable(2)]
 		protected RoverlikeTopCurrencyItem CurrencyItem;
 
-		// Token: 0x04020DAB RID: 134571
+		// Token: 0x0401B6D8 RID: 112344
 		private List<int> BlessSlotIds = new List<int>();
 
-		// Token: 0x04020DAC RID: 134572
+		// Token: 0x0401B6D9 RID: 112345
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04020DAD RID: 134573
+		// Token: 0x0401B6DA RID: 112346
 		private bool RefreshEnabled;
 
-		// Token: 0x04020DAE RID: 134574
+		// Token: 0x0401B6DB RID: 112347
 		private bool AnimInitialized;
 
-		// Token: 0x04020DAF RID: 134575
+		// Token: 0x0401B6DC RID: 112348
 		private int CachedPassiveCount;
 
-		// Token: 0x04020DB0 RID: 134576
+		// Token: 0x0401B6DD RID: 112349
 		private readonly Dictionary<int, int> CachedSlotBlessMap = new Dictionary<int, int>();
 
-		// Token: 0x0200C3A1 RID: 50081
+		// Token: 0x0200AD88 RID: 44424
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B08A RID: 241802
+			// Token: 0x040359EB RID: 219627
 			public const int BtnCommon = 0;
 
-			// Token: 0x0403B08B RID: 241803
+			// Token: 0x040359EC RID: 219628
 			public const int ButtonLayout = 1;
 
-			// Token: 0x0403B08C RID: 241804
+			// Token: 0x040359ED RID: 219629
 			public const int BlessSlotLayout = 2;
 
-			// Token: 0x0403B08D RID: 241805
+			// Token: 0x040359EE RID: 219630
 			public const int BlessingItem = 3;
 
-			// Token: 0x0403B08E RID: 241806
+			// Token: 0x040359EF RID: 219631
 			public const int TxtPassiveBlessCount = 4;
 
-			// Token: 0x0403B08F RID: 241807
+			// Token: 0x040359F0 RID: 219632
 			public const int ItemCurrency = 5;
 
-			// Token: 0x0403B090 RID: 241808
+			// Token: 0x040359F1 RID: 219633
 			public const int BtnBack = 6;
 		}
 	}

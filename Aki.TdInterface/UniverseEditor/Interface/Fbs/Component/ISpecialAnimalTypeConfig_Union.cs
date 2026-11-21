@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200596E RID: 22894
+	// Token: 0x02005F7B RID: 24443
 	public enum ISpecialAnimalTypeConfig_Union : byte
 	{
-		// Token: 0x0400EF58 RID: 61272
+		// Token: 0x0400FC4D RID: 64589
 		NONE,
-		// Token: 0x0400EF59 RID: 61273
+		// Token: 0x0400FC4E RID: 64590
 		ISpecialAnimalTypeConfig,
-		// Token: 0x0400EF5A RID: 61274
+		// Token: 0x0400FC4F RID: 64591
 		ICollectAnimalConfig
 	}
 }

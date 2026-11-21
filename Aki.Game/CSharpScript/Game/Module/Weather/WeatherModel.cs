@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Area;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.Weather
 {
-	// Token: 0x02004864 RID: 18532
+	// Token: 0x02003795 RID: 14229
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class WeatherModel : ModelBase
 	{
-		// Token: 0x17007924 RID: 31012
-		// (get) Token: 0x06030818 RID: 198680 RVA: 0x00B43610 File Offset: 0x00B41810
+		// Token: 0x17004BE1 RID: 19425
+		// (get) Token: 0x06024FE8 RID: 151528 RVA: 0x00A73898 File Offset: 0x00A71A98
 		public int CurrentWeatherId
 		{
 			get
@@ -25,7 +27,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x06030819 RID: 198681 RVA: 0x00B43618 File Offset: 0x00B41818
+		// Token: 0x06024FE9 RID: 151529 RVA: 0x00A738A0 File Offset: 0x00A71AA0
 		public WeatherDefines.EWeatherType GetCurrentWeatherType()
 		{
 			if (this.WeatherId == 0)
@@ -35,37 +37,26 @@ namespace CSharpScript.Game.Module.Weather
 			return WeatherModuleConfig.Instance.GetWeatherType(this.WeatherId);
 		}
 
-		// Token: 0x0603081A RID: 198682 RVA: 0x00B43634 File Offset: 0x00B41834
+		// Token: 0x06024FEA RID: 151530 RVA: 0x00A738BC File Offset: 0x00A71ABC
 		public void SetCurrentWeatherId(int id)
 		{
 			this.WeatherId = id;
 		}
 
-		// Token: 0x0603081B RID: 198683 RVA: 0x00B4363D File Offset: 0x00B4183D
+		// Token: 0x06024FEB RID: 151531 RVA: 0x00A738C5 File Offset: 0x00A71AC5
 		public WeatherActor GetWorldWeatherActor()
 		{
 			return this.WorldWeatherActor;
 		}
 
-		// Token: 0x17007925 RID: 31013
-		// (get) Token: 0x0603081C RID: 198684 RVA: 0x00B43648 File Offset: 0x00B41848
-		private HashSet<int> ClickedWeatherSwitchConfigIdSet
+		// Token: 0x06024FEC RID: 151532 RVA: 0x00A738CD File Offset: 0x00A71ACD
+		private ServerStorageSet GetClickedWeatherSwitchConfigIdStorage()
 		{
-			get
-			{
-				if (this.ClickedWeatherSwitchConfigIdSetInternal == null)
-				{
-					this.ClickedWeatherSwitchConfigIdSetInternal = new HashSet<int>();
-					foreach (int item in (LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.WeatherCentralClicked, null) ?? new List<int>()))
-					{
-						this.ClickedWeatherSwitchConfigIdSetInternal.Add(item);
-					}
-				}
-				return this.ClickedWeatherSwitchConfigIdSetInternal;
-			}
+			ServerStorageUtil.OverrideLocalListToServerSet(ELocalStoragePlayerKey.WeatherCentralClicked, EClientStorageSystemIdType.WeatherCentralClicked, true);
+			return ServerStorageModel.Instance.Get(EClientStorageSystemIdType.WeatherCentralClicked) as ServerStorageSet;
 		}
 
-		// Token: 0x0603081D RID: 198685 RVA: 0x00B436C8 File Offset: 0x00B418C8
+		// Token: 0x06024FED RID: 151533 RVA: 0x00A738F0 File Offset: 0x00A71AF0
 		public int GetSwitchConfigIdByWeatherId(int weatherId)
 		{
 			if (this.WeatherIdToWeatherSwitchConfigIdMap == null)
@@ -87,7 +78,7 @@ namespace CSharpScript.Game.Module.Weather
 			return result;
 		}
 
-		// Token: 0x0603081E RID: 198686 RVA: 0x00B43788 File Offset: 0x00B41988
+		// Token: 0x06024FEE RID: 151534 RVA: 0x00A739B0 File Offset: 0x00A71BB0
 		public int GetCurrentWeatherSwitchConfigId()
 		{
 			int currentAreaId = AreaModel.Instance.GetCurrentAreaId(null);
@@ -99,7 +90,7 @@ namespace CSharpScript.Game.Module.Weather
 			return this.GetSwitchConfigIdByWeatherId(this.CurrentWeatherId);
 		}
 
-		// Token: 0x0603081F RID: 198687 RVA: 0x00B437CC File Offset: 0x00B419CC
+		// Token: 0x06024FEF RID: 151535 RVA: 0x00A739F4 File Offset: 0x00A71BF4
 		public bool IsInValidArea(int levelOneAreaId)
 		{
 			if (this.ValidAreaIdSet == null)
@@ -113,14 +104,14 @@ namespace CSharpScript.Game.Module.Weather
 			return this.ValidAreaIdSet.Contains(levelOneAreaId);
 		}
 
-		// Token: 0x06030820 RID: 198688 RVA: 0x00B43844 File Offset: 0x00B41A44
+		// Token: 0x06024FF0 RID: 151536 RVA: 0x00A73A6C File Offset: 0x00A71C6C
 		public bool IsWeatherBanArea(int weatherSwitchConfigId, int areaId)
 		{
 			WeatherSwitch? weatherSwitchConfig = WeatherModuleConfig.Instance.GetWeatherSwitchConfig(weatherSwitchConfigId);
-			return weatherSwitchConfig != null && weatherSwitchConfig.Value.BanAreaList().Contains(areaId);
+			return weatherSwitchConfig != null && Array.IndexOf<int>(weatherSwitchConfig.Value.BanAreaList(), areaId) >= 0;
 		}
 
-		// Token: 0x06030821 RID: 198689 RVA: 0x00B43880 File Offset: 0x00B41A80
+		// Token: 0x06024FF1 RID: 151537 RVA: 0x00A73AAC File Offset: 0x00A71CAC
 		public bool IsCurrentTimeInValidTime(int id)
 		{
 			double hour = TimeOfDayModel.Instance.GameTime.Hour;
@@ -134,7 +125,7 @@ namespace CSharpScript.Game.Module.Weather
 			return hour >= (double)num || hour <= (double)num2;
 		}
 
-		// Token: 0x06030822 RID: 198690 RVA: 0x00B438E4 File Offset: 0x00B41AE4
+		// Token: 0x06024FF2 RID: 151538 RVA: 0x00A73B10 File Offset: 0x00A71D10
 		public int GetAccelerateWeatherTime(int id)
 		{
 			if (this.IsCurrentTimeInValidTime(id))
@@ -160,7 +151,7 @@ namespace CSharpScript.Game.Module.Weather
 			return num3 * 3600;
 		}
 
-		// Token: 0x06030823 RID: 198691 RVA: 0x00B4399C File Offset: 0x00B41B9C
+		// Token: 0x06024FF3 RID: 151539 RVA: 0x00A73BC8 File Offset: 0x00A71DC8
 		public void SetUnlockedWeatherSwitchConfigIdList(IEnumerable<int> list)
 		{
 			this.UnlockedWeatherSwitchConfigIdSet.Clear();
@@ -171,63 +162,62 @@ namespace CSharpScript.Game.Module.Weather
 			EventSystem.Instance.Emit(EEventName.OnWeatherCentralRedDotUpdate);
 		}
 
-		// Token: 0x06030824 RID: 198692 RVA: 0x00B43A08 File Offset: 0x00B41C08
+		// Token: 0x06024FF4 RID: 151540 RVA: 0x00A73C34 File Offset: 0x00A71E34
 		public void AddUnlockedWeatherSwitchConfigId(int id)
 		{
 			this.UnlockedWeatherSwitchConfigIdSet.Add(id);
 			EventSystem.Instance.Emit(EEventName.OnWeatherCentralRedDotUpdate);
 		}
 
-		// Token: 0x06030825 RID: 198693 RVA: 0x00B43A27 File Offset: 0x00B41C27
+		// Token: 0x06024FF5 RID: 151541 RVA: 0x00A73C53 File Offset: 0x00A71E53
 		public bool IsWeatherSwitchConfigUnlocked(int id)
 		{
 			return this.UnlockedWeatherSwitchConfigIdSet.Contains(id);
 		}
 
-		// Token: 0x06030826 RID: 198694 RVA: 0x00B43A38 File Offset: 0x00B41C38
+		// Token: 0x06024FF6 RID: 151542 RVA: 0x00A73C64 File Offset: 0x00A71E64
 		public bool HasAnyNewWeather()
 		{
 			HashSet<int> unlockedWeatherSwitchConfigIdSet = this.UnlockedWeatherSwitchConfigIdSet;
 			int num = (unlockedWeatherSwitchConfigIdSet != null) ? unlockedWeatherSwitchConfigIdSet.Count : 0;
-			int count = this.ClickedWeatherSwitchConfigIdSet.Count;
-			return num > count;
+			int num2 = this.GetClickedWeatherSwitchConfigIdStorage().Size();
+			return num > num2;
 		}
 
-		// Token: 0x06030827 RID: 198695 RVA: 0x00B43A66 File Offset: 0x00B41C66
+		// Token: 0x06024FF7 RID: 151543 RVA: 0x00A73C92 File Offset: 0x00A71E92
 		public bool IsWeatherClicked(int weatherSwitchConfigId)
 		{
-			return this.ClickedWeatherSwitchConfigIdSet.Contains(weatherSwitchConfigId);
+			return this.GetClickedWeatherSwitchConfigIdStorage().Has(weatherSwitchConfigId);
 		}
 
-		// Token: 0x06030828 RID: 198696 RVA: 0x00B43A74 File Offset: 0x00B41C74
+		// Token: 0x06024FF8 RID: 151544 RVA: 0x00A73CA0 File Offset: 0x00A71EA0
 		public void RecordWeatherClicked(int weatherSwitchConfigId)
 		{
-			this.ClickedWeatherSwitchConfigIdSet.Add(weatherSwitchConfigId);
-			LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.WeatherCentralClicked, this.ClickedWeatherSwitchConfigIdSet.ToList<int>());
+			this.GetClickedWeatherSwitchConfigIdStorage().Add(weatherSwitchConfigId);
 			EventSystem.Instance.Emit(EEventName.OnWeatherCentralRedDotUpdate);
 		}
 
-		// Token: 0x06030829 RID: 198697 RVA: 0x00B43AA9 File Offset: 0x00B41CA9
+		// Token: 0x06024FF9 RID: 151545 RVA: 0x00A73CBE File Offset: 0x00A71EBE
 		public void RecordSwitchTime()
 		{
 			this.LastSwitchTime = Time.Instance.WorldTime;
 		}
 
-		// Token: 0x0603082A RID: 198698 RVA: 0x00B43ABC File Offset: 0x00B41CBC
+		// Token: 0x06024FFA RID: 151546 RVA: 0x00A73CD0 File Offset: 0x00A71ED0
 		public int GetRemainCoolDownTime()
 		{
 			double num = (Time.Instance.WorldTime - this.LastSwitchTime) * 0.0010000000474974513;
 			return (int)Math.Ceiling((double)ConfigCommonParamById.GetIntConfig("WeatherControlCoolDown").Value - num);
 		}
 
-		// Token: 0x0603082B RID: 198699 RVA: 0x00B43B00 File Offset: 0x00B41D00
+		// Token: 0x06024FFB RID: 151547 RVA: 0x00A73D14 File Offset: 0x00A71F14
 		public bool CanSwitchWeather()
 		{
 			return this.GetRemainCoolDownTime() <= 0;
 		}
 
-		// Token: 0x17007926 RID: 31014
-		// (get) Token: 0x0603082C RID: 198700 RVA: 0x00B43B0E File Offset: 0x00B41D0E
+		// Token: 0x17004BE2 RID: 19426
+		// (get) Token: 0x06024FFC RID: 151548 RVA: 0x00A73D22 File Offset: 0x00A71F22
 		public ObservatoryModule ObservatoryModule
 		{
 			get
@@ -240,8 +230,8 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x17007927 RID: 31015
-		// (get) Token: 0x0603082D RID: 198701 RVA: 0x00B43B2C File Offset: 0x00B41D2C
+		// Token: 0x17004BE3 RID: 19427
+		// (get) Token: 0x06024FFD RID: 151549 RVA: 0x00A73D40 File Offset: 0x00A71F40
 		public int? TargetWeatherSwitchConfigId
 		{
 			get
@@ -256,14 +246,14 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x0603082E RID: 198702 RVA: 0x00B43B6C File Offset: 0x00B41D6C
+		// Token: 0x06024FFE RID: 151550 RVA: 0x00A73D80 File Offset: 0x00A71F80
 		public void SetTargetWeatherSwitchConfigId(int weatherSwitchConfigId)
 		{
 			this.TargetWeatherSwitchConfigIdInternal = new int?(weatherSwitchConfigId);
 		}
 
-		// Token: 0x17007928 RID: 31016
-		// (get) Token: 0x0603082F RID: 198703 RVA: 0x00B43B7A File Offset: 0x00B41D7A
+		// Token: 0x17004BE4 RID: 19428
+		// (get) Token: 0x06024FFF RID: 151551 RVA: 0x00A73D8E File Offset: 0x00A71F8E
 		public static WeatherModel Instance
 		{
 			get
@@ -272,7 +262,7 @@ namespace CSharpScript.Game.Module.Weather
 			}
 		}
 
-		// Token: 0x06030830 RID: 198704 RVA: 0x00B43B81 File Offset: 0x00B41D81
+		// Token: 0x06025000 RID: 151552 RVA: 0x00A73D95 File Offset: 0x00A71F95
 		public static WeatherModel GetOrCreateInstance()
 		{
 			if (WeatherModel._Instance == null)
@@ -282,7 +272,7 @@ namespace CSharpScript.Game.Module.Weather
 			return WeatherModel._Instance;
 		}
 
-		// Token: 0x06030831 RID: 198705 RVA: 0x00B43B95 File Offset: 0x00B41D95
+		// Token: 0x06025001 RID: 151553 RVA: 0x00A73DA9 File Offset: 0x00A71FA9
 		public static bool CreateInstance()
 		{
 			if (WeatherModel._Instance != null)
@@ -293,58 +283,54 @@ namespace CSharpScript.Game.Module.Weather
 			return true;
 		}
 
-		// Token: 0x06030832 RID: 198706 RVA: 0x00B43BAB File Offset: 0x00B41DAB
+		// Token: 0x06025002 RID: 151554 RVA: 0x00A73DBF File Offset: 0x00A71FBF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030833 RID: 198707 RVA: 0x00B43BAD File Offset: 0x00B41DAD
+		// Token: 0x06025003 RID: 151555 RVA: 0x00A73DC1 File Offset: 0x00A71FC1
 		public static void ResetStaticDefaultValue()
 		{
 			WeatherModel._Instance = null;
 		}
 
-		// Token: 0x06030834 RID: 198708 RVA: 0x00B43BB5 File Offset: 0x00B41DB5
+		// Token: 0x06025004 RID: 151556 RVA: 0x00A73DC9 File Offset: 0x00A71FC9
 		static WeatherModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WeatherModel.CreateStaticDefaultValue), new Action(WeatherModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A0DF RID: 106719
+		// Token: 0x04014793 RID: 83859
 		private readonly WeatherActor WorldWeatherActor = new WeatherActor();
 
-		// Token: 0x0401A0E0 RID: 106720
+		// Token: 0x04014794 RID: 83860
 		private int WeatherId;
 
-		// Token: 0x0401A0E1 RID: 106721
+		// Token: 0x04014795 RID: 83861
 		private readonly HashSet<int> UnlockedWeatherSwitchConfigIdSet = new HashSet<int>();
 
-		// Token: 0x0401A0E2 RID: 106722
-		[Nullable(2)]
-		private HashSet<int> ClickedWeatherSwitchConfigIdSetInternal;
-
-		// Token: 0x0401A0E3 RID: 106723
+		// Token: 0x04014796 RID: 83862
 		[Nullable(2)]
 		private Dictionary<int, int> WeatherIdToWeatherSwitchConfigIdMap;
 
-		// Token: 0x0401A0E4 RID: 106724
+		// Token: 0x04014797 RID: 83863
 		[Nullable(2)]
 		private HashSet<int> ValidAreaIdSet;
 
-		// Token: 0x0401A0E5 RID: 106725
+		// Token: 0x04014798 RID: 83864
 		public double LastSwitchTime;
 
-		// Token: 0x0401A0E6 RID: 106726
+		// Token: 0x04014799 RID: 83865
 		public bool TimeSwitchConfirmNeedShow = true;
 
-		// Token: 0x0401A0E7 RID: 106727
+		// Token: 0x0401479A RID: 83866
 		[Nullable(2)]
 		private ObservatoryModule ObservatoryModuleInternal;
 
-		// Token: 0x0401A0E8 RID: 106728
+		// Token: 0x0401479B RID: 83867
 		private int? TargetWeatherSwitchConfigIdInternal;
 
-		// Token: 0x0401A0E9 RID: 106729
+		// Token: 0x0401479C RID: 83868
 		[Nullable(2)]
 		private static WeatherModel _Instance;
 	}

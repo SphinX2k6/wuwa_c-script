@@ -6,281 +6,237 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Parkour
 {
-	// Token: 0x02003EEB RID: 16107
+	// Token: 0x020031AD RID: 12717
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Parkour/SParkourConfig.SParkourConfig")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 240)]
 	public class SParkourConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028C91 RID: 167057 RVA: 0x009B48F8 File Offset: 0x009B2AF8
+		// Token: 0x0601F66D RID: 128621 RVA: 0x0092CFD7 File Offset: 0x0092B1D7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SParkourConfig._ScriptStructPtr != 0) ? SParkourConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Parkour/SParkourConfig.SParkourConfig", ref SParkourConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17005F98 RID: 24472
-		// (get) Token: 0x06028C92 RID: 167058 RVA: 0x009B491C File Offset: 0x009B2B1C
-		// (set) Token: 0x06028C93 RID: 167059 RVA: 0x009B4930 File Offset: 0x009B2B30
+		// Token: 0x1700390F RID: 14607
+		// (get) Token: 0x0601F66E RID: 128622 RVA: 0x0092CFFB File Offset: 0x0092B1FB
+		// (set) Token: 0x0601F66F RID: 128623 RVA: 0x0092D00F File Offset: 0x0092B20F
 		public unsafe FName ConfigName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_ConfigName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_ConfigName) = value;
 			}
 		}
 
-		// Token: 0x17005F99 RID: 24473
-		// (get) Token: 0x06028C94 RID: 167060 RVA: 0x009B4945 File Offset: 0x009B2B45
-		// (set) Token: 0x06028C95 RID: 167061 RVA: 0x009B4955 File Offset: 0x009B2B55
+		// Token: 0x17003910 RID: 14608
+		// (get) Token: 0x0601F670 RID: 128624 RVA: 0x0092D024 File Offset: 0x0092B224
+		// (set) Token: 0x0601F671 RID: 128625 RVA: 0x0092D034 File Offset: 0x0092B234
 		public unsafe bool IstoStart
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_IstoStart) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_IstoStart) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F9A RID: 24474
-		// (get) Token: 0x06028C96 RID: 167062 RVA: 0x009B4966 File Offset: 0x009B2B66
-		// (set) Token: 0x06028C97 RID: 167063 RVA: 0x009B4976 File Offset: 0x009B2B76
+		// Token: 0x17003911 RID: 14609
+		// (get) Token: 0x0601F672 RID: 128626 RVA: 0x0092D045 File Offset: 0x0092B245
+		// (set) Token: 0x0601F673 RID: 128627 RVA: 0x0092D055 File Offset: 0x0092B255
 		public unsafe bool IsRequireToEnd
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_IsRequireToEnd) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_IsRequireToEnd) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005F9B RID: 24475
-		// (get) Token: 0x06028C98 RID: 167064 RVA: 0x009B4988 File Offset: 0x009B2B88
-		// (set) Token: 0x06028C99 RID: 167065 RVA: 0x009B49CB File Offset: 0x009B2BCB
-		public TArray<SParkourPointInfo> ParkourPoints
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SParkourPointInfo> result;
-				if ((result = this._ParkourPoints) == null)
-				{
-					result = (this._ParkourPoints = new TArray<SParkourPointInfo>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_3, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ParkourPoints.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17005F9C RID: 24476
-		// (get) Token: 0x06028C9A RID: 167066 RVA: 0x009B49D9 File Offset: 0x009B2BD9
-		// (set) Token: 0x06028C9B RID: 167067 RVA: 0x009B49E9 File Offset: 0x009B2BE9
+		// Token: 0x17003912 RID: 14610
+		// (get) Token: 0x0601F674 RID: 128628 RVA: 0x0092D066 File Offset: 0x0092B266
+		// (set) Token: 0x0601F675 RID: 128629 RVA: 0x0092D076 File Offset: 0x0092B276
 		public unsafe int CheckPointsRequire
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_CheckPointsRequire);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_CheckPointsRequire) = value;
 			}
 		}
 
-		// Token: 0x17005F9D RID: 24477
-		// (get) Token: 0x06028C9C RID: 167068 RVA: 0x009B49FA File Offset: 0x009B2BFA
-		// (set) Token: 0x06028C9D RID: 167069 RVA: 0x009B4A19 File Offset: 0x009B2C19
+		// Token: 0x17003913 RID: 14611
+		// (get) Token: 0x0601F676 RID: 128630 RVA: 0x0092D087 File Offset: 0x0092B287
+		// (set) Token: 0x0601F677 RID: 128631 RVA: 0x0092D0A6 File Offset: 0x0092B2A6
 		public TSoftObjectPtr<UEffectModelBase> CheckPointResource
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_5, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_CheckPointResource, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_5, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_CheckPointResource, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005F9E RID: 24478
-		// (get) Token: 0x06028C9E RID: 167070 RVA: 0x009B4A3E File Offset: 0x009B2C3E
-		// (set) Token: 0x06028C9F RID: 167071 RVA: 0x009B4A5D File Offset: 0x009B2C5D
+		// Token: 0x17003914 RID: 14612
+		// (get) Token: 0x0601F678 RID: 128632 RVA: 0x0092D0CB File Offset: 0x0092B2CB
+		// (set) Token: 0x0601F679 RID: 128633 RVA: 0x0092D0EA File Offset: 0x0092B2EA
 		public TSoftObjectPtr<UEffectModelBase> CheckPointsDestroyRes
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_6, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_CheckPointsDestroyRes, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_6, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_CheckPointsDestroyRes, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005F9F RID: 24479
-		// (get) Token: 0x06028CA0 RID: 167072 RVA: 0x009B4A82 File Offset: 0x009B2C82
-		// (set) Token: 0x06028CA1 RID: 167073 RVA: 0x009B4AA1 File Offset: 0x009B2CA1
+		// Token: 0x17003915 RID: 14613
+		// (get) Token: 0x0601F67A RID: 128634 RVA: 0x0092D10F File Offset: 0x0092B30F
+		// (set) Token: 0x0601F67B RID: 128635 RVA: 0x0092D12E File Offset: 0x0092B32E
 		public TSoftObjectPtr<UEffectModelBase> StartResource
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_7, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_StartResource, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_7, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_StartResource, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005FA0 RID: 24480
-		// (get) Token: 0x06028CA2 RID: 167074 RVA: 0x009B4AC6 File Offset: 0x009B2CC6
-		// (set) Token: 0x06028CA3 RID: 167075 RVA: 0x009B4AE5 File Offset: 0x009B2CE5
+		// Token: 0x17003916 RID: 14614
+		// (get) Token: 0x0601F67C RID: 128636 RVA: 0x0092D153 File Offset: 0x0092B353
+		// (set) Token: 0x0601F67D RID: 128637 RVA: 0x0092D172 File Offset: 0x0092B372
 		public TSoftObjectPtr<UEffectModelBase> EndResource
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_8, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_EndResource, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_8, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_EndResource, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005FA1 RID: 24481
-		// (get) Token: 0x06028CA4 RID: 167076 RVA: 0x009B4B0A File Offset: 0x009B2D0A
-		// (set) Token: 0x06028CA5 RID: 167077 RVA: 0x009B4B1A File Offset: 0x009B2D1A
+		// Token: 0x17003917 RID: 14615
+		// (get) Token: 0x0601F67E RID: 128638 RVA: 0x0092D197 File Offset: 0x0092B397
+		// (set) Token: 0x0601F67F RID: 128639 RVA: 0x0092D1A7 File Offset: 0x0092B3A7
 		public unsafe float DefaultBuffId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_DefaultBuffId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_DefaultBuffId) = value;
 			}
 		}
 
-		// Token: 0x17005FA2 RID: 24482
-		// (get) Token: 0x06028CA6 RID: 167078 RVA: 0x009B4B2B File Offset: 0x009B2D2B
-		// (set) Token: 0x06028CA7 RID: 167079 RVA: 0x009B4B3B File Offset: 0x009B2D3B
+		// Token: 0x17003918 RID: 14616
+		// (get) Token: 0x0601F680 RID: 128640 RVA: 0x0092D1B8 File Offset: 0x0092B3B8
+		// (set) Token: 0x0601F681 RID: 128641 RVA: 0x0092D1C8 File Offset: 0x0092B3C8
 		public unsafe float DefaultModifiedTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_DefaultModifiedTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)SParkourConfig.__PropertyOffset_DefaultModifiedTime) = value;
 			}
 		}
 
-		// Token: 0x06028CA8 RID: 167080 RVA: 0x009B4B4C File Offset: 0x009B2D4C
+		// Token: 0x0601F682 RID: 128642 RVA: 0x0092D1D9 File Offset: 0x0092B3D9
 		public SParkourConfig()
 		{
 		}
 
-		// Token: 0x06028CA9 RID: 167081 RVA: 0x009B4B54 File Offset: 0x009B2D54
-		public SParkourConfig(FName ConfigName, bool IstoStart, bool IsRequireToEnd, TArray<SParkourPointInfo> ParkourPoints, int CheckPointsRequire, TSoftObjectPtr<UEffectModelBase> CheckPointResource, TSoftObjectPtr<UEffectModelBase> CheckPointsDestroyRes, TSoftObjectPtr<UEffectModelBase> StartResource, TSoftObjectPtr<UEffectModelBase> EndResource, float DefaultBuffId, float DefaultModifiedTime)
-		{
-			this.ConfigName = ConfigName;
-			this.IstoStart = IstoStart;
-			this.IsRequireToEnd = IsRequireToEnd;
-			this.ParkourPoints = ParkourPoints;
-			this.CheckPointsRequire = CheckPointsRequire;
-			this.CheckPointResource = CheckPointResource;
-			this.CheckPointsDestroyRes = CheckPointsDestroyRes;
-			this.StartResource = StartResource;
-			this.EndResource = EndResource;
-			this.DefaultBuffId = DefaultBuffId;
-			this.DefaultModifiedTime = DefaultModifiedTime;
-		}
-
-		// Token: 0x06028CAA RID: 167082 RVA: 0x009B4BBC File Offset: 0x009B2DBC
+		// Token: 0x0601F683 RID: 128643 RVA: 0x0092D1E1 File Offset: 0x0092B3E1
 		protected override IntPtr GetUStructPtr()
 		{
 			return SParkourConfig.StaticStruct();
 		}
 
-		// Token: 0x06028CAB RID: 167083 RVA: 0x009B4BC8 File Offset: 0x009B2DC8
+		// Token: 0x0601F684 RID: 128644 RVA: 0x0092D1ED File Offset: 0x0092B3ED
 		[NullableContext(2)]
 		public SParkourConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028CAC RID: 167084 RVA: 0x009B4BD2 File Offset: 0x009B2DD2
+		// Token: 0x0601F685 RID: 128645 RVA: 0x0092D1F7 File Offset: 0x0092B3F7
 		public SParkourConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028CAD RID: 167085 RVA: 0x009B4BDD File Offset: 0x009B2DDD
+		// Token: 0x0601F686 RID: 128646 RVA: 0x0092D202 File Offset: 0x0092B402
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SParkourConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06028CAE RID: 167086 RVA: 0x009B4BE7 File Offset: 0x009B2DE7
+		// Token: 0x0601F687 RID: 128647 RVA: 0x0092D20C File Offset: 0x0092B40C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SParkourConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014D91 RID: 85393
+		// Token: 0x04010D52 RID: 68946
 		public const string __ObjectPath = "/Game/Aki/Data/Parkour/SParkourConfig.SParkourConfig";
 
-		// Token: 0x04014D92 RID: 85394
+		// Token: 0x04010D53 RID: 68947
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014D93 RID: 85395
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010D54 RID: 68948
+		internal static int __PropertyOffset_ConfigName;
 
-		// Token: 0x04014D94 RID: 85396
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010D55 RID: 68949
+		internal static int __PropertyOffset_IstoStart;
 
-		// Token: 0x04014D95 RID: 85397
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010D56 RID: 68950
+		internal static int __PropertyOffset_IsRequireToEnd;
 
-		// Token: 0x04014D96 RID: 85398
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010D57 RID: 68951
+		internal static int __PropertyOffset_CheckPointsRequire;
 
-		// Token: 0x04014D97 RID: 85399
-		[Nullable(2)]
-		private TArray<SParkourPointInfo> _ParkourPoints;
+		// Token: 0x04010D58 RID: 68952
+		internal static int __PropertyOffset_CheckPointResource;
 
-		// Token: 0x04014D98 RID: 85400
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010D59 RID: 68953
+		internal static int __PropertyOffset_CheckPointsDestroyRes;
 
-		// Token: 0x04014D99 RID: 85401
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010D5A RID: 68954
+		internal static int __PropertyOffset_StartResource;
 
-		// Token: 0x04014D9A RID: 85402
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010D5B RID: 68955
+		internal static int __PropertyOffset_EndResource;
 
-		// Token: 0x04014D9B RID: 85403
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010D5C RID: 68956
+		internal static int __PropertyOffset_DefaultBuffId;
 
-		// Token: 0x04014D9C RID: 85404
-		internal static int __PropertyOffset_8;
-
-		// Token: 0x04014D9D RID: 85405
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x04014D9E RID: 85406
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010D5D RID: 68957
+		internal static int __PropertyOffset_DefaultModifiedTime;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001241 RID: 4673
+	// Token: 0x02001381 RID: 4993
 	public class EFlagChallengeSystemVarTypeJsonConverter : JsonConverter<EFlagChallengeSystemVarType>
 	{
-		// Token: 0x060069CD RID: 27085 RVA: 0x000FD810 File Offset: 0x000FBA10
+		// Token: 0x06007020 RID: 28704 RVA: 0x0010B43C File Offset: 0x0010963C
 		public override EFlagChallengeSystemVarType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EFlagChallengeSystemVarTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060069CE RID: 27086 RVA: 0x000FD834 File Offset: 0x000FBA34
+		// Token: 0x06007021 RID: 28705 RVA: 0x0010B460 File Offset: 0x00109660
 		public override void Write(Utf8JsonWriter writer, EFlagChallengeSystemVarType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

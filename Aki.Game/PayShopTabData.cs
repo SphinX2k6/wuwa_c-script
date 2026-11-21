@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200235C RID: 9052
+// Token: 0x02001841 RID: 6209
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopTabData
 {
-	// Token: 0x060120B0 RID: 73904 RVA: 0x0046D350 File Offset: 0x0046B550
+	// Token: 0x0600F560 RID: 62816 RVA: 0x0047A410 File Offset: 0x00478610
 	public void Phrase(PayShopTabConfigInfo info)
 	{
 		this.ShopId = info.ShopId;
@@ -22,39 +21,39 @@ public class PayShopTabData
 		this.TextureBgPath = info.TabContentPath;
 		this.BeginTime = info.BeginTime;
 		this.EndTime = info.EndTime;
-		this.MoneyList = info.Money.ToList<int>();
+		this.MoneyList = new List<int>(info.Money);
 	}
 
-	// Token: 0x04008871 RID: 34929
+	// Token: 0x040089B6 RID: 35254
 	public int ShopId;
 
-	// Token: 0x04008872 RID: 34930
+	// Token: 0x040089B7 RID: 35255
 	public int TabId;
 
-	// Token: 0x04008873 RID: 34931
+	// Token: 0x040089B8 RID: 35256
 	public int Sort;
 
-	// Token: 0x04008874 RID: 34932
+	// Token: 0x040089B9 RID: 35257
 	public string Name = "";
 
-	// Token: 0x04008875 RID: 34933
+	// Token: 0x040089BA RID: 35258
 	public int Logic;
 
-	// Token: 0x04008876 RID: 34934
+	// Token: 0x040089BB RID: 35259
 	public bool Enable = true;
 
-	// Token: 0x04008877 RID: 34935
+	// Token: 0x040089BC RID: 35260
 	public string SpriteBgPath = "";
 
-	// Token: 0x04008878 RID: 34936
+	// Token: 0x040089BD RID: 35261
 	public string TextureBgPath = "";
 
-	// Token: 0x04008879 RID: 34937
+	// Token: 0x040089BE RID: 35262
 	public long BeginTime;
 
-	// Token: 0x0400887A RID: 34938
+	// Token: 0x040089BF RID: 35263
 	public long EndTime;
 
-	// Token: 0x0400887B RID: 34939
+	// Token: 0x040089C0 RID: 35264
 	public List<int> MoneyList = new List<int>();
 }

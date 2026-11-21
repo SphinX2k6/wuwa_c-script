@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200082E RID: 2094
+	// Token: 0x020008D1 RID: 2257
 	public class LifePointCenterComponent_SetValue
 	{
-		// Token: 0x04001E2A RID: 7722
+		// Token: 0x04002036 RID: 8246
 		public bool? Disabled;
 
-		// Token: 0x04001E2B RID: 7723
+		// Token: 0x04002037 RID: 8247
 		public bool? EdIsLocked;
 	}
 }

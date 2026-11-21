@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A9 RID: 25001
+	// Token: 0x02005127 RID: 20775
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeTalentTreeView : UiViewBase
 	{
-		// Token: 0x0603F246 RID: 258630 RVA: 0x00F40EB0 File Offset: 0x00F3F0B0
+		// Token: 0x06033F06 RID: 212742 RVA: 0x00E87D78 File Offset: 0x00E85F78
 		public RoverlikeTalentTreeView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F247 RID: 258631 RVA: 0x00F40EBC File Offset: 0x00F3F0BC
+		// Token: 0x06033F07 RID: 212743 RVA: 0x00E87D84 File Offset: 0x00E85F84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F248 RID: 258632 RVA: 0x00F40F88 File Offset: 0x00F3F188
+		// Token: 0x06033F08 RID: 212744 RVA: 0x00E87E50 File Offset: 0x00E86050
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeTalentTreeView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F249 RID: 258633 RVA: 0x00F40FCC File Offset: 0x00F3F1CC
+		// Token: 0x06033F09 RID: 212745 RVA: 0x00E87E94 File Offset: 0x00E86094
 		protected override void OnStart()
 		{
 			if (this.TreeData == null)
@@ -67,19 +67,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F24A RID: 258634 RVA: 0x00F41006 File Offset: 0x00F3F206
+		// Token: 0x06033F0A RID: 212746 RVA: 0x00E87ECE File Offset: 0x00E860CE
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoverlikeTalentUnlockDataUpdate, new Action(this.OnTalentUnlockDataUpdate));
 		}
 
-		// Token: 0x0603F24B RID: 258635 RVA: 0x00F41024 File Offset: 0x00F3F224
+		// Token: 0x06033F0B RID: 212747 RVA: 0x00E87EEC File Offset: 0x00E860EC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoverlikeTalentUnlockDataUpdate, new Action(this.OnTalentUnlockDataUpdate));
 		}
 
-		// Token: 0x0603F24C RID: 258636 RVA: 0x00F41042 File Offset: 0x00F3F242
+		// Token: 0x06033F0C RID: 212748 RVA: 0x00E87F0A File Offset: 0x00E8610A
 		protected override void OnBeforeDestroy()
 		{
 			RoverlikeTalentTreeData treeData = this.TreeData;
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.TreeData = null;
 		}
 
-		// Token: 0x0603F24D RID: 258637 RVA: 0x00F4105C File Offset: 0x00F3F25C
+		// Token: 0x06033F0D RID: 212749 RVA: 0x00E87F24 File Offset: 0x00E86124
 		private RoverlikeTalentTreeNodeRowItem CreateRowItem()
 		{
 			return new RoverlikeTalentTreeNodeRowItem();
 		}
 
-		// Token: 0x0603F24E RID: 258638 RVA: 0x00F41064 File Offset: 0x00F3F264
+		// Token: 0x06033F0E RID: 212750 RVA: 0x00E87F2C File Offset: 0x00E8612C
 		private UniTask ScrollToNode(RoverlikeTalentNodeData node, bool tween = false)
 		{
 			RoverlikeTalentTreeView.<ScrollToNode>d__13 <ScrollToNode>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <ScrollToNode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F24F RID: 258639 RVA: 0x00F410B8 File Offset: 0x00F3F2B8
+		// Token: 0x06033F0F RID: 212751 RVA: 0x00E87F80 File Offset: 0x00E86180
 		private void OnClickNode(bool isSelect, RoverlikeTalentNodeData data)
 		{
 			if (!isSelect || this.TreeData == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			detailPanel.Refresh(data);
 		}
 
-		// Token: 0x0603F250 RID: 258640 RVA: 0x00F4112B File Offset: 0x00F3F32B
+		// Token: 0x06033F10 RID: 212752 RVA: 0x00E87FF3 File Offset: 0x00E861F3
 		private void OnUnlockSuccess(RoverlikeTalentNodeData data)
 		{
 			if (this.TreeData == null)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			scrollView.RefreshByDataAsync(this.TreeData.RowDataList, false).Forget();
 		}
 
-		// Token: 0x0603F251 RID: 258641 RVA: 0x00F41158 File Offset: 0x00F3F358
+		// Token: 0x06033F11 RID: 212753 RVA: 0x00E88020 File Offset: 0x00E86220
 		private void OnTalentUnlockDataUpdate()
 		{
 			if (this.TreeData == null)
@@ -176,19 +176,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020EA3 RID: 134819
+		// Token: 0x0401B7D0 RID: 112592
 		[Nullable(2)]
 		private RoverlikeTalentTreeData TreeData;
 
-		// Token: 0x04020EA4 RID: 134820
+		// Token: 0x0401B7D1 RID: 112593
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020EA5 RID: 134821
+		// Token: 0x0401B7D2 RID: 112594
 		[Nullable(2)]
 		private RoverlikeTalentTreeDetailPanel DetailPanel;
 
-		// Token: 0x04020EA6 RID: 134822
+		// Token: 0x0401B7D3 RID: 112595
 		[Nullable(new byte[]
 		{
 			2,
@@ -197,23 +197,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericScrollViewNew<RoverlikeTalentTreeNodeRowItem, RoverlikeTalentTreeNodeRowData> ScrollView;
 
-		// Token: 0x0200C3FA RID: 50170
+		// Token: 0x0200ADE1 RID: 44513
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403B25A RID: 242266
+			// Token: 0x04035BBB RID: 220091
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403B25B RID: 242267
+			// Token: 0x04035BBC RID: 220092
 			public const int DetailPanelItem = 1;
 
-			// Token: 0x0403B25C RID: 242268
+			// Token: 0x04035BBD RID: 220093
 			public const int ScrollView = 2;
 
-			// Token: 0x0403B25D RID: 242269
+			// Token: 0x04035BBE RID: 220094
 			public const int TalentRowTemplateItem = 3;
 
-			// Token: 0x0403B25E RID: 242270
+			// Token: 0x04035BBF RID: 220095
 			public const int BtnMask = 4;
 		}
 	}

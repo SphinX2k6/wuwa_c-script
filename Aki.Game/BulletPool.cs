@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E19 RID: 11801
+// Token: 0x02002375 RID: 9077
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletPool : IStaticVariableResetter
 {
-	// Token: 0x06018D5D RID: 101725 RVA: 0x0065EDD9 File Offset: 0x0065CFD9
+	// Token: 0x0601661F RID: 91679 RVA: 0x00684F61 File Offset: 0x00683161
 	static BulletPool()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletPool.CreateStaticDefaultValue), new Action(BulletPool.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06018D5E RID: 101726 RVA: 0x0065EDF8 File Offset: 0x0065CFF8
+	// Token: 0x06016620 RID: 91680 RVA: 0x00684F80 File Offset: 0x00683180
 	public static void Init()
 	{
 		for (int i = 0; i < 10; i++)
 		{
 			BulletEntity bulletEntity = BulletPool.BulletEntityPool.Create("bulletEntity");
 			EntitySystem.Instance.Init(bulletEntity);
-			EntitySystem.Instance.DeSpawn<BulletEntity>(bulletEntity);
+			EntitySystem.Instance.DeSpawn(bulletEntity);
 			BulletPool.BulletEntityPool.Put(bulletEntity);
 		}
 		for (int j = 0; j < 10; j++)
@@ -46,7 +46,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D5F RID: 101727 RVA: 0x0065EEF4 File Offset: 0x0065D0F4
+	// Token: 0x06016621 RID: 91681 RVA: 0x0068507C File Offset: 0x0068327C
 	public static void Clear()
 	{
 		BulletPool.BulletEntityPool.Clear();
@@ -56,8 +56,8 @@ public class BulletPool : IStaticVariableResetter
 		BulletPool.RotatorPool.Clear();
 	}
 
-	// Token: 0x17002275 RID: 8821
-	// (get) Token: 0x06018D60 RID: 101728 RVA: 0x0065EF28 File Offset: 0x0065D128
+	// Token: 0x170022DD RID: 8925
+	// (get) Token: 0x06016622 RID: 91682 RVA: 0x006850B0 File Offset: 0x006832B0
 	public static Lru<string, BulletEntity> BulletEntityPool
 	{
 		get
@@ -66,13 +66,13 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D61 RID: 101729 RVA: 0x0065EF30 File Offset: 0x0065D130
+	// Token: 0x06016623 RID: 91683 RVA: 0x006850B8 File Offset: 0x006832B8
 	public static BulletEntity CreateBulletEntity()
 	{
 		BulletEntity bulletEntity = BulletPool.BulletEntityPool.Get("bulletEntity");
 		if (bulletEntity != null)
 		{
-			EntitySystem.Instance.Respawn<BulletEntity>(bulletEntity, false, 0, null);
+			EntitySystem.Instance.Respawn(bulletEntity, false, 0, null);
 		}
 		else
 		{
@@ -82,15 +82,15 @@ public class BulletPool : IStaticVariableResetter
 		return bulletEntity;
 	}
 
-	// Token: 0x06018D62 RID: 101730 RVA: 0x0065EF7E File Offset: 0x0065D17E
+	// Token: 0x06016624 RID: 91684 RVA: 0x00685106 File Offset: 0x00683306
 	public static void RecycleBulletEntity(BulletEntity obj)
 	{
-		EntitySystem.Instance.DeSpawn<BulletEntity>(obj);
+		EntitySystem.Instance.DeSpawn(obj);
 		BulletPool.BulletEntityPool.Put(obj);
 	}
 
-	// Token: 0x17002276 RID: 8822
-	// (get) Token: 0x06018D63 RID: 101731 RVA: 0x0065EF98 File Offset: 0x0065D198
+	// Token: 0x170022DE RID: 8926
+	// (get) Token: 0x06016625 RID: 91685 RVA: 0x00685120 File Offset: 0x00683320
 	public static Pool<BulletHitActorData> BulletHitActorDataPool
 	{
 		get
@@ -99,7 +99,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D64 RID: 101732 RVA: 0x0065EFA0 File Offset: 0x0065D1A0
+	// Token: 0x06016626 RID: 91686 RVA: 0x00685128 File Offset: 0x00683328
 	public static BulletHitActorData CreateBulletHitActorData()
 	{
 		BulletHitActorData bulletHitActorData = BulletPool.BulletHitActorDataPool.Get();
@@ -110,15 +110,15 @@ public class BulletPool : IStaticVariableResetter
 		return bulletHitActorData;
 	}
 
-	// Token: 0x06018D65 RID: 101733 RVA: 0x0065EFC7 File Offset: 0x0065D1C7
+	// Token: 0x06016627 RID: 91687 RVA: 0x0068514F File Offset: 0x0068334F
 	public static void RecycleBulletHitActorData(BulletHitActorData obj)
 	{
 		obj.Clear();
 		BulletPool.BulletHitActorDataPool.Put(obj);
 	}
 
-	// Token: 0x17002277 RID: 8823
-	// (get) Token: 0x06018D66 RID: 101734 RVA: 0x0065EFDB File Offset: 0x0065D1DB
+	// Token: 0x170022DF RID: 8927
+	// (get) Token: 0x06016628 RID: 91688 RVA: 0x00685163 File Offset: 0x00683363
 	public static Pool<BulletConditionResult> BulletConditionResultPool
 	{
 		get
@@ -127,7 +127,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D67 RID: 101735 RVA: 0x0065EFE4 File Offset: 0x0065D1E4
+	// Token: 0x06016629 RID: 91689 RVA: 0x0068516C File Offset: 0x0068336C
 	public static BulletConditionResult CreateBulletConditionResult()
 	{
 		BulletConditionResult bulletConditionResult = BulletPool.BulletConditionResultPool.Get();
@@ -138,15 +138,15 @@ public class BulletPool : IStaticVariableResetter
 		return bulletConditionResult;
 	}
 
-	// Token: 0x06018D68 RID: 101736 RVA: 0x0065F00B File Offset: 0x0065D20B
+	// Token: 0x0601662A RID: 91690 RVA: 0x00685193 File Offset: 0x00683393
 	public static void RecycleBulletConditionResult(BulletConditionResult obj)
 	{
 		obj.Clear();
 		BulletPool.BulletConditionResultPool.Put(obj);
 	}
 
-	// Token: 0x17002278 RID: 8824
-	// (get) Token: 0x06018D69 RID: 101737 RVA: 0x0065F01F File Offset: 0x0065D21F
+	// Token: 0x170022E0 RID: 8928
+	// (get) Token: 0x0601662B RID: 91691 RVA: 0x006851A7 File Offset: 0x006833A7
 	public static SimplePool<Vector> VectorPool
 	{
 		get
@@ -155,7 +155,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D6A RID: 101738 RVA: 0x0065F028 File Offset: 0x0065D228
+	// Token: 0x0601662C RID: 91692 RVA: 0x006851B0 File Offset: 0x006833B0
 	public static Vector CreateVector(bool needReset = false)
 	{
 		Vector vector = BulletPool.VectorPool.Get();
@@ -171,20 +171,15 @@ public class BulletPool : IStaticVariableResetter
 		return vector;
 	}
 
-	// Token: 0x06018D6B RID: 101739 RVA: 0x0065F064 File Offset: 0x0065D264
+	// Token: 0x0601662D RID: 91693 RVA: 0x006851E9 File Offset: 0x006833E9
 	public static void RecycleVector(Vector obj)
 	{
 		BulletPool.VectorCount--;
-		if (BulletConstant.Instance.OpenPoolCheck)
-		{
-			obj.Set(double.NaN, double.NaN, double.NaN);
-			return;
-		}
 		BulletPool.VectorPool.Release(obj);
 	}
 
-	// Token: 0x17002279 RID: 8825
-	// (get) Token: 0x06018D6C RID: 101740 RVA: 0x0065F0B6 File Offset: 0x0065D2B6
+	// Token: 0x170022E1 RID: 8929
+	// (get) Token: 0x0601662E RID: 91694 RVA: 0x00685202 File Offset: 0x00683402
 	public static SimplePool<Rotator> RotatorPool
 	{
 		get
@@ -193,7 +188,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D6D RID: 101741 RVA: 0x0065F0C0 File Offset: 0x0065D2C0
+	// Token: 0x0601662F RID: 91695 RVA: 0x0068520C File Offset: 0x0068340C
 	public static Rotator CreateRotator(bool needReset = false)
 	{
 		Rotator rotator = BulletPool.RotatorPool.Get();
@@ -209,20 +204,15 @@ public class BulletPool : IStaticVariableResetter
 		return rotator;
 	}
 
-	// Token: 0x06018D6E RID: 101742 RVA: 0x0065F0F9 File Offset: 0x0065D2F9
+	// Token: 0x06016630 RID: 91696 RVA: 0x00685245 File Offset: 0x00683445
 	public static void RecycleRotator(Rotator obj)
 	{
 		BulletPool.RotatorCount--;
-		if (BulletConstant.Instance.OpenPoolCheck)
-		{
-			obj.Set(float.NaN, float.NaN, float.NaN);
-			return;
-		}
 		BulletPool.RotatorPool.Release(obj);
 	}
 
-	// Token: 0x1700227A RID: 8826
-	// (get) Token: 0x06018D6F RID: 101743 RVA: 0x0065F134 File Offset: 0x0065D334
+	// Token: 0x170022E2 RID: 8930
+	// (get) Token: 0x06016631 RID: 91697 RVA: 0x0068525E File Offset: 0x0068345E
 	public static SimplePool<BulletHitTempResult> BulletHitTempResultPool
 	{
 		get
@@ -231,7 +221,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D70 RID: 101744 RVA: 0x0065F13C File Offset: 0x0065D33C
+	// Token: 0x06016632 RID: 91698 RVA: 0x00685268 File Offset: 0x00683468
 	public static BulletHitTempResult CreateBulletHitTempResult()
 	{
 		BulletHitTempResult bulletHitTempResult = BulletPool.BulletHitTempResultPool.Get();
@@ -243,14 +233,14 @@ public class BulletPool : IStaticVariableResetter
 		return bulletHitTempResult;
 	}
 
-	// Token: 0x06018D71 RID: 101745 RVA: 0x0065F16A File Offset: 0x0065D36A
+	// Token: 0x06016633 RID: 91699 RVA: 0x00685296 File Offset: 0x00683496
 	public static void RecycleBulletHitTempResult(BulletHitTempResult obj)
 	{
 		BulletPool.BulletHitTempResultCount--;
 		BulletPool.BulletHitTempResultPool.Release(obj);
 	}
 
-	// Token: 0x06018D72 RID: 101746 RVA: 0x0065F184 File Offset: 0x0065D384
+	// Token: 0x06016634 RID: 91700 RVA: 0x006852B0 File Offset: 0x006834B0
 	public static void CheckAtFrameEnd()
 	{
 		if (BulletPool.VectorCount != 0)
@@ -285,7 +275,7 @@ public class BulletPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D73 RID: 101747 RVA: 0x0065F248 File Offset: 0x0065D448
+	// Token: 0x06016635 RID: 91701 RVA: 0x00685374 File Offset: 0x00683574
 	public static void CreateStaticDefaultValue()
 	{
 		BulletPool._bulletEntityPool = new Lru<string, BulletEntity>(10, (string key) => EntitySystem.Instance.Create<BulletEntity>(0, null), null);
@@ -299,7 +289,7 @@ public class BulletPool : IStaticVariableResetter
 		BulletPool.BulletHitTempResultCount = 0;
 	}
 
-	// Token: 0x06018D74 RID: 101748 RVA: 0x0065F309 File Offset: 0x0065D509
+	// Token: 0x06016636 RID: 91702 RVA: 0x00685435 File Offset: 0x00683635
 	public static void ResetStaticDefaultValue()
 	{
 		BulletPool._bulletEntityPool = null;
@@ -313,16 +303,16 @@ public class BulletPool : IStaticVariableResetter
 		BulletPool.BulletHitTempResultCount = 0;
 	}
 
-	// Token: 0x0400BA56 RID: 47702
+	// Token: 0x0400BDE4 RID: 48612
 	private const string KEY_BULLET_ENTITY = "bulletEntity";
 
-	// Token: 0x0400BA57 RID: 47703
+	// Token: 0x0400BDE5 RID: 48613
 	private const int PRE_ADD_COUNT = 10;
 
-	// Token: 0x0400BA58 RID: 47704
+	// Token: 0x0400BDE6 RID: 48614
 	private const int CAPACITY = 20;
 
-	// Token: 0x0400BA59 RID: 47705
+	// Token: 0x0400BDE7 RID: 48615
 	[Nullable(new byte[]
 	{
 		2,
@@ -331,7 +321,7 @@ public class BulletPool : IStaticVariableResetter
 	})]
 	private static Lru<string, BulletEntity> _bulletEntityPool;
 
-	// Token: 0x0400BA5A RID: 47706
+	// Token: 0x0400BDE8 RID: 48616
 	[Nullable(new byte[]
 	{
 		2,
@@ -339,7 +329,7 @@ public class BulletPool : IStaticVariableResetter
 	})]
 	private static Pool<BulletHitActorData> _bulletHitActorDataPool;
 
-	// Token: 0x0400BA5B RID: 47707
+	// Token: 0x0400BDE9 RID: 48617
 	[Nullable(new byte[]
 	{
 		2,
@@ -347,7 +337,7 @@ public class BulletPool : IStaticVariableResetter
 	})]
 	private static Pool<BulletConditionResult> _bulletConditionResultPool;
 
-	// Token: 0x0400BA5C RID: 47708
+	// Token: 0x0400BDEA RID: 48618
 	[Nullable(new byte[]
 	{
 		2,
@@ -355,10 +345,10 @@ public class BulletPool : IStaticVariableResetter
 	})]
 	private static SimplePool<Vector> _vectorPool;
 
-	// Token: 0x0400BA5D RID: 47709
+	// Token: 0x0400BDEB RID: 48619
 	private static int VectorCount;
 
-	// Token: 0x0400BA5E RID: 47710
+	// Token: 0x0400BDEC RID: 48620
 	[Nullable(new byte[]
 	{
 		2,
@@ -366,10 +356,10 @@ public class BulletPool : IStaticVariableResetter
 	})]
 	private static SimplePool<Rotator> _rotatorPool;
 
-	// Token: 0x0400BA5F RID: 47711
+	// Token: 0x0400BDED RID: 48621
 	private static int RotatorCount;
 
-	// Token: 0x0400BA60 RID: 47712
+	// Token: 0x0400BDEE RID: 48622
 	[Nullable(new byte[]
 	{
 		2,
@@ -377,6 +367,6 @@ public class BulletPool : IStaticVariableResetter
 	})]
 	private static SimplePool<BulletHitTempResult> _bulletHitTempResultPool;
 
-	// Token: 0x0400BA61 RID: 47713
+	// Token: 0x0400BDEF RID: 48623
 	private static int BulletHitTempResultCount;
 }

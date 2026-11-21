@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A4 RID: 18084
+	// Token: 0x020035D5 RID: 13781
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ImmersiveMouseModule
 	{
-		// Token: 0x0602E9FA RID: 190970 RVA: 0x00ACB454 File Offset: 0x00AC9654
+		// Token: 0x06023146 RID: 143686 RVA: 0x009F9D28 File Offset: 0x009F7F28
 		public void Initialize()
 		{
 			if (this.IsInitialized)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Ui
 			this.UpdateInputBindings();
 		}
 
-		// Token: 0x0602E9FB RID: 190971 RVA: 0x00ACB504 File Offset: 0x00AC9704
+		// Token: 0x06023147 RID: 143687 RVA: 0x009F9DD8 File Offset: 0x009F7FD8
 		private void InitGamepadIgnoreKeys()
 		{
 			this.GamepadIgnoreKeySet.Clear();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9FC RID: 190972 RVA: 0x00ACB594 File Offset: 0x00AC9794
+		// Token: 0x06023148 RID: 143688 RVA: 0x009F9E68 File Offset: 0x009F8068
 		public void EnableImmersiveMode()
 		{
 			if (this.ImmersiveModeEnabled || !this.FunctionEnabled)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Ui
 			InputManager.Instance.SetImmersiveInputWakeState(this.CurrentInputMainType, true);
 		}
 
-		// Token: 0x0602E9FD RID: 190973 RVA: 0x00ACB624 File Offset: 0x00AC9824
+		// Token: 0x06023149 RID: 143689 RVA: 0x009F9EF8 File Offset: 0x009F80F8
 		public void DisableImmersiveMode()
 		{
 			if (!this.ImmersiveModeEnabled)
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.Ui
 			InputManager.Instance.SetImmersiveInputWakeState(this.CurrentInputMainType, false);
 		}
 
-		// Token: 0x0602E9FE RID: 190974 RVA: 0x00ACB69B File Offset: 0x00AC989B
+		// Token: 0x0602314A RID: 143690 RVA: 0x009F9F6F File Offset: 0x009F816F
 		public bool IsImmersiveModeEnabled()
 		{
 			return this.ImmersiveModeEnabled;
 		}
 
-		// Token: 0x0602E9FF RID: 190975 RVA: 0x00ACB6A3 File Offset: 0x00AC98A3
+		// Token: 0x0602314B RID: 143691 RVA: 0x009F9F77 File Offset: 0x009F8177
 		public bool IsImmersiveInputPaused()
 		{
 			return this.PauseReasonSet.Count > 0;
 		}
 
-		// Token: 0x0602EA00 RID: 190976 RVA: 0x00ACB6B3 File Offset: 0x00AC98B3
+		// Token: 0x0602314C RID: 143692 RVA: 0x009F9F87 File Offset: 0x009F8187
 		public void PauseImmersiveMode(EImmersiveMouseModeReason reason, bool bReset = true, bool bShowCursor = true)
 		{
 			this.PauseReasonSet.Add(reason);
@@ -115,14 +115,14 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit(EEventName.RefreshCursor);
 		}
 
-		// Token: 0x0602EA01 RID: 190977 RVA: 0x00ACB6F3 File Offset: 0x00AC98F3
+		// Token: 0x0602314D RID: 143693 RVA: 0x009F9FC7 File Offset: 0x009F81C7
 		public void ResumeImmersiveMode(EImmersiveMouseModeReason reason)
 		{
 			this.PauseReasonSet.Remove(reason);
 			EventSystem.Instance.Emit(EEventName.RefreshCursor);
 		}
 
-		// Token: 0x0602EA02 RID: 190978 RVA: 0x00ACB714 File Offset: 0x00AC9914
+		// Token: 0x0602314E RID: 143694 RVA: 0x009F9FE8 File Offset: 0x009F81E8
 		public void Tick(float deltaTime)
 		{
 			if (!this.ImmersiveModeEnabled)
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA03 RID: 190979 RVA: 0x00ACB82F File Offset: 0x00AC9A2F
+		// Token: 0x0602314F RID: 143695 RVA: 0x009FA103 File Offset: 0x009F8303
 		public void Reset()
 		{
 			this.MouseIdleTime = 0f;
 		}
 
-		// Token: 0x0602EA04 RID: 190980 RVA: 0x00ACB83C File Offset: 0x00AC9A3C
+		// Token: 0x06023150 RID: 143696 RVA: 0x009FA110 File Offset: 0x009F8310
 		private void OnClickedMouse(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (this.ImmersiveModeEnabled && this.CurrentInputMainType == EInputControllerMainType.Keyboard && !InputManager.Instance.GetImmersiveInputWakeState())
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA05 RID: 190981 RVA: 0x00ACB890 File Offset: 0x00AC9A90
+		// Token: 0x06023151 RID: 143697 RVA: 0x009FA164 File Offset: 0x009F8364
 		private bool CheckMousePress()
 		{
 			foreach (string actionName in this.MouseInputActionList)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Ui
 			return false;
 		}
 
-		// Token: 0x0602EA06 RID: 190982 RVA: 0x00ACB8C8 File Offset: 0x00AC9AC8
+		// Token: 0x06023152 RID: 143698 RVA: 0x009FA19C File Offset: 0x009F839C
 		private bool CheckMouseInViewport()
 		{
 			float num = 0f;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Ui
 			return Global.PlayerController.GetMousePosition(ref num, ref num2);
 		}
 
-		// Token: 0x0602EA07 RID: 190983 RVA: 0x00ACB8F0 File Offset: 0x00AC9AF0
+		// Token: 0x06023153 RID: 143699 RVA: 0x009FA1C4 File Offset: 0x009F83C4
 		public void RefreshMouseImmersiveMode()
 		{
 			UiViewBase uiViewBase = null;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA08 RID: 190984 RVA: 0x00ACB9A0 File Offset: 0x00AC9BA0
+		// Token: 0x06023154 RID: 143700 RVA: 0x009FA274 File Offset: 0x009F8474
 		private void ApplyImmersiveMouseConfig(EUiViewName viewName)
 		{
 			ImmersiveMouse immersiveMouseViewConfigByViewName = ImmersiveMouseConfig.Instance.GetImmersiveMouseViewConfigByViewName(viewName);
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Ui
 			this.DeadZone = immersiveMouseViewConfigByViewName.DeadZone;
 		}
 
-		// Token: 0x0602EA09 RID: 190985 RVA: 0x00ACB9D3 File Offset: 0x00AC9BD3
+		// Token: 0x06023155 RID: 143701 RVA: 0x009FA2A7 File Offset: 0x009F84A7
 		public void SetFunctionEnabled(bool bEnabled, bool bReset = true, bool bShowCursor = true)
 		{
 			this.FunctionEnabled = bEnabled;
@@ -281,13 +281,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA0A RID: 190986 RVA: 0x00ACBA03 File Offset: 0x00AC9C03
+		// Token: 0x06023156 RID: 143702 RVA: 0x009FA2D7 File Offset: 0x009F84D7
 		public bool IsFunctionEnabled()
 		{
 			return this.FunctionEnabled;
 		}
 
-		// Token: 0x0602EA0B RID: 190987 RVA: 0x00ACBA0B File Offset: 0x00AC9C0B
+		// Token: 0x06023157 RID: 143703 RVA: 0x009FA2DF File Offset: 0x009F84DF
 		private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 		{
 			if (this.CurrentInputMainType == now)
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Ui
 			this.UpdateInputBindings();
 		}
 
-		// Token: 0x0602EA0C RID: 190988 RVA: 0x00ACBA24 File Offset: 0x00AC9C24
+		// Token: 0x06023158 RID: 143704 RVA: 0x009FA2F8 File Offset: 0x009F84F8
 		private void UpdateInputBindings()
 		{
 			if (!this.ImmersiveModeEnabled)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Ui
 			this.BindInputListeners();
 		}
 
-		// Token: 0x0602EA0D RID: 190989 RVA: 0x00ACBA3C File Offset: 0x00AC9C3C
+		// Token: 0x06023159 RID: 143705 RVA: 0x009FA310 File Offset: 0x009F8510
 		private void BindInputListeners()
 		{
 			if (this.CurrentInputMainType == EInputControllerMainType.Gamepad)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA0E RID: 190990 RVA: 0x00ACBAA0 File Offset: 0x00AC9CA0
+		// Token: 0x0602315A RID: 143706 RVA: 0x009FA374 File Offset: 0x009F8574
 		private void UnbindAllInputListeners()
 		{
 			if (this.IsGamepadInputBound)
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA0F RID: 190991 RVA: 0x00ACBB00 File Offset: 0x00AC9D00
+		// Token: 0x0602315B RID: 143707 RVA: 0x009FA3D4 File Offset: 0x009F85D4
 		private void OnGamepadAnyKey(bool bPress, FKey key)
 		{
 			if (!bPress)
@@ -359,13 +359,13 @@ namespace CSharpScript.Game.Ui
 			this.OnAnyInput();
 		}
 
-		// Token: 0x0602EA10 RID: 190992 RVA: 0x00ACBB4D File Offset: 0x00AC9D4D
+		// Token: 0x0602315C RID: 143708 RVA: 0x009FA421 File Offset: 0x009F8621
 		private void OnTouchInput(string arg1, InputDistributeDefine.ITouchData arg2, InputIdentification arg3)
 		{
 			this.OnAnyInput();
 		}
 
-		// Token: 0x0602EA11 RID: 190993 RVA: 0x00ACBB58 File Offset: 0x00AC9D58
+		// Token: 0x0602315D RID: 143709 RVA: 0x009FA42C File Offset: 0x009F862C
 		private void OnAnyInput()
 		{
 			if (!this.ImmersiveModeEnabled || this.PauseReasonSet.Count > 0)
@@ -382,13 +382,13 @@ namespace CSharpScript.Game.Ui
 			this.MouseIdleTime = 0f;
 		}
 
-		// Token: 0x0602EA12 RID: 190994 RVA: 0x00ACBBBC File Offset: 0x00AC9DBC
+		// Token: 0x0602315E RID: 143710 RVA: 0x009FA490 File Offset: 0x009F8690
 		private bool HasAnyInput()
 		{
 			return this.CurrentInputMainType == EInputControllerMainType.Keyboard && (this.CheckMousePress() || this.CheckMouseMove());
 		}
 
-		// Token: 0x0602EA13 RID: 190995 RVA: 0x00ACBBDC File Offset: 0x00AC9DDC
+		// Token: 0x0602315F RID: 143711 RVA: 0x009FA4B0 File Offset: 0x009F86B0
 		private bool CheckMouseMove()
 		{
 			float value = 0f;
@@ -397,29 +397,29 @@ namespace CSharpScript.Game.Ui
 			return Math.Abs(value) + Math.Abs(value2) > this.DeadZone;
 		}
 
-		// Token: 0x0401965E RID: 104030
+		// Token: 0x04013D03 RID: 81155
 		private bool ImmersiveModeEnabled;
 
-		// Token: 0x0401965F RID: 104031
+		// Token: 0x04013D04 RID: 81156
 		private float DeadZone = 0.1f;
 
-		// Token: 0x04019660 RID: 104032
+		// Token: 0x04013D05 RID: 81157
 		private int AutoHideMouseDelay = 3000;
 
-		// Token: 0x04019661 RID: 104033
+		// Token: 0x04013D06 RID: 81158
 		private float MouseIdleTime;
 
-		// Token: 0x04019662 RID: 104034
+		// Token: 0x04013D07 RID: 81159
 		private int TickId = -1;
 
-		// Token: 0x04019663 RID: 104035
+		// Token: 0x04013D08 RID: 81160
 		private readonly string[] MouseInputActionList = new string[]
 		{
 			"UI左键点击",
 			"UI右键点击"
 		};
 
-		// Token: 0x04019664 RID: 104036
+		// Token: 0x04013D09 RID: 81161
 		private readonly ELayerType[] ImmersiveMouseViewLayerList = new ELayerType[]
 		{
 			ELayerType.Pop,
@@ -428,34 +428,34 @@ namespace CSharpScript.Game.Ui
 			ELayerType.Normal
 		};
 
-		// Token: 0x04019665 RID: 104037
+		// Token: 0x04013D0A RID: 81162
 		private readonly HashSet<EUiViewName> ImmersiveMouseViewSet = new HashSet<EUiViewName>();
 
-		// Token: 0x04019666 RID: 104038
+		// Token: 0x04013D0B RID: 81163
 		private bool IsInitialized;
 
-		// Token: 0x04019667 RID: 104039
+		// Token: 0x04013D0C RID: 81164
 		private EUiViewName? TopView;
 
-		// Token: 0x04019668 RID: 104040
+		// Token: 0x04013D0D RID: 81165
 		private readonly HashSet<EImmersiveMouseModeReason> PauseReasonSet = new HashSet<EImmersiveMouseModeReason>();
 
-		// Token: 0x04019669 RID: 104041
+		// Token: 0x04013D0E RID: 81166
 		private bool FunctionEnabled = true;
 
-		// Token: 0x0401966A RID: 104042
+		// Token: 0x04013D0F RID: 81167
 		private bool IsMouseInViewport;
 
-		// Token: 0x0401966B RID: 104043
+		// Token: 0x04013D10 RID: 81168
 		private EInputControllerMainType CurrentInputMainType;
 
-		// Token: 0x0401966C RID: 104044
+		// Token: 0x04013D11 RID: 81169
 		private bool IsGamepadInputBound;
 
-		// Token: 0x0401966D RID: 104045
+		// Token: 0x04013D12 RID: 81170
 		private bool IsTouchInputBound;
 
-		// Token: 0x0401966E RID: 104046
+		// Token: 0x04013D13 RID: 81171
 		private readonly HashSet<string> GamepadIgnoreKeySet = new HashSet<string>();
 	}
 }

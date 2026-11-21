@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F34 RID: 24372
+	// Token: 0x02004F1B RID: 20251
 	public class WheelTowerBossHandBookViewData : IWheelTowerBossHandBookViewData
 	{
-		// Token: 0x17008F34 RID: 36660
-		// (get) Token: 0x0603DE8B RID: 253579 RVA: 0x00EF56E1 File Offset: 0x00EF38E1
-		// (set) Token: 0x0603DE8C RID: 253580 RVA: 0x00EF56E9 File Offset: 0x00EF38E9
+		// Token: 0x17006306 RID: 25350
+		// (get) Token: 0x06032E26 RID: 208422 RVA: 0x00E4740D File Offset: 0x00E4560D
+		// (set) Token: 0x06032E27 RID: 208423 RVA: 0x00E47415 File Offset: 0x00E45615
 		public bool IsEndless { get; set; }
 
-		// Token: 0x17008F35 RID: 36661
-		// (get) Token: 0x0603DE8D RID: 253581 RVA: 0x00EF56F2 File Offset: 0x00EF38F2
-		// (set) Token: 0x0603DE8E RID: 253582 RVA: 0x00EF56FA File Offset: 0x00EF38FA
+		// Token: 0x17006307 RID: 25351
+		// (get) Token: 0x06032E28 RID: 208424 RVA: 0x00E4741E File Offset: 0x00E4561E
+		// (set) Token: 0x06032E29 RID: 208425 RVA: 0x00E47426 File Offset: 0x00E45626
 		public int BossId { get; set; }
 
-		// Token: 0x17008F36 RID: 36662
-		// (get) Token: 0x0603DE8F RID: 253583 RVA: 0x00EF5703 File Offset: 0x00EF3903
-		// (set) Token: 0x0603DE90 RID: 253584 RVA: 0x00EF570B File Offset: 0x00EF390B
+		// Token: 0x17006308 RID: 25352
+		// (get) Token: 0x06032E2A RID: 208426 RVA: 0x00E4742F File Offset: 0x00E4562F
+		// (set) Token: 0x06032E2B RID: 208427 RVA: 0x00E47437 File Offset: 0x00E45637
 		public int BossRound { get; set; }
 
-		// Token: 0x17008F37 RID: 36663
-		// (get) Token: 0x0603DE91 RID: 253585 RVA: 0x00EF5714 File Offset: 0x00EF3914
-		// (set) Token: 0x0603DE92 RID: 253586 RVA: 0x00EF571C File Offset: 0x00EF391C
+		// Token: 0x17006309 RID: 25353
+		// (get) Token: 0x06032E2C RID: 208428 RVA: 0x00E47440 File Offset: 0x00E45640
+		// (set) Token: 0x06032E2D RID: 208429 RVA: 0x00E47448 File Offset: 0x00E45648
 		public int TeamRound { get; set; }
 	}
 }

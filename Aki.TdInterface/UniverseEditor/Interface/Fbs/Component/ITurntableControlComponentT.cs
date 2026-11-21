@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AF4 RID: 23284
+	// Token: 0x0200610A RID: 24842
 	public class ITurntableControlComponentT
 	{
-		// Token: 0x1700AFA9 RID: 44969
-		// (get) Token: 0x06027C02 RID: 162818 RVA: 0x00577CD5 File Offset: 0x00575ED5
-		// (set) Token: 0x06027C03 RID: 162819 RVA: 0x00577CDD File Offset: 0x00575EDD
+		// Token: 0x1700B8F1 RID: 47345
+		// (get) Token: 0x0602A1C6 RID: 172486 RVA: 0x005BF729 File Offset: 0x005BD929
+		// (set) Token: 0x0602A1C7 RID: 172487 RVA: 0x005BF731 File Offset: 0x005BD931
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AFAA RID: 44970
-		// (get) Token: 0x06027C04 RID: 162820 RVA: 0x00577CE6 File Offset: 0x00575EE6
-		// (set) Token: 0x06027C05 RID: 162821 RVA: 0x00577CEE File Offset: 0x00575EEE
+		// Token: 0x1700B8F2 RID: 47346
+		// (get) Token: 0x0602A1C8 RID: 172488 RVA: 0x005BF73A File Offset: 0x005BD93A
+		// (set) Token: 0x0602A1C9 RID: 172489 RVA: 0x005BF742 File Offset: 0x005BD942
 		public TTurntableControllerUnion Config { get; set; }
 
-		// Token: 0x1700AFAB RID: 44971
-		// (get) Token: 0x06027C06 RID: 162822 RVA: 0x00577CF7 File Offset: 0x00575EF7
-		// (set) Token: 0x06027C07 RID: 162823 RVA: 0x00577CFF File Offset: 0x00575EFF
+		// Token: 0x1700B8F3 RID: 47347
+		// (get) Token: 0x0602A1CA RID: 172490 RVA: 0x005BF74B File Offset: 0x005BD94B
+		// (set) Token: 0x0602A1CB RID: 172491 RVA: 0x005BF753 File Offset: 0x005BD953
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027C08 RID: 162824 RVA: 0x00577D08 File Offset: 0x00575F08
+		// Token: 0x0602A1CC RID: 172492 RVA: 0x005BF75C File Offset: 0x005BD95C
 		public ITurntableControlComponentT()
 		{
 			this.Disabled = false;

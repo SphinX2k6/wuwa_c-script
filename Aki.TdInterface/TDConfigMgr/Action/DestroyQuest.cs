@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001563 RID: 5475
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016C1 RID: 5825
 	public class DestroyQuest : ActionParams
 	{
-		// Token: 0x06007BA5 RID: 31653 RVA: 0x00129CB0 File Offset: 0x00127EB0
+		// Token: 0x06008283 RID: 33411 RVA: 0x00138D5C File Offset: 0x00136F5C
 		private DestroyQuest_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007BA6 RID: 31654 RVA: 0x00129CE8 File Offset: 0x00127EE8
+		// Token: 0x06008284 RID: 33412 RVA: 0x00138D94 File Offset: 0x00136F94
 		public static DestroyQuest Create([Nullable(2)] DestroyQuest instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BA7 RID: 31655 RVA: 0x00129CFB File Offset: 0x00127EFB
+		// Token: 0x06008285 RID: 33413 RVA: 0x00138DA7 File Offset: 0x00136FA7
 		public static DestroyQuest CreateFromSetValue([Nullable(2)] DestroyQuest_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BA8 RID: 31656 RVA: 0x00129D0E File Offset: 0x00127F0E
+		// Token: 0x06008286 RID: 33414 RVA: 0x00138DBA File Offset: 0x00136FBA
 		public DestroyQuest_SetValue ToSetValue()
 		{
 			return new DestroyQuest_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028F9 RID: 10489
-		// (get) Token: 0x06007BA9 RID: 31657 RVA: 0x00129D2D File Offset: 0x00127F2D
-		// (set) Token: 0x06007BAA RID: 31658 RVA: 0x00129D58 File Offset: 0x00127F58
+		// Token: 0x17002AE4 RID: 10980
+		// (get) Token: 0x06008287 RID: 33415 RVA: 0x00138DD9 File Offset: 0x00136FD9
+		// (set) Token: 0x06008288 RID: 33416 RVA: 0x00138E04 File Offset: 0x00137004
 		public virtual int QuestId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028FA RID: 10490
-		// (get) Token: 0x06007BAB RID: 31659 RVA: 0x00129D68 File Offset: 0x00127F68
-		// (set) Token: 0x06007BAC RID: 31660 RVA: 0x00129DA2 File Offset: 0x00127FA2
+		// Token: 0x17002AE5 RID: 10981
+		// (get) Token: 0x06008289 RID: 33417 RVA: 0x00138E14 File Offset: 0x00137014
+		// (set) Token: 0x0600828A RID: 33418 RVA: 0x00138E4E File Offset: 0x0013704E
 		public virtual bool? IsDestroy
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004732 RID: 18226
+		// Token: 0x04004AD2 RID: 19154
 		[Nullable(2)]
 		protected new DestroyQuest FbInstance;
 
-		// Token: 0x04004733 RID: 18227
+		// Token: 0x04004AD3 RID: 19155
 		[Nullable(2)]
 		protected DestroyQuest_SetValue PocoInterface;
 	}

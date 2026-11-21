@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200246B RID: 9323
+// Token: 0x02001950 RID: 6480
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomInteractDetailPanel : UiPanelBase, IDetailContent
 {
-	// Token: 0x06012B8E RID: 76686 RVA: 0x0049E658 File Offset: 0x0049C858
+	// Token: 0x06010046 RID: 65606 RVA: 0x004ABDC4 File Offset: 0x004A9FC4
 	public PhantomInteractDetailPanel(bool isSpecialContent)
 	{
 		this.IsSpecialContent = isSpecialContent;
 	}
 
-	// Token: 0x06012B8F RID: 76687 RVA: 0x0049E674 File Offset: 0x0049C874
+	// Token: 0x06010047 RID: 65607 RVA: 0x004ABDE0 File Offset: 0x004A9FE0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class PhantomInteractDetailPanel : UiPanelBase, IDetailContent
 		};
 	}
 
-	// Token: 0x06012B90 RID: 76688 RVA: 0x0049E6FC File Offset: 0x0049C8FC
+	// Token: 0x06010048 RID: 65608 RVA: 0x004ABE68 File Offset: 0x004AA068
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomInteractDetailPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class PhantomInteractDetailPanel : UiPanelBase, IDetailContent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012B91 RID: 76689 RVA: 0x0049E740 File Offset: 0x0049C940
+	// Token: 0x06010049 RID: 65609 RVA: 0x004ABEAC File Offset: 0x004AA0AC
 	[NullableContext(1)]
 	public UniTask Refresh(PhantomInteractDetailViewModel viewModel)
 	{
@@ -54,20 +54,20 @@ public class PhantomInteractDetailPanel : UiPanelBase, IDetailContent
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012B92 RID: 76690 RVA: 0x0049E78B File Offset: 0x0049C98B
+	// Token: 0x0601004A RID: 65610 RVA: 0x004ABEF7 File Offset: 0x004AA0F7
 	void IDetailContent.SetUiActive(bool active)
 	{
 		base.SetUiActive(active);
 	}
 
-	// Token: 0x06012B93 RID: 76691 RVA: 0x0049E794 File Offset: 0x0049C994
+	// Token: 0x0601004B RID: 65611 RVA: 0x004ABF00 File Offset: 0x004AA100
 	[NullableContext(1)]
 	void IDetailContent.Refresh(PhantomInteractDetailViewModel viewModel)
 	{
 		this.Refresh(viewModel);
 	}
 
-	// Token: 0x06012B94 RID: 76692 RVA: 0x0049E7A0 File Offset: 0x0049C9A0
+	// Token: 0x0601004C RID: 65612 RVA: 0x004ABF0C File Offset: 0x004AA10C
 	public void PlaySwitchAnimation()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -83,7 +83,7 @@ public class PhantomInteractDetailPanel : UiPanelBase, IDetailContent
 		seqPlayer2.PlayLevelSequenceByName("Switch", false, null, false);
 	}
 
-	// Token: 0x06012B95 RID: 76693 RVA: 0x0049E7E0 File Offset: 0x0049C9E0
+	// Token: 0x0601004D RID: 65613 RVA: 0x004ABF4C File Offset: 0x004AA14C
 	public void SetScrollListenerActive(bool active)
 	{
 		IDetailContent detailContent = this.DetailContent;
@@ -94,40 +94,40 @@ public class PhantomInteractDetailPanel : UiPanelBase, IDetailContent
 		detailContent.SetScrollListenerActive(active);
 	}
 
-	// Token: 0x04008CFA RID: 36090
+	// Token: 0x04008E41 RID: 36417
 	private PhantomInteractListItem PhantomItem;
 
-	// Token: 0x04008CFB RID: 36091
+	// Token: 0x04008E42 RID: 36418
 	private GetWayPanel GetWayPanel;
 
-	// Token: 0x04008CFC RID: 36092
+	// Token: 0x04008E43 RID: 36419
 	private int? GetWayId = new int?(0);
 
-	// Token: 0x04008CFD RID: 36093
+	// Token: 0x04008E44 RID: 36420
 	private IDetailContent DetailContent;
 
-	// Token: 0x04008CFE RID: 36094
+	// Token: 0x04008E45 RID: 36421
 	private ActivePanel ActivePanel;
 
-	// Token: 0x04008CFF RID: 36095
+	// Token: 0x04008E46 RID: 36422
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008D00 RID: 36096
+	// Token: 0x04008E47 RID: 36423
 	private readonly bool IsSpecialContent;
 
-	// Token: 0x020089E6 RID: 35302
+	// Token: 0x02007B6D RID: 31597
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CC8E RID: 183438
+		// Token: 0x04027FA4 RID: 163748
 		ItemPanelVision,
-		// Token: 0x0402CC8F RID: 183439
+		// Token: 0x04027FA5 RID: 163749
 		TxtTitle,
-		// Token: 0x0402CC90 RID: 183440
+		// Token: 0x04027FA6 RID: 163750
 		ItemPanelContent,
-		// Token: 0x0402CC91 RID: 183441
+		// Token: 0x04027FA7 RID: 163751
 		ItemLink,
-		// Token: 0x0402CC92 RID: 183442
+		// Token: 0x04027FA8 RID: 163752
 		ItemNotActive
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E41 RID: 3649
+	// Token: 0x02000F3D RID: 3901
 	public class IGraph3dEdgeNormal : IGraph3dEdgeBase
 	{
-		// Token: 0x06005272 RID: 21106 RVA: 0x000CAFD1 File Offset: 0x000C91D1
-		[NullableContext(1)]
+		// Token: 0x06005799 RID: 22425 RVA: 0x000D6899 File Offset: 0x000D4A99
 		public static IGraph3dEdgeNormal Create(IGraph3dEdgeNormal? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BAD RID: 7085
-		// (get) Token: 0x06005273 RID: 21107 RVA: 0x000CAFF0 File Offset: 0x000C91F0
+		// Token: 0x17001D1A RID: 7450
+		// (get) Token: 0x0600579A RID: 22426 RVA: 0x000D68B8 File Offset: 0x000D4AB8
 		public override int Id
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BAE RID: 7086
-		// (get) Token: 0x06005274 RID: 21108 RVA: 0x000CAFFD File Offset: 0x000C91FD
+		// Token: 0x17001D1B RID: 7451
+		// (get) Token: 0x0600579B RID: 22427 RVA: 0x000D68C5 File Offset: 0x000D4AC5
 		public override int From
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BAF RID: 7087
-		// (get) Token: 0x06005275 RID: 21109 RVA: 0x000CB00A File Offset: 0x000C920A
+		// Token: 0x17001D1C RID: 7452
+		// (get) Token: 0x0600579C RID: 22428 RVA: 0x000D68D2 File Offset: 0x000D4AD2
 		public override int To
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F86 RID: 12166
+		// Token: 0x0400324E RID: 12878
 		private IGraph3dEdgeNormal Instance;
 	}
 }

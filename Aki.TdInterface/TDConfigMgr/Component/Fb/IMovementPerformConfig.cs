@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D45 RID: 3397
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E3F RID: 3647
 	public class IMovementPerformConfig
 	{
-		// Token: 0x06004D79 RID: 19833 RVA: 0x000C0B04 File Offset: 0x000BED04
+		// Token: 0x06005295 RID: 21141 RVA: 0x000CC248 File Offset: 0x000CA448
 		public static IMovementPerformConfig Create(IMovementPerformConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018AC RID: 6316
-		// (get) Token: 0x06004D7A RID: 19834 RVA: 0x000C0B24 File Offset: 0x000BED24
+		// Token: 0x17001A12 RID: 6674
+		// (get) Token: 0x06005296 RID: 21142 RVA: 0x000CC268 File Offset: 0x000CA468
 		public virtual List<IVehicleMontagePlayConfig> VehicleMontagePlayConfigs
 		{
 			get
@@ -44,19 +42,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018AD RID: 6317
-		// (get) Token: 0x06004D7B RID: 19835 RVA: 0x000C0B90 File Offset: 0x000BED90
+		// Token: 0x17001A13 RID: 6675
+		// (get) Token: 0x06005297 RID: 21143 RVA: 0x000CC2D4 File Offset: 0x000CA4D4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISpeedEffectConfig> PlayerSpeedEffectConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -79,24 +77,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C68 RID: 11368
+		// Token: 0x04002F28 RID: 12072
 		private IMovementPerformConfig Instance;
 
-		// Token: 0x04002C69 RID: 11369
+		// Token: 0x04002F29 RID: 12073
 		private List<IVehicleMontagePlayConfig> _VehicleMontagePlayConfigsCache;
 
-		// Token: 0x04002C6A RID: 11370
+		// Token: 0x04002F2A RID: 12074
 		private bool _VehicleMontagePlayConfigsInited;
 
-		// Token: 0x04002C6B RID: 11371
+		// Token: 0x04002F2B RID: 12075
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISpeedEffectConfig> _PlayerSpeedEffectConfigsCache;
 
-		// Token: 0x04002C6C RID: 11372
+		// Token: 0x04002F2C RID: 12076
 		private bool _PlayerSpeedEffectConfigsInited;
 	}
 }

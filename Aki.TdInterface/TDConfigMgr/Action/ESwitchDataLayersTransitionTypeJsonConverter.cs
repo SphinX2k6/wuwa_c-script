@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002442 RID: 9282
+	// Token: 0x020026E3 RID: 9955
 	public class ESwitchDataLayersTransitionTypeJsonConverter : JsonConverter<ESwitchDataLayersTransitionType>
 	{
-		// Token: 0x0600C9A9 RID: 51625 RVA: 0x001D85D8 File Offset: 0x001D67D8
+		// Token: 0x0600D659 RID: 54873 RVA: 0x001F24A0 File Offset: 0x001F06A0
 		public override ESwitchDataLayersTransitionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESwitchDataLayersTransitionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C9AA RID: 51626 RVA: 0x001D85FC File Offset: 0x001D67FC
+		// Token: 0x0600D65A RID: 54874 RVA: 0x001F24C4 File Offset: 0x001F06C4
 		public override void Write(Utf8JsonWriter writer, ESwitchDataLayersTransitionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

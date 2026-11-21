@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200565D RID: 22109
+	// Token: 0x02005BFE RID: 23550
 	public class INpcStandbyShowFinitelyInfoT
 	{
-		// Token: 0x1700A3C4 RID: 41924
-		// (get) Token: 0x06024C31 RID: 150577 RVA: 0x00512874 File Offset: 0x00510A74
-		// (set) Token: 0x06024C32 RID: 150578 RVA: 0x0051287C File Offset: 0x00510A7C
+		// Token: 0x1700AC53 RID: 44115
+		// (get) Token: 0x06026E6A RID: 159338 RVA: 0x00553410 File Offset: 0x00551610
+		// (set) Token: 0x06026E6B RID: 159339 RVA: 0x00553418 File Offset: 0x00551618
 		public string Montage { get; set; }
 
-		// Token: 0x1700A3C5 RID: 41925
-		// (get) Token: 0x06024C33 RID: 150579 RVA: 0x00512885 File Offset: 0x00510A85
-		// (set) Token: 0x06024C34 RID: 150580 RVA: 0x0051288D File Offset: 0x00510A8D
+		// Token: 0x1700AC54 RID: 44116
+		// (get) Token: 0x06026E6C RID: 159340 RVA: 0x00553421 File Offset: 0x00551621
+		// (set) Token: 0x06026E6D RID: 159341 RVA: 0x00553429 File Offset: 0x00551629
 		public IMontageIdT RegisteredMontageId { get; set; }
 
-		// Token: 0x1700A3C6 RID: 41926
-		// (get) Token: 0x06024C35 RID: 150581 RVA: 0x00512896 File Offset: 0x00510A96
-		// (set) Token: 0x06024C36 RID: 150582 RVA: 0x0051289E File Offset: 0x00510A9E
+		// Token: 0x1700AC55 RID: 44117
+		// (get) Token: 0x06026E6E RID: 159342 RVA: 0x00553432 File Offset: 0x00551632
+		// (set) Token: 0x06026E6F RID: 159343 RVA: 0x0055343A File Offset: 0x0055163A
 		public int FaceExpressionId { get; set; }
 
-		// Token: 0x1700A3C7 RID: 41927
-		// (get) Token: 0x06024C37 RID: 150583 RVA: 0x005128A7 File Offset: 0x00510AA7
-		// (set) Token: 0x06024C38 RID: 150584 RVA: 0x005128AF File Offset: 0x00510AAF
+		// Token: 0x1700AC56 RID: 44118
+		// (get) Token: 0x06026E70 RID: 159344 RVA: 0x00553443 File Offset: 0x00551643
+		// (set) Token: 0x06026E71 RID: 159345 RVA: 0x0055344B File Offset: 0x0055164B
 		public int Time { get; set; }
 
-		// Token: 0x1700A3C8 RID: 41928
-		// (get) Token: 0x06024C39 RID: 150585 RVA: 0x005128B8 File Offset: 0x00510AB8
-		// (set) Token: 0x06024C3A RID: 150586 RVA: 0x005128C0 File Offset: 0x00510AC0
+		// Token: 0x1700AC57 RID: 44119
+		// (get) Token: 0x06026E72 RID: 159346 RVA: 0x00553454 File Offset: 0x00551654
+		// (set) Token: 0x06026E73 RID: 159347 RVA: 0x0055345C File Offset: 0x0055165C
 		public IIgnoreEntityIdsCollisionT IgnoreEntityCollision { get; set; }
 
-		// Token: 0x1700A3C9 RID: 41929
-		// (get) Token: 0x06024C3B RID: 150587 RVA: 0x005128C9 File Offset: 0x00510AC9
-		// (set) Token: 0x06024C3C RID: 150588 RVA: 0x005128D1 File Offset: 0x00510AD1
+		// Token: 0x1700AC58 RID: 44120
+		// (get) Token: 0x06026E74 RID: 159348 RVA: 0x00553465 File Offset: 0x00551665
+		// (set) Token: 0x06026E75 RID: 159349 RVA: 0x0055346D File Offset: 0x0055166D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06024C3D RID: 150589 RVA: 0x005128DA File Offset: 0x00510ADA
+		// Token: 0x06026E76 RID: 159350 RVA: 0x00553476 File Offset: 0x00551676
 		public INpcStandbyShowFinitelyInfoT()
 		{
 			this.Montage = null;

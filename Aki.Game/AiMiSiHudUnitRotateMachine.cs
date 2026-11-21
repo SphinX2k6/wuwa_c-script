@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001F43 RID: 8003
+// Token: 0x02001405 RID: 5125
 public class AiMiSiHudUnitRotateMachine
 {
-	// Token: 0x0600F761 RID: 63329 RVA: 0x003BD278 File Offset: 0x003BB478
+	// Token: 0x0600CB80 RID: 52096 RVA: 0x003C8D64 File Offset: 0x003C6F64
 	public bool Update(float delta, double yaw)
 	{
 		if (!this.IsInit)
@@ -40,13 +40,13 @@ public class AiMiSiHudUnitRotateMachine
 		return curValue != this.CurValue;
 	}
 
-	// Token: 0x0600F762 RID: 63330 RVA: 0x003BD328 File Offset: 0x003BB528
+	// Token: 0x0600CB81 RID: 52097 RVA: 0x003C8E14 File Offset: 0x003C7014
 	private void SetTargetDir(int dir)
 	{
 		this.TargetDir = dir;
 	}
 
-	// Token: 0x0600F763 RID: 63331 RVA: 0x003BD334 File Offset: 0x003BB534
+	// Token: 0x0600CB82 RID: 52098 RVA: 0x003C8E20 File Offset: 0x003C7020
 	private void UpdateAnim(float delta)
 	{
 		if (this.NextChangeDirCountdown > 0f)
@@ -85,30 +85,30 @@ public class AiMiSiHudUnitRotateMachine
 		}
 	}
 
-	// Token: 0x040072AE RID: 29358
+	// Token: 0x0400738F RID: 29583
 	public double YawSpeedMin = 0.02;
 
-	// Token: 0x040072AF RID: 29359
+	// Token: 0x04007390 RID: 29584
 	public double Speed = 0.002;
 
-	// Token: 0x040072B0 RID: 29360
+	// Token: 0x04007391 RID: 29585
 	public int Countdown = 500;
 
-	// Token: 0x040072B1 RID: 29361
+	// Token: 0x04007392 RID: 29586
 	private double LastYaw;
 
-	// Token: 0x040072B2 RID: 29362
+	// Token: 0x04007393 RID: 29587
 	private bool IsInit;
 
-	// Token: 0x040072B3 RID: 29363
+	// Token: 0x04007394 RID: 29588
 	private int TargetDir;
 
-	// Token: 0x040072B4 RID: 29364
+	// Token: 0x04007395 RID: 29589
 	private int CurDir;
 
-	// Token: 0x040072B5 RID: 29365
+	// Token: 0x04007396 RID: 29590
 	private float NextChangeDirCountdown;
 
-	// Token: 0x040072B6 RID: 29366
+	// Token: 0x04007397 RID: 29591
 	public double CurValue;
 }

@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007226 RID: 29222
+	// Token: 0x020062DB RID: 25307
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemStateComponent : EntityComponent
 	{
-		// Token: 0x17009E34 RID: 40500
-		// (get) Token: 0x060479A8 RID: 293288 RVA: 0x0124E754 File Offset: 0x0124C954
+		// Token: 0x170073D8 RID: 29656
+		// (get) Token: 0x0603D2F6 RID: 250614 RVA: 0x011A761D File Offset: 0x011A581D
 		public bool? IsInteractState
 		{
 			get
@@ -29,14 +29,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479A9 RID: 293289 RVA: 0x0124E776 File Offset: 0x0124C976
+		// Token: 0x0603D2F7 RID: 250615 RVA: 0x011A763F File Offset: 0x011A583F
 		public void SetPerformanceStateControlledExternally(bool controlled)
 		{
 			this.IsPerformanceStateControlledExternally = controlled;
 		}
 
-		// Token: 0x17009E35 RID: 40501
-		// (get) Token: 0x060479AA RID: 293290 RVA: 0x0124E77F File Offset: 0x0124C97F
+		// Token: 0x170073D9 RID: 29657
+		// (get) Token: 0x0603D2F8 RID: 250616 RVA: 0x011A7648 File Offset: 0x011A5848
 		public bool PerformanceStateControlledExternally
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E36 RID: 40502
-		// (get) Token: 0x060479AB RID: 293291 RVA: 0x0124E787 File Offset: 0x0124C987
+		// Token: 0x170073DA RID: 29658
+		// (get) Token: 0x0603D2F9 RID: 250617 RVA: 0x011A7650 File Offset: 0x011A5850
 		public SceneItemStateComponent.ESceneItemState State
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E37 RID: 40503
-		// (get) Token: 0x060479AC RID: 293292 RVA: 0x0124E78F File Offset: 0x0124C98F
+		// Token: 0x170073DB RID: 29659
+		// (get) Token: 0x0603D2FA RID: 250618 RVA: 0x011A7658 File Offset: 0x011A5858
 		public int StateTagId
 		{
 			get
@@ -65,8 +65,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E38 RID: 40504
-		// (get) Token: 0x060479AD RID: 293293 RVA: 0x0124E79C File Offset: 0x0124C99C
+		// Token: 0x170073DC RID: 29660
+		// (get) Token: 0x0603D2FB RID: 250619 RVA: 0x011A7665 File Offset: 0x011A5865
 		public int? GetPerformanceStateTagId
 		{
 			get
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479AE RID: 293294 RVA: 0x0124E7A4 File Offset: 0x0124C9A4
+		// Token: 0x0603D2FC RID: 250620 RVA: 0x011A7670 File Offset: 0x011A5870
 		protected override bool OnInitData(IEntityArgs Args = null)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -123,14 +123,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060479AF RID: 293295 RVA: 0x0124E970 File Offset: 0x0124CB70
+		// Token: 0x0603D2FD RID: 250621 RVA: 0x011A783C File Offset: 0x011A5A3C
 		protected override bool OnStart()
 		{
 			this.InitStateHandle(this.CurStateTagId.Value);
 			return true;
 		}
 
-		// Token: 0x060479B0 RID: 293296 RVA: 0x0124E984 File Offset: 0x0124CB84
+		// Token: 0x0603D2FE RID: 250622 RVA: 0x011A7850 File Offset: 0x011A5A50
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionLoadCompleted)))
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060479B1 RID: 293297 RVA: 0x0124E9FC File Offset: 0x0124CBFC
+		// Token: 0x0603D2FF RID: 250623 RVA: 0x011A78C8 File Offset: 0x011A5AC8
 		public bool IsInState(SceneItemStateComponent.ESceneItemState inState)
 		{
 			return this.CurState == inState;
 		}
 
-		// Token: 0x060479B2 RID: 293298 RVA: 0x0124EA08 File Offset: 0x0124CC08
+		// Token: 0x0603D300 RID: 250624 RVA: 0x011A78D4 File Offset: 0x011A5AD4
 		public unsafe void StartFadeOut()
 		{
 			if (this.FadeOutTimer != null)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, (float)((int)(leaveAoiFadeOutDuration * (float)TimeUtil.Instance.InverseMillisecond)), null, null, true, 1f);
 		}
 
-		// Token: 0x060479B3 RID: 293299 RVA: 0x0124EB44 File Offset: 0x0124CD44
+		// Token: 0x0603D301 RID: 250625 RVA: 0x011A7A10 File Offset: 0x011A5C10
 		public void StopFadeOut()
 		{
 			if (this.FadeOutTimer == null)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.FadeOutTimer = null;
 		}
 
-		// Token: 0x060479B4 RID: 293300 RVA: 0x0124EB68 File Offset: 0x0124CD68
+		// Token: 0x0603D302 RID: 250626 RVA: 0x011A7A34 File Offset: 0x011A5C34
 		public void HandleDestroyState(ERemoveEntityType? removeType = null)
 		{
 			this.IsNotInPrepare = new bool?(false);
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479B5 RID: 293301 RVA: 0x0124EE18 File Offset: 0x0124D018
+		// Token: 0x0603D303 RID: 250627 RVA: 0x011A7CE4 File Offset: 0x011A5EE4
 		private void InitStateHandle(int initStateId)
 		{
 			SceneItemStateComponent.<>c__DisplayClass43_0 CS$<>8__locals1 = new SceneItemStateComponent.<>c__DisplayClass43_0();
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.IsNotInPrepare = new bool?(true);
 		}
 
-		// Token: 0x060479B6 RID: 293302 RVA: 0x0124F188 File Offset: 0x0124D388
+		// Token: 0x0603D304 RID: 250628 RVA: 0x011A8054 File Offset: 0x011A6254
 		public void UpdateState(int stateId, bool isReady, bool isInit = false)
 		{
 			if (this.IsPerformanceStateControlledExternally)
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.EmitWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, stateId, true);
 		}
 
-		// Token: 0x060479B7 RID: 293303 RVA: 0x0124F230 File Offset: 0x0124D430
+		// Token: 0x0603D305 RID: 250629 RVA: 0x011A80FC File Offset: 0x011A62FC
 		private SceneItemStateComponent.ESceneItemState MapStateTagIdToState(int stateTagId)
 		{
 			SceneItemStateComponent.ESceneItemState result;
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return result;
 		}
 
-		// Token: 0x060479B8 RID: 293304 RVA: 0x0124F298 File Offset: 0x0124D498
+		// Token: 0x0603D306 RID: 250630 RVA: 0x011A8164 File Offset: 0x011A6364
 		private void OnSceneInteractionLoadCompleted()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionLoadCompleted));
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.IsNotInPrepare = new bool?(true);
 		}
 
-		// Token: 0x060479B9 RID: 293305 RVA: 0x0124F35A File Offset: 0x0124D55A
+		// Token: 0x0603D307 RID: 250631 RVA: 0x011A8226 File Offset: 0x011A6426
 		private void HandleSceneItemReferenceDestroy(ELevelEventState result)
 		{
 			TimerSystem.FlowTimeInstance.Delay(delegate(float _)
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, (float)(2 * TimeUtil.Instance.InverseMillisecond), null, null, true, 1f);
 		}
 
-		// Token: 0x060479BA RID: 293306 RVA: 0x0124F388 File Offset: 0x0124D588
+		// Token: 0x0603D308 RID: 250632 RVA: 0x011A8254 File Offset: 0x011A6454
 		public void ChangePerformanceState(int newTagId, bool isForce = false, bool isCheck = true)
 		{
 			int? performanceStateTagId = this.PerformanceStateTagId;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.EmitWithTarget<int, int>(base.Entity, EEventName.OnEntityPerformanceStateChanged, this.PbDataId.Value, this.PerformanceStateTagId.Value);
 		}
 
-		// Token: 0x060479BB RID: 293307 RVA: 0x0124F473 File Offset: 0x0124D673
+		// Token: 0x0603D309 RID: 250633 RVA: 0x011A833F File Offset: 0x011A653F
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479BC RID: 293308 RVA: 0x0124F4A8 File Offset: 0x0124D6A8
+		// Token: 0x0603D30A RID: 250634 RVA: 0x011A8374 File Offset: 0x011A6574
 		private void BornStateReady(bool isForce)
 		{
 			LevelTagComponent tagComponent = this.TagComponent;
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.BornPerformTimer = null;
 		}
 
-		// Token: 0x060479BD RID: 293309 RVA: 0x0124F534 File Offset: 0x0124D734
+		// Token: 0x0603D30B RID: 250635 RVA: 0x011A8400 File Offset: 0x011A6600
 		private void ChangeDestroyPerformanceState(ERemoveEntityType? removeType)
 		{
 			if (removeType == null)
@@ -616,7 +616,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060479BE RID: 293310 RVA: 0x0124F62C File Offset: 0x0124D82C
+		// Token: 0x0603D30C RID: 250636 RVA: 0x011A84F8 File Offset: 0x011A66F8
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -625,183 +625,140 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemStateComponent sceneItemStateComponent = (SceneItemStateComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CurState"))
+			this.CurState = sceneItemStateComponent.CurState;
+			this.CurStateTagId = sceneItemStateComponent.CurStateTagId;
+			this.ContextMessageId = sceneItemStateComponent.ContextMessageId;
+			if (sceneItemStateComponent.BehaviorMap == null)
 			{
-				this.CurState = sceneItemStateComponent.CurState;
+				this.BehaviorMap = null;
 			}
-			if (base.CanResetComponentProperty("CurStateTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BehaviorMap), "BehaviorMap"))
 			{
-				this.CurStateTagId = sceneItemStateComponent.CurStateTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ContextMessageId"))
+			if (sceneItemStateComponent.ActorComp == null)
 			{
-				this.ContextMessageId = sceneItemStateComponent.ContextMessageId;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("BehaviorMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemStateComponent.BehaviorMap == null)
-				{
-					this.BehaviorMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<ActionInfo>>>(this.BehaviorMap), "BehaviorMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemStateComponent.LifeCycleConfig == null)
 			{
-				if (sceneItemStateComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.LifeCycleConfig = null;
 			}
-			if (base.CanResetComponentProperty("LifeCycleConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LifeCycleConfig), "LifeCycleConfig"))
 			{
-				if (sceneItemStateComponent.LifeCycleConfig == null)
-				{
-					this.LifeCycleConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemLifeCycleComponent>(this.LifeCycleConfig), "LifeCycleConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateConfig"))
+			if (sceneItemStateComponent.StateConfig == null)
 			{
-				if (sceneItemStateComponent.StateConfig == null)
-				{
-					this.StateConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityStateComponent>(this.StateConfig), "StateConfig"))
-				{
-					return false;
-				}
+				this.StateConfig = null;
 			}
-			if (base.CanResetComponentProperty("IsNotInPrepare"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateConfig), "StateConfig"))
 			{
-				this.IsNotInPrepare = sceneItemStateComponent.IsNotInPrepare;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CreatureDataId"))
+			this.IsNotInPrepare = sceneItemStateComponent.IsNotInPrepare;
+			this.CreatureDataId = sceneItemStateComponent.CreatureDataId;
+			this.PbDataId = sceneItemStateComponent.PbDataId;
+			if (sceneItemStateComponent.TagComponent == null)
 			{
-				this.CreatureDataId = sceneItemStateComponent.CreatureDataId;
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("PbDataId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				this.PbDataId = sceneItemStateComponent.PbDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (sceneItemStateComponent.ModelConfig == null)
 			{
-				if (sceneItemStateComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.ModelConfig = null;
 			}
-			if (base.CanResetComponentProperty("ModelConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ModelConfig), "ModelConfig"))
 			{
-				if (sceneItemStateComponent.ModelConfig == null)
-				{
-					this.ModelConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SModelConfig>(this.ModelConfig), "ModelConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SummonerId"))
+			this.SummonerId = sceneItemStateComponent.SummonerId;
+			if (sceneItemStateComponent.CreateBulletTimer == null)
 			{
-				this.SummonerId = sceneItemStateComponent.SummonerId;
+				this.CreateBulletTimer = null;
 			}
-			if (base.CanResetComponentProperty("CreateBulletTimer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreateBulletTimer), "CreateBulletTimer"))
 			{
-				if (sceneItemStateComponent.CreateBulletTimer == null)
-				{
-					this.CreateBulletTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.CreateBulletTimer), "CreateBulletTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PerformanceStateTagId"))
+			this.PerformanceStateTagId = sceneItemStateComponent.PerformanceStateTagId;
+			this.DestroyPerformanceStateTagId = sceneItemStateComponent.DestroyPerformanceStateTagId;
+			this.IsNotInInteractPerformance = sceneItemStateComponent.IsNotInInteractPerformance;
+			if (sceneItemStateComponent.DelayRemoveTimer == null)
 			{
-				this.PerformanceStateTagId = sceneItemStateComponent.PerformanceStateTagId;
+				this.DelayRemoveTimer = null;
 			}
-			if (base.CanResetComponentProperty("DestroyPerformanceStateTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayRemoveTimer), "DelayRemoveTimer"))
 			{
-				this.DestroyPerformanceStateTagId = sceneItemStateComponent.DestroyPerformanceStateTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsNotInInteractPerformance"))
+			if (sceneItemStateComponent.BornPerformTimer == null)
 			{
-				this.IsNotInInteractPerformance = sceneItemStateComponent.IsNotInInteractPerformance;
+				this.BornPerformTimer = null;
 			}
-			if (base.CanResetComponentProperty("DelayRemoveTimer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BornPerformTimer), "BornPerformTimer"))
 			{
-				if (sceneItemStateComponent.DelayRemoveTimer == null)
-				{
-					this.DelayRemoveTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayRemoveTimer), "DelayRemoveTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("BornPerformTimer"))
+			if (sceneItemStateComponent.FadeOutTimer == null)
 			{
-				if (sceneItemStateComponent.BornPerformTimer == null)
-				{
-					this.BornPerformTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.BornPerformTimer), "BornPerformTimer"))
-				{
-					return false;
-				}
+				this.FadeOutTimer = null;
 			}
-			if (base.CanResetComponentProperty("FadeOutTimer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FadeOutTimer), "FadeOutTimer"))
 			{
-				if (sceneItemStateComponent.FadeOutTimer == null)
-				{
-					this.FadeOutTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.FadeOutTimer), "FadeOutTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsPerformanceStateControlledExternally"))
-			{
-				this.IsPerformanceStateControlledExternally = sceneItemStateComponent.IsPerformanceStateControlledExternally;
-			}
+			this.IsPerformanceStateControlledExternally = sceneItemStateComponent.IsPerformanceStateControlledExternally;
 			return true;
 		}
 
-		// Token: 0x04025AC2 RID: 154306
+		// Token: 0x170073DD RID: 29661
+		// (get) Token: 0x0603D30D RID: 250637 RVA: 0x011A8750 File Offset: 0x011A6950
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073DE RID: 29662
+		// (get) Token: 0x0603D30E RID: 250638 RVA: 0x011A8753 File Offset: 0x011A6953
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020731 RID: 132913
 		private const float MIN_DELAY_THRESHOLD = 0.1f;
 
-		// Token: 0x04025AC3 RID: 154307
+		// Token: 0x04020732 RID: 132914
 		private const int RESET_LIMIT = 2;
 
-		// Token: 0x04025AC4 RID: 154308
+		// Token: 0x04020733 RID: 132915
 		[Nullable(1)]
 		private const string SERVER_DATA = "StateTagComponentPb";
 
-		// Token: 0x04025AC5 RID: 154309
+		// Token: 0x04020734 RID: 132916
 		private SceneItemStateComponent.ESceneItemState CurState = SceneItemStateComponent.ESceneItemState.Normal;
 
-		// Token: 0x04025AC6 RID: 154310
+		// Token: 0x04020735 RID: 132917
 		private int? CurStateTagId;
 
-		// Token: 0x04025AC7 RID: 154311
+		// Token: 0x04020736 RID: 132918
 		private long? ContextMessageId;
 
-		// Token: 0x04025AC8 RID: 154312
+		// Token: 0x04020737 RID: 132919
 		[Nullable(new byte[]
 		{
 			2,
@@ -810,72 +767,72 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		public Dictionary<int, List<ActionInfo>> BehaviorMap;
 
-		// Token: 0x04025AC9 RID: 154313
+		// Token: 0x04020738 RID: 132920
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x04025ACA RID: 154314
+		// Token: 0x04020739 RID: 132921
 		private SceneItemLifeCycleComponent LifeCycleConfig;
 
-		// Token: 0x04025ACB RID: 154315
+		// Token: 0x0402073A RID: 132922
 		public EntityStateComponent StateConfig;
 
-		// Token: 0x04025ACC RID: 154316
+		// Token: 0x0402073B RID: 132923
 		private bool? IsNotInPrepare = new bool?(false);
 
-		// Token: 0x04025ACD RID: 154317
+		// Token: 0x0402073C RID: 132924
 		private long? CreatureDataId;
 
-		// Token: 0x04025ACE RID: 154318
+		// Token: 0x0402073D RID: 132925
 		private int? PbDataId;
 
-		// Token: 0x04025ACF RID: 154319
+		// Token: 0x0402073E RID: 132926
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x04025AD0 RID: 154320
+		// Token: 0x0402073F RID: 132927
 		private SModelConfig ModelConfig;
 
-		// Token: 0x04025AD1 RID: 154321
+		// Token: 0x04020740 RID: 132928
 		private long? SummonerId;
 
-		// Token: 0x04025AD2 RID: 154322
+		// Token: 0x04020741 RID: 132929
 		private TimerHandle CreateBulletTimer;
 
-		// Token: 0x04025AD3 RID: 154323
+		// Token: 0x04020742 RID: 132930
 		private int? PerformanceStateTagId;
 
-		// Token: 0x04025AD4 RID: 154324
+		// Token: 0x04020743 RID: 132931
 		private int? DestroyPerformanceStateTagId;
 
-		// Token: 0x04025AD5 RID: 154325
+		// Token: 0x04020744 RID: 132932
 		private bool? IsNotInInteractPerformance;
 
-		// Token: 0x04025AD6 RID: 154326
+		// Token: 0x04020745 RID: 132933
 		private TimerHandle DelayRemoveTimer;
 
-		// Token: 0x04025AD7 RID: 154327
+		// Token: 0x04020746 RID: 132934
 		private TimerHandle BornPerformTimer;
 
-		// Token: 0x04025AD8 RID: 154328
+		// Token: 0x04020747 RID: 132935
 		private TimerHandle FadeOutTimer;
 
-		// Token: 0x04025AD9 RID: 154329
+		// Token: 0x04020748 RID: 132936
 		private bool IsPerformanceStateControlledExternally;
 
-		// Token: 0x0200CF74 RID: 53108
+		// Token: 0x0200BB09 RID: 47881
 		[NullableContext(0)]
 		public enum ESceneItemState
 		{
-			// Token: 0x0403E5AB RID: 255403
+			// Token: 0x040398D1 RID: 235729
 			Born,
-			// Token: 0x0403E5AC RID: 255404
+			// Token: 0x040398D2 RID: 235730
 			Normal,
-			// Token: 0x0403E5AD RID: 255405
+			// Token: 0x040398D3 RID: 235731
 			Active,
-			// Token: 0x0403E5AE RID: 255406
+			// Token: 0x040398D4 RID: 235732
 			Destroy,
-			// Token: 0x0403E5AF RID: 255407
+			// Token: 0x040398D5 RID: 235733
 			Completed,
-			// Token: 0x0403E5B0 RID: 255408
+			// Token: 0x040398D6 RID: 235734
 			Custom
 		}
 	}

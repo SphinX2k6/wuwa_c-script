@@ -11,14 +11,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005096 RID: 20630
+	// Token: 0x02004066 RID: 16486
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class FlowController : ControllerWithAssistantBase
 	{
-		// Token: 0x17008084 RID: 32900
-		// (get) Token: 0x06034DD1 RID: 216529 RVA: 0x00C8254F File Offset: 0x00C8074F
+		// Token: 0x17005444 RID: 21572
+		// (get) Token: 0x06029CCA RID: 171210 RVA: 0x00BCF76F File Offset: 0x00BCD96F
 		protected override bool IsTickEvenPausedInternal
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034DD2 RID: 216530 RVA: 0x00C82552 File Offset: 0x00C80752
+		// Token: 0x06029CCB RID: 171211 RVA: 0x00BCF772 File Offset: 0x00BCD972
 		protected override bool OnInit()
 		{
 			bool result = base.OnInit();
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return result;
 		}
 
-		// Token: 0x06034DD3 RID: 216531 RVA: 0x00C8255F File Offset: 0x00C8075F
+		// Token: 0x06029CCC RID: 171212 RVA: 0x00BCF77F File Offset: 0x00BCD97F
 		protected override bool OnClear()
 		{
 			FlowNetworks.UnRegister();
 			return base.OnClear();
 		}
 
-		// Token: 0x06034DD4 RID: 216532 RVA: 0x00C8256C File Offset: 0x00C8076C
+		// Token: 0x06029CCD RID: 171213 RVA: 0x00BCF78C File Offset: 0x00BCD98C
 		protected override void RegisterAssistant()
 		{
 			base.AddAssistant(0, new FlowServerNotifyCenter());
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			base.AddAssistant(3, new FlowLaunchCenter());
 		}
 
-		// Token: 0x06034DD5 RID: 216533 RVA: 0x00C825A0 File Offset: 0x00C807A0
+		// Token: 0x06029CCE RID: 171214 RVA: 0x00BCF7C0 File Offset: 0x00BCD9C0
 		[return: Nullable(2)]
 		private T GetAssistant<T>(FlowController.EAssistantType type) where T : class
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return default(T);
 		}
 
-		// Token: 0x06034DD6 RID: 216534 RVA: 0x00C825E4 File Offset: 0x00C807E4
+		// Token: 0x06029CCF RID: 171215 RVA: 0x00BCF804 File Offset: 0x00BCDA04
 		public void StartNotify(FlowStartNotify notify)
 		{
 			FlowServerNotifyCenter assistant = this.GetAssistant<FlowServerNotifyCenter>(FlowController.EAssistantType.ServerNotifyCenter);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.HandleFlowStartNotify(notify);
 		}
 
-		// Token: 0x06034DD7 RID: 216535 RVA: 0x00C825F8 File Offset: 0x00C807F8
+		// Token: 0x06029CD0 RID: 171216 RVA: 0x00BCF818 File Offset: 0x00BCDA18
 		public void EndNotify(FlowEndNotify notify)
 		{
 			FlowServerNotifyCenter assistant = this.GetAssistant<FlowServerNotifyCenter>(FlowController.EAssistantType.ServerNotifyCenter);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.HandleFlowEndNotify(notify);
 		}
 
-		// Token: 0x06034DD8 RID: 216536 RVA: 0x00C8260C File Offset: 0x00C8080C
+		// Token: 0x06029CD1 RID: 171217 RVA: 0x00BCF82C File Offset: 0x00BCDA2C
 		public void SkipBlackScreenNotify(FlowServerSkipNotify notify)
 		{
 			FlowServerNotifyCenter assistant = this.GetAssistant<FlowServerNotifyCenter>(FlowController.EAssistantType.ServerNotifyCenter);
@@ -100,12 +100,12 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.HandleFlowSkipBlackScreenNotify(notify);
 		}
 
-		// Token: 0x06034DD9 RID: 216537 RVA: 0x00C82620 File Offset: 0x00C80820
+		// Token: 0x06029CD2 RID: 171218 RVA: 0x00BCF840 File Offset: 0x00BCDA40
 		public void ClearOnLeaveOnlineWorld()
 		{
 		}
 
-		// Token: 0x06034DDA RID: 216538 RVA: 0x00C82622 File Offset: 0x00C80822
+		// Token: 0x06029CD3 RID: 171219 RVA: 0x00BCF842 File Offset: 0x00BCDA42
 		[NullableContext(2)]
 		public FlowAction GetFlowAction(EAction type)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetFlowAction(type);
 		}
 
-		// Token: 0x06034DDB RID: 216539 RVA: 0x00C82637 File Offset: 0x00C80837
+		// Token: 0x06029CD4 RID: 171220 RVA: 0x00BCF857 File Offset: 0x00BCDA57
 		public void ExecuteActions(List<ActionInfo> actions, FlowContext context, Action callback)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.ExecuteActions(actions, context, callback);
 		}
 
-		// Token: 0x06034DDC RID: 216540 RVA: 0x00C8264D File Offset: 0x00C8084D
+		// Token: 0x06029CD5 RID: 171221 RVA: 0x00BCF86D File Offset: 0x00BCDA6D
 		public void FinishFlow(string reason, long? incId = null, bool isServerEnd = false)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -139,14 +139,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.FinishFlow(reason, incId, isServerEnd);
 		}
 
-		// Token: 0x06034DDD RID: 216541 RVA: 0x00C82663 File Offset: 0x00C80863
+		// Token: 0x06029CD6 RID: 171222 RVA: 0x00BCF883 File Offset: 0x00BCDA83
 		public bool HasFlow(string flowListName, int flowId, int flowStateId)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.HasFlow(flowListName, flowId, flowStateId);
 		}
 
-		// Token: 0x06034DDE RID: 216542 RVA: 0x00C8267A File Offset: 0x00C8087A
+		// Token: 0x06029CD7 RID: 171223 RVA: 0x00BCF89A File Offset: 0x00BCDA9A
 		public void MarkClientError(string reason)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.MarkClientError(reason);
 		}
 
-		// Token: 0x06034DDF RID: 216543 RVA: 0x00C8268E File Offset: 0x00C8088E
+		// Token: 0x06029CD8 RID: 171224 RVA: 0x00BCF8AE File Offset: 0x00BCDAAE
 		[NullableContext(2)]
 		public FlowContext GetCurrentContext()
 		{
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetCurrentContext();
 		}
 
-		// Token: 0x06034DE0 RID: 216544 RVA: 0x00C826A2 File Offset: 0x00C808A2
+		// Token: 0x06029CD9 RID: 171225 RVA: 0x00BCF8C2 File Offset: 0x00BCDAC2
 		public void BackgroundFlow(string reason, bool useFade = true, bool isServerEnd = false, bool stopAtNoSkipSetPlotMode = false)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.BackgroundActions(reason, useFade, isServerEnd, stopAtNoSkipSetPlotMode);
 		}
 
-		// Token: 0x06034DE1 RID: 216545 RVA: 0x00C826BA File Offset: 0x00C808BA
+		// Token: 0x06029CDA RID: 171226 RVA: 0x00BCF8DA File Offset: 0x00BCDADA
 		public void RunNextAction()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.ExecuteNextAction();
 		}
 
-		// Token: 0x06034DE2 RID: 216546 RVA: 0x00C826CD File Offset: 0x00C808CD
+		// Token: 0x06029CDB RID: 171227 RVA: 0x00BCF8ED File Offset: 0x00BCDAED
 		public void FinishFlowByGm()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.ForceFinishActionsByGm();
 		}
 
-		// Token: 0x06034DE3 RID: 216547 RVA: 0x00C826E0 File Offset: 0x00C808E0
+		// Token: 0x06029CDC RID: 171228 RVA: 0x00BCF900 File Offset: 0x00BCDB00
 		public EAction? GetCurFlowAction()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -213,14 +213,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetCurActionName();
 		}
 
-		// Token: 0x06034DE4 RID: 216548 RVA: 0x00C82707 File Offset: 0x00C80907
+		// Token: 0x06029CDD RID: 171229 RVA: 0x00BCF927 File Offset: 0x00BCDB27
 		public bool IsInShowTalk()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.IsInShowTalk();
 		}
 
-		// Token: 0x06034DE5 RID: 216549 RVA: 0x00C8271B File Offset: 0x00C8091B
+		// Token: 0x06029CDE RID: 171230 RVA: 0x00BCF93B File Offset: 0x00BCDB3B
 		public void ExecuteSubActions([Nullable(new byte[]
 		{
 			2,
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.ExecuteSubActions(actions, callback, append);
 		}
 
-		// Token: 0x06034DE6 RID: 216550 RVA: 0x00C82731 File Offset: 0x00C80931
+		// Token: 0x06029CDF RID: 171231 RVA: 0x00BCF951 File Offset: 0x00BCDB51
 		[NullableContext(2)]
 		public global::Vector GetInteractPoint()
 		{
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetInteractPoint();
 		}
 
-		// Token: 0x06034DE7 RID: 216551 RVA: 0x00C82745 File Offset: 0x00C80945
+		// Token: 0x06029CE0 RID: 171232 RVA: 0x00BCF965 File Offset: 0x00BCDB65
 		[NullableContext(2)]
 		public IInteractCameraOffsetConfig GetCameraOffsetConfig()
 		{
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetCameraOffsetConfig();
 		}
 
-		// Token: 0x06034DE8 RID: 216552 RVA: 0x00C82759 File Offset: 0x00C80959
+		// Token: 0x06029CE1 RID: 171233 RVA: 0x00BCF979 File Offset: 0x00BCDB79
 		public void AddActionNext(ActionInfo actionInfo)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.AddActionNext(actionInfo);
 		}
 
-		// Token: 0x06034DE9 RID: 216553 RVA: 0x00C8276D File Offset: 0x00C8096D
+		// Token: 0x06029CE2 RID: 171234 RVA: 0x00BCF98D File Offset: 0x00BCDB8D
 		[NullableContext(2)]
 		public int GetRecommendedOption(ITalkItem talkItem = null)
 		{
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetOptionToSelect(talkItem);
 		}
 
-		// Token: 0x06034DEA RID: 216554 RVA: 0x00C82782 File Offset: 0x00C80982
+		// Token: 0x06029CE3 RID: 171235 RVA: 0x00BCF9A2 File Offset: 0x00BCDBA2
 		public void SelectOption(int talkId, int index)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.RecordOption(talkId, index);
 		}
 
-		// Token: 0x06034DEB RID: 216555 RVA: 0x00C82797 File Offset: 0x00C80997
+		// Token: 0x06029CE4 RID: 171236 RVA: 0x00BCF9B7 File Offset: 0x00BCDBB7
 		public void RecordTalkItem(ITalkItem talkItem)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.RecordTalkItem(talkItem);
 		}
 
-		// Token: 0x06034DEC RID: 216556 RVA: 0x00C827AC File Offset: 0x00C809AC
+		// Token: 0x06029CE5 RID: 171237 RVA: 0x00BCF9CC File Offset: 0x00BCDBCC
 		public PlotReviewViewData CreatePlotReviewViewData()
 		{
 			List<PlotReviewItemData> list = new List<PlotReviewItemData>();
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			};
 		}
 
-		// Token: 0x06034DED RID: 216557 RVA: 0x00C828BC File Offset: 0x00C80ABC
+		// Token: 0x06029CE6 RID: 171238 RVA: 0x00BCFADC File Offset: 0x00BCDCDC
 		public bool OpenPlotReviewView()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -365,8 +365,8 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x17008085 RID: 32901
-		// (get) Token: 0x06034DEE RID: 216558 RVA: 0x00C82917 File Offset: 0x00C80B17
+		// Token: 0x17005445 RID: 21573
+		// (get) Token: 0x06029CE7 RID: 171239 RVA: 0x00BCFB37 File Offset: 0x00BCDD37
 		public FlowSequence FlowSequence
 		{
 			get
@@ -375,8 +375,8 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x17008086 RID: 32902
-		// (get) Token: 0x06034DEF RID: 216559 RVA: 0x00C82925 File Offset: 0x00C80B25
+		// Token: 0x17005446 RID: 21574
+		// (get) Token: 0x06029CE8 RID: 171240 RVA: 0x00BCFB45 File Offset: 0x00BCDD45
 		public FlowShowTalk FlowShowTalk
 		{
 			get
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034DF0 RID: 216560 RVA: 0x00C82933 File Offset: 0x00C80B33
+		// Token: 0x06029CE9 RID: 171241 RVA: 0x00BCFB53 File Offset: 0x00BCDD53
 		public void EnableSkip(bool enable)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -396,21 +396,21 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.EnableSkip(enable);
 		}
 
-		// Token: 0x06034DF1 RID: 216561 RVA: 0x00C82947 File Offset: 0x00C80B47
+		// Token: 0x06029CEA RID: 171242 RVA: 0x00BCFB67 File Offset: 0x00BCDD67
 		public bool IsSkipEnabled()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.IsSkipEnabled();
 		}
 
-		// Token: 0x06034DF2 RID: 216562 RVA: 0x00C8295B File Offset: 0x00C80B5B
+		// Token: 0x06029CEB RID: 171243 RVA: 0x00BCFB7B File Offset: 0x00BCDD7B
 		public bool CheckCanSkipTmp()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.CheckCanSkipTmp();
 		}
 
-		// Token: 0x06034DF3 RID: 216563 RVA: 0x00C8296F File Offset: 0x00C80B6F
+		// Token: 0x06029CEC RID: 171244 RVA: 0x00BCFB8F File Offset: 0x00BCDD8F
 		public void CountDownSkip(bool enable)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.TriggerCountDownSkip(enable);
 		}
 
-		// Token: 0x06034DF4 RID: 216564 RVA: 0x00C82983 File Offset: 0x00C80B83
+		// Token: 0x06029CED RID: 171245 RVA: 0x00BCFBA3 File Offset: 0x00BCDDA3
 		public void CheckDisableInput(EPlotLevel? level = null, bool seamless = false, bool disableSequenceInertiaKeeper = false)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -432,7 +432,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.HandleInputBeforePlay(level, seamless, disableSequenceInertiaKeeper);
 		}
 
-		// Token: 0x06034DF5 RID: 216565 RVA: 0x00C82999 File Offset: 0x00C80B99
+		// Token: 0x06029CEE RID: 171246 RVA: 0x00BCFBB9 File Offset: 0x00BCDDB9
 		[NullableContext(2)]
 		public ActionInfo GetNextAction(bool bCheckSubAction = true)
 		{
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetNextAction(bCheckSubAction);
 		}
 
-		// Token: 0x06034DF6 RID: 216566 RVA: 0x00C829AE File Offset: 0x00C80BAE
+		// Token: 0x06029CEF RID: 171247 RVA: 0x00BCFBCE File Offset: 0x00BCDDCE
 		public void LogError(string text, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.LogError(text, pairs);
 		}
 
-		// Token: 0x06034DF7 RID: 216567 RVA: 0x00C829C3 File Offset: 0x00C80BC3
+		// Token: 0x06029CF0 RID: 171248 RVA: 0x00BCFBE3 File Offset: 0x00BCDDE3
 		public long GetFlowIncId()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.GetFlowIncId();
 		}
 
-		// Token: 0x06034DF8 RID: 216568 RVA: 0x00C829D8 File Offset: 0x00C80BD8
+		// Token: 0x06029CF1 RID: 171249 RVA: 0x00BCFBF8 File Offset: 0x00BCDDF8
 		public void RequestPosition(IVector location, IRotator rotation)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -483,41 +483,41 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.RequestPosition(location, rotation);
 		}
 
-		// Token: 0x06034DF9 RID: 216569 RVA: 0x00C829ED File Offset: 0x00C80BED
+		// Token: 0x06029CF2 RID: 171250 RVA: 0x00BCFC0D File Offset: 0x00BCDE0D
 		public bool CheckViewControlBeginForC()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.CheckViewControlBeginForC();
 		}
 
-		// Token: 0x06034DFA RID: 216570 RVA: 0x00C82A01 File Offset: 0x00C80C01
+		// Token: 0x06029CF3 RID: 171251 RVA: 0x00BCFC21 File Offset: 0x00BCDE21
 		public List<ActionParams> GetNameAction(EAction name)
 		{
 			return this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner).GetNameAction(name);
 		}
 
-		// Token: 0x06034DFB RID: 216571 RVA: 0x00C82A10 File Offset: 0x00C80C10
+		// Token: 0x06029CF4 RID: 171252 RVA: 0x00BCFC30 File Offset: 0x00BCDE30
 		public string GetFlowName()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return ((assistant != null) ? assistant.GetFlowName() : null) ?? string.Empty;
 		}
 
-		// Token: 0x06034DFC RID: 216572 RVA: 0x00C82A2E File Offset: 0x00C80C2E
+		// Token: 0x06029CF5 RID: 171253 RVA: 0x00BCFC4E File Offset: 0x00BCDE4E
 		public bool HasPendingShowTalkOrSequenceDataAction()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.HasPendingShowTalkOrSequenceDataAction();
 		}
 
-		// Token: 0x06034DFD RID: 216573 RVA: 0x00C82A42 File Offset: 0x00C80C42
+		// Token: 0x06029CF6 RID: 171254 RVA: 0x00BCFC62 File Offset: 0x00BCDE62
 		public bool CollectSeamlessFinalize(ESeamlessFinalizeFlag flag)
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
 			return assistant != null && assistant.CollectSeamlessFinalize(flag);
 		}
 
-		// Token: 0x06034DFE RID: 216574 RVA: 0x00C82A57 File Offset: 0x00C80C57
+		// Token: 0x06029CF7 RID: 171255 RVA: 0x00BCFC77 File Offset: 0x00BCDE77
 		public void RunDeferredSeamlessFinalizeOnPlotEnd()
 		{
 			FlowActionRunner assistant = this.GetAssistant<FlowActionRunner>(FlowController.EAssistantType.ActionRunner);
@@ -528,12 +528,12 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.RunDeferredSeamlessFinalizeOnPlotEnd();
 		}
 
-		// Token: 0x06034DFF RID: 216575 RVA: 0x00C82A6A File Offset: 0x00C80C6A
+		// Token: 0x06029CF8 RID: 171256 RVA: 0x00BCFC8A File Offset: 0x00BCDE8A
 		public void StartFlowByRes(string res)
 		{
 		}
 
-		// Token: 0x06034E00 RID: 216576 RVA: 0x00C82A6C File Offset: 0x00C80C6C
+		// Token: 0x06029CF9 RID: 171257 RVA: 0x00BCFC8C File Offset: 0x00BCDE8C
 		[NullableContext(2)]
 		public long StartFlow([Nullable(1)] string flowListName, int flowId, int stateId, GeneralContext context = null, long flowIncId = 0L, bool isServerNotify = false, bool isAsync = false, bool isSkip = false, global::Vector pos = null)
 		{
@@ -545,7 +545,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.StartFlow(flowListName, flowId, stateId, context, flowIncId, isServerNotify, isAsync, null, false, isSkip, pos, null, false);
 		}
 
-		// Token: 0x06034E01 RID: 216577 RVA: 0x00C82AA0 File Offset: 0x00C80CA0
+		// Token: 0x06029CFA RID: 171258 RVA: 0x00BCFCC0 File Offset: 0x00BCDEC0
 		public long StartFlowForView(string flowListName, int flowId, int stateId, UiParam uiParam, bool canBeAbandoned = true)
 		{
 			FlowLaunchCenter assistant = this.GetAssistant<FlowLaunchCenter>(FlowController.EAssistantType.LaunchCenter);
@@ -556,20 +556,20 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return assistant.StartFlow(flowListName, flowId, stateId, null, 0L, false, false, uiParam, canBeAbandoned, false, null, null, false);
 		}
 
-		// Token: 0x06034E02 RID: 216578 RVA: 0x00C82AD0 File Offset: 0x00C80CD0
+		// Token: 0x06029CFB RID: 171259 RVA: 0x00BCFCF0 File Offset: 0x00BCDEF0
 		[NullableContext(2)]
 		public long StartFlowForCallback([Nullable(1)] string flowListName, int flowId, int stateId, Action callback, GeneralContext context = null, long flowIncId = 0L, bool isServerNotify = false, bool isAsync = false, bool isSkip = false, global::Vector pos = null)
 		{
 			return this.GetAssistant<FlowLaunchCenter>(FlowController.EAssistantType.LaunchCenter).StartFlow(flowListName, flowId, stateId, context, flowIncId, isServerNotify, isAsync, null, false, isSkip, pos, callback, false);
 		}
 
-		// Token: 0x06034E03 RID: 216579 RVA: 0x00C82B00 File Offset: 0x00C80D00
+		// Token: 0x06029CFC RID: 171260 RVA: 0x00BCFD20 File Offset: 0x00BCDF20
 		public void StartFlowForTeleportTransition(string flowListName, int flowId, int stateId, [Nullable(2)] Action callback = null)
 		{
 			this.GetAssistant<FlowLaunchCenter>(FlowController.EAssistantType.LaunchCenter).StartFlow(flowListName, flowId, stateId, null, 0L, false, false, null, false, false, null, callback, true);
 		}
 
-		// Token: 0x06034E04 RID: 216580 RVA: 0x00C82B29 File Offset: 0x00C80D29
+		// Token: 0x06029CFD RID: 171261 RVA: 0x00BCFD49 File Offset: 0x00BCDF49
 		public void StartPlotNetworkPending()
 		{
 			FlowLaunchCenter assistant = this.GetAssistant<FlowLaunchCenter>(FlowController.EAssistantType.LaunchCenter);
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.StartPlotNetworkPending();
 		}
 
-		// Token: 0x06034E05 RID: 216581 RVA: 0x00C82B3C File Offset: 0x00C80D3C
+		// Token: 0x06029CFE RID: 171262 RVA: 0x00BCFD5C File Offset: 0x00BCDF5C
 		protected override void OnTick(float delta)
 		{
 			FlowLaunchCenter assistant = this.GetAssistant<FlowLaunchCenter>(FlowController.EAssistantType.LaunchCenter);
@@ -591,8 +591,8 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			assistant.Tick(delta);
 		}
 
-		// Token: 0x17008087 RID: 32903
-		// (get) Token: 0x06034E06 RID: 216582 RVA: 0x00C82B50 File Offset: 0x00C80D50
+		// Token: 0x17005447 RID: 21575
+		// (get) Token: 0x06029CFF RID: 171263 RVA: 0x00BCFD70 File Offset: 0x00BCDF70
 		public static FlowController Instance
 		{
 			get
@@ -601,7 +601,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E07 RID: 216583 RVA: 0x00C82B57 File Offset: 0x00C80D57
+		// Token: 0x06029D00 RID: 171264 RVA: 0x00BCFD77 File Offset: 0x00BCDF77
 		public static FlowController GetOrCreateInstance()
 		{
 			if (FlowController._Instance == null)
@@ -611,7 +611,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return FlowController._Instance;
 		}
 
-		// Token: 0x06034E08 RID: 216584 RVA: 0x00C82B6B File Offset: 0x00C80D6B
+		// Token: 0x06029D01 RID: 171265 RVA: 0x00BCFD8B File Offset: 0x00BCDF8B
 		public static bool CreateInstance()
 		{
 			if (FlowController._Instance != null)
@@ -622,41 +622,41 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return true;
 		}
 
-		// Token: 0x06034E09 RID: 216585 RVA: 0x00C82B81 File Offset: 0x00C80D81
+		// Token: 0x06029D02 RID: 171266 RVA: 0x00BCFDA1 File Offset: 0x00BCDFA1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034E0A RID: 216586 RVA: 0x00C82B83 File Offset: 0x00C80D83
+		// Token: 0x06029D03 RID: 171267 RVA: 0x00BCFDA3 File Offset: 0x00BCDFA3
 		public static void ResetStaticDefaultValue()
 		{
 			FlowController._Instance = null;
 		}
 
-		// Token: 0x06034E0B RID: 216587 RVA: 0x00C82B8B File Offset: 0x00C80D8B
+		// Token: 0x06029D04 RID: 171268 RVA: 0x00BCFDAB File Offset: 0x00BCDFAB
 		static FlowController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlowController.CreateStaticDefaultValue), new Action(FlowController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401C288 RID: 115336
+		// Token: 0x04016CB7 RID: 93367
 		public const int LOCAL_FLOWINCID = -1;
 
-		// Token: 0x0401C289 RID: 115337
+		// Token: 0x04016CB8 RID: 93368
 		[Nullable(2)]
 		private static FlowController _Instance;
 
-		// Token: 0x0200B224 RID: 45604
+		// Token: 0x02009C5D RID: 40029
 		[NullableContext(0)]
 		private enum EAssistantType
 		{
-			// Token: 0x04036054 RID: 221268
+			// Token: 0x04030AA8 RID: 199336
 			ServerNotifyCenter,
-			// Token: 0x04036055 RID: 221269
+			// Token: 0x04030AA9 RID: 199337
 			ActionCenter,
-			// Token: 0x04036056 RID: 221270
+			// Token: 0x04030AAA RID: 199338
 			ActionRunner,
-			// Token: 0x04036057 RID: 221271
+			// Token: 0x04030AAB RID: 199339
 			LaunchCenter
 		}
 	}

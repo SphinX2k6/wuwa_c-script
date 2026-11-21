@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002A49 RID: 10825
+// Token: 0x02001FC4 RID: 8132
 public enum EFlySkinGetWayType
 {
-	// Token: 0x0400A767 RID: 42855
+	// Token: 0x0400AB6B RID: 43883
 	Locked = 1,
-	// Token: 0x0400A768 RID: 42856
+	// Token: 0x0400AB6C RID: 43884
 	CanJump
 }

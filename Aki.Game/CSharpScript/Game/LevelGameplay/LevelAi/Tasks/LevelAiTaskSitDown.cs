@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC4 RID: 28100
+	// Token: 0x02005F43 RID: 24387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiTaskSitDown : LevelAiTask
 	{
-		// Token: 0x060448D2 RID: 280786 RVA: 0x010E7F04 File Offset: 0x010E6104
+		// Token: 0x0603AA36 RID: 240182 RVA: 0x01092144 File Offset: 0x01090344
 		public unsafe override void MakePlanExpansions(PlanningContext context, LevelAiWorldState worldState)
 		{
 			string reason = "Sit Down Task Make Plan Expansions";
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			this.CreatePlanSteps(context, worldState.MakeCopy());
 		}
 
-		// Token: 0x060448D3 RID: 280787 RVA: 0x010E7F8C File Offset: 0x010E618C
+		// Token: 0x0603AA37 RID: 240183 RVA: 0x010921CC File Offset: 0x010903CC
 		public void Init()
 		{
 			if (this.IsInit)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x060448D4 RID: 280788 RVA: 0x010E802C File Offset: 0x010E622C
+		// Token: 0x0603AA38 RID: 240184 RVA: 0x0109226C File Offset: 0x0109046C
 		private void Swing(INpcSwing option)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(option.TargetNpcId);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			component.StartSwing(option.SwingDa, option.EntityId, new bool?(option.SkipSitDown.GetValueOrDefault()));
 		}
 
-		// Token: 0x060448D5 RID: 280789 RVA: 0x010E8088 File Offset: 0x010E6288
+		// Token: 0x0603AA39 RID: 240185 RVA: 0x010922C8 File Offset: 0x010904C8
 		private void SwingGetUp(INpcSwingGetUp option)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(option.TargetNpcId);
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			component.ExitLoopSwing();
 		}
 
-		// Token: 0x060448D6 RID: 280790 RVA: 0x010E80BC File Offset: 0x010E62BC
+		// Token: 0x0603AA3A RID: 240186 RVA: 0x010922FC File Offset: 0x010904FC
 		private void SitDown(INpcSitDown option)
 		{
 			int posEntityId = option.PosEntityId;
@@ -124,6 +124,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 				return;
 			}
 			PawnChairController pawnChairController = component.GetSubEntityInteractLogicController() as PawnChairController;
+			if (pawnChairController == null || !pawnChairController.IsSceneInteractionLoadCompleted())
+			{
+				return;
+			}
 			BaseActorComponent component2 = base.CreatureDataComponent.Entity.GetComponent<BaseActorComponent>();
 			int pbDataId = base.CreatureDataComponent.GetPbDataId();
 			LevelAiTaskSuccess levelAiTaskSuccess = new LevelAiTaskSuccess();
@@ -217,7 +221,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			this.ChairNeedSetMorph = flag2.GetValueOrDefault();
 		}
 
-		// Token: 0x060448D7 RID: 280791 RVA: 0x010E85B8 File Offset: 0x010E67B8
+		// Token: 0x0603AA3B RID: 240187 RVA: 0x01092808 File Offset: 0x01090A08
 		protected override void TickTask(float deltaTime)
 		{
 			base.TickTask(deltaTime);
@@ -240,7 +244,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x060448D8 RID: 280792 RVA: 0x010E864C File Offset: 0x010E684C
+		// Token: 0x0603AA3C RID: 240188 RVA: 0x0109289C File Offset: 0x01090A9C
 		protected override void OnTaskFinished(ELevelAiNodeResult result)
 		{
 			base.OnTaskFinished(result);
@@ -255,29 +259,29 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x04023A60 RID: 146016
+		// Token: 0x0401ED02 RID: 126210
 		private const float NEARBY_CHAIR_OFFSET = 100f;
 
-		// Token: 0x04023A61 RID: 146017
+		// Token: 0x0401ED03 RID: 126211
 		private const float MOVE_TO_NEARBY_CHAIR_SPEED = 100f;
 
-		// Token: 0x04023A62 RID: 146018
+		// Token: 0x0401ED04 RID: 126212
 		private const float MOVE_TO_CHAIR_SPEED = 70f;
 
-		// Token: 0x04023A63 RID: 146019
+		// Token: 0x0401ED05 RID: 126213
 		public bool CanRecordPlanProgress;
 
-		// Token: 0x04023A64 RID: 146020
+		// Token: 0x0401ED06 RID: 126214
 		public int Cost;
 
-		// Token: 0x04023A65 RID: 146021
+		// Token: 0x0401ED07 RID: 126215
 		private bool IsInit;
 
-		// Token: 0x04023A66 RID: 146022
+		// Token: 0x0401ED08 RID: 126216
 		[Nullable(2)]
 		private EntityHandle ItemEntity;
 
-		// Token: 0x04023A67 RID: 146023
+		// Token: 0x0401ED09 RID: 126217
 		private bool ChairNeedSetMorph;
 	}
 }

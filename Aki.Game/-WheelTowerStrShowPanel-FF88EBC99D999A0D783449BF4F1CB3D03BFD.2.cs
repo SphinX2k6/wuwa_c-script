@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020015F1 RID: 5617
+// Token: 0x02000AA9 RID: 2729
 internal enum <WheelTowerStrShowPanel>FF88EBC99D999A0D783449BF4F1CB3D03BFD67AB42C2C03995E553FAE7EBC0656__EWheelTowerStrItemComponent
 {
-	// Token: 0x040046DE RID: 18142
+	// Token: 0x04004784 RID: 18308
 	Name,
-	// Token: 0x040046DF RID: 18143
+	// Token: 0x04004785 RID: 18309
 	Info
 }

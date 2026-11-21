@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200017F RID: 383
+// Token: 0x02000183 RID: 387
 internal class TurningParams
 {
-	// Token: 0x06001848 RID: 6216 RVA: 0x000815F3 File Offset: 0x0007F7F3
+	// Token: 0x060018E5 RID: 6373 RVA: 0x000875A3 File Offset: 0x000857A3
 	public TurningParams(float totalTime)
 	{
 		this.TotalTime = totalTime;
 	}
 
-	// Token: 0x06001849 RID: 6217 RVA: 0x00081604 File Offset: 0x0007F804
+	// Token: 0x060018E6 RID: 6374 RVA: 0x000875B4 File Offset: 0x000857B4
 	[NullableContext(1)]
 	public unsafe void CalcTurningRate(CharacterActorComponent actorComp, float startTime, float deltaTime)
 	{
@@ -52,27 +52,27 @@ internal class TurningParams
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 5));
 	}
 
-	// Token: 0x0400103C RID: 4156
+	// Token: 0x0400107F RID: 4223
 	public bool NeedTurn;
 
-	// Token: 0x0400103D RID: 4157
+	// Token: 0x04001080 RID: 4224
 	public float AddRate;
 
-	// Token: 0x0400103E RID: 4158
+	// Token: 0x04001081 RID: 4225
 	public float TotalTime;
 
-	// Token: 0x0400103F RID: 4159
+	// Token: 0x04001082 RID: 4226
 	public float StartAngle;
 
-	// Token: 0x04001040 RID: 4160
+	// Token: 0x04001083 RID: 4227
 	public float EndAngle;
 
-	// Token: 0x04001041 RID: 4161
+	// Token: 0x04001084 RID: 4228
 	public float PreFrameAngle;
 
-	// Token: 0x04001042 RID: 4162
+	// Token: 0x04001085 RID: 4229
 	public bool IsInit;
 
-	// Token: 0x04001043 RID: 4163
+	// Token: 0x04001086 RID: 4230
 	public bool IsRootMotionValid;
 }

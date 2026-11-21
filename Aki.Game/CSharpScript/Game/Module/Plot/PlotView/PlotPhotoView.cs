@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005057 RID: 20567
+	// Token: 0x02004027 RID: 16423
 	public class PlotPhotoView : UiViewBase
 	{
-		// Token: 0x06034A15 RID: 215573 RVA: 0x00C6F76E File Offset: 0x00C6D96E
+		// Token: 0x06029908 RID: 170248 RVA: 0x00BBCA0E File Offset: 0x00BBAC0E
 		[NullableContext(1)]
 		public PlotPhotoView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034A16 RID: 215574 RVA: 0x00C6F778 File Offset: 0x00C6D978
+		// Token: 0x06029909 RID: 170249 RVA: 0x00BBCA18 File Offset: 0x00BBAC18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -51,29 +51,29 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06034A17 RID: 215575 RVA: 0x00C6F906 File Offset: 0x00C6DB06
+		// Token: 0x0602990A RID: 170250 RVA: 0x00BBCBA6 File Offset: 0x00BBADA6
 		private void OnClickCloseButton()
 		{
 			UiManager.Instance.CloseView(EUiViewName.PlotPhotoView, null);
 		}
 
-		// Token: 0x06034A18 RID: 215576 RVA: 0x00C6F918 File Offset: 0x00C6DB18
+		// Token: 0x0602990B RID: 170251 RVA: 0x00BBCBB8 File Offset: 0x00BBADB8
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06034A19 RID: 215577 RVA: 0x00C6F91A File Offset: 0x00C6DB1A
+		// Token: 0x0602990C RID: 170252 RVA: 0x00BBCBBA File Offset: 0x00BBADBA
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x06034A1A RID: 215578 RVA: 0x00C6F91C File Offset: 0x00C6DB1C
+		// Token: 0x0602990D RID: 170253 RVA: 0x00BBCBBC File Offset: 0x00BBADBC
 		protected override void OnStart()
 		{
 			this.Callback = (this.OpenParam as Action);
 		}
 
-		// Token: 0x06034A1B RID: 215579 RVA: 0x00C6F930 File Offset: 0x00C6DB30
+		// Token: 0x0602990E RID: 170254 RVA: 0x00BBCBD0 File Offset: 0x00BBADD0
 		protected override void OnAfterShow()
 		{
 			base.GetSprite(0).SetUIActive(false);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06034A1C RID: 215580 RVA: 0x00C6F9EF File Offset: 0x00C6DBEF
+		// Token: 0x0602990F RID: 170255 RVA: 0x00BBCC8F File Offset: 0x00BBAE8F
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Callback != null)
@@ -107,38 +107,38 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0401C0C3 RID: 114883
+		// Token: 0x04016AEE RID: 92910
 		[Nullable(2)]
 		private Action Callback;
 
-		// Token: 0x0200B1B4 RID: 45492
+		// Token: 0x02009BEE RID: 39918
 		private static class EPhotoFullComponents
 		{
-			// Token: 0x04035E40 RID: 220736
+			// Token: 0x04030895 RID: 198805
 			public const int LastButton = 0;
 
-			// Token: 0x04035E41 RID: 220737
+			// Token: 0x04030896 RID: 198806
 			public const int NextButton = 1;
 
-			// Token: 0x04035E42 RID: 220738
+			// Token: 0x04030897 RID: 198807
 			public const int CloseButton = 2;
 
-			// Token: 0x04035E43 RID: 220739
+			// Token: 0x04030898 RID: 198808
 			public const int Texture = 3;
 
-			// Token: 0x04035E44 RID: 220740
+			// Token: 0x04030899 RID: 198809
 			public const int UITextDark = 4;
 
-			// Token: 0x04035E45 RID: 220741
+			// Token: 0x0403089A RID: 198810
 			public const int UITextName = 5;
 
-			// Token: 0x04035E46 RID: 220742
+			// Token: 0x0403089B RID: 198811
 			public const int UITextDate = 6;
 
-			// Token: 0x04035E47 RID: 220743
+			// Token: 0x0403089C RID: 198812
 			public const int UITextNumber = 7;
 
-			// Token: 0x04035E48 RID: 220744
+			// Token: 0x0403089D RID: 198813
 			public const int UITextDescription = 8;
 		}
 	}

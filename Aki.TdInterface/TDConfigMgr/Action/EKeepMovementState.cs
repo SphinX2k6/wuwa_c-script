@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001607 RID: 5639
+	// Token: 0x02001769 RID: 5993
 	[EnumExtensions]
 	public enum EKeepMovementState
 	{
-		// Token: 0x04004B77 RID: 19319
+		// Token: 0x04004F3D RID: 20285
 		Kite,
-		// Token: 0x04004B78 RID: 19320
+		// Token: 0x04004F3E RID: 20286
 		Soar
 	}
 }

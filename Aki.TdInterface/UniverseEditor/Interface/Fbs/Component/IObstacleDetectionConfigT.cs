@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005693 RID: 22163
+	// Token: 0x02005C34 RID: 23604
 	public class IObstacleDetectionConfigT
 	{
-		// Token: 0x1700A4CE RID: 42190
-		// (get) Token: 0x06024FBE RID: 151486 RVA: 0x0051BB5B File Offset: 0x00519D5B
-		// (set) Token: 0x06024FBF RID: 151487 RVA: 0x0051BB63 File Offset: 0x00519D63
+		// Token: 0x1700AD5D RID: 44381
+		// (get) Token: 0x060271F7 RID: 160247 RVA: 0x0055C6F7 File Offset: 0x0055A8F7
+		// (set) Token: 0x060271F8 RID: 160248 RVA: 0x0055C6FF File Offset: 0x0055A8FF
 		public ITrafficMatchTargetT ObstacleDetectionType { get; set; }
 
-		// Token: 0x1700A4CF RID: 42191
-		// (get) Token: 0x06024FC0 RID: 151488 RVA: 0x0051BB6C File Offset: 0x00519D6C
-		// (set) Token: 0x06024FC1 RID: 151489 RVA: 0x0051BB74 File Offset: 0x00519D74
+		// Token: 0x1700AD5E RID: 44382
+		// (get) Token: 0x060271F9 RID: 160249 RVA: 0x0055C708 File Offset: 0x0055A908
+		// (set) Token: 0x060271FA RID: 160250 RVA: 0x0055C710 File Offset: 0x0055A910
 		public TTriggerShapeUnion ExtraObstacleDetectionRange { get; set; }
 
-		// Token: 0x06024FC2 RID: 151490 RVA: 0x0051BB7D File Offset: 0x00519D7D
+		// Token: 0x060271FB RID: 160251 RVA: 0x0055C719 File Offset: 0x0055A919
 		public IObstacleDetectionConfigT()
 		{
 			this.ObstacleDetectionType = null;

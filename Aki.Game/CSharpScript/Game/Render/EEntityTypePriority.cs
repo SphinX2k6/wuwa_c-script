@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045BF RID: 17855
+	// Token: 0x020034E7 RID: 13543
 	public enum EEntityTypePriority
 	{
-		// Token: 0x040189CA RID: 100810
+		// Token: 0x04013005 RID: 77829
 		None,
-		// Token: 0x040189CB RID: 100811
+		// Token: 0x04013006 RID: 77830
 		Player,
-		// Token: 0x040189CC RID: 100812
+		// Token: 0x04013007 RID: 77831
 		NPC,
-		// Token: 0x040189CD RID: 100813
+		// Token: 0x04013008 RID: 77832
 		Boss,
-		// Token: 0x040189CE RID: 100814
+		// Token: 0x04013009 RID: 77833
 		Monster,
-		// Token: 0x040189CF RID: 100815
+		// Token: 0x0401300A RID: 77834
 		Vision,
-		// Token: 0x040189D0 RID: 100816
+		// Token: 0x0401300B RID: 77835
 		Animal,
-		// Token: 0x040189D1 RID: 100817
+		// Token: 0x0401300C RID: 77836
 		SceneItem,
-		// Token: 0x040189D2 RID: 100818
+		// Token: 0x0401300D RID: 77837
 		Custom
 	}
 }

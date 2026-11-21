@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200240B RID: 9227
+// Token: 0x020018F0 RID: 6384
 public enum ESetCount
 {
-	// Token: 0x04008B7E RID: 35710
+	// Token: 0x04008CC5 RID: 36037
 	Add,
-	// Token: 0x04008B7F RID: 35711
+	// Token: 0x04008CC6 RID: 36038
 	Reduce,
-	// Token: 0x04008B80 RID: 35712
+	// Token: 0x04008CC7 RID: 36039
 	Set
 }

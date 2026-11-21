@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028EA RID: 10474
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BC2 RID: 11202
 	public class ICloseSplineMove : ISplineMoveConfig
 	{
-		// Token: 0x0600E8B1 RID: 59569 RVA: 0x00222542 File Offset: 0x00220742
+		// Token: 0x0600F6F2 RID: 63218 RVA: 0x0023F6FA File Offset: 0x0023D8FA
 		public static ICloseSplineMove Create(ICloseSplineMove? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700489F RID: 18591
-		// (get) Token: 0x0600E8B2 RID: 59570 RVA: 0x00222561 File Offset: 0x00220761
+		// Token: 0x17004C1C RID: 19484
+		// (get) Token: 0x0600F6F3 RID: 63219 RVA: 0x0023F719 File Offset: 0x0023D919
 		public override ESplineMoveConfigType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048A0 RID: 18592
-		// (get) Token: 0x0600E8B3 RID: 59571 RVA: 0x0022256E File Offset: 0x0022076E
+		// Token: 0x17004C1D RID: 19485
+		// (get) Token: 0x0600F6F4 RID: 63220 RVA: 0x0023F726 File Offset: 0x0023D926
 		public override ITargetEntityType Target
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048A1 RID: 18593
-		// (get) Token: 0x0600E8B4 RID: 59572 RVA: 0x0022259D File Offset: 0x0022079D
+		// Token: 0x17004C1E RID: 19486
+		// (get) Token: 0x0600F6F5 RID: 63221 RVA: 0x0023F755 File Offset: 0x0023D955
 		public override int SplineEntityId
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008074 RID: 32884
+		// Token: 0x04008738 RID: 34616
 		private ICloseSplineMove Instance;
 
-		// Token: 0x04008075 RID: 32885
+		// Token: 0x04008739 RID: 34617
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04008076 RID: 32886
+		// Token: 0x0400873A RID: 34618
 		private bool _TargetInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200640F RID: 25615
+	// Token: 0x02006A8F RID: 27279
 	public struct ICloseAirPassageMove : IFlatbufferObject
 	{
-		// Token: 0x1700BEBC RID: 48828
-		// (get) Token: 0x0602C521 RID: 181537 RVA: 0x006154AD File Offset: 0x006136AD
+		// Token: 0x1700C856 RID: 51286
+		// (get) Token: 0x0602ECF7 RID: 191735 RVA: 0x00661339 File Offset: 0x0065F539
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C522 RID: 181538 RVA: 0x006154BA File Offset: 0x006136BA
+		// Token: 0x0602ECF8 RID: 191736 RVA: 0x00661346 File Offset: 0x0065F546
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C523 RID: 181539 RVA: 0x006154C4 File Offset: 0x006136C4
+		// Token: 0x0602ECF9 RID: 191737 RVA: 0x00661350 File Offset: 0x0065F550
 		public static ICloseAirPassageMove GetRootAsICloseAirPassageMove(ByteBuffer _bb)
 		{
 			return ICloseAirPassageMove.GetRootAsICloseAirPassageMove(_bb, default(ICloseAirPassageMove));
 		}
 
-		// Token: 0x0602C524 RID: 181540 RVA: 0x006154E0 File Offset: 0x006136E0
+		// Token: 0x0602ECFA RID: 191738 RVA: 0x0066136C File Offset: 0x0065F56C
 		public static ICloseAirPassageMove GetRootAsICloseAirPassageMove(ByteBuffer _bb, ICloseAirPassageMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C525 RID: 181541 RVA: 0x006154FD File Offset: 0x006136FD
+		// Token: 0x0602ECFB RID: 191739 RVA: 0x00661389 File Offset: 0x0065F589
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C526 RID: 181542 RVA: 0x0061550C File Offset: 0x0061370C
+		// Token: 0x0602ECFC RID: 191740 RVA: 0x00661398 File Offset: 0x0065F598
 		public ICloseAirPassageMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BEBD RID: 48829
-		// (get) Token: 0x0602C527 RID: 181543 RVA: 0x0061551C File Offset: 0x0061371C
+		// Token: 0x1700C857 RID: 51287
+		// (get) Token: 0x0602ECFD RID: 191741 RVA: 0x006613A8 File Offset: 0x0065F5A8
 		public ESplineMovePattern Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BEBE RID: 48830
-		// (get) Token: 0x0602C528 RID: 181544 RVA: 0x00615558 File Offset: 0x00613758
+		// Token: 0x1700C858 RID: 51288
+		// (get) Token: 0x0602ECFE RID: 191742 RVA: 0x006613E4 File Offset: 0x0065F5E4
 		public float GravitySwitchAngularVelocity
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BEBF RID: 48831
-		// (get) Token: 0x0602C529 RID: 181545 RVA: 0x00615598 File Offset: 0x00613798
+		// Token: 0x1700C859 RID: 51289
+		// (get) Token: 0x0602ECFF RID: 191743 RVA: 0x00661424 File Offset: 0x0065F624
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C52A RID: 181546 RVA: 0x006155D4 File Offset: 0x006137D4
+		// Token: 0x0602ED00 RID: 191744 RVA: 0x00661460 File Offset: 0x0065F660
 		public static Offset<ICloseAirPassageMove> CreateICloseAirPassageMove(FlatBufferBuilder builder, ESplineMovePattern Type = ESplineMovePattern.PathLine, float GravitySwitchAngularVelocity = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICloseAirPassageMove.EndICloseAirPassageMove(builder);
 		}
 
-		// Token: 0x0602C52B RID: 181547 RVA: 0x006155F8 File Offset: 0x006137F8
+		// Token: 0x0602ED01 RID: 191745 RVA: 0x00661484 File Offset: 0x0065F684
 		public static void StartICloseAirPassageMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602C52C RID: 181548 RVA: 0x00615601 File Offset: 0x00613801
+		// Token: 0x0602ED02 RID: 191746 RVA: 0x0066148D File Offset: 0x0065F68D
 		public static void AddType(FlatBufferBuilder builder, ESplineMovePattern type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C52D RID: 181549 RVA: 0x0061560C File Offset: 0x0061380C
+		// Token: 0x0602ED03 RID: 191747 RVA: 0x00661498 File Offset: 0x0065F698
 		public static void AddGravitySwitchAngularVelocity(FlatBufferBuilder builder, float gravitySwitchAngularVelocity)
 		{
 			builder.AddFloat(1, gravitySwitchAngularVelocity, 0.0);
 		}
 
-		// Token: 0x0602C52E RID: 181550 RVA: 0x0061561F File Offset: 0x0061381F
+		// Token: 0x0602ED04 RID: 191748 RVA: 0x006614AB File Offset: 0x0065F6AB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602C52F RID: 181551 RVA: 0x0061562A File Offset: 0x0061382A
+		// Token: 0x0602ED05 RID: 191749 RVA: 0x006614B6 File Offset: 0x0065F6B6
 		public static Offset<ICloseAirPassageMove> EndICloseAirPassageMove(FlatBufferBuilder builder)
 		{
 			return new Offset<ICloseAirPassageMove>(builder.EndTable());
 		}
 
-		// Token: 0x0602C530 RID: 181552 RVA: 0x00615638 File Offset: 0x00613838
+		// Token: 0x0602ED06 RID: 191750 RVA: 0x006614C4 File Offset: 0x0065F6C4
 		public ICloseAirPassageMoveT UnPack()
 		{
 			ICloseAirPassageMoveT closeAirPassageMoveT = new ICloseAirPassageMoveT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return closeAirPassageMoveT;
 		}
 
-		// Token: 0x0602C531 RID: 181553 RVA: 0x00615653 File Offset: 0x00613853
+		// Token: 0x0602ED07 RID: 191751 RVA: 0x006614DF File Offset: 0x0065F6DF
 		public void UnPackTo(ICloseAirPassageMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602C532 RID: 181554 RVA: 0x0061567C File Offset: 0x0061387C
+		// Token: 0x0602ED08 RID: 191752 RVA: 0x00661508 File Offset: 0x0065F708
 		public static Offset<ICloseAirPassageMove> Pack(FlatBufferBuilder builder, ICloseAirPassageMoveT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICloseAirPassageMove.CreateICloseAirPassageMove(builder, _o.Type, _o.GravitySwitchAngularVelocity, _o.NullMask);
 		}
 
-		// Token: 0x040109FD RID: 68093
+		// Token: 0x04011823 RID: 71715
 		private Table __p;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007BA RID: 1978
+	// Token: 0x020007D4 RID: 2004
 	public class ConfigRealmBetweenTaskByTaskId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E6E RID: 11886 RVA: 0x0015FD17 File Offset: 0x0015DF17
+		// Token: 0x06002F0A RID: 12042 RVA: 0x00166C23 File Offset: 0x00164E23
 		static ConfigRealmBetweenTaskByTaskId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRealmBetweenTaskByTaskId.CreateStaticDefaultValue), new Action(ConfigRealmBetweenTaskByTaskId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E6F RID: 11887 RVA: 0x0015FD38 File Offset: 0x0015DF38
+		// Token: 0x06002F0B RID: 12043 RVA: 0x00166C44 File Offset: 0x00164E44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRealmBetweenTaskByTaskId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E70 RID: 11888 RVA: 0x0015FDB7 File Offset: 0x0015DFB7
+		// Token: 0x06002F0C RID: 12044 RVA: 0x00166CC3 File Offset: 0x00164EC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRealmBetweenTaskByTaskId.LogPair = null;
 			ConfigRealmBetweenTaskByTaskId.HandleId = 0;
 		}
 
-		// Token: 0x06002E71 RID: 11889 RVA: 0x0015FDC5 File Offset: 0x0015DFC5
+		// Token: 0x06002F0D RID: 12045 RVA: 0x00166CD1 File Offset: 0x00164ED1
 		public static void Init()
 		{
 			ConfigRealmBetweenTaskByTaskId.HandleId = ConfigCommon.InitDataStatement(ConfigRealmBetweenTaskByTaskId.HandleId, "db_realmbetween.db", "select BinData from `RealmBetweenTask` where TaskId=?");
 		}
 
-		// Token: 0x06002E72 RID: 11890 RVA: 0x0015FDE0 File Offset: 0x0015DFE0
+		// Token: 0x06002F0E RID: 12046 RVA: 0x00166CEC File Offset: 0x00164EEC
 		public static RealmBetweenTask? GetConfig(int p0TaskId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRealmBetweenTaskByTaskId.HandleId, ConfigRealmBetweenTaskByTaskId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RealmBetweenTask?(rootAsRealmBetweenTask);
 		}
 
-		// Token: 0x040035FC RID: 13820
+		// Token: 0x040036B2 RID: 14002
 		private const string DB = "db_realmbetween.db";
 
-		// Token: 0x040035FD RID: 13821
+		// Token: 0x040036B3 RID: 14003
 		private const string FILE = "q.千岛路书3.5.xlsx";
 
-		// Token: 0x040035FE RID: 13822
+		// Token: 0x040036B4 RID: 14004
 		private const string TABLE = "RealmBetweenTask";
 
-		// Token: 0x040035FF RID: 13823
+		// Token: 0x040036B5 RID: 14005
 		private const string COMMAND = "select BinData from `RealmBetweenTask` where TaskId=?";
 
-		// Token: 0x04003600 RID: 13824
+		// Token: 0x040036B6 RID: 14006
 		private const string KEY_PREFIX = "RealmBetweenTaskByTaskId";
 
-		// Token: 0x04003601 RID: 13825
+		// Token: 0x040036B7 RID: 14007
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003602 RID: 13826
+		// Token: 0x040036B8 RID: 14008
 		private static int HandleId;
 	}
 }

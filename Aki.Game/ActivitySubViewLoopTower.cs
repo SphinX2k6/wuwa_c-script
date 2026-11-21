@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012B8 RID: 4792
+// Token: 0x0200076C RID: 1900
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewLoopTower : ActivitySubViewBase
 {
-	// Token: 0x060083A0 RID: 33696 RVA: 0x001C06CC File Offset: 0x001BE8CC
+	// Token: 0x06005737 RID: 22327 RVA: 0x001C945C File Offset: 0x001C765C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -52,23 +52,37 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060083A1 RID: 33697 RVA: 0x001C087D File Offset: 0x001BEA7D
+	// Token: 0x06005738 RID: 22328 RVA: 0x001C960D File Offset: 0x001C780D
+	protected override void OnAddEventListener()
+	{
+		EventSystem.Instance.Add(EEventName.OnTowerRewardReceived, new Action(this.RefreshRewardBtnRedDot));
+		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
+	}
+
+	// Token: 0x06005739 RID: 22329 RVA: 0x001C9647 File Offset: 0x001C7847
+	protected override void OnRemoveEventListener()
+	{
+		EventSystem.Instance.Remove(EEventName.OnTowerRewardReceived, new Action(this.RefreshRewardBtnRedDot));
+		EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
+	}
+
+	// Token: 0x0600573A RID: 22330 RVA: 0x001C9681 File Offset: 0x001C7881
 	protected override void OnSetData()
 	{
 	}
 
-	// Token: 0x060083A2 RID: 33698 RVA: 0x001C0880 File Offset: 0x001BEA80
+	// Token: 0x0600573B RID: 22331 RVA: 0x001C9684 File Offset: 0x001C7884
 	protected override UniTask OnBeforeStartAsync()
 	{
-		ActivitySubViewLoopTower.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
+		ActivitySubViewLoopTower.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
 		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnBeforeStartAsync>d__.<>4__this = this;
 		<OnBeforeStartAsync>d__.<>1__state = -1;
-		<OnBeforeStartAsync>d__.<>t__builder.Start<ActivitySubViewLoopTower.<OnBeforeStartAsync>d__8>(ref <OnBeforeStartAsync>d__);
+		<OnBeforeStartAsync>d__.<>t__builder.Start<ActivitySubViewLoopTower.<OnBeforeStartAsync>d__10>(ref <OnBeforeStartAsync>d__);
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060083A3 RID: 33699 RVA: 0x001C08C4 File Offset: 0x001BEAC4
+	// Token: 0x0600573C RID: 22332 RVA: 0x001C96C8 File Offset: 0x001C78C8
 	protected override void OnStart()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -82,7 +96,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060083A4 RID: 33700 RVA: 0x001C095F File Offset: 0x001BEB5F
+	// Token: 0x0600573D RID: 22333 RVA: 0x001C9763 File Offset: 0x001C7963
 	protected override void OnBeforeShow()
 	{
 		this.OnRefreshView();
@@ -96,17 +110,40 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		item.SetUIActive(!TowerModel.Instance.GetLoopTowerIsClickShop());
 	}
 
-	// Token: 0x060083A5 RID: 33701 RVA: 0x001C099B File Offset: 0x001BEB9B
+	// Token: 0x0600573E RID: 22334 RVA: 0x001C979F File Offset: 0x001C799F
 	protected override void OnRefreshView()
 	{
 		TowerModel.Instance.CurrentSelectDifficulties = 3;
-		base.GetItem(8).SetUIActive(TowerModel.Instance.CanGetRewardByDifficulties(3));
+		this.RefreshRewardBtnRedDot();
 		this.RefreshTimerText();
 		this.RefreshFunctionalComponent();
 		this.RefreshStarNumber();
 	}
 
-	// Token: 0x060083A6 RID: 33702 RVA: 0x001C09D1 File Offset: 0x001BEBD1
+	// Token: 0x0600573F RID: 22335 RVA: 0x001C97C4 File Offset: 0x001C79C4
+	private void RefreshRewardBtnRedDot()
+	{
+		UUIItem item = base.GetItem(8);
+		if (item == null)
+		{
+			return;
+		}
+		item.SetUIActive(TowerModel.Instance.CanGetRewardByDifficulties(3));
+	}
+
+	// Token: 0x06005740 RID: 22336 RVA: 0x001C97E4 File Offset: 0x001C79E4
+	private void OnRefreshCommonActivityRedDot(int activityId)
+	{
+		ActivityBaseData activityBaseData = this.ActivityBaseData;
+		int? num = (activityBaseData != null) ? new int?(activityBaseData.Id) : null;
+		if (!(activityId == num.GetValueOrDefault() & num != null))
+		{
+			return;
+		}
+		this.RefreshRewardBtnRedDot();
+	}
+
+	// Token: 0x06005741 RID: 22337 RVA: 0x001C982C File Offset: 0x001C7A2C
 	protected override void OnTimer(float gap)
 	{
 		if (!this.NeedTick)
@@ -116,7 +153,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x060083A7 RID: 33703 RVA: 0x001C09E4 File Offset: 0x001BEBE4
+	// Token: 0x06005742 RID: 22338 RVA: 0x001C9840 File Offset: 0x001C7A40
 	private void RefreshTimerText()
 	{
 		double num = (double)MathUtils.Instance.LongToNumber(TowerModel.Instance.TowerEndTime.GetValueOrDefault());
@@ -131,7 +168,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		this.TitleComponent.SetTimeTextByText(remainTimeText);
 	}
 
-	// Token: 0x060083A8 RID: 33704 RVA: 0x001C0A58 File Offset: 0x001BEC58
+	// Token: 0x06005743 RID: 22339 RVA: 0x001C98B4 File Offset: 0x001C7AB4
 	private void RefreshRewardComponent()
 	{
 		List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -139,7 +176,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		this.RewardListComponent.RefreshItemLayout(previewReward, null);
 	}
 
-	// Token: 0x060083A9 RID: 33705 RVA: 0x001C0AA4 File Offset: 0x001BECA4
+	// Token: 0x06005744 RID: 22340 RVA: 0x001C9900 File Offset: 0x001C7B00
 	private void RefreshFunctionalComponent()
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew("CollectActivity_Button_ahead", null);
@@ -149,7 +186,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		this.FunctionalComponent.SetFunctionRedDotVisible(loopTowerIsClickSeason < TowerModel.Instance.CurrentSeason);
 	}
 
-	// Token: 0x060083AA RID: 33706 RVA: 0x001C0B10 File Offset: 0x001BED10
+	// Token: 0x06005745 RID: 22341 RVA: 0x001C996C File Offset: 0x001C7B6C
 	private void RefreshNewSeasonTip()
 	{
 		int player = LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.LoopTowerSeason, -1);
@@ -171,7 +208,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060083AB RID: 33707 RVA: 0x001C0B78 File Offset: 0x001BED78
+	// Token: 0x06005746 RID: 22342 RVA: 0x001C99D4 File Offset: 0x001C7BD4
 	private void RefreshStarNumber()
 	{
 		TowerModel instance = TowerModel.Instance;
@@ -180,7 +217,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		base.GetText(6).SetText(difficultyMaxStars.ToString() + "/" + difficultyAllStars.ToString(), true);
 	}
 
-	// Token: 0x060083AC RID: 33708 RVA: 0x001C0BC0 File Offset: 0x001BEDC0
+	// Token: 0x06005747 RID: 22343 RVA: 0x001C9A1C File Offset: 0x001C7C1C
 	private void JumpFunction()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -189,7 +226,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x060083AD RID: 33709 RVA: 0x001C0BF1 File Offset: 0x001BEDF1
+	// Token: 0x06005748 RID: 22344 RVA: 0x001C9A4D File Offset: 0x001C7C4D
 	private void OnClickTowerShopBtn()
 	{
 		TowerModel.Instance.SetLoopTowerIsClickShop(true);
@@ -201,7 +238,7 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		PayShopController.Instance.OpenPayShopViewWithTab(PayShopDefine.EPayShopTabType.ActivityShop, 0);
 	}
 
-	// Token: 0x060083AE RID: 33710 RVA: 0x001C0C20 File Offset: 0x001BEE20
+	// Token: 0x06005749 RID: 22345 RVA: 0x001C9A7C File Offset: 0x001C7C7C
 	private void OnClickTowerRewardBtn()
 	{
 		TowerModel instance = TowerModel.Instance;
@@ -220,13 +257,13 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04003B3B RID: 15163
+	// Token: 0x04003BD3 RID: 15315
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04003B3C RID: 15164
+	// Token: 0x04003BD4 RID: 15316
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04003B3D RID: 15165
+	// Token: 0x04003BD5 RID: 15317
 	[Nullable(new byte[]
 	{
 		2,
@@ -234,41 +271,41 @@ public class ActivitySubViewLoopTower : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04003B3E RID: 15166
+	// Token: 0x04003BD6 RID: 15318
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x04003B3F RID: 15167
+	// Token: 0x04003BD7 RID: 15319
 	private bool NeedTick = true;
 
-	// Token: 0x020078D4 RID: 30932
+	// Token: 0x02006A5E RID: 27230
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027CF3 RID: 163059
+		// Token: 0x04023021 RID: 143393
 		public const int TitleItem = 0;
 
-		// Token: 0x04027CF4 RID: 163060
+		// Token: 0x04023022 RID: 143394
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04027CF5 RID: 163061
+		// Token: 0x04023023 RID: 143395
 		public const int RewardListItem = 2;
 
-		// Token: 0x04027CF6 RID: 163062
+		// Token: 0x04023024 RID: 143396
 		public const int FunctionArea = 3;
 
-		// Token: 0x04027CF7 RID: 163063
+		// Token: 0x04023025 RID: 143397
 		public const int TowerShopBtn = 4;
 
-		// Token: 0x04027CF8 RID: 163064
+		// Token: 0x04023026 RID: 143398
 		public const int TowerRewardBtn = 5;
 
-		// Token: 0x04027CF9 RID: 163065
+		// Token: 0x04023027 RID: 143399
 		public const int TowerProgressText = 6;
 
-		// Token: 0x04027CFA RID: 163066
+		// Token: 0x04023028 RID: 143400
 		public const int ShopBtnRedDotItem = 7;
 
-		// Token: 0x04027CFB RID: 163067
+		// Token: 0x04023029 RID: 143401
 		public const int RewardBtnRedDotItem = 8;
 	}
 }

@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EFB RID: 20219
+	// Token: 0x02003EC4 RID: 16068
 	internal enum <RogueBattleRoleStarUpView>F52A40143EFCC4349148FFAE8B004B466C9AE908E9DCF5AD21602BFF394F254FA__ERogueBattleRoleStarUpViewDefine
 	{
-		// Token: 0x0401B8EF RID: 112879
+		// Token: 0x040162C2 RID: 90818
 		CaptionItem,
-		// Token: 0x0401B8F0 RID: 112880
+		// Token: 0x040162C3 RID: 90819
 		TextureRoleIcon,
-		// Token: 0x0401B8F1 RID: 112881
+		// Token: 0x040162C4 RID: 90820
 		ScrollViewWithScrollBar,
-		// Token: 0x0401B8F2 RID: 112882
+		// Token: 0x040162C5 RID: 90821
 		ScrollItem,
-		// Token: 0x0401B8F3 RID: 112883
+		// Token: 0x040162C6 RID: 90822
 		BtnConfirm,
-		// Token: 0x0401B8F4 RID: 112884
+		// Token: 0x040162C7 RID: 90823
 		BtnRoleDetail,
-		// Token: 0x0401B8F5 RID: 112885
+		// Token: 0x040162C8 RID: 90824
 		StarLayout,
-		// Token: 0x0401B8F6 RID: 112886
+		// Token: 0x040162C9 RID: 90825
 		StarItem
 	}
 }

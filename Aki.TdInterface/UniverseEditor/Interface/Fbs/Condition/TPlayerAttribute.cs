@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D51 RID: 19793
+	// Token: 0x0200524D RID: 21069
 	public enum TPlayerAttribute : byte
 	{
-		// Token: 0x0400D78B RID: 55179
+		// Token: 0x0400E2BA RID: 58042
 		NONE,
-		// Token: 0x0400D78C RID: 55180
+		// Token: 0x0400E2BB RID: 58043
 		IHealthAttribute,
-		// Token: 0x0400D78D RID: 55181
+		// Token: 0x0400E2BC RID: 58044
 		IStabilityPointAttribute
 	}
 }

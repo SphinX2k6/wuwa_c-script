@@ -3,49 +3,49 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002118 RID: 8472
+	// Token: 0x02002379 RID: 9081
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlayLevelSequence_SetValue
 	{
-		// Token: 0x04006F8D RID: 28557
-		[Nullable(1)]
+		// Token: 0x040075C1 RID: 30145
+		[Nullable(0)]
 		public string LevelSequencePath;
 
-		// Token: 0x04006F8E RID: 28558
+		// Token: 0x040075C2 RID: 30146
 		public bool? IsEnableCenterOffset;
 
-		// Token: 0x04006F8F RID: 28559
+		// Token: 0x040075C3 RID: 30147
 		public bool? KeepUI;
 
-		// Token: 0x04006F90 RID: 28560
+		// Token: 0x040075C4 RID: 30148
 		public string Mark;
 
-		// Token: 0x04006F91 RID: 28561
+		// Token: 0x040075C5 RID: 30149
 		public TPlayMode? PlayMode;
 
-		// Token: 0x04006F92 RID: 28562
+		// Token: 0x040075C6 RID: 30150
 		public ILoopRange LoopRange;
 
-		// Token: 0x04006F93 RID: 28563
+		// Token: 0x040075C7 RID: 30151
 		public ILevelSequenceTransitionType Intro;
 
-		// Token: 0x04006F94 RID: 28564
+		// Token: 0x040075C8 RID: 30152
 		public ILevelSequenceTransitionType Outro;
 
-		// Token: 0x04006F95 RID: 28565
+		// Token: 0x040075C9 RID: 30153
 		public float? Rate;
 
-		// Token: 0x04006F96 RID: 28566
+		// Token: 0x040075CA RID: 30154
 		public IEaseData RateEase;
 
-		// Token: 0x04006F97 RID: 28567
+		// Token: 0x040075CB RID: 30155
 		public bool? IsPlayOnTeleport;
 
-		// Token: 0x04006F98 RID: 28568
+		// Token: 0x040075CC RID: 30156
 		public bool? IsCarryCharacter;
 
-		// Token: 0x04006F99 RID: 28569
+		// Token: 0x040075CD RID: 30157
 		public IFloatingSubtitleLanguageDiff PreprocessOperation;
 	}
 }

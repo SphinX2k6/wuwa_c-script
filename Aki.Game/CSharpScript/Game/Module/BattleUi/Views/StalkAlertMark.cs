@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E30 RID: 24112
+	// Token: 0x02004E15 RID: 19989
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StalkAlertMark : EntityHeadIconItem
 	{
-		// Token: 0x0603D525 RID: 251173 RVA: 0x00EC81B8 File Offset: 0x00EC63B8
+		// Token: 0x060324B5 RID: 206005 RVA: 0x00E19724 File Offset: 0x00E17924
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D526 RID: 251174 RVA: 0x00EC8244 File Offset: 0x00EC6444
+		// Token: 0x060324B6 RID: 206006 RVA: 0x00E197B0 File Offset: 0x00E179B0
 		protected override void OnStart()
 		{
 			this.AlertBarItem = base.GetSprite(0);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(false);
 		}
 
-		// Token: 0x0603D527 RID: 251175 RVA: 0x00EC8290 File Offset: 0x00EC6490
+		// Token: 0x060324B7 RID: 206007 RVA: 0x00E197FC File Offset: 0x00E179FC
 		public StalkAlertMark(UUIItem parent, AActor trackActor)
 		{
 			if (GlobalData.World == null)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 		}
 
-		// Token: 0x0603D528 RID: 251176 RVA: 0x00EC8391 File Offset: 0x00EC6591
+		// Token: 0x060324B8 RID: 206008 RVA: 0x00E198FD File Offset: 0x00E17AFD
 		public override void Update()
 		{
 			if (GlobalData.World == null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Update();
 		}
 
-		// Token: 0x0603D529 RID: 251177 RVA: 0x00EC83C0 File Offset: 0x00EC65C0
+		// Token: 0x060324B9 RID: 206009 RVA: 0x00E1992C File Offset: 0x00E17B2C
 		private void PositionUpdate()
 		{
 			UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			alertArrowItem2.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0603D52A RID: 251178 RVA: 0x00EC86D4 File Offset: 0x00EC68D4
+		// Token: 0x060324BA RID: 206010 RVA: 0x00E19C40 File Offset: 0x00E17E40
 		private bool ClampToEllipse(Vector2D vector, bool inFront)
 		{
 			double x = vector.X;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603D52B RID: 251179 RVA: 0x00EC8748 File Offset: 0x00EC6948
+		// Token: 0x060324BB RID: 206011 RVA: 0x00E19CB4 File Offset: 0x00E17EB4
 		private void AlertValueUpdate()
 		{
 			CharacterAiComponent aiComponent = this.AiComponent;
@@ -194,13 +194,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastAlertValue = (double)num;
 		}
 
-		// Token: 0x0603D52C RID: 251180 RVA: 0x00EC882A File Offset: 0x00EC6A2A
+		// Token: 0x060324BC RID: 206012 RVA: 0x00E19D96 File Offset: 0x00E17F96
 		private double GetOffsetY(double x)
 		{
 			return 367.327774667328 / (1.0 + Math.Pow(x / 537.430940553175, 1.11393060779131)) + 7.776280778151;
 		}
 
-		// Token: 0x0603D52D RID: 251181 RVA: 0x00EC8863 File Offset: 0x00EC6A63
+		// Token: 0x060324BD RID: 206013 RVA: 0x00E19DCF File Offset: 0x00E17FCF
 		public void SetAlertIcon(string iconType)
 		{
 			ResourceSystem.Instance.LoadAsync<ULGUISpriteData_BaseObject>(iconType, delegate([Nullable(2)] ULGUISpriteData_BaseObject sprite, string _)
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0603D52E RID: 251182 RVA: 0x00EC8884 File Offset: 0x00EC6A84
+		// Token: 0x060324BE RID: 206014 RVA: 0x00E19DF0 File Offset: 0x00E17FF0
 		public void StopUpdateAlertValue()
 		{
 			this.RequestStopUpdateAlertValue = true;
 		}
 
-		// Token: 0x0603D52F RID: 251183 RVA: 0x00EC8890 File Offset: 0x00EC6A90
+		// Token: 0x060324BF RID: 206015 RVA: 0x00E19DFC File Offset: 0x00E17FFC
 		public void ActivateAlertEffect()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PositionUpdate();
 		}
 
-		// Token: 0x0603D530 RID: 251184 RVA: 0x00EC88C8 File Offset: 0x00EC6AC8
+		// Token: 0x060324C0 RID: 206016 RVA: 0x00E19E34 File Offset: 0x00E18034
 		public bool CheckShowUiCondition()
 		{
 			if (this.AiComponent == null)
@@ -264,8 +264,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return flag;
 		}
 
-		// Token: 0x17008E6D RID: 36461
-		// (get) Token: 0x0603D531 RID: 251185 RVA: 0x00EC898C File Offset: 0x00EC6B8C
+		// Token: 0x1700623F RID: 25151
+		// (get) Token: 0x060324C1 RID: 206017 RVA: 0x00E19EF8 File Offset: 0x00E180F8
 		[Nullable(2)]
 		public CharacterAiComponent AiComponent
 		{
@@ -281,82 +281,82 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FFB2 RID: 130994
+		// Token: 0x0401AA79 RID: 109177
 		private const string ADD_AUDIO_ID = "play_ui_fb_warn";
 
-		// Token: 0x0401FFB3 RID: 130995
+		// Token: 0x0401AA7A RID: 109178
 		[Nullable(2)]
 		private readonly AActor TrackingActor;
 
-		// Token: 0x0401FFB4 RID: 130996
+		// Token: 0x0401AA7B RID: 109179
 		[Nullable(2)]
 		private UUISprite AlertBarItem;
 
-		// Token: 0x0401FFB5 RID: 130997
+		// Token: 0x0401AA7C RID: 109180
 		[Nullable(2)]
 		private UUISprite AlertIconItem;
 
-		// Token: 0x0401FFB6 RID: 130998
+		// Token: 0x0401AA7D RID: 109181
 		[Nullable(2)]
 		private UUIItem AlertArrowItem;
 
-		// Token: 0x0401FFB7 RID: 130999
+		// Token: 0x0401AA7E RID: 109182
 		private FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x0401FFB8 RID: 131000
+		// Token: 0x0401AA7F RID: 109183
 		private readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401FFB9 RID: 131001
+		// Token: 0x0401AA80 RID: 109184
 		private readonly Vector2D ViewportSize = Vector2D.Create();
 
-		// Token: 0x0401FFBA RID: 131002
+		// Token: 0x0401AA81 RID: 109185
 		private readonly Vector2D PointTransport = new Vector2D(1.0, -1.0);
 
-		// Token: 0x0401FFBB RID: 131003
+		// Token: 0x0401AA82 RID: 109186
 		private readonly global::Vector TrackPositionCache = global::Vector.Create();
 
-		// Token: 0x0401FFBC RID: 131004
+		// Token: 0x0401AA83 RID: 109187
 		private readonly global::Vector OffsetCache = global::Vector.Create();
 
-		// Token: 0x0401FFBD RID: 131005
+		// Token: 0x0401AA84 RID: 109188
 		private readonly global::Vector CameraForwardCache = global::Vector.Create();
 
-		// Token: 0x0401FFBE RID: 131006
+		// Token: 0x0401AA85 RID: 109189
 		private readonly global::Vector ProjectResult = global::Vector.Create();
 
-		// Token: 0x0401FFBF RID: 131007
+		// Token: 0x0401AA86 RID: 109190
 		private bool RequestStopUpdateAlertValue;
 
-		// Token: 0x0401FFC0 RID: 131008
+		// Token: 0x0401AA87 RID: 109191
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FFC1 RID: 131009
+		// Token: 0x0401AA88 RID: 109192
 		[Nullable(2)]
 		private CharacterAiComponent AiComp;
 
-		// Token: 0x0401FFC2 RID: 131010
+		// Token: 0x0401AA89 RID: 109193
 		private readonly float LimitA;
 
-		// Token: 0x0401FFC3 RID: 131011
+		// Token: 0x0401AA8A RID: 109194
 		private readonly float LimitB;
 
-		// Token: 0x0401FFC4 RID: 131012
+		// Token: 0x0401AA8B RID: 109195
 		private double LastAlertValue;
 
-		// Token: 0x0401FFC5 RID: 131013
+		// Token: 0x0401AA8C RID: 109196
 		[Nullable(2)]
 		private string AudioPath;
 
-		// Token: 0x0200C1B2 RID: 49586
+		// Token: 0x0200ABC1 RID: 43969
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403A885 RID: 239749
+			// Token: 0x04035277 RID: 217719
 			AlertBar,
-			// Token: 0x0403A886 RID: 239750
+			// Token: 0x04035278 RID: 217720
 			AlertIcon,
-			// Token: 0x0403A887 RID: 239751
+			// Token: 0x04035279 RID: 217721
 			AlertArrow
 		}
 	}

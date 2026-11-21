@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065A5 RID: 26021
+	// Token: 0x02005523 RID: 21795
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,9 +16,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class DockyardInteractGrid : GridProxyAbstract<IPanelPos>
 	{
-		// Token: 0x17009579 RID: 38265
-		// (get) Token: 0x060413DC RID: 267228 RVA: 0x00FCF03A File Offset: 0x00FCD23A
-		// (set) Token: 0x060413DB RID: 267227 RVA: 0x00FCF016 File Offset: 0x00FCD216
+		// Token: 0x170068DB RID: 26843
+		// (get) Token: 0x060360A1 RID: 221345 RVA: 0x00F1603E File Offset: 0x00F1423E
+		// (set) Token: 0x060360A0 RID: 221344 RVA: 0x00F1601A File Offset: 0x00F1421A
 		public EDockyardInteractGridShowType ShowType
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413DD RID: 267229 RVA: 0x00FCF044 File Offset: 0x00FCD244
+		// Token: 0x060360A2 RID: 221346 RVA: 0x00F16048 File Offset: 0x00F14248
 		private void SetEmptyState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_GridEmpty");
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BgSprite.SetUIActive(true);
 		}
 
-		// Token: 0x060413DE RID: 267230 RVA: 0x00FCF088 File Offset: 0x00FCD288
+		// Token: 0x060360A3 RID: 221347 RVA: 0x00F1608C File Offset: 0x00F1428C
 		private void SetOutlineState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_GridFinsh");
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BgSprite.SetUIActive(true);
 		}
 
-		// Token: 0x060413DF RID: 267231 RVA: 0x00FCF0CC File Offset: 0x00FCD2CC
+		// Token: 0x060360A4 RID: 221348 RVA: 0x00F160D0 File Offset: 0x00F142D0
 		private void SetPreviewErrorState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_GridError");
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BgSprite.SetUIActive(true);
 		}
 
-		// Token: 0x060413E0 RID: 267232 RVA: 0x00FCF110 File Offset: 0x00FCD310
+		// Token: 0x060360A5 RID: 221349 RVA: 0x00F16114 File Offset: 0x00F14314
 		private void SetPreviewOccupancyState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_GridReplace");
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BgSprite.SetUIActive(true);
 		}
 
-		// Token: 0x060413E1 RID: 267233 RVA: 0x00FCF154 File Offset: 0x00FCD354
+		// Token: 0x060360A6 RID: 221350 RVA: 0x00F16158 File Offset: 0x00F14358
 		private void SetPreviewMatchState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_GridFinsh");
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BgSprite.SetUIActive(true);
 		}
 
-		// Token: 0x060413E2 RID: 267234 RVA: 0x00FCF198 File Offset: 0x00FCD398
+		// Token: 0x060360A7 RID: 221351 RVA: 0x00F1619C File Offset: 0x00F1439C
 		private void SetMatchState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_GridFinsh");
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BgSprite.SetUIActive(true);
 		}
 
-		// Token: 0x060413E3 RID: 267235 RVA: 0x00FCF1DC File Offset: 0x00FCD3DC
+		// Token: 0x060360A8 RID: 221352 RVA: 0x00F161E0 File Offset: 0x00F143E0
 		public DockyardInteractGrid(DockyardInteractPanelModel parentModel)
 		{
 			this.ParentModel = parentModel;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x060413E4 RID: 267236 RVA: 0x00FCF27C File Offset: 0x00FCD47C
+		// Token: 0x060360A9 RID: 221353 RVA: 0x00F16280 File Offset: 0x00F14480
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060413E5 RID: 267237 RVA: 0x00FCF2E5 File Offset: 0x00FCD4E5
+		// Token: 0x060360AA RID: 221354 RVA: 0x00F162E9 File Offset: 0x00F144E9
 		protected override void OnStart()
 		{
 			this.BgSprite = base.GetSprite(0);
@@ -147,14 +147,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060413E6 RID: 267238 RVA: 0x00FCF306 File Offset: 0x00FCD506
+		// Token: 0x060360AB RID: 221355 RVA: 0x00F1630A File Offset: 0x00F1450A
 		public override void Refresh(IPanelPos pos, bool isSelected, int gridIndex)
 		{
 			this.InteractGridData = this.ParentModel.GetInteractGridData(pos);
 			this.ShowType = (this.InteractGridData.IsFinish ? EDockyardInteractGridShowType.Match : EDockyardInteractGridShowType.Empty);
 		}
 
-		// Token: 0x060413E7 RID: 267239 RVA: 0x00FCF331 File Offset: 0x00FCD531
+		// Token: 0x060360AC RID: 221356 RVA: 0x00F16335 File Offset: 0x00F14535
 		public void RefreshBgSprite(bool isAllMatch)
 		{
 			if (!isAllMatch)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ShowType = EDockyardInteractGridShowType.PreviewMatch;
 		}
 
-		// Token: 0x060413E8 RID: 267240 RVA: 0x00FCF35A File Offset: 0x00FCD55A
+		// Token: 0x060360AD RID: 221357 RVA: 0x00F1635E File Offset: 0x00F1455E
 		public void ResetPreviewBg()
 		{
 			if (this.InteractGridData.IsFinish)
@@ -181,14 +181,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ShowType = EDockyardInteractGridShowType.Empty;
 		}
 
-		// Token: 0x060413E9 RID: 267241 RVA: 0x00FCF378 File Offset: 0x00FCD578
+		// Token: 0x060360AE RID: 221358 RVA: 0x00F1637C File Offset: 0x00F1457C
 		public int GetTargetItemId()
 		{
 			return this.InteractGridData.TargetId;
 		}
 
-		// Token: 0x1700957A RID: 38266
-		// (get) Token: 0x060413EA RID: 267242 RVA: 0x00FCF385 File Offset: 0x00FCD585
+		// Token: 0x170068DC RID: 26844
+		// (get) Token: 0x060360AF RID: 221359 RVA: 0x00F16389 File Offset: 0x00F14589
 		public bool IsFinishInteract
 		{
 			get
@@ -197,35 +197,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413EB RID: 267243 RVA: 0x00FCF392 File Offset: 0x00FCD592
+		// Token: 0x060360B0 RID: 221360 RVA: 0x00F16396 File Offset: 0x00F14596
 		public override object GetKey(IPanelPos data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x04021F6D RID: 139117
+		// Token: 0x0401C89E RID: 116894
 		private DockyardInteractGridData InteractGridData;
 
-		// Token: 0x04021F6E RID: 139118
+		// Token: 0x0401C89F RID: 116895
 		private UUISprite BgSprite;
 
-		// Token: 0x04021F6F RID: 139119
+		// Token: 0x0401C8A0 RID: 116896
 		private readonly DockyardInteractPanelModel ParentModel;
 
-		// Token: 0x04021F70 RID: 139120
+		// Token: 0x0401C8A1 RID: 116897
 		private EDockyardInteractGridShowType ShowTypeInternal;
 
-		// Token: 0x04021F71 RID: 139121
+		// Token: 0x0401C8A2 RID: 116898
 		private Dictionary<EDockyardInteractGridShowType, Action> StateFunc;
 
-		// Token: 0x0200C7A1 RID: 51105
+		// Token: 0x0200B186 RID: 45446
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C4E9 RID: 247017
+			// Token: 0x04036E3A RID: 224826
 			public const int BgSprite = 0;
 
-			// Token: 0x0403C4EA RID: 247018
+			// Token: 0x04036E3B RID: 224827
 			public const int QuicklySellItem = 1;
 		}
 	}

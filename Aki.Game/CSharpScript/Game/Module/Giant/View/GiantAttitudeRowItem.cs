@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005978 RID: 22904
+	// Token: 0x02004951 RID: 18769
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantAttitudeRowItem : UiPanelBase
 	{
-		// Token: 0x0603A21F RID: 238111 RVA: 0x00DD2AEC File Offset: 0x00DD0CEC
+		// Token: 0x0602F145 RID: 192837 RVA: 0x00D21F7C File Offset: 0x00D2017C
 		public UniTask Init(UUIItem item)
 		{
 			GiantAttitudeRowItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A220 RID: 238112 RVA: 0x00DD2B38 File Offset: 0x00DD0D38
+		// Token: 0x0602F146 RID: 192838 RVA: 0x00D21FC8 File Offset: 0x00D201C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A221 RID: 238113 RVA: 0x00DD2D0A File Offset: 0x00DD0F0A
+		// Token: 0x0602F147 RID: 192839 RVA: 0x00D2219A File Offset: 0x00D2039A
 		public void SetClickCallback(Action call)
 		{
 			this.OnClickCall = call;
 		}
 
-		// Token: 0x0603A222 RID: 238114 RVA: 0x00DD2D14 File Offset: 0x00DD0F14
+		// Token: 0x0602F148 RID: 192840 RVA: 0x00D221A4 File Offset: 0x00D203A4
 		public void Refresh(GiantAttitudeRowData attitude, GiantAttitudeRowData assist, bool locked, bool active)
 		{
 			this.RefreshRow(EAttitudeRowComp.PnlIcon01, EAttitudeRowComp.SprIcon01, EAttitudeRowComp.PnlLock01, EAttitudeRowComp.TxtContent01, attitude, locked);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			item2.SetUIActive(active);
 		}
 
-		// Token: 0x0603A223 RID: 238115 RVA: 0x00DD2D68 File Offset: 0x00DD0F68
+		// Token: 0x0602F149 RID: 192841 RVA: 0x00D221F8 File Offset: 0x00D203F8
 		private void RefreshRow(EAttitudeRowComp pnlIcon, EAttitudeRowComp sprIcon, EAttitudeRowComp pnlLock, EAttitudeRowComp txtContent, GiantAttitudeRowData data, bool locked)
 		{
 			UUIText text = base.GetText((int)txtContent);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			}
 		}
 
-		// Token: 0x0603A224 RID: 238116 RVA: 0x00DD2E09 File Offset: 0x00DD1009
+		// Token: 0x0602F14A RID: 192842 RVA: 0x00D22299 File Offset: 0x00D20499
 		private void OnClick()
 		{
 			Action onClickCall = this.OnClickCall;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			onClickCall();
 		}
 
-		// Token: 0x0401E54C RID: 124236
+		// Token: 0x04018FEA RID: 102378
 		[Nullable(2)]
 		private Action OnClickCall;
 	}

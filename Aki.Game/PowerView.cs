@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025FA RID: 9722
+// Token: 0x02001AE5 RID: 6885
 [NullableContext(1)]
 [Nullable(0)]
 public class PowerView : UiTickViewBase
 {
-	// Token: 0x06013C78 RID: 81016 RVA: 0x004F5731 File Offset: 0x004F3931
+	// Token: 0x0601115A RID: 69978 RVA: 0x005044C5 File Offset: 0x005026C5
 	public PowerView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06013C79 RID: 81017 RVA: 0x004F5744 File Offset: 0x004F3944
+	// Token: 0x0601115B RID: 69979 RVA: 0x005044D8 File Offset: 0x005026D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -73,7 +73,7 @@ public class PowerView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06013C7A RID: 81018 RVA: 0x004F59E4 File Offset: 0x004F3BE4
+	// Token: 0x0601115C RID: 69980 RVA: 0x00504778 File Offset: 0x00502978
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPowerChanged, new Action(this.OnPowerChange));
@@ -82,7 +82,7 @@ public class PowerView : UiTickViewBase
 		EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnPlayerCurrencyChange));
 	}
 
-	// Token: 0x06013C7B RID: 81019 RVA: 0x004F5A64 File Offset: 0x004F3C64
+	// Token: 0x0601115D RID: 69981 RVA: 0x005047F8 File Offset: 0x005029F8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPowerChanged, new Action(this.OnPowerChange));
@@ -91,13 +91,13 @@ public class PowerView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnPlayerCurrencyChange));
 	}
 
-	// Token: 0x06013C7C RID: 81020 RVA: 0x004F5AE1 File Offset: 0x004F3CE1
+	// Token: 0x0601115E RID: 69982 RVA: 0x00504875 File Offset: 0x00502A75
 	protected override void OnBeforeShow()
 	{
 		this.RefreshCurrency();
 	}
 
-	// Token: 0x06013C7D RID: 81021 RVA: 0x004F5AEC File Offset: 0x004F3CEC
+	// Token: 0x0601115F RID: 69983 RVA: 0x00504880 File Offset: 0x00502A80
 	private UniTask RefreshCurrency()
 	{
 		PowerView.<RefreshCurrency>d__17 <RefreshCurrency>d__;
@@ -108,7 +108,7 @@ public class PowerView : UiTickViewBase
 		return <RefreshCurrency>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013C7E RID: 81022 RVA: 0x004F5B30 File Offset: 0x004F3D30
+	// Token: 0x06011160 RID: 69984 RVA: 0x005048C4 File Offset: 0x00502AC4
 	protected override void OnStart()
 	{
 		UUIItem item2 = base.GetItem(11);
@@ -155,7 +155,7 @@ public class PowerView : UiTickViewBase
 		this.UpdateDisplayItem(this.SelectedItemInfo);
 	}
 
-	// Token: 0x06013C7F RID: 81023 RVA: 0x004F5D14 File Offset: 0x004F3F14
+	// Token: 0x06011161 RID: 69985 RVA: 0x00504AA8 File Offset: 0x00502CA8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -174,7 +174,7 @@ public class PowerView : UiTickViewBase
 		return list;
 	}
 
-	// Token: 0x06013C80 RID: 81024 RVA: 0x004F5D84 File Offset: 0x004F3F84
+	// Token: 0x06011162 RID: 69986 RVA: 0x00504B18 File Offset: 0x00502D18
 	protected override void OnBeforeDestroy()
 	{
 		if (this.PowerPropScrollView == null)
@@ -185,7 +185,7 @@ public class PowerView : UiTickViewBase
 		this.PowerPropScrollView = null;
 	}
 
-	// Token: 0x06013C81 RID: 81025 RVA: 0x004F5DA4 File Offset: 0x004F3FA4
+	// Token: 0x06011163 RID: 69987 RVA: 0x00504B38 File Offset: 0x00502D38
 	protected override void OnTick(float delta)
 	{
 		this.RefreshRecoveryText();
@@ -193,7 +193,7 @@ public class PowerView : UiTickViewBase
 		this.RefreshRecoveryItem((selectedItemInfo != null) ? new int?(selectedItemInfo.ItemId) : null);
 	}
 
-	// Token: 0x06013C82 RID: 81026 RVA: 0x004F5DDC File Offset: 0x004F3FDC
+	// Token: 0x06011164 RID: 69988 RVA: 0x00504B70 File Offset: 0x00502D70
 	private void UpdateCountDown(string fullRecoveryText, string nextRecoveryText)
 	{
 		UUIText text = base.GetText(5);
@@ -209,7 +209,7 @@ public class PowerView : UiTickViewBase
 		text2.SetText(nextRecoveryText, true);
 	}
 
-	// Token: 0x06013C83 RID: 81027 RVA: 0x004F5E08 File Offset: 0x004F4008
+	// Token: 0x06011165 RID: 69989 RVA: 0x00504B9C File Offset: 0x00502D9C
 	private void RefreshViewByBoxData()
 	{
 		if (this.PowerConfirmBoxData == null)
@@ -266,13 +266,13 @@ public class PowerView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013C84 RID: 81028 RVA: 0x004F5FA4 File Offset: 0x004F41A4
+	// Token: 0x06011166 RID: 69990 RVA: 0x00504D38 File Offset: 0x00502F38
 	private void CancelClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013C85 RID: 81029 RVA: 0x004F5FB0 File Offset: 0x004F41B0
+	// Token: 0x06011167 RID: 69991 RVA: 0x00504D44 File Offset: 0x00502F44
 	private void ConfirmClick()
 	{
 		if (this.PowerConfirmBoxData == null || this.SelectedItemInfo == null)
@@ -315,7 +315,7 @@ public class PowerView : UiTickViewBase
 		PowerController.Instance.ExchangePower(this.SelectedItemInfo, costCount, null);
 	}
 
-	// Token: 0x06013C86 RID: 81030 RVA: 0x004F60CC File Offset: 0x004F42CC
+	// Token: 0x06011168 RID: 69992 RVA: 0x00504E60 File Offset: 0x00503060
 	private void SetDisplayItemInfo(MediumItemGridExtendCallback callbackParameter)
 	{
 		PowerItemInfo powerItemInfo = callbackParameter.Data as PowerItemInfo;
@@ -330,14 +330,14 @@ public class PowerView : UiTickViewBase
 		this.UpdateDisplayItem(powerItemInfo);
 	}
 
-	// Token: 0x06013C87 RID: 81031 RVA: 0x004F6114 File Offset: 0x004F4314
+	// Token: 0x06011169 RID: 69993 RVA: 0x00504EA8 File Offset: 0x005030A8
 	private void UpdateDisplayItem(PowerItemInfo itemInfo)
 	{
 		this.RefreshNameText(itemInfo);
 		this.RefreshViewByItemId(itemInfo.ItemId);
 	}
 
-	// Token: 0x06013C88 RID: 81032 RVA: 0x004F612C File Offset: 0x004F432C
+	// Token: 0x0601116A RID: 69994 RVA: 0x00504EC0 File Offset: 0x005030C0
 	private void RefreshNameText(PowerItemInfo itemInfo)
 	{
 		if (itemInfo.ItemId != 6)
@@ -357,13 +357,13 @@ public class PowerView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "GetOverPower", Array.Empty<object>());
 	}
 
-	// Token: 0x06013C89 RID: 81033 RVA: 0x004F61DA File Offset: 0x004F43DA
+	// Token: 0x0601116B RID: 69995 RVA: 0x00504F6E File Offset: 0x0050316E
 	private void RefreshViewByItemId(int itemId)
 	{
 		this.RefreshRecoveryItem(new int?(itemId));
 	}
 
-	// Token: 0x06013C8A RID: 81034 RVA: 0x004F61E8 File Offset: 0x004F43E8
+	// Token: 0x0601116C RID: 69996 RVA: 0x00504F7C File Offset: 0x0050317C
 	private void RefreshRecoveryItem(int? itemId)
 	{
 		if (itemId == null)
@@ -380,7 +380,7 @@ public class PowerView : UiTickViewBase
 		item.SetUIActive(powerDataById.GetPowerRecoveryMode() == EPowerRecoveryMode.Update);
 	}
 
-	// Token: 0x06013C8B RID: 81035 RVA: 0x004F622C File Offset: 0x004F442C
+	// Token: 0x0601116D RID: 69997 RVA: 0x00504FC0 File Offset: 0x005031C0
 	private void RefreshRecoveryText()
 	{
 		PowerItemInfo selectedItemInfo = this.SelectedItemInfo;
@@ -392,7 +392,7 @@ public class PowerView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013C8C RID: 81036 RVA: 0x004F62A4 File Offset: 0x004F44A4
+	// Token: 0x0601116E RID: 69998 RVA: 0x00505038 File Offset: 0x00503238
 	private void RefreshPowerFullItem()
 	{
 		PowerData powerDataById = PowerModel.Instance.GetPowerDataById(5);
@@ -404,7 +404,7 @@ public class PowerView : UiTickViewBase
 		item.SetUIActive(powerDataById.CheckPowerIfMax());
 	}
 
-	// Token: 0x06013C8D RID: 81037 RVA: 0x004F62D8 File Offset: 0x004F44D8
+	// Token: 0x0601116F RID: 69999 RVA: 0x0050506C File Offset: 0x0050326C
 	private void OnPowerChange()
 	{
 		float inValue = (float)PowerModel.Instance.PowerCount / (float)this.PowerNaturalLimit;
@@ -446,7 +446,7 @@ public class PowerView : UiTickViewBase
 		this.PowerConfirmBoxData.PowerCount = PowerModel.Instance.PowerCount;
 	}
 
-	// Token: 0x06013C8E RID: 81038 RVA: 0x004F6420 File Offset: 0x004F4620
+	// Token: 0x06011170 RID: 70000 RVA: 0x005051B4 File Offset: 0x005033B4
 	private void OnPlayerCurrencyChange(int itemId)
 	{
 		if (itemId == 3)
@@ -470,7 +470,7 @@ public class PowerView : UiTickViewBase
 		payItemGrid.SetBottomText(PlayerInfoModel.Instance.GetPlayerMoney(3).ToString());
 	}
 
-	// Token: 0x06013C8F RID: 81039 RVA: 0x004F6494 File Offset: 0x004F4694
+	// Token: 0x06011171 RID: 70001 RVA: 0x00505228 File Offset: 0x00503428
 	private void OnBuySuccess(int shopId, int goodsId)
 	{
 		if (shopId == 0 || goodsId == 0)
@@ -500,7 +500,7 @@ public class PowerView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06013C90 RID: 81040 RVA: 0x004F6534 File Offset: 0x004F4734
+	// Token: 0x06011172 RID: 70002 RVA: 0x005052C8 File Offset: 0x005034C8
 	private void OnGoodUnlock()
 	{
 		this.PowerItemInfos = this.GetPowerRecoverItem();
@@ -512,7 +512,7 @@ public class PowerView : UiTickViewBase
 		powerPropScrollView.RefreshByData<PowerItemInfo>(this.PowerItemInfos, null);
 	}
 
-	// Token: 0x06013C91 RID: 81041 RVA: 0x004F656C File Offset: 0x004F476C
+	// Token: 0x06011173 RID: 70003 RVA: 0x00505300 File Offset: 0x00503500
 	private ILayoutItem<MediumItemGrid> RefreshScrollView(object rawItemInfo, UUIItem uiItem, int index)
 	{
 		PowerItemInfo powerItemInfo = (PowerItemInfo)rawItemInfo;
@@ -545,13 +545,13 @@ public class PowerView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0400950D RID: 38157
+	// Token: 0x04009664 RID: 38500
 	private const string COUN_NOT_ENOUGH_COLOR = "9D2437FF";
 
-	// Token: 0x0400950E RID: 38158
+	// Token: 0x04009665 RID: 38501
 	private const string WHITE_COLOR = "FFFFFFFF";
 
-	// Token: 0x0400950F RID: 38159
+	// Token: 0x04009666 RID: 38502
 	[Nullable(new byte[]
 	{
 		2,
@@ -559,19 +559,19 @@ public class PowerView : UiTickViewBase
 	})]
 	private GenericScrollView<MediumItemGrid> PowerPropScrollView;
 
-	// Token: 0x04009510 RID: 38160
+	// Token: 0x04009667 RID: 38503
 	[Nullable(2)]
 	private MediumItemGrid PayItemGrid;
 
-	// Token: 0x04009511 RID: 38161
+	// Token: 0x04009668 RID: 38504
 	[Nullable(2)]
 	private PowerConfirmBoxData PowerConfirmBoxData;
 
-	// Token: 0x04009512 RID: 38162
+	// Token: 0x04009669 RID: 38505
 	[Nullable(2)]
 	private PowerItemInfo SelectedItemInfo;
 
-	// Token: 0x04009513 RID: 38163
+	// Token: 0x0400966A RID: 38506
 	[Nullable(new byte[]
 	{
 		2,
@@ -579,54 +579,54 @@ public class PowerView : UiTickViewBase
 	})]
 	private List<PowerItemInfo> PowerItemInfos;
 
-	// Token: 0x04009514 RID: 38164
+	// Token: 0x0400966B RID: 38507
 	private int PowerNaturalLimit;
 
-	// Token: 0x04009515 RID: 38165
+	// Token: 0x0400966C RID: 38508
 	private int PowerChargeLimit;
 
-	// Token: 0x04009516 RID: 38166
+	// Token: 0x0400966D RID: 38509
 	[Nullable(2)]
 	private ItemGridBase SelectedItemGrid;
 
-	// Token: 0x04009517 RID: 38167
+	// Token: 0x0400966E RID: 38510
 	private int StartSelectedIndex = -1;
 
-	// Token: 0x02008C2B RID: 35883
+	// Token: 0x02007DB4 RID: 32180
 	[NullableContext(0)]
 	private enum EPowerWidget
 	{
-		// Token: 0x0402D806 RID: 186374
+		// Token: 0x04028B1E RID: 166686
 		CancelButton,
-		// Token: 0x0402D807 RID: 186375
+		// Token: 0x04028B1F RID: 166687
 		CancelText,
-		// Token: 0x0402D808 RID: 186376
+		// Token: 0x04028B20 RID: 166688
 		ConfirmButton,
-		// Token: 0x0402D809 RID: 186377
+		// Token: 0x04028B21 RID: 166689
 		ConfirmText,
-		// Token: 0x0402D80A RID: 186378
+		// Token: 0x04028B22 RID: 166690
 		Power1,
-		// Token: 0x0402D80B RID: 186379
+		// Token: 0x04028B23 RID: 166691
 		Power2,
-		// Token: 0x0402D80C RID: 186380
+		// Token: 0x04028B24 RID: 166692
 		Title,
-		// Token: 0x0402D80D RID: 186381
+		// Token: 0x04028B25 RID: 166693
 		ScrollView,
-		// Token: 0x0402D80E RID: 186382
+		// Token: 0x04028B26 RID: 166694
 		ContentText,
-		// Token: 0x0402D80F RID: 186383
+		// Token: 0x04028B27 RID: 166695
 		ContainerProp,
-		// Token: 0x0402D810 RID: 186384
+		// Token: 0x04028B28 RID: 166696
 		CommonDescribe,
-		// Token: 0x0402D811 RID: 186385
+		// Token: 0x04028B29 RID: 166697
 		Recover,
-		// Token: 0x0402D812 RID: 186386
+		// Token: 0x04028B2A RID: 166698
 		Group,
-		// Token: 0x0402D813 RID: 186387
+		// Token: 0x04028B2B RID: 166699
 		ConfirmButton2,
-		// Token: 0x0402D814 RID: 186388
+		// Token: 0x04028B2C RID: 166700
 		PowerSlider,
-		// Token: 0x0402D815 RID: 186389
+		// Token: 0x04028B2D RID: 166701
 		PowerFullItem
 	}
 }

@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002C8 RID: 712
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200030F RID: 783
 	public class IDollGrabShowcaseDollCameraConfig_SetValue
 	{
-		// Token: 0x04000C2D RID: 3117
+		// Token: 0x04000D17 RID: 3351
 		public IShowcaseFullViewCameraConfig FullViewCamera;
 
-		// Token: 0x04000C2E RID: 3118
+		// Token: 0x04000D18 RID: 3352
 		public IDollComboCamera DollCamera;
 	}
 }

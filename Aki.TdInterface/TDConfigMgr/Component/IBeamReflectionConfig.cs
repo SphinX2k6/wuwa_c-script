@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001F7 RID: 503
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000220 RID: 544
 	public class IBeamReflectionConfig
 	{
-		// Token: 0x0600083E RID: 2110 RVA: 0x00026710 File Offset: 0x00024910
+		// Token: 0x060008BE RID: 2238 RVA: 0x00028064 File Offset: 0x00026264
 		private IBeamReflectionConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600083F RID: 2111 RVA: 0x00026748 File Offset: 0x00024948
+		// Token: 0x060008BF RID: 2239 RVA: 0x0002809C File Offset: 0x0002629C
 		public static IBeamReflectionConfig Create([Nullable(2)] IBeamReflectionConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000840 RID: 2112 RVA: 0x0002675B File Offset: 0x0002495B
+		// Token: 0x060008C0 RID: 2240 RVA: 0x000280AF File Offset: 0x000262AF
 		public static IBeamReflectionConfig CreateFromSetValue([Nullable(2)] IBeamReflectionConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000841 RID: 2113 RVA: 0x0002676E File Offset: 0x0002496E
+		// Token: 0x060008C1 RID: 2241 RVA: 0x000280C2 File Offset: 0x000262C2
 		public IBeamReflectionConfig_SetValue ToSetValue()
 		{
 			return new IBeamReflectionConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700028A RID: 650
-		// (get) Token: 0x06000842 RID: 2114 RVA: 0x00026784 File Offset: 0x00024984
-		// (set) Token: 0x06000843 RID: 2115 RVA: 0x000267E5 File Offset: 0x000249E5
+		// Token: 0x170002AC RID: 684
+		// (get) Token: 0x060008C2 RID: 2242 RVA: 0x000280D8 File Offset: 0x000262D8
+		// (set) Token: 0x060008C3 RID: 2243 RVA: 0x00028139 File Offset: 0x00026339
 		public virtual VectorInfo NormalVector
 		{
 			get
@@ -90,18 +88,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400090A RID: 2314
+		// Token: 0x0400099B RID: 2459
 		[Nullable(2)]
 		protected IBeamReflectionConfig FbInstance;
 
-		// Token: 0x0400090B RID: 2315
+		// Token: 0x0400099C RID: 2460
 		[Nullable(2)]
 		protected IBeamReflectionConfig_SetValue PocoInterface;
 
-		// Token: 0x0400090C RID: 2316
+		// Token: 0x0400099D RID: 2461
 		private VectorInfo _NormalVectorCache;
 
-		// Token: 0x0400090D RID: 2317
+		// Token: 0x0400099E RID: 2462
 		private bool _NormalVectorInited;
 	}
 }

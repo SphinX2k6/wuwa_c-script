@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005951 RID: 22865
+	// Token: 0x02005F5E RID: 24414
 	public class ISpawnMonsterConfigT
 	{
-		// Token: 0x1700ABA1 RID: 43937
-		// (get) Token: 0x06026B39 RID: 158521 RVA: 0x00554751 File Offset: 0x00552951
-		// (set) Token: 0x06026B3A RID: 158522 RVA: 0x00554759 File Offset: 0x00552959
+		// Token: 0x1700B4D5 RID: 46293
+		// (get) Token: 0x060290A3 RID: 168099 RVA: 0x0059B3BD File Offset: 0x005995BD
+		// (set) Token: 0x060290A4 RID: 168100 RVA: 0x0059B3C5 File Offset: 0x005995C5
 		public int Id { get; set; }
 
-		// Token: 0x1700ABA2 RID: 43938
-		// (get) Token: 0x06026B3B RID: 158523 RVA: 0x00554762 File Offset: 0x00552962
-		// (set) Token: 0x06026B3C RID: 158524 RVA: 0x0055476A File Offset: 0x0055296A
+		// Token: 0x1700B4D6 RID: 46294
+		// (get) Token: 0x060290A5 RID: 168101 RVA: 0x0059B3CE File Offset: 0x005995CE
+		// (set) Token: 0x060290A6 RID: 168102 RVA: 0x0059B3D6 File Offset: 0x005995D6
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700ABA3 RID: 43939
-		// (get) Token: 0x06026B3D RID: 158525 RVA: 0x00554773 File Offset: 0x00552973
-		// (set) Token: 0x06026B3E RID: 158526 RVA: 0x0055477B File Offset: 0x0055297B
+		// Token: 0x1700B4D7 RID: 46295
+		// (get) Token: 0x060290A7 RID: 168103 RVA: 0x0059B3DF File Offset: 0x005995DF
+		// (set) Token: 0x060290A8 RID: 168104 RVA: 0x0059B3E7 File Offset: 0x005995E7
 		public List<int> TargetsToAwake { get; set; }
 
-		// Token: 0x1700ABA4 RID: 43940
-		// (get) Token: 0x06026B3F RID: 158527 RVA: 0x00554784 File Offset: 0x00552984
-		// (set) Token: 0x06026B40 RID: 158528 RVA: 0x0055478C File Offset: 0x0055298C
+		// Token: 0x1700B4D8 RID: 46296
+		// (get) Token: 0x060290A9 RID: 168105 RVA: 0x0059B3F0 File Offset: 0x005995F0
+		// (set) Token: 0x060290AA RID: 168106 RVA: 0x0059B3F8 File Offset: 0x005995F8
 		public TSpawnMonsterCompleteConditionUnion CompleteCondition { get; set; }
 
-		// Token: 0x1700ABA5 RID: 43941
-		// (get) Token: 0x06026B41 RID: 158529 RVA: 0x00554795 File Offset: 0x00552995
-		// (set) Token: 0x06026B42 RID: 158530 RVA: 0x0055479D File Offset: 0x0055299D
+		// Token: 0x1700B4D9 RID: 46297
+		// (get) Token: 0x060290AB RID: 168107 RVA: 0x0059B401 File Offset: 0x00599601
+		// (set) Token: 0x060290AC RID: 168108 RVA: 0x0059B409 File Offset: 0x00599609
 		public ISpawnMonsterPreDependOnPrecedingT PreCondition { get; set; }
 
-		// Token: 0x1700ABA6 RID: 43942
-		// (get) Token: 0x06026B43 RID: 158531 RVA: 0x005547A6 File Offset: 0x005529A6
-		// (set) Token: 0x06026B44 RID: 158532 RVA: 0x005547AE File Offset: 0x005529AE
+		// Token: 0x1700B4DA RID: 46298
+		// (get) Token: 0x060290AD RID: 168109 RVA: 0x0059B412 File Offset: 0x00599612
+		// (set) Token: 0x060290AE RID: 168110 RVA: 0x0059B41A File Offset: 0x0059961A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026B45 RID: 158533 RVA: 0x005547B7 File Offset: 0x005529B7
+		// Token: 0x060290AF RID: 168111 RVA: 0x0059B423 File Offset: 0x00599623
 		public ISpawnMonsterConfigT()
 		{
 			this.Id = 0;

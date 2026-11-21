@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004881 RID: 18561
+	// Token: 0x020037F8 RID: 14328
 	public class VillageInfrTaskBottomPanel : UiPanelBase
 	{
-		// Token: 0x060308FE RID: 198910 RVA: 0x00B4773C File Offset: 0x00B4593C
+		// Token: 0x0602542A RID: 152618 RVA: 0x00A82510 File Offset: 0x00A80710
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,26 +24,26 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x060308FF RID: 198911 RVA: 0x00B477C2 File Offset: 0x00B459C2
+		// Token: 0x0602542B RID: 152619 RVA: 0x00A82596 File Offset: 0x00A80796
 		protected override void OnStart()
 		{
 			this.CreateRewardLayout();
 			this.Refresh();
 		}
 
-		// Token: 0x06030900 RID: 198912 RVA: 0x00B477D0 File Offset: 0x00B459D0
+		// Token: 0x0602542C RID: 152620 RVA: 0x00A825A4 File Offset: 0x00A807A4
 		public void Refresh()
 		{
 			this.RefreshReward();
 		}
 
-		// Token: 0x06030901 RID: 198913 RVA: 0x00B477D8 File Offset: 0x00B459D8
+		// Token: 0x0602542D RID: 152621 RVA: 0x00A825AC File Offset: 0x00A807AC
 		private void CreateRewardLayout()
 		{
 			this.RewardLayout = new GenericLayout<RewardItem, int>(base.GetHorizontalLayout(1), () => new RewardItem(), null, false, true);
 		}
 
-		// Token: 0x06030902 RID: 198914 RVA: 0x00B47810 File Offset: 0x00B45A10
+		// Token: 0x0602542E RID: 152622 RVA: 0x00A825E4 File Offset: 0x00A807E4
 		public void RefreshReward()
 		{
 			List<InfrV2ScoreReward> list = new List<InfrV2ScoreReward>(VillageInfrConfig.Instance.GetScoreReward());
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetSprite(4).SetFillAmount((float)Math.Min((double)rewardScore / (double)score, 1.0));
 		}
 
-		// Token: 0x0401A180 RID: 106880
+		// Token: 0x040149F3 RID: 84467
 		[Nullable(new byte[]
 		{
 			2,

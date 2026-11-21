@@ -6,19 +6,19 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022EF RID: 8943
+// Token: 0x020017D3 RID: 6099
 [NullableContext(1)]
 [Nullable(0)]
 public class OnlineHallSettingButton : UiPanelBase
 {
-	// Token: 0x060119EA RID: 72170 RVA: 0x00452B10 File Offset: 0x00450D10
+	// Token: 0x0600EE82 RID: 61058 RVA: 0x0045F7DC File Offset: 0x0045D9DC
 	public OnlineHallSettingButton(AActor uiContainerActor, WorldEnterPermission type)
 	{
 		this.Type = type;
 		base.CreateThenShowByActor(uiContainerActor, null);
 	}
 
-	// Token: 0x060119EB RID: 72171 RVA: 0x00452B28 File Offset: 0x00450D28
+	// Token: 0x0600EE83 RID: 61059 RVA: 0x0045F7F4 File Offset: 0x0045D9F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,50 +32,50 @@ public class OnlineHallSettingButton : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060119EC RID: 72172 RVA: 0x00452B91 File Offset: 0x00450D91
+	// Token: 0x0600EE84 RID: 61060 RVA: 0x0045F85D File Offset: 0x0045DA5D
 	protected override void OnStart()
 	{
 		this.InitType(this.Type);
 		this.AddEvents();
 	}
 
-	// Token: 0x060119ED RID: 72173 RVA: 0x00452BA5 File Offset: 0x00450DA5
+	// Token: 0x0600EE85 RID: 61061 RVA: 0x0045F871 File Offset: 0x0045DA71
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEvents();
 	}
 
-	// Token: 0x060119EE RID: 72174 RVA: 0x00452BAD File Offset: 0x00450DAD
+	// Token: 0x0600EE86 RID: 61062 RVA: 0x0045F879 File Offset: 0x0045DA79
 	private void AddEvents()
 	{
 		base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnSettingButtonClicked));
 	}
 
-	// Token: 0x060119EF RID: 72175 RVA: 0x00452BCC File Offset: 0x00450DCC
+	// Token: 0x0600EE87 RID: 61063 RVA: 0x0045F898 File Offset: 0x0045DA98
 	private void RemoveEvents()
 	{
 		base.GetExtendToggle(0).OnStateChange.Remove(new Action<EToggleState>(this.OnSettingButtonClicked));
 	}
 
-	// Token: 0x060119F0 RID: 72176 RVA: 0x00452BEB File Offset: 0x00450DEB
+	// Token: 0x0600EE88 RID: 61064 RVA: 0x0045F8B7 File Offset: 0x0045DAB7
 	public void BindOnSettingButtonClickedCallback(Action<WorldEnterPermission> onSettingButtonClickedCallback)
 	{
 		this.OnSettingButtonClickedCallback = onSettingButtonClickedCallback;
 	}
 
-	// Token: 0x060119F1 RID: 72177 RVA: 0x00452BF4 File Offset: 0x00450DF4
+	// Token: 0x0600EE89 RID: 61065 RVA: 0x0045F8C0 File Offset: 0x0045DAC0
 	public void BindCanToggleExecuteChange(Func<WorldEnterPermission, bool> toggle)
 	{
 		this.OnCanToggleClicked = toggle;
 	}
 
-	// Token: 0x060119F2 RID: 72178 RVA: 0x00452BFD File Offset: 0x00450DFD
+	// Token: 0x0600EE8A RID: 61066 RVA: 0x0045F8C9 File Offset: 0x0045DAC9
 	private bool CanToggleExecuteChange()
 	{
 		return this.OnCanToggleClicked == null || this.OnCanToggleClicked(this.Type);
 	}
 
-	// Token: 0x060119F3 RID: 72179 RVA: 0x00452C1C File Offset: 0x00450E1C
+	// Token: 0x0600EE8B RID: 61067 RVA: 0x0045F8E8 File Offset: 0x0045DAE8
 	public void SetSelected(bool bSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -87,7 +87,7 @@ public class OnlineHallSettingButton : UiPanelBase
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060119F4 RID: 72180 RVA: 0x00452C4C File Offset: 0x00450E4C
+	// Token: 0x0600EE8C RID: 61068 RVA: 0x0045F918 File Offset: 0x0045DB18
 	private void InitType(WorldEnterPermission type)
 	{
 		UUIText text = base.GetText(1);
@@ -98,7 +98,7 @@ public class OnlineHallSettingButton : UiPanelBase
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanToggleExecuteChange));
 	}
 
-	// Token: 0x060119F5 RID: 72181 RVA: 0x00452CA3 File Offset: 0x00450EA3
+	// Token: 0x0600EE8D RID: 61069 RVA: 0x0045F96F File Offset: 0x0045DB6F
 	private void OnSettingButtonClicked(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -111,24 +111,24 @@ public class OnlineHallSettingButton : UiPanelBase
 		}
 	}
 
-	// Token: 0x040085C3 RID: 34243
+	// Token: 0x04008701 RID: 34561
 	[Nullable(2)]
 	private Action<WorldEnterPermission> OnSettingButtonClickedCallback;
 
-	// Token: 0x040085C4 RID: 34244
+	// Token: 0x04008702 RID: 34562
 	private readonly WorldEnterPermission Type;
 
-	// Token: 0x040085C5 RID: 34245
+	// Token: 0x04008703 RID: 34563
 	[Nullable(2)]
 	private Func<WorldEnterPermission, bool> OnCanToggleClicked;
 
-	// Token: 0x02008866 RID: 34918
+	// Token: 0x020079EA RID: 31210
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402C533 RID: 181555
+		// Token: 0x04027835 RID: 161845
 		Tog,
-		// Token: 0x0402C534 RID: 181556
+		// Token: 0x04027836 RID: 161846
 		TogText
 	}
 }

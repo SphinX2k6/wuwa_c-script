@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200007E RID: 126
+	// Token: 0x02000081 RID: 129
 	public enum ECaptureStateType
 	{
-		// Token: 0x0400027A RID: 634
+		// Token: 0x04000289 RID: 649
 		Default,
-		// Token: 0x0400027B RID: 635
+		// Token: 0x0400028A RID: 650
 		AllType
 	}
 }

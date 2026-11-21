@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000254 RID: 596
+	// Token: 0x02000297 RID: 663
 	public class ICommonSpline_SetValue
 	{
-		// Token: 0x04000A96 RID: 2710
+		// Token: 0x04000B77 RID: 2935
 		public ESplineType Type;
 
-		// Token: 0x04000A97 RID: 2711
-		[Nullable(1)]
+		// Token: 0x04000B78 RID: 2936
 		public List<ICommonSplinePoint> Points;
 	}
 }

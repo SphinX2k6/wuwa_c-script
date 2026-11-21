@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Audio;
 
-// Token: 0x0200325A RID: 12890
+// Token: 0x020027C9 RID: 10185
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleAudioCoolDownTime
 {
-	// Token: 0x0601BCF7 RID: 113911 RVA: 0x007AF068 File Offset: 0x007AD268
+	// Token: 0x060198BE RID: 104638 RVA: 0x007D7398 File Offset: 0x007D5598
 	public RoleAudioCoolDownTime(ERoleAudioType type)
 	{
 		this.Type = type;
@@ -46,7 +46,7 @@ public class RoleAudioCoolDownTime
 		}
 	}
 
-	// Token: 0x0601BCF8 RID: 113912 RVA: 0x007AF1A1 File Offset: 0x007AD3A1
+	// Token: 0x060198BF RID: 104639 RVA: 0x007D74D1 File Offset: 0x007D56D1
 	public void RefreshCoolDownTime(int entityId, bool log = true)
 	{
 		GameAudioModel instance = GameAudioModel.Instance;
@@ -57,7 +57,7 @@ public class RoleAudioCoolDownTime
 		instance.UpdateAudioCooldownRecord(entityId, (int)this.Type, this.ProbabilityCooldown.DefaultProbability, this.ProbabilityCooldown.DefaultCooldownTime, log);
 	}
 
-	// Token: 0x0601BCF9 RID: 113913 RVA: 0x007AF1D8 File Offset: 0x007AD3D8
+	// Token: 0x060198C0 RID: 104640 RVA: 0x007D7508 File Offset: 0x007D5708
 	public bool CheckCoolDownTime(int roleId, int entityId, bool update = true, bool log = true)
 	{
 		bool flag = true;
@@ -110,19 +110,19 @@ public class RoleAudioCoolDownTime
 		return flag;
 	}
 
-	// Token: 0x0400DB70 RID: 56176
+	// Token: 0x0400E00F RID: 57359
 	public ERoleAudioType Type;
 
-	// Token: 0x0400DB71 RID: 56177
+	// Token: 0x0400E010 RID: 57360
 	public double[] CurrentTeamTime = new double[3];
 
-	// Token: 0x0400DB72 RID: 56178
+	// Token: 0x0400E011 RID: 57361
 	public double TeamIntervalTime;
 
-	// Token: 0x0400DB73 RID: 56179
+	// Token: 0x0400E012 RID: 57362
 	public int GroupId;
 
-	// Token: 0x0400DB74 RID: 56180
+	// Token: 0x0400E013 RID: 57363
 	public AudioCoolDownWithTagInfo ProbabilityCooldown = new AudioCoolDownWithTagInfo
 	{
 		DefaultCooldownTime = 0,

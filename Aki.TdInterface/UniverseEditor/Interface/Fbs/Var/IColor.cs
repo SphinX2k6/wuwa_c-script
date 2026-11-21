@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A87 RID: 14983
+	// Token: 0x02003E62 RID: 15970
 	public struct IColor : IFlatbufferObject
 	{
-		// Token: 0x17006699 RID: 26265
-		// (get) Token: 0x06014505 RID: 83205 RVA: 0x002F6E59 File Offset: 0x002F5059
+		// Token: 0x17006BC9 RID: 27593
+		// (get) Token: 0x06015821 RID: 88097 RVA: 0x0031A045 File Offset: 0x00318245
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014506 RID: 83206 RVA: 0x002F6E66 File Offset: 0x002F5066
+		// Token: 0x06015822 RID: 88098 RVA: 0x0031A052 File Offset: 0x00318252
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014507 RID: 83207 RVA: 0x002F6E70 File Offset: 0x002F5070
+		// Token: 0x06015823 RID: 88099 RVA: 0x0031A05C File Offset: 0x0031825C
 		public static IColor GetRootAsIColor(ByteBuffer _bb)
 		{
 			return IColor.GetRootAsIColor(_bb, default(IColor));
 		}
 
-		// Token: 0x06014508 RID: 83208 RVA: 0x002F6E8C File Offset: 0x002F508C
+		// Token: 0x06015824 RID: 88100 RVA: 0x0031A078 File Offset: 0x00318278
 		public static IColor GetRootAsIColor(ByteBuffer _bb, IColor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014509 RID: 83209 RVA: 0x002F6EA9 File Offset: 0x002F50A9
+		// Token: 0x06015825 RID: 88101 RVA: 0x0031A095 File Offset: 0x00318295
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601450A RID: 83210 RVA: 0x002F6EB8 File Offset: 0x002F50B8
+		// Token: 0x06015826 RID: 88102 RVA: 0x0031A0A4 File Offset: 0x003182A4
 		public IColor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700669A RID: 26266
-		// (get) Token: 0x0601450B RID: 83211 RVA: 0x002F6EC8 File Offset: 0x002F50C8
+		// Token: 0x17006BCA RID: 27594
+		// (get) Token: 0x06015827 RID: 88103 RVA: 0x0031A0B4 File Offset: 0x003182B4
 		public float R
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x1700669B RID: 26267
-		// (get) Token: 0x0601450C RID: 83212 RVA: 0x002F6F08 File Offset: 0x002F5108
+		// Token: 0x17006BCB RID: 27595
+		// (get) Token: 0x06015828 RID: 88104 RVA: 0x0031A0F4 File Offset: 0x003182F4
 		public float G
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x1700669C RID: 26268
-		// (get) Token: 0x0601450D RID: 83213 RVA: 0x002F6F48 File Offset: 0x002F5148
+		// Token: 0x17006BCC RID: 27596
+		// (get) Token: 0x06015829 RID: 88105 RVA: 0x0031A134 File Offset: 0x00318334
 		public float B
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x1700669D RID: 26269
-		// (get) Token: 0x0601450E RID: 83214 RVA: 0x002F6F88 File Offset: 0x002F5188
+		// Token: 0x17006BCD RID: 27597
+		// (get) Token: 0x0601582A RID: 88106 RVA: 0x0031A174 File Offset: 0x00318374
 		public float A
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x1700669E RID: 26270
-		// (get) Token: 0x0601450F RID: 83215 RVA: 0x002F6FCC File Offset: 0x002F51CC
+		// Token: 0x17006BCE RID: 27598
+		// (get) Token: 0x0601582B RID: 88107 RVA: 0x0031A1B8 File Offset: 0x003183B8
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014510 RID: 83216 RVA: 0x002F7009 File Offset: 0x002F5209
+		// Token: 0x0601582C RID: 88108 RVA: 0x0031A1F5 File Offset: 0x003183F5
 		public static Offset<IColor> CreateIColor(FlatBufferBuilder builder, float R = 0f, float G = 0f, float B = 0f, float A = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IColor.EndIColor(builder);
 		}
 
-		// Token: 0x06014511 RID: 83217 RVA: 0x002F703D File Offset: 0x002F523D
+		// Token: 0x0601582D RID: 88109 RVA: 0x0031A229 File Offset: 0x00318429
 		public static void StartIColor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06014512 RID: 83218 RVA: 0x002F7046 File Offset: 0x002F5246
+		// Token: 0x0601582E RID: 88110 RVA: 0x0031A232 File Offset: 0x00318432
 		public static void AddR(FlatBufferBuilder builder, float r)
 		{
 			builder.AddFloat(0, r, 0.0);
 		}
 
-		// Token: 0x06014513 RID: 83219 RVA: 0x002F7059 File Offset: 0x002F5259
+		// Token: 0x0601582F RID: 88111 RVA: 0x0031A245 File Offset: 0x00318445
 		public static void AddG(FlatBufferBuilder builder, float g)
 		{
 			builder.AddFloat(1, g, 0.0);
 		}
 
-		// Token: 0x06014514 RID: 83220 RVA: 0x002F706C File Offset: 0x002F526C
+		// Token: 0x06015830 RID: 88112 RVA: 0x0031A258 File Offset: 0x00318458
 		public static void AddB(FlatBufferBuilder builder, float b)
 		{
 			builder.AddFloat(2, b, 0.0);
 		}
 
-		// Token: 0x06014515 RID: 83221 RVA: 0x002F707F File Offset: 0x002F527F
+		// Token: 0x06015831 RID: 88113 RVA: 0x0031A26B File Offset: 0x0031846B
 		public static void AddA(FlatBufferBuilder builder, float a)
 		{
 			builder.AddFloat(3, a, 0.0);
 		}
 
-		// Token: 0x06014516 RID: 83222 RVA: 0x002F7092 File Offset: 0x002F5292
+		// Token: 0x06015832 RID: 88114 RVA: 0x0031A27E File Offset: 0x0031847E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06014517 RID: 83223 RVA: 0x002F709D File Offset: 0x002F529D
+		// Token: 0x06015833 RID: 88115 RVA: 0x0031A289 File Offset: 0x00318489
 		public static Offset<IColor> EndIColor(FlatBufferBuilder builder)
 		{
 			return new Offset<IColor>(builder.EndTable());
 		}
 
-		// Token: 0x06014518 RID: 83224 RVA: 0x002F70AC File Offset: 0x002F52AC
+		// Token: 0x06015834 RID: 88116 RVA: 0x0031A298 File Offset: 0x00318498
 		public IColorT UnPack()
 		{
 			IColorT colorT = new IColorT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return colorT;
 		}
 
-		// Token: 0x06014519 RID: 83225 RVA: 0x002F70C7 File Offset: 0x002F52C7
+		// Token: 0x06015835 RID: 88117 RVA: 0x0031A2B3 File Offset: 0x003184B3
 		public void UnPackTo(IColorT _o)
 		{
 			_o.R = this.R;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601451A RID: 83226 RVA: 0x002F7108 File Offset: 0x002F5308
+		// Token: 0x06015836 RID: 88118 RVA: 0x0031A2F4 File Offset: 0x003184F4
 		public static Offset<IColor> Pack(FlatBufferBuilder builder, IColorT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IColor.CreateIColor(builder, _o.R, _o.G, _o.B, _o.A, _o.NullMask);
 		}
 
-		// Token: 0x0400AF00 RID: 44800
+		// Token: 0x0400B822 RID: 47138
 		private Table __p;
 	}
 }

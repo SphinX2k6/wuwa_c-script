@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006583 RID: 25987
+	// Token: 0x02005501 RID: 21761
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingRewardLimitTimeButton : UiPanelBase
 	{
-		// Token: 0x06041217 RID: 266775 RVA: 0x00FC8C5F File Offset: 0x00FC6E5F
+		// Token: 0x06035EDC RID: 220892 RVA: 0x00F0FC13 File Offset: 0x00F0DE13
 		public FishingRewardLimitTimeButton(ActivityFishingData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06041218 RID: 266776 RVA: 0x00FC8C7C File Offset: 0x00FC6E7C
+		// Token: 0x06035EDD RID: 220893 RVA: 0x00F0FC30 File Offset: 0x00F0DE30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041219 RID: 266777 RVA: 0x00FC8D43 File Offset: 0x00FC6F43
+		// Token: 0x06035EDE RID: 220894 RVA: 0x00F0FCF7 File Offset: 0x00F0DEF7
 		protected override void OnBeforeHide()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x0604121A RID: 266778 RVA: 0x00FC8D4C File Offset: 0x00FC6F4C
+		// Token: 0x06035EDF RID: 220895 RVA: 0x00F0FD00 File Offset: 0x00F0DF00
 		public void RefreshActive()
 		{
 			this.LimitTimeRewardOn = this.Data.IsLimitTimeRewardOn();
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ClearTimer();
 		}
 
-		// Token: 0x0604121B RID: 266779 RVA: 0x00FC8D9C File Offset: 0x00FC6F9C
+		// Token: 0x06035EE0 RID: 220896 RVA: 0x00F0FD50 File Offset: 0x00F0DF50
 		private void RefreshRedDot()
 		{
 			base.GetItem(2).SetUIActive(this.Data.GetTimeLimitRedDotState());
 		}
 
-		// Token: 0x0604121C RID: 266780 RVA: 0x00FC8DB8 File Offset: 0x00FC6FB8
+		// Token: 0x06035EE1 RID: 220897 RVA: 0x00F0FD6C File Offset: 0x00F0DF6C
 		private void OnRefreshTime(float _)
 		{
 			long limitTimeEndTime = this.Data.GetLimitTimeEndTime();
@@ -82,14 +82,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(1).SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0604121D RID: 266781 RVA: 0x00FC8E12 File Offset: 0x00FC7012
+		// Token: 0x06035EE2 RID: 220898 RVA: 0x00F0FDC6 File Offset: 0x00F0DFC6
 		private void InitTimer()
 		{
 			this.ClearTimer();
 			this.RefreshTimeHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnRefreshTime), 1000f, 1f, null, null, false);
 		}
 
-		// Token: 0x0604121E RID: 266782 RVA: 0x00FC8E43 File Offset: 0x00FC7043
+		// Token: 0x06035EE3 RID: 220899 RVA: 0x00F0FDF7 File Offset: 0x00F0DFF7
 		private void ClearTimer()
 		{
 			if (this.RefreshTimeHandle != null)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604121F RID: 266783 RVA: 0x00FC8E65 File Offset: 0x00FC7065
+		// Token: 0x06035EE4 RID: 220900 RVA: 0x00F0FE19 File Offset: 0x00F0E019
 		private void OnClickedButton()
 		{
 			if (this.LimitTimeRewardOn)
@@ -108,33 +108,33 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x04021EE1 RID: 138977
+		// Token: 0x0401C812 RID: 116754
 		private const int CHECKGAP = 1000;
 
-		// Token: 0x04021EE2 RID: 138978
+		// Token: 0x0401C813 RID: 116755
 		private bool LimitTimeRewardOn;
 
-		// Token: 0x04021EE3 RID: 138979
+		// Token: 0x0401C814 RID: 116756
 		private readonly string RemainTimeText = "{0}";
 
-		// Token: 0x04021EE4 RID: 138980
+		// Token: 0x0401C815 RID: 116757
 		[Nullable(2)]
 		private TimerHandle RefreshTimeHandle;
 
-		// Token: 0x04021EE5 RID: 138981
+		// Token: 0x0401C816 RID: 116758
 		protected ActivityFishingData Data;
 
-		// Token: 0x0200C779 RID: 51065
+		// Token: 0x0200B15E RID: 45406
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403C447 RID: 246855
+			// Token: 0x04036D98 RID: 224664
 			public const int Button = 0;
 
-			// Token: 0x0403C448 RID: 246856
+			// Token: 0x04036D99 RID: 224665
 			public const int TxtTime = 1;
 
-			// Token: 0x0403C449 RID: 246857
+			// Token: 0x04036D9A RID: 224666
 			public const int RedDot = 2;
 		}
 	}

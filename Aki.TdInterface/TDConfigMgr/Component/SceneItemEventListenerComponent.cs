@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200088F RID: 2191
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000932 RID: 2354
 	public class SceneItemEventListenerComponent : IComponentBase
 	{
-		// Token: 0x060030DB RID: 12507 RVA: 0x0007DA84 File Offset: 0x0007BC84
+		// Token: 0x06003417 RID: 13335 RVA: 0x00084F6C File Offset: 0x0008316C
 		private SceneItemEventListenerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060030DC RID: 12508 RVA: 0x0007DABC File Offset: 0x0007BCBC
+		// Token: 0x06003418 RID: 13336 RVA: 0x00084FA4 File Offset: 0x000831A4
 		public static SceneItemEventListenerComponent Create([Nullable(2)] SceneItemEventListenerComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030DD RID: 12509 RVA: 0x0007DACF File Offset: 0x0007BCCF
+		// Token: 0x06003419 RID: 13337 RVA: 0x00084FB7 File Offset: 0x000831B7
 		public static SceneItemEventListenerComponent CreateFromSetValue([Nullable(2)] SceneItemEventListenerComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030DE RID: 12510 RVA: 0x0007DAE2 File Offset: 0x0007BCE2
+		// Token: 0x0600341A RID: 13338 RVA: 0x00084FCA File Offset: 0x000831CA
 		public new SceneItemEventListenerComponent_SetValue ToSetValue()
 		{
 			return new SceneItemEventListenerComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CFA RID: 3322
-		// (get) Token: 0x060030DF RID: 12511 RVA: 0x0007DB10 File Offset: 0x0007BD10
-		// (set) Token: 0x060030E0 RID: 12512 RVA: 0x0007DB4A File Offset: 0x0007BD4A
+		// Token: 0x17000DC3 RID: 3523
+		// (get) Token: 0x0600341B RID: 13339 RVA: 0x00084FF8 File Offset: 0x000831F8
+		// (set) Token: 0x0600341C RID: 13340 RVA: 0x00085032 File Offset: 0x00083232
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CFB RID: 3323
-		// (get) Token: 0x060030E1 RID: 12513 RVA: 0x0007DB58 File Offset: 0x0007BD58
-		// (set) Token: 0x060030E2 RID: 12514 RVA: 0x0007DB82 File Offset: 0x0007BD82
+		// Token: 0x17000DC4 RID: 3524
+		// (get) Token: 0x0600341D RID: 13341 RVA: 0x00085040 File Offset: 0x00083240
+		// (set) Token: 0x0600341E RID: 13342 RVA: 0x0008506A File Offset: 0x0008326A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CFC RID: 3324
-		// (get) Token: 0x060030E3 RID: 12515 RVA: 0x0007DB90 File Offset: 0x0007BD90
-		// (set) Token: 0x060030E4 RID: 12516 RVA: 0x0007DC23 File Offset: 0x0007BE23
+		// Token: 0x17000DC5 RID: 3525
+		// (get) Token: 0x0600341F RID: 13343 RVA: 0x00085078 File Offset: 0x00083278
+		// (set) Token: 0x06003420 RID: 13344 RVA: 0x0008510B File Offset: 0x0008330B
 		public virtual List<ISceneItemEventConfig> Events
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002022 RID: 8226
+		// Token: 0x04002234 RID: 8756
 		[Nullable(2)]
 		protected new SceneItemEventListenerComponent FbInstance;
 
-		// Token: 0x04002023 RID: 8227
+		// Token: 0x04002235 RID: 8757
 		[Nullable(2)]
 		protected new SceneItemEventListenerComponent_SetValue PocoInterface;
 
-		// Token: 0x04002024 RID: 8228
+		// Token: 0x04002236 RID: 8758
 		private List<ISceneItemEventConfig> _EventsCache;
 
-		// Token: 0x04002025 RID: 8229
+		// Token: 0x04002237 RID: 8759
 		private bool _EventsInited;
 	}
 }

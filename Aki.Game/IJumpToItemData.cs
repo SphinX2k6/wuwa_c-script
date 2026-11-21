@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200116F RID: 4463
+// Token: 0x02000623 RID: 1571
 public interface IJumpToItemData
 {
-	// Token: 0x17000A2F RID: 2607
-	// (get) Token: 0x060075CE RID: 30158
-	// (set) Token: 0x060075CF RID: 30159
+	// Token: 0x17000A4F RID: 2639
+	// (get) Token: 0x06004965 RID: 18789
+	// (set) Token: 0x06004966 RID: 18790
 	int LevelId { get; set; }
 
-	// Token: 0x17000A30 RID: 2608
-	// (get) Token: 0x060075D0 RID: 30160
-	// (set) Token: 0x060075D1 RID: 30161
+	// Token: 0x17000A50 RID: 2640
+	// (get) Token: 0x06004967 RID: 18791
+	// (set) Token: 0x06004968 RID: 18792
 	bool Done { get; set; }
 
-	// Token: 0x17000A31 RID: 2609
-	// (get) Token: 0x060075D2 RID: 30162
-	// (set) Token: 0x060075D3 RID: 30163
+	// Token: 0x17000A51 RID: 2641
+	// (get) Token: 0x06004969 RID: 18793
+	// (set) Token: 0x0600496A RID: 18794
 	bool IsUnlock { get; set; }
 
-	// Token: 0x17000A32 RID: 2610
-	// (get) Token: 0x060075D4 RID: 30164
-	// (set) Token: 0x060075D5 RID: 30165
+	// Token: 0x17000A52 RID: 2642
+	// (get) Token: 0x0600496B RID: 18795
+	// (set) Token: 0x0600496C RID: 18796
 	int StarNumber { get; set; }
 }

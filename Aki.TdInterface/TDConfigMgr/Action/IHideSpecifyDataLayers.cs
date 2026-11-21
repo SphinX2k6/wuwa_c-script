@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B03 RID: 6915
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CB2 RID: 7346
 	public class IHideSpecifyDataLayers : IHideGroupType
 	{
-		// Token: 0x06009412 RID: 37906 RVA: 0x00157254 File Offset: 0x00155454
+		// Token: 0x06009BFC RID: 39932 RVA: 0x00167F30 File Offset: 0x00166130
 		private IHideSpecifyDataLayers_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009413 RID: 37907 RVA: 0x0015728C File Offset: 0x0015548C
+		// Token: 0x06009BFD RID: 39933 RVA: 0x00167F68 File Offset: 0x00166168
 		public static IHideSpecifyDataLayers Create([Nullable(2)] IHideSpecifyDataLayers instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009414 RID: 37908 RVA: 0x0015729F File Offset: 0x0015549F
+		// Token: 0x06009BFE RID: 39934 RVA: 0x00167F7B File Offset: 0x0016617B
 		public static IHideSpecifyDataLayers CreateFromSetValue([Nullable(2)] IHideSpecifyDataLayers_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009415 RID: 37909 RVA: 0x001572B2 File Offset: 0x001554B2
+		// Token: 0x06009BFF RID: 39935 RVA: 0x00167F8E File Offset: 0x0016618E
 		public new IHideSpecifyDataLayers_SetValue ToSetValue()
 		{
 			return new IHideSpecifyDataLayers_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EDA RID: 11994
-		// (get) Token: 0x06009416 RID: 37910 RVA: 0x001572D1 File Offset: 0x001554D1
-		// (set) Token: 0x06009417 RID: 37911 RVA: 0x001572FC File Offset: 0x001554FC
+		// Token: 0x17003100 RID: 12544
+		// (get) Token: 0x06009C00 RID: 39936 RVA: 0x00167FAD File Offset: 0x001661AD
+		// (set) Token: 0x06009C01 RID: 39937 RVA: 0x00167FD8 File Offset: 0x001661D8
 		public override EHideType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EDB RID: 11995
-		// (get) Token: 0x06009418 RID: 37912 RVA: 0x0015730A File Offset: 0x0015550A
-		// (set) Token: 0x06009419 RID: 37913 RVA: 0x00157331 File Offset: 0x00155531
+		// Token: 0x17003101 RID: 12545
+		// (get) Token: 0x06009C02 RID: 39938 RVA: 0x00167FE6 File Offset: 0x001661E6
+		// (set) Token: 0x06009C03 RID: 39939 RVA: 0x0016800D File Offset: 0x0016620D
 		public virtual List<int> DataLayers
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005ADB RID: 23259
+		// Token: 0x04005F79 RID: 24441
 		[Nullable(2)]
 		protected new IHideSpecifyDataLayers FbInstance;
 
-		// Token: 0x04005ADC RID: 23260
+		// Token: 0x04005F7A RID: 24442
 		[Nullable(2)]
 		protected new IHideSpecifyDataLayers_SetValue PocoInterface;
 	}

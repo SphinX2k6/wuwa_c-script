@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015DB RID: 5595
+	// Token: 0x0200164D RID: 5709
 	public enum GiantIdleNetType
 	{
-		// Token: 0x0400BDA0 RID: 48544
+		// Token: 0x0400C294 RID: 49812
 		[OriginalName("Common")]
 		Common,
-		// Token: 0x0400BDA1 RID: 48545
+		// Token: 0x0400C295 RID: 49813
 		[OriginalName("Watch")]
 		Watch,
-		// Token: 0x0400BDA2 RID: 48546
+		// Token: 0x0400C296 RID: 49814
 		[OriginalName("Akimbo")]
 		Akimbo,
-		// Token: 0x0400BDA3 RID: 48547
+		// Token: 0x0400C297 RID: 49815
 		[OriginalName("Rest")]
 		Rest
 	}

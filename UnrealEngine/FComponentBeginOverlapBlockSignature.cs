@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200094F RID: 2383
+	// Token: 0x020001AB RID: 427
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FComponentBeginOverlapBlockSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060086FB RID: 34555 RVA: 0x000C07DD File Offset: 0x000BE9DD
+		// Token: 0x06001FE2 RID: 8162 RVA: 0x0002E19D File Offset: 0x0002C39D
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FComponentBeginOverlapBlockSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x060086FC RID: 34556 RVA: 0x000C07E9 File Offset: 0x000BE9E9
+		// Token: 0x06001FE3 RID: 8163 RVA: 0x0002E1A9 File Offset: 0x0002C3A9
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FComponentBeginOverlapBlockSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FComponentBeginOverlapBlockSignature._FunctionPtr;
 		}
 
-		// Token: 0x17001FF3 RID: 8179
-		// (get) Token: 0x060086FD RID: 34557 RVA: 0x000C080C File Offset: 0x000BEA0C
+		// Token: 0x17000473 RID: 1139
+		// (get) Token: 0x06001FE4 RID: 8164 RVA: 0x0002E1CC File Offset: 0x0002C3CC
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060086FE RID: 34558 RVA: 0x000C0813 File Offset: 0x000BEA13
+		// Token: 0x06001FE5 RID: 8165 RVA: 0x0002E1D3 File Offset: 0x0002C3D3
 		[NullableContext(2)]
 		public FComponentBeginOverlapBlockSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060086FF RID: 34559 RVA: 0x000C081D File Offset: 0x000BEA1D
+		// Token: 0x06001FE6 RID: 8166 RVA: 0x0002E1DD File Offset: 0x0002C3DD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int, bool, FHitResult>) ?? ((Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int, bool, FHitResult>)Delegate.CreateDelegate(typeof(Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int, bool, FHitResult>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06008700 RID: 34560 RVA: 0x000C0850 File Offset: 0x000BEA50
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06001FE7 RID: 8167 RVA: 0x0002E210 File Offset: 0x0002C410
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -74,8 +73,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FComponentBeginOverlapBlockSignature.RegisterId);
 		}
 
-		// Token: 0x06008701 RID: 34561 RVA: 0x000C08A0 File Offset: 0x000BEAA0
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06001FE8 RID: 8168 RVA: 0x0002E260 File Offset: 0x0002C460
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -89,10 +87,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x06008702 RID: 34562 RVA: 0x000C08C0 File Offset: 0x000BEAC0
+		// Token: 0x06001FE9 RID: 8169 RVA: 0x0002E280 File Offset: 0x0002C480
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UPrimitiveComponent OverlappedComponent, AActor OtherActor, UPrimitiveComponent OtherComp, int OtherBodyIndex, bool bFromSweep, in FHitResult SweepResult)
 		{
 			FComponentBeginOverlapBlockSignature.__FComponentBeginOverlapBlockSignature_DelegateParams* ptr = stackalloc FComponentBeginOverlapBlockSignature.__FComponentBeginOverlapBlockSignature_DelegateParams[(UIntPtr)199] + 15L / (long)sizeof(FComponentBeginOverlapBlockSignature.__FComponentBeginOverlapBlockSignature_DelegateParams) & -16L;
@@ -109,10 +106,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x06008703 RID: 34563 RVA: 0x000C0980 File Offset: 0x000BEB80
+		// Token: 0x06001FEA RID: 8170 RVA: 0x0002E340 File Offset: 0x0002C540
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int, bool, FHitResult> action = target as Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int, bool, FHitResult>;
@@ -127,51 +123,51 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, ((FComponentBeginOverlapBlockSignature.__FComponentBeginOverlapBlockSignature_DelegateParams*)__Parameters)->OtherBodyIndex, ((FComponentBeginOverlapBlockSignature.__FComponentBeginOverlapBlockSignature_DelegateParams*)__Parameters)->bFromSweep, arg);
 		}
 
-		// Token: 0x04004040 RID: 16448
+		// Token: 0x04000A9A RID: 2714
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04004041 RID: 16449
+		// Token: 0x04000A9B RID: 2715
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ComponentBeginOverlapBlockSignature__DelegateSignature";
 
-		// Token: 0x04004042 RID: 16450
+		// Token: 0x04000A9C RID: 2716
 		private static int RegisterId;
 
-		// Token: 0x02002CC1 RID: 11457
+		// Token: 0x0200097D RID: 2429
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 184)]
-		protected ref struct __FComponentBeginOverlapBlockSignature_DelegateParams
+		private ref struct __FComponentBeginOverlapBlockSignature_DelegateParams
 		{
-			// Token: 0x04016652 RID: 91730
+			// Token: 0x040058C7 RID: 22727
 			[FieldOffset(0)]
 			public IntPtr OverlappedComponent;
 
-			// Token: 0x04016653 RID: 91731
+			// Token: 0x040058C8 RID: 22728
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 
-			// Token: 0x04016654 RID: 91732
+			// Token: 0x040058C9 RID: 22729
 			[FieldOffset(16)]
 			public IntPtr OtherComp;
 
-			// Token: 0x04016655 RID: 91733
+			// Token: 0x040058CA RID: 22730
 			[FieldOffset(24)]
 			public int OtherBodyIndex;
 
-			// Token: 0x04016656 RID: 91734
+			// Token: 0x040058CB RID: 22731
 			[FieldOffset(28)]
 			public bool bFromSweep;
 
-			// Token: 0x04016657 RID: 91735
+			// Token: 0x040058CC RID: 22732
 			[FieldOffset(32)]
 			public byte SweepResult;
 		}
 
-		// Token: 0x02002CC2 RID: 11458
+		// Token: 0x0200097E RID: 2430
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016658 RID: 91736
+			// Token: 0x040058CD RID: 22733
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

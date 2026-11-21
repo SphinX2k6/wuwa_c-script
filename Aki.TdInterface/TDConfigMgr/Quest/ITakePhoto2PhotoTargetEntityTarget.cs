@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200116E RID: 4462
+	// Token: 0x020012A6 RID: 4774
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITakePhoto2PhotoTargetEntityTarget : ITakePhoto2Target
 	{
-		// Token: 0x0600655A RID: 25946 RVA: 0x000F3448 File Offset: 0x000F1648
-		[NullableContext(1)]
+		// Token: 0x06006B89 RID: 27529 RVA: 0x00100B58 File Offset: 0x000FED58
+		[NullableContext(0)]
 		private ITakePhoto2PhotoTargetEntityTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600655B RID: 25947 RVA: 0x000F3480 File Offset: 0x000F1680
-		[NullableContext(1)]
+		// Token: 0x06006B8A RID: 27530 RVA: 0x00100B90 File Offset: 0x000FED90
+		[NullableContext(0)]
 		public static ITakePhoto2PhotoTargetEntityTarget Create([Nullable(2)] ITakePhoto2PhotoTargetEntityTarget instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600655C RID: 25948 RVA: 0x000F3493 File Offset: 0x000F1693
-		[NullableContext(1)]
+		// Token: 0x06006B8B RID: 27531 RVA: 0x00100BA3 File Offset: 0x000FEDA3
+		[NullableContext(0)]
 		public static ITakePhoto2PhotoTargetEntityTarget CreateFromSetValue([Nullable(2)] ITakePhoto2PhotoTargetEntityTarget_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600655D RID: 25949 RVA: 0x000F34A8 File Offset: 0x000F16A8
-		[NullableContext(1)]
+		// Token: 0x06006B8C RID: 27532 RVA: 0x00100BB8 File Offset: 0x000FEDB8
+		[NullableContext(0)]
 		public new ITakePhoto2PhotoTargetEntityTarget_SetValue ToSetValue()
 		{
 			return new ITakePhoto2PhotoTargetEntityTarget_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700210D RID: 8461
-		// (get) Token: 0x0600655E RID: 25950 RVA: 0x000F34F6 File Offset: 0x000F16F6
-		// (set) Token: 0x0600655F RID: 25951 RVA: 0x000F3521 File Offset: 0x000F1721
+		// Token: 0x170022CB RID: 8907
+		// (get) Token: 0x06006B8D RID: 27533 RVA: 0x00100C06 File Offset: 0x000FEE06
+		// (set) Token: 0x06006B8E RID: 27534 RVA: 0x00100C31 File Offset: 0x000FEE31
 		public override ETakePhoto2TargetType Type
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700210E RID: 8462
-		// (get) Token: 0x06006560 RID: 25952 RVA: 0x000F3530 File Offset: 0x000F1730
-		// (set) Token: 0x06006561 RID: 25953 RVA: 0x000F356A File Offset: 0x000F176A
+		// Token: 0x170022CC RID: 8908
+		// (get) Token: 0x06006B8F RID: 27535 RVA: 0x00100C40 File Offset: 0x000FEE40
+		// (set) Token: 0x06006B90 RID: 27536 RVA: 0x00100C7A File Offset: 0x000FEE7A
 		public override bool? IsOptionalTarget
 		{
 			get
@@ -114,9 +114,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700210F RID: 8463
-		// (get) Token: 0x06006562 RID: 25954 RVA: 0x000F3578 File Offset: 0x000F1778
-		// (set) Token: 0x06006563 RID: 25955 RVA: 0x000F35D9 File Offset: 0x000F17D9
+		// Token: 0x170022CD RID: 8909
+		// (get) Token: 0x06006B91 RID: 27537 RVA: 0x00100C88 File Offset: 0x000FEE88
+		// (set) Token: 0x06006B92 RID: 27538 RVA: 0x00100CE9 File Offset: 0x000FEEE9
 		public override ITakePhoto2TargetCameraDistanceCondition TargetCameraDistanceCondition
 		{
 			get
@@ -144,9 +144,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002110 RID: 8464
-		// (get) Token: 0x06006564 RID: 25956 RVA: 0x000F35EE File Offset: 0x000F17EE
-		// (set) Token: 0x06006565 RID: 25957 RVA: 0x000F3619 File Offset: 0x000F1819
+		// Token: 0x170022CE RID: 8910
+		// (get) Token: 0x06006B93 RID: 27539 RVA: 0x00100CFE File Offset: 0x000FEEFE
+		// (set) Token: 0x06006B94 RID: 27540 RVA: 0x00100D29 File Offset: 0x000FEF29
 		public virtual int EntityId
 		{
 			get
@@ -167,9 +167,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002111 RID: 8465
-		// (get) Token: 0x06006566 RID: 25958 RVA: 0x000F3628 File Offset: 0x000F1828
-		// (set) Token: 0x06006567 RID: 25959 RVA: 0x000F3689 File Offset: 0x000F1889
+		// Token: 0x170022CF RID: 8911
+		// (get) Token: 0x06006B95 RID: 27541 RVA: 0x00100D38 File Offset: 0x000FEF38
+		// (set) Token: 0x06006B96 RID: 27542 RVA: 0x00100D99 File Offset: 0x000FEF99
 		public virtual ITakePhoto2TargetPosByRangeCondition TargetPosCondition
 		{
 			get
@@ -197,24 +197,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CD6 RID: 15574
+		// Token: 0x0400403B RID: 16443
 		protected new ITakePhoto2PhotoTargetEntityTarget FbInstance;
 
-		// Token: 0x04003CD7 RID: 15575
+		// Token: 0x0400403C RID: 16444
 		protected new ITakePhoto2PhotoTargetEntityTarget_SetValue PocoInterface;
 
-		// Token: 0x04003CD8 RID: 15576
-		[Nullable(1)]
+		// Token: 0x0400403D RID: 16445
+		[Nullable(0)]
 		private ITakePhoto2TargetCameraDistanceCondition _TargetCameraDistanceConditionCache;
 
-		// Token: 0x04003CD9 RID: 15577
+		// Token: 0x0400403E RID: 16446
 		private bool _TargetCameraDistanceConditionInited;
 
-		// Token: 0x04003CDA RID: 15578
-		[Nullable(1)]
+		// Token: 0x0400403F RID: 16447
+		[Nullable(0)]
 		private ITakePhoto2TargetPosByRangeCondition _TargetPosConditionCache;
 
-		// Token: 0x04003CDB RID: 15579
+		// Token: 0x04004040 RID: 16448
 		private bool _TargetPosConditionInited;
 	}
 }

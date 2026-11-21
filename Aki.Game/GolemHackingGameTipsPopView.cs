@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001004 RID: 4100
+// Token: 0x020004B8 RID: 1208
 public class GolemHackingGameTipsPopView : UiViewBase
 {
-	// Token: 0x06006926 RID: 26918 RVA: 0x0014EDA0 File Offset: 0x0014CFA0
+	// Token: 0x06003CBB RID: 15547 RVA: 0x001576C8 File Offset: 0x001558C8
 	[NullableContext(1)]
 	public GolemHackingGameTipsPopView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06006927 RID: 26919 RVA: 0x0014EDB4 File Offset: 0x0014CFB4
+	// Token: 0x06003CBC RID: 15548 RVA: 0x001576DC File Offset: 0x001558DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -41,7 +41,7 @@ public class GolemHackingGameTipsPopView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06006928 RID: 26920 RVA: 0x0014EE9C File Offset: 0x0014D09C
+	// Token: 0x06003CBD RID: 15549 RVA: 0x001577C4 File Offset: 0x001559C4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GolemHackingGameTipsPopView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class GolemHackingGameTipsPopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006929 RID: 26921 RVA: 0x0014EEE0 File Offset: 0x0014D0E0
+	// Token: 0x06003CBE RID: 15550 RVA: 0x00157808 File Offset: 0x00155A08
 	protected override void OnAfterShow()
 	{
 		int num = 2000 + this.GridList.Count * 250;
@@ -69,7 +69,7 @@ public class GolemHackingGameTipsPopView : UiViewBase
 		}, (float)num, 1f, null, null, true);
 	}
 
-	// Token: 0x0600692A RID: 26922 RVA: 0x0014EF53 File Offset: 0x0014D153
+	// Token: 0x06003CBF RID: 15551 RVA: 0x0015787B File Offset: 0x00155A7B
 	private void OnClickedClose()
 	{
 		if (this.TimerHandle != null)
@@ -83,27 +83,27 @@ public class GolemHackingGameTipsPopView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04003060 RID: 12384
+	// Token: 0x040030F9 RID: 12537
 	private const int INTERVAL_TIME = 250;
 
-	// Token: 0x04003061 RID: 12385
+	// Token: 0x040030FA RID: 12538
 	[Nullable(1)]
 	protected List<GolemHackingTipsPopGrid> GridList = new List<GolemHackingTipsPopGrid>();
 
-	// Token: 0x04003062 RID: 12386
+	// Token: 0x040030FB RID: 12539
 	[Nullable(2)]
 	protected TimerHandle TimerHandle;
 
-	// Token: 0x020075FD RID: 30205
+	// Token: 0x02006791 RID: 26513
 	private enum EDefine
 	{
-		// Token: 0x04026FB8 RID: 159672
+		// Token: 0x04022303 RID: 140035
 		BtnMask,
-		// Token: 0x04026FB9 RID: 159673
+		// Token: 0x04022304 RID: 140036
 		TxtTipsDesc,
-		// Token: 0x04026FBA RID: 159674
+		// Token: 0x04022305 RID: 140037
 		PanelCodeTips,
-		// Token: 0x04026FBB RID: 159675
+		// Token: 0x04022306 RID: 140038
 		PanelHelpTipsItem
 	}
 }

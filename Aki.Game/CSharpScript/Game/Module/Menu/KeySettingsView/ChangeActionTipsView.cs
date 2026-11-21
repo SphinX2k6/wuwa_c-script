@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x0200545A RID: 21594
+	// Token: 0x0200443D RID: 17469
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangeActionTipsView : UiViewBase
 	{
-		// Token: 0x060371F9 RID: 225785 RVA: 0x00D10ED0 File Offset: 0x00D0F0D0
+		// Token: 0x0602C142 RID: 180546 RVA: 0x00C602E8 File Offset: 0x00C5E4E8
 		[NullableContext(1)]
 		public ChangeActionTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060371FA RID: 225786 RVA: 0x00D10EDC File Offset: 0x00D0F0DC
+		// Token: 0x0602C143 RID: 180547 RVA: 0x00C602F4 File Offset: 0x00C5E4F4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x060371FB RID: 225787 RVA: 0x00D10F87 File Offset: 0x00D0F187
+		// Token: 0x0602C144 RID: 180548 RVA: 0x00C6039F File Offset: 0x00C5E59F
 		private void OnConfirmButtonClicked()
 		{
 			if (this.OnConfirmCallback != null)
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060371FC RID: 225788 RVA: 0x00D10FA9 File Offset: 0x00D0F1A9
+		// Token: 0x0602C145 RID: 180549 RVA: 0x00C603C1 File Offset: 0x00C5E5C1
 		private void OnCancelButtonClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060371FD RID: 225789 RVA: 0x00D10FB4 File Offset: 0x00D0F1B4
+		// Token: 0x0602C146 RID: 180550 RVA: 0x00C603CC File Offset: 0x00C5E5CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ChangeActionTipsView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060371FE RID: 225790 RVA: 0x00D10FF8 File Offset: 0x00D0F1F8
+		// Token: 0x0602C147 RID: 180551 RVA: 0x00C60410 File Offset: 0x00C5E610
 		protected override void OnStart()
 		{
 			IChangeActionInfo changeActionInfo = this.OpenParam as IChangeActionInfo;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			twoRowItem2.SetActive(true);
 		}
 
-		// Token: 0x060371FF RID: 225791 RVA: 0x00D11097 File Offset: 0x00D0F297
+		// Token: 0x0602C148 RID: 180552 RVA: 0x00C604AF File Offset: 0x00C5E6AF
 		protected override void OnBeforeDestroy()
 		{
 			this.OneRowItem = null;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.OnConfirmCallback = null;
 		}
 
-		// Token: 0x06037200 RID: 225792 RVA: 0x00D110AE File Offset: 0x00D0F2AE
+		// Token: 0x0602C149 RID: 180553 RVA: 0x00C604C6 File Offset: 0x00C5E6C6
 		[NullableContext(1)]
 		private void OnSelected(ChangeActionRowView changeActionRowView, bool bRevert)
 		{
@@ -115,35 +115,35 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.IsRevert = bRevert;
 		}
 
-		// Token: 0x0401D150 RID: 119120
+		// Token: 0x04017BE9 RID: 97257
 		private Action<bool> OnConfirmCallback;
 
-		// Token: 0x0401D151 RID: 119121
+		// Token: 0x04017BEA RID: 97258
 		private KeySettingRowData KeySettingRowData;
 
-		// Token: 0x0401D152 RID: 119122
+		// Token: 0x04017BEB RID: 97259
 		private ChangeActionRowView OneRowItem;
 
-		// Token: 0x0401D153 RID: 119123
+		// Token: 0x04017BEC RID: 97260
 		private ChangeActionRowView TwoRowItem;
 
-		// Token: 0x0401D154 RID: 119124
+		// Token: 0x04017BED RID: 97261
 		private bool IsRevert;
 
-		// Token: 0x0200B6D1 RID: 46801
+		// Token: 0x0200A109 RID: 41225
 		[NullableContext(0)]
 		public class EChildType
 		{
-			// Token: 0x0403762A RID: 226858
+			// Token: 0x0403207F RID: 204927
 			public const int ConfirmButton = 0;
 
-			// Token: 0x0403762B RID: 226859
+			// Token: 0x04032080 RID: 204928
 			public const int CancelButton = 1;
 
-			// Token: 0x0403762C RID: 226860
+			// Token: 0x04032081 RID: 204929
 			public const int OneRowItem = 2;
 
-			// Token: 0x0403762D RID: 226861
+			// Token: 0x04032082 RID: 204930
 			public const int TwoRowItem = 3;
 		}
 	}

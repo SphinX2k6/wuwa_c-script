@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C11 RID: 19473
+	// Token: 0x02003BC2 RID: 15298
 	public enum EGamepadChangeKeyReason
 	{
-		// Token: 0x0401AD20 RID: 109856
+		// Token: 0x0401567C RID: 87676
 		MenuView,
-		// Token: 0x0401AD21 RID: 109857
+		// Token: 0x0401567D RID: 87677
 		ProtoInputSetting,
-		// Token: 0x0401AD22 RID: 109858
+		// Token: 0x0401567E RID: 87678
 		SwitchBattleInputData
 	}
 }

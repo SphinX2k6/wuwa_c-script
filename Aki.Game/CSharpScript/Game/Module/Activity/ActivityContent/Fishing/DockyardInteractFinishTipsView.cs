@@ -4,23 +4,23 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065C3 RID: 26051
+	// Token: 0x02005541 RID: 21825
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardInteractFinishTipsView : UiViewBase
 	{
-		// Token: 0x0604158F RID: 267663 RVA: 0x00FD5D6E File Offset: 0x00FD3F6E
+		// Token: 0x06036254 RID: 221780 RVA: 0x00F1CDAE File Offset: 0x00F1AFAE
 		public DockyardInteractFinishTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06041590 RID: 267664 RVA: 0x00FD5D77 File Offset: 0x00FD3F77
+		// Token: 0x06036255 RID: 221781 RVA: 0x00F1CDB7 File Offset: 0x00F1AFB7
 		protected override void OnRegisterComponent()
 		{
 			this.Vm = (this.OpenParam as DockyardInteractFinishTipsViewModel);
 		}
 
-		// Token: 0x06041591 RID: 267665 RVA: 0x00FD5D8A File Offset: 0x00FD3F8A
+		// Token: 0x06036256 RID: 221782 RVA: 0x00F1CDCA File Offset: 0x00F1AFCA
 		protected override void OnAfterPlayStartSequence()
 		{
 			Action closeCallback = this.Vm.CloseCallback;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402200F RID: 139279
+		// Token: 0x0401C940 RID: 117056
 		private DockyardInteractFinishTipsViewModel Vm;
 	}
 }

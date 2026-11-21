@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B39 RID: 11065
+// Token: 0x020020B5 RID: 8373
 public class SurvivorsCardTipsView : UiViewBase
 {
-	// Token: 0x06016F5A RID: 94042 RVA: 0x005D3B6D File Offset: 0x005D1D6D
+	// Token: 0x0601498B RID: 84363 RVA: 0x006006DD File Offset: 0x005FE8DD
 	[NullableContext(1)]
 	public SurvivorsCardTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016F5B RID: 94043 RVA: 0x005D3B78 File Offset: 0x005D1D78
+	// Token: 0x0601498C RID: 84364 RVA: 0x006006E8 File Offset: 0x005FE8E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,13 +29,13 @@ public class SurvivorsCardTipsView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016F5C RID: 94044 RVA: 0x005D3BDF File Offset: 0x005D1DDF
+	// Token: 0x0601498D RID: 84365 RVA: 0x0060074F File Offset: 0x005FE94F
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016F5D RID: 94045 RVA: 0x005D3BE8 File Offset: 0x005D1DE8
+	// Token: 0x0601498E RID: 84366 RVA: 0x00600758 File Offset: 0x005FE958
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsCardTipsView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class SurvivorsCardTipsView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016F5E RID: 94046 RVA: 0x005D3C2C File Offset: 0x005D1E2C
+	// Token: 0x0601498F RID: 84367 RVA: 0x0060079C File Offset: 0x005FE99C
 	protected override void OnStart()
 	{
 		object openParam = this.OpenParam;
@@ -93,7 +93,7 @@ public class SurvivorsCardTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400AAFF RID: 43775
+	// Token: 0x0400AF05 RID: 44805
 	[Nullable(2)]
 	private SurvivorsRogueCardBase CardItem;
 }

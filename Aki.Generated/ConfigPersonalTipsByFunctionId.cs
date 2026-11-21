@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000650 RID: 1616
+	// Token: 0x02000668 RID: 1640
 	public class ConfigPersonalTipsByFunctionId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060025F0 RID: 9712 RVA: 0x001302E5 File Offset: 0x0012E4E5
+		// Token: 0x06002680 RID: 9856 RVA: 0x00136D61 File Offset: 0x00134F61
 		static ConfigPersonalTipsByFunctionId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPersonalTipsByFunctionId.CreateStaticDefaultValue), new Action(ConfigPersonalTipsByFunctionId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060025F1 RID: 9713 RVA: 0x00130304 File Offset: 0x0012E504
+		// Token: 0x06002681 RID: 9857 RVA: 0x00136D80 File Offset: 0x00134F80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPersonalTipsByFunctionId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060025F2 RID: 9714 RVA: 0x00130383 File Offset: 0x0012E583
+		// Token: 0x06002682 RID: 9858 RVA: 0x00136DFF File Offset: 0x00134FFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPersonalTipsByFunctionId.LogPair = null;
 			ConfigPersonalTipsByFunctionId.HandleId = 0;
 		}
 
-		// Token: 0x060025F3 RID: 9715 RVA: 0x00130391 File Offset: 0x0012E591
+		// Token: 0x06002683 RID: 9859 RVA: 0x00136E0D File Offset: 0x0013500D
 		public static void Init()
 		{
 			ConfigPersonalTipsByFunctionId.HandleId = ConfigCommon.InitDataStatement(ConfigPersonalTipsByFunctionId.HandleId, "db_personal.db", "select BinData from `PersonalTips` where FunctionId=?");
 		}
 
-		// Token: 0x060025F4 RID: 9716 RVA: 0x001303AC File Offset: 0x0012E5AC
+		// Token: 0x06002684 RID: 9860 RVA: 0x00136E28 File Offset: 0x00135028
 		[NullableContext(2)]
 		public static IReadOnlyList<PersonalTips> GetConfigList(int p0FunctionId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002C16 RID: 11286
+		// Token: 0x04002CBE RID: 11454
 		private const string DB = "db_personal.db";
 
-		// Token: 0x04002C17 RID: 11287
+		// Token: 0x04002CBF RID: 11455
 		private const string FILE = "g.个性化弹窗.xlsx";
 
-		// Token: 0x04002C18 RID: 11288
+		// Token: 0x04002CC0 RID: 11456
 		private const string TABLE = "PersonalTips";
 
-		// Token: 0x04002C19 RID: 11289
+		// Token: 0x04002CC1 RID: 11457
 		private const string COMMAND = "select BinData from `PersonalTips` where FunctionId=?";
 
-		// Token: 0x04002C1A RID: 11290
+		// Token: 0x04002CC2 RID: 11458
 		private const string KEY_PREFIX = "PersonalTipsByFunctionId";
 
-		// Token: 0x04002C1B RID: 11291
+		// Token: 0x04002CC3 RID: 11459
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002C1C RID: 11292
+		// Token: 0x04002CC4 RID: 11460
 		private static int HandleId;
 	}
 }

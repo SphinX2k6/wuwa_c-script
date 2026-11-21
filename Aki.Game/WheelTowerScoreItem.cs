@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001607 RID: 5639
+// Token: 0x02000ABF RID: 2751
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerScoreItem
 {
-	// Token: 0x06009EE0 RID: 40672 RVA: 0x0022BBCC File Offset: 0x00229DCC
+	// Token: 0x060072BE RID: 29374 RVA: 0x002359CC File Offset: 0x00233BCC
 	public WheelTowerScoreItem(UiPanelBase contextObject, UUIItem parentItem)
 	{
 		this.ContextObject = contextObject;
@@ -25,7 +25,7 @@ public class WheelTowerScoreItem
 		auibaseActor.OnPreDestroyed.Add(new Action<AActor>(this.OnDestroy));
 	}
 
-	// Token: 0x06009EE1 RID: 40673 RVA: 0x0022BC3C File Offset: 0x00229E3C
+	// Token: 0x060072BF RID: 29375 RVA: 0x00235A3C File Offset: 0x00233C3C
 	public void Refresh(EScoreLevel scoreLevel)
 	{
 		if (this.IsLock)
@@ -66,7 +66,7 @@ public class WheelTowerScoreItem
 		this.LoadScoreItemAsync(scoreLevel).Forget();
 	}
 
-	// Token: 0x06009EE2 RID: 40674 RVA: 0x0022BD20 File Offset: 0x00229F20
+	// Token: 0x060072C0 RID: 29376 RVA: 0x00235B20 File Offset: 0x00233D20
 	private UniTask LoadScoreItemAsync(EScoreLevel scoreLevel)
 	{
 		WheelTowerScoreItem.<LoadScoreItemAsync>d__9 <LoadScoreItemAsync>d__;
@@ -78,7 +78,7 @@ public class WheelTowerScoreItem
 		return <LoadScoreItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009EE3 RID: 40675 RVA: 0x0022BD6B File Offset: 0x00229F6B
+	// Token: 0x060072C1 RID: 29377 RVA: 0x00235B6B File Offset: 0x00233D6B
 	private void Unlock()
 	{
 		this.IsLock = false;
@@ -88,7 +88,7 @@ public class WheelTowerScoreItem
 		}
 	}
 
-	// Token: 0x06009EE4 RID: 40676 RVA: 0x0022BD94 File Offset: 0x00229F94
+	// Token: 0x060072C2 RID: 29378 RVA: 0x00235B94 File Offset: 0x00233D94
 	[NullableContext(2)]
 	private void OnDestroy(AActor _)
 	{
@@ -99,24 +99,24 @@ public class WheelTowerScoreItem
 		this.SeqPlayerMap.Clear();
 	}
 
-	// Token: 0x04004723 RID: 18211
+	// Token: 0x040047C9 RID: 18377
 	private readonly Dictionary<EScoreLevel, UUIItem> CachedScoreItemMap = new Dictionary<EScoreLevel, UUIItem>();
 
-	// Token: 0x04004724 RID: 18212
+	// Token: 0x040047CA RID: 18378
 	private readonly Dictionary<EScoreLevel, LevelSequencePlayer> SeqPlayerMap = new Dictionary<EScoreLevel, LevelSequencePlayer>();
 
-	// Token: 0x04004725 RID: 18213
+	// Token: 0x040047CB RID: 18379
 	private readonly Queue<EScoreLevel> RefreshQueue = new Queue<EScoreLevel>(4);
 
-	// Token: 0x04004726 RID: 18214
+	// Token: 0x040047CC RID: 18380
 	private readonly UiPanelBase ContextObject;
 
-	// Token: 0x04004727 RID: 18215
+	// Token: 0x040047CD RID: 18381
 	private readonly UUIItem ParentItem;
 
-	// Token: 0x04004728 RID: 18216
+	// Token: 0x040047CE RID: 18382
 	private EScoreLevel? CurrentShowLevel;
 
-	// Token: 0x04004729 RID: 18217
+	// Token: 0x040047CF RID: 18383
 	private bool IsLock;
 }

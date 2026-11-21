@@ -4,34 +4,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelEntityAbility
 {
-	// Token: 0x02006FB5 RID: 28597
+	// Token: 0x02006136 RID: 24886
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelAbilityConfig : ILevelAbilityConfig
 	{
-		// Token: 0x17009B77 RID: 39799
-		// (get) Token: 0x060457FB RID: 284667 RVA: 0x0113DE98 File Offset: 0x0113C098
-		// (set) Token: 0x060457FC RID: 284668 RVA: 0x0113DEA0 File Offset: 0x0113C0A0
+		// Token: 0x170070B7 RID: 28855
+		// (get) Token: 0x0603B9AB RID: 244139 RVA: 0x010E7CC4 File Offset: 0x010E5EC4
+		// (set) Token: 0x0603B9AC RID: 244140 RVA: 0x010E7CCC File Offset: 0x010E5ECC
 		public EAbilityTickPhase? TickPhase { get; set; }
 
-		// Token: 0x17009B78 RID: 39800
-		// (get) Token: 0x060457FD RID: 284669 RVA: 0x0113DEA9 File Offset: 0x0113C0A9
-		// (set) Token: 0x060457FE RID: 284670 RVA: 0x0113DEB1 File Offset: 0x0113C0B1
+		// Token: 0x170070B8 RID: 28856
+		// (get) Token: 0x0603B9AD RID: 244141 RVA: 0x010E7CD5 File Offset: 0x010E5ED5
+		// (set) Token: 0x0603B9AE RID: 244142 RVA: 0x010E7CDD File Offset: 0x010E5EDD
 		public int? TickOrder { get; set; }
 
-		// Token: 0x17009B79 RID: 39801
-		// (get) Token: 0x060457FF RID: 284671 RVA: 0x0113DEBA File Offset: 0x0113C0BA
-		// (set) Token: 0x06045800 RID: 284672 RVA: 0x0113DEC2 File Offset: 0x0113C0C2
+		// Token: 0x170070B9 RID: 28857
+		// (get) Token: 0x0603B9AF RID: 244143 RVA: 0x010E7CE6 File Offset: 0x010E5EE6
+		// (set) Token: 0x0603B9B0 RID: 244144 RVA: 0x010E7CEE File Offset: 0x010E5EEE
 		public bool? NeedTickActivate { get; set; }
 
-		// Token: 0x17009B7A RID: 39802
-		// (get) Token: 0x06045801 RID: 284673 RVA: 0x0113DECB File Offset: 0x0113C0CB
-		// (set) Token: 0x06045802 RID: 284674 RVA: 0x0113DED3 File Offset: 0x0113C0D3
+		// Token: 0x170070BA RID: 28858
+		// (get) Token: 0x0603B9B1 RID: 244145 RVA: 0x010E7CF7 File Offset: 0x010E5EF7
+		// (set) Token: 0x0603B9B2 RID: 244146 RVA: 0x010E7CFF File Offset: 0x010E5EFF
 		public List<EEventName> Events { get; set; }
 
-		// Token: 0x17009B7B RID: 39803
-		// (get) Token: 0x06045803 RID: 284675 RVA: 0x0113DEDC File Offset: 0x0113C0DC
-		// (set) Token: 0x06045804 RID: 284676 RVA: 0x0113DEE4 File Offset: 0x0113C0E4
+		// Token: 0x170070BB RID: 28859
+		// (get) Token: 0x0603B9B3 RID: 244147 RVA: 0x010E7D08 File Offset: 0x010E5F08
+		// (set) Token: 0x0603B9B4 RID: 244148 RVA: 0x010E7D10 File Offset: 0x010E5F10
 		public List<int> BlockedTags { get; set; }
 	}
 }

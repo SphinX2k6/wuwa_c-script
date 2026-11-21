@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045BE RID: 17854
+	// Token: 0x02004A26 RID: 18982
 	public class ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT
 	{
-		// Token: 0x17007EEE RID: 32494
-		// (get) Token: 0x0601B01B RID: 110619 RVA: 0x003D9AEA File Offset: 0x003D7CEA
-		// (set) Token: 0x0601B01C RID: 110620 RVA: 0x003D9AF2 File Offset: 0x003D7CF2
+		// Token: 0x1700852F RID: 34095
+		// (get) Token: 0x0601C7F0 RID: 116720 RVA: 0x00405D86 File Offset: 0x00403F86
+		// (set) Token: 0x0601C7F1 RID: 116721 RVA: 0x00405D8E File Offset: 0x00403F8E
 		public ETrapDefenseSpawnMonsterCondition Type { get; set; }
 
-		// Token: 0x0601B01D RID: 110621 RVA: 0x003D9AFB File Offset: 0x003D7CFB
+		// Token: 0x0601C7F2 RID: 116722 RVA: 0x00405D97 File Offset: 0x00403F97
 		public ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT()
 		{
 			this.Type = ETrapDefenseSpawnMonsterCondition.Completed;

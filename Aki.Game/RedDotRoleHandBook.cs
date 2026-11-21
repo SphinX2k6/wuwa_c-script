@@ -5,24 +5,24 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x0200341A RID: 13338
+// Token: 0x0200298C RID: 10636
 public class RedDotRoleHandBook : RedDotBase
 {
-	// Token: 0x0601CD5F RID: 118111 RVA: 0x0080BC71 File Offset: 0x00809E71
+	// Token: 0x0601AA57 RID: 109143 RVA: 0x00832235 File Offset: 0x00830435
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RedDotRefreshItemData, new Action(base.EventCheck));
 		EventSystem.Instance.Add(EEventName.RedDotStart, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CD60 RID: 118112 RVA: 0x0080BCAB File Offset: 0x00809EAB
+	// Token: 0x0601AA58 RID: 109144 RVA: 0x0083226F File Offset: 0x0083046F
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RedDotRefreshItemData, new Action(base.EventCheck));
 		EventSystem.Instance.Remove(EEventName.RedDotStart, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CD61 RID: 118113 RVA: 0x0080BCE8 File Offset: 0x00809EE8
+	// Token: 0x0601AA59 RID: 109145 RVA: 0x008322AC File Offset: 0x008304AC
 	protected override bool OnCheck(int uId = 0)
 	{
 		IReadOnlyList<RoleInfo> roleListByType = RoleConfig.Instance.GetRoleListByType(ERoleType.Common);

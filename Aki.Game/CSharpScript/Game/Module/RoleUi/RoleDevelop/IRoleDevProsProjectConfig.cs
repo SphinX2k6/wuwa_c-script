@@ -4,83 +4,83 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D00 RID: 19712
+	// Token: 0x02003CB2 RID: 15538
 	[NullableContext(1)]
 	public interface IRoleDevProsProjectConfig
 	{
-		// Token: 0x17007DB1 RID: 32177
-		// (get) Token: 0x06032F5E RID: 208734
-		// (set) Token: 0x06032F5F RID: 208735
+		// Token: 0x1700515B RID: 20827
+		// (get) Token: 0x06027D39 RID: 163129
+		// (set) Token: 0x06027D3A RID: 163130
 		int Id { get; set; }
 
-		// Token: 0x17007DB2 RID: 32178
-		// (get) Token: 0x06032F60 RID: 208736
-		// (set) Token: 0x06032F61 RID: 208737
+		// Token: 0x1700515C RID: 20828
+		// (get) Token: 0x06027D3B RID: 163131
+		// (set) Token: 0x06027D3C RID: 163132
 		int ElementId { get; set; }
 
-		// Token: 0x17007DB3 RID: 32179
-		// (get) Token: 0x06032F62 RID: 208738
-		// (set) Token: 0x06032F63 RID: 208739
+		// Token: 0x1700515D RID: 20829
+		// (get) Token: 0x06027D3D RID: 163133
+		// (set) Token: 0x06027D3E RID: 163134
 		string RoleName { get; set; }
 
-		// Token: 0x17007DB4 RID: 32180
-		// (get) Token: 0x06032F64 RID: 208740
-		// (set) Token: 0x06032F65 RID: 208741
+		// Token: 0x1700515E RID: 20830
+		// (get) Token: 0x06027D3F RID: 163135
+		// (set) Token: 0x06027D40 RID: 163136
 		int RoleExperience { get; set; }
 
-		// Token: 0x17007DB5 RID: 32181
-		// (get) Token: 0x06032F66 RID: 208742
-		// (set) Token: 0x06032F67 RID: 208743
+		// Token: 0x1700515F RID: 20831
+		// (get) Token: 0x06027D41 RID: 163137
+		// (set) Token: 0x06027D42 RID: 163138
 		int RoleGoalLevel { get; set; }
 
-		// Token: 0x17007DB6 RID: 32182
-		// (get) Token: 0x06032F68 RID: 208744
-		// (set) Token: 0x06032F69 RID: 208745
+		// Token: 0x17005160 RID: 20832
+		// (get) Token: 0x06027D43 RID: 163139
+		// (set) Token: 0x06027D44 RID: 163140
 		int WeaponGoalLevel { get; set; }
 
-		// Token: 0x17007DB7 RID: 32183
-		// (get) Token: 0x06032F6A RID: 208746
-		// (set) Token: 0x06032F6B RID: 208747
+		// Token: 0x17005161 RID: 20833
+		// (get) Token: 0x06027D45 RID: 163141
+		// (set) Token: 0x06027D46 RID: 163142
 		int WeaponExperience { get; set; }
 
-		// Token: 0x17007DB8 RID: 32184
-		// (get) Token: 0x06032F6C RID: 208748
-		// (set) Token: 0x06032F6D RID: 208749
+		// Token: 0x17005162 RID: 20834
+		// (get) Token: 0x06027D47 RID: 163143
+		// (set) Token: 0x06027D48 RID: 163144
 		List<int> RoleItemGroup { get; set; }
 
-		// Token: 0x17007DB9 RID: 32185
-		// (get) Token: 0x06032F6E RID: 208750
-		// (set) Token: 0x06032F6F RID: 208751
+		// Token: 0x17005163 RID: 20835
+		// (get) Token: 0x06027D49 RID: 163145
+		// (set) Token: 0x06027D4A RID: 163146
 		List<int> WeaponBreachItemGroup { get; set; }
 
-		// Token: 0x17007DBA RID: 32186
-		// (get) Token: 0x06032F70 RID: 208752
-		// (set) Token: 0x06032F71 RID: 208753
+		// Token: 0x17005164 RID: 20836
+		// (get) Token: 0x06027D4B RID: 163147
+		// (set) Token: 0x06027D4C RID: 163148
 		int WeaponType { get; set; }
 
-		// Token: 0x17007DBB RID: 32187
-		// (get) Token: 0x06032F72 RID: 208754
-		// (set) Token: 0x06032F73 RID: 208755
+		// Token: 0x17005165 RID: 20837
+		// (get) Token: 0x06027D4D RID: 163149
+		// (set) Token: 0x06027D4E RID: 163150
 		List<int> SkillItemGroup { get; set; }
 
-		// Token: 0x17007DBC RID: 32188
-		// (get) Token: 0x06032F74 RID: 208756
-		// (set) Token: 0x06032F75 RID: 208757
+		// Token: 0x17005166 RID: 20838
+		// (get) Token: 0x06027D4F RID: 163151
+		// (set) Token: 0x06027D50 RID: 163152
 		List<int> PrefectSkillLevel { get; set; }
 
-		// Token: 0x17007DBD RID: 32189
-		// (get) Token: 0x06032F76 RID: 208758
-		// (set) Token: 0x06032F77 RID: 208759
+		// Token: 0x17005167 RID: 20839
+		// (get) Token: 0x06027D51 RID: 163153
+		// (set) Token: 0x06027D52 RID: 163154
 		string RoleHeadIcon { get; set; }
 
-		// Token: 0x17007DBE RID: 32190
-		// (get) Token: 0x06032F78 RID: 208760
-		// (set) Token: 0x06032F79 RID: 208761
+		// Token: 0x17005168 RID: 20840
+		// (get) Token: 0x06027D53 RID: 163155
+		// (set) Token: 0x06027D54 RID: 163156
 		string RoleHeadIconSmall { get; set; }
 
-		// Token: 0x17007DBF RID: 32191
-		// (get) Token: 0x06032F7A RID: 208762
-		// (set) Token: 0x06032F7B RID: 208763
+		// Token: 0x17005169 RID: 20841
+		// (get) Token: 0x06027D55 RID: 163157
+		// (set) Token: 0x06027D56 RID: 163158
 		string FormationRoleCard { get; set; }
 	}
 }

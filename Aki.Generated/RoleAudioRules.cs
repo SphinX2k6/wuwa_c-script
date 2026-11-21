@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001038 RID: 4152
+	// Token: 0x02001120 RID: 4384
 	public struct RoleAudioRules : IFlatbufferObject
 	{
-		// Token: 0x170031EE RID: 12782
-		// (get) Token: 0x0600C736 RID: 50998 RVA: 0x002F7744 File Offset: 0x002F5944
+		// Token: 0x17003269 RID: 12905
+		// (get) Token: 0x0600CD80 RID: 52608 RVA: 0x003135B8 File Offset: 0x003117B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C737 RID: 50999 RVA: 0x002F7751 File Offset: 0x002F5951
+		// Token: 0x0600CD81 RID: 52609 RVA: 0x003135C5 File Offset: 0x003117C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C738 RID: 51000 RVA: 0x002F7758 File Offset: 0x002F5958
+		// Token: 0x0600CD82 RID: 52610 RVA: 0x003135CC File Offset: 0x003117CC
 		public static RoleAudioRules GetRootAsRoleAudioRules(ByteBuffer _bb)
 		{
 			return RoleAudioRules.GetRootAsRoleAudioRules(_bb, default(RoleAudioRules));
 		}
 
-		// Token: 0x0600C739 RID: 51001 RVA: 0x002F7774 File Offset: 0x002F5974
+		// Token: 0x0600CD83 RID: 52611 RVA: 0x003135E8 File Offset: 0x003117E8
 		public static RoleAudioRules GetRootAsRoleAudioRules(ByteBuffer _bb, RoleAudioRules obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C73A RID: 51002 RVA: 0x002F7791 File Offset: 0x002F5991
+		// Token: 0x0600CD84 RID: 52612 RVA: 0x00313605 File Offset: 0x00311805
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C73B RID: 51003 RVA: 0x002F77A0 File Offset: 0x002F59A0
+		// Token: 0x0600CD85 RID: 52613 RVA: 0x00313614 File Offset: 0x00311814
 		public RoleAudioRules __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170031EF RID: 12783
-		// (get) Token: 0x0600C73C RID: 51004 RVA: 0x002F77B0 File Offset: 0x002F59B0
+		// Token: 0x1700326A RID: 12906
+		// (get) Token: 0x0600CD86 RID: 52614 RVA: 0x00313624 File Offset: 0x00311824
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031F0 RID: 12784
-		// (get) Token: 0x0600C73D RID: 51005 RVA: 0x002F77EC File Offset: 0x002F59EC
+		// Token: 0x1700326B RID: 12907
+		// (get) Token: 0x0600CD87 RID: 52615 RVA: 0x00313660 File Offset: 0x00311860
 		public int TeamColdTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031F1 RID: 12785
-		// (get) Token: 0x0600C73E RID: 51006 RVA: 0x002F7828 File Offset: 0x002F5A28
+		// Token: 0x1700326C RID: 12908
+		// (get) Token: 0x0600CD88 RID: 52616 RVA: 0x0031369C File Offset: 0x0031189C
 		public int CharacterColdTime
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031F2 RID: 12786
-		// (get) Token: 0x0600C73F RID: 51007 RVA: 0x002F7864 File Offset: 0x002F5A64
+		// Token: 0x1700326D RID: 12909
+		// (get) Token: 0x0600CD89 RID: 52617 RVA: 0x003136D8 File Offset: 0x003118D8
 		public int PostProbability
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031F3 RID: 12787
-		// (get) Token: 0x0600C740 RID: 51008 RVA: 0x002F78A4 File Offset: 0x002F5AA4
+		// Token: 0x1700326E RID: 12910
+		// (get) Token: 0x0600CD8A RID: 52618 RVA: 0x00313718 File Offset: 0x00311918
 		public int GroupID
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005135 RID: 20789
+		// Token: 0x0400571D RID: 22301
 		private Table __p;
 	}
 }

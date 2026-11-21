@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000BA RID: 186
+	// Token: 0x020000C2 RID: 194
 	[EnumExtensions]
 	public enum EHookFetchMoveMode
 	{
-		// Token: 0x04000429 RID: 1065
+		// Token: 0x0400044D RID: 1101
 		Uniform
 	}
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000691 RID: 1681
+	// Token: 0x0200067D RID: 1661
 	public sealed class GachaInfo : IMessage<GachaInfo>, IMessage, IEquatable<GachaInfo>, IDeepCloneable<GachaInfo>, IBufferMessage
 	{
-		// Token: 0x060099D5 RID: 39381 RVA: 0x00172820 File Offset: 0x00170A20
+		// Token: 0x0600987F RID: 39039 RVA: 0x0016FDEC File Offset: 0x0016DFEC
 		[NullableContext(1)]
 		public static GachaInfo Create()
 		{
 			return new GachaInfo();
 		}
 
-		// Token: 0x17001EB0 RID: 7856
-		// (get) Token: 0x060099D6 RID: 39382 RVA: 0x00172827 File Offset: 0x00170A27
+		// Token: 0x17001E66 RID: 7782
+		// (get) Token: 0x06009880 RID: 39040 RVA: 0x0016FDF3 File Offset: 0x0016DFF3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<GachaInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB1 RID: 7857
-		// (get) Token: 0x060099D7 RID: 39383 RVA: 0x0017282E File Offset: 0x00170A2E
+		// Token: 0x17001E67 RID: 7783
+		// (get) Token: 0x06009881 RID: 39041 RVA: 0x0016FDFA File Offset: 0x0016DFFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB2 RID: 7858
-		// (get) Token: 0x060099D8 RID: 39384 RVA: 0x00172831 File Offset: 0x00170A31
+		// Token: 0x17001E68 RID: 7784
+		// (get) Token: 0x06009882 RID: 39042 RVA: 0x0016FDFD File Offset: 0x0016DFFD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060099D9 RID: 39385 RVA: 0x00172838 File Offset: 0x00170A38
+		// Token: 0x06009883 RID: 39043 RVA: 0x0016FE04 File Offset: 0x0016E004
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaInfo()
 		{
 		}
 
-		// Token: 0x060099DA RID: 39386 RVA: 0x00172878 File Offset: 0x00170A78
+		// Token: 0x06009884 RID: 39044 RVA: 0x0016FE44 File Offset: 0x0016E044
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaInfo(GachaInfo other) : this()
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060099DB RID: 39387 RVA: 0x0017297C File Offset: 0x00170B7C
+		// Token: 0x06009885 RID: 39045 RVA: 0x0016FF48 File Offset: 0x0016E148
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GachaInfo Clone()
@@ -94,9 +94,9 @@ namespace Aki.Protocol
 			return new GachaInfo(this);
 		}
 
-		// Token: 0x17001EB3 RID: 7859
-		// (get) Token: 0x060099DC RID: 39388 RVA: 0x00172984 File Offset: 0x00170B84
-		// (set) Token: 0x060099DD RID: 39389 RVA: 0x0017298C File Offset: 0x00170B8C
+		// Token: 0x17001E69 RID: 7785
+		// (get) Token: 0x06009886 RID: 39046 RVA: 0x0016FF50 File Offset: 0x0016E150
+		// (set) Token: 0x06009887 RID: 39047 RVA: 0x0016FF58 File Offset: 0x0016E158
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -111,9 +111,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB4 RID: 7860
-		// (get) Token: 0x060099DE RID: 39390 RVA: 0x00172995 File Offset: 0x00170B95
-		// (set) Token: 0x060099DF RID: 39391 RVA: 0x0017299D File Offset: 0x00170B9D
+		// Token: 0x17001E6A RID: 7786
+		// (get) Token: 0x06009888 RID: 39048 RVA: 0x0016FF61 File Offset: 0x0016E161
+		// (set) Token: 0x06009889 RID: 39049 RVA: 0x0016FF69 File Offset: 0x0016E169
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TodayTimes
@@ -128,9 +128,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB5 RID: 7861
-		// (get) Token: 0x060099E0 RID: 39392 RVA: 0x001729A6 File Offset: 0x00170BA6
-		// (set) Token: 0x060099E1 RID: 39393 RVA: 0x001729AE File Offset: 0x00170BAE
+		// Token: 0x17001E6B RID: 7787
+		// (get) Token: 0x0600988A RID: 39050 RVA: 0x0016FF72 File Offset: 0x0016E172
+		// (set) Token: 0x0600988B RID: 39051 RVA: 0x0016FF7A File Offset: 0x0016E17A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalTimes
@@ -145,9 +145,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB6 RID: 7862
-		// (get) Token: 0x060099E2 RID: 39394 RVA: 0x001729B7 File Offset: 0x00170BB7
-		// (set) Token: 0x060099E3 RID: 39395 RVA: 0x001729BF File Offset: 0x00170BBF
+		// Token: 0x17001E6C RID: 7788
+		// (get) Token: 0x0600988C RID: 39052 RVA: 0x0016FF83 File Offset: 0x0016E183
+		// (set) Token: 0x0600988D RID: 39053 RVA: 0x0016FF8B File Offset: 0x0016E18B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -162,8 +162,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB7 RID: 7863
-		// (get) Token: 0x060099E4 RID: 39396 RVA: 0x001729C8 File Offset: 0x00170BC8
+		// Token: 0x17001E6D RID: 7789
+		// (get) Token: 0x0600988E RID: 39054 RVA: 0x0016FF94 File Offset: 0x0016E194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaConsume> GachaConsumes
@@ -174,9 +174,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB8 RID: 7864
-		// (get) Token: 0x060099E5 RID: 39397 RVA: 0x001729D0 File Offset: 0x00170BD0
-		// (set) Token: 0x060099E6 RID: 39398 RVA: 0x001729D8 File Offset: 0x00170BD8
+		// Token: 0x17001E6E RID: 7790
+		// (get) Token: 0x0600988F RID: 39055 RVA: 0x0016FF9C File Offset: 0x0016E19C
+		// (set) Token: 0x06009890 RID: 39056 RVA: 0x0016FFA4 File Offset: 0x0016E1A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UsePoolId
@@ -191,8 +191,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EB9 RID: 7865
-		// (get) Token: 0x060099E7 RID: 39399 RVA: 0x001729E1 File Offset: 0x00170BE1
+		// Token: 0x17001E6F RID: 7791
+		// (get) Token: 0x06009891 RID: 39057 RVA: 0x0016FFAD File Offset: 0x0016E1AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaPoolInfo> Pools
@@ -203,9 +203,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EBA RID: 7866
-		// (get) Token: 0x060099E8 RID: 39400 RVA: 0x001729E9 File Offset: 0x00170BE9
-		// (set) Token: 0x060099E9 RID: 39401 RVA: 0x001729F1 File Offset: 0x00170BF1
+		// Token: 0x17001E70 RID: 7792
+		// (get) Token: 0x06009892 RID: 39058 RVA: 0x0016FFB5 File Offset: 0x0016E1B5
+		// (set) Token: 0x06009893 RID: 39059 RVA: 0x0016FFBD File Offset: 0x0016E1BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BeginTime
@@ -220,9 +220,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EBB RID: 7867
-		// (get) Token: 0x060099EA RID: 39402 RVA: 0x001729FA File Offset: 0x00170BFA
-		// (set) Token: 0x060099EB RID: 39403 RVA: 0x00172A02 File Offset: 0x00170C02
+		// Token: 0x17001E71 RID: 7793
+		// (get) Token: 0x06009894 RID: 39060 RVA: 0x0016FFC6 File Offset: 0x0016E1C6
+		// (set) Token: 0x06009895 RID: 39061 RVA: 0x0016FFCE File Offset: 0x0016E1CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EndTime
@@ -237,9 +237,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EBC RID: 7868
-		// (get) Token: 0x060099EC RID: 39404 RVA: 0x00172A0B File Offset: 0x00170C0B
-		// (set) Token: 0x060099ED RID: 39405 RVA: 0x00172A13 File Offset: 0x00170C13
+		// Token: 0x17001E72 RID: 7794
+		// (get) Token: 0x06009896 RID: 39062 RVA: 0x0016FFD7 File Offset: 0x0016E1D7
+		// (set) Token: 0x06009897 RID: 39063 RVA: 0x0016FFDF File Offset: 0x0016E1DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DailyLimitTimes
@@ -254,9 +254,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EBD RID: 7869
-		// (get) Token: 0x060099EE RID: 39406 RVA: 0x00172A1C File Offset: 0x00170C1C
-		// (set) Token: 0x060099EF RID: 39407 RVA: 0x00172A24 File Offset: 0x00170C24
+		// Token: 0x17001E73 RID: 7795
+		// (get) Token: 0x06009898 RID: 39064 RVA: 0x0016FFE8 File Offset: 0x0016E1E8
+		// (set) Token: 0x06009899 RID: 39065 RVA: 0x0016FFF0 File Offset: 0x0016E1F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalLimitTimes
@@ -271,9 +271,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EBE RID: 7870
-		// (get) Token: 0x060099F0 RID: 39408 RVA: 0x00172A2D File Offset: 0x00170C2D
-		// (set) Token: 0x060099F1 RID: 39409 RVA: 0x00172A35 File Offset: 0x00170C35
+		// Token: 0x17001E74 RID: 7796
+		// (get) Token: 0x0600989A RID: 39066 RVA: 0x0016FFF9 File Offset: 0x0016E1F9
+		// (set) Token: 0x0600989B RID: 39067 RVA: 0x00170001 File Offset: 0x0016E201
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ResourcesId
@@ -288,9 +288,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EBF RID: 7871
-		// (get) Token: 0x060099F2 RID: 39410 RVA: 0x00172A48 File Offset: 0x00170C48
-		// (set) Token: 0x060099F3 RID: 39411 RVA: 0x00172A50 File Offset: 0x00170C50
+		// Token: 0x17001E75 RID: 7797
+		// (get) Token: 0x0600989C RID: 39068 RVA: 0x00170014 File Offset: 0x0016E214
+		// (set) Token: 0x0600989D RID: 39069 RVA: 0x0017001C File Offset: 0x0016E21C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GachaAccumulateId
@@ -305,8 +305,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EC0 RID: 7872
-		// (get) Token: 0x060099F4 RID: 39412 RVA: 0x00172A59 File Offset: 0x00170C59
+		// Token: 0x17001E76 RID: 7798
+		// (get) Token: 0x0600989E RID: 39070 RVA: 0x00170025 File Offset: 0x0016E225
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GachaDiscountInfo> GachaDiscountInfos
@@ -317,9 +317,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EC1 RID: 7873
-		// (get) Token: 0x060099F5 RID: 39413 RVA: 0x00172A61 File Offset: 0x00170C61
-		// (set) Token: 0x060099F6 RID: 39414 RVA: 0x00172A69 File Offset: 0x00170C69
+		// Token: 0x17001E77 RID: 7799
+		// (get) Token: 0x0600989F RID: 39071 RVA: 0x0017002D File Offset: 0x0016E22D
+		// (set) Token: 0x060098A0 RID: 39072 RVA: 0x00170035 File Offset: 0x0016E235
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool OnlyViewDiscount
@@ -334,9 +334,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EC2 RID: 7874
-		// (get) Token: 0x060099F7 RID: 39415 RVA: 0x00172A72 File Offset: 0x00170C72
-		// (set) Token: 0x060099F8 RID: 39416 RVA: 0x00172A7A File Offset: 0x00170C7A
+		// Token: 0x17001E78 RID: 7800
+		// (get) Token: 0x060098A1 RID: 39073 RVA: 0x0017003E File Offset: 0x0016E23E
+		// (set) Token: 0x060098A2 RID: 39074 RVA: 0x00170046 File Offset: 0x0016E246
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsShowProgress
@@ -351,8 +351,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001EC3 RID: 7875
-		// (get) Token: 0x060099F9 RID: 39417 RVA: 0x00172A83 File Offset: 0x00170C83
+		// Token: 0x17001E79 RID: 7801
+		// (get) Token: 0x060098A3 RID: 39075 RVA: 0x0017004F File Offset: 0x0016E24F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, string> DiscountTagDetails
@@ -363,7 +363,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060099FA RID: 39418 RVA: 0x00172A8B File Offset: 0x00170C8B
+		// Token: 0x060098A4 RID: 39076 RVA: 0x00170057 File Offset: 0x0016E257
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -371,7 +371,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GachaInfo);
 		}
 
-		// Token: 0x060099FB RID: 39419 RVA: 0x00172A9C File Offset: 0x00170C9C
+		// Token: 0x060098A5 RID: 39077 RVA: 0x00170068 File Offset: 0x0016E268
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GachaInfo other)
@@ -379,7 +379,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Id == other.Id && this.TodayTimes == other.TodayTimes && this.TotalTimes == other.TotalTimes && this.ItemId == other.ItemId && this.gachaConsumes_.Equals(other.gachaConsumes_) && this.UsePoolId == other.UsePoolId && this.pools_.Equals(other.pools_) && this.BeginTime == other.BeginTime && this.EndTime == other.EndTime && this.DailyLimitTimes == other.DailyLimitTimes && this.TotalLimitTimes == other.TotalLimitTimes && !(this.ResourcesId != other.ResourcesId) && this.GachaAccumulateId == other.GachaAccumulateId && this.gachaDiscountInfos_.Equals(other.gachaDiscountInfos_) && this.OnlyViewDiscount == other.OnlyViewDiscount && this.IsShowProgress == other.IsShowProgress && this.DiscountTagDetails.Equals(other.DiscountTagDetails) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060099FC RID: 39420 RVA: 0x00172BF0 File Offset: 0x00170DF0
+		// Token: 0x060098A6 RID: 39078 RVA: 0x001701BC File Offset: 0x0016E3BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -448,7 +448,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060099FD RID: 39421 RVA: 0x00172D95 File Offset: 0x00170F95
+		// Token: 0x060098A7 RID: 39079 RVA: 0x00170361 File Offset: 0x0016E561
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -456,7 +456,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060099FE RID: 39422 RVA: 0x00172DA2 File Offset: 0x00170FA2
+		// Token: 0x060098A8 RID: 39080 RVA: 0x0017036E File Offset: 0x0016E56E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -464,7 +464,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060099FF RID: 39423 RVA: 0x00172DAC File Offset: 0x00170FAC
+		// Token: 0x060098A9 RID: 39081 RVA: 0x00170378 File Offset: 0x0016E578
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -544,7 +544,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009A00 RID: 39424 RVA: 0x00172F88 File Offset: 0x00171188
+		// Token: 0x060098AA RID: 39082 RVA: 0x00170554 File Offset: 0x0016E754
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -613,7 +613,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009A01 RID: 39425 RVA: 0x00173120 File Offset: 0x00171320
+		// Token: 0x060098AB RID: 39083 RVA: 0x001706EC File Offset: 0x0016E8EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GachaInfo other)
@@ -681,7 +681,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009A02 RID: 39426 RVA: 0x00173295 File Offset: 0x00171495
+		// Token: 0x060098AC RID: 39084 RVA: 0x00170861 File Offset: 0x0016EA61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -689,7 +689,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009A03 RID: 39427 RVA: 0x001732A0 File Offset: 0x001714A0
+		// Token: 0x060098AD RID: 39085 RVA: 0x0017086C File Offset: 0x0016EA6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -823,124 +823,124 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040048B6 RID: 18614
+		// Token: 0x040048AF RID: 18607
 		private static readonly MessageParser<GachaInfo> _parser = new MessageParser<GachaInfo>(() => new GachaInfo());
 
-		// Token: 0x040048B7 RID: 18615
+		// Token: 0x040048B0 RID: 18608
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040048B8 RID: 18616
+		// Token: 0x040048B1 RID: 18609
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x040048B9 RID: 18617
+		// Token: 0x040048B2 RID: 18610
 		private int id_;
 
-		// Token: 0x040048BA RID: 18618
+		// Token: 0x040048B3 RID: 18611
 		public const int TodayTimesFieldNumber = 2;
 
-		// Token: 0x040048BB RID: 18619
+		// Token: 0x040048B4 RID: 18612
 		private int todayTimes_;
 
-		// Token: 0x040048BC RID: 18620
+		// Token: 0x040048B5 RID: 18613
 		public const int TotalTimesFieldNumber = 3;
 
-		// Token: 0x040048BD RID: 18621
+		// Token: 0x040048B6 RID: 18614
 		private int totalTimes_;
 
-		// Token: 0x040048BE RID: 18622
+		// Token: 0x040048B7 RID: 18615
 		public const int ItemIdFieldNumber = 4;
 
-		// Token: 0x040048BF RID: 18623
+		// Token: 0x040048B8 RID: 18616
 		private int itemId_;
 
-		// Token: 0x040048C0 RID: 18624
+		// Token: 0x040048B9 RID: 18617
 		public const int GachaConsumesFieldNumber = 5;
 
-		// Token: 0x040048C1 RID: 18625
+		// Token: 0x040048BA RID: 18618
 		private static readonly FieldCodec<GachaConsume> _repeated_gachaConsumes_codec = FieldCodec.ForMessage<GachaConsume>(42U, GachaConsume.Parser);
 
-		// Token: 0x040048C2 RID: 18626
+		// Token: 0x040048BB RID: 18619
 		private readonly RepeatedField<GachaConsume> gachaConsumes_ = new RepeatedField<GachaConsume>();
 
-		// Token: 0x040048C3 RID: 18627
+		// Token: 0x040048BC RID: 18620
 		public const int UsePoolIdFieldNumber = 6;
 
-		// Token: 0x040048C4 RID: 18628
+		// Token: 0x040048BD RID: 18621
 		private int usePoolId_;
 
-		// Token: 0x040048C5 RID: 18629
+		// Token: 0x040048BE RID: 18622
 		public const int PoolsFieldNumber = 7;
 
-		// Token: 0x040048C6 RID: 18630
+		// Token: 0x040048BF RID: 18623
 		private static readonly FieldCodec<GachaPoolInfo> _repeated_pools_codec = FieldCodec.ForMessage<GachaPoolInfo>(58U, GachaPoolInfo.Parser);
 
-		// Token: 0x040048C7 RID: 18631
+		// Token: 0x040048C0 RID: 18624
 		private readonly RepeatedField<GachaPoolInfo> pools_ = new RepeatedField<GachaPoolInfo>();
 
-		// Token: 0x040048C8 RID: 18632
+		// Token: 0x040048C1 RID: 18625
 		public const int BeginTimeFieldNumber = 8;
 
-		// Token: 0x040048C9 RID: 18633
+		// Token: 0x040048C2 RID: 18626
 		private long beginTime_;
 
-		// Token: 0x040048CA RID: 18634
+		// Token: 0x040048C3 RID: 18627
 		public const int EndTimeFieldNumber = 9;
 
-		// Token: 0x040048CB RID: 18635
+		// Token: 0x040048C4 RID: 18628
 		private long endTime_;
 
-		// Token: 0x040048CC RID: 18636
+		// Token: 0x040048C5 RID: 18629
 		public const int DailyLimitTimesFieldNumber = 10;
 
-		// Token: 0x040048CD RID: 18637
+		// Token: 0x040048C6 RID: 18630
 		private int dailyLimitTimes_;
 
-		// Token: 0x040048CE RID: 18638
+		// Token: 0x040048C7 RID: 18631
 		public const int TotalLimitTimesFieldNumber = 11;
 
-		// Token: 0x040048CF RID: 18639
+		// Token: 0x040048C8 RID: 18632
 		private int totalLimitTimes_;
 
-		// Token: 0x040048D0 RID: 18640
+		// Token: 0x040048C9 RID: 18633
 		public const int ResourcesIdFieldNumber = 12;
 
-		// Token: 0x040048D1 RID: 18641
+		// Token: 0x040048CA RID: 18634
 		private string resourcesId_ = "";
 
-		// Token: 0x040048D2 RID: 18642
+		// Token: 0x040048CB RID: 18635
 		public const int GachaAccumulateIdFieldNumber = 13;
 
-		// Token: 0x040048D3 RID: 18643
+		// Token: 0x040048CC RID: 18636
 		private int gachaAccumulateId_;
 
-		// Token: 0x040048D4 RID: 18644
+		// Token: 0x040048CD RID: 18637
 		public const int GachaDiscountInfosFieldNumber = 14;
 
-		// Token: 0x040048D5 RID: 18645
+		// Token: 0x040048CE RID: 18638
 		private static readonly FieldCodec<GachaDiscountInfo> _repeated_gachaDiscountInfos_codec = FieldCodec.ForMessage<GachaDiscountInfo>(114U, GachaDiscountInfo.Parser);
 
-		// Token: 0x040048D6 RID: 18646
+		// Token: 0x040048CF RID: 18639
 		private readonly RepeatedField<GachaDiscountInfo> gachaDiscountInfos_ = new RepeatedField<GachaDiscountInfo>();
 
-		// Token: 0x040048D7 RID: 18647
+		// Token: 0x040048D0 RID: 18640
 		public const int OnlyViewDiscountFieldNumber = 15;
 
-		// Token: 0x040048D8 RID: 18648
+		// Token: 0x040048D1 RID: 18641
 		private bool onlyViewDiscount_;
 
-		// Token: 0x040048D9 RID: 18649
+		// Token: 0x040048D2 RID: 18642
 		public const int IsShowProgressFieldNumber = 16;
 
-		// Token: 0x040048DA RID: 18650
+		// Token: 0x040048D3 RID: 18643
 		private bool isShowProgress_;
 
-		// Token: 0x040048DB RID: 18651
+		// Token: 0x040048D4 RID: 18644
 		public const int DiscountTagDetailsFieldNumber = 17;
 
-		// Token: 0x040048DC RID: 18652
+		// Token: 0x040048D5 RID: 18645
 		private static readonly MapField<int, string>.Codec _map_discountTagDetails_codec = new MapField<int, string>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForString(18U, ""), 138U);
 
-		// Token: 0x040048DD RID: 18653
+		// Token: 0x040048D6 RID: 18646
 		private readonly MapField<int, string> discountTagDetails_ = new MapField<int, string>();
 	}
 }

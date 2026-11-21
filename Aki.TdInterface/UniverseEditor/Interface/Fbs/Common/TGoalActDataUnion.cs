@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E8B RID: 24203
+	// Token: 0x020064CE RID: 25806
 	public class TGoalActDataUnion
 	{
-		// Token: 0x1700B4D9 RID: 46297
-		// (get) Token: 0x06029732 RID: 169778 RVA: 0x005AE0CC File Offset: 0x005AC2CC
-		// (set) Token: 0x06029733 RID: 169779 RVA: 0x005AE0D4 File Offset: 0x005AC2D4
+		// Token: 0x1700BE44 RID: 48708
+		// (get) Token: 0x0602BDDA RID: 179674 RVA: 0x005F7070 File Offset: 0x005F5270
+		// (set) Token: 0x0602BDDB RID: 179675 RVA: 0x005F7078 File Offset: 0x005F5278
 		public TGoalActData Type { get; set; }
 
-		// Token: 0x1700B4DA RID: 46298
-		// (get) Token: 0x06029734 RID: 169780 RVA: 0x005AE0DD File Offset: 0x005AC2DD
-		// (set) Token: 0x06029735 RID: 169781 RVA: 0x005AE0E5 File Offset: 0x005AC2E5
+		// Token: 0x1700BE45 RID: 48709
+		// (get) Token: 0x0602BDDC RID: 179676 RVA: 0x005F7081 File Offset: 0x005F5281
+		// (set) Token: 0x0602BDDD RID: 179677 RVA: 0x005F7089 File Offset: 0x005F5289
 		public object Value { get; set; }
 
-		// Token: 0x06029736 RID: 169782 RVA: 0x005AE0EE File Offset: 0x005AC2EE
+		// Token: 0x0602BDDE RID: 179678 RVA: 0x005F7092 File Offset: 0x005F5292
 		public TGoalActDataUnion()
 		{
 			this.Type = TGoalActData.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029737 RID: 169783 RVA: 0x005AE104 File Offset: 0x005AC304
+		// Token: 0x0602BDDF RID: 179679 RVA: 0x005F70A8 File Offset: 0x005F52A8
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029738 RID: 169784 RVA: 0x005AE116 File Offset: 0x005AC316
+		// Token: 0x0602BDE0 RID: 179680 RVA: 0x005F70BA File Offset: 0x005F52BA
 		public IDiscardForEnergyToDeployTypeT AsIDiscardForEnergyToDeployType()
 		{
 			return this.As<IDiscardForEnergyToDeployTypeT>();
 		}
 
-		// Token: 0x06029739 RID: 169785 RVA: 0x005AE11E File Offset: 0x005AC31E
+		// Token: 0x0602BDE1 RID: 179681 RVA: 0x005F70C2 File Offset: 0x005F52C2
 		public static TGoalActDataUnion FromIDiscardForEnergyToDeployType(IDiscardForEnergyToDeployTypeT _idiscardforenergytodeploytype)
 		{
 			return new TGoalActDataUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602973A RID: 169786 RVA: 0x005AE133 File Offset: 0x005AC333
+		// Token: 0x0602BDE2 RID: 179682 RVA: 0x005F70D7 File Offset: 0x005F52D7
 		public IDiscardForEnergyToEvolutionTypeT AsIDiscardForEnergyToEvolutionType()
 		{
 			return this.As<IDiscardForEnergyToEvolutionTypeT>();
 		}
 
-		// Token: 0x0602973B RID: 169787 RVA: 0x005AE13B File Offset: 0x005AC33B
+		// Token: 0x0602BDE3 RID: 179683 RVA: 0x005F70DF File Offset: 0x005F52DF
 		public static TGoalActDataUnion FromIDiscardForEnergyToEvolutionType(IDiscardForEnergyToEvolutionTypeT _idiscardforenergytoevolutiontype)
 		{
 			return new TGoalActDataUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602973C RID: 169788 RVA: 0x005AE150 File Offset: 0x005AC350
+		// Token: 0x0602BDE4 RID: 179684 RVA: 0x005F70F4 File Offset: 0x005F52F4
 		public static int Pack(FlatBufferBuilder builder, TGoalActDataUnion _o)
 		{
 			TGoalActData type = _o.Type;

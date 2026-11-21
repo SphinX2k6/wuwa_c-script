@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002C2F RID: 11311
+// Token: 0x020021AA RID: 8618
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class TutorialModel : ModelBase
 {
-	// Token: 0x060178FB RID: 96507 RVA: 0x005FD3F0 File Offset: 0x005FB5F0
+	// Token: 0x0601532D RID: 86829 RVA: 0x00629E14 File Offset: 0x00628014
 	protected override bool OnInit()
 	{
 		foreach (object obj in Enum.GetValues(typeof(ETutorialType)))
@@ -24,10 +23,10 @@ public class TutorialModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060178FC RID: 96508 RVA: 0x005FD460 File Offset: 0x005FB660
+	// Token: 0x0601532E RID: 86830 RVA: 0x00629E84 File Offset: 0x00628084
 	public void InitTutorialTotalData()
 	{
-		foreach (TutorialSaveData tutorialSaveData in this.TutorialSaveDataMap.Values.ToList<TutorialSaveData>())
+		foreach (TutorialSaveData tutorialSaveData in new List<TutorialSaveData>(this.TutorialSaveDataMap.Values))
 		{
 			TutorialSaveData tutorialSaveData2 = new TutorialSaveData();
 			tutorialSaveData2.TimeStamp = tutorialSaveData.TimeStamp;
@@ -41,7 +40,7 @@ public class TutorialModel : ModelBase
 		}
 	}
 
-	// Token: 0x060178FD RID: 96509 RVA: 0x005FD550 File Offset: 0x005FB750
+	// Token: 0x0601532F RID: 86831 RVA: 0x00629F74 File Offset: 0x00628174
 	protected override bool OnClear()
 	{
 		foreach (Dictionary<int, TutorialSaveData> dictionary in this.TutorialTotalData.Values)
@@ -52,7 +51,7 @@ public class TutorialModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060178FE RID: 96510 RVA: 0x005FD5B4 File Offset: 0x005FB7B4
+	// Token: 0x06015330 RID: 86832 RVA: 0x00629FD8 File Offset: 0x006281D8
 	public void InitUnlockTutorials(IReadOnlyList<TutorialInfo> tutorialInfos)
 	{
 		foreach (TutorialInfo tutorialInfo in tutorialInfos)
@@ -74,7 +73,7 @@ public class TutorialModel : ModelBase
 		}
 	}
 
-	// Token: 0x060178FF RID: 96511 RVA: 0x005FD6A4 File Offset: 0x005FB8A4
+	// Token: 0x06015331 RID: 86833 RVA: 0x0062A0C8 File Offset: 0x006282C8
 	public void InitDefaultUnlockTutorials()
 	{
 		foreach (GuideTutorial guideTutorial in GuideConfig.Instance.GetAllTutorial())
@@ -95,7 +94,7 @@ public class TutorialModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017900 RID: 96512 RVA: 0x005FD764 File Offset: 0x005FB964
+	// Token: 0x06015332 RID: 86834 RVA: 0x0062A188 File Offset: 0x00628388
 	public void UpdateUnlockTutorials(TutorialInfo tutorialInfo)
 	{
 		TutorialSaveData tutorialSaveData = new TutorialSaveData();
@@ -118,7 +117,7 @@ public class TutorialModel : ModelBase
 		this.InvokeTutorialRedDot(tutorialSaveData);
 	}
 
-	// Token: 0x06017901 RID: 96513 RVA: 0x005FD838 File Offset: 0x005FBA38
+	// Token: 0x06015333 RID: 86835 RVA: 0x0062A25C File Offset: 0x0062845C
 	public List<TutorialItemData> GetUnlockedTutorialDataByType(ETutorialType tType, EExclusiveTutorialType exclusiveType = EExclusiveTutorialType.None)
 	{
 		Dictionary<int, TutorialSaveData> dictionary = this.TutorialTotalData[tType];
@@ -194,7 +193,7 @@ public class TutorialModel : ModelBase
 		return list.GetRange(0, Math.Min(val, list.Count));
 	}
 
-	// Token: 0x06017902 RID: 96514 RVA: 0x005FD9E4 File Offset: 0x005FBBE4
+	// Token: 0x06015334 RID: 86836 RVA: 0x0062A408 File Offset: 0x00628608
 	public void RemoveRedDotTutorialId(int tutorialId)
 	{
 		if (!this.TutorialSaveDataMap.ContainsKey(tutorialId))
@@ -206,20 +205,20 @@ public class TutorialModel : ModelBase
 		this.InvokeTutorialRedDot(tutorialSaveData);
 	}
 
-	// Token: 0x06017903 RID: 96515 RVA: 0x005FDA1C File Offset: 0x005FBC1C
+	// Token: 0x06015335 RID: 86837 RVA: 0x0062A440 File Offset: 0x00628640
 	public bool RedDotCheckIsNewTutorial(int tutorialId)
 	{
 		TutorialSaveData tutorialSaveData;
 		return this.TutorialSaveDataMap.TryGetValue(tutorialId, out tutorialSaveData) && tutorialSaveData.HasRedDot;
 	}
 
-	// Token: 0x06017904 RID: 96516 RVA: 0x005FDA41 File Offset: 0x005FBC41
+	// Token: 0x06015336 RID: 86838 RVA: 0x0062A465 File Offset: 0x00628665
 	public void InvokeUpdateTutorials()
 	{
 		EventSystem.Instance.Emit(EEventName.OnTutorialUpdate);
 	}
 
-	// Token: 0x06017905 RID: 96517 RVA: 0x005FDA54 File Offset: 0x005FBC54
+	// Token: 0x06015337 RID: 86839 RVA: 0x0062A478 File Offset: 0x00628678
 	[NullableContext(2)]
 	public void InvokeTutorialRedDot(TutorialSaveData saveData = null)
 	{
@@ -231,7 +230,7 @@ public class TutorialModel : ModelBase
 		}
 	}
 
-	// Token: 0x06017906 RID: 96518 RVA: 0x005FDA94 File Offset: 0x005FBC94
+	// Token: 0x06015338 RID: 86840 RVA: 0x0062A4B8 File Offset: 0x006286B8
 	public bool RedDotCheckIsNewTutorialType(ETutorialType tType)
 	{
 		if (!this.TutorialTotalData.ContainsKey(tType))
@@ -251,7 +250,7 @@ public class TutorialModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06017907 RID: 96519 RVA: 0x005FDB64 File Offset: 0x005FBD64
+	// Token: 0x06015339 RID: 86841 RVA: 0x0062A588 File Offset: 0x00628788
 	[return: TupleElementNames(new string[]
 	{
 		"ItemData",
@@ -276,20 +275,24 @@ public class TutorialModel : ModelBase
 			return new ValueTuple<List<TutorialItemData>, bool>(list, false);
 		}
 		bool item = false;
-		foreach (ETutorialType etutorialType in this.TutorialTotalData.Keys.OrderBy(delegate(ETutorialType t)
+		List<ETutorialType> list2 = new List<ETutorialType>();
+		if (currentType != null && this.TutorialTotalData.ContainsKey(currentType.Value))
 		{
-			ETutorialType? currentType3 = currentType;
-			if (!(t == currentType3.GetValueOrDefault() & currentType3 != null))
+			list2.Add(currentType.Value);
+		}
+		foreach (ETutorialType etutorialType in this.TutorialTotalData.Keys)
+		{
+			if (currentType == null || etutorialType != currentType.Value)
 			{
-				return 1;
+				list2.Add(etutorialType);
 			}
-			return -1;
-		}).ToList<ETutorialType>())
+		}
+		foreach (ETutorialType etutorialType2 in list2)
 		{
-			if (etutorialType != ETutorialType.All)
+			if (etutorialType2 != ETutorialType.All)
 			{
-				List<TutorialItemData> list2 = new List<TutorialItemData>();
-				foreach (TutorialSaveData tutorialSaveData in this.TutorialTotalData[etutorialType].Values)
+				List<TutorialItemData> list3 = new List<TutorialItemData>();
+				foreach (TutorialSaveData tutorialSaveData in this.TutorialTotalData[etutorialType2].Values)
 				{
 					if (!tutorialSaveData.IsExcludedFromWiki)
 					{
@@ -308,32 +311,32 @@ public class TutorialModel : ModelBase
 								tutorialItemData.Text = tutorialTitle.Replace(searchText, TutorialUtils.AddSearchHighlight(searchText));
 								TutorialItemData item2 = tutorialItemData;
 								item = true;
-								list2.Add(item2);
+								list3.Add(item2);
 							}
 						}
 					}
 				}
-				ETutorialType? currentType2 = currentType;
-				ETutorialType etutorialType2 = ETutorialType.All;
-				if (currentType2.GetValueOrDefault() == etutorialType2 & currentType2 != null)
+				ETutorialType? etutorialType3 = currentType;
+				ETutorialType etutorialType4 = ETutorialType.All;
+				if (etutorialType3.GetValueOrDefault() == etutorialType4 & etutorialType3 != null)
 				{
-					list.AddRange(list2);
+					list.AddRange(list3);
 				}
-				else if (list2.Count > 0)
+				else if (list3.Count > 0)
 				{
 					list.Add(new TutorialItemData
 					{
 						IsTypeTitle = true,
-						TextId = TutorialUtils.GetTutorialTypeTxt(etutorialType)
+						TextId = TutorialUtils.GetTutorialTypeTxt(etutorialType2)
 					});
-					list.AddRange(list2);
+					list.AddRange(list3);
 				}
 			}
 		}
 		return new ValueTuple<List<TutorialItemData>, bool>(list, item);
 	}
 
-	// Token: 0x06017908 RID: 96520 RVA: 0x005FDDBC File Offset: 0x005FBFBC
+	// Token: 0x0601533A RID: 86842 RVA: 0x0062A848 File Offset: 0x00628A48
 	[NullableContext(2)]
 	public TutorialSaveData GetSavedDataById(int tId)
 	{
@@ -345,8 +348,8 @@ public class TutorialModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17001FC4 RID: 8132
-	// (get) Token: 0x06017909 RID: 96521 RVA: 0x005FDDDC File Offset: 0x005FBFDC
+	// Token: 0x1700201C RID: 8220
+	// (get) Token: 0x0601533B RID: 86843 RVA: 0x0062A868 File Offset: 0x00628A68
 	public static TutorialModel Instance
 	{
 		get
@@ -355,7 +358,7 @@ public class TutorialModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601790A RID: 96522 RVA: 0x005FDDE3 File Offset: 0x005FBFE3
+	// Token: 0x0601533C RID: 86844 RVA: 0x0062A86F File Offset: 0x00628A6F
 	public static TutorialModel GetOrCreateInstance()
 	{
 		if (TutorialModel._Instance == null)
@@ -365,7 +368,7 @@ public class TutorialModel : ModelBase
 		return TutorialModel._Instance;
 	}
 
-	// Token: 0x0601790B RID: 96523 RVA: 0x005FDDF7 File Offset: 0x005FBFF7
+	// Token: 0x0601533D RID: 86845 RVA: 0x0062A883 File Offset: 0x00628A83
 	public static bool CreateInstance()
 	{
 		if (TutorialModel._Instance != null)
@@ -376,28 +379,28 @@ public class TutorialModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601790C RID: 96524 RVA: 0x005FDE0D File Offset: 0x005FC00D
+	// Token: 0x0601533E RID: 86846 RVA: 0x0062A899 File Offset: 0x00628A99
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601790D RID: 96525 RVA: 0x005FDE0F File Offset: 0x005FC00F
+	// Token: 0x0601533F RID: 86847 RVA: 0x0062A89B File Offset: 0x00628A9B
 	public static void ResetStaticDefaultValue()
 	{
 		TutorialModel._Instance = null;
 	}
 
-	// Token: 0x0601790E RID: 96526 RVA: 0x005FDE17 File Offset: 0x005FC017
+	// Token: 0x06015340 RID: 86848 RVA: 0x0062A8A3 File Offset: 0x00628AA3
 	static TutorialModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TutorialModel.CreateStaticDefaultValue), new Action(TutorialModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AFC5 RID: 44997
+	// Token: 0x0400B3CA RID: 46026
 	[Nullable(2)]
 	public ItemRewardNotify RewardInfo;
 
-	// Token: 0x0400AFC6 RID: 44998
+	// Token: 0x0400B3CB RID: 46027
 	[Nullable(new byte[]
 	{
 		1,
@@ -405,16 +408,16 @@ public class TutorialModel : ModelBase
 	})]
 	public List<ValueTuple<int, int>> RewardList = new List<ValueTuple<int, int>>();
 
-	// Token: 0x0400AFC7 RID: 44999
+	// Token: 0x0400B3CC RID: 46028
 	public EExclusiveTutorialType CurrentExclusiveType;
 
-	// Token: 0x0400AFC8 RID: 45000
+	// Token: 0x0400B3CD RID: 46029
 	private readonly Dictionary<ETutorialType, Dictionary<int, TutorialSaveData>> TutorialTotalData = new Dictionary<ETutorialType, Dictionary<int, TutorialSaveData>>();
 
-	// Token: 0x0400AFC9 RID: 45001
+	// Token: 0x0400B3CE RID: 46030
 	private readonly Dictionary<int, TutorialSaveData> TutorialSaveDataMap = new Dictionary<int, TutorialSaveData>();
 
-	// Token: 0x0400AFCA RID: 45002
+	// Token: 0x0400B3CF RID: 46031
 	[Nullable(2)]
 	private static TutorialModel _Instance;
 }

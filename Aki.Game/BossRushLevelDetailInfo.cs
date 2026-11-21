@@ -7,12 +7,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Activity.ActivityContent.BossRush;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020011B8 RID: 4536
+// Token: 0x0200066C RID: 1644
 [NullableContext(1)]
 [Nullable(0)]
 public class BossRushLevelDetailInfo
 {
-	// Token: 0x06007885 RID: 30853 RVA: 0x001948BC File Offset: 0x00192ABC
+	// Token: 0x06004C1C RID: 19484 RVA: 0x0019D4C4 File Offset: 0x0019B6C4
 	public void Phrase(int activityId, BossRushLevelData data, int[] unlockBuffs)
 	{
 		this.ActivityId = activityId;
@@ -89,43 +89,43 @@ public class BossRushLevelDetailInfo
 		}
 	}
 
-	// Token: 0x06007886 RID: 30854 RVA: 0x00194C50 File Offset: 0x00192E50
+	// Token: 0x06004C1D RID: 19485 RVA: 0x0019D858 File Offset: 0x0019BA58
 	public void SetId(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06007887 RID: 30855 RVA: 0x00194C59 File Offset: 0x00192E59
+	// Token: 0x06004C1E RID: 19486 RVA: 0x0019D861 File Offset: 0x0019BA61
 	public void SetScore(int score)
 	{
 		this.Score = score;
 	}
 
-	// Token: 0x06007888 RID: 30856 RVA: 0x00194C62 File Offset: 0x00192E62
+	// Token: 0x06004C1F RID: 19487 RVA: 0x0019D86A File Offset: 0x0019BA6A
 	public void SetUnLockTime(double unLockTime)
 	{
 		this.UnLockTime = unLockTime;
 	}
 
-	// Token: 0x06007889 RID: 30857 RVA: 0x00194C6B File Offset: 0x00192E6B
+	// Token: 0x06004C20 RID: 19488 RVA: 0x0019D873 File Offset: 0x0019BA73
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x0600788A RID: 30858 RVA: 0x00194C74 File Offset: 0x00192E74
+	// Token: 0x06004C21 RID: 19489 RVA: 0x0019D87C File Offset: 0x0019BA7C
 	public string GetMonsterTexturePath()
 	{
 		return this.GetConfig().Value.PreviewTexture;
 	}
 
-	// Token: 0x0600788B RID: 30859 RVA: 0x00194C98 File Offset: 0x00192E98
+	// Token: 0x06004C22 RID: 19490 RVA: 0x0019D8A0 File Offset: 0x0019BAA0
 	public string GetBigMonsterTexturePath()
 	{
 		return this.GetConfig().Value.StageTexture;
 	}
 
-	// Token: 0x0600788C RID: 30860 RVA: 0x00194CBC File Offset: 0x00192EBC
+	// Token: 0x06004C23 RID: 19491 RVA: 0x0019D8C4 File Offset: 0x0019BAC4
 	public string GetMonsterName()
 	{
 		int bossInfo = this.GetConfig().Value.BossInfo;
@@ -137,31 +137,31 @@ public class BossRushLevelDetailInfo
 		return monsterInfoConfig.Value.Name;
 	}
 
-	// Token: 0x0600788D RID: 30861 RVA: 0x00194D0C File Offset: 0x00192F0C
+	// Token: 0x06004C24 RID: 19492 RVA: 0x0019D914 File Offset: 0x0019BB14
 	public string GetLevelDesc()
 	{
 		return this.GetConfig().Value.LevelDesc;
 	}
 
-	// Token: 0x0600788E RID: 30862 RVA: 0x00194D30 File Offset: 0x00192F30
+	// Token: 0x06004C25 RID: 19493 RVA: 0x0019D938 File Offset: 0x0019BB38
 	public int[] GetRecommendElementIdArray()
 	{
 		return this.GetInstanceDungeonConfig().Value.RecommendElement().ToArray<int>();
 	}
 
-	// Token: 0x0600788F RID: 30863 RVA: 0x00194D58 File Offset: 0x00192F58
+	// Token: 0x06004C26 RID: 19494 RVA: 0x0019D960 File Offset: 0x0019BB60
 	public bool GetUnLockState()
 	{
 		return this.IsOpen;
 	}
 
-	// Token: 0x06007890 RID: 30864 RVA: 0x00194D60 File Offset: 0x00192F60
+	// Token: 0x06004C27 RID: 19495 RVA: 0x0019D968 File Offset: 0x0019BB68
 	public int GetScore()
 	{
 		return this.Score;
 	}
 
-	// Token: 0x06007891 RID: 30865 RVA: 0x00194D68 File Offset: 0x00192F68
+	// Token: 0x06004C28 RID: 19496 RVA: 0x0019D970 File Offset: 0x0019BB70
 	public string GetUnlockTimeText()
 	{
 		if (TimeUtil.Instance.GetServerTime() >= this.UnLockTime)
@@ -180,19 +180,19 @@ public class BossRushLevelDetailInfo
 		});
 	}
 
-	// Token: 0x06007892 RID: 30866 RVA: 0x00194DEB File Offset: 0x00192FEB
+	// Token: 0x06004C29 RID: 19497 RVA: 0x0019D9F3 File Offset: 0x0019BBF3
 	public double GetUnLockTime()
 	{
 		return this.UnLockTime;
 	}
 
-	// Token: 0x06007893 RID: 30867 RVA: 0x00194DF3 File Offset: 0x00192FF3
+	// Token: 0x06004C2A RID: 19498 RVA: 0x0019D9FB File Offset: 0x0019BBFB
 	public BossRushActivity? GetConfig()
 	{
 		return BossRushConfig.Instance.GetBossRushByActivityIdAndInstanceId(this.ActivityId, this.Id);
 	}
 
-	// Token: 0x06007894 RID: 30868 RVA: 0x00194E0C File Offset: 0x0019300C
+	// Token: 0x06004C2B RID: 19499 RVA: 0x0019DA14 File Offset: 0x0019BC14
 	public int GetMaxBuffCount()
 	{
 		if (BossRushModel.Instance.CurrentSelectBuffTabName != EBuffTabName.Normal)
@@ -202,19 +202,19 @@ public class BossRushLevelDetailInfo
 		return this.GetConfig().Value.BuffCount;
 	}
 
-	// Token: 0x06007895 RID: 30869 RVA: 0x00194E54 File Offset: 0x00193054
+	// Token: 0x06004C2C RID: 19500 RVA: 0x0019DA5C File Offset: 0x0019BC5C
 	public int GetInstanceDungeonId()
 	{
 		return this.GetConfig().Value.InstId;
 	}
 
-	// Token: 0x06007896 RID: 30870 RVA: 0x00194E78 File Offset: 0x00193078
+	// Token: 0x06004C2D RID: 19501 RVA: 0x0019DA80 File Offset: 0x0019BC80
 	public int GetInstanceDungeonFormationId()
 	{
 		return this.GetInstanceDungeonConfig().Value.FightFormationId;
 	}
 
-	// Token: 0x06007897 RID: 30871 RVA: 0x00194E9C File Offset: 0x0019309C
+	// Token: 0x06004C2E RID: 19502 RVA: 0x0019DAA4 File Offset: 0x0019BCA4
 	public int GetInstanceDungeonFormationNumb()
 	{
 		Aki.Config.FightFormation? fightFormationConfig = FormationConfig.Instance.GetFightFormationConfig(this.GetInstanceDungeonFormationId());
@@ -225,14 +225,14 @@ public class BossRushLevelDetailInfo
 		return fightFormationConfig.Value.LimitCount().Length;
 	}
 
-	// Token: 0x06007898 RID: 30872 RVA: 0x00194ED8 File Offset: 0x001930D8
+	// Token: 0x06004C2F RID: 19503 RVA: 0x0019DAE0 File Offset: 0x0019BCE0
 	public InstanceDungeon? GetInstanceDungeonConfig()
 	{
 		int instId = this.GetConfig().Value.InstId;
 		return InstanceDungeonConfig.Instance.GetConfig(instId);
 	}
 
-	// Token: 0x06007899 RID: 30873 RVA: 0x00194F08 File Offset: 0x00193108
+	// Token: 0x06004C30 RID: 19504 RVA: 0x0019DB10 File Offset: 0x0019BD10
 	public BossRushTeamInfo ConvertToTeamInfo()
 	{
 		BossRushTeamInfo bossRushTeamInfo = new BossRushTeamInfo();
@@ -267,36 +267,36 @@ public class BossRushLevelDetailInfo
 		return bossRushTeamInfo;
 	}
 
-	// Token: 0x04003766 RID: 14182
+	// Token: 0x040037FF RID: 14335
 	private int ActivityId;
 
-	// Token: 0x04003767 RID: 14183
+	// Token: 0x04003800 RID: 14336
 	private int Id;
 
-	// Token: 0x04003768 RID: 14184
+	// Token: 0x04003801 RID: 14337
 	private int Score;
 
-	// Token: 0x04003769 RID: 14185
+	// Token: 0x04003802 RID: 14338
 	private double UnLockTime;
 
-	// Token: 0x0400376A RID: 14186
+	// Token: 0x04003803 RID: 14339
 	private List<BossRushBuffInfo> BuffInfo = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400376B RID: 14187
+	// Token: 0x04003804 RID: 14340
 	private List<BossRushBuffInfo> UnlockBuffInfo = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400376C RID: 14188
+	// Token: 0x04003805 RID: 14341
 	private List<BossRushBuffInfo> OptionBuffInfo = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400376D RID: 14189
+	// Token: 0x04003806 RID: 14342
 	private List<BossRushBuffInfo> ScoreBuffInfo = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400376E RID: 14190
+	// Token: 0x04003807 RID: 14343
 	private List<BossRushBuffInfo> AllScoreBuffInfo = new List<BossRushBuffInfo>();
 
-	// Token: 0x0400376F RID: 14191
+	// Token: 0x04003808 RID: 14344
 	private List<BossRushRoleInfo> RoleInfo = new List<BossRushRoleInfo>();
 
-	// Token: 0x04003770 RID: 14192
+	// Token: 0x04003809 RID: 14345
 	private bool IsOpen;
 }

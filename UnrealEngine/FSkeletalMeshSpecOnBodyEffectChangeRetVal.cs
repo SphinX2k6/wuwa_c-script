@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200193C RID: 6460
+	// Token: 0x0200041E RID: 1054
 	public sealed class FSkeletalMeshSpecOnBodyEffectChangeRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017F35 RID: 98101 RVA: 0x002318C3 File Offset: 0x0022FAC3
+		// Token: 0x060065E9 RID: 26089 RVA: 0x00092053 File Offset: 0x00090253
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSkeletalMeshSpecOnBodyEffectChangeRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017F36 RID: 98102 RVA: 0x002318CF File Offset: 0x0022FACF
+		// Token: 0x060065EA RID: 26090 RVA: 0x0009205F File Offset: 0x0009025F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSkeletalMeshSpecOnBodyEffectChangeRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FSkeletalMeshSpecOnBodyEffectChangeRetVal._FunctionPtr;
 		}
 
-		// Token: 0x06017F37 RID: 98103 RVA: 0x002318F2 File Offset: 0x0022FAF2
+		// Token: 0x060065EB RID: 26091 RVA: 0x00092082 File Offset: 0x00090282
 		public FSkeletalMeshSpecOnBodyEffectChangeRetVal()
 		{
 		}
 
-		// Token: 0x06017F38 RID: 98104 RVA: 0x002318FA File Offset: 0x0022FAFA
+		// Token: 0x060065EC RID: 26092 RVA: 0x0009208A File Offset: 0x0009028A
 		[NullableContext(2)]
 		public FSkeletalMeshSpecOnBodyEffectChangeRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017F39 RID: 98105 RVA: 0x00231904 File Offset: 0x0022FB04
+		// Token: 0x060065ED RID: 26093 RVA: 0x00092094 File Offset: 0x00090294
 		public FSkeletalMeshSpecOnBodyEffectChangeRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017F3A RID: 98106 RVA: 0x0023190F File Offset: 0x0022FB0F
+		// Token: 0x060065EE RID: 26094 RVA: 0x0009209F File Offset: 0x0009029F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>) ?? ((Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>)Delegate.CreateDelegate(typeof(Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017F3B RID: 98107 RVA: 0x00231941 File Offset: 0x0022FB41
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060065EF RID: 26095 RVA: 0x000920D1 File Offset: 0x000902D1
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -71,10 +70,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FSkeletalMeshSpecOnBodyEffectChangeRetVal.RegisterId);
 		}
 
-		// Token: 0x06017F3C RID: 98108 RVA: 0x0023197C File Offset: 0x0022FB7C
+		// Token: 0x060065F0 RID: 26096 RVA: 0x0009210C File Offset: 0x0009030C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UActorComponent Execute(float Opacity, UActorComponent CharRenderingComponent, USkeletalMeshComponent SkeletalMeshComponent, AActor Owner)
 		{
 			FSkeletalMeshSpecOnBodyEffectChangeRetVal.__FSkeletalMeshSpecOnBodyEffectChangeRetVal_DelegateParams* ptr = stackalloc FSkeletalMeshSpecOnBodyEffectChangeRetVal.__FSkeletalMeshSpecOnBodyEffectChangeRetVal_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FSkeletalMeshSpecOnBodyEffectChangeRetVal.__FSkeletalMeshSpecOnBodyEffectChangeRetVal_DelegateParams) & -16L;
@@ -87,10 +85,9 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UActorComponent>(ptr->__Result);
 		}
 
-		// Token: 0x06017F3D RID: 98109 RVA: 0x00231A08 File Offset: 0x0022FC08
+		// Token: 0x060065F1 RID: 26097 RVA: 0x00092198 File Offset: 0x00090398
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent> func = target as Func<float, UActorComponent, USkeletalMeshComponent, AActor, UActorComponent>;
@@ -105,47 +102,47 @@ namespace UnrealEngine
 			((FSkeletalMeshSpecOnBodyEffectChangeRetVal.__FSkeletalMeshSpecOnBodyEffectChangeRetVal_DelegateParams*)__Parameters)->__Result = ((uactorComponent != null) ? uactorComponent.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0400CF5D RID: 53085
+		// Token: 0x04002ADE RID: 10974
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CF5E RID: 53086
+		// Token: 0x04002ADF RID: 10975
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.SkeletalMeshSpecOnBodyEffectChangeRetVal__DelegateSignature";
 
-		// Token: 0x0400CF5F RID: 53087
+		// Token: 0x04002AE0 RID: 10976
 		private static int RegisterId;
 
-		// Token: 0x02003001 RID: 12289
+		// Token: 0x02000B15 RID: 2837
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FSkeletalMeshSpecOnBodyEffectChangeRetVal_DelegateParams
+		private ref struct __FSkeletalMeshSpecOnBodyEffectChangeRetVal_DelegateParams
 		{
-			// Token: 0x04016C12 RID: 93202
+			// Token: 0x04005BBB RID: 23483
 			[FieldOffset(0)]
 			public float Opacity;
 
-			// Token: 0x04016C13 RID: 93203
+			// Token: 0x04005BBC RID: 23484
 			[FieldOffset(8)]
 			public IntPtr CharRenderingComponent;
 
-			// Token: 0x04016C14 RID: 93204
+			// Token: 0x04005BBD RID: 23485
 			[FieldOffset(16)]
 			public IntPtr SkeletalMeshComponent;
 
-			// Token: 0x04016C15 RID: 93205
+			// Token: 0x04005BBE RID: 23486
 			[FieldOffset(24)]
 			public IntPtr Owner;
 
-			// Token: 0x04016C16 RID: 93206
+			// Token: 0x04005BBF RID: 23487
 			[FieldOffset(32)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003002 RID: 12290
+		// Token: 0x02000B16 RID: 2838
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016C17 RID: 93207
+			// Token: 0x04005BC0 RID: 23488
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

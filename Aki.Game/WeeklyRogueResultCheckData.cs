@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002D52 RID: 11602
+// Token: 0x020022AC RID: 8876
 public class WeeklyRogueResultCheckData : IWeeklyRogueResultCheckData
 {
-	// Token: 0x170020E3 RID: 8419
-	// (get) Token: 0x06018615 RID: 99861 RVA: 0x00634FAF File Offset: 0x006331AF
-	// (set) Token: 0x06018616 RID: 99862 RVA: 0x00634FB7 File Offset: 0x006331B7
+	// Token: 0x1700213E RID: 8510
+	// (get) Token: 0x06015EB7 RID: 89783 RVA: 0x0065AFBF File Offset: 0x006591BF
+	// (set) Token: 0x06015EB8 RID: 89784 RVA: 0x0065AFC7 File Offset: 0x006591C7
 	public int CurrentInGameScore { get; set; }
 
-	// Token: 0x170020E4 RID: 8420
-	// (get) Token: 0x06018617 RID: 99863 RVA: 0x00634FC0 File Offset: 0x006331C0
-	// (set) Token: 0x06018618 RID: 99864 RVA: 0x00634FC8 File Offset: 0x006331C8
+	// Token: 0x1700213F RID: 8511
+	// (get) Token: 0x06015EB9 RID: 89785 RVA: 0x0065AFD0 File Offset: 0x006591D0
+	// (set) Token: 0x06015EBA RID: 89786 RVA: 0x0065AFD8 File Offset: 0x006591D8
 	public int MaxInGameScore { get; set; }
 }

@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x020014E4 RID: 5348
+// Token: 0x0200099C RID: 2460
 public enum EScratchDirectionType
 {
-	// Token: 0x04004303 RID: 17155
+	// Token: 0x040043A8 RID: 17320
 	Center,
-	// Token: 0x04004304 RID: 17156
+	// Token: 0x040043A9 RID: 17321
 	Left,
-	// Token: 0x04004305 RID: 17157
+	// Token: 0x040043AA RID: 17322
 	Right,
-	// Token: 0x04004306 RID: 17158
+	// Token: 0x040043AB RID: 17323
 	Top,
-	// Token: 0x04004307 RID: 17159
+	// Token: 0x040043AC RID: 17324
 	Bottom,
-	// Token: 0x04004308 RID: 17160
+	// Token: 0x040043AD RID: 17325
 	LeftTop,
-	// Token: 0x04004309 RID: 17161
+	// Token: 0x040043AE RID: 17326
 	LeftBottom,
-	// Token: 0x0400430A RID: 17162
+	// Token: 0x040043AF RID: 17327
 	RightTop,
-	// Token: 0x0400430B RID: 17163
+	// Token: 0x040043B0 RID: 17328
 	RightBottom
 }

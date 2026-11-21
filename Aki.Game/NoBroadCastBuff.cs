@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EAB RID: 11947
+// Token: 0x020023FE RID: 9214
 public static class NoBroadCastBuff
 {
-	// Token: 0x0400BE98 RID: 48792
+	// Token: 0x0400C233 RID: 49715
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<long> Values = new HashSet<long>
@@ -53,6 +53,8 @@ public static class NoBroadCastBuff
 		1502000501L,
 		1110001007L,
 		1110001008L,
-		1110001009L
+		1110001009L,
+		7100000044L,
+		7100000004L
 	};
 }

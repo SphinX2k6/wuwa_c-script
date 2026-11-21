@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200349A RID: 13466
+// Token: 0x02002A0E RID: 10766
 [NullableContext(1)]
 [Nullable(0)]
 public class CatmullRomCurve
 {
-	// Token: 0x0601D4EE RID: 120046 RVA: 0x0082B5F4 File Offset: 0x008297F4
+	// Token: 0x0601B1EA RID: 111082 RVA: 0x00852858 File Offset: 0x00850A58
 	public CatmullRomCurve(IntVector2D[] points)
 	{
 		if (points == null || points.Length < 2)
@@ -24,7 +24,7 @@ public class CatmullRomCurve
 		this.SegmentCount = this.ControlPoints.Length - 1;
 	}
 
-	// Token: 0x0601D4EF RID: 120047 RVA: 0x0082B678 File Offset: 0x00829878
+	// Token: 0x0601B1EB RID: 111083 RVA: 0x008528DC File Offset: 0x00850ADC
 	public CatmullRomCurve(IReadOnlyList<global::Vector> points)
 	{
 		if (points == null || points.Count < 2)
@@ -40,19 +40,19 @@ public class CatmullRomCurve
 		this.SegmentCount = this.ControlPoints.Length - 1;
 	}
 
-	// Token: 0x0601D4F0 RID: 120048 RVA: 0x0082B6FE File Offset: 0x008298FE
+	// Token: 0x0601B1EC RID: 111084 RVA: 0x00852962 File Offset: 0x00850B62
 	public int GetPointCount()
 	{
 		return this.ControlPoints.Length;
 	}
 
-	// Token: 0x0601D4F1 RID: 120049 RVA: 0x0082B708 File Offset: 0x00829908
+	// Token: 0x0601B1ED RID: 111085 RVA: 0x0085296C File Offset: 0x00850B6C
 	public int GetSegmentCount()
 	{
 		return this.SegmentCount;
 	}
 
-	// Token: 0x0601D4F2 RID: 120050 RVA: 0x0082B710 File Offset: 0x00829910
+	// Token: 0x0601B1EE RID: 111086 RVA: 0x00852974 File Offset: 0x00850B74
 	public global::Vector GetPoint(double t)
 	{
 		if (t < 0.0 || t > 1.0)
@@ -75,7 +75,7 @@ public class CatmullRomCurve
 		return this.EvaluateSegment(num, localT);
 	}
 
-	// Token: 0x0601D4F3 RID: 120051 RVA: 0x0082B7C8 File Offset: 0x008299C8
+	// Token: 0x0601B1EF RID: 111087 RVA: 0x00852A2C File Offset: 0x00850C2C
 	public global::Vector GetDerivative(double t)
 	{
 		double t2 = Math.Max(0.0, t - 0.001);
@@ -85,7 +85,7 @@ public class CatmullRomCurve
 		return global::Vector.Create(point2.X - point.X, point2.Y - point.Y, 0.0);
 	}
 
-	// Token: 0x0601D4F4 RID: 120052 RVA: 0x0082B844 File Offset: 0x00829A44
+	// Token: 0x0601B1F0 RID: 111088 RVA: 0x00852AA8 File Offset: 0x00850CA8
 	public List<global::Vector> GetPoints(int segments = 100)
 	{
 		List<global::Vector> list = new List<global::Vector>(segments + 1);
@@ -96,7 +96,7 @@ public class CatmullRomCurve
 		return list;
 	}
 
-	// Token: 0x0601D4F5 RID: 120053 RVA: 0x0082B878 File Offset: 0x00829A78
+	// Token: 0x0601B1F1 RID: 111089 RVA: 0x00852ADC File Offset: 0x00850CDC
 	private global::Vector EvaluateSegment(int segmentIndex, double localT)
 	{
 		global::Vector[] controlPoints = this.ControlPoints;
@@ -118,7 +118,7 @@ public class CatmullRomCurve
 		return this.LinearInterp(p3, p4, num3, num4, t2);
 	}
 
-	// Token: 0x0601D4F6 RID: 120054 RVA: 0x0082BA00 File Offset: 0x00829C00
+	// Token: 0x0601B1F2 RID: 111090 RVA: 0x00852C64 File Offset: 0x00850E64
 	private global::Vector LinearInterp(global::Vector p0, global::Vector p1, double t0, double t1, double t)
 	{
 		double num = t1 - t0;
@@ -131,7 +131,7 @@ public class CatmullRomCurve
 		return global::Vector.Create(num2 * p0.X + num3 * p1.X, num2 * p0.Y + num3 * p1.Y, 0.0);
 	}
 
-	// Token: 0x0601D4F7 RID: 120055 RVA: 0x0082BA80 File Offset: 0x00829C80
+	// Token: 0x0601B1F3 RID: 111091 RVA: 0x00852CE4 File Offset: 0x00850EE4
 	private double Distance(global::Vector v0, global::Vector v1)
 	{
 		double num = v1.X - v0.X;
@@ -139,7 +139,7 @@ public class CatmullRomCurve
 		return Math.Sqrt(num * num + num2 * num2);
 	}
 
-	// Token: 0x0601D4F8 RID: 120056 RVA: 0x0082BAB4 File Offset: 0x00829CB4
+	// Token: 0x0601B1F4 RID: 111092 RVA: 0x00852D18 File Offset: 0x00850F18
 	public static ICatmullRomArcLengthLookup CreateArcLengthLookup(CatmullRomCurve curve, int segmentCount)
 	{
 		int num = Math.Max(1, (int)Math.Floor((double)segmentCount));
@@ -166,7 +166,7 @@ public class CatmullRomCurve
 		return new CatmullRomArcLengthLookup(array, array2, num2);
 	}
 
-	// Token: 0x0601D4F9 RID: 120057 RVA: 0x0082BB90 File Offset: 0x00829D90
+	// Token: 0x0601B1F5 RID: 111093 RVA: 0x00852DF4 File Offset: 0x00850FF4
 	public static double GetParameterByArcLength(ICatmullRomArcLengthLookup lookup, double arcLength)
 	{
 		if (lookup.TotalLength <= 1E-10 || lookup.ParamSamples.Count < 2)
@@ -207,24 +207,24 @@ public class CatmullRomCurve
 		return lookup.ParamSamples[num4] + num7 * (lookup.ParamSamples[num4 + 1] - lookup.ParamSamples[num4]);
 	}
 
-	// Token: 0x0400E6F3 RID: 59123
+	// Token: 0x0400EBA8 RID: 60328
 	private readonly global::Vector[] ControlPoints;
 
-	// Token: 0x0400E6F4 RID: 59124
+	// Token: 0x0400EBA9 RID: 60329
 	private readonly int SegmentCount;
 
-	// Token: 0x0400E6F5 RID: 59125
+	// Token: 0x0400EBAA RID: 60330
 	private const int ARC_LENGTH_LUT_MIN_SEGMENTS = 1;
 
-	// Token: 0x0400E6F6 RID: 59126
+	// Token: 0x0400EBAB RID: 60331
 	private const double ARC_LENGTH_SEGMENT_LENGTH_EPSILON = 1E-10;
 
-	// Token: 0x0400E6F7 RID: 59127
+	// Token: 0x0400EBAC RID: 60332
 	private const double CENTRIPETAL_ALPHA = 0.5;
 
-	// Token: 0x0400E6F8 RID: 59128
+	// Token: 0x0400EBAD RID: 60333
 	private const double NUMERIC_DERIVATIVE_STEP = 0.001;
 
-	// Token: 0x0400E6F9 RID: 59129
+	// Token: 0x0400EBAE RID: 60334
 	private const double PARAM_DENOMINATOR_EPSILON = 1E-12;
 }

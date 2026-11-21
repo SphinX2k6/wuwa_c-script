@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02001F7F RID: 8063
-// (Invoke) Token: 0x0600FA2A RID: 64042
+// Token: 0x02001441 RID: 5185
+// (Invoke) Token: 0x0600CE49 RID: 52809
 public delegate void TAreaToggleFunction(int areaId);

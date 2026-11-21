@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006997 RID: 27031
+	// Token: 0x02005AF3 RID: 23283
 	public enum ETriggerEventType
 	{
-		// Token: 0x0402309A RID: 143514
+		// Token: 0x0401E284 RID: 123524
 		Unknown,
-		// Token: 0x0402309B RID: 143515
+		// Token: 0x0401E285 RID: 123525
 		Enter,
-		// Token: 0x0402309C RID: 143516
+		// Token: 0x0401E286 RID: 123526
 		Exit
 	}
 }

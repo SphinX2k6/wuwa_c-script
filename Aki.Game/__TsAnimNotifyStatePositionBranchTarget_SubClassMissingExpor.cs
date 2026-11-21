@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003763 RID: 14179
+// Token: 0x02002CDC RID: 11484
 public class __TsAnimNotifyStatePositionBranchTarget_SubClassMissingExportProxy : __TsAnimNotifyStatePositionBranchTarget_InheritProxy
 {
-	// Token: 0x0601E61D RID: 124445 RVA: 0x0088C120 File Offset: 0x0088A320
+	// Token: 0x0601C316 RID: 115478 RVA: 0x008B251C File Offset: 0x008B071C
 	[NullableContext(1)]
 	protected __TsAnimNotifyStatePositionBranchTarget_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStatePositionBranchTarget.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E61E RID: 124446 RVA: 0x0088C153 File Offset: 0x0088A353
+	// Token: 0x0601C317 RID: 115479 RVA: 0x008B254F File Offset: 0x008B074F
 	protected __TsAnimNotifyStatePositionBranchTarget_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

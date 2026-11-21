@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200430F RID: 17167
+	// Token: 0x0200476E RID: 18286
 	public class TRollBlockLaunchMethodUnion
 	{
-		// Token: 0x1700796C RID: 31084
-		// (get) Token: 0x06019755 RID: 104277 RVA: 0x003A60E0 File Offset: 0x003A42E0
-		// (set) Token: 0x06019756 RID: 104278 RVA: 0x003A60E8 File Offset: 0x003A42E8
+		// Token: 0x17007F9F RID: 32671
+		// (get) Token: 0x0601AED7 RID: 110295 RVA: 0x003D1A10 File Offset: 0x003CFC10
+		// (set) Token: 0x0601AED8 RID: 110296 RVA: 0x003D1A18 File Offset: 0x003CFC18
 		public TRollBlockLaunchMethod Type { get; set; }
 
-		// Token: 0x1700796D RID: 31085
-		// (get) Token: 0x06019757 RID: 104279 RVA: 0x003A60F1 File Offset: 0x003A42F1
-		// (set) Token: 0x06019758 RID: 104280 RVA: 0x003A60F9 File Offset: 0x003A42F9
+		// Token: 0x17007FA0 RID: 32672
+		// (get) Token: 0x0601AED9 RID: 110297 RVA: 0x003D1A21 File Offset: 0x003CFC21
+		// (set) Token: 0x0601AEDA RID: 110298 RVA: 0x003D1A29 File Offset: 0x003CFC29
 		public object Value { get; set; }
 
-		// Token: 0x06019759 RID: 104281 RVA: 0x003A6102 File Offset: 0x003A4302
+		// Token: 0x0601AEDB RID: 110299 RVA: 0x003D1A32 File Offset: 0x003CFC32
 		public TRollBlockLaunchMethodUnion()
 		{
 			this.Type = TRollBlockLaunchMethod.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601975A RID: 104282 RVA: 0x003A6118 File Offset: 0x003A4318
+		// Token: 0x0601AEDC RID: 110300 RVA: 0x003D1A48 File Offset: 0x003CFC48
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601975B RID: 104283 RVA: 0x003A612A File Offset: 0x003A432A
+		// Token: 0x0601AEDD RID: 110301 RVA: 0x003D1A5A File Offset: 0x003CFC5A
 		public IRollBlockLaunchMethodInteractT AsIRollBlockLaunchMethodInteract()
 		{
 			return this.As<IRollBlockLaunchMethodInteractT>();
 		}
 
-		// Token: 0x0601975C RID: 104284 RVA: 0x003A6132 File Offset: 0x003A4332
+		// Token: 0x0601AEDE RID: 110302 RVA: 0x003D1A62 File Offset: 0x003CFC62
 		public static TRollBlockLaunchMethodUnion FromIRollBlockLaunchMethodInteract(IRollBlockLaunchMethodInteractT _irollblocklaunchmethodinteract)
 		{
 			return new TRollBlockLaunchMethodUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601975D RID: 104285 RVA: 0x003A6147 File Offset: 0x003A4347
+		// Token: 0x0601AEDF RID: 110303 RVA: 0x003D1A77 File Offset: 0x003CFC77
 		public IRollBlockLaunchMethodRangeT AsIRollBlockLaunchMethodRange()
 		{
 			return this.As<IRollBlockLaunchMethodRangeT>();
 		}
 
-		// Token: 0x0601975E RID: 104286 RVA: 0x003A614F File Offset: 0x003A434F
+		// Token: 0x0601AEE0 RID: 110304 RVA: 0x003D1A7F File Offset: 0x003CFC7F
 		public static TRollBlockLaunchMethodUnion FromIRollBlockLaunchMethodRange(IRollBlockLaunchMethodRangeT _irollblocklaunchmethodrange)
 		{
 			return new TRollBlockLaunchMethodUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601975F RID: 104287 RVA: 0x003A6164 File Offset: 0x003A4364
+		// Token: 0x0601AEE1 RID: 110305 RVA: 0x003D1A94 File Offset: 0x003CFC94
 		public static int Pack(FlatBufferBuilder builder, TRollBlockLaunchMethodUnion _o)
 		{
 			TRollBlockLaunchMethod type = _o.Type;

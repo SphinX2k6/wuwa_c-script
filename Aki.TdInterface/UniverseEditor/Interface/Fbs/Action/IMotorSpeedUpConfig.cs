@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B45 RID: 27461
+	// Token: 0x0200728B RID: 29323
 	public struct IMotorSpeedUpConfig : IFlatbufferObject
 	{
-		// Token: 0x1700CC0B RID: 52235
-		// (get) Token: 0x06030333 RID: 197427 RVA: 0x0068CDDE File Offset: 0x0068AFDE
+		// Token: 0x1700D6F0 RID: 55024
+		// (get) Token: 0x0603318A RID: 209290 RVA: 0x006E539A File Offset: 0x006E359A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030334 RID: 197428 RVA: 0x0068CDEB File Offset: 0x0068AFEB
+		// Token: 0x0603318B RID: 209291 RVA: 0x006E53A7 File Offset: 0x006E35A7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030335 RID: 197429 RVA: 0x0068CDF4 File Offset: 0x0068AFF4
+		// Token: 0x0603318C RID: 209292 RVA: 0x006E53B0 File Offset: 0x006E35B0
 		public static IMotorSpeedUpConfig GetRootAsIMotorSpeedUpConfig(ByteBuffer _bb)
 		{
 			return IMotorSpeedUpConfig.GetRootAsIMotorSpeedUpConfig(_bb, default(IMotorSpeedUpConfig));
 		}
 
-		// Token: 0x06030336 RID: 197430 RVA: 0x0068CE10 File Offset: 0x0068B010
+		// Token: 0x0603318D RID: 209293 RVA: 0x006E53CC File Offset: 0x006E35CC
 		public static IMotorSpeedUpConfig GetRootAsIMotorSpeedUpConfig(ByteBuffer _bb, IMotorSpeedUpConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030337 RID: 197431 RVA: 0x0068CE2D File Offset: 0x0068B02D
+		// Token: 0x0603318E RID: 209294 RVA: 0x006E53E9 File Offset: 0x006E35E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030338 RID: 197432 RVA: 0x0068CE3C File Offset: 0x0068B03C
+		// Token: 0x0603318F RID: 209295 RVA: 0x006E53F8 File Offset: 0x006E35F8
 		public IMotorSpeedUpConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CC0C RID: 52236
-		// (get) Token: 0x06030339 RID: 197433 RVA: 0x0068CE4C File Offset: 0x0068B04C
+		// Token: 0x1700D6F1 RID: 55025
+		// (get) Token: 0x06033190 RID: 209296 RVA: 0x006E5408 File Offset: 0x006E3608
 		public EMotorParamsChangeType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CC0D RID: 52237
-		// (get) Token: 0x0603033A RID: 197434 RVA: 0x0068CE88 File Offset: 0x0068B088
+		// Token: 0x1700D6F2 RID: 55026
+		// (get) Token: 0x06033191 RID: 209297 RVA: 0x006E5444 File Offset: 0x006E3644
 		public EMotorSpeedUpConfigTag SpeedUpTagId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603033B RID: 197435 RVA: 0x0068CEC4 File Offset: 0x0068B0C4
+		// Token: 0x06033192 RID: 209298 RVA: 0x006E5480 File Offset: 0x006E3680
 		public static Offset<IMotorSpeedUpConfig> CreateIMotorSpeedUpConfig(FlatBufferBuilder builder, EMotorParamsChangeType Type = EMotorParamsChangeType.SpeedUp, EMotorSpeedUpConfigTag SpeedUpTagId = EMotorSpeedUpConfigTag.None)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorSpeedUpConfig.EndIMotorSpeedUpConfig(builder);
 		}
 
-		// Token: 0x0603033C RID: 197436 RVA: 0x0068CEE1 File Offset: 0x0068B0E1
+		// Token: 0x06033193 RID: 209299 RVA: 0x006E549D File Offset: 0x006E369D
 		public static void StartIMotorSpeedUpConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603033D RID: 197437 RVA: 0x0068CEEA File Offset: 0x0068B0EA
+		// Token: 0x06033194 RID: 209300 RVA: 0x006E54A6 File Offset: 0x006E36A6
 		public static void AddType(FlatBufferBuilder builder, EMotorParamsChangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603033E RID: 197438 RVA: 0x0068CEF5 File Offset: 0x0068B0F5
+		// Token: 0x06033195 RID: 209301 RVA: 0x006E54B1 File Offset: 0x006E36B1
 		public static void AddSpeedUpTagId(FlatBufferBuilder builder, EMotorSpeedUpConfigTag speedUpTagId)
 		{
 			builder.AddInt(1, (int)speedUpTagId, 0);
 		}
 
-		// Token: 0x0603033F RID: 197439 RVA: 0x0068CF00 File Offset: 0x0068B100
+		// Token: 0x06033196 RID: 209302 RVA: 0x006E54BC File Offset: 0x006E36BC
 		public static Offset<IMotorSpeedUpConfig> EndIMotorSpeedUpConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorSpeedUpConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06030340 RID: 197440 RVA: 0x0068CF10 File Offset: 0x0068B110
+		// Token: 0x06033197 RID: 209303 RVA: 0x006E54CC File Offset: 0x006E36CC
 		public IMotorSpeedUpConfigT UnPack()
 		{
 			IMotorSpeedUpConfigT motorSpeedUpConfigT = new IMotorSpeedUpConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorSpeedUpConfigT;
 		}
 
-		// Token: 0x06030341 RID: 197441 RVA: 0x0068CF2B File Offset: 0x0068B12B
+		// Token: 0x06033198 RID: 209304 RVA: 0x006E54E7 File Offset: 0x006E36E7
 		public void UnPackTo(IMotorSpeedUpConfigT _o)
 		{
 			_o.Type = this.Type;
 			_o.SpeedUpTagId = this.SpeedUpTagId;
 		}
 
-		// Token: 0x06030342 RID: 197442 RVA: 0x0068CF48 File Offset: 0x0068B148
+		// Token: 0x06033199 RID: 209305 RVA: 0x006E5504 File Offset: 0x006E3704
 		public static Offset<IMotorSpeedUpConfig> Pack(FlatBufferBuilder builder, IMotorSpeedUpConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorSpeedUpConfig.CreateIMotorSpeedUpConfig(builder, _o.Type, _o.SpeedUpTagId);
 		}
 
-		// Token: 0x040113E3 RID: 70627
+		// Token: 0x0401230C RID: 74508
 		private Table __p;
 	}
 }

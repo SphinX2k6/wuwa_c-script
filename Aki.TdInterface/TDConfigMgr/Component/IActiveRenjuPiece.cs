@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001A3 RID: 419
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001BA RID: 442
 	public class IActiveRenjuPiece : IJigsawCompleteCondition
 	{
-		// Token: 0x06000662 RID: 1634 RVA: 0x00022CD4 File Offset: 0x00020ED4
+		// Token: 0x06000678 RID: 1656 RVA: 0x00023934 File Offset: 0x00021B34
 		private IActiveRenjuPiece_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000663 RID: 1635 RVA: 0x00022D0C File Offset: 0x00020F0C
+		// Token: 0x06000679 RID: 1657 RVA: 0x0002396C File Offset: 0x00021B6C
 		public static IActiveRenjuPiece Create([Nullable(2)] IActiveRenjuPiece instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000664 RID: 1636 RVA: 0x00022D1F File Offset: 0x00020F1F
+		// Token: 0x0600067A RID: 1658 RVA: 0x0002397F File Offset: 0x00021B7F
 		public static IActiveRenjuPiece CreateFromSetValue([Nullable(2)] IActiveRenjuPiece_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000665 RID: 1637 RVA: 0x00022D32 File Offset: 0x00020F32
+		// Token: 0x0600067B RID: 1659 RVA: 0x00023992 File Offset: 0x00021B92
 		public new IActiveRenjuPiece_SetValue ToSetValue()
 		{
 			return new IActiveRenjuPiece_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700021A RID: 538
-		// (get) Token: 0x06000666 RID: 1638 RVA: 0x00022D5D File Offset: 0x00020F5D
-		// (set) Token: 0x06000667 RID: 1639 RVA: 0x00022D88 File Offset: 0x00020F88
+		// Token: 0x17000222 RID: 546
+		// (get) Token: 0x0600067C RID: 1660 RVA: 0x000239BD File Offset: 0x00021BBD
+		// (set) Token: 0x0600067D RID: 1661 RVA: 0x000239E8 File Offset: 0x00021BE8
 		public override EJigsawCompleteCondition Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700021B RID: 539
-		// (get) Token: 0x06000668 RID: 1640 RVA: 0x00022D98 File Offset: 0x00020F98
-		// (set) Token: 0x06000669 RID: 1641 RVA: 0x00022E2B File Offset: 0x0002102B
+		// Token: 0x17000223 RID: 547
+		// (get) Token: 0x0600067E RID: 1662 RVA: 0x000239F8 File Offset: 0x00021BF8
+		// (set) Token: 0x0600067F RID: 1663 RVA: 0x00023A8B File Offset: 0x00021C8B
 		public virtual List<IRenjuConfig> RenjuConfig
 		{
 			get
@@ -123,20 +121,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700021C RID: 540
-		// (get) Token: 0x0600066A RID: 1642 RVA: 0x00022E40 File Offset: 0x00021040
-		// (set) Token: 0x0600066B RID: 1643 RVA: 0x00022ED3 File Offset: 0x000210D3
+		// Token: 0x17000224 RID: 548
+		// (get) Token: 0x06000680 RID: 1664 RVA: 0x00023AA0 File Offset: 0x00021CA0
+		// (set) Token: 0x06000681 RID: 1665 RVA: 0x00023B33 File Offset: 0x00021D33
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IJigsawItemMatchedConfig> ExitMatchedConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -167,7 +165,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -176,29 +174,29 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400080C RID: 2060
+		// Token: 0x04000865 RID: 2149
 		[Nullable(2)]
 		protected new IActiveRenjuPiece FbInstance;
 
-		// Token: 0x0400080D RID: 2061
+		// Token: 0x04000866 RID: 2150
 		[Nullable(2)]
 		protected new IActiveRenjuPiece_SetValue PocoInterface;
 
-		// Token: 0x0400080E RID: 2062
+		// Token: 0x04000867 RID: 2151
 		private List<IRenjuConfig> _RenjuConfigCache;
 
-		// Token: 0x0400080F RID: 2063
+		// Token: 0x04000868 RID: 2152
 		private bool _RenjuConfigInited;
 
-		// Token: 0x04000810 RID: 2064
+		// Token: 0x04000869 RID: 2153
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IJigsawItemMatchedConfig> _ExitMatchedConfigCache;
 
-		// Token: 0x04000811 RID: 2065
+		// Token: 0x0400086A RID: 2154
 		private bool _ExitMatchedConfigInited;
 	}
 }

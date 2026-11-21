@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 {
-	// Token: 0x02006AAE RID: 27310
+	// Token: 0x02005C0B RID: 23563
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RbRollState : RbBaseMoveState
 	{
-		// Token: 0x06043D88 RID: 277896 RVA: 0x0109FD69 File Offset: 0x0109DF69
+		// Token: 0x06039DDE RID: 237022 RVA: 0x01044471 File Offset: 0x01042671
 		public RbRollState(RbBlockComponent owner) : base(owner)
 		{
 		}
 
-		// Token: 0x06043D89 RID: 277897 RVA: 0x0109FD94 File Offset: 0x0109DF94
+		// Token: 0x06039DDF RID: 237023 RVA: 0x0104449C File Offset: 0x0104269C
 		public override void Enter([Nullable(new byte[]
 		{
 			0,
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			this.BlockRollTime = (this.Owner.IsMainController ? this.GameplaySetting.BlockRollTime : this.GameplaySetting.VisionBlockRollTime);
 		}
 
-		// Token: 0x06043D8A RID: 277898 RVA: 0x0109FEEC File Offset: 0x0109E0EC
+		// Token: 0x06039DE0 RID: 237024 RVA: 0x010445F4 File Offset: 0x010427F4
 		public override void Update(float delta)
 		{
 			if (this.RollingTimer >= this.BlockRollTime)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			}
 		}
 
-		// Token: 0x06043D8B RID: 277899 RVA: 0x0109FFA8 File Offset: 0x0109E1A8
+		// Token: 0x06039DE1 RID: 237025 RVA: 0x010446B0 File Offset: 0x010428B0
 		private FTransformDouble CalcNewTransform(float alpha)
 		{
 			global::Vector vector = global::Vector.Create(this.OriginTrans.Value.GetLocation());
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			return new FTransformDouble(ref frotator, ref fvectorDouble, ref fvector);
 		}
 
-		// Token: 0x06043D8C RID: 277900 RVA: 0x010A0080 File Offset: 0x0109E280
+		// Token: 0x06039DE2 RID: 237026 RVA: 0x01044788 File Offset: 0x01042988
 		private void OnBlockRollFinish(Entity entity)
 		{
 			FTransformDouble actorTransform = this.CalcNewTransform(1f);
@@ -102,30 +102,40 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			this.IsFinishedInternal = true;
 		}
 
-		// Token: 0x0402374F RID: 145231
+		// Token: 0x17006E38 RID: 28216
+		// (get) Token: 0x06039DE3 RID: 237027 RVA: 0x010447D6 File Offset: 0x010429D6
+		public override bool NeedUpdateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E941 RID: 125249
 		[Nullable(2)]
 		public RbRollMovement Info;
 
-		// Token: 0x04023750 RID: 145232
+		// Token: 0x0401E942 RID: 125250
 		[Nullable(2)]
 		private global::Vector CurMoveDir = global::Vector.Create();
 
-		// Token: 0x04023751 RID: 145233
+		// Token: 0x0401E943 RID: 125251
 		private float RollingTimer;
 
-		// Token: 0x04023752 RID: 145234
+		// Token: 0x0401E944 RID: 125252
 		private global::Vector RotationCenter = global::Vector.Create();
 
-		// Token: 0x04023753 RID: 145235
+		// Token: 0x0401E945 RID: 125253
 		private global::Vector RotationAxis = global::Vector.Create();
 
-		// Token: 0x04023754 RID: 145236
+		// Token: 0x0401E946 RID: 125254
 		private float BlockRollTime;
 
-		// Token: 0x04023755 RID: 145237
+		// Token: 0x0401E947 RID: 125255
 		private FTransformDouble? OriginTrans;
 
-		// Token: 0x04023756 RID: 145238
+		// Token: 0x0401E948 RID: 125256
 		[Nullable(2)]
 		public BP_RollBlockGameplaySetting_C GameplaySetting;
 	}

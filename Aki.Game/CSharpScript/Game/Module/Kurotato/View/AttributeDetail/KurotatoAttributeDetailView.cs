@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 {
-	// Token: 0x02005782 RID: 22402
+	// Token: 0x02004759 RID: 18265
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoAttributeDetailView : UiViewBase
 	{
-		// Token: 0x06038E84 RID: 233092 RVA: 0x00D864DE File Offset: 0x00D846DE
+		// Token: 0x0602DD94 RID: 187796 RVA: 0x00CD519E File Offset: 0x00CD339E
 		public KurotatoAttributeDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038E85 RID: 233093 RVA: 0x00D864E8 File Offset: 0x00D846E8
+		// Token: 0x0602DD95 RID: 187797 RVA: 0x00CD51A8 File Offset: 0x00CD33A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038E86 RID: 233094 RVA: 0x00D86574 File Offset: 0x00D84774
+		// Token: 0x0602DD96 RID: 187798 RVA: 0x00CD5234 File Offset: 0x00CD3434
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 			KurotatoModel.Instance.BattleData.AssignAllPlayerAttrListen(this.AttrListenDelegate);
 		}
 
-		// Token: 0x06038E87 RID: 233095 RVA: 0x00D86668 File Offset: 0x00D84868
+		// Token: 0x0602DD97 RID: 187799 RVA: 0x00CD5328 File Offset: 0x00CD3528
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<IDictionary<int, int>>(EEventName.KurotatoOnPropertyUpdate, new Action<IDictionary<int, int>>(this.OnAttrChanged));
@@ -73,25 +72,32 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 			}
 		}
 
-		// Token: 0x06038E88 RID: 233096 RVA: 0x00D866E1 File Offset: 0x00D848E1
+		// Token: 0x0602DD98 RID: 187800 RVA: 0x00CD53A1 File Offset: 0x00CD35A1
 		private void OnAttrChanged(IDictionary<int, int> propertyValues)
 		{
 			this.RefreshAttrList();
 		}
 
-		// Token: 0x06038E89 RID: 233097 RVA: 0x00D866E9 File Offset: 0x00D848E9
+		// Token: 0x0602DD99 RID: 187801 RVA: 0x00CD53A9 File Offset: 0x00CD35A9
 		private void OnKscAttrChanged(EKSC_AttrType attrType, int oldValue, int newValue)
 		{
 			this.RefreshAttrList();
 		}
 
-		// Token: 0x06038E8A RID: 233098 RVA: 0x00D866F4 File Offset: 0x00D848F4
+		// Token: 0x0602DD9A RID: 187802 RVA: 0x00CD53B4 File Offset: 0x00CD35B4
 		private void RefreshAttrList()
 		{
-			KurotatoModel model = KurotatoModel.Instance;
-			List<IKurotatoRoleSkillInfo> data = (from config in KurotatoConfig.Instance.GetAllProperty()
-			where config.RoleType != 0
-			select config).OrderBy((KurotatoProperty config) => config, Comparer<KurotatoProperty>.Create(delegate(KurotatoProperty a, KurotatoProperty b)
+			KurotatoModel instance = KurotatoModel.Instance;
+			IReadOnlyList<KurotatoProperty> allProperty = KurotatoConfig.Instance.GetAllProperty();
+			List<KurotatoProperty> list = new List<KurotatoProperty>();
+			for (int i = 0; i < allProperty.Count; i++)
+			{
+				if (allProperty[i].RoleType != 0)
+				{
+					list.Add(allProperty[i]);
+				}
+			}
+			list.Sort(delegate(KurotatoProperty a, KurotatoProperty b)
 			{
 				if (a.RoleType != b.RoleType)
 				{
@@ -107,39 +113,42 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 					return a.Id - b.Id;
 				}
 				return num;
-			})).Select(delegate(KurotatoProperty config)
+			});
+			List<IKurotatoRoleSkillInfo> list2 = new List<IKurotatoRoleSkillInfo>(list.Count);
+			for (int j = 0; j < list.Count; j++)
 			{
-				bool flag = model.IsPropertyLocked(config.Id);
-				return new KurotatoRoleSkillInfo
+				KurotatoProperty kurotatoProperty = list[j];
+				bool flag = instance.IsPropertyLocked(kurotatoProperty.Id);
+				list2.Add(new KurotatoRoleSkillInfo
 				{
-					AttrId = config.Id,
-					Value = model.GetPropertyValue(config.Id),
+					AttrId = kurotatoProperty.Id,
+					Value = instance.GetPropertyValue(kurotatoProperty.Id),
 					IsRecommend = false,
-					BaseValue = new int?(config.BasicValue),
+					BaseValue = new int?(kurotatoProperty.BasicValue),
 					IsLocked = new bool?(flag),
-					LockedValue = new int?(flag ? model.GetPropertyLockedValue(config.Id) : 0)
-				};
-			}).ToList<IKurotatoRoleSkillInfo>();
-			this.AttrLayout.RefreshByData(data, null, true);
+					LockedValue = new int?(flag ? instance.GetPropertyLockedValue(kurotatoProperty.Id) : 0)
+				});
+			}
+			this.AttrLayout.RefreshByData(list2, null, true);
 		}
 
-		// Token: 0x06038E8B RID: 233099 RVA: 0x00D867AD File Offset: 0x00D849AD
+		// Token: 0x0602DD9B RID: 187803 RVA: 0x00CD54F1 File Offset: 0x00CD36F1
 		private KurotatoRoleAttributeItem InitAttrItem()
 		{
 			return new KurotatoRoleAttributeItem();
 		}
 
-		// Token: 0x06038E8C RID: 233100 RVA: 0x00D867B4 File Offset: 0x00D849B4
+		// Token: 0x0602DD9C RID: 187804 RVA: 0x00CD54F8 File Offset: 0x00CD36F8
 		private void OnBackButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DD5C RID: 122204
+		// Token: 0x040187F2 RID: 100338
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DD5D RID: 122205
+		// Token: 0x040187F3 RID: 100339
 		[Nullable(new byte[]
 		{
 			2,
@@ -148,19 +157,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttributeDetail
 		})]
 		private GenericLayout<KurotatoRoleAttributeItem, IKurotatoRoleSkillInfo> AttrLayout;
 
-		// Token: 0x0401DD5E RID: 122206
+		// Token: 0x040187F4 RID: 100340
 		[Nullable(2)]
 		private FOnKSCAllAttrChange AttrListenDelegate;
 
-		// Token: 0x0200B9A2 RID: 47522
+		// Token: 0x0200A3BA RID: 41914
 		[NullableContext(0)]
 		private enum EAttributeView
 		{
-			// Token: 0x04038211 RID: 229905
+			// Token: 0x04032C06 RID: 207878
 			ItemCaption,
-			// Token: 0x04038212 RID: 229906
+			// Token: 0x04032C07 RID: 207879
 			AttributeContent,
-			// Token: 0x04038213 RID: 229907
+			// Token: 0x04032C08 RID: 207880
 			ItemAttribute
 		}
 	}

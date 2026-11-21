@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA6 RID: 27302
+	// Token: 0x02005C03 RID: 23555
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RollBlockController : ControllerBase
 	{
-		// Token: 0x06043D28 RID: 277800 RVA: 0x0109ABC0 File Offset: 0x01098DC0
+		// Token: 0x06039D7D RID: 236925 RVA: 0x0103F2E8 File Offset: 0x0103D4E8
 		protected override bool OnInit()
 		{
 			Log.Instance.Info(ELogModule.RollBlock, ELogAuthor.CH, "[RollBlockController] 初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return true;
 		}
 
-		// Token: 0x06043D29 RID: 277801 RVA: 0x0109AC34 File Offset: 0x01098E34
+		// Token: 0x06039D7E RID: 236926 RVA: 0x0103F35C File Offset: 0x0103D55C
 		public unsafe void EnterRollBlockGameplay(RollBlockOpenGamePlayNotify notify, bool isReset = false)
 		{
 			if (this.GameplaySetting == null)
@@ -179,7 +178,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.CurrentKey = null;
 		}
 
-		// Token: 0x06043D2A RID: 277802 RVA: 0x0109B0EC File Offset: 0x010992EC
+		// Token: 0x06039D7F RID: 236927 RVA: 0x0103F814 File Offset: 0x0103DA14
 		public void ExitRollBlockGameplay(int incId, bool isReset = false)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -248,7 +247,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D2B RID: 277803 RVA: 0x0109B360 File Offset: 0x01099560
+		// Token: 0x06039D80 RID: 236928 RVA: 0x0103FA88 File Offset: 0x0103DC88
 		public unsafe void UpdateRollBlockGameplayInfo(RollBlockGamePlayPbInfo newInfo)
 		{
 			int incId = newInfo.IncId;
@@ -373,7 +372,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D2C RID: 277804 RVA: 0x0109B7C4 File Offset: 0x010999C4
+		// Token: 0x06039D81 RID: 236929 RVA: 0x0103FEEC File Offset: 0x0103E0EC
 		public void OnClickMoveInput(string name, InputDistributeDefine.EActionType actionType)
 		{
 			if (this.IsReseting)
@@ -416,7 +415,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D2D RID: 277805 RVA: 0x0109B904 File Offset: 0x01099B04
+		// Token: 0x06039D82 RID: 236930 RVA: 0x0104002C File Offset: 0x0103E22C
 		private unsafe void ProcessMoveInput(string name, InputDistributeDefine.EActionType actionType)
 		{
 			if (actionType == InputDistributeDefine.EActionType.Press)
@@ -432,7 +431,15 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 				this.PressedKey.Remove(name);
 				if (this.CurrentKey == name)
 				{
-					this.CurrentKey = ((this.PressedKey.Count > 0) ? this.PressedKey.First<string>() : null);
+					string currentKey = null;
+					using (HashSet<string>.Enumerator enumerator = this.PressedKey.GetEnumerator())
+					{
+						if (enumerator.MoveNext())
+						{
+							currentKey = enumerator.Current;
+						}
+					}
+					this.CurrentKey = currentKey;
 				}
 			}
 			if (this.CurrentKey != null)
@@ -456,7 +463,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 		}
 
-		// Token: 0x06043D2E RID: 277806 RVA: 0x0109BA58 File Offset: 0x01099C58
+		// Token: 0x06039D83 RID: 236931 RVA: 0x010401A8 File Offset: 0x0103E3A8
 		public void OnClickTip()
 		{
 			if (this.IsReseting || this.IsRequesting)
@@ -506,7 +513,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.IsRequesting = true;
 		}
 
-		// Token: 0x06043D2F RID: 277807 RVA: 0x0109BB50 File Offset: 0x01099D50
+		// Token: 0x06039D84 RID: 236932 RVA: 0x010402A0 File Offset: 0x0103E4A0
 		public void OnClickReset(bool needDelay = false, bool resetByRollBlockDestroy = false)
 		{
 			if ((this.IsReseting || this.IsRequesting) && !resetByRollBlockDestroy)
@@ -552,7 +559,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.ExecuteResetInternal(0f);
 		}
 
-		// Token: 0x06043D30 RID: 277808 RVA: 0x0109BCA4 File Offset: 0x01099EA4
+		// Token: 0x06039D85 RID: 236933 RVA: 0x010403F4 File Offset: 0x0103E5F4
 		private void ExecuteResetInternal(float _)
 		{
 			Log.Instance.Info(ELogModule.RollBlock, ELogAuthor.CH, "[OnClickReset] 重置操作开始", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -582,7 +589,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}, 0);
 		}
 
-		// Token: 0x06043D31 RID: 277809 RVA: 0x0109BD04 File Offset: 0x01099F04
+		// Token: 0x06039D86 RID: 236934 RVA: 0x01040454 File Offset: 0x0103E654
 		public void OnClickEsc()
 		{
 			if (this.IsReseting || this.IsRequesting)
@@ -644,7 +651,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.IsRequesting = true;
 		}
 
-		// Token: 0x06043D32 RID: 277810 RVA: 0x0109BE5C File Offset: 0x0109A05C
+		// Token: 0x06039D87 RID: 236935 RVA: 0x010405AC File Offset: 0x0103E7AC
 		public void OnClickSwitch()
 		{
 			if (this.IsReseting || this.IsRequesting)
@@ -723,7 +730,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.IsRequesting = true;
 		}
 
-		// Token: 0x06043D33 RID: 277811 RVA: 0x0109BF2C File Offset: 0x0109A12C
+		// Token: 0x06039D88 RID: 236936 RVA: 0x0104067C File Offset: 0x0103E87C
 		public void OnNotifyGameplayReset(RollBlockResetGamePlayNotify notify)
 		{
 			int incId = notify.Info.IncId;
@@ -743,7 +750,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06043D34 RID: 277812 RVA: 0x0109BFB8 File Offset: 0x0109A1B8
+		// Token: 0x06039D89 RID: 236937 RVA: 0x01040708 File Offset: 0x0103E908
 		public void OnNotifyAvailableInputsChange(RollBlockUpdateAvailableInputsNotify notify)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -784,7 +791,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D35 RID: 277813 RVA: 0x0109C0BC File Offset: 0x0109A2BC
+		// Token: 0x06039D8A RID: 236938 RVA: 0x0104080C File Offset: 0x0103EA0C
 		private void OnClickMove()
 		{
 			if (this.IsRequesting)
@@ -897,7 +904,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			this.IsRequesting = true;
 		}
 
-		// Token: 0x06043D36 RID: 277814 RVA: 0x0109C3C8 File Offset: 0x0109A5C8
+		// Token: 0x06039D8B RID: 236939 RVA: 0x01040B18 File Offset: 0x0103ED18
 		private bool IsBlockMoving()
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -921,7 +928,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return false;
 		}
 
-		// Token: 0x06043D37 RID: 277815 RVA: 0x0109C47C File Offset: 0x0109A67C
+		// Token: 0x06039D8C RID: 236940 RVA: 0x01040BCC File Offset: 0x0103EDCC
 		public void OnRollBlockStateChange(RbBlockStateChangeNotify notify)
 		{
 			int incId = notify.IncId;
@@ -980,7 +987,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D38 RID: 277816 RVA: 0x0109C618 File Offset: 0x0109A818
+		// Token: 0x06039D8D RID: 236941 RVA: 0x01040D68 File Offset: 0x0103EF68
 		private void HandleGroupEntitiesCreate(int incId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1026,7 +1033,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			rollBlockGameplayInfo.InitState = ERollBlockInitState.WaitEntitiesCreate;
 		}
 
-		// Token: 0x06043D39 RID: 277817 RVA: 0x0109C764 File Offset: 0x0109A964
+		// Token: 0x06039D8E RID: 236942 RVA: 0x01040EB4 File Offset: 0x0103F0B4
 		private unsafe void OnAllEntityCreated(bool? result, int incId)
 		{
 			RollBlockController.<>c__DisplayClass35_0 CS$<>8__locals1 = new RollBlockController.<>c__DisplayClass35_0();
@@ -1189,7 +1196,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D3A RID: 277818 RVA: 0x0109CC5C File Offset: 0x0109AE5C
+		// Token: 0x06039D8F RID: 236943 RVA: 0x010413AC File Offset: 0x0103F5AC
 		private unsafe void OnAllSceneItemLoadCompleted(int incId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1278,7 +1285,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}, 100f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043D3B RID: 277819 RVA: 0x0109CF8C File Offset: 0x0109B18C
+		// Token: 0x06039D90 RID: 236944 RVA: 0x010416DC File Offset: 0x0103F8DC
 		private unsafe void StartRollBlockBirthEffect(int incId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1369,7 +1376,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x06043D3C RID: 277820 RVA: 0x0109D334 File Offset: 0x0109B534
+		// Token: 0x06039D91 RID: 236945 RVA: 0x01041A84 File Offset: 0x0103FC84
 		private unsafe void SliceBirthEffect(float _)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1541,7 +1548,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D3D RID: 277821 RVA: 0x0109DB1C File Offset: 0x0109BD1C
+		// Token: 0x06039D92 RID: 236946 RVA: 0x0104226C File Offset: 0x0104046C
 		private unsafe void OnEntityCreated(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			long creatureDataId = handle.CreatureDataId;
@@ -1611,7 +1618,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D3E RID: 277822 RVA: 0x0109DD24 File Offset: 0x0109BF24
+		// Token: 0x06039D93 RID: 236947 RVA: 0x01042474 File Offset: 0x01040674
 		private void OnMainBlockEntityRemoved(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (removeType == ERemoveEntityType.RbBlockDestroyed)
@@ -1624,7 +1631,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D3F RID: 277823 RVA: 0x0109DD7C File Offset: 0x0109BF7C
+		// Token: 0x06039D94 RID: 236948 RVA: 0x010424CC File Offset: 0x010406CC
 		public void RegisterRollBlockToGameplay(RbBaseComponent blockComp, int incId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1641,7 +1648,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			rollBlockGameplayInfo.RollBlockEntities.Add(blockComp);
 		}
 
-		// Token: 0x06043D40 RID: 277824 RVA: 0x0109DDD8 File Offset: 0x0109BFD8
+		// Token: 0x06039D95 RID: 236949 RVA: 0x01042528 File Offset: 0x01040728
 		public void RegisterVisionRollBlockToGameplay(int incId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1658,7 +1665,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			rollBlockGameplayInfo.HasTipActorNum++;
 		}
 
-		// Token: 0x06043D41 RID: 277825 RVA: 0x0109DE34 File Offset: 0x0109C034
+		// Token: 0x06039D96 RID: 236950 RVA: 0x01042584 File Offset: 0x01040784
 		public void UnRegisterVisionRollBlockToGameplay(int incId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1675,7 +1682,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			rollBlockGameplayInfo.HasTipActorNum--;
 		}
 
-		// Token: 0x06043D42 RID: 277826 RVA: 0x0109DE90 File Offset: 0x0109C090
+		// Token: 0x06039D97 RID: 236951 RVA: 0x010425E0 File Offset: 0x010407E0
 		[NullableContext(2)]
 		public global::Vector GetForwardVector(int incId)
 		{
@@ -1693,7 +1700,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return rollBlockGameplayInfo.Forward;
 		}
 
-		// Token: 0x06043D43 RID: 277827 RVA: 0x0109DEE4 File Offset: 0x0109C0E4
+		// Token: 0x06039D98 RID: 236952 RVA: 0x01042634 File Offset: 0x01040834
 		[NullableContext(2)]
 		public global::Vector GetRightVector(int incId)
 		{
@@ -1711,7 +1718,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return rollBlockGameplayInfo.Right;
 		}
 
-		// Token: 0x06043D44 RID: 277828 RVA: 0x0109DF38 File Offset: 0x0109C138
+		// Token: 0x06039D99 RID: 236953 RVA: 0x01042688 File Offset: 0x01040888
 		public bool GetIsMultiBlock()
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1728,14 +1735,14 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return rollBlockGameplayInfo.MultiBlock;
 		}
 
-		// Token: 0x06043D45 RID: 277829 RVA: 0x0109DF9C File Offset: 0x0109C19C
+		// Token: 0x06039D9A RID: 236954 RVA: 0x010426EC File Offset: 0x010408EC
 		public bool IsCurrentIncId(int incId)
 		{
 			int? currentIncId = this.CurrentIncId;
 			return currentIncId.GetValueOrDefault() == incId & currentIncId != null;
 		}
 
-		// Token: 0x06043D46 RID: 277830 RVA: 0x0109DFC4 File Offset: 0x0109C1C4
+		// Token: 0x06039D9B RID: 236955 RVA: 0x01042714 File Offset: 0x01040914
 		private void OnGuideGroupOpening(EUiViewName viewName, int viewId)
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1752,7 +1759,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnGuideGroupFinished));
 		}
 
-		// Token: 0x06043D47 RID: 277831 RVA: 0x0109E040 File Offset: 0x0109C240
+		// Token: 0x06039D9C RID: 236956 RVA: 0x01042790 File Offset: 0x01040990
 		private void OnGuideGroupFinished(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.GuideTutorialView && viewName != EUiViewName.GuideTutorialPopView)
@@ -1776,7 +1783,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D48 RID: 277832 RVA: 0x0109E0E4 File Offset: 0x0109C2E4
+		// Token: 0x06039D9D RID: 236957 RVA: 0x01042834 File Offset: 0x01040A34
 		public int GetCurrentDifficulty()
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1793,7 +1800,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return rollBlockGameplayInfo.Difficulty;
 		}
 
-		// Token: 0x06043D49 RID: 277833 RVA: 0x0109E148 File Offset: 0x0109C348
+		// Token: 0x06039D9E RID: 236958 RVA: 0x01042898 File Offset: 0x01040A98
 		public int GetTotalDifficulty()
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1810,7 +1817,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return rollBlockGameplayInfo.TotalDifficulty;
 		}
 
-		// Token: 0x06043D4A RID: 277834 RVA: 0x0109E1AC File Offset: 0x0109C3AC
+		// Token: 0x06039D9F RID: 236959 RVA: 0x010428FC File Offset: 0x01040AFC
 		private void HandleGameplayReady()
 		{
 			RollBlockGameplayInfo info;
@@ -1855,7 +1862,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}, 0);
 		}
 
-		// Token: 0x06043D4B RID: 277835 RVA: 0x0109E25C File Offset: 0x0109C45C
+		// Token: 0x06039DA0 RID: 236960 RVA: 0x010429AC File Offset: 0x01040BAC
 		public void NotifyServerShowAllBlock()
 		{
 			RollBlockGameplayInfo rollBlockGameplayInfo;
@@ -1875,7 +1882,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D4C RID: 277836 RVA: 0x0109E318 File Offset: 0x0109C518
+		// Token: 0x06039DA1 RID: 236961 RVA: 0x01042A68 File Offset: 0x01040C68
 		public void UpdateRollBlockItem(RollBlockItemUpdateNotify notify)
 		{
 			long entityId = notify.EntityId;
@@ -1920,7 +1927,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			rbItemComponent.UpdateRollBlockItem(notify.Component);
 		}
 
-		// Token: 0x06043D4D RID: 277837 RVA: 0x0109E3FC File Offset: 0x0109C5FC
+		// Token: 0x06039DA2 RID: 236962 RVA: 0x01042B4C File Offset: 0x01040D4C
 		public void ExitOnOnlineModeChange()
 		{
 			if (this.OnlineCurrentIncId != null)
@@ -1931,8 +1938,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			EventSystem.Instance.Remove(EEventName.OnLeaveOnlineWorld, new Action(this.ExitOnOnlineModeChange));
 		}
 
-		// Token: 0x1700994A RID: 39242
-		// (get) Token: 0x06043D4E RID: 277838 RVA: 0x0109E43A File Offset: 0x0109C63A
+		// Token: 0x17006E36 RID: 28214
+		// (get) Token: 0x06039DA3 RID: 236963 RVA: 0x01042B8A File Offset: 0x01040D8A
 		public static RollBlockController Instance
 		{
 			get
@@ -1941,7 +1948,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D4F RID: 277839 RVA: 0x0109E441 File Offset: 0x0109C641
+		// Token: 0x06039DA4 RID: 236964 RVA: 0x01042B91 File Offset: 0x01040D91
 		public static RollBlockController GetOrCreateInstance()
 		{
 			if (RollBlockController._Instance == null)
@@ -1951,7 +1958,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return RollBlockController._Instance;
 		}
 
-		// Token: 0x06043D50 RID: 277840 RVA: 0x0109E455 File Offset: 0x0109C655
+		// Token: 0x06039DA5 RID: 236965 RVA: 0x01042BA5 File Offset: 0x01040DA5
 		public static bool CreateInstance()
 		{
 			if (RollBlockController._Instance != null)
@@ -1962,97 +1969,97 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return true;
 		}
 
-		// Token: 0x06043D51 RID: 277841 RVA: 0x0109E46B File Offset: 0x0109C66B
+		// Token: 0x06039DA6 RID: 236966 RVA: 0x01042BBB File Offset: 0x01040DBB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043D52 RID: 277842 RVA: 0x0109E46D File Offset: 0x0109C66D
+		// Token: 0x06039DA7 RID: 236967 RVA: 0x01042BBD File Offset: 0x01040DBD
 		public static void ResetStaticDefaultValue()
 		{
 			RollBlockController._Instance = null;
 		}
 
-		// Token: 0x06043D53 RID: 277843 RVA: 0x0109E475 File Offset: 0x0109C675
+		// Token: 0x06039DA8 RID: 236968 RVA: 0x01042BC5 File Offset: 0x01040DC5
 		static RollBlockController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RollBlockController.CreateStaticDefaultValue), new Action(RollBlockController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402370C RID: 145164
+		// Token: 0x0401E8FE RID: 125182
 		private const string COMMON_FORCE_FEEDBACK_PATH = "/Game/Aki/Character/Role/Common/Data/GamePadShake/CommonShake/FF_Common_Lv1.FF_Common_Lv1";
 
-		// Token: 0x0402370D RID: 145165
+		// Token: 0x0401E8FF RID: 125183
 		private readonly Dictionary<int, RollBlockGameplayInfo> OpenedGameplayInfo = new Dictionary<int, RollBlockGameplayInfo>();
 
-		// Token: 0x0402370E RID: 145166
+		// Token: 0x0401E900 RID: 125184
 		private readonly Dictionary<int, WaitEntityTask> WaitEntityTask = new Dictionary<int, WaitEntityTask>();
 
-		// Token: 0x0402370F RID: 145167
+		// Token: 0x0401E901 RID: 125185
 		private readonly Dictionary<int, Dictionary<Entity, Action>> NotLoadCompletedEntity = new Dictionary<int, Dictionary<Entity, Action>>();
 
-		// Token: 0x04023710 RID: 145168
+		// Token: 0x0401E902 RID: 125186
 		private bool IsMainController;
 
-		// Token: 0x04023711 RID: 145169
+		// Token: 0x0401E903 RID: 125187
 		private int? CurrentIncId;
 
-		// Token: 0x04023712 RID: 145170
+		// Token: 0x0401E904 RID: 125188
 		private int? OnlineCurrentIncId;
 
-		// Token: 0x04023713 RID: 145171
+		// Token: 0x0401E905 RID: 125189
 		private bool IsReseting;
 
-		// Token: 0x04023714 RID: 145172
+		// Token: 0x0401E906 RID: 125190
 		[Nullable(2)]
 		public BP_RollBlockGameplaySetting_C GameplaySetting;
 
-		// Token: 0x04023715 RID: 145173
+		// Token: 0x0401E907 RID: 125191
 		[Nullable(2)]
 		private string CurrentKey;
 
-		// Token: 0x04023716 RID: 145174
+		// Token: 0x0401E908 RID: 125192
 		private readonly HashSet<string> PressedKey = new HashSet<string>();
 
-		// Token: 0x04023717 RID: 145175
+		// Token: 0x0401E909 RID: 125193
 		private bool IsRequesting;
 
-		// Token: 0x04023718 RID: 145176
+		// Token: 0x0401E90A RID: 125194
 		private int MistakeInputCount;
 
-		// Token: 0x04023719 RID: 145177
+		// Token: 0x0401E90B RID: 125195
 		private int TotalInputCount;
 
-		// Token: 0x0402371A RID: 145178
+		// Token: 0x0401E90C RID: 125196
 		private readonly Dictionary<int, List<Action<float>>> PendingTickFunctions = new Dictionary<int, List<Action<float>>>();
 
-		// Token: 0x0402371B RID: 145179
+		// Token: 0x0401E90D RID: 125197
 		private bool IsOpeningGuide;
 
-		// Token: 0x0402371C RID: 145180
+		// Token: 0x0401E90E RID: 125198
 		[Nullable(2)]
 		private UKuroForceFeedbackEffect CommonForceFeedback;
 
-		// Token: 0x0402371D RID: 145181
+		// Token: 0x0401E90F RID: 125199
 		private RbGridDirection? InputDir;
 
-		// Token: 0x0402371E RID: 145182
+		// Token: 0x0401E910 RID: 125200
 		private Vector2D CurBirthEffectAreaWidth = Vector2D.Create();
 
-		// Token: 0x0402371F RID: 145183
+		// Token: 0x0401E911 RID: 125201
 		private Vector2D CurBirthEffectAreaHeight = Vector2D.Create();
 
-		// Token: 0x04023720 RID: 145184
+		// Token: 0x0401E912 RID: 125202
 		private readonly HashSet<RbBaseComponent> NeedShowEntities = new HashSet<RbBaseComponent>();
 
-		// Token: 0x04023721 RID: 145185
+		// Token: 0x0401E913 RID: 125203
 		[Nullable(2)]
 		private TimerHandle SliceBirthEffectTimerHandle;
 
-		// Token: 0x04023722 RID: 145186
+		// Token: 0x0401E914 RID: 125204
 		private int SliceBirthEffectIncId;
 
-		// Token: 0x04023723 RID: 145187
+		// Token: 0x0401E915 RID: 125205
 		[Nullable(2)]
 		private static RollBlockController _Instance;
 	}

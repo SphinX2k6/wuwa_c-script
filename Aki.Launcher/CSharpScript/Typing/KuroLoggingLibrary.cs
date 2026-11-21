@@ -12,7 +12,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void PromoteGlobalLogVerbosity_Internal(byte verbosity);
 
-		// Token: 0x0600021E RID: 542 RVA: 0x0000B2F0 File Offset: 0x000094F0
+		// Token: 0x0600021E RID: 542 RVA: 0x0000B328 File Offset: 0x00009528
 		public static void PromoteGlobalLogVerbosity(byte verbosity)
 		{
 			KuroLoggingLibrary.PromoteGlobalLogVerbosity_Internal(verbosity);
@@ -22,7 +22,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void ResetGlobalLogVerbosity_Internal();
 
-		// Token: 0x06000220 RID: 544 RVA: 0x0000B2F8 File Offset: 0x000094F8
+		// Token: 0x06000220 RID: 544 RVA: 0x0000B330 File Offset: 0x00009530
 		public static void ResetGlobalLogVerbosity()
 		{
 			KuroLoggingLibrary.ResetGlobalLogVerbosity_Internal();
@@ -32,7 +32,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetCategoryVerbosity_Internal(string categoryName, byte verbosity);
 
-		// Token: 0x06000222 RID: 546 RVA: 0x0000B2FF File Offset: 0x000094FF
+		// Token: 0x06000222 RID: 546 RVA: 0x0000B337 File Offset: 0x00009537
 		public static void SetCategoryVerbosity(string categoryName, byte verbosity)
 		{
 			KuroLoggingLibrary.SetCategoryVerbosity_Internal(categoryName, verbosity);
@@ -42,7 +42,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void RegisterTerminateDelegate_Internal();
 
-		// Token: 0x06000224 RID: 548 RVA: 0x0000B308 File Offset: 0x00009508
+		// Token: 0x06000224 RID: 548 RVA: 0x0000B340 File Offset: 0x00009540
 		public static void RegisterTerminateDelegate()
 		{
 			KuroLoggingLibrary.RegisterTerminateDelegate_Internal();
@@ -52,7 +52,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern string GetLogFilename_Internal();
 
-		// Token: 0x06000226 RID: 550 RVA: 0x0000B30F File Offset: 0x0000950F
+		// Token: 0x06000226 RID: 550 RVA: 0x0000B347 File Offset: 0x00009547
 		public static string GetLogFilename()
 		{
 			return KuroLoggingLibrary.GetLogFilename_Internal();

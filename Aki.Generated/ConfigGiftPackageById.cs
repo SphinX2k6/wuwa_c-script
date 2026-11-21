@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200039B RID: 923
+	// Token: 0x020003B1 RID: 945
 	public class ConfigGiftPackageById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060015A9 RID: 5545 RVA: 0x000D413F File Offset: 0x000D233F
+		// Token: 0x0600162D RID: 5677 RVA: 0x000DA893 File Offset: 0x000D8A93
 		static ConfigGiftPackageById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGiftPackageById.CreateStaticDefaultValue), new Action(ConfigGiftPackageById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060015AA RID: 5546 RVA: 0x000D4160 File Offset: 0x000D2360
+		// Token: 0x0600162E RID: 5678 RVA: 0x000DA8B4 File Offset: 0x000D8AB4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGiftPackageById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060015AB RID: 5547 RVA: 0x000D41DF File Offset: 0x000D23DF
+		// Token: 0x0600162F RID: 5679 RVA: 0x000DA933 File Offset: 0x000D8B33
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGiftPackageById.LogPair = null;
 			ConfigGiftPackageById.HandleId = 0;
 		}
 
-		// Token: 0x060015AC RID: 5548 RVA: 0x000D41ED File Offset: 0x000D23ED
+		// Token: 0x06001630 RID: 5680 RVA: 0x000DA941 File Offset: 0x000D8B41
 		public static void Init()
 		{
 			ConfigGiftPackageById.HandleId = ConfigCommon.InitDataStatement(ConfigGiftPackageById.HandleId, "db_giftpackage.db", "select BinData from `GiftPackage` where Id=?");
 		}
 
-		// Token: 0x060015AD RID: 5549 RVA: 0x000D4208 File Offset: 0x000D2408
+		// Token: 0x06001631 RID: 5681 RVA: 0x000DA95C File Offset: 0x000D8B5C
 		public static GiftPackage? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGiftPackageById.HandleId, ConfigGiftPackageById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GiftPackage?(rootAsGiftPackage);
 		}
 
-		// Token: 0x04001921 RID: 6433
+		// Token: 0x040019BB RID: 6587
 		private const string DB = "db_giftpackage.db";
 
-		// Token: 0x04001922 RID: 6434
+		// Token: 0x040019BC RID: 6588
 		private const string FILE = "l.礼包.xlsx";
 
-		// Token: 0x04001923 RID: 6435
+		// Token: 0x040019BD RID: 6589
 		private const string TABLE = "GiftPackage";
 
-		// Token: 0x04001924 RID: 6436
+		// Token: 0x040019BE RID: 6590
 		private const string COMMAND = "select BinData from `GiftPackage` where Id=?";
 
-		// Token: 0x04001925 RID: 6437
+		// Token: 0x040019BF RID: 6591
 		private const string KEY_PREFIX = "GiftPackageById";
 
-		// Token: 0x04001926 RID: 6438
+		// Token: 0x040019C0 RID: 6592
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001927 RID: 6439
+		// Token: 0x040019C1 RID: 6593
 		private static int HandleId;
 	}
 }

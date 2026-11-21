@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CA8 RID: 23720
+	// Token: 0x020062D9 RID: 25305
 	public enum TSpawnMonsterStartCondition : byte
 	{
-		// Token: 0x0400F548 RID: 62792
+		// Token: 0x0401028F RID: 66191
 		NONE,
-		// Token: 0x0400F549 RID: 62793
+		// Token: 0x04010290 RID: 66192
 		IImmediateStartCondition,
-		// Token: 0x0400F54A RID: 62794
+		// Token: 0x04010291 RID: 66193
 		ITriggerRangeStartCondition
 	}
 }

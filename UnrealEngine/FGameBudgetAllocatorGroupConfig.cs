@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001860 RID: 6240
+	// Token: 0x02000397 RID: 919
 	[UnrealObjectPath("/Script/KuroGameBudget.GameBudgetAllocatorGroupConfig")]
 	[UnrealStructLayout(208, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 208)]
 	public class FGameBudgetAllocatorGroupConfig : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06016F50 RID: 94032 RVA: 0x00217E42 File Offset: 0x00216042
+		// Token: 0x06005B24 RID: 23332 RVA: 0x00080BFE File Offset: 0x0007EDFE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGameBudgetAllocatorGroupConfig._ScriptStructPtr != 0) ? FGameBudgetAllocatorGroupConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameBudget.GameBudgetAllocatorGroupConfig", ref FGameBudgetAllocatorGroupConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17005C79 RID: 23673
-		// (get) Token: 0x06016F51 RID: 94033 RVA: 0x00217E66 File Offset: 0x00216066
-		// (set) Token: 0x06016F52 RID: 94034 RVA: 0x00217E7A File Offset: 0x0021607A
+		// Token: 0x17001201 RID: 4609
+		// (get) Token: 0x06005B25 RID: 23333 RVA: 0x00080C22 File Offset: 0x0007EE22
+		// (set) Token: 0x06005B26 RID: 23334 RVA: 0x00080C36 File Offset: 0x0007EE36
 		public unsafe FName GroupName
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C7A RID: 23674
-		// (get) Token: 0x06016F53 RID: 94035 RVA: 0x00217E8F File Offset: 0x0021608F
-		// (set) Token: 0x06016F54 RID: 94036 RVA: 0x00217E9F File Offset: 0x0021609F
+		// Token: 0x17001202 RID: 4610
+		// (get) Token: 0x06005B27 RID: 23335 RVA: 0x00080C4B File Offset: 0x0007EE4B
+		// (set) Token: 0x06005B28 RID: 23336 RVA: 0x00080C5B File Offset: 0x0007EE5B
 		public unsafe ESignificanceGroup SignificanceGroup
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C7B RID: 23675
-		// (get) Token: 0x06016F55 RID: 94037 RVA: 0x00217EB0 File Offset: 0x002160B0
-		// (set) Token: 0x06016F56 RID: 94038 RVA: 0x00217EC0 File Offset: 0x002160C0
+		// Token: 0x17001203 RID: 4611
+		// (get) Token: 0x06005B29 RID: 23337 RVA: 0x00080C6C File Offset: 0x0007EE6C
+		// (set) Token: 0x06005B2A RID: 23338 RVA: 0x00080C7C File Offset: 0x0007EE7C
 		public unsafe uint TickPriority
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C7C RID: 23676
-		// (get) Token: 0x06016F57 RID: 94039 RVA: 0x00217ED1 File Offset: 0x002160D1
-		// (set) Token: 0x06016F58 RID: 94040 RVA: 0x00217EE1 File Offset: 0x002160E1
+		// Token: 0x17001204 RID: 4612
+		// (get) Token: 0x06005B2B RID: 23339 RVA: 0x00080C8D File Offset: 0x0007EE8D
+		// (set) Token: 0x06005B2C RID: 23340 RVA: 0x00080C9D File Offset: 0x0007EE9D
 		public unsafe EDisableActorTickStrategy DisableActorTickStrategy
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C7D RID: 23677
-		// (get) Token: 0x06016F59 RID: 94041 RVA: 0x00217EF2 File Offset: 0x002160F2
-		// (set) Token: 0x06016F5A RID: 94042 RVA: 0x00217F02 File Offset: 0x00216102
+		// Token: 0x17001205 RID: 4613
+		// (get) Token: 0x06005B2D RID: 23341 RVA: 0x00080CAE File Offset: 0x0007EEAE
+		// (set) Token: 0x06005B2E RID: 23342 RVA: 0x00080CBE File Offset: 0x0007EEBE
 		public unsafe uint DisableActorTickDistance
 		{
 			get
@@ -91,72 +91,62 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016F5B RID: 94043 RVA: 0x00217F13 File Offset: 0x00216113
+		// Token: 0x06005B2F RID: 23343 RVA: 0x00080CCF File Offset: 0x0007EECF
 		public FGameBudgetAllocatorGroupConfig()
 		{
 		}
 
-		// Token: 0x06016F5C RID: 94044 RVA: 0x00217F1B File Offset: 0x0021611B
-		public FGameBudgetAllocatorGroupConfig(FName GroupName, ESignificanceGroup SignificanceGroup, uint TickPriority, EDisableActorTickStrategy DisableActorTickStrategy, uint DisableActorTickDistance)
-		{
-			this.GroupName = GroupName;
-			this.SignificanceGroup = SignificanceGroup;
-			this.TickPriority = TickPriority;
-			this.DisableActorTickStrategy = DisableActorTickStrategy;
-			this.DisableActorTickDistance = DisableActorTickDistance;
-		}
-
-		// Token: 0x06016F5D RID: 94045 RVA: 0x00217F48 File Offset: 0x00216148
+		// Token: 0x06005B30 RID: 23344 RVA: 0x00080CD7 File Offset: 0x0007EED7
 		protected override IntPtr GetUStructPtr()
 		{
 			return FGameBudgetAllocatorGroupConfig.StaticStruct();
 		}
 
-		// Token: 0x06016F5E RID: 94046 RVA: 0x00217F54 File Offset: 0x00216154
+		// Token: 0x06005B31 RID: 23345 RVA: 0x00080CE3 File Offset: 0x0007EEE3
 		[NullableContext(2)]
 		public FGameBudgetAllocatorGroupConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016F5F RID: 94047 RVA: 0x00217F5E File Offset: 0x0021615E
+		// Token: 0x06005B32 RID: 23346 RVA: 0x00080CED File Offset: 0x0007EEED
 		public FGameBudgetAllocatorGroupConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016F60 RID: 94048 RVA: 0x00217F69 File Offset: 0x00216169
+		// Token: 0x06005B33 RID: 23347 RVA: 0x00080CF8 File Offset: 0x0007EEF8
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FGameBudgetAllocatorGroupConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06016F61 RID: 94049 RVA: 0x00217F73 File Offset: 0x00216173
+		// Token: 0x06005B34 RID: 23348 RVA: 0x00080D02 File Offset: 0x0007EF02
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FGameBudgetAllocatorGroupConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400C7A5 RID: 51109
+		// Token: 0x0400260C RID: 9740
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameBudget.GameBudgetAllocatorGroupConfig";
 
-		// Token: 0x0400C7A6 RID: 51110
+		// Token: 0x0400260D RID: 9741
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400C7A7 RID: 51111
+		// Token: 0x0400260E RID: 9742
 		internal static int __PropertyOffset_GroupName;
 
-		// Token: 0x0400C7A8 RID: 51112
+		// Token: 0x0400260F RID: 9743
 		internal static int __PropertyOffset_SignificanceGroup;
 
-		// Token: 0x0400C7A9 RID: 51113
+		// Token: 0x04002610 RID: 9744
 		internal static int __PropertyOffset_TickPriority;
 
-		// Token: 0x0400C7AA RID: 51114
+		// Token: 0x04002611 RID: 9745
 		internal static int __PropertyOffset_DisableActorTickStrategy;
 
-		// Token: 0x0400C7AB RID: 51115
+		// Token: 0x04002612 RID: 9746
 		internal static int __PropertyOffset_DisableActorTickDistance;
 	}
 }

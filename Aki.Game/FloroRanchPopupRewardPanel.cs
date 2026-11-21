@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B98 RID: 7064
+// Token: 0x02001057 RID: 4183
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchPopupRewardPanel : UiPanelBase
 {
-	// Token: 0x0600D25A RID: 53850 RVA: 0x00304C98 File Offset: 0x00302E98
+	// Token: 0x0600A66B RID: 42603 RVA: 0x0030FD70 File Offset: 0x0030DF70
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,7 +26,7 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D25B RID: 53851 RVA: 0x00304D04 File Offset: 0x00302F04
+	// Token: 0x0600A66C RID: 42604 RVA: 0x0030FDDC File Offset: 0x0030DFDC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchPopupRewardPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -37,20 +37,20 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D25C RID: 53852 RVA: 0x00304D47 File Offset: 0x00302F47
+	// Token: 0x0600A66D RID: 42605 RVA: 0x0030FE1F File Offset: 0x0030E01F
 	protected override void OnStart()
 	{
 		this.TemplateRewardItem = base.GetItem(1);
 		this.TemplateRewardItem.SetUIActive(false);
 	}
 
-	// Token: 0x0600D25D RID: 53853 RVA: 0x00304D62 File Offset: 0x00302F62
+	// Token: 0x0600A66E RID: 42606 RVA: 0x0030FE3A File Offset: 0x0030E03A
 	protected override void OnBeforeShow()
 	{
 		this.TimerHandle = FloroRanchGamePlayModel.Instance.FloroRanchTimerSystem.Forever(new TTimerAction(this.OnTick), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600D25E RID: 53854 RVA: 0x00304D94 File Offset: 0x00302F94
+	// Token: 0x0600A66F RID: 42607 RVA: 0x0030FE6C File Offset: 0x0030E06C
 	private void OnTick(float deltaTime)
 	{
 		foreach (FloroRanchPopupRewardItem floroRanchPopupRewardItem in this.RewardItemSet)
@@ -59,7 +59,7 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D25F RID: 53855 RVA: 0x00304DE8 File Offset: 0x00302FE8
+	// Token: 0x0600A670 RID: 42608 RVA: 0x0030FEC0 File Offset: 0x0030E0C0
 	protected override void OnBeforeHide()
 	{
 		if (this.TimerHandle != null)
@@ -69,7 +69,7 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D260 RID: 53856 RVA: 0x00304E10 File Offset: 0x00303010
+	// Token: 0x0600A671 RID: 42609 RVA: 0x0030FEE8 File Offset: 0x0030E0E8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -85,32 +85,32 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		return <GetRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D261 RID: 53857 RVA: 0x00304E53 File Offset: 0x00303053
+	// Token: 0x0600A672 RID: 42610 RVA: 0x0030FF2B File Offset: 0x0030E12B
 	private void RecycleRewardItem(FloroRanchPopupRewardItem item)
 	{
 		this.RewardItemSet.Remove(item);
 		this.RewardItemPool.Add(item);
 	}
 
-	// Token: 0x0600D262 RID: 53858 RVA: 0x00304E6E File Offset: 0x0030306E
+	// Token: 0x0600A673 RID: 42611 RVA: 0x0030FF46 File Offset: 0x0030E146
 	public void BindCoinTargetPos(FVector vector)
 	{
 		this.CoinTargetPos = Vector.Create((double)vector.X, (double)vector.Y, (double)vector.Z);
 	}
 
-	// Token: 0x0600D263 RID: 53859 RVA: 0x00304E90 File Offset: 0x00303090
+	// Token: 0x0600A674 RID: 42612 RVA: 0x0030FF68 File Offset: 0x0030E168
 	public void BindCoinChangeCallBack(Action<long> callback)
 	{
 		this.CoinChangeCallBack = callback;
 	}
 
-	// Token: 0x0600D264 RID: 53860 RVA: 0x00304E99 File Offset: 0x00303099
+	// Token: 0x0600A675 RID: 42613 RVA: 0x0030FF71 File Offset: 0x0030E171
 	public void BindDiamondChangeCallBack(Action<long> callback)
 	{
 		this.DiamondChangeCallBack = callback;
 	}
 
-	// Token: 0x0600D265 RID: 53861 RVA: 0x00304EA4 File Offset: 0x003030A4
+	// Token: 0x0600A676 RID: 42614 RVA: 0x0030FF7C File Offset: 0x0030E17C
 	public UniTask ShowPopupReward(FloroRanchUiItemBase item, EFloroRanchPopupRewardType rewardType, long count)
 	{
 		FloroRanchPopupRewardPanel.<ShowPopupReward>d__20 <ShowPopupReward>d__;
@@ -124,7 +124,7 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		return <ShowPopupReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D266 RID: 53862 RVA: 0x00304F00 File Offset: 0x00303100
+	// Token: 0x0600A677 RID: 42615 RVA: 0x0030FFD8 File Offset: 0x0030E1D8
 	private UniTask ShowCoinReward(Vector startPoint, FloroRanchPopupRewardItem rewardItem, long count)
 	{
 		FloroRanchPopupRewardPanel.<ShowCoinReward>d__21 <ShowCoinReward>d__;
@@ -138,7 +138,7 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		return <ShowCoinReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D267 RID: 53863 RVA: 0x00304F5C File Offset: 0x0030315C
+	// Token: 0x0600A678 RID: 42616 RVA: 0x00310034 File Offset: 0x0030E234
 	private UniTask ShowDiamondReward(Vector startPoint, FloroRanchPopupRewardItem rewardItem, long count)
 	{
 		FloroRanchPopupRewardPanel.<ShowDiamondReward>d__22 <ShowDiamondReward>d__;
@@ -152,7 +152,7 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		return <ShowDiamondReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D268 RID: 53864 RVA: 0x00304FB8 File Offset: 0x003031B8
+	// Token: 0x0600A679 RID: 42617 RVA: 0x00310090 File Offset: 0x0030E290
 	private UniTask ShowSalaryReward(Vector startPoint, FloroRanchPopupRewardItem rewardItem, long count)
 	{
 		FloroRanchPopupRewardPanel.<ShowSalaryReward>d__23 <ShowSalaryReward>d__;
@@ -166,41 +166,41 @@ public class FloroRanchPopupRewardPanel : UiPanelBase
 		return <ShowSalaryReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04006070 RID: 24688
+	// Token: 0x0400613F RID: 24895
 	[Nullable(2)]
 	private Vector CoinTargetPos;
 
-	// Token: 0x04006071 RID: 24689
+	// Token: 0x04006140 RID: 24896
 	private readonly HashSet<FloroRanchPopupRewardItem> RewardItemSet = new HashSet<FloroRanchPopupRewardItem>();
 
-	// Token: 0x04006072 RID: 24690
+	// Token: 0x04006141 RID: 24897
 	private readonly List<FloroRanchPopupRewardItem> RewardItemPool = new List<FloroRanchPopupRewardItem>();
 
-	// Token: 0x04006073 RID: 24691
+	// Token: 0x04006142 RID: 24898
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04006074 RID: 24692
+	// Token: 0x04006143 RID: 24899
 	private UCurveFloat LerpCurve;
 
-	// Token: 0x04006075 RID: 24693
+	// Token: 0x04006144 RID: 24900
 	[Nullable(2)]
 	private UUIItem TemplateRewardItem;
 
-	// Token: 0x04006076 RID: 24694
+	// Token: 0x04006145 RID: 24901
 	private Action<long> CoinChangeCallBack;
 
-	// Token: 0x04006077 RID: 24695
+	// Token: 0x04006146 RID: 24902
 	private Action<long> DiamondChangeCallBack;
 
-	// Token: 0x0200812A RID: 33066
+	// Token: 0x020072B8 RID: 29368
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A28C RID: 172684
+		// Token: 0x040255C0 RID: 153024
 		public const int RewardRoot = 0;
 
-		// Token: 0x0402A28D RID: 172685
+		// Token: 0x040255C1 RID: 153025
 		public const int RewardTemplate = 1;
 	}
 }

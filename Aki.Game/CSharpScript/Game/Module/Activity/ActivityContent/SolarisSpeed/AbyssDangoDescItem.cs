@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060C8 RID: 24776
+	// Token: 0x02005046 RID: 20550
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 	})]
 	internal class AbyssDangoDescItem : GridProxyAbstract<IAbyssDescData>
 	{
-		// Token: 0x0603EA47 RID: 256583 RVA: 0x00F20D04 File Offset: 0x00F1EF04
+		// Token: 0x0603370B RID: 210699 RVA: 0x00E67AD4 File Offset: 0x00E65CD4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EA48 RID: 256584 RVA: 0x00F20D90 File Offset: 0x00F1EF90
+		// Token: 0x0603370C RID: 210700 RVA: 0x00E67B60 File Offset: 0x00E65D60
 		[NullableContext(1)]
 		public override void Refresh(IAbyssDescData data, bool isSelected, int gridIndex)
 		{
@@ -65,14 +65,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0200C313 RID: 49939
+		// Token: 0x0200ACFE RID: 44286
 		private enum EDescItem
 		{
-			// Token: 0x0403AE7B RID: 241275
+			// Token: 0x040357E3 RID: 219107
 			Bg,
-			// Token: 0x0403AE7C RID: 241276
+			// Token: 0x040357E4 RID: 219108
 			Name,
-			// Token: 0x0403AE7D RID: 241277
+			// Token: 0x040357E5 RID: 219109
 			NumText
 		}
 	}

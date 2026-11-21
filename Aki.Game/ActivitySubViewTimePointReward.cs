@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200151B RID: 5403
+// Token: 0x020009D3 RID: 2515
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewTimePointReward : ActivitySubViewBase
 {
-	// Token: 0x06009A0C RID: 39436 RVA: 0x00215474 File Offset: 0x00213674
+	// Token: 0x06006DEA RID: 28138 RVA: 0x0021F210 File Offset: 0x0021D410
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,13 +35,13 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009A0D RID: 39437 RVA: 0x00215540 File Offset: 0x00213740
+	// Token: 0x06006DEB RID: 28139 RVA: 0x0021F2DC File Offset: 0x0021D4DC
 	protected override void OnSetData()
 	{
 		this.ActivityTimePointRewardData = (this.ActivityBaseData as ActivityTimePointRewardData);
 	}
 
-	// Token: 0x06009A0E RID: 39438 RVA: 0x00215554 File Offset: 0x00213754
+	// Token: 0x06006DEC RID: 28140 RVA: 0x0021F2F0 File Offset: 0x0021D4F0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewTimePointReward.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009A0F RID: 39439 RVA: 0x00215598 File Offset: 0x00213798
+	// Token: 0x06006DED RID: 28141 RVA: 0x0021F334 File Offset: 0x0021D534
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityTimePointRewardData.LocalConfig;
@@ -73,19 +73,19 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A10 RID: 39440 RVA: 0x00215679 File Offset: 0x00213879
+	// Token: 0x06006DEE RID: 28142 RVA: 0x0021F415 File Offset: 0x0021D615
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06009A11 RID: 39441 RVA: 0x00215697 File Offset: 0x00213897
+	// Token: 0x06006DEF RID: 28143 RVA: 0x0021F433 File Offset: 0x0021D633
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06009A12 RID: 39442 RVA: 0x002156B5 File Offset: 0x002138B5
+	// Token: 0x06006DF0 RID: 28144 RVA: 0x0021F451 File Offset: 0x0021D651
 	[NullableContext(1)]
 	private TimePointRewardItem InitItem()
 	{
@@ -95,7 +95,7 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06009A13 RID: 39443 RVA: 0x002156D0 File Offset: 0x002138D0
+	// Token: 0x06006DF1 RID: 28145 RVA: 0x0021F46C File Offset: 0x0021D66C
 	protected override UniTask OnBeforeShowSelfAsync()
 	{
 		ActivitySubViewTimePointReward.<OnBeforeShowSelfAsync>d__12 <OnBeforeShowSelfAsync>d__;
@@ -106,7 +106,7 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		return <OnBeforeShowSelfAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009A14 RID: 39444 RVA: 0x00215714 File Offset: 0x00213914
+	// Token: 0x06006DF2 RID: 28146 RVA: 0x0021F4B0 File Offset: 0x0021D6B0
 	private UniTask RefreshRewardLayout()
 	{
 		ActivitySubViewTimePointReward.<RefreshRewardLayout>d__13 <RefreshRewardLayout>d__;
@@ -117,7 +117,7 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		return <RefreshRewardLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009A15 RID: 39445 RVA: 0x00215757 File Offset: 0x00213957
+	// Token: 0x06006DF3 RID: 28147 RVA: 0x0021F4F3 File Offset: 0x0021D6F3
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (this.ActivityBaseData.Id != id)
@@ -127,13 +127,13 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		this.RefreshRewardLayout();
 	}
 
-	// Token: 0x06009A16 RID: 39446 RVA: 0x0021576F File Offset: 0x0021396F
+	// Token: 0x06006DF4 RID: 28148 RVA: 0x0021F50B File Offset: 0x0021D70B
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06009A17 RID: 39447 RVA: 0x00215778 File Offset: 0x00213978
+	// Token: 0x06006DF5 RID: 28149 RVA: 0x0021F514 File Offset: 0x0021D714
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -146,19 +146,19 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009A18 RID: 39448 RVA: 0x002157B5 File Offset: 0x002139B5
+	// Token: 0x06006DF6 RID: 28150 RVA: 0x0021F551 File Offset: 0x0021D751
 	private void OnGetReward(int id)
 	{
 		ActivityTimePointRewardController.Instance.GetRewardById(this.ActivityTimePointRewardData.Id, id);
 	}
 
-	// Token: 0x040043CF RID: 17359
+	// Token: 0x04004475 RID: 17525
 	protected ActivityTimePointRewardData ActivityTimePointRewardData;
 
-	// Token: 0x040043D0 RID: 17360
+	// Token: 0x04004476 RID: 17526
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x040043D1 RID: 17361
+	// Token: 0x04004477 RID: 17527
 	[Nullable(new byte[]
 	{
 		2,
@@ -167,26 +167,26 @@ public class ActivitySubViewTimePointReward : ActivitySubViewBase
 	})]
 	private GenericLayout<TimePointRewardItem, TimePointRewardData> GridLayout;
 
-	// Token: 0x040043D2 RID: 17362
+	// Token: 0x04004478 RID: 17528
 	private UiPanelBase BgItem;
 
-	// Token: 0x02007B49 RID: 31561
+	// Token: 0x02006CD4 RID: 27860
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040288A9 RID: 166057
+		// Token: 0x04023BE4 RID: 146404
 		public const int TitleItem = 0;
 
-		// Token: 0x040288AA RID: 166058
+		// Token: 0x04023BE5 RID: 146405
 		public const int TextDesc = 1;
 
-		// Token: 0x040288AB RID: 166059
+		// Token: 0x04023BE6 RID: 146406
 		public const int Layout = 2;
 
-		// Token: 0x040288AC RID: 166060
+		// Token: 0x04023BE7 RID: 146407
 		public const int LayoutItem = 3;
 
-		// Token: 0x040288AD RID: 166061
+		// Token: 0x04023BE8 RID: 146408
 		public const int BgItem = 4;
 	}
 }

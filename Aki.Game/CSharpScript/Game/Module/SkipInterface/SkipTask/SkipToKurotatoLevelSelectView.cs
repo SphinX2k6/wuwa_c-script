@@ -8,10 +8,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BCF RID: 19407
+	// Token: 0x02003B79 RID: 15225
 	public class SkipToKurotatoLevelSelectView : SkipTask
 	{
-		// Token: 0x0603232D RID: 205613 RVA: 0x00BAA4C4 File Offset: 0x00BA86C4
+		// Token: 0x060270BE RID: 159934 RVA: 0x00AEE77C File Offset: 0x00AEC97C
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

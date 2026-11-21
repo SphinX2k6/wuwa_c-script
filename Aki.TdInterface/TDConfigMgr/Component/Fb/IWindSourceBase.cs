@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D8F RID: 3471
+	// Token: 0x02000E8B RID: 3723
 	public class IWindSourceBase
 	{
-		// Token: 0x06004EF2 RID: 20210 RVA: 0x000C3CCE File Offset: 0x000C1ECE
-		[NullableContext(1)]
+		// Token: 0x06005417 RID: 21527 RVA: 0x000CF51E File Offset: 0x000CD71E
 		public static IWindSourceBase Create(IWindSourceBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001991 RID: 6545
-		// (get) Token: 0x06004EF3 RID: 20211 RVA: 0x000C3CED File Offset: 0x000C1EED
+		// Token: 0x17001AFC RID: 6908
+		// (get) Token: 0x06005418 RID: 21528 RVA: 0x000CF53D File Offset: 0x000CD73D
 		public virtual EWindSourceType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D62 RID: 11618
+		// Token: 0x04003028 RID: 12328
 		private IWindSourceBase Instance;
 	}
 }

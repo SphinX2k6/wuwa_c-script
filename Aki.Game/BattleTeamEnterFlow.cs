@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02001BFB RID: 7163
+// Token: 0x020010BA RID: 4282
 [NullableContext(1)]
 [Nullable(0)]
 public class BattleTeamEnterFlow
 {
-	// Token: 0x0600D5B5 RID: 54709 RVA: 0x00315000 File Offset: 0x00313200
+	// Token: 0x0600A9C8 RID: 43464 RVA: 0x003202FC File Offset: 0x0031E4FC
 	public static void Execute(IBattleTeamEnterContext ctx)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -50,7 +50,7 @@ public class BattleTeamEnterFlow
 		}
 	}
 
-	// Token: 0x0600D5B6 RID: 54710 RVA: 0x00315090 File Offset: 0x00313290
+	// Token: 0x0600A9C9 RID: 43465 RVA: 0x0032038C File Offset: 0x0031E58C
 	private static void EnterAsLeader(IBattleTeamEnterContext ctx)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -100,7 +100,7 @@ public class BattleTeamEnterFlow
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(new ConfirmBoxDataNew(EConfirmBoxConfigId.MatchingTeamLackButNoEnter));
 	}
 
-	// Token: 0x0600D5B7 RID: 54711 RVA: 0x0031520C File Offset: 0x0031340C
+	// Token: 0x0600A9CA RID: 43466 RVA: 0x00320508 File Offset: 0x0031E708
 	private unsafe static void EnterAsMember()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -122,7 +122,7 @@ public class BattleTeamEnterFlow
 		InstanceDungeonEntranceController.Instance.MatchChangeReadyRequest(!isSelfReady);
 	}
 
-	// Token: 0x0600D5B8 RID: 54712 RVA: 0x003152E4 File Offset: 0x003134E4
+	// Token: 0x0600A9CB RID: 43467 RVA: 0x003205E0 File Offset: 0x0031E7E0
 	private static void EnterAsSolo(IBattleTeamEnterContext ctx)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -170,7 +170,7 @@ public class BattleTeamEnterFlow
 		}
 	}
 
-	// Token: 0x0600D5B9 RID: 54713 RVA: 0x00315400 File Offset: 0x00313600
+	// Token: 0x0600A9CC RID: 43468 RVA: 0x003206FC File Offset: 0x0031E8FC
 	private static void EnterAsTower()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -193,7 +193,7 @@ public class BattleTeamEnterFlow
 		TowerController.Instance.TowerStartRequest(TowerModel.Instance.CurrentSelectFloor, instance.OwnRoleConfigIdList.Item1, true);
 	}
 
-	// Token: 0x0600D5BA RID: 54714 RVA: 0x003154AC File Offset: 0x003136AC
+	// Token: 0x0600A9CD RID: 43469 RVA: 0x003207A8 File Offset: 0x0031E9A8
 	private static void EnterButtonSoloBegin()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -222,7 +222,7 @@ public class BattleTeamEnterFlow
 		InstanceDungeonController.Instance.PrewarTeamFightRequest(InstanceDungeonEntranceModel.Instance.InstanceId, item, InstanceDungeonEntranceModel.Instance.EntranceId, 0, InstanceDungeonEntranceModel.Instance.TransitionOption, TowerDefenseModel.Instance.GetProtocolPhantomIdList(item));
 	}
 
-	// Token: 0x0600D5BB RID: 54715 RVA: 0x00315588 File Offset: 0x00313788
+	// Token: 0x0600A9CE RID: 43470 RVA: 0x00320884 File Offset: 0x0031EA84
 	private static void TeamLeaderEnterMatchInstRequest()
 	{
 		Log instance = Log.Instance;

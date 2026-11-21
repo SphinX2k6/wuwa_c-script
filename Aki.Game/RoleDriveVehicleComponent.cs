@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200323C RID: 12860
+// Token: 0x020027AB RID: 10155
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 {
-	// Token: 0x0601BC03 RID: 113667 RVA: 0x007A52A4 File Offset: 0x007A34A4
+	// Token: 0x060197A5 RID: 104357 RVA: 0x007CDBB4 File Offset: 0x007CBDB4
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -26,7 +26,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		return true;
 	}
 
-	// Token: 0x0601BC04 RID: 113668 RVA: 0x007A5300 File Offset: 0x007A3500
+	// Token: 0x060197A6 RID: 104358 RVA: 0x007CDC10 File Offset: 0x007CBE10
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -42,7 +42,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		base.SetWaterEffect(false);
 	}
 
-	// Token: 0x0601BC05 RID: 113669 RVA: 0x007A5340 File Offset: 0x007A3540
+	// Token: 0x060197A7 RID: 104359 RVA: 0x007CDC50 File Offset: 0x007CBE50
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<ECharMoveState, ECharMoveState>(this.OnMoveStateChanged));
@@ -64,7 +64,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601BC06 RID: 113670 RVA: 0x007A540C File Offset: 0x007A360C
+	// Token: 0x060197A8 RID: 104360 RVA: 0x007CDD1C File Offset: 0x007CBF1C
 	protected override void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 		switch (info.ExitType)
@@ -99,7 +99,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601BC07 RID: 113671 RVA: 0x007A54FC File Offset: 0x007A36FC
+	// Token: 0x060197A9 RID: 104361 RVA: 0x007CDE0C File Offset: 0x007CC00C
 	protected void LeaveVehiclePerformStandUp(VehiclePassengerInfo info)
 	{
 		if (info.VehicleType == EVehicleType.Motorcycle)
@@ -125,7 +125,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.ActorComp.SetActorRotation(rotator.ToUeRotator(), "LeaveVehicle.StandUp", false);
 	}
 
-	// Token: 0x0601BC08 RID: 113672 RVA: 0x007A55E4 File Offset: 0x007A37E4
+	// Token: 0x060197AA RID: 104362 RVA: 0x007CDEF4 File Offset: 0x007CC0F4
 	protected void LeaveVehiclePerformStandUpMotorcycle(VehiclePassengerInfo info)
 	{
 		Entity vehicleEntity = info.VehicleEntity;
@@ -152,7 +152,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.AddMoveHandle = this.MoveComp.SetAddMoveWorld(new FVectorDouble?(this.TmpVector1.ToUeVector(false)), launchSpeedFadeTime, launchSpeedFadeCurve, new int?(this.AddMoveHandle), null, (launchSpeedFadeCurve == null) ? EVelocityCurveType.Concave : EVelocityCurveType.None, 0f, 1f);
 	}
 
-	// Token: 0x0601BC09 RID: 113673 RVA: 0x007A56F0 File Offset: 0x007A38F0
+	// Token: 0x060197AB RID: 104363 RVA: 0x007CE000 File Offset: 0x007CC200
 	protected UniTask JumpToAirAndParagliding(VehiclePassengerInfo info)
 	{
 		RoleDriveVehicleComponent.<JumpToAirAndParagliding>d__12 <JumpToAirAndParagliding>d__;
@@ -164,7 +164,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		return <JumpToAirAndParagliding>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601BC0A RID: 113674 RVA: 0x007A573C File Offset: 0x007A393C
+	// Token: 0x060197AC RID: 104364 RVA: 0x007CE04C File Offset: 0x007CC24C
 	protected void OnParaglidingDelayFinish(float deltaTime)
 	{
 		Entity entity = base.Entity;
@@ -203,7 +203,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		characterMoveComponent.TrySetGlide();
 	}
 
-	// Token: 0x0601BC0B RID: 113675 RVA: 0x007A57F4 File Offset: 0x007A39F4
+	// Token: 0x060197AD RID: 104365 RVA: 0x007CE104 File Offset: 0x007CC304
 	protected void GuaranteeBounceSkillEnd(float deltaTime)
 	{
 		Entity entity = base.Entity;
@@ -220,7 +220,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.RestoreSwimAndCollision();
 	}
 
-	// Token: 0x0601BC0C RID: 113676 RVA: 0x007A585C File Offset: 0x007A3A5C
+	// Token: 0x060197AE RID: 104366 RVA: 0x007CE16C File Offset: 0x007CC36C
 	protected void OnBounceSkillEnd(int entityId, int skillId)
 	{
 		if (skillId != 100035)
@@ -243,7 +243,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.RestoreSwimAndCollision();
 	}
 
-	// Token: 0x0601BC0D RID: 113677 RVA: 0x007A593C File Offset: 0x007A3B3C
+	// Token: 0x060197AF RID: 104367 RVA: 0x007CE24C File Offset: 0x007CC44C
 	protected void RestoreSwimAndCollision()
 	{
 		Entity entity = base.Entity;
@@ -264,7 +264,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.PlatformActorToIgnore = null;
 	}
 
-	// Token: 0x0601BC0E RID: 113678 RVA: 0x007A59A0 File Offset: 0x007A3BA0
+	// Token: 0x060197B0 RID: 104368 RVA: 0x007CE2B0 File Offset: 0x007CC4B0
 	protected override void ChangeCurrentState()
 	{
 		CharacterSkillComponent component = base.Entity.GetComponent<CharacterSkillComponent>();
@@ -293,7 +293,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		base.ChangeCurrentState();
 	}
 
-	// Token: 0x0601BC0F RID: 113679 RVA: 0x007A5A80 File Offset: 0x007A3C80
+	// Token: 0x060197B1 RID: 104369 RVA: 0x007CE390 File Offset: 0x007CC590
 	protected override void RestoreState()
 	{
 		base.RestoreState();
@@ -328,7 +328,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["角色.BaseRole.状态通用标识.驾驶载具"]));
 	}
 
-	// Token: 0x0601BC10 RID: 113680 RVA: 0x007A5B90 File Offset: 0x007A3D90
+	// Token: 0x060197B2 RID: 104370 RVA: 0x007CE4A0 File Offset: 0x007CC6A0
 	protected override void ListenAutoLeave()
 	{
 		base.ListenAutoLeave();
@@ -360,7 +360,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601BC11 RID: 113681 RVA: 0x007A5CB8 File Offset: 0x007A3EB8
+	// Token: 0x060197B3 RID: 104371 RVA: 0x007CE5C8 File Offset: 0x007CC7C8
 	protected override void RemoveListenAutoLeave()
 	{
 		base.RemoveListenAutoLeave();
@@ -391,13 +391,13 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601BC12 RID: 113682 RVA: 0x007A5DEC File Offset: 0x007A3FEC
+	// Token: 0x060197B4 RID: 104372 RVA: 0x007CE6FC File Offset: 0x007CC8FC
 	private bool CheckShield()
 	{
 		return FormationAttributeController.Instance.GetValue(EFormationAttributeId.MotorcycleShield) <= 0f;
 	}
 
-	// Token: 0x0601BC13 RID: 113683 RVA: 0x007A5E04 File Offset: 0x007A4004
+	// Token: 0x060197B5 RID: 104373 RVA: 0x007CE714 File Offset: 0x007CC914
 	private void OnCaughtTagChange(int tagId, bool tagExist)
 	{
 		if (!tagExist || base.VehicleInfo == null)
@@ -408,7 +408,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.TryLeaveAndDisableVehicle("RoleDriveVehicleComponent.OnCaughtTagChange", true);
 	}
 
-	// Token: 0x0601BC14 RID: 113684 RVA: 0x007A5E4C File Offset: 0x007A404C
+	// Token: 0x060197B6 RID: 104374 RVA: 0x007CE75C File Offset: 0x007CC95C
 	private void OnFrozenChange(bool isFrozen)
 	{
 		if (!this.CheckShield() || base.VehicleInfo == null || isFrozen)
@@ -419,7 +419,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.TryLeaveAndDisableVehicle("RoleDriveVehicleComponent.OnFrozenChange", true);
 	}
 
-	// Token: 0x0601BC15 RID: 113685 RVA: 0x007A5EA0 File Offset: 0x007A40A0
+	// Token: 0x060197B7 RID: 104375 RVA: 0x007CE7B0 File Offset: 0x007CC9B0
 	protected void OnCharBeHitAnim()
 	{
 		if (base.VehicleInfo == null)
@@ -435,7 +435,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.TryLeaveAndDisableVehicle("RoleDriveVehicleComponent.OnCharBeHitAnim", true);
 	}
 
-	// Token: 0x0601BC16 RID: 113686 RVA: 0x007A5F06 File Offset: 0x007A4106
+	// Token: 0x060197B8 RID: 104376 RVA: 0x007CE816 File Offset: 0x007CCA16
 	protected void OnRoleDead()
 	{
 		if (base.VehicleInfo == null)
@@ -445,7 +445,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.TryLeaveAndDisableVehicle("RoleDriveVehicleComponent.OnRoleDead", true);
 	}
 
-	// Token: 0x0601BC17 RID: 113687 RVA: 0x007A5F20 File Offset: 0x007A4120
+	// Token: 0x060197B9 RID: 104377 RVA: 0x007CE830 File Offset: 0x007CCA30
 	protected void TryLeaveAndDisableVehicle(string reason, bool atOnce = false)
 	{
 		if (base.VehicleInfo == null || base.VehicleInfo.VehicleType != EVehicleType.Motorcycle)
@@ -490,7 +490,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601BC18 RID: 113688 RVA: 0x007A603C File Offset: 0x007A423C
+	// Token: 0x060197BA RID: 104378 RVA: 0x007CE94C File Offset: 0x007CCB4C
 	protected void OnBanMotorTag(int tagId, bool tagExist)
 	{
 		if (base.VehicleEntity != null && tagExist)
@@ -504,7 +504,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601BC19 RID: 113689 RVA: 0x007A6088 File Offset: 0x007A4288
+	// Token: 0x060197BB RID: 104379 RVA: 0x007CE998 File Offset: 0x007CCB98
 	protected void OnForbidVehicleInUnopenedArea(bool forbid)
 	{
 		if (forbid)
@@ -529,7 +529,7 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		}
 	}
 
-	// Token: 0x0601BC1A RID: 113690 RVA: 0x007A60E2 File Offset: 0x007A42E2
+	// Token: 0x060197BC RID: 104380 RVA: 0x007CE9F2 File Offset: 0x007CCBF2
 	protected void ForceStopAddMove()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -540,13 +540,13 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 		this.AddMoveHandle = 0;
 	}
 
-	// Token: 0x0601BC1B RID: 113691 RVA: 0x007A6103 File Offset: 0x007A4303
+	// Token: 0x060197BD RID: 104381 RVA: 0x007CEA13 File Offset: 0x007CCC13
 	protected void OnMoveStateChanged(ECharMoveState oldMoveState, ECharMoveState newMoveState)
 	{
 		this.ForceStopAddMove();
 	}
 
-	// Token: 0x0601BC1C RID: 113692 RVA: 0x007A610C File Offset: 0x007A430C
+	// Token: 0x060197BE RID: 104382 RVA: 0x007CEA1C File Offset: 0x007CCC1C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -554,76 +554,101 @@ public class RoleDriveVehicleComponent : CharacterDriveVehicleComponent
 			return false;
 		}
 		RoleDriveVehicleComponent roleDriveVehicleComponent = (RoleDriveVehicleComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ParaglidingDelayHandle"))
+		if (roleDriveVehicleComponent.ParaglidingDelayHandle == null)
 		{
-			if (roleDriveVehicleComponent.ParaglidingDelayHandle == null)
-			{
-				this.ParaglidingDelayHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ParaglidingDelayHandle), "ParaglidingDelayHandle"))
-			{
-				return false;
-			}
+			this.ParaglidingDelayHandle = null;
 		}
-		if (base.CanResetComponentProperty("PlatformActorToIgnore"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ParaglidingDelayHandle), "ParaglidingDelayHandle"))
 		{
-			if (roleDriveVehicleComponent.PlatformActorToIgnore == null)
-			{
-				this.PlatformActorToIgnore = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.PlatformActorToIgnore), "PlatformActorToIgnore"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("GuaranteeBounceSkillEndHandle"))
+		if (roleDriveVehicleComponent.PlatformActorToIgnore == null)
 		{
-			if (roleDriveVehicleComponent.GuaranteeBounceSkillEndHandle == null)
-			{
-				this.GuaranteeBounceSkillEndHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.GuaranteeBounceSkillEndHandle), "GuaranteeBounceSkillEndHandle"))
-			{
-				return false;
-			}
+			this.PlatformActorToIgnore = null;
 		}
-		if (base.CanResetComponentProperty("AddMoveHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlatformActorToIgnore), "PlatformActorToIgnore"))
 		{
-			this.AddMoveHandle = roleDriveVehicleComponent.AddMoveHandle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SwimDelayHandle"))
+		if (roleDriveVehicleComponent.GuaranteeBounceSkillEndHandle == null)
 		{
-			if (roleDriveVehicleComponent.SwimDelayHandle == null)
-			{
-				this.SwimDelayHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.SwimDelayHandle), "SwimDelayHandle"))
-			{
-				return false;
-			}
+			this.GuaranteeBounceSkillEndHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GuaranteeBounceSkillEndHandle), "GuaranteeBounceSkillEndHandle"))
+		{
+			return false;
+		}
+		this.AddMoveHandle = roleDriveVehicleComponent.AddMoveHandle;
+		if (roleDriveVehicleComponent.SwimDelayHandle == null)
+		{
+			this.SwimDelayHandle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwimDelayHandle), "SwimDelayHandle"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DA9D RID: 55965
+	// Token: 0x1700289C RID: 10396
+	// (get) Token: 0x060197BF RID: 104383 RVA: 0x007CEAF4 File Offset: 0x007CCCF4
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700289D RID: 10397
+	// (get) Token: 0x060197C0 RID: 104384 RVA: 0x007CEAF7 File Offset: 0x007CCCF7
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700289E RID: 10398
+	// (get) Token: 0x060197C1 RID: 104385 RVA: 0x007CEAFA File Offset: 0x007CCCFA
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700289F RID: 10399
+	// (get) Token: 0x060197C2 RID: 104386 RVA: 0x007CEAFD File Offset: 0x007CCCFD
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF3C RID: 57148
 	private const float STAND_UP_EXIT_DELAY_TIME = 1700f;
 
-	// Token: 0x0400DA9E RID: 55966
+	// Token: 0x0400DF3D RID: 57149
 	[Nullable(2)]
 	protected TimerHandle ParaglidingDelayHandle;
 
-	// Token: 0x0400DA9F RID: 55967
+	// Token: 0x0400DF3E RID: 57150
 	[Nullable(2)]
 	protected AActor PlatformActorToIgnore;
 
-	// Token: 0x0400DAA0 RID: 55968
+	// Token: 0x0400DF3F RID: 57151
 	[Nullable(2)]
 	protected TimerHandle GuaranteeBounceSkillEndHandle;
 
-	// Token: 0x0400DAA1 RID: 55969
+	// Token: 0x0400DF40 RID: 57152
 	protected int AddMoveHandle;
 
-	// Token: 0x0400DAA2 RID: 55970
+	// Token: 0x0400DF41 RID: 57153
 	[Nullable(2)]
 	protected TimerHandle SwimDelayHandle;
 }

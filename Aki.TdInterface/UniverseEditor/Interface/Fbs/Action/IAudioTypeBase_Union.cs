@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061B8 RID: 25016
+	// Token: 0x02006826 RID: 26662
 	public enum IAudioTypeBase_Union : byte
 	{
-		// Token: 0x040106D7 RID: 67287
+		// Token: 0x040114E9 RID: 70889
 		NONE,
-		// Token: 0x040106D8 RID: 67288
+		// Token: 0x040114EA RID: 70890
 		IAudioTypeBase,
-		// Token: 0x040106D9 RID: 67289
+		// Token: 0x040114EB RID: 70891
 		IRoleSceneVoice
 	}
 }

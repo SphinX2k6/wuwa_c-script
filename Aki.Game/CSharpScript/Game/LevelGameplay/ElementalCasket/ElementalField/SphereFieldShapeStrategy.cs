@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EB0 RID: 28336
+	// Token: 0x02006030 RID: 24624
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SphereFieldShapeStrategy : BaseFieldShapeStrategy
 	{
-		// Token: 0x17009A93 RID: 39571
-		// (get) Token: 0x06045072 RID: 282738 RVA: 0x0110E800 File Offset: 0x0110CA00
+		// Token: 0x17006FCA RID: 28618
+		// (get) Token: 0x0603B213 RID: 242195 RVA: 0x010B88DC File Offset: 0x010B6ADC
 		public override ESceneItemElementalFieldShapeType ShapeType
 		{
 			get
@@ -20,14 +20,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06045073 RID: 282739 RVA: 0x0110E803 File Offset: 0x0110CA03
+		// Token: 0x0603B214 RID: 242196 RVA: 0x010B88DF File Offset: 0x010B6ADF
 		public SphereFieldShapeStrategy(ISceneItemElementalFieldShapeContext context, ISphereTriggerShape sphereShapeConfig) : base(context, sphereShapeConfig.Center)
 		{
 			this.Radius = sphereShapeConfig.Radius;
 		}
 
-		// Token: 0x17009A94 RID: 39572
-		// (get) Token: 0x06045074 RID: 282740 RVA: 0x0110E82F File Offset: 0x0110CA2F
+		// Token: 0x17006FCB RID: 28619
+		// (get) Token: 0x0603B215 RID: 242197 RVA: 0x010B890B File Offset: 0x010B6B0B
 		public override Action<UKuroFastCollisionShapeComponent> ApplyStaticConfig
 		{
 			get
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x17009A95 RID: 39573
-		// (get) Token: 0x06045075 RID: 282741 RVA: 0x0110E83D File Offset: 0x0110CA3D
+		// Token: 0x17006FCC RID: 28620
+		// (get) Token: 0x0603B216 RID: 242198 RVA: 0x010B8919 File Offset: 0x010B6B19
 		public override Func<ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>, ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>> FillSnapshot
 		{
 			get
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x04023EF6 RID: 147190
+		// Token: 0x0401F1A9 RID: 127401
 		private readonly Number Radius = 0;
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001305 RID: 4869
+	// Token: 0x02001372 RID: 4978
 	[NetMessage(EMessageId.SwitchRoleRequest)]
 	public sealed class SwitchRoleRequest : IMessage<SwitchRoleRequest>, IMessage, IEquatable<SwitchRoleRequest>, IDeepCloneable<SwitchRoleRequest>, IBufferMessage
 	{
-		// Token: 0x06019E16 RID: 106006 RVA: 0x003C2A60 File Offset: 0x003C0C60
+		// Token: 0x0601A826 RID: 108582 RVA: 0x003DCD19 File Offset: 0x003DAF19
 		[NullableContext(1)]
 		public static SwitchRoleRequest Create()
 		{
 			return new SwitchRoleRequest();
 		}
 
-		// Token: 0x17005745 RID: 22341
-		// (get) Token: 0x06019E17 RID: 106007 RVA: 0x003C2A67 File Offset: 0x003C0C67
+		// Token: 0x170059BF RID: 22975
+		// (get) Token: 0x0601A827 RID: 108583 RVA: 0x003DCD20 File Offset: 0x003DAF20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005746 RID: 22342
-		// (get) Token: 0x06019E18 RID: 106008 RVA: 0x003C2A6A File Offset: 0x003C0C6A
+		// Token: 0x170059C0 RID: 22976
+		// (get) Token: 0x0601A828 RID: 108584 RVA: 0x003DCD23 File Offset: 0x003DAF23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019E19 RID: 106009 RVA: 0x003C2A71 File Offset: 0x003C0C71
+		// Token: 0x0601A829 RID: 108585 RVA: 0x003DCD2A File Offset: 0x003DAF2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchRoleRequest()
 		{
 		}
 
-		// Token: 0x06019E1A RID: 106010 RVA: 0x003C2A7C File Offset: 0x003C0C7C
+		// Token: 0x0601A82A RID: 108586 RVA: 0x003DCD34 File Offset: 0x003DAF34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchRoleRequest(SwitchRoleRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06019E1B RID: 106011 RVA: 0x003C2AE0 File Offset: 0x003C0CE0
+		// Token: 0x0601A82B RID: 108587 RVA: 0x003DCD98 File Offset: 0x003DAF98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchRoleRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new SwitchRoleRequest(this);
 		}
 
-		// Token: 0x17005747 RID: 22343
-		// (get) Token: 0x06019E1C RID: 106012 RVA: 0x003C2AE8 File Offset: 0x003C0CE8
-		// (set) Token: 0x06019E1D RID: 106013 RVA: 0x003C2AF0 File Offset: 0x003C0CF0
+		// Token: 0x170059C1 RID: 22977
+		// (get) Token: 0x0601A82C RID: 108588 RVA: 0x003DCDA0 File Offset: 0x003DAFA0
+		// (set) Token: 0x0601A82D RID: 108589 RVA: 0x003DCDA8 File Offset: 0x003DAFA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005748 RID: 22344
-		// (get) Token: 0x06019E1E RID: 106014 RVA: 0x003C2AF9 File Offset: 0x003C0CF9
-		// (set) Token: 0x06019E1F RID: 106015 RVA: 0x003C2B01 File Offset: 0x003C0D01
+		// Token: 0x170059C2 RID: 22978
+		// (get) Token: 0x0601A82E RID: 108590 RVA: 0x003DCDB1 File Offset: 0x003DAFB1
+		// (set) Token: 0x0601A82F RID: 108591 RVA: 0x003DCDB9 File Offset: 0x003DAFB9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchRoleType SwitchType
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005749 RID: 22345
-		// (get) Token: 0x06019E20 RID: 106016 RVA: 0x003C2B0A File Offset: 0x003C0D0A
-		// (set) Token: 0x06019E21 RID: 106017 RVA: 0x003C2B12 File Offset: 0x003C0D12
+		// Token: 0x170059C3 RID: 22979
+		// (get) Token: 0x0601A830 RID: 108592 RVA: 0x003DCDC2 File Offset: 0x003DAFC2
+		// (set) Token: 0x0601A831 RID: 108593 RVA: 0x003DCDCA File Offset: 0x003DAFCA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool OnStageWithoutControl
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700574A RID: 22346
-		// (get) Token: 0x06019E22 RID: 106018 RVA: 0x003C2B1B File Offset: 0x003C0D1B
-		// (set) Token: 0x06019E23 RID: 106019 RVA: 0x003C2B23 File Offset: 0x003C0D23
+		// Token: 0x170059C4 RID: 22980
+		// (get) Token: 0x0601A832 RID: 108594 RVA: 0x003DCDD3 File Offset: 0x003DAFD3
+		// (set) Token: 0x0601A833 RID: 108595 RVA: 0x003DCDDB File Offset: 0x003DAFDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Transform Transform
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019E24 RID: 106020 RVA: 0x003C2B2C File Offset: 0x003C0D2C
+		// Token: 0x0601A834 RID: 108596 RVA: 0x003DCDE4 File Offset: 0x003DAFE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SwitchRoleRequest);
 		}
 
-		// Token: 0x06019E25 RID: 106021 RVA: 0x003C2B3C File Offset: 0x003C0D3C
+		// Token: 0x0601A835 RID: 108597 RVA: 0x003DCDF4 File Offset: 0x003DAFF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SwitchRoleRequest other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && this.SwitchType == other.SwitchType && this.OnStageWithoutControl == other.OnStageWithoutControl && object.Equals(this.Transform, other.Transform) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06019E26 RID: 106022 RVA: 0x003C2BAC File Offset: 0x003C0DAC
+		// Token: 0x0601A836 RID: 108598 RVA: 0x003DCE64 File Offset: 0x003DB064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06019E27 RID: 106023 RVA: 0x003C2C39 File Offset: 0x003C0E39
+		// Token: 0x0601A837 RID: 108599 RVA: 0x003DCEF1 File Offset: 0x003DB0F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06019E28 RID: 106024 RVA: 0x003C2C46 File Offset: 0x003C0E46
+		// Token: 0x0601A838 RID: 108600 RVA: 0x003DCEFE File Offset: 0x003DB0FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06019E29 RID: 106025 RVA: 0x003C2C50 File Offset: 0x003C0E50
+		// Token: 0x0601A839 RID: 108601 RVA: 0x003DCF08 File Offset: 0x003DB108
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.OnStageWithoutControl)
-			{
-				output.WriteRawTag(48);
-				output.WriteBool(this.OnStageWithoutControl);
-			}
 			if (this.RoleId != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.RoleId);
 			}
 			if (this.transform_ != null)
 			{
-				output.WriteRawTag(74);
+				output.WriteRawTag(58);
 				output.WriteMessage(this.Transform);
 			}
 			if (this.SwitchType != SwitchRoleType.SignleWorld)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(64);
 				output.WriteEnum((int)this.SwitchType);
+			}
+			if (this.OnStageWithoutControl)
+			{
+				output.WriteRawTag(112);
+				output.WriteBool(this.OnStageWithoutControl);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019E2A RID: 106026 RVA: 0x003C2CE4 File Offset: 0x003C0EE4
+		// Token: 0x0601A83A RID: 108602 RVA: 0x003DCF9C File Offset: 0x003DB19C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06019E2B RID: 106027 RVA: 0x003C2D60 File Offset: 0x003C0F60
+		// Token: 0x0601A83B RID: 108603 RVA: 0x003DD018 File Offset: 0x003DB218
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SwitchRoleRequest other)
@@ -290,7 +290,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06019E2C RID: 106028 RVA: 0x003C2DF0 File Offset: 0x003C0FF0
+		// Token: 0x0601A83C RID: 108604 RVA: 0x003DD0A8 File Offset: 0x003DB2A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -298,7 +298,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06019E2D RID: 106029 RVA: 0x003C2DFC File Offset: 0x003C0FFC
+		// Token: 0x0601A83D RID: 108605 RVA: 0x003DD0B4 File Offset: 0x003DB2B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -310,22 +310,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 64U)
+				if (num <= 58U)
 				{
-					if (num == 48U)
-					{
-						this.OnStageWithoutControl = input.ReadBool();
-						continue;
-					}
-					if (num == 64U)
+					if (num == 24U)
 					{
 						this.RoleId = input.ReadInt32();
 						continue;
 					}
-				}
-				else
-				{
-					if (num == 74U)
+					if (num == 58U)
 					{
 						if (this.transform_ == null)
 						{
@@ -334,9 +326,17 @@ namespace Aki.Protocol
 						input.ReadMessage(this.Transform);
 						continue;
 					}
-					if (num == 120U)
+				}
+				else
+				{
+					if (num == 64U)
 					{
 						this.SwitchType = (SwitchRoleType)input.ReadEnum();
+						continue;
+					}
+					if (num == 112U)
+					{
+						this.OnStageWithoutControl = input.ReadBool();
 						continue;
 					}
 				}
@@ -344,31 +344,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400974E RID: 38734
+		// Token: 0x04009B70 RID: 39792
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400974F RID: 38735
-		public const int RoleIdFieldNumber = 8;
+		// Token: 0x04009B71 RID: 39793
+		public const int RoleIdFieldNumber = 3;
 
-		// Token: 0x04009750 RID: 38736
+		// Token: 0x04009B72 RID: 39794
 		private int roleId_;
 
-		// Token: 0x04009751 RID: 38737
-		public const int SwitchTypeFieldNumber = 15;
+		// Token: 0x04009B73 RID: 39795
+		public const int SwitchTypeFieldNumber = 8;
 
-		// Token: 0x04009752 RID: 38738
+		// Token: 0x04009B74 RID: 39796
 		private SwitchRoleType switchType_;
 
-		// Token: 0x04009753 RID: 38739
-		public const int OnStageWithoutControlFieldNumber = 6;
+		// Token: 0x04009B75 RID: 39797
+		public const int OnStageWithoutControlFieldNumber = 14;
 
-		// Token: 0x04009754 RID: 38740
+		// Token: 0x04009B76 RID: 39798
 		private bool onStageWithoutControl_;
 
-		// Token: 0x04009755 RID: 38741
-		public const int TransformFieldNumber = 9;
+		// Token: 0x04009B77 RID: 39799
+		public const int TransformFieldNumber = 7;
 
-		// Token: 0x04009756 RID: 38742
+		// Token: 0x04009B78 RID: 39800
 		private Transform transform_;
 	}
 }

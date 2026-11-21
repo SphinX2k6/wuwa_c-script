@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002A79 RID: 10873
+// Token: 0x02001FF4 RID: 8180
 public class SkipTask
 {
-	// Token: 0x06016A2F RID: 92719 RVA: 0x005BC719 File Offset: 0x005BA919
+	// Token: 0x06014450 RID: 83024 RVA: 0x005E88A1 File Offset: 0x005E6AA1
 	public void Initialize()
 	{
 		this.OnAddEvents();
 		this.OnInitialize();
 	}
 
-	// Token: 0x06016A30 RID: 92720 RVA: 0x005BC727 File Offset: 0x005BA927
+	// Token: 0x06014451 RID: 83025 RVA: 0x005E88AF File Offset: 0x005E6AAF
 	public void Destroy()
 	{
 		this.Deactivate();
@@ -21,7 +21,7 @@ public class SkipTask
 		this.OnRemoveEvents();
 	}
 
-	// Token: 0x06016A31 RID: 92721 RVA: 0x005BC73C File Offset: 0x005BA93C
+	// Token: 0x06014452 RID: 83026 RVA: 0x005E88C4 File Offset: 0x005E6AC4
 	public void Run([Nullable(new byte[]
 	{
 		1,
@@ -37,7 +37,7 @@ public class SkipTask
 		this.Activate(data);
 	}
 
-	// Token: 0x06016A32 RID: 92722 RVA: 0x005BC784 File Offset: 0x005BA984
+	// Token: 0x06014453 RID: 83027 RVA: 0x005E890C File Offset: 0x005E6B0C
 	public UniTask<ESkipTaskFinishType> AsyncRun([Nullable(new byte[]
 	{
 		1,
@@ -53,13 +53,13 @@ public class SkipTask
 		return <AsyncRun>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016A33 RID: 92723 RVA: 0x005BC7CF File Offset: 0x005BA9CF
+	// Token: 0x06014454 RID: 83028 RVA: 0x005E8957 File Offset: 0x005E6B57
 	public bool GetIsRunning()
 	{
 		return this.IsRunning;
 	}
 
-	// Token: 0x06016A34 RID: 92724 RVA: 0x005BC7D8 File Offset: 0x005BA9D8
+	// Token: 0x06014455 RID: 83029 RVA: 0x005E8960 File Offset: 0x005E6B60
 	protected void Finish()
 	{
 		Log instance = Log.Instance;
@@ -76,7 +76,7 @@ public class SkipTask
 		this.Deactivate();
 	}
 
-	// Token: 0x06016A35 RID: 92725 RVA: 0x005BC83C File Offset: 0x005BAA3C
+	// Token: 0x06014456 RID: 83030 RVA: 0x005E89C4 File Offset: 0x005E6BC4
 	public void Stop()
 	{
 		Log instance = Log.Instance;
@@ -93,7 +93,7 @@ public class SkipTask
 		this.Deactivate();
 	}
 
-	// Token: 0x06016A36 RID: 92726 RVA: 0x005BC89D File Offset: 0x005BAA9D
+	// Token: 0x06014457 RID: 83031 RVA: 0x005E8A25 File Offset: 0x005E6C25
 	private void Activate([Nullable(new byte[]
 	{
 		1,
@@ -104,19 +104,19 @@ public class SkipTask
 		this.OnRun(data);
 	}
 
-	// Token: 0x06016A37 RID: 92727 RVA: 0x005BC8AD File Offset: 0x005BAAAD
+	// Token: 0x06014458 RID: 83032 RVA: 0x005E8A35 File Offset: 0x005E6C35
 	private void Deactivate()
 	{
 		this.IsRunning = false;
 		this.CustomPromise = null;
 	}
 
-	// Token: 0x06016A38 RID: 92728 RVA: 0x005BC8BD File Offset: 0x005BAABD
+	// Token: 0x06014459 RID: 83033 RVA: 0x005E8A45 File Offset: 0x005E6C45
 	protected virtual void OnInitialize()
 	{
 	}
 
-	// Token: 0x06016A39 RID: 92729 RVA: 0x005BC8BF File Offset: 0x005BAABF
+	// Token: 0x0601445A RID: 83034 RVA: 0x005E8A47 File Offset: 0x005E6C47
 	protected virtual void OnRun([Nullable(new byte[]
 	{
 		1,
@@ -125,35 +125,35 @@ public class SkipTask
 	{
 	}
 
-	// Token: 0x06016A3A RID: 92730 RVA: 0x005BC8C1 File Offset: 0x005BAAC1
+	// Token: 0x0601445B RID: 83035 RVA: 0x005E8A49 File Offset: 0x005E6C49
 	protected virtual void OnFinished()
 	{
 	}
 
-	// Token: 0x06016A3B RID: 92731 RVA: 0x005BC8C3 File Offset: 0x005BAAC3
+	// Token: 0x0601445C RID: 83036 RVA: 0x005E8A4B File Offset: 0x005E6C4B
 	protected virtual void OnStopped()
 	{
 	}
 
-	// Token: 0x06016A3C RID: 92732 RVA: 0x005BC8C5 File Offset: 0x005BAAC5
+	// Token: 0x0601445D RID: 83037 RVA: 0x005E8A4D File Offset: 0x005E6C4D
 	protected virtual void OnDestroyed()
 	{
 	}
 
-	// Token: 0x06016A3D RID: 92733 RVA: 0x005BC8C7 File Offset: 0x005BAAC7
+	// Token: 0x0601445E RID: 83038 RVA: 0x005E8A4F File Offset: 0x005E6C4F
 	protected virtual void OnAddEvents()
 	{
 	}
 
-	// Token: 0x06016A3E RID: 92734 RVA: 0x005BC8C9 File Offset: 0x005BAAC9
+	// Token: 0x0601445F RID: 83039 RVA: 0x005E8A51 File Offset: 0x005E6C51
 	protected virtual void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x0400A814 RID: 43028
+	// Token: 0x0400AC18 RID: 44056
 	private bool IsRunning;
 
-	// Token: 0x0400A815 RID: 43029
+	// Token: 0x0400AC19 RID: 44057
 	[Nullable(2)]
 	private CustomPromise<ESkipTaskFinishType> CustomPromise;
 }

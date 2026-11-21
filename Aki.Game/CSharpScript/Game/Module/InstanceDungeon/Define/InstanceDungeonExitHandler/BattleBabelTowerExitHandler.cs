@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058E6 RID: 22758
+	// Token: 0x020048BE RID: 18622
 	public class BattleBabelTowerExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039CFD RID: 236797 RVA: 0x00DBB6C7 File Offset: 0x00DB98C7
+		// Token: 0x0602EC20 RID: 191520 RVA: 0x00D0A61F File Offset: 0x00D0881F
 		public override bool Checker()
 		{
 			return BabelTowerModel.Instance.CheckInBattleBabelTower();
 		}
 
-		// Token: 0x06039CFE RID: 236798 RVA: 0x00DBB6D3 File Offset: 0x00DB98D3
+		// Token: 0x0602EC21 RID: 191521 RVA: 0x00D0A62B File Offset: 0x00D0882B
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

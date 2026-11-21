@@ -5,7 +5,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001382 RID: 4994
+// Token: 0x02000836 RID: 2102
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetailInfo>
 {
-	// Token: 0x06008BE6 RID: 35814 RVA: 0x001DEE38 File Offset: 0x001DD038
+	// Token: 0x06005F81 RID: 24449 RVA: 0x001E7C8C File Offset: 0x001E5E8C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		};
 	}
 
-	// Token: 0x06008BE7 RID: 35815 RVA: 0x001DEF7E File Offset: 0x001DD17E
+	// Token: 0x06005F82 RID: 24450 RVA: 0x001E7DD2 File Offset: 0x001E5FD2
 	public override void Refresh(MowingTowerLevelDetailInfo data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -49,7 +49,7 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		this.RefreshLevelDesc(data);
 	}
 
-	// Token: 0x06008BE8 RID: 35816 RVA: 0x001DEFAC File Offset: 0x001DD1AC
+	// Token: 0x06005F83 RID: 24451 RVA: 0x001E7E00 File Offset: 0x001E6000
 	private void RefreshTexture(MowingTowerLevelDetailInfo data)
 	{
 		bool unLockState = data.GetUnLockState();
@@ -166,7 +166,7 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		}
 	}
 
-	// Token: 0x06008BE9 RID: 35817 RVA: 0x001DF1D0 File Offset: 0x001DD3D0
+	// Token: 0x06005F84 RID: 24452 RVA: 0x001E8024 File Offset: 0x001E6224
 	private void RefreshLockState(MowingTowerLevelDetailInfo data)
 	{
 		bool unLockState = data.GetUnLockState();
@@ -174,7 +174,7 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		base.GetItem(7).SetUIActive(unLockState);
 	}
 
-	// Token: 0x06008BEA RID: 35818 RVA: 0x001DF204 File Offset: 0x001DD404
+	// Token: 0x06005F85 RID: 24453 RVA: 0x001E8058 File Offset: 0x001E6258
 	private void RefreshScore(MowingTowerLevelDetailInfo data)
 	{
 		if (data.GetUnLockState())
@@ -189,7 +189,7 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		}
 	}
 
-	// Token: 0x06008BEB RID: 35819 RVA: 0x001DF260 File Offset: 0x001DD460
+	// Token: 0x06005F86 RID: 24454 RVA: 0x001E80B4 File Offset: 0x001E62B4
 	private void RefreshUnlockTime(MowingTowerLevelDetailInfo data)
 	{
 		if (!data.GetUnLockState())
@@ -203,13 +203,13 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		}
 	}
 
-	// Token: 0x06008BEC RID: 35820 RVA: 0x001DF2D3 File Offset: 0x001DD4D3
+	// Token: 0x06005F87 RID: 24455 RVA: 0x001E8127 File Offset: 0x001E6327
 	private void RefreshLevelDesc(MowingTowerLevelDetailInfo data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), data.GetLevelDesc(), Array.Empty<object>());
 	}
 
-	// Token: 0x06008BED RID: 35821 RVA: 0x001DF2F4 File Offset: 0x001DD4F4
+	// Token: 0x06005F88 RID: 24456 RVA: 0x001E8148 File Offset: 0x001E6348
 	private void OnClickButton()
 	{
 		if (this.CurrentData == null || !this.CurrentData.GetUnLockState())
@@ -222,54 +222,54 @@ public class MowingTowerMainLevelItem : GridProxyAbstract<MowingTowerLevelDetail
 		EventSystem.Instance.Emit<int>(EEventName.ChangeMowingTowerMainView, 1);
 	}
 
-	// Token: 0x06008BEE RID: 35822 RVA: 0x001DF361 File Offset: 0x001DD561
+	// Token: 0x06005F89 RID: 24457 RVA: 0x001E81B5 File Offset: 0x001E63B5
 	public bool GetCurrentIsFinish()
 	{
 		return this.CurrentData != null && this.CurrentData.GetScore() > 0;
 	}
 
-	// Token: 0x04003E08 RID: 15880
+	// Token: 0x04003EA0 RID: 16032
 	[Nullable(2)]
 	private MowingTowerLevelDetailInfo CurrentData;
 
-	// Token: 0x020079F6 RID: 31222
+	// Token: 0x02006B80 RID: 27520
 	[NullableContext(0)]
 	private static class EComponent
 	{
-		// Token: 0x04028230 RID: 164400
+		// Token: 0x0402355D RID: 144733
 		public const int Button = 0;
 
-		// Token: 0x04028231 RID: 164401
+		// Token: 0x0402355E RID: 144734
 		public const int BgItem = 1;
 
-		// Token: 0x04028232 RID: 164402
+		// Token: 0x0402355F RID: 144735
 		public const int NormalTexture = 2;
 
-		// Token: 0x04028233 RID: 164403
+		// Token: 0x04023560 RID: 144736
 		public const int LockTexture = 3;
 
-		// Token: 0x04028234 RID: 164404
+		// Token: 0x04023561 RID: 144737
 		public const int SingleItem = 4;
 
-		// Token: 0x04028235 RID: 164405
+		// Token: 0x04023562 RID: 144738
 		public const int DoubleItem = 5;
 
-		// Token: 0x04028236 RID: 164406
+		// Token: 0x04023563 RID: 144739
 		public const int LevelText = 6;
 
-		// Token: 0x04028237 RID: 164407
+		// Token: 0x04023564 RID: 144740
 		public const int ScoreItem = 7;
 
-		// Token: 0x04028238 RID: 164408
+		// Token: 0x04023565 RID: 144741
 		public const int ScoreText = 8;
 
-		// Token: 0x04028239 RID: 164409
+		// Token: 0x04023566 RID: 144742
 		public const int NoneScoreItem = 9;
 
-		// Token: 0x0402823A RID: 164410
+		// Token: 0x04023567 RID: 144743
 		public const int LockScoreItem = 10;
 
-		// Token: 0x0402823B RID: 164411
+		// Token: 0x04023568 RID: 144744
 		public const int LockScoreText = 11;
 	}
 }

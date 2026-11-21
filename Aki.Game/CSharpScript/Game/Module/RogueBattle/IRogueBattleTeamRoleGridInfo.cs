@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EC7 RID: 20167
+	// Token: 0x02003E90 RID: 16016
 	[NullableContext(1)]
 	public interface IRogueBattleTeamRoleGridInfo
 	{
-		// Token: 0x17007EF1 RID: 32497
-		// (get) Token: 0x06033C73 RID: 212083
-		// (set) Token: 0x06033C74 RID: 212084
+		// Token: 0x170052A1 RID: 21153
+		// (get) Token: 0x06028ADE RID: 166622
+		// (set) Token: 0x06028ADF RID: 166623
 		RoleDataBase RoleData { get; set; }
 
-		// Token: 0x17007EF2 RID: 32498
-		// (get) Token: 0x06033C75 RID: 212085
-		// (set) Token: 0x06033C76 RID: 212086
+		// Token: 0x170052A2 RID: 21154
+		// (get) Token: 0x06028AE0 RID: 166624
+		// (set) Token: 0x06028AE1 RID: 166625
 		int RoleStarLv { get; set; }
 
-		// Token: 0x17007EF3 RID: 32499
-		// (get) Token: 0x06033C77 RID: 212087
-		// (set) Token: 0x06033C78 RID: 212088
+		// Token: 0x170052A3 RID: 21155
+		// (get) Token: 0x06028AE2 RID: 166626
+		// (set) Token: 0x06028AE3 RID: 166627
 		int FormationIndex { get; set; }
 
-		// Token: 0x17007EF4 RID: 32500
-		// (get) Token: 0x06033C79 RID: 212089
-		// (set) Token: 0x06033C7A RID: 212090
+		// Token: 0x170052A4 RID: 21156
+		// (get) Token: 0x06028AE4 RID: 166628
+		// (set) Token: 0x06028AE5 RID: 166629
 		bool IsLinkOn { get; set; }
 	}
 }

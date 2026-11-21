@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200166D RID: 5741
+	// Token: 0x020016E9 RID: 5865
 	public enum WorldEnterPermission
 	{
-		// Token: 0x0400C1A2 RID: 49570
+		// Token: 0x0400C6CB RID: 50891
 		[OriginalName("ConfirmJoin")]
 		ConfirmJoin,
-		// Token: 0x0400C1A3 RID: 49571
+		// Token: 0x0400C6CC RID: 50892
 		[OriginalName("DirectJoin")]
 		DirectJoin,
-		// Token: 0x0400C1A4 RID: 49572
+		// Token: 0x0400C6CD RID: 50893
 		[OriginalName("ForbidJoin")]
 		ForbidJoin,
-		// Token: 0x0400C1A5 RID: 49573
+		// Token: 0x0400C6CE RID: 50894
 		[OriginalName("OnlyFriendJoin")]
 		OnlyFriendJoin
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E6D RID: 20077
+	// Token: 0x02003E36 RID: 15926
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleMapRoleAttributeBuffsItem : UiPanelBase
 	{
-		// Token: 0x06033B07 RID: 211719 RVA: 0x00C1ACEC File Offset: 0x00C18EEC
+		// Token: 0x06028972 RID: 166258 RVA: 0x00B64214 File Offset: 0x00B62414
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,13 +25,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B08 RID: 211720 RVA: 0x00C1AD5C File Offset: 0x00C18F5C
+		// Token: 0x06028973 RID: 166259 RVA: 0x00B64284 File Offset: 0x00B62484
 		protected override void OnStart()
 		{
 			this.BuffsLayout = new GenericLayout<RougeBattleAttributeBuffItem, int>(base.GetGridLayout(1), new Func<RougeBattleAttributeBuffItem>(this.CreateElement), null, false, true);
 		}
 
-		// Token: 0x06033B09 RID: 211721 RVA: 0x00C1AD7F File Offset: 0x00C18F7F
+		// Token: 0x06028974 RID: 166260 RVA: 0x00B642A7 File Offset: 0x00B624A7
 		private RougeBattleAttributeBuffItem CreateElement()
 		{
 			return new RougeBattleAttributeBuffItem
@@ -41,13 +40,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B0A RID: 211722 RVA: 0x00C1AD98 File Offset: 0x00C18F98
+		// Token: 0x06028975 RID: 166261 RVA: 0x00B642C0 File Offset: 0x00B624C0
 		protected override void OnBeforeDestroy()
 		{
 			this.BuffsLayout = null;
 		}
 
-		// Token: 0x06033B0B RID: 211723 RVA: 0x00C1ADA4 File Offset: 0x00C18FA4
+		// Token: 0x06028976 RID: 166262 RVA: 0x00B642CC File Offset: 0x00B624CC
 		public void Refresh(int roleId)
 		{
 			this.RoleId = roleId;
@@ -72,12 +71,12 @@ namespace CSharpScript.Game.Module.RogueBattle
 			GenericLayout<RougeBattleAttributeBuffItem, int> buffsLayout = this.BuffsLayout;
 			if (buffsLayout != null)
 			{
-				buffsLayout.RefreshByData(roleAffixs.ToList<int>(), null, false);
+				buffsLayout.RefreshByData(roleAffixs, null, false);
 			}
 			this.BuffList = new List<int>(roleAffixs);
 		}
 
-		// Token: 0x06033B0C RID: 211724 RVA: 0x00C1AE4C File Offset: 0x00C1904C
+		// Token: 0x06028977 RID: 166263 RVA: 0x00B64370 File Offset: 0x00B62570
 		private void OnClickBuff(int buffId)
 		{
 			RogueBattleRoleAffixDetailOpenParam param = new RogueBattleRoleAffixDetailOpenParam
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			UiManager.Instance.OpenView(EUiViewName.RogueBattleRoleAffixDetailView, param, null);
 		}
 
-		// Token: 0x0401B6D7 RID: 112343
+		// Token: 0x040160AA RID: 90282
 		[Nullable(new byte[]
 		{
 			2,
@@ -97,10 +96,10 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RougeBattleAttributeBuffItem, int> BuffsLayout;
 
-		// Token: 0x0401B6D8 RID: 112344
+		// Token: 0x040160AB RID: 90283
 		private List<int> BuffList = new List<int>();
 
-		// Token: 0x0401B6D9 RID: 112345
+		// Token: 0x040160AC RID: 90284
 		private int RoleId;
 	}
 }

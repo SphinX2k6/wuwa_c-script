@@ -5,16 +5,17 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.Platform;
+using CSharpScript.Launcher.Ui.HotFix;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x020025E6 RID: 9702
+// Token: 0x02001AD1 RID: 6865
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PlatformController : ControllerBase
 {
-	// Token: 0x06013BA1 RID: 80801 RVA: 0x004F26AA File Offset: 0x004F08AA
+	// Token: 0x06011083 RID: 69763 RVA: 0x005013DA File Offset: 0x004FF5DA
 	protected override bool OnInit()
 	{
 		this.ControlScreenSaver(false);
@@ -23,26 +24,26 @@ public class PlatformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013BA2 RID: 80802 RVA: 0x004F26C0 File Offset: 0x004F08C0
+	// Token: 0x06011084 RID: 69764 RVA: 0x005013F0 File Offset: 0x004FF5F0
 	protected override bool OnClear()
 	{
 		this.UnBindInput();
 		return true;
 	}
 
-	// Token: 0x06013BA3 RID: 80803 RVA: 0x004F26C9 File Offset: 0x004F08C9
+	// Token: 0x06011085 RID: 69765 RVA: 0x005013F9 File Offset: 0x004FF5F9
 	private void BindInput()
 	{
 		InputDistributeController.Instance.BindAxis("MouseMove", new TInputHandle<float>(this.OnMouseAxisInput));
 	}
 
-	// Token: 0x06013BA4 RID: 80804 RVA: 0x004F26E6 File Offset: 0x004F08E6
+	// Token: 0x06011086 RID: 69766 RVA: 0x00501416 File Offset: 0x004FF616
 	private void UnBindInput()
 	{
 		InputDistributeController.Instance.UnBindAxis("MouseMove", new TInputHandle<float>(this.OnMouseAxisInput));
 	}
 
-	// Token: 0x06013BA5 RID: 80805 RVA: 0x004F2703 File Offset: 0x004F0903
+	// Token: 0x06011087 RID: 69767 RVA: 0x00501433 File Offset: 0x004FF633
 	private void OnMouseAxisInput(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f)
@@ -60,7 +61,7 @@ public class PlatformController : ControllerBase
 		Info.Instance.SwitchInputControllerType(EInputControllerType.Keyboard, "MouseAxisInput");
 	}
 
-	// Token: 0x06013BA6 RID: 80806 RVA: 0x004F2738 File Offset: 0x004F0938
+	// Token: 0x06011088 RID: 69768 RVA: 0x00501468 File Offset: 0x004FF668
 	private void InitDeviceInfo()
 	{
 		if (!Info.Instance.IsPcPlatform())
@@ -69,7 +70,7 @@ public class PlatformController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013BA7 RID: 80807 RVA: 0x004F2758 File Offset: 0x004F0958
+	// Token: 0x06011089 RID: 69769 RVA: 0x00501488 File Offset: 0x004FF688
 	public void ControlScreenSaver(bool state)
 	{
 		Log instance = Log.Instance;
@@ -81,7 +82,7 @@ public class PlatformController : ControllerBase
 		UKismetSystemLibrary.ControlScreensaver(state);
 	}
 
-	// Token: 0x06013BA8 RID: 80808 RVA: 0x004F279C File Offset: 0x004F099C
+	// Token: 0x0601108A RID: 69770 RVA: 0x005014CC File Offset: 0x004FF6CC
 	public unsafe void SendClientBasicInfo()
 	{
 		ClientBasicInfoRequest clientBasicInfoRequest = new ClientBasicInfoRequest();
@@ -104,7 +105,7 @@ public class PlatformController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013BA9 RID: 80809 RVA: 0x004F2894 File Offset: 0x004F0A94
+	// Token: 0x0601108B RID: 69771 RVA: 0x005015C4 File Offset: 0x004FF7C4
 	public ClientBasicInfo PackageClientBasicInfo()
 	{
 		ClientBasicInfo clientBasicInfo = new ClientBasicInfo();
@@ -137,11 +138,17 @@ public class PlatformController : ControllerBase
 		clientBasicInfo.DeviceInfo = (LoginModel.Instance.DeviceInfo() ?? string.Empty);
 		clientBasicInfo.DriverDate = (LoginModel.Instance.DriverDate() ?? string.Empty);
 		clientBasicInfo.ClientVersion = BaseConfigController.Instance.GetVersionString();
+		int localResourceQualityTier = (int)HotFixManager.LocalResourceQualityTier;
+		if (localResourceQualityTier == 0)
+		{
+			localResourceQualityTier = (int)HotFixManager.GetLocalResourceQualityTier();
+		}
+		clientBasicInfo.QualityVersion = localResourceQualityTier;
 		return clientBasicInfo;
 	}
 
-	// Token: 0x1700194C RID: 6476
-	// (get) Token: 0x06013BAA RID: 80810 RVA: 0x004F2A39 File Offset: 0x004F0C39
+	// Token: 0x17001984 RID: 6532
+	// (get) Token: 0x0601108C RID: 69772 RVA: 0x00501783 File Offset: 0x004FF983
 	public static PlatformController Instance
 	{
 		get
@@ -150,7 +157,7 @@ public class PlatformController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013BAB RID: 80811 RVA: 0x004F2A40 File Offset: 0x004F0C40
+	// Token: 0x0601108D RID: 69773 RVA: 0x0050178A File Offset: 0x004FF98A
 	public static PlatformController GetOrCreateInstance()
 	{
 		if (PlatformController._Instance == null)
@@ -160,7 +167,7 @@ public class PlatformController : ControllerBase
 		return PlatformController._Instance;
 	}
 
-	// Token: 0x06013BAC RID: 80812 RVA: 0x004F2A54 File Offset: 0x004F0C54
+	// Token: 0x0601108E RID: 69774 RVA: 0x0050179E File Offset: 0x004FF99E
 	public static bool CreateInstance()
 	{
 		if (PlatformController._Instance != null)
@@ -171,24 +178,24 @@ public class PlatformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013BAD RID: 80813 RVA: 0x004F2A6A File Offset: 0x004F0C6A
+	// Token: 0x0601108F RID: 69775 RVA: 0x005017B4 File Offset: 0x004FF9B4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013BAE RID: 80814 RVA: 0x004F2A6C File Offset: 0x004F0C6C
+	// Token: 0x06011090 RID: 69776 RVA: 0x005017B6 File Offset: 0x004FF9B6
 	public static void ResetStaticDefaultValue()
 	{
 		PlatformController._Instance = null;
 	}
 
-	// Token: 0x06013BAF RID: 80815 RVA: 0x004F2A74 File Offset: 0x004F0C74
+	// Token: 0x06011091 RID: 69777 RVA: 0x005017BE File Offset: 0x004FF9BE
 	static PlatformController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PlatformController.CreateStaticDefaultValue), new Action(PlatformController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400949F RID: 38047
+	// Token: 0x040095F6 RID: 38390
 	[Nullable(2)]
 	private static PlatformController _Instance;
 }

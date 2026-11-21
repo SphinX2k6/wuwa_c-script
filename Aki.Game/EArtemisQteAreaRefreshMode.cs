@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020010F9 RID: 4345
+// Token: 0x020005AD RID: 1453
 public enum EArtemisQteAreaRefreshMode
 {
-	// Token: 0x04003480 RID: 13440
+	// Token: 0x04003519 RID: 13593
 	Never,
-	// Token: 0x04003481 RID: 13441
+	// Token: 0x0400351A RID: 13594
 	Any,
-	// Token: 0x04003482 RID: 13442
+	// Token: 0x0400351B RID: 13595
 	All
 }

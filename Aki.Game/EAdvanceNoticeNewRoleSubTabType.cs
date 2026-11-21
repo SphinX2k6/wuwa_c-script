@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020010C9 RID: 4297
+// Token: 0x0200057D RID: 1405
 public enum EAdvanceNoticeNewRoleSubTabType
 {
-	// Token: 0x04003401 RID: 13313
+	// Token: 0x0400349A RID: 13466
 	Role = 1,
-	// Token: 0x04003402 RID: 13314
+	// Token: 0x0400349B RID: 13467
 	Weapon
 }

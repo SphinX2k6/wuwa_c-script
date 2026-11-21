@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002E83 RID: 11907
+// Token: 0x020023D5 RID: 9173
 public enum EBuffDurationType
 {
-	// Token: 0x0400BD90 RID: 48528
+	// Token: 0x0400C127 RID: 49447
 	Instant,
-	// Token: 0x0400BD91 RID: 48529
+	// Token: 0x0400C128 RID: 49448
 	Infinite,
-	// Token: 0x0400BD92 RID: 48530
+	// Token: 0x0400C129 RID: 49449
 	HasDuration
 }

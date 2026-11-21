@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F8F RID: 12175
+// Token: 0x020024E3 RID: 9443
 public enum ESkillTargetType
 {
-	// Token: 0x0400C344 RID: 49988
+	// Token: 0x0400C6ED RID: 50925
 	SkillTarget,
-	// Token: 0x0400C345 RID: 49989
+	// Token: 0x0400C6EE RID: 50926
 	LockOnTarget,
-	// Token: 0x0400C346 RID: 49990
+	// Token: 0x0400C6EF RID: 50927
 	Owner
 }

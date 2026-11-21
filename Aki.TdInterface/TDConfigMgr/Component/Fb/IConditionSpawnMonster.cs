@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DB5 RID: 3509
+	// Token: 0x02000EB1 RID: 3761
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IConditionSpawnMonster
 	{
-		// Token: 0x06004FAC RID: 20396 RVA: 0x000C52F2 File Offset: 0x000C34F2
-		[NullableContext(1)]
+		// Token: 0x060054D1 RID: 21713 RVA: 0x000D0B42 File Offset: 0x000CED42
+		[NullableContext(0)]
 		public static IConditionSpawnMonster Create(IConditionSpawnMonster? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019FF RID: 6655
-		// (get) Token: 0x06004FAD RID: 20397 RVA: 0x000C5311 File Offset: 0x000C3511
+		// Token: 0x17001B6A RID: 7018
+		// (get) Token: 0x060054D2 RID: 21714 RVA: 0x000D0B61 File Offset: 0x000CED61
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A00 RID: 6656
-		// (get) Token: 0x06004FAE RID: 20398 RVA: 0x000C5345 File Offset: 0x000C3545
+		// Token: 0x17001B6B RID: 7019
+		// (get) Token: 0x060054D3 RID: 21715 RVA: 0x000D0B95 File Offset: 0x000CED95
 		public virtual IConditionGroup EndCondition
 		{
 			get
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A01 RID: 6657
-		// (get) Token: 0x06004FAF RID: 20399 RVA: 0x000C537C File Offset: 0x000C357C
+		// Token: 0x17001B6C RID: 7020
+		// (get) Token: 0x060054D4 RID: 21716 RVA: 0x000D0BCC File Offset: 0x000CEDCC
 		public virtual bool? Loop
 		{
 			get
@@ -71,12 +71,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A02 RID: 6658
-		// (get) Token: 0x06004FB0 RID: 20400 RVA: 0x000C53B4 File Offset: 0x000C35B4
-		[Nullable(1)]
+		// Token: 0x17001B6D RID: 7021
+		// (get) Token: 0x060054D5 RID: 21717 RVA: 0x000D0C04 File Offset: 0x000CEE04
+		[Nullable(0)]
 		public virtual List<IDynamicSpawnMonsterConfig> BatchConfigs
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._BatchConfigsInited)
@@ -94,26 +94,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DB6 RID: 11702
+		// Token: 0x0400307C RID: 12412
 		private IConditionSpawnMonster Instance;
 
-		// Token: 0x04002DB7 RID: 11703
+		// Token: 0x0400307D RID: 12413
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002DB8 RID: 11704
+		// Token: 0x0400307E RID: 12414
 		private bool _ConditionInited;
 
-		// Token: 0x04002DB9 RID: 11705
+		// Token: 0x0400307F RID: 12415
 		private IConditionGroup _EndConditionCache;
 
-		// Token: 0x04002DBA RID: 11706
+		// Token: 0x04003080 RID: 12416
 		private bool _EndConditionInited;
 
-		// Token: 0x04002DBB RID: 11707
-		[Nullable(1)]
+		// Token: 0x04003081 RID: 12417
+		[Nullable(0)]
 		private List<IDynamicSpawnMonsterConfig> _BatchConfigsCache;
 
-		// Token: 0x04002DBC RID: 11708
+		// Token: 0x04003082 RID: 12418
 		private bool _BatchConfigsInited;
 	}
 }

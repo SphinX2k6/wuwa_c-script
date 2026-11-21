@@ -11,30 +11,30 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DC6 RID: 7622
+// Token: 0x02001288 RID: 4744
 [NullableContext(2)]
 [Nullable(0)]
 public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 {
-	// Token: 0x0600E7B6 RID: 59318 RVA: 0x0036A157 File Offset: 0x00368357
+	// Token: 0x0600BBD5 RID: 48085 RVA: 0x00375DEB File Offset: 0x00373FEB
 	static GuideFocusItem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuideFocusItem.CreateStaticDefaultValue), new Action(GuideFocusItem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E7B7 RID: 59319 RVA: 0x0036A176 File Offset: 0x00368376
+	// Token: 0x0600BBD6 RID: 48086 RVA: 0x00375E0A File Offset: 0x0037400A
 	public static void CreateStaticDefaultValue()
 	{
 		GuideFocusItem.IsOpenLog = false;
 	}
 
-	// Token: 0x0600E7B8 RID: 59320 RVA: 0x0036A17E File Offset: 0x0036837E
+	// Token: 0x0600BBD7 RID: 48087 RVA: 0x00375E12 File Offset: 0x00374012
 	public static void ResetStaticDefaultValue()
 	{
 		GuideFocusItem.IsOpenLog = false;
 	}
 
-	// Token: 0x0600E7B9 RID: 59321 RVA: 0x0036A188 File Offset: 0x00368388
+	// Token: 0x0600BBD8 RID: 48088 RVA: 0x00375E1C File Offset: 0x0037401C
 	[NullableContext(1)]
 	public GuideFocusItem(UUIItem attachedItem, UUIItem attachedItemForShow, GuideFocusView owner)
 	{
@@ -44,7 +44,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		this.AttachedItemForShow = attachedItemForShow;
 	}
 
-	// Token: 0x0600E7BA RID: 59322 RVA: 0x0036A219 File Offset: 0x00368419
+	// Token: 0x0600BBD9 RID: 48089 RVA: 0x00375EAD File Offset: 0x003740AD
 	[NullableContext(1)]
 	public void Init(UUIItem item)
 	{
@@ -54,7 +54,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7BB RID: 59323 RVA: 0x0036A230 File Offset: 0x00368430
+	// Token: 0x0600BBDA RID: 48090 RVA: 0x00375EC4 File Offset: 0x003740C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -81,7 +81,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600E7BC RID: 59324 RVA: 0x0036A33C File Offset: 0x0036853C
+	// Token: 0x0600BBDB RID: 48091 RVA: 0x00375FD0 File Offset: 0x003741D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GuideFocusItem.<OnBeforeStartAsync>d__29 <OnBeforeStartAsync>d__;
@@ -92,7 +92,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E7BD RID: 59325 RVA: 0x0036A380 File Offset: 0x00368580
+	// Token: 0x0600BBDC RID: 48092 RVA: 0x00376014 File Offset: 0x00374214
 	protected override void OnStart()
 	{
 		ULGUICanvas ulguicanvas = LguiUtil.Instance.GetChildActorByHierarchyIndex(base.GetOriginalActor() as AUIBaseActor, 0).GetComponentByClass(ULGUICanvas.StaticClass()) as ULGUICanvas;
@@ -179,7 +179,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0600E7BE RID: 59326 RVA: 0x0036A6D0 File Offset: 0x003688D0
+	// Token: 0x0600BBDD RID: 48093 RVA: 0x00376364 File Offset: 0x00374564
 	protected override void OnBeforeShow()
 	{
 		GuideFocusView owner = this.Owner;
@@ -209,7 +209,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7BF RID: 59327 RVA: 0x0036A7B0 File Offset: 0x003689B0
+	// Token: 0x0600BBDE RID: 48094 RVA: 0x00376444 File Offset: 0x00374644
 	protected override void OnAfterHide()
 	{
 		this.GuideCursorFollowItem = null;
@@ -227,13 +227,13 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C0 RID: 59328 RVA: 0x0036A83F File Offset: 0x00368A3F
+	// Token: 0x0600BBDF RID: 48095 RVA: 0x003764D3 File Offset: 0x003746D3
 	protected override void OnAfterShow()
 	{
 		this.Owner.ReadyToShow = true;
 	}
 
-	// Token: 0x0600E7C1 RID: 59329 RVA: 0x0036A850 File Offset: 0x00368A50
+	// Token: 0x0600BBE0 RID: 48096 RVA: 0x003764E4 File Offset: 0x003746E4
 	private void TryFinishByClick()
 	{
 		if (!this.Config.Value.UseClick)
@@ -256,7 +256,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}, null, null);
 	}
 
-	// Token: 0x0600E7C2 RID: 59330 RVA: 0x0036A8E0 File Offset: 0x00368AE0
+	// Token: 0x0600BBE1 RID: 48097 RVA: 0x00376574 File Offset: 0x00374774
 	private void OnButtonClick()
 	{
 		if (GuideFocusItem.IsOpenLog)
@@ -376,7 +376,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C3 RID: 59331 RVA: 0x0036ABB4 File Offset: 0x00368DB4
+	// Token: 0x0600BBE2 RID: 48098 RVA: 0x00376848 File Offset: 0x00374A48
 	private void OnButtonPointerDownCallBack()
 	{
 		if (this.IsFinishing)
@@ -424,7 +424,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C4 RID: 59332 RVA: 0x0036ACBC File Offset: 0x00368EBC
+	// Token: 0x0600BBE3 RID: 48099 RVA: 0x00376950 File Offset: 0x00374B50
 	private void OnButtonPointerUpCallBack()
 	{
 		if (GuideFocusItem.IsOpenLog)
@@ -482,7 +482,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C5 RID: 59333 RVA: 0x0036AE10 File Offset: 0x00369010
+	// Token: 0x0600BBE4 RID: 48100 RVA: 0x00376AA4 File Offset: 0x00374CA4
 	private void OnButtonHover()
 	{
 		if (GuideFocusItem.IsOpenLog)
@@ -537,7 +537,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C6 RID: 59334 RVA: 0x0036AF54 File Offset: 0x00369154
+	// Token: 0x0600BBE5 RID: 48101 RVA: 0x00376BE8 File Offset: 0x00374DE8
 	private void OnButtonUnHover()
 	{
 		if (GuideFocusItem.IsOpenLog)
@@ -589,7 +589,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C7 RID: 59335 RVA: 0x0036B088 File Offset: 0x00369288
+	// Token: 0x0600BBE6 RID: 48102 RVA: 0x00376D1C File Offset: 0x00374F1C
 	[NullableContext(1)]
 	private void OnDraggablePointerDownCallBack(ULGUIPointerEventData eventData)
 	{
@@ -620,7 +620,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C8 RID: 59336 RVA: 0x0036B13C File Offset: 0x0036933C
+	// Token: 0x0600BBE7 RID: 48103 RVA: 0x00376DD0 File Offset: 0x00374FD0
 	[NullableContext(1)]
 	private void OnDraggablePointerBeginDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -652,7 +652,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7C9 RID: 59337 RVA: 0x0036B1F4 File Offset: 0x003693F4
+	// Token: 0x0600BBE8 RID: 48104 RVA: 0x00376E88 File Offset: 0x00375088
 	[NullableContext(1)]
 	private void OnDraggablePointerDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -684,7 +684,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7CA RID: 59338 RVA: 0x0036B2AC File Offset: 0x003694AC
+	// Token: 0x0600BBE9 RID: 48105 RVA: 0x00376F40 File Offset: 0x00375140
 	[NullableContext(1)]
 	private void OnDraggablePointerEndDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -712,7 +712,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7CB RID: 59339 RVA: 0x0036B35C File Offset: 0x0036955C
+	// Token: 0x0600BBEA RID: 48106 RVA: 0x00376FF0 File Offset: 0x003751F0
 	[NullableContext(1)]
 	private void OnDraggablePointerUpCallBack(ULGUIPointerEventData eventData)
 	{
@@ -744,13 +744,13 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E7CC RID: 59340 RVA: 0x0036B42D File Offset: 0x0036962D
+	// Token: 0x0600BBEB RID: 48107 RVA: 0x003770C1 File Offset: 0x003752C1
 	public void OnBaseViewCloseWhenFinish()
 	{
 		this.TextPart.OnBaseViewCloseWhenFinish();
 	}
 
-	// Token: 0x0600E7CD RID: 59341 RVA: 0x0036B43C File Offset: 0x0036963C
+	// Token: 0x0600BBEC RID: 48108 RVA: 0x003770D0 File Offset: 0x003752D0
 	protected override void OnBeforeDestroy()
 	{
 		this.IsFinishing = true;
@@ -802,7 +802,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0600E7CE RID: 59342 RVA: 0x0036B584 File Offset: 0x00369784
+	// Token: 0x0600BBED RID: 48109 RVA: 0x00377218 File Offset: 0x00375418
 	[NullableContext(1)]
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
@@ -835,7 +835,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		EventSystem.Instance.Emit<int, AActor>(EEventName.GuideTouchIdInject, num, this.AttachedItem.GetOwner());
 	}
 
-	// Token: 0x0600E7CF RID: 59343 RVA: 0x0036B60C File Offset: 0x0036980C
+	// Token: 0x0600BBEE RID: 48110 RVA: 0x003772A0 File Offset: 0x003754A0
 	public void OnTick(float delta)
 	{
 		if (!base.IsShowOrShowing)
@@ -863,7 +863,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		textPart.OnTick(delta);
 	}
 
-	// Token: 0x0600E7D0 RID: 59344 RVA: 0x0036B678 File Offset: 0x00369878
+	// Token: 0x0600BBEF RID: 48111 RVA: 0x0037730C File Offset: 0x0037550C
 	private void ApplyGuideCursorFollow()
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -894,7 +894,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		UiNavigationNewController.Instance.RefreshNavigationMousePositionForGuide(guideCursorFollowItem);
 	}
 
-	// Token: 0x0600E7D1 RID: 59345 RVA: 0x0036B740 File Offset: 0x00369940
+	// Token: 0x0600BBF0 RID: 48112 RVA: 0x003773D4 File Offset: 0x003755D4
 	public void OnDurationChange(float remainDuration)
 	{
 		if (!base.GetActive())
@@ -909,7 +909,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		textPart.OnDurationChange(remainDuration);
 	}
 
-	// Token: 0x0600E7D2 RID: 59346 RVA: 0x0036B75C File Offset: 0x0036995C
+	// Token: 0x0600BBF1 RID: 48113 RVA: 0x003773F0 File Offset: 0x003755F0
 	public void ApplyButtonFollow()
 	{
 		UUIItem attachedItemForShow = this.AttachedItemForShow;
@@ -974,7 +974,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		uuiitem.D_K2_SetWorldLocation(attachedItem.D_K2_GetComponentLocation(), false, ref fhitResult4, false);
 	}
 
-	// Token: 0x0600E7D3 RID: 59347 RVA: 0x0036BA6C File Offset: 0x00369C6C
+	// Token: 0x0600BBF2 RID: 48114 RVA: 0x00377700 File Offset: 0x00375900
 	public void ApplyBgFollow()
 	{
 		if (!this.Config.Value.UseMask)
@@ -989,7 +989,7 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		maskItem.SetWidth(UiLayer.Instance.UiRootItem.Width);
 	}
 
-	// Token: 0x0600E7D4 RID: 59348 RVA: 0x0036BAF4 File Offset: 0x00369CF4
+	// Token: 0x0600BBF3 RID: 48115 RVA: 0x00377788 File Offset: 0x00375988
 	[NullableContext(0)]
 	private ValueTuple<float, float, float, float> GetAttachItemBound([Nullable(1)] UUIItem item)
 	{
@@ -1004,85 +1004,85 @@ public class GuideFocusItem : UiPanelBase, IStaticVariableResetter
 		return new ValueTuple<float, float, float, float>((float)num3, (float)num5, (float)num4, (float)num6);
 	}
 
-	// Token: 0x04006B2D RID: 27437
+	// Token: 0x04006C0E RID: 27662
 	private const int CANVAS_CLIP_FEATHER = 10;
 
-	// Token: 0x04006B2E RID: 27438
+	// Token: 0x04006C0F RID: 27663
 	private const float GUIDE_CURSOR_FOLLOW_THRESHOLD = 0.5f;
 
-	// Token: 0x04006B2F RID: 27439
+	// Token: 0x04006C10 RID: 27664
 	public static bool IsOpenLog;
 
-	// Token: 0x04006B30 RID: 27440
+	// Token: 0x04006C11 RID: 27665
 	private FocusItemText TextPart;
 
-	// Token: 0x04006B31 RID: 27441
+	// Token: 0x04006C12 RID: 27666
 	public readonly GuideFocusView Owner;
 
-	// Token: 0x04006B32 RID: 27442
+	// Token: 0x04006C13 RID: 27667
 	private readonly UUIItem AttachedItem;
 
-	// Token: 0x04006B33 RID: 27443
+	// Token: 0x04006C14 RID: 27668
 	private readonly UUIItem AttachedItemForShow;
 
-	// Token: 0x04006B34 RID: 27444
+	// Token: 0x04006C15 RID: 27669
 	private UUIItem MaskItem;
 
-	// Token: 0x04006B35 RID: 27445
+	// Token: 0x04006C16 RID: 27670
 	public UUIItem RectItem;
 
-	// Token: 0x04006B36 RID: 27446
+	// Token: 0x04006C17 RID: 27671
 	public readonly GuideFocusNew? Config;
 
-	// Token: 0x04006B37 RID: 27447
+	// Token: 0x04006C18 RID: 27672
 	private bool IsFinishing;
 
-	// Token: 0x04006B38 RID: 27448
+	// Token: 0x04006C19 RID: 27673
 	private bool IsDragging;
 
-	// Token: 0x04006B39 RID: 27449
+	// Token: 0x04006C1A RID: 27674
 	private bool IsButtonDown;
 
-	// Token: 0x04006B3A RID: 27450
+	// Token: 0x04006C1B RID: 27675
 	private UUIDraggableComponent ParentDraggableComponent;
 
-	// Token: 0x04006B3B RID: 27451
+	// Token: 0x04006C1C RID: 27676
 	private UUISelectableComponent ParentSelectable;
 
-	// Token: 0x04006B3C RID: 27452
+	// Token: 0x04006C1D RID: 27677
 	private ULGUIPointerEventData DragEventData;
 
-	// Token: 0x04006B3D RID: 27453
+	// Token: 0x04006C1E RID: 27678
 	private FVector2D MultiAttachPivot = new FVector2D(0f, 0f);
 
-	// Token: 0x04006B3E RID: 27454
+	// Token: 0x04006C1F RID: 27679
 	private FVector MultiAttachPos = new FVector(0f, 0f, 0f);
 
-	// Token: 0x04006B3F RID: 27455
+	// Token: 0x04006C20 RID: 27680
 	private bool HasExecutedClick;
 
-	// Token: 0x04006B40 RID: 27456
+	// Token: 0x04006C21 RID: 27681
 	private UUIItem GuideCursorFollowItem;
 
-	// Token: 0x04006B41 RID: 27457
+	// Token: 0x04006C22 RID: 27682
 	private FVector2D LastGuideCursorViewportPos = new FVector2D(0f, 0f);
 
-	// Token: 0x04006B42 RID: 27458
+	// Token: 0x04006C23 RID: 27683
 	private bool HasLastGuideCursorViewportPos;
 
-	// Token: 0x02008398 RID: 33688
+	// Token: 0x02007520 RID: 29984
 	[NullableContext(0)]
 	private enum EFocusItem
 	{
-		// Token: 0x0402ADE1 RID: 175585
+		// Token: 0x04026107 RID: 155911
 		ClickArea,
-		// Token: 0x0402ADE2 RID: 175586
+		// Token: 0x04026108 RID: 155912
 		RectBg,
-		// Token: 0x0402ADE3 RID: 175587
+		// Token: 0x04026109 RID: 155913
 		RectView,
-		// Token: 0x0402ADE4 RID: 175588
+		// Token: 0x0402610A RID: 155914
 		TextPart,
-		// Token: 0x0402ADE5 RID: 175589
+		// Token: 0x0402610B RID: 155915
 		PanelClickAnyWhere = 3
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077E9 RID: 30697
+	// Token: 0x02008027 RID: 32807
 	public enum TTransitionPopupStyle : byte
 	{
-		// Token: 0x04012A27 RID: 76327
+		// Token: 0x04013AEE RID: 80622
 		NONE,
-		// Token: 0x04012A28 RID: 76328
+		// Token: 0x04013AEF RID: 80623
 		ITransitionPopupArtText,
-		// Token: 0x04012A29 RID: 76329
+		// Token: 0x04013AF0 RID: 80624
 		ITransitionPopupLeftBottomTransition,
-		// Token: 0x04012A2A RID: 76330
+		// Token: 0x04013AF1 RID: 80625
 		ITransitionPopupLeftTopTip
 	}
 }

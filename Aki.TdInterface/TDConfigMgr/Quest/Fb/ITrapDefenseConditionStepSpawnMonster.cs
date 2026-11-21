@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013D7 RID: 5079
+	// Token: 0x0200152E RID: 5422
 	public class ITrapDefenseConditionStepSpawnMonster : ITrapDefenseConditionStepBase
 	{
-		// Token: 0x060073E3 RID: 29667 RVA: 0x00115C88 File Offset: 0x00113E88
-		[NullableContext(1)]
+		// Token: 0x06007AA4 RID: 31396 RVA: 0x0012466C File Offset: 0x0012286C
 		public static ITrapDefenseConditionStepSpawnMonster Create(ITrapDefenseConditionStepSpawnMonster? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002608 RID: 9736
-		// (get) Token: 0x060073E4 RID: 29668 RVA: 0x00115CA7 File Offset: 0x00113EA7
+		// Token: 0x170027EA RID: 10218
+		// (get) Token: 0x06007AA5 RID: 31397 RVA: 0x0012468B File Offset: 0x0012288B
 		public override ETrapDefenseConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004315 RID: 17173
+		// Token: 0x040046A6 RID: 18086
 		private ITrapDefenseConditionStepSpawnMonster Instance;
 	}
 }

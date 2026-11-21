@@ -1,11 +1,11 @@
 ﻿using System;
 using CSharpScript.Game.Module.Kurotato;
 
-// Token: 0x020019A3 RID: 6563
+// Token: 0x02000E60 RID: 3680
 public class KurotatoSmallItemGrid : SmallItemGridBase
 {
-	// Token: 0x17001008 RID: 4104
-	// (get) Token: 0x0600BF86 RID: 49030 RVA: 0x002B3FF3 File Offset: 0x002B21F3
+	// Token: 0x1700102C RID: 4140
+	// (get) Token: 0x0600938E RID: 37774 RVA: 0x002BEF77 File Offset: 0x002BD177
 	public override ESmallItemGridType Type
 	{
 		get
@@ -14,12 +14,12 @@ public class KurotatoSmallItemGrid : SmallItemGridBase
 		}
 	}
 
-	// Token: 0x04005610 RID: 22032
+	// Token: 0x040056BF RID: 22207
 	public int Id;
 
-	// Token: 0x04005611 RID: 22033
+	// Token: 0x040056C0 RID: 22208
 	public EKurotatoCardType CardType;
 
-	// Token: 0x04005612 RID: 22034
+	// Token: 0x040056C1 RID: 22209
 	public bool? IsReceivedVisible;
 }

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200318F RID: 12687
+// Token: 0x020026FC RID: 9980
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillBuling : SpecialSkillBase
 {
-	// Token: 0x0601B50A RID: 111882 RVA: 0x007750DF File Offset: 0x007732DF
+	// Token: 0x0601900E RID: 102414 RVA: 0x0079CA57 File Offset: 0x0079AC57
 	[NullableContext(1)]
 	public SpecialSkillBuling(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B50B RID: 111883 RVA: 0x00775100 File Offset: 0x00773300
+	// Token: 0x0601900F RID: 102415 RVA: 0x0079CA78 File Offset: 0x0079AC78
 	public override void OnStart()
 	{
 		this.EntityRef = this.SpecialSkillComponent.Entity;
@@ -35,7 +35,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B50C RID: 111884 RVA: 0x007751A0 File Offset: 0x007733A0
+	// Token: 0x06019010 RID: 102416 RVA: 0x0079CB18 File Offset: 0x0079AD18
 	public override void OnEnd()
 	{
 		if (this.IsAddAttributeListener)
@@ -49,7 +49,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B50D RID: 111885 RVA: 0x007751CC File Offset: 0x007733CC
+	// Token: 0x06019011 RID: 102417 RVA: 0x0079CB44 File Offset: 0x0079AD44
 	private void InitSpecialEnergy()
 	{
 		this.SpecialEnergyTypeList.Clear();
@@ -78,7 +78,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B50E RID: 111886 RVA: 0x0077527C File Offset: 0x0077347C
+	// Token: 0x06019012 RID: 102418 RVA: 0x0079CBF4 File Offset: 0x0079ADF4
 	[NullableContext(1)]
 	public void ModifySlotSpecialEnergy(int[] numberParams)
 	{
@@ -101,7 +101,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		this.AddSlotSpecialEnergy(num.Value, num2.Value);
 	}
 
-	// Token: 0x0601B50F RID: 111887 RVA: 0x00775331 File Offset: 0x00773531
+	// Token: 0x06019013 RID: 102419 RVA: 0x0079CCA9 File Offset: 0x0079AEA9
 	public void AddSlotSpecialEnergy(int attributeId, int energyType)
 	{
 		if (this.SpecialEnergyTypeList.Count == 4)
@@ -113,7 +113,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		this.SaveSpecialEnergy();
 	}
 
-	// Token: 0x0601B510 RID: 111888 RVA: 0x00775368 File Offset: 0x00773568
+	// Token: 0x06019014 RID: 102420 RVA: 0x0079CCE0 File Offset: 0x0079AEE0
 	public void RemoveSlotSpecialEnergy(int attributeId, int removeNum = 1)
 	{
 		for (int i = 0; i < removeNum; i++)
@@ -127,7 +127,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		this.SaveSpecialEnergy();
 	}
 
-	// Token: 0x0601B511 RID: 111889 RVA: 0x007753B4 File Offset: 0x007735B4
+	// Token: 0x06019015 RID: 102421 RVA: 0x0079CD2C File Offset: 0x0079AF2C
 	private void SaveSpecialEnergy()
 	{
 		int num = 0;
@@ -144,7 +144,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		attributeComponent.SetBaseValue(EAttributeType.SpecialEnergy1, (float)num);
 	}
 
-	// Token: 0x0601B512 RID: 111890 RVA: 0x00775420 File Offset: 0x00773620
+	// Token: 0x06019016 RID: 102422 RVA: 0x0079CD98 File Offset: 0x0079AF98
 	public int GetSpecialEnergyType(int index)
 	{
 		if (index < 0 || index >= this.SpecialEnergyTypeList.Count)
@@ -154,7 +154,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		return this.SpecialEnergyTypeList[index];
 	}
 
-	// Token: 0x0601B513 RID: 111891 RVA: 0x00775442 File Offset: 0x00773642
+	// Token: 0x06019017 RID: 102423 RVA: 0x0079CDBA File Offset: 0x0079AFBA
 	private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (newValue == 0f && this.SpecialEnergyTypeList.Count != 0)
@@ -163,7 +163,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B514 RID: 111892 RVA: 0x00775464 File Offset: 0x00773664
+	// Token: 0x06019018 RID: 102424 RVA: 0x0079CDDC File Offset: 0x0079AFDC
 	private void InitSlotEnergyTags()
 	{
 		if (this.SpecialEnergyTagMap != null)
@@ -187,7 +187,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		this.SpecialEnergyTagMap[key7] = GameplayTagDefine.EGameplayTagId["角色.BulingMd10011.卦象.结算准备.空"];
 	}
 
-	// Token: 0x0601B515 RID: 111893 RVA: 0x00775558 File Offset: 0x00773758
+	// Token: 0x06019019 RID: 102425 RVA: 0x0079CED0 File Offset: 0x0079B0D0
 	private int? GetSpecialEnergyTag()
 	{
 		if (this.SpecialEnergyTypeList.Count == 0)
@@ -222,7 +222,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B516 RID: 111894 RVA: 0x00775618 File Offset: 0x00773818
+	// Token: 0x0601901A RID: 102426 RVA: 0x0079CF90 File Offset: 0x0079B190
 	private void SetSpecialEnergyTag()
 	{
 		int? specialEnergyTag = this.GetSpecialEnergyTag();
@@ -271,7 +271,7 @@ public class SpecialSkillBuling : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B517 RID: 111895 RVA: 0x00775734 File Offset: 0x00773934
+	// Token: 0x0601901B RID: 102427 RVA: 0x0079D0AC File Offset: 0x0079B2AC
 	private int GetUiTag(int index, int energyType)
 	{
 		if (energyType == 1)
@@ -305,58 +305,58 @@ public class SpecialSkillBuling : SpecialSkillBase
 		return 0;
 	}
 
-	// Token: 0x0400D586 RID: 54662
+	// Token: 0x0400D9E9 RID: 55785
 	private const int SLOT_COUNT = 4;
 
-	// Token: 0x0400D587 RID: 54663
+	// Token: 0x0400D9EA RID: 55786
 	private const int SLOT_BITS = 2;
 
-	// Token: 0x0400D588 RID: 54664
+	// Token: 0x0400D9EB RID: 55787
 	private const int SLOT_MASK = 3;
 
-	// Token: 0x0400D589 RID: 54665
+	// Token: 0x0400D9EC RID: 55788
 	private const EAttributeType slotSpecialEnergyType = EAttributeType.SpecialEnergy1;
 
-	// Token: 0x0400D58A RID: 54666
+	// Token: 0x0400D9ED RID: 55789
 	private Entity EntityRef;
 
-	// Token: 0x0400D58B RID: 54667
+	// Token: 0x0400D9EE RID: 55790
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400D58C RID: 54668
+	// Token: 0x0400D9EF RID: 55791
 	private RoleTagComponent TagComponent;
 
-	// Token: 0x0400D58D RID: 54669
+	// Token: 0x0400D9F0 RID: 55792
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400D58E RID: 54670
+	// Token: 0x0400D9F1 RID: 55793
 	[Nullable(1)]
 	private readonly List<int> SpecialEnergyTypeList = new List<int>();
 
-	// Token: 0x0400D58F RID: 54671
+	// Token: 0x0400D9F2 RID: 55794
 	private Dictionary<int, int> SpecialEnergyTagMap;
 
-	// Token: 0x0400D590 RID: 54672
+	// Token: 0x0400D9F3 RID: 55795
 	private bool IsAddAttributeListener;
 
-	// Token: 0x0400D591 RID: 54673
+	// Token: 0x0400D9F4 RID: 55796
 	private int? CurrentTag;
 
-	// Token: 0x0400D592 RID: 54674
+	// Token: 0x0400D9F5 RID: 55797
 	[Nullable(1)]
 	private readonly List<int> UiTagList = new List<int>();
 
-	// Token: 0x020096E5 RID: 38629
+	// Token: 0x0200890B RID: 35083
 	[NullableContext(0)]
 	private enum ESlotEnergyType
 	{
-		// Token: 0x04030566 RID: 197990
+		// Token: 0x0402BBFB RID: 179195
 		Empty,
-		// Token: 0x04030567 RID: 197991
+		// Token: 0x0402BBFC RID: 179196
 		EnergyA,
-		// Token: 0x04030568 RID: 197992
+		// Token: 0x0402BBFD RID: 179197
 		EnergyB,
-		// Token: 0x04030569 RID: 197993
+		// Token: 0x0402BBFE RID: 179198
 		Max
 	}
 }

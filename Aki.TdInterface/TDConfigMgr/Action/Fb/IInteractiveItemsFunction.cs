@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002934 RID: 10548
+	// Token: 0x02002C10 RID: 11280
 	public class IInteractiveItemsFunction : EnableFunction
 	{
-		// Token: 0x0600EA00 RID: 59904 RVA: 0x002247A0 File Offset: 0x002229A0
-		[NullableContext(1)]
+		// Token: 0x0600F852 RID: 63570 RVA: 0x00241AF8 File Offset: 0x0023FCF8
 		public static IInteractiveItemsFunction Create(IInteractiveItemsFunction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700495A RID: 18778
-		// (get) Token: 0x0600EA01 RID: 59905 RVA: 0x002247BF File Offset: 0x002229BF
+		// Token: 0x17004CE0 RID: 19680
+		// (get) Token: 0x0600F853 RID: 63571 RVA: 0x00241B17 File Offset: 0x0023FD17
 		public override EEnableFunctionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700495B RID: 18779
-		// (get) Token: 0x0600EA02 RID: 59906 RVA: 0x002247CC File Offset: 0x002229CC
+		// Token: 0x17004CE1 RID: 19681
+		// (get) Token: 0x0600F854 RID: 63572 RVA: 0x00241B24 File Offset: 0x0023FD24
 		public virtual bool Enable
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008112 RID: 33042
+		// Token: 0x040087E0 RID: 34784
 		private IInteractiveItemsFunction Instance;
 	}
 }

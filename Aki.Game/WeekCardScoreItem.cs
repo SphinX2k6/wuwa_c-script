@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020023AD RID: 9133
+// Token: 0x02001892 RID: 6290
 public class WeekCardScoreItem : UiPanelBase
 {
-	// Token: 0x06012429 RID: 74793 RVA: 0x0047F090 File Offset: 0x0047D290
+	// Token: 0x0600F8DB RID: 63707 RVA: 0x0048C564 File Offset: 0x0048A764
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -24,7 +24,7 @@ public class WeekCardScoreItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601242A RID: 74794 RVA: 0x0047F11C File Offset: 0x0047D31C
+	// Token: 0x0600F8DC RID: 63708 RVA: 0x0048C5F0 File Offset: 0x0048A7F0
 	[NullableContext(1)]
 	public void Refresh(IWeekScoreData costData)
 	{
@@ -38,16 +38,16 @@ public class WeekCardScoreItem : UiPanelBase
 		base.SetTextureByPath(costData.IconPath, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x02008949 RID: 35145
+	// Token: 0x02007AD2 RID: 31442
 	private class EComponent
 	{
-		// Token: 0x0402CA0B RID: 182795
+		// Token: 0x04027D26 RID: 163110
 		public const int TipsText = 0;
 
-		// Token: 0x0402CA0C RID: 182796
+		// Token: 0x04027D27 RID: 163111
 		public const int CostText = 1;
 
-		// Token: 0x0402CA0D RID: 182797
+		// Token: 0x04027D28 RID: 163112
 		public const int CostIcon = 2;
 	}
 }

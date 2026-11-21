@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FA0 RID: 20384
+	// Token: 0x020054FC RID: 21756
 	public struct ICircumnutation : IFlatbufferObject
 	{
-		// Token: 0x17009387 RID: 37767
-		// (get) Token: 0x060206A9 RID: 132777 RVA: 0x00482878 File Offset: 0x00480A78
+		// Token: 0x17009B5F RID: 39775
+		// (get) Token: 0x0602259D RID: 140701 RVA: 0x004BBD59 File Offset: 0x004B9F59
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060206AA RID: 132778 RVA: 0x00482885 File Offset: 0x00480A85
+		// Token: 0x0602259E RID: 140702 RVA: 0x004BBD66 File Offset: 0x004B9F66
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060206AB RID: 132779 RVA: 0x0048288C File Offset: 0x00480A8C
+		// Token: 0x0602259F RID: 140703 RVA: 0x004BBD70 File Offset: 0x004B9F70
 		public static ICircumnutation GetRootAsICircumnutation(ByteBuffer _bb)
 		{
 			return ICircumnutation.GetRootAsICircumnutation(_bb, default(ICircumnutation));
 		}
 
-		// Token: 0x060206AC RID: 132780 RVA: 0x004828A8 File Offset: 0x00480AA8
+		// Token: 0x060225A0 RID: 140704 RVA: 0x004BBD8C File Offset: 0x004B9F8C
 		public static ICircumnutation GetRootAsICircumnutation(ByteBuffer _bb, ICircumnutation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060206AD RID: 132781 RVA: 0x004828C5 File Offset: 0x00480AC5
+		// Token: 0x060225A1 RID: 140705 RVA: 0x004BBDA9 File Offset: 0x004B9FA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060206AE RID: 132782 RVA: 0x004828D4 File Offset: 0x00480AD4
+		// Token: 0x060225A2 RID: 140706 RVA: 0x004BBDB8 File Offset: 0x004B9FB8
 		public ICircumnutation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009388 RID: 37768
-		// (get) Token: 0x060206AF RID: 132783 RVA: 0x004828E4 File Offset: 0x00480AE4
+		// Token: 0x17009B60 RID: 39776
+		// (get) Token: 0x060225A3 RID: 140707 RVA: 0x004BBDC8 File Offset: 0x004B9FC8
 		public EThrowMotion Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009389 RID: 37769
-		// (get) Token: 0x060206B0 RID: 132784 RVA: 0x00482920 File Offset: 0x00480B20
+		// Token: 0x17009B61 RID: 39777
+		// (get) Token: 0x060225A4 RID: 140708 RVA: 0x004BBE04 File Offset: 0x004BA004
 		public float Velocity
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700938A RID: 37770
-		// (get) Token: 0x060206B1 RID: 132785 RVA: 0x00482960 File Offset: 0x00480B60
+		// Token: 0x17009B62 RID: 39778
+		// (get) Token: 0x060225A5 RID: 140709 RVA: 0x004BBE44 File Offset: 0x004BA044
 		public string VelocityCurve
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060206B2 RID: 132786 RVA: 0x00482997 File Offset: 0x00480B97
+		// Token: 0x060225A6 RID: 140710 RVA: 0x004BBE7B File Offset: 0x004BA07B
 		public Span<byte> GetVelocityCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060206B3 RID: 132787 RVA: 0x004829A6 File Offset: 0x00480BA6
+		// Token: 0x060225A7 RID: 140711 RVA: 0x004BBE8A File Offset: 0x004BA08A
 		public byte[] GetVelocityCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700938B RID: 37771
-		// (get) Token: 0x060206B4 RID: 132788 RVA: 0x004829B4 File Offset: 0x00480BB4
+		// Token: 0x17009B63 RID: 39779
+		// (get) Token: 0x060225A8 RID: 140712 RVA: 0x004BBE98 File Offset: 0x004BA098
 		public EDirection Direction
 		{
 			get
@@ -119,8 +119,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700938C RID: 37772
-		// (get) Token: 0x060206B5 RID: 132789 RVA: 0x004829F4 File Offset: 0x00480BF4
+		// Token: 0x17009B64 RID: 39780
+		// (get) Token: 0x060225A9 RID: 140713 RVA: 0x004BBED8 File Offset: 0x004BA0D8
 		public float AngularVelocity
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700938D RID: 37773
-		// (get) Token: 0x060206B6 RID: 132790 RVA: 0x00482A38 File Offset: 0x00480C38
+		// Token: 0x17009B65 RID: 39781
+		// (get) Token: 0x060225AA RID: 140714 RVA: 0x004BBF1C File Offset: 0x004BA11C
 		public float RotationSpeed
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700938E RID: 37774
-		// (get) Token: 0x060206B7 RID: 132791 RVA: 0x00482A7C File Offset: 0x00480C7C
+		// Token: 0x17009B66 RID: 39782
+		// (get) Token: 0x060225AB RID: 140715 RVA: 0x004BBF60 File Offset: 0x004BA160
 		public string AngularVelocityCurve
 		{
 			get
@@ -164,20 +164,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060206B8 RID: 132792 RVA: 0x00482AB4 File Offset: 0x00480CB4
+		// Token: 0x060225AC RID: 140716 RVA: 0x004BBF98 File Offset: 0x004BA198
 		public Span<byte> GetAngularVelocityCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x060206B9 RID: 132793 RVA: 0x00482AC4 File Offset: 0x00480CC4
+		// Token: 0x060225AD RID: 140717 RVA: 0x004BBFA8 File Offset: 0x004BA1A8
 		public byte[] GetAngularVelocityCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(16);
 		}
 
-		// Token: 0x1700938F RID: 37775
-		// (get) Token: 0x060206BA RID: 132794 RVA: 0x00482AD4 File Offset: 0x00480CD4
+		// Token: 0x17009B67 RID: 39783
+		// (get) Token: 0x060225AE RID: 140718 RVA: 0x004BBFB8 File Offset: 0x004BA1B8
 		public IRenderTrajectoryConfig? RenderTrajectoryConfig
 		{
 			get
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060206BB RID: 132795 RVA: 0x00482B34 File Offset: 0x00480D34
+		// Token: 0x060225AF RID: 140719 RVA: 0x004BC018 File Offset: 0x004BA218
 		public static Offset<ICircumnutation> CreateICircumnutation(FlatBufferBuilder builder, EThrowMotion Type = EThrowMotion.Projectile, float Velocity = 0f, StringOffset VelocityCurveOffset = default(StringOffset), EDirection Direction = EDirection.Right, float AngularVelocity = 0f, float RotationSpeed = 0f, StringOffset AngularVelocityCurveOffset = default(StringOffset), Offset<IRenderTrajectoryConfig> RenderTrajectoryConfigOffset = default(Offset<IRenderTrajectoryConfig>))
 		{
 			builder.StartTable(8);
@@ -206,67 +206,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICircumnutation.EndICircumnutation(builder);
 		}
 
-		// Token: 0x060206BC RID: 132796 RVA: 0x00482B8B File Offset: 0x00480D8B
+		// Token: 0x060225B0 RID: 140720 RVA: 0x004BC06F File Offset: 0x004BA26F
 		public static void StartICircumnutation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x060206BD RID: 132797 RVA: 0x00482B94 File Offset: 0x00480D94
+		// Token: 0x060225B1 RID: 140721 RVA: 0x004BC078 File Offset: 0x004BA278
 		public static void AddType(FlatBufferBuilder builder, EThrowMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060206BE RID: 132798 RVA: 0x00482B9F File Offset: 0x00480D9F
+		// Token: 0x060225B2 RID: 140722 RVA: 0x004BC083 File Offset: 0x004BA283
 		public static void AddVelocity(FlatBufferBuilder builder, float velocity)
 		{
 			builder.AddFloat(1, velocity, 0.0);
 		}
 
-		// Token: 0x060206BF RID: 132799 RVA: 0x00482BB2 File Offset: 0x00480DB2
+		// Token: 0x060225B3 RID: 140723 RVA: 0x004BC096 File Offset: 0x004BA296
 		public static void AddVelocityCurve(FlatBufferBuilder builder, StringOffset velocityCurveOffset)
 		{
 			builder.AddOffset(2, velocityCurveOffset.Value, 0);
 		}
 
-		// Token: 0x060206C0 RID: 132800 RVA: 0x00482BC2 File Offset: 0x00480DC2
+		// Token: 0x060225B4 RID: 140724 RVA: 0x004BC0A6 File Offset: 0x004BA2A6
 		public static void AddDirection(FlatBufferBuilder builder, EDirection direction)
 		{
 			builder.AddByte(3, (byte)direction, 0);
 		}
 
-		// Token: 0x060206C1 RID: 132801 RVA: 0x00482BCD File Offset: 0x00480DCD
+		// Token: 0x060225B5 RID: 140725 RVA: 0x004BC0B1 File Offset: 0x004BA2B1
 		public static void AddAngularVelocity(FlatBufferBuilder builder, float angularVelocity)
 		{
 			builder.AddFloat(4, angularVelocity, 0.0);
 		}
 
-		// Token: 0x060206C2 RID: 132802 RVA: 0x00482BE0 File Offset: 0x00480DE0
+		// Token: 0x060225B6 RID: 140726 RVA: 0x004BC0C4 File Offset: 0x004BA2C4
 		public static void AddRotationSpeed(FlatBufferBuilder builder, float rotationSpeed)
 		{
 			builder.AddFloat(5, rotationSpeed, 0.0);
 		}
 
-		// Token: 0x060206C3 RID: 132803 RVA: 0x00482BF3 File Offset: 0x00480DF3
+		// Token: 0x060225B7 RID: 140727 RVA: 0x004BC0D7 File Offset: 0x004BA2D7
 		public static void AddAngularVelocityCurve(FlatBufferBuilder builder, StringOffset angularVelocityCurveOffset)
 		{
 			builder.AddOffset(6, angularVelocityCurveOffset.Value, 0);
 		}
 
-		// Token: 0x060206C4 RID: 132804 RVA: 0x00482C03 File Offset: 0x00480E03
+		// Token: 0x060225B8 RID: 140728 RVA: 0x004BC0E7 File Offset: 0x004BA2E7
 		public static void AddRenderTrajectoryConfig(FlatBufferBuilder builder, Offset<IRenderTrajectoryConfig> renderTrajectoryConfigOffset)
 		{
 			builder.AddOffset(7, renderTrajectoryConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060206C5 RID: 132805 RVA: 0x00482C13 File Offset: 0x00480E13
+		// Token: 0x060225B9 RID: 140729 RVA: 0x004BC0F7 File Offset: 0x004BA2F7
 		public static Offset<ICircumnutation> EndICircumnutation(FlatBufferBuilder builder)
 		{
 			return new Offset<ICircumnutation>(builder.EndTable());
 		}
 
-		// Token: 0x060206C6 RID: 132806 RVA: 0x00482C20 File Offset: 0x00480E20
+		// Token: 0x060225BA RID: 140730 RVA: 0x004BC104 File Offset: 0x004BA304
 		public ICircumnutationT UnPack()
 		{
 			ICircumnutationT circumnutationT = new ICircumnutationT();
@@ -274,7 +274,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return circumnutationT;
 		}
 
-		// Token: 0x060206C7 RID: 132807 RVA: 0x00482C3C File Offset: 0x00480E3C
+		// Token: 0x060225BB RID: 140731 RVA: 0x004BC120 File Offset: 0x004BA320
 		public void UnPackTo(ICircumnutationT _o)
 		{
 			_o.Type = this.Type;
@@ -287,7 +287,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.RenderTrajectoryConfig = ((this.RenderTrajectoryConfig != null) ? this.RenderTrajectoryConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x060206C8 RID: 132808 RVA: 0x00482CCC File Offset: 0x00480ECC
+		// Token: 0x060225BC RID: 140732 RVA: 0x004BC1B0 File Offset: 0x004BA3B0
 		public static Offset<ICircumnutation> Pack(FlatBufferBuilder builder, ICircumnutationT _o)
 		{
 			if (_o == null)
@@ -300,7 +300,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICircumnutation.CreateICircumnutation(builder, _o.Type, _o.Velocity, velocityCurveOffset, _o.Direction, _o.AngularVelocity, _o.RotationSpeed, angularVelocityCurveOffset, renderTrajectoryConfigOffset);
 		}
 
-		// Token: 0x0400DE6A RID: 56938
+		// Token: 0x0400EA58 RID: 59992
 		private Table __p;
 	}
 }

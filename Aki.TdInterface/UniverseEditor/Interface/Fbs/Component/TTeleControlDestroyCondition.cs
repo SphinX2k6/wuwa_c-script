@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CBD RID: 23741
+	// Token: 0x020062EE RID: 25326
 	public enum TTeleControlDestroyCondition : byte
 	{
-		// Token: 0x0400F581 RID: 62849
+		// Token: 0x040102C8 RID: 66248
 		NONE,
-		// Token: 0x0400F582 RID: 62850
+		// Token: 0x040102C9 RID: 66249
 		ICreateBulletDestroyCondition,
-		// Token: 0x0400F583 RID: 62851
+		// Token: 0x040102CA RID: 66250
 		ILetGoDestroyCondition,
-		// Token: 0x0400F584 RID: 62852
+		// Token: 0x040102CB RID: 66251
 		IThrowDestroyCondition
 	}
 }

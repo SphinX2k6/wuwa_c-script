@@ -8,12 +8,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200140A RID: 5130
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001561 RID: 5473
 	public class IFinishRollBlock : IQuestCondition
 	{
-		// Token: 0x060074A3 RID: 29859 RVA: 0x00116D40 File Offset: 0x00114F40
+		// Token: 0x06007B64 RID: 31588 RVA: 0x00125724 File Offset: 0x00123924
 		public static IFinishRollBlock Create(IFinishRollBlock? instance)
 		{
 			if (instance == null)
@@ -26,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002662 RID: 9826
-		// (get) Token: 0x060074A4 RID: 29860 RVA: 0x00116D5F File Offset: 0x00114F5F
+		// Token: 0x17002844 RID: 10308
+		// (get) Token: 0x06007B65 RID: 31589 RVA: 0x00125743 File Offset: 0x00123943
 		public override EChildQuest Type
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002663 RID: 9827
-		// (get) Token: 0x060074A5 RID: 29861 RVA: 0x00116D6C File Offset: 0x00114F6C
+		// Token: 0x17002845 RID: 10309
+		// (get) Token: 0x06007B66 RID: 31590 RVA: 0x00125750 File Offset: 0x00123950
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002664 RID: 9828
-		// (get) Token: 0x060074A6 RID: 29862 RVA: 0x00116DA0 File Offset: 0x00114FA0
+		// Token: 0x17002846 RID: 10310
+		// (get) Token: 0x06007B67 RID: 31591 RVA: 0x00125784 File Offset: 0x00123984
 		public virtual int CenterEntityId
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002665 RID: 9829
-		// (get) Token: 0x060074A7 RID: 29863 RVA: 0x00116DB0 File Offset: 0x00114FB0
+		// Token: 0x17002847 RID: 10311
+		// (get) Token: 0x06007B68 RID: 31592 RVA: 0x00125794 File Offset: 0x00123994
 		public virtual int? InteractEntityId
 		{
 			get
@@ -78,8 +76,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002666 RID: 9830
-		// (get) Token: 0x060074A8 RID: 29864 RVA: 0x00116DE8 File Offset: 0x00114FE8
+		// Token: 0x17002848 RID: 10312
+		// (get) Token: 0x06007B69 RID: 31593 RVA: 0x001257CC File Offset: 0x001239CC
 		[Nullable(2)]
 		public virtual List<ERollBlockInteractType> InteractTypes
 		{
@@ -105,19 +103,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002667 RID: 9831
-		// (get) Token: 0x060074A9 RID: 29865 RVA: 0x00116E5D File Offset: 0x0011505D
+		// Token: 0x17002849 RID: 10313
+		// (get) Token: 0x06007B6A RID: 31594 RVA: 0x00125841 File Offset: 0x00123A41
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IRollBlockStartupMethodBase> LaunchMethod
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -135,8 +133,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002668 RID: 9832
-		// (get) Token: 0x060074AA RID: 29866 RVA: 0x00116E9D File Offset: 0x0011509D
+		// Token: 0x1700284A RID: 10314
+		// (get) Token: 0x06007B6B RID: 31595 RVA: 0x00125881 File Offset: 0x00123A81
 		public virtual int RollBlockGroupId
 		{
 			get
@@ -145,8 +143,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002669 RID: 9833
-		// (get) Token: 0x060074AB RID: 29867 RVA: 0x00116EAA File Offset: 0x001150AA
+		// Token: 0x1700284B RID: 10315
+		// (get) Token: 0x06007B6C RID: 31596 RVA: 0x0012588E File Offset: 0x00123A8E
 		public virtual int RollBlockTemplateId
 		{
 			get
@@ -155,8 +153,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700266A RID: 9834
-		// (get) Token: 0x060074AC RID: 29868 RVA: 0x00116EB7 File Offset: 0x001150B7
+		// Token: 0x1700284C RID: 10316
+		// (get) Token: 0x06007B6D RID: 31597 RVA: 0x0012589B File Offset: 0x00123A9B
 		public virtual VarRef CurrentDifficultyVarRef
 		{
 			get
@@ -171,8 +169,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700266B RID: 9835
-		// (get) Token: 0x060074AD RID: 29869 RVA: 0x00116EE6 File Offset: 0x001150E6
+		// Token: 0x1700284D RID: 10317
+		// (get) Token: 0x06007B6E RID: 31598 RVA: 0x001258CA File Offset: 0x00123ACA
 		public virtual VarRef AllDifficultyCountVarRef
 		{
 			get
@@ -187,19 +185,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700266C RID: 9836
-		// (get) Token: 0x060074AE RID: 29870 RVA: 0x00116F18 File Offset: 0x00115118
+		// Token: 0x1700284E RID: 10318
+		// (get) Token: 0x06007B6F RID: 31599 RVA: 0x001258FC File Offset: 0x00123AFC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> EnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -222,19 +220,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700266D RID: 9837
-		// (get) Token: 0x060074AF RID: 29871 RVA: 0x00116F94 File Offset: 0x00115194
+		// Token: 0x1700284F RID: 10319
+		// (get) Token: 0x06007B70 RID: 31600 RVA: 0x00125978 File Offset: 0x00123B78
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> ExitActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -257,19 +255,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700266E RID: 9838
-		// (get) Token: 0x060074B0 RID: 29872 RVA: 0x00117010 File Offset: 0x00115210
+		// Token: 0x17002850 RID: 10320
+		// (get) Token: 0x06007B71 RID: 31601 RVA: 0x001259F4 File Offset: 0x00123BF4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> CompleteActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -292,77 +290,77 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400437E RID: 17278
+		// Token: 0x0400470F RID: 18191
 		private IFinishRollBlock Instance;
 
-		// Token: 0x0400437F RID: 17279
+		// Token: 0x04004710 RID: 18192
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004380 RID: 17280
+		// Token: 0x04004711 RID: 18193
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004381 RID: 17281
+		// Token: 0x04004712 RID: 18194
 		[Nullable(2)]
 		private List<ERollBlockInteractType> _InteractTypesCache;
 
-		// Token: 0x04004382 RID: 17282
+		// Token: 0x04004713 RID: 18195
 		private bool _InteractTypesInited;
 
-		// Token: 0x04004383 RID: 17283
+		// Token: 0x04004714 RID: 18196
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IRollBlockStartupMethodBase> _LaunchMethodCache;
 
-		// Token: 0x04004384 RID: 17284
+		// Token: 0x04004715 RID: 18197
 		private bool _LaunchMethodInited;
 
-		// Token: 0x04004385 RID: 17285
+		// Token: 0x04004716 RID: 18198
 		private VarRef _CurrentDifficultyVarRefCache;
 
-		// Token: 0x04004386 RID: 17286
+		// Token: 0x04004717 RID: 18199
 		private bool _CurrentDifficultyVarRefInited;
 
-		// Token: 0x04004387 RID: 17287
+		// Token: 0x04004718 RID: 18200
 		private VarRef _AllDifficultyCountVarRefCache;
 
-		// Token: 0x04004388 RID: 17288
+		// Token: 0x04004719 RID: 18201
 		private bool _AllDifficultyCountVarRefInited;
 
-		// Token: 0x04004389 RID: 17289
+		// Token: 0x0400471A RID: 18202
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _EnterActionsCache;
 
-		// Token: 0x0400438A RID: 17290
+		// Token: 0x0400471B RID: 18203
 		private bool _EnterActionsInited;
 
-		// Token: 0x0400438B RID: 17291
+		// Token: 0x0400471C RID: 18204
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitActionsCache;
 
-		// Token: 0x0400438C RID: 17292
+		// Token: 0x0400471D RID: 18205
 		private bool _ExitActionsInited;
 
-		// Token: 0x0400438D RID: 17293
+		// Token: 0x0400471E RID: 18206
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _CompleteActionsCache;
 
-		// Token: 0x0400438E RID: 17294
+		// Token: 0x0400471F RID: 18207
 		private bool _CompleteActionsInited;
 	}
 }

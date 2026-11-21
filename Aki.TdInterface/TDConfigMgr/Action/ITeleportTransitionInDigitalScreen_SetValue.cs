@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FA3 RID: 8099
+	// Token: 0x020021E6 RID: 8678
 	public class ITeleportTransitionInDigitalScreen_SetValue
 	{
-		// Token: 0x04006B8B RID: 27531
+		// Token: 0x04007186 RID: 29062
 		public ETeleportTransitionType Type;
 
-		// Token: 0x04006B8C RID: 27532
+		// Token: 0x04007187 RID: 29063
 		public int ConfigId;
 	}
 }

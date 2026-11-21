@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 {
-	// Token: 0x020069E5 RID: 27109
+	// Token: 0x02005B41 RID: 23361
 	public class TuningStandBubbleTypeTooLong : TuningStandBubbleTypeBase
 	{
-		// Token: 0x060436E7 RID: 276199 RVA: 0x0107AA18 File Offset: 0x01078C18
+		// Token: 0x06039723 RID: 235299 RVA: 0x0101EECC File Offset: 0x0101D0CC
 		public override bool TryStartBubble(bool canPlay)
 		{
 			if (this.PlayFlow == null || this.HasPlayedOnce)
@@ -22,10 +22,10 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			return true;
 		}
 
-		// Token: 0x04023307 RID: 144135
+		// Token: 0x0401E4F7 RID: 124151
 		protected new ETuningStandBubbleTriggerType BubbleType = ETuningStandBubbleTriggerType.TooLong;
 
-		// Token: 0x04023308 RID: 144136
+		// Token: 0x0401E4F8 RID: 124152
 		protected bool HasPlayedOnce;
 	}
 }

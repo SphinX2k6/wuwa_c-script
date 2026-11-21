@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004871 RID: 18545
+	// Token: 0x02004CD6 RID: 19670
 	public struct IEditorState : IFlatbufferObject
 	{
-		// Token: 0x1700861E RID: 34334
-		// (get) Token: 0x0601CDD4 RID: 118228 RVA: 0x004146F7 File Offset: 0x004128F7
+		// Token: 0x17008C68 RID: 35944
+		// (get) Token: 0x0601E5C5 RID: 124357 RVA: 0x00440F9F File Offset: 0x0043F19F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CDD5 RID: 118229 RVA: 0x00414704 File Offset: 0x00412904
+		// Token: 0x0601E5C6 RID: 124358 RVA: 0x00440FAC File Offset: 0x0043F1AC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601CDD6 RID: 118230 RVA: 0x0041470C File Offset: 0x0041290C
+		// Token: 0x0601E5C7 RID: 124359 RVA: 0x00440FB4 File Offset: 0x0043F1B4
 		public static IEditorState GetRootAsIEditorState(ByteBuffer _bb)
 		{
 			return IEditorState.GetRootAsIEditorState(_bb, default(IEditorState));
 		}
 
-		// Token: 0x0601CDD7 RID: 118231 RVA: 0x00414728 File Offset: 0x00412928
+		// Token: 0x0601E5C8 RID: 124360 RVA: 0x00440FD0 File Offset: 0x0043F1D0
 		public static IEditorState GetRootAsIEditorState(ByteBuffer _bb, IEditorState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601CDD8 RID: 118232 RVA: 0x00414745 File Offset: 0x00412945
+		// Token: 0x0601E5C9 RID: 124361 RVA: 0x00440FED File Offset: 0x0043F1ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601CDD9 RID: 118233 RVA: 0x00414754 File Offset: 0x00412954
+		// Token: 0x0601E5CA RID: 124362 RVA: 0x00440FFC File Offset: 0x0043F1FC
 		public IEditorState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700861F RID: 34335
-		// (get) Token: 0x0601CDDA RID: 118234 RVA: 0x00414764 File Offset: 0x00412964
+		// Token: 0x17008C69 RID: 35945
+		// (get) Token: 0x0601E5CB RID: 124363 RVA: 0x0044100C File Offset: 0x0043F20C
 		public bool IsNewJsonNameMode
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008620 RID: 34336
-		// (get) Token: 0x0601CDDB RID: 118235 RVA: 0x004147A4 File Offset: 0x004129A4
+		// Token: 0x17008C6A RID: 35946
+		// (get) Token: 0x0601E5CC RID: 124364 RVA: 0x0044104C File Offset: 0x0043F24C
 		public long LastWorkSpaceCheckTimestamp
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008621 RID: 34337
-		// (get) Token: 0x0601CDDC RID: 118236 RVA: 0x004147E4 File Offset: 0x004129E4
+		// Token: 0x17008C6B RID: 35947
+		// (get) Token: 0x0601E5CD RID: 124365 RVA: 0x0044108C File Offset: 0x0043F28C
 		public bool IsLoadingArchive
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008622 RID: 34338
-		// (get) Token: 0x0601CDDD RID: 118237 RVA: 0x00414824 File Offset: 0x00412A24
+		// Token: 0x17008C6C RID: 35948
+		// (get) Token: 0x0601E5CE RID: 124366 RVA: 0x004410CC File Offset: 0x0043F2CC
 		public bool IsEnableBreakPoint
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008623 RID: 34339
-		// (get) Token: 0x0601CDDE RID: 118238 RVA: 0x00414864 File Offset: 0x00412A64
+		// Token: 0x17008C6D RID: 35949
+		// (get) Token: 0x0601E5CF RID: 124367 RVA: 0x0044110C File Offset: 0x0043F30C
 		public string PlannedBranch
 		{
 			get
@@ -111,19 +111,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CDDF RID: 118239 RVA: 0x0041489C File Offset: 0x00412A9C
+		// Token: 0x0601E5D0 RID: 124368 RVA: 0x00441144 File Offset: 0x0043F344
 		public Span<byte> GetPlannedBranchBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0601CDE0 RID: 118240 RVA: 0x004148AC File Offset: 0x00412AAC
+		// Token: 0x0601E5D1 RID: 124369 RVA: 0x00441154 File Offset: 0x0043F354
 		public byte[] GetPlannedBranchArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x0601CDE1 RID: 118241 RVA: 0x004148BC File Offset: 0x00412ABC
+		// Token: 0x0601E5D2 RID: 124370 RVA: 0x00441164 File Offset: 0x0043F364
 		public string AutoCaptureTree(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -134,8 +134,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17008624 RID: 34340
-		// (get) Token: 0x0601CDE2 RID: 118242 RVA: 0x004148F8 File Offset: 0x00412AF8
+		// Token: 0x17008C6E RID: 35950
+		// (get) Token: 0x0601E5D3 RID: 124371 RVA: 0x004411A0 File Offset: 0x0043F3A0
 		public int AutoCaptureTreeLength
 		{
 			get
@@ -149,24 +149,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008625 RID: 34341
-		// (get) Token: 0x0601CDE3 RID: 118243 RVA: 0x00414924 File Offset: 0x00412B24
-		public IEditorObjectCacheInfo? EditorObjectCacheInfo
+		// Token: 0x17008C6F RID: 35951
+		// (get) Token: 0x0601E5D4 RID: 124372 RVA: 0x004411CC File Offset: 0x0043F3CC
+		public bool IsShowIndividualOwner
 		{
 			get
 			{
 				int num = this.__p.__offset(16);
-				if (num == 0)
-				{
-					return null;
-				}
-				return new IEditorObjectCacheInfo?(default(IEditorObjectCacheInfo).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
 			}
 		}
 
-		// Token: 0x17008626 RID: 34342
-		// (get) Token: 0x0601CDE4 RID: 118244 RVA: 0x00414984 File Offset: 0x00412B84
-		public bool IsShowIndividualOwner
+		// Token: 0x17008C70 RID: 35952
+		// (get) Token: 0x0601E5D5 RID: 124373 RVA: 0x0044120C File Offset: 0x0043F40C
+		public bool IsEnableFlowEditorTreeView
 		{
 			get
 			{
@@ -175,9 +171,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008627 RID: 34343
-		// (get) Token: 0x0601CDE5 RID: 118245 RVA: 0x004149C4 File Offset: 0x00412BC4
-		public bool IsEnableFlowEditorTreeView
+		// Token: 0x17008C71 RID: 35953
+		// (get) Token: 0x0601E5D6 RID: 124374 RVA: 0x0044124C File Offset: 0x0043F44C
+		public bool HideMachineNotRegistedTip
 		{
 			get
 			{
@@ -186,9 +182,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008628 RID: 34344
-		// (get) Token: 0x0601CDE6 RID: 118246 RVA: 0x00414A04 File Offset: 0x00412C04
-		public bool HideMachineNotRegistedTip
+		// Token: 0x17008C72 RID: 35954
+		// (get) Token: 0x0601E5D7 RID: 124375 RVA: 0x0044128C File Offset: 0x0043F48C
+		public bool IsDefaultAddPlotConfig
 		{
 			get
 			{
@@ -197,24 +193,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x17008629 RID: 34345
-		// (get) Token: 0x0601CDE7 RID: 118247 RVA: 0x00414A44 File Offset: 0x00412C44
-		public bool IsDefaultAddPlotConfig
-		{
-			get
-			{
-				int num = this.__p.__offset(24);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
-			}
-		}
-
-		// Token: 0x1700862A RID: 34346
-		// (get) Token: 0x0601CDE8 RID: 118248 RVA: 0x00414A84 File Offset: 0x00412C84
+		// Token: 0x17008C73 RID: 35955
+		// (get) Token: 0x0601E5D8 RID: 124376 RVA: 0x004412CC File Offset: 0x0043F4CC
 		public IEditorRestartInfo? EditorRestartInfo
 		{
 			get
 			{
-				int num = this.__p.__offset(26);
+				int num = this.__p.__offset(24);
 				if (num == 0)
 				{
 					return null;
@@ -223,13 +208,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601CDE9 RID: 118249 RVA: 0x00414AE4 File Offset: 0x00412CE4
-		public static Offset<IEditorState> CreateIEditorState(FlatBufferBuilder builder, bool IsNewJsonNameMode = false, long LastWorkSpaceCheckTimestamp = 0L, bool IsLoadingArchive = false, bool IsEnableBreakPoint = false, StringOffset PlannedBranchOffset = default(StringOffset), VectorOffset AutoCaptureTreeOffset = default(VectorOffset), Offset<IEditorObjectCacheInfo> EditorObjectCacheInfoOffset = default(Offset<IEditorObjectCacheInfo>), bool IsShowIndividualOwner = false, bool IsEnableFlowEditorTreeView = false, bool HideMachineNotRegistedTip = false, bool IsDefaultAddPlotConfig = false, Offset<IEditorRestartInfo> EditorRestartInfoOffset = default(Offset<IEditorRestartInfo>))
+		// Token: 0x0601E5D9 RID: 124377 RVA: 0x0044132C File Offset: 0x0043F52C
+		public static Offset<IEditorState> CreateIEditorState(FlatBufferBuilder builder, bool IsNewJsonNameMode = false, long LastWorkSpaceCheckTimestamp = 0L, bool IsLoadingArchive = false, bool IsEnableBreakPoint = false, StringOffset PlannedBranchOffset = default(StringOffset), VectorOffset AutoCaptureTreeOffset = default(VectorOffset), bool IsShowIndividualOwner = false, bool IsEnableFlowEditorTreeView = false, bool HideMachineNotRegistedTip = false, bool IsDefaultAddPlotConfig = false, Offset<IEditorRestartInfo> EditorRestartInfoOffset = default(Offset<IEditorRestartInfo>))
 		{
-			builder.StartTable(12);
+			builder.StartTable(11);
 			IEditorState.AddLastWorkSpaceCheckTimestamp(builder, LastWorkSpaceCheckTimestamp);
 			IEditorState.AddEditorRestartInfo(builder, EditorRestartInfoOffset);
-			IEditorState.AddEditorObjectCacheInfo(builder, EditorObjectCacheInfoOffset);
 			IEditorState.AddAutoCaptureTree(builder, AutoCaptureTreeOffset);
 			IEditorState.AddPlannedBranch(builder, PlannedBranchOffset);
 			IEditorState.AddIsDefaultAddPlotConfig(builder, IsDefaultAddPlotConfig);
@@ -242,49 +226,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IEditorState.EndIEditorState(builder);
 		}
 
-		// Token: 0x0601CDEA RID: 118250 RVA: 0x00414B5C File Offset: 0x00412D5C
+		// Token: 0x0601E5DA RID: 124378 RVA: 0x0044139C File Offset: 0x0043F59C
 		public static void StartIEditorState(FlatBufferBuilder builder)
 		{
-			builder.StartTable(12);
+			builder.StartTable(11);
 		}
 
-		// Token: 0x0601CDEB RID: 118251 RVA: 0x00414B66 File Offset: 0x00412D66
+		// Token: 0x0601E5DB RID: 124379 RVA: 0x004413A6 File Offset: 0x0043F5A6
 		public static void AddIsNewJsonNameMode(FlatBufferBuilder builder, bool isNewJsonNameMode)
 		{
 			builder.AddBool(0, isNewJsonNameMode, false);
 		}
 
-		// Token: 0x0601CDEC RID: 118252 RVA: 0x00414B71 File Offset: 0x00412D71
+		// Token: 0x0601E5DC RID: 124380 RVA: 0x004413B1 File Offset: 0x0043F5B1
 		public static void AddLastWorkSpaceCheckTimestamp(FlatBufferBuilder builder, long lastWorkSpaceCheckTimestamp)
 		{
 			builder.AddLong(1, lastWorkSpaceCheckTimestamp, 0L);
 		}
 
-		// Token: 0x0601CDED RID: 118253 RVA: 0x00414B7D File Offset: 0x00412D7D
+		// Token: 0x0601E5DD RID: 124381 RVA: 0x004413BD File Offset: 0x0043F5BD
 		public static void AddIsLoadingArchive(FlatBufferBuilder builder, bool isLoadingArchive)
 		{
 			builder.AddBool(2, isLoadingArchive, false);
 		}
 
-		// Token: 0x0601CDEE RID: 118254 RVA: 0x00414B88 File Offset: 0x00412D88
+		// Token: 0x0601E5DE RID: 124382 RVA: 0x004413C8 File Offset: 0x0043F5C8
 		public static void AddIsEnableBreakPoint(FlatBufferBuilder builder, bool isEnableBreakPoint)
 		{
 			builder.AddBool(3, isEnableBreakPoint, false);
 		}
 
-		// Token: 0x0601CDEF RID: 118255 RVA: 0x00414B93 File Offset: 0x00412D93
+		// Token: 0x0601E5DF RID: 124383 RVA: 0x004413D3 File Offset: 0x0043F5D3
 		public static void AddPlannedBranch(FlatBufferBuilder builder, StringOffset plannedBranchOffset)
 		{
 			builder.AddOffset(4, plannedBranchOffset.Value, 0);
 		}
 
-		// Token: 0x0601CDF0 RID: 118256 RVA: 0x00414BA3 File Offset: 0x00412DA3
+		// Token: 0x0601E5E0 RID: 124384 RVA: 0x004413E3 File Offset: 0x0043F5E3
 		public static void AddAutoCaptureTree(FlatBufferBuilder builder, VectorOffset autoCaptureTreeOffset)
 		{
 			builder.AddOffset(5, autoCaptureTreeOffset.Value, 0);
 		}
 
-		// Token: 0x0601CDF1 RID: 118257 RVA: 0x00414BB4 File Offset: 0x00412DB4
+		// Token: 0x0601E5E1 RID: 124385 RVA: 0x004413F4 File Offset: 0x0043F5F4
 		public static VectorOffset CreateAutoCaptureTreeVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -295,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CDF2 RID: 118258 RVA: 0x00414BF4 File Offset: 0x00412DF4
+		// Token: 0x0601E5E2 RID: 124386 RVA: 0x00441434 File Offset: 0x0043F634
 		public static VectorOffset CreateAutoCaptureTreeVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -303,7 +287,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CDF3 RID: 118259 RVA: 0x00414C0E File Offset: 0x00412E0E
+		// Token: 0x0601E5E3 RID: 124387 RVA: 0x0044144E File Offset: 0x0043F64E
 		public static VectorOffset CreateAutoCaptureTreeVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -311,7 +295,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CDF4 RID: 118260 RVA: 0x00414C2C File Offset: 0x00412E2C
+		// Token: 0x0601E5E4 RID: 124388 RVA: 0x0044146C File Offset: 0x0043F66C
 		public static VectorOffset CreateAutoCaptureTreeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -319,55 +303,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601CDF5 RID: 118261 RVA: 0x00414C45 File Offset: 0x00412E45
+		// Token: 0x0601E5E5 RID: 124389 RVA: 0x00441485 File Offset: 0x0043F685
 		public static void StartAutoCaptureTreeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601CDF6 RID: 118262 RVA: 0x00414C50 File Offset: 0x00412E50
-		public static void AddEditorObjectCacheInfo(FlatBufferBuilder builder, Offset<IEditorObjectCacheInfo> editorObjectCacheInfoOffset)
-		{
-			builder.AddOffset(6, editorObjectCacheInfoOffset.Value, 0);
-		}
-
-		// Token: 0x0601CDF7 RID: 118263 RVA: 0x00414C60 File Offset: 0x00412E60
+		// Token: 0x0601E5E6 RID: 124390 RVA: 0x00441490 File Offset: 0x0043F690
 		public static void AddIsShowIndividualOwner(FlatBufferBuilder builder, bool isShowIndividualOwner)
 		{
-			builder.AddBool(7, isShowIndividualOwner, false);
+			builder.AddBool(6, isShowIndividualOwner, false);
 		}
 
-		// Token: 0x0601CDF8 RID: 118264 RVA: 0x00414C6B File Offset: 0x00412E6B
+		// Token: 0x0601E5E7 RID: 124391 RVA: 0x0044149B File Offset: 0x0043F69B
 		public static void AddIsEnableFlowEditorTreeView(FlatBufferBuilder builder, bool isEnableFlowEditorTreeView)
 		{
-			builder.AddBool(8, isEnableFlowEditorTreeView, false);
+			builder.AddBool(7, isEnableFlowEditorTreeView, false);
 		}
 
-		// Token: 0x0601CDF9 RID: 118265 RVA: 0x00414C76 File Offset: 0x00412E76
+		// Token: 0x0601E5E8 RID: 124392 RVA: 0x004414A6 File Offset: 0x0043F6A6
 		public static void AddHideMachineNotRegistedTip(FlatBufferBuilder builder, bool hideMachineNotRegistedTip)
 		{
-			builder.AddBool(9, hideMachineNotRegistedTip, false);
+			builder.AddBool(8, hideMachineNotRegistedTip, false);
 		}
 
-		// Token: 0x0601CDFA RID: 118266 RVA: 0x00414C82 File Offset: 0x00412E82
+		// Token: 0x0601E5E9 RID: 124393 RVA: 0x004414B1 File Offset: 0x0043F6B1
 		public static void AddIsDefaultAddPlotConfig(FlatBufferBuilder builder, bool isDefaultAddPlotConfig)
 		{
-			builder.AddBool(10, isDefaultAddPlotConfig, false);
+			builder.AddBool(9, isDefaultAddPlotConfig, false);
 		}
 
-		// Token: 0x0601CDFB RID: 118267 RVA: 0x00414C8E File Offset: 0x00412E8E
+		// Token: 0x0601E5EA RID: 124394 RVA: 0x004414BD File Offset: 0x0043F6BD
 		public static void AddEditorRestartInfo(FlatBufferBuilder builder, Offset<IEditorRestartInfo> editorRestartInfoOffset)
 		{
-			builder.AddOffset(11, editorRestartInfoOffset.Value, 0);
+			builder.AddOffset(10, editorRestartInfoOffset.Value, 0);
 		}
 
-		// Token: 0x0601CDFC RID: 118268 RVA: 0x00414C9F File Offset: 0x00412E9F
+		// Token: 0x0601E5EB RID: 124395 RVA: 0x004414CE File Offset: 0x0043F6CE
 		public static Offset<IEditorState> EndIEditorState(FlatBufferBuilder builder)
 		{
 			return new Offset<IEditorState>(builder.EndTable());
 		}
 
-		// Token: 0x0601CDFD RID: 118269 RVA: 0x00414CAC File Offset: 0x00412EAC
+		// Token: 0x0601E5EC RID: 124396 RVA: 0x004414DC File Offset: 0x0043F6DC
 		public IEditorStateT UnPack()
 		{
 			IEditorStateT editorStateT = new IEditorStateT();
@@ -375,7 +353,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return editorStateT;
 		}
 
-		// Token: 0x0601CDFE RID: 118270 RVA: 0x00414CC8 File Offset: 0x00412EC8
+		// Token: 0x0601E5ED RID: 124397 RVA: 0x004414F8 File Offset: 0x0043F6F8
 		public void UnPackTo(IEditorStateT _o)
 		{
 			_o.IsNewJsonNameMode = this.IsNewJsonNameMode;
@@ -388,7 +366,6 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			{
 				_o.AutoCaptureTree.Add(this.AutoCaptureTree(i));
 			}
-			_o.EditorObjectCacheInfo = ((this.EditorObjectCacheInfo != null) ? this.EditorObjectCacheInfo.Value.UnPack() : null);
 			_o.IsShowIndividualOwner = this.IsShowIndividualOwner;
 			_o.IsEnableFlowEditorTreeView = this.IsEnableFlowEditorTreeView;
 			_o.HideMachineNotRegistedTip = this.HideMachineNotRegistedTip;
@@ -396,7 +373,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			_o.EditorRestartInfo = ((this.EditorRestartInfo != null) ? this.EditorRestartInfo.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601CDFF RID: 118271 RVA: 0x00414DD0 File Offset: 0x00412FD0
+		// Token: 0x0601E5EE RID: 124398 RVA: 0x004415D0 File Offset: 0x0043F7D0
 		public static Offset<IEditorState> Pack(FlatBufferBuilder builder, IEditorStateT _o)
 		{
 			if (_o == null)
@@ -414,12 +391,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 				}
 				autoCaptureTreeOffset = IEditorState.CreateAutoCaptureTreeVector(builder, array);
 			}
-			Offset<IEditorObjectCacheInfo> editorObjectCacheInfoOffset = (_o.EditorObjectCacheInfo == null) ? default(Offset<IEditorObjectCacheInfo>) : IEditorObjectCacheInfo.Pack(builder, _o.EditorObjectCacheInfo);
 			Offset<IEditorRestartInfo> editorRestartInfoOffset = (_o.EditorRestartInfo == null) ? default(Offset<IEditorRestartInfo>) : IEditorRestartInfo.Pack(builder, _o.EditorRestartInfo);
-			return IEditorState.CreateIEditorState(builder, _o.IsNewJsonNameMode, _o.LastWorkSpaceCheckTimestamp, _o.IsLoadingArchive, _o.IsEnableBreakPoint, plannedBranchOffset, autoCaptureTreeOffset, editorObjectCacheInfoOffset, _o.IsShowIndividualOwner, _o.IsEnableFlowEditorTreeView, _o.HideMachineNotRegistedTip, _o.IsDefaultAddPlotConfig, editorRestartInfoOffset);
+			return IEditorState.CreateIEditorState(builder, _o.IsNewJsonNameMode, _o.LastWorkSpaceCheckTimestamp, _o.IsLoadingArchive, _o.IsEnableBreakPoint, plannedBranchOffset, autoCaptureTreeOffset, _o.IsShowIndividualOwner, _o.IsEnableFlowEditorTreeView, _o.HideMachineNotRegistedTip, _o.IsDefaultAddPlotConfig, editorRestartInfoOffset);
 		}
 
-		// Token: 0x0400CE26 RID: 52774
+		// Token: 0x0400D860 RID: 55392
 		private Table __p;
 	}
 }

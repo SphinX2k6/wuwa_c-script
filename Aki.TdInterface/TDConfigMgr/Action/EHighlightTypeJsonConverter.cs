@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002358 RID: 9048
+	// Token: 0x020025CD RID: 9677
 	public class EHighlightTypeJsonConverter : JsonConverter<EHighlightType>
 	{
-		// Token: 0x0600C58C RID: 50572 RVA: 0x001CD514 File Offset: 0x001CB714
+		// Token: 0x0600D176 RID: 53622 RVA: 0x001E57F4 File Offset: 0x001E39F4
 		public override EHighlightType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EHighlightTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C58D RID: 50573 RVA: 0x001CD538 File Offset: 0x001CB738
+		// Token: 0x0600D177 RID: 53623 RVA: 0x001E5818 File Offset: 0x001E3A18
 		public override void Write(Utf8JsonWriter writer, EHighlightType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

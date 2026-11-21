@@ -1,36 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Aki.Core.Utils;
 using CSharpScript.Typing;
 using UnrealEngine;
 
 namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x020044C1 RID: 17601
+	// Token: 0x02002F93 RID: 12179
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChairSummonEvaluator
 	{
-		// Token: 0x17007399 RID: 29593
-		// (get) Token: 0x0602D5F5 RID: 185845 RVA: 0x00A3C2CA File Offset: 0x00A3A4CA
-		// (set) Token: 0x0602D5F6 RID: 185846 RVA: 0x00A3C2D1 File Offset: 0x00A3A4D1
+		// Token: 0x17002DB7 RID: 11703
+		// (get) Token: 0x0601CE1B RID: 118299 RVA: 0x008D2A6A File Offset: 0x008D0C6A
+		// (set) Token: 0x0601CE1C RID: 118300 RVA: 0x008D2A71 File Offset: 0x008D0C71
 		[StaticVariableRuleIgnore]
 		public static bool DebugDraw { get; set; }
 
-		// Token: 0x1700739A RID: 29594
-		// (get) Token: 0x0602D5F7 RID: 185847 RVA: 0x00A3C2D9 File Offset: 0x00A3A4D9
-		// (set) Token: 0x0602D5F8 RID: 185848 RVA: 0x00A3C2E0 File Offset: 0x00A3A4E0
+		// Token: 0x17002DB8 RID: 11704
+		// (get) Token: 0x0601CE1D RID: 118301 RVA: 0x008D2A79 File Offset: 0x008D0C79
+		// (set) Token: 0x0601CE1E RID: 118302 RVA: 0x008D2A80 File Offset: 0x008D0C80
 		[StaticVariableRuleIgnore]
 		public static float DebugDrawDuration { get; private set; }
 
-		// Token: 0x0602D5F9 RID: 185849 RVA: 0x00A3C2E8 File Offset: 0x00A3A4E8
+		// Token: 0x0601CE1F RID: 118303 RVA: 0x008D2A88 File Offset: 0x008D0C88
 		public static void SetDebugDraw(bool enable, float duration = 5f)
 		{
 			ChairSummonEvaluator.DebugDraw = enable;
 			ChairSummonEvaluator.DebugDrawDuration = (enable ? duration : 0f);
 		}
 
-		// Token: 0x0602D5FA RID: 185850 RVA: 0x00A3C300 File Offset: 0x00A3A500
+		// Token: 0x0601CE20 RID: 118304 RVA: 0x008D2AA0 File Offset: 0x008D0CA0
 		public IChairSummonResult Evaluate(Entity chairEntity, ChairFollowerConfig chairConfig)
 		{
 			FKuroPerfSightHelper.BeginExtTag("ChairSummon.Evaluate");
@@ -39,7 +40,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return result;
 		}
 
-		// Token: 0x0602D5FB RID: 185851 RVA: 0x00A3C320 File Offset: 0x00A3A520
+		// Token: 0x0601CE21 RID: 118305 RVA: 0x008D2AC0 File Offset: 0x008D0CC0
 		[return: Nullable(2)]
 		public string EvaluateTickGroundCheck(Entity chairEntity, ChairFollowerConfig chairConfig)
 		{
@@ -71,10 +72,11 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			float yaw = component.ActorRotationProxy.Yaw;
 			IChairSummonResult result = ChairSummonEvaluator.CreateSummonResult();
 			ChairSummonEvaluator.FillDownRayGeometry(result, yaw, vector2, vector, chairConfig);
-			return this.CheckGroundByDownRays(characterActorComponent, chairEntity, vector, chairConfig, result, false);
+			Vector vector4;
+			return this.CheckGroundByDownRays(characterActorComponent, chairEntity, vector, chairConfig, result, false, out vector4);
 		}
 
-		// Token: 0x0602D5FC RID: 185852 RVA: 0x00A3C3F8 File Offset: 0x00A3A5F8
+		// Token: 0x0601CE22 RID: 118306 RVA: 0x008D2B9C File Offset: 0x008D0D9C
 		private IChairSummonResult EvaluateInternal(Entity chairEntity, ChairFollowerConfig chairConfig)
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -103,47 +105,35 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return this.EvaluateAtPlayerLocation(chairEntity, characterActorComponent, gravityUp, chairConfig);
 		}
 
-		// Token: 0x0602D5FD RID: 185853 RVA: 0x00A3C480 File Offset: 0x00A3A680
+		// Token: 0x0601CE23 RID: 118307 RVA: 0x008D2C24 File Offset: 0x008D0E24
 		private IChairSummonResult EvaluateAtPlayerLocation(Entity chairEntity, CharacterActorComponent playerActorComp, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			IChairSummonResult chairSummonResult = ChairSummonEvaluator.CreateSummonResult();
 			chairSummonResult.Yaw = playerActorComp.ActorRotationProxy.Yaw - chairConfig.ChairFrontYawOffset;
-			Vector vector = Vector.Create(playerActorComp.ActorLocationProxy);
-			ValueTuple<bool, Vector> valueTuple = SkillBehaviorMisc.TraceGroundWithGravity(playerActorComp, vector, false, 2500f);
-			bool item = valueTuple.Item1;
-			Vector item2 = valueTuple.Item2;
-			if (!item || item2 == null)
-			{
-				chairSummonResult.FailReason = "地检未命中地面";
-				return chairSummonResult;
-			}
-			Vector vector2 = Vector.Create(item2);
-			Vector vector3 = Vector.Create(gravityUp);
-			vector3.MultiplyEqual((double)playerActorComp.ScaledHalfHeight);
-			vector2.SubtractionEqual(vector3);
-			Vector vector4 = Vector.Create(playerActorComp.ActorLocationProxy);
-			vector4.SubtractionEqual(vector3);
-			Vector vector5 = Vector.Create(vector2);
-			vector5.SubtractionEqual(vector4);
-			double num = vector5.DotProduct(gravityUp);
-			if (num > (double)chairConfig.MaxSummonHeightUp)
-			{
-				chairSummonResult.FailReason = "落点比玩家高出过多(防坐下卡点)";
-				return chairSummonResult;
-			}
-			if (num < (double)(-(double)chairConfig.MaxSummonHeightDown))
-			{
-				chairSummonResult.FailReason = "落点比玩家低出过多(悬崖下/深坑)";
-				return chairSummonResult;
-			}
-			string text = this.CheckWaterDepth(playerActorComp, chairEntity, vector, vector2, gravityUp, chairConfig);
+			Vector targetLoc = Vector.Create(playerActorComp.ActorLocationProxy);
+			Vector vector = Vector.Create(playerActorComp.FloorLocation);
+			ChairSummonEvaluator.FillDownRayGeometry(chairSummonResult, chairSummonResult.Yaw, vector, gravityUp, chairConfig);
+			Vector vector2;
+			string text = this.CheckGroundByDownRays(playerActorComp, chairEntity, gravityUp, chairConfig, chairSummonResult, chairConfig.CheckGroundMobility, out vector2);
 			if (text != null)
 			{
 				chairSummonResult.FailReason = text;
 				return chairSummonResult;
 			}
-			ChairSummonEvaluator.FillDownRayGeometry(chairSummonResult, chairSummonResult.Yaw, vector2, gravityUp, chairConfig);
-			string text2 = this.CheckGroundByDownRays(playerActorComp, chairEntity, gravityUp, chairConfig, chairSummonResult, chairConfig.CheckGroundMobility);
+			Vector vector3 = Vector.Create(vector2);
+			vector3.SubtractionEqual(vector);
+			float num = (float)vector3.DotProduct(gravityUp);
+			if (num > chairConfig.MaxSummonHeightUp)
+			{
+				chairSummonResult.FailReason = "落点比玩家高出过多(防坐下卡点)";
+				return chairSummonResult;
+			}
+			if (num < -chairConfig.MaxSummonHeightDown)
+			{
+				chairSummonResult.FailReason = "落点比玩家低出过多(悬崖下/深坑)";
+				return chairSummonResult;
+			}
+			string text2 = this.CheckWaterDepth(playerActorComp, chairEntity, targetLoc, vector2, gravityUp, chairConfig);
 			if (text2 != null)
 			{
 				chairSummonResult.FailReason = text2;
@@ -164,16 +154,16 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				chairSummonResult.FailReason = "椅子占用空间被阻挡(Profile)";
 				return chairSummonResult;
 			}
-			Vector vector6 = Vector.Create(vector2);
-			Vector vector7 = Vector.Create(gravityUp);
-			vector7.MultiplyEqual((double)chairConfig.SummonHeightOffset);
-			vector6.AdditionEqual(vector7);
-			chairSummonResult.FinalLocation.Set(vector6.X, vector6.Y, vector6.Z);
+			Vector vector4 = Vector.Create(vector2);
+			Vector vector5 = Vector.Create(gravityUp);
+			vector5.MultiplyEqual((double)chairConfig.SummonHeightOffset);
+			vector4.AdditionEqual(vector5);
+			chairSummonResult.FinalLocation.Set(vector4.X, vector4.Y, vector4.Z);
 			chairSummonResult.Success = true;
 			return chairSummonResult;
 		}
 
-		// Token: 0x0602D5FE RID: 185854 RVA: 0x00A3C66C File Offset: 0x00A3A86C
+		// Token: 0x0601CE24 RID: 118308 RVA: 0x008D2DA8 File Offset: 0x008D0FA8
 		[return: Nullable(2)]
 		private string CheckWaterDepth(CharacterActorComponent playerActorComp, Entity chairEntity, Vector targetLoc, Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
@@ -233,7 +223,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return result;
 		}
 
-		// Token: 0x0602D5FF RID: 185855 RVA: 0x00A3C82B File Offset: 0x00A3AA2B
+		// Token: 0x0601CE25 RID: 118309 RVA: 0x008D2F67 File Offset: 0x008D1167
 		private static IChairSummonResult CreateSummonResult()
 		{
 			return new ChairSummonResult
@@ -246,7 +236,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			};
 		}
 
-		// Token: 0x0602D600 RID: 185856 RVA: 0x00A3C865 File Offset: 0x00A3AA65
+		// Token: 0x0601CE26 RID: 118310 RVA: 0x008D2FA1 File Offset: 0x008D11A1
 		private static Vector ComputeBoxCenter(Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			Vector vector = Vector.Create(gravityUp);
@@ -255,8 +245,8 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return vector;
 		}
 
-		// Token: 0x0602D601 RID: 185857 RVA: 0x00A3C88C File Offset: 0x00A3AA8C
-		private static void FillDownRayGeometry(IChairSummonResult result, float chairYaw, Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
+		// Token: 0x0601CE27 RID: 118311 RVA: 0x008D2FC8 File Offset: 0x008D11C8
+		private static void FillDownRayGeometry(IChairSummonResult result, float chairYaw, Vector groundRef, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			double num = (double)chairYaw * 3.141592653589793 / 180.0;
 			double num2 = Math.Cos(num);
@@ -271,7 +261,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			{
 				int item = valueTuple.Item1;
 				int item2 = valueTuple.Item2;
-				Vector vector = Vector.Create(realGround);
+				Vector vector = Vector.Create(groundRef);
 				if (item != 0 || item2 != 0)
 				{
 					Vector vector2 = Vector.Create(inV);
@@ -291,9 +281,9 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D602 RID: 185858 RVA: 0x00A3C9F0 File Offset: 0x00A3ABF0
+		// Token: 0x0601CE28 RID: 118312 RVA: 0x008D312C File Offset: 0x008D132C
 		[return: Nullable(2)]
-		private string CheckGroundByDownRays(CharacterActorComponent playerActorComp, Entity chairEntity, Vector gravityUp, ChairFollowerConfig chairConfig, IChairSummonResult result, bool checkGroundMobility)
+		private string CheckGroundByDownRays(CharacterActorComponent playerActorComp, Entity chairEntity, Vector gravityUp, ChairFollowerConfig chairConfig, IChairSummonResult result, bool checkGroundMobility, out Vector centerHitLocation)
 		{
 			FKuroPerfSightHelper.BeginExtTag("ChairSummon.Trace.DownRay");
 			UTraceLineElement utraceLineElement;
@@ -312,8 +302,11 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			float num = float.PositiveInfinity;
 			float num2 = float.NegativeInfinity;
 			string text = null;
-			foreach (ValueTuple<Vector, Vector> valueTuple in result.DownRayLines)
+			centerHitLocation = Vector.Create();
+			List<ValueTuple<Vector, Vector>> downRayLines = result.DownRayLines;
+			for (int i = 0; i < downRayLines.Count; i++)
 			{
+				ValueTuple<Vector, Vector> valueTuple = downRayLines[i];
 				Vector item = valueTuple.Item1;
 				Vector item2 = valueTuple.Item2;
 				utraceLineElement2.ActorsToIgnore.Empty(true);
@@ -344,6 +337,10 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				}
 				Vector vector = Vector.Create();
 				TraceElementCommon.Instance.GetHitLocation(hitResult, 0, vector);
+				if (i == 0)
+				{
+					centerHitLocation.Set(vector.X, vector.Y, vector.Z);
+				}
 				float num3 = (float)vector.DotProduct(gravityUp);
 				if (num3 < num)
 				{
@@ -364,7 +361,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return text;
 		}
 
-		// Token: 0x0602D603 RID: 185859 RVA: 0x00A3CC40 File Offset: 0x00A3AE40
+		// Token: 0x0601CE29 RID: 118313 RVA: 0x008D3378 File Offset: 0x008D1578
 		private static List<AActor> CollectChairIgnoreActors(Entity chairEntity)
 		{
 			List<AActor> list = new List<AActor>();
@@ -391,7 +388,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return list;
 		}
 
-		// Token: 0x0602D604 RID: 185860 RVA: 0x00A3CCC0 File Offset: 0x00A3AEC0
+		// Token: 0x0601CE2A RID: 118314 RVA: 0x008D33F8 File Offset: 0x008D15F8
 		private bool IsTraceTypeBoxBlocked(CharacterActorComponent playerActorComp, Entity chairEntity, Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			if (!chairConfig.EnableBlockTraceCheck)
@@ -426,7 +423,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return result;
 		}
 
-		// Token: 0x0602D605 RID: 185861 RVA: 0x00A3CD7C File Offset: 0x00A3AF7C
+		// Token: 0x0601CE2B RID: 118315 RVA: 0x008D34B4 File Offset: 0x008D16B4
 		private bool IsObjectTypeBoxBlocked(CharacterActorComponent playerActorComp, Entity chairEntity, Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			if (!chairConfig.EnableBlockObjectCheck)
@@ -471,7 +468,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return result;
 		}
 
-		// Token: 0x0602D606 RID: 185862 RVA: 0x00A3CE94 File Offset: 0x00A3B094
+		// Token: 0x0601CE2C RID: 118316 RVA: 0x008D35CC File Offset: 0x008D17CC
 		private bool IsProfileBoxBlocked(CharacterActorComponent playerActorComp, Entity chairEntity, Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			if (!chairConfig.EnableBlockProfileCheck)
@@ -479,34 +476,27 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return false;
 			}
 			FKuroPerfSightHelper.BeginExtTag("ChairSummon.Trace.BlockProfile");
-			UTraceBoxElement utraceBoxElement;
-			if ((utraceBoxElement = this.ProfileBoxElement) == null)
-			{
-				utraceBoxElement = (this.ProfileBoxElement = new UTraceBoxElement());
-			}
-			UTraceBoxElement utraceBoxElement2 = utraceBoxElement;
-			utraceBoxElement2.WorldContextObject = GlobalData.World;
-			utraceBoxElement2.bIsSingle = true;
-			utraceBoxElement2.bIgnoreSelf = true;
-			utraceBoxElement2.bIsProfile = true;
-			utraceBoxElement2.ProfileName = chairConfig.BlockCheckProfileName;
-			utraceBoxElement2.bTraceComplex = false;
-			ChairSummonEvaluator.ApplyDebugDrawSettings(utraceBoxElement2);
 			bool result;
 			try
 			{
-				ChairSummonEvaluator.ConfigureBlockBoxElement(utraceBoxElement2, playerActorComp, chairEntity, realGround, gravityUp, chairConfig);
-				result = ChairSummonEvaluator.HasBlockingActor(utraceBoxElement2, playerActorComp.Actor, chairEntity, "ChairSummon.BlockProfileBox");
+				Vector boxPosition = ChairSummonEvaluator.ComputeBoxCenter(realGround, gravityUp, chairConfig);
+				float yaw = playerActorComp.ActorRotationProxy.Yaw - chairConfig.ChairFrontYawOffset;
+				TArray<AActor> tarray = new TArray<AActor>();
+				tarray.Add(playerActorComp.Actor);
+				foreach (AActor value in ChairSummonEvaluator.CollectChairIgnoreActors(chairEntity))
+				{
+					tarray.Add(value);
+				}
+				result = OverlapTestUtils.BoxOverlapAnyTestByProfile(GlobalData.World, boxPosition, new FVector(chairConfig.BoxHalfSizeX, chairConfig.BoxHalfSizeY, chairConfig.BoxHalfSizeZ), Rotator.Create(0f, yaw, 0f).ToUeRotator(), chairConfig.BlockCheckProfileName, false, tarray, "ChairSummon.BlockProfileBox");
 			}
 			finally
 			{
-				utraceBoxElement2.ClearCacheData(true);
 				FKuroPerfSightHelper.EndExtTag("ChairSummon.Trace.BlockProfile");
 			}
 			return result;
 		}
 
-		// Token: 0x0602D607 RID: 185863 RVA: 0x00A3CF50 File Offset: 0x00A3B150
+		// Token: 0x0601CE2D RID: 118317 RVA: 0x008D36CC File Offset: 0x008D18CC
 		private static void ConfigureBlockBoxElement(UTraceBoxElement element, CharacterActorComponent playerActorComp, Entity chairEntity, Vector realGround, Vector gravityUp, ChairFollowerConfig chairConfig)
 		{
 			Vector inV = ChairSummonEvaluator.ComputeBoxCenter(realGround, gravityUp, chairConfig);
@@ -532,7 +522,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			TraceElementCommon.Instance.SetBoxOrientation(element, Rotator.Create(0f, yaw, 0f));
 		}
 
-		// Token: 0x0602D608 RID: 185864 RVA: 0x00A3D060 File Offset: 0x00A3B260
+		// Token: 0x0601CE2E RID: 118318 RVA: 0x008D37DC File Offset: 0x008D19DC
 		private static bool HasBlockingActor(UTraceBoxElement element, AActor playerActor, Entity chairEntity, string traceKey)
 		{
 			bool flag = TraceElementCommon.Instance.BoxTrace(element, traceKey);
@@ -560,7 +550,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return result;
 		}
 
-		// Token: 0x0602D609 RID: 185865 RVA: 0x00A3D0F4 File Offset: 0x00A3B2F4
+		// Token: 0x0601CE2F RID: 118319 RVA: 0x008D3870 File Offset: 0x008D1A70
 		private unsafe static void LogHitActorCollisionResponses(string traceKey, UKuroHitResult hitResult, int hitIndex)
 		{
 			AActor aactor = hitResult.Actors.Get(hitIndex).Get();
@@ -611,7 +601,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray12<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 12));
 		}
 
-		// Token: 0x0602D60A RID: 185866 RVA: 0x00A3D364 File Offset: 0x00A3B564
+		// Token: 0x0601CE30 RID: 118320 RVA: 0x008D3AE0 File Offset: 0x008D1CE0
 		public void StopDebugDraw()
 		{
 			UTraceLineElement waterLineElement = this.WaterLineElement;
@@ -630,19 +620,14 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				traceTypeBoxElement.SetDrawDebugTrace(EDrawDebugTrace.None);
 			}
 			UTraceBoxElement objectTypeBoxElement = this.ObjectTypeBoxElement;
-			if (objectTypeBoxElement != null)
-			{
-				objectTypeBoxElement.SetDrawDebugTrace(EDrawDebugTrace.None);
-			}
-			UTraceBoxElement profileBoxElement = this.ProfileBoxElement;
-			if (profileBoxElement == null)
+			if (objectTypeBoxElement == null)
 			{
 				return;
 			}
-			profileBoxElement.SetDrawDebugTrace(EDrawDebugTrace.None);
+			objectTypeBoxElement.SetDrawDebugTrace(EDrawDebugTrace.None);
 		}
 
-		// Token: 0x0602D60B RID: 185867 RVA: 0x00A3D3CA File Offset: 0x00A3B5CA
+		// Token: 0x0601CE31 RID: 118321 RVA: 0x008D3B34 File Offset: 0x008D1D34
 		[NullableContext(2)]
 		private static void ApplyDebugDrawSettings(UTraceBaseElement element)
 		{
@@ -664,7 +649,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			element.SetDrawDebugTrace(EDrawDebugTrace.ForDuration);
 		}
 
-		// Token: 0x0602D60C RID: 185868 RVA: 0x00A3D408 File Offset: 0x00A3B608
+		// Token: 0x0601CE32 RID: 118322 RVA: 0x008D3B70 File Offset: 0x008D1D70
 		public void Dispose()
 		{
 			this.StopDebugDraw();
@@ -692,54 +677,48 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				objectTypeBoxElement.Dispose();
 			}
 			this.ObjectTypeBoxElement = null;
-			UTraceBoxElement profileBoxElement = this.ProfileBoxElement;
-			if (profileBoxElement != null)
-			{
-				profileBoxElement.Dispose();
-			}
-			this.ProfileBoxElement = null;
 		}
 
-		// Token: 0x040183F8 RID: 99320
+		// Token: 0x0400F382 RID: 62338
 		private const string TRACE_KEY_DOWN_RAY = "ChairSummon.DownRay";
 
-		// Token: 0x040183F9 RID: 99321
+		// Token: 0x0400F383 RID: 62339
 		private const string TRACE_KEY_WATER = "ChairSummon.Water";
 
-		// Token: 0x040183FA RID: 99322
+		// Token: 0x0400F384 RID: 62340
 		private const string TRACE_KEY_BLOCK_TRACE_BOX = "ChairSummon.BlockTraceBox";
 
-		// Token: 0x040183FB RID: 99323
+		// Token: 0x0400F385 RID: 62341
 		private const string TRACE_KEY_BLOCK_OBJECT_BOX = "ChairSummon.BlockObjectBox";
 
-		// Token: 0x040183FC RID: 99324
+		// Token: 0x0400F386 RID: 62342
 		private const string TRACE_KEY_BLOCK_PROFILE_BOX = "ChairSummon.BlockProfileBox";
 
-		// Token: 0x040183FD RID: 99325
+		// Token: 0x0400F387 RID: 62343
 		private const float BLOCK_BOX_TRACE_HALF_DISTANCE = 0.5f;
 
-		// Token: 0x040183FE RID: 99326
+		// Token: 0x0400F388 RID: 62344
 		private const float WATER_PROBE_END_TOLERANCE = 1f;
 
-		// Token: 0x040183FF RID: 99327
+		// Token: 0x0400F389 RID: 62345
 		private const string PERF_TAG_EVALUATE = "ChairSummon.Evaluate";
 
-		// Token: 0x04018400 RID: 99328
+		// Token: 0x0400F38A RID: 62346
 		private const string PERF_TAG_DOWN_RAY = "ChairSummon.Trace.DownRay";
 
-		// Token: 0x04018401 RID: 99329
+		// Token: 0x0400F38B RID: 62347
 		private const string PERF_TAG_WATER = "ChairSummon.Trace.Water";
 
-		// Token: 0x04018402 RID: 99330
+		// Token: 0x0400F38C RID: 62348
 		private const string PERF_TAG_BLOCK_TRACE = "ChairSummon.Trace.BlockTrace";
 
-		// Token: 0x04018403 RID: 99331
+		// Token: 0x0400F38D RID: 62349
 		private const string PERF_TAG_BLOCK_OBJECT = "ChairSummon.Trace.BlockObject";
 
-		// Token: 0x04018404 RID: 99332
+		// Token: 0x0400F38E RID: 62350
 		private const string PERF_TAG_BLOCK_PROFILE = "ChairSummon.Trace.BlockProfile";
 
-		// Token: 0x04018405 RID: 99333
+		// Token: 0x0400F38F RID: 62351
 		[Nullable(new byte[]
 		{
 			1,
@@ -755,23 +734,19 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			new ValueTuple<int, int>(-1, -1)
 		};
 
-		// Token: 0x04018406 RID: 99334
+		// Token: 0x0400F390 RID: 62352
 		[Nullable(2)]
 		private UTraceLineElement DownRayLineElement;
 
-		// Token: 0x04018407 RID: 99335
+		// Token: 0x0400F391 RID: 62353
 		[Nullable(2)]
 		private UTraceBoxElement ObjectTypeBoxElement;
 
-		// Token: 0x04018408 RID: 99336
-		[Nullable(2)]
-		private UTraceBoxElement ProfileBoxElement;
-
-		// Token: 0x04018409 RID: 99337
+		// Token: 0x0400F392 RID: 62354
 		[Nullable(2)]
 		private UTraceBoxElement TraceTypeBoxElement;
 
-		// Token: 0x0401840A RID: 99338
+		// Token: 0x0400F393 RID: 62355
 		[Nullable(2)]
 		private UTraceLineElement WaterLineElement;
 	}

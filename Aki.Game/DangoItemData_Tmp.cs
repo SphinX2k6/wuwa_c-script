@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BC6 RID: 7110
+// Token: 0x02001085 RID: 4229
 public class DangoItemData_Tmp
 {
-	// Token: 0x040060F3 RID: 24819
+	// Token: 0x040061C2 RID: 25026
 	public int RoleConfigId;
 
-	// Token: 0x040060F4 RID: 24820
+	// Token: 0x040061C3 RID: 25027
 	public int DangoId;
 
-	// Token: 0x040060F5 RID: 24821
+	// Token: 0x040061C4 RID: 25028
 	public int Level;
 
-	// Token: 0x040060F6 RID: 24822
+	// Token: 0x040061C5 RID: 25029
 	public bool IfSelf = true;
 
-	// Token: 0x040060F7 RID: 24823
+	// Token: 0x040061C6 RID: 25030
 	public int Index;
 
-	// Token: 0x040060F8 RID: 24824
+	// Token: 0x040061C7 RID: 25031
 	[Nullable(1)]
 	public int[] DangoEquipIds = new int[0];
 }

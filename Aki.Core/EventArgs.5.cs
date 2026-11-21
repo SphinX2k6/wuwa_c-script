@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000094 RID: 148
+// Token: 0x02000096 RID: 150
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4> : IEventArgs
 {
-	// Token: 0x06000471 RID: 1137 RVA: 0x00019E1B File Offset: 0x0001801B
+	// Token: 0x060004B2 RID: 1202 RVA: 0x0001A57F File Offset: 0x0001877F
 	public EventArgs(T1 p1, T2 p2, T3 p3, T4 p4)
 	{
 		this.<p1>P = p1;
@@ -15,7 +15,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		this.<p4>P = p4;
 	}
 
-	// Token: 0x06000472 RID: 1138 RVA: 0x00019E3C File Offset: 0x0001803C
+	// Token: 0x060004B3 RID: 1203 RVA: 0x0001A5A0 File Offset: 0x000187A0
 	public bool Invoke(Enum name, Delegate handle)
 	{
 		Action<T1, T2, T3, T4> action = handle as Action<T1, T2, T3, T4>;
@@ -42,7 +42,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		return true;
 	}
 
-	// Token: 0x06000473 RID: 1139 RVA: 0x00019ED8 File Offset: 0x000180D8
+	// Token: 0x060004B4 RID: 1204 RVA: 0x0001A63C File Offset: 0x0001883C
 	public bool Invoke(long name, Delegate handle)
 	{
 		Action<T1, T2, T3, T4> action = handle as Action<T1, T2, T3, T4>;
@@ -69,19 +69,19 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		return true;
 	}
 
-	// Token: 0x040003F5 RID: 1013
+	// Token: 0x04000403 RID: 1027
 	[CompilerGenerated]
 	private readonly T1 <p1>P;
 
-	// Token: 0x040003F6 RID: 1014
+	// Token: 0x04000404 RID: 1028
 	[CompilerGenerated]
 	private readonly T2 <p2>P;
 
-	// Token: 0x040003F7 RID: 1015
+	// Token: 0x04000405 RID: 1029
 	[CompilerGenerated]
 	private readonly T3 <p3>P;
 
-	// Token: 0x040003F8 RID: 1016
+	// Token: 0x04000406 RID: 1030
 	[CompilerGenerated]
 	private readonly T4 <p4>P;
 }

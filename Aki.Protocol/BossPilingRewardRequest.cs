@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020001C7 RID: 455
+	// Token: 0x020001CB RID: 459
 	[NetMessage(EMessageId.BossPilingRewardRequest)]
 	public sealed class BossPilingRewardRequest : IMessage<BossPilingRewardRequest>, IMessage, IEquatable<BossPilingRewardRequest>, IDeepCloneable<BossPilingRewardRequest>, IBufferMessage
 	{
-		// Token: 0x06003429 RID: 13353 RVA: 0x00083B95 File Offset: 0x00081D95
+		// Token: 0x060034B6 RID: 13494 RVA: 0x00085305 File Offset: 0x00083505
 		[NullableContext(1)]
 		public static BossPilingRewardRequest Create()
 		{
 			return new BossPilingRewardRequest();
 		}
 
-		// Token: 0x17000843 RID: 2115
-		// (get) Token: 0x0600342A RID: 13354 RVA: 0x00083B9C File Offset: 0x00081D9C
+		// Token: 0x1700085C RID: 2140
+		// (get) Token: 0x060034B7 RID: 13495 RVA: 0x0008530C File Offset: 0x0008350C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000844 RID: 2116
-		// (get) Token: 0x0600342B RID: 13355 RVA: 0x00083B9F File Offset: 0x00081D9F
+		// Token: 0x1700085D RID: 2141
+		// (get) Token: 0x060034B8 RID: 13496 RVA: 0x0008530F File Offset: 0x0008350F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600342C RID: 13356 RVA: 0x00083BA6 File Offset: 0x00081DA6
+		// Token: 0x060034B9 RID: 13497 RVA: 0x00085316 File Offset: 0x00083516
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossPilingRewardRequest()
 		{
 		}
 
-		// Token: 0x0600342D RID: 13357 RVA: 0x00083BB9 File Offset: 0x00081DB9
+		// Token: 0x060034BA RID: 13498 RVA: 0x00085329 File Offset: 0x00083529
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossPilingRewardRequest(BossPilingRewardRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600342E RID: 13358 RVA: 0x00083BEF File Offset: 0x00081DEF
+		// Token: 0x060034BB RID: 13499 RVA: 0x0008535F File Offset: 0x0008355F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BossPilingRewardRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new BossPilingRewardRequest(this);
 		}
 
-		// Token: 0x17000845 RID: 2117
-		// (get) Token: 0x0600342F RID: 13359 RVA: 0x00083BF7 File Offset: 0x00081DF7
-		// (set) Token: 0x06003430 RID: 13360 RVA: 0x00083BFF File Offset: 0x00081DFF
+		// Token: 0x1700085E RID: 2142
+		// (get) Token: 0x060034BC RID: 13500 RVA: 0x00085367 File Offset: 0x00083567
+		// (set) Token: 0x060034BD RID: 13501 RVA: 0x0008536F File Offset: 0x0008356F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000846 RID: 2118
-		// (get) Token: 0x06003431 RID: 13361 RVA: 0x00083C08 File Offset: 0x00081E08
+		// Token: 0x1700085F RID: 2143
+		// (get) Token: 0x060034BE RID: 13502 RVA: 0x00085378 File Offset: 0x00083578
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BossPilingTaskIds
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003432 RID: 13362 RVA: 0x00083C10 File Offset: 0x00081E10
+		// Token: 0x060034BF RID: 13503 RVA: 0x00085380 File Offset: 0x00083580
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BossPilingRewardRequest);
 		}
 
-		// Token: 0x06003433 RID: 13363 RVA: 0x00083C20 File Offset: 0x00081E20
+		// Token: 0x060034C0 RID: 13504 RVA: 0x00085390 File Offset: 0x00083590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BossPilingRewardRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.bossPilingTaskIds_.Equals(other.bossPilingTaskIds_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003434 RID: 13364 RVA: 0x00083C70 File Offset: 0x00081E70
+		// Token: 0x060034C1 RID: 13505 RVA: 0x000853E0 File Offset: 0x000835E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003435 RID: 13365 RVA: 0x00083CBD File Offset: 0x00081EBD
+		// Token: 0x060034C2 RID: 13506 RVA: 0x0008542D File Offset: 0x0008362D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06003436 RID: 13366 RVA: 0x00083CCA File Offset: 0x00081ECA
+		// Token: 0x060034C3 RID: 13507 RVA: 0x0008543A File Offset: 0x0008363A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003437 RID: 13367 RVA: 0x00083CD4 File Offset: 0x00081ED4
+		// Token: 0x060034C4 RID: 13508 RVA: 0x00085444 File Offset: 0x00083644
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.bossPilingTaskIds_.WriteTo(ref output, BossPilingRewardRequest._repeated_bossPilingTaskIds_codec);
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(112);
 				output.WriteInt32(this.ActivityId);
 			}
-			this.bossPilingTaskIds_.WriteTo(ref output, BossPilingRewardRequest._repeated_bossPilingTaskIds_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06003438 RID: 13368 RVA: 0x00083D24 File Offset: 0x00081F24
+		// Token: 0x060034C5 RID: 13509 RVA: 0x00085494 File Offset: 0x00083694
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003439 RID: 13369 RVA: 0x00083D78 File Offset: 0x00081F78
+		// Token: 0x060034C6 RID: 13510 RVA: 0x000854E8 File Offset: 0x000836E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BossPilingRewardRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600343A RID: 13370 RVA: 0x00083DC5 File Offset: 0x00081FC5
+		// Token: 0x060034C7 RID: 13511 RVA: 0x00085535 File Offset: 0x00083735
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600343B RID: 13371 RVA: 0x00083DD0 File Offset: 0x00081FD0
+		// Token: 0x060034C8 RID: 13512 RVA: 0x00085540 File Offset: 0x00083740
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 104U && num != 106U)
 				{
-					if (num != 64U && num != 66U)
+					if (num != 112U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.bossPilingTaskIds_.AddEntriesFrom(ref input, BossPilingRewardRequest._repeated_bossPilingTaskIds_codec);
+						this.ActivityId = input.ReadInt32();
 					}
 				}
 				else
 				{
-					this.ActivityId = input.ReadInt32();
+					this.bossPilingTaskIds_.AddEntriesFrom(ref input, BossPilingRewardRequest._repeated_bossPilingTaskIds_codec);
 				}
 			}
 		}
 
-		// Token: 0x040029F5 RID: 10741
+		// Token: 0x04002A70 RID: 10864
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040029F6 RID: 10742
-		public const int ActivityIdFieldNumber = 3;
+		// Token: 0x04002A71 RID: 10865
+		public const int ActivityIdFieldNumber = 14;
 
-		// Token: 0x040029F7 RID: 10743
+		// Token: 0x04002A72 RID: 10866
 		private int activityId_;
 
-		// Token: 0x040029F8 RID: 10744
-		public const int BossPilingTaskIdsFieldNumber = 8;
+		// Token: 0x04002A73 RID: 10867
+		public const int BossPilingTaskIdsFieldNumber = 13;
 
-		// Token: 0x040029F9 RID: 10745
-		private static readonly FieldCodec<int> _repeated_bossPilingTaskIds_codec = FieldCodec.ForInt32(66U);
+		// Token: 0x04002A74 RID: 10868
+		private static readonly FieldCodec<int> _repeated_bossPilingTaskIds_codec = FieldCodec.ForInt32(106U);
 
-		// Token: 0x040029FA RID: 10746
+		// Token: 0x04002A75 RID: 10869
 		private readonly RepeatedField<int> bossPilingTaskIds_ = new RepeatedField<int>();
 	}
 }

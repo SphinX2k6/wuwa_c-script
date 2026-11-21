@@ -5,18 +5,18 @@ using CSharpScript.Game.LevelFlow.Node;
 
 namespace CSharpScript.Game.LevelFlow.Section
 {
-	// Token: 0x02006F72 RID: 28530
+	// Token: 0x020060F3 RID: 24819
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowSection : IStaticVariableResetter
 	{
-		// Token: 0x06045670 RID: 284272 RVA: 0x01134043 File Offset: 0x01132243
+		// Token: 0x0603B81E RID: 243742 RVA: 0x010DDE47 File Offset: 0x010DC047
 		static LevelFlowSection()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelFlowSection.CreateStaticDefaultValue), new Action(LevelFlowSection.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045671 RID: 284273 RVA: 0x01134064 File Offset: 0x01132264
+		// Token: 0x0603B81F RID: 243743 RVA: 0x010DDE68 File Offset: 0x010DC068
 		public LevelFlowSection(List<LevelFlowNode> nodeList, List<LevelFlowNode> resetNodeList)
 		{
 			this.ResetNodeList = resetNodeList;
@@ -24,19 +24,19 @@ namespace CSharpScript.Game.LevelFlow.Section
 			this.NodeList = nodeList;
 		}
 
-		// Token: 0x06045672 RID: 284274 RVA: 0x011340B9 File Offset: 0x011322B9
+		// Token: 0x0603B820 RID: 243744 RVA: 0x010DDEBD File Offset: 0x010DC0BD
 		public void BindCompleteCallBack(Action<LevelFlowSection, bool> completeCallBack)
 		{
 			this.CompleteCallBack = completeCallBack;
 		}
 
-		// Token: 0x06045673 RID: 284275 RVA: 0x011340C2 File Offset: 0x011322C2
+		// Token: 0x0603B821 RID: 243745 RVA: 0x010DDEC6 File Offset: 0x010DC0C6
 		public void BindResetCompleteCallBack(Action<LevelFlowSection, bool> completeCallBack)
 		{
 			this.ResetCompleteCallBack = completeCallBack;
 		}
 
-		// Token: 0x06045674 RID: 284276 RVA: 0x011340CC File Offset: 0x011322CC
+		// Token: 0x0603B822 RID: 243746 RVA: 0x010DDED0 File Offset: 0x010DC0D0
 		public void Enter()
 		{
 			this.NodeSet.Clear();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelFlow.Section
 			}
 		}
 
-		// Token: 0x06045675 RID: 284277 RVA: 0x01134184 File Offset: 0x01132384
+		// Token: 0x0603B823 RID: 243747 RVA: 0x010DDF88 File Offset: 0x010DC188
 		public void Tick(float deltaTime)
 		{
 			foreach (LevelFlowNode levelFlowNode in this.NodeSet)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelFlow.Section
 			}
 		}
 
-		// Token: 0x06045676 RID: 284278 RVA: 0x011341D8 File Offset: 0x011323D8
+		// Token: 0x0603B824 RID: 243748 RVA: 0x010DDFDC File Offset: 0x010DC1DC
 		public void Exit()
 		{
 			foreach (LevelFlowNode levelFlowNode in this.NodeList)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.LevelFlow.Section
 			this.CompleteCallBack = null;
 		}
 
-		// Token: 0x06045677 RID: 284279 RVA: 0x01134248 File Offset: 0x01132448
+		// Token: 0x0603B825 RID: 243749 RVA: 0x010DE04C File Offset: 0x010DC24C
 		public void Reset()
 		{
 			foreach (LevelFlowNode levelFlowNode in this.NodeList)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelFlow.Section
 			}
 		}
 
-		// Token: 0x06045678 RID: 284280 RVA: 0x0113433C File Offset: 0x0113253C
+		// Token: 0x0603B826 RID: 243750 RVA: 0x010DE140 File Offset: 0x010DC340
 		private void OnNodeComplete(LevelFlowNode node, bool isSuccess)
 		{
 			if (isSuccess)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelFlow.Section
 			completeCallBack2(this, false);
 		}
 
-		// Token: 0x06045679 RID: 284281 RVA: 0x01134394 File Offset: 0x01132594
+		// Token: 0x0603B827 RID: 243751 RVA: 0x010DE198 File Offset: 0x010DC398
 		private void OnResetNodeComplete(LevelFlowNode node, bool isSuccess)
 		{
 			if (isSuccess)
@@ -147,34 +147,34 @@ namespace CSharpScript.Game.LevelFlow.Section
 			resetCompleteCallBack2(this, false);
 		}
 
-		// Token: 0x0604567A RID: 284282 RVA: 0x0113442C File Offset: 0x0113262C
+		// Token: 0x0603B828 RID: 243752 RVA: 0x010DE230 File Offset: 0x010DC430
 		public static void CreateStaticDefaultValue()
 		{
 			LevelFlowSection.SelfIncrementId = 0;
 		}
 
-		// Token: 0x0604567B RID: 284283 RVA: 0x01134434 File Offset: 0x01132634
+		// Token: 0x0603B829 RID: 243753 RVA: 0x010DE238 File Offset: 0x010DC438
 		public static void ResetStaticDefaultValue()
 		{
 			LevelFlowSection.SelfIncrementId = 0;
 		}
 
-		// Token: 0x04024376 RID: 148342
+		// Token: 0x0401F62B RID: 128555
 		public readonly int SectionId;
 
-		// Token: 0x04024377 RID: 148343
+		// Token: 0x0401F62C RID: 128556
 		private static int SelfIncrementId;
 
-		// Token: 0x04024378 RID: 148344
+		// Token: 0x0401F62D RID: 128557
 		private readonly List<LevelFlowNode> NodeList = new List<LevelFlowNode>();
 
-		// Token: 0x04024379 RID: 148345
+		// Token: 0x0401F62E RID: 128558
 		private readonly List<LevelFlowNode> ResetNodeList = new List<LevelFlowNode>();
 
-		// Token: 0x0402437A RID: 148346
+		// Token: 0x0401F62F RID: 128559
 		private readonly HashSet<LevelFlowNode> NodeSet = new HashSet<LevelFlowNode>();
 
-		// Token: 0x0402437B RID: 148347
+		// Token: 0x0401F630 RID: 128560
 		[Nullable(new byte[]
 		{
 			2,
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.LevelFlow.Section
 		})]
 		private Action<LevelFlowSection, bool> CompleteCallBack;
 
-		// Token: 0x0402437C RID: 148348
+		// Token: 0x0401F631 RID: 128561
 		[Nullable(new byte[]
 		{
 			2,

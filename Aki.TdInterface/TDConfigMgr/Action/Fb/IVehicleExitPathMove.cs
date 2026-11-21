@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029D6 RID: 10710
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CC3 RID: 11459
 	public class IVehicleExitPathMove : IVehicleControlType
 	{
-		// Token: 0x0600ECAA RID: 60586 RVA: 0x00228D51 File Offset: 0x00226F51
+		// Token: 0x0600FB41 RID: 64321 RVA: 0x002466D5 File Offset: 0x002448D5
 		public static IVehicleExitPathMove Create(IVehicleExitPathMove? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AC0 RID: 19136
-		// (get) Token: 0x0600ECAB RID: 60587 RVA: 0x00228D70 File Offset: 0x00226F70
+		// Token: 0x17004E69 RID: 20073
+		// (get) Token: 0x0600FB42 RID: 64322 RVA: 0x002466F4 File Offset: 0x002448F4
 		public override EVehicleControlType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AC1 RID: 19137
-		// (get) Token: 0x0600ECAC RID: 60588 RVA: 0x00228D7D File Offset: 0x00226F7D
+		// Token: 0x17004E6A RID: 20074
+		// (get) Token: 0x0600FB43 RID: 64323 RVA: 0x00246701 File Offset: 0x00244901
 		public virtual ICloseSplineMovePattern Pattern
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008252 RID: 33362
+		// Token: 0x04008943 RID: 35139
 		private IVehicleExitPathMove Instance;
 
-		// Token: 0x04008253 RID: 33363
+		// Token: 0x04008944 RID: 35140
 		private ICloseSplineMovePattern _PatternCache;
 
-		// Token: 0x04008254 RID: 33364
+		// Token: 0x04008945 RID: 35141
 		private bool _PatternInited;
 	}
 }

@@ -4,21 +4,20 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Action.Fb;
-using Aki.TDConfigMgr.Wrapper.Out;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common;
 using Google.FlatBuffers;
 using UnrealEngine;
 
-// Token: 0x020034F6 RID: 13558
+// Token: 0x02002A6A RID: 10858
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class BubbleConfig : ConfigBase
 {
-	// Token: 0x170028F7 RID: 10487
-	// (get) Token: 0x0601DB9D RID: 121757 RVA: 0x00854804 File Offset: 0x00852A04
+	// Token: 0x17002C8F RID: 11407
+	// (get) Token: 0x0601B8AB RID: 112811 RVA: 0x0087CBCC File Offset: 0x0087ADCC
 	private CacheLru<string, Aki.TDConfigMgr.Action.ActionInfo> BubbleFbLru
 	{
 		get
@@ -32,7 +31,7 @@ public class BubbleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601DB9E RID: 121758 RVA: 0x00854838 File Offset: 0x00852A38
+	// Token: 0x0601B8AC RID: 112812 RVA: 0x0087CC00 File Offset: 0x0087AE00
 	[return: Nullable(2)]
 	private Aki.TDConfigMgr.Action.ActionInfo LoadBubbleFromFb(string actionGuid)
 	{
@@ -44,21 +43,21 @@ public class BubbleConfig : ConfigBase
 		return Aki.TDConfigMgr.Action.ActionInfo.Create(Aki.TDConfigMgr.Action.Fb.ActionInfo.Create(new IActionInfo?(IActionInfo.GetRootAsIActionInfo(byteBuffer))));
 	}
 
-	// Token: 0x0601DB9F RID: 121759 RVA: 0x00854876 File Offset: 0x00852A76
+	// Token: 0x0601B8AD RID: 112813 RVA: 0x0087CC3E File Offset: 0x0087AE3E
 	protected override bool OnInit()
 	{
 		this.BubbleDataMap = new Dictionary<string, Aki.TDConfigMgr.Action.AddPlayBubble>();
 		return true;
 	}
 
-	// Token: 0x0601DBA0 RID: 121760 RVA: 0x00854884 File Offset: 0x00852A84
+	// Token: 0x0601B8AE RID: 112814 RVA: 0x0087CC4C File Offset: 0x0087AE4C
 	protected override bool OnClear()
 	{
 		this.BubbleDataMap = null;
 		return true;
 	}
 
-	// Token: 0x0601DBA1 RID: 121761 RVA: 0x00854890 File Offset: 0x00852A90
+	// Token: 0x0601B8AF RID: 112815 RVA: 0x0087CC58 File Offset: 0x0087AE58
 	private BubbleData? GetBubbleConfig(string actionGuid)
 	{
 		BubbleData? config = ConfigBubbleDataByActionGuid.GetConfig(actionGuid, false);
@@ -69,38 +68,15 @@ public class BubbleConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601DBA2 RID: 121762 RVA: 0x008548BC File Offset: 0x00852ABC
+	// Token: 0x0601B8B0 RID: 112816 RVA: 0x0087CC84 File Offset: 0x0087AE84
 	[return: Nullable(2)]
 	public Aki.TDConfigMgr.Action.AddPlayBubble GetBubbleData(string actionGuid)
 	{
-		if (!PublicUtil.Instance.UseDbConfig())
-		{
-			this.ParseConfigFromJsonFile();
-			return this.BubbleDataMap.GetValueOrDefault(actionGuid);
-		}
-		if (WrapperSetting.UseFb)
-		{
-			Aki.TDConfigMgr.Action.ActionInfo actionInfo = this.BubbleFbLru.Get(actionGuid);
-			return ((actionInfo != null) ? actionInfo.Params : null) as Aki.TDConfigMgr.Action.AddPlayBubble;
-		}
-		Aki.TDConfigMgr.Action.AddPlayBubble addPlayBubble;
-		if (!this.BubbleDataMap.TryGetValue(actionGuid, out addPlayBubble))
-		{
-			BubbleData? bubbleConfig = this.GetBubbleConfig(actionGuid);
-			if (bubbleConfig == null)
-			{
-				return null;
-			}
-			Aki.TDConfigMgr.Action.AddPlayBubble addPlayBubble2 = Json.Decode<Aki.TDConfigMgr.Action.AddPlayBubble>(bubbleConfig.Value.Params, null);
-			if (addPlayBubble2 != null)
-			{
-				this.BubbleDataMap[actionGuid] = addPlayBubble2;
-			}
-		}
-		return this.BubbleDataMap.GetValueOrDefault(actionGuid);
+		Aki.TDConfigMgr.Action.ActionInfo actionInfo = this.BubbleFbLru.Get(actionGuid);
+		return ((actionInfo != null) ? actionInfo.Params : null) as Aki.TDConfigMgr.Action.AddPlayBubble;
 	}
 
-	// Token: 0x0601DBA3 RID: 121763 RVA: 0x00854964 File Offset: 0x00852B64
+	// Token: 0x0601B8B1 RID: 112817 RVA: 0x0087CCB0 File Offset: 0x0087AEB0
 	private void ParseConfigFromJsonFile()
 	{
 		string configPath = PublicUtil.Instance.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/BubbleConfig.json");
@@ -138,8 +114,8 @@ public class BubbleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x170028F8 RID: 10488
-	// (get) Token: 0x0601DBA4 RID: 121764 RVA: 0x00854A4D File Offset: 0x00852C4D
+	// Token: 0x17002C90 RID: 11408
+	// (get) Token: 0x0601B8B2 RID: 112818 RVA: 0x0087CD99 File Offset: 0x0087AF99
 	public static BubbleConfig Instance
 	{
 		get
@@ -148,7 +124,7 @@ public class BubbleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601DBA5 RID: 121765 RVA: 0x00854A54 File Offset: 0x00852C54
+	// Token: 0x0601B8B3 RID: 112819 RVA: 0x0087CDA0 File Offset: 0x0087AFA0
 	public static BubbleConfig GetOrCreateInstance()
 	{
 		if (BubbleConfig._Instance == null)
@@ -158,7 +134,7 @@ public class BubbleConfig : ConfigBase
 		return BubbleConfig._Instance;
 	}
 
-	// Token: 0x0601DBA6 RID: 121766 RVA: 0x00854A68 File Offset: 0x00852C68
+	// Token: 0x0601B8B4 RID: 112820 RVA: 0x0087CDB4 File Offset: 0x0087AFB4
 	public static bool CreateInstance()
 	{
 		if (BubbleConfig._Instance != null)
@@ -169,24 +145,24 @@ public class BubbleConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601DBA7 RID: 121767 RVA: 0x00854A7E File Offset: 0x00852C7E
+	// Token: 0x0601B8B5 RID: 112821 RVA: 0x0087CDCA File Offset: 0x0087AFCA
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DBA8 RID: 121768 RVA: 0x00854A80 File Offset: 0x00852C80
+	// Token: 0x0601B8B6 RID: 112822 RVA: 0x0087CDCC File Offset: 0x0087AFCC
 	public static void ResetStaticDefaultValue()
 	{
 		BubbleConfig._Instance = null;
 	}
 
-	// Token: 0x0601DBA9 RID: 121769 RVA: 0x00854A88 File Offset: 0x00852C88
+	// Token: 0x0601B8B7 RID: 112823 RVA: 0x0087CDD4 File Offset: 0x0087AFD4
 	static BubbleConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BubbleConfig.CreateStaticDefaultValue), new Action(BubbleConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E945 RID: 59717
+	// Token: 0x0400EDFC RID: 60924
 	[Nullable(new byte[]
 	{
 		2,
@@ -195,13 +171,13 @@ public class BubbleConfig : ConfigBase
 	})]
 	private Dictionary<string, Aki.TDConfigMgr.Action.AddPlayBubble> BubbleDataMap;
 
-	// Token: 0x0400E946 RID: 59718
+	// Token: 0x0400EDFD RID: 60925
 	private string BubbleFbPath = UBlueprintPathsLibrary.ProjectContentDir() + "Aki/Config/UniverseEditorConfig/Bubbles/";
 
-	// Token: 0x0400E947 RID: 59719
+	// Token: 0x0400EDFE RID: 60926
 	private const int BUBBLE_FB_LRU_CAPACITY = 50;
 
-	// Token: 0x0400E948 RID: 59720
+	// Token: 0x0400EDFF RID: 60927
 	[Nullable(new byte[]
 	{
 		2,
@@ -210,7 +186,7 @@ public class BubbleConfig : ConfigBase
 	})]
 	private CacheLru<string, Aki.TDConfigMgr.Action.ActionInfo> BubbleFbLruInternal;
 
-	// Token: 0x0400E949 RID: 59721
+	// Token: 0x0400EE00 RID: 60928
 	[Nullable(2)]
 	private static BubbleConfig _Instance;
 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F88 RID: 28552
+	// Token: 0x0200774E RID: 30542
 	public class ISequenceUnlockPointsT
 	{
-		// Token: 0x1700D415 RID: 54293
-		// (get) Token: 0x06032752 RID: 206674 RVA: 0x006CFA6B File Offset: 0x006CDC6B
-		// (set) Token: 0x06032753 RID: 206675 RVA: 0x006CFA73 File Offset: 0x006CDC73
+		// Token: 0x1700DFE4 RID: 57316
+		// (get) Token: 0x060359A2 RID: 219554 RVA: 0x0072F423 File Offset: 0x0072D623
+		// (set) Token: 0x060359A3 RID: 219555 RVA: 0x0072F42B File Offset: 0x0072D62B
 		public EInteractUnlockType Type { get; set; }
 
-		// Token: 0x1700D416 RID: 54294
-		// (get) Token: 0x06032754 RID: 206676 RVA: 0x006CFA7C File Offset: 0x006CDC7C
-		// (set) Token: 0x06032755 RID: 206677 RVA: 0x006CFA84 File Offset: 0x006CDC84
+		// Token: 0x1700DFE5 RID: 57317
+		// (get) Token: 0x060359A4 RID: 219556 RVA: 0x0072F434 File Offset: 0x0072D634
+		// (set) Token: 0x060359A5 RID: 219557 RVA: 0x0072F43C File Offset: 0x0072D63C
 		public List<ISequenceInteractStageT> Stages { get; set; }
 
-		// Token: 0x06032756 RID: 206678 RVA: 0x006CFA8D File Offset: 0x006CDC8D
+		// Token: 0x060359A6 RID: 219558 RVA: 0x0072F445 File Offset: 0x0072D645
 		public ISequenceUnlockPointsT()
 		{
 			this.Type = EInteractUnlockType.Sequence;

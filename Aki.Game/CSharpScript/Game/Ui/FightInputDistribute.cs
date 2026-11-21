@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.SkillButtonUi;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004683 RID: 18051
+	// Token: 0x020035B4 RID: 13748
 	public class FightInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E98A RID: 190858 RVA: 0x00AC9BE0 File Offset: 0x00AC7DE0
+		// Token: 0x060230D4 RID: 143572 RVA: 0x009F7914 File Offset: 0x009F5B14
 		private void HandleGamepadSwitchInteract()
 		{
 			if (Info.Instance.IsInGamepad())
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E98B RID: 190859 RVA: 0x00AC9C5C File Offset: 0x00AC7E5C
+		// Token: 0x060230D5 RID: 143573 RVA: 0x009F7990 File Offset: 0x009F5B90
 		public override bool OnRefresh()
 		{
 			if (!UiLayer.Instance.UiRootItem.IsUIActiveSelf() && !UiLayer.Instance.WorldSpaceUiRootItem.IsUIActiveSelf())

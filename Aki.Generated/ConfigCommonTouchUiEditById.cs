@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000189 RID: 393
+	// Token: 0x0200019B RID: 411
 	public class ConfigCommonTouchUiEditById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000937 RID: 2359 RVA: 0x0008D8CB File Offset: 0x0008BACB
+		// Token: 0x060009A3 RID: 2467 RVA: 0x00093803 File Offset: 0x00091A03
 		static ConfigCommonTouchUiEditById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommonTouchUiEditById.CreateStaticDefaultValue), new Action(ConfigCommonTouchUiEditById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000938 RID: 2360 RVA: 0x0008D8EC File Offset: 0x0008BAEC
+		// Token: 0x060009A4 RID: 2468 RVA: 0x00093824 File Offset: 0x00091A24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommonTouchUiEditById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000939 RID: 2361 RVA: 0x0008D96B File Offset: 0x0008BB6B
+		// Token: 0x060009A5 RID: 2469 RVA: 0x000938A3 File Offset: 0x00091AA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommonTouchUiEditById.LogPair = null;
 			ConfigCommonTouchUiEditById.HandleId = 0;
 		}
 
-		// Token: 0x0600093A RID: 2362 RVA: 0x0008D979 File Offset: 0x0008BB79
+		// Token: 0x060009A6 RID: 2470 RVA: 0x000938B1 File Offset: 0x00091AB1
 		public static void Init()
 		{
 			ConfigCommonTouchUiEditById.HandleId = ConfigCommon.InitDataStatement(ConfigCommonTouchUiEditById.HandleId, "db_commontouchuiedit.db", "select BinData from `CommonTouchUiEdit` where Id=?");
 		}
 
-		// Token: 0x0600093B RID: 2363 RVA: 0x0008D994 File Offset: 0x0008BB94
+		// Token: 0x060009A7 RID: 2471 RVA: 0x000938CC File Offset: 0x00091ACC
 		public static CommonTouchUiEdit? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCommonTouchUiEditById.HandleId, ConfigCommonTouchUiEditById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CommonTouchUiEdit?(rootAsCommonTouchUiEdit);
 		}
 
-		// Token: 0x04000AA3 RID: 2723
+		// Token: 0x04000B21 RID: 2849
 		private const string DB = "db_commontouchuiedit.db";
 
-		// Token: 0x04000AA4 RID: 2724
+		// Token: 0x04000B22 RID: 2850
 		private const string FILE = "y.移动端活动玩法主界面键位配置.xlsx";
 
-		// Token: 0x04000AA5 RID: 2725
+		// Token: 0x04000B23 RID: 2851
 		private const string TABLE = "CommonTouchUiEdit";
 
-		// Token: 0x04000AA6 RID: 2726
+		// Token: 0x04000B24 RID: 2852
 		private const string COMMAND = "select BinData from `CommonTouchUiEdit` where Id=?";
 
-		// Token: 0x04000AA7 RID: 2727
+		// Token: 0x04000B25 RID: 2853
 		private const string KEY_PREFIX = "CommonTouchUiEditById";
 
-		// Token: 0x04000AA8 RID: 2728
+		// Token: 0x04000B26 RID: 2854
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000AA9 RID: 2729
+		// Token: 0x04000B27 RID: 2855
 		private static int HandleId;
 	}
 }

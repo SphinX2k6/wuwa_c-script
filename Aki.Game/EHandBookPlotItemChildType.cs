@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02001E19 RID: 7705
+// Token: 0x020012DB RID: 4827
 public class EHandBookPlotItemChildType
 {
-	// Token: 0x04006CB4 RID: 27828
+	// Token: 0x04006D95 RID: 28053
 	public const int TalkItem = 0;
 
-	// Token: 0x04006CB5 RID: 27829
+	// Token: 0x04006D96 RID: 28054
 	public const int OptionItem = 1;
 
-	// Token: 0x04006CB6 RID: 27830
+	// Token: 0x04006D97 RID: 28055
 	public const int NodeTitleItem = 2;
 
-	// Token: 0x04006CB7 RID: 27831
+	// Token: 0x04006D98 RID: 28056
 	public const int OptionTalker = 3;
 }

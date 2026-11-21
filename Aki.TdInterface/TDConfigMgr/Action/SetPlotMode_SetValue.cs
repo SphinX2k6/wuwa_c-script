@@ -3,76 +3,76 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D1 RID: 8657
+	// Token: 0x0200243C RID: 9276
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SetPlotMode_SetValue
 	{
-		// Token: 0x0400717D RID: 29053
-		[Nullable(1)]
+		// Token: 0x040077C6 RID: 30662
+		[Nullable(0)]
 		public string Mode;
 
-		// Token: 0x0400717E RID: 29054
+		// Token: 0x040077C7 RID: 30663
 		public bool? IsSwitchMainRole;
 
-		// Token: 0x0400717F RID: 29055
+		// Token: 0x040077C8 RID: 30664
 		public bool? UseFlowCamera;
 
-		// Token: 0x04007180 RID: 29056
+		// Token: 0x040077C9 RID: 30665
 		public bool? Interruptible;
 
-		// Token: 0x04007181 RID: 29057
+		// Token: 0x040077CA RID: 30666
 		public bool? NoSkip;
 
-		// Token: 0x04007182 RID: 29058
+		// Token: 0x040077CB RID: 30667
 		public bool? DisableAutoFadeOut;
 
-		// Token: 0x04007183 RID: 29059
+		// Token: 0x040077CC RID: 30668
 		public bool? WaitForPlayerMotionEnd;
 
-		// Token: 0x04007184 RID: 29060
+		// Token: 0x040077CD RID: 30669
 		public bool? NoUiEnterAnimation;
 
-		// Token: 0x04007185 RID: 29061
+		// Token: 0x040077CE RID: 30670
 		public FadeInScreen FastFadeIn;
 
-		// Token: 0x04007186 RID: 29062
+		// Token: 0x040077CF RID: 30671
 		public bool? KeepMainRolePose;
 
-		// Token: 0x04007187 RID: 29063
+		// Token: 0x040077D0 RID: 30672
 		public IPromptStyleBase PromptStyle;
 
-		// Token: 0x04007188 RID: 29064
+		// Token: 0x040077D1 RID: 30673
 		public ISubtitleStyleBase SubtitleStyle;
 
-		// Token: 0x04007189 RID: 29065
+		// Token: 0x040077D2 RID: 30674
 		public IPhoneMessageConfig PhoneMessageConfig;
 
-		// Token: 0x0400718A RID: 29066
+		// Token: 0x040077D3 RID: 30675
 		public int? SystemGameDialogConfigId;
 
-		// Token: 0x0400718B RID: 29067
+		// Token: 0x040077D4 RID: 30676
 		public EMainCharacterSkin? MainCharacterSkin;
 
-		// Token: 0x0400718C RID: 29068
+		// Token: 0x040077D5 RID: 30677
 		public IPlotFilmModeConfig FilmModeConfig;
 
-		// Token: 0x0400718D RID: 29069
+		// Token: 0x040077D6 RID: 30678
 		public EOverrideAudioLevel? OverrideAudioLevel;
 
-		// Token: 0x0400718E RID: 29070
+		// Token: 0x040077D7 RID: 30679
 		public bool? Mp4Mode;
 
-		// Token: 0x0400718F RID: 29071
+		// Token: 0x040077D8 RID: 30680
 		public IEntityControlConfig EntityControlConfig;
 
-		// Token: 0x04007190 RID: 29072
+		// Token: 0x040077D9 RID: 30681
 		public IVisualNovelConfig VisualNovelConfig;
 
-		// Token: 0x04007191 RID: 29073
+		// Token: 0x040077DA RID: 30682
 		public IPlotModeUiStyleLevelD UiStyle;
 
-		// Token: 0x04007192 RID: 29074
+		// Token: 0x040077DB RID: 30683
 		public IPlotAudioConfig AudioConfig;
 	}
 }

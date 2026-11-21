@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x0200552C RID: 21804
+	// Token: 0x020044FF RID: 17663
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +19,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 	})]
 	public class EnrichmentAreaItemRangeHandle : MarkItemRangeHandle<MarkBlueRangeImageComponent>
 	{
-		// Token: 0x06037AA3 RID: 228003 RVA: 0x00D3677D File Offset: 0x00D3497D
+		// Token: 0x0602C973 RID: 182643 RVA: 0x00C8448A File Offset: 0x00C8268A
 		public EnrichmentAreaItemRangeHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037AA4 RID: 228004 RVA: 0x00D36788 File Offset: 0x00D34988
+		// Token: 0x0602C974 RID: 182644 RVA: 0x00C84494 File Offset: 0x00C82694
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037AA5 RID: 228005 RVA: 0x00D367CB File Offset: 0x00D349CB
+		// Token: 0x0602C975 RID: 182645 RVA: 0x00C844D7 File Offset: 0x00C826D7
 		protected override MarkBlueRangeImageComponent GetOrCreateComponent()
 		{
 			if (this.ComponentInternal == null)
@@ -53,10 +53,10 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return this.ComponentInternal;
 		}
 
-		// Token: 0x06037AA6 RID: 228006 RVA: 0x00D367F4 File Offset: 0x00D349F4
+		// Token: 0x0602C976 RID: 182646 RVA: 0x00C84500 File Offset: 0x00C82700
 		protected override void OnResetRangeComponent(MarkRangeImageComponent rangeComponent)
 		{
-			EMarkType markType = this.Context.MarkItemEntity.GamePlay.MarkType;
+			EMarkType markType = this.Context.MarkItem.MarkType;
 			EventSystem.Instance.Emit<EMarkType, EMarkPriorityType>(EEventName.TakeMarkComponentExitContainer, markType, EMarkPriorityType.OthersLevel);
 			MarkBlueRangeImageComponent componentInternal = this.ComponentInternal;
 			UUIItem uuiitem = (componentInternal != null) ? componentInternal.GetRootItem() : null;
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			rootItem.SetAnchorOffset(vector2D.ToUeVector2D(false));
 		}
 
-		// Token: 0x06037AA7 RID: 228007 RVA: 0x00D368A0 File Offset: 0x00D34AA0
+		// Token: 0x0602C977 RID: 182647 RVA: 0x00C845A7 File Offset: 0x00C827A7
 		protected override void DestroyComponent()
 		{
 			if (this.ComponentInternal != null)
 			{
 				this.ComponentInternal.RecycleToPool();
-				EventSystem.Instance.Emit<EMarkType, EMarkPriorityType>(EEventName.TakeMarkComponentExitContainer, this.Context.MarkItemEntity.GamePlay.MarkType, EMarkPriorityType.OthersLevel);
+				EventSystem.Instance.Emit<EMarkType, EMarkPriorityType>(EEventName.TakeMarkComponentExitContainer, this.Context.MarkItem.MarkType, EMarkPriorityType.OthersLevel);
 				this.ComponentInternal = null;
 			}
 		}

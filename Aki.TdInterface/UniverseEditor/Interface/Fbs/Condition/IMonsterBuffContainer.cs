@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C55 RID: 19541
+	// Token: 0x0200514E RID: 20814
 	public struct IMonsterBuffContainer : IFlatbufferObject
 	{
-		// Token: 0x17008DFB RID: 36347
-		// (get) Token: 0x0601EFBF RID: 126911 RVA: 0x004556E2 File Offset: 0x004538E2
+		// Token: 0x17009529 RID: 38185
+		// (get) Token: 0x06020BE1 RID: 134113 RVA: 0x00489232 File Offset: 0x00487432
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EFC0 RID: 126912 RVA: 0x004556EF File Offset: 0x004538EF
+		// Token: 0x06020BE2 RID: 134114 RVA: 0x0048923F File Offset: 0x0048743F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EFC1 RID: 126913 RVA: 0x004556F8 File Offset: 0x004538F8
+		// Token: 0x06020BE3 RID: 134115 RVA: 0x00489248 File Offset: 0x00487448
 		public static IMonsterBuffContainer GetRootAsIMonsterBuffContainer(ByteBuffer _bb)
 		{
 			return IMonsterBuffContainer.GetRootAsIMonsterBuffContainer(_bb, default(IMonsterBuffContainer));
 		}
 
-		// Token: 0x0601EFC2 RID: 126914 RVA: 0x00455714 File Offset: 0x00453914
+		// Token: 0x06020BE4 RID: 134116 RVA: 0x00489264 File Offset: 0x00487464
 		public static IMonsterBuffContainer GetRootAsIMonsterBuffContainer(ByteBuffer _bb, IMonsterBuffContainer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EFC3 RID: 126915 RVA: 0x00455731 File Offset: 0x00453931
+		// Token: 0x06020BE5 RID: 134117 RVA: 0x00489281 File Offset: 0x00487481
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EFC4 RID: 126916 RVA: 0x00455740 File Offset: 0x00453940
+		// Token: 0x06020BE6 RID: 134118 RVA: 0x00489290 File Offset: 0x00487490
 		public IMonsterBuffContainer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008DFC RID: 36348
-		// (get) Token: 0x0601EFC5 RID: 126917 RVA: 0x00455750 File Offset: 0x00453950
+		// Token: 0x1700952A RID: 38186
+		// (get) Token: 0x06020BE7 RID: 134119 RVA: 0x004892A0 File Offset: 0x004874A0
 		public ETargetBuffContainer Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008DFD RID: 36349
-		// (get) Token: 0x0601EFC6 RID: 126918 RVA: 0x0045578C File Offset: 0x0045398C
+		// Token: 0x1700952B RID: 38187
+		// (get) Token: 0x06020BE8 RID: 134120 RVA: 0x004892DC File Offset: 0x004874DC
 		public int MonsterEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EFC7 RID: 126919 RVA: 0x004557C8 File Offset: 0x004539C8
+		// Token: 0x06020BE9 RID: 134121 RVA: 0x00489318 File Offset: 0x00487518
 		public static Offset<IMonsterBuffContainer> CreateIMonsterBuffContainer(FlatBufferBuilder builder, ETargetBuffContainer Type = ETargetBuffContainer.Monster, int MonsterEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IMonsterBuffContainer.EndIMonsterBuffContainer(builder);
 		}
 
-		// Token: 0x0601EFC8 RID: 126920 RVA: 0x004557E5 File Offset: 0x004539E5
+		// Token: 0x06020BEA RID: 134122 RVA: 0x00489335 File Offset: 0x00487535
 		public static void StartIMonsterBuffContainer(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601EFC9 RID: 126921 RVA: 0x004557EE File Offset: 0x004539EE
+		// Token: 0x06020BEB RID: 134123 RVA: 0x0048933E File Offset: 0x0048753E
 		public static void AddType(FlatBufferBuilder builder, ETargetBuffContainer type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EFCA RID: 126922 RVA: 0x004557F9 File Offset: 0x004539F9
+		// Token: 0x06020BEC RID: 134124 RVA: 0x00489349 File Offset: 0x00487549
 		public static void AddMonsterEntityId(FlatBufferBuilder builder, int monsterEntityId)
 		{
 			builder.AddInt(1, monsterEntityId, 0);
 		}
 
-		// Token: 0x0601EFCB RID: 126923 RVA: 0x00455804 File Offset: 0x00453A04
+		// Token: 0x06020BED RID: 134125 RVA: 0x00489354 File Offset: 0x00487554
 		public static Offset<IMonsterBuffContainer> EndIMonsterBuffContainer(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterBuffContainer>(builder.EndTable());
 		}
 
-		// Token: 0x0601EFCC RID: 126924 RVA: 0x00455814 File Offset: 0x00453A14
+		// Token: 0x06020BEE RID: 134126 RVA: 0x00489364 File Offset: 0x00487564
 		public IMonsterBuffContainerT UnPack()
 		{
 			IMonsterBuffContainerT monsterBuffContainerT = new IMonsterBuffContainerT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return monsterBuffContainerT;
 		}
 
-		// Token: 0x0601EFCD RID: 126925 RVA: 0x0045582F File Offset: 0x00453A2F
+		// Token: 0x06020BEF RID: 134127 RVA: 0x0048937F File Offset: 0x0048757F
 		public void UnPackTo(IMonsterBuffContainerT _o)
 		{
 			_o.Type = this.Type;
 			_o.MonsterEntityId = this.MonsterEntityId;
 		}
 
-		// Token: 0x0601EFCE RID: 126926 RVA: 0x0045584C File Offset: 0x00453A4C
+		// Token: 0x06020BF0 RID: 134128 RVA: 0x0048939C File Offset: 0x0048759C
 		public static Offset<IMonsterBuffContainer> Pack(FlatBufferBuilder builder, IMonsterBuffContainerT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IMonsterBuffContainer.CreateIMonsterBuffContainer(builder, _o.Type, _o.MonsterEntityId);
 		}
 
-		// Token: 0x0400D5FF RID: 54783
+		// Token: 0x0400E126 RID: 57638
 		private Table __p;
 	}
 }

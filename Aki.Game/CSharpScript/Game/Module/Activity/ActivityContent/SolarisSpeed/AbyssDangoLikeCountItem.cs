@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060CA RID: 24778
+	// Token: 0x02005048 RID: 20552
 	internal class AbyssDangoLikeCountItem : UiPanelBase
 	{
-		// Token: 0x0603EA50 RID: 256592 RVA: 0x00F20FE8 File Offset: 0x00F1F1E8
+		// Token: 0x06033714 RID: 210708 RVA: 0x00E67DB8 File Offset: 0x00E65FB8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EA51 RID: 256593 RVA: 0x00F21030 File Offset: 0x00F1F230
+		// Token: 0x06033715 RID: 210709 RVA: 0x00E67E00 File Offset: 0x00E66000
 		public void Refresh(int data)
 		{
 			UUIText text = base.GetText(0);
@@ -32,10 +32,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			text.SetText(data.ToString(), true);
 		}
 
-		// Token: 0x0200C316 RID: 49942
+		// Token: 0x0200AD01 RID: 44289
 		private enum ELikeCountItem
 		{
-			// Token: 0x0403AE87 RID: 241287
+			// Token: 0x040357EF RID: 219119
 			LikeCount
 		}
 	}

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D46 RID: 19782
+	// Token: 0x02003D0F RID: 15631
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopProjectRolePanel : RoleDevelopProjectBasePanel
 	{
-		// Token: 0x060331B6 RID: 209334 RVA: 0x00BE97BC File Offset: 0x00BE79BC
+		// Token: 0x06028019 RID: 163865 RVA: 0x00B32AE0 File Offset: 0x00B30CE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060331B7 RID: 209335 RVA: 0x00BE998E File Offset: 0x00BE7B8E
+		// Token: 0x0602801A RID: 163866 RVA: 0x00B32CB2 File Offset: 0x00B30EB2
 		protected override void OnStart()
 		{
 			this.InitRoleItemGrid();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.InitLayout();
 		}
 
-		// Token: 0x060331B8 RID: 209336 RVA: 0x00BE99A4 File Offset: 0x00BE7BA4
+		// Token: 0x0602801B RID: 163867 RVA: 0x00B32CC8 File Offset: 0x00B30EC8
 		private void InitRoleItemGrid()
 		{
 			this.RoleItemGrid = new SmallItemGrid();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RoleItemGrid.SetToggleInteractive(false);
 		}
 
-		// Token: 0x060331B9 RID: 209337 RVA: 0x00BE9A04 File Offset: 0x00BE7C04
+		// Token: 0x0602801C RID: 163868 RVA: 0x00B32D28 File Offset: 0x00B30F28
 		private void InitButtonItem()
 		{
 			this.NormalButtonItem = new ButtonItem(base.GetItem(4));
@@ -83,20 +83,20 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.HighLightButtonItem.SetFunction(new Action<int>(this.OnClickJumpButton));
 		}
 
-		// Token: 0x060331BA RID: 209338 RVA: 0x00BE9A8D File Offset: 0x00BE7C8D
+		// Token: 0x0602801D RID: 163869 RVA: 0x00B32DB1 File Offset: 0x00B30FB1
 		private void InitLayout()
 		{
 			this.ItemLayout = new GenericLayout<RoleDevelopProjectMaterialItem, RoleDevelopProjectMaterialItemData>(base.GetVerticalLayout(8), new Func<RoleDevelopProjectMaterialItem>(this.CreateItem), null, false, true);
 		}
 
-		// Token: 0x060331BB RID: 209339 RVA: 0x00BE9AB0 File Offset: 0x00BE7CB0
+		// Token: 0x0602801E RID: 163870 RVA: 0x00B32DD4 File Offset: 0x00B30FD4
 		public override void OnCommonItemCountAnyChange(int configId)
 		{
 			this.RefreshButtonItem();
 			this.ItemLayout.RefreshWithoutDataSync();
 		}
 
-		// Token: 0x060331BC RID: 209340 RVA: 0x00BE9AC3 File Offset: 0x00BE7CC3
+		// Token: 0x0602801F RID: 163871 RVA: 0x00B32DE7 File Offset: 0x00B30FE7
 		protected override void OnRefreshView(bool forceRefresh)
 		{
 			if (RoleDevelopUtil.IsProspectRole(this.Data.GetId()))
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshProjectView();
 		}
 
-		// Token: 0x060331BD RID: 209341 RVA: 0x00BE9AE4 File Offset: 0x00BE7CE4
+		// Token: 0x06028020 RID: 163872 RVA: 0x00B32E08 File Offset: 0x00B31008
 		private void RefreshProspectProjectView()
 		{
 			int id = this.Data.GetId();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.ItemLayout.RefreshByData(roleDevelopProjectViewItems, null, false);
 		}
 
-		// Token: 0x060331BE RID: 209342 RVA: 0x00BE9BD8 File Offset: 0x00BE7DD8
+		// Token: 0x06028021 RID: 163873 RVA: 0x00B32EFC File Offset: 0x00B310FC
 		private void RefreshProjectView()
 		{
 			int id = this.Data.GetId();
@@ -181,7 +181,8 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 				{
 					ItemConfigId = new int?(id),
 					Data = this.Data,
-					ElementId = new int?(roleConfig.Value.ElementId)
+					ElementId = new int?(roleConfig.Value.ElementId),
+					SkinId = new int?(roleConfig.Value.SkinId)
 				};
 				this.RoleItemGrid.Apply<CharacterSmallItemGrid>(parameters2);
 				return;
@@ -230,7 +231,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x060331BF RID: 209343 RVA: 0x00BE9F60 File Offset: 0x00BE8160
+		// Token: 0x06028022 RID: 163874 RVA: 0x00B332A0 File Offset: 0x00B314A0
 		private void RefreshButtonItem()
 		{
 			int id = this.Data.GetId();
@@ -245,7 +246,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.SetButtonState(isHighLight, "RoleProject_Button01");
 		}
 
-		// Token: 0x060331C0 RID: 209344 RVA: 0x00BE9FCA File Offset: 0x00BE81CA
+		// Token: 0x06028023 RID: 163875 RVA: 0x00B3330A File Offset: 0x00B3150A
 		private void SetButtonState(bool isHighLight, string textKey)
 		{
 			this.NormalButtonItem.SetUiActive(!isHighLight);
@@ -253,14 +254,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			(isHighLight ? this.HighLightButtonItem : this.NormalButtonItem).SetLocalTextNew(textKey, Array.Empty<object>());
 		}
 
-		// Token: 0x060331C1 RID: 209345 RVA: 0x00BEA004 File Offset: 0x00BE8204
+		// Token: 0x06028024 RID: 163876 RVA: 0x00B33344 File Offset: 0x00B31544
 		private void OnClickCallJumpButton()
 		{
 			List<int> hotRoleGachaIds = RoleDevelopUtil.GetHotRoleGachaIds(this.Data.GetId(), true);
 			UiManager.Instance.OpenView(EUiViewName.GachaMainView, hotRoleGachaIds[0], null);
 		}
 
-		// Token: 0x060331C2 RID: 209346 RVA: 0x00BEA040 File Offset: 0x00BE8240
+		// Token: 0x06028025 RID: 163877 RVA: 0x00B33380 File Offset: 0x00B31580
 		private void OnClickJumpButton(int value)
 		{
 			int id = this.Data.GetId();
@@ -287,19 +288,19 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.LogRoleDevelopClick(id, ERoleDevelopCategoryType.Role, ERoleDevelopLogSubPage.RoleDevelopJump, new ERoleDevelopLogItemState?(ERoleDevelopLogItemState.Normal));
 		}
 
-		// Token: 0x060331C3 RID: 209347 RVA: 0x00BEA0F5 File Offset: 0x00BE82F5
+		// Token: 0x06028026 RID: 163878 RVA: 0x00B33435 File Offset: 0x00B31635
 		private bool CanRoleItemGridExecuteChange(object parameters, bool _, EToggleState state)
 		{
 			return false;
 		}
 
-		// Token: 0x060331C4 RID: 209348 RVA: 0x00BEA0F8 File Offset: 0x00BE82F8
+		// Token: 0x06028027 RID: 163879 RVA: 0x00B33438 File Offset: 0x00B31638
 		private RoleDevelopProjectMaterialItem CreateItem()
 		{
 			return new RoleDevelopProjectMaterialItem();
 		}
 
-		// Token: 0x0401B2AE RID: 111278
+		// Token: 0x04015C7F RID: 89215
 		private readonly Dictionary<EItemMaterialType, ERoleDevelopLogSubPage> RoleDevelopMaterialTypeToLogSubPageMap = new Dictionary<EItemMaterialType, ERoleDevelopLogSubPage>
 		{
 			{
@@ -324,54 +325,44 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		};
 
-		// Token: 0x0401B2AF RID: 111279
+		// Token: 0x04015C80 RID: 89216
 		private SmallItemGrid RoleItemGrid;
 
-		// Token: 0x0401B2B0 RID: 111280
+		// Token: 0x04015C81 RID: 89217
 		private ButtonItem NormalButtonItem;
 
-		// Token: 0x0401B2B1 RID: 111281
+		// Token: 0x04015C82 RID: 89218
 		private ButtonItem HighLightButtonItem;
 
-		// Token: 0x0401B2B2 RID: 111282
+		// Token: 0x04015C83 RID: 89219
 		private GenericLayout<RoleDevelopProjectMaterialItem, RoleDevelopProjectMaterialItemData> ItemLayout;
 
-		// Token: 0x0200AEAE RID: 44718
+		// Token: 0x020098E2 RID: 39138
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x040350B9 RID: 217273
-			public const int SmallRoleItem = 0;
-
-			// Token: 0x040350BA RID: 217274
-			public const int TxtRoleName = 1;
-
-			// Token: 0x040350BB RID: 217275
-			public const int TxtGoalLevel = 2;
-
-			// Token: 0x040350BC RID: 217276
-			public const int PanelItemRight = 3;
-
-			// Token: 0x040350BD RID: 217277
-			public const int NormalButtonItem = 4;
-
-			// Token: 0x040350BE RID: 217278
-			public const int HighLightButtonItem = 5;
-
-			// Token: 0x040350BF RID: 217279
-			public const int BtnCallJump = 6;
-
-			// Token: 0x040350C0 RID: 217280
-			public const int PanelItemNotObtained = 7;
-
-			// Token: 0x040350C1 RID: 217281
-			public const int PanelItemDetailLayout = 8;
-
-			// Token: 0x040350C2 RID: 217282
-			public const int PanelItemList = 9;
-
-			// Token: 0x040350C3 RID: 217283
-			public const int TxtNotObtained = 10;
+			// Token: 0x0402FADC RID: 195292
+			SmallRoleItem,
+			// Token: 0x0402FADD RID: 195293
+			TxtRoleName,
+			// Token: 0x0402FADE RID: 195294
+			TxtGoalLevel,
+			// Token: 0x0402FADF RID: 195295
+			PanelItemRight,
+			// Token: 0x0402FAE0 RID: 195296
+			NormalButtonItem,
+			// Token: 0x0402FAE1 RID: 195297
+			HighLightButtonItem,
+			// Token: 0x0402FAE2 RID: 195298
+			BtnCallJump,
+			// Token: 0x0402FAE3 RID: 195299
+			PanelItemNotObtained,
+			// Token: 0x0402FAE4 RID: 195300
+			PanelItemDetailLayout,
+			// Token: 0x0402FAE5 RID: 195301
+			PanelItemList,
+			// Token: 0x0402FAE6 RID: 195302
+			TxtNotObtained
 		}
 	}
 }

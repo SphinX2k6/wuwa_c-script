@@ -7,14 +7,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWalk
 {
-	// Token: 0x0200710D RID: 28941
+	// Token: 0x020063BD RID: 25533
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AssistedWalkFollowerLogic : AttachMoveLogic
 	{
-		// Token: 0x17009D0E RID: 40206
-		// (get) Token: 0x06046A7F RID: 289407 RVA: 0x011C93F6 File Offset: 0x011C75F6
-		// (set) Token: 0x06046A80 RID: 289408 RVA: 0x011C9403 File Offset: 0x011C7603
+		// Token: 0x1700759D RID: 30109
+		// (get) Token: 0x0603DE7E RID: 253566 RVA: 0x011F8416 File Offset: 0x011F6616
+		// (set) Token: 0x0603DE7F RID: 253567 RVA: 0x011F8423 File Offset: 0x011F6623
 		protected new AssistedWalkParams Params
 		{
 			get
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}
 		}
 
-		// Token: 0x06046A81 RID: 289409 RVA: 0x011C940C File Offset: 0x011C760C
+		// Token: 0x0603DE80 RID: 253568 RVA: 0x011F842C File Offset: 0x011F662C
 		public override bool IsMoving()
 		{
 			return this.InState;
 		}
 
-		// Token: 0x06046A82 RID: 289410 RVA: 0x011C9414 File Offset: 0x011C7614
+		// Token: 0x0603DE81 RID: 253569 RVA: 0x011F8434 File Offset: 0x011F6634
 		public override void StopMove()
 		{
 			Action exitCallback = this.ExitCallback;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}
 		}
 
-		// Token: 0x06046A83 RID: 289411 RVA: 0x011C94C8 File Offset: 0x011C76C8
+		// Token: 0x0603DE82 RID: 253570 RVA: 0x011F84E8 File Offset: 0x011F66E8
 		public override void Dispose()
 		{
 			this.StopMove();
 		}
 
-		// Token: 0x06046A84 RID: 289412 RVA: 0x011C94D0 File Offset: 0x011C76D0
+		// Token: 0x0603DE83 RID: 253571 RVA: 0x011F84F0 File Offset: 0x011F66F0
 		[NullableContext(1)]
 		public void StartHelpedAssistedWalkWithData(Entity entity, CharacterActorComponent leader, BP_AssistedWalkConfig_C data, [Nullable(2)] Action endCallback = null, bool waitAnim = true)
 		{
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x06046A85 RID: 289413 RVA: 0x011C9658 File Offset: 0x011C7858
+		// Token: 0x0603DE84 RID: 253572 RVA: 0x011F8678 File Offset: 0x011F6878
 		[NullableContext(1)]
 		private void ApplyFollowerEnterState(CharacterActorComponent leader)
 		{
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			component.SyncLinkGameplayAnimBlueprint(EGameplayABPType.AssistedWalk);
 		}
 
-		// Token: 0x06046A86 RID: 289414 RVA: 0x011C9710 File Offset: 0x011C7910
+		// Token: 0x0603DE85 RID: 253573 RVA: 0x011F8730 File Offset: 0x011F6930
 		private void ResetFollowerState()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			characterLinkedAnimInstComponent.SyncLinkGameplayAnimBlueprint(EGameplayABPType.None);
 		}
 
-		// Token: 0x06046A87 RID: 289415 RVA: 0x011C9784 File Offset: 0x011C7984
+		// Token: 0x0603DE86 RID: 253574 RVA: 0x011F87A4 File Offset: 0x011F69A4
 		private void WriteFollowerAnimLogicParams(bool entering, bool waitAnim = true)
 		{
 			UKuroAnimInstanceChar animInstance = this.AnimInstance;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			uabpLogicParams.bInAssistedWalking = false;
 		}
 
-		// Token: 0x06046A88 RID: 289416 RVA: 0x011C97D4 File Offset: 0x011C79D4
+		// Token: 0x0603DE87 RID: 253575 RVA: 0x011F87F4 File Offset: 0x011F69F4
 		[NullableContext(1)]
 		private void InitComponents(Entity entity)
 		{
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			this.UeMovementComp = entity.GetComponent<UeMovementTickManageComponent>();
 		}
 
-		// Token: 0x06046A89 RID: 289417 RVA: 0x011C9824 File Offset: 0x011C7A24
+		// Token: 0x0603DE88 RID: 253576 RVA: 0x011F8844 File Offset: 0x011F6A44
 		private void ClearFollowerAssistedWalkTag()
 		{
 			if (this.AssistedWalkTagId == 0)
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			this.AssistedWalkTagId = 0;
 		}
 
-		// Token: 0x06046A8A RID: 289418 RVA: 0x011C984E File Offset: 0x011C7A4E
+		// Token: 0x0603DE89 RID: 253577 RVA: 0x011F886E File Offset: 0x011F6A6E
 		private void ClearFollowerComponents()
 		{
 			this.Entity = null;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			this.LeaderActionComp = null;
 		}
 
-		// Token: 0x06046A8B RID: 289419 RVA: 0x011C9884 File Offset: 0x011C7A84
+		// Token: 0x0603DE8A RID: 253578 RVA: 0x011F88A4 File Offset: 0x011F6AA4
 		private bool ArePartnerComponentsAlive()
 		{
 			AssistedWalkUtils instance = AssistedWalkUtils.Instance;
@@ -263,31 +263,31 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			return instance.ArePartnerComponentsAlive(logTag, actorComp, array);
 		}
 
-		// Token: 0x0402517D RID: 151933
+		// Token: 0x04020E12 RID: 134674
 		private Entity Entity;
 
-		// Token: 0x0402517E RID: 151934
+		// Token: 0x04020E13 RID: 134675
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x0402517F RID: 151935
+		// Token: 0x04020E14 RID: 134676
 		private BaseMoveComponent MoveComp;
 
-		// Token: 0x04025180 RID: 151936
+		// Token: 0x04020E15 RID: 134677
 		private CharacterAnimationComponent AnimComp;
 
-		// Token: 0x04025181 RID: 151937
+		// Token: 0x04020E16 RID: 134678
 		private UeMovementTickManageComponent UeMovementComp;
 
-		// Token: 0x04025182 RID: 151938
+		// Token: 0x04020E17 RID: 134679
 		private UKuroAnimInstanceChar AnimInstance;
 
-		// Token: 0x04025183 RID: 151939
+		// Token: 0x04020E18 RID: 134680
 		private int AssistedWalkTagId;
 
-		// Token: 0x04025184 RID: 151940
+		// Token: 0x04020E19 RID: 134681
 		private CharacterCustomActionComponent LeaderActionComp;
 
-		// Token: 0x04025185 RID: 151941
+		// Token: 0x04020E1A RID: 134682
 		private SightLockMode LastSightLockMode;
 	}
 }

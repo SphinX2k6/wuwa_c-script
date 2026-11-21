@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017D0 RID: 6096
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001957 RID: 6487
 	public class IAkEventMapType
 	{
-		// Token: 0x060082E9 RID: 33513 RVA: 0x00138F38 File Offset: 0x00137138
+		// Token: 0x060089FB RID: 35323 RVA: 0x00148520 File Offset: 0x00146720
 		private IAkEventMapType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060082EA RID: 33514 RVA: 0x00138F70 File Offset: 0x00137170
+		// Token: 0x060089FC RID: 35324 RVA: 0x00148558 File Offset: 0x00146758
 		public static IAkEventMapType Create([Nullable(2)] IAkEventMapType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082EB RID: 33515 RVA: 0x00138F83 File Offset: 0x00137183
+		// Token: 0x060089FD RID: 35325 RVA: 0x0014856B File Offset: 0x0014676B
 		public static IAkEventMapType CreateFromSetValue([Nullable(2)] IAkEventMapType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082EC RID: 33516 RVA: 0x00138F96 File Offset: 0x00137196
+		// Token: 0x060089FE RID: 35326 RVA: 0x0014857E File Offset: 0x0014677E
 		public IAkEventMapType_SetValue ToSetValue()
 		{
 			return new IAkEventMapType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B11 RID: 11025
-		// (get) Token: 0x060082ED RID: 33517 RVA: 0x00138FA9 File Offset: 0x001371A9
-		// (set) Token: 0x060082EE RID: 33518 RVA: 0x00138FD4 File Offset: 0x001371D4
+		// Token: 0x17002D07 RID: 11527
+		// (get) Token: 0x060089FF RID: 35327 RVA: 0x00148591 File Offset: 0x00146791
+		// (set) Token: 0x06008A00 RID: 35328 RVA: 0x001485BC File Offset: 0x001467BC
 		public virtual EAkEventMap Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400532E RID: 21294
+		// Token: 0x04005772 RID: 22386
 		[Nullable(2)]
 		protected IAkEventMapType FbInstance;
 
-		// Token: 0x0400532F RID: 21295
+		// Token: 0x04005773 RID: 22387
 		[Nullable(2)]
 		protected IAkEventMapType_SetValue PocoInterface;
 	}

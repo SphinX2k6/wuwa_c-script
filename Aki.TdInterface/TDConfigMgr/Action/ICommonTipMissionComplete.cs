@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200191E RID: 6430
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AA7 RID: 6823
 	public class ICommonTipMissionComplete : ICommonTipType
 	{
-		// Token: 0x060089D5 RID: 35285 RVA: 0x00145174 File Offset: 0x00143374
+		// Token: 0x06009101 RID: 37121 RVA: 0x00154AB4 File Offset: 0x00152CB4
 		private ICommonTipMissionComplete_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060089D6 RID: 35286 RVA: 0x001451AC File Offset: 0x001433AC
+		// Token: 0x06009102 RID: 37122 RVA: 0x00154AEC File Offset: 0x00152CEC
 		public static ICommonTipMissionComplete Create([Nullable(2)] ICommonTipMissionComplete instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089D7 RID: 35287 RVA: 0x001451BF File Offset: 0x001433BF
+		// Token: 0x06009103 RID: 37123 RVA: 0x00154AFF File Offset: 0x00152CFF
 		public static ICommonTipMissionComplete CreateFromSetValue([Nullable(2)] ICommonTipMissionComplete_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089D8 RID: 35288 RVA: 0x001451D4 File Offset: 0x001433D4
+		// Token: 0x06009104 RID: 37124 RVA: 0x00154B14 File Offset: 0x00152D14
 		public new ICommonTipMissionComplete_SetValue ToSetValue()
 		{
 			return new ICommonTipMissionComplete_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C92 RID: 11410
-		// (get) Token: 0x060089D9 RID: 35289 RVA: 0x00145222 File Offset: 0x00143422
-		// (set) Token: 0x060089DA RID: 35290 RVA: 0x0014524D File Offset: 0x0014344D
+		// Token: 0x17002E92 RID: 11922
+		// (get) Token: 0x06009105 RID: 37125 RVA: 0x00154B62 File Offset: 0x00152D62
+		// (set) Token: 0x06009106 RID: 37126 RVA: 0x00154B8D File Offset: 0x00152D8D
 		public override ECommonTipType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C93 RID: 11411
-		// (get) Token: 0x060089DB RID: 35291 RVA: 0x0014525B File Offset: 0x0014345B
-		// (set) Token: 0x060089DC RID: 35292 RVA: 0x00145286 File Offset: 0x00143486
+		// Token: 0x17002E93 RID: 11923
+		// (get) Token: 0x06009107 RID: 37127 RVA: 0x00154B9B File Offset: 0x00152D9B
+		// (set) Token: 0x06009108 RID: 37128 RVA: 0x00154BC6 File Offset: 0x00152DC6
 		public virtual string TidMainText
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C94 RID: 11412
-		// (get) Token: 0x060089DD RID: 35293 RVA: 0x00145294 File Offset: 0x00143494
-		// (set) Token: 0x060089DE RID: 35294 RVA: 0x001452BF File Offset: 0x001434BF
+		// Token: 0x17002E94 RID: 11924
+		// (get) Token: 0x06009109 RID: 37129 RVA: 0x00154BD4 File Offset: 0x00152DD4
+		// (set) Token: 0x0600910A RID: 37130 RVA: 0x00154BFF File Offset: 0x00152DFF
 		public virtual string TidSubText
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C95 RID: 11413
-		// (get) Token: 0x060089DF RID: 35295 RVA: 0x001452CD File Offset: 0x001434CD
-		// (set) Token: 0x060089E0 RID: 35296 RVA: 0x001452E4 File Offset: 0x001434E4
+		// Token: 0x17002E95 RID: 11925
+		// (get) Token: 0x0600910B RID: 37131 RVA: 0x00154C0D File Offset: 0x00152E0D
+		// (set) Token: 0x0600910C RID: 37132 RVA: 0x00154C24 File Offset: 0x00152E24
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C96 RID: 11414
-		// (get) Token: 0x060089E1 RID: 35297 RVA: 0x001452F2 File Offset: 0x001434F2
-		// (set) Token: 0x060089E2 RID: 35298 RVA: 0x00145309 File Offset: 0x00143509
+		// Token: 0x17002E96 RID: 11926
+		// (get) Token: 0x0600910D RID: 37133 RVA: 0x00154C32 File Offset: 0x00152E32
+		// (set) Token: 0x0600910E RID: 37134 RVA: 0x00154C49 File Offset: 0x00152E49
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -176,11 +174,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005647 RID: 22087
+		// Token: 0x04005A97 RID: 23191
 		[Nullable(2)]
 		protected new ICommonTipMissionComplete FbInstance;
 
-		// Token: 0x04005648 RID: 22088
+		// Token: 0x04005A98 RID: 23192
 		[Nullable(2)]
 		protected new ICommonTipMissionComplete_SetValue PocoInterface;
 	}

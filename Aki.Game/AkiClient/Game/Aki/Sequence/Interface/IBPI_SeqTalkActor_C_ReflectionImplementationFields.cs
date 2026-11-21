@@ -2,13 +2,13 @@
 
 namespace AkiClient.Game.Aki.Sequence.Interface
 {
-	// Token: 0x02003A41 RID: 14913
+	// Token: 0x02003081 RID: 12417
 	internal static class IBPI_SeqTalkActor_C_ReflectionImplementationFields
 	{
-		// Token: 0x0400F139 RID: 61753
+		// Token: 0x0400F97F RID: 63871
 		public static IntPtr __GetSeqMouthAnimInstance_NativeFunctionPtr;
 
-		// Token: 0x0400F13A RID: 61754
+		// Token: 0x0400F980 RID: 63872
 		public static IntPtr __GetSeqTalkId_NativeFunctionPtr;
 	}
 }

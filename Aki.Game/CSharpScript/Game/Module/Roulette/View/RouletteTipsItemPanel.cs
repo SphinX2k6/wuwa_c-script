@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C9A RID: 19610
+	// Token: 0x02003C4B RID: 15435
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RouletteTipsItemPanel : UiPanelBase
 	{
-		// Token: 0x06032ADA RID: 207578 RVA: 0x00BD27D8 File Offset: 0x00BD09D8
+		// Token: 0x0602788D RID: 161933 RVA: 0x00B1743C File Offset: 0x00B1563C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,31 +29,31 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032ADB RID: 207579 RVA: 0x00BD2862 File Offset: 0x00BD0A62
+		// Token: 0x0602788E RID: 161934 RVA: 0x00B174C6 File Offset: 0x00B156C6
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<CommonItemSmallItemGridWrap, ItemRefreshData>(base.GetGridLayout(0), new Func<CommonItemSmallItemGridWrap>(this.InitGridItem), null, false, true);
 		}
 
-		// Token: 0x06032ADC RID: 207580 RVA: 0x00BD2885 File Offset: 0x00BD0A85
+		// Token: 0x0602788F RID: 161935 RVA: 0x00B174E9 File Offset: 0x00B156E9
 		private CommonItemSmallItemGridWrap InitGridItem()
 		{
 			return new CommonItemSmallItemGridWrap();
 		}
 
-		// Token: 0x06032ADD RID: 207581 RVA: 0x00BD288C File Offset: 0x00BD0A8C
+		// Token: 0x06027890 RID: 161936 RVA: 0x00B174F0 File Offset: 0x00B156F0
 		public void RefreshTitle(string textId)
 		{
 			base.GetText(2).ShowTextNew(textId);
 		}
 
-		// Token: 0x06032ADE RID: 207582 RVA: 0x00BD289B File Offset: 0x00BD0A9B
+		// Token: 0x06027891 RID: 161937 RVA: 0x00B174FF File Offset: 0x00B156FF
 		public void RefreshItemPanel(List<ItemRefreshData> dataList)
 		{
 			this.ItemLayout.RefreshByData(dataList, null, false);
 		}
 
-		// Token: 0x0401AFAF RID: 110511
+		// Token: 0x0401590C RID: 88332
 		[Nullable(new byte[]
 		{
 			2,

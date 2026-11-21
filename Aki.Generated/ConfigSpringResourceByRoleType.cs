@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200098B RID: 2443
+	// Token: 0x02000A60 RID: 2656
 	public class ConfigSpringResourceByRoleType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003956 RID: 14678 RVA: 0x0019DC44 File Offset: 0x0019BE44
+		// Token: 0x06003E54 RID: 15956 RVA: 0x001BCFD8 File Offset: 0x001BB1D8
 		static ConfigSpringResourceByRoleType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringResourceByRoleType.CreateStaticDefaultValue), new Action(ConfigSpringResourceByRoleType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003957 RID: 14679 RVA: 0x0019DC64 File Offset: 0x0019BE64
+		// Token: 0x06003E55 RID: 15957 RVA: 0x001BCFF8 File Offset: 0x001BB1F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringResourceByRoleType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003958 RID: 14680 RVA: 0x0019DCE3 File Offset: 0x0019BEE3
+		// Token: 0x06003E56 RID: 15958 RVA: 0x001BD077 File Offset: 0x001BB277
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringResourceByRoleType.LogPair = null;
 			ConfigSpringResourceByRoleType.HandleId = 0;
 		}
 
-		// Token: 0x06003959 RID: 14681 RVA: 0x0019DCF1 File Offset: 0x0019BEF1
+		// Token: 0x06003E57 RID: 15959 RVA: 0x001BD085 File Offset: 0x001BB285
 		public static void Init()
 		{
 			ConfigSpringResourceByRoleType.HandleId = ConfigCommon.InitDataStatement(ConfigSpringResourceByRoleType.HandleId, "db_sprintsign.db", "select BinData from `SpringResource` where RoleType=?");
 		}
 
-		// Token: 0x0600395A RID: 14682 RVA: 0x0019DD0C File Offset: 0x0019BF0C
+		// Token: 0x06003E58 RID: 15960 RVA: 0x001BD0A0 File Offset: 0x001BB2A0
 		[NullableContext(2)]
 		public static IReadOnlyList<SpringResource> GetConfigList(int p0RoleType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040042B3 RID: 17075
+		// Token: 0x04004886 RID: 18566
 		private const string DB = "db_sprintsign.db";
 
-		// Token: 0x040042B4 RID: 17076
+		// Token: 0x04004887 RID: 18567
 		private const string FILE = "c.2.0春节签到.xlsx";
 
-		// Token: 0x040042B5 RID: 17077
+		// Token: 0x04004888 RID: 18568
 		private const string TABLE = "SpringResource";
 
-		// Token: 0x040042B6 RID: 17078
+		// Token: 0x04004889 RID: 18569
 		private const string COMMAND = "select BinData from `SpringResource` where RoleType=?";
 
-		// Token: 0x040042B7 RID: 17079
+		// Token: 0x0400488A RID: 18570
 		private const string KEY_PREFIX = "SpringResourceByRoleType";
 
-		// Token: 0x040042B8 RID: 17080
+		// Token: 0x0400488B RID: 18571
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042B9 RID: 17081
+		// Token: 0x0400488C RID: 18572
 		private static int HandleId;
 	}
 }

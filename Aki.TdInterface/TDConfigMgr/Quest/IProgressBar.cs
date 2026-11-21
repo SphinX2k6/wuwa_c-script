@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001061 RID: 4193
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200118F RID: 4495
 	public class IProgressBar
 	{
-		// Token: 0x06005DF2 RID: 24050 RVA: 0x000E3454 File Offset: 0x000E1654
+		// Token: 0x060063E4 RID: 25572 RVA: 0x000F0428 File Offset: 0x000EE628
 		private IProgressBar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005DF3 RID: 24051 RVA: 0x000E348C File Offset: 0x000E168C
+		// Token: 0x060063E5 RID: 25573 RVA: 0x000F0460 File Offset: 0x000EE660
 		public static IProgressBar Create([Nullable(2)] IProgressBar instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DF4 RID: 24052 RVA: 0x000E349F File Offset: 0x000E169F
+		// Token: 0x060063E6 RID: 25574 RVA: 0x000F0473 File Offset: 0x000EE673
 		public static IProgressBar CreateFromSetValue([Nullable(2)] IProgressBar_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DF5 RID: 24053 RVA: 0x000E34B2 File Offset: 0x000E16B2
+		// Token: 0x060063E7 RID: 25575 RVA: 0x000F0486 File Offset: 0x000EE686
 		public IProgressBar_SetValue ToSetValue()
 		{
 			return new IProgressBar_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EE9 RID: 7913
-		// (get) Token: 0x06005DF6 RID: 24054 RVA: 0x000E34D1 File Offset: 0x000E16D1
-		// (set) Token: 0x06005DF7 RID: 24055 RVA: 0x000E34FC File Offset: 0x000E16FC
+		// Token: 0x17002098 RID: 8344
+		// (get) Token: 0x060063E8 RID: 25576 RVA: 0x000F04A5 File Offset: 0x000EE6A5
+		// (set) Token: 0x060063E9 RID: 25577 RVA: 0x000F04D0 File Offset: 0x000EE6D0
 		public virtual EProgressBarStyle ProgressStyle
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EEA RID: 7914
-		// (get) Token: 0x06005DF8 RID: 24056 RVA: 0x000E350C File Offset: 0x000E170C
-		// (set) Token: 0x06005DF9 RID: 24057 RVA: 0x000E356D File Offset: 0x000E176D
+		// Token: 0x17002099 RID: 8345
+		// (get) Token: 0x060063EA RID: 25578 RVA: 0x000F04E0 File Offset: 0x000EE6E0
+		// (set) Token: 0x060063EB RID: 25579 RVA: 0x000F0541 File Offset: 0x000EE741
 		public virtual IProgressCalculate ProgressCalculate
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003890 RID: 14480
+		// Token: 0x04003BD8 RID: 15320
 		[Nullable(2)]
 		protected IProgressBar FbInstance;
 
-		// Token: 0x04003891 RID: 14481
+		// Token: 0x04003BD9 RID: 15321
 		[Nullable(2)]
 		protected IProgressBar_SetValue PocoInterface;
 
-		// Token: 0x04003892 RID: 14482
+		// Token: 0x04003BDA RID: 15322
 		private IProgressCalculate _ProgressCalculateCache;
 
-		// Token: 0x04003893 RID: 14483
+		// Token: 0x04003BDB RID: 15323
 		private bool _ProgressCalculateInited;
 	}
 }

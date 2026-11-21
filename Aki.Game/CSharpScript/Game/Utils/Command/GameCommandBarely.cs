@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Command
 {
-	// Token: 0x0200457B RID: 17787
+	// Token: 0x020034A3 RID: 13475
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Utils.Command
 	})]
 	internal class GameCommandBarely<[Nullable(0)] T> : GameCommandWithValidators<T> where T : ICommandType
 	{
-		// Token: 0x0602DE75 RID: 188021 RVA: 0x00A8DB3A File Offset: 0x00A8BD3A
+		// Token: 0x06022557 RID: 140631 RVA: 0x009B9252 File Offset: 0x009B7452
 		public GameCommandBarely([Nullable(new byte[]
 		{
 			2,

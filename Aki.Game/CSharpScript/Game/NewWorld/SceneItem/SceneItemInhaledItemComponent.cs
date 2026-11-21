@@ -9,13 +9,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007182 RID: 29058
+	// Token: 0x02006236 RID: 25142
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemInhaledItemComponent : EntityComponent
 	{
-		// Token: 0x17009D7E RID: 40318
-		// (get) Token: 0x0604705E RID: 290910 RVA: 0x011FD4B6 File Offset: 0x011FB6B6
+		// Token: 0x17007279 RID: 29305
+		// (get) Token: 0x0603C8F8 RID: 248056 RVA: 0x01157C12 File Offset: 0x01155E12
 		public bool IsHaling
 		{
 			get
@@ -24,8 +24,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D7F RID: 40319
-		// (get) Token: 0x0604705F RID: 290911 RVA: 0x011FD4C4 File Offset: 0x011FB6C4
+		// Token: 0x1700727A RID: 29306
+		// (get) Token: 0x0603C8F9 RID: 248057 RVA: 0x01157C20 File Offset: 0x01155E20
 		public int? InhaledStrength
 		{
 			get
@@ -39,9 +39,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D80 RID: 40320
-		// (get) Token: 0x06047060 RID: 290912 RVA: 0x011FD4EF File Offset: 0x011FB6EF
-		// (set) Token: 0x06047061 RID: 290913 RVA: 0x011FD4F8 File Offset: 0x011FB6F8
+		// Token: 0x1700727B RID: 29307
+		// (get) Token: 0x0603C8FA RID: 248058 RVA: 0x01157C4B File Offset: 0x01155E4B
+		// (set) Token: 0x0603C8FB RID: 248059 RVA: 0x01157C54 File Offset: 0x01155E54
 		private SceneItemInhaledItemComponent.EPerformanceState PerformanceState
 		{
 			get
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047062 RID: 290914 RVA: 0x011FD5C8 File Offset: 0x011FB7C8
+		// Token: 0x0603C8FC RID: 248060 RVA: 0x01157D24 File Offset: 0x01155F24
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			object param = args.GetP1<CreateEntityData>().GetParam<SceneItemInhaledItemComponent>();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047063 RID: 290915 RVA: 0x011FD654 File Offset: 0x011FB854
+		// Token: 0x0603C8FD RID: 248061 RVA: 0x01157DB0 File Offset: 0x01155FB0
 		protected override bool OnStart()
 		{
 			this.TagComp = base.Entity.GetComponent<BaseTagComponent>();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047064 RID: 290916 RVA: 0x011FD774 File Offset: 0x011FB974
+		// Token: 0x0603C8FE RID: 248062 RVA: 0x01157ED0 File Offset: 0x011560D0
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047065 RID: 290917 RVA: 0x011FD7C8 File Offset: 0x011FB9C8
+		// Token: 0x0603C8FF RID: 248063 RVA: 0x01157F24 File Offset: 0x01156124
 		protected override void OnTick(float delta)
 		{
 			SceneItemInhaledItemComponent.EState state = this.State;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047066 RID: 290918 RVA: 0x011FD7EC File Offset: 0x011FB9EC
+		// Token: 0x0603C900 RID: 248064 RVA: 0x01157F48 File Offset: 0x01156148
 		private void TickInhaling(float delta)
 		{
 			if (this.InhaledTimer == -1f)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047067 RID: 290919 RVA: 0x011FD838 File Offset: 0x011FBA38
+		// Token: 0x0603C901 RID: 248065 RVA: 0x01157F94 File Offset: 0x01156194
 		[NullableContext(1)]
 		public void StartInhalation(Entity entity)
 		{
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047068 RID: 290920 RVA: 0x011FD924 File Offset: 0x011FBB24
+		// Token: 0x0603C902 RID: 248066 RVA: 0x01158080 File Offset: 0x01156280
 		public void StopInhalation(bool needUpdatePerformance = true)
 		{
 			if (this.State == SceneItemInhaledItemComponent.EState.Reset)
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InhaledTimer = -1f;
 		}
 
-		// Token: 0x06047069 RID: 290921 RVA: 0x011FD994 File Offset: 0x011FBB94
+		// Token: 0x0603C903 RID: 248067 RVA: 0x011580F0 File Offset: 0x011562F0
 		private void CooldownTimer()
 		{
 			if (this.CdTimerHandle != null)
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, this.CdTime, null, null, true, 1f);
 		}
 
-		// Token: 0x0604706A RID: 290922 RVA: 0x011FD9FC File Offset: 0x011FBBFC
+		// Token: 0x0603C904 RID: 248068 RVA: 0x01158158 File Offset: 0x01156358
 		private void NotifyServer()
 		{
 			if (this.InhalationEntityId < 0L || this.SkillId < 0 || this.InhaledType < 0)
@@ -275,13 +275,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			Log.Instance.Info(ELogModule.Temp, ELogAuthor.CH, "成功吸取污染物", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0604706B RID: 290923 RVA: 0x011FDADE File Offset: 0x011FBCDE
+		// Token: 0x0603C905 RID: 248069 RVA: 0x0115823A File Offset: 0x0115643A
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.UpdatePerformanceState();
 		}
 
-		// Token: 0x0604706C RID: 290924 RVA: 0x011FDAE8 File Offset: 0x011FBCE8
+		// Token: 0x0603C906 RID: 248070 RVA: 0x01158244 File Offset: 0x01156444
 		private void UpdatePerformanceState()
 		{
 			bool isHaling = this.IsHaling;
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604706D RID: 290925 RVA: 0x011FDB94 File Offset: 0x011FBD94
+		// Token: 0x0603C907 RID: 248071 RVA: 0x011582F0 File Offset: 0x011564F0
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -327,97 +327,85 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemInhaledItemComponent sceneItemInhaledItemComponent = (SceneItemInhaledItemComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemInhaledItemComponent.Config == null)
 			{
-				if (sceneItemInhaledItemComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InhaledItemComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemInhaledItemComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemInhaledItemComponent.TagComp == null)
 			{
-				if (sceneItemInhaledItemComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("InhaledTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.InhaledTime = sceneItemInhaledItemComponent.InhaledTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("InhaledTimer"))
+			if (sceneItemInhaledItemComponent.ActorComp == null)
 			{
-				this.InhaledTimer = sceneItemInhaledItemComponent.InhaledTimer;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("DisableHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.DisableHandle = sceneItemInhaledItemComponent.DisableHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("State"))
+			this.InhaledTime = sceneItemInhaledItemComponent.InhaledTime;
+			this.InhaledTimer = sceneItemInhaledItemComponent.InhaledTimer;
+			this.DisableHandle = sceneItemInhaledItemComponent.DisableHandle;
+			this.State = sceneItemInhaledItemComponent.State;
+			this.PerformanceStateInternal = sceneItemInhaledItemComponent.PerformanceStateInternal;
+			this.InhalationEntityId = sceneItemInhaledItemComponent.InhalationEntityId;
+			this.SkillId = sceneItemInhaledItemComponent.SkillId;
+			this.InhaledType = sceneItemInhaledItemComponent.InhaledType;
+			if (sceneItemInhaledItemComponent.CdTimerHandle == null)
 			{
-				this.State = sceneItemInhaledItemComponent.State;
+				this.CdTimerHandle = null;
 			}
-			if (base.CanResetComponentProperty("PerformanceStateInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CdTimerHandle), "CdTimerHandle"))
 			{
-				this.PerformanceStateInternal = sceneItemInhaledItemComponent.PerformanceStateInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("InhalationEntityId"))
-			{
-				this.InhalationEntityId = sceneItemInhaledItemComponent.InhalationEntityId;
-			}
-			if (base.CanResetComponentProperty("SkillId"))
-			{
-				this.SkillId = sceneItemInhaledItemComponent.SkillId;
-			}
-			if (base.CanResetComponentProperty("InhaledType"))
-			{
-				this.InhaledType = sceneItemInhaledItemComponent.InhaledType;
-			}
-			if (base.CanResetComponentProperty("CdTimerHandle"))
-			{
-				if (sceneItemInhaledItemComponent.CdTimerHandle == null)
-				{
-					this.CdTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.CdTimerHandle), "CdTimerHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CdTime"))
-			{
-				this.CdTime = sceneItemInhaledItemComponent.CdTime;
-			}
-			if (base.CanResetComponentProperty("IsInCooldown"))
-			{
-				this.IsInCooldown = sceneItemInhaledItemComponent.IsInCooldown;
-			}
+			this.CdTime = sceneItemInhaledItemComponent.CdTime;
+			this.IsInCooldown = sceneItemInhaledItemComponent.IsInCooldown;
 			return true;
 		}
 
-		// Token: 0x04025530 RID: 152880
+		// Token: 0x1700727C RID: 29308
+		// (get) Token: 0x0603C908 RID: 248072 RVA: 0x01158434 File Offset: 0x01156634
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700727D RID: 29309
+		// (get) Token: 0x0603C909 RID: 248073 RVA: 0x01158437 File Offset: 0x01156637
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700727E RID: 29310
+		// (get) Token: 0x0603C90A RID: 248074 RVA: 0x0115843A File Offset: 0x0115663A
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020197 RID: 131479
 		private const float SENSORY_RANGE = 3000f;
 
-		// Token: 0x04025531 RID: 152881
+		// Token: 0x04020198 RID: 131480
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static Dictionary<SceneItemInhaledItemComponent.EPerformanceState, int> performanceStateTag = new Dictionary<SceneItemInhaledItemComponent.EPerformanceState, int>
@@ -440,75 +428,75 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		};
 
-		// Token: 0x04025532 RID: 152882
+		// Token: 0x04020199 RID: 131481
 		private InhaledItemComponent Config;
 
-		// Token: 0x04025533 RID: 152883
+		// Token: 0x0402019A RID: 131482
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04025534 RID: 152884
+		// Token: 0x0402019B RID: 131483
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025535 RID: 152885
+		// Token: 0x0402019C RID: 131484
 		private float InhaledTime = -1f;
 
-		// Token: 0x04025536 RID: 152886
+		// Token: 0x0402019D RID: 131485
 		private float InhaledTimer = -1f;
 
-		// Token: 0x04025537 RID: 152887
+		// Token: 0x0402019E RID: 131486
 		private int DisableHandle = -1;
 
-		// Token: 0x04025538 RID: 152888
+		// Token: 0x0402019F RID: 131487
 		private SceneItemInhaledItemComponent.EState State;
 
-		// Token: 0x04025539 RID: 152889
+		// Token: 0x040201A0 RID: 131488
 		private SceneItemInhaledItemComponent.EPerformanceState PerformanceStateInternal = SceneItemInhaledItemComponent.EPerformanceState.None;
 
-		// Token: 0x0402553A RID: 152890
+		// Token: 0x040201A1 RID: 131489
 		private long InhalationEntityId = -1L;
 
-		// Token: 0x0402553B RID: 152891
+		// Token: 0x040201A2 RID: 131490
 		private int SkillId = -1;
 
-		// Token: 0x0402553C RID: 152892
+		// Token: 0x040201A3 RID: 131491
 		private int InhaledType = -1;
 
-		// Token: 0x0402553D RID: 152893
+		// Token: 0x040201A4 RID: 131492
 		private TimerHandle CdTimerHandle;
 
-		// Token: 0x0402553E RID: 152894
+		// Token: 0x040201A5 RID: 131493
 		private float CdTime = -1f;
 
-		// Token: 0x0402553F RID: 152895
+		// Token: 0x040201A6 RID: 131494
 		public bool IsInCooldown;
 
-		// Token: 0x0200CECB RID: 52939
+		// Token: 0x0200BA61 RID: 47713
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403E380 RID: 254848
+			// Token: 0x040396A6 RID: 235174
 			Reset,
-			// Token: 0x0403E381 RID: 254849
+			// Token: 0x040396A7 RID: 235175
 			Inhaling,
-			// Token: 0x0403E382 RID: 254850
+			// Token: 0x040396A8 RID: 235176
 			Moving
 		}
 
-		// Token: 0x0200CECC RID: 52940
+		// Token: 0x0200BA62 RID: 47714
 		[NullableContext(0)]
 		private enum EPerformanceState
 		{
-			// Token: 0x0403E384 RID: 254852
+			// Token: 0x040396AA RID: 235178
 			Normal,
-			// Token: 0x0403E385 RID: 254853
+			// Token: 0x040396AB RID: 235179
 			Active,
-			// Token: 0x0403E386 RID: 254854
+			// Token: 0x040396AC RID: 235180
 			NormalInhaling,
-			// Token: 0x0403E387 RID: 254855
+			// Token: 0x040396AD RID: 235181
 			ActiveInhaling,
-			// Token: 0x0403E388 RID: 254856
+			// Token: 0x040396AE RID: 235182
 			Destroy,
-			// Token: 0x0403E389 RID: 254857
+			// Token: 0x040396AF RID: 235183
 			None
 		}
 	}

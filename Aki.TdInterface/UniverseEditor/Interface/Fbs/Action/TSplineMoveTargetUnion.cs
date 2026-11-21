@@ -3,39 +3,55 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077A2 RID: 30626
+	// Token: 0x02007FDA RID: 32730
 	public class TSplineMoveTargetUnion
 	{
-		// Token: 0x1700E6AF RID: 59055
-		// (get) Token: 0x06037956 RID: 227670 RVA: 0x0078506A File Offset: 0x0078326A
-		// (set) Token: 0x06037957 RID: 227671 RVA: 0x00785072 File Offset: 0x00783272
+		// Token: 0x1700F309 RID: 62217
+		// (get) Token: 0x0603AED3 RID: 241363 RVA: 0x007EA5A8 File Offset: 0x007E87A8
+		// (set) Token: 0x0603AED4 RID: 241364 RVA: 0x007EA5B0 File Offset: 0x007E87B0
 		public TSplineMoveTarget Type { get; set; }
 
-		// Token: 0x1700E6B0 RID: 59056
-		// (get) Token: 0x06037958 RID: 227672 RVA: 0x0078507B File Offset: 0x0078327B
-		// (set) Token: 0x06037959 RID: 227673 RVA: 0x00785083 File Offset: 0x00783283
+		// Token: 0x1700F30A RID: 62218
+		// (get) Token: 0x0603AED5 RID: 241365 RVA: 0x007EA5B9 File Offset: 0x007E87B9
+		// (set) Token: 0x0603AED6 RID: 241366 RVA: 0x007EA5C1 File Offset: 0x007E87C1
 		public object Value { get; set; }
 
-		// Token: 0x0603795A RID: 227674 RVA: 0x0078508C File Offset: 0x0078328C
+		// Token: 0x0603AED7 RID: 241367 RVA: 0x007EA5CA File Offset: 0x007E87CA
 		public TSplineMoveTargetUnion()
 		{
 			this.Type = TSplineMoveTarget.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603795B RID: 227675 RVA: 0x007850A2 File Offset: 0x007832A2
+		// Token: 0x0603AED8 RID: 241368 RVA: 0x007EA5E0 File Offset: 0x007E87E0
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603795C RID: 227676 RVA: 0x007850B4 File Offset: 0x007832B4
+		// Token: 0x0603AED9 RID: 241369 RVA: 0x007EA5F2 File Offset: 0x007E87F2
+		public IAssistCharacterSplineMoveTargetT AsIAssistCharacterSplineMoveTarget()
+		{
+			return this.As<IAssistCharacterSplineMoveTargetT>();
+		}
+
+		// Token: 0x0603AEDA RID: 241370 RVA: 0x007EA5FA File Offset: 0x007E87FA
+		public static TSplineMoveTargetUnion FromIAssistCharacterSplineMoveTarget(IAssistCharacterSplineMoveTargetT _iassistcharactersplinemovetarget)
+		{
+			return new TSplineMoveTargetUnion
+			{
+				Type = TSplineMoveTarget.IAssistCharacterSplineMoveTarget,
+				Value = _iassistcharactersplinemovetarget
+			};
+		}
+
+		// Token: 0x0603AEDB RID: 241371 RVA: 0x007EA60F File Offset: 0x007E880F
 		public IEntitySplineMoveTargetT AsIEntitySplineMoveTarget()
 		{
 			return this.As<IEntitySplineMoveTargetT>();
 		}
 
-		// Token: 0x0603795D RID: 227677 RVA: 0x007850BC File Offset: 0x007832BC
+		// Token: 0x0603AEDC RID: 241372 RVA: 0x007EA617 File Offset: 0x007E8817
 		public static TSplineMoveTargetUnion FromIEntitySplineMoveTarget(IEntitySplineMoveTargetT _ientitysplinemovetarget)
 		{
 			return new TSplineMoveTargetUnion
@@ -45,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603795E RID: 227678 RVA: 0x007850D1 File Offset: 0x007832D1
+		// Token: 0x0603AEDD RID: 241373 RVA: 0x007EA62C File Offset: 0x007E882C
 		public IPlayerSplineMoveTargetT AsIPlayerSplineMoveTarget()
 		{
 			return this.As<IPlayerSplineMoveTargetT>();
 		}
 
-		// Token: 0x0603795F RID: 227679 RVA: 0x007850D9 File Offset: 0x007832D9
+		// Token: 0x0603AEDE RID: 241374 RVA: 0x007EA634 File Offset: 0x007E8834
 		public static TSplineMoveTargetUnion FromIPlayerSplineMoveTarget(IPlayerSplineMoveTargetT _iplayersplinemovetarget)
 		{
 			return new TSplineMoveTargetUnion
@@ -61,19 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037960 RID: 227680 RVA: 0x007850F0 File Offset: 0x007832F0
+		// Token: 0x0603AEDF RID: 241375 RVA: 0x007EA64C File Offset: 0x007E884C
 		public static int Pack(FlatBufferBuilder builder, TSplineMoveTargetUnion _o)
 		{
-			TSplineMoveTarget type = _o.Type;
-			if (type == TSplineMoveTarget.IEntitySplineMoveTarget)
+			switch (_o.Type)
 			{
+			case TSplineMoveTarget.IAssistCharacterSplineMoveTarget:
+				return IAssistCharacterSplineMoveTarget.Pack(builder, _o.AsIAssistCharacterSplineMoveTarget()).Value;
+			case TSplineMoveTarget.IEntitySplineMoveTarget:
 				return IEntitySplineMoveTarget.Pack(builder, _o.AsIEntitySplineMoveTarget()).Value;
-			}
-			if (type != TSplineMoveTarget.IPlayerSplineMoveTarget)
-			{
+			case TSplineMoveTarget.IPlayerSplineMoveTarget:
+				return IPlayerSplineMoveTarget.Pack(builder, _o.AsIPlayerSplineMoveTarget()).Value;
+			default:
 				return 0;
 			}
-			return IPlayerSplineMoveTarget.Pack(builder, _o.AsIPlayerSplineMoveTarget()).Value;
 		}
 	}
 }

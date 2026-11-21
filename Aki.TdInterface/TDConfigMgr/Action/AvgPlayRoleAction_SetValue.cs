@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A6 RID: 5286
+	// Token: 0x020015FF RID: 5631
 	public class AvgPlayRoleAction_SetValue
 	{
-		// Token: 0x040045F7 RID: 17911
-		[Nullable(1)]
+		// Token: 0x04004992 RID: 18834
 		public List<IAvgPlayRoleActionItem> RoleActionList;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C21 RID: 3105
+	// Token: 0x02000D04 RID: 3332
 	public struct EffectCsvConfig : IFlatbufferObject
 	{
-		// Token: 0x17000E8E RID: 3726
-		// (get) Token: 0x06006794 RID: 26516 RVA: 0x00220129 File Offset: 0x0021E329
+		// Token: 0x17000EE2 RID: 3810
+		// (get) Token: 0x06006D87 RID: 28039 RVA: 0x0023F4E9 File Offset: 0x0023D6E9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006795 RID: 26517 RVA: 0x00220136 File Offset: 0x0021E336
+		// Token: 0x06006D88 RID: 28040 RVA: 0x0023F4F6 File Offset: 0x0023D6F6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006796 RID: 26518 RVA: 0x00220140 File Offset: 0x0021E340
+		// Token: 0x06006D89 RID: 28041 RVA: 0x0023F500 File Offset: 0x0023D700
 		public static EffectCsvConfig GetRootAsEffectCsvConfig(ByteBuffer _bb)
 		{
 			return EffectCsvConfig.GetRootAsEffectCsvConfig(_bb, default(EffectCsvConfig));
 		}
 
-		// Token: 0x06006797 RID: 26519 RVA: 0x0022015C File Offset: 0x0021E35C
+		// Token: 0x06006D8A RID: 28042 RVA: 0x0023F51C File Offset: 0x0023D71C
 		public static EffectCsvConfig GetRootAsEffectCsvConfig(ByteBuffer _bb, EffectCsvConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006798 RID: 26520 RVA: 0x00220179 File Offset: 0x0021E379
+		// Token: 0x06006D8B RID: 28043 RVA: 0x0023F539 File Offset: 0x0023D739
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006799 RID: 26521 RVA: 0x00220188 File Offset: 0x0021E388
+		// Token: 0x06006D8C RID: 28044 RVA: 0x0023F548 File Offset: 0x0023D748
 		public EffectCsvConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000E8F RID: 3727
-		// (get) Token: 0x0600679A RID: 26522 RVA: 0x00220198 File Offset: 0x0021E398
+		// Token: 0x17000EE3 RID: 3811
+		// (get) Token: 0x06006D8D RID: 28045 RVA: 0x0023F558 File Offset: 0x0023D758
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000E90 RID: 3728
-		// (get) Token: 0x0600679B RID: 26523 RVA: 0x002201D4 File Offset: 0x0021E3D4
+		// Token: 0x17000EE4 RID: 3812
+		// (get) Token: 0x06006D8E RID: 28046 RVA: 0x0023F594 File Offset: 0x0023D794
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600679C RID: 26524 RVA: 0x0022020B File Offset: 0x0021E40B
+		// Token: 0x06006D8F RID: 28047 RVA: 0x0023F5CB File Offset: 0x0023D7CB
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600679D RID: 26525 RVA: 0x0022021A File Offset: 0x0021E41A
+		// Token: 0x06006D90 RID: 28048 RVA: 0x0023F5DA File Offset: 0x0023D7DA
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000E91 RID: 3729
-		// (get) Token: 0x0600679E RID: 26526 RVA: 0x00220234 File Offset: 0x0021E434
+		// Token: 0x17000EE5 RID: 3813
+		// (get) Token: 0x06006D91 RID: 28049 RVA: 0x0023F5F4 File Offset: 0x0023D7F4
 		public int Type
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000E92 RID: 3730
-		// (get) Token: 0x0600679F RID: 26527 RVA: 0x00220270 File Offset: 0x0021E470
+		// Token: 0x17000EE6 RID: 3814
+		// (get) Token: 0x06006D92 RID: 28050 RVA: 0x0023F630 File Offset: 0x0023D830
 		public string Data
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060067A0 RID: 26528 RVA: 0x002202A8 File Offset: 0x0021E4A8
+		// Token: 0x06006D93 RID: 28051 RVA: 0x0023F668 File Offset: 0x0023D868
 		public Span<byte> GetDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060067A1 RID: 26529 RVA: 0x002202B8 File Offset: 0x0021E4B8
+		// Token: 0x06006D94 RID: 28052 RVA: 0x0023F678 File Offset: 0x0023D878
 		public byte[] GetDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004C61 RID: 19553
+		// Token: 0x04005244 RID: 21060
 		private Table __p;
 	}
 }

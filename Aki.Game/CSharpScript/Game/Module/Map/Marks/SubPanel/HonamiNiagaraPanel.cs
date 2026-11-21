@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 {
-	// Token: 0x020054D4 RID: 21716
+	// Token: 0x020044A7 RID: 17575
 	public class HonamiNiagaraPanel : UiPanelBase
 	{
-		// Token: 0x0603771F RID: 227103 RVA: 0x00D2B724 File Offset: 0x00D29924
+		// Token: 0x0602C5C4 RID: 181700 RVA: 0x00C7920C File Offset: 0x00C7740C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037720 RID: 227104 RVA: 0x00D2B76C File Offset: 0x00D2996C
+		// Token: 0x0602C5C5 RID: 181701 RVA: 0x00C79254 File Offset: 0x00C77454
 		[NullableContext(1)]
 		public UniTask SetNiagaraAndShow(string resourceId, [Nullable(2)] string audioEvent = null)
 		{
@@ -38,10 +38,10 @@ namespace CSharpScript.Game.Module.Map.Marks.SubPanel
 			return <SetNiagaraAndShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200B740 RID: 46912
+		// Token: 0x0200A16F RID: 41327
 		private enum EChildComponents
 		{
-			// Token: 0x040377DC RID: 227292
+			// Token: 0x04032215 RID: 205333
 			Niagara
 		}
 	}

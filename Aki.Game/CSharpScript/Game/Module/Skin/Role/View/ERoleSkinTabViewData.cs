@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Skin.Role.View
 {
-	// Token: 0x02004BF5 RID: 19445
+	// Token: 0x02003BA6 RID: 15270
 	public enum ERoleSkinTabViewData
 	{
-		// Token: 0x0401ABEC RID: 109548
+		// Token: 0x04015546 RID: 87366
 		SelectRoleSkinId,
-		// Token: 0x0401ABED RID: 109549
+		// Token: 0x04015547 RID: 87367
 		IsWearWeaponSkin
 	}
 }

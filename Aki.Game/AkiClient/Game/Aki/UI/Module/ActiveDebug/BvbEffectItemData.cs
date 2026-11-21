@@ -6,52 +6,52 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 {
-	// Token: 0x020039DF RID: 14815
+	// Token: 0x02003038 RID: 12344
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/UI/Module/ActiveDebug/BvbEffectItemData.BvbEffectItemData")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class BvbEffectItemData : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601F005 RID: 126981 RVA: 0x008A71DE File Offset: 0x008A53DE
+		// Token: 0x0601D491 RID: 119953 RVA: 0x008EFDB9 File Offset: 0x008EDFB9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (BvbEffectItemData._ScriptStructPtr != 0) ? BvbEffectItemData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/UI/Module/ActiveDebug/BvbEffectItemData.BvbEffectItemData", ref BvbEffectItemData._ScriptStructPtr);
 		}
 
-		// Token: 0x170029C7 RID: 10695
-		// (get) Token: 0x0601F006 RID: 126982 RVA: 0x008A7202 File Offset: 0x008A5402
-		// (set) Token: 0x0601F007 RID: 126983 RVA: 0x008A7216 File Offset: 0x008A5416
+		// Token: 0x17002E8C RID: 11916
+		// (get) Token: 0x0601D492 RID: 119954 RVA: 0x008EFDDD File Offset: 0x008EDFDD
+		// (set) Token: 0x0601D493 RID: 119955 RVA: 0x008EFDF1 File Offset: 0x008EDFF1
 		public unsafe string Title
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_Title)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_Title)), value);
 			}
 		}
 
-		// Token: 0x170029C8 RID: 10696
-		// (get) Token: 0x0601F008 RID: 126984 RVA: 0x008A722B File Offset: 0x008A542B
-		// (set) Token: 0x0601F009 RID: 126985 RVA: 0x008A723F File Offset: 0x008A543F
+		// Token: 0x17002E8D RID: 11917
+		// (get) Token: 0x0601D494 RID: 119956 RVA: 0x008EFE06 File Offset: 0x008EE006
+		// (set) Token: 0x0601D495 RID: 119957 RVA: 0x008EFE1A File Offset: 0x008EE01A
 		public unsafe string Desc
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_Desc)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbEffectItemData.__PropertyOffset_Desc)), value);
 			}
 		}
 
-		// Token: 0x170029C9 RID: 10697
-		// (get) Token: 0x0601F00A RID: 126986 RVA: 0x008A7254 File Offset: 0x008A5454
-		// (set) Token: 0x0601F00B RID: 126987 RVA: 0x008A7297 File Offset: 0x008A5497
+		// Token: 0x17002E8E RID: 11918
+		// (get) Token: 0x0601D496 RID: 119958 RVA: 0x008EFE30 File Offset: 0x008EE030
+		// (set) Token: 0x0601D497 RID: 119959 RVA: 0x008EFE73 File Offset: 0x008EE073
 		public TArray<string> ChildTitleList
 		{
 			get
@@ -60,7 +60,7 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 				TArray<string> result;
 				if ((result = this._ChildTitleList) == null)
 				{
-					result = (this._ChildTitleList = new TArray<string>(base.NativePtr + (IntPtr)BvbEffectItemData.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._ChildTitleList = new TArray<string>(base.NativePtr + (IntPtr)BvbEffectItemData.__PropertyOffset_ChildTitleList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -70,9 +70,9 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 			}
 		}
 
-		// Token: 0x170029CA RID: 10698
-		// (get) Token: 0x0601F00C RID: 126988 RVA: 0x008A72A8 File Offset: 0x008A54A8
-		// (set) Token: 0x0601F00D RID: 126989 RVA: 0x008A72EB File Offset: 0x008A54EB
+		// Token: 0x17002E8F RID: 11919
+		// (get) Token: 0x0601D498 RID: 119960 RVA: 0x008EFE84 File Offset: 0x008EE084
+		// (set) Token: 0x0601D499 RID: 119961 RVA: 0x008EFEC7 File Offset: 0x008EE0C7
 		public TArray<string> ChildDescList
 		{
 			get
@@ -81,7 +81,7 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 				TArray<string> result;
 				if ((result = this._ChildDescList) == null)
 				{
-					result = (this._ChildDescList = new TArray<string>(base.NativePtr + (IntPtr)BvbEffectItemData.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._ChildDescList = new TArray<string>(base.NativePtr + (IntPtr)BvbEffectItemData.__PropertyOffset_ChildDescList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -91,65 +91,56 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 			}
 		}
 
-		// Token: 0x0601F00E RID: 126990 RVA: 0x008A72F9 File Offset: 0x008A54F9
+		// Token: 0x0601D49A RID: 119962 RVA: 0x008EFED5 File Offset: 0x008EE0D5
 		public BvbEffectItemData()
 		{
 		}
 
-		// Token: 0x0601F00F RID: 126991 RVA: 0x008A7301 File Offset: 0x008A5501
-		public BvbEffectItemData(string Title, string Desc, TArray<string> ChildTitleList, TArray<string> ChildDescList)
-		{
-			this.Title = Title;
-			this.Desc = Desc;
-			this.ChildTitleList = ChildTitleList;
-			this.ChildDescList = ChildDescList;
-		}
-
-		// Token: 0x0601F010 RID: 126992 RVA: 0x008A7326 File Offset: 0x008A5526
+		// Token: 0x0601D49B RID: 119963 RVA: 0x008EFEDD File Offset: 0x008EE0DD
 		protected override IntPtr GetUStructPtr()
 		{
 			return BvbEffectItemData.StaticStruct();
 		}
 
-		// Token: 0x0601F011 RID: 126993 RVA: 0x008A7332 File Offset: 0x008A5532
+		// Token: 0x0601D49C RID: 119964 RVA: 0x008EFEE9 File Offset: 0x008EE0E9
 		[NullableContext(2)]
 		public BvbEffectItemData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F012 RID: 126994 RVA: 0x008A733C File Offset: 0x008A553C
+		// Token: 0x0601D49D RID: 119965 RVA: 0x008EFEF3 File Offset: 0x008EE0F3
 		public BvbEffectItemData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F013 RID: 126995 RVA: 0x008A7347 File Offset: 0x008A5547
+		// Token: 0x0601D49E RID: 119966 RVA: 0x008EFEFE File Offset: 0x008EE0FE
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new BvbEffectItemData(Pointer, false, true);
 		}
 
-		// Token: 0x0601F014 RID: 126996 RVA: 0x008A7351 File Offset: 0x008A5551
+		// Token: 0x0601D49F RID: 119967 RVA: 0x008EFF08 File Offset: 0x008EE108
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new BvbEffectItemData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400ED72 RID: 60786
+		// Token: 0x0400F6B3 RID: 63155
 		public const string __ObjectPath = "/Game/Aki/UI/Module/ActiveDebug/BvbEffectItemData.BvbEffectItemData";
 
-		// Token: 0x0400ED73 RID: 60787
+		// Token: 0x0400F6B4 RID: 63156
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400ED74 RID: 60788
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400F6B5 RID: 63157
+		internal static int __PropertyOffset_Title;
 
-		// Token: 0x0400ED75 RID: 60789
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F6B6 RID: 63158
+		internal static int __PropertyOffset_Desc;
 
-		// Token: 0x0400ED76 RID: 60790
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F6B7 RID: 63159
+		internal static int __PropertyOffset_ChildTitleList;
 
-		// Token: 0x0400ED77 RID: 60791
+		// Token: 0x0400F6B8 RID: 63160
 		[Nullable(new byte[]
 		{
 			2,
@@ -157,10 +148,10 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 		})]
 		private TArray<string> _ChildTitleList;
 
-		// Token: 0x0400ED78 RID: 60792
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F6B9 RID: 63161
+		internal static int __PropertyOffset_ChildDescList;
 
-		// Token: 0x0400ED79 RID: 60793
+		// Token: 0x0400F6BA RID: 63162
 		[Nullable(new byte[]
 		{
 			2,

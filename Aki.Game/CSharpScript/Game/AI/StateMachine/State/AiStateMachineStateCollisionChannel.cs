@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x02007329 RID: 29481
+	// Token: 0x020064AC RID: 25772
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStateCollisionChannel : AiStateMachineState
 	{
-		// Token: 0x060485BB RID: 296379 RVA: 0x0129CA2E File Offset: 0x0129AC2E
+		// Token: 0x0603EA08 RID: 256520 RVA: 0x0123F4AE File Offset: 0x0123D6AE
 		public AiStateMachineStateCollisionChannel(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485BC RID: 296380 RVA: 0x0129CA43 File Offset: 0x0129AC43
+		// Token: 0x0603EA09 RID: 256521 RVA: 0x0123F4C3 File Offset: 0x0123D6C3
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.IgnoreChannels = state.BindCollisionChannel.IgnoreChannels;
 			return true;
 		}
 
-		// Token: 0x060485BD RID: 296381 RVA: 0x0129CA58 File Offset: 0x0129AC58
+		// Token: 0x0603EA0A RID: 256522 RVA: 0x0123F4D8 File Offset: 0x0123D6D8
 		[NullableContext(2)]
 		public override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485BE RID: 296382 RVA: 0x0129CB28 File Offset: 0x0129AD28
+		// Token: 0x0603EA0B RID: 256523 RVA: 0x0123F5A8 File Offset: 0x0123D7A8
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
@@ -66,11 +66,11 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			this.OriginalResponses.Clear();
 		}
 
-		// Token: 0x04026423 RID: 156707
+		// Token: 0x04021710 RID: 136976
 		[Nullable(2)]
 		public List<int> IgnoreChannels;
 
-		// Token: 0x04026424 RID: 156708
+		// Token: 0x04021711 RID: 136977
 		private readonly Dictionary<int, Dictionary<UShapeComponent, ECollisionResponse>> OriginalResponses = new Dictionary<int, Dictionary<UShapeComponent, ECollisionResponse>>();
 	}
 }

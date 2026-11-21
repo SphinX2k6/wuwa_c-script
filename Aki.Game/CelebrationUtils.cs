@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020011C3 RID: 4547
+// Token: 0x02000677 RID: 1655
 public class CelebrationUtils
 {
-	// Token: 0x06007915 RID: 30997 RVA: 0x0019797A File Offset: 0x00195B7A
+	// Token: 0x06004CAC RID: 19628 RVA: 0x001A062A File Offset: 0x0019E82A
 	[NullableContext(1)]
 	public static string GetActivityLogo()
 	{

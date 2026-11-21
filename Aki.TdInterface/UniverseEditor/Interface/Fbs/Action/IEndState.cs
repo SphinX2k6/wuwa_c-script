@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066A5 RID: 26277
+	// Token: 0x02006D1F RID: 27935
 	public struct IEndState : IFlatbufferObject
 	{
-		// Token: 0x1700C33F RID: 49983
-		// (get) Token: 0x0602DAB7 RID: 187063 RVA: 0x0063FCE9 File Offset: 0x0063DEE9
+		// Token: 0x1700CCF0 RID: 52464
+		// (get) Token: 0x060302D4 RID: 197332 RVA: 0x0068CF9D File Offset: 0x0068B19D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DAB8 RID: 187064 RVA: 0x0063FCF6 File Offset: 0x0063DEF6
+		// Token: 0x060302D5 RID: 197333 RVA: 0x0068CFAA File Offset: 0x0068B1AA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DAB9 RID: 187065 RVA: 0x0063FD00 File Offset: 0x0063DF00
+		// Token: 0x060302D6 RID: 197334 RVA: 0x0068CFB4 File Offset: 0x0068B1B4
 		public static IEndState GetRootAsIEndState(ByteBuffer _bb)
 		{
 			return IEndState.GetRootAsIEndState(_bb, default(IEndState));
 		}
 
-		// Token: 0x0602DABA RID: 187066 RVA: 0x0063FD1C File Offset: 0x0063DF1C
+		// Token: 0x060302D7 RID: 197335 RVA: 0x0068CFD0 File Offset: 0x0068B1D0
 		public static IEndState GetRootAsIEndState(ByteBuffer _bb, IEndState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DABB RID: 187067 RVA: 0x0063FD39 File Offset: 0x0063DF39
+		// Token: 0x060302D8 RID: 197336 RVA: 0x0068CFED File Offset: 0x0068B1ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DABC RID: 187068 RVA: 0x0063FD48 File Offset: 0x0063DF48
+		// Token: 0x060302D9 RID: 197337 RVA: 0x0068CFFC File Offset: 0x0068B1FC
 		public IEndState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602DABD RID: 187069 RVA: 0x0063FD58 File Offset: 0x0063DF58
+		// Token: 0x060302DA RID: 197338 RVA: 0x0068D00C File Offset: 0x0068B20C
 		public int StayFlowMontageActors(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700C340 RID: 49984
-		// (get) Token: 0x0602DABE RID: 187070 RVA: 0x0063FD98 File Offset: 0x0063DF98
+		// Token: 0x1700CCF1 RID: 52465
+		// (get) Token: 0x060302DB RID: 197339 RVA: 0x0068D04C File Offset: 0x0068B24C
 		public int StayFlowMontageActorsLength
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DABF RID: 187071 RVA: 0x0063FDC3 File Offset: 0x0063DFC3
+		// Token: 0x060302DC RID: 197340 RVA: 0x0068D077 File Offset: 0x0068B277
 		public Span<int> GetStayFlowMontageActorsBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0602DAC0 RID: 187072 RVA: 0x0063FDD2 File Offset: 0x0063DFD2
+		// Token: 0x060302DD RID: 197341 RVA: 0x0068D086 File Offset: 0x0068B286
 		public int[] GetStayFlowMontageActorsArray()
 		{
 			return this.__p.__vector_as_array<int>(4);
 		}
 
-		// Token: 0x1700C341 RID: 49985
-		// (get) Token: 0x0602DAC1 RID: 187073 RVA: 0x0063FDE0 File Offset: 0x0063DFE0
+		// Token: 0x1700CCF2 RID: 52466
+		// (get) Token: 0x060302DE RID: 197342 RVA: 0x0068D094 File Offset: 0x0068B294
 		public byte NullMask
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DAC2 RID: 187074 RVA: 0x0063FE1C File Offset: 0x0063E01C
+		// Token: 0x060302DF RID: 197343 RVA: 0x0068D0D0 File Offset: 0x0068B2D0
 		public static Offset<IEndState> CreateIEndState(FlatBufferBuilder builder, VectorOffset StayFlowMontageActorsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -110,19 +110,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEndState.EndIEndState(builder);
 		}
 
-		// Token: 0x0602DAC3 RID: 187075 RVA: 0x0063FE39 File Offset: 0x0063E039
+		// Token: 0x060302E0 RID: 197344 RVA: 0x0068D0ED File Offset: 0x0068B2ED
 		public static void StartIEndState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DAC4 RID: 187076 RVA: 0x0063FE42 File Offset: 0x0063E042
+		// Token: 0x060302E1 RID: 197345 RVA: 0x0068D0F6 File Offset: 0x0068B2F6
 		public static void AddStayFlowMontageActors(FlatBufferBuilder builder, VectorOffset stayFlowMontageActorsOffset)
 		{
 			builder.AddOffset(0, stayFlowMontageActorsOffset.Value, 0);
 		}
 
-		// Token: 0x0602DAC5 RID: 187077 RVA: 0x0063FE54 File Offset: 0x0063E054
+		// Token: 0x060302E2 RID: 197346 RVA: 0x0068D108 File Offset: 0x0068B308
 		public static VectorOffset CreateStayFlowMontageActorsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DAC6 RID: 187078 RVA: 0x0063FE8B File Offset: 0x0063E08B
+		// Token: 0x060302E3 RID: 197347 RVA: 0x0068D13F File Offset: 0x0068B33F
 		public static VectorOffset CreateStayFlowMontageActorsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DAC7 RID: 187079 RVA: 0x0063FEA5 File Offset: 0x0063E0A5
+		// Token: 0x060302E4 RID: 197348 RVA: 0x0068D159 File Offset: 0x0068B359
 		public static VectorOffset CreateStayFlowMontageActorsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DAC8 RID: 187080 RVA: 0x0063FEC3 File Offset: 0x0063E0C3
+		// Token: 0x060302E5 RID: 197349 RVA: 0x0068D177 File Offset: 0x0068B377
 		public static VectorOffset CreateStayFlowMontageActorsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -157,25 +157,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602DAC9 RID: 187081 RVA: 0x0063FEDC File Offset: 0x0063E0DC
+		// Token: 0x060302E6 RID: 197350 RVA: 0x0068D190 File Offset: 0x0068B390
 		public static void StartStayFlowMontageActorsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602DACA RID: 187082 RVA: 0x0063FEE7 File Offset: 0x0063E0E7
+		// Token: 0x060302E7 RID: 197351 RVA: 0x0068D19B File Offset: 0x0068B39B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0602DACB RID: 187083 RVA: 0x0063FEF2 File Offset: 0x0063E0F2
+		// Token: 0x060302E8 RID: 197352 RVA: 0x0068D1A6 File Offset: 0x0068B3A6
 		public static Offset<IEndState> EndIEndState(FlatBufferBuilder builder)
 		{
 			return new Offset<IEndState>(builder.EndTable());
 		}
 
-		// Token: 0x0602DACC RID: 187084 RVA: 0x0063FF00 File Offset: 0x0063E100
+		// Token: 0x060302E9 RID: 197353 RVA: 0x0068D1B4 File Offset: 0x0068B3B4
 		public IEndStateT UnPack()
 		{
 			IEndStateT endStateT = new IEndStateT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return endStateT;
 		}
 
-		// Token: 0x0602DACD RID: 187085 RVA: 0x0063FF1C File Offset: 0x0063E11C
+		// Token: 0x060302EA RID: 197354 RVA: 0x0068D1D0 File Offset: 0x0068B3D0
 		public void UnPackTo(IEndStateT _o)
 		{
 			_o.StayFlowMontageActors = new List<int>();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602DACE RID: 187086 RVA: 0x0063FF64 File Offset: 0x0063E164
+		// Token: 0x060302EB RID: 197355 RVA: 0x0068D218 File Offset: 0x0068B418
 		public static Offset<IEndState> Pack(FlatBufferBuilder builder, IEndStateT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEndState.CreateIEndState(builder, stayFlowMontageActorsOffset, _o.NullMask);
 		}
 
-		// Token: 0x04010D5D RID: 68957
+		// Token: 0x04011B83 RID: 72579
 		private Table __p;
 	}
 }

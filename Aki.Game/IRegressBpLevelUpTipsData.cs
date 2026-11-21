@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200147D RID: 5245
+// Token: 0x02000931 RID: 2353
 public interface IRegressBpLevelUpTipsData
 {
-	// Token: 0x17000CF0 RID: 3312
-	// (get) Token: 0x06009463 RID: 37987
-	// (set) Token: 0x06009464 RID: 37988
+	// Token: 0x17000D10 RID: 3344
+	// (get) Token: 0x060067F8 RID: 26616
+	// (set) Token: 0x060067F9 RID: 26617
 	int? PrevLevel { get; set; }
 
-	// Token: 0x17000CF1 RID: 3313
-	// (get) Token: 0x06009465 RID: 37989
-	// (set) Token: 0x06009466 RID: 37990
+	// Token: 0x17000D11 RID: 3345
+	// (get) Token: 0x060067FA RID: 26618
+	// (set) Token: 0x060067FB RID: 26619
 	int? CurLevel { get; set; }
 }

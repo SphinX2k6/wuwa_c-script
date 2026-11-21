@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200063A RID: 1594
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006D7 RID: 1751
 	public class IQteType
 	{
-		// Token: 0x0600220A RID: 8714 RVA: 0x0005DC40 File Offset: 0x0005BE40
+		// Token: 0x06002510 RID: 9488 RVA: 0x00064954 File Offset: 0x00062B54
 		private IQteType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600220B RID: 8715 RVA: 0x0005DC78 File Offset: 0x0005BE78
+		// Token: 0x06002511 RID: 9489 RVA: 0x0006498C File Offset: 0x00062B8C
 		public static IQteType Create([Nullable(2)] IQteType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600220C RID: 8716 RVA: 0x0005DC8B File Offset: 0x0005BE8B
+		// Token: 0x06002512 RID: 9490 RVA: 0x0006499F File Offset: 0x00062B9F
 		public static IQteType CreateFromSetValue([Nullable(2)] IQteType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600220D RID: 8717 RVA: 0x0005DC9E File Offset: 0x0005BE9E
+		// Token: 0x06002513 RID: 9491 RVA: 0x000649B2 File Offset: 0x00062BB2
 		public IQteType_SetValue ToSetValue()
 		{
 			return new IQteType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700090D RID: 2317
-		// (get) Token: 0x0600220E RID: 8718 RVA: 0x0005DCBD File Offset: 0x0005BEBD
-		// (set) Token: 0x0600220F RID: 8719 RVA: 0x0005DCE8 File Offset: 0x0005BEE8
+		// Token: 0x170009C4 RID: 2500
+		// (get) Token: 0x06002514 RID: 9492 RVA: 0x000649D1 File Offset: 0x00062BD1
+		// (set) Token: 0x06002515 RID: 9493 RVA: 0x000649FC File Offset: 0x00062BFC
 		public virtual EQteType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700090E RID: 2318
-		// (get) Token: 0x06002210 RID: 8720 RVA: 0x0005DCF6 File Offset: 0x0005BEF6
-		// (set) Token: 0x06002211 RID: 8721 RVA: 0x0005DD21 File Offset: 0x0005BF21
+		// Token: 0x170009C5 RID: 2501
+		// (get) Token: 0x06002516 RID: 9494 RVA: 0x00064A0A File Offset: 0x00062C0A
+		// (set) Token: 0x06002517 RID: 9495 RVA: 0x00064A35 File Offset: 0x00062C35
 		public virtual int QteId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017AD RID: 6061
+		// Token: 0x0400199F RID: 6559
 		[Nullable(2)]
 		protected IQteType FbInstance;
 
-		// Token: 0x040017AE RID: 6062
+		// Token: 0x040019A0 RID: 6560
 		[Nullable(2)]
 		protected IQteType_SetValue PocoInterface;
 	}

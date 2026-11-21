@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E6B RID: 11883
+// Token: 0x020023BD RID: 9149
 [NullableContext(2)]
 [Nullable(0)]
 public class DamageTransfer
 {
-	// Token: 0x170022D3 RID: 8915
-	// (get) Token: 0x06019643 RID: 104003 RVA: 0x0068CBB6 File Offset: 0x0068ADB6
-	// (set) Token: 0x06019644 RID: 104004 RVA: 0x0068CBBE File Offset: 0x0068ADBE
+	// Token: 0x17002352 RID: 9042
+	// (get) Token: 0x06016F0A RID: 93962 RVA: 0x006B2FAA File Offset: 0x006B11AA
+	// (set) Token: 0x06016F0B RID: 93963 RVA: 0x006B2FB2 File Offset: 0x006B11B2
 	public BaseDamageComponent TransferTarget { get; set; }
 
-	// Token: 0x170022D4 RID: 8916
-	// (get) Token: 0x06019645 RID: 104005 RVA: 0x0068CBC7 File Offset: 0x0068ADC7
-	// (set) Token: 0x06019646 RID: 104006 RVA: 0x0068CBCF File Offset: 0x0068ADCF
+	// Token: 0x17002353 RID: 9043
+	// (get) Token: 0x06016F0C RID: 93964 RVA: 0x006B2FBB File Offset: 0x006B11BB
+	// (set) Token: 0x06016F0D RID: 93965 RVA: 0x006B2FC3 File Offset: 0x006B11C3
 	public float ToughRecoverDelayTime { get; set; }
 
-	// Token: 0x170022D5 RID: 8917
-	// (get) Token: 0x06019647 RID: 104007 RVA: 0x0068CBD8 File Offset: 0x0068ADD8
-	// (set) Token: 0x06019648 RID: 104008 RVA: 0x0068CBE0 File Offset: 0x0068ADE0
+	// Token: 0x17002354 RID: 9044
+	// (get) Token: 0x06016F0E RID: 93966 RVA: 0x006B2FCC File Offset: 0x006B11CC
+	// (set) Token: 0x06016F0F RID: 93967 RVA: 0x006B2FD4 File Offset: 0x006B11D4
 	public float WeakTime { get; set; }
 }

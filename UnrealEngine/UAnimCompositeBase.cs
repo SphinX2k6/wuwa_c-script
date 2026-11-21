@@ -6,41 +6,41 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020007F5 RID: 2037
+	// Token: 0x02000177 RID: 375
 	[UnrealObjectPath("/Script/Engine.AnimCompositeBase")]
 	[UnrealStructLayout(440, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 440)]
 	public abstract class UAnimCompositeBase : UAnimSequenceBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06006CB7 RID: 27831 RVA: 0x0009C7F5 File Offset: 0x0009A9F5
+		// Token: 0x060016D0 RID: 5840 RVA: 0x00023925 File Offset: 0x00021B25
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAnimCompositeBase._ClassPtr;
 		}
 
-		// Token: 0x06006CB8 RID: 27832 RVA: 0x0009C801 File Offset: 0x0009AA01
+		// Token: 0x060016D1 RID: 5841 RVA: 0x00023931 File Offset: 0x00021B31
 		static UAnimCompositeBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.AnimCompositeBase");
 		}
 
-		// Token: 0x06006CB9 RID: 27833 RVA: 0x0009C810 File Offset: 0x0009AA10
+		// Token: 0x060016D2 RID: 5842 RVA: 0x00023940 File Offset: 0x00021B40
 		protected UAnimCompositeBase() : this(BuiltinUtils.AllocNativeUObject(UAnimCompositeBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06006CBA RID: 27834 RVA: 0x0009C838 File Offset: 0x0009AA38
+		// Token: 0x060016D3 RID: 5843 RVA: 0x00023968 File Offset: 0x00021B68
 		protected UAnimCompositeBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003471 RID: 13425
+		// Token: 0x04000747 RID: 1863
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.AnimCompositeBase";
 
-		// Token: 0x04003472 RID: 13426
+		// Token: 0x04000748 RID: 1864
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003473 RID: 13427
+		// Token: 0x04000749 RID: 1865
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

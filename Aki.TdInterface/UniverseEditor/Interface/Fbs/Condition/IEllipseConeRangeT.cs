@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C11 RID: 19473
+	// Token: 0x020050FE RID: 20734
 	public class IEllipseConeRangeT
 	{
-		// Token: 0x17008D70 RID: 36208
-		// (get) Token: 0x0601ED77 RID: 126327 RVA: 0x0045170C File Offset: 0x0044F90C
-		// (set) Token: 0x0601ED78 RID: 126328 RVA: 0x00451714 File Offset: 0x0044F914
+		// Token: 0x17009494 RID: 38036
+		// (get) Token: 0x0602095D RID: 133469 RVA: 0x00484D74 File Offset: 0x00482F74
+		// (set) Token: 0x0602095E RID: 133470 RVA: 0x00484D7C File Offset: 0x00482F7C
 		public float HorizontalAngle { get; set; }
 
-		// Token: 0x17008D71 RID: 36209
-		// (get) Token: 0x0601ED79 RID: 126329 RVA: 0x0045171D File Offset: 0x0044F91D
-		// (set) Token: 0x0601ED7A RID: 126330 RVA: 0x00451725 File Offset: 0x0044F925
+		// Token: 0x17009495 RID: 38037
+		// (get) Token: 0x0602095F RID: 133471 RVA: 0x00484D85 File Offset: 0x00482F85
+		// (set) Token: 0x06020960 RID: 133472 RVA: 0x00484D8D File Offset: 0x00482F8D
 		public float VerticalAngle { get; set; }
 
-		// Token: 0x0601ED7B RID: 126331 RVA: 0x0045172E File Offset: 0x0044F92E
+		// Token: 0x06020961 RID: 133473 RVA: 0x00484D96 File Offset: 0x00482F96
 		public IEllipseConeRangeT()
 		{
 			this.HorizontalAngle = 0f;

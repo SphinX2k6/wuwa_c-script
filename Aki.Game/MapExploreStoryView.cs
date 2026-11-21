@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001ACE RID: 6862
+// Token: 0x02000F8D RID: 3981
 [NullableContext(2)]
 [Nullable(0)]
 public class MapExploreStoryView : UiViewBase
 {
-	// Token: 0x0600CB9E RID: 52126 RVA: 0x002E7997 File Offset: 0x002E5B97
+	// Token: 0x06009FAF RID: 40879 RVA: 0x002F2AEB File Offset: 0x002F0CEB
 	[NullableContext(1)]
 	public MapExploreStoryView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CB9F RID: 52127 RVA: 0x002E79A8 File Offset: 0x002E5BA8
+	// Token: 0x06009FB0 RID: 40880 RVA: 0x002F2AFC File Offset: 0x002F0CFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,7 +41,7 @@ public class MapExploreStoryView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CBA0 RID: 52128 RVA: 0x002E7A98 File Offset: 0x002E5C98
+	// Token: 0x06009FB1 RID: 40881 RVA: 0x002F2BEC File Offset: 0x002F0DEC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MapExploreStoryView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class MapExploreStoryView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CBA1 RID: 52129 RVA: 0x002E7ADC File Offset: 0x002E5CDC
+	// Token: 0x06009FB2 RID: 40882 RVA: 0x002F2C30 File Offset: 0x002F0E30
 	protected override void OnBeforeShow()
 	{
 		MapExploreStoryViewParams dataParam = this.DataParam;
@@ -84,7 +84,7 @@ public class MapExploreStoryView : UiViewBase
 		areaShowItem.Refresh(exploreAreaData.GetIconPercentDataAreaStory(), null);
 	}
 
-	// Token: 0x0600CBA2 RID: 52130 RVA: 0x002E7B7C File Offset: 0x002E5D7C
+	// Token: 0x06009FB3 RID: 40883 RVA: 0x002F2CD0 File Offset: 0x002F0ED0
 	protected override void OnAfterPlayStartSequence()
 	{
 		if (this.JumpIndex >= 0 && this.StoryList != null)
@@ -107,7 +107,7 @@ public class MapExploreStoryView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600CBA3 RID: 52131 RVA: 0x002E7BF0 File Offset: 0x002E5DF0
+	// Token: 0x06009FB4 RID: 40884 RVA: 0x002F2D44 File Offset: 0x002F0F44
 	protected override void OnBeforeDestroy()
 	{
 		MapExploreStoryViewParams dataParam = this.DataParam;
@@ -133,19 +133,19 @@ public class MapExploreStoryView : UiViewBase
 		this.AreaShowItem = null;
 	}
 
-	// Token: 0x0600CBA4 RID: 52132 RVA: 0x002E7C4B File Offset: 0x002E5E4B
+	// Token: 0x06009FB5 RID: 40885 RVA: 0x002F2D9F File Offset: 0x002F0F9F
 	private void OnCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005DA3 RID: 23971
+	// Token: 0x04005E72 RID: 24178
 	private MapExploreStoryViewParams DataParam;
 
-	// Token: 0x04005DA4 RID: 23972
+	// Token: 0x04005E73 RID: 24179
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x04005DA5 RID: 23973
+	// Token: 0x04005E74 RID: 24180
 	[Nullable(new byte[]
 	{
 		2,
@@ -154,13 +154,13 @@ public class MapExploreStoryView : UiViewBase
 	})]
 	private GenericScrollViewNew<MapExploreStoryItem, IMapExploreStoryItemData> ScrollView;
 
-	// Token: 0x04005DA6 RID: 23974
+	// Token: 0x04005E75 RID: 24181
 	private MapAreaOnlyShowItem AreaShowItem;
 
-	// Token: 0x04005DA7 RID: 23975
+	// Token: 0x04005E76 RID: 24182
 	private int JumpIndex = -1;
 
-	// Token: 0x04005DA8 RID: 23976
+	// Token: 0x04005E77 RID: 24183
 	[Nullable(new byte[]
 	{
 		2,
@@ -168,21 +168,21 @@ public class MapExploreStoryView : UiViewBase
 	})]
 	private List<IMapExploreStoryItemData> StoryList;
 
-	// Token: 0x0200802E RID: 32814
+	// Token: 0x020071BC RID: 29116
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D9C RID: 171420
+		// Token: 0x040250D0 RID: 151760
 		ItemCaption,
-		// Token: 0x04029D9D RID: 171421
+		// Token: 0x040250D1 RID: 151761
 		ScrollView,
-		// Token: 0x04029D9E RID: 171422
+		// Token: 0x040250D2 RID: 151762
 		ItemStory,
-		// Token: 0x04029D9F RID: 171423
+		// Token: 0x040250D3 RID: 151763
 		ItemExploreArea,
-		// Token: 0x04029DA0 RID: 171424
+		// Token: 0x040250D4 RID: 151764
 		TxtAreaProgress,
-		// Token: 0x04029DA1 RID: 171425
+		// Token: 0x040250D5 RID: 151765
 		TxtTitle
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000994 RID: 2452
+	// Token: 0x02000A47 RID: 2631
 	public static class ELookAtRotateModeExtensions
 	{
-		// Token: 0x060036CB RID: 14027 RVA: 0x0008EA30 File Offset: 0x0008CC30
+		// Token: 0x06003A52 RID: 14930 RVA: 0x0009699C File Offset: 0x00094B9C
 		public static string ToEnumString(this ELookAtRotateMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036CC RID: 14028 RVA: 0x0008EA68 File Offset: 0x0008CC68
+		// Token: 0x06003A53 RID: 14931 RVA: 0x000969D4 File Offset: 0x00094BD4
 		public static ELookAtRotateMode FromString(string name)
 		{
 			ELookAtRotateMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036CD RID: 14029 RVA: 0x0008EA91 File Offset: 0x0008CC91
+		// Token: 0x06003A54 RID: 14932 RVA: 0x000969FD File Offset: 0x00094BFD
 		public static bool TryFromString(string name, out ELookAtRotateMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036CE RID: 14030 RVA: 0x0008EACA File Offset: 0x0008CCCA
+		// Token: 0x06003A55 RID: 14933 RVA: 0x00096A36 File Offset: 0x00094C36
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036CF RID: 14031 RVA: 0x0008EAE2 File Offset: 0x0008CCE2
+		// Token: 0x06003A56 RID: 14934 RVA: 0x00096A4E File Offset: 0x00094C4E
 		public static ELookAtRotateMode[] GetValues()
 		{
 			return new ELookAtRotateMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036D0 RID: 14032 RVA: 0x0008EAEE File Offset: 0x0008CCEE
+		// Token: 0x06003A57 RID: 14935 RVA: 0x00096A5A File Offset: 0x00094C5A
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200135F RID: 4959
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014AF RID: 5295
 	public class ICheckUiGameQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007187 RID: 29063 RVA: 0x00111939 File Offset: 0x0010FB39
+		// Token: 0x06007827 RID: 30759 RVA: 0x0011FEA5 File Offset: 0x0011E0A5
 		public static ICheckUiGameQuestCondition Create(ICheckUiGameQuestCondition? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700249C RID: 9372
-		// (get) Token: 0x06007188 RID: 29064 RVA: 0x00111958 File Offset: 0x0010FB58
+		// Token: 0x1700266B RID: 9835
+		// (get) Token: 0x06007828 RID: 30760 RVA: 0x0011FEC4 File Offset: 0x0011E0C4
 		public override EChildQuest Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700249D RID: 9373
-		// (get) Token: 0x06007189 RID: 29065 RVA: 0x00111965 File Offset: 0x0010FB65
+		// Token: 0x1700266C RID: 9836
+		// (get) Token: 0x06007829 RID: 30761 RVA: 0x0011FED1 File Offset: 0x0011E0D1
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700249E RID: 9374
-		// (get) Token: 0x0600718A RID: 29066 RVA: 0x00111999 File Offset: 0x0010FB99
+		// Token: 0x1700266D RID: 9837
+		// (get) Token: 0x0600782A RID: 30762 RVA: 0x0011FF05 File Offset: 0x0011E105
 		public virtual List<IUiGame> GameplayConfigs
 		{
 			get
@@ -69,20 +67,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004197 RID: 16791
+		// Token: 0x04004513 RID: 17683
 		private ICheckUiGameQuestCondition Instance;
 
-		// Token: 0x04004198 RID: 16792
+		// Token: 0x04004514 RID: 17684
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004199 RID: 16793
+		// Token: 0x04004515 RID: 17685
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400419A RID: 16794
+		// Token: 0x04004516 RID: 17686
 		private List<IUiGame> _GameplayConfigsCache;
 
-		// Token: 0x0400419B RID: 16795
+		// Token: 0x04004517 RID: 17687
 		private bool _GameplayConfigsInited;
 	}
 }

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020029E8 RID: 10728
+// Token: 0x02001F63 RID: 8035
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 {
-	// Token: 0x06016403 RID: 91139 RVA: 0x005A0C30 File Offset: 0x0059EE30
+	// Token: 0x06013E0A RID: 81418 RVA: 0x005CBC24 File Offset: 0x005C9E24
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 		};
 	}
 
-	// Token: 0x06016404 RID: 91140 RVA: 0x005A0CB8 File Offset: 0x0059EEB8
+	// Token: 0x06013E0B RID: 81419 RVA: 0x005CBCAC File Offset: 0x005C9EAC
 	protected override void OnStart()
 	{
 		this.ItemGrid = new SmallItemGrid();
@@ -40,7 +40,7 @@ public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 		toggle.OnStateChange.Add(new Action<EToggleState>(this.OnClickToggle));
 	}
 
-	// Token: 0x06016405 RID: 91141 RVA: 0x005A0D18 File Offset: 0x0059EF18
+	// Token: 0x06013E0C RID: 81420 RVA: 0x005CBD0C File Offset: 0x005C9F0C
 	[NullableContext(1)]
 	public override void Refresh(IShipTogetherRoleItemData data, bool isSelected, int gridIndex)
 	{
@@ -85,7 +85,7 @@ public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 		text2.SetText(favorLevel.ToString() ?? "", true);
 	}
 
-	// Token: 0x06016406 RID: 91142 RVA: 0x005A0E4C File Offset: 0x0059F04C
+	// Token: 0x06013E0D RID: 81421 RVA: 0x005CBE40 File Offset: 0x005CA040
 	public void BindOnClickToggleCallBack([Nullable(new byte[]
 	{
 		1,
@@ -95,7 +95,7 @@ public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 		this.OnClickToggleCallBack = func;
 	}
 
-	// Token: 0x06016407 RID: 91143 RVA: 0x005A0E55 File Offset: 0x0059F055
+	// Token: 0x06013E0E RID: 81422 RVA: 0x005CBE49 File Offset: 0x005CA049
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -119,7 +119,7 @@ public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 		onClickToggleCallBack2(this.Toggle, this.RoleId);
 	}
 
-	// Token: 0x06016408 RID: 91144 RVA: 0x005A0E90 File Offset: 0x0059F090
+	// Token: 0x06013E0F RID: 81423 RVA: 0x005CBE84 File Offset: 0x005CA084
 	private void RefreshState()
 	{
 		if (this.IsInFormation)
@@ -154,38 +154,38 @@ public class ShipTogetherRoleItem : GridProxyAbstract<IShipTogetherRoleItemData>
 		}
 	}
 
-	// Token: 0x0400A58B RID: 42379
+	// Token: 0x0400A975 RID: 43381
 	private int RoleId;
 
-	// Token: 0x0400A58C RID: 42380
+	// Token: 0x0400A976 RID: 43382
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x0400A58D RID: 42381
+	// Token: 0x0400A977 RID: 43383
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x0400A58E RID: 42382
+	// Token: 0x0400A978 RID: 43384
 	private Action<UUIExtendToggle, int> OnClickToggleCallBack;
 
-	// Token: 0x0400A58F RID: 42383
+	// Token: 0x0400A979 RID: 43385
 	private bool IsInFormation;
 
-	// Token: 0x02009021 RID: 36897
+	// Token: 0x02008268 RID: 33384
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402EAAB RID: 191147
+		// Token: 0x0402A1A3 RID: 172451
 		public const int Toggle = 0;
 
-		// Token: 0x0402EAAC RID: 191148
+		// Token: 0x0402A1A4 RID: 172452
 		public const int NameText = 1;
 
-		// Token: 0x0402EAAD RID: 191149
+		// Token: 0x0402A1A5 RID: 172453
 		public const int FavorDesText = 2;
 
-		// Token: 0x0402EAAE RID: 191150
+		// Token: 0x0402A1A6 RID: 172454
 		public const int FavorLevelText = 3;
 
-		// Token: 0x0402EAAF RID: 191151
+		// Token: 0x0402A1A7 RID: 172455
 		public const int RoleItem = 4;
 	}
 }

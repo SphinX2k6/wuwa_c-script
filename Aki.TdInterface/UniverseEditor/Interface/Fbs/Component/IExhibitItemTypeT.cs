@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051D5 RID: 20949
+	// Token: 0x0200573A RID: 22330
 	public class IExhibitItemTypeT
 	{
-		// Token: 0x17009954 RID: 39252
-		// (get) Token: 0x06021F92 RID: 139154 RVA: 0x004B67AE File Offset: 0x004B49AE
-		// (set) Token: 0x06021F93 RID: 139155 RVA: 0x004B67B6 File Offset: 0x004B49B6
+		// Token: 0x1700A143 RID: 41283
+		// (get) Token: 0x06023EEA RID: 147178 RVA: 0x004F0816 File Offset: 0x004EEA16
+		// (set) Token: 0x06023EEB RID: 147179 RVA: 0x004F081E File Offset: 0x004EEA1E
 		public EExhibitItemType Type { get; set; }
 
-		// Token: 0x06021F94 RID: 139156 RVA: 0x004B67BF File Offset: 0x004B49BF
+		// Token: 0x06023EEC RID: 147180 RVA: 0x004F0827 File Offset: 0x004EEA27
 		public IExhibitItemTypeT()
 		{
 			this.Type = EExhibitItemType.Phantom;

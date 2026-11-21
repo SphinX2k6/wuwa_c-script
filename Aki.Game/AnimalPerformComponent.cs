@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Component;
@@ -12,12 +11,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002E22 RID: 11810
+// Token: 0x0200237E RID: 9086
 [NullableContext(2)]
 [Nullable(0)]
 public class AnimalPerformComponent : BasePerformComponent
 {
-	// Token: 0x06018DF9 RID: 101881 RVA: 0x0066811C File Offset: 0x0066631C
+	// Token: 0x060166BD RID: 91837 RVA: 0x0068E0C0 File Offset: 0x0068C2C0
 	public void HandlePendingDestroy()
 	{
 		if (!this.PendingDestroy && !this.PlayDeathAnimOnDestroy)
@@ -37,7 +36,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018DFA RID: 101882 RVA: 0x0066818C File Offset: 0x0066638C
+	// Token: 0x060166BE RID: 91838 RVA: 0x0068E130 File Offset: 0x0068C330
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		object param = args.GetP1<CreateEntityData>().GetParam<AnimalPerformComponent>();
@@ -57,10 +56,7 @@ public class AnimalPerformComponent : BasePerformComponent
 				foreach (ICollectAnimalPartsConfig collectAnimalPartsConfig in animalComponent.SpecialAnimalConfig.PartsMap)
 				{
 					this.PartToBoneMap[(int)collectAnimalPartsConfig.Slot] = collectAnimalPartsConfig.Skeleton;
-					Dictionary<int, bool> partEnableMap = this.PartEnableMap;
-					int slot = (int)collectAnimalPartsConfig.Slot;
-					int[] pbAnimalInitialPartIds = component.PbAnimalInitialPartIds;
-					partEnableMap[slot] = (pbAnimalInitialPartIds != null && pbAnimalInitialPartIds.Contains((int)collectAnimalPartsConfig.Slot));
+					this.PartEnableMap[(int)collectAnimalPartsConfig.Slot] = (component.PbAnimalInitialPartIds != null && Array.IndexOf<int>(component.PbAnimalInitialPartIds, (int)collectAnimalPartsConfig.Slot) >= 0);
 				}
 			}
 		}
@@ -68,7 +64,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		return true;
 	}
 
-	// Token: 0x06018DFB RID: 101883 RVA: 0x006682E4 File Offset: 0x006664E4
+	// Token: 0x060166BF RID: 91839 RVA: 0x0068E290 File Offset: 0x0068C490
 	protected unsafe override bool OnStart()
 	{
 		base.OnStart();
@@ -160,7 +156,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		return true;
 	}
 
-	// Token: 0x06018DFC RID: 101884 RVA: 0x006687CC File Offset: 0x006669CC
+	// Token: 0x060166C0 RID: 91840 RVA: 0x0068E778 File Offset: 0x0068C978
 	protected override void OnActivate()
 	{
 		if (base.Entity.GetComponent<CreatureDataComponent>().GetEntityType() == EEntityType.Monster)
@@ -175,7 +171,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.UpdateAllPartsHideState();
 	}
 
-	// Token: 0x06018DFD RID: 101885 RVA: 0x0066881A File Offset: 0x00666A1A
+	// Token: 0x060166C1 RID: 91841 RVA: 0x0068E7C6 File Offset: 0x0068C9C6
 	protected override void OnTick(float delta)
 	{
 		if (!this.CanLookAtPlayer)
@@ -190,7 +186,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.SightTarget(null);
 	}
 
-	// Token: 0x06018DFE RID: 101886 RVA: 0x00668854 File Offset: 0x00666A54
+	// Token: 0x060166C2 RID: 91842 RVA: 0x0068E800 File Offset: 0x0068CA00
 	private bool IsInSightDirection()
 	{
 		CharacterActorComponent characterActorComponent = Global.BaseCharacter.CharacterActorComponent;
@@ -201,7 +197,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		return MathUtils.Instance.GetAngleByVectorDot(this.TempDirect, this.ActorComp.ActorForwardProxy) <= 80.0;
 	}
 
-	// Token: 0x06018DFF RID: 101887 RVA: 0x006688E6 File Offset: 0x00666AE6
+	// Token: 0x060166C3 RID: 91843 RVA: 0x0068E89C File Offset: 0x0068CA9C
 	private void SightTarget(BaseActorComponent target)
 	{
 		if (!this.CanLookAtPlayer)
@@ -211,7 +207,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.AnimComp.SetSightTargetItem(target);
 	}
 
-	// Token: 0x06018E00 RID: 101888 RVA: 0x00668900 File Offset: 0x00666B00
+	// Token: 0x060166C4 RID: 91844 RVA: 0x0068E8B4 File Offset: 0x0068CAB4
 	protected override bool OnEnd()
 	{
 		this.RemoveBlurCollision();
@@ -224,7 +220,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		return true;
 	}
 
-	// Token: 0x06018E01 RID: 101889 RVA: 0x006689A0 File Offset: 0x00666BA0
+	// Token: 0x060166C5 RID: 91845 RVA: 0x0068E954 File Offset: 0x0068CB54
 	[NullableContext(1)]
 	private void AddMaterialControllerData(string materialPath)
 	{
@@ -249,7 +245,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06018E02 RID: 101890 RVA: 0x006689D0 File Offset: 0x00666BD0
+	// Token: 0x060166C6 RID: 91846 RVA: 0x0068E984 File Offset: 0x0068CB84
 	private void RemoveMaterialControllerData()
 	{
 		if (this.MaterialHandle > -1)
@@ -259,7 +255,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.MaterialHandle = -1;
 	}
 
-	// Token: 0x06018E03 RID: 101891 RVA: 0x006689FD File Offset: 0x00666BFD
+	// Token: 0x060166C7 RID: 91847 RVA: 0x0068E9B1 File Offset: 0x0068CBB1
 	private void OnDyingTagAdd(int tagId, bool gameplayTagExist)
 	{
 		if (!gameplayTagExist)
@@ -269,7 +265,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		EventSystem.Instance.Emit<Entity>(EEventName.OnAnimalDying, base.Entity);
 	}
 
-	// Token: 0x06018E04 RID: 101892 RVA: 0x00668A1C File Offset: 0x00666C1C
+	// Token: 0x060166C8 RID: 91848 RVA: 0x0068E9D0 File Offset: 0x0068CBD0
 	private void OnDestroyDisappearTagAdd(int tagId, bool gameplayTagExist)
 	{
 		if (!gameplayTagExist)
@@ -294,7 +290,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		CreatureController.Instance.DelayRemoveEntityFinished(base.Entity);
 	}
 
-	// Token: 0x06018E05 RID: 101893 RVA: 0x00668AA0 File Offset: 0x00666CA0
+	// Token: 0x060166C9 RID: 91849 RVA: 0x0068EA54 File Offset: 0x0068CC54
 	private void OnGameplayTagChange(int tagId, bool gameplayTagExist)
 	{
 		string materialPath;
@@ -323,7 +319,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E06 RID: 101894 RVA: 0x00668B4C File Offset: 0x00666D4C
+	// Token: 0x060166CA RID: 91850 RVA: 0x0068EB00 File Offset: 0x0068CD00
 	private void OnChangeModeFinish()
 	{
 		if (base.Entity.GetComponent<CreatureDataComponent>().GetEntityType() == EEntityType.Monster)
@@ -339,7 +335,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.RemoveBlurCollision();
 	}
 
-	// Token: 0x06018E07 RID: 101895 RVA: 0x00668B9C File Offset: 0x00666D9C
+	// Token: 0x060166CB RID: 91851 RVA: 0x0068EB50 File Offset: 0x0068CD50
 	[NullableContext(1)]
 	private void OnFriendHit(BulletInfo bulletInfo)
 	{
@@ -378,7 +374,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E08 RID: 101896 RVA: 0x00668C48 File Offset: 0x00666E48
+	// Token: 0x060166CC RID: 91852 RVA: 0x0068EBFC File Offset: 0x0068CDFC
 	[NullableContext(1)]
 	private void OnAnimalDying(Entity entity)
 	{
@@ -399,7 +395,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.GameplayTagComp.AddTag(new int?(AnimalPerformComponent.GAMEPLAY_TAG_ALERT));
 	}
 
-	// Token: 0x06018E09 RID: 101897 RVA: 0x00668CCC File Offset: 0x00666ECC
+	// Token: 0x060166CD RID: 91853 RVA: 0x0068EC80 File Offset: 0x0068CE80
 	private void AddBlurCollision()
 	{
 		if (this.HaveBlurEvent)
@@ -425,7 +421,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E0A RID: 101898 RVA: 0x00668D7C File Offset: 0x00666F7C
+	// Token: 0x060166CE RID: 91854 RVA: 0x0068ED30 File Offset: 0x0068CF30
 	private void RemoveBlurCollision()
 	{
 		if (!this.HaveBlurEvent)
@@ -451,7 +447,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E0B RID: 101899 RVA: 0x00668E2C File Offset: 0x0066702C
+	// Token: 0x060166CF RID: 91855 RVA: 0x0068EDE0 File Offset: 0x0068CFE0
 	private void OnBlurBegin(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex, bool bFromSweep, [Nullable(1)] FHitResult sweepResult)
 	{
 		if (this.IsAnotherClientPlayer(otherActor) && !this.GameplayTagComp.HasTag(AnimalPerformComponent.GAMEPLAY_TAG_BLUR))
@@ -460,7 +456,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E0C RID: 101900 RVA: 0x00668E5E File Offset: 0x0066705E
+	// Token: 0x060166D0 RID: 91856 RVA: 0x0068EE12 File Offset: 0x0068D012
 	private void OnBlurEnd(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex)
 	{
 		if (this.IsAnotherClientPlayer(otherActor) && this.GameplayTagComp.HasTag(AnimalPerformComponent.GAMEPLAY_TAG_BLUR))
@@ -469,7 +465,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E0D RID: 101901 RVA: 0x00668E94 File Offset: 0x00667094
+	// Token: 0x060166D1 RID: 91857 RVA: 0x0068EE48 File Offset: 0x0068D048
 	public unsafe void SetUiOpenPerformance(EUiViewName uiViewName, int boardId)
 	{
 		AnimalStateMachineComponent component = base.Entity.GetComponent<AnimalStateMachineComponent>();
@@ -489,14 +485,14 @@ public class AnimalPerformComponent : BasePerformComponent
 		component.SwitchState(EAnimalPerformState.SystemUi);
 	}
 
-	// Token: 0x06018E0E RID: 101902 RVA: 0x00668F44 File Offset: 0x00667144
+	// Token: 0x060166D2 RID: 91858 RVA: 0x0068EEF8 File Offset: 0x0068D0F8
 	[NullableContext(1)]
 	public void InitFeedingAnimalConfig(int[] itemIds, string[] gameplayTags)
 	{
 		(base.Entity.GetComponent<AnimalStateMachineComponent>().GetState(EAnimalPerformState.SystemUi) as AnimalPerformSystemUiState).InitFeedingAnimalConfig(itemIds, gameplayTags);
 	}
 
-	// Token: 0x06018E0F RID: 101903 RVA: 0x00668F64 File Offset: 0x00667164
+	// Token: 0x060166D3 RID: 91859 RVA: 0x0068EF18 File Offset: 0x0068D118
 	private bool IsAnotherClientPlayer(AActor otherActor)
 	{
 		EntityHandle entityByActor = ActorUtils.GetEntityByActor(otherActor, false);
@@ -512,7 +508,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		return component != null && component.Valid && !component.IsAutonomousProxy;
 	}
 
-	// Token: 0x06018E10 RID: 101904 RVA: 0x00668FC8 File Offset: 0x006671C8
+	// Token: 0x060166D4 RID: 91860 RVA: 0x0068EF7C File Offset: 0x0068D17C
 	private void AddEvents()
 	{
 		if (!this.EventsInited)
@@ -524,7 +520,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E11 RID: 101905 RVA: 0x00669040 File Offset: 0x00667240
+	// Token: 0x060166D5 RID: 91861 RVA: 0x0068EFF4 File Offset: 0x0068D1F4
 	private void RemoveEvents()
 	{
 		if (this.EventsInited)
@@ -536,7 +532,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E12 RID: 101906 RVA: 0x006690B8 File Offset: 0x006672B8
+	// Token: 0x060166D6 RID: 91862 RVA: 0x0068F06C File Offset: 0x0068D26C
 	public bool GetIsPartShow(int partId)
 	{
 		Dictionary<int, bool> partEnableMap = this.PartEnableMap;
@@ -544,7 +540,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		return partEnableMap != null && partEnableMap.TryGetValue(partId, out flag) && flag;
 	}
 
-	// Token: 0x06018E13 RID: 101907 RVA: 0x006690E0 File Offset: 0x006672E0
+	// Token: 0x060166D7 RID: 91863 RVA: 0x0068F094 File Offset: 0x0068D294
 	private void UpdateAllPartsHideState()
 	{
 		if (this.PartEnableMap == null || this.PartToBoneMap == null)
@@ -567,7 +563,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E14 RID: 101908 RVA: 0x00669180 File Offset: 0x00667380
+	// Token: 0x060166D8 RID: 91864 RVA: 0x0068F134 File Offset: 0x0068D334
 	public void ShowPart(int partId)
 	{
 		Dictionary<int, string> partToBoneMap = this.PartToBoneMap;
@@ -586,7 +582,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E15 RID: 101909 RVA: 0x006691D8 File Offset: 0x006673D8
+	// Token: 0x060166D9 RID: 91865 RVA: 0x0068F18C File Offset: 0x0068D38C
 	public void HidePart(int partId)
 	{
 		Dictionary<int, string> partToBoneMap = this.PartToBoneMap;
@@ -605,7 +601,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		}
 	}
 
-	// Token: 0x06018E16 RID: 101910 RVA: 0x00669230 File Offset: 0x00667430
+	// Token: 0x060166DA RID: 91866 RVA: 0x0068F1E4 File Offset: 0x0068D3E4
 	private void SetHideBone(FName boneName, bool hide)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -646,7 +642,7 @@ public class AnimalPerformComponent : BasePerformComponent
 		this.ActorComp.Actor.Mesh.UnHideBoneByName(boneName);
 	}
 
-	// Token: 0x06018E17 RID: 101911 RVA: 0x006692E4 File Offset: 0x006674E4
+	// Token: 0x060166DB RID: 91867 RVA: 0x0068F298 File Offset: 0x0068D498
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -655,153 +651,167 @@ public class AnimalPerformComponent : BasePerformComponent
 			return false;
 		}
 		AnimalPerformComponent animalPerformComponent = (AnimalPerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (animalPerformComponent.ActorComp == null)
 		{
-			if (animalPerformComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("PerceptionComp"))
-		{
-			if (animalPerformComponent.PerceptionComp == null)
-			{
-				this.PerceptionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnPerceptionComponent>(this.PerceptionComp), "PerceptionComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GameplayTagComp"))
-		{
-			if (animalPerformComponent.GameplayTagComp == null)
-			{
-				this.GameplayTagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.GameplayTagComp), "GameplayTagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CanLookAtPlayer"))
-		{
-			this.CanLookAtPlayer = animalPerformComponent.CanLookAtPlayer;
-		}
-		if (base.CanResetComponentProperty("TempDirect") && animalPerformComponent.TempDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempDirect), "TempDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MaterialHandle"))
+		if (animalPerformComponent.PerceptionComp == null)
 		{
-			this.MaterialHandle = animalPerformComponent.MaterialHandle;
+			this.PerceptionComp = null;
 		}
-		if (base.CanResetComponentProperty("EventsInited"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerceptionComp), "PerceptionComp"))
 		{
-			this.EventsInited = animalPerformComponent.EventsInited;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MaterialMap"))
+		if (animalPerformComponent.GameplayTagComp == null)
 		{
-			if (animalPerformComponent.MaterialMap == null)
-			{
-				this.MaterialMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, string>>(this.MaterialMap), "MaterialMap"))
-			{
-				return false;
-			}
+			this.GameplayTagComp = null;
 		}
-		if (base.CanResetComponentProperty("PartToBoneMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GameplayTagComp), "GameplayTagComp"))
 		{
-			if (animalPerformComponent.PartToBoneMap == null)
-			{
-				this.PartToBoneMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, string>>(this.PartToBoneMap), "PartToBoneMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PartEnableMap"))
+		this.CanLookAtPlayer = animalPerformComponent.CanLookAtPlayer;
+		if (animalPerformComponent.TempDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempDirect), "TempDirect"))
 		{
-			if (animalPerformComponent.PartEnableMap == null)
-			{
-				this.PartEnableMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, bool>>(this.PartEnableMap), "PartEnableMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("HaveBlurEvent"))
+		this.MaterialHandle = animalPerformComponent.MaterialHandle;
+		this.EventsInited = animalPerformComponent.EventsInited;
+		if (animalPerformComponent.MaterialMap == null)
 		{
-			this.HaveBlurEvent = animalPerformComponent.HaveBlurEvent;
+			this.MaterialMap = null;
 		}
-		if (base.CanResetComponentProperty("PendingDestroy"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MaterialMap), "MaterialMap"))
 		{
-			this.PendingDestroy = animalPerformComponent.PendingDestroy;
+			return false;
 		}
-		if (base.CanResetComponentProperty("PlayDeathAnimOnDestroy"))
+		if (animalPerformComponent.PartToBoneMap == null)
 		{
-			this.PlayDeathAnimOnDestroy = animalPerformComponent.PlayDeathAnimOnDestroy;
+			this.PartToBoneMap = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartToBoneMap), "PartToBoneMap"))
+		{
+			return false;
+		}
+		if (animalPerformComponent.PartEnableMap == null)
+		{
+			this.PartEnableMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartEnableMap), "PartEnableMap"))
+		{
+			return false;
+		}
+		this.HaveBlurEvent = animalPerformComponent.HaveBlurEvent;
+		this.PendingDestroy = animalPerformComponent.PendingDestroy;
+		this.PlayDeathAnimOnDestroy = animalPerformComponent.PlayDeathAnimOnDestroy;
 		return true;
 	}
 
-	// Token: 0x0400BA8C RID: 47756
+	// Token: 0x170022E9 RID: 8937
+	// (get) Token: 0x060166DC RID: 91868 RVA: 0x0068F424 File Offset: 0x0068D624
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022EA RID: 8938
+	// (get) Token: 0x060166DD RID: 91869 RVA: 0x0068F427 File Offset: 0x0068D627
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022EB RID: 8939
+	// (get) Token: 0x060166DE RID: 91870 RVA: 0x0068F42A File Offset: 0x0068D62A
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022EC RID: 8940
+	// (get) Token: 0x060166DF RID: 91871 RVA: 0x0068F42D File Offset: 0x0068D62D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170022ED RID: 8941
+	// (get) Token: 0x060166E0 RID: 91872 RVA: 0x0068F430 File Offset: 0x0068D630
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400BE1A RID: 48666
 	private const int DEFAULT_SIGHT_RANGE = 300;
 
-	// Token: 0x0400BA8D RID: 47757
+	// Token: 0x0400BE1B RID: 48667
 	private const int SIGHT_OPEN_DEGREE = 80;
 
-	// Token: 0x0400BA8E RID: 47758
+	// Token: 0x0400BE1C RID: 48668
 	private static readonly int GAMEPLAY_TAG_DISAPPEAR = GameplayTagDefine.EGameplayTagId["动物.Common.特殊表现.消失"];
 
-	// Token: 0x0400BA8F RID: 47759
+	// Token: 0x0400BE1D RID: 48669
 	private static readonly int GAMEPLAY_TAG_BLUR = GameplayTagDefine.EGameplayTagId["动物.Common.特殊表现.虚化"];
 
-	// Token: 0x0400BA90 RID: 47760
+	// Token: 0x0400BE1E RID: 48670
 	private const int DESTROY_DISAPPEAR_TIME = 2000;
 
-	// Token: 0x0400BA91 RID: 47761
+	// Token: 0x0400BE1F RID: 48671
 	private static readonly int GAMEPLAY_TAG_INVISIBILITY = GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.隐身.不被子弹命中"];
 
-	// Token: 0x0400BA92 RID: 47762
+	// Token: 0x0400BE20 RID: 48672
 	private static readonly int GAMEPLAY_TAG_ON_HIT = GameplayTagDefine.EGameplayTagId["动物.Common.通知标识.受到攻击"];
 
-	// Token: 0x0400BA93 RID: 47763
+	// Token: 0x0400BE21 RID: 48673
 	private const int ALERT_RANGE = 500;
 
-	// Token: 0x0400BA94 RID: 47764
+	// Token: 0x0400BE22 RID: 48674
 	private static readonly int GAMEPLAY_TAG_ALERT = GameplayTagDefine.EGameplayTagId["动物.Common.通知标识.警觉"];
 
-	// Token: 0x0400BA95 RID: 47765
+	// Token: 0x0400BE23 RID: 48675
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400BA96 RID: 47766
+	// Token: 0x0400BE24 RID: 48676
 	private PawnPerceptionComponent PerceptionComp;
 
-	// Token: 0x0400BA97 RID: 47767
+	// Token: 0x0400BE25 RID: 48677
 	private BaseTagComponent GameplayTagComp;
 
-	// Token: 0x0400BA98 RID: 47768
+	// Token: 0x0400BE26 RID: 48678
 	private bool CanLookAtPlayer;
 
-	// Token: 0x0400BA99 RID: 47769
+	// Token: 0x0400BE27 RID: 48679
 	[Nullable(1)]
 	private readonly global::Vector TempDirect = global::Vector.Create();
 
-	// Token: 0x0400BA9A RID: 47770
+	// Token: 0x0400BE28 RID: 48680
 	private int MaterialHandle = -1;
 
-	// Token: 0x0400BA9B RID: 47771
+	// Token: 0x0400BE29 RID: 48681
 	private bool EventsInited;
 
-	// Token: 0x0400BA9C RID: 47772
+	// Token: 0x0400BE2A RID: 48682
 	[Nullable(new byte[]
 	{
 		2,
@@ -809,7 +819,7 @@ public class AnimalPerformComponent : BasePerformComponent
 	})]
 	private Dictionary<int, string> MaterialMap;
 
-	// Token: 0x0400BA9D RID: 47773
+	// Token: 0x0400BE2B RID: 48683
 	[Nullable(new byte[]
 	{
 		2,
@@ -817,15 +827,15 @@ public class AnimalPerformComponent : BasePerformComponent
 	})]
 	private Dictionary<int, string> PartToBoneMap;
 
-	// Token: 0x0400BA9E RID: 47774
+	// Token: 0x0400BE2C RID: 48684
 	private Dictionary<int, bool> PartEnableMap;
 
-	// Token: 0x0400BA9F RID: 47775
+	// Token: 0x0400BE2D RID: 48685
 	private bool HaveBlurEvent;
 
-	// Token: 0x0400BAA0 RID: 47776
+	// Token: 0x0400BE2E RID: 48686
 	public bool PendingDestroy = true;
 
-	// Token: 0x0400BAA1 RID: 47777
+	// Token: 0x0400BE2F RID: 48687
 	public bool PlayDeathAnimOnDestroy;
 }

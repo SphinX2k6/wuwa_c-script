@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004576 RID: 17782
+	// Token: 0x020049DE RID: 18910
 	public class IRollBlockGridLaserT
 	{
-		// Token: 0x17007E4D RID: 32333
-		// (get) Token: 0x0601AD71 RID: 109937 RVA: 0x003D4AD1 File Offset: 0x003D2CD1
-		// (set) Token: 0x0601AD72 RID: 109938 RVA: 0x003D4AD9 File Offset: 0x003D2CD9
+		// Token: 0x1700848E RID: 33934
+		// (get) Token: 0x0601C546 RID: 116038 RVA: 0x00400D6D File Offset: 0x003FEF6D
+		// (set) Token: 0x0601C547 RID: 116039 RVA: 0x00400D75 File Offset: 0x003FEF75
 		public ERollBlockGridType Type { get; set; }
 
-		// Token: 0x17007E4E RID: 32334
-		// (get) Token: 0x0601AD73 RID: 109939 RVA: 0x003D4AE2 File Offset: 0x003D2CE2
-		// (set) Token: 0x0601AD74 RID: 109940 RVA: 0x003D4AEA File Offset: 0x003D2CEA
+		// Token: 0x1700848F RID: 33935
+		// (get) Token: 0x0601C548 RID: 116040 RVA: 0x00400D7E File Offset: 0x003FEF7E
+		// (set) Token: 0x0601C549 RID: 116041 RVA: 0x00400D86 File Offset: 0x003FEF86
 		public TRollBlockUnion Block { get; set; }
 
-		// Token: 0x17007E4F RID: 32335
-		// (get) Token: 0x0601AD75 RID: 109941 RVA: 0x003D4AF3 File Offset: 0x003D2CF3
-		// (set) Token: 0x0601AD76 RID: 109942 RVA: 0x003D4AFB File Offset: 0x003D2CFB
+		// Token: 0x17008490 RID: 33936
+		// (get) Token: 0x0601C54A RID: 116042 RVA: 0x00400D8F File Offset: 0x003FEF8F
+		// (set) Token: 0x0601C54B RID: 116043 RVA: 0x00400D97 File Offset: 0x003FEF97
 		public List<TRollBlockItemUnion> Items { get; set; }
 
-		// Token: 0x17007E50 RID: 32336
-		// (get) Token: 0x0601AD77 RID: 109943 RVA: 0x003D4B04 File Offset: 0x003D2D04
-		// (set) Token: 0x0601AD78 RID: 109944 RVA: 0x003D4B0C File Offset: 0x003D2D0C
+		// Token: 0x17008491 RID: 33937
+		// (get) Token: 0x0601C54C RID: 116044 RVA: 0x00400DA0 File Offset: 0x003FEFA0
+		// (set) Token: 0x0601C54D RID: 116045 RVA: 0x00400DA8 File Offset: 0x003FEFA8
 		public ERollBlockLayType Direction { get; set; }
 
-		// Token: 0x17007E51 RID: 32337
-		// (get) Token: 0x0601AD79 RID: 109945 RVA: 0x003D4B15 File Offset: 0x003D2D15
-		// (set) Token: 0x0601AD7A RID: 109946 RVA: 0x003D4B1D File Offset: 0x003D2D1D
+		// Token: 0x17008492 RID: 33938
+		// (get) Token: 0x0601C54E RID: 116046 RVA: 0x00400DB1 File Offset: 0x003FEFB1
+		// (set) Token: 0x0601C54F RID: 116047 RVA: 0x00400DB9 File Offset: 0x003FEFB9
 		public int Length { get; set; }
 
-		// Token: 0x17007E52 RID: 32338
-		// (get) Token: 0x0601AD7B RID: 109947 RVA: 0x003D4B26 File Offset: 0x003D2D26
-		// (set) Token: 0x0601AD7C RID: 109948 RVA: 0x003D4B2E File Offset: 0x003D2D2E
+		// Token: 0x17008493 RID: 33939
+		// (get) Token: 0x0601C550 RID: 116048 RVA: 0x00400DC2 File Offset: 0x003FEFC2
+		// (set) Token: 0x0601C551 RID: 116049 RVA: 0x00400DCA File Offset: 0x003FEFCA
 		public int Height { get; set; }
 
-		// Token: 0x17007E53 RID: 32339
-		// (get) Token: 0x0601AD7D RID: 109949 RVA: 0x003D4B37 File Offset: 0x003D2D37
-		// (set) Token: 0x0601AD7E RID: 109950 RVA: 0x003D4B3F File Offset: 0x003D2D3F
+		// Token: 0x17008494 RID: 33940
+		// (get) Token: 0x0601C552 RID: 116050 RVA: 0x00400DD3 File Offset: 0x003FEFD3
+		// (set) Token: 0x0601C553 RID: 116051 RVA: 0x00400DDB File Offset: 0x003FEFDB
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601AD7F RID: 109951 RVA: 0x003D4B48 File Offset: 0x003D2D48
+		// Token: 0x0601C554 RID: 116052 RVA: 0x00400DE4 File Offset: 0x003FEFE4
 		public IRollBlockGridLaserT()
 		{
 			this.Type = ERollBlockGridType.Empty;

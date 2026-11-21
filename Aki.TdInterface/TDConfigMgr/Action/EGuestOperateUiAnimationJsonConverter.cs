@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200234E RID: 9038
+	// Token: 0x020025C1 RID: 9665
 	public class EGuestOperateUiAnimationJsonConverter : JsonConverter<EGuestOperateUiAnimation>
 	{
-		// Token: 0x0600C55F RID: 50527 RVA: 0x001CCF00 File Offset: 0x001CB100
+		// Token: 0x0600D140 RID: 53568 RVA: 0x001E50CC File Offset: 0x001E32CC
 		public override EGuestOperateUiAnimation Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EGuestOperateUiAnimationExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C560 RID: 50528 RVA: 0x001CCF24 File Offset: 0x001CB124
+		// Token: 0x0600D141 RID: 53569 RVA: 0x001E50F0 File Offset: 0x001E32F0
 		public override void Write(Utf8JsonWriter writer, EGuestOperateUiAnimation value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -12,18 +12,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C3E RID: 7230
+// Token: 0x020010FD RID: 4349
 [NullableContext(2)]
 [Nullable(0)]
 public class FriendProcessView : UiViewBase
 {
-	// Token: 0x0600D9CE RID: 55758 RVA: 0x003284C3 File Offset: 0x003266C3
+	// Token: 0x0600ADE4 RID: 44516 RVA: 0x003338C3 File Offset: 0x00331AC3
 	[NullableContext(1)]
 	public FriendProcessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D9CF RID: 55759 RVA: 0x003284CC File Offset: 0x003266CC
+	// Token: 0x0600ADE5 RID: 44517 RVA: 0x003338CC File Offset: 0x00331ACC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -80,7 +80,7 @@ public class FriendProcessView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D9D0 RID: 55760 RVA: 0x003287D4 File Offset: 0x003269D4
+	// Token: 0x0600ADE6 RID: 44518 RVA: 0x00333BD4 File Offset: 0x00331DD4
 	private void OnClickXboxButton()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(null, null);
@@ -91,7 +91,7 @@ public class FriendProcessView : UiViewBase
 		KuroSdkController.Instance.OpenProfileCard(selectedPlayerOrItemInstance.GetSdkUserId());
 	}
 
-	// Token: 0x0600D9D1 RID: 55761 RVA: 0x00328814 File Offset: 0x00326A14
+	// Token: 0x0600ADE7 RID: 44519 RVA: 0x00333C14 File Offset: 0x00331E14
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.UpdateFriendViewShow, new Action(this.CallBackUpdateFriendViewShow));
@@ -100,7 +100,7 @@ public class FriendProcessView : UiViewBase
 		EventSystem.Instance.Add(EEventName.UpdateBlackListShow, new Action(this.RefreshBlackBtn));
 	}
 
-	// Token: 0x0600D9D2 RID: 55762 RVA: 0x00328894 File Offset: 0x00326A94
+	// Token: 0x0600ADE8 RID: 44520 RVA: 0x00333C94 File Offset: 0x00331E94
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateFriendViewShow, new Action(this.CallBackUpdateFriendViewShow));
@@ -109,7 +109,7 @@ public class FriendProcessView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.UpdateBlackListShow, new Action(this.RefreshBlackBtn));
 	}
 
-	// Token: 0x0600D9D3 RID: 55763 RVA: 0x00328914 File Offset: 0x00326B14
+	// Token: 0x0600ADE9 RID: 44521 RVA: 0x00333D14 File Offset: 0x00331F14
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FriendProcessView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -120,7 +120,7 @@ public class FriendProcessView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D9D4 RID: 55764 RVA: 0x00328958 File Offset: 0x00326B58
+	// Token: 0x0600ADEA RID: 44522 RVA: 0x00333D58 File Offset: 0x00331F58
 	protected override void OnStart()
 	{
 		this.HeadPhotoItem = new PlayerHeadItem(base.GetItem(0).GetOwner());
@@ -133,7 +133,7 @@ public class FriendProcessView : UiViewBase
 		this.UpdatePlayerDataShow();
 	}
 
-	// Token: 0x0600D9D5 RID: 55765 RVA: 0x003289D0 File Offset: 0x00326BD0
+	// Token: 0x0600ADEB RID: 44523 RVA: 0x00333DD0 File Offset: 0x00331FD0
 	private void RefreshPersonalOptionItemLayout()
 	{
 		if (this.PersonalOptionItemLayout != null)
@@ -144,7 +144,7 @@ public class FriendProcessView : UiViewBase
 		this.PersonalOptionItemLayout.RebuildLayoutByDataNew<int>(this.GetOptionDataList().ToArray(), null);
 	}
 
-	// Token: 0x0600D9D6 RID: 55766 RVA: 0x00328A30 File Offset: 0x00326C30
+	// Token: 0x0600ADEC RID: 44524 RVA: 0x00333E30 File Offset: 0x00332030
 	[NullableContext(1)]
 	private List<int> GetOptionDataList()
 	{
@@ -160,7 +160,7 @@ public class FriendProcessView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600D9D7 RID: 55767 RVA: 0x00328AA4 File Offset: 0x00326CA4
+	// Token: 0x0600ADED RID: 44525 RVA: 0x00333EA4 File Offset: 0x003320A4
 	[NullableContext(1)]
 	private ILayoutItem<PersonalOptionItem> InitPersonalOptionItem(object optionIntId, UUIItem uiItem, int index)
 	{
@@ -202,7 +202,7 @@ public class FriendProcessView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600D9D8 RID: 55768 RVA: 0x00328B3C File Offset: 0x00326D3C
+	// Token: 0x0600ADEE RID: 44526 RVA: 0x00333F3C File Offset: 0x0033213C
 	private void UpdatePlayerDataShow()
 	{
 		FriendData cachePlayerData = FriendModel.Instance.CachePlayerData;
@@ -218,7 +218,7 @@ public class FriendProcessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D9D9 RID: 55769 RVA: 0x00328BFC File Offset: 0x00326DFC
+	// Token: 0x0600ADEF RID: 44527 RVA: 0x00333FFC File Offset: 0x003321FC
 	public void RefreshMute()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(null, null);
@@ -226,7 +226,7 @@ public class FriendProcessView : UiViewBase
 		base.GetItem(8).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600D9DA RID: 55770 RVA: 0x00328C44 File Offset: 0x00326E44
+	// Token: 0x0600ADF0 RID: 44528 RVA: 0x00334044 File Offset: 0x00332244
 	private void RefreshName()
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -241,7 +241,7 @@ public class FriendProcessView : UiViewBase
 		text.useChangeColor = false;
 	}
 
-	// Token: 0x0600D9DB RID: 55771 RVA: 0x00328CF0 File Offset: 0x00326EF0
+	// Token: 0x0600ADF1 RID: 44529 RVA: 0x003340F0 File Offset: 0x003322F0
 	private void RefreshPlayStationItem()
 	{
 		KuroSdkController instance = KuroSdkController.Instance;
@@ -300,7 +300,7 @@ public class FriendProcessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D9DC RID: 55772 RVA: 0x00328E58 File Offset: 0x00327058
+	// Token: 0x0600ADF2 RID: 44530 RVA: 0x00334258 File Offset: 0x00332458
 	private void RefreshSign()
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -329,7 +329,7 @@ public class FriendProcessView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D9DD RID: 55773 RVA: 0x00328F30 File Offset: 0x00327130
+	// Token: 0x0600ADF3 RID: 44531 RVA: 0x00334330 File Offset: 0x00332530
 	private void ShowNecessaryItem()
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -355,7 +355,7 @@ public class FriendProcessView : UiViewBase
 		lookCardBtn.SetActive(true);
 	}
 
-	// Token: 0x0600D9DE RID: 55774 RVA: 0x00329118 File Offset: 0x00327318
+	// Token: 0x0600ADF4 RID: 44532 RVA: 0x00334518 File Offset: 0x00332718
 	private void RefreshBlackBtn()
 	{
 		FriendData cachePlayerData = FriendModel.Instance.CachePlayerData;
@@ -367,7 +367,7 @@ public class FriendProcessView : UiViewBase
 		this.BlockBtn.GetRootItem().SetUIActive(false);
 	}
 
-	// Token: 0x0600D9DF RID: 55775 RVA: 0x00329168 File Offset: 0x00327368
+	// Token: 0x0600ADF5 RID: 44533 RVA: 0x00334568 File Offset: 0x00332768
 	private void RefreshShieldState(int playerId)
 	{
 		this.UnShieldBtn.GetRootItem().SetUIActive(false);
@@ -392,7 +392,7 @@ public class FriendProcessView : UiViewBase
 		this.RefreshMute();
 	}
 
-	// Token: 0x0600D9E0 RID: 55776 RVA: 0x00329278 File Offset: 0x00327478
+	// Token: 0x0600ADF6 RID: 44534 RVA: 0x00334678 File Offset: 0x00332878
 	private void OnClickChatBtn()
 	{
 		FriendData selectedPlayerOrItemInstance = FriendModel.Instance.GetSelectedPlayerOrItemInstance(null, null);
@@ -408,7 +408,7 @@ public class FriendProcessView : UiViewBase
 		ChatController.Instance.OpenFriendChat(selectedPlayerOrItemInstance.PlayerId);
 	}
 
-	// Token: 0x0600D9E1 RID: 55777 RVA: 0x003292E8 File Offset: 0x003274E8
+	// Token: 0x0600ADF7 RID: 44535 RVA: 0x003346E8 File Offset: 0x003328E8
 	private void CallBackUpdateFriendViewShow()
 	{
 		if (FriendModel.Instance.GetSelectedPlayerOrItemInstance(null, null) == null)
@@ -419,7 +419,7 @@ public class FriendProcessView : UiViewBase
 		this.UpdatePlayerDataShow();
 	}
 
-	// Token: 0x0600D9E2 RID: 55778 RVA: 0x00329321 File Offset: 0x00327521
+	// Token: 0x0600ADF8 RID: 44536 RVA: 0x00334721 File Offset: 0x00332921
 	protected override void OnBeforeDestroy()
 	{
 		if (this.PersonalOptionItemLayout != null)
@@ -429,7 +429,7 @@ public class FriendProcessView : UiViewBase
 		}
 	}
 
-	// Token: 0x04006336 RID: 25398
+	// Token: 0x04006408 RID: 25608
 	[Nullable(new byte[]
 	{
 		2,
@@ -437,95 +437,95 @@ public class FriendProcessView : UiViewBase
 	})]
 	private GenericLayoutNew<PersonalOptionItem> PersonalOptionItemLayout;
 
-	// Token: 0x04006337 RID: 25399
+	// Token: 0x04006409 RID: 25609
 	private PersonalOptionItem UnShieldBtn;
 
-	// Token: 0x04006338 RID: 25400
+	// Token: 0x0400640A RID: 25610
 	private PersonalOptionItem ShieldBtn;
 
-	// Token: 0x04006339 RID: 25401
+	// Token: 0x0400640B RID: 25611
 	private PersonalOptionItem BlockBtn;
 
-	// Token: 0x0400633A RID: 25402
+	// Token: 0x0400640C RID: 25612
 	private PersonalOptionItem DeleteFriendBtn;
 
-	// Token: 0x0400633B RID: 25403
+	// Token: 0x0400640D RID: 25613
 	private PersonalOptionItem ReportBtn;
 
-	// Token: 0x0400633C RID: 25404
+	// Token: 0x0400640E RID: 25614
 	private PersonalOptionItem LookCardBtn;
 
-	// Token: 0x0400633D RID: 25405
+	// Token: 0x0400640F RID: 25615
 	private PersonalOptionItem ChangeRemarkBtn;
 
-	// Token: 0x0400633E RID: 25406
+	// Token: 0x04006410 RID: 25616
 	private PlayerHeadItem HeadPhotoItem;
 
-	// Token: 0x0400633F RID: 25407
+	// Token: 0x04006411 RID: 25617
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x02008202 RID: 33282
+	// Token: 0x0200738B RID: 29579
 	[NullableContext(0)]
 	private class EFriendProcessViewComponents
 	{
-		// Token: 0x0402A6D3 RID: 173779
+		// Token: 0x040259FA RID: 154106
 		public const int HeadPhotoItem = 0;
 
-		// Token: 0x0402A6D4 RID: 173780
+		// Token: 0x040259FB RID: 154107
 		public const int HeadFrameSprite = 1;
 
-		// Token: 0x0402A6D5 RID: 173781
+		// Token: 0x040259FC RID: 154108
 		public const int NameText = 2;
 
-		// Token: 0x0402A6D6 RID: 173782
+		// Token: 0x040259FD RID: 154109
 		public const int BracketNameParent = 3;
 
-		// Token: 0x0402A6D7 RID: 173783
+		// Token: 0x040259FE RID: 154110
 		public const int BracketNameText = 4;
 
-		// Token: 0x0402A6D8 RID: 173784
+		// Token: 0x040259FF RID: 154111
 		public const int LevelNumberText = 5;
 
-		// Token: 0x0402A6D9 RID: 173785
+		// Token: 0x04025A00 RID: 154112
 		public const int ChatBtn = 6;
 
-		// Token: 0x0402A6DA RID: 173786
+		// Token: 0x04025A01 RID: 154113
 		public const int LevelText = 7;
 
-		// Token: 0x0402A6DB RID: 173787
+		// Token: 0x04025A02 RID: 154114
 		public const int BlockShowItem = 8;
 
-		// Token: 0x0402A6DC RID: 173788
+		// Token: 0x04025A03 RID: 154115
 		public const int GirdLayout = 9;
 
-		// Token: 0x0402A6DD RID: 173789
+		// Token: 0x04025A04 RID: 154116
 		public const int Title = 10;
 
-		// Token: 0x0402A6DE RID: 173790
+		// Token: 0x04025A05 RID: 154117
 		public const int SignText = 11;
 
-		// Token: 0x0402A6DF RID: 173791
+		// Token: 0x04025A06 RID: 154118
 		public const int PlayStationItem = 12;
 
-		// Token: 0x0402A6E0 RID: 173792
+		// Token: 0x04025A07 RID: 154119
 		public const int PlayStationText = 13;
 
-		// Token: 0x0402A6E1 RID: 173793
+		// Token: 0x04025A08 RID: 154120
 		public const int PlayerTitleItem = 14;
 
-		// Token: 0x0402A6E2 RID: 173794
+		// Token: 0x04025A09 RID: 154121
 		public const int PlayStationTexture = 15;
 
-		// Token: 0x0402A6E3 RID: 173795
+		// Token: 0x04025A0A RID: 154122
 		public const int PcItem = 16;
 
-		// Token: 0x0402A6E4 RID: 173796
+		// Token: 0x04025A0B RID: 154123
 		public const int TexCard = 17;
 
-		// Token: 0x0402A6E5 RID: 173797
+		// Token: 0x04025A0C RID: 154124
 		public const int XboxButton = 18;
 
-		// Token: 0x0402A6E6 RID: 173798
+		// Token: 0x04025A0D RID: 154125
 		public const int XboxText = 19;
 	}
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000512 RID: 1298
+	// Token: 0x020004FC RID: 1276
 	public sealed class FadeBackgroundFadeInEffectBlackPb : IMessage<FadeBackgroundFadeInEffectBlackPb>, IMessage, IEquatable<FadeBackgroundFadeInEffectBlackPb>, IDeepCloneable<FadeBackgroundFadeInEffectBlackPb>, IBufferMessage
 	{
-		// Token: 0x06007A0F RID: 31247 RVA: 0x0012885E File Offset: 0x00126A5E
+		// Token: 0x06007893 RID: 30867 RVA: 0x001259CA File Offset: 0x00123BCA
 		[NullableContext(1)]
 		public static FadeBackgroundFadeInEffectBlackPb Create()
 		{
 			return new FadeBackgroundFadeInEffectBlackPb();
 		}
 
-		// Token: 0x170017A9 RID: 6057
-		// (get) Token: 0x06007A10 RID: 31248 RVA: 0x00128865 File Offset: 0x00126A65
+		// Token: 0x17001758 RID: 5976
+		// (get) Token: 0x06007894 RID: 30868 RVA: 0x001259D1 File Offset: 0x00123BD1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170017AA RID: 6058
-		// (get) Token: 0x06007A11 RID: 31249 RVA: 0x00128868 File Offset: 0x00126A68
+		// Token: 0x17001759 RID: 5977
+		// (get) Token: 0x06007895 RID: 30869 RVA: 0x001259D4 File Offset: 0x00123BD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A12 RID: 31250 RVA: 0x0012886F File Offset: 0x00126A6F
+		// Token: 0x06007896 RID: 30870 RVA: 0x001259DB File Offset: 0x00123BDB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeInEffectBlackPb()
 		{
 		}
 
-		// Token: 0x06007A13 RID: 31251 RVA: 0x00128878 File Offset: 0x00126A78
+		// Token: 0x06007897 RID: 30871 RVA: 0x001259E4 File Offset: 0x00123BE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeInEffectBlackPb(FadeBackgroundFadeInEffectBlackPb other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06007A14 RID: 31252 RVA: 0x001288CC File Offset: 0x00126ACC
+		// Token: 0x06007898 RID: 30872 RVA: 0x00125A38 File Offset: 0x00123C38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FadeBackgroundFadeInEffectBlackPb Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new FadeBackgroundFadeInEffectBlackPb(this);
 		}
 
-		// Token: 0x170017AB RID: 6059
-		// (get) Token: 0x06007A15 RID: 31253 RVA: 0x001288D4 File Offset: 0x00126AD4
-		// (set) Token: 0x06007A16 RID: 31254 RVA: 0x001288DC File Offset: 0x00126ADC
+		// Token: 0x1700175A RID: 5978
+		// (get) Token: 0x06007899 RID: 30873 RVA: 0x00125A40 File Offset: 0x00123C40
+		// (set) Token: 0x0600789A RID: 30874 RVA: 0x00125A48 File Offset: 0x00123C48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FadeColor
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170017AC RID: 6060
-		// (get) Token: 0x06007A17 RID: 31255 RVA: 0x001288E5 File Offset: 0x00126AE5
-		// (set) Token: 0x06007A18 RID: 31256 RVA: 0x001288FD File Offset: 0x00126AFD
+		// Token: 0x1700175B RID: 5979
+		// (get) Token: 0x0600789B RID: 30875 RVA: 0x00125A51 File Offset: 0x00123C51
+		// (set) Token: 0x0600789C RID: 30876 RVA: 0x00125A69 File Offset: 0x00123C69
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float FadeInTime
@@ -108,8 +108,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170017AD RID: 6061
-		// (get) Token: 0x06007A19 RID: 31257 RVA: 0x00128914 File Offset: 0x00126B14
+		// Token: 0x1700175C RID: 5980
+		// (get) Token: 0x0600789D RID: 30877 RVA: 0x00125A80 File Offset: 0x00123C80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasFadeInTime
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A1A RID: 31258 RVA: 0x00128921 File Offset: 0x00126B21
+		// Token: 0x0600789E RID: 30878 RVA: 0x00125A8D File Offset: 0x00123C8D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearFadeInTime()
@@ -128,9 +128,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x170017AE RID: 6062
-		// (get) Token: 0x06007A1B RID: 31259 RVA: 0x00128932 File Offset: 0x00126B32
-		// (set) Token: 0x06007A1C RID: 31260 RVA: 0x0012894A File Offset: 0x00126B4A
+		// Token: 0x1700175D RID: 5981
+		// (get) Token: 0x0600789F RID: 30879 RVA: 0x00125A9E File Offset: 0x00123C9E
+		// (set) Token: 0x060078A0 RID: 30880 RVA: 0x00125AB6 File Offset: 0x00123CB6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float FadeOutTime
@@ -150,8 +150,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170017AF RID: 6063
-		// (get) Token: 0x06007A1D RID: 31261 RVA: 0x00128961 File Offset: 0x00126B61
+		// Token: 0x1700175E RID: 5982
+		// (get) Token: 0x060078A1 RID: 30881 RVA: 0x00125ACD File Offset: 0x00123CCD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasFadeOutTime
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A1E RID: 31262 RVA: 0x0012896E File Offset: 0x00126B6E
+		// Token: 0x060078A2 RID: 30882 RVA: 0x00125ADA File Offset: 0x00123CDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearFadeOutTime()
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			this._hasBits0 &= -3;
 		}
 
-		// Token: 0x06007A1F RID: 31263 RVA: 0x0012897F File Offset: 0x00126B7F
+		// Token: 0x060078A3 RID: 30883 RVA: 0x00125AEB File Offset: 0x00123CEB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FadeBackgroundFadeInEffectBlackPb);
 		}
 
-		// Token: 0x06007A20 RID: 31264 RVA: 0x00128990 File Offset: 0x00126B90
+		// Token: 0x060078A4 RID: 30884 RVA: 0x00125AFC File Offset: 0x00123CFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FadeBackgroundFadeInEffectBlackPb other)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FadeColor == other.FadeColor && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.FadeInTime, other.FadeInTime) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.FadeOutTime, other.FadeOutTime) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007A21 RID: 31265 RVA: 0x00128A00 File Offset: 0x00126C00
+		// Token: 0x060078A5 RID: 30885 RVA: 0x00125B6C File Offset: 0x00123D6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007A22 RID: 31266 RVA: 0x00128A75 File Offset: 0x00126C75
+		// Token: 0x060078A6 RID: 30886 RVA: 0x00125BE1 File Offset: 0x00123DE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007A23 RID: 31267 RVA: 0x00128A82 File Offset: 0x00126C82
+		// Token: 0x060078A7 RID: 30887 RVA: 0x00125BEE File Offset: 0x00123DEE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007A24 RID: 31268 RVA: 0x00128A8C File Offset: 0x00126C8C
+		// Token: 0x060078A8 RID: 30888 RVA: 0x00125BF8 File Offset: 0x00123DF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007A25 RID: 31269 RVA: 0x00128B00 File Offset: 0x00126D00
+		// Token: 0x060078A9 RID: 30889 RVA: 0x00125C6C File Offset: 0x00123E6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -278,7 +278,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007A26 RID: 31270 RVA: 0x00128B58 File Offset: 0x00126D58
+		// Token: 0x060078AA RID: 30890 RVA: 0x00125CC4 File Offset: 0x00123EC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FadeBackgroundFadeInEffectBlackPb other)
@@ -302,7 +302,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007A27 RID: 31271 RVA: 0x00128BBC File Offset: 0x00126DBC
+		// Token: 0x060078AB RID: 30891 RVA: 0x00125D28 File Offset: 0x00123F28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -310,7 +310,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007A28 RID: 31272 RVA: 0x00128BC8 File Offset: 0x00126DC8
+		// Token: 0x060078AC RID: 30892 RVA: 0x00125D34 File Offset: 0x00123F34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -347,34 +347,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003ED2 RID: 16082
+		// Token: 0x04003EC3 RID: 16067
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003ED3 RID: 16083
+		// Token: 0x04003EC4 RID: 16068
 		private int _hasBits0;
 
-		// Token: 0x04003ED4 RID: 16084
+		// Token: 0x04003EC5 RID: 16069
 		public const int FadeColorFieldNumber = 1;
 
-		// Token: 0x04003ED5 RID: 16085
+		// Token: 0x04003EC6 RID: 16070
 		private int fadeColor_;
 
-		// Token: 0x04003ED6 RID: 16086
+		// Token: 0x04003EC7 RID: 16071
 		public const int FadeInTimeFieldNumber = 2;
 
-		// Token: 0x04003ED7 RID: 16087
+		// Token: 0x04003EC8 RID: 16072
 		private static readonly float FadeInTimeDefaultValue;
 
-		// Token: 0x04003ED8 RID: 16088
+		// Token: 0x04003EC9 RID: 16073
 		private float fadeInTime_;
 
-		// Token: 0x04003ED9 RID: 16089
+		// Token: 0x04003ECA RID: 16074
 		public const int FadeOutTimeFieldNumber = 3;
 
-		// Token: 0x04003EDA RID: 16090
+		// Token: 0x04003ECB RID: 16075
 		private static readonly float FadeOutTimeDefaultValue;
 
-		// Token: 0x04003EDB RID: 16091
+		// Token: 0x04003ECC RID: 16076
 		private float fadeOutTime_;
 	}
 }

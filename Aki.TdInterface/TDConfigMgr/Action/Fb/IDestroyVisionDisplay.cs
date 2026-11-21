@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002599 RID: 9625
+	// Token: 0x02002848 RID: 10312
 	public class IDestroyVisionDisplay : IDestroyDynamicEntitiesType
 	{
-		// Token: 0x0600D8AC RID: 55468 RVA: 0x00205902 File Offset: 0x00203B02
-		[NullableContext(1)]
+		// Token: 0x0600E626 RID: 58918 RVA: 0x002215D6 File Offset: 0x0021F7D6
 		public static IDestroyVisionDisplay Create(IDestroyVisionDisplay? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F3C RID: 16188
-		// (get) Token: 0x0600D8AD RID: 55469 RVA: 0x00205921 File Offset: 0x00203B21
+		// Token: 0x17004244 RID: 16964
+		// (get) Token: 0x0600E627 RID: 58919 RVA: 0x002215F5 File Offset: 0x0021F7F5
 		public override EDynamicEntityType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400786D RID: 30829
+		// Token: 0x04007ED4 RID: 32468
 		private IDestroyVisionDisplay Instance;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200150C RID: 5388
+// Token: 0x020009C4 RID: 2500
 public enum ESpring25RoleType
 {
-	// Token: 0x0400438E RID: 17294
+	// Token: 0x04004434 RID: 17460
 	Sanhua = 1,
-	// Token: 0x0400438F RID: 17295
+	// Token: 0x04004435 RID: 17461
 	Jinxi,
-	// Token: 0x04004390 RID: 17296
+	// Token: 0x04004436 RID: 17462
 	Changli,
-	// Token: 0x04004391 RID: 17297
+	// Token: 0x04004437 RID: 17463
 	Abu,
-	// Token: 0x04004392 RID: 17298
+	// Token: 0x04004438 RID: 17464
 	Kamola,
-	// Token: 0x04004393 RID: 17299
+	// Token: 0x04004439 RID: 17465
 	Luokeke,
-	// Token: 0x04004394 RID: 17300
+	// Token: 0x0400443A RID: 17466
 	Bulante
 }

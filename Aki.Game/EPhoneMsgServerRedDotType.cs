@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002507 RID: 9479
+// Token: 0x020019EE RID: 6638
 public enum EPhoneMsgServerRedDotType
 {
-	// Token: 0x04008FA0 RID: 36768
+	// Token: 0x040090EA RID: 37098
 	Decoration,
-	// Token: 0x04008FA1 RID: 36769
+	// Token: 0x040090EB RID: 37099
 	Preview,
-	// Token: 0x04008FA2 RID: 36770
+	// Token: 0x040090EC RID: 37100
 	VoiceOnce
 }

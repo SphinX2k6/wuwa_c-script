@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008DF RID: 2271
+	// Token: 0x02000984 RID: 2436
 	public class VisionComponent_SetValue
 	{
-		// Token: 0x040021BC RID: 8636
+		// Token: 0x040023D3 RID: 9171
 		public bool? Disabled;
 
-		// Token: 0x040021BD RID: 8637
+		// Token: 0x040023D4 RID: 9172
 		public bool? EdIsLocked;
 
-		// Token: 0x040021BE RID: 8638
+		// Token: 0x040023D5 RID: 9173
 		public int VisionId;
 	}
 }

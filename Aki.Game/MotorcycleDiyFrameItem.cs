@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002278 RID: 8824
+// Token: 0x0200175C RID: 5980
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyFrameItem : GridProxyAbstract<MotorcycleDiyFrameItemData>
 {
-	// Token: 0x060113C2 RID: 70594 RVA: 0x0043449C File Offset: 0x0043269C
+	// Token: 0x0600E858 RID: 59480 RVA: 0x004410A8 File Offset: 0x0043F2A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class MotorcycleDiyFrameItem : GridProxyAbstract<MotorcycleDiyFrameItemDa
 		};
 	}
 
-	// Token: 0x060113C3 RID: 70595 RVA: 0x004345A0 File Offset: 0x004327A0
+	// Token: 0x0600E859 RID: 59481 RVA: 0x004411AC File Offset: 0x0043F3AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleDiyFrameItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ public class MotorcycleDiyFrameItem : GridProxyAbstract<MotorcycleDiyFrameItemDa
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060113C4 RID: 70596 RVA: 0x004345E4 File Offset: 0x004327E4
+	// Token: 0x0600E85A RID: 59482 RVA: 0x004411F0 File Offset: 0x0043F3F0
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiyFrameItemData data, bool isSelected, int gridIndex)
 	{
@@ -118,19 +118,19 @@ public class MotorcycleDiyFrameItem : GridProxyAbstract<MotorcycleDiyFrameItemDa
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x060113C5 RID: 70597 RVA: 0x0043485C File Offset: 0x00432A5C
+	// Token: 0x0600E85B RID: 59483 RVA: 0x00441468 File Offset: 0x0043F668
 	public override void OnSelected(bool fireEvent)
 	{
 		this.OnClickToggleCallBack();
 	}
 
-	// Token: 0x060113C6 RID: 70598 RVA: 0x00434864 File Offset: 0x00432A64
+	// Token: 0x0600E85C RID: 59484 RVA: 0x00441470 File Offset: 0x0043F670
 	private void OnClickItem(EToggleState toggleState)
 	{
 		this.OnClickToggleCallBack();
 	}
 
-	// Token: 0x060113C7 RID: 70599 RVA: 0x0043486C File Offset: 0x00432A6C
+	// Token: 0x0600E85D RID: 59485 RVA: 0x00441478 File Offset: 0x0043F678
 	private void OnClickToggleCallBack()
 	{
 		if (this.FrameId == 0)
@@ -145,17 +145,17 @@ public class MotorcycleDiyFrameItem : GridProxyAbstract<MotorcycleDiyFrameItemDa
 		onClickToggleBack(this.FrameId, base.GetExtendToggle(0), base.GetItem(6));
 	}
 
-	// Token: 0x04008321 RID: 33569
+	// Token: 0x0400845F RID: 33887
 	private int FrameId;
 
-	// Token: 0x04008322 RID: 33570
+	// Token: 0x04008460 RID: 33888
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008323 RID: 33571
+	// Token: 0x04008461 RID: 33889
 	private EOutLookState? CurrentState;
 
-	// Token: 0x04008324 RID: 33572
+	// Token: 0x04008462 RID: 33890
 	[Nullable(new byte[]
 	{
 		2,
@@ -164,34 +164,34 @@ public class MotorcycleDiyFrameItem : GridProxyAbstract<MotorcycleDiyFrameItemDa
 	})]
 	public Action<int, UUIExtendToggle, UUIItem> OnClickToggleBack;
 
-	// Token: 0x020087BB RID: 34747
+	// Token: 0x02007944 RID: 31044
 	private class EFrameItemComponent
 	{
-		// Token: 0x0402C1CA RID: 180682
+		// Token: 0x040274E2 RID: 160994
 		public const int TogFrame = 0;
 
-		// Token: 0x0402C1CB RID: 180683
+		// Token: 0x040274E3 RID: 160995
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C1CC RID: 180684
+		// Token: 0x040274E4 RID: 160996
 		public const int TexQuality1 = 2;
 
-		// Token: 0x0402C1CD RID: 180685
+		// Token: 0x040274E5 RID: 160997
 		public const int TexQuality2 = 3;
 
-		// Token: 0x0402C1CE RID: 180686
+		// Token: 0x040274E6 RID: 160998
 		public const int PnlSelect = 4;
 
-		// Token: 0x0402C1CF RID: 180687
+		// Token: 0x040274E7 RID: 160999
 		public const int Pnllock = 5;
 
-		// Token: 0x0402C1D0 RID: 180688
+		// Token: 0x040274E8 RID: 161000
 		public const int NewItem = 6;
 
-		// Token: 0x0402C1D1 RID: 180689
+		// Token: 0x040274E9 RID: 161001
 		public const int BanItem = 7;
 
-		// Token: 0x0402C1D2 RID: 180690
+		// Token: 0x040274EA RID: 161002
 		public const int PreviewItem = 8;
 	}
 }

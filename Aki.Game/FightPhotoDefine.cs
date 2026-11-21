@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001274 RID: 4724
+// Token: 0x02000728 RID: 1832
 public class FightPhotoDefine
 {
-	// Token: 0x04003A70 RID: 14960
+	// Token: 0x04003B08 RID: 15112
 	public const int DEFAULT_FIGHT_PHOTO_FILTER_ID = 1;
 
-	// Token: 0x04003A71 RID: 14961
+	// Token: 0x04003B09 RID: 15113
 	[Nullable(1)]
 	public static readonly Dictionary<EFightPhotoFrameMode, float> fightPhotoFrameModeToActorMode = new Dictionary<EFightPhotoFrameMode, float>
 	{

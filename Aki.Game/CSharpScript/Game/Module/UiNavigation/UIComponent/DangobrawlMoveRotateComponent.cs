@@ -7,15 +7,15 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x020049FD RID: 18941
+	// Token: 0x02003977 RID: 14711
 	public class DangobrawlMoveRotateComponent : DangobrawlHotKeyComponentBase
 	{
-		// Token: 0x060312BF RID: 201407 RVA: 0x00B67A42 File Offset: 0x00B65C42
+		// Token: 0x06025DF5 RID: 155125 RVA: 0x00AA29FE File Offset: 0x00AA0BFE
 		public DangobrawlMoveRotateComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312C0 RID: 201408 RVA: 0x00B67A4C File Offset: 0x00B65C4C
+		// Token: 0x06025DF6 RID: 155126 RVA: 0x00AA2A08 File Offset: 0x00AA0C08
 		protected override bool ShouldShow()
 		{
 			EInputPlatform? inputPlatform = DangobrawlHotKeyComponentBase.InputPlatform;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return flag && (isDragging || flag3);
 		}
 
-		// Token: 0x060312C1 RID: 201409 RVA: 0x00B67AC0 File Offset: 0x00B65CC0
+		// Token: 0x06025DF7 RID: 155127 RVA: 0x00AA2A7C File Offset: 0x00AA0C7C
 		protected override void OnRelease(HotKeyMap config)
 		{
 			int targetUid = DangobrawlHotKeyComponentBase.DraggingUid ?? DangobrawlHotKeyComponentBase.FsmSourceUid.GetValueOrDefault(-1);

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CFA RID: 7418
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F07 RID: 7943
 	public class IPlayCommonEffect : PlayEffect2
 	{
-		// Token: 0x06009F2F RID: 40751 RVA: 0x0016BBE4 File Offset: 0x00169DE4
+		// Token: 0x0600A907 RID: 43271 RVA: 0x0017FD88 File Offset: 0x0017DF88
 		private IPlayCommonEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F30 RID: 40752 RVA: 0x0016BC1C File Offset: 0x00169E1C
+		// Token: 0x0600A908 RID: 43272 RVA: 0x0017FDC0 File Offset: 0x0017DFC0
 		public static IPlayCommonEffect Create([Nullable(2)] IPlayCommonEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F31 RID: 40753 RVA: 0x0016BC2F File Offset: 0x00169E2F
+		// Token: 0x0600A909 RID: 43273 RVA: 0x0017FDD3 File Offset: 0x0017DFD3
 		public static IPlayCommonEffect CreateFromSetValue([Nullable(2)] IPlayCommonEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F32 RID: 40754 RVA: 0x0016BC44 File Offset: 0x00169E44
+		// Token: 0x0600A90A RID: 43274 RVA: 0x0017FDE8 File Offset: 0x0017DFE8
 		public new IPlayCommonEffect_SetValue ToSetValue()
 		{
 			return new IPlayCommonEffect_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003177 RID: 12663
-		// (get) Token: 0x06009F33 RID: 40755 RVA: 0x0016BC92 File Offset: 0x00169E92
-		// (set) Token: 0x06009F34 RID: 40756 RVA: 0x0016BCBD File Offset: 0x00169EBD
+		// Token: 0x17003407 RID: 13319
+		// (get) Token: 0x0600A90B RID: 43275 RVA: 0x0017FE36 File Offset: 0x0017E036
+		// (set) Token: 0x0600A90C RID: 43276 RVA: 0x0017FE61 File Offset: 0x0017E061
 		public override EEffectType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003178 RID: 12664
-		// (get) Token: 0x06009F35 RID: 40757 RVA: 0x0016BCCB File Offset: 0x00169ECB
-		// (set) Token: 0x06009F36 RID: 40758 RVA: 0x0016BCF6 File Offset: 0x00169EF6
+		// Token: 0x17003408 RID: 13320
+		// (get) Token: 0x0600A90D RID: 43277 RVA: 0x0017FE6F File Offset: 0x0017E06F
+		// (set) Token: 0x0600A90E RID: 43278 RVA: 0x0017FE9A File Offset: 0x0017E09A
 		public override string Path
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003179 RID: 12665
-		// (get) Token: 0x06009F37 RID: 40759 RVA: 0x0016BD04 File Offset: 0x00169F04
-		// (set) Token: 0x06009F38 RID: 40760 RVA: 0x0016BD2B File Offset: 0x00169F2B
+		// Token: 0x17003409 RID: 13321
+		// (get) Token: 0x0600A90F RID: 43279 RVA: 0x0017FEA8 File Offset: 0x0017E0A8
+		// (set) Token: 0x0600A910 RID: 43280 RVA: 0x0017FECF File Offset: 0x0017E0CF
 		public virtual IBasePos2 Pos2
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700317A RID: 12666
-		// (get) Token: 0x06009F39 RID: 40761 RVA: 0x0016BD3C File Offset: 0x00169F3C
-		// (set) Token: 0x06009F3A RID: 40762 RVA: 0x0016BD76 File Offset: 0x00169F76
+		// Token: 0x1700340A RID: 13322
+		// (get) Token: 0x0600A911 RID: 43281 RVA: 0x0017FEE0 File Offset: 0x0017E0E0
+		// (set) Token: 0x0600A912 RID: 43282 RVA: 0x0017FF1A File Offset: 0x0017E11A
 		public virtual float? DestroyTime
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700317B RID: 12667
-		// (get) Token: 0x06009F3B RID: 40763 RVA: 0x0016BD84 File Offset: 0x00169F84
-		// (set) Token: 0x06009F3C RID: 40764 RVA: 0x0016BDBE File Offset: 0x00169FBE
+		// Token: 0x1700340B RID: 13323
+		// (get) Token: 0x0600A913 RID: 43283 RVA: 0x0017FF28 File Offset: 0x0017E128
+		// (set) Token: 0x0600A914 RID: 43284 RVA: 0x0017FF62 File Offset: 0x0017E162
 		public virtual bool? PlayEffectEnd
 		{
 			get
@@ -181,11 +179,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400601E RID: 24606
+		// Token: 0x0400658E RID: 25998
 		[Nullable(2)]
 		protected new IPlayCommonEffect FbInstance;
 
-		// Token: 0x0400601F RID: 24607
+		// Token: 0x0400658F RID: 25999
 		[Nullable(2)]
 		protected new IPlayCommonEffect_SetValue PocoInterface;
 	}

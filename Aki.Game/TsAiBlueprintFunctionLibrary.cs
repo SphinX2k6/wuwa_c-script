@@ -13,12 +13,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E3C RID: 11836
+// Token: 0x02002398 RID: 9112
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C")]
 public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06018FB7 RID: 102327 RVA: 0x00670974 File Offset: 0x0066EB74
+	// Token: 0x06016884 RID: 92292 RVA: 0x0069683C File Offset: 0x00694A3C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static EQuestStepState GetQuestState(int entityId, float questId)
 	{
@@ -30,7 +30,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return (EQuestStepState)quest.Status.Value;
 	}
 
-	// Token: 0x06018FB8 RID: 102328 RVA: 0x006709A4 File Offset: 0x0066EBA4
+	// Token: 0x06016885 RID: 92293 RVA: 0x0069686C File Offset: 0x00694A6C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetDistanceByPlayer(int entityId)
 	{
@@ -49,7 +49,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return float.MaxValue;
 	}
 
-	// Token: 0x06018FB9 RID: 102329 RVA: 0x006709F8 File Offset: 0x0066EBF8
+	// Token: 0x06016886 RID: 92294 RVA: 0x006968C0 File Offset: 0x00694AC0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool CheckPlayerGameplayTag(int entityId, FGameplayTag tag)
 	{
@@ -62,7 +62,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return component != null && component.HasTag(tag.TagId());
 	}
 
-	// Token: 0x06018FBA RID: 102330 RVA: 0x00670A34 File Offset: 0x0066EC34
+	// Token: 0x06016887 RID: 92295 RVA: 0x006968FC File Offset: 0x00694AFC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void RestartBehaviorTree(int entityId)
 	{
@@ -74,7 +74,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		component.RestartBehaviorTree();
 	}
 
-	// Token: 0x06018FBB RID: 102331 RVA: 0x00670A58 File Offset: 0x0066EC58
+	// Token: 0x06016888 RID: 92296 RVA: 0x00696920 File Offset: 0x00694B20
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetAiEnabled(int entityId, bool value, string key)
@@ -93,7 +93,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		component.DisableAi(key2);
 	}
 
-	// Token: 0x06018FBC RID: 102332 RVA: 0x00670A94 File Offset: 0x0066EC94
+	// Token: 0x06016889 RID: 92297 RVA: 0x0069695C File Offset: 0x00694B5C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool NeedCheckPlayerImpact(int entityId)
 	{
@@ -106,14 +106,14 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return npcDecision != null && npcDecision.CheckPlayerImpact;
 	}
 
-	// Token: 0x06018FBD RID: 102333 RVA: 0x00670ACE File Offset: 0x0066ECCE
+	// Token: 0x0601688A RID: 92298 RVA: 0x00696996 File Offset: 0x00694B96
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool NeedCheckPlayerAttack(int entityId)
 	{
 		return TsAiBlueprintFunctionLibrary.NeedCheckPlayerAttackNoBlueprint(entityId);
 	}
 
-	// Token: 0x06018FBE RID: 102334 RVA: 0x00670AD8 File Offset: 0x0066ECD8
+	// Token: 0x0601688B RID: 92299 RVA: 0x006969A0 File Offset: 0x00694BA0
 	public static bool NeedCheckPlayerAttackNoBlueprint(int entityId)
 	{
 		CharacterAiComponent component = EntitySystem.Instance.GetComponent<CharacterAiComponent>(entityId);
@@ -125,7 +125,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return npcDecision != null && npcDecision.CheckPlayerAttack;
 	}
 
-	// Token: 0x06018FBF RID: 102335 RVA: 0x00670B14 File Offset: 0x0066ED14
+	// Token: 0x0601688C RID: 92300 RVA: 0x006969DC File Offset: 0x00694BDC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void UpdateInteractionComponent(int entityId)
 	{
@@ -136,7 +136,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC0 RID: 102336 RVA: 0x00670B38 File Offset: 0x0066ED38
+	// Token: 0x0601688D RID: 92301 RVA: 0x00696A00 File Offset: 0x00694C00
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void OnPlayerAttack(int entityId)
 	{
@@ -147,7 +147,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC1 RID: 102337 RVA: 0x00670B5C File Offset: 0x0066ED5C
+	// Token: 0x0601688E RID: 92302 RVA: 0x00696A24 File Offset: 0x00694C24
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void OnPlayerImpact(int entityId)
 	{
@@ -158,7 +158,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC2 RID: 102338 RVA: 0x00670B80 File Offset: 0x0066ED80
+	// Token: 0x0601688F RID: 92303 RVA: 0x00696A48 File Offset: 0x00694C48
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void OnPlayerAttackBegin(int entityId)
 	{
@@ -169,7 +169,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC3 RID: 102339 RVA: 0x00670BA4 File Offset: 0x0066EDA4
+	// Token: 0x06016890 RID: 92304 RVA: 0x00696A6C File Offset: 0x00694C6C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void OnPlayerImpactBegin(int entityId)
 	{
@@ -180,7 +180,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC4 RID: 102340 RVA: 0x00670BC8 File Offset: 0x0066EDC8
+	// Token: 0x06016891 RID: 92305 RVA: 0x00696A90 File Offset: 0x00694C90
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void OnPlayerAttackEnd(int entityId)
 	{
@@ -191,7 +191,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC5 RID: 102341 RVA: 0x00670BEC File Offset: 0x0066EDEC
+	// Token: 0x06016892 RID: 92306 RVA: 0x00696AB4 File Offset: 0x00694CB4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void OnPlayerImpactEnd(int entityId)
 	{
@@ -202,7 +202,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC6 RID: 102342 RVA: 0x00670C10 File Offset: 0x0066EE10
+	// Token: 0x06016893 RID: 92307 RVA: 0x00696AD8 File Offset: 0x00694CD8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void UpdateNpcPerformData(int entityId, ref bool isAttacked, ref bool isImpacted, ref float direction, ref float strength, ref bool isRegionMoveMode, ref bool isEnableTurnMove, ref float turnYawRateRef, ref bool forceUpdateSourceAnimation)
 	{
@@ -225,7 +225,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		turnYawRateRef = ((component3 != null && component3.Valid) ? component3.TurnYawRate : 0f);
 	}
 
-	// Token: 0x06018FC7 RID: 102343 RVA: 0x00670CB4 File Offset: 0x0066EEB4
+	// Token: 0x06016894 RID: 92308 RVA: 0x00696B7C File Offset: 0x00694D7C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void UpdateNpcStateData(int entityId, ref int animState)
 	{
@@ -236,7 +236,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		}
 	}
 
-	// Token: 0x06018FC8 RID: 102344 RVA: 0x00670CD8 File Offset: 0x0066EED8
+	// Token: 0x06016895 RID: 92309 RVA: 0x00696BA0 File Offset: 0x00694DA0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool GetAndResetNoTransitionSwitch(int entityId)
 	{
@@ -250,7 +250,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return isNoTransitionSwitch;
 	}
 
-	// Token: 0x06018FC9 RID: 102345 RVA: 0x00670D08 File Offset: 0x0066EF08
+	// Token: 0x06016896 RID: 92310 RVA: 0x00696BD0 File Offset: 0x00694DD0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool IsAiDriver(int entityId)
 	{
@@ -258,7 +258,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return component != null && component.IsAiDriver;
 	}
 
-	// Token: 0x06018FCA RID: 102346 RVA: 0x00670D2C File Offset: 0x0066EF2C
+	// Token: 0x06016897 RID: 92311 RVA: 0x00696BF4 File Offset: 0x00694DF4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static AActor GetRoleActor(int entityId)
@@ -271,14 +271,14 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return component.GetRoleActor();
 	}
 
-	// Token: 0x06018FCB RID: 102347 RVA: 0x00670D44 File Offset: 0x0066EF44
+	// Token: 0x06016898 RID: 92312 RVA: 0x00696C0C File Offset: 0x00694E0C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetFollowData(int entityId, AActor target, int type)
 	{
 	}
 
-	// Token: 0x06018FCC RID: 102348 RVA: 0x00670D46 File Offset: 0x0066EF46
+	// Token: 0x06016899 RID: 92313 RVA: 0x00696C0E File Offset: 0x00694E0E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	[return: Nullable(new byte[]
 	{
@@ -295,7 +295,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return component.GetAttributeSharerActors();
 	}
 
-	// Token: 0x06018FCD RID: 102349 RVA: 0x00670D5E File Offset: 0x0066EF5E
+	// Token: 0x0601689A RID: 92314 RVA: 0x00696C26 File Offset: 0x00694E26
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void Reset(int entityId, float targetEntityId)
 	{
@@ -307,7 +307,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		component.Reset((int)targetEntityId);
 	}
 
-	// Token: 0x06018FCE RID: 102350 RVA: 0x00670D77 File Offset: 0x0066EF77
+	// Token: 0x0601689B RID: 92315 RVA: 0x00696C3F File Offset: 0x00694E3F
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetToRoleDistance(int entityId)
 	{
@@ -315,14 +315,14 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return (float)((component != null) ? component.GetToRoleDistance() : 0.0);
 	}
 
-	// Token: 0x06018FCF RID: 102351 RVA: 0x00670D99 File Offset: 0x0066EF99
+	// Token: 0x0601689C RID: 92316 RVA: 0x00696C61 File Offset: 0x00694E61
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static int GetSummonType(int entityId)
 	{
 		return 0;
 	}
 
-	// Token: 0x06018FD0 RID: 102352 RVA: 0x00670D9C File Offset: 0x0066EF9C
+	// Token: 0x0601689D RID: 92317 RVA: 0x00696C64 File Offset: 0x00694E64
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void TsLogInfo(string text)
@@ -330,7 +330,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		Log.Instance.Info(ELogModule.AI, ELogAuthor.LCZ, text, default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06018FD1 RID: 102353 RVA: 0x00670DC0 File Offset: 0x0066EFC0
+	// Token: 0x0601689E RID: 92318 RVA: 0x00696C88 File Offset: 0x00694E88
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static bool GetLevelBoolVar(SAiLevelVar levelVar)
@@ -341,7 +341,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return (bool)LevelGamePlayUtils.GetVarValue(varRefFormAiLevelVar, context);
 	}
 
-	// Token: 0x06018FD2 RID: 102354 RVA: 0x00670DFC File Offset: 0x0066EFFC
+	// Token: 0x0601689F RID: 92319 RVA: 0x00696CC4 File Offset: 0x00694EC4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static int GetLevelIntVar(SAiLevelVar levelVar)
@@ -352,7 +352,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return Convert.ToInt32(LevelGamePlayUtils.GetVarValue(varRefFormAiLevelVar, context) ?? 0);
 	}
 
-	// Token: 0x06018FD3 RID: 102355 RVA: 0x00670E40 File Offset: 0x0066F040
+	// Token: 0x060168A0 RID: 92320 RVA: 0x00696D08 File Offset: 0x00694F08
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static string GetLevelStringVar(SAiLevelVar levelVar)
@@ -363,7 +363,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return (LevelGamePlayUtils.GetVarValue(varRefFormAiLevelVar, context) as string) ?? "";
 	}
 
-	// Token: 0x06018FD4 RID: 102356 RVA: 0x00670E84 File Offset: 0x0066F084
+	// Token: 0x060168A1 RID: 92321 RVA: 0x00696D4C File Offset: 0x00694F4C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static float GetLevelFloatVar(SAiLevelVar levelVar)
@@ -374,7 +374,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return Convert.ToSingle(LevelGamePlayUtils.GetVarValue(varRefFormAiLevelVar, context) ?? 0);
 	}
 
-	// Token: 0x06018FD5 RID: 102357 RVA: 0x00670EC8 File Offset: 0x0066F0C8
+	// Token: 0x060168A2 RID: 92322 RVA: 0x00696D90 File Offset: 0x00694F90
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static FVector GetLevelPosVar(SAiLevelVar levelVar)
@@ -386,7 +386,7 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return new FVector(vectorInfo.X.GetValueOrDefault(), vectorInfo.Y.GetValueOrDefault(), vectorInfo.Z.GetValueOrDefault());
 	}
 
-	// Token: 0x06018FD6 RID: 102358 RVA: 0x00670F32 File Offset: 0x0066F132
+	// Token: 0x060168A3 RID: 92323 RVA: 0x00696DFA File Offset: 0x00694FFA
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAiBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -396,132 +396,132 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		return TsAiBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x06018FD7 RID: 102359 RVA: 0x00670F58 File Offset: 0x0066F158
+	// Token: 0x060168A4 RID: 92324 RVA: 0x00696E20 File Offset: 0x00695020
 	public TsAiBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(TsAiBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018FD8 RID: 102360 RVA: 0x00670F80 File Offset: 0x0066F180
+	// Token: 0x060168A5 RID: 92325 RVA: 0x00696E48 File Offset: 0x00695048
 	[NullableContext(1)]
 	public TsAiBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAiBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018FD9 RID: 102361 RVA: 0x00670FB3 File Offset: 0x0066F1B3
+	// Token: 0x060168A6 RID: 92326 RVA: 0x00696E7B File Offset: 0x0069507B
 	protected TsAiBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06018FDA RID: 102362 RVA: 0x00670FBC File Offset: 0x0066F1BC
+	// Token: 0x060168A7 RID: 92327 RVA: 0x00696E84 File Offset: 0x00695084
 	protected unsafe static void __CPPCALL_GetQuestState_Implementation(TsAiBlueprintFunctionLibrary.__GetQuestState_FunctionParams* __Params)
 	{
 		*(&__Params->__Result) = (byte)TsAiBlueprintFunctionLibrary.GetQuestState(__Params->entityId, __Params->questId);
 	}
 
-	// Token: 0x06018FDB RID: 102363 RVA: 0x00670FD7 File Offset: 0x0066F1D7
+	// Token: 0x060168A8 RID: 92328 RVA: 0x00696E9F File Offset: 0x0069509F
 	protected unsafe static void __CPPCALL_GetDistanceByPlayer_Implementation(TsAiBlueprintFunctionLibrary.__GetDistanceByPlayer_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetDistanceByPlayer(__Params->entityId);
 	}
 
-	// Token: 0x06018FDC RID: 102364 RVA: 0x00670FEA File Offset: 0x0066F1EA
+	// Token: 0x060168A9 RID: 92329 RVA: 0x00696EB2 File Offset: 0x006950B2
 	protected unsafe static void __CPPCALL_CheckPlayerGameplayTag_Implementation(TsAiBlueprintFunctionLibrary.__CheckPlayerGameplayTag_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.CheckPlayerGameplayTag(__Params->entityId, __Params->tag);
 	}
 
-	// Token: 0x06018FDD RID: 102365 RVA: 0x00671003 File Offset: 0x0066F203
+	// Token: 0x060168AA RID: 92330 RVA: 0x00696ECB File Offset: 0x006950CB
 	protected unsafe static void __CPPCALL_RestartBehaviorTree_Implementation(TsAiBlueprintFunctionLibrary.__RestartBehaviorTree_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.RestartBehaviorTree(__Params->entityId);
 	}
 
-	// Token: 0x06018FDE RID: 102366 RVA: 0x00671010 File Offset: 0x0066F210
+	// Token: 0x060168AB RID: 92331 RVA: 0x00696ED8 File Offset: 0x006950D8
 	protected unsafe static void __CPPCALL_SetAiEnabled_Implementation(TsAiBlueprintFunctionLibrary.__SetAiEnabled_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		TsAiBlueprintFunctionLibrary.SetAiEnabled(__Params->entityId, __Params->value, key);
 	}
 
-	// Token: 0x06018FDF RID: 102367 RVA: 0x0067103C File Offset: 0x0066F23C
+	// Token: 0x060168AC RID: 92332 RVA: 0x00696F04 File Offset: 0x00695104
 	protected unsafe static void __CPPCALL_NeedCheckPlayerImpact_Implementation(TsAiBlueprintFunctionLibrary.__NeedCheckPlayerImpact_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.NeedCheckPlayerImpact(__Params->entityId);
 	}
 
-	// Token: 0x06018FE0 RID: 102368 RVA: 0x0067104F File Offset: 0x0066F24F
+	// Token: 0x060168AD RID: 92333 RVA: 0x00696F17 File Offset: 0x00695117
 	protected unsafe static void __CPPCALL_NeedCheckPlayerAttack_Implementation(TsAiBlueprintFunctionLibrary.__NeedCheckPlayerAttack_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.NeedCheckPlayerAttack(__Params->entityId);
 	}
 
-	// Token: 0x06018FE1 RID: 102369 RVA: 0x00671062 File Offset: 0x0066F262
+	// Token: 0x060168AE RID: 92334 RVA: 0x00696F2A File Offset: 0x0069512A
 	protected unsafe static void __CPPCALL_UpdateInteractionComponent_Implementation(TsAiBlueprintFunctionLibrary.__UpdateInteractionComponent_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.UpdateInteractionComponent(__Params->entityId);
 	}
 
-	// Token: 0x06018FE2 RID: 102370 RVA: 0x0067106F File Offset: 0x0066F26F
+	// Token: 0x060168AF RID: 92335 RVA: 0x00696F37 File Offset: 0x00695137
 	protected unsafe static void __CPPCALL_OnPlayerAttack_Implementation(TsAiBlueprintFunctionLibrary.__OnPlayerAttack_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.OnPlayerAttack(__Params->entityId);
 	}
 
-	// Token: 0x06018FE3 RID: 102371 RVA: 0x0067107C File Offset: 0x0066F27C
+	// Token: 0x060168B0 RID: 92336 RVA: 0x00696F44 File Offset: 0x00695144
 	protected unsafe static void __CPPCALL_OnPlayerImpact_Implementation(TsAiBlueprintFunctionLibrary.__OnPlayerImpact_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.OnPlayerImpact(__Params->entityId);
 	}
 
-	// Token: 0x06018FE4 RID: 102372 RVA: 0x00671089 File Offset: 0x0066F289
+	// Token: 0x060168B1 RID: 92337 RVA: 0x00696F51 File Offset: 0x00695151
 	protected unsafe static void __CPPCALL_OnPlayerAttackBegin_Implementation(TsAiBlueprintFunctionLibrary.__OnPlayerAttackBegin_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.OnPlayerAttackBegin(__Params->entityId);
 	}
 
-	// Token: 0x06018FE5 RID: 102373 RVA: 0x00671096 File Offset: 0x0066F296
+	// Token: 0x060168B2 RID: 92338 RVA: 0x00696F5E File Offset: 0x0069515E
 	protected unsafe static void __CPPCALL_OnPlayerImpactBegin_Implementation(TsAiBlueprintFunctionLibrary.__OnPlayerImpactBegin_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.OnPlayerImpactBegin(__Params->entityId);
 	}
 
-	// Token: 0x06018FE6 RID: 102374 RVA: 0x006710A3 File Offset: 0x0066F2A3
+	// Token: 0x060168B3 RID: 92339 RVA: 0x00696F6B File Offset: 0x0069516B
 	protected unsafe static void __CPPCALL_OnPlayerAttackEnd_Implementation(TsAiBlueprintFunctionLibrary.__OnPlayerAttackEnd_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.OnPlayerAttackEnd(__Params->entityId);
 	}
 
-	// Token: 0x06018FE7 RID: 102375 RVA: 0x006710B0 File Offset: 0x0066F2B0
+	// Token: 0x060168B4 RID: 92340 RVA: 0x00696F78 File Offset: 0x00695178
 	protected unsafe static void __CPPCALL_OnPlayerImpactEnd_Implementation(TsAiBlueprintFunctionLibrary.__OnPlayerImpactEnd_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.OnPlayerImpactEnd(__Params->entityId);
 	}
 
-	// Token: 0x06018FE8 RID: 102376 RVA: 0x006710C0 File Offset: 0x0066F2C0
+	// Token: 0x060168B5 RID: 92341 RVA: 0x00696F88 File Offset: 0x00695188
 	protected unsafe static void __CPPCALL_UpdateNpcPerformData_Implementation(TsAiBlueprintFunctionLibrary.__UpdateNpcPerformData_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.UpdateNpcPerformData(__Params->entityId, ref __Params->isAttacked, ref __Params->isImpacted, ref __Params->direction, ref __Params->strength, ref __Params->isRegionMoveMode, ref __Params->isEnableTurnMove, ref __Params->turnYawRateRef, ref __Params->forceUpdateSourceAnimation);
 	}
 
-	// Token: 0x06018FE9 RID: 102377 RVA: 0x00671108 File Offset: 0x0066F308
+	// Token: 0x060168B6 RID: 92342 RVA: 0x00696FD0 File Offset: 0x006951D0
 	protected unsafe static void __CPPCALL_UpdateNpcStateData_Implementation(TsAiBlueprintFunctionLibrary.__UpdateNpcStateData_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.UpdateNpcStateData(__Params->entityId, ref __Params->animState);
 	}
 
-	// Token: 0x06018FEA RID: 102378 RVA: 0x0067111B File Offset: 0x0066F31B
+	// Token: 0x060168B7 RID: 92343 RVA: 0x00696FE3 File Offset: 0x006951E3
 	protected unsafe static void __CPPCALL_GetAndResetNoTransitionSwitch_Implementation(TsAiBlueprintFunctionLibrary.__GetAndResetNoTransitionSwitch_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetAndResetNoTransitionSwitch(__Params->entityId);
 	}
 
-	// Token: 0x06018FEB RID: 102379 RVA: 0x0067112E File Offset: 0x0066F32E
+	// Token: 0x060168B8 RID: 92344 RVA: 0x00696FF6 File Offset: 0x006951F6
 	protected unsafe static void __CPPCALL_IsAiDriver_Implementation(TsAiBlueprintFunctionLibrary.__IsAiDriver_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.IsAiDriver(__Params->entityId);
 	}
 
-	// Token: 0x06018FEC RID: 102380 RVA: 0x00671141 File Offset: 0x0066F341
+	// Token: 0x060168B9 RID: 92345 RVA: 0x00697009 File Offset: 0x00695209
 	protected unsafe static void __CPPCALL_GetRoleActor_Implementation(TsAiBlueprintFunctionLibrary.__GetRoleActor_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -529,14 +529,14 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		ptr = ((roleActor != null) ? roleActor.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x06018FED RID: 102381 RVA: 0x00671164 File Offset: 0x0066F364
+	// Token: 0x060168BA RID: 92346 RVA: 0x0069702C File Offset: 0x0069522C
 	protected unsafe static void __CPPCALL_SetFollowData_Implementation(TsAiBlueprintFunctionLibrary.__SetFollowData_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->target);
 		TsAiBlueprintFunctionLibrary.SetFollowData(__Params->entityId, orCreateUObjectByNativePointer, __Params->type);
 	}
 
-	// Token: 0x06018FEE RID: 102382 RVA: 0x00671190 File Offset: 0x0066F390
+	// Token: 0x060168BB RID: 92347 RVA: 0x00697058 File Offset: 0x00695258
 	protected unsafe static void __CPPCALL_GetFollowActor_Implementation(TsAiBlueprintFunctionLibrary.__GetFollowActor_FunctionParams* __Params)
 	{
 		TArray<AActor> followActor = TsAiBlueprintFunctionLibrary.GetFollowActor(__Params->entityId);
@@ -547,619 +547,619 @@ public class TsAiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUO
 		followActor.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x06018FEF RID: 102383 RVA: 0x006711C2 File Offset: 0x0066F3C2
+	// Token: 0x060168BC RID: 92348 RVA: 0x0069708A File Offset: 0x0069528A
 	protected unsafe static void __CPPCALL_Reset_Implementation(TsAiBlueprintFunctionLibrary.__Reset_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.Reset(__Params->entityId, __Params->targetEntityId);
 	}
 
-	// Token: 0x06018FF0 RID: 102384 RVA: 0x006711D5 File Offset: 0x0066F3D5
+	// Token: 0x060168BD RID: 92349 RVA: 0x0069709D File Offset: 0x0069529D
 	protected unsafe static void __CPPCALL_GetToRoleDistance_Implementation(TsAiBlueprintFunctionLibrary.__GetToRoleDistance_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetToRoleDistance(__Params->entityId);
 	}
 
-	// Token: 0x06018FF1 RID: 102385 RVA: 0x006711E8 File Offset: 0x0066F3E8
+	// Token: 0x060168BE RID: 92350 RVA: 0x006970B0 File Offset: 0x006952B0
 	protected unsafe static void __CPPCALL_GetSummonType_Implementation(TsAiBlueprintFunctionLibrary.__GetSummonType_FunctionParams* __Params)
 	{
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetSummonType(__Params->entityId);
 	}
 
-	// Token: 0x06018FF2 RID: 102386 RVA: 0x006711FB File Offset: 0x0066F3FB
+	// Token: 0x060168BF RID: 92351 RVA: 0x006970C3 File Offset: 0x006952C3
 	protected unsafe static void __CPPCALL_TsLogInfo_Implementation(TsAiBlueprintFunctionLibrary.__TsLogInfo_FunctionParams* __Params)
 	{
 		TsAiBlueprintFunctionLibrary.TsLogInfo(FString.ToString((void*)(&__Params->text)));
 	}
 
-	// Token: 0x06018FF3 RID: 102387 RVA: 0x00671210 File Offset: 0x0066F410
+	// Token: 0x060168C0 RID: 92352 RVA: 0x006970D8 File Offset: 0x006952D8
 	protected unsafe static void __CPPCALL_GetLevelBoolVar_Implementation(TsAiBlueprintFunctionLibrary.__GetLevelBoolVar_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetLevelBoolVar(levelVar);
 	}
 
-	// Token: 0x06018FF4 RID: 102388 RVA: 0x00671238 File Offset: 0x0066F438
+	// Token: 0x060168C1 RID: 92353 RVA: 0x00697100 File Offset: 0x00695300
 	protected unsafe static void __CPPCALL_GetLevelIntVar_Implementation(TsAiBlueprintFunctionLibrary.__GetLevelIntVar_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetLevelIntVar(levelVar);
 	}
 
-	// Token: 0x06018FF5 RID: 102389 RVA: 0x00671260 File Offset: 0x0066F460
+	// Token: 0x060168C2 RID: 92354 RVA: 0x00697128 File Offset: 0x00695328
 	protected unsafe static void __CPPCALL_GetLevelStringVar_Implementation(TsAiBlueprintFunctionLibrary.__GetLevelStringVar_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
 		FString.CopyFrom((void*)(&__Params->__Result), TsAiBlueprintFunctionLibrary.GetLevelStringVar(levelVar));
 	}
 
-	// Token: 0x06018FF6 RID: 102390 RVA: 0x00671290 File Offset: 0x0066F490
+	// Token: 0x060168C3 RID: 92355 RVA: 0x00697158 File Offset: 0x00695358
 	protected unsafe static void __CPPCALL_GetLevelFloatVar_Implementation(TsAiBlueprintFunctionLibrary.__GetLevelFloatVar_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetLevelFloatVar(levelVar);
 	}
 
-	// Token: 0x06018FF7 RID: 102391 RVA: 0x006712B8 File Offset: 0x0066F4B8
+	// Token: 0x060168C4 RID: 92356 RVA: 0x00697180 File Offset: 0x00695380
 	protected unsafe static void __CPPCALL_GetLevelPosVar_Implementation(TsAiBlueprintFunctionLibrary.__GetLevelPosVar_FunctionParams* __Params)
 	{
 		SAiLevelVar levelVar = new SAiLevelVar(&__Params->levelVar, true, true);
 		__Params->__Result = TsAiBlueprintFunctionLibrary.GetLevelPosVar(levelVar);
 	}
 
-	// Token: 0x0400BB86 RID: 48006
+	// Token: 0x0400BF14 RID: 48916
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400BB87 RID: 48007
+	// Token: 0x0400BF15 RID: 48917
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400BB88 RID: 48008
+	// Token: 0x0400BF16 RID: 48918
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02009386 RID: 37766
+	// Token: 0x020085AC RID: 34220
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetQuestState_FunctionParams
 	{
-		// Token: 0x0402F9DF RID: 195039
+		// Token: 0x0402B065 RID: 176229
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9E0 RID: 195040
+		// Token: 0x0402B066 RID: 176230
 		[FieldOffset(4)]
 		public float questId;
 
-		// Token: 0x0402F9E1 RID: 195041
+		// Token: 0x0402B067 RID: 176231
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F9E2 RID: 195042
+		// Token: 0x0402B068 RID: 176232
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009387 RID: 37767
+	// Token: 0x020085AD RID: 34221
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetDistanceByPlayer_FunctionParams
 	{
-		// Token: 0x0402F9E3 RID: 195043
+		// Token: 0x0402B069 RID: 176233
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9E4 RID: 195044
+		// Token: 0x0402B06A RID: 176234
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F9E5 RID: 195045
+		// Token: 0x0402B06B RID: 176235
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02009388 RID: 37768
+	// Token: 0x020085AE RID: 34222
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __CheckPlayerGameplayTag_FunctionParams
 	{
-		// Token: 0x0402F9E6 RID: 195046
+		// Token: 0x0402B06C RID: 176236
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9E7 RID: 195047
+		// Token: 0x0402B06D RID: 176237
 		[FieldOffset(4)]
 		public FGameplayTag tag;
 
-		// Token: 0x0402F9E8 RID: 195048
+		// Token: 0x0402B06E RID: 176238
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F9E9 RID: 195049
+		// Token: 0x0402B06F RID: 176239
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009389 RID: 37769
+	// Token: 0x020085AF RID: 34223
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RestartBehaviorTree_FunctionParams
 	{
-		// Token: 0x0402F9EA RID: 195050
+		// Token: 0x0402B070 RID: 176240
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9EB RID: 195051
+		// Token: 0x0402B071 RID: 176241
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200938A RID: 37770
+	// Token: 0x020085B0 RID: 34224
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetAiEnabled_FunctionParams
 	{
-		// Token: 0x0402F9EC RID: 195052
+		// Token: 0x0402B072 RID: 176242
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9ED RID: 195053
+		// Token: 0x0402B073 RID: 176243
 		[FieldOffset(4)]
 		public bool value;
 
-		// Token: 0x0402F9EE RID: 195054
+		// Token: 0x0402B074 RID: 176244
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x0402F9EF RID: 195055
+		// Token: 0x0402B075 RID: 176245
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200938B RID: 37771
+	// Token: 0x020085B1 RID: 34225
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __NeedCheckPlayerImpact_FunctionParams
 	{
-		// Token: 0x0402F9F0 RID: 195056
+		// Token: 0x0402B076 RID: 176246
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9F1 RID: 195057
+		// Token: 0x0402B077 RID: 176247
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F9F2 RID: 195058
+		// Token: 0x0402B078 RID: 176248
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200938C RID: 37772
+	// Token: 0x020085B2 RID: 34226
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __NeedCheckPlayerAttack_FunctionParams
 	{
-		// Token: 0x0402F9F3 RID: 195059
+		// Token: 0x0402B079 RID: 176249
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9F4 RID: 195060
+		// Token: 0x0402B07A RID: 176250
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F9F5 RID: 195061
+		// Token: 0x0402B07B RID: 176251
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200938D RID: 37773
+	// Token: 0x020085B3 RID: 34227
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UpdateInteractionComponent_FunctionParams
 	{
-		// Token: 0x0402F9F6 RID: 195062
+		// Token: 0x0402B07C RID: 176252
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9F7 RID: 195063
+		// Token: 0x0402B07D RID: 176253
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200938E RID: 37774
+	// Token: 0x020085B4 RID: 34228
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnPlayerAttack_FunctionParams
 	{
-		// Token: 0x0402F9F8 RID: 195064
+		// Token: 0x0402B07E RID: 176254
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9F9 RID: 195065
+		// Token: 0x0402B07F RID: 176255
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200938F RID: 37775
+	// Token: 0x020085B5 RID: 34229
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnPlayerImpact_FunctionParams
 	{
-		// Token: 0x0402F9FA RID: 195066
+		// Token: 0x0402B080 RID: 176256
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9FB RID: 195067
+		// Token: 0x0402B081 RID: 176257
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009390 RID: 37776
+	// Token: 0x020085B6 RID: 34230
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnPlayerAttackBegin_FunctionParams
 	{
-		// Token: 0x0402F9FC RID: 195068
+		// Token: 0x0402B082 RID: 176258
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9FD RID: 195069
+		// Token: 0x0402B083 RID: 176259
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009391 RID: 37777
+	// Token: 0x020085B7 RID: 34231
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnPlayerImpactBegin_FunctionParams
 	{
-		// Token: 0x0402F9FE RID: 195070
+		// Token: 0x0402B084 RID: 176260
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F9FF RID: 195071
+		// Token: 0x0402B085 RID: 176261
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009392 RID: 37778
+	// Token: 0x020085B8 RID: 34232
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnPlayerAttackEnd_FunctionParams
 	{
-		// Token: 0x0402FA00 RID: 195072
+		// Token: 0x0402B086 RID: 176262
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA01 RID: 195073
+		// Token: 0x0402B087 RID: 176263
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009393 RID: 37779
+	// Token: 0x020085B9 RID: 34233
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnPlayerImpactEnd_FunctionParams
 	{
-		// Token: 0x0402FA02 RID: 195074
+		// Token: 0x0402B088 RID: 176264
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA03 RID: 195075
+		// Token: 0x0402B089 RID: 176265
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009394 RID: 37780
+	// Token: 0x020085BA RID: 34234
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __UpdateNpcPerformData_FunctionParams
 	{
-		// Token: 0x0402FA04 RID: 195076
+		// Token: 0x0402B08A RID: 176266
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA05 RID: 195077
+		// Token: 0x0402B08B RID: 176267
 		[FieldOffset(4)]
 		public bool isAttacked;
 
-		// Token: 0x0402FA06 RID: 195078
+		// Token: 0x0402B08C RID: 176268
 		[FieldOffset(5)]
 		public bool isImpacted;
 
-		// Token: 0x0402FA07 RID: 195079
+		// Token: 0x0402B08D RID: 176269
 		[FieldOffset(8)]
 		public float direction;
 
-		// Token: 0x0402FA08 RID: 195080
+		// Token: 0x0402B08E RID: 176270
 		[FieldOffset(12)]
 		public float strength;
 
-		// Token: 0x0402FA09 RID: 195081
+		// Token: 0x0402B08F RID: 176271
 		[FieldOffset(16)]
 		public bool isRegionMoveMode;
 
-		// Token: 0x0402FA0A RID: 195082
+		// Token: 0x0402B090 RID: 176272
 		[FieldOffset(17)]
 		public bool isEnableTurnMove;
 
-		// Token: 0x0402FA0B RID: 195083
+		// Token: 0x0402B091 RID: 176273
 		[FieldOffset(20)]
 		public float turnYawRateRef;
 
-		// Token: 0x0402FA0C RID: 195084
+		// Token: 0x0402B092 RID: 176274
 		[FieldOffset(24)]
 		public bool forceUpdateSourceAnimation;
 
-		// Token: 0x0402FA0D RID: 195085
+		// Token: 0x0402B093 RID: 176275
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009395 RID: 37781
+	// Token: 0x020085BB RID: 34235
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UpdateNpcStateData_FunctionParams
 	{
-		// Token: 0x0402FA0E RID: 195086
+		// Token: 0x0402B094 RID: 176276
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA0F RID: 195087
+		// Token: 0x0402B095 RID: 176277
 		[FieldOffset(4)]
 		public int animState;
 
-		// Token: 0x0402FA10 RID: 195088
+		// Token: 0x0402B096 RID: 176278
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009396 RID: 37782
+	// Token: 0x020085BC RID: 34236
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAndResetNoTransitionSwitch_FunctionParams
 	{
-		// Token: 0x0402FA11 RID: 195089
+		// Token: 0x0402B097 RID: 176279
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA12 RID: 195090
+		// Token: 0x0402B098 RID: 176280
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA13 RID: 195091
+		// Token: 0x0402B099 RID: 176281
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009397 RID: 37783
+	// Token: 0x020085BD RID: 34237
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __IsAiDriver_FunctionParams
 	{
-		// Token: 0x0402FA14 RID: 195092
+		// Token: 0x0402B09A RID: 176282
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA15 RID: 195093
+		// Token: 0x0402B09B RID: 176283
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA16 RID: 195094
+		// Token: 0x0402B09C RID: 176284
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009398 RID: 37784
+	// Token: 0x020085BE RID: 34238
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleActor_FunctionParams
 	{
-		// Token: 0x0402FA17 RID: 195095
+		// Token: 0x0402B09D RID: 176285
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA18 RID: 195096
+		// Token: 0x0402B09E RID: 176286
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA19 RID: 195097
+		// Token: 0x0402B09F RID: 176287
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009399 RID: 37785
+	// Token: 0x020085BF RID: 34239
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetFollowData_FunctionParams
 	{
-		// Token: 0x0402FA1A RID: 195098
+		// Token: 0x0402B0A0 RID: 176288
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA1B RID: 195099
+		// Token: 0x0402B0A1 RID: 176289
 		[FieldOffset(8)]
 		public IntPtr target;
 
-		// Token: 0x0402FA1C RID: 195100
+		// Token: 0x0402B0A2 RID: 176290
 		[FieldOffset(16)]
 		public int type;
 
-		// Token: 0x0402FA1D RID: 195101
+		// Token: 0x0402B0A3 RID: 176291
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200939A RID: 37786
+	// Token: 0x020085C0 RID: 34240
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetFollowActor_FunctionParams
 	{
-		// Token: 0x0402FA1E RID: 195102
+		// Token: 0x0402B0A4 RID: 176292
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA1F RID: 195103
+		// Token: 0x0402B0A5 RID: 176293
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA20 RID: 195104
+		// Token: 0x0402B0A6 RID: 176294
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x0200939B RID: 37787
+	// Token: 0x020085C1 RID: 34241
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __Reset_FunctionParams
 	{
-		// Token: 0x0402FA21 RID: 195105
+		// Token: 0x0402B0A7 RID: 176295
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA22 RID: 195106
+		// Token: 0x0402B0A8 RID: 176296
 		[FieldOffset(4)]
 		public float targetEntityId;
 
-		// Token: 0x0402FA23 RID: 195107
+		// Token: 0x0402B0A9 RID: 176297
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200939C RID: 37788
+	// Token: 0x020085C2 RID: 34242
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetToRoleDistance_FunctionParams
 	{
-		// Token: 0x0402FA24 RID: 195108
+		// Token: 0x0402B0AA RID: 176298
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA25 RID: 195109
+		// Token: 0x0402B0AB RID: 176299
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA26 RID: 195110
+		// Token: 0x0402B0AC RID: 176300
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x0200939D RID: 37789
+	// Token: 0x020085C3 RID: 34243
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetSummonType_FunctionParams
 	{
-		// Token: 0x0402FA27 RID: 195111
+		// Token: 0x0402B0AD RID: 176301
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA28 RID: 195112
+		// Token: 0x0402B0AE RID: 176302
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA29 RID: 195113
+		// Token: 0x0402B0AF RID: 176303
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x0200939E RID: 37790
+	// Token: 0x020085C4 RID: 34244
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TsLogInfo_FunctionParams
 	{
-		// Token: 0x0402FA2A RID: 195114
+		// Token: 0x0402B0B0 RID: 176304
 		[FieldOffset(0)]
 		public FString text;
 
-		// Token: 0x0402FA2B RID: 195115
+		// Token: 0x0402B0B1 RID: 176305
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200939F RID: 37791
+	// Token: 0x020085C5 RID: 34245
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetLevelBoolVar_FunctionParams
 	{
-		// Token: 0x0402FA2C RID: 195116
+		// Token: 0x0402B0B2 RID: 176306
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x0402FA2D RID: 195117
+		// Token: 0x0402B0B3 RID: 176307
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA2E RID: 195118
+		// Token: 0x0402B0B4 RID: 176308
 		[FieldOffset(40)]
 		public bool __Result;
 	}
 
-	// Token: 0x020093A0 RID: 37792
+	// Token: 0x020085C6 RID: 34246
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetLevelIntVar_FunctionParams
 	{
-		// Token: 0x0402FA2F RID: 195119
+		// Token: 0x0402B0B5 RID: 176309
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x0402FA30 RID: 195120
+		// Token: 0x0402B0B6 RID: 176310
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA31 RID: 195121
+		// Token: 0x0402B0B7 RID: 176311
 		[FieldOffset(40)]
 		public int __Result;
 	}
 
-	// Token: 0x020093A1 RID: 37793
+	// Token: 0x020085C7 RID: 34247
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __GetLevelStringVar_FunctionParams
 	{
-		// Token: 0x0402FA32 RID: 195122
+		// Token: 0x0402B0B8 RID: 176312
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x0402FA33 RID: 195123
+		// Token: 0x0402B0B9 RID: 176313
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA34 RID: 195124
+		// Token: 0x0402B0BA RID: 176314
 		[FieldOffset(40)]
 		public FString __Result;
 	}
 
-	// Token: 0x020093A2 RID: 37794
+	// Token: 0x020085C8 RID: 34248
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetLevelFloatVar_FunctionParams
 	{
-		// Token: 0x0402FA35 RID: 195125
+		// Token: 0x0402B0BB RID: 176315
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x0402FA36 RID: 195126
+		// Token: 0x0402B0BC RID: 176316
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA37 RID: 195127
+		// Token: 0x0402B0BD RID: 176317
 		[FieldOffset(40)]
 		public float __Result;
 	}
 
-	// Token: 0x020093A3 RID: 37795
+	// Token: 0x020085C9 RID: 34249
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __GetLevelPosVar_FunctionParams
 	{
-		// Token: 0x0402FA38 RID: 195128
+		// Token: 0x0402B0BE RID: 176318
 		[FieldOffset(0)]
 		public byte levelVar;
 
-		// Token: 0x0402FA39 RID: 195129
+		// Token: 0x0402B0BF RID: 176319
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA3A RID: 195130
+		// Token: 0x0402B0C0 RID: 176320
 		[FieldOffset(40)]
 		public FVector __Result;
 	}

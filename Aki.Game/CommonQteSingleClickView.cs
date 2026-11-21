@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002631 RID: 9777
+// Token: 0x02001B1C RID: 6940
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -19,13 +19,13 @@ using UnrealEngine;
 })]
 public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickContext>
 {
-	// Token: 0x06013FCD RID: 81869 RVA: 0x00507261 File Offset: 0x00505461
+	// Token: 0x060114AF RID: 70831 RVA: 0x00516141 File Offset: 0x00514341
 	[NullableContext(1)]
 	public CommonQteSingleClickView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06013FCE RID: 81870 RVA: 0x0050726C File Offset: 0x0050546C
+	// Token: 0x060114B0 RID: 70832 RVA: 0x0051614C File Offset: 0x0051434C
 	protected unsafe override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -72,7 +72,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		this.ComponentRegisterInfos = list2;
 	}
 
-	// Token: 0x06013FCF RID: 81871 RVA: 0x0050744C File Offset: 0x0050564C
+	// Token: 0x060114B1 RID: 70833 RVA: 0x0051632C File Offset: 0x0051452C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteSingleClickView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -83,7 +83,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013FD0 RID: 81872 RVA: 0x00507490 File Offset: 0x00505690
+	// Token: 0x060114B2 RID: 70834 RVA: 0x00516370 File Offset: 0x00514570
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -125,7 +125,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		animItem.SetUIActive(false);
 	}
 
-	// Token: 0x06013FD1 RID: 81873 RVA: 0x005075BB File Offset: 0x005057BB
+	// Token: 0x060114B3 RID: 70835 RVA: 0x0051649B File Offset: 0x0051469B
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -147,14 +147,14 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		levelSequencePlayerBorder.Clear();
 	}
 
-	// Token: 0x06013FD2 RID: 81874 RVA: 0x005075FA File Offset: 0x005057FA
+	// Token: 0x060114B4 RID: 70836 RVA: 0x005164DA File Offset: 0x005146DA
 	[NullableContext(1)]
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteSingleClickContext;
 	}
 
-	// Token: 0x06013FD3 RID: 81875 RVA: 0x00507605 File Offset: 0x00505805
+	// Token: 0x060114B5 RID: 70837 RVA: 0x005164E5 File Offset: 0x005146E5
 	[NullableContext(1)]
 	protected override void OnRefreshActionUi(string action)
 	{
@@ -171,7 +171,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		keyItem2.Show(null);
 	}
 
-	// Token: 0x06013FD4 RID: 81876 RVA: 0x0050762A File Offset: 0x0050582A
+	// Token: 0x060114B6 RID: 70838 RVA: 0x0051650A File Offset: 0x0051470A
 	[NullableContext(1)]
 	protected override void OnRefreshIcon(ULGUITexturePackerSpriteData sprite)
 	{
@@ -188,7 +188,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		iconItem2.SetUIActive(true);
 	}
 
-	// Token: 0x06013FD5 RID: 81877 RVA: 0x00507650 File Offset: 0x00505850
+	// Token: 0x060114B7 RID: 70839 RVA: 0x00516530 File Offset: 0x00514730
 	protected override void OnPlayQteStart()
 	{
 		UUIItem animItem = this.AnimItem;
@@ -225,13 +225,13 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x06013FD6 RID: 81878 RVA: 0x005076EC File Offset: 0x005058EC
+	// Token: 0x060114B8 RID: 70840 RVA: 0x005165CC File Offset: 0x005147CC
 	private void OnBtnClickPress()
 	{
 		base.OnInputCallback(this.QteAction, InputDistributeDefine.EActionType.Press, null);
 	}
 
-	// Token: 0x06013FD7 RID: 81879 RVA: 0x005076FC File Offset: 0x005058FC
+	// Token: 0x060114B9 RID: 70841 RVA: 0x005165DC File Offset: 0x005147DC
 	[NullableContext(1)]
 	private void OnSequenceEndEvent(string sequenceName)
 	{
@@ -276,7 +276,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		this.IsQteInteractive = true;
 	}
 
-	// Token: 0x06013FD8 RID: 81880 RVA: 0x005077E6 File Offset: 0x005059E6
+	// Token: 0x060114BA RID: 70842 RVA: 0x005166C6 File Offset: 0x005148C6
 	protected override void OnInputPress()
 	{
 		CommonQteSingleClickContext commonQteContext = this.CommonQteContext;
@@ -286,7 +286,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x06013FD9 RID: 81881 RVA: 0x00507808 File Offset: 0x00505A08
+	// Token: 0x060114BB RID: 70843 RVA: 0x005166E8 File Offset: 0x005148E8
 	protected override void OnHandleQteEnd()
 	{
 		if (!this.IsMobile)
@@ -335,7 +335,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x06013FDA RID: 81882 RVA: 0x005078D5 File Offset: 0x00505AD5
+	// Token: 0x060114BC RID: 70844 RVA: 0x005167B5 File Offset: 0x005149B5
 	[NullableContext(1)]
 	private void SetPlayRate(string sequenceName, float playRate)
 	{
@@ -358,7 +358,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		sequencePlayer.SetPlayRate(playRate);
 	}
 
-	// Token: 0x06013FDB RID: 81883 RVA: 0x00507910 File Offset: 0x00505B10
+	// Token: 0x060114BD RID: 70845 RVA: 0x005167F0 File Offset: 0x005149F0
 	private void FixLoopProgress()
 	{
 		UUIItem animItem = this.AnimItem;
@@ -384,7 +384,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x06013FDC RID: 81884 RVA: 0x00507998 File Offset: 0x00505B98
+	// Token: 0x060114BE RID: 70846 RVA: 0x00516878 File Offset: 0x00514A78
 	protected override void OnQtePause()
 	{
 		base.OnQtePause();
@@ -399,7 +399,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x06013FDD RID: 81885 RVA: 0x005079E4 File Offset: 0x00505BE4
+	// Token: 0x060114BF RID: 70847 RVA: 0x005168C4 File Offset: 0x00514AC4
 	protected override void OnQteResume()
 	{
 		base.OnQteResume();
@@ -420,7 +420,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x06013FDE RID: 81886 RVA: 0x00507A54 File Offset: 0x00505C54
+	// Token: 0x060114C0 RID: 70848 RVA: 0x00516934 File Offset: 0x00514B34
 	protected override void OnTickQteView(float delta)
 	{
 		float fillAmount = 1f;
@@ -437,7 +437,7 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		progressBar.SetFillAmount(fillAmount);
 	}
 
-	// Token: 0x06013FDF RID: 81887 RVA: 0x00507AB0 File Offset: 0x00505CB0
+	// Token: 0x060114C1 RID: 70849 RVA: 0x00516990 File Offset: 0x00514B90
 	protected override void RefreshUiOffset()
 	{
 		if (this.CommonQteContext != null)
@@ -461,73 +461,73 @@ public class CommonQteSingleClickView : CommonQteViewBase<CommonQteSingleClickCo
 		}
 	}
 
-	// Token: 0x040096BD RID: 38589
+	// Token: 0x04009815 RID: 38933
 	private const float LOOP_ANIM_START_OFFSET = 1.167f;
 
-	// Token: 0x040096BE RID: 38590
+	// Token: 0x04009816 RID: 38934
 	[Nullable(1)]
 	private const string LOOP_SEQUENCE = "Loop2";
 
-	// Token: 0x040096BF RID: 38591
+	// Token: 0x04009817 RID: 38935
 	private CombineKeyItem KeyItem;
 
-	// Token: 0x040096C0 RID: 38592
+	// Token: 0x04009818 RID: 38936
 	private UUIItem KeyItemContainer;
 
-	// Token: 0x040096C1 RID: 38593
+	// Token: 0x04009819 RID: 38937
 	private UUIItem AnimItem;
 
-	// Token: 0x040096C2 RID: 38594
+	// Token: 0x0400981A RID: 38938
 	private UUIButtonComponent BtnClick;
 
-	// Token: 0x040096C3 RID: 38595
+	// Token: 0x0400981B RID: 38939
 	private UUISprite IconItem;
 
-	// Token: 0x040096C4 RID: 38596
+	// Token: 0x0400981C RID: 38940
 	private UUIItem BorderItem;
 
-	// Token: 0x040096C5 RID: 38597
+	// Token: 0x0400981D RID: 38941
 	private UUITexture ProgressBar;
 
-	// Token: 0x040096C6 RID: 38598
+	// Token: 0x0400981E RID: 38942
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040096C7 RID: 38599
+	// Token: 0x0400981F RID: 38943
 	private LevelSequencePlayer LevelSequencePlayerBorder;
 
-	// Token: 0x02008C81 RID: 35969
+	// Token: 0x02007E0A RID: 32266
 	[NullableContext(0)]
 	private enum EPadChildType
 	{
-		// Token: 0x0402D9C4 RID: 186820
+		// Token: 0x04028CDB RID: 167131
 		AnimItem,
-		// Token: 0x0402D9C5 RID: 186821
+		// Token: 0x04028CDC RID: 167132
 		BtnClick,
-		// Token: 0x0402D9C6 RID: 186822
+		// Token: 0x04028CDD RID: 167133
 		Icon,
-		// Token: 0x0402D9C7 RID: 186823
+		// Token: 0x04028CDE RID: 167134
 		BorderItem,
-		// Token: 0x0402D9C8 RID: 186824
+		// Token: 0x04028CDF RID: 167135
 		ProgressBar
 	}
 
-	// Token: 0x02008C82 RID: 35970
+	// Token: 0x02007E0B RID: 32267
 	[NullableContext(0)]
 	private enum EDesktopChildType
 	{
-		// Token: 0x0402D9CA RID: 186826
+		// Token: 0x04028CE1 RID: 167137
 		AnimItem,
-		// Token: 0x0402D9CB RID: 186827
+		// Token: 0x04028CE2 RID: 167138
 		KeyItemContainer,
-		// Token: 0x0402D9CC RID: 186828
+		// Token: 0x04028CE3 RID: 167139
 		KeyItem,
-		// Token: 0x0402D9CD RID: 186829
+		// Token: 0x04028CE4 RID: 167140
 		Icon,
-		// Token: 0x0402D9CE RID: 186830
+		// Token: 0x04028CE5 RID: 167141
 		BtnClick,
-		// Token: 0x0402D9CF RID: 186831
+		// Token: 0x04028CE6 RID: 167142
 		BorderItem,
-		// Token: 0x0402D9D0 RID: 186832
+		// Token: 0x04028CE7 RID: 167143
 		ProgressBar
 	}
 }

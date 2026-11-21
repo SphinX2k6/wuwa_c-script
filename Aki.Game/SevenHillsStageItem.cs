@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020012AD RID: 4781
+// Token: 0x02000761 RID: 1889
 [NullableContext(2)]
 [Nullable(0)]
 public class SevenHillsStageItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600833B RID: 33595 RVA: 0x001BEF10 File Offset: 0x001BD110
+	// Token: 0x060056D2 RID: 22226 RVA: 0x001C7CA0 File Offset: 0x001C5EA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -56,14 +56,14 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600833C RID: 33596 RVA: 0x001BF128 File Offset: 0x001BD328
+	// Token: 0x060056D3 RID: 22227 RVA: 0x001C7EB8 File Offset: 0x001C60B8
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshStageState));
 		this.AddTimer();
 	}
 
-	// Token: 0x0600833D RID: 33597 RVA: 0x001BF14C File Offset: 0x001BD34C
+	// Token: 0x060056D4 RID: 22228 RVA: 0x001C7EDC File Offset: 0x001C60DC
 	private void AddTimer()
 	{
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(delegate(float _)
@@ -72,7 +72,7 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600833E RID: 33598 RVA: 0x001BF178 File Offset: 0x001BD378
+	// Token: 0x060056D5 RID: 22229 RVA: 0x001C7F08 File Offset: 0x001C6108
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.StageId = data;
@@ -84,7 +84,7 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		this.RefreshLockText();
 	}
 
-	// Token: 0x0600833F RID: 33599 RVA: 0x001BF208 File Offset: 0x001BD408
+	// Token: 0x060056D6 RID: 22230 RVA: 0x001C7F98 File Offset: 0x001C6198
 	private void RefreshStageState()
 	{
 		bool flag = !this.ActivityData.IsStageUnlock(this.StageId);
@@ -131,7 +131,7 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		item4.SetUIActive(this.ActivityData.CheckStageRed(this.StageId));
 	}
 
-	// Token: 0x06008340 RID: 33600 RVA: 0x001BF344 File Offset: 0x001BD544
+	// Token: 0x060056D7 RID: 22231 RVA: 0x001C80D4 File Offset: 0x001C62D4
 	private void RefreshLockText()
 	{
 		if (this.ActivityData.IsStageUnlock(this.StageId))
@@ -158,13 +158,13 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x06008341 RID: 33601 RVA: 0x001BF423 File Offset: 0x001BD623
+	// Token: 0x060056D8 RID: 22232 RVA: 0x001C81B3 File Offset: 0x001C63B3
 	private void OnRefreshTimer()
 	{
 		this.RefreshLockText();
 	}
 
-	// Token: 0x06008342 RID: 33602 RVA: 0x001BF42C File Offset: 0x001BD62C
+	// Token: 0x060056D9 RID: 22233 RVA: 0x001C81BC File Offset: 0x001C63BC
 	private void OnRefreshStageState(int activityId)
 	{
 		ActivityLongShanData activityData = this.ActivityData;
@@ -175,14 +175,14 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008343 RID: 33603 RVA: 0x001BF473 File Offset: 0x001BD673
+	// Token: 0x060056DA RID: 22234 RVA: 0x001C8203 File Offset: 0x001C6403
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshStageState));
 		this.RemoveTimer();
 	}
 
-	// Token: 0x06008344 RID: 33604 RVA: 0x001BF497 File Offset: 0x001BD697
+	// Token: 0x060056DB RID: 22235 RVA: 0x001C8227 File Offset: 0x001C6427
 	private void RemoveTimer()
 	{
 		if (this.TimerHandle != null)
@@ -192,7 +192,7 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008345 RID: 33605 RVA: 0x001BF4BC File Offset: 0x001BD6BC
+	// Token: 0x060056DC RID: 22236 RVA: 0x001C824C File Offset: 0x001C644C
 	private void OnClickGotoBtn()
 	{
 		ActivityLongShanData activityData = this.ActivityData;
@@ -209,7 +209,7 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008346 RID: 33606 RVA: 0x001BF534 File Offset: 0x001BD734
+	// Token: 0x060056DD RID: 22237 RVA: 0x001C82C4 File Offset: 0x001C64C4
 	private void OnClickStageBtn()
 	{
 		if (!this.ActivityData.IsStageUnlock(this.StageId))
@@ -224,56 +224,56 @@ public class SevenHillsStageItem : GridProxyAbstract<int>
 		onClickStageItem(this.StageId);
 	}
 
-	// Token: 0x04003B23 RID: 15139
+	// Token: 0x04003BBB RID: 15291
 	private int StageId;
 
-	// Token: 0x04003B24 RID: 15140
+	// Token: 0x04003BBC RID: 15292
 	public ActivityLongShanData ActivityData;
 
-	// Token: 0x04003B25 RID: 15141
+	// Token: 0x04003BBD RID: 15293
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04003B26 RID: 15142
+	// Token: 0x04003BBE RID: 15294
 	public Action<int> OnClickStageItem;
 
-	// Token: 0x020078CD RID: 30925
+	// Token: 0x02006A57 RID: 27223
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027CC2 RID: 163010
+		// Token: 0x04022FF0 RID: 143344
 		public const int BtnRoot = 0;
 
-		// Token: 0x04027CC3 RID: 163011
+		// Token: 0x04022FF1 RID: 143345
 		public const int TextureImage = 1;
 
-		// Token: 0x04027CC4 RID: 163012
+		// Token: 0x04022FF2 RID: 143346
 		public const int SpriteRomeNum = 2;
 
-		// Token: 0x04027CC5 RID: 163013
+		// Token: 0x04022FF3 RID: 143347
 		public const int ItemFinish = 3;
 
-		// Token: 0x04027CC6 RID: 163014
+		// Token: 0x04022FF4 RID: 143348
 		public const int ItemRedDot = 4;
 
-		// Token: 0x04027CC7 RID: 163015
+		// Token: 0x04022FF5 RID: 143349
 		public const int SpriteLine = 5;
 
-		// Token: 0x04027CC8 RID: 163016
+		// Token: 0x04022FF6 RID: 143350
 		public const int TextStageName = 6;
 
-		// Token: 0x04027CC9 RID: 163017
+		// Token: 0x04022FF7 RID: 143351
 		public const int TextProgress = 7;
 
-		// Token: 0x04027CCA RID: 163018
+		// Token: 0x04022FF8 RID: 143352
 		public const int ItemLock = 8;
 
-		// Token: 0x04027CCB RID: 163019
+		// Token: 0x04022FF9 RID: 143353
 		public const int BtnGoto = 9;
 
-		// Token: 0x04027CCC RID: 163020
+		// Token: 0x04022FFA RID: 143354
 		public const int TextLock = 10;
 
-		// Token: 0x04027CCD RID: 163021
+		// Token: 0x04022FFB RID: 143355
 		public const int ItemTimeLock = 11;
 	}
 }

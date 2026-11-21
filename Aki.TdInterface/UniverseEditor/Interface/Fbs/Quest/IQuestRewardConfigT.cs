@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004011 RID: 16401
+	// Token: 0x02004452 RID: 17490
 	public class IQuestRewardConfigT
 	{
-		// Token: 0x17007342 RID: 29506
-		// (get) Token: 0x06017ACC RID: 96972 RVA: 0x0036A2B3 File Offset: 0x003684B3
-		// (set) Token: 0x06017ACD RID: 96973 RVA: 0x0036A2BB File Offset: 0x003684BB
+		// Token: 0x17007944 RID: 31044
+		// (get) Token: 0x06019165 RID: 102757 RVA: 0x003940A7 File Offset: 0x003922A7
+		// (set) Token: 0x06019166 RID: 102758 RVA: 0x003940AF File Offset: 0x003922AF
 		public int RewardId { get; set; }
 
-		// Token: 0x17007343 RID: 29507
-		// (get) Token: 0x06017ACE RID: 96974 RVA: 0x0036A2C4 File Offset: 0x003684C4
-		// (set) Token: 0x06017ACF RID: 96975 RVA: 0x0036A2CC File Offset: 0x003684CC
+		// Token: 0x17007945 RID: 31045
+		// (get) Token: 0x06019167 RID: 102759 RVA: 0x003940B8 File Offset: 0x003922B8
+		// (set) Token: 0x06019168 RID: 102760 RVA: 0x003940C0 File Offset: 0x003922C0
 		public EItemGetUiType RewardGetUiType { get; set; }
 
-		// Token: 0x17007344 RID: 29508
-		// (get) Token: 0x06017AD0 RID: 96976 RVA: 0x0036A2D5 File Offset: 0x003684D5
-		// (set) Token: 0x06017AD1 RID: 96977 RVA: 0x0036A2DD File Offset: 0x003684DD
+		// Token: 0x17007946 RID: 31046
+		// (get) Token: 0x06019169 RID: 102761 RVA: 0x003940C9 File Offset: 0x003922C9
+		// (set) Token: 0x0601916A RID: 102762 RVA: 0x003940D1 File Offset: 0x003922D1
 		public IItemGetUiConfigSpecialQuestT UiConfig { get; set; }
 
-		// Token: 0x17007345 RID: 29509
-		// (get) Token: 0x06017AD2 RID: 96978 RVA: 0x0036A2E6 File Offset: 0x003684E6
-		// (set) Token: 0x06017AD3 RID: 96979 RVA: 0x0036A2EE File Offset: 0x003684EE
+		// Token: 0x17007947 RID: 31047
+		// (get) Token: 0x0601916B RID: 102763 RVA: 0x003940DA File Offset: 0x003922DA
+		// (set) Token: 0x0601916C RID: 102764 RVA: 0x003940E2 File Offset: 0x003922E2
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017AD4 RID: 96980 RVA: 0x0036A2F7 File Offset: 0x003684F7
+		// Token: 0x0601916D RID: 102765 RVA: 0x003940EB File Offset: 0x003922EB
 		public IQuestRewardConfigT()
 		{
 			this.RewardId = 0;

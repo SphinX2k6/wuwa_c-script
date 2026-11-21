@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x02002DAD RID: 11693
+// Token: 0x02002307 RID: 8967
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataLogic
 {
-	// Token: 0x1700216C RID: 8556
-	// (get) Token: 0x0601894D RID: 100685 RVA: 0x00648030 File Offset: 0x00646230
+	// Token: 0x170021C8 RID: 8648
+	// (get) Token: 0x060161F5 RID: 90613 RVA: 0x0066DF10 File Offset: 0x0066C110
 	public string ComponentName
 	{
 		get
@@ -25,8 +24,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700216D RID: 8557
-	// (get) Token: 0x0601894E RID: 100686 RVA: 0x00648058 File Offset: 0x00646258
+	// Token: 0x170021C9 RID: 8649
+	// (get) Token: 0x060161F6 RID: 90614 RVA: 0x0066DF38 File Offset: 0x0066C138
 	public EBulletHitDirectionType HitDirectionType
 	{
 		get
@@ -39,8 +38,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700216E RID: 8558
-	// (get) Token: 0x0601894F RID: 100687 RVA: 0x0064808D File Offset: 0x0064628D
+	// Token: 0x170021CA RID: 8650
+	// (get) Token: 0x060161F7 RID: 90615 RVA: 0x0066DF6D File Offset: 0x0066C16D
 	public bool DestroyOnHitCharacter
 	{
 		get
@@ -53,8 +52,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700216F RID: 8559
-	// (get) Token: 0x06018950 RID: 100688 RVA: 0x006480BD File Offset: 0x006462BD
+	// Token: 0x170021CB RID: 8651
+	// (get) Token: 0x060161F8 RID: 90616 RVA: 0x0066DF9D File Offset: 0x0066C19D
 	public bool DestroyOnHitObstacle
 	{
 		get
@@ -67,8 +66,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002170 RID: 8560
-	// (get) Token: 0x06018951 RID: 100689 RVA: 0x006480ED File Offset: 0x006462ED
+	// Token: 0x170021CC RID: 8652
+	// (get) Token: 0x060161F9 RID: 90617 RVA: 0x0066DFCD File Offset: 0x0066C1CD
 	public FName ProfileName
 	{
 		get
@@ -82,8 +81,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002171 RID: 8561
-	// (get) Token: 0x06018952 RID: 100690 RVA: 0x0064811F File Offset: 0x0064631F
+	// Token: 0x170021CD RID: 8653
+	// (get) Token: 0x060161FA RID: 90618 RVA: 0x0066DFFF File Offset: 0x0066C1FF
 	public EBulletType Type
 	{
 		get
@@ -96,8 +95,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002172 RID: 8562
-	// (get) Token: 0x06018953 RID: 100691 RVA: 0x00648154 File Offset: 0x00646354
+	// Token: 0x170021CE RID: 8654
+	// (get) Token: 0x060161FB RID: 90619 RVA: 0x0066E034 File Offset: 0x0066C234
 	public bool InteractWithWater
 	{
 		get
@@ -110,8 +109,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002173 RID: 8563
-	// (get) Token: 0x06018954 RID: 100692 RVA: 0x00648184 File Offset: 0x00646384
+	// Token: 0x170021CF RID: 8655
+	// (get) Token: 0x060161FC RID: 90620 RVA: 0x0066E064 File Offset: 0x0066C264
 	public bool InteractWithAirWall
 	{
 		get
@@ -124,8 +123,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002174 RID: 8564
-	// (get) Token: 0x06018955 RID: 100693 RVA: 0x006481B4 File Offset: 0x006463B4
+	// Token: 0x170021D0 RID: 8656
+	// (get) Token: 0x060161FD RID: 90621 RVA: 0x0066E094 File Offset: 0x0066C294
 	public int ReboundChannel
 	{
 		get
@@ -138,8 +137,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002175 RID: 8565
-	// (get) Token: 0x06018956 RID: 100694 RVA: 0x006481E4 File Offset: 0x006463E4
+	// Token: 0x170021D1 RID: 8657
+	// (get) Token: 0x060161FE RID: 90622 RVA: 0x0066E0C4 File Offset: 0x0066C2C4
 	public bool CanCounterAttack
 	{
 		get
@@ -152,8 +151,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002176 RID: 8566
-	// (get) Token: 0x06018957 RID: 100695 RVA: 0x00648214 File Offset: 0x00646414
+	// Token: 0x170021D2 RID: 8658
+	// (get) Token: 0x060161FF RID: 90623 RVA: 0x0066E0F4 File Offset: 0x0066C2F4
 	public bool CounterAttackIgnoreAngle
 	{
 		get
@@ -166,8 +165,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002177 RID: 8567
-	// (get) Token: 0x06018958 RID: 100696 RVA: 0x00648244 File Offset: 0x00646444
+	// Token: 0x170021D3 RID: 8659
+	// (get) Token: 0x06016200 RID: 90624 RVA: 0x0066E124 File Offset: 0x0066C324
 	public bool CounterAttackIgnoreDist
 	{
 		get
@@ -180,8 +179,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002178 RID: 8568
-	// (get) Token: 0x06018959 RID: 100697 RVA: 0x00648274 File Offset: 0x00646474
+	// Token: 0x170021D4 RID: 8660
+	// (get) Token: 0x06016201 RID: 90625 RVA: 0x0066E154 File Offset: 0x0066C354
 	public bool CanBreakWindupAttack
 	{
 		get
@@ -194,8 +193,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x17002179 RID: 8569
-	// (get) Token: 0x0601895A RID: 100698 RVA: 0x006482A4 File Offset: 0x006464A4
+	// Token: 0x170021D5 RID: 8661
+	// (get) Token: 0x06016202 RID: 90626 RVA: 0x0066E184 File Offset: 0x0066C384
 	public bool CanVisionCounterAttack
 	{
 		get
@@ -208,8 +207,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700217A RID: 8570
-	// (get) Token: 0x0601895B RID: 100699 RVA: 0x006482D4 File Offset: 0x006464D4
+	// Token: 0x170021D6 RID: 8662
+	// (get) Token: 0x06016203 RID: 90627 RVA: 0x0066E1B4 File Offset: 0x0066C3B4
 	public bool CanDodge
 	{
 		get
@@ -222,8 +221,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700217B RID: 8571
-	// (get) Token: 0x0601895C RID: 100700 RVA: 0x00648304 File Offset: 0x00646504
+	// Token: 0x170021D7 RID: 8663
+	// (get) Token: 0x06016204 RID: 90628 RVA: 0x0066E1E4 File Offset: 0x0066C3E4
 	public bool DestroyOnCountZero
 	{
 		get
@@ -236,8 +235,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700217C RID: 8572
-	// (get) Token: 0x0601895D RID: 100701 RVA: 0x00648334 File Offset: 0x00646534
+	// Token: 0x170021D8 RID: 8664
+	// (get) Token: 0x06016205 RID: 90629 RVA: 0x0066E214 File Offset: 0x0066C414
 	public int[] PresentTagIds
 	{
 		get
@@ -247,7 +246,7 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x0601895E RID: 100702 RVA: 0x00648344 File Offset: 0x00646544
+	// Token: 0x06016206 RID: 90630 RVA: 0x0066E224 File Offset: 0x0066C424
 	private void InitPresetTag()
 	{
 		if (!this.PresetTagInit)
@@ -271,8 +270,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700217D RID: 8573
-	// (get) Token: 0x0601895F RID: 100703 RVA: 0x006483C3 File Offset: 0x006465C3
+	// Token: 0x170021D9 RID: 8665
+	// (get) Token: 0x06016207 RID: 90631 RVA: 0x0066E2A3 File Offset: 0x0066C4A3
 	public bool IgnoreWater
 	{
 		get
@@ -285,8 +284,8 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x1700217E RID: 8574
-	// (get) Token: 0x06018960 RID: 100704 RVA: 0x006483F3 File Offset: 0x006465F3
+	// Token: 0x170021DA RID: 8666
+	// (get) Token: 0x06016208 RID: 90632 RVA: 0x0066E2D3 File Offset: 0x0066C4D3
 	public bool DestroyOnFrozen
 	{
 		get
@@ -299,129 +298,89 @@ public class BulletDataLogic
 		}
 	}
 
-	// Token: 0x06018961 RID: 100705 RVA: 0x00648424 File Offset: 0x00646624
+	// Token: 0x06016209 RID: 90633 RVA: 0x0066E304 File Offset: 0x0066C504
 	public BulletDataLogic(TSoftObjectPtr<BulletLogicType_C> data)
 	{
-		string text = data.ToAssetPathName();
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			if (!string.IsNullOrEmpty(text) && !(text == "None"))
-			{
-				TSoftObjectPtr<UObject> tsoftObjectPtr = data.As<UObject>();
-				if (UKismetSystemLibrary.IsValidSoftObjectReference(tsoftObjectPtr))
-				{
-					goto IL_6F;
-				}
-			}
-			CombatLog instance = CombatLog.Instance;
-			CombatLog.EDebugModule flag = CombatLog.EDebugModule.Bullet;
-			Entity entity = null;
-			string message = "子弹配置出错，没有配置逻辑设置.预设";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("配置路径", text ?? "");
-			instance.Error(flag, entity, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			return;
-		}
-		IL_6F:
-		this.Data = ResourceSystem.Instance.Load<BulletLogicType_C>(text, "js_undefined");
-		if (this.Data == null)
-		{
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				CombatLog instance2 = CombatLog.Instance;
-				CombatLog.EDebugModule flag2 = CombatLog.EDebugModule.Bullet;
-				Entity entity2 = null;
-				string message2 = "子弹配置出错，逻辑设置.预设 资源加载失败";
-				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("配置路径", text ?? "");
-				instance2.Error(flag2, entity2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-			}
-			return;
-		}
-		if (Info.Instance.IsBuildDevelopmentOrDebug && !this.ProfileName.ToString().ToLower().StartsWith("bullet_"))
-		{
-			CombatLog instance3 = CombatLog.Instance;
-			CombatLog.EDebugModule flag3 = CombatLog.EDebugModule.Bullet;
-			Entity entity3 = null;
-			string message3 = "子弹配置出错，逻辑设置.预设.子弹碰撞预设 填写的值不对";
-			ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("配置路径", text);
-			instance3.Error(flag3, entity3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
-		}
+		string path = data.ToAssetPathName();
+		this.Data = ResourceSystem.Instance.Load<BulletLogicType_C>(path, "js_undefined");
+		BulletLogicType_C data2 = this.Data;
 	}
 
-	// Token: 0x06018962 RID: 100706 RVA: 0x00648552 File Offset: 0x00646752
+	// Token: 0x0601620A RID: 90634 RVA: 0x0066E33B File Offset: 0x0066C53B
 	public void Preload()
 	{
 		this.InitPresetTag();
 	}
 
-	// Token: 0x0400B66B RID: 46699
+	// Token: 0x0400B9E5 RID: 47589
 	[Nullable(2)]
 	public readonly BulletLogicType_C Data;
 
-	// Token: 0x0400B66C RID: 46700
+	// Token: 0x0400B9E6 RID: 47590
 	[Nullable(2)]
 	private string ComponentNameInternal;
 
-	// Token: 0x0400B66D RID: 46701
+	// Token: 0x0400B9E7 RID: 47591
 	private bool ComponentNameInit;
 
-	// Token: 0x0400B66E RID: 46702
+	// Token: 0x0400B9E8 RID: 47592
 	private EBulletHitDirectionType? HitDirectionTypeInternal;
 
-	// Token: 0x0400B66F RID: 46703
+	// Token: 0x0400B9E9 RID: 47593
 	private bool? DestroyOnHitCharacterInternal;
 
-	// Token: 0x0400B670 RID: 46704
+	// Token: 0x0400B9EA RID: 47594
 	private bool? DestroyOnHitObstacleInternal;
 
-	// Token: 0x0400B671 RID: 46705
+	// Token: 0x0400B9EB RID: 47595
 	private FName? ProfileNameInternal;
 
-	// Token: 0x0400B672 RID: 46706
+	// Token: 0x0400B9EC RID: 47596
 	private bool ProfileNameInit;
 
-	// Token: 0x0400B673 RID: 46707
+	// Token: 0x0400B9ED RID: 47597
 	private EBulletType? TypeInternal;
 
-	// Token: 0x0400B674 RID: 46708
+	// Token: 0x0400B9EE RID: 47598
 	private bool? InteractWithWaterInternal;
 
-	// Token: 0x0400B675 RID: 46709
+	// Token: 0x0400B9EF RID: 47599
 	private bool? InteractWithAirWallInternal;
 
-	// Token: 0x0400B676 RID: 46710
+	// Token: 0x0400B9F0 RID: 47600
 	private int? ReboundChannelInternal;
 
-	// Token: 0x0400B677 RID: 46711
+	// Token: 0x0400B9F1 RID: 47601
 	private bool? CanCounterAttackInternal;
 
-	// Token: 0x0400B678 RID: 46712
+	// Token: 0x0400B9F2 RID: 47602
 	private bool? CounterAttackIgnoreAngleInternal;
 
-	// Token: 0x0400B679 RID: 46713
+	// Token: 0x0400B9F3 RID: 47603
 	private bool? CounterAttackIgnoreDistanceInternal;
 
-	// Token: 0x0400B67A RID: 46714
+	// Token: 0x0400B9F4 RID: 47604
 	private bool? CanBreakWindupAttackInternal;
 
-	// Token: 0x0400B67B RID: 46715
+	// Token: 0x0400B9F5 RID: 47605
 	private bool? CanVisionCounterAttackInternal;
 
-	// Token: 0x0400B67C RID: 46716
+	// Token: 0x0400B9F6 RID: 47606
 	private bool? CanDodgeInternal;
 
-	// Token: 0x0400B67D RID: 46717
+	// Token: 0x0400B9F7 RID: 47607
 	private bool? DestroyOnCountZeroInternal;
 
-	// Token: 0x0400B67E RID: 46718
+	// Token: 0x0400B9F8 RID: 47608
 	[Nullable(2)]
 	private int[] PresentTagIdsInternal;
 
-	// Token: 0x0400B67F RID: 46719
+	// Token: 0x0400B9F9 RID: 47609
 	private bool PresetTagInit;
 
-	// Token: 0x0400B680 RID: 46720
+	// Token: 0x0400B9FA RID: 47610
 	private bool? IgnoreWaterInternal;
 
-	// Token: 0x0400B681 RID: 46721
+	// Token: 0x0400B9FB RID: 47611
 	private bool? DestroyOnFrozenInternal;
 }

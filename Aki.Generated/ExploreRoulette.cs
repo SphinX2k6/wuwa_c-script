@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C51 RID: 3153
+	// Token: 0x02000D34 RID: 3380
 	public struct ExploreRoulette : IFlatbufferObject
 	{
-		// Token: 0x17000FF3 RID: 4083
-		// (get) Token: 0x06006BAE RID: 27566 RVA: 0x00228D6C File Offset: 0x00226F6C
+		// Token: 0x1700104C RID: 4172
+		// (get) Token: 0x060071B0 RID: 29104 RVA: 0x00248018 File Offset: 0x00246218
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BAF RID: 27567 RVA: 0x00228D79 File Offset: 0x00226F79
+		// Token: 0x060071B1 RID: 29105 RVA: 0x00248025 File Offset: 0x00246225
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006BB0 RID: 27568 RVA: 0x00228D80 File Offset: 0x00226F80
+		// Token: 0x060071B2 RID: 29106 RVA: 0x0024802C File Offset: 0x0024622C
 		public static ExploreRoulette GetRootAsExploreRoulette(ByteBuffer _bb)
 		{
 			return ExploreRoulette.GetRootAsExploreRoulette(_bb, default(ExploreRoulette));
 		}
 
-		// Token: 0x06006BB1 RID: 27569 RVA: 0x00228D9C File Offset: 0x00226F9C
+		// Token: 0x060071B3 RID: 29107 RVA: 0x00248048 File Offset: 0x00246248
 		public static ExploreRoulette GetRootAsExploreRoulette(ByteBuffer _bb, ExploreRoulette obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006BB2 RID: 27570 RVA: 0x00228DB9 File Offset: 0x00226FB9
+		// Token: 0x060071B4 RID: 29108 RVA: 0x00248065 File Offset: 0x00246265
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006BB3 RID: 27571 RVA: 0x00228DC8 File Offset: 0x00226FC8
+		// Token: 0x060071B5 RID: 29109 RVA: 0x00248074 File Offset: 0x00246274
 		public ExploreRoulette __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000FF4 RID: 4084
-		// (get) Token: 0x06006BB4 RID: 27572 RVA: 0x00228DD8 File Offset: 0x00226FD8
+		// Token: 0x1700104D RID: 4173
+		// (get) Token: 0x060071B6 RID: 29110 RVA: 0x00248084 File Offset: 0x00246284
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BB5 RID: 27573 RVA: 0x00228E14 File Offset: 0x00227014
+		// Token: 0x060071B7 RID: 29111 RVA: 0x002480C0 File Offset: 0x002462C0
 		public string BanTags(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000FF5 RID: 4085
-		// (get) Token: 0x06006BB6 RID: 27574 RVA: 0x00228E50 File Offset: 0x00227050
+		// Token: 0x1700104E RID: 4174
+		// (get) Token: 0x060071B8 RID: 29112 RVA: 0x002480FC File Offset: 0x002462FC
 		public int BanTagsLength
 		{
 			get
@@ -91,24 +91,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BB7 RID: 27575 RVA: 0x00228E7B File Offset: 0x0022707B
+		// Token: 0x060071B9 RID: 29113 RVA: 0x00248127 File Offset: 0x00246327
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BanTagsIter()或GetBanTagsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] BanTags()
+		public string[] BanTags()
 		{
 			return this.BanTagsIter().ToArray<string>();
 		}
 
-		// Token: 0x06006BB8 RID: 27576 RVA: 0x00228E88 File Offset: 0x00227088
+		// Token: 0x060071BA RID: 29114 RVA: 0x00248134 File Offset: 0x00246334
 		[NullableContext(1)]
-		public readonly IEnumerable<string> BanTagsIter()
+		public IEnumerable<string> BanTagsIter()
 		{
 			ExploreRoulette.<BanTagsIter>d__14 <BanTagsIter>d__ = new ExploreRoulette.<BanTagsIter>d__14(-2);
 			<BanTagsIter>d__.<>3__<>4__this = this;
 			return <BanTagsIter>d__;
 		}
 
-		// Token: 0x04004C98 RID: 19608
+		// Token: 0x0400527B RID: 21115
 		private Table __p;
 	}
 }

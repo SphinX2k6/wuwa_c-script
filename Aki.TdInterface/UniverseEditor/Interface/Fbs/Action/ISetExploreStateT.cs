@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FED RID: 28653
+	// Token: 0x020077B6 RID: 30646
 	public class ISetExploreStateT
 	{
-		// Token: 0x1700D4C5 RID: 54469
-		// (get) Token: 0x06032AAA RID: 207530 RVA: 0x006D5CF5 File Offset: 0x006D3EF5
-		// (set) Token: 0x06032AAB RID: 207531 RVA: 0x006D5CFD File Offset: 0x006D3EFD
+		// Token: 0x1700E099 RID: 57497
+		// (get) Token: 0x06035D10 RID: 220432 RVA: 0x00735939 File Offset: 0x00733B39
+		// (set) Token: 0x06035D11 RID: 220433 RVA: 0x00735941 File Offset: 0x00733B41
 		public ITeleControlConfigT Config { get; set; }
 
-		// Token: 0x06032AAC RID: 207532 RVA: 0x006D5D06 File Offset: 0x006D3F06
+		// Token: 0x06035D12 RID: 220434 RVA: 0x0073594A File Offset: 0x00733B4A
 		public ISetExploreStateT()
 		{
 			this.Config = null;

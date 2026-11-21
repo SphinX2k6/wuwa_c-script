@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000426 RID: 1062
+	// Token: 0x0200043C RID: 1084
 	public class ConfigInfrArchiveTaskByTaskId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018ED RID: 6381 RVA: 0x000E693B File Offset: 0x000E4B3B
+		// Token: 0x06001971 RID: 6513 RVA: 0x000ED08F File Offset: 0x000EB28F
 		static ConfigInfrArchiveTaskByTaskId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrArchiveTaskByTaskId.CreateStaticDefaultValue), new Action(ConfigInfrArchiveTaskByTaskId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018EE RID: 6382 RVA: 0x000E695C File Offset: 0x000E4B5C
+		// Token: 0x06001972 RID: 6514 RVA: 0x000ED0B0 File Offset: 0x000EB2B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrArchiveTaskByTaskId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018EF RID: 6383 RVA: 0x000E69DB File Offset: 0x000E4BDB
+		// Token: 0x06001973 RID: 6515 RVA: 0x000ED12F File Offset: 0x000EB32F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrArchiveTaskByTaskId.LogPair = null;
 			ConfigInfrArchiveTaskByTaskId.HandleId = 0;
 		}
 
-		// Token: 0x060018F0 RID: 6384 RVA: 0x000E69E9 File Offset: 0x000E4BE9
+		// Token: 0x06001974 RID: 6516 RVA: 0x000ED13D File Offset: 0x000EB33D
 		public static void Init()
 		{
 			ConfigInfrArchiveTaskByTaskId.HandleId = ConfigCommon.InitDataStatement(ConfigInfrArchiveTaskByTaskId.HandleId, "db_infrastructure.db", "select BinData from `InfrArchiveTask` where TaskId=?");
 		}
 
-		// Token: 0x060018F1 RID: 6385 RVA: 0x000E6A04 File Offset: 0x000E4C04
+		// Token: 0x06001975 RID: 6517 RVA: 0x000ED158 File Offset: 0x000EB358
 		public static InfrArchiveTask? GetConfig(int p0TaskId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrArchiveTaskByTaskId.HandleId, ConfigInfrArchiveTaskByTaskId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrArchiveTask?(rootAsInfrArchiveTask);
 		}
 
-		// Token: 0x04001CEE RID: 7406
+		// Token: 0x04001D88 RID: 7560
 		private const string DB = "db_infrastructure.db";
 
-		// Token: 0x04001CEF RID: 7407
+		// Token: 0x04001D89 RID: 7561
 		private const string FILE = "j.基建_档案馆.xlsx";
 
-		// Token: 0x04001CF0 RID: 7408
+		// Token: 0x04001D8A RID: 7562
 		private const string TABLE = "InfrArchiveTask";
 
-		// Token: 0x04001CF1 RID: 7409
+		// Token: 0x04001D8B RID: 7563
 		private const string COMMAND = "select BinData from `InfrArchiveTask` where TaskId=?";
 
-		// Token: 0x04001CF2 RID: 7410
+		// Token: 0x04001D8C RID: 7564
 		private const string KEY_PREFIX = "InfrArchiveTaskByTaskId";
 
-		// Token: 0x04001CF3 RID: 7411
+		// Token: 0x04001D8D RID: 7565
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CF4 RID: 7412
+		// Token: 0x04001D8E RID: 7566
 		private static int HandleId;
 	}
 }

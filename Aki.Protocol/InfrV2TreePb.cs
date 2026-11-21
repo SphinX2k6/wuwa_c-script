@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200080C RID: 2060
+	// Token: 0x020007F8 RID: 2040
 	public sealed class InfrV2TreePb : IMessage<InfrV2TreePb>, IMessage, IEquatable<InfrV2TreePb>, IDeepCloneable<InfrV2TreePb>, IBufferMessage
 	{
-		// Token: 0x0600B846 RID: 47174 RVA: 0x001B6F99 File Offset: 0x001B5199
+		// Token: 0x0600B6F0 RID: 46832 RVA: 0x001B4558 File Offset: 0x001B2758
 		[NullableContext(1)]
 		public static InfrV2TreePb Create()
 		{
 			return new InfrV2TreePb();
 		}
 
-		// Token: 0x17002520 RID: 9504
-		// (get) Token: 0x0600B847 RID: 47175 RVA: 0x001B6FA0 File Offset: 0x001B51A0
+		// Token: 0x170024D6 RID: 9430
+		// (get) Token: 0x0600B6F1 RID: 46833 RVA: 0x001B455F File Offset: 0x001B275F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002521 RID: 9505
-		// (get) Token: 0x0600B848 RID: 47176 RVA: 0x001B6FA3 File Offset: 0x001B51A3
+		// Token: 0x170024D7 RID: 9431
+		// (get) Token: 0x0600B6F2 RID: 46834 RVA: 0x001B4562 File Offset: 0x001B2762
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B849 RID: 47177 RVA: 0x001B6FAA File Offset: 0x001B51AA
+		// Token: 0x0600B6F3 RID: 46835 RVA: 0x001B4569 File Offset: 0x001B2769
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2TreePb()
 		{
 		}
 
-		// Token: 0x0600B84A RID: 47178 RVA: 0x001B6FBD File Offset: 0x001B51BD
+		// Token: 0x0600B6F4 RID: 46836 RVA: 0x001B457C File Offset: 0x001B277C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2TreePb(InfrV2TreePb other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600B84B RID: 47179 RVA: 0x001B6FF3 File Offset: 0x001B51F3
+		// Token: 0x0600B6F5 RID: 46837 RVA: 0x001B45B2 File Offset: 0x001B27B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InfrV2TreePb Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new InfrV2TreePb(this);
 		}
 
-		// Token: 0x17002522 RID: 9506
-		// (get) Token: 0x0600B84C RID: 47180 RVA: 0x001B6FFB File Offset: 0x001B51FB
+		// Token: 0x170024D8 RID: 9432
+		// (get) Token: 0x0600B6F6 RID: 46838 RVA: 0x001B45BA File Offset: 0x001B27BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<InfrV2OneTree> Trees
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002523 RID: 9507
-		// (get) Token: 0x0600B84D RID: 47181 RVA: 0x001B7003 File Offset: 0x001B5203
-		// (set) Token: 0x0600B84E RID: 47182 RVA: 0x001B700B File Offset: 0x001B520B
+		// Token: 0x170024D9 RID: 9433
+		// (get) Token: 0x0600B6F7 RID: 46839 RVA: 0x001B45C2 File Offset: 0x001B27C2
+		// (set) Token: 0x0600B6F8 RID: 46840 RVA: 0x001B45CA File Offset: 0x001B27CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ManualTraceTree
@@ -96,7 +96,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B84F RID: 47183 RVA: 0x001B7014 File Offset: 0x001B5214
+		// Token: 0x0600B6F9 RID: 46841 RVA: 0x001B45D3 File Offset: 0x001B27D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			return this.Equals(other as InfrV2TreePb);
 		}
 
-		// Token: 0x0600B850 RID: 47184 RVA: 0x001B7024 File Offset: 0x001B5224
+		// Token: 0x0600B6FA RID: 46842 RVA: 0x001B45E4 File Offset: 0x001B27E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(InfrV2TreePb other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.trees_.Equals(other.trees_) && this.ManualTraceTree == other.ManualTraceTree && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600B851 RID: 47185 RVA: 0x001B7074 File Offset: 0x001B5274
+		// Token: 0x0600B6FB RID: 46843 RVA: 0x001B4634 File Offset: 0x001B2834
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B852 RID: 47186 RVA: 0x001B70C1 File Offset: 0x001B52C1
+		// Token: 0x0600B6FC RID: 46844 RVA: 0x001B4681 File Offset: 0x001B2881
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600B853 RID: 47187 RVA: 0x001B70CE File Offset: 0x001B52CE
+		// Token: 0x0600B6FD RID: 46845 RVA: 0x001B468E File Offset: 0x001B288E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600B854 RID: 47188 RVA: 0x001B70D8 File Offset: 0x001B52D8
+		// Token: 0x0600B6FE RID: 46846 RVA: 0x001B4698 File Offset: 0x001B2898
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B855 RID: 47189 RVA: 0x001B7128 File Offset: 0x001B5328
+		// Token: 0x0600B6FF RID: 46847 RVA: 0x001B46E8 File Offset: 0x001B28E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B856 RID: 47190 RVA: 0x001B717C File Offset: 0x001B537C
+		// Token: 0x0600B700 RID: 46848 RVA: 0x001B473C File Offset: 0x001B293C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(InfrV2TreePb other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600B857 RID: 47191 RVA: 0x001B71C9 File Offset: 0x001B53C9
+		// Token: 0x0600B701 RID: 46849 RVA: 0x001B4789 File Offset: 0x001B2989
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -206,7 +206,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600B858 RID: 47192 RVA: 0x001B71D4 File Offset: 0x001B53D4
+		// Token: 0x0600B702 RID: 46850 RVA: 0x001B4794 File Offset: 0x001B2994
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,22 +236,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005132 RID: 20786
+		// Token: 0x0400512B RID: 20779
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005133 RID: 20787
+		// Token: 0x0400512C RID: 20780
 		public const int TreesFieldNumber = 1;
 
-		// Token: 0x04005134 RID: 20788
+		// Token: 0x0400512D RID: 20781
 		private static readonly FieldCodec<InfrV2OneTree> _repeated_trees_codec = FieldCodec.ForMessage<InfrV2OneTree>(10U, InfrV2OneTree.Parser);
 
-		// Token: 0x04005135 RID: 20789
+		// Token: 0x0400512E RID: 20782
 		private readonly RepeatedField<InfrV2OneTree> trees_ = new RepeatedField<InfrV2OneTree>();
 
-		// Token: 0x04005136 RID: 20790
+		// Token: 0x0400512F RID: 20783
 		public const int ManualTraceTreeFieldNumber = 3;
 
-		// Token: 0x04005137 RID: 20791
+		// Token: 0x04005130 RID: 20784
 		private int manualTraceTree_;
 	}
 }

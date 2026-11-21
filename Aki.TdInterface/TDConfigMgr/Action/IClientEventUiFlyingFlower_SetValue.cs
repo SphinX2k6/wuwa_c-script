@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018B5 RID: 6325
+	// Token: 0x02001A40 RID: 6720
 	public class IClientEventUiFlyingFlower_SetValue
 	{
-		// Token: 0x04005561 RID: 21857
+		// Token: 0x040059AE RID: 22958
 		public EClientEventUiType Type;
 
-		// Token: 0x04005562 RID: 21858
-		[Nullable(1)]
+		// Token: 0x040059AF RID: 22959
 		public IClientEventFlyingFlowerUpdateSubtitle EventType;
 	}
 }

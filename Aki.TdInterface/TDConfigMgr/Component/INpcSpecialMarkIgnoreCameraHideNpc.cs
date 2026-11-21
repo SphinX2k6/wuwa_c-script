@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000576 RID: 1398
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005DD RID: 1501
 	public class INpcSpecialMarkIgnoreCameraHideNpc : INpcSpecialMarkBase
 	{
-		// Token: 0x06001CA2 RID: 7330 RVA: 0x00051A88 File Offset: 0x0004FC88
+		// Token: 0x06001E9E RID: 7838 RVA: 0x00056844 File Offset: 0x00054A44
 		private INpcSpecialMarkIgnoreCameraHideNpc_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001CA3 RID: 7331 RVA: 0x00051AC0 File Offset: 0x0004FCC0
+		// Token: 0x06001E9F RID: 7839 RVA: 0x0005687C File Offset: 0x00054A7C
 		public static INpcSpecialMarkIgnoreCameraHideNpc Create([Nullable(2)] INpcSpecialMarkIgnoreCameraHideNpc instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CA4 RID: 7332 RVA: 0x00051AD3 File Offset: 0x0004FCD3
+		// Token: 0x06001EA0 RID: 7840 RVA: 0x0005688F File Offset: 0x00054A8F
 		public static INpcSpecialMarkIgnoreCameraHideNpc CreateFromSetValue([Nullable(2)] INpcSpecialMarkIgnoreCameraHideNpc_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CA5 RID: 7333 RVA: 0x00051AE6 File Offset: 0x0004FCE6
+		// Token: 0x06001EA1 RID: 7841 RVA: 0x000568A2 File Offset: 0x00054AA2
 		public new INpcSpecialMarkIgnoreCameraHideNpc_SetValue ToSetValue()
 		{
 			return new INpcSpecialMarkIgnoreCameraHideNpc_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700077F RID: 1919
-		// (get) Token: 0x06001CA6 RID: 7334 RVA: 0x00051AF9 File Offset: 0x0004FCF9
-		// (set) Token: 0x06001CA7 RID: 7335 RVA: 0x00051B24 File Offset: 0x0004FD24
+		// Token: 0x17000802 RID: 2050
+		// (get) Token: 0x06001EA2 RID: 7842 RVA: 0x000568B5 File Offset: 0x00054AB5
+		// (set) Token: 0x06001EA3 RID: 7843 RVA: 0x000568E0 File Offset: 0x00054AE0
 		public override ESpecialNpcMarkType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001461 RID: 5217
+		// Token: 0x040015CB RID: 5579
 		[Nullable(2)]
 		protected new INpcSpecialMarkIgnoreCameraHideNpc FbInstance;
 
-		// Token: 0x04001462 RID: 5218
+		// Token: 0x040015CC RID: 5580
 		[Nullable(2)]
 		protected new INpcSpecialMarkIgnoreCameraHideNpc_SetValue PocoInterface;
 	}

@@ -3,22 +3,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005583 RID: 21891
+	// Token: 0x02004559 RID: 17753
 	public class MarkShowState : IMarkShowState
 	{
-		// Token: 0x17008658 RID: 34392
-		// (get) Token: 0x06037CBF RID: 228543 RVA: 0x00D39504 File Offset: 0x00D37704
-		// (set) Token: 0x06037CC0 RID: 228544 RVA: 0x00D3950C File Offset: 0x00D3770C
+		// Token: 0x17005A1F RID: 23071
+		// (get) Token: 0x0602CBBD RID: 183229 RVA: 0x00C871E4 File Offset: 0x00C853E4
+		// (set) Token: 0x0602CBBE RID: 183230 RVA: 0x00C871EC File Offset: 0x00C853EC
 		public int Id { get; set; }
 
-		// Token: 0x17008659 RID: 34393
-		// (get) Token: 0x06037CC1 RID: 228545 RVA: 0x00D39515 File Offset: 0x00D37715
-		// (set) Token: 0x06037CC2 RID: 228546 RVA: 0x00D3951D File Offset: 0x00D3771D
+		// Token: 0x17005A20 RID: 23072
+		// (get) Token: 0x0602CBBF RID: 183231 RVA: 0x00C871F5 File Offset: 0x00C853F5
+		// (set) Token: 0x0602CBC0 RID: 183232 RVA: 0x00C871FD File Offset: 0x00C853FD
 		public bool NeedFocus { get; set; }
 
-		// Token: 0x1700865A RID: 34394
-		// (get) Token: 0x06037CC3 RID: 228547 RVA: 0x00D39526 File Offset: 0x00D37726
-		// (set) Token: 0x06037CC4 RID: 228548 RVA: 0x00D3952E File Offset: 0x00D3772E
+		// Token: 0x17005A21 RID: 23073
+		// (get) Token: 0x0602CBC1 RID: 183233 RVA: 0x00C87206 File Offset: 0x00C85406
+		// (set) Token: 0x0602CBC2 RID: 183234 RVA: 0x00C8720E File Offset: 0x00C8540E
 		public MapMarkShowFlag ShowFlag { get; set; }
 	}
 }

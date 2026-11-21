@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E45 RID: 7749
+	// Token: 0x0200207A RID: 8314
 	public class ISetStateMachineBlendAnimType_SetValue
 	{
-		// Token: 0x0400631B RID: 25371
+		// Token: 0x040068FF RID: 26879
 		public EBlendAnimType Type;
 
-		// Token: 0x0400631C RID: 25372
+		// Token: 0x04006900 RID: 26880
 		public EBlendAnimState State;
 	}
 }

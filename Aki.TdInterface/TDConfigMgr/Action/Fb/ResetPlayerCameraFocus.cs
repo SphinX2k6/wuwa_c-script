@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028CC RID: 10444
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BA1 RID: 11169
 	public class ResetPlayerCameraFocus : ActionParams
 	{
-		// Token: 0x0600E7F9 RID: 59385 RVA: 0x00220D45 File Offset: 0x0021EF45
+		// Token: 0x0600F628 RID: 63016 RVA: 0x0023DCC5 File Offset: 0x0023BEC5
 		public static ResetPlayerCameraFocus Create(IResetPlayerCameraFocus? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004823 RID: 18467
-		// (get) Token: 0x0600E7FA RID: 59386 RVA: 0x00220D64 File Offset: 0x0021EF64
+		// Token: 0x17004B94 RID: 19348
+		// (get) Token: 0x0600F629 RID: 63017 RVA: 0x0023DCE4 File Offset: 0x0023BEE4
 		public virtual IResetPlayerFocusType ResetType
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004824 RID: 18468
-		// (get) Token: 0x0600E7FB RID: 59387 RVA: 0x00220D93 File Offset: 0x0021EF93
+		// Token: 0x17004B95 RID: 19349
+		// (get) Token: 0x0600F62A RID: 63018 RVA: 0x0023DD13 File Offset: 0x0023BF13
 		public virtual float FadeInTime
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004825 RID: 18469
-		// (get) Token: 0x0600E7FC RID: 59388 RVA: 0x00220DA0 File Offset: 0x0021EFA0
+		// Token: 0x17004B96 RID: 19350
+		// (get) Token: 0x0600F62B RID: 63019 RVA: 0x0023DD20 File Offset: 0x0023BF20
 		public virtual bool? CannotInterrupt
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004826 RID: 18470
-		// (get) Token: 0x0600E7FD RID: 59389 RVA: 0x00220DD8 File Offset: 0x0021EFD8
+		// Token: 0x17004B97 RID: 19351
+		// (get) Token: 0x0600F62C RID: 63020 RVA: 0x0023DD58 File Offset: 0x0023BF58
 		public virtual float? Duration
 		{
 			get
@@ -76,13 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400803C RID: 32828
+		// Token: 0x040086FB RID: 34555
 		private IResetPlayerCameraFocus Instance;
 
-		// Token: 0x0400803D RID: 32829
+		// Token: 0x040086FC RID: 34556
 		private IResetPlayerFocusType _ResetTypeCache;
 
-		// Token: 0x0400803E RID: 32830
+		// Token: 0x040086FD RID: 34557
 		private bool _ResetTypeInited;
 	}
 }

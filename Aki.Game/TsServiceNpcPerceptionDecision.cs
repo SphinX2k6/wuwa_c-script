@@ -13,31 +13,28 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Service/TsServiceNpcPerceptionDecision.TsServiceNpcPerceptionDecision_C")]
 public class TsServiceNpcPerceptionDecision : UBTService_BlueprintBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600034B RID: 843 RVA: 0x0000F438 File Offset: 0x0000D638
+	// Token: 0x0600034B RID: 843 RVA: 0x0000FB50 File Offset: 0x0000DD50
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsServiceNpcPerceptionDecision) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsServiceNpcPerceptionDecision.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600034C RID: 844 RVA: 0x0000F4D8 File Offset: 0x0000D6D8
+	// Token: 0x0600034C RID: 844 RVA: 0x0000FC08 File Offset: 0x0000DE08
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -93,7 +90,7 @@ public class TsServiceNpcPerceptionDecision : UBTService_BlueprintBase, IUnrealU
 		BlackboardController.Instance.SetIntValueByEntity(id, ENpcBlackBoardKeys.NeutralCount.ToString(), count);
 	}
 
-	// Token: 0x0600034D RID: 845 RVA: 0x0000F670 File Offset: 0x0000D870
+	// Token: 0x0600034D RID: 845 RVA: 0x0000FDA0 File Offset: 0x0000DFA0
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsServiceNpcPerceptionDecision._ClassPtr == IntPtr.Zero)
@@ -103,23 +100,23 @@ public class TsServiceNpcPerceptionDecision : UBTService_BlueprintBase, IUnrealU
 		return TsServiceNpcPerceptionDecision._ClassPtr;
 	}
 
-	// Token: 0x0600034E RID: 846 RVA: 0x0000F694 File Offset: 0x0000D894
+	// Token: 0x0600034E RID: 846 RVA: 0x0000FDC4 File Offset: 0x0000DFC4
 	public TsServiceNpcPerceptionDecision() : this(BuiltinUtils.AllocNativeUObject(TsServiceNpcPerceptionDecision.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600034F RID: 847 RVA: 0x0000F6BC File Offset: 0x0000D8BC
+	// Token: 0x0600034F RID: 847 RVA: 0x0000FDEC File Offset: 0x0000DFEC
 	[NullableContext(1)]
 	public TsServiceNpcPerceptionDecision(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsServiceNpcPerceptionDecision.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000350 RID: 848 RVA: 0x0000F6EF File Offset: 0x0000D8EF
+	// Token: 0x06000350 RID: 848 RVA: 0x0000FE1F File Offset: 0x0000E01F
 	protected TsServiceNpcPerceptionDecision(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000351 RID: 849 RVA: 0x0000F6F8 File Offset: 0x0000D8F8
+	// Token: 0x06000351 RID: 849 RVA: 0x0000FE28 File Offset: 0x0000E028
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTService_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

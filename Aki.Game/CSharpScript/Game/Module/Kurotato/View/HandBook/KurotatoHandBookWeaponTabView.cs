@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Kurotato.Data;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 {
-	// Token: 0x02005767 RID: 22375
+	// Token: 0x0200473E RID: 18238
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoHandBookWeaponTabView : UiTabViewBase
 	{
-		// Token: 0x06038D7C RID: 232828 RVA: 0x00D81014 File Offset: 0x00D7F214
+		// Token: 0x0602DC8C RID: 187532 RVA: 0x00CCFAD8 File Offset: 0x00CCDCD8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D7D RID: 232829 RVA: 0x00D81104 File Offset: 0x00D7F304
+		// Token: 0x0602DC8D RID: 187533 RVA: 0x00CCFBC8 File Offset: 0x00CCDDC8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoHandBookWeaponTabView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,7 +51,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D7E RID: 232830 RVA: 0x00D81147 File Offset: 0x00D7F347
+		// Token: 0x0602DC8E RID: 187534 RVA: 0x00CCFC0B File Offset: 0x00CCDE0B
 		protected override void OnShowUiTabViewFromToggle()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -63,13 +62,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.RefreshCurrentList();
 		}
 
-		// Token: 0x06038D7F RID: 232831 RVA: 0x00D81165 File Offset: 0x00D7F365
+		// Token: 0x0602DC8F RID: 187535 RVA: 0x00CCFC29 File Offset: 0x00CCDE29
 		protected override void OnShowUiTabViewFromView()
 		{
 			this.RefreshCurrentList();
 		}
 
-		// Token: 0x06038D80 RID: 232832 RVA: 0x00D8116D File Offset: 0x00D7F36D
+		// Token: 0x0602DC90 RID: 187536 RVA: 0x00CCFC31 File Offset: 0x00CCDE31
 		private void RefreshCurrentList()
 		{
 			if (this.TabType == EKurotatoCardType.None)
@@ -84,14 +83,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			weaponLoopScrollView.RefreshAllGridProxies();
 		}
 
-		// Token: 0x06038D81 RID: 232833 RVA: 0x00D81189 File Offset: 0x00D7F389
+		// Token: 0x0602DC91 RID: 187537 RVA: 0x00CCFC4D File Offset: 0x00CCDE4D
 		protected override void OnHideUiTabViewBase(bool fromToggle)
 		{
 			this.ActivityData.ReadKurotatoItemRedDot();
 			this.ActivityData.ReadKurotatoWeaponRedDot();
 		}
 
-		// Token: 0x06038D82 RID: 232834 RVA: 0x00D811A4 File Offset: 0x00D7F3A4
+		// Token: 0x0602DC92 RID: 187538 RVA: 0x00CCFC68 File Offset: 0x00CCDE68
 		private void OnTabToggleClick(EKurotatoCardType tabType)
 		{
 			if (this.TabType == EKurotatoCardType.Weapon)
@@ -109,8 +108,11 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 				tabLayout.SelectGridProxyByKey((int)tabType, false);
 			}
 			List<IKurotatoMediumItemGridData> list = (tabType == EKurotatoCardType.Weapon) ? this.ActivityData.GetKurotatoWeaponList() : this.ActivityData.GetKurotatoItemList();
-			this.CurrentIdList = (from data in list
-			select data.Id).ToList<int>();
+			this.CurrentIdList = new List<int>(list.Count);
+			foreach (IKurotatoMediumItemGridData kurotatoMediumItemGridData in list)
+			{
+				this.CurrentIdList.Add(kurotatoMediumItemGridData.Id);
+			}
 			LoopScrollView<KurotatoWeaponMediumItemGrid, IKurotatoMediumItemGridData> weaponLoopScrollView = this.WeaponLoopScrollView;
 			if (weaponLoopScrollView != null)
 			{
@@ -151,7 +153,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			}));
 		}
 
-		// Token: 0x06038D83 RID: 232835 RVA: 0x00D81300 File Offset: 0x00D7F500
+		// Token: 0x0602DC93 RID: 187539 RVA: 0x00CCFDFC File Offset: 0x00CCDFFC
 		private void OnGirdItemToggleClick(int itemId)
 		{
 			int gridIndex = this.CurrentIdList.FindIndex((int id) => id == itemId);
@@ -168,7 +170,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			itemInfoTip.Refresh(this.TabType, itemId, true, false, null);
 		}
 
-		// Token: 0x06038D84 RID: 232836 RVA: 0x00D8136C File Offset: 0x00D7F56C
+		// Token: 0x0602DC94 RID: 187540 RVA: 0x00CCFE68 File Offset: 0x00CCE068
 		private KurotatoHandBookWeaponViewTabItem CreateTabItem()
 		{
 			return new KurotatoHandBookWeaponViewTabItem
@@ -177,7 +179,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			};
 		}
 
-		// Token: 0x06038D85 RID: 232837 RVA: 0x00D81388 File Offset: 0x00D7F588
+		// Token: 0x0602DC95 RID: 187541 RVA: 0x00CCFE84 File Offset: 0x00CCE084
 		private KurotatoWeaponMediumItemGrid CreateWeaponItem()
 		{
 			KurotatoWeaponMediumItemGrid item = new KurotatoWeaponMediumItemGrid();
@@ -194,13 +196,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return item;
 		}
 
-		// Token: 0x0401DD08 RID: 122120
+		// Token: 0x0401879E RID: 100254
 		private KurotatoActivityData ActivityData;
 
-		// Token: 0x0401DD09 RID: 122121
+		// Token: 0x0401879F RID: 100255
 		private EKurotatoCardType TabType = EKurotatoCardType.None;
 
-		// Token: 0x0401DD0A RID: 122122
+		// Token: 0x040187A0 RID: 100256
 		[Nullable(new byte[]
 		{
 			2,
@@ -208,7 +210,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 		})]
 		private GenericLayout<KurotatoHandBookWeaponViewTabItem, EKurotatoCardType> TabLayout;
 
-		// Token: 0x0401DD0B RID: 122123
+		// Token: 0x040187A1 RID: 100257
 		[Nullable(new byte[]
 		{
 			2,
@@ -217,30 +219,30 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 		})]
 		private LoopScrollView<KurotatoWeaponMediumItemGrid, IKurotatoMediumItemGridData> WeaponLoopScrollView;
 
-		// Token: 0x0401DD0C RID: 122124
+		// Token: 0x040187A2 RID: 100258
 		private List<int> CurrentIdList = new List<int>();
 
-		// Token: 0x0401DD0D RID: 122125
+		// Token: 0x040187A3 RID: 100259
 		[Nullable(2)]
 		private KurotatoItemInfoTipPanel ItemInfoTip;
 
-		// Token: 0x0200B96B RID: 47467
+		// Token: 0x0200A386 RID: 41862
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403811E RID: 229662
+			// Token: 0x04032B1A RID: 207642
 			LayoutTab,
-			// Token: 0x0403811F RID: 229663
+			// Token: 0x04032B1B RID: 207643
 			ItemTab,
-			// Token: 0x04038120 RID: 229664
+			// Token: 0x04032B1C RID: 207644
 			LayoutWeapon,
-			// Token: 0x04038121 RID: 229665
+			// Token: 0x04032B1D RID: 207645
 			ItemWeapon,
-			// Token: 0x04038122 RID: 229666
+			// Token: 0x04032B1E RID: 207646
 			TextCollected,
-			// Token: 0x04038123 RID: 229667
+			// Token: 0x04032B1F RID: 207647
 			ItemInfoPanel,
-			// Token: 0x04038124 RID: 229668
+			// Token: 0x04032B20 RID: 207648
 			ScrollWeapon
 		}
 	}

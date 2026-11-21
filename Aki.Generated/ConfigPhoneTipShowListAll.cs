@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006C0 RID: 1728
+	// Token: 0x020006D8 RID: 1752
 	public class ConfigPhoneTipShowListAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002890 RID: 10384 RVA: 0x0013EE7C File Offset: 0x0013D07C
+		// Token: 0x06002920 RID: 10528 RVA: 0x001458F8 File Offset: 0x00143AF8
 		static ConfigPhoneTipShowListAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhoneTipShowListAll.CreateStaticDefaultValue), new Action(ConfigPhoneTipShowListAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002891 RID: 10385 RVA: 0x0013EE9C File Offset: 0x0013D09C
+		// Token: 0x06002921 RID: 10529 RVA: 0x00145918 File Offset: 0x00143B18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhoneTipShowListAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002892 RID: 10386 RVA: 0x0013EF1B File Offset: 0x0013D11B
+		// Token: 0x06002922 RID: 10530 RVA: 0x00145997 File Offset: 0x00143B97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhoneTipShowListAll.LogPair = null;
 			ConfigPhoneTipShowListAll.HandleId = 0;
 		}
 
-		// Token: 0x06002893 RID: 10387 RVA: 0x0013EF29 File Offset: 0x0013D129
+		// Token: 0x06002923 RID: 10531 RVA: 0x001459A5 File Offset: 0x00143BA5
 		public static void Init()
 		{
 			ConfigPhoneTipShowListAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhoneTipShowListAll.HandleId, "db_phonemsg.db", "select BinData from `PhoneTipShowList`");
 		}
 
-		// Token: 0x06002894 RID: 10388 RVA: 0x0013EF44 File Offset: 0x0013D144
+		// Token: 0x06002924 RID: 10532 RVA: 0x001459C0 File Offset: 0x00143BC0
 		[NullableContext(2)]
 		public static IReadOnlyList<PhoneTipShowList> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002F26 RID: 12070
+		// Token: 0x04002FCE RID: 12238
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x04002F27 RID: 12071
+		// Token: 0x04002FCF RID: 12239
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x04002F28 RID: 12072
+		// Token: 0x04002FD0 RID: 12240
 		private const string TABLE = "PhoneTipShowList";
 
-		// Token: 0x04002F29 RID: 12073
+		// Token: 0x04002FD1 RID: 12241
 		private const string COMMAND = "select BinData from `PhoneTipShowList`";
 
-		// Token: 0x04002F2A RID: 12074
+		// Token: 0x04002FD2 RID: 12242
 		private const string KEY_PREFIX = "PhoneTipShowListAll";
 
-		// Token: 0x04002F2B RID: 12075
+		// Token: 0x04002FD3 RID: 12243
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F2C RID: 12076
+		// Token: 0x04002FD4 RID: 12244
 		private static int HandleId;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000934 RID: 2356
+	// Token: 0x0200097F RID: 2431
 	public class ConfigSkillButtonByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600374B RID: 14155 RVA: 0x00191F7C File Offset: 0x0019017C
+		// Token: 0x0600390D RID: 14605 RVA: 0x0019F19C File Offset: 0x0019D39C
 		static ConfigSkillButtonByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillButtonByRoleId.CreateStaticDefaultValue), new Action(ConfigSkillButtonByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600374C RID: 14156 RVA: 0x00191F9C File Offset: 0x0019019C
+		// Token: 0x0600390E RID: 14606 RVA: 0x0019F1BC File Offset: 0x0019D3BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillButtonByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600374D RID: 14157 RVA: 0x0019201B File Offset: 0x0019021B
+		// Token: 0x0600390F RID: 14607 RVA: 0x0019F23B File Offset: 0x0019D43B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillButtonByRoleId.LogPair = null;
 			ConfigSkillButtonByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x0600374E RID: 14158 RVA: 0x00192029 File Offset: 0x00190229
+		// Token: 0x06003910 RID: 14608 RVA: 0x0019F249 File Offset: 0x0019D449
 		public static void Init()
 		{
 			ConfigSkillButtonByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigSkillButtonByRoleId.HandleId, "db_skillbutton.db", "select BinData from `SkillButton` where RoleId=?");
 		}
 
-		// Token: 0x0600374F RID: 14159 RVA: 0x00192044 File Offset: 0x00190244
+		// Token: 0x06003911 RID: 14609 RVA: 0x0019F264 File Offset: 0x0019D464
 		[NullableContext(2)]
 		public static IReadOnlyList<SkillButton> GetConfigList(int p0RoleId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004052 RID: 16466
+		// Token: 0x0400425F RID: 16991
 		private const string DB = "db_skillbutton.db";
 
-		// Token: 0x04004053 RID: 16467
+		// Token: 0x04004260 RID: 16992
 		private const string FILE = "j.技能按钮.xlsx";
 
-		// Token: 0x04004054 RID: 16468
+		// Token: 0x04004261 RID: 16993
 		private const string TABLE = "SkillButton";
 
-		// Token: 0x04004055 RID: 16469
+		// Token: 0x04004262 RID: 16994
 		private const string COMMAND = "select BinData from `SkillButton` where RoleId=?";
 
-		// Token: 0x04004056 RID: 16470
+		// Token: 0x04004263 RID: 16995
 		private const string KEY_PREFIX = "SkillButtonByRoleId";
 
-		// Token: 0x04004057 RID: 16471
+		// Token: 0x04004264 RID: 16996
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004058 RID: 16472
+		// Token: 0x04004265 RID: 16997
 		private static int HandleId;
 	}
 }

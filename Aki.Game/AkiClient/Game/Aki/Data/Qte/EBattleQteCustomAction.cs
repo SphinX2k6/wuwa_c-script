@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Qte
 {
-	// Token: 0x02003EC8 RID: 16072
+	// Token: 0x0200318D RID: 12685
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Qte/EBattleQteCustomAction.EBattleQteCustomAction")]
 	public enum EBattleQteCustomAction : byte
 	{
-		// Token: 0x04014C10 RID: 85008
+		// Token: 0x04010BF6 RID: 68598
 		无,
-		// Token: 0x04014C11 RID: 85009
+		// Token: 0x04010BF7 RID: 68599
 		切换角色,
-		// Token: 0x04014C12 RID: 85010
+		// Token: 0x04010BF8 RID: 68600
 		切换到指定角色,
-		// Token: 0x04014C13 RID: 85011
+		// Token: 0x04010BF9 RID: 68601
 		EBattleQteCustomAction_MAX
 	}
 }

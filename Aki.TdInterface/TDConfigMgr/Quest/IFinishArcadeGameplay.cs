@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F71 RID: 3953
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200109B RID: 4251
 	public class IFinishArcadeGameplay : IQuestCondition
 	{
-		// Token: 0x060057DE RID: 22494 RVA: 0x000D69B0 File Offset: 0x000D4BB0
+		// Token: 0x06005DB2 RID: 23986 RVA: 0x000E341C File Offset: 0x000E161C
 		private IFinishArcadeGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060057DF RID: 22495 RVA: 0x000D69E8 File Offset: 0x000D4BE8
+		// Token: 0x06005DB3 RID: 23987 RVA: 0x000E3454 File Offset: 0x000E1654
 		public static IFinishArcadeGameplay Create([Nullable(2)] IFinishArcadeGameplay instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057E0 RID: 22496 RVA: 0x000D69FB File Offset: 0x000D4BFB
+		// Token: 0x06005DB4 RID: 23988 RVA: 0x000E3467 File Offset: 0x000E1667
 		public static IFinishArcadeGameplay CreateFromSetValue([Nullable(2)] IFinishArcadeGameplay_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060057E1 RID: 22497 RVA: 0x000D6A0E File Offset: 0x000D4C0E
+		// Token: 0x06005DB5 RID: 23989 RVA: 0x000E347A File Offset: 0x000E167A
 		public new IFinishArcadeGameplay_SetValue ToSetValue()
 		{
 			return new IFinishArcadeGameplay_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D47 RID: 7495
-		// (get) Token: 0x060057E2 RID: 22498 RVA: 0x000D6A39 File Offset: 0x000D4C39
-		// (set) Token: 0x060057E3 RID: 22499 RVA: 0x000D6A64 File Offset: 0x000D4C64
+		// Token: 0x17001EED RID: 7917
+		// (get) Token: 0x06005DB6 RID: 23990 RVA: 0x000E34A5 File Offset: 0x000E16A5
+		// (set) Token: 0x06005DB7 RID: 23991 RVA: 0x000E34D0 File Offset: 0x000E16D0
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D48 RID: 7496
-		// (get) Token: 0x060057E4 RID: 22500 RVA: 0x000D6A74 File Offset: 0x000D4C74
-		// (set) Token: 0x060057E5 RID: 22501 RVA: 0x000D6AD5 File Offset: 0x000D4CD5
+		// Token: 0x17001EEE RID: 7918
+		// (get) Token: 0x06005DB8 RID: 23992 RVA: 0x000E34E0 File Offset: 0x000E16E0
+		// (set) Token: 0x06005DB9 RID: 23993 RVA: 0x000E3541 File Offset: 0x000E1741
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D49 RID: 7497
-		// (get) Token: 0x060057E6 RID: 22502 RVA: 0x000D6AEA File Offset: 0x000D4CEA
-		// (set) Token: 0x060057E7 RID: 22503 RVA: 0x000D6B11 File Offset: 0x000D4D11
+		// Token: 0x17001EEF RID: 7919
+		// (get) Token: 0x06005DBA RID: 23994 RVA: 0x000E3556 File Offset: 0x000E1756
+		// (set) Token: 0x06005DBB RID: 23995 RVA: 0x000E357D File Offset: 0x000E177D
 		public virtual IArcadeGameplayBase ArcadeGameplay
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003516 RID: 13590
+		// Token: 0x04003847 RID: 14407
 		[Nullable(2)]
 		protected new IFinishArcadeGameplay FbInstance;
 
-		// Token: 0x04003517 RID: 13591
+		// Token: 0x04003848 RID: 14408
 		[Nullable(2)]
 		protected new IFinishArcadeGameplay_SetValue PocoInterface;
 
-		// Token: 0x04003518 RID: 13592
+		// Token: 0x04003849 RID: 14409
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003519 RID: 13593
+		// Token: 0x0400384A RID: 14410
 		private bool _PreConditionsInited;
 	}
 }

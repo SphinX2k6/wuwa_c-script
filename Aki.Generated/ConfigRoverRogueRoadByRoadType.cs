@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008EF RID: 2287
+	// Token: 0x0200093A RID: 2362
 	public class ConfigRoverRogueRoadByRoadType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060035AD RID: 13741 RVA: 0x00188BC0 File Offset: 0x00186DC0
+		// Token: 0x0600376F RID: 14191 RVA: 0x00195DE0 File Offset: 0x00193FE0
 		static ConfigRoverRogueRoadByRoadType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoverRogueRoadByRoadType.CreateStaticDefaultValue), new Action(ConfigRoverRogueRoadByRoadType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060035AE RID: 13742 RVA: 0x00188BE0 File Offset: 0x00186DE0
+		// Token: 0x06003770 RID: 14192 RVA: 0x00195E00 File Offset: 0x00194000
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoverRogueRoadByRoadType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060035AF RID: 13743 RVA: 0x00188C5F File Offset: 0x00186E5F
+		// Token: 0x06003771 RID: 14193 RVA: 0x00195E7F File Offset: 0x0019407F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoverRogueRoadByRoadType.LogPair = null;
 			ConfigRoverRogueRoadByRoadType.HandleId = 0;
 		}
 
-		// Token: 0x060035B0 RID: 13744 RVA: 0x00188C6D File Offset: 0x00186E6D
+		// Token: 0x06003772 RID: 14194 RVA: 0x00195E8D File Offset: 0x0019408D
 		public static void Init()
 		{
 			ConfigRoverRogueRoadByRoadType.HandleId = ConfigCommon.InitDataStatement(ConfigRoverRogueRoadByRoadType.HandleId, "db_roverlike.db", "select BinData from `RoverRogueRoad` where RoadType=?");
 		}
 
-		// Token: 0x060035B1 RID: 13745 RVA: 0x00188C88 File Offset: 0x00186E88
+		// Token: 0x06003773 RID: 14195 RVA: 0x00195EA8 File Offset: 0x001940A8
 		[NullableContext(2)]
 		public static IReadOnlyList<RoverRogueRoad> GetConfigList(int p0RoadType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003E6F RID: 15983
+		// Token: 0x0400407C RID: 16508
 		private const string DB = "db_roverlike.db";
 
-		// Token: 0x04003E70 RID: 15984
+		// Token: 0x0400407D RID: 16509
 		private const string FILE = "f.俯视肉鸽_关卡.xlsx";
 
-		// Token: 0x04003E71 RID: 15985
+		// Token: 0x0400407E RID: 16510
 		private const string TABLE = "RoverRogueRoad";
 
-		// Token: 0x04003E72 RID: 15986
+		// Token: 0x0400407F RID: 16511
 		private const string COMMAND = "select BinData from `RoverRogueRoad` where RoadType=?";
 
-		// Token: 0x04003E73 RID: 15987
+		// Token: 0x04004080 RID: 16512
 		private const string KEY_PREFIX = "RoverRogueRoadByRoadType";
 
-		// Token: 0x04003E74 RID: 15988
+		// Token: 0x04004081 RID: 16513
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003E75 RID: 15989
+		// Token: 0x04004082 RID: 16514
 		private static int HandleId;
 	}
 }

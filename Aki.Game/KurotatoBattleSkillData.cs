@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.GameMainView.Data;
 using CSharpScript.Game.Module.SkillButtonUi;
 using UnrealEngine;
 
-// Token: 0x02001CC2 RID: 7362
+// Token: 0x02001184 RID: 4484
 [NullableContext(2)]
 [Nullable(0)]
 public class KurotatoBattleSkillData : BattleSkillDataBase
 {
-	// Token: 0x0600DEBA RID: 57018 RVA: 0x00341F18 File Offset: 0x00340118
+	// Token: 0x0600B2D7 RID: 45783 RVA: 0x0034D940 File Offset: 0x0034BB40
 	public KurotatoBattleSkillData(int skillId)
 	{
 		this.SkillId = skillId;
 	}
 
-	// Token: 0x0600DEBB RID: 57019 RVA: 0x00341F30 File Offset: 0x00340130
+	// Token: 0x0600B2D8 RID: 45784 RVA: 0x0034D958 File Offset: 0x0034BB58
 	protected override void OnInitData()
 	{
 		if (this.SkillId == 0)
@@ -42,7 +42,7 @@ public class KurotatoBattleSkillData : BattleSkillDataBase
 		this.GroupSkillCdInfo = ((characterSkillCdComponent != null) ? characterSkillCdComponent.GetGroupSkillCdInfo(this.SkillId) : null);
 	}
 
-	// Token: 0x0600DEBC RID: 57020 RVA: 0x00341FC8 File Offset: 0x003401C8
+	// Token: 0x0600B2D9 RID: 45785 RVA: 0x0034D9F0 File Offset: 0x0034BBF0
 	public void RefreshSkillCd()
 	{
 		if (this.CharacterSkillCdComponent != null)
@@ -57,13 +57,13 @@ public class KurotatoBattleSkillData : BattleSkillDataBase
 		this.IsEnableInternal = true;
 	}
 
-	// Token: 0x0600DEBD RID: 57021 RVA: 0x00341FFF File Offset: 0x003401FF
+	// Token: 0x0600B2DA RID: 45786 RVA: 0x0034DA27 File Offset: 0x0034BC27
 	public override int GetSkillId()
 	{
 		return this.SkillId;
 	}
 
-	// Token: 0x0600DEBE RID: 57022 RVA: 0x00342008 File Offset: 0x00340208
+	// Token: 0x0600B2DB RID: 45787 RVA: 0x0034DA30 File Offset: 0x0034BC30
 	public override string GetSkillTexturePath()
 	{
 		SSkillInfo skillConfig = this.SkillConfig;
@@ -79,37 +79,37 @@ public class KurotatoBattleSkillData : BattleSkillDataBase
 		return skillIcon.AssetPathName.ToString();
 	}
 
-	// Token: 0x0600DEBF RID: 57023 RVA: 0x0034203F File Offset: 0x0034023F
+	// Token: 0x0600B2DC RID: 45788 RVA: 0x0034DA67 File Offset: 0x0034BC67
 	public override EInputAction GetActionType()
 	{
 		return EInputAction.闪避;
 	}
 
-	// Token: 0x0600DEC0 RID: 57024 RVA: 0x00342046 File Offset: 0x00340246
+	// Token: 0x0600B2DD RID: 45789 RVA: 0x0034DA6E File Offset: 0x0034BC6E
 	public override ESkillButtonType GetButtonType()
 	{
 		return ESkillButtonType.闪避;
 	}
 
-	// Token: 0x0600DEC1 RID: 57025 RVA: 0x00342049 File Offset: 0x00340249
+	// Token: 0x0600B2DE RID: 45790 RVA: 0x0034DA71 File Offset: 0x0034BC71
 	public override bool IsEnable()
 	{
 		return this.IsEnableInternal;
 	}
 
-	// Token: 0x0600DEC2 RID: 57026 RVA: 0x00342051 File Offset: 0x00340251
+	// Token: 0x0600B2DF RID: 45791 RVA: 0x0034DA79 File Offset: 0x0034BC79
 	public override GroupSkillCdInfo GetGroupSkillCdInfo()
 	{
 		return this.GroupSkillCdInfo;
 	}
 
-	// Token: 0x0600DEC3 RID: 57027 RVA: 0x00342059 File Offset: 0x00340259
+	// Token: 0x0600B2E0 RID: 45792 RVA: 0x0034DA81 File Offset: 0x0034BC81
 	public override bool HasCdComponent()
 	{
 		return true;
 	}
 
-	// Token: 0x0600DEC4 RID: 57028 RVA: 0x0034205C File Offset: 0x0034025C
+	// Token: 0x0600B2E1 RID: 45793 RVA: 0x0034DA84 File Offset: 0x0034BC84
 	public override float GetSkillRemainingCoolDown()
 	{
 		if (this.GroupSkillCdInfo != null)
@@ -119,30 +119,30 @@ public class KurotatoBattleSkillData : BattleSkillDataBase
 		return 0f;
 	}
 
-	// Token: 0x0600DEC5 RID: 57029 RVA: 0x00342077 File Offset: 0x00340277
+	// Token: 0x0600B2E2 RID: 45794 RVA: 0x0034DA9F File Offset: 0x0034BC9F
 	public override bool IsCdVisible()
 	{
 		return true;
 	}
 
-	// Token: 0x04006655 RID: 26197
+	// Token: 0x04006734 RID: 26420
 	private bool IsEnableInternal = true;
 
-	// Token: 0x04006656 RID: 26198
+	// Token: 0x04006735 RID: 26421
 	private readonly int SkillId;
 
-	// Token: 0x04006657 RID: 26199
+	// Token: 0x04006736 RID: 26422
 	private SSkillInfo SkillConfig;
 
-	// Token: 0x04006658 RID: 26200
+	// Token: 0x04006737 RID: 26423
 	private GroupSkillCdInfo GroupSkillCdInfo;
 
-	// Token: 0x04006659 RID: 26201
+	// Token: 0x04006738 RID: 26424
 	private EntityHandle EntityHandle;
 
-	// Token: 0x0400665A RID: 26202
+	// Token: 0x04006739 RID: 26425
 	private CharacterSkillComponent CharacterSkillComponent;
 
-	// Token: 0x0400665B RID: 26203
+	// Token: 0x0400673A RID: 26426
 	private CharacterSkillCdComponent CharacterSkillCdComponent;
 }

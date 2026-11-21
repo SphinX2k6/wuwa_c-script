@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D01 RID: 15617
+	// Token: 0x02004118 RID: 16664
 	public struct IArcadeGameplayBase : IFlatbufferObject
 	{
-		// Token: 0x17006B29 RID: 27433
-		// (get) Token: 0x060158A3 RID: 88227 RVA: 0x0031CDBC File Offset: 0x0031AFBC
+		// Token: 0x170070E3 RID: 28899
+		// (get) Token: 0x06016DDB RID: 93659 RVA: 0x00344034 File Offset: 0x00342234
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060158A4 RID: 88228 RVA: 0x0031CDC9 File Offset: 0x0031AFC9
+		// Token: 0x06016DDC RID: 93660 RVA: 0x00344041 File Offset: 0x00342241
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060158A5 RID: 88229 RVA: 0x0031CDD0 File Offset: 0x0031AFD0
+		// Token: 0x06016DDD RID: 93661 RVA: 0x00344048 File Offset: 0x00342248
 		public static IArcadeGameplayBase GetRootAsIArcadeGameplayBase(ByteBuffer _bb)
 		{
 			return IArcadeGameplayBase.GetRootAsIArcadeGameplayBase(_bb, default(IArcadeGameplayBase));
 		}
 
-		// Token: 0x060158A6 RID: 88230 RVA: 0x0031CDEC File Offset: 0x0031AFEC
+		// Token: 0x06016DDE RID: 93662 RVA: 0x00344064 File Offset: 0x00342264
 		public static IArcadeGameplayBase GetRootAsIArcadeGameplayBase(ByteBuffer _bb, IArcadeGameplayBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060158A7 RID: 88231 RVA: 0x0031CE09 File Offset: 0x0031B009
+		// Token: 0x06016DDF RID: 93663 RVA: 0x00344081 File Offset: 0x00342281
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060158A8 RID: 88232 RVA: 0x0031CE18 File Offset: 0x0031B018
+		// Token: 0x06016DE0 RID: 93664 RVA: 0x00344090 File Offset: 0x00342290
 		public IArcadeGameplayBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006B2A RID: 27434
-		// (get) Token: 0x060158A9 RID: 88233 RVA: 0x0031CE28 File Offset: 0x0031B028
+		// Token: 0x170070E4 RID: 28900
+		// (get) Token: 0x06016DE1 RID: 93665 RVA: 0x003440A0 File Offset: 0x003422A0
 		public EArcadeGameplayType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060158AA RID: 88234 RVA: 0x0031CE64 File Offset: 0x0031B064
+		// Token: 0x06016DE2 RID: 93666 RVA: 0x003440DC File Offset: 0x003422DC
 		public static Offset<IArcadeGameplayBase> CreateIArcadeGameplayBase(FlatBufferBuilder builder, EArcadeGameplayType Type = EArcadeGameplayType.DropCatch)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IArcadeGameplayBase.EndIArcadeGameplayBase(builder);
 		}
 
-		// Token: 0x060158AB RID: 88235 RVA: 0x0031CE7A File Offset: 0x0031B07A
+		// Token: 0x06016DE3 RID: 93667 RVA: 0x003440F2 File Offset: 0x003422F2
 		public static void StartIArcadeGameplayBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060158AC RID: 88236 RVA: 0x0031CE83 File Offset: 0x0031B083
+		// Token: 0x06016DE4 RID: 93668 RVA: 0x003440FB File Offset: 0x003422FB
 		public static void AddType(FlatBufferBuilder builder, EArcadeGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060158AD RID: 88237 RVA: 0x0031CE8E File Offset: 0x0031B08E
+		// Token: 0x06016DE5 RID: 93669 RVA: 0x00344106 File Offset: 0x00342306
 		public static Offset<IArcadeGameplayBase> EndIArcadeGameplayBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IArcadeGameplayBase>(builder.EndTable());
 		}
 
-		// Token: 0x060158AE RID: 88238 RVA: 0x0031CE9C File Offset: 0x0031B09C
+		// Token: 0x06016DE6 RID: 93670 RVA: 0x00344114 File Offset: 0x00342314
 		public IArcadeGameplayBaseT UnPack()
 		{
 			IArcadeGameplayBaseT arcadeGameplayBaseT = new IArcadeGameplayBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return arcadeGameplayBaseT;
 		}
 
-		// Token: 0x060158AF RID: 88239 RVA: 0x0031CEB7 File Offset: 0x0031B0B7
+		// Token: 0x06016DE7 RID: 93671 RVA: 0x0034412F File Offset: 0x0034232F
 		public void UnPackTo(IArcadeGameplayBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060158B0 RID: 88240 RVA: 0x0031CEC8 File Offset: 0x0031B0C8
+		// Token: 0x06016DE8 RID: 93672 RVA: 0x00344140 File Offset: 0x00342340
 		public static Offset<IArcadeGameplayBase> Pack(FlatBufferBuilder builder, IArcadeGameplayBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IArcadeGameplayBase.CreateIArcadeGameplayBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400B5B2 RID: 46514
+		// Token: 0x0400BF5F RID: 48991
 		private Table __p;
 	}
 }

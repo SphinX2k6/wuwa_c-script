@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065AF RID: 26031
+	// Token: 0x0200552D RID: 21805
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class DockyardItemBlockGrid : GridProxyAbstract<IPanelPos>
 	{
-		// Token: 0x0604149D RID: 267421 RVA: 0x00FD2A58 File Offset: 0x00FD0C58
+		// Token: 0x06036162 RID: 221538 RVA: 0x00F19A5C File Offset: 0x00F17C5C
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ParentItem = (this.OpenParam as DockyardItemBlock);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604149E RID: 267422 RVA: 0x00FD2AD4 File Offset: 0x00FD0CD4
+		// Token: 0x06036163 RID: 221539 RVA: 0x00F19AD8 File Offset: 0x00F17CD8
 		private void InitDrag()
 		{
 			this.DraggableComponent = base.GetDraggable(1);
@@ -43,43 +43,43 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.DraggableComponent.OnPointerEndDragCallBack.Bind(new Action<ULGUIPointerEventData>(this.ParentItem.OnDragEnd));
 		}
 
-		// Token: 0x0604149F RID: 267423 RVA: 0x00FD2BB4 File Offset: 0x00FD0DB4
+		// Token: 0x06036164 RID: 221540 RVA: 0x00F19BB8 File Offset: 0x00F17DB8
 		protected override void OnStart()
 		{
 			this.InitDrag();
 			base.GetSprite(0).SetUIActive(false);
 		}
 
-		// Token: 0x060414A0 RID: 267424 RVA: 0x00FD2BC9 File Offset: 0x00FD0DC9
+		// Token: 0x06036165 RID: 221541 RVA: 0x00F19BCD File Offset: 0x00F17DCD
 		public override void Refresh(IPanelPos data, bool isSelected, int gridIndex)
 		{
 			this.Value = this.ParentItem.GetValueByPanelPos(data);
 			this.RefreshDragItemActive(false);
 		}
 
-		// Token: 0x060414A1 RID: 267425 RVA: 0x00FD2BE4 File Offset: 0x00FD0DE4
+		// Token: 0x06036166 RID: 221542 RVA: 0x00F19BE8 File Offset: 0x00F17DE8
 		public void RefreshDragItemActive(bool isInSelectState)
 		{
 			this.DraggableComponent.RootUIComp.Get().SetUIActive(this.Value != 0 || isInSelectState);
 		}
 
-		// Token: 0x04021FC3 RID: 139203
+		// Token: 0x0401C8F4 RID: 116980
 		private UUIDraggableComponent DraggableComponent;
 
-		// Token: 0x04021FC4 RID: 139204
+		// Token: 0x0401C8F5 RID: 116981
 		private DockyardItemBlock ParentItem;
 
-		// Token: 0x04021FC5 RID: 139205
+		// Token: 0x0401C8F6 RID: 116982
 		private int Value;
 
-		// Token: 0x0200C7B6 RID: 51126
+		// Token: 0x0200B19B RID: 45467
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C53C RID: 247100
+			// Token: 0x04036E8D RID: 224909
 			public const int BgSprite = 0;
 
-			// Token: 0x0403C53D RID: 247101
+			// Token: 0x04036E8E RID: 224910
 			public const int DraggableItem = 1;
 		}
 	}

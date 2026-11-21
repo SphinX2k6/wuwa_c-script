@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x02002A7E RID: 10878
+// Token: 0x02001FFA RID: 8186
 [NullableContext(1)]
 public interface ISpecialTransitionParams
 {
-	// Token: 0x17001E18 RID: 7704
-	// (get) Token: 0x06016A75 RID: 92789
-	// (set) Token: 0x06016A76 RID: 92790
+	// Token: 0x17001E70 RID: 7792
+	// (get) Token: 0x0601449A RID: 83098
+	// (set) Token: 0x0601449B RID: 83099
 	ISpecialTransitionViewParams ViewParams { get; set; }
 
-	// Token: 0x17001E19 RID: 7705
-	// (get) Token: 0x06016A77 RID: 92791
-	// (set) Token: 0x06016A78 RID: 92792
+	// Token: 0x17001E71 RID: 7793
+	// (get) Token: 0x0601449C RID: 83100
+	// (set) Token: 0x0601449D RID: 83101
 	ISpecialTransitionFlowParams FlowParams { get; set; }
 
-	// Token: 0x17001E1A RID: 7706
-	// (get) Token: 0x06016A79 RID: 92793
-	// (set) Token: 0x06016A7A RID: 92794
+	// Token: 0x17001E72 RID: 7794
+	// (get) Token: 0x0601449E RID: 83102
+	// (set) Token: 0x0601449F RID: 83103
 	ECustomScreenLoading? LoadingType { get; set; }
 }

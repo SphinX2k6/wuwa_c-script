@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DBD RID: 23997
+	// Token: 0x02004DA1 RID: 19873
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleUiHoverTipsD : BattleChildView
 	{
-		// Token: 0x0603CFAB RID: 249771 RVA: 0x00EA93B4 File Offset: 0x00EA75B4
+		// Token: 0x06031F22 RID: 204578 RVA: 0x00DFA290 File Offset: 0x00DF8490
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			BattleUiHoverTipsD.<InitializeAsync>d__6 <InitializeAsync>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CFAC RID: 249772 RVA: 0x00EA93F8 File Offset: 0x00EA75F8
+		// Token: 0x06031F23 RID: 204579 RVA: 0x00DFA2D4 File Offset: 0x00DF84D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CFAD RID: 249773 RVA: 0x00EA9484 File Offset: 0x00EA7684
+		// Token: 0x06031F24 RID: 204580 RVA: 0x00DFA360 File Offset: 0x00DF8560
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, false);
 		}
 
-		// Token: 0x0603CFAE RID: 249774 RVA: 0x00EA950C File Offset: 0x00EA770C
+		// Token: 0x06031F25 RID: 204581 RVA: 0x00DFA3E8 File Offset: 0x00DF85E8
 		[NullableContext(1)]
 		public void CreateAndShow(UUIItem parent, IBattleUiHoverTipsD info)
 		{
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603CFAF RID: 249775 RVA: 0x00EA9578 File Offset: 0x00EA7778
+		// Token: 0x06031F26 RID: 204582 RVA: 0x00DFA454 File Offset: 0x00DF8654
 		protected override void OnShowBattleChildView()
 		{
 			this.LevelSequencePlayer.StopCurrentSequence(false, false);
 			this.LevelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x0603CFB0 RID: 249776 RVA: 0x00EA95B0 File Offset: 0x00EA77B0
+		// Token: 0x06031F27 RID: 204583 RVA: 0x00DFA48C File Offset: 0x00DF868C
 		[NullableContext(1)]
 		public void UpdateInfo(IBattleUiHoverTipsD info)
 		{
@@ -128,13 +128,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFB1 RID: 249777 RVA: 0x00EA9612 File Offset: 0x00EA7812
+		// Token: 0x06031F28 RID: 204584 RVA: 0x00DFA4EE File Offset: 0x00DF86EE
 		private void StartCountdown()
 		{
 			this.TimerHandle = TimerSystem.Instance.Delay(new TTimerAction(this.OnTimerEnd), 8000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603CFB2 RID: 249778 RVA: 0x00EA9640 File Offset: 0x00EA7840
+		// Token: 0x06031F29 RID: 204585 RVA: 0x00DFA51C File Offset: 0x00DF871C
 		public void EndShow()
 		{
 			if (this.TimerHandle != null)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x0603CFB3 RID: 249779 RVA: 0x00EA96A0 File Offset: 0x00EA78A0
+		// Token: 0x06031F2A RID: 204586 RVA: 0x00DFA57C File Offset: 0x00DF877C
 		private void OnTimerEnd(float _ = 0f)
 		{
 			if (this.TimerHandle == null)
@@ -166,44 +166,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit(EEventName.BattleUiToggleShipTowerBuffInfo);
 		}
 
-		// Token: 0x0603CFB4 RID: 249780 RVA: 0x00EA96C1 File Offset: 0x00EA78C1
+		// Token: 0x06031F2B RID: 204587 RVA: 0x00DFA59D File Offset: 0x00DF879D
 		protected override void OnBeforeDestroy()
 		{
 			this.OnTimerEnd(0f);
 		}
 
-		// Token: 0x0401FC62 RID: 130146
+		// Token: 0x0401A71F RID: 108319
 		private bool Created;
 
-		// Token: 0x0401FC63 RID: 130147
+		// Token: 0x0401A720 RID: 108320
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401FC64 RID: 130148
+		// Token: 0x0401A721 RID: 108321
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FC65 RID: 130149
+		// Token: 0x0401A722 RID: 108322
 		private IBattleUiHoverTipsD Info;
 
-		// Token: 0x0401FC66 RID: 130150
+		// Token: 0x0401A723 RID: 108323
 		private BattleUiHoverTipsD.BattleUiInfoItem InfoItem;
 
-		// Token: 0x0200C0B6 RID: 49334
+		// Token: 0x0200AABF RID: 43711
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A26E RID: 238190
+			// Token: 0x04034C40 RID: 216128
 			SpriteBg,
-			// Token: 0x0403A26F RID: 238191
+			// Token: 0x04034C41 RID: 216129
 			ItemInfo,
-			// Token: 0x0403A270 RID: 238192
+			// Token: 0x04034C42 RID: 216130
 			TxtDescTitle
 		}
 
-		// Token: 0x0200C0B7 RID: 49335
+		// Token: 0x0200AAC0 RID: 43712
 		[NullableContext(0)]
 		public class BattleUiInfoItem : UiPanelBase
 		{
-			// Token: 0x06050388 RID: 328584 RVA: 0x0158C774 File Offset: 0x0158A974
+			// Token: 0x060468CF RID: 288975 RVA: 0x01545D88 File Offset: 0x01543F88
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 5;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x06050389 RID: 328585 RVA: 0x0158C840 File Offset: 0x0158AA40
+			// Token: 0x060468D0 RID: 288976 RVA: 0x01545E54 File Offset: 0x01544054
 			protected override UniTask OnBeforeStartAsync()
 			{
 				BattleUiHoverTipsD.BattleUiInfoItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -234,14 +234,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				return <OnBeforeStartAsync>d__.<>t__builder.Task;
 			}
 
-			// Token: 0x0605038A RID: 328586 RVA: 0x0158C883 File Offset: 0x0158AA83
+			// Token: 0x060468D1 RID: 288977 RVA: 0x01545E97 File Offset: 0x01544097
 			[NullableContext(1)]
 			private static BattleUiHoverTipsD.BattleUiDescInfoItem CreateItem()
 			{
 				return new BattleUiHoverTipsD.BattleUiDescInfoItem();
 			}
 
-			// Token: 0x0605038B RID: 328587 RVA: 0x0158C88C File Offset: 0x0158AA8C
+			// Token: 0x060468D2 RID: 288978 RVA: 0x01545EA0 File Offset: 0x015440A0
 			[NullableContext(1)]
 			public void Refresh(IBattleUiHoverTipsD info)
 			{
@@ -273,11 +273,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x0403A271 RID: 238193
+			// Token: 0x04034C43 RID: 216131
 			[Nullable(2)]
 			private SmallItemGrid IconItem;
 
-			// Token: 0x0403A272 RID: 238194
+			// Token: 0x04034C44 RID: 216132
 			[Nullable(new byte[]
 			{
 				2,
@@ -286,26 +286,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			})]
 			private GenericLayout<BattleUiHoverTipsD.BattleUiDescInfoItem, IBattleUiHoverTipsDescInfo> ContentLayout;
 
-			// Token: 0x0200D18C RID: 53644
+			// Token: 0x0200BD6A RID: 48490
 			private enum EItemChildType
 			{
-				// Token: 0x0403EE17 RID: 257559
+				// Token: 0x0403A25F RID: 238175
 				TxtSubTitle,
-				// Token: 0x0403EE18 RID: 257560
+				// Token: 0x0403A260 RID: 238176
 				ItemGrid,
-				// Token: 0x0403EE19 RID: 257561
+				// Token: 0x0403A261 RID: 238177
 				VLayoutContent,
-				// Token: 0x0403EE1A RID: 257562
+				// Token: 0x0403A262 RID: 238178
 				ItemDescInfo,
-				// Token: 0x0403EE1B RID: 257563
+				// Token: 0x0403A263 RID: 238179
 				TxtTitle
 			}
 
-			// Token: 0x0200D18D RID: 53645
+			// Token: 0x0200BD6B RID: 48491
 			[CompilerGenerated]
 			private static class <>O
 			{
-				// Token: 0x0403EE1C RID: 257564
+				// Token: 0x0403A264 RID: 238180
 				[Nullable(new byte[]
 				{
 					0,
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0200C0B8 RID: 49336
+		// Token: 0x0200AAC1 RID: 43713
 		[NullableContext(1)]
 		[Nullable(new byte[]
 		{
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		public class BattleUiDescInfoItem : GridProxyAbstract<IBattleUiHoverTipsDescInfo>
 		{
-			// Token: 0x0605038D RID: 328589 RVA: 0x0158C960 File Offset: 0x0158AB60
+			// Token: 0x060468D4 RID: 288980 RVA: 0x01545F74 File Offset: 0x01544174
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 5;
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ComponentRegisterInfos = list;
 			}
 
-			// Token: 0x0605038E RID: 328590 RVA: 0x0158CA2C File Offset: 0x0158AC2C
+			// Token: 0x060468D5 RID: 288981 RVA: 0x01546040 File Offset: 0x01544240
 			public override void Refresh(IBattleUiHoverTipsDescInfo data, bool isSelected, int gridIndex)
 			{
 				UUIText text = base.GetText(2);
@@ -375,25 +375,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x0403A273 RID: 238195
+			// Token: 0x04034C45 RID: 216133
 			private const string EGridCompleteHexColor_Done = "adfb5aff";
 
-			// Token: 0x0403A274 RID: 238196
+			// Token: 0x04034C46 RID: 216134
 			private const string EGridCompleteHexColor_NotDone = "adadadff";
 
-			// Token: 0x0200D18F RID: 53647
+			// Token: 0x0200BD6D RID: 48493
 			[NullableContext(0)]
 			private enum EDescChildType
 			{
-				// Token: 0x0403EE23 RID: 257571
+				// Token: 0x0403A26B RID: 238187
 				SpriteUnlock,
-				// Token: 0x0403EE24 RID: 257572
+				// Token: 0x0403A26C RID: 238188
 				TxtState,
-				// Token: 0x0403EE25 RID: 257573
+				// Token: 0x0403A26D RID: 238189
 				TxtDesc,
-				// Token: 0x0403EE26 RID: 257574
+				// Token: 0x0403A26E RID: 238190
 				SpriteLock,
-				// Token: 0x0403EE27 RID: 257575
+				// Token: 0x0403A26F RID: 238191
 				ItemStateRoot
 			}
 		}

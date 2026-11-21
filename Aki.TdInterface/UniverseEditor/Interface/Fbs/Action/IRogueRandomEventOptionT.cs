@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EE6 RID: 28390
+	// Token: 0x0200766A RID: 30314
 	public class IRogueRandomEventOptionT
 	{
-		// Token: 0x1700D337 RID: 54071
-		// (get) Token: 0x060322B9 RID: 205497 RVA: 0x006C7D69 File Offset: 0x006C5F69
-		// (set) Token: 0x060322BA RID: 205498 RVA: 0x006C7D71 File Offset: 0x006C5F71
+		// Token: 0x1700DE8E RID: 56974
+		// (get) Token: 0x060352F9 RID: 217849 RVA: 0x00723A9D File Offset: 0x00721C9D
+		// (set) Token: 0x060352FA RID: 217850 RVA: 0x00723AA5 File Offset: 0x00721CA5
 		public ESystemOptionType Type { get; set; }
 
-		// Token: 0x1700D338 RID: 54072
-		// (get) Token: 0x060322BB RID: 205499 RVA: 0x006C7D7A File Offset: 0x006C5F7A
-		// (set) Token: 0x060322BC RID: 205500 RVA: 0x006C7D82 File Offset: 0x006C5F82
+		// Token: 0x1700DE8F RID: 56975
+		// (get) Token: 0x060352FB RID: 217851 RVA: 0x00723AAE File Offset: 0x00721CAE
+		// (set) Token: 0x060352FC RID: 217852 RVA: 0x00723AB6 File Offset: 0x00721CB6
 		public List<ISystemOptionT> SystemOptions { get; set; }
 
-		// Token: 0x1700D339 RID: 54073
-		// (get) Token: 0x060322BD RID: 205501 RVA: 0x006C7D8B File Offset: 0x006C5F8B
-		// (set) Token: 0x060322BE RID: 205502 RVA: 0x006C7D93 File Offset: 0x006C5F93
+		// Token: 0x1700DE90 RID: 56976
+		// (get) Token: 0x060352FD RID: 217853 RVA: 0x00723ABF File Offset: 0x00721CBF
+		// (set) Token: 0x060352FE RID: 217854 RVA: 0x00723AC7 File Offset: 0x00721CC7
 		public bool KeepPreTalkItem { get; set; }
 
-		// Token: 0x1700D33A RID: 54074
-		// (get) Token: 0x060322BF RID: 205503 RVA: 0x006C7D9C File Offset: 0x006C5F9C
-		// (set) Token: 0x060322C0 RID: 205504 RVA: 0x006C7DA4 File Offset: 0x006C5FA4
+		// Token: 0x1700DE91 RID: 56977
+		// (get) Token: 0x060352FF RID: 217855 RVA: 0x00723AD0 File Offset: 0x00721CD0
+		// (set) Token: 0x06035300 RID: 217856 RVA: 0x00723AD8 File Offset: 0x00721CD8
 		public int EventId { get; set; }
 
-		// Token: 0x1700D33B RID: 54075
-		// (get) Token: 0x060322C1 RID: 205505 RVA: 0x006C7DAD File Offset: 0x006C5FAD
-		// (set) Token: 0x060322C2 RID: 205506 RVA: 0x006C7DB5 File Offset: 0x006C5FB5
+		// Token: 0x1700DE92 RID: 56978
+		// (get) Token: 0x06035301 RID: 217857 RVA: 0x00723AE1 File Offset: 0x00721CE1
+		// (set) Token: 0x06035302 RID: 217858 RVA: 0x00723AE9 File Offset: 0x00721CE9
 		public byte NullMask { get; set; }
 
-		// Token: 0x060322C3 RID: 205507 RVA: 0x006C7DBE File Offset: 0x006C5FBE
+		// Token: 0x06035303 RID: 217859 RVA: 0x00723AF2 File Offset: 0x00721CF2
 		public IRogueRandomEventOptionT()
 		{
 			this.Type = ESystemOptionType.RogueRandomEvent;

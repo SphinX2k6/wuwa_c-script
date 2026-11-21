@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200272B RID: 10027
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029F7 RID: 10743
 	public class NewMoveWithSpline : ActionParams
 	{
-		// Token: 0x0600DF96 RID: 57238 RVA: 0x002120DA File Offset: 0x002102DA
+		// Token: 0x0600ED95 RID: 60821 RVA: 0x0022EBDF File Offset: 0x0022CDDF
 		public static NewMoveWithSpline Create(INewMoveWithSpline? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004302 RID: 17154
-		// (get) Token: 0x0600DF97 RID: 57239 RVA: 0x002120F9 File Offset: 0x002102F9
+		// Token: 0x17004655 RID: 18005
+		// (get) Token: 0x0600ED96 RID: 60822 RVA: 0x0022EBFE File Offset: 0x0022CDFE
 		public virtual INewSplineMoveTarget MoveTarget
 		{
 			get
@@ -38,8 +36,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004303 RID: 17155
-		// (get) Token: 0x0600DF98 RID: 57240 RVA: 0x00212128 File Offset: 0x00210328
+		// Token: 0x17004656 RID: 18006
+		// (get) Token: 0x0600ED97 RID: 60823 RVA: 0x0022EC2D File Offset: 0x0022CE2D
+		[Nullable(2)]
+		public virtual IFrontAxleTrackingSplineMove Move
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._MoveInited)
+				{
+					return this._MoveCache;
+				}
+				this._MoveInited = true;
+				this._MoveCache = IFrontAxleTrackingSplineMove.Create(this.Instance.Move);
+				return this._MoveCache;
+			}
+		}
+
+		// Token: 0x17004657 RID: 18007
+		// (get) Token: 0x0600ED98 RID: 60824 RVA: 0x0022EC61 File Offset: 0x0022CE61
 		public virtual int SplineEntityId
 		{
 			get
@@ -48,8 +64,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004304 RID: 17156
-		// (get) Token: 0x0600DF99 RID: 57241 RVA: 0x00212138 File Offset: 0x00210338
+		// Token: 0x17004658 RID: 18008
+		// (get) Token: 0x0600ED99 RID: 60825 RVA: 0x0022EC70 File Offset: 0x0022CE70
 		public virtual int? StartPointIndex
 		{
 			get
@@ -62,8 +78,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004305 RID: 17157
-		// (get) Token: 0x0600DF9A RID: 57242 RVA: 0x00212170 File Offset: 0x00210370
+		// Token: 0x17004659 RID: 18009
+		// (get) Token: 0x0600ED9A RID: 60826 RVA: 0x0022ECA8 File Offset: 0x0022CEA8
 		public virtual int? EndPointIndex
 		{
 			get
@@ -76,8 +92,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004306 RID: 17158
-		// (get) Token: 0x0600DF9B RID: 57243 RVA: 0x002121A8 File Offset: 0x002103A8
+		// Token: 0x1700465A RID: 18010
+		// (get) Token: 0x0600ED9B RID: 60827 RVA: 0x0022ECE0 File Offset: 0x0022CEE0
 		public virtual bool? IsStartFromCurrentPos
 		{
 			get
@@ -90,8 +106,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004307 RID: 17159
-		// (get) Token: 0x0600DF9C RID: 57244 RVA: 0x002121E0 File Offset: 0x002103E0
+		// Token: 0x1700465B RID: 18011
+		// (get) Token: 0x0600ED9C RID: 60828 RVA: 0x0022ED18 File Offset: 0x0022CF18
 		public virtual bool? IsFollowStrictly
 		{
 			get
@@ -104,13 +120,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C15 RID: 31765
+		// Token: 0x040082C1 RID: 33473
 		private INewMoveWithSpline Instance;
 
-		// Token: 0x04007C16 RID: 31766
+		// Token: 0x040082C2 RID: 33474
 		private INewSplineMoveTarget _MoveTargetCache;
 
-		// Token: 0x04007C17 RID: 31767
+		// Token: 0x040082C3 RID: 33475
 		private bool _MoveTargetInited;
+
+		// Token: 0x040082C4 RID: 33476
+		[Nullable(2)]
+		private IFrontAxleTrackingSplineMove _MoveCache;
+
+		// Token: 0x040082C5 RID: 33477
+		private bool _MoveInited;
 	}
 }

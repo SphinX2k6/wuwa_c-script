@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A3D RID: 6717
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BD2 RID: 7122
 	public class IFaceExpressionTextureMultiSlotConfig : IFaceExpressionConfig
 	{
-		// Token: 0x06008FCE RID: 36814 RVA: 0x0014F8E8 File Offset: 0x0014DAE8
+		// Token: 0x06009738 RID: 38712 RVA: 0x0015F814 File Offset: 0x0015DA14
 		private IFaceExpressionTextureMultiSlotConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008FCF RID: 36815 RVA: 0x0014F920 File Offset: 0x0014DB20
+		// Token: 0x06009739 RID: 38713 RVA: 0x0015F84C File Offset: 0x0015DA4C
 		public static IFaceExpressionTextureMultiSlotConfig Create([Nullable(2)] IFaceExpressionTextureMultiSlotConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008FD0 RID: 36816 RVA: 0x0014F933 File Offset: 0x0014DB33
+		// Token: 0x0600973A RID: 38714 RVA: 0x0015F85F File Offset: 0x0015DA5F
 		public static IFaceExpressionTextureMultiSlotConfig CreateFromSetValue([Nullable(2)] IFaceExpressionTextureMultiSlotConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008FD1 RID: 36817 RVA: 0x0014F946 File Offset: 0x0014DB46
+		// Token: 0x0600973B RID: 38715 RVA: 0x0015F872 File Offset: 0x0015DA72
 		public new IFaceExpressionTextureMultiSlotConfig_SetValue ToSetValue()
 		{
 			return new IFaceExpressionTextureMultiSlotConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DE1 RID: 11745
-		// (get) Token: 0x06008FD2 RID: 36818 RVA: 0x0014F971 File Offset: 0x0014DB71
-		// (set) Token: 0x06008FD3 RID: 36819 RVA: 0x0014F99C File Offset: 0x0014DB9C
+		// Token: 0x17002FEE RID: 12270
+		// (get) Token: 0x0600973C RID: 38716 RVA: 0x0015F89D File Offset: 0x0015DA9D
+		// (set) Token: 0x0600973D RID: 38717 RVA: 0x0015F8C8 File Offset: 0x0015DAC8
 		public override EFaceExpressionConfigType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DE2 RID: 11746
-		// (get) Token: 0x06008FD4 RID: 36820 RVA: 0x0014F9AA File Offset: 0x0014DBAA
-		// (set) Token: 0x06008FD5 RID: 36821 RVA: 0x0014F9D5 File Offset: 0x0014DBD5
+		// Token: 0x17002FEF RID: 12271
+		// (get) Token: 0x0600973E RID: 38718 RVA: 0x0015F8D6 File Offset: 0x0015DAD6
+		// (set) Token: 0x0600973F RID: 38719 RVA: 0x0015F901 File Offset: 0x0015DB01
 		public virtual int SlotIndex
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DE3 RID: 11747
-		// (get) Token: 0x06008FD6 RID: 36822 RVA: 0x0014F9E3 File Offset: 0x0014DBE3
-		// (set) Token: 0x06008FD7 RID: 36823 RVA: 0x0014FA0E File Offset: 0x0014DC0E
+		// Token: 0x17002FF0 RID: 12272
+		// (get) Token: 0x06009740 RID: 38720 RVA: 0x0015F90F File Offset: 0x0015DB0F
+		// (set) Token: 0x06009741 RID: 38721 RVA: 0x0015F93A File Offset: 0x0015DB3A
 		public virtual int FaceIndex
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058E6 RID: 22758
+		// Token: 0x04005D4B RID: 23883
 		[Nullable(2)]
 		protected new IFaceExpressionTextureMultiSlotConfig FbInstance;
 
-		// Token: 0x040058E7 RID: 22759
+		// Token: 0x04005D4C RID: 23884
 		[Nullable(2)]
 		protected new IFaceExpressionTextureMultiSlotConfig_SetValue PocoInterface;
 	}

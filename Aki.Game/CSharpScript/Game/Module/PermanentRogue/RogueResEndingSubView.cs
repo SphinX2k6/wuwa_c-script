@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005311 RID: 21265
+	// Token: 0x020042E1 RID: 17121
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResEndingSubView : UiViewBase
 	{
-		// Token: 0x0603663F RID: 222783 RVA: 0x00CDE91A File Offset: 0x00CDCB1A
+		// Token: 0x0602B53B RID: 177467 RVA: 0x00C2C2EA File Offset: 0x00C2A4EA
 		public RogueResEndingSubView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036640 RID: 222784 RVA: 0x00CDE944 File Offset: 0x00CDCB44
+		// Token: 0x0602B53C RID: 177468 RVA: 0x00C2C314 File Offset: 0x00C2A514
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036641 RID: 222785 RVA: 0x00CDEA48 File Offset: 0x00CDCC48
+		// Token: 0x0602B53D RID: 177469 RVA: 0x00C2C418 File Offset: 0x00C2A618
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueResEndingSubView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036642 RID: 222786 RVA: 0x00CDEA8C File Offset: 0x00CDCC8C
+		// Token: 0x0602B53E RID: 177470 RVA: 0x00C2C45C File Offset: 0x00C2A65C
 		protected override void OnStart()
 		{
 			this.CurEndingId = (int)this.OpenParam;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06036643 RID: 222787 RVA: 0x00CDEB54 File Offset: 0x00CDCD54
+		// Token: 0x0602B53F RID: 177471 RVA: 0x00C2C524 File Offset: 0x00C2A724
 		protected override void OnBeforeShow()
 		{
 			int num = this.EndingIdList.IndexOf(this.CurEndingId);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshEnding();
 		}
 
-		// Token: 0x06036644 RID: 222788 RVA: 0x00CDEC16 File Offset: 0x00CDCE16
+		// Token: 0x0602B540 RID: 177472 RVA: 0x00C2C5E6 File Offset: 0x00C2A7E6
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.EndingParamMap.Clear();
 		}
 
-		// Token: 0x06036645 RID: 222789 RVA: 0x00CDEC38 File Offset: 0x00CDCE38
+		// Token: 0x0602B541 RID: 177473 RVA: 0x00C2C608 File Offset: 0x00C2A808
 		private void OnClickBack()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036646 RID: 222790 RVA: 0x00CDEC44 File Offset: 0x00CDCE44
+		// Token: 0x0602B542 RID: 177474 RVA: 0x00C2C614 File Offset: 0x00C2A814
 		private void OnClickPrev()
 		{
 			int num = this.EndingIdList.IndexOf(this.CurEndingId);
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036647 RID: 222791 RVA: 0x00CDED84 File Offset: 0x00CDCF84
+		// Token: 0x0602B543 RID: 177475 RVA: 0x00C2C754 File Offset: 0x00C2A954
 		private void OnClickNext()
 		{
 			int num = this.EndingIdList.IndexOf(this.CurEndingId);
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036648 RID: 222792 RVA: 0x00CDEEDC File Offset: 0x00CDD0DC
+		// Token: 0x0602B544 RID: 177476 RVA: 0x00C2C8AC File Offset: 0x00C2AAAC
 		public void RefreshEnding()
 		{
 			bool endingIsUnlock = ActivityPermanentRogueModel.Instance.GetEndingIsUnlock(this.CurEndingId);
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06036649 RID: 222793 RVA: 0x00CDEFFC File Offset: 0x00CDD1FC
+		// Token: 0x0602B545 RID: 177477 RVA: 0x00C2C9CC File Offset: 0x00C2ABCC
 		private void RefreshRedDot()
 		{
 			int curEndingId = this.CurEndingId;
@@ -321,30 +321,30 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			item2.SetUIActive(uiactive2);
 		}
 
-		// Token: 0x0401CBDA RID: 117722
+		// Token: 0x04017610 RID: 95760
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CBDB RID: 117723
+		// Token: 0x04017611 RID: 95761
 		[Nullable(2)]
 		private RogueEndingCollectionItem EndingItem;
 
-		// Token: 0x0401CBDC RID: 117724
+		// Token: 0x04017612 RID: 95762
 		private int CurEndingId;
 
-		// Token: 0x0401CBDD RID: 117725
+		// Token: 0x04017613 RID: 95763
 		private int CurSeasonId;
 
-		// Token: 0x0401CBDE RID: 117726
+		// Token: 0x04017614 RID: 95764
 		private readonly List<int> EndingIdList = new List<int>();
 
-		// Token: 0x0401CBDF RID: 117727
+		// Token: 0x04017615 RID: 95765
 		private readonly Dictionary<int, int> UnReachEnding = new Dictionary<int, int>();
 
-		// Token: 0x0401CBE0 RID: 117728
+		// Token: 0x04017616 RID: 95766
 		private readonly Dictionary<int, IRogueEndingItemParam> EndingParamMap = new Dictionary<int, IRogueEndingItemParam>();
 
-		// Token: 0x0401CBE1 RID: 117729
+		// Token: 0x04017617 RID: 95767
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

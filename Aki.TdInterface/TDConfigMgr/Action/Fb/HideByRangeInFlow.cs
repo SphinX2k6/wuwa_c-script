@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002834 RID: 10292
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B07 RID: 11015
 	public class HideByRangeInFlow : ActionParams
 	{
-		// Token: 0x0600E436 RID: 58422 RVA: 0x0021995B File Offset: 0x00217B5B
+		// Token: 0x0600F25B RID: 62043 RVA: 0x002367BF File Offset: 0x002349BF
 		public static HideByRangeInFlow Create(IHideByRangeInFlow? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004590 RID: 17808
-		// (get) Token: 0x0600E437 RID: 58423 RVA: 0x0021997A File Offset: 0x00217B7A
+		// Token: 0x170048FB RID: 18683
+		// (get) Token: 0x0600F25C RID: 62044 RVA: 0x002367DE File Offset: 0x002349DE
 		public virtual ETriggerShape Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004591 RID: 17809
-		// (get) Token: 0x0600E438 RID: 58424 RVA: 0x00219987 File Offset: 0x00217B87
+		// Token: 0x170048FC RID: 18684
+		// (get) Token: 0x0600F25D RID: 62045 RVA: 0x002367EB File Offset: 0x002349EB
 		public virtual VectorInfo Center
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004592 RID: 17810
-		// (get) Token: 0x0600E439 RID: 58425 RVA: 0x002199BB File Offset: 0x00217BBB
+		// Token: 0x170048FD RID: 18685
+		// (get) Token: 0x0600F25E RID: 62046 RVA: 0x0023681F File Offset: 0x00234A1F
 		public virtual int Radius
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004593 RID: 17811
-		// (get) Token: 0x0600E43A RID: 58426 RVA: 0x002199C8 File Offset: 0x00217BC8
+		// Token: 0x170048FE RID: 18686
+		// (get) Token: 0x0600F25F RID: 62047 RVA: 0x0023682C File Offset: 0x00234A2C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -82,8 +80,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004594 RID: 17812
-		// (get) Token: 0x0600E43B RID: 58427 RVA: 0x00219A2C File Offset: 0x00217C2C
+		// Token: 0x170048FF RID: 18687
+		// (get) Token: 0x0600F260 RID: 62048 RVA: 0x00236890 File Offset: 0x00234A90
 		public virtual bool IsCleanSimpleNpc
 		{
 			get
@@ -92,8 +90,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004595 RID: 17813
-		// (get) Token: 0x0600E43C RID: 58428 RVA: 0x00219A3C File Offset: 0x00217C3C
+		// Token: 0x17004900 RID: 18688
+		// (get) Token: 0x0600F261 RID: 62049 RVA: 0x002368A0 File Offset: 0x00234AA0
 		public virtual bool? IsCleanPasserByNpc
 		{
 			get
@@ -106,20 +104,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E44 RID: 32324
+		// Token: 0x04008501 RID: 34049
 		private IHideByRangeInFlow Instance;
 
-		// Token: 0x04007E45 RID: 32325
+		// Token: 0x04008502 RID: 34050
 		[Nullable(2)]
 		private VectorInfo _CenterCache;
 
-		// Token: 0x04007E46 RID: 32326
+		// Token: 0x04008503 RID: 34051
 		private bool _CenterInited;
 
-		// Token: 0x04007E47 RID: 32327
+		// Token: 0x04008504 RID: 34052
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007E48 RID: 32328
+		// Token: 0x04008505 RID: 34053
 		private bool _EntityIdsInited;
 	}
 }

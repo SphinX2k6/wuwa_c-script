@@ -7,12 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200144E RID: 5198
-	[NullableContext(1)]
+	// Token: 0x020015A6 RID: 5542
+	[NullableContext(2)]
 	[Nullable(0)]
 	public class IForceClosedRestriction
 	{
-		// Token: 0x0600762C RID: 30252 RVA: 0x0011A425 File Offset: 0x00118625
+		// Token: 0x06007CF4 RID: 31988 RVA: 0x00128EF9 File Offset: 0x001270F9
+		[NullableContext(0)]
 		public static IForceClosedRestriction Create(IForceClosedRestriction? instance)
 		{
 			if (instance == null)
@@ -25,10 +26,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002763 RID: 10083
-		// (get) Token: 0x0600762D RID: 30253 RVA: 0x0011A444 File Offset: 0x00118644
+		// Token: 0x1700294A RID: 10570
+		// (get) Token: 0x06007CF5 RID: 31989 RVA: 0x00128F18 File Offset: 0x00127118
+		[Nullable(0)]
 		public virtual VectorInfo RangeCenter
 		{
+			[NullableContext(0)]
 			get
 			{
 				if (this._RangeCenterInited)
@@ -41,8 +44,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002764 RID: 10084
-		// (get) Token: 0x0600762E RID: 30254 RVA: 0x0011A478 File Offset: 0x00118678
+		// Token: 0x1700294B RID: 10571
+		// (get) Token: 0x06007CF6 RID: 31990 RVA: 0x00128F4C File Offset: 0x0012714C
 		public virtual int RangeRadius
 		{
 			get
@@ -51,12 +54,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002765 RID: 10085
-		// (get) Token: 0x0600762F RID: 30255 RVA: 0x0011A488 File Offset: 0x00118688
-		[Nullable(2)]
+		// Token: 0x1700294C RID: 10572
+		// (get) Token: 0x06007CF7 RID: 31991 RVA: 0x00128F5C File Offset: 0x0012715C
 		public virtual List<int> RangeEntities
 		{
-			[NullableContext(2)]
 			get
 			{
 				if (this._RangeEntitiesInited)
@@ -78,10 +79,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002766 RID: 10086
-		// (get) Token: 0x06007630 RID: 30256 RVA: 0x0011A4FD File Offset: 0x001186FD
+		// Token: 0x1700294D RID: 10573
+		// (get) Token: 0x06007CF8 RID: 31992 RVA: 0x00128FD1 File Offset: 0x001271D1
+		[Nullable(0)]
 		public virtual Aki.TDConfigMgr.Action.Fb.PosA FailedReturnPos
 		{
+			[NullableContext(0)]
 			get
 			{
 				if (this._FailedReturnPosInited)
@@ -94,8 +97,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002767 RID: 10087
-		// (get) Token: 0x06007631 RID: 30257 RVA: 0x0011A534 File Offset: 0x00118734
+		// Token: 0x1700294E RID: 10574
+		// (get) Token: 0x06007CF9 RID: 31993 RVA: 0x00129008 File Offset: 0x00127208
 		public virtual int? FailedReturnPosEntityId
 		{
 			get
@@ -108,28 +111,70 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400449C RID: 17564
+		// Token: 0x1700294F RID: 10575
+		// (get) Token: 0x06007CFA RID: 31994 RVA: 0x00129040 File Offset: 0x00127240
+		public virtual List<int> AllowDungeonList
+		{
+			get
+			{
+				if (this._AllowDungeonListInited)
+				{
+					return this._AllowDungeonListCache;
+				}
+				this._AllowDungeonListInited = true;
+				if ((this.Instance.NullMask & 4) == 0)
+				{
+					return null;
+				}
+				int allowDungeonListLength = this.Instance.AllowDungeonListLength;
+				this._AllowDungeonListCache = new List<int>(allowDungeonListLength);
+				for (int i = 0; i < allowDungeonListLength; i++)
+				{
+					this._AllowDungeonListCache.Add(this.Instance.AllowDungeonList(i));
+				}
+				return this._AllowDungeonListCache;
+			}
+		}
+
+		// Token: 0x17002950 RID: 10576
+		// (get) Token: 0x06007CFB RID: 31995 RVA: 0x001290B8 File Offset: 0x001272B8
+		public virtual bool? OnlyFailOnceOutsideDungeon
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 8) == 0)
+				{
+					return null;
+				}
+				return new bool?(this.Instance.OnlyFailOnceOutsideDungeon);
+			}
+		}
+
+		// Token: 0x04004832 RID: 18482
 		private IForceClosedRestriction Instance;
 
-		// Token: 0x0400449D RID: 17565
-		[Nullable(2)]
+		// Token: 0x04004833 RID: 18483
 		private VectorInfo _RangeCenterCache;
 
-		// Token: 0x0400449E RID: 17566
+		// Token: 0x04004834 RID: 18484
 		private bool _RangeCenterInited;
 
-		// Token: 0x0400449F RID: 17567
-		[Nullable(2)]
+		// Token: 0x04004835 RID: 18485
 		private List<int> _RangeEntitiesCache;
 
-		// Token: 0x040044A0 RID: 17568
+		// Token: 0x04004836 RID: 18486
 		private bool _RangeEntitiesInited;
 
-		// Token: 0x040044A1 RID: 17569
-		[Nullable(2)]
+		// Token: 0x04004837 RID: 18487
 		private Aki.TDConfigMgr.Action.Fb.PosA _FailedReturnPosCache;
 
-		// Token: 0x040044A2 RID: 17570
+		// Token: 0x04004838 RID: 18488
 		private bool _FailedReturnPosInited;
+
+		// Token: 0x04004839 RID: 18489
+		private List<int> _AllowDungeonListCache;
+
+		// Token: 0x0400483A RID: 18490
+		private bool _AllowDungeonListInited;
 	}
 }

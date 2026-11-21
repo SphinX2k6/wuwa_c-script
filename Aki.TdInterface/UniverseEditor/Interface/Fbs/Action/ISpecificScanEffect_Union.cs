@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200717B RID: 29051
+	// Token: 0x0200794A RID: 31050
 	public enum ISpecificScanEffect_Union : byte
 	{
-		// Token: 0x04011C21 RID: 72737
+		// Token: 0x04012C17 RID: 76823
 		NONE,
-		// Token: 0x04011C22 RID: 72738
+		// Token: 0x04012C18 RID: 76824
 		ISpecificScanEffect,
-		// Token: 0x04011C23 RID: 72739
+		// Token: 0x04012C19 RID: 76825
 		IChargeSlashScanEffect,
-		// Token: 0x04011C24 RID: 72740
+		// Token: 0x04012C1A RID: 76826
 		IFlyingFeatherScanEffect
 	}
 }

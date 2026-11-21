@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 {
-	// Token: 0x020061B0 RID: 25008
+	// Token: 0x0200512E RID: 20782
 	public enum ERogueActivityState
 	{
-		// Token: 0x04020EB2 RID: 134834
+		// Token: 0x0401B7DF RID: 112607
 		Open,
-		// Token: 0x04020EB3 RID: 134835
+		// Token: 0x0401B7E0 RID: 112608
 		ReceiveReward,
-		// Token: 0x04020EB4 RID: 134836
+		// Token: 0x0401B7E1 RID: 112609
 		Close
 	}
 }

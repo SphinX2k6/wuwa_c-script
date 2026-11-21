@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B90 RID: 19344
+	// Token: 0x02003B3A RID: 15162
 	public class EndlessSpeedUpTips : UiPanelBase
 	{
-		// Token: 0x0603220F RID: 205327 RVA: 0x00BA525C File Offset: 0x00BA345C
+		// Token: 0x06026F9F RID: 159647 RVA: 0x00AE93A8 File Offset: 0x00AE75A8
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06032210 RID: 205328 RVA: 0x00BA5270 File Offset: 0x00BA3470
+		// Token: 0x06026FA0 RID: 159648 RVA: 0x00AE93BC File Offset: 0x00AE75BC
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			EndlessSpeedUpTips.<OnShowAsyncImplementImplement>d__2 <OnShowAsyncImplementImplement>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032211 RID: 205329 RVA: 0x00BA52B4 File Offset: 0x00BA34B4
+		// Token: 0x06026FA1 RID: 159649 RVA: 0x00AE9400 File Offset: 0x00AE7600
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			EndlessSpeedUpTips.<OnHideAsyncImplementImplement>d__3 <OnHideAsyncImplementImplement>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401AB4A RID: 109386
+		// Token: 0x0401549E RID: 87198
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 
-// Token: 0x02000EBF RID: 3775
+// Token: 0x02000374 RID: 884
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueInputLayer : InputLayer
 {
-	// Token: 0x06005D9B RID: 23963 RVA: 0x0011495D File Offset: 0x00112B5D
+	// Token: 0x06003132 RID: 12594 RVA: 0x0011C63D File Offset: 0x0011A83D
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.SurvivorsRogue;
 	}
 
-	// Token: 0x06005D9C RID: 23964 RVA: 0x00114964 File Offset: 0x00112B64
+	// Token: 0x06003133 RID: 12595 RVA: 0x0011C644 File Offset: 0x0011A844
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		switch (action)
@@ -29,19 +29,19 @@ public class SurvivorsRogueInputLayer : InputLayer
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x06005D9D RID: 23965 RVA: 0x001149A5 File Offset: 0x00112BA5
+	// Token: 0x06003134 RID: 12596 RVA: 0x0011C685 File Offset: 0x0011A885
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x06005D9E RID: 23966 RVA: 0x001149AC File Offset: 0x00112BAC
+	// Token: 0x06003135 RID: 12597 RVA: 0x0011C68C File Offset: 0x0011A88C
 	public override SInputCommand HandleHold(EInputAction action, float time)
 	{
 		return InputLayer.GetSwallowCommand();
 	}
 
-	// Token: 0x06005D9F RID: 23967 RVA: 0x001149B4 File Offset: 0x00112BB4
+	// Token: 0x06003136 RID: 12598 RVA: 0x0011C694 File Offset: 0x0011A894
 	private void ExecSkillAction()
 	{
 		KscSubControllerBase curSubController = KuroSimpleCombatController.Instance.CurSubController;

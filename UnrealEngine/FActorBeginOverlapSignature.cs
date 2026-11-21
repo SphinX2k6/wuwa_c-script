@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020007A8 RID: 1960
+	// Token: 0x02000162 RID: 354
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FActorBeginOverlapSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06006849 RID: 26697 RVA: 0x000950C9 File Offset: 0x000932C9
+		// Token: 0x060015C0 RID: 5568 RVA: 0x00021705 File Offset: 0x0001F905
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FActorBeginOverlapSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600684A RID: 26698 RVA: 0x000950D5 File Offset: 0x000932D5
+		// Token: 0x060015C1 RID: 5569 RVA: 0x00021711 File Offset: 0x0001F911
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FActorBeginOverlapSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FActorBeginOverlapSignature._FunctionPtr;
 		}
 
-		// Token: 0x170018A0 RID: 6304
-		// (get) Token: 0x0600684B RID: 26699 RVA: 0x000950F8 File Offset: 0x000932F8
+		// Token: 0x1700023B RID: 571
+		// (get) Token: 0x060015C2 RID: 5570 RVA: 0x00021734 File Offset: 0x0001F934
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600684C RID: 26700 RVA: 0x000950FF File Offset: 0x000932FF
+		// Token: 0x060015C3 RID: 5571 RVA: 0x0002173B File Offset: 0x0001F93B
 		[NullableContext(2)]
 		public FActorBeginOverlapSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600684D RID: 26701 RVA: 0x00095109 File Offset: 0x00093309
+		// Token: 0x060015C4 RID: 5572 RVA: 0x00021745 File Offset: 0x0001F945
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<AActor, AActor>) ?? ((Action<AActor, AActor>)Delegate.CreateDelegate(typeof(Action<AActor, AActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600684E RID: 26702 RVA: 0x0009513C File Offset: 0x0009333C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060015C5 RID: 5573 RVA: 0x00021778 File Offset: 0x0001F978
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -72,8 +71,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FActorBeginOverlapSignature.RegisterId);
 		}
 
-		// Token: 0x0600684F RID: 26703 RVA: 0x0009518C File Offset: 0x0009338C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060015C6 RID: 5574 RVA: 0x000217C8 File Offset: 0x0001F9C8
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -85,10 +83,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x06006850 RID: 26704 RVA: 0x000951AC File Offset: 0x000933AC
+		// Token: 0x060015C7 RID: 5575 RVA: 0x000217E8 File Offset: 0x0001F9E8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(AActor OverlappedActor, AActor OtherActor)
 		{
 			FActorBeginOverlapSignature.__FActorBeginOverlapSignature_DelegateParams* ptr = stackalloc FActorBeginOverlapSignature.__FActorBeginOverlapSignature_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FActorBeginOverlapSignature.__FActorBeginOverlapSignature_DelegateParams) & -16L;
@@ -98,10 +95,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x06006851 RID: 26705 RVA: 0x00095220 File Offset: 0x00093420
+		// Token: 0x060015C8 RID: 5576 RVA: 0x0002185C File Offset: 0x0001FA5C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<AActor, AActor> action = target as Action<AActor, AActor>;
@@ -114,35 +110,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 		}
 
-		// Token: 0x04003226 RID: 12838
+		// Token: 0x040006E9 RID: 1769
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04003227 RID: 12839
+		// Token: 0x040006EA RID: 1770
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ActorBeginOverlapSignature__DelegateSignature";
 
-		// Token: 0x04003228 RID: 12840
+		// Token: 0x040006EB RID: 1771
 		private static int RegisterId;
 
-		// Token: 0x02002C63 RID: 11363
+		// Token: 0x02000946 RID: 2374
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FActorBeginOverlapSignature_DelegateParams
+		private ref struct __FActorBeginOverlapSignature_DelegateParams
 		{
-			// Token: 0x0401658F RID: 91535
+			// Token: 0x04005865 RID: 22629
 			[FieldOffset(0)]
 			public IntPtr OverlappedActor;
 
-			// Token: 0x04016590 RID: 91536
+			// Token: 0x04005866 RID: 22630
 			[FieldOffset(8)]
 			public IntPtr OtherActor;
 		}
 
-		// Token: 0x02002C64 RID: 11364
+		// Token: 0x02000947 RID: 2375
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016591 RID: 91537
+			// Token: 0x04005867 RID: 22631
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

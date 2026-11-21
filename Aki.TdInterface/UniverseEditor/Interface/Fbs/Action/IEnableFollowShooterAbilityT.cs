@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200665E RID: 26206
+	// Token: 0x02006CCF RID: 27855
 	public class IEnableFollowShooterAbilityT
 	{
-		// Token: 0x1700C2B1 RID: 49841
-		// (get) Token: 0x0602D863 RID: 186467 RVA: 0x0063BE61 File Offset: 0x0063A061
-		// (set) Token: 0x0602D864 RID: 186468 RVA: 0x0063BE69 File Offset: 0x0063A069
+		// Token: 0x1700CC4F RID: 52303
+		// (get) Token: 0x06030034 RID: 196660 RVA: 0x006889C9 File Offset: 0x00686BC9
+		// (set) Token: 0x06030035 RID: 196661 RVA: 0x006889D1 File Offset: 0x00686BD1
 		public bool Enable { get; set; }
 
-		// Token: 0x1700C2B2 RID: 49842
-		// (get) Token: 0x0602D865 RID: 186469 RVA: 0x0063BE72 File Offset: 0x0063A072
-		// (set) Token: 0x0602D866 RID: 186470 RVA: 0x0063BE7A File Offset: 0x0063A07A
+		// Token: 0x1700CC50 RID: 52304
+		// (get) Token: 0x06030036 RID: 196662 RVA: 0x006889DA File Offset: 0x00686BDA
+		// (set) Token: 0x06030037 RID: 196663 RVA: 0x006889E2 File Offset: 0x00686BE2
 		public int Id { get; set; }
 
-		// Token: 0x1700C2B3 RID: 49843
-		// (get) Token: 0x0602D867 RID: 186471 RVA: 0x0063BE83 File Offset: 0x0063A083
-		// (set) Token: 0x0602D868 RID: 186472 RVA: 0x0063BE8B File Offset: 0x0063A08B
+		// Token: 0x1700CC51 RID: 52305
+		// (get) Token: 0x06030038 RID: 196664 RVA: 0x006889EB File Offset: 0x00686BEB
+		// (set) Token: 0x06030039 RID: 196665 RVA: 0x006889F3 File Offset: 0x00686BF3
 		public IFollowShooterJellyFishAbilityT AbilityType { get; set; }
 
-		// Token: 0x0602D869 RID: 186473 RVA: 0x0063BE94 File Offset: 0x0063A094
+		// Token: 0x0603003A RID: 196666 RVA: 0x006889FC File Offset: 0x00686BFC
 		public IEnableFollowShooterAbilityT()
 		{
 			this.Enable = false;

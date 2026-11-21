@@ -1,0 +1,242 @@
+﻿<linker>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.Runtime.Intrinsics.X86.Avx">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx2">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx2/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512BW">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512BW/VL">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512BW/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512CD">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512CD/VL">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512CD/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512DQ">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512DQ/VL">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512DQ/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx10v1">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx10v1/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx10v1/V512">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx10v1/V512/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512F">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512F/VL">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512F/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512Vbmi">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512Vbmi/VL">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Avx512Vbmi/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.AvxVnni">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.AvxVnni/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Fma">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.Fma/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.X86Serialize">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.X86.X86Serialize/X64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.Runtime.Intrinsics.Vector256">
+      <method signature="System.Boolean get_IsHardwareAccelerated()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Vector512">
+      <method signature="System.Boolean get_IsHardwareAccelerated()" body="stub" value="false" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.Diagnostics.Tracing.EventSource" feature="System.Diagnostics.Tracing.EventSource.IsSupported" featurevalue="false">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+      <method signature="System.Void Finalize()" body="stub" />
+      <method signature="System.Boolean IsEnabled()" body="stub" value="false" />
+      <method signature="System.Boolean IsEnabled(System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords)" body="stub" value="false" />
+      <method signature="System.Boolean IsEnabled(System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords,System.Diagnostics.Tracing.EventChannel)" body="stub" value="false" />
+    </type>
+    <type fullname="System.Diagnostics.Tracing.EventSource" feature="System.Diagnostics.Metrics.Meter.IsSupported" featurevalue="false">
+      <method signature="System.Boolean get_IsMeterSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Diagnostics.StackTrace" feature="System.Diagnostics.StackTrace.IsSupported" featurevalue="false">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <!-- Note: Invariant=true and Invariant=false are substituted at different levels. This allows for the whole Settings nested class
+         to be trimmed when Invariant=true, and allows for the Settings static cctor (on Unix) to be preserved when Invariant=false. -->
+    <type fullname="System.Globalization.GlobalizationMode">
+      <method signature="System.Boolean get_Invariant()" body="stub" value="true" feature="System.Globalization.Invariant" featurevalue="true" />
+      <method signature="System.Boolean get_InvariantNoLoad()" body="stub" value="true" feature="System.Globalization.Invariant" featurevalue="true" />
+      <method signature="System.Boolean get_PredefinedCulturesOnly()" body="stub" value="true" feature="System.Globalization.PredefinedCulturesOnly" featurevalue="true" />
+    </type>
+    <type fullname="System.Globalization.GlobalizationMode/Settings">
+      <method signature="System.Boolean get_Invariant()" body="stub" value="false" feature="System.Globalization.Invariant" featurevalue="false" />
+    </type>
+    <type fullname="System.LocalAppContextSwitches">
+      <method signature="System.Boolean get_EnableUnsafeUTF7Encoding()" body="stub" value="false" feature="System.Text.Encoding.EnableUnsafeUTF7Encoding" featurevalue="false" />
+    </type>
+    <type fullname="System.Resources.ResourceReader">
+      <method signature="System.Boolean InitializeBinaryFormatter()" body="stub" value="false" feature="System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization" featurevalue="false" />
+    </type>
+    <type fullname="System.Threading.Tasks.Task" feature="System.Diagnostics.Debugger.IsSupported" featurevalue="false">
+      <field name="s_asyncDebuggingEnabled" value="false" initialize="false" />
+      <method signature="System.Boolean get_IsWaitNotificationEnabled()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Resources.ResourceReader" feature="System.Resources.ResourceManager.AllowCustomResourceTypes" featurevalue="false">
+      <method signature="System.Boolean get_AllowCustomResourceTypes()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Reflection.Metadata.MetadataUpdater" feature="System.Reflection.Metadata.MetadataUpdater.IsSupported" featurevalue="false">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="Internal.Runtime.InteropServices.ComponentActivator" feature="System.Runtime.InteropServices.EnableConsumingManagedCodeFromNativeHosting" featurevalue="false">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.StartupHookProvider" feature="System.StartupHookProvider.IsSupported" featurevalue="false">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.BitConverter">
+      <field name="IsLittleEndian" value="true" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.IntPtr">
+      <method signature="System.Int32 get_Size()" body="stub" value="8" />
+    </type>
+    <type fullname="System.UIntPtr">
+      <method signature="System.Int32 get_Size()" body="stub" value="8" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.Runtime.Intrinsics.Vector64">
+      <method signature="System.Boolean get_IsHardwareAccelerated()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.AdvSimd">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.AdvSimd/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Aes">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Aes/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.ArmBase">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.ArmBase/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Crc32">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Crc32/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Dp">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Dp/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Rdm">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Rdm/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Sha1">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Sha1/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Sha256">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Sha256/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Sve">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+    <type fullname="System.Runtime.Intrinsics.Arm.Sve/Arm64">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.Runtime.Intrinsics.Wasm.PackedSimd">
+      <method signature="System.Boolean get_IsSupported()" body="stub" value="false" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib">
+    <type fullname="System.Threading.ThreadPool">
+      <method signature="System.Boolean get_UseWindowsThreadPool()" body="stub" value="true" feature="System.Threading.ThreadPool.UseWindowsThreadPool" featurevalue="true" />
+      <method signature="System.Boolean get_UseWindowsThreadPool()" body="stub" value="false" feature="System.Threading.ThreadPool.UseWindowsThreadPool" featurevalue="false" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib" feature="System.Resources.UseSystemResourceKeys" featurevalue="true">
+    <resource name="System.Private.CoreLib.Strings.resources" action="remove" />
+    <type fullname="System.SR">
+      <method signature="System.Boolean UsingResourceKeys()" body="stub" value="true" />
+      <method signature="System.Boolean GetUsingResourceKeysSwitchValue()" body="stub" value="true" />
+    </type>
+  </assembly>
+  <assembly fullname="System.Private.CoreLib" feature="System.Resources.UseSystemResourceKeys" featurevalue="false">
+    <type fullname="System.SR">
+      <method signature="System.Boolean UsingResourceKeys()" body="stub" value="false" />
+      <method signature="System.Boolean GetUsingResourceKeysSwitchValue()" body="stub" value="false" />
+    </type>
+  </assembly>
+</linker>

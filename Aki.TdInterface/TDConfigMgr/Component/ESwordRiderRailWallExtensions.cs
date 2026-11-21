@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A26 RID: 2598
+	// Token: 0x02000AEB RID: 2795
 	public static class ESwordRiderRailWallExtensions
 	{
-		// Token: 0x0600395C RID: 14684 RVA: 0x000942F8 File Offset: 0x000924F8
+		// Token: 0x06003D34 RID: 15668 RVA: 0x0009CC2C File Offset: 0x0009AE2C
 		public static string ToEnumString(this ESwordRiderRailWall value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600395D RID: 14685 RVA: 0x00094330 File Offset: 0x00092530
+		// Token: 0x06003D35 RID: 15669 RVA: 0x0009CC64 File Offset: 0x0009AE64
 		public static ESwordRiderRailWall FromString(string name)
 		{
 			ESwordRiderRailWall result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600395E RID: 14686 RVA: 0x00094359 File Offset: 0x00092559
+		// Token: 0x06003D36 RID: 15670 RVA: 0x0009CC8D File Offset: 0x0009AE8D
 		public static bool TryFromString(string name, out ESwordRiderRailWall value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600395F RID: 14687 RVA: 0x00094392 File Offset: 0x00092592
+		// Token: 0x06003D37 RID: 15671 RVA: 0x0009CCC6 File Offset: 0x0009AEC6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003960 RID: 14688 RVA: 0x000943AA File Offset: 0x000925AA
+		// Token: 0x06003D38 RID: 15672 RVA: 0x0009CCDE File Offset: 0x0009AEDE
 		public static ESwordRiderRailWall[] GetValues()
 		{
 			return new ESwordRiderRailWall[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003961 RID: 14689 RVA: 0x000943B6 File Offset: 0x000925B6
+		// Token: 0x06003D39 RID: 15673 RVA: 0x0009CCEA File Offset: 0x0009AEEA
 		public static string[] GetNames()
 		{
 			return new string[]

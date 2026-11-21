@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002E9E RID: 11934
+// Token: 0x020023F1 RID: 9201
 [NullableContext(1)]
 [Nullable(0)]
 public class ConfigOverrideConditionListener : IClear
 {
-	// Token: 0x060197D4 RID: 104404 RVA: 0x00694538 File Offset: 0x00692738
+	// Token: 0x060170AA RID: 94378 RVA: 0x006BA8F8 File Offset: 0x006B8AF8
 	public IConfigOverrideRule ResolveOverrideConfigRule(List<IConfigOverrideRule> configOverrides)
 	{
 		if (configOverrides == null || configOverrides.Count == 0)
@@ -26,7 +25,7 @@ public class ConfigOverrideConditionListener : IClear
 		return null;
 	}
 
-	// Token: 0x060197D5 RID: 104405 RVA: 0x0069459C File Offset: 0x0069279C
+	// Token: 0x060170AB RID: 94379 RVA: 0x006BA95C File Offset: 0x006B8B5C
 	public long? GetCurrentConfigId(int listenerId)
 	{
 		ConfigOverrideConditionListener.ConfigOverrideListenerRuntime configOverrideListenerRuntime;
@@ -37,7 +36,7 @@ public class ConfigOverrideConditionListener : IClear
 		return null;
 	}
 
-	// Token: 0x060197D6 RID: 104406 RVA: 0x006945CC File Offset: 0x006927CC
+	// Token: 0x060170AC RID: 94380 RVA: 0x006BA98C File Offset: 0x006B8B8C
 	public ConfigOverrideConditionListener.ConfigOverrideListenerRegistration AddListener(List<IConfigOverrideRule> configOverrides, Action callback, bool triggerOnRegister, long currentOverrideConfigId)
 	{
 		if (configOverrides == null || configOverrides.Count == 0)
@@ -75,7 +74,7 @@ public class ConfigOverrideConditionListener : IClear
 		};
 	}
 
-	// Token: 0x060197D7 RID: 104407 RVA: 0x006946E8 File Offset: 0x006928E8
+	// Token: 0x060170AD RID: 94381 RVA: 0x006BAAA8 File Offset: 0x006B8CA8
 	public ConfigOverrideConditionListener.ConfigOverrideListenerRegistration RemoveListener(int listenerId)
 	{
 		ConfigOverrideConditionListener.ConfigOverrideListenerRuntime configOverrideListenerRuntime;
@@ -94,11 +93,11 @@ public class ConfigOverrideConditionListener : IClear
 		};
 	}
 
-	// Token: 0x060197D8 RID: 104408 RVA: 0x0069476C File Offset: 0x0069296C
+	// Token: 0x060170AE RID: 94382 RVA: 0x006BAB2C File Offset: 0x006B8D2C
 	public void Clear()
 	{
 		this.listenerMap.Clear();
-		foreach (KeyValuePair<EConfigOverrideConditionType, int> keyValuePair in this.conditionListenerCountMap.ToList<KeyValuePair<EConfigOverrideConditionType, int>>())
+		foreach (KeyValuePair<EConfigOverrideConditionType, int> keyValuePair in this.conditionListenerCountMap)
 		{
 			if (keyValuePair.Value > 0)
 			{
@@ -108,13 +107,13 @@ public class ConfigOverrideConditionListener : IClear
 		this.conditionListenerCountMap.Clear();
 	}
 
-	// Token: 0x060197D9 RID: 104409 RVA: 0x006947EC File Offset: 0x006929EC
+	// Token: 0x060170AF RID: 94383 RVA: 0x006BABA8 File Offset: 0x006B8DA8
 	public bool ClearObject()
 	{
 		return true;
 	}
 
-	// Token: 0x060197DA RID: 104410 RVA: 0x006947F0 File Offset: 0x006929F0
+	// Token: 0x060170B0 RID: 94384 RVA: 0x006BABAC File Offset: 0x006B8DAC
 	private bool EvaluateOverrideCondition(IConfigOverrideRule overrideRule)
 	{
 		if (overrideRule.ConditionType != EConfigOverrideConditionType.FormationRoleHasTag)
@@ -134,20 +133,28 @@ public class ConfigOverrideConditionListener : IClear
 		return this.CheckFormationRoleHasTag(tagName);
 	}
 
-	// Token: 0x060197DB RID: 104411 RVA: 0x00694838 File Offset: 0x00692A38
+	// Token: 0x060170B1 RID: 94385 RVA: 0x006BABF4 File Offset: 0x006B8DF4
 	private bool CheckFormationRoleHasTag(string tagName)
 	{
-		return SceneTeamModel.Instance.GetTeamEntities(false).Any(delegate(EntityHandle entityHandle)
+		List<EntityHandle> teamEntities = SceneTeamModel.Instance.GetTeamEntities(false);
+		int i = 0;
+		int count = teamEntities.Count;
+		while (i < count)
 		{
-			WorldEntity entity = entityHandle.Entity;
+			WorldEntity entity = teamEntities[i].Entity;
 			object obj = (entity != null) ? entity.GetComponent<BaseTagComponent>() : null;
 			int tagIdByName = GameplayTagUtils.GetTagIdByName(tagName);
 			object obj2 = obj;
-			return obj2 != null && obj2.HasTag(tagIdByName);
-		});
+			if (obj2 != null && obj2.HasTag(tagIdByName))
+			{
+				return true;
+			}
+			i++;
+		}
+		return false;
 	}
 
-	// Token: 0x060197DC RID: 104412 RVA: 0x00694870 File Offset: 0x00692A70
+	// Token: 0x060170B2 RID: 94386 RVA: 0x006BAC54 File Offset: 0x006B8E54
 	private void RegisterConditionListener(EConfigOverrideConditionType conditionType)
 	{
 		int num;
@@ -163,7 +170,7 @@ public class ConfigOverrideConditionListener : IClear
 		this.conditionListenerCountMap[conditionType] = num + 1;
 	}
 
-	// Token: 0x060197DD RID: 104413 RVA: 0x006948B5 File Offset: 0x00692AB5
+	// Token: 0x060170B3 RID: 94387 RVA: 0x006BAC99 File Offset: 0x006B8E99
 	private void RegisterConditionEvent(EConfigOverrideConditionType conditionType)
 	{
 		if (conditionType == EConfigOverrideConditionType.FormationRoleHasTag)
@@ -172,7 +179,7 @@ public class ConfigOverrideConditionListener : IClear
 		}
 	}
 
-	// Token: 0x060197DE RID: 104414 RVA: 0x006948D8 File Offset: 0x00692AD8
+	// Token: 0x060170B4 RID: 94388 RVA: 0x006BACBC File Offset: 0x006B8EBC
 	private void UnregisterConditionListener(EConfigOverrideConditionType conditionType)
 	{
 		int num;
@@ -188,7 +195,7 @@ public class ConfigOverrideConditionListener : IClear
 		}
 	}
 
-	// Token: 0x060197DF RID: 104415 RVA: 0x00694915 File Offset: 0x00692B15
+	// Token: 0x060170B5 RID: 94389 RVA: 0x006BACF9 File Offset: 0x006B8EF9
 	private void UnregisterConditionEvent(EConfigOverrideConditionType conditionType)
 	{
 		if (conditionType == EConfigOverrideConditionType.FormationRoleHasTag)
@@ -197,16 +204,16 @@ public class ConfigOverrideConditionListener : IClear
 		}
 	}
 
-	// Token: 0x060197E0 RID: 104416 RVA: 0x00694937 File Offset: 0x00692B37
+	// Token: 0x060170B6 RID: 94390 RVA: 0x006BAD1B File Offset: 0x006B8F1B
 	private void OnFormationConditionChanged()
 	{
 		this.DispatchFormationListeners();
 	}
 
-	// Token: 0x060197E1 RID: 104417 RVA: 0x00694940 File Offset: 0x00692B40
+	// Token: 0x060170B7 RID: 94391 RVA: 0x006BAD24 File Offset: 0x006B8F24
 	private void DispatchFormationListeners()
 	{
-		foreach (KeyValuePair<int, ConfigOverrideConditionListener.ConfigOverrideListenerRuntime> keyValuePair in this.listenerMap.ToList<KeyValuePair<int, ConfigOverrideConditionListener.ConfigOverrideListenerRuntime>>())
+		foreach (KeyValuePair<int, ConfigOverrideConditionListener.ConfigOverrideListenerRuntime> keyValuePair in this.listenerMap)
 		{
 			if (keyValuePair.Value.ConditionTypes.Contains(EConfigOverrideConditionType.FormationRoleHasTag))
 			{
@@ -218,7 +225,7 @@ public class ConfigOverrideConditionListener : IClear
 		}
 	}
 
-	// Token: 0x060197E2 RID: 104418 RVA: 0x006949C0 File Offset: 0x00692BC0
+	// Token: 0x060170B8 RID: 94392 RVA: 0x006BAD9C File Offset: 0x006B8F9C
 	private void DispatchListeners(List<int> listenerIds)
 	{
 		foreach (int key in listenerIds)
@@ -243,72 +250,72 @@ public class ConfigOverrideConditionListener : IClear
 		}
 	}
 
-	// Token: 0x0400BE32 RID: 48690
+	// Token: 0x0400C1CD RID: 49613
 	private readonly Dictionary<int, ConfigOverrideConditionListener.ConfigOverrideListenerRuntime> listenerMap = new Dictionary<int, ConfigOverrideConditionListener.ConfigOverrideListenerRuntime>();
 
-	// Token: 0x0400BE33 RID: 48691
+	// Token: 0x0400C1CE RID: 49614
 	private int listenerIdGenerator;
 
-	// Token: 0x0400BE34 RID: 48692
+	// Token: 0x0400C1CF RID: 49615
 	private readonly Dictionary<EConfigOverrideConditionType, int> conditionListenerCountMap = new Dictionary<EConfigOverrideConditionType, int>();
 
-	// Token: 0x020095D6 RID: 38358
+	// Token: 0x020087FF RID: 34815
 	[Nullable(0)]
 	public class ConfigOverrideRule : IConfigOverrideRule
 	{
-		// Token: 0x1700A0B9 RID: 41145
-		// (get) Token: 0x0604C0A6 RID: 311462 RVA: 0x0140D693 File Offset: 0x0140B893
-		// (set) Token: 0x0604C0A7 RID: 311463 RVA: 0x0140D69B File Offset: 0x0140B89B
+		// Token: 0x17007848 RID: 30792
+		// (get) Token: 0x06042541 RID: 271681 RVA: 0x013B82A3 File Offset: 0x013B64A3
+		// (set) Token: 0x06042542 RID: 271682 RVA: 0x013B82AB File Offset: 0x013B64AB
 		public long OverrideConfigId { get; set; }
 
-		// Token: 0x1700A0BA RID: 41146
-		// (get) Token: 0x0604C0A8 RID: 311464 RVA: 0x0140D6A4 File Offset: 0x0140B8A4
-		// (set) Token: 0x0604C0A9 RID: 311465 RVA: 0x0140D6AC File Offset: 0x0140B8AC
+		// Token: 0x17007849 RID: 30793
+		// (get) Token: 0x06042543 RID: 271683 RVA: 0x013B82B4 File Offset: 0x013B64B4
+		// (set) Token: 0x06042544 RID: 271684 RVA: 0x013B82BC File Offset: 0x013B64BC
 		public EConfigOverrideConditionType ConditionType { get; set; }
 
-		// Token: 0x1700A0BB RID: 41147
-		// (get) Token: 0x0604C0AA RID: 311466 RVA: 0x0140D6B5 File Offset: 0x0140B8B5
-		// (set) Token: 0x0604C0AB RID: 311467 RVA: 0x0140D6BD File Offset: 0x0140B8BD
+		// Token: 0x1700784A RID: 30794
+		// (get) Token: 0x06042545 RID: 271685 RVA: 0x013B82C5 File Offset: 0x013B64C5
+		// (set) Token: 0x06042546 RID: 271686 RVA: 0x013B82CD File Offset: 0x013B64CD
 		public string ConditionString { get; set; }
 	}
 
-	// Token: 0x020095D7 RID: 38359
+	// Token: 0x02008800 RID: 34816
 	[Nullable(0)]
 	private class ConfigOverrideListenerRuntime
 	{
-		// Token: 0x1700A0BC RID: 41148
-		// (get) Token: 0x0604C0AD RID: 311469 RVA: 0x0140D6CE File Offset: 0x0140B8CE
-		// (set) Token: 0x0604C0AE RID: 311470 RVA: 0x0140D6D6 File Offset: 0x0140B8D6
+		// Token: 0x1700784B RID: 30795
+		// (get) Token: 0x06042548 RID: 271688 RVA: 0x013B82DE File Offset: 0x013B64DE
+		// (set) Token: 0x06042549 RID: 271689 RVA: 0x013B82E6 File Offset: 0x013B64E6
 		public int ListenerId { get; set; }
 
-		// Token: 0x1700A0BD RID: 41149
-		// (get) Token: 0x0604C0AF RID: 311471 RVA: 0x0140D6DF File Offset: 0x0140B8DF
-		// (set) Token: 0x0604C0B0 RID: 311472 RVA: 0x0140D6E7 File Offset: 0x0140B8E7
+		// Token: 0x1700784C RID: 30796
+		// (get) Token: 0x0604254A RID: 271690 RVA: 0x013B82EF File Offset: 0x013B64EF
+		// (set) Token: 0x0604254B RID: 271691 RVA: 0x013B82F7 File Offset: 0x013B64F7
 		public HashSet<EConfigOverrideConditionType> ConditionTypes { get; set; }
 
-		// Token: 0x1700A0BE RID: 41150
-		// (get) Token: 0x0604C0B1 RID: 311473 RVA: 0x0140D6F0 File Offset: 0x0140B8F0
-		// (set) Token: 0x0604C0B2 RID: 311474 RVA: 0x0140D6F8 File Offset: 0x0140B8F8
+		// Token: 0x1700784D RID: 30797
+		// (get) Token: 0x0604254C RID: 271692 RVA: 0x013B8300 File Offset: 0x013B6500
+		// (set) Token: 0x0604254D RID: 271693 RVA: 0x013B8308 File Offset: 0x013B6508
 		public long? CurrentOverrideConfigId { get; set; }
 
-		// Token: 0x1700A0BF RID: 41151
-		// (get) Token: 0x0604C0B3 RID: 311475 RVA: 0x0140D701 File Offset: 0x0140B901
-		// (set) Token: 0x0604C0B4 RID: 311476 RVA: 0x0140D709 File Offset: 0x0140B909
+		// Token: 0x1700784E RID: 30798
+		// (get) Token: 0x0604254E RID: 271694 RVA: 0x013B8311 File Offset: 0x013B6511
+		// (set) Token: 0x0604254F RID: 271695 RVA: 0x013B8319 File Offset: 0x013B6519
 		public List<IConfigOverrideRule> ConfigOverrides { get; set; }
 
-		// Token: 0x1700A0C0 RID: 41152
-		// (get) Token: 0x0604C0B5 RID: 311477 RVA: 0x0140D712 File Offset: 0x0140B912
-		// (set) Token: 0x0604C0B6 RID: 311478 RVA: 0x0140D71A File Offset: 0x0140B91A
+		// Token: 0x1700784F RID: 30799
+		// (get) Token: 0x06042550 RID: 271696 RVA: 0x013B8322 File Offset: 0x013B6522
+		// (set) Token: 0x06042551 RID: 271697 RVA: 0x013B832A File Offset: 0x013B652A
 		public Action Callback { get; set; }
 	}
 
-	// Token: 0x020095D8 RID: 38360
+	// Token: 0x02008801 RID: 34817
 	[NullableContext(0)]
 	public class ConfigOverrideListenerRegistration
 	{
-		// Token: 0x1700A0C1 RID: 41153
-		// (get) Token: 0x0604C0B8 RID: 311480 RVA: 0x0140D72B File Offset: 0x0140B92B
-		// (set) Token: 0x0604C0B9 RID: 311481 RVA: 0x0140D733 File Offset: 0x0140B933
+		// Token: 0x17007850 RID: 30800
+		// (get) Token: 0x06042553 RID: 271699 RVA: 0x013B833B File Offset: 0x013B653B
+		// (set) Token: 0x06042554 RID: 271700 RVA: 0x013B8343 File Offset: 0x013B6543
 		public int ListenerId { get; set; }
 	}
 }

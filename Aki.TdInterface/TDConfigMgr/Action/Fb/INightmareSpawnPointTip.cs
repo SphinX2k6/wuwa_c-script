@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002756 RID: 10070
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A22 RID: 10786
 	public class INightmareSpawnPointTip : ICommonTipType
 	{
-		// Token: 0x0600E05B RID: 57435 RVA: 0x00212F68 File Offset: 0x00211168
+		// Token: 0x0600EE5B RID: 61019 RVA: 0x0022FAA0 File Offset: 0x0022DCA0
 		public static INightmareSpawnPointTip Create(INightmareSpawnPointTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004371 RID: 17265
-		// (get) Token: 0x0600E05C RID: 57436 RVA: 0x00212F87 File Offset: 0x00211187
+		// Token: 0x170046C5 RID: 18117
+		// (get) Token: 0x0600EE5C RID: 61020 RVA: 0x0022FABF File Offset: 0x0022DCBF
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004372 RID: 17266
-		// (get) Token: 0x0600E05D RID: 57437 RVA: 0x00212F94 File Offset: 0x00211194
+		// Token: 0x170046C6 RID: 18118
+		// (get) Token: 0x0600EE5D RID: 61021 RVA: 0x0022FACC File Offset: 0x0022DCCC
 		public virtual string TidMainText
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004373 RID: 17267
-		// (get) Token: 0x0600E05E RID: 57438 RVA: 0x00212FA1 File Offset: 0x002111A1
+		// Token: 0x170046C7 RID: 18119
+		// (get) Token: 0x0600EE5E RID: 61022 RVA: 0x0022FAD9 File Offset: 0x0022DCD9
 		public virtual string TidSubText
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004374 RID: 17268
-		// (get) Token: 0x0600E05F RID: 57439 RVA: 0x00212FAE File Offset: 0x002111AE
+		// Token: 0x170046C8 RID: 18120
+		// (get) Token: 0x0600EE5F RID: 61023 RVA: 0x0022FAE6 File Offset: 0x0022DCE6
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004375 RID: 17269
-		// (get) Token: 0x0600E060 RID: 57440 RVA: 0x00212FB1 File Offset: 0x002111B1
+		// Token: 0x170046C9 RID: 18121
+		// (get) Token: 0x0600EE60 RID: 61024 RVA: 0x0022FAE9 File Offset: 0x0022DCE9
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -76,7 +74,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C54 RID: 31828
+		// Token: 0x04008302 RID: 33538
 		private INightmareSpawnPointTip Instance;
 	}
 }

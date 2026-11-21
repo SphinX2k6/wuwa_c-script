@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006540 RID: 25920
+	// Token: 0x02006BB1 RID: 27569
 	public enum IDartInteractTypeBase_Union : byte
 	{
-		// Token: 0x04010B88 RID: 68488
+		// Token: 0x040119A4 RID: 72100
 		NONE,
-		// Token: 0x04010B89 RID: 68489
+		// Token: 0x040119A5 RID: 72101
 		IDartInteractTypeBase,
-		// Token: 0x04010B8A RID: 68490
+		// Token: 0x040119A6 RID: 72102
 		IDartMachineInteractType,
-		// Token: 0x04010B8B RID: 68491
+		// Token: 0x040119A7 RID: 72103
 		IDartChampionOwnerInteractType,
-		// Token: 0x04010B8C RID: 68492
+		// Token: 0x040119A8 RID: 72104
 		IDartPlayableRoleInteractType
 	}
 }

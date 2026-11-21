@@ -10,12 +10,12 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class RemoteVersionConfig
 	{
-		// Token: 0x060002A4 RID: 676 RVA: 0x0000DB34 File Offset: 0x0000BD34
+		// Token: 0x060002A5 RID: 677 RVA: 0x0000DE54 File Offset: 0x0000C054
 		public RemoteVersionConfig()
 		{
 		}
 
-		// Token: 0x060002A5 RID: 677 RVA: 0x0000DB80 File Offset: 0x0000BD80
+		// Token: 0x060002A6 RID: 678 RVA: 0x0000DEA0 File Offset: 0x0000C0A0
 		public RemoteVersionConfig(Partial<RemoteVersionConfig> data)
 		{
 			this.PackageVersion = (data.GetValue<string>(([Nullable(1)] RemoteVersionConfig r) => r.PackageVersion) ?? "");
@@ -33,19 +33,19 @@ namespace CSharpScript.Launcher
 			}
 		}
 
-		// Token: 0x040001A6 RID: 422
+		// Token: 0x040001B2 RID: 434
 		public string PackageVersion = "";
 
-		// Token: 0x040001A7 RID: 423
+		// Token: 0x040001B3 RID: 435
 		public string LauncherPackageVersion = "";
 
-		// Token: 0x040001A8 RID: 424
+		// Token: 0x040001B4 RID: 436
 		public string ChangeList = "";
 
-		// Token: 0x040001A9 RID: 425
+		// Token: 0x040001B5 RID: 437
 		public long? UpdateTime = new long?(0L);
 
-		// Token: 0x040001AA RID: 426
+		// Token: 0x040001B6 RID: 438
 		public Dictionary<string, VersionItem> ResVersions = new Dictionary<string, VersionItem>();
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D2 RID: 6354
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A63 RID: 6755
 	public class IClientUiEvent : IClientEventTarget
 	{
-		// Token: 0x06008847 RID: 34887 RVA: 0x001427B8 File Offset: 0x001409B8
+		// Token: 0x06008F8F RID: 36751 RVA: 0x00152330 File Offset: 0x00150530
 		private IClientUiEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008848 RID: 34888 RVA: 0x001427F0 File Offset: 0x001409F0
+		// Token: 0x06008F90 RID: 36752 RVA: 0x00152368 File Offset: 0x00150568
 		public static IClientUiEvent Create([Nullable(2)] IClientUiEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008849 RID: 34889 RVA: 0x00142803 File Offset: 0x00140A03
+		// Token: 0x06008F91 RID: 36753 RVA: 0x0015237B File Offset: 0x0015057B
 		public static IClientUiEvent CreateFromSetValue([Nullable(2)] IClientUiEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600884A RID: 34890 RVA: 0x00142816 File Offset: 0x00140A16
+		// Token: 0x06008F92 RID: 36754 RVA: 0x0015238E File Offset: 0x0015058E
 		public new IClientUiEvent_SetValue ToSetValue()
 		{
 			return new IClientUiEvent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C3D RID: 11325
-		// (get) Token: 0x0600884B RID: 34891 RVA: 0x00142835 File Offset: 0x00140A35
-		// (set) Token: 0x0600884C RID: 34892 RVA: 0x00142860 File Offset: 0x00140A60
+		// Token: 0x17002E3F RID: 11839
+		// (get) Token: 0x06008F93 RID: 36755 RVA: 0x001523AD File Offset: 0x001505AD
+		// (set) Token: 0x06008F94 RID: 36756 RVA: 0x001523D8 File Offset: 0x001505D8
 		public override EClientEventTarget Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C3E RID: 11326
-		// (get) Token: 0x0600884D RID: 34893 RVA: 0x0014286E File Offset: 0x00140A6E
-		// (set) Token: 0x0600884E RID: 34894 RVA: 0x00142895 File Offset: 0x00140A95
+		// Token: 0x17002E40 RID: 11840
+		// (get) Token: 0x06008F95 RID: 36757 RVA: 0x001523E6 File Offset: 0x001505E6
+		// (set) Token: 0x06008F96 RID: 36758 RVA: 0x0015240D File Offset: 0x0015060D
 		public virtual IClientEventUi Ui
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400559E RID: 21918
+		// Token: 0x040059F8 RID: 23032
 		[Nullable(2)]
 		protected new IClientUiEvent FbInstance;
 
-		// Token: 0x0400559F RID: 21919
+		// Token: 0x040059F9 RID: 23033
 		[Nullable(2)]
 		protected new IClientUiEvent_SetValue PocoInterface;
 	}

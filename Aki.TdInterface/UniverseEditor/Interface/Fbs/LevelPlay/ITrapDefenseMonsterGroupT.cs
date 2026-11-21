@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045B8 RID: 17848
+	// Token: 0x02004A20 RID: 18976
 	public class ITrapDefenseMonsterGroupT
 	{
-		// Token: 0x17007EDC RID: 32476
-		// (get) Token: 0x0601AFDB RID: 110555 RVA: 0x003D931A File Offset: 0x003D751A
-		// (set) Token: 0x0601AFDC RID: 110556 RVA: 0x003D9322 File Offset: 0x003D7522
+		// Token: 0x1700851D RID: 34077
+		// (get) Token: 0x0601C7B0 RID: 116656 RVA: 0x004055B6 File Offset: 0x004037B6
+		// (set) Token: 0x0601C7B1 RID: 116657 RVA: 0x004055BE File Offset: 0x004037BE
 		public int Id { get; set; }
 
-		// Token: 0x0601AFDD RID: 110557 RVA: 0x003D932B File Offset: 0x003D752B
+		// Token: 0x0601C7B2 RID: 116658 RVA: 0x004055C7 File Offset: 0x004037C7
 		public ITrapDefenseMonsterGroupT()
 		{
 			this.Id = 0;

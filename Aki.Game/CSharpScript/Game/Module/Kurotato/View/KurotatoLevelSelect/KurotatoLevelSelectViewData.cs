@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Kurotato.View.KurotatoLevelSelect
 {
-	// Token: 0x02005759 RID: 22361
+	// Token: 0x02004730 RID: 18224
 	public class KurotatoLevelSelectViewData
 	{
-		// Token: 0x0401DCC6 RID: 122054
+		// Token: 0x0401875C RID: 100188
 		public EKurotatoLevelMode LevelMode = EKurotatoLevelMode.Teach;
 
-		// Token: 0x0401DCC7 RID: 122055
+		// Token: 0x0401875D RID: 100189
 		public int LevelId;
 
-		// Token: 0x0401DCC8 RID: 122056
+		// Token: 0x0401875E RID: 100190
 		public int? RoleId = new int?(0);
 	}
 }

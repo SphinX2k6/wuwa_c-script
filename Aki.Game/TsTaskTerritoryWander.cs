@@ -16,9 +16,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTerritoryWander.TsTaskTerritoryWander_C")]
 public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700021A RID: 538
-	// (get) Token: 0x06000B85 RID: 2949 RVA: 0x00039A09 File Offset: 0x00037C09
-	// (set) Token: 0x06000B86 RID: 2950 RVA: 0x00039A1D File Offset: 0x00037C1D
+	// Token: 0x1700021D RID: 541
+	// (get) Token: 0x06000B8B RID: 2955 RVA: 0x0003AC4D File Offset: 0x00038E4D
+	// (set) Token: 0x06000B8C RID: 2956 RVA: 0x0003AC61 File Offset: 0x00038E61
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string RangeCenterKey
@@ -35,9 +35,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700021B RID: 539
-	// (get) Token: 0x06000B87 RID: 2951 RVA: 0x00039A32 File Offset: 0x00037C32
-	// (set) Token: 0x06000B88 RID: 2952 RVA: 0x00039A42 File Offset: 0x00037C42
+	// Token: 0x1700021E RID: 542
+	// (get) Token: 0x06000B8D RID: 2957 RVA: 0x0003AC76 File Offset: 0x00038E76
+	// (set) Token: 0x06000B8E RID: 2958 RVA: 0x0003AC86 File Offset: 0x00038E86
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float RangeRadius
 	{
@@ -51,9 +51,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700021C RID: 540
-	// (get) Token: 0x06000B89 RID: 2953 RVA: 0x00039A53 File Offset: 0x00037C53
-	// (set) Token: 0x06000B8A RID: 2954 RVA: 0x00039A63 File Offset: 0x00037C63
+	// Token: 0x1700021F RID: 543
+	// (get) Token: 0x06000B8F RID: 2959 RVA: 0x0003AC97 File Offset: 0x00038E97
+	// (set) Token: 0x06000B90 RID: 2960 RVA: 0x0003ACA7 File Offset: 0x00038EA7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Angle
 	{
@@ -67,9 +67,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700021D RID: 541
-	// (get) Token: 0x06000B8B RID: 2955 RVA: 0x00039A74 File Offset: 0x00037C74
-	// (set) Token: 0x06000B8C RID: 2956 RVA: 0x00039A84 File Offset: 0x00037C84
+	// Token: 0x17000220 RID: 544
+	// (get) Token: 0x06000B91 RID: 2961 RVA: 0x0003ACB8 File Offset: 0x00038EB8
+	// (set) Token: 0x06000B92 RID: 2962 RVA: 0x0003ACC8 File Offset: 0x00038EC8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float InnerDiameter
 	{
@@ -83,9 +83,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700021E RID: 542
-	// (get) Token: 0x06000B8D RID: 2957 RVA: 0x00039A95 File Offset: 0x00037C95
-	// (set) Token: 0x06000B8E RID: 2958 RVA: 0x00039AA5 File Offset: 0x00037CA5
+	// Token: 0x17000221 RID: 545
+	// (get) Token: 0x06000B93 RID: 2963 RVA: 0x0003ACD9 File Offset: 0x00038ED9
+	// (set) Token: 0x06000B94 RID: 2964 RVA: 0x0003ACE9 File Offset: 0x00038EE9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float OuterDiameter
 	{
@@ -99,9 +99,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700021F RID: 543
-	// (get) Token: 0x06000B8F RID: 2959 RVA: 0x00039AB6 File Offset: 0x00037CB6
-	// (set) Token: 0x06000B90 RID: 2960 RVA: 0x00039AC6 File Offset: 0x00037CC6
+	// Token: 0x17000222 RID: 546
+	// (get) Token: 0x06000B95 RID: 2965 RVA: 0x0003ACFA File Offset: 0x00038EFA
+	// (set) Token: 0x06000B96 RID: 2966 RVA: 0x0003AD0A File Offset: 0x00038F0A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ForceNavigation
 	{
@@ -115,9 +115,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17000220 RID: 544
-	// (get) Token: 0x06000B91 RID: 2961 RVA: 0x00039AD7 File Offset: 0x00037CD7
-	// (set) Token: 0x06000B92 RID: 2962 RVA: 0x00039AE7 File Offset: 0x00037CE7
+	// Token: 0x17000223 RID: 547
+	// (get) Token: 0x06000B97 RID: 2967 RVA: 0x0003AD1B File Offset: 0x00038F1B
+	// (set) Token: 0x06000B98 RID: 2968 RVA: 0x0003AD2B File Offset: 0x00038F2B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float TurnSpeed
 	{
@@ -131,9 +131,9 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17000221 RID: 545
-	// (get) Token: 0x06000B93 RID: 2963 RVA: 0x00039AF8 File Offset: 0x00037CF8
-	// (set) Token: 0x06000B94 RID: 2964 RVA: 0x00039B08 File Offset: 0x00037D08
+	// Token: 0x17000224 RID: 548
+	// (get) Token: 0x06000B99 RID: 2969 RVA: 0x0003AD3C File Offset: 0x00038F3C
+	// (set) Token: 0x06000B9A RID: 2970 RVA: 0x0003AD4C File Offset: 0x00038F4C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugMode
 	{
@@ -147,7 +147,7 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x06000B95 RID: 2965 RVA: 0x00039B1C File Offset: 0x00037D1C
+	// Token: 0x06000B9B RID: 2971 RVA: 0x0003AD60 File Offset: 0x00038F60
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -164,29 +164,26 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x06000B96 RID: 2966 RVA: 0x00039BA0 File Offset: 0x00037DA0
+	// Token: 0x06000B9C RID: 2972 RVA: 0x0003ADE4 File Offset: 0x00038FE4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTerritoryWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskTerritoryWander.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B97 RID: 2967 RVA: 0x00039C3C File Offset: 0x00037E3C
+	// Token: 0x06000B9D RID: 2973 RVA: 0x0003AE94 File Offset: 0x00039094
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
 		this.InitTsVariables();
@@ -249,30 +246,27 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.CurrentNavigationIndex = 1;
 	}
 
-	// Token: 0x06000B98 RID: 2968 RVA: 0x00039DE8 File Offset: 0x00037FE8
+	// Token: 0x06000B9E RID: 2974 RVA: 0x0003B040 File Offset: 0x00039240
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTerritoryWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskTerritoryWander.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B99 RID: 2969 RVA: 0x00039E88 File Offset: 0x00038088
+	// Token: 0x06000B9F RID: 2975 RVA: 0x0003B0F8 File Offset: 0x000392F8
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
 		if (!(ownerController is TsAiController))
@@ -316,11 +310,11 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		{
 			this.CurrentNavigationIndex++;
 		}
-		this.ActorComp.SetInputDirect(this.CacheVector, false);
+		this.ActorComp.SetInputDirect(this.CacheVector, false, EInputDirectSpace.World);
 		AiControllerLibrary.TurnToDirect(this.ActorComp, this.CacheVector, this.TsTurnSpeed, false, 0f);
 	}
 
-	// Token: 0x06000B9A RID: 2970 RVA: 0x0003A000 File Offset: 0x00038200
+	// Token: 0x06000BA0 RID: 2976 RVA: 0x0003B274 File Offset: 0x00039474
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -339,7 +333,7 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		return new ValueTuple<double, double>(num * Math.Cos(randomRange2), num * Math.Sin(randomRange2));
 	}
 
-	// Token: 0x06000B9B RID: 2971 RVA: 0x0003A074 File Offset: 0x00038274
+	// Token: 0x06000BA1 RID: 2977 RVA: 0x0003B2E8 File Offset: 0x000394E8
 	protected override void OnClear()
 	{
 		TsAiController tsAiController = base.AIOwner as TsAiController;
@@ -357,27 +351,21 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.UnifiedStateComp = null;
 	}
 
-	// Token: 0x06000B9C RID: 2972 RVA: 0x0003A0C0 File Offset: 0x000382C0
+	// Token: 0x06000BA2 RID: 2978 RVA: 0x0003B334 File Offset: 0x00039534
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void FindWanderLocation()
+	protected virtual void FindWanderLocation()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("FindWanderLocation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTerritoryWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("FindWanderLocation"), TsTaskTerritoryWander.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.FindWanderLocation_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000B9D RID: 2973 RVA: 0x0003A130 File Offset: 0x00038330
+	// Token: 0x06000BA3 RID: 2979 RVA: 0x0003B390 File Offset: 0x00039590
 	protected void FindWanderLocation_Implementation()
 	{
 		if (this.TargetLocation == null)
@@ -403,27 +391,21 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.DebugDraw();
 	}
 
-	// Token: 0x06000B9E RID: 2974 RVA: 0x0003A2C8 File Offset: 0x000384C8
+	// Token: 0x06000BA4 RID: 2980 RVA: 0x0003B528 File Offset: 0x00039728
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void FindWanderPath()
+	protected virtual void FindWanderPath()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("FindWanderPath"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTerritoryWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("FindWanderPath"), TsTaskTerritoryWander.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.FindWanderPath_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000B9F RID: 2975 RVA: 0x0003A338 File Offset: 0x00038538
+	// Token: 0x06000BA5 RID: 2981 RVA: 0x0003B584 File Offset: 0x00039784
 	protected void FindWanderPath_Implementation()
 	{
 		if (this.NavigationPath == null)
@@ -439,27 +421,21 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x06000BA0 RID: 2976 RVA: 0x0003A3D0 File Offset: 0x000385D0
+	// Token: 0x06000BA6 RID: 2982 RVA: 0x0003B61C File Offset: 0x0003981C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void DebugDraw()
+	protected virtual void DebugDraw()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DebugDraw"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTerritoryWander) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DebugDraw"), TsTaskTerritoryWander.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DebugDraw_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000BA1 RID: 2977 RVA: 0x0003A440 File Offset: 0x00038640
+	// Token: 0x06000BA7 RID: 2983 RVA: 0x0003B678 File Offset: 0x00039878
 	protected void DebugDraw_Implementation()
 	{
 		if (this.TsDebugMode && GlobalData.IsPlayInEditor)
@@ -471,7 +447,7 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x06000BA2 RID: 2978 RVA: 0x0003A5B4 File Offset: 0x000387B4
+	// Token: 0x06000BA8 RID: 2984 RVA: 0x0003B7EC File Offset: 0x000399EC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskTerritoryWander._ClassPtr == IntPtr.Zero)
@@ -481,23 +457,23 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		return TsTaskTerritoryWander._ClassPtr;
 	}
 
-	// Token: 0x06000BA3 RID: 2979 RVA: 0x0003A5D8 File Offset: 0x000387D8
+	// Token: 0x06000BA9 RID: 2985 RVA: 0x0003B810 File Offset: 0x00039A10
 	public TsTaskTerritoryWander() : this(BuiltinUtils.AllocNativeUObject(TsTaskTerritoryWander.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000BA4 RID: 2980 RVA: 0x0003A600 File Offset: 0x00038800
+	// Token: 0x06000BAA RID: 2986 RVA: 0x0003B838 File Offset: 0x00039A38
 	[NullableContext(1)]
 	public TsTaskTerritoryWander(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskTerritoryWander.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000BA5 RID: 2981 RVA: 0x0003A633 File Offset: 0x00038833
+	// Token: 0x06000BAB RID: 2987 RVA: 0x0003B86B File Offset: 0x00039A6B
 	protected TsTaskTerritoryWander(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000BA6 RID: 2982 RVA: 0x0003A648 File Offset: 0x00038848
+	// Token: 0x06000BAC RID: 2988 RVA: 0x0003B880 File Offset: 0x00039A80
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -506,7 +482,7 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06000BA7 RID: 2983 RVA: 0x0003A678 File Offset: 0x00038878
+	// Token: 0x06000BAD RID: 2989 RVA: 0x0003B8B0 File Offset: 0x00039AB0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -515,43 +491,43 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x06000BA8 RID: 2984 RVA: 0x0003A6AB File Offset: 0x000388AB
+	// Token: 0x06000BAE RID: 2990 RVA: 0x0003B8E3 File Offset: 0x00039AE3
 	protected virtual void __CPPCALL_FindWanderLocation_Implementation()
 	{
 		this.FindWanderLocation_Implementation();
 	}
 
-	// Token: 0x06000BA9 RID: 2985 RVA: 0x0003A6B3 File Offset: 0x000388B3
+	// Token: 0x06000BAF RID: 2991 RVA: 0x0003B8EB File Offset: 0x00039AEB
 	protected virtual void __CPPCALL_FindWanderPath_Implementation()
 	{
 		this.FindWanderPath_Implementation();
 	}
 
-	// Token: 0x06000BAA RID: 2986 RVA: 0x0003A6BB File Offset: 0x000388BB
+	// Token: 0x06000BB0 RID: 2992 RVA: 0x0003B8F3 File Offset: 0x00039AF3
 	protected virtual void __CPPCALL_DebugDraw_Implementation()
 	{
 		this.DebugDraw_Implementation();
 	}
 
-	// Token: 0x0400090A RID: 2314
+	// Token: 0x04000912 RID: 2322
 	private const double PI = 3.14;
 
-	// Token: 0x0400090B RID: 2315
+	// Token: 0x04000913 RID: 2323
 	private const int NAVIGATION_END_TIME = 5000;
 
-	// Token: 0x0400090C RID: 2316
+	// Token: 0x04000914 RID: 2324
 	private const int NAVIGATION_COMPLETE_DISTANCE = 20;
 
-	// Token: 0x0400090D RID: 2317
+	// Token: 0x04000915 RID: 2325
 	private global::Vector RangeCenter;
 
-	// Token: 0x0400090E RID: 2318
+	// Token: 0x04000916 RID: 2326
 	private global::Vector TargetLocation;
 
-	// Token: 0x0400090F RID: 2319
+	// Token: 0x04000917 RID: 2327
 	private bool FoundPath;
 
-	// Token: 0x04000910 RID: 2320
+	// Token: 0x04000918 RID: 2328
 	[Nullable(new byte[]
 	{
 		2,
@@ -559,83 +535,83 @@ public class TsTaskTerritoryWander : TsTaskAbortImmediatelyBase, IUnrealUObject,
 	})]
 	private List<global::Vector> NavigationPath;
 
-	// Token: 0x04000911 RID: 2321
+	// Token: 0x04000919 RID: 2329
 	private int CurrentNavigationIndex;
 
-	// Token: 0x04000912 RID: 2322
+	// Token: 0x0400091A RID: 2330
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x04000913 RID: 2323
+	// Token: 0x0400091B RID: 2331
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x04000914 RID: 2324
+	// Token: 0x0400091C RID: 2332
 	private BaseUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x04000915 RID: 2325
+	// Token: 0x0400091D RID: 2333
 	private global::Vector CacheVector;
 
-	// Token: 0x04000916 RID: 2326
+	// Token: 0x0400091E RID: 2334
 	private double NavigationEndTime;
 
-	// Token: 0x04000917 RID: 2327
-	private bool IsInitTsVariables;
-
-	// Token: 0x04000918 RID: 2328
-	[Nullable(1)]
-	private string TsRangeCenterKey = "";
-
-	// Token: 0x04000919 RID: 2329
-	private float TsRangeRadius;
-
-	// Token: 0x0400091A RID: 2330
-	private float TsAngle;
-
-	// Token: 0x0400091B RID: 2331
-	private float TsInnerDiameter;
-
-	// Token: 0x0400091C RID: 2332
-	private float TsOuterDiameter;
-
-	// Token: 0x0400091D RID: 2333
-	private bool TsForceNavigation;
-
-	// Token: 0x0400091E RID: 2334
-	private float TsTurnSpeed;
-
 	// Token: 0x0400091F RID: 2335
-	private bool TsDebugMode;
+	private bool IsInitTsVariables;
 
 	// Token: 0x04000920 RID: 2336
 	[Nullable(1)]
-	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTerritoryWander.TsTaskTerritoryWander_C";
+	private string TsRangeCenterKey = "";
 
 	// Token: 0x04000921 RID: 2337
-	private static IntPtr _ClassPtr;
+	private float TsRangeRadius;
 
 	// Token: 0x04000922 RID: 2338
-	private static IntPtr _ClassDefaultObjectPtr;
+	private float TsAngle;
 
 	// Token: 0x04000923 RID: 2339
-	private static int __PropertyOffset_RangeCenterKey;
+	private float TsInnerDiameter;
 
 	// Token: 0x04000924 RID: 2340
-	private static int __PropertyOffset_RangeRadius;
+	private float TsOuterDiameter;
 
 	// Token: 0x04000925 RID: 2341
-	private static int __PropertyOffset_Angle;
+	private bool TsForceNavigation;
 
 	// Token: 0x04000926 RID: 2342
-	private static int __PropertyOffset_InnerDiameter;
+	private float TsTurnSpeed;
 
 	// Token: 0x04000927 RID: 2343
-	private static int __PropertyOffset_OuterDiameter;
+	private bool TsDebugMode;
 
 	// Token: 0x04000928 RID: 2344
-	private static int __PropertyOffset_ForceNavigation;
+	[Nullable(1)]
+	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTerritoryWander.TsTaskTerritoryWander_C";
 
 	// Token: 0x04000929 RID: 2345
-	private static int __PropertyOffset_TurnSpeed;
+	private static IntPtr _ClassPtr;
 
 	// Token: 0x0400092A RID: 2346
+	private static IntPtr _ClassDefaultObjectPtr;
+
+	// Token: 0x0400092B RID: 2347
+	private static int __PropertyOffset_RangeCenterKey;
+
+	// Token: 0x0400092C RID: 2348
+	private static int __PropertyOffset_RangeRadius;
+
+	// Token: 0x0400092D RID: 2349
+	private static int __PropertyOffset_Angle;
+
+	// Token: 0x0400092E RID: 2350
+	private static int __PropertyOffset_InnerDiameter;
+
+	// Token: 0x0400092F RID: 2351
+	private static int __PropertyOffset_OuterDiameter;
+
+	// Token: 0x04000930 RID: 2352
+	private static int __PropertyOffset_ForceNavigation;
+
+	// Token: 0x04000931 RID: 2353
+	private static int __PropertyOffset_TurnSpeed;
+
+	// Token: 0x04000932 RID: 2354
 	private static int __PropertyOffset_DebugMode;
 }

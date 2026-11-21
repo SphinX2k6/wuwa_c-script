@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200461E RID: 17950
+	// Token: 0x02004A86 RID: 19078
 	public class TTrapDefenseSpawnMonsterConditionUnion
 	{
-		// Token: 0x17007F73 RID: 32627
-		// (get) Token: 0x0601B307 RID: 111367 RVA: 0x003DF52C File Offset: 0x003DD72C
-		// (set) Token: 0x0601B308 RID: 111368 RVA: 0x003DF534 File Offset: 0x003DD734
+		// Token: 0x170085B4 RID: 34228
+		// (get) Token: 0x0601CADC RID: 117468 RVA: 0x0040B7C8 File Offset: 0x004099C8
+		// (set) Token: 0x0601CADD RID: 117469 RVA: 0x0040B7D0 File Offset: 0x004099D0
 		public TTrapDefenseSpawnMonsterCondition Type { get; set; }
 
-		// Token: 0x17007F74 RID: 32628
-		// (get) Token: 0x0601B309 RID: 111369 RVA: 0x003DF53D File Offset: 0x003DD73D
-		// (set) Token: 0x0601B30A RID: 111370 RVA: 0x003DF545 File Offset: 0x003DD745
+		// Token: 0x170085B5 RID: 34229
+		// (get) Token: 0x0601CADE RID: 117470 RVA: 0x0040B7D9 File Offset: 0x004099D9
+		// (set) Token: 0x0601CADF RID: 117471 RVA: 0x0040B7E1 File Offset: 0x004099E1
 		public object Value { get; set; }
 
-		// Token: 0x0601B30B RID: 111371 RVA: 0x003DF54E File Offset: 0x003DD74E
+		// Token: 0x0601CAE0 RID: 117472 RVA: 0x0040B7EA File Offset: 0x004099EA
 		public TTrapDefenseSpawnMonsterConditionUnion()
 		{
 			this.Type = TTrapDefenseSpawnMonsterCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B30C RID: 111372 RVA: 0x003DF564 File Offset: 0x003DD764
+		// Token: 0x0601CAE1 RID: 117473 RVA: 0x0040B800 File Offset: 0x00409A00
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B30D RID: 111373 RVA: 0x003DF576 File Offset: 0x003DD776
+		// Token: 0x0601CAE2 RID: 117474 RVA: 0x0040B812 File Offset: 0x00409A12
 		public ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT AsITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion()
 		{
 			return this.As<ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT>();
 		}
 
-		// Token: 0x0601B30E RID: 111374 RVA: 0x003DF57E File Offset: 0x003DD77E
+		// Token: 0x0601CAE3 RID: 117475 RVA: 0x0040B81A File Offset: 0x00409A1A
 		public static TTrapDefenseSpawnMonsterConditionUnion FromITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT _itrapdefensespawnmonsterconditionallopenediscompletion)
 		{
 			return new TTrapDefenseSpawnMonsterConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B30F RID: 111375 RVA: 0x003DF593 File Offset: 0x003DD793
+		// Token: 0x0601CAE4 RID: 117476 RVA: 0x0040B82F File Offset: 0x00409A2F
 		public ITrapDefenseSpawnMonsterConditionCompletedT AsITrapDefenseSpawnMonsterConditionCompleted()
 		{
 			return this.As<ITrapDefenseSpawnMonsterConditionCompletedT>();
 		}
 
-		// Token: 0x0601B310 RID: 111376 RVA: 0x003DF59B File Offset: 0x003DD79B
+		// Token: 0x0601CAE5 RID: 117477 RVA: 0x0040B837 File Offset: 0x00409A37
 		public static TTrapDefenseSpawnMonsterConditionUnion FromITrapDefenseSpawnMonsterConditionCompleted(ITrapDefenseSpawnMonsterConditionCompletedT _itrapdefensespawnmonsterconditioncompleted)
 		{
 			return new TTrapDefenseSpawnMonsterConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B311 RID: 111377 RVA: 0x003DF5B0 File Offset: 0x003DD7B0
+		// Token: 0x0601CAE6 RID: 117478 RVA: 0x0040B84C File Offset: 0x00409A4C
 		public ITrapDefenseSpawnMonsterConditionOpenT AsITrapDefenseSpawnMonsterConditionOpen()
 		{
 			return this.As<ITrapDefenseSpawnMonsterConditionOpenT>();
 		}
 
-		// Token: 0x0601B312 RID: 111378 RVA: 0x003DF5B8 File Offset: 0x003DD7B8
+		// Token: 0x0601CAE7 RID: 117479 RVA: 0x0040B854 File Offset: 0x00409A54
 		public static TTrapDefenseSpawnMonsterConditionUnion FromITrapDefenseSpawnMonsterConditionOpen(ITrapDefenseSpawnMonsterConditionOpenT _itrapdefensespawnmonsterconditionopen)
 		{
 			return new TTrapDefenseSpawnMonsterConditionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B313 RID: 111379 RVA: 0x003DF5D0 File Offset: 0x003DD7D0
+		// Token: 0x0601CAE8 RID: 117480 RVA: 0x0040B86C File Offset: 0x00409A6C
 		public static int Pack(FlatBufferBuilder builder, TTrapDefenseSpawnMonsterConditionUnion _o)
 		{
 			switch (_o.Type)

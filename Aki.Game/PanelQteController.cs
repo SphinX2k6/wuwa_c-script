@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022FC RID: 8956
+// Token: 0x020017E0 RID: 6112
 [NullableContext(1)]
 [Nullable(0)]
 public class PanelQteController : UiControllerBase
 {
-	// Token: 0x06011AB8 RID: 72376 RVA: 0x004575B0 File Offset: 0x004557B0
+	// Token: 0x0600EF50 RID: 61264 RVA: 0x00464290 File Offset: 0x00462490
 	public int StartAnimNotifyQte(int qteId, USkeletalMeshComponent meshComp, long? preMessageId)
 	{
 		if (!this.CheckCanStartQte())
@@ -30,7 +30,7 @@ public class PanelQteController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06011AB9 RID: 72377 RVA: 0x00457604 File Offset: 0x00455804
+	// Token: 0x0600EF51 RID: 61265 RVA: 0x004642E4 File Offset: 0x004624E4
 	[NullableContext(2)]
 	public int StartBuffQte(int qteId, long buffId, int buffHandleId, Entity buffOwner, long? preMessageId)
 	{
@@ -62,7 +62,7 @@ public class PanelQteController : UiControllerBase
 		return -1;
 	}
 
-	// Token: 0x06011ABA RID: 72378 RVA: 0x004576C8 File Offset: 0x004558C8
+	// Token: 0x0600EF52 RID: 61266 RVA: 0x004643A8 File Offset: 0x004625A8
 	public int StartLevelSequenceQte(int qteId, AActor actor)
 	{
 		if (!this.CheckCanStartQte())
@@ -77,7 +77,7 @@ public class PanelQteController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06011ABB RID: 72379 RVA: 0x00457708 File Offset: 0x00455908
+	// Token: 0x0600EF53 RID: 61267 RVA: 0x004643E8 File Offset: 0x004625E8
 	public int StartLevelEventQte(int qteId)
 	{
 		if (!this.CheckCanStartQte())
@@ -91,7 +91,7 @@ public class PanelQteController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06011ABC RID: 72380 RVA: 0x00457740 File Offset: 0x00455940
+	// Token: 0x0600EF54 RID: 61268 RVA: 0x00464420 File Offset: 0x00462620
 	public bool StopQte(int handleId, bool bForce = false)
 	{
 		if (!PanelQteModel.Instance.StopQte(handleId))
@@ -163,13 +163,13 @@ public class PanelQteController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011ABD RID: 72381 RVA: 0x004578B7 File Offset: 0x00455AB7
+	// Token: 0x0600EF55 RID: 61269 RVA: 0x00464597 File Offset: 0x00462797
 	private bool CheckCanStartQte()
 	{
 		return !PanelQteModel.Instance.IsInQte.GetValueOrDefault() && GameModeModel.Instance.WorldDone && BattleUiModel.Instance.GetCurRoleData() != null;
 	}
 
-	// Token: 0x06011ABE RID: 72382 RVA: 0x004578EC File Offset: 0x00455AEC
+	// Token: 0x0600EF56 RID: 61270 RVA: 0x004645CC File Offset: 0x004627CC
 	private int StartQte(PanelQteContext context)
 	{
 		SPanelQte panelQteConfig = PanelQteModel.Instance.GetPanelQteConfig(context.QteId);
@@ -273,19 +273,19 @@ public class PanelQteController : UiControllerBase
 		return num;
 	}
 
-	// Token: 0x06011ABF RID: 72383 RVA: 0x00457BCD File Offset: 0x00455DCD
+	// Token: 0x0600EF57 RID: 61271 RVA: 0x004648AD File Offset: 0x00462AAD
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(EEventName.OnTeamLivingStateChange, new Action<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(this.OnTeamLivingStateChange));
 	}
 
-	// Token: 0x06011AC0 RID: 72384 RVA: 0x00457BEB File Offset: 0x00455DEB
+	// Token: 0x0600EF58 RID: 61272 RVA: 0x004648CB File Offset: 0x00462ACB
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnTeamLivingStateChange, new Action<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(this.OnTeamLivingStateChange));
 	}
 
-	// Token: 0x06011AC1 RID: 72385 RVA: 0x00457C0C File Offset: 0x00455E0C
+	// Token: 0x0600EF59 RID: 61273 RVA: 0x004648EC File Offset: 0x00462AEC
 	private void OnTeamLivingStateChange(bool isMyTeam, ETeamGroupType groupType, ETeamLivingState state, ETeamLivingState oldState)
 	{
 		if (isMyTeam && groupType == ETeamGroupType.Battle && state == ETeamLivingState.Dead)
@@ -298,8 +298,8 @@ public class PanelQteController : UiControllerBase
 		}
 	}
 
-	// Token: 0x170016A9 RID: 5801
-	// (get) Token: 0x06011AC2 RID: 72386 RVA: 0x00457C48 File Offset: 0x00455E48
+	// Token: 0x170016E0 RID: 5856
+	// (get) Token: 0x0600EF5A RID: 61274 RVA: 0x00464928 File Offset: 0x00462B28
 	public static PanelQteController Instance
 	{
 		get
@@ -308,7 +308,7 @@ public class PanelQteController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011AC3 RID: 72387 RVA: 0x00457C4F File Offset: 0x00455E4F
+	// Token: 0x0600EF5B RID: 61275 RVA: 0x0046492F File Offset: 0x00462B2F
 	public static PanelQteController GetOrCreateInstance()
 	{
 		if (PanelQteController._Instance == null)
@@ -318,7 +318,7 @@ public class PanelQteController : UiControllerBase
 		return PanelQteController._Instance;
 	}
 
-	// Token: 0x06011AC4 RID: 72388 RVA: 0x00457C63 File Offset: 0x00455E63
+	// Token: 0x0600EF5C RID: 61276 RVA: 0x00464943 File Offset: 0x00462B43
 	public static bool CreateInstance()
 	{
 		if (PanelQteController._Instance != null)
@@ -329,24 +329,24 @@ public class PanelQteController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011AC5 RID: 72389 RVA: 0x00457C79 File Offset: 0x00455E79
+	// Token: 0x0600EF5D RID: 61277 RVA: 0x00464959 File Offset: 0x00462B59
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011AC6 RID: 72390 RVA: 0x00457C7B File Offset: 0x00455E7B
+	// Token: 0x0600EF5E RID: 61278 RVA: 0x0046495B File Offset: 0x00462B5B
 	public static void ResetStaticDefaultValue()
 	{
 		PanelQteController._Instance = null;
 	}
 
-	// Token: 0x06011AC7 RID: 72391 RVA: 0x00457C83 File Offset: 0x00455E83
+	// Token: 0x0600EF5F RID: 61279 RVA: 0x00464963 File Offset: 0x00462B63
 	static PanelQteController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PanelQteController.CreateStaticDefaultValue), new Action(PanelQteController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008605 RID: 34309
+	// Token: 0x04008743 RID: 34627
 	private readonly int[] _disableInputTagIds = new int[]
 	{
 		GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止攻击"],
@@ -360,7 +360,7 @@ public class PanelQteController : UiControllerBase
 		GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.不能切人"]
 	};
 
-	// Token: 0x04008606 RID: 34310
+	// Token: 0x04008744 RID: 34628
 	[Nullable(2)]
 	private static PanelQteController _Instance;
 }

@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000868 RID: 2152
+	// Token: 0x0200090B RID: 2315
 	public class ReboundComponent_SetValue
 	{
-		// Token: 0x04001F6D RID: 8045
+		// Token: 0x0400217F RID: 8575
 		public bool? Disabled;
 
-		// Token: 0x04001F6E RID: 8046
+		// Token: 0x04002180 RID: 8576
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F6F RID: 8047
+		// Token: 0x04002181 RID: 8577
 		public long BulletId;
 
-		// Token: 0x04001F70 RID: 8048
-		[Nullable(1)]
+		// Token: 0x04002182 RID: 8578
 		public IForwardFrontRebound Option;
 	}
 }

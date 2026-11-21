@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017CA RID: 6090
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001951 RID: 6481
 	public class IAiFollowerSlideRailEnd : ISlideRailEndType
 	{
-		// Token: 0x060082BF RID: 33471 RVA: 0x001389EC File Offset: 0x00136BEC
+		// Token: 0x060089D1 RID: 35281 RVA: 0x00147FD4 File Offset: 0x001461D4
 		private IAiFollowerSlideRailEnd_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060082C0 RID: 33472 RVA: 0x00138A24 File Offset: 0x00136C24
+		// Token: 0x060089D2 RID: 35282 RVA: 0x0014800C File Offset: 0x0014620C
 		public static IAiFollowerSlideRailEnd Create([Nullable(2)] IAiFollowerSlideRailEnd instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082C1 RID: 33473 RVA: 0x00138A37 File Offset: 0x00136C37
+		// Token: 0x060089D3 RID: 35283 RVA: 0x0014801F File Offset: 0x0014621F
 		public static IAiFollowerSlideRailEnd CreateFromSetValue([Nullable(2)] IAiFollowerSlideRailEnd_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082C2 RID: 33474 RVA: 0x00138A4A File Offset: 0x00136C4A
+		// Token: 0x060089D4 RID: 35284 RVA: 0x00148032 File Offset: 0x00146232
 		public new IAiFollowerSlideRailEnd_SetValue ToSetValue()
 		{
 			return new IAiFollowerSlideRailEnd_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B05 RID: 11013
-		// (get) Token: 0x060082C3 RID: 33475 RVA: 0x00138A69 File Offset: 0x00136C69
-		// (set) Token: 0x060082C4 RID: 33476 RVA: 0x00138A94 File Offset: 0x00136C94
+		// Token: 0x17002CFB RID: 11515
+		// (get) Token: 0x060089D5 RID: 35285 RVA: 0x00148051 File Offset: 0x00146251
+		// (set) Token: 0x060089D6 RID: 35286 RVA: 0x0014807C File Offset: 0x0014627C
 		public override ESlideRailEndType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B06 RID: 11014
-		// (get) Token: 0x060082C5 RID: 33477 RVA: 0x00138AA2 File Offset: 0x00136CA2
-		// (set) Token: 0x060082C6 RID: 33478 RVA: 0x00138ACD File Offset: 0x00136CCD
+		// Token: 0x17002CFC RID: 11516
+		// (get) Token: 0x060089D7 RID: 35287 RVA: 0x0014808A File Offset: 0x0014628A
+		// (set) Token: 0x060089D8 RID: 35288 RVA: 0x001480B5 File Offset: 0x001462B5
 		public virtual int AiEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400531A RID: 21274
+		// Token: 0x0400575E RID: 22366
 		[Nullable(2)]
 		protected new IAiFollowerSlideRailEnd FbInstance;
 
-		// Token: 0x0400531B RID: 21275
+		// Token: 0x0400575F RID: 22367
 		[Nullable(2)]
 		protected new IAiFollowerSlideRailEnd_SetValue PocoInterface;
 	}

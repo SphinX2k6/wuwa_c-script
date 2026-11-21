@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001CF RID: 463
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001F2 RID: 498
 	public class IAttachTarget
 	{
-		// Token: 0x0600076C RID: 1900 RVA: 0x00024ED8 File Offset: 0x000230D8
+		// Token: 0x060007C0 RID: 1984 RVA: 0x000261DC File Offset: 0x000243DC
 		private IAttachTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600076D RID: 1901 RVA: 0x00024F10 File Offset: 0x00023110
+		// Token: 0x060007C1 RID: 1985 RVA: 0x00026214 File Offset: 0x00024414
 		public static IAttachTarget Create([Nullable(2)] IAttachTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600076E RID: 1902 RVA: 0x00024F23 File Offset: 0x00023123
+		// Token: 0x060007C2 RID: 1986 RVA: 0x00026227 File Offset: 0x00024427
 		public static IAttachTarget CreateFromSetValue([Nullable(2)] IAttachTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600076F RID: 1903 RVA: 0x00024F36 File Offset: 0x00023136
+		// Token: 0x060007C3 RID: 1987 RVA: 0x0002623A File Offset: 0x0002443A
 		public IAttachTarget_SetValue ToSetValue()
 		{
 			return new IAttachTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700025D RID: 605
-		// (get) Token: 0x06000770 RID: 1904 RVA: 0x00024F49 File Offset: 0x00023149
-		// (set) Token: 0x06000771 RID: 1905 RVA: 0x00024F74 File Offset: 0x00023174
+		// Token: 0x17000272 RID: 626
+		// (get) Token: 0x060007C4 RID: 1988 RVA: 0x0002624D File Offset: 0x0002444D
+		// (set) Token: 0x060007C5 RID: 1989 RVA: 0x00026278 File Offset: 0x00024478
 		public virtual EAttachType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008A1 RID: 2209
+		// Token: 0x04000915 RID: 2325
 		[Nullable(2)]
 		protected IAttachTarget FbInstance;
 
-		// Token: 0x040008A2 RID: 2210
+		// Token: 0x04000916 RID: 2326
 		[Nullable(2)]
 		protected IAttachTarget_SetValue PocoInterface;
 	}

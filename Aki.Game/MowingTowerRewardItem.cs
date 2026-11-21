@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001392 RID: 5010
+// Token: 0x02000846 RID: 2118
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 internal class MowingTowerRewardItem : GridProxyAbstract<IActivityRewardData>
 {
-	// Token: 0x06008C5B RID: 35931 RVA: 0x001E1580 File Offset: 0x001DF780
+	// Token: 0x06005FF6 RID: 24566 RVA: 0x001EA3D4 File Offset: 0x001E85D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,19 +32,19 @@ internal class MowingTowerRewardItem : GridProxyAbstract<IActivityRewardData>
 		};
 	}
 
-	// Token: 0x06008C5C RID: 35932 RVA: 0x001E1655 File Offset: 0x001DF855
+	// Token: 0x06005FF7 RID: 24567 RVA: 0x001EA4A9 File Offset: 0x001E86A9
 	protected override void OnStart()
 	{
 		this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
 	}
 
-	// Token: 0x06008C5D RID: 35933 RVA: 0x001E1678 File Offset: 0x001DF878
+	// Token: 0x06005FF8 RID: 24568 RVA: 0x001EA4CC File Offset: 0x001E86CC
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06008C5E RID: 35934 RVA: 0x001E1680 File Offset: 0x001DF880
+	// Token: 0x06005FF9 RID: 24569 RVA: 0x001EA4D4 File Offset: 0x001E86D4
 	public override void Refresh(IActivityRewardData data, bool isSelected, int gridIndex)
 	{
 		this.RewardData = data;
@@ -73,7 +73,7 @@ internal class MowingTowerRewardItem : GridProxyAbstract<IActivityRewardData>
 		itemLayout.RefreshByData(data2, null, false);
 	}
 
-	// Token: 0x06008C5F RID: 35935 RVA: 0x001E176C File Offset: 0x001DF96C
+	// Token: 0x06005FFA RID: 24570 RVA: 0x001EA5C0 File Offset: 0x001E87C0
 	private void OnClickButton()
 	{
 		IActivityRewardData rewardData = this.RewardData;
@@ -89,11 +89,11 @@ internal class MowingTowerRewardItem : GridProxyAbstract<IActivityRewardData>
 		clickFunction();
 	}
 
-	// Token: 0x04003E54 RID: 15956
+	// Token: 0x04003EEC RID: 16108
 	[Nullable(2)]
 	private IActivityRewardData RewardData;
 
-	// Token: 0x04003E55 RID: 15957
+	// Token: 0x04003EED RID: 16109
 	[Nullable(new byte[]
 	{
 		2,

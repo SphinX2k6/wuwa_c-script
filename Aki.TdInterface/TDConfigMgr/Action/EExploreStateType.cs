@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015DD RID: 5597
+	// Token: 0x0200173D RID: 5949
 	[EnumExtensions]
 	public enum EExploreStateType
 	{
-		// Token: 0x04004AB1 RID: 19121
+		// Token: 0x04004E71 RID: 20081
 		TeleControl
 	}
 }

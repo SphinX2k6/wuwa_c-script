@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x02005791 RID: 22417
+	// Token: 0x02004768 RID: 18280
 	public class KurotatoNormalRewardButton : KurotatoRewardButton
 	{
-		// Token: 0x06038F08 RID: 233224 RVA: 0x00D88AF5 File Offset: 0x00D86CF5
+		// Token: 0x0602DE18 RID: 187928 RVA: 0x00CD7845 File Offset: 0x00CD5A45
 		public void BindRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotKurotatoNormalRewardBtn, base.GetItem(2), null, 0);
 		}
 
-		// Token: 0x06038F09 RID: 233225 RVA: 0x00D88B0F File Offset: 0x00D86D0F
+		// Token: 0x0602DE19 RID: 187929 RVA: 0x00CD785F File Offset: 0x00CD5A5F
 		public void UnBindRedDot()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotKurotatoNormalRewardBtn, base.GetItem(2), 0);

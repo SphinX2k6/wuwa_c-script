@@ -5,15 +5,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B77 RID: 27511
+	// Token: 0x02005CEF RID: 23791
 	public class LevelEventSetNpcPosition : LevelEventBase
 	{
-		// Token: 0x06044250 RID: 279120 RVA: 0x010C9DD4 File Offset: 0x010C7FD4
+		// Token: 0x0603A3A2 RID: 238498 RVA: 0x01073A48 File Offset: 0x01071C48
 		public LevelEventSetNpcPosition(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044251 RID: 279121 RVA: 0x010C9DE0 File Offset: 0x010C7FE0
+		// Token: 0x0603A3A3 RID: 238499 RVA: 0x01073A54 File Offset: 0x01071C54
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

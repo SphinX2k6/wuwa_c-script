@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB1 RID: 2737
+	// Token: 0x02000B7B RID: 2939
 	public class IIndependentSystemRewardType
 	{
-		// Token: 0x06003F1D RID: 16157 RVA: 0x000A16EE File Offset: 0x0009F8EE
-		[NullableContext(1)]
+		// Token: 0x06004347 RID: 17223 RVA: 0x000AACE2 File Offset: 0x000A8EE2
 		public static IIndependentSystemRewardType Create(IIndependentSystemRewardType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F78 RID: 3960
-		// (get) Token: 0x06003F1E RID: 16158 RVA: 0x000A170D File Offset: 0x0009F90D
+		// Token: 0x1700104C RID: 4172
+		// (get) Token: 0x06004348 RID: 17224 RVA: 0x000AAD01 File Offset: 0x000A8F01
 		public virtual EIndependentSystemRewardType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002310 RID: 8976
+		// Token: 0x0400252C RID: 9516
 		private IIndependentSystemRewardType Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000664 RID: 1636
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000701 RID: 1793
 	public class IReboundType
 	{
-		// Token: 0x06002302 RID: 8962 RVA: 0x0005FF9C File Offset: 0x0005E19C
+		// Token: 0x06002608 RID: 9736 RVA: 0x00066CB0 File Offset: 0x00064EB0
 		private IReboundType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002303 RID: 8963 RVA: 0x0005FFD4 File Offset: 0x0005E1D4
+		// Token: 0x06002609 RID: 9737 RVA: 0x00066CE8 File Offset: 0x00064EE8
 		public static IReboundType Create([Nullable(2)] IReboundType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002304 RID: 8964 RVA: 0x0005FFE7 File Offset: 0x0005E1E7
+		// Token: 0x0600260A RID: 9738 RVA: 0x00066CFB File Offset: 0x00064EFB
 		public static IReboundType CreateFromSetValue([Nullable(2)] IReboundType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002305 RID: 8965 RVA: 0x0005FFFA File Offset: 0x0005E1FA
+		// Token: 0x0600260B RID: 9739 RVA: 0x00066D0E File Offset: 0x00064F0E
 		public IReboundType_SetValue ToSetValue()
 		{
 			return new IReboundType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700094A RID: 2378
-		// (get) Token: 0x06002306 RID: 8966 RVA: 0x0006000D File Offset: 0x0005E20D
-		// (set) Token: 0x06002307 RID: 8967 RVA: 0x00060038 File Offset: 0x0005E238
+		// Token: 0x17000A01 RID: 2561
+		// (get) Token: 0x0600260C RID: 9740 RVA: 0x00066D21 File Offset: 0x00064F21
+		// (set) Token: 0x0600260D RID: 9741 RVA: 0x00066D4C File Offset: 0x00064F4C
 		public virtual EReboundOptionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001846 RID: 6214
+		// Token: 0x04001A38 RID: 6712
 		[Nullable(2)]
 		protected IReboundType FbInstance;
 
-		// Token: 0x04001847 RID: 6215
+		// Token: 0x04001A39 RID: 6713
 		[Nullable(2)]
 		protected IReboundType_SetValue PocoInterface;
 	}

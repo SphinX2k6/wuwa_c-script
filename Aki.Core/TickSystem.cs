@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x020000D0 RID: 208
+// Token: 0x020000D2 RID: 210
 [NullableContext(1)]
 [Nullable(0)]
 public class TickSystem : Singleton
 {
-	// Token: 0x170000D6 RID: 214
-	// (get) Token: 0x06000674 RID: 1652 RVA: 0x00022745 File Offset: 0x00020945
-	// (set) Token: 0x06000675 RID: 1653 RVA: 0x00022763 File Offset: 0x00020963
+	// Token: 0x170000E8 RID: 232
+	// (get) Token: 0x060006B5 RID: 1717 RVA: 0x00022D15 File Offset: 0x00020F15
+	// (set) Token: 0x060006B6 RID: 1718 RVA: 0x00022D33 File Offset: 0x00020F33
 	public bool IsPaused
 	{
 		get
@@ -28,8 +28,8 @@ public class TickSystem : Singleton
 		}
 	}
 
-	// Token: 0x170000D7 RID: 215
-	// (get) Token: 0x06000676 RID: 1654 RVA: 0x0002277F File Offset: 0x0002097F
+	// Token: 0x170000E9 RID: 233
+	// (get) Token: 0x060006B7 RID: 1719 RVA: 0x00022D4F File Offset: 0x00020F4F
 	public bool IsSetPaused
 	{
 		get
@@ -38,7 +38,7 @@ public class TickSystem : Singleton
 		}
 	}
 
-	// Token: 0x06000677 RID: 1655 RVA: 0x00022787 File Offset: 0x00020987
+	// Token: 0x060006B8 RID: 1720 RVA: 0x00022D57 File Offset: 0x00020F57
 	public void Initialize(UGameInstance gameInstance)
 	{
 		this.KuroTickManager = new UKuroTickManager(gameInstance, null, EObjectFlags.RF_NoFlags);
@@ -46,7 +46,7 @@ public class TickSystem : Singleton
 		this.Groups.Clear();
 	}
 
-	// Token: 0x06000678 RID: 1656 RVA: 0x000227B0 File Offset: 0x000209B0
+	// Token: 0x060006B9 RID: 1721 RVA: 0x00022D80 File Offset: 0x00020F80
 	public void Destroy()
 	{
 		foreach (KeyValuePair<ETickingGroup, Action<float>> keyValuePair in this.Delegates)
@@ -59,13 +59,13 @@ public class TickSystem : Singleton
 		this.KuroTickManager.ClearTick();
 	}
 
-	// Token: 0x06000679 RID: 1657 RVA: 0x00022818 File Offset: 0x00020A18
+	// Token: 0x060006BA RID: 1722 RVA: 0x00022DE8 File Offset: 0x00020FE8
 	public bool Has(int id)
 	{
 		return id > 0 && this.Tickers.ContainsKey(id);
 	}
 
-	// Token: 0x0600067A RID: 1658 RVA: 0x0002282C File Offset: 0x00020A2C
+	// Token: 0x060006BB RID: 1723 RVA: 0x00022DFC File Offset: 0x00020FFC
 	[NullableContext(2)]
 	public Ticker Add(Action<float> handle, [Nullable(1)] string name, ETickingGroup group = ETickingGroup.TG_PrePhysics, bool tickEvenPaused = false, int priority = 0, bool ignoreSelfCenterMode = false)
 	{
@@ -131,7 +131,7 @@ public class TickSystem : Singleton
 		return ticker;
 	}
 
-	// Token: 0x0600067B RID: 1659 RVA: 0x00022994 File Offset: 0x00020B94
+	// Token: 0x060006BC RID: 1724 RVA: 0x00022F64 File Offset: 0x00021164
 	public unsafe bool Remove(int id)
 	{
 		Ticker ticker;
@@ -194,7 +194,7 @@ public class TickSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600067C RID: 1660 RVA: 0x00022BB4 File Offset: 0x00020DB4
+	// Token: 0x060006BD RID: 1725 RVA: 0x00023184 File Offset: 0x00021384
 	public bool Pause(int id)
 	{
 		Ticker ticker;
@@ -213,7 +213,7 @@ public class TickSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600067D RID: 1661 RVA: 0x00022C08 File Offset: 0x00020E08
+	// Token: 0x060006BE RID: 1726 RVA: 0x000231D8 File Offset: 0x000213D8
 	public bool Resume(int id)
 	{
 		Ticker ticker;
@@ -232,7 +232,7 @@ public class TickSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600067E RID: 1662 RVA: 0x00022C5C File Offset: 0x00020E5C
+	// Token: 0x060006BF RID: 1727 RVA: 0x0002322C File Offset: 0x0002142C
 	private unsafe void Handle(Ticker ticker, float delta)
 	{
 		if (ticker.Pause)
@@ -295,68 +295,68 @@ public class TickSystem : Singleton
 		}
 	}
 
-	// Token: 0x0600067F RID: 1663 RVA: 0x00022E54 File Offset: 0x00021054
+	// Token: 0x060006C0 RID: 1728 RVA: 0x00023424 File Offset: 0x00021624
 	public void AddTickPrerequisiteActor(ETickingGroup group, AActor actor, int priority)
 	{
 		this.KuroTickManager.AddPrerequisiteActor(group, actor, priority);
 	}
 
-	// Token: 0x06000680 RID: 1664 RVA: 0x00022E64 File Offset: 0x00021064
+	// Token: 0x060006C1 RID: 1729 RVA: 0x00023434 File Offset: 0x00021634
 	public void RemoveTickPrerequisiteActor(ETickingGroup group, AActor actor, int priority)
 	{
 		this.KuroTickManager.RemovePrerequisiteActor(group, actor, priority);
 	}
 
-	// Token: 0x06000681 RID: 1665 RVA: 0x00022E74 File Offset: 0x00021074
+	// Token: 0x060006C2 RID: 1730 RVA: 0x00023444 File Offset: 0x00021644
 	public void AddTickPrerequisiteActorComp(ETickingGroup group, UActorComponent comp, int priority)
 	{
 		this.KuroTickManager.AddPrerequisiteActorComponent(group, comp, priority);
 	}
 
-	// Token: 0x06000682 RID: 1666 RVA: 0x00022E84 File Offset: 0x00021084
+	// Token: 0x060006C3 RID: 1731 RVA: 0x00023454 File Offset: 0x00021654
 	public void RemoveTickPrerequisiteActorComp(ETickingGroup group, UActorComponent comp, int priority)
 	{
 		this.KuroTickManager.RemovePrerequisiteActorComponent(group, comp, priority);
 	}
 
-	// Token: 0x06000683 RID: 1667 RVA: 0x00022E94 File Offset: 0x00021094
+	// Token: 0x060006C4 RID: 1732 RVA: 0x00023464 File Offset: 0x00021664
 	public void SetSkeletalMeshProxyTickFunction(ETickingGroup group, USkeletalMeshComponent comp, int priority)
 	{
 		this.KuroTickManager.SetSkeletalMeshProxyTickFunction(group, comp, priority);
 	}
 
-	// Token: 0x06000684 RID: 1668 RVA: 0x00022EA4 File Offset: 0x000210A4
+	// Token: 0x060006C5 RID: 1733 RVA: 0x00023474 File Offset: 0x00021674
 	public void CleanSkeletalMeshProxyTickFunction(USkeletalMeshComponent comp)
 	{
 		this.KuroTickManager.CleanSkeletalMeshProxyTickFunction(comp);
 	}
 
-	// Token: 0x06000685 RID: 1669 RVA: 0x00022EB2 File Offset: 0x000210B2
+	// Token: 0x060006C6 RID: 1734 RVA: 0x00023482 File Offset: 0x00021682
 	public void SetMovementProxyTickFunction(ETickingGroup group, UCharacterMovementComponent comp, int priority)
 	{
 		this.KuroTickManager.SetCharacterMovementProxyTickFunction(group, comp, priority);
 	}
 
-	// Token: 0x06000686 RID: 1670 RVA: 0x00022EC2 File Offset: 0x000210C2
+	// Token: 0x060006C7 RID: 1735 RVA: 0x00023492 File Offset: 0x00021692
 	public void CleanMovementProxyTickFunction(UCharacterMovementComponent comp)
 	{
 		this.KuroTickManager.CleanCharacterMovementProxyTickFunction(comp);
 	}
 
-	// Token: 0x06000687 RID: 1671 RVA: 0x00022ED0 File Offset: 0x000210D0
+	// Token: 0x060006C8 RID: 1736 RVA: 0x000234A0 File Offset: 0x000216A0
 	public void SetTickFunctionCompletionCallbackInMainThread(ETickingGroup group, int priority)
 	{
 		this.KuroTickManager.SetTickFunctionCompletionCallbackInMainThread(group, priority);
 	}
 
-	// Token: 0x06000688 RID: 1672 RVA: 0x00022EDF File Offset: 0x000210DF
+	// Token: 0x060006C9 RID: 1737 RVA: 0x000234AF File Offset: 0x000216AF
 	public void SetGamePrerequisiteTickFunction(ETickingGroup group, int priority)
 	{
 		this.KuroTickManager.SetGamePrerequisiteTickFunction(group, priority);
 	}
 
-	// Token: 0x170000D8 RID: 216
-	// (get) Token: 0x06000689 RID: 1673 RVA: 0x00022EEE File Offset: 0x000210EE
+	// Token: 0x170000EA RID: 234
+	// (get) Token: 0x060006CA RID: 1738 RVA: 0x000234BE File Offset: 0x000216BE
 	public static TickSystem Instance
 	{
 		get
@@ -370,12 +370,12 @@ public class TickSystem : Singleton
 		}
 	}
 
-	// Token: 0x0600068A RID: 1674 RVA: 0x00022F11 File Offset: 0x00021111
+	// Token: 0x060006CB RID: 1739 RVA: 0x000234E1 File Offset: 0x000216E1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600068B RID: 1675 RVA: 0x00022F13 File Offset: 0x00021113
+	// Token: 0x060006CC RID: 1740 RVA: 0x000234E3 File Offset: 0x000216E3
 	public static void ResetStaticDefaultValue()
 	{
 		TickSystem instance = TickSystem._instance;
@@ -386,38 +386,38 @@ public class TickSystem : Singleton
 		TickSystem._instance = null;
 	}
 
-	// Token: 0x0600068C RID: 1676 RVA: 0x00022F2C File Offset: 0x0002112C
+	// Token: 0x060006CD RID: 1741 RVA: 0x000234FC File Offset: 0x000216FC
 	static TickSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TickSystem.CreateStaticDefaultValue), new Action(TickSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400053B RID: 1339
+	// Token: 0x0400054A RID: 1354
 	private const int SECOND_TO_MILLISECOND = 1000;
 
-	// Token: 0x0400053C RID: 1340
+	// Token: 0x0400054B RID: 1355
 	public const int InvalidId = -1;
 
-	// Token: 0x0400053D RID: 1341
+	// Token: 0x0400054C RID: 1356
 	private bool IsPausedInternal;
 
-	// Token: 0x0400053E RID: 1342
+	// Token: 0x0400054D RID: 1357
 	public int PausedFrame = -1;
 
-	// Token: 0x0400053F RID: 1343
+	// Token: 0x0400054E RID: 1358
 	private int Increment;
 
-	// Token: 0x04000540 RID: 1344
+	// Token: 0x0400054F RID: 1359
 	[Nullable(2)]
 	private UKuroTickManager KuroTickManager;
 
-	// Token: 0x04000541 RID: 1345
+	// Token: 0x04000550 RID: 1360
 	private readonly Dictionary<int, Ticker> Tickers = new Dictionary<int, Ticker>();
 
-	// Token: 0x04000542 RID: 1346
+	// Token: 0x04000551 RID: 1361
 	private readonly Dictionary<ETickingGroup, Action<float>> Delegates = new Dictionary<ETickingGroup, Action<float>>();
 
-	// Token: 0x04000543 RID: 1347
+	// Token: 0x04000552 RID: 1362
 	[Nullable(new byte[]
 	{
 		1,
@@ -427,19 +427,19 @@ public class TickSystem : Singleton
 	})]
 	private readonly Dictionary<ETickingGroup, List<List<Ticker>>> Groups = new Dictionary<ETickingGroup, List<List<Ticker>>>();
 
-	// Token: 0x04000544 RID: 1348
+	// Token: 0x04000553 RID: 1363
 	private readonly HashSet<int> PendingRemoveIds = new HashSet<int>();
 
-	// Token: 0x04000545 RID: 1349
+	// Token: 0x04000554 RID: 1364
 	private bool IsIterating;
 
-	// Token: 0x04000546 RID: 1350
+	// Token: 0x04000555 RID: 1365
 	private ETickingGroup IteratingGroup;
 
-	// Token: 0x04000547 RID: 1351
+	// Token: 0x04000556 RID: 1366
 	private int IteratingPriority;
 
-	// Token: 0x04000548 RID: 1352
+	// Token: 0x04000557 RID: 1367
 	[Nullable(2)]
 	private static TickSystem _instance;
 }

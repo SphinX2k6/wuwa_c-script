@@ -9,12 +9,12 @@ using CSharpScript.Launcher.Ui.HotFix;
 using CSharpScript.Launcher.Util;
 using UnrealEngine;
 
-// Token: 0x02000DD7 RID: 3543
+// Token: 0x02000289 RID: 649
 [NullableContext(1)]
 [Nullable(0)]
 public class GameSettingsDumpUtils : Singleton
 {
-	// Token: 0x0600545A RID: 21594 RVA: 0x000EF6F8 File Offset: 0x000ED8F8
+	// Token: 0x060027E1 RID: 10209 RVA: 0x000F6440 File Offset: 0x000F4640
 	private static string DumpConsoleVarNumber(string command)
 	{
 		float consoleVariableFloatValue = UKismetSystemLibrary.GetConsoleVariableFloatValue(command);
@@ -26,7 +26,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600545B RID: 21595 RVA: 0x000EF744 File Offset: 0x000ED944
+	// Token: 0x060027E2 RID: 10210 RVA: 0x000F648C File Offset: 0x000F468C
 	public string DumpVolume(string volumeTag)
 	{
 		float value = 0f;
@@ -39,13 +39,13 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600545C RID: 21596 RVA: 0x000EF79F File Offset: 0x000ED99F
+	// Token: 0x060027E3 RID: 10211 RVA: 0x000F64E7 File Offset: 0x000F46E7
 	public string DumpImageQuality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("sg.KuroRenderQuality") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.GlobalLightQuality");
 	}
 
-	// Token: 0x0600545D RID: 21597 RVA: 0x000EF7BC File Offset: 0x000ED9BC
+	// Token: 0x060027E4 RID: 10212 RVA: 0x000F6504 File Offset: 0x000F4704
 	public string DumpDisplayMode()
 	{
 		TEnumAsByte<EWindowMode> fullscreenMode = UGameUserSettings.GetGameUserSettings().GetFullscreenMode();
@@ -55,7 +55,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600545E RID: 21598 RVA: 0x000EF7FC File Offset: 0x000ED9FC
+	// Token: 0x060027E5 RID: 10213 RVA: 0x000F6544 File Offset: 0x000F4744
 	public string DumpResourceStandard()
 	{
 		ETier localResourceQualityTier = HotFixManager.LocalResourceQualityTier;
@@ -68,7 +68,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600545F RID: 21599 RVA: 0x000EF858 File Offset: 0x000EDA58
+	// Token: 0x060027E6 RID: 10214 RVA: 0x000F65A0 File Offset: 0x000F47A0
 	public string DumpResolution()
 	{
 		FIntPoint screenResolution = UGameUserSettings.GetGameUserSettings().GetScreenResolution();
@@ -80,7 +80,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005460 RID: 21600 RVA: 0x000EF8B4 File Offset: 0x000EDAB4
+	// Token: 0x060027E7 RID: 10215 RVA: 0x000F65FC File Offset: 0x000F47FC
 	public string DumpBrightness()
 	{
 		string str = "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TonemapperGamma") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.LUT.Regenerate");
@@ -92,7 +92,7 @@ public class GameSettingsDumpUtils : Singleton
 		return str + defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005461 RID: 21601 RVA: 0x000EF934 File Offset: 0x000EDB34
+	// Token: 0x060027E8 RID: 10216 RVA: 0x000F667C File Offset: 0x000F487C
 	public string DumpHighestFps()
 	{
 		float frameRateLimit = UGameUserSettings.GetGameUserSettings().GetFrameRateLimit();
@@ -102,31 +102,31 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005462 RID: 21602 RVA: 0x000EF971 File Offset: 0x000EDB71
+	// Token: 0x060027E9 RID: 10217 RVA: 0x000F66B9 File Offset: 0x000F48B9
 	public string DumpShadowQuality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("sg.ShadowQuality");
 	}
 
-	// Token: 0x06005463 RID: 21603 RVA: 0x000EF97D File Offset: 0x000EDB7D
+	// Token: 0x060027EA RID: 10218 RVA: 0x000F66C5 File Offset: 0x000F48C5
 	public string DumpNiagaraQuality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("fx.Niagara.QualityLevel") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.DisableDistortion");
 	}
 
-	// Token: 0x06005464 RID: 21604 RVA: 0x000EF998 File Offset: 0x000EDB98
+	// Token: 0x060027EB RID: 10219 RVA: 0x000F66E0 File Offset: 0x000F48E0
 	public string DumpImageDetail()
 	{
 		return "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.ToonOutlineDrawDistancePc") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Streaming.ForceKuroRuntimeLODBias") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.ToonOutlineDrawDistanceMobile") + GameSettingsDumpUtils.DumpConsoleVarNumber("foliage.DensityType") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Mobile.SceneObjMobileSSR") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Mobile.TreeRimLight") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.AutoExposure") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Streaming.ForceKuroRuntimeLODBias");
 	}
 
-	// Token: 0x06005465 RID: 21605 RVA: 0x000EFA22 File Offset: 0x000EDC22
+	// Token: 0x060027EC RID: 10220 RVA: 0x000F676A File Offset: 0x000F496A
 	public string DumpAntiAliasing()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.DefaultFeature.AntiAliasing");
 	}
 
-	// Token: 0x06005466 RID: 21606 RVA: 0x000EFA30 File Offset: 0x000EDC30
+	// Token: 0x060027ED RID: 10221 RVA: 0x000F6778 File Offset: 0x000F4978
 	public string DumpSceneAo()
 	{
 		string str = "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.AmbientOcclusionLevels") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Mobile.SSAO");
@@ -144,7 +144,7 @@ public class GameSettingsDumpUtils : Singleton
 		return str2 + defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005467 RID: 21607 RVA: 0x000EFB08 File Offset: 0x000EDD08
+	// Token: 0x060027EE RID: 10222 RVA: 0x000F6850 File Offset: 0x000F4A50
 	public string DumpNpcDensity()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(57, 1);
@@ -154,7 +154,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005468 RID: 21608 RVA: 0x000EFB50 File Offset: 0x000EDD50
+	// Token: 0x060027EF RID: 10223 RVA: 0x000F6898 File Offset: 0x000F4A98
 	public string DumpNvidiaDlss()
 	{
 		string str = "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.NGX.DLSS.Enable") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAASamples") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAAFilterSize") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.FidelityFX.FSR.SecondaryUpscale");
@@ -164,7 +164,7 @@ public class GameSettingsDumpUtils : Singleton
 		return str + defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005469 RID: 21609 RVA: 0x000EFBD4 File Offset: 0x000EDDD4
+	// Token: 0x060027F0 RID: 10224 RVA: 0x000F691C File Offset: 0x000F4B1C
 	public string DumpNvidiaDlssFg()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(40, 1);
@@ -173,13 +173,13 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600546A RID: 21610 RVA: 0x000EFC0F File Offset: 0x000EDE0F
+	// Token: 0x060027F1 RID: 10225 RVA: 0x000F6957 File Offset: 0x000F4B57
 	public string DumpNvidiaDlssQuality()
 	{
 		return "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.NGX.DLSS.Quality.Auto") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.NGX.DLSS.Quality");
 	}
 
-	// Token: 0x0600546B RID: 21611 RVA: 0x000EFC34 File Offset: 0x000EDE34
+	// Token: 0x060027F2 RID: 10226 RVA: 0x000F697C File Offset: 0x000F4B7C
 	public string DumpNvidiaDlssSharpness()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(18, 1);
@@ -188,109 +188,115 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600546C RID: 21612 RVA: 0x000EFC6A File Offset: 0x000EDE6A
+	// Token: 0x060027F3 RID: 10227 RVA: 0x000F69B2 File Offset: 0x000F4BB2
 	public string DumpNvidiaReflex()
 	{
 		return "[DumpNvidiaReflex]can not get setting value in engine";
 	}
 
-	// Token: 0x0600546D RID: 21613 RVA: 0x000EFC71 File Offset: 0x000EDE71
+	// Token: 0x060027F4 RID: 10228 RVA: 0x000F69B9 File Offset: 0x000F4BB9
 	public string DumpHdr()
 	{
 		return "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.HDR.EnableHDROutput");
 	}
 
-	// Token: 0x0600546E RID: 21614 RVA: 0x000EFC88 File Offset: 0x000EDE88
+	// Token: 0x060027F5 RID: 10229 RVA: 0x000F69D0 File Offset: 0x000F4BD0
 	public string DumpFsr()
 	{
 		return "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAASamples") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.FidelityFX.FSR.PrimaryUpscale") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.ScreenPercentage") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.MipMapLODBias") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAACurrentFrameWeight") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAA.ClampTolerant") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAA.SharpenLimitDepth") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.NGX.DLSS.Enable");
 	}
 
-	// Token: 0x0600546F RID: 21615 RVA: 0x000EFD12 File Offset: 0x000EDF12
+	// Token: 0x060027F6 RID: 10230 RVA: 0x000F6A5A File Offset: 0x000F4C5A
 	public string DumpXess()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.XeSS.Enabled");
 	}
 
-	// Token: 0x06005470 RID: 21616 RVA: 0x000EFD1E File Offset: 0x000EDF1E
+	// Token: 0x060027F7 RID: 10231 RVA: 0x000F6A66 File Offset: 0x000F4C66
 	public string DumpXessQuality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.XeSS.Enabled");
 	}
 
-	// Token: 0x06005471 RID: 21617 RVA: 0x000EFD2A File Offset: 0x000EDF2A
+	// Token: 0x060027F8 RID: 10232 RVA: 0x000F6A72 File Offset: 0x000F4C72
 	public string DumpXess2()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.XeSS.Enabled");
 	}
 
-	// Token: 0x06005472 RID: 21618 RVA: 0x000EFD36 File Offset: 0x000EDF36
+	// Token: 0x060027F9 RID: 10233 RVA: 0x000F6A7E File Offset: 0x000F4C7E
 	public string DumpXess2Fg()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.XeFG.Enabled");
 	}
 
-	// Token: 0x06005473 RID: 21619 RVA: 0x000EFD42 File Offset: 0x000EDF42
+	// Token: 0x060027FA RID: 10234 RVA: 0x000F6A8A File Offset: 0x000F4C8A
 	public string DumpXess2Quality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.XeSS.Quality");
 	}
 
-	// Token: 0x06005474 RID: 21620 RVA: 0x000EFD4E File Offset: 0x000EDF4E
+	// Token: 0x060027FB RID: 10235 RVA: 0x000F6A96 File Offset: 0x000F4C96
 	public string DumpFsr3()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.FidelityFX.FSR3.Enabled");
 	}
 
-	// Token: 0x06005475 RID: 21621 RVA: 0x000EFD5A File Offset: 0x000EDF5A
+	// Token: 0x060027FC RID: 10236 RVA: 0x000F6AA2 File Offset: 0x000F4CA2
 	public string DumpFsr3Fg()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.FidelityFX.FI.Enabled");
 	}
 
-	// Token: 0x06005476 RID: 21622 RVA: 0x000EFD66 File Offset: 0x000EDF66
+	// Token: 0x060027FD RID: 10237 RVA: 0x000F6AAE File Offset: 0x000F4CAE
 	public string DumpFsr3Quality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.FidelityFX.FSR3.QualityMode");
 	}
 
-	// Token: 0x06005477 RID: 21623 RVA: 0x000EFD72 File Offset: 0x000EDF72
+	// Token: 0x060027FE RID: 10238 RVA: 0x000F6ABA File Offset: 0x000F4CBA
+	public string DumpPssr()
+	{
+		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.SIE.PSSR.Enable");
+	}
+
+	// Token: 0x060027FF RID: 10239 RVA: 0x000F6AC6 File Offset: 0x000F4CC6
 	public string DumpMetalFxEnable()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.MetalFxUpscale") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAA.SharpenLimitDepth");
 	}
 
-	// Token: 0x06005478 RID: 21624 RVA: 0x000EFD8D File Offset: 0x000EDF8D
+	// Token: 0x06002800 RID: 10240 RVA: 0x000F6AE1 File Offset: 0x000F4CE1
 	public string DumpIrx()
 	{
 		return "[DumpIrx]can not get setting value in engine";
 	}
 
-	// Token: 0x06005479 RID: 21625 RVA: 0x000EFD94 File Offset: 0x000EDF94
+	// Token: 0x06002801 RID: 10241 RVA: 0x000F6AE8 File Offset: 0x000F4CE8
 	public string DumpBloom()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.KuroBloomEnable");
 	}
 
-	// Token: 0x0600547A RID: 21626 RVA: 0x000EFDA0 File Offset: 0x000EDFA0
+	// Token: 0x06002802 RID: 10242 RVA: 0x000F6AF4 File Offset: 0x000F4CF4
 	public string DumpVolumeFog()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.volumetricfog");
 	}
 
-	// Token: 0x0600547B RID: 21627 RVA: 0x000EFDAC File Offset: 0x000EDFAC
+	// Token: 0x06002803 RID: 10243 RVA: 0x000F6B00 File Offset: 0x000F4D00
 	public string DumpVolumeLight()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.lightShaftQuality") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.MobileLightShaft");
 	}
 
-	// Token: 0x0600547C RID: 21628 RVA: 0x000EFDC7 File Offset: 0x000EDFC7
+	// Token: 0x06002804 RID: 10244 RVA: 0x000F6B1B File Offset: 0x000F4D1B
 	public string DumpMotionBlur()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.MotionBlur.Amount");
 	}
 
-	// Token: 0x0600547D RID: 21629 RVA: 0x000EFDD4 File Offset: 0x000EDFD4
+	// Token: 0x06002805 RID: 10245 RVA: 0x000F6B28 File Offset: 0x000F4D28
 	public string DumpPcVsync()
 	{
 		UGameUserSettings gameUserSettings = UGameUserSettings.GetGameUserSettings();
@@ -300,25 +306,25 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600547E RID: 21630 RVA: 0x000EFE11 File Offset: 0x000EE011
+	// Token: 0x06002806 RID: 10246 RVA: 0x000F6B65 File Offset: 0x000F4D65
 	public string DumpMobileResolution()
 	{
 		return "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAA.SharpenLimitDepth") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.TemporalAA.Sharpness") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.ScreenPercentage");
 	}
 
-	// Token: 0x0600547F RID: 21631 RVA: 0x000EFE45 File Offset: 0x000EE045
+	// Token: 0x06002807 RID: 10247 RVA: 0x000F6B99 File Offset: 0x000F4D99
 	public string DumpTextLanguage()
 	{
 		return "LanguageSystem.PackageLanguage: " + LanguageSystem.Instance.PackageLanguage;
 	}
 
-	// Token: 0x06005480 RID: 21632 RVA: 0x000EFE5B File Offset: 0x000EE05B
+	// Token: 0x06002808 RID: 10248 RVA: 0x000F6BAF File Offset: 0x000F4DAF
 	public string DumpVoiceLanguage()
 	{
 		return "LanguageSystem.PackageAudio: " + LanguageSystem.Instance.PackageAudio;
 	}
 
-	// Token: 0x06005481 RID: 21633 RVA: 0x000EFE74 File Offset: 0x000EE074
+	// Token: 0x06002809 RID: 10249 RVA: 0x000F6BC8 File Offset: 0x000F4DC8
 	public string DumpHorizontalViewSensitivity()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(26, 1);
@@ -327,7 +333,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005482 RID: 21634 RVA: 0x000EFEB4 File Offset: 0x000EE0B4
+	// Token: 0x0600280A RID: 10250 RVA: 0x000F6C08 File Offset: 0x000F4E08
 	public string DumpVerticalViewSensitivity()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(28, 1);
@@ -336,7 +342,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005483 RID: 21635 RVA: 0x000EFEF4 File Offset: 0x000EE0F4
+	// Token: 0x0600280B RID: 10251 RVA: 0x000F6C48 File Offset: 0x000F4E48
 	public string DumpAimHorizontalViewSensitivity()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(28, 1);
@@ -345,7 +351,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005484 RID: 21636 RVA: 0x000EFF34 File Offset: 0x000EE134
+	// Token: 0x0600280C RID: 10252 RVA: 0x000F6C88 File Offset: 0x000F4E88
 	public string DumpAimVerticalViewSensitivity()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(30, 1);
@@ -354,7 +360,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005485 RID: 21637 RVA: 0x000EFF74 File Offset: 0x000EE174
+	// Token: 0x0600280D RID: 10253 RVA: 0x000F6CC8 File Offset: 0x000F4EC8
 	public string DumpCameraShakeStrength()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(13, 1);
@@ -363,7 +369,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005486 RID: 21638 RVA: 0x000EFFB4 File Offset: 0x000EE1B4
+	// Token: 0x0600280E RID: 10254 RVA: 0x000F6D08 File Offset: 0x000F4F08
 	public string DumpCommonSpringArmLength()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(38, 1);
@@ -372,7 +378,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005487 RID: 21639 RVA: 0x000EFFF4 File Offset: 0x000EE1F4
+	// Token: 0x0600280F RID: 10255 RVA: 0x000F6D48 File Offset: 0x000F4F48
 	public string DumpFightSpringArmLength()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(37, 1);
@@ -381,7 +387,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005488 RID: 21640 RVA: 0x000F0034 File Offset: 0x000EE234
+	// Token: 0x06002810 RID: 10256 RVA: 0x000F6D88 File Offset: 0x000F4F88
 	public string DumpResetFocusEnable()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(20, 1);
@@ -390,7 +396,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005489 RID: 21641 RVA: 0x000F0074 File Offset: 0x000EE274
+	// Token: 0x06002811 RID: 10257 RVA: 0x000F6DC8 File Offset: 0x000F4FC8
 	public string DumpIsSidestepCameraEnable()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(24, 1);
@@ -399,7 +405,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600548A RID: 21642 RVA: 0x000F00B4 File Offset: 0x000EE2B4
+	// Token: 0x06002812 RID: 10258 RVA: 0x000F6E08 File Offset: 0x000F5008
 	public string DumpIsSoftLockCameraEnable()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(32, 1);
@@ -408,7 +414,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600548B RID: 21643 RVA: 0x000F00F4 File Offset: 0x000EE2F4
+	// Token: 0x06002813 RID: 10259 RVA: 0x000F6E48 File Offset: 0x000F5048
 	public string DumpWalkOrRunRate()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(18, 1);
@@ -417,7 +423,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600548C RID: 21644 RVA: 0x000F012C File Offset: 0x000EE32C
+	// Token: 0x06002814 RID: 10260 RVA: 0x000F6E80 File Offset: 0x000F5080
 	public string DumpJoystickMode()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(22, 1);
@@ -426,7 +432,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600548D RID: 21645 RVA: 0x000F0168 File Offset: 0x000EE368
+	// Token: 0x06002815 RID: 10261 RVA: 0x000F6EBC File Offset: 0x000F50BC
 	public string DumpSkillButtonMode()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(32, 1);
@@ -435,7 +441,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600548E RID: 21646 RVA: 0x000F01A4 File Offset: 0x000EE3A4
+	// Token: 0x06002816 RID: 10262 RVA: 0x000F6EF8 File Offset: 0x000F50F8
 	public string DumpAimAssist()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(20, 1);
@@ -444,7 +450,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600548F RID: 21647 RVA: 0x000F01E4 File Offset: 0x000EE3E4
+	// Token: 0x06002817 RID: 10263 RVA: 0x000F6F38 File Offset: 0x000F5138
 	public string DumpKeyboardLockEnemyMode()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(27, 1);
@@ -453,7 +459,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005490 RID: 21648 RVA: 0x000F0220 File Offset: 0x000EE420
+	// Token: 0x06002818 RID: 10264 RVA: 0x000F6F74 File Offset: 0x000F5174
 	public string DumpGamepadLockEnemyMode()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(26, 1);
@@ -462,7 +468,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005491 RID: 21649 RVA: 0x000F025C File Offset: 0x000EE45C
+	// Token: 0x06002819 RID: 10265 RVA: 0x000F6FB0 File Offset: 0x000F51B0
 	public string DumpEnemyHitDisplayMode()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(17, 1);
@@ -471,13 +477,13 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005492 RID: 21650 RVA: 0x000F0297 File Offset: 0x000EE497
+	// Token: 0x0600281A RID: 10266 RVA: 0x000F6FEB File Offset: 0x000F51EB
 	public string DumpAutoAdjustImageQuality()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.AutoCoolUIEnable");
 	}
 
-	// Token: 0x06005493 RID: 21651 RVA: 0x000F02A4 File Offset: 0x000EE4A4
+	// Token: 0x0600281B RID: 10267 RVA: 0x000F6FF8 File Offset: 0x000F51F8
 	public string DumpShowDamage()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(22, 1);
@@ -486,7 +492,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005494 RID: 21652 RVA: 0x000F02E0 File Offset: 0x000EE4E0
+	// Token: 0x0600281C RID: 10268 RVA: 0x000F7034 File Offset: 0x000F5234
 	public string DumpDynamicBones()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(13, 1);
@@ -495,25 +501,25 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005495 RID: 21653 RVA: 0x000F031B File Offset: 0x000EE51B
+	// Token: 0x0600281D RID: 10269 RVA: 0x000F706F File Offset: 0x000F526F
 	public string DumpRayTracing()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("sg.RayTracingQuality");
 	}
 
-	// Token: 0x06005496 RID: 21654 RVA: 0x000F0327 File Offset: 0x000EE527
+	// Token: 0x0600281E RID: 10270 RVA: 0x000F707B File Offset: 0x000F527B
 	public string DumpRayTracedReflection()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Lumen.Reflections.Allow");
 	}
 
-	// Token: 0x06005497 RID: 21655 RVA: 0x000F0333 File Offset: 0x000EE533
+	// Token: 0x0600281F RID: 10271 RVA: 0x000F7087 File Offset: 0x000F5287
 	public string DumpRayTracedGI()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Lumen.DiffuseIndirect.Allow");
 	}
 
-	// Token: 0x06005498 RID: 21656 RVA: 0x000F0340 File Offset: 0x000EE540
+	// Token: 0x06002820 RID: 10272 RVA: 0x000F7094 File Offset: 0x000F5294
 	public string DumpTeammateFx()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(38, 1);
@@ -522,19 +528,19 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06005499 RID: 21657 RVA: 0x000F037B File Offset: 0x000EE57B
+	// Token: 0x06002821 RID: 10273 RVA: 0x000F70CF File Offset: 0x000F52CF
 	public string DumpSaturation()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Client.Saturation");
 	}
 
-	// Token: 0x0600549A RID: 21658 RVA: 0x000F0387 File Offset: 0x000EE587
+	// Token: 0x06002822 RID: 10274 RVA: 0x000F70DB File Offset: 0x000F52DB
 	public string DumpContrast()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Client.Contrast");
 	}
 
-	// Token: 0x0600549B RID: 21659 RVA: 0x000F0394 File Offset: 0x000EE594
+	// Token: 0x06002823 RID: 10275 RVA: 0x000F70E8 File Offset: 0x000F52E8
 	public string DumpFilter()
 	{
 		int global = LocalStorage.GetGlobal<int>(ELocalStorageGlobalKey.FilterSettingId, 0);
@@ -556,49 +562,49 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600549C RID: 21660 RVA: 0x000F0437 File Offset: 0x000EE637
+	// Token: 0x06002824 RID: 10276 RVA: 0x000F718B File Offset: 0x000F538B
 	public string DumpImageDisplayMode()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.ImageDisplayMode");
 	}
 
-	// Token: 0x0600549D RID: 21661 RVA: 0x000F0443 File Offset: 0x000EE643
+	// Token: 0x06002825 RID: 10277 RVA: 0x000F7197 File Offset: 0x000F5397
 	public string DumpEyeProtection()
 	{
 		return "";
 	}
 
-	// Token: 0x0600549E RID: 21662 RVA: 0x000F044A File Offset: 0x000EE64A
+	// Token: 0x06002826 RID: 10278 RVA: 0x000F719E File Offset: 0x000F539E
 	public string DumpEyeProtectionMode()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.EyeProtectionMode");
 	}
 
-	// Token: 0x0600549F RID: 21663 RVA: 0x000F0456 File Offset: 0x000EE656
+	// Token: 0x06002827 RID: 10279 RVA: 0x000F71AA File Offset: 0x000F53AA
 	public string DumpEyeProtectionTemp()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.EyeProtectionTemp");
 	}
 
-	// Token: 0x060054A0 RID: 21664 RVA: 0x000F0462 File Offset: 0x000EE662
+	// Token: 0x06002828 RID: 10280 RVA: 0x000F71B6 File Offset: 0x000F53B6
 	public string DumpEyeProtectionStrength()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.EyeProtectionStrength");
 	}
 
-	// Token: 0x060054A1 RID: 21665 RVA: 0x000F046E File Offset: 0x000EE66E
+	// Token: 0x06002829 RID: 10281 RVA: 0x000F71C2 File Offset: 0x000F53C2
 	public string DumpEyeProtectionBrightness()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.EyeProtectionBrightness");
 	}
 
-	// Token: 0x060054A2 RID: 21666 RVA: 0x000F047A File Offset: 0x000EE67A
+	// Token: 0x0600282A RID: 10282 RVA: 0x000F71CE File Offset: 0x000F53CE
 	public string DumpEyeProtectionTexture()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.EyeProtectionTexture");
 	}
 
-	// Token: 0x060054A3 RID: 21667 RVA: 0x000F0488 File Offset: 0x000EE688
+	// Token: 0x0600282B RID: 10283 RVA: 0x000F71DC File Offset: 0x000F53DC
 	public string DumpSkinDamageMode()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(47, 1);
@@ -607,13 +613,13 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060054A4 RID: 21668 RVA: 0x000F04BE File Offset: 0x000EE6BE
+	// Token: 0x0600282C RID: 10284 RVA: 0x000F7212 File Offset: 0x000F5412
 	public string DumpAdrenoFME()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.FEstimation.Option");
 	}
 
-	// Token: 0x060054A5 RID: 21669 RVA: 0x000F04CC File Offset: 0x000EE6CC
+	// Token: 0x0600282D RID: 10285 RVA: 0x000F7220 File Offset: 0x000F5420
 	public string DumpAutoRun()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 1);
@@ -633,7 +639,7 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060054A6 RID: 21670 RVA: 0x000F0530 File Offset: 0x000EE730
+	// Token: 0x0600282E RID: 10286 RVA: 0x000F7284 File Offset: 0x000F5484
 	public string DumpAutoSprint()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 1);
@@ -653,13 +659,13 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060054A7 RID: 21671 RVA: 0x000F0594 File Offset: 0x000EE794
+	// Token: 0x0600282F RID: 10287 RVA: 0x000F72E8 File Offset: 0x000F54E8
 	public string DumpVulkan()
 	{
 		return "" + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Android.VulkanSetting") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Android.DefaultVulkanSetting") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Android.DisableVulkanSupport") + GameSettingsDumpUtils.DumpConsoleVarNumber("r.Mobile.FlushSceneColorRendering");
 	}
 
-	// Token: 0x060054A8 RID: 21672 RVA: 0x000F05E4 File Offset: 0x000EE7E4
+	// Token: 0x06002830 RID: 10288 RVA: 0x000F7338 File Offset: 0x000F5538
 	public string DumpWaterInteract()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(31, 1);
@@ -668,44 +674,55 @@ public class GameSettingsDumpUtils : Singleton
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060054A9 RID: 21673 RVA: 0x000F061F File Offset: 0x000EE81F
+	// Token: 0x06002831 RID: 10289 RVA: 0x000F7373 File Offset: 0x000F5573
 	public string DumpVegetationDither()
 	{
 		return "";
 	}
 
-	// Token: 0x060054AA RID: 21674 RVA: 0x000F0626 File Offset: 0x000EE826
+	// Token: 0x06002832 RID: 10290 RVA: 0x000F737A File Offset: 0x000F557A
 	public string DumpVegetationDensity()
 	{
 		return "";
 	}
 
-	// Token: 0x060054AB RID: 21675 RVA: 0x000F062D File Offset: 0x000EE82D
+	// Token: 0x06002833 RID: 10291 RVA: 0x000F7381 File Offset: 0x000F5581
 	public string DumpAutoExposure()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.AutoExposurePlayerCustom");
 	}
 
-	// Token: 0x060054AC RID: 21676 RVA: 0x000F0639 File Offset: 0x000EE839
+	// Token: 0x06002834 RID: 10292 RVA: 0x000F7390 File Offset: 0x000F5590
 	public string DumpLoadingRangeScaleLevel()
 	{
-		return GameSettingsDumpUtils.DumpConsoleVarNumber("wp.Runtime.PlannedLoadingRangeScaleExtra");
+		return string.Concat(new string[]
+		{
+			GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.Foliage.GrassCullDistanceMax"),
+			"; ",
+			GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.Foliage.MobileGrassCullDistanceMax"),
+			"; ",
+			GameSettingsDumpUtils.DumpConsoleVarNumber("wp.Runtime.LoadingRangeScale"),
+			"; ",
+			GameSettingsDumpUtils.DumpConsoleVarNumber("wp.Runtime.PlannedLoadingRangeScale"),
+			"; ",
+			GameSettingsDumpUtils.DumpConsoleVarNumber("foliage.LODDistanceScale")
+		});
 	}
 
-	// Token: 0x060054AD RID: 21677 RVA: 0x000F0645 File Offset: 0x000EE845
+	// Token: 0x06002835 RID: 10293 RVA: 0x000F740A File Offset: 0x000F560A
 	public string DumpHarmonySuperResolution()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.HarmonySuperResolution");
 	}
 
-	// Token: 0x060054AE RID: 21678 RVA: 0x000F0651 File Offset: 0x000EE851
+	// Token: 0x06002836 RID: 10294 RVA: 0x000F7416 File Offset: 0x000F5616
 	public string DumpHarmonyRayTracingBoost()
 	{
 		return GameSettingsDumpUtils.DumpConsoleVarNumber("r.Kuro.HarmonyRayTracingBoost");
 	}
 
-	// Token: 0x170005EA RID: 1514
-	// (get) Token: 0x060054AF RID: 21679 RVA: 0x000F065D File Offset: 0x000EE85D
+	// Token: 0x17000610 RID: 1552
+	// (get) Token: 0x06002837 RID: 10295 RVA: 0x000F7422 File Offset: 0x000F5622
 	public static GameSettingsDumpUtils Instance
 	{
 		get
@@ -719,12 +736,12 @@ public class GameSettingsDumpUtils : Singleton
 		}
 	}
 
-	// Token: 0x060054B0 RID: 21680 RVA: 0x000F0680 File Offset: 0x000EE880
+	// Token: 0x06002838 RID: 10296 RVA: 0x000F7445 File Offset: 0x000F5645
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060054B1 RID: 21681 RVA: 0x000F0682 File Offset: 0x000EE882
+	// Token: 0x06002839 RID: 10297 RVA: 0x000F7447 File Offset: 0x000F5647
 	public static void ResetStaticDefaultValue()
 	{
 		GameSettingsDumpUtils instance = GameSettingsDumpUtils._instance;
@@ -735,13 +752,13 @@ public class GameSettingsDumpUtils : Singleton
 		GameSettingsDumpUtils._instance = null;
 	}
 
-	// Token: 0x060054B2 RID: 21682 RVA: 0x000F069B File Offset: 0x000EE89B
+	// Token: 0x0600283A RID: 10298 RVA: 0x000F7460 File Offset: 0x000F5660
 	static GameSettingsDumpUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsDumpUtils.CreateStaticDefaultValue), new Action(GameSettingsDumpUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400269D RID: 9885
+	// Token: 0x04002728 RID: 10024
 	[Nullable(2)]
 	private static GameSettingsDumpUtils _instance;
 }

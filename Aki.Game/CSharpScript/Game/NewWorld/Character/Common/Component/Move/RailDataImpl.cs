@@ -5,34 +5,34 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070F6 RID: 28918
+	// Token: 0x020063A6 RID: 25510
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RailDataImpl : IRailData
 	{
-		// Token: 0x17009CE9 RID: 40169
-		// (get) Token: 0x0604698D RID: 289165 RVA: 0x011C2A9F File Offset: 0x011C0C9F
-		// (set) Token: 0x0604698E RID: 289166 RVA: 0x011C2AA7 File Offset: 0x011C0CA7
+		// Token: 0x17007572 RID: 30066
+		// (get) Token: 0x0603DD86 RID: 253318 RVA: 0x011F1C53 File Offset: 0x011EFE53
+		// (set) Token: 0x0603DD87 RID: 253319 RVA: 0x011F1C5B File Offset: 0x011EFE5B
 		public int RailSplineEntityId { get; set; }
 
-		// Token: 0x17009CEA RID: 40170
-		// (get) Token: 0x0604698F RID: 289167 RVA: 0x011C2AB0 File Offset: 0x011C0CB0
-		// (set) Token: 0x06046990 RID: 289168 RVA: 0x011C2AB8 File Offset: 0x011C0CB8
+		// Token: 0x17007573 RID: 30067
+		// (get) Token: 0x0603DD88 RID: 253320 RVA: 0x011F1C64 File Offset: 0x011EFE64
+		// (set) Token: 0x0603DD89 RID: 253321 RVA: 0x011F1C6C File Offset: 0x011EFE6C
 		public float? SlideSpeed { get; set; }
 
-		// Token: 0x17009CEB RID: 40171
-		// (get) Token: 0x06046991 RID: 289169 RVA: 0x011C2AC1 File Offset: 0x011C0CC1
-		// (set) Token: 0x06046992 RID: 289170 RVA: 0x011C2AC9 File Offset: 0x011C0CC9
+		// Token: 0x17007574 RID: 30068
+		// (get) Token: 0x0603DD8A RID: 253322 RVA: 0x011F1C75 File Offset: 0x011EFE75
+		// (set) Token: 0x0603DD8B RID: 253323 RVA: 0x011F1C7D File Offset: 0x011EFE7D
 		public float? UpSpeed { get; set; }
 
-		// Token: 0x17009CEC RID: 40172
-		// (get) Token: 0x06046993 RID: 289171 RVA: 0x011C2AD2 File Offset: 0x011C0CD2
-		// (set) Token: 0x06046994 RID: 289172 RVA: 0x011C2ADA File Offset: 0x011C0CDA
+		// Token: 0x17007575 RID: 30069
+		// (get) Token: 0x0603DD8C RID: 253324 RVA: 0x011F1C86 File Offset: 0x011EFE86
+		// (set) Token: 0x0603DD8D RID: 253325 RVA: 0x011F1C8E File Offset: 0x011EFE8E
 		public float? DownSpeed { get; set; }
 
-		// Token: 0x17009CED RID: 40173
-		// (get) Token: 0x06046995 RID: 289173 RVA: 0x011C2AE3 File Offset: 0x011C0CE3
-		// (set) Token: 0x06046996 RID: 289174 RVA: 0x011C2AEB File Offset: 0x011C0CEB
+		// Token: 0x17007576 RID: 30070
+		// (get) Token: 0x0603DD8E RID: 253326 RVA: 0x011F1C97 File Offset: 0x011EFE97
+		// (set) Token: 0x0603DD8F RID: 253327 RVA: 0x011F1C9F File Offset: 0x011EFE9F
 		[Nullable(new byte[]
 		{
 			2,
@@ -48,12 +48,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			1
 		})] set; }
 
-		// Token: 0x17009CEE RID: 40174
-		// (get) Token: 0x06046997 RID: 289175 RVA: 0x011C2AF4 File Offset: 0x011C0CF4
-		// (set) Token: 0x06046998 RID: 289176 RVA: 0x011C2AFC File Offset: 0x011C0CFC
+		// Token: 0x17007577 RID: 30071
+		// (get) Token: 0x0603DD90 RID: 253328 RVA: 0x011F1CA8 File Offset: 0x011EFEA8
+		// (set) Token: 0x0603DD91 RID: 253329 RVA: 0x011F1CB0 File Offset: 0x011EFEB0
 		public ISlopeSlidePerform SlidePerformConfig { get; set; }
 
-		// Token: 0x06046999 RID: 289177 RVA: 0x011C2B08 File Offset: 0x011C0D08
+		// Token: 0x0603DD92 RID: 253330 RVA: 0x011F1CBC File Offset: 0x011EFEBC
 		[NullableContext(1)]
 		public static RailDataImpl FromSlideRailComponent(SlideRailComponent comp)
 		{
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return railDataImpl;
 		}
 
-		// Token: 0x0604699A RID: 289178 RVA: 0x011C2BD0 File Offset: 0x011C0DD0
+		// Token: 0x0603DD93 RID: 253331 RVA: 0x011F1D84 File Offset: 0x011EFF84
 		[NullableContext(1)]
 		public static RailDataImpl FromSlidePerformComponent(SlidePerformComponent comp)
 		{

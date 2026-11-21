@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B6C RID: 19308
+	// Token: 0x02003B16 RID: 15126
 	public enum ETeleportMode
 	{
-		// Token: 0x0401AA4F RID: 109135
+		// Token: 0x040153A5 RID: 86949
 		Loading,
-		// Token: 0x0401AA50 RID: 109136
+		// Token: 0x040153A6 RID: 86950
 		NoLoading,
-		// Token: 0x0401AA51 RID: 109137
+		// Token: 0x040153A7 RID: 86951
 		Auto
 	}
 }

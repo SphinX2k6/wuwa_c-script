@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000919 RID: 2329
+	// Token: 0x020009C6 RID: 2502
 	public class EConveyorBeltMoveTypeJsonConverter : JsonConverter<EConveyorBeltMoveType>
 	{
-		// Token: 0x060034A3 RID: 13475 RVA: 0x00089CBC File Offset: 0x00087EBC
+		// Token: 0x0600380F RID: 14351 RVA: 0x0009183C File Offset: 0x0008FA3C
 		public override EConveyorBeltMoveType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EConveyorBeltMoveTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060034A4 RID: 13476 RVA: 0x00089CE0 File Offset: 0x00087EE0
+		// Token: 0x06003810 RID: 14352 RVA: 0x00091860 File Offset: 0x0008FA60
 		public override void Write(Utf8JsonWriter writer, EConveyorBeltMoveType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

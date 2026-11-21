@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020019A1 RID: 6561
+// Token: 0x02000E5E RID: 3678
 public class CharacterSmallItemGrid : SmallItemGridBase
 {
-	// Token: 0x17001006 RID: 4102
-	// (get) Token: 0x0600BF82 RID: 49026 RVA: 0x002B3FDD File Offset: 0x002B21DD
+	// Token: 0x1700102A RID: 4138
+	// (get) Token: 0x0600938A RID: 37770 RVA: 0x002BEF61 File Offset: 0x002BD161
 	public override ESmallItemGridType Type
 	{
 		get
@@ -13,24 +13,24 @@ public class CharacterSmallItemGrid : SmallItemGridBase
 		}
 	}
 
-	// Token: 0x04005608 RID: 22024
+	// Token: 0x040056B7 RID: 22199
 	public int? ElementId;
 
-	// Token: 0x04005609 RID: 22025
+	// Token: 0x040056B8 RID: 22200
 	public bool? IsLockVisible;
 
-	// Token: 0x0400560A RID: 22026
+	// Token: 0x040056B9 RID: 22201
 	public bool? IsReceivableVisible;
 
-	// Token: 0x0400560B RID: 22027
+	// Token: 0x040056BA RID: 22202
 	public bool? IsReceivedVisible;
 
-	// Token: 0x0400560C RID: 22028
+	// Token: 0x040056BB RID: 22203
 	public bool? IsSelectedFlag;
 
-	// Token: 0x0400560D RID: 22029
+	// Token: 0x040056BC RID: 22204
 	public bool? IsCookUp;
 
-	// Token: 0x0400560E RID: 22030
+	// Token: 0x040056BD RID: 22205
 	public bool? IsBlack;
 }

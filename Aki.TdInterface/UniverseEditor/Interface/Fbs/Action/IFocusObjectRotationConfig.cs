@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200683D RID: 26685
+	// Token: 0x02006EC3 RID: 28355
 	public struct IFocusObjectRotationConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C63E RID: 50750
-		// (get) Token: 0x0602E86D RID: 190573 RVA: 0x006593F3 File Offset: 0x006575F3
+		// Token: 0x1700D002 RID: 53250
+		// (get) Token: 0x060310F5 RID: 200949 RVA: 0x006A7333 File Offset: 0x006A5533
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E86E RID: 190574 RVA: 0x00659400 File Offset: 0x00657600
+		// Token: 0x060310F6 RID: 200950 RVA: 0x006A7340 File Offset: 0x006A5540
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E86F RID: 190575 RVA: 0x00659408 File Offset: 0x00657608
+		// Token: 0x060310F7 RID: 200951 RVA: 0x006A7348 File Offset: 0x006A5548
 		public static IFocusObjectRotationConfig GetRootAsIFocusObjectRotationConfig(ByteBuffer _bb)
 		{
 			return IFocusObjectRotationConfig.GetRootAsIFocusObjectRotationConfig(_bb, default(IFocusObjectRotationConfig));
 		}
 
-		// Token: 0x0602E870 RID: 190576 RVA: 0x00659424 File Offset: 0x00657624
+		// Token: 0x060310F8 RID: 200952 RVA: 0x006A7364 File Offset: 0x006A5564
 		public static IFocusObjectRotationConfig GetRootAsIFocusObjectRotationConfig(ByteBuffer _bb, IFocusObjectRotationConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E871 RID: 190577 RVA: 0x00659441 File Offset: 0x00657641
+		// Token: 0x060310F9 RID: 200953 RVA: 0x006A7381 File Offset: 0x006A5581
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E872 RID: 190578 RVA: 0x00659450 File Offset: 0x00657650
+		// Token: 0x060310FA RID: 200954 RVA: 0x006A7390 File Offset: 0x006A5590
 		public IFocusObjectRotationConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C63F RID: 50751
-		// (get) Token: 0x0602E873 RID: 190579 RVA: 0x00659460 File Offset: 0x00657660
+		// Token: 0x1700D003 RID: 53251
+		// (get) Token: 0x060310FB RID: 200955 RVA: 0x006A73A0 File Offset: 0x006A55A0
 		public IVectorInfo? TargetRotation
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C640 RID: 50752
-		// (get) Token: 0x0602E874 RID: 190580 RVA: 0x006594C0 File Offset: 0x006576C0
+		// Token: 0x1700D004 RID: 53252
+		// (get) Token: 0x060310FC RID: 200956 RVA: 0x006A7400 File Offset: 0x006A5600
 		public string SpeedCurve
 		{
 			get
@@ -78,19 +78,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E875 RID: 190581 RVA: 0x006594F7 File Offset: 0x006576F7
+		// Token: 0x060310FD RID: 200957 RVA: 0x006A7437 File Offset: 0x006A5637
 		public Span<byte> GetSpeedCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E876 RID: 190582 RVA: 0x00659506 File Offset: 0x00657706
+		// Token: 0x060310FE RID: 200958 RVA: 0x006A7446 File Offset: 0x006A5646
 		public byte[] GetSpeedCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602E877 RID: 190583 RVA: 0x00659514 File Offset: 0x00657714
+		// Token: 0x060310FF RID: 200959 RVA: 0x006A7454 File Offset: 0x006A5654
 		public static Offset<IFocusObjectRotationConfig> CreateIFocusObjectRotationConfig(FlatBufferBuilder builder, Offset<IVectorInfo> TargetRotationOffset = default(Offset<IVectorInfo>), StringOffset SpeedCurveOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFocusObjectRotationConfig.EndIFocusObjectRotationConfig(builder);
 		}
 
-		// Token: 0x0602E878 RID: 190584 RVA: 0x00659531 File Offset: 0x00657731
+		// Token: 0x06031100 RID: 200960 RVA: 0x006A7471 File Offset: 0x006A5671
 		public static void StartIFocusObjectRotationConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E879 RID: 190585 RVA: 0x0065953A File Offset: 0x0065773A
+		// Token: 0x06031101 RID: 200961 RVA: 0x006A747A File Offset: 0x006A567A
 		public static void AddTargetRotation(FlatBufferBuilder builder, Offset<IVectorInfo> targetRotationOffset)
 		{
 			builder.AddOffset(0, targetRotationOffset.Value, 0);
 		}
 
-		// Token: 0x0602E87A RID: 190586 RVA: 0x0065954A File Offset: 0x0065774A
+		// Token: 0x06031102 RID: 200962 RVA: 0x006A748A File Offset: 0x006A568A
 		public static void AddSpeedCurve(FlatBufferBuilder builder, StringOffset speedCurveOffset)
 		{
 			builder.AddOffset(1, speedCurveOffset.Value, 0);
 		}
 
-		// Token: 0x0602E87B RID: 190587 RVA: 0x0065955A File Offset: 0x0065775A
+		// Token: 0x06031103 RID: 200963 RVA: 0x006A749A File Offset: 0x006A569A
 		public static Offset<IFocusObjectRotationConfig> EndIFocusObjectRotationConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFocusObjectRotationConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602E87C RID: 190588 RVA: 0x00659568 File Offset: 0x00657768
+		// Token: 0x06031104 RID: 200964 RVA: 0x006A74A8 File Offset: 0x006A56A8
 		public IFocusObjectRotationConfigT UnPack()
 		{
 			IFocusObjectRotationConfigT focusObjectRotationConfigT = new IFocusObjectRotationConfigT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return focusObjectRotationConfigT;
 		}
 
-		// Token: 0x0602E87D RID: 190589 RVA: 0x00659584 File Offset: 0x00657784
+		// Token: 0x06031105 RID: 200965 RVA: 0x006A74C4 File Offset: 0x006A56C4
 		public void UnPackTo(IFocusObjectRotationConfigT _o)
 		{
 			_o.TargetRotation = ((this.TargetRotation != null) ? this.TargetRotation.Value.UnPack() : null);
 			_o.SpeedCurve = this.SpeedCurve;
 		}
 
-		// Token: 0x0602E87E RID: 190590 RVA: 0x006595CC File Offset: 0x006577CC
+		// Token: 0x06031106 RID: 200966 RVA: 0x006A750C File Offset: 0x006A570C
 		public static Offset<IFocusObjectRotationConfig> Pack(FlatBufferBuilder builder, IFocusObjectRotationConfigT _o)
 		{
 			if (_o == null)
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFocusObjectRotationConfig.CreateIFocusObjectRotationConfig(builder, targetRotationOffset, speedCurveOffset);
 		}
 
-		// Token: 0x04010F86 RID: 69510
+		// Token: 0x04011DC0 RID: 73152
 		private Table __p;
 	}
 }

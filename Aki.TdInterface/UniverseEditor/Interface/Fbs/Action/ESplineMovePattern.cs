@@ -2,20 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200600C RID: 24588
+	// Token: 0x0200666B RID: 26219
 	public enum ESplineMovePattern : byte
 	{
-		// Token: 0x04010035 RID: 65589
+		// Token: 0x04010E17 RID: 69143
 		PathLine,
-		// Token: 0x04010036 RID: 65590
+		// Token: 0x04010E18 RID: 69144
 		RacingTrack,
-		// Token: 0x04010037 RID: 65591
+		// Token: 0x04010E19 RID: 69145
 		SlideTrack,
-		// Token: 0x04010038 RID: 65592
+		// Token: 0x04010E1A RID: 69146
 		AirPassage,
-		// Token: 0x04010039 RID: 65593
+		// Token: 0x04010E1B RID: 69147
 		MotorcycleTrack,
-		// Token: 0x0401003A RID: 65594
-		MechaAirPassage
+		// Token: 0x04010E1C RID: 69148
+		MechaAirPassage,
+		// Token: 0x04010E1D RID: 69149
+		PetalGrabMove
 	}
 }

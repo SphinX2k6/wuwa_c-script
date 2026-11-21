@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024DE RID: 9438
+	// Token: 0x02002783 RID: 10115
 	public class IFixTeleControllerResetPos : ActionParams
 	{
-		// Token: 0x0600D2B6 RID: 53942 RVA: 0x001F416A File Offset: 0x001F236A
-		[NullableContext(1)]
+		// Token: 0x0600E00B RID: 57355 RVA: 0x0020F9C6 File Offset: 0x0020DBC6
 		public static IFixTeleControllerResetPos Create(IFixTeleControllerResetPos? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003ABC RID: 15036
-		// (get) Token: 0x0600D2B7 RID: 53943 RVA: 0x001F4189 File Offset: 0x001F2389
+		// Token: 0x17003DB3 RID: 15795
+		// (get) Token: 0x0600E00C RID: 57356 RVA: 0x0020F9E5 File Offset: 0x0020DBE5
 		public virtual int PositionEntityId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007394 RID: 29588
+		// Token: 0x040079E1 RID: 31201
 		private IFixTeleControllerResetPos Instance;
 	}
 }

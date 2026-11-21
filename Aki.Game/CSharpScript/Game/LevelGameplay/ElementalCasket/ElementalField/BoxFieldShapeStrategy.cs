@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EB1 RID: 28337
+	// Token: 0x02006031 RID: 24625
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BoxFieldShapeStrategy : BaseFieldShapeStrategy
 	{
-		// Token: 0x17009A96 RID: 39574
-		// (get) Token: 0x06045078 RID: 282744 RVA: 0x0110E8E0 File Offset: 0x0110CAE0
+		// Token: 0x17006FCD RID: 28621
+		// (get) Token: 0x0603B219 RID: 242201 RVA: 0x010B89BC File Offset: 0x010B6BBC
 		public override ESceneItemElementalFieldShapeType ShapeType
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06045079 RID: 282745 RVA: 0x0110E8E4 File Offset: 0x0110CAE4
+		// Token: 0x0603B21A RID: 242202 RVA: 0x010B89C0 File Offset: 0x010B6BC0
 		public BoxFieldShapeStrategy(ISceneItemElementalFieldShapeContext context, IBoxTriggerShape boxShapeConfig) : base(context, boxShapeConfig.Center)
 		{
 			this.BoxSize.FromConfigVector(boxShapeConfig.Size);
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x17009A97 RID: 39575
-		// (get) Token: 0x0604507A RID: 282746 RVA: 0x0110E964 File Offset: 0x0110CB64
+		// Token: 0x17006FCE RID: 28622
+		// (get) Token: 0x0603B21B RID: 242203 RVA: 0x010B8A40 File Offset: 0x010B6C40
 		public override Action<UKuroFastCollisionShapeComponent> ApplyStaticConfig
 		{
 			get
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x17009A98 RID: 39576
-		// (get) Token: 0x0604507B RID: 282747 RVA: 0x0110E972 File Offset: 0x0110CB72
+		// Token: 0x17006FCF RID: 28623
+		// (get) Token: 0x0603B21C RID: 242204 RVA: 0x010B8A4E File Offset: 0x010B6C4E
 		public override Func<ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>, ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>> FillSnapshot
 		{
 			get
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x0604507C RID: 282748 RVA: 0x0110E980 File Offset: 0x0110CB80
+		// Token: 0x0603B21D RID: 242205 RVA: 0x010B8A5C File Offset: 0x010B6C5C
 		private FRotator? GetWorldRotation()
 		{
 			BaseActorComponent baseActorComponent = this.Context.GetBaseActorComponent();
@@ -99,14 +99,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return new FRotator?(relativeRotation.ToUeRotator());
 		}
 
-		// Token: 0x04023EF7 RID: 147191
+		// Token: 0x0401F1AA RID: 127402
 		private readonly Vector BoxSize = Vector.Create();
 
-		// Token: 0x04023EF8 RID: 147192
+		// Token: 0x0401F1AB RID: 127403
 		[Nullable(2)]
 		private readonly Rotator RelativeRotation;
 
-		// Token: 0x04023EF9 RID: 147193
+		// Token: 0x0401F1AC RID: 127404
 		private readonly Rotator WorldRotation = Rotator.Create();
 	}
 }

@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.ActivityGamePlay.CommonFSMManager;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 {
-	// Token: 0x0200688C RID: 26764
+	// Token: 0x020057DC RID: 22492
 	public class DangoBrawlGameExitState : ActivityGameplayTurnStateBase<EDangoBrawlFsmState>
 	{
-		// Token: 0x06042CF8 RID: 273656 RVA: 0x010435D9 File Offset: 0x010417D9
+		// Token: 0x06037850 RID: 227408 RVA: 0x00F84B59 File Offset: 0x00F82D59
 		public override void Enter(EDangoBrawlFsmState? prev)
 		{
 			TimerSystem.GameplayTimeInstance.Next(delegate(float _)
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			}, null, null);
 		}
 
-		// Token: 0x06042CF9 RID: 273657 RVA: 0x01043607 File Offset: 0x01041807
+		// Token: 0x06037851 RID: 227409 RVA: 0x00F84B87 File Offset: 0x00F82D87
 		public override void Exit(EDangoBrawlFsmState? next)
 		{
 		}

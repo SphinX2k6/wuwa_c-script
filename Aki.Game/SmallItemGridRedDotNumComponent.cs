@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200198C RID: 6540
+// Token: 0x02000E49 RID: 3657
 public class SmallItemGridRedDotNumComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF1F RID: 48927 RVA: 0x002B3434 File Offset: 0x002B1634
+	// Token: 0x06009327 RID: 37671 RVA: 0x002BE3B8 File Offset: 0x002BC5B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ public class SmallItemGridRedDotNumComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF20 RID: 48928 RVA: 0x002B347C File Offset: 0x002B167C
+	// Token: 0x06009328 RID: 37672 RVA: 0x002BE400 File Offset: 0x002BC600
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -36,23 +36,23 @@ public class SmallItemGridRedDotNumComponent : SmallItemGridComponent
 		this.SetActive(false);
 	}
 
-	// Token: 0x0600BF21 RID: 48929 RVA: 0x002B34BF File Offset: 0x002B16BF
+	// Token: 0x06009329 RID: 37673 RVA: 0x002BE443 File Offset: 0x002BC643
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRedDotNum";
 	}
 
-	// Token: 0x0600BF22 RID: 48930 RVA: 0x002B34C6 File Offset: 0x002B16C6
+	// Token: 0x0600932A RID: 37674 RVA: 0x002BE44A File Offset: 0x002BC64A
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Top;
 	}
 
-	// Token: 0x02007ECA RID: 32458
+	// Token: 0x02007059 RID: 28761
 	private enum EChildType
 	{
-		// Token: 0x0402970C RID: 169740
+		// Token: 0x04024A49 RID: 150089
 		TxtContent
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001EC3 RID: 7875
+// Token: 0x02001385 RID: 4997
 public enum ETarget
 {
-	// Token: 0x0400700F RID: 28687
+	// Token: 0x040070F0 RID: 28912
 	HonamiCity,
-	// Token: 0x04007010 RID: 28688
+	// Token: 0x040070F1 RID: 28913
 	Tower
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x0200609D RID: 24733
+	// Token: 0x0200501B RID: 20507
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleItem : UiPanelBase
 	{
-		// Token: 0x0603E84D RID: 256077 RVA: 0x00F1C6D0 File Offset: 0x00F1A8D0
+		// Token: 0x06033511 RID: 210193 RVA: 0x00E63494 File Offset: 0x00E61694
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E84E RID: 256078 RVA: 0x00F1C77C File Offset: 0x00F1A97C
+		// Token: 0x06033512 RID: 210194 RVA: 0x00E63540 File Offset: 0x00E61740
 		public UniTask RefreshExternalByDataAsync(Spring25DialogueSpineData data)
 		{
 			RoleItem.<RefreshExternalByDataAsync>d__2 <RefreshExternalByDataAsync>d__;
@@ -44,32 +44,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <RefreshExternalByDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E84F RID: 256079 RVA: 0x00F1C7C7 File Offset: 0x00F1A9C7
+		// Token: 0x06033513 RID: 210195 RVA: 0x00E6358B File Offset: 0x00E6178B
 		public void RefreshText(string textId)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(2), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603E850 RID: 256080 RVA: 0x00F1C7E0 File Offset: 0x00F1A9E0
+		// Token: 0x06033514 RID: 210196 RVA: 0x00E635A4 File Offset: 0x00E617A4
 		public void RefreshAnim(string animName)
 		{
 			base.GetSpine(0).SetAnimation(0, animName, true);
 		}
 
-		// Token: 0x0200C2F3 RID: 49907
+		// Token: 0x0200ACDE RID: 44254
 		[NullableContext(0)]
 		private class ERoleComponent
 		{
-			// Token: 0x0403ADDB RID: 241115
+			// Token: 0x04035743 RID: 218947
 			public const int RoleSpine = 0;
 
-			// Token: 0x0403ADDC RID: 241116
+			// Token: 0x04035744 RID: 218948
 			public const int ChatItem = 1;
 
-			// Token: 0x0403ADDD RID: 241117
+			// Token: 0x04035745 RID: 218949
 			public const int ChatText = 2;
 
-			// Token: 0x0403ADDE RID: 241118
+			// Token: 0x04035746 RID: 218950
 			public const int RoleSpinAnother = 3;
 		}
 	}

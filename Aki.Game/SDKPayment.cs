@@ -1,50 +1,50 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E1C RID: 3612
+// Token: 0x020002D0 RID: 720
 [NullableContext(1)]
 [Nullable(0)]
 public class SDKPayment : ISDKPayment
 {
-	// Token: 0x1700061B RID: 1563
-	// (get) Token: 0x060056AA RID: 22186 RVA: 0x000FA0B2 File Offset: 0x000F82B2
-	// (set) Token: 0x060056AB RID: 22187 RVA: 0x000FA0BA File Offset: 0x000F82BA
+	// Token: 0x1700063F RID: 1599
+	// (get) Token: 0x06002A3A RID: 10810 RVA: 0x00101898 File Offset: 0x000FFA98
+	// (set) Token: 0x06002A3B RID: 10811 RVA: 0x001018A0 File Offset: 0x000FFAA0
 	public string product_id { get; set; }
 
-	// Token: 0x1700061C RID: 1564
-	// (get) Token: 0x060056AC RID: 22188 RVA: 0x000FA0C3 File Offset: 0x000F82C3
-	// (set) Token: 0x060056AD RID: 22189 RVA: 0x000FA0CB File Offset: 0x000F82CB
+	// Token: 0x17000640 RID: 1600
+	// (get) Token: 0x06002A3C RID: 10812 RVA: 0x001018A9 File Offset: 0x000FFAA9
+	// (set) Token: 0x06002A3D RID: 10813 RVA: 0x001018B1 File Offset: 0x000FFAB1
 	public string cpOrderId { get; set; }
 
-	// Token: 0x1700061D RID: 1565
-	// (get) Token: 0x060056AE RID: 22190 RVA: 0x000FA0D4 File Offset: 0x000F82D4
-	// (set) Token: 0x060056AF RID: 22191 RVA: 0x000FA0DC File Offset: 0x000F82DC
+	// Token: 0x17000641 RID: 1601
+	// (get) Token: 0x06002A3E RID: 10814 RVA: 0x001018BA File Offset: 0x000FFABA
+	// (set) Token: 0x06002A3F RID: 10815 RVA: 0x001018C2 File Offset: 0x000FFAC2
 	public string price { get; set; }
 
-	// Token: 0x1700061E RID: 1566
-	// (get) Token: 0x060056B0 RID: 22192 RVA: 0x000FA0E5 File Offset: 0x000F82E5
-	// (set) Token: 0x060056B1 RID: 22193 RVA: 0x000FA0ED File Offset: 0x000F82ED
+	// Token: 0x17000642 RID: 1602
+	// (get) Token: 0x06002A40 RID: 10816 RVA: 0x001018CB File Offset: 0x000FFACB
+	// (set) Token: 0x06002A41 RID: 10817 RVA: 0x001018D3 File Offset: 0x000FFAD3
 	public string goodsName { get; set; }
 
-	// Token: 0x1700061F RID: 1567
-	// (get) Token: 0x060056B2 RID: 22194 RVA: 0x000FA0F6 File Offset: 0x000F82F6
-	// (set) Token: 0x060056B3 RID: 22195 RVA: 0x000FA0FE File Offset: 0x000F82FE
+	// Token: 0x17000643 RID: 1603
+	// (get) Token: 0x06002A42 RID: 10818 RVA: 0x001018DC File Offset: 0x000FFADC
+	// (set) Token: 0x06002A43 RID: 10819 RVA: 0x001018E4 File Offset: 0x000FFAE4
 	public string goodsDesc { get; set; }
 
-	// Token: 0x17000620 RID: 1568
-	// (get) Token: 0x060056B4 RID: 22196 RVA: 0x000FA107 File Offset: 0x000F8307
-	// (set) Token: 0x060056B5 RID: 22197 RVA: 0x000FA10F File Offset: 0x000F830F
+	// Token: 0x17000644 RID: 1604
+	// (get) Token: 0x06002A44 RID: 10820 RVA: 0x001018ED File Offset: 0x000FFAED
+	// (set) Token: 0x06002A45 RID: 10821 RVA: 0x001018F5 File Offset: 0x000FFAF5
 	[Nullable(2)]
 	public string extraParams { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000621 RID: 1569
-	// (get) Token: 0x060056B6 RID: 22198 RVA: 0x000FA118 File Offset: 0x000F8318
-	// (set) Token: 0x060056B7 RID: 22199 RVA: 0x000FA120 File Offset: 0x000F8320
+	// Token: 0x17000645 RID: 1605
+	// (get) Token: 0x06002A46 RID: 10822 RVA: 0x001018FE File Offset: 0x000FFAFE
+	// (set) Token: 0x06002A47 RID: 10823 RVA: 0x00101906 File Offset: 0x000FFB06
 	[Nullable(2)]
 	public string callbackUrl { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000622 RID: 1570
-	// (get) Token: 0x060056B8 RID: 22200 RVA: 0x000FA129 File Offset: 0x000F8329
-	// (set) Token: 0x060056B9 RID: 22201 RVA: 0x000FA131 File Offset: 0x000F8331
+	// Token: 0x17000646 RID: 1606
+	// (get) Token: 0x06002A48 RID: 10824 RVA: 0x0010190F File Offset: 0x000FFB0F
+	// (set) Token: 0x06002A49 RID: 10825 RVA: 0x00101917 File Offset: 0x000FFB17
 	public string currency { get; set; }
 }

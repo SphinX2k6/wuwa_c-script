@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001EC RID: 492
+	// Token: 0x020001FE RID: 510
 	public class ConfigDangoMonopolyMapPointByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000B8B RID: 2955 RVA: 0x0009AEC4 File Offset: 0x000990C4
+		// Token: 0x06000BF7 RID: 3063 RVA: 0x000A0DFC File Offset: 0x0009EFFC
 		static ConfigDangoMonopolyMapPointByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoMonopolyMapPointByActivityId.CreateStaticDefaultValue), new Action(ConfigDangoMonopolyMapPointByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B8C RID: 2956 RVA: 0x0009AEE4 File Offset: 0x000990E4
+		// Token: 0x06000BF8 RID: 3064 RVA: 0x000A0E1C File Offset: 0x0009F01C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoMonopolyMapPointByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000B8D RID: 2957 RVA: 0x0009AF63 File Offset: 0x00099163
+		// Token: 0x06000BF9 RID: 3065 RVA: 0x000A0E9B File Offset: 0x0009F09B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoMonopolyMapPointByActivityId.LogPair = null;
 			ConfigDangoMonopolyMapPointByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06000B8E RID: 2958 RVA: 0x0009AF71 File Offset: 0x00099171
+		// Token: 0x06000BFA RID: 3066 RVA: 0x000A0EA9 File Offset: 0x0009F0A9
 		public static void Init()
 		{
 			ConfigDangoMonopolyMapPointByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigDangoMonopolyMapPointByActivityId.HandleId, "db_dangomonopoly.db", "select BinData from `DangoMonopolyMapPoint` where SeasonId=?");
 		}
 
-		// Token: 0x06000B8F RID: 2959 RVA: 0x0009AF8C File Offset: 0x0009918C
+		// Token: 0x06000BFB RID: 3067 RVA: 0x000A0EC4 File Offset: 0x0009F0C4
 		[NullableContext(2)]
 		public static IReadOnlyList<DangoMonopolyMapPoint> GetConfigList(int p0SeasonId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000D58 RID: 3416
+		// Token: 0x04000DD6 RID: 3542
 		private const string DB = "db_dangomonopoly.db";
 
-		// Token: 0x04000D59 RID: 3417
+		// Token: 0x04000DD7 RID: 3543
 		private const string FILE = "t.团子大富翁.xlsx";
 
-		// Token: 0x04000D5A RID: 3418
+		// Token: 0x04000DD8 RID: 3544
 		private const string TABLE = "DangoMonopolyMapPoint";
 
-		// Token: 0x04000D5B RID: 3419
+		// Token: 0x04000DD9 RID: 3545
 		private const string COMMAND = "select BinData from `DangoMonopolyMapPoint` where SeasonId=?";
 
-		// Token: 0x04000D5C RID: 3420
+		// Token: 0x04000DDA RID: 3546
 		private const string KEY_PREFIX = "DangoMonopolyMapPointByActivityId";
 
-		// Token: 0x04000D5D RID: 3421
+		// Token: 0x04000DDB RID: 3547
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000D5E RID: 3422
+		// Token: 0x04000DDC RID: 3548
 		private static int HandleId;
 	}
 }

@@ -6,51 +6,51 @@ using CSharpScript.Utils;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002DE7 RID: 11751
+// Token: 0x02002342 RID: 9026
 [NullableContext(2)]
 [Nullable(0)]
 public class BatchBulletPositionDotMatrix : IBatchBulletPositionShape
 {
-	// Token: 0x06018AAB RID: 101035 RVA: 0x006536F5 File Offset: 0x006518F5
+	// Token: 0x06016358 RID: 90968 RVA: 0x006797D5 File Offset: 0x006779D5
 	private BatchBulletPositionDotMatrix()
 	{
 	}
 
-	// Token: 0x06018AAC RID: 101036 RVA: 0x00653704 File Offset: 0x00651904
+	// Token: 0x06016359 RID: 90969 RVA: 0x006797E4 File Offset: 0x006779E4
 	public void OnBreak()
 	{
 	}
 
-	// Token: 0x06018AAD RID: 101037 RVA: 0x00653706 File Offset: 0x00651906
+	// Token: 0x0601635A RID: 90970 RVA: 0x006797E6 File Offset: 0x006779E6
 	public void OnEnd()
 	{
 	}
 
-	// Token: 0x06018AAE RID: 101038 RVA: 0x00653708 File Offset: 0x00651908
+	// Token: 0x0601635B RID: 90971 RVA: 0x006797E8 File Offset: 0x006779E8
 	public UniTask Load()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06018AAF RID: 101039 RVA: 0x0065370F File Offset: 0x0065190F
+	// Token: 0x0601635C RID: 90972 RVA: 0x006797EF File Offset: 0x006779EF
 	public float GetDelay()
 	{
 		return 0f;
 	}
 
-	// Token: 0x06018AB0 RID: 101040 RVA: 0x00653716 File Offset: 0x00651916
+	// Token: 0x0601635D RID: 90973 RVA: 0x006797F6 File Offset: 0x006779F6
 	public bool IsDestroyOnEnd()
 	{
 		return false;
 	}
 
-	// Token: 0x06018AB1 RID: 101041 RVA: 0x00653719 File Offset: 0x00651919
+	// Token: 0x0601635E RID: 90974 RVA: 0x006797F9 File Offset: 0x006779F9
 	public bool IsSummonChildBullet()
 	{
 		return false;
 	}
 
-	// Token: 0x06018AB2 RID: 101042 RVA: 0x0065371C File Offset: 0x0065191C
+	// Token: 0x0601635F RID: 90975 RVA: 0x006797FC File Offset: 0x006779FC
 	[NullableContext(1)]
 	public static BatchBulletPositionDotMatrix Create(CharacterCustomValueComponent customValueComp, SBatchBulletPositionPointMatrix config)
 	{
@@ -59,7 +59,7 @@ public class BatchBulletPositionDotMatrix : IBatchBulletPositionShape
 		return batchBulletPositionDotMatrix;
 	}
 
-	// Token: 0x06018AB3 RID: 101043 RVA: 0x0065372C File Offset: 0x0065192C
+	// Token: 0x06016360 RID: 90976 RVA: 0x0067980C File Offset: 0x00677A0C
 	[NullableContext(1)]
 	public void FromUeConfig(CharacterCustomValueComponent customValueComp, SBatchBulletPositionPointMatrix config)
 	{
@@ -79,7 +79,7 @@ public class BatchBulletPositionDotMatrix : IBatchBulletPositionShape
 		this.BeginRotator = config.BeginRotator;
 	}
 
-	// Token: 0x06018AB4 RID: 101044 RVA: 0x00653810 File Offset: 0x00651A10
+	// Token: 0x06016361 RID: 90977 RVA: 0x006798F0 File Offset: 0x00677AF0
 	public Transform ToTransform(int index)
 	{
 		if (this.PositionOffset.Count <= index)
@@ -106,16 +106,16 @@ public class BatchBulletPositionDotMatrix : IBatchBulletPositionShape
 		return transform;
 	}
 
-	// Token: 0x06018AB5 RID: 101045 RVA: 0x006538E6 File Offset: 0x00651AE6
+	// Token: 0x06016362 RID: 90978 RVA: 0x006799C6 File Offset: 0x00677BC6
 	public Vector ToTargetLocation(Transform transform)
 	{
 		return null;
 	}
 
-	// Token: 0x0400B7C8 RID: 47048
+	// Token: 0x0400BB4E RID: 47950
 	public Vector Center;
 
-	// Token: 0x0400B7C9 RID: 47049
+	// Token: 0x0400BB4F RID: 47951
 	[Nullable(new byte[]
 	{
 		2,
@@ -123,15 +123,15 @@ public class BatchBulletPositionDotMatrix : IBatchBulletPositionShape
 	})]
 	public List<Vector> PositionOffset;
 
-	// Token: 0x0400B7CA RID: 47050
+	// Token: 0x0400BB50 RID: 47952
 	public double PositionOffsetScale;
 
-	// Token: 0x0400B7CB RID: 47051
+	// Token: 0x0400BB51 RID: 47953
 	public Rotator Rotator;
 
-	// Token: 0x0400B7CC RID: 47052
+	// Token: 0x0400BB52 RID: 47954
 	public Rotator RotatorOffset;
 
-	// Token: 0x0400B7CD RID: 47053
+	// Token: 0x0400BB53 RID: 47955
 	public EBatchBulletBeginRotator BeginRotator = EBatchBulletBeginRotator.切线方向;
 }

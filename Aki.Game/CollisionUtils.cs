@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x020034A9 RID: 13481
+// Token: 0x02002A1D RID: 10781
 [NullableContext(1)]
 [Nullable(0)]
 public class CollisionUtils : Singleton
 {
-	// Token: 0x0601D597 RID: 120215 RVA: 0x0082E6CF File Offset: 0x0082C8CF
+	// Token: 0x0601B294 RID: 111252 RVA: 0x008558D7 File Offset: 0x00853AD7
 	public FCollisionResponseContainer GetCollisionResponseContainer()
 	{
 		if (this.CollisionResponseContainerRef == null)
@@ -20,7 +20,7 @@ public class CollisionUtils : Singleton
 		return this.CollisionResponseContainerRef;
 	}
 
-	// Token: 0x0601D598 RID: 120216 RVA: 0x0082E700 File Offset: 0x0082C900
+	// Token: 0x0601B295 RID: 111253 RVA: 0x00855908 File Offset: 0x00853B08
 	public void SetCollisionResponseToPawn(UCapsuleComponent capsule, EPawnChannel pawnChannel, ECollisionResponse newResponse)
 	{
 		List<ECollisionChannel> list = new List<ECollisionChannel>();
@@ -48,8 +48,8 @@ public class CollisionUtils : Singleton
 		}
 	}
 
-	// Token: 0x170028BA RID: 10426
-	// (get) Token: 0x0601D599 RID: 120217 RVA: 0x0082E7AC File Offset: 0x0082C9AC
+	// Token: 0x17002C52 RID: 11346
+	// (get) Token: 0x0601B296 RID: 111254 RVA: 0x008559B4 File Offset: 0x00853BB4
 	public static CollisionUtils Instance
 	{
 		get
@@ -63,12 +63,12 @@ public class CollisionUtils : Singleton
 		}
 	}
 
-	// Token: 0x0601D59A RID: 120218 RVA: 0x0082E7CF File Offset: 0x0082C9CF
+	// Token: 0x0601B297 RID: 111255 RVA: 0x008559D7 File Offset: 0x00853BD7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D59B RID: 120219 RVA: 0x0082E7D1 File Offset: 0x0082C9D1
+	// Token: 0x0601B298 RID: 111256 RVA: 0x008559D9 File Offset: 0x00853BD9
 	public static void ResetStaticDefaultValue()
 	{
 		CollisionUtils instance = CollisionUtils._instance;
@@ -79,17 +79,17 @@ public class CollisionUtils : Singleton
 		CollisionUtils._instance = null;
 	}
 
-	// Token: 0x0601D59C RID: 120220 RVA: 0x0082E7EA File Offset: 0x0082C9EA
+	// Token: 0x0601B299 RID: 111257 RVA: 0x008559F2 File Offset: 0x00853BF2
 	static CollisionUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CollisionUtils.CreateStaticDefaultValue), new Action(CollisionUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E74C RID: 59212
+	// Token: 0x0400EC00 RID: 60416
 	[Nullable(2)]
 	private FCollisionResponseContainer CollisionResponseContainerRef;
 
-	// Token: 0x0400E74D RID: 59213
+	// Token: 0x0400EC01 RID: 60417
 	[Nullable(2)]
 	private static CollisionUtils _instance;
 }

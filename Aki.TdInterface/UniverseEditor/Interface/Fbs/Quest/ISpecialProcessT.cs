@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200413D RID: 16701
+	// Token: 0x0200457E RID: 17790
 	public class ISpecialProcessT
 	{
-		// Token: 0x17007648 RID: 30280
-		// (get) Token: 0x060187F0 RID: 100336 RVA: 0x00387ECA File Offset: 0x003860CA
-		// (set) Token: 0x060187F1 RID: 100337 RVA: 0x00387ED2 File Offset: 0x003860D2
+		// Token: 0x17007C4E RID: 31822
+		// (get) Token: 0x06019E93 RID: 106131 RVA: 0x003B1ED2 File Offset: 0x003B00D2
+		// (set) Token: 0x06019E94 RID: 106132 RVA: 0x003B1EDA File Offset: 0x003B00DA
 		public ESpecialProcess Type { get; set; }
 
-		// Token: 0x060187F2 RID: 100338 RVA: 0x00387EDB File Offset: 0x003860DB
+		// Token: 0x06019E95 RID: 106133 RVA: 0x003B1EE3 File Offset: 0x003B00E3
 		public ISpecialProcessT()
 		{
 			this.Type = ESpecialProcess.LowMemorySceneSwitch;

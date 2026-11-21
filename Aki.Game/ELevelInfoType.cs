@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002B43 RID: 11075
+// Token: 0x020020BF RID: 8383
 internal enum ELevelInfoType
 {
-	// Token: 0x0400AB5F RID: 43871
+	// Token: 0x0400AF65 RID: 44901
 	Type1,
-	// Token: 0x0400AB60 RID: 43872
+	// Token: 0x0400AF66 RID: 44902
 	Type2
 }

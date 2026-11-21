@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023CF RID: 9167
+	// Token: 0x02002666 RID: 9830
 	public static class EPlayerMoveTagExtensions
 	{
-		// Token: 0x0600C7A2 RID: 51106 RVA: 0x001D3954 File Offset: 0x001D1B54
+		// Token: 0x0600D425 RID: 54309 RVA: 0x001ED100 File Offset: 0x001EB300
 		public static string ToEnumString(this EPlayerMoveTag value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7A3 RID: 51107 RVA: 0x001D39A8 File Offset: 0x001D1BA8
+		// Token: 0x0600D426 RID: 54310 RVA: 0x001ED154 File Offset: 0x001EB354
 		public static EPlayerMoveTag FromString(string name)
 		{
 			EPlayerMoveTag result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C7A4 RID: 51108 RVA: 0x001D39D4 File Offset: 0x001D1BD4
+		// Token: 0x0600D427 RID: 54311 RVA: 0x001ED180 File Offset: 0x001EB380
 		public static bool TryFromString(string name, out EPlayerMoveTag value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C7A5 RID: 51109 RVA: 0x001D3A3C File Offset: 0x001D1C3C
+		// Token: 0x0600D428 RID: 54312 RVA: 0x001ED1E8 File Offset: 0x001EB3E8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7A6 RID: 51110 RVA: 0x001D3A64 File Offset: 0x001D1C64
+		// Token: 0x0600D429 RID: 54313 RVA: 0x001ED210 File Offset: 0x001EB410
 		public static EPlayerMoveTag[] GetValues()
 		{
 			return new EPlayerMoveTag[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C7A7 RID: 51111 RVA: 0x001D3A77 File Offset: 0x001D1C77
+		// Token: 0x0600D42A RID: 54314 RVA: 0x001ED223 File Offset: 0x001EB423
 		public static string[] GetNames()
 		{
 			return new string[]

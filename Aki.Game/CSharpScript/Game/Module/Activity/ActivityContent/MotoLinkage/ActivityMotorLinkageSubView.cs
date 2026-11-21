@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 {
-	// Token: 0x0200644F RID: 25679
+	// Token: 0x020053CD RID: 21453
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityMotorLinkageSubView : ActivitySubViewBase
 	{
-		// Token: 0x17009484 RID: 38020
-		// (get) Token: 0x060408A3 RID: 264355 RVA: 0x00F9F447 File Offset: 0x00F9D647
+		// Token: 0x170067E6 RID: 26598
+		// (get) Token: 0x06035564 RID: 218468 RVA: 0x00EE63C3 File Offset: 0x00EE45C3
 		[Nullable(2)]
 		private ActivityMotorLinkageData MotorData
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x060408A4 RID: 264356 RVA: 0x00F9F454 File Offset: 0x00F9D654
+		// Token: 0x06035565 RID: 218469 RVA: 0x00EE63D0 File Offset: 0x00EE45D0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			};
 		}
 
-		// Token: 0x060408A5 RID: 264357 RVA: 0x00F9F51C File Offset: 0x00F9D71C
+		// Token: 0x06035566 RID: 218470 RVA: 0x00EE6498 File Offset: 0x00EE4698
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityMotorLinkageSubView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060408A6 RID: 264358 RVA: 0x00F9F55F File Offset: 0x00F9D75F
+		// Token: 0x06035567 RID: 218471 RVA: 0x00EE64DB File Offset: 0x00EE46DB
 		protected override void OnStart()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			motorData.ReadRedDot();
 		}
 
-		// Token: 0x060408A7 RID: 264359 RVA: 0x00F9F58C File Offset: 0x00F9D78C
+		// Token: 0x06035568 RID: 218472 RVA: 0x00EE6508 File Offset: 0x00EE4708
 		protected override void OnRefreshView()
 		{
 			foreach (MotorLinkageButton motorLinkageButton in this.ButtonList)
@@ -81,25 +81,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			this.RefreshTab();
 		}
 
-		// Token: 0x060408A8 RID: 264360 RVA: 0x00F9F5F0 File Offset: 0x00F9D7F0
+		// Token: 0x06035569 RID: 218473 RVA: 0x00EE656C File Offset: 0x00EE476C
 		protected override void OnBeforeDestroy()
 		{
 			this.CancelResetTimerHandle();
 		}
 
-		// Token: 0x060408A9 RID: 264361 RVA: 0x00F9F5F8 File Offset: 0x00F9D7F8
+		// Token: 0x0603556A RID: 218474 RVA: 0x00EE6574 File Offset: 0x00EE4774
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x060408AA RID: 264362 RVA: 0x00F9F616 File Offset: 0x00F9D816
+		// Token: 0x0603556B RID: 218475 RVA: 0x00EE6592 File Offset: 0x00EE4792
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x060408AB RID: 264363 RVA: 0x00F9F634 File Offset: 0x00F9D834
+		// Token: 0x0603556C RID: 218476 RVA: 0x00EE65B0 File Offset: 0x00EE47B0
 		private void OnRedDotRefresh(int activityId)
 		{
 			ActivityMotorLinkageData motorData = this.MotorData;
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			this.OnRefreshView();
 		}
 
-		// Token: 0x060408AC RID: 264364 RVA: 0x00F9F67C File Offset: 0x00F9D87C
+		// Token: 0x0603556D RID: 218477 RVA: 0x00EE65F8 File Offset: 0x00EE47F8
 		private void RefreshTab()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.MotorData.Id);
 		}
 
-		// Token: 0x060408AD RID: 264365 RVA: 0x00F9F69C File Offset: 0x00F9D89C
+		// Token: 0x0603556E RID: 218478 RVA: 0x00EE6618 File Offset: 0x00EE4818
 		public override void PlaySubViewSequence(string name, bool blockClick = false)
 		{
 			string name2 = name;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			base.PlaySubViewSequence(name2, blockClick);
 		}
 
-		// Token: 0x060408AE RID: 264366 RVA: 0x00F9F6E4 File Offset: 0x00F9D8E4
+		// Token: 0x0603556F RID: 218479 RVA: 0x00EE6660 File Offset: 0x00EE4860
 		private void RefreshProgress()
 		{
 			int allIpCurrentProgress = this.MotorData.GetAllIpCurrentProgress();
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			text.SetText(allIpCurrentProgress.ToString() + "/" + allIpTotalProgress.ToString(), true);
 		}
 
-		// Token: 0x060408AF RID: 264367 RVA: 0x00F9F734 File Offset: 0x00F9D934
+		// Token: 0x06035570 RID: 218480 RVA: 0x00EE66B0 File Offset: 0x00EE48B0
 		private void RefreshRedDot()
 		{
 			bool flag = this.MotorData.HasAnyRewardCanReceive();
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			commonInfoPanel.SetFunctionRedDotVisible(flag2 || flag);
 		}
 
-		// Token: 0x060408B0 RID: 264368 RVA: 0x00F9F76C File Offset: 0x00F9D96C
+		// Token: 0x06035571 RID: 218481 RVA: 0x00EE66E8 File Offset: 0x00EE48E8
 		private UniTask CreateButtonList()
 		{
 			ActivityMotorLinkageSubView.<CreateButtonList>d__22 <CreateButtonList>d__;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			return <CreateButtonList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060408B1 RID: 264369 RVA: 0x00F9F7AF File Offset: 0x00F9D9AF
+		// Token: 0x06035572 RID: 218482 RVA: 0x00EE672B File Offset: 0x00EE492B
 		private void OnClickDetail()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			});
 		}
 
-		// Token: 0x060408B2 RID: 264370 RVA: 0x00F9F7CD File Offset: 0x00F9D9CD
+		// Token: 0x06035573 RID: 218483 RVA: 0x00EE6749 File Offset: 0x00EE4949
 		private void OnButtonClick(int ipId)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorLinkageRewardView, ipId, null);
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			motorData.SetCanSubViewPlayShowView(true);
 		}
 
-		// Token: 0x060408B3 RID: 264371 RVA: 0x00F9F7FC File Offset: 0x00F9D9FC
+		// Token: 0x06035574 RID: 218484 RVA: 0x00EE6778 File Offset: 0x00EE4978
 		public override void OnCommonViewStateChange(bool show)
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x060408B4 RID: 264372 RVA: 0x00F9F854 File Offset: 0x00F9DA54
+		// Token: 0x06035575 RID: 218485 RVA: 0x00EE67D0 File Offset: 0x00EE49D0
 		private void OnButtonEnter(int ipId)
 		{
 			int num = this.IpToIndex(ipId);
@@ -278,21 +278,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x060408B5 RID: 264373 RVA: 0x00F9F995 File Offset: 0x00F9DB95
+		// Token: 0x06035576 RID: 218486 RVA: 0x00EE6911 File Offset: 0x00EE4B11
 		private void OnButtonExit()
 		{
 			this.CancelResetTimerHandle();
 			this.StartResetTimerHandle();
 		}
 
-		// Token: 0x060408B6 RID: 264374 RVA: 0x00F9F9A3 File Offset: 0x00F9DBA3
+		// Token: 0x06035577 RID: 218487 RVA: 0x00EE691F File Offset: 0x00EE4B1F
 		private void CancelTimerAndResetState()
 		{
 			this.CancelResetTimerHandle();
 			this.ResetState();
 		}
 
-		// Token: 0x060408B7 RID: 264375 RVA: 0x00F9F9B4 File Offset: 0x00F9DBB4
+		// Token: 0x06035578 RID: 218488 RVA: 0x00EE6930 File Offset: 0x00EE4B30
 		private void ResetState()
 		{
 			if (this.PlayerStateList == null)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x060408B8 RID: 264376 RVA: 0x00F9FA4C File Offset: 0x00F9DC4C
+		// Token: 0x06035579 RID: 218489 RVA: 0x00EE69C8 File Offset: 0x00EE4BC8
 		private void CancelResetTimerHandle()
 		{
 			if (this.ResetStateHandle != null)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		}
 
-		// Token: 0x060408B9 RID: 264377 RVA: 0x00F9FA6E File Offset: 0x00F9DC6E
+		// Token: 0x0603557A RID: 218490 RVA: 0x00EE69EA File Offset: 0x00EE4BEA
 		private void StartResetTimerHandle()
 		{
 			this.ResetStateHandle = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -345,13 +345,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x060408BA RID: 264378 RVA: 0x00F9FA9C File Offset: 0x00F9DC9C
+		// Token: 0x0603557B RID: 218491 RVA: 0x00EE6A18 File Offset: 0x00EE4C18
 		private int IpToIndex(int ipId)
 		{
 			return ActivityMotorLinkageController.Instance.ActivityData.GetSortedIpList().FindIndex((int id) => id == ipId);
 		}
 
-		// Token: 0x04021905 RID: 137477
+		// Token: 0x0401C234 RID: 115252
 		private string[][] roleAnimNameDefine = new string[][]
 		{
 			new string[]
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			}
 		};
 
-		// Token: 0x04021906 RID: 137478
+		// Token: 0x0401C235 RID: 115253
 		private int[] fxDefineList = new int[]
 		{
 			6,
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			5
 		};
 
-		// Token: 0x04021907 RID: 137479
+		// Token: 0x0401C236 RID: 115254
 		private int[] buttonDefineList = new int[]
 		{
 			2,
@@ -387,21 +387,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoLinkage
 			4
 		};
 
-		// Token: 0x04021908 RID: 137480
+		// Token: 0x0401C237 RID: 115255
 		private const int RESET_TIME_MS = 2000;
 
-		// Token: 0x04021909 RID: 137481
+		// Token: 0x0401C238 RID: 115256
 		[Nullable(2)]
 		private ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0402190A RID: 137482
+		// Token: 0x0401C239 RID: 115257
 		private readonly List<MotorLinkageButton> ButtonList = new List<MotorLinkageButton>();
 
-		// Token: 0x0402190B RID: 137483
+		// Token: 0x0401C23A RID: 115258
 		[Nullable(2)]
 		private bool[] PlayerStateList;
 
-		// Token: 0x0402190C RID: 137484
+		// Token: 0x0401C23B RID: 115259
 		[Nullable(2)]
 		private TimerHandle ResetStateHandle;
 	}

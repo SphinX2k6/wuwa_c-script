@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200179E RID: 6046
+// Token: 0x02000C57 RID: 3159
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynamicData>
 {
-	// Token: 0x0600B02C RID: 45100 RVA: 0x0027C308 File Offset: 0x0027A508
+	// Token: 0x06008414 RID: 33812 RVA: 0x002868A0 File Offset: 0x00284AA0
 	public UniTask Init(UUIItem actor)
 	{
 		ChatContentItem.<Init>d__5 <Init>d__;
@@ -25,7 +25,7 @@ public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynam
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B02D RID: 45101 RVA: 0x0027C354 File Offset: 0x0027A554
+	// Token: 0x06008415 RID: 33813 RVA: 0x002868EC File Offset: 0x00284AEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -41,7 +41,7 @@ public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynam
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B02E RID: 45102 RVA: 0x0027C3E0 File Offset: 0x0027A5E0
+	// Token: 0x06008416 RID: 33814 RVA: 0x00286978 File Offset: 0x00284B78
 	private UniTask InitChildItem()
 	{
 		ChatContentItem.<InitChildItem>d__7 <InitChildItem>d__;
@@ -52,7 +52,7 @@ public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynam
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B02F RID: 45103 RVA: 0x0027C424 File Offset: 0x0027A624
+	// Token: 0x06008417 RID: 33815 RVA: 0x002869BC File Offset: 0x00284BBC
 	public AUIBaseActor GetUsingItem(IChatContentDynamicData data)
 	{
 		switch (data.Type)
@@ -68,13 +68,13 @@ public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynam
 		}
 	}
 
-	// Token: 0x0600B030 RID: 45104 RVA: 0x0027C493 File Offset: 0x0027A693
+	// Token: 0x06008418 RID: 33816 RVA: 0x00286A2B File Offset: 0x00284C2B
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600B031 RID: 45105 RVA: 0x0027C49C File Offset: 0x0027A69C
+	// Token: 0x06008419 RID: 33817 RVA: 0x00286A34 File Offset: 0x00284C34
 	public void Update(IChatContentDynamicData data, int gridIndex)
 	{
 		this.Data = data;
@@ -145,7 +145,7 @@ public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynam
 		}
 	}
 
-	// Token: 0x0600B032 RID: 45106 RVA: 0x0027C57A File Offset: 0x0027A77A
+	// Token: 0x0600841A RID: 33818 RVA: 0x00286B12 File Offset: 0x00284D12
 	public UUIItem GetInteractItem()
 	{
 		if (this.Data.Type == EChatContentType.Left)
@@ -155,19 +155,19 @@ public class ChatContentItem : UiPanelBase, IDynamicScrollItem<IChatContentDynam
 		return this.RightItem.GetBtnItem();
 	}
 
-	// Token: 0x0400500D RID: 20493
+	// Token: 0x040050B7 RID: 20663
 	[Nullable(2)]
 	public IChatContentDynamicData Data;
 
-	// Token: 0x0400500E RID: 20494
+	// Token: 0x040050B8 RID: 20664
 	[Nullable(2)]
 	private ChatContent RightItem;
 
-	// Token: 0x0400500F RID: 20495
+	// Token: 0x040050B9 RID: 20665
 	[Nullable(2)]
 	private ChatContent LeftItem;
 
-	// Token: 0x04005010 RID: 20496
+	// Token: 0x040050BA RID: 20666
 	[Nullable(2)]
 	private ChatTeamTipsContent TipsItem;
 }

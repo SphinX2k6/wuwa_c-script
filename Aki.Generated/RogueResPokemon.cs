@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200100D RID: 4109
+	// Token: 0x020010F5 RID: 4341
 	public struct RogueResPokemon : IFlatbufferObject
 	{
-		// Token: 0x1700309E RID: 12446
-		// (get) Token: 0x0600C379 RID: 50041 RVA: 0x002EECEC File Offset: 0x002ECEEC
+		// Token: 0x17003119 RID: 12569
+		// (get) Token: 0x0600C9C3 RID: 51651 RVA: 0x0030ADC8 File Offset: 0x00308FC8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C37A RID: 50042 RVA: 0x002EECF9 File Offset: 0x002ECEF9
+		// Token: 0x0600C9C4 RID: 51652 RVA: 0x0030ADD5 File Offset: 0x00308FD5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C37B RID: 50043 RVA: 0x002EED00 File Offset: 0x002ECF00
+		// Token: 0x0600C9C5 RID: 51653 RVA: 0x0030ADDC File Offset: 0x00308FDC
 		public static RogueResPokemon GetRootAsRogueResPokemon(ByteBuffer _bb)
 		{
 			return RogueResPokemon.GetRootAsRogueResPokemon(_bb, default(RogueResPokemon));
 		}
 
-		// Token: 0x0600C37C RID: 50044 RVA: 0x002EED1C File Offset: 0x002ECF1C
+		// Token: 0x0600C9C6 RID: 51654 RVA: 0x0030ADF8 File Offset: 0x00308FF8
 		public static RogueResPokemon GetRootAsRogueResPokemon(ByteBuffer _bb, RogueResPokemon obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C37D RID: 50045 RVA: 0x002EED39 File Offset: 0x002ECF39
+		// Token: 0x0600C9C7 RID: 51655 RVA: 0x0030AE15 File Offset: 0x00309015
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C37E RID: 50046 RVA: 0x002EED48 File Offset: 0x002ECF48
+		// Token: 0x0600C9C8 RID: 51656 RVA: 0x0030AE24 File Offset: 0x00309024
 		public RogueResPokemon __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700309F RID: 12447
-		// (get) Token: 0x0600C37F RID: 50047 RVA: 0x002EED58 File Offset: 0x002ECF58
+		// Token: 0x1700311A RID: 12570
+		// (get) Token: 0x0600C9C9 RID: 51657 RVA: 0x0030AE34 File Offset: 0x00309034
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170030A0 RID: 12448
-		// (get) Token: 0x0600C380 RID: 50048 RVA: 0x002EED94 File Offset: 0x002ECF94
+		// Token: 0x1700311B RID: 12571
+		// (get) Token: 0x0600C9CA RID: 51658 RVA: 0x0030AE70 File Offset: 0x00309070
 		public int PhantomItem
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170030A1 RID: 12449
-		// (get) Token: 0x0600C381 RID: 50049 RVA: 0x002EEDD0 File Offset: 0x002ECFD0
+		// Token: 0x1700311C RID: 12572
+		// (get) Token: 0x0600C9CB RID: 51659 RVA: 0x0030AEAC File Offset: 0x003090AC
 		public int Quality
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170030A2 RID: 12450
-		// (get) Token: 0x0600C382 RID: 50050 RVA: 0x002EEE0C File Offset: 0x002ED00C
+		// Token: 0x1700311D RID: 12573
+		// (get) Token: 0x0600C9CC RID: 51660 RVA: 0x0030AEE8 File Offset: 0x003090E8
 		public string PokemonIcon
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C383 RID: 50051 RVA: 0x002EEE44 File Offset: 0x002ED044
+		// Token: 0x0600C9CD RID: 51661 RVA: 0x0030AF20 File Offset: 0x00309120
 		public Span<byte> GetPokemonIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C384 RID: 50052 RVA: 0x002EEE54 File Offset: 0x002ED054
+		// Token: 0x0600C9CE RID: 51662 RVA: 0x0030AF30 File Offset: 0x00309130
 		public byte[] GetPokemonIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170030A3 RID: 12451
-		// (get) Token: 0x0600C385 RID: 50053 RVA: 0x002EEE6C File Offset: 0x002ED06C
+		// Token: 0x1700311E RID: 12574
+		// (get) Token: 0x0600C9CF RID: 51663 RVA: 0x0030AF48 File Offset: 0x00309148
 		public string PokemonName
 		{
 			get
@@ -134,20 +134,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C386 RID: 50054 RVA: 0x002EEEA4 File Offset: 0x002ED0A4
+		// Token: 0x0600C9D0 RID: 51664 RVA: 0x0030AF80 File Offset: 0x00309180
 		public Span<byte> GetPokemonNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600C387 RID: 50055 RVA: 0x002EEEB4 File Offset: 0x002ED0B4
+		// Token: 0x0600C9D1 RID: 51665 RVA: 0x0030AF90 File Offset: 0x00309190
 		public byte[] GetPokemonNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170030A4 RID: 12452
-		// (get) Token: 0x0600C388 RID: 50056 RVA: 0x002EEECC File Offset: 0x002ED0CC
+		// Token: 0x1700311F RID: 12575
+		// (get) Token: 0x0600C9D2 RID: 51666 RVA: 0x0030AFA8 File Offset: 0x003091A8
 		public string PokemonSettleIcon
 		{
 			get
@@ -161,20 +161,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C389 RID: 50057 RVA: 0x002EEF04 File Offset: 0x002ED104
+		// Token: 0x0600C9D3 RID: 51667 RVA: 0x0030AFE0 File Offset: 0x003091E0
 		public Span<byte> GetPokemonSettleIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600C38A RID: 50058 RVA: 0x002EEF14 File Offset: 0x002ED114
+		// Token: 0x0600C9D4 RID: 51668 RVA: 0x0030AFF0 File Offset: 0x003091F0
 		public byte[] GetPokemonSettleIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170030A5 RID: 12453
-		// (get) Token: 0x0600C38B RID: 50059 RVA: 0x002EEF2C File Offset: 0x002ED12C
+		// Token: 0x17003120 RID: 12576
+		// (get) Token: 0x0600C9D5 RID: 51669 RVA: 0x0030B008 File Offset: 0x00309208
 		public string PokemonSkillDesc
 		{
 			get
@@ -188,19 +188,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C38C RID: 50060 RVA: 0x002EEF64 File Offset: 0x002ED164
+		// Token: 0x0600C9D6 RID: 51670 RVA: 0x0030B040 File Offset: 0x00309240
 		public Span<byte> GetPokemonSkillDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600C38D RID: 50061 RVA: 0x002EEF74 File Offset: 0x002ED174
+		// Token: 0x0600C9D7 RID: 51671 RVA: 0x0030B050 File Offset: 0x00309250
 		public byte[] GetPokemonSkillDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040050FA RID: 20730
+		// Token: 0x040056E2 RID: 22242
 		private Table __p;
 	}
 }

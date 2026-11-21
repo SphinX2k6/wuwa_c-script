@@ -9,7 +9,7 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001ED0 RID: 7888
+// Token: 0x02001392 RID: 5010
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreRewardData>
 {
-	// Token: 0x0600F281 RID: 62081 RVA: 0x003A7540 File Offset: 0x003A5740
+	// Token: 0x0600C6A0 RID: 50848 RVA: 0x003B3040 File Offset: 0x003B1240
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -36,7 +36,7 @@ public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreR
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F282 RID: 62082 RVA: 0x003A75EC File Offset: 0x003A57EC
+	// Token: 0x0600C6A1 RID: 50849 RVA: 0x003B30EC File Offset: 0x003B12EC
 	protected override void OnStart()
 	{
 		this.RewardItemGrid = new SmallItemGrid();
@@ -46,7 +46,7 @@ public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreR
 		this.RewardItemLevelSequence = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600F283 RID: 62083 RVA: 0x003A766D File Offset: 0x003A586D
+	// Token: 0x0600C6A2 RID: 50850 RVA: 0x003B316D File Offset: 0x003B136D
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer rewardItemLevelSequence = this.RewardItemLevelSequence;
@@ -57,7 +57,7 @@ public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreR
 		this.RewardItemLevelSequence = null;
 	}
 
-	// Token: 0x0600F284 RID: 62084 RVA: 0x003A7688 File Offset: 0x003A5888
+	// Token: 0x0600C6A3 RID: 50851 RVA: 0x003B3188 File Offset: 0x003B1388
 	public override void Refresh(HonamiStoryScoreRewardData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -83,7 +83,7 @@ public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreR
 		this.RefreshGrid();
 	}
 
-	// Token: 0x0600F285 RID: 62085 RVA: 0x003A7764 File Offset: 0x003A5964
+	// Token: 0x0600C6A4 RID: 50852 RVA: 0x003B3264 File Offset: 0x003B1464
 	private void RefreshGrid()
 	{
 		bool lockBlackVisible = this.Data.State == EHonamiStoryCollectState.Unfinished;
@@ -102,12 +102,12 @@ public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreR
 		this.RewardItemGrid.SetLockBlackVisible(lockBlackVisible);
 	}
 
-	// Token: 0x0600F286 RID: 62086 RVA: 0x003A782C File Offset: 0x003A5A2C
+	// Token: 0x0600C6A5 RID: 50853 RVA: 0x003B332C File Offset: 0x003B152C
 	private void OnClickedGrid(MediumItemGridExtendCallback _)
 	{
 		if (this.Data.State != EHonamiStoryCollectState.Finished)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null, false);
 			return;
 		}
 		Action onClickToGet = this.OnClickToGet;
@@ -118,35 +118,35 @@ public class HonamiStoryLimitTaskScoreItem : GridProxyAbstract<HonamiStoryScoreR
 		onClickToGet();
 	}
 
-	// Token: 0x04007057 RID: 28759
+	// Token: 0x04007138 RID: 28984
 	private HonamiStoryScoreRewardData Data;
 
-	// Token: 0x04007058 RID: 28760
+	// Token: 0x04007139 RID: 28985
 	[Nullable(2)]
 	private SmallItemGrid RewardItemGrid;
 
-	// Token: 0x04007059 RID: 28761
+	// Token: 0x0400713A RID: 28986
 	private TItem? RewardItem;
 
-	// Token: 0x0400705A RID: 28762
+	// Token: 0x0400713B RID: 28987
 	[Nullable(2)]
 	public Action OnClickToGet;
 
-	// Token: 0x0400705B RID: 28763
+	// Token: 0x0400713C RID: 28988
 	[Nullable(2)]
 	private LevelSequencePlayer RewardItemLevelSequence;
 
-	// Token: 0x020084B0 RID: 33968
+	// Token: 0x02007635 RID: 30261
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B304 RID: 176900
+		// Token: 0x04026628 RID: 157224
 		RewardItem,
-		// Token: 0x0402B305 RID: 176901
+		// Token: 0x04026629 RID: 157225
 		SpriteBg,
-		// Token: 0x0402B306 RID: 176902
+		// Token: 0x0402662A RID: 157226
 		PnlCanGet,
-		// Token: 0x0402B307 RID: 176903
+		// Token: 0x0402662B RID: 157227
 		TxtPointNum
 	}
 }

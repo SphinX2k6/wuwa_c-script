@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001457 RID: 5207
+// Token: 0x0200090B RID: 2315
 public enum EActivityRegressTaskSubViewType
 {
-	// Token: 0x0400413D RID: 16701
+	// Token: 0x040041D5 RID: 16853
 	MainTask,
-	// Token: 0x0400413E RID: 16702
+	// Token: 0x040041D6 RID: 16854
 	Cultivate,
-	// Token: 0x0400413F RID: 16703
+	// Token: 0x040041D7 RID: 16855
 	DoubleDrop
 }

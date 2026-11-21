@@ -7,13 +7,13 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 {
-	// Token: 0x020069B5 RID: 27061
+	// Token: 0x02005B11 RID: 23313
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class WriteLetterModel : ModelBase
 	{
-		// Token: 0x06043542 RID: 275778 RVA: 0x010731D8 File Offset: 0x010713D8
+		// Token: 0x0603957A RID: 234874 RVA: 0x01017620 File Offset: 0x01015820
 		public void SetLetterContentsFromProto([Nullable(new byte[]
 		{
 			2,
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			}
 		}
 
-		// Token: 0x06043543 RID: 275779 RVA: 0x01073288 File Offset: 0x01071488
+		// Token: 0x0603957B RID: 234875 RVA: 0x010176D0 File Offset: 0x010158D0
 		public void ResetLetterContent(int letterId)
 		{
 			this.LetterContents.Remove(letterId);
 		}
 
-		// Token: 0x06043544 RID: 275780 RVA: 0x01073298 File Offset: 0x01071498
+		// Token: 0x0603957C RID: 234876 RVA: 0x010176E0 File Offset: 0x010158E0
 		public bool RecordLetterContent(int letterId, ITalkItem talkItem)
 		{
 			string tidTalk = talkItem.TidTalk;
@@ -66,14 +66,14 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return true;
 		}
 
-		// Token: 0x06043545 RID: 275781 RVA: 0x010732D4 File Offset: 0x010714D4
+		// Token: 0x0603957D RID: 234877 RVA: 0x0101771C File Offset: 0x0101591C
 		public bool HasLetterContent(int letterId)
 		{
 			HashSet<string> hashSet;
 			return this.LetterContents.TryGetValue(letterId, out hashSet) && hashSet != null && hashSet.Count > 0;
 		}
 
-		// Token: 0x06043546 RID: 275782 RVA: 0x01073304 File Offset: 0x01071504
+		// Token: 0x0603957E RID: 234878 RVA: 0x0101774C File Offset: 0x0101594C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return null;
 		}
 
-		// Token: 0x06043547 RID: 275783 RVA: 0x01073324 File Offset: 0x01071524
+		// Token: 0x0603957F RID: 234879 RVA: 0x0101776C File Offset: 0x0101596C
 		[NullableContext(2)]
 		public MiniLetterContentPb GetLetterContentPb(int letterId)
 		{
@@ -107,14 +107,14 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return miniLetterContentPb;
 		}
 
-		// Token: 0x06043548 RID: 275784 RVA: 0x010733A4 File Offset: 0x010715A4
+		// Token: 0x06039580 RID: 234880 RVA: 0x010177EC File Offset: 0x010159EC
 		protected override bool OnClear()
 		{
 			this.LetterContents.Clear();
 			return true;
 		}
 
-		// Token: 0x06043549 RID: 275785 RVA: 0x010733B4 File Offset: 0x010715B4
+		// Token: 0x06039581 RID: 234881 RVA: 0x010177FC File Offset: 0x010159FC
 		private HashSet<string> GetOrCreateSet(int letterId)
 		{
 			HashSet<string> hashSet;
@@ -126,8 +126,8 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return hashSet;
 		}
 
-		// Token: 0x1700985A RID: 39002
-		// (get) Token: 0x0604354A RID: 275786 RVA: 0x010733E8 File Offset: 0x010715E8
+		// Token: 0x17006D3A RID: 27962
+		// (get) Token: 0x06039582 RID: 234882 RVA: 0x01017830 File Offset: 0x01015A30
 		public static WriteLetterModel Instance
 		{
 			get
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			}
 		}
 
-		// Token: 0x0604354B RID: 275787 RVA: 0x010733EF File Offset: 0x010715EF
+		// Token: 0x06039583 RID: 234883 RVA: 0x01017837 File Offset: 0x01015A37
 		public static WriteLetterModel GetOrCreateInstance()
 		{
 			if (WriteLetterModel._Instance == null)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return WriteLetterModel._Instance;
 		}
 
-		// Token: 0x0604354C RID: 275788 RVA: 0x01073403 File Offset: 0x01071603
+		// Token: 0x06039584 RID: 234884 RVA: 0x0101784B File Offset: 0x01015A4B
 		public static bool CreateInstance()
 		{
 			if (WriteLetterModel._Instance != null)
@@ -157,27 +157,27 @@ namespace CSharpScript.Game.LevelGamePlay.WriteLetter
 			return true;
 		}
 
-		// Token: 0x0604354D RID: 275789 RVA: 0x01073419 File Offset: 0x01071619
+		// Token: 0x06039585 RID: 234885 RVA: 0x01017861 File Offset: 0x01015A61
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604354E RID: 275790 RVA: 0x0107341B File Offset: 0x0107161B
+		// Token: 0x06039586 RID: 234886 RVA: 0x01017863 File Offset: 0x01015A63
 		public static void ResetStaticDefaultValue()
 		{
 			WriteLetterModel._Instance = null;
 		}
 
-		// Token: 0x0604354F RID: 275791 RVA: 0x01073423 File Offset: 0x01071623
+		// Token: 0x06039587 RID: 234887 RVA: 0x0101786B File Offset: 0x01015A6B
 		static WriteLetterModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WriteLetterModel.CreateStaticDefaultValue), new Action(WriteLetterModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040231FE RID: 143870
+		// Token: 0x0401E3ED RID: 123885
 		private readonly Dictionary<int, HashSet<string>> LetterContents = new Dictionary<int, HashSet<string>>();
 
-		// Token: 0x040231FF RID: 143871
+		// Token: 0x0401E3EE RID: 123886
 		[Nullable(2)]
 		private static WriteLetterModel _Instance;
 	}

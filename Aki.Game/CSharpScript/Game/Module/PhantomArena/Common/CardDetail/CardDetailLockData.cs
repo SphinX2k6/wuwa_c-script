@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005216 RID: 21014
+	// Token: 0x020041E6 RID: 16870
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardDetailLockData : ICardDetailLockData
 	{
-		// Token: 0x1700820F RID: 33295
-		// (get) Token: 0x06035BD6 RID: 220118 RVA: 0x00CB9060 File Offset: 0x00CB7260
-		// (set) Token: 0x06035BD7 RID: 220119 RVA: 0x00CB9068 File Offset: 0x00CB7268
+		// Token: 0x170055CF RID: 21967
+		// (get) Token: 0x0602AAD1 RID: 174801 RVA: 0x00C066A4 File Offset: 0x00C048A4
+		// (set) Token: 0x0602AAD2 RID: 174802 RVA: 0x00C066AC File Offset: 0x00C048AC
 		public string Desc { get; set; }
 
-		// Token: 0x17008210 RID: 33296
-		// (get) Token: 0x06035BD8 RID: 220120 RVA: 0x00CB9071 File Offset: 0x00CB7271
-		// (set) Token: 0x06035BD9 RID: 220121 RVA: 0x00CB9079 File Offset: 0x00CB7279
+		// Token: 0x170055D0 RID: 21968
+		// (get) Token: 0x0602AAD3 RID: 174803 RVA: 0x00C066B5 File Offset: 0x00C048B5
+		// (set) Token: 0x0602AAD4 RID: 174804 RVA: 0x00C066BD File Offset: 0x00C048BD
 		public int RemainRound { get; set; }
 	}
 }

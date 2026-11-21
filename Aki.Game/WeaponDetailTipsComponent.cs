@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002D16 RID: 11542
+// Token: 0x02002270 RID: 8816
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponDetailTipsComponent : UiPanelBase
 {
-	// Token: 0x06018407 RID: 99335 RVA: 0x0062B810 File Offset: 0x00629A10
+	// Token: 0x06015CA8 RID: 89256 RVA: 0x00651808 File Offset: 0x0064FA08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -65,7 +64,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06018408 RID: 99336 RVA: 0x0062BA8C File Offset: 0x00629C8C
+	// Token: 0x06015CA9 RID: 89257 RVA: 0x00651A84 File Offset: 0x0064FC84
 	private void LockToggleClick(EToggleState state)
 	{
 		bool bLock = state != EToggleState.ETT_Checked;
@@ -77,7 +76,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		InventoryController.Instance.ItemLockRequest(weaponIncId, bLock);
 	}
 
-	// Token: 0x06018409 RID: 99337 RVA: 0x0062BABC File Offset: 0x00629CBC
+	// Token: 0x06015CAA RID: 89258 RVA: 0x00651AB4 File Offset: 0x0064FCB4
 	protected override void OnStart()
 	{
 		this.ReplaceButtonItem = new ButtonItem(base.GetItem(11));
@@ -88,7 +87,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		this.EquipItem.CreateThenShowByActor(base.GetItem(10).GetOwner(), null);
 	}
 
-	// Token: 0x0601840A RID: 99338 RVA: 0x0062BB55 File Offset: 0x00629D55
+	// Token: 0x06015CAB RID: 89259 RVA: 0x00651B4D File Offset: 0x0064FD4D
 	public void SetCanShowEquip(bool canShowEquip = false)
 	{
 		this.CanShowEquip = canShowEquip;
@@ -103,13 +102,13 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601840B RID: 99339 RVA: 0x0062BB77 File Offset: 0x00629D77
+	// Token: 0x06015CAC RID: 89260 RVA: 0x00651B6F File Offset: 0x0064FD6F
 	public void SetCanShowLock(bool canShowLock)
 	{
 		this.CanShowLock = canShowLock;
 	}
 
-	// Token: 0x0601840C RID: 99340 RVA: 0x0062BB80 File Offset: 0x00629D80
+	// Token: 0x06015CAD RID: 89261 RVA: 0x00651B78 File Offset: 0x0064FD78
 	private void UpdateAttribute(WeaponConf weaponConfig)
 	{
 		WeaponAttributeParam[] array = new WeaponAttributeParam[]
@@ -144,7 +143,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		this.AttributeLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0601840D RID: 99341 RVA: 0x0062BC94 File Offset: 0x00629E94
+	// Token: 0x06015CAE RID: 89262 RVA: 0x00651C8C File Offset: 0x0064FE8C
 	private void UpdateStar(int breachLevel, int maxLevel)
 	{
 		IStarItemData[] array = new IStarItemData[maxLevel];
@@ -161,22 +160,22 @@ public class WeaponDetailTipsComponent : UiPanelBase
 			};
 			array[i] = starItemData;
 		}
-		this.StarLayout.RefreshByData(array.ToList<IStarItemData>(), null, false);
+		this.StarLayout.RefreshByData(array, null, false);
 	}
 
-	// Token: 0x0601840E RID: 99342 RVA: 0x0062BD04 File Offset: 0x00629F04
+	// Token: 0x06015CAF RID: 89263 RVA: 0x00651CF7 File Offset: 0x0064FEF7
 	private CSharpScript.Game.Module.RoleUi.StarItem InitStarItem()
 	{
 		return new CSharpScript.Game.Module.RoleUi.StarItem();
 	}
 
-	// Token: 0x0601840F RID: 99343 RVA: 0x0062BD0B File Offset: 0x00629F0B
+	// Token: 0x06015CB0 RID: 89264 RVA: 0x00651CFE File Offset: 0x0064FEFE
 	private AttributeItem InitAttributeItem()
 	{
 		return new AttributeItem();
 	}
 
-	// Token: 0x06018410 RID: 99344 RVA: 0x0062BD14 File Offset: 0x00629F14
+	// Token: 0x06015CB1 RID: 89265 RVA: 0x00651D08 File Offset: 0x0064FF08
 	private void UpdateWeaponIcon(int weaponType)
 	{
 		foreach (Mapping mapping in MappingConfig.Instance.GetWeaponConfList())
@@ -190,7 +189,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06018411 RID: 99345 RVA: 0x0062BDAC File Offset: 0x00629FAC
+	// Token: 0x06015CB2 RID: 89266 RVA: 0x00651DA0 File Offset: 0x0064FFA0
 	public void UpdateComponent(WeaponDataBase weaponData)
 	{
 		this.WeaponData = weaponData;
@@ -245,38 +244,38 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		this.SetReplaceCultureActive(false);
 	}
 
-	// Token: 0x06018412 RID: 99346 RVA: 0x0062C04C File Offset: 0x0062A24C
+	// Token: 0x06015CB3 RID: 89267 RVA: 0x00652040 File Offset: 0x00650240
 	public void UpdateWeaponLock(bool isLock)
 	{
 		EToggleState state = isLock ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked;
 		base.GetExtendToggle(3).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06018413 RID: 99347 RVA: 0x0062C072 File Offset: 0x0062A272
+	// Token: 0x06015CB4 RID: 89268 RVA: 0x00652066 File Offset: 0x00650266
 	public void UpdateWeaponBreachRedDot(bool state)
 	{
 		this.CultureButtonItem.SetRedDotVisible(state);
 	}
 
-	// Token: 0x06018414 RID: 99348 RVA: 0x0062C080 File Offset: 0x0062A280
+	// Token: 0x06015CB5 RID: 89269 RVA: 0x00652074 File Offset: 0x00650274
 	public void SetReplaceFunction(TWeaponDetailsTipsFunctionWithNumber replaceFunction)
 	{
 		this.ReplaceButtonItem.SetFunction(new Action<int>(replaceFunction.Invoke));
 	}
 
-	// Token: 0x06018415 RID: 99349 RVA: 0x0062C099 File Offset: 0x0062A299
+	// Token: 0x06015CB6 RID: 89270 RVA: 0x0065208D File Offset: 0x0065028D
 	public void SetReplaceEnableClick(bool bEnableClick)
 	{
 		this.ReplaceButtonItem.SetEnableClick(bEnableClick);
 	}
 
-	// Token: 0x06018416 RID: 99350 RVA: 0x0062C0A7 File Offset: 0x0062A2A7
+	// Token: 0x06015CB7 RID: 89271 RVA: 0x0065209B File Offset: 0x0065029B
 	public void SetCultureFunction(TWeaponDetailsTipsFunctionWithNumber cultureFunction)
 	{
 		this.CultureButtonItem.SetFunction(new Action<int>(cultureFunction.Invoke));
 	}
 
-	// Token: 0x06018417 RID: 99351 RVA: 0x0062C0C0 File Offset: 0x0062A2C0
+	// Token: 0x06015CB8 RID: 89272 RVA: 0x006520B4 File Offset: 0x006502B4
 	public void UpdateEquip(int roleId)
 	{
 		if (!this.CanShowEquip)
@@ -307,7 +306,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06018418 RID: 99352 RVA: 0x0062C1A4 File Offset: 0x0062A3A4
+	// Token: 0x06015CB9 RID: 89273 RVA: 0x00652198 File Offset: 0x00650398
 	public int GetWeaponIncId()
 	{
 		WeaponInstance weaponInstance = this.WeaponData as WeaponInstance;
@@ -318,20 +317,20 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		return 0;
 	}
 
-	// Token: 0x06018419 RID: 99353 RVA: 0x0062C1D0 File Offset: 0x0062A3D0
+	// Token: 0x06015CBA RID: 89274 RVA: 0x006521C4 File Offset: 0x006503C4
 	private void SetLockToggleActive(bool value)
 	{
 		base.GetExtendToggle(3).RootUIComp.Get().SetUIActive(value && this.CanShowLock);
 	}
 
-	// Token: 0x0601841A RID: 99354 RVA: 0x0062C202 File Offset: 0x0062A402
+	// Token: 0x06015CBB RID: 89275 RVA: 0x006521F6 File Offset: 0x006503F6
 	private void SetReplaceCultureActive(bool value)
 	{
 		this.ReplaceButtonItem.SetActive(value);
 		this.CultureButtonItem.SetActive(value);
 	}
 
-	// Token: 0x0601841B RID: 99355 RVA: 0x0062C21C File Offset: 0x0062A41C
+	// Token: 0x06015CBC RID: 89276 RVA: 0x00652210 File Offset: 0x00650410
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -367,29 +366,29 @@ public class WeaponDetailTipsComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0400B430 RID: 46128
+	// Token: 0x0400B7A5 RID: 47013
 	[Nullable(2)]
 	protected WeaponDataBase WeaponData;
 
-	// Token: 0x0400B431 RID: 46129
+	// Token: 0x0400B7A6 RID: 47014
 	[Nullable(2)]
 	protected ButtonItem ReplaceButtonItem;
 
-	// Token: 0x0400B432 RID: 46130
+	// Token: 0x0400B7A7 RID: 47015
 	[Nullable(2)]
 	protected ButtonItem CultureButtonItem;
 
-	// Token: 0x0400B433 RID: 46131
+	// Token: 0x0400B7A8 RID: 47016
 	protected bool CanShowEquip;
 
-	// Token: 0x0400B434 RID: 46132
+	// Token: 0x0400B7A9 RID: 47017
 	[Nullable(2)]
 	private CommonEquippedItem EquipItem;
 
-	// Token: 0x0400B435 RID: 46133
+	// Token: 0x0400B7AA RID: 47018
 	protected bool CanShowLock = true;
 
-	// Token: 0x0400B436 RID: 46134
+	// Token: 0x0400B7AB RID: 47019
 	[Nullable(new byte[]
 	{
 		2,
@@ -398,7 +397,7 @@ public class WeaponDetailTipsComponent : UiPanelBase
 	})]
 	protected GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData> StarLayout;
 
-	// Token: 0x0400B437 RID: 46135
+	// Token: 0x0400B7AC RID: 47020
 	[Nullable(new byte[]
 	{
 		2,
@@ -407,41 +406,41 @@ public class WeaponDetailTipsComponent : UiPanelBase
 	})]
 	protected GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-	// Token: 0x020092A8 RID: 37544
+	// Token: 0x020084D0 RID: 34000
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402F696 RID: 194198
+		// Token: 0x0402AD20 RID: 175392
 		WeaponSprite,
-		// Token: 0x0402F697 RID: 194199
+		// Token: 0x0402AD21 RID: 175393
 		WeaponNameText,
-		// Token: 0x0402F698 RID: 194200
+		// Token: 0x0402AD22 RID: 175394
 		LevelText,
-		// Token: 0x0402F699 RID: 194201
+		// Token: 0x0402AD23 RID: 175395
 		LockToggle,
-		// Token: 0x0402F69A RID: 194202
+		// Token: 0x0402AD24 RID: 175396
 		StarHorizontalLayout,
-		// Token: 0x0402F69B RID: 194203
+		// Token: 0x0402AD25 RID: 175397
 		AttributeLayout,
-		// Token: 0x0402F69C RID: 194204
+		// Token: 0x0402AD26 RID: 175398
 		ResonanceLevelText,
-		// Token: 0x0402F69D RID: 194205
+		// Token: 0x0402AD27 RID: 175399
 		SkillNameText,
-		// Token: 0x0402F69E RID: 194206
+		// Token: 0x0402AD28 RID: 175400
 		SkillDescText,
-		// Token: 0x0402F69F RID: 194207
+		// Token: 0x0402AD29 RID: 175401
 		BgDescText,
-		// Token: 0x0402F6A0 RID: 194208
+		// Token: 0x0402AD2A RID: 175402
 		EquipItem,
-		// Token: 0x0402F6A1 RID: 194209
+		// Token: 0x0402AD2B RID: 175403
 		ReplaceItem,
-		// Token: 0x0402F6A2 RID: 194210
+		// Token: 0x0402AD2C RID: 175404
 		CultureItem,
-		// Token: 0x0402F6A3 RID: 194211
+		// Token: 0x0402AD2D RID: 175405
 		WeaponSpriteBg,
-		// Token: 0x0402F6A4 RID: 194212
+		// Token: 0x0402AD2E RID: 175406
 		MaxItem,
-		// Token: 0x0402F6A5 RID: 194213
+		// Token: 0x0402AD2F RID: 175407
 		MaxLevelText
 	}
 }

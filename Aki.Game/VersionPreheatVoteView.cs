@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001578 RID: 5496
+// Token: 0x02000A30 RID: 2608
 [NullableContext(1)]
 [Nullable(0)]
 public class VersionPreheatVoteView : UiViewBase
 {
-	// Token: 0x06009D26 RID: 40230 RVA: 0x00220905 File Offset: 0x0021EB05
+	// Token: 0x06007104 RID: 28932 RVA: 0x0022A6B5 File Offset: 0x002288B5
 	public VersionPreheatVoteView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06009D27 RID: 40231 RVA: 0x00220910 File Offset: 0x0021EB10
+	// Token: 0x06007105 RID: 28933 RVA: 0x0022A6C0 File Offset: 0x002288C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -54,7 +54,7 @@ public class VersionPreheatVoteView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D28 RID: 40232 RVA: 0x00220AA0 File Offset: 0x0021ECA0
+	// Token: 0x06007106 RID: 28934 RVA: 0x0022A850 File Offset: 0x00228A50
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VersionPreheatVoteView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -65,46 +65,46 @@ public class VersionPreheatVoteView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009D29 RID: 40233 RVA: 0x00220AE3 File Offset: 0x0021ECE3
+	// Token: 0x06007107 RID: 28935 RVA: 0x0022A893 File Offset: 0x00228A93
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.VersionPreheatRewardResponse, new Action<int>(this.HandleVersionPreheatRewardResponse));
 		EventSystem.Instance.Add<bool>(EEventName.VersionPreheatOnClickVote, new Action<bool>(this.HandleVersionPreheatOnClickVote));
 	}
 
-	// Token: 0x06009D2A RID: 40234 RVA: 0x00220B1D File Offset: 0x0021ED1D
+	// Token: 0x06007108 RID: 28936 RVA: 0x0022A8CD File Offset: 0x00228ACD
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.VersionPreheatRewardResponse, new <>f__AnonymousDelegate2<int>(this.HandleVersionPreheatRewardResponse));
 		EventSystem.Instance.Remove(EEventName.VersionPreheatOnClickVote, new Action<bool>(this.HandleVersionPreheatOnClickVote));
 	}
 
-	// Token: 0x06009D2B RID: 40235 RVA: 0x00220B57 File Offset: 0x0021ED57
+	// Token: 0x06007109 RID: 28937 RVA: 0x0022A907 File Offset: 0x00228B07
 	private void HandleOnClickExit()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009D2C RID: 40236 RVA: 0x00220B60 File Offset: 0x0021ED60
+	// Token: 0x0600710A RID: 28938 RVA: 0x0022A910 File Offset: 0x00228B10
 	private void HandleVersionPreheatRewardResponse(int i = 0)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009D2D RID: 40237 RVA: 0x00220B69 File Offset: 0x0021ED69
+	// Token: 0x0600710B RID: 28939 RVA: 0x0022A919 File Offset: 0x00228B19
 	private void HandleVersionPreheatOnClickVote(bool isLeft)
 	{
 		this.LeftToggle.RefreshToggle(isLeft);
 		this.RightToggle.RefreshToggle(!isLeft);
 	}
 
-	// Token: 0x06009D2E RID: 40238 RVA: 0x00220B86 File Offset: 0x0021ED86
+	// Token: 0x0600710C RID: 28940 RVA: 0x0022A936 File Offset: 0x00228B36
 	private CommonItemSmallItemGrid GridProxyCreateFunction()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06009D2F RID: 40239 RVA: 0x00220B90 File Offset: 0x0021ED90
+	// Token: 0x0600710D RID: 28941 RVA: 0x0022A940 File Offset: 0x00228B40
 	public void RefreshExternal(VersionPreheatVoteData data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), data.TitleTextId, Array.Empty<object>());
@@ -131,44 +131,44 @@ public class VersionPreheatVoteView : UiViewBase
 		this.HandleVersionPreheatOnClickVote(data.IsLeftChosen.Value);
 	}
 
-	// Token: 0x040044F4 RID: 17652
+	// Token: 0x0400459A RID: 17818
 	private VersionPreheatToggleItem LeftToggle;
 
-	// Token: 0x040044F5 RID: 17653
+	// Token: 0x0400459B RID: 17819
 	private VersionPreheatToggleItem RightToggle;
 
-	// Token: 0x040044F6 RID: 17654
+	// Token: 0x0400459C RID: 17820
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-	// Token: 0x02007BA9 RID: 31657
+	// Token: 0x02006D34 RID: 27956
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04028A7B RID: 166523
+		// Token: 0x04023DB6 RID: 146870
 		public const int Crest1Item = 0;
 
-		// Token: 0x04028A7C RID: 166524
+		// Token: 0x04023DB7 RID: 146871
 		public const int Crest2Item = 1;
 
-		// Token: 0x04028A7D RID: 166525
+		// Token: 0x04023DB8 RID: 146872
 		public const int TitleText = 2;
 
-		// Token: 0x04028A7E RID: 166526
+		// Token: 0x04023DB9 RID: 146873
 		public const int ContentText = 3;
 
-		// Token: 0x04028A7F RID: 166527
+		// Token: 0x04023DBA RID: 146874
 		public const int LeftToggleItem = 4;
 
-		// Token: 0x04028A80 RID: 166528
+		// Token: 0x04023DBB RID: 146875
 		public const int RightToggleItem = 5;
 
-		// Token: 0x04028A81 RID: 166529
+		// Token: 0x04023DBC RID: 146876
 		public const int ItemLayout = 6;
 
-		// Token: 0x04028A82 RID: 166530
+		// Token: 0x04023DBD RID: 146877
 		public const int ItemTemplateItem = 7;
 
-		// Token: 0x04028A83 RID: 166531
+		// Token: 0x04023DBE RID: 146878
 		public const int ExitButton = 8;
 	}
 }

@@ -9,24 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CE1 RID: 23777
+	// Token: 0x02004CC3 RID: 19651
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleSkillDotIndicatorItem : UiPanelBase
 	{
-		// Token: 0x0603C2AD RID: 246445 RVA: 0x00E67553 File Offset: 0x00E65753
+		// Token: 0x06031203 RID: 201219 RVA: 0x00DB7B07 File Offset: 0x00DB5D07
 		private string GetResourceId()
 		{
 			return "UiItem_LuhesSkillPoint";
 		}
 
-		// Token: 0x0603C2AE RID: 246446 RVA: 0x00E6755A File Offset: 0x00E6575A
+		// Token: 0x06031204 RID: 201220 RVA: 0x00DB7B0E File Offset: 0x00DB5D0E
 		public BattleSkillDotIndicatorItem(UUIItem parentItem)
 		{
 			base.CreateByResourceIdAsync(this.GetResourceId(), parentItem, false).Forget();
 		}
 
-		// Token: 0x0603C2AF RID: 246447 RVA: 0x00E6758C File Offset: 0x00E6578C
+		// Token: 0x06031205 RID: 201221 RVA: 0x00DB7B40 File Offset: 0x00DB5D40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C2B0 RID: 246448 RVA: 0x00E67618 File Offset: 0x00E65818
+		// Token: 0x06031206 RID: 201222 RVA: 0x00DB7BCC File Offset: 0x00DB5DCC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleSkillDotIndicatorItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -53,15 +53,15 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C2B1 RID: 246449 RVA: 0x00E6765B File Offset: 0x00E6585B
+		// Token: 0x06031207 RID: 201223 RVA: 0x00DB7C0F File Offset: 0x00DB5E0F
 		protected override void OnStart()
 		{
 			this.IsEnable = true;
 			this.SetIconPath(this.IconPath, true);
 		}
 
-		// Token: 0x17008DFF RID: 36351
-		// (get) Token: 0x0603C2B2 RID: 246450 RVA: 0x00E67671 File Offset: 0x00E65871
+		// Token: 0x170061D1 RID: 25041
+		// (get) Token: 0x06031208 RID: 201224 RVA: 0x00DB7C25 File Offset: 0x00DB5E25
 		public bool IsComponentActive
 		{
 			get
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C2B3 RID: 246451 RVA: 0x00E67679 File Offset: 0x00E65879
+		// Token: 0x06031209 RID: 201225 RVA: 0x00DB7C2D File Offset: 0x00DB5E2D
 		public void SetComponentActive(bool bShow)
 		{
 			if (this.IsActive != bShow)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsActive = bShow;
 		}
 
-		// Token: 0x0603C2B4 RID: 246452 RVA: 0x00E67694 File Offset: 0x00E65894
+		// Token: 0x0603120A RID: 201226 RVA: 0x00DB7C48 File Offset: 0x00DB5E48
 		public void SetCount(int num, bool force = false)
 		{
 			if (this.CurrentCount == num && !force)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C2B5 RID: 246453 RVA: 0x00E676F0 File Offset: 0x00E658F0
+		// Token: 0x0603120B RID: 201227 RVA: 0x00DB7CA4 File Offset: 0x00DB5EA4
 		public void SetIconPath(string iconPath, bool force = false)
 		{
 			if (this.IconPath == iconPath && !force)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0603C2B6 RID: 246454 RVA: 0x00E677D8 File Offset: 0x00E659D8
+		// Token: 0x0603120C RID: 201228 RVA: 0x00DB7D8C File Offset: 0x00DB5F8C
 		protected override void OnBeforeDestroy()
 		{
 			this.IsEnable = false;
@@ -156,33 +156,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F5DE RID: 128478
+		// Token: 0x0401A097 RID: 106647
 		private readonly List<SkillButtonDotIndicator> DotViews = new List<SkillButtonDotIndicator>();
 
-		// Token: 0x0401F5DF RID: 128479
+		// Token: 0x0401A098 RID: 106648
 		private string IconPath = "";
 
-		// Token: 0x0401F5E0 RID: 128480
+		// Token: 0x0401A099 RID: 106649
 		private int LoadHandleId;
 
-		// Token: 0x0401F5E1 RID: 128481
+		// Token: 0x0401A09A RID: 106650
 		private bool IsEnable;
 
-		// Token: 0x0401F5E2 RID: 128482
+		// Token: 0x0401A09B RID: 106651
 		private bool IsActive;
 
-		// Token: 0x0401F5E3 RID: 128483
+		// Token: 0x0401A09C RID: 106652
 		private int CurrentCount;
 
-		// Token: 0x0200BF3B RID: 48955
+		// Token: 0x0200A941 RID: 43329
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039AE6 RID: 236262
+			// Token: 0x040344A8 RID: 214184
 			Dot1,
-			// Token: 0x04039AE7 RID: 236263
+			// Token: 0x040344A9 RID: 214185
 			Dot2,
-			// Token: 0x04039AE8 RID: 236264
+			// Token: 0x040344AA RID: 214186
 			Dot3
 		}
 	}

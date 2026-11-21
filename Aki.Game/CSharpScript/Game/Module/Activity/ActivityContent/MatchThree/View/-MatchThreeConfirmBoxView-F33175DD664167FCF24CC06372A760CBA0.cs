@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x0200648F RID: 25743
+	// Token: 0x0200540D RID: 21517
 	internal enum <MatchThreeConfirmBoxView>F33175DD664167FCF24CC06372A760CBA0D4AD5C594798B2D44CEEC629FAADAB7__EComponents
 	{
-		// Token: 0x04021A15 RID: 137749
+		// Token: 0x0401C346 RID: 115526
 		TxtTitle,
-		// Token: 0x04021A16 RID: 137750
+		// Token: 0x0401C347 RID: 115527
 		BtnClose,
-		// Token: 0x04021A17 RID: 137751
+		// Token: 0x0401C348 RID: 115528
 		TxtContent,
-		// Token: 0x04021A18 RID: 137752
+		// Token: 0x0401C349 RID: 115529
 		TogOption,
-		// Token: 0x04021A19 RID: 137753
+		// Token: 0x0401C34A RID: 115530
 		BtnLeft,
-		// Token: 0x04021A1A RID: 137754
+		// Token: 0x0401C34B RID: 115531
 		BtnRight,
-		// Token: 0x04021A1B RID: 137755
+		// Token: 0x0401C34C RID: 115532
 		TextToggle
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200717F RID: 29055
+	// Token: 0x0200794E RID: 31054
 	public class ISplineMoveConfigT
 	{
-		// Token: 0x1700D7D5 RID: 55253
-		// (get) Token: 0x0603383E RID: 211006 RVA: 0x006F0889 File Offset: 0x006EEA89
-		// (set) Token: 0x0603383F RID: 211007 RVA: 0x006F0891 File Offset: 0x006EEA91
+		// Token: 0x1700E3C7 RID: 58311
+		// (get) Token: 0x06036B18 RID: 224024 RVA: 0x00751819 File Offset: 0x0074FA19
+		// (set) Token: 0x06036B19 RID: 224025 RVA: 0x00751821 File Offset: 0x0074FA21
 		public ESplineMoveConfigType Type { get; set; }
 
-		// Token: 0x1700D7D6 RID: 55254
-		// (get) Token: 0x06033840 RID: 211008 RVA: 0x006F089A File Offset: 0x006EEA9A
-		// (set) Token: 0x06033841 RID: 211009 RVA: 0x006F08A2 File Offset: 0x006EEAA2
+		// Token: 0x1700E3C8 RID: 58312
+		// (get) Token: 0x06036B1A RID: 224026 RVA: 0x0075182A File Offset: 0x0074FA2A
+		// (set) Token: 0x06036B1B RID: 224027 RVA: 0x00751832 File Offset: 0x0074FA32
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x1700D7D7 RID: 55255
-		// (get) Token: 0x06033842 RID: 211010 RVA: 0x006F08AB File Offset: 0x006EEAAB
-		// (set) Token: 0x06033843 RID: 211011 RVA: 0x006F08B3 File Offset: 0x006EEAB3
+		// Token: 0x1700E3C9 RID: 58313
+		// (get) Token: 0x06036B1C RID: 224028 RVA: 0x0075183B File Offset: 0x0074FA3B
+		// (set) Token: 0x06036B1D RID: 224029 RVA: 0x00751843 File Offset: 0x0074FA43
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x06033844 RID: 211012 RVA: 0x006F08BC File Offset: 0x006EEABC
+		// Token: 0x06036B1E RID: 224030 RVA: 0x0075184C File Offset: 0x0074FA4C
 		public ISplineMoveConfigT()
 		{
 			this.Type = ESplineMoveConfigType.Open;

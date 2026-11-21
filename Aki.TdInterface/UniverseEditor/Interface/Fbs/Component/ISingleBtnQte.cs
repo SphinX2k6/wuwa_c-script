@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005914 RID: 22804
+	// Token: 0x02005F21 RID: 24353
 	public struct ISingleBtnQte : IFlatbufferObject
 	{
-		// Token: 0x1700AAEE RID: 43758
-		// (get) Token: 0x060268A6 RID: 157862 RVA: 0x0054F198 File Offset: 0x0054D398
+		// Token: 0x1700B422 RID: 46114
+		// (get) Token: 0x06028E10 RID: 167440 RVA: 0x00595E04 File Offset: 0x00594004
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060268A7 RID: 157863 RVA: 0x0054F1A5 File Offset: 0x0054D3A5
+		// Token: 0x06028E11 RID: 167441 RVA: 0x00595E11 File Offset: 0x00594011
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060268A8 RID: 157864 RVA: 0x0054F1AC File Offset: 0x0054D3AC
+		// Token: 0x06028E12 RID: 167442 RVA: 0x00595E18 File Offset: 0x00594018
 		public static ISingleBtnQte GetRootAsISingleBtnQte(ByteBuffer _bb)
 		{
 			return ISingleBtnQte.GetRootAsISingleBtnQte(_bb, default(ISingleBtnQte));
 		}
 
-		// Token: 0x060268A9 RID: 157865 RVA: 0x0054F1C8 File Offset: 0x0054D3C8
+		// Token: 0x06028E13 RID: 167443 RVA: 0x00595E34 File Offset: 0x00594034
 		public static ISingleBtnQte GetRootAsISingleBtnQte(ByteBuffer _bb, ISingleBtnQte obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060268AA RID: 157866 RVA: 0x0054F1E5 File Offset: 0x0054D3E5
+		// Token: 0x06028E14 RID: 167444 RVA: 0x00595E51 File Offset: 0x00594051
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060268AB RID: 157867 RVA: 0x0054F1F4 File Offset: 0x0054D3F4
+		// Token: 0x06028E15 RID: 167445 RVA: 0x00595E60 File Offset: 0x00594060
 		public ISingleBtnQte __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AAEF RID: 43759
-		// (get) Token: 0x060268AC RID: 157868 RVA: 0x0054F204 File Offset: 0x0054D404
+		// Token: 0x1700B423 RID: 46115
+		// (get) Token: 0x06028E16 RID: 167446 RVA: 0x00595E70 File Offset: 0x00594070
 		public EQteType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AAF0 RID: 43760
-		// (get) Token: 0x060268AD RID: 157869 RVA: 0x0054F240 File Offset: 0x0054D440
+		// Token: 0x1700B424 RID: 46116
+		// (get) Token: 0x06028E17 RID: 167447 RVA: 0x00595EAC File Offset: 0x005940AC
 		public int QteId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AAF1 RID: 43761
-		// (get) Token: 0x060268AE RID: 157870 RVA: 0x0054F27C File Offset: 0x0054D47C
+		// Token: 0x1700B425 RID: 46117
+		// (get) Token: 0x06028E18 RID: 167448 RVA: 0x00595EE8 File Offset: 0x005940E8
 		public IQteCallback? SuccessCallback
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AAF2 RID: 43762
-		// (get) Token: 0x060268AF RID: 157871 RVA: 0x0054F2DC File Offset: 0x0054D4DC
+		// Token: 0x1700B426 RID: 46118
+		// (get) Token: 0x06028E19 RID: 167449 RVA: 0x00595F48 File Offset: 0x00594148
 		public IQteCallback? FailureCallback
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060268B0 RID: 157872 RVA: 0x0054F33A File Offset: 0x0054D53A
+		// Token: 0x06028E1A RID: 167450 RVA: 0x00595FA6 File Offset: 0x005941A6
 		public static Offset<ISingleBtnQte> CreateISingleBtnQte(FlatBufferBuilder builder, EQteType Type = EQteType.SingleBtn, int QteId = 0, Offset<IQteCallback> SuccessCallbackOffset = default(Offset<IQteCallback>), Offset<IQteCallback> FailureCallbackOffset = default(Offset<IQteCallback>))
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISingleBtnQte.EndISingleBtnQte(builder);
 		}
 
-		// Token: 0x060268B1 RID: 157873 RVA: 0x0054F366 File Offset: 0x0054D566
+		// Token: 0x06028E1B RID: 167451 RVA: 0x00595FD2 File Offset: 0x005941D2
 		public static void StartISingleBtnQte(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060268B2 RID: 157874 RVA: 0x0054F36F File Offset: 0x0054D56F
+		// Token: 0x06028E1C RID: 167452 RVA: 0x00595FDB File Offset: 0x005941DB
 		public static void AddType(FlatBufferBuilder builder, EQteType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060268B3 RID: 157875 RVA: 0x0054F37A File Offset: 0x0054D57A
+		// Token: 0x06028E1D RID: 167453 RVA: 0x00595FE6 File Offset: 0x005941E6
 		public static void AddQteId(FlatBufferBuilder builder, int qteId)
 		{
 			builder.AddInt(1, qteId, 0);
 		}
 
-		// Token: 0x060268B4 RID: 157876 RVA: 0x0054F385 File Offset: 0x0054D585
+		// Token: 0x06028E1E RID: 167454 RVA: 0x00595FF1 File Offset: 0x005941F1
 		public static void AddSuccessCallback(FlatBufferBuilder builder, Offset<IQteCallback> successCallbackOffset)
 		{
 			builder.AddOffset(2, successCallbackOffset.Value, 0);
 		}
 
-		// Token: 0x060268B5 RID: 157877 RVA: 0x0054F395 File Offset: 0x0054D595
+		// Token: 0x06028E1F RID: 167455 RVA: 0x00596001 File Offset: 0x00594201
 		public static void AddFailureCallback(FlatBufferBuilder builder, Offset<IQteCallback> failureCallbackOffset)
 		{
 			builder.AddOffset(3, failureCallbackOffset.Value, 0);
 		}
 
-		// Token: 0x060268B6 RID: 157878 RVA: 0x0054F3A5 File Offset: 0x0054D5A5
+		// Token: 0x06028E20 RID: 167456 RVA: 0x00596011 File Offset: 0x00594211
 		public static Offset<ISingleBtnQte> EndISingleBtnQte(FlatBufferBuilder builder)
 		{
 			return new Offset<ISingleBtnQte>(builder.EndTable());
 		}
 
-		// Token: 0x060268B7 RID: 157879 RVA: 0x0054F3B4 File Offset: 0x0054D5B4
+		// Token: 0x06028E21 RID: 167457 RVA: 0x00596020 File Offset: 0x00594220
 		public ISingleBtnQteT UnPack()
 		{
 			ISingleBtnQteT singleBtnQteT = new ISingleBtnQteT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return singleBtnQteT;
 		}
 
-		// Token: 0x060268B8 RID: 157880 RVA: 0x0054F3D0 File Offset: 0x0054D5D0
+		// Token: 0x06028E22 RID: 167458 RVA: 0x0059603C File Offset: 0x0059423C
 		public void UnPackTo(ISingleBtnQteT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.FailureCallback = ((this.FailureCallback != null) ? this.FailureCallback.Value.UnPack() : null);
 		}
 
-		// Token: 0x060268B9 RID: 157881 RVA: 0x0054F454 File Offset: 0x0054D654
+		// Token: 0x06028E23 RID: 167459 RVA: 0x005960C0 File Offset: 0x005942C0
 		public static Offset<ISingleBtnQte> Pack(FlatBufferBuilder builder, ISingleBtnQteT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISingleBtnQte.CreateISingleBtnQte(builder, _o.Type, _o.QteId, successCallbackOffset, failureCallbackOffset);
 		}
 
-		// Token: 0x0400EEB7 RID: 61111
+		// Token: 0x0400FBAC RID: 64428
 		private Table __p;
 	}
 }

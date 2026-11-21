@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022D1 RID: 8913
+	// Token: 0x02002540 RID: 9536
 	public static class EChangeElementalBoxStateTargetTypeExtensions
 	{
-		// Token: 0x0600C32B RID: 49963 RVA: 0x001C855C File Offset: 0x001C675C
+		// Token: 0x0600CEFA RID: 52986 RVA: 0x001E0364 File Offset: 0x001DE564
 		public static string ToEnumString(this EChangeElementalBoxStateTargetType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C32C RID: 49964 RVA: 0x001C8594 File Offset: 0x001C6794
+		// Token: 0x0600CEFB RID: 52987 RVA: 0x001E039C File Offset: 0x001DE59C
 		public static EChangeElementalBoxStateTargetType FromString(string name)
 		{
 			EChangeElementalBoxStateTargetType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C32D RID: 49965 RVA: 0x001C85BD File Offset: 0x001C67BD
+		// Token: 0x0600CEFC RID: 52988 RVA: 0x001E03C5 File Offset: 0x001DE5C5
 		public static bool TryFromString(string name, out EChangeElementalBoxStateTargetType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C32E RID: 49966 RVA: 0x001C85F6 File Offset: 0x001C67F6
+		// Token: 0x0600CEFD RID: 52989 RVA: 0x001E03FE File Offset: 0x001DE5FE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C32F RID: 49967 RVA: 0x001C860E File Offset: 0x001C680E
+		// Token: 0x0600CEFE RID: 52990 RVA: 0x001E0416 File Offset: 0x001DE616
 		public static EChangeElementalBoxStateTargetType[] GetValues()
 		{
 			return new EChangeElementalBoxStateTargetType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C330 RID: 49968 RVA: 0x001C861A File Offset: 0x001C681A
+		// Token: 0x0600CEFF RID: 52991 RVA: 0x001E0422 File Offset: 0x001DE622
 		public static string[] GetNames()
 		{
 			return new string[]

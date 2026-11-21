@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AA0 RID: 2720
+	// Token: 0x02000B75 RID: 2933
 	public class ConfigWuWaGoLevelCsvByKey : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FD5 RID: 16341 RVA: 0x001C34C4 File Offset: 0x001C16C4
+		// Token: 0x060044D3 RID: 17619 RVA: 0x001E2858 File Offset: 0x001E0A58
 		static ConfigWuWaGoLevelCsvByKey()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWuWaGoLevelCsvByKey.CreateStaticDefaultValue), new Action(ConfigWuWaGoLevelCsvByKey.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FD6 RID: 16342 RVA: 0x001C34E4 File Offset: 0x001C16E4
+		// Token: 0x060044D4 RID: 17620 RVA: 0x001E2878 File Offset: 0x001E0A78
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWuWaGoLevelCsvByKey.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FD7 RID: 16343 RVA: 0x001C3563 File Offset: 0x001C1763
+		// Token: 0x060044D5 RID: 17621 RVA: 0x001E28F7 File Offset: 0x001E0AF7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWuWaGoLevelCsvByKey.LogPair = null;
 			ConfigWuWaGoLevelCsvByKey.HandleId = 0;
 		}
 
-		// Token: 0x06003FD8 RID: 16344 RVA: 0x001C3571 File Offset: 0x001C1771
+		// Token: 0x060044D6 RID: 17622 RVA: 0x001E2905 File Offset: 0x001E0B05
 		public static void Init()
 		{
 			ConfigWuWaGoLevelCsvByKey.HandleId = ConfigCommon.InitDataStatement(ConfigWuWaGoLevelCsvByKey.HandleId, "db_wuwagolevelcsv.db", "select BinData from `WuWaGoLevelCsv` where Key=?");
 		}
 
-		// Token: 0x06003FD9 RID: 16345 RVA: 0x001C358C File Offset: 0x001C178C
+		// Token: 0x060044D7 RID: 17623 RVA: 0x001E2920 File Offset: 0x001E0B20
 		public static WuWaGoLevelCsv? GetConfig(string p0Key, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWuWaGoLevelCsvByKey.HandleId, ConfigWuWaGoLevelCsvByKey.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new WuWaGoLevelCsv?(rootAsWuWaGoLevelCsv);
 		}
 
-		// Token: 0x04004A46 RID: 19014
+		// Token: 0x04005019 RID: 20505
 		private const string DB = "db_wuwagolevelcsv.db";
 
-		// Token: 0x04004A47 RID: 19015
+		// Token: 0x0400501A RID: 20506
 		private const string FILE = "k.可视化编辑/c.Csv/m.鸣潮GO关卡配置/*.csv*";
 
-		// Token: 0x04004A48 RID: 19016
+		// Token: 0x0400501B RID: 20507
 		private const string TABLE = "WuWaGoLevelCsv";
 
-		// Token: 0x04004A49 RID: 19017
+		// Token: 0x0400501C RID: 20508
 		private const string COMMAND = "select BinData from `WuWaGoLevelCsv` where Key=?";
 
-		// Token: 0x04004A4A RID: 19018
+		// Token: 0x0400501D RID: 20509
 		private const string KEY_PREFIX = "WuWaGoLevelCsvByKey";
 
-		// Token: 0x04004A4B RID: 19019
+		// Token: 0x0400501E RID: 20510
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A4C RID: 19020
+		// Token: 0x0400501F RID: 20511
 		private static int HandleId;
 	}
 }

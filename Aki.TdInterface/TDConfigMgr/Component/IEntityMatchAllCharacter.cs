@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000325 RID: 805
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200036C RID: 876
 	public class IEntityMatchAllCharacter : IEntityMatchConfig
 	{
-		// Token: 0x06000FD8 RID: 4056 RVA: 0x000379F4 File Offset: 0x00035BF4
+		// Token: 0x0600110A RID: 4362 RVA: 0x0003A9C0 File Offset: 0x00038BC0
 		private IEntityMatchAllCharacter_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FD9 RID: 4057 RVA: 0x00037A2C File Offset: 0x00035C2C
+		// Token: 0x0600110B RID: 4363 RVA: 0x0003A9F8 File Offset: 0x00038BF8
 		public static IEntityMatchAllCharacter Create([Nullable(2)] IEntityMatchAllCharacter instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FDA RID: 4058 RVA: 0x00037A3F File Offset: 0x00035C3F
+		// Token: 0x0600110C RID: 4364 RVA: 0x0003AA0B File Offset: 0x00038C0B
 		public static IEntityMatchAllCharacter CreateFromSetValue([Nullable(2)] IEntityMatchAllCharacter_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FDB RID: 4059 RVA: 0x00037A52 File Offset: 0x00035C52
+		// Token: 0x0600110D RID: 4365 RVA: 0x0003AA1E File Offset: 0x00038C1E
 		public new IEntityMatchAllCharacter_SetValue ToSetValue()
 		{
 			return new IEntityMatchAllCharacter_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000491 RID: 1169
-		// (get) Token: 0x06000FDC RID: 4060 RVA: 0x00037A65 File Offset: 0x00035C65
-		// (set) Token: 0x06000FDD RID: 4061 RVA: 0x00037A90 File Offset: 0x00035C90
+		// Token: 0x170004DF RID: 1247
+		// (get) Token: 0x0600110E RID: 4366 RVA: 0x0003AA31 File Offset: 0x00038C31
+		// (set) Token: 0x0600110F RID: 4367 RVA: 0x0003AA5C File Offset: 0x00038C5C
 		public override EEntityMatchType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D78 RID: 3448
+		// Token: 0x04000E63 RID: 3683
 		[Nullable(2)]
 		protected new IEntityMatchAllCharacter FbInstance;
 
-		// Token: 0x04000D79 RID: 3449
+		// Token: 0x04000E64 RID: 3684
 		[Nullable(2)]
 		protected new IEntityMatchAllCharacter_SetValue PocoInterface;
 	}

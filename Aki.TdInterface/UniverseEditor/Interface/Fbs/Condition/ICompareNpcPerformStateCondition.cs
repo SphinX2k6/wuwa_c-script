@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BB9 RID: 19385
+	// Token: 0x020050A3 RID: 20643
 	public struct ICompareNpcPerformStateCondition : IFlatbufferObject
 	{
-		// Token: 0x17008CBC RID: 36028
-		// (get) Token: 0x0601E938 RID: 125240 RVA: 0x00446CA9 File Offset: 0x00444EA9
+		// Token: 0x170093D5 RID: 37845
+		// (get) Token: 0x060204E4 RID: 132324 RVA: 0x0047980D File Offset: 0x00477A0D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E939 RID: 125241 RVA: 0x00446CB6 File Offset: 0x00444EB6
+		// Token: 0x060204E5 RID: 132325 RVA: 0x0047981A File Offset: 0x00477A1A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E93A RID: 125242 RVA: 0x00446CC0 File Offset: 0x00444EC0
+		// Token: 0x060204E6 RID: 132326 RVA: 0x00479824 File Offset: 0x00477A24
 		public static ICompareNpcPerformStateCondition GetRootAsICompareNpcPerformStateCondition(ByteBuffer _bb)
 		{
 			return ICompareNpcPerformStateCondition.GetRootAsICompareNpcPerformStateCondition(_bb, default(ICompareNpcPerformStateCondition));
 		}
 
-		// Token: 0x0601E93B RID: 125243 RVA: 0x00446CDC File Offset: 0x00444EDC
+		// Token: 0x060204E7 RID: 132327 RVA: 0x00479840 File Offset: 0x00477A40
 		public static ICompareNpcPerformStateCondition GetRootAsICompareNpcPerformStateCondition(ByteBuffer _bb, ICompareNpcPerformStateCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E93C RID: 125244 RVA: 0x00446CF9 File Offset: 0x00444EF9
+		// Token: 0x060204E8 RID: 132328 RVA: 0x0047985D File Offset: 0x00477A5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E93D RID: 125245 RVA: 0x00446D08 File Offset: 0x00444F08
+		// Token: 0x060204E9 RID: 132329 RVA: 0x0047986C File Offset: 0x00477A6C
 		public ICompareNpcPerformStateCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008CBD RID: 36029
-		// (get) Token: 0x0601E93E RID: 125246 RVA: 0x00446D18 File Offset: 0x00444F18
+		// Token: 0x170093D6 RID: 37846
+		// (get) Token: 0x060204EA RID: 132330 RVA: 0x0047987C File Offset: 0x00477A7C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CBE RID: 36030
-		// (get) Token: 0x0601E93F RID: 125247 RVA: 0x00446D54 File Offset: 0x00444F54
+		// Token: 0x170093D7 RID: 37847
+		// (get) Token: 0x060204EB RID: 132331 RVA: 0x004798B8 File Offset: 0x00477AB8
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CBF RID: 36031
-		// (get) Token: 0x0601E940 RID: 125248 RVA: 0x00446D90 File Offset: 0x00444F90
+		// Token: 0x170093D8 RID: 37848
+		// (get) Token: 0x060204EC RID: 132332 RVA: 0x004798F4 File Offset: 0x00477AF4
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CC0 RID: 36032
-		// (get) Token: 0x0601E941 RID: 125249 RVA: 0x00446DCC File Offset: 0x00444FCC
+		// Token: 0x170093D9 RID: 37849
+		// (get) Token: 0x060204ED RID: 132333 RVA: 0x00479930 File Offset: 0x00477B30
 		public string State
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E942 RID: 125250 RVA: 0x00446E04 File Offset: 0x00445004
+		// Token: 0x060204EE RID: 132334 RVA: 0x00479968 File Offset: 0x00477B68
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601E943 RID: 125251 RVA: 0x00446E14 File Offset: 0x00445014
+		// Token: 0x060204EF RID: 132335 RVA: 0x00479978 File Offset: 0x00477B78
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x0601E944 RID: 125252 RVA: 0x00446E23 File Offset: 0x00445023
+		// Token: 0x060204F0 RID: 132336 RVA: 0x00479987 File Offset: 0x00477B87
 		public static Offset<ICompareNpcPerformStateCondition> CreateICompareNpcPerformStateCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int EntityId = 0, ECompare Compare = ECompare.Eq, StringOffset StateOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareNpcPerformStateCondition.EndICompareNpcPerformStateCondition(builder);
 		}
 
-		// Token: 0x0601E945 RID: 125253 RVA: 0x00446E4F File Offset: 0x0044504F
+		// Token: 0x060204F1 RID: 132337 RVA: 0x004799B3 File Offset: 0x00477BB3
 		public static void StartICompareNpcPerformStateCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E946 RID: 125254 RVA: 0x00446E58 File Offset: 0x00445058
+		// Token: 0x060204F2 RID: 132338 RVA: 0x004799BC File Offset: 0x00477BBC
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E947 RID: 125255 RVA: 0x00446E63 File Offset: 0x00445063
+		// Token: 0x060204F3 RID: 132339 RVA: 0x004799C7 File Offset: 0x00477BC7
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0601E948 RID: 125256 RVA: 0x00446E6E File Offset: 0x0044506E
+		// Token: 0x060204F4 RID: 132340 RVA: 0x004799D2 File Offset: 0x00477BD2
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E949 RID: 125257 RVA: 0x00446E79 File Offset: 0x00445079
+		// Token: 0x060204F5 RID: 132341 RVA: 0x004799DD File Offset: 0x00477BDD
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(3, stateOffset.Value, 0);
 		}
 
-		// Token: 0x0601E94A RID: 125258 RVA: 0x00446E89 File Offset: 0x00445089
+		// Token: 0x060204F6 RID: 132342 RVA: 0x004799ED File Offset: 0x00477BED
 		public static Offset<ICompareNpcPerformStateCondition> EndICompareNpcPerformStateCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareNpcPerformStateCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E94B RID: 125259 RVA: 0x00446E98 File Offset: 0x00445098
+		// Token: 0x060204F7 RID: 132343 RVA: 0x004799FC File Offset: 0x00477BFC
 		public ICompareNpcPerformStateConditionT UnPack()
 		{
 			ICompareNpcPerformStateConditionT compareNpcPerformStateConditionT = new ICompareNpcPerformStateConditionT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareNpcPerformStateConditionT;
 		}
 
-		// Token: 0x0601E94C RID: 125260 RVA: 0x00446EB3 File Offset: 0x004450B3
+		// Token: 0x060204F8 RID: 132344 RVA: 0x00479A17 File Offset: 0x00477C17
 		public void UnPackTo(ICompareNpcPerformStateConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.State = this.State;
 		}
 
-		// Token: 0x0601E94D RID: 125261 RVA: 0x00446EE8 File Offset: 0x004450E8
+		// Token: 0x060204F9 RID: 132345 RVA: 0x00479A4C File Offset: 0x00477C4C
 		public static Offset<ICompareNpcPerformStateCondition> Pack(FlatBufferBuilder builder, ICompareNpcPerformStateConditionT _o)
 		{
 			if (_o == null)
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareNpcPerformStateCondition.CreateICompareNpcPerformStateCondition(builder, _o.Type, _o.EntityId, _o.Compare, stateOffset);
 		}
 
-		// Token: 0x0400D49D RID: 54429
+		// Token: 0x0400DFA2 RID: 57250
 		private Table __p;
 	}
 }

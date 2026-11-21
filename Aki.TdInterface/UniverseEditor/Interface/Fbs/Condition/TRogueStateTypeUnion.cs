@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D55 RID: 19797
+	// Token: 0x02005251 RID: 21073
 	public class TRogueStateTypeUnion
 	{
-		// Token: 0x17008F53 RID: 36691
-		// (get) Token: 0x0601F694 RID: 128660 RVA: 0x0046067A File Offset: 0x0045E87A
-		// (set) Token: 0x0601F695 RID: 128661 RVA: 0x00460682 File Offset: 0x0045E882
+		// Token: 0x1700968C RID: 38540
+		// (get) Token: 0x060212DD RID: 135901 RVA: 0x0049464E File Offset: 0x0049284E
+		// (set) Token: 0x060212DE RID: 135902 RVA: 0x00494656 File Offset: 0x00492856
 		public TRogueStateType Type { get; set; }
 
-		// Token: 0x17008F54 RID: 36692
-		// (get) Token: 0x0601F696 RID: 128662 RVA: 0x0046068B File Offset: 0x0045E88B
-		// (set) Token: 0x0601F697 RID: 128663 RVA: 0x00460693 File Offset: 0x0045E893
+		// Token: 0x1700968D RID: 38541
+		// (get) Token: 0x060212DF RID: 135903 RVA: 0x0049465F File Offset: 0x0049285F
+		// (set) Token: 0x060212E0 RID: 135904 RVA: 0x00494667 File Offset: 0x00492867
 		public object Value { get; set; }
 
-		// Token: 0x0601F698 RID: 128664 RVA: 0x0046069C File Offset: 0x0045E89C
+		// Token: 0x060212E1 RID: 135905 RVA: 0x00494670 File Offset: 0x00492870
 		public TRogueStateTypeUnion()
 		{
 			this.Type = TRogueStateType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F699 RID: 128665 RVA: 0x004606B2 File Offset: 0x0045E8B2
+		// Token: 0x060212E2 RID: 135906 RVA: 0x00494686 File Offset: 0x00492886
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F69A RID: 128666 RVA: 0x004606C4 File Offset: 0x0045E8C4
+		// Token: 0x060212E3 RID: 135907 RVA: 0x00494698 File Offset: 0x00492898
 		public ICheckRogueMiracleCreationT AsICheckRogueMiracleCreation()
 		{
 			return this.As<ICheckRogueMiracleCreationT>();
 		}
 
-		// Token: 0x0601F69B RID: 128667 RVA: 0x004606CC File Offset: 0x0045E8CC
+		// Token: 0x060212E4 RID: 135908 RVA: 0x004946A0 File Offset: 0x004928A0
 		public static TRogueStateTypeUnion FromICheckRogueMiracleCreation(ICheckRogueMiracleCreationT _icheckroguemiraclecreation)
 		{
 			return new TRogueStateTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F69C RID: 128668 RVA: 0x004606E1 File Offset: 0x0045E8E1
+		// Token: 0x060212E5 RID: 135909 RVA: 0x004946B5 File Offset: 0x004928B5
 		public ICheckRogueTalentT AsICheckRogueTalent()
 		{
 			return this.As<ICheckRogueTalentT>();
 		}
 
-		// Token: 0x0601F69D RID: 128669 RVA: 0x004606E9 File Offset: 0x0045E8E9
+		// Token: 0x060212E6 RID: 135910 RVA: 0x004946BD File Offset: 0x004928BD
 		public static TRogueStateTypeUnion FromICheckRogueTalent(ICheckRogueTalentT _icheckroguetalent)
 		{
 			return new TRogueStateTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F69E RID: 128670 RVA: 0x00460700 File Offset: 0x0045E900
+		// Token: 0x060212E7 RID: 135911 RVA: 0x004946D4 File Offset: 0x004928D4
 		public static int Pack(FlatBufferBuilder builder, TRogueStateTypeUnion _o)
 		{
 			TRogueStateType type = _o.Type;

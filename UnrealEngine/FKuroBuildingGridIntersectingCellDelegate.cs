@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020016B3 RID: 5811
+	// Token: 0x0200031F RID: 799
 	public sealed class FKuroBuildingGridIntersectingCellDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06015130 RID: 86320 RVA: 0x001EF874 File Offset: 0x001EDA74
+		// Token: 0x06005428 RID: 21544 RVA: 0x00075B84 File Offset: 0x00073D84
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroBuildingGridIntersectingCellDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06015131 RID: 86321 RVA: 0x001EF880 File Offset: 0x001EDA80
+		// Token: 0x06005429 RID: 21545 RVA: 0x00075B90 File Offset: 0x00073D90
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroBuildingGridIntersectingCellDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroBuildingGridIntersectingCellDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06015132 RID: 86322 RVA: 0x001EF8A3 File Offset: 0x001EDAA3
+		// Token: 0x0600542A RID: 21546 RVA: 0x00075BB3 File Offset: 0x00073DB3
 		public FKuroBuildingGridIntersectingCellDelegate()
 		{
 		}
 
-		// Token: 0x06015133 RID: 86323 RVA: 0x001EF8AB File Offset: 0x001EDAAB
+		// Token: 0x0600542B RID: 21547 RVA: 0x00075BBB File Offset: 0x00073DBB
 		[NullableContext(2)]
 		public FKuroBuildingGridIntersectingCellDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06015134 RID: 86324 RVA: 0x001EF8B5 File Offset: 0x001EDAB5
+		// Token: 0x0600542C RID: 21548 RVA: 0x00075BC5 File Offset: 0x00073DC5
 		public FKuroBuildingGridIntersectingCellDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06015135 RID: 86325 RVA: 0x001EF8C0 File Offset: 0x001EDAC0
+		// Token: 0x0600542D RID: 21549 RVA: 0x00075BD0 File Offset: 0x00073DD0
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string, FKuroBuildingGridCellVector, int>) ?? ((Action<string, FKuroBuildingGridCellVector, int>)Delegate.CreateDelegate(typeof(Action<string, FKuroBuildingGridCellVector, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06015136 RID: 86326 RVA: 0x001EF8F2 File Offset: 0x001EDAF2
+		// Token: 0x0600542E RID: 21550 RVA: 0x00075C02 File Offset: 0x00073E02
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string, FKuroBuildingGridCellVector, int> Callback)
 		{
 			if (FKuroBuildingGridIntersectingCellDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroBuildingGridIntersectingCellDelegate.RegisterId);
 		}
 
-		// Token: 0x06015137 RID: 86327 RVA: 0x001EF92C File Offset: 0x001EDB2C
+		// Token: 0x0600542F RID: 21551 RVA: 0x00075C3C File Offset: 0x00073E3C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string GridGuid, in FKuroBuildingGridCellVector Coords, int CellIndex)
 		{
 			FKuroBuildingGridIntersectingCellDelegate.__FKuroBuildingGridIntersectingCellDelegate_DelegateParams* ptr = stackalloc FKuroBuildingGridIntersectingCellDelegate.__FKuroBuildingGridIntersectingCellDelegate_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FKuroBuildingGridIntersectingCellDelegate.__FKuroBuildingGridIntersectingCellDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKuroBuildingGridIntersectingCellDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06015138 RID: 86328 RVA: 0x001EF994 File Offset: 0x001EDB94
+		// Token: 0x06005430 RID: 21552 RVA: 0x00075CA4 File Offset: 0x00073EA4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string, FKuroBuildingGridCellVector, int> action = target as Action<string, FKuroBuildingGridCellVector, int>;
@@ -95,39 +92,39 @@ namespace UnrealEngine
 			action(arg, ((FKuroBuildingGridIntersectingCellDelegate.__FKuroBuildingGridIntersectingCellDelegate_DelegateParams*)__Parameters)->Coords, ((FKuroBuildingGridIntersectingCellDelegate.__FKuroBuildingGridIntersectingCellDelegate_DelegateParams*)__Parameters)->CellIndex);
 		}
 
-		// Token: 0x0400B783 RID: 46979
+		// Token: 0x0400225F RID: 8799
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400B784 RID: 46980
+		// Token: 0x04002260 RID: 8800
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroBuildingGridSystem.KuroBuildingGridIntersectingCellDelegate__DelegateSignature";
 
-		// Token: 0x0400B785 RID: 46981
+		// Token: 0x04002261 RID: 8801
 		private static int RegisterId;
 
-		// Token: 0x02002EE7 RID: 12007
+		// Token: 0x02000A20 RID: 2592
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FKuroBuildingGridIntersectingCellDelegate_DelegateParams
+		private ref struct __FKuroBuildingGridIntersectingCellDelegate_DelegateParams
 		{
-			// Token: 0x04016A08 RID: 92680
+			// Token: 0x040059E3 RID: 23011
 			[FieldOffset(0)]
 			public FString GridGuid;
 
-			// Token: 0x04016A09 RID: 92681
+			// Token: 0x040059E4 RID: 23012
 			[FieldOffset(16)]
 			public FKuroBuildingGridCellVector Coords;
 
-			// Token: 0x04016A0A RID: 92682
+			// Token: 0x040059E5 RID: 23013
 			[FieldOffset(24)]
 			public int CellIndex;
 		}
 
-		// Token: 0x02002EE8 RID: 12008
+		// Token: 0x02000A21 RID: 2593
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016A0B RID: 92683
+			// Token: 0x040059E6 RID: 23014
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

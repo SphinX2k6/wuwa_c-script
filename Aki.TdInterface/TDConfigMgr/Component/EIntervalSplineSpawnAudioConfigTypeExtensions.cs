@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000980 RID: 2432
+	// Token: 0x02000A33 RID: 2611
 	public static class EIntervalSplineSpawnAudioConfigTypeExtensions
 	{
-		// Token: 0x06003671 RID: 13937 RVA: 0x0008DE38 File Offset: 0x0008C038
+		// Token: 0x060039F8 RID: 14840 RVA: 0x00095DA4 File Offset: 0x00093FA4
 		public static string ToEnumString(this EIntervalSplineSpawnAudioConfigType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003672 RID: 13938 RVA: 0x0008DE60 File Offset: 0x0008C060
+		// Token: 0x060039F9 RID: 14841 RVA: 0x00095DCC File Offset: 0x00093FCC
 		public static EIntervalSplineSpawnAudioConfigType FromString(string name)
 		{
 			EIntervalSplineSpawnAudioConfigType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003673 RID: 13939 RVA: 0x0008DE89 File Offset: 0x0008C089
+		// Token: 0x060039FA RID: 14842 RVA: 0x00095DF5 File Offset: 0x00093FF5
 		public static bool TryFromString(string name, out EIntervalSplineSpawnAudioConfigType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003674 RID: 13940 RVA: 0x0008DEAE File Offset: 0x0008C0AE
+		// Token: 0x060039FB RID: 14843 RVA: 0x00095E1A File Offset: 0x0009401A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003675 RID: 13941 RVA: 0x0008DEBE File Offset: 0x0008C0BE
+		// Token: 0x060039FC RID: 14844 RVA: 0x00095E2A File Offset: 0x0009402A
 		public static EIntervalSplineSpawnAudioConfigType[] GetValues()
 		{
 			return new EIntervalSplineSpawnAudioConfigType[1];
 		}
 
-		// Token: 0x06003676 RID: 13942 RVA: 0x0008DEC6 File Offset: 0x0008C0C6
+		// Token: 0x060039FD RID: 14845 RVA: 0x00095E32 File Offset: 0x00094032
 		public static string[] GetNames()
 		{
 			return new string[]

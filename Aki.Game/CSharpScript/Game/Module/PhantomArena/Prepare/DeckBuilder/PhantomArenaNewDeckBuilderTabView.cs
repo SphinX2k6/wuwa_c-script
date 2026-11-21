@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,14 +14,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x020051AB RID: 20907
+	// Token: 0x0200417B RID: 16763
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaNewDeckBuilderTabView : PhantomArenaChildViewBase
 	{
-		// Token: 0x170081A7 RID: 33191
-		// (get) Token: 0x06035847 RID: 219207 RVA: 0x00CAC8D6 File Offset: 0x00CAAAD6
-		// (set) Token: 0x06035848 RID: 219208 RVA: 0x00CAC8E3 File Offset: 0x00CAAAE3
+		// Token: 0x17005567 RID: 21863
+		// (get) Token: 0x0602A742 RID: 173890 RVA: 0x00BF9F26 File Offset: 0x00BF8126
+		// (set) Token: 0x0602A743 RID: 173891 RVA: 0x00BF9F33 File Offset: 0x00BF8133
 		public new IPhantomArenaDeckBuilderTabViewModel ViewModel
 		{
 			get
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035849 RID: 219209 RVA: 0x00CAC8EC File Offset: 0x00CAAAEC
+		// Token: 0x0602A744 RID: 173892 RVA: 0x00BF9F3C File Offset: 0x00BF813C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603584A RID: 219210 RVA: 0x00CACB50 File Offset: 0x00CAAD50
+		// Token: 0x0602A745 RID: 173893 RVA: 0x00BFA1A0 File Offset: 0x00BF83A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaNewDeckBuilderTabView.<OnBeforeStartAsync>d__27 <OnBeforeStartAsync>d__;
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603584B RID: 219211 RVA: 0x00CACB94 File Offset: 0x00CAAD94
+		// Token: 0x0602A746 RID: 173894 RVA: 0x00BFA1E4 File Offset: 0x00BF83E4
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnPhantomArenaCardUnlock, new Action<int>(this.OnPhantomArenaCardUnlock));
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			EventSystem.Instance.Add(EEventName.GamepadTriggerCardInfo, new Action<UUIItem>(this.OnGamepadTriggerCardInfo));
 		}
 
-		// Token: 0x0603584C RID: 219212 RVA: 0x00CACBF8 File Offset: 0x00CAADF8
+		// Token: 0x0602A747 RID: 173895 RVA: 0x00BFA248 File Offset: 0x00BF8448
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaCardUnlock, new Action<int>(this.OnPhantomArenaCardUnlock));
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			EventSystem.Instance.Remove(EEventName.GamepadTriggerCardInfo, new Action<UUIItem>(this.OnGamepadTriggerCardInfo));
 		}
 
-		// Token: 0x0603584D RID: 219213 RVA: 0x00CACC5C File Offset: 0x00CAAE5C
+		// Token: 0x0602A748 RID: 173896 RVA: 0x00BFA2AC File Offset: 0x00BF84AC
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			PhantomArenaNewDeckBuilderTabView.<OnBeforeShowAsyncImplement>d__30 <OnBeforeShowAsyncImplement>d__;
@@ -109,7 +108,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603584E RID: 219214 RVA: 0x00CACCA0 File Offset: 0x00CAAEA0
+		// Token: 0x0602A749 RID: 173897 RVA: 0x00BFA2F0 File Offset: 0x00BF84F0
 		protected override UniTask OnPlayingShowSequenceAsync()
 		{
 			PhantomArenaNewDeckBuilderTabView.<OnPlayingShowSequenceAsync>d__31 <OnPlayingShowSequenceAsync>d__;
@@ -120,7 +119,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnPlayingShowSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603584F RID: 219215 RVA: 0x00CACCE4 File Offset: 0x00CAAEE4
+		// Token: 0x0602A74A RID: 173898 RVA: 0x00BFA334 File Offset: 0x00BF8534
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			PhantomArenaNewDeckBuilderTabView.<OnPlayingStartSequenceAsync>d__32 <OnPlayingStartSequenceAsync>d__;
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035850 RID: 219216 RVA: 0x00CACD27 File Offset: 0x00CAAF27
+		// Token: 0x0602A74B RID: 173899 RVA: 0x00BFA377 File Offset: 0x00BF8577
 		protected override void OnBeforeHide()
 		{
 			this.ResetMainViewOverrideCloseFunc();
@@ -148,7 +147,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			showLockedSwitchItem2.SetOnStateChangedCallback(null);
 		}
 
-		// Token: 0x06035851 RID: 219217 RVA: 0x00CACD54 File Offset: 0x00CAAF54
+		// Token: 0x0602A74C RID: 173900 RVA: 0x00BFA3A4 File Offset: 0x00BF85A4
 		private List<ICardTabItemData> CreateElementTabItemDataList()
 		{
 			List<ECardTabType> list = new List<ECardTabType>();
@@ -168,7 +167,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return list2;
 		}
 
-		// Token: 0x06035852 RID: 219218 RVA: 0x00CACDE8 File Offset: 0x00CAAFE8
+		// Token: 0x0602A74D RID: 173901 RVA: 0x00BFA438 File Offset: 0x00BF8638
 		private ICardTabItemData CreateElementTabItemData(ECardTabType tabType)
 		{
 			ICardTabItemData result;
@@ -203,7 +202,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return result;
 		}
 
-		// Token: 0x06035853 RID: 219219 RVA: 0x00CACEA4 File Offset: 0x00CAB0A4
+		// Token: 0x0602A74E RID: 173902 RVA: 0x00BFA4F4 File Offset: 0x00BF86F4
 		private void UpdateLibraryCardDataList()
 		{
 			this.LibraryCardDataList.Clear();
@@ -246,7 +245,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.LibraryCardDataList.Sort((DeckBuilderCardItemData a, DeckBuilderCardItemData b) => PhantomArenaDefine.deckBuilderCardItemDataSortFunc(a, b));
 		}
 
-		// Token: 0x06035854 RID: 219220 RVA: 0x00CAD098 File Offset: 0x00CAB298
+		// Token: 0x0602A74F RID: 173903 RVA: 0x00BFA6E8 File Offset: 0x00BF88E8
 		private void UpdateAllPageCardDataList()
 		{
 			CardFilterContext filterContext = new CardFilterContext
@@ -262,15 +261,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.CurPage = this.MinPage;
 		}
 
-		// Token: 0x06035855 RID: 219221 RVA: 0x00CAD138 File Offset: 0x00CAB338
+		// Token: 0x0602A750 RID: 173904 RVA: 0x00BFA788 File Offset: 0x00BF8988
 		private void UpdateCurPageCardDataList()
 		{
-			int num = (this.CurPage - 1) * this.MaxCardCountPerPage;
-			int num2 = this.CurPage * this.MaxCardCountPerPage;
-			this.CurPageCardDataList = this.AllPageCardDataList.Skip(num).Take(num2 - num).ToList<DeckBuilderCardItemData>();
+			int skip = (this.CurPage - 1) * this.MaxCardCountPerPage;
+			this.CurPageCardDataList = NoLinq.SkipTakeToList<DeckBuilderCardItemData>(this.AllPageCardDataList, skip, this.MaxCardCountPerPage);
 		}
 
-		// Token: 0x06035856 RID: 219222 RVA: 0x00CAD184 File Offset: 0x00CAB384
+		// Token: 0x0602A751 RID: 173905 RVA: 0x00BFA7C0 File Offset: 0x00BF89C0
 		private void RefreshPageText()
 		{
 			UUIText text = base.GetText(6);
@@ -285,7 +283,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06035857 RID: 219223 RVA: 0x00CAD1DC File Offset: 0x00CAB3DC
+		// Token: 0x0602A752 RID: 173906 RVA: 0x00BFA818 File Offset: 0x00BF8A18
 		private void RefreshCardLayout()
 		{
 			bool uiactive = this.CurPageCardDataList.Count == 0;
@@ -302,7 +300,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06035858 RID: 219224 RVA: 0x00CAD224 File Offset: 0x00CAB424
+		// Token: 0x0602A753 RID: 173907 RVA: 0x00BFA860 File Offset: 0x00BF8A60
 		private UniTask RefreshCardLayoutAsync(bool playGridAnim)
 		{
 			PhantomArenaNewDeckBuilderTabView.<RefreshCardLayoutAsync>d__41 <RefreshCardLayoutAsync>d__;
@@ -314,7 +312,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <RefreshCardLayoutAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035859 RID: 219225 RVA: 0x00CAD270 File Offset: 0x00CAB470
+		// Token: 0x0602A754 RID: 173908 RVA: 0x00BFA8AC File Offset: 0x00BF8AAC
 		private void RefreshAllCardLeftCount()
 		{
 			foreach (DeckBuilderCardItemData deckBuilderCardItemData in this.LibraryCardDataList)
@@ -332,7 +330,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603585A RID: 219226 RVA: 0x00CAD304 File Offset: 0x00CAB504
+		// Token: 0x0602A755 RID: 173909 RVA: 0x00BFA940 File Offset: 0x00BF8B40
 		private void UpdateStateContextInCardData(DeckBuilderCardItemData data)
 		{
 			data.IsAllInDeck = (data.LeftCount == 0);
@@ -348,7 +346,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			data.Disabled = (this.DeckInfo.CheckCanAddCard(context) > EAddCardResult.Success);
 		}
 
-		// Token: 0x0603585B RID: 219227 RVA: 0x00CAD380 File Offset: 0x00CAB580
+		// Token: 0x0602A756 RID: 173910 RVA: 0x00BFA9BC File Offset: 0x00BF8BBC
 		private void RefreshAllCardAvailable()
 		{
 			foreach (DeckBuilderCardItemData deckBuilderCardItemData in this.LibraryCardDataList)
@@ -364,7 +362,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603585C RID: 219228 RVA: 0x00CAD400 File Offset: 0x00CAB600
+		// Token: 0x0602A757 RID: 173911 RVA: 0x00BFAA3C File Offset: 0x00BF8C3C
 		private void RefreshDeckSlotsPanel(bool needRequestCheckCardSkillUnlock = true)
 		{
 			DeckBuilderDeckSlotsPanelData data = new DeckBuilderDeckSlotsPanelData
@@ -401,7 +399,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			deckSlotsPanel.RefreshByData(data);
 		}
 
-		// Token: 0x0603585D RID: 219229 RVA: 0x00CAD570 File Offset: 0x00CAB770
+		// Token: 0x0602A758 RID: 173912 RVA: 0x00BFABAC File Offset: 0x00BF8DAC
 		public void RefreshElementTab()
 		{
 			List<ECardElement> elementList = this.DeckInfo.GetElementList();
@@ -427,7 +425,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			elementTabScrollView.RefreshAllGridProxies();
 		}
 
-		// Token: 0x0603585E RID: 219230 RVA: 0x00CAD650 File Offset: 0x00CAB850
+		// Token: 0x0602A759 RID: 173913 RVA: 0x00BFAC8C File Offset: 0x00BF8E8C
 		public void RefreshFullTip()
 		{
 			ECardTabType tabType = this.TabDataList[this.CurSelectedElementTabIndex].TabType;
@@ -444,7 +442,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(14), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603585F RID: 219231 RVA: 0x00CAD6E0 File Offset: 0x00CAB8E0
+		// Token: 0x0602A75A RID: 173914 RVA: 0x00BFAD1C File Offset: 0x00BF8F1C
 		private void OpenCardInfoView(int cardId)
 		{
 			DeckBuilderCardInfoViewData param = new DeckBuilderCardInfoViewData
@@ -462,7 +460,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			UiManager.Instance.OpenView(EUiViewName.DeckBuilderCardInfoView, param, null);
 		}
 
-		// Token: 0x06035860 RID: 219232 RVA: 0x00CAD7B0 File Offset: 0x00CAB9B0
+		// Token: 0x0602A75B RID: 173915 RVA: 0x00BFADEC File Offset: 0x00BF8FEC
 		protected void AddCardToDeck(int cardId, int addCount = 1)
 		{
 			if (this.DeckInfo == null)
@@ -557,7 +555,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035861 RID: 219233 RVA: 0x00CAD9F0 File Offset: 0x00CABBF0
+		// Token: 0x0602A75C RID: 173916 RVA: 0x00BFB02C File Offset: 0x00BF922C
 		protected void RemoveCardSlotByCardId(int cardId, int removeCount = 1)
 		{
 			if (this.DeckInfo == null)
@@ -621,7 +619,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			Log.Instance.Error(ELogModule.PhantomArena, ELogAuthor.LZK, "移除卡牌异常", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06035862 RID: 219234 RVA: 0x00CADB4C File Offset: 0x00CABD4C
+		// Token: 0x0602A75D RID: 173917 RVA: 0x00BFB188 File Offset: 0x00BF9388
 		protected void RemoveCardSlotByElements(HashSet<ECardElement> elements)
 		{
 			if (this.DeckInfo == null)
@@ -649,7 +647,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			Log.Instance.Error(ELogModule.PhantomArena, ELogAuthor.LZK, "移除卡牌异常", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06035863 RID: 219235 RVA: 0x00CADBD4 File Offset: 0x00CABDD4
+		// Token: 0x0602A75E RID: 173918 RVA: 0x00BFB210 File Offset: 0x00BF9410
 		protected void RemoveAllCardSlot()
 		{
 			if (this.DeckInfo == null)
@@ -677,7 +675,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			Log.Instance.Error(ELogModule.PhantomArena, ELogAuthor.LZK, "移除卡牌异常", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06035864 RID: 219236 RVA: 0x00CADC5B File Offset: 0x00CABE5B
+		// Token: 0x0602A75F RID: 173919 RVA: 0x00BFB297 File Offset: 0x00BF9497
 		private void OnElementTabSelect(int gridIndex)
 		{
 			this.SelectElementTabByIndex(gridIndex);
@@ -688,7 +686,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshFullTip();
 		}
 
-		// Token: 0x06035865 RID: 219237 RVA: 0x00CADC82 File Offset: 0x00CABE82
+		// Token: 0x0602A760 RID: 173920 RVA: 0x00BFB2BE File Offset: 0x00BF94BE
 		private void RefreshFieldCardEffectUnlock(PhantomBattleCheckCardSkillUnlockResponse info)
 		{
 			DeckBuilderDeckSlotsPanel deckSlotsPanel = this.DeckSlotsPanel;
@@ -699,7 +697,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			deckSlotsPanel.RefreshFieldCardEffectUnlock(info);
 		}
 
-		// Token: 0x06035866 RID: 219238 RVA: 0x00CADC95 File Offset: 0x00CABE95
+		// Token: 0x0602A761 RID: 173921 RVA: 0x00BFB2D1 File Offset: 0x00BF94D1
 		private void SelectElementTabByIndex(int tabIndex)
 		{
 			this.CurSelectedElementTabIndex = tabIndex;
@@ -711,7 +709,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			elementTabScrollView.SelectGridProxy(tabIndex, false);
 		}
 
-		// Token: 0x06035867 RID: 219239 RVA: 0x00CADCB0 File Offset: 0x00CABEB0
+		// Token: 0x0602A762 RID: 173922 RVA: 0x00BFB2EC File Offset: 0x00BF94EC
 		private DeckBuilderElementTabItem CreateElementTabItem()
 		{
 			return new DeckBuilderElementTabItem
@@ -720,7 +718,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x06035868 RID: 219240 RVA: 0x00CADCC9 File Offset: 0x00CABEC9
+		// Token: 0x0602A763 RID: 173923 RVA: 0x00BFB305 File Offset: 0x00BF9505
 		private DeckBuilderCardItem CreateCardItem()
 		{
 			return new DeckBuilderCardItem
@@ -729,7 +727,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x06035869 RID: 219241 RVA: 0x00CADCE8 File Offset: 0x00CABEE8
+		// Token: 0x0602A764 RID: 173924 RVA: 0x00BFB324 File Offset: 0x00BF9524
 		private void OnNormalSlotItemClick(DeckBuilderCardSlotItem item)
 		{
 			DeckCardSlotInfo data = item.GetData();
@@ -740,7 +738,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RemoveCardSlotByCardId(data.CardId, 1);
 		}
 
-		// Token: 0x0603586A RID: 219242 RVA: 0x00CADD10 File Offset: 0x00CABF10
+		// Token: 0x0602A765 RID: 173925 RVA: 0x00BFB34C File Offset: 0x00BF954C
 		private void OnFieldCardItemEffectBtnClick(DeckBuilderCardSlotItem item)
 		{
 			DeckCardSlotInfo data = item.GetData();
@@ -751,19 +749,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			PhantomArenaController.Instance.OpenDeckBuilderCardInfoViewWithoutOutlookTab(data.CardId);
 		}
 
-		// Token: 0x0603586B RID: 219243 RVA: 0x00CADD38 File Offset: 0x00CABF38
+		// Token: 0x0602A766 RID: 173926 RVA: 0x00BFB374 File Offset: 0x00BF9574
 		private bool CanNormalSlotItemToggleChange(DeckBuilderCardSlotItem item)
 		{
 			return false;
 		}
 
-		// Token: 0x0603586C RID: 219244 RVA: 0x00CADD3B File Offset: 0x00CABF3B
+		// Token: 0x0602A767 RID: 173927 RVA: 0x00BFB377 File Offset: 0x00BF9577
 		private bool CanFieldSlotItemToggleChange(DeckBuilderCardSlotItem item)
 		{
 			return false;
 		}
 
-		// Token: 0x0603586D RID: 219245 RVA: 0x00CADD40 File Offset: 0x00CABF40
+		// Token: 0x0602A768 RID: 173928 RVA: 0x00BFB37C File Offset: 0x00BF957C
 		private void OnCoreSlotItemClick(DeckBuilderCardSlotItem item)
 		{
 			DeckCardSlotInfo data = item.GetData();
@@ -774,7 +772,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RemoveCardSlotByCardId(data.CardId, 1);
 		}
 
-		// Token: 0x0603586E RID: 219246 RVA: 0x00CADD68 File Offset: 0x00CABF68
+		// Token: 0x0602A769 RID: 173929 RVA: 0x00BFB3A4 File Offset: 0x00BF95A4
 		private void OnSlotItemLongPressComplete(DeckBuilderCardSlotItem item)
 		{
 			DeckCardSlotInfo data = item.GetData();
@@ -794,7 +792,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			UiManager.Instance.OpenView(EUiViewName.DeckBuilderCardInfoView, param, null);
 		}
 
-		// Token: 0x0603586F RID: 219247 RVA: 0x00CADDF8 File Offset: 0x00CABFF8
+		// Token: 0x0602A76A RID: 173930 RVA: 0x00BFB434 File Offset: 0x00BF9634
 		private void OnSlotItemLongPress(DeckBuilderCardSlotItem item, float progress)
 		{
 			if (progress == -1f)
@@ -819,7 +817,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035870 RID: 219248 RVA: 0x00CADE5C File Offset: 0x00CAC05C
+		// Token: 0x0602A76B RID: 173931 RVA: 0x00BFB498 File Offset: 0x00BF9698
 		private void RefreshLongPressItemPosition()
 		{
 			FVector? pointerEventDataPosition = LguiEventSystemManager.Instance.GetPointerEventDataPosition(0);
@@ -841,7 +839,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			item.SetLGUISpaceAbsolutePosition(fvector);
 		}
 
-		// Token: 0x06035871 RID: 219249 RVA: 0x00CADF0F File Offset: 0x00CAC10F
+		// Token: 0x0602A76C RID: 173932 RVA: 0x00BFB54B File Offset: 0x00BF974B
 		private void OnSlotItemLongPressEnd()
 		{
 			UUIItem item = base.GetItem(16);
@@ -852,13 +850,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06035872 RID: 219250 RVA: 0x00CADF24 File Offset: 0x00CAC124
+		// Token: 0x0602A76D RID: 173933 RVA: 0x00BFB560 File Offset: 0x00BF9760
 		private bool CanCoreSlotItemToggleChange(DeckBuilderCardSlotItem item)
 		{
 			return false;
 		}
 
-		// Token: 0x06035873 RID: 219251 RVA: 0x00CADF28 File Offset: 0x00CAC128
+		// Token: 0x0602A76E RID: 173934 RVA: 0x00BFB564 File Offset: 0x00BF9764
 		private void OnPrePageBtnClick()
 		{
 			if (this.MaxPage == 0)
@@ -878,7 +876,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshCardLayout();
 		}
 
-		// Token: 0x06035874 RID: 219252 RVA: 0x00CADF7C File Offset: 0x00CAC17C
+		// Token: 0x0602A76F RID: 173935 RVA: 0x00BFB5B8 File Offset: 0x00BF97B8
 		private void OnNextPageBtnClick()
 		{
 			if (this.MaxPage == 0)
@@ -898,7 +896,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshCardLayout();
 		}
 
-		// Token: 0x06035875 RID: 219253 RVA: 0x00CADFD0 File Offset: 0x00CAC1D0
+		// Token: 0x0602A770 RID: 173936 RVA: 0x00BFB60C File Offset: 0x00BF980C
 		private void OnDeckDeleteBtnClick()
 		{
 			if (this.DeckInfo == null || this.DeckInfo.GetTotalCardCount() == 0)
@@ -915,7 +913,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			UiManager.Instance.OpenView(EUiViewName.DeckBuilderCardDeleteView, param, null);
 		}
 
-		// Token: 0x06035876 RID: 219254 RVA: 0x00CAE048 File Offset: 0x00CAC248
+		// Token: 0x0602A771 RID: 173937 RVA: 0x00BFB684 File Offset: 0x00BF9884
 		private void OnShowLockedToggleChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -932,7 +930,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshCardLayout();
 		}
 
-		// Token: 0x06035877 RID: 219255 RVA: 0x00CAE076 File Offset: 0x00CAC276
+		// Token: 0x0602A772 RID: 173938 RVA: 0x00BFB6B2 File Offset: 0x00BF98B2
 		private void OnCostFilterResult(int configId, bool _)
 		{
 			this.CurCostFilter = configId;
@@ -942,7 +940,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshCardLayout();
 		}
 
-		// Token: 0x06035878 RID: 219256 RVA: 0x00CAE098 File Offset: 0x00CAC298
+		// Token: 0x0602A773 RID: 173939 RVA: 0x00BFB6D4 File Offset: 0x00BF98D4
 		private void RefreshCardFilterEntrance()
 		{
 			IReadOnlyList<PhantomBattleCardFilter> allPhantomBattleCardFilter = PhantomArenaConfig.Instance.GetAllPhantomBattleCardFilter();
@@ -970,7 +968,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			cardFilterEntrance2.SelectItemByIndex(gridIndex, false);
 		}
 
-		// Token: 0x06035879 RID: 219257 RVA: 0x00CAE150 File Offset: 0x00CAC350
+		// Token: 0x0602A774 RID: 173940 RVA: 0x00BFB78C File Offset: 0x00BF998C
 		private void OnPhantomArenaCardUnlock(int cardId)
 		{
 			DeckBuilderCardItemData deckBuilderCardItemData;
@@ -992,7 +990,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603587A RID: 219258 RVA: 0x00CAE19C File Offset: 0x00CAC39C
+		// Token: 0x0602A775 RID: 173941 RVA: 0x00BFB7D8 File Offset: 0x00BF99D8
 		private void OnPhantomArenaCardOutlookUnlock(int cardId)
 		{
 			DeckBuilderCardItemData deckBuilderCardItemData;
@@ -1018,7 +1016,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603587B RID: 219259 RVA: 0x00CAE1FB File Offset: 0x00CAC3FB
+		// Token: 0x0602A776 RID: 173942 RVA: 0x00BFB837 File Offset: 0x00BF9A37
 		private void OnGamepadTriggerCardInfo(UUIItem uiItem)
 		{
 			DeckBuilderDeckSlotsPanel deckSlotsPanel = this.DeckSlotsPanel;
@@ -1029,7 +1027,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			deckSlotsPanel.GamepadTriggerDeckBuilderCardInfoView(uiItem);
 		}
 
-		// Token: 0x0603587C RID: 219260 RVA: 0x00CAE20E File Offset: 0x00CAC40E
+		// Token: 0x0602A777 RID: 173943 RVA: 0x00BFB84A File Offset: 0x00BF9A4A
 		private void OnSaveBtnClick()
 		{
 			if (this.DeckInfo == null)
@@ -1039,7 +1037,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.SaveDeckInternal();
 		}
 
-		// Token: 0x0603587D RID: 219261 RVA: 0x00CAE220 File Offset: 0x00CAC420
+		// Token: 0x0602A778 RID: 173944 RVA: 0x00BFB85C File Offset: 0x00BF9A5C
 		private void SaveDeckInternal()
 		{
 			if (this.DeckInfo == null)
@@ -1088,7 +1086,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			});
 		}
 
-		// Token: 0x0603587E RID: 219262 RVA: 0x00CAE2B8 File Offset: 0x00CAC4B8
+		// Token: 0x0602A779 RID: 173945 RVA: 0x00BFB8F4 File Offset: 0x00BF9AF4
 		private void OnCloseBtnClick()
 		{
 			if (this.ViewModel == null)
@@ -1109,7 +1107,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			base.CloseMe();
 		}
 
-		// Token: 0x0603587F RID: 219263 RVA: 0x00CAE35D File Offset: 0x00CAC55D
+		// Token: 0x0602A77A RID: 173946 RVA: 0x00BFB999 File Offset: 0x00BF9B99
 		private void SetMainViewOverrideCloseFunc()
 		{
 			if (this.ViewModel != null)
@@ -1118,7 +1116,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035880 RID: 219264 RVA: 0x00CAE37E File Offset: 0x00CAC57E
+		// Token: 0x0602A77B RID: 173947 RVA: 0x00BFB9BA File Offset: 0x00BF9BBA
 		private void ResetMainViewOverrideCloseFunc()
 		{
 			if (this.ViewModel != null)
@@ -1127,7 +1125,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x06035881 RID: 219265 RVA: 0x00CAE394 File Offset: 0x00CAC594
+		// Token: 0x0602A77C RID: 173948 RVA: 0x00BFB9D0 File Offset: 0x00BF9BD0
 		private void OnChangeNameBtnClick()
 		{
 			string text = StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew("PhantomBattle_1077", null), Array.Empty<string>());
@@ -1138,7 +1136,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			instance.OpenSetPhantomArenaDeckName(bottomText, callBack, ((deckInfo != null) ? deckInfo.GetName() : null) ?? "");
 		}
 
-		// Token: 0x06035882 RID: 219266 RVA: 0x00CAE3E9 File Offset: 0x00CAC5E9
+		// Token: 0x0602A77D RID: 173949 RVA: 0x00BFBA25 File Offset: 0x00BF9C25
 		private void OnSlotCardPointEnterCallback(int cardId)
 		{
 			if (this.CardDetailTip == null)
@@ -1150,7 +1148,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.CardDetailTip.SetUiActive(true);
 		}
 
-		// Token: 0x06035883 RID: 219267 RVA: 0x00CAE41E File Offset: 0x00CAC61E
+		// Token: 0x0602A77E RID: 173950 RVA: 0x00BFBA5A File Offset: 0x00BF9C5A
 		private void OnSlotCardPointExitCallback()
 		{
 			if (this.CardDetailTip == null)
@@ -1168,7 +1166,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}, 500f, null, null, true, 1f);
 		}
 
-		// Token: 0x06035884 RID: 219268 RVA: 0x00CAE45C File Offset: 0x00CAC65C
+		// Token: 0x0602A77F RID: 173951 RVA: 0x00BFBA98 File Offset: 0x00BF9C98
 		private void OnQuicklyBuildBtnClick()
 		{
 			DeckBuilderQuicklyBuildViewData param = new DeckBuilderQuicklyBuildViewData
@@ -1201,7 +1199,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			UiManager.Instance.OpenView(EUiViewName.DeckBuilderQuicklyBuildView, param, null);
 		}
 
-		// Token: 0x06035885 RID: 219269 RVA: 0x00CAE4A0 File Offset: 0x00CAC6A0
+		// Token: 0x0602A780 RID: 173952 RVA: 0x00BFBADC File Offset: 0x00BF9CDC
 		private void ReplaceDeck(DeckInfo newDeckInfo)
 		{
 			DeckInfo deckInfo = this.DeckInfo;
@@ -1240,7 +1238,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.RefreshFullTip();
 		}
 
-		// Token: 0x06035886 RID: 219270 RVA: 0x00CAE5B8 File Offset: 0x00CAC7B8
+		// Token: 0x0602A781 RID: 173953 RVA: 0x00BFBBF4 File Offset: 0x00BF9DF4
 		protected override void OnBeforeDestroy()
 		{
 			IPhantomArenaDeckBuilderTabViewModel viewModel = this.ViewModel;
@@ -1251,7 +1249,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			viewModel.EndEditDeck();
 		}
 
-		// Token: 0x06035887 RID: 219271 RVA: 0x00CAE5CC File Offset: 0x00CAC7CC
+		// Token: 0x0602A782 RID: 173954 RVA: 0x00BFBC08 File Offset: 0x00BF9E08
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams == null || configParams.Length == 0)
@@ -1314,7 +1312,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603588C RID: 219276 RVA: 0x00CAE78C File Offset: 0x00CAC98C
+		// Token: 0x0602A787 RID: 173959 RVA: 0x00BFBDC8 File Offset: 0x00BF9FC8
 		[NullableContext(0)]
 		[CompilerGenerated]
 		private UniTask<Aki.Protocol.ErrorCode> <OnChangeNameBtnClick>g__inputCallBack|82_0([Nullable(1)] string input)
@@ -1328,131 +1326,131 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <<OnChangeNameBtnClick>g__inputCallBack|82_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C6B0 RID: 116400
+		// Token: 0x040170E5 RID: 94437
 		protected Dictionary<int, DeckBuilderCardItemData> LibraryCardDataMap = new Dictionary<int, DeckBuilderCardItemData>();
 
-		// Token: 0x0401C6B1 RID: 116401
+		// Token: 0x040170E6 RID: 94438
 		protected List<DeckBuilderCardItemData> LibraryCardDataList = new List<DeckBuilderCardItemData>();
 
-		// Token: 0x0401C6B2 RID: 116402
+		// Token: 0x040170E7 RID: 94439
 		protected List<DeckBuilderCardItemData> AllPageCardDataList = new List<DeckBuilderCardItemData>();
 
-		// Token: 0x0401C6B3 RID: 116403
+		// Token: 0x040170E8 RID: 94440
 		protected List<DeckBuilderCardItemData> CurPageCardDataList = new List<DeckBuilderCardItemData>();
 
-		// Token: 0x0401C6B4 RID: 116404
+		// Token: 0x040170E9 RID: 94441
 		protected int CurSelectedCardIndex = -1;
 
-		// Token: 0x0401C6B5 RID: 116405
+		// Token: 0x040170EA RID: 94442
 		protected int CurPage;
 
-		// Token: 0x0401C6B6 RID: 116406
+		// Token: 0x040170EB RID: 94443
 		protected int MinPage;
 
-		// Token: 0x0401C6B7 RID: 116407
+		// Token: 0x040170EC RID: 94444
 		protected int MaxPage;
 
-		// Token: 0x0401C6B8 RID: 116408
+		// Token: 0x040170ED RID: 94445
 		protected readonly int MaxCardCountPerPage = 8;
 
-		// Token: 0x0401C6B9 RID: 116409
+		// Token: 0x040170EE RID: 94446
 		protected List<ICardTabItemData> TabDataList = new List<ICardTabItemData>();
 
-		// Token: 0x0401C6BA RID: 116410
+		// Token: 0x040170EF RID: 94447
 		protected int CurSelectedElementTabIndex = -1;
 
-		// Token: 0x0401C6BB RID: 116411
+		// Token: 0x040170F0 RID: 94448
 		protected int CurCostFilter = 1;
 
-		// Token: 0x0401C6BC RID: 116412
+		// Token: 0x040170F1 RID: 94449
 		protected bool IncludeLockedCard;
 
-		// Token: 0x0401C6BD RID: 116413
+		// Token: 0x040170F2 RID: 94450
 		protected int CurSlotSortType = 1;
 
-		// Token: 0x0401C6BE RID: 116414
+		// Token: 0x040170F3 RID: 94451
 		protected bool IsAscending = true;
 
-		// Token: 0x0401C6BF RID: 116415
+		// Token: 0x040170F4 RID: 94452
 		protected DeckInfo DeckInfo;
 
-		// Token: 0x0401C6C0 RID: 116416
+		// Token: 0x040170F5 RID: 94453
 		private LoopScrollView<DeckBuilderElementTabItem, ICardTabItemData> ElementTabScrollView;
 
-		// Token: 0x0401C6C1 RID: 116417
+		// Token: 0x040170F6 RID: 94454
 		protected GenericLayout<DeckBuilderCardItem, DeckBuilderCardItemData> CardLayout;
 
-		// Token: 0x0401C6C2 RID: 116418
+		// Token: 0x040170F7 RID: 94455
 		protected PhantomArenaMainViewSwitchItem ShowLockedSwitchItem;
 
-		// Token: 0x0401C6C3 RID: 116419
+		// Token: 0x040170F8 RID: 94456
 		protected DeckBuilderSortFilterEntrance CardFilterEntrance;
 
-		// Token: 0x0401C6C4 RID: 116420
+		// Token: 0x040170F9 RID: 94457
 		protected DeckBuilderDeckSlotsPanel DeckSlotsPanel;
 
-		// Token: 0x0401C6C5 RID: 116421
+		// Token: 0x040170FA RID: 94458
 		private DeckBuilderCardDetailTip CardDetailTip;
 
-		// Token: 0x0200B328 RID: 45864
+		// Token: 0x02009D60 RID: 40288
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x040364C7 RID: 222407
+			// Token: 0x04030F1A RID: 200474
 			public const int ElementTabLoopScrollView = 0;
 
-			// Token: 0x040364C8 RID: 222408
+			// Token: 0x04030F1B RID: 200475
 			public const int ElementTabItem = 1;
 
-			// Token: 0x040364C9 RID: 222409
+			// Token: 0x04030F1C RID: 200476
 			public const int CardLayout = 2;
 
-			// Token: 0x040364CA RID: 222410
+			// Token: 0x04030F1D RID: 200477
 			public const int CardItem = 3;
 
-			// Token: 0x040364CB RID: 222411
+			// Token: 0x04030F1E RID: 200478
 			public const int FilterItem = 4;
 
-			// Token: 0x040364CC RID: 222412
+			// Token: 0x04030F1F RID: 200479
 			public const int CardEmptyItem = 5;
 
-			// Token: 0x040364CD RID: 222413
+			// Token: 0x04030F20 RID: 200480
 			public const int PageText = 6;
 
-			// Token: 0x040364CE RID: 222414
+			// Token: 0x04030F21 RID: 200481
 			public const int PrePageBtn = 7;
 
-			// Token: 0x040364CF RID: 222415
+			// Token: 0x04030F22 RID: 200482
 			public const int NextPageBtn = 8;
 
-			// Token: 0x040364D0 RID: 222416
+			// Token: 0x04030F23 RID: 200483
 			public const int QuicklyBuildBtn = 9;
 
-			// Token: 0x040364D1 RID: 222417
+			// Token: 0x04030F24 RID: 200484
 			public const int SaveBtn = 10;
 
-			// Token: 0x040364D2 RID: 222418
+			// Token: 0x04030F25 RID: 200485
 			public const int DeckSlotsPanelItem = 11;
 
-			// Token: 0x040364D3 RID: 222419
+			// Token: 0x04030F26 RID: 200486
 			public const int RenameBtn = 12;
 
-			// Token: 0x040364D4 RID: 222420
+			// Token: 0x04030F27 RID: 200487
 			public const int DeleteBtn = 13;
 
-			// Token: 0x040364D5 RID: 222421
+			// Token: 0x04030F28 RID: 200488
 			public const int TextFullTip = 14;
 
-			// Token: 0x040364D6 RID: 222422
+			// Token: 0x04030F29 RID: 200489
 			public const int ItemFullTip = 15;
 
-			// Token: 0x040364D7 RID: 222423
+			// Token: 0x04030F2A RID: 200490
 			public const int LongPressItem = 16;
 
-			// Token: 0x040364D8 RID: 222424
+			// Token: 0x04030F2B RID: 200491
 			public const int SpriteLongPressBar = 17;
 
-			// Token: 0x040364D9 RID: 222425
+			// Token: 0x04030F2C RID: 200492
 			public const int ItemDetailTipPanel = 18;
 		}
 	}

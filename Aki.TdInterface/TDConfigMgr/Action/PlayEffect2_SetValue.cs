@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200210C RID: 8460
+	// Token: 0x0200236D RID: 9069
 	public class PlayEffect2_SetValue
 	{
-		// Token: 0x04006F69 RID: 28521
+		// Token: 0x0400759D RID: 30109
 		public EEffectType Type;
 
-		// Token: 0x04006F6A RID: 28522
-		[Nullable(1)]
+		// Token: 0x0400759E RID: 30110
 		public string Path;
 	}
 }

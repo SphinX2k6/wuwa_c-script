@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA2 RID: 23970
+	// Token: 0x02004D84 RID: 19844
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleSkillButtonMobilePanel : UiPanelBase
 	{
-		// Token: 0x0603CDB2 RID: 249266 RVA: 0x00E9E05C File Offset: 0x00E9C25C
+		// Token: 0x06031D0F RID: 204047 RVA: 0x00DEE914 File Offset: 0x00DECB14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CDB3 RID: 249267 RVA: 0x00E9E1D0 File Offset: 0x00E9C3D0
+		// Token: 0x06031D10 RID: 204048 RVA: 0x00DEEA88 File Offset: 0x00DECC88
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorcycleSkillButtonMobilePanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CDB4 RID: 249268 RVA: 0x00E9E213 File Offset: 0x00E9C413
+		// Token: 0x06031D11 RID: 204049 RVA: 0x00DEEACB File Offset: 0x00DECCCB
 		protected override void OnBeforeDestroy()
 		{
 			this.BattleSkillItemList.Clear();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiModel.Instance.ChildViewData.RemoveCallback(EBattleUiChild.MotorcycleMobileSkillButton, new Action(this.OnSkillButtonVisibleChanged));
 		}
 
-		// Token: 0x0603CDB5 RID: 249269 RVA: 0x00E9E248 File Offset: 0x00E9C448
+		// Token: 0x06031D12 RID: 204050 RVA: 0x00DEEB00 File Offset: 0x00DECD00
 		protected override void OnAfterShow()
 		{
 			this.AddEvents();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DataDirty = true;
 		}
 
-		// Token: 0x0603CDB6 RID: 249270 RVA: 0x00E9E2EC File Offset: 0x00E9C4EC
+		// Token: 0x06031D13 RID: 204051 RVA: 0x00DEEBA4 File Offset: 0x00DECDA4
 		protected override void OnBeforeHide()
 		{
 			this.RemoveEvents();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDB7 RID: 249271 RVA: 0x00E9E34C File Offset: 0x00E9C54C
+		// Token: 0x06031D14 RID: 204052 RVA: 0x00DEEC04 File Offset: 0x00DECE04
 		protected override void OnBeforeShow()
 		{
 			foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDB8 RID: 249272 RVA: 0x00E9E39C File Offset: 0x00E9C59C
+		// Token: 0x06031D15 RID: 204053 RVA: 0x00DEEC54 File Offset: 0x00DECE54
 		public void Tick(float delta)
 		{
 			if (!base.IsShowOrShowing)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDB9 RID: 249273 RVA: 0x00E9E414 File Offset: 0x00E9C614
+		// Token: 0x06031D16 RID: 204054 RVA: 0x00DEECCC File Offset: 0x00DECECC
 		private void RefreshAllBattleSkillItems()
 		{
 			SkillButtonUiModel instance = SkillButtonUiModel.Instance;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDBA RID: 249274 RVA: 0x00E9E4A8 File Offset: 0x00E9C6A8
+		// Token: 0x06031D17 RID: 204055 RVA: 0x00DEED60 File Offset: 0x00DECF60
 		private void DeactivateAllBattleSkillItems()
 		{
 			foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDBB RID: 249275 RVA: 0x00E9E4F8 File Offset: 0x00E9C6F8
+		// Token: 0x06031D18 RID: 204056 RVA: 0x00DEEDB0 File Offset: 0x00DECFB0
 		public UniTask NewAllBattleSkillItems()
 		{
 			MotorcycleSkillButtonMobilePanel.<NewAllBattleSkillItems>d__17 <NewAllBattleSkillItems>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAllBattleSkillItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CDBC RID: 249276 RVA: 0x00E9E53C File Offset: 0x00E9C73C
+		// Token: 0x06031D19 RID: 204057 RVA: 0x00DEEDF4 File Offset: 0x00DECFF4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewBattleSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CDBD RID: 249277 RVA: 0x00E9E58F File Offset: 0x00E9C78F
+		// Token: 0x06031D1A RID: 204058 RVA: 0x00DEEE47 File Offset: 0x00DED047
 		private BattleSkillItem GetBattleSkillItem(int inputIndex)
 		{
 			return this.BattleSkillItemList[inputIndex];
 		}
 
-		// Token: 0x0603CDBE RID: 249278 RVA: 0x00E9E5A0 File Offset: 0x00E9C7A0
+		// Token: 0x06031D1B RID: 204059 RVA: 0x00DEEE58 File Offset: 0x00DED058
 		[NullableContext(2)]
 		public BattleSkillItem GetBattleSkillItemByButtonType(ESkillButtonType buttonType)
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.GetBattleSkillItem(motorPadSkillButtonIndexByButton);
 		}
 
-		// Token: 0x0603CDBF RID: 249279 RVA: 0x00E9E5C8 File Offset: 0x00E9C7C8
+		// Token: 0x06031D1C RID: 204060 RVA: 0x00DEEE80 File Offset: 0x00DED080
 		private UniTask NewAllBehaviorButton()
 		{
 			MotorcycleSkillButtonMobilePanel.<NewAllBehaviorButton>d__21 <NewAllBehaviorButton>d__;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAllBehaviorButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CDC0 RID: 249280 RVA: 0x00E9E60C File Offset: 0x00E9C80C
+		// Token: 0x06031D1D RID: 204061 RVA: 0x00DEEEC4 File Offset: 0x00DED0C4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewBehaviorButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CDC1 RID: 249281 RVA: 0x00E9E660 File Offset: 0x00E9C860
+		// Token: 0x06031D1E RID: 204062 RVA: 0x00DEEF18 File Offset: 0x00DED118
 		private void RefreshAllBehaviorButton()
 		{
 			SkillButtonUiModel instance = SkillButtonUiModel.Instance;
@@ -250,14 +250,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDC2 RID: 249282 RVA: 0x00E9E6D0 File Offset: 0x00E9C8D0
+		// Token: 0x06031D1F RID: 204063 RVA: 0x00DEEF88 File Offset: 0x00DED188
 		[NullableContext(2)]
 		private BehaviorButton GetBehaviorButton(EBehaviorType inputActionType)
 		{
 			return this.BehaviorButtonMap.GetValueOrDefault(inputActionType);
 		}
 
-		// Token: 0x0603CDC3 RID: 249283 RVA: 0x00E9E6E0 File Offset: 0x00E9C8E0
+		// Token: 0x06031D20 RID: 204064 RVA: 0x00DEEF98 File Offset: 0x00DED198
 		protected void AddEvents()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.OnUiScreenRootVisibleChange, new Action<bool>(this.OnSetUiVisible));
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<bool>(EEventName.CharSkillCdPauseStateChanged, new Action<bool>(this.OnCharSkillCdPauseStateChanged));
 		}
 
-		// Token: 0x0603CDC4 RID: 249284 RVA: 0x00E9E950 File Offset: 0x00E9CB50
+		// Token: 0x06031D21 RID: 204065 RVA: 0x00DEF208 File Offset: 0x00DED408
 		protected void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnUiScreenRootVisibleChange, new Action<bool>(this.OnSetUiVisible));
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.CharSkillCdPauseStateChanged, new Action<bool>(this.OnCharSkillCdPauseStateChanged));
 		}
 
-		// Token: 0x0603CDC5 RID: 249285 RVA: 0x00E9EBC0 File Offset: 0x00E9CDC0
+		// Token: 0x06031D22 RID: 204066 RVA: 0x00DEF478 File Offset: 0x00DED678
 		private void OnSetUiVisible(bool bVisible)
 		{
 			if (bVisible)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDC6 RID: 249286 RVA: 0x00E9EC14 File Offset: 0x00E9CE14
+		// Token: 0x06031D23 RID: 204067 RVA: 0x00DEF4CC File Offset: 0x00DED6CC
 		private void OnSkillButtonDataRefresh(ESkillButtonRefreshReason refreshReason)
 		{
 			if (refreshReason == ESkillButtonRefreshReason.GamepadRefreshAimState || refreshReason == ESkillButtonRefreshReason.GamepadRefreshKeyAction)
@@ -333,13 +333,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DataDirty = true;
 		}
 
-		// Token: 0x0603CDC7 RID: 249287 RVA: 0x00E9EC26 File Offset: 0x00E9CE26
+		// Token: 0x06031D24 RID: 204068 RVA: 0x00DEF4DE File Offset: 0x00DED6DE
 		private void OnSkillButtonDataClear()
 		{
 			this.DeactivateAllBattleSkillItems();
 		}
 
-		// Token: 0x0603CDC8 RID: 249288 RVA: 0x00E9EC2E File Offset: 0x00E9CE2E
+		// Token: 0x06031D25 RID: 204069 RVA: 0x00DEF4E6 File Offset: 0x00DED6E6
 		private void OnSkillButtonIndexRefresh()
 		{
 			if (!BattleUiModel.Instance.MotorcycleData.IsDriving)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DataDirty = true;
 		}
 
-		// Token: 0x0603CDC9 RID: 249289 RVA: 0x00E9EC4C File Offset: 0x00E9CE4C
+		// Token: 0x06031D26 RID: 204070 RVA: 0x00DEF504 File Offset: 0x00DED704
 		private void OnSkillButtonEnableRefresh(ESkillButtonType buttonType, int extendCoolDown)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshEnable(false);
 		}
 
-		// Token: 0x0603CDCA RID: 249290 RVA: 0x00E9EC78 File Offset: 0x00E9CE78
+		// Token: 0x06031D27 RID: 204071 RVA: 0x00DEF530 File Offset: 0x00DED730
 		private void OnSkillButtonVisibleRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshKey();
 		}
 
-		// Token: 0x0603CDCB RID: 249291 RVA: 0x00E9ECA8 File Offset: 0x00E9CEA8
+		// Token: 0x06031D28 RID: 204072 RVA: 0x00DEF560 File Offset: 0x00DED760
 		private void OnSkillButtonDynamicEffectRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshDynamicEffect();
 		}
 
-		// Token: 0x0603CDCC RID: 249292 RVA: 0x00E9ECD0 File Offset: 0x00E9CED0
+		// Token: 0x06031D29 RID: 204073 RVA: 0x00DEF588 File Offset: 0x00DED788
 		private void OnSkillButtonCustomRefresh(ESkillButtonType buttonType, int from, int param)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDCD RID: 249293 RVA: 0x00E9ECFC File Offset: 0x00E9CEFC
+		// Token: 0x06031D2A RID: 204074 RVA: 0x00DEF5B4 File Offset: 0x00DED7B4
 		private void OnSkillButtonSkillIdRefresh(ESkillButtonType actionType)
 		{
 			SkillButtonData skillButtonDataByButton = SkillButtonUiModel.Instance.GetSkillButtonDataByButton(actionType);
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.Refresh(skillButtonDataByButton);
 		}
 
-		// Token: 0x0603CDCE RID: 249294 RVA: 0x00E9ED34 File Offset: 0x00E9CF34
+		// Token: 0x06031D2B RID: 204075 RVA: 0x00DEF5EC File Offset: 0x00DED7EC
 		private void OnSkillButtonAttributeRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshAttribute(true);
 		}
 
-		// Token: 0x0603CDCF RID: 249295 RVA: 0x00E9ED54 File Offset: 0x00E9CF54
+		// Token: 0x06031D2C RID: 204076 RVA: 0x00DEF60C File Offset: 0x00DED80C
 		private void OnSkillButtonIconPathRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshSkillName();
 		}
 
-		// Token: 0x0603CDD0 RID: 249296 RVA: 0x00E9ED7C File Offset: 0x00E9CF7C
+		// Token: 0x06031D2D RID: 204077 RVA: 0x00DEF634 File Offset: 0x00DED834
 		private void OnSkillButtonCdRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshSkillCoolDown();
 		}
 
-		// Token: 0x0603CDD1 RID: 249297 RVA: 0x00E9ED9C File Offset: 0x00E9CF9C
+		// Token: 0x06031D2E RID: 204078 RVA: 0x00DEF654 File Offset: 0x00DED854
 		private void OnSkillButtonLongPressRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshConfigLongPress(-1, 0);
 		}
 
-		// Token: 0x0603CDD2 RID: 249298 RVA: 0x00E9EDC4 File Offset: 0x00E9CFC4
+		// Token: 0x06031D2F RID: 204079 RVA: 0x00DEF67C File Offset: 0x00DED87C
 		private void OnSkillButtonExtraEffectRefresh(ESkillButtonType buttonType)
 		{
 			BattleSkillItem battleSkillItemByButtonType = this.GetBattleSkillItemByButtonType(buttonType);
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			battleSkillItemByButtonType.RefreshExtraEffect();
 		}
 
-		// Token: 0x0603CDD3 RID: 249299 RVA: 0x00E9EDE4 File Offset: 0x00E9CFE4
+		// Token: 0x06031D30 RID: 204080 RVA: 0x00DEF69C File Offset: 0x00DED89C
 		private void OnBehaviorButtonEnableRefresh(EBehaviorType buttonType)
 		{
 			BehaviorButton behaviorButton = this.GetBehaviorButton(buttonType);
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			behaviorButton.RefreshEnable(false);
 		}
 
-		// Token: 0x0603CDD4 RID: 249300 RVA: 0x00E9EE04 File Offset: 0x00E9D004
+		// Token: 0x06031D31 RID: 204081 RVA: 0x00DEF6BC File Offset: 0x00DED8BC
 		private void OnBehaviorButtonVisibleRefresh(EBehaviorType buttonType)
 		{
 			BehaviorButton behaviorButton = this.GetBehaviorButton(buttonType);
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			behaviorButton.RefreshVisible();
 		}
 
-		// Token: 0x0603CDD5 RID: 249301 RVA: 0x00E9EE24 File Offset: 0x00E9D024
+		// Token: 0x06031D32 RID: 204082 RVA: 0x00DEF6DC File Offset: 0x00DED8DC
 		private void OnBehaviorButtonSkillIdRefresh(EBehaviorType buttonType)
 		{
 			BehaviorButton behaviorButton = this.GetBehaviorButton(buttonType);
@@ -512,7 +512,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			behaviorButton.RefreshAll();
 		}
 
-		// Token: 0x0603CDD6 RID: 249302 RVA: 0x00E9EE44 File Offset: 0x00E9D044
+		// Token: 0x06031D33 RID: 204083 RVA: 0x00DEF6FC File Offset: 0x00DED8FC
 		private void OnBehaviorButtonIconPathRefresh(EBehaviorType buttonType)
 		{
 			BehaviorButton behaviorButton = this.GetBehaviorButton(buttonType);
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			behaviorButton.RefreshSkillIcon();
 		}
 
-		// Token: 0x0603CDD7 RID: 249303 RVA: 0x00E9EE64 File Offset: 0x00E9D064
+		// Token: 0x06031D34 RID: 204084 RVA: 0x00DEF71C File Offset: 0x00DED91C
 		private void OnBehaviorButtonDynamicEffectRefresh(EBehaviorType buttonType)
 		{
 			BehaviorButton behaviorButton = this.GetBehaviorButton(buttonType);
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			behaviorButton.RefreshDynamicEffect();
 		}
 
-		// Token: 0x0603CDD8 RID: 249304 RVA: 0x00E9EE84 File Offset: 0x00E9D084
+		// Token: 0x06031D35 RID: 204085 RVA: 0x00DEF73C File Offset: 0x00DED93C
 		private void OnPauseGame(int flag)
 		{
 			foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDD9 RID: 249305 RVA: 0x00E9EED8 File Offset: 0x00E9D0D8
+		// Token: 0x06031D36 RID: 204086 RVA: 0x00DEF790 File Offset: 0x00DED990
 		private void OnChangedTimeScale()
 		{
 			foreach (BattleSkillItem battleSkillItem in this.BattleSkillItemList)
@@ -552,13 +552,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDDA RID: 249306 RVA: 0x00E9EF28 File Offset: 0x00E9D128
+		// Token: 0x06031D37 RID: 204087 RVA: 0x00DEF7E0 File Offset: 0x00DED9E0
 		private void OnCharSkillCdPauseStateChanged(bool _)
 		{
 			this.OnChangedTimeScale();
 		}
 
-		// Token: 0x0603CDDB RID: 249307 RVA: 0x00E9EF30 File Offset: 0x00E9D130
+		// Token: 0x06031D38 RID: 204088 RVA: 0x00DEF7E8 File Offset: 0x00DED9E8
 		private void OnSkillButtonVisibleChanged()
 		{
 			bool visible = this.GetVisible();
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CheckVisibleChange(visible);
 		}
 
-		// Token: 0x0603CDDC RID: 249308 RVA: 0x00E9EF64 File Offset: 0x00E9D164
+		// Token: 0x06031D39 RID: 204089 RVA: 0x00DEF81C File Offset: 0x00DEDA1C
 		public override void SetActive(bool visibility)
 		{
 			if (this.GetVisible() != visibility)
@@ -577,7 +577,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetActive(visibility);
 		}
 
-		// Token: 0x0603CDDD RID: 249309 RVA: 0x00E9EFA0 File Offset: 0x00E9D1A0
+		// Token: 0x06031D3A RID: 204090 RVA: 0x00DEF858 File Offset: 0x00DEDA58
 		public void SetVisible(int visibleReason, bool bVisible)
 		{
 			bool visible = this.GetVisible();
@@ -585,19 +585,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CheckVisibleChange(visible);
 		}
 
-		// Token: 0x0603CDDE RID: 249310 RVA: 0x00E9EFC3 File Offset: 0x00E9D1C3
+		// Token: 0x06031D3B RID: 204091 RVA: 0x00DEF87B File Offset: 0x00DEDA7B
 		private void SetVisibleInner(int visibleReason, bool bVisible)
 		{
 			this.InnerVisibleState = VisibleStateUtil.SetVisible(this.InnerVisibleState, bVisible, visibleReason);
 		}
 
-		// Token: 0x0603CDDF RID: 249311 RVA: 0x00E9EFD8 File Offset: 0x00E9D1D8
+		// Token: 0x06031D3C RID: 204092 RVA: 0x00DEF890 File Offset: 0x00DEDA90
 		public bool GetVisible()
 		{
 			return this.BaseVisible && this.InnerVisibleState == 0;
 		}
 
-		// Token: 0x0603CDE0 RID: 249312 RVA: 0x00E9EFF0 File Offset: 0x00E9D1F0
+		// Token: 0x06031D3D RID: 204093 RVA: 0x00DEF8A8 File Offset: 0x00DEDAA8
 		private void CheckVisibleChange(bool oldVisible)
 		{
 			bool visible = this.GetVisible();
@@ -608,51 +608,51 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(visible);
 		}
 
-		// Token: 0x0401FB42 RID: 129858
+		// Token: 0x0401A5FA RID: 108026
 		private const int MOBILE_INDEX_EXPLORE_ITEM = 3;
 
-		// Token: 0x0401FB43 RID: 129859
+		// Token: 0x0401A5FB RID: 108027
 		private readonly List<BattleSkillItem> BattleSkillItemList = new List<BattleSkillItem>();
 
-		// Token: 0x0401FB44 RID: 129860
+		// Token: 0x0401A5FC RID: 108028
 		private readonly Dictionary<EBehaviorType, BehaviorButton> BehaviorButtonMap = new Dictionary<EBehaviorType, BehaviorButton>();
 
-		// Token: 0x0401FB45 RID: 129861
+		// Token: 0x0401A5FD RID: 108029
 		[StaticVariableRuleIgnore]
 		private static readonly Stat RefreshAllBattleSkillItemObject = Stat.Create("[SkillButton]RefreshAllBattleSkillItem", "", "");
 
-		// Token: 0x0401FB46 RID: 129862
+		// Token: 0x0401A5FE RID: 108030
 		private bool BaseVisible;
 
-		// Token: 0x0401FB47 RID: 129863
+		// Token: 0x0401A5FF RID: 108031
 		private int InnerVisibleState = 1;
 
-		// Token: 0x0401FB48 RID: 129864
+		// Token: 0x0401A600 RID: 108032
 		private bool DataDirty;
 
-		// Token: 0x0200C07A RID: 49274
+		// Token: 0x0200AA80 RID: 43648
 		[NullableContext(0)]
 		private enum EPadChildType
 		{
-			// Token: 0x0403A151 RID: 237905
+			// Token: 0x04034B14 RID: 215828
 			SkillItem1,
-			// Token: 0x0403A152 RID: 237906
+			// Token: 0x04034B15 RID: 215829
 			SkillItem2,
-			// Token: 0x0403A153 RID: 237907
+			// Token: 0x04034B16 RID: 215830
 			SkillItem3,
-			// Token: 0x0403A154 RID: 237908
+			// Token: 0x04034B17 RID: 215831
 			SkillItem4,
-			// Token: 0x0403A155 RID: 237909
+			// Token: 0x04034B18 RID: 215832
 			SkillItem5,
-			// Token: 0x0403A156 RID: 237910
+			// Token: 0x04034B19 RID: 215833
 			SkillItem6,
-			// Token: 0x0403A157 RID: 237911
+			// Token: 0x04034B1A RID: 215834
 			SkillItem7,
-			// Token: 0x0403A158 RID: 237912
+			// Token: 0x04034B1B RID: 215835
 			LockButtonItem,
-			// Token: 0x0403A159 RID: 237913
+			// Token: 0x04034B1C RID: 215836
 			AimItem,
-			// Token: 0x0403A15A RID: 237914
+			// Token: 0x04034B1D RID: 215837
 			SkillItem8
 		}
 	}

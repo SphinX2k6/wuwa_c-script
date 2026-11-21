@@ -9,39 +9,39 @@ using CSharpScript.Game.Module.QuickTimeAction.Context;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020026C2 RID: 9922
+// Token: 0x02001BAD RID: 7085
 [NullableContext(1)]
 [Nullable(0)]
 public class QtaItemBase : UiPanelBase
 {
-	// Token: 0x0601458C RID: 83340 RVA: 0x00526AF1 File Offset: 0x00524CF1
+	// Token: 0x06011A6E RID: 72302 RVA: 0x00535829 File Offset: 0x00533A29
 	public virtual void SetPreloadQta(int qtaId)
 	{
 	}
 
-	// Token: 0x0601458D RID: 83341 RVA: 0x00526AF3 File Offset: 0x00524CF3
+	// Token: 0x06011A6F RID: 72303 RVA: 0x0053582B File Offset: 0x00533A2B
 	public virtual void SetQtaContext(QtaContextBase context)
 	{
 	}
 
-	// Token: 0x0601458E RID: 83342 RVA: 0x00526AF5 File Offset: 0x00524CF5
+	// Token: 0x06011A70 RID: 72304 RVA: 0x0053582D File Offset: 0x00533A2D
 	public void PlayQtaStart()
 	{
 		this.OnPlayQtaStart();
 	}
 
-	// Token: 0x0601458F RID: 83343 RVA: 0x00526AFD File Offset: 0x00524CFD
+	// Token: 0x06011A71 RID: 72305 RVA: 0x00535835 File Offset: 0x00533A35
 	protected virtual void OnPlayQtaStart()
 	{
 	}
 
-	// Token: 0x06014590 RID: 83344 RVA: 0x00526AFF File Offset: 0x00524CFF
+	// Token: 0x06011A72 RID: 72306 RVA: 0x00535837 File Offset: 0x00533A37
 	protected override void OnRegisterComponent()
 	{
 		this.IsMobile = Info.Instance.IsInTouch();
 	}
 
-	// Token: 0x06014591 RID: 83345 RVA: 0x00526B14 File Offset: 0x00524D14
+	// Token: 0x06011A73 RID: 72307 RVA: 0x0053584C File Offset: 0x00533A4C
 	protected override void OnStart()
 	{
 		UUIItem floatUnit = UiLayer.Instance.GetFloatUnit(ELayerType.BattleFloat, 2);
@@ -55,7 +55,7 @@ public class QtaItemBase : UiPanelBase
 		EventSystem.Instance.Add<int?>(EEventName.QtaEnd, new Action<int?>(this.OnQtaEnd));
 	}
 
-	// Token: 0x06014592 RID: 83346 RVA: 0x00526BAC File Offset: 0x00524DAC
+	// Token: 0x06011A74 RID: 72308 RVA: 0x005358E4 File Offset: 0x00533AE4
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Emit<string>(EEventName.EnableCacheCustomInputData, this.RootActor.GetName());
@@ -65,27 +65,27 @@ public class QtaItemBase : UiPanelBase
 		this.ClearTickTimer();
 	}
 
-	// Token: 0x06014593 RID: 83347 RVA: 0x00526C2C File Offset: 0x00524E2C
+	// Token: 0x06011A75 RID: 72309 RVA: 0x00535964 File Offset: 0x00533B64
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
 		this.ResumeQta(false);
 	}
 
-	// Token: 0x06014594 RID: 83348 RVA: 0x00526C3B File Offset: 0x00524E3B
+	// Token: 0x06011A76 RID: 72310 RVA: 0x00535973 File Offset: 0x00533B73
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
 		this.PauseQta();
 	}
 
-	// Token: 0x06014595 RID: 83349 RVA: 0x00526C49 File Offset: 0x00524E49
+	// Token: 0x06011A77 RID: 72311 RVA: 0x00535981 File Offset: 0x00533B81
 	protected void InitTweenAnim(int itemId)
 	{
 		this.TweenAnimPlayer.InitTweenAnim(itemId, base.GetItem(itemId), false);
 	}
 
-	// Token: 0x06014596 RID: 83350 RVA: 0x00526C60 File Offset: 0x00524E60
+	// Token: 0x06011A78 RID: 72312 RVA: 0x00535998 File Offset: 0x00533B98
 	private void OnQtaEnd(int? handleId)
 	{
 		int qtaHandle = this.QtaHandle;
@@ -97,13 +97,13 @@ public class QtaItemBase : UiPanelBase
 		this.HandleQtaEnd();
 	}
 
-	// Token: 0x06014597 RID: 83351 RVA: 0x00526C8F File Offset: 0x00524E8F
+	// Token: 0x06011A79 RID: 72313 RVA: 0x005359C7 File Offset: 0x00533BC7
 	private void OnBattleUiVisibleChanged()
 	{
 		this.RefreshOnBattleUiVisibleChanged();
 	}
 
-	// Token: 0x06014598 RID: 83352 RVA: 0x00526C97 File Offset: 0x00524E97
+	// Token: 0x06011A7A RID: 72314 RVA: 0x005359CF File Offset: 0x00533BCF
 	private void OnTriggerUiTimeDilation()
 	{
 		if (this.IsQtaEnd)
@@ -118,33 +118,33 @@ public class QtaItemBase : UiPanelBase
 		this.ResumeQta(true);
 	}
 
-	// Token: 0x06014599 RID: 83353 RVA: 0x00526CC1 File Offset: 0x00524EC1
+	// Token: 0x06011A7B RID: 72315 RVA: 0x005359F9 File Offset: 0x00533BF9
 	protected virtual void RefreshOnBattleUiVisibleChanged()
 	{
 	}
 
-	// Token: 0x0601459A RID: 83354 RVA: 0x00526CC3 File Offset: 0x00524EC3
+	// Token: 0x06011A7C RID: 72316 RVA: 0x005359FB File Offset: 0x00533BFB
 	public virtual void OnQtaMoment(EQtaMomentName moment)
 	{
 	}
 
-	// Token: 0x0601459B RID: 83355 RVA: 0x00526CC5 File Offset: 0x00524EC5
+	// Token: 0x06011A7D RID: 72317 RVA: 0x005359FD File Offset: 0x00533BFD
 	protected virtual void HandleQtaEnd()
 	{
 	}
 
-	// Token: 0x0601459C RID: 83356 RVA: 0x00526CC7 File Offset: 0x00524EC7
+	// Token: 0x06011A7E RID: 72318 RVA: 0x005359FF File Offset: 0x00533BFF
 	protected void Tick(float delta)
 	{
 		this.OnTick(delta);
 	}
 
-	// Token: 0x0601459D RID: 83357 RVA: 0x00526CD0 File Offset: 0x00524ED0
+	// Token: 0x06011A7F RID: 72319 RVA: 0x00535A08 File Offset: 0x00533C08
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x0601459E RID: 83358 RVA: 0x00526CD2 File Offset: 0x00524ED2
+	// Token: 0x06011A80 RID: 72320 RVA: 0x00535A0A File Offset: 0x00533C0A
 	protected void PauseQta()
 	{
 		if (this.IsQtaPause || this.IsQtaEnd)
@@ -163,7 +163,7 @@ public class QtaItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601459F RID: 83359 RVA: 0x00526D0C File Offset: 0x00524F0C
+	// Token: 0x06011A81 RID: 72321 RVA: 0x00535A44 File Offset: 0x00533C44
 	protected void ResumeQta(bool delay = false)
 	{
 		if (!this.IsQtaPause || this.IsQtaEnd)
@@ -195,23 +195,23 @@ public class QtaItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060145A0 RID: 83360 RVA: 0x00526D6E File Offset: 0x00524F6E
+	// Token: 0x06011A82 RID: 72322 RVA: 0x00535AA6 File Offset: 0x00533CA6
 	protected virtual void OnQtaPause()
 	{
 	}
 
-	// Token: 0x060145A1 RID: 83361 RVA: 0x00526D70 File Offset: 0x00524F70
+	// Token: 0x06011A83 RID: 72323 RVA: 0x00535AA8 File Offset: 0x00533CA8
 	protected virtual void OnQtaResume()
 	{
 	}
 
-	// Token: 0x060145A2 RID: 83362 RVA: 0x00526D72 File Offset: 0x00524F72
+	// Token: 0x06011A84 RID: 72324 RVA: 0x00535AAA File Offset: 0x00533CAA
 	public bool IsValidInput()
 	{
 		return this.CanInteractive && !this.IsQtaEnd && !this.IsQtaPause;
 	}
 
-	// Token: 0x060145A3 RID: 83363 RVA: 0x00526D90 File Offset: 0x00524F90
+	// Token: 0x06011A85 RID: 72325 RVA: 0x00535AC8 File Offset: 0x00533CC8
 	protected void SetQtaActive(QtaContextBase context)
 	{
 		this.IsQtaActive = true;
@@ -236,7 +236,7 @@ public class QtaItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x060145A4 RID: 83364 RVA: 0x00526E23 File Offset: 0x00525023
+	// Token: 0x06011A86 RID: 72326 RVA: 0x00535B5B File Offset: 0x00533D5B
 	protected void ClearTickTimer()
 	{
 		if (this.TickTimer != null)
@@ -246,37 +246,37 @@ public class QtaItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x040098FC RID: 39164
+	// Token: 0x04009A54 RID: 39508
 	protected int QtaHandle;
 
-	// Token: 0x040098FD RID: 39165
+	// Token: 0x04009A55 RID: 39509
 	protected bool IsMobile;
 
-	// Token: 0x040098FE RID: 39166
+	// Token: 0x04009A56 RID: 39510
 	protected bool IsQtaActive;
 
-	// Token: 0x040098FF RID: 39167
+	// Token: 0x04009A57 RID: 39511
 	protected bool IsQtaPlayStart;
 
-	// Token: 0x04009900 RID: 39168
+	// Token: 0x04009A58 RID: 39512
 	protected bool IsQtaStart;
 
-	// Token: 0x04009901 RID: 39169
+	// Token: 0x04009A59 RID: 39513
 	protected bool IsQtaEnd;
 
-	// Token: 0x04009902 RID: 39170
+	// Token: 0x04009A5A RID: 39514
 	protected bool CanInteractive;
 
-	// Token: 0x04009903 RID: 39171
+	// Token: 0x04009A5B RID: 39515
 	protected bool IsQtaPause;
 
-	// Token: 0x04009904 RID: 39172
+	// Token: 0x04009A5C RID: 39516
 	[Nullable(2)]
 	protected TimerHandle TickTimer;
 
-	// Token: 0x04009905 RID: 39173
+	// Token: 0x04009A5D RID: 39517
 	protected int TickInterval = 20;
 
-	// Token: 0x04009906 RID: 39174
+	// Token: 0x04009A5E RID: 39518
 	protected BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 }

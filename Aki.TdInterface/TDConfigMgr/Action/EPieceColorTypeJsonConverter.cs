@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023CC RID: 9164
+	// Token: 0x02002661 RID: 9825
 	public class EPieceColorTypeJsonConverter : JsonConverter<EPieceColorType>
 	{
-		// Token: 0x0600C796 RID: 51094 RVA: 0x001D3804 File Offset: 0x001D1A04
+		// Token: 0x0600D410 RID: 54288 RVA: 0x001ECE9C File Offset: 0x001EB09C
 		public override EPieceColorType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPieceColorTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C797 RID: 51095 RVA: 0x001D3828 File Offset: 0x001D1A28
+		// Token: 0x0600D411 RID: 54289 RVA: 0x001ECEC0 File Offset: 0x001EB0C0
 		public override void Write(Utf8JsonWriter writer, EPieceColorType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

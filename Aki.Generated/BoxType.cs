@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B4C RID: 2892
+	// Token: 0x02000C2C RID: 3116
 	public struct BoxType : IFlatbufferObject
 	{
-		// Token: 0x170005F1 RID: 1521
-		// (get) Token: 0x06004F7B RID: 20347 RVA: 0x001E84F5 File Offset: 0x001E66F5
+		// Token: 0x17000631 RID: 1585
+		// (get) Token: 0x0600553D RID: 21821 RVA: 0x00208675 File Offset: 0x00206875
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F7C RID: 20348 RVA: 0x001E8502 File Offset: 0x001E6702
+		// Token: 0x0600553E RID: 21822 RVA: 0x00208682 File Offset: 0x00206882
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004F7D RID: 20349 RVA: 0x001E850C File Offset: 0x001E670C
+		// Token: 0x0600553F RID: 21823 RVA: 0x0020868C File Offset: 0x0020688C
 		public static BoxType GetRootAsBoxType(ByteBuffer _bb)
 		{
 			return BoxType.GetRootAsBoxType(_bb, default(BoxType));
 		}
 
-		// Token: 0x06004F7E RID: 20350 RVA: 0x001E8528 File Offset: 0x001E6728
+		// Token: 0x06005540 RID: 21824 RVA: 0x002086A8 File Offset: 0x002068A8
 		public static BoxType GetRootAsBoxType(ByteBuffer _bb, BoxType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004F7F RID: 20351 RVA: 0x001E8545 File Offset: 0x001E6745
+		// Token: 0x06005541 RID: 21825 RVA: 0x002086C5 File Offset: 0x002068C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004F80 RID: 20352 RVA: 0x001E8554 File Offset: 0x001E6754
+		// Token: 0x06005542 RID: 21826 RVA: 0x002086D4 File Offset: 0x002068D4
 		public BoxType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170005F2 RID: 1522
-		// (get) Token: 0x06004F81 RID: 20353 RVA: 0x001E8564 File Offset: 0x001E6764
+		// Token: 0x17000632 RID: 1586
+		// (get) Token: 0x06005543 RID: 21827 RVA: 0x002086E4 File Offset: 0x002068E4
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170005F3 RID: 1523
-		// (get) Token: 0x06004F82 RID: 20354 RVA: 0x001E85A0 File Offset: 0x001E67A0
+		// Token: 0x17000633 RID: 1587
+		// (get) Token: 0x06005544 RID: 21828 RVA: 0x00208720 File Offset: 0x00206920
 		public string Mark
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F83 RID: 20355 RVA: 0x001E85D7 File Offset: 0x001E67D7
+		// Token: 0x06005545 RID: 21829 RVA: 0x00208757 File Offset: 0x00206957
 		public Span<byte> GetMarkBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06004F84 RID: 20356 RVA: 0x001E85E6 File Offset: 0x001E67E6
+		// Token: 0x06005546 RID: 21830 RVA: 0x00208766 File Offset: 0x00206966
 		public byte[] GetMarkArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170005F4 RID: 1524
-		// (get) Token: 0x06004F85 RID: 20357 RVA: 0x001E8600 File Offset: 0x001E6800
+		// Token: 0x17000634 RID: 1588
+		// (get) Token: 0x06005547 RID: 21831 RVA: 0x00208780 File Offset: 0x00206980
 		public int StartState
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F86 RID: 20358 RVA: 0x001E863C File Offset: 0x001E683C
+		// Token: 0x06005548 RID: 21832 RVA: 0x002087BC File Offset: 0x002069BC
 		public int IdleState(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170005F5 RID: 1525
-		// (get) Token: 0x06004F87 RID: 20359 RVA: 0x001E867C File Offset: 0x001E687C
+		// Token: 0x17000635 RID: 1589
+		// (get) Token: 0x06005549 RID: 21833 RVA: 0x002087FC File Offset: 0x002069FC
 		public int IdleStateLength
 		{
 			get
@@ -132,19 +132,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F88 RID: 20360 RVA: 0x001E86A8 File Offset: 0x001E68A8
+		// Token: 0x0600554A RID: 21834 RVA: 0x00208828 File Offset: 0x00206A28
 		public Span<int> GetIdleStateBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06004F89 RID: 20361 RVA: 0x001E86B8 File Offset: 0x001E68B8
+		// Token: 0x0600554B RID: 21835 RVA: 0x00208838 File Offset: 0x00206A38
 		public int[] GetIdleStateArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004F8A RID: 20362 RVA: 0x001E86D0 File Offset: 0x001E68D0
+		// Token: 0x0600554C RID: 21836 RVA: 0x00208850 File Offset: 0x00206A50
 		public int IdleStartState(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -155,8 +155,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170005F6 RID: 1526
-		// (get) Token: 0x06004F8B RID: 20363 RVA: 0x001E8710 File Offset: 0x001E6910
+		// Token: 0x17000636 RID: 1590
+		// (get) Token: 0x0600554D RID: 21837 RVA: 0x00208890 File Offset: 0x00206A90
 		public int IdleStartStateLength
 		{
 			get
@@ -170,20 +170,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F8C RID: 20364 RVA: 0x001E873C File Offset: 0x001E693C
+		// Token: 0x0600554E RID: 21838 RVA: 0x002088BC File Offset: 0x00206ABC
 		public Span<int> GetIdleStartStateBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06004F8D RID: 20365 RVA: 0x001E874C File Offset: 0x001E694C
+		// Token: 0x0600554F RID: 21839 RVA: 0x002088CC File Offset: 0x00206ACC
 		public int[] GetIdleStartStateArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170005F7 RID: 1527
-		// (get) Token: 0x06004F8E RID: 20366 RVA: 0x001E8764 File Offset: 0x001E6964
+		// Token: 0x17000637 RID: 1591
+		// (get) Token: 0x06005550 RID: 21840 RVA: 0x002088E4 File Offset: 0x00206AE4
 		public int DeathState
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170005F8 RID: 1528
-		// (get) Token: 0x06004F8F RID: 20367 RVA: 0x001E87A4 File Offset: 0x001E69A4
+		// Token: 0x17000638 RID: 1592
+		// (get) Token: 0x06005551 RID: 21841 RVA: 0x00208924 File Offset: 0x00206B24
 		public float OpenTime
 		{
 			get
@@ -212,43 +212,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F90 RID: 20368 RVA: 0x001E87E8 File Offset: 0x001E69E8
+		// Token: 0x06005552 RID: 21842 RVA: 0x00208965 File Offset: 0x00206B65
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用IdleStartStateIter()或GetIdleStartStateBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] IdleStartState()
+		public int[] IdleStartState()
 		{
-			BoxType boxType = this;
-			return boxType.GetIdleStartStateArray() ?? Array.Empty<int>();
+			return this.GetIdleStartStateArray();
 		}
 
-		// Token: 0x06004F91 RID: 20369 RVA: 0x001E880C File Offset: 0x001E6A0C
+		// Token: 0x06005553 RID: 21843 RVA: 0x0020896D File Offset: 0x00206B6D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> IdleStartStateIter()
+		public IEnumerable<int> IdleStartStateIter()
 		{
 			BoxType.<IdleStartStateIter>d__31 <IdleStartStateIter>d__ = new BoxType.<IdleStartStateIter>d__31(-2);
 			<IdleStartStateIter>d__.<>3__<>4__this = this;
 			return <IdleStartStateIter>d__;
 		}
 
-		// Token: 0x06004F92 RID: 20370 RVA: 0x001E8824 File Offset: 0x001E6A24
+		// Token: 0x06005554 RID: 21844 RVA: 0x00208982 File Offset: 0x00206B82
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用IdleStateIter()或GetIdleStateBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] IdleState()
+		public int[] IdleState()
 		{
-			BoxType boxType = this;
-			return boxType.GetIdleStateArray() ?? Array.Empty<int>();
+			return this.GetIdleStateArray();
 		}
 
-		// Token: 0x06004F93 RID: 20371 RVA: 0x001E8848 File Offset: 0x001E6A48
+		// Token: 0x06005555 RID: 21845 RVA: 0x0020898A File Offset: 0x00206B8A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> IdleStateIter()
+		public IEnumerable<int> IdleStateIter()
 		{
 			BoxType.<IdleStateIter>d__33 <IdleStateIter>d__ = new BoxType.<IdleStateIter>d__33(-2);
 			<IdleStateIter>d__.<>3__<>4__this = this;
 			return <IdleStateIter>d__;
 		}
 
-		// Token: 0x04004B47 RID: 19271
+		// Token: 0x04005127 RID: 20775
 		private Table __p;
 	}
 }

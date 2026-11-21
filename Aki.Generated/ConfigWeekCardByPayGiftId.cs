@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A94 RID: 2708
+	// Token: 0x02000B69 RID: 2921
 	public class ConfigWeekCardByPayGiftId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F8C RID: 16268 RVA: 0x001C1ACC File Offset: 0x001BFCCC
+		// Token: 0x0600448A RID: 17546 RVA: 0x001E0E60 File Offset: 0x001DF060
 		static ConfigWeekCardByPayGiftId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeekCardByPayGiftId.CreateStaticDefaultValue), new Action(ConfigWeekCardByPayGiftId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F8D RID: 16269 RVA: 0x001C1AEC File Offset: 0x001BFCEC
+		// Token: 0x0600448B RID: 17547 RVA: 0x001E0E80 File Offset: 0x001DF080
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeekCardByPayGiftId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F8E RID: 16270 RVA: 0x001C1B6B File Offset: 0x001BFD6B
+		// Token: 0x0600448C RID: 17548 RVA: 0x001E0EFF File Offset: 0x001DF0FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeekCardByPayGiftId.LogPair = null;
 			ConfigWeekCardByPayGiftId.HandleId = 0;
 		}
 
-		// Token: 0x06003F8F RID: 16271 RVA: 0x001C1B79 File Offset: 0x001BFD79
+		// Token: 0x0600448D RID: 17549 RVA: 0x001E0F0D File Offset: 0x001DF10D
 		public static void Init()
 		{
 			ConfigWeekCardByPayGiftId.HandleId = ConfigCommon.InitDataStatement(ConfigWeekCardByPayGiftId.HandleId, "db_weekcard.db", "select BinData from `WeekCard` where PayGiftId=?");
 		}
 
-		// Token: 0x06003F90 RID: 16272 RVA: 0x001C1B94 File Offset: 0x001BFD94
+		// Token: 0x0600448E RID: 17550 RVA: 0x001E0F28 File Offset: 0x001DF128
 		public static WeekCard? GetConfig(int p0PayGiftId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeekCardByPayGiftId.HandleId, ConfigWeekCardByPayGiftId.LogPair))
@@ -89,7 +89,7 @@ namespace Aki.Config
 			return new WeekCard?(rootAsWeekCard);
 		}
 
-		// Token: 0x06003F91 RID: 16273 RVA: 0x001C1D0C File Offset: 0x001BFF0C
+		// Token: 0x0600448F RID: 17551 RVA: 0x001E10A0 File Offset: 0x001DF2A0
 		[NullableContext(2)]
 		public static IReadOnlyList<WeekCard> GetConfigList(int p0PayGiftId, bool useCache = true)
 		{
@@ -142,22 +142,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040049F2 RID: 18930
+		// Token: 0x04004FC5 RID: 20421
 		private const string DB = "db_weekcard.db";
 
-		// Token: 0x040049F3 RID: 18931
+		// Token: 0x04004FC6 RID: 20422
 		private const string FILE = "z.周卡.xlsx";
 
-		// Token: 0x040049F4 RID: 18932
+		// Token: 0x04004FC7 RID: 20423
 		private const string TABLE = "WeekCard";
 
-		// Token: 0x040049F5 RID: 18933
+		// Token: 0x04004FC8 RID: 20424
 		private const string COMMAND = "select BinData from `WeekCard` where PayGiftId=?";
 
-		// Token: 0x040049F6 RID: 18934
+		// Token: 0x04004FC9 RID: 20425
 		private const string KEY_PREFIX = "WeekCardByPayGiftId";
 
-		// Token: 0x040049F7 RID: 18935
+		// Token: 0x04004FCA RID: 20426
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,7 +167,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040049F8 RID: 18936
+		// Token: 0x04004FCB RID: 20427
 		private static int HandleId;
 	}
 }

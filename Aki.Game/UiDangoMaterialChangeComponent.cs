@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002C9C RID: 11420
+// Token: 0x020021F5 RID: 8693
 [NullableContext(1)]
 [Nullable(0)]
 public class UiDangoMaterialChangeComponent : UiModelComponentBase
 {
-	// Token: 0x06017DDD RID: 97757 RVA: 0x00611836 File Offset: 0x0060FA36
+	// Token: 0x06015651 RID: 87633 RVA: 0x006373BA File Offset: 0x006355BA
 	protected override void OnInit()
 	{
 		this.UiModelActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
@@ -22,25 +22,25 @@ public class UiDangoMaterialChangeComponent : UiModelComponentBase
 		}, 100, "Ui.UiSceneModel");
 	}
 
-	// Token: 0x06017DDE RID: 97758 RVA: 0x0061186C File Offset: 0x0060FA6C
+	// Token: 0x06015652 RID: 87634 RVA: 0x006373F0 File Offset: 0x006355F0
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017DDF RID: 97759 RVA: 0x00611890 File Offset: 0x0060FA90
+	// Token: 0x06015653 RID: 87635 RVA: 0x00637414 File Offset: 0x00635614
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017DE0 RID: 97760 RVA: 0x006118B4 File Offset: 0x0060FAB4
+	// Token: 0x06015654 RID: 87636 RVA: 0x00637438 File Offset: 0x00635638
 	private void OnModelLoadComplete()
 	{
 		this.InitOriginalMaterialMap();
 	}
 
-	// Token: 0x06017DE1 RID: 97761 RVA: 0x006118BC File Offset: 0x0060FABC
+	// Token: 0x06015655 RID: 87637 RVA: 0x00637440 File Offset: 0x00635640
 	private void InitOriginalMaterialMap()
 	{
 		this.OriginalMaterialMap.Clear();
@@ -59,7 +59,7 @@ public class UiDangoMaterialChangeComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017DE2 RID: 97762 RVA: 0x00611928 File Offset: 0x0060FB28
+	// Token: 0x06015656 RID: 87638 RVA: 0x006374AC File Offset: 0x006356AC
 	public void ReplaceSelectMaterial(bool isReplace)
 	{
 		CharRenderingComponent charRenderingComponent = this.UiModelActorComponent.CharRenderingComponent;
@@ -71,19 +71,19 @@ public class UiDangoMaterialChangeComponent : UiModelComponentBase
 		charRenderingComponent.RemoveExternalMaterialReplaceV2(EKuroCharBodySpecifiedType.All, EKuroCharSlotSpecifiedType.Outline, EKuroCharMeshPart.ECharacterMeshPart_Max);
 	}
 
-	// Token: 0x0400B1EC RID: 45548
+	// Token: 0x0400B557 RID: 46423
 	private const string SELECT_MATERIAL_PATH = "/Game/Aki/Character/NPC/Tuanzi/HYtuanzi_jinxi/Model/MI_Tuanzi_Stroke_90001.MI_Tuanzi_Stroke_90001";
 
-	// Token: 0x0400B1ED RID: 45549
+	// Token: 0x0400B558 RID: 46424
 	protected UiModelActorComponent UiModelActorComponent;
 
-	// Token: 0x0400B1EE RID: 45550
+	// Token: 0x0400B559 RID: 46425
 	private UMaterialInstance ReplaceMaterial;
 
-	// Token: 0x0400B1EF RID: 45551
+	// Token: 0x0400B55A RID: 46426
 	private readonly Dictionary<int, UMaterialInterface> OriginalMaterialMap = new Dictionary<int, UMaterialInterface>();
 
-	// Token: 0x0400B1F0 RID: 45552
+	// Token: 0x0400B55B RID: 46427
 	private readonly FName[] SlotNameList = new FName[]
 	{
 		new FName("OL_Hair"),

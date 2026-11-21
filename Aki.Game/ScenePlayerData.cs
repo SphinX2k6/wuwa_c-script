@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003510 RID: 13584
+// Token: 0x02002A85 RID: 10885
 [NullableContext(2)]
 [Nullable(0)]
 public class ScenePlayerData
 {
-	// Token: 0x0601DC5D RID: 121949 RVA: 0x00857AE7 File Offset: 0x00855CE7
+	// Token: 0x0601B977 RID: 113015 RVA: 0x008800B3 File Offset: 0x0087E2B3
 	public ScenePlayerData(int playerId, int areaId)
 	{
 		this.PlayerId = playerId;
@@ -16,7 +16,7 @@ public class ScenePlayerData
 		this.Location = Vector.Create();
 	}
 
-	// Token: 0x0601DC5E RID: 121950 RVA: 0x00857B08 File Offset: 0x00855D08
+	// Token: 0x0601B978 RID: 113016 RVA: 0x008800D4 File Offset: 0x0087E2D4
 	public void Clear()
 	{
 		this.PlayerId = 0;
@@ -27,7 +27,7 @@ public class ScenePlayerData
 		}
 	}
 
-	// Token: 0x0601DC5F RID: 121951 RVA: 0x00857B31 File Offset: 0x00855D31
+	// Token: 0x0601B979 RID: 113017 RVA: 0x008800FD File Offset: 0x0087E2FD
 	public void SetTimerStart()
 	{
 		if (this.TimerNumber != null)
@@ -40,25 +40,25 @@ public class ScenePlayerData
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0601DC60 RID: 121952 RVA: 0x00857B65 File Offset: 0x00855D65
+	// Token: 0x0601B97A RID: 113018 RVA: 0x00880131 File Offset: 0x0087E331
 	public int GetPlayerId()
 	{
 		return this.PlayerId;
 	}
 
-	// Token: 0x0601DC61 RID: 121953 RVA: 0x00857B6D File Offset: 0x00855D6D
+	// Token: 0x0601B97B RID: 113019 RVA: 0x00880139 File Offset: 0x0087E339
 	public void SetRemoteSceneLoading(bool isFinish)
 	{
 		this.RemoteSceneLoading = isFinish;
 	}
 
-	// Token: 0x0601DC62 RID: 121954 RVA: 0x00857B76 File Offset: 0x00855D76
+	// Token: 0x0601B97C RID: 113020 RVA: 0x00880142 File Offset: 0x0087E342
 	public bool IsRemoteSceneLoading()
 	{
 		return this.RemoteSceneLoading;
 	}
 
-	// Token: 0x0601DC63 RID: 121955 RVA: 0x00857B80 File Offset: 0x00855D80
+	// Token: 0x0601B97D RID: 113021 RVA: 0x0088014C File Offset: 0x0087E34C
 	public void SetLocation()
 	{
 		SceneTeamPlayer teamPlayerData = SceneTeamModel.Instance.GetTeamPlayerData(this.PlayerId);
@@ -116,7 +116,7 @@ public class ScenePlayerData
 		EventSystem.Instance.Emit<int, Vector>(EEventName.ScenePlayerLocationChanged, this.PlayerId, this.Location);
 	}
 
-	// Token: 0x0601DC64 RID: 121956 RVA: 0x00857C89 File Offset: 0x00855E89
+	// Token: 0x0601B97E RID: 113022 RVA: 0x00880255 File Offset: 0x0087E455
 	public Vector GetLocation()
 	{
 		if (CreatureModel.Instance.GetPlayerId() != this.PlayerId)
@@ -135,34 +135,34 @@ public class ScenePlayerData
 		return characterActorComponent.ActorLocationProxy;
 	}
 
-	// Token: 0x0601DC65 RID: 121957 RVA: 0x00857CC2 File Offset: 0x00855EC2
+	// Token: 0x0601B97F RID: 113023 RVA: 0x0088028E File Offset: 0x0087E48E
 	public int GetAreaId()
 	{
 		return this.AreaId;
 	}
 
-	// Token: 0x0601DC66 RID: 121958 RVA: 0x00857CCA File Offset: 0x00855ECA
+	// Token: 0x0601B980 RID: 113024 RVA: 0x00880296 File Offset: 0x0087E496
 	public void SetAreaId(int areaId)
 	{
 		this.AreaId = areaId;
 		this.SetLocation();
 	}
 
-	// Token: 0x0400E9AC RID: 59820
+	// Token: 0x0400EE67 RID: 61031
 	private int PlayerId;
 
-	// Token: 0x0400E9AD RID: 59821
+	// Token: 0x0400EE68 RID: 61032
 	private int AreaId;
 
-	// Token: 0x0400E9AE RID: 59822
+	// Token: 0x0400EE69 RID: 61033
 	private Vector Location;
 
-	// Token: 0x0400E9AF RID: 59823
+	// Token: 0x0400EE6A RID: 61034
 	private bool RemoteSceneLoading;
 
-	// Token: 0x0400E9B0 RID: 59824
+	// Token: 0x0400EE6B RID: 61035
 	private TimerHandle TimerNumber;
 
-	// Token: 0x0400E9B1 RID: 59825
+	// Token: 0x0400EE6C RID: 61036
 	private const int TIME_INTERVAL = 1000;
 }

@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F4A RID: 20298
+	// Token: 0x02005479 RID: 21625
 	public class IButterflySplinePointT
 	{
-		// Token: 0x17009253 RID: 37459
-		// (get) Token: 0x06020259 RID: 131673 RVA: 0x00479103 File Offset: 0x00477303
-		// (set) Token: 0x0602025A RID: 131674 RVA: 0x0047910B File Offset: 0x0047730B
+		// Token: 0x170099CC RID: 39372
+		// (get) Token: 0x06021FAB RID: 139179 RVA: 0x004AF0F3 File Offset: 0x004AD2F3
+		// (set) Token: 0x06021FAC RID: 139180 RVA: 0x004AF0FB File Offset: 0x004AD2FB
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x17009254 RID: 37460
-		// (get) Token: 0x0602025B RID: 131675 RVA: 0x00479114 File Offset: 0x00477314
-		// (set) Token: 0x0602025C RID: 131676 RVA: 0x0047911C File Offset: 0x0047731C
+		// Token: 0x170099CD RID: 39373
+		// (get) Token: 0x06021FAD RID: 139181 RVA: 0x004AF104 File Offset: 0x004AD304
+		// (set) Token: 0x06021FAE RID: 139182 RVA: 0x004AF10C File Offset: 0x004AD30C
 		public IVectorInfoT ArriveTangent { get; set; }
 
-		// Token: 0x17009255 RID: 37461
-		// (get) Token: 0x0602025D RID: 131677 RVA: 0x00479125 File Offset: 0x00477325
-		// (set) Token: 0x0602025E RID: 131678 RVA: 0x0047912D File Offset: 0x0047732D
+		// Token: 0x170099CE RID: 39374
+		// (get) Token: 0x06021FAF RID: 139183 RVA: 0x004AF115 File Offset: 0x004AD315
+		// (set) Token: 0x06021FB0 RID: 139184 RVA: 0x004AF11D File Offset: 0x004AD31D
 		public IVectorInfoT LeaveTangent { get; set; }
 
-		// Token: 0x17009256 RID: 37462
-		// (get) Token: 0x0602025F RID: 131679 RVA: 0x00479136 File Offset: 0x00477336
-		// (set) Token: 0x06020260 RID: 131680 RVA: 0x0047913E File Offset: 0x0047733E
+		// Token: 0x170099CF RID: 39375
+		// (get) Token: 0x06021FB1 RID: 139185 RVA: 0x004AF126 File Offset: 0x004AD326
+		// (set) Token: 0x06021FB2 RID: 139186 RVA: 0x004AF12E File Offset: 0x004AD32E
 		public ESplineLine LineType { get; set; }
 
-		// Token: 0x17009257 RID: 37463
-		// (get) Token: 0x06020261 RID: 131681 RVA: 0x00479147 File Offset: 0x00477347
-		// (set) Token: 0x06020262 RID: 131682 RVA: 0x0047914F File Offset: 0x0047734F
+		// Token: 0x170099D0 RID: 39376
+		// (get) Token: 0x06021FB3 RID: 139187 RVA: 0x004AF137 File Offset: 0x004AD337
+		// (set) Token: 0x06021FB4 RID: 139188 RVA: 0x004AF13F File Offset: 0x004AD33F
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x17009258 RID: 37464
-		// (get) Token: 0x06020263 RID: 131683 RVA: 0x00479158 File Offset: 0x00477358
-		// (set) Token: 0x06020264 RID: 131684 RVA: 0x00479160 File Offset: 0x00477360
+		// Token: 0x170099D1 RID: 39377
+		// (get) Token: 0x06021FB5 RID: 139189 RVA: 0x004AF148 File Offset: 0x004AD348
+		// (set) Token: 0x06021FB6 RID: 139190 RVA: 0x004AF150 File Offset: 0x004AD350
 		public int MoveSpeed { get; set; }
 
-		// Token: 0x17009259 RID: 37465
-		// (get) Token: 0x06020265 RID: 131685 RVA: 0x00479169 File Offset: 0x00477369
-		// (set) Token: 0x06020266 RID: 131686 RVA: 0x00479171 File Offset: 0x00477371
+		// Token: 0x170099D2 RID: 39378
+		// (get) Token: 0x06021FB7 RID: 139191 RVA: 0x004AF159 File Offset: 0x004AD359
+		// (set) Token: 0x06021FB8 RID: 139192 RVA: 0x004AF161 File Offset: 0x004AD361
 		public bool IgnorePoint { get; set; }
 
-		// Token: 0x06020267 RID: 131687 RVA: 0x0047917A File Offset: 0x0047737A
+		// Token: 0x06021FB9 RID: 139193 RVA: 0x004AF16A File Offset: 0x004AD36A
 		public IButterflySplinePointT()
 		{
 			this.Position = null;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F92 RID: 3986
+	// Token: 0x020010BC RID: 4284
 	public class IFlipperConditionStepBase_SetValue
 	{
-		// Token: 0x040035A8 RID: 13736
+		// Token: 0x040038D8 RID: 14552
 		public EFlipperConditionStep Type;
 	}
 }

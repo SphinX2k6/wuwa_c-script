@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002071 RID: 8305
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022BA RID: 8890
 	public class IVisualNovelDisplayItemPrefab : IVisualNovelDisplayItemBase
 	{
-		// Token: 0x0600B66C RID: 46700 RVA: 0x001A6ECC File Offset: 0x001A50CC
+		// Token: 0x0600C198 RID: 49560 RVA: 0x001BD724 File Offset: 0x001BB924
 		private IVisualNovelDisplayItemPrefab_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B66D RID: 46701 RVA: 0x001A6F04 File Offset: 0x001A5104
+		// Token: 0x0600C199 RID: 49561 RVA: 0x001BD75C File Offset: 0x001BB95C
 		public static IVisualNovelDisplayItemPrefab Create([Nullable(2)] IVisualNovelDisplayItemPrefab instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B66E RID: 46702 RVA: 0x001A6F17 File Offset: 0x001A5117
+		// Token: 0x0600C19A RID: 49562 RVA: 0x001BD76F File Offset: 0x001BB96F
 		public static IVisualNovelDisplayItemPrefab CreateFromSetValue([Nullable(2)] IVisualNovelDisplayItemPrefab_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B66F RID: 46703 RVA: 0x001A6F2A File Offset: 0x001A512A
+		// Token: 0x0600C19B RID: 49563 RVA: 0x001BD782 File Offset: 0x001BB982
 		public new IVisualNovelDisplayItemPrefab_SetValue ToSetValue()
 		{
 			return new IVisualNovelDisplayItemPrefab_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037E5 RID: 14309
-		// (get) Token: 0x0600B670 RID: 46704 RVA: 0x001A6F49 File Offset: 0x001A5149
-		// (set) Token: 0x0600B671 RID: 46705 RVA: 0x001A6F74 File Offset: 0x001A5174
+		// Token: 0x17003AC5 RID: 15045
+		// (get) Token: 0x0600C19C RID: 49564 RVA: 0x001BD7A1 File Offset: 0x001BB9A1
+		// (set) Token: 0x0600C19D RID: 49565 RVA: 0x001BD7CC File Offset: 0x001BB9CC
 		public override EVisualNovelDisplayItemType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037E6 RID: 14310
-		// (get) Token: 0x0600B672 RID: 46706 RVA: 0x001A6F82 File Offset: 0x001A5182
-		// (set) Token: 0x0600B673 RID: 46707 RVA: 0x001A6FAD File Offset: 0x001A51AD
+		// Token: 0x17003AC6 RID: 15046
+		// (get) Token: 0x0600C19E RID: 49566 RVA: 0x001BD7DA File Offset: 0x001BB9DA
+		// (set) Token: 0x0600C19F RID: 49567 RVA: 0x001BD805 File Offset: 0x001BBA05
 		public virtual int PrefabId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D94 RID: 28052
+		// Token: 0x040073A0 RID: 29600
 		[Nullable(2)]
 		protected new IVisualNovelDisplayItemPrefab FbInstance;
 
-		// Token: 0x04006D95 RID: 28053
+		// Token: 0x040073A1 RID: 29601
 		[Nullable(2)]
 		protected new IVisualNovelDisplayItemPrefab_SetValue PocoInterface;
 	}

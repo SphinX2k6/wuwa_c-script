@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060B1 RID: 24753
+	// Token: 0x02006713 RID: 26387
 	public class IActorFxEmotePlayT
 	{
-		// Token: 0x1700B66B RID: 46699
-		// (get) Token: 0x0602A428 RID: 173096 RVA: 0x005D3681 File Offset: 0x005D1881
-		// (set) Token: 0x0602A429 RID: 173097 RVA: 0x005D3689 File Offset: 0x005D1889
+		// Token: 0x1700BFD6 RID: 49110
+		// (get) Token: 0x0602CB09 RID: 183049 RVA: 0x0061D629 File Offset: 0x0061B829
+		// (set) Token: 0x0602CB0A RID: 183050 RVA: 0x0061D631 File Offset: 0x0061B831
 		public EActorFxEmoteType Type { get; set; }
 
-		// Token: 0x1700B66C RID: 46700
-		// (get) Token: 0x0602A42A RID: 173098 RVA: 0x005D3692 File Offset: 0x005D1892
-		// (set) Token: 0x0602A42B RID: 173099 RVA: 0x005D369A File Offset: 0x005D189A
+		// Token: 0x1700BFD7 RID: 49111
+		// (get) Token: 0x0602CB0B RID: 183051 RVA: 0x0061D63A File Offset: 0x0061B83A
+		// (set) Token: 0x0602CB0C RID: 183052 RVA: 0x0061D642 File Offset: 0x0061B842
 		public long FxEmoteId { get; set; }
 
-		// Token: 0x1700B66D RID: 46701
-		// (get) Token: 0x0602A42C RID: 173100 RVA: 0x005D36A3 File Offset: 0x005D18A3
-		// (set) Token: 0x0602A42D RID: 173101 RVA: 0x005D36AB File Offset: 0x005D18AB
+		// Token: 0x1700BFD8 RID: 49112
+		// (get) Token: 0x0602CB0D RID: 183053 RVA: 0x0061D64B File Offset: 0x0061B84B
+		// (set) Token: 0x0602CB0E RID: 183054 RVA: 0x0061D653 File Offset: 0x0061B853
 		public IActorFxEmoteOverrideConfigT OverrideConfig { get; set; }
 
-		// Token: 0x1700B66E RID: 46702
-		// (get) Token: 0x0602A42E RID: 173102 RVA: 0x005D36B4 File Offset: 0x005D18B4
-		// (set) Token: 0x0602A42F RID: 173103 RVA: 0x005D36BC File Offset: 0x005D18BC
+		// Token: 0x1700BFD9 RID: 49113
+		// (get) Token: 0x0602CB0F RID: 183055 RVA: 0x0061D65C File Offset: 0x0061B85C
+		// (set) Token: 0x0602CB10 RID: 183056 RVA: 0x0061D664 File Offset: 0x0061B864
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700B66F RID: 46703
-		// (get) Token: 0x0602A430 RID: 173104 RVA: 0x005D36C5 File Offset: 0x005D18C5
-		// (set) Token: 0x0602A431 RID: 173105 RVA: 0x005D36CD File Offset: 0x005D18CD
+		// Token: 0x1700BFDA RID: 49114
+		// (get) Token: 0x0602CB11 RID: 183057 RVA: 0x0061D66D File Offset: 0x0061B86D
+		// (set) Token: 0x0602CB12 RID: 183058 RVA: 0x0061D675 File Offset: 0x0061B875
 		public bool LoopPlay { get; set; }
 
-		// Token: 0x1700B670 RID: 46704
-		// (get) Token: 0x0602A432 RID: 173106 RVA: 0x005D36D6 File Offset: 0x005D18D6
-		// (set) Token: 0x0602A433 RID: 173107 RVA: 0x005D36DE File Offset: 0x005D18DE
+		// Token: 0x1700BFDB RID: 49115
+		// (get) Token: 0x0602CB13 RID: 183059 RVA: 0x0061D67E File Offset: 0x0061B87E
+		// (set) Token: 0x0602CB14 RID: 183060 RVA: 0x0061D686 File Offset: 0x0061B886
 		public bool KeepPlay { get; set; }
 
-		// Token: 0x1700B671 RID: 46705
-		// (get) Token: 0x0602A434 RID: 173108 RVA: 0x005D36E7 File Offset: 0x005D18E7
-		// (set) Token: 0x0602A435 RID: 173109 RVA: 0x005D36EF File Offset: 0x005D18EF
+		// Token: 0x1700BFDC RID: 49116
+		// (get) Token: 0x0602CB15 RID: 183061 RVA: 0x0061D68F File Offset: 0x0061B88F
+		// (set) Token: 0x0602CB16 RID: 183062 RVA: 0x0061D697 File Offset: 0x0061B897
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A436 RID: 173110 RVA: 0x005D36F8 File Offset: 0x005D18F8
+		// Token: 0x0602CB17 RID: 183063 RVA: 0x0061D6A0 File Offset: 0x0061B8A0
 		public IActorFxEmotePlayT()
 		{
 			this.Type = EActorFxEmoteType.Play;

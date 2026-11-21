@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B66 RID: 7014
+// Token: 0x02001025 RID: 4133
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchHandBookView : UiViewBase
 {
-	// Token: 0x0600D067 RID: 53351 RVA: 0x002F975E File Offset: 0x002F795E
+	// Token: 0x0600A478 RID: 42104 RVA: 0x00304836 File Offset: 0x00302A36
 	public FloroRanchHandBookView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D068 RID: 53352 RVA: 0x002F9768 File Offset: 0x002F7968
+	// Token: 0x0600A479 RID: 42105 RVA: 0x00304840 File Offset: 0x00302A40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -62,7 +62,7 @@ public class FloroRanchHandBookView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D069 RID: 53353 RVA: 0x002F9980 File Offset: 0x002F7B80
+	// Token: 0x0600A47A RID: 42106 RVA: 0x00304A58 File Offset: 0x00302C58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchHandBookView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -73,13 +73,13 @@ public class FloroRanchHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D06A RID: 53354 RVA: 0x002F99C3 File Offset: 0x002F7BC3
+	// Token: 0x0600A47B RID: 42107 RVA: 0x00304A9B File Offset: 0x00302C9B
 	private FloroRanchActivityData GetHandBookActivityData()
 	{
 		return FloroRanchModel.Instance.GetActivityData(this.ActivityDataType, true);
 	}
 
-	// Token: 0x0600D06B RID: 53355 RVA: 0x002F99D8 File Offset: 0x002F7BD8
+	// Token: 0x0600A47C RID: 42108 RVA: 0x00304AB0 File Offset: 0x00302CB0
 	private UniTask RefreshView()
 	{
 		FloroRanchHandBookView.<RefreshView>d__10 <RefreshView>d__;
@@ -90,7 +90,7 @@ public class FloroRanchHandBookView : UiViewBase
 		return <RefreshView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D06C RID: 53356 RVA: 0x002F9A1C File Offset: 0x002F7C1C
+	// Token: 0x0600A47D RID: 42109 RVA: 0x00304AF4 File Offset: 0x00302CF4
 	private void RefreshTabRedDot()
 	{
 		FloroRanchActivityData handBookActivityData = this.GetHandBookActivityData();
@@ -107,13 +107,13 @@ public class FloroRanchHandBookView : UiViewBase
 		item2.SetUIActive(handBookActivityData.IsToyHasRedDot());
 	}
 
-	// Token: 0x0600D06D RID: 53357 RVA: 0x002F9A61 File Offset: 0x002F7C61
+	// Token: 0x0600A47E RID: 42110 RVA: 0x00304B39 File Offset: 0x00302D39
 	private bool IsSelectedItem()
 	{
 		return this.CurrentSelectedItem != null;
 	}
 
-	// Token: 0x0600D06E RID: 53358 RVA: 0x002F9A6C File Offset: 0x002F7C6C
+	// Token: 0x0600A47F RID: 42111 RVA: 0x00304B44 File Offset: 0x00302D44
 	private void OnItemClick(FloroRanchHandBookSmallSlotItem item)
 	{
 		FloroRanchHandBookSmallSlotItem currentSelectedItem = this.CurrentSelectedItem;
@@ -127,7 +127,7 @@ public class FloroRanchHandBookView : UiViewBase
 		this.RefreshCardItem(item.Data);
 	}
 
-	// Token: 0x0600D06F RID: 53359 RVA: 0x002F9AA0 File Offset: 0x002F7CA0
+	// Token: 0x0600A480 RID: 42112 RVA: 0x00304B78 File Offset: 0x00302D78
 	private void RefreshCardItem(FloroRanchUnlockDataBase data)
 	{
 		this.CardItem.CardType = this.CurrentType;
@@ -140,19 +140,19 @@ public class FloroRanchHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D070 RID: 53360 RVA: 0x002F9AFF File Offset: 0x002F7CFF
+	// Token: 0x0600A481 RID: 42113 RVA: 0x00304BD7 File Offset: 0x00302DD7
 	private bool OnPhantomCanExecuteChange()
 	{
 		return this.CurrentType > EFloroRanchCardType.Phantom;
 	}
 
-	// Token: 0x0600D071 RID: 53361 RVA: 0x002F9B0A File Offset: 0x002F7D0A
+	// Token: 0x0600A482 RID: 42114 RVA: 0x00304BE2 File Offset: 0x00302DE2
 	private bool OnToyCanExecuteChange()
 	{
 		return this.CurrentType != EFloroRanchCardType.Toy;
 	}
 
-	// Token: 0x0600D072 RID: 53362 RVA: 0x002F9B18 File Offset: 0x002F7D18
+	// Token: 0x0600A483 RID: 42115 RVA: 0x00304BF0 File Offset: 0x00302DF0
 	private void OnPhantomBtnClick(EToggleState state)
 	{
 		this.CurrentType = EFloroRanchCardType.Phantom;
@@ -164,7 +164,7 @@ public class FloroRanchHandBookView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D073 RID: 53363 RVA: 0x002F9B3E File Offset: 0x002F7D3E
+	// Token: 0x0600A484 RID: 42116 RVA: 0x00304C16 File Offset: 0x00302E16
 	private void OnToyBtnClick(EToggleState state)
 	{
 		this.CurrentType = EFloroRanchCardType.Toy;
@@ -176,14 +176,14 @@ public class FloroRanchHandBookView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D074 RID: 53364 RVA: 0x002F9B64 File Offset: 0x002F7D64
+	// Token: 0x0600A485 RID: 42117 RVA: 0x00304C3C File Offset: 0x00302E3C
 	private void OnCloseBtnClick()
 	{
 		EventSystem.Instance.Emit(EEventName.FloroRanchDataRedDot);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D075 RID: 53365 RVA: 0x002F9B7D File Offset: 0x002F7D7D
+	// Token: 0x0600A486 RID: 42118 RVA: 0x00304C55 File Offset: 0x00302E55
 	private FloroRanchHandBookItem CreateHandBookItem()
 	{
 		return new FloroRanchHandBookItem
@@ -194,57 +194,57 @@ public class FloroRanchHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x04005FB2 RID: 24498
+	// Token: 0x04006081 RID: 24705
 	private EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x04005FB3 RID: 24499
+	// Token: 0x04006082 RID: 24706
 	private EFloroRanchCardType CurrentType;
 
-	// Token: 0x04005FB4 RID: 24500
+	// Token: 0x04006083 RID: 24707
 	[Nullable(2)]
 	private FloroRanchHandBookSmallSlotItem CurrentSelectedItem;
 
-	// Token: 0x04005FB5 RID: 24501
+	// Token: 0x04006084 RID: 24708
 	private GenericScrollViewNew<FloroRanchHandBookItem, int> ItemScrollLayout;
 
-	// Token: 0x04005FB6 RID: 24502
+	// Token: 0x04006085 RID: 24709
 	private FloroRanchCardItem CardItem;
 
-	// Token: 0x020080D3 RID: 32979
+	// Token: 0x02007261 RID: 29281
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A074 RID: 172148
+		// Token: 0x040253A8 RID: 152488
 		public const int BtnClose = 0;
 
-		// Token: 0x0402A075 RID: 172149
+		// Token: 0x040253A9 RID: 152489
 		public const int LayoutTab = 1;
 
-		// Token: 0x0402A076 RID: 172150
+		// Token: 0x040253AA RID: 152490
 		public const int TogglePhantom = 2;
 
-		// Token: 0x0402A077 RID: 172151
+		// Token: 0x040253AB RID: 152491
 		public const int ToggleToy = 3;
 
-		// Token: 0x0402A078 RID: 172152
+		// Token: 0x040253AC RID: 152492
 		public const int ScrollList = 4;
 
-		// Token: 0x0402A079 RID: 172153
+		// Token: 0x040253AD RID: 152493
 		public const int LayoutHandBook = 5;
 
-		// Token: 0x0402A07A RID: 172154
+		// Token: 0x040253AE RID: 152494
 		public const int ItemHandBook = 6;
 
-		// Token: 0x0402A07B RID: 172155
+		// Token: 0x040253AF RID: 152495
 		public const int ItemCardDetail = 7;
 
-		// Token: 0x0402A07C RID: 172156
+		// Token: 0x040253B0 RID: 152496
 		public const int TextProgress = 8;
 
-		// Token: 0x0402A07D RID: 172157
+		// Token: 0x040253B1 RID: 152497
 		public const int ItemPhantomRedDot = 9;
 
-		// Token: 0x0402A07E RID: 172158
+		// Token: 0x040253B2 RID: 152498
 		public const int ItemToyRedDot = 10;
 	}
 }

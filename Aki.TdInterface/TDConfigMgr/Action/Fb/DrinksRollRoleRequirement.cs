@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AE9 RID: 10985
+	// Token: 0x02002DDD RID: 11741
 	public class DrinksRollRoleRequirement : ActionParams
 	{
-		// Token: 0x0600F0C1 RID: 61633 RVA: 0x0022F202 File Offset: 0x0022D402
-		[NullableContext(1)]
+		// Token: 0x0600FF77 RID: 65399 RVA: 0x0024CF0E File Offset: 0x0024B10E
 		public static DrinksRollRoleRequirement Create(IDrinksRollRoleRequirement? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CB1 RID: 19633
-		// (get) Token: 0x0600F0C2 RID: 61634 RVA: 0x0022F221 File Offset: 0x0022D421
+		// Token: 0x1700506B RID: 20587
+		// (get) Token: 0x0600FF78 RID: 65400 RVA: 0x0024CF2D File Offset: 0x0024B12D
 		public virtual int RoleId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CB2 RID: 19634
-		// (get) Token: 0x0600F0C3 RID: 61635 RVA: 0x0022F230 File Offset: 0x0022D430
+		// Token: 0x1700506C RID: 20588
+		// (get) Token: 0x0600FF79 RID: 65401 RVA: 0x0024CF3C File Offset: 0x0024B13C
 		public virtual int? RequirementId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008475 RID: 33909
+		// Token: 0x04008B79 RID: 35705
 		private IDrinksRollRoleRequirement Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004C8 RID: 1224
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000521 RID: 1313
 	public class ILiftFloorSeqMark
 	{
-		// Token: 0x060018DC RID: 6364 RVA: 0x0004A148 File Offset: 0x00048348
+		// Token: 0x06001A76 RID: 6774 RVA: 0x0004DE90 File Offset: 0x0004C090
 		private ILiftFloorSeqMark_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018DD RID: 6365 RVA: 0x0004A180 File Offset: 0x00048380
+		// Token: 0x06001A77 RID: 6775 RVA: 0x0004DEC8 File Offset: 0x0004C0C8
 		public static ILiftFloorSeqMark Create([Nullable(2)] ILiftFloorSeqMark instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018DE RID: 6366 RVA: 0x0004A193 File Offset: 0x00048393
+		// Token: 0x06001A78 RID: 6776 RVA: 0x0004DEDB File Offset: 0x0004C0DB
 		public static ILiftFloorSeqMark CreateFromSetValue([Nullable(2)] ILiftFloorSeqMark_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018DF RID: 6367 RVA: 0x0004A1A6 File Offset: 0x000483A6
+		// Token: 0x06001A79 RID: 6777 RVA: 0x0004DEEE File Offset: 0x0004C0EE
 		public ILiftFloorSeqMark_SetValue ToSetValue()
 		{
 			return new ILiftFloorSeqMark_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006A1 RID: 1697
-		// (get) Token: 0x060018E0 RID: 6368 RVA: 0x0004A1C5 File Offset: 0x000483C5
-		// (set) Token: 0x060018E1 RID: 6369 RVA: 0x0004A1F0 File Offset: 0x000483F0
+		// Token: 0x17000708 RID: 1800
+		// (get) Token: 0x06001A7A RID: 6778 RVA: 0x0004DF0D File Offset: 0x0004C10D
+		// (set) Token: 0x06001A7B RID: 6779 RVA: 0x0004DF38 File Offset: 0x0004C138
 		public virtual int Floor
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006A2 RID: 1698
-		// (get) Token: 0x060018E2 RID: 6370 RVA: 0x0004A1FE File Offset: 0x000483FE
-		// (set) Token: 0x060018E3 RID: 6371 RVA: 0x0004A229 File Offset: 0x00048429
+		// Token: 0x17000709 RID: 1801
+		// (get) Token: 0x06001A7C RID: 6780 RVA: 0x0004DF46 File Offset: 0x0004C146
+		// (set) Token: 0x06001A7D RID: 6781 RVA: 0x0004DF71 File Offset: 0x0004C171
 		public virtual string Mark
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001261 RID: 4705
+		// Token: 0x04001383 RID: 4995
 		[Nullable(2)]
 		protected ILiftFloorSeqMark FbInstance;
 
-		// Token: 0x04001262 RID: 4706
+		// Token: 0x04001384 RID: 4996
 		[Nullable(2)]
 		protected ILiftFloorSeqMark_SetValue PocoInterface;
 	}

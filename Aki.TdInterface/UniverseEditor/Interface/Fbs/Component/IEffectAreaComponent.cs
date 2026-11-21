@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200510B RID: 20747
+	// Token: 0x02005670 RID: 22128
 	public struct IEffectAreaComponent : IFlatbufferObject
 	{
-		// Token: 0x1700972C RID: 38700
-		// (get) Token: 0x060216DC RID: 136924 RVA: 0x004A4388 File Offset: 0x004A2588
+		// Token: 0x17009F19 RID: 40729
+		// (get) Token: 0x06023630 RID: 144944 RVA: 0x004DE314 File Offset: 0x004DC514
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060216DD RID: 136925 RVA: 0x004A4395 File Offset: 0x004A2595
+		// Token: 0x06023631 RID: 144945 RVA: 0x004DE321 File Offset: 0x004DC521
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060216DE RID: 136926 RVA: 0x004A439C File Offset: 0x004A259C
+		// Token: 0x06023632 RID: 144946 RVA: 0x004DE328 File Offset: 0x004DC528
 		public static IEffectAreaComponent GetRootAsIEffectAreaComponent(ByteBuffer _bb)
 		{
 			return IEffectAreaComponent.GetRootAsIEffectAreaComponent(_bb, default(IEffectAreaComponent));
 		}
 
-		// Token: 0x060216DF RID: 136927 RVA: 0x004A43B8 File Offset: 0x004A25B8
+		// Token: 0x06023633 RID: 144947 RVA: 0x004DE344 File Offset: 0x004DC544
 		public static IEffectAreaComponent GetRootAsIEffectAreaComponent(ByteBuffer _bb, IEffectAreaComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060216E0 RID: 136928 RVA: 0x004A43D5 File Offset: 0x004A25D5
+		// Token: 0x06023634 RID: 144948 RVA: 0x004DE361 File Offset: 0x004DC561
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060216E1 RID: 136929 RVA: 0x004A43E4 File Offset: 0x004A25E4
+		// Token: 0x06023635 RID: 144949 RVA: 0x004DE370 File Offset: 0x004DC570
 		public IEffectAreaComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700972D RID: 38701
-		// (get) Token: 0x060216E2 RID: 136930 RVA: 0x004A43F4 File Offset: 0x004A25F4
+		// Token: 0x17009F1A RID: 40730
+		// (get) Token: 0x06023636 RID: 144950 RVA: 0x004DE380 File Offset: 0x004DC580
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700972E RID: 38702
-		// (get) Token: 0x060216E3 RID: 136931 RVA: 0x004A4434 File Offset: 0x004A2634
+		// Token: 0x17009F1B RID: 40731
+		// (get) Token: 0x06023637 RID: 144951 RVA: 0x004DE3C0 File Offset: 0x004DC5C0
 		public IBuffArea? Config
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700972F RID: 38703
-		// (get) Token: 0x060216E4 RID: 136932 RVA: 0x004A4494 File Offset: 0x004A2694
+		// Token: 0x17009F1C RID: 40732
+		// (get) Token: 0x06023638 RID: 144952 RVA: 0x004DE420 File Offset: 0x004DC620
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060216E5 RID: 136933 RVA: 0x004A44D0 File Offset: 0x004A26D0
+		// Token: 0x06023639 RID: 144953 RVA: 0x004DE45C File Offset: 0x004DC65C
 		public static Offset<IEffectAreaComponent> CreateIEffectAreaComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IBuffArea> ConfigOffset = default(Offset<IBuffArea>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEffectAreaComponent.EndIEffectAreaComponent(builder);
 		}
 
-		// Token: 0x060216E6 RID: 136934 RVA: 0x004A44F4 File Offset: 0x004A26F4
+		// Token: 0x0602363A RID: 144954 RVA: 0x004DE480 File Offset: 0x004DC680
 		public static void StartIEffectAreaComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060216E7 RID: 136935 RVA: 0x004A44FD File Offset: 0x004A26FD
+		// Token: 0x0602363B RID: 144955 RVA: 0x004DE489 File Offset: 0x004DC689
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060216E8 RID: 136936 RVA: 0x004A4508 File Offset: 0x004A2708
+		// Token: 0x0602363C RID: 144956 RVA: 0x004DE494 File Offset: 0x004DC694
 		public static void AddConfig(FlatBufferBuilder builder, Offset<IBuffArea> configOffset)
 		{
 			builder.AddOffset(1, configOffset.Value, 0);
 		}
 
-		// Token: 0x060216E9 RID: 136937 RVA: 0x004A4518 File Offset: 0x004A2718
+		// Token: 0x0602363D RID: 144957 RVA: 0x004DE4A4 File Offset: 0x004DC6A4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060216EA RID: 136938 RVA: 0x004A4523 File Offset: 0x004A2723
+		// Token: 0x0602363E RID: 144958 RVA: 0x004DE4AF File Offset: 0x004DC6AF
 		public static Offset<IEffectAreaComponent> EndIEffectAreaComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IEffectAreaComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060216EB RID: 136939 RVA: 0x004A4530 File Offset: 0x004A2730
+		// Token: 0x0602363F RID: 144959 RVA: 0x004DE4BC File Offset: 0x004DC6BC
 		public IEffectAreaComponentT UnPack()
 		{
 			IEffectAreaComponentT effectAreaComponentT = new IEffectAreaComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return effectAreaComponentT;
 		}
 
-		// Token: 0x060216EC RID: 136940 RVA: 0x004A454C File Offset: 0x004A274C
+		// Token: 0x06023640 RID: 144960 RVA: 0x004DE4D8 File Offset: 0x004DC6D8
 		public void UnPackTo(IEffectAreaComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060216ED RID: 136941 RVA: 0x004A45A0 File Offset: 0x004A27A0
+		// Token: 0x06023641 RID: 144961 RVA: 0x004DE52C File Offset: 0x004DC72C
 		public static Offset<IEffectAreaComponent> Pack(FlatBufferBuilder builder, IEffectAreaComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEffectAreaComponent.CreateIEffectAreaComponent(builder, _o.Disabled, configOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E178 RID: 57720
+		// Token: 0x0400ED75 RID: 60789
 		private Table __p;
 	}
 }

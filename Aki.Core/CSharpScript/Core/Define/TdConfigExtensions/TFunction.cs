@@ -4,8 +4,8 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Core.Define.TdConfigExtensions
 {
-	// Token: 0x0200013F RID: 319
-	// (Invoke) Token: 0x06000B33 RID: 2867
+	// Token: 0x02000143 RID: 323
+	// (Invoke) Token: 0x06000B8E RID: 2958
 	[return: Nullable(new byte[]
 	{
 		0,

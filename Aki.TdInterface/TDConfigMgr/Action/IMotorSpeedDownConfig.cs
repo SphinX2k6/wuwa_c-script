@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C2C RID: 7212
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E23 RID: 7715
 	public class IMotorSpeedDownConfig : IMotorParamsChangeConfig
 	{
-		// Token: 0x06009ABD RID: 39613 RVA: 0x00163C3C File Offset: 0x00161E3C
+		// Token: 0x0600A415 RID: 42005 RVA: 0x00176F7C File Offset: 0x0017517C
 		private IMotorSpeedDownConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009ABE RID: 39614 RVA: 0x00163C74 File Offset: 0x00161E74
+		// Token: 0x0600A416 RID: 42006 RVA: 0x00176FB4 File Offset: 0x001751B4
 		public static IMotorSpeedDownConfig Create([Nullable(2)] IMotorSpeedDownConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009ABF RID: 39615 RVA: 0x00163C87 File Offset: 0x00161E87
+		// Token: 0x0600A417 RID: 42007 RVA: 0x00176FC7 File Offset: 0x001751C7
 		public static IMotorSpeedDownConfig CreateFromSetValue([Nullable(2)] IMotorSpeedDownConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AC0 RID: 39616 RVA: 0x00163C9A File Offset: 0x00161E9A
+		// Token: 0x0600A418 RID: 42008 RVA: 0x00176FDA File Offset: 0x001751DA
 		public new IMotorSpeedDownConfig_SetValue ToSetValue()
 		{
 			return new IMotorSpeedDownConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003073 RID: 12403
-		// (get) Token: 0x06009AC1 RID: 39617 RVA: 0x00163CB9 File Offset: 0x00161EB9
-		// (set) Token: 0x06009AC2 RID: 39618 RVA: 0x00163CE4 File Offset: 0x00161EE4
+		// Token: 0x170032E4 RID: 13028
+		// (get) Token: 0x0600A419 RID: 42009 RVA: 0x00176FF9 File Offset: 0x001751F9
+		// (set) Token: 0x0600A41A RID: 42010 RVA: 0x00177024 File Offset: 0x00175224
 		public override EMotorParamsChangeType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003074 RID: 12404
-		// (get) Token: 0x06009AC3 RID: 39619 RVA: 0x00163CF2 File Offset: 0x00161EF2
-		// (set) Token: 0x06009AC4 RID: 39620 RVA: 0x00163D1D File Offset: 0x00161F1D
+		// Token: 0x170032E5 RID: 13029
+		// (get) Token: 0x0600A41B RID: 42011 RVA: 0x00177032 File Offset: 0x00175232
+		// (set) Token: 0x0600A41C RID: 42012 RVA: 0x0017705D File Offset: 0x0017525D
 		public virtual EMotorSpeedDownConfig SpeedDownTagId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E14 RID: 24084
+		// Token: 0x0400634B RID: 25419
 		[Nullable(2)]
 		protected new IMotorSpeedDownConfig FbInstance;
 
-		// Token: 0x04005E15 RID: 24085
+		// Token: 0x0400634C RID: 25420
 		[Nullable(2)]
 		protected new IMotorSpeedDownConfig_SetValue PocoInterface;
 	}

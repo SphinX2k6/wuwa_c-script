@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002701 RID: 9985
+	// Token: 0x020029C7 RID: 10695
 	public class IAssistCharacterSplineMove : IAssistCharacterMoveType
 	{
-		// Token: 0x0600DEE1 RID: 57057 RVA: 0x00210C86 File Offset: 0x0020EE86
-		[NullableContext(1)]
+		// Token: 0x0600ECC9 RID: 60617 RVA: 0x0022D5EE File Offset: 0x0022B7EE
 		public static IAssistCharacterSplineMove Create(IAssistCharacterSplineMove? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042A1 RID: 17057
-		// (get) Token: 0x0600DEE2 RID: 57058 RVA: 0x00210CA5 File Offset: 0x0020EEA5
+		// Token: 0x170045E9 RID: 17897
+		// (get) Token: 0x0600ECCA RID: 60618 RVA: 0x0022D60D File Offset: 0x0022B80D
 		public override EAssistCharacterMoveType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042A2 RID: 17058
-		// (get) Token: 0x0600DEE3 RID: 57059 RVA: 0x00210CB2 File Offset: 0x0020EEB2
+		// Token: 0x170045EA RID: 17898
+		// (get) Token: 0x0600ECCB RID: 60619 RVA: 0x0022D61A File Offset: 0x0022B81A
 		public virtual int SplineId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BB3 RID: 31667
+		// Token: 0x04008257 RID: 33367
 		private IAssistCharacterSplineMove Instance;
 	}
 }

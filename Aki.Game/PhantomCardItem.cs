@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020012DD RID: 4829
+// Token: 0x02000791 RID: 1937
 [NullableContext(1)]
 [Nullable(0)]
 internal class PhantomCardItem : GridProxyAbstract<int>
 {
-	// Token: 0x06008531 RID: 34097 RVA: 0x001C5050 File Offset: 0x001C3250
+	// Token: 0x060058CC RID: 22732 RVA: 0x001CDEAC File Offset: 0x001CC0AC
 	public PhantomCardItem(ActivityMapTravelData activityBaseData)
 	{
 		this.ActivityBaseData = activityBaseData;
 	}
 
-	// Token: 0x06008532 RID: 34098 RVA: 0x001C5060 File Offset: 0x001C3260
+	// Token: 0x060058CD RID: 22733 RVA: 0x001CDEBC File Offset: 0x001CC0BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -60,14 +60,14 @@ internal class PhantomCardItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008533 RID: 34099 RVA: 0x001C5254 File Offset: 0x001C3454
+	// Token: 0x060058CE RID: 22734 RVA: 0x001CE0B0 File Offset: 0x001CC2B0
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		base.GetItem(8).SetUIActive(false);
 	}
 
-	// Token: 0x06008534 RID: 34100 RVA: 0x001C5274 File Offset: 0x001C3474
+	// Token: 0x060058CF RID: 22735 RVA: 0x001CE0D0 File Offset: 0x001CC2D0
 	public override void Refresh(int phantomId, bool isSelected, int gridIndex)
 	{
 		this.PhantomId = phantomId;
@@ -86,7 +86,7 @@ internal class PhantomCardItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008535 RID: 34101 RVA: 0x001C5344 File Offset: 0x001C3544
+	// Token: 0x060058D0 RID: 22736 RVA: 0x001CE1A0 File Offset: 0x001CC3A0
 	private void RefreshTexture(int rarity)
 	{
 		UiResourceConfig instance = UiResourceConfig.Instance;
@@ -112,7 +112,7 @@ internal class PhantomCardItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008536 RID: 34102 RVA: 0x001C5414 File Offset: 0x001C3614
+	// Token: 0x060058D1 RID: 22737 RVA: 0x001CE270 File Offset: 0x001CC470
 	private void TryUnlockItem()
 	{
 		if (!this.ActivityBaseData.SaveFirstCheckRedDotState(EMapTravelSaveFlag.PhantomCollectNewUnlock, this.PhantomId))
@@ -121,7 +121,7 @@ internal class PhantomCardItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008537 RID: 34103 RVA: 0x001C5454 File Offset: 0x001C3654
+	// Token: 0x060058D2 RID: 22738 RVA: 0x001CE2B0 File Offset: 0x001CC4B0
 	private void OnClickedButton()
 	{
 		PhantomGain? phantomConfig = ActivityMapTravelConfig.Instance.GetPhantomConfig(this.PhantomId);
@@ -134,53 +134,53 @@ internal class PhantomCardItem : GridProxyAbstract<int>
 		AdventureGuideController.Instance.RequestForDetection(DetectionType.NormalMonster, Array.Empty<int>(), phantomConfig.Value.MonsterInfoId);
 	}
 
-	// Token: 0x04003BB7 RID: 15287
+	// Token: 0x04003C4F RID: 15439
 	protected int PhantomId;
 
-	// Token: 0x04003BB8 RID: 15288
+	// Token: 0x04003C50 RID: 15440
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04003BB9 RID: 15289
+	// Token: 0x04003C51 RID: 15441
 	protected ActivityMapTravelData ActivityBaseData;
 
-	// Token: 0x020078F1 RID: 30961
+	// Token: 0x02006A7B RID: 27259
 	[NullableContext(0)]
 	private class ECardComponent
 	{
-		// Token: 0x04027D73 RID: 163187
+		// Token: 0x040230A1 RID: 143521
 		public const int Button = 0;
 
-		// Token: 0x04027D74 RID: 163188
+		// Token: 0x040230A2 RID: 143522
 		public const int ItemLock = 1;
 
-		// Token: 0x04027D75 RID: 163189
+		// Token: 0x040230A3 RID: 143523
 		public const int PanelNormal = 2;
 
-		// Token: 0x04027D76 RID: 163190
+		// Token: 0x040230A4 RID: 143524
 		public const int TexBg = 3;
 
-		// Token: 0x04027D77 RID: 163191
+		// Token: 0x040230A5 RID: 143525
 		public const int TexQuality1 = 4;
 
-		// Token: 0x04027D78 RID: 163192
+		// Token: 0x040230A6 RID: 143526
 		public const int TxtName = 5;
 
-		// Token: 0x04027D79 RID: 163193
+		// Token: 0x040230A7 RID: 143527
 		public const int TexMonster = 6;
 
-		// Token: 0x04027D7A RID: 163194
+		// Token: 0x040230A8 RID: 143528
 		public const int ItemDone = 7;
 
-		// Token: 0x04027D7B RID: 163195
+		// Token: 0x040230A9 RID: 143529
 		public const int ItemNew = 8;
 
-		// Token: 0x04027D7C RID: 163196
+		// Token: 0x040230AA RID: 143530
 		public const int TexQuality3 = 9;
 
-		// Token: 0x04027D7D RID: 163197
+		// Token: 0x040230AB RID: 143531
 		public const int TexQuality2 = 10;
 
-		// Token: 0x04027D7E RID: 163198
+		// Token: 0x040230AC RID: 143532
 		public const int TexQuality4 = 11;
 	}
 }

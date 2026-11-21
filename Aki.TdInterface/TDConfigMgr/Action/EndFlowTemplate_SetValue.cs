@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001651 RID: 5713
+	// Token: 0x020017BE RID: 6078
 	public class EndFlowTemplate_SetValue
 	{
-		// Token: 0x04004C87 RID: 19591
+		// Token: 0x0400507B RID: 20603
 		public bool IsResetPosition;
 	}
 }

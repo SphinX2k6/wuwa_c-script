@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200257B RID: 9595
+	// Token: 0x02002823 RID: 10275
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IVisualNovelPerformanceCgMove : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D75E RID: 55134 RVA: 0x0020147E File Offset: 0x001FF67E
-		[NullableContext(1)]
+		// Token: 0x0600E4C2 RID: 58562 RVA: 0x0021CFFA File Offset: 0x0021B1FA
+		[NullableContext(0)]
 		public static IVisualNovelPerformanceCgMove Create(IVisualNovelPerformanceCgMove? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E2A RID: 15914
-		// (get) Token: 0x0600D75F RID: 55135 RVA: 0x0020149D File Offset: 0x001FF69D
+		// Token: 0x1700412A RID: 16682
+		// (get) Token: 0x0600E4C3 RID: 58563 RVA: 0x0021D019 File Offset: 0x0021B219
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E2B RID: 15915
-		// (get) Token: 0x0600D760 RID: 55136 RVA: 0x002014AC File Offset: 0x001FF6AC
+		// Token: 0x1700412B RID: 16683
+		// (get) Token: 0x0600E4C4 RID: 58564 RVA: 0x0021D028 File Offset: 0x0021B228
 		public override float? StartTime
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E2C RID: 15916
-		// (get) Token: 0x0600D761 RID: 55137 RVA: 0x002014E2 File Offset: 0x001FF6E2
+		// Token: 0x1700412C RID: 16684
+		// (get) Token: 0x0600E4C5 RID: 58565 RVA: 0x0021D05E File Offset: 0x0021B25E
 		public virtual IVisualNovelPortraitTransform StartTransform
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E2D RID: 15917
-		// (get) Token: 0x0600D762 RID: 55138 RVA: 0x00201516 File Offset: 0x001FF716
+		// Token: 0x1700412D RID: 16685
+		// (get) Token: 0x0600E4C6 RID: 58566 RVA: 0x0021D092 File Offset: 0x0021B292
 		public virtual IVisualNovelPortraitTransform TargetTransform
 		{
 			get
@@ -80,12 +80,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E2E RID: 15918
-		// (get) Token: 0x0600D763 RID: 55139 RVA: 0x0020154A File Offset: 0x001FF74A
-		[Nullable(1)]
+		// Token: 0x1700412E RID: 16686
+		// (get) Token: 0x0600E4C7 RID: 58567 RVA: 0x0021D0C6 File Offset: 0x0021B2C6
+		[Nullable(0)]
 		public virtual IEaseCurveType EaseCurve
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._EaseCurveInited)
@@ -98,8 +98,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E2F RID: 15919
-		// (get) Token: 0x0600D764 RID: 55140 RVA: 0x0020157C File Offset: 0x001FF77C
+		// Token: 0x1700412F RID: 16687
+		// (get) Token: 0x0600E4C8 RID: 58568 RVA: 0x0021D0F8 File Offset: 0x0021B2F8
 		public virtual float? Duration
 		{
 			get
@@ -112,26 +112,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007733 RID: 30515
+		// Token: 0x04007D8F RID: 32143
 		private IVisualNovelPerformanceCgMove Instance;
 
-		// Token: 0x04007734 RID: 30516
+		// Token: 0x04007D90 RID: 32144
 		private IVisualNovelPortraitTransform _StartTransformCache;
 
-		// Token: 0x04007735 RID: 30517
+		// Token: 0x04007D91 RID: 32145
 		private bool _StartTransformInited;
 
-		// Token: 0x04007736 RID: 30518
+		// Token: 0x04007D92 RID: 32146
 		private IVisualNovelPortraitTransform _TargetTransformCache;
 
-		// Token: 0x04007737 RID: 30519
+		// Token: 0x04007D93 RID: 32147
 		private bool _TargetTransformInited;
 
-		// Token: 0x04007738 RID: 30520
-		[Nullable(1)]
+		// Token: 0x04007D94 RID: 32148
+		[Nullable(0)]
 		private IEaseCurveType _EaseCurveCache;
 
-		// Token: 0x04007739 RID: 30521
+		// Token: 0x04007D95 RID: 32149
 		private bool _EaseCurveInited;
 	}
 }

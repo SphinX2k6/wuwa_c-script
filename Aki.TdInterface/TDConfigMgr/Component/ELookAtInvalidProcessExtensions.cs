@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000992 RID: 2450
+	// Token: 0x02000A45 RID: 2629
 	public static class ELookAtInvalidProcessExtensions
 	{
-		// Token: 0x060036C2 RID: 14018 RVA: 0x0008E91C File Offset: 0x0008CB1C
+		// Token: 0x06003A49 RID: 14921 RVA: 0x00096888 File Offset: 0x00094A88
 		public static string ToEnumString(this ELookAtInvalidProcess value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036C3 RID: 14019 RVA: 0x0008E954 File Offset: 0x0008CB54
+		// Token: 0x06003A4A RID: 14922 RVA: 0x000968C0 File Offset: 0x00094AC0
 		public static ELookAtInvalidProcess FromString(string name)
 		{
 			ELookAtInvalidProcess result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036C4 RID: 14020 RVA: 0x0008E97D File Offset: 0x0008CB7D
+		// Token: 0x06003A4B RID: 14923 RVA: 0x000968E9 File Offset: 0x00094AE9
 		public static bool TryFromString(string name, out ELookAtInvalidProcess value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036C5 RID: 14021 RVA: 0x0008E9B6 File Offset: 0x0008CBB6
+		// Token: 0x06003A4C RID: 14924 RVA: 0x00096922 File Offset: 0x00094B22
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036C6 RID: 14022 RVA: 0x0008E9CE File Offset: 0x0008CBCE
+		// Token: 0x06003A4D RID: 14925 RVA: 0x0009693A File Offset: 0x00094B3A
 		public static ELookAtInvalidProcess[] GetValues()
 		{
 			return new ELookAtInvalidProcess[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036C7 RID: 14023 RVA: 0x0008E9DA File Offset: 0x0008CBDA
+		// Token: 0x06003A4E RID: 14926 RVA: 0x00096946 File Offset: 0x00094B46
 		public static string[] GetNames()
 		{
 			return new string[]

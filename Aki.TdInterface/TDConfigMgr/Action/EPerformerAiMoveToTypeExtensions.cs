@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023BD RID: 9149
+	// Token: 0x02002650 RID: 9808
 	public static class EPerformerAiMoveToTypeExtensions
 	{
-		// Token: 0x0600C751 RID: 51025 RVA: 0x001D2E14 File Offset: 0x001D1014
+		// Token: 0x0600D3C2 RID: 54210 RVA: 0x001EC3D0 File Offset: 0x001EA5D0
 		public static string ToEnumString(this EPerformerAiMoveToType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C752 RID: 51026 RVA: 0x001D2E5C File Offset: 0x001D105C
+		// Token: 0x0600D3C3 RID: 54211 RVA: 0x001EC418 File Offset: 0x001EA618
 		public static EPerformerAiMoveToType FromString(string name)
 		{
 			EPerformerAiMoveToType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C753 RID: 51027 RVA: 0x001D2E88 File Offset: 0x001D1088
+		// Token: 0x0600D3C4 RID: 54212 RVA: 0x001EC444 File Offset: 0x001EA644
 		public static bool TryFromString(string name, out EPerformerAiMoveToType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C754 RID: 51028 RVA: 0x001D2EDE File Offset: 0x001D10DE
+		// Token: 0x0600D3C5 RID: 54213 RVA: 0x001EC49A File Offset: 0x001EA69A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C755 RID: 51029 RVA: 0x001D2EFE File Offset: 0x001D10FE
+		// Token: 0x0600D3C6 RID: 54214 RVA: 0x001EC4BA File Offset: 0x001EA6BA
 		public static EPerformerAiMoveToType[] GetValues()
 		{
 			return new EPerformerAiMoveToType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C756 RID: 51030 RVA: 0x001D2F0E File Offset: 0x001D110E
+		// Token: 0x0600D3C7 RID: 54215 RVA: 0x001EC4CA File Offset: 0x001EA6CA
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055E7 RID: 21991
+	// Token: 0x020045BD RID: 17853
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MapRoguePopupBase : UiPanelBase
 	{
-		// Token: 0x0603803C RID: 229436 RVA: 0x00D4469C File Offset: 0x00D4289C
+		// Token: 0x0602CF3A RID: 184122 RVA: 0x00C923E4 File Offset: 0x00C905E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603803D RID: 229437 RVA: 0x00D44748 File Offset: 0x00D42948
+		// Token: 0x0602CF3B RID: 184123 RVA: 0x00C92490 File Offset: 0x00C90690
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapRoguePopupBase.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603803E RID: 229438 RVA: 0x00D4478C File Offset: 0x00D4298C
+		// Token: 0x0602CF3C RID: 184124 RVA: 0x00C924D4 File Offset: 0x00C906D4
 		protected override void OnBeforeShow()
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, 500f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603803F RID: 229439 RVA: 0x00D4482B File Offset: 0x00D42A2B
+		// Token: 0x0602CF3D RID: 184125 RVA: 0x00C92573 File Offset: 0x00C90773
 		private void OnBackBtnClick()
 		{
 			MapRogueController.Instance.OpenExploreEnd(false);
 		}
 
-		// Token: 0x06038040 RID: 229440 RVA: 0x00D44838 File Offset: 0x00D42A38
+		// Token: 0x0602CF3E RID: 184126 RVA: 0x00C92580 File Offset: 0x00C90780
 		private void OnMaskBtnClick()
 		{
 			Action onMaskClick = this.OnMaskClick;
@@ -81,19 +81,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			onMaskClick();
 		}
 
-		// Token: 0x06038041 RID: 229441 RVA: 0x00D4484A File Offset: 0x00D42A4A
+		// Token: 0x0602CF3F RID: 184127 RVA: 0x00C92592 File Offset: 0x00C90792
 		private void OnBtnHelp()
 		{
 			MapRogueController.Instance.OpenMapHelpView();
 		}
 
-		// Token: 0x06038042 RID: 229442 RVA: 0x00D44858 File Offset: 0x00D42A58
+		// Token: 0x0602CF40 RID: 184128 RVA: 0x00C925A0 File Offset: 0x00C907A0
 		public void SetMaskButtonVisible(bool bVisible)
 		{
 			base.GetButton(3).RootUIComp.Get().SetUIActive(bVisible);
 		}
 
-		// Token: 0x06038043 RID: 229443 RVA: 0x00D4487F File Offset: 0x00D42A7F
+		// Token: 0x0602CF41 RID: 184129 RVA: 0x00C925C7 File Offset: 0x00C907C7
 		[NullableContext(1)]
 		public void SetHelpCallBack(Action call)
 		{
@@ -105,25 +105,25 @@ namespace CSharpScript.Game.Module.MapRogue
 			captionItem.SetHelpCallBack(call);
 		}
 
-		// Token: 0x0401D6E4 RID: 120548
+		// Token: 0x0401816F RID: 98671
 		protected LevelSequencePlayer LevelSequencePlayerInstance;
 
-		// Token: 0x0401D6E5 RID: 120549
+		// Token: 0x04018170 RID: 98672
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401D6E6 RID: 120550
+		// Token: 0x04018171 RID: 98673
 		protected MapRoguePanelLv PanelLv;
 
-		// Token: 0x0401D6E7 RID: 120551
+		// Token: 0x04018172 RID: 98674
 		protected MapRogueTitleItem MapTitleItem;
 
-		// Token: 0x0401D6E8 RID: 120552
+		// Token: 0x04018173 RID: 98675
 		public MapRogueMoodBar MoodBar;
 
-		// Token: 0x0401D6E9 RID: 120553
+		// Token: 0x04018174 RID: 98676
 		public Action OnMaskClick;
 
-		// Token: 0x0401D6EA RID: 120554
+		// Token: 0x04018175 RID: 98677
 		private const int LV_CHANGE_DELAY = 500;
 	}
 }

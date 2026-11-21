@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x0200581C RID: 22556
+	// Token: 0x020047F3 RID: 18419
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemRewardSelectView : UiViewBase
 	{
-		// Token: 0x06039505 RID: 234757 RVA: 0x00D97A14 File Offset: 0x00D95C14
+		// Token: 0x0602E419 RID: 189465 RVA: 0x00CE68A5 File Offset: 0x00CE4AA5
 		public ItemRewardSelectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039506 RID: 234758 RVA: 0x00D97A34 File Offset: 0x00D95C34
+		// Token: 0x0602E41A RID: 189466 RVA: 0x00CE68C4 File Offset: 0x00CE4AC4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +35,7 @@ namespace CSharpScript.Game.Module.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039507 RID: 234759 RVA: 0x00D97AA0 File Offset: 0x00D95CA0
+		// Token: 0x0602E41B RID: 189467 RVA: 0x00CE6930 File Offset: 0x00CE4B30
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ItemRewardSelectView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -47,7 +46,7 @@ namespace CSharpScript.Game.Module.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039508 RID: 234760 RVA: 0x00D97AE4 File Offset: 0x00D95CE4
+		// Token: 0x0602E41C RID: 189468 RVA: 0x00CE6974 File Offset: 0x00CE4B74
 		private UniTask InitBgPrefabs()
 		{
 			ItemRewardSelectView.<InitBgPrefabs>d__10 <InitBgPrefabs>d__;
@@ -58,7 +57,7 @@ namespace CSharpScript.Game.Module.Item
 			return <InitBgPrefabs>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039509 RID: 234761 RVA: 0x00D97B28 File Offset: 0x00D95D28
+		// Token: 0x0602E41D RID: 189469 RVA: 0x00CE69B8 File Offset: 0x00CE4BB8
 		private UniTask LoadBgPrefabAsync(int itemId, string path)
 		{
 			ItemRewardSelectView.<LoadBgPrefabAsync>d__11 <LoadBgPrefabAsync>d__;
@@ -71,7 +70,7 @@ namespace CSharpScript.Game.Module.Item
 			return <LoadBgPrefabAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603950A RID: 234762 RVA: 0x00D97B7B File Offset: 0x00D95D7B
+		// Token: 0x0602E41E RID: 189470 RVA: 0x00CE6A0B File Offset: 0x00CE4C0B
 		private void OnClickBackButton()
 		{
 			UiManager.Instance.CloseView(EUiViewName.ItemRewardSelectView, delegate(bool _)
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Module.Item
 			});
 		}
 
-		// Token: 0x0603950B RID: 234763 RVA: 0x00D97B98 File Offset: 0x00D95D98
+		// Token: 0x0602E41F RID: 189471 RVA: 0x00CE6A28 File Offset: 0x00CE4C28
 		private void OnConfirmButton(int index, int itemId)
 		{
 			int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(itemId);
@@ -137,7 +136,7 @@ namespace CSharpScript.Game.Module.Item
 			UiManager.Instance.OpenView(EUiViewName.ConfirmBoxView, confirmBoxDataNew, null);
 		}
 
-		// Token: 0x0603950C RID: 234764 RVA: 0x00D97D5A File Offset: 0x00D95F5A
+		// Token: 0x0602E420 RID: 189472 RVA: 0x00CE6BEA File Offset: 0x00CE4DEA
 		private void DoSelectItemCallBackAndClose(int index, int itemId)
 		{
 			Action<int, int> onSelectItemCallBack = this.ItemData.OnSelectItemCallBack;
@@ -148,32 +147,27 @@ namespace CSharpScript.Game.Module.Item
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603950D RID: 234765 RVA: 0x00D97D7C File Offset: 0x00D95F7C
+		// Token: 0x0602E421 RID: 189473 RVA: 0x00CE6C0C File Offset: 0x00CE4E0C
 		private bool CheckSelectItemIfResonant(int itemId)
 		{
 			ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(itemId);
-			if (itemConfigData == null)
-			{
-				return false;
-			}
-			int[] showTypes = itemConfigData.ShowTypes;
-			return showTypes != null && showTypes.Contains(30);
+			return itemConfigData != null && itemConfigData.ShowTypes != null && Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0;
 		}
 
-		// Token: 0x0603950E RID: 234766 RVA: 0x00D97DB6 File Offset: 0x00D95FB6
+		// Token: 0x0602E422 RID: 189474 RVA: 0x00CE6C45 File Offset: 0x00CE4E45
 		private void OnSelectItem(int itemId, int index)
 		{
 			this.RefreshBgRoot(itemId).Forget();
 			this.CurrentSelectItemId = itemId;
 		}
 
-		// Token: 0x0603950F RID: 234767 RVA: 0x00D97DCB File Offset: 0x00D95FCB
+		// Token: 0x0602E423 RID: 189475 RVA: 0x00CE6C5A File Offset: 0x00CE4E5A
 		protected override void OnBeforeShow()
 		{
 			this.ItemRewardSelectContent.Refresh(this.ItemData.GiftPackageId);
 		}
 
-		// Token: 0x06039510 RID: 234768 RVA: 0x00D97DE4 File Offset: 0x00D95FE4
+		// Token: 0x0602E424 RID: 189476 RVA: 0x00CE6C74 File Offset: 0x00CE4E74
 		private UniTask RefreshBgRoot(int itemId)
 		{
 			ItemRewardSelectView.<RefreshBgRoot>d__18 <RefreshBgRoot>d__;
@@ -185,7 +179,7 @@ namespace CSharpScript.Game.Module.Item
 			return <RefreshBgRoot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039511 RID: 234769 RVA: 0x00D97E30 File Offset: 0x00D96030
+		// Token: 0x0602E425 RID: 189477 RVA: 0x00CE6CC0 File Offset: 0x00CE4EC0
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			ItemRewardSelectView.<OnPlayingStartSequenceAsync>d__19 <OnPlayingStartSequenceAsync>d__;
@@ -196,7 +190,7 @@ namespace CSharpScript.Game.Module.Item
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039512 RID: 234770 RVA: 0x00D97E74 File Offset: 0x00D96074
+		// Token: 0x0602E426 RID: 189478 RVA: 0x00CE6D04 File Offset: 0x00CE4F04
 		protected override UniTask OnPlayingCloseSequenceAsync()
 		{
 			ItemRewardSelectView.<OnPlayingCloseSequenceAsync>d__20 <OnPlayingCloseSequenceAsync>d__;
@@ -207,28 +201,28 @@ namespace CSharpScript.Game.Module.Item
 			return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401DF88 RID: 122760
+		// Token: 0x04018A1F RID: 100895
 		[Nullable(2)]
 		private ItemRewardSelectViewOpenParam ItemData;
 
-		// Token: 0x0401DF89 RID: 122761
+		// Token: 0x04018A20 RID: 100896
 		[Nullable(2)]
 		private ItemRewardSelectContent ItemRewardSelectContent;
 
-		// Token: 0x0401DF8A RID: 122762
+		// Token: 0x04018A21 RID: 100897
 		private int CurrentSelectItemId;
 
-		// Token: 0x0401DF8B RID: 122763
+		// Token: 0x04018A22 RID: 100898
 		private readonly Dictionary<int, UUIItem> RootPrefabMap = new Dictionary<int, UUIItem>();
 
-		// Token: 0x0401DF8C RID: 122764
+		// Token: 0x04018A23 RID: 100899
 		private readonly Dictionary<int, UiSequencePlayer> BgSequencePlayerMap = new Dictionary<int, UiSequencePlayer>();
 
-		// Token: 0x0401DF8D RID: 122765
+		// Token: 0x04018A24 RID: 100900
 		[Nullable(2)]
 		private ResonantChainOptionLimitInfo LimitInfo;
 
-		// Token: 0x0401DF8E RID: 122766
+		// Token: 0x04018A25 RID: 100901
 		[Nullable(2)]
 		private UUIItem CurrentShowItem;
 	}

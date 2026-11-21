@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02001C05 RID: 7173
+// Token: 0x020010C4 RID: 4292
 public class FormationActionKeys
 {
-	// Token: 0x04006221 RID: 25121
+	// Token: 0x040062F3 RID: 25331
 	public int PresetForm;
 
-	// Token: 0x04006222 RID: 25122
+	// Token: 0x040062F4 RID: 25332
 	public int EditFormName;
 }

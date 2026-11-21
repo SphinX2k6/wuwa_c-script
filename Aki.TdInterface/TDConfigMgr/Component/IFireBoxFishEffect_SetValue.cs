@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000387 RID: 903
+	// Token: 0x020003D0 RID: 976
 	public class IFireBoxFishEffect_SetValue
 	{
-		// Token: 0x04000E8D RID: 3725
+		// Token: 0x04000F84 RID: 3972
 		public EGraph3dEffectType Type;
 
-		// Token: 0x04000E8E RID: 3726
-		[Nullable(1)]
+		// Token: 0x04000F85 RID: 3973
 		public string Effect;
 	}
 }

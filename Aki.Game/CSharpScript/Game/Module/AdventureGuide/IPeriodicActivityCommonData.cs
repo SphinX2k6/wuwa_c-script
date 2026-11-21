@@ -2,15 +2,15 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005ECF RID: 24271
+	// Token: 0x02004EB4 RID: 20148
 	public interface IPeriodicActivityCommonData
 	{
-		// Token: 0x17008EE1 RID: 36577
-		// (get) Token: 0x0603DB45 RID: 252741
+		// Token: 0x170062B3 RID: 25267
+		// (get) Token: 0x06032AD5 RID: 207573
 		int ActivityId { get; }
 
-		// Token: 0x17008EE2 RID: 36578
-		// (get) Token: 0x0603DB46 RID: 252742
+		// Token: 0x170062B4 RID: 25268
+		// (get) Token: 0x06032AD6 RID: 207574
 		int Round { get; }
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001148 RID: 4424
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001278 RID: 4728
 	public class IStalkingGamePlayConfig : ISpecialGamePlayConfig
 	{
-		// Token: 0x0600646A RID: 25706 RVA: 0x000F1660 File Offset: 0x000EF860
+		// Token: 0x06006A71 RID: 27249 RVA: 0x000FE924 File Offset: 0x000FCB24
 		private IStalkingGamePlayConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600646B RID: 25707 RVA: 0x000F1698 File Offset: 0x000EF898
+		// Token: 0x06006A72 RID: 27250 RVA: 0x000FE95C File Offset: 0x000FCB5C
 		public static IStalkingGamePlayConfig Create([Nullable(2)] IStalkingGamePlayConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600646C RID: 25708 RVA: 0x000F16AB File Offset: 0x000EF8AB
+		// Token: 0x06006A73 RID: 27251 RVA: 0x000FE96F File Offset: 0x000FCB6F
 		public static IStalkingGamePlayConfig CreateFromSetValue([Nullable(2)] IStalkingGamePlayConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600646D RID: 25709 RVA: 0x000F16BE File Offset: 0x000EF8BE
+		// Token: 0x06006A74 RID: 27252 RVA: 0x000FE982 File Offset: 0x000FCB82
 		public new IStalkingGamePlayConfig_SetValue ToSetValue()
 		{
 			return new IStalkingGamePlayConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020CE RID: 8398
-		// (get) Token: 0x0600646E RID: 25710 RVA: 0x000F16D1 File Offset: 0x000EF8D1
-		// (set) Token: 0x0600646F RID: 25711 RVA: 0x000F16FC File Offset: 0x000EF8FC
+		// Token: 0x17002284 RID: 8836
+		// (get) Token: 0x06006A75 RID: 27253 RVA: 0x000FE995 File Offset: 0x000FCB95
+		// (set) Token: 0x06006A76 RID: 27254 RVA: 0x000FE9C0 File Offset: 0x000FCBC0
 		public override ESpecialGamePlayConfigType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C53 RID: 15443
+		// Token: 0x04003FA6 RID: 16294
 		[Nullable(2)]
 		protected new IStalkingGamePlayConfig FbInstance;
 
-		// Token: 0x04003C54 RID: 15444
+		// Token: 0x04003FA7 RID: 16295
 		[Nullable(2)]
 		protected new IStalkingGamePlayConfig_SetValue PocoInterface;
 	}

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FF8 RID: 20472
+	// Token: 0x02005557 RID: 21847
 	public class IConditionListenerComponentT
 	{
-		// Token: 0x17009451 RID: 37969
-		// (get) Token: 0x06020B9F RID: 134047 RVA: 0x0048CF09 File Offset: 0x0048B109
-		// (set) Token: 0x06020BA0 RID: 134048 RVA: 0x0048CF11 File Offset: 0x0048B111
+		// Token: 0x17009C32 RID: 39986
+		// (get) Token: 0x06022ABF RID: 142015 RVA: 0x004C6959 File Offset: 0x004C4B59
+		// (set) Token: 0x06022AC0 RID: 142016 RVA: 0x004C6961 File Offset: 0x004C4B61
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009452 RID: 37970
-		// (get) Token: 0x06020BA1 RID: 134049 RVA: 0x0048CF1A File Offset: 0x0048B11A
-		// (set) Token: 0x06020BA2 RID: 134050 RVA: 0x0048CF22 File Offset: 0x0048B122
+		// Token: 0x17009C33 RID: 39987
+		// (get) Token: 0x06022AC1 RID: 142017 RVA: 0x004C696A File Offset: 0x004C4B6A
+		// (set) Token: 0x06022AC2 RID: 142018 RVA: 0x004C6972 File Offset: 0x004C4B72
 		public List<ICondtionListenerT> Listeners { get; set; }
 
-		// Token: 0x17009453 RID: 37971
-		// (get) Token: 0x06020BA3 RID: 134051 RVA: 0x0048CF2B File Offset: 0x0048B12B
-		// (set) Token: 0x06020BA4 RID: 134052 RVA: 0x0048CF33 File Offset: 0x0048B133
+		// Token: 0x17009C34 RID: 39988
+		// (get) Token: 0x06022AC3 RID: 142019 RVA: 0x004C697B File Offset: 0x004C4B7B
+		// (set) Token: 0x06022AC4 RID: 142020 RVA: 0x004C6983 File Offset: 0x004C4B83
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020BA5 RID: 134053 RVA: 0x0048CF3C File Offset: 0x0048B13C
+		// Token: 0x06022AC5 RID: 142021 RVA: 0x004C698C File Offset: 0x004C4B8C
 		public IConditionListenerComponentT()
 		{
 			this.Disabled = false;

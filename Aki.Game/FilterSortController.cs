@@ -4,13 +4,13 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using FilterDefine;
 
-// Token: 0x02001829 RID: 6185
+// Token: 0x02000CE2 RID: 3298
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FilterSortController : UiControllerBase
 {
-	// Token: 0x0600B578 RID: 46456 RVA: 0x0028FB58 File Offset: 0x0028DD58
+	// Token: 0x06008963 RID: 35171 RVA: 0x0029A278 File Offset: 0x00298478
 	public void OpenFilterView(FilterViewData viewData)
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(viewData.UniqueId);
@@ -38,20 +38,20 @@ public class FilterSortController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.FilterView, viewData, null);
 	}
 
-	// Token: 0x0600B579 RID: 46457 RVA: 0x0028FC57 File Offset: 0x0028DE57
+	// Token: 0x06008964 RID: 35172 RVA: 0x0029A377 File Offset: 0x00298577
 	public void OpenPhantomFilterView(PhantomFilterViewData<IPhantomFilterData> viewData)
 	{
 		UiManager.Instance.OpenView(EUiViewName.PhantomFilterPopupView, viewData, null);
 	}
 
-	// Token: 0x0600B57A RID: 46458 RVA: 0x0028FC6A File Offset: 0x0028DE6A
+	// Token: 0x06008965 RID: 35173 RVA: 0x0029A38A File Offset: 0x0029858A
 	public void OpenSortView(SortViewData viewData)
 	{
 		UiManager.Instance.OpenView(EUiViewName.SortView, viewData, null);
 	}
 
-	// Token: 0x17000F2B RID: 3883
-	// (get) Token: 0x0600B57B RID: 46459 RVA: 0x0028FC7D File Offset: 0x0028DE7D
+	// Token: 0x17000F4E RID: 3918
+	// (get) Token: 0x06008966 RID: 35174 RVA: 0x0029A39D File Offset: 0x0029859D
 	public static FilterSortController Instance
 	{
 		get
@@ -60,7 +60,7 @@ public class FilterSortController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600B57C RID: 46460 RVA: 0x0028FC84 File Offset: 0x0028DE84
+	// Token: 0x06008967 RID: 35175 RVA: 0x0029A3A4 File Offset: 0x002985A4
 	public static FilterSortController GetOrCreateInstance()
 	{
 		if (FilterSortController._Instance == null)
@@ -70,7 +70,7 @@ public class FilterSortController : UiControllerBase
 		return FilterSortController._Instance;
 	}
 
-	// Token: 0x0600B57D RID: 46461 RVA: 0x0028FC98 File Offset: 0x0028DE98
+	// Token: 0x06008968 RID: 35176 RVA: 0x0029A3B8 File Offset: 0x002985B8
 	public static bool CreateInstance()
 	{
 		if (FilterSortController._Instance != null)
@@ -81,24 +81,24 @@ public class FilterSortController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600B57E RID: 46462 RVA: 0x0028FCAE File Offset: 0x0028DEAE
+	// Token: 0x06008969 RID: 35177 RVA: 0x0029A3CE File Offset: 0x002985CE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B57F RID: 46463 RVA: 0x0028FCB0 File Offset: 0x0028DEB0
+	// Token: 0x0600896A RID: 35178 RVA: 0x0029A3D0 File Offset: 0x002985D0
 	public static void ResetStaticDefaultValue()
 	{
 		FilterSortController._Instance = null;
 	}
 
-	// Token: 0x0600B580 RID: 46464 RVA: 0x0028FCB8 File Offset: 0x0028DEB8
+	// Token: 0x0600896B RID: 35179 RVA: 0x0029A3D8 File Offset: 0x002985D8
 	static FilterSortController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FilterSortController.CreateStaticDefaultValue), new Action(FilterSortController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005206 RID: 20998
+	// Token: 0x040052B1 RID: 21169
 	[Nullable(2)]
 	private static FilterSortController _Instance;
 }

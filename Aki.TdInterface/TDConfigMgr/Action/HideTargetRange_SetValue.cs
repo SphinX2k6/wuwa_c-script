@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001747 RID: 5959
+	// Token: 0x020018C8 RID: 6344
 	public class HideTargetRange_SetValue
 	{
-		// Token: 0x0400505D RID: 20573
+		// Token: 0x04005493 RID: 21651
 		public int RangeEntity;
 
-		// Token: 0x0400505E RID: 20574
-		[Nullable(1)]
+		// Token: 0x04005494 RID: 21652
 		public IHideRangeType HideConfig;
 
-		// Token: 0x0400505F RID: 20575
+		// Token: 0x04005495 RID: 21653
 		public bool? IsHideSimpleNpc;
 
-		// Token: 0x04005060 RID: 20576
+		// Token: 0x04005496 RID: 21654
 		public bool? IsHidePasserByNpc;
 	}
 }

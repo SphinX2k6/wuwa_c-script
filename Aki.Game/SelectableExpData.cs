@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001959 RID: 6489
+// Token: 0x02000E16 RID: 3606
 [NullableContext(1)]
 [Nullable(0)]
 public class SelectableExpData
 {
-	// Token: 0x0600BDA4 RID: 48548 RVA: 0x002AE63C File Offset: 0x002AC83C
+	// Token: 0x060091A7 RID: 37287 RVA: 0x002B9480 File Offset: 0x002B7680
 	public static SelectableExpData PhraseData(CommonIntensifyPropExpData source)
 	{
 		SelectableExpData selectableExpData = new SelectableExpData();
@@ -20,7 +20,7 @@ public class SelectableExpData
 		return selectableExpData;
 	}
 
-	// Token: 0x0600BDA5 RID: 48549 RVA: 0x002AE690 File Offset: 0x002AC890
+	// Token: 0x060091A8 RID: 37288 RVA: 0x002B94D4 File Offset: 0x002B76D4
 	public void UpdateComponent(int currentLevel, int currentMaxLevel, int currentExp, int? limitLevel = null, bool addUp = false)
 	{
 		this.ArrivedLevel = currentLevel;
@@ -37,7 +37,7 @@ public class SelectableExpData
 		this.CurrentMaxExp = this.StageMaxExp(this.CurrentLevel);
 	}
 
-	// Token: 0x0600BDA6 RID: 48550 RVA: 0x002AE6FE File Offset: 0x002AC8FE
+	// Token: 0x060091A9 RID: 37289 RVA: 0x002B9542 File Offset: 0x002B7742
 	public bool UpdateExp(int newAddExp)
 	{
 		if (this.IsInMax() && newAddExp > this.FrontExp)
@@ -48,7 +48,7 @@ public class SelectableExpData
 		return true;
 	}
 
-	// Token: 0x0600BDA7 RID: 48551 RVA: 0x002AE71C File Offset: 0x002AC91C
+	// Token: 0x060091AA RID: 37290 RVA: 0x002B9560 File Offset: 0x002B7760
 	private void ForceUpdateExp(int newAddExp)
 	{
 		this.FrontExp = newAddExp;
@@ -64,7 +64,7 @@ public class SelectableExpData
 		this.UpdateCurrentExp(newAddExp, this.CurrentLevel, fillAmount);
 	}
 
-	// Token: 0x0600BDA8 RID: 48552 RVA: 0x002AE798 File Offset: 0x002AC998
+	// Token: 0x060091AB RID: 37291 RVA: 0x002B95DC File Offset: 0x002B77DC
 	protected void UpdateNextExp(int newAddExp, int level)
 	{
 		if (level >= this.CurrentMaxLevel)
@@ -87,7 +87,7 @@ public class SelectableExpData
 		this.UpdateCurrentExp(newAddExp, level, fillAmount);
 	}
 
-	// Token: 0x0600BDA9 RID: 48553 RVA: 0x002AE806 File Offset: 0x002ACA06
+	// Token: 0x060091AC RID: 37292 RVA: 0x002B964A File Offset: 0x002B784A
 	protected void UpdateCurrentExp(int newAddExp, int nextLevel, float fillAmount)
 	{
 		this.ArrivedExp = newAddExp;
@@ -95,7 +95,7 @@ public class SelectableExpData
 		this.ArrivedLevel = nextLevel;
 	}
 
-	// Token: 0x0600BDAA RID: 48554 RVA: 0x002AE820 File Offset: 0x002ACA20
+	// Token: 0x060091AD RID: 37293 RVA: 0x002B9664 File Offset: 0x002B7864
 	public int StageMaxExp(int level)
 	{
 		if (this.GetMaxExpFunction == null)
@@ -112,7 +112,7 @@ public class SelectableExpData
 		return num;
 	}
 
-	// Token: 0x0600BDAB RID: 48555 RVA: 0x002AE87E File Offset: 0x002ACA7E
+	// Token: 0x060091AE RID: 37294 RVA: 0x002B96C2 File Offset: 0x002B78C2
 	public int GetMaxExp(int level)
 	{
 		if (this.IsAddUp)
@@ -122,7 +122,7 @@ public class SelectableExpData
 		return this.StageMaxExp(level);
 	}
 
-	// Token: 0x0600BDAC RID: 48556 RVA: 0x002AE898 File Offset: 0x002ACA98
+	// Token: 0x060091AF RID: 37295 RVA: 0x002B96DC File Offset: 0x002B78DC
 	public int AddUpMaxExp(int level)
 	{
 		int num = 0;
@@ -133,13 +133,13 @@ public class SelectableExpData
 		return num;
 	}
 
-	// Token: 0x0600BDAD RID: 48557 RVA: 0x002AE8BE File Offset: 0x002ACABE
+	// Token: 0x060091B0 RID: 37296 RVA: 0x002B9702 File Offset: 0x002B7902
 	public bool IsInMax()
 	{
 		return this.ArrivedLevel == this.CurrentMaxLevel;
 	}
 
-	// Token: 0x0600BDAE RID: 48558 RVA: 0x002AE8D0 File Offset: 0x002ACAD0
+	// Token: 0x060091B1 RID: 37297 RVA: 0x002B9714 File Offset: 0x002B7914
 	public int GetOverExp()
 	{
 		int expDistanceToMax = this.GetExpDistanceToMax();
@@ -151,31 +151,31 @@ public class SelectableExpData
 		return 0;
 	}
 
-	// Token: 0x0600BDAF RID: 48559 RVA: 0x002AE8F4 File Offset: 0x002ACAF4
+	// Token: 0x060091B2 RID: 37298 RVA: 0x002B9738 File Offset: 0x002B7938
 	public bool GetIsAddUp()
 	{
 		return this.IsAddUp;
 	}
 
-	// Token: 0x0600BDB0 RID: 48560 RVA: 0x002AE8FC File Offset: 0x002ACAFC
+	// Token: 0x060091B3 RID: 37299 RVA: 0x002B9740 File Offset: 0x002B7940
 	public void SetMaxExpFunction(Func<int, int> getMaxExpFunction)
 	{
 		this.GetMaxExpFunction = getMaxExpFunction;
 	}
 
-	// Token: 0x0600BDB1 RID: 48561 RVA: 0x002AE905 File Offset: 0x002ACB05
+	// Token: 0x060091B4 RID: 37300 RVA: 0x002B9749 File Offset: 0x002B7949
 	public int GetCurrentLevel()
 	{
 		return this.CurrentLevel;
 	}
 
-	// Token: 0x0600BDB2 RID: 48562 RVA: 0x002AE90D File Offset: 0x002ACB0D
+	// Token: 0x060091B5 RID: 37301 RVA: 0x002B9751 File Offset: 0x002B7951
 	public int GetExpDistanceToMax()
 	{
 		return this.GetExpDistanceToLevel(this.CurrentMaxLevel);
 	}
 
-	// Token: 0x0600BDB3 RID: 48563 RVA: 0x002AE91C File Offset: 0x002ACB1C
+	// Token: 0x060091B6 RID: 37302 RVA: 0x002B9760 File Offset: 0x002B7960
 	public int GetExpDistanceToLevel(int targetLevel)
 	{
 		if (targetLevel <= this.CurrentLevel)
@@ -196,94 +196,94 @@ public class SelectableExpData
 		return num2 - num3 - this.CurrentExp;
 	}
 
-	// Token: 0x0600BDB4 RID: 48564 RVA: 0x002AE989 File Offset: 0x002ACB89
+	// Token: 0x060091B7 RID: 37303 RVA: 0x002B97CD File Offset: 0x002B79CD
 	public int GetCurrentExp()
 	{
 		return this.CurrentExp;
 	}
 
-	// Token: 0x0600BDB5 RID: 48565 RVA: 0x002AE991 File Offset: 0x002ACB91
+	// Token: 0x060091B8 RID: 37304 RVA: 0x002B97D5 File Offset: 0x002B79D5
 	public int GetCurrentMaxLevel()
 	{
 		return this.CurrentMaxLevel;
 	}
 
-	// Token: 0x0600BDB6 RID: 48566 RVA: 0x002AE999 File Offset: 0x002ACB99
+	// Token: 0x060091B9 RID: 37305 RVA: 0x002B97DD File Offset: 0x002B79DD
 	public int GetLimitLevel()
 	{
 		return this.LimitLevel.Value;
 	}
 
-	// Token: 0x0600BDB7 RID: 48567 RVA: 0x002AE9A6 File Offset: 0x002ACBA6
+	// Token: 0x060091BA RID: 37306 RVA: 0x002B97EA File Offset: 0x002B79EA
 	public int GetArrivedAddExp()
 	{
 		return this.ArrivedExp;
 	}
 
-	// Token: 0x0600BDB8 RID: 48568 RVA: 0x002AE9AE File Offset: 0x002ACBAE
+	// Token: 0x060091BB RID: 37307 RVA: 0x002B97F2 File Offset: 0x002B79F2
 	public float GetCurrentAddExp()
 	{
 		return (float)this.CurrentAddExp;
 	}
 
-	// Token: 0x0600BDB9 RID: 48569 RVA: 0x002AE9B7 File Offset: 0x002ACBB7
+	// Token: 0x060091BC RID: 37308 RVA: 0x002B97FB File Offset: 0x002B79FB
 	public int GetArrivedLevel()
 	{
 		return this.ArrivedLevel;
 	}
 
-	// Token: 0x0600BDBA RID: 48570 RVA: 0x002AE9BF File Offset: 0x002ACBBF
+	// Token: 0x060091BD RID: 37309 RVA: 0x002B9803 File Offset: 0x002B7A03
 	public float GetArrivedFillAmount()
 	{
 		return this.ArrivedFillAmount;
 	}
 
-	// Token: 0x0600BDBB RID: 48571 RVA: 0x002AE9C7 File Offset: 0x002ACBC7
+	// Token: 0x060091BE RID: 37310 RVA: 0x002B980B File Offset: 0x002B7A0B
 	public bool GetIfNext()
 	{
 		return this.IfNext;
 	}
 
-	// Token: 0x0400558A RID: 21898
+	// Token: 0x04005637 RID: 22071
 	protected int ArrivedLevel;
 
-	// Token: 0x0400558B RID: 21899
+	// Token: 0x04005638 RID: 22072
 	protected int ArrivedExp;
 
-	// Token: 0x0400558C RID: 21900
+	// Token: 0x04005639 RID: 22073
 	protected float ArrivedFillAmount;
 
-	// Token: 0x0400558D RID: 21901
+	// Token: 0x0400563A RID: 22074
 	protected int CurrentMaxExp;
 
-	// Token: 0x0400558E RID: 21902
+	// Token: 0x0400563B RID: 22075
 	protected int CurrentLevel;
 
-	// Token: 0x0400558F RID: 21903
+	// Token: 0x0400563C RID: 22076
 	protected int CurrentExp;
 
-	// Token: 0x04005590 RID: 21904
+	// Token: 0x0400563D RID: 22077
 	protected int CurrentMaxLevel;
 
-	// Token: 0x04005591 RID: 21905
+	// Token: 0x0400563E RID: 22078
 	protected int? LimitLevel = new int?(0);
 
-	// Token: 0x04005592 RID: 21906
+	// Token: 0x0400563F RID: 22079
 	protected int FrontExp;
 
-	// Token: 0x04005593 RID: 21907
+	// Token: 0x04005640 RID: 22080
 	private bool IfNext;
 
-	// Token: 0x04005594 RID: 21908
+	// Token: 0x04005641 RID: 22081
 	private int CurrentAddExp;
 
-	// Token: 0x04005595 RID: 21909
+	// Token: 0x04005642 RID: 22082
 	protected Dictionary<int, int> MaxExpCacheMap = new Dictionary<int, int>();
 
-	// Token: 0x04005596 RID: 21910
+	// Token: 0x04005643 RID: 22083
 	[Nullable(2)]
 	protected Func<int, int> GetMaxExpFunction;
 
-	// Token: 0x04005597 RID: 21911
+	// Token: 0x04005644 RID: 22084
 	private bool IsAddUp;
 }

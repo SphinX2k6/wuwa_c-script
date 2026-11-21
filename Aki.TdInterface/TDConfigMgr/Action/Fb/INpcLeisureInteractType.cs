@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002816 RID: 10262
+	// Token: 0x02002AE9 RID: 10985
 	public class INpcLeisureInteractType
 	{
-		// Token: 0x0600E3A6 RID: 58278 RVA: 0x00218B1E File Offset: 0x00216D1E
-		[NullableContext(1)]
+		// Token: 0x0600F1CB RID: 61899 RVA: 0x00235982 File Offset: 0x00233B82
 		public static INpcLeisureInteractType Create(INpcLeisureInteractType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700453C RID: 17724
-		// (get) Token: 0x0600E3A7 RID: 58279 RVA: 0x00218B3D File Offset: 0x00216D3D
+		// Token: 0x170048A7 RID: 18599
+		// (get) Token: 0x0600F1CC RID: 61900 RVA: 0x002359A1 File Offset: 0x00233BA1
 		public virtual ENpcLeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700453D RID: 17725
-		// (get) Token: 0x0600E3A8 RID: 58280 RVA: 0x00218B4C File Offset: 0x00216D4C
+		// Token: 0x170048A8 RID: 18600
+		// (get) Token: 0x0600F1CD RID: 61901 RVA: 0x002359B0 File Offset: 0x00233BB0
 		public virtual bool? KeepState
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E0A RID: 32266
+		// Token: 0x040084C7 RID: 33991
 		private INpcLeisureInteractType Instance;
 	}
 }

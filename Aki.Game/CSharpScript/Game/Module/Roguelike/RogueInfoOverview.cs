@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF8 RID: 19960
+	// Token: 0x02003DC1 RID: 15809
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueInfoOverview : UiPanelBase
 	{
-		// Token: 0x06033818 RID: 210968 RVA: 0x00C08EA0 File Offset: 0x00C070A0
+		// Token: 0x06028683 RID: 165507 RVA: 0x00B523B0 File Offset: 0x00B505B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033819 RID: 210969 RVA: 0x00C08FA9 File Offset: 0x00C071A9
+		// Token: 0x06028684 RID: 165508 RVA: 0x00B524B9 File Offset: 0x00B506B9
 		protected override void OnBeforeCreateImplement()
 		{
 			this.UiViewSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiViewSequence);
 		}
 
-		// Token: 0x0603381A RID: 210970 RVA: 0x00C08FC4 File Offset: 0x00C071C4
+		// Token: 0x06028685 RID: 165509 RVA: 0x00B524D4 File Offset: 0x00B506D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueInfoOverview.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603381B RID: 210971 RVA: 0x00C09007 File Offset: 0x00C07207
+		// Token: 0x06028686 RID: 165510 RVA: 0x00B52517 File Offset: 0x00B50717
 		protected override void OnStart()
 		{
 			PhantomSelectItem phantomItem = this.PhantomItem;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshByViewModel();
 		}
 
-		// Token: 0x0603381C RID: 210972 RVA: 0x00C09028 File Offset: 0x00C07228
+		// Token: 0x06028687 RID: 165511 RVA: 0x00B52538 File Offset: 0x00B50738
 		private void OnBtnMore()
 		{
 			if (this.Vm == null)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.RogueAttributeDetailView, attrList, null);
 		}
 
-		// Token: 0x0603381D RID: 210973 RVA: 0x00C0905C File Offset: 0x00C0725C
+		// Token: 0x06028688 RID: 165512 RVA: 0x00B5256C File Offset: 0x00B5076C
 		private void InitAttributeItemList()
 		{
 			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("RoleAttributeDisplay6");
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UniTask.WhenAll(list).ContinueWith(new Action(this.UpdateAttribute)).Forget();
 		}
 
-		// Token: 0x0603381E RID: 210974 RVA: 0x00C09184 File Offset: 0x00C07384
+		// Token: 0x06028689 RID: 165513 RVA: 0x00B52694 File Offset: 0x00B50894
 		protected void UpdateAttribute()
 		{
 			if (this.Vm == null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603381F RID: 210975 RVA: 0x00C091EE File Offset: 0x00C073EE
+		// Token: 0x0602868A RID: 165514 RVA: 0x00B526FE File Offset: 0x00B508FE
 		[NullableContext(1)]
 		public void SetViewModel(RogueInfoViewModel vm)
 		{
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.UpdateAttribute();
 		}
 
-		// Token: 0x06033820 RID: 210976 RVA: 0x00C09203 File Offset: 0x00C07403
+		// Token: 0x0602868B RID: 165515 RVA: 0x00B52713 File Offset: 0x00B50913
 		public void RefreshPanel()
 		{
 			this.RefreshByViewModel();
 		}
 
-		// Token: 0x06033821 RID: 210977 RVA: 0x00C0920C File Offset: 0x00C0740C
+		// Token: 0x0602868C RID: 165516 RVA: 0x00B5271C File Offset: 0x00B5091C
 		private void RefreshByViewModel()
 		{
 			if (this.Vm == null)
@@ -208,39 +208,39 @@ namespace CSharpScript.Game.Module.Roguelike
 			roleItem2.GetRootItem().SetUIActive(rogueCharacterConfig != null);
 		}
 
-		// Token: 0x0401B549 RID: 111945
+		// Token: 0x04015F1C RID: 89884
 		public PhantomSelectItem PhantomItem;
 
-		// Token: 0x0401B54A RID: 111946
+		// Token: 0x04015F1D RID: 89885
 		public RoleSelectItem RoleItem;
 
-		// Token: 0x0401B54B RID: 111947
+		// Token: 0x04015F1E RID: 89886
 		[Nullable(1)]
 		public List<AttributeItem> AttributeItemList = new List<AttributeItem>();
 
-		// Token: 0x0401B54C RID: 111948
+		// Token: 0x04015F1F RID: 89887
 		public UiBehaviorLevelSequence UiViewSequence;
 
-		// Token: 0x0401B54D RID: 111949
+		// Token: 0x04015F20 RID: 89888
 		private RogueInfoViewModel Vm;
 
-		// Token: 0x0200AF82 RID: 44930
+		// Token: 0x020099B7 RID: 39351
 		[NullableContext(0)]
 		private class ERogueInfoOverviewDefine
 		{
-			// Token: 0x040354A6 RID: 218278
+			// Token: 0x0402FED9 RID: 196313
 			public const int PhantomItem = 0;
 
-			// Token: 0x040354A7 RID: 218279
+			// Token: 0x0402FEDA RID: 196314
 			public const int RoleItem = 1;
 
-			// Token: 0x040354A8 RID: 218280
+			// Token: 0x0402FEDB RID: 196315
 			public const int AttrPanelItem = 2;
 
-			// Token: 0x040354A9 RID: 218281
+			// Token: 0x0402FEDC RID: 196316
 			public const int AttrItem = 3;
 
-			// Token: 0x040354AA RID: 218282
+			// Token: 0x0402FEDD RID: 196317
 			public const int BtnMore = 4;
 		}
 	}

@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200153D RID: 5437
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x02001698 RID: 5784
 	public class IFadeBackgroundFadeOutEffectTypeBaseConverter : JsonConverter<IFadeBackgroundFadeOutEffectTypeBase>
 	{
-		// Token: 0x06007B25 RID: 31525 RVA: 0x001289F0 File Offset: 0x00126BF0
+		// Token: 0x060081F6 RID: 33270 RVA: 0x0013788C File Offset: 0x00135A8C
 		[return: Nullable(2)]
 		public override IFadeBackgroundFadeOutEffectTypeBase Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -54,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B26 RID: 31526 RVA: 0x00128A94 File Offset: 0x00126C94
+		// Token: 0x060081F7 RID: 33271 RVA: 0x00137930 File Offset: 0x00135B30
 		public override void Write(Utf8JsonWriter writer, IFadeBackgroundFadeOutEffectTypeBase value, JsonSerializerOptions options)
 		{
 			IFadeBackgroundFadeOutEffectBlack fadeBackgroundFadeOutEffectBlack = value as IFadeBackgroundFadeOutEffectBlack;

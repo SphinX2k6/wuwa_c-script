@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000404 RID: 1028
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200045D RID: 1117
 	public class IGuideLineCreatorScanOption
 	{
-		// Token: 0x060014BB RID: 5307 RVA: 0x00041E68 File Offset: 0x00040068
+		// Token: 0x06001655 RID: 5717 RVA: 0x00045BB0 File Offset: 0x00043DB0
 		private IGuideLineCreatorScanOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014BC RID: 5308 RVA: 0x00041EA0 File Offset: 0x000400A0
+		// Token: 0x06001656 RID: 5718 RVA: 0x00045BE8 File Offset: 0x00043DE8
 		public static IGuideLineCreatorScanOption Create([Nullable(2)] IGuideLineCreatorScanOption instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014BD RID: 5309 RVA: 0x00041EB3 File Offset: 0x000400B3
+		// Token: 0x06001657 RID: 5719 RVA: 0x00045BFB File Offset: 0x00043DFB
 		public static IGuideLineCreatorScanOption CreateFromSetValue([Nullable(2)] IGuideLineCreatorScanOption_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014BE RID: 5310 RVA: 0x00041EC6 File Offset: 0x000400C6
+		// Token: 0x06001658 RID: 5720 RVA: 0x00045C0E File Offset: 0x00043E0E
 		public IGuideLineCreatorScanOption_SetValue ToSetValue()
 		{
 			return new IGuideLineCreatorScanOption_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005B5 RID: 1461
-		// (get) Token: 0x060014BF RID: 5311 RVA: 0x00041ED9 File Offset: 0x000400D9
-		// (set) Token: 0x060014C0 RID: 5312 RVA: 0x00041F04 File Offset: 0x00040104
+		// Token: 0x1700061C RID: 1564
+		// (get) Token: 0x06001659 RID: 5721 RVA: 0x00045C21 File Offset: 0x00043E21
+		// (set) Token: 0x0600165A RID: 5722 RVA: 0x00045C4C File Offset: 0x00043E4C
 		public virtual int ResponseRange
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400103C RID: 4156
+		// Token: 0x0400115E RID: 4446
 		[Nullable(2)]
 		protected IGuideLineCreatorScanOption FbInstance;
 
-		// Token: 0x0400103D RID: 4157
+		// Token: 0x0400115F RID: 4447
 		[Nullable(2)]
 		protected IGuideLineCreatorScanOption_SetValue PocoInterface;
 	}

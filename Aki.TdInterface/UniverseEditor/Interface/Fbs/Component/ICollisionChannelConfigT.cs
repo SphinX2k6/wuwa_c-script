@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FB9 RID: 20409
+	// Token: 0x02005515 RID: 21781
 	public class ICollisionChannelConfigT
 	{
-		// Token: 0x170093D3 RID: 37843
-		// (get) Token: 0x060207D7 RID: 133079 RVA: 0x00485135 File Offset: 0x00483335
-		// (set) Token: 0x060207D8 RID: 133080 RVA: 0x0048513D File Offset: 0x0048333D
+		// Token: 0x17009BAB RID: 39851
+		// (get) Token: 0x060226CB RID: 141003 RVA: 0x004BE619 File Offset: 0x004BC819
+		// (set) Token: 0x060226CC RID: 141004 RVA: 0x004BE621 File Offset: 0x004BC821
 		public IOverrideCollisionChannelT OverrideCollisionChannel { get; set; }
 
-		// Token: 0x060207D9 RID: 133081 RVA: 0x00485146 File Offset: 0x00483346
+		// Token: 0x060226CD RID: 141005 RVA: 0x004BE62A File Offset: 0x004BC82A
 		public ICollisionChannelConfigT()
 		{
 			this.OverrideCollisionChannel = null;

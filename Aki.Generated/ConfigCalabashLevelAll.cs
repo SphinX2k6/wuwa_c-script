@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000136 RID: 310
+	// Token: 0x02000145 RID: 325
 	public class ConfigCalabashLevelAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000745 RID: 1861 RVA: 0x00082C58 File Offset: 0x00080E58
+		// Token: 0x0600079F RID: 1951 RVA: 0x000885BC File Offset: 0x000867BC
 		static ConfigCalabashLevelAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCalabashLevelAll.CreateStaticDefaultValue), new Action(ConfigCalabashLevelAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000746 RID: 1862 RVA: 0x00082C78 File Offset: 0x00080E78
+		// Token: 0x060007A0 RID: 1952 RVA: 0x000885DC File Offset: 0x000867DC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCalabashLevelAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000747 RID: 1863 RVA: 0x00082CF7 File Offset: 0x00080EF7
+		// Token: 0x060007A1 RID: 1953 RVA: 0x0008865B File Offset: 0x0008685B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCalabashLevelAll.LogPair = null;
 			ConfigCalabashLevelAll.HandleId = 0;
 		}
 
-		// Token: 0x06000748 RID: 1864 RVA: 0x00082D05 File Offset: 0x00080F05
+		// Token: 0x060007A2 RID: 1954 RVA: 0x00088669 File Offset: 0x00086869
 		public static void Init()
 		{
 			ConfigCalabashLevelAll.HandleId = ConfigCommon.InitDataStatement(ConfigCalabashLevelAll.HandleId, "db_calabash.db", "select BinData from `CalabashLevel`");
 		}
 
-		// Token: 0x06000749 RID: 1865 RVA: 0x00082D20 File Offset: 0x00080F20
+		// Token: 0x060007A3 RID: 1955 RVA: 0x00088684 File Offset: 0x00086884
 		[NullableContext(2)]
 		public static IReadOnlyList<CalabashLevel> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400085E RID: 2142
+		// Token: 0x040008C7 RID: 2247
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x0400085F RID: 2143
+		// Token: 0x040008C8 RID: 2248
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x04000860 RID: 2144
+		// Token: 0x040008C9 RID: 2249
 		private const string TABLE = "CalabashLevel";
 
-		// Token: 0x04000861 RID: 2145
+		// Token: 0x040008CA RID: 2250
 		private const string COMMAND = "select BinData from `CalabashLevel`";
 
-		// Token: 0x04000862 RID: 2146
+		// Token: 0x040008CB RID: 2251
 		private const string KEY_PREFIX = "CalabashLevelAll";
 
-		// Token: 0x04000863 RID: 2147
+		// Token: 0x040008CC RID: 2252
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000864 RID: 2148
+		// Token: 0x040008CD RID: 2253
 		private static int HandleId;
 	}
 }

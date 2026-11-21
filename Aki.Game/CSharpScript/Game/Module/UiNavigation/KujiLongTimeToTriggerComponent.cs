@@ -1,70 +1,68 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing;
 using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004981 RID: 18817
+	// Token: 0x020038FA RID: 14586
 	public class KujiLongTimeToTriggerComponent : LongTimeToTriggerComponent
 	{
-		// Token: 0x060310DA RID: 200922 RVA: 0x00B62D16 File Offset: 0x00B60F16
+		// Token: 0x06025C0E RID: 154638 RVA: 0x00A9DC16 File Offset: 0x00A9BE16
 		public KujiLongTimeToTriggerComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310DB RID: 200923 RVA: 0x00B62D1F File Offset: 0x00B60F1F
-		protected override void OnInit()
+		// Token: 0x06025C0F RID: 154639 RVA: 0x00A9DC1F File Offset: 0x00A9BE1F
+		[NullableContext(2)]
+		private IKujiTearGamepadHandler GetTearView()
 		{
-			this.ActivityView = (UiManager.Instance.GetViewByName(EUiViewName.PrizeDrawingTearView) as ActivityPrizeDrawingTearView);
+			return (UiManager.Instance.GetViewByName(EUiViewName.SolarSchoolPrizeDrawingTearView) as IKujiTearGamepadHandler) ?? (UiManager.Instance.GetViewByName(EUiViewName.PrizeDrawingTearView) as IKujiTearGamepadHandler);
 		}
 
-		// Token: 0x060310DC RID: 200924 RVA: 0x00B62D3B File Offset: 0x00B60F3B
+		// Token: 0x06025C10 RID: 154640 RVA: 0x00A9DC4D File Offset: 0x00A9BE4D
 		protected override void OnHandleLongPressRefresh(float percent)
 		{
-			if (this.ActivityView == null)
+			IKujiTearGamepadHandler tearView = this.GetTearView();
+			if (tearView == null)
 			{
 				return;
 			}
-			this.ActivityView.OnGamepadHold(percent);
+			tearView.OnGamepadHold(percent);
 		}
 
-		// Token: 0x060310DD RID: 200925 RVA: 0x00B62D52 File Offset: 0x00B60F52
+		// Token: 0x06025C11 RID: 154641 RVA: 0x00A9DC60 File Offset: 0x00A9BE60
 		protected override void OnPressAction()
 		{
-			if (this.ActivityView == null)
+			IKujiTearGamepadHandler tearView = this.GetTearView();
+			if (tearView == null)
 			{
 				return;
 			}
-			this.ActivityView.OnGamepadPress();
+			tearView.OnGamepadPress();
 		}
 
-		// Token: 0x060310DE RID: 200926 RVA: 0x00B62D68 File Offset: 0x00B60F68
+		// Token: 0x06025C12 RID: 154642 RVA: 0x00A9DC72 File Offset: 0x00A9BE72
 		protected override void OnReleaseAction()
 		{
-			if (this.ActivityView == null)
+			IKujiTearGamepadHandler tearView = this.GetTearView();
+			if (tearView == null)
 			{
 				return;
 			}
-			this.ActivityView.OnGamepadRelease();
+			tearView.OnGamepadRelease();
 		}
 
-		// Token: 0x060310DF RID: 200927 RVA: 0x00B62D80 File Offset: 0x00B60F80
+		// Token: 0x06025C13 RID: 154643 RVA: 0x00A9DC84 File Offset: 0x00A9BE84
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
-			UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.PrizeDrawingTearView);
-			if (viewByName == null)
+			IKujiTearGamepadHandler tearView = this.GetTearView();
+			if (tearView == null)
 			{
 				base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, false, false);
 				return;
 			}
-			ActivityPrizeDrawingTearView activityPrizeDrawingTearView = viewByName as ActivityPrizeDrawingTearView;
-			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, activityPrizeDrawingTearView.GetGamepadCanPress(), false);
+			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, tearView.GetGamepadCanPress(), false);
 		}
-
-		// Token: 0x0401A4A7 RID: 107687
-		[Nullable(2)]
-		private ActivityPrizeDrawingTearView ActivityView;
 	}
 }

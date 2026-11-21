@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x0200635B RID: 25435
+	// Token: 0x020052D9 RID: 21209
 	public class PinballItemGridRoleHeadComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x06040006 RID: 262150 RVA: 0x00F7BA64 File Offset: 0x00F79C64
+		// Token: 0x06034CC7 RID: 216263 RVA: 0x00EC29C4 File Offset: 0x00EC0BC4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040007 RID: 262151 RVA: 0x00F7BAAC File Offset: 0x00F79CAC
+		// Token: 0x06034CC8 RID: 216264 RVA: 0x00EC2A0C File Offset: 0x00EC0C0C
 		[NullableContext(2)]
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseRole";
 		}
 
-		// Token: 0x06040008 RID: 262152 RVA: 0x00F7BAB4 File Offset: 0x00F79CB4
+		// Token: 0x06034CC9 RID: 216265 RVA: 0x00EC2A14 File Offset: 0x00EC0C14
 		[NullableContext(1)]
 		protected override void OnRefresh(params object[] args)
 		{
@@ -56,10 +56,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			base.TrySetTextureByPath(pinballRoleConfig.Value.SmallIcon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0200C57D RID: 50557
+		// Token: 0x0200AF64 RID: 44900
 		private enum EComponent
 		{
-			// Token: 0x0403B9B6 RID: 244150
+			// Token: 0x04036318 RID: 221976
 			TexRoleIcon
 		}
 	}

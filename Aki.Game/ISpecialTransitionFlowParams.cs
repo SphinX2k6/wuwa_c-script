@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A82 RID: 10882
+// Token: 0x02001FFE RID: 8190
 [NullableContext(2)]
 public interface ISpecialTransitionFlowParams
 {
-	// Token: 0x17001E26 RID: 7718
-	// (get) Token: 0x06016A93 RID: 92819
-	// (set) Token: 0x06016A94 RID: 92820
+	// Token: 0x17001E7E RID: 7806
+	// (get) Token: 0x060144B8 RID: 83128
+	// (set) Token: 0x060144B9 RID: 83129
 	IFadeEffect FadeInEffect { get; set; }
 
-	// Token: 0x17001E27 RID: 7719
-	// (get) Token: 0x06016A95 RID: 92821
-	// (set) Token: 0x06016A96 RID: 92822
+	// Token: 0x17001E7F RID: 7807
+	// (get) Token: 0x060144BA RID: 83130
+	// (set) Token: 0x060144BB RID: 83131
 	IFadeEffect FadeOutEffect { get; set; }
 
-	// Token: 0x17001E28 RID: 7720
-	// (get) Token: 0x06016A97 RID: 92823
-	// (set) Token: 0x06016A98 RID: 92824
+	// Token: 0x17001E80 RID: 7808
+	// (get) Token: 0x060144BC RID: 83132
+	// (set) Token: 0x060144BD RID: 83133
 	float? KeepTime { get; set; }
 }

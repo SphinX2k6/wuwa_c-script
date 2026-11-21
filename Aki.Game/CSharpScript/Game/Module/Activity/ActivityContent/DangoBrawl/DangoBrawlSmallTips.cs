@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200681A RID: 26650
+	// Token: 0x0200576A RID: 22378
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlSmallTips : UiPanelBase
 	{
-		// Token: 0x060427D1 RID: 272337 RVA: 0x01027844 File Offset: 0x01025A44
+		// Token: 0x06037326 RID: 226086 RVA: 0x00F68D88 File Offset: 0x00F66F88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060427D2 RID: 272338 RVA: 0x010278B0 File Offset: 0x01025AB0
+		// Token: 0x06037327 RID: 226087 RVA: 0x00F68DF4 File Offset: 0x00F66FF4
 		protected override void OnBeforeCreateImplement()
 		{
 			this.TipsSequence = new UiBehaviorLevelSequence(this);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.TipsSequence.AddSequenceFinishEvent("Close", new Action<string>(this.OnTipsCloseSequenceFinish), false);
 		}
 
-		// Token: 0x060427D3 RID: 272339 RVA: 0x0102790E File Offset: 0x01025B0E
+		// Token: 0x06037328 RID: 226088 RVA: 0x00F68E52 File Offset: 0x00F67052
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindGlobalInput();
@@ -43,20 +43,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OnTipsClosed = null;
 		}
 
-		// Token: 0x060427D4 RID: 272340 RVA: 0x01027923 File Offset: 0x01025B23
+		// Token: 0x06037329 RID: 226089 RVA: 0x00F68E67 File Offset: 0x00F67067
 		public void SetKeepOpenItem(UUIItem item)
 		{
 			this.KeepOpenItem = item;
 		}
 
-		// Token: 0x060427D5 RID: 272341 RVA: 0x0102792C File Offset: 0x01025B2C
+		// Token: 0x0603732A RID: 226090 RVA: 0x00F68E70 File Offset: 0x00F67070
 		public void SetMaskAttach(UUIButtonComponent maskButton)
 		{
 			this.MaskButton = maskButton;
 		}
 
-		// Token: 0x17009737 RID: 38711
-		// (get) Token: 0x060427D6 RID: 272342 RVA: 0x01027935 File Offset: 0x01025B35
+		// Token: 0x17006A78 RID: 27256
+		// (get) Token: 0x0603732B RID: 226091 RVA: 0x00F68E79 File Offset: 0x00F67079
 		private bool UseMaskClose
 		{
 			get
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060427D7 RID: 272343 RVA: 0x01027940 File Offset: 0x01025B40
+		// Token: 0x0603732C RID: 226092 RVA: 0x00F68E84 File Offset: 0x00F67084
 		public void Show(bool locked)
 		{
 			if (!this.TipsWantVisible)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BindGlobalInput();
 		}
 
-		// Token: 0x060427D8 RID: 272344 RVA: 0x010279C8 File Offset: 0x01025BC8
+		// Token: 0x0603732D RID: 226093 RVA: 0x00F68F0C File Offset: 0x00F6710C
 		public void Hide()
 		{
 			this.UnbindGlobalInput();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onTipsClosed();
 		}
 
-		// Token: 0x060427D9 RID: 272345 RVA: 0x01027A28 File Offset: 0x01025C28
+		// Token: 0x0603732E RID: 226094 RVA: 0x00F68F6C File Offset: 0x00F6716C
 		[NullableContext(1)]
 		public void Refresh(string title, string desc)
 		{
@@ -130,14 +130,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), desc, Array.Empty<object>());
 		}
 
-		// Token: 0x060427DA RID: 272346 RVA: 0x01027A58 File Offset: 0x01025C58
+		// Token: 0x0603732F RID: 226095 RVA: 0x00F68F9C File Offset: 0x00F6719C
 		[NullableContext(1)]
 		private void OnTipsStartSequenceStart(string _)
 		{
 			base.SetUiActive(true);
 		}
 
-		// Token: 0x060427DB RID: 272347 RVA: 0x01027A61 File Offset: 0x01025C61
+		// Token: 0x06037330 RID: 226096 RVA: 0x00F68FA5 File Offset: 0x00F671A5
 		[NullableContext(1)]
 		private void OnTipsCloseSequenceFinish(string _)
 		{
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060427DC RID: 272348 RVA: 0x01027A74 File Offset: 0x01025C74
+		// Token: 0x06037331 RID: 226097 RVA: 0x00F68FB8 File Offset: 0x00F671B8
 		private void HoldMask()
 		{
 			this.MaskHeld = true;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			uuiitem.SetUIActive(true);
 		}
 
-		// Token: 0x060427DD RID: 272349 RVA: 0x01027AAC File Offset: 0x01025CAC
+		// Token: 0x06037332 RID: 226098 RVA: 0x00F68FF0 File Offset: 0x00F671F0
 		private void ReleaseMask()
 		{
 			if (!this.MaskHeld)
@@ -185,19 +185,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			uuiitem.SetUIActive(false);
 		}
 
-		// Token: 0x060427DE RID: 272350 RVA: 0x01027AEC File Offset: 0x01025CEC
+		// Token: 0x06037333 RID: 226099 RVA: 0x00F69030 File Offset: 0x00F67230
 		private void BindGlobalInput()
 		{
 			InputDistributeController.Instance.BindActionIgnoreLimit("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnGlobalClickAction));
 		}
 
-		// Token: 0x060427DF RID: 272351 RVA: 0x01027B09 File Offset: 0x01025D09
+		// Token: 0x06037334 RID: 226100 RVA: 0x00F6904D File Offset: 0x00F6724D
 		private void UnbindGlobalInput()
 		{
 			InputDistributeController.Instance.UnBindActionIgnoreLimit("UI左键点击", new TInputHandle<InputDistributeDefine.EActionType>(this.OnGlobalClickAction));
 		}
 
-		// Token: 0x060427E0 RID: 272352 RVA: 0x01027B28 File Offset: 0x01025D28
+		// Token: 0x06037335 RID: 226101 RVA: 0x00F6906C File Offset: 0x00F6726C
 		[NullableContext(1)]
 		private void OnGlobalClickAction(string _, InputDistributeDefine.EActionType actionType, InputIdentification __)
 		{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.Hide();
 		}
 
-		// Token: 0x060427E1 RID: 272353 RVA: 0x01027B54 File Offset: 0x01025D54
+		// Token: 0x06037336 RID: 226102 RVA: 0x00F69098 File Offset: 0x00F67298
 		private bool IsHitOnSelfOrKeepOpen(UUIItem hit)
 		{
 			if (hit == null)
@@ -234,31 +234,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x04022A56 RID: 141910
+		// Token: 0x0401D2B3 RID: 119475
 		private UiBehaviorLevelSequence TipsSequence;
 
-		// Token: 0x04022A57 RID: 141911
+		// Token: 0x0401D2B4 RID: 119476
 		private bool TipsWantVisible;
 
-		// Token: 0x04022A58 RID: 141912
+		// Token: 0x0401D2B5 RID: 119477
 		private UUIItem KeepOpenItem;
 
-		// Token: 0x04022A59 RID: 141913
+		// Token: 0x0401D2B6 RID: 119478
 		private UUIButtonComponent MaskButton;
 
-		// Token: 0x04022A5A RID: 141914
+		// Token: 0x0401D2B7 RID: 119479
 		private bool MaskHeld;
 
-		// Token: 0x04022A5B RID: 141915
+		// Token: 0x0401D2B8 RID: 119480
 		public Action OnTipsClosed;
 
-		// Token: 0x0200C9AC RID: 51628
+		// Token: 0x0200B379 RID: 45945
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CEA5 RID: 249509
+			// Token: 0x04037792 RID: 227218
 			TxtTitle,
-			// Token: 0x0403CEA6 RID: 249510
+			// Token: 0x04037793 RID: 227219
 			TxtDesc
 		}
 	}

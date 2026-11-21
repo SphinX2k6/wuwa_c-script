@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200767B RID: 30331
+	// Token: 0x02007E89 RID: 32393
 	public class TClientModifyTargetUnion
 	{
-		// Token: 0x1700E5E5 RID: 58853
-		// (get) Token: 0x0603731A RID: 226074 RVA: 0x0077B3A6 File Offset: 0x007795A6
-		// (set) Token: 0x0603731B RID: 226075 RVA: 0x0077B3AE File Offset: 0x007795AE
+		// Token: 0x1700F223 RID: 61987
+		// (get) Token: 0x0603A7C1 RID: 239553 RVA: 0x007DF4F0 File Offset: 0x007DD6F0
+		// (set) Token: 0x0603A7C2 RID: 239554 RVA: 0x007DF4F8 File Offset: 0x007DD6F8
 		public TClientModifyTarget Type { get; set; }
 
-		// Token: 0x1700E5E6 RID: 58854
-		// (get) Token: 0x0603731C RID: 226076 RVA: 0x0077B3B7 File Offset: 0x007795B7
-		// (set) Token: 0x0603731D RID: 226077 RVA: 0x0077B3BF File Offset: 0x007795BF
+		// Token: 0x1700F224 RID: 61988
+		// (get) Token: 0x0603A7C3 RID: 239555 RVA: 0x007DF501 File Offset: 0x007DD701
+		// (set) Token: 0x0603A7C4 RID: 239556 RVA: 0x007DF509 File Offset: 0x007DD709
 		public object Value { get; set; }
 
-		// Token: 0x0603731E RID: 226078 RVA: 0x0077B3C8 File Offset: 0x007795C8
+		// Token: 0x0603A7C5 RID: 239557 RVA: 0x007DF512 File Offset: 0x007DD712
 		public TClientModifyTargetUnion()
 		{
 			this.Type = TClientModifyTarget.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603731F RID: 226079 RVA: 0x0077B3DE File Offset: 0x007795DE
+		// Token: 0x0603A7C6 RID: 239558 RVA: 0x007DF528 File Offset: 0x007DD728
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037320 RID: 226080 RVA: 0x0077B3F0 File Offset: 0x007795F0
+		// Token: 0x0603A7C7 RID: 239559 RVA: 0x007DF53A File Offset: 0x007DD73A
 		public IClientModifyPlayerTargetT AsIClientModifyPlayerTarget()
 		{
 			return this.As<IClientModifyPlayerTargetT>();
 		}
 
-		// Token: 0x06037321 RID: 226081 RVA: 0x0077B3F8 File Offset: 0x007795F8
+		// Token: 0x0603A7C8 RID: 239560 RVA: 0x007DF542 File Offset: 0x007DD742
 		public static TClientModifyTargetUnion FromIClientModifyPlayerTarget(IClientModifyPlayerTargetT _iclientmodifyplayertarget)
 		{
 			return new TClientModifyTargetUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037322 RID: 226082 RVA: 0x0077B40D File Offset: 0x0077960D
+		// Token: 0x0603A7C9 RID: 239561 RVA: 0x007DF557 File Offset: 0x007DD757
 		public IClientModifySelfTargetT AsIClientModifySelfTarget()
 		{
 			return this.As<IClientModifySelfTargetT>();
 		}
 
-		// Token: 0x06037323 RID: 226083 RVA: 0x0077B415 File Offset: 0x00779615
+		// Token: 0x0603A7CA RID: 239562 RVA: 0x007DF55F File Offset: 0x007DD75F
 		public static TClientModifyTargetUnion FromIClientModifySelfTarget(IClientModifySelfTargetT _iclientmodifyselftarget)
 		{
 			return new TClientModifyTargetUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037324 RID: 226084 RVA: 0x0077B42C File Offset: 0x0077962C
+		// Token: 0x0603A7CB RID: 239563 RVA: 0x007DF574 File Offset: 0x007DD774
 		public static int Pack(FlatBufferBuilder builder, TClientModifyTargetUnion _o)
 		{
 			TClientModifyTarget type = _o.Type;

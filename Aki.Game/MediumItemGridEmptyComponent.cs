@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001914 RID: 6420
+// Token: 0x02000DCD RID: 3533
 public class MediumItemGridEmptyComponent : MediumItemGridVisibleComponent
 {
-	// Token: 0x0600BC0F RID: 48143 RVA: 0x002AA04C File Offset: 0x002A824C
+	// Token: 0x06008FF9 RID: 36857 RVA: 0x002B47A8 File Offset: 0x002B29A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,26 +26,26 @@ public class MediumItemGridEmptyComponent : MediumItemGridVisibleComponent
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BC10 RID: 48144 RVA: 0x002AA0D1 File Offset: 0x002A82D1
+	// Token: 0x06008FFA RID: 36858 RVA: 0x002B482D File Offset: 0x002B2A2D
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBtnEmpty";
 	}
 
-	// Token: 0x0600BC11 RID: 48145 RVA: 0x002AA0D8 File Offset: 0x002A82D8
+	// Token: 0x06008FFB RID: 36859 RVA: 0x002B4834 File Offset: 0x002B2A34
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x0600BC12 RID: 48146 RVA: 0x002AA0DB File Offset: 0x002A82DB
+	// Token: 0x06008FFC RID: 36860 RVA: 0x002B4837 File Offset: 0x002B2A37
 	protected override void OnDeactivate()
 	{
 		this.OnClickedCallback = null;
 	}
 
-	// Token: 0x0600BC13 RID: 48147 RVA: 0x002AA0E4 File Offset: 0x002A82E4
+	// Token: 0x06008FFD RID: 36861 RVA: 0x002B4840 File Offset: 0x002B2A40
 	private void OnBtnClick()
 	{
 		Action onClickedCallback = this.OnClickedCallback;
@@ -56,14 +56,14 @@ public class MediumItemGridEmptyComponent : MediumItemGridVisibleComponent
 		onClickedCallback();
 	}
 
-	// Token: 0x0600BC14 RID: 48148 RVA: 0x002AA0F6 File Offset: 0x002A82F6
+	// Token: 0x06008FFE RID: 36862 RVA: 0x002B4852 File Offset: 0x002B2A52
 	public void SetClickable(bool isClickable)
 	{
 		this.IsClickable = isClickable;
 		this.UpdateClickable();
 	}
 
-	// Token: 0x0600BC15 RID: 48149 RVA: 0x002AA105 File Offset: 0x002A8305
+	// Token: 0x06008FFF RID: 36863 RVA: 0x002B4861 File Offset: 0x002B2A61
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -71,7 +71,7 @@ public class MediumItemGridEmptyComponent : MediumItemGridVisibleComponent
 		this.UpdateClickable();
 	}
 
-	// Token: 0x0600BC16 RID: 48150 RVA: 0x002AA114 File Offset: 0x002A8314
+	// Token: 0x06009000 RID: 36864 RVA: 0x002B4870 File Offset: 0x002B2A70
 	private void UpdateClickable()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -82,17 +82,17 @@ public class MediumItemGridEmptyComponent : MediumItemGridVisibleComponent
 		button.SetSelfInteractive(this.IsClickable);
 	}
 
-	// Token: 0x0400552F RID: 21807
+	// Token: 0x040055DA RID: 21978
 	[Nullable(2)]
 	public Action OnClickedCallback;
 
-	// Token: 0x04005530 RID: 21808
+	// Token: 0x040055DB RID: 21979
 	private bool IsClickable;
 
-	// Token: 0x02007E87 RID: 32391
+	// Token: 0x0200700E RID: 28686
 	private class EChildType
 	{
-		// Token: 0x04029654 RID: 169556
+		// Token: 0x04024980 RID: 149888
 		public const int BtnRoot = 0;
 	}
 }

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F0 RID: 24816
+	// Token: 0x0200506E RID: 20590
 	public static class RoverlikeFloatTextKeyMap
 	{
-		// Token: 0x0603EC19 RID: 257049 RVA: 0x00F28D58 File Offset: 0x00F26F58
+		// Token: 0x060338DB RID: 211163 RVA: 0x00E6FB6C File Offset: 0x00E6DD6C
 		// Note: this type is marked as 'beforefieldinit'.
 		static RoverlikeFloatTextKeyMap()
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			RoverlikeFloatTextKeyMap.Map = dictionary;
 		}
 
-		// Token: 0x04020CB8 RID: 134328
+		// Token: 0x0401B5E5 RID: 112101
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ERoverlikeFloatTextType, RoverlikeFloatTextKeyPair> Map;

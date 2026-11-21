@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024D3 RID: 9427
+// Token: 0x020019BA RID: 6586
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class VisionNewRecommendPreviewAttrItem : GridProxyAbstract<VisionAssembleAttrData>
 {
-	// Token: 0x06012F54 RID: 77652 RVA: 0x004B1770 File Offset: 0x004AF970
+	// Token: 0x06010413 RID: 66579 RVA: 0x004BF370 File Offset: 0x004BD570
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,13 +36,13 @@ public class VisionNewRecommendPreviewAttrItem : GridProxyAbstract<VisionAssembl
 		};
 	}
 
-	// Token: 0x06012F55 RID: 77653 RVA: 0x004B18C1 File Offset: 0x004AFAC1
+	// Token: 0x06010414 RID: 66580 RVA: 0x004BF4C1 File Offset: 0x004BD6C1
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06012F56 RID: 77654 RVA: 0x004B18D4 File Offset: 0x004AFAD4
+	// Token: 0x06010415 RID: 66581 RVA: 0x004BF4D4 File Offset: 0x004BD6D4
 	public void PlaySequence(string name)
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -58,19 +58,19 @@ public class VisionNewRecommendPreviewAttrItem : GridProxyAbstract<VisionAssembl
 		levelSequencePlayer2.PlayLevelSequenceByName(name, false, null, false);
 	}
 
-	// Token: 0x06012F57 RID: 77655 RVA: 0x004B1910 File Offset: 0x004AFB10
+	// Token: 0x06010416 RID: 66582 RVA: 0x004BF510 File Offset: 0x004BD710
 	public void SetLeftItemAlpha(float alpha)
 	{
 		base.GetItem(0).SetAlpha(alpha);
 	}
 
-	// Token: 0x06012F58 RID: 77656 RVA: 0x004B191F File Offset: 0x004AFB1F
+	// Token: 0x06010417 RID: 66583 RVA: 0x004BF51F File Offset: 0x004BD71F
 	public void SetRightItemAlpha(float alpha)
 	{
 		base.GetItem(11).SetAlpha(alpha);
 	}
 
-	// Token: 0x06012F59 RID: 77657 RVA: 0x004B1930 File Offset: 0x004AFB30
+	// Token: 0x06010418 RID: 66584 RVA: 0x004BF530 File Offset: 0x004BD730
 	private void RefreshBg(int gridIndex)
 	{
 		bool uiactive = gridIndex % 2 == 0;
@@ -91,7 +91,7 @@ public class VisionNewRecommendPreviewAttrItem : GridProxyAbstract<VisionAssembl
 		sprite2.SetUIActive(data2 != null && data2.IsHighLight);
 	}
 
-	// Token: 0x06012F5A RID: 77658 RVA: 0x004B19A8 File Offset: 0x004AFBA8
+	// Token: 0x06010419 RID: 66585 RVA: 0x004BF5A8 File Offset: 0x004BD7A8
 	public override void Refresh(VisionAssembleAttrData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -113,45 +113,45 @@ public class VisionNewRecommendPreviewAttrItem : GridProxyAbstract<VisionAssembl
 		base.GetText(8).SetText(formatAttributeValueString, true);
 	}
 
-	// Token: 0x04008EC0 RID: 36544
+	// Token: 0x0400900A RID: 36874
 	[Nullable(2)]
 	private VisionAssembleAttrData Data;
 
-	// Token: 0x04008EC1 RID: 36545
+	// Token: 0x0400900B RID: 36875
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008A63 RID: 35427
+	// Token: 0x02007BEC RID: 31724
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CEF0 RID: 184048
+		// Token: 0x0402820E RID: 164366
 		LeftItem,
-		// Token: 0x0402CEF1 RID: 184049
+		// Token: 0x0402820F RID: 164367
 		LeftSpriteBg,
-		// Token: 0x0402CEF2 RID: 184050
+		// Token: 0x04028210 RID: 164368
 		LeftTextureIcon,
-		// Token: 0x0402CEF3 RID: 184051
+		// Token: 0x04028211 RID: 164369
 		LeftAttributeText,
-		// Token: 0x0402CEF4 RID: 184052
+		// Token: 0x04028212 RID: 164370
 		LeftNumText,
-		// Token: 0x0402CEF5 RID: 184053
+		// Token: 0x04028213 RID: 164371
 		RightSpriteBg,
-		// Token: 0x0402CEF6 RID: 184054
+		// Token: 0x04028214 RID: 164372
 		RightTextureIcon,
-		// Token: 0x0402CEF7 RID: 184055
+		// Token: 0x04028215 RID: 164373
 		RightAttributeText,
-		// Token: 0x0402CEF8 RID: 184056
+		// Token: 0x04028216 RID: 164374
 		RightNumText,
-		// Token: 0x0402CEF9 RID: 184057
+		// Token: 0x04028217 RID: 164375
 		UpItem,
-		// Token: 0x0402CEFA RID: 184058
+		// Token: 0x04028218 RID: 164376
 		DownItem,
-		// Token: 0x0402CEFB RID: 184059
+		// Token: 0x04028219 RID: 164377
 		RightItem,
-		// Token: 0x0402CEFC RID: 184060
+		// Token: 0x0402821A RID: 164378
 		LeftHighLightBg,
-		// Token: 0x0402CEFD RID: 184061
+		// Token: 0x0402821B RID: 164379
 		RightHighLightBg
 	}
 }

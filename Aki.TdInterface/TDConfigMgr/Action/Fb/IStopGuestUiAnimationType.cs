@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A10 RID: 10768
+	// Token: 0x02002CFD RID: 11517
 	public class IStopGuestUiAnimationType
 	{
-		// Token: 0x0600ED78 RID: 60792 RVA: 0x00229E4A File Offset: 0x0022804A
-		[NullableContext(1)]
+		// Token: 0x0600FC0F RID: 64527 RVA: 0x002477CE File Offset: 0x002459CE
 		public static IStopGuestUiAnimationType Create(IStopGuestUiAnimationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B1A RID: 19226
-		// (get) Token: 0x0600ED79 RID: 60793 RVA: 0x00229E69 File Offset: 0x00228069
+		// Token: 0x17004EC3 RID: 20163
+		// (get) Token: 0x0600FC10 RID: 64528 RVA: 0x002477ED File Offset: 0x002459ED
 		public virtual EGuestUiAnimationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082B6 RID: 33462
+		// Token: 0x040089A7 RID: 35239
 		private IStopGuestUiAnimationType Instance;
 	}
 }

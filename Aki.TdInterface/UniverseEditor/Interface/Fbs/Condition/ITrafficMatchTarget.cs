@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CFA RID: 19706
+	// Token: 0x020051F6 RID: 20982
 	public struct ITrafficMatchTarget : IFlatbufferObject
 	{
-		// Token: 0x17008EFC RID: 36604
-		// (get) Token: 0x0601F46E RID: 128110 RVA: 0x0045D174 File Offset: 0x0045B374
+		// Token: 0x17009635 RID: 38453
+		// (get) Token: 0x060210B3 RID: 135347 RVA: 0x004910C4 File Offset: 0x0048F2C4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F46F RID: 128111 RVA: 0x0045D181 File Offset: 0x0045B381
+		// Token: 0x060210B4 RID: 135348 RVA: 0x004910D1 File Offset: 0x0048F2D1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F470 RID: 128112 RVA: 0x0045D188 File Offset: 0x0045B388
+		// Token: 0x060210B5 RID: 135349 RVA: 0x004910D8 File Offset: 0x0048F2D8
 		public static ITrafficMatchTarget GetRootAsITrafficMatchTarget(ByteBuffer _bb)
 		{
 			return ITrafficMatchTarget.GetRootAsITrafficMatchTarget(_bb, default(ITrafficMatchTarget));
 		}
 
-		// Token: 0x0601F471 RID: 128113 RVA: 0x0045D1A4 File Offset: 0x0045B3A4
+		// Token: 0x060210B6 RID: 135350 RVA: 0x004910F4 File Offset: 0x0048F2F4
 		public static ITrafficMatchTarget GetRootAsITrafficMatchTarget(ByteBuffer _bb, ITrafficMatchTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F472 RID: 128114 RVA: 0x0045D1C1 File Offset: 0x0045B3C1
+		// Token: 0x060210B7 RID: 135351 RVA: 0x00491111 File Offset: 0x0048F311
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F473 RID: 128115 RVA: 0x0045D1D0 File Offset: 0x0045B3D0
+		// Token: 0x060210B8 RID: 135352 RVA: 0x00491120 File Offset: 0x0048F320
 		public ITrafficMatchTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008EFD RID: 36605
-		// (get) Token: 0x0601F474 RID: 128116 RVA: 0x0045D1E0 File Offset: 0x0045B3E0
+		// Token: 0x17009636 RID: 38454
+		// (get) Token: 0x060210B9 RID: 135353 RVA: 0x00491130 File Offset: 0x0048F330
 		public bool MatchPlayer
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008EFE RID: 36606
-		// (get) Token: 0x0601F475 RID: 128117 RVA: 0x0045D220 File Offset: 0x0045B420
+		// Token: 0x17009637 RID: 38455
+		// (get) Token: 0x060210BA RID: 135354 RVA: 0x00491170 File Offset: 0x0048F370
 		public ITrafficMatchTargetByEntityLogic? MatchTargetType
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F476 RID: 128118 RVA: 0x0045D27D File Offset: 0x0045B47D
+		// Token: 0x060210BB RID: 135355 RVA: 0x004911CD File Offset: 0x0048F3CD
 		public static Offset<ITrafficMatchTarget> CreateITrafficMatchTarget(FlatBufferBuilder builder, bool MatchPlayer = false, Offset<ITrafficMatchTargetByEntityLogic> MatchTargetTypeOffset = default(Offset<ITrafficMatchTargetByEntityLogic>))
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ITrafficMatchTarget.EndITrafficMatchTarget(builder);
 		}
 
-		// Token: 0x0601F477 RID: 128119 RVA: 0x0045D29A File Offset: 0x0045B49A
+		// Token: 0x060210BC RID: 135356 RVA: 0x004911EA File Offset: 0x0048F3EA
 		public static void StartITrafficMatchTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F478 RID: 128120 RVA: 0x0045D2A3 File Offset: 0x0045B4A3
+		// Token: 0x060210BD RID: 135357 RVA: 0x004911F3 File Offset: 0x0048F3F3
 		public static void AddMatchPlayer(FlatBufferBuilder builder, bool matchPlayer)
 		{
 			builder.AddBool(0, matchPlayer, false);
 		}
 
-		// Token: 0x0601F479 RID: 128121 RVA: 0x0045D2AE File Offset: 0x0045B4AE
+		// Token: 0x060210BE RID: 135358 RVA: 0x004911FE File Offset: 0x0048F3FE
 		public static void AddMatchTargetType(FlatBufferBuilder builder, Offset<ITrafficMatchTargetByEntityLogic> matchTargetTypeOffset)
 		{
 			builder.AddOffset(1, matchTargetTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601F47A RID: 128122 RVA: 0x0045D2BE File Offset: 0x0045B4BE
+		// Token: 0x060210BF RID: 135359 RVA: 0x0049120E File Offset: 0x0048F40E
 		public static Offset<ITrafficMatchTarget> EndITrafficMatchTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrafficMatchTarget>(builder.EndTable());
 		}
 
-		// Token: 0x0601F47B RID: 128123 RVA: 0x0045D2CC File Offset: 0x0045B4CC
+		// Token: 0x060210C0 RID: 135360 RVA: 0x0049121C File Offset: 0x0048F41C
 		public ITrafficMatchTargetT UnPack()
 		{
 			ITrafficMatchTargetT trafficMatchTargetT = new ITrafficMatchTargetT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return trafficMatchTargetT;
 		}
 
-		// Token: 0x0601F47C RID: 128124 RVA: 0x0045D2E8 File Offset: 0x0045B4E8
+		// Token: 0x060210C1 RID: 135361 RVA: 0x00491238 File Offset: 0x0048F438
 		public void UnPackTo(ITrafficMatchTargetT _o)
 		{
 			_o.MatchPlayer = this.MatchPlayer;
 			_o.MatchTargetType = ((this.MatchTargetType != null) ? this.MatchTargetType.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601F47D RID: 128125 RVA: 0x0045D330 File Offset: 0x0045B530
+		// Token: 0x060210C2 RID: 135362 RVA: 0x00491280 File Offset: 0x0048F480
 		public static Offset<ITrafficMatchTarget> Pack(FlatBufferBuilder builder, ITrafficMatchTargetT _o)
 		{
 			if (_o == null)
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ITrafficMatchTarget.CreateITrafficMatchTarget(builder, _o.MatchPlayer, matchTargetTypeOffset);
 		}
 
-		// Token: 0x0400D6D6 RID: 54998
+		// Token: 0x0400E203 RID: 57859
 		private Table __p;
 	}
 }

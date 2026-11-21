@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C12 RID: 3090
+	// Token: 0x02000CE2 RID: 3298
 	public class IBossStateViewStyle
 	{
-		// Token: 0x060046E5 RID: 18149 RVA: 0x000B2CBE File Offset: 0x000B0EBE
-		[NullableContext(1)]
+		// Token: 0x06004B48 RID: 19272 RVA: 0x000BCE8A File Offset: 0x000BB08A
 		public static IBossStateViewStyle Create(IBossStateViewStyle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700147E RID: 5246
-		// (get) Token: 0x060046E6 RID: 18150 RVA: 0x000B2CDD File Offset: 0x000B0EDD
+		// Token: 0x1700157F RID: 5503
+		// (get) Token: 0x06004B49 RID: 19273 RVA: 0x000BCEA9 File Offset: 0x000BB0A9
 		public virtual EBossStateViewStyle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002847 RID: 10311
+		// Token: 0x04002A93 RID: 10899
 		private IBossStateViewStyle Instance;
 	}
 }

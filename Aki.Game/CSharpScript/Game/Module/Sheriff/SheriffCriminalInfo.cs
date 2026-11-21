@@ -5,10 +5,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C31 RID: 19505
+	// Token: 0x02003BE2 RID: 15330
 	public class SheriffCriminalInfo
 	{
-		// Token: 0x0603277F RID: 206719 RVA: 0x00BC2BAC File Offset: 0x00BC0DAC
+		// Token: 0x06027532 RID: 161074 RVA: 0x00B077D4 File Offset: 0x00B059D4
 		[NullableContext(1)]
 		public void UpdateByProto(SheriffCriminalInfo proto, int? zoneId = null)
 		{
@@ -27,19 +27,19 @@ namespace CSharpScript.Game.Module.Sheriff
 			}
 		}
 
-		// Token: 0x0401ADCE RID: 110030
+		// Token: 0x0401572B RID: 87851
 		public int ZoneId;
 
-		// Token: 0x0401ADCF RID: 110031
+		// Token: 0x0401572C RID: 87852
 		public int CriminalId;
 
-		// Token: 0x0401ADD0 RID: 110032
+		// Token: 0x0401572D RID: 87853
 		public int Identity;
 
-		// Token: 0x0401ADD1 RID: 110033
+		// Token: 0x0401572E RID: 87854
 		public ESheriffCriminalState State;
 
-		// Token: 0x0401ADD2 RID: 110034
+		// Token: 0x0401572F RID: 87855
 		public int AnomalyId;
 	}
 }

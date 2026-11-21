@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002702 RID: 9986
+	// Token: 0x020007D7 RID: 2007
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnDialogueMouthEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0602507F RID: 151679 RVA: 0x0036C9F4 File Offset: 0x0036ABF4
+		// Token: 0x0600ACE4 RID: 44260 RVA: 0x000FF550 File Offset: 0x000FD750
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnDialogueMouthEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x06025080 RID: 151680 RVA: 0x0036CA00 File Offset: 0x0036AC00
+		// Token: 0x0600ACE5 RID: 44261 RVA: 0x000FF55C File Offset: 0x000FD75C
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnDialogueMouthEvent._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnDialogueMouthEvent._FunctionPtr;
 		}
 
-		// Token: 0x06025081 RID: 151681 RVA: 0x0036CA23 File Offset: 0x0036AC23
+		// Token: 0x0600ACE6 RID: 44262 RVA: 0x000FF57F File Offset: 0x000FD77F
 		public FOnDialogueMouthEvent()
 		{
 		}
 
-		// Token: 0x06025082 RID: 151682 RVA: 0x0036CA2B File Offset: 0x0036AC2B
+		// Token: 0x0600ACE7 RID: 44263 RVA: 0x000FF587 File Offset: 0x000FD787
 		[NullableContext(2)]
 		public FOnDialogueMouthEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025083 RID: 151683 RVA: 0x0036CA35 File Offset: 0x0036AC35
+		// Token: 0x0600ACE8 RID: 44264 RVA: 0x000FF591 File Offset: 0x000FD791
 		public FOnDialogueMouthEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025084 RID: 151684 RVA: 0x0036CA40 File Offset: 0x0036AC40
+		// Token: 0x0600ACE9 RID: 44265 RVA: 0x000FF59C File Offset: 0x000FD79C
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool, FText, FText, int>) ?? ((Action<bool, FText, FText, int>)Delegate.CreateDelegate(typeof(Action<bool, FText, FText, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06025085 RID: 151685 RVA: 0x0036CA72 File Offset: 0x0036AC72
+		// Token: 0x0600ACEA RID: 44266 RVA: 0x000FF5CE File Offset: 0x000FD7CE
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool, FText, FText, int> Callback)
 		{
 			if (FOnDialogueMouthEvent.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnDialogueMouthEvent.RegisterId);
 		}
 
-		// Token: 0x06025086 RID: 151686 RVA: 0x0036CAAC File Offset: 0x0036ACAC
+		// Token: 0x0600ACEB RID: 44267 RVA: 0x000FF608 File Offset: 0x000FD808
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool, FText, FText, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06025087 RID: 151687 RVA: 0x0036CAB8 File Offset: 0x0036ACB8
+		// Token: 0x0600ACEC RID: 44268 RVA: 0x000FF614 File Offset: 0x000FD814
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bShow, in FText SpeakerName, in FText DialogueKey, in int SpeakerId)
 		{
 			FOnDialogueMouthEvent.__FOnDialogueMouthEvent_DelegateParams* ptr = stackalloc FOnDialogueMouthEvent.__FOnDialogueMouthEvent_DelegateParams[(UIntPtr)79] + 15L / (long)sizeof(FOnDialogueMouthEvent.__FOnDialogueMouthEvent_DelegateParams) & -16L;
@@ -91,10 +88,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnDialogueMouthEvent._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025088 RID: 151688 RVA: 0x0036CB34 File Offset: 0x0036AD34
+		// Token: 0x0600ACED RID: 44269 RVA: 0x000FF690 File Offset: 0x000FD890
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, FText, FText, int> action = target as Action<bool, FText, FText, int>;
@@ -107,43 +103,43 @@ namespace UnrealEngine
 			action(((FOnDialogueMouthEvent.__FOnDialogueMouthEvent_DelegateParams*)__Parameters)->bShow, arg, arg2, ((FOnDialogueMouthEvent.__FOnDialogueMouthEvent_DelegateParams*)__Parameters)->SpeakerId);
 		}
 
-		// Token: 0x04013F3E RID: 81726
+		// Token: 0x04004A8E RID: 19086
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04013F3F RID: 81727
+		// Token: 0x04004A8F RID: 19087
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SequenceDialogue.OnDialogueMouthEvent__DelegateSignature";
 
-		// Token: 0x04013F40 RID: 81728
+		// Token: 0x04004A90 RID: 19088
 		private static int RegisterId;
 
-		// Token: 0x0200369E RID: 13982
+		// Token: 0x02000F79 RID: 3961
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
-		protected ref struct __FOnDialogueMouthEvent_DelegateParams
+		private ref struct __FOnDialogueMouthEvent_DelegateParams
 		{
-			// Token: 0x040177A5 RID: 96165
+			// Token: 0x04006367 RID: 25447
 			[FieldOffset(0)]
 			public bool bShow;
 
-			// Token: 0x040177A6 RID: 96166
+			// Token: 0x04006368 RID: 25448
 			[FieldOffset(8)]
 			public byte SpeakerName;
 
-			// Token: 0x040177A7 RID: 96167
+			// Token: 0x04006369 RID: 25449
 			[FieldOffset(32)]
 			public byte DialogueKey;
 
-			// Token: 0x040177A8 RID: 96168
+			// Token: 0x0400636A RID: 25450
 			[FieldOffset(56)]
 			public int SpeakerId;
 		}
 
-		// Token: 0x0200369F RID: 13983
+		// Token: 0x02000F7A RID: 3962
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177A9 RID: 96169
+			// Token: 0x0400636B RID: 25451
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

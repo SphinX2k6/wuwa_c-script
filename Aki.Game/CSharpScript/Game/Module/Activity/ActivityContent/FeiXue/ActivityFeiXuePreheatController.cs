@@ -10,55 +10,55 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006633 RID: 26163
+	// Token: 0x020055B1 RID: 21937
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityFeiXuePreheatController : ActivityControllerBase
 	{
-		// Token: 0x0604195B RID: 268635 RVA: 0x00FE8385 File Offset: 0x00FE6585
+		// Token: 0x06036620 RID: 222752 RVA: 0x00F2F43D File Offset: 0x00F2D63D
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0604195C RID: 268636 RVA: 0x00FE8387 File Offset: 0x00FE6587
+		// Token: 0x06036621 RID: 222753 RVA: 0x00F2F43F File Offset: 0x00F2D63F
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_FeixueMain";
 		}
 
-		// Token: 0x0604195D RID: 268637 RVA: 0x00FE838E File Offset: 0x00FE658E
+		// Token: 0x06036622 RID: 222754 RVA: 0x00F2F446 File Offset: 0x00F2D646
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySubViewFeiXuePreheat();
 		}
 
-		// Token: 0x0604195E RID: 268638 RVA: 0x00FE8395 File Offset: 0x00FE6595
+		// Token: 0x06036623 RID: 222755 RVA: 0x00F2F44D File Offset: 0x00F2D64D
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.ActivityId = data.Id;
 			return new ActivityFeiXuePreheatData();
 		}
 
-		// Token: 0x0604195F RID: 268639 RVA: 0x00FE83A8 File Offset: 0x00FE65A8
+		// Token: 0x06036624 RID: 222756 RVA: 0x00F2F460 File Offset: 0x00F2D660
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06041960 RID: 268640 RVA: 0x00FE83AB File Offset: 0x00FE65AB
+		// Token: 0x06036625 RID: 222757 RVA: 0x00F2F463 File Offset: 0x00F2D663
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.FeiXuePreheatInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFeiXuePreheatInfoUpdateNotify));
 		}
 
-		// Token: 0x06041961 RID: 268641 RVA: 0x00FE83C9 File Offset: 0x00FE65C9
+		// Token: 0x06036626 RID: 222758 RVA: 0x00F2F481 File Offset: 0x00F2D681
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.FeiXuePreheatInfoUpdateNotify);
 		}
 
-		// Token: 0x06041962 RID: 268642 RVA: 0x00FE83DC File Offset: 0x00FE65DC
+		// Token: 0x06036627 RID: 222759 RVA: 0x00F2F494 File Offset: 0x00F2D694
 		[NullableContext(2)]
 		public ActivityFeiXuePreheatData GetActivityData()
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return activityFeiXuePreheatData;
 		}
 
-		// Token: 0x06041963 RID: 268643 RVA: 0x00FE843C File Offset: 0x00FE663C
+		// Token: 0x06036628 RID: 222760 RVA: 0x00F2F4F4 File Offset: 0x00F2D6F4
 		[NullableContext(2)]
 		protected void OnFeiXuePreheatInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}
 
-		// Token: 0x06041964 RID: 268644 RVA: 0x00FE84B4 File Offset: 0x00FE66B4
+		// Token: 0x06036629 RID: 222761 RVA: 0x00F2F56C File Offset: 0x00F2D76C
 		[NullableContext(2)]
 		public void RequestTaskReward(int actId, Action callback = null)
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 				}
 				if (feiXuePreheatInfoRewardResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(feiXuePreheatInfoRewardResponse.ErrorCode, 22363, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(feiXuePreheatInfoRewardResponse.ErrorCode, 26680, null, true, true);
 					return;
 				}
 				EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}, 0);
 		}
 
-		// Token: 0x06041965 RID: 268645 RVA: 0x00FE8520 File Offset: 0x00FE6720
+		// Token: 0x0603662A RID: 222762 RVA: 0x00F2F5D8 File Offset: 0x00F2D7D8
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -141,8 +141,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x1700960B RID: 38411
-		// (get) Token: 0x06041966 RID: 268646 RVA: 0x00FE856B File Offset: 0x00FE676B
+		// Token: 0x1700696D RID: 26989
+		// (get) Token: 0x0603662B RID: 222763 RVA: 0x00F2F623 File Offset: 0x00F2D823
 		public static ActivityFeiXuePreheatController Instance
 		{
 			get
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			}
 		}
 
-		// Token: 0x06041967 RID: 268647 RVA: 0x00FE8572 File Offset: 0x00FE6772
+		// Token: 0x0603662C RID: 222764 RVA: 0x00F2F62A File Offset: 0x00F2D82A
 		public static ActivityFeiXuePreheatController GetOrCreateInstance()
 		{
 			if (ActivityFeiXuePreheatController._Instance == null)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return ActivityFeiXuePreheatController._Instance;
 		}
 
-		// Token: 0x06041968 RID: 268648 RVA: 0x00FE8586 File Offset: 0x00FE6786
+		// Token: 0x0603662D RID: 222765 RVA: 0x00F2F63E File Offset: 0x00F2D83E
 		public static bool CreateInstance()
 		{
 			if (ActivityFeiXuePreheatController._Instance != null)
@@ -172,27 +172,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			return true;
 		}
 
-		// Token: 0x06041969 RID: 268649 RVA: 0x00FE859C File Offset: 0x00FE679C
+		// Token: 0x0603662E RID: 222766 RVA: 0x00F2F654 File Offset: 0x00F2D854
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604196A RID: 268650 RVA: 0x00FE859E File Offset: 0x00FE679E
+		// Token: 0x0603662F RID: 222767 RVA: 0x00F2F656 File Offset: 0x00F2D856
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityFeiXuePreheatController._Instance = null;
 		}
 
-		// Token: 0x0604196B RID: 268651 RVA: 0x00FE85A6 File Offset: 0x00FE67A6
+		// Token: 0x06036630 RID: 222768 RVA: 0x00F2F65E File Offset: 0x00F2D85E
 		static ActivityFeiXuePreheatController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityFeiXuePreheatController.CreateStaticDefaultValue), new Action(ActivityFeiXuePreheatController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040221EE RID: 139758
+		// Token: 0x0401CB1F RID: 117535
 		public int ActivityId;
 
-		// Token: 0x040221EF RID: 139759
+		// Token: 0x0401CB20 RID: 117536
 		[Nullable(2)]
 		private static ActivityFeiXuePreheatController _Instance;
 	}

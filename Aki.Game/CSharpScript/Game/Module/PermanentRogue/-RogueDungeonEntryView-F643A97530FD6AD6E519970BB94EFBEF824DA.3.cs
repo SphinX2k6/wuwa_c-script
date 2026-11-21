@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200530A RID: 21258
+	// Token: 0x020042DA RID: 17114
 	internal enum <RogueDungeonEntryView>F643A97530FD6AD6E519970BB94EFBEF824DA3B2869446269D6DC73333A1E6A58__EInfoComponentDefine
 	{
-		// Token: 0x0401CBA9 RID: 117673
+		// Token: 0x040175DF RID: 95711
 		Title,
-		// Token: 0x0401CBAA RID: 117674
+		// Token: 0x040175E0 RID: 95712
 		Desc,
-		// Token: 0x0401CBAB RID: 117675
+		// Token: 0x040175E1 RID: 95713
 		AwardItem,
-		// Token: 0x0401CBAC RID: 117676
+		// Token: 0x040175E2 RID: 95714
 		BtnConfirmItem,
-		// Token: 0x0401CBAD RID: 117677
+		// Token: 0x040175E3 RID: 95715
 		TxtEndingNum,
-		// Token: 0x0401CBAE RID: 117678
+		// Token: 0x040175E4 RID: 95716
 		PanelLevel,
-		// Token: 0x0401CBAF RID: 117679
+		// Token: 0x040175E5 RID: 95717
 		TxtLevel,
-		// Token: 0x0401CBB0 RID: 117680
+		// Token: 0x040175E6 RID: 95718
 		BtnEnding
 	}
 }

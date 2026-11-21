@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001583 RID: 5507
+// Token: 0x02000A3B RID: 2619
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class WheelTowerRoleEnhanceSkillItem : GridProxyAbstract<WheelTowerRoleEnhanceSkillData>
 {
-	// Token: 0x06009D4D RID: 40269 RVA: 0x00221678 File Offset: 0x0021F878
+	// Token: 0x0600712B RID: 28971 RVA: 0x0022B428 File Offset: 0x00229628
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -39,7 +39,7 @@ public class WheelTowerRoleEnhanceSkillItem : GridProxyAbstract<WheelTowerRoleEn
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D4E RID: 40270 RVA: 0x00221786 File Offset: 0x0021F986
+	// Token: 0x0600712C RID: 28972 RVA: 0x0022B536 File Offset: 0x00229736
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(5);
@@ -50,7 +50,7 @@ public class WheelTowerRoleEnhanceSkillItem : GridProxyAbstract<WheelTowerRoleEn
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06009D4F RID: 40271 RVA: 0x0022179C File Offset: 0x0021F99C
+	// Token: 0x0600712D RID: 28973 RVA: 0x0022B54C File Offset: 0x0022974C
 	public override void Refresh(WheelTowerRoleEnhanceSkillData data, bool isSelected, int gridIndex)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.SkillName, Array.Empty<object>());

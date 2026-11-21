@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D7 RID: 25303
+	// Token: 0x02005255 RID: 21077
 	public class PinballRankRoleHeadData : IPinballRankRoleHeadData
 	{
-		// Token: 0x17009293 RID: 37523
-		// (get) Token: 0x0603FAC4 RID: 260804 RVA: 0x00F67F67 File Offset: 0x00F66167
-		// (set) Token: 0x0603FAC5 RID: 260805 RVA: 0x00F67F6F File Offset: 0x00F6616F
+		// Token: 0x170065F5 RID: 26101
+		// (get) Token: 0x06034785 RID: 214917 RVA: 0x00EAEEC3 File Offset: 0x00EAD0C3
+		// (set) Token: 0x06034786 RID: 214918 RVA: 0x00EAEECB File Offset: 0x00EAD0CB
 		public int RoleId { get; set; }
 
-		// Token: 0x17009294 RID: 37524
-		// (get) Token: 0x0603FAC6 RID: 260806 RVA: 0x00F67F78 File Offset: 0x00F66178
-		// (set) Token: 0x0603FAC7 RID: 260807 RVA: 0x00F67F80 File Offset: 0x00F66180
+		// Token: 0x170065F6 RID: 26102
+		// (get) Token: 0x06034787 RID: 214919 RVA: 0x00EAEED4 File Offset: 0x00EAD0D4
+		// (set) Token: 0x06034788 RID: 214920 RVA: 0x00EAEEDC File Offset: 0x00EAD0DC
 		public int Level { get; set; }
 	}
 }

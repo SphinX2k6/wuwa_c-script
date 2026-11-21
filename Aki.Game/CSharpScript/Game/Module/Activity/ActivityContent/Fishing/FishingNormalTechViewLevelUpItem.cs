@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006622 RID: 26146
+	// Token: 0x020055A0 RID: 21920
 	public class FishingNormalTechViewLevelUpItem : UiPanelBase
 	{
-		// Token: 0x060418D3 RID: 268499 RVA: 0x00FE4DDC File Offset: 0x00FE2FDC
+		// Token: 0x06036598 RID: 222616 RVA: 0x00F2BE90 File Offset: 0x00F2A090
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -60,21 +60,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060418D4 RID: 268500 RVA: 0x00FE5016 File Offset: 0x00FE3216
+		// Token: 0x06036599 RID: 222617 RVA: 0x00F2C0CA File Offset: 0x00F2A2CA
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnFishingTechNodeRefresh, new Action<int>(this.OnFishingTechNodeRefresh));
 			EventSystem.Instance.Add(EEventName.FishingTechViewComeBack, new Action(this.FishingTechViewComeBack));
 		}
 
-		// Token: 0x060418D5 RID: 268501 RVA: 0x00FE5050 File Offset: 0x00FE3250
+		// Token: 0x0603659A RID: 222618 RVA: 0x00F2C104 File Offset: 0x00F2A304
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFishingTechNodeRefresh, new Action<int>(this.OnFishingTechNodeRefresh));
 			EventSystem.Instance.Remove(EEventName.FishingTechViewComeBack, new Action(this.FishingTechViewComeBack));
 		}
 
-		// Token: 0x060418D6 RID: 268502 RVA: 0x00FE508C File Offset: 0x00FE328C
+		// Token: 0x0603659B RID: 222619 RVA: 0x00F2C140 File Offset: 0x00F2A340
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingNormalTechViewLevelUpItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060418D7 RID: 268503 RVA: 0x00FE50CF File Offset: 0x00FE32CF
+		// Token: 0x0603659C RID: 222620 RVA: 0x00F2C183 File Offset: 0x00F2A383
 		private void OnFishingTechNodeRefresh(int nodeId)
 		{
 			IFishingTechNode node = this.Node;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshView(this.Node);
 		}
 
-		// Token: 0x060418D8 RID: 268504 RVA: 0x00FE510B File Offset: 0x00FE330B
+		// Token: 0x0603659D RID: 222621 RVA: 0x00F2C1BF File Offset: 0x00F2A3BF
 		private void FishingTechViewComeBack()
 		{
 			if (this.Node != null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418D9 RID: 268505 RVA: 0x00FE5124 File Offset: 0x00FE3324
+		// Token: 0x0603659E RID: 222622 RVA: 0x00F2C1D8 File Offset: 0x00F2A3D8
 		[NullableContext(1)]
 		public void RefreshView(IFishingTechNode node)
 		{
@@ -213,14 +213,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418DA RID: 268506 RVA: 0x00FE5500 File Offset: 0x00FE3700
+		// Token: 0x0603659F RID: 222623 RVA: 0x00F2C5B4 File Offset: 0x00F2A7B4
 		[NullableContext(1)]
 		private FishingTechLevelUpItem InitItem()
 		{
 			return new FishingTechLevelUpItem();
 		}
 
-		// Token: 0x060418DB RID: 268507 RVA: 0x00FE5507 File Offset: 0x00FE3707
+		// Token: 0x060365A0 RID: 222624 RVA: 0x00F2C5BB File Offset: 0x00F2A7BB
 		private void OnClickLevelUpBtn()
 		{
 			if (this.Node != null)
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x040221B2 RID: 139698
+		// Token: 0x0401CAE3 RID: 117475
 		[Nullable(new byte[]
 		{
 			2,
@@ -238,60 +238,60 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingTechLevelUpItem, IFishingTechLevelUpItem> ItemLayout;
 
-		// Token: 0x040221B3 RID: 139699
+		// Token: 0x0401CAE4 RID: 117476
 		[Nullable(2)]
 		private FishingTechCostItem CostItem;
 
-		// Token: 0x040221B4 RID: 139700
+		// Token: 0x0401CAE5 RID: 117477
 		[Nullable(2)]
 		private IFishingTechNode Node;
 
-		// Token: 0x0200C83A RID: 51258
+		// Token: 0x0200B21C RID: 45596
 		private class EComponentDefine
 		{
-			// Token: 0x0403C7A8 RID: 247720
+			// Token: 0x040370ED RID: 225517
 			public const int CubeBgItem = 0;
 
-			// Token: 0x0403C7A9 RID: 247721
+			// Token: 0x040370EE RID: 225518
 			public const int CircleBgItem = 1;
 
-			// Token: 0x0403C7AA RID: 247722
+			// Token: 0x040370EF RID: 225519
 			public const int TechTexture = 2;
 
-			// Token: 0x0403C7AB RID: 247723
+			// Token: 0x040370F0 RID: 225520
 			public const int TechTitleText = 3;
 
-			// Token: 0x0403C7AC RID: 247724
+			// Token: 0x040370F1 RID: 225521
 			public const int TechLevelText = 4;
 
-			// Token: 0x0403C7AD RID: 247725
+			// Token: 0x040370F2 RID: 225522
 			public const int TechDesText = 5;
 
-			// Token: 0x0403C7AE RID: 247726
+			// Token: 0x040370F3 RID: 225523
 			public const int LevelUpItemLayout = 6;
 
-			// Token: 0x0403C7AF RID: 247727
+			// Token: 0x040370F4 RID: 225524
 			public const int LevelUpItem = 7;
 
-			// Token: 0x0403C7B0 RID: 247728
+			// Token: 0x040370F5 RID: 225525
 			public const int CostItem = 8;
 
-			// Token: 0x0403C7B1 RID: 247729
+			// Token: 0x040370F6 RID: 225526
 			public const int LevelUpBtn = 9;
 
-			// Token: 0x0403C7B2 RID: 247730
+			// Token: 0x040370F7 RID: 225527
 			public const int NotEnoughItem = 10;
 
-			// Token: 0x0403C7B3 RID: 247731
+			// Token: 0x040370F8 RID: 225528
 			public const int MaxLevelItem = 11;
 
-			// Token: 0x0403C7B4 RID: 247732
+			// Token: 0x040370F9 RID: 225529
 			public const int LevelDesText = 12;
 
-			// Token: 0x0403C7B5 RID: 247733
+			// Token: 0x040370FA RID: 225530
 			public const int CostPanelItem = 13;
 
-			// Token: 0x0403C7B6 RID: 247734
+			// Token: 0x040370FB RID: 225531
 			public const int CannotLevelUpReasonText = 14;
 		}
 	}

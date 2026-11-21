@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053F1 RID: 21489
+	// Token: 0x020043D4 RID: 17364
 	public enum EInputControllerType
 	{
-		// Token: 0x0401CFDD RID: 118749
+		// Token: 0x04017A76 RID: 96886
 		None,
-		// Token: 0x0401CFDE RID: 118750
+		// Token: 0x04017A77 RID: 96887
 		Keyboard,
-		// Token: 0x0401CFDF RID: 118751
+		// Token: 0x04017A78 RID: 96888
 		Gamepad
 	}
 }

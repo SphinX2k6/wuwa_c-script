@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200038A RID: 906
+	// Token: 0x02000392 RID: 914
 	[NetMessage(EMessageId.DangoMonopolyNextBoardResponse)]
 	public sealed class DangoMonopolyNextBoardResponse : IMessage<DangoMonopolyNextBoardResponse>, IMessage, IEquatable<DangoMonopolyNextBoardResponse>, IDeepCloneable<DangoMonopolyNextBoardResponse>, IBufferMessage
 	{
-		// Token: 0x06005993 RID: 22931 RVA: 0x000DA191 File Offset: 0x000D8391
+		// Token: 0x06005A80 RID: 23168 RVA: 0x000DC819 File Offset: 0x000DAA19
 		[NullableContext(1)]
 		public static DangoMonopolyNextBoardResponse Create()
 		{
 			return new DangoMonopolyNextBoardResponse();
 		}
 
-		// Token: 0x17001086 RID: 4230
-		// (get) Token: 0x06005994 RID: 22932 RVA: 0x000DA198 File Offset: 0x000D8398
+		// Token: 0x170010B7 RID: 4279
+		// (get) Token: 0x06005A81 RID: 23169 RVA: 0x000DC820 File Offset: 0x000DAA20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001087 RID: 4231
-		// (get) Token: 0x06005995 RID: 22933 RVA: 0x000DA19B File Offset: 0x000D839B
+		// Token: 0x170010B8 RID: 4280
+		// (get) Token: 0x06005A82 RID: 23170 RVA: 0x000DC823 File Offset: 0x000DAA23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005996 RID: 22934 RVA: 0x000DA1A2 File Offset: 0x000D83A2
+		// Token: 0x06005A83 RID: 23171 RVA: 0x000DC82A File Offset: 0x000DAA2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyNextBoardResponse()
 		{
 		}
 
-		// Token: 0x06005997 RID: 22935 RVA: 0x000DA1B8 File Offset: 0x000D83B8
+		// Token: 0x06005A84 RID: 23172 RVA: 0x000DC840 File Offset: 0x000DAA40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyNextBoardResponse(DangoMonopolyNextBoardResponse other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005998 RID: 22936 RVA: 0x000DA211 File Offset: 0x000D8411
+		// Token: 0x06005A85 RID: 23173 RVA: 0x000DC899 File Offset: 0x000DAA99
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyNextBoardResponse Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new DangoMonopolyNextBoardResponse(this);
 		}
 
-		// Token: 0x17001088 RID: 4232
-		// (get) Token: 0x06005999 RID: 22937 RVA: 0x000DA219 File Offset: 0x000D8419
-		// (set) Token: 0x0600599A RID: 22938 RVA: 0x000DA221 File Offset: 0x000D8421
+		// Token: 0x170010B9 RID: 4281
+		// (get) Token: 0x06005A86 RID: 23174 RVA: 0x000DC8A1 File Offset: 0x000DAAA1
+		// (set) Token: 0x06005A87 RID: 23175 RVA: 0x000DC8A9 File Offset: 0x000DAAA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001089 RID: 4233
-		// (get) Token: 0x0600599B RID: 22939 RVA: 0x000DA22A File Offset: 0x000D842A
-		// (set) Token: 0x0600599C RID: 22940 RVA: 0x000DA232 File Offset: 0x000D8432
+		// Token: 0x170010BA RID: 4282
+		// (get) Token: 0x06005A88 RID: 23176 RVA: 0x000DC8B2 File Offset: 0x000DAAB2
+		// (set) Token: 0x06005A89 RID: 23177 RVA: 0x000DC8BA File Offset: 0x000DAABA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int BoardId
@@ -104,8 +104,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700108A RID: 4234
-		// (get) Token: 0x0600599D RID: 22941 RVA: 0x000DA23B File Offset: 0x000D843B
+		// Token: 0x170010BB RID: 4283
+		// (get) Token: 0x06005A8A RID: 23178 RVA: 0x000DC8C3 File Offset: 0x000DAAC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> PropertyIds
@@ -116,9 +116,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700108B RID: 4235
-		// (get) Token: 0x0600599E RID: 22942 RVA: 0x000DA243 File Offset: 0x000D8443
-		// (set) Token: 0x0600599F RID: 22943 RVA: 0x000DA24B File Offset: 0x000D844B
+		// Token: 0x170010BC RID: 4284
+		// (get) Token: 0x06005A8B RID: 23179 RVA: 0x000DC8CB File Offset: 0x000DAACB
+		// (set) Token: 0x06005A8C RID: 23180 RVA: 0x000DC8D3 File Offset: 0x000DAAD3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BoardUnlockTime
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060059A0 RID: 22944 RVA: 0x000DA254 File Offset: 0x000D8454
+		// Token: 0x06005A8D RID: 23181 RVA: 0x000DC8DC File Offset: 0x000DAADC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoMonopolyNextBoardResponse);
 		}
 
-		// Token: 0x060059A1 RID: 22945 RVA: 0x000DA264 File Offset: 0x000D8464
+		// Token: 0x06005A8E RID: 23182 RVA: 0x000DC8EC File Offset: 0x000DAAEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoMonopolyNextBoardResponse other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.BoardId == other.BoardId && this.propertyIds_.Equals(other.propertyIds_) && this.BoardUnlockTime == other.BoardUnlockTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060059A2 RID: 22946 RVA: 0x000DA2D4 File Offset: 0x000D84D4
+		// Token: 0x06005A8F RID: 23183 RVA: 0x000DC95C File Offset: 0x000DAB5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060059A3 RID: 22947 RVA: 0x000DA359 File Offset: 0x000D8559
+		// Token: 0x06005A90 RID: 23184 RVA: 0x000DC9E1 File Offset: 0x000DABE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060059A4 RID: 22948 RVA: 0x000DA366 File Offset: 0x000D8566
+		// Token: 0x06005A91 RID: 23185 RVA: 0x000DC9EE File Offset: 0x000DABEE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -191,26 +191,26 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060059A5 RID: 22949 RVA: 0x000DA370 File Offset: 0x000D8570
+		// Token: 0x06005A92 RID: 23186 RVA: 0x000DC9F8 File Offset: 0x000DABF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.propertyIds_.WriteTo(ref output, DangoMonopolyNextBoardResponse._repeated_propertyIds_codec);
-			if (this.BoardId != 0)
+			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(32);
-				output.WriteInt32(this.BoardId);
+				output.WriteRawTag(16);
+				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this.BoardUnlockTime != 0L)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(56);
 				output.WriteInt64(this.BoardUnlockTime);
 			}
-			if (this.ErrorCode != ErrorCode.Success)
+			this.propertyIds_.WriteTo(ref output, DangoMonopolyNextBoardResponse._repeated_propertyIds_codec);
+			if (this.BoardId != 0)
 			{
-				output.WriteRawTag(112);
-				output.WriteEnum((int)this.ErrorCode);
+				output.WriteRawTag(88);
+				output.WriteInt32(this.BoardId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060059A6 RID: 22950 RVA: 0x000DA3F8 File Offset: 0x000D85F8
+		// Token: 0x06005A93 RID: 23187 RVA: 0x000DCA80 File Offset: 0x000DAC80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060059A7 RID: 22951 RVA: 0x000DA47C File Offset: 0x000D867C
+		// Token: 0x06005A94 RID: 23188 RVA: 0x000DCB04 File Offset: 0x000DAD04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoMonopolyNextBoardResponse other)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060059A8 RID: 22952 RVA: 0x000DA4F1 File Offset: 0x000D86F1
+		// Token: 0x06005A95 RID: 23189 RVA: 0x000DCB79 File Offset: 0x000DAD79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060059A9 RID: 22953 RVA: 0x000DA4FC File Offset: 0x000D86FC
+		// Token: 0x06005A96 RID: 23190 RVA: 0x000DCB84 File Offset: 0x000DAD84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -289,29 +289,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 18U)
+				if (num <= 56U)
 				{
-					if (num == 16U || num == 18U)
+					if (num == 16U)
 					{
-						this.propertyIds_.AddEntriesFrom(ref input, DangoMonopolyNextBoardResponse._repeated_propertyIds_codec);
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						continue;
+					}
+					if (num == 56U)
+					{
+						this.BoardUnlockTime = input.ReadInt64();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 32U)
+					if (num == 80U || num == 82U)
+					{
+						this.propertyIds_.AddEntriesFrom(ref input, DangoMonopolyNextBoardResponse._repeated_propertyIds_codec);
+						continue;
+					}
+					if (num == 88U)
 					{
 						this.BoardId = input.ReadInt32();
-						continue;
-					}
-					if (num == 80U)
-					{
-						this.BoardUnlockTime = input.ReadInt64();
-						continue;
-					}
-					if (num == 112U)
-					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
 				}
@@ -319,34 +319,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400356C RID: 13676
+		// Token: 0x04003608 RID: 13832
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400356D RID: 13677
-		public const int ErrorCodeFieldNumber = 14;
+		// Token: 0x04003609 RID: 13833
+		public const int ErrorCodeFieldNumber = 2;
 
-		// Token: 0x0400356E RID: 13678
+		// Token: 0x0400360A RID: 13834
 		private ErrorCode errorCode_;
 
-		// Token: 0x0400356F RID: 13679
-		public const int BoardIdFieldNumber = 4;
+		// Token: 0x0400360B RID: 13835
+		public const int BoardIdFieldNumber = 11;
 
-		// Token: 0x04003570 RID: 13680
+		// Token: 0x0400360C RID: 13836
 		private int boardId_;
 
-		// Token: 0x04003571 RID: 13681
-		public const int PropertyIdsFieldNumber = 2;
+		// Token: 0x0400360D RID: 13837
+		public const int PropertyIdsFieldNumber = 10;
 
-		// Token: 0x04003572 RID: 13682
-		private static readonly FieldCodec<int> _repeated_propertyIds_codec = FieldCodec.ForInt32(18U);
+		// Token: 0x0400360E RID: 13838
+		private static readonly FieldCodec<int> _repeated_propertyIds_codec = FieldCodec.ForInt32(82U);
 
-		// Token: 0x04003573 RID: 13683
+		// Token: 0x0400360F RID: 13839
 		private readonly RepeatedField<int> propertyIds_ = new RepeatedField<int>();
 
-		// Token: 0x04003574 RID: 13684
-		public const int BoardUnlockTimeFieldNumber = 10;
+		// Token: 0x04003610 RID: 13840
+		public const int BoardUnlockTimeFieldNumber = 7;
 
-		// Token: 0x04003575 RID: 13685
+		// Token: 0x04003611 RID: 13841
 		private long boardUnlockTime_;
 	}
 }

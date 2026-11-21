@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C58 RID: 19544
+	// Token: 0x02003C09 RID: 15369
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainView : UiViewBase
 	{
-		// Token: 0x0603286B RID: 206955 RVA: 0x00BC517B File Offset: 0x00BC337B
+		// Token: 0x0602761E RID: 161310 RVA: 0x00B09DC7 File Offset: 0x00B07FC7
 		public SheriffMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603286C RID: 206956 RVA: 0x00BC5190 File Offset: 0x00BC3390
+		// Token: 0x0602761F RID: 161311 RVA: 0x00B09DDC File Offset: 0x00B07FDC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603286D RID: 206957 RVA: 0x00BC5278 File Offset: 0x00BC3478
+		// Token: 0x06027620 RID: 161312 RVA: 0x00B09EC4 File Offset: 0x00B080C4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffMainView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603286E RID: 206958 RVA: 0x00BC52BC File Offset: 0x00BC34BC
+		// Token: 0x06027621 RID: 161313 RVA: 0x00B09F08 File Offset: 0x00B08108
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			base.GetButton(2).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0603286F RID: 206959 RVA: 0x00BC543C File Offset: 0x00BC363C
+		// Token: 0x06027622 RID: 161314 RVA: 0x00B0A088 File Offset: 0x00B08288
 		protected override void OnBeforeShow()
 		{
 			this.RefreshDialogBeforeSelectClue();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[0], EUiTabViewName.SheriffMainSelectCluePanel, null, this.Proxy, null);
 		}
 
-		// Token: 0x06032870 RID: 206960 RVA: 0x00BC5480 File Offset: 0x00BC3680
+		// Token: 0x06027623 RID: 161315 RVA: 0x00B0A0CC File Offset: 0x00B082CC
 		protected override void OnBeforeDestroy()
 		{
 			TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.TabViewComponent = null;
 		}
 
-		// Token: 0x06032871 RID: 206961 RVA: 0x00BC549C File Offset: 0x00BC369C
+		// Token: 0x06027624 RID: 161316 RVA: 0x00B0A0E8 File Offset: 0x00B082E8
 		protected void RefreshDialogBeforeSelectClue()
 		{
 			List<string> beforeDialogStateId = this.Proxy.GetBeforeDialogStateId();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.DialogPanel.Refresh(beforeDialogStateId);
 		}
 
-		// Token: 0x06032872 RID: 206962 RVA: 0x00BC54D8 File Offset: 0x00BC36D8
+		// Token: 0x06027625 RID: 161317 RVA: 0x00B0A124 File Offset: 0x00B08324
 		protected void RefreshHintButton(bool isCurIndex)
 		{
 			bool flag = this.Proxy.CheckNeedHintButton();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			}
 		}
 
-		// Token: 0x06032873 RID: 206963 RVA: 0x00BC552C File Offset: 0x00BC372C
+		// Token: 0x06027626 RID: 161318 RVA: 0x00B0A178 File Offset: 0x00B08378
 		private void OnClueRecordsCallback()
 		{
 			this.CaptionItem.SetUiActive(false);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[1], EUiTabViewName.SheriffMainAnalysisCluePanel, null, this.Proxy, null);
 		}
 
-		// Token: 0x06032874 RID: 206964 RVA: 0x00BC5578 File Offset: 0x00BC3778
+		// Token: 0x06027627 RID: 161319 RVA: 0x00B0A1C4 File Offset: 0x00B083C4
 		private void OnAnalysisClueEndCallback(bool isSuccess)
 		{
 			this.CaptionItem.SetUiActive(true);
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[0], EUiTabViewName.SheriffMainSelectCluePanel, null, this.Proxy, null);
 		}
 
-		// Token: 0x06032875 RID: 206965 RVA: 0x00BC55D4 File Offset: 0x00BC37D4
+		// Token: 0x06027628 RID: 161320 RVA: 0x00B0A220 File Offset: 0x00B08420
 		private void OnBackFromDetailClueCallback()
 		{
 			this.CaptionItem.SetUiActive(true);
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[0], EUiTabViewName.SheriffMainSelectCluePanel, null, this.Proxy, null);
 		}
 
-		// Token: 0x06032876 RID: 206966 RVA: 0x00BC5620 File Offset: 0x00BC3820
+		// Token: 0x06027629 RID: 161321 RVA: 0x00B0A26C File Offset: 0x00B0846C
 		private void OnCheckClueDetailCallback()
 		{
 			this.CaptionItem.SetUiActive(false);
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[2], EUiTabViewName.SheriffMainClueDetailPanel, null, this.Proxy, null);
 		}
 
-		// Token: 0x06032877 RID: 206967 RVA: 0x00BC566C File Offset: 0x00BC386C
+		// Token: 0x0602762A RID: 161322 RVA: 0x00B0A2B8 File Offset: 0x00B084B8
 		private void OnConclusionInfoCallback()
 		{
 			this.CaptionItem.SetUiActive(false);
@@ -189,19 +189,19 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			tabViewComponent.ToggleCallBack(this.TabDataList[3], EUiTabViewName.SheriffMainConclusionPanel, null, this.Proxy, null);
 		}
 
-		// Token: 0x06032878 RID: 206968 RVA: 0x00BC56B6 File Offset: 0x00BC38B6
+		// Token: 0x0602762B RID: 161323 RVA: 0x00B0A302 File Offset: 0x00B08502
 		private void OnGameplayAllEndCallback()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06032879 RID: 206969 RVA: 0x00BC56BF File Offset: 0x00BC38BF
+		// Token: 0x0602762C RID: 161324 RVA: 0x00B0A30B File Offset: 0x00B0850B
 		private void OnClickedReplayDialog()
 		{
 			this.RefreshDialogBeforeSelectClue();
 		}
 
-		// Token: 0x0603287A RID: 206970 RVA: 0x00BC56C7 File Offset: 0x00BC38C7
+		// Token: 0x0602762D RID: 161325 RVA: 0x00B0A313 File Offset: 0x00B08513
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -222,14 +222,14 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			return currentTabView.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0603287B RID: 206971 RVA: 0x00BC56E6 File Offset: 0x00BC38E6
+		// Token: 0x0602762E RID: 161326 RVA: 0x00B0A332 File Offset: 0x00B08532
 		private void OnClickBtnTips()
 		{
 			this.Proxy.SetNeedHintToggle(true);
 			this.Proxy.RefreshHintToggleState();
 		}
 
-		// Token: 0x0603287C RID: 206972 RVA: 0x00BC5700 File Offset: 0x00BC3900
+		// Token: 0x0602762F RID: 161327 RVA: 0x00B0A34C File Offset: 0x00B0854C
 		private void OnClickedClose()
 		{
 			if (this.Proxy.GetCurQuestionIndex() == 0)
@@ -245,45 +245,45 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603287D RID: 206973 RVA: 0x00BC5751 File Offset: 0x00BC3951
+		// Token: 0x06027630 RID: 161328 RVA: 0x00B0A39D File Offset: 0x00B0859D
 		private void OnRefreshHintButton(bool isCurIndex)
 		{
 			this.RefreshHintButton(isCurIndex);
 		}
 
-		// Token: 0x0401AE57 RID: 110167
+		// Token: 0x040157B4 RID: 87988
 		protected SheriffMainDialogPanel DialogPanel;
 
-		// Token: 0x0401AE58 RID: 110168
+		// Token: 0x040157B5 RID: 87989
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x0401AE59 RID: 110169
+		// Token: 0x040157B6 RID: 87990
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401AE5A RID: 110170
+		// Token: 0x040157B7 RID: 87991
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AE5B RID: 110171
+		// Token: 0x040157B8 RID: 87992
 		[Nullable(2)]
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x0401AE5C RID: 110172
+		// Token: 0x040157B9 RID: 87993
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200ADFB RID: 44539
+		// Token: 0x02009819 RID: 38937
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034D83 RID: 216451
+			// Token: 0x0402F728 RID: 194344
 			public const int Caption = 0;
 
-			// Token: 0x04034D84 RID: 216452
+			// Token: 0x0402F729 RID: 194345
 			public const int Content = 1;
 
-			// Token: 0x04034D85 RID: 216453
+			// Token: 0x0402F72A RID: 194346
 			public const int BtnTips = 2;
 
-			// Token: 0x04034D86 RID: 216454
+			// Token: 0x0402F72B RID: 194347
 			public const int DialogItem = 3;
 		}
 	}

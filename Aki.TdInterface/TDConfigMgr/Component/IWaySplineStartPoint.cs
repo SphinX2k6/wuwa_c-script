@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007D9 RID: 2009
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200087C RID: 2172
 	public class IWaySplineStartPoint : IWaySplinePointType
 	{
-		// Token: 0x06002B9D RID: 11165 RVA: 0x00071B18 File Offset: 0x0006FD18
+		// Token: 0x06002ECD RID: 11981 RVA: 0x00078E7C File Offset: 0x0007707C
 		private IWaySplineStartPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B9E RID: 11166 RVA: 0x00071B50 File Offset: 0x0006FD50
+		// Token: 0x06002ECE RID: 11982 RVA: 0x00078EB4 File Offset: 0x000770B4
 		public static IWaySplineStartPoint Create([Nullable(2)] IWaySplineStartPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B9F RID: 11167 RVA: 0x00071B63 File Offset: 0x0006FD63
+		// Token: 0x06002ECF RID: 11983 RVA: 0x00078EC7 File Offset: 0x000770C7
 		public static IWaySplineStartPoint CreateFromSetValue([Nullable(2)] IWaySplineStartPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BA0 RID: 11168 RVA: 0x00071B76 File Offset: 0x0006FD76
+		// Token: 0x06002ED0 RID: 11984 RVA: 0x00078EDA File Offset: 0x000770DA
 		public new IWaySplineStartPoint_SetValue ToSetValue()
 		{
 			return new IWaySplineStartPoint_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B6C RID: 2924
-		// (get) Token: 0x06002BA1 RID: 11169 RVA: 0x00071B95 File Offset: 0x0006FD95
-		// (set) Token: 0x06002BA2 RID: 11170 RVA: 0x00071BC0 File Offset: 0x0006FDC0
+		// Token: 0x17000C2F RID: 3119
+		// (get) Token: 0x06002ED1 RID: 11985 RVA: 0x00078EF9 File Offset: 0x000770F9
+		// (set) Token: 0x06002ED2 RID: 11986 RVA: 0x00078F24 File Offset: 0x00077124
 		public override EWaySplinePointType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B6D RID: 2925
-		// (get) Token: 0x06002BA3 RID: 11171 RVA: 0x00071BD0 File Offset: 0x0006FDD0
-		// (set) Token: 0x06002BA4 RID: 11172 RVA: 0x00071C31 File Offset: 0x0006FE31
+		// Token: 0x17000C30 RID: 3120
+		// (get) Token: 0x06002ED3 RID: 11987 RVA: 0x00078F34 File Offset: 0x00077134
+		// (set) Token: 0x06002ED4 RID: 11988 RVA: 0x00078F95 File Offset: 0x00077195
 		[Nullable(2)]
 		public virtual IVehicleGenerationConfig GenerationConfig
 		{
@@ -116,18 +114,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CF2 RID: 7410
+		// Token: 0x04001EFE RID: 7934
 		[Nullable(2)]
 		protected new IWaySplineStartPoint FbInstance;
 
-		// Token: 0x04001CF3 RID: 7411
+		// Token: 0x04001EFF RID: 7935
 		[Nullable(2)]
 		protected new IWaySplineStartPoint_SetValue PocoInterface;
 
-		// Token: 0x04001CF4 RID: 7412
+		// Token: 0x04001F00 RID: 7936
 		private IVehicleGenerationConfig _GenerationConfigCache;
 
-		// Token: 0x04001CF5 RID: 7413
+		// Token: 0x04001F01 RID: 7937
 		private bool _GenerationConfigInited;
 	}
 }

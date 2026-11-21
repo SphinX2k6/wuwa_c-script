@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200428A RID: 17034
+	// Token: 0x020046E6 RID: 18150
 	public class IWalkingPatternConditionT
 	{
-		// Token: 0x170078F8 RID: 30968
-		// (get) Token: 0x060193C3 RID: 103363 RVA: 0x003A0289 File Offset: 0x0039E489
-		// (set) Token: 0x060193C4 RID: 103364 RVA: 0x003A0291 File Offset: 0x0039E491
+		// Token: 0x17007F29 RID: 32553
+		// (get) Token: 0x0601AB2F RID: 109359 RVA: 0x003CB961 File Offset: 0x003C9B61
+		// (set) Token: 0x0601AB30 RID: 109360 RVA: 0x003CB969 File Offset: 0x003C9B69
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x170078F9 RID: 30969
-		// (get) Token: 0x060193C5 RID: 103365 RVA: 0x003A029A File Offset: 0x0039E49A
-		// (set) Token: 0x060193C6 RID: 103366 RVA: 0x003A02A2 File Offset: 0x0039E4A2
+		// Token: 0x17007F2A RID: 32554
+		// (get) Token: 0x0601AB31 RID: 109361 RVA: 0x003CB972 File Offset: 0x003C9B72
+		// (set) Token: 0x0601AB32 RID: 109362 RVA: 0x003CB97A File Offset: 0x003C9B7A
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x170078FA RID: 30970
-		// (get) Token: 0x060193C7 RID: 103367 RVA: 0x003A02AB File Offset: 0x0039E4AB
-		// (set) Token: 0x060193C8 RID: 103368 RVA: 0x003A02B3 File Offset: 0x0039E4B3
+		// Token: 0x17007F2B RID: 32555
+		// (get) Token: 0x0601AB33 RID: 109363 RVA: 0x003CB983 File Offset: 0x003C9B83
+		// (set) Token: 0x0601AB34 RID: 109364 RVA: 0x003CB98B File Offset: 0x003C9B8B
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x170078FB RID: 30971
-		// (get) Token: 0x060193C9 RID: 103369 RVA: 0x003A02BC File Offset: 0x0039E4BC
-		// (set) Token: 0x060193CA RID: 103370 RVA: 0x003A02C4 File Offset: 0x0039E4C4
+		// Token: 0x17007F2C RID: 32556
+		// (get) Token: 0x0601AB35 RID: 109365 RVA: 0x003CB994 File Offset: 0x003C9B94
+		// (set) Token: 0x0601AB36 RID: 109366 RVA: 0x003CB99C File Offset: 0x003C9B9C
 		public int EndEntityId { get; set; }
 
-		// Token: 0x170078FC RID: 30972
-		// (get) Token: 0x060193CB RID: 103371 RVA: 0x003A02CD File Offset: 0x0039E4CD
-		// (set) Token: 0x060193CC RID: 103372 RVA: 0x003A02D5 File Offset: 0x0039E4D5
+		// Token: 0x17007F2D RID: 32557
+		// (get) Token: 0x0601AB37 RID: 109367 RVA: 0x003CB9A5 File Offset: 0x003C9BA5
+		// (set) Token: 0x0601AB38 RID: 109368 RVA: 0x003CB9AD File Offset: 0x003C9BAD
 		public TVarRefUnion ScoreVar { get; set; }
 
-		// Token: 0x060193CD RID: 103373 RVA: 0x003A02DE File Offset: 0x0039E4DE
+		// Token: 0x0601AB39 RID: 109369 RVA: 0x003CB9B6 File Offset: 0x003C9BB6
 		public IWalkingPatternConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

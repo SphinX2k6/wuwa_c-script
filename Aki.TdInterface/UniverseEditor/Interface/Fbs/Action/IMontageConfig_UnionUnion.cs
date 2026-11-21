@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AF5 RID: 27381
+	// Token: 0x0200722C RID: 29228
 	public class IMontageConfig_UnionUnion
 	{
-		// Token: 0x1700CB1C RID: 51996
-		// (get) Token: 0x0602FFE2 RID: 196578 RVA: 0x006865D9 File Offset: 0x006847D9
-		// (set) Token: 0x0602FFE3 RID: 196579 RVA: 0x006865E1 File Offset: 0x006847E1
+		// Token: 0x1700D5EB RID: 54763
+		// (get) Token: 0x06032DB6 RID: 208310 RVA: 0x006DDC91 File Offset: 0x006DBE91
+		// (set) Token: 0x06032DB7 RID: 208311 RVA: 0x006DDC99 File Offset: 0x006DBE99
 		public IMontageConfig_Union Type { get; set; }
 
-		// Token: 0x1700CB1D RID: 51997
-		// (get) Token: 0x0602FFE4 RID: 196580 RVA: 0x006865EA File Offset: 0x006847EA
-		// (set) Token: 0x0602FFE5 RID: 196581 RVA: 0x006865F2 File Offset: 0x006847F2
+		// Token: 0x1700D5EC RID: 54764
+		// (get) Token: 0x06032DB8 RID: 208312 RVA: 0x006DDCA2 File Offset: 0x006DBEA2
+		// (set) Token: 0x06032DB9 RID: 208313 RVA: 0x006DDCAA File Offset: 0x006DBEAA
 		public object Value { get; set; }
 
-		// Token: 0x0602FFE6 RID: 196582 RVA: 0x006865FB File Offset: 0x006847FB
+		// Token: 0x06032DBA RID: 208314 RVA: 0x006DDCB3 File Offset: 0x006DBEB3
 		public IMontageConfig_UnionUnion()
 		{
 			this.Type = IMontageConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602FFE7 RID: 196583 RVA: 0x00686611 File Offset: 0x00684811
+		// Token: 0x06032DBB RID: 208315 RVA: 0x006DDCC9 File Offset: 0x006DBEC9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602FFE8 RID: 196584 RVA: 0x00686623 File Offset: 0x00684823
+		// Token: 0x06032DBC RID: 208316 RVA: 0x006DDCDB File Offset: 0x006DBEDB
 		public IMontageConfigT AsIMontageConfig()
 		{
 			return this.As<IMontageConfigT>();
 		}
 
-		// Token: 0x0602FFE9 RID: 196585 RVA: 0x0068662B File Offset: 0x0068482B
+		// Token: 0x06032DBD RID: 208317 RVA: 0x006DDCE3 File Offset: 0x006DBEE3
 		public static IMontageConfig_UnionUnion FromIMontageConfig(IMontageConfigT _imontageconfig)
 		{
 			return new IMontageConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FFEA RID: 196586 RVA: 0x00686640 File Offset: 0x00684840
+		// Token: 0x06032DBE RID: 208318 RVA: 0x006DDCF8 File Offset: 0x006DBEF8
 		public IMontageAssetT AsIMontageAsset()
 		{
 			return this.As<IMontageAssetT>();
 		}
 
-		// Token: 0x0602FFEB RID: 196587 RVA: 0x00686648 File Offset: 0x00684848
+		// Token: 0x06032DBF RID: 208319 RVA: 0x006DDD00 File Offset: 0x006DBF00
 		public static IMontageConfig_UnionUnion FromIMontageAsset(IMontageAssetT _imontageasset)
 		{
 			return new IMontageConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FFEC RID: 196588 RVA: 0x0068665D File Offset: 0x0068485D
+		// Token: 0x06032DC0 RID: 208320 RVA: 0x006DDD15 File Offset: 0x006DBF15
 		public IMontageRegisteredT AsIMontageRegistered()
 		{
 			return this.As<IMontageRegisteredT>();
 		}
 
-		// Token: 0x0602FFED RID: 196589 RVA: 0x00686665 File Offset: 0x00684865
+		// Token: 0x06032DC1 RID: 208321 RVA: 0x006DDD1D File Offset: 0x006DBF1D
 		public static IMontageConfig_UnionUnion FromIMontageRegistered(IMontageRegisteredT _imontageregistered)
 		{
 			return new IMontageConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FFEE RID: 196590 RVA: 0x0068667C File Offset: 0x0068487C
+		// Token: 0x06032DC2 RID: 208322 RVA: 0x006DDD34 File Offset: 0x006DBF34
 		public static int Pack(FlatBufferBuilder builder, IMontageConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

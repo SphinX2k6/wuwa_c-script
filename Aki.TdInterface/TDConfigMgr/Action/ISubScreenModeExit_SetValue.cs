@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EDE RID: 7902
+	// Token: 0x02002117 RID: 8471
 	public class ISubScreenModeExit_SetValue
 	{
-		// Token: 0x040064A7 RID: 25767
+		// Token: 0x04006A96 RID: 27286
 		public ESubScreenOperationType Type;
 
-		// Token: 0x040064A8 RID: 25768
-		[Nullable(1)]
+		// Token: 0x04006A97 RID: 27287
 		public List<ISetSubScreenData> ExitConfigs;
 	}
 }

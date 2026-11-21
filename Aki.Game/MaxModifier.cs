@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000EFE RID: 3838
+// Token: 0x020003B3 RID: 947
 public class MaxModifier : IMaxModifier
 {
-	// Token: 0x1700076F RID: 1903
-	// (get) Token: 0x06006049 RID: 24649 RVA: 0x0012CA05 File Offset: 0x0012AC05
-	// (set) Token: 0x0600604A RID: 24650 RVA: 0x0012CA0D File Offset: 0x0012AC0D
+	// Token: 0x17000791 RID: 1937
+	// (get) Token: 0x060033E1 RID: 13281 RVA: 0x00135309 File Offset: 0x00133509
+	// (set) Token: 0x060033E2 RID: 13282 RVA: 0x00135311 File Offset: 0x00133511
 	public float Percent { get; set; }
 
-	// Token: 0x17000770 RID: 1904
-	// (get) Token: 0x0600604B RID: 24651 RVA: 0x0012CA16 File Offset: 0x0012AC16
-	// (set) Token: 0x0600604C RID: 24652 RVA: 0x0012CA1E File Offset: 0x0012AC1E
+	// Token: 0x17000792 RID: 1938
+	// (get) Token: 0x060033E3 RID: 13283 RVA: 0x0013531A File Offset: 0x0013351A
+	// (set) Token: 0x060033E4 RID: 13284 RVA: 0x00135322 File Offset: 0x00133522
 	public float Offset { get; set; }
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CE2 RID: 15586
+	// Token: 0x020040F9 RID: 16633
 	public enum ETrackViewMode : byte
 	{
-		// Token: 0x0400B556 RID: 46422
+		// Token: 0x0400BF03 RID: 48899
 		All,
-		// Token: 0x0400B557 RID: 46423
+		// Token: 0x0400BF04 RID: 48900
 		Nearest
 	}
 }

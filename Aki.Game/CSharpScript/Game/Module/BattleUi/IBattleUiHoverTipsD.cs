@@ -5,39 +5,39 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C7A RID: 23674
+	// Token: 0x02004C5A RID: 19546
 	[NullableContext(1)]
 	public interface IBattleUiHoverTipsD
 	{
-		// Token: 0x17008DC5 RID: 36293
-		// (get) Token: 0x0603BD16 RID: 245014
-		// (set) Token: 0x0603BD17 RID: 245015
+		// Token: 0x17006197 RID: 24983
+		// (get) Token: 0x06030C64 RID: 199780
+		// (set) Token: 0x06030C65 RID: 199781
 		string TitleKey { get; set; }
 
-		// Token: 0x17008DC6 RID: 36294
-		// (get) Token: 0x0603BD18 RID: 245016
-		// (set) Token: 0x0603BD19 RID: 245017
+		// Token: 0x17006198 RID: 24984
+		// (get) Token: 0x06030C66 RID: 199782
+		// (set) Token: 0x06030C67 RID: 199783
 		FColor? TitleColor { get; set; }
 
-		// Token: 0x17008DC7 RID: 36295
-		// (get) Token: 0x0603BD1A RID: 245018
-		// (set) Token: 0x0603BD1B RID: 245019
+		// Token: 0x17006199 RID: 24985
+		// (get) Token: 0x06030C68 RID: 199784
+		// (set) Token: 0x06030C69 RID: 199785
 		[Nullable(2)]
 		string SubTitleKey { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008DC8 RID: 36296
-		// (get) Token: 0x0603BD1C RID: 245020
-		// (set) Token: 0x0603BD1D RID: 245021
+		// Token: 0x1700619A RID: 24986
+		// (get) Token: 0x06030C6A RID: 199786
+		// (set) Token: 0x06030C6B RID: 199787
 		IMediumItemGridBase ItemInfo { get; set; }
 
-		// Token: 0x17008DC9 RID: 36297
-		// (get) Token: 0x0603BD1E RID: 245022
-		// (set) Token: 0x0603BD1F RID: 245023
+		// Token: 0x1700619B RID: 24987
+		// (get) Token: 0x06030C6C RID: 199788
+		// (set) Token: 0x06030C6D RID: 199789
 		List<IBattleUiHoverTipsDescInfo> DescInfoList { get; set; }
 
-		// Token: 0x17008DCA RID: 36298
-		// (get) Token: 0x0603BD20 RID: 245024
-		// (set) Token: 0x0603BD21 RID: 245025
+		// Token: 0x1700619C RID: 24988
+		// (get) Token: 0x06030C6E RID: 199790
+		// (set) Token: 0x06030C6F RID: 199791
 		[Nullable(2)]
 		string DescTitleKey { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

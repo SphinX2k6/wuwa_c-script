@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Shop
 {
-	// Token: 0x02005720 RID: 22304
+	// Token: 0x020046F7 RID: 18167
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 	})]
 	public class KurotatoShopSelectCard : GridProxyAbstract<IKurotatoShopSelectCardData>
 	{
-		// Token: 0x06038B5D RID: 232285 RVA: 0x00D751E8 File Offset: 0x00D733E8
+		// Token: 0x0602DA6C RID: 186988 RVA: 0x00CC381C File Offset: 0x00CC1A1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038B5E RID: 232286 RVA: 0x00D75314 File Offset: 0x00D73514
+		// Token: 0x0602DA6D RID: 186989 RVA: 0x00CC3948 File Offset: 0x00CC1B48
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoShopSelectCard.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -59,38 +59,38 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B5F RID: 232287 RVA: 0x00D75357 File Offset: 0x00D73557
+		// Token: 0x0602DA6E RID: 186990 RVA: 0x00CC398B File Offset: 0x00CC1B8B
 		public void SetConfirmCb(Action<int> cb)
 		{
 			this.ConfirmCb = cb;
 		}
 
-		// Token: 0x06038B60 RID: 232288 RVA: 0x00D75360 File Offset: 0x00D73560
+		// Token: 0x0602DA6F RID: 186991 RVA: 0x00CC3994 File Offset: 0x00CC1B94
 		public void SetBuildTagClickCb(Action<int, EToggleState> cb)
 		{
 			this.BuildTagClickCb = cb;
 		}
 
-		// Token: 0x06038B61 RID: 232289 RVA: 0x00D75369 File Offset: 0x00D73569
+		// Token: 0x0602DA70 RID: 186992 RVA: 0x00CC399D File Offset: 0x00CC1B9D
 		public void SetAttrPreviewCb(Action<int, bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> cb)
 		{
 			this.AttrPreviewCb = cb;
 		}
 
-		// Token: 0x06038B62 RID: 232290 RVA: 0x00D75372 File Offset: 0x00D73572
+		// Token: 0x0602DA71 RID: 186993 RVA: 0x00CC39A6 File Offset: 0x00CC1BA6
 		public void ClearAttrPreviewSelection()
 		{
 			this.CardInfoItem.ClearAttrPreviewSelection();
 		}
 
-		// Token: 0x06038B63 RID: 232291 RVA: 0x00D7537F File Offset: 0x00D7357F
+		// Token: 0x0602DA72 RID: 186994 RVA: 0x00CC39B3 File Offset: 0x00CC1BB3
 		public override void Refresh(IKurotatoShopSelectCardData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.RefreshCardInfo();
 		}
 
-		// Token: 0x06038B64 RID: 232292 RVA: 0x00D75390 File Offset: 0x00D73590
+		// Token: 0x0602DA73 RID: 186995 RVA: 0x00CC39C4 File Offset: 0x00CC1BC4
 		public void RefreshCurrencyState()
 		{
 			if (this.Data == null)
@@ -106,25 +106,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x06038B65 RID: 232293 RVA: 0x00D753FD File Offset: 0x00D735FD
+		// Token: 0x0602DA74 RID: 186996 RVA: 0x00CC3A31 File Offset: 0x00CC1C31
 		public void SetComposeUpgradeVisible(bool visible)
 		{
 			this.CardInfoItem.SetComposeUpgradeVisible(visible);
 		}
 
-		// Token: 0x06038B66 RID: 232294 RVA: 0x00D7540B File Offset: 0x00D7360B
+		// Token: 0x0602DA75 RID: 186997 RVA: 0x00CC3A3F File Offset: 0x00CC1C3F
 		public void RefreshBuildTagLevel()
 		{
 			this.CardInfoItem.RefreshBuildTagLevel();
 		}
 
-		// Token: 0x06038B67 RID: 232295 RVA: 0x00D75418 File Offset: 0x00D73618
+		// Token: 0x0602DA76 RID: 186998 RVA: 0x00CC3A4C File Offset: 0x00CC1C4C
 		public void RefreshHoldNum()
 		{
 			this.CardInfoItem.RefreshHoldNum();
 		}
 
-		// Token: 0x06038B68 RID: 232296 RVA: 0x00D75428 File Offset: 0x00D73628
+		// Token: 0x0602DA77 RID: 186999 RVA: 0x00CC3A5C File Offset: 0x00CC1C5C
 		private void RefreshCardInfo()
 		{
 			this.CardInfoItem.Refresh(new KurotatoCardItemData
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.RefreshCurrencyState();
 		}
 
-		// Token: 0x06038B69 RID: 232297 RVA: 0x00D755A8 File Offset: 0x00D737A8
+		// Token: 0x0602DA78 RID: 187000 RVA: 0x00CC3BDC File Offset: 0x00CC1DDC
 		private void OnClickConfirm()
 		{
 			if (KurotatoModel.Instance.BattleData.GetCurrencyCount() >= this.Data.Cost)
@@ -163,25 +163,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B6A RID: 232298 RVA: 0x00D755E1 File Offset: 0x00D737E1
+		// Token: 0x0602DA79 RID: 187001 RVA: 0x00CC3C15 File Offset: 0x00CC1E15
 		private void OnToggleClickLock(int selectionId, bool isLock)
 		{
 			KurotatoController.Instance.RequestKurotatoShopRewardLock(selectionId).Forget<bool>();
 		}
 
-		// Token: 0x06038B6B RID: 232299 RVA: 0x00D755F3 File Offset: 0x00D737F3
+		// Token: 0x0602DA7A RID: 187002 RVA: 0x00CC3C27 File Offset: 0x00CC1E27
 		public void ClearBuildTagSelection()
 		{
 			this.CardInfoItem.ClearBuildTagSelection();
 		}
 
-		// Token: 0x06038B6C RID: 232300 RVA: 0x00D75600 File Offset: 0x00D73800
+		// Token: 0x0602DA7B RID: 187003 RVA: 0x00CC3C34 File Offset: 0x00CC1E34
 		public void CloseBuildInfo()
 		{
 			this.CardInfoItem.CloseBuildInfo();
 		}
 
-		// Token: 0x06038B6D RID: 232301 RVA: 0x00D7560D File Offset: 0x00D7380D
+		// Token: 0x0602DA7C RID: 187004 RVA: 0x00CC3C41 File Offset: 0x00CC1E41
 		public int GetSelectionId()
 		{
 			IKurotatoShopSelectCardData data = this.Data;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return data.SelectionId;
 		}
 
-		// Token: 0x06038B6E RID: 232302 RVA: 0x00D75620 File Offset: 0x00D73820
+		// Token: 0x0602DA7D RID: 187005 RVA: 0x00CC3C54 File Offset: 0x00CC1E54
 		private void OnClickBuildTag(EToggleState state)
 		{
 			Action<int, EToggleState> buildTagClickCb = this.BuildTagClickCb;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			buildTagClickCb(this.Data.SelectionId, state);
 		}
 
-		// Token: 0x06038B6F RID: 232303 RVA: 0x00D7563E File Offset: 0x00D7383E
+		// Token: 0x0602DA7E RID: 187006 RVA: 0x00CC3C72 File Offset: 0x00CC1E72
 		private void OnAttrPreview(bool active, IReadOnlyList<IKurotatoAttrPreviewDelta> deltas)
 		{
 			Action<int, bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> attrPreviewCb = this.AttrPreviewCb;
@@ -214,20 +214,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			attrPreviewCb(this.Data.SelectionId, active, deltas);
 		}
 
-		// Token: 0x06038B70 RID: 232304 RVA: 0x00D7565D File Offset: 0x00D7385D
+		// Token: 0x0602DA7F RID: 187007 RVA: 0x00CC3C91 File Offset: 0x00CC1E91
 		public bool IsRecommend()
 		{
 			IKurotatoShopSelectCardData data = this.Data;
 			return data != null && data.IsRecommend;
 		}
 
-		// Token: 0x06038B71 RID: 232305 RVA: 0x00D75670 File Offset: 0x00D73870
+		// Token: 0x0602DA80 RID: 187008 RVA: 0x00CC3CA4 File Offset: 0x00CC1EA4
 		public bool HasBuildTag()
 		{
 			return this.CardInfoItem.HasBuildTag();
 		}
 
-		// Token: 0x06038B72 RID: 232306 RVA: 0x00D75680 File Offset: 0x00D73880
+		// Token: 0x0602DA81 RID: 187009 RVA: 0x00CC3CB4 File Offset: 0x00CC1EB4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -263,22 +263,22 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x0401DC2A RID: 121898
+		// Token: 0x040186C0 RID: 100032
 		[Nullable(2)]
 		private IKurotatoShopSelectCardData Data;
 
-		// Token: 0x0401DC2B RID: 121899
+		// Token: 0x040186C1 RID: 100033
 		private readonly KurotatoCardInfoItem CardInfoItem = new KurotatoCardInfoItem();
 
-		// Token: 0x0401DC2C RID: 121900
+		// Token: 0x040186C2 RID: 100034
 		[Nullable(2)]
 		private Action<int> ConfirmCb;
 
-		// Token: 0x0401DC2D RID: 121901
+		// Token: 0x040186C3 RID: 100035
 		[Nullable(2)]
 		private Action<int, EToggleState> BuildTagClickCb;
 
-		// Token: 0x0401DC2E RID: 121902
+		// Token: 0x040186C4 RID: 100036
 		[Nullable(new byte[]
 		{
 			2,
@@ -287,26 +287,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 		})]
 		private Action<int, bool, IReadOnlyList<IKurotatoAttrPreviewDelta>> AttrPreviewCb;
 
-		// Token: 0x0200B8DB RID: 47323
+		// Token: 0x0200A2FD RID: 41725
 		[NullableContext(0)]
 		private class EChildComp
 		{
-			// Token: 0x04037EB2 RID: 229042
+			// Token: 0x040328C4 RID: 207044
 			public const int CardInfoItem = 0;
 
-			// Token: 0x04037EB3 RID: 229043
+			// Token: 0x040328C5 RID: 207045
 			public const int ButtonConfirm = 1;
 
-			// Token: 0x04037EB4 RID: 229044
+			// Token: 0x040328C6 RID: 207046
 			public const int TextureItemIcon = 2;
 
-			// Token: 0x04037EB5 RID: 229045
+			// Token: 0x040328C7 RID: 207047
 			public const int TextNum = 3;
 
-			// Token: 0x04037EB6 RID: 229046
+			// Token: 0x040328C8 RID: 207048
 			public const int PanelDone = 4;
 
-			// Token: 0x04037EB7 RID: 229047
+			// Token: 0x040328C9 RID: 207049
 			public const int TextDiscount = 5;
 		}
 	}

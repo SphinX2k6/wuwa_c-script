@@ -8,13 +8,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x0200596C RID: 22892
+	// Token: 0x02004945 RID: 18757
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class GiantModel : ModelBase
 	{
-		// Token: 0x0603A142 RID: 237890 RVA: 0x00DCD8EC File Offset: 0x00DCBAEC
+		// Token: 0x0602F066 RID: 192614 RVA: 0x00D1CB54 File Offset: 0x00D1AD54
 		protected override bool OnInit()
 		{
 			this.StableValueMap[GiantEcoNetType.Water] = 0.0;
@@ -36,12 +36,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.IsBodyVisible = true;
 			this.IsUnlocked = false;
 			this.CurrentIdleKey = EGiantIdleType.Common.ToEnumString();
+			this.PendingRestoreIdleKey = null;
 			this.CurrentMontageId = 0;
 			this.CurrentMontageCanBeInterrupt = true;
 			return true;
 		}
 
-		// Token: 0x0603A143 RID: 237891 RVA: 0x00DCD9FC File Offset: 0x00DCBBFC
+		// Token: 0x0602F067 RID: 192615 RVA: 0x00D1CC6C File Offset: 0x00D1AE6C
 		protected override bool OnClear()
 		{
 			this.StableValueMap.Clear();
@@ -57,12 +58,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.IsBodyVisible = true;
 			this.IsUnlocked = false;
 			this.CurrentIdleKey = "";
+			this.PendingRestoreIdleKey = null;
 			this.CurrentMontageId = 0;
 			this.CurrentMontageCanBeInterrupt = true;
 			return true;
 		}
 
-		// Token: 0x0603A144 RID: 237892 RVA: 0x00DCDAA0 File Offset: 0x00DCBCA0
+		// Token: 0x0602F068 RID: 192616 RVA: 0x00D1CD18 File Offset: 0x00D1AF18
 		public double GetStableValue(GiantEcoNetType ecology)
 		{
 			double result;
@@ -73,7 +75,7 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A145 RID: 237893 RVA: 0x00DCDAC8 File Offset: 0x00DCBCC8
+		// Token: 0x0602F069 RID: 192617 RVA: 0x00D1CD40 File Offset: 0x00D1AF40
 		public void SetStableValue(GiantEcoNetType ecology, double value)
 		{
 			double stableValue = this.GetStableValue(ecology);
@@ -86,7 +88,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A146 RID: 237894 RVA: 0x00DCDB10 File Offset: 0x00DCBD10
+		// Token: 0x0602F06A RID: 192618 RVA: 0x00D1CD88 File Offset: 0x00D1AF88
 		public EGiantStage GetStage(GiantEcoNetType ecology)
 		{
 			EGiantStage result;
@@ -97,7 +99,7 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A147 RID: 237895 RVA: 0x00DCDB30 File Offset: 0x00DCBD30
+		// Token: 0x0602F06B RID: 192619 RVA: 0x00D1CDA8 File Offset: 0x00D1AFA8
 		public void SetStage(GiantEcoNetType ecology, EGiantStage stage)
 		{
 			EGiantStage stage2 = this.GetStage(ecology);
@@ -109,7 +111,7 @@ namespace CSharpScript.Game.Module.Giant
 			EventSystem.Instance.Emit<GiantEcoNetType?, EGiantStage, EGiantStage>(EEventName.OnGiantStageCross, new GiantEcoNetType?(ecology), stage2, stage);
 		}
 
-		// Token: 0x0603A148 RID: 237896 RVA: 0x00DCDB70 File Offset: 0x00DCBD70
+		// Token: 0x0602F06C RID: 192620 RVA: 0x00D1CDE8 File Offset: 0x00D1AFE8
 		public GiantEcoNetStatus GetEcoStatus(GiantEcoNetType ecology)
 		{
 			GiantEcoNetStatus result;
@@ -120,7 +122,7 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A149 RID: 237897 RVA: 0x00DCDB90 File Offset: 0x00DCBD90
+		// Token: 0x0602F06D RID: 192621 RVA: 0x00D1CE08 File Offset: 0x00D1B008
 		public void SetEcoStatus(GiantEcoNetType ecology, GiantEcoNetStatus status)
 		{
 			GiantEcoNetStatus ecoStatus = this.GetEcoStatus(ecology);
@@ -133,13 +135,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A14A RID: 237898 RVA: 0x00DCDBD0 File Offset: 0x00DCBDD0
+		// Token: 0x0602F06E RID: 192622 RVA: 0x00D1CE48 File Offset: 0x00D1B048
 		public double GetTotalStableValue()
 		{
 			return this.TotalStableValue;
 		}
 
-		// Token: 0x0603A14B RID: 237899 RVA: 0x00DCDBD8 File Offset: 0x00DCBDD8
+		// Token: 0x0602F06F RID: 192623 RVA: 0x00D1CE50 File Offset: 0x00D1B050
 		public bool CanChangeMood()
 		{
 			double totalStableValue = this.GetTotalStableValue();
@@ -153,7 +155,7 @@ namespace CSharpScript.Game.Module.Giant
 			return false;
 		}
 
-		// Token: 0x0603A14C RID: 237900 RVA: 0x00DCDC28 File Offset: 0x00DCBE28
+		// Token: 0x0602F070 RID: 192624 RVA: 0x00D1CEA0 File Offset: 0x00D1B0A0
 		public void SetTotalStableValue(double value)
 		{
 			if (this.TotalStableValue == value)
@@ -166,13 +168,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A14D RID: 237901 RVA: 0x00DCDC6E File Offset: 0x00DCBE6E
+		// Token: 0x0602F071 RID: 192625 RVA: 0x00D1CEE6 File Offset: 0x00D1B0E6
 		public bool GetRewardGot(int rewardId)
 		{
 			return this.GotRewardIdSet.Contains(rewardId);
 		}
 
-		// Token: 0x0603A14E RID: 237902 RVA: 0x00DCDC7C File Offset: 0x00DCBE7C
+		// Token: 0x0602F072 RID: 192626 RVA: 0x00D1CEF4 File Offset: 0x00D1B0F4
 		public void SetGotRewardIds(IReadOnlyList<int> rewardIds)
 		{
 			this.GotRewardIdSet.Clear();
@@ -183,13 +185,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A14F RID: 237903 RVA: 0x00DCDCDC File Offset: 0x00DCBEDC
+		// Token: 0x0602F073 RID: 192627 RVA: 0x00D1CF54 File Offset: 0x00D1B154
 		public bool IsNodeInteracted(int nodeId)
 		{
 			return this.ActiveNodeIdSet.Contains(nodeId);
 		}
 
-		// Token: 0x0603A150 RID: 237904 RVA: 0x00DCDCEC File Offset: 0x00DCBEEC
+		// Token: 0x0602F074 RID: 192628 RVA: 0x00D1CF64 File Offset: 0x00D1B164
 		public void SetInteractedNodeIds(IReadOnlyList<int> nodeIds)
 		{
 			this.ActiveNodeIdSet.Clear();
@@ -201,7 +203,7 @@ namespace CSharpScript.Game.Module.Giant
 			EventSystem.Instance.Emit(EEventName.OnGiantNodeInteractChange);
 		}
 
-		// Token: 0x0603A151 RID: 237905 RVA: 0x00DCDD5C File Offset: 0x00DCBF5C
+		// Token: 0x0602F075 RID: 192629 RVA: 0x00D1CFD4 File Offset: 0x00D1B1D4
 		public void AddInteractedNodeIds(IReadOnlyList<int> nodeIds)
 		{
 			foreach (int item in nodeIds)
@@ -212,13 +214,13 @@ namespace CSharpScript.Game.Module.Giant
 			EventSystem.Instance.Emit(EEventName.OnGiantNodeInteractChange);
 		}
 
-		// Token: 0x0603A152 RID: 237906 RVA: 0x00DCDDC0 File Offset: 0x00DCBFC0
+		// Token: 0x0602F076 RID: 192630 RVA: 0x00D1D038 File Offset: 0x00D1B238
 		public bool IsInteractNodeRead(int nodeId)
 		{
 			return this.IsReadCached(nodeId, EGiantReadCacheType.Node);
 		}
 
-		// Token: 0x0603A153 RID: 237907 RVA: 0x00DCDDCC File Offset: 0x00DCBFCC
+		// Token: 0x0602F077 RID: 192631 RVA: 0x00D1D044 File Offset: 0x00D1B244
 		public bool MarkActivatedNodesInteractRead()
 		{
 			bool flag = false;
@@ -238,7 +240,7 @@ namespace CSharpScript.Game.Module.Giant
 			return true;
 		}
 
-		// Token: 0x0603A154 RID: 237908 RVA: 0x00DCDE44 File Offset: 0x00DCC044
+		// Token: 0x0602F078 RID: 192632 RVA: 0x00D1D0BC File Offset: 0x00D1B2BC
 		public GiantItemAccessStatus GetAccessState(int accessId)
 		{
 			GiantItemAccessStatus result;
@@ -249,14 +251,14 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A155 RID: 237909 RVA: 0x00DCDE64 File Offset: 0x00DCC064
+		// Token: 0x0602F079 RID: 192633 RVA: 0x00D1D0DC File Offset: 0x00D1B2DC
 		public void SetAccessState(int accessId, GiantItemAccessStatus state)
 		{
 			this.AccessStateMap[accessId] = state;
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A156 RID: 237910 RVA: 0x00DCDE7C File Offset: 0x00DCC07C
+		// Token: 0x0602F07A RID: 192634 RVA: 0x00D1D0F4 File Offset: 0x00D1B2F4
 		[NullableContext(2)]
 		public IReadOnlyDictionary<int, int> GetAccessItemInfos(int accessId)
 		{
@@ -268,7 +270,7 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A157 RID: 237911 RVA: 0x00DCDE9C File Offset: 0x00DCC09C
+		// Token: 0x0602F07B RID: 192635 RVA: 0x00D1D114 File Offset: 0x00D1B314
 		public void SetAccessItemInfos(int accessId, IReadOnlyDictionary<int, int> itemInfos)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -284,13 +286,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.AccessItemInfoMap[accessId] = dictionary;
 		}
 
-		// Token: 0x0603A158 RID: 237912 RVA: 0x00DCDF0C File Offset: 0x00DCC10C
+		// Token: 0x0602F07C RID: 192636 RVA: 0x00D1D184 File Offset: 0x00D1B384
 		public bool HasNewAccess(int accessId)
 		{
 			return this.GetAccessState(accessId) != GiantItemAccessStatus.AccessLock && !this.IsReadCached(accessId, EGiantReadCacheType.Access);
 		}
 
-		// Token: 0x0603A159 RID: 237913 RVA: 0x00DCDF24 File Offset: 0x00DCC124
+		// Token: 0x0602F07D RID: 192637 RVA: 0x00D1D19C File Offset: 0x00D1B39C
 		public void MarkAccessRead(int accessId)
 		{
 			if (!this.MarkAccessReadSilently(accessId))
@@ -301,13 +303,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A15A RID: 237914 RVA: 0x00DCDF49 File Offset: 0x00DCC149
+		// Token: 0x0602F07E RID: 192638 RVA: 0x00D1D1C1 File Offset: 0x00D1B3C1
 		public bool MarkAccessReadSilently(int accessId)
 		{
 			return this.MarkReadCached(accessId, EGiantReadCacheType.Access);
 		}
 
-		// Token: 0x0603A15B RID: 237915 RVA: 0x00DCDF54 File Offset: 0x00DCC154
+		// Token: 0x0602F07F RID: 192639 RVA: 0x00D1D1CC File Offset: 0x00D1B3CC
 		public void MarkAccessReadBatch(IReadOnlyList<int> accessIds)
 		{
 			foreach (int id in accessIds)
@@ -318,20 +320,20 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A15C RID: 237916 RVA: 0x00DCDFB8 File Offset: 0x00DCC1B8
+		// Token: 0x0602F080 RID: 192640 RVA: 0x00D1D230 File Offset: 0x00D1B430
 		private int GetReadCacheKey(int id, EGiantReadCacheType type)
 		{
 			return (int)(type * (EGiantReadCacheType)GiantDefine.ReadCacheKeyTypeOffset + id);
 		}
 
-		// Token: 0x0603A15D RID: 237917 RVA: 0x00DCDFC4 File Offset: 0x00DCC1C4
+		// Token: 0x0602F081 RID: 192641 RVA: 0x00D1D23C File Offset: 0x00D1B43C
 		private bool IsReadCached(int id, EGiantReadCacheType type)
 		{
 			ActivityModel instance = ActivityModel.Instance;
 			return this.ActivityId != 0 && instance != null && instance.GetActivityCacheDataByKey(this.ActivityId, 0, this.GetReadCacheKey(id, type)) == GiantDefine.ReadFlagValue;
 		}
 
-		// Token: 0x0603A15E RID: 237918 RVA: 0x00DCE000 File Offset: 0x00DCC200
+		// Token: 0x0602F082 RID: 192642 RVA: 0x00D1D278 File Offset: 0x00D1B478
 		private bool MarkReadCached(int id, EGiantReadCacheType type)
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -348,13 +350,13 @@ namespace CSharpScript.Game.Module.Giant
 			return true;
 		}
 
-		// Token: 0x0603A15F RID: 237919 RVA: 0x00DCE053 File Offset: 0x00DCC253
+		// Token: 0x0602F083 RID: 192643 RVA: 0x00D1D2CB File Offset: 0x00D1B4CB
 		public EGiantStage GetTotalStage()
 		{
 			return this.TotalStage;
 		}
 
-		// Token: 0x0603A160 RID: 237920 RVA: 0x00DCE05C File Offset: 0x00DCC25C
+		// Token: 0x0602F084 RID: 192644 RVA: 0x00D1D2D4 File Offset: 0x00D1B4D4
 		public void SetTotalStage(EGiantStage stage)
 		{
 			if (this.TotalStage == stage)
@@ -366,13 +368,13 @@ namespace CSharpScript.Game.Module.Giant
 			EventSystem.Instance.Emit<GiantEcoNetType?, EGiantStage, EGiantStage>(EEventName.OnGiantStageCross, null, totalStage, stage);
 		}
 
-		// Token: 0x0603A161 RID: 237921 RVA: 0x00DCE09C File Offset: 0x00DCC29C
+		// Token: 0x0602F085 RID: 192645 RVA: 0x00D1D314 File Offset: 0x00D1B514
 		public bool GetItemLocked(int itemId)
 		{
 			return !this.UnlockedDeliveryItemSet.Contains(itemId);
 		}
 
-		// Token: 0x0603A162 RID: 237922 RVA: 0x00DCE0B0 File Offset: 0x00DCC2B0
+		// Token: 0x0602F086 RID: 192646 RVA: 0x00D1D328 File Offset: 0x00D1B528
 		public void SetUnlockedDeliveryItems(IReadOnlyList<int> itemIds)
 		{
 			this.UnlockedDeliveryItemSet.Clear();
@@ -383,7 +385,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A163 RID: 237923 RVA: 0x00DCE110 File Offset: 0x00DCC310
+		// Token: 0x0602F087 RID: 192647 RVA: 0x00D1D388 File Offset: 0x00D1B588
 		public void AddUnlockedDeliveryItems(IReadOnlyList<int> itemIds)
 		{
 			foreach (int item in itemIds)
@@ -393,13 +395,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.NotifyContentRedDotDirty();
 		}
 
-		// Token: 0x0603A164 RID: 237924 RVA: 0x00DCE164 File Offset: 0x00DCC364
+		// Token: 0x0602F088 RID: 192648 RVA: 0x00D1D3DC File Offset: 0x00D1B5DC
 		public void SetPendingPicEco(GiantEcoNetType eco)
 		{
 			this.PendingPicEco = new GiantEcoNetType?(eco);
 		}
 
-		// Token: 0x0603A165 RID: 237925 RVA: 0x00DCE172 File Offset: 0x00DCC372
+		// Token: 0x0602F089 RID: 192649 RVA: 0x00D1D3EA File Offset: 0x00D1B5EA
 		public GiantEcoNetType? TakePendingPicEco()
 		{
 			GiantEcoNetType? pendingPicEco = this.PendingPicEco;
@@ -407,81 +409,95 @@ namespace CSharpScript.Game.Module.Giant
 			return pendingPicEco;
 		}
 
-		// Token: 0x0603A166 RID: 237926 RVA: 0x00DCE186 File Offset: 0x00DCC386
+		// Token: 0x0602F08A RID: 192650 RVA: 0x00D1D3FE File Offset: 0x00D1B5FE
 		public bool GetIsBodyVisible()
 		{
 			return this.IsBodyVisible;
 		}
 
-		// Token: 0x0603A167 RID: 237927 RVA: 0x00DCE18E File Offset: 0x00DCC38E
+		// Token: 0x0602F08B RID: 192651 RVA: 0x00D1D406 File Offset: 0x00D1B606
 		public void SetIsBodyVisible(bool visible)
 		{
 			this.IsBodyVisible = visible;
 		}
 
-		// Token: 0x0603A168 RID: 237928 RVA: 0x00DCE197 File Offset: 0x00DCC397
+		// Token: 0x0602F08C RID: 192652 RVA: 0x00D1D40F File Offset: 0x00D1B60F
 		public bool GetIsUnlocked()
 		{
 			return this.IsUnlocked;
 		}
 
-		// Token: 0x0603A169 RID: 237929 RVA: 0x00DCE19F File Offset: 0x00DCC39F
+		// Token: 0x0602F08D RID: 192653 RVA: 0x00D1D417 File Offset: 0x00D1B617
 		public void SetIsUnlocked(bool unlocked)
 		{
 			this.IsUnlocked = unlocked;
 		}
 
-		// Token: 0x0603A16A RID: 237930 RVA: 0x00DCE1A8 File Offset: 0x00DCC3A8
+		// Token: 0x0602F08E RID: 192654 RVA: 0x00D1D420 File Offset: 0x00D1B620
 		public string GetCurrentIdleKey()
 		{
 			return this.CurrentIdleKey;
 		}
 
-		// Token: 0x0603A16B RID: 237931 RVA: 0x00DCE1B0 File Offset: 0x00DCC3B0
+		// Token: 0x0602F08F RID: 192655 RVA: 0x00D1D428 File Offset: 0x00D1B628
 		public void SetCurrentIdleKey(string idleKey)
 		{
 			this.CurrentIdleKey = idleKey;
 		}
 
-		// Token: 0x0603A16C RID: 237932 RVA: 0x00DCE1B9 File Offset: 0x00DCC3B9
+		// Token: 0x0602F090 RID: 192656 RVA: 0x00D1D431 File Offset: 0x00D1B631
+		[NullableContext(2)]
+		public string GetPendingRestoreIdleKey()
+		{
+			return this.PendingRestoreIdleKey;
+		}
+
+		// Token: 0x0602F091 RID: 192657 RVA: 0x00D1D439 File Offset: 0x00D1B639
+		[NullableContext(2)]
+		public void SetPendingRestoreIdleKey(string idleKey)
+		{
+			this.PendingRestoreIdleKey = idleKey;
+		}
+
+		// Token: 0x0602F092 RID: 192658 RVA: 0x00D1D442 File Offset: 0x00D1B642
 		public int GetCurrentMontageId()
 		{
 			return this.CurrentMontageId;
 		}
 
-		// Token: 0x0603A16D RID: 237933 RVA: 0x00DCE1C1 File Offset: 0x00DCC3C1
+		// Token: 0x0602F093 RID: 192659 RVA: 0x00D1D44A File Offset: 0x00D1B64A
 		public bool GetCurrentMontageCanBeInterrupt()
 		{
 			return this.CurrentMontageCanBeInterrupt;
 		}
 
-		// Token: 0x0603A16E RID: 237934 RVA: 0x00DCE1C9 File Offset: 0x00DCC3C9
+		// Token: 0x0602F094 RID: 192660 RVA: 0x00D1D452 File Offset: 0x00D1B652
 		public void SetCurrentMontage(int giantAnimationId, bool canBeInterrupt)
 		{
 			this.CurrentMontageId = giantAnimationId;
 			this.CurrentMontageCanBeInterrupt = canBeInterrupt;
 		}
 
-		// Token: 0x0603A16F RID: 237935 RVA: 0x00DCE1D9 File Offset: 0x00DCC3D9
+		// Token: 0x0602F095 RID: 192661 RVA: 0x00D1D462 File Offset: 0x00D1B662
 		public void ClearCurrentMontage()
 		{
 			this.CurrentMontageId = 0;
 			this.CurrentMontageCanBeInterrupt = true;
 		}
 
-		// Token: 0x0603A170 RID: 237936 RVA: 0x00DCE1E9 File Offset: 0x00DCC3E9
+		// Token: 0x0602F096 RID: 192662 RVA: 0x00D1D472 File Offset: 0x00D1B672
 		public void SetActivityId(int activityId)
 		{
 			this.ActivityId = activityId;
 		}
 
-		// Token: 0x0603A171 RID: 237937 RVA: 0x00DCE1F2 File Offset: 0x00DCC3F2
+		// Token: 0x0602F097 RID: 192663 RVA: 0x00D1D47B File Offset: 0x00D1B67B
 		public int GetActivityId()
 		{
 			return this.ActivityId;
 		}
 
-		// Token: 0x0603A172 RID: 237938 RVA: 0x00DCE1FA File Offset: 0x00DCC3FA
+		// Token: 0x0602F098 RID: 192664 RVA: 0x00D1D483 File Offset: 0x00D1B683
 		public void NotifyContentRedDotDirty()
 		{
 			if (this.ActivityId > 0)
@@ -490,8 +506,8 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x17008B3C RID: 35644
-		// (get) Token: 0x0603A173 RID: 237939 RVA: 0x00DCE21B File Offset: 0x00DCC41B
+		// Token: 0x17005F09 RID: 24329
+		// (get) Token: 0x0602F099 RID: 192665 RVA: 0x00D1D4A4 File Offset: 0x00D1B6A4
 		public static GiantModel Instance
 		{
 			get
@@ -500,7 +516,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A174 RID: 237940 RVA: 0x00DCE222 File Offset: 0x00DCC422
+		// Token: 0x0602F09A RID: 192666 RVA: 0x00D1D4AB File Offset: 0x00D1B6AB
 		public static GiantModel GetOrCreateInstance()
 		{
 			if (GiantModel._Instance == null)
@@ -510,7 +526,7 @@ namespace CSharpScript.Game.Module.Giant
 			return GiantModel._Instance;
 		}
 
-		// Token: 0x0603A175 RID: 237941 RVA: 0x00DCE236 File Offset: 0x00DCC436
+		// Token: 0x0602F09B RID: 192667 RVA: 0x00D1D4BF File Offset: 0x00D1B6BF
 		public static bool CreateInstance()
 		{
 			if (GiantModel._Instance != null)
@@ -521,75 +537,79 @@ namespace CSharpScript.Game.Module.Giant
 			return true;
 		}
 
-		// Token: 0x0603A176 RID: 237942 RVA: 0x00DCE24C File Offset: 0x00DCC44C
+		// Token: 0x0602F09C RID: 192668 RVA: 0x00D1D4D5 File Offset: 0x00D1B6D5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A177 RID: 237943 RVA: 0x00DCE24E File Offset: 0x00DCC44E
+		// Token: 0x0602F09D RID: 192669 RVA: 0x00D1D4D7 File Offset: 0x00D1B6D7
 		public static void ResetStaticDefaultValue()
 		{
 			GiantModel._Instance = null;
 		}
 
-		// Token: 0x0603A178 RID: 237944 RVA: 0x00DCE256 File Offset: 0x00DCC456
+		// Token: 0x0602F09E RID: 192670 RVA: 0x00D1D4DF File Offset: 0x00D1B6DF
 		static GiantModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GiantModel.CreateStaticDefaultValue), new Action(GiantModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E497 RID: 124055
+		// Token: 0x04018F34 RID: 102196
 		private readonly Dictionary<GiantEcoNetType, double> StableValueMap = new Dictionary<GiantEcoNetType, double>();
 
-		// Token: 0x0401E498 RID: 124056
+		// Token: 0x04018F35 RID: 102197
 		private readonly Dictionary<GiantEcoNetType, EGiantStage> StageMap = new Dictionary<GiantEcoNetType, EGiantStage>();
 
-		// Token: 0x0401E499 RID: 124057
+		// Token: 0x04018F36 RID: 102198
 		private readonly Dictionary<GiantEcoNetType, GiantEcoNetStatus> EcoStatusMap = new Dictionary<GiantEcoNetType, GiantEcoNetStatus>();
 
-		// Token: 0x0401E49A RID: 124058
+		// Token: 0x04018F37 RID: 102199
 		private readonly HashSet<int> UnlockedDeliveryItemSet = new HashSet<int>();
 
-		// Token: 0x0401E49B RID: 124059
+		// Token: 0x04018F38 RID: 102200
 		private readonly HashSet<int> GotRewardIdSet = new HashSet<int>();
 
-		// Token: 0x0401E49C RID: 124060
+		// Token: 0x04018F39 RID: 102201
 		private readonly HashSet<int> ActiveNodeIdSet = new HashSet<int>();
 
-		// Token: 0x0401E49D RID: 124061
+		// Token: 0x04018F3A RID: 102202
 		private readonly Dictionary<int, GiantItemAccessStatus> AccessStateMap = new Dictionary<int, GiantItemAccessStatus>();
 
-		// Token: 0x0401E49E RID: 124062
+		// Token: 0x04018F3B RID: 102203
 		private readonly Dictionary<int, Dictionary<int, int>> AccessItemInfoMap = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x0401E49F RID: 124063
+		// Token: 0x04018F3C RID: 102204
 		private double TotalStableValue;
 
-		// Token: 0x0401E4A0 RID: 124064
+		// Token: 0x04018F3D RID: 102205
 		private EGiantStage TotalStage;
 
-		// Token: 0x0401E4A1 RID: 124065
+		// Token: 0x04018F3E RID: 102206
 		private bool IsBodyVisible = true;
 
-		// Token: 0x0401E4A2 RID: 124066
+		// Token: 0x04018F3F RID: 102207
 		private bool IsUnlocked;
 
-		// Token: 0x0401E4A3 RID: 124067
+		// Token: 0x04018F40 RID: 102208
 		private string CurrentIdleKey = "";
 
-		// Token: 0x0401E4A4 RID: 124068
+		// Token: 0x04018F41 RID: 102209
+		[Nullable(2)]
+		private string PendingRestoreIdleKey;
+
+		// Token: 0x04018F42 RID: 102210
 		private GiantEcoNetType? PendingPicEco;
 
-		// Token: 0x0401E4A5 RID: 124069
+		// Token: 0x04018F43 RID: 102211
 		private int CurrentMontageId;
 
-		// Token: 0x0401E4A6 RID: 124070
+		// Token: 0x04018F44 RID: 102212
 		private bool CurrentMontageCanBeInterrupt = true;
 
-		// Token: 0x0401E4A7 RID: 124071
+		// Token: 0x04018F45 RID: 102213
 		private int ActivityId;
 
-		// Token: 0x0401E4A8 RID: 124072
+		// Token: 0x04018F46 RID: 102214
 		[Nullable(2)]
 		private static GiantModel _Instance;
 	}

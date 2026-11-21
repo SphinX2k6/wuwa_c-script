@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Battle
 {
-	// Token: 0x02003E38 RID: 15928
+	// Token: 0x0200313F RID: 12607
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Battle/EWuYinQuState.EWuYinQuState")]
 	public enum EWuYinQuState : byte
 	{
-		// Token: 0x0401451C RID: 83228
+		// Token: 0x04010853 RID: 67667
 		StateIdle,
-		// Token: 0x0401451D RID: 83229
+		// Token: 0x04010854 RID: 67668
 		StateFighting1,
-		// Token: 0x0401451E RID: 83230
+		// Token: 0x04010855 RID: 67669
 		StateFighting2,
-		// Token: 0x0401451F RID: 83231
+		// Token: 0x04010856 RID: 67670
 		StateFighting3,
-		// Token: 0x04014520 RID: 83232
+		// Token: 0x04010857 RID: 67671
 		Nothing,
-		// Token: 0x04014521 RID: 83233
+		// Token: 0x04010858 RID: 67672
 		EWuYinQuState_MAX
 	}
 }

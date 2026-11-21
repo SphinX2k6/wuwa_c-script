@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002253 RID: 8787
+// Token: 0x02001737 RID: 5943
 public enum EMotorTechTreeNodeType
 {
-	// Token: 0x0400827F RID: 33407
+	// Token: 0x040083BD RID: 33725
 	Common,
-	// Token: 0x04008280 RID: 33408
+	// Token: 0x040083BE RID: 33726
 	Exclusive
 }

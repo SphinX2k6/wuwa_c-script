@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A69 RID: 2665
+	// Token: 0x02000B3E RID: 2878
 	public class ConfigUiNormalConfigByViewName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E8A RID: 16010 RVA: 0x001BB9BB File Offset: 0x001B9BBB
+		// Token: 0x06004388 RID: 17288 RVA: 0x001DAD4F File Offset: 0x001D8F4F
 		static ConfigUiNormalConfigByViewName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiNormalConfigByViewName.CreateStaticDefaultValue), new Action(ConfigUiNormalConfigByViewName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E8B RID: 16011 RVA: 0x001BB9DC File Offset: 0x001B9BDC
+		// Token: 0x06004389 RID: 17289 RVA: 0x001DAD70 File Offset: 0x001D8F70
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiNormalConfigByViewName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E8C RID: 16012 RVA: 0x001BBA5B File Offset: 0x001B9C5B
+		// Token: 0x0600438A RID: 17290 RVA: 0x001DADEF File Offset: 0x001D8FEF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiNormalConfigByViewName.LogPair = null;
 			ConfigUiNormalConfigByViewName.HandleId = 0;
 		}
 
-		// Token: 0x06003E8D RID: 16013 RVA: 0x001BBA69 File Offset: 0x001B9C69
+		// Token: 0x0600438B RID: 17291 RVA: 0x001DADFD File Offset: 0x001D8FFD
 		public static void Init()
 		{
 			ConfigUiNormalConfigByViewName.HandleId = ConfigCommon.InitDataStatement(ConfigUiNormalConfigByViewName.HandleId, "db_ui.db", "select BinData from `UiNormalConfig` where ViewName = ?");
 		}
 
-		// Token: 0x06003E8E RID: 16014 RVA: 0x001BBA84 File Offset: 0x001B9C84
+		// Token: 0x0600438C RID: 17292 RVA: 0x001DAE18 File Offset: 0x001D9018
 		public static UiNormalConfig? GetConfig(string p0ViewName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiNormalConfigByViewName.HandleId, ConfigUiNormalConfigByViewName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new UiNormalConfig?(rootAsUiNormalConfig);
 		}
 
-		// Token: 0x040048C5 RID: 18629
+		// Token: 0x04004E98 RID: 20120
 		private const string DB = "db_ui.db";
 
-		// Token: 0x040048C6 RID: 18630
+		// Token: 0x04004E99 RID: 20121
 		private const string FILE = "u.UiNormal层级队列配置.csv";
 
-		// Token: 0x040048C7 RID: 18631
+		// Token: 0x04004E9A RID: 20122
 		private const string TABLE = "UiNormalConfig";
 
-		// Token: 0x040048C8 RID: 18632
+		// Token: 0x04004E9B RID: 20123
 		private const string COMMAND = "select BinData from `UiNormalConfig` where ViewName = ?";
 
-		// Token: 0x040048C9 RID: 18633
+		// Token: 0x04004E9C RID: 20124
 		private const string KEY_PREFIX = "UiNormalConfigByViewName";
 
-		// Token: 0x040048CA RID: 18634
+		// Token: 0x04004E9D RID: 20125
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048CB RID: 18635
+		// Token: 0x04004E9E RID: 20126
 		private static int HandleId;
 	}
 }

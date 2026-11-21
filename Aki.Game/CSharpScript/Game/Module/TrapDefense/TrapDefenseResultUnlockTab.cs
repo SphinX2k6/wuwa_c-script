@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA7 RID: 19111
+	// Token: 0x02003A4F RID: 14927
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseResultUnlockTab : GridProxyAbstract<ITrapDefenseResultUnlockTab>
 	{
-		// Token: 0x06031858 RID: 202840 RVA: 0x00B7B3AC File Offset: 0x00B795AC
+		// Token: 0x060265E8 RID: 157160 RVA: 0x00ABF360 File Offset: 0x00ABD560
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031859 RID: 202841 RVA: 0x00B7B478 File Offset: 0x00B79678
+		// Token: 0x060265E9 RID: 157161 RVA: 0x00ABF42C File Offset: 0x00ABD62C
 		protected override void OnStart()
 		{
 			this.OrganLayout = new GenericLayout<TrapDefenseResultOrganUnlockItem, ITrapDefenseResultUnlockInfo>(base.GetGridLayout(1), new Func<TrapDefenseResultOrganUnlockItem>(this.CreateOrganItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 			this.BdLayout = new GenericLayout<TrapDefenseResultBdUnlockItem, ITrapDefenseResultUnlockInfo>(base.GetGridLayout(3), new Func<TrapDefenseResultBdUnlockItem>(this.CreateBdItem), base.GetItem(4).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603185A RID: 202842 RVA: 0x00B7B4E8 File Offset: 0x00B796E8
+		// Token: 0x060265EA RID: 157162 RVA: 0x00ABF49C File Offset: 0x00ABD69C
 		public override void Refresh(ITrapDefenseResultUnlockTab data, bool isSelected, int gridIndex)
 		{
 			ETrapDefenseResultUnlockType type = data.Type;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BdLayout.RefreshByData(data.DataList, null, true);
 		}
 
-		// Token: 0x0603185B RID: 202843 RVA: 0x00B7B5AC File Offset: 0x00B797AC
+		// Token: 0x060265EB RID: 157163 RVA: 0x00ABF560 File Offset: 0x00ABD760
 		public void PlayUnlockAnim()
 		{
 			if (!this.IsUnlockAnim)
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603185C RID: 202844 RVA: 0x00B7B650 File Offset: 0x00B79850
+		// Token: 0x060265EC RID: 157164 RVA: 0x00ABF604 File Offset: 0x00ABD804
 		private TrapDefenseResultOrganUnlockItem CreateOrganItem()
 		{
 			return new TrapDefenseResultOrganUnlockItem();
 		}
 
-		// Token: 0x0603185D RID: 202845 RVA: 0x00B7B657 File Offset: 0x00B79857
+		// Token: 0x060265ED RID: 157165 RVA: 0x00ABF60B File Offset: 0x00ABD80B
 		private TrapDefenseResultBdUnlockItem CreateBdItem()
 		{
 			return new TrapDefenseResultBdUnlockItem();
 		}
 
-		// Token: 0x0401A783 RID: 108419
+		// Token: 0x040150D5 RID: 86229
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<ETrapDefenseResultUnlockType, string> tabTypeTxtMap = new Dictionary<ETrapDefenseResultUnlockType, string>
 		{
@@ -113,35 +113,35 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		};
 
-		// Token: 0x0401A784 RID: 108420
+		// Token: 0x040150D6 RID: 86230
 		protected GenericLayout<TrapDefenseResultOrganUnlockItem, ITrapDefenseResultUnlockInfo> OrganLayout;
 
-		// Token: 0x0401A785 RID: 108421
+		// Token: 0x040150D7 RID: 86231
 		protected GenericLayout<TrapDefenseResultBdUnlockItem, ITrapDefenseResultUnlockInfo> BdLayout;
 
-		// Token: 0x0401A786 RID: 108422
+		// Token: 0x040150D8 RID: 86232
 		public bool IsShared;
 
-		// Token: 0x0401A787 RID: 108423
+		// Token: 0x040150D9 RID: 86233
 		private bool IsUnlockAnim;
 
-		// Token: 0x0200ABFC RID: 44028
+		// Token: 0x0200961C RID: 38428
 		[NullableContext(0)]
 		internal class EUnlockTab
 		{
-			// Token: 0x04034428 RID: 214056
+			// Token: 0x0402EDD9 RID: 191961
 			public const int Title = 0;
 
-			// Token: 0x04034429 RID: 214057
+			// Token: 0x0402EDDA RID: 191962
 			public const int OrganLayout = 1;
 
-			// Token: 0x0403442A RID: 214058
+			// Token: 0x0402EDDB RID: 191963
 			public const int OrganItem = 2;
 
-			// Token: 0x0403442B RID: 214059
+			// Token: 0x0402EDDC RID: 191964
 			public const int BdLayout = 3;
 
-			// Token: 0x0403442C RID: 214060
+			// Token: 0x0402EDDD RID: 191965
 			public const int BdItem = 4;
 		}
 	}

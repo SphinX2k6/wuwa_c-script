@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002046 RID: 8262
+	// Token: 0x0200067F RID: 1663
 	public sealed class FLGUIDrawableEvent_Color_DynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F3B7 RID: 127927 RVA: 0x002E6058 File Offset: 0x002E4258
+		// Token: 0x06009065 RID: 36965 RVA: 0x000D8C7E File Offset: 0x000D6E7E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIDrawableEvent_Color_DynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F3B8 RID: 127928 RVA: 0x002E6064 File Offset: 0x002E4264
+		// Token: 0x06009066 RID: 36966 RVA: 0x000D8C8A File Offset: 0x000D6E8A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIDrawableEvent_Color_DynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIDrawableEvent_Color_DynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F3B9 RID: 127929 RVA: 0x002E6087 File Offset: 0x002E4287
+		// Token: 0x06009067 RID: 36967 RVA: 0x000D8CAD File Offset: 0x000D6EAD
 		public FLGUIDrawableEvent_Color_DynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F3BA RID: 127930 RVA: 0x002E608F File Offset: 0x002E428F
+		// Token: 0x06009068 RID: 36968 RVA: 0x000D8CB5 File Offset: 0x000D6EB5
 		[NullableContext(2)]
 		public FLGUIDrawableEvent_Color_DynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F3BB RID: 127931 RVA: 0x002E6099 File Offset: 0x002E4299
+		// Token: 0x06009069 RID: 36969 RVA: 0x000D8CBF File Offset: 0x000D6EBF
 		public FLGUIDrawableEvent_Color_DynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F3BC RID: 127932 RVA: 0x002E60A4 File Offset: 0x002E42A4
+		// Token: 0x0600906A RID: 36970 RVA: 0x000D8CCA File Offset: 0x000D6ECA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FColor>) ?? ((Action<FColor>)Delegate.CreateDelegate(typeof(Action<FColor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F3BD RID: 127933 RVA: 0x002E60D6 File Offset: 0x002E42D6
+		// Token: 0x0600906B RID: 36971 RVA: 0x000D8CFC File Offset: 0x000D6EFC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FColor> Callback)
 		{
 			if (FLGUIDrawableEvent_Color_DynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIDrawableEvent_Color_DynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F3BE RID: 127934 RVA: 0x002E6110 File Offset: 0x002E4310
+		// Token: 0x0600906C RID: 36972 RVA: 0x000D8D38 File Offset: 0x000D6F38
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FColor value)
 		{
 			FLGUIDrawableEvent_Color_DynamicDelegate.__FLGUIDrawableEvent_Color_DynamicDelegate_DelegateParams* ptr = stackalloc FLGUIDrawableEvent_Color_DynamicDelegate.__FLGUIDrawableEvent_Color_DynamicDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FLGUIDrawableEvent_Color_DynamicDelegate.__FLGUIDrawableEvent_Color_DynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F3BF RID: 127935 RVA: 0x002E6150 File Offset: 0x002E4350
+		// Token: 0x0600906D RID: 36973 RVA: 0x000D8D78 File Offset: 0x000D6F78
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FColor> action = target as Action<FColor>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIDrawableEvent_Color_DynamicDelegate.__FLGUIDrawableEvent_Color_DynamicDelegate_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04010E76 RID: 69238
+		// Token: 0x04003F16 RID: 16150
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010E77 RID: 69239
+		// Token: 0x04003F17 RID: 16151
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIDrawableEvent_Color_DynamicDelegate__DelegateSignature";
 
-		// Token: 0x04010E78 RID: 69240
+		// Token: 0x04003F18 RID: 16152
 		private static int RegisterId;
 
-		// Token: 0x0200344F RID: 13391
+		// Token: 0x02000E92 RID: 3730
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FLGUIDrawableEvent_Color_DynamicDelegate_DelegateParams
+		private ref struct __FLGUIDrawableEvent_Color_DynamicDelegate_DelegateParams
 		{
-			// Token: 0x04017432 RID: 95282
+			// Token: 0x04006241 RID: 25153
 			[FieldOffset(0)]
 			public FColor value;
 		}
 
-		// Token: 0x02003450 RID: 13392
+		// Token: 0x02000E93 RID: 3731
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017433 RID: 95283
+			// Token: 0x04006242 RID: 25154
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

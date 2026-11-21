@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.Area.AreaFunction;
 
 namespace CSharpScript.Game.Module.Area
 {
-	// Token: 0x02005EA1 RID: 24225
+	// Token: 0x02004E86 RID: 20102
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AreaFunctionDispatcher
 	{
-		// Token: 0x0603DA39 RID: 252473 RVA: 0x00EE1E13 File Offset: 0x00EE0013
+		// Token: 0x060329C9 RID: 207305 RVA: 0x00E3334B File Offset: 0x00E3154B
 		public void Init()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x0603DA3A RID: 252474 RVA: 0x00EE1E1C File Offset: 0x00EE001C
+		// Token: 0x060329CA RID: 207306 RVA: 0x00E33354 File Offset: 0x00E31554
 		public void Destroy()
 		{
 			this.RemoveEventListener();
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Area
 			this.PendingAreaRequests = 0;
 		}
 
-		// Token: 0x0603DA3B RID: 252475 RVA: 0x00EE1E8C File Offset: 0x00EE008C
+		// Token: 0x060329CB RID: 207307 RVA: 0x00E333C4 File Offset: 0x00E315C4
 		public void OnTick(double delta)
 		{
 			if (this.PendingAreaRequests > 0)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA3C RID: 252476 RVA: 0x00EE1EE8 File Offset: 0x00EE00E8
+		// Token: 0x060329CC RID: 207308 RVA: 0x00E33420 File Offset: 0x00E31620
 		public void SetEnabled(bool value, string reason)
 		{
 			if (this.Enabled == value)
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA3D RID: 252477 RVA: 0x00EE1F20 File Offset: 0x00EE0120
+		// Token: 0x060329CD RID: 207309 RVA: 0x00E33458 File Offset: 0x00E31658
 		public void IncrementPendingAreaRequest()
 		{
 			this.PendingAreaRequests++;
 		}
 
-		// Token: 0x0603DA3E RID: 252478 RVA: 0x00EE1F30 File Offset: 0x00EE0130
+		// Token: 0x060329CE RID: 207310 RVA: 0x00E33468 File Offset: 0x00E31668
 		public void DecrementPendingAreaRequest()
 		{
 			if (this.PendingAreaRequests <= 0)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Area
 			this.PendingAreaRequests--;
 		}
 
-		// Token: 0x0603DA3F RID: 252479 RVA: 0x00EE1F74 File Offset: 0x00EE0174
+		// Token: 0x060329CF RID: 207311 RVA: 0x00E334AC File Offset: 0x00E316AC
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Add(EEventName.ChangeModeFinish, new Action(this.OnChangeModeFinish));
 		}
 
-		// Token: 0x0603DA40 RID: 252480 RVA: 0x00EE1FD8 File Offset: 0x00EE01D8
+		// Token: 0x060329D0 RID: 207312 RVA: 0x00E33510 File Offset: 0x00E31710
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Remove(EEventName.ChangeModeFinish, new Action(this.OnChangeModeFinish));
 		}
 
-		// Token: 0x0603DA41 RID: 252481 RVA: 0x00EE203C File Offset: 0x00EE023C
+		// Token: 0x060329D1 RID: 207313 RVA: 0x00E33574 File Offset: 0x00E31774
 		private void OnWorldDone()
 		{
 			if (!EventSystem.Instance.Has<int?, int>(EEventName.ChangeArea, new Action<int?, int>(this.OnChangeArea)))
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Area
 			this.OnChangeArea(null, area.Value.AreaId);
 		}
 
-		// Token: 0x0603DA42 RID: 252482 RVA: 0x00EE20C4 File Offset: 0x00EE02C4
+		// Token: 0x060329D2 RID: 207314 RVA: 0x00E335FC File Offset: 0x00E317FC
 		private void OnClearWorld()
 		{
 			if (EventSystem.Instance.Has<int?, int>(EEventName.ChangeArea, new Action<int?, int>(this.OnChangeArea)))
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Area
 			this.OnChangeArea(new int?(area.Value.AreaId), 0);
 		}
 
-		// Token: 0x0603DA43 RID: 252483 RVA: 0x00EE214C File Offset: 0x00EE034C
+		// Token: 0x060329D3 RID: 207315 RVA: 0x00E33684 File Offset: 0x00E31884
 		private void OnChangeModeFinish()
 		{
 			AreaModel instance = AreaModel.Instance;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Area
 			this.OnChangeArea(null, area.Value.AreaId);
 		}
 
-		// Token: 0x0603DA44 RID: 252484 RVA: 0x00EE219C File Offset: 0x00EE039C
+		// Token: 0x060329D4 RID: 207316 RVA: 0x00E336D4 File Offset: 0x00E318D4
 		private void OnChangeArea(int? preAreaId, int curAreaId)
 		{
 			IReadOnlyList<int> readOnlyList = this.PickFunctionIdsByAreaChain(curAreaId);
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Area
 			this.EnableForArea(readOnlyList);
 		}
 
-		// Token: 0x0603DA45 RID: 252485 RVA: 0x00EE21EC File Offset: 0x00EE03EC
+		// Token: 0x060329D5 RID: 207317 RVA: 0x00E33724 File Offset: 0x00E31924
 		private unsafe void EnableForArea(IReadOnlyList<int> functionIds)
 		{
 			this.DisableForAreaInternal("EnableForArea.Reset");
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA46 RID: 252486 RVA: 0x00EE23D4 File Offset: 0x00EE05D4
+		// Token: 0x060329D6 RID: 207318 RVA: 0x00E3390C File Offset: 0x00E31B0C
 		private void DisableForAreaInternal(string reason)
 		{
 			for (int i = this.Instances.Count - 1; i >= 0; i--)
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Area
 			this.Instances.Clear();
 		}
 
-		// Token: 0x0603DA47 RID: 252487 RVA: 0x00EE2418 File Offset: 0x00EE0618
+		// Token: 0x060329D7 RID: 207319 RVA: 0x00E33950 File Offset: 0x00E31B50
 		private IReadOnlyList<int> PickFunctionIdsByAreaChain(int curAreaId)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Area
 			return list;
 		}
 
-		// Token: 0x0603DA48 RID: 252488 RVA: 0x00EE2544 File Offset: 0x00EE0744
+		// Token: 0x060329D8 RID: 207320 RVA: 0x00E33A7C File Offset: 0x00E31C7C
 		private bool IdsEqual(IReadOnlyList<int> a, IReadOnlyList<int> b)
 		{
 			if (a.Count != b.Count)
@@ -285,16 +285,16 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x0402028C RID: 131724
+		// Token: 0x0401AD53 RID: 109907
 		private IReadOnlyList<int> CurFunctionIds = new List<int>();
 
-		// Token: 0x0402028D RID: 131725
+		// Token: 0x0401AD54 RID: 109908
 		private readonly List<IAreaFunctionInstance> Instances = new List<IAreaFunctionInstance>();
 
-		// Token: 0x0402028E RID: 131726
+		// Token: 0x0401AD55 RID: 109909
 		private bool Enabled = true;
 
-		// Token: 0x0402028F RID: 131727
+		// Token: 0x0401AD56 RID: 109910
 		private int PendingAreaRequests;
 	}
 }

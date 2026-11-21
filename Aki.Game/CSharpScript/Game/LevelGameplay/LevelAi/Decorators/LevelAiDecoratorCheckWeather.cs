@@ -5,22 +5,22 @@ using CSharpScript.Game.Module.Weather;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 {
-	// Token: 0x02006DD0 RID: 28112
+	// Token: 0x02005F4F RID: 24399
 	public class LevelAiDecoratorCheckWeather : LevelAiDecorator
 	{
-		// Token: 0x06044912 RID: 280850 RVA: 0x010E9BC7 File Offset: 0x010E7DC7
+		// Token: 0x0603AA76 RID: 240246 RVA: 0x01093E17 File Offset: 0x01092017
 		protected override void OnExecutionStart()
 		{
 			EventSystem.Instance.Add(EEventName.WeatherChange, new Action(this.OnWeatherChange));
 		}
 
-		// Token: 0x06044913 RID: 280851 RVA: 0x010E9BE5 File Offset: 0x010E7DE5
+		// Token: 0x0603AA77 RID: 240247 RVA: 0x01093E35 File Offset: 0x01092035
 		protected override void OnExecutionFinish(ELevelAiNodeResult result)
 		{
 			EventSystem.Instance.Remove(EEventName.WeatherChange, new Action(this.OnWeatherChange));
 		}
 
-		// Token: 0x06044914 RID: 280852 RVA: 0x010E9C04 File Offset: 0x010E7E04
+		// Token: 0x0603AA78 RID: 240248 RVA: 0x01093E54 File Offset: 0x01092054
 		protected override bool CheckCondition(ELevelAiDecoratorCheckType checkType)
 		{
 			ICompareWeather compareWeather = this.Params as ICompareWeather;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 			return !flag;
 		}
 
-		// Token: 0x06044915 RID: 280853 RVA: 0x010E9C4C File Offset: 0x010E7E4C
+		// Token: 0x0603AA79 RID: 240249 RVA: 0x01093E9C File Offset: 0x0109209C
 		private void OnWeatherChange()
 		{
 			bool rawValue = this.CheckCondition(ELevelAiDecoratorCheckType.PlanRecheck);

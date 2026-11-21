@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021CC RID: 8652
+	// Token: 0x02002437 RID: 9271
 	public class SetPlayerMoveControl_SetValue
 	{
-		// Token: 0x0400715F RID: 29023
+		// Token: 0x040077A7 RID: 30631
 		public int Left;
 
-		// Token: 0x04007160 RID: 29024
+		// Token: 0x040077A8 RID: 30632
 		public int Right;
 
-		// Token: 0x04007161 RID: 29025
+		// Token: 0x040077A9 RID: 30633
 		public int Forward;
 
-		// Token: 0x04007162 RID: 29026
+		// Token: 0x040077AA RID: 30634
 		public int Back;
 	}
 }

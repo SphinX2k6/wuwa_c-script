@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A0C RID: 6668
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BA1 RID: 7073
 	public class IEntityHandInHandInitiator : IHandInHandInitiatorType
 	{
-		// Token: 0x06008ED7 RID: 36567 RVA: 0x0014DDA4 File Offset: 0x0014BFA4
+		// Token: 0x06009641 RID: 38465 RVA: 0x0015DCD0 File Offset: 0x0015BED0
 		private IEntityHandInHandInitiator_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008ED8 RID: 36568 RVA: 0x0014DDDC File Offset: 0x0014BFDC
+		// Token: 0x06009642 RID: 38466 RVA: 0x0015DD08 File Offset: 0x0015BF08
 		public static IEntityHandInHandInitiator Create([Nullable(2)] IEntityHandInHandInitiator instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008ED9 RID: 36569 RVA: 0x0014DDEF File Offset: 0x0014BFEF
+		// Token: 0x06009643 RID: 38467 RVA: 0x0015DD1B File Offset: 0x0015BF1B
 		public static IEntityHandInHandInitiator CreateFromSetValue([Nullable(2)] IEntityHandInHandInitiator_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EDA RID: 36570 RVA: 0x0014DE02 File Offset: 0x0014C002
+		// Token: 0x06009644 RID: 38468 RVA: 0x0015DD2E File Offset: 0x0015BF2E
 		public new IEntityHandInHandInitiator_SetValue ToSetValue()
 		{
 			return new IEntityHandInHandInitiator_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DAE RID: 11694
-		// (get) Token: 0x06008EDB RID: 36571 RVA: 0x0014DE21 File Offset: 0x0014C021
-		// (set) Token: 0x06008EDC RID: 36572 RVA: 0x0014DE4C File Offset: 0x0014C04C
+		// Token: 0x17002FBB RID: 12219
+		// (get) Token: 0x06009645 RID: 38469 RVA: 0x0015DD4D File Offset: 0x0015BF4D
+		// (set) Token: 0x06009646 RID: 38470 RVA: 0x0015DD78 File Offset: 0x0015BF78
 		public override EHandInHandInitiatorType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DAF RID: 11695
-		// (get) Token: 0x06008EDD RID: 36573 RVA: 0x0014DE5A File Offset: 0x0014C05A
-		// (set) Token: 0x06008EDE RID: 36574 RVA: 0x0014DE85 File Offset: 0x0014C085
+		// Token: 0x17002FBC RID: 12220
+		// (get) Token: 0x06009647 RID: 38471 RVA: 0x0015DD86 File Offset: 0x0015BF86
+		// (set) Token: 0x06009648 RID: 38472 RVA: 0x0015DDB1 File Offset: 0x0015BFB1
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005875 RID: 22645
+		// Token: 0x04005CDA RID: 23770
 		[Nullable(2)]
 		protected new IEntityHandInHandInitiator FbInstance;
 
-		// Token: 0x04005876 RID: 22646
+		// Token: 0x04005CDB RID: 23771
 		[Nullable(2)]
 		protected new IEntityHandInHandInitiator_SetValue PocoInterface;
 	}

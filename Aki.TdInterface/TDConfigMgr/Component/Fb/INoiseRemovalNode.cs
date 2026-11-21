@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E47 RID: 3655
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F43 RID: 3907
 	public class INoiseRemovalNode
 	{
-		// Token: 0x0600528E RID: 21134 RVA: 0x000CB2FF File Offset: 0x000C94FF
+		// Token: 0x060057B5 RID: 22453 RVA: 0x000D6BC7 File Offset: 0x000D4DC7
 		public static INoiseRemovalNode Create(INoiseRemovalNode? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BBD RID: 7101
-		// (get) Token: 0x0600528F RID: 21135 RVA: 0x000CB31E File Offset: 0x000C951E
+		// Token: 0x17001D2A RID: 7466
+		// (get) Token: 0x060057B6 RID: 22454 RVA: 0x000D6BE6 File Offset: 0x000D4DE6
 		public virtual ENoiseRemovalColor Color
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BBE RID: 7102
-		// (get) Token: 0x06005290 RID: 21136 RVA: 0x000CB32B File Offset: 0x000C952B
+		// Token: 0x17001D2B RID: 7467
+		// (get) Token: 0x060057B7 RID: 22455 RVA: 0x000D6BF3 File Offset: 0x000D4DF3
 		public virtual VectorInfo Position
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F94 RID: 12180
+		// Token: 0x0400325C RID: 12892
 		private INoiseRemovalNode Instance;
 
-		// Token: 0x04002F95 RID: 12181
+		// Token: 0x0400325D RID: 12893
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002F96 RID: 12182
+		// Token: 0x0400325E RID: 12894
 		private bool _PositionInited;
 	}
 }

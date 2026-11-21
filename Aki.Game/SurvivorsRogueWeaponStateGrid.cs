@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B71 RID: 11121
+// Token: 0x020020ED RID: 8429
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponGridData>
 {
-	// Token: 0x0601708D RID: 94349 RVA: 0x005D917C File Offset: 0x005D737C
+	// Token: 0x06014ABE RID: 84670 RVA: 0x00605CEC File Offset: 0x00603EEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,13 +42,13 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		};
 	}
 
-	// Token: 0x0601708E RID: 94350 RVA: 0x005D9307 File Offset: 0x005D7507
+	// Token: 0x06014ABF RID: 84671 RVA: 0x00605E77 File Offset: 0x00604077
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0601708F RID: 94351 RVA: 0x005D931C File Offset: 0x005D751C
+	// Token: 0x06014AC0 RID: 84672 RVA: 0x00605E8C File Offset: 0x0060408C
 	private void OnClickBtn()
 	{
 		if (this.Data.IsDisable)
@@ -72,7 +72,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsTabMainView, param, null);
 	}
 
-	// Token: 0x06017090 RID: 94352 RVA: 0x005D93D6 File Offset: 0x005D75D6
+	// Token: 0x06014AC1 RID: 84673 RVA: 0x00605F46 File Offset: 0x00604146
 	public override void Refresh(ISurvivorsWeaponGridData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -90,7 +90,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		this.SetStateNormal();
 	}
 
-	// Token: 0x06017091 RID: 94353 RVA: 0x005D940C File Offset: 0x005D760C
+	// Token: 0x06014AC2 RID: 84674 RVA: 0x00605F7C File Offset: 0x0060417C
 	private void SetStateDisable()
 	{
 		base.GetItem(13).SetUIActive(true);
@@ -107,7 +107,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		base.GetItem(14).SetUIActive(false);
 	}
 
-	// Token: 0x06017092 RID: 94354 RVA: 0x005D949C File Offset: 0x005D769C
+	// Token: 0x06014AC3 RID: 84675 RVA: 0x0060600C File Offset: 0x0060420C
 	private void SetStateLock()
 	{
 		base.GetItem(13).SetUIActive(false);
@@ -134,7 +134,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		uuiitem.SetUIActive(data3 != null && data3.UnlockBatch != null);
 	}
 
-	// Token: 0x06017093 RID: 94355 RVA: 0x005D95A8 File Offset: 0x005D77A8
+	// Token: 0x06014AC4 RID: 84676 RVA: 0x00606118 File Offset: 0x00604318
 	private void SetStateNormal()
 	{
 		base.GetItem(13).SetUIActive(false);
@@ -184,7 +184,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		this.SetDisConnected();
 	}
 
-	// Token: 0x06017094 RID: 94356 RVA: 0x005D9748 File Offset: 0x005D7948
+	// Token: 0x06014AC5 RID: 84677 RVA: 0x006062B8 File Offset: 0x006044B8
 	public void SetSelectOn(bool bUp)
 	{
 		base.GetItem(3).SetUIActive(bUp);
@@ -196,21 +196,21 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		this.LevelSequencePlayer.StopSequenceByKey("PreArm", false, true);
 	}
 
-	// Token: 0x06017095 RID: 94357 RVA: 0x005D9794 File Offset: 0x005D7994
+	// Token: 0x06014AC6 RID: 84678 RVA: 0x00606304 File Offset: 0x00604504
 	public void SetLevelUp()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("PreArm", false, true);
 		this.LevelSequencePlayer.PlayOrReplaySequenceByName("LevelUp", false, null);
 	}
 
-	// Token: 0x06017096 RID: 94358 RVA: 0x005D97D0 File Offset: 0x005D79D0
+	// Token: 0x06014AC7 RID: 84679 RVA: 0x00606340 File Offset: 0x00604540
 	public void SetSingleAnim(string seqName)
 	{
 		this.LevelSequencePlayer.StopCurrentSequence(false, true);
 		this.LevelSequencePlayer.PlayOrReplaySequenceByName(seqName, false, null);
 	}
 
-	// Token: 0x06017097 RID: 94359 RVA: 0x005D9800 File Offset: 0x005D7A00
+	// Token: 0x06014AC8 RID: 84680 RVA: 0x00606370 File Offset: 0x00604570
 	public void SetConnected(bool directionLeft, int distance)
 	{
 		this.SetDisConnected();
@@ -236,7 +236,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		this.LevelSequencePlayer.PlayOrReplaySequenceByName("Connect", false, null);
 	}
 
-	// Token: 0x06017098 RID: 94360 RVA: 0x005D987C File Offset: 0x005D7A7C
+	// Token: 0x06014AC9 RID: 84681 RVA: 0x006063EC File Offset: 0x006045EC
 	public void SetDisConnected()
 	{
 		if (this.ConnectedComponentIndex >= 0)
@@ -250,7 +250,7 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		this.ConnectedComponentIndex = -1;
 	}
 
-	// Token: 0x06017099 RID: 94361 RVA: 0x005D98B0 File Offset: 0x005D7AB0
+	// Token: 0x06014ACA RID: 84682 RVA: 0x00606420 File Offset: 0x00604620
 	public void SetQualityById(int qualityId)
 	{
 		SurvivorsQuality? qualityConfig = SurvivorsRogueConfig.Instance.GetQualityConfig(qualityId);
@@ -265,14 +265,14 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		sprite.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0601709A RID: 94362 RVA: 0x005D98FE File Offset: 0x005D7AFE
+	// Token: 0x06014ACB RID: 84683 RVA: 0x0060646E File Offset: 0x0060466E
 	public override object GetKey(ISurvivorsWeaponGridData data, int displayIndex)
 	{
 		SurvivorsWeaponGainData weaponData = data.WeaponData;
 		return (weaponData != null) ? weaponData.ConfigId : 0;
 	}
 
-	// Token: 0x0601709B RID: 94363 RVA: 0x005D9918 File Offset: 0x005D7B18
+	// Token: 0x06014ACC RID: 84684 RVA: 0x00606488 File Offset: 0x00604688
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -293,25 +293,25 @@ public class SurvivorsRogueWeaponStateGrid : GridProxyAbstract<ISurvivorsWeaponG
 		};
 	}
 
-	// Token: 0x0400AC57 RID: 44119
+	// Token: 0x0400B05D RID: 45149
 	private const string SURVIVORS_LV_KEY = "SurvivorsCombat_Lv";
 
-	// Token: 0x0400AC58 RID: 44120
+	// Token: 0x0400B05E RID: 45150
 	private const string SEQ_PRE_SELECT = "PreArm";
 
-	// Token: 0x0400AC59 RID: 44121
+	// Token: 0x0400B05F RID: 45151
 	private const string SEQ_LEVEL_UP = "LevelUp";
 
-	// Token: 0x0400AC5A RID: 44122
+	// Token: 0x0400B060 RID: 45152
 	private const string SEQ_CONNECT = "Connect";
 
-	// Token: 0x0400AC5B RID: 44123
+	// Token: 0x0400B061 RID: 45153
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AC5C RID: 44124
+	// Token: 0x0400B062 RID: 45154
 	protected ISurvivorsWeaponGridData Data;
 
-	// Token: 0x0400AC5D RID: 44125
+	// Token: 0x0400B063 RID: 45155
 	private int ConnectedComponentIndex = -1;
 }

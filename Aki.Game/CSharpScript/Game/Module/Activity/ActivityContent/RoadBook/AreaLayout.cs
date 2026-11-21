@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061F2 RID: 25074
+	// Token: 0x02005170 RID: 20848
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 	})]
 	public class AreaLayout : GridProxyAbstract<AreaLayoutItemData>, IDynamicScrollItem<AreaLayoutItemData>
 	{
-		// Token: 0x0603F46F RID: 259183 RVA: 0x00F4A7AC File Offset: 0x00F489AC
+		// Token: 0x06034130 RID: 213296 RVA: 0x00E91704 File Offset: 0x00E8F904
 		public AreaLayout(ActivityRoadBookData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F470 RID: 259184 RVA: 0x00F4A7BC File Offset: 0x00F489BC
+		// Token: 0x06034131 RID: 213297 RVA: 0x00E91714 File Offset: 0x00E8F914
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F471 RID: 259185 RVA: 0x00F4A884 File Offset: 0x00F48A84
+		// Token: 0x06034132 RID: 213298 RVA: 0x00E917DC File Offset: 0x00E8F9DC
 		public UniTask Init(UUIItem actor)
 		{
 			AreaLayout.<Init>d__8 <Init>d__;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F472 RID: 259186 RVA: 0x00F4A8CF File Offset: 0x00F48ACF
+		// Token: 0x06034133 RID: 213299 RVA: 0x00E91827 File Offset: 0x00E8FA27
 		public void Update(AreaLayoutItemData data, int index)
 		{
 			this.Refresh(data, false, index);
 		}
 
-		// Token: 0x0603F473 RID: 259187 RVA: 0x00F4A8DA File Offset: 0x00F48ADA
+		// Token: 0x06034134 RID: 213300 RVA: 0x00E91832 File Offset: 0x00E8FA32
 		public override void Refresh(AreaLayoutItemData data, bool isSelected, int gridIndex)
 		{
 			this.AreaData = data.AreaData;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RefreshTask(data.TaskData);
 		}
 
-		// Token: 0x0603F474 RID: 259188 RVA: 0x00F4A90C File Offset: 0x00F48B0C
+		// Token: 0x06034135 RID: 213301 RVA: 0x00E91864 File Offset: 0x00E8FA64
 		private void RefreshTitle(RoadBookAreaData areaData)
 		{
 			Area value = AreaConfig.Instance.GetAreaInfo(areaData.AreaId).Value;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F475 RID: 259189 RVA: 0x00F4AAB0 File Offset: 0x00F48CB0
+		// Token: 0x06034136 RID: 213302 RVA: 0x00E91A08 File Offset: 0x00E8FC08
 		private void RefreshTask(ActivityTaskData taskData)
 		{
 			base.GetItem(4).SetUIActive(false);
@@ -116,20 +116,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.NormalItem.Refresh(taskData, false, 0);
 		}
 
-		// Token: 0x0603F476 RID: 259190 RVA: 0x00F4AAF4 File Offset: 0x00F48CF4
+		// Token: 0x06034137 RID: 213303 RVA: 0x00E91A4C File Offset: 0x00E8FC4C
 		public void PlayUnlockAnim()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Unlock", true, null, false);
 		}
 
-		// Token: 0x0603F477 RID: 259191 RVA: 0x00F4AB1C File Offset: 0x00F48D1C
+		// Token: 0x06034138 RID: 213304 RVA: 0x00E91A74 File Offset: 0x00E8FC74
 		[NullableContext(2)]
 		public UUIItem GetFirstItem()
 		{
 			return this.TaskLayout.GetItemByIndex(0);
 		}
 
-		// Token: 0x0603F478 RID: 259192 RVA: 0x00F4AB2A File Offset: 0x00F48D2A
+		// Token: 0x06034139 RID: 213305 RVA: 0x00E91A82 File Offset: 0x00E8FC82
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(AreaLayoutItemData data)
 		{
@@ -140,12 +140,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603F479 RID: 259193 RVA: 0x00F4AB56 File Offset: 0x00F48D56
+		// Token: 0x0603413A RID: 213306 RVA: 0x00E91AAE File Offset: 0x00E8FCAE
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0603F47A RID: 259194 RVA: 0x00F4AB58 File Offset: 0x00F48D58
+		// Token: 0x0603413B RID: 213307 RVA: 0x00E91AB0 File Offset: 0x00E8FCB0
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.AreaData = null;
 		}
 
-		// Token: 0x04021008 RID: 135176
+		// Token: 0x0401B937 RID: 112951
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,23 +168,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 		})]
 		protected GenericLayout<RoadBookTaskNormalItem, ActivityTaskData> TaskLayout;
 
-		// Token: 0x04021009 RID: 135177
+		// Token: 0x0401B938 RID: 112952
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0402100A RID: 135178
+		// Token: 0x0401B939 RID: 112953
 		[Nullable(2)]
 		private RoadBookTaskLockItem LockItem;
 
-		// Token: 0x0402100B RID: 135179
+		// Token: 0x0401B93A RID: 112954
 		[Nullable(2)]
 		private RoadBookTaskNormalItem NormalItem;
 
-		// Token: 0x0402100C RID: 135180
+		// Token: 0x0401B93B RID: 112955
 		[Nullable(2)]
 		private RoadBookAreaData AreaData;
 
-		// Token: 0x0402100D RID: 135181
+		// Token: 0x0401B93C RID: 112956
 		protected ActivityRoadBookData ActivityBaseData;
 	}
 }

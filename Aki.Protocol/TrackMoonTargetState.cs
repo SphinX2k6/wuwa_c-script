@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001669 RID: 5737
+	// Token: 0x020016E5 RID: 5861
 	public enum TrackMoonTargetState
 	{
-		// Token: 0x0400C190 RID: 49552
+		// Token: 0x0400C6B9 RID: 50873
 		[OriginalName("TrackMoonTargetRunning")]
 		TrackMoonTargetRunning,
-		// Token: 0x0400C191 RID: 49553
+		// Token: 0x0400C6BA RID: 50874
 		[OriginalName("TrackMoonTargetFinish")]
 		TrackMoonTargetFinish,
-		// Token: 0x0400C192 RID: 49554
+		// Token: 0x0400C6BB RID: 50875
 		[OriginalName("TrackMoonTargetTaken")]
 		TrackMoonTargetTaken
 	}

@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D2E RID: 27950
+	// Token: 0x020074A9 RID: 29865
 	public static class IPlayMovieVerify
 	{
-		// Token: 0x060314FB RID: 201979 RVA: 0x006B0170 File Offset: 0x006AE370
+		// Token: 0x060344F7 RID: 214263 RVA: 0x0070B848 File Offset: 0x00709A48
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyString(tablePos, 4, false) && verifier.VerifyField(tablePos, 6, 2UL, 1UL, false))
@@ -18,9 +18,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				{
 					verifyAction = (IPlayMovieVerify.<>O.<0>__Verify = new VerifyTableAction(IMp4UiReplaceMaterialVerify.Verify));
 				}
-				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false))
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false))
 				{
-					short offsetId2 = 14;
+					short offsetId2 = 16;
 					VerifyTableAction verifyAction2;
 					if ((verifyAction2 = IPlayMovieVerify.<>O.<1>__Verify) == null)
 					{
@@ -28,13 +28,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 					}
 					if (verifier.VerifyVectorOfTables(tablePos, offsetId2, verifyAction2, false))
 					{
-						short offsetId3 = 16;
+						short offsetId3 = 18;
 						VerifyTableAction verifyAction3;
 						if ((verifyAction3 = IPlayMovieVerify.<>O.<2>__Verify) == null)
 						{
 							verifyAction3 = (IPlayMovieVerify.<>O.<2>__Verify = new VerifyTableAction(ISetBlendAnimVerify.Verify));
 						}
-						if (verifier.VerifyTable(tablePos, offsetId3, verifyAction3, false) && verifier.VerifyField(tablePos, 18, 1UL, 1UL, false))
+						if (verifier.VerifyTable(tablePos, offsetId3, verifyAction3, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false))
 						{
 							return verifier.VerifyTableEnd(tablePos);
 						}
@@ -44,17 +44,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007DF9 RID: 32249
+		// Token: 0x02008685 RID: 34437
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040139B0 RID: 80304
+			// Token: 0x04014A74 RID: 84596
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040139B1 RID: 80305
+			// Token: 0x04014A75 RID: 84597
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040139B2 RID: 80306
+			// Token: 0x04014A76 RID: 84598
 			public static VerifyTableAction <2>__Verify;
 		}
 	}

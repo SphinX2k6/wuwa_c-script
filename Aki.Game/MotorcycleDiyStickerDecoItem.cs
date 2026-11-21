@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002281 RID: 8833
+// Token: 0x02001765 RID: 5989
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStickerDecoItemData>
 {
-	// Token: 0x060113FB RID: 70651 RVA: 0x00435B7C File Offset: 0x00433D7C
+	// Token: 0x0600E891 RID: 59537 RVA: 0x00442788 File Offset: 0x00440988
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStick
 		};
 	}
 
-	// Token: 0x060113FC RID: 70652 RVA: 0x00435C80 File Offset: 0x00433E80
+	// Token: 0x0600E892 RID: 59538 RVA: 0x0044288C File Offset: 0x00440A8C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleDiyStickerDecoItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStick
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060113FD RID: 70653 RVA: 0x00435CC4 File Offset: 0x00433EC4
+	// Token: 0x0600E893 RID: 59539 RVA: 0x004428D0 File Offset: 0x00440AD0
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiyStickerDecoItemData data, bool isSelected, int gridIndex)
 	{
@@ -157,7 +157,7 @@ public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStick
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x060113FE RID: 70654 RVA: 0x00436074 File Offset: 0x00434274
+	// Token: 0x0600E894 RID: 59540 RVA: 0x00442C80 File Offset: 0x00440E80
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.Data == null)
@@ -172,7 +172,7 @@ public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStick
 		onClickToggleBack(this.Data.ItemId, base.GetExtendToggle(0), base.GetItem(7));
 	}
 
-	// Token: 0x060113FF RID: 70655 RVA: 0x004360A8 File Offset: 0x004342A8
+	// Token: 0x0600E895 RID: 59541 RVA: 0x00442CB4 File Offset: 0x00440EB4
 	private void OnClickItem(EToggleState toggleState)
 	{
 		if (this.Data == null)
@@ -187,16 +187,16 @@ public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStick
 		onClickToggleBack(this.Data.ItemId, base.GetExtendToggle(0), base.GetItem(7));
 	}
 
-	// Token: 0x04008333 RID: 33587
+	// Token: 0x04008471 RID: 33905
 	private MotorcycleDiyStickerDecoItemData Data;
 
-	// Token: 0x04008334 RID: 33588
+	// Token: 0x04008472 RID: 33906
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008335 RID: 33589
+	// Token: 0x04008473 RID: 33907
 	private EOutLookState? CurrentState;
 
-	// Token: 0x04008336 RID: 33590
+	// Token: 0x04008474 RID: 33908
 	[Nullable(new byte[]
 	{
 		2,
@@ -205,35 +205,35 @@ public class MotorcycleDiyStickerDecoItem : GridProxyAbstract<MotorcycleDiyStick
 	})]
 	public Action<int, UUIExtendToggle, UUIItem> OnClickToggleBack;
 
-	// Token: 0x020087C6 RID: 34758
+	// Token: 0x0200794F RID: 31055
 	[NullableContext(0)]
 	private class EStickerDecoItemComponent
 	{
-		// Token: 0x0402C200 RID: 180736
+		// Token: 0x04027518 RID: 161048
 		public const int TogItem = 0;
 
-		// Token: 0x0402C201 RID: 180737
+		// Token: 0x04027519 RID: 161049
 		public const int SprQuality = 1;
 
-		// Token: 0x0402C202 RID: 180738
+		// Token: 0x0402751A RID: 161050
 		public const int PnlNone = 2;
 
-		// Token: 0x0402C203 RID: 180739
+		// Token: 0x0402751B RID: 161051
 		public const int TexIcon = 3;
 
-		// Token: 0x0402C204 RID: 180740
+		// Token: 0x0402751C RID: 161052
 		public const int PnlBan = 4;
 
-		// Token: 0x0402C205 RID: 180741
+		// Token: 0x0402751D RID: 161053
 		public const int PnlLock = 5;
 
-		// Token: 0x0402C206 RID: 180742
+		// Token: 0x0402751E RID: 161054
 		public const int PnlSelect = 6;
 
-		// Token: 0x0402C207 RID: 180743
+		// Token: 0x0402751F RID: 161055
 		public const int NewItem = 7;
 
-		// Token: 0x0402C208 RID: 180744
+		// Token: 0x04027520 RID: 161056
 		public const int PreviewItem = 8;
 	}
 }

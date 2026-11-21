@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DFD RID: 24061
+	// Token: 0x0200643A RID: 25658
 	public enum IGravityDirectionType_Union : byte
 	{
-		// Token: 0x0400F7EA RID: 63466
+		// Token: 0x04010545 RID: 66885
 		NONE,
-		// Token: 0x0400F7EB RID: 63467
+		// Token: 0x04010546 RID: 66886
 		IGravityDirectionType,
-		// Token: 0x0400F7EC RID: 63468
+		// Token: 0x04010547 RID: 66887
 		IGravityDirectionSelfRotation,
-		// Token: 0x0400F7ED RID: 63469
+		// Token: 0x04010548 RID: 66888
 		IGravityDirectionVectorInfo,
-		// Token: 0x0400F7EE RID: 63470
+		// Token: 0x04010549 RID: 66889
 		IGravityDirectionWorldAxis,
-		// Token: 0x0400F7EF RID: 63471
+		// Token: 0x0401054A RID: 66890
 		IGravityDirectionByEntityGravity
 	}
 }

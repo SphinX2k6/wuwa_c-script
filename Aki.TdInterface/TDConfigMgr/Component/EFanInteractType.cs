@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000A7 RID: 167
+	// Token: 0x020000AD RID: 173
 	[EnumExtensions]
 	public enum EFanInteractType
 	{
-		// Token: 0x040003E8 RID: 1000
+		// Token: 0x04000404 RID: 1028
 		Hit,
-		// Token: 0x040003E9 RID: 1001
+		// Token: 0x04000405 RID: 1029
 		FKey
 	}
 }

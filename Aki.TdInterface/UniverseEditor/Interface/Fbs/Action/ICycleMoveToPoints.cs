@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006522 RID: 25890
+	// Token: 0x02006B90 RID: 27536
 	public struct ICycleMoveToPoints : IFlatbufferObject
 	{
-		// Token: 0x1700C07E RID: 49278
-		// (get) Token: 0x0602CE91 RID: 183953 RVA: 0x0062ADF9 File Offset: 0x00628FF9
+		// Token: 0x1700CA10 RID: 51728
+		// (get) Token: 0x0602F62F RID: 194095 RVA: 0x006772A5 File Offset: 0x006754A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE92 RID: 183954 RVA: 0x0062AE06 File Offset: 0x00629006
+		// Token: 0x0602F630 RID: 194096 RVA: 0x006772B2 File Offset: 0x006754B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CE93 RID: 183955 RVA: 0x0062AE10 File Offset: 0x00629010
+		// Token: 0x0602F631 RID: 194097 RVA: 0x006772BC File Offset: 0x006754BC
 		public static ICycleMoveToPoints GetRootAsICycleMoveToPoints(ByteBuffer _bb)
 		{
 			return ICycleMoveToPoints.GetRootAsICycleMoveToPoints(_bb, default(ICycleMoveToPoints));
 		}
 
-		// Token: 0x0602CE94 RID: 183956 RVA: 0x0062AE2C File Offset: 0x0062902C
+		// Token: 0x0602F632 RID: 194098 RVA: 0x006772D8 File Offset: 0x006754D8
 		public static ICycleMoveToPoints GetRootAsICycleMoveToPoints(ByteBuffer _bb, ICycleMoveToPoints obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CE95 RID: 183957 RVA: 0x0062AE49 File Offset: 0x00629049
+		// Token: 0x0602F633 RID: 194099 RVA: 0x006772F5 File Offset: 0x006754F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CE96 RID: 183958 RVA: 0x0062AE58 File Offset: 0x00629058
+		// Token: 0x0602F634 RID: 194100 RVA: 0x00677304 File Offset: 0x00675504
 		public ICycleMoveToPoints __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C07F RID: 49279
-		// (get) Token: 0x0602CE97 RID: 183959 RVA: 0x0062AE68 File Offset: 0x00629068
+		// Token: 0x1700CA11 RID: 51729
+		// (get) Token: 0x0602F635 RID: 194101 RVA: 0x00677314 File Offset: 0x00675514
 		public EMoveSceneItemType Type
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE98 RID: 183960 RVA: 0x0062AEA4 File Offset: 0x006290A4
+		// Token: 0x0602F636 RID: 194102 RVA: 0x00677350 File Offset: 0x00675550
 		public IVectorInfo? Points(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700C080 RID: 49280
-		// (get) Token: 0x0602CE99 RID: 183961 RVA: 0x0062AF04 File Offset: 0x00629104
+		// Token: 0x1700CA12 RID: 51730
+		// (get) Token: 0x0602F637 RID: 194103 RVA: 0x006773B0 File Offset: 0x006755B0
 		public int PointsLength
 		{
 			get
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C081 RID: 49281
-		// (get) Token: 0x0602CE9A RID: 183962 RVA: 0x0062AF30 File Offset: 0x00629130
+		// Token: 0x1700CA13 RID: 51731
+		// (get) Token: 0x0602F638 RID: 194104 RVA: 0x006773DC File Offset: 0x006755DC
 		public bool IsLoop
 		{
 			get
@@ -101,8 +101,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C082 RID: 49282
-		// (get) Token: 0x0602CE9B RID: 183963 RVA: 0x0062AF70 File Offset: 0x00629170
+		// Token: 0x1700CA14 RID: 51732
+		// (get) Token: 0x0602F639 RID: 194105 RVA: 0x0067741C File Offset: 0x0067561C
 		public float StopTime
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C083 RID: 49283
-		// (get) Token: 0x0602CE9C RID: 183964 RVA: 0x0062AFB4 File Offset: 0x006291B4
+		// Token: 0x1700CA15 RID: 51733
+		// (get) Token: 0x0602F63A RID: 194106 RVA: 0x00677460 File Offset: 0x00675660
 		public TMoveToPointType MoveMotionType
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE9D RID: 183965 RVA: 0x0062AFF4 File Offset: 0x006291F4
+		// Token: 0x0602F63B RID: 194107 RVA: 0x006774A0 File Offset: 0x006756A0
 		public TTable? MoveMotion<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -142,20 +142,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602CE9E RID: 183966 RVA: 0x0062B03C File Offset: 0x0062923C
+		// Token: 0x0602F63C RID: 194108 RVA: 0x006774E8 File Offset: 0x006756E8
 		public IUniformMotion MoveMotionAsIUniformMotion()
 		{
 			return this.MoveMotion<IUniformMotion>().Value;
 		}
 
-		// Token: 0x0602CE9F RID: 183967 RVA: 0x0062B058 File Offset: 0x00629258
+		// Token: 0x0602F63D RID: 194109 RVA: 0x00677504 File Offset: 0x00675704
 		public IVariableMotion MoveMotionAsIVariableMotion()
 		{
 			return this.MoveMotion<IVariableMotion>().Value;
 		}
 
-		// Token: 0x1700C084 RID: 49284
-		// (get) Token: 0x0602CEA0 RID: 183968 RVA: 0x0062B074 File Offset: 0x00629274
+		// Token: 0x1700CA16 RID: 51734
+		// (get) Token: 0x0602F63E RID: 194110 RVA: 0x00677520 File Offset: 0x00675720
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CEA1 RID: 183969 RVA: 0x0062B0B4 File Offset: 0x006292B4
+		// Token: 0x0602F63F RID: 194111 RVA: 0x00677560 File Offset: 0x00675760
 		public static Offset<ICycleMoveToPoints> CreateICycleMoveToPoints(FlatBufferBuilder builder, EMoveSceneItemType Type = EMoveSceneItemType.MoveToPoint, VectorOffset PointsOffset = default(VectorOffset), bool IsLoop = false, float StopTime = 0f, TMoveToPointType MoveMotion_type = TMoveToPointType.NONE, int MoveMotionOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -183,25 +183,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICycleMoveToPoints.EndICycleMoveToPoints(builder);
 		}
 
-		// Token: 0x0602CEA2 RID: 183970 RVA: 0x0062B103 File Offset: 0x00629303
+		// Token: 0x0602F640 RID: 194112 RVA: 0x006775AF File Offset: 0x006757AF
 		public static void StartICycleMoveToPoints(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0602CEA3 RID: 183971 RVA: 0x0062B10C File Offset: 0x0062930C
+		// Token: 0x0602F641 RID: 194113 RVA: 0x006775B8 File Offset: 0x006757B8
 		public static void AddType(FlatBufferBuilder builder, EMoveSceneItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CEA4 RID: 183972 RVA: 0x0062B117 File Offset: 0x00629317
+		// Token: 0x0602F642 RID: 194114 RVA: 0x006775C3 File Offset: 0x006757C3
 		public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset)
 		{
 			builder.AddOffset(1, pointsOffset.Value, 0);
 		}
 
-		// Token: 0x0602CEA5 RID: 183973 RVA: 0x0062B128 File Offset: 0x00629328
+		// Token: 0x0602F643 RID: 194115 RVA: 0x006775D4 File Offset: 0x006757D4
 		public static VectorOffset CreatePointsVector(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -212,7 +212,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CEA6 RID: 183974 RVA: 0x0062B168 File Offset: 0x00629368
+		// Token: 0x0602F644 RID: 194116 RVA: 0x00677614 File Offset: 0x00675814
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CEA7 RID: 183975 RVA: 0x0062B182 File Offset: 0x00629382
+		// Token: 0x0602F645 RID: 194117 RVA: 0x0067762E File Offset: 0x0067582E
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVectorInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CEA8 RID: 183976 RVA: 0x0062B1A0 File Offset: 0x006293A0
+		// Token: 0x0602F646 RID: 194118 RVA: 0x0067764C File Offset: 0x0067584C
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -236,49 +236,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CEA9 RID: 183977 RVA: 0x0062B1B9 File Offset: 0x006293B9
+		// Token: 0x0602F647 RID: 194119 RVA: 0x00677665 File Offset: 0x00675865
 		public static void StartPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602CEAA RID: 183978 RVA: 0x0062B1C4 File Offset: 0x006293C4
+		// Token: 0x0602F648 RID: 194120 RVA: 0x00677670 File Offset: 0x00675870
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(2, isLoop, false);
 		}
 
-		// Token: 0x0602CEAB RID: 183979 RVA: 0x0062B1CF File Offset: 0x006293CF
+		// Token: 0x0602F649 RID: 194121 RVA: 0x0067767B File Offset: 0x0067587B
 		public static void AddStopTime(FlatBufferBuilder builder, float stopTime)
 		{
 			builder.AddFloat(3, stopTime, 0.0);
 		}
 
-		// Token: 0x0602CEAC RID: 183980 RVA: 0x0062B1E2 File Offset: 0x006293E2
+		// Token: 0x0602F64A RID: 194122 RVA: 0x0067768E File Offset: 0x0067588E
 		public static void AddMoveMotionType(FlatBufferBuilder builder, TMoveToPointType moveMotionType)
 		{
 			builder.AddByte(4, (byte)moveMotionType, 0);
 		}
 
-		// Token: 0x0602CEAD RID: 183981 RVA: 0x0062B1ED File Offset: 0x006293ED
+		// Token: 0x0602F64B RID: 194123 RVA: 0x00677699 File Offset: 0x00675899
 		public static void AddMoveMotion(FlatBufferBuilder builder, int moveMotionOffset)
 		{
 			builder.AddOffset(5, moveMotionOffset, 0);
 		}
 
-		// Token: 0x0602CEAE RID: 183982 RVA: 0x0062B1F8 File Offset: 0x006293F8
+		// Token: 0x0602F64C RID: 194124 RVA: 0x006776A4 File Offset: 0x006758A4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x0602CEAF RID: 183983 RVA: 0x0062B203 File Offset: 0x00629403
+		// Token: 0x0602F64D RID: 194125 RVA: 0x006776AF File Offset: 0x006758AF
 		public static Offset<ICycleMoveToPoints> EndICycleMoveToPoints(FlatBufferBuilder builder)
 		{
 			return new Offset<ICycleMoveToPoints>(builder.EndTable());
 		}
 
-		// Token: 0x0602CEB0 RID: 183984 RVA: 0x0062B210 File Offset: 0x00629410
+		// Token: 0x0602F64E RID: 194126 RVA: 0x006776BC File Offset: 0x006758BC
 		public ICycleMoveToPointsT UnPack()
 		{
 			ICycleMoveToPointsT cycleMoveToPointsT = new ICycleMoveToPointsT();
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return cycleMoveToPointsT;
 		}
 
-		// Token: 0x0602CEB1 RID: 183985 RVA: 0x0062B22C File Offset: 0x0062942C
+		// Token: 0x0602F64F RID: 194127 RVA: 0x006776D8 File Offset: 0x006758D8
 		public void UnPackTo(ICycleMoveToPointsT _o)
 		{
 			_o.Type = this.Type;
@@ -314,7 +314,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602CEB2 RID: 183986 RVA: 0x0062B358 File Offset: 0x00629558
+		// Token: 0x0602F650 RID: 194128 RVA: 0x00677804 File Offset: 0x00675A04
 		public static Offset<ICycleMoveToPoints> Pack(FlatBufferBuilder builder, ICycleMoveToPointsT _o)
 		{
 			if (_o == null)
@@ -336,7 +336,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICycleMoveToPoints.CreateICycleMoveToPoints(builder, _o.Type, pointsOffset, _o.IsLoop, _o.StopTime, moveMotion_type, moveMotionOffset, _o.NullMask);
 		}
 
-		// Token: 0x04010B6C RID: 68460
+		// Token: 0x04011985 RID: 72069
 		private Table __p;
 	}
 }

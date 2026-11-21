@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CE3 RID: 23779
+	// Token: 0x02006317 RID: 25367
 	public enum EAudioFadeCurveType : byte
 	{
-		// Token: 0x0400F5DE RID: 62942
+		// Token: 0x0401032C RID: 66348
 		Log3,
-		// Token: 0x0400F5DF RID: 62943
+		// Token: 0x0401032D RID: 66349
 		Sine,
-		// Token: 0x0400F5E0 RID: 62944
+		// Token: 0x0401032E RID: 66350
 		Log1,
-		// Token: 0x0400F5E1 RID: 62945
+		// Token: 0x0401032F RID: 66351
 		InvSCurve,
-		// Token: 0x0400F5E2 RID: 62946
+		// Token: 0x04010330 RID: 66352
 		Linear,
-		// Token: 0x0400F5E3 RID: 62947
+		// Token: 0x04010331 RID: 66353
 		SCurve,
-		// Token: 0x0400F5E4 RID: 62948
+		// Token: 0x04010332 RID: 66354
 		Exp1,
-		// Token: 0x0400F5E5 RID: 62949
+		// Token: 0x04010333 RID: 66355
 		SineRecip,
-		// Token: 0x0400F5E6 RID: 62950
+		// Token: 0x04010334 RID: 66356
 		Exp3
 	}
 }

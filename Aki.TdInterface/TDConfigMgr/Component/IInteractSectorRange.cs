@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200048F RID: 1167
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004E8 RID: 1256
 	public class IInteractSectorRange
 	{
-		// Token: 0x06001776 RID: 6006 RVA: 0x00047098 File Offset: 0x00045298
+		// Token: 0x06001910 RID: 6416 RVA: 0x0004ADE0 File Offset: 0x00048FE0
 		private IInteractSectorRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001777 RID: 6007 RVA: 0x000470D0 File Offset: 0x000452D0
+		// Token: 0x06001911 RID: 6417 RVA: 0x0004AE18 File Offset: 0x00049018
 		public static IInteractSectorRange Create([Nullable(2)] IInteractSectorRange instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001778 RID: 6008 RVA: 0x000470E3 File Offset: 0x000452E3
+		// Token: 0x06001912 RID: 6418 RVA: 0x0004AE2B File Offset: 0x0004902B
 		public static IInteractSectorRange CreateFromSetValue([Nullable(2)] IInteractSectorRange_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001779 RID: 6009 RVA: 0x000470F6 File Offset: 0x000452F6
+		// Token: 0x06001913 RID: 6419 RVA: 0x0004AE3E File Offset: 0x0004903E
 		public IInteractSectorRange_SetValue ToSetValue()
 		{
 			return new IInteractSectorRange_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000643 RID: 1603
-		// (get) Token: 0x0600177A RID: 6010 RVA: 0x00047115 File Offset: 0x00045315
-		// (set) Token: 0x0600177B RID: 6011 RVA: 0x00047144 File Offset: 0x00045344
+		// Token: 0x170006AA RID: 1706
+		// (get) Token: 0x06001914 RID: 6420 RVA: 0x0004AE5D File Offset: 0x0004905D
+		// (set) Token: 0x06001915 RID: 6421 RVA: 0x0004AE8C File Offset: 0x0004908C
 		public virtual float Begin
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000644 RID: 1604
-		// (get) Token: 0x0600177C RID: 6012 RVA: 0x00047152 File Offset: 0x00045352
-		// (set) Token: 0x0600177D RID: 6013 RVA: 0x00047181 File Offset: 0x00045381
+		// Token: 0x170006AB RID: 1707
+		// (get) Token: 0x06001916 RID: 6422 RVA: 0x0004AE9A File Offset: 0x0004909A
+		// (set) Token: 0x06001917 RID: 6423 RVA: 0x0004AEC9 File Offset: 0x000490C9
 		public virtual float End
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001192 RID: 4498
+		// Token: 0x040012B4 RID: 4788
 		[Nullable(2)]
 		protected IInteractSectorRange FbInstance;
 
-		// Token: 0x04001193 RID: 4499
+		// Token: 0x040012B5 RID: 4789
 		[Nullable(2)]
 		protected IInteractSectorRange_SetValue PocoInterface;
 	}

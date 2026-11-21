@@ -6,17 +6,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x0200733D RID: 29501
+	// Token: 0x020064C0 RID: 25792
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionCheckState : AiStateMachineCondition
 	{
-		// Token: 0x06048633 RID: 296499 RVA: 0x0129ED7B File Offset: 0x0129CF7B
+		// Token: 0x0603EA80 RID: 256640 RVA: 0x01241803 File Offset: 0x0123FA03
 		public AiStateMachineConditionCheckState(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048634 RID: 296500 RVA: 0x0129ED88 File Offset: 0x0129CF88
+		// Token: 0x0603EA81 RID: 256641 RVA: 0x01241810 File Offset: 0x0123FA10
 		protected override bool RegisterEvents()
 		{
 			if (base.RegisterEvents())
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x06048635 RID: 296501 RVA: 0x0129EDE8 File Offset: 0x0129CFE8
+		// Token: 0x0603EA82 RID: 256642 RVA: 0x01241870 File Offset: 0x0123FA70
 		protected override bool UnregisterEvents()
 		{
 			if (base.UnregisterEvents())
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return false;
 		}
 
-		// Token: 0x06048636 RID: 296502 RVA: 0x0129EE45 File Offset: 0x0129D045
+		// Token: 0x0603EA83 RID: 256643 RVA: 0x012418CD File Offset: 0x0123FACD
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			if (condition.CondCheckState != null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048637 RID: 296503 RVA: 0x0129EE84 File Offset: 0x0129D084
+		// Token: 0x0603EA84 RID: 256644 RVA: 0x0124190C File Offset: 0x0123FB0C
 		[NullableContext(2)]
 		private AiStateMachineBase GetTargetNode()
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return result;
 		}
 
-		// Token: 0x06048638 RID: 296504 RVA: 0x0129EEDE File Offset: 0x0129D0DE
+		// Token: 0x0603EA85 RID: 256645 RVA: 0x01241966 File Offset: 0x0123FB66
 		protected override void OnTick()
 		{
 			if (this.TargetNode == null)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			this.ResultSelf = (targetNode != null && targetNode.Activated);
 		}
 
-		// Token: 0x06048639 RID: 296505 RVA: 0x0129EF0C File Offset: 0x0129D10C
+		// Token: 0x0603EA86 RID: 256646 RVA: 0x01241994 File Offset: 0x0123FB94
 		private void OnStateActivated(bool value)
 		{
 			this.ResultSelf = value;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x0604863A RID: 296506 RVA: 0x0129EF5C File Offset: 0x0129D15C
+		// Token: 0x0603EA87 RID: 256647 RVA: 0x012419E4 File Offset: 0x0123FBE4
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -119,14 +119,14 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x04026462 RID: 156770
+		// Token: 0x0402174F RID: 137039
 		[Nullable(2)]
 		private string TargetNodeName;
 
-		// Token: 0x04026463 RID: 156771
+		// Token: 0x04021750 RID: 137040
 		private int? TargetNodeUuid;
 
-		// Token: 0x04026464 RID: 156772
+		// Token: 0x04021751 RID: 137041
 		[Nullable(2)]
 		private AiStateMachineBase TargetNode;
 	}

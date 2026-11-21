@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x02006352 RID: 25426
+	// Token: 0x020052D0 RID: 21200
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,26 +14,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 	})]
 	public class PinballItemWeaponGridView : PinballItemGridView<PinballWeaponData>
 	{
-		// Token: 0x0603FFDA RID: 262106 RVA: 0x00F7B402 File Offset: 0x00F79602
+		// Token: 0x06034C9B RID: 216219 RVA: 0x00EC2362 File Offset: 0x00EC0562
 		public void BindReduceButtonCallback(Func<IPinballItemButtonCallback, bool> callback)
 		{
 			this.ReduceButtonCallback = callback;
 		}
 
-		// Token: 0x0603FFDB RID: 262107 RVA: 0x00F7B40B File Offset: 0x00F7960B
+		// Token: 0x06034C9C RID: 216220 RVA: 0x00EC236B File Offset: 0x00EC056B
 		public void BindFocusListenerDelegate(Action<IPinballItemToggleCallback> callback)
 		{
 			this.FocusListenerCallback = callback;
 		}
 
-		// Token: 0x0603FFDC RID: 262108 RVA: 0x00F7B414 File Offset: 0x00F79614
+		// Token: 0x06034C9D RID: 216221 RVA: 0x00EC2374 File Offset: 0x00EC0574
 		protected override void OnStart()
 		{
 			base.OnStart();
 			base.GetItemToggle().bLockStateOnSelect = true;
 		}
 
-		// Token: 0x0603FFDD RID: 262109 RVA: 0x00F7B428 File Offset: 0x00F79628
+		// Token: 0x06034C9E RID: 216222 RVA: 0x00EC2388 File Offset: 0x00EC0588
 		public override UniTask RefreshAsync(PinballWeaponData data, bool isSelected, int gridIndex)
 		{
 			PinballItemWeaponGridView.<RefreshAsync>d__6 <RefreshAsync>d__;
@@ -45,17 +45,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFDE RID: 262110 RVA: 0x00F7B473 File Offset: 0x00F79673
+		// Token: 0x06034C9F RID: 216223 RVA: 0x00EC23D3 File Offset: 0x00EC05D3
 		public override void Refresh(PinballWeaponData data, bool isSelected, int gridIndex)
 		{
 			this.RefreshAsync(data, isSelected, gridIndex).Forget();
 		}
 
-		// Token: 0x040215CE RID: 136654
+		// Token: 0x0401BEFD RID: 114429
 		[Nullable(2)]
 		protected new PinballWeaponData Data;
 
-		// Token: 0x040215CF RID: 136655
+		// Token: 0x0401BEFE RID: 114430
 		[Nullable(new byte[]
 		{
 			2,
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Func<IPinballItemButtonCallback, bool> ReduceButtonCallback;
 
-		// Token: 0x040215D0 RID: 136656
+		// Token: 0x0401BEFF RID: 114431
 		[Nullable(new byte[]
 		{
 			2,

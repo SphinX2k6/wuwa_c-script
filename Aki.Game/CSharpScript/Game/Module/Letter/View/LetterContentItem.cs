@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Letter.View
 {
-	// Token: 0x020056CD RID: 22221
+	// Token: 0x020046A4 RID: 18084
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Letter.View
 	})]
 	public class LetterContentItem : GridProxyAbstract<ITalkItem>
 	{
-		// Token: 0x06038845 RID: 231493 RVA: 0x00D6C994 File Offset: 0x00D6AB94
+		// Token: 0x0602D755 RID: 186197 RVA: 0x00CBAF4C File Offset: 0x00CB914C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038846 RID: 231494 RVA: 0x00D6C9DC File Offset: 0x00D6ABDC
+		// Token: 0x0602D756 RID: 186198 RVA: 0x00CBAF94 File Offset: 0x00CB9194
 		[NullableContext(1)]
 		public override void Refresh(ITalkItem data, bool isSelected, int gridIndex)
 		{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.ScheduleEndTimer(this.TypingDurationSec);
 		}
 
-		// Token: 0x06038847 RID: 231495 RVA: 0x00D6CBF4 File Offset: 0x00D6ADF4
+		// Token: 0x0602D757 RID: 186199 RVA: 0x00CBB1AC File Offset: 0x00CB93AC
 		public void ForceComplete()
 		{
 			if (!this.IsPlaying)
@@ -128,25 +128,25 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.FireFinished();
 		}
 
-		// Token: 0x06038848 RID: 231496 RVA: 0x00D6CC48 File Offset: 0x00D6AE48
+		// Token: 0x0602D758 RID: 186200 RVA: 0x00CBB200 File Offset: 0x00CB9400
 		public bool IsInProtectTime()
 		{
 			return DateTimeOffset.Now.ToUnixTimeMilliseconds() < this.ProtectEndMs;
 		}
 
-		// Token: 0x06038849 RID: 231497 RVA: 0x00D6CC6C File Offset: 0x00D6AE6C
+		// Token: 0x0602D759 RID: 186201 RVA: 0x00CBB224 File Offset: 0x00CB9424
 		public long GetProtectRemainingMs()
 		{
 			return Math.Max(0L, this.ProtectEndMs - DateTimeOffset.Now.ToUnixTimeMilliseconds());
 		}
 
-		// Token: 0x0603884A RID: 231498 RVA: 0x00D6CC94 File Offset: 0x00D6AE94
+		// Token: 0x0602D75A RID: 186202 RVA: 0x00CBB24C File Offset: 0x00CB944C
 		public bool IsFinished()
 		{
 			return this.HasFiredFinished;
 		}
 
-		// Token: 0x0603884B RID: 231499 RVA: 0x00D6CC9C File Offset: 0x00D6AE9C
+		// Token: 0x0602D75B RID: 186203 RVA: 0x00CBB254 File Offset: 0x00CB9454
 		[NullableContext(1)]
 		public unsafe void SetOnFinished(Action callback)
 		{
@@ -166,20 +166,20 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.OnFinishedCallback = callback;
 		}
 
-		// Token: 0x0603884C RID: 231500 RVA: 0x00D6CD25 File Offset: 0x00D6AF25
+		// Token: 0x0602D75C RID: 186204 RVA: 0x00CBB2DD File Offset: 0x00CB94DD
 		[NullableContext(1)]
 		public override object GetKey(ITalkItem data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x0603884D RID: 231501 RVA: 0x00D6CD32 File Offset: 0x00D6AF32
+		// Token: 0x0602D75D RID: 186205 RVA: 0x00CBB2EA File Offset: 0x00CB94EA
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearRuntime();
 		}
 
-		// Token: 0x0603884E RID: 231502 RVA: 0x00D6CD3C File Offset: 0x00D6AF3C
+		// Token: 0x0602D75E RID: 186206 RVA: 0x00CBB2F4 File Offset: 0x00CB94F4
 		private void OnAudioStart()
 		{
 			PlotTextAudioComponent audioComp = this.AudioComp;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.ScheduleEndTimer(Math.Max(this.TypingDurationSec, val));
 		}
 
-		// Token: 0x0603884F RID: 231503 RVA: 0x00D6CD78 File Offset: 0x00D6AF78
+		// Token: 0x0602D75F RID: 186207 RVA: 0x00CBB330 File Offset: 0x00CB9530
 		private void ScheduleEndTimer(float durationSeconds)
 		{
 			this.ClearEndTimer();
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			}, (float)num, null, null, true, 1f);
 		}
 
-		// Token: 0x06038850 RID: 231504 RVA: 0x00D6CDD8 File Offset: 0x00D6AFD8
+		// Token: 0x0602D760 RID: 186208 RVA: 0x00CBB390 File Offset: 0x00CB9590
 		private void FireFinished()
 		{
 			if (this.HasFiredFinished)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			onFinishedCallback();
 		}
 
-		// Token: 0x06038851 RID: 231505 RVA: 0x00D6CE01 File Offset: 0x00D6B001
+		// Token: 0x0602D761 RID: 186209 RVA: 0x00CBB3B9 File Offset: 0x00CB95B9
 		private void ClearEndTimer()
 		{
 			if (this.EndTimer != null)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			}
 		}
 
-		// Token: 0x06038852 RID: 231506 RVA: 0x00D6CE23 File Offset: 0x00D6B023
+		// Token: 0x0602D762 RID: 186210 RVA: 0x00CBB3DB File Offset: 0x00CB95DB
 		private void ClearRuntime()
 		{
 			this.ClearEndTimer();
@@ -251,38 +251,38 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.AudioComp = null;
 		}
 
-		// Token: 0x0401DB00 RID: 121600
+		// Token: 0x04018596 RID: 99734
 		private PlotTextWriterComponent WriterComp;
 
-		// Token: 0x0401DB01 RID: 121601
+		// Token: 0x04018597 RID: 99735
 		private PlotTextAudioComponent AudioComp;
 
-		// Token: 0x0401DB02 RID: 121602
+		// Token: 0x04018598 RID: 99736
 		private TimerHandle EndTimer;
 
-		// Token: 0x0401DB03 RID: 121603
+		// Token: 0x04018599 RID: 99737
 		private long ProtectEndMs;
 
-		// Token: 0x0401DB04 RID: 121604
+		// Token: 0x0401859A RID: 99738
 		private float TypingDurationSec;
 
-		// Token: 0x0401DB05 RID: 121605
+		// Token: 0x0401859B RID: 99739
 		private int BoundTalkId = -1;
 
-		// Token: 0x0401DB06 RID: 121606
+		// Token: 0x0401859C RID: 99740
 		private bool IsPlaying;
 
-		// Token: 0x0401DB07 RID: 121607
+		// Token: 0x0401859D RID: 99741
 		private bool HasFiredFinished;
 
-		// Token: 0x0401DB08 RID: 121608
+		// Token: 0x0401859E RID: 99742
 		private Action OnFinishedCallback;
 
-		// Token: 0x0200B8A6 RID: 47270
+		// Token: 0x0200A2CD RID: 41677
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04037E00 RID: 228864
+			// Token: 0x0403281A RID: 206874
 			public const int TxtLetterContent = 0;
 		}
 	}

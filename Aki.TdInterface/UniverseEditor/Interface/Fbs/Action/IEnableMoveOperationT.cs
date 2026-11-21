@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006676 RID: 26230
+	// Token: 0x02006CEA RID: 27882
 	public class IEnableMoveOperationT
 	{
-		// Token: 0x1700C2DA RID: 49882
-		// (get) Token: 0x0602D923 RID: 186659 RVA: 0x0063D1EA File Offset: 0x0063B3EA
-		// (set) Token: 0x0602D924 RID: 186660 RVA: 0x0063D1F2 File Offset: 0x0063B3F2
+		// Token: 0x1700CC7D RID: 52349
+		// (get) Token: 0x0603010C RID: 196876 RVA: 0x00689F86 File Offset: 0x00688186
+		// (set) Token: 0x0603010D RID: 196877 RVA: 0x00689F8E File Offset: 0x0068818E
 		public EMoveOperationType Type { get; set; }
 
-		// Token: 0x0602D925 RID: 186661 RVA: 0x0063D1FB File Offset: 0x0063B3FB
+		// Token: 0x0603010E RID: 196878 RVA: 0x00689F97 File Offset: 0x00688197
 		public IEnableMoveOperationT()
 		{
 			this.Type = EMoveOperationType.Enable;

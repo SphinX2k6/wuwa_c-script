@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020010A4 RID: 4260
+// Token: 0x02000558 RID: 1368
 public enum EActivityViewState
 {
-	// Token: 0x0400338E RID: 13198
+	// Token: 0x04003427 RID: 13351
 	Side,
-	// Token: 0x0400338F RID: 13199
+	// Token: 0x04003428 RID: 13352
 	Global
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EE4 RID: 3812
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FFA RID: 4090
 	public class ICheckActivityStateCondition : IQuestCondition
 	{
-		// Token: 0x06005414 RID: 21524 RVA: 0x000CE880 File Offset: 0x000CCA80
+		// Token: 0x06005990 RID: 22928 RVA: 0x000DAA28 File Offset: 0x000D8C28
 		private ICheckActivityStateCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005415 RID: 21525 RVA: 0x000CE8B8 File Offset: 0x000CCAB8
+		// Token: 0x06005991 RID: 22929 RVA: 0x000DAA60 File Offset: 0x000D8C60
 		public static ICheckActivityStateCondition Create([Nullable(2)] ICheckActivityStateCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005416 RID: 21526 RVA: 0x000CE8CB File Offset: 0x000CCACB
+		// Token: 0x06005992 RID: 22930 RVA: 0x000DAA73 File Offset: 0x000D8C73
 		public static ICheckActivityStateCondition CreateFromSetValue([Nullable(2)] ICheckActivityStateCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005417 RID: 21527 RVA: 0x000CE8E0 File Offset: 0x000CCAE0
+		// Token: 0x06005993 RID: 22931 RVA: 0x000DAA88 File Offset: 0x000D8C88
 		public new ICheckActivityStateCondition_SetValue ToSetValue()
 		{
 			return new ICheckActivityStateCondition_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C35 RID: 7221
-		// (get) Token: 0x06005418 RID: 21528 RVA: 0x000CE92E File Offset: 0x000CCB2E
-		// (set) Token: 0x06005419 RID: 21529 RVA: 0x000CE959 File Offset: 0x000CCB59
+		// Token: 0x17001DCD RID: 7629
+		// (get) Token: 0x06005994 RID: 22932 RVA: 0x000DAAD6 File Offset: 0x000D8CD6
+		// (set) Token: 0x06005995 RID: 22933 RVA: 0x000DAB01 File Offset: 0x000D8D01
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C36 RID: 7222
-		// (get) Token: 0x0600541A RID: 21530 RVA: 0x000CE968 File Offset: 0x000CCB68
-		// (set) Token: 0x0600541B RID: 21531 RVA: 0x000CE9C9 File Offset: 0x000CCBC9
+		// Token: 0x17001DCE RID: 7630
+		// (get) Token: 0x06005996 RID: 22934 RVA: 0x000DAB10 File Offset: 0x000D8D10
+		// (set) Token: 0x06005997 RID: 22935 RVA: 0x000DAB71 File Offset: 0x000D8D71
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C37 RID: 7223
-		// (get) Token: 0x0600541C RID: 21532 RVA: 0x000CE9DE File Offset: 0x000CCBDE
-		// (set) Token: 0x0600541D RID: 21533 RVA: 0x000CEA09 File Offset: 0x000CCC09
+		// Token: 0x17001DCF RID: 7631
+		// (get) Token: 0x06005998 RID: 22936 RVA: 0x000DAB86 File Offset: 0x000D8D86
+		// (set) Token: 0x06005999 RID: 22937 RVA: 0x000DABB1 File Offset: 0x000D8DB1
 		public virtual int ActivityId
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C38 RID: 7224
-		// (get) Token: 0x0600541E RID: 21534 RVA: 0x000CEA17 File Offset: 0x000CCC17
-		// (set) Token: 0x0600541F RID: 21535 RVA: 0x000CEA42 File Offset: 0x000CCC42
+		// Token: 0x17001DD0 RID: 7632
+		// (get) Token: 0x0600599A RID: 22938 RVA: 0x000DABBF File Offset: 0x000D8DBF
+		// (set) Token: 0x0600599B RID: 22939 RVA: 0x000DABEA File Offset: 0x000D8DEA
 		public virtual ECompare Compare
 		{
 			get
@@ -166,9 +164,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C39 RID: 7225
-		// (get) Token: 0x06005420 RID: 21536 RVA: 0x000CEA50 File Offset: 0x000CCC50
-		// (set) Token: 0x06005421 RID: 21537 RVA: 0x000CEA7B File Offset: 0x000CCC7B
+		// Token: 0x17001DD1 RID: 7633
+		// (get) Token: 0x0600599C RID: 22940 RVA: 0x000DABF8 File Offset: 0x000D8DF8
+		// (set) Token: 0x0600599D RID: 22941 RVA: 0x000DAC23 File Offset: 0x000D8E23
 		public virtual EActivityState ActivityState
 		{
 			get
@@ -189,18 +187,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032EC RID: 13036
+		// Token: 0x040035F9 RID: 13817
 		[Nullable(2)]
 		protected new ICheckActivityStateCondition FbInstance;
 
-		// Token: 0x040032ED RID: 13037
+		// Token: 0x040035FA RID: 13818
 		[Nullable(2)]
 		protected new ICheckActivityStateCondition_SetValue PocoInterface;
 
-		// Token: 0x040032EE RID: 13038
+		// Token: 0x040035FB RID: 13819
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040032EF RID: 13039
+		// Token: 0x040035FC RID: 13820
 		private bool _PreConditionsInited;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CA0 RID: 23712
+	// Token: 0x020062D1 RID: 25297
 	public class TSceneItemSeqEventCbTypeUnion
 	{
-		// Token: 0x1700B248 RID: 45640
-		// (get) Token: 0x060289AB RID: 166315 RVA: 0x00594B8E File Offset: 0x00592D8E
-		// (set) Token: 0x060289AC RID: 166316 RVA: 0x00594B96 File Offset: 0x00592D96
+		// Token: 0x1700BBA2 RID: 48034
+		// (get) Token: 0x0602AFF3 RID: 176115 RVA: 0x005DD304 File Offset: 0x005DB504
+		// (set) Token: 0x0602AFF4 RID: 176116 RVA: 0x005DD30C File Offset: 0x005DB50C
 		public TSceneItemSeqEventCbType Type { get; set; }
 
-		// Token: 0x1700B249 RID: 45641
-		// (get) Token: 0x060289AD RID: 166317 RVA: 0x00594B9F File Offset: 0x00592D9F
-		// (set) Token: 0x060289AE RID: 166318 RVA: 0x00594BA7 File Offset: 0x00592DA7
+		// Token: 0x1700BBA3 RID: 48035
+		// (get) Token: 0x0602AFF5 RID: 176117 RVA: 0x005DD315 File Offset: 0x005DB515
+		// (set) Token: 0x0602AFF6 RID: 176118 RVA: 0x005DD31D File Offset: 0x005DB51D
 		public object Value { get; set; }
 
-		// Token: 0x060289AF RID: 166319 RVA: 0x00594BB0 File Offset: 0x00592DB0
+		// Token: 0x0602AFF7 RID: 176119 RVA: 0x005DD326 File Offset: 0x005DB526
 		public TSceneItemSeqEventCbTypeUnion()
 		{
 			this.Type = TSceneItemSeqEventCbType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060289B0 RID: 166320 RVA: 0x00594BC6 File Offset: 0x00592DC6
+		// Token: 0x0602AFF8 RID: 176120 RVA: 0x005DD33C File Offset: 0x005DB53C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060289B1 RID: 166321 RVA: 0x00594BD8 File Offset: 0x00592DD8
+		// Token: 0x0602AFF9 RID: 176121 RVA: 0x005DD34E File Offset: 0x005DB54E
 		public IAnEventT AsIAnEvent()
 		{
 			return this.As<IAnEventT>();
 		}
 
-		// Token: 0x060289B2 RID: 166322 RVA: 0x00594BE0 File Offset: 0x00592DE0
+		// Token: 0x0602AFFA RID: 176122 RVA: 0x005DD356 File Offset: 0x005DB556
 		public static TSceneItemSeqEventCbTypeUnion FromIAnEvent(IAnEventT _ianevent)
 		{
 			return new TSceneItemSeqEventCbTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289B3 RID: 166323 RVA: 0x00594BF5 File Offset: 0x00592DF5
+		// Token: 0x0602AFFB RID: 176123 RVA: 0x005DD36B File Offset: 0x005DB56B
 		public IAnsEventT AsIAnsEvent()
 		{
 			return this.As<IAnsEventT>();
 		}
 
-		// Token: 0x060289B4 RID: 166324 RVA: 0x00594BFD File Offset: 0x00592DFD
+		// Token: 0x0602AFFC RID: 176124 RVA: 0x005DD373 File Offset: 0x005DB573
 		public static TSceneItemSeqEventCbTypeUnion FromIAnsEvent(IAnsEventT _iansevent)
 		{
 			return new TSceneItemSeqEventCbTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289B5 RID: 166325 RVA: 0x00594C14 File Offset: 0x00592E14
+		// Token: 0x0602AFFD RID: 176125 RVA: 0x005DD388 File Offset: 0x005DB588
 		public static int Pack(FlatBufferBuilder builder, TSceneItemSeqEventCbTypeUnion _o)
 		{
 			TSceneItemSeqEventCbType type = _o.Type;

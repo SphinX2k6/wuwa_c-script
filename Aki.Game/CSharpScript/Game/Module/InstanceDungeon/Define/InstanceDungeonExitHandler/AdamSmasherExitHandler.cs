@@ -5,23 +5,23 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058E5 RID: 22757
+	// Token: 0x020048BD RID: 18621
 	public class AdamSmasherExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039CFA RID: 236794 RVA: 0x00DBB613 File Offset: 0x00DB9813
+		// Token: 0x0602EC1D RID: 191517 RVA: 0x00D0A56B File Offset: 0x00D0876B
 		public override bool Checker()
 		{
 			return AdamSmasherController.Instance.IsInAdamSmasherDungeon();
 		}
 
-		// Token: 0x06039CFB RID: 236795 RVA: 0x00DBB620 File Offset: 0x00DB9820
+		// Token: 0x0602EC1E RID: 191518 RVA: 0x00D0A578 File Offset: 0x00D08778
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CyberPunkExitChallengeViewConfirm);
 			confirmBoxDataNew.FunctionMap[2] = delegate()
 			{
-				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().Forget<bool>();
+				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).Forget<bool>();
 			};
 			confirmBoxDataNew.FunctionMap[1] = delegate()
 			{

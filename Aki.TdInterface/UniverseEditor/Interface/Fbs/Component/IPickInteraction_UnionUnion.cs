@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200573D RID: 22333
+	// Token: 0x02005D44 RID: 23876
 	public class IPickInteraction_UnionUnion
 	{
-		// Token: 0x1700A67D RID: 42621
-		// (get) Token: 0x06025653 RID: 153171 RVA: 0x00528F92 File Offset: 0x00527192
-		// (set) Token: 0x06025654 RID: 153172 RVA: 0x00528F9A File Offset: 0x0052719A
+		// Token: 0x1700AFA1 RID: 44961
+		// (get) Token: 0x06027B73 RID: 162675 RVA: 0x0056F11E File Offset: 0x0056D31E
+		// (set) Token: 0x06027B74 RID: 162676 RVA: 0x0056F126 File Offset: 0x0056D326
 		public IPickInteraction_Union Type { get; set; }
 
-		// Token: 0x1700A67E RID: 42622
-		// (get) Token: 0x06025655 RID: 153173 RVA: 0x00528FA3 File Offset: 0x005271A3
-		// (set) Token: 0x06025656 RID: 153174 RVA: 0x00528FAB File Offset: 0x005271AB
+		// Token: 0x1700AFA2 RID: 44962
+		// (get) Token: 0x06027B75 RID: 162677 RVA: 0x0056F12F File Offset: 0x0056D32F
+		// (set) Token: 0x06027B76 RID: 162678 RVA: 0x0056F137 File Offset: 0x0056D337
 		public object Value { get; set; }
 
-		// Token: 0x06025657 RID: 153175 RVA: 0x00528FB4 File Offset: 0x005271B4
+		// Token: 0x06027B77 RID: 162679 RVA: 0x0056F140 File Offset: 0x0056D340
 		public IPickInteraction_UnionUnion()
 		{
 			this.Type = IPickInteraction_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025658 RID: 153176 RVA: 0x00528FCA File Offset: 0x005271CA
+		// Token: 0x06027B78 RID: 162680 RVA: 0x0056F156 File Offset: 0x0056D356
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06025659 RID: 153177 RVA: 0x00528FDC File Offset: 0x005271DC
+		// Token: 0x06027B79 RID: 162681 RVA: 0x0056F168 File Offset: 0x0056D368
 		public IPickInteractionT AsIPickInteraction()
 		{
 			return this.As<IPickInteractionT>();
 		}
 
-		// Token: 0x0602565A RID: 153178 RVA: 0x00528FE4 File Offset: 0x005271E4
+		// Token: 0x06027B7A RID: 162682 RVA: 0x0056F170 File Offset: 0x0056D370
 		public static IPickInteraction_UnionUnion FromIPickInteraction(IPickInteractionT _ipickinteraction)
 		{
 			return new IPickInteraction_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602565B RID: 153179 RVA: 0x00528FF9 File Offset: 0x005271F9
+		// Token: 0x06027B7B RID: 162683 RVA: 0x0056F185 File Offset: 0x0056D385
 		public IChessmanPickInteractionT AsIChessmanPickInteraction()
 		{
 			return this.As<IChessmanPickInteractionT>();
 		}
 
-		// Token: 0x0602565C RID: 153180 RVA: 0x00529001 File Offset: 0x00527201
+		// Token: 0x06027B7C RID: 162684 RVA: 0x0056F18D File Offset: 0x0056D38D
 		public static IPickInteraction_UnionUnion FromIChessmanPickInteraction(IChessmanPickInteractionT _ichessmanpickinteraction)
 		{
 			return new IPickInteraction_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602565D RID: 153181 RVA: 0x00529018 File Offset: 0x00527218
+		// Token: 0x06027B7D RID: 162685 RVA: 0x0056F1A4 File Offset: 0x0056D3A4
 		public static int Pack(FlatBufferBuilder builder, IPickInteraction_UnionUnion _o)
 		{
 			IPickInteraction_Union type = _o.Type;

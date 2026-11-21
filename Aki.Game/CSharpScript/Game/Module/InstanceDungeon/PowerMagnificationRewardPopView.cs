@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005889 RID: 22665
+	// Token: 0x02004861 RID: 18529
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PowerMagnificationRewardPopView : UiViewBase
 	{
-		// Token: 0x06039ADD RID: 236253 RVA: 0x00DB5724 File Offset: 0x00DB3924
+		// Token: 0x0602EA00 RID: 190976 RVA: 0x00D0463C File Offset: 0x00D0283C
 		[NullableContext(1)]
 		public PowerMagnificationRewardPopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039ADE RID: 236254 RVA: 0x00DB5730 File Offset: 0x00DB3930
+		// Token: 0x0602EA01 RID: 190977 RVA: 0x00D04648 File Offset: 0x00D02848
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039ADF RID: 236255 RVA: 0x00DB587C File Offset: 0x00DB3A7C
+		// Token: 0x0602EA02 RID: 190978 RVA: 0x00D04794 File Offset: 0x00D02994
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PowerMagnificationRewardPopView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -63,19 +63,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039AE0 RID: 236256 RVA: 0x00DB58BF File Offset: 0x00DB3ABF
+		// Token: 0x0602EA03 RID: 190979 RVA: 0x00D047D7 File Offset: 0x00D029D7
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnPowerChanged, new Action(this.OnPowerChange));
 		}
 
-		// Token: 0x06039AE1 RID: 236257 RVA: 0x00DB58DD File Offset: 0x00DB3ADD
+		// Token: 0x0602EA04 RID: 190980 RVA: 0x00D047F5 File Offset: 0x00D029F5
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPowerChanged, new Action(this.OnPowerChange));
 		}
 
-		// Token: 0x06039AE2 RID: 236258 RVA: 0x00DB58FC File Offset: 0x00DB3AFC
+		// Token: 0x0602EA05 RID: 190981 RVA: 0x00D04814 File Offset: 0x00D02A14
 		protected override void OnBeforeShow()
 		{
 			PowerCurrencyItem overPowerCurrencyItem = this.OverPowerCurrencyItem;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			});
 		}
 
-		// Token: 0x06039AE3 RID: 236259 RVA: 0x00DB59BA File Offset: 0x00DB3BBA
+		// Token: 0x0602EA06 RID: 190982 RVA: 0x00D048D2 File Offset: 0x00D02AD2
 		private void OnPowerChange()
 		{
 			PowerRewardButtonItem singleButtonItem = this.SingleButtonItem;
@@ -146,13 +146,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			doubleButtonItem.RefreshPowerState();
 		}
 
-		// Token: 0x06039AE4 RID: 236260 RVA: 0x00DB59DD File Offset: 0x00DB3BDD
+		// Token: 0x0602EA07 RID: 190983 RVA: 0x00D048F5 File Offset: 0x00D02AF5
 		private void OnHelpButtonClick()
 		{
 			HelpController.Instance.OpenHelpById(128);
 		}
 
-		// Token: 0x06039AE5 RID: 236261 RVA: 0x00DB59F0 File Offset: 0x00DB3BF0
+		// Token: 0x0602EA08 RID: 190984 RVA: 0x00D04908 File Offset: 0x00D02B08
 		private UniTask InitCurrency()
 		{
 			PowerMagnificationRewardPopView.<InitCurrency>d__15 <InitCurrency>d__;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return <InitCurrency>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039AE6 RID: 236262 RVA: 0x00DB5A34 File Offset: 0x00DB3C34
+		// Token: 0x0602EA09 RID: 190985 RVA: 0x00D0494C File Offset: 0x00D02B4C
 		private bool RewardByCount(int count)
 		{
 			if (this.Data == null)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x06039AE7 RID: 236263 RVA: 0x00DB5ABC File Offset: 0x00DB3CBC
+		// Token: 0x0602EA0A RID: 190986 RVA: 0x00D049D4 File Offset: 0x00D02BD4
 		protected override void OnBeforeDestroy()
 		{
 			PowerMagnificationRewardPopViewData data = this.Data;
@@ -204,47 +204,47 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			closeCallBack();
 		}
 
-		// Token: 0x0401E233 RID: 123443
+		// Token: 0x04018CD0 RID: 101584
 		private PowerMagnificationRewardPopViewData Data;
 
-		// Token: 0x0401E234 RID: 123444
+		// Token: 0x04018CD1 RID: 101585
 		private PowerCurrencyItem PowerCurrencyItem;
 
-		// Token: 0x0401E235 RID: 123445
+		// Token: 0x04018CD2 RID: 101586
 		private PowerCurrencyItem OverPowerCurrencyItem;
 
-		// Token: 0x0401E236 RID: 123446
+		// Token: 0x04018CD3 RID: 101587
 		private PowerRewardButtonItem SingleButtonItem;
 
-		// Token: 0x0401E237 RID: 123447
+		// Token: 0x04018CD4 RID: 101588
 		private PowerRewardButtonItem DoubleButtonItem;
 
-		// Token: 0x0401E238 RID: 123448
+		// Token: 0x04018CD5 RID: 101589
 		private const int POWER_MAGIFICATION_REWARD_HELPID = 128;
 
-		// Token: 0x0200BAE5 RID: 47845
+		// Token: 0x0200A4FE RID: 42238
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04038793 RID: 231315
+			// Token: 0x04033194 RID: 209300
 			public const int TitleText = 0;
 
-			// Token: 0x04038794 RID: 231316
+			// Token: 0x04033195 RID: 209301
 			public const int ContentText = 1;
 
-			// Token: 0x04038795 RID: 231317
+			// Token: 0x04033196 RID: 209302
 			public const int LeftButtonItem = 2;
 
-			// Token: 0x04038796 RID: 231318
+			// Token: 0x04033197 RID: 209303
 			public const int RightButtonItem = 3;
 
-			// Token: 0x04038797 RID: 231319
+			// Token: 0x04033198 RID: 209304
 			public const int HelpButton = 4;
 
-			// Token: 0x04038798 RID: 231320
+			// Token: 0x04033199 RID: 209305
 			public const int DoubleCountItem = 5;
 
-			// Token: 0x04038799 RID: 231321
+			// Token: 0x0403319A RID: 209306
 			public const int DoubleCountText = 6;
 		}
 	}

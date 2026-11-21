@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000703 RID: 1795
+	// Token: 0x020000EE RID: 238
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.AssetBundleData")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FAssetBundleData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06006132 RID: 24882 RVA: 0x0008B5F2 File Offset: 0x000897F2
+		// Token: 0x0600109E RID: 4254 RVA: 0x0001A732 File Offset: 0x00018932
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAssetBundleData._ScriptStructPtr != 0) ? FAssetBundleData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.AssetBundleData", ref FAssetBundleData._ScriptStructPtr);
 		}
 
-		// Token: 0x1700176D RID: 5997
-		// (get) Token: 0x06006133 RID: 24883 RVA: 0x0008B618 File Offset: 0x00089818
-		// (set) Token: 0x06006134 RID: 24884 RVA: 0x0008B65B File Offset: 0x0008985B
+		// Token: 0x1700019E RID: 414
+		// (get) Token: 0x0600109F RID: 4255 RVA: 0x0001A758 File Offset: 0x00018958
+		// (set) Token: 0x060010A0 RID: 4256 RVA: 0x0001A79B File Offset: 0x0001899B
 		public TArray<FAssetBundleEntry> Bundles
 		{
 			get
@@ -39,56 +39,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006135 RID: 24885 RVA: 0x0008B669 File Offset: 0x00089869
+		// Token: 0x060010A1 RID: 4257 RVA: 0x0001A7A9 File Offset: 0x000189A9
 		public FAssetBundleData()
 		{
 		}
 
-		// Token: 0x06006136 RID: 24886 RVA: 0x0008B671 File Offset: 0x00089871
-		public FAssetBundleData(TArray<FAssetBundleEntry> Bundles)
-		{
-			this.Bundles = Bundles;
-		}
-
-		// Token: 0x06006137 RID: 24887 RVA: 0x0008B680 File Offset: 0x00089880
+		// Token: 0x060010A2 RID: 4258 RVA: 0x0001A7B1 File Offset: 0x000189B1
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAssetBundleData.StaticStruct();
 		}
 
-		// Token: 0x06006138 RID: 24888 RVA: 0x0008B68C File Offset: 0x0008988C
+		// Token: 0x060010A3 RID: 4259 RVA: 0x0001A7BD File Offset: 0x000189BD
 		[NullableContext(2)]
 		public FAssetBundleData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06006139 RID: 24889 RVA: 0x0008B696 File Offset: 0x00089896
+		// Token: 0x060010A4 RID: 4260 RVA: 0x0001A7C7 File Offset: 0x000189C7
 		public FAssetBundleData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600613A RID: 24890 RVA: 0x0008B6A1 File Offset: 0x000898A1
+		// Token: 0x060010A5 RID: 4261 RVA: 0x0001A7D2 File Offset: 0x000189D2
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAssetBundleData(Pointer, false, true);
 		}
 
-		// Token: 0x0600613B RID: 24891 RVA: 0x0008B6AB File Offset: 0x000898AB
+		// Token: 0x060010A6 RID: 4262 RVA: 0x0001A7DC File Offset: 0x000189DC
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAssetBundleData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04002D76 RID: 11638
+		// Token: 0x04000405 RID: 1029
 		public const string __ObjectPath = "/Script/CoreUObject.AssetBundleData";
 
-		// Token: 0x04002D77 RID: 11639
+		// Token: 0x04000406 RID: 1030
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04002D78 RID: 11640
+		// Token: 0x04000407 RID: 1031
 		internal static int __PropertyOffset_Bundles;
 
-		// Token: 0x04002D79 RID: 11641
+		// Token: 0x04000408 RID: 1032
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02003010 RID: 12304
+// Token: 0x02002566 RID: 9574
 public enum EStopMethod
 {
-	// Token: 0x0400C585 RID: 50565
+	// Token: 0x0400C952 RID: 51538
 	BlendOut,
-	// Token: 0x0400C586 RID: 50566
+	// Token: 0x0400C953 RID: 51539
 	WaitNextEndSection,
-	// Token: 0x0400C587 RID: 50567
+	// Token: 0x0400C954 RID: 51540
 	JumpToEndSection,
-	// Token: 0x0400C588 RID: 50568
+	// Token: 0x0400C955 RID: 51541
 	FastOut,
-	// Token: 0x0400C589 RID: 50569
+	// Token: 0x0400C956 RID: 51542
 	WaitLoopToEnd,
-	// Token: 0x0400C58A RID: 50570
+	// Token: 0x0400C957 RID: 51543
 	BlendToEndSection
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003239 RID: 12857
+// Token: 0x020027A8 RID: 10152
 public static class AbnormalBuffIds
 {
-	// Token: 0x0400DA90 RID: 55952
+	// Token: 0x0400DF2F RID: 57135
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly long[] abnormalBuffIds = new long[]

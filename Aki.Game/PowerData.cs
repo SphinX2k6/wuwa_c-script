@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020025F2 RID: 9714
+// Token: 0x02001ADD RID: 6877
 [NullableContext(1)]
 [Nullable(0)]
 public class PowerData
 {
-	// Token: 0x06013C40 RID: 80960 RVA: 0x004F4B5C File Offset: 0x004F2D5C
+	// Token: 0x06011122 RID: 69922 RVA: 0x005038E8 File Offset: 0x00501AE8
 	public void Phrase(int itemId, int power, double lastUpdateTime)
 	{
 		this.ItemId = itemId;
@@ -17,7 +17,7 @@ public class PowerData
 		this.NextRecoverTime = lastUpdateTime + (double)this.GetPowerIncreaseTimeSpan();
 	}
 
-	// Token: 0x06013C41 RID: 80961 RVA: 0x004F4BA2 File Offset: 0x004F2DA2
+	// Token: 0x06011123 RID: 69923 RVA: 0x0050392E File Offset: 0x00501B2E
 	public void CheckPowerUpdate()
 	{
 		if (this.NeedUpdateFlag && this.GetIfCanRequestNewPower())
@@ -26,14 +26,14 @@ public class PowerData
 		}
 	}
 
-	// Token: 0x06013C42 RID: 80962 RVA: 0x004F4BBC File Offset: 0x004F2DBC
+	// Token: 0x06011124 RID: 69924 RVA: 0x00503948 File Offset: 0x00501B48
 	protected virtual bool GetIfCanRequestNewPower()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
 		return this.NextRecoverTime > 0.0 && serverTime >= this.NextRecoverTime && PowerController.Instance.GetIfCanRequestNewPower() && serverTime - this.CurrentRequestNewPowerTime > 1.0;
 	}
 
-	// Token: 0x06013C43 RID: 80963 RVA: 0x004F4C0F File Offset: 0x004F2E0F
+	// Token: 0x06011125 RID: 69925 RVA: 0x0050399B File Offset: 0x00501B9B
 	protected void RequestNewPowerDataAndCacheRequestTime()
 	{
 		PowerController.Instance.SendUpdatePowerRequest(new int[]
@@ -43,13 +43,13 @@ public class PowerData
 		this.CurrentRequestNewPowerTime = TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x06013C44 RID: 80964 RVA: 0x004F4C3A File Offset: 0x004F2E3A
+	// Token: 0x06011126 RID: 69926 RVA: 0x005039C6 File Offset: 0x00501BC6
 	protected void OnCheckPowerUpdate()
 	{
 		this.RequestNewPowerDataAndCacheRequestTime();
 	}
 
-	// Token: 0x06013C45 RID: 80965 RVA: 0x004F4C42 File Offset: 0x004F2E42
+	// Token: 0x06011127 RID: 69927 RVA: 0x005039CE File Offset: 0x00501BCE
 	public virtual EPowerRecoveryMode GetPowerRecoveryMode()
 	{
 		if (!this.NeedUpdateFlag)
@@ -59,7 +59,7 @@ public class PowerData
 		return EPowerRecoveryMode.Update;
 	}
 
-	// Token: 0x06013C46 RID: 80966 RVA: 0x004F4C4F File Offset: 0x004F2E4F
+	// Token: 0x06011128 RID: 69928 RVA: 0x005039DB File Offset: 0x00501BDB
 	private void ChangePower(int power)
 	{
 		this.CurrentPower = power;
@@ -68,55 +68,55 @@ public class PowerData
 		EventSystem.Instance.Emit<int>(EEventName.OnPowerChangedWithId, this.ItemId);
 	}
 
-	// Token: 0x06013C47 RID: 80967 RVA: 0x004F4C8D File Offset: 0x004F2E8D
+	// Token: 0x06011129 RID: 69929 RVA: 0x00503A19 File Offset: 0x00501C19
 	public int GetCurrentPower()
 	{
 		return this.CurrentPower;
 	}
 
-	// Token: 0x06013C48 RID: 80968 RVA: 0x004F4C95 File Offset: 0x004F2E95
+	// Token: 0x0601112A RID: 69930 RVA: 0x00503A21 File Offset: 0x00501C21
 	public bool CheckPowerIfMax()
 	{
 		return this.CurrentPower >= this.GetPowerLimit();
 	}
 
-	// Token: 0x06013C49 RID: 80969 RVA: 0x004F4CA8 File Offset: 0x004F2EA8
+	// Token: 0x0601112B RID: 69931 RVA: 0x00503A34 File Offset: 0x00501C34
 	public double GetResetTime()
 	{
 		return this.ResetTime;
 	}
 
-	// Token: 0x06013C4A RID: 80970 RVA: 0x004F4CB0 File Offset: 0x004F2EB0
+	// Token: 0x0601112C RID: 69932 RVA: 0x00503A3C File Offset: 0x00501C3C
 	public bool GetNeedUpdateFlag()
 	{
 		return this.NeedUpdateFlag;
 	}
 
-	// Token: 0x06013C4B RID: 80971 RVA: 0x004F4CB8 File Offset: 0x004F2EB8
+	// Token: 0x0601112D RID: 69933 RVA: 0x00503A44 File Offset: 0x00501C44
 	public virtual string GetPowerCurrencyShowTextId()
 	{
 		return "Text_ItemShow_Text";
 	}
 
-	// Token: 0x06013C4C RID: 80972 RVA: 0x004F4CBF File Offset: 0x004F2EBF
+	// Token: 0x0601112E RID: 69934 RVA: 0x00503A4B File Offset: 0x00501C4B
 	public virtual bool IfNeedShowMax()
 	{
 		return false;
 	}
 
-	// Token: 0x06013C4D RID: 80973 RVA: 0x004F4CC2 File Offset: 0x004F2EC2
+	// Token: 0x0601112F RID: 69935 RVA: 0x00503A4E File Offset: 0x00501C4E
 	public virtual int GetPowerLimit()
 	{
 		return PowerConfig.Instance.GetPowerNaturalLimit();
 	}
 
-	// Token: 0x06013C4E RID: 80974 RVA: 0x004F4CCE File Offset: 0x004F2ECE
+	// Token: 0x06011130 RID: 69936 RVA: 0x00503A5A File Offset: 0x00501C5A
 	public virtual int GetPowerIncreaseTimeSpan()
 	{
 		return PowerConfig.Instance.GetPowerIncreaseSpan();
 	}
 
-	// Token: 0x06013C4F RID: 80975 RVA: 0x004F4CDC File Offset: 0x004F2EDC
+	// Token: 0x06011131 RID: 69937 RVA: 0x00503A68 File Offset: 0x00501C68
 	public string GetNextTimerRecoverText()
 	{
 		double num = this.NextRecoverTime - TimeUtil.Instance.GetServerTime();
@@ -128,7 +128,7 @@ public class PowerData
 		return num4.ToString().PadLeft(2, '0') + ":" + ((int)num3).ToString().PadLeft(2, '0');
 	}
 
-	// Token: 0x06013C50 RID: 80976 RVA: 0x004F4D68 File Offset: 0x004F2F68
+	// Token: 0x06011132 RID: 69938 RVA: 0x00503AF4 File Offset: 0x00501CF4
 	public string GetFullRecoverText()
 	{
 		double num = this.FinishUpdateTime - TimeUtil.Instance.GetServerTime();
@@ -148,30 +148,30 @@ public class PowerData
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x040094E7 RID: 38119
+	// Token: 0x0400963E RID: 38462
 	protected int ItemId;
 
-	// Token: 0x040094E8 RID: 38120
+	// Token: 0x0400963F RID: 38463
 	protected int CurrentPower;
 
-	// Token: 0x040094E9 RID: 38121
+	// Token: 0x04009640 RID: 38464
 	protected double FinishUpdateTime;
 
-	// Token: 0x040094EA RID: 38122
+	// Token: 0x04009641 RID: 38465
 	protected bool NeedUpdateFlag;
 
-	// Token: 0x040094EB RID: 38123
+	// Token: 0x04009642 RID: 38466
 	protected int CurrentRecoverMode;
 
-	// Token: 0x040094EC RID: 38124
+	// Token: 0x04009643 RID: 38467
 	protected double NextRecoverTime;
 
-	// Token: 0x040094ED RID: 38125
+	// Token: 0x04009644 RID: 38468
 	protected double ResetTime;
 
-	// Token: 0x040094EE RID: 38126
+	// Token: 0x04009645 RID: 38469
 	protected double CurrentRequestNewPowerTime;
 
-	// Token: 0x040094EF RID: 38127
+	// Token: 0x04009646 RID: 38470
 	protected int LastTickCountDown = -1;
 }

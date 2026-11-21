@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E25 RID: 15909
+	// Token: 0x02004260 RID: 16992
 	public class IFastReturnPosBaseT
 	{
-		// Token: 0x17006E04 RID: 28164
-		// (get) Token: 0x060164B9 RID: 91321 RVA: 0x00338252 File Offset: 0x00336452
-		// (set) Token: 0x060164BA RID: 91322 RVA: 0x0033825A File Offset: 0x0033645A
+		// Token: 0x170073EA RID: 29674
+		// (get) Token: 0x06017AE6 RID: 96998 RVA: 0x00360E4A File Offset: 0x0035F04A
+		// (set) Token: 0x06017AE7 RID: 96999 RVA: 0x00360E52 File Offset: 0x0035F052
 		public EFastReturnPosType Type { get; set; }
 
-		// Token: 0x060164BB RID: 91323 RVA: 0x00338263 File Offset: 0x00336463
+		// Token: 0x06017AE8 RID: 97000 RVA: 0x00360E5B File Offset: 0x0035F05B
 		public IFastReturnPosBaseT()
 		{
 			this.Type = EFastReturnPosType.EntityPos;

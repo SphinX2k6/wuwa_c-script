@@ -7,9 +7,9 @@ namespace Aki.TDConfigMgr.Component
 	[EnumExtensions]
 	public enum EAiGearStrategy
 	{
-		// Token: 0x0400021D RID: 541
+		// Token: 0x04000222 RID: 546
 		RenjuStrategy,
-		// Token: 0x0400021E RID: 542
+		// Token: 0x04000223 RID: 547
 		RaceStrategy
 	}
 }

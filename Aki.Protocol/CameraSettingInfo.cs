@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200022B RID: 555
+	// Token: 0x02000230 RID: 560
 	public sealed class CameraSettingInfo : IMessage<CameraSettingInfo>, IMessage, IEquatable<CameraSettingInfo>, IDeepCloneable<CameraSettingInfo>, IBufferMessage
 	{
-		// Token: 0x06003C5D RID: 15453 RVA: 0x00096265 File Offset: 0x00094465
+		// Token: 0x06003D02 RID: 15618 RVA: 0x00097E81 File Offset: 0x00096081
 		[NullableContext(1)]
 		public static CameraSettingInfo Create()
 		{
 			return new CameraSettingInfo();
 		}
 
-		// Token: 0x17000A0D RID: 2573
-		// (get) Token: 0x06003C5E RID: 15454 RVA: 0x0009626C File Offset: 0x0009446C
+		// Token: 0x17000A2C RID: 2604
+		// (get) Token: 0x06003D03 RID: 15619 RVA: 0x00097E88 File Offset: 0x00096088
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000A0E RID: 2574
-		// (get) Token: 0x06003C5F RID: 15455 RVA: 0x0009626F File Offset: 0x0009446F
+		// Token: 0x17000A2D RID: 2605
+		// (get) Token: 0x06003D04 RID: 15620 RVA: 0x00097E8B File Offset: 0x0009608B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003C60 RID: 15456 RVA: 0x00096276 File Offset: 0x00094476
+		// Token: 0x06003D05 RID: 15621 RVA: 0x00097E92 File Offset: 0x00096092
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CameraSettingInfo()
 		{
 		}
 
-		// Token: 0x06003C61 RID: 15457 RVA: 0x0009627E File Offset: 0x0009447E
+		// Token: 0x06003D06 RID: 15622 RVA: 0x00097E9A File Offset: 0x0009609A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CameraSettingInfo(CameraSettingInfo other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003C62 RID: 15458 RVA: 0x000962B3 File Offset: 0x000944B3
+		// Token: 0x06003D07 RID: 15623 RVA: 0x00097ECF File Offset: 0x000960CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CameraSettingInfo Clone()
@@ -65,9 +65,9 @@ namespace Aki.Protocol
 			return new CameraSettingInfo(this);
 		}
 
-		// Token: 0x17000A0F RID: 2575
-		// (get) Token: 0x06003C63 RID: 15459 RVA: 0x000962BB File Offset: 0x000944BB
-		// (set) Token: 0x06003C64 RID: 15460 RVA: 0x000962C3 File Offset: 0x000944C3
+		// Token: 0x17000A2E RID: 2606
+		// (get) Token: 0x06003D08 RID: 15624 RVA: 0x00097ED7 File Offset: 0x000960D7
+		// (set) Token: 0x06003D09 RID: 15625 RVA: 0x00097EDF File Offset: 0x000960DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CameraParamInfo CameraParam
@@ -82,7 +82,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003C65 RID: 15461 RVA: 0x000962CC File Offset: 0x000944CC
+		// Token: 0x06003D0A RID: 15626 RVA: 0x00097EE8 File Offset: 0x000960E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CameraSettingInfo);
 		}
 
-		// Token: 0x06003C66 RID: 15462 RVA: 0x000962DA File Offset: 0x000944DA
+		// Token: 0x06003D0B RID: 15627 RVA: 0x00097EF6 File Offset: 0x000960F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CameraSettingInfo other)
@@ -98,7 +98,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.CameraParam, other.CameraParam) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003C67 RID: 15463 RVA: 0x00096310 File Offset: 0x00094510
+		// Token: 0x06003D0C RID: 15628 RVA: 0x00097F2C File Offset: 0x0009612C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003C68 RID: 15464 RVA: 0x0009634C File Offset: 0x0009454C
+		// Token: 0x06003D0D RID: 15629 RVA: 0x00097F68 File Offset: 0x00096168
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06003C69 RID: 15465 RVA: 0x00096359 File Offset: 0x00094559
+		// Token: 0x06003D0E RID: 15630 RVA: 0x00097F75 File Offset: 0x00096175
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003C6A RID: 15466 RVA: 0x00096362 File Offset: 0x00094562
+		// Token: 0x06003D0F RID: 15631 RVA: 0x00097F7E File Offset: 0x0009617E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003C6B RID: 15467 RVA: 0x00096394 File Offset: 0x00094594
+		// Token: 0x06003D10 RID: 15632 RVA: 0x00097FB0 File Offset: 0x000961B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003C6C RID: 15468 RVA: 0x000963D4 File Offset: 0x000945D4
+		// Token: 0x06003D11 RID: 15633 RVA: 0x00097FF0 File Offset: 0x000961F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CameraSettingInfo other)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06003C6D RID: 15469 RVA: 0x00096428 File Offset: 0x00094628
+		// Token: 0x06003D12 RID: 15634 RVA: 0x00098044 File Offset: 0x00096244
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -192,7 +192,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003C6E RID: 15470 RVA: 0x00096434 File Offset: 0x00094634
+		// Token: 0x06003D13 RID: 15635 RVA: 0x00098050 File Offset: 0x00096250
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,13 +219,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002C74 RID: 11380
+		// Token: 0x04002CF6 RID: 11510
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002C75 RID: 11381
+		// Token: 0x04002CF7 RID: 11511
 		public const int CameraParamFieldNumber = 1;
 
-		// Token: 0x04002C76 RID: 11382
+		// Token: 0x04002CF8 RID: 11512
 		private CameraParamInfo cameraParam_;
 	}
 }

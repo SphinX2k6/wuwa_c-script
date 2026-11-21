@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001511 RID: 5393
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200166A RID: 5738
 	public class CloseWalkingOverlayMontage : ActionParams
 	{
-		// Token: 0x06007A8C RID: 31372 RVA: 0x001248B0 File Offset: 0x00122AB0
+		// Token: 0x06008157 RID: 33111 RVA: 0x001334D8 File Offset: 0x001316D8
 		private CloseWalkingOverlayMontage_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A8D RID: 31373 RVA: 0x001248E8 File Offset: 0x00122AE8
+		// Token: 0x06008158 RID: 33112 RVA: 0x00133510 File Offset: 0x00131710
 		public static CloseWalkingOverlayMontage Create([Nullable(2)] CloseWalkingOverlayMontage instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A8E RID: 31374 RVA: 0x001248FB File Offset: 0x00122AFB
+		// Token: 0x06008159 RID: 33113 RVA: 0x00133523 File Offset: 0x00131723
 		public static CloseWalkingOverlayMontage CreateFromSetValue([Nullable(2)] CloseWalkingOverlayMontage_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A8F RID: 31375 RVA: 0x0012490E File Offset: 0x00122B0E
+		// Token: 0x0600815A RID: 33114 RVA: 0x00133536 File Offset: 0x00131736
 		public CloseWalkingOverlayMontage_SetValue ToSetValue()
 		{
 			return new CloseWalkingOverlayMontage_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028E4 RID: 10468
-		// (get) Token: 0x06007A90 RID: 31376 RVA: 0x00124921 File Offset: 0x00122B21
-		// (set) Token: 0x06007A91 RID: 31377 RVA: 0x0012494C File Offset: 0x00122B4C
+		// Token: 0x17002ACD RID: 10957
+		// (get) Token: 0x0600815B RID: 33115 RVA: 0x00133549 File Offset: 0x00131749
+		// (set) Token: 0x0600815C RID: 33116 RVA: 0x00133574 File Offset: 0x00131774
 		public virtual int EntityId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046FA RID: 18170
+		// Token: 0x04004A96 RID: 19094
 		[Nullable(2)]
 		protected new CloseWalkingOverlayMontage FbInstance;
 
-		// Token: 0x040046FB RID: 18171
+		// Token: 0x04004A97 RID: 19095
 		[Nullable(2)]
 		protected CloseWalkingOverlayMontage_SetValue PocoInterface;
 	}

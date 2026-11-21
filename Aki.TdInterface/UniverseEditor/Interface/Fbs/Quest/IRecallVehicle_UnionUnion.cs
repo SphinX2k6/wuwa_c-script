@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200409E RID: 16542
+	// Token: 0x020044DF RID: 17631
 	public class IRecallVehicle_UnionUnion
 	{
-		// Token: 0x170074B7 RID: 29879
-		// (get) Token: 0x06018147 RID: 98631 RVA: 0x00378CC5 File Offset: 0x00376EC5
-		// (set) Token: 0x06018148 RID: 98632 RVA: 0x00378CCD File Offset: 0x00376ECD
+		// Token: 0x17007AB9 RID: 31417
+		// (get) Token: 0x060197E0 RID: 104416 RVA: 0x003A2AFD File Offset: 0x003A0CFD
+		// (set) Token: 0x060197E1 RID: 104417 RVA: 0x003A2B05 File Offset: 0x003A0D05
 		public IRecallVehicle_Union Type { get; set; }
 
-		// Token: 0x170074B8 RID: 29880
-		// (get) Token: 0x06018149 RID: 98633 RVA: 0x00378CD6 File Offset: 0x00376ED6
-		// (set) Token: 0x0601814A RID: 98634 RVA: 0x00378CDE File Offset: 0x00376EDE
+		// Token: 0x17007ABA RID: 31418
+		// (get) Token: 0x060197E2 RID: 104418 RVA: 0x003A2B0E File Offset: 0x003A0D0E
+		// (set) Token: 0x060197E3 RID: 104419 RVA: 0x003A2B16 File Offset: 0x003A0D16
 		public object Value { get; set; }
 
-		// Token: 0x0601814B RID: 98635 RVA: 0x00378CE7 File Offset: 0x00376EE7
+		// Token: 0x060197E4 RID: 104420 RVA: 0x003A2B1F File Offset: 0x003A0D1F
 		public IRecallVehicle_UnionUnion()
 		{
 			this.Type = IRecallVehicle_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601814C RID: 98636 RVA: 0x00378CFD File Offset: 0x00376EFD
+		// Token: 0x060197E5 RID: 104421 RVA: 0x003A2B35 File Offset: 0x003A0D35
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601814D RID: 98637 RVA: 0x00378D0F File Offset: 0x00376F0F
+		// Token: 0x060197E6 RID: 104422 RVA: 0x003A2B47 File Offset: 0x003A0D47
 		public IRecallVehicleT AsIRecallVehicle()
 		{
 			return this.As<IRecallVehicleT>();
 		}
 
-		// Token: 0x0601814E RID: 98638 RVA: 0x00378D17 File Offset: 0x00376F17
+		// Token: 0x060197E7 RID: 104423 RVA: 0x003A2B4F File Offset: 0x003A0D4F
 		public static IRecallVehicle_UnionUnion FromIRecallVehicle(IRecallVehicleT _irecallvehicle)
 		{
 			return new IRecallVehicle_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601814F RID: 98639 RVA: 0x00378D2C File Offset: 0x00376F2C
+		// Token: 0x060197E8 RID: 104424 RVA: 0x003A2B64 File Offset: 0x003A0D64
 		public IRecallFishingBoatT AsIRecallFishingBoat()
 		{
 			return this.As<IRecallFishingBoatT>();
 		}
 
-		// Token: 0x06018150 RID: 98640 RVA: 0x00378D34 File Offset: 0x00376F34
+		// Token: 0x060197E9 RID: 104425 RVA: 0x003A2B6C File Offset: 0x003A0D6C
 		public static IRecallVehicle_UnionUnion FromIRecallFishingBoat(IRecallFishingBoatT _irecallfishingboat)
 		{
 			return new IRecallVehicle_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06018151 RID: 98641 RVA: 0x00378D4C File Offset: 0x00376F4C
+		// Token: 0x060197EA RID: 104426 RVA: 0x003A2B84 File Offset: 0x003A0D84
 		public static int Pack(FlatBufferBuilder builder, IRecallVehicle_UnionUnion _o)
 		{
 			IRecallVehicle_Union type = _o.Type;

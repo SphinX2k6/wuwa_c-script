@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D4E RID: 19790
+	// Token: 0x0200524A RID: 21066
 	public enum TPhotographCameraCheckType : byte
 	{
-		// Token: 0x0400D784 RID: 55172
+		// Token: 0x0400E2B3 RID: 58035
 		NONE,
-		// Token: 0x0400D785 RID: 55173
+		// Token: 0x0400E2B4 RID: 58036
 		IPhotographCameraCheckAspectRatioType,
-		// Token: 0x0400D786 RID: 55174
+		// Token: 0x0400E2B5 RID: 58037
 		IPhotographCameraCheckBlurIntensity,
-		// Token: 0x0400D787 RID: 55175
+		// Token: 0x0400E2B6 RID: 58038
 		IPhotographCameraCheckTemplate
 	}
 }

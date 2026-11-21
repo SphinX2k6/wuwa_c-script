@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006946 RID: 26950
+	// Token: 0x02006FF9 RID: 28665
 	public class IInformationViewConfigT
 	{
-		// Token: 0x1700C7F2 RID: 51186
-		// (get) Token: 0x0602F0F2 RID: 192754 RVA: 0x0066A0FC File Offset: 0x006682FC
-		// (set) Token: 0x0602F0F3 RID: 192755 RVA: 0x0066A104 File Offset: 0x00668304
+		// Token: 0x1700D1F5 RID: 53749
+		// (get) Token: 0x06031AC2 RID: 203458 RVA: 0x006BA5E4 File Offset: 0x006B87E4
+		// (set) Token: 0x06031AC3 RID: 203459 RVA: 0x006BA5EC File Offset: 0x006B87EC
 		public int InfoDisplayGroup { get; set; }
 
-		// Token: 0x1700C7F3 RID: 51187
-		// (get) Token: 0x0602F0F4 RID: 192756 RVA: 0x0066A10D File Offset: 0x0066830D
-		// (set) Token: 0x0602F0F5 RID: 192757 RVA: 0x0066A115 File Offset: 0x00668315
+		// Token: 0x1700D1F6 RID: 53750
+		// (get) Token: 0x06031AC4 RID: 203460 RVA: 0x006BA5F5 File Offset: 0x006B87F5
+		// (set) Token: 0x06031AC5 RID: 203461 RVA: 0x006BA5FD File Offset: 0x006B87FD
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F0F6 RID: 192758 RVA: 0x0066A11E File Offset: 0x0066831E
+		// Token: 0x06031AC6 RID: 203462 RVA: 0x006BA606 File Offset: 0x006B8806
 		public IInformationViewConfigT()
 		{
 			this.InfoDisplayGroup = 0;

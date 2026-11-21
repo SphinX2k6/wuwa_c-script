@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009CB RID: 2507
+	// Token: 0x02000AA0 RID: 2720
 	public class ConfigTemplateConfigByBlueprintType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003AD6 RID: 15062 RVA: 0x001A6787 File Offset: 0x001A4987
+		// Token: 0x06003FD4 RID: 16340 RVA: 0x001C5B1B File Offset: 0x001C3D1B
 		static ConfigTemplateConfigByBlueprintType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTemplateConfigByBlueprintType.CreateStaticDefaultValue), new Action(ConfigTemplateConfigByBlueprintType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003AD7 RID: 15063 RVA: 0x001A67A8 File Offset: 0x001A49A8
+		// Token: 0x06003FD5 RID: 16341 RVA: 0x001C5B3C File Offset: 0x001C3D3C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTemplateConfigByBlueprintType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003AD8 RID: 15064 RVA: 0x001A6827 File Offset: 0x001A4A27
+		// Token: 0x06003FD6 RID: 16342 RVA: 0x001C5BBB File Offset: 0x001C3DBB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTemplateConfigByBlueprintType.LogPair = null;
 			ConfigTemplateConfigByBlueprintType.HandleId = 0;
 		}
 
-		// Token: 0x06003AD9 RID: 15065 RVA: 0x001A6835 File Offset: 0x001A4A35
+		// Token: 0x06003FD7 RID: 16343 RVA: 0x001C5BC9 File Offset: 0x001C3DC9
 		public static void Init()
 		{
 			ConfigTemplateConfigByBlueprintType.HandleId = ConfigCommon.InitDataStatement(ConfigTemplateConfigByBlueprintType.HandleId, "db_template.db", "select BinData from `TemplateConfig` where BlueprintType=?");
 		}
 
-		// Token: 0x06003ADA RID: 15066 RVA: 0x001A6850 File Offset: 0x001A4A50
+		// Token: 0x06003FD8 RID: 16344 RVA: 0x001C5BE4 File Offset: 0x001C3DE4
 		public static TemplateConfig? GetConfig(string p0BlueprintType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTemplateConfigByBlueprintType.HandleId, ConfigTemplateConfigByBlueprintType.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new TemplateConfig?(rootAsTemplateConfig);
 		}
 
-		// Token: 0x04004473 RID: 17523
+		// Token: 0x04004A46 RID: 19014
 		private const string DB = "db_template.db";
 
-		// Token: 0x04004474 RID: 17524
+		// Token: 0x04004A47 RID: 19015
 		private const string FILE = "UniverseEditor/Entity/Template.csv";
 
-		// Token: 0x04004475 RID: 17525
+		// Token: 0x04004A48 RID: 19016
 		private const string TABLE = "TemplateConfig";
 
-		// Token: 0x04004476 RID: 17526
+		// Token: 0x04004A49 RID: 19017
 		private const string COMMAND = "select BinData from `TemplateConfig` where BlueprintType=?";
 
-		// Token: 0x04004477 RID: 17527
+		// Token: 0x04004A4A RID: 19018
 		private const string KEY_PREFIX = "TemplateConfigByBlueprintType";
 
-		// Token: 0x04004478 RID: 17528
+		// Token: 0x04004A4B RID: 19019
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004479 RID: 17529
+		// Token: 0x04004A4C RID: 19020
 		private static int HandleId;
 	}
 }

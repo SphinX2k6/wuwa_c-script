@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E2F RID: 3631
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F2B RID: 3883
 	public class IStreamingRtEffectRef
 	{
-		// Token: 0x0600521A RID: 21018 RVA: 0x000CA547 File Offset: 0x000C8747
+		// Token: 0x06005741 RID: 22337 RVA: 0x000D5E0F File Offset: 0x000D400F
 		public static IStreamingRtEffectRef Create(IStreamingRtEffectRef? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B79 RID: 7033
-		// (get) Token: 0x0600521B RID: 21019 RVA: 0x000CA566 File Offset: 0x000C8766
+		// Token: 0x17001CE6 RID: 7398
+		// (get) Token: 0x06005742 RID: 22338 RVA: 0x000D5E2E File Offset: 0x000D402E
 		public virtual string ActorRefKey
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F4C RID: 12108
+		// Token: 0x04003214 RID: 12820
 		private IStreamingRtEffectRef Instance;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CA9 RID: 23721
+	// Token: 0x020062DA RID: 25306
 	public class TSpawnMonsterStartConditionUnion
 	{
-		// Token: 0x1700B24E RID: 45646
-		// (get) Token: 0x060289D1 RID: 166353 RVA: 0x00594ED0 File Offset: 0x005930D0
-		// (set) Token: 0x060289D2 RID: 166354 RVA: 0x00594ED8 File Offset: 0x005930D8
+		// Token: 0x1700BBA8 RID: 48040
+		// (get) Token: 0x0602B019 RID: 176153 RVA: 0x005DD644 File Offset: 0x005DB844
+		// (set) Token: 0x0602B01A RID: 176154 RVA: 0x005DD64C File Offset: 0x005DB84C
 		public TSpawnMonsterStartCondition Type { get; set; }
 
-		// Token: 0x1700B24F RID: 45647
-		// (get) Token: 0x060289D3 RID: 166355 RVA: 0x00594EE1 File Offset: 0x005930E1
-		// (set) Token: 0x060289D4 RID: 166356 RVA: 0x00594EE9 File Offset: 0x005930E9
+		// Token: 0x1700BBA9 RID: 48041
+		// (get) Token: 0x0602B01B RID: 176155 RVA: 0x005DD655 File Offset: 0x005DB855
+		// (set) Token: 0x0602B01C RID: 176156 RVA: 0x005DD65D File Offset: 0x005DB85D
 		public object Value { get; set; }
 
-		// Token: 0x060289D5 RID: 166357 RVA: 0x00594EF2 File Offset: 0x005930F2
+		// Token: 0x0602B01D RID: 176157 RVA: 0x005DD666 File Offset: 0x005DB866
 		public TSpawnMonsterStartConditionUnion()
 		{
 			this.Type = TSpawnMonsterStartCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060289D6 RID: 166358 RVA: 0x00594F08 File Offset: 0x00593108
+		// Token: 0x0602B01E RID: 176158 RVA: 0x005DD67C File Offset: 0x005DB87C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060289D7 RID: 166359 RVA: 0x00594F1A File Offset: 0x0059311A
+		// Token: 0x0602B01F RID: 176159 RVA: 0x005DD68E File Offset: 0x005DB88E
 		public IImmediateStartConditionT AsIImmediateStartCondition()
 		{
 			return this.As<IImmediateStartConditionT>();
 		}
 
-		// Token: 0x060289D8 RID: 166360 RVA: 0x00594F22 File Offset: 0x00593122
+		// Token: 0x0602B020 RID: 176160 RVA: 0x005DD696 File Offset: 0x005DB896
 		public static TSpawnMonsterStartConditionUnion FromIImmediateStartCondition(IImmediateStartConditionT _iimmediatestartcondition)
 		{
 			return new TSpawnMonsterStartConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289D9 RID: 166361 RVA: 0x00594F37 File Offset: 0x00593137
+		// Token: 0x0602B021 RID: 176161 RVA: 0x005DD6AB File Offset: 0x005DB8AB
 		public ITriggerRangeStartConditionT AsITriggerRangeStartCondition()
 		{
 			return this.As<ITriggerRangeStartConditionT>();
 		}
 
-		// Token: 0x060289DA RID: 166362 RVA: 0x00594F3F File Offset: 0x0059313F
+		// Token: 0x0602B022 RID: 176162 RVA: 0x005DD6B3 File Offset: 0x005DB8B3
 		public static TSpawnMonsterStartConditionUnion FromITriggerRangeStartCondition(ITriggerRangeStartConditionT _itriggerrangestartcondition)
 		{
 			return new TSpawnMonsterStartConditionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060289DB RID: 166363 RVA: 0x00594F54 File Offset: 0x00593154
+		// Token: 0x0602B023 RID: 176163 RVA: 0x005DD6C8 File Offset: 0x005DB8C8
 		public static int Pack(FlatBufferBuilder builder, TSpawnMonsterStartConditionUnion _o)
 		{
 			TSpawnMonsterStartCondition type = _o.Type;

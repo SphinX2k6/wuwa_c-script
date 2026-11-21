@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E6B RID: 3691
+	// Token: 0x02000F7E RID: 3966
 	[EnumExtensions]
 	public enum EInformationViewType
 	{
-		// Token: 0x0400309C RID: 12444
+		// Token: 0x0400339E RID: 13214
 		LevelPlay,
-		// Token: 0x0400309D RID: 12445
+		// Token: 0x0400339F RID: 13215
 		BossRushBuffInfo,
-		// Token: 0x0400309E RID: 12446
+		// Token: 0x040033A0 RID: 13216
 		DangoAbyss
 	}
 }

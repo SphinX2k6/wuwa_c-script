@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200658F RID: 25999
+	// Token: 0x02006BF7 RID: 27639
 	public class IDestroyFishingBoatT
 	{
 	}

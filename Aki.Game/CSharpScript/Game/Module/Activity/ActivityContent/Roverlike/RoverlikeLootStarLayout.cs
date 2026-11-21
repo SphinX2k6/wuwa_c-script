@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200616D RID: 24941
+	// Token: 0x020050EB RID: 20715
 	internal class RoverlikeLootStarLayout : UiPanelBase
 	{
-		// Token: 0x0603F0BC RID: 258236 RVA: 0x00F3C254 File Offset: 0x00F3A454
+		// Token: 0x06033D7C RID: 212348 RVA: 0x00E83128 File Offset: 0x00E81328
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,25 +25,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F0BD RID: 258237 RVA: 0x00F3C2BD File Offset: 0x00F3A4BD
+		// Token: 0x06033D7D RID: 212349 RVA: 0x00E83191 File Offset: 0x00E81391
 		protected override void OnStart()
 		{
 			this.StarGrid = new GenericLayout<RoverlikeLootStarItem, bool>(base.GetHorizontalLayout(0), new Func<RoverlikeLootStarItem>(this.CreateStarItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603F0BE RID: 258238 RVA: 0x00F3C2F0 File Offset: 0x00F3A4F0
+		// Token: 0x06033D7E RID: 212350 RVA: 0x00E831C4 File Offset: 0x00E813C4
 		protected override void OnBeforeDestroy()
 		{
 			this.StarGrid = null;
 		}
 
-		// Token: 0x0603F0BF RID: 258239 RVA: 0x00F3C2F9 File Offset: 0x00F3A4F9
+		// Token: 0x06033D7F RID: 212351 RVA: 0x00E831CD File Offset: 0x00E813CD
 		public void SetVisible(bool visible)
 		{
 			base.SetUiActive(visible);
 		}
 
-		// Token: 0x0603F0C0 RID: 258240 RVA: 0x00F3C304 File Offset: 0x00F3A504
+		// Token: 0x06033D80 RID: 212352 RVA: 0x00E831D8 File Offset: 0x00E813D8
 		public void SetStars(int level, int maxLevel)
 		{
 			List<bool> list = new List<bool>();
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			starGrid.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F0C1 RID: 258241 RVA: 0x00F3C340 File Offset: 0x00F3A540
+		// Token: 0x06033D81 RID: 212353 RVA: 0x00E83214 File Offset: 0x00E81414
 		[NullableContext(1)]
 		private RoverlikeLootStarItem CreateStarItem()
 		{
 			return new RoverlikeLootStarItem();
 		}
 
-		// Token: 0x04020E26 RID: 134694
+		// Token: 0x0401B753 RID: 112467
 		[Nullable(new byte[]
 		{
 			2,
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeLootStarItem, bool> StarGrid;
 
-		// Token: 0x0200C3D4 RID: 50132
+		// Token: 0x0200ADBB RID: 44475
 		private class ERoverlikeLootStarLayout
 		{
-			// Token: 0x0403B17B RID: 242043
+			// Token: 0x04035ADC RID: 219868
 			public const int StarLayout = 0;
 
-			// Token: 0x0403B17C RID: 242044
+			// Token: 0x04035ADD RID: 219869
 			public const int StarItem = 1;
 		}
 	}

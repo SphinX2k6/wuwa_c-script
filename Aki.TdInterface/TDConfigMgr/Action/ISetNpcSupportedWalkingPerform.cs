@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E38 RID: 7736
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200206D RID: 8301
 	public class ISetNpcSupportedWalkingPerform : ISetNpcGroupPerformType
 	{
-		// Token: 0x0600A57F RID: 42367 RVA: 0x00176E10 File Offset: 0x00175010
+		// Token: 0x0600B037 RID: 45111 RVA: 0x0018CB10 File Offset: 0x0018AD10
 		private ISetNpcSupportedWalkingPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A580 RID: 42368 RVA: 0x00176E48 File Offset: 0x00175048
+		// Token: 0x0600B038 RID: 45112 RVA: 0x0018CB48 File Offset: 0x0018AD48
 		public static ISetNpcSupportedWalkingPerform Create([Nullable(2)] ISetNpcSupportedWalkingPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A581 RID: 42369 RVA: 0x00176E5B File Offset: 0x0017505B
+		// Token: 0x0600B039 RID: 45113 RVA: 0x0018CB5B File Offset: 0x0018AD5B
 		public static ISetNpcSupportedWalkingPerform CreateFromSetValue([Nullable(2)] ISetNpcSupportedWalkingPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A582 RID: 42370 RVA: 0x00176E6E File Offset: 0x0017506E
+		// Token: 0x0600B03A RID: 45114 RVA: 0x0018CB6E File Offset: 0x0018AD6E
 		public new ISetNpcSupportedWalkingPerform_SetValue ToSetValue()
 		{
 			return new ISetNpcSupportedWalkingPerform_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032C2 RID: 12994
-		// (get) Token: 0x0600A583 RID: 42371 RVA: 0x00176E99 File Offset: 0x00175099
-		// (set) Token: 0x0600A584 RID: 42372 RVA: 0x00176EC4 File Offset: 0x001750C4
+		// Token: 0x17003586 RID: 13702
+		// (get) Token: 0x0600B03B RID: 45115 RVA: 0x0018CB99 File Offset: 0x0018AD99
+		// (set) Token: 0x0600B03C RID: 45116 RVA: 0x0018CBC4 File Offset: 0x0018ADC4
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032C3 RID: 12995
-		// (get) Token: 0x0600A585 RID: 42373 RVA: 0x00176ED4 File Offset: 0x001750D4
-		// (set) Token: 0x0600A586 RID: 42374 RVA: 0x00176F35 File Offset: 0x00175135
+		// Token: 0x17003587 RID: 13703
+		// (get) Token: 0x0600B03D RID: 45117 RVA: 0x0018CBD4 File Offset: 0x0018ADD4
+		// (set) Token: 0x0600B03E RID: 45118 RVA: 0x0018CC35 File Offset: 0x0018AE35
 		public virtual IPlayerInitiator Initiator
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032C4 RID: 12996
-		// (get) Token: 0x0600A587 RID: 42375 RVA: 0x00176F4A File Offset: 0x0017514A
-		// (set) Token: 0x0600A588 RID: 42376 RVA: 0x00176F75 File Offset: 0x00175175
+		// Token: 0x17003588 RID: 13704
+		// (get) Token: 0x0600B03F RID: 45119 RVA: 0x0018CC4A File Offset: 0x0018AE4A
+		// (set) Token: 0x0600B040 RID: 45120 RVA: 0x0018CC75 File Offset: 0x0018AE75
 		public virtual int Target
 		{
 			get
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062F5 RID: 25333
+		// Token: 0x040068D9 RID: 26841
 		[Nullable(2)]
 		protected new ISetNpcSupportedWalkingPerform FbInstance;
 
-		// Token: 0x040062F6 RID: 25334
+		// Token: 0x040068DA RID: 26842
 		[Nullable(2)]
 		protected new ISetNpcSupportedWalkingPerform_SetValue PocoInterface;
 
-		// Token: 0x040062F7 RID: 25335
+		// Token: 0x040068DB RID: 26843
 		private IPlayerInitiator _InitiatorCache;
 
-		// Token: 0x040062F8 RID: 25336
+		// Token: 0x040068DC RID: 26844
 		private bool _InitiatorInited;
 	}
 }

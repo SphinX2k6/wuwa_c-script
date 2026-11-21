@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005ABB RID: 23227
+	// Token: 0x02004A97 RID: 19095
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DreamLinkLimitTimeRewardItem : UiPanelBase
 	{
-		// Token: 0x0603AD4B RID: 240971 RVA: 0x00E04CC7 File Offset: 0x00E02EC7
+		// Token: 0x0602FC97 RID: 195735 RVA: 0x00D5528F File Offset: 0x00D5348F
 		public DreamLinkLimitTimeRewardItem(DreamLinkData Data)
 		{
 			this.Data = Data;
 		}
 
-		// Token: 0x0603AD4C RID: 240972 RVA: 0x00E04CE4 File Offset: 0x00E02EE4
+		// Token: 0x0602FC98 RID: 195736 RVA: 0x00D552AC File Offset: 0x00D534AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AD4D RID: 240973 RVA: 0x00E04DAB File Offset: 0x00E02FAB
+		// Token: 0x0602FC99 RID: 195737 RVA: 0x00D55373 File Offset: 0x00D53573
 		protected override void OnBeforeHide()
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603AD4E RID: 240974 RVA: 0x00E04DB4 File Offset: 0x00E02FB4
+		// Token: 0x0602FC9A RID: 195738 RVA: 0x00D5537C File Offset: 0x00D5357C
 		public void RefreshActive()
 		{
 			this.LimitTimeRewardOn = this.Data.IsLimitTimeRewardOn();
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603AD4F RID: 240975 RVA: 0x00E04E04 File Offset: 0x00E03004
+		// Token: 0x0602FC9B RID: 195739 RVA: 0x00D553CC File Offset: 0x00D535CC
 		private void RefreshRedDot()
 		{
 			base.GetItem(2).SetUIActive(this.Data.CheckHasLimitTimeReward());
 		}
 
-		// Token: 0x0603AD50 RID: 240976 RVA: 0x00E04E20 File Offset: 0x00E03020
+		// Token: 0x0602FC9C RID: 195740 RVA: 0x00D553E8 File Offset: 0x00D535E8
 		private void OnRefreshTime(float _)
 		{
 			long limitTimeEndTime = this.Data.GetLimitTimeEndTime();
@@ -82,14 +82,14 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetText(1).SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0603AD51 RID: 240977 RVA: 0x00E04E7A File Offset: 0x00E0307A
+		// Token: 0x0602FC9D RID: 195741 RVA: 0x00D55442 File Offset: 0x00D53642
 		private void InitTimer()
 		{
 			this.ClearTimer();
 			this.RefreshTimeHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnRefreshTime), 1000f, 1f, null, null, false);
 		}
 
-		// Token: 0x0603AD52 RID: 240978 RVA: 0x00E04EAB File Offset: 0x00E030AB
+		// Token: 0x0602FC9E RID: 195742 RVA: 0x00D55473 File Offset: 0x00D53673
 		private void ClearTimer()
 		{
 			if (this.RefreshTimeHandle != null)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD53 RID: 240979 RVA: 0x00E04ECD File Offset: 0x00E030CD
+		// Token: 0x0602FC9F RID: 195743 RVA: 0x00D55495 File Offset: 0x00D53695
 		private void OnClickedButton()
 		{
 			if (this.LimitTimeRewardOn)
@@ -109,33 +109,33 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0401EB31 RID: 125745
+		// Token: 0x040195D8 RID: 103896
 		private const int CHECKGAP = 1000;
 
-		// Token: 0x0401EB32 RID: 125746
+		// Token: 0x040195D9 RID: 103897
 		private bool LimitTimeRewardOn;
 
-		// Token: 0x0401EB33 RID: 125747
+		// Token: 0x040195DA RID: 103898
 		private string RemainTimeText = "{0}";
 
-		// Token: 0x0401EB34 RID: 125748
+		// Token: 0x040195DB RID: 103899
 		[Nullable(2)]
 		private TimerHandle RefreshTimeHandle;
 
-		// Token: 0x0401EB35 RID: 125749
+		// Token: 0x040195DC RID: 103900
 		private DreamLinkData Data;
 
-		// Token: 0x0200BD0E RID: 48398
+		// Token: 0x0200A716 RID: 42774
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04039046 RID: 233542
+			// Token: 0x04033A10 RID: 211472
 			public const int Button = 0;
 
-			// Token: 0x04039047 RID: 233543
+			// Token: 0x04033A11 RID: 211473
 			public const int TxtTime = 1;
 
-			// Token: 0x04039048 RID: 233544
+			// Token: 0x04033A12 RID: 211474
 			public const int RedDot = 2;
 		}
 	}

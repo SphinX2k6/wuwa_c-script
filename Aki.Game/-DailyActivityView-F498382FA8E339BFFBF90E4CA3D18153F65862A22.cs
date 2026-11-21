@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x020019FC RID: 6652
+// Token: 0x02000EBB RID: 3771
 internal enum <DailyActivityView>F498382FA8E339BFFBF90E4CA3D18153F65862A22E73AF3686805686EAF34A2A0__EActiveComponent
 {
-	// Token: 0x040059B2 RID: 22962
+	// Token: 0x04005A81 RID: 23169
 	TaskScrollView,
-	// Token: 0x040059B3 RID: 22963
+	// Token: 0x04005A82 RID: 23170
 	TaskExampleItem,
-	// Token: 0x040059B4 RID: 22964
+	// Token: 0x04005A83 RID: 23171
 	DailyActivityText,
-	// Token: 0x040059B5 RID: 22965
+	// Token: 0x04005A84 RID: 23172
 	DailyZeroText,
-	// Token: 0x040059B6 RID: 22966
+	// Token: 0x04005A85 RID: 23173
 	DailyPanelProgress,
-	// Token: 0x040059B7 RID: 22967
+	// Token: 0x04005A86 RID: 23174
 	TabHorizontalLayout,
-	// Token: 0x040059B8 RID: 22968
+	// Token: 0x04005A87 RID: 23175
 	TabItem,
-	// Token: 0x040059B9 RID: 22969
+	// Token: 0x04005A88 RID: 23176
 	WeeklyChallengeLoopView,
-	// Token: 0x040059BA RID: 22970
+	// Token: 0x04005A89 RID: 23177
 	WeeklyChallengeItem,
-	// Token: 0x040059BB RID: 22971
+	// Token: 0x04005A8A RID: 23178
 	WeeklyActivityText,
-	// Token: 0x040059BC RID: 22972
+	// Token: 0x04005A8B RID: 23179
 	WeeklyActivityZeroText,
-	// Token: 0x040059BD RID: 22973
+	// Token: 0x04005A8C RID: 23180
 	WeeklyPanelProgress,
-	// Token: 0x040059BE RID: 22974
+	// Token: 0x04005A8D RID: 23181
 	DailyPanel,
-	// Token: 0x040059BF RID: 22975
+	// Token: 0x04005A8E RID: 23182
 	WeeklyPanel,
-	// Token: 0x040059C0 RID: 22976
+	// Token: 0x04005A8F RID: 23183
 	TimePanel,
-	// Token: 0x040059C1 RID: 22977
+	// Token: 0x04005A90 RID: 23184
 	TextTime,
-	// Token: 0x040059C2 RID: 22978
+	// Token: 0x04005A91 RID: 23185
 	PnlDoubleExp
 }

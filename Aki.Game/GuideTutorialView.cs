@@ -12,18 +12,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DCD RID: 7629
+// Token: 0x0200128F RID: 4751
 [NullableContext(2)]
 [Nullable(0)]
 public class GuideTutorialView : UiViewBase
 {
-	// Token: 0x0600E82B RID: 59435 RVA: 0x0036DF8E File Offset: 0x0036C18E
+	// Token: 0x0600BC4A RID: 48202 RVA: 0x00379C8E File Offset: 0x00377E8E
 	[NullableContext(1)]
 	public GuideTutorialView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E82C RID: 59436 RVA: 0x0036DFA0 File Offset: 0x0036C1A0
+	// Token: 0x0600BC4B RID: 48203 RVA: 0x00379CA0 File Offset: 0x00377EA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -76,7 +76,7 @@ public class GuideTutorialView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600E82D RID: 59437 RVA: 0x0036E264 File Offset: 0x0036C464
+	// Token: 0x0600BC4C RID: 48204 RVA: 0x00379F64 File Offset: 0x00378164
 	private void PrePage()
 	{
 		if (this.MoveTween == null && this.NowPage > 0)
@@ -96,7 +96,7 @@ public class GuideTutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E82E RID: 59438 RVA: 0x0036E340 File Offset: 0x0036C540
+	// Token: 0x0600BC4D RID: 48205 RVA: 0x0037A040 File Offset: 0x00378240
 	private void NextPage()
 	{
 		if (this.MoveTween == null && this.NowPage < this.PageArray.Length - 1)
@@ -116,7 +116,7 @@ public class GuideTutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E82F RID: 59439 RVA: 0x0036E424 File Offset: 0x0036C624
+	// Token: 0x0600BC4E RID: 48206 RVA: 0x0037A124 File Offset: 0x00378324
 	protected override void OnBeforeHide()
 	{
 		TutorialListInfo tutorialInfo = this.TutorialInfo;
@@ -142,7 +142,7 @@ public class GuideTutorialView : UiViewBase
 		finishPromise.SetResult();
 	}
 
-	// Token: 0x0600E830 RID: 59440 RVA: 0x0036E454 File Offset: 0x0036C654
+	// Token: 0x0600BC4F RID: 48207 RVA: 0x0037A154 File Offset: 0x00378354
 	protected override void OnBeforeDestroy()
 	{
 		GenericLayoutNew<TutorialPageItem> pageDotLayout = this.PageDotLayout;
@@ -184,7 +184,7 @@ public class GuideTutorialView : UiViewBase
 		this.MoveTween = null;
 	}
 
-	// Token: 0x0600E831 RID: 59441 RVA: 0x0036E50C File Offset: 0x0036C70C
+	// Token: 0x0600BC50 RID: 48208 RVA: 0x0037A20C File Offset: 0x0037840C
 	[NullableContext(1)]
 	private ILayoutItem<TutorialPageItem> InitDetail(object tempData, UUIItem uiItem, int index)
 	{
@@ -199,7 +199,7 @@ public class GuideTutorialView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E832 RID: 59442 RVA: 0x0036E550 File Offset: 0x0036C750
+	// Token: 0x0600BC51 RID: 48209 RVA: 0x0037A250 File Offset: 0x00378450
 	[NullableContext(1)]
 	private void FinishSequenceEvent(string sequenceName)
 	{
@@ -214,7 +214,7 @@ public class GuideTutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E833 RID: 59443 RVA: 0x0036E5A4 File Offset: 0x0036C7A4
+	// Token: 0x0600BC52 RID: 48210 RVA: 0x0037A2A4 File Offset: 0x003784A4
 	private void PlayTip()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Start", true, null, false);
@@ -223,7 +223,7 @@ public class GuideTutorialView : UiViewBase
 		base.GetItem(9).SetUIActive(true);
 	}
 
-	// Token: 0x0600E834 RID: 59444 RVA: 0x0036E5F8 File Offset: 0x0036C7F8
+	// Token: 0x0600BC53 RID: 48211 RVA: 0x0037A2F8 File Offset: 0x003784F8
 	private void PlayAtOnce()
 	{
 		this.UiViewSequence.PlaySequence("StartAtOnce", true, null);
@@ -232,7 +232,7 @@ public class GuideTutorialView : UiViewBase
 		base.GetItem(9).SetUIActive(false);
 	}
 
-	// Token: 0x0600E835 RID: 59445 RVA: 0x0036E64C File Offset: 0x0036C84C
+	// Token: 0x0600BC54 RID: 48212 RVA: 0x0037A34C File Offset: 0x0037854C
 	private void InitLastPanel()
 	{
 		if (this.LastShowPanel == null)
@@ -245,7 +245,7 @@ public class GuideTutorialView : UiViewBase
 		this.LastShowPanel.PlayAnime(false);
 	}
 
-	// Token: 0x0600E836 RID: 59446 RVA: 0x0036E6AC File Offset: 0x0036C8AC
+	// Token: 0x0600BC55 RID: 48213 RVA: 0x0037A3AC File Offset: 0x003785AC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GuideTutorialView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -256,7 +256,7 @@ public class GuideTutorialView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E837 RID: 59447 RVA: 0x0036E6F0 File Offset: 0x0036C8F0
+	// Token: 0x0600BC56 RID: 48214 RVA: 0x0037A3F0 File Offset: 0x003785F0
 	protected override void OnStart()
 	{
 		this.TutorialInfo = (this.OpenParam as TutorialListInfo);
@@ -285,7 +285,7 @@ public class GuideTutorialView : UiViewBase
 		this.RefreshView(0);
 	}
 
-	// Token: 0x0600E838 RID: 59448 RVA: 0x0036E879 File Offset: 0x0036CA79
+	// Token: 0x0600BC57 RID: 48215 RVA: 0x0037A579 File Offset: 0x00378779
 	protected override void OnBeforeShow()
 	{
 		if (this.TutorialInfo.TutorialTip)
@@ -296,7 +296,7 @@ public class GuideTutorialView : UiViewBase
 		this.PlayTip();
 	}
 
-	// Token: 0x0600E839 RID: 59449 RVA: 0x0036E898 File Offset: 0x0036CA98
+	// Token: 0x0600BC58 RID: 48216 RVA: 0x0037A598 File Offset: 0x00378798
 	private void RefreshView(int index)
 	{
 		if (this.PageArray.Length > 1)
@@ -324,7 +324,7 @@ public class GuideTutorialView : UiViewBase
 		this.CurrentShowPanel.RefreshPage(guideTutorialPage2);
 	}
 
-	// Token: 0x0600E83A RID: 59450 RVA: 0x0036E9EC File Offset: 0x0036CBEC
+	// Token: 0x0600BC59 RID: 48217 RVA: 0x0037A6EC File Offset: 0x003788EC
 	private void TryRemoveTutorialRedDot()
 	{
 		TutorialSaveData savedDataById = TutorialModel.Instance.GetSavedDataById(this.TutorialInfo.GuideId);
@@ -334,34 +334,34 @@ public class GuideTutorialView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E83B RID: 59451 RVA: 0x0036EA2A File Offset: 0x0036CC2A
+	// Token: 0x0600BC5A RID: 48218 RVA: 0x0037A72A File Offset: 0x0037892A
 	private void OnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04006B63 RID: 27491
+	// Token: 0x04006C44 RID: 27716
 	private const float TWEEN_TIME = 0.3f;
 
-	// Token: 0x04006B64 RID: 27492
+	// Token: 0x04006C45 RID: 27717
 	public TutorialListInfo TutorialInfo;
 
-	// Token: 0x04006B65 RID: 27493
+	// Token: 0x04006C46 RID: 27718
 	public bool IsPopView = true;
 
-	// Token: 0x04006B66 RID: 27494
+	// Token: 0x04006C47 RID: 27719
 	private int[] PageArray;
 
-	// Token: 0x04006B67 RID: 27495
+	// Token: 0x04006C48 RID: 27720
 	private int NowPage;
 
-	// Token: 0x04006B68 RID: 27496
+	// Token: 0x04006C49 RID: 27721
 	private bool HasReadToEnd;
 
-	// Token: 0x04006B69 RID: 27497
+	// Token: 0x04006C4A RID: 27722
 	private bool RequireReadAll;
 
-	// Token: 0x04006B6A RID: 27498
+	// Token: 0x04006C4B RID: 27723
 	[Nullable(new byte[]
 	{
 		2,
@@ -369,51 +369,51 @@ public class GuideTutorialView : UiViewBase
 	})]
 	private GenericLayoutNew<TutorialPageItem> PageDotLayout;
 
-	// Token: 0x04006B6B RID: 27499
+	// Token: 0x04006C4C RID: 27724
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006B6C RID: 27500
+	// Token: 0x04006C4D RID: 27725
 	private GuideTutorialPagePanel CurrentShowPanel;
 
-	// Token: 0x04006B6D RID: 27501
+	// Token: 0x04006C4E RID: 27726
 	private GuideTutorialPagePanel LastShowPanel;
 
-	// Token: 0x04006B6E RID: 27502
+	// Token: 0x04006C4F RID: 27727
 	private ULTweener MoveTween;
 
-	// Token: 0x020083AF RID: 33711
+	// Token: 0x02007536 RID: 30006
 	[NullableContext(0)]
 	public enum ETutorialsPopupComponents
 	{
-		// Token: 0x0402AE2F RID: 175663
+		// Token: 0x04026154 RID: 155988
 		SprIcon,
-		// Token: 0x0402AE30 RID: 175664
+		// Token: 0x04026155 RID: 155989
 		TxtTitle,
-		// Token: 0x0402AE31 RID: 175665
+		// Token: 0x04026156 RID: 155990
 		BtnBack,
-		// Token: 0x0402AE32 RID: 175666
+		// Token: 0x04026157 RID: 155991
 		PnlMid,
-		// Token: 0x0402AE33 RID: 175667
+		// Token: 0x04026158 RID: 155992
 		PnlBottom,
-		// Token: 0x0402AE34 RID: 175668
+		// Token: 0x04026159 RID: 155993
 		PnlPages,
-		// Token: 0x0402AE35 RID: 175669
+		// Token: 0x0402615A RID: 155994
 		UiItemPagesDot,
-		// Token: 0x0402AE36 RID: 175670
+		// Token: 0x0402615B RID: 155995
 		BtnArrowL,
-		// Token: 0x0402AE37 RID: 175671
+		// Token: 0x0402615C RID: 155996
 		BtnArrowR,
-		// Token: 0x0402AE38 RID: 175672
+		// Token: 0x0402615D RID: 155997
 		UiItemTutorialsTps,
-		// Token: 0x0402AE39 RID: 175673
+		// Token: 0x0402615E RID: 155998
 		UiItemLayerBg,
-		// Token: 0x0402AE3A RID: 175674
+		// Token: 0x0402615F RID: 155999
 		UiItemLayerUi,
-		// Token: 0x0402AE3B RID: 175675
+		// Token: 0x04026160 RID: 156000
 		PageParent,
-		// Token: 0x0402AE3C RID: 175676
+		// Token: 0x04026161 RID: 156001
 		BtnBg,
-		// Token: 0x0402AE3D RID: 175677
+		// Token: 0x04026162 RID: 156002
 		TipReadAll
 	}
 }

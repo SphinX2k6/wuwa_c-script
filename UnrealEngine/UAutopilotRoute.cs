@@ -7,31 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001891 RID: 6289
+	// Token: 0x020003B5 RID: 949
 	[UnrealObjectPath("/Script/KuroGameplay.AutopilotRoute")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 80)]
 	public class UAutopilotRoute : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060172AA RID: 94890 RVA: 0x0021C5F9 File Offset: 0x0021A7F9
+		// Token: 0x06005D55 RID: 23893 RVA: 0x00083A99 File Offset: 0x00081C99
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAutopilotRoute._ClassPtr;
 		}
 
-		// Token: 0x060172AB RID: 94891 RVA: 0x0021C608 File Offset: 0x0021A808
+		// Token: 0x06005D56 RID: 23894 RVA: 0x00083AA8 File Offset: 0x00081CA8
 		public UAutopilotRoute() : this(BuiltinUtils.AllocNativeUObject(UAutopilotRoute.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060172AC RID: 94892 RVA: 0x0021C630 File Offset: 0x0021A830
+		// Token: 0x06005D57 RID: 23895 RVA: 0x00083AD0 File Offset: 0x00081CD0
 		[NullableContext(1)]
 		public UAutopilotRoute(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAutopilotRoute.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D29 RID: 23849
-		// (get) Token: 0x060172AD RID: 94893 RVA: 0x0021C663 File Offset: 0x0021A863
-		// (set) Token: 0x060172AE RID: 94894 RVA: 0x0021C677 File Offset: 0x0021A877
+		// Token: 0x1700126C RID: 4716
+		// (get) Token: 0x06005D58 RID: 23896 RVA: 0x00083B03 File Offset: 0x00081D03
+		// (set) Token: 0x06005D59 RID: 23897 RVA: 0x00083B17 File Offset: 0x00081D17
 		[Nullable(2)]
 		public unsafe USplineComponent RoadSpline
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005D2A RID: 23850
-		// (get) Token: 0x060172AF RID: 94895 RVA: 0x0021C68C File Offset: 0x0021A88C
-		// (set) Token: 0x060172B0 RID: 94896 RVA: 0x0021C6C5 File Offset: 0x0021A8C5
+		// Token: 0x1700126D RID: 4717
+		// (get) Token: 0x06005D5A RID: 23898 RVA: 0x00083B2C File Offset: 0x00081D2C
+		// (set) Token: 0x06005D5B RID: 23899 RVA: 0x00083B65 File Offset: 0x00081D65
 		[Nullable(1)]
 		public TArray<FRoadSegmentInfo> RoadSegmentInfos
 		{
@@ -71,81 +71,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060172B1 RID: 94897 RVA: 0x0021C6D4 File Offset: 0x0021A8D4
+		// Token: 0x06005D5C RID: 23900 RVA: 0x00083B74 File Offset: 0x00081D74
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UKuroRoadway GetRoadSegmentInfoByKey(float Key)
 		{
 			UAutopilotRoute.__GetRoadSegmentInfoByKey_FunctionParams* ptr = stackalloc UAutopilotRoute.__GetRoadSegmentInfoByKey_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UAutopilotRoute.__GetRoadSegmentInfoByKey_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UAutopilotRoute.__GetRoadSegmentInfoByKey_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Key = Key;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__GetRoadSegmentInfoByKey_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__GetRoadSegmentInfoByKey_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroRoadway>(ptr->__Result);
 		}
 
-		// Token: 0x060172B2 RID: 94898 RVA: 0x0021C728 File Offset: 0x0021A928
+		// Token: 0x06005D5D RID: 23901 RVA: 0x00083BC8 File Offset: 0x00081DC8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UKuroRoadway GetRoadSegmentInfoByAlongDistance(float Distance)
 		{
 			UAutopilotRoute.__GetRoadSegmentInfoByAlongDistance_FunctionParams* ptr = stackalloc UAutopilotRoute.__GetRoadSegmentInfoByAlongDistance_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UAutopilotRoute.__GetRoadSegmentInfoByAlongDistance_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UAutopilotRoute.__GetRoadSegmentInfoByAlongDistance_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Distance = Distance;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__GetRoadSegmentInfoByAlongDistance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__GetRoadSegmentInfoByAlongDistance_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroRoadway>(ptr->__Result);
 		}
 
-		// Token: 0x060172B3 RID: 94899 RVA: 0x0021C77C File Offset: 0x0021A97C
+		// Token: 0x06005D5E RID: 23902 RVA: 0x00083C1C File Offset: 0x00081E1C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UKuroRoadway D_GetRoadSegmentInfoByWorldPosition(FVectorDouble Position)
 		{
 			UAutopilotRoute.__D_GetRoadSegmentInfoByWorldPosition_FunctionParams* ptr = stackalloc UAutopilotRoute.__D_GetRoadSegmentInfoByWorldPosition_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UAutopilotRoute.__D_GetRoadSegmentInfoByWorldPosition_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UAutopilotRoute.__D_GetRoadSegmentInfoByWorldPosition_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Position = Position;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__D_GetRoadSegmentInfoByWorldPosition_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__D_GetRoadSegmentInfoByWorldPosition_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroRoadway>(ptr->__Result);
 		}
 
-		// Token: 0x060172B4 RID: 94900 RVA: 0x0021C7CE File Offset: 0x0021A9CE
+		// Token: 0x06005D5F RID: 23903 RVA: 0x00083C6D File Offset: 0x00081E6D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Clear()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__Clear_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UAutopilotRoute.__Clear_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060172B5 RID: 94901 RVA: 0x0021C7E3 File Offset: 0x0021A9E3
+		// Token: 0x06005D60 RID: 23904 RVA: 0x00083C81 File Offset: 0x00081E81
 		static UAutopilotRoute()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.AutopilotRoute");
 		}
 
-		// Token: 0x060172B6 RID: 94902 RVA: 0x0021C7F1 File Offset: 0x0021A9F1
+		// Token: 0x06005D61 RID: 23905 RVA: 0x00083C8F File Offset: 0x00081E8F
 		protected UAutopilotRoute(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C8FB RID: 51451
+		// Token: 0x040026E4 RID: 9956
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.AutopilotRoute";
 
-		// Token: 0x0400C8FC RID: 51452
+		// Token: 0x040026E5 RID: 9957
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C8FD RID: 51453
+		// Token: 0x040026E6 RID: 9958
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C8FE RID: 51454
+		// Token: 0x040026E7 RID: 9959
 		internal static int __PropertyOffset_RoadSpline;
 
-		// Token: 0x0400C8FF RID: 51455
+		// Token: 0x040026E8 RID: 9960
 		internal static int __PropertyOffset_RoadSegmentInfos;
 
-		// Token: 0x0400C900 RID: 51456
+		// Token: 0x040026E9 RID: 9961
 		[Nullable(new byte[]
 		{
 			2,
@@ -153,56 +149,56 @@ namespace UnrealEngine
 		})]
 		private TArray<FRoadSegmentInfo> _RoadSegmentInfos;
 
-		// Token: 0x0400C901 RID: 51457
+		// Token: 0x040026EA RID: 9962
 		private static IntPtr __GetRoadSegmentInfoByKey_NativeFunctionPtr;
 
-		// Token: 0x0400C902 RID: 51458
+		// Token: 0x040026EB RID: 9963
 		private static IntPtr __GetRoadSegmentInfoByAlongDistance_NativeFunctionPtr;
 
-		// Token: 0x0400C903 RID: 51459
+		// Token: 0x040026EC RID: 9964
 		private static IntPtr __D_GetRoadSegmentInfoByWorldPosition_NativeFunctionPtr;
 
-		// Token: 0x0400C904 RID: 51460
+		// Token: 0x040026ED RID: 9965
 		private static IntPtr __Clear_NativeFunctionPtr;
 
-		// Token: 0x02002F92 RID: 12178
+		// Token: 0x02000AB5 RID: 2741
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetRoadSegmentInfoByKey_FunctionParams
 		{
-			// Token: 0x04016B5C RID: 93020
+			// Token: 0x04005B19 RID: 23321
 			[FieldOffset(0)]
 			public float Key;
 
-			// Token: 0x04016B5D RID: 93021
+			// Token: 0x04005B1A RID: 23322
 			[FieldOffset(8)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002F93 RID: 12179
+		// Token: 0x02000AB6 RID: 2742
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetRoadSegmentInfoByAlongDistance_FunctionParams
 		{
-			// Token: 0x04016B5E RID: 93022
+			// Token: 0x04005B1B RID: 23323
 			[FieldOffset(0)]
 			public float Distance;
 
-			// Token: 0x04016B5F RID: 93023
+			// Token: 0x04005B1C RID: 23324
 			[FieldOffset(8)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002F94 RID: 12180
+		// Token: 0x02000AB7 RID: 2743
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __D_GetRoadSegmentInfoByWorldPosition_FunctionParams
 		{
-			// Token: 0x04016B60 RID: 93024
+			// Token: 0x04005B1D RID: 23325
 			[FieldOffset(0)]
 			public FVectorDouble Position;
 
-			// Token: 0x04016B61 RID: 93025
+			// Token: 0x04005B1E RID: 23326
 			[FieldOffset(24)]
 			public IntPtr __Result;
 		}

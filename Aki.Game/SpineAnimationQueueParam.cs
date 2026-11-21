@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019AA RID: 6570
+// Token: 0x02000E68 RID: 3688
 [NullableContext(1)]
 [Nullable(0)]
 public class SpineAnimationQueueParam : ISpineAnimationQueueParam
 {
-	// Token: 0x1700100F RID: 4111
-	// (get) Token: 0x0600BF9F RID: 49055 RVA: 0x002B4171 File Offset: 0x002B2371
-	// (set) Token: 0x0600BFA0 RID: 49056 RVA: 0x002B4179 File Offset: 0x002B2379
+	// Token: 0x17001034 RID: 4148
+	// (get) Token: 0x060093A9 RID: 37801 RVA: 0x002BF101 File Offset: 0x002BD301
+	// (set) Token: 0x060093AA RID: 37802 RVA: 0x002BF109 File Offset: 0x002BD309
 	public int LayerIndex { get; set; }
 
-	// Token: 0x17001010 RID: 4112
-	// (get) Token: 0x0600BFA1 RID: 49057 RVA: 0x002B4182 File Offset: 0x002B2382
-	// (set) Token: 0x0600BFA2 RID: 49058 RVA: 0x002B418A File Offset: 0x002B238A
+	// Token: 0x17001035 RID: 4149
+	// (get) Token: 0x060093AB RID: 37803 RVA: 0x002BF112 File Offset: 0x002BD312
+	// (set) Token: 0x060093AC RID: 37804 RVA: 0x002BF11A File Offset: 0x002BD31A
 	public string AnimationName { get; set; } = "";
 
-	// Token: 0x17001011 RID: 4113
-	// (get) Token: 0x0600BFA3 RID: 49059 RVA: 0x002B4193 File Offset: 0x002B2393
-	// (set) Token: 0x0600BFA4 RID: 49060 RVA: 0x002B419B File Offset: 0x002B239B
+	// Token: 0x17001036 RID: 4150
+	// (get) Token: 0x060093AD RID: 37805 RVA: 0x002BF123 File Offset: 0x002BD323
+	// (set) Token: 0x060093AE RID: 37806 RVA: 0x002BF12B File Offset: 0x002BD32B
 	public bool Loop { get; set; }
 }

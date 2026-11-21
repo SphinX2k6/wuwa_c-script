@@ -19,24 +19,24 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x0200144E RID: 5198
+// Token: 0x02000902 RID: 2306
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityRegressController : ActivityControllerBase
 {
-	// Token: 0x060092E6 RID: 37606 RVA: 0x001F87D2 File Offset: 0x001F69D2
+	// Token: 0x0600667B RID: 26235 RVA: 0x0020130E File Offset: 0x001FF50E
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060092E7 RID: 37607 RVA: 0x001F87D5 File Offset: 0x001F69D5
+	// Token: 0x0600667C RID: 26236 RVA: 0x00201311 File Offset: 0x001FF511
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060092E8 RID: 37608 RVA: 0x001F87D8 File Offset: 0x001F69D8
+	// Token: 0x0600667D RID: 26237 RVA: 0x00201314 File Offset: 0x001FF514
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -45,7 +45,7 @@ public class ActivityRegressController : ActivityControllerBase
 		EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x060092E9 RID: 37609 RVA: 0x001F8858 File Offset: 0x001F6A58
+	// Token: 0x0600667E RID: 26238 RVA: 0x00201394 File Offset: 0x001FF594
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -54,47 +54,47 @@ public class ActivityRegressController : ActivityControllerBase
 		EventSystem.Instance.Remove<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x060092EA RID: 37610 RVA: 0x001F88D5 File Offset: 0x001F6AD5
+	// Token: 0x0600667F RID: 26239 RVA: 0x00201411 File Offset: 0x001FF611
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.RegressActivityTrialRoleUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.RegressActivityTrialRoleUpdateNotify));
 		Net.Instance.Register(ENotifyMessageId.RegressTrialRoleUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.RegressTrialRoleUnlockNotify));
 	}
 
-	// Token: 0x060092EB RID: 37611 RVA: 0x001F890F File Offset: 0x001F6B0F
+	// Token: 0x06006680 RID: 26240 RVA: 0x0020144B File Offset: 0x001FF64B
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.RegressActivityTrialRoleUpdateNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.RegressTrialRoleUnlockNotify);
 	}
 
-	// Token: 0x060092EC RID: 37612 RVA: 0x001F8931 File Offset: 0x001F6B31
+	// Token: 0x06006681 RID: 26241 RVA: 0x0020146D File Offset: 0x001FF66D
 	protected override bool OnClear()
 	{
 		this.ActivityStartConditionMap.Clear();
 		return true;
 	}
 
-	// Token: 0x060092ED RID: 37613 RVA: 0x001F893F File Offset: 0x001F6B3F
+	// Token: 0x06006682 RID: 26242 RVA: 0x0020147B File Offset: 0x001FF67B
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_CircumfluenceMain30";
 	}
 
-	// Token: 0x060092EE RID: 37614 RVA: 0x001F8946 File Offset: 0x001F6B46
+	// Token: 0x06006683 RID: 26243 RVA: 0x00201482 File Offset: 0x001FF682
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		ActivityRegressModel.Instance.ActivityId = data.Id;
 		return new ActivityRegressData();
 	}
 
-	// Token: 0x060092EF RID: 37615 RVA: 0x001F895D File Offset: 0x001F6B5D
+	// Token: 0x06006684 RID: 26244 RVA: 0x00201499 File Offset: 0x001FF699
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivityRegress30MainView();
 	}
 
-	// Token: 0x060092F0 RID: 37616 RVA: 0x001F8964 File Offset: 0x001F6B64
+	// Token: 0x06006685 RID: 26245 RVA: 0x002014A0 File Offset: 0x001FF6A0
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		foreach (EUiViewName viewName in new EUiViewName[]
@@ -110,13 +110,13 @@ public class ActivityRegressController : ActivityControllerBase
 		return false;
 	}
 
-	// Token: 0x060092F1 RID: 37617 RVA: 0x001F89AA File Offset: 0x001F6BAA
+	// Token: 0x06006686 RID: 26246 RVA: 0x002014E6 File Offset: 0x001FF6E6
 	public void RequestClaimSignReward(int rewardId)
 	{
 		this.RegressTaskRewardRequest(rewardId, RegressTaskTypeEnum.SignReward);
 	}
 
-	// Token: 0x060092F2 RID: 37618 RVA: 0x001F89B4 File Offset: 0x001F6BB4
+	// Token: 0x06006687 RID: 26247 RVA: 0x002014F0 File Offset: 0x001FF6F0
 	public void RequestClaimQuestionnaireReward(ERegressQuestionnaireType type)
 	{
 		RegressInvestigation? regressQuestionnaireConfig = ActivityRegressConfig.Instance.GetRegressQuestionnaireConfig(type);
@@ -127,7 +127,7 @@ public class ActivityRegressController : ActivityControllerBase
 		this.RegressTaskRewardRequest(regressQuestionnaireConfig.Value.Id, RegressTaskTypeEnum.Questionnaire);
 	}
 
-	// Token: 0x060092F3 RID: 37619 RVA: 0x001F89F0 File Offset: 0x001F6BF0
+	// Token: 0x06006688 RID: 26248 RVA: 0x0020152C File Offset: 0x001FF72C
 	public void RequestClaimScoreReward(List<int> rewardIds)
 	{
 		ActivityRegressController.<>c__DisplayClass15_0 CS$<>8__locals1 = new ActivityRegressController.<>c__DisplayClass15_0();
@@ -139,13 +139,13 @@ public class ActivityRegressController : ActivityControllerBase
 		Net.Instance.Call(ERequestMessageId.RegressBonusRequest, regressBonusRequest, new Action<IMessage, Net.CallbackStatus>(CS$<>8__locals1.<RequestClaimScoreReward>g__Response|0), 0);
 	}
 
-	// Token: 0x060092F4 RID: 37620 RVA: 0x001F8A50 File Offset: 0x001F6C50
+	// Token: 0x06006689 RID: 26249 RVA: 0x0020158C File Offset: 0x001FF78C
 	public void RequestClaimTaskReward(int taskId)
 	{
 		this.RegressTaskRewardRequest(taskId, RegressTaskTypeEnum.TaskReward);
 	}
 
-	// Token: 0x060092F5 RID: 37621 RVA: 0x001F8A5C File Offset: 0x001F6C5C
+	// Token: 0x0600668A RID: 26250 RVA: 0x00201598 File Offset: 0x001FF798
 	private void RegressTaskRewardRequest(int taskId, RegressTaskTypeEnum rewardType)
 	{
 		int activityId = ActivityRegressModel.Instance.ActivityId;
@@ -159,7 +159,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060092F6 RID: 37622 RVA: 0x001F8AC0 File Offset: 0x001F6CC0
+	// Token: 0x0600668B RID: 26251 RVA: 0x002015FC File Offset: 0x001FF7FC
 	public void RequestClaimAllTaskReward()
 	{
 		List<RegressQuest> list = ActivityRegressModel.Instance.ActivityData.GetRegressTaskListByType(ERegressTaskType.Constant) ?? new List<RegressQuest>();
@@ -196,7 +196,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060092F7 RID: 37623 RVA: 0x001F8BCC File Offset: 0x001F6DCC
+	// Token: 0x0600668C RID: 26252 RVA: 0x00201708 File Offset: 0x001FF908
 	public UniTask RequestGachaInfo()
 	{
 		ActivityRegressController.<RequestGachaInfo>d__19 <RequestGachaInfo>d__;
@@ -206,7 +206,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return <RequestGachaInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060092F8 RID: 37624 RVA: 0x001F8C08 File Offset: 0x001F6E08
+	// Token: 0x0600668D RID: 26253 RVA: 0x00201744 File Offset: 0x001FF944
 	public void RegressSetCurUseTrialRoleRequest(int roleId, Action<int> callback)
 	{
 		RegressSetCurUseTrialRoleRequest regressSetCurUseTrialRoleRequest = Aki.Protocol.RegressSetCurUseTrialRoleRequest.Create();
@@ -217,7 +217,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060092F9 RID: 37625 RVA: 0x001F8C4C File Offset: 0x001F6E4C
+	// Token: 0x0600668E RID: 26254 RVA: 0x00201788 File Offset: 0x001FF988
 	[NullableContext(2)]
 	private void RegressActivityTrialRoleUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -237,7 +237,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060092FA RID: 37626 RVA: 0x001F8CC0 File Offset: 0x001F6EC0
+	// Token: 0x0600668F RID: 26255 RVA: 0x002017FC File Offset: 0x001FF9FC
 	[NullableContext(2)]
 	private void RegressTrialRoleUnlockNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -247,7 +247,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060092FB RID: 37627 RVA: 0x001F8D14 File Offset: 0x001F6F14
+	// Token: 0x06006690 RID: 26256 RVA: 0x00201850 File Offset: 0x001FFA50
 	[NullableContext(2)]
 	private void UpdateActivatedTrialRoleInternal(int roleId, roleInfo trialRoleInfo = null)
 	{
@@ -264,7 +264,7 @@ public class ActivityRegressController : ActivityControllerBase
 		TrialRoleModel.Instance.SetGroupTrialRoleId(roleId, trialRoleInfo);
 	}
 
-	// Token: 0x060092FC RID: 37628 RVA: 0x001F8D78 File Offset: 0x001F6F78
+	// Token: 0x06006691 RID: 26257 RVA: 0x002018B4 File Offset: 0x001FFAB4
 	public void RegressTrialRoleLvUpRequest(int trialRoleId)
 	{
 		RegressTrialRoleLvUpRequest regressTrialRoleLvUpRequest = Aki.Protocol.RegressTrialRoleLvUpRequest.Create();
@@ -284,14 +284,14 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060092FD RID: 37629 RVA: 0x001F8DAF File Offset: 0x001F6FAF
+	// Token: 0x06006692 RID: 26258 RVA: 0x002018EB File Offset: 0x001FFAEB
 	private void OnWorldDone()
 	{
 		this.ActivityStartConditionMap[ERecallStartCondition.WorldDone] = true;
 		this.CheckIsStart(false);
 	}
 
-	// Token: 0x060092FE RID: 37630 RVA: 0x001F8DC8 File Offset: 0x001F6FC8
+	// Token: 0x06006693 RID: 26259 RVA: 0x00201904 File Offset: 0x001FFB04
 	private void OnActivityUpdate()
 	{
 		bool isActivityRecallReady = ActivityRegressModel.Instance.IsActivityRecallReady;
@@ -305,7 +305,7 @@ public class ActivityRegressController : ActivityControllerBase
 		this.CheckIsStart(true);
 	}
 
-	// Token: 0x060092FF RID: 37631 RVA: 0x001F8E40 File Offset: 0x001F7040
+	// Token: 0x06006694 RID: 26260 RVA: 0x0020197C File Offset: 0x001FFB7C
 	private void CheckIsStart(bool isInstantly = false)
 	{
 		bool flag = true;
@@ -335,7 +335,7 @@ public class ActivityRegressController : ActivityControllerBase
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, isInstantly);
 	}
 
-	// Token: 0x06009300 RID: 37632 RVA: 0x001F8F0C File Offset: 0x001F710C
+	// Token: 0x06006695 RID: 26261 RVA: 0x00201A48 File Offset: 0x001FFC48
 	private void OnInventoryUpdate(int configId, int count)
 	{
 		if (ActivityRegressModel.Instance.ActivityData != null && 20 == configId)
@@ -358,7 +358,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009301 RID: 37633 RVA: 0x001F9044 File Offset: 0x001F7244
+	// Token: 0x06006696 RID: 26262 RVA: 0x00201B80 File Offset: 0x001FFD80
 	public void OpenQuestionnaire(ERegressQuestionnaireType type)
 	{
 		Log instance = Log.Instance;
@@ -379,7 +379,7 @@ public class ActivityRegressController : ActivityControllerBase
 		KuroSdkController.Instance.SdkOpenUrlWnd(title, questionnaireUrl, isLandscape, false, true);
 	}
 
-	// Token: 0x06009302 RID: 37634 RVA: 0x001F90BC File Offset: 0x001F72BC
+	// Token: 0x06006697 RID: 26263 RVA: 0x00201BF8 File Offset: 0x001FFDF8
 	public void RequestQuestionOpen(ERegressQuestionnaireType type)
 	{
 		RegressInvestigation? regressQuestionnaireConfig = ActivityRegressConfig.Instance.GetRegressQuestionnaireConfig(type);
@@ -396,7 +396,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06009303 RID: 37635 RVA: 0x001F9128 File Offset: 0x001F7328
+	// Token: 0x06006698 RID: 26264 RVA: 0x00201C64 File Offset: 0x001FFE64
 	public UniTask NewTrialRoleGetNightmarePhantomInstInfoRequest()
 	{
 		ActivityRegressController.<NewTrialRoleGetNightmarePhantomInstInfoRequest>d__31 <NewTrialRoleGetNightmarePhantomInstInfoRequest>d__;
@@ -406,7 +406,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return <NewTrialRoleGetNightmarePhantomInstInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009304 RID: 37636 RVA: 0x001F9164 File Offset: 0x001F7364
+	// Token: 0x06006699 RID: 26265 RVA: 0x00201CA0 File Offset: 0x001FFEA0
 	public string GetQuestionnaireUrl(ERegressQuestionnaireType type)
 	{
 		RegressInvestigation value = ActivityRegressConfig.Instance.GetRegressQuestionnaireConfig(type).Value;
@@ -437,7 +437,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06009305 RID: 37637 RVA: 0x001F92A0 File Offset: 0x001F74A0
+	// Token: 0x0600669A RID: 26266 RVA: 0x00201DDC File Offset: 0x001FFFDC
 	public void RequestAllTaskScoreRewards()
 	{
 		IReadOnlyList<RegressBonusReward> sortedRegressBonusRewardConfigList = ActivityRegressModel.Instance.ActivityData.GetSortedRegressBonusRewardConfigList();
@@ -464,7 +464,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009306 RID: 37638 RVA: 0x001F9350 File Offset: 0x001F7550
+	// Token: 0x0600669B RID: 26267 RVA: 0x00201E8C File Offset: 0x0020008C
 	public unsafe bool JumpByQuestConfig(RegressQuest config)
 	{
 		ERegressTaskType taskType = (ERegressTaskType)config.TaskType;
@@ -499,7 +499,7 @@ public class ActivityRegressController : ActivityControllerBase
 		{
 			if (taskType == ERegressTaskType.Daily)
 			{
-				AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DailyActivityTabView), null, null);
+				AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DailyActivityTabView), null, null, null);
 				return true;
 			}
 			Log instance = Log.Instance;
@@ -515,7 +515,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009307 RID: 37639 RVA: 0x001F9478 File Offset: 0x001F7678
+	// Token: 0x0600669C RID: 26268 RVA: 0x00201FC0 File Offset: 0x002001C0
 	private bool JumpToMainlineQuest(RegressQuest config)
 	{
 		int? firstUnFinishMainQuestId = ActivityRegressModel.Instance.GetFirstUnFinishMainQuestId();
@@ -528,7 +528,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009308 RID: 37640 RVA: 0x001F94CC File Offset: 0x001F76CC
+	// Token: 0x0600669D RID: 26269 RVA: 0x00202014 File Offset: 0x00200214
 	private bool JumpToRoleQuest(RegressQuest config)
 	{
 		global::RoleQuest firstShowRoleQuest = ActivityRegressModel.Instance.GetFirstShowRoleQuest();
@@ -541,7 +541,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009309 RID: 37641 RVA: 0x001F951C File Offset: 0x001F771C
+	// Token: 0x0600669E RID: 26270 RVA: 0x00202064 File Offset: 0x00200264
 	public bool ExploreJump()
 	{
 		ExploreAreaData firstUnlockArea = this.GetFirstUnlockArea();
@@ -567,7 +567,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600930A RID: 37642 RVA: 0x001F95C4 File Offset: 0x001F77C4
+	// Token: 0x0600669F RID: 26271 RVA: 0x0020210C File Offset: 0x0020030C
 	[NullableContext(2)]
 	public unsafe ExploreAreaData GetFirstUnlockArea()
 	{
@@ -628,7 +628,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return null;
 	}
 
-	// Token: 0x0600930B RID: 37643 RVA: 0x001F980C File Offset: 0x001F7A0C
+	// Token: 0x060066A0 RID: 26272 RVA: 0x00202354 File Offset: 0x00200554
 	public void RegressDisposableRewardRequest()
 	{
 		RegressDisposableRewardRequest message = Aki.Protocol.RegressDisposableRewardRequest.Create();
@@ -638,13 +638,13 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600930C RID: 37644 RVA: 0x001F984F File Offset: 0x001F7A4F
+	// Token: 0x060066A1 RID: 26273 RVA: 0x00202397 File Offset: 0x00200597
 	public bool IsNeedExtraRewardView()
 	{
 		return ActivityRegressModel.Instance.NeedShowExtraRewardView;
 	}
 
-	// Token: 0x0600930D RID: 37645 RVA: 0x001F985C File Offset: 0x001F7A5C
+	// Token: 0x060066A2 RID: 26274 RVA: 0x002023A4 File Offset: 0x002005A4
 	public RewardData<IBattlePassExtraRewardInfo> BuildExtraRewardData(List<RewardItemData> rewardItemDataList)
 	{
 		List<RewardItemData> list = new List<RewardItemData>();
@@ -712,7 +712,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return new RewardData<IBattlePassExtraRewardInfo>(battlePassExtraRewardInfo, null);
 	}
 
-	// Token: 0x0600930E RID: 37646 RVA: 0x001F9AA8 File Offset: 0x001F7CA8
+	// Token: 0x060066A3 RID: 26275 RVA: 0x002025F0 File Offset: 0x002007F0
 	public void RequestBuyBattlePassLevel(int level)
 	{
 		RegressBuyBonusLvRequest regressBuyBonusLvRequest = RegressBuyBonusLvRequest.Create();
@@ -723,7 +723,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600930F RID: 37647 RVA: 0x001F9AF2 File Offset: 0x001F7CF2
+	// Token: 0x060066A4 RID: 26276 RVA: 0x0020263A File Offset: 0x0020083A
 	private void OnPayItemSuccess(PayItemSuccess notify)
 	{
 		if (notify.PayItemId == 46)
@@ -734,7 +734,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009310 RID: 37648 RVA: 0x001F9B30 File Offset: 0x001F7D30
+	// Token: 0x060066A5 RID: 26277 RVA: 0x00202678 File Offset: 0x00200878
 	public static void OpenGameIntroductionByRoleId(int roleId)
 	{
 		string text = ChannelModel.Instance.GameIntroductionUrl;
@@ -759,7 +759,7 @@ public class ActivityRegressController : ActivityControllerBase
 		KuroSdkController.Instance.OpenWebView("", url, true, true, true, "Default");
 	}
 
-	// Token: 0x06009311 RID: 37649 RVA: 0x001F9BDC File Offset: 0x001F7DDC
+	// Token: 0x060066A6 RID: 26278 RVA: 0x00202724 File Offset: 0x00200924
 	public void OpenTrialRoleView(int? selectedGroupId = null)
 	{
 		NewPlayerSupportTrialRoleViewModel newPlayerSupportTrialRoleViewModel = new NewPlayerSupportTrialRoleViewModel(ETrialRoleType.ReturnSupportTrial, ConfigCommonParamById.GetStringConfig("NewPlayerSupportTrialRoleIcon"), ConfigCommonParamById.GetStringConfig("NewPlayerSupportTrialRoleTitle"), 465, selectedGroupId);
@@ -770,7 +770,7 @@ public class ActivityRegressController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityNewPlayerSupportTrialRoleView, newPlayerSupportTrialRoleViewModel, null);
 	}
 
-	// Token: 0x06009312 RID: 37650 RVA: 0x001F9C54 File Offset: 0x001F7E54
+	// Token: 0x060066A7 RID: 26279 RVA: 0x0020279C File Offset: 0x0020099C
 	public static void RegressStartJumpToActivity(Action callback)
 	{
 		bool flag = UiManager.Instance.IsViewOpen(EUiViewName.ActivityRegressNewVersionMainView);
@@ -784,8 +784,8 @@ public class ActivityRegressController : ActivityControllerBase
 		});
 	}
 
-	// Token: 0x17000CD4 RID: 3284
-	// (get) Token: 0x06009313 RID: 37651 RVA: 0x001F9CA3 File Offset: 0x001F7EA3
+	// Token: 0x17000CF4 RID: 3316
+	// (get) Token: 0x060066A8 RID: 26280 RVA: 0x002027EB File Offset: 0x002009EB
 	public static ActivityRegressController Instance
 	{
 		get
@@ -794,7 +794,7 @@ public class ActivityRegressController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009314 RID: 37652 RVA: 0x001F9CAA File Offset: 0x001F7EAA
+	// Token: 0x060066A9 RID: 26281 RVA: 0x002027F2 File Offset: 0x002009F2
 	public static ActivityRegressController GetOrCreateInstance()
 	{
 		if (ActivityRegressController._Instance == null)
@@ -804,7 +804,7 @@ public class ActivityRegressController : ActivityControllerBase
 		return ActivityRegressController._Instance;
 	}
 
-	// Token: 0x06009315 RID: 37653 RVA: 0x001F9CBE File Offset: 0x001F7EBE
+	// Token: 0x060066AA RID: 26282 RVA: 0x00202806 File Offset: 0x00200A06
 	public static bool CreateInstance()
 	{
 		if (ActivityRegressController._Instance != null)
@@ -815,24 +815,24 @@ public class ActivityRegressController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009316 RID: 37654 RVA: 0x001F9CD4 File Offset: 0x001F7ED4
+	// Token: 0x060066AB RID: 26283 RVA: 0x0020281C File Offset: 0x00200A1C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009317 RID: 37655 RVA: 0x001F9CD6 File Offset: 0x001F7ED6
+	// Token: 0x060066AC RID: 26284 RVA: 0x0020281E File Offset: 0x00200A1E
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRegressController._Instance = null;
 	}
 
-	// Token: 0x06009318 RID: 37656 RVA: 0x001F9CDE File Offset: 0x001F7EDE
+	// Token: 0x060066AD RID: 26285 RVA: 0x00202826 File Offset: 0x00200A26
 	static ActivityRegressController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRegressController.CreateStaticDefaultValue), new Action(ActivityRegressController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600931A RID: 37658 RVA: 0x001F9D10 File Offset: 0x001F7F10
+	// Token: 0x060066AF RID: 26287 RVA: 0x00202858 File Offset: 0x00200A58
 	[NullableContext(2)]
 	[CompilerGenerated]
 	internal static void <RegressTaskRewardRequest>g__Response|17_0(RegressTaskResponse response, Net.CallbackStatus _)
@@ -848,7 +848,7 @@ public class ActivityRegressController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x0600931B RID: 37659 RVA: 0x001F9D46 File Offset: 0x001F7F46
+	// Token: 0x060066B0 RID: 26288 RVA: 0x0020288E File Offset: 0x00200A8E
 	[NullableContext(2)]
 	[CompilerGenerated]
 	internal static void <RequestClaimAllTaskReward>g__Response|18_0(RegressRepeatedTaskResponse response, Net.CallbackStatus _)
@@ -864,7 +864,7 @@ public class ActivityRegressController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x0600931D RID: 37661 RVA: 0x001F9DCC File Offset: 0x001F7FCC
+	// Token: 0x060066B2 RID: 26290 RVA: 0x00202914 File Offset: 0x00200B14
 	[NullableContext(2)]
 	[CompilerGenerated]
 	internal static void <RegressDisposableRewardRequest>g__Response|39_0(RegressDisposableRewardResponse response, Net.CallbackStatus _)
@@ -882,13 +882,13 @@ public class ActivityRegressController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x04004107 RID: 16647
+	// Token: 0x0400419F RID: 16799
 	private const int BP_REMINDER_INTERVAL = 5;
 
-	// Token: 0x04004108 RID: 16648
+	// Token: 0x040041A0 RID: 16800
 	private readonly Dictionary<ERecallStartCondition, bool> ActivityStartConditionMap = new Dictionary<ERecallStartCondition, bool>();
 
-	// Token: 0x04004109 RID: 16649
+	// Token: 0x040041A1 RID: 16801
 	[Nullable(2)]
 	private static ActivityRegressController _Instance;
 }

@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView
 {
-	// Token: 0x02004CEA RID: 19690
+	// Token: 0x02003C9C RID: 15516
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleAttributeTabView : UiTabViewBase
 	{
-		// Token: 0x06032D9F RID: 208287 RVA: 0x00BD98E0 File Offset: 0x00BD7AE0
+		// Token: 0x06027B7A RID: 162682 RVA: 0x00B1F1E8 File Offset: 0x00B1D3E8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,27 +65,27 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			};
 		}
 
-		// Token: 0x06032DA0 RID: 208288 RVA: 0x00BD9BFA File Offset: 0x00BD7DFA
+		// Token: 0x06027B7B RID: 162683 RVA: 0x00B1F502 File Offset: 0x00B1D702
 		protected void DetailClick()
 		{
 			this.UpdateAttrList();
 		}
 
-		// Token: 0x06032DA1 RID: 208289 RVA: 0x00BD9C04 File Offset: 0x00BD7E04
+		// Token: 0x06027B7C RID: 162684 RVA: 0x00B1F50C File Offset: 0x00B1D70C
 		protected void LevelUpClick(int _)
 		{
 			RoleViewViewModel viewModel = new RoleViewViewModel(this.RoleInstance.GetRoleId(), false, ERoleViewSource.Normal);
 			RoleController.Instance.OpenRoleViewByViewModel(EUiViewName.RoleLevelUpView, viewModel);
 		}
 
-		// Token: 0x06032DA2 RID: 208290 RVA: 0x00BD9C34 File Offset: 0x00BD7E34
+		// Token: 0x06027B7D RID: 162685 RVA: 0x00B1F53C File Offset: 0x00B1D73C
 		protected void BreakthroughClick(int _)
 		{
 			RoleViewViewModel viewModel = new RoleViewViewModel(this.RoleInstance.GetRoleId(), false, ERoleViewSource.Normal);
 			RoleController.Instance.OpenRoleViewByViewModel(EUiViewName.RoleBreachView, viewModel);
 		}
 
-		// Token: 0x06032DA3 RID: 208291 RVA: 0x00BD9C64 File Offset: 0x00BD7E64
+		// Token: 0x06027B7E RID: 162686 RVA: 0x00B1F56C File Offset: 0x00B1D76C
 		protected void RoleChangeClick()
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			UiManager.Instance.OpenView(EUiViewName.RoleElementView, this.RoleViewAgent, null);
 		}
 
-		// Token: 0x06032DA4 RID: 208292 RVA: 0x00BD9CC8 File Offset: 0x00BD7EC8
+		// Token: 0x06027B7F RID: 162687 RVA: 0x00B1F5D0 File Offset: 0x00B1D7D0
 		protected void RoleTagClick()
 		{
 			RoleInfo roleConfig = this.RoleInstance.GetRoleConfig();
@@ -110,14 +110,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			UiManager.Instance.OpenView(EUiViewName.RoleTagDetailView, roleTagByRoleInfo, null);
 		}
 
-		// Token: 0x06032DA5 RID: 208293 RVA: 0x00BD9D00 File Offset: 0x00BD7F00
+		// Token: 0x06027B80 RID: 162688 RVA: 0x00B1F608 File Offset: 0x00B1D808
 		protected void OnRoleSkinClick()
 		{
 			int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
 			SkinController.Instance.SkipToSkinView(curSelectRoleId, EUiTabViewName.RoleSkinTabView, false, -1, null, null, null);
 		}
 
-		// Token: 0x06032DA6 RID: 208294 RVA: 0x00BD9D40 File Offset: 0x00BD7F40
+		// Token: 0x06027B81 RID: 162689 RVA: 0x00B1F648 File Offset: 0x00B1D848
 		protected void TeachClick()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06032DA7 RID: 208295 RVA: 0x00BD9E90 File Offset: 0x00BD8090
+		// Token: 0x06027B82 RID: 162690 RVA: 0x00B1F798 File Offset: 0x00B1D998
 		protected override void OnStart()
 		{
 			this.RoleViewAgent = (this.ExtraParams as RoleViewAgent);
@@ -207,21 +207,21 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.RoleTagLayout = new GenericLayout<RoleTagSmallIconItem, int>(base.GetHorizontalLayout(17), new Func<RoleTagSmallIconItem>(this.InitRoleTagItem), null, false, true);
 		}
 
-		// Token: 0x06032DA8 RID: 208296 RVA: 0x00BD9FB0 File Offset: 0x00BD81B0
+		// Token: 0x06027B83 RID: 162691 RVA: 0x00B1F8B8 File Offset: 0x00B1DAB8
 		[NullableContext(1)]
 		private StarItem InitStarItem()
 		{
 			return new StarItem();
 		}
 
-		// Token: 0x06032DA9 RID: 208297 RVA: 0x00BD9FB7 File Offset: 0x00BD81B7
+		// Token: 0x06027B84 RID: 162692 RVA: 0x00B1F8BF File Offset: 0x00B1DABF
 		[NullableContext(1)]
 		private RoleTagSmallIconItem InitRoleTagItem()
 		{
 			return new RoleTagSmallIconItem();
 		}
 
-		// Token: 0x06032DAA RID: 208298 RVA: 0x00BD9FC0 File Offset: 0x00BD81C0
+		// Token: 0x06027B85 RID: 162693 RVA: 0x00B1F8C8 File Offset: 0x00B1DAC8
 		private void InitAttributeItemList()
 		{
 			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("RoleAttributeDisplay6");
@@ -255,27 +255,27 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DAB RID: 208299 RVA: 0x00BDA06C File Offset: 0x00BD826C
+		// Token: 0x06027B86 RID: 162694 RVA: 0x00B1F974 File Offset: 0x00B1DB74
 		protected override void AddEventListener()
 		{
-			EventSystem.Instance.Add(EEventName.RoleInfoUpdate, new Action(this.OnRoleInfoUpdate));
+			EventSystem.Instance.Add<int>(EEventName.RoleInfoUpdate, new Action<int>(this.OnRoleInfoUpdate));
 			EventSystem.Instance.Add<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.ChangeRoleEvent));
 			EventSystem.Instance.Add<int, int, int>(EEventName.RoleLevelUp, new Action<int, int, int>(this.OnRoleLevelUp));
 			EventSystem.Instance.Add<int>(EEventName.ActiveRole, new Action<int>(this.ActiveRoleEvent));
 			EventSystem.Instance.Add(EEventName.RoleRefreshName, new Action(this.RefreshNameEvent));
 		}
 
-		// Token: 0x06032DAC RID: 208300 RVA: 0x00BDA108 File Offset: 0x00BD8308
+		// Token: 0x06027B87 RID: 162695 RVA: 0x00B1FA10 File Offset: 0x00B1DC10
 		protected override void RemoveEventListener()
 		{
-			EventSystem.Instance.Remove(EEventName.RoleInfoUpdate, new Action(this.OnRoleInfoUpdate));
+			EventSystem.Instance.Remove(EEventName.RoleInfoUpdate, new Action<int>(this.OnRoleInfoUpdate));
 			EventSystem.Instance.Remove(EEventName.RoleSystemChangeRole, new Action<int>(this.ChangeRoleEvent));
 			EventSystem.Instance.Remove(EEventName.RoleLevelUp, new Action<int, int, int>(this.OnRoleLevelUp));
 			EventSystem.Instance.Remove(EEventName.ActiveRole, new Action<int>(this.ActiveRoleEvent));
 			EventSystem.Instance.Remove(EEventName.RoleRefreshName, new Action(this.RefreshNameEvent));
 		}
 
-		// Token: 0x06032DAD RID: 208301 RVA: 0x00BDA1A1 File Offset: 0x00BD83A1
+		// Token: 0x06027B88 RID: 162696 RVA: 0x00B1FAA9 File Offset: 0x00B1DCA9
 		private void ChangeRoleEvent(int roleId)
 		{
 			this.RoleInstance = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.UpdateTeachBtn();
 		}
 
-		// Token: 0x06032DAE RID: 208302 RVA: 0x00BDA1D8 File Offset: 0x00BD83D8
+		// Token: 0x06027B89 RID: 162697 RVA: 0x00B1FAE0 File Offset: 0x00B1DCE0
 		private void UpdateTeachBtn()
 		{
 			this.LevelUpButtonItem.BindRedDot(ERedDotName.RoleAttributeTabLevelUp, this.RoleInstance.GetDataId());
@@ -307,43 +307,43 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			base.GetButton(14).GetRootComponent().SetUIActive(false);
 		}
 
-		// Token: 0x06032DAF RID: 208303 RVA: 0x00BDA2AF File Offset: 0x00BD84AF
-		private void OnRoleInfoUpdate()
+		// Token: 0x06027B8A RID: 162698 RVA: 0x00B1FBB7 File Offset: 0x00B1DDB7
+		private void OnRoleInfoUpdate(int roleId)
 		{
 			this.UpdateRoleInfo();
 		}
 
-		// Token: 0x06032DB0 RID: 208304 RVA: 0x00BDA2B7 File Offset: 0x00BD84B7
+		// Token: 0x06027B8B RID: 162699 RVA: 0x00B1FBBF File Offset: 0x00B1DDBF
 		private void OnRoleLevelUp(int i, int i1, int arg3)
 		{
 			this.UpdateRoleInfo();
 		}
 
-		// Token: 0x06032DB1 RID: 208305 RVA: 0x00BDA2BF File Offset: 0x00BD84BF
+		// Token: 0x06027B8C RID: 162700 RVA: 0x00B1FBC7 File Offset: 0x00B1DDC7
 		private void ActiveRoleEvent(int i)
 		{
 			this.PlayModelEffect();
 		}
 
-		// Token: 0x06032DB2 RID: 208306 RVA: 0x00BDA2C7 File Offset: 0x00BD84C7
+		// Token: 0x06027B8D RID: 162701 RVA: 0x00B1FBCF File Offset: 0x00B1DDCF
 		private void RefreshNameEvent()
 		{
 			this.UpdateRename();
 		}
 
-		// Token: 0x06032DB3 RID: 208307 RVA: 0x00BDA2CF File Offset: 0x00BD84CF
+		// Token: 0x06027B8E RID: 162702 RVA: 0x00B1FBD7 File Offset: 0x00B1DDD7
 		protected void PlayModelEffect()
 		{
 			UiRoleUtils.PlayRoleLevelUpEffect(this.SceneRoleActor);
 		}
 
-		// Token: 0x06032DB4 RID: 208308 RVA: 0x00BDA2DC File Offset: 0x00BD84DC
+		// Token: 0x06027B8F RID: 162703 RVA: 0x00B1FBE4 File Offset: 0x00B1DDE4
 		private void UpdateAttrList()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoleAttributeDetailView, this.RoleInstance.GetShowAttrList(), null);
 		}
 
-		// Token: 0x06032DB5 RID: 208309 RVA: 0x00BDA2FC File Offset: 0x00BD84FC
+		// Token: 0x06027B90 RID: 162704 RVA: 0x00B1FC04 File Offset: 0x00B1DE04
 		private void UpdateRoleLevel()
 		{
 			this.SetRoleLevelUpState();
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			LguiUtil.Instance.SetLocalTextNew(text, "Level_Text_New_Suffix", new <>z__ReadOnlySingleElementList<object>(levelData.GetCurrentMaxLevel()));
 		}
 
-		// Token: 0x06032DB6 RID: 208310 RVA: 0x00BDA3F4 File Offset: 0x00BD85F4
+		// Token: 0x06027B91 RID: 162705 RVA: 0x00B1FCFC File Offset: 0x00B1DEFC
 		private void UpdateRoleBreakLevel()
 		{
 			RoleLevelData levelData = this.RoleInstance.GetLevelData();
@@ -404,14 +404,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			base.GetText(8).SetText(elementInfoLocalName, true);
 		}
 
-		// Token: 0x06032DB7 RID: 208311 RVA: 0x00BDA5C0 File Offset: 0x00BD87C0
+		// Token: 0x06027B92 RID: 162706 RVA: 0x00B1FEC8 File Offset: 0x00B1E0C8
 		private void UpdateRoleTag()
 		{
 			int[] roleTagByRoleInfo = RoleModel.Instance.GetRoleTagByRoleInfo(this.RoleInstance.GetRoleConfig());
 			this.RoleTagLayout.RefreshByData(new List<int>(roleTagByRoleInfo), null, false);
 		}
 
-		// Token: 0x06032DB8 RID: 208312 RVA: 0x00BDA5F6 File Offset: 0x00BD87F6
+		// Token: 0x06027B93 RID: 162707 RVA: 0x00B1FEFE File Offset: 0x00B1E0FE
 		private void UpdateRoleInfo()
 		{
 			this.UpdateRoleLevel();
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.UpdateRoleSkinButton();
 		}
 
-		// Token: 0x06032DB9 RID: 208313 RVA: 0x00BDA630 File Offset: 0x00BD8830
+		// Token: 0x06027B94 RID: 162708 RVA: 0x00B1FF38 File Offset: 0x00B1E138
 		private void UpdateRoleChangeButton()
 		{
 			int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -446,20 +446,20 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			item.SetUIActive(flag6 && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.DirectTrainMakeRoleChange, false));
 		}
 
-		// Token: 0x06032DBA RID: 208314 RVA: 0x00BDA700 File Offset: 0x00BD8900
+		// Token: 0x06027B95 RID: 162709 RVA: 0x00B20008 File Offset: 0x00B1E208
 		private void UpdateRoleSkinButton()
 		{
 			bool flag = this.RoleViewAgent.GetCurSelectRoleData().IsTrialRole();
 			base.GetButton(21).RootUIComp.Get().SetUIActive(!flag);
 		}
 
-		// Token: 0x06032DBB RID: 208315 RVA: 0x00BDA73C File Offset: 0x00BD893C
+		// Token: 0x06027B96 RID: 162710 RVA: 0x00B20044 File Offset: 0x00B1E244
 		private void UpdateRename()
 		{
 			base.GetText(11).SetText(this.RoleInstance.GetName(null), true);
 		}
 
-		// Token: 0x06032DBC RID: 208316 RVA: 0x00BDA76C File Offset: 0x00BD896C
+		// Token: 0x06027B97 RID: 162711 RVA: 0x00B20074 File Offset: 0x00B1E274
 		private void UpdateTrial()
 		{
 			bool flag = this.RoleInstance.IsTrialRole();
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DBD RID: 208317 RVA: 0x00BDA844 File Offset: 0x00BD8A44
+		// Token: 0x06027B98 RID: 162712 RVA: 0x00B2014C File Offset: 0x00B1E34C
 		protected void UpdateButtonState()
 		{
 			if (this.RoleInstance.IsTrialRole())
@@ -519,7 +519,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.BreakthroughButtonItem.SetText(textById2);
 		}
 
-		// Token: 0x06032DBE RID: 208318 RVA: 0x00BDA944 File Offset: 0x00BD8B44
+		// Token: 0x06027B99 RID: 162713 RVA: 0x00B2024C File Offset: 0x00B1E44C
 		protected void SetRoleLevelUpState()
 		{
 			RoleLevelData levelData = this.RoleInstance.GetLevelData();
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.RoleState = ERoleState.CanLevelUp;
 		}
 
-		// Token: 0x06032DBF RID: 208319 RVA: 0x00BDA984 File Offset: 0x00BD8B84
+		// Token: 0x06027B9A RID: 162714 RVA: 0x00B2028C File Offset: 0x00B1E48C
 		protected void PlayMontageStart()
 		{
 			bool instantAttributeBlend = RoleUtils.NeedInstantAttributeBlend(this.RoleInstance.GetRoleId());
@@ -544,7 +544,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, false, false);
 		}
 
-		// Token: 0x06032DC0 RID: 208320 RVA: 0x00BDA9BC File Offset: 0x00BD8BBC
+		// Token: 0x06027B9B RID: 162715 RVA: 0x00B202C4 File Offset: 0x00B1E4C4
 		protected void PlayMontageStartWithReLoop()
 		{
 			bool instantAttributeBlend = RoleUtils.NeedInstantAttributeBlend(this.RoleInstance.GetRoleId());
@@ -552,7 +552,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Attribute_Perform, false, true, false);
 		}
 
-		// Token: 0x06032DC1 RID: 208321 RVA: 0x00BDA9F4 File Offset: 0x00BD8BF4
+		// Token: 0x06027B9C RID: 162716 RVA: 0x00B202FC File Offset: 0x00B1E4FC
 		protected void UpdateAttribute()
 		{
 			IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("RoleAttributeDisplay6");
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			}
 		}
 
-		// Token: 0x06032DC2 RID: 208322 RVA: 0x00BDAA50 File Offset: 0x00BD8C50
+		// Token: 0x06027B9D RID: 162717 RVA: 0x00B20358 File Offset: 0x00B1E558
 		protected override void OnBeforeShow()
 		{
 			this.RoleInstance = this.RoleViewAgent.GetCurSelectRoleData();
@@ -575,20 +575,20 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.LevelUpButtonItem.BindRedDot(ERedDotName.RoleAttributeTabLevelUp, this.RoleInstance.GetDataId());
 		}
 
-		// Token: 0x06032DC3 RID: 208323 RVA: 0x00BDAA87 File Offset: 0x00BD8C87
+		// Token: 0x06027B9E RID: 162718 RVA: 0x00B2038F File Offset: 0x00B1E58F
 		protected override void OnAfterShow()
 		{
 			this.PlayMontageStart();
 		}
 
-		// Token: 0x06032DC4 RID: 208324 RVA: 0x00BDAA8F File Offset: 0x00BD8C8F
+		// Token: 0x06027B9F RID: 162719 RVA: 0x00B20397 File Offset: 0x00B1E597
 		protected override void OnBeforeHide()
 		{
 			this.LevelUpButtonItem.UnBindRedDot();
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RoleSkin, null, 0);
 		}
 
-		// Token: 0x06032DC5 RID: 208325 RVA: 0x00BDAAAC File Offset: 0x00BD8CAC
+		// Token: 0x06027BA0 RID: 162720 RVA: 0x00B203B4 File Offset: 0x00B1E5B4
 		protected override void OnBeforeDestroy()
 		{
 			foreach (AttributeItem attributeItem in this.AttributeItemList)
@@ -599,29 +599,29 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 			this.LevelUpButtonItem = null;
 		}
 
-		// Token: 0x0401B0E3 RID: 110819
+		// Token: 0x04015A68 RID: 88680
 		private ERoleState RoleState;
 
-		// Token: 0x0401B0E4 RID: 110820
+		// Token: 0x04015A69 RID: 88681
 		private ButtonItem LevelUpButtonItem;
 
-		// Token: 0x0401B0E5 RID: 110821
+		// Token: 0x04015A6A RID: 88682
 		private ButtonItem BreakthroughButtonItem;
 
-		// Token: 0x0401B0E6 RID: 110822
+		// Token: 0x04015A6B RID: 88683
 		protected RoleViewAgent RoleViewAgent;
 
-		// Token: 0x0401B0E7 RID: 110823
+		// Token: 0x04015A6C RID: 88684
 		protected RoleDataBase RoleInstance;
 
-		// Token: 0x0401B0E8 RID: 110824
+		// Token: 0x04015A6D RID: 88685
 		[Nullable(1)]
 		protected List<AttributeItem> AttributeItemList = new List<AttributeItem>();
 
-		// Token: 0x0401B0E9 RID: 110825
+		// Token: 0x04015A6E RID: 88686
 		protected IRoleSystemUiParams RoleSystemUiParams;
 
-		// Token: 0x0401B0EA RID: 110826
+		// Token: 0x04015A6F RID: 88687
 		[Nullable(new byte[]
 		{
 			2,
@@ -630,7 +630,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 		})]
 		private GenericLayout<StarItem, IStarItemData> StarLayout;
 
-		// Token: 0x0401B0EB RID: 110827
+		// Token: 0x04015A70 RID: 88688
 		[Nullable(new byte[]
 		{
 			2,
@@ -638,68 +638,68 @@ namespace CSharpScript.Game.Module.RoleUi.TabView
 		})]
 		private GenericLayout<RoleTagSmallIconItem, int> RoleTagLayout;
 
-		// Token: 0x0401B0EC RID: 110828
+		// Token: 0x04015A71 RID: 88689
 		private TsUiSceneRoleActor SceneRoleActor;
 
-		// Token: 0x0200AE71 RID: 44657
+		// Token: 0x0200988F RID: 39055
 		[NullableContext(0)]
 		private enum ERoleAttributeTabViewDefine
 		{
-			// Token: 0x04034F5C RID: 216924
+			// Token: 0x0402F904 RID: 194820
 			DetailButton,
-			// Token: 0x04034F5D RID: 216925
+			// Token: 0x0402F905 RID: 194821
 			LevelUpButton,
-			// Token: 0x04034F5E RID: 216926
+			// Token: 0x0402F906 RID: 194822
 			ExpText,
-			// Token: 0x04034F5F RID: 216927
+			// Token: 0x0402F907 RID: 194823
 			ExpImage,
-			// Token: 0x04034F60 RID: 216928
+			// Token: 0x0402F908 RID: 194824
 			BreakLevelText,
-			// Token: 0x04034F61 RID: 216929
+			// Token: 0x0402F909 RID: 194825
 			AttributeItem,
-			// Token: 0x04034F62 RID: 216930
+			// Token: 0x0402F90A RID: 194826
 			MaxLevelText,
-			// Token: 0x04034F63 RID: 216931
+			// Token: 0x0402F90B RID: 194827
 			LevelText,
-			// Token: 0x04034F64 RID: 216932
+			// Token: 0x0402F90C RID: 194828
 			ElementText,
-			// Token: 0x04034F65 RID: 216933
+			// Token: 0x0402F90D RID: 194829
 			ElementTexture,
-			// Token: 0x04034F66 RID: 216934
+			// Token: 0x0402F90E RID: 194830
 			StarRoot,
-			// Token: 0x04034F67 RID: 216935
+			// Token: 0x0402F90F RID: 194831
 			RoleNameText,
-			// Token: 0x04034F68 RID: 216936
+			// Token: 0x0402F910 RID: 194832
 			AttributeRootItem,
-			// Token: 0x04034F69 RID: 216937
+			// Token: 0x0402F911 RID: 194833
 			TrialRootItem,
-			// Token: 0x04034F6A RID: 216938
+			// Token: 0x0402F912 RID: 194834
 			BtnTeaching,
-			// Token: 0x04034F6B RID: 216939
+			// Token: 0x0402F913 RID: 194835
 			BreakthroughButton,
-			// Token: 0x04034F6C RID: 216940
+			// Token: 0x0402F914 RID: 194836
 			RoleChangeButton,
-			// Token: 0x04034F6D RID: 216941
+			// Token: 0x0402F915 RID: 194837
 			RoleTagRoot,
-			// Token: 0x04034F6E RID: 216942
+			// Token: 0x0402F916 RID: 194838
 			RoleTagItem,
-			// Token: 0x04034F6F RID: 216943
+			// Token: 0x0402F917 RID: 194839
 			RoleTagButton,
-			// Token: 0x04034F70 RID: 216944
+			// Token: 0x0402F918 RID: 194840
 			RoleBreakPreviewButton,
-			// Token: 0x04034F71 RID: 216945
+			// Token: 0x0402F919 RID: 194841
 			RoleSkinButton,
-			// Token: 0x04034F72 RID: 216946
+			// Token: 0x0402F91A RID: 194842
 			RoleSkinRedDot,
-			// Token: 0x04034F73 RID: 216947
+			// Token: 0x0402F91B RID: 194843
 			RoleChangeRedDot,
-			// Token: 0x04034F74 RID: 216948
+			// Token: 0x0402F91C RID: 194844
 			TrialRoleIcon,
-			// Token: 0x04034F75 RID: 216949
+			// Token: 0x0402F91D RID: 194845
 			TrialRoleTxt,
-			// Token: 0x04034F76 RID: 216950
+			// Token: 0x0402F91E RID: 194846
 			BgElementTexture,
-			// Token: 0x04034F77 RID: 216951
+			// Token: 0x0402F91F RID: 194847
 			MaxSpriteItem
 		}
 	}

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 using UnrealEngine;
 
-// Token: 0x0200192F RID: 6447
+// Token: 0x02000DE8 RID: 3560
 public class MediumItemGridRoleDevTagComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BCA6 RID: 48294 RVA: 0x002AAF94 File Offset: 0x002A9194
+	// Token: 0x06009090 RID: 37008 RVA: 0x002B56F0 File Offset: 0x002B38F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,14 +22,14 @@ public class MediumItemGridRoleDevTagComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCA7 RID: 48295 RVA: 0x002AAFFD File Offset: 0x002A91FD
+	// Token: 0x06009091 RID: 37009 RVA: 0x002B5759 File Offset: 0x002B3959
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_RoleDevelopTag";
 	}
 
-	// Token: 0x0600BCA8 RID: 48296 RVA: 0x002AB004 File Offset: 0x002A9204
+	// Token: 0x06009092 RID: 37010 RVA: 0x002B5760 File Offset: 0x002B3960
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -65,19 +65,19 @@ public class MediumItemGridRoleDevTagComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BCA9 RID: 48297 RVA: 0x002AB093 File Offset: 0x002A9293
+	// Token: 0x06009093 RID: 37011 RVA: 0x002B57EF File Offset: 0x002B39EF
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x02007E93 RID: 32403
+	// Token: 0x0200701A RID: 28698
 	private class EChildType
 	{
-		// Token: 0x0402966D RID: 169581
+		// Token: 0x04024999 RID: 149913
 		public const int TexBg = 0;
 
-		// Token: 0x0402966E RID: 169582
+		// Token: 0x0402499A RID: 149914
 		public const int TxtTagState = 1;
 	}
 }

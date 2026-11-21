@@ -6,29 +6,29 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Commit
 {
-	// Token: 0x02006885 RID: 26757
+	// Token: 0x020057D5 RID: 22485
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlRollbackController
 	{
-		// Token: 0x06042CCF RID: 273615 RVA: 0x01042063 File Offset: 0x01040263
+		// Token: 0x06037827 RID: 227367 RVA: 0x00F835E3 File Offset: 0x00F817E3
 		public DangoBrawlRollbackController(ActivityDangoBrawlData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06042CD0 RID: 273616 RVA: 0x0104207D File Offset: 0x0104027D
+		// Token: 0x06037828 RID: 227368 RVA: 0x00F835FD File Offset: 0x00F817FD
 		public void Start()
 		{
 			this.RebuildFromServerData();
 		}
 
-		// Token: 0x06042CD1 RID: 273617 RVA: 0x01042085 File Offset: 0x01040285
+		// Token: 0x06037829 RID: 227369 RVA: 0x00F83605 File Offset: 0x00F81805
 		public void Stop()
 		{
 		}
 
-		// Token: 0x06042CD2 RID: 273618 RVA: 0x01042087 File Offset: 0x01040287
+		// Token: 0x0603782A RID: 227370 RVA: 0x00F83607 File Offset: 0x00F81807
 		public EItemZone ResolveZone(int uid)
 		{
 			DangoBrawlBackpackData bagpackData = this.Data.BagpackData;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return EItemZone.None;
 		}
 
-		// Token: 0x06042CD3 RID: 273619 RVA: 0x010420C4 File Offset: 0x010402C4
+		// Token: 0x0603782B RID: 227371 RVA: 0x00F83644 File Offset: 0x00F81844
 		public EItemZone ResolveServerZone(int uid)
 		{
 			ItemSucAnchor itemSucAnchor;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return EItemZone.Bench;
 		}
 
-		// Token: 0x06042CD4 RID: 273620 RVA: 0x010420F0 File Offset: 0x010402F0
+		// Token: 0x0603782C RID: 227372 RVA: 0x00F83670 File Offset: 0x00F81870
 		public static EBagOpKind DeriveOpKind(EItemZone from, EItemZone to)
 		{
 			switch (from)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return EBagOpKind.BagToBag;
 		}
 
-		// Token: 0x06042CD5 RID: 273621 RVA: 0x0104214A File Offset: 0x0104034A
+		// Token: 0x0603782D RID: 227373 RVA: 0x00F836CA File Offset: 0x00F818CA
 		private void CommitBagAnchor(int uid, PanelPos leftTop, EDangoBrawlRotate rotate)
 		{
 			this.ServerAnchors[uid] = new ItemSucAnchor
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			};
 		}
 
-		// Token: 0x06042CD6 RID: 273622 RVA: 0x01042178 File Offset: 0x01040378
+		// Token: 0x0603782E RID: 227374 RVA: 0x00F836F8 File Offset: 0x00F818F8
 		private void CommitBenchAnchor(int uid)
 		{
 			DangoBrawlBenchData benchData = this.Data.BenchData;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			};
 		}
 
-		// Token: 0x06042CD7 RID: 273623 RVA: 0x010421D0 File Offset: 0x010403D0
+		// Token: 0x0603782F RID: 227375 RVA: 0x00F83750 File Offset: 0x00F81950
 		public void RebuildFromServerData()
 		{
 			this.ServerAnchors.Clear();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042CD8 RID: 273624 RVA: 0x010422A8 File Offset: 0x010404A8
+		// Token: 0x06037830 RID: 227376 RVA: 0x00F83828 File Offset: 0x00F81A28
 		public RestoreReport RestoreToServerAnchor(IReadOnlyCollection<int> uids)
 		{
 			RestoreReport restoreReport = new RestoreReport();
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return restoreReport;
 		}
 
-		// Token: 0x06042CD9 RID: 273625 RVA: 0x0104274C File Offset: 0x0104094C
+		// Token: 0x06037831 RID: 227377 RVA: 0x00F83CCC File Offset: 0x00F81ECC
 		public void RestoreToServerAnchorWithVisualCancel(IReadOnlyCollection<int> uids, InteractionPayload entry)
 		{
 			this.RestoreToServerAnchor(uids);
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			touchController.ReleaseHoldingSourceView(entry.SourceView);
 		}
 
-		// Token: 0x06042CDA RID: 273626 RVA: 0x0104278C File Offset: 0x0104098C
+		// Token: 0x06037832 RID: 227378 RVA: 0x00F83D0C File Offset: 0x00F81F0C
 		private static List<DangoBrawlRollbackController.AnchorRestoreEntry> SortBagConfigFirst(List<DangoBrawlRollbackController.AnchorRestoreEntry> entries)
 		{
 			List<DangoBrawlRollbackController.AnchorRestoreEntry> list = new List<DangoBrawlRollbackController.AnchorRestoreEntry>(entries.Count);
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return list;
 		}
 
-		// Token: 0x06042CDB RID: 273627 RVA: 0x0104284C File Offset: 0x01040A4C
+		// Token: 0x06037833 RID: 227379 RVA: 0x00F83DCC File Offset: 0x00F81FCC
 		public OpSnapshot TakeSnapshot(OpSnapshotItem[] items)
 		{
 			return new OpSnapshot
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			};
 		}
 
-		// Token: 0x06042CDC RID: 273628 RVA: 0x0104285C File Offset: 0x01040A5C
+		// Token: 0x06037834 RID: 227380 RVA: 0x00F83DDC File Offset: 0x00F81FDC
 		public RestoreReport RestoreSnapshot(OpSnapshot snapshot)
 		{
 			RestoreReport restoreReport = new RestoreReport();
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return restoreReport;
 		}
 
-		// Token: 0x06042CDD RID: 273629 RVA: 0x01042A4C File Offset: 0x01040C4C
+		// Token: 0x06037835 RID: 227381 RVA: 0x00F83FCC File Offset: 0x00F821CC
 		public void RestoreWithVisualCancel(IReadOnlyList<OpSnapshot> snapshots, InteractionPayload entry)
 		{
 			foreach (OpSnapshot snapshot in snapshots)
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			touchController.ReleaseHoldingSourceView(entry.SourceView);
 		}
 
-		// Token: 0x06042CDE RID: 273630 RVA: 0x01042ACC File Offset: 0x01040CCC
+		// Token: 0x06037836 RID: 227382 RVA: 0x00F8404C File Offset: 0x00F8224C
 		private static void RestoreToBag(DangoBrawlBackpackData bag, OpSnapshotItem s, RestoreReport report)
 		{
 			if (bag.AddItemData(s.Item, false))
@@ -412,14 +412,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			instance.Warn(module, author, defaultInterpolatedStringHandler.ToStringAndClear(), default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06042CDF RID: 273631 RVA: 0x01042B90 File Offset: 0x01040D90
+		// Token: 0x06037837 RID: 227383 RVA: 0x00F84110 File Offset: 0x00F82310
 		private static void RestoreToBench(DangoBrawlBenchData bench, OpSnapshotItem s)
 		{
 			DangoBrawlBenchItemServerData serverData = DangoBrawlBenchServerData.MakeData(s.Item.MyUid, s.Item.MyConfigId);
 			bench.AddItemDataToMap(serverData, s.BenchDropPos, EDangoBrawlRotate.Direction0, true);
 		}
 
-		// Token: 0x06042CE0 RID: 273632 RVA: 0x01042BC8 File Offset: 0x01040DC8
+		// Token: 0x06037838 RID: 227384 RVA: 0x00F84148 File Offset: 0x00F82348
 		private static List<OpSnapshotItem> SortBagFirst(OpSnapshotItem[] items)
 		{
 			List<OpSnapshotItem> list = new List<OpSnapshotItem>(items.Length);
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return list;
 		}
 
-		// Token: 0x06042CE1 RID: 273633 RVA: 0x01042C48 File Offset: 0x01040E48
+		// Token: 0x06037839 RID: 227385 RVA: 0x00F841C8 File Offset: 0x00F823C8
 		public void Audit(string reason)
 		{
 			DangoBrawlBackpackData bagpackData = this.Data.BagpackData;
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042CE2 RID: 273634 RVA: 0x01042E50 File Offset: 0x01041050
+		// Token: 0x0603783A RID: 227386 RVA: 0x00F843D0 File Offset: 0x00F825D0
 		private int AuditItem(int uid, DangoBrawlItemBase itemData, EItemZone expected, IDangoBrawlItemZone own, IDangoBrawlItemZone other, HashSet<int> skipUids, string reason)
 		{
 			if (skipUids.Contains(uid))
@@ -546,7 +546,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return 1;
 		}
 
-		// Token: 0x06042CE3 RID: 273635 RVA: 0x01042F84 File Offset: 0x01041184
+		// Token: 0x0603783B RID: 227387 RVA: 0x00F84504 File Offset: 0x00F82704
 		private int AuditGhosts(EItemZone zoneKind, IDangoBrawlItemZone zone, HashSet<int> skipUids, string reason)
 		{
 			List<int> list = new List<int>();
@@ -575,30 +575,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return num;
 		}
 
-		// Token: 0x04022C3C RID: 142396
+		// Token: 0x0401D498 RID: 119960
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022C3D RID: 142397
+		// Token: 0x0401D499 RID: 119961
 		private readonly Dictionary<int, ItemSucAnchor> ServerAnchors = new Dictionary<int, ItemSucAnchor>();
 
-		// Token: 0x0200CA52 RID: 51794
+		// Token: 0x0200B41C RID: 46108
 		[NullableContext(2)]
 		[Nullable(0)]
 		private class AnchorRestoreEntry
 		{
-			// Token: 0x0403D281 RID: 250497
+			// Token: 0x04037B60 RID: 228192
 			public int Uid;
 
-			// Token: 0x0403D282 RID: 250498
+			// Token: 0x04037B61 RID: 228193
 			public int ConfigId;
 
-			// Token: 0x0403D283 RID: 250499
+			// Token: 0x04037B62 RID: 228194
 			public DangoBrawlBackpackItemData BagItem;
 
-			// Token: 0x0403D284 RID: 250500
+			// Token: 0x04037B63 RID: 228195
 			public EItemZone FromZone;
 
-			// Token: 0x0403D285 RID: 250501
+			// Token: 0x04037B64 RID: 228196
 			public ItemSucAnchor Anchor;
 		}
 	}

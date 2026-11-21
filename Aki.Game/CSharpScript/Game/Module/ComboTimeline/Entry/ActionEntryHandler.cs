@@ -5,13 +5,13 @@ using CSharpScript.Game.Module.ComboTimeline.Entry.Action;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry
 {
-	// Token: 0x02005B97 RID: 23447
+	// Token: 0x02004B77 RID: 19319
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActionEntryHandler : IComboTimelineEntryHandler
 	{
-		// Token: 0x17008CE4 RID: 36068
-		// (get) Token: 0x0603B4F9 RID: 242937 RVA: 0x00E2294E File Offset: 0x00E20B4E
+		// Token: 0x170060B6 RID: 24758
+		// (get) Token: 0x06030446 RID: 197702 RVA: 0x00D72E9E File Offset: 0x00D7109E
 		public EShowTimelineType Type
 		{
 			get
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			}
 		}
 
-		// Token: 0x0603B4FA RID: 242938 RVA: 0x00E22951 File Offset: 0x00E20B51
+		// Token: 0x06030447 RID: 197703 RVA: 0x00D72EA1 File Offset: 0x00D710A1
 		public ActionEntryHandler()
 		{
 			ActionEntryTypeRegistry.RegisterDefaultActionHandlers();
 		}
 
-		// Token: 0x0603B4FB RID: 242939 RVA: 0x00E22960 File Offset: 0x00E20B60
+		// Token: 0x06030448 RID: 197704 RVA: 0x00D72EB0 File Offset: 0x00D710B0
 		public void StartCapture(IComboTimelineCaptureContext context)
 		{
 			foreach (IActionEntryHandler actionEntryHandler in ActionEntryTypeRegistry.GetAll())
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			}
 		}
 
-		// Token: 0x0603B4FC RID: 242940 RVA: 0x00E229AC File Offset: 0x00E20BAC
+		// Token: 0x06030449 RID: 197705 RVA: 0x00D72EFC File Offset: 0x00D710FC
 		public void StopCapture()
 		{
 			foreach (IActionEntryHandler actionEntryHandler in ActionEntryTypeRegistry.GetAll())
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			}
 		}
 
-		// Token: 0x0603B4FD RID: 242941 RVA: 0x00E229F8 File Offset: 0x00E20BF8
+		// Token: 0x0603044A RID: 197706 RVA: 0x00D72F48 File Offset: 0x00D71148
 		public bool Apply(IShowTimelineBase entry, IComboTimelineReplayContext context)
 		{
 			IShowTimelineAction showTimelineAction = (IShowTimelineAction)entry;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			return actionEntryHandler == null || actionEntryHandler.Apply(showTimelineAction, context);
 		}
 
-		// Token: 0x0603B4FE RID: 242942 RVA: 0x00E22A24 File Offset: 0x00E20C24
+		// Token: 0x0603044B RID: 197707 RVA: 0x00D72F74 File Offset: 0x00D71174
 		public string Describe(IShowTimelineBase entry)
 		{
 			IShowTimelineAction showTimelineAction = (IShowTimelineAction)entry;

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 {
-	// Token: 0x02006E5B RID: 28251
+	// Token: 0x02005FDC RID: 24540
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FindSunSpiritLevelFloor
 	{
-		// Token: 0x06044DA3 RID: 282019 RVA: 0x010FE584 File Offset: 0x010FC784
+		// Token: 0x0603AF30 RID: 241456 RVA: 0x010A8AE4 File Offset: 0x010A6CE4
 		public UniTask SpawnFloorAsync(string path, Transform transform)
 		{
 			FindSunSpiritLevelFloor.<SpawnFloorAsync>d__5 <SpawnFloorAsync>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			return <SpawnFloorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044DA4 RID: 282020 RVA: 0x010FE5D8 File Offset: 0x010FC7D8
+		// Token: 0x0603AF31 RID: 241457 RVA: 0x010A8B38 File Offset: 0x010A6D38
 		private void InitNiagara(UNiagaraComponent niagaraComp)
 		{
 			FindSunSpiritModel instance = FindSunSpiritModel.Instance;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			UNiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32(this.NiagaraComp, FNameUtil.GetDynamicFName("OutlineArray").Value, this.OutlineList);
 		}
 
-		// Token: 0x06044DA5 RID: 282021 RVA: 0x010FE718 File Offset: 0x010FC918
+		// Token: 0x0603AF32 RID: 241458 RVA: 0x010A8C78 File Offset: 0x010A6E78
 		public void RefreshFloor()
 		{
 			UNiagaraComponent niagaraComp = this.NiagaraComp;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			UNiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32(this.NiagaraComp, FNameUtil.GetDynamicFName("GridArray").Value, this.EffectList);
 		}
 
-		// Token: 0x06044DA6 RID: 282022 RVA: 0x010FE7B0 File Offset: 0x010FC9B0
+		// Token: 0x0603AF33 RID: 241459 RVA: 0x010A8D10 File Offset: 0x010A6F10
 		public void RefreshOutline()
 		{
 			UNiagaraComponent niagaraComp = this.NiagaraComp;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			UNiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32(this.NiagaraComp, FNameUtil.GetDynamicFName("OutlineArray").Value, this.OutlineList);
 		}
 
-		// Token: 0x06044DA7 RID: 282023 RVA: 0x010FE874 File Offset: 0x010FCA74
+		// Token: 0x0603AF34 RID: 241460 RVA: 0x010A8DD4 File Offset: 0x010A6FD4
 		public void ClearFloor()
 		{
 			this.NiagaraComp = null;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			this.FloorActor = null;
 		}
 
-		// Token: 0x06044DA8 RID: 282024 RVA: 0x010FE8AF File Offset: 0x010FCAAF
+		// Token: 0x0603AF35 RID: 241461 RVA: 0x010A8E0F File Offset: 0x010A700F
 		private FindSunSpiritLevelFloor.EFloorEffectType GetEffectType(EFindSunSpiritGridType gridType, bool isBlock)
 		{
 			if (gridType == EFindSunSpiritGridType.NormalFloor)
@@ -125,31 +125,31 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite.Performance.Level
 			return FindSunSpiritLevelFloor.EFloorEffectType.MutableBlockFloor;
 		}
 
-		// Token: 0x04023D35 RID: 146741
+		// Token: 0x0401EFEA RID: 126954
 		[Nullable(2)]
 		private AActor FloorActor;
 
-		// Token: 0x04023D36 RID: 146742
+		// Token: 0x0401EFEB RID: 126955
 		[Nullable(2)]
 		private UNiagaraComponent NiagaraComp;
 
-		// Token: 0x04023D37 RID: 146743
+		// Token: 0x0401EFEC RID: 126956
 		private readonly TArray<int> EffectList = new TArray<int>();
 
-		// Token: 0x04023D38 RID: 146744
+		// Token: 0x0401EFED RID: 126957
 		private readonly TArray<int> OutlineList = new TArray<int>();
 
-		// Token: 0x0200CD19 RID: 52505
+		// Token: 0x0200B909 RID: 47369
 		[NullableContext(0)]
 		private enum EFloorEffectType
 		{
-			// Token: 0x0403DD62 RID: 253282
+			// Token: 0x04039184 RID: 233860
 			Empty,
-			// Token: 0x0403DD63 RID: 253283
+			// Token: 0x04039185 RID: 233861
 			NormalFloor,
-			// Token: 0x0403DD64 RID: 253284
+			// Token: 0x04039186 RID: 233862
 			MutableOpenFloor,
-			// Token: 0x0403DD65 RID: 253285
+			// Token: 0x04039187 RID: 233863
 			MutableBlockFloor
 		}
 	}

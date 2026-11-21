@@ -5,16 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001544 RID: 5444
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x0200169F RID: 5791
 	public class IMoveOperationTypeConverter : JsonConverter<IMoveOperationType>
 	{
-		// Token: 0x06007B3A RID: 31546 RVA: 0x00128DA8 File Offset: 0x00126FA8
+		// Token: 0x0600820B RID: 33291 RVA: 0x00137C44 File Offset: 0x00135E44
 		[return: Nullable(2)]
 		public override IMoveOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
@@ -54,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B3B RID: 31547 RVA: 0x00128E4C File Offset: 0x0012704C
+		// Token: 0x0600820C RID: 33292 RVA: 0x00137CE8 File Offset: 0x00135EE8
 		public override void Write(Utf8JsonWriter writer, IMoveOperationType value, JsonSerializerOptions options)
 		{
 			IEnableMoveOperation enableMoveOperation = value as IEnableMoveOperation;

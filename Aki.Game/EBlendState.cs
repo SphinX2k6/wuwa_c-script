@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000224 RID: 548
+// Token: 0x02000228 RID: 552
 public enum EBlendState
 {
-	// Token: 0x0400162B RID: 5675
+	// Token: 0x0400166D RID: 5741
 	None,
-	// Token: 0x0400162C RID: 5676
+	// Token: 0x0400166E RID: 5742
 	BlendIn,
-	// Token: 0x0400162D RID: 5677
+	// Token: 0x0400166F RID: 5743
 	Loop,
-	// Token: 0x0400162E RID: 5678
+	// Token: 0x04001670 RID: 5744
 	BlendOut
 }

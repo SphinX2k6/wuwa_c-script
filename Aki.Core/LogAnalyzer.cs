@@ -12,13 +12,13 @@ using UnrealEngine.Bulitin.Utils;
 [Nullable(0)]
 public class LogAnalyzer : Singleton
 {
-	// Token: 0x0600012E RID: 302 RVA: 0x0000894C File Offset: 0x00006B4C
+	// Token: 0x06000130 RID: 304 RVA: 0x000086B8 File Offset: 0x000068B8
 	public void SetPlayerId(int playerId)
 	{
 		this.PlayerId = playerId;
 	}
 
-	// Token: 0x0600012F RID: 303 RVA: 0x00008958 File Offset: 0x00006B58
+	// Token: 0x06000131 RID: 305 RVA: 0x000086C4 File Offset: 0x000068C4
 	public void SetP4Version(string version)
 	{
 		this.P4Version = version;
@@ -30,13 +30,13 @@ public class LogAnalyzer : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000130 RID: 304 RVA: 0x00008996 File Offset: 0x00006B96
+	// Token: 0x06000132 RID: 306 RVA: 0x00008702 File Offset: 0x00006902
 	public string GetP4Version()
 	{
 		return this.P4Version;
 	}
 
-	// Token: 0x06000131 RID: 305 RVA: 0x000089A0 File Offset: 0x00006BA0
+	// Token: 0x06000133 RID: 307 RVA: 0x0000870C File Offset: 0x0000690C
 	public void SetBranch(string inBranch)
 	{
 		string text = inBranch;
@@ -53,13 +53,13 @@ public class LogAnalyzer : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000132 RID: 306 RVA: 0x000089FE File Offset: 0x00006BFE
+	// Token: 0x06000134 RID: 308 RVA: 0x0000876A File Offset: 0x0000696A
 	public string GetBranch()
 	{
 		return this.Branch;
 	}
 
-	// Token: 0x06000133 RID: 307 RVA: 0x00008A08 File Offset: 0x00006C08
+	// Token: 0x06000135 RID: 309 RVA: 0x00008774 File Offset: 0x00006974
 	public unsafe void Initialize(bool enable, string branch)
 	{
 		this.SetBranch(branch);
@@ -82,7 +82,7 @@ public class LogAnalyzer : Singleton
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06000134 RID: 308 RVA: 0x00008AA8 File Offset: 0x00006CA8
+	// Token: 0x06000136 RID: 310 RVA: 0x00008814 File Offset: 0x00006A14
 	public void Clear()
 	{
 		bool flag = UKuroLogAnalyzerLibrary.Clear();
@@ -94,11 +94,11 @@ public class LogAnalyzer : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000135 RID: 309 RVA: 0x00008AE8 File Offset: 0x00006CE8
+	// Token: 0x06000137 RID: 311 RVA: 0x00008854 File Offset: 0x00006A54
 	private unsafe void InitCounter()
 	{
-		Log.Instance.Delegate = new Action<int, global::ELogLevel, ELogModule, ELogAuthor, string, UnsafeStringBuilder, string>(this.Count);
-		int num9 = Enum.GetNames(typeof(global::ELogLevel)).Length;
+		Log.Instance.Delegate = new Action<int, ELogLevel, ELogModule, ELogAuthor, string, UnsafeStringBuilder, string>(this.Count);
+		int num9 = Enum.GetNames(typeof(ELogLevel)).Length;
 		this.LevelStatistics = new int[num9];
 		int num2 = Enum.GetNames(typeof(ELogAuthor)).Length;
 		this.AuthorStatistics = new int[num2];
@@ -334,7 +334,7 @@ public class LogAnalyzer : Singleton
 		}, 600000f, 1f, null, "LogAnalyzer.StatisticsTimer", false);
 	}
 
-	// Token: 0x06000136 RID: 310 RVA: 0x00008BC8 File Offset: 0x00006DC8
+	// Token: 0x06000138 RID: 312 RVA: 0x00008934 File Offset: 0x00006B34
 	private void InitReport()
 	{
 		if (this.ReportTimer != null)
@@ -376,20 +376,20 @@ public class LogAnalyzer : Singleton
 		}, 60000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06000137 RID: 311 RVA: 0x00008C34 File Offset: 0x00006E34
-	private void Count(int id, global::ELogLevel level, ELogModule module, ELogAuthor author, string message, [Nullable(2)] UnsafeStringBuilder context, string stack)
+	// Token: 0x06000139 RID: 313 RVA: 0x000089A0 File Offset: 0x00006BA0
+	private void Count(int id, ELogLevel level, ELogModule module, ELogAuthor author, string message, [Nullable(2)] UnsafeStringBuilder context, string stack)
 	{
 		this.LogInternal(true, id, level, module, author, null, message, context, stack, null);
 	}
 
-	// Token: 0x06000138 RID: 312 RVA: 0x00008C5D File Offset: 0x00006E5D
-	public bool NeedLogContext(global::ELogLevel level)
+	// Token: 0x0600013A RID: 314 RVA: 0x000089C9 File Offset: 0x00006BC9
+	public bool NeedLogContext(ELogLevel level)
 	{
-		return level <= global::ELogLevel.Error && this.ReportCount < 10;
+		return level <= ELogLevel.Error && this.ReportCount < 10;
 	}
 
-	// Token: 0x06000139 RID: 313 RVA: 0x00008C74 File Offset: 0x00006E74
-	private void LogInternal(bool ts, int id, global::ELogLevel level, ELogModule module, ELogAuthor author, [Nullable(2)] string format, string message, [Nullable(2)] UnsafeStringBuilder context, string stack, FName? engineCategory = null)
+	// Token: 0x0600013B RID: 315 RVA: 0x000089E0 File Offset: 0x00006BE0
+	private void LogInternal(bool ts, int id, ELogLevel level, ELogModule module, ELogAuthor author, [Nullable(2)] string format, string message, [Nullable(2)] UnsafeStringBuilder context, string stack, FName? engineCategory = null)
 	{
 		this.LevelStatistics[(int)level]++;
 		if (module < (ELogModule)this.ModuleStatistics.Length)
@@ -406,7 +406,7 @@ public class LogAnalyzer : Singleton
 			LogAnalyzer.IncreaseCount<string>(this.MessageStatistics, format);
 			LogAnalyzer.IncreaseCount<FName>(this.EngineCategoryStatistics, engineCategory.Value);
 		}
-		if (level > global::ELogLevel.Error)
+		if (level > ELogLevel.Error)
 		{
 			return;
 		}
@@ -434,14 +434,14 @@ public class LogAnalyzer : Singleton
 		}
 	}
 
-	// Token: 0x0600013A RID: 314 RVA: 0x00008DEC File Offset: 0x00006FEC
+	// Token: 0x0600013C RID: 316 RVA: 0x00008B58 File Offset: 0x00006D58
 	private unsafe static void IncreaseCount<TKey>(Dictionary<TKey, int> statistics, TKey key)
 	{
 		bool flag;
 		(*CollectionsMarshal.GetValueRefOrAddDefault<TKey, int>(statistics, key, out flag))++;
 	}
 
-	// Token: 0x0600013B RID: 315 RVA: 0x00008E07 File Offset: 0x00007007
+	// Token: 0x0600013D RID: 317 RVA: 0x00008B73 File Offset: 0x00006D73
 	private static void KeepTop<[Nullable(2)] T>(List<T> list, int maxCount)
 	{
 		if (list.Count > maxCount)
@@ -450,7 +450,7 @@ public class LogAnalyzer : Singleton
 		}
 	}
 
-	// Token: 0x0600013C RID: 316 RVA: 0x00008E24 File Offset: 0x00007024
+	// Token: 0x0600013E RID: 318 RVA: 0x00008B90 File Offset: 0x00006D90
 	private bool Track(string eventName, ILogRecord content)
 	{
 		string text = LogRecordJsonWriter.Write(content);
@@ -463,27 +463,27 @@ public class LogAnalyzer : Singleton
 		return true;
 	}
 
-	// Token: 0x0600013D RID: 317 RVA: 0x00008E58 File Offset: 0x00007058
+	// Token: 0x0600013F RID: 319 RVA: 0x00008BC4 File Offset: 0x00006DC4
 	private void EngineLogHandle(FName category, int verbosity, string format, string message)
 	{
-		global::ELogLevel elogLevel;
+		ELogLevel elogLevel;
 		if (verbosity - 1 > 1)
 		{
 			if (verbosity != 3)
 			{
-				elogLevel = global::ELogLevel.Info;
+				elogLevel = ELogLevel.Info;
 			}
 			else
 			{
-				elogLevel = global::ELogLevel.Warn;
+				elogLevel = ELogLevel.Warn;
 			}
 		}
 		else
 		{
-			elogLevel = global::ELogLevel.Error;
+			elogLevel = ELogLevel.Error;
 		}
-		global::ELogLevel elogLevel2 = elogLevel;
-		if (elogLevel2 == global::ELogLevel.Info)
+		ELogLevel elogLevel2 = elogLevel;
+		if (elogLevel2 == ELogLevel.Info)
 		{
 			return;
 		}
@@ -491,7 +491,7 @@ public class LogAnalyzer : Singleton
 	}
 
 	// Token: 0x1700001F RID: 31
-	// (get) Token: 0x0600013E RID: 318 RVA: 0x00008EA7 File Offset: 0x000070A7
+	// (get) Token: 0x06000140 RID: 320 RVA: 0x00008C13 File Offset: 0x00006E13
 	public static LogAnalyzer Instance
 	{
 		get
@@ -505,12 +505,12 @@ public class LogAnalyzer : Singleton
 		}
 	}
 
-	// Token: 0x0600013F RID: 319 RVA: 0x00008ECA File Offset: 0x000070CA
+	// Token: 0x06000141 RID: 321 RVA: 0x00008C36 File Offset: 0x00006E36
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000140 RID: 320 RVA: 0x00008ECC File Offset: 0x000070CC
+	// Token: 0x06000142 RID: 322 RVA: 0x00008C38 File Offset: 0x00006E38
 	public static void ResetStaticDefaultValue()
 	{
 		LogAnalyzer instance = LogAnalyzer._instance;
@@ -521,102 +521,102 @@ public class LogAnalyzer : Singleton
 		LogAnalyzer._instance = null;
 	}
 
-	// Token: 0x06000141 RID: 321 RVA: 0x00008EE5 File Offset: 0x000070E5
+	// Token: 0x06000143 RID: 323 RVA: 0x00008C51 File Offset: 0x00006E51
 	static LogAnalyzer()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LogAnalyzer.CreateStaticDefaultValue), new Action(LogAnalyzer.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000144 RID: 324
+	// Token: 0x04000145 RID: 325
 	private const int STATISTICS_INTERVAL = 600000;
 
-	// Token: 0x04000145 RID: 325
+	// Token: 0x04000146 RID: 326
 	private const double STATISTICS_MESSAGE_ERRO_THRESHOLD = 0.01;
 
-	// Token: 0x04000146 RID: 326
+	// Token: 0x04000147 RID: 327
 	private const int STATISTICS_THRESHOLD = 10;
 
-	// Token: 0x04000147 RID: 327
+	// Token: 0x04000148 RID: 328
 	private const int STATISTICS_MODULE_TOP_NUM = 10;
 
-	// Token: 0x04000148 RID: 328
+	// Token: 0x04000149 RID: 329
 	private const int STATISTICS_ENGINE_CATEGORY_TOP_NUM = 10;
 
-	// Token: 0x04000149 RID: 329
+	// Token: 0x0400014A RID: 330
 	private const int STATISTICS_AUTHOR_TOP_NUM = 10;
 
-	// Token: 0x0400014A RID: 330
+	// Token: 0x0400014B RID: 331
 	private const int STATISTICS_MESSAGE_TOP_NUM = 10;
 
-	// Token: 0x0400014B RID: 331
+	// Token: 0x0400014C RID: 332
 	private const int REPORT_INTERVAL = 60000;
 
-	// Token: 0x0400014C RID: 332
-	private const global::ELogLevel REPORT_LEVEL = global::ELogLevel.Error;
-
 	// Token: 0x0400014D RID: 333
-	private const int REPORT_NUM = 10;
+	private const ELogLevel REPORT_LEVEL = ELogLevel.Error;
 
 	// Token: 0x0400014E RID: 334
-	private const int SIMPLIFY_REPORT_NUM = 100;
+	private const int REPORT_NUM = 10;
 
 	// Token: 0x0400014F RID: 335
-	private const int SIMPLIFY_REPORT_MESSAGE_MAX_LENGTH = 100;
+	private const int SIMPLIFY_REPORT_NUM = 100;
 
 	// Token: 0x04000150 RID: 336
-	private const string REPLACE_BRANCH_WORD = "branch_";
+	private const int SIMPLIFY_REPORT_MESSAGE_MAX_LENGTH = 100;
 
 	// Token: 0x04000151 RID: 337
-	private int[] LevelStatistics = Array.Empty<int>();
+	private const string REPLACE_BRANCH_WORD = "branch_";
 
 	// Token: 0x04000152 RID: 338
-	private int[] ModuleStatistics = Array.Empty<int>();
+	private int[] LevelStatistics = Array.Empty<int>();
 
 	// Token: 0x04000153 RID: 339
-	private readonly Dictionary<FName, int> EngineCategoryStatistics = new Dictionary<FName, int>();
+	private int[] ModuleStatistics = Array.Empty<int>();
 
 	// Token: 0x04000154 RID: 340
-	private int[] AuthorStatistics = Array.Empty<int>();
+	private readonly Dictionary<FName, int> EngineCategoryStatistics = new Dictionary<FName, int>();
 
 	// Token: 0x04000155 RID: 341
-	private readonly Dictionary<string, int> MessageStatistics = new Dictionary<string, int>();
+	private int[] AuthorStatistics = Array.Empty<int>();
 
 	// Token: 0x04000156 RID: 342
-	[Nullable(2)]
-	private TimerHandle StatisticsTimer;
+	private readonly Dictionary<string, int> MessageStatistics = new Dictionary<string, int>();
 
 	// Token: 0x04000157 RID: 343
 	[Nullable(2)]
-	private TimerHandle ReportTimer;
+	private TimerHandle StatisticsTimer;
 
 	// Token: 0x04000158 RID: 344
-	private int ReportCount;
+	[Nullable(2)]
+	private TimerHandle ReportTimer;
 
 	// Token: 0x04000159 RID: 345
-	private readonly Dictionary<string, int> SimplifyReports = new Dictionary<string, int>();
+	private int ReportCount;
 
 	// Token: 0x0400015A RID: 346
-	private int PlayerId;
+	private readonly Dictionary<string, int> SimplifyReports = new Dictionary<string, int>();
 
 	// Token: 0x0400015B RID: 347
-	private string P4Version;
+	private int PlayerId;
 
 	// Token: 0x0400015C RID: 348
-	private string Branch;
+	private string P4Version;
 
 	// Token: 0x0400015D RID: 349
-	private readonly Stat StatisticsStat = Stat.Create("LogAnalyzer.Statistics", "", "");
+	private string Branch;
 
 	// Token: 0x0400015E RID: 350
-	private readonly Stat ReportStat = Stat.Create("LogAnalyzer.Report", "", "");
+	private readonly Stat StatisticsStat = Stat.Create("LogAnalyzer.Statistics", "", "");
 
 	// Token: 0x0400015F RID: 351
-	private readonly Stat CountStat = Stat.Create("LogAnalyzer.Count", "", "");
+	private readonly Stat ReportStat = Stat.Create("LogAnalyzer.Report", "", "");
 
 	// Token: 0x04000160 RID: 352
-	private readonly Stat TrackStat = Stat.Create("LogAnalyzer.Track", "", "");
+	private readonly Stat CountStat = Stat.Create("LogAnalyzer.Count", "", "");
 
 	// Token: 0x04000161 RID: 353
+	private readonly Stat TrackStat = Stat.Create("LogAnalyzer.Track", "", "");
+
+	// Token: 0x04000162 RID: 354
 	[Nullable(2)]
 	private static LogAnalyzer _instance;
 }

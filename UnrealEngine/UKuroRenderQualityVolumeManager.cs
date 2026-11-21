@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BA2 RID: 7074
+	// Token: 0x020004DD RID: 1245
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroRenderQualityVolumeManager")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public class UKuroRenderQualityVolumeManager : UEngineSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B0E7 RID: 110823 RVA: 0x0027DCF2 File Offset: 0x0027BEF2
+		// Token: 0x060075BD RID: 30141 RVA: 0x000AC185 File Offset: 0x000AA385
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroRenderQualityVolumeManager._ClassPtr;
 		}
 
-		// Token: 0x0601B0E8 RID: 110824 RVA: 0x0027DD00 File Offset: 0x0027BF00
+		// Token: 0x060075BE RID: 30142 RVA: 0x000AC194 File Offset: 0x000AA394
 		public UKuroRenderQualityVolumeManager() : this(BuiltinUtils.AllocNativeUObject(UKuroRenderQualityVolumeManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B0E9 RID: 110825 RVA: 0x0027DD28 File Offset: 0x0027BF28
+		// Token: 0x060075BF RID: 30143 RVA: 0x000AC1BC File Offset: 0x000AA3BC
 		public UKuroRenderQualityVolumeManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroRenderQualityVolumeManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006C73 RID: 27763
-		// (get) Token: 0x0601B0EA RID: 110826 RVA: 0x0027DD5C File Offset: 0x0027BF5C
-		// (set) Token: 0x0601B0EB RID: 110827 RVA: 0x0027DD95 File Offset: 0x0027BF95
+		// Token: 0x170016B5 RID: 5813
+		// (get) Token: 0x060075C0 RID: 30144 RVA: 0x000AC1F0 File Offset: 0x000AA3F0
+		// (set) Token: 0x060075C1 RID: 30145 RVA: 0x000AC229 File Offset: 0x000AA429
 		public FOnEnterVolumeBlueprintEvent OnEnterVolumeBlueprintEvent
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006C74 RID: 27764
-		// (get) Token: 0x0601B0EC RID: 110828 RVA: 0x0027DDB8 File Offset: 0x0027BFB8
-		// (set) Token: 0x0601B0ED RID: 110829 RVA: 0x0027DDF1 File Offset: 0x0027BFF1
+		// Token: 0x170016B6 RID: 5814
+		// (get) Token: 0x060075C2 RID: 30146 RVA: 0x000AC24C File Offset: 0x000AA44C
+		// (set) Token: 0x060075C3 RID: 30147 RVA: 0x000AC285 File Offset: 0x000AA485
 		public FOnLeaveVolumeBlueprintEvent OnLeaveVolumeBlueprintEvent
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006C75 RID: 27765
-		// (get) Token: 0x0601B0EE RID: 110830 RVA: 0x0027DE14 File Offset: 0x0027C014
-		// (set) Token: 0x0601B0EF RID: 110831 RVA: 0x0027DE4D File Offset: 0x0027C04D
+		// Token: 0x170016B7 RID: 5815
+		// (get) Token: 0x060075C4 RID: 30148 RVA: 0x000AC2A8 File Offset: 0x000AA4A8
+		// (set) Token: 0x060075C5 RID: 30149 RVA: 0x000AC2E1 File Offset: 0x000AA4E1
 		public FOnApplyKuroRenderLocalSettingsBlueprintEvent OnApplyKuroRenderLocalSettingsBlueprintEvent
 		{
 			get
@@ -92,56 +92,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601B0F0 RID: 110832
+		// Token: 0x060075C6 RID: 30150
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsLowMemoryMobile();
 
-		// Token: 0x0601B0F1 RID: 110833
+		// Token: 0x060075C7 RID: 30151
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsLowMemoryDesktop();
 
-		// Token: 0x0601B0F2 RID: 110834
+		// Token: 0x060075C8 RID: 30152
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsKuroRenderQualityVolumeEnable();
 
-		// Token: 0x0601B0F3 RID: 110835 RVA: 0x0027DE6E File Offset: 0x0027C06E
+		// Token: 0x060075C9 RID: 30153 RVA: 0x000AC302 File Offset: 0x000AA502
 		static UKuroRenderQualityVolumeManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroRenderQualityVolumeManager");
 		}
 
-		// Token: 0x0601B0F4 RID: 110836 RVA: 0x0027DE7C File Offset: 0x0027C07C
+		// Token: 0x060075CA RID: 30154 RVA: 0x000AC310 File Offset: 0x000AA510
 		protected UKuroRenderQualityVolumeManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400E911 RID: 59665
+		// Token: 0x040031A9 RID: 12713
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroRenderQualityVolumeManager";
 
-		// Token: 0x0400E912 RID: 59666
+		// Token: 0x040031AA RID: 12714
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400E913 RID: 59667
+		// Token: 0x040031AB RID: 12715
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400E914 RID: 59668
+		// Token: 0x040031AC RID: 12716
 		internal static int __PropertyOffset_OnEnterVolumeBlueprintEvent;
 
-		// Token: 0x0400E915 RID: 59669
+		// Token: 0x040031AD RID: 12717
 		[Nullable(2)]
 		private FOnEnterVolumeBlueprintEvent _OnEnterVolumeBlueprintEvent;
 
-		// Token: 0x0400E916 RID: 59670
+		// Token: 0x040031AE RID: 12718
 		internal static int __PropertyOffset_OnLeaveVolumeBlueprintEvent;
 
-		// Token: 0x0400E917 RID: 59671
+		// Token: 0x040031AF RID: 12719
 		[Nullable(2)]
 		private FOnLeaveVolumeBlueprintEvent _OnLeaveVolumeBlueprintEvent;
 
-		// Token: 0x0400E918 RID: 59672
+		// Token: 0x040031B0 RID: 12720
 		internal static int __PropertyOffset_OnApplyKuroRenderLocalSettingsBlueprintEvent;
 
-		// Token: 0x0400E919 RID: 59673
+		// Token: 0x040031B1 RID: 12721
 		[Nullable(2)]
 		private FOnApplyKuroRenderLocalSettingsBlueprintEvent _OnApplyKuroRenderLocalSettingsBlueprintEvent;
 	}

@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x020039EF RID: 14831
+	// Token: 0x02003DC8 RID: 15816
 	public enum EBvbCardActiveSkillTag : byte
 	{
-		// Token: 0x0400ADE9 RID: 44521
+		// Token: 0x0400B700 RID: 46848
 		None,
-		// Token: 0x0400ADEA RID: 44522
+		// Token: 0x0400B701 RID: 46849
 		Attack,
-		// Token: 0x0400ADEB RID: 44523
+		// Token: 0x0400B702 RID: 46850
 		Defense,
-		// Token: 0x0400ADEC RID: 44524
+		// Token: 0x0400B703 RID: 46851
 		LongTermOperation,
-		// Token: 0x0400ADED RID: 44525
+		// Token: 0x0400B704 RID: 46852
 		ShortTermOperation
 	}
 }

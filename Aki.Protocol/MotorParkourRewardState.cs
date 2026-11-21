@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001601 RID: 5633
+	// Token: 0x02001674 RID: 5748
 	public enum MotorParkourRewardState
 	{
-		// Token: 0x0400BF5A RID: 48986
+		// Token: 0x0400C454 RID: 50260
 		[OriginalName("MotorParkourRewardLocked")]
 		MotorParkourRewardLocked,
-		// Token: 0x0400BF5B RID: 48987
+		// Token: 0x0400C455 RID: 50261
 		[OriginalName("MotorParkourRewardAvailable")]
 		MotorParkourRewardAvailable,
-		// Token: 0x0400BF5C RID: 48988
+		// Token: 0x0400C456 RID: 50262
 		[OriginalName("MotorParkourRewardRewarded")]
 		MotorParkourRewardRewarded
 	}

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002991 RID: 10641
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C78 RID: 11384
 	public class AddTrialFollowShooter : ActionParams
 	{
-		// Token: 0x0600EB98 RID: 60312 RVA: 0x00227422 File Offset: 0x00225622
+		// Token: 0x0600FA16 RID: 64022 RVA: 0x00244BAE File Offset: 0x00242DAE
 		public static AddTrialFollowShooter Create(IAddTrialFollowShooter? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A38 RID: 19000
-		// (get) Token: 0x0600EB99 RID: 60313 RVA: 0x00227441 File Offset: 0x00225641
+		// Token: 0x17004DD4 RID: 19924
+		// (get) Token: 0x0600FA17 RID: 64023 RVA: 0x00244BCD File Offset: 0x00242DCD
 		public virtual int Id
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A39 RID: 19001
-		// (get) Token: 0x0600EB9A RID: 60314 RVA: 0x0022744E File Offset: 0x0022564E
+		// Token: 0x17004DD5 RID: 19925
+		// (get) Token: 0x0600FA18 RID: 64024 RVA: 0x00244BDA File Offset: 0x00242DDA
 		public virtual IActiveRange ActiveRange
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081BF RID: 33215
+		// Token: 0x040088A4 RID: 34980
 		private IAddTrialFollowShooter Instance;
 
-		// Token: 0x040081C0 RID: 33216
+		// Token: 0x040088A5 RID: 34981
 		[Nullable(2)]
 		private IActiveRange _ActiveRangeCache;
 
-		// Token: 0x040081C1 RID: 33217
+		// Token: 0x040088A6 RID: 34982
 		private bool _ActiveRangeInited;
 	}
 }

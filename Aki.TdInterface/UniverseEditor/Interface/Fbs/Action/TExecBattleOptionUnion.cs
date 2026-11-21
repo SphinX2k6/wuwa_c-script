@@ -3,39 +3,71 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076BD RID: 30397
+	// Token: 0x02007ECB RID: 32459
 	public class TExecBattleOptionUnion
 	{
-		// Token: 0x1700E617 RID: 58903
-		// (get) Token: 0x06037494 RID: 226452 RVA: 0x0077DBCA File Offset: 0x0077BDCA
-		// (set) Token: 0x06037495 RID: 226453 RVA: 0x0077DBD2 File Offset: 0x0077BDD2
+		// Token: 0x1700F255 RID: 62037
+		// (get) Token: 0x0603A943 RID: 239939 RVA: 0x007E1E1A File Offset: 0x007E001A
+		// (set) Token: 0x0603A944 RID: 239940 RVA: 0x007E1E22 File Offset: 0x007E0022
 		public TExecBattleOption Type { get; set; }
 
-		// Token: 0x1700E618 RID: 58904
-		// (get) Token: 0x06037496 RID: 226454 RVA: 0x0077DBDB File Offset: 0x0077BDDB
-		// (set) Token: 0x06037497 RID: 226455 RVA: 0x0077DBE3 File Offset: 0x0077BDE3
+		// Token: 0x1700F256 RID: 62038
+		// (get) Token: 0x0603A945 RID: 239941 RVA: 0x007E1E2B File Offset: 0x007E002B
+		// (set) Token: 0x0603A946 RID: 239942 RVA: 0x007E1E33 File Offset: 0x007E0033
 		public object Value { get; set; }
 
-		// Token: 0x06037498 RID: 226456 RVA: 0x0077DBEC File Offset: 0x0077BDEC
+		// Token: 0x0603A947 RID: 239943 RVA: 0x007E1E3C File Offset: 0x007E003C
 		public TExecBattleOptionUnion()
 		{
 			this.Type = TExecBattleOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037499 RID: 226457 RVA: 0x0077DC02 File Offset: 0x0077BE02
+		// Token: 0x0603A948 RID: 239944 RVA: 0x007E1E52 File Offset: 0x007E0052
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603749A RID: 226458 RVA: 0x0077DC14 File Offset: 0x0077BE14
+		// Token: 0x0603A949 RID: 239945 RVA: 0x007E1E64 File Offset: 0x007E0064
+		public IAiAssistCharacterMoveToPointT AsIAiAssistCharacterMoveToPoint()
+		{
+			return this.As<IAiAssistCharacterMoveToPointT>();
+		}
+
+		// Token: 0x0603A94A RID: 239946 RVA: 0x007E1E6C File Offset: 0x007E006C
+		public static TExecBattleOptionUnion FromIAiAssistCharacterMoveToPoint(IAiAssistCharacterMoveToPointT _iaiassistcharactermovetopoint)
+		{
+			return new TExecBattleOptionUnion
+			{
+				Type = TExecBattleOption.IAiAssistCharacterMoveToPoint,
+				Value = _iaiassistcharactermovetopoint
+			};
+		}
+
+		// Token: 0x0603A94B RID: 239947 RVA: 0x007E1E81 File Offset: 0x007E0081
+		public IAiAssistCharacterStopMoveToPointT AsIAiAssistCharacterStopMoveToPoint()
+		{
+			return this.As<IAiAssistCharacterStopMoveToPointT>();
+		}
+
+		// Token: 0x0603A94C RID: 239948 RVA: 0x007E1E89 File Offset: 0x007E0089
+		public static TExecBattleOptionUnion FromIAiAssistCharacterStopMoveToPoint(IAiAssistCharacterStopMoveToPointT _iaiassistcharacterstopmovetopoint)
+		{
+			return new TExecBattleOptionUnion
+			{
+				Type = TExecBattleOption.IAiAssistCharacterStopMoveToPoint,
+				Value = _iaiassistcharacterstopmovetopoint
+			};
+		}
+
+		// Token: 0x0603A94D RID: 239949 RVA: 0x007E1E9E File Offset: 0x007E009E
 		public IExitMonsterMoveTargetT AsIExitMonsterMoveTarget()
 		{
 			return this.As<IExitMonsterMoveTargetT>();
 		}
 
-		// Token: 0x0603749B RID: 226459 RVA: 0x0077DC1C File Offset: 0x0077BE1C
+		// Token: 0x0603A94E RID: 239950 RVA: 0x007E1EA6 File Offset: 0x007E00A6
 		public static TExecBattleOptionUnion FromIExitMonsterMoveTarget(IExitMonsterMoveTargetT _iexitmonstermovetarget)
 		{
 			return new TExecBattleOptionUnion
@@ -45,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603749C RID: 226460 RVA: 0x0077DC31 File Offset: 0x0077BE31
+		// Token: 0x0603A94F RID: 239951 RVA: 0x007E1EBB File Offset: 0x007E00BB
 		public IExitMonsterMoveWithSplineT AsIExitMonsterMoveWithSpline()
 		{
 			return this.As<IExitMonsterMoveWithSplineT>();
 		}
 
-		// Token: 0x0603749D RID: 226461 RVA: 0x0077DC39 File Offset: 0x0077BE39
+		// Token: 0x0603A950 RID: 239952 RVA: 0x007E1EC3 File Offset: 0x007E00C3
 		public static TExecBattleOptionUnion FromIExitMonsterMoveWithSpline(IExitMonsterMoveWithSplineT _iexitmonstermovewithspline)
 		{
 			return new TExecBattleOptionUnion
@@ -61,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603749E RID: 226462 RVA: 0x0077DC4E File Offset: 0x0077BE4E
+		// Token: 0x0603A951 RID: 239953 RVA: 0x007E1ED8 File Offset: 0x007E00D8
 		public ISendBattleEventsT AsISendBattleEvents()
 		{
 			return this.As<ISendBattleEventsT>();
 		}
 
-		// Token: 0x0603749F RID: 226463 RVA: 0x0077DC56 File Offset: 0x0077BE56
+		// Token: 0x0603A952 RID: 239954 RVA: 0x007E1EE0 File Offset: 0x007E00E0
 		public static TExecBattleOptionUnion FromISendBattleEvents(ISendBattleEventsT _isendbattleevents)
 		{
 			return new TExecBattleOptionUnion
@@ -77,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374A0 RID: 226464 RVA: 0x0077DC6B File Offset: 0x0077BE6B
+		// Token: 0x0603A953 RID: 239955 RVA: 0x007E1EF5 File Offset: 0x007E00F5
 		public ISendBattleEventsForMonsterSummonT AsISendBattleEventsForMonsterSummon()
 		{
 			return this.As<ISendBattleEventsForMonsterSummonT>();
 		}
 
-		// Token: 0x060374A1 RID: 226465 RVA: 0x0077DC73 File Offset: 0x0077BE73
+		// Token: 0x0603A954 RID: 239956 RVA: 0x007E1EFD File Offset: 0x007E00FD
 		public static TExecBattleOptionUnion FromISendBattleEventsForMonsterSummon(ISendBattleEventsForMonsterSummonT _isendbattleeventsformonstersummon)
 		{
 			return new TExecBattleOptionUnion
@@ -93,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374A2 RID: 226466 RVA: 0x0077DC88 File Offset: 0x0077BE88
+		// Token: 0x0603A955 RID: 239957 RVA: 0x007E1F12 File Offset: 0x007E0112
 		public ISetBattleTagsT AsISetBattleTags()
 		{
 			return this.As<ISetBattleTagsT>();
 		}
 
-		// Token: 0x060374A3 RID: 226467 RVA: 0x0077DC90 File Offset: 0x0077BE90
+		// Token: 0x0603A956 RID: 239958 RVA: 0x007E1F1A File Offset: 0x007E011A
 		public static TExecBattleOptionUnion FromISetBattleTags(ISetBattleTagsT _isetbattletags)
 		{
 			return new TExecBattleOptionUnion
@@ -109,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374A4 RID: 226468 RVA: 0x0077DCA5 File Offset: 0x0077BEA5
+		// Token: 0x0603A957 RID: 239959 RVA: 0x007E1F2F File Offset: 0x007E012F
 		public ISetMonsterMoveTargetT AsISetMonsterMoveTarget()
 		{
 			return this.As<ISetMonsterMoveTargetT>();
 		}
 
-		// Token: 0x060374A5 RID: 226469 RVA: 0x0077DCAD File Offset: 0x0077BEAD
+		// Token: 0x0603A958 RID: 239960 RVA: 0x007E1F37 File Offset: 0x007E0137
 		public static TExecBattleOptionUnion FromISetMonsterMoveTarget(ISetMonsterMoveTargetT _isetmonstermovetarget)
 		{
 			return new TExecBattleOptionUnion
@@ -125,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374A6 RID: 226470 RVA: 0x0077DCC2 File Offset: 0x0077BEC2
+		// Token: 0x0603A959 RID: 239961 RVA: 0x007E1F4C File Offset: 0x007E014C
 		public ISetMonsterMoveWithSplineT AsISetMonsterMoveWithSpline()
 		{
 			return this.As<ISetMonsterMoveWithSplineT>();
 		}
 
-		// Token: 0x060374A7 RID: 226471 RVA: 0x0077DCCA File Offset: 0x0077BECA
+		// Token: 0x0603A95A RID: 239962 RVA: 0x007E1F54 File Offset: 0x007E0154
 		public static TExecBattleOptionUnion FromISetMonsterMoveWithSpline(ISetMonsterMoveWithSplineT _isetmonstermovewithspline)
 		{
 			return new TExecBattleOptionUnion
@@ -141,11 +173,15 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060374A8 RID: 226472 RVA: 0x0077DCE0 File Offset: 0x0077BEE0
+		// Token: 0x0603A95B RID: 239963 RVA: 0x007E1F6C File Offset: 0x007E016C
 		public static int Pack(FlatBufferBuilder builder, TExecBattleOptionUnion _o)
 		{
 			switch (_o.Type)
 			{
+			case TExecBattleOption.IAiAssistCharacterMoveToPoint:
+				return IAiAssistCharacterMoveToPoint.Pack(builder, _o.AsIAiAssistCharacterMoveToPoint()).Value;
+			case TExecBattleOption.IAiAssistCharacterStopMoveToPoint:
+				return IAiAssistCharacterStopMoveToPoint.Pack(builder, _o.AsIAiAssistCharacterStopMoveToPoint()).Value;
 			case TExecBattleOption.IExitMonsterMoveTarget:
 				return IExitMonsterMoveTarget.Pack(builder, _o.AsIExitMonsterMoveTarget()).Value;
 			case TExecBattleOption.IExitMonsterMoveWithSpline:

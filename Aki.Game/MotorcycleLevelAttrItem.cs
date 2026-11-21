@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002237 RID: 8759
+// Token: 0x0200171B RID: 5915
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class MotorcycleLevelAttrItem : GridProxyAbstract<IMotorLevelAttrData>
 {
-	// Token: 0x06011176 RID: 70006 RVA: 0x0042AD44 File Offset: 0x00428F44
+	// Token: 0x0600E60C RID: 58892 RVA: 0x004378E8 File Offset: 0x00435AE8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class MotorcycleLevelAttrItem : GridProxyAbstract<IMotorLevelAttrData>
 		};
 	}
 
-	// Token: 0x06011177 RID: 70007 RVA: 0x0042ADCA File Offset: 0x00428FCA
+	// Token: 0x0600E60D RID: 58893 RVA: 0x0043796E File Offset: 0x00435B6E
 	private string GetEnoughColorStr(bool isEnough, string value)
 	{
 		StringBuilder stringBuilder = new StringBuilder();
@@ -38,7 +38,7 @@ public class MotorcycleLevelAttrItem : GridProxyAbstract<IMotorLevelAttrData>
 		return stringBuilder.ToString();
 	}
 
-	// Token: 0x06011178 RID: 70008 RVA: 0x0042AE00 File Offset: 0x00429000
+	// Token: 0x0600E60E RID: 58894 RVA: 0x004379A4 File Offset: 0x00435BA4
 	public override void Refresh(IMotorLevelAttrData data, bool isSelected, int gridIndex)
 	{
 		MotorAttr? motorAttrConfig = MotorConfig.Instance.GetMotorAttrConfig(data.AttrId);
@@ -122,23 +122,23 @@ public class MotorcycleLevelAttrItem : GridProxyAbstract<IMotorLevelAttrData>
 		base.GetText(3).SetText(newText, true);
 	}
 
-	// Token: 0x0200876B RID: 34667
+	// Token: 0x020078F4 RID: 30964
 	[NullableContext(0)]
 	private class EMotorLevelAttrItemComponent
 	{
-		// Token: 0x0402C040 RID: 180288
+		// Token: 0x04027358 RID: 160600
 		public const int BgItem = 0;
 
-		// Token: 0x0402C041 RID: 180289
+		// Token: 0x04027359 RID: 160601
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C042 RID: 180290
+		// Token: 0x0402735A RID: 160602
 		public const int TxtAttrName = 2;
 
-		// Token: 0x0402C043 RID: 180291
+		// Token: 0x0402735B RID: 160603
 		public const int TxtAttrValue = 3;
 
-		// Token: 0x0402C044 RID: 180292
+		// Token: 0x0402735C RID: 160604
 		public const int SprAdditionBg = 4;
 	}
 }

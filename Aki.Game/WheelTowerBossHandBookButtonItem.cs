@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001589 RID: 5513
+// Token: 0x02000A41 RID: 2625
 public class WheelTowerBossHandBookButtonItem : UiPanelBase
 {
-	// Token: 0x06009D5A RID: 40282 RVA: 0x00221B28 File Offset: 0x0021FD28
+	// Token: 0x06007138 RID: 28984 RVA: 0x0022B8D8 File Offset: 0x00229AD8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,7 +30,7 @@ public class WheelTowerBossHandBookButtonItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D5B RID: 40283 RVA: 0x00221BD0 File Offset: 0x0021FDD0
+	// Token: 0x06007139 RID: 28985 RVA: 0x0022B980 File Offset: 0x00229B80
 	public void RefreshRedDot()
 	{
 		bool uiactive = WheelTowerModel.Instance.ActivityData.HasBossHandBookRedDot();
@@ -42,7 +42,7 @@ public class WheelTowerBossHandBookButtonItem : UiPanelBase
 		sprite.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06009D5C RID: 40284 RVA: 0x00221BFF File Offset: 0x0021FDFF
+	// Token: 0x0600713A RID: 28986 RVA: 0x0022B9AF File Offset: 0x00229BAF
 	public void SetJumpInfo(int waveId, int teamRound, bool isEndless)
 	{
 		this.JumpWaveConfigId = waveId;
@@ -50,7 +50,7 @@ public class WheelTowerBossHandBookButtonItem : UiPanelBase
 		this.JumpEndless = isEndless;
 	}
 
-	// Token: 0x06009D5D RID: 40285 RVA: 0x00221C18 File Offset: 0x0021FE18
+	// Token: 0x0600713B RID: 28987 RVA: 0x0022B9C8 File Offset: 0x00229BC8
 	private void OnBossHandBookBtnClick()
 	{
 		NewTowerWave? waveConfigById = WheelTowerConfig.Instance.GetWaveConfigById(this.JumpWaveConfigId);
@@ -70,12 +70,12 @@ public class WheelTowerBossHandBookButtonItem : UiPanelBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x04004524 RID: 17700
+	// Token: 0x040045CA RID: 17866
 	private int JumpWaveConfigId;
 
-	// Token: 0x04004525 RID: 17701
+	// Token: 0x040045CB RID: 17867
 	private int JumpTeamRound;
 
-	// Token: 0x04004526 RID: 17702
+	// Token: 0x040045CC RID: 17868
 	private bool JumpEndless;
 }

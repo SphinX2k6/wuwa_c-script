@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003CC RID: 972
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000423 RID: 1059
 	public class IFurnitureSlot
 	{
-		// Token: 0x06001383 RID: 4995 RVA: 0x0003F5D8 File Offset: 0x0003D7D8
+		// Token: 0x06001511 RID: 5393 RVA: 0x00043158 File Offset: 0x00041358
 		private IFurnitureSlot_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001384 RID: 4996 RVA: 0x0003F610 File Offset: 0x0003D810
+		// Token: 0x06001512 RID: 5394 RVA: 0x00043190 File Offset: 0x00041390
 		public static IFurnitureSlot Create([Nullable(2)] IFurnitureSlot instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001385 RID: 4997 RVA: 0x0003F623 File Offset: 0x0003D823
+		// Token: 0x06001513 RID: 5395 RVA: 0x000431A3 File Offset: 0x000413A3
 		public static IFurnitureSlot CreateFromSetValue([Nullable(2)] IFurnitureSlot_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001386 RID: 4998 RVA: 0x0003F638 File Offset: 0x0003D838
+		// Token: 0x06001514 RID: 5396 RVA: 0x000431B8 File Offset: 0x000413B8
 		public IFurnitureSlot_SetValue ToSetValue()
 		{
 			return new IFurnitureSlot_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700056D RID: 1389
-		// (get) Token: 0x06001387 RID: 4999 RVA: 0x0003F688 File Offset: 0x0003D888
-		// (set) Token: 0x06001388 RID: 5000 RVA: 0x0003F6E9 File Offset: 0x0003D8E9
+		// Token: 0x170005D1 RID: 1489
+		// (get) Token: 0x06001515 RID: 5397 RVA: 0x00043208 File Offset: 0x00041408
+		// (set) Token: 0x06001516 RID: 5398 RVA: 0x00043269 File Offset: 0x00041469
 		[Nullable(2)]
 		public virtual IFurnitureCamera SlotCamera
 		{
@@ -97,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700056E RID: 1390
-		// (get) Token: 0x06001389 RID: 5001 RVA: 0x0003F700 File Offset: 0x0003D900
-		// (set) Token: 0x0600138A RID: 5002 RVA: 0x0003F761 File Offset: 0x0003D961
+		// Token: 0x170005D2 RID: 1490
+		// (get) Token: 0x06001517 RID: 5399 RVA: 0x00043280 File Offset: 0x00041480
+		// (set) Token: 0x06001518 RID: 5400 RVA: 0x000432E1 File Offset: 0x000414E1
 		public virtual ISlotShape SlotShape
 		{
 			get
@@ -127,9 +125,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700056F RID: 1391
-		// (get) Token: 0x0600138B RID: 5003 RVA: 0x0003F776 File Offset: 0x0003D976
-		// (set) Token: 0x0600138C RID: 5004 RVA: 0x0003F7A1 File Offset: 0x0003D9A1
+		// Token: 0x170005D3 RID: 1491
+		// (get) Token: 0x06001519 RID: 5401 RVA: 0x000432F6 File Offset: 0x000414F6
+		// (set) Token: 0x0600151A RID: 5402 RVA: 0x00043321 File Offset: 0x00041521
 		public virtual int FurnitureTag
 		{
 			get
@@ -150,9 +148,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000570 RID: 1392
-		// (get) Token: 0x0600138D RID: 5005 RVA: 0x0003F7AF File Offset: 0x0003D9AF
-		// (set) Token: 0x0600138E RID: 5006 RVA: 0x0003F7D6 File Offset: 0x0003D9D6
+		// Token: 0x170005D4 RID: 1492
+		// (get) Token: 0x0600151B RID: 5403 RVA: 0x0004332F File Offset: 0x0004152F
+		// (set) Token: 0x0600151C RID: 5404 RVA: 0x00043356 File Offset: 0x00041556
 		[Nullable(2)]
 		public virtual List<int> ExcludedFurnitureIds
 		{
@@ -177,9 +175,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000571 RID: 1393
-		// (get) Token: 0x0600138F RID: 5007 RVA: 0x0003F7E4 File Offset: 0x0003D9E4
-		// (set) Token: 0x06001390 RID: 5008 RVA: 0x0003F80E File Offset: 0x0003DA0E
+		// Token: 0x170005D5 RID: 1493
+		// (get) Token: 0x0600151D RID: 5405 RVA: 0x00043364 File Offset: 0x00041564
+		// (set) Token: 0x0600151E RID: 5406 RVA: 0x0004338E File Offset: 0x0004158E
 		public virtual int? EdPreviewFurnitureId
 		{
 			get
@@ -196,24 +194,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F8C RID: 3980
+		// Token: 0x040010A5 RID: 4261
 		[Nullable(2)]
 		protected IFurnitureSlot FbInstance;
 
-		// Token: 0x04000F8D RID: 3981
+		// Token: 0x040010A6 RID: 4262
 		[Nullable(2)]
 		protected IFurnitureSlot_SetValue PocoInterface;
 
-		// Token: 0x04000F8E RID: 3982
+		// Token: 0x040010A7 RID: 4263
 		private IFurnitureCamera _SlotCameraCache;
 
-		// Token: 0x04000F8F RID: 3983
+		// Token: 0x040010A8 RID: 4264
 		private bool _SlotCameraInited;
 
-		// Token: 0x04000F90 RID: 3984
+		// Token: 0x040010A9 RID: 4265
 		private ISlotShape _SlotShapeCache;
 
-		// Token: 0x04000F91 RID: 3985
+		// Token: 0x040010AA RID: 4266
 		private bool _SlotShapeInited;
 	}
 }

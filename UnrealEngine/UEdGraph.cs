@@ -6,62 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A47 RID: 2631
+	// Token: 0x020001DC RID: 476
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.EdGraph")]
 	[UnrealStructLayout(176, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 176)]
 	public class UEdGraph : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008EBF RID: 36543 RVA: 0x000CC155 File Offset: 0x000CA355
+		// Token: 0x06002170 RID: 8560 RVA: 0x00030FF9 File Offset: 0x0002F1F9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEdGraph._ClassPtr;
 		}
 
-		// Token: 0x06008EC0 RID: 36544 RVA: 0x000CC164 File Offset: 0x000CA364
+		// Token: 0x06002171 RID: 8561 RVA: 0x00031008 File Offset: 0x0002F208
 		public UEdGraph() : this(BuiltinUtils.AllocNativeUObject(UEdGraph.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06008EC1 RID: 36545 RVA: 0x000CC18C File Offset: 0x000CA38C
+		// Token: 0x06002172 RID: 8562 RVA: 0x00031030 File Offset: 0x0002F230
 		public UEdGraph(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEdGraph.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700219F RID: 8607
-		// (get) Token: 0x06008EC2 RID: 36546 RVA: 0x000CC1BF File Offset: 0x000CA3BF
-		// (set) Token: 0x06008EC3 RID: 36547 RVA: 0x000CC1D3 File Offset: 0x000CA3D3
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<UEdGraphSchema> Schema
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UEdGraph.__PropertyOffset_Schema);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UEdGraph.__PropertyOffset_Schema) = value;
-			}
-		}
-
-		// Token: 0x170021A0 RID: 8608
-		// (get) Token: 0x06008EC4 RID: 36548 RVA: 0x000CC1E8 File Offset: 0x000CA3E8
-		// (set) Token: 0x06008EC5 RID: 36549 RVA: 0x000CC221 File Offset: 0x000CA421
+		// Token: 0x170004AA RID: 1194
+		// (get) Token: 0x06002173 RID: 8563 RVA: 0x00031064 File Offset: 0x0002F264
+		// (set) Token: 0x06002174 RID: 8564 RVA: 0x0003109D File Offset: 0x0002F29D
 		public TArray<UEdGraphNode> Nodes
 		{
 			get
@@ -80,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A1 RID: 8609
-		// (get) Token: 0x06008EC6 RID: 36550 RVA: 0x000CC22F File Offset: 0x000CA42F
-		// (set) Token: 0x06008EC7 RID: 36551 RVA: 0x000CC248 File Offset: 0x000CA448
+		// Token: 0x170004AB RID: 1195
+		// (get) Token: 0x06002175 RID: 8565 RVA: 0x000310AB File Offset: 0x0002F2AB
+		// (set) Token: 0x06002176 RID: 8566 RVA: 0x000310C4 File Offset: 0x0002F2C4
 		public unsafe bool bEditable
 		{
 			get
@@ -95,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A2 RID: 8610
-		// (get) Token: 0x06008EC8 RID: 36552 RVA: 0x000CC278 File Offset: 0x000CA478
-		// (set) Token: 0x06008EC9 RID: 36553 RVA: 0x000CC291 File Offset: 0x000CA491
+		// Token: 0x170004AC RID: 1196
+		// (get) Token: 0x06002177 RID: 8567 RVA: 0x000310F4 File Offset: 0x0002F2F4
+		// (set) Token: 0x06002178 RID: 8568 RVA: 0x0003110D File Offset: 0x0002F30D
 		public unsafe bool bAllowDeletion
 		{
 			get
@@ -110,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170021A3 RID: 8611
-		// (get) Token: 0x06008ECA RID: 36554 RVA: 0x000CC2C1 File Offset: 0x000CA4C1
-		// (set) Token: 0x06008ECB RID: 36555 RVA: 0x000CC2DA File Offset: 0x000CA4DA
+		// Token: 0x170004AD RID: 1197
+		// (get) Token: 0x06002179 RID: 8569 RVA: 0x0003113D File Offset: 0x0002F33D
+		// (set) Token: 0x0600217A RID: 8570 RVA: 0x00031156 File Offset: 0x0002F356
 		public unsafe bool bAllowRenaming
 		{
 			get
@@ -125,33 +95,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008ECC RID: 36556 RVA: 0x000CC30A File Offset: 0x000CA50A
+		// Token: 0x0600217B RID: 8571 RVA: 0x00031186 File Offset: 0x0002F386
 		static UEdGraph()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.EdGraph");
 		}
 
-		// Token: 0x06008ECD RID: 36557 RVA: 0x000CC318 File Offset: 0x000CA518
+		// Token: 0x0600217C RID: 8572 RVA: 0x00031194 File Offset: 0x0002F394
 		protected UEdGraph(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400466A RID: 18026
+		// Token: 0x04000BAB RID: 2987
 		public new const string __ObjectPath = "/Script/Engine.EdGraph";
 
-		// Token: 0x0400466B RID: 18027
+		// Token: 0x04000BAC RID: 2988
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400466C RID: 18028
+		// Token: 0x04000BAD RID: 2989
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400466D RID: 18029
-		internal static int __PropertyOffset_Schema;
-
-		// Token: 0x0400466E RID: 18030
+		// Token: 0x04000BAE RID: 2990
 		internal static int __PropertyOffset_Nodes;
 
-		// Token: 0x0400466F RID: 18031
+		// Token: 0x04000BAF RID: 2991
 		[Nullable(new byte[]
 		{
 			2,
@@ -159,22 +126,22 @@ namespace UnrealEngine
 		})]
 		private TArray<UEdGraphNode> _Nodes;
 
-		// Token: 0x04004670 RID: 18032
+		// Token: 0x04000BB0 RID: 2992
 		internal static int __PropertyOffset_bEditable;
 
-		// Token: 0x04004671 RID: 18033
+		// Token: 0x04000BB1 RID: 2993
 		internal static byte __PropertyMask_bEditable;
 
-		// Token: 0x04004672 RID: 18034
+		// Token: 0x04000BB2 RID: 2994
 		internal static int __PropertyOffset_bAllowDeletion;
 
-		// Token: 0x04004673 RID: 18035
+		// Token: 0x04000BB3 RID: 2995
 		internal static byte __PropertyMask_bAllowDeletion;
 
-		// Token: 0x04004674 RID: 18036
+		// Token: 0x04000BB4 RID: 2996
 		internal static int __PropertyOffset_bAllowRenaming;
 
-		// Token: 0x04004675 RID: 18037
+		// Token: 0x04000BB5 RID: 2997
 		internal static byte __PropertyMask_bAllowRenaming;
 	}
 }

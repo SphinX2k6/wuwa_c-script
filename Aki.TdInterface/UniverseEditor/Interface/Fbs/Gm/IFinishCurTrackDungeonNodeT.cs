@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004652 RID: 18002
+	// Token: 0x02004ABA RID: 19130
 	public class IFinishCurTrackDungeonNodeT
 	{
-		// Token: 0x17007FC7 RID: 32711
-		// (get) Token: 0x0601B47F RID: 111743 RVA: 0x003E19EA File Offset: 0x003DFBEA
-		// (set) Token: 0x0601B480 RID: 111744 RVA: 0x003E19F2 File Offset: 0x003DFBF2
+		// Token: 0x17008608 RID: 34312
+		// (get) Token: 0x0601CC54 RID: 117844 RVA: 0x0040DC86 File Offset: 0x0040BE86
+		// (set) Token: 0x0601CC55 RID: 117845 RVA: 0x0040DC8E File Offset: 0x0040BE8E
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17007FC8 RID: 32712
-		// (get) Token: 0x0601B481 RID: 111745 RVA: 0x003E19FB File Offset: 0x003DFBFB
-		// (set) Token: 0x0601B482 RID: 111746 RVA: 0x003E1A03 File Offset: 0x003DFC03
+		// Token: 0x17008609 RID: 34313
+		// (get) Token: 0x0601CC56 RID: 117846 RVA: 0x0040DC97 File Offset: 0x0040BE97
+		// (set) Token: 0x0601CC57 RID: 117847 RVA: 0x0040DC9F File Offset: 0x0040BE9F
 		public int NodeId { get; set; }
 
-		// Token: 0x17007FC9 RID: 32713
-		// (get) Token: 0x0601B483 RID: 111747 RVA: 0x003E1A0C File Offset: 0x003DFC0C
-		// (set) Token: 0x0601B484 RID: 111748 RVA: 0x003E1A14 File Offset: 0x003DFC14
+		// Token: 0x1700860A RID: 34314
+		// (get) Token: 0x0601CC58 RID: 117848 RVA: 0x0040DCA8 File Offset: 0x0040BEA8
+		// (set) Token: 0x0601CC59 RID: 117849 RVA: 0x0040DCB0 File Offset: 0x0040BEB0
 		public int NodeIndex { get; set; }
 
-		// Token: 0x17007FCA RID: 32714
-		// (get) Token: 0x0601B485 RID: 111749 RVA: 0x003E1A1D File Offset: 0x003DFC1D
-		// (set) Token: 0x0601B486 RID: 111750 RVA: 0x003E1A25 File Offset: 0x003DFC25
+		// Token: 0x1700860B RID: 34315
+		// (get) Token: 0x0601CC5A RID: 117850 RVA: 0x0040DCB9 File Offset: 0x0040BEB9
+		// (set) Token: 0x0601CC5B RID: 117851 RVA: 0x0040DCC1 File Offset: 0x0040BEC1
 		public bool IsComplete { get; set; }
 
-		// Token: 0x17007FCB RID: 32715
-		// (get) Token: 0x0601B487 RID: 111751 RVA: 0x003E1A2E File Offset: 0x003DFC2E
-		// (set) Token: 0x0601B488 RID: 111752 RVA: 0x003E1A36 File Offset: 0x003DFC36
+		// Token: 0x1700860C RID: 34316
+		// (get) Token: 0x0601CC5C RID: 117852 RVA: 0x0040DCCA File Offset: 0x0040BECA
+		// (set) Token: 0x0601CC5D RID: 117853 RVA: 0x0040DCD2 File Offset: 0x0040BED2
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601B489 RID: 111753 RVA: 0x003E1A3F File Offset: 0x003DFC3F
+		// Token: 0x0601CC5E RID: 117854 RVA: 0x0040DCDB File Offset: 0x0040BEDB
 		public IFinishCurTrackDungeonNodeT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

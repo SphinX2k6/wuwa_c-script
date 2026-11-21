@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200085C RID: 2140
+	// Token: 0x020008FF RID: 2303
 	public class ProceduralVisualComponent_SetValue
 	{
-		// Token: 0x04001F2C RID: 7980
+		// Token: 0x0400213E RID: 8510
 		public bool? Disabled;
 
-		// Token: 0x04001F2D RID: 7981
+		// Token: 0x0400213F RID: 8511
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F2E RID: 7982
-		[Nullable(1)]
+		// Token: 0x04002140 RID: 8512
 		public List<IProceduralVisualBase> Configs;
 	}
 }

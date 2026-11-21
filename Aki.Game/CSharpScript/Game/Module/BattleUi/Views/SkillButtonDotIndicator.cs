@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CE0 RID: 23776
+	// Token: 0x02004CC2 RID: 19650
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SkillButtonDotIndicator : UiPanelBase
 	{
-		// Token: 0x0603C2A6 RID: 246438 RVA: 0x00E67350 File Offset: 0x00E65550
+		// Token: 0x060311FC RID: 201212 RVA: 0x00DB7904 File Offset: 0x00DB5B04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C2A7 RID: 246439 RVA: 0x00E673DA File Offset: 0x00E655DA
+		// Token: 0x060311FD RID: 201213 RVA: 0x00DB798E File Offset: 0x00DB5B8E
 		protected override void OnStart()
 		{
 			base.SkipDestroyActor = true;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetTexture(0).SetUIActive(false);
 		}
 
-		// Token: 0x0603C2A8 RID: 246440 RVA: 0x00E67405 File Offset: 0x00E65605
+		// Token: 0x060311FE RID: 201214 RVA: 0x00DB79B9 File Offset: 0x00DB5BB9
 		protected override void OnBeforeDestroy()
 		{
 			if (this.DefaultTextureData != null)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603C2A9 RID: 246441 RVA: 0x00E6741C File Offset: 0x00E6561C
+		// Token: 0x060311FF RID: 201215 RVA: 0x00DB79D0 File Offset: 0x00DB5BD0
 		private void InitTweenAnim(int componentType)
 		{
 			if (this.TweenAnimPlayer == null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 		}
 
-		// Token: 0x0603C2AA RID: 246442 RVA: 0x00E67448 File Offset: 0x00E65648
+		// Token: 0x06031200 RID: 201216 RVA: 0x00DB79FC File Offset: 0x00DB5BFC
 		public void SetDotState(bool bIn, bool force = false)
 		{
 			if (force)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimPlayer.PlayTweenAnim(bIn ? 1 : 2);
 		}
 
-		// Token: 0x0603C2AB RID: 246443 RVA: 0x00E674F8 File Offset: 0x00E656F8
+		// Token: 0x06031201 RID: 201217 RVA: 0x00DB7AAC File Offset: 0x00DB5CAC
 		public void SetIconResource(UTexture textureData)
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -115,21 +115,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F5DC RID: 128476
+		// Token: 0x0401A095 RID: 106645
 		private BattleUiTweenAnimPlayer TweenAnimPlayer;
 
-		// Token: 0x0401F5DD RID: 128477
+		// Token: 0x0401A096 RID: 106646
 		private UTexture DefaultTextureData;
 
-		// Token: 0x0200BF3A RID: 48954
+		// Token: 0x0200A940 RID: 43328
 		[NullableContext(0)]
 		private enum EDotChildType
 		{
-			// Token: 0x04039AE2 RID: 236258
+			// Token: 0x040344A4 RID: 214180
 			LightDot,
-			// Token: 0x04039AE3 RID: 236259
+			// Token: 0x040344A5 RID: 214181
 			AniIn,
-			// Token: 0x04039AE4 RID: 236260
+			// Token: 0x040344A6 RID: 214182
 			AniOut
 		}
 	}

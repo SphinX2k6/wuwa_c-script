@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020F4 RID: 8436
+	// Token: 0x020006D3 RID: 1747
 	public sealed class FOnSequencePlayEvent : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FC1E RID: 130078 RVA: 0x002F38C1 File Offset: 0x002F1AC1
+		// Token: 0x060094C9 RID: 38089 RVA: 0x000E06D1 File Offset: 0x000DE8D1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnSequencePlayEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FC1F RID: 130079 RVA: 0x002F38CD File Offset: 0x002F1ACD
+		// Token: 0x060094CA RID: 38090 RVA: 0x000E06DD File Offset: 0x000DE8DD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnSequencePlayEvent._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnSequencePlayEvent._FunctionPtr;
 		}
 
-		// Token: 0x0601FC20 RID: 130080 RVA: 0x002F38F0 File Offset: 0x002F1AF0
+		// Token: 0x060094CB RID: 38091 RVA: 0x000E0700 File Offset: 0x000DE900
 		public FOnSequencePlayEvent()
 		{
 		}
 
-		// Token: 0x0601FC21 RID: 130081 RVA: 0x002F38F8 File Offset: 0x002F1AF8
+		// Token: 0x060094CC RID: 38092 RVA: 0x000E0708 File Offset: 0x000DE908
 		[NullableContext(2)]
 		public FOnSequencePlayEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FC22 RID: 130082 RVA: 0x002F3902 File Offset: 0x002F1B02
+		// Token: 0x060094CD RID: 38093 RVA: 0x000E0712 File Offset: 0x000DE912
 		public FOnSequencePlayEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FC23 RID: 130083 RVA: 0x002F390D File Offset: 0x002F1B0D
+		// Token: 0x060094CE RID: 38094 RVA: 0x000E071D File Offset: 0x000DE91D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string, string>) ?? ((Action<string, string>)Delegate.CreateDelegate(typeof(Action<string, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FC24 RID: 130084 RVA: 0x002F393F File Offset: 0x002F1B3F
+		// Token: 0x060094CF RID: 38095 RVA: 0x000E074F File Offset: 0x000DE94F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string, string> Callback)
 		{
 			if (FOnSequencePlayEvent.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnSequencePlayEvent.RegisterId);
 		}
 
-		// Token: 0x0601FC25 RID: 130085 RVA: 0x002F397C File Offset: 0x002F1B7C
+		// Token: 0x060094D0 RID: 38096 RVA: 0x000E078C File Offset: 0x000DE98C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string sequenceName, string eventName)
 		{
 			FOnSequencePlayEvent.__FOnSequencePlayEvent_DelegateParams* ptr = stackalloc FOnSequencePlayEvent.__FOnSequencePlayEvent_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FOnSequencePlayEvent.__FOnSequencePlayEvent_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnSequencePlayEvent._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601FC26 RID: 130086 RVA: 0x002F39E0 File Offset: 0x002F1BE0
+		// Token: 0x060094D1 RID: 38097 RVA: 0x000E07F0 File Offset: 0x000DE9F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string, string> action = target as Action<string, string>;
@@ -95,35 +92,35 @@ namespace UnrealEngine
 			action(arg, arg2);
 		}
 
-		// Token: 0x040111E9 RID: 70121
+		// Token: 0x040040B7 RID: 16567
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040111EA RID: 70122
+		// Token: 0x040040B8 RID: 16568
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.OnSequencePlayEvent__DelegateSignature";
 
-		// Token: 0x040111EB RID: 70123
+		// Token: 0x040040B9 RID: 16569
 		private static int RegisterId;
 
-		// Token: 0x020034D9 RID: 13529
+		// Token: 0x02000F05 RID: 3845
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FOnSequencePlayEvent_DelegateParams
+		private ref struct __FOnSequencePlayEvent_DelegateParams
 		{
-			// Token: 0x040174EC RID: 95468
+			// Token: 0x040062D1 RID: 25297
 			[FieldOffset(0)]
 			public FString sequenceName;
 
-			// Token: 0x040174ED RID: 95469
+			// Token: 0x040062D2 RID: 25298
 			[FieldOffset(16)]
 			public FString eventName;
 		}
 
-		// Token: 0x020034DA RID: 13530
+		// Token: 0x02000F06 RID: 3846
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174EE RID: 95470
+			// Token: 0x040062D3 RID: 25299
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

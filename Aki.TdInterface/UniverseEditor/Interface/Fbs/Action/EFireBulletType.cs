@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F72 RID: 24434
+	// Token: 0x020065B7 RID: 26039
 	public enum EFireBulletType : byte
 	{
-		// Token: 0x0400FD7A RID: 64890
+		// Token: 0x04010AFE RID: 68350
 		TrackTarget,
-		// Token: 0x0400FD7B RID: 64891
+		// Token: 0x04010AFF RID: 68351
 		ForwardFront,
-		// Token: 0x0400FD7C RID: 64892
+		// Token: 0x04010B00 RID: 68352
 		TrackPosition
 	}
 }

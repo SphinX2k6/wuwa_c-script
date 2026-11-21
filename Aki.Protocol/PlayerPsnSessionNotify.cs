@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000DA4 RID: 3492
+	// Token: 0x02000D94 RID: 3476
 	[NetMessage(EMessageId.PlayerPsnSessionNotify)]
 	public sealed class PlayerPsnSessionNotify : IMessage<PlayerPsnSessionNotify>, IMessage, IEquatable<PlayerPsnSessionNotify>, IDeepCloneable<PlayerPsnSessionNotify>, IBufferMessage
 	{
-		// Token: 0x06012D0C RID: 77068 RVA: 0x002BE7DF File Offset: 0x002BC9DF
+		// Token: 0x06012C10 RID: 76816 RVA: 0x002BCBBB File Offset: 0x002BADBB
 		[NullableContext(1)]
 		public static PlayerPsnSessionNotify Create()
 		{
 			return new PlayerPsnSessionNotify();
 		}
 
-		// Token: 0x17003E6B RID: 15979
-		// (get) Token: 0x06012D0D RID: 77069 RVA: 0x002BE7E6 File Offset: 0x002BC9E6
+		// Token: 0x17003E36 RID: 15926
+		// (get) Token: 0x06012C11 RID: 76817 RVA: 0x002BCBC2 File Offset: 0x002BADC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E6C RID: 15980
-		// (get) Token: 0x06012D0E RID: 77070 RVA: 0x002BE7E9 File Offset: 0x002BC9E9
+		// Token: 0x17003E37 RID: 15927
+		// (get) Token: 0x06012C12 RID: 76818 RVA: 0x002BCBC5 File Offset: 0x002BADC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012D0F RID: 77071 RVA: 0x002BE7F0 File Offset: 0x002BC9F0
+		// Token: 0x06012C13 RID: 76819 RVA: 0x002BCBCC File Offset: 0x002BADCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerPsnSessionNotify()
 		{
 		}
 
-		// Token: 0x06012D10 RID: 77072 RVA: 0x002BE803 File Offset: 0x002BCA03
+		// Token: 0x06012C14 RID: 76820 RVA: 0x002BCBDF File Offset: 0x002BADDF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerPsnSessionNotify(PlayerPsnSessionNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012D11 RID: 77073 RVA: 0x002BE834 File Offset: 0x002BCA34
+		// Token: 0x06012C15 RID: 76821 RVA: 0x002BCC10 File Offset: 0x002BAE10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerPsnSessionNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new PlayerPsnSessionNotify(this);
 		}
 
-		// Token: 0x17003E6D RID: 15981
-		// (get) Token: 0x06012D12 RID: 77074 RVA: 0x002BE83C File Offset: 0x002BCA3C
-		// (set) Token: 0x06012D13 RID: 77075 RVA: 0x002BE844 File Offset: 0x002BCA44
+		// Token: 0x17003E38 RID: 15928
+		// (get) Token: 0x06012C16 RID: 76822 RVA: 0x002BCC18 File Offset: 0x002BAE18
+		// (set) Token: 0x06012C17 RID: 76823 RVA: 0x002BCC20 File Offset: 0x002BAE20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PsnSessionId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E6E RID: 15982
-		// (get) Token: 0x06012D14 RID: 77076 RVA: 0x002BE857 File Offset: 0x002BCA57
-		// (set) Token: 0x06012D15 RID: 77077 RVA: 0x002BE85F File Offset: 0x002BCA5F
+		// Token: 0x17003E39 RID: 15929
+		// (get) Token: 0x06012C18 RID: 76824 RVA: 0x002BCC33 File Offset: 0x002BAE33
+		// (set) Token: 0x06012C19 RID: 76825 RVA: 0x002BCC3B File Offset: 0x002BAE3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012D16 RID: 77078 RVA: 0x002BE868 File Offset: 0x002BCA68
+		// Token: 0x06012C1A RID: 76826 RVA: 0x002BCC44 File Offset: 0x002BAE44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PlayerPsnSessionNotify);
 		}
 
-		// Token: 0x06012D17 RID: 77079 RVA: 0x002BE878 File Offset: 0x002BCA78
+		// Token: 0x06012C1B RID: 76827 RVA: 0x002BCC54 File Offset: 0x002BAE54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PlayerPsnSessionNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.PsnSessionId != other.PsnSessionId) && this.PlayerId == other.PlayerId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012D18 RID: 77080 RVA: 0x002BE8C8 File Offset: 0x002BCAC8
+		// Token: 0x06012C1C RID: 76828 RVA: 0x002BCCA4 File Offset: 0x002BAEA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012D19 RID: 77081 RVA: 0x002BE922 File Offset: 0x002BCB22
+		// Token: 0x06012C1D RID: 76829 RVA: 0x002BCCFE File Offset: 0x002BAEFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012D1A RID: 77082 RVA: 0x002BE92F File Offset: 0x002BCB2F
+		// Token: 0x06012C1E RID: 76830 RVA: 0x002BCD0B File Offset: 0x002BAF0B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012D1B RID: 77083 RVA: 0x002BE938 File Offset: 0x002BCB38
+		// Token: 0x06012C1F RID: 76831 RVA: 0x002BCD14 File Offset: 0x002BAF14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.PsnSessionId.Length != 0)
-			{
-				output.WriteRawTag(50);
-				output.WriteString(this.PsnSessionId);
-			}
 			if (this.PlayerId != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.PlayerId);
+			}
+			if (this.PsnSessionId.Length != 0)
+			{
+				output.WriteRawTag(82);
+				output.WriteString(this.PsnSessionId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012D1C RID: 77084 RVA: 0x002BE998 File Offset: 0x002BCB98
+		// Token: 0x06012C20 RID: 76832 RVA: 0x002BCD74 File Offset: 0x002BAF74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012D1D RID: 77085 RVA: 0x002BE9F4 File Offset: 0x002BCBF4
+		// Token: 0x06012C21 RID: 76833 RVA: 0x002BCDD0 File Offset: 0x002BAFD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PlayerPsnSessionNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012D1E RID: 77086 RVA: 0x002BEA49 File Offset: 0x002BCC49
+		// Token: 0x06012C22 RID: 76834 RVA: 0x002BCE25 File Offset: 0x002BB025
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012D1F RID: 77087 RVA: 0x002BEA54 File Offset: 0x002BCC54
+		// Token: 0x06012C23 RID: 76835 RVA: 0x002BCE30 File Offset: 0x002BB030
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 50U)
+				if (num != 24U)
 				{
-					if (num != 56U)
+					if (num != 82U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.PlayerId = input.ReadInt32();
+						this.PsnSessionId = input.ReadString();
 					}
 				}
 				else
 				{
-					this.PsnSessionId = input.ReadString();
+					this.PlayerId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x0400747B RID: 29819
+		// Token: 0x04007493 RID: 29843
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400747C RID: 29820
-		public const int PsnSessionIdFieldNumber = 6;
+		// Token: 0x04007494 RID: 29844
+		public const int PsnSessionIdFieldNumber = 10;
 
-		// Token: 0x0400747D RID: 29821
+		// Token: 0x04007495 RID: 29845
 		private string psnSessionId_ = "";
 
-		// Token: 0x0400747E RID: 29822
-		public const int PlayerIdFieldNumber = 7;
+		// Token: 0x04007496 RID: 29846
+		public const int PlayerIdFieldNumber = 3;
 
-		// Token: 0x0400747F RID: 29823
+		// Token: 0x04007497 RID: 29847
 		private int playerId_;
 	}
 }

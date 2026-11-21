@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006680 RID: 26240
+	// Token: 0x020055D0 RID: 21968
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchActivityData : ActivityBaseData
 	{
-		// Token: 0x06041BFD RID: 269309 RVA: 0x00FF2D7C File Offset: 0x00FF0F7C
+		// Token: 0x06036749 RID: 223049 RVA: 0x00F34184 File Offset: 0x00F32384
 		protected override void PhraseEx(ActivityData data)
 		{
 			if (data == null)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.OnLevelRewardUpdateNotify(dropCatchActivityInfo.DropCatchLevelInfos);
 		}
 
-		// Token: 0x06041BFE RID: 269310 RVA: 0x00FF2DAC File Offset: 0x00FF0FAC
+		// Token: 0x0603674A RID: 223050 RVA: 0x00F341B4 File Offset: 0x00F323B4
 		[NullableContext(2)]
 		public DropCatchLevelData GetLevelData(int configId)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041BFF RID: 269311 RVA: 0x00FF2DCC File Offset: 0x00FF0FCC
+		// Token: 0x0603674B RID: 223051 RVA: 0x00F341D4 File Offset: 0x00F323D4
 		[NullableContext(2)]
 		public DropCatchLevelData GetLastLevelData(int configId)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041C00 RID: 269312 RVA: 0x00FF2E40 File Offset: 0x00FF1040
+		// Token: 0x0603674C RID: 223052 RVA: 0x00F34248 File Offset: 0x00F32448
 		public EDropCatchLevelState? GetLevelStarStatus(int configId, int starIndex)
 		{
 			if (this.GetLevelData(configId) != null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return new EDropCatchLevelState?(EDropCatchLevelState.Lock);
 		}
 
-		// Token: 0x06041C01 RID: 269313 RVA: 0x00FF2E94 File Offset: 0x00FF1094
+		// Token: 0x0603674D RID: 223053 RVA: 0x00F3429C File Offset: 0x00F3249C
 		public int GetDefaultOpenCfgId()
 		{
 			IReadOnlyList<DropCatchGameplay> dropCatchGameplayByActivityId = DropCatchConfig.Instance.GetDropCatchGameplayByActivityId(base.Id);
@@ -157,13 +157,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C02 RID: 269314 RVA: 0x00FF2FE5 File Offset: 0x00FF11E5
+		// Token: 0x0603674E RID: 223054 RVA: 0x00F343ED File Offset: 0x00F325ED
 		public void SetPreferredOpenLevel(int levelId)
 		{
 			this.PreferredOpenLevelId = levelId;
 		}
 
-		// Token: 0x06041C03 RID: 269315 RVA: 0x00FF2FF0 File Offset: 0x00FF11F0
+		// Token: 0x0603674F RID: 223055 RVA: 0x00F343F8 File Offset: 0x00F325F8
 		public bool GetCanReceive()
 		{
 			foreach (DropCatchLevelData dropCatchLevelData in this.LevelInfoMap.Values)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return false;
 		}
 
-		// Token: 0x06041C04 RID: 269316 RVA: 0x00FF3090 File Offset: 0x00FF1290
+		// Token: 0x06036750 RID: 223056 RVA: 0x00F34498 File Offset: 0x00F32698
 		public int GetFinishLevelCount()
 		{
 			int num = 0;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return num;
 		}
 
-		// Token: 0x06041C05 RID: 269317 RVA: 0x00FF30F0 File Offset: 0x00FF12F0
+		// Token: 0x06036751 RID: 223057 RVA: 0x00F344F8 File Offset: 0x00F326F8
 		public void OnLevelRewardUpdateNotify(IList<DropCatchLevelInfo> levelInfos)
 		{
 			if (levelInfos == null || levelInfos.Count == 0)
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C06 RID: 269318 RVA: 0x00FF3144 File Offset: 0x00FF1344
+		// Token: 0x06036752 RID: 223058 RVA: 0x00F3454C File Offset: 0x00F3274C
 		public void UpdateTargetLevelData(DropCatchLevelInfo info)
 		{
 			if (info == null)
@@ -247,13 +247,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C07 RID: 269319 RVA: 0x00FF321C File Offset: 0x00FF141C
+		// Token: 0x06036753 RID: 223059 RVA: 0x00F34624 File Offset: 0x00F32824
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.GetCanReceive();
 		}
 
-		// Token: 0x06041C08 RID: 269320 RVA: 0x00FF3224 File Offset: 0x00FF1424
+		// Token: 0x06036754 RID: 223060 RVA: 0x00F3462C File Offset: 0x00F3282C
 		protected override bool GetExDataFinishShowState()
 		{
 			if (this.LevelInfoMap == null || this.LevelInfoMap.Count == 0)
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return true;
 		}
 
-		// Token: 0x06041C09 RID: 269321 RVA: 0x00FF329C File Offset: 0x00FF149C
+		// Token: 0x06036755 RID: 223061 RVA: 0x00F346A4 File Offset: 0x00F328A4
 		public bool CheckLevelCompleted(int levelId)
 		{
 			DropCatchLevelData levelData = this.GetLevelData(levelId);
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return !(targetStarState.GetValueOrDefault() == edropCatchLevelState & targetStarState != null);
 		}
 
-		// Token: 0x06041C0A RID: 269322 RVA: 0x00FF3304 File Offset: 0x00FF1504
+		// Token: 0x06036756 RID: 223062 RVA: 0x00F3470C File Offset: 0x00F3290C
 		[NullableContext(2)]
 		public string GetLevelUnlockHintText(int configId)
 		{
@@ -331,10 +331,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return null;
 		}
 
-		// Token: 0x04022371 RID: 140145
+		// Token: 0x0401CBCA RID: 117706
 		private readonly Dictionary<int, DropCatchLevelData> LevelInfoMap = new Dictionary<int, DropCatchLevelData>();
 
-		// Token: 0x04022372 RID: 140146
+		// Token: 0x0401CBCB RID: 117707
 		private int PreferredOpenLevelId;
 	}
 }

@@ -1,62 +1,62 @@
 ﻿using System;
 
-// Token: 0x02001097 RID: 4247
+// Token: 0x0200054B RID: 1355
 internal static class EActivityRecommendItemComp
 {
-	// Token: 0x0400333E RID: 13118
+	// Token: 0x040033D7 RID: 13271
 	public const int IconItem = 0;
 
-	// Token: 0x0400333F RID: 13119
+	// Token: 0x040033D8 RID: 13272
 	public const int IconSprite = 1;
 
-	// Token: 0x04003340 RID: 13120
+	// Token: 0x040033D9 RID: 13273
 	public const int IconTexture = 2;
 
-	// Token: 0x04003341 RID: 13121
+	// Token: 0x040033DA RID: 13274
 	public const int TitleText = 3;
 
-	// Token: 0x04003342 RID: 13122
+	// Token: 0x040033DB RID: 13275
 	public const int MainQuestSubText = 4;
 
-	// Token: 0x04003343 RID: 13123
+	// Token: 0x040033DC RID: 13276
 	public const int TagItem = 5;
 
-	// Token: 0x04003344 RID: 13124
+	// Token: 0x040033DD RID: 13277
 	public const int TagBgSprite = 6;
 
-	// Token: 0x04003345 RID: 13125
+	// Token: 0x040033DE RID: 13278
 	public const int TagIconSprite = 7;
 
-	// Token: 0x04003346 RID: 13126
+	// Token: 0x040033DF RID: 13279
 	public const int TagText = 8;
 
-	// Token: 0x04003347 RID: 13127
+	// Token: 0x040033E0 RID: 13280
 	public const int RewardLayout = 9;
 
-	// Token: 0x04003348 RID: 13128
+	// Token: 0x040033E1 RID: 13281
 	public const int RewardItem = 10;
 
-	// Token: 0x04003349 RID: 13129
+	// Token: 0x040033E2 RID: 13282
 	public const int JumpBtn = 11;
 
-	// Token: 0x0400334A RID: 13130
+	// Token: 0x040033E3 RID: 13283
 	public const int PreOpenBtn = 12;
 
-	// Token: 0x0400334B RID: 13131
+	// Token: 0x040033E4 RID: 13284
 	public const int DownItem = 13;
 
-	// Token: 0x0400334C RID: 13132
+	// Token: 0x040033E5 RID: 13285
 	public const int LineItem = 14;
 
-	// Token: 0x0400334D RID: 13133
+	// Token: 0x040033E6 RID: 13286
 	public const int SpriteColor = 15;
 
-	// Token: 0x0400334E RID: 13134
+	// Token: 0x040033E7 RID: 13287
 	public const int BigIconRoot = 16;
 
-	// Token: 0x0400334F RID: 13135
+	// Token: 0x040033E8 RID: 13288
 	public const int BigIconSprite = 17;
 
-	// Token: 0x04003350 RID: 13136
+	// Token: 0x040033E9 RID: 13289
 	public const int LockedBtn = 18;
 }

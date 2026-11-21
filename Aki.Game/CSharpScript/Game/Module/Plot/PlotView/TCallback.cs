@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005068 RID: 20584
-	// (Invoke) Token: 0x06034BB5 RID: 215989
+	// Token: 0x02004038 RID: 16440
+	// (Invoke) Token: 0x06029AA9 RID: 170665
 	public delegate void TCallback(bool result);
 }

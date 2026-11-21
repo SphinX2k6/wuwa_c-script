@@ -4,18 +4,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x0200574B RID: 22347
+	// Token: 0x02004722 RID: 18210
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TabData
 	{
-		// Token: 0x0401DCA8 RID: 122024
+		// Token: 0x0401873E RID: 100158
 		public string IconResourceId = "";
 
-		// Token: 0x0401DCA9 RID: 122025
+		// Token: 0x0401873F RID: 100159
 		public string TitleId = "";
 
-		// Token: 0x0401DCAA RID: 122026
+		// Token: 0x04018740 RID: 100160
 		public EUiTabViewName ViewName;
 	}
 }

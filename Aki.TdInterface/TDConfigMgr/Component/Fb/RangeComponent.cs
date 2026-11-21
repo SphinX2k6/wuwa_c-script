@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C2A RID: 3114
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CFD RID: 3325
 	public class RangeComponent : IComponentBase
 	{
-		// Token: 0x06004757 RID: 18263 RVA: 0x000B3A6A File Offset: 0x000B1C6A
+		// Token: 0x06004BC7 RID: 19399 RVA: 0x000BDE1A File Offset: 0x000BC01A
 		public static RangeComponent Create(IRangeComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014C0 RID: 5312
-		// (get) Token: 0x06004758 RID: 18264 RVA: 0x000B3A8C File Offset: 0x000B1C8C
+		// Token: 0x170015C8 RID: 5576
+		// (get) Token: 0x06004BC8 RID: 19400 RVA: 0x000BDE3C File Offset: 0x000BC03C
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014C1 RID: 5313
-		// (get) Token: 0x06004759 RID: 18265 RVA: 0x000B3AC4 File Offset: 0x000B1CC4
+		// Token: 0x170015C9 RID: 5577
+		// (get) Token: 0x06004BC9 RID: 19401 RVA: 0x000BDE74 File Offset: 0x000BC074
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,19 +46,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014C2 RID: 5314
-		// (get) Token: 0x0600475A RID: 18266 RVA: 0x000B3ADC File Offset: 0x000B1CDC
+		// Token: 0x170015CA RID: 5578
+		// (get) Token: 0x06004BCA RID: 19402 RVA: 0x000BDE8C File Offset: 0x000BC08C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISetRangeActorCollisionResponseToChannels> SetRangeActorCollisionResponseToChannels
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -83,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014C3 RID: 5315
-		// (get) Token: 0x0600475B RID: 18267 RVA: 0x000B3B56 File Offset: 0x000B1D56
+		// Token: 0x170015CB RID: 5579
+		// (get) Token: 0x06004BCB RID: 19403 RVA: 0x000BDF06 File Offset: 0x000BC106
 		public virtual ITriggerShape Shape
 		{
 			get
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014C4 RID: 5316
-		// (get) Token: 0x0600475C RID: 18268 RVA: 0x000B3B88 File Offset: 0x000B1D88
+		// Token: 0x170015CC RID: 5580
+		// (get) Token: 0x06004BCC RID: 19404 RVA: 0x000BDF38 File Offset: 0x000BC138
 		public virtual int? ExtraRange
 		{
 			get
@@ -113,24 +111,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400287F RID: 10367
+		// Token: 0x04002AD4 RID: 10964
 		private IRangeComponent Instance;
 
-		// Token: 0x04002880 RID: 10368
+		// Token: 0x04002AD5 RID: 10965
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISetRangeActorCollisionResponseToChannels> _SetRangeActorCollisionResponseToChannelsCache;
 
-		// Token: 0x04002881 RID: 10369
+		// Token: 0x04002AD6 RID: 10966
 		private bool _SetRangeActorCollisionResponseToChannelsInited;
 
-		// Token: 0x04002882 RID: 10370
+		// Token: 0x04002AD7 RID: 10967
 		private ITriggerShape _ShapeCache;
 
-		// Token: 0x04002883 RID: 10371
+		// Token: 0x04002AD8 RID: 10968
 		private bool _ShapeInited;
 	}
 }

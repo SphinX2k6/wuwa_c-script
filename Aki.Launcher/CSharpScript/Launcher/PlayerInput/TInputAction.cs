@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x02000120 RID: 288
-	// (Invoke) Token: 0x06000930 RID: 2352
+	// Token: 0x02000124 RID: 292
+	// (Invoke) Token: 0x06000964 RID: 2404
 	public delegate void TInputAction(bool bPress, string actionName);
 }

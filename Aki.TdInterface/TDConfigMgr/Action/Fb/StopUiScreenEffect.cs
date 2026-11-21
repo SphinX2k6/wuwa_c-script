@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A7 RID: 9895
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200296A RID: 10602
 	public class StopUiScreenEffect : ActionParams
 	{
-		// Token: 0x0600DD7C RID: 56700 RVA: 0x0020E6CF File Offset: 0x0020C8CF
+		// Token: 0x0600EB53 RID: 60243 RVA: 0x0022AE6F File Offset: 0x0022906F
 		public static StopUiScreenEffect Create(IStopUiScreenEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041F0 RID: 16880
-		// (get) Token: 0x0600DD7D RID: 56701 RVA: 0x0020E6EE File Offset: 0x0020C8EE
+		// Token: 0x1700452D RID: 17709
+		// (get) Token: 0x0600EB54 RID: 60244 RVA: 0x0022AE8E File Offset: 0x0022908E
 		public virtual string EffectDaPath
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AFF RID: 31487
+		// Token: 0x0400819C RID: 33180
 		private IStopUiScreenEffect Instance;
 	}
 }

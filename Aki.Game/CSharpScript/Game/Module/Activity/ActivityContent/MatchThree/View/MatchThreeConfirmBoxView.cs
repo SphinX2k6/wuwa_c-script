@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006490 RID: 25744
+	// Token: 0x0200540E RID: 21518
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeConfirmBoxView : UiViewBase
 	{
-		// Token: 0x06040A73 RID: 264819 RVA: 0x00FA5B41 File Offset: 0x00FA3D41
+		// Token: 0x06035737 RID: 218935 RVA: 0x00EECB89 File Offset: 0x00EEAD89
 		public MatchThreeConfirmBoxView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06040A74 RID: 264820 RVA: 0x00FA5B60 File Offset: 0x00FA3D60
+		// Token: 0x06035738 RID: 218936 RVA: 0x00EECBA8 File Offset: 0x00EEADA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040A75 RID: 264821 RVA: 0x00FA5CD0 File Offset: 0x00FA3ED0
+		// Token: 0x06035739 RID: 218937 RVA: 0x00EECD18 File Offset: 0x00EEAF18
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreeConfirmBoxView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040A76 RID: 264822 RVA: 0x00FA5D14 File Offset: 0x00FA3F14
+		// Token: 0x0603573A RID: 218938 RVA: 0x00EECD5C File Offset: 0x00EEAF5C
 		protected override void OnBeforeShow()
 		{
 			bool flag = this.ShouldShowCloseButton();
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			childPopView3.PopItem.OverrideBackBtnCallBack(new Action(this.OnClose));
 		}
 
-		// Token: 0x06040A77 RID: 264823 RVA: 0x00FA5DAC File Offset: 0x00FA3FAC
+		// Token: 0x0603573B RID: 218939 RVA: 0x00EECDF4 File Offset: 0x00EEAFF4
 		private bool ShouldShowCloseButton()
 		{
 			return this.Config.Value.NeedClose && this.ConfirmBoxData != null && this.ConfirmBoxData.ConfigId != EConfirmBoxConfigId.MatchThreeRestartConfirm && this.ConfirmBoxData.ConfigId != EConfirmBoxConfigId.MatchThreeLowerDifficultyConfirm;
 		}
 
-		// Token: 0x06040A78 RID: 264824 RVA: 0x00FA5E01 File Offset: 0x00FA4001
+		// Token: 0x0603573C RID: 218940 RVA: 0x00EECE49 File Offset: 0x00EEB049
 		protected override void OnAfterShow()
 		{
 			Action afterShowFunction = this.ConfirmBoxData.GetAfterShowFunction();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			afterShowFunction();
 		}
 
-		// Token: 0x06040A79 RID: 264825 RVA: 0x00FA5E18 File Offset: 0x00FA4018
+		// Token: 0x0603573D RID: 218941 RVA: 0x00EECE60 File Offset: 0x00EEB060
 		protected override void OnBeforeHide()
 		{
 			if (this.LastHide)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040A7A RID: 264826 RVA: 0x00FA5E3C File Offset: 0x00FA403C
+		// Token: 0x0603573E RID: 218942 RVA: 0x00EECE84 File Offset: 0x00EEB084
 		protected override void OnBeforeDestroy()
 		{
 			this.ResetButtonList();
@@ -154,14 +154,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			destroyFunction();
 		}
 
-		// Token: 0x06040A7B RID: 264827 RVA: 0x00FA5E9A File Offset: 0x00FA409A
+		// Token: 0x0603573F RID: 218943 RVA: 0x00EECEE2 File Offset: 0x00EEB0E2
 		private void OnClose()
 		{
 			this.SelectedIndex = -1;
 			this.ConfirmBoxButtonClick();
 		}
 
-		// Token: 0x06040A7C RID: 264828 RVA: 0x00FA5EAC File Offset: 0x00FA40AC
+		// Token: 0x06035740 RID: 218944 RVA: 0x00EECEF4 File Offset: 0x00EEB0F4
 		private void ConfirmBoxButtonClick()
 		{
 			ConfirmBoxDataNew confirmBoxData = this.ConfirmBoxData;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			});
 		}
 
-		// Token: 0x06040A7D RID: 264829 RVA: 0x00FA5F1C File Offset: 0x00FA411C
+		// Token: 0x06035741 RID: 218945 RVA: 0x00EECF64 File Offset: 0x00EEB164
 		private void HandleSelectedIndexWhenClose()
 		{
 			if (this.SelectedIndex != -1)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.SelectedIndex = (((this.Config != null && this.Config.GetValueOrDefault().ButtonTextLength == 1) || this.ConfirmBoxData.IsEscViewTriggerCallBack) ? 1 : 0);
 		}
 
-		// Token: 0x06040A7E RID: 264830 RVA: 0x00FA5F70 File Offset: 0x00FA4170
+		// Token: 0x06035742 RID: 218946 RVA: 0x00EECFB8 File Offset: 0x00EEB1B8
 		private UniTask InitButton()
 		{
 			MatchThreeConfirmBoxView.<InitButton>d__17 <InitButton>d__;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <InitButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040A7F RID: 264831 RVA: 0x00FA5FB4 File Offset: 0x00FA41B4
+		// Token: 0x06035743 RID: 218947 RVA: 0x00EECFFC File Offset: 0x00EEB1FC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040A80 RID: 264832 RVA: 0x00FA6010 File Offset: 0x00FA4210
+		// Token: 0x06035744 RID: 218948 RVA: 0x00EED058 File Offset: 0x00EEB258
 		private void ResetButtonList()
 		{
 			int i = 0;
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ButtonList = Array.Empty<ConfirmBoxButton>();
 		}
 
-		// Token: 0x06040A81 RID: 264833 RVA: 0x00FA604B File Offset: 0x00FA424B
+		// Token: 0x06035745 RID: 218949 RVA: 0x00EED093 File Offset: 0x00EEB293
 		private void OnToggleClick(EToggleState toggleState)
 		{
 			Action<bool> toggleFunction = this.ToggleFunction;
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			toggleFunction(toggleState == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06040A82 RID: 264834 RVA: 0x00FA6064 File Offset: 0x00FA4264
+		// Token: 0x06035746 RID: 218950 RVA: 0x00EED0AC File Offset: 0x00EEB2AC
 		private void InitToggle()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -309,24 +309,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ToggleFunction = data.GetToggleFunction();
 		}
 
-		// Token: 0x04021A1C RID: 137756
+		// Token: 0x0401C34D RID: 115533
 		private ConfirmBoxButton[] ButtonList = Array.Empty<ConfirmBoxButton>();
 
-		// Token: 0x04021A1D RID: 137757
+		// Token: 0x0401C34E RID: 115534
 		private readonly List<UUIButtonComponent> ButtonComponentList = new List<UUIButtonComponent>();
 
-		// Token: 0x04021A1E RID: 137758
+		// Token: 0x0401C34F RID: 115535
 		private ConfirmBox? Config;
 
-		// Token: 0x04021A1F RID: 137759
+		// Token: 0x0401C350 RID: 115536
 		[Nullable(2)]
 		private ConfirmBoxDataNew ConfirmBoxData;
 
-		// Token: 0x04021A20 RID: 137760
+		// Token: 0x0401C351 RID: 115537
 		[Nullable(2)]
 		private Action<bool> ToggleFunction;
 
-		// Token: 0x04021A21 RID: 137761
+		// Token: 0x0401C352 RID: 115538
 		private int SelectedIndex;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200285F RID: 10335
+// Token: 0x02001DDA RID: 7642
 [NullableContext(1)]
 [Nullable(0)]
 public static class ClassifyDataFactory
 {
-	// Token: 0x06015496 RID: 87190 RVA: 0x0056007A File Offset: 0x0055E27A
+	// Token: 0x06012E94 RID: 77460 RVA: 0x0058ADD6 File Offset: 0x00588FD6
 	public static RoleFavorActionClassifyData CreateClassifyData(string titleTableId, EFavorTabType favorTabType, int roleId, EFavorActionType typeParam)
 	{
 		if (favorTabType == EFavorTabType.Action)
@@ -16,7 +16,7 @@ public static class ClassifyDataFactory
 		throw new Exception("不支持的好感度类型");
 	}
 
-	// Token: 0x06015497 RID: 87191 RVA: 0x00560093 File Offset: 0x0055E293
+	// Token: 0x06012E95 RID: 77461 RVA: 0x0058ADEF File Offset: 0x00588FEF
 	public static RoleFavorExperienceClassifyData CreateClassifyData(string titleTableId, EFavorTabType favorTabType, int roleId, EFavorExperienceType typeParam)
 	{
 		if (favorTabType == EFavorTabType.Experience)
@@ -26,7 +26,7 @@ public static class ClassifyDataFactory
 		throw new Exception("不支持的好感度类型");
 	}
 
-	// Token: 0x06015498 RID: 87192 RVA: 0x005600AC File Offset: 0x0055E2AC
+	// Token: 0x06012E96 RID: 77462 RVA: 0x0058AE08 File Offset: 0x00589008
 	public static RoleFavorPreciousItemClassifyData CreateClassifyData(string titleTableId, EFavorTabType favorTabType, int roleId)
 	{
 		if (favorTabType == EFavorTabType.PreciousItem)
@@ -36,7 +36,7 @@ public static class ClassifyDataFactory
 		throw new Exception("不支持的好感度类型");
 	}
 
-	// Token: 0x06015499 RID: 87193 RVA: 0x005600C4 File Offset: 0x0055E2C4
+	// Token: 0x06012E97 RID: 77463 RVA: 0x0058AE20 File Offset: 0x00589020
 	public static RoleFavorVoiceClassifyData CreateClassifyData(string titleTableId, EFavorTabType favorTabType, int roleId, EFavorVoiceType typeParam)
 	{
 		if (favorTabType == EFavorTabType.Voice)
@@ -46,7 +46,7 @@ public static class ClassifyDataFactory
 		throw new Exception("不支持的好感度类型");
 	}
 
-	// Token: 0x0601549A RID: 87194 RVA: 0x005600DC File Offset: 0x0055E2DC
+	// Token: 0x06012E98 RID: 77464 RVA: 0x0058AE38 File Offset: 0x00589038
 	public static RoleFavorClassifyDataBase CreateClassifyData(string titleTableId, EFavorTabType favorTabType, int roleId, [Nullable(2)] object typeParam = null)
 	{
 		switch (favorTabType)

@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B71 RID: 7025
+// Token: 0x02001030 RID: 4144
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchRandomEventView : UiViewBase
 {
-	// Token: 0x0600D0F0 RID: 53488 RVA: 0x002FC48C File Offset: 0x002FA68C
+	// Token: 0x0600A501 RID: 42241 RVA: 0x00307564 File Offset: 0x00305764
 	public FloroRanchRandomEventView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D0F1 RID: 53489 RVA: 0x002FC4A0 File Offset: 0x002FA6A0
+	// Token: 0x0600A502 RID: 42242 RVA: 0x00307578 File Offset: 0x00305778
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -63,7 +63,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D0F2 RID: 53490 RVA: 0x002FC6B8 File Offset: 0x002FA8B8
+	// Token: 0x0600A503 RID: 42243 RVA: 0x00307790 File Offset: 0x00305990
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchRandomEventView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D0F3 RID: 53491 RVA: 0x002FC6FC File Offset: 0x002FA8FC
+	// Token: 0x0600A504 RID: 42244 RVA: 0x003077D4 File Offset: 0x003059D4
 	protected override void OnBeforeShow()
 	{
 		global::FloroRanchActivityData currentActivityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -119,7 +119,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0F4 RID: 53492 RVA: 0x002FC810 File Offset: 0x002FAA10
+	// Token: 0x0600A505 RID: 42245 RVA: 0x003078E8 File Offset: 0x00305AE8
 	protected override void OnBeforeHide()
 	{
 		this.UiBlur.SetEnableUiBlur(false);
@@ -130,14 +130,14 @@ public class FloroRanchRandomEventView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0F5 RID: 53493 RVA: 0x002FC852 File Offset: 0x002FAA52
+	// Token: 0x0600A506 RID: 42246 RVA: 0x0030792A File Offset: 0x00305B2A
 	private void InitUiBlur()
 	{
 		this.UiBlur = UE.NewObject<TsUiBlur>(this.RootActor, null, EObjectFlags.RF_NoFlags);
 		this.UiBlur.SetEnableUiBlur(false);
 	}
 
-	// Token: 0x0600D0F6 RID: 53494 RVA: 0x002FC874 File Offset: 0x002FAA74
+	// Token: 0x0600A507 RID: 42247 RVA: 0x0030794C File Offset: 0x00305B4C
 	private UniTask CreateToyItem(int point)
 	{
 		FloroRanchRandomEventView.<CreateToyItem>d__14 <CreateToyItem>d__;
@@ -149,7 +149,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		return <CreateToyItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D0F7 RID: 53495 RVA: 0x002FC8C0 File Offset: 0x002FAAC0
+	// Token: 0x0600A508 RID: 42248 RVA: 0x00307998 File Offset: 0x00305B98
 	private void ShowAllToy()
 	{
 		int enableToyCount = FloroRanchGamePlayModel.Instance.EnableToyCount;
@@ -166,7 +166,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0F8 RID: 53496 RVA: 0x002FC904 File Offset: 0x002FAB04
+	// Token: 0x0600A509 RID: 42249 RVA: 0x003079DC File Offset: 0x00305BDC
 	private void ShowToy(int point)
 	{
 		FloroRanchToyGridItem floroRanchToyGridItem;
@@ -177,7 +177,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0F9 RID: 53497 RVA: 0x002FC934 File Offset: 0x002FAB34
+	// Token: 0x0600A50A RID: 42250 RVA: 0x00307A0C File Offset: 0x00305C0C
 	private void HideToy(int point)
 	{
 		FloroRanchToyGridItem floroRanchToyGridItem;
@@ -187,20 +187,20 @@ public class FloroRanchRandomEventView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0FA RID: 53498 RVA: 0x002FC958 File Offset: 0x002FAB58
+	// Token: 0x0600A50B RID: 42251 RVA: 0x00307A30 File Offset: 0x00305C30
 	private void SetToyListActive(bool isActive)
 	{
 		base.GetItem(10).SetAlpha(isActive > false);
 	}
 
-	// Token: 0x0600D0FB RID: 53499 RVA: 0x002FC96C File Offset: 0x002FAB6C
+	// Token: 0x0600A50C RID: 42252 RVA: 0x00307A44 File Offset: 0x00305C44
 	private void ToySellCallback(int point)
 	{
 		this.HideToy(point);
 		this.ShowAllToy();
 	}
 
-	// Token: 0x0600D0FC RID: 53500 RVA: 0x002FC97C File Offset: 0x002FAB7C
+	// Token: 0x0600A50D RID: 42253 RVA: 0x00307A54 File Offset: 0x00305C54
 	private void OnClickToyItem(int point)
 	{
 		if (point < 0)
@@ -220,7 +220,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D0FD RID: 53501 RVA: 0x002FC9F4 File Offset: 0x002FABF4
+	// Token: 0x0600A50E RID: 42254 RVA: 0x00307ACC File Offset: 0x00305CCC
 	private FloroRanchRandomEventItem InitEventItem()
 	{
 		FloroRanchRandomEventItem floroRanchRandomEventItem = new FloroRanchRandomEventItem();
@@ -228,7 +228,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		return floroRanchRandomEventItem;
 	}
 
-	// Token: 0x0600D0FE RID: 53502 RVA: 0x002FCA10 File Offset: 0x002FAC10
+	// Token: 0x0600A50F RID: 42255 RVA: 0x00307AE8 File Offset: 0x00305CE8
 	private void OnClickConfirmButton()
 	{
 		global::FloroRanchActivityData activityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -329,7 +329,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		this.SendEventChoiceRequest(activityData);
 	}
 
-	// Token: 0x0600D0FF RID: 53503 RVA: 0x002FCD1C File Offset: 0x002FAF1C
+	// Token: 0x0600A510 RID: 42256 RVA: 0x00307DF4 File Offset: 0x00305FF4
 	private void OnClickEventItem(int gridIndex, int choiceId)
 	{
 		if (this.SelectedChoiceId == choiceId)
@@ -341,7 +341,7 @@ public class FloroRanchRandomEventView : UiViewBase
 		base.GetButton(8).SetSelfInteractive(true);
 	}
 
-	// Token: 0x0600D100 RID: 53504 RVA: 0x002FCD4C File Offset: 0x002FAF4C
+	// Token: 0x0600A511 RID: 42257 RVA: 0x00307E24 File Offset: 0x00306024
 	private void SendEventChoiceRequest(global::FloroRanchActivityData activityData)
 	{
 		int id = activityData.Id;
@@ -358,21 +358,21 @@ public class FloroRanchRandomEventView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D101 RID: 53505 RVA: 0x002FCD94 File Offset: 0x002FAF94
+	// Token: 0x0600A512 RID: 42258 RVA: 0x00307E6C File Offset: 0x0030606C
 	private void OnClickHideButton()
 	{
 		FloroRanchGamePlayModel.Instance.HideRecordView();
 	}
 
-	// Token: 0x04005FE2 RID: 24546
+	// Token: 0x040060B1 RID: 24753
 	[Nullable(2)]
 	private FloroRanchPlayEvent EventData;
 
-	// Token: 0x04005FE3 RID: 24547
+	// Token: 0x040060B2 RID: 24754
 	[Nullable(2)]
 	private Action CloseCallback;
 
-	// Token: 0x04005FE4 RID: 24548
+	// Token: 0x040060B3 RID: 24755
 	[Nullable(new byte[]
 	{
 		2,
@@ -380,57 +380,57 @@ public class FloroRanchRandomEventView : UiViewBase
 	})]
 	private GenericLayout<FloroRanchRandomEventItem, int> EventLayout;
 
-	// Token: 0x04005FE5 RID: 24549
+	// Token: 0x040060B4 RID: 24756
 	private int SelectedChoiceId;
 
-	// Token: 0x04005FE6 RID: 24550
+	// Token: 0x040060B5 RID: 24757
 	private readonly Dictionary<int, FloroRanchToyGridItem> ToyItemMap = new Dictionary<int, FloroRanchToyGridItem>();
 
-	// Token: 0x04005FE7 RID: 24551
+	// Token: 0x040060B6 RID: 24758
 	[Nullable(2)]
 	private TsUiBlur UiBlur;
 
-	// Token: 0x04005FE8 RID: 24552
+	// Token: 0x040060B7 RID: 24759
 	private int EventHandle;
 
-	// Token: 0x020080E6 RID: 32998
+	// Token: 0x02007274 RID: 29300
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A0E8 RID: 172264
+		// Token: 0x0402541C RID: 152604
 		public const int InfoPanel = 0;
 
-		// Token: 0x0402A0E9 RID: 172265
+		// Token: 0x0402541D RID: 152605
 		public const int EventTitle = 1;
 
-		// Token: 0x0402A0EA RID: 172266
+		// Token: 0x0402541E RID: 152606
 		public const int ChatPanel = 2;
 
-		// Token: 0x0402A0EB RID: 172267
+		// Token: 0x0402541F RID: 152607
 		public const int ChatText = 3;
 
-		// Token: 0x0402A0EC RID: 172268
+		// Token: 0x04025420 RID: 152608
 		public const int Spine = 4;
 
-		// Token: 0x0402A0ED RID: 172269
+		// Token: 0x04025421 RID: 152609
 		public const int BarItem = 5;
 
-		// Token: 0x0402A0EE RID: 172270
+		// Token: 0x04025422 RID: 152610
 		public const int EventLayout = 6;
 
-		// Token: 0x0402A0EF RID: 172271
+		// Token: 0x04025423 RID: 152611
 		public const int EventItem = 7;
 
-		// Token: 0x0402A0F0 RID: 172272
+		// Token: 0x04025424 RID: 152612
 		public const int ConfirmButton = 8;
 
-		// Token: 0x0402A0F1 RID: 172273
+		// Token: 0x04025425 RID: 152613
 		public const int HideButton = 9;
 
-		// Token: 0x0402A0F2 RID: 172274
+		// Token: 0x04025426 RID: 152614
 		public const int ToyLayout = 10;
 
-		// Token: 0x0402A0F3 RID: 172275
+		// Token: 0x04025427 RID: 152615
 		public const int ToyItemTemplate = 11;
 	}
 }

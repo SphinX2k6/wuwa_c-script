@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02001710 RID: 5904
+// Token: 0x02000BC8 RID: 3016
 [NullableContext(1)]
 [Nullable(0)]
 public class BlackScreenTransitionView : BlackScreenViewBase
 {
-	// Token: 0x0600A969 RID: 43369 RVA: 0x0026224C File Offset: 0x0026044C
+	// Token: 0x06007D4A RID: 32074 RVA: 0x0026C710 File Offset: 0x0026A910
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -22,7 +22,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A96A RID: 43370 RVA: 0x00262294 File Offset: 0x00260494
+	// Token: 0x06007D4B RID: 32075 RVA: 0x0026C758 File Offset: 0x0026A958
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -36,7 +36,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		this.ViewData.TriggerCurrentStateDelegate();
 	}
 
-	// Token: 0x0600A96B RID: 43371 RVA: 0x00262358 File Offset: 0x00260558
+	// Token: 0x06007D4C RID: 32076 RVA: 0x0026C81C File Offset: 0x0026AA1C
 	protected override void OnBeforeDestroy()
 	{
 		base.ResetPromiseData();
@@ -48,7 +48,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		levelSequencePlayer.Clear();
 	}
 
-	// Token: 0x0600A96C RID: 43372 RVA: 0x00262370 File Offset: 0x00260570
+	// Token: 0x06007D4D RID: 32077 RVA: 0x0026C834 File Offset: 0x0026AA34
 	private void OnCloseEvent(string sequenceName)
 	{
 		if (sequenceName == this.ShowAnimType)
@@ -76,7 +76,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		}
 	}
 
-	// Token: 0x0600A96D RID: 43373 RVA: 0x00262414 File Offset: 0x00260614
+	// Token: 0x06007D4E RID: 32078 RVA: 0x0026C8D8 File Offset: 0x0026AAD8
 	private void ShowWithOutAnimDelegate()
 	{
 		Log.Instance.Info(ELogModule.BlackScreen, ELogAuthor.XXJ, "开始显示黑屏", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -84,7 +84,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		base.FinishShowPromise();
 	}
 
-	// Token: 0x0600A96E RID: 43374 RVA: 0x00262450 File Offset: 0x00260650
+	// Token: 0x06007D4F RID: 32079 RVA: 0x0026C914 File Offset: 0x0026AB14
 	private void ShowDelegate()
 	{
 		Log instance = Log.Instance;
@@ -102,7 +102,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		levelSequencePlayer.PlayLevelSequenceByName(this.ShowAnimType, false, null, false);
 	}
 
-	// Token: 0x0600A96F RID: 43375 RVA: 0x002624B4 File Offset: 0x002606B4
+	// Token: 0x06007D50 RID: 32080 RVA: 0x0026C978 File Offset: 0x0026AB78
 	private void HideWithOutAnimDelegate()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -116,7 +116,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		base.FinishHidePromise();
 	}
 
-	// Token: 0x0600A970 RID: 43376 RVA: 0x00262514 File Offset: 0x00260714
+	// Token: 0x06007D51 RID: 32081 RVA: 0x0026C9D8 File Offset: 0x0026ABD8
 	private void HideDelegate()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -138,14 +138,14 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		levelSequencePlayer2.PlayLevelSequenceByName(this.HideAnimType, false, null, false);
 	}
 
-	// Token: 0x0600A971 RID: 43377 RVA: 0x00262584 File Offset: 0x00260784
+	// Token: 0x06007D52 RID: 32082 RVA: 0x0026CA48 File Offset: 0x0026AC48
 	private void ApplyColor(string colorType)
 	{
 		FColor color = (colorType == "White") ? ColorUtils.ColorWhile : ColorUtils.ColorBlack;
 		base.GetTexture(0).SetColor(color);
 	}
 
-	// Token: 0x0600A972 RID: 43378 RVA: 0x002625B8 File Offset: 0x002607B8
+	// Token: 0x06007D53 RID: 32083 RVA: 0x0026CA7C File Offset: 0x0026AC7C
 	public override void ShowTemp(string showAnimType, string colorType)
 	{
 		base.CreateShowPromise();
@@ -159,7 +159,7 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		}
 	}
 
-	// Token: 0x0600A973 RID: 43379 RVA: 0x00262608 File Offset: 0x00260808
+	// Token: 0x06007D54 RID: 32084 RVA: 0x0026CACC File Offset: 0x0026ACCC
 	public override void HideTemp(string hideAnimType)
 	{
 		base.CreateHidePromise();
@@ -172,24 +172,45 @@ public class BlackScreenTransitionView : BlackScreenViewBase
 		}
 	}
 
-	// Token: 0x04004D40 RID: 19776
+	// Token: 0x06007D55 RID: 32085 RVA: 0x0026CB14 File Offset: 0x0026AD14
+	public override void CompleteShowImmediately()
+	{
+		if (!(this.ShowAnimType == "None"))
+		{
+			CustomPromise showPromise = base.ShowPromise;
+			if (showPromise != null && showPromise.IsPending && this.LevelSequencePlayer != null)
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.BlackScreen;
+				ELogAuthor author = ELogAuthor.LJQ;
+				string message = "无动画打开请求,立即完成显示动画";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("动画名称", this.ShowAnimType);
+				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				this.LevelSequencePlayer.StopCurrentSequence(true, true);
+				base.GetTexture(0).SetAlpha(1f);
+				return;
+			}
+		}
+	}
+
+	// Token: 0x04004DE8 RID: 19944
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004D41 RID: 19777
+	// Token: 0x04004DE9 RID: 19945
 	private string ShowAnimType = "None";
 
-	// Token: 0x04004D42 RID: 19778
+	// Token: 0x04004DEA RID: 19946
 	private string HideAnimType = "None";
 
-	// Token: 0x04004D43 RID: 19779
+	// Token: 0x04004DEB RID: 19947
 	private readonly BlackScreenViewData ViewData = new BlackScreenViewData();
 
-	// Token: 0x02007CC4 RID: 31940
+	// Token: 0x02006E49 RID: 28233
 	[NullableContext(0)]
 	private static class ECompDefine
 	{
-		// Token: 0x04028ECD RID: 167629
+		// Token: 0x040241F6 RID: 147958
 		public const int BlackTexture = 0;
 	}
 }

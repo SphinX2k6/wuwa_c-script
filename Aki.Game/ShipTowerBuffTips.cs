@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200299E RID: 10654
+// Token: 0x02001F19 RID: 7961
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerBuffTips : UiPanelBase
 {
-	// Token: 0x06016165 RID: 90469 RVA: 0x005959E8 File Offset: 0x00593BE8
+	// Token: 0x06013B6B RID: 80747 RVA: 0x005C09A8 File Offset: 0x005BEBA8
 	public UniTask Init(UUIItem item)
 	{
 		ShipTowerBuffTips.<Init>d__3 <Init>d__;
@@ -26,7 +26,7 @@ public class ShipTowerBuffTips : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016166 RID: 90470 RVA: 0x00595A34 File Offset: 0x00593C34
+	// Token: 0x06013B6C RID: 80748 RVA: 0x005C09F4 File Offset: 0x005BEBF4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerBuffTips.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class ShipTowerBuffTips : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016167 RID: 90471 RVA: 0x00595A78 File Offset: 0x00593C78
+	// Token: 0x06013B6D RID: 80749 RVA: 0x005C0A38 File Offset: 0x005BEC38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,22 +57,22 @@ public class ShipTowerBuffTips : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016168 RID: 90472 RVA: 0x00595B9B File Offset: 0x00593D9B
+	// Token: 0x06013B6E RID: 80750 RVA: 0x005C0B5B File Offset: 0x005BED5B
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06016169 RID: 90473 RVA: 0x00595B9D File Offset: 0x00593D9D
+	// Token: 0x06013B6F RID: 80751 RVA: 0x005C0B5D File Offset: 0x005BED5D
 	protected override void OnBeforeShow()
 	{
 	}
 
-	// Token: 0x0601616A RID: 90474 RVA: 0x00595B9F File Offset: 0x00593D9F
+	// Token: 0x06013B70 RID: 80752 RVA: 0x005C0B5F File Offset: 0x005BED5F
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0601616B RID: 90475 RVA: 0x00595BA4 File Offset: 0x00593DA4
+	// Token: 0x06013B71 RID: 80753 RVA: 0x005C0B64 File Offset: 0x005BED64
 	public void UpdateData(ShipTowerBuffData data)
 	{
 		this.Data = data;
@@ -94,16 +94,16 @@ public class ShipTowerBuffTips : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601616C RID: 90476 RVA: 0x00595CBF File Offset: 0x00593EBF
+	// Token: 0x06013B72 RID: 80754 RVA: 0x005C0C7F File Offset: 0x005BEE7F
 	private ShipTowerBuffWayItem CreateWayItem()
 	{
 		return new ShipTowerBuffWayItem();
 	}
 
-	// Token: 0x0400A4A3 RID: 42147
+	// Token: 0x0400A88D RID: 43149
 	private ShipTowerBuffData Data;
 
-	// Token: 0x0400A4A4 RID: 42148
+	// Token: 0x0400A88E RID: 43150
 	[Nullable(new byte[]
 	{
 		2,
@@ -112,44 +112,44 @@ public class ShipTowerBuffTips : UiPanelBase
 	})]
 	private GenericLayout<ShipTowerBuffWayItem, IGetWayItemData> ItemLayout;
 
-	// Token: 0x02008FA4 RID: 36772
+	// Token: 0x020081ED RID: 33261
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E860 RID: 190560
+		// Token: 0x04029F5F RID: 171871
 		public const int TextureQualityBg = 0;
 
-		// Token: 0x0402E861 RID: 190561
+		// Token: 0x04029F60 RID: 171872
 		public const int TxtUseTimes = 1;
 
-		// Token: 0x0402E862 RID: 190562
+		// Token: 0x04029F61 RID: 171873
 		public const int TxtName = 2;
 
-		// Token: 0x0402E863 RID: 190563
+		// Token: 0x04029F62 RID: 171874
 		public const int TxtDesc = 3;
 
-		// Token: 0x0402E864 RID: 190564
+		// Token: 0x04029F63 RID: 171875
 		public const int TextureIcon = 4;
 
-		// Token: 0x0402E865 RID: 190565
+		// Token: 0x04029F64 RID: 171876
 		public const int ItemQualityEffectBlue = 5;
 
-		// Token: 0x0402E866 RID: 190566
+		// Token: 0x04029F65 RID: 171877
 		public const int SpriteQualityBgPurple = 6;
 
-		// Token: 0x0402E867 RID: 190567
+		// Token: 0x04029F66 RID: 171878
 		public const int ItemQualityEffectPurple = 7;
 
-		// Token: 0x0402E868 RID: 190568
+		// Token: 0x04029F67 RID: 171879
 		public const int ItemQualityEffectGold = 8;
 
-		// Token: 0x0402E869 RID: 190569
+		// Token: 0x04029F68 RID: 171880
 		public const int VerticalLayoutWay = 9;
 
-		// Token: 0x0402E86A RID: 190570
+		// Token: 0x04029F69 RID: 171881
 		public const int ItemWay = 10;
 
-		// Token: 0x0402E86B RID: 190571
+		// Token: 0x04029F6A RID: 171882
 		public const int BtnWay = 11;
 	}
 }

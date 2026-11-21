@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006601 RID: 26113
+	// Token: 0x02006C72 RID: 27762
 	public class IDollGrabItemDeliveryT
 	{
-		// Token: 0x1700C206 RID: 49670
-		// (get) Token: 0x0602D571 RID: 185713 RVA: 0x00636DA2 File Offset: 0x00634FA2
-		// (set) Token: 0x0602D572 RID: 185714 RVA: 0x00636DAA File Offset: 0x00634FAA
+		// Token: 0x1700CBA4 RID: 52132
+		// (get) Token: 0x0602FD42 RID: 195906 RVA: 0x0068390A File Offset: 0x00681B0A
+		// (set) Token: 0x0602FD43 RID: 195907 RVA: 0x00683912 File Offset: 0x00681B12
 		public int ShowcaseId { get; set; }
 
-		// Token: 0x0602D573 RID: 185715 RVA: 0x00636DB3 File Offset: 0x00634FB3
+		// Token: 0x0602FD44 RID: 195908 RVA: 0x0068391B File Offset: 0x00681B1B
 		public IDollGrabItemDeliveryT()
 		{
 			this.ShowcaseId = 0;

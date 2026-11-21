@@ -6,10 +6,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C7F RID: 7295
+// Token: 0x0200113E RID: 4414
 public class GachaDiscountTimesItem : UiPanelBase
 {
-	// Token: 0x0600DBFC RID: 56316 RVA: 0x0033378C File Offset: 0x0033198C
+	// Token: 0x0600B012 RID: 45074 RVA: 0x0033EBEC File Offset: 0x0033CDEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -27,7 +27,7 @@ public class GachaDiscountTimesItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DBFD RID: 56317 RVA: 0x00333838 File Offset: 0x00331A38
+	// Token: 0x0600B013 RID: 45075 RVA: 0x0033EC98 File Offset: 0x0033CE98
 	[NullableContext(1)]
 	public void Refresh(GachaDiscountInfo info)
 	{
@@ -55,16 +55,16 @@ public class GachaDiscountTimesItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text2, "DiscountCount_Num", new <>z__ReadOnlySingleElementList<object>(num3.ToString()));
 	}
 
-	// Token: 0x02008242 RID: 33346
+	// Token: 0x020073CB RID: 29643
 	private enum EComponent
 	{
-		// Token: 0x0402A7F8 RID: 174072
+		// Token: 0x04025B1E RID: 154398
 		SpritePointDisable,
-		// Token: 0x0402A7F9 RID: 174073
+		// Token: 0x04025B1F RID: 154399
 		SpritePointActive,
-		// Token: 0x0402A7FA RID: 174074
+		// Token: 0x04025B20 RID: 154400
 		TextDescription,
-		// Token: 0x0402A7FB RID: 174075
+		// Token: 0x04025B21 RID: 154401
 		TextValue
 	}
 }

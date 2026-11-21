@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200697C RID: 27004
+	// Token: 0x02005AD8 RID: 23256
 	public class ActionInteractGravityFlip : ActionParams
 	{
-		// Token: 0x0402302E RID: 143406
+		// Token: 0x0401E218 RID: 123416
 		public int EntityId;
 	}
 }

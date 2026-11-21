@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Framework
 {
-	// Token: 0x0200451F RID: 17695
+	// Token: 0x02003443 RID: 13379
 	[StaticVariableRuleIgnore]
 	public abstract class ControllerManagerBase : IControllerManagerBase
 	{
-		// Token: 0x0602D89B RID: 186523 RVA: 0x00A46E88 File Offset: 0x00A45088
+		// Token: 0x06021F6D RID: 139117 RVA: 0x00972C98 File Offset: 0x00970E98
 		public unsafe bool CreateInstance()
 		{
 			try
@@ -37,7 +37,7 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D89C RID: 186524 RVA: 0x00A46F60 File Offset: 0x00A45160
+		// Token: 0x06021F6E RID: 139118 RVA: 0x00972D70 File Offset: 0x00970F70
 		public virtual bool Init()
 		{
 			try
@@ -63,13 +63,13 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D89D RID: 186525 RVA: 0x00A46FFC File Offset: 0x00A451FC
+		// Token: 0x06021F6F RID: 139119 RVA: 0x00972E0C File Offset: 0x0097100C
 		public void Tick(float delta)
 		{
 			ControllerRegister.Tick(delta, this.IsInFight);
 		}
 
-		// Token: 0x0602D89E RID: 186526 RVA: 0x00A4700C File Offset: 0x00A4520C
+		// Token: 0x06021F70 RID: 139120 RVA: 0x00972E1C File Offset: 0x0097101C
 		public virtual bool Clear()
 		{
 			try
@@ -104,7 +104,7 @@ namespace CSharpScript.Core.Framework
 			return true;
 		}
 
-		// Token: 0x0602D89F RID: 186527 RVA: 0x00A470D8 File Offset: 0x00A452D8
+		// Token: 0x06021F71 RID: 139121 RVA: 0x00972EE8 File Offset: 0x009710E8
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -117,7 +117,7 @@ namespace CSharpScript.Core.Framework
 			return ControllerRegister.Preload();
 		}
 
-		// Token: 0x0602D8A0 RID: 186528 RVA: 0x00A470E0 File Offset: 0x00A452E0
+		// Token: 0x06021F72 RID: 139122 RVA: 0x00972EF0 File Offset: 0x009710F0
 		public void LeaveLevel()
 		{
 			try
@@ -145,7 +145,7 @@ namespace CSharpScript.Core.Framework
 			}
 		}
 
-		// Token: 0x0602D8A1 RID: 186529 RVA: 0x00A47198 File Offset: 0x00A45398
+		// Token: 0x06021F73 RID: 139123 RVA: 0x00972FA8 File Offset: 0x009711A8
 		public void ChangeMode()
 		{
 			try
@@ -173,25 +173,25 @@ namespace CSharpScript.Core.Framework
 			}
 		}
 
-		// Token: 0x0602D8A2 RID: 186530 RVA: 0x00A47250 File Offset: 0x00A45450
+		// Token: 0x06021F74 RID: 139124 RVA: 0x00973060 File Offset: 0x00971260
 		protected bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x0602D8A3 RID: 186531 RVA: 0x00A47253 File Offset: 0x00A45453
+		// Token: 0x06021F75 RID: 139125 RVA: 0x00973063 File Offset: 0x00971263
 		protected bool OnLeaveLevel()
 		{
 			return true;
 		}
 
-		// Token: 0x0602D8A4 RID: 186532 RVA: 0x00A47256 File Offset: 0x00A45456
+		// Token: 0x06021F76 RID: 139126 RVA: 0x00973066 File Offset: 0x00971266
 		protected bool OnChangeMode()
 		{
 			return true;
 		}
 
-		// Token: 0x04018585 RID: 99717
+		// Token: 0x04012BAE RID: 76718
 		protected bool IsInFight;
 	}
 }

@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006592 RID: 26002
+	// Token: 0x02005510 RID: 21776
 	public interface IDockyardGridInterface
 	{
-		// Token: 0x06041321 RID: 267041
+		// Token: 0x06035FE6 RID: 221158
 		void OnItemBlockClick(int id);
 
-		// Token: 0x06041322 RID: 267042
+		// Token: 0x06035FE7 RID: 221159
 		bool CanDrag(int id);
 
-		// Token: 0x06041323 RID: 267043
+		// Token: 0x06035FE8 RID: 221160
 		bool DragBegin(int id);
 
-		// Token: 0x06041324 RID: 267044
+		// Token: 0x06035FE9 RID: 221161
 		bool DragEnd(int id);
 	}
 }

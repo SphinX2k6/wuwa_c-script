@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FC5 RID: 24517
+	// Token: 0x02004FAC RID: 20396
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpView : ActivitySubViewBase
 	{
-		// Token: 0x0603E22B RID: 254507 RVA: 0x00F01AC8 File Offset: 0x00EFFCC8
+		// Token: 0x060331C5 RID: 209349 RVA: 0x00E53784 File Offset: 0x00E51984
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E22C RID: 254508 RVA: 0x00F01BD4 File Offset: 0x00EFFDD4
+		// Token: 0x060331C6 RID: 209350 RVA: 0x00E53890 File Offset: 0x00E51A90
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUpView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E22D RID: 254509 RVA: 0x00F01C18 File Offset: 0x00EFFE18
+		// Token: 0x060331C7 RID: 209351 RVA: 0x00E538D4 File Offset: 0x00E51AD4
 		protected override void OnStart()
 		{
 			TotalTopUpData totalTopUpData = this.ActivityBaseData as TotalTopUpData;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E22E RID: 254510 RVA: 0x00F01C3C File Offset: 0x00EFFE3C
+		// Token: 0x060331C8 RID: 209352 RVA: 0x00E538F8 File Offset: 0x00E51AF8
 		private void Refresh(TotalTopUpData data)
 		{
 			TotalTopUpPageViewModel pageViewModel = data.PageViewModel;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			progressPanel.Refresh(pageViewModel);
 		}
 
-		// Token: 0x0603E22F RID: 254511 RVA: 0x00F01CAC File Offset: 0x00EFFEAC
+		// Token: 0x060331C9 RID: 209353 RVA: 0x00E53968 File Offset: 0x00E51B68
 		protected override void OnRefreshView()
 		{
 			TotalTopUpUtil.Debug("TotalTopUpView刷新", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E230 RID: 254512 RVA: 0x00F01CE4 File Offset: 0x00EFFEE4
+		// Token: 0x060331CA RID: 209354 RVA: 0x00E539A0 File Offset: 0x00E51BA0
 		protected override void OnTimer(float deltaTime)
 		{
 			TotalTopUpData totalTopUpData = this.ActivityBaseData as TotalTopUpData;
@@ -105,18 +105,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			titlePanel.RefreshTime((long)num);
 		}
 
-		// Token: 0x04020761 RID: 132961
+		// Token: 0x0401B233 RID: 111155
 		private readonly List<TotalTopUpPageRewardItem> RewardPanels = new List<TotalTopUpPageRewardItem>();
 
-		// Token: 0x04020762 RID: 132962
+		// Token: 0x0401B234 RID: 111156
 		[Nullable(2)]
 		private TotalTopUpPageProgressPanel ProgressPanel;
 
-		// Token: 0x04020763 RID: 132963
+		// Token: 0x0401B235 RID: 111157
 		[Nullable(2)]
 		private TotalTopUpPageTitlePanel TitlePanel;
 
-		// Token: 0x04020764 RID: 132964
+		// Token: 0x0401B236 RID: 111158
 		[StaticVariableRuleIgnore]
 		private static readonly int[] RewardNodes = new int[]
 		{
@@ -131,41 +131,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			7
 		};
 
-		// Token: 0x0200C29B RID: 49819
+		// Token: 0x0200ACA6 RID: 44198
 		[NullableContext(0)]
 		private class ENode
 		{
-			// Token: 0x0403AC9A RID: 240794
+			// Token: 0x04035676 RID: 218742
 			public const int ItemReward0 = 0;
 
-			// Token: 0x0403AC9B RID: 240795
+			// Token: 0x04035677 RID: 218743
 			public const int ItemReward1 = 1;
 
-			// Token: 0x0403AC9C RID: 240796
+			// Token: 0x04035678 RID: 218744
 			public const int ItemReward2 = 2;
 
-			// Token: 0x0403AC9D RID: 240797
+			// Token: 0x04035679 RID: 218745
 			public const int ItemReward3 = 3;
 
-			// Token: 0x0403AC9E RID: 240798
+			// Token: 0x0403567A RID: 218746
 			public const int ItemReward4 = 4;
 
-			// Token: 0x0403AC9F RID: 240799
+			// Token: 0x0403567B RID: 218747
 			public const int ItemReward5 = 5;
 
-			// Token: 0x0403ACA0 RID: 240800
+			// Token: 0x0403567C RID: 218748
 			public const int ItemReward6 = 6;
 
-			// Token: 0x0403ACA1 RID: 240801
+			// Token: 0x0403567D RID: 218749
 			public const int ItemReward7 = 7;
 
-			// Token: 0x0403ACA2 RID: 240802
+			// Token: 0x0403567E RID: 218750
 			public const int ItemRewardIsolate = 8;
 
-			// Token: 0x0403ACA3 RID: 240803
+			// Token: 0x0403567F RID: 218751
 			public const int ItemTitlePanel = 9;
 
-			// Token: 0x0403ACA4 RID: 240804
+			// Token: 0x04035680 RID: 218752
 			public const int ItemProgressPanel = 10;
 		}
 	}

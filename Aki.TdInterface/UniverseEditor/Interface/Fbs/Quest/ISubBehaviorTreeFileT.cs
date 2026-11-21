@@ -3,55 +3,55 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200414C RID: 16716
+	// Token: 0x02004590 RID: 17808
 	public class ISubBehaviorTreeFileT
 	{
-		// Token: 0x17007674 RID: 30324
-		// (get) Token: 0x060188B8 RID: 100536 RVA: 0x00389DD0 File Offset: 0x00387FD0
-		// (set) Token: 0x060188B9 RID: 100537 RVA: 0x00389DD8 File Offset: 0x00387FD8
+		// Token: 0x17007C83 RID: 31875
+		// (get) Token: 0x06019F80 RID: 106368 RVA: 0x003B438C File Offset: 0x003B258C
+		// (set) Token: 0x06019F81 RID: 106369 RVA: 0x003B4394 File Offset: 0x003B2594
 		public int Id { get; set; }
 
-		// Token: 0x17007675 RID: 30325
-		// (get) Token: 0x060188BA RID: 100538 RVA: 0x00389DE1 File Offset: 0x00387FE1
-		// (set) Token: 0x060188BB RID: 100539 RVA: 0x00389DE9 File Offset: 0x00387FE9
+		// Token: 0x17007C84 RID: 31876
+		// (get) Token: 0x06019F82 RID: 106370 RVA: 0x003B439D File Offset: 0x003B259D
+		// (set) Token: 0x06019F83 RID: 106371 RVA: 0x003B43A5 File Offset: 0x003B25A5
 		public string ParentUid { get; set; }
 
-		// Token: 0x17007676 RID: 30326
-		// (get) Token: 0x060188BC RID: 100540 RVA: 0x00389DF2 File Offset: 0x00387FF2
-		// (set) Token: 0x060188BD RID: 100541 RVA: 0x00389DFA File Offset: 0x00387FFA
+		// Token: 0x17007C85 RID: 31877
+		// (get) Token: 0x06019F84 RID: 106372 RVA: 0x003B43AE File Offset: 0x003B25AE
+		// (set) Token: 0x06019F85 RID: 106373 RVA: 0x003B43B6 File Offset: 0x003B25B6
 		public IBehaviorTreeT Tree { get; set; }
 
-		// Token: 0x17007677 RID: 30327
-		// (get) Token: 0x060188BE RID: 100542 RVA: 0x00389E03 File Offset: 0x00388003
-		// (set) Token: 0x060188BF RID: 100543 RVA: 0x00389E0B File Offset: 0x0038800B
+		// Token: 0x17007C86 RID: 31878
+		// (get) Token: 0x06019F86 RID: 106374 RVA: 0x003B43BF File Offset: 0x003B25BF
+		// (set) Token: 0x06019F87 RID: 106375 RVA: 0x003B43C7 File Offset: 0x003B25C7
 		public List<string> Children { get; set; }
 
-		// Token: 0x17007678 RID: 30328
-		// (get) Token: 0x060188C0 RID: 100544 RVA: 0x00389E14 File Offset: 0x00388014
-		// (set) Token: 0x060188C1 RID: 100545 RVA: 0x00389E1C File Offset: 0x0038801C
+		// Token: 0x17007C87 RID: 31879
+		// (get) Token: 0x06019F88 RID: 106376 RVA: 0x003B43D0 File Offset: 0x003B25D0
+		// (set) Token: 0x06019F89 RID: 106377 RVA: 0x003B43D8 File Offset: 0x003B25D8
 		public List<string> Reference { get; set; }
 
-		// Token: 0x17007679 RID: 30329
-		// (get) Token: 0x060188C2 RID: 100546 RVA: 0x00389E25 File Offset: 0x00388025
-		// (set) Token: 0x060188C3 RID: 100547 RVA: 0x00389E2D File Offset: 0x0038802D
+		// Token: 0x17007C88 RID: 31880
+		// (get) Token: 0x06019F8A RID: 106378 RVA: 0x003B43E1 File Offset: 0x003B25E1
+		// (set) Token: 0x06019F8B RID: 106379 RVA: 0x003B43E9 File Offset: 0x003B25E9
 		public List<string> WeakReference { get; set; }
 
-		// Token: 0x1700767A RID: 30330
-		// (get) Token: 0x060188C4 RID: 100548 RVA: 0x00389E36 File Offset: 0x00388036
-		// (set) Token: 0x060188C5 RID: 100549 RVA: 0x00389E3E File Offset: 0x0038803E
+		// Token: 0x17007C89 RID: 31881
+		// (get) Token: 0x06019F8C RID: 106380 RVA: 0x003B43F2 File Offset: 0x003B25F2
+		// (set) Token: 0x06019F8D RID: 106381 RVA: 0x003B43FA File Offset: 0x003B25FA
 		public string _Name { get; set; }
 
-		// Token: 0x1700767B RID: 30331
-		// (get) Token: 0x060188C6 RID: 100550 RVA: 0x00389E47 File Offset: 0x00388047
-		// (set) Token: 0x060188C7 RID: 100551 RVA: 0x00389E4F File Offset: 0x0038804F
+		// Token: 0x17007C8A RID: 31882
+		// (get) Token: 0x06019F8E RID: 106382 RVA: 0x003B4403 File Offset: 0x003B2603
+		// (set) Token: 0x06019F8F RID: 106383 RVA: 0x003B440B File Offset: 0x003B260B
 		public string _Path { get; set; }
 
-		// Token: 0x1700767C RID: 30332
-		// (get) Token: 0x060188C8 RID: 100552 RVA: 0x00389E58 File Offset: 0x00388058
-		// (set) Token: 0x060188C9 RID: 100553 RVA: 0x00389E60 File Offset: 0x00388060
+		// Token: 0x17007C8B RID: 31883
+		// (get) Token: 0x06019F90 RID: 106384 RVA: 0x003B4414 File Offset: 0x003B2614
+		// (set) Token: 0x06019F91 RID: 106385 RVA: 0x003B441C File Offset: 0x003B261C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060188CA RID: 100554 RVA: 0x00389E6C File Offset: 0x0038806C
+		// Token: 0x06019F92 RID: 106386 RVA: 0x003B4428 File Offset: 0x003B2628
 		public ISubBehaviorTreeFileT()
 		{
 			this.Id = 0;

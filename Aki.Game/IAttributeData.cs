@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x02000F04 RID: 3844
+// Token: 0x020003B9 RID: 953
 public interface IAttributeData
 {
-	// Token: 0x1700077B RID: 1915
-	// (get) Token: 0x06006094 RID: 24724
-	// (set) Token: 0x06006095 RID: 24725
+	// Token: 0x1700079D RID: 1949
+	// (get) Token: 0x0600342C RID: 13356
+	// (set) Token: 0x0600342D RID: 13357
 	float Max { get; set; }
 
-	// Token: 0x1700077C RID: 1916
-	// (get) Token: 0x06006096 RID: 24726
-	// (set) Token: 0x06006097 RID: 24727
+	// Token: 0x1700079E RID: 1950
+	// (get) Token: 0x0600342E RID: 13358
+	// (set) Token: 0x0600342F RID: 13359
 	float BaseMax { get; set; }
 
-	// Token: 0x1700077D RID: 1917
-	// (get) Token: 0x06006098 RID: 24728
-	// (set) Token: 0x06006099 RID: 24729
+	// Token: 0x1700079F RID: 1951
+	// (get) Token: 0x06003430 RID: 13360
+	// (set) Token: 0x06003431 RID: 13361
 	float Value { get; set; }
 
-	// Token: 0x1700077E RID: 1918
-	// (get) Token: 0x0600609A RID: 24730
-	// (set) Token: 0x0600609B RID: 24731
+	// Token: 0x170007A0 RID: 1952
+	// (get) Token: 0x06003432 RID: 13362
+	// (set) Token: 0x06003433 RID: 13363
 	float Speed { get; set; }
 
-	// Token: 0x1700077F RID: 1919
-	// (get) Token: 0x0600609C RID: 24732
-	// (set) Token: 0x0600609D RID: 24733
+	// Token: 0x170007A1 RID: 1953
+	// (get) Token: 0x06003434 RID: 13364
+	// (set) Token: 0x06003435 RID: 13365
 	float BaseSpeed { get; set; }
 
-	// Token: 0x17000780 RID: 1920
-	// (get) Token: 0x0600609E RID: 24734
-	// (set) Token: 0x0600609F RID: 24735
+	// Token: 0x170007A2 RID: 1954
+	// (get) Token: 0x06003436 RID: 13366
+	// (set) Token: 0x06003437 RID: 13367
 	double Timestamp { get; set; }
 }

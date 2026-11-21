@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014BC RID: 5308
+// Token: 0x02000970 RID: 2416
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleGiftView : ActivitySubViewBase
 {
-	// Token: 0x06009675 RID: 38517 RVA: 0x00207E4C File Offset: 0x0020604C
+	// Token: 0x06006A0A RID: 27146 RVA: 0x00210DB8 File Offset: 0x0020EFB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -32,13 +32,13 @@ public class RoleGiftView : ActivitySubViewBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06009676 RID: 38518 RVA: 0x00207F23 File Offset: 0x00206123
+	// Token: 0x06006A0B RID: 27147 RVA: 0x00210E8F File Offset: 0x0020F08F
 	protected override void OnSetData()
 	{
 		this.RoleGiftDataField = (this.ActivityBaseData as RoleGiftData);
 	}
 
-	// Token: 0x06009677 RID: 38519 RVA: 0x00207F38 File Offset: 0x00206138
+	// Token: 0x06006A0C RID: 27148 RVA: 0x00210EA4 File Offset: 0x0020F0A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleGiftView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -49,13 +49,13 @@ public class RoleGiftView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009678 RID: 38520 RVA: 0x00207F7B File Offset: 0x0020617B
+	// Token: 0x06006A0D RID: 27149 RVA: 0x00210EE7 File Offset: 0x0020F0E7
 	protected override void OnStart()
 	{
 		base.RefreshView();
 	}
 
-	// Token: 0x06009679 RID: 38521 RVA: 0x00207F83 File Offset: 0x00206183
+	// Token: 0x06006A0E RID: 27150 RVA: 0x00210EEF File Offset: 0x0020F0EF
 	protected override void OnRefreshView()
 	{
 		ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -66,7 +66,7 @@ public class RoleGiftView : ActivitySubViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600967A RID: 38522 RVA: 0x00207F9C File Offset: 0x0020619C
+	// Token: 0x06006A0F RID: 27151 RVA: 0x00210F08 File Offset: 0x0020F108
 	private void Refresh()
 	{
 		RoleGiftData roleGiftDataField = this.RoleGiftDataField;
@@ -123,7 +123,7 @@ public class RoleGiftView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600967B RID: 38523 RVA: 0x0020807C File Offset: 0x0020627C
+	// Token: 0x06006A10 RID: 27152 RVA: 0x00210FE8 File Offset: 0x0020F1E8
 	private unsafe void OnBtnCheckDetailClick()
 	{
 		RoleGiftData roleGiftDataField = this.RoleGiftDataField;
@@ -167,7 +167,7 @@ public class RoleGiftView : ActivitySubViewBase
 		instance.OpenRoleMainView(agentType, selectRoleId, list, null, null);
 	}
 
-	// Token: 0x0600967C RID: 38524 RVA: 0x00208220 File Offset: 0x00206420
+	// Token: 0x06006A11 RID: 27153 RVA: 0x0021118C File Offset: 0x0020F38C
 	private void OnBtnGetRewardClick()
 	{
 		if (this.ActivityBaseData == null)
@@ -181,34 +181,34 @@ public class RoleGiftView : ActivitySubViewBase
 		RoleGiftController.Instance.RequestRoleGiftReward(id).Forget();
 	}
 
-	// Token: 0x04004267 RID: 16999
+	// Token: 0x040042FF RID: 17151
 	public RoleGiftData RoleGiftDataField;
 
-	// Token: 0x04004268 RID: 17000
+	// Token: 0x04004300 RID: 17152
 	private ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x04004269 RID: 17001
+	// Token: 0x04004301 RID: 17153
 	private RoleDescribeComponent DescComponent;
 
-	// Token: 0x0400426A RID: 17002
+	// Token: 0x04004302 RID: 17154
 	private FunctionalPanelConditionLock LockPanel;
 
-	// Token: 0x0400426B RID: 17003
+	// Token: 0x04004303 RID: 17155
 	private ButtonItem RewardBtnItem;
 
-	// Token: 0x02007AF5 RID: 31477
+	// Token: 0x02006C79 RID: 27769
 	[NullableContext(0)]
 	private enum ENode
 	{
-		// Token: 0x04028721 RID: 165665
+		// Token: 0x04023A3B RID: 145979
 		ItemCommonInfo,
-		// Token: 0x04028722 RID: 165666
+		// Token: 0x04023A3C RID: 145980
 		ItemRoleDesc,
-		// Token: 0x04028723 RID: 165667
+		// Token: 0x04023A3D RID: 145981
 		BtnGetReward,
-		// Token: 0x04028724 RID: 165668
+		// Token: 0x04023A3E RID: 145982
 		ItemLock,
-		// Token: 0x04028725 RID: 165669
+		// Token: 0x04023A3F RID: 145983
 		ItemRewarded
 	}
 }

@@ -2,47 +2,47 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056F5 RID: 22261
+	// Token: 0x020046CC RID: 18124
 	public interface IKurotatoSmallItemGridData
 	{
-		// Token: 0x170087FA RID: 34810
-		// (get) Token: 0x060389D9 RID: 231897
-		// (set) Token: 0x060389DA RID: 231898
+		// Token: 0x17005BC2 RID: 23490
+		// (get) Token: 0x0602D8E9 RID: 186601
+		// (set) Token: 0x0602D8EA RID: 186602
 		EKurotatoCardType Type { get; set; }
 
-		// Token: 0x170087FB RID: 34811
-		// (get) Token: 0x060389DB RID: 231899
-		// (set) Token: 0x060389DC RID: 231900
+		// Token: 0x17005BC3 RID: 23491
+		// (get) Token: 0x0602D8EB RID: 186603
+		// (set) Token: 0x0602D8EC RID: 186604
 		int Id { get; set; }
 
-		// Token: 0x170087FC RID: 34812
-		// (get) Token: 0x060389DD RID: 231901
-		// (set) Token: 0x060389DE RID: 231902
+		// Token: 0x17005BC4 RID: 23492
+		// (get) Token: 0x0602D8ED RID: 186605
+		// (set) Token: 0x0602D8EE RID: 186606
 		int IncId { get; set; }
 
-		// Token: 0x170087FD RID: 34813
-		// (get) Token: 0x060389DF RID: 231903
-		// (set) Token: 0x060389E0 RID: 231904
+		// Token: 0x17005BC5 RID: 23493
+		// (get) Token: 0x0602D8EF RID: 186607
+		// (set) Token: 0x0602D8F0 RID: 186608
 		int Count { get; set; }
 
-		// Token: 0x170087FE RID: 34814
-		// (get) Token: 0x060389E1 RID: 231905
-		// (set) Token: 0x060389E2 RID: 231906
+		// Token: 0x17005BC6 RID: 23494
+		// (get) Token: 0x0602D8F1 RID: 186609
+		// (set) Token: 0x0602D8F2 RID: 186610
 		bool? PlayComposeFx { get; set; }
 
-		// Token: 0x170087FF RID: 34815
-		// (get) Token: 0x060389E3 RID: 231907
-		// (set) Token: 0x060389E4 RID: 231908
+		// Token: 0x17005BC7 RID: 23495
+		// (get) Token: 0x0602D8F3 RID: 186611
+		// (set) Token: 0x0602D8F4 RID: 186612
 		bool? ShowArrow { get; set; }
 
-		// Token: 0x17008800 RID: 34816
-		// (get) Token: 0x060389E5 RID: 231909
-		// (set) Token: 0x060389E6 RID: 231910
+		// Token: 0x17005BC8 RID: 23496
+		// (get) Token: 0x0602D8F5 RID: 186613
+		// (set) Token: 0x0602D8F6 RID: 186614
 		bool? IsReceived { get; set; }
 
-		// Token: 0x17008801 RID: 34817
-		// (get) Token: 0x060389E7 RID: 231911
-		// (set) Token: 0x060389E8 RID: 231912
+		// Token: 0x17005BC9 RID: 23497
+		// (get) Token: 0x0602D8F7 RID: 186615
+		// (set) Token: 0x0602D8F8 RID: 186616
 		bool? IsShowCount { get; set; }
 	}
 }

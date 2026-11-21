@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044EF RID: 17647
+	// Token: 0x02004957 RID: 18775
 	public class ILevelPlayExploratoryConfigT
 	{
-		// Token: 0x17007D0D RID: 32013
-		// (get) Token: 0x0601A7B9 RID: 108473 RVA: 0x003C8901 File Offset: 0x003C6B01
-		// (set) Token: 0x0601A7BA RID: 108474 RVA: 0x003C8909 File Offset: 0x003C6B09
+		// Token: 0x1700834E RID: 33614
+		// (get) Token: 0x0601BF8E RID: 114574 RVA: 0x003F4B9D File Offset: 0x003F2D9D
+		// (set) Token: 0x0601BF8F RID: 114575 RVA: 0x003F4BA5 File Offset: 0x003F2DA5
 		public ELevelPlayExploratoryCheckTiming When { get; set; }
 
-		// Token: 0x17007D0E RID: 32014
-		// (get) Token: 0x0601A7BB RID: 108475 RVA: 0x003C8912 File Offset: 0x003C6B12
-		// (set) Token: 0x0601A7BC RID: 108476 RVA: 0x003C891A File Offset: 0x003C6B1A
+		// Token: 0x1700834F RID: 33615
+		// (get) Token: 0x0601BF90 RID: 114576 RVA: 0x003F4BAE File Offset: 0x003F2DAE
+		// (set) Token: 0x0601BF91 RID: 114577 RVA: 0x003F4BB6 File Offset: 0x003F2DB6
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17007D0F RID: 32015
-		// (get) Token: 0x0601A7BD RID: 108477 RVA: 0x003C8923 File Offset: 0x003C6B23
-		// (set) Token: 0x0601A7BE RID: 108478 RVA: 0x003C892B File Offset: 0x003C6B2B
+		// Token: 0x17008350 RID: 33616
+		// (get) Token: 0x0601BF92 RID: 114578 RVA: 0x003F4BBF File Offset: 0x003F2DBF
+		// (set) Token: 0x0601BF93 RID: 114579 RVA: 0x003F4BC7 File Offset: 0x003F2DC7
 		public int AddType { get; set; }
 
-		// Token: 0x17007D10 RID: 32016
-		// (get) Token: 0x0601A7BF RID: 108479 RVA: 0x003C8934 File Offset: 0x003C6B34
-		// (set) Token: 0x0601A7C0 RID: 108480 RVA: 0x003C893C File Offset: 0x003C6B3C
+		// Token: 0x17008351 RID: 33617
+		// (get) Token: 0x0601BF94 RID: 114580 RVA: 0x003F4BD0 File Offset: 0x003F2DD0
+		// (set) Token: 0x0601BF95 RID: 114581 RVA: 0x003F4BD8 File Offset: 0x003F2DD8
 		public int AreaId { get; set; }
 
-		// Token: 0x17007D11 RID: 32017
-		// (get) Token: 0x0601A7C1 RID: 108481 RVA: 0x003C8945 File Offset: 0x003C6B45
-		// (set) Token: 0x0601A7C2 RID: 108482 RVA: 0x003C894D File Offset: 0x003C6B4D
+		// Token: 0x17008352 RID: 33618
+		// (get) Token: 0x0601BF96 RID: 114582 RVA: 0x003F4BE1 File Offset: 0x003F2DE1
+		// (set) Token: 0x0601BF97 RID: 114583 RVA: 0x003F4BE9 File Offset: 0x003F2DE9
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A7C3 RID: 108483 RVA: 0x003C8956 File Offset: 0x003C6B56
+		// Token: 0x0601BF98 RID: 114584 RVA: 0x003F4BF2 File Offset: 0x003F2DF2
 		public ILevelPlayExploratoryConfigT()
 		{
 			this.When = ELevelPlayExploratoryCheckTiming.OnCompletion;

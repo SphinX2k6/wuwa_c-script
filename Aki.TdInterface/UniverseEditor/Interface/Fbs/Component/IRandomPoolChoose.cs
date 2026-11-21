@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057F0 RID: 22512
+	// Token: 0x02005DF7 RID: 24055
 	public struct IRandomPoolChoose : IFlatbufferObject
 	{
-		// Token: 0x1700A825 RID: 43045
-		// (get) Token: 0x06025D50 RID: 154960 RVA: 0x00537B82 File Offset: 0x00535D82
+		// Token: 0x1700B149 RID: 45385
+		// (get) Token: 0x06028270 RID: 164464 RVA: 0x0057DD0E File Offset: 0x0057BF0E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D51 RID: 154961 RVA: 0x00537B8F File Offset: 0x00535D8F
+		// Token: 0x06028271 RID: 164465 RVA: 0x0057DD1B File Offset: 0x0057BF1B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025D52 RID: 154962 RVA: 0x00537B98 File Offset: 0x00535D98
+		// Token: 0x06028272 RID: 164466 RVA: 0x0057DD24 File Offset: 0x0057BF24
 		public static IRandomPoolChoose GetRootAsIRandomPoolChoose(ByteBuffer _bb)
 		{
 			return IRandomPoolChoose.GetRootAsIRandomPoolChoose(_bb, default(IRandomPoolChoose));
 		}
 
-		// Token: 0x06025D53 RID: 154963 RVA: 0x00537BB4 File Offset: 0x00535DB4
+		// Token: 0x06028273 RID: 164467 RVA: 0x0057DD40 File Offset: 0x0057BF40
 		public static IRandomPoolChoose GetRootAsIRandomPoolChoose(ByteBuffer _bb, IRandomPoolChoose obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025D54 RID: 154964 RVA: 0x00537BD1 File Offset: 0x00535DD1
+		// Token: 0x06028274 RID: 164468 RVA: 0x0057DD5D File Offset: 0x0057BF5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025D55 RID: 154965 RVA: 0x00537BE0 File Offset: 0x00535DE0
+		// Token: 0x06028275 RID: 164469 RVA: 0x0057DD6C File Offset: 0x0057BF6C
 		public IRandomPoolChoose __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A826 RID: 43046
-		// (get) Token: 0x06025D56 RID: 154966 RVA: 0x00537BF0 File Offset: 0x00535DF0
+		// Token: 0x1700B14A RID: 45386
+		// (get) Token: 0x06028276 RID: 164470 RVA: 0x0057DD7C File Offset: 0x0057BF7C
 		public EMonsterChooseType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D57 RID: 154967 RVA: 0x00537C2C File Offset: 0x00535E2C
+		// Token: 0x06028277 RID: 164471 RVA: 0x0057DDB8 File Offset: 0x0057BFB8
 		public IRandomPoolConfig? RandomPoolConfigs(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IRandomPoolConfig?(default(IRandomPoolConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A827 RID: 43047
-		// (get) Token: 0x06025D58 RID: 154968 RVA: 0x00537C8C File Offset: 0x00535E8C
+		// Token: 0x1700B14B RID: 45387
+		// (get) Token: 0x06028278 RID: 164472 RVA: 0x0057DE18 File Offset: 0x0057C018
 		public int RandomPoolConfigsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D59 RID: 154969 RVA: 0x00537CB7 File Offset: 0x00535EB7
+		// Token: 0x06028279 RID: 164473 RVA: 0x0057DE43 File Offset: 0x0057C043
 		public static Offset<IRandomPoolChoose> CreateIRandomPoolChoose(FlatBufferBuilder builder, EMonsterChooseType Type = EMonsterChooseType.RandomPoolChoose, VectorOffset RandomPoolConfigsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRandomPoolChoose.EndIRandomPoolChoose(builder);
 		}
 
-		// Token: 0x06025D5A RID: 154970 RVA: 0x00537CD4 File Offset: 0x00535ED4
+		// Token: 0x0602827A RID: 164474 RVA: 0x0057DE60 File Offset: 0x0057C060
 		public static void StartIRandomPoolChoose(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06025D5B RID: 154971 RVA: 0x00537CDD File Offset: 0x00535EDD
+		// Token: 0x0602827B RID: 164475 RVA: 0x0057DE69 File Offset: 0x0057C069
 		public static void AddType(FlatBufferBuilder builder, EMonsterChooseType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025D5C RID: 154972 RVA: 0x00537CE8 File Offset: 0x00535EE8
+		// Token: 0x0602827C RID: 164476 RVA: 0x0057DE74 File Offset: 0x0057C074
 		public static void AddRandomPoolConfigs(FlatBufferBuilder builder, VectorOffset randomPoolConfigsOffset)
 		{
 			builder.AddOffset(1, randomPoolConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06025D5D RID: 154973 RVA: 0x00537CF8 File Offset: 0x00535EF8
+		// Token: 0x0602827D RID: 164477 RVA: 0x0057DE84 File Offset: 0x0057C084
 		public static VectorOffset CreateRandomPoolConfigsVector(FlatBufferBuilder builder, Offset<IRandomPoolConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D5E RID: 154974 RVA: 0x00537D38 File Offset: 0x00535F38
+		// Token: 0x0602827E RID: 164478 RVA: 0x0057DEC4 File Offset: 0x0057C0C4
 		public static VectorOffset CreateRandomPoolConfigsVectorBlock(FlatBufferBuilder builder, Offset<IRandomPoolConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D5F RID: 154975 RVA: 0x00537D52 File Offset: 0x00535F52
+		// Token: 0x0602827F RID: 164479 RVA: 0x0057DEDE File Offset: 0x0057C0DE
 		public static VectorOffset CreateRandomPoolConfigsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IRandomPoolConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D60 RID: 154976 RVA: 0x00537D70 File Offset: 0x00535F70
+		// Token: 0x06028280 RID: 164480 RVA: 0x0057DEFC File Offset: 0x0057C0FC
 		public static VectorOffset CreateRandomPoolConfigsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025D61 RID: 154977 RVA: 0x00537D89 File Offset: 0x00535F89
+		// Token: 0x06028281 RID: 164481 RVA: 0x0057DF15 File Offset: 0x0057C115
 		public static void StartRandomPoolConfigsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06025D62 RID: 154978 RVA: 0x00537D94 File Offset: 0x00535F94
+		// Token: 0x06028282 RID: 164482 RVA: 0x0057DF20 File Offset: 0x0057C120
 		public static Offset<IRandomPoolChoose> EndIRandomPoolChoose(FlatBufferBuilder builder)
 		{
 			return new Offset<IRandomPoolChoose>(builder.EndTable());
 		}
 
-		// Token: 0x06025D63 RID: 154979 RVA: 0x00537DA4 File Offset: 0x00535FA4
+		// Token: 0x06028283 RID: 164483 RVA: 0x0057DF30 File Offset: 0x0057C130
 		public IRandomPoolChooseT UnPack()
 		{
 			IRandomPoolChooseT randomPoolChooseT = new IRandomPoolChooseT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return randomPoolChooseT;
 		}
 
-		// Token: 0x06025D64 RID: 154980 RVA: 0x00537DC0 File Offset: 0x00535FC0
+		// Token: 0x06028284 RID: 164484 RVA: 0x0057DF4C File Offset: 0x0057C14C
 		public void UnPackTo(IRandomPoolChooseT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025D65 RID: 154981 RVA: 0x00537E2C File Offset: 0x0053602C
+		// Token: 0x06028285 RID: 164485 RVA: 0x0057DFB8 File Offset: 0x0057C1B8
 		public static Offset<IRandomPoolChoose> Pack(FlatBufferBuilder builder, IRandomPoolChooseT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRandomPoolChoose.CreateIRandomPoolChoose(builder, _o.Type, randomPoolConfigsOffset);
 		}
 
-		// Token: 0x0400ECE3 RID: 60643
+		// Token: 0x0400F9CE RID: 63950
 		private Table __p;
 	}
 }

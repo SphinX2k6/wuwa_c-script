@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020014F6 RID: 5366
+// Token: 0x020009AE RID: 2478
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivitySevenDaySignConfig : ConfigBase
 {
-	// Token: 0x06009909 RID: 39177 RVA: 0x00211B78 File Offset: 0x0020FD78
+	// Token: 0x06006CE3 RID: 27875 RVA: 0x0021B868 File Offset: 0x00219A68
 	public ActivitySign? GetActivitySignById(int actId)
 	{
 		return ConfigActivitySignById.GetConfig(actId, true);
 	}
 
-	// Token: 0x0600990A RID: 39178 RVA: 0x00211B84 File Offset: 0x0020FD84
+	// Token: 0x06006CE4 RID: 27876 RVA: 0x0021B874 File Offset: 0x00219A74
 	public OneItemConfig? GetActivityRewardByDay(int actId, int day)
 	{
 		ActivitySign? config = ConfigActivitySignById.GetConfig(actId, true);
@@ -25,8 +25,8 @@ public class ActivitySevenDaySignConfig : ConfigBase
 		return config.GetValueOrDefault().SignRewards(day);
 	}
 
-	// Token: 0x17000D2B RID: 3371
-	// (get) Token: 0x0600990B RID: 39179 RVA: 0x00211BBC File Offset: 0x0020FDBC
+	// Token: 0x17000D4C RID: 3404
+	// (get) Token: 0x06006CE5 RID: 27877 RVA: 0x0021B8AC File Offset: 0x00219AAC
 	public static ActivitySevenDaySignConfig Instance
 	{
 		get
@@ -35,7 +35,7 @@ public class ActivitySevenDaySignConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600990C RID: 39180 RVA: 0x00211BC3 File Offset: 0x0020FDC3
+	// Token: 0x06006CE6 RID: 27878 RVA: 0x0021B8B3 File Offset: 0x00219AB3
 	public static ActivitySevenDaySignConfig GetOrCreateInstance()
 	{
 		if (ActivitySevenDaySignConfig._Instance == null)
@@ -45,7 +45,7 @@ public class ActivitySevenDaySignConfig : ConfigBase
 		return ActivitySevenDaySignConfig._Instance;
 	}
 
-	// Token: 0x0600990D RID: 39181 RVA: 0x00211BD7 File Offset: 0x0020FDD7
+	// Token: 0x06006CE7 RID: 27879 RVA: 0x0021B8C7 File Offset: 0x00219AC7
 	public static bool CreateInstance()
 	{
 		if (ActivitySevenDaySignConfig._Instance != null)
@@ -56,24 +56,24 @@ public class ActivitySevenDaySignConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600990E RID: 39182 RVA: 0x00211BED File Offset: 0x0020FDED
+	// Token: 0x06006CE8 RID: 27880 RVA: 0x0021B8DD File Offset: 0x00219ADD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600990F RID: 39183 RVA: 0x00211BEF File Offset: 0x0020FDEF
+	// Token: 0x06006CE9 RID: 27881 RVA: 0x0021B8DF File Offset: 0x00219ADF
 	public static void ResetStaticDefaultValue()
 	{
 		ActivitySevenDaySignConfig._Instance = null;
 	}
 
-	// Token: 0x06009910 RID: 39184 RVA: 0x00211BF7 File Offset: 0x0020FDF7
+	// Token: 0x06006CEA RID: 27882 RVA: 0x0021B8E7 File Offset: 0x00219AE7
 	static ActivitySevenDaySignConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivitySevenDaySignConfig.CreateStaticDefaultValue), new Action(ActivitySevenDaySignConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004355 RID: 17237
+	// Token: 0x040043FA RID: 17402
 	[Nullable(2)]
 	private static ActivitySevenDaySignConfig _Instance;
 }

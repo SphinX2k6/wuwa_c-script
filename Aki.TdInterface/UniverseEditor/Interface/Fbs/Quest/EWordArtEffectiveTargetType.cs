@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CEA RID: 15594
+	// Token: 0x02004101 RID: 16641
 	public enum EWordArtEffectiveTargetType : byte
 	{
-		// Token: 0x0400B57D RID: 46461
+		// Token: 0x0400BF2A RID: 48938
 		Number
 	}
 }

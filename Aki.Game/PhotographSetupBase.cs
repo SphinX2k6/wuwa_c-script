@@ -7,10 +7,10 @@ using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020025D2 RID: 9682
+// Token: 0x02001ABD RID: 6845
 public abstract class PhotographSetupBase : UiPanelBase, IPhotographSetupItem
 {
-	// Token: 0x06013A47 RID: 80455 RVA: 0x004E9867 File Offset: 0x004E7A67
+	// Token: 0x06010F27 RID: 69415 RVA: 0x004F8467 File Offset: 0x004F6667
 	public virtual void Initialize(EPhotoSetupValueType setupValueType)
 	{
 		this.SetupValueType = setupValueType;
@@ -18,7 +18,7 @@ public abstract class PhotographSetupBase : UiPanelBase, IPhotographSetupItem
 		this.Refresh();
 	}
 
-	// Token: 0x06013A48 RID: 80456 RVA: 0x004E988C File Offset: 0x004E7A8C
+	// Token: 0x06010F28 RID: 69416 RVA: 0x004F848C File Offset: 0x004F668C
 	public virtual void InitializeById(int setupId)
 	{
 		PhotoSetup? photoSetupConfigById = PhotographConfig.Instance.GetPhotoSetupConfigById(setupId);
@@ -31,44 +31,44 @@ public abstract class PhotographSetupBase : UiPanelBase, IPhotographSetupItem
 		this.Refresh();
 	}
 
-	// Token: 0x06013A49 RID: 80457
+	// Token: 0x06010F29 RID: 69417
 	public abstract void Refresh();
 
-	// Token: 0x06013A4A RID: 80458 RVA: 0x004E98D1 File Offset: 0x004E7AD1
+	// Token: 0x06010F2A RID: 69418 RVA: 0x004F84D1 File Offset: 0x004F66D1
 	public void SetInCurrentMode(bool bInCurrentMode)
 	{
 		this.IsInCurrentMode = bInCurrentMode;
 	}
 
-	// Token: 0x06013A4B RID: 80459 RVA: 0x004E98DA File Offset: 0x004E7ADA
+	// Token: 0x06010F2B RID: 69419 RVA: 0x004F84DA File Offset: 0x004F66DA
 	public virtual void SetEnable(bool bEnable)
 	{
-		base.SetUiActive(bEnable);
+		this.SetActive(bEnable);
 	}
 
-	// Token: 0x06013A4C RID: 80460 RVA: 0x004E98E3 File Offset: 0x004E7AE3
+	// Token: 0x06010F2C RID: 69420 RVA: 0x004F84E3 File Offset: 0x004F66E3
 	public virtual void SetLock(bool bLock)
 	{
 	}
 
-	// Token: 0x06013A4D RID: 80461 RVA: 0x004E98E5 File Offset: 0x004E7AE5
+	// Token: 0x06010F2D RID: 69421 RVA: 0x004F84E5 File Offset: 0x004F66E5
 	public virtual void SetSubItem(bool bSubItem)
 	{
 	}
 
-	// Token: 0x06013A4E RID: 80462 RVA: 0x004E98E7 File Offset: 0x004E7AE7
+	// Token: 0x06010F2E RID: 69422 RVA: 0x004F84E7 File Offset: 0x004F66E7
 	public void Destroy()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x06013A4F RID: 80463 RVA: 0x004E98F0 File Offset: 0x004E7AF0
+	// Token: 0x06010F2F RID: 69423 RVA: 0x004F84F0 File Offset: 0x004F66F0
 	protected bool IsPhotoSetupRedDotVisible()
 	{
 		return this.SetupConfig != null && this.SetupConfig.GetValueOrDefault().IsShowRedDot && !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.Photography) as ServerStorageSet).Has(this.SetupConfig.Value.Id);
 	}
 
-	// Token: 0x06013A50 RID: 80464 RVA: 0x004E9950 File Offset: 0x004E7B50
+	// Token: 0x06010F30 RID: 69424 RVA: 0x004F8550 File Offset: 0x004F6750
 	[NullableContext(1)]
 	protected void MarkPhotoSetupRedDotAsRead(Action onRead)
 	{
@@ -86,12 +86,12 @@ public abstract class PhotographSetupBase : UiPanelBase, IPhotographSetupItem
 		EventSystem.Instance.Emit(EEventName.RedDotPhotoSetup);
 	}
 
-	// Token: 0x04009417 RID: 37911
+	// Token: 0x0400956D RID: 38253
 	protected EPhotoSetupValueType SetupValueType;
 
-	// Token: 0x04009418 RID: 37912
+	// Token: 0x0400956E RID: 38254
 	protected PhotoSetup? SetupConfig;
 
-	// Token: 0x04009419 RID: 37913
+	// Token: 0x0400956F RID: 38255
 	protected bool IsInCurrentMode = true;
 }

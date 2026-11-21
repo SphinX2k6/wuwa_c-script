@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200490C RID: 18700
+	// Token: 0x02003883 RID: 14467
 	public class NavigationFunctionPageButton : NavigationButton
 	{
-		// Token: 0x06030E25 RID: 200229 RVA: 0x00B5A1D5 File Offset: 0x00B583D5
+		// Token: 0x06025952 RID: 153938 RVA: 0x00A95045 File Offset: 0x00A93245
 		[NullableContext(1)]
 		public NavigationFunctionPageButton(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E26 RID: 200230 RVA: 0x00B5A1E0 File Offset: 0x00B583E0
+		// Token: 0x06025953 RID: 153939 RVA: 0x00A95050 File Offset: 0x00A93250
 		protected override void OnStart()
 		{
 			SpecialPanelHandleBase panelHandle = this.PanelHandle;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E27 RID: 200231 RVA: 0x00B5A24C File Offset: 0x00B5844C
+		// Token: 0x06025954 RID: 153940 RVA: 0x00A950BC File Offset: 0x00A932BC
 		protected override bool OnCheckFindOpposite()
 		{
 			ULGUIBehaviour selectable = this.Selectable;

@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001599 RID: 5529
+	// Token: 0x0200160B RID: 5643
 	public enum AdsorbType
 	{
-		// Token: 0x0400A7D9 RID: 42969
+		// Token: 0x0400AC58 RID: 44120
 		[OriginalName("SceneAdsorb")]
 		SceneAdsorb,
-		// Token: 0x0400A7DA RID: 42970
+		// Token: 0x0400AC59 RID: 44121
 		[OriginalName("PlayerAdsorb")]
 		PlayerAdsorb
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000672 RID: 1650
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200070F RID: 1807
 	public class IRefreshRule
 	{
-		// Token: 0x06002346 RID: 9030 RVA: 0x00060724 File Offset: 0x0005E924
+		// Token: 0x0600264C RID: 9804 RVA: 0x00067438 File Offset: 0x00065638
 		private IRefreshRule_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002347 RID: 9031 RVA: 0x0006075C File Offset: 0x0005E95C
+		// Token: 0x0600264D RID: 9805 RVA: 0x00067470 File Offset: 0x00065670
 		public static IRefreshRule Create([Nullable(2)] IRefreshRule instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002348 RID: 9032 RVA: 0x0006076F File Offset: 0x0005E96F
+		// Token: 0x0600264E RID: 9806 RVA: 0x00067483 File Offset: 0x00065683
 		public static IRefreshRule CreateFromSetValue([Nullable(2)] IRefreshRule_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002349 RID: 9033 RVA: 0x00060782 File Offset: 0x0005E982
+		// Token: 0x0600264F RID: 9807 RVA: 0x00067496 File Offset: 0x00065696
 		public IRefreshRule_SetValue ToSetValue()
 		{
 			return new IRefreshRule_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000957 RID: 2391
-		// (get) Token: 0x0600234A RID: 9034 RVA: 0x00060795 File Offset: 0x0005E995
-		// (set) Token: 0x0600234B RID: 9035 RVA: 0x000607C0 File Offset: 0x0005E9C0
+		// Token: 0x17000A0E RID: 2574
+		// (get) Token: 0x06002650 RID: 9808 RVA: 0x000674A9 File Offset: 0x000656A9
+		// (set) Token: 0x06002651 RID: 9809 RVA: 0x000674D4 File Offset: 0x000656D4
 		public virtual ERefreshRule Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001865 RID: 6245
+		// Token: 0x04001A57 RID: 6743
 		[Nullable(2)]
 		protected IRefreshRule FbInstance;
 
-		// Token: 0x04001866 RID: 6246
+		// Token: 0x04001A58 RID: 6744
 		[Nullable(2)]
 		protected IRefreshRule_SetValue PocoInterface;
 	}

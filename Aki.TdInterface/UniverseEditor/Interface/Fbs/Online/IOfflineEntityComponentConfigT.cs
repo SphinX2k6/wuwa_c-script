@@ -4,15 +4,15 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Online
 {
-	// Token: 0x02004388 RID: 17288
+	// Token: 0x020047EA RID: 18410
 	public class IOfflineEntityComponentConfigT
 	{
-		// Token: 0x17007A35 RID: 31285
-		// (get) Token: 0x06019B89 RID: 105353 RVA: 0x003AF07D File Offset: 0x003AD27D
-		// (set) Token: 0x06019B8A RID: 105354 RVA: 0x003AF085 File Offset: 0x003AD285
+		// Token: 0x1700806A RID: 32874
+		// (get) Token: 0x0601B317 RID: 111383 RVA: 0x003DAAA5 File Offset: 0x003D8CA5
+		// (set) Token: 0x0601B318 RID: 111384 RVA: 0x003DAAAD File Offset: 0x003D8CAD
 		public List<EComponent> Components { get; set; }
 
-		// Token: 0x06019B8B RID: 105355 RVA: 0x003AF08E File Offset: 0x003AD28E
+		// Token: 0x0601B319 RID: 111385 RVA: 0x003DAAB6 File Offset: 0x003D8CB6
 		public IOfflineEntityComponentConfigT()
 		{
 			this.Components = null;

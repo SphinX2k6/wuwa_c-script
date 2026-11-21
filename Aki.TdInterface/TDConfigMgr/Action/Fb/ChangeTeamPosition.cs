@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200267C RID: 9852
+	// Token: 0x0200293F RID: 10559
 	public class ChangeTeamPosition : ActionParams
 	{
-		// Token: 0x0600DCBF RID: 56511 RVA: 0x0020D3FD File Offset: 0x0020B5FD
-		[NullableContext(1)]
+		// Token: 0x0600EA97 RID: 60055 RVA: 0x00229BDD File Offset: 0x00227DDD
 		public static ChangeTeamPosition Create(IChangeTeamPosition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004189 RID: 16777
-		// (get) Token: 0x0600DCC0 RID: 56512 RVA: 0x0020D41C File Offset: 0x0020B61C
+		// Token: 0x170044C7 RID: 17607
+		// (get) Token: 0x0600EA98 RID: 60056 RVA: 0x00229BFC File Offset: 0x00227DFC
 		public virtual int PositionId
 		{
 			get
@@ -31,21 +29,29 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700418A RID: 16778
-		// (get) Token: 0x0600DCC1 RID: 56513 RVA: 0x0020D42C File Offset: 0x0020B62C
-		public virtual bool? RestoreToPrevious
+		// Token: 0x170044C8 RID: 17608
+		// (get) Token: 0x0600EA99 RID: 60057 RVA: 0x00229C09 File Offset: 0x00227E09
+		public virtual ITeamType TeamType
 		{
 			get
 			{
-				if ((this.Instance.NullMask & 1) == 0)
+				if (this._TeamTypeInited)
 				{
-					return null;
+					return this._TeamTypeCache;
 				}
-				return new bool?(this.Instance.RestoreToPrevious);
+				this._TeamTypeInited = true;
+				this._TeamTypeCache = ActionReadHelper.ReadChangeTeamPosition_TeamType(this.Instance);
+				return this._TeamTypeCache;
 			}
 		}
 
-		// Token: 0x04007AAC RID: 31404
+		// Token: 0x04008147 RID: 33095
 		private IChangeTeamPosition Instance;
+
+		// Token: 0x04008148 RID: 33096
+		private ITeamType _TeamTypeCache;
+
+		// Token: 0x04008149 RID: 33097
+		private bool _TeamTypeInited;
 	}
 }

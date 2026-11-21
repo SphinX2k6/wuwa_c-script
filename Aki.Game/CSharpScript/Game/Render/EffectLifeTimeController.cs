@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045CF RID: 17871
+	// Token: 0x020034F7 RID: 13559
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EffectLifeTimeController
 	{
-		// Token: 0x170075A2 RID: 30114
-		// (get) Token: 0x0602E10B RID: 188683 RVA: 0x00A9E91B File Offset: 0x00A9CB1B
+		// Token: 0x17004859 RID: 18521
+		// (get) Token: 0x060227F6 RID: 141302 RVA: 0x009CABE3 File Offset: 0x009C8DE3
 		public float LifeTime
 		{
 			get
@@ -18,8 +18,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x170075A3 RID: 30115
-		// (get) Token: 0x0602E10C RID: 188684 RVA: 0x00A9E923 File Offset: 0x00A9CB23
+		// Token: 0x1700485A RID: 18522
+		// (get) Token: 0x060227F7 RID: 141303 RVA: 0x009CABEB File Offset: 0x009C8DEB
 		public float PassTime
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x170075A4 RID: 30116
-		// (get) Token: 0x0602E10D RID: 188685 RVA: 0x00A9E92B File Offset: 0x00A9CB2B
+		// Token: 0x1700485B RID: 18523
+		// (get) Token: 0x060227F8 RID: 141304 RVA: 0x009CABF3 File Offset: 0x009C8DF3
 		public float TotalPassTime
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x170075A5 RID: 30117
-		// (get) Token: 0x0602E10E RID: 188686 RVA: 0x00A9E933 File Offset: 0x00A9CB33
+		// Token: 0x1700485C RID: 18524
+		// (get) Token: 0x060227F9 RID: 141305 RVA: 0x009CABFB File Offset: 0x009C8DFB
 		public EControllerState State
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x170075A6 RID: 30118
-		// (get) Token: 0x0602E10F RID: 188687 RVA: 0x00A9E93B File Offset: 0x00A9CB3B
+		// Token: 0x1700485D RID: 18525
+		// (get) Token: 0x060227FA RID: 141306 RVA: 0x009CAC03 File Offset: 0x009C8E03
 		public bool IsFinish
 		{
 			get
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x170075A7 RID: 30119
-		// (get) Token: 0x0602E110 RID: 188688 RVA: 0x00A9E946 File Offset: 0x00A9CB46
+		// Token: 0x1700485E RID: 18526
+		// (get) Token: 0x060227FB RID: 141307 RVA: 0x009CAC0E File Offset: 0x009C8E0E
 		public EEffectLifeTimeType Type
 		{
 			get
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E111 RID: 188689 RVA: 0x00A9E94E File Offset: 0x00A9CB4E
+		// Token: 0x060227FC RID: 141308 RVA: 0x009CAC16 File Offset: 0x009C8E16
 		public void SetPassTimeManual(float target, float? speed = null)
 		{
 			this.ManualTarget = target;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E112 RID: 188690 RVA: 0x00A9E970 File Offset: 0x00A9CB70
+		// Token: 0x060227FD RID: 141309 RVA: 0x009CAC38 File Offset: 0x009C8E38
 		public EffectLifeTimeController(float startTime, float loopTime, float endTime, EEffectLifeTimeType type, Action finishCallback = null, Func<bool> readyToFinish = null, float defaultManualTime = 0f, float defaultManualSpeed = 1f)
 		{
 			this.StateInternal = EControllerState.Constructor;
@@ -96,21 +96,21 @@ namespace CSharpScript.Game.Render
 			this.ReInit(startTime, loopTime, endTime);
 		}
 
-		// Token: 0x0602E113 RID: 188691 RVA: 0x00A9E9E9 File Offset: 0x00A9CBE9
+		// Token: 0x060227FE RID: 141310 RVA: 0x009CACB1 File Offset: 0x009C8EB1
 		public void Reset()
 		{
 			this.PassTimeInternal = this.DefaultPassTime;
 			this.TotalPassTimeInternal = 0f;
 		}
 
-		// Token: 0x0602E114 RID: 188692 RVA: 0x00A9EA02 File Offset: 0x00A9CC02
+		// Token: 0x060227FF RID: 141311 RVA: 0x009CACCA File Offset: 0x009C8ECA
 		public void JumpToEnd()
 		{
 			this.PassTimeInternal = this.LifeTimeStamp;
 			this.TotalPassTimeInternal = this.LifeTimeStamp;
 		}
 
-		// Token: 0x0602E115 RID: 188693 RVA: 0x00A9EA1C File Offset: 0x00A9CC1C
+		// Token: 0x06022800 RID: 141312 RVA: 0x009CACE4 File Offset: 0x009C8EE4
 		public void ReInit(float startTime, float loopTime, float endTime)
 		{
 			this.StartTimeInternal = startTime;
@@ -121,39 +121,39 @@ namespace CSharpScript.Game.Render
 			this.CalcLoopBehavior();
 		}
 
-		// Token: 0x0602E116 RID: 188694 RVA: 0x00A9EA4D File Offset: 0x00A9CC4D
+		// Token: 0x06022801 RID: 141313 RVA: 0x009CAD15 File Offset: 0x009C8F15
 		public void SetType(EEffectLifeTimeType type)
 		{
 			this.TypeInternal = type;
 			this.CalcLoopBehavior();
 		}
 
-		// Token: 0x0602E117 RID: 188695 RVA: 0x00A9EA5C File Offset: 0x00A9CC5C
+		// Token: 0x06022802 RID: 141314 RVA: 0x009CAD24 File Offset: 0x009C8F24
 		public bool LifeTimeCheck(float deltaSecond)
 		{
 			return false;
 		}
 
-		// Token: 0x0602E118 RID: 188696 RVA: 0x00A9EA60 File Offset: 0x00A9CC60
+		// Token: 0x06022803 RID: 141315 RVA: 0x009CAD28 File Offset: 0x009C8F28
 		public void CalcLoopBehavior()
 		{
 			this.WillLoop = (this.TypeInternal == EEffectLifeTimeType.AlwaysLoop || (this.TypeInternal == EEffectLifeTimeType.Auto && this.LoopTimeInternal > 0f));
 			this.WillEverPlay = (this.WillLoop || (this.TypeInternal == EEffectLifeTimeType.Auto && this.LifeTimeStamp <= 0f) || this.TypeInternal == EEffectLifeTimeType.Manual);
 		}
 
-		// Token: 0x0602E119 RID: 188697 RVA: 0x00A9EAC6 File Offset: 0x00A9CCC6
+		// Token: 0x06022804 RID: 141316 RVA: 0x009CAD8E File Offset: 0x009C8F8E
 		public void SetStateBuild()
 		{
 			this.StateInternal = EControllerState.Build;
 		}
 
-		// Token: 0x0602E11A RID: 188698 RVA: 0x00A9EACF File Offset: 0x00A9CCCF
+		// Token: 0x06022805 RID: 141317 RVA: 0x009CAD97 File Offset: 0x009C8F97
 		public void SetStateInit()
 		{
 			this.StateInternal = EControllerState.Init;
 		}
 
-		// Token: 0x0602E11B RID: 188699 RVA: 0x00A9EAD8 File Offset: 0x00A9CCD8
+		// Token: 0x06022806 RID: 141318 RVA: 0x009CADA0 File Offset: 0x009C8FA0
 		public void Play()
 		{
 			if (this.StateInternal < EControllerState.Constructor)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Render
 			this.TotalPassTimeInternal = 0f;
 		}
 
-		// Token: 0x0602E11C RID: 188700 RVA: 0x00A9EB04 File Offset: 0x00A9CD04
+		// Token: 0x06022807 RID: 141319 RVA: 0x009CADCC File Offset: 0x009C8FCC
 		public void Update(float deltaSecond)
 		{
 			this.TotalPassTimeInternal += deltaSecond;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Render
 			this.SeekTo(this.PassTimeInternal + num * (float)Math.Sign(this.ManualTarget - this.PassTimeInternal), false);
 		}
 
-		// Token: 0x0602E11D RID: 188701 RVA: 0x00A9EB8C File Offset: 0x00A9CD8C
+		// Token: 0x06022808 RID: 141320 RVA: 0x009CAE54 File Offset: 0x009C9054
 		public void SeekTo(float time, bool triggerFinish = false)
 		{
 			this.PassTimeInternal = time;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E11E RID: 188702 RVA: 0x00A9EBF8 File Offset: 0x00A9CDF8
+		// Token: 0x06022809 RID: 141321 RVA: 0x009CAEC0 File Offset: 0x009C90C0
 		private void MakeLoop()
 		{
 			if (this.LoopTimeInternal <= 0.01f)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Render
 			this.PassTimeInternal -= this.LoopTimeInternal;
 		}
 
-		// Token: 0x0602E11F RID: 188703 RVA: 0x00A9EC6B File Offset: 0x00A9CE6B
+		// Token: 0x0602280A RID: 141322 RVA: 0x009CAF33 File Offset: 0x009C9133
 		public void Stop(bool immediately = false)
 		{
 			if (this.StateInternal >= EControllerState.Stopping)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E120 RID: 188704 RVA: 0x00A9EC8D File Offset: 0x00A9CE8D
+		// Token: 0x0602280B RID: 141323 RVA: 0x009CAF55 File Offset: 0x009C9155
 		protected void PrepareFinish()
 		{
 			if (this.ReadyToFinish != null && !this.ReadyToFinish())
@@ -244,58 +244,58 @@ namespace CSharpScript.Game.Render
 			finishCallback();
 		}
 
-		// Token: 0x0602E121 RID: 188705 RVA: 0x00A9ECBC File Offset: 0x00A9CEBC
+		// Token: 0x0602280C RID: 141324 RVA: 0x009CAF84 File Offset: 0x009C9184
 		public void SetStateFinish()
 		{
 			this.StateInternal = EControllerState.Finished;
 		}
 
-		// Token: 0x04018AEC RID: 101100
+		// Token: 0x04013127 RID: 78119
 		protected EEffectLifeTimeType TypeInternal;
 
-		// Token: 0x04018AED RID: 101101
+		// Token: 0x04013128 RID: 78120
 		protected float DefaultPassTime;
 
-		// Token: 0x04018AEE RID: 101102
+		// Token: 0x04013129 RID: 78121
 		protected float PassTimeInternal;
 
-		// Token: 0x04018AEF RID: 101103
+		// Token: 0x0401312A RID: 78122
 		protected float TotalPassTimeInternal;
 
-		// Token: 0x04018AF0 RID: 101104
+		// Token: 0x0401312B RID: 78123
 		protected float StartTimeInternal = -1f;
 
-		// Token: 0x04018AF1 RID: 101105
+		// Token: 0x0401312C RID: 78124
 		protected float LoopTimeInternal;
 
-		// Token: 0x04018AF2 RID: 101106
+		// Token: 0x0401312D RID: 78125
 		protected float EndTimeInternal;
 
-		// Token: 0x04018AF3 RID: 101107
+		// Token: 0x0401312E RID: 78126
 		protected float LoopTimeStamp;
 
-		// Token: 0x04018AF4 RID: 101108
+		// Token: 0x0401312F RID: 78127
 		protected float LifeTimeStamp;
 
-		// Token: 0x04018AF5 RID: 101109
+		// Token: 0x04013130 RID: 78128
 		protected EControllerState StateInternal;
 
-		// Token: 0x04018AF6 RID: 101110
+		// Token: 0x04013131 RID: 78129
 		protected Func<bool> ReadyToFinish;
 
-		// Token: 0x04018AF7 RID: 101111
+		// Token: 0x04013132 RID: 78130
 		protected Action FinishCallback;
 
-		// Token: 0x04018AF8 RID: 101112
+		// Token: 0x04013133 RID: 78131
 		protected float ManualTarget;
 
-		// Token: 0x04018AF9 RID: 101113
+		// Token: 0x04013134 RID: 78132
 		protected float ManualSpeed;
 
-		// Token: 0x04018AFA RID: 101114
+		// Token: 0x04013135 RID: 78133
 		public bool WillLoop;
 
-		// Token: 0x04018AFB RID: 101115
+		// Token: 0x04013136 RID: 78134
 		public bool WillEverPlay;
 	}
 }

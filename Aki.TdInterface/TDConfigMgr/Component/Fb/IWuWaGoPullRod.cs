@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E09 RID: 3593
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F05 RID: 3845
 	public class IWuWaGoPullRod : IWuWaGoEntityBase
 	{
-		// Token: 0x06005156 RID: 20822 RVA: 0x000C8AB1 File Offset: 0x000C6CB1
+		// Token: 0x0600567D RID: 22141 RVA: 0x000D4379 File Offset: 0x000D2579
 		public static IWuWaGoPullRod Create(IWuWaGoPullRod? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B01 RID: 6913
-		// (get) Token: 0x06005157 RID: 20823 RVA: 0x000C8AD0 File Offset: 0x000C6CD0
+		// Token: 0x17001C6E RID: 7278
+		// (get) Token: 0x0600567E RID: 22142 RVA: 0x000D4398 File Offset: 0x000D2598
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B02 RID: 6914
-		// (get) Token: 0x06005158 RID: 20824 RVA: 0x000C8AE0 File Offset: 0x000C6CE0
+		// Token: 0x17001C6F RID: 7279
+		// (get) Token: 0x0600567F RID: 22143 RVA: 0x000D43A8 File Offset: 0x000D25A8
 		public virtual List<IWuWaGoInteractStateAction> InteractConfig
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002ED2 RID: 11986
+		// Token: 0x0400319A RID: 12698
 		private IWuWaGoPullRod Instance;
 
-		// Token: 0x04002ED3 RID: 11987
+		// Token: 0x0400319B RID: 12699
 		private List<IWuWaGoInteractStateAction> _InteractConfigCache;
 
-		// Token: 0x04002ED4 RID: 11988
+		// Token: 0x0400319C RID: 12700
 		private bool _InteractConfigInited;
 	}
 }

@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 {
-	// Token: 0x02005181 RID: 20865
+	// Token: 0x02004151 RID: 16721
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaDeckDetailView : UiViewBase
 	{
-		// Token: 0x060355E1 RID: 218593 RVA: 0x00CA4242 File Offset: 0x00CA2442
+		// Token: 0x0602A4DC RID: 173276 RVA: 0x00BF17FA File Offset: 0x00BEF9FA
 		public PhantomArenaDeckDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060355E2 RID: 218594 RVA: 0x00CA424C File Offset: 0x00CA244C
+		// Token: 0x0602A4DD RID: 173277 RVA: 0x00BF1804 File Offset: 0x00BEFA04
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			};
 		}
 
-		// Token: 0x060355E3 RID: 218595 RVA: 0x00CA4420 File Offset: 0x00CA2620
+		// Token: 0x0602A4DE RID: 173278 RVA: 0x00BF19D8 File Offset: 0x00BEFBD8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaDeckDetailView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060355E4 RID: 218596 RVA: 0x00CA4463 File Offset: 0x00CA2663
+		// Token: 0x0602A4DF RID: 173279 RVA: 0x00BF1A1B File Offset: 0x00BEFC1B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnPhantomArenaCardUnlock, new Action<int>(this.OnPhantomArenaCardUnlock));
 		}
 
-		// Token: 0x060355E5 RID: 218597 RVA: 0x00CA4481 File Offset: 0x00CA2681
+		// Token: 0x0602A4E0 RID: 173280 RVA: 0x00BF1A39 File Offset: 0x00BEFC39
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaCardUnlock, new Action<int>(this.OnPhantomArenaCardUnlock));
 		}
 
-		// Token: 0x060355E6 RID: 218598 RVA: 0x00CA44A0 File Offset: 0x00CA26A0
+		// Token: 0x0602A4E1 RID: 173281 RVA: 0x00BF1A58 File Offset: 0x00BEFC58
 		public void RefreshDeckSlotsPanel()
 		{
 			bool isNeedFieldCard = PhantomArenaModel.Instance.IsNewPhantomArenaActivity(this.Data.ActivityId);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			deckSlotsPanel.RefreshByData(data);
 		}
 
-		// Token: 0x060355E7 RID: 218599 RVA: 0x00CA45A0 File Offset: 0x00CA27A0
+		// Token: 0x0602A4E2 RID: 173282 RVA: 0x00BF1B58 File Offset: 0x00BEFD58
 		public void SelectFirstCardSlot()
 		{
 			if (this.SelectCoreCardSlot())
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			this.SelectNormalCardSlotByIndex(0);
 		}
 
-		// Token: 0x060355E8 RID: 218600 RVA: 0x00CA45B2 File Offset: 0x00CA27B2
+		// Token: 0x0602A4E3 RID: 173283 RVA: 0x00BF1B6A File Offset: 0x00BEFD6A
 		public bool SelectFieldCardSlot()
 		{
 			if (!this.DeckSlotsPanel.SelectFieldCardSlot())
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			return true;
 		}
 
-		// Token: 0x060355E9 RID: 218601 RVA: 0x00CA45E5 File Offset: 0x00CA27E5
+		// Token: 0x0602A4E4 RID: 173284 RVA: 0x00BF1B9D File Offset: 0x00BEFD9D
 		public bool SelectCoreCardSlot()
 		{
 			if (!this.DeckSlotsPanel.SelectCoreCardSlot())
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			return true;
 		}
 
-		// Token: 0x060355EA RID: 218602 RVA: 0x00CA4618 File Offset: 0x00CA2818
+		// Token: 0x0602A4E5 RID: 173285 RVA: 0x00BF1BD0 File Offset: 0x00BEFDD0
 		public void SelectNormalCardSlotByIndex(int index)
 		{
 			this.DeckSlotsPanel.SelectNormalCardSlotByIndex(index);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			this.RefreshCardDetail();
 		}
 
-		// Token: 0x060355EB RID: 218603 RVA: 0x00CA4648 File Offset: 0x00CA2848
+		// Token: 0x0602A4E6 RID: 173286 RVA: 0x00BF1C00 File Offset: 0x00BEFE00
 		public void RefreshCardDetail()
 		{
 			int value = this.Data.CurCardId.Value;
@@ -196,13 +196,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			this.EntryDescLayoutItem.Refresh(list);
 		}
 
-		// Token: 0x060355EC RID: 218604 RVA: 0x00CA485E File Offset: 0x00CA2A5E
+		// Token: 0x0602A4E7 RID: 173287 RVA: 0x00BF1E16 File Offset: 0x00BF0016
 		protected bool IsCardUnlock(int cardId)
 		{
 			return !this.Data.ShowLocked || PhantomArenaModel.Instance.IsCardUnlock(cardId);
 		}
 
-		// Token: 0x060355ED RID: 218605 RVA: 0x00CA487C File Offset: 0x00CA2A7C
+		// Token: 0x0602A4E8 RID: 173288 RVA: 0x00BF1E34 File Offset: 0x00BF0034
 		protected void RefreshDetailLockState()
 		{
 			UpdateCardDetailLockStateContext context = new UpdateCardDetailLockStateContext
@@ -218,13 +218,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			PhantomArenaController.Instance.UpdateCardDetailLockState(context);
 		}
 
-		// Token: 0x060355EE RID: 218606 RVA: 0x00CA490F File Offset: 0x00CA2B0F
+		// Token: 0x0602A4E9 RID: 173289 RVA: 0x00BF1EC7 File Offset: 0x00BF00C7
 		protected void RefreshCardItemLockState()
 		{
 			this.CardItem.RefreshIsLocked();
 		}
 
-		// Token: 0x060355EF RID: 218607 RVA: 0x00CA491C File Offset: 0x00CA2B1C
+		// Token: 0x0602A4EA RID: 173290 RVA: 0x00BF1ED4 File Offset: 0x00BF00D4
 		public void RefreshLockState()
 		{
 			int? curCardId = this.Data.CurCardId;
@@ -239,13 +239,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			this.RefreshDeckSlotsPanel();
 		}
 
-		// Token: 0x060355F0 RID: 218608 RVA: 0x00CA4994 File Offset: 0x00CA2B94
+		// Token: 0x0602A4EB RID: 173291 RVA: 0x00BF1F4C File Offset: 0x00BF014C
 		private void OnUnlockCardBtnClick(int _)
 		{
 			PhantomArenaController.Instance.CardUnlockRequest(this.Data.CurCardId.Value, null);
 		}
 
-		// Token: 0x060355F1 RID: 218609 RVA: 0x00CA49BF File Offset: 0x00CA2BBF
+		// Token: 0x0602A4EC RID: 173292 RVA: 0x00BF1F77 File Offset: 0x00BF0177
 		private void OnCoreSlotItemToggleStateChange(DeckBuilderCardSlotItem item, EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -254,13 +254,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			}
 		}
 
-		// Token: 0x060355F2 RID: 218610 RVA: 0x00CA49CC File Offset: 0x00CA2BCC
+		// Token: 0x0602A4ED RID: 173293 RVA: 0x00BF1F84 File Offset: 0x00BF0184
 		private bool CanCoreSlotItemToggleChange(DeckBuilderCardSlotItem item)
 		{
 			return true;
 		}
 
-		// Token: 0x060355F3 RID: 218611 RVA: 0x00CA49CF File Offset: 0x00CA2BCF
+		// Token: 0x0602A4EE RID: 173294 RVA: 0x00BF1F87 File Offset: 0x00BF0187
 		private void OnFieldSlotItemToggleStateChange(DeckBuilderCardSlotItem item, EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -269,13 +269,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			}
 		}
 
-		// Token: 0x060355F4 RID: 218612 RVA: 0x00CA49DC File Offset: 0x00CA2BDC
+		// Token: 0x0602A4EF RID: 173295 RVA: 0x00BF1F94 File Offset: 0x00BF0194
 		private bool CanFieldSlotItemToggleChange(DeckBuilderCardSlotItem item)
 		{
 			return true;
 		}
 
-		// Token: 0x060355F5 RID: 218613 RVA: 0x00CA49DF File Offset: 0x00CA2BDF
+		// Token: 0x0602A4F0 RID: 173296 RVA: 0x00BF1F97 File Offset: 0x00BF0197
 		private void OnNormalSlotItemToggleStateChange(DeckBuilderCardSlotItem item, EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -284,19 +284,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			}
 		}
 
-		// Token: 0x060355F6 RID: 218614 RVA: 0x00CA49F1 File Offset: 0x00CA2BF1
+		// Token: 0x0602A4F1 RID: 173297 RVA: 0x00BF1FA9 File Offset: 0x00BF01A9
 		private bool CanNormalSlotItemToggleChange(DeckBuilderCardSlotItem item)
 		{
 			return true;
 		}
 
-		// Token: 0x060355F7 RID: 218615 RVA: 0x00CA49F4 File Offset: 0x00CA2BF4
+		// Token: 0x0602A4F2 RID: 173298 RVA: 0x00BF1FAC File Offset: 0x00BF01AC
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060355F8 RID: 218616 RVA: 0x00CA4A00 File Offset: 0x00CA2C00
+		// Token: 0x0602A4F3 RID: 173299 RVA: 0x00BF1FB8 File Offset: 0x00BF01B8
 		private void OnConfirmBtnClick(int _)
 		{
 			bool flag = false;
@@ -332,13 +332,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			PhantomArenaController.Instance.OpenPhantomArenaConfirmBoxView(confirmBoxDataNew, isNew);
 		}
 
-		// Token: 0x060355F9 RID: 218617 RVA: 0x00CA4B58 File Offset: 0x00CA2D58
+		// Token: 0x0602A4F4 RID: 173300 RVA: 0x00BF2110 File Offset: 0x00BF0310
 		private void OnPhantomArenaCardUnlock(int cardId)
 		{
 			this.RefreshLockState();
 		}
 
-		// Token: 0x060355FA RID: 218618 RVA: 0x00CA4B60 File Offset: 0x00CA2D60
+		// Token: 0x0602A4F5 RID: 173301 RVA: 0x00BF2118 File Offset: 0x00BF0318
 		public void ShowEntry()
 		{
 			if (this.IsEntryShow)
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			this.RefreshEntryShowState();
 		}
 
-		// Token: 0x060355FB RID: 218619 RVA: 0x00CA4BA4 File Offset: 0x00CA2DA4
+		// Token: 0x0602A4F6 RID: 173302 RVA: 0x00BF215C File Offset: 0x00BF035C
 		public void HideEntry()
 		{
 			if (!this.IsEntryShow)
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			tipLevelSequencePlayer.PlayOrReplaySequenceByName("TipsHide", false, null);
 		}
 
-		// Token: 0x060355FC RID: 218620 RVA: 0x00CA4BE0 File Offset: 0x00CA2DE0
+		// Token: 0x0602A4F7 RID: 173303 RVA: 0x00BF2198 File Offset: 0x00BF0398
 		public void RefreshEntryShowState()
 		{
 			base.GetItem(4).SetUIActive(this.IsEntryShow);
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			base.GetItem(11).SetUIActive(this.IsEntryShow);
 		}
 
-		// Token: 0x060355FD RID: 218621 RVA: 0x00CA4C1A File Offset: 0x00CA2E1A
+		// Token: 0x0602A4F8 RID: 173304 RVA: 0x00BF21D2 File Offset: 0x00BF03D2
 		private void OnSeqEnd(string seqName)
 		{
 			if (seqName == "TipsHide".ToString())
@@ -387,115 +387,115 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 			}
 		}
 
-		// Token: 0x060355FE RID: 218622 RVA: 0x00CA4C34 File Offset: 0x00CA2E34
+		// Token: 0x0602A4F9 RID: 173305 RVA: 0x00BF21EC File Offset: 0x00BF03EC
 		private void ShowMaskButton()
 		{
 			base.GetButton(16).RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x060355FF RID: 218623 RVA: 0x00CA4C5C File Offset: 0x00CA2E5C
+		// Token: 0x0602A4FA RID: 173306 RVA: 0x00BF2214 File Offset: 0x00BF0414
 		private void HideMaskButton()
 		{
 			base.GetButton(16).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06035600 RID: 218624 RVA: 0x00CA4C84 File Offset: 0x00CA2E84
+		// Token: 0x0602A4FB RID: 173307 RVA: 0x00BF223C File Offset: 0x00BF043C
 		private void OnCardDescBtnClick()
 		{
 			this.ShowEntry();
 			this.ShowMaskButton();
 		}
 
-		// Token: 0x06035601 RID: 218625 RVA: 0x00CA4C92 File Offset: 0x00CA2E92
+		// Token: 0x0602A4FC RID: 173308 RVA: 0x00BF224A File Offset: 0x00BF044A
 		private void OnMaskBtnClick()
 		{
 			this.HideEntry();
 			this.HideMaskButton();
 		}
 
-		// Token: 0x0401C5DB RID: 116187
+		// Token: 0x04017010 RID: 94224
 		private IPhantomArenaDeckDetailViewData Data;
 
-		// Token: 0x0401C5DC RID: 116188
+		// Token: 0x04017011 RID: 94225
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401C5DD RID: 116189
+		// Token: 0x04017012 RID: 94226
 		private DetailViewCardItem CardItem;
 
-		// Token: 0x0401C5DE RID: 116190
+		// Token: 0x04017013 RID: 94227
 		private CardDetailItem DetailItem;
 
-		// Token: 0x0401C5DF RID: 116191
+		// Token: 0x04017014 RID: 94228
 		private CardDetailEntryDescLayoutItem EntryDescLayoutItem;
 
-		// Token: 0x0401C5E0 RID: 116192
+		// Token: 0x04017015 RID: 94229
 		private DeckBuilderDeckSlotsPanel DeckSlotsPanel;
 
-		// Token: 0x0401C5E1 RID: 116193
+		// Token: 0x04017016 RID: 94230
 		private ButtonItem UnlockBtnItem;
 
-		// Token: 0x0401C5E2 RID: 116194
+		// Token: 0x04017017 RID: 94231
 		private ButtonItem ConfirmBtnItem;
 
-		// Token: 0x0401C5E3 RID: 116195
+		// Token: 0x04017018 RID: 94232
 		private LevelSequencePlayer TipLevelSequencePlayer;
 
-		// Token: 0x0401C5E4 RID: 116196
+		// Token: 0x04017019 RID: 94233
 		private bool IsEntryShow;
 
-		// Token: 0x0200B2F4 RID: 45812
+		// Token: 0x02009D2D RID: 40237
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040363BD RID: 222141
+			// Token: 0x04030E12 RID: 200210
 			public const int CaptionItem = 0;
 
-			// Token: 0x040363BE RID: 222142
+			// Token: 0x04030E13 RID: 200211
 			public const int DeckSlotsPanelItem = 1;
 
-			// Token: 0x040363BF RID: 222143
+			// Token: 0x04030E14 RID: 200212
 			public const int CardItem = 2;
 
-			// Token: 0x040363C0 RID: 222144
+			// Token: 0x04030E15 RID: 200213
 			public const int DetailItem = 3;
 
-			// Token: 0x040363C1 RID: 222145
+			// Token: 0x04030E16 RID: 200214
 			public const int EntryRootItem = 4;
 
-			// Token: 0x040363C2 RID: 222146
+			// Token: 0x04030E17 RID: 200215
 			public const int EntryDescLayout = 5;
 
-			// Token: 0x040363C3 RID: 222147
+			// Token: 0x04030E18 RID: 200216
 			public const int EntryDescLayoutItem = 6;
 
-			// Token: 0x040363C4 RID: 222148
+			// Token: 0x04030E19 RID: 200217
 			public const int UnlockBtnItem = 7;
 
-			// Token: 0x040363C5 RID: 222149
+			// Token: 0x04030E1A RID: 200218
 			public const int ConfirmBtnItem = 8;
 
-			// Token: 0x040363C6 RID: 222150
+			// Token: 0x04030E1B RID: 200219
 			public const int TipText = 9;
 
-			// Token: 0x040363C7 RID: 222151
+			// Token: 0x04030E1C RID: 200220
 			public const int EntryBgItem = 10;
 
-			// Token: 0x040363C8 RID: 222152
+			// Token: 0x04030E1D RID: 200221
 			public const int EntryLineItem = 11;
 
-			// Token: 0x040363C9 RID: 222153
+			// Token: 0x04030E1E RID: 200222
 			public const int CardDescBtn = 12;
 
-			// Token: 0x040363CA RID: 222154
+			// Token: 0x04030E1F RID: 200223
 			public const int CardAndDetailRootItem = 13;
 
-			// Token: 0x040363CB RID: 222155
+			// Token: 0x04030E20 RID: 200224
 			public const int LockTipItem = 14;
 
-			// Token: 0x040363CC RID: 222156
+			// Token: 0x04030E21 RID: 200225
 			public const int LockTipText = 15;
 
-			// Token: 0x040363CD RID: 222157
+			// Token: 0x04030E22 RID: 200226
 			public const int MaskButton = 16;
 		}
 	}

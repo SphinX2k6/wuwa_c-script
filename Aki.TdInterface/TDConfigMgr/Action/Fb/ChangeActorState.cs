@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025BC RID: 9660
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200286B RID: 10347
 	public class ChangeActorState : ActionParams
 	{
-		// Token: 0x0600D949 RID: 55625 RVA: 0x00206A98 File Offset: 0x00204C98
+		// Token: 0x0600E6C3 RID: 59075 RVA: 0x0022276C File Offset: 0x0022096C
 		public static ChangeActorState Create(IChangeActorState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F93 RID: 16275
-		// (get) Token: 0x0600D94A RID: 55626 RVA: 0x00206AB7 File Offset: 0x00204CB7
+		// Token: 0x1700429B RID: 17051
+		// (get) Token: 0x0600E6C4 RID: 59076 RVA: 0x0022278B File Offset: 0x0022098B
 		public virtual string State
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078B2 RID: 30898
+		// Token: 0x04007F19 RID: 32537
 		private IChangeActorState Instance;
 	}
 }

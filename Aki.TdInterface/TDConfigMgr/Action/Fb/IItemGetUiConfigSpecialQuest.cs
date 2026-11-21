@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200263B RID: 9787
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020028FB RID: 10491
 	public class IItemGetUiConfigSpecialQuest : IItemGetUiConfigBase
 	{
-		// Token: 0x0600DB9D RID: 56221 RVA: 0x0020B0A9 File Offset: 0x002092A9
-		[NullableContext(1)]
+		// Token: 0x0600E96B RID: 59755 RVA: 0x00227875 File Offset: 0x00225A75
 		public static IItemGetUiConfigSpecialQuest Create(IItemGetUiConfigSpecialQuest? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040E9 RID: 16617
-		// (get) Token: 0x0600DB9E RID: 56222 RVA: 0x0020B0C8 File Offset: 0x002092C8
+		// Token: 0x17004423 RID: 17443
+		// (get) Token: 0x0600E96C RID: 59756 RVA: 0x00227894 File Offset: 0x00225A94
 		public override EItemGetUiType Type
 		{
 			get
@@ -33,18 +30,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040EA RID: 16618
-		// (get) Token: 0x0600DB9F RID: 56223 RVA: 0x0020B0D5 File Offset: 0x002092D5
+		// Token: 0x17004424 RID: 17444
+		// (get) Token: 0x0600E96D RID: 59757 RVA: 0x002278A1 File Offset: 0x00225AA1
+		[Nullable(2)]
 		public virtual string Title
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.Title;
 			}
 		}
 
-		// Token: 0x170040EB RID: 16619
-		// (get) Token: 0x0600DBA0 RID: 56224 RVA: 0x0020B0E4 File Offset: 0x002092E4
+		// Token: 0x17004425 RID: 17445
+		// (get) Token: 0x0600E96E RID: 59758 RVA: 0x002278B0 File Offset: 0x00225AB0
 		public virtual bool? ShowDetail
 		{
 			get
@@ -57,7 +56,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A0B RID: 31243
+		// Token: 0x040080A7 RID: 32935
 		private IItemGetUiConfigSpecialQuest Instance;
 	}
 }

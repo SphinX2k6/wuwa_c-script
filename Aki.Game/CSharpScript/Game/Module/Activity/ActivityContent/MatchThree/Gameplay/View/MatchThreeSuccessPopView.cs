@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E5 RID: 25829
+	// Token: 0x02005463 RID: 21603
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MatchThreeSuccessPopView : UiViewBase
 	{
-		// Token: 0x06040D67 RID: 265575 RVA: 0x00FB4AF5 File Offset: 0x00FB2CF5
+		// Token: 0x06035A2B RID: 219691 RVA: 0x00EFBB25 File Offset: 0x00EF9D25
 		[NullableContext(1)]
 		public MatchThreeSuccessPopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06040D68 RID: 265576 RVA: 0x00FB4B00 File Offset: 0x00FB2D00
+		// Token: 0x06035A2C RID: 219692 RVA: 0x00EFBB30 File Offset: 0x00EF9D30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040D69 RID: 265577 RVA: 0x00FB4CB4 File Offset: 0x00FB2EB4
+		// Token: 0x06035A2D RID: 219693 RVA: 0x00EFBCE4 File Offset: 0x00EF9EE4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreeSuccessPopView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040D6A RID: 265578 RVA: 0x00FB4CF8 File Offset: 0x00FB2EF8
+		// Token: 0x06035A2E RID: 219694 RVA: 0x00EFBD28 File Offset: 0x00EF9F28
 		protected override void OnStart()
 		{
 			MatchThreeSuccessPopParams parameters = this.Parameters;
@@ -130,21 +130,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			instance.TrySetLocalTextNew(text2, textStringId, new <>z__ReadOnlySingleElementList<object>((parameters3 != null) ? parameters3.Score : 0));
 		}
 
-		// Token: 0x06040D6B RID: 265579 RVA: 0x00FB4E17 File Offset: 0x00FB3017
+		// Token: 0x06035A2F RID: 219695 RVA: 0x00EFBE47 File Offset: 0x00EFA047
 		protected override void OnBeforeDestroy()
 		{
 			this.RewardLayout = null;
 			this.Parameters = null;
 		}
 
-		// Token: 0x06040D6C RID: 265580 RVA: 0x00FB4E27 File Offset: 0x00FB3027
+		// Token: 0x06035A30 RID: 219696 RVA: 0x00EFBE57 File Offset: 0x00EFA057
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06040D6D RID: 265581 RVA: 0x00FB4E2E File Offset: 0x00FB302E
+		// Token: 0x06035A31 RID: 219697 RVA: 0x00EFBE5E File Offset: 0x00EFA05E
 		private void OnClickExit()
 		{
 			if (this.ClickInProgress)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base.CloseMe(new Action<bool>(this.OnExitCloseFinished));
 		}
 
-		// Token: 0x06040D6E RID: 265582 RVA: 0x00FB4E6A File Offset: 0x00FB306A
+		// Token: 0x06035A32 RID: 219698 RVA: 0x00EFBE9A File Offset: 0x00EFA09A
 		private void OnExitCloseFinished(bool success)
 		{
 			if (!success)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			pendingExitCallback();
 		}
 
-		// Token: 0x06040D6F RID: 265583 RVA: 0x00FB4E8E File Offset: 0x00FB308E
+		// Token: 0x06035A33 RID: 219699 RVA: 0x00EFBEBE File Offset: 0x00EFA0BE
 		private void OnClickRetry()
 		{
 			if (!this.ClickInProgress)
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040D70 RID: 265584 RVA: 0x00FB4EC0 File Offset: 0x00FB30C0
+		// Token: 0x06035A34 RID: 219700 RVA: 0x00EFBEF0 File Offset: 0x00EFA0F0
 		private UniTask RetryAsync()
 		{
 			MatchThreeSuccessPopView.<RetryAsync>d__15 <RetryAsync>d__;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <RetryAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040D71 RID: 265585 RVA: 0x00FB4F03 File Offset: 0x00FB3103
+		// Token: 0x06035A35 RID: 219701 RVA: 0x00EFBF33 File Offset: 0x00EFA133
 		private void OnRetryCloseFinished(bool success)
 		{
 			if (!success)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			pendingRetryCallback();
 		}
 
-		// Token: 0x04021C77 RID: 138359
+		// Token: 0x0401C5A8 RID: 116136
 		[Nullable(new byte[]
 		{
 			2,
@@ -226,39 +226,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x04021C78 RID: 138360
+		// Token: 0x0401C5A9 RID: 116137
 		private MatchThreeSuccessPopParams Parameters;
 
-		// Token: 0x04021C79 RID: 138361
+		// Token: 0x0401C5AA RID: 116138
 		private Action PendingExitCallback;
 
-		// Token: 0x04021C7A RID: 138362
+		// Token: 0x0401C5AB RID: 116139
 		private Action PendingRetryCallback;
 
-		// Token: 0x04021C7B RID: 138363
+		// Token: 0x0401C5AC RID: 116140
 		private bool ClickInProgress;
 
-		// Token: 0x0200C724 RID: 50980
+		// Token: 0x0200B10A RID: 45322
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403C29A RID: 246426
+			// Token: 0x04036BF5 RID: 224245
 			PnlSuccess,
-			// Token: 0x0403C29B RID: 246427
+			// Token: 0x04036BF6 RID: 224246
 			PnlScore,
-			// Token: 0x0403C29C RID: 246428
+			// Token: 0x04036BF7 RID: 224247
 			TxtScore,
-			// Token: 0x0403C29D RID: 246429
+			// Token: 0x04036BF8 RID: 224248
 			TxtNewRecord,
-			// Token: 0x0403C29E RID: 246430
+			// Token: 0x04036BF9 RID: 224249
 			BtnExit,
-			// Token: 0x0403C29F RID: 246431
+			// Token: 0x04036BFA RID: 224250
 			BtnRetry,
-			// Token: 0x0403C2A0 RID: 246432
+			// Token: 0x04036BFB RID: 224251
 			PnlReward,
-			// Token: 0x0403C2A1 RID: 246433
+			// Token: 0x04036BFC RID: 224252
 			PnlRewardLayout,
-			// Token: 0x0403C2A2 RID: 246434
+			// Token: 0x04036BFD RID: 224253
 			RewardItemTemplate
 		}
 	}

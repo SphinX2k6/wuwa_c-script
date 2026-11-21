@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B7A RID: 7034
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D27 RID: 7463
 	public class ILifePoint : IUiGame
 	{
-		// Token: 0x0600969B RID: 38555 RVA: 0x0015BC48 File Offset: 0x00159E48
+		// Token: 0x06009E7D RID: 40573 RVA: 0x0016C7F4 File Offset: 0x0016A9F4
 		private ILifePoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600969C RID: 38556 RVA: 0x0015BC80 File Offset: 0x00159E80
+		// Token: 0x06009E7E RID: 40574 RVA: 0x0016C82C File Offset: 0x0016AA2C
 		public static ILifePoint Create([Nullable(2)] ILifePoint instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600969D RID: 38557 RVA: 0x0015BC93 File Offset: 0x00159E93
+		// Token: 0x06009E7F RID: 40575 RVA: 0x0016C83F File Offset: 0x0016AA3F
 		public static ILifePoint CreateFromSetValue([Nullable(2)] ILifePoint_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600969E RID: 38558 RVA: 0x0015BCA8 File Offset: 0x00159EA8
+		// Token: 0x06009E80 RID: 40576 RVA: 0x0016C854 File Offset: 0x0016AA54
 		public new ILifePoint_SetValue ToSetValue()
 		{
 			return new ILifePoint_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F6D RID: 12141
-		// (get) Token: 0x0600969F RID: 38559 RVA: 0x0015BD0E File Offset: 0x00159F0E
-		// (set) Token: 0x060096A0 RID: 38560 RVA: 0x0015BD39 File Offset: 0x00159F39
+		// Token: 0x17003192 RID: 12690
+		// (get) Token: 0x06009E81 RID: 40577 RVA: 0x0016C8BA File Offset: 0x0016AABA
+		// (set) Token: 0x06009E82 RID: 40578 RVA: 0x0016C8E5 File Offset: 0x0016AAE5
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F6E RID: 12142
-		// (get) Token: 0x060096A1 RID: 38561 RVA: 0x0015BD48 File Offset: 0x00159F48
-		// (set) Token: 0x060096A2 RID: 38562 RVA: 0x0015BDA9 File Offset: 0x00159FA9
+		// Token: 0x17003193 RID: 12691
+		// (get) Token: 0x06009E83 RID: 40579 RVA: 0x0016C8F4 File Offset: 0x0016AAF4
+		// (set) Token: 0x06009E84 RID: 40580 RVA: 0x0016C955 File Offset: 0x0016AB55
 		public virtual ILifePointColorBoard ColorBoard
 		{
 			get
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F6F RID: 12143
-		// (get) Token: 0x060096A3 RID: 38563 RVA: 0x0015BDBE File Offset: 0x00159FBE
-		// (set) Token: 0x060096A4 RID: 38564 RVA: 0x0015BDE9 File Offset: 0x00159FE9
+		// Token: 0x17003194 RID: 12692
+		// (get) Token: 0x06009E85 RID: 40581 RVA: 0x0016C96A File Offset: 0x0016AB6A
+		// (set) Token: 0x06009E86 RID: 40582 RVA: 0x0016C995 File Offset: 0x0016AB95
 		public virtual int StepLimit
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F70 RID: 12144
-		// (get) Token: 0x060096A5 RID: 38565 RVA: 0x0015BDF7 File Offset: 0x00159FF7
-		// (set) Token: 0x060096A6 RID: 38566 RVA: 0x0015BE22 File Offset: 0x0015A022
+		// Token: 0x17003195 RID: 12693
+		// (get) Token: 0x06009E87 RID: 40583 RVA: 0x0016C9A3 File Offset: 0x0016ABA3
+		// (set) Token: 0x06009E88 RID: 40584 RVA: 0x0016C9CE File Offset: 0x0016ABCE
 		public virtual string TidDesc
 		{
 			get
@@ -165,20 +163,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F71 RID: 12145
-		// (get) Token: 0x060096A7 RID: 38567 RVA: 0x0015BE30 File Offset: 0x0015A030
-		// (set) Token: 0x060096A8 RID: 38568 RVA: 0x0015BEC3 File Offset: 0x0015A0C3
+		// Token: 0x17003196 RID: 12694
+		// (get) Token: 0x06009E89 RID: 40585 RVA: 0x0016C9DC File Offset: 0x0016ABDC
+		// (set) Token: 0x06009E8A RID: 40586 RVA: 0x0016CA6F File Offset: 0x0016AC6F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ILifePointMaxStepRewardRuleItem> MaxStepRewardRule
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -209,7 +207,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -218,9 +216,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F72 RID: 12146
-		// (get) Token: 0x060096A9 RID: 38569 RVA: 0x0015BED8 File Offset: 0x0015A0D8
-		// (set) Token: 0x060096AA RID: 38570 RVA: 0x0015BF12 File Offset: 0x0015A112
+		// Token: 0x17003197 RID: 12695
+		// (get) Token: 0x06009E8B RID: 40587 RVA: 0x0016CA84 File Offset: 0x0016AC84
+		// (set) Token: 0x06009E8C RID: 40588 RVA: 0x0016CABE File Offset: 0x0016ACBE
 		public virtual bool? CloseUiAfterCompletion
 		{
 			get
@@ -242,9 +240,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F73 RID: 12147
-		// (get) Token: 0x060096AB RID: 38571 RVA: 0x0015BF20 File Offset: 0x0015A120
-		// (set) Token: 0x060096AC RID: 38572 RVA: 0x0015BF37 File Offset: 0x0015A137
+		// Token: 0x17003198 RID: 12696
+		// (get) Token: 0x06009E8D RID: 40589 RVA: 0x0016CACC File Offset: 0x0016ACCC
+		// (set) Token: 0x06009E8E RID: 40590 RVA: 0x0016CAE3 File Offset: 0x0016ACE3
 		[Nullable(2)]
 		public virtual string EdTidDesc
 		{
@@ -264,29 +262,29 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C0C RID: 23564
+		// Token: 0x040060A5 RID: 24741
 		[Nullable(2)]
 		protected new ILifePoint FbInstance;
 
-		// Token: 0x04005C0D RID: 23565
+		// Token: 0x040060A6 RID: 24742
 		[Nullable(2)]
 		protected new ILifePoint_SetValue PocoInterface;
 
-		// Token: 0x04005C0E RID: 23566
+		// Token: 0x040060A7 RID: 24743
 		private ILifePointColorBoard _ColorBoardCache;
 
-		// Token: 0x04005C0F RID: 23567
+		// Token: 0x040060A8 RID: 24744
 		private bool _ColorBoardInited;
 
-		// Token: 0x04005C10 RID: 23568
+		// Token: 0x040060A9 RID: 24745
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ILifePointMaxStepRewardRuleItem> _MaxStepRewardRuleCache;
 
-		// Token: 0x04005C11 RID: 23569
+		// Token: 0x040060AA RID: 24746
 		private bool _MaxStepRewardRuleInited;
 	}
 }

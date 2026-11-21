@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000889 RID: 2185
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200092C RID: 2348
 	public class SceneBulletComponent : IComponentBase
 	{
-		// Token: 0x060030B3 RID: 12467 RVA: 0x0007D540 File Offset: 0x0007B740
+		// Token: 0x060033EF RID: 13295 RVA: 0x00084A28 File Offset: 0x00082C28
 		private SceneBulletComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060030B4 RID: 12468 RVA: 0x0007D578 File Offset: 0x0007B778
+		// Token: 0x060033F0 RID: 13296 RVA: 0x00084A60 File Offset: 0x00082C60
 		public static SceneBulletComponent Create([Nullable(2)] SceneBulletComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030B5 RID: 12469 RVA: 0x0007D58B File Offset: 0x0007B78B
+		// Token: 0x060033F1 RID: 13297 RVA: 0x00084A73 File Offset: 0x00082C73
 		public static SceneBulletComponent CreateFromSetValue([Nullable(2)] SceneBulletComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030B6 RID: 12470 RVA: 0x0007D59E File Offset: 0x0007B79E
+		// Token: 0x060033F2 RID: 13298 RVA: 0x00084A86 File Offset: 0x00082C86
 		public new SceneBulletComponent_SetValue ToSetValue()
 		{
 			return new SceneBulletComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CEF RID: 3311
-		// (get) Token: 0x060030B7 RID: 12471 RVA: 0x0007D5D8 File Offset: 0x0007B7D8
-		// (set) Token: 0x060030B8 RID: 12472 RVA: 0x0007D612 File Offset: 0x0007B812
+		// Token: 0x17000DB8 RID: 3512
+		// (get) Token: 0x060033F3 RID: 13299 RVA: 0x00084AC0 File Offset: 0x00082CC0
+		// (set) Token: 0x060033F4 RID: 13300 RVA: 0x00084AFA File Offset: 0x00082CFA
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CF0 RID: 3312
-		// (get) Token: 0x060030B9 RID: 12473 RVA: 0x0007D620 File Offset: 0x0007B820
-		// (set) Token: 0x060030BA RID: 12474 RVA: 0x0007D64A File Offset: 0x0007B84A
+		// Token: 0x17000DB9 RID: 3513
+		// (get) Token: 0x060033F5 RID: 13301 RVA: 0x00084B08 File Offset: 0x00082D08
+		// (set) Token: 0x060033F6 RID: 13302 RVA: 0x00084B32 File Offset: 0x00082D32
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CF1 RID: 3313
-		// (get) Token: 0x060030BB RID: 12475 RVA: 0x0007D658 File Offset: 0x0007B858
-		// (set) Token: 0x060030BC RID: 12476 RVA: 0x0007D692 File Offset: 0x0007B892
+		// Token: 0x17000DBA RID: 3514
+		// (get) Token: 0x060033F7 RID: 13303 RVA: 0x00084B40 File Offset: 0x00082D40
+		// (set) Token: 0x060033F8 RID: 13304 RVA: 0x00084B7A File Offset: 0x00082D7A
 		public virtual bool? DisableGenerateByRange
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CF2 RID: 3314
-		// (get) Token: 0x060030BD RID: 12477 RVA: 0x0007D6A0 File Offset: 0x0007B8A0
-		// (set) Token: 0x060030BE RID: 12478 RVA: 0x0007D733 File Offset: 0x0007B933
+		// Token: 0x17000DBB RID: 3515
+		// (get) Token: 0x060033F9 RID: 13305 RVA: 0x00084B88 File Offset: 0x00082D88
+		// (set) Token: 0x060033FA RID: 13306 RVA: 0x00084C1B File Offset: 0x00082E1B
 		public virtual List<ISceneBulletGroup> BulletGroups
 		{
 			get
@@ -168,18 +166,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400200D RID: 8205
+		// Token: 0x0400221F RID: 8735
 		[Nullable(2)]
 		protected new SceneBulletComponent FbInstance;
 
-		// Token: 0x0400200E RID: 8206
+		// Token: 0x04002220 RID: 8736
 		[Nullable(2)]
 		protected new SceneBulletComponent_SetValue PocoInterface;
 
-		// Token: 0x0400200F RID: 8207
+		// Token: 0x04002221 RID: 8737
 		private List<ISceneBulletGroup> _BulletGroupsCache;
 
-		// Token: 0x04002010 RID: 8208
+		// Token: 0x04002222 RID: 8738
 		private bool _BulletGroupsInited;
 	}
 }

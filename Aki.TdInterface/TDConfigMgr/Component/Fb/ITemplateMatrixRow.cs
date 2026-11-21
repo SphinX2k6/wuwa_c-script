@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D88 RID: 3464
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E84 RID: 3716
 	public class ITemplateMatrixRow
 	{
-		// Token: 0x06004ECB RID: 20171 RVA: 0x000C35E1 File Offset: 0x000C17E1
+		// Token: 0x060053F0 RID: 21488 RVA: 0x000CEE31 File Offset: 0x000CD031
 		public static ITemplateMatrixRow Create(ITemplateMatrixRow? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001978 RID: 6520
-		// (get) Token: 0x06004ECC RID: 20172 RVA: 0x000C3600 File Offset: 0x000C1800
+		// Token: 0x17001AE3 RID: 6883
+		// (get) Token: 0x060053F1 RID: 21489 RVA: 0x000CEE50 File Offset: 0x000CD050
 		public virtual List<ISpawnTemplateEntityConfig> Items
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D3B RID: 11579
+		// Token: 0x04003001 RID: 12289
 		private ITemplateMatrixRow Instance;
 
-		// Token: 0x04002D3C RID: 11580
+		// Token: 0x04003002 RID: 12290
 		private List<ISpawnTemplateEntityConfig> _ItemsCache;
 
-		// Token: 0x04002D3D RID: 11581
+		// Token: 0x04003003 RID: 12291
 		private bool _ItemsInited;
 	}
 }

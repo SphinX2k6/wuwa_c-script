@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// Token: 0x02001B29 RID: 6953
+// Token: 0x02000FE8 RID: 4072
 public class FloroRanchEntityDefine : IStaticVariableResetter
 {
-	// Token: 0x0600CE42 RID: 52802 RVA: 0x002EF81E File Offset: 0x002EDA1E
+	// Token: 0x0600A253 RID: 41555 RVA: 0x002FA8FE File Offset: 0x002F8AFE
 	static FloroRanchEntityDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FloroRanchEntityDefine.CreateStaticDefaultValue), new Action(FloroRanchEntityDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600CE43 RID: 52803 RVA: 0x002EF83D File Offset: 0x002EDA3D
+	// Token: 0x0600A254 RID: 41556 RVA: 0x002FA91D File Offset: 0x002F8B1D
 	public static void CreateStaticDefaultValue()
 	{
 		FloroRanchEntityDefine.floroRanchEntityComponentDefine = null;
 	}
 
-	// Token: 0x0600CE44 RID: 52804 RVA: 0x002EF845 File Offset: 0x002EDA45
+	// Token: 0x0600A255 RID: 41557 RVA: 0x002FA925 File Offset: 0x002F8B25
 	public static void ResetStaticDefaultValue()
 	{
 		FloroRanchEntityDefine.floroRanchEntityComponentDefine = null;
 	}
 
-	// Token: 0x0600CE45 RID: 52805 RVA: 0x002EF850 File Offset: 0x002EDA50
+	// Token: 0x0600A256 RID: 41558 RVA: 0x002FA930 File Offset: 0x002F8B30
 	[NullableContext(1)]
 	public unsafe static FloroRanchEntityCreateData GetFloroRanchEntityComponentDefine(EFloroRanchEntityType entityType)
 	{
@@ -109,7 +109,7 @@ public class FloroRanchEntityDefine : IStaticVariableResetter
 		return FloroRanchEntityDefine.floroRanchEntityComponentDefine[entityType];
 	}
 
-	// Token: 0x04005E90 RID: 24208
+	// Token: 0x04005F5F RID: 24415
 	[Nullable(1)]
 	private static Dictionary<EFloroRanchEntityType, FloroRanchEntityCreateData> floroRanchEntityComponentDefine;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DA5 RID: 7589
+	// Token: 0x02001FBC RID: 8124
 	public class IResetEntityConfig_SetValue
 	{
-		// Token: 0x040061A7 RID: 24999
+		// Token: 0x0400672F RID: 26415
 		public EResetEntityType Type;
 	}
 }

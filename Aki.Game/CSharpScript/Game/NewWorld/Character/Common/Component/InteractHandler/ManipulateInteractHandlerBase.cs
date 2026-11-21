@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007112 RID: 28946
+	// Token: 0x02006340 RID: 25408
 	public abstract class ManipulateInteractHandlerBase : IManipulateInteractHandler
 	{
-		// Token: 0x06046AB4 RID: 289460 RVA: 0x011CA1FA File Offset: 0x011C83FA
+		// Token: 0x0603D8F9 RID: 252153 RVA: 0x011D2FFE File Offset: 0x011D11FE
 		[NullableContext(1)]
 		protected ManipulateInteractHandlerBase(IManipulateInteractContext context)
 		{
 		}
 
-		// Token: 0x06046AB5 RID: 289461
+		// Token: 0x0603D8FA RID: 252154
 		public abstract bool Start();
 
-		// Token: 0x06046AB6 RID: 289462
+		// Token: 0x0603D8FB RID: 252155
 		public abstract void End();
 
-		// Token: 0x06046AB7 RID: 289463 RVA: 0x011CA20C File Offset: 0x011C840C
+		// Token: 0x0603D8FC RID: 252156 RVA: 0x011D3010 File Offset: 0x011D1210
 		protected void ApplyInteractBuff()
 		{
 			string roleBody = this.Context.ActorComp.CreatureData.GetRoleConfig().Value.RoleBody;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			});
 		}
 
-		// Token: 0x06046AB8 RID: 289464 RVA: 0x011CA2C0 File Offset: 0x011C84C0
+		// Token: 0x0603D8FD RID: 252157 RVA: 0x011D30C4 File Offset: 0x011D12C4
 		protected void RemoveInteractBuffImmediate()
 		{
 			if (this.Context.BuffComp != null && this.Context.CurBuffId != null)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x04025188 RID: 151944
+		// Token: 0x04020A68 RID: 133736
 		[Nullable(1)]
 		protected readonly IManipulateInteractContext Context = context;
 	}

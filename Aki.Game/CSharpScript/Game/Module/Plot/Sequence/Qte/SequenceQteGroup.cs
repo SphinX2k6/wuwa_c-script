@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 {
-	// Token: 0x0200501E RID: 20510
+	// Token: 0x02003FE8 RID: 16360
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 	})]
 	public class SequenceQteGroup : SequenceQteHandleBase<CommonQteGroupContext>
 	{
-		// Token: 0x060347D0 RID: 214992 RVA: 0x00C5D280 File Offset: 0x00C5B480
+		// Token: 0x06029673 RID: 169587 RVA: 0x00BA87CC File Offset: 0x00BA69CC
 		public SequenceQteGroup(SequenceQteManager qteManager, CommonQteGroupContext context) : base(qteManager, context)
 		{
 			if (this.Context.ContextMap != null)
@@ -27,21 +27,21 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x060347D1 RID: 214993 RVA: 0x00C5D330 File Offset: 0x00C5B530
+		// Token: 0x06029674 RID: 169588 RVA: 0x00BA887C File Offset: 0x00BA6A7C
 		public override void OnBegin()
 		{
 			base.OnBegin();
 			this.MarkSequenceQtePending = true;
 		}
 
-		// Token: 0x060347D2 RID: 214994 RVA: 0x00C5D33F File Offset: 0x00C5B53F
+		// Token: 0x06029675 RID: 169589 RVA: 0x00BA888B File Offset: 0x00BA6A8B
 		public override void OnFinish()
 		{
 			base.OnFinish();
 			this.CacheIntervalCheckProgressMap.Clear();
 		}
 
-		// Token: 0x060347D3 RID: 214995 RVA: 0x00C5D354 File Offset: 0x00C5B554
+		// Token: 0x06029676 RID: 169590 RVA: 0x00BA88A0 File Offset: 0x00BA6AA0
 		protected override void OnReceiveTick(float delta)
 		{
 			if (this.Context.ContextMap == null || this.Context.MainQteContext == null || this.Context.ContextMap.Count == 0)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			this.Progress = (float)MathUtils.Instance.Clamp(num / (double)this.Context.ContextMap.Count * 0.009999999776482582, 0.0, 1.0);
 		}
 
-		// Token: 0x060347D4 RID: 214996 RVA: 0x00C5D4E4 File Offset: 0x00C5B6E4
+		// Token: 0x06029677 RID: 169591 RVA: 0x00BA8A30 File Offset: 0x00BA6C30
 		public void SetSubQteParams([Nullable(new byte[]
 		{
 			2,
@@ -100,21 +100,21 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			}
 		}
 
-		// Token: 0x060347D5 RID: 214997 RVA: 0x00C5D544 File Offset: 0x00C5B744
+		// Token: 0x06029678 RID: 169592 RVA: 0x00BA8A90 File Offset: 0x00BA6C90
 		[NullableContext(2)]
 		private void OnSubQteSucceed(CommonQteContextBase context)
 		{
 			this.PlaySubResultSpine(context, true);
 		}
 
-		// Token: 0x060347D6 RID: 214998 RVA: 0x00C5D54E File Offset: 0x00C5B74E
+		// Token: 0x06029679 RID: 169593 RVA: 0x00BA8A9A File Offset: 0x00BA6C9A
 		[NullableContext(2)]
 		private void OnSubQteFailed(CommonQteContextBase context)
 		{
 			this.PlaySubResultSpine(context, false);
 		}
 
-		// Token: 0x060347D7 RID: 214999 RVA: 0x00C5D558 File Offset: 0x00C5B758
+		// Token: 0x0602967A RID: 169594 RVA: 0x00BA8AA4 File Offset: 0x00BA6CA4
 		[NullableContext(2)]
 		private void PlaySubResultSpine(CommonQteContextBase context, bool isSuccess)
 		{
@@ -135,16 +135,16 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			base.PlayResultSpine(isSuccess, spineInfo);
 		}
 
-		// Token: 0x0401BF91 RID: 114577
+		// Token: 0x0401697C RID: 92540
 		private const int PAUSED_TIME_BUFFER = 50;
 
-		// Token: 0x0401BF92 RID: 114578
+		// Token: 0x0401697D RID: 92541
 		private readonly Dictionary<int, MovieSceneSubQteParamsProxy> SubQteParamsMap = new Dictionary<int, MovieSceneSubQteParamsProxy>();
 
-		// Token: 0x0401BF93 RID: 114579
+		// Token: 0x0401697E RID: 92542
 		private int PauseTimeCheck = 50;
 
-		// Token: 0x0401BF94 RID: 114580
+		// Token: 0x0401697F RID: 92543
 		private readonly Dictionary<int, double> CacheIntervalCheckProgressMap = new Dictionary<int, double>();
 	}
 }

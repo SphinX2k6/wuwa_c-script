@@ -5,37 +5,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B2 RID: 29106
+	// Token: 0x02006267 RID: 25191
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ManualTickSequenceDriver
 	{
-		// Token: 0x06047397 RID: 291735 RVA: 0x0121A489 File Offset: 0x01218689
+		// Token: 0x0603CC92 RID: 248978 RVA: 0x0117438D File Offset: 0x0117258D
 		public bool IsPlaying()
 		{
 			return this.IsMoving;
 		}
 
-		// Token: 0x06047398 RID: 291736 RVA: 0x0121A491 File Offset: 0x01218691
+		// Token: 0x0603CC93 RID: 248979 RVA: 0x01174395 File Offset: 0x01172595
 		[NullableContext(2)]
 		public ALevelSequenceActor GetSequenceActor()
 		{
 			return this.Player.GetSequenceActor();
 		}
 
-		// Token: 0x06047399 RID: 291737 RVA: 0x0121A49E File Offset: 0x0121869E
+		// Token: 0x0603CC94 RID: 248980 RVA: 0x011743A2 File Offset: 0x011725A2
 		public float? GetMarkTimeInSeconds(string mark)
 		{
 			return this.Player.GetMarkTimeInSeconds(mark);
 		}
 
-		// Token: 0x0604739A RID: 291738 RVA: 0x0121A4AC File Offset: 0x012186AC
+		// Token: 0x0603CC95 RID: 248981 RVA: 0x011743B0 File Offset: 0x011725B0
 		public float GetCurrentSeconds()
 		{
 			return this.Player.GetCurrentSeconds();
 		}
 
-		// Token: 0x0604739B RID: 291739 RVA: 0x0121A4BC File Offset: 0x012186BC
+		// Token: 0x0603CC96 RID: 248982 RVA: 0x011743C0 File Offset: 0x011725C0
 		public void Play(ULevelSequence sequence, PlayLevelSequence config, bool jumpToEnd = false, [Nullable(2)] Action onStopped = null)
 		{
 			if (!this.Player.Init(sequence, config.IsEnableCenterOffset.GetValueOrDefault(), config.PreprocessOperation))
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SetupByPlayMode(config);
 		}
 
-		// Token: 0x0604739C RID: 291740 RVA: 0x0121A5A0 File Offset: 0x012187A0
+		// Token: 0x0603CC97 RID: 248983 RVA: 0x011744A4 File Offset: 0x011726A4
 		[NullableContext(2)]
 		private void SetupInstant(string mark)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SetStopped();
 		}
 
-		// Token: 0x0604739D RID: 291741 RVA: 0x0121A5F8 File Offset: 0x012187F8
+		// Token: 0x0603CC98 RID: 248984 RVA: 0x011744FC File Offset: 0x011726FC
 		private void SetupByPlayMode(PlayLevelSequence config)
 		{
 			string mark = config.Mark;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x0604739E RID: 291742 RVA: 0x0121A6C0 File Offset: 0x012188C0
+		// Token: 0x0603CC99 RID: 248985 RVA: 0x011745C4 File Offset: 0x011727C4
 		private unsafe void SetupLoop(PlayLevelSequence config)
 		{
 			this.IsLoop = true;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.IsMoving = true;
 		}
 
-		// Token: 0x0604739F RID: 291743 RVA: 0x0121A848 File Offset: 0x01218A48
+		// Token: 0x0603CC9A RID: 248986 RVA: 0x0117474C File Offset: 0x0117294C
 		private void SetupShortestPath(float targetSeconds)
 		{
 			float num = this.Player.GetEndSeconds() - this.Player.GetStartSeconds();
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SeqTargetSeconds = this.Player.GetEndSeconds();
 		}
 
-		// Token: 0x060473A0 RID: 291744 RVA: 0x0121A8D8 File Offset: 0x01218AD8
+		// Token: 0x0603CC9B RID: 248987 RVA: 0x011747DC File Offset: 0x011729DC
 		[NullableContext(2)]
 		private float? ResolveMarkSeconds(string mark)
 		{
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return markTimeInSeconds;
 		}
 
-		// Token: 0x060473A1 RID: 291745 RVA: 0x0121A95C File Offset: 0x01218B5C
+		// Token: 0x0603CC9C RID: 248988 RVA: 0x01174860 File Offset: 0x01172A60
 		public void Tick(float deltaMs)
 		{
 			if (!this.IsMoving || !this.Player.HasActor())
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.TickToTarget(num2);
 		}
 
-		// Token: 0x060473A2 RID: 291746 RVA: 0x0121A9C0 File Offset: 0x01218BC0
+		// Token: 0x0603CC9D RID: 248989 RVA: 0x011748C4 File Offset: 0x01172AC4
 		private void TickToTarget(float advance)
 		{
 			float num = MathF.Abs(this.SeqTargetSeconds - this.SeqPlayedSeconds);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.Player.SetPositionBySeconds(this.SeqPlayedSeconds, EUpdatePositionMethod.Play);
 		}
 
-		// Token: 0x060473A3 RID: 291747 RVA: 0x0121AAEC File Offset: 0x01218CEC
+		// Token: 0x0603CC9E RID: 248990 RVA: 0x011749F0 File Offset: 0x01172BF0
 		private void OnReachTarget()
 		{
 			if (this.IsWrapping)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.SetStopped();
 		}
 
-		// Token: 0x060473A4 RID: 291748 RVA: 0x0121AB90 File Offset: 0x01218D90
+		// Token: 0x0603CC9F RID: 248991 RVA: 0x01174A94 File Offset: 0x01172C94
 		private void TickLoop(float advance)
 		{
 			ClampStepResult clampStepResult = SequenceDriveHelper.ClampStep(advance, this.SeqAccumulatedSeconds, float.MaxValue);
@@ -323,13 +323,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473A5 RID: 291749 RVA: 0x0121ACFF File Offset: 0x01218EFF
+		// Token: 0x0603CCA0 RID: 248992 RVA: 0x01174C03 File Offset: 0x01172E03
 		public void SetTimeDilation(float timeDilation)
 		{
 			this.CustomTimeDilation = timeDilation;
 		}
 
-		// Token: 0x060473A6 RID: 291750 RVA: 0x0121AD08 File Offset: 0x01218F08
+		// Token: 0x0603CCA1 RID: 248993 RVA: 0x01174C0C File Offset: 0x01172E0C
 		private void SetStopped()
 		{
 			this.IsMoving = false;
@@ -342,14 +342,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			onStopped();
 		}
 
-		// Token: 0x060473A7 RID: 291751 RVA: 0x0121AD28 File Offset: 0x01218F28
+		// Token: 0x0603CCA2 RID: 248994 RVA: 0x01174C2C File Offset: 0x01172E2C
 		public void Stop()
 		{
 			this.OnStopped = null;
 			this.IsMoving = false;
 		}
 
-		// Token: 0x060473A8 RID: 291752 RVA: 0x0121AD38 File Offset: 0x01218F38
+		// Token: 0x0603CCA3 RID: 248995 RVA: 0x01174C3C File Offset: 0x01172E3C
 		public void Release()
 		{
 			this.Stop();
@@ -360,47 +360,47 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.Player.Release();
 		}
 
-		// Token: 0x04025741 RID: 153409
+		// Token: 0x040203B0 RID: 132016
 		private readonly ManualSequencePlayer Player = new ManualSequencePlayer();
 
-		// Token: 0x04025742 RID: 153410
+		// Token: 0x040203B1 RID: 132017
 		private float CustomTimeDilation = 1f;
 
-		// Token: 0x04025743 RID: 153411
+		// Token: 0x040203B2 RID: 132018
 		private bool IsMoving;
 
-		// Token: 0x04025744 RID: 153412
+		// Token: 0x040203B3 RID: 132019
 		[Nullable(2)]
 		private Action OnStopped;
 
-		// Token: 0x04025745 RID: 153413
+		// Token: 0x040203B4 RID: 132020
 		private float RateAbs = 1f;
 
-		// Token: 0x04025746 RID: 153414
+		// Token: 0x040203B5 RID: 132021
 		private bool RateIsNegative;
 
-		// Token: 0x04025747 RID: 153415
+		// Token: 0x040203B6 RID: 132022
 		private float SeqAccumulatedSeconds;
 
-		// Token: 0x04025748 RID: 153416
+		// Token: 0x040203B7 RID: 132023
 		private float SeqPlayedSeconds;
 
-		// Token: 0x04025749 RID: 153417
+		// Token: 0x040203B8 RID: 132024
 		private float SeqTargetSeconds;
 
-		// Token: 0x0402574A RID: 153418
+		// Token: 0x040203B9 RID: 132025
 		private bool IsLoop;
 
-		// Token: 0x0402574B RID: 153419
+		// Token: 0x040203BA RID: 132026
 		private float LoopStartSeconds;
 
-		// Token: 0x0402574C RID: 153420
+		// Token: 0x040203BB RID: 132027
 		private float LoopEndSeconds;
 
-		// Token: 0x0402574D RID: 153421
+		// Token: 0x040203BC RID: 132028
 		private bool IsWrapping;
 
-		// Token: 0x0402574E RID: 153422
+		// Token: 0x040203BD RID: 132029
 		private float WrapFinalTargetSeconds;
 	}
 }

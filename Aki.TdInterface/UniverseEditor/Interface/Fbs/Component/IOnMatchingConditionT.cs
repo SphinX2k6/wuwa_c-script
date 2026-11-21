@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200569F RID: 22175
+	// Token: 0x02005C43 RID: 23619
 	public class IOnMatchingConditionT
 	{
-		// Token: 0x1700A4EA RID: 42218
-		// (get) Token: 0x0602502A RID: 151594 RVA: 0x0051C76C File Offset: 0x0051A96C
-		// (set) Token: 0x0602502B RID: 151595 RVA: 0x0051C774 File Offset: 0x0051A974
+		// Token: 0x1700AD7E RID: 44414
+		// (get) Token: 0x0602727F RID: 160383 RVA: 0x0055D6B4 File Offset: 0x0055B8B4
+		// (set) Token: 0x06027280 RID: 160384 RVA: 0x0055D6BC File Offset: 0x0055B8BC
 		public EBulletCreateCondition Type { get; set; }
 
-		// Token: 0x1700A4EB RID: 42219
-		// (get) Token: 0x0602502C RID: 151596 RVA: 0x0051C77D File Offset: 0x0051A97D
-		// (set) Token: 0x0602502D RID: 151597 RVA: 0x0051C785 File Offset: 0x0051A985
+		// Token: 0x1700AD7F RID: 44415
+		// (get) Token: 0x06027281 RID: 160385 RVA: 0x0055D6C5 File Offset: 0x0055B8C5
+		// (set) Token: 0x06027282 RID: 160386 RVA: 0x0055D6CD File Offset: 0x0055B8CD
 		public long BulletId { get; set; }
 
-		// Token: 0x0602502E RID: 151598 RVA: 0x0051C78E File Offset: 0x0051A98E
+		// Token: 0x06027283 RID: 160387 RVA: 0x0055D6D6 File Offset: 0x0055B8D6
 		public IOnMatchingConditionT()
 		{
 			this.Type = EBulletCreateCondition.OnHit;

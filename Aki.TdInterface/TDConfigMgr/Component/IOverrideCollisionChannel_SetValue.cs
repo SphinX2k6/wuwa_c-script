@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005B7 RID: 1463
+	// Token: 0x02000622 RID: 1570
 	public class IOverrideCollisionChannel_SetValue
 	{
-		// Token: 0x040015EA RID: 5610
+		// Token: 0x0400175E RID: 5982
 		public ECollisionChannelPreset? CollisionChannelPreset;
 
-		// Token: 0x040015EB RID: 5611
+		// Token: 0x0400175F RID: 5983
 		public float? BlurResponseRadius;
 	}
 }

@@ -4,21 +4,21 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049CF RID: 18895
+	// Token: 0x02003949 RID: 14665
 	public class SelectPhotoStickerItemComponent : HotKeyComponent
 	{
-		// Token: 0x060311F4 RID: 201204 RVA: 0x00B65165 File Offset: 0x00B63365
+		// Token: 0x06025D2A RID: 154922 RVA: 0x00AA00B5 File Offset: 0x00A9E2B5
 		public SelectPhotoStickerItemComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311F5 RID: 201205 RVA: 0x00B6516E File Offset: 0x00B6336E
+		// Token: 0x06025D2B RID: 154923 RVA: 0x00AA00BE File Offset: 0x00A9E2BE
 		protected override void OnPress(HotKeyMap config)
 		{
 			PhotographController.Instance.RequestSelectSticker();
 		}
 
-		// Token: 0x060311F6 RID: 201206 RVA: 0x00B6517C File Offset: 0x00B6337C
+		// Token: 0x06025D2C RID: 154924 RVA: 0x00AA00CC File Offset: 0x00A9E2CC
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

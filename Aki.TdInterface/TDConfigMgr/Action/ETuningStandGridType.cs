@@ -3,27 +3,27 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016E9 RID: 5865
+	// Token: 0x02001865 RID: 6245
 	[EnumExtensions]
 	public enum ETuningStandGridType
 	{
-		// Token: 0x04004F57 RID: 20311
+		// Token: 0x04005384 RID: 21380
 		Empty,
-		// Token: 0x04004F58 RID: 20312
+		// Token: 0x04005385 RID: 21381
 		Start1,
-		// Token: 0x04004F59 RID: 20313
+		// Token: 0x04005386 RID: 21382
 		End1,
-		// Token: 0x04004F5A RID: 20314
+		// Token: 0x04005387 RID: 21383
 		Start2,
-		// Token: 0x04004F5B RID: 20315
+		// Token: 0x04005388 RID: 21384
 		End2,
-		// Token: 0x04004F5C RID: 20316
+		// Token: 0x04005389 RID: 21385
 		Number1,
-		// Token: 0x04004F5D RID: 20317
+		// Token: 0x0400538A RID: 21386
 		Number2,
-		// Token: 0x04004F5E RID: 20318
+		// Token: 0x0400538B RID: 21387
 		Number3,
-		// Token: 0x04004F5F RID: 20319
+		// Token: 0x0400538C RID: 21388
 		Number4
 	}
 }

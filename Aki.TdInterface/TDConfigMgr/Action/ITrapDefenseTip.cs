@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF6 RID: 8182
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200223D RID: 8765
 	public class ITrapDefenseTip : ICommonTipType
 	{
-		// Token: 0x0600B3F2 RID: 46066 RVA: 0x001A2A40 File Offset: 0x001A0C40
+		// Token: 0x0600BF08 RID: 48904 RVA: 0x001B8FAC File Offset: 0x001B71AC
 		private ITrapDefenseTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B3F3 RID: 46067 RVA: 0x001A2A78 File Offset: 0x001A0C78
+		// Token: 0x0600BF09 RID: 48905 RVA: 0x001B8FE4 File Offset: 0x001B71E4
 		public static ITrapDefenseTip Create([Nullable(2)] ITrapDefenseTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3F4 RID: 46068 RVA: 0x001A2A8B File Offset: 0x001A0C8B
+		// Token: 0x0600BF0A RID: 48906 RVA: 0x001B8FF7 File Offset: 0x001B71F7
 		public static ITrapDefenseTip CreateFromSetValue([Nullable(2)] ITrapDefenseTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3F5 RID: 46069 RVA: 0x001A2A9E File Offset: 0x001A0C9E
+		// Token: 0x0600BF0B RID: 48907 RVA: 0x001B900A File Offset: 0x001B720A
 		public new ITrapDefenseTip_SetValue ToSetValue()
 		{
 			return new ITrapDefenseTip_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003760 RID: 14176
-		// (get) Token: 0x0600B3F6 RID: 46070 RVA: 0x001A2AC9 File Offset: 0x001A0CC9
-		// (set) Token: 0x0600B3F7 RID: 46071 RVA: 0x001A2AF4 File Offset: 0x001A0CF4
+		// Token: 0x17003A38 RID: 14904
+		// (get) Token: 0x0600BF0C RID: 48908 RVA: 0x001B9035 File Offset: 0x001B7235
+		// (set) Token: 0x0600BF0D RID: 48909 RVA: 0x001B9060 File Offset: 0x001B7260
 		public override ECommonTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003761 RID: 14177
-		// (get) Token: 0x0600B3F8 RID: 46072 RVA: 0x001A2B02 File Offset: 0x001A0D02
-		// (set) Token: 0x0600B3F9 RID: 46073 RVA: 0x001A2B2D File Offset: 0x001A0D2D
+		// Token: 0x17003A39 RID: 14905
+		// (get) Token: 0x0600BF0E RID: 48910 RVA: 0x001B906E File Offset: 0x001B726E
+		// (set) Token: 0x0600BF0F RID: 48911 RVA: 0x001B9099 File Offset: 0x001B7299
 		public virtual string MainText
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003762 RID: 14178
-		// (get) Token: 0x0600B3FA RID: 46074 RVA: 0x001A2B3B File Offset: 0x001A0D3B
-		// (set) Token: 0x0600B3FB RID: 46075 RVA: 0x001A2B66 File Offset: 0x001A0D66
+		// Token: 0x17003A3A RID: 14906
+		// (get) Token: 0x0600BF10 RID: 48912 RVA: 0x001B90A7 File Offset: 0x001B72A7
+		// (set) Token: 0x0600BF11 RID: 48913 RVA: 0x001B90D2 File Offset: 0x001B72D2
 		public virtual ETrapDefenseTipType TipType
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C7F RID: 27775
+		// Token: 0x04007281 RID: 29313
 		[Nullable(2)]
 		protected new ITrapDefenseTip FbInstance;
 
-		// Token: 0x04006C80 RID: 27776
+		// Token: 0x04007282 RID: 29314
 		[Nullable(2)]
 		protected new ITrapDefenseTip_SetValue PocoInterface;
 	}

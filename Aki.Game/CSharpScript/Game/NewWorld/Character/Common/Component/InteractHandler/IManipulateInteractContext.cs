@@ -5,68 +5,68 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007110 RID: 28944
+	// Token: 0x0200633E RID: 25406
 	[NullableContext(2)]
 	public interface IManipulateInteractContext
 	{
-		// Token: 0x17009D10 RID: 40208
-		// (get) Token: 0x06046AA1 RID: 289441
+		// Token: 0x170074D6 RID: 29910
+		// (get) Token: 0x0603D8E6 RID: 252134
 		[Nullable(1)]
 		BaseTagComponent TagComp { [NullableContext(1)] get; }
 
-		// Token: 0x17009D11 RID: 40209
-		// (get) Token: 0x06046AA2 RID: 289442
+		// Token: 0x170074D7 RID: 29911
+		// (get) Token: 0x0603D8E7 RID: 252135
 		[Nullable(1)]
 		CharacterBuffComponent BuffComp { [NullableContext(1)] get; }
 
-		// Token: 0x17009D12 RID: 40210
-		// (get) Token: 0x06046AA3 RID: 289443
+		// Token: 0x170074D8 RID: 29912
+		// (get) Token: 0x0603D8E8 RID: 252136
 		[Nullable(1)]
 		CharacterActorComponent ActorComp { [NullableContext(1)] get; }
 
-		// Token: 0x17009D13 RID: 40211
-		// (get) Token: 0x06046AA4 RID: 289444
+		// Token: 0x170074D9 RID: 29913
+		// (get) Token: 0x0603D8E9 RID: 252137
 		[Nullable(1)]
 		CreatureDataComponent CreatureDataComp { [NullableContext(1)] get; }
 
-		// Token: 0x17009D14 RID: 40212
-		// (get) Token: 0x06046AA5 RID: 289445
+		// Token: 0x170074DA RID: 29914
+		// (get) Token: 0x0603D8EA RID: 252138
 		string EffectPath { get; }
 
-		// Token: 0x17009D15 RID: 40213
-		// (get) Token: 0x06046AA6 RID: 289446
+		// Token: 0x170074DB RID: 29915
+		// (get) Token: 0x0603D8EB RID: 252139
 		SceneItemExploreInteractComponent ChooseTargetOnStartSkill { get; }
 
-		// Token: 0x17009D16 RID: 40214
-		// (get) Token: 0x06046AA7 RID: 289447
+		// Token: 0x170074DC RID: 29916
+		// (get) Token: 0x0603D8EC RID: 252140
 		SceneItemExploreInteractComponent BestTargetInternal { get; }
 
-		// Token: 0x17009D17 RID: 40215
-		// (get) Token: 0x06046AA8 RID: 289448
+		// Token: 0x170074DD RID: 29917
+		// (get) Token: 0x0603D8ED RID: 252141
 		bool CurrentPointLegal { get; }
 
-		// Token: 0x17009D18 RID: 40216
-		// (get) Token: 0x06046AA9 RID: 289449
-		// (set) Token: 0x06046AAA RID: 289450
+		// Token: 0x170074DE RID: 29918
+		// (get) Token: 0x0603D8EE RID: 252142
+		// (set) Token: 0x0603D8EF RID: 252143
 		bool Interacting { get; set; }
 
-		// Token: 0x17009D19 RID: 40217
-		// (get) Token: 0x06046AAB RID: 289451
-		// (set) Token: 0x06046AAC RID: 289452
+		// Token: 0x170074DF RID: 29919
+		// (get) Token: 0x0603D8F0 RID: 252144
+		// (set) Token: 0x0603D8F1 RID: 252145
 		SceneItemExploreInteractComponent SelectedTargetInternal { get; set; }
 
-		// Token: 0x17009D1A RID: 40218
-		// (get) Token: 0x06046AAD RID: 289453
-		// (set) Token: 0x06046AAE RID: 289454
+		// Token: 0x170074E0 RID: 29920
+		// (get) Token: 0x0603D8F2 RID: 252146
+		// (set) Token: 0x0603D8F3 RID: 252147
 		long? CurBuffId { get; set; }
 
-		// Token: 0x06046AAF RID: 289455
+		// Token: 0x0603D8F4 RID: 252148
 		bool CheckBeforeInteract(EExploreSkillInteractType type);
 
-		// Token: 0x06046AB0 RID: 289456
+		// Token: 0x0603D8F5 RID: 252149
 		void RequestInteractAction();
 
-		// Token: 0x06046AB1 RID: 289457
+		// Token: 0x0603D8F6 RID: 252150
 		void SpawnEffect();
 	}
 }

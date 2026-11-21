@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Component
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Component
 {
-	// Token: 0x02006896 RID: 26774
+	// Token: 0x020057E6 RID: 22502
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,8 +13,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 	})]
 	public class DangoBrawlDataComponent : ActivityGameplayComponentBase<IDangoBrawlEntityData>
 	{
-		// Token: 0x170097BC RID: 38844
-		// (get) Token: 0x06042D24 RID: 273700 RVA: 0x01043FBE File Offset: 0x010421BE
+		// Token: 0x17006AFC RID: 27388
+		// (get) Token: 0x0603787C RID: 227452 RVA: 0x00F8553A File Offset: 0x00F8373A
 		public IDangoBrawlEntityData Data
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x170097BD RID: 38845
-		// (get) Token: 0x06042D25 RID: 273701 RVA: 0x01043FC6 File Offset: 0x010421C6
+		// Token: 0x17006AFD RID: 27389
+		// (get) Token: 0x0603787D RID: 227453 RVA: 0x00F85542 File Offset: 0x00F83742
 		public int? Uid
 		{
 			get
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D26 RID: 273702 RVA: 0x01043FCE File Offset: 0x010421CE
+		// Token: 0x0603787E RID: 227454 RVA: 0x00F8554A File Offset: 0x00F8374A
 		public void SetUid(int uid)
 		{
 			this.UidInternal = new int?(uid);
 		}
 
-		// Token: 0x06042D27 RID: 273703 RVA: 0x01043FDC File Offset: 0x010421DC
+		// Token: 0x0603787F RID: 227455 RVA: 0x00F85558 File Offset: 0x00F83758
 		[NullableContext(2)]
 		protected override void OnCreate(IDangoBrawlEntityData args = null)
 		{
@@ -51,18 +51,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.DataInternal = args;
 		}
 
-		// Token: 0x06042D28 RID: 273704 RVA: 0x01044013 File Offset: 0x01042213
+		// Token: 0x06037880 RID: 227456 RVA: 0x00F8558F File Offset: 0x00F8378F
 		protected override void OnEnd()
 		{
 			this.DataInternal = null;
 			this.UidInternal = null;
 		}
 
-		// Token: 0x04022C50 RID: 142416
+		// Token: 0x0401D4AC RID: 119980
 		[Nullable(2)]
 		private IDangoBrawlEntityData DataInternal;
 
-		// Token: 0x04022C51 RID: 142417
+		// Token: 0x0401D4AD RID: 119981
 		private int? UidInternal;
 	}
 }

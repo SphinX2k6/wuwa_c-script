@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02002599 RID: 9625
+// Token: 0x02001A84 RID: 6788
 public enum EPhotoClusterEffectType
 {
-	// Token: 0x04009317 RID: 37655
+	// Token: 0x0400946F RID: 37999
 	None,
-	// Token: 0x04009318 RID: 37656
+	// Token: 0x04009470 RID: 38000
 	MapleOrange,
-	// Token: 0x04009319 RID: 37657
+	// Token: 0x04009471 RID: 38001
 	MapleRed,
-	// Token: 0x0400931A RID: 37658
+	// Token: 0x04009472 RID: 38002
 	Ginkgo,
-	// Token: 0x0400931B RID: 37659
+	// Token: 0x04009473 RID: 38003
 	Bamboo,
-	// Token: 0x0400931C RID: 37660
+	// Token: 0x04009474 RID: 38004
 	RedSpiderLily,
-	// Token: 0x0400931D RID: 37661
+	// Token: 0x04009475 RID: 38005
 	Sakura,
-	// Token: 0x0400931E RID: 37662
+	// Token: 0x04009476 RID: 38006
 	Dandelion,
-	// Token: 0x0400931F RID: 37663
+	// Token: 0x04009477 RID: 38007
 	Ribbon
 }

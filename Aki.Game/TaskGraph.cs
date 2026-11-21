@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02003540 RID: 13632
+// Token: 0x02002AB5 RID: 10933
 [NullableContext(1)]
 [Nullable(0)]
 public class TaskGraph : IStaticVariableResetter
 {
-	// Token: 0x0601DF14 RID: 122644 RVA: 0x00863DBC File Offset: 0x00861FBC
+	// Token: 0x0601BC3C RID: 113724 RVA: 0x0088B9F4 File Offset: 0x00889BF4
 	static TaskGraph()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TaskGraph.CreateStaticDefaultValue), new Action(TaskGraph.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DF15 RID: 122645 RVA: 0x00863DDC File Offset: 0x00861FDC
+	// Token: 0x0601BC3D RID: 113725 RVA: 0x0088BA14 File Offset: 0x00889C14
 	private int Compare(string a, string b)
 	{
 		Dictionary<string, int> nodeCumulativePriorities = TaskUtils.GetNodeCumulativePriorities(this.GraphDependencyMap, this.NodesWithNoDependencies);
 		return nodeCumulativePriorities[a] - nodeCumulativePriorities[b];
 	}
 
-	// Token: 0x0601DF16 RID: 122646 RVA: 0x00863E0C File Offset: 0x0086200C
+	// Token: 0x0601BC3E RID: 113726 RVA: 0x0088BA44 File Offset: 0x00889C44
 	public TaskGraph(Dictionary<string, IGraphNode> nodeMap, [Nullable(new byte[]
 	{
 		1,
@@ -76,7 +76,7 @@ public class TaskGraph : IStaticVariableResetter
 		bool visualizeTaskGraph = TaskGraph.VisualizeTaskGraph;
 	}
 
-	// Token: 0x0601DF17 RID: 122647 RVA: 0x00864028 File Offset: 0x00862228
+	// Token: 0x0601BC3F RID: 113727 RVA: 0x0088BC60 File Offset: 0x00889E60
 	[NullableContext(2)]
 	public UniTask Run(IRunOptions options = null)
 	{
@@ -89,23 +89,23 @@ public class TaskGraph : IStaticVariableResetter
 		return <Run>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DF18 RID: 122648 RVA: 0x00864073 File Offset: 0x00862273
+	// Token: 0x0601BC40 RID: 113728 RVA: 0x0088BCAB File Offset: 0x00889EAB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DF19 RID: 122649 RVA: 0x00864075 File Offset: 0x00862275
+	// Token: 0x0601BC41 RID: 113729 RVA: 0x0088BCAD File Offset: 0x00889EAD
 	public static void ResetStaticDefaultValue()
 	{
 		TaskGraph.VisualizeTaskGraph = false;
 	}
 
-	// Token: 0x0400EB35 RID: 60213
+	// Token: 0x0400EFF2 RID: 61426
 	private readonly Dictionary<string, IGraphNodeWithDependencies> GraphDependencyMap = new Dictionary<string, IGraphNodeWithDependencies>();
 
-	// Token: 0x0400EB36 RID: 60214
+	// Token: 0x0400EFF3 RID: 61427
 	private readonly List<string> NodesWithNoDependencies = new List<string>();
 
-	// Token: 0x0400EB37 RID: 60215
+	// Token: 0x0400EFF4 RID: 61428
 	public static bool VisualizeTaskGraph;
 }

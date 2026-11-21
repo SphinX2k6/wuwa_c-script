@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E62 RID: 28258
+	// Token: 0x020075E3 RID: 30179
 	public class IRemovePreloadResourceCharacterType_UnionUnion
 	{
-		// Token: 0x1700D279 RID: 53881
-		// (get) Token: 0x06031EE4 RID: 204516 RVA: 0x006C15B9 File Offset: 0x006BF7B9
-		// (set) Token: 0x06031EE5 RID: 204517 RVA: 0x006C15C1 File Offset: 0x006BF7C1
+		// Token: 0x1700DDCB RID: 56779
+		// (get) Token: 0x06034F0C RID: 216844 RVA: 0x0071D0B9 File Offset: 0x0071B2B9
+		// (set) Token: 0x06034F0D RID: 216845 RVA: 0x0071D0C1 File Offset: 0x0071B2C1
 		public IRemovePreloadResourceCharacterType_Union Type { get; set; }
 
-		// Token: 0x1700D27A RID: 53882
-		// (get) Token: 0x06031EE6 RID: 204518 RVA: 0x006C15CA File Offset: 0x006BF7CA
-		// (set) Token: 0x06031EE7 RID: 204519 RVA: 0x006C15D2 File Offset: 0x006BF7D2
+		// Token: 0x1700DDCC RID: 56780
+		// (get) Token: 0x06034F0E RID: 216846 RVA: 0x0071D0CA File Offset: 0x0071B2CA
+		// (set) Token: 0x06034F0F RID: 216847 RVA: 0x0071D0D2 File Offset: 0x0071B2D2
 		public object Value { get; set; }
 
-		// Token: 0x06031EE8 RID: 204520 RVA: 0x006C15DB File Offset: 0x006BF7DB
+		// Token: 0x06034F10 RID: 216848 RVA: 0x0071D0DB File Offset: 0x0071B2DB
 		public IRemovePreloadResourceCharacterType_UnionUnion()
 		{
 			this.Type = IRemovePreloadResourceCharacterType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06031EE9 RID: 204521 RVA: 0x006C15F1 File Offset: 0x006BF7F1
+		// Token: 0x06034F11 RID: 216849 RVA: 0x0071D0F1 File Offset: 0x0071B2F1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06031EEA RID: 204522 RVA: 0x006C1603 File Offset: 0x006BF803
+		// Token: 0x06034F12 RID: 216850 RVA: 0x0071D103 File Offset: 0x0071B303
 		public IRemovePreloadResourceCharacterTypeT AsIRemovePreloadResourceCharacterType()
 		{
 			return this.As<IRemovePreloadResourceCharacterTypeT>();
 		}
 
-		// Token: 0x06031EEB RID: 204523 RVA: 0x006C160B File Offset: 0x006BF80B
+		// Token: 0x06034F13 RID: 216851 RVA: 0x0071D10B File Offset: 0x0071B30B
 		public static IRemovePreloadResourceCharacterType_UnionUnion FromIRemovePreloadResourceCharacterType(IRemovePreloadResourceCharacterTypeT _iremovepreloadresourcecharactertype)
 		{
 			return new IRemovePreloadResourceCharacterType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031EEC RID: 204524 RVA: 0x006C1620 File Offset: 0x006BF820
+		// Token: 0x06034F14 RID: 216852 RVA: 0x0071D120 File Offset: 0x0071B320
 		public IRemovePreloadResourceTrialCharacterT AsIRemovePreloadResourceTrialCharacter()
 		{
 			return this.As<IRemovePreloadResourceTrialCharacterT>();
 		}
 
-		// Token: 0x06031EED RID: 204525 RVA: 0x006C1628 File Offset: 0x006BF828
+		// Token: 0x06034F15 RID: 216853 RVA: 0x0071D128 File Offset: 0x0071B328
 		public static IRemovePreloadResourceCharacterType_UnionUnion FromIRemovePreloadResourceTrialCharacter(IRemovePreloadResourceTrialCharacterT _iremovepreloadresourcetrialcharacter)
 		{
 			return new IRemovePreloadResourceCharacterType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031EEE RID: 204526 RVA: 0x006C163D File Offset: 0x006BF83D
+		// Token: 0x06034F16 RID: 216854 RVA: 0x0071D13D File Offset: 0x0071B33D
 		public IRemovePreloadFlowsT AsIRemovePreloadFlows()
 		{
 			return this.As<IRemovePreloadFlowsT>();
 		}
 
-		// Token: 0x06031EEF RID: 204527 RVA: 0x006C1645 File Offset: 0x006BF845
+		// Token: 0x06034F17 RID: 216855 RVA: 0x0071D145 File Offset: 0x0071B345
 		public static IRemovePreloadResourceCharacterType_UnionUnion FromIRemovePreloadFlows(IRemovePreloadFlowsT _iremovepreloadflows)
 		{
 			return new IRemovePreloadResourceCharacterType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031EF0 RID: 204528 RVA: 0x006C165A File Offset: 0x006BF85A
+		// Token: 0x06034F18 RID: 216856 RVA: 0x0071D15A File Offset: 0x0071B35A
 		public IRemovePreloadResourcePhantomCharacterT AsIRemovePreloadResourcePhantomCharacter()
 		{
 			return this.As<IRemovePreloadResourcePhantomCharacterT>();
 		}
 
-		// Token: 0x06031EF1 RID: 204529 RVA: 0x006C1662 File Offset: 0x006BF862
+		// Token: 0x06034F19 RID: 216857 RVA: 0x0071D162 File Offset: 0x0071B362
 		public static IRemovePreloadResourceCharacterType_UnionUnion FromIRemovePreloadResourcePhantomCharacter(IRemovePreloadResourcePhantomCharacterT _iremovepreloadresourcephantomcharacter)
 		{
 			return new IRemovePreloadResourceCharacterType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031EF2 RID: 204530 RVA: 0x006C1677 File Offset: 0x006BF877
+		// Token: 0x06034F1A RID: 216858 RVA: 0x0071D177 File Offset: 0x0071B377
 		public IRemovePreloadLinkResourceT AsIRemovePreloadLinkResource()
 		{
 			return this.As<IRemovePreloadLinkResourceT>();
 		}
 
-		// Token: 0x06031EF3 RID: 204531 RVA: 0x006C167F File Offset: 0x006BF87F
+		// Token: 0x06034F1B RID: 216859 RVA: 0x0071D17F File Offset: 0x0071B37F
 		public static IRemovePreloadResourceCharacterType_UnionUnion FromIRemovePreloadLinkResource(IRemovePreloadLinkResourceT _iremovepreloadlinkresource)
 		{
 			return new IRemovePreloadResourceCharacterType_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031EF4 RID: 204532 RVA: 0x006C1694 File Offset: 0x006BF894
+		// Token: 0x06034F1C RID: 216860 RVA: 0x0071D194 File Offset: 0x0071B394
 		public static int Pack(FlatBufferBuilder builder, IRemovePreloadResourceCharacterType_UnionUnion _o)
 		{
 			switch (_o.Type)

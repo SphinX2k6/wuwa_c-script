@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001758 RID: 5976
+// Token: 0x02000C11 RID: 3089
 public class VisionRecoveryBatchResultView : UiViewBase
 {
-	// Token: 0x0600ACE1 RID: 44257 RVA: 0x0026DC98 File Offset: 0x0026BE98
+	// Token: 0x060080C8 RID: 32968 RVA: 0x00278114 File Offset: 0x00276314
 	[NullableContext(1)]
 	public VisionRecoveryBatchResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600ACE2 RID: 44258 RVA: 0x0026DCA4 File Offset: 0x0026BEA4
+	// Token: 0x060080C9 RID: 32969 RVA: 0x00278120 File Offset: 0x00276320
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class VisionRecoveryBatchResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600ACE3 RID: 44259 RVA: 0x0026DD50 File Offset: 0x0026BF50
+	// Token: 0x060080CA RID: 32970 RVA: 0x002781CC File Offset: 0x002763CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRecoveryBatchResultView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -45,20 +45,20 @@ public class VisionRecoveryBatchResultView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600ACE4 RID: 44260 RVA: 0x0026DD93 File Offset: 0x0026BF93
+	// Token: 0x060080CB RID: 32971 RVA: 0x0027820F File Offset: 0x0027640F
 	[NullableContext(1)]
 	private VisionRecoverySlotGridItem InitVisionRecoverySlotGridItem()
 	{
 		return new VisionRecoverySlotGridItem(new Action<bool, PhantomItemData>(this.OnClickRewardCallback), false);
 	}
 
-	// Token: 0x0600ACE5 RID: 44261 RVA: 0x0026DDA7 File Offset: 0x0026BFA7
+	// Token: 0x060080CC RID: 32972 RVA: 0x00278223 File Offset: 0x00276423
 	private void OnClickMaskBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600ACE6 RID: 44262 RVA: 0x0026DDB0 File Offset: 0x0026BFB0
+	// Token: 0x060080CD RID: 32973 RVA: 0x0027822C File Offset: 0x0027642C
 	[NullableContext(2)]
 	private void OnClickRewardCallback(bool isAddVision, PhantomItemData data)
 	{
@@ -69,10 +69,10 @@ public class VisionRecoveryBatchResultView : UiViewBase
 		ItemController.Instance.OpenItemTipsByItemUid(data.GetUniqueId(), data.GetConfigId(), true, null);
 	}
 
-	// Token: 0x04004EA5 RID: 20133
+	// Token: 0x04004F4E RID: 20302
 	private const int CELLS_PER_LINE = 7;
 
-	// Token: 0x04004EA6 RID: 20134
+	// Token: 0x04004F4F RID: 20303
 	[Nullable(new byte[]
 	{
 		2,
@@ -81,7 +81,7 @@ public class VisionRecoveryBatchResultView : UiViewBase
 	})]
 	private GenericLayout<VisionRecoverySlotGridItem, PhantomItemData> MainRewardLayout;
 
-	// Token: 0x04004EA7 RID: 20135
+	// Token: 0x04004F50 RID: 20304
 	[Nullable(new byte[]
 	{
 		2,
@@ -90,18 +90,18 @@ public class VisionRecoveryBatchResultView : UiViewBase
 	})]
 	private GenericLayout<VisionRecoverySlotGridItem, PhantomItemData> ExtraRewardLayout;
 
-	// Token: 0x02007D3C RID: 32060
+	// Token: 0x02006EC2 RID: 28354
 	private enum EComponent
 	{
-		// Token: 0x0402901C RID: 167964
+		// Token: 0x04024347 RID: 148295
 		VisionItem,
-		// Token: 0x0402901D RID: 167965
+		// Token: 0x04024348 RID: 148296
 		MaskBtn,
-		// Token: 0x0402901E RID: 167966
+		// Token: 0x04024349 RID: 148297
 		MainRewardLayout,
-		// Token: 0x0402901F RID: 167967
+		// Token: 0x0402434A RID: 148298
 		TipsItem,
-		// Token: 0x04029020 RID: 167968
+		// Token: 0x0402434B RID: 148299
 		ExtraRewardLayout
 	}
 }

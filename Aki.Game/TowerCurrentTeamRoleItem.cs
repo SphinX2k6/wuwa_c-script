@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BE3 RID: 11235
+// Token: 0x0200215E RID: 8542
 public class TowerCurrentTeamRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601756E RID: 95598 RVA: 0x005EFB40 File Offset: 0x005EDD40
+	// Token: 0x06014F9F RID: 85919 RVA: 0x0061C6BC File Offset: 0x0061A8BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class TowerCurrentTeamRoleItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601756F RID: 95599 RVA: 0x005EFBCC File Offset: 0x005EDDCC
+	// Token: 0x06014FA0 RID: 85920 RVA: 0x0061C748 File Offset: 0x0061A948
 	public override void Refresh(int roleId, bool isSelected, int gridIndex)
 	{
 		UUITexture roleTexture = base.GetTexture(1);
@@ -67,14 +67,14 @@ public class TowerCurrentTeamRoleItem : GridProxyAbstract<int>
 		sprite2.SetUIActive(false);
 	}
 
-	// Token: 0x0200919E RID: 37278
+	// Token: 0x020083E1 RID: 33761
 	private enum EChildType
 	{
-		// Token: 0x0402F1EB RID: 193003
+		// Token: 0x0402A8ED RID: 174317
 		RoleItem,
-		// Token: 0x0402F1EC RID: 193004
+		// Token: 0x0402A8EE RID: 174318
 		RoleTexture,
-		// Token: 0x0402F1ED RID: 193005
+		// Token: 0x0402A8EF RID: 174319
 		TagSprite
 	}
 }

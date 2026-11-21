@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A40 RID: 14912
+	// Token: 0x02003E1B RID: 15899
 	public class IBvbCardFilterCompareCostT
 	{
-		// Token: 0x17006630 RID: 26160
-		// (get) Token: 0x060142F2 RID: 82674 RVA: 0x002F347A File Offset: 0x002F167A
-		// (set) Token: 0x060142F3 RID: 82675 RVA: 0x002F3482 File Offset: 0x002F1682
+		// Token: 0x17006B60 RID: 27488
+		// (get) Token: 0x0601560E RID: 87566 RVA: 0x00316666 File Offset: 0x00314866
+		// (set) Token: 0x0601560F RID: 87567 RVA: 0x0031666E File Offset: 0x0031486E
 		public EBvbCardFilterType Type { get; set; }
 
-		// Token: 0x17006631 RID: 26161
-		// (get) Token: 0x060142F4 RID: 82676 RVA: 0x002F348B File Offset: 0x002F168B
-		// (set) Token: 0x060142F5 RID: 82677 RVA: 0x002F3493 File Offset: 0x002F1693
+		// Token: 0x17006B61 RID: 27489
+		// (get) Token: 0x06015610 RID: 87568 RVA: 0x00316677 File Offset: 0x00314877
+		// (set) Token: 0x06015611 RID: 87569 RVA: 0x0031667F File Offset: 0x0031487F
 		public EVarCompare CompareType { get; set; }
 
-		// Token: 0x17006632 RID: 26162
-		// (get) Token: 0x060142F6 RID: 82678 RVA: 0x002F349C File Offset: 0x002F169C
-		// (set) Token: 0x060142F7 RID: 82679 RVA: 0x002F34A4 File Offset: 0x002F16A4
+		// Token: 0x17006B62 RID: 27490
+		// (get) Token: 0x06015612 RID: 87570 RVA: 0x00316688 File Offset: 0x00314888
+		// (set) Token: 0x06015613 RID: 87571 RVA: 0x00316690 File Offset: 0x00314890
 		public int Cost { get; set; }
 
-		// Token: 0x060142F8 RID: 82680 RVA: 0x002F34AD File Offset: 0x002F16AD
+		// Token: 0x06015614 RID: 87572 RVA: 0x00316699 File Offset: 0x00314899
 		public IBvbCardFilterCompareCostT()
 		{
 			this.Type = EBvbCardFilterType.CompareCost;

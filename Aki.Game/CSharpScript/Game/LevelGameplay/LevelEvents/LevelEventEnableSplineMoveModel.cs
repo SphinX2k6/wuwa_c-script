@@ -7,17 +7,17 @@ using CSharpScript.Game.LevelGamePlay.Guarantee;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B19 RID: 27417
+	// Token: 0x02005C91 RID: 23697
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventEnableSplineMoveModel : LevelEventBase
 	{
-		// Token: 0x060440AC RID: 278700 RVA: 0x010B99B5 File Offset: 0x010B7BB5
+		// Token: 0x0603A1FE RID: 238078 RVA: 0x01063241 File Offset: 0x01061441
 		public LevelEventEnableSplineMoveModel(int Id) : base(Id)
 		{
 		}
 
-		// Token: 0x060440AD RID: 278701 RVA: 0x010B99CC File Offset: 0x010B7BCC
+		// Token: 0x0603A1FF RID: 238079 RVA: 0x01063258 File Offset: 0x01061458
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440AE RID: 278702 RVA: 0x010B9CB0 File Offset: 0x010B7EB0
+		// Token: 0x0603A200 RID: 238080 RVA: 0x0106353C File Offset: 0x0106173C
 		private void OnRefreshBaseCharacter(float _)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -135,13 +135,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.DelayExecuteList.Clear();
 		}
 
-		// Token: 0x060440AF RID: 278703 RVA: 0x010B9D54 File Offset: 0x010B7F54
+		// Token: 0x0603A201 RID: 238081 RVA: 0x010635E0 File Offset: 0x010617E0
 		protected override void OnReset()
 		{
 			this.InParams = null;
 		}
 
-		// Token: 0x060440B0 RID: 278704 RVA: 0x010B9D60 File Offset: 0x010B7F60
+		// Token: 0x0603A202 RID: 238082 RVA: 0x010635EC File Offset: 0x010617EC
 		protected override void OnUpdateGuarantee()
 		{
 			if (this.InParams == null)
@@ -175,16 +175,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.RemGuaranteeAction, this.Type, this.BaseContext, p, new bool?(true));
 		}
 
-		// Token: 0x040238E6 RID: 145638
+		// Token: 0x0401EB88 RID: 125832
 		private const int CHECK_BASE_CHARACTER_INTERVAL = 500;
 
-		// Token: 0x040238E7 RID: 145639
+		// Token: 0x0401EB89 RID: 125833
 		private EnableSplineMoveModel InParams;
 
-		// Token: 0x040238E8 RID: 145640
+		// Token: 0x0401EB8A RID: 125834
 		private TimerHandle DelayExecuteHandle;
 
-		// Token: 0x040238E9 RID: 145641
+		// Token: 0x0401EB8B RID: 125835
 		[Nullable(new byte[]
 		{
 			1,

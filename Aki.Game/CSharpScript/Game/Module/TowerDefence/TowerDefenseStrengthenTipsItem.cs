@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B5C RID: 19292
+	// Token: 0x02003B04 RID: 15108
 	public class TowerDefenseStrengthenTipsItem : UiPanelBase
 	{
-		// Token: 0x06031F39 RID: 204601 RVA: 0x00B977C8 File Offset: 0x00B959C8
+		// Token: 0x06026CC8 RID: 158920 RVA: 0x00ADBA04 File Offset: 0x00AD9C04
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,20 +24,20 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F3A RID: 204602 RVA: 0x00B97810 File Offset: 0x00B95A10
+		// Token: 0x06026CC9 RID: 158921 RVA: 0x00ADBA4C File Offset: 0x00AD9C4C
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06031F3B RID: 204603 RVA: 0x00B97823 File Offset: 0x00B95A23
+		// Token: 0x06026CCA RID: 158922 RVA: 0x00ADBA5F File Offset: 0x00AD9C5F
 		[NullableContext(1)]
 		public void SetTextByKey(string textKey)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textKey, Array.Empty<object>());
 		}
 
-		// Token: 0x06031F3C RID: 204604 RVA: 0x00B9783C File Offset: 0x00B95A3C
+		// Token: 0x06026CCB RID: 158923 RVA: 0x00ADBA78 File Offset: 0x00AD9C78
 		public UniTask PlayStartSequenceAsync()
 		{
 			TowerDefenseStrengthenTipsItem.<PlayStartSequenceAsync>d__5 <PlayStartSequenceAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <PlayStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F3D RID: 204605 RVA: 0x00B97880 File Offset: 0x00B95A80
+		// Token: 0x06026CCC RID: 158924 RVA: 0x00ADBABC File Offset: 0x00AD9CBC
 		public UniTask PlayCloseSequenceAsync()
 		{
 			TowerDefenseStrengthenTipsItem.<PlayCloseSequenceAsync>d__6 <PlayCloseSequenceAsync>d__;
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <PlayCloseSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401AA2A RID: 109098
+		// Token: 0x0401537C RID: 86908
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200ACE9 RID: 44265
+		// Token: 0x02009708 RID: 38664
 		private class EItemComponent
 		{
-			// Token: 0x040348A3 RID: 215203
+			// Token: 0x0402F24C RID: 193100
 			public const int TipsText = 0;
 		}
 	}

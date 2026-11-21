@@ -5,35 +5,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004149 RID: 16713
+	// Token: 0x0200458D RID: 17805
 	public class IStuckCheckConditionT
 	{
-		// Token: 0x17007665 RID: 30309
-		// (get) Token: 0x06018876 RID: 100470 RVA: 0x00389368 File Offset: 0x00387568
-		// (set) Token: 0x06018877 RID: 100471 RVA: 0x00389370 File Offset: 0x00387570
+		// Token: 0x17007C74 RID: 31860
+		// (get) Token: 0x06019F3E RID: 106302 RVA: 0x003B3924 File Offset: 0x003B1B24
+		// (set) Token: 0x06019F3F RID: 106303 RVA: 0x003B392C File Offset: 0x003B1B2C
 		public List<int> RangeEntities { get; set; }
 
-		// Token: 0x17007666 RID: 30310
-		// (get) Token: 0x06018878 RID: 100472 RVA: 0x00389379 File Offset: 0x00387579
-		// (set) Token: 0x06018879 RID: 100473 RVA: 0x00389381 File Offset: 0x00387581
+		// Token: 0x17007C75 RID: 31861
+		// (get) Token: 0x06019F40 RID: 106304 RVA: 0x003B3935 File Offset: 0x003B1B35
+		// (set) Token: 0x06019F41 RID: 106305 RVA: 0x003B393D File Offset: 0x003B1B3D
 		public float TriggerInterval { get; set; }
 
-		// Token: 0x17007667 RID: 30311
-		// (get) Token: 0x0601887A RID: 100474 RVA: 0x0038938A File Offset: 0x0038758A
-		// (set) Token: 0x0601887B RID: 100475 RVA: 0x00389392 File Offset: 0x00387592
+		// Token: 0x17007C76 RID: 31862
+		// (get) Token: 0x06019F42 RID: 106306 RVA: 0x003B3946 File Offset: 0x003B1B46
+		// (set) Token: 0x06019F43 RID: 106307 RVA: 0x003B394E File Offset: 0x003B1B4E
 		public int MaxTriggerTimes { get; set; }
 
-		// Token: 0x17007668 RID: 30312
-		// (get) Token: 0x0601887C RID: 100476 RVA: 0x0038939B File Offset: 0x0038759B
-		// (set) Token: 0x0601887D RID: 100477 RVA: 0x003893A3 File Offset: 0x003875A3
+		// Token: 0x17007C77 RID: 31863
+		// (get) Token: 0x06019F44 RID: 106308 RVA: 0x003B3957 File Offset: 0x003B1B57
+		// (set) Token: 0x06019F45 RID: 106309 RVA: 0x003B395F File Offset: 0x003B1B5F
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17007669 RID: 30313
-		// (get) Token: 0x0601887E RID: 100478 RVA: 0x003893AC File Offset: 0x003875AC
-		// (set) Token: 0x0601887F RID: 100479 RVA: 0x003893B4 File Offset: 0x003875B4
+		// Token: 0x17007C78 RID: 31864
+		// (get) Token: 0x06019F46 RID: 106310 RVA: 0x003B3968 File Offset: 0x003B1B68
+		// (set) Token: 0x06019F47 RID: 106311 RVA: 0x003B3970 File Offset: 0x003B1B70
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x06018880 RID: 100480 RVA: 0x003893BD File Offset: 0x003875BD
+		// Token: 0x06019F48 RID: 106312 RVA: 0x003B3979 File Offset: 0x003B1B79
 		public IStuckCheckConditionT()
 		{
 			this.RangeEntities = null;

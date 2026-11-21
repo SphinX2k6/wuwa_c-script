@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F3B RID: 20283
+	// Token: 0x0200546D RID: 21613
 	public class IBulletCreateConditionT
 	{
-		// Token: 0x17009232 RID: 37426
-		// (get) Token: 0x060201C9 RID: 131529 RVA: 0x00477B70 File Offset: 0x00475D70
-		// (set) Token: 0x060201CA RID: 131530 RVA: 0x00477B78 File Offset: 0x00475D78
+		// Token: 0x170099B4 RID: 39348
+		// (get) Token: 0x06021F39 RID: 139065 RVA: 0x004ADF04 File Offset: 0x004AC104
+		// (set) Token: 0x06021F3A RID: 139066 RVA: 0x004ADF0C File Offset: 0x004AC10C
 		public EBulletCreateCondition Type { get; set; }
 
-		// Token: 0x17009233 RID: 37427
-		// (get) Token: 0x060201CB RID: 131531 RVA: 0x00477B81 File Offset: 0x00475D81
-		// (set) Token: 0x060201CC RID: 131532 RVA: 0x00477B89 File Offset: 0x00475D89
+		// Token: 0x170099B5 RID: 39349
+		// (get) Token: 0x06021F3B RID: 139067 RVA: 0x004ADF15 File Offset: 0x004AC115
+		// (set) Token: 0x06021F3C RID: 139068 RVA: 0x004ADF1D File Offset: 0x004AC11D
 		public long BulletId { get; set; }
 
-		// Token: 0x060201CD RID: 131533 RVA: 0x00477B92 File Offset: 0x00475D92
+		// Token: 0x06021F3D RID: 139069 RVA: 0x004ADF26 File Offset: 0x004AC126
 		public IBulletCreateConditionT()
 		{
 			this.Type = EBulletCreateCondition.OnHit;

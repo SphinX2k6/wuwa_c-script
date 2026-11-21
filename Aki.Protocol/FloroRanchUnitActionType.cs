@@ -3,55 +3,55 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015C5 RID: 5573
+	// Token: 0x02001637 RID: 5687
 	public enum FloroRanchUnitActionType
 	{
-		// Token: 0x0400BCC9 RID: 48329
+		// Token: 0x0400C1BC RID: 49596
 		[OriginalName("OpBuff")]
 		OpBuff,
-		// Token: 0x0400BCCA RID: 48330
+		// Token: 0x0400C1BD RID: 49597
 		[OriginalName("OpUnit")]
 		OpUnit,
-		// Token: 0x0400BCCB RID: 48331
+		// Token: 0x0400C1BE RID: 49598
 		[OriginalName("UnitSettle")]
 		UnitSettle,
-		// Token: 0x0400BCCC RID: 48332
+		// Token: 0x0400C1BF RID: 49599
 		[OriginalName("UnitResourcesChange")]
 		UnitResourcesChange,
-		// Token: 0x0400BCCD RID: 48333
+		// Token: 0x0400C1C0 RID: 49600
 		[OriginalName("Eating")]
 		Eating,
-		// Token: 0x0400BCCE RID: 48334
+		// Token: 0x0400C1C1 RID: 49601
 		[OriginalName("EvolveUpdate")]
 		EvolveUpdate,
-		// Token: 0x0400BCCF RID: 48335
+		// Token: 0x0400C1C2 RID: 49602
 		[OriginalName("Mix")]
 		Mix,
-		// Token: 0x0400BCD0 RID: 48336
+		// Token: 0x0400C1C3 RID: 49603
 		[OriginalName("Sacrifice")]
 		Sacrifice,
-		// Token: 0x0400BCD1 RID: 48337
+		// Token: 0x0400C1C4 RID: 49604
 		[OriginalName("DebugActionInfo")]
 		DebugActionInfo,
-		// Token: 0x0400BCD2 RID: 48338
+		// Token: 0x0400C1C5 RID: 49605
 		[OriginalName("BeEat")]
 		BeEat,
-		// Token: 0x0400BCD3 RID: 48339
+		// Token: 0x0400C1C6 RID: 49606
 		[OriginalName("ChangePoint")]
 		ChangePoint,
-		// Token: 0x0400BCD4 RID: 48340
+		// Token: 0x0400C1C7 RID: 49607
 		[OriginalName("ActionStop")]
 		ActionStop,
-		// Token: 0x0400BCD5 RID: 48341
+		// Token: 0x0400C1C8 RID: 49608
 		[OriginalName("ToyLvUp")]
 		ToyLvUp,
-		// Token: 0x0400BCD6 RID: 48342
+		// Token: 0x0400C1C9 RID: 49609
 		[OriginalName("ChangeTag")]
 		ChangeTag,
-		// Token: 0x0400BCD7 RID: 48343
+		// Token: 0x0400C1CA RID: 49610
 		[OriginalName("StageTributeChange")]
 		StageTributeChange,
-		// Token: 0x0400BCD8 RID: 48344
+		// Token: 0x0400C1CB RID: 49611
 		[OriginalName("SelfDefineValue")]
 		SelfDefineValue
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018C4 RID: 6340
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A55 RID: 6741
 	public class IClientModifyTarget
 	{
-		// Token: 0x06008801 RID: 34817 RVA: 0x00141FF8 File Offset: 0x001401F8
+		// Token: 0x06008F49 RID: 36681 RVA: 0x00151B70 File Offset: 0x0014FD70
 		private IClientModifyTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008802 RID: 34818 RVA: 0x00142030 File Offset: 0x00140230
+		// Token: 0x06008F4A RID: 36682 RVA: 0x00151BA8 File Offset: 0x0014FDA8
 		public static IClientModifyTarget Create([Nullable(2)] IClientModifyTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008803 RID: 34819 RVA: 0x00142043 File Offset: 0x00140243
+		// Token: 0x06008F4B RID: 36683 RVA: 0x00151BBB File Offset: 0x0014FDBB
 		public static IClientModifyTarget CreateFromSetValue([Nullable(2)] IClientModifyTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008804 RID: 34820 RVA: 0x00142056 File Offset: 0x00140256
+		// Token: 0x06008F4C RID: 36684 RVA: 0x00151BCE File Offset: 0x0014FDCE
 		public IClientModifyTarget_SetValue ToSetValue()
 		{
 			return new IClientModifyTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C2F RID: 11311
-		// (get) Token: 0x06008805 RID: 34821 RVA: 0x00142069 File Offset: 0x00140269
-		// (set) Token: 0x06008806 RID: 34822 RVA: 0x00142094 File Offset: 0x00140294
+		// Token: 0x17002E31 RID: 11825
+		// (get) Token: 0x06008F4D RID: 36685 RVA: 0x00151BE1 File Offset: 0x0014FDE1
+		// (set) Token: 0x06008F4E RID: 36686 RVA: 0x00151C0C File Offset: 0x0014FE0C
 		public virtual EClientModifyTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400557C RID: 21884
+		// Token: 0x040059D6 RID: 22998
 		[Nullable(2)]
 		protected IClientModifyTarget FbInstance;
 
-		// Token: 0x0400557D RID: 21885
+		// Token: 0x040059D7 RID: 22999
 		[Nullable(2)]
 		protected IClientModifyTarget_SetValue PocoInterface;
 	}

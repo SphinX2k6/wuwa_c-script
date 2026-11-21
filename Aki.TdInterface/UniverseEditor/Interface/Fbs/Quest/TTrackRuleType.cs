@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004326 RID: 17190
+	// Token: 0x02004788 RID: 18312
 	public enum TTrackRuleType : byte
 	{
-		// Token: 0x0400C0E0 RID: 49376
+		// Token: 0x0400CAFE RID: 51966
 		NONE,
-		// Token: 0x0400C0E1 RID: 49377
+		// Token: 0x0400CAFF RID: 51967
 		ITrackRuleFindFirstNotMatchState,
-		// Token: 0x0400C0E2 RID: 49378
+		// Token: 0x0400CB00 RID: 51968
 		ITrackRuleFindLastMatchState
 	}
 }

@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x02002EA5 RID: 11941
+// Token: 0x020023F8 RID: 9208
 public interface IBoundsLocker
 {
-	// Token: 0x17002331 RID: 9009
-	// (get) Token: 0x060197FD RID: 104445
-	// (set) Token: 0x060197FE RID: 104446
+	// Token: 0x170023C7 RID: 9159
+	// (get) Token: 0x060170DD RID: 94429
+	// (set) Token: 0x060170DE RID: 94430
 	bool LockUpperBounds { get; set; }
 
-	// Token: 0x17002332 RID: 9010
-	// (get) Token: 0x060197FF RID: 104447
-	// (set) Token: 0x06019800 RID: 104448
+	// Token: 0x170023C8 RID: 9160
+	// (get) Token: 0x060170DF RID: 94431
+	// (set) Token: 0x060170E0 RID: 94432
 	bool LockLowerBounds { get; set; }
 
-	// Token: 0x17002333 RID: 9011
-	// (get) Token: 0x06019801 RID: 104449
-	// (set) Token: 0x06019802 RID: 104450
+	// Token: 0x170023C9 RID: 9161
+	// (get) Token: 0x060170E1 RID: 94433
+	// (set) Token: 0x060170E2 RID: 94434
 	float UpperPercent { get; set; }
 
-	// Token: 0x17002334 RID: 9012
-	// (get) Token: 0x06019803 RID: 104451
-	// (set) Token: 0x06019804 RID: 104452
+	// Token: 0x170023CA RID: 9162
+	// (get) Token: 0x060170E3 RID: 94435
+	// (set) Token: 0x060170E4 RID: 94436
 	float UpperOffset { get; set; }
 
-	// Token: 0x17002335 RID: 9013
-	// (get) Token: 0x06019805 RID: 104453
-	// (set) Token: 0x06019806 RID: 104454
+	// Token: 0x170023CB RID: 9163
+	// (get) Token: 0x060170E5 RID: 94437
+	// (set) Token: 0x060170E6 RID: 94438
 	float LowerPercent { get; set; }
 
-	// Token: 0x17002336 RID: 9014
-	// (get) Token: 0x06019807 RID: 104455
-	// (set) Token: 0x06019808 RID: 104456
+	// Token: 0x170023CC RID: 9164
+	// (get) Token: 0x060170E7 RID: 94439
+	// (set) Token: 0x060170E8 RID: 94440
 	float LowerOffset { get; set; }
 }

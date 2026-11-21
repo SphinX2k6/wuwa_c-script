@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002706 RID: 9990
+	// Token: 0x020029CD RID: 10701
 	public class IDetectBattleMonsterOnGround : IDetectBattleTagType
 	{
-		// Token: 0x0600DEF4 RID: 57076 RVA: 0x00210E02 File Offset: 0x0020F002
-		[NullableContext(1)]
+		// Token: 0x0600ECE0 RID: 60640 RVA: 0x0022D7AB File Offset: 0x0022B9AB
 		public static IDetectBattleMonsterOnGround Create(IDetectBattleMonsterOnGround? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042AA RID: 17066
-		// (get) Token: 0x0600DEF5 RID: 57077 RVA: 0x00210E21 File Offset: 0x0020F021
+		// Token: 0x170045F4 RID: 17908
+		// (get) Token: 0x0600ECE1 RID: 60641 RVA: 0x0022D7CA File Offset: 0x0022B9CA
 		public override EDetectBattleTagType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BBC RID: 31676
+		// Token: 0x04008261 RID: 33377
 		private IDetectBattleMonsterOnGround Instance;
 	}
 }

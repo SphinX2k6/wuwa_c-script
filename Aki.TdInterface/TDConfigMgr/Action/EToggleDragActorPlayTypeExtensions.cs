@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002479 RID: 9337
+	// Token: 0x0200271A RID: 10010
 	public static class EToggleDragActorPlayTypeExtensions
 	{
-		// Token: 0x0600CA9F RID: 51871 RVA: 0x001DD384 File Offset: 0x001DB584
+		// Token: 0x0600D74F RID: 55119 RVA: 0x001F7438 File Offset: 0x001F5638
 		public static string ToEnumString(this EToggleDragActorPlayType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAA0 RID: 51872 RVA: 0x001DD3BC File Offset: 0x001DB5BC
+		// Token: 0x0600D750 RID: 55120 RVA: 0x001F7470 File Offset: 0x001F5670
 		public static EToggleDragActorPlayType FromString(string name)
 		{
 			EToggleDragActorPlayType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAA1 RID: 51873 RVA: 0x001DD3E5 File Offset: 0x001DB5E5
+		// Token: 0x0600D751 RID: 55121 RVA: 0x001F7499 File Offset: 0x001F5699
 		public static bool TryFromString(string name, out EToggleDragActorPlayType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CAA2 RID: 51874 RVA: 0x001DD41E File Offset: 0x001DB61E
+		// Token: 0x0600D752 RID: 55122 RVA: 0x001F74D2 File Offset: 0x001F56D2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAA3 RID: 51875 RVA: 0x001DD436 File Offset: 0x001DB636
+		// Token: 0x0600D753 RID: 55123 RVA: 0x001F74EA File Offset: 0x001F56EA
 		public static EToggleDragActorPlayType[] GetValues()
 		{
 			return new EToggleDragActorPlayType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAA4 RID: 51876 RVA: 0x001DD442 File Offset: 0x001DB642
+		// Token: 0x0600D754 RID: 55124 RVA: 0x001F74F6 File Offset: 0x001F56F6
 		public static string[] GetNames()
 		{
 			return new string[]

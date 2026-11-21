@@ -8,28 +8,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Mail
 {
-	// Token: 0x020056A2 RID: 22178
+	// Token: 0x02004678 RID: 18040
 	internal class RewardItem : LoopScrollSmallItemGrid<TItem>
 	{
-		// Token: 0x060386E7 RID: 231143 RVA: 0x00D65E71 File Offset: 0x00D64071
+		// Token: 0x0602D5E4 RID: 185828 RVA: 0x00CB3FC1 File Offset: 0x00CB21C1
 		protected override void OnRefresh(TItem data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data, isSelected, gridIndex);
 		}
 
-		// Token: 0x060386E8 RID: 231144 RVA: 0x00D65E7C File Offset: 0x00D6407C
+		// Token: 0x0602D5E5 RID: 185829 RVA: 0x00CB3FCC File Offset: 0x00CB21CC
 		protected override void OnExtendToggleClicked()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 		}
 
-		// Token: 0x060386E9 RID: 231145 RVA: 0x00D65E90 File Offset: 0x00D64090
+		// Token: 0x0602D5E6 RID: 185830 RVA: 0x00CB3FE1 File Offset: 0x00CB21E1
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x060386EA RID: 231146 RVA: 0x00D65E9C File Offset: 0x00D6409C
+		// Token: 0x0602D5E7 RID: 185831 RVA: 0x00CB3FEC File Offset: 0x00CB21EC
 		public override void Refresh(TItem data, bool isSelected, int gridIndex)
 		{
 			InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -115,11 +115,11 @@ namespace CSharpScript.Game.Module.Mail
 			base.Apply<PropSmallItemGrid>(parameters3);
 		}
 
-		// Token: 0x0401DA32 RID: 121394
+		// Token: 0x040184BD RID: 99517
 		[Nullable(1)]
 		public MailBoxView Onwner;
 
-		// Token: 0x0401DA33 RID: 121395
+		// Token: 0x040184BE RID: 99518
 		private int ConfigId;
 	}
 }

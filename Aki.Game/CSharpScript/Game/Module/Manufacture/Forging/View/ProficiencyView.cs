@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x0200564C RID: 22092
+	// Token: 0x02004622 RID: 17954
 	public class ProficiencyView : UiPanelBase
 	{
-		// Token: 0x060382AC RID: 230060 RVA: 0x00D4DDEC File Offset: 0x00D4BFEC
+		// Token: 0x0602D1AA RID: 184746 RVA: 0x00C9BB3C File Offset: 0x00C99D3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060382AD RID: 230061 RVA: 0x00D4DED4 File Offset: 0x00D4C0D4
+		// Token: 0x0602D1AB RID: 184747 RVA: 0x00C9BC24 File Offset: 0x00C99E24
 		public void OnChangeRoleClick()
 		{
 			if (this.ChangeClickCall != null)
@@ -44,20 +44,20 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x060382AE RID: 230062 RVA: 0x00D4DEE9 File Offset: 0x00D4C0E9
+		// Token: 0x0602D1AC RID: 184748 RVA: 0x00C9BC39 File Offset: 0x00C99E39
 		[NullableContext(1)]
 		public void BindChangeRoleClick(Action func)
 		{
 			this.ChangeClickCall = func;
 		}
 
-		// Token: 0x060382AF RID: 230063 RVA: 0x00D4DEF2 File Offset: 0x00D4C0F2
+		// Token: 0x0602D1AD RID: 184749 RVA: 0x00C9BC42 File Offset: 0x00C99E42
 		public void SetExpNumVisible(bool visible)
 		{
 			base.GetText(0).SetUIActive(visible);
 		}
 
-		// Token: 0x060382B0 RID: 230064 RVA: 0x00D4DF04 File Offset: 0x00D4C104
+		// Token: 0x0602D1AE RID: 184750 RVA: 0x00C9BC54 File Offset: 0x00C99E54
 		public unsafe void SetExpNum(int count, int single, int sum, int times)
 		{
 			int num = single * sum;
@@ -90,30 +90,30 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			LguiUtil.Instance.SetLocalText(base.GetText(0), "Proficiency", Array.Empty<object>());
 		}
 
-		// Token: 0x060382B1 RID: 230065 RVA: 0x00D4E018 File Offset: 0x00D4C218
+		// Token: 0x0602D1AF RID: 184751 RVA: 0x00C9BD68 File Offset: 0x00C99F68
 		public void SetRoleTexture(int roleId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
 			base.SetRoleIcon(roleDataById.GetRoleConfig().RoleHeadIconLarge, base.GetTexture(1), roleId, null, null);
 		}
 
-		// Token: 0x0401D8C2 RID: 121026
+		// Token: 0x0401834D RID: 99149
 		[Nullable(2)]
 		private Action ChangeClickCall;
 
-		// Token: 0x0200B7FF RID: 47103
+		// Token: 0x0200A22A RID: 41514
 		public class EProficiencyViewComponents
 		{
-			// Token: 0x04037A9D RID: 227997
+			// Token: 0x040324C7 RID: 206023
 			public const int TxtAddNum = 0;
 
-			// Token: 0x04037A9E RID: 227998
+			// Token: 0x040324C8 RID: 206024
 			public const int TexRole = 1;
 
-			// Token: 0x04037A9F RID: 227999
+			// Token: 0x040324C9 RID: 206025
 			public const int BtnChange = 2;
 
-			// Token: 0x04037AA0 RID: 228000
+			// Token: 0x040324CA RID: 206026
 			public const int TxtType = 3;
 		}
 	}

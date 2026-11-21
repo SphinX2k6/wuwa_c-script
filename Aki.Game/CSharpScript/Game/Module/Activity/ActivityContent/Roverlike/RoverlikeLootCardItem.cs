@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006165 RID: 24933
+	// Token: 0x020050E3 RID: 20707
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLootCardItem : UiPanelBase
 	{
-		// Token: 0x0603F066 RID: 258150 RVA: 0x00F3A688 File Offset: 0x00F38888
+		// Token: 0x06033D26 RID: 212262 RVA: 0x00E8155C File Offset: 0x00E7F75C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F067 RID: 258151 RVA: 0x00F3A83F File Offset: 0x00F38A3F
+		// Token: 0x06033D27 RID: 212263 RVA: 0x00E81713 File Offset: 0x00E7F913
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<RoverlikeLootStarItem, bool>(base.GetHorizontalLayout(4), new Func<RoverlikeLootStarItem>(this.CreateStarItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603F068 RID: 258152 RVA: 0x00F3A874 File Offset: 0x00F38A74
+		// Token: 0x06033D28 RID: 212264 RVA: 0x00E81748 File Offset: 0x00E7F948
 		public void Refresh(RoverlikeLootGainEntry entry)
 		{
 			RoverRogueLoot? lootConfig = RoverlikeConfig.Instance.GetLootConfig(entry.ConfigId);
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshLocked(entry, lootConfig.Value);
 		}
 
-		// Token: 0x0603F069 RID: 258153 RVA: 0x00F3A908 File Offset: 0x00F38B08
+		// Token: 0x06033D29 RID: 212265 RVA: 0x00E817DC File Offset: 0x00E7F9DC
 		public void ResetView()
 		{
 			GenericLayout<RoverlikeLootStarItem, bool> starLayout = this.StarLayout;
@@ -100,8 +100,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x170091B7 RID: 37303
-		// (get) Token: 0x0603F06A RID: 258154 RVA: 0x00F3A966 File Offset: 0x00F38B66
+		// Token: 0x17006519 RID: 25881
+		// (get) Token: 0x06033D2A RID: 212266 RVA: 0x00E8183A File Offset: 0x00E7FA3A
 		[Nullable(2)]
 		private RoverlikeActivityData ActivityData
 		{
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F06B RID: 258155 RVA: 0x00F3A978 File Offset: 0x00F38B78
+		// Token: 0x06033D2B RID: 212267 RVA: 0x00E8184C File Offset: 0x00E7FA4C
 		private void RefreshTips(bool unlocked)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(9), unlocked ? "RoverRogue_LootUpgradeText" : "RoverRogue_LootUnlockText", Array.Empty<object>());
 		}
 
-		// Token: 0x0603F06C RID: 258156 RVA: 0x00F3A9A0 File Offset: 0x00F38BA0
+		// Token: 0x06033D2C RID: 212268 RVA: 0x00E81874 File Offset: 0x00E7FA74
 		private void RefreshUnlocked(RoverlikeLootGainEntry entry, RoverRogueLoot config)
 		{
 			UUITexture texture = base.GetTexture(3);
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F06D RID: 258157 RVA: 0x00F3AAC8 File Offset: 0x00F38CC8
+		// Token: 0x06033D2D RID: 212269 RVA: 0x00E8199C File Offset: 0x00E7FB9C
 		private void RefreshLocked(RoverlikeLootGainEntry entry, RoverRogueLoot config)
 		{
 			UUITexture texture = base.GetTexture(3);
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603F06E RID: 258158 RVA: 0x00F3ABE8 File Offset: 0x00F38DE8
+		// Token: 0x06033D2E RID: 212270 RVA: 0x00E81ABC File Offset: 0x00E7FCBC
 		private void RefreshStars(int level, int maxLevel)
 		{
 			List<bool> list = new List<bool>();
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.StarLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F06F RID: 258159 RVA: 0x00F3AC20 File Offset: 0x00F38E20
+		// Token: 0x06033D2F RID: 212271 RVA: 0x00E81AF4 File Offset: 0x00E7FCF4
 		[return: TupleElementNames(new string[]
 		{
 			"desc",
@@ -241,13 +241,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new ValueTuple<string, int[]>(item, item2);
 		}
 
-		// Token: 0x0603F070 RID: 258160 RVA: 0x00F3AC99 File Offset: 0x00F38E99
+		// Token: 0x06033D30 RID: 212272 RVA: 0x00E81B6D File Offset: 0x00E7FD6D
 		private RoverlikeLootStarItem CreateStarItem()
 		{
 			return new RoverlikeLootStarItem();
 		}
 
-		// Token: 0x04020E0B RID: 134667
+		// Token: 0x0401B738 RID: 112440
 		[Nullable(new byte[]
 		{
 			2,
@@ -255,44 +255,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeLootStarItem, bool> StarLayout;
 
-		// Token: 0x0200C3C9 RID: 50121
+		// Token: 0x0200ADB0 RID: 44464
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B144 RID: 241988
+			// Token: 0x04035AA5 RID: 219813
 			public const int TxtName = 0;
 
-			// Token: 0x0403B145 RID: 241989
+			// Token: 0x04035AA6 RID: 219814
 			public const int TxtStarLabel = 1;
 
-			// Token: 0x0403B146 RID: 241990
+			// Token: 0x04035AA7 RID: 219815
 			public const int TexIcon = 2;
 
-			// Token: 0x0403B147 RID: 241991
+			// Token: 0x04035AA8 RID: 219816
 			public const int TexIconMask = 3;
 
-			// Token: 0x0403B148 RID: 241992
+			// Token: 0x04035AA9 RID: 219817
 			public const int StarLayout = 4;
 
-			// Token: 0x0403B149 RID: 241993
+			// Token: 0x04035AAA RID: 219818
 			public const int StarItem = 5;
 
-			// Token: 0x0403B14A RID: 241994
+			// Token: 0x04035AAB RID: 219819
 			public const int TxtEffect = 6;
 
-			// Token: 0x0403B14B RID: 241995
+			// Token: 0x04035AAC RID: 219820
 			public const int TxtLockInfo = 7;
 
-			// Token: 0x0403B14C RID: 241996
+			// Token: 0x04035AAD RID: 219821
 			public const int PnlUpgrade = 8;
 
-			// Token: 0x0403B14D RID: 241997
+			// Token: 0x04035AAE RID: 219822
 			public const int TxtTips = 9;
 
-			// Token: 0x0403B14E RID: 241998
+			// Token: 0x04035AAF RID: 219823
 			public const int TxtUpgradeCond = 10;
 
-			// Token: 0x0403B14F RID: 241999
+			// Token: 0x04035AB0 RID: 219824
 			public const int PnlMax = 11;
 		}
 	}

@@ -17,13 +17,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 {
-	// Token: 0x02006AD3 RID: 27347
+	// Token: 0x02005C4B RID: 23627
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class LevelPickInteractController : ControllerBase
 	{
-		// Token: 0x06043F1A RID: 278298 RVA: 0x010A9AB5 File Offset: 0x010A7CB5
+		// Token: 0x0603A063 RID: 237667 RVA: 0x01053165 File Offset: 0x01051365
 		protected override bool OnInit()
 		{
 			base.PauseTick();
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			return true;
 		}
 
-		// Token: 0x06043F1B RID: 278299 RVA: 0x010A9ADA File Offset: 0x010A7CDA
+		// Token: 0x0603A064 RID: 237668 RVA: 0x0105318A File Offset: 0x0105138A
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.OnStartLoadingState, new Action(this.OnOpenLoading));
 			return true;
 		}
 
-		// Token: 0x06043F1C RID: 278300 RVA: 0x010A9AF9 File Offset: 0x010A7CF9
+		// Token: 0x0603A065 RID: 237669 RVA: 0x010531A9 File Offset: 0x010513A9
 		private void OnOpenLoading()
 		{
 			if (this.InPickInteractModel)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F1D RID: 278301 RVA: 0x010A9B0C File Offset: 0x010A7D0C
+		// Token: 0x0603A066 RID: 237670 RVA: 0x010531BC File Offset: 0x010513BC
 		private void AddInputEvent()
 		{
 			InputDistributeController.Instance.BindTouches(new int[]
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}), new TInputHandle<InputDistributeDefine.EActionType>(this.OnMouseClick));
 		}
 
-		// Token: 0x06043F1E RID: 278302 RVA: 0x010A9B6C File Offset: 0x010A7D6C
+		// Token: 0x0603A067 RID: 237671 RVA: 0x0105321C File Offset: 0x0105141C
 		private void RemoveInputEvent()
 		{
 			InputDistributeController.Instance.UnBindTouches(new <>z__ReadOnlyArray<int>(new int[]
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}, new TInputHandle<InputDistributeDefine.EActionType>(this.OnMouseClick));
 		}
 
-		// Token: 0x06043F1F RID: 278303 RVA: 0x010A9BCC File Offset: 0x010A7DCC
+		// Token: 0x0603A068 RID: 237672 RVA: 0x0105327C File Offset: 0x0105147C
 		private void OnMouseClick(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType == InputDistributeDefine.EActionType.Release)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F20 RID: 278304 RVA: 0x010A9C3C File Offset: 0x010A7E3C
+		// Token: 0x0603A069 RID: 237673 RVA: 0x010532EC File Offset: 0x010514EC
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification inputIdentification)
 		{
 			if (touchData.TouchType == InputDistributeDefine.ETouchType.TouchEnd)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F21 RID: 278305 RVA: 0x010A9CDC File Offset: 0x010A7EDC
+		// Token: 0x0603A06A RID: 237674 RVA: 0x0105338C File Offset: 0x0105158C
 		public void EnterPickInteractModel(IRenjuChess inParams, bool isPickTrigger = false)
 		{
 			int chessboard = inParams.Chessboard;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			EventSystem.Instance.Add(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
 		}
 
-		// Token: 0x06043F22 RID: 278306 RVA: 0x010A9E30 File Offset: 0x010A8030
+		// Token: 0x0603A06B RID: 237675 RVA: 0x010534E0 File Offset: 0x010516E0
 		private void OnActiveBattleView()
 		{
 			if (this.InPickInteractModel)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			EventSystem.Instance.Remove(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
 		}
 
-		// Token: 0x06043F23 RID: 278307 RVA: 0x010A9E94 File Offset: 0x010A8094
+		// Token: 0x0603A06C RID: 237676 RVA: 0x01053544 File Offset: 0x01051744
 		private void EnterPickCamera(IRenjuChess inParams)
 		{
 			IAdjustPlayerCameraType cameraConfig = inParams.CameraConfig;
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F24 RID: 278308 RVA: 0x010A9FD4 File Offset: 0x010A81D4
+		// Token: 0x0603A06D RID: 237677 RVA: 0x01053684 File Offset: 0x01051884
 		private void ResetCameraAndCloseView(bool force = false)
 		{
 			if (this.OnClosingView != null)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}, true);
 		}
 
-		// Token: 0x06043F25 RID: 278309 RVA: 0x010AA0A4 File Offset: 0x010A82A4
+		// Token: 0x0603A06E RID: 237678 RVA: 0x01053754 File Offset: 0x01051954
 		[NullableContext(2)]
 		private void CloseInteractionView(object closeParams = null)
 		{
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F26 RID: 278310 RVA: 0x010AA170 File Offset: 0x010A8370
+		// Token: 0x0603A06F RID: 237679 RVA: 0x01053820 File Offset: 0x01051A20
 		private void OnTicTacToeGameOver(bool playerWin)
 		{
 			this.WaitTicTacToeGameEndTime = 2500f;
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}, 1500f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043F27 RID: 278311 RVA: 0x010AA22C File Offset: 0x010A842C
+		// Token: 0x0603A070 RID: 237680 RVA: 0x010538DC File Offset: 0x01051ADC
 		private void OnTicTacToeGameOverPlotStart(PlotInfo plotInfo)
 		{
 			EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnTicTacToeGameOverPlotStart));
@@ -329,14 +329,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			EventSystem.Instance.Add(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnTicTacToeGameOverPlotEnd));
 		}
 
-		// Token: 0x06043F28 RID: 278312 RVA: 0x010AA296 File Offset: 0x010A8496
+		// Token: 0x0603A071 RID: 237681 RVA: 0x01053946 File Offset: 0x01051B46
 		private void OnTicTacToeGameOverPlotEnd(PlotResultInfo plotResult)
 		{
 			EventSystem.Instance.Remove(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnTicTacToeGameOverPlotEnd));
 			this.ExitPickInteractModel(false);
 		}
 
-		// Token: 0x06043F29 RID: 278313 RVA: 0x010AA2BC File Offset: 0x010A84BC
+		// Token: 0x0603A072 RID: 237682 RVA: 0x0105396C File Offset: 0x01051B6C
 		public void ExitPickInteractModel(bool force = false)
 		{
 			this.WaitTicTacToeGameEndTime = 0f;
@@ -411,7 +411,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x06043F2A RID: 278314 RVA: 0x010AA4B2 File Offset: 0x010A86B2
+		// Token: 0x0603A073 RID: 237683 RVA: 0x01053B62 File Offset: 0x01051D62
 		public void ResetPickInteractGame()
 		{
 			if (!this.InPickInteractModel)
@@ -427,9 +427,9 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			this.RefreshAllPickBounds();
 		}
 
-		// Token: 0x1700997A RID: 39290
-		// (get) Token: 0x06043F2B RID: 278315 RVA: 0x010AA4E8 File Offset: 0x010A86E8
-		// (set) Token: 0x06043F2C RID: 278316 RVA: 0x010AA4F0 File Offset: 0x010A86F0
+		// Token: 0x17006E7D RID: 28285
+		// (get) Token: 0x0603A074 RID: 237684 RVA: 0x01053B98 File Offset: 0x01051D98
+		// (set) Token: 0x0603A075 RID: 237685 RVA: 0x01053BA0 File Offset: 0x01051DA0
 		public bool InPickInteractModel
 		{
 			get
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F2D RID: 278317 RVA: 0x010AA514 File Offset: 0x010A8714
+		// Token: 0x0603A076 RID: 237686 RVA: 0x01053BC4 File Offset: 0x01051DC4
 		protected override void OnTick(float delta)
 		{
 			if (!this.InPickInteractModel)
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F2E RID: 278318 RVA: 0x010AA5A4 File Offset: 0x010A87A4
+		// Token: 0x0603A077 RID: 237687 RVA: 0x01053C54 File Offset: 0x01051E54
 		private List<LevelPickInteractItem> GetMousePickItem()
 		{
 			this.MousePickActorArray.Clear();
@@ -519,7 +519,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			return this.MousePickActorArray;
 		}
 
-		// Token: 0x06043F2F RID: 278319 RVA: 0x010AA6D8 File Offset: 0x010A88D8
+		// Token: 0x0603A078 RID: 237688 RVA: 0x01053D88 File Offset: 0x01051F88
 		private void RefreshAllPickBounds()
 		{
 			foreach (KeyValuePair<AActor, LevelPickInteractItem> keyValuePair in this.PickActorItemMap)
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F30 RID: 278320 RVA: 0x010AA740 File Offset: 0x010A8940
+		// Token: 0x0603A079 RID: 237689 RVA: 0x01053DF0 File Offset: 0x01051FF0
 		private void RefreshPickBoundsEvent(AActor actor)
 		{
 			if (!this.PickActorItemMap.ContainsKey(actor))
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			levelPickInteractItem.RefreshBox(actor);
 		}
 
-		// Token: 0x06043F31 RID: 278321 RVA: 0x010AA768 File Offset: 0x010A8968
+		// Token: 0x0603A07A RID: 237690 RVA: 0x01053E18 File Offset: 0x01052018
 		private void OnWaitInitPiecesComplete()
 		{
 			if (this.ChessBoardComponent == null || !this.IsWaittingInitPieces)
@@ -559,7 +559,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			this.InitChessboardPickItem(this.ChessBoardComponent);
 		}
 
-		// Token: 0x06043F32 RID: 278322 RVA: 0x010AA78E File Offset: 0x010A898E
+		// Token: 0x0603A07B RID: 237691 RVA: 0x01053E3E File Offset: 0x0105203E
 		private void OnPiecePostMoveEventStart()
 		{
 			if (this.IsDoingPostMoveEvent)
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F33 RID: 278323 RVA: 0x010AA7B3 File Offset: 0x010A89B3
+		// Token: 0x0603A07C RID: 237692 RVA: 0x01053E63 File Offset: 0x01052063
 		private void OnPiecePostMoveEventEnd()
 		{
 			if (!this.IsDoingPostMoveEvent)
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F34 RID: 278324 RVA: 0x010AA7D8 File Offset: 0x010A89D8
+		// Token: 0x0603A07D RID: 237693 RVA: 0x01053E88 File Offset: 0x01052088
 		private void InitChessboardPickItem(SceneItemJigsawBaseComponent boardComponent)
 		{
 			this.ChessBoardComponent = boardComponent;
@@ -621,8 +621,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x1700997B RID: 39291
-		// (get) Token: 0x06043F35 RID: 278325 RVA: 0x010AA8F8 File Offset: 0x010A8AF8
+		// Token: 0x17006E7E RID: 28286
+		// (get) Token: 0x0603A07E RID: 237694 RVA: 0x01053FA8 File Offset: 0x010521A8
 		public static LevelPickInteractController Instance
 		{
 			get
@@ -631,7 +631,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F36 RID: 278326 RVA: 0x010AA8FF File Offset: 0x010A8AFF
+		// Token: 0x0603A07F RID: 237695 RVA: 0x01053FAF File Offset: 0x010521AF
 		public static LevelPickInteractController GetOrCreateInstance()
 		{
 			if (LevelPickInteractController._Instance == null)
@@ -641,7 +641,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			return LevelPickInteractController._Instance;
 		}
 
-		// Token: 0x06043F37 RID: 278327 RVA: 0x010AA913 File Offset: 0x010A8B13
+		// Token: 0x0603A080 RID: 237696 RVA: 0x01053FC3 File Offset: 0x010521C3
 		public static bool CreateInstance()
 		{
 			if (LevelPickInteractController._Instance != null)
@@ -652,81 +652,81 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			return true;
 		}
 
-		// Token: 0x06043F38 RID: 278328 RVA: 0x010AA929 File Offset: 0x010A8B29
+		// Token: 0x0603A081 RID: 237697 RVA: 0x01053FD9 File Offset: 0x010521D9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043F39 RID: 278329 RVA: 0x010AA92B File Offset: 0x010A8B2B
+		// Token: 0x0603A082 RID: 237698 RVA: 0x01053FDB File Offset: 0x010521DB
 		public static void ResetStaticDefaultValue()
 		{
 			LevelPickInteractController._Instance = null;
 		}
 
-		// Token: 0x06043F3A RID: 278330 RVA: 0x010AA933 File Offset: 0x010A8B33
+		// Token: 0x0603A083 RID: 237699 RVA: 0x01053FE3 File Offset: 0x010521E3
 		static LevelPickInteractController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelPickInteractController.CreateStaticDefaultValue), new Action(LevelPickInteractController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402383F RID: 145471
+		// Token: 0x0401EADF RID: 125663
 		private bool IsPickTrigger;
 
-		// Token: 0x04023840 RID: 145472
+		// Token: 0x0401EAE0 RID: 125664
 		private readonly Dictionary<AActor, LevelPickInteractItem> PickActorItemMap = new Dictionary<AActor, LevelPickInteractItem>();
 
-		// Token: 0x04023841 RID: 145473
+		// Token: 0x0401EAE1 RID: 125665
 		private readonly List<LevelPickInteractItem> MousePickActorArray = new List<LevelPickInteractItem>();
 
-		// Token: 0x04023842 RID: 145474
+		// Token: 0x0401EAE2 RID: 125666
 		private readonly Vector2D AnchoredPosition = Vector2D.Create();
 
-		// Token: 0x04023843 RID: 145475
+		// Token: 0x0401EAE3 RID: 125667
 		private readonly Vector2D TouchPosition = Vector2D.Create();
 
-		// Token: 0x04023844 RID: 145476
+		// Token: 0x0401EAE4 RID: 125668
 		[Nullable(2)]
 		private SceneItemJigsawBaseComponent ChessBoardComponent;
 
-		// Token: 0x04023845 RID: 145477
+		// Token: 0x0401EAE5 RID: 125669
 		[Nullable(2)]
 		private WaitEntityTask WaitEntityTask;
 
-		// Token: 0x04023846 RID: 145478
+		// Token: 0x0401EAE6 RID: 125670
 		[Nullable(2)]
 		private IRenjuChess EnterParams;
 
-		// Token: 0x04023847 RID: 145479
+		// Token: 0x0401EAE7 RID: 125671
 		private ELevelPickInteractType LevelPickInteractType;
 
-		// Token: 0x04023848 RID: 145480
+		// Token: 0x0401EAE8 RID: 125672
 		private EAdjustPlayerCamera? EnterCameraModel;
 
-		// Token: 0x04023849 RID: 145481
+		// Token: 0x0401EAE9 RID: 125673
 		[Nullable(2)]
 		public Action OnClosingView;
 
-		// Token: 0x0402384A RID: 145482
+		// Token: 0x0401EAEA RID: 125674
 		[Nullable(2)]
 		public Action OnViewPiecePostMoveEventStart;
 
-		// Token: 0x0402384B RID: 145483
+		// Token: 0x0401EAEB RID: 125675
 		[Nullable(2)]
 		public Action OnViewPiecePostMoveEventEnd;
 
-		// Token: 0x0402384C RID: 145484
+		// Token: 0x0401EAEC RID: 125676
 		private float WaitTicTacToeGameEndTime;
 
-		// Token: 0x0402384D RID: 145485
+		// Token: 0x0401EAED RID: 125677
 		private bool InPickInteractModeInternal;
 
-		// Token: 0x0402384E RID: 145486
+		// Token: 0x0401EAEE RID: 125678
 		private bool IsWaittingInitPieces;
 
-		// Token: 0x0402384F RID: 145487
+		// Token: 0x0401EAEF RID: 125679
 		private bool IsDoingPostMoveEvent;
 
-		// Token: 0x04023850 RID: 145488
+		// Token: 0x0401EAF0 RID: 125680
 		[Nullable(2)]
 		private static LevelPickInteractController _Instance;
 	}

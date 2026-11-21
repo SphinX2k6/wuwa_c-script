@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rewards
 {
-	// Token: 0x02006849 RID: 26697
+	// Token: 0x02005799 RID: 22425
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 	})]
 	internal class DangoBrawlRewardTabItem : GridProxyAbstract<DangoBrawlRewardTabData>
 	{
-		// Token: 0x06042A42 RID: 272962 RVA: 0x0103456C File Offset: 0x0103276C
+		// Token: 0x06037597 RID: 226711 RVA: 0x00F75A94 File Offset: 0x00F73C94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042A43 RID: 272963 RVA: 0x01034633 File Offset: 0x01032833
+		// Token: 0x06037598 RID: 226712 RVA: 0x00F75B5B File Offset: 0x00F73D5B
 		public override void Refresh(DangoBrawlRewardTabData data, bool isSelected, int gridIndex)
 		{
 			this.TabIndex = gridIndex;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.SetRedDotVisible(data.CanReceive);
 		}
 
-		// Token: 0x06042A44 RID: 272964 RVA: 0x01034664 File Offset: 0x01032864
+		// Token: 0x06037599 RID: 226713 RVA: 0x00F75B8C File Offset: 0x00F73D8C
 		public void SetRedDotVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x06042A45 RID: 272965 RVA: 0x01034678 File Offset: 0x01032878
+		// Token: 0x0603759A RID: 226714 RVA: 0x00F75BA0 File Offset: 0x00F73DA0
 		private void OnClickToggle(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			onTabClickCallBack(this.TabIndex);
 		}
 
-		// Token: 0x06042A46 RID: 272966 RVA: 0x0103469D File Offset: 0x0103289D
+		// Token: 0x0603759B RID: 226715 RVA: 0x00F75BC5 File Offset: 0x00F73DC5
 		public void SetTabClickCallback(Action<int> callback)
 		{
 			this.OnTabClickCallBack = callback;
 		}
 
-		// Token: 0x06042A47 RID: 272967 RVA: 0x010346A6 File Offset: 0x010328A6
+		// Token: 0x0603759C RID: 226716 RVA: 0x00F75BCE File Offset: 0x00F73DCE
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleSelect(false, false);
 		}
 
-		// Token: 0x06042A48 RID: 272968 RVA: 0x010346B0 File Offset: 0x010328B0
+		// Token: 0x0603759D RID: 226717 RVA: 0x00F75BD8 File Offset: 0x00F73DD8
 		public void SetToggleSelect(bool isSelected, bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -97,22 +97,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x04022B4D RID: 142157
+		// Token: 0x0401D3AA RID: 119722
 		private int TabIndex = -1;
 
-		// Token: 0x04022B4E RID: 142158
+		// Token: 0x0401D3AB RID: 119723
 		[Nullable(2)]
 		private Action<int> OnTabClickCallBack;
 
-		// Token: 0x0200CA11 RID: 51729
+		// Token: 0x0200B3DC RID: 46044
 		[NullableContext(0)]
 		private enum ETab
 		{
-			// Token: 0x0403D108 RID: 250120
+			// Token: 0x040379EF RID: 227823
 			Toggle,
-			// Token: 0x0403D109 RID: 250121
+			// Token: 0x040379F0 RID: 227824
 			Name,
-			// Token: 0x0403D10A RID: 250122
+			// Token: 0x040379F1 RID: 227825
 			RedPoint
 		}
 	}

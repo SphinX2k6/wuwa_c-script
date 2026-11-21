@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072CB RID: 29387
+	// Token: 0x0200644D RID: 25677
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class CameraUtility : IStaticVariableResetter
 	{
-		// Token: 0x06048191 RID: 295313 RVA: 0x0127D0B4 File Offset: 0x0127B2B4
+		// Token: 0x0603E594 RID: 255380 RVA: 0x0121FBB0 File Offset: 0x0121DDB0
 		static CameraUtility()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CameraUtility.CreateStaticDefaultValue), new Action(CameraUtility.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06048192 RID: 295314 RVA: 0x0127D1F8 File Offset: 0x0127B3F8
+		// Token: 0x0603E595 RID: 255381 RVA: 0x0121FCF4 File Offset: 0x0121DEF4
 		[NullableContext(2)]
 		public static void GetSocketLocation(AActor character, FName? socketName, [Nullable(1)] global::Vector outVector, EntityHandle handle = null)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Camera
 			entityHandle.Entity.GetComponent<CharacterAnimationComponent>().GetCameraPosition(outVector);
 		}
 
-		// Token: 0x06048193 RID: 295315 RVA: 0x0127D2EC File Offset: 0x0127B4EC
+		// Token: 0x0603E596 RID: 255382 RVA: 0x0121FDE8 File Offset: 0x0121DFE8
 		[NullableContext(2)]
 		private static bool IsTsActor(EntityHandle handle)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Camera
 			return entityType <= EEntityType.Monster || entityType == EEntityType.Vision;
 		}
 
-		// Token: 0x06048194 RID: 295316 RVA: 0x0127D331 File Offset: 0x0127B531
+		// Token: 0x0603E597 RID: 255383 RVA: 0x0121FE2D File Offset: 0x0121E02D
 		[NullableContext(2)]
 		public static FTransformDouble GetRootTransform(ACharacter character)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Camera
 			return character.Mesh.D_GetSocketTransform(CameraUtility.Root, ERelativeTransformSpace.RTS_World);
 		}
 
-		// Token: 0x06048195 RID: 295317 RVA: 0x0127D358 File Offset: 0x0127B558
+		// Token: 0x0603E598 RID: 255384 RVA: 0x0121FE54 File Offset: 0x0121E054
 		public static bool TargetCanBeSelect(BaseActorComponent actorComp)
 		{
 			if (!actorComp.Valid || !actorComp.Active)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Camera
 			return component == null || (!component.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.濒死"]) && !component.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.隐身.不可锁定"]));
 		}
 
-		// Token: 0x06048196 RID: 295318 RVA: 0x0127D3BC File Offset: 0x0127B5BC
+		// Token: 0x0603E599 RID: 255385 RVA: 0x0121FEB8 File Offset: 0x0121E0B8
 		[NullableContext(2)]
 		public static EntityHandle GetCameraTargetEntityHandle()
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Camera
 			return characterEntityHandle;
 		}
 
-		// Token: 0x06048197 RID: 295319 RVA: 0x0127D404 File Offset: 0x0127B604
+		// Token: 0x0603E59A RID: 255386 RVA: 0x0121FF00 File Offset: 0x0121E100
 		[NullableContext(2)]
 		public static EntityHandle GetCameraLockOnTargetEntityHandle()
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Camera
 			return targetEntity;
 		}
 
-		// Token: 0x06048198 RID: 295320 RVA: 0x0127D44C File Offset: 0x0127B64C
+		// Token: 0x0603E59B RID: 255387 RVA: 0x0121FF48 File Offset: 0x0121E148
 		public static void GetCameraCharacterRotation(global::Rotator outR)
 		{
 			outR.Reset();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048199 RID: 295321 RVA: 0x0127D4B8 File Offset: 0x0127B6B8
+		// Token: 0x0603E59C RID: 255388 RVA: 0x0121FFB4 File Offset: 0x0121E1B4
 		public static float GetPlayerTargetAndCameraYawOffset()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Camera
 			return 0f;
 		}
 
-		// Token: 0x0604819A RID: 295322 RVA: 0x0127D5A8 File Offset: 0x0127B7A8
+		// Token: 0x0603E59D RID: 255389 RVA: 0x012200A4 File Offset: 0x0121E2A4
 		public static float GetPlayerAndCameraYawOffset()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Camera
 			return MathUtils.Instance.WrapAngle(fightCameraLogicComponent.PlayerRotatorInGravity.Yaw - yawInGravity);
 		}
 
-		// Token: 0x0604819B RID: 295323 RVA: 0x0127D624 File Offset: 0x0127B824
+		// Token: 0x0603E59E RID: 255390 RVA: 0x01220120 File Offset: 0x0121E320
 		public static global::Rotator GetCameraDefaultFocusRotator()
 		{
 			float? floatConfig = ConfigCommonParamById.GetFloatConfig("InitialCameraPitch");
@@ -240,20 +240,20 @@ namespace CSharpScript.Game.Camera
 			return CameraUtility.TempRotator;
 		}
 
-		// Token: 0x0604819C RID: 295324 RVA: 0x0127D7AC File Offset: 0x0127B9AC
+		// Token: 0x0603E59F RID: 255391 RVA: 0x012202A8 File Offset: 0x0121E4A8
 		public static FRotator GetCameraDefaultFocusUeRotator()
 		{
 			return CameraUtility.GetCameraDefaultFocusRotator().ToUeRotator();
 		}
 
-		// Token: 0x0604819D RID: 295325 RVA: 0x0127D7B8 File Offset: 0x0127B9B8
+		// Token: 0x0603E5A0 RID: 255392 RVA: 0x012202B4 File Offset: 0x0121E4B4
 		[NullableContext(2)]
 		public static bool CheckCameraShakeCondition(EntityHandle entityHandle)
 		{
 			return entityHandle != null && entityHandle.Valid && CameraUtility.CheckFormationControlState(entityHandle, true, true);
 		}
 
-		// Token: 0x0604819E RID: 295326 RVA: 0x0127D7D8 File Offset: 0x0127B9D8
+		// Token: 0x0603E5A1 RID: 255393 RVA: 0x012202D4 File Offset: 0x0121E4D4
 		[NullableContext(2)]
 		public unsafe static bool CheckCameraSequenceCondition(TsBaseCharacter owner, ESequenceCameraAnsEffectiveClientType sequenceCameraAnsEffectiveClientType = ESequenceCameraAnsEffectiveClientType.单客户端)
 		{
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604819F RID: 295327 RVA: 0x0127DBA4 File Offset: 0x0127BDA4
+		// Token: 0x0603E5A2 RID: 255394 RVA: 0x012206A0 File Offset: 0x0121E8A0
 		public static bool CheckApplyCameraModifyCondition([Nullable(2)] EntityHandle entityHandle, SCameraModifier_Settings cameraModifySettings, ECameraAnsEffectiveClientType cameraEffectiveClientType = ECameraAnsEffectiveClientType.单客户端_角色为中心_, [Nullable(new byte[]
 		{
 			2,
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Camera
 			return entityHandle != null && entityHandle.Valid && CameraUtility.CheckFormationControlState(entityHandle, false, !cameraModifySettings.IsSwitchModifier) && CameraUtility.CheckCameraEffectiveClientType(entityHandle, cameraEffectiveClientType) && (cameraModifierConditions == null || CameraUtility.CheckCameraModifierConditions(cameraModifierConditions));
 		}
 
-		// Token: 0x060481A0 RID: 295328 RVA: 0x0127DBF4 File Offset: 0x0127BDF4
+		// Token: 0x0603E5A3 RID: 255395 RVA: 0x012206F0 File Offset: 0x0121E8F0
 		public static bool CheckFormationControlState(EntityHandle entityHandle, bool needLocal = false, bool needControl = false)
 		{
 			if (!entityHandle.Valid)
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481A1 RID: 295329 RVA: 0x0127DCE0 File Offset: 0x0127BEE0
+		// Token: 0x0603E5A4 RID: 255396 RVA: 0x012207DC File Offset: 0x0121E9DC
 		[NullableContext(2)]
 		public static bool CheckCameraEffectiveClientType(EntityHandle entityHandle, ECameraAnsEffectiveClientType cameraEffectiveClientType)
 		{
@@ -590,7 +590,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481A2 RID: 295330 RVA: 0x0127DFC7 File Offset: 0x0127C1C7
+		// Token: 0x0603E5A5 RID: 255397 RVA: 0x01220AC3 File Offset: 0x0121ECC3
 		private static bool CheckCameraModifierConditions([Nullable(new byte[]
 		{
 			2,
@@ -600,7 +600,7 @@ namespace CSharpScript.Game.Camera
 			return cameraModifierConditions == null || CameraUtility.IsCameraModifyValidation(cameraModifierConditions);
 		}
 
-		// Token: 0x060481A3 RID: 295331 RVA: 0x0127DFD4 File Offset: 0x0127C1D4
+		// Token: 0x0603E5A6 RID: 255398 RVA: 0x01220AD0 File Offset: 0x0121ECD0
 		private static bool IsCameraModifyValidation(TArray<SCameraModifier_Condition> conditionArray)
 		{
 			int num = conditionArray.Num();
@@ -696,7 +696,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481A4 RID: 295332 RVA: 0x0127E104 File Offset: 0x0127C304
+		// Token: 0x0603E5A7 RID: 255399 RVA: 0x01220C00 File Offset: 0x0121EE00
 		private static bool CheckSelfContainsTag(SCameraModifier_Condition condition)
 		{
 			BaseTagComponent component = Global.BaseCharacter.GetEntityNoBlueprint().GetComponent<BaseTagComponent>();
@@ -708,7 +708,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481A5 RID: 295333 RVA: 0x0127E15C File Offset: 0x0127C35C
+		// Token: 0x0603E5A8 RID: 255400 RVA: 0x01220C58 File Offset: 0x0121EE58
 		private static bool CheckTargetContainsTag(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -725,7 +725,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481A6 RID: 295334 RVA: 0x0127E1BC File Offset: 0x0127C3BC
+		// Token: 0x0603E5A9 RID: 255401 RVA: 0x01220CB8 File Offset: 0x0121EEB8
 		private static bool CheckCameraArmLength(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -741,7 +741,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481A7 RID: 295335 RVA: 0x0127E200 File Offset: 0x0127C400
+		// Token: 0x0603E5AA RID: 255402 RVA: 0x01220CFC File Offset: 0x0121EEFC
 		private static bool CheckTargetCameraLeft(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -764,7 +764,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481A8 RID: 295336 RVA: 0x0127E29C File Offset: 0x0127C49C
+		// Token: 0x0603E5AB RID: 255403 RVA: 0x01220D98 File Offset: 0x0121EF98
 		private static bool CheckTargetHeightDelta(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -786,7 +786,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481A9 RID: 295337 RVA: 0x0127E31C File Offset: 0x0127C51C
+		// Token: 0x0603E5AC RID: 255404 RVA: 0x01220E18 File Offset: 0x0121F018
 		private static bool CheckTargetYawDelta(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -805,7 +805,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481AA RID: 295338 RVA: 0x0127E364 File Offset: 0x0127C564
+		// Token: 0x0603E5AD RID: 255405 RVA: 0x01220E60 File Offset: 0x0121F060
 		private static bool CheckCameraPitch(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -824,7 +824,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481AB RID: 295339 RVA: 0x0127E3BC File Offset: 0x0127C5BC
+		// Token: 0x0603E5AE RID: 255406 RVA: 0x01220EB8 File Offset: 0x0121F0B8
 		private static bool CheckTargetDistance(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -850,7 +850,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481AC RID: 295340 RVA: 0x0127E458 File Offset: 0x0127C658
+		// Token: 0x0603E5AF RID: 255407 RVA: 0x01220F54 File Offset: 0x0121F154
 		private static bool CheckTargetCollision(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -898,7 +898,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481AD RID: 295341 RVA: 0x0127E5C8 File Offset: 0x0127C7C8
+		// Token: 0x0603E5B0 RID: 255408 RVA: 0x012210C4 File Offset: 0x0121F2C4
 		private static bool CheckCameraTargetConnectionLeft(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -924,7 +924,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481AE RID: 295342 RVA: 0x0127E68C File Offset: 0x0127C88C
+		// Token: 0x0603E5B1 RID: 255409 RVA: 0x01221188 File Offset: 0x0121F388
 		private static bool CheckCameraTargetConnectionRight(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -950,7 +950,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481AF RID: 295343 RVA: 0x0127E750 File Offset: 0x0127C950
+		// Token: 0x0603E5B2 RID: 255410 RVA: 0x0122124C File Offset: 0x0121F44C
 		private static bool CheckCharacterYawDelta(SCameraModifier_Condition condition)
 		{
 			bool flag = false;
@@ -969,7 +969,7 @@ namespace CSharpScript.Game.Camera
 			return !flag;
 		}
 
-		// Token: 0x060481B0 RID: 295344 RVA: 0x0127E790 File Offset: 0x0127C990
+		// Token: 0x0603E5B3 RID: 255411 RVA: 0x0122128C File Offset: 0x0121F48C
 		public static bool CharacterMovementBaseIsMoving()
 		{
 			FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -1005,7 +1005,7 @@ namespace CSharpScript.Game.Camera
 			return gamePlayElevatorComponent != null && gamePlayElevatorComponent.IsMovingOrTeleporting();
 		}
 
-		// Token: 0x060481B1 RID: 295345 RVA: 0x0127E830 File Offset: 0x0127CA30
+		// Token: 0x0603E5B4 RID: 255412 RVA: 0x0122132C File Offset: 0x0121F52C
 		public static void SetCameraRotationWithString(string rotation)
 		{
 			List<string> list = new List<string>();
@@ -1021,7 +1021,7 @@ namespace CSharpScript.Game.Camera
 			CameraUtility.SetCameraRotationWithAxisString(list[0], list[1]);
 		}
 
-		// Token: 0x060481B2 RID: 295346 RVA: 0x0127E8B8 File Offset: 0x0127CAB8
+		// Token: 0x0603E5B5 RID: 255413 RVA: 0x012213B4 File Offset: 0x0121F5B4
 		public static void SetCameraRotationWithAxisString(string pitchStr, string yawStr)
 		{
 			float inPitch = MathCommon.Clamp(float.Parse(pitchStr), -89.9f, 89.9f);
@@ -1030,7 +1030,7 @@ namespace CSharpScript.Game.Camera
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.SetRotation(new FRotator(inPitch, inYaw, inRoll));
 		}
 
-		// Token: 0x060481B3 RID: 295347 RVA: 0x0127E914 File Offset: 0x0127CB14
+		// Token: 0x0603E5B6 RID: 255414 RVA: 0x01221410 File Offset: 0x0121F610
 		[NullableContext(2)]
 		public static void ResetFocus(float time = 0.6f, CurveBase curve = null, bool canBreakByInput = true, float stayTime = 0f)
 		{
@@ -1044,7 +1044,7 @@ namespace CSharpScript.Game.Camera
 			fightCameraLogicComponent.PlayCameraEulerRotatorWithCurve(CameraUtility.GetCameraDefaultFocusRotator(), time, curve, canBreakByInput, stayTime);
 		}
 
-		// Token: 0x060481B4 RID: 295348 RVA: 0x0127E964 File Offset: 0x0127CB64
+		// Token: 0x0603E5B7 RID: 255415 RVA: 0x01221460 File Offset: 0x0121F660
 		public unsafe static void PrintRotationInNormalGravity(global::Rotator rotation, string printContent)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1064,7 +1064,7 @@ namespace CSharpScript.Game.Camera
 			instance.Info(module, author, printContent, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060481B5 RID: 295349 RVA: 0x0127EA14 File Offset: 0x0127CC14
+		// Token: 0x0603E5B8 RID: 255416 RVA: 0x01221510 File Offset: 0x0121F710
 		public unsafe static void PrintRotationInCameraGravity(global::Rotator rotation, string printContent)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1084,7 +1084,7 @@ namespace CSharpScript.Game.Camera
 			instance.Info(module, author, printContent, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060481B6 RID: 295350 RVA: 0x0127EAC4 File Offset: 0x0127CCC4
+		// Token: 0x0603E5B9 RID: 255417 RVA: 0x012215C0 File Offset: 0x0121F7C0
 		public static global::Rotator GetRotatorInGravity(global::Rotator rotator, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1099,7 +1099,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481B7 RID: 295351 RVA: 0x0127EB30 File Offset: 0x0127CD30
+		// Token: 0x0603E5BA RID: 255418 RVA: 0x0122162C File Offset: 0x0121F82C
 		public static global::Rotator SetRotatorInGravity(global::Rotator inOutRotator, global::Rotator rotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1114,7 +1114,7 @@ namespace CSharpScript.Game.Camera
 			return inOutRotator;
 		}
 
-		// Token: 0x060481B8 RID: 295352 RVA: 0x0127EB9C File Offset: 0x0127CD9C
+		// Token: 0x0603E5BB RID: 255419 RVA: 0x01221698 File Offset: 0x0121F898
 		public static global::Rotator GetRotatorInNormal(global::Rotator rotator, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1129,7 +1129,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481B9 RID: 295353 RVA: 0x0127EC08 File Offset: 0x0127CE08
+		// Token: 0x0603E5BC RID: 255420 RVA: 0x01221704 File Offset: 0x0121F904
 		public static global::Vector GetVectorInGravity(global::Vector vector, global::Vector outVector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1142,7 +1142,7 @@ namespace CSharpScript.Game.Camera
 			return outVector;
 		}
 
-		// Token: 0x060481BA RID: 295354 RVA: 0x0127EC54 File Offset: 0x0127CE54
+		// Token: 0x0603E5BD RID: 255421 RVA: 0x01221750 File Offset: 0x0121F950
 		public static global::Vector GetVectorInNormal(global::Vector vector, global::Vector outVector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1155,7 +1155,7 @@ namespace CSharpScript.Game.Camera
 			return outVector;
 		}
 
-		// Token: 0x060481BB RID: 295355 RVA: 0x0127ECA0 File Offset: 0x0127CEA0
+		// Token: 0x0603E5BE RID: 255422 RVA: 0x0122179C File Offset: 0x0121F99C
 		public static float GetPitchInGravity(global::Rotator rotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1167,7 +1167,7 @@ namespace CSharpScript.Game.Camera
 			return CameraUtility.TempRotator.Pitch;
 		}
 
-		// Token: 0x060481BC RID: 295356 RVA: 0x0127ECFC File Offset: 0x0127CEFC
+		// Token: 0x0603E5BF RID: 255423 RVA: 0x012217F8 File Offset: 0x0121F9F8
 		public static global::Rotator SetPitchInGravity(global::Rotator rotator, double pitch, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1183,7 +1183,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481BD RID: 295357 RVA: 0x0127EDA8 File Offset: 0x0127CFA8
+		// Token: 0x0603E5C0 RID: 255424 RVA: 0x012218A4 File Offset: 0x0121FAA4
 		public static global::Rotator AddPitchInGravity(global::Rotator rotator, double addPitch, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1199,7 +1199,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481BE RID: 295358 RVA: 0x0127EE68 File Offset: 0x0127D068
+		// Token: 0x0603E5C1 RID: 255425 RVA: 0x01221964 File Offset: 0x0121FB64
 		public static float GetYawInGravity(global::Rotator rotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1211,7 +1211,7 @@ namespace CSharpScript.Game.Camera
 			return CameraUtility.TempRotator.Yaw;
 		}
 
-		// Token: 0x060481BF RID: 295359 RVA: 0x0127EEC4 File Offset: 0x0127D0C4
+		// Token: 0x0603E5C2 RID: 255426 RVA: 0x012219C0 File Offset: 0x0121FBC0
 		public static global::Rotator SetYawInGravity(global::Rotator rotator, double yaw, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1227,7 +1227,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481C0 RID: 295360 RVA: 0x0127EF58 File Offset: 0x0127D158
+		// Token: 0x0603E5C3 RID: 255427 RVA: 0x01221A54 File Offset: 0x0121FC54
 		public static global::Rotator AddYawInGravity(global::Rotator rotator, double addYaw, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1243,7 +1243,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481C1 RID: 295361 RVA: 0x0127F000 File Offset: 0x0127D200
+		// Token: 0x0603E5C4 RID: 255428 RVA: 0x01221AFC File Offset: 0x0121FCFC
 		public static float GetRollInGravity(global::Rotator rotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1255,7 +1255,7 @@ namespace CSharpScript.Game.Camera
 			return CameraUtility.TempRotator.Roll;
 		}
 
-		// Token: 0x060481C2 RID: 295362 RVA: 0x0127F05C File Offset: 0x0127D25C
+		// Token: 0x0603E5C5 RID: 255429 RVA: 0x01221B58 File Offset: 0x0121FD58
 		public static global::Rotator SetRollInGravity(global::Rotator rotator, double roll, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1271,7 +1271,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481C3 RID: 295363 RVA: 0x0127F0F0 File Offset: 0x0127D2F0
+		// Token: 0x0603E5C6 RID: 255430 RVA: 0x01221BEC File Offset: 0x0121FDEC
 		public static global::Rotator AddRollInGravity(global::Rotator rotator, double addRoll, global::Rotator outRotator)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1287,7 +1287,7 @@ namespace CSharpScript.Game.Camera
 			return outRotator;
 		}
 
-		// Token: 0x060481C4 RID: 295364 RVA: 0x0127F198 File Offset: 0x0127D398
+		// Token: 0x0603E5C7 RID: 255431 RVA: 0x01221C94 File Offset: 0x0121FE94
 		public static global::Vector SetXnInGravity(global::Vector vector, double x, global::Vector outVector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1303,7 +1303,7 @@ namespace CSharpScript.Game.Camera
 			return outVector;
 		}
 
-		// Token: 0x060481C5 RID: 295365 RVA: 0x0127F208 File Offset: 0x0127D408
+		// Token: 0x0603E5C8 RID: 255432 RVA: 0x01221D04 File Offset: 0x0121FF04
 		public static global::Vector SetYnInGravity(global::Vector vector, float y, global::Vector outVector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1319,7 +1319,7 @@ namespace CSharpScript.Game.Camera
 			return outVector;
 		}
 
-		// Token: 0x060481C6 RID: 295366 RVA: 0x0127F27C File Offset: 0x0127D47C
+		// Token: 0x0603E5C9 RID: 255433 RVA: 0x01221D78 File Offset: 0x0121FF78
 		public static global::Vector SetZnInGravity(global::Vector vector, double z, global::Vector outVector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1335,7 +1335,7 @@ namespace CSharpScript.Game.Camera
 			return outVector;
 		}
 
-		// Token: 0x060481C7 RID: 295367 RVA: 0x0127F2EC File Offset: 0x0127D4EC
+		// Token: 0x0603E5CA RID: 255434 RVA: 0x01221DE8 File Offset: 0x0121FFE8
 		public static float GetZnInGravity(global::Vector vector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1346,7 +1346,7 @@ namespace CSharpScript.Game.Camera
 			return (float)CameraUtility.GetVectorInGravity(vector, CameraUtility.TempVector).Z;
 		}
 
-		// Token: 0x060481C8 RID: 295368 RVA: 0x0127F338 File Offset: 0x0127D538
+		// Token: 0x0603E5CB RID: 255435 RVA: 0x01221E34 File Offset: 0x01220034
 		public static global::Vector AddZnInGravity(global::Vector vector, double addZ, global::Vector outVector)
 		{
 			FightCameraLogicComponent logicComponent = CameraController.Instance.MainModel.FightCamera.LogicComponent;
@@ -1361,7 +1361,7 @@ namespace CSharpScript.Game.Camera
 			return outVector;
 		}
 
-		// Token: 0x060481C9 RID: 295369 RVA: 0x0127F39C File Offset: 0x0127D59C
+		// Token: 0x0603E5CC RID: 255436 RVA: 0x01221E98 File Offset: 0x01220098
 		public static FName GetCameraMode(ECustomCameraMode cameraMode)
 		{
 			switch (cameraMode)
@@ -1391,7 +1391,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481CA RID: 295370 RVA: 0x0127F420 File Offset: 0x0127D620
+		// Token: 0x0603E5CD RID: 255437 RVA: 0x01221F1C File Offset: 0x0122011C
 		public static double GetValidPitchAngle(double limitPitchAngle, bool isMinValue)
 		{
 			if (!MathUtils.Instance.IsNearlyZero(limitPitchAngle, new double?((double)0.0001f)) && MathUtils.Instance.IsNearlyZero(Math.Abs(limitPitchAngle) % 90.0, new double?((double)0.0001f)))
@@ -1405,90 +1405,90 @@ namespace CSharpScript.Game.Camera
 			return Math.Max(limitPitchAngle, -89.9000015258789);
 		}
 
-		// Token: 0x060481CB RID: 295371 RVA: 0x0127F4A8 File Offset: 0x0127D6A8
+		// Token: 0x0603E5CE RID: 255438 RVA: 0x01221FA4 File Offset: 0x012201A4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060481CC RID: 295372 RVA: 0x0127F4AA File Offset: 0x0127D6AA
+		// Token: 0x0603E5CF RID: 255439 RVA: 0x01221FA6 File Offset: 0x012201A6
 		public static void ResetStaticDefaultValue()
 		{
 			CameraUtility._cameraSphereTrace = null;
 		}
 
-		// Token: 0x040260B0 RID: 155824
+		// Token: 0x04021393 RID: 136083
 		private const string PROFILE_KEY = "CameraUtility_CheckCollision_Camera";
 
-		// Token: 0x040260B1 RID: 155825
+		// Token: 0x04021394 RID: 136084
 		private const float RESET_FOCUS_TIME = 0.6f;
 
-		// Token: 0x040260B2 RID: 155826
+		// Token: 0x04021395 RID: 136085
 		private const float PITCH_LIMIT_VALUE = 89.9f;
 
-		// Token: 0x040260B3 RID: 155827
+		// Token: 0x04021396 RID: 136086
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraPosition = new FName("CameraPosition");
 
-		// Token: 0x040260B4 RID: 155828
+		// Token: 0x04021397 RID: 136087
 		[StaticVariableRuleIgnore]
 		public static readonly FName HitCase = new FName("HitCase");
 
-		// Token: 0x040260B5 RID: 155829
+		// Token: 0x04021398 RID: 136088
 		[StaticVariableRuleIgnore]
 		public static readonly FName Root = new FName("Root");
 
-		// Token: 0x040260B6 RID: 155830
+		// Token: 0x04021399 RID: 136089
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeDefault = new FName("KuroDefault");
 
-		// Token: 0x040260B7 RID: 155831
+		// Token: 0x0402139A RID: 136090
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeLockOn = new FName("KuroLockOn");
 
-		// Token: 0x040260B8 RID: 155832
+		// Token: 0x0402139B RID: 136091
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeWidget = new FName("KuroWidget");
 
-		// Token: 0x040260B9 RID: 155833
+		// Token: 0x0402139C RID: 136092
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeSequence = new FName("KuroSequence");
 
-		// Token: 0x040260BA RID: 155834
+		// Token: 0x0402139D RID: 136093
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeScene = new FName("KuroScene");
 
-		// Token: 0x040260BB RID: 155835
+		// Token: 0x0402139E RID: 136094
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeOrbital = new FName("KuroOrbital");
 
-		// Token: 0x040260BC RID: 155836
+		// Token: 0x0402139F RID: 136095
 		[StaticVariableRuleIgnore]
 		public static readonly FName CameraModeFree = new FName("KuroFree");
 
-		// Token: 0x040260BD RID: 155837
+		// Token: 0x040213A0 RID: 136096
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector = global::Vector.Create();
 
-		// Token: 0x040260BE RID: 155838
+		// Token: 0x040213A1 RID: 136097
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector1 = global::Vector.Create();
 
-		// Token: 0x040260BF RID: 155839
+		// Token: 0x040213A2 RID: 136098
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040260C0 RID: 155840
+		// Token: 0x040213A3 RID: 136099
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TempQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040260C1 RID: 155841
+		// Token: 0x040213A4 RID: 136100
 		[StaticVariableRuleIgnore]
 		private static readonly global::Rotator TempRotator = global::Rotator.Create();
 
-		// Token: 0x040260C2 RID: 155842
+		// Token: 0x040213A5 RID: 136101
 		public static readonly float CapsuleHeightRatio = 0.67f;
 
-		// Token: 0x040260C3 RID: 155843
+		// Token: 0x040213A6 RID: 136102
 		[Nullable(2)]
 		private static UTraceSphereElement _cameraSphereTrace;
 	}

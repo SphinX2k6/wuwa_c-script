@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B23 RID: 19235
+	// Token: 0x0200500A RID: 20490
 	public struct ICheckSceneItemDirectionCondition : IFlatbufferObject
 	{
-		// Token: 0x17008B84 RID: 35716
-		// (get) Token: 0x0601E416 RID: 123926 RVA: 0x0043D9F8 File Offset: 0x0043BBF8
+		// Token: 0x17009294 RID: 37524
+		// (get) Token: 0x0601FFA1 RID: 130977 RVA: 0x004701A4 File Offset: 0x0046E3A4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E417 RID: 123927 RVA: 0x0043DA05 File Offset: 0x0043BC05
+		// Token: 0x0601FFA2 RID: 130978 RVA: 0x004701B1 File Offset: 0x0046E3B1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E418 RID: 123928 RVA: 0x0043DA0C File Offset: 0x0043BC0C
+		// Token: 0x0601FFA3 RID: 130979 RVA: 0x004701B8 File Offset: 0x0046E3B8
 		public static ICheckSceneItemDirectionCondition GetRootAsICheckSceneItemDirectionCondition(ByteBuffer _bb)
 		{
 			return ICheckSceneItemDirectionCondition.GetRootAsICheckSceneItemDirectionCondition(_bb, default(ICheckSceneItemDirectionCondition));
 		}
 
-		// Token: 0x0601E419 RID: 123929 RVA: 0x0043DA28 File Offset: 0x0043BC28
+		// Token: 0x0601FFA4 RID: 130980 RVA: 0x004701D4 File Offset: 0x0046E3D4
 		public static ICheckSceneItemDirectionCondition GetRootAsICheckSceneItemDirectionCondition(ByteBuffer _bb, ICheckSceneItemDirectionCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E41A RID: 123930 RVA: 0x0043DA45 File Offset: 0x0043BC45
+		// Token: 0x0601FFA5 RID: 130981 RVA: 0x004701F1 File Offset: 0x0046E3F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E41B RID: 123931 RVA: 0x0043DA54 File Offset: 0x0043BC54
+		// Token: 0x0601FFA6 RID: 130982 RVA: 0x00470200 File Offset: 0x0046E400
 		public ICheckSceneItemDirectionCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B85 RID: 35717
-		// (get) Token: 0x0601E41C RID: 123932 RVA: 0x0043DA64 File Offset: 0x0043BC64
+		// Token: 0x17009295 RID: 37525
+		// (get) Token: 0x0601FFA7 RID: 130983 RVA: 0x00470210 File Offset: 0x0046E410
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B86 RID: 35718
-		// (get) Token: 0x0601E41D RID: 123933 RVA: 0x0043DAA0 File Offset: 0x0043BCA0
+		// Token: 0x17009296 RID: 37526
+		// (get) Token: 0x0601FFA8 RID: 130984 RVA: 0x0047024C File Offset: 0x0046E44C
 		public TTargetEntity TargetType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E41E RID: 123934 RVA: 0x0043DADC File Offset: 0x0043BCDC
+		// Token: 0x0601FFA9 RID: 130985 RVA: 0x00470288 File Offset: 0x0046E488
 		public TTable? Target<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,32 +89,32 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601E41F RID: 123935 RVA: 0x0043DB20 File Offset: 0x0043BD20
+		// Token: 0x0601FFAA RID: 130986 RVA: 0x004702CC File Offset: 0x0046E4CC
 		public IPlayerEntity TargetAsIPlayerEntity()
 		{
 			return this.Target<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0601E420 RID: 123936 RVA: 0x0043DB3C File Offset: 0x0043BD3C
+		// Token: 0x0601FFAB RID: 130987 RVA: 0x004702E8 File Offset: 0x0046E4E8
 		public ISelfEntity TargetAsISelfEntity()
 		{
 			return this.Target<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0601E421 RID: 123937 RVA: 0x0043DB58 File Offset: 0x0043BD58
+		// Token: 0x0601FFAC RID: 130988 RVA: 0x00470304 File Offset: 0x0046E504
 		public ITargetEntity TargetAsITargetEntity()
 		{
 			return this.Target<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0601E422 RID: 123938 RVA: 0x0043DB74 File Offset: 0x0043BD74
+		// Token: 0x0601FFAD RID: 130989 RVA: 0x00470320 File Offset: 0x0046E520
 		public ITriggeredEntity TargetAsITriggeredEntity()
 		{
 			return this.Target<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x17008B87 RID: 35719
-		// (get) Token: 0x0601E423 RID: 123939 RVA: 0x0043DB90 File Offset: 0x0043BD90
+		// Token: 0x17009297 RID: 37527
+		// (get) Token: 0x0601FFAE RID: 130990 RVA: 0x0047033C File Offset: 0x0046E53C
 		public string RotatePoint
 		{
 			get
@@ -128,20 +128,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E424 RID: 123940 RVA: 0x0043DBC8 File Offset: 0x0043BDC8
+		// Token: 0x0601FFAF RID: 130991 RVA: 0x00470374 File Offset: 0x0046E574
 		public Span<byte> GetRotatePointBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601E425 RID: 123941 RVA: 0x0043DBD8 File Offset: 0x0043BDD8
+		// Token: 0x0601FFB0 RID: 130992 RVA: 0x00470384 File Offset: 0x0046E584
 		public byte[] GetRotatePointArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x17008B88 RID: 35720
-		// (get) Token: 0x0601E426 RID: 123942 RVA: 0x0043DBE8 File Offset: 0x0043BDE8
+		// Token: 0x17009298 RID: 37528
+		// (get) Token: 0x0601FFB1 RID: 130993 RVA: 0x00470394 File Offset: 0x0046E594
 		public IVectorInfo? Direction
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B89 RID: 35721
-		// (get) Token: 0x0601E427 RID: 123943 RVA: 0x0043DC48 File Offset: 0x0043BE48
+		// Token: 0x17009299 RID: 37529
+		// (get) Token: 0x0601FFB2 RID: 130994 RVA: 0x004703F4 File Offset: 0x0046E5F4
 		public float AngleInterval
 		{
 			get
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E428 RID: 123944 RVA: 0x0043DC89 File Offset: 0x0043BE89
+		// Token: 0x0601FFB3 RID: 130995 RVA: 0x00470435 File Offset: 0x0046E635
 		public static Offset<ICheckSceneItemDirectionCondition> CreateICheckSceneItemDirectionCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, TTargetEntity Target_type = TTargetEntity.NONE, int TargetOffset = 0, StringOffset RotatePointOffset = default(StringOffset), Offset<IVectorInfo> DirectionOffset = default(Offset<IVectorInfo>), float AngleInterval = 0f)
 		{
 			builder.StartTable(6);
@@ -183,55 +183,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSceneItemDirectionCondition.EndICheckSceneItemDirectionCondition(builder);
 		}
 
-		// Token: 0x0601E429 RID: 123945 RVA: 0x0043DCC5 File Offset: 0x0043BEC5
+		// Token: 0x0601FFB4 RID: 130996 RVA: 0x00470471 File Offset: 0x0046E671
 		public static void StartICheckSceneItemDirectionCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601E42A RID: 123946 RVA: 0x0043DCCE File Offset: 0x0043BECE
+		// Token: 0x0601FFB5 RID: 130997 RVA: 0x0047047A File Offset: 0x0046E67A
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E42B RID: 123947 RVA: 0x0043DCD9 File Offset: 0x0043BED9
+		// Token: 0x0601FFB6 RID: 130998 RVA: 0x00470485 File Offset: 0x0046E685
 		public static void AddTargetType(FlatBufferBuilder builder, TTargetEntity targetType)
 		{
 			builder.AddByte(1, (byte)targetType, 0);
 		}
 
-		// Token: 0x0601E42C RID: 123948 RVA: 0x0043DCE4 File Offset: 0x0043BEE4
+		// Token: 0x0601FFB7 RID: 130999 RVA: 0x00470490 File Offset: 0x0046E690
 		public static void AddTarget(FlatBufferBuilder builder, int targetOffset)
 		{
 			builder.AddOffset(2, targetOffset, 0);
 		}
 
-		// Token: 0x0601E42D RID: 123949 RVA: 0x0043DCEF File Offset: 0x0043BEEF
+		// Token: 0x0601FFB8 RID: 131000 RVA: 0x0047049B File Offset: 0x0046E69B
 		public static void AddRotatePoint(FlatBufferBuilder builder, StringOffset rotatePointOffset)
 		{
 			builder.AddOffset(3, rotatePointOffset.Value, 0);
 		}
 
-		// Token: 0x0601E42E RID: 123950 RVA: 0x0043DCFF File Offset: 0x0043BEFF
+		// Token: 0x0601FFB9 RID: 131001 RVA: 0x004704AB File Offset: 0x0046E6AB
 		public static void AddDirection(FlatBufferBuilder builder, Offset<IVectorInfo> directionOffset)
 		{
 			builder.AddOffset(4, directionOffset.Value, 0);
 		}
 
-		// Token: 0x0601E42F RID: 123951 RVA: 0x0043DD0F File Offset: 0x0043BF0F
+		// Token: 0x0601FFBA RID: 131002 RVA: 0x004704BB File Offset: 0x0046E6BB
 		public static void AddAngleInterval(FlatBufferBuilder builder, float angleInterval)
 		{
 			builder.AddFloat(5, angleInterval, 0.0);
 		}
 
-		// Token: 0x0601E430 RID: 123952 RVA: 0x0043DD22 File Offset: 0x0043BF22
+		// Token: 0x0601FFBB RID: 131003 RVA: 0x004704CE File Offset: 0x0046E6CE
 		public static Offset<ICheckSceneItemDirectionCondition> EndICheckSceneItemDirectionCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSceneItemDirectionCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E431 RID: 123953 RVA: 0x0043DD30 File Offset: 0x0043BF30
+		// Token: 0x0601FFBC RID: 131004 RVA: 0x004704DC File Offset: 0x0046E6DC
 		public ICheckSceneItemDirectionConditionT UnPack()
 		{
 			ICheckSceneItemDirectionConditionT checkSceneItemDirectionConditionT = new ICheckSceneItemDirectionConditionT();
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkSceneItemDirectionConditionT;
 		}
 
-		// Token: 0x0601E432 RID: 123954 RVA: 0x0043DD4C File Offset: 0x0043BF4C
+		// Token: 0x0601FFBD RID: 131005 RVA: 0x004704F8 File Offset: 0x0046E6F8
 		public void UnPackTo(ICheckSceneItemDirectionConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -265,7 +265,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.AngleInterval = this.AngleInterval;
 		}
 
-		// Token: 0x0601E433 RID: 123955 RVA: 0x0043DED0 File Offset: 0x0043C0D0
+		// Token: 0x0601FFBE RID: 131006 RVA: 0x0047067C File Offset: 0x0046E87C
 		public static Offset<ICheckSceneItemDirectionCondition> Pack(FlatBufferBuilder builder, ICheckSceneItemDirectionConditionT _o)
 		{
 			if (_o == null)
@@ -279,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSceneItemDirectionCondition.CreateICheckSceneItemDirectionCondition(builder, _o.Type, target_type, targetOffset, rotatePointOffset, directionOffset, _o.AngleInterval);
 		}
 
-		// Token: 0x0400D3C4 RID: 54212
+		// Token: 0x0400DEC3 RID: 57027
 		private Table __p;
 	}
 }

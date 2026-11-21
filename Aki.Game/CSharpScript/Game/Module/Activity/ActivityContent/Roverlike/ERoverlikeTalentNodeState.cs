@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200619E RID: 24990
+	// Token: 0x0200511C RID: 20764
 	public enum ERoverlikeTalentNodeState
 	{
-		// Token: 0x04020E84 RID: 134788
+		// Token: 0x0401B7B1 RID: 112561
 		Lock,
-		// Token: 0x04020E85 RID: 134789
+		// Token: 0x0401B7B2 RID: 112562
 		Unlock,
-		// Token: 0x04020E86 RID: 134790
+		// Token: 0x0401B7B3 RID: 112563
 		Full
 	}
 }

@@ -14,17 +14,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017A9 RID: 6057
+// Token: 0x02000C62 RID: 3170
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatView : UiTickViewBase
 {
-	// Token: 0x0600B07E RID: 45182 RVA: 0x0027E483 File Offset: 0x0027C683
+	// Token: 0x06008466 RID: 33894 RVA: 0x00288A1B File Offset: 0x00286C1B
 	public ChatView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B07F RID: 45183 RVA: 0x0027E4C4 File Offset: 0x0027C6C4
+	// Token: 0x06008467 RID: 33895 RVA: 0x00288A5C File Offset: 0x00286C5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 27;
@@ -107,13 +107,13 @@ public class ChatView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B080 RID: 45184 RVA: 0x0027E98A File Offset: 0x0027CB8A
+	// Token: 0x06008468 RID: 33896 RVA: 0x00288F22 File Offset: 0x00287122
 	protected override void OnBeforeCreate()
 	{
 		UiInteractLogReport.RecordChatOpen();
 	}
 
-	// Token: 0x0600B081 RID: 45185 RVA: 0x0027E994 File Offset: 0x0027CB94
+	// Token: 0x06008469 RID: 33897 RVA: 0x00288F2C File Offset: 0x0028712C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ChatView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -124,13 +124,13 @@ public class ChatView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B082 RID: 45186 RVA: 0x0027E9D7 File Offset: 0x0027CBD7
+	// Token: 0x0600846A RID: 33898 RVA: 0x00288F6F File Offset: 0x0028716F
 	private ChatContentItem CreateNodeGrid(IChatContentDynamicData data, UUIItem uiItem, int index)
 	{
 		return new ChatContentItem();
 	}
 
-	// Token: 0x0600B083 RID: 45187 RVA: 0x0027E9E0 File Offset: 0x0027CBE0
+	// Token: 0x0600846B RID: 33899 RVA: 0x00288F78 File Offset: 0x00287178
 	protected override void OnStart()
 	{
 		this.IsInTouch = Info.Instance.IsInTouch();
@@ -162,7 +162,7 @@ public class ChatView : UiTickViewBase
 		this.RefreshBlurItem();
 	}
 
-	// Token: 0x0600B084 RID: 45188 RVA: 0x0027EAD0 File Offset: 0x0027CCD0
+	// Token: 0x0600846C RID: 33900 RVA: 0x00289068 File Offset: 0x00287268
 	private void RefreshBlurItem()
 	{
 		bool flag = UiManager.Instance.IsViewShow(EUiViewName.BattleView);
@@ -178,7 +178,7 @@ public class ChatView : UiTickViewBase
 		item2.SetUIActive(true);
 	}
 
-	// Token: 0x0600B085 RID: 45189 RVA: 0x0027EB20 File Offset: 0x0027CD20
+	// Token: 0x0600846D RID: 33901 RVA: 0x002890B8 File Offset: 0x002872B8
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearChatContent();
@@ -196,19 +196,19 @@ public class ChatView : UiTickViewBase
 		this.IsTryScroll = false;
 	}
 
-	// Token: 0x0600B086 RID: 45190 RVA: 0x0027EB79 File Offset: 0x0027CD79
+	// Token: 0x0600846E RID: 33902 RVA: 0x00289111 File Offset: 0x00287311
 	protected override void OnAfterDestroy()
 	{
 		UiInteractLogReport.RecordChatClose();
 	}
 
-	// Token: 0x0600B087 RID: 45191 RVA: 0x0027EB80 File Offset: 0x0027CD80
+	// Token: 0x0600846F RID: 33903 RVA: 0x00289118 File Offset: 0x00287318
 	protected override void OnTick(float delta)
 	{
 		bool isTryScroll = this.IsTryScroll;
 	}
 
-	// Token: 0x0600B088 RID: 45192 RVA: 0x0027EB8C File Offset: 0x0027CD8C
+	// Token: 0x06008470 RID: 33904 RVA: 0x00289124 File Offset: 0x00287324
 	private void AddEvents()
 	{
 		UUITextInputComponent inputText = base.GetInputText(2);
@@ -234,7 +234,7 @@ public class ChatView : UiTickViewBase
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 	}
 
-	// Token: 0x0600B089 RID: 45193 RVA: 0x0027EDB8 File Offset: 0x0027CFB8
+	// Token: 0x06008471 RID: 33905 RVA: 0x00289350 File Offset: 0x00287550
 	private void RemoveEvents()
 	{
 		UUITextInputComponent inputText = base.GetInputText(2);
@@ -260,18 +260,18 @@ public class ChatView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 	}
 
-	// Token: 0x0600B08A RID: 45194 RVA: 0x0027EF9B File Offset: 0x0027D19B
+	// Token: 0x06008472 RID: 33906 RVA: 0x00289533 File Offset: 0x00287733
 	private ChatRoomItem OnGridProxyCreate()
 	{
 		return this.NewPrivateChatFriendItem();
 	}
 
-	// Token: 0x0600B08B RID: 45195 RVA: 0x0027EFA3 File Offset: 0x0027D1A3
+	// Token: 0x06008473 RID: 33907 RVA: 0x0028953B File Offset: 0x0028773B
 	private void OnChatInputChanged(string content)
 	{
 	}
 
-	// Token: 0x0600B08C RID: 45196 RVA: 0x0027EFA8 File Offset: 0x0027D1A8
+	// Token: 0x06008474 RID: 33908 RVA: 0x00289540 File Offset: 0x00287740
 	private void OnChatInputSubmit(string content)
 	{
 		Log instance = Log.Instance;
@@ -283,18 +283,18 @@ public class ChatView : UiTickViewBase
 		this.PrivateChatRequest(content, ChatContentType.Text);
 	}
 
-	// Token: 0x0600B08D RID: 45197 RVA: 0x0027EFE6 File Offset: 0x0027D1E6
+	// Token: 0x06008475 RID: 33909 RVA: 0x0028957E File Offset: 0x0028777E
 	private void OnInputActivate(bool state)
 	{
 	}
 
-	// Token: 0x0600B08E RID: 45198 RVA: 0x0027EFE8 File Offset: 0x0027D1E8
+	// Token: 0x06008476 RID: 33910 RVA: 0x00289580 File Offset: 0x00287780
 	private bool OnCheckTextInput(string inString)
 	{
 		return true;
 	}
 
-	// Token: 0x0600B08F RID: 45199 RVA: 0x0027EFEB File Offset: 0x0027D1EB
+	// Token: 0x06008477 RID: 33911 RVA: 0x00289583 File Offset: 0x00287783
 	private void OnCheckTextClip(string str)
 	{
 		ScrollingTipsController.Instance.ShowTipsById("ReachInputMaxNum", new object[]
@@ -303,7 +303,7 @@ public class ChatView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600B090 RID: 45200 RVA: 0x0027F010 File Offset: 0x0027D210
+	// Token: 0x06008478 RID: 33912 RVA: 0x002895A8 File Offset: 0x002877A8
 	private void OnChatScrollValueChange(FVector2D inVector)
 	{
 		if (inVector.Y >= 0f)
@@ -329,12 +329,12 @@ public class ChatView : UiTickViewBase
 		instance.RequestPrivateRoomLocalHistory(joinedChatRoom as PrivateChatRoom);
 	}
 
-	// Token: 0x0600B091 RID: 45201 RVA: 0x0027F071 File Offset: 0x0027D271
+	// Token: 0x06008479 RID: 33913 RVA: 0x00289609 File Offset: 0x00287809
 	private void OnCreatePrivateChatRoom(int targetPlayerId)
 	{
 	}
 
-	// Token: 0x0600B092 RID: 45202 RVA: 0x0027F074 File Offset: 0x0027D274
+	// Token: 0x0600847A RID: 33914 RVA: 0x0028960C File Offset: 0x0028780C
 	private void OnInputChat(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (!this.HasChat)
@@ -352,7 +352,7 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B093 RID: 45203 RVA: 0x0027F0A4 File Offset: 0x0027D2A4
+	// Token: 0x0600847B RID: 33915 RVA: 0x0028963C File Offset: 0x0028783C
 	private void OnOpenChatRoom(ChatRoom chatRoom)
 	{
 		List<ChatRoom> allSortedChatRoom = ChatModel.Instance.GetAllSortedChatRoom();
@@ -378,7 +378,7 @@ public class ChatView : UiTickViewBase
 		this.SetHasChat(true);
 	}
 
-	// Token: 0x0600B094 RID: 45204 RVA: 0x0027F110 File Offset: 0x0027D310
+	// Token: 0x0600847C RID: 33916 RVA: 0x002896A8 File Offset: 0x002878A8
 	private void OnAddChatContent(ChatRoom chatRoom, ChatContentData chatContentData)
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -397,7 +397,7 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B095 RID: 45205 RVA: 0x0027F160 File Offset: 0x0027D360
+	// Token: 0x0600847D RID: 33917 RVA: 0x002896F8 File Offset: 0x002878F8
 	private UniTask CheckIfBlockThenAddChatContent(ChatContentData chatContentData)
 	{
 		ChatView.<CheckIfBlockThenAddChatContent>d__38 <CheckIfBlockThenAddChatContent>d__;
@@ -409,7 +409,7 @@ public class ChatView : UiTickViewBase
 		return <CheckIfBlockThenAddChatContent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B096 RID: 45206 RVA: 0x0027F1AC File Offset: 0x0027D3AC
+	// Token: 0x0600847E RID: 33918 RVA: 0x00289744 File Offset: 0x00287944
 	private void OnJoinChatRoom(ChatRoom chatRoom)
 	{
 		if (ChatModel.Instance.GetJoinedChatRoom().GetUniqueId() != chatRoom.GetUniqueId())
@@ -430,7 +430,7 @@ public class ChatView : UiTickViewBase
 		this.SetHasChat(true);
 	}
 
-	// Token: 0x0600B097 RID: 45207 RVA: 0x0027F220 File Offset: 0x0027D420
+	// Token: 0x0600847F RID: 33919 RVA: 0x002897B8 File Offset: 0x002879B8
 	private void OnAddHistoryChatContentCompleted(ChatRoom chatRoom)
 	{
 		if (!(chatRoom is PrivateChatRoom))
@@ -454,7 +454,7 @@ public class ChatView : UiTickViewBase
 		this.SetHasChat(true);
 	}
 
-	// Token: 0x0600B098 RID: 45208 RVA: 0x0027F28C File Offset: 0x0027D48C
+	// Token: 0x06008480 RID: 33920 RVA: 0x00289824 File Offset: 0x00287A24
 	private void OnRemoveOrClosePrivateChatRoom(int targetPlayerId)
 	{
 		List<ChatRoom> allSortedChatRoom = ChatModel.Instance.GetAllSortedChatRoom();
@@ -474,7 +474,7 @@ public class ChatView : UiTickViewBase
 		this.RefreshTeamChatRoom(chatRoom);
 	}
 
-	// Token: 0x0600B099 RID: 45209 RVA: 0x0027F2D8 File Offset: 0x0027D4D8
+	// Token: 0x06008481 RID: 33921 RVA: 0x00289870 File Offset: 0x00287A70
 	private void OnSelectExpression(int expressionId)
 	{
 		ChatRoom joinedChatRoom = ChatModel.Instance.GetJoinedChatRoom();
@@ -500,32 +500,32 @@ public class ChatView : UiTickViewBase
 		this.PrivateChatRequest(expressionId.ToString(), ChatContentType.Emoji);
 	}
 
-	// Token: 0x0600B09A RID: 45210 RVA: 0x0027F366 File Offset: 0x0027D566
+	// Token: 0x06008482 RID: 33922 RVA: 0x002898FE File Offset: 0x00287AFE
 	private void OnClickAddPrivateChatButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SelectedFriendChatView, null, null);
 	}
 
-	// Token: 0x0600B09B RID: 45211 RVA: 0x0027F379 File Offset: 0x0027D579
+	// Token: 0x06008483 RID: 33923 RVA: 0x00289911 File Offset: 0x00287B11
 	private void OnClickExpressionButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ChatExpressionView, null, null);
 	}
 
-	// Token: 0x0600B09C RID: 45212 RVA: 0x0027F38C File Offset: 0x0027D58C
+	// Token: 0x06008484 RID: 33924 RVA: 0x00289924 File Offset: 0x00287B24
 	private void OnClickQuickChatButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.QuickChatView, null, null);
 	}
 
-	// Token: 0x0600B09D RID: 45213 RVA: 0x0027F3A0 File Offset: 0x0027D5A0
+	// Token: 0x06008485 RID: 33925 RVA: 0x00289938 File Offset: 0x00287B38
 	private void OnClickSendButton()
 	{
 		string text = base.GetInputText(2).GetText();
 		this.PrivateChatRequest(text, ChatContentType.Text);
 	}
 
-	// Token: 0x0600B09E RID: 45214 RVA: 0x0027F3C4 File Offset: 0x0027D5C4
+	// Token: 0x06008486 RID: 33926 RVA: 0x0028995C File Offset: 0x00287B5C
 	private void OnClickFriendDetailButton()
 	{
 		ChatRoom joinedChatRoom = ChatModel.Instance.GetJoinedChatRoom();
@@ -556,13 +556,13 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B09F RID: 45215 RVA: 0x0027F43E File Offset: 0x0027D63E
+	// Token: 0x06008487 RID: 33927 RVA: 0x002899D6 File Offset: 0x00287BD6
 	private void OnClickCloseButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ChatView, null);
 	}
 
-	// Token: 0x0600B0A0 RID: 45216 RVA: 0x0027F450 File Offset: 0x0027D650
+	// Token: 0x06008488 RID: 33928 RVA: 0x002899E8 File Offset: 0x00287BE8
 	private void RefreshTextInputDefaultText()
 	{
 		UUIText text = base.GetText(18);
@@ -586,7 +586,7 @@ public class ChatView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, "SendChatText", new <>z__ReadOnlySingleElementList<object>(text2));
 	}
 
-	// Token: 0x0600B0A1 RID: 45217 RVA: 0x0027F510 File Offset: 0x0027D710
+	// Token: 0x06008489 RID: 33929 RVA: 0x00289AA8 File Offset: 0x00287CA8
 	private void PrivateChatRequest(string text, ChatContentType chatContentType)
 	{
 		if (StringUtils.IsEmpty(text))
@@ -645,7 +645,7 @@ public class ChatView : UiTickViewBase
 		base.GetInputText(2).SetText("", false);
 	}
 
-	// Token: 0x0600B0A2 RID: 45218 RVA: 0x0027F690 File Offset: 0x0027D890
+	// Token: 0x0600848A RID: 33930 RVA: 0x00289C28 File Offset: 0x00287E28
 	private void SetHasChat(bool bHasChat)
 	{
 		UUIItem item = base.GetItem(12);
@@ -655,7 +655,7 @@ public class ChatView : UiTickViewBase
 		this.HasChat = bHasChat;
 	}
 
-	// Token: 0x0600B0A3 RID: 45219 RVA: 0x0027F6C5 File Offset: 0x0027D8C5
+	// Token: 0x0600848B RID: 33931 RVA: 0x00289C5D File Offset: 0x00287E5D
 	private void SetFriendDetailButtonVisible(bool bVisible)
 	{
 		AUIBaseActor auibaseActor = base.GetButton(8).GetOwner() as AUIBaseActor;
@@ -671,7 +671,7 @@ public class ChatView : UiTickViewBase
 		uiitem.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600B0A4 RID: 45220 RVA: 0x0027F6F0 File Offset: 0x0027D8F0
+	// Token: 0x0600848C RID: 33932 RVA: 0x00289C88 File Offset: 0x00287E88
 	private void RefreshPrivateChatRoom(PrivateChatRoom privateChatRoom)
 	{
 		if (privateChatRoom == null)
@@ -693,7 +693,7 @@ public class ChatView : UiTickViewBase
 		this.SetHasChat(true);
 	}
 
-	// Token: 0x0600B0A5 RID: 45221 RVA: 0x0027F758 File Offset: 0x0027D958
+	// Token: 0x0600848D RID: 33933 RVA: 0x00289CF0 File Offset: 0x00287EF0
 	private void RefreshTeamChatRoom(ChatRoom chatRoom)
 	{
 		if (chatRoom == null)
@@ -711,7 +711,7 @@ public class ChatView : UiTickViewBase
 		this.SetHasChat(true);
 	}
 
-	// Token: 0x0600B0A6 RID: 45222 RVA: 0x0027F7B8 File Offset: 0x0027D9B8
+	// Token: 0x0600848E RID: 33934 RVA: 0x00289D50 File Offset: 0x00287F50
 	private UniTask RefreshChatContent(ChatRoom chatRoom)
 	{
 		ChatView.<RefreshChatContent>d__55 <RefreshChatContent>d__;
@@ -723,7 +723,7 @@ public class ChatView : UiTickViewBase
 		return <RefreshChatContent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B0A7 RID: 45223 RVA: 0x0027F804 File Offset: 0x0027DA04
+	// Token: 0x0600848F RID: 33935 RVA: 0x00289D9C File Offset: 0x00287F9C
 	private void AddChatContents(List<ChatContentData> chatContentList)
 	{
 		if (chatContentList.Count <= 0)
@@ -735,7 +735,7 @@ public class ChatView : UiTickViewBase
 		this.ScheduleScrollToBottom(() => chatContentList.Count - 1, 500f);
 	}
 
-	// Token: 0x0600B0A8 RID: 45224 RVA: 0x0027F868 File Offset: 0x0027DA68
+	// Token: 0x06008490 RID: 33936 RVA: 0x00289E00 File Offset: 0x00288000
 	private void AddChatContent(List<ChatContentData> chatContentDataList, bool? selectLastItem = false)
 	{
 		List<IChatContentDynamicData> dataList = new List<IChatContentDynamicData>();
@@ -839,7 +839,7 @@ public class ChatView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600B0A9 RID: 45225 RVA: 0x0027F9B8 File Offset: 0x0027DBB8
+	// Token: 0x06008491 RID: 33937 RVA: 0x00289F50 File Offset: 0x00288150
 	private void ClearChatContent()
 	{
 		foreach (ChatContentBase chatContentBase in this.ChatContentList)
@@ -849,7 +849,7 @@ public class ChatView : UiTickViewBase
 		this.ChatContentList.Clear();
 	}
 
-	// Token: 0x0600B0AA RID: 45226 RVA: 0x0027FA14 File Offset: 0x0027DC14
+	// Token: 0x06008492 RID: 33938 RVA: 0x00289FAC File Offset: 0x002881AC
 	private void SelectChatRoom(ChatRoom selectPrivateChatRoom, List<ChatRoom> chatRoomList)
 	{
 		if (selectPrivateChatRoom == null)
@@ -864,7 +864,7 @@ public class ChatView : UiTickViewBase
 		this.ChatRoomItemLoopScrollView.SelectGridProxy(num, false);
 	}
 
-	// Token: 0x0600B0AB RID: 45227 RVA: 0x0027FA40 File Offset: 0x0027DC40
+	// Token: 0x06008493 RID: 33939 RVA: 0x00289FD8 File Offset: 0x002881D8
 	[NullableContext(2)]
 	private void RefreshIsOnline(PrivateChatRoom privateChatRoom, bool isShow = true)
 	{
@@ -895,7 +895,7 @@ public class ChatView : UiTickViewBase
 		chatRoomItem.RefreshIsOnline(privateChatRoom);
 	}
 
-	// Token: 0x0600B0AC RID: 45228 RVA: 0x0027FAAC File Offset: 0x0027DCAC
+	// Token: 0x06008494 RID: 33940 RVA: 0x0028A044 File Offset: 0x00288244
 	[NullableContext(2)]
 	private void RefreshPlayerName(PrivateChatRoom privateChatRoom, bool showTitle = false)
 	{
@@ -927,7 +927,7 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B0AD RID: 45229 RVA: 0x0027FB3C File Offset: 0x0027DD3C
+	// Token: 0x06008495 RID: 33941 RVA: 0x0028A0D4 File Offset: 0x002882D4
 	private void TryActivateRefreshPlayInfoTimeDown()
 	{
 		this.RemoveRefreshPlayInfoTimeDown();
@@ -943,7 +943,7 @@ public class ChatView : UiTickViewBase
 		this.RefreshPlayInfoTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnRefreshPlayInfoTimeDown), 10000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600B0AE RID: 45230 RVA: 0x0027FB90 File Offset: 0x0027DD90
+	// Token: 0x06008496 RID: 33942 RVA: 0x0028A128 File Offset: 0x00288328
 	private void RemoveRefreshPlayInfoTimeDown()
 	{
 		if (!TimerSystem.GameplayTimeInstance.Has(this.RefreshPlayInfoTimerId))
@@ -954,7 +954,7 @@ public class ChatView : UiTickViewBase
 		this.RefreshPlayInfoTimerId = null;
 	}
 
-	// Token: 0x0600B0AF RID: 45231 RVA: 0x0027FBC0 File Offset: 0x0027DDC0
+	// Token: 0x06008497 RID: 33943 RVA: 0x0028A158 File Offset: 0x00288358
 	private void ScheduleScrollToBottom(Func<int> getItemIndex, float delay)
 	{
 		TimerHandle handle = null;
@@ -977,7 +977,7 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B0B0 RID: 45232 RVA: 0x0027FC28 File Offset: 0x0027DE28
+	// Token: 0x06008498 RID: 33944 RVA: 0x0028A1C0 File Offset: 0x002883C0
 	private void ClearScrollToBottomTimers()
 	{
 		foreach (TimerHandle handle in this.ScrollToBottomTimerIds)
@@ -987,7 +987,7 @@ public class ChatView : UiTickViewBase
 		this.ScrollToBottomTimerIds.Clear();
 	}
 
-	// Token: 0x0600B0B1 RID: 45233 RVA: 0x0027FC8C File Offset: 0x0027DE8C
+	// Token: 0x06008499 RID: 33945 RVA: 0x0028A224 File Offset: 0x00288424
 	private void OnRefreshPlayInfoTimeDown(float delta)
 	{
 		ChatRoom joinedChatRoom = ChatModel.Instance.GetJoinedChatRoom();
@@ -1005,7 +1005,7 @@ public class ChatView : UiTickViewBase
 		FriendController.Instance.RequestSearchPlayerBasicInfo(targetPlayerId, true);
 	}
 
-	// Token: 0x0600B0B2 RID: 45234 RVA: 0x0027FCD0 File Offset: 0x0027DED0
+	// Token: 0x0600849A RID: 33946 RVA: 0x0028A268 File Offset: 0x00288468
 	private void OnRefreshPrivateFriendInfo(int playerId)
 	{
 		PrivateChatRoom privateChatRoom = ChatModel.Instance.GetPrivateChatRoom(playerId);
@@ -1017,7 +1017,7 @@ public class ChatView : UiTickViewBase
 		this.RefreshPlayerName(privateChatRoom, false);
 	}
 
-	// Token: 0x0600B0B3 RID: 45235 RVA: 0x0027FD00 File Offset: 0x0027DF00
+	// Token: 0x0600849B RID: 33947 RVA: 0x0028A298 File Offset: 0x00288498
 	private void OnRefreshMutePlayer(int playerId)
 	{
 		PrivateChatRoom privateChatRoom = ChatModel.Instance.GetPrivateChatRoom(playerId);
@@ -1038,7 +1038,7 @@ public class ChatView : UiTickViewBase
 		chatRoomItem.RefreshMuteItem();
 	}
 
-	// Token: 0x0600B0B4 RID: 45236 RVA: 0x0027FD48 File Offset: 0x0027DF48
+	// Token: 0x0600849C RID: 33948 RVA: 0x0028A2E0 File Offset: 0x002884E0
 	private void OnChatPlayerInfoChanged(int playerId)
 	{
 		PrivateChatRoom privateChatRoom = ChatModel.Instance.GetPrivateChatRoom(playerId);
@@ -1059,7 +1059,7 @@ public class ChatView : UiTickViewBase
 		chatRoomItem.RefreshPlayerTexture();
 	}
 
-	// Token: 0x0600B0B5 RID: 45237 RVA: 0x0027FD8E File Offset: 0x0027DF8E
+	// Token: 0x0600849D RID: 33949 RVA: 0x0028A326 File Offset: 0x00288526
 	private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		if (this.IsInTouch && !Info.Instance.IsInTouch())
@@ -1071,7 +1071,7 @@ public class ChatView : UiTickViewBase
 		this.RefreshTextInputDefaultText();
 	}
 
-	// Token: 0x0600B0B6 RID: 45238 RVA: 0x0027FDC2 File Offset: 0x0027DFC2
+	// Token: 0x0600849E RID: 33950 RVA: 0x0028A35A File Offset: 0x0028855A
 	private void RefreshChatRoomItem(List<ChatRoom> chatRoomList)
 	{
 		this.CurrentChatRoomList = chatRoomList;
@@ -1083,7 +1083,7 @@ public class ChatView : UiTickViewBase
 		chatRoomItemLoopScrollView.RefreshByData(chatRoomList, false, null, false);
 	}
 
-	// Token: 0x0600B0B7 RID: 45239 RVA: 0x0027FDDF File Offset: 0x0027DFDF
+	// Token: 0x0600849F RID: 33951 RVA: 0x0028A377 File Offset: 0x00288577
 	private ChatRoomItem NewPrivateChatFriendItem()
 	{
 		ChatRoomItem chatRoomItem = new ChatRoomItem();
@@ -1091,7 +1091,7 @@ public class ChatView : UiTickViewBase
 		return chatRoomItem;
 	}
 
-	// Token: 0x0600B0B8 RID: 45240 RVA: 0x0027FDF8 File Offset: 0x0027DFF8
+	// Token: 0x060084A0 RID: 33952 RVA: 0x0028A390 File Offset: 0x00288590
 	private void OnChatRoomClicked(EChatRoomType chatType, int targetPlayerId)
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -1124,7 +1124,7 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B0B9 RID: 45241 RVA: 0x0027FE7C File Offset: 0x0027E07C
+	// Token: 0x060084A1 RID: 33953 RVA: 0x0028A414 File Offset: 0x00288614
 	private void JoinPrivateChatRoom(PrivateChatRoom privateChatRoom)
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -1145,7 +1145,7 @@ public class ChatView : UiTickViewBase
 		instance.JoinChatRoom(privateChatRoom);
 	}
 
-	// Token: 0x0600B0BA RID: 45242 RVA: 0x0027FEC4 File Offset: 0x0027E0C4
+	// Token: 0x060084A2 RID: 33954 RVA: 0x0028A45C File Offset: 0x0028865C
 	private void JoinTeamChatRoom()
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -1158,7 +1158,7 @@ public class ChatView : UiTickViewBase
 		Log.Instance.Error(ELogModule.Chat, ELogAuthor.LJQ, "加入队伍聊天室失败，聊天室未初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600B0BB RID: 45243 RVA: 0x0027FF08 File Offset: 0x0027E108
+	// Token: 0x060084A3 RID: 33955 RVA: 0x0028A4A0 File Offset: 0x002886A0
 	private void JoinWorldChatRoom()
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -1171,7 +1171,7 @@ public class ChatView : UiTickViewBase
 		Log.Instance.Error(ELogModule.Chat, ELogAuthor.LJQ, "加入世界聊天室失败，聊天室未初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600B0BC RID: 45244 RVA: 0x0027FF4C File Offset: 0x0027E14C
+	// Token: 0x060084A4 RID: 33956 RVA: 0x0028A4E4 File Offset: 0x002886E4
 	[return: Nullable(2)]
 	private ChatRoom JoinFirstChatRoom(List<ChatRoom> chatRoomList)
 	{
@@ -1203,7 +1203,7 @@ public class ChatView : UiTickViewBase
 		return null;
 	}
 
-	// Token: 0x0600B0BD RID: 45245 RVA: 0x0027FFD8 File Offset: 0x0027E1D8
+	// Token: 0x060084A5 RID: 33957 RVA: 0x0028A570 File Offset: 0x00288770
 	[NullableContext(2)]
 	private void RefreshThirdPartyItem(PrivateChatRoom privateChatRoom)
 	{
@@ -1266,7 +1266,7 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B0BE RID: 45246 RVA: 0x002800DC File Offset: 0x0027E2DC
+	// Token: 0x060084A6 RID: 33958 RVA: 0x0028A674 File Offset: 0x00288874
 	[NullableContext(2)]
 	private void RefreshPcItem(PrivateChatRoom privateChatRoom, bool ifTeamRoom = false)
 	{
@@ -1303,35 +1303,35 @@ public class ChatView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B0BF RID: 45247 RVA: 0x00280151 File Offset: 0x0027E351
+	// Token: 0x060084A7 RID: 33959 RVA: 0x0028A6E9 File Offset: 0x002888E9
 	protected override void OnBeforeShow()
 	{
 		GameSettingsDeviceRender.Instance.TemporaryDisableFrameGeneration("ChatView");
 	}
 
-	// Token: 0x0600B0C0 RID: 45248 RVA: 0x00280162 File Offset: 0x0027E362
+	// Token: 0x060084A8 RID: 33960 RVA: 0x0028A6FA File Offset: 0x002888FA
 	protected override void OnAfterHide()
 	{
 		GameSettingsDeviceRender.Instance.CancelTemporaryDisableFrameGeneration("ChatView");
 	}
 
-	// Token: 0x04005025 RID: 20517
+	// Token: 0x040050CF RID: 20687
 	private List<ChatContentData> ChatContentDataList = new List<ChatContentData>();
 
-	// Token: 0x04005026 RID: 20518
+	// Token: 0x040050D0 RID: 20688
 	private readonly List<ChatContentBase> ChatContentList = new List<ChatContentBase>();
 
-	// Token: 0x04005027 RID: 20519
+	// Token: 0x040050D1 RID: 20689
 	private bool CanRequestHistory;
 
-	// Token: 0x04005028 RID: 20520
+	// Token: 0x040050D2 RID: 20690
 	[Nullable(2)]
 	private TimerHandle RefreshPlayInfoTimerId;
 
-	// Token: 0x04005029 RID: 20521
+	// Token: 0x040050D3 RID: 20691
 	private readonly HashSet<TimerHandle> ScrollToBottomTimerIds = new HashSet<TimerHandle>();
 
-	// Token: 0x0400502A RID: 20522
+	// Token: 0x040050D4 RID: 20692
 	[Nullable(new byte[]
 	{
 		2,
@@ -1340,7 +1340,7 @@ public class ChatView : UiTickViewBase
 	})]
 	private LoopScrollView<ChatRoomItem, ChatRoom> ChatRoomItemLoopScrollView;
 
-	// Token: 0x0400502B RID: 20523
+	// Token: 0x040050D5 RID: 20693
 	[Nullable(new byte[]
 	{
 		2,
@@ -1350,111 +1350,111 @@ public class ChatView : UiTickViewBase
 	})]
 	private DynamicScrollView<ChatContentItem, ChatContentDynamicItem, IChatContentDynamicData> ChatLoopScrollView;
 
-	// Token: 0x0400502C RID: 20524
+	// Token: 0x040050D6 RID: 20694
 	[Nullable(2)]
 	private ChatContentDynamicItem ChatBaseItem;
 
-	// Token: 0x0400502D RID: 20525
+	// Token: 0x040050D7 RID: 20695
 	private List<ChatRoom> CurrentChatRoomList = new List<ChatRoom>();
 
-	// Token: 0x0400502E RID: 20526
+	// Token: 0x040050D8 RID: 20696
 	public int ChatInputMaxNum;
 
-	// Token: 0x0400502F RID: 20527
+	// Token: 0x040050D9 RID: 20697
 	private bool HasChat;
 
-	// Token: 0x04005030 RID: 20528
+	// Token: 0x040050DA RID: 20698
 	private bool IsTryScroll;
 
-	// Token: 0x04005031 RID: 20529
+	// Token: 0x040050DB RID: 20699
 	private readonly InputKeyDisplayData InputKeyDisplayDataRef = new InputKeyDisplayData();
 
-	// Token: 0x04005032 RID: 20530
+	// Token: 0x040050DC RID: 20700
 	private bool IsInTouch;
 
-	// Token: 0x02007DBA RID: 32186
+	// Token: 0x02006F40 RID: 28480
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04029289 RID: 168585
+		// Token: 0x040245B4 RID: 148916
 		public const int AddPrivateChatButton = 0;
 
-		// Token: 0x0402928A RID: 168586
+		// Token: 0x040245B5 RID: 148917
 		public const int ExpressionButton = 1;
 
-		// Token: 0x0402928B RID: 168587
+		// Token: 0x040245B6 RID: 148918
 		public const int ChatInputText = 2;
 
-		// Token: 0x0402928C RID: 168588
+		// Token: 0x040245B7 RID: 148919
 		public const int QuickChatButton = 3;
 
-		// Token: 0x0402928D RID: 168589
+		// Token: 0x040245B8 RID: 148920
 		public const int SendButton = 4;
 
-		// Token: 0x0402928E RID: 168590
+		// Token: 0x040245B9 RID: 148921
 		public const int OnlineState = 5;
 
-		// Token: 0x0402928F RID: 168591
+		// Token: 0x040245BA RID: 148922
 		public const int FriendRemarks = 6;
 
-		// Token: 0x04029290 RID: 168592
+		// Token: 0x040245BB RID: 148923
 		public const int FriendNameText = 7;
 
-		// Token: 0x04029291 RID: 168593
+		// Token: 0x040245BC RID: 148924
 		public const int FriendDetailButton = 8;
 
-		// Token: 0x04029292 RID: 168594
+		// Token: 0x040245BD RID: 148925
 		public const int CloseButton = 9;
 
-		// Token: 0x04029293 RID: 168595
+		// Token: 0x040245BE RID: 148926
 		public const int ChatFriendSourceItem = 10;
 
-		// Token: 0x04029294 RID: 168596
+		// Token: 0x040245BF RID: 148927
 		public const int ChatScrollView = 11;
 
-		// Token: 0x04029295 RID: 168597
+		// Token: 0x040245C0 RID: 148928
 		public const int ChatItem = 12;
 
-		// Token: 0x04029296 RID: 168598
+		// Token: 0x040245C1 RID: 148929
 		public const int NoneItem = 13;
 
-		// Token: 0x04029297 RID: 168599
+		// Token: 0x040245C2 RID: 148930
 		public const int ChatScrollContent = 14;
 
-		// Token: 0x04029298 RID: 168600
+		// Token: 0x040245C3 RID: 148931
 		public const int ChatRoomItemLoopScrollView = 15;
 
-		// Token: 0x04029299 RID: 168601
+		// Token: 0x040245C4 RID: 148932
 		public const int MastButton = 16;
 
-		// Token: 0x0402929A RID: 168602
+		// Token: 0x040245C5 RID: 148933
 		public const int OfflineState = 17;
 
-		// Token: 0x0402929B RID: 168603
+		// Token: 0x040245C6 RID: 148934
 		public const int TextInputDefaultText = 18;
 
-		// Token: 0x0402929C RID: 168604
+		// Token: 0x040245C7 RID: 148935
 		public const int InputItem = 19;
 
-		// Token: 0x0402929D RID: 168605
+		// Token: 0x040245C8 RID: 148936
 		public const int MuteItem = 20;
 
-		// Token: 0x0402929E RID: 168606
+		// Token: 0x040245C9 RID: 148937
 		public const int ThirdPartyTexture = 21;
 
-		// Token: 0x0402929F RID: 168607
+		// Token: 0x040245CA RID: 148938
 		public const int ThirdPartyText = 22;
 
-		// Token: 0x040292A0 RID: 168608
+		// Token: 0x040245CB RID: 148939
 		public const int FullBlur = 23;
 
-		// Token: 0x040292A1 RID: 168609
+		// Token: 0x040245CC RID: 148940
 		public const int PartialBlur = 24;
 
-		// Token: 0x040292A2 RID: 168610
+		// Token: 0x040245CD RID: 148941
 		public const int PcItem = 25;
 
-		// Token: 0x040292A3 RID: 168611
+		// Token: 0x040245CE RID: 148942
 		public const int ChatScrollItem = 26;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001127 RID: 4391
+// Token: 0x020005DB RID: 1499
 public enum EBabelTowerBuffState
 {
-	// Token: 0x0400352E RID: 13614
+	// Token: 0x040035C7 RID: 13767
 	Normal,
-	// Token: 0x0400352F RID: 13615
+	// Token: 0x040035C8 RID: 13768
 	Lock,
-	// Token: 0x04003530 RID: 13616
+	// Token: 0x040035C9 RID: 13769
 	Use
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E40 RID: 24128
+	// Token: 0x02004E25 RID: 20005
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TopBuffBuLing : TopBuffContainer
 	{
-		// Token: 0x0603D5A1 RID: 251297 RVA: 0x00ECA5F4 File Offset: 0x00EC87F4
+		// Token: 0x06032531 RID: 206129 RVA: 0x00E1BB60 File Offset: 0x00E19D60
 		protected override UniTask OnInitAsync()
 		{
 			TopBuffBuLing.<OnInitAsync>d__4 <OnInitAsync>d__;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnInitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D5A2 RID: 251298 RVA: 0x00ECA638 File Offset: 0x00EC8838
+		// Token: 0x06032532 RID: 206130 RVA: 0x00E1BBA4 File Offset: 0x00E19DA4
 		public override void SetVisible(bool visible)
 		{
 			foreach (TopBuffItemBuLing topBuffItemBuLing in this.ItemList)
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5A3 RID: 251299 RVA: 0x00ECA68C File Offset: 0x00EC888C
+		// Token: 0x06032533 RID: 206131 RVA: 0x00E1BBF8 File Offset: 0x00E19DF8
 		private void AddEvents()
 		{
 			foreach (int tagId in TopBuffBuLing.TagIds)
@@ -41,18 +41,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5A4 RID: 251300 RVA: 0x00ECA6C4 File Offset: 0x00EC88C4
+		// Token: 0x06032534 RID: 206132 RVA: 0x00E1BC30 File Offset: 0x00E19E30
 		private void RemoveEvents()
 		{
 		}
 
-		// Token: 0x0603D5A5 RID: 251301 RVA: 0x00ECA6C6 File Offset: 0x00EC88C6
+		// Token: 0x06032535 RID: 206133 RVA: 0x00E1BC32 File Offset: 0x00E19E32
 		private void OnTagCountChange(int tagId, bool tagExist)
 		{
 			this.Dirty = true;
 		}
 
-		// Token: 0x0603D5A6 RID: 251302 RVA: 0x00ECA6D0 File Offset: 0x00EC88D0
+		// Token: 0x06032536 RID: 206134 RVA: 0x00E1BC3C File Offset: 0x00E19E3C
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5A7 RID: 251303 RVA: 0x00ECA740 File Offset: 0x00EC8940
+		// Token: 0x06032537 RID: 206135 RVA: 0x00E1BCAC File Offset: 0x00E19EAC
 		private void RefreshItemList(bool isInit = false)
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5A8 RID: 251304 RVA: 0x00ECA960 File Offset: 0x00EC8B60
+		// Token: 0x06032538 RID: 206136 RVA: 0x00E1BECC File Offset: 0x00E1A0CC
 		protected override void OnDestroy()
 		{
 			this.RemoveEvents();
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x04020006 RID: 131078
+		// Token: 0x0401AACD RID: 109261
 		[StaticVariableRuleIgnore]
 		private static readonly int[] TagIds = new int[]
 		{
@@ -176,13 +176,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			GameplayTagDefine.EGameplayTagId["角色.BulingMd10011.卦象.UI标识.B4"]
 		};
 
-		// Token: 0x04020007 RID: 131079
+		// Token: 0x0401AACE RID: 109262
 		private bool Dirty;
 
-		// Token: 0x04020008 RID: 131080
+		// Token: 0x0401AACF RID: 109263
 		private readonly List<TopBuffItemBuLing> ItemList = new List<TopBuffItemBuLing>();
 
-		// Token: 0x04020009 RID: 131081
+		// Token: 0x0401AAD0 RID: 109264
 		private int LastCount;
 	}
 }

@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Area;
 
 namespace CSharpScript.Game.Module.ExploreLevel
 {
-	// Token: 0x02005A8D RID: 23181
+	// Token: 0x02004A69 RID: 19049
 	public class CountryExploreScoreData
 	{
-		// Token: 0x0603AB6B RID: 240491 RVA: 0x00DFC47D File Offset: 0x00DFA67D
+		// Token: 0x0602FAB4 RID: 195252 RVA: 0x00D4CA11 File Offset: 0x00D4AC11
 		public void Initialize(int countryId, int areaId, int progress, int lastProgress, int score)
 		{
 			this.CountryId = countryId;
@@ -20,62 +20,62 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			this.AreaConfig = CSharpScript.Game.Module.Area.AreaConfig.Instance.GetAreaInfo(areaId);
 		}
 
-		// Token: 0x0603AB6C RID: 240492 RVA: 0x00DFC4BC File Offset: 0x00DFA6BC
+		// Token: 0x0602FAB5 RID: 195253 RVA: 0x00D4CA50 File Offset: 0x00D4AC50
 		public void SetReceived(bool bReceived)
 		{
 			this.IsReceived = bReceived;
 		}
 
-		// Token: 0x0603AB6D RID: 240493 RVA: 0x00DFC4C5 File Offset: 0x00DFA6C5
+		// Token: 0x0602FAB6 RID: 195254 RVA: 0x00D4CA59 File Offset: 0x00D4AC59
 		public bool GetIsReceived()
 		{
 			return this.IsReceived;
 		}
 
-		// Token: 0x0603AB6E RID: 240494 RVA: 0x00DFC4D0 File Offset: 0x00DFA6D0
+		// Token: 0x0602FAB7 RID: 195255 RVA: 0x00D4CA64 File Offset: 0x00D4AC64
 		[NullableContext(1)]
 		public string GetAreaNameTextId()
 		{
 			return this.AreaConfig.Value.Title;
 		}
 
-		// Token: 0x0603AB6F RID: 240495 RVA: 0x00DFC4F0 File Offset: 0x00DFA6F0
+		// Token: 0x0602FAB8 RID: 195256 RVA: 0x00D4CA84 File Offset: 0x00D4AC84
 		public Area? GetAreaConfig()
 		{
 			return this.AreaConfig;
 		}
 
-		// Token: 0x0603AB70 RID: 240496 RVA: 0x00DFC4F8 File Offset: 0x00DFA6F8
+		// Token: 0x0602FAB9 RID: 195257 RVA: 0x00D4CA8C File Offset: 0x00D4AC8C
 		public bool CanReceive()
 		{
 			return this.GetAreaProgress() >= this.Progress && !this.IsReceived;
 		}
 
-		// Token: 0x0603AB71 RID: 240497 RVA: 0x00DFC513 File Offset: 0x00DFA713
+		// Token: 0x0602FABA RID: 195258 RVA: 0x00D4CAA7 File Offset: 0x00D4ACA7
 		public int GetAreaProgress()
 		{
 			return ExploreProgressModel.Instance.GetExploreAreaData(this.AreaId).GetProgress();
 		}
 
-		// Token: 0x0401EA5A RID: 125530
+		// Token: 0x04019501 RID: 103681
 		public int CountryId;
 
-		// Token: 0x0401EA5B RID: 125531
+		// Token: 0x04019502 RID: 103682
 		public int AreaId;
 
-		// Token: 0x0401EA5C RID: 125532
+		// Token: 0x04019503 RID: 103683
 		public int Progress;
 
-		// Token: 0x0401EA5D RID: 125533
+		// Token: 0x04019504 RID: 103684
 		public int LastProgress;
 
-		// Token: 0x0401EA5E RID: 125534
+		// Token: 0x04019505 RID: 103685
 		public int Score;
 
-		// Token: 0x0401EA5F RID: 125535
+		// Token: 0x04019506 RID: 103686
 		private bool IsReceived;
 
-		// Token: 0x0401EA60 RID: 125536
+		// Token: 0x04019507 RID: 103687
 		private Area? AreaConfig;
 	}
 }

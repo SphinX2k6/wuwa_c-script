@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007044 RID: 28740
+	// Token: 0x02007810 RID: 30736
 	public class ISetNpcTwoPersonPerformT
 	{
-		// Token: 0x1700D575 RID: 54645
-		// (get) Token: 0x06032DA2 RID: 208290 RVA: 0x006DBF4D File Offset: 0x006DA14D
-		// (set) Token: 0x06032DA3 RID: 208291 RVA: 0x006DBF55 File Offset: 0x006DA155
+		// Token: 0x1700E156 RID: 57686
+		// (get) Token: 0x0603603F RID: 221247 RVA: 0x0073C475 File Offset: 0x0073A675
+		// (set) Token: 0x06036040 RID: 221248 RVA: 0x0073C47D File Offset: 0x0073A67D
 		public ENpcGroupPerformType Type { get; set; }
 
-		// Token: 0x1700D576 RID: 54646
-		// (get) Token: 0x06032DA4 RID: 208292 RVA: 0x006DBF5E File Offset: 0x006DA15E
-		// (set) Token: 0x06032DA5 RID: 208293 RVA: 0x006DBF66 File Offset: 0x006DA166
+		// Token: 0x1700E157 RID: 57687
+		// (get) Token: 0x06036041 RID: 221249 RVA: 0x0073C486 File Offset: 0x0073A686
+		// (set) Token: 0x06036042 RID: 221250 RVA: 0x0073C48E File Offset: 0x0073A68E
 		public IPlayerInitiatorT Initiator { get; set; }
 
-		// Token: 0x1700D577 RID: 54647
-		// (get) Token: 0x06032DA6 RID: 208294 RVA: 0x006DBF6F File Offset: 0x006DA16F
-		// (set) Token: 0x06032DA7 RID: 208295 RVA: 0x006DBF77 File Offset: 0x006DA177
+		// Token: 0x1700E158 RID: 57688
+		// (get) Token: 0x06036043 RID: 221251 RVA: 0x0073C497 File Offset: 0x0073A697
+		// (set) Token: 0x06036044 RID: 221252 RVA: 0x0073C49F File Offset: 0x0073A69F
 		public int Target { get; set; }
 
-		// Token: 0x1700D578 RID: 54648
-		// (get) Token: 0x06032DA8 RID: 208296 RVA: 0x006DBF80 File Offset: 0x006DA180
-		// (set) Token: 0x06032DA9 RID: 208297 RVA: 0x006DBF88 File Offset: 0x006DA188
+		// Token: 0x1700E159 RID: 57689
+		// (get) Token: 0x06036045 RID: 221253 RVA: 0x0073C4A8 File Offset: 0x0073A6A8
+		// (set) Token: 0x06036046 RID: 221254 RVA: 0x0073C4B0 File Offset: 0x0073A6B0
 		public string GroupPerformMark { get; set; }
 
-		// Token: 0x1700D579 RID: 54649
-		// (get) Token: 0x06032DAA RID: 208298 RVA: 0x006DBF91 File Offset: 0x006DA191
-		// (set) Token: 0x06032DAB RID: 208299 RVA: 0x006DBF99 File Offset: 0x006DA199
+		// Token: 0x1700E15A RID: 57690
+		// (get) Token: 0x06036047 RID: 221255 RVA: 0x0073C4B9 File Offset: 0x0073A6B9
+		// (set) Token: 0x06036048 RID: 221256 RVA: 0x0073C4C1 File Offset: 0x0073A6C1
 		public ENpcGroupPerformNpcType NpcType { get; set; }
 
-		// Token: 0x1700D57A RID: 54650
-		// (get) Token: 0x06032DAC RID: 208300 RVA: 0x006DBFA2 File Offset: 0x006DA1A2
-		// (set) Token: 0x06032DAD RID: 208301 RVA: 0x006DBFAA File Offset: 0x006DA1AA
+		// Token: 0x1700E15B RID: 57691
+		// (get) Token: 0x06036049 RID: 221257 RVA: 0x0073C4CA File Offset: 0x0073A6CA
+		// (set) Token: 0x0603604A RID: 221258 RVA: 0x0073C4D2 File Offset: 0x0073A6D2
 		public EWaitInteractNpcMontageWaitType WaitInteractNpcType { get; set; }
 
-		// Token: 0x1700D57B RID: 54651
-		// (get) Token: 0x06032DAE RID: 208302 RVA: 0x006DBFB3 File Offset: 0x006DA1B3
-		// (set) Token: 0x06032DAF RID: 208303 RVA: 0x006DBFBB File Offset: 0x006DA1BB
+		// Token: 0x1700E15C RID: 57692
+		// (get) Token: 0x0603604B RID: 221259 RVA: 0x0073C4DB File Offset: 0x0073A6DB
+		// (set) Token: 0x0603604C RID: 221260 RVA: 0x0073C4E3 File Offset: 0x0073A6E3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032DB0 RID: 208304 RVA: 0x006DBFC4 File Offset: 0x006DA1C4
+		// Token: 0x0603604D RID: 221261 RVA: 0x0073C4EC File Offset: 0x0073A6EC
 		public ISetNpcTwoPersonPerformT()
 		{
 			this.Type = ENpcGroupPerformType.HandInHand;

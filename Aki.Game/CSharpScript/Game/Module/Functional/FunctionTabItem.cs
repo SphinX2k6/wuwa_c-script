@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Functional
 {
-	// Token: 0x02005A1D RID: 23069
+	// Token: 0x020049F9 RID: 18937
 	public class FunctionTabItem : UiPanelBase
 	{
-		// Token: 0x0603A82F RID: 239663 RVA: 0x00DEC8EC File Offset: 0x00DEAAEC
+		// Token: 0x0602F778 RID: 194424 RVA: 0x00D3CE7C File Offset: 0x00D3B07C
 		[NullableContext(1)]
 		public FunctionTabItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603A830 RID: 239664 RVA: 0x00DEC904 File Offset: 0x00DEAB04
+		// Token: 0x0602F779 RID: 194425 RVA: 0x00D3CE94 File Offset: 0x00D3B094
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,16 +29,16 @@ namespace CSharpScript.Game.Module.Functional
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A831 RID: 239665 RVA: 0x00DEC94C File Offset: 0x00DEAB4C
+		// Token: 0x0602F77A RID: 194426 RVA: 0x00D3CEDC File Offset: 0x00D3B0DC
 		public void SetToggleState(bool bSelected)
 		{
 			base.GetExtendToggle(0).SetToggleState(bSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0200BC92 RID: 48274
+		// Token: 0x0200A69B RID: 42651
 		private class ECompDefine
 		{
-			// Token: 0x04038E3B RID: 233019
+			// Token: 0x04033806 RID: 210950
 			public const int Toggle = 0;
 		}
 	}

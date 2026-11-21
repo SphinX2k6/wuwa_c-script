@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Define.SimpleTabel
 {
-	// Token: 0x0200024F RID: 591
+	// Token: 0x02000254 RID: 596
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TableReaderUtil : IStaticVariableResetter
 	{
-		// Token: 0x06000ED8 RID: 3800 RVA: 0x00056E91 File Offset: 0x00055091
+		// Token: 0x06000F19 RID: 3865 RVA: 0x000599D5 File Offset: 0x00057BD5
 		static TableReaderUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TableReaderUtil.CreateStaticDefaultValue), new Action(TableReaderUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000ED9 RID: 3801 RVA: 0x00056EB0 File Offset: 0x000550B0
+		// Token: 0x06000F1A RID: 3866 RVA: 0x000599F4 File Offset: 0x00057BF4
 		[NullableContext(0)]
 		[return: Nullable(new byte[]
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return table.__vector_as_array<T>(fieldOffset) ?? Array.Empty<T>();
 		}
 
-		// Token: 0x06000EDA RID: 3802 RVA: 0x00056ED8 File Offset: 0x000550D8
+		// Token: 0x06000F1B RID: 3867 RVA: 0x00059A1C File Offset: 0x00057C1C
 		public static int GetIntFromCommonConfig(string key, int defaultValue)
 		{
 			string dbPath = KuroApplication.ProjectContentDir() + "Aki/ConfigDB/db_common_param.db";
@@ -85,30 +85,30 @@ namespace CSharpScript.Launcher.Define.SimpleTabel
 			return result;
 		}
 
-		// Token: 0x06000EDB RID: 3803 RVA: 0x00056FF0 File Offset: 0x000551F0
+		// Token: 0x06000F1C RID: 3868 RVA: 0x00059B34 File Offset: 0x00057D34
 		public static void CreateStaticDefaultValue()
 		{
 			TableReaderUtil.ArrayCapacityObject = new Dictionary<int, int>();
 			TableReaderUtil.ArrayElementInitFunc = (() => 0);
 		}
 
-		// Token: 0x06000EDC RID: 3804 RVA: 0x00057020 File Offset: 0x00055220
+		// Token: 0x06000F1D RID: 3869 RVA: 0x00059B64 File Offset: 0x00057D64
 		public static void ResetStaticDefaultValue()
 		{
 			TableReaderUtil.ArrayCapacityObject = null;
 			TableReaderUtil.ArrayElementInitFunc = null;
 		}
 
-		// Token: 0x04000981 RID: 2433
+		// Token: 0x040009C9 RID: 2505
 		private static Dictionary<int, int> ArrayCapacityObject;
 
-		// Token: 0x04000982 RID: 2434
+		// Token: 0x040009CA RID: 2506
 		private static Func<object> ArrayElementInitFunc;
 
-		// Token: 0x04000983 RID: 2435
+		// Token: 0x040009CB RID: 2507
 		private const string CommonConfigDb = "db_common_param.db";
 
-		// Token: 0x04000984 RID: 2436
+		// Token: 0x040009CC RID: 2508
 		private const string CommonConfigTableName = "CommonParam";
 	}
 }

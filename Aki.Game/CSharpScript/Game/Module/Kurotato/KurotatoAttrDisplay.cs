@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005700 RID: 22272
+	// Token: 0x020046D7 RID: 18135
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoAttrDisplay : IKurotatoAttrDisplay
 	{
-		// Token: 0x1700882B RID: 34859
-		// (get) Token: 0x06038A40 RID: 232000 RVA: 0x00D707F9 File Offset: 0x00D6E9F9
-		// (set) Token: 0x06038A41 RID: 232001 RVA: 0x00D70801 File Offset: 0x00D6EA01
+		// Token: 0x17005BF3 RID: 23539
+		// (get) Token: 0x0602D950 RID: 186704 RVA: 0x00CBEDE1 File Offset: 0x00CBCFE1
+		// (set) Token: 0x0602D951 RID: 186705 RVA: 0x00CBEDE9 File Offset: 0x00CBCFE9
 		public string Icon { get; set; }
 
-		// Token: 0x1700882C RID: 34860
-		// (get) Token: 0x06038A42 RID: 232002 RVA: 0x00D7080A File Offset: 0x00D6EA0A
-		// (set) Token: 0x06038A43 RID: 232003 RVA: 0x00D70812 File Offset: 0x00D6EA12
+		// Token: 0x17005BF4 RID: 23540
+		// (get) Token: 0x0602D952 RID: 186706 RVA: 0x00CBEDF2 File Offset: 0x00CBCFF2
+		// (set) Token: 0x0602D953 RID: 186707 RVA: 0x00CBEDFA File Offset: 0x00CBCFFA
 		public string Text { get; set; }
 
-		// Token: 0x1700882D RID: 34861
-		// (get) Token: 0x06038A44 RID: 232004 RVA: 0x00D7081B File Offset: 0x00D6EA1B
-		// (set) Token: 0x06038A45 RID: 232005 RVA: 0x00D70823 File Offset: 0x00D6EA23
+		// Token: 0x17005BF5 RID: 23541
+		// (get) Token: 0x0602D954 RID: 186708 RVA: 0x00CBEE03 File Offset: 0x00CBD003
+		// (set) Token: 0x0602D955 RID: 186709 RVA: 0x00CBEE0B File Offset: 0x00CBD00B
 		public int PropertyId { get; set; }
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002538 RID: 9528
+// Token: 0x02001A21 RID: 6689
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,19 +11,19 @@ using System.Runtime.CompilerServices;
 })]
 public class RewardChatGridData : MultiTemplateGridDataBase<PhoneMsgChatData, RewardChatItem>
 {
-	// Token: 0x0601326A RID: 78442 RVA: 0x004C1123 File Offset: 0x004BF323
+	// Token: 0x0601073D RID: 67389 RVA: 0x004CF6E7 File Offset: 0x004CD8E7
 	public RewardChatGridData(PhoneMsgChatData data)
 	{
 		base.Data = data;
 	}
 
-	// Token: 0x0601326B RID: 78443 RVA: 0x004C1132 File Offset: 0x004BF332
+	// Token: 0x0601073E RID: 67390 RVA: 0x004CF6F6 File Offset: 0x004CD8F6
 	public override int GetTemplateIndex()
 	{
 		return 5;
 	}
 
-	// Token: 0x0601326C RID: 78444 RVA: 0x004C1135 File Offset: 0x004BF335
+	// Token: 0x0601073F RID: 67391 RVA: 0x004CF6F9 File Offset: 0x004CD8F9
 	public override RewardChatItem CreateProxy()
 	{
 		return new RewardChatItem
@@ -32,7 +32,7 @@ public class RewardChatGridData : MultiTemplateGridDataBase<PhoneMsgChatData, Re
 		};
 	}
 
-	// Token: 0x04009099 RID: 37017
+	// Token: 0x040091F3 RID: 37363
 	[Nullable(2)]
 	public Action OnRewardClick;
 }

@@ -7,15 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065B9 RID: 26041
+	// Token: 0x02005537 RID: 21815
 	public class DockyardQteSkipPanel : UiPanelBase, IDockyardLeftTipsInterface
 	{
-		// Token: 0x1700958D RID: 38285
-		// (get) Token: 0x06041521 RID: 267553 RVA: 0x00FD47E8 File Offset: 0x00FD29E8
-		// (set) Token: 0x06041522 RID: 267554 RVA: 0x00FD47F0 File Offset: 0x00FD29F0
+		// Token: 0x170068EF RID: 26863
+		// (get) Token: 0x060361E6 RID: 221670 RVA: 0x00F1B824 File Offset: 0x00F19A24
+		// (set) Token: 0x060361E7 RID: 221671 RVA: 0x00F1B82C File Offset: 0x00F19A2C
 		public bool LockState { get; set; }
 
-		// Token: 0x06041523 RID: 267555 RVA: 0x00FD47FC File Offset: 0x00FD29FC
+		// Token: 0x060361E8 RID: 221672 RVA: 0x00F1B838 File Offset: 0x00F19A38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041524 RID: 267556 RVA: 0x00FD48E6 File Offset: 0x00FD2AE6
+		// Token: 0x060361E9 RID: 221673 RVA: 0x00F1B922 File Offset: 0x00F19B22
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, false);
 		}
 
-		// Token: 0x06041525 RID: 267557 RVA: 0x00FD4914 File Offset: 0x00FD2B14
+		// Token: 0x060361EA RID: 221674 RVA: 0x00F1B950 File Offset: 0x00F19B50
 		public void SetPanelVisible(bool bVisible)
 		{
 			if (this.LockState)
@@ -71,31 +71,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.LevelSequencePlayer.PlaySequencePurely("Hide", false, false, null, null, false);
 		}
 
-		// Token: 0x06041526 RID: 267558 RVA: 0x00FD4989 File Offset: 0x00FD2B89
+		// Token: 0x060361EB RID: 221675 RVA: 0x00F1B9C5 File Offset: 0x00F19BC5
 		public void SetQtePanelText(int currentCount, int maxCount)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Fishing_QTE_Unfish", new <>z__ReadOnlySingleElementList<object>(maxCount - currentCount));
 		}
 
-		// Token: 0x06041527 RID: 267559 RVA: 0x00FD49AE File Offset: 0x00FD2BAE
+		// Token: 0x060361EC RID: 221676 RVA: 0x00F1B9EA File Offset: 0x00F19BEA
 		public void SetQtePanelTextVisible(bool bVisible)
 		{
 			base.GetText(0).SetUIActive(bVisible);
 		}
 
-		// Token: 0x06041528 RID: 267560 RVA: 0x00FD49C0 File Offset: 0x00FD2BC0
+		// Token: 0x060361ED RID: 221677 RVA: 0x00F1B9FC File Offset: 0x00F19BFC
 		public void SetButtonContinueVisible(bool bVisible)
 		{
 			base.GetButton(1).RootUIComp.Get().SetUIActive(bVisible);
 		}
 
-		// Token: 0x06041529 RID: 267561 RVA: 0x00FD49E8 File Offset: 0x00FD2BE8
+		// Token: 0x060361EE RID: 221678 RVA: 0x00F1BA24 File Offset: 0x00F19C24
 		public void SetButtonExitVisible(bool bVisible)
 		{
 			base.GetButton(2).RootUIComp.Get().SetUIActive(bVisible);
 		}
 
-		// Token: 0x0604152A RID: 267562 RVA: 0x00FD4A0F File Offset: 0x00FD2C0F
+		// Token: 0x060361EF RID: 221679 RVA: 0x00F1BA4B File Offset: 0x00F19C4B
 		private void OnContinueClick()
 		{
 			Action continueFunc = this.ContinueFunc;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			continueFunc();
 		}
 
-		// Token: 0x0604152B RID: 267563 RVA: 0x00FD4A21 File Offset: 0x00FD2C21
+		// Token: 0x060361F0 RID: 221680 RVA: 0x00F1BA5D File Offset: 0x00F19C5D
 		private void OnExitClick()
 		{
 			Action exitFunc = this.ExitFunc;
@@ -117,28 +117,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			exitFunc();
 		}
 
-		// Token: 0x04021FF3 RID: 139251
+		// Token: 0x0401C924 RID: 117028
 		[Nullable(1)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04021FF4 RID: 139252
+		// Token: 0x0401C925 RID: 117029
 		[Nullable(2)]
 		public Action ContinueFunc;
 
-		// Token: 0x04021FF5 RID: 139253
+		// Token: 0x0401C926 RID: 117030
 		[Nullable(2)]
 		public Action ExitFunc;
 
-		// Token: 0x0200C7D4 RID: 51156
+		// Token: 0x0200B1B7 RID: 45495
 		private class EComponentDefine
 		{
-			// Token: 0x0403C5BA RID: 247226
+			// Token: 0x04036F08 RID: 225032
 			public const int Content = 0;
 
-			// Token: 0x0403C5BB RID: 247227
+			// Token: 0x04036F09 RID: 225033
 			public const int Continue = 1;
 
-			// Token: 0x0403C5BC RID: 247228
+			// Token: 0x04036F0A RID: 225034
 			public const int Exit = 2;
 		}
 	}

@@ -2,14 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007677 RID: 30327
+	// Token: 0x02007E85 RID: 32389
 	public enum TClientFollowShooterLeisureType : byte
 	{
-		// Token: 0x04012660 RID: 75360
+		// Token: 0x040136AA RID: 79530
 		NONE,
-		// Token: 0x04012661 RID: 75361
+		// Token: 0x040136AB RID: 79531
 		IClientFollowShooterPlayAnimation,
-		// Token: 0x04012662 RID: 75362
+		// Token: 0x040136AC RID: 79532
+		IClientFollowShooterPlaySkill,
+		// Token: 0x040136AD RID: 79533
 		IClientFollowShooterResetToPlayer
 	}
 }

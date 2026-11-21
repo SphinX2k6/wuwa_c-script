@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000640 RID: 1600
+	// Token: 0x02000658 RID: 1624
 	public class ConfigPayShopAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002590 RID: 9616 RVA: 0x0012E090 File Offset: 0x0012C290
+		// Token: 0x06002620 RID: 9760 RVA: 0x00134B0C File Offset: 0x00132D0C
 		static ConfigPayShopAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPayShopAll.CreateStaticDefaultValue), new Action(ConfigPayShopAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002591 RID: 9617 RVA: 0x0012E0B0 File Offset: 0x0012C2B0
+		// Token: 0x06002621 RID: 9761 RVA: 0x00134B2C File Offset: 0x00132D2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPayShopAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002592 RID: 9618 RVA: 0x0012E12F File Offset: 0x0012C32F
+		// Token: 0x06002622 RID: 9762 RVA: 0x00134BAB File Offset: 0x00132DAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPayShopAll.LogPair = null;
 			ConfigPayShopAll.HandleId = 0;
 		}
 
-		// Token: 0x06002593 RID: 9619 RVA: 0x0012E13D File Offset: 0x0012C33D
+		// Token: 0x06002623 RID: 9763 RVA: 0x00134BB9 File Offset: 0x00132DB9
 		public static void Init()
 		{
 			ConfigPayShopAll.HandleId = ConfigCommon.InitDataStatement(ConfigPayShopAll.HandleId, "db_payshop.db", "select BinData from `PayShop`");
 		}
 
-		// Token: 0x06002594 RID: 9620 RVA: 0x0012E158 File Offset: 0x0012C358
+		// Token: 0x06002624 RID: 9764 RVA: 0x00134BD4 File Offset: 0x00132DD4
 		[NullableContext(2)]
 		public static IReadOnlyList<PayShop> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002BA6 RID: 11174
+		// Token: 0x04002C4E RID: 11342
 		private const string DB = "db_payshop.db";
 
-		// Token: 0x04002BA7 RID: 11175
+		// Token: 0x04002C4F RID: 11343
 		private const string FILE = "s.商业化商城.xlsx";
 
-		// Token: 0x04002BA8 RID: 11176
+		// Token: 0x04002C50 RID: 11344
 		private const string TABLE = "PayShop";
 
-		// Token: 0x04002BA9 RID: 11177
+		// Token: 0x04002C51 RID: 11345
 		private const string COMMAND = "select BinData from `PayShop`";
 
-		// Token: 0x04002BAA RID: 11178
+		// Token: 0x04002C52 RID: 11346
 		private const string KEY_PREFIX = "PayShopAll";
 
-		// Token: 0x04002BAB RID: 11179
+		// Token: 0x04002C53 RID: 11347
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002BAC RID: 11180
+		// Token: 0x04002C54 RID: 11348
 		private static int HandleId;
 	}
 }

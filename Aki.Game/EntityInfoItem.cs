@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025CE RID: 9678
+// Token: 0x02001AB9 RID: 6841
 public class EntityInfoItem : UiPanelBase
 {
-	// Token: 0x06013A1E RID: 80414 RVA: 0x004E8D8C File Offset: 0x004E6F8C
+	// Token: 0x06010EFE RID: 69374 RVA: 0x004F798C File Offset: 0x004F5B8C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class EntityInfoItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013A1F RID: 80415 RVA: 0x004E8DE8 File Offset: 0x004E6FE8
+	// Token: 0x06010EFF RID: 69375 RVA: 0x004F79E8 File Offset: 0x004F5BE8
 	public void InitSpr()
 	{
 		if (this.UiSequencePlayer == null)
@@ -30,7 +30,7 @@ public class EntityInfoItem : UiPanelBase
 		this.Finished = false;
 	}
 
-	// Token: 0x06013A20 RID: 80416 RVA: 0x004E8E40 File Offset: 0x004E7040
+	// Token: 0x06010F00 RID: 69376 RVA: 0x004F7A40 File Offset: 0x004F5C40
 	[NullableContext(1)]
 	public void Refresh(IInfoData info)
 	{
@@ -48,7 +48,7 @@ public class EntityInfoItem : UiPanelBase
 		base.GetText(2).SetText(configTextByKey, true);
 	}
 
-	// Token: 0x06013A21 RID: 80417 RVA: 0x004E8E98 File Offset: 0x004E7098
+	// Token: 0x06010F01 RID: 69377 RVA: 0x004F7A98 File Offset: 0x004F5C98
 	public void RefreshFinishState(bool bFinished)
 	{
 		if (bFinished && !this.Finished)
@@ -66,7 +66,7 @@ public class EntityInfoItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013A22 RID: 80418 RVA: 0x004E8F1C File Offset: 0x004E711C
+	// Token: 0x06010F02 RID: 69378 RVA: 0x004F7B1C File Offset: 0x004F5D1C
 	[NullableContext(1)]
 	public void SetTextLine(string description)
 	{
@@ -81,21 +81,21 @@ public class EntityInfoItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009407 RID: 37895
+	// Token: 0x0400955D RID: 38237
 	[Nullable(2)]
 	protected LevelSequencePlayer UiSequencePlayer;
 
-	// Token: 0x04009408 RID: 37896
+	// Token: 0x0400955E RID: 38238
 	private bool Finished;
 
-	// Token: 0x02008BDD RID: 35805
+	// Token: 0x02007D65 RID: 32101
 	private enum EItemChildType
 	{
-		// Token: 0x0402D674 RID: 185972
+		// Token: 0x04028989 RID: 166281
 		TitleBg,
-		// Token: 0x0402D675 RID: 185973
+		// Token: 0x0402898A RID: 166282
 		SpriteTick,
-		// Token: 0x0402D676 RID: 185974
+		// Token: 0x0402898B RID: 166283
 		Text
 	}
 }

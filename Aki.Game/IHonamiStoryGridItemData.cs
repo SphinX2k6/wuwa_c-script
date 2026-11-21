@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001E85 RID: 7813
+// Token: 0x02001347 RID: 4935
 [NullableContext(1)]
 public interface IHonamiStoryGridItemData
 {
-	// Token: 0x0600EE1A RID: 60954
+	// Token: 0x0600C239 RID: 49721
 	int GetIncId();
 
-	// Token: 0x0600EE1B RID: 60955
+	// Token: 0x0600C23A RID: 49722
 	int GetPosition();
 
-	// Token: 0x0600EE1C RID: 60956
+	// Token: 0x0600C23B RID: 49723
 	int GetGridHeight();
 
-	// Token: 0x0600EE1D RID: 60957
+	// Token: 0x0600C23C RID: 49724
 	int GetGridWidth();
 
-	// Token: 0x0600EE1E RID: 60958
+	// Token: 0x0600C23D RID: 49725
 	int GetRow();
 
-	// Token: 0x0600EE1F RID: 60959
+	// Token: 0x0600C23E RID: 49726
 	int GetColumn();
 
-	// Token: 0x0600EE20 RID: 60960
+	// Token: 0x0600C23F RID: 49727
 	List<int> GetGridFillPositionList();
 }

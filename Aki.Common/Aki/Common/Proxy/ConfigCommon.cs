@@ -4,12 +4,12 @@ using Google.FlatBuffers;
 
 namespace Aki.Common.Proxy
 {
-	// Token: 0x0200001E RID: 30
+	// Token: 0x0200001F RID: 31
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConfigCommon
 	{
-		// Token: 0x060000CD RID: 205 RVA: 0x0000B231 File Offset: 0x00009431
+		// Token: 0x0600013A RID: 314 RVA: 0x0000E9FD File Offset: 0x0000CBFD
 		public static int InitDataStatement(int handleId, string dbName, string command)
 		{
 			Func<int, string, string, int> initDataStatementFunc = ConfigCommon.InitDataStatementFunc;
@@ -20,7 +20,7 @@ namespace Aki.Common.Proxy
 			return initDataStatementFunc(handleId, dbName, command);
 		}
 
-		// Token: 0x060000CE RID: 206 RVA: 0x0000B246 File Offset: 0x00009446
+		// Token: 0x0600013B RID: 315 RVA: 0x0000EA12 File Offset: 0x0000CC12
 		public static bool CheckStatement(int handleId, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -33,7 +33,7 @@ namespace Aki.Common.Proxy
 			return checkStatementFunc != null && checkStatementFunc(handleId, pairs);
 		}
 
-		// Token: 0x060000CF RID: 207 RVA: 0x0000B25A File Offset: 0x0000945A
+		// Token: 0x0600013C RID: 316 RVA: 0x0000EA26 File Offset: 0x0000CC26
 		public static bool BindInt(int handleId, int bindingIndex, int value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -46,7 +46,7 @@ namespace Aki.Common.Proxy
 			return bindIntFunc != null && bindIntFunc(handleId, bindingIndex, value, pairs);
 		}
 
-		// Token: 0x060000D0 RID: 208 RVA: 0x0000B270 File Offset: 0x00009470
+		// Token: 0x0600013D RID: 317 RVA: 0x0000EA3C File Offset: 0x0000CC3C
 		public static int Step(int handleId, bool errZero = false, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -63,7 +63,7 @@ namespace Aki.Common.Proxy
 			return stepFunc(handleId, errZero, pairs);
 		}
 
-		// Token: 0x060000D1 RID: 209 RVA: 0x0000B288 File Offset: 0x00009488
+		// Token: 0x0600013E RID: 318 RVA: 0x0000EA54 File Offset: 0x0000CC54
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -85,7 +85,7 @@ namespace Aki.Common.Proxy
 			return getValueFunc(handleId, columnIndex, pairs);
 		}
 
-		// Token: 0x060000D2 RID: 210 RVA: 0x0000B2B0 File Offset: 0x000094B0
+		// Token: 0x0600013F RID: 319 RVA: 0x0000EA7C File Offset: 0x0000CC7C
 		[NullableContext(0)]
 		public static ValueTuple<bool, int?> GetValueInt(int handleId, int columnIndex, [ParamCollection] [Nullable(new byte[]
 		{
@@ -103,7 +103,7 @@ namespace Aki.Common.Proxy
 			return getValueIntFunc(handleId, columnIndex, pairs);
 		}
 
-		// Token: 0x060000D3 RID: 211 RVA: 0x0000B2D8 File Offset: 0x000094D8
+		// Token: 0x06000140 RID: 320 RVA: 0x0000EAA4 File Offset: 0x0000CCA4
 		public static bool Reset(int handleId, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -116,7 +116,7 @@ namespace Aki.Common.Proxy
 			return resetFunc != null && resetFunc(handleId, pairs);
 		}
 
-		// Token: 0x060000D4 RID: 212 RVA: 0x0000B2EC File Offset: 0x000094EC
+		// Token: 0x06000141 RID: 321 RVA: 0x0000EAB8 File Offset: 0x0000CCB8
 		public static bool BindString(int handleId, int bindingIndex, string value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -129,7 +129,7 @@ namespace Aki.Common.Proxy
 			return bindStringFunc != null && bindStringFunc(handleId, bindingIndex, value, pairs);
 		}
 
-		// Token: 0x060000D5 RID: 213 RVA: 0x0000B302 File Offset: 0x00009502
+		// Token: 0x06000142 RID: 322 RVA: 0x0000EACE File Offset: 0x0000CCCE
 		public static int GetLangStatementId(string tableName, string dbName, string command, string culture = "")
 		{
 			Func<string, string, string, string, int> getLangStatementIdFunc = ConfigCommon.GetLangStatementIdFunc;
@@ -140,7 +140,7 @@ namespace Aki.Common.Proxy
 			return getLangStatementIdFunc(tableName, dbName, command, culture);
 		}
 
-		// Token: 0x060000D6 RID: 214 RVA: 0x0000B318 File Offset: 0x00009518
+		// Token: 0x06000143 RID: 323 RVA: 0x0000EAE4 File Offset: 0x0000CCE4
 		public static void ClearLangAllStatementId(string tableName, string dbName)
 		{
 			Action<string, string> clearLangAllStatementIdAction = ConfigCommon.ClearLangAllStatementIdAction;
@@ -151,7 +151,7 @@ namespace Aki.Common.Proxy
 			clearLangAllStatementIdAction(tableName, dbName);
 		}
 
-		// Token: 0x060000D7 RID: 215 RVA: 0x0000B32B File Offset: 0x0000952B
+		// Token: 0x06000144 RID: 324 RVA: 0x0000EAF7 File Offset: 0x0000CCF7
 		public static bool BindBool(int handleId, int bindingIndex, bool value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -164,7 +164,7 @@ namespace Aki.Common.Proxy
 			return bindBoolFunc != null && bindBoolFunc(handleId, bindingIndex, value, pairs);
 		}
 
-		// Token: 0x060000D8 RID: 216 RVA: 0x0000B341 File Offset: 0x00009541
+		// Token: 0x06000145 RID: 325 RVA: 0x0000EB0D File Offset: 0x0000CD0D
 		public static bool BindFloat64(int handleId, int bindingIndex, double value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -177,7 +177,7 @@ namespace Aki.Common.Proxy
 			return bindFloat64Func != null && bindFloat64Func(handleId, bindingIndex, value, pairs);
 		}
 
-		// Token: 0x060000D9 RID: 217 RVA: 0x0000B357 File Offset: 0x00009557
+		// Token: 0x06000146 RID: 326 RVA: 0x0000EB23 File Offset: 0x0000CD23
 		public static bool BindBigInt(int handleId, int bindingIndex, long value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -190,7 +190,7 @@ namespace Aki.Common.Proxy
 			return bindBigIntFunc != null && bindBigIntFunc(handleId, bindingIndex, value, pairs);
 		}
 
-		// Token: 0x060000DA RID: 218 RVA: 0x0000B36D File Offset: 0x0000956D
+		// Token: 0x06000147 RID: 327 RVA: 0x0000EB39 File Offset: 0x0000CD39
 		[return: Nullable(2)]
 		public static object GetConfig(string key)
 		{
@@ -202,7 +202,7 @@ namespace Aki.Common.Proxy
 			return getConfigFunc(key);
 		}
 
-		// Token: 0x060000DB RID: 219 RVA: 0x0000B380 File Offset: 0x00009580
+		// Token: 0x06000148 RID: 328 RVA: 0x0000EB4C File Offset: 0x0000CD4C
 		public static void SaveConfig(string key, object config, int valueSize = 1)
 		{
 			Action<string, object, int> saveConfigAction = ConfigCommon.SaveConfigAction;
@@ -213,7 +213,7 @@ namespace Aki.Common.Proxy
 			saveConfigAction(key, config, valueSize);
 		}
 
-		// Token: 0x060000DC RID: 220 RVA: 0x0000B394 File Offset: 0x00009594
+		// Token: 0x06000149 RID: 329 RVA: 0x0000EB60 File Offset: 0x0000CD60
 		[return: Nullable(2)]
 		public static ByteBuffer GetConfigBuffer(string key)
 		{
@@ -225,7 +225,7 @@ namespace Aki.Common.Proxy
 			return getConfigBufferFunc(key);
 		}
 
-		// Token: 0x060000DD RID: 221 RVA: 0x0000B3A7 File Offset: 0x000095A7
+		// Token: 0x0600014A RID: 330 RVA: 0x0000EB73 File Offset: 0x0000CD73
 		public static void SaveConfigBuffer(string key, ByteBuffer configBuffer, int valueSize = 1)
 		{
 			Action<string, ByteBuffer, int> saveConfigBufferAction = ConfigCommon.SaveConfigBufferAction;
@@ -236,7 +236,7 @@ namespace Aki.Common.Proxy
 			saveConfigBufferAction(key, configBuffer, valueSize);
 		}
 
-		// Token: 0x04000222 RID: 546
+		// Token: 0x04000227 RID: 551
 		[Nullable(new byte[]
 		{
 			2,
@@ -245,7 +245,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, string, string, int> InitDataStatementFunc;
 
-		// Token: 0x04000223 RID: 547
+		// Token: 0x04000228 RID: 552
 		[Nullable(new byte[]
 		{
 			2,
@@ -256,7 +256,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, LogList<ValueTuple<string, object>>, bool> CheckStatementFunc;
 
-		// Token: 0x04000224 RID: 548
+		// Token: 0x04000229 RID: 553
 		[Nullable(new byte[]
 		{
 			2,
@@ -267,7 +267,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, int, LogList<ValueTuple<string, object>>, bool> BindIntFunc;
 
-		// Token: 0x04000225 RID: 549
+		// Token: 0x0400022A RID: 554
 		[Nullable(new byte[]
 		{
 			2,
@@ -278,7 +278,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, bool, LogList<ValueTuple<string, object>>, int> StepFunc;
 
-		// Token: 0x04000226 RID: 550
+		// Token: 0x0400022B RID: 555
 		[Nullable(new byte[]
 		{
 			2,
@@ -291,7 +291,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, LogList<ValueTuple<string, object>>, ValueTuple<bool, byte[]>> GetValueFunc;
 
-		// Token: 0x04000227 RID: 551
+		// Token: 0x0400022C RID: 556
 		[Nullable(new byte[]
 		{
 			2,
@@ -303,7 +303,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, LogList<ValueTuple<string, object>>, ValueTuple<bool, int?>> GetValueIntFunc;
 
-		// Token: 0x04000228 RID: 552
+		// Token: 0x0400022D RID: 557
 		[Nullable(new byte[]
 		{
 			2,
@@ -314,7 +314,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, LogList<ValueTuple<string, object>>, bool> ResetFunc;
 
-		// Token: 0x04000229 RID: 553
+		// Token: 0x0400022E RID: 558
 		[Nullable(new byte[]
 		{
 			2,
@@ -326,7 +326,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, string, LogList<ValueTuple<string, object>>, bool> BindStringFunc;
 
-		// Token: 0x0400022A RID: 554
+		// Token: 0x0400022F RID: 559
 		[Nullable(new byte[]
 		{
 			2,
@@ -337,7 +337,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<string, string, string, string, int> GetLangStatementIdFunc;
 
-		// Token: 0x0400022B RID: 555
+		// Token: 0x04000230 RID: 560
 		[Nullable(new byte[]
 		{
 			2,
@@ -346,7 +346,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Action<string, string> ClearLangAllStatementIdAction;
 
-		// Token: 0x0400022C RID: 556
+		// Token: 0x04000231 RID: 561
 		[Nullable(new byte[]
 		{
 			2,
@@ -357,7 +357,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, bool, LogList<ValueTuple<string, object>>, bool> BindBoolFunc;
 
-		// Token: 0x0400022D RID: 557
+		// Token: 0x04000232 RID: 562
 		[Nullable(new byte[]
 		{
 			2,
@@ -368,7 +368,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, double, LogList<ValueTuple<string, object>>, bool> BindFloat64Func;
 
-		// Token: 0x0400022E RID: 558
+		// Token: 0x04000233 RID: 563
 		[Nullable(new byte[]
 		{
 			2,
@@ -379,7 +379,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<int, int, long, LogList<ValueTuple<string, object>>, bool> BindBigIntFunc;
 
-		// Token: 0x0400022F RID: 559
+		// Token: 0x04000234 RID: 564
 		[Nullable(new byte[]
 		{
 			2,
@@ -388,7 +388,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<string, object> GetConfigFunc;
 
-		// Token: 0x04000230 RID: 560
+		// Token: 0x04000235 RID: 565
 		[Nullable(new byte[]
 		{
 			2,
@@ -397,7 +397,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Action<string, object, int> SaveConfigAction;
 
-		// Token: 0x04000231 RID: 561
+		// Token: 0x04000236 RID: 566
 		[Nullable(new byte[]
 		{
 			2,
@@ -406,7 +406,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Func<string, ByteBuffer> GetConfigBufferFunc;
 
-		// Token: 0x04000232 RID: 562
+		// Token: 0x04000237 RID: 567
 		[Nullable(new byte[]
 		{
 			2,
@@ -415,7 +415,7 @@ namespace Aki.Common.Proxy
 		})]
 		public static Action<string, ByteBuffer, int> SaveConfigBufferAction;
 
-		// Token: 0x04000233 RID: 563
+		// Token: 0x04000238 RID: 568
 		[Nullable(2)]
 		public static IStat AllConfigStatementStat;
 	}

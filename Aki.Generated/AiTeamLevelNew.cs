@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AF6 RID: 2806
+	// Token: 0x02000BD0 RID: 3024
 	public struct AiTeamLevelNew : IFlatbufferObject
 	{
-		// Token: 0x170002B3 RID: 691
-		// (get) Token: 0x06004734 RID: 18228 RVA: 0x001D4899 File Offset: 0x001D2A99
+		// Token: 0x170002CA RID: 714
+		// (get) Token: 0x06004C7B RID: 19579 RVA: 0x001F4239 File Offset: 0x001F2439
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004735 RID: 18229 RVA: 0x001D48A6 File Offset: 0x001D2AA6
+		// Token: 0x06004C7C RID: 19580 RVA: 0x001F4246 File Offset: 0x001F2446
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004736 RID: 18230 RVA: 0x001D48B0 File Offset: 0x001D2AB0
+		// Token: 0x06004C7D RID: 19581 RVA: 0x001F4250 File Offset: 0x001F2450
 		public static AiTeamLevelNew GetRootAsAiTeamLevelNew(ByteBuffer _bb)
 		{
 			return AiTeamLevelNew.GetRootAsAiTeamLevelNew(_bb, default(AiTeamLevelNew));
 		}
 
-		// Token: 0x06004737 RID: 18231 RVA: 0x001D48CC File Offset: 0x001D2ACC
+		// Token: 0x06004C7E RID: 19582 RVA: 0x001F426C File Offset: 0x001F246C
 		public static AiTeamLevelNew GetRootAsAiTeamLevelNew(ByteBuffer _bb, AiTeamLevelNew obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004738 RID: 18232 RVA: 0x001D48E9 File Offset: 0x001D2AE9
+		// Token: 0x06004C7F RID: 19583 RVA: 0x001F4289 File Offset: 0x001F2489
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004739 RID: 18233 RVA: 0x001D48F8 File Offset: 0x001D2AF8
+		// Token: 0x06004C80 RID: 19584 RVA: 0x001F4298 File Offset: 0x001F2498
 		public AiTeamLevelNew __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170002B4 RID: 692
-		// (get) Token: 0x0600473A RID: 18234 RVA: 0x001D4908 File Offset: 0x001D2B08
+		// Token: 0x170002CB RID: 715
+		// (get) Token: 0x06004C81 RID: 19585 RVA: 0x001F42A8 File Offset: 0x001F24A8
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600473B RID: 18235 RVA: 0x001D4944 File Offset: 0x001D2B44
+		// Token: 0x06004C82 RID: 19586 RVA: 0x001F42E4 File Offset: 0x001F24E4
 		public int PositionId(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170002B5 RID: 693
-		// (get) Token: 0x0600473C RID: 18236 RVA: 0x001D4984 File Offset: 0x001D2B84
+		// Token: 0x170002CC RID: 716
+		// (get) Token: 0x06004C83 RID: 19587 RVA: 0x001F4324 File Offset: 0x001F2524
 		public int PositionIdLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600473D RID: 18237 RVA: 0x001D49AF File Offset: 0x001D2BAF
+		// Token: 0x06004C84 RID: 19588 RVA: 0x001F434F File Offset: 0x001F254F
 		public Span<int> GetPositionIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600473E RID: 18238 RVA: 0x001D49BE File Offset: 0x001D2BBE
+		// Token: 0x06004C85 RID: 19589 RVA: 0x001F435E File Offset: 0x001F255E
 		public int[] GetPositionIdArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170002B6 RID: 694
-		// (get) Token: 0x0600473F RID: 18239 RVA: 0x001D49D8 File Offset: 0x001D2BD8
+		// Token: 0x170002CD RID: 717
+		// (get) Token: 0x06004C86 RID: 19590 RVA: 0x001F4378 File Offset: 0x001F2578
 		public FloatRange? AllocationPeriodic
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002B7 RID: 695
-		// (get) Token: 0x06004740 RID: 18240 RVA: 0x001D4A38 File Offset: 0x001D2C38
+		// Token: 0x170002CE RID: 718
+		// (get) Token: 0x06004C87 RID: 19591 RVA: 0x001F43D8 File Offset: 0x001F25D8
 		public int AttackerNum
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002B8 RID: 696
-		// (get) Token: 0x06004741 RID: 18241 RVA: 0x001D4A78 File Offset: 0x001D2C78
+		// Token: 0x170002CF RID: 719
+		// (get) Token: 0x06004C88 RID: 19592 RVA: 0x001F4418 File Offset: 0x001F2618
 		public FloatRange? AttackCountDown
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002B9 RID: 697
-		// (get) Token: 0x06004742 RID: 18242 RVA: 0x001D4AD8 File Offset: 0x001D2CD8
+		// Token: 0x170002D0 RID: 720
+		// (get) Token: 0x06004C89 RID: 19593 RVA: 0x001F4478 File Offset: 0x001F2678
 		public FloatRange? NoAttackCountDown
 		{
 			get
@@ -162,8 +162,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170002BA RID: 698
-		// (get) Token: 0x06004743 RID: 18243 RVA: 0x001D4B38 File Offset: 0x001D2D38
+		// Token: 0x170002D1 RID: 721
+		// (get) Token: 0x06004C8A RID: 19594 RVA: 0x001F44D8 File Offset: 0x001F26D8
 		public FloatRange? BeAttackCountDown
 		{
 			get
@@ -177,7 +177,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004744 RID: 18244 RVA: 0x001D4B98 File Offset: 0x001D2D98
+		// Token: 0x06004C8B RID: 19595 RVA: 0x001F4538 File Offset: 0x001F2738
 		public float EliteRatio(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -188,8 +188,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170002BB RID: 699
-		// (get) Token: 0x06004745 RID: 18245 RVA: 0x001D4BDC File Offset: 0x001D2DDC
+		// Token: 0x170002D2 RID: 722
+		// (get) Token: 0x06004C8C RID: 19596 RVA: 0x001F457C File Offset: 0x001F277C
 		public int EliteRatioLength
 		{
 			get
@@ -203,19 +203,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004746 RID: 18246 RVA: 0x001D4C08 File Offset: 0x001D2E08
+		// Token: 0x06004C8D RID: 19597 RVA: 0x001F45A8 File Offset: 0x001F27A8
 		public Span<float> GetEliteRatioBytes()
 		{
 			return this.__p.__vector_as_span<float>(18, 4);
 		}
 
-		// Token: 0x06004747 RID: 18247 RVA: 0x001D4C18 File Offset: 0x001D2E18
+		// Token: 0x06004C8E RID: 19598 RVA: 0x001F45B8 File Offset: 0x001F27B8
 		public float[] GetEliteRatioArray()
 		{
 			return this.__p.__vector_as_array<float>(18) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x06004748 RID: 18248 RVA: 0x001D4C30 File Offset: 0x001D2E30
+		// Token: 0x06004C8F RID: 19599 RVA: 0x001F45D0 File Offset: 0x001F27D0
 		public float RangeRatio(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -226,8 +226,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170002BC RID: 700
-		// (get) Token: 0x06004749 RID: 18249 RVA: 0x001D4C74 File Offset: 0x001D2E74
+		// Token: 0x170002D3 RID: 723
+		// (get) Token: 0x06004C90 RID: 19600 RVA: 0x001F4614 File Offset: 0x001F2814
 		public int RangeRatioLength
 		{
 			get
@@ -241,73 +241,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600474A RID: 18250 RVA: 0x001D4CA0 File Offset: 0x001D2EA0
+		// Token: 0x06004C91 RID: 19601 RVA: 0x001F4640 File Offset: 0x001F2840
 		public Span<float> GetRangeRatioBytes()
 		{
 			return this.__p.__vector_as_span<float>(20, 4);
 		}
 
-		// Token: 0x0600474B RID: 18251 RVA: 0x001D4CB0 File Offset: 0x001D2EB0
+		// Token: 0x06004C92 RID: 19602 RVA: 0x001F4650 File Offset: 0x001F2850
 		public float[] GetRangeRatioArray()
 		{
 			return this.__p.__vector_as_array<float>(20) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x0600474C RID: 18252 RVA: 0x001D4CC8 File Offset: 0x001D2EC8
+		// Token: 0x06004C93 RID: 19603 RVA: 0x001F4668 File Offset: 0x001F2868
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EliteRatioIter()或GetEliteRatioBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] EliteRatio()
+		public float[] EliteRatio()
 		{
-			AiTeamLevelNew aiTeamLevelNew = this;
-			return aiTeamLevelNew.GetEliteRatioArray() ?? Array.Empty<float>();
+			return this.GetEliteRatioArray();
 		}
 
-		// Token: 0x0600474D RID: 18253 RVA: 0x001D4CEC File Offset: 0x001D2EEC
+		// Token: 0x06004C94 RID: 19604 RVA: 0x001F4670 File Offset: 0x001F2870
 		[NullableContext(1)]
-		public readonly IEnumerable<float> EliteRatioIter()
+		public IEnumerable<float> EliteRatioIter()
 		{
 			AiTeamLevelNew.<EliteRatioIter>d__36 <EliteRatioIter>d__ = new AiTeamLevelNew.<EliteRatioIter>d__36(-2);
 			<EliteRatioIter>d__.<>3__<>4__this = this;
 			return <EliteRatioIter>d__;
 		}
 
-		// Token: 0x0600474E RID: 18254 RVA: 0x001D4D04 File Offset: 0x001D2F04
+		// Token: 0x06004C95 RID: 19605 RVA: 0x001F4685 File Offset: 0x001F2885
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PositionIdIter()或GetPositionIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PositionId()
+		public int[] PositionId()
 		{
-			AiTeamLevelNew aiTeamLevelNew = this;
-			return aiTeamLevelNew.GetPositionIdArray() ?? Array.Empty<int>();
+			return this.GetPositionIdArray();
 		}
 
-		// Token: 0x0600474F RID: 18255 RVA: 0x001D4D28 File Offset: 0x001D2F28
+		// Token: 0x06004C96 RID: 19606 RVA: 0x001F468D File Offset: 0x001F288D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PositionIdIter()
+		public IEnumerable<int> PositionIdIter()
 		{
 			AiTeamLevelNew.<PositionIdIter>d__38 <PositionIdIter>d__ = new AiTeamLevelNew.<PositionIdIter>d__38(-2);
 			<PositionIdIter>d__.<>3__<>4__this = this;
 			return <PositionIdIter>d__;
 		}
 
-		// Token: 0x06004750 RID: 18256 RVA: 0x001D4D40 File Offset: 0x001D2F40
+		// Token: 0x06004C97 RID: 19607 RVA: 0x001F46A2 File Offset: 0x001F28A2
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RangeRatioIter()或GetRangeRatioBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] RangeRatio()
+		public float[] RangeRatio()
 		{
-			AiTeamLevelNew aiTeamLevelNew = this;
-			return aiTeamLevelNew.GetRangeRatioArray() ?? Array.Empty<float>();
+			return this.GetRangeRatioArray();
 		}
 
-		// Token: 0x06004751 RID: 18257 RVA: 0x001D4D64 File Offset: 0x001D2F64
+		// Token: 0x06004C98 RID: 19608 RVA: 0x001F46AA File Offset: 0x001F28AA
 		[NullableContext(1)]
-		public readonly IEnumerable<float> RangeRatioIter()
+		public IEnumerable<float> RangeRatioIter()
 		{
 			AiTeamLevelNew.<RangeRatioIter>d__40 <RangeRatioIter>d__ = new AiTeamLevelNew.<RangeRatioIter>d__40(-2);
 			<RangeRatioIter>d__.<>3__<>4__this = this;
 			return <RangeRatioIter>d__;
 		}
 
-		// Token: 0x04004AD7 RID: 19159
+		// Token: 0x040050B1 RID: 20657
 		private Table __p;
 	}
 }

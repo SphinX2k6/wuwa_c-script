@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001114 RID: 4372
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001242 RID: 4674
 	public class IRoleTowerSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x060062BA RID: 25274 RVA: 0x000ED848 File Offset: 0x000EBA48
+		// Token: 0x060068B5 RID: 26805 RVA: 0x000FA9BC File Offset: 0x000F8BBC
 		private IRoleTowerSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060062BB RID: 25275 RVA: 0x000ED880 File Offset: 0x000EBA80
+		// Token: 0x060068B6 RID: 26806 RVA: 0x000FA9F4 File Offset: 0x000F8BF4
 		public static IRoleTowerSystemConfig Create([Nullable(2)] IRoleTowerSystemConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062BC RID: 25276 RVA: 0x000ED893 File Offset: 0x000EBA93
+		// Token: 0x060068B7 RID: 26807 RVA: 0x000FAA07 File Offset: 0x000F8C07
 		public static IRoleTowerSystemConfig CreateFromSetValue([Nullable(2)] IRoleTowerSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062BD RID: 25277 RVA: 0x000ED8A6 File Offset: 0x000EBAA6
+		// Token: 0x060068B8 RID: 26808 RVA: 0x000FAA1A File Offset: 0x000F8C1A
 		public new IRoleTowerSystemConfig_SetValue ToSetValue()
 		{
 			return new IRoleTowerSystemConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002043 RID: 8259
-		// (get) Token: 0x060062BE RID: 25278 RVA: 0x000ED8C5 File Offset: 0x000EBAC5
-		// (set) Token: 0x060062BF RID: 25279 RVA: 0x000ED8F0 File Offset: 0x000EBAF0
+		// Token: 0x170021F6 RID: 8694
+		// (get) Token: 0x060068B9 RID: 26809 RVA: 0x000FAA39 File Offset: 0x000F8C39
+		// (set) Token: 0x060068BA RID: 26810 RVA: 0x000FAA64 File Offset: 0x000F8C64
 		public override EEnableSystemType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002044 RID: 8260
-		// (get) Token: 0x060062C0 RID: 25280 RVA: 0x000ED900 File Offset: 0x000EBB00
-		// (set) Token: 0x060062C1 RID: 25281 RVA: 0x000ED993 File Offset: 0x000EBB93
+		// Token: 0x170021F7 RID: 8695
+		// (get) Token: 0x060068BB RID: 26811 RVA: 0x000FAA74 File Offset: 0x000F8C74
+		// (set) Token: 0x060068BC RID: 26812 RVA: 0x000FAB07 File Offset: 0x000F8D07
 		public virtual List<IRoleTowerSystemVar> Vars
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B3A RID: 15162
+		// Token: 0x04003E88 RID: 16008
 		[Nullable(2)]
 		protected new IRoleTowerSystemConfig FbInstance;
 
-		// Token: 0x04003B3B RID: 15163
+		// Token: 0x04003E89 RID: 16009
 		[Nullable(2)]
 		protected new IRoleTowerSystemConfig_SetValue PocoInterface;
 
-		// Token: 0x04003B3C RID: 15164
+		// Token: 0x04003E8A RID: 16010
 		private List<IRoleTowerSystemVar> _VarsCache;
 
-		// Token: 0x04003B3D RID: 15165
+		// Token: 0x04003E8B RID: 16011
 		private bool _VarsInited;
 	}
 }

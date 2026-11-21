@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EC1 RID: 3777
+	// Token: 0x02000FA6 RID: 4006
 	public struct PhantomBattleCardEffect : IFlatbufferObject
 	{
-		// Token: 0x17002590 RID: 9616
-		// (get) Token: 0x0600A546 RID: 42310 RVA: 0x002ABDF8 File Offset: 0x002A9FF8
+		// Token: 0x170025F6 RID: 9718
+		// (get) Token: 0x0600AB67 RID: 43879 RVA: 0x002C8FEC File Offset: 0x002C71EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A547 RID: 42311 RVA: 0x002ABE05 File Offset: 0x002AA005
+		// Token: 0x0600AB68 RID: 43880 RVA: 0x002C8FF9 File Offset: 0x002C71F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A548 RID: 42312 RVA: 0x002ABE0C File Offset: 0x002AA00C
+		// Token: 0x0600AB69 RID: 43881 RVA: 0x002C9000 File Offset: 0x002C7200
 		public static PhantomBattleCardEffect GetRootAsPhantomBattleCardEffect(ByteBuffer _bb)
 		{
 			return PhantomBattleCardEffect.GetRootAsPhantomBattleCardEffect(_bb, default(PhantomBattleCardEffect));
 		}
 
-		// Token: 0x0600A549 RID: 42313 RVA: 0x002ABE28 File Offset: 0x002AA028
+		// Token: 0x0600AB6A RID: 43882 RVA: 0x002C901C File Offset: 0x002C721C
 		public static PhantomBattleCardEffect GetRootAsPhantomBattleCardEffect(ByteBuffer _bb, PhantomBattleCardEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A54A RID: 42314 RVA: 0x002ABE45 File Offset: 0x002AA045
+		// Token: 0x0600AB6B RID: 43883 RVA: 0x002C9039 File Offset: 0x002C7239
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A54B RID: 42315 RVA: 0x002ABE54 File Offset: 0x002AA054
+		// Token: 0x0600AB6C RID: 43884 RVA: 0x002C9048 File Offset: 0x002C7248
 		public PhantomBattleCardEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002591 RID: 9617
-		// (get) Token: 0x0600A54C RID: 42316 RVA: 0x002ABE64 File Offset: 0x002AA064
+		// Token: 0x170025F7 RID: 9719
+		// (get) Token: 0x0600AB6D RID: 43885 RVA: 0x002C9058 File Offset: 0x002C7258
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002592 RID: 9618
-		// (get) Token: 0x0600A54D RID: 42317 RVA: 0x002ABEA0 File Offset: 0x002AA0A0
+		// Token: 0x170025F8 RID: 9720
+		// (get) Token: 0x0600AB6E RID: 43886 RVA: 0x002C9094 File Offset: 0x002C7294
 		public string BaseColor
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A54E RID: 42318 RVA: 0x002ABED7 File Offset: 0x002AA0D7
+		// Token: 0x0600AB6F RID: 43887 RVA: 0x002C90CB File Offset: 0x002C72CB
 		public Span<byte> GetBaseColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600A54F RID: 42319 RVA: 0x002ABEE6 File Offset: 0x002AA0E6
+		// Token: 0x0600AB70 RID: 43888 RVA: 0x002C90DA File Offset: 0x002C72DA
 		public byte[] GetBaseColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002593 RID: 9619
-		// (get) Token: 0x0600A550 RID: 42320 RVA: 0x002ABF00 File Offset: 0x002AA100
+		// Token: 0x170025F9 RID: 9721
+		// (get) Token: 0x0600AB71 RID: 43889 RVA: 0x002C90F4 File Offset: 0x002C72F4
 		public string BackGroundColor
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A551 RID: 42321 RVA: 0x002ABF37 File Offset: 0x002AA137
+		// Token: 0x0600AB72 RID: 43890 RVA: 0x002C912B File Offset: 0x002C732B
 		public Span<byte> GetBackGroundColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600A552 RID: 42322 RVA: 0x002ABF46 File Offset: 0x002AA146
+		// Token: 0x0600AB73 RID: 43891 RVA: 0x002C913A File Offset: 0x002C733A
 		public byte[] GetBackGroundColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002594 RID: 9620
-		// (get) Token: 0x0600A553 RID: 42323 RVA: 0x002ABF60 File Offset: 0x002AA160
+		// Token: 0x170025FA RID: 9722
+		// (get) Token: 0x0600AB74 RID: 43892 RVA: 0x002C9154 File Offset: 0x002C7354
 		public string FieldIcon
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A554 RID: 42324 RVA: 0x002ABF98 File Offset: 0x002AA198
+		// Token: 0x0600AB75 RID: 43893 RVA: 0x002C918C File Offset: 0x002C738C
 		public Span<byte> GetFieldIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600A555 RID: 42325 RVA: 0x002ABFA8 File Offset: 0x002AA1A8
+		// Token: 0x0600AB76 RID: 43894 RVA: 0x002C919C File Offset: 0x002C739C
 		public byte[] GetFieldIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002595 RID: 9621
-		// (get) Token: 0x0600A556 RID: 42326 RVA: 0x002ABFC0 File Offset: 0x002AA1C0
+		// Token: 0x170025FB RID: 9723
+		// (get) Token: 0x0600AB77 RID: 43895 RVA: 0x002C91B4 File Offset: 0x002C73B4
 		public string FieldRing
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A557 RID: 42327 RVA: 0x002ABFF8 File Offset: 0x002AA1F8
+		// Token: 0x0600AB78 RID: 43896 RVA: 0x002C91EC File Offset: 0x002C73EC
 		public Span<byte> GetFieldRingBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600A558 RID: 42328 RVA: 0x002AC008 File Offset: 0x002AA208
+		// Token: 0x0600AB79 RID: 43897 RVA: 0x002C91FC File Offset: 0x002C73FC
 		public byte[] GetFieldRingArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002596 RID: 9622
-		// (get) Token: 0x0600A559 RID: 42329 RVA: 0x002AC020 File Offset: 0x002AA220
+		// Token: 0x170025FC RID: 9724
+		// (get) Token: 0x0600AB7A RID: 43898 RVA: 0x002C9214 File Offset: 0x002C7414
 		public string FieldActivateIcon
 		{
 			get
@@ -185,20 +185,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A55A RID: 42330 RVA: 0x002AC058 File Offset: 0x002AA258
+		// Token: 0x0600AB7B RID: 43899 RVA: 0x002C924C File Offset: 0x002C744C
 		public Span<byte> GetFieldActivateIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600A55B RID: 42331 RVA: 0x002AC068 File Offset: 0x002AA268
+		// Token: 0x0600AB7C RID: 43900 RVA: 0x002C925C File Offset: 0x002C745C
 		public byte[] GetFieldActivateIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002597 RID: 9623
-		// (get) Token: 0x0600A55C RID: 42332 RVA: 0x002AC080 File Offset: 0x002AA280
+		// Token: 0x170025FD RID: 9725
+		// (get) Token: 0x0600AB7D RID: 43901 RVA: 0x002C9274 File Offset: 0x002C7474
 		public string FieldActivateRing
 		{
 			get
@@ -212,20 +212,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A55D RID: 42333 RVA: 0x002AC0B8 File Offset: 0x002AA2B8
+		// Token: 0x0600AB7E RID: 43902 RVA: 0x002C92AC File Offset: 0x002C74AC
 		public Span<byte> GetFieldActivateRingBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600A55E RID: 42334 RVA: 0x002AC0C8 File Offset: 0x002AA2C8
+		// Token: 0x0600AB7F RID: 43903 RVA: 0x002C92BC File Offset: 0x002C74BC
 		public byte[] GetFieldActivateRingArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002598 RID: 9624
-		// (get) Token: 0x0600A55F RID: 42335 RVA: 0x002AC0E0 File Offset: 0x002AA2E0
+		// Token: 0x170025FE RID: 9726
+		// (get) Token: 0x0600AB80 RID: 43904 RVA: 0x002C92D4 File Offset: 0x002C74D4
 		public string FieldButtonColor
 		{
 			get
@@ -239,20 +239,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A560 RID: 42336 RVA: 0x002AC118 File Offset: 0x002AA318
+		// Token: 0x0600AB81 RID: 43905 RVA: 0x002C930C File Offset: 0x002C750C
 		public Span<byte> GetFieldButtonColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600A561 RID: 42337 RVA: 0x002AC128 File Offset: 0x002AA328
+		// Token: 0x0600AB82 RID: 43906 RVA: 0x002C931C File Offset: 0x002C751C
 		public byte[] GetFieldButtonColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002599 RID: 9625
-		// (get) Token: 0x0600A562 RID: 42338 RVA: 0x002AC140 File Offset: 0x002AA340
+		// Token: 0x170025FF RID: 9727
+		// (get) Token: 0x0600AB83 RID: 43907 RVA: 0x002C9334 File Offset: 0x002C7534
 		public string FieldNorColor
 		{
 			get
@@ -266,20 +266,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A563 RID: 42339 RVA: 0x002AC178 File Offset: 0x002AA378
+		// Token: 0x0600AB84 RID: 43908 RVA: 0x002C936C File Offset: 0x002C756C
 		public Span<byte> GetFieldNorColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600A564 RID: 42340 RVA: 0x002AC188 File Offset: 0x002AA388
+		// Token: 0x0600AB85 RID: 43909 RVA: 0x002C937C File Offset: 0x002C757C
 		public byte[] GetFieldNorColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700259A RID: 9626
-		// (get) Token: 0x0600A565 RID: 42341 RVA: 0x002AC1A0 File Offset: 0x002AA3A0
+		// Token: 0x17002600 RID: 9728
+		// (get) Token: 0x0600AB86 RID: 43910 RVA: 0x002C9394 File Offset: 0x002C7594
 		public string FieldActivateColor
 		{
 			get
@@ -293,20 +293,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A566 RID: 42342 RVA: 0x002AC1D8 File Offset: 0x002AA3D8
+		// Token: 0x0600AB87 RID: 43911 RVA: 0x002C93CC File Offset: 0x002C75CC
 		public Span<byte> GetFieldActivateColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600A567 RID: 42343 RVA: 0x002AC1E8 File Offset: 0x002AA3E8
+		// Token: 0x0600AB88 RID: 43912 RVA: 0x002C93DC File Offset: 0x002C75DC
 		public byte[] GetFieldActivateColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700259B RID: 9627
-		// (get) Token: 0x0600A568 RID: 42344 RVA: 0x002AC200 File Offset: 0x002AA400
+		// Token: 0x17002601 RID: 9729
+		// (get) Token: 0x0600AB89 RID: 43913 RVA: 0x002C93F4 File Offset: 0x002C75F4
 		public string FieldLightColor
 		{
 			get
@@ -320,20 +320,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A569 RID: 42345 RVA: 0x002AC238 File Offset: 0x002AA438
+		// Token: 0x0600AB8A RID: 43914 RVA: 0x002C942C File Offset: 0x002C762C
 		public Span<byte> GetFieldLightColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x0600A56A RID: 42346 RVA: 0x002AC248 File Offset: 0x002AA448
+		// Token: 0x0600AB8B RID: 43915 RVA: 0x002C943C File Offset: 0x002C763C
 		public byte[] GetFieldLightColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700259C RID: 9628
-		// (get) Token: 0x0600A56B RID: 42347 RVA: 0x002AC260 File Offset: 0x002AA460
+		// Token: 0x17002602 RID: 9730
+		// (get) Token: 0x0600AB8C RID: 43916 RVA: 0x002C9454 File Offset: 0x002C7654
 		public string FieldReleaseColor
 		{
 			get
@@ -347,20 +347,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A56C RID: 42348 RVA: 0x002AC298 File Offset: 0x002AA498
+		// Token: 0x0600AB8D RID: 43917 RVA: 0x002C948C File Offset: 0x002C768C
 		public Span<byte> GetFieldReleaseColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(26, 1);
 		}
 
-		// Token: 0x0600A56D RID: 42349 RVA: 0x002AC2A8 File Offset: 0x002AA4A8
+		// Token: 0x0600AB8E RID: 43918 RVA: 0x002C949C File Offset: 0x002C769C
 		public byte[] GetFieldReleaseColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(26) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700259D RID: 9629
-		// (get) Token: 0x0600A56E RID: 42350 RVA: 0x002AC2C0 File Offset: 0x002AA4C0
+		// Token: 0x17002603 RID: 9731
+		// (get) Token: 0x0600AB8F RID: 43919 RVA: 0x002C94B4 File Offset: 0x002C76B4
 		public string FieldSkillTexRelease
 		{
 			get
@@ -374,20 +374,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A56F RID: 42351 RVA: 0x002AC2F8 File Offset: 0x002AA4F8
+		// Token: 0x0600AB90 RID: 43920 RVA: 0x002C94EC File Offset: 0x002C76EC
 		public Span<byte> GetFieldSkillTexReleaseBytes()
 		{
 			return this.__p.__vector_as_span<byte>(28, 1);
 		}
 
-		// Token: 0x0600A570 RID: 42352 RVA: 0x002AC308 File Offset: 0x002AA508
+		// Token: 0x0600AB91 RID: 43921 RVA: 0x002C94FC File Offset: 0x002C76FC
 		public byte[] GetFieldSkillTexReleaseArray()
 		{
 			return this.__p.__vector_as_array<byte>(28) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700259E RID: 9630
-		// (get) Token: 0x0600A571 RID: 42353 RVA: 0x002AC320 File Offset: 0x002AA520
+		// Token: 0x17002604 RID: 9732
+		// (get) Token: 0x0600AB92 RID: 43922 RVA: 0x002C9514 File Offset: 0x002C7714
 		public string FieldSkillTexBg
 		{
 			get
@@ -401,20 +401,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A572 RID: 42354 RVA: 0x002AC358 File Offset: 0x002AA558
+		// Token: 0x0600AB93 RID: 43923 RVA: 0x002C954C File Offset: 0x002C774C
 		public Span<byte> GetFieldSkillTexBgBytes()
 		{
 			return this.__p.__vector_as_span<byte>(30, 1);
 		}
 
-		// Token: 0x0600A573 RID: 42355 RVA: 0x002AC368 File Offset: 0x002AA568
+		// Token: 0x0600AB94 RID: 43924 RVA: 0x002C955C File Offset: 0x002C775C
 		public byte[] GetFieldSkillTexBgArray()
 		{
 			return this.__p.__vector_as_array<byte>(30) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700259F RID: 9631
-		// (get) Token: 0x0600A574 RID: 42356 RVA: 0x002AC380 File Offset: 0x002AA580
+		// Token: 0x17002605 RID: 9733
+		// (get) Token: 0x0600AB95 RID: 43925 RVA: 0x002C9574 File Offset: 0x002C7774
 		public string FieldSkillTexIcon
 		{
 			get
@@ -428,20 +428,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A575 RID: 42357 RVA: 0x002AC3B8 File Offset: 0x002AA5B8
+		// Token: 0x0600AB96 RID: 43926 RVA: 0x002C95AC File Offset: 0x002C77AC
 		public Span<byte> GetFieldSkillTexIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(32, 1);
 		}
 
-		// Token: 0x0600A576 RID: 42358 RVA: 0x002AC3C8 File Offset: 0x002AA5C8
+		// Token: 0x0600AB97 RID: 43927 RVA: 0x002C95BC File Offset: 0x002C77BC
 		public byte[] GetFieldSkillTexIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(32) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170025A0 RID: 9632
-		// (get) Token: 0x0600A577 RID: 42359 RVA: 0x002AC3E0 File Offset: 0x002AA5E0
+		// Token: 0x17002606 RID: 9734
+		// (get) Token: 0x0600AB98 RID: 43928 RVA: 0x002C95D4 File Offset: 0x002C77D4
 		public string FieldTexSmokeColor
 		{
 			get
@@ -455,19 +455,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A578 RID: 42360 RVA: 0x002AC418 File Offset: 0x002AA618
+		// Token: 0x0600AB99 RID: 43929 RVA: 0x002C960C File Offset: 0x002C780C
 		public Span<byte> GetFieldTexSmokeColorBytes()
 		{
 			return this.__p.__vector_as_span<byte>(34, 1);
 		}
 
-		// Token: 0x0600A579 RID: 42361 RVA: 0x002AC428 File Offset: 0x002AA628
+		// Token: 0x0600AB9A RID: 43930 RVA: 0x002C961C File Offset: 0x002C781C
 		public byte[] GetFieldTexSmokeColorArray()
 		{
 			return this.__p.__vector_as_array<byte>(34) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004F7D RID: 20349
+		// Token: 0x04005562 RID: 21858
 		private Table __p;
 	}
 }

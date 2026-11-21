@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001030 RID: 4144
+	// Token: 0x0200115C RID: 4444
 	public class IOperation_SetValue
 	{
-		// Token: 0x04003796 RID: 14230
+		// Token: 0x04003AD1 RID: 15057
 		public EOperation Type;
 	}
 }

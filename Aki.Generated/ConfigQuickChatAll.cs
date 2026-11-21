@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000796 RID: 1942
+	// Token: 0x020007B0 RID: 1968
 	public class ConfigQuickChatAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D96 RID: 11670 RVA: 0x0015AD3F File Offset: 0x00158F3F
+		// Token: 0x06002E32 RID: 11826 RVA: 0x00161C4B File Offset: 0x0015FE4B
 		static ConfigQuickChatAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuickChatAll.CreateStaticDefaultValue), new Action(ConfigQuickChatAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D97 RID: 11671 RVA: 0x0015AD60 File Offset: 0x00158F60
+		// Token: 0x06002E33 RID: 11827 RVA: 0x00161C6C File Offset: 0x0015FE6C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuickChatAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D98 RID: 11672 RVA: 0x0015ADDF File Offset: 0x00158FDF
+		// Token: 0x06002E34 RID: 11828 RVA: 0x00161CEB File Offset: 0x0015FEEB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuickChatAll.LogPair = null;
 			ConfigQuickChatAll.HandleId = 0;
 		}
 
-		// Token: 0x06002D99 RID: 11673 RVA: 0x0015ADED File Offset: 0x00158FED
+		// Token: 0x06002E35 RID: 11829 RVA: 0x00161CF9 File Offset: 0x0015FEF9
 		public static void Init()
 		{
 			ConfigQuickChatAll.HandleId = ConfigCommon.InitDataStatement(ConfigQuickChatAll.HandleId, "db_chat.db", "select BinData from `QuickChat`");
 		}
 
-		// Token: 0x06002D9A RID: 11674 RVA: 0x0015AE08 File Offset: 0x00159008
+		// Token: 0x06002E36 RID: 11830 RVA: 0x00161D14 File Offset: 0x0015FF14
 		[NullableContext(2)]
 		public static IReadOnlyList<QuickChat> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003500 RID: 13568
+		// Token: 0x040035B6 RID: 13750
 		private const string DB = "db_chat.db";
 
-		// Token: 0x04003501 RID: 13569
+		// Token: 0x040035B7 RID: 13751
 		private const string FILE = "l.聊天.xlsx";
 
-		// Token: 0x04003502 RID: 13570
+		// Token: 0x040035B8 RID: 13752
 		private const string TABLE = "QuickChat";
 
-		// Token: 0x04003503 RID: 13571
+		// Token: 0x040035B9 RID: 13753
 		private const string COMMAND = "select BinData from `QuickChat`";
 
-		// Token: 0x04003504 RID: 13572
+		// Token: 0x040035BA RID: 13754
 		private const string KEY_PREFIX = "QuickChatAll";
 
-		// Token: 0x04003505 RID: 13573
+		// Token: 0x040035BB RID: 13755
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003506 RID: 13574
+		// Token: 0x040035BC RID: 13756
 		private static int HandleId;
 	}
 }

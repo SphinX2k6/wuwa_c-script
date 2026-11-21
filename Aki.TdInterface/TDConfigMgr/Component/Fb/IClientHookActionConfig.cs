@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AF0 RID: 2800
+	// Token: 0x02000BBB RID: 3003
 	public class IClientHookActionConfig
 	{
-		// Token: 0x06004072 RID: 16498 RVA: 0x000A4871 File Offset: 0x000A2A71
-		[NullableContext(1)]
+		// Token: 0x060044A1 RID: 17569 RVA: 0x000ADEA5 File Offset: 0x000AC0A5
 		public static IClientHookActionConfig Create(IClientHookActionConfig? instance)
 		{
 			if (instance == null)
@@ -23,19 +22,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700104F RID: 4175
-		// (get) Token: 0x06004073 RID: 16499 RVA: 0x000A4890 File Offset: 0x000A2A90
+		// Token: 0x17001126 RID: 4390
+		// (get) Token: 0x060044A2 RID: 17570 RVA: 0x000ADEC4 File Offset: 0x000AC0C4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -58,19 +57,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001050 RID: 4176
-		// (get) Token: 0x06004074 RID: 16500 RVA: 0x000A490C File Offset: 0x000A2B0C
+		// Token: 0x17001127 RID: 4391
+		// (get) Token: 0x060044A3 RID: 17571 RVA: 0x000ADF40 File Offset: 0x000AC140
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -93,19 +92,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001051 RID: 4177
-		// (get) Token: 0x06004075 RID: 16501 RVA: 0x000A4988 File Offset: 0x000A2B88
+		// Token: 0x17001128 RID: 4392
+		// (get) Token: 0x060044A4 RID: 17572 RVA: 0x000ADFBC File Offset: 0x000AC1BC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -128,40 +127,40 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023ED RID: 9197
+		// Token: 0x0400260A RID: 9738
 		private IClientHookActionConfig Instance;
 
-		// Token: 0x040023EE RID: 9198
+		// Token: 0x0400260B RID: 9739
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x040023EF RID: 9199
+		// Token: 0x0400260C RID: 9740
 		private bool _HookActionsInited;
 
-		// Token: 0x040023F0 RID: 9200
+		// Token: 0x0400260D RID: 9741
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x040023F1 RID: 9201
+		// Token: 0x0400260E RID: 9742
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x040023F2 RID: 9202
+		// Token: 0x0400260F RID: 9743
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x040023F3 RID: 9203
+		// Token: 0x04002610 RID: 9744
 		private bool _FinishActionsInited;
 	}
 }

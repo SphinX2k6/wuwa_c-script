@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006510 RID: 25872
+	// Token: 0x02006B7E RID: 27518
 	public struct ICustomScreenTypeBase : IFlatbufferObject
 	{
-		// Token: 0x1700C063 RID: 49251
-		// (get) Token: 0x0602CE13 RID: 183827 RVA: 0x0062A036 File Offset: 0x00628236
+		// Token: 0x1700C9F3 RID: 51699
+		// (get) Token: 0x0602F5A9 RID: 193961 RVA: 0x006762D6 File Offset: 0x006744D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE14 RID: 183828 RVA: 0x0062A043 File Offset: 0x00628243
+		// Token: 0x0602F5AA RID: 193962 RVA: 0x006762E3 File Offset: 0x006744E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CE15 RID: 183829 RVA: 0x0062A04C File Offset: 0x0062824C
+		// Token: 0x0602F5AB RID: 193963 RVA: 0x006762EC File Offset: 0x006744EC
 		public static ICustomScreenTypeBase GetRootAsICustomScreenTypeBase(ByteBuffer _bb)
 		{
 			return ICustomScreenTypeBase.GetRootAsICustomScreenTypeBase(_bb, default(ICustomScreenTypeBase));
 		}
 
-		// Token: 0x0602CE16 RID: 183830 RVA: 0x0062A068 File Offset: 0x00628268
+		// Token: 0x0602F5AC RID: 193964 RVA: 0x00676308 File Offset: 0x00674508
 		public static ICustomScreenTypeBase GetRootAsICustomScreenTypeBase(ByteBuffer _bb, ICustomScreenTypeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CE17 RID: 183831 RVA: 0x0062A085 File Offset: 0x00628285
+		// Token: 0x0602F5AD RID: 193965 RVA: 0x00676325 File Offset: 0x00674525
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CE18 RID: 183832 RVA: 0x0062A094 File Offset: 0x00628294
+		// Token: 0x0602F5AE RID: 193966 RVA: 0x00676334 File Offset: 0x00674534
 		public ICustomScreenTypeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C064 RID: 49252
-		// (get) Token: 0x0602CE19 RID: 183833 RVA: 0x0062A0A4 File Offset: 0x006282A4
+		// Token: 0x1700C9F4 RID: 51700
+		// (get) Token: 0x0602F5AF RID: 193967 RVA: 0x00676344 File Offset: 0x00674544
 		public ECustomScreenType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE1A RID: 183834 RVA: 0x0062A0E0 File Offset: 0x006282E0
+		// Token: 0x0602F5B0 RID: 193968 RVA: 0x00676380 File Offset: 0x00674580
 		public static Offset<ICustomScreenTypeBase> CreateICustomScreenTypeBase(FlatBufferBuilder builder, ECustomScreenType Type = ECustomScreenType.Spine)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenTypeBase.EndICustomScreenTypeBase(builder);
 		}
 
-		// Token: 0x0602CE1B RID: 183835 RVA: 0x0062A0F6 File Offset: 0x006282F6
+		// Token: 0x0602F5B1 RID: 193969 RVA: 0x00676396 File Offset: 0x00674596
 		public static void StartICustomScreenTypeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CE1C RID: 183836 RVA: 0x0062A0FF File Offset: 0x006282FF
+		// Token: 0x0602F5B2 RID: 193970 RVA: 0x0067639F File Offset: 0x0067459F
 		public static void AddType(FlatBufferBuilder builder, ECustomScreenType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CE1D RID: 183837 RVA: 0x0062A10A File Offset: 0x0062830A
+		// Token: 0x0602F5B3 RID: 193971 RVA: 0x006763AA File Offset: 0x006745AA
 		public static Offset<ICustomScreenTypeBase> EndICustomScreenTypeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomScreenTypeBase>(builder.EndTable());
 		}
 
-		// Token: 0x0602CE1E RID: 183838 RVA: 0x0062A118 File Offset: 0x00628318
+		// Token: 0x0602F5B4 RID: 193972 RVA: 0x006763B8 File Offset: 0x006745B8
 		public ICustomScreenTypeBaseT UnPack()
 		{
 			ICustomScreenTypeBaseT customScreenTypeBaseT = new ICustomScreenTypeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return customScreenTypeBaseT;
 		}
 
-		// Token: 0x0602CE1F RID: 183839 RVA: 0x0062A133 File Offset: 0x00628333
+		// Token: 0x0602F5B5 RID: 193973 RVA: 0x006763D3 File Offset: 0x006745D3
 		public void UnPackTo(ICustomScreenTypeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CE20 RID: 183840 RVA: 0x0062A144 File Offset: 0x00628344
+		// Token: 0x0602F5B6 RID: 193974 RVA: 0x006763E4 File Offset: 0x006745E4
 		public static Offset<ICustomScreenTypeBase> Pack(FlatBufferBuilder builder, ICustomScreenTypeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenTypeBase.CreateICustomScreenTypeBase(builder, _o.Type);
 		}
 
-		// Token: 0x04010B55 RID: 68437
+		// Token: 0x0401196D RID: 72045
 		private Table __p;
 	}
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002438 RID: 9272
+	// Token: 0x0200078C RID: 1932
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneSequencePlayer")]
 	[UnrealStructLayout(1816, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1816)]
 	public abstract class UMovieSceneSequencePlayer : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022BD4 RID: 142292 RVA: 0x003360A0 File Offset: 0x003342A0
+		// Token: 0x0600A6A9 RID: 42665 RVA: 0x000F63BB File Offset: 0x000F45BB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSequencePlayer._ClassPtr;
 		}
 
-		// Token: 0x170085A2 RID: 34210
-		// (get) Token: 0x06022BD5 RID: 142293 RVA: 0x003360AC File Offset: 0x003342AC
-		// (set) Token: 0x06022BD6 RID: 142294 RVA: 0x003360E5 File Offset: 0x003342E5
+		// Token: 0x17001EFF RID: 7935
+		// (get) Token: 0x0600A6AA RID: 42666 RVA: 0x000F63C8 File Offset: 0x000F45C8
+		// (set) Token: 0x0600A6AB RID: 42667 RVA: 0x000F6401 File Offset: 0x000F4601
 		public FOnMovieSceneSequencePlayerEvent OnPlay
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085A3 RID: 34211
-		// (get) Token: 0x06022BD7 RID: 142295 RVA: 0x00336108 File Offset: 0x00334308
-		// (set) Token: 0x06022BD8 RID: 142296 RVA: 0x00336141 File Offset: 0x00334341
+		// Token: 0x17001F00 RID: 7936
+		// (get) Token: 0x0600A6AC RID: 42668 RVA: 0x000F6424 File Offset: 0x000F4624
+		// (set) Token: 0x0600A6AD RID: 42669 RVA: 0x000F645D File Offset: 0x000F465D
 		public FOnMovieSceneSequencePlayerEvent OnPlayReverse
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085A4 RID: 34212
-		// (get) Token: 0x06022BD9 RID: 142297 RVA: 0x00336164 File Offset: 0x00334364
-		// (set) Token: 0x06022BDA RID: 142298 RVA: 0x0033619D File Offset: 0x0033439D
+		// Token: 0x17001F01 RID: 7937
+		// (get) Token: 0x0600A6AE RID: 42670 RVA: 0x000F6480 File Offset: 0x000F4680
+		// (set) Token: 0x0600A6AF RID: 42671 RVA: 0x000F64B9 File Offset: 0x000F46B9
 		public FOnMovieSceneSequencePlayerEvent OnStop
 		{
 			get
@@ -82,9 +82,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085A5 RID: 34213
-		// (get) Token: 0x06022BDB RID: 142299 RVA: 0x003361C0 File Offset: 0x003343C0
-		// (set) Token: 0x06022BDC RID: 142300 RVA: 0x003361F9 File Offset: 0x003343F9
+		// Token: 0x17001F02 RID: 7938
+		// (get) Token: 0x0600A6B0 RID: 42672 RVA: 0x000F64DC File Offset: 0x000F46DC
+		// (set) Token: 0x0600A6B1 RID: 42673 RVA: 0x000F6515 File Offset: 0x000F4715
 		public FOnMovieSceneSequencePlayerEvent OnPause
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085A6 RID: 34214
-		// (get) Token: 0x06022BDD RID: 142301 RVA: 0x0033621C File Offset: 0x0033441C
-		// (set) Token: 0x06022BDE RID: 142302 RVA: 0x00336255 File Offset: 0x00334455
+		// Token: 0x17001F03 RID: 7939
+		// (get) Token: 0x0600A6B2 RID: 42674 RVA: 0x000F6538 File Offset: 0x000F4738
+		// (set) Token: 0x0600A6B3 RID: 42675 RVA: 0x000F6571 File Offset: 0x000F4771
 		public FOnMovieSceneSequencePlayerEvent OnInterrupt
 		{
 			get
@@ -124,9 +124,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085A7 RID: 34215
-		// (get) Token: 0x06022BDF RID: 142303 RVA: 0x00336278 File Offset: 0x00334478
-		// (set) Token: 0x06022BE0 RID: 142304 RVA: 0x003362B1 File Offset: 0x003344B1
+		// Token: 0x17001F04 RID: 7940
+		// (get) Token: 0x0600A6B4 RID: 42676 RVA: 0x000F6594 File Offset: 0x000F4794
+		// (set) Token: 0x0600A6B5 RID: 42677 RVA: 0x000F65CD File Offset: 0x000F47CD
 		public FOnMovieSceneSequencePlayerEvent OnFinished
 		{
 			get
@@ -145,27 +145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085A8 RID: 34216
-		// (get) Token: 0x06022BE1 RID: 142305 RVA: 0x003362D2 File Offset: 0x003344D2
-		// (set) Token: 0x06022BE2 RID: 142306 RVA: 0x003362E6 File Offset: 0x003344E6
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EMovieScenePlayerStatus> Status
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_Status);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_Status) = value;
-			}
-		}
-
-		// Token: 0x170085A9 RID: 34217
-		// (get) Token: 0x06022BE3 RID: 142307 RVA: 0x003362FB File Offset: 0x003344FB
-		// (set) Token: 0x06022BE4 RID: 142308 RVA: 0x00336314 File Offset: 0x00334514
+		// Token: 0x17001F05 RID: 7941
+		// (get) Token: 0x0600A6B6 RID: 42678 RVA: 0x000F65EE File Offset: 0x000F47EE
+		// (set) Token: 0x0600A6B7 RID: 42679 RVA: 0x000F6607 File Offset: 0x000F4807
 		public unsafe bool bReversePlayback
 		{
 			get
@@ -178,9 +160,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085AA RID: 34218
-		// (get) Token: 0x06022BE5 RID: 142309 RVA: 0x00336344 File Offset: 0x00334544
-		// (set) Token: 0x06022BE6 RID: 142310 RVA: 0x0033637D File Offset: 0x0033457D
+		// Token: 0x17001F06 RID: 7942
+		// (get) Token: 0x0600A6B8 RID: 42680 RVA: 0x000F6638 File Offset: 0x000F4838
+		// (set) Token: 0x0600A6B9 RID: 42681 RVA: 0x000F6671 File Offset: 0x000F4871
 		public TArray<int> KeyFrames
 		{
 			get
@@ -199,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085AB RID: 34219
-		// (get) Token: 0x06022BE7 RID: 142311 RVA: 0x0033638B File Offset: 0x0033458B
-		// (set) Token: 0x06022BE8 RID: 142312 RVA: 0x0033639F File Offset: 0x0033459F
+		// Token: 0x17001F07 RID: 7943
+		// (get) Token: 0x0600A6BA RID: 42682 RVA: 0x000F667F File Offset: 0x000F487F
+		// (set) Token: 0x0600A6BB RID: 42683 RVA: 0x000F6693 File Offset: 0x000F4893
 		[Nullable(2)]
 		public unsafe UMovieSceneSequence Sequence
 		{
@@ -217,9 +199,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085AC RID: 34220
-		// (get) Token: 0x06022BE9 RID: 142313 RVA: 0x003363B4 File Offset: 0x003345B4
-		// (set) Token: 0x06022BEA RID: 142314 RVA: 0x003363ED File Offset: 0x003345ED
+		// Token: 0x17001F08 RID: 7944
+		// (get) Token: 0x0600A6BC RID: 42684 RVA: 0x000F66A8 File Offset: 0x000F48A8
+		// (set) Token: 0x0600A6BD RID: 42685 RVA: 0x000F66E1 File Offset: 0x000F48E1
 		public FFrameNumber StartTime
 		{
 			get
@@ -238,9 +220,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085AD RID: 34221
-		// (get) Token: 0x06022BEB RID: 142315 RVA: 0x0033640E File Offset: 0x0033460E
-		// (set) Token: 0x06022BEC RID: 142316 RVA: 0x0033641E File Offset: 0x0033461E
+		// Token: 0x17001F09 RID: 7945
+		// (get) Token: 0x0600A6BE RID: 42686 RVA: 0x000F6702 File Offset: 0x000F4902
+		// (set) Token: 0x0600A6BF RID: 42687 RVA: 0x000F6712 File Offset: 0x000F4912
 		public unsafe int DurationFrames
 		{
 			get
@@ -253,9 +235,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085AE RID: 34222
-		// (get) Token: 0x06022BED RID: 142317 RVA: 0x0033642F File Offset: 0x0033462F
-		// (set) Token: 0x06022BEE RID: 142318 RVA: 0x0033643F File Offset: 0x0033463F
+		// Token: 0x17001F0A RID: 7946
+		// (get) Token: 0x0600A6C0 RID: 42688 RVA: 0x000F6723 File Offset: 0x000F4923
+		// (set) Token: 0x0600A6C1 RID: 42689 RVA: 0x000F6733 File Offset: 0x000F4933
 		public unsafe float DurationSubFrames
 		{
 			get
@@ -268,9 +250,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085AF RID: 34223
-		// (get) Token: 0x06022BEF RID: 142319 RVA: 0x00336450 File Offset: 0x00334650
-		// (set) Token: 0x06022BF0 RID: 142320 RVA: 0x00336460 File Offset: 0x00334660
+		// Token: 0x17001F0B RID: 7947
+		// (get) Token: 0x0600A6C2 RID: 42690 RVA: 0x000F6744 File Offset: 0x000F4944
+		// (set) Token: 0x0600A6C3 RID: 42691 RVA: 0x000F6754 File Offset: 0x000F4954
 		public unsafe int CurrentNumLoops
 		{
 			get
@@ -283,9 +265,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085B0 RID: 34224
-		// (get) Token: 0x06022BF1 RID: 142321 RVA: 0x00336474 File Offset: 0x00334674
-		// (set) Token: 0x06022BF2 RID: 142322 RVA: 0x003364AD File Offset: 0x003346AD
+		// Token: 0x17001F0C RID: 7948
+		// (get) Token: 0x0600A6C4 RID: 42692 RVA: 0x000F6768 File Offset: 0x000F4968
+		// (set) Token: 0x0600A6C5 RID: 42693 RVA: 0x000F67A1 File Offset: 0x000F49A1
 		public FMovieSceneSequencePlaybackSettings PlaybackSettings
 		{
 			get
@@ -304,154 +286,76 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085B1 RID: 34225
-		// (get) Token: 0x06022BF3 RID: 142323 RVA: 0x003364D0 File Offset: 0x003346D0
-		// (set) Token: 0x06022BF4 RID: 142324 RVA: 0x00336509 File Offset: 0x00334709
-		public FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneRootEvaluationTemplateInstance result;
-				if ((result = this._RootTemplateInstance) == null)
-				{
-					result = (this._RootTemplateInstance = new FMovieSceneRootEvaluationTemplateInstance(base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_RootTemplateInstance, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneRootEvaluationTemplateInstance.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_RootTemplateInstance, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170085B2 RID: 34226
-		// (get) Token: 0x06022BF5 RID: 142325 RVA: 0x0033652C File Offset: 0x0033472C
-		// (set) Token: 0x06022BF6 RID: 142326 RVA: 0x00336565 File Offset: 0x00334765
-		public FMovieSceneSequenceReplProperties NetSyncProps
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneSequenceReplProperties result;
-				if ((result = this._NetSyncProps) == null)
-				{
-					result = (this._NetSyncProps = new FMovieSceneSequenceReplProperties(base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_NetSyncProps, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneSequenceReplProperties.StaticStruct(), base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_NetSyncProps, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170085B3 RID: 34227
-		// (get) Token: 0x06022BF7 RID: 142327 RVA: 0x00336586 File Offset: 0x00334786
-		// (set) Token: 0x06022BF8 RID: 142328 RVA: 0x003365A0 File Offset: 0x003347A0
-		[Nullable(2)]
-		public unsafe IMovieScenePlaybackClient PlaybackClient
-		{
-			[NullableContext(2)]
-			get
-			{
-				return (IMovieScenePlaybackClient)BuiltinUtils.GetOrCreateUObjectByNativePointer(*(base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_PlaybackClient));
-			}
-			[NullableContext(2)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UMovieSceneSequencePlayer.__PropertyOffset_PlaybackClient) = new FScriptInterface(value, (value != null) ? value.InterfaceOffset() : 0);
-			}
-		}
-
-		// Token: 0x170085B4 RID: 34228
-		// (get) Token: 0x06022BF9 RID: 142329 RVA: 0x003365C6 File Offset: 0x003347C6
-		// (set) Token: 0x06022BFA RID: 142330 RVA: 0x003365DA File Offset: 0x003347DA
-		[Nullable(2)]
-		public unsafe UMovieSceneSequenceTickManager TickManager
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UMovieSceneSequenceTickManager>(base.NativePtr / (IntPtr)sizeof(void*) + UMovieSceneSequencePlayer.__PropertyOffset_TickManager);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UMovieSceneSequencePlayer.__PropertyOffset_TickManager, value);
-			}
-		}
-
-		// Token: 0x06022BFB RID: 142331 RVA: 0x003365EF File Offset: 0x003347EF
+		// Token: 0x0600A6C6 RID: 42694 RVA: 0x000F67C2 File Offset: 0x000F49C2
 		public void StopAtCurrentTime()
 		{
 			UMovieSceneSequencePlayer.__StopAtCurrentTime_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022BFC RID: 142332 RVA: 0x003365FC File Offset: 0x003347FC
+		// Token: 0x0600A6C7 RID: 42695 RVA: 0x000F67CF File Offset: 0x000F49CF
 		public void Stop()
 		{
 			UMovieSceneSequencePlayer.__Stop_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022BFD RID: 142333 RVA: 0x00336609 File Offset: 0x00334809
+		// Token: 0x0600A6C8 RID: 42696 RVA: 0x000F67DC File Offset: 0x000F49DC
 		public void SetTimeRange(float StartTime, float Duration)
 		{
 			UMovieSceneSequencePlayer.__SetTimeRange_Internal(base.NativePtr, StartTime, Duration);
 		}
 
-		// Token: 0x06022BFE RID: 142334 RVA: 0x00336618 File Offset: 0x00334818
+		// Token: 0x0600A6C9 RID: 42697 RVA: 0x000F67EB File Offset: 0x000F49EB
 		public void SetPlayRate(float PlayRate)
 		{
 			UMovieSceneSequencePlayer.__SetPlayRate_Internal(base.NativePtr, PlayRate);
 		}
 
-		// Token: 0x06022BFF RID: 142335 RVA: 0x00336626 File Offset: 0x00334826
+		// Token: 0x0600A6CA RID: 42698 RVA: 0x000F67F9 File Offset: 0x000F49F9
 		[NullableContext(2)]
 		public void SetPlaybackPositionWithNoEval(FMovieSceneSequencePlaybackParams PlaybackParams)
 		{
 			UMovieSceneSequencePlayer.__SetPlaybackPositionWithNoEval_Internal(base.NativePtr, (PlaybackParams ?? new FMovieSceneSequencePlaybackParams()).NativePtr);
 		}
 
-		// Token: 0x06022C00 RID: 142336 RVA: 0x00336642 File Offset: 0x00334842
+		// Token: 0x0600A6CB RID: 42699 RVA: 0x000F6815 File Offset: 0x000F4A15
 		[NullableContext(2)]
 		public void SetPlaybackPosition(FMovieSceneSequencePlaybackParams PlaybackParams)
 		{
 			UMovieSceneSequencePlayer.__SetPlaybackPosition_Internal(base.NativePtr, (PlaybackParams ?? new FMovieSceneSequencePlaybackParams()).NativePtr);
 		}
 
-		// Token: 0x06022C01 RID: 142337 RVA: 0x0033665E File Offset: 0x0033485E
+		// Token: 0x0600A6CC RID: 42700 RVA: 0x000F6831 File Offset: 0x000F4A31
 		[NullableContext(2)]
 		public void SetKeyFrames(in TArray<int> InKeyFrames)
 		{
 			UMovieSceneSequencePlayer.__SetKeyFrames_Internal(base.NativePtr, (InKeyFrames ?? new TArray<int>()).NativePtr);
 		}
 
-		// Token: 0x06022C02 RID: 142338 RVA: 0x0033667B File Offset: 0x0033487B
+		// Token: 0x0600A6CD RID: 42701 RVA: 0x000F684E File Offset: 0x000F4A4E
 		public void SetFrameRate(FFrameRate FrameRate)
 		{
 			UMovieSceneSequencePlayer.__SetFrameRate_Internal(base.NativePtr, FrameRate);
 		}
 
-		// Token: 0x06022C03 RID: 142339 RVA: 0x00336689 File Offset: 0x00334889
+		// Token: 0x0600A6CE RID: 42702 RVA: 0x000F685C File Offset: 0x000F4A5C
 		public void SetFrameRange(int StartFrame, int Duration, float SubFrames = 0f)
 		{
 			UMovieSceneSequencePlayer.__SetFrameRange_Internal(base.NativePtr, StartFrame, Duration, SubFrames);
 		}
 
-		// Token: 0x06022C04 RID: 142340 RVA: 0x00336699 File Offset: 0x00334899
+		// Token: 0x0600A6CF RID: 42703 RVA: 0x000F686C File Offset: 0x000F4A6C
 		public void SetDisableCameraCuts(bool bInDisableCameraCuts)
 		{
 			UMovieSceneSequencePlayer.__SetDisableCameraCuts_Internal(base.NativePtr, bInDisableCameraCuts);
 		}
 
-		// Token: 0x06022C05 RID: 142341 RVA: 0x003366A7 File Offset: 0x003348A7
+		// Token: 0x0600A6D0 RID: 42704 RVA: 0x000F687A File Offset: 0x000F4A7A
 		public void ScrubToSeconds(float TimeInSeconds)
 		{
 			UMovieSceneSequencePlayer.__ScrubToSeconds_Internal(base.NativePtr, TimeInSeconds);
 		}
 
-		// Token: 0x06022C06 RID: 142342 RVA: 0x003366B8 File Offset: 0x003348B8
+		// Token: 0x0600A6D1 RID: 42705 RVA: 0x000F6888 File Offset: 0x000F4A88
 		public unsafe bool ScrubToMarkedFrame(string InLabel)
 		{
 			FString fstring = FString.AllocTemp(InLabel);
@@ -460,40 +364,47 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06022C07 RID: 142343 RVA: 0x003366E2 File Offset: 0x003348E2
+		// Token: 0x0600A6D2 RID: 42706 RVA: 0x000F68B2 File Offset: 0x000F4AB2
 		[NullableContext(2)]
 		public void ScrubToFrame(FFrameTime NewPosition)
 		{
 			UMovieSceneSequencePlayer.__ScrubToFrame_Internal(base.NativePtr, (NewPosition ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06022C08 RID: 142344 RVA: 0x003366FE File Offset: 0x003348FE
+		// Token: 0x0600A6D3 RID: 42707 RVA: 0x000F68CE File Offset: 0x000F4ACE
 		public void Scrub()
 		{
 			UMovieSceneSequencePlayer.__Scrub_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C09 RID: 142345 RVA: 0x0033670B File Offset: 0x0033490B
+		// Token: 0x0600A6D4 RID: 42708 RVA: 0x000F68DB File Offset: 0x000F4ADB
 		[NullableContext(2)]
 		public void RPC_OnStopEvent(FFrameTime StoppedTime)
 		{
 			UMovieSceneSequencePlayer.__RPC_OnStopEvent_Internal(base.NativePtr, (StoppedTime ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06022C0A RID: 142346 RVA: 0x00336727 File Offset: 0x00334927
+		// Token: 0x0600A6D5 RID: 42709 RVA: 0x000F68F7 File Offset: 0x000F4AF7
 		[NullableContext(2)]
 		public void RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, FFrameTime RelevantTime)
 		{
 			UMovieSceneSequencePlayer.__RPC_ExplicitServerUpdateEvent_Internal(base.NativePtr, Method, (RelevantTime ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06022C0B RID: 142347 RVA: 0x00336744 File Offset: 0x00334944
+		// Token: 0x0600A6D6 RID: 42710 RVA: 0x000F6914 File Offset: 0x000F4B14
+		[NullableContext(2)]
+		public void PlayToWithEventSweep(FMovieSceneSequencePlaybackParams PlaybackParams)
+		{
+			UMovieSceneSequencePlayer.__PlayToWithEventSweep_Internal(base.NativePtr, (PlaybackParams ?? new FMovieSceneSequencePlaybackParams()).NativePtr);
+		}
+
+		// Token: 0x0600A6D7 RID: 42711 RVA: 0x000F6930 File Offset: 0x000F4B30
 		public void PlayToSeconds(float TimeInSeconds)
 		{
 			UMovieSceneSequencePlayer.__PlayToSeconds_Internal(base.NativePtr, TimeInSeconds);
 		}
 
-		// Token: 0x06022C0C RID: 142348 RVA: 0x00336754 File Offset: 0x00334954
+		// Token: 0x0600A6D8 RID: 42712 RVA: 0x000F6940 File Offset: 0x000F4B40
 		public unsafe bool PlayToMarkedFrame(string InLabel)
 		{
 			FString fstring = FString.AllocTemp(InLabel);
@@ -502,14 +413,14 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06022C0D RID: 142349 RVA: 0x0033677E File Offset: 0x0033497E
+		// Token: 0x0600A6D9 RID: 42713 RVA: 0x000F696A File Offset: 0x000F4B6A
 		[NullableContext(2)]
 		public void PlayToFrame(FFrameTime NewPosition)
 		{
 			UMovieSceneSequencePlayer.__PlayToFrame_Internal(base.NativePtr, (NewPosition ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06022C0E RID: 142350 RVA: 0x0033679C File Offset: 0x0033499C
+		// Token: 0x0600A6DA RID: 42714 RVA: 0x000F6988 File Offset: 0x000F4B88
 		public unsafe void PlayTo_Loop([Nullable(2)] FMovieSceneSequencePlaybackParams InPlaybackParams, string StartMarkedFrame)
 		{
 			FString fstring = FString.AllocTemp(StartMarkedFrame);
@@ -517,63 +428,63 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06022C0F RID: 142351 RVA: 0x003367D5 File Offset: 0x003349D5
+		// Token: 0x0600A6DB RID: 42715 RVA: 0x000F69C1 File Offset: 0x000F4BC1
 		[NullableContext(2)]
 		public void PlayTo_Circle(FMovieSceneSequencePlaybackParams InPlaybackParams, bool InAutoDirect = false, bool InIsForward = true)
 		{
 			UMovieSceneSequencePlayer.__PlayTo_Circle_Internal(base.NativePtr, (InPlaybackParams ?? new FMovieSceneSequencePlaybackParams()).NativePtr, InAutoDirect, InIsForward);
 		}
 
-		// Token: 0x06022C10 RID: 142352 RVA: 0x003367F3 File Offset: 0x003349F3
+		// Token: 0x0600A6DC RID: 42716 RVA: 0x000F69DF File Offset: 0x000F4BDF
 		[NullableContext(2)]
 		public void PlayTo(FMovieSceneSequencePlaybackParams PlaybackParams)
 		{
 			UMovieSceneSequencePlayer.__PlayTo_Internal(base.NativePtr, (PlaybackParams ?? new FMovieSceneSequencePlaybackParams()).NativePtr);
 		}
 
-		// Token: 0x06022C11 RID: 142353 RVA: 0x0033680F File Offset: 0x00334A0F
+		// Token: 0x0600A6DD RID: 42717 RVA: 0x000F69FB File Offset: 0x000F4BFB
 		public void PlayReverseLooping(int NumLoops = -1)
 		{
 			UMovieSceneSequencePlayer.__PlayReverseLooping_Internal(base.NativePtr, NumLoops);
 		}
 
-		// Token: 0x06022C12 RID: 142354 RVA: 0x0033681D File Offset: 0x00334A1D
+		// Token: 0x0600A6DE RID: 42718 RVA: 0x000F6A09 File Offset: 0x000F4C09
 		public void PlayReverse()
 		{
 			UMovieSceneSequencePlayer.__PlayReverse_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C13 RID: 142355 RVA: 0x0033682A File Offset: 0x00334A2A
+		// Token: 0x0600A6DF RID: 42719 RVA: 0x000F6A16 File Offset: 0x000F4C16
 		public void PlayLooping(int NumLoops = -1)
 		{
 			UMovieSceneSequencePlayer.__PlayLooping_Internal(base.NativePtr, NumLoops);
 		}
 
-		// Token: 0x06022C14 RID: 142356 RVA: 0x00336838 File Offset: 0x00334A38
+		// Token: 0x0600A6E0 RID: 42720 RVA: 0x000F6A24 File Offset: 0x000F4C24
 		public void Play()
 		{
 			UMovieSceneSequencePlayer.__Play_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C15 RID: 142357 RVA: 0x00336845 File Offset: 0x00334A45
+		// Token: 0x0600A6E1 RID: 42721 RVA: 0x000F6A31 File Offset: 0x000F4C31
 		public void PauseOnNextFrame()
 		{
 			UMovieSceneSequencePlayer.__PauseOnNextFrame_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C16 RID: 142358 RVA: 0x00336852 File Offset: 0x00334A52
+		// Token: 0x0600A6E2 RID: 42722 RVA: 0x000F6A3E File Offset: 0x000F4C3E
 		public void Pause()
 		{
 			UMovieSceneSequencePlayer.__Pause_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C17 RID: 142359 RVA: 0x0033685F File Offset: 0x00334A5F
+		// Token: 0x0600A6E3 RID: 42723 RVA: 0x000F6A4B File Offset: 0x000F4C4B
 		public void JumpToSeconds(float TimeInSeconds)
 		{
 			UMovieSceneSequencePlayer.__JumpToSeconds_Internal(base.NativePtr, TimeInSeconds);
 		}
 
-		// Token: 0x06022C18 RID: 142360 RVA: 0x00336870 File Offset: 0x00334A70
+		// Token: 0x0600A6E4 RID: 42724 RVA: 0x000F6A5C File Offset: 0x000F4C5C
 		public unsafe bool JumpToMarkedFrame(string InLabel)
 		{
 			FString fstring = FString.AllocTemp(InLabel);
@@ -582,444 +493,425 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06022C19 RID: 142361 RVA: 0x0033689A File Offset: 0x00334A9A
+		// Token: 0x0600A6E5 RID: 42725 RVA: 0x000F6A86 File Offset: 0x000F4C86
 		[NullableContext(2)]
 		public void JumpToFrame(FFrameTime NewPosition)
 		{
 			UMovieSceneSequencePlayer.__JumpToFrame_Internal(base.NativePtr, (NewPosition ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06022C1A RID: 142362 RVA: 0x003368B6 File Offset: 0x00334AB6
+		// Token: 0x0600A6E6 RID: 42726 RVA: 0x000F6AA2 File Offset: 0x000F4CA2
 		public bool IsStopped()
 		{
 			return UMovieSceneSequencePlayer.__IsStopped_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C1B RID: 142363 RVA: 0x003368C3 File Offset: 0x00334AC3
+		// Token: 0x0600A6E7 RID: 42727 RVA: 0x000F6AAF File Offset: 0x000F4CAF
 		public bool IsReversed()
 		{
 			return UMovieSceneSequencePlayer.__IsReversed_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C1C RID: 142364 RVA: 0x003368D0 File Offset: 0x00334AD0
+		// Token: 0x0600A6E8 RID: 42728 RVA: 0x000F6ABC File Offset: 0x000F4CBC
 		public bool IsPlaying()
 		{
 			return UMovieSceneSequencePlayer.__IsPlaying_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C1D RID: 142365 RVA: 0x003368DD File Offset: 0x00334ADD
+		// Token: 0x0600A6E9 RID: 42729 RVA: 0x000F6AC9 File Offset: 0x000F4CC9
 		public bool IsPaused()
 		{
 			return UMovieSceneSequencePlayer.__IsPaused_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C1E RID: 142366 RVA: 0x003368EA File Offset: 0x00334AEA
+		// Token: 0x0600A6EA RID: 42730 RVA: 0x000F6AD6 File Offset: 0x000F4CD6
 		public void GoToEndAndStop(EUpdatePositionMethod UpdateMethod = EUpdatePositionMethod.Jump)
 		{
 			UMovieSceneSequencePlayer.__GoToEndAndStop_Internal(base.NativePtr, UpdateMethod);
 		}
 
-		// Token: 0x06022C1F RID: 142367 RVA: 0x003368F8 File Offset: 0x00334AF8
+		// Token: 0x0600A6EB RID: 42731 RVA: 0x000F6AE4 File Offset: 0x000F4CE4
 		public FQualifiedFrameTime GetStartTime()
 		{
 			return new FQualifiedFrameTime(UMovieSceneSequencePlayer.__GetStartTime_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06022C20 RID: 142368 RVA: 0x0033690B File Offset: 0x00334B0B
+		// Token: 0x0600A6EC RID: 42732 RVA: 0x000F6AF7 File Offset: 0x000F4CF7
 		public float GetPlayRate()
 		{
 			return UMovieSceneSequencePlayer.__GetPlayRate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C21 RID: 142369 RVA: 0x00336918 File Offset: 0x00334B18
+		// Token: 0x0600A6ED RID: 42733 RVA: 0x000F6B04 File Offset: 0x000F4D04
 		public TArray<FMovieSceneObjectBindingID> GetObjectBindings([Nullable(2)] UObject InObject)
 		{
 			return new TArray<FMovieSceneObjectBindingID>(UMovieSceneSequencePlayer.__GetObjectBindings_Internal(base.NativePtr, (InObject != null) ? InObject.NativePtr : IntPtr.Zero), null);
 		}
 
-		// Token: 0x06022C22 RID: 142370 RVA: 0x0033693B File Offset: 0x00334B3B
+		// Token: 0x0600A6EE RID: 42734 RVA: 0x000F6B27 File Offset: 0x000F4D27
 		public FFrameRate GetFrameRate()
 		{
 			return UMovieSceneSequencePlayer.__GetFrameRate_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C23 RID: 142371 RVA: 0x00336948 File Offset: 0x00334B48
+		// Token: 0x0600A6EF RID: 42735 RVA: 0x000F6B34 File Offset: 0x000F4D34
 		public int GetFrameDuration()
 		{
 			return UMovieSceneSequencePlayer.__GetFrameDuration_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C24 RID: 142372 RVA: 0x00336955 File Offset: 0x00334B55
+		// Token: 0x0600A6F0 RID: 42736 RVA: 0x000F6B41 File Offset: 0x000F4D41
 		public FQualifiedFrameTime GetEndTime()
 		{
 			return new FQualifiedFrameTime(UMovieSceneSequencePlayer.__GetEndTime_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06022C25 RID: 142373 RVA: 0x00336968 File Offset: 0x00334B68
+		// Token: 0x0600A6F1 RID: 42737 RVA: 0x000F6B54 File Offset: 0x000F4D54
 		public FQualifiedFrameTime GetDuration()
 		{
 			return new FQualifiedFrameTime(UMovieSceneSequencePlayer.__GetDuration_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06022C26 RID: 142374 RVA: 0x0033697B File Offset: 0x00334B7B
+		// Token: 0x0600A6F2 RID: 42738 RVA: 0x000F6B67 File Offset: 0x000F4D67
 		public bool GetDisableCameraCuts()
 		{
 			return UMovieSceneSequencePlayer.__GetDisableCameraCuts_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C27 RID: 142375 RVA: 0x00336988 File Offset: 0x00334B88
+		// Token: 0x0600A6F3 RID: 42739 RVA: 0x000F6B74 File Offset: 0x000F4D74
 		public FQualifiedFrameTime GetCurrentTime()
 		{
 			return new FQualifiedFrameTime(UMovieSceneSequencePlayer.__GetCurrentTime_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06022C28 RID: 142376 RVA: 0x0033699B File Offset: 0x00334B9B
+		// Token: 0x0600A6F4 RID: 42740 RVA: 0x000F6B87 File Offset: 0x000F4D87
 		public TArray<UObject> GetBoundObjects([Nullable(2)] FMovieSceneObjectBindingID ObjectBinding)
 		{
 			return new TArray<UObject>(UMovieSceneSequencePlayer.__GetBoundObjects_Internal(base.NativePtr, (ObjectBinding ?? new FMovieSceneObjectBindingID()).NativePtr), null);
 		}
 
-		// Token: 0x06022C29 RID: 142377 RVA: 0x003369BD File Offset: 0x00334BBD
+		// Token: 0x0600A6F5 RID: 42741 RVA: 0x000F6BA9 File Offset: 0x000F4DA9
 		public void ClearKeyFrames()
 		{
 			UMovieSceneSequencePlayer.__ClearKeyFrames_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C2A RID: 142378 RVA: 0x003369CA File Offset: 0x00334BCA
+		// Token: 0x0600A6F6 RID: 42742 RVA: 0x000F6BB6 File Offset: 0x000F4DB6
 		public void CleanPauseOnFrame()
 		{
 			UMovieSceneSequencePlayer.__CleanPauseOnFrame_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C2B RID: 142379 RVA: 0x003369D7 File Offset: 0x00334BD7
+		// Token: 0x0600A6F7 RID: 42743 RVA: 0x000F6BC3 File Offset: 0x000F4DC3
 		public void ChangePlaybackDirection()
 		{
 			UMovieSceneSequencePlayer.__ChangePlaybackDirection_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06022C2C RID: 142380
+		// Token: 0x0600A6F8 RID: 42744
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopAtCurrentTime_Internal(IntPtr @this);
 
-		// Token: 0x06022C2D RID: 142381
+		// Token: 0x0600A6F9 RID: 42745
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Stop_Internal(IntPtr @this);
 
-		// Token: 0x06022C2E RID: 142382
+		// Token: 0x0600A6FA RID: 42746
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTimeRange_Internal(IntPtr @this, float StartTime, float Duration);
 
-		// Token: 0x06022C2F RID: 142383
+		// Token: 0x0600A6FB RID: 42747
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPlayRate_Internal(IntPtr @this, float PlayRate);
 
-		// Token: 0x06022C30 RID: 142384
+		// Token: 0x0600A6FC RID: 42748
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPlaybackPositionWithNoEval_Internal(IntPtr @this, IntPtr PlaybackParams);
 
-		// Token: 0x06022C31 RID: 142385
+		// Token: 0x0600A6FD RID: 42749
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPlaybackPosition_Internal(IntPtr @this, IntPtr PlaybackParams);
 
-		// Token: 0x06022C32 RID: 142386
+		// Token: 0x0600A6FE RID: 42750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKeyFrames_Internal(IntPtr @this, IntPtr InKeyFrames);
 
-		// Token: 0x06022C33 RID: 142387
+		// Token: 0x0600A6FF RID: 42751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFrameRate_Internal(IntPtr @this, FFrameRate FrameRate);
 
-		// Token: 0x06022C34 RID: 142388
+		// Token: 0x0600A700 RID: 42752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetFrameRange_Internal(IntPtr @this, int StartFrame, int Duration, float SubFrames);
 
-		// Token: 0x06022C35 RID: 142389
+		// Token: 0x0600A701 RID: 42753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDisableCameraCuts_Internal(IntPtr @this, bool bInDisableCameraCuts);
 
-		// Token: 0x06022C36 RID: 142390
+		// Token: 0x0600A702 RID: 42754
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrubToSeconds_Internal(IntPtr @this, float TimeInSeconds);
 
-		// Token: 0x06022C37 RID: 142391
+		// Token: 0x0600A703 RID: 42755
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ScrubToMarkedFrame_Internal(IntPtr @this, in FString InLabel);
 
-		// Token: 0x06022C38 RID: 142392
+		// Token: 0x0600A704 RID: 42756
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ScrubToFrame_Internal(IntPtr @this, IntPtr NewPosition);
 
-		// Token: 0x06022C39 RID: 142393
+		// Token: 0x0600A705 RID: 42757
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Scrub_Internal(IntPtr @this);
 
-		// Token: 0x06022C3A RID: 142394
+		// Token: 0x0600A706 RID: 42758
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RPC_OnStopEvent_Internal(IntPtr @this, IntPtr StoppedTime);
 
-		// Token: 0x06022C3B RID: 142395
+		// Token: 0x0600A707 RID: 42759
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RPC_ExplicitServerUpdateEvent_Internal(IntPtr @this, EUpdatePositionMethod Method, IntPtr RelevantTime);
 
-		// Token: 0x06022C3C RID: 142396
+		// Token: 0x0600A708 RID: 42760
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		private static extern void __PlayToWithEventSweep_Internal(IntPtr @this, IntPtr PlaybackParams);
+
+		// Token: 0x0600A709 RID: 42761
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayToSeconds_Internal(IntPtr @this, float TimeInSeconds);
 
-		// Token: 0x06022C3D RID: 142397
+		// Token: 0x0600A70A RID: 42762
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __PlayToMarkedFrame_Internal(IntPtr @this, in FString InLabel);
 
-		// Token: 0x06022C3E RID: 142398
+		// Token: 0x0600A70B RID: 42763
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayToFrame_Internal(IntPtr @this, IntPtr NewPosition);
 
-		// Token: 0x06022C3F RID: 142399
+		// Token: 0x0600A70C RID: 42764
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayTo_Loop_Internal(IntPtr @this, IntPtr InPlaybackParams, in FString StartMarkedFrame);
 
-		// Token: 0x06022C40 RID: 142400
+		// Token: 0x0600A70D RID: 42765
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayTo_Circle_Internal(IntPtr @this, IntPtr InPlaybackParams, bool InAutoDirect, bool InIsForward);
 
-		// Token: 0x06022C41 RID: 142401
+		// Token: 0x0600A70E RID: 42766
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayTo_Internal(IntPtr @this, IntPtr PlaybackParams);
 
-		// Token: 0x06022C42 RID: 142402
+		// Token: 0x0600A70F RID: 42767
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayReverseLooping_Internal(IntPtr @this, int NumLoops);
 
-		// Token: 0x06022C43 RID: 142403
+		// Token: 0x0600A710 RID: 42768
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayReverse_Internal(IntPtr @this);
 
-		// Token: 0x06022C44 RID: 142404
+		// Token: 0x0600A711 RID: 42769
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PlayLooping_Internal(IntPtr @this, int NumLoops);
 
-		// Token: 0x06022C45 RID: 142405
+		// Token: 0x0600A712 RID: 42770
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Play_Internal(IntPtr @this);
 
-		// Token: 0x06022C46 RID: 142406
+		// Token: 0x0600A713 RID: 42771
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PauseOnNextFrame_Internal(IntPtr @this);
 
-		// Token: 0x06022C47 RID: 142407
+		// Token: 0x0600A714 RID: 42772
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Pause_Internal(IntPtr @this);
 
-		// Token: 0x06022C48 RID: 142408
+		// Token: 0x0600A715 RID: 42773
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __JumpToSeconds_Internal(IntPtr @this, float TimeInSeconds);
 
-		// Token: 0x06022C49 RID: 142409
+		// Token: 0x0600A716 RID: 42774
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __JumpToMarkedFrame_Internal(IntPtr @this, in FString InLabel);
 
-		// Token: 0x06022C4A RID: 142410
+		// Token: 0x0600A717 RID: 42775
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __JumpToFrame_Internal(IntPtr @this, IntPtr NewPosition);
 
-		// Token: 0x06022C4B RID: 142411
+		// Token: 0x0600A718 RID: 42776
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStopped_Internal(IntPtr @this);
 
-		// Token: 0x06022C4C RID: 142412
+		// Token: 0x0600A719 RID: 42777
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsReversed_Internal(IntPtr @this);
 
-		// Token: 0x06022C4D RID: 142413
+		// Token: 0x0600A71A RID: 42778
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPlaying_Internal(IntPtr @this);
 
-		// Token: 0x06022C4E RID: 142414
+		// Token: 0x0600A71B RID: 42779
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPaused_Internal(IntPtr @this);
 
-		// Token: 0x06022C4F RID: 142415
+		// Token: 0x0600A71C RID: 42780
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GoToEndAndStop_Internal(IntPtr @this, EUpdatePositionMethod UpdateMethod);
 
-		// Token: 0x06022C50 RID: 142416
+		// Token: 0x0600A71D RID: 42781
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetStartTime_Internal(IntPtr @this);
 
-		// Token: 0x06022C51 RID: 142417
+		// Token: 0x0600A71E RID: 42782
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetPlayRate_Internal(IntPtr @this);
 
-		// Token: 0x06022C52 RID: 142418
+		// Token: 0x0600A71F RID: 42783
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetObjectBindings_Internal(IntPtr @this, IntPtr InObject);
 
-		// Token: 0x06022C53 RID: 142419
+		// Token: 0x0600A720 RID: 42784
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FFrameRate __GetFrameRate_Internal(IntPtr @this);
 
-		// Token: 0x06022C54 RID: 142420
+		// Token: 0x0600A721 RID: 42785
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetFrameDuration_Internal(IntPtr @this);
 
-		// Token: 0x06022C55 RID: 142421
+		// Token: 0x0600A722 RID: 42786
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetEndTime_Internal(IntPtr @this);
 
-		// Token: 0x06022C56 RID: 142422
+		// Token: 0x0600A723 RID: 42787
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDuration_Internal(IntPtr @this);
 
-		// Token: 0x06022C57 RID: 142423
+		// Token: 0x0600A724 RID: 42788
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetDisableCameraCuts_Internal(IntPtr @this);
 
-		// Token: 0x06022C58 RID: 142424
+		// Token: 0x0600A725 RID: 42789
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetCurrentTime_Internal(IntPtr @this);
 
-		// Token: 0x06022C59 RID: 142425
+		// Token: 0x0600A726 RID: 42790
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetBoundObjects_Internal(IntPtr @this, IntPtr ObjectBinding);
 
-		// Token: 0x06022C5A RID: 142426
+		// Token: 0x0600A727 RID: 42791
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearKeyFrames_Internal(IntPtr @this);
 
-		// Token: 0x06022C5B RID: 142427
+		// Token: 0x0600A728 RID: 42792
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CleanPauseOnFrame_Internal(IntPtr @this);
 
-		// Token: 0x06022C5C RID: 142428
+		// Token: 0x0600A729 RID: 42793
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ChangePlaybackDirection_Internal(IntPtr @this);
 
-		// Token: 0x06022C5D RID: 142429 RVA: 0x003369E4 File Offset: 0x00334BE4
+		// Token: 0x0600A72A RID: 42794 RVA: 0x000F6BD0 File Offset: 0x000F4DD0
 		static UMovieSceneSequencePlayer()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneSequencePlayer");
 		}
 
-		// Token: 0x06022C5E RID: 142430 RVA: 0x003369F4 File Offset: 0x00334BF4
+		// Token: 0x0600A72B RID: 42795 RVA: 0x000F6BE0 File Offset: 0x000F4DE0
 		protected UMovieSceneSequencePlayer() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSequencePlayer.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022C5F RID: 142431 RVA: 0x00336A1C File Offset: 0x00334C1C
+		// Token: 0x0600A72C RID: 42796 RVA: 0x000F6C08 File Offset: 0x000F4E08
 		protected UMovieSceneSequencePlayer(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040128ED RID: 76013
+		// Token: 0x04004778 RID: 18296
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneSequencePlayer";
 
-		// Token: 0x040128EE RID: 76014
+		// Token: 0x04004779 RID: 18297
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040128EF RID: 76015
+		// Token: 0x0400477A RID: 18298
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040128F0 RID: 76016
+		// Token: 0x0400477B RID: 18299
 		internal static int __PropertyOffset_OnPlay;
 
-		// Token: 0x040128F1 RID: 76017
+		// Token: 0x0400477C RID: 18300
 		[Nullable(2)]
 		private FOnMovieSceneSequencePlayerEvent _OnPlay;
 
-		// Token: 0x040128F2 RID: 76018
+		// Token: 0x0400477D RID: 18301
 		internal static int __PropertyOffset_OnPlayReverse;
 
-		// Token: 0x040128F3 RID: 76019
+		// Token: 0x0400477E RID: 18302
 		[Nullable(2)]
 		private FOnMovieSceneSequencePlayerEvent _OnPlayReverse;
 
-		// Token: 0x040128F4 RID: 76020
+		// Token: 0x0400477F RID: 18303
 		internal static int __PropertyOffset_OnStop;
 
-		// Token: 0x040128F5 RID: 76021
+		// Token: 0x04004780 RID: 18304
 		[Nullable(2)]
 		private FOnMovieSceneSequencePlayerEvent _OnStop;
 
-		// Token: 0x040128F6 RID: 76022
+		// Token: 0x04004781 RID: 18305
 		internal static int __PropertyOffset_OnPause;
 
-		// Token: 0x040128F7 RID: 76023
+		// Token: 0x04004782 RID: 18306
 		[Nullable(2)]
 		private FOnMovieSceneSequencePlayerEvent _OnPause;
 
-		// Token: 0x040128F8 RID: 76024
+		// Token: 0x04004783 RID: 18307
 		internal static int __PropertyOffset_OnInterrupt;
 
-		// Token: 0x040128F9 RID: 76025
+		// Token: 0x04004784 RID: 18308
 		[Nullable(2)]
 		private FOnMovieSceneSequencePlayerEvent _OnInterrupt;
 
-		// Token: 0x040128FA RID: 76026
+		// Token: 0x04004785 RID: 18309
 		internal static int __PropertyOffset_OnFinished;
 
-		// Token: 0x040128FB RID: 76027
+		// Token: 0x04004786 RID: 18310
 		[Nullable(2)]
 		private FOnMovieSceneSequencePlayerEvent _OnFinished;
 
-		// Token: 0x040128FC RID: 76028
-		internal static int __PropertyOffset_Status;
-
-		// Token: 0x040128FD RID: 76029
+		// Token: 0x04004787 RID: 18311
 		internal static int __PropertyOffset_bReversePlayback;
 
-		// Token: 0x040128FE RID: 76030
+		// Token: 0x04004788 RID: 18312
 		internal static byte __PropertyMask_bReversePlayback;
 
-		// Token: 0x040128FF RID: 76031
+		// Token: 0x04004789 RID: 18313
 		internal static int __PropertyOffset_KeyFrames;
 
-		// Token: 0x04012900 RID: 76032
+		// Token: 0x0400478A RID: 18314
 		[Nullable(2)]
 		private TArray<int> _KeyFrames;
 
-		// Token: 0x04012901 RID: 76033
+		// Token: 0x0400478B RID: 18315
 		internal static int __PropertyOffset_Sequence;
 
-		// Token: 0x04012902 RID: 76034
+		// Token: 0x0400478C RID: 18316
 		internal static int __PropertyOffset_StartTime;
 
-		// Token: 0x04012903 RID: 76035
+		// Token: 0x0400478D RID: 18317
 		[Nullable(2)]
 		private FFrameNumber _StartTime;
 
-		// Token: 0x04012904 RID: 76036
+		// Token: 0x0400478E RID: 18318
 		internal static int __PropertyOffset_DurationFrames;
 
-		// Token: 0x04012905 RID: 76037
+		// Token: 0x0400478F RID: 18319
 		internal static int __PropertyOffset_DurationSubFrames;
 
-		// Token: 0x04012906 RID: 76038
+		// Token: 0x04004790 RID: 18320
 		internal static int __PropertyOffset_CurrentNumLoops;
 
-		// Token: 0x04012907 RID: 76039
+		// Token: 0x04004791 RID: 18321
 		internal static int __PropertyOffset_PlaybackSettings;
 
-		// Token: 0x04012908 RID: 76040
+		// Token: 0x04004792 RID: 18322
 		[Nullable(2)]
 		private FMovieSceneSequencePlaybackSettings _PlaybackSettings;
-
-		// Token: 0x04012909 RID: 76041
-		internal static int __PropertyOffset_RootTemplateInstance;
-
-		// Token: 0x0401290A RID: 76042
-		[Nullable(2)]
-		private FMovieSceneRootEvaluationTemplateInstance _RootTemplateInstance;
-
-		// Token: 0x0401290B RID: 76043
-		internal static int __PropertyOffset_NetSyncProps;
-
-		// Token: 0x0401290C RID: 76044
-		[Nullable(2)]
-		private FMovieSceneSequenceReplProperties _NetSyncProps;
-
-		// Token: 0x0401290D RID: 76045
-		internal static int __PropertyOffset_PlaybackClient;
-
-		// Token: 0x0401290E RID: 76046
-		internal static int __PropertyOffset_TickManager;
 	}
 }

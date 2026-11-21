@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BE1 RID: 11233
+// Token: 0x0200215C RID: 8540
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerChallengeFormationView : UiViewBase
 {
-	// Token: 0x0601754A RID: 95562 RVA: 0x005EEB83 File Offset: 0x005ECD83
+	// Token: 0x06014F7B RID: 85883 RVA: 0x0061B6C3 File Offset: 0x006198C3
 	public TowerChallengeFormationView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601754B RID: 95563 RVA: 0x005EEBA0 File Offset: 0x005ECDA0
+	// Token: 0x06014F7C RID: 85884 RVA: 0x0061B6E0 File Offset: 0x006198E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -70,25 +69,25 @@ public class TowerChallengeFormationView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601754C RID: 95564 RVA: 0x005EEE21 File Offset: 0x005ED021
+	// Token: 0x06014F7D RID: 85885 RVA: 0x0061B961 File Offset: 0x00619B61
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 	}
 
-	// Token: 0x0601754D RID: 95565 RVA: 0x005EEE3F File Offset: 0x005ED03F
+	// Token: 0x06014F7E RID: 85886 RVA: 0x0061B97F File Offset: 0x00619B7F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 	}
 
-	// Token: 0x0601754E RID: 95566 RVA: 0x005EEE5D File Offset: 0x005ED05D
+	// Token: 0x06014F7F RID: 85887 RVA: 0x0061B99D File Offset: 0x00619B9D
 	protected override void OnBeforeShow()
 	{
 		this.RemoveSwitchedRoles();
 	}
 
-	// Token: 0x0601754F RID: 95567 RVA: 0x005EEE68 File Offset: 0x005ED068
+	// Token: 0x06014F80 RID: 85888 RVA: 0x0061B9A8 File Offset: 0x00619BA8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TowerChallengeFormationView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -99,20 +98,20 @@ public class TowerChallengeFormationView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017550 RID: 95568 RVA: 0x005EEEAB File Offset: 0x005ED0AB
+	// Token: 0x06014F81 RID: 85889 RVA: 0x0061B9EB File Offset: 0x00619BEB
 	private void AddSelectOrder(int roleId)
 	{
 		this.SelectOrderList.Remove(roleId);
 		this.SelectOrderList.Add(roleId);
 	}
 
-	// Token: 0x06017551 RID: 95569 RVA: 0x005EEEC6 File Offset: 0x005ED0C6
+	// Token: 0x06014F82 RID: 85890 RVA: 0x0061BA06 File Offset: 0x00619C06
 	private void RemoveSelectOrder(int roleId)
 	{
 		this.SelectOrderList.Remove(roleId);
 	}
 
-	// Token: 0x06017552 RID: 95570 RVA: 0x005EEED8 File Offset: 0x005ED0D8
+	// Token: 0x06014F83 RID: 85891 RVA: 0x0061BA18 File Offset: 0x00619C18
 	private int GetLastSelectedRoleId()
 	{
 		HashSet<int> selectedRoleSet = RoleSelectModel.Instance.SelectedRoleSet;
@@ -127,7 +126,7 @@ public class TowerChallengeFormationView : UiViewBase
 		return 0;
 	}
 
-	// Token: 0x06017553 RID: 95571 RVA: 0x005EEF24 File Offset: 0x005ED124
+	// Token: 0x06014F84 RID: 85892 RVA: 0x0061BA64 File Offset: 0x00619C64
 	private void ApplyPresetTeam(FormationData formationData)
 	{
 		List<int> roleIdListWithTrial = formationData.GetRoleIdListWithTrial(false);
@@ -143,13 +142,13 @@ public class TowerChallengeFormationView : UiViewBase
 		this.ApplyRoleIdListToTeam(roleIdListWithTrial);
 	}
 
-	// Token: 0x06017554 RID: 95572 RVA: 0x005EEF9C File Offset: 0x005ED19C
+	// Token: 0x06014F85 RID: 85893 RVA: 0x0061BADC File Offset: 0x00619CDC
 	public void ApplyRecommendFormation(List<int> roleIdList)
 	{
 		this.ApplyRoleIdListToTeam(roleIdList);
 	}
 
-	// Token: 0x06017555 RID: 95573 RVA: 0x005EEFA8 File Offset: 0x005ED1A8
+	// Token: 0x06014F86 RID: 85894 RVA: 0x0061BAE8 File Offset: 0x00619CE8
 	private void ApplyRoleIdListToTeam(List<int> roleIdList)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -190,7 +189,7 @@ public class TowerChallengeFormationView : UiViewBase
 		this.UpdateSkillBranchBtn();
 	}
 
-	// Token: 0x06017556 RID: 95574 RVA: 0x005EF090 File Offset: 0x005ED290
+	// Token: 0x06014F87 RID: 85895 RVA: 0x0061BBD0 File Offset: 0x00619DD0
 	protected override void OnStart()
 	{
 		this.TitleItem = new TowerTitleItem(base.GetItem(0), delegate()
@@ -212,7 +211,7 @@ public class TowerChallengeFormationView : UiViewBase
 		this.AddHomeBtnExtraCallback();
 	}
 
-	// Token: 0x06017557 RID: 95575 RVA: 0x005EF145 File Offset: 0x005ED345
+	// Token: 0x06014F88 RID: 85896 RVA: 0x0061BC85 File Offset: 0x00619E85
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -230,7 +229,7 @@ public class TowerChallengeFormationView : UiViewBase
 		});
 	}
 
-	// Token: 0x06017558 RID: 95576 RVA: 0x005EF178 File Offset: 0x005ED378
+	// Token: 0x06014F89 RID: 85897 RVA: 0x0061BCB8 File Offset: 0x00619EB8
 	private void FillSelectByClearRecord()
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -258,12 +257,12 @@ public class TowerChallengeFormationView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017559 RID: 95577 RVA: 0x005EF274 File Offset: 0x005ED474
+	// Token: 0x06014F8A RID: 85898 RVA: 0x0061BDB4 File Offset: 0x00619FB4
 	private void RefreshView()
 	{
 		TowerConfig value = TowerClimbConfig.Instance.GetTowerInfo(this.TowerId).Value;
-		this.BuffShowLayout.RefreshByData(value.ShowBuffs().ToList<long>(), null, false);
-		this.MonsterLayout.RefreshByData(value.ShowMonsters().ToList<int>(), null, false);
+		this.BuffShowLayout.RefreshByData(value.ShowBuffs(), null, false);
+		this.MonsterLayout.RefreshByData(value.ShowMonsters(), null, false);
 		this.ElementLayoutItem.Refresh(value.RecommendElement());
 		List<ValueTuple<bool, TowerTarget>> list = new List<ValueTuple<bool, TowerTarget>>();
 		List<int> floorStarsIndex = TowerModel.Instance.GetFloorStarsIndex(this.TowerId);
@@ -284,7 +283,7 @@ public class TowerChallengeFormationView : UiViewBase
 		this.UpdateSkillBranchBtn();
 	}
 
-	// Token: 0x0601755A RID: 95578 RVA: 0x005EF3B8 File Offset: 0x005ED5B8
+	// Token: 0x06014F8B RID: 85899 RVA: 0x0061BEF0 File Offset: 0x0061A0F0
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRoleDetailViewClose));
@@ -319,25 +318,25 @@ public class TowerChallengeFormationView : UiViewBase
 		this.MonsterLayout = null;
 	}
 
-	// Token: 0x0601755B RID: 95579 RVA: 0x005EF46C File Offset: 0x005ED66C
+	// Token: 0x06014F8C RID: 85900 RVA: 0x0061BFA4 File Offset: 0x0061A1A4
 	private TowerBuffShowItem InitBuffItem()
 	{
 		return new TowerBuffShowItem();
 	}
 
-	// Token: 0x0601755C RID: 95580 RVA: 0x005EF473 File Offset: 0x005ED673
+	// Token: 0x06014F8D RID: 85901 RVA: 0x0061BFAB File Offset: 0x0061A1AB
 	private TowerStarsComplexItem InitTargetStarItem()
 	{
 		return new TowerStarsComplexItem();
 	}
 
-	// Token: 0x0601755D RID: 95581 RVA: 0x005EF47A File Offset: 0x005ED67A
+	// Token: 0x06014F8E RID: 85902 RVA: 0x0061BFB2 File Offset: 0x0061A1B2
 	private TowerMonsterItem InitMonsterItem()
 	{
 		return new TowerMonsterItem();
 	}
 
-	// Token: 0x0601755E RID: 95582 RVA: 0x005EF484 File Offset: 0x005ED684
+	// Token: 0x06014F8F RID: 85903 RVA: 0x0061BFBC File Offset: 0x0061A1BC
 	private void OnClickRoleDetailBtn()
 	{
 		List<int> selectedRoleIdList = this.GetSelectedRoleIdList();
@@ -347,11 +346,15 @@ public class TowerChallengeFormationView : UiViewBase
 		{
 			return;
 		}
-		HashSet<int> selectedSet = new HashSet<int>(selectedRoleIdList);
+		HashSet<int> hashSet = new HashSet<int>(selectedRoleIdList);
 		List<int> list2 = new List<int>(selectedRoleIdList);
-		list2.AddRange(from roleId in list
-		where !selectedSet.Contains(roleId)
-		select roleId);
+		foreach (int item in list)
+		{
+			if (!hashSet.Contains(item))
+			{
+				list2.Add(item);
+			}
+		}
 		RoleModel.Instance.StartGamePlayRoleEdit(ESkillBranchCacheType.Tower);
 		RoleModel.Instance.StartRecordRoleSkillBranchChangeRequest();
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnRoleDetailViewClose));
@@ -364,7 +367,7 @@ public class TowerChallengeFormationView : UiViewBase
 		});
 	}
 
-	// Token: 0x0601755F RID: 95583 RVA: 0x005EF558 File Offset: 0x005ED758
+	// Token: 0x06014F90 RID: 85904 RVA: 0x0061C0BC File Offset: 0x0061A2BC
 	private void OnRoleDetailViewClose(EUiViewName viewName, int _)
 	{
 		if (viewName != EUiViewName.RoleRootView)
@@ -388,7 +391,7 @@ public class TowerChallengeFormationView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017560 RID: 95584 RVA: 0x005EF5F4 File Offset: 0x005ED7F4
+	// Token: 0x06014F91 RID: 85905 RVA: 0x0061C158 File Offset: 0x0061A358
 	private void OnClickChallengeBtn()
 	{
 		List<int> selectedRoleIdList = this.GetSelectedRoleIdList();
@@ -400,7 +403,7 @@ public class TowerChallengeFormationView : UiViewBase
 		TowerController.Instance.TowerStartRequest(this.TowerId, selectedRoleIdList, true).Forget();
 	}
 
-	// Token: 0x06017561 RID: 95585 RVA: 0x005EF63C File Offset: 0x005ED83C
+	// Token: 0x06014F92 RID: 85906 RVA: 0x0061C1A0 File Offset: 0x0061A3A0
 	private void OnClickSkillBranchBtn()
 	{
 		List<int> selectedRoleIdList = this.GetSelectedRoleIdList();
@@ -416,24 +419,32 @@ public class TowerChallengeFormationView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.RoleSkillBranchPopView, roleSkillBranchPopViewParams, null);
 	}
 
-	// Token: 0x06017562 RID: 95586 RVA: 0x005EF688 File Offset: 0x005ED888
+	// Token: 0x06014F93 RID: 85907 RVA: 0x0061C1EC File Offset: 0x0061A3EC
 	private List<int> GetSelectedRoleIdList()
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
 		List<int> list = new List<int>();
-		foreach (int key in from k in roleIndexMap.Keys
-		orderby k
-		select k)
+		List<int> list2 = new List<int>(roleIndexMap.Keys);
+		list2.Sort();
+		foreach (int key in list2)
 		{
 			list.Add(roleIndexMap[key].GetDataId());
 		}
 		return list;
 	}
 
-	// Token: 0x06017563 RID: 95587 RVA: 0x005EF718 File Offset: 0x005ED918
+	// Token: 0x06014F94 RID: 85908 RVA: 0x0061C268 File Offset: 0x0061A468
 	private void UpdateSkillBranchBtn()
 	{
-		bool uiactive = this.GetSelectedRoleIdList().Any((int roleId) => roleId > 0 && RoleModel.Instance.IsRoleHasBranch(roleId));
+		bool uiactive = false;
+		foreach (int num in this.GetSelectedRoleIdList())
+		{
+			if (num > 0 && RoleModel.Instance.IsRoleHasBranch(num))
+			{
+				uiactive = true;
+				break;
+			}
+		}
 		UUIButtonComponent button = base.GetButton(12);
 		if (button == null)
 		{
@@ -442,7 +453,7 @@ public class TowerChallengeFormationView : UiViewBase
 		button.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06017564 RID: 95588 RVA: 0x005EF770 File Offset: 0x005ED970
+	// Token: 0x06014F95 RID: 85909 RVA: 0x0061C2EC File Offset: 0x0061A4EC
 	private void OnRoleSkillBranchChanged(int roleId)
 	{
 		TowerFormationTeamPanel teamPanel = this.TeamPanel;
@@ -458,7 +469,7 @@ public class TowerChallengeFormationView : UiViewBase
 		currentTeamRolePanel.Refresh();
 	}
 
-	// Token: 0x06017565 RID: 95589 RVA: 0x005EF794 File Offset: 0x005ED994
+	// Token: 0x06014F96 RID: 85910 RVA: 0x0061C310 File Offset: 0x0061A510
 	private void RemoveSwitchedRoles()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -506,7 +517,7 @@ public class TowerChallengeFormationView : UiViewBase
 		this.UpdateSkillBranchBtn();
 	}
 
-	// Token: 0x06017566 RID: 95590 RVA: 0x005EF8D4 File Offset: 0x005EDAD4
+	// Token: 0x06014F97 RID: 85911 RVA: 0x0061C450 File Offset: 0x0061A650
 	private void BenchRole(int roleId)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -523,26 +534,26 @@ public class TowerChallengeFormationView : UiViewBase
 		this.RemoveSelectOrder(roleId);
 	}
 
-	// Token: 0x0400AEB1 RID: 44721
+	// Token: 0x0400B2B6 RID: 45750
 	private int TowerId = -1;
 
-	// Token: 0x0400AEB2 RID: 44722
+	// Token: 0x0400B2B7 RID: 45751
 	[Nullable(2)]
 	private TowerTitleItem TitleItem;
 
-	// Token: 0x0400AEB3 RID: 44723
+	// Token: 0x0400B2B8 RID: 45752
 	[Nullable(2)]
 	private TowerElementLayoutItem ElementLayoutItem;
 
-	// Token: 0x0400AEB4 RID: 44724
+	// Token: 0x0400B2B9 RID: 45753
 	[Nullable(2)]
 	private TowerFormationTeamPanel TeamPanel;
 
-	// Token: 0x0400AEB5 RID: 44725
+	// Token: 0x0400B2BA RID: 45754
 	[Nullable(2)]
 	private TowerCurrentTeamRolePanel CurrentTeamRolePanel;
 
-	// Token: 0x0400AEB6 RID: 44726
+	// Token: 0x0400B2BB RID: 45755
 	[Nullable(new byte[]
 	{
 		2,
@@ -550,7 +561,7 @@ public class TowerChallengeFormationView : UiViewBase
 	})]
 	private GenericLayout<TowerBuffShowItem, long> BuffShowLayout;
 
-	// Token: 0x0400AEB7 RID: 44727
+	// Token: 0x0400B2BC RID: 45756
 	[Nullable(new byte[]
 	{
 		2,
@@ -559,7 +570,7 @@ public class TowerChallengeFormationView : UiViewBase
 	})]
 	private GenericLayout<TowerStarsComplexItem, ValueTuple<bool, TowerTarget>> TargetStarLayout;
 
-	// Token: 0x0400AEB8 RID: 44728
+	// Token: 0x0400B2BD RID: 45757
 	[Nullable(new byte[]
 	{
 		2,
@@ -567,40 +578,40 @@ public class TowerChallengeFormationView : UiViewBase
 	})]
 	private GenericLayout<TowerMonsterItem, int> MonsterLayout;
 
-	// Token: 0x0400AEB9 RID: 44729
+	// Token: 0x0400B2BE RID: 45758
 	private readonly List<int> SelectOrderList = new List<int>();
 
-	// Token: 0x02009199 RID: 37273
+	// Token: 0x020083DD RID: 33757
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F1D0 RID: 192976
+		// Token: 0x0402A8D5 RID: 174293
 		CaptionItem,
-		// Token: 0x0402F1D1 RID: 192977
+		// Token: 0x0402A8D6 RID: 174294
 		TeamItem,
-		// Token: 0x0402F1D2 RID: 192978
+		// Token: 0x0402A8D7 RID: 174295
 		LevelInfoItem,
-		// Token: 0x0402F1D3 RID: 192979
+		// Token: 0x0402A8D8 RID: 174296
 		QuickPassItem,
-		// Token: 0x0402F1D4 RID: 192980
+		// Token: 0x0402A8D9 RID: 174297
 		ElementItem,
-		// Token: 0x0402F1D5 RID: 192981
+		// Token: 0x0402A8DA RID: 174298
 		ShowBuffLayout,
-		// Token: 0x0402F1D6 RID: 192982
+		// Token: 0x0402A8DB RID: 174299
 		TargetStarLayout,
-		// Token: 0x0402F1D7 RID: 192983
+		// Token: 0x0402A8DC RID: 174300
 		MonsterLayout,
-		// Token: 0x0402F1D8 RID: 192984
+		// Token: 0x0402A8DD RID: 174301
 		CurrentTeamRoleItem,
-		// Token: 0x0402F1D9 RID: 192985
+		// Token: 0x0402A8DE RID: 174302
 		CostText,
-		// Token: 0x0402F1DA RID: 192986
+		// Token: 0x0402A8DF RID: 174303
 		ChallengeBtn,
-		// Token: 0x0402F1DB RID: 192987
+		// Token: 0x0402A8E0 RID: 174304
 		RoleDetailBtn,
-		// Token: 0x0402F1DC RID: 192988
+		// Token: 0x0402A8E1 RID: 174305
 		BtnSkillBranch,
-		// Token: 0x0402F1DD RID: 192989
+		// Token: 0x0402A8E2 RID: 174306
 		BgTexture
 	}
 }

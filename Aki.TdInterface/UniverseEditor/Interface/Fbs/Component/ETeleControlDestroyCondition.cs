@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E27 RID: 20007
+	// Token: 0x02005336 RID: 21302
 	public enum ETeleControlDestroyCondition : byte
 	{
-		// Token: 0x0400DB72 RID: 56178
+		// Token: 0x0400E6E4 RID: 59108
 		LetGo,
-		// Token: 0x0400DB73 RID: 56179
+		// Token: 0x0400E6E5 RID: 59109
 		CreateBullet,
-		// Token: 0x0400DB74 RID: 56180
+		// Token: 0x0400E6E6 RID: 59110
 		Throw
 	}
 }

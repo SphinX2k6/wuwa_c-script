@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB8 RID: 23992
+	// Token: 0x02004D9C RID: 19868
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FarmGoldScoreItem : BaseScoreItem
 	{
-		// Token: 0x0603CF44 RID: 249668 RVA: 0x00EA5E38 File Offset: 0x00EA4038
+		// Token: 0x06031EBB RID: 204475 RVA: 0x00DF6D14 File Offset: 0x00DF4F14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CF45 RID: 249669 RVA: 0x00EA5EA4 File Offset: 0x00EA40A4
+		// Token: 0x06031EBC RID: 204476 RVA: 0x00DF6D80 File Offset: 0x00DF4F80
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF46 RID: 249670 RVA: 0x00EA5F28 File Offset: 0x00EA4128
+		// Token: 0x06031EBD RID: 204477 RVA: 0x00DF6E04 File Offset: 0x00DF5004
 		public override bool IsValidScore(int scoreId)
 		{
 			BattleScoreConf? scoreConfig = BattleScoreModel.Instance.GetScoreConfig(scoreId, false);
 			return scoreConfig != null && scoreConfig.Value.Type == 0;
 		}
 
-		// Token: 0x0603CF47 RID: 249671 RVA: 0x00EA5F60 File Offset: 0x00EA4160
+		// Token: 0x06031EBE RID: 204478 RVA: 0x00DF6E3C File Offset: 0x00DF503C
 		public override void OnTick(float delta)
 		{
 			this.RefreshTreeBociText();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowCurrentTextByIndexArray(this.CurrentScoreIndexArray);
 		}
 
-		// Token: 0x0603CF48 RID: 249672 RVA: 0x00EA5FE8 File Offset: 0x00EA41E8
+		// Token: 0x06031EBF RID: 204479 RVA: 0x00DF6EC4 File Offset: 0x00DF50C4
 		private void ShowCurrentTextByIndexArray(List<int> indexArray)
 		{
 			string text = string.Empty;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			artText.SetText(text);
 		}
 
-		// Token: 0x0603CF49 RID: 249673 RVA: 0x00EA606C File Offset: 0x00EA426C
+		// Token: 0x06031EC0 RID: 204480 RVA: 0x00DF6F48 File Offset: 0x00DF5148
 		private void RefreshLowerIndexScoreText(int counterIndex, List<int> currentIndexArray)
 		{
 			int count = currentIndexArray.Count;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF4A RID: 249674 RVA: 0x00EA60B8 File Offset: 0x00EA42B8
+		// Token: 0x06031EC1 RID: 204481 RVA: 0x00DF6F94 File Offset: 0x00DF5194
 		private void RefreshHigherIndexScoreText(int counterIndex, List<int> currentIndexArray)
 		{
 			for (int i = counterIndex; i >= 0; i--)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF4B RID: 249675 RVA: 0x00EA60F8 File Offset: 0x00EA42F8
+		// Token: 0x06031EC2 RID: 204482 RVA: 0x00DF6FD4 File Offset: 0x00DF51D4
 		private bool CheckCounterValueIndexIfSame(int counterIndex, List<int> currentIndexArray, List<int> targetIndexArray)
 		{
 			for (int i = 0; i <= counterIndex; i++)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CF4C RID: 249676 RVA: 0x00EA6124 File Offset: 0x00EA4324
+		// Token: 0x06031EC3 RID: 204483 RVA: 0x00DF7000 File Offset: 0x00DF5200
 		private int GetNumValueByIndexArray(List<int> indexArray)
 		{
 			int count = indexArray.Count;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return num;
 		}
 
-		// Token: 0x0603CF4D RID: 249677 RVA: 0x00EA6168 File Offset: 0x00EA4368
+		// Token: 0x06031EC4 RID: 204484 RVA: 0x00DF7044 File Offset: 0x00DF5244
 		protected override void OnBattleScoreChanged(int scoreId, int score)
 		{
 			List<int> list = new List<int>(this.TargetScoreIndexArray);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowCurrentTextByIndexArray(this.CurrentScoreIndexArray);
 		}
 
-		// Token: 0x0603CF4E RID: 249678 RVA: 0x00EA627C File Offset: 0x00EA447C
+		// Token: 0x06031EC5 RID: 204485 RVA: 0x00DF7158 File Offset: 0x00DF5358
 		public void RefreshTreeBociText()
 		{
 			string newText = "";
@@ -201,25 +201,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(1).SetText(newText, true);
 		}
 
-		// Token: 0x0401FC00 RID: 130048
+		// Token: 0x0401A6BD RID: 108221
 		private bool RunState;
 
-		// Token: 0x0401FC01 RID: 130049
+		// Token: 0x0401A6BE RID: 108222
 		private int CounterValueIndex;
 
-		// Token: 0x0401FC02 RID: 130050
+		// Token: 0x0401A6BF RID: 108223
 		private List<int> CurrentScoreIndexArray = new List<int>();
 
-		// Token: 0x0401FC03 RID: 130051
+		// Token: 0x0401A6C0 RID: 108224
 		private readonly List<int> TargetScoreIndexArray = new List<int>();
 
-		// Token: 0x0200C0A2 RID: 49314
+		// Token: 0x0200AAAB RID: 43691
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403A214 RID: 238100
+			// Token: 0x04034BE6 RID: 216038
 			ScoreText,
-			// Token: 0x0403A215 RID: 238101
+			// Token: 0x04034BE7 RID: 216039
 			BociText
 		}
 	}

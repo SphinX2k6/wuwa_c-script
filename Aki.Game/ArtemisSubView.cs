@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010F5 RID: 4341
+// Token: 0x020005A9 RID: 1449
 public class ArtemisSubView : ActivitySubViewBase
 {
-	// Token: 0x06007137 RID: 28983 RVA: 0x00171D94 File Offset: 0x0016FF94
+	// Token: 0x060044CD RID: 17613 RVA: 0x0017A750 File Offset: 0x00178950
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06007138 RID: 28984 RVA: 0x00171EB8 File Offset: 0x001700B8
+	// Token: 0x060044CE RID: 17614 RVA: 0x0017A874 File Offset: 0x00178A74
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ArtemisSubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -43,25 +43,25 @@ public class ArtemisSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007139 RID: 28985 RVA: 0x00171EFB File Offset: 0x001700FB
+	// Token: 0x060044CF RID: 17615 RVA: 0x0017A8B7 File Offset: 0x00178AB7
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnArtemisStateRefresh, new Action(this.RefreshAircraftStatus));
 	}
 
-	// Token: 0x0600713A RID: 28986 RVA: 0x00171F19 File Offset: 0x00170119
+	// Token: 0x060044D0 RID: 17616 RVA: 0x0017A8D5 File Offset: 0x00178AD5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnArtemisStateRefresh, new Action(this.RefreshAircraftStatus));
 	}
 
-	// Token: 0x0600713B RID: 28987 RVA: 0x00171F37 File Offset: 0x00170137
+	// Token: 0x060044D1 RID: 17617 RVA: 0x0017A8F3 File Offset: 0x00178AF3
 	protected override void OnBeforeShow()
 	{
 		this.RefreshAircraftStatus();
 	}
 
-	// Token: 0x0600713C RID: 28988 RVA: 0x00171F3F File Offset: 0x0017013F
+	// Token: 0x060044D2 RID: 17618 RVA: 0x0017A8FB File Offset: 0x00178AFB
 	protected override void OnBeforeDestroy()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -72,7 +72,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		rootActor.OnSequencePlayEvent.Unbind();
 	}
 
-	// Token: 0x0600713D RID: 28989 RVA: 0x00171F58 File Offset: 0x00170158
+	// Token: 0x060044D3 RID: 17619 RVA: 0x0017A914 File Offset: 0x00178B14
 	[NullableContext(1)]
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
@@ -125,7 +125,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600713E RID: 28990 RVA: 0x0017209B File Offset: 0x0017029B
+	// Token: 0x060044D4 RID: 17620 RVA: 0x0017AA57 File Offset: 0x00178C57
 	private void ClickCommonInfo()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -141,7 +141,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600713F RID: 28991 RVA: 0x001720BC File Offset: 0x001702BC
+	// Token: 0x060044D5 RID: 17621 RVA: 0x0017AA78 File Offset: 0x00178C78
 	private void RefreshAircraftStatus()
 	{
 		ArtemisActivityData artemisActivityData = this.ActivityBaseData as ArtemisActivityData;
@@ -182,7 +182,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007140 RID: 28992 RVA: 0x001721CC File Offset: 0x001703CC
+	// Token: 0x060044D6 RID: 17622 RVA: 0x0017AB88 File Offset: 0x00178D88
 	private void SetPlaneVisibleVisible(int targetIndex)
 	{
 		int num = this.AlreadyPlayedPlaneAnim(targetIndex) ? targetIndex : (targetIndex - 1);
@@ -197,7 +197,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007141 RID: 28993 RVA: 0x00172218 File Offset: 0x00170418
+	// Token: 0x060044D7 RID: 17623 RVA: 0x0017ABD4 File Offset: 0x00178DD4
 	private bool AlreadyPlayedPlaneAnim(int index)
 	{
 		ArtemisActivityData artemisActivityData = this.ActivityBaseData as ArtemisActivityData;
@@ -211,7 +211,7 @@ public class ArtemisSubView : ActivitySubViewBase
 		return player != null && player.TryGetValue(getCacheActivityId, out num) && num >= index;
 	}
 
-	// Token: 0x06007142 RID: 28994 RVA: 0x00172260 File Offset: 0x00170460
+	// Token: 0x060044D8 RID: 17624 RVA: 0x0017AC1C File Offset: 0x00178E1C
 	private void SetPlayedPlaneAnim(int index)
 	{
 		ArtemisActivityData artemisActivityData = this.ActivityBaseData as ArtemisActivityData;
@@ -225,53 +225,53 @@ public class ArtemisSubView : ActivitySubViewBase
 		LocalStorage.SetPlayer<Dictionary<int, int>>(ELocalStoragePlayerKey.FirstPlayArtemisPlaneAnimMap, dictionary);
 	}
 
-	// Token: 0x0400346E RID: 13422
+	// Token: 0x04003507 RID: 13575
 	[Nullable(2)]
 	protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-	// Token: 0x0400346F RID: 13423
+	// Token: 0x04003508 RID: 13576
 	private bool FullPlaneVisible;
 
-	// Token: 0x04003470 RID: 13424
+	// Token: 0x04003509 RID: 13577
 	private int MaxDay;
 
-	// Token: 0x020076BC RID: 30396
+	// Token: 0x02006850 RID: 26704
 	private class EComponent
 	{
-		// Token: 0x040272FC RID: 160508
+		// Token: 0x04022645 RID: 140869
 		public const int CurrentDayText = 0;
 
-		// Token: 0x040272FD RID: 160509
+		// Token: 0x04022646 RID: 140870
 		public const int TargetDayText = 1;
 
-		// Token: 0x040272FE RID: 160510
+		// Token: 0x04022647 RID: 140871
 		public const int ActivityInfoUiItem = 2;
 
-		// Token: 0x040272FF RID: 160511
+		// Token: 0x04022648 RID: 140872
 		public const int AircraftTexture = 3;
 
-		// Token: 0x04027300 RID: 160512
+		// Token: 0x04022649 RID: 140873
 		public const int AirPoint1Item = 4;
 
-		// Token: 0x04027301 RID: 160513
+		// Token: 0x0402264A RID: 140874
 		public const int AirPoint2Item = 5;
 
-		// Token: 0x04027302 RID: 160514
+		// Token: 0x0402264B RID: 140875
 		public const int AirPoint3Item = 6;
 
-		// Token: 0x04027303 RID: 160515
+		// Token: 0x0402264C RID: 140876
 		public const int AirPoint4Item = 7;
 
-		// Token: 0x04027304 RID: 160516
+		// Token: 0x0402264D RID: 140877
 		public const int AirPoint5Item = 8;
 
-		// Token: 0x04027305 RID: 160517
+		// Token: 0x0402264E RID: 140878
 		public const int AirPoint6Item = 9;
 
-		// Token: 0x04027306 RID: 160518
+		// Token: 0x0402264F RID: 140879
 		public const int AirPoint7Item = 10;
 
-		// Token: 0x04027307 RID: 160519
+		// Token: 0x04022650 RID: 140880
 		public const int GitchItem = 11;
 	}
 }

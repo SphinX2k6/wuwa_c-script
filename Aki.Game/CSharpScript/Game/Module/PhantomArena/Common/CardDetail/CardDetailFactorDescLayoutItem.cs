@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x0200520F RID: 21007
+	// Token: 0x020041DF RID: 16863
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardDetailFactorDescLayoutItem : UiPanelBase
 	{
-		// Token: 0x06035BA0 RID: 220064 RVA: 0x00CB862E File Offset: 0x00CB682E
+		// Token: 0x0602AA9B RID: 174747 RVA: 0x00C05C6F File Offset: 0x00C03E6F
 		public CardDetailFactorDescLayoutItem(UUILayoutBase layout, UUIItem templateItem = null)
 		{
 			this.FactorDescLayout = new GenericLayout<CardDetailFactorDescItem, CardDetailFactorDescItemData>(layout, new Func<CardDetailFactorDescItem>(this.CreateCardFactorDescItem), ((templateItem != null) ? templateItem.GetOwner() : null) as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06035BA1 RID: 220065 RVA: 0x00CB8661 File Offset: 0x00CB6861
+		// Token: 0x0602AA9C RID: 174748 RVA: 0x00C05CA2 File Offset: 0x00C03EA2
 		public void Refresh(List<CardDetailFactorDescItemData> factorDataList)
 		{
 			this.FactorDescLayout.RefreshByData(factorDataList, null, false);
 		}
 
-		// Token: 0x06035BA2 RID: 220066 RVA: 0x00CB8671 File Offset: 0x00CB6871
+		// Token: 0x0602AA9D RID: 174749 RVA: 0x00C05CB2 File Offset: 0x00C03EB2
 		public void SetLayoutActive(bool active)
 		{
 			UUIItem rootUiItem = this.FactorDescLayout.GetRootUiItem();
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			rootUiItem.SetUIActive(active);
 		}
 
-		// Token: 0x06035BA3 RID: 220067 RVA: 0x00CB8689 File Offset: 0x00CB6889
+		// Token: 0x0602AA9E RID: 174750 RVA: 0x00C05CCA File Offset: 0x00C03ECA
 		private CardDetailFactorDescItem CreateCardFactorDescItem()
 		{
 			return new CardDetailFactorDescItem();
 		}
 
-		// Token: 0x06035BA4 RID: 220068 RVA: 0x00CB8690 File Offset: 0x00CB6890
+		// Token: 0x0602AA9F RID: 174751 RVA: 0x00C05CD4 File Offset: 0x00C03ED4
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams == null || configParams.Length <= 1)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			};
 		}
 
-		// Token: 0x0401C7B7 RID: 116663
+		// Token: 0x040171EC RID: 94700
 		private readonly GenericLayout<CardDetailFactorDescItem, CardDetailFactorDescItemData> FactorDescLayout;
 	}
 }

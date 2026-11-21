@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 {
-	// Token: 0x02003B42 RID: 15170
+	// Token: 0x020030BD RID: 12477
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Interaction/BP_MaterialRuntimeParUpdate.BP_MaterialRuntimeParUpdate_C")]
 	[UnrealStructLayout(1664, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1664)]
 	public class BP_MaterialRuntimeParUpdate_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060218FE RID: 137470 RVA: 0x008EFA9A File Offset: 0x008EDC9A
+		// Token: 0x0601DFBD RID: 122813 RVA: 0x00907C65 File Offset: 0x00905E65
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_MaterialRuntimeParUpdate_C._ClassPtr == IntPtr.Zero)
@@ -25,95 +25,95 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			return BP_MaterialRuntimeParUpdate_C._ClassPtr;
 		}
 
-		// Token: 0x060218FF RID: 137471 RVA: 0x008EFAC0 File Offset: 0x008EDCC0
+		// Token: 0x0601DFBE RID: 122814 RVA: 0x00907C8C File Offset: 0x00905E8C
 		public BP_MaterialRuntimeParUpdate_C() : this(BuiltinUtils.AllocNativeUObject(BP_MaterialRuntimeParUpdate_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021900 RID: 137472 RVA: 0x008EFAE8 File Offset: 0x008EDCE8
+		// Token: 0x0601DFBF RID: 122815 RVA: 0x00907CB4 File Offset: 0x00905EB4
 		[NullableContext(1)]
 		public BP_MaterialRuntimeParUpdate_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_MaterialRuntimeParUpdate_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003736 RID: 14134
-		// (get) Token: 0x06021901 RID: 137473 RVA: 0x008EFB1B File Offset: 0x008EDD1B
-		// (set) Token: 0x06021902 RID: 137474 RVA: 0x008EFB2F File Offset: 0x008EDD2F
+		// Token: 0x1700316A RID: 12650
+		// (get) Token: 0x0601DFC0 RID: 122816 RVA: 0x00907CE7 File Offset: 0x00905EE7
+		// (set) Token: 0x0601DFC1 RID: 122817 RVA: 0x00907CFB File Offset: 0x00905EFB
 		public unsafe USceneComponent Target
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Target);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Target, value);
 			}
 		}
 
-		// Token: 0x17003737 RID: 14135
-		// (get) Token: 0x06021903 RID: 137475 RVA: 0x008EFB44 File Offset: 0x008EDD44
-		// (set) Token: 0x06021904 RID: 137476 RVA: 0x008EFB58 File Offset: 0x008EDD58
+		// Token: 0x1700316B RID: 12651
+		// (get) Token: 0x0601DFC2 RID: 122818 RVA: 0x00907D10 File Offset: 0x00905F10
+		// (set) Token: 0x0601DFC3 RID: 122819 RVA: 0x00907D24 File Offset: 0x00905F24
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17003738 RID: 14136
-		// (get) Token: 0x06021905 RID: 137477 RVA: 0x008EFB6D File Offset: 0x008EDD6D
-		// (set) Token: 0x06021906 RID: 137478 RVA: 0x008EFB7D File Offset: 0x008EDD7D
+		// Token: 0x1700316C RID: 12652
+		// (get) Token: 0x0601DFC4 RID: 122820 RVA: 0x00907D39 File Offset: 0x00905F39
+		// (set) Token: 0x0601DFC5 RID: 122821 RVA: 0x00907D49 File Offset: 0x00905F49
 		public unsafe int Material_Index
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Material_Index);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Material_Index) = value;
 			}
 		}
 
-		// Token: 0x17003739 RID: 14137
-		// (get) Token: 0x06021907 RID: 137479 RVA: 0x008EFB8E File Offset: 0x008EDD8E
-		// (set) Token: 0x06021908 RID: 137480 RVA: 0x008EFBA2 File Offset: 0x008EDDA2
+		// Token: 0x1700316D RID: 12653
+		// (get) Token: 0x0601DFC6 RID: 122822 RVA: 0x00907D5A File Offset: 0x00905F5A
+		// (set) Token: 0x0601DFC7 RID: 122823 RVA: 0x00907D6E File Offset: 0x00905F6E
 		public unsafe FLinearColor NewVar_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_NewVar_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_NewVar_0) = value;
 			}
 		}
 
-		// Token: 0x1700373A RID: 14138
-		// (get) Token: 0x06021909 RID: 137481 RVA: 0x008EFBB7 File Offset: 0x008EDDB7
-		// (set) Token: 0x0602190A RID: 137482 RVA: 0x008EFBCB File Offset: 0x008EDDCB
+		// Token: 0x1700316E RID: 12654
+		// (get) Token: 0x0601DFC8 RID: 122824 RVA: 0x00907D83 File Offset: 0x00905F83
+		// (set) Token: 0x0601DFC9 RID: 122825 RVA: 0x00907D97 File Offset: 0x00905F97
 		public unsafe ItemMaterialControllerActorData DA
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ItemMaterialControllerActorData>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<ItemMaterialControllerActorData>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_DA);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MaterialRuntimeParUpdate_C.__PropertyOffset_DA, value);
 			}
 		}
 
-		// Token: 0x1700373B RID: 14139
-		// (get) Token: 0x0602190B RID: 137483 RVA: 0x008EFBE0 File Offset: 0x008EDDE0
-		// (set) Token: 0x0602190C RID: 137484 RVA: 0x008EFC19 File Offset: 0x008EDE19
+		// Token: 0x1700316F RID: 12655
+		// (get) Token: 0x0601DFCA RID: 122826 RVA: 0x00907DAC File Offset: 0x00905FAC
+		// (set) Token: 0x0601DFCB RID: 122827 RVA: 0x00907DE5 File Offset: 0x00905FE5
 		[Nullable(1)]
 		public TMap<FName, FKuroCurveFloat> Custom_Scalar_Par_Map
 		{
@@ -124,7 +124,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TMap<FName, FKuroCurveFloat> result;
 				if ((result = this._Custom_Scalar_Par_Map) == null)
 				{
-					result = (this._Custom_Scalar_Par_Map = new TMap<FName, FKuroCurveFloat>(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_6, this));
+					result = (this._Custom_Scalar_Par_Map = new TMap<FName, FKuroCurveFloat>(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Custom_Scalar_Par_Map, this));
 				}
 				return result;
 			}
@@ -135,84 +135,84 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x1700373C RID: 14140
-		// (get) Token: 0x0602190D RID: 137485 RVA: 0x008EFC27 File Offset: 0x008EDE27
-		// (set) Token: 0x0602190E RID: 137486 RVA: 0x008EFC37 File Offset: 0x008EDE37
+		// Token: 0x17003170 RID: 12656
+		// (get) Token: 0x0601DFCC RID: 122828 RVA: 0x00907DF3 File Offset: 0x00905FF3
+		// (set) Token: 0x0601DFCD RID: 122829 RVA: 0x00907E03 File Offset: 0x00906003
 		public unsafe float DateTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_DateTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_DateTime) = value;
 			}
 		}
 
-		// Token: 0x1700373D RID: 14141
-		// (get) Token: 0x0602190F RID: 137487 RVA: 0x008EFC48 File Offset: 0x008EDE48
-		// (set) Token: 0x06021910 RID: 137488 RVA: 0x008EFC5C File Offset: 0x008EDE5C
+		// Token: 0x17003171 RID: 12657
+		// (get) Token: 0x0601DFCE RID: 122830 RVA: 0x00907E14 File Offset: 0x00906014
+		// (set) Token: 0x0601DFCF RID: 122831 RVA: 0x00907E28 File Offset: 0x00906028
 		public unsafe FName FloatParam_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_FloatParam_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_FloatParam_0) = value;
 			}
 		}
 
-		// Token: 0x1700373E RID: 14142
-		// (get) Token: 0x06021911 RID: 137489 RVA: 0x008EFC71 File Offset: 0x008EDE71
-		// (set) Token: 0x06021912 RID: 137490 RVA: 0x008EFC81 File Offset: 0x008EDE81
+		// Token: 0x17003172 RID: 12658
+		// (get) Token: 0x0601DFD0 RID: 122832 RVA: 0x00907E3D File Offset: 0x0090603D
+		// (set) Token: 0x0601DFD1 RID: 122833 RVA: 0x00907E4D File Offset: 0x0090604D
 		public unsafe float FloatParam_Value_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_FloatParam_Value_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_FloatParam_Value_0) = value;
 			}
 		}
 
-		// Token: 0x1700373F RID: 14143
-		// (get) Token: 0x06021913 RID: 137491 RVA: 0x008EFC92 File Offset: 0x008EDE92
-		// (set) Token: 0x06021914 RID: 137492 RVA: 0x008EFCA6 File Offset: 0x008EDEA6
+		// Token: 0x17003173 RID: 12659
+		// (get) Token: 0x0601DFD2 RID: 122834 RVA: 0x00907E5E File Offset: 0x0090605E
+		// (set) Token: 0x0601DFD3 RID: 122835 RVA: 0x00907E72 File Offset: 0x00906072
 		public unsafe FName VectorParam_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_VectorParam_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_VectorParam_0) = value;
 			}
 		}
 
-		// Token: 0x17003740 RID: 14144
-		// (get) Token: 0x06021915 RID: 137493 RVA: 0x008EFCBB File Offset: 0x008EDEBB
-		// (set) Token: 0x06021916 RID: 137494 RVA: 0x008EFCCF File Offset: 0x008EDECF
+		// Token: 0x17003174 RID: 12660
+		// (get) Token: 0x0601DFD4 RID: 122836 RVA: 0x00907E87 File Offset: 0x00906087
+		// (set) Token: 0x0601DFD5 RID: 122837 RVA: 0x00907E9B File Offset: 0x0090609B
 		public unsafe FLinearColor VectorParam_Value_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_VectorParam_Value_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_VectorParam_Value_0) = value;
 			}
 		}
 
-		// Token: 0x17003741 RID: 14145
-		// (get) Token: 0x06021917 RID: 137495 RVA: 0x008EFCE4 File Offset: 0x008EDEE4
-		// (set) Token: 0x06021918 RID: 137496 RVA: 0x008EFD1D File Offset: 0x008EDF1D
+		// Token: 0x17003175 RID: 12661
+		// (get) Token: 0x0601DFD6 RID: 122838 RVA: 0x00907EB0 File Offset: 0x009060B0
+		// (set) Token: 0x0601DFD7 RID: 122839 RVA: 0x00907EE9 File Offset: 0x009060E9
 		[Nullable(1)]
 		public TArray<UMaterialInstance> Materials
 		{
@@ -223,7 +223,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<UMaterialInstance> result;
 				if ((result = this._Materials) == null)
 				{
-					result = (this._Materials = new TArray<UMaterialInstance>(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_12, this));
+					result = (this._Materials = new TArray<UMaterialInstance>(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Materials, this));
 				}
 				return result;
 			}
@@ -234,125 +234,117 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003742 RID: 14146
-		// (get) Token: 0x06021919 RID: 137497 RVA: 0x008EFD2B File Offset: 0x008EDF2B
-		// (set) Token: 0x0602191A RID: 137498 RVA: 0x008EFD3B File Offset: 0x008EDF3B
+		// Token: 0x17003176 RID: 12662
+		// (get) Token: 0x0601DFD8 RID: 122840 RVA: 0x00907EF7 File Offset: 0x009060F7
+		// (set) Token: 0x0601DFD9 RID: 122841 RVA: 0x00907F07 File Offset: 0x00906107
 		public unsafe bool IsPlay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_IsPlay) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_IsPlay) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003743 RID: 14147
-		// (get) Token: 0x0602191B RID: 137499 RVA: 0x008EFD4C File Offset: 0x008EDF4C
-		// (set) Token: 0x0602191C RID: 137500 RVA: 0x008EFD5C File Offset: 0x008EDF5C
+		// Token: 0x17003177 RID: 12663
+		// (get) Token: 0x0601DFDA RID: 122842 RVA: 0x00907F18 File Offset: 0x00906118
+		// (set) Token: 0x0601DFDB RID: 122843 RVA: 0x00907F28 File Offset: 0x00906128
 		public unsafe float Time_Speed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Time_Speed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Time_Speed) = value;
 			}
 		}
 
-		// Token: 0x17003744 RID: 14148
-		// (get) Token: 0x0602191D RID: 137501 RVA: 0x008EFD6D File Offset: 0x008EDF6D
-		// (set) Token: 0x0602191E RID: 137502 RVA: 0x008EFD7D File Offset: 0x008EDF7D
+		// Token: 0x17003178 RID: 12664
+		// (get) Token: 0x0601DFDC RID: 122844 RVA: 0x00907F39 File Offset: 0x00906139
+		// (set) Token: 0x0601DFDD RID: 122845 RVA: 0x00907F49 File Offset: 0x00906149
 		public unsafe float MaxDurationTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_MaxDurationTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_MaxDurationTime) = value;
 			}
 		}
 
-		// Token: 0x17003745 RID: 14149
-		// (get) Token: 0x0602191F RID: 137503 RVA: 0x008EFD8E File Offset: 0x008EDF8E
-		// (set) Token: 0x06021920 RID: 137504 RVA: 0x008EFD9E File Offset: 0x008EDF9E
+		// Token: 0x17003179 RID: 12665
+		// (get) Token: 0x0601DFDE RID: 122846 RVA: 0x00907F5A File Offset: 0x0090615A
+		// (set) Token: 0x0601DFDF RID: 122847 RVA: 0x00907F6A File Offset: 0x0090616A
 		public unsafe float Timer_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Timer_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_MaterialRuntimeParUpdate_C.__PropertyOffset_Timer_0) = value;
 			}
 		}
 
-		// Token: 0x06021921 RID: 137505 RVA: 0x008EFDAF File Offset: 0x008EDFAF
+		// Token: 0x0601DFE0 RID: 122848 RVA: 0x00907F7B File Offset: 0x0090617B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void CleanArray()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__CleanArray_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021922 RID: 137506 RVA: 0x008EFDC3 File Offset: 0x008EDFC3
+		// Token: 0x0601DFE1 RID: 122849 RVA: 0x00907F8F File Offset: 0x0090618F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Play()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__Play_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021923 RID: 137507 RVA: 0x008EFDD7 File Offset: 0x008EDFD7
+		// Token: 0x0601DFE2 RID: 122850 RVA: 0x00907FA3 File Offset: 0x009061A3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void Set_Initialize()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__Set_Initialize_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021924 RID: 137508 RVA: 0x008EFDEB File Offset: 0x008EDFEB
+		// Token: 0x0601DFE3 RID: 122851 RVA: 0x00907FB7 File Offset: 0x009061B7
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021925 RID: 137509 RVA: 0x008EFDFF File Offset: 0x008EDFFF
+		// Token: 0x0601DFE4 RID: 122852 RVA: 0x00907FCB File Offset: 0x009061CB
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021926 RID: 137510 RVA: 0x008EFE14 File Offset: 0x008EE014
+		// Token: 0x0601DFE5 RID: 122853 RVA: 0x00907FDF File Offset: 0x009061DF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021927 RID: 137511 RVA: 0x008EFE28 File Offset: 0x008EE028
+		// Token: 0x0601DFE6 RID: 122854 RVA: 0x00907FF3 File Offset: 0x009061F3
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021928 RID: 137512 RVA: 0x008EFE40 File Offset: 0x008EE040
+		// Token: 0x0601DFE7 RID: 122855 RVA: 0x00908008 File Offset: 0x00906208
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_MaterialRuntimeParUpdate_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_MaterialRuntimeParUpdate_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_MaterialRuntimeParUpdate_C.__ReceiveTick_FunctionParams) & -16L;
@@ -361,51 +353,50 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021929 RID: 137513 RVA: 0x008EFE88 File Offset: 0x008EE088
+		// Token: 0x0601DFE8 RID: 122856 RVA: 0x00908050 File Offset: 0x00906250
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_MaterialRuntimeParUpdate_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_MaterialRuntimeParUpdate_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_MaterialRuntimeParUpdate_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_MaterialRuntimeParUpdate_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_MaterialRuntimeParUpdate_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602192A RID: 137514 RVA: 0x008EFECF File Offset: 0x008EE0CF
+		// Token: 0x0601DFE9 RID: 122857 RVA: 0x00908096 File Offset: 0x00906296
 		protected BP_MaterialRuntimeParUpdate_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040105C8 RID: 67016
+		// Token: 0x0400FD81 RID: 64897
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Interaction/BP_MaterialRuntimeParUpdate.BP_MaterialRuntimeParUpdate_C";
 
-		// Token: 0x040105C9 RID: 67017
+		// Token: 0x0400FD82 RID: 64898
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040105CA RID: 67018
+		// Token: 0x0400FD83 RID: 64899
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040105CB RID: 67019
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FD84 RID: 64900
+		internal static int __PropertyOffset_Target;
 
-		// Token: 0x040105CC RID: 67020
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FD85 RID: 64901
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040105CD RID: 67021
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FD86 RID: 64902
+		internal static int __PropertyOffset_Material_Index;
 
-		// Token: 0x040105CE RID: 67022
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FD87 RID: 64903
+		internal static int __PropertyOffset_NewVar_0;
 
-		// Token: 0x040105CF RID: 67023
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FD88 RID: 64904
+		internal static int __PropertyOffset_DA;
 
-		// Token: 0x040105D0 RID: 67024
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FD89 RID: 64905
+		internal static int __PropertyOffset_Custom_Scalar_Par_Map;
 
-		// Token: 0x040105D1 RID: 67025
+		// Token: 0x0400FD8A RID: 64906
 		[Nullable(new byte[]
 		{
 			2,
@@ -413,25 +404,25 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TMap<FName, FKuroCurveFloat> _Custom_Scalar_Par_Map;
 
-		// Token: 0x040105D2 RID: 67026
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FD8B RID: 64907
+		internal static int __PropertyOffset_DateTime;
 
-		// Token: 0x040105D3 RID: 67027
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FD8C RID: 64908
+		internal static int __PropertyOffset_FloatParam_0;
 
-		// Token: 0x040105D4 RID: 67028
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FD8D RID: 64909
+		internal static int __PropertyOffset_FloatParam_Value_0;
 
-		// Token: 0x040105D5 RID: 67029
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FD8E RID: 64910
+		internal static int __PropertyOffset_VectorParam_0;
 
-		// Token: 0x040105D6 RID: 67030
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FD8F RID: 64911
+		internal static int __PropertyOffset_VectorParam_Value_0;
 
-		// Token: 0x040105D7 RID: 67031
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FD90 RID: 64912
+		internal static int __PropertyOffset_Materials;
 
-		// Token: 0x040105D8 RID: 67032
+		// Token: 0x0400FD91 RID: 64913
 		[Nullable(new byte[]
 		{
 			2,
@@ -439,43 +430,43 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<UMaterialInstance> _Materials;
 
-		// Token: 0x040105D9 RID: 67033
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400FD92 RID: 64914
+		internal static int __PropertyOffset_IsPlay;
 
-		// Token: 0x040105DA RID: 67034
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400FD93 RID: 64915
+		internal static int __PropertyOffset_Time_Speed;
 
-		// Token: 0x040105DB RID: 67035
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400FD94 RID: 64916
+		internal static int __PropertyOffset_MaxDurationTime;
 
-		// Token: 0x040105DC RID: 67036
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400FD95 RID: 64917
+		internal static int __PropertyOffset_Timer_0;
 
-		// Token: 0x040105DD RID: 67037
+		// Token: 0x0400FD96 RID: 64918
 		private static IntPtr __CleanArray_NativeFunctionPtr;
 
-		// Token: 0x040105DE RID: 67038
+		// Token: 0x0400FD97 RID: 64919
 		private static IntPtr __Play_NativeFunctionPtr;
 
-		// Token: 0x040105DF RID: 67039
+		// Token: 0x0400FD98 RID: 64920
 		private static IntPtr __Set_Initialize_NativeFunctionPtr;
 
-		// Token: 0x040105E0 RID: 67040
+		// Token: 0x0400FD99 RID: 64921
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x040105E1 RID: 67041
+		// Token: 0x0400FD9A RID: 64922
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040105E2 RID: 67042
+		// Token: 0x0400FD9B RID: 64923
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x02009CAB RID: 40107
+		// Token: 0x02008DFF RID: 36351
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031378 RID: 201592
+			// Token: 0x0402CA27 RID: 182823
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001149 RID: 4425
+	// Token: 0x0200127F RID: 4735
 	public struct TrackMoonHandbookReward : IFlatbufferObject
 	{
-		// Token: 0x17003B33 RID: 15155
-		// (get) Token: 0x0600E0E8 RID: 57576 RVA: 0x00332A08 File Offset: 0x00330C08
+		// Token: 0x17003E97 RID: 16023
+		// (get) Token: 0x0600EE56 RID: 61014 RVA: 0x0035DDF4 File Offset: 0x0035BFF4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E0E9 RID: 57577 RVA: 0x00332A15 File Offset: 0x00330C15
+		// Token: 0x0600EE57 RID: 61015 RVA: 0x0035DE01 File Offset: 0x0035C001
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E0EA RID: 57578 RVA: 0x00332A1C File Offset: 0x00330C1C
+		// Token: 0x0600EE58 RID: 61016 RVA: 0x0035DE08 File Offset: 0x0035C008
 		public static TrackMoonHandbookReward GetRootAsTrackMoonHandbookReward(ByteBuffer _bb)
 		{
 			return TrackMoonHandbookReward.GetRootAsTrackMoonHandbookReward(_bb, default(TrackMoonHandbookReward));
 		}
 
-		// Token: 0x0600E0EB RID: 57579 RVA: 0x00332A38 File Offset: 0x00330C38
+		// Token: 0x0600EE59 RID: 61017 RVA: 0x0035DE24 File Offset: 0x0035C024
 		public static TrackMoonHandbookReward GetRootAsTrackMoonHandbookReward(ByteBuffer _bb, TrackMoonHandbookReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E0EC RID: 57580 RVA: 0x00332A55 File Offset: 0x00330C55
+		// Token: 0x0600EE5A RID: 61018 RVA: 0x0035DE41 File Offset: 0x0035C041
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E0ED RID: 57581 RVA: 0x00332A64 File Offset: 0x00330C64
+		// Token: 0x0600EE5B RID: 61019 RVA: 0x0035DE50 File Offset: 0x0035C050
 		public TrackMoonHandbookReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B34 RID: 15156
-		// (get) Token: 0x0600E0EE RID: 57582 RVA: 0x00332A74 File Offset: 0x00330C74
+		// Token: 0x17003E98 RID: 16024
+		// (get) Token: 0x0600EE5C RID: 61020 RVA: 0x0035DE60 File Offset: 0x0035C060
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B35 RID: 15157
-		// (get) Token: 0x0600E0EF RID: 57583 RVA: 0x00332AB0 File Offset: 0x00330CB0
+		// Token: 0x17003E99 RID: 16025
+		// (get) Token: 0x0600EE5D RID: 61021 RVA: 0x0035DE9C File Offset: 0x0035C09C
 		public int Goal
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B36 RID: 15158
-		// (get) Token: 0x0600E0F0 RID: 57584 RVA: 0x00332AEC File Offset: 0x00330CEC
+		// Token: 0x17003E9A RID: 16026
+		// (get) Token: 0x0600EE5E RID: 61022 RVA: 0x0035DED8 File Offset: 0x0035C0D8
 		public int RewardInfo
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400528E RID: 21134
+		// Token: 0x040058D1 RID: 22737
 		private Table __p;
 	}
 }

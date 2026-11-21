@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002226 RID: 8742
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002491 RID: 9361
 	public class SummonEntity : ActionParams
 	{
-		// Token: 0x0600BFE2 RID: 49122 RVA: 0x001B9020 File Offset: 0x001B7220
+		// Token: 0x0600CBA0 RID: 52128 RVA: 0x001D06EC File Offset: 0x001CE8EC
 		private SummonEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFE3 RID: 49123 RVA: 0x001B9058 File Offset: 0x001B7258
+		// Token: 0x0600CBA1 RID: 52129 RVA: 0x001D0724 File Offset: 0x001CE924
 		public static SummonEntity Create([Nullable(2)] SummonEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFE4 RID: 49124 RVA: 0x001B906B File Offset: 0x001B726B
+		// Token: 0x0600CBA2 RID: 52130 RVA: 0x001D0737 File Offset: 0x001CE937
 		public static SummonEntity CreateFromSetValue([Nullable(2)] SummonEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFE5 RID: 49125 RVA: 0x001B907E File Offset: 0x001B727E
+		// Token: 0x0600CBA3 RID: 52131 RVA: 0x001D074A File Offset: 0x001CE94A
 		public SummonEntity_SetValue ToSetValue()
 		{
 			return new SummonEntity_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A1D RID: 14877
-		// (get) Token: 0x0600BFE6 RID: 49126 RVA: 0x001B9094 File Offset: 0x001B7294
-		// (set) Token: 0x0600BFE7 RID: 49127 RVA: 0x001B90F5 File Offset: 0x001B72F5
+		// Token: 0x17003D13 RID: 15635
+		// (get) Token: 0x0600CBA4 RID: 52132 RVA: 0x001D0760 File Offset: 0x001CE960
+		// (set) Token: 0x0600CBA5 RID: 52133 RVA: 0x001D07C1 File Offset: 0x001CE9C1
 		public virtual ISummonVehicle SummonEntityConfig
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007269 RID: 29289
+		// Token: 0x040078B3 RID: 30899
 		[Nullable(2)]
 		protected new SummonEntity FbInstance;
 
-		// Token: 0x0400726A RID: 29290
+		// Token: 0x040078B4 RID: 30900
 		[Nullable(2)]
 		protected SummonEntity_SetValue PocoInterface;
 
-		// Token: 0x0400726B RID: 29291
+		// Token: 0x040078B5 RID: 30901
 		private ISummonVehicle _SummonEntityConfigCache;
 
-		// Token: 0x0400726C RID: 29292
+		// Token: 0x040078B6 RID: 30902
 		private bool _SummonEntityConfigInited;
 	}
 }

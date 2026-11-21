@@ -9,30 +9,30 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x0200476C RID: 18284
+	// Token: 0x0200369D RID: 13981
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameplayEntityActionExecutor : IStaticVariableResetter
 	{
-		// Token: 0x0602FCBC RID: 195772 RVA: 0x00B12AF6 File Offset: 0x00B10CF6
+		// Token: 0x06024486 RID: 148614 RVA: 0x00A42AB6 File Offset: 0x00A40CB6
 		static GameplayEntityActionExecutor()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameplayEntityActionExecutor.CreateStaticDefaultValue), new Action(GameplayEntityActionExecutor.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602FCBD RID: 195773 RVA: 0x00B12B15 File Offset: 0x00B10D15
+		// Token: 0x06024487 RID: 148615 RVA: 0x00A42AD5 File Offset: 0x00A40CD5
 		public static void CreateStaticDefaultValue()
 		{
 			GameplayEntityActionExecutor._executionContextStack = new List<IGameplayEntityExecutionContext>();
 		}
 
-		// Token: 0x0602FCBE RID: 195774 RVA: 0x00B12B21 File Offset: 0x00B10D21
+		// Token: 0x06024488 RID: 148616 RVA: 0x00A42AE1 File Offset: 0x00A40CE1
 		public static void ResetStaticDefaultValue()
 		{
 			GameplayEntityActionExecutor._executionContextStack = null;
 		}
 
-		// Token: 0x0602FCBF RID: 195775 RVA: 0x00B12B2C File Offset: 0x00B10D2C
+		// Token: 0x06024489 RID: 148617 RVA: 0x00A42AEC File Offset: 0x00A40CEC
 		public static UniTask ExecuteActionList(WuWaGoGameModeBase gameMode, IReadOnlyList<ActionInfo> actionList)
 		{
 			GameplayEntityActionExecutor.<ExecuteActionList>d__5 <ExecuteActionList>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <ExecuteActionList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC0 RID: 195776 RVA: 0x00B12B78 File Offset: 0x00B10D78
+		// Token: 0x0602448A RID: 148618 RVA: 0x00A42B38 File Offset: 0x00A40D38
 		public static UniTask ExecutePullRodImmediately(WuWaGoGameModeBase gameMode, WuWaGoPullRodEntity pullRod)
 		{
 			GameplayEntityActionExecutor.<ExecutePullRodImmediately>d__6 <ExecutePullRodImmediately>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <ExecutePullRodImmediately>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC1 RID: 195777 RVA: 0x00B12BC4 File Offset: 0x00B10DC4
+		// Token: 0x0602448B RID: 148619 RVA: 0x00A42B84 File Offset: 0x00A40D84
 		private static void PrepareLinkedPullRodPresentation(int sourcePbDataId, EGameplayEntityState targetState)
 		{
 			IGameplayEntityExecutionContext currentExecutionContext = GameplayEntityActionExecutor.GetCurrentExecutionContext();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FCC2 RID: 195778 RVA: 0x00B12C40 File Offset: 0x00B10E40
+		// Token: 0x0602448C RID: 148620 RVA: 0x00A42C00 File Offset: 0x00A40E00
 		[NullableContext(0)]
 		private static UniTask<bool> WaitForLinkedPullRodPresentation(int sourcePbDataId)
 		{
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <WaitForLinkedPullRodPresentation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC3 RID: 195779 RVA: 0x00B12C84 File Offset: 0x00B10E84
+		// Token: 0x0602448D RID: 148621 RVA: 0x00A42C44 File Offset: 0x00A40E44
 		private static UniTask ExecuteActionListInternal(IReadOnlyList<ActionInfo> actionList)
 		{
 			GameplayEntityActionExecutor.<ExecuteActionListInternal>d__9 <ExecuteActionListInternal>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <ExecuteActionListInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC4 RID: 195780 RVA: 0x00B12CC8 File Offset: 0x00B10EC8
+		// Token: 0x0602448E RID: 148622 RVA: 0x00A42C88 File Offset: 0x00A40E88
 		private static UniTask ExecuteWuWaGoAction(ActionInfo actionInfo)
 		{
 			GameplayEntityActionExecutor.<ExecuteWuWaGoAction>d__10 <ExecuteWuWaGoAction>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <ExecuteWuWaGoAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC5 RID: 195781 RVA: 0x00B12D0C File Offset: 0x00B10F0C
+		// Token: 0x0602448F RID: 148623 RVA: 0x00A42CCC File Offset: 0x00A40ECC
 		private static UniTask ExecuteSingleEntityStateChange(int entityId, string stateTag)
 		{
 			GameplayEntityActionExecutor.<ExecuteSingleEntityStateChange>d__11 <ExecuteSingleEntityStateChange>d__;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <ExecuteSingleEntityStateChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC6 RID: 195782 RVA: 0x00B12D58 File Offset: 0x00B10F58
+		// Token: 0x06024490 RID: 148624 RVA: 0x00A42D18 File Offset: 0x00A40F18
 		private static UniTask ExecuteEntityController(int pbDataId)
 		{
 			GameplayEntityActionExecutor.<ExecuteEntityController>d__12 <ExecuteEntityController>d__;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <ExecuteEntityController>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC7 RID: 195783 RVA: 0x00B12D9C File Offset: 0x00B10F9C
+		// Token: 0x06024491 RID: 148625 RVA: 0x00A42D5C File Offset: 0x00A40F5C
 		private static bool BeginExecutionContextIfNeeded(WuWaGoGameModeBase gameMode)
 		{
 			if (GameplayEntityActionExecutor.GetCurrentExecutionContext() != null)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return true;
 		}
 
-		// Token: 0x0602FCC8 RID: 195784 RVA: 0x00B12DEC File Offset: 0x00B10FEC
+		// Token: 0x06024492 RID: 148626 RVA: 0x00A42DAC File Offset: 0x00A40FAC
 		private static UniTask EndExecutionContextIfNeeded(bool isRootExecution)
 		{
 			GameplayEntityActionExecutor.<EndExecutionContextIfNeeded>d__14 <EndExecutionContextIfNeeded>d__;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <EndExecutionContextIfNeeded>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCC9 RID: 195785 RVA: 0x00B12E2F File Offset: 0x00B1102F
+		// Token: 0x06024493 RID: 148627 RVA: 0x00A42DEF File Offset: 0x00A40FEF
 		[NullableContext(2)]
 		private static IGameplayEntityExecutionContext GetCurrentExecutionContext()
 		{
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return null;
 		}
 
-		// Token: 0x0602FCCA RID: 195786 RVA: 0x00B12E54 File Offset: 0x00B11054
+		// Token: 0x06024494 RID: 148628 RVA: 0x00A42E14 File Offset: 0x00A41014
 		private static void QueuePendingBowTrap(int pbDataId)
 		{
 			IGameplayEntityExecutionContext currentExecutionContext = GameplayEntityActionExecutor.GetCurrentExecutionContext();
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			currentExecutionContext.PendingBowTrapPbDataIds.Add(pbDataId);
 		}
 
-		// Token: 0x0602FCCB RID: 195787 RVA: 0x00B12EA8 File Offset: 0x00B110A8
+		// Token: 0x06024495 RID: 148629 RVA: 0x00A42E68 File Offset: 0x00A41068
 		private static void QueuePendingMovableFloor(int pbDataId)
 		{
 			IGameplayEntityExecutionContext currentExecutionContext = GameplayEntityActionExecutor.GetCurrentExecutionContext();
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			currentExecutionContext.PendingMovableFloorPbDataIds.Add(pbDataId);
 		}
 
-		// Token: 0x0602FCCC RID: 195788 RVA: 0x00B12EFC File Offset: 0x00B110FC
+		// Token: 0x06024496 RID: 148630 RVA: 0x00A42EBC File Offset: 0x00A410BC
 		private static UniTask FlushPendingBowTraps(IGameplayEntityExecutionContext context)
 		{
 			GameplayEntityActionExecutor.<FlushPendingBowTraps>d__18 <FlushPendingBowTraps>d__;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <FlushPendingBowTraps>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FCCD RID: 195789 RVA: 0x00B12F40 File Offset: 0x00B11140
+		// Token: 0x06024497 RID: 148631 RVA: 0x00A42F00 File Offset: 0x00A41100
 		private static UniTask FlushPendingMovableFloors(IGameplayEntityExecutionContext context)
 		{
 			GameplayEntityActionExecutor.<FlushPendingMovableFloors>d__19 <FlushPendingMovableFloors>d__;
@@ -228,10 +228,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <FlushPendingMovableFloors>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019C94 RID: 105620
+		// Token: 0x04014344 RID: 82756
 		private const string DAMAGE_BATCH_REASON_IMMEDIATE_BOW_TRAP = "ImmediateBowTrapActionList";
 
-		// Token: 0x04019C95 RID: 105621
+		// Token: 0x04014345 RID: 82757
 		[Nullable(new byte[]
 		{
 			2,

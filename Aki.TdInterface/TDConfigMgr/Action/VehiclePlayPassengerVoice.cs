@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002275 RID: 8821
+	// Token: 0x020024E2 RID: 9442
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VehiclePlayPassengerVoice : ActionParams
 	{
-		// Token: 0x0600C186 RID: 49542 RVA: 0x001BC0E4 File Offset: 0x001BA2E4
-		[NullableContext(1)]
+		// Token: 0x0600CD4C RID: 52556 RVA: 0x001D3868 File Offset: 0x001D1A68
+		[NullableContext(0)]
 		private VehiclePlayPassengerVoice_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C187 RID: 49543 RVA: 0x001BC11C File Offset: 0x001BA31C
-		[NullableContext(1)]
+		// Token: 0x0600CD4D RID: 52557 RVA: 0x001D38A0 File Offset: 0x001D1AA0
+		[NullableContext(0)]
 		public static VehiclePlayPassengerVoice Create([Nullable(2)] VehiclePlayPassengerVoice instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C188 RID: 49544 RVA: 0x001BC12F File Offset: 0x001BA32F
-		[NullableContext(1)]
+		// Token: 0x0600CD4E RID: 52558 RVA: 0x001D38B3 File Offset: 0x001D1AB3
+		[NullableContext(0)]
 		public static VehiclePlayPassengerVoice CreateFromSetValue([Nullable(2)] VehiclePlayPassengerVoice_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C189 RID: 49545 RVA: 0x001BC142 File Offset: 0x001BA342
-		[NullableContext(1)]
+		// Token: 0x0600CD4F RID: 52559 RVA: 0x001D38C6 File Offset: 0x001D1AC6
+		[NullableContext(0)]
 		public VehiclePlayPassengerVoice_SetValue ToSetValue()
 		{
 			return new VehiclePlayPassengerVoice_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A81 RID: 14977
-		// (get) Token: 0x0600C18A RID: 49546 RVA: 0x001BC16D File Offset: 0x001BA36D
-		// (set) Token: 0x0600C18B RID: 49547 RVA: 0x001BC198 File Offset: 0x001BA398
+		// Token: 0x17003D78 RID: 15736
+		// (get) Token: 0x0600CD50 RID: 52560 RVA: 0x001D38F1 File Offset: 0x001D1AF1
+		// (set) Token: 0x0600CD51 RID: 52561 RVA: 0x001D391C File Offset: 0x001D1B1C
 		public virtual EGondolaVoiceTriggeredType TriggerType
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A82 RID: 14978
-		// (get) Token: 0x0600C18C RID: 49548 RVA: 0x001BC1A8 File Offset: 0x001BA3A8
-		// (set) Token: 0x0600C18D RID: 49549 RVA: 0x001BC209 File Offset: 0x001BA409
+		// Token: 0x17003D79 RID: 15737
+		// (get) Token: 0x0600CD52 RID: 52562 RVA: 0x001D392C File Offset: 0x001D1B2C
+		// (set) Token: 0x0600CD53 RID: 52563 RVA: 0x001D398D File Offset: 0x001D1B8D
 		public virtual IPlayVoicePassengersConfig TriggerPassengers
 		{
 			get
@@ -119,9 +119,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A83 RID: 14979
-		// (get) Token: 0x0600C18E RID: 49550 RVA: 0x001BC21E File Offset: 0x001BA41E
-		// (set) Token: 0x0600C18F RID: 49551 RVA: 0x001BC245 File Offset: 0x001BA445
+		// Token: 0x17003D7A RID: 15738
+		// (get) Token: 0x0600CD54 RID: 52564 RVA: 0x001D39A2 File Offset: 0x001D1BA2
+		// (set) Token: 0x0600CD55 RID: 52565 RVA: 0x001D39C9 File Offset: 0x001D1BC9
 		public virtual List<float> TriggerParams
 		{
 			get
@@ -143,17 +143,17 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007348 RID: 29512
+		// Token: 0x04007995 RID: 31125
 		protected new VehiclePlayPassengerVoice FbInstance;
 
-		// Token: 0x04007349 RID: 29513
+		// Token: 0x04007996 RID: 31126
 		protected VehiclePlayPassengerVoice_SetValue PocoInterface;
 
-		// Token: 0x0400734A RID: 29514
-		[Nullable(1)]
+		// Token: 0x04007997 RID: 31127
+		[Nullable(0)]
 		private IPlayVoicePassengersConfig _TriggerPassengersCache;
 
-		// Token: 0x0400734B RID: 29515
+		// Token: 0x04007998 RID: 31128
 		private bool _TriggerPassengersInited;
 	}
 }

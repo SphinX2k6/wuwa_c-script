@@ -4,16 +4,16 @@ using CSharpScript.Game.Module.HonamiStory;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058EC RID: 22764
+	// Token: 0x020048C4 RID: 18628
 	public class HonamiStoryExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D0F RID: 236815 RVA: 0x00DBB982 File Offset: 0x00DB9B82
+		// Token: 0x0602EC32 RID: 191538 RVA: 0x00D0A8DA File Offset: 0x00D08ADA
 		public override bool Checker()
 		{
 			return HonamiStoryUtil.CheckInHonamiStoryDungeon();
 		}
 
-		// Token: 0x06039D10 RID: 236816 RVA: 0x00DBB989 File Offset: 0x00DB9B89
+		// Token: 0x0602EC33 RID: 191539 RVA: 0x00D0A8E1 File Offset: 0x00D08AE1
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

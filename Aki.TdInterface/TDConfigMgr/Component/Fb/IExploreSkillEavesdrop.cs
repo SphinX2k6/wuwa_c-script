@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CC3 RID: 3267
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DA5 RID: 3493
 	public class IExploreSkillEavesdrop : IExploreSkillInteractType
 	{
-		// Token: 0x06004AB5 RID: 19125 RVA: 0x000BAEA6 File Offset: 0x000B90A6
+		// Token: 0x06004F63 RID: 20323 RVA: 0x000C58B6 File Offset: 0x000C3AB6
 		public static IExploreSkillEavesdrop Create(IExploreSkillEavesdrop? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016EC RID: 5868
-		// (get) Token: 0x06004AB6 RID: 19126 RVA: 0x000BAEC5 File Offset: 0x000B90C5
+		// Token: 0x17001814 RID: 6164
+		// (get) Token: 0x06004F64 RID: 20324 RVA: 0x000C58D5 File Offset: 0x000C3AD5
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016ED RID: 5869
-		// (get) Token: 0x06004AB7 RID: 19127 RVA: 0x000BAED4 File Offset: 0x000B90D4
+		// Token: 0x17001815 RID: 6165
+		// (get) Token: 0x06004F65 RID: 20325 RVA: 0x000C58E4 File Offset: 0x000C3AE4
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016EE RID: 5870
-		// (get) Token: 0x06004AB8 RID: 19128 RVA: 0x000BAF3D File Offset: 0x000B913D
+		// Token: 0x17001816 RID: 6166
+		// (get) Token: 0x06004F66 RID: 20326 RVA: 0x000C594D File Offset: 0x000C3B4D
 		[Nullable(2)]
 		public virtual VectorInfo InteractOffset
 		{
@@ -74,20 +72,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AB4 RID: 10932
+		// Token: 0x04002D2E RID: 11566
 		private IExploreSkillEavesdrop Instance;
 
-		// Token: 0x04002AB5 RID: 10933
+		// Token: 0x04002D2F RID: 11567
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002AB6 RID: 10934
+		// Token: 0x04002D30 RID: 11568
 		private bool _ActionsInited;
 
-		// Token: 0x04002AB7 RID: 10935
+		// Token: 0x04002D31 RID: 11569
 		[Nullable(2)]
 		private VectorInfo _InteractOffsetCache;
 
-		// Token: 0x04002AB8 RID: 10936
+		// Token: 0x04002D32 RID: 11570
 		private bool _InteractOffsetInited;
 	}
 }

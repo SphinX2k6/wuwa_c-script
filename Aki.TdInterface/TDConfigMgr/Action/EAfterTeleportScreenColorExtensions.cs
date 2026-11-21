@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002299 RID: 8857
+	// Token: 0x02002506 RID: 9478
 	public static class EAfterTeleportScreenColorExtensions
 	{
-		// Token: 0x0600C22F RID: 49711 RVA: 0x001C5FD8 File Offset: 0x001C41D8
+		// Token: 0x0600CDF5 RID: 52725 RVA: 0x001DDCCC File Offset: 0x001DBECC
 		public static string ToEnumString(this EAfterTeleportScreenColor value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C230 RID: 49712 RVA: 0x001C6010 File Offset: 0x001C4210
+		// Token: 0x0600CDF6 RID: 52726 RVA: 0x001DDD04 File Offset: 0x001DBF04
 		public static EAfterTeleportScreenColor FromString(string name)
 		{
 			EAfterTeleportScreenColor result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C231 RID: 49713 RVA: 0x001C6039 File Offset: 0x001C4239
+		// Token: 0x0600CDF7 RID: 52727 RVA: 0x001DDD2D File Offset: 0x001DBF2D
 		public static bool TryFromString(string name, out EAfterTeleportScreenColor value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C232 RID: 49714 RVA: 0x001C6072 File Offset: 0x001C4272
+		// Token: 0x0600CDF8 RID: 52728 RVA: 0x001DDD66 File Offset: 0x001DBF66
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C233 RID: 49715 RVA: 0x001C608A File Offset: 0x001C428A
+		// Token: 0x0600CDF9 RID: 52729 RVA: 0x001DDD7E File Offset: 0x001DBF7E
 		public static EAfterTeleportScreenColor[] GetValues()
 		{
 			return new EAfterTeleportScreenColor[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C234 RID: 49716 RVA: 0x001C6096 File Offset: 0x001C4296
+		// Token: 0x0600CDFA RID: 52730 RVA: 0x001DDD8A File Offset: 0x001DBF8A
 		public static string[] GetNames()
 		{
 			return new string[]

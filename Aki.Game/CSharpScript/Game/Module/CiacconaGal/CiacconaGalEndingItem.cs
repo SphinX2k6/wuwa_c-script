@@ -12,19 +12,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BEF RID: 23535
+	// Token: 0x02004BCF RID: 19407
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalEndingItem : UiPanelBase
 	{
-		// Token: 0x0603B7B7 RID: 243639 RVA: 0x00E2F886 File Offset: 0x00E2DA86
+		// Token: 0x06030702 RID: 198402 RVA: 0x00D7FB96 File Offset: 0x00D7DD96
 		public CiacconaGalEndingItem(CiacconaGalEndingData endingData, string labelTextId)
 		{
 			this.EndingData = endingData;
 			this.LabelTextId = labelTextId;
 		}
 
-		// Token: 0x0603B7B8 RID: 243640 RVA: 0x00E2F89C File Offset: 0x00E2DA9C
+		// Token: 0x06030703 RID: 198403 RVA: 0x00D7FBAC File Offset: 0x00D7DDAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B7B9 RID: 243641 RVA: 0x00E2FA2C File Offset: 0x00E2DC2C
+		// Token: 0x06030704 RID: 198404 RVA: 0x00D7FD3C File Offset: 0x00D7DF3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalEndingItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -70,20 +70,20 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7BA RID: 243642 RVA: 0x00E2FA6F File Offset: 0x00E2DC6F
+		// Token: 0x06030705 RID: 198405 RVA: 0x00D7FD7F File Offset: 0x00D7DF7F
 		protected override void OnStart()
 		{
 			this.RefreshPanel();
 			EventSystem.Instance.Add(EEventName.OnCiacconaEndingDataUpdate, new Action(this.OnCiacconaEndingDataUpdate));
 		}
 
-		// Token: 0x0603B7BB RID: 243643 RVA: 0x00E2FA93 File Offset: 0x00E2DC93
+		// Token: 0x06030706 RID: 198406 RVA: 0x00D7FDA3 File Offset: 0x00D7DFA3
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCiacconaEndingDataUpdate, new Action(this.OnCiacconaEndingDataUpdate));
 		}
 
-		// Token: 0x0603B7BC RID: 243644 RVA: 0x00E2FAB4 File Offset: 0x00E2DCB4
+		// Token: 0x06030707 RID: 198407 RVA: 0x00D7FDC4 File Offset: 0x00D7DFC4
 		private void RefreshPanel()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), this.LabelTextId, Array.Empty<object>());
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			base.GetUiNiagara(8).SetUIActive(!this.EndingData.IsFinished && this.EndingData.Type == ECiacconaGalEndingType.Main);
 		}
 
-		// Token: 0x0603B7BD RID: 243645 RVA: 0x00E2FC10 File Offset: 0x00E2DE10
+		// Token: 0x06030708 RID: 198408 RVA: 0x00D7FF20 File Offset: 0x00D7E120
 		private void OnBtnRewardClick()
 		{
 			if (this.EndingData.IsFinished)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Emit<RewardPopupData>(EEventName.RefreshRewardPopUp, p);
 		}
 
-		// Token: 0x0603B7BE RID: 243646 RVA: 0x00E2FD24 File Offset: 0x00E2DF24
+		// Token: 0x06030709 RID: 198409 RVA: 0x00D80034 File Offset: 0x00D7E234
 		private void OnBtnSelfClick()
 		{
 			if (this.EndingData.IsFinished)
@@ -140,51 +140,51 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			GenericPromptController.Instance.ShowPromptByCode("EndingUnfinished", Array.Empty<object>());
 		}
 
-		// Token: 0x0603B7BF RID: 243647 RVA: 0x00E2FD63 File Offset: 0x00E2DF63
+		// Token: 0x0603070A RID: 198410 RVA: 0x00D80073 File Offset: 0x00D7E273
 		private void OnCiacconaEndingDataUpdate()
 		{
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0401EFD4 RID: 126932
+		// Token: 0x04019A85 RID: 105093
 		[Nullable(2)]
 		private ButtonSpriteItem BtnReward;
 
-		// Token: 0x0401EFD5 RID: 126933
+		// Token: 0x04019A86 RID: 105094
 		private readonly CiacconaGalEndingData EndingData;
 
-		// Token: 0x0401EFD6 RID: 126934
+		// Token: 0x04019A87 RID: 105095
 		private readonly string LabelTextId;
 
-		// Token: 0x0200BDD6 RID: 48598
+		// Token: 0x0200A7DE RID: 42974
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393D8 RID: 234456
+			// Token: 0x04033D9B RID: 212379
 			public const int BtnSelf = 0;
 
-			// Token: 0x040393D9 RID: 234457
+			// Token: 0x04033D9C RID: 212380
 			public const int TextureBg = 1;
 
-			// Token: 0x040393DA RID: 234458
+			// Token: 0x04033D9D RID: 212381
 			public const int TextTitle = 2;
 
-			// Token: 0x040393DB RID: 234459
+			// Token: 0x04033D9E RID: 212382
 			public const int TextDesc = 3;
 
-			// Token: 0x040393DC RID: 234460
+			// Token: 0x04033D9F RID: 212383
 			public const int SpriteRewarded = 4;
 
-			// Token: 0x040393DD RID: 234461
+			// Token: 0x04033DA0 RID: 212384
 			public const int BtnReward = 5;
 
-			// Token: 0x040393DE RID: 234462
+			// Token: 0x04033DA1 RID: 212385
 			public const int TextureHoverLock = 6;
 
-			// Token: 0x040393DF RID: 234463
+			// Token: 0x04033DA2 RID: 212386
 			public const int TextureHoverFinish = 7;
 
-			// Token: 0x040393E0 RID: 234464
+			// Token: 0x04033DA3 RID: 212387
 			public const int Niagara = 8;
 		}
 	}

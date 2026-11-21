@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063B3 RID: 25523
+	// Token: 0x02006A24 RID: 27172
 	public class IClientEventUiT
 	{
-		// Token: 0x1700BE39 RID: 48697
-		// (get) Token: 0x0602C26D RID: 180845 RVA: 0x0061012A File Offset: 0x0060E32A
-		// (set) Token: 0x0602C26E RID: 180846 RVA: 0x00610132 File Offset: 0x0060E332
+		// Token: 0x1700C7BD RID: 51133
+		// (get) Token: 0x0602E9CF RID: 190927 RVA: 0x0065B162 File Offset: 0x00659362
+		// (set) Token: 0x0602E9D0 RID: 190928 RVA: 0x0065B16A File Offset: 0x0065936A
 		public EClientEventUiType Type { get; set; }
 
-		// Token: 0x0602C26F RID: 180847 RVA: 0x0061013B File Offset: 0x0060E33B
+		// Token: 0x0602E9D1 RID: 190929 RVA: 0x0065B173 File Offset: 0x00659373
 		public IClientEventUiT()
 		{
 			this.Type = EClientEventUiType.PlayPiano;

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02002ADB RID: 10971
+// Token: 0x02002057 RID: 8279
 public interface ISurvivorsChooseData
 {
-	// Token: 0x17001E59 RID: 7769
-	// (get) Token: 0x06016D56 RID: 93526
+	// Token: 0x17001EB1 RID: 7857
+	// (get) Token: 0x06014787 RID: 83847
 	ESurvivorsObtainMode ObtainMode { get; }
 }

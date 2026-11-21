@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006584 RID: 25988
+	// Token: 0x02005502 RID: 21762
 	public class FishingRewardMainTabItem : CommonTabItemBase, ITabViewRegister
 	{
-		// Token: 0x06041220 RID: 266784 RVA: 0x00FC8E80 File Offset: 0x00FC7080
+		// Token: 0x06035EE5 RID: 220901 RVA: 0x00F0FE34 File Offset: 0x00F0E034
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,20 +31,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041221 RID: 266785 RVA: 0x00FC8F26 File Offset: 0x00FC7126
+		// Token: 0x06035EE6 RID: 220902 RVA: 0x00F0FEDA File Offset: 0x00F0E0DA
 		protected override void OnStart()
 		{
 			this.SetRedDotVisible(false);
 		}
 
-		// Token: 0x06041222 RID: 266786 RVA: 0x00FC8F2F File Offset: 0x00FC712F
+		// Token: 0x06035EE7 RID: 220903 RVA: 0x00F0FEE3 File Offset: 0x00F0E0E3
 		[NullableContext(1)]
 		public void RegisterViewModule(UiTabViewBase tabView)
 		{
 			tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 		}
 
-		// Token: 0x06041223 RID: 266787 RVA: 0x00FC8F3D File Offset: 0x00FC713D
+		// Token: 0x06035EE8 RID: 220904 RVA: 0x00F0FEF1 File Offset: 0x00F0E0F1
 		public void SetRedDotVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(1);
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x06041224 RID: 266788 RVA: 0x00FC8F51 File Offset: 0x00FC7151
+		// Token: 0x06035EE9 RID: 220905 RVA: 0x00F0FF05 File Offset: 0x00F0E105
 		[NullableContext(1)]
 		protected override void OnUpdateTabIcon(string iconPath)
 		{
 		}
 
-		// Token: 0x06041225 RID: 266789 RVA: 0x00FC8F53 File Offset: 0x00FC7153
+		// Token: 0x06035EEA RID: 220906 RVA: 0x00F0FF07 File Offset: 0x00F0E107
 		protected override void OnSetToggleState(EToggleState state, bool bFire)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			extendToggle.SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x06041226 RID: 266790 RVA: 0x00FC8F6B File Offset: 0x00FC716B
+		// Token: 0x06035EEB RID: 220907 RVA: 0x00F0FF1F File Offset: 0x00F0E11F
 		[NullableContext(1)]
 		protected override UUIExtendToggle GetTabToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x06041227 RID: 266791 RVA: 0x00FC8F74 File Offset: 0x00FC7174
+		// Token: 0x06035EEC RID: 220908 RVA: 0x00F0FF28 File Offset: 0x00F0E128
 		protected void OnToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -93,16 +93,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x04021EE6 RID: 138982
+		// Token: 0x0401C817 RID: 116759
 		public int TabIndex;
 
-		// Token: 0x0200C77A RID: 51066
+		// Token: 0x0200B15F RID: 45407
 		private class EComponentDefine
 		{
-			// Token: 0x0403C44A RID: 246858
+			// Token: 0x04036D9B RID: 224667
 			public const int Toggle = 0;
 
-			// Token: 0x0403C44B RID: 246859
+			// Token: 0x04036D9C RID: 224668
 			public const int RedDot = 1;
 		}
 	}

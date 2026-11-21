@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020016D2 RID: 5842
+// Token: 0x02000B8A RID: 2954
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceExpressionSwitchItem : CommonTabItemBase
 {
-	// Token: 0x0600A716 RID: 42774 RVA: 0x002576B4 File Offset: 0x002558B4
+	// Token: 0x06007AF6 RID: 31478 RVA: 0x00261AC0 File Offset: 0x0025FCC0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class AdviceExpressionSwitchItem : CommonTabItemBase
 		};
 	}
 
-	// Token: 0x0600A717 RID: 42775 RVA: 0x0025771B File Offset: 0x0025591B
+	// Token: 0x06007AF7 RID: 31479 RVA: 0x00261B27 File Offset: 0x0025FD27
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -35,7 +35,7 @@ public class AdviceExpressionSwitchItem : CommonTabItemBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600A718 RID: 42776 RVA: 0x00257739 File Offset: 0x00255939
+	// Token: 0x06007AF8 RID: 31480 RVA: 0x00261B45 File Offset: 0x0025FD45
 	private void OnExtendToggleToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && this.SelectedCallBack != null)
@@ -44,7 +44,7 @@ public class AdviceExpressionSwitchItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600A719 RID: 42777 RVA: 0x0025775A File Offset: 0x0025595A
+	// Token: 0x06007AF9 RID: 31481 RVA: 0x00261B66 File Offset: 0x0025FD66
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -55,25 +55,25 @@ public class AdviceExpressionSwitchItem : CommonTabItemBase
 		extendToggle.SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600A71A RID: 42778 RVA: 0x00257772 File Offset: 0x00255972
+	// Token: 0x06007AFA RID: 31482 RVA: 0x00261B7E File Offset: 0x0025FD7E
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		CommonTabData data2 = data.Data;
 		base.UpdateTabIcon((data2 != null) ? data2.GetIcon() : null);
 	}
 
-	// Token: 0x0600A71B RID: 42779 RVA: 0x0025778C File Offset: 0x0025598C
+	// Token: 0x06007AFB RID: 31483 RVA: 0x00261B98 File Offset: 0x0025FD98
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x0600A71C RID: 42780 RVA: 0x0025778E File Offset: 0x0025598E
+	// Token: 0x06007AFC RID: 31484 RVA: 0x00261B9A File Offset: 0x0025FD9A
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600A71D RID: 42781 RVA: 0x00257798 File Offset: 0x00255998
+	// Token: 0x06007AFD RID: 31485 RVA: 0x00261BA4 File Offset: 0x0025FDA4
 	public void UpdateView(int groupId)
 	{
 		this.ExpressionGroupId = groupId;
@@ -85,17 +85,17 @@ public class AdviceExpressionSwitchItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x04004B79 RID: 19321
+	// Token: 0x04004C20 RID: 19488
 	private int ExpressionGroupId;
 
-	// Token: 0x02007CA5 RID: 31909
+	// Token: 0x02006E2A RID: 28202
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x04028E2A RID: 167466
+		// Token: 0x04024153 RID: 147795
 		public const int SwitchToggle = 0;
 
-		// Token: 0x04028E2B RID: 167467
+		// Token: 0x04024154 RID: 147796
 		public const int ExpressionImg = 1;
 	}
 }

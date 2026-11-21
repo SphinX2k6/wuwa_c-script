@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200276F RID: 10095
+	// Token: 0x02002A41 RID: 10817
 	public class IFlowTemplateMode
 	{
-		// Token: 0x0600E0CF RID: 57551 RVA: 0x002138C1 File Offset: 0x00211AC1
-		[NullableContext(1)]
+		// Token: 0x0600EEED RID: 61165 RVA: 0x00230655 File Offset: 0x0022E855
 		public static IFlowTemplateMode Create(IFlowTemplateMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043B3 RID: 17331
-		// (get) Token: 0x0600E0D0 RID: 57552 RVA: 0x002138E0 File Offset: 0x00211AE0
+		// Token: 0x17004719 RID: 18201
+		// (get) Token: 0x0600EEEE RID: 61166 RVA: 0x00230674 File Offset: 0x0022E874
 		public virtual int Id
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043B4 RID: 17332
-		// (get) Token: 0x0600E0D1 RID: 57553 RVA: 0x002138ED File Offset: 0x00211AED
+		// Token: 0x1700471A RID: 18202
+		// (get) Token: 0x0600EEEF RID: 61167 RVA: 0x00230681 File Offset: 0x0022E881
 		public virtual int CameraId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C7D RID: 31869
+		// Token: 0x04008333 RID: 33587
 		private IFlowTemplateMode Instance;
 	}
 }

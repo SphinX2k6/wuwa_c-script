@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A95 RID: 6805
+// Token: 0x02000F54 RID: 3924
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreLevelPreviewView : UiViewBase
 {
-	// Token: 0x0600C8F3 RID: 51443 RVA: 0x002DD548 File Offset: 0x002DB748
+	// Token: 0x06009D04 RID: 40196 RVA: 0x002E867C File Offset: 0x002E687C
 	public ExploreLevelPreviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C8F4 RID: 51444 RVA: 0x002DD554 File Offset: 0x002DB754
+	// Token: 0x06009D05 RID: 40197 RVA: 0x002E8688 File Offset: 0x002E6888
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -64,7 +63,7 @@ public class ExploreLevelPreviewView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C8F5 RID: 51445 RVA: 0x002DD74C File Offset: 0x002DB94C
+	// Token: 0x06009D06 RID: 40198 RVA: 0x002E8880 File Offset: 0x002E6A80
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ExploreLevelPreviewView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -75,34 +74,34 @@ public class ExploreLevelPreviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C8F6 RID: 51446 RVA: 0x002DD790 File Offset: 0x002DB990
+	// Token: 0x06009D07 RID: 40199 RVA: 0x002E88C4 File Offset: 0x002E6AC4
 	private void OnPreviewItemGridClicked(MediumItemGridExtendCallback callbackParameter)
 	{
 		int itemId = (int)callbackParameter.Data;
-		ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 	}
 
-	// Token: 0x0600C8F7 RID: 51447 RVA: 0x002DD7B6 File Offset: 0x002DB9B6
+	// Token: 0x06009D08 RID: 40200 RVA: 0x002E88EB File Offset: 0x002E6AEB
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(this.PreviewExploreLevelRewardData.GetHelpId());
 	}
 
-	// Token: 0x0600C8F8 RID: 51448 RVA: 0x002DD7CD File Offset: 0x002DB9CD
+	// Token: 0x06009D09 RID: 40201 RVA: 0x002E8902 File Offset: 0x002E6B02
 	private void OnClickedLeftButton()
 	{
 		this.PreviewIndex = Math.Max(0, this.PreviewIndex - 1);
 		this.RefreshPreviewDisplay();
 	}
 
-	// Token: 0x0600C8F9 RID: 51449 RVA: 0x002DD7E9 File Offset: 0x002DB9E9
+	// Token: 0x06009D0A RID: 40202 RVA: 0x002E891E File Offset: 0x002E6B1E
 	private void OnClickedRightButton()
 	{
 		this.PreviewIndex = Math.Min(this.PreviewIndex + 1, this.UnlockFunctionExploreLevelRewardDataList.Count - 1);
 		this.RefreshPreviewDisplay();
 	}
 
-	// Token: 0x0600C8FA RID: 51450 RVA: 0x002DD814 File Offset: 0x002DBA14
+	// Token: 0x06009D0B RID: 40203 RVA: 0x002E8948 File Offset: 0x002E6B48
 	protected override void OnStart()
 	{
 		this.CountryExploreLevelData = (this.OpenParam as CountryExploreLevelData);
@@ -113,7 +112,7 @@ public class ExploreLevelPreviewView : UiViewBase
 		this.RefreshExploreLevelPreviewItemScrollView();
 	}
 
-	// Token: 0x0600C8FB RID: 51451 RVA: 0x002DD89E File Offset: 0x002DBA9E
+	// Token: 0x06009D0C RID: 40204 RVA: 0x002E89D2 File Offset: 0x002E6BD2
 	protected override void OnBeforeDestroy()
 	{
 		this.CountryExploreLevelData = null;
@@ -125,13 +124,13 @@ public class ExploreLevelPreviewView : UiViewBase
 		this.LoopScrollView = null;
 	}
 
-	// Token: 0x0600C8FC RID: 51452 RVA: 0x002DD8BF File Offset: 0x002DBABF
+	// Token: 0x06009D0D RID: 40205 RVA: 0x002E89F3 File Offset: 0x002E6BF3
 	private ExploreLevelPreviewItem OnCreateExploreLevelPreviewItem()
 	{
 		return new ExploreLevelPreviewItem();
 	}
 
-	// Token: 0x0600C8FD RID: 51453 RVA: 0x002DD8C8 File Offset: 0x002DBAC8
+	// Token: 0x06009D0E RID: 40206 RVA: 0x002E89FC File Offset: 0x002E6BFC
 	private int? GetPreviewExploreLevelRewardDataIndex(int fromExploreLevel)
 	{
 		int count = this.UnlockFunctionExploreLevelRewardDataList.Count;
@@ -152,7 +151,7 @@ public class ExploreLevelPreviewView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x0600C8FE RID: 51454 RVA: 0x002DD93C File Offset: 0x002DBB3C
+	// Token: 0x06009D0F RID: 40207 RVA: 0x002E8A70 File Offset: 0x002E6C70
 	private void RefreshPreviewDisplay()
 	{
 		if (this.UnlockFunctionExploreLevelRewardDataList.Count > this.PreviewIndex)
@@ -164,7 +163,7 @@ public class ExploreLevelPreviewView : UiViewBase
 		this.RefreshButtonVisible();
 	}
 
-	// Token: 0x0600C8FF RID: 51455 RVA: 0x002DD984 File Offset: 0x002DBB84
+	// Token: 0x06009D10 RID: 40208 RVA: 0x002E8AB8 File Offset: 0x002E6CB8
 	private void RefreshUnlockDisplay(CountryExploreLevelRewardData exploreLevelRewardData)
 	{
 		this.PreviewExploreLevelRewardData = exploreLevelRewardData;
@@ -188,7 +187,7 @@ public class ExploreLevelPreviewView : UiViewBase
 		base.GetText(3).ShowTextNew(exploreLevelRewardData.GetRewardNameId());
 	}
 
-	// Token: 0x0600C900 RID: 51456 RVA: 0x002DDA40 File Offset: 0x002DBC40
+	// Token: 0x06009D11 RID: 40209 RVA: 0x002E8B74 File Offset: 0x002E6D74
 	private void RefreshPreviewItemGrid(CountryExploreLevelRewardData exploreLevelRewardData)
 	{
 		int previewItemConfigId = exploreLevelRewardData.GetPreviewItemConfigId();
@@ -205,7 +204,7 @@ public class ExploreLevelPreviewView : UiViewBase
 		previewItemGrid.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x0600C901 RID: 51457 RVA: 0x002DDA84 File Offset: 0x002DBC84
+	// Token: 0x06009D12 RID: 40210 RVA: 0x002E8BB8 File Offset: 0x002E6DB8
 	private void RefreshButtonVisible()
 	{
 		int count = this.UnlockFunctionExploreLevelRewardDataList.Count;
@@ -213,27 +212,32 @@ public class ExploreLevelPreviewView : UiViewBase
 		base.GetButton(1).RootUIComp.Get().SetUIActive(this.PreviewIndex > 0);
 	}
 
-	// Token: 0x0600C902 RID: 51458 RVA: 0x002DDAE4 File Offset: 0x002DBCE4
+	// Token: 0x06009D13 RID: 40211 RVA: 0x002E8C18 File Offset: 0x002E6E18
 	private void RefreshExploreLevelPreviewItemScrollView()
 	{
-		List<CountryExploreLevelRewardData> data = this.CountryExploreLevelData.GetAllExploreLevelRewardData().Skip(1).ToList<CountryExploreLevelRewardData>();
+		List<CountryExploreLevelRewardData> allExploreLevelRewardData = this.CountryExploreLevelData.GetAllExploreLevelRewardData();
+		List<CountryExploreLevelRewardData> list = new List<CountryExploreLevelRewardData>();
+		for (int i = 1; i < allExploreLevelRewardData.Count; i++)
+		{
+			list.Add(allExploreLevelRewardData[i]);
+		}
 		LoopScrollView<ExploreLevelPreviewItem, CountryExploreLevelRewardData> loopScrollView = this.LoopScrollView;
 		if (loopScrollView == null)
 		{
 			return;
 		}
-		loopScrollView.ReloadData(data, false);
+		loopScrollView.ReloadData(list, false);
 	}
 
-	// Token: 0x04005C89 RID: 23689
+	// Token: 0x04005D58 RID: 23896
 	[Nullable(2)]
 	private CountryExploreLevelData CountryExploreLevelData;
 
-	// Token: 0x04005C8A RID: 23690
+	// Token: 0x04005D59 RID: 23897
 	[Nullable(2)]
 	private CountryExploreLevelRewardData PreviewExploreLevelRewardData;
 
-	// Token: 0x04005C8B RID: 23691
+	// Token: 0x04005D5A RID: 23898
 	[Nullable(new byte[]
 	{
 		2,
@@ -242,7 +246,7 @@ public class ExploreLevelPreviewView : UiViewBase
 	})]
 	private LoopScrollView<ExploreLevelPreviewItem, CountryExploreLevelRewardData> LoopScrollView;
 
-	// Token: 0x04005C8C RID: 23692
+	// Token: 0x04005D5B RID: 23899
 	[Nullable(new byte[]
 	{
 		2,
@@ -250,36 +254,36 @@ public class ExploreLevelPreviewView : UiViewBase
 	})]
 	private IReadOnlyList<CountryExploreLevelRewardData> UnlockFunctionExploreLevelRewardDataList;
 
-	// Token: 0x04005C8D RID: 23693
+	// Token: 0x04005D5C RID: 23900
 	private int PreviewIndex;
 
-	// Token: 0x04005C8E RID: 23694
+	// Token: 0x04005D5D RID: 23901
 	[Nullable(2)]
 	private SmallItemGrid PreviewItemGrid;
 
-	// Token: 0x02007FF3 RID: 32755
+	// Token: 0x02007182 RID: 29058
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029C60 RID: 171104
+		// Token: 0x04024F9A RID: 151450
 		HelpButton,
-		// Token: 0x04029C61 RID: 171105
+		// Token: 0x04024F9B RID: 151451
 		LeftButton,
-		// Token: 0x04029C62 RID: 171106
+		// Token: 0x04024F9C RID: 151452
 		RightButton,
-		// Token: 0x04029C63 RID: 171107
+		// Token: 0x04024F9D RID: 151453
 		UnlockNameText,
-		// Token: 0x04029C64 RID: 171108
+		// Token: 0x04024F9E RID: 151454
 		UnlockDescriptionText,
-		// Token: 0x04029C65 RID: 171109
+		// Token: 0x04024F9F RID: 151455
 		UnlockSprite,
-		// Token: 0x04029C66 RID: 171110
+		// Token: 0x04024FA0 RID: 151456
 		LoopScrollView,
-		// Token: 0x04029C67 RID: 171111
+		// Token: 0x04024FA1 RID: 151457
 		SourceRewardItem,
-		// Token: 0x04029C68 RID: 171112
+		// Token: 0x04024FA2 RID: 151458
 		LockSprite,
-		// Token: 0x04029C69 RID: 171113
+		// Token: 0x04024FA3 RID: 151459
 		PreviewItemGridItem
 	}
 }

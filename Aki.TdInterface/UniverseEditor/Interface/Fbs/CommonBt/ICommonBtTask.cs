@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005ECF RID: 24271
+	// Token: 0x02006512 RID: 25874
 	public struct ICommonBtTask : IFlatbufferObject
 	{
-		// Token: 0x1700B586 RID: 46470
-		// (get) Token: 0x06029ADE RID: 170718 RVA: 0x005B8791 File Offset: 0x005B6991
+		// Token: 0x1700BEF1 RID: 48881
+		// (get) Token: 0x0602C192 RID: 180626 RVA: 0x00601C75 File Offset: 0x005FFE75
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x06029ADF RID: 170719 RVA: 0x005B879E File Offset: 0x005B699E
+		// Token: 0x0602C193 RID: 180627 RVA: 0x00601C82 File Offset: 0x005FFE82
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029AE0 RID: 170720 RVA: 0x005B87A8 File Offset: 0x005B69A8
+		// Token: 0x0602C194 RID: 180628 RVA: 0x00601C8C File Offset: 0x005FFE8C
 		public static ICommonBtTask GetRootAsICommonBtTask(ByteBuffer _bb)
 		{
 			return ICommonBtTask.GetRootAsICommonBtTask(_bb, default(ICommonBtTask));
 		}
 
-		// Token: 0x06029AE1 RID: 170721 RVA: 0x005B87C4 File Offset: 0x005B69C4
+		// Token: 0x0602C195 RID: 180629 RVA: 0x00601CA8 File Offset: 0x005FFEA8
 		public static ICommonBtTask GetRootAsICommonBtTask(ByteBuffer _bb, ICommonBtTask obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029AE2 RID: 170722 RVA: 0x005B87E1 File Offset: 0x005B69E1
+		// Token: 0x0602C196 RID: 180630 RVA: 0x00601CC5 File Offset: 0x005FFEC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029AE3 RID: 170723 RVA: 0x005B87F0 File Offset: 0x005B69F0
+		// Token: 0x0602C197 RID: 180631 RVA: 0x00601CD4 File Offset: 0x005FFED4
 		public ICommonBtTask __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B587 RID: 46471
-		// (get) Token: 0x06029AE4 RID: 170724 RVA: 0x005B8800 File Offset: 0x005B6A00
+		// Token: 0x1700BEF2 RID: 48882
+		// (get) Token: 0x0602C198 RID: 180632 RVA: 0x00601CE4 File Offset: 0x005FFEE4
 		public ECommonBtNodeType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x1700B588 RID: 46472
-		// (get) Token: 0x06029AE5 RID: 170725 RVA: 0x005B883C File Offset: 0x005B6A3C
+		// Token: 0x1700BEF3 RID: 48883
+		// (get) Token: 0x0602C199 RID: 180633 RVA: 0x00601D20 File Offset: 0x005FFF20
 		public int Id
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x1700B589 RID: 46473
-		// (get) Token: 0x06029AE6 RID: 170726 RVA: 0x005B8878 File Offset: 0x005B6A78
+		// Token: 0x1700BEF4 RID: 48884
+		// (get) Token: 0x0602C19A RID: 180634 RVA: 0x00601D5C File Offset: 0x005FFF5C
 		public string Desc
 		{
 			get
@@ -93,19 +93,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x06029AE7 RID: 170727 RVA: 0x005B88AF File Offset: 0x005B6AAF
+		// Token: 0x0602C19B RID: 180635 RVA: 0x00601D93 File Offset: 0x005FFF93
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06029AE8 RID: 170728 RVA: 0x005B88BE File Offset: 0x005B6ABE
+		// Token: 0x0602C19C RID: 180636 RVA: 0x00601DA2 File Offset: 0x005FFFA2
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x06029AE9 RID: 170729 RVA: 0x005B88CC File Offset: 0x005B6ACC
+		// Token: 0x0602C19D RID: 180637 RVA: 0x00601DB0 File Offset: 0x005FFFB0
 		public TCommonBtDecorator DecoratorsType(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return (TCommonBtDecorator)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700B58A RID: 46474
-		// (get) Token: 0x06029AEA RID: 170730 RVA: 0x005B890C File Offset: 0x005B6B0C
+		// Token: 0x1700BEF5 RID: 48885
+		// (get) Token: 0x0602C19E RID: 180638 RVA: 0x00601DF0 File Offset: 0x005FFFF0
 		public int DecoratorsTypeLength
 		{
 			get
@@ -131,13 +131,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x06029AEB RID: 170731 RVA: 0x005B8938 File Offset: 0x005B6B38
+		// Token: 0x0602C19F RID: 180639 RVA: 0x00601E1C File Offset: 0x0060001C
 		public Span<TCommonBtDecorator> GetDecoratorsTypeBytes()
 		{
 			return this.__p.__vector_as_span<TCommonBtDecorator>(10, 1);
 		}
 
-		// Token: 0x06029AEC RID: 170732 RVA: 0x005B8948 File Offset: 0x005B6B48
+		// Token: 0x0602C1A0 RID: 180640 RVA: 0x00601E2C File Offset: 0x0060002C
 		public TCommonBtDecorator[] GetDecoratorsTypeArray()
 		{
 			int num = this.__p.__offset(10);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return array;
 		}
 
-		// Token: 0x06029AED RID: 170733 RVA: 0x005B89B4 File Offset: 0x005B6BB4
+		// Token: 0x0602C1A1 RID: 180641 RVA: 0x00601E98 File Offset: 0x00600098
 		public TTable? Decorators<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -166,8 +166,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700B58B RID: 46475
-		// (get) Token: 0x06029AEE RID: 170734 RVA: 0x005B89FC File Offset: 0x005B6BFC
+		// Token: 0x1700BEF6 RID: 48886
+		// (get) Token: 0x0602C1A2 RID: 180642 RVA: 0x00601EE0 File Offset: 0x006000E0
 		public int DecoratorsLength
 		{
 			get
@@ -181,8 +181,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x1700B58C RID: 46476
-		// (get) Token: 0x06029AEF RID: 170735 RVA: 0x005B8A28 File Offset: 0x005B6C28
+		// Token: 0x1700BEF7 RID: 48887
+		// (get) Token: 0x0602C1A3 RID: 180643 RVA: 0x00601F0C File Offset: 0x0060010C
 		public bool _FoldedForTree
 		{
 			get
@@ -192,8 +192,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x1700B58D RID: 46477
-		// (get) Token: 0x06029AF0 RID: 170736 RVA: 0x005B8A68 File Offset: 0x005B6C68
+		// Token: 0x1700BEF8 RID: 48888
+		// (get) Token: 0x0602C1A4 RID: 180644 RVA: 0x00601F4C File Offset: 0x0060014C
 		public ICommonBtActionInfo? ActionInfo
 		{
 			get
@@ -207,8 +207,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x1700B58E RID: 46478
-		// (get) Token: 0x06029AF1 RID: 170737 RVA: 0x005B8AC8 File Offset: 0x005B6CC8
+		// Token: 0x1700BEF9 RID: 48889
+		// (get) Token: 0x0602C1A5 RID: 180645 RVA: 0x00601FAC File Offset: 0x006001AC
 		public byte NullMask
 		{
 			get
@@ -222,7 +222,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x06029AF2 RID: 170738 RVA: 0x005B8B08 File Offset: 0x005B6D08
+		// Token: 0x0602C1A6 RID: 180646 RVA: 0x00601FEC File Offset: 0x006001EC
 		public static Offset<ICommonBtTask> CreateICommonBtTask(FlatBufferBuilder builder, ECommonBtNodeType Type = ECommonBtNodeType.Start, int Id = 0, StringOffset DescOffset = default(StringOffset), VectorOffset Decorators_typeOffset = default(VectorOffset), VectorOffset DecoratorsOffset = default(VectorOffset), bool _foldedForTree = false, Offset<ICommonBtActionInfo> ActionInfoOffset = default(Offset<ICommonBtActionInfo>), byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -237,37 +237,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return ICommonBtTask.EndICommonBtTask(builder);
 		}
 
-		// Token: 0x06029AF3 RID: 170739 RVA: 0x005B8B5F File Offset: 0x005B6D5F
+		// Token: 0x0602C1A7 RID: 180647 RVA: 0x00602043 File Offset: 0x00600243
 		public static void StartICommonBtTask(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06029AF4 RID: 170740 RVA: 0x005B8B68 File Offset: 0x005B6D68
+		// Token: 0x0602C1A8 RID: 180648 RVA: 0x0060204C File Offset: 0x0060024C
 		public static void AddType(FlatBufferBuilder builder, ECommonBtNodeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029AF5 RID: 170741 RVA: 0x005B8B73 File Offset: 0x005B6D73
+		// Token: 0x0602C1A9 RID: 180649 RVA: 0x00602057 File Offset: 0x00600257
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06029AF6 RID: 170742 RVA: 0x005B8B7E File Offset: 0x005B6D7E
+		// Token: 0x0602C1AA RID: 180650 RVA: 0x00602062 File Offset: 0x00600262
 		public static void AddDesc(FlatBufferBuilder builder, StringOffset descOffset)
 		{
 			builder.AddOffset(2, descOffset.Value, 0);
 		}
 
-		// Token: 0x06029AF7 RID: 170743 RVA: 0x005B8B8E File Offset: 0x005B6D8E
+		// Token: 0x0602C1AB RID: 180651 RVA: 0x00602072 File Offset: 0x00600272
 		public static void AddDecoratorsType(FlatBufferBuilder builder, VectorOffset decoratorsTypeOffset)
 		{
 			builder.AddOffset(3, decoratorsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06029AF8 RID: 170744 RVA: 0x005B8BA0 File Offset: 0x005B6DA0
+		// Token: 0x0602C1AC RID: 180652 RVA: 0x00602084 File Offset: 0x00600284
 		public static VectorOffset CreateDecoratorsTypeVector(FlatBufferBuilder builder, TCommonBtDecorator[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029AF9 RID: 170745 RVA: 0x005B8BD7 File Offset: 0x005B6DD7
+		// Token: 0x0602C1AD RID: 180653 RVA: 0x006020BB File Offset: 0x006002BB
 		public static VectorOffset CreateDecoratorsTypeVectorBlock(FlatBufferBuilder builder, TCommonBtDecorator[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029AFA RID: 170746 RVA: 0x005B8BF1 File Offset: 0x005B6DF1
+		// Token: 0x0602C1AE RID: 180654 RVA: 0x006020D5 File Offset: 0x006002D5
 		public static VectorOffset CreateDecoratorsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TCommonBtDecorator> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -294,7 +294,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029AFB RID: 170747 RVA: 0x005B8C0F File Offset: 0x005B6E0F
+		// Token: 0x0602C1AF RID: 180655 RVA: 0x006020F3 File Offset: 0x006002F3
 		public static VectorOffset CreateDecoratorsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -302,19 +302,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029AFC RID: 170748 RVA: 0x005B8C28 File Offset: 0x005B6E28
+		// Token: 0x0602C1B0 RID: 180656 RVA: 0x0060210C File Offset: 0x0060030C
 		public static void StartDecoratorsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06029AFD RID: 170749 RVA: 0x005B8C33 File Offset: 0x005B6E33
+		// Token: 0x0602C1B1 RID: 180657 RVA: 0x00602117 File Offset: 0x00600317
 		public static void AddDecorators(FlatBufferBuilder builder, VectorOffset decoratorsOffset)
 		{
 			builder.AddOffset(4, decoratorsOffset.Value, 0);
 		}
 
-		// Token: 0x06029AFE RID: 170750 RVA: 0x005B8C44 File Offset: 0x005B6E44
+		// Token: 0x0602C1B2 RID: 180658 RVA: 0x00602128 File Offset: 0x00600328
 		public static VectorOffset CreateDecoratorsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029AFF RID: 170751 RVA: 0x005B8C7B File Offset: 0x005B6E7B
+		// Token: 0x0602C1B3 RID: 180659 RVA: 0x0060215F File Offset: 0x0060035F
 		public static VectorOffset CreateDecoratorsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -333,7 +333,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029B00 RID: 170752 RVA: 0x005B8C95 File Offset: 0x005B6E95
+		// Token: 0x0602C1B4 RID: 180660 RVA: 0x00602179 File Offset: 0x00600379
 		public static VectorOffset CreateDecoratorsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029B01 RID: 170753 RVA: 0x005B8CB3 File Offset: 0x005B6EB3
+		// Token: 0x0602C1B5 RID: 180661 RVA: 0x00602197 File Offset: 0x00600397
 		public static VectorOffset CreateDecoratorsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -349,37 +349,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return builder.EndVector();
 		}
 
-		// Token: 0x06029B02 RID: 170754 RVA: 0x005B8CCC File Offset: 0x005B6ECC
+		// Token: 0x0602C1B6 RID: 180662 RVA: 0x006021B0 File Offset: 0x006003B0
 		public static void StartDecoratorsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06029B03 RID: 170755 RVA: 0x005B8CD7 File Offset: 0x005B6ED7
+		// Token: 0x0602C1B7 RID: 180663 RVA: 0x006021BB File Offset: 0x006003BB
 		public static void Add_FoldedForTree(FlatBufferBuilder builder, bool _FoldedForTree)
 		{
 			builder.AddBool(5, _FoldedForTree, false);
 		}
 
-		// Token: 0x06029B04 RID: 170756 RVA: 0x005B8CE2 File Offset: 0x005B6EE2
+		// Token: 0x0602C1B8 RID: 180664 RVA: 0x006021C6 File Offset: 0x006003C6
 		public static void AddActionInfo(FlatBufferBuilder builder, Offset<ICommonBtActionInfo> actionInfoOffset)
 		{
 			builder.AddOffset(6, actionInfoOffset.Value, 0);
 		}
 
-		// Token: 0x06029B05 RID: 170757 RVA: 0x005B8CF2 File Offset: 0x005B6EF2
+		// Token: 0x0602C1B9 RID: 180665 RVA: 0x006021D6 File Offset: 0x006003D6
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06029B06 RID: 170758 RVA: 0x005B8CFD File Offset: 0x005B6EFD
+		// Token: 0x0602C1BA RID: 180666 RVA: 0x006021E1 File Offset: 0x006003E1
 		public static Offset<ICommonBtTask> EndICommonBtTask(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonBtTask>(builder.EndTable());
 		}
 
-		// Token: 0x06029B07 RID: 170759 RVA: 0x005B8D0C File Offset: 0x005B6F0C
+		// Token: 0x0602C1BB RID: 180667 RVA: 0x006021F0 File Offset: 0x006003F0
 		public ICommonBtTaskT UnPack()
 		{
 			ICommonBtTaskT commonBtTaskT = new ICommonBtTaskT();
@@ -387,7 +387,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return commonBtTaskT;
 		}
 
-		// Token: 0x06029B08 RID: 170760 RVA: 0x005B8D28 File Offset: 0x005B6F28
+		// Token: 0x0602C1BC RID: 180668 RVA: 0x0060220C File Offset: 0x0060040C
 		public void UnPackTo(ICommonBtTaskT _o)
 		{
 			_o.Type = this.Type;
@@ -423,7 +423,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06029B09 RID: 170761 RVA: 0x005B8F20 File Offset: 0x005B7120
+		// Token: 0x0602C1BD RID: 180669 RVA: 0x00602404 File Offset: 0x00600604
 		public static Offset<ICommonBtTask> Pack(FlatBufferBuilder builder, ICommonBtTaskT _o)
 		{
 			if (_o == null)
@@ -455,7 +455,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return ICommonBtTask.CreateICommonBtTask(builder, _o.Type, _o.Id, descOffset, decorators_typeOffset, decoratorsOffset, _o._FoldedForTree, actionInfoOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F965 RID: 63845
+		// Token: 0x040106C8 RID: 67272
 		private Table __p;
 	}
 }

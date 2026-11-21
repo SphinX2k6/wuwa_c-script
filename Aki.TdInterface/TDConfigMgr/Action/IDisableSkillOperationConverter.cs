@@ -5,23 +5,17 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200152B RID: 5419
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x02001685 RID: 5765
 	public class IDisableSkillOperationConverter : JsonConverter<IDisableSkillOperation>
 	{
-		// Token: 0x06007AEF RID: 31471 RVA: 0x00128668 File Offset: 0x00126868
+		// Token: 0x060081BD RID: 33213 RVA: 0x001374E1 File Offset: 0x001356E1
 		[return: Nullable(2)]
 		public override IDisableSkillOperation Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			return IDisableSkillOperation.CreateFromSetValue(JsonSerializer.Deserialize<IDisableSkillOperation_SetValue>(ref reader, options));
 		}
 
-		// Token: 0x06007AF0 RID: 31472 RVA: 0x00128676 File Offset: 0x00126876
+		// Token: 0x060081BE RID: 33214 RVA: 0x001374EF File Offset: 0x001356EF
 		public override void Write(Utf8JsonWriter writer, IDisableSkillOperation value, JsonSerializerOptions options)
 		{
 			JsonSerializer.Serialize<IDisableSkillOperation_SetValue>(writer, value.ToSetValue(), options);

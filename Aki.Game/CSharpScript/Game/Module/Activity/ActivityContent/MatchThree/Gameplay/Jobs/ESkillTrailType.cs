@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 {
-	// Token: 0x02006510 RID: 25872
+	// Token: 0x0200548E RID: 21646
 	public enum ESkillTrailType
 	{
-		// Token: 0x04021DA8 RID: 138664
+		// Token: 0x0401C6D9 RID: 116441
 		Allure,
-		// Token: 0x04021DA9 RID: 138665
+		// Token: 0x0401C6DA RID: 116442
 		Chain
 	}
 }

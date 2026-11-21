@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019B2 RID: 6578
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B3B RID: 6971
 	[JsonConverter(typeof(IDisableMoveOperationConverter))]
 	public class IDisableMoveOperation : IMoveOperationType
 	{
-		// Token: 0x06008CD9 RID: 36057 RVA: 0x0014A4C0 File Offset: 0x001486C0
+		// Token: 0x0600940B RID: 37899 RVA: 0x00159E54 File Offset: 0x00158054
 		private IDisableMoveOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008CDA RID: 36058 RVA: 0x0014A4F8 File Offset: 0x001486F8
+		// Token: 0x0600940C RID: 37900 RVA: 0x00159E8C File Offset: 0x0015808C
 		public static IDisableMoveOperation Create([Nullable(2)] IDisableMoveOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CDB RID: 36059 RVA: 0x0014A50B File Offset: 0x0014870B
+		// Token: 0x0600940D RID: 37901 RVA: 0x00159E9F File Offset: 0x0015809F
 		public static IDisableMoveOperation CreateFromSetValue([Nullable(2)] IDisableMoveOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CDC RID: 36060 RVA: 0x0014A520 File Offset: 0x00148720
+		// Token: 0x0600940E RID: 37902 RVA: 0x00159EB4 File Offset: 0x001580B4
 		public new IDisableMoveOperation_SetValue ToSetValue()
 		{
 			return new IDisableMoveOperation_SetValue
@@ -71,9 +69,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D36 RID: 11574
-		// (get) Token: 0x06008CDD RID: 36061 RVA: 0x0014A5B6 File Offset: 0x001487B6
-		// (set) Token: 0x06008CDE RID: 36062 RVA: 0x0014A5E1 File Offset: 0x001487E1
+		// Token: 0x17002F39 RID: 12089
+		// (get) Token: 0x0600940F RID: 37903 RVA: 0x00159F4A File Offset: 0x0015814A
+		// (set) Token: 0x06009410 RID: 37904 RVA: 0x00159F75 File Offset: 0x00158175
 		public override EMoveOperationType Type
 		{
 			get
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D37 RID: 11575
-		// (get) Token: 0x06008CDF RID: 36063 RVA: 0x0014A5EF File Offset: 0x001487EF
-		// (set) Token: 0x06008CE0 RID: 36064 RVA: 0x0014A61A File Offset: 0x0014881A
+		// Token: 0x17002F3A RID: 12090
+		// (get) Token: 0x06009411 RID: 37905 RVA: 0x00159F83 File Offset: 0x00158183
+		// (set) Token: 0x06009412 RID: 37906 RVA: 0x00159FAE File Offset: 0x001581AE
 		public virtual bool Forward
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D38 RID: 11576
-		// (get) Token: 0x06008CE1 RID: 36065 RVA: 0x0014A628 File Offset: 0x00148828
-		// (set) Token: 0x06008CE2 RID: 36066 RVA: 0x0014A653 File Offset: 0x00148853
+		// Token: 0x17002F3B RID: 12091
+		// (get) Token: 0x06009413 RID: 37907 RVA: 0x00159FBC File Offset: 0x001581BC
+		// (set) Token: 0x06009414 RID: 37908 RVA: 0x00159FE7 File Offset: 0x001581E7
 		public virtual bool Back
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D39 RID: 11577
-		// (get) Token: 0x06008CE3 RID: 36067 RVA: 0x0014A661 File Offset: 0x00148861
-		// (set) Token: 0x06008CE4 RID: 36068 RVA: 0x0014A68C File Offset: 0x0014888C
+		// Token: 0x17002F3C RID: 12092
+		// (get) Token: 0x06009415 RID: 37909 RVA: 0x00159FF5 File Offset: 0x001581F5
+		// (set) Token: 0x06009416 RID: 37910 RVA: 0x0015A020 File Offset: 0x00158220
 		public virtual bool Left
 		{
 			get
@@ -151,9 +149,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D3A RID: 11578
-		// (get) Token: 0x06008CE5 RID: 36069 RVA: 0x0014A69A File Offset: 0x0014889A
-		// (set) Token: 0x06008CE6 RID: 36070 RVA: 0x0014A6C5 File Offset: 0x001488C5
+		// Token: 0x17002F3D RID: 12093
+		// (get) Token: 0x06009417 RID: 37911 RVA: 0x0015A02E File Offset: 0x0015822E
+		// (set) Token: 0x06009418 RID: 37912 RVA: 0x0015A059 File Offset: 0x00158259
 		public virtual bool Right
 		{
 			get
@@ -170,9 +168,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D3B RID: 11579
-		// (get) Token: 0x06008CE7 RID: 36071 RVA: 0x0014A6D4 File Offset: 0x001488D4
-		// (set) Token: 0x06008CE8 RID: 36072 RVA: 0x0014A70E File Offset: 0x0014890E
+		// Token: 0x17002F3E RID: 12094
+		// (get) Token: 0x06009419 RID: 37913 RVA: 0x0015A068 File Offset: 0x00158268
+		// (set) Token: 0x0600941A RID: 37914 RVA: 0x0015A0A2 File Offset: 0x001582A2
 		public virtual bool? ForceWalk
 		{
 			get
@@ -194,9 +192,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D3C RID: 11580
-		// (get) Token: 0x06008CE9 RID: 36073 RVA: 0x0014A71C File Offset: 0x0014891C
-		// (set) Token: 0x06008CEA RID: 36074 RVA: 0x0014A756 File Offset: 0x00148956
+		// Token: 0x17002F3F RID: 12095
+		// (get) Token: 0x0600941B RID: 37915 RVA: 0x0015A0B0 File Offset: 0x001582B0
+		// (set) Token: 0x0600941C RID: 37916 RVA: 0x0015A0EA File Offset: 0x001582EA
 		public virtual bool? ForceJog
 		{
 			get
@@ -218,9 +216,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D3D RID: 11581
-		// (get) Token: 0x06008CEB RID: 36075 RVA: 0x0014A764 File Offset: 0x00148964
-		// (set) Token: 0x06008CEC RID: 36076 RVA: 0x0014A79E File Offset: 0x0014899E
+		// Token: 0x17002F40 RID: 12096
+		// (get) Token: 0x0600941D RID: 37917 RVA: 0x0015A0F8 File Offset: 0x001582F8
+		// (set) Token: 0x0600941E RID: 37918 RVA: 0x0015A132 File Offset: 0x00158332
 		public virtual bool? ForbidSprint
 		{
 			get
@@ -242,9 +240,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D3E RID: 11582
-		// (get) Token: 0x06008CED RID: 36077 RVA: 0x0014A7AC File Offset: 0x001489AC
-		// (set) Token: 0x06008CEE RID: 36078 RVA: 0x0014A7E6 File Offset: 0x001489E6
+		// Token: 0x17002F41 RID: 12097
+		// (get) Token: 0x0600941F RID: 37919 RVA: 0x0015A140 File Offset: 0x00158340
+		// (set) Token: 0x06009420 RID: 37920 RVA: 0x0015A17A File Offset: 0x0015837A
 		public virtual bool? ForbidAndDisableSprint
 		{
 			get
@@ -266,9 +264,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D3F RID: 11583
-		// (get) Token: 0x06008CEF RID: 36079 RVA: 0x0014A7F4 File Offset: 0x001489F4
-		// (set) Token: 0x06008CF0 RID: 36080 RVA: 0x0014A82E File Offset: 0x00148A2E
+		// Token: 0x17002F42 RID: 12098
+		// (get) Token: 0x06009421 RID: 37921 RVA: 0x0015A188 File Offset: 0x00158388
+		// (set) Token: 0x06009422 RID: 37922 RVA: 0x0015A1C2 File Offset: 0x001583C2
 		public virtual bool? ForbidAndDisableMotorcycleSprint
 		{
 			get
@@ -290,9 +288,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D40 RID: 11584
-		// (get) Token: 0x06008CF1 RID: 36081 RVA: 0x0014A83C File Offset: 0x00148A3C
-		// (set) Token: 0x06008CF2 RID: 36082 RVA: 0x0014A876 File Offset: 0x00148A76
+		// Token: 0x17002F43 RID: 12099
+		// (get) Token: 0x06009423 RID: 37923 RVA: 0x0015A1D0 File Offset: 0x001583D0
+		// (set) Token: 0x06009424 RID: 37924 RVA: 0x0015A20A File Offset: 0x0015840A
 		public virtual bool? DisableClimbAndStep
 		{
 			get
@@ -314,11 +312,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005799 RID: 22425
+		// Token: 0x04005BE8 RID: 23528
 		[Nullable(2)]
 		protected new IDisableMoveOperation FbInstance;
 
-		// Token: 0x0400579A RID: 22426
+		// Token: 0x04005BE9 RID: 23529
 		[Nullable(2)]
 		protected new IDisableMoveOperation_SetValue PocoInterface;
 	}

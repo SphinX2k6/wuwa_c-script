@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002819 RID: 10265
+// Token: 0x02001D94 RID: 7572
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleDevRoleViewItemDataBase
 {
-	// Token: 0x0601517D RID: 86397 RVA: 0x00557164 File Offset: 0x00555364
+	// Token: 0x06012B7D RID: 76669 RVA: 0x00581F64 File Offset: 0x00580164
 	public void InitByRoleId(int roleId, ERoleDevDataType roleType)
 	{
 		this.RoleIdInternal = roleId;
@@ -16,11 +16,11 @@ public abstract class RoleDevRoleViewItemDataBase
 		this.InitByRoleType(roleId);
 	}
 
-	// Token: 0x0601517E RID: 86398
+	// Token: 0x06012B7E RID: 76670
 	protected abstract void InitByRoleType(int roleId);
 
-	// Token: 0x17001BDC RID: 7132
-	// (get) Token: 0x0601517F RID: 86399 RVA: 0x0055717B File Offset: 0x0055537B
+	// Token: 0x17001C34 RID: 7220
+	// (get) Token: 0x06012B7F RID: 76671 RVA: 0x00581F7B File Offset: 0x0058017B
 	public int RoleId
 	{
 		get
@@ -29,8 +29,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BDD RID: 7133
-	// (get) Token: 0x06015180 RID: 86400 RVA: 0x00557183 File Offset: 0x00555383
+	// Token: 0x17001C35 RID: 7221
+	// (get) Token: 0x06012B80 RID: 76672 RVA: 0x00581F83 File Offset: 0x00580183
 	public ERoleDevDataType RoleType
 	{
 		get
@@ -39,41 +39,41 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x06015181 RID: 86401
+	// Token: 0x06012B81 RID: 76673
 	protected abstract int GetRoleLevel();
 
-	// Token: 0x06015182 RID: 86402
+	// Token: 0x06012B82 RID: 76674
 	protected abstract int GetRoleBreachLevel();
 
-	// Token: 0x06015183 RID: 86403
+	// Token: 0x06012B83 RID: 76675
 	protected abstract int GetRoleGoalUpgradeLevel();
 
-	// Token: 0x06015184 RID: 86404
+	// Token: 0x06012B84 RID: 76676
 	protected abstract int GetRoleGoalBreakLevel();
 
-	// Token: 0x06015185 RID: 86405
+	// Token: 0x06012B85 RID: 76677
 	protected abstract List<global::IRoleDevDetailItemData> GetDetailItems();
 
-	// Token: 0x06015186 RID: 86406
+	// Token: 0x06012B86 RID: 76678
 	protected abstract string GetRoleName();
 
-	// Token: 0x06015187 RID: 86407
+	// Token: 0x06012B87 RID: 76679
 	protected abstract bool GetIsCanUpgrade();
 
-	// Token: 0x06015188 RID: 86408
+	// Token: 0x06012B88 RID: 76680
 	protected abstract bool GetIsCanBreach();
 
-	// Token: 0x06015189 RID: 86409
+	// Token: 0x06012B89 RID: 76681
 	protected abstract bool GetIsCall();
 
-	// Token: 0x0601518A RID: 86410
+	// Token: 0x06012B8A RID: 76682
 	protected abstract int GetGachaId();
 
-	// Token: 0x0601518B RID: 86411
+	// Token: 0x06012B8B RID: 76683
 	protected abstract bool GetIsForecast();
 
-	// Token: 0x17001BDE RID: 7134
-	// (get) Token: 0x0601518C RID: 86412 RVA: 0x0055718B File Offset: 0x0055538B
+	// Token: 0x17001C36 RID: 7222
+	// (get) Token: 0x06012B8C RID: 76684 RVA: 0x00581F8B File Offset: 0x0058018B
 	public int RoleLevel
 	{
 		get
@@ -82,8 +82,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BDF RID: 7135
-	// (get) Token: 0x0601518D RID: 86413 RVA: 0x00557193 File Offset: 0x00555393
+	// Token: 0x17001C37 RID: 7223
+	// (get) Token: 0x06012B8D RID: 76685 RVA: 0x00581F93 File Offset: 0x00580193
 	public int RoleBreachLevel
 	{
 		get
@@ -92,8 +92,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE0 RID: 7136
-	// (get) Token: 0x0601518E RID: 86414 RVA: 0x0055719B File Offset: 0x0055539B
+	// Token: 0x17001C38 RID: 7224
+	// (get) Token: 0x06012B8E RID: 76686 RVA: 0x00581F9B File Offset: 0x0058019B
 	public int RoleGoalUpgradeLevel
 	{
 		get
@@ -102,8 +102,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE1 RID: 7137
-	// (get) Token: 0x0601518F RID: 86415 RVA: 0x005571A3 File Offset: 0x005553A3
+	// Token: 0x17001C39 RID: 7225
+	// (get) Token: 0x06012B8F RID: 76687 RVA: 0x00581FA3 File Offset: 0x005801A3
 	public int RoleGoalBreakLevel
 	{
 		get
@@ -112,8 +112,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE2 RID: 7138
-	// (get) Token: 0x06015190 RID: 86416 RVA: 0x005571AB File Offset: 0x005553AB
+	// Token: 0x17001C3A RID: 7226
+	// (get) Token: 0x06012B90 RID: 76688 RVA: 0x00581FAB File Offset: 0x005801AB
 	public List<global::IRoleDevDetailItemData> DetailItems
 	{
 		get
@@ -122,8 +122,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE3 RID: 7139
-	// (get) Token: 0x06015191 RID: 86417 RVA: 0x005571B3 File Offset: 0x005553B3
+	// Token: 0x17001C3B RID: 7227
+	// (get) Token: 0x06012B91 RID: 76689 RVA: 0x00581FB3 File Offset: 0x005801B3
 	public string RoleName
 	{
 		get
@@ -132,8 +132,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE4 RID: 7140
-	// (get) Token: 0x06015192 RID: 86418 RVA: 0x005571BB File Offset: 0x005553BB
+	// Token: 0x17001C3C RID: 7228
+	// (get) Token: 0x06012B92 RID: 76690 RVA: 0x00581FBB File Offset: 0x005801BB
 	public bool IsCanUpgrade
 	{
 		get
@@ -142,8 +142,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE5 RID: 7141
-	// (get) Token: 0x06015193 RID: 86419 RVA: 0x005571C3 File Offset: 0x005553C3
+	// Token: 0x17001C3D RID: 7229
+	// (get) Token: 0x06012B93 RID: 76691 RVA: 0x00581FC3 File Offset: 0x005801C3
 	public bool IsCanBreach
 	{
 		get
@@ -152,8 +152,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE6 RID: 7142
-	// (get) Token: 0x06015194 RID: 86420 RVA: 0x005571CB File Offset: 0x005553CB
+	// Token: 0x17001C3E RID: 7230
+	// (get) Token: 0x06012B94 RID: 76692 RVA: 0x00581FCB File Offset: 0x005801CB
 	public bool IsCall
 	{
 		get
@@ -162,8 +162,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE7 RID: 7143
-	// (get) Token: 0x06015195 RID: 86421 RVA: 0x005571D3 File Offset: 0x005553D3
+	// Token: 0x17001C3F RID: 7231
+	// (get) Token: 0x06012B95 RID: 76693 RVA: 0x00581FD3 File Offset: 0x005801D3
 	public int GachaId
 	{
 		get
@@ -172,8 +172,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE8 RID: 7144
-	// (get) Token: 0x06015196 RID: 86422 RVA: 0x005571DB File Offset: 0x005553DB
+	// Token: 0x17001C40 RID: 7232
+	// (get) Token: 0x06012B96 RID: 76694 RVA: 0x00581FDB File Offset: 0x005801DB
 	public bool IsForecast
 	{
 		get
@@ -182,8 +182,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BE9 RID: 7145
-	// (get) Token: 0x06015197 RID: 86423 RVA: 0x005571E3 File Offset: 0x005553E3
+	// Token: 0x17001C41 RID: 7233
+	// (get) Token: 0x06012B97 RID: 76695 RVA: 0x00581FE3 File Offset: 0x005801E3
 	public bool IsCanShowUpgradeItem
 	{
 		get
@@ -192,8 +192,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BEA RID: 7146
-	// (get) Token: 0x06015198 RID: 86424 RVA: 0x005571F3 File Offset: 0x005553F3
+	// Token: 0x17001C42 RID: 7234
+	// (get) Token: 0x06012B98 RID: 76696 RVA: 0x00581FF3 File Offset: 0x005801F3
 	public bool IsCanShowBreachItem
 	{
 		get
@@ -202,8 +202,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BEB RID: 7147
-	// (get) Token: 0x06015199 RID: 86425 RVA: 0x00557203 File Offset: 0x00555403
+	// Token: 0x17001C43 RID: 7235
+	// (get) Token: 0x06012B99 RID: 76697 RVA: 0x00582003 File Offset: 0x00580203
 	public bool IsFinish
 	{
 		get
@@ -212,8 +212,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BEC RID: 7148
-	// (get) Token: 0x0601519A RID: 86426 RVA: 0x00557218 File Offset: 0x00555418
+	// Token: 0x17001C44 RID: 7236
+	// (get) Token: 0x06012B9A RID: 76698 RVA: 0x00582018 File Offset: 0x00580218
 	public bool IsAllMaterialEnough
 	{
 		get
@@ -222,8 +222,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BED RID: 7149
-	// (get) Token: 0x0601519B RID: 86427 RVA: 0x00557225 File Offset: 0x00555425
+	// Token: 0x17001C45 RID: 7237
+	// (get) Token: 0x06012B9B RID: 76699 RVA: 0x00582025 File Offset: 0x00580225
 	public bool IsRoleObtained
 	{
 		get
@@ -232,8 +232,8 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x17001BEE RID: 7150
-	// (get) Token: 0x0601519C RID: 86428 RVA: 0x00557230 File Offset: 0x00555430
+	// Token: 0x17001C46 RID: 7238
+	// (get) Token: 0x06012B9C RID: 76700 RVA: 0x00582030 File Offset: 0x00580230
 	public bool RoleLevelIsMax
 	{
 		get
@@ -242,12 +242,12 @@ public abstract class RoleDevRoleViewItemDataBase
 		}
 	}
 
-	// Token: 0x0601519D RID: 86429
+	// Token: 0x06012B9D RID: 76701
 	protected abstract int GetMaxLevel();
 
-	// Token: 0x04009E3C RID: 40508
+	// Token: 0x0400A225 RID: 41509
 	protected int RoleIdInternal;
 
-	// Token: 0x04009E3D RID: 40509
+	// Token: 0x0400A226 RID: 41510
 	protected ERoleDevDataType RoleTypeInternal;
 }

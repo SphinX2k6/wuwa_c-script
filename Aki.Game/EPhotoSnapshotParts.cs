@@ -1,19 +1,19 @@
 ﻿using System;
 
-// Token: 0x020025A7 RID: 9639
+// Token: 0x02001A92 RID: 6802
 [Flags]
 public enum EPhotoSnapshotParts
 {
-	// Token: 0x04009355 RID: 37717
+	// Token: 0x040094AD RID: 38061
 	None = 0,
-	// Token: 0x04009356 RID: 37718
+	// Token: 0x040094AE RID: 38062
 	Lens = 1,
-	// Token: 0x04009357 RID: 37719
+	// Token: 0x040094AF RID: 38063
 	Options = 2,
-	// Token: 0x04009358 RID: 37720
+	// Token: 0x040094B0 RID: 38064
 	Template = 4,
-	// Token: 0x04009359 RID: 37721
+	// Token: 0x040094B1 RID: 38065
 	ModePrivate = 7,
-	// Token: 0x0400935A RID: 37722
+	// Token: 0x040094B2 RID: 38066
 	All = 7
 }

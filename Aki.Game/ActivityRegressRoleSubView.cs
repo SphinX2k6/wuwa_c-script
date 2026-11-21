@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001499 RID: 5273
+// Token: 0x0200094D RID: 2381
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x06009567 RID: 38247 RVA: 0x002039D0 File Offset: 0x00201BD0
+	// Token: 0x060068FC RID: 26876 RVA: 0x0020C938 File Offset: 0x0020AB38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = ActivityRegressMainViewComponentsInfo.Value;
@@ -22,7 +22,7 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009568 RID: 38248 RVA: 0x00203A00 File Offset: 0x00201C00
+	// Token: 0x060068FD RID: 26877 RVA: 0x0020C968 File Offset: 0x0020AB68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressRoleSubView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009569 RID: 38249 RVA: 0x00203A44 File Offset: 0x00201C44
+	// Token: 0x060068FE RID: 26878 RVA: 0x0020C9AC File Offset: 0x0020ABAC
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -44,14 +44,14 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		base.GetItem(3).SetUIActive(true);
 	}
 
-	// Token: 0x0600956A RID: 38250 RVA: 0x00203A98 File Offset: 0x00201C98
+	// Token: 0x060068FF RID: 26879 RVA: 0x0020CA00 File Offset: 0x0020AC00
 	protected override void OnBeforeDestroy()
 	{
 		this.ActivityRecallTabGroupPanel.Destroy();
 		this.ActivityRecallTabGroupPanel = null;
 	}
 
-	// Token: 0x0600956B RID: 38251 RVA: 0x00203AAC File Offset: 0x00201CAC
+	// Token: 0x06006900 RID: 26880 RVA: 0x0020CA14 File Offset: 0x0020AC14
 	protected override void OnUpdate(int subTabIndex)
 	{
 		List<RegressBase?> sortedOpenRegressBaseConfigList = ActivityRegressConfig.Instance.GetSortedOpenRegressBaseConfigList();
@@ -71,7 +71,7 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		this.ActivityRecallTabGroupPanel.RefreshByData(this.TabCommonDataList, subTabIndex);
 	}
 
-	// Token: 0x0600956C RID: 38252 RVA: 0x00203BA0 File Offset: 0x00201DA0
+	// Token: 0x06006901 RID: 26881 RVA: 0x0020CB08 File Offset: 0x0020AD08
 	private void TabCallBack(int index)
 	{
 		ActivityRegressTabSwitchItemCommonData activityRegressTabSwitchItemCommonData = this.TabCommonDataList[index];
@@ -95,7 +95,7 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		this.SequencePlayer.PlaySequence("Start", false, null);
 	}
 
-	// Token: 0x0600956D RID: 38253 RVA: 0x00203C5C File Offset: 0x00201E5C
+	// Token: 0x06006902 RID: 26882 RVA: 0x0020CBC4 File Offset: 0x0020ADC4
 	public override void OnParentShow()
 	{
 		base.OnParentShow();
@@ -112,7 +112,7 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		}
 	}
 
-	// Token: 0x0600956E RID: 38254 RVA: 0x00203C9C File Offset: 0x00201E9C
+	// Token: 0x06006903 RID: 26883 RVA: 0x0020CC04 File Offset: 0x0020AE04
 	private unsafe void OnPnlBtnClick()
 	{
 		int gachaTrialRoleId = ActivityRegressModel.Instance.GetGachaTrialRoleId(this.Config.Value.GachaId);
@@ -128,7 +128,7 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		instance.OpenRoleMainView(agentType, selectRoleId, list, null, null);
 	}
 
-	// Token: 0x0600956F RID: 38255 RVA: 0x00203D04 File Offset: 0x00201F04
+	// Token: 0x06006904 RID: 26884 RVA: 0x0020CC6C File Offset: 0x0020AE6C
 	[NullableContext(1)]
 	private UniTask UpdateGachaPoolItem(ProtoGachaInfo gachaInfo, ProtoGachaPoolInfo poolInfo)
 	{
@@ -142,16 +142,16 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 		return <UpdateGachaPoolItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400420D RID: 16909
+	// Token: 0x040042A5 RID: 17061
 	private ActivityRoleDescribeComponent RoleDescPanel;
 
-	// Token: 0x0400420E RID: 16910
+	// Token: 0x040042A6 RID: 17062
 	private ActivityRegressTabGroupPanel ActivityRecallTabGroupPanel;
 
-	// Token: 0x0400420F RID: 16911
+	// Token: 0x040042A7 RID: 17063
 	private ActivityRegressRoleActivityInfoPanel ActivityRecallRoleActivityInfoPanel;
 
-	// Token: 0x04004210 RID: 16912
+	// Token: 0x040042A8 RID: 17064
 	[Nullable(new byte[]
 	{
 		2,
@@ -159,18 +159,18 @@ public class ActivityRegressRoleSubView : ActivityRegressMainSubViewBase
 	})]
 	private List<ActivityRegressTabSwitchItemCommonData> TabCommonDataList;
 
-	// Token: 0x04004211 RID: 16913
+	// Token: 0x040042A9 RID: 17065
 	private EActivityRegressEntranceType? EntryType;
 
-	// Token: 0x04004212 RID: 16914
+	// Token: 0x040042AA RID: 17066
 	private RegressBase? Config;
 
-	// Token: 0x04004213 RID: 16915
+	// Token: 0x040042AB RID: 17067
 	private GachaPoolItem GachaPoolItem;
 
-	// Token: 0x04004214 RID: 16916
+	// Token: 0x040042AC RID: 17068
 	private ERecallRolePoolItemType? RolePoolItemType;
 
-	// Token: 0x04004215 RID: 16917
+	// Token: 0x040042AD RID: 17069
 	private float PoolItemAnchorOffsetX;
 }

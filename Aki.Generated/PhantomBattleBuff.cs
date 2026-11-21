@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EBF RID: 3775
+	// Token: 0x02000FA4 RID: 4004
 	public struct PhantomBattleBuff : IFlatbufferObject
 	{
-		// Token: 0x17002546 RID: 9542
-		// (get) Token: 0x0600A489 RID: 42121 RVA: 0x002AA125 File Offset: 0x002A8325
+		// Token: 0x170025AC RID: 9644
+		// (get) Token: 0x0600AAAA RID: 43690 RVA: 0x002C73B1 File Offset: 0x002C55B1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A48A RID: 42122 RVA: 0x002AA132 File Offset: 0x002A8332
+		// Token: 0x0600AAAB RID: 43691 RVA: 0x002C73BE File Offset: 0x002C55BE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A48B RID: 42123 RVA: 0x002AA13C File Offset: 0x002A833C
+		// Token: 0x0600AAAC RID: 43692 RVA: 0x002C73C8 File Offset: 0x002C55C8
 		public static PhantomBattleBuff GetRootAsPhantomBattleBuff(ByteBuffer _bb)
 		{
 			return PhantomBattleBuff.GetRootAsPhantomBattleBuff(_bb, default(PhantomBattleBuff));
 		}
 
-		// Token: 0x0600A48C RID: 42124 RVA: 0x002AA158 File Offset: 0x002A8358
+		// Token: 0x0600AAAD RID: 43693 RVA: 0x002C73E4 File Offset: 0x002C55E4
 		public static PhantomBattleBuff GetRootAsPhantomBattleBuff(ByteBuffer _bb, PhantomBattleBuff obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A48D RID: 42125 RVA: 0x002AA175 File Offset: 0x002A8375
+		// Token: 0x0600AAAE RID: 43694 RVA: 0x002C7401 File Offset: 0x002C5601
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A48E RID: 42126 RVA: 0x002AA184 File Offset: 0x002A8384
+		// Token: 0x0600AAAF RID: 43695 RVA: 0x002C7410 File Offset: 0x002C5610
 		public PhantomBattleBuff __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002547 RID: 9543
-		// (get) Token: 0x0600A48F RID: 42127 RVA: 0x002AA194 File Offset: 0x002A8394
+		// Token: 0x170025AD RID: 9645
+		// (get) Token: 0x0600AAB0 RID: 43696 RVA: 0x002C7420 File Offset: 0x002C5620
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002548 RID: 9544
-		// (get) Token: 0x0600A490 RID: 42128 RVA: 0x002AA1D0 File Offset: 0x002A83D0
+		// Token: 0x170025AE RID: 9646
+		// (get) Token: 0x0600AAB1 RID: 43697 RVA: 0x002C745C File Offset: 0x002C565C
 		public int TargetSelectType
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A491 RID: 42129 RVA: 0x002AA20C File Offset: 0x002A840C
+		// Token: 0x0600AAB2 RID: 43698 RVA: 0x002C7498 File Offset: 0x002C5698
 		public string TargetSelectParams(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002549 RID: 9545
-		// (get) Token: 0x0600A492 RID: 42130 RVA: 0x002AA248 File Offset: 0x002A8448
+		// Token: 0x170025AF RID: 9647
+		// (get) Token: 0x0600AAB3 RID: 43699 RVA: 0x002C74D4 File Offset: 0x002C56D4
 		public int TargetSelectParamsLength
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700254A RID: 9546
-		// (get) Token: 0x0600A493 RID: 42131 RVA: 0x002AA274 File Offset: 0x002A8474
+		// Token: 0x170025B0 RID: 9648
+		// (get) Token: 0x0600AAB4 RID: 43700 RVA: 0x002C7500 File Offset: 0x002C5700
 		public int BuffShowType
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700254B RID: 9547
-		// (get) Token: 0x0600A494 RID: 42132 RVA: 0x002AA2B4 File Offset: 0x002A84B4
+		// Token: 0x170025B1 RID: 9649
+		// (get) Token: 0x0600AAB5 RID: 43701 RVA: 0x002C7540 File Offset: 0x002C5740
 		public int EffectType
 		{
 			get
@@ -136,7 +136,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A495 RID: 42133 RVA: 0x002AA2F4 File Offset: 0x002A84F4
+		// Token: 0x0600AAB6 RID: 43702 RVA: 0x002C7580 File Offset: 0x002C5780
 		public string EffectParams(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -147,8 +147,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700254C RID: 9548
-		// (get) Token: 0x0600A496 RID: 42134 RVA: 0x002AA330 File Offset: 0x002A8530
+		// Token: 0x170025B2 RID: 9650
+		// (get) Token: 0x0600AAB7 RID: 43703 RVA: 0x002C75BC File Offset: 0x002C57BC
 		public int EffectParamsLength
 		{
 			get
@@ -162,41 +162,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A497 RID: 42135 RVA: 0x002AA35C File Offset: 0x002A855C
+		// Token: 0x0600AAB8 RID: 43704 RVA: 0x002C75E8 File Offset: 0x002C57E8
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EffectParamsIter()或GetEffectParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] EffectParams()
+		public string[] EffectParams()
 		{
 			return this.EffectParamsIter().ToArray<string>();
 		}
 
-		// Token: 0x0600A498 RID: 42136 RVA: 0x002AA369 File Offset: 0x002A8569
+		// Token: 0x0600AAB9 RID: 43705 RVA: 0x002C75F5 File Offset: 0x002C57F5
 		[NullableContext(1)]
-		public readonly IEnumerable<string> EffectParamsIter()
+		public IEnumerable<string> EffectParamsIter()
 		{
 			PhantomBattleBuff.<EffectParamsIter>d__23 <EffectParamsIter>d__ = new PhantomBattleBuff.<EffectParamsIter>d__23(-2);
 			<EffectParamsIter>d__.<>3__<>4__this = this;
 			return <EffectParamsIter>d__;
 		}
 
-		// Token: 0x0600A499 RID: 42137 RVA: 0x002AA37E File Offset: 0x002A857E
+		// Token: 0x0600AABA RID: 43706 RVA: 0x002C760A File Offset: 0x002C580A
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TargetSelectParamsIter()或GetTargetSelectParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] TargetSelectParams()
+		public string[] TargetSelectParams()
 		{
 			return this.TargetSelectParamsIter().ToArray<string>();
 		}
 
-		// Token: 0x0600A49A RID: 42138 RVA: 0x002AA38B File Offset: 0x002A858B
+		// Token: 0x0600AABB RID: 43707 RVA: 0x002C7617 File Offset: 0x002C5817
 		[NullableContext(1)]
-		public readonly IEnumerable<string> TargetSelectParamsIter()
+		public IEnumerable<string> TargetSelectParamsIter()
 		{
 			PhantomBattleBuff.<TargetSelectParamsIter>d__25 <TargetSelectParamsIter>d__ = new PhantomBattleBuff.<TargetSelectParamsIter>d__25(-2);
 			<TargetSelectParamsIter>d__.<>3__<>4__this = this;
 			return <TargetSelectParamsIter>d__;
 		}
 
-		// Token: 0x04004F7A RID: 20346
+		// Token: 0x0400555F RID: 21855
 		private Table __p;
 	}
 }

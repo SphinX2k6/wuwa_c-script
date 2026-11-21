@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 {
-	// Token: 0x020047F5 RID: 18421
+	// Token: 0x02003726 RID: 14118
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PunishReportPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030402 RID: 197634 RVA: 0x00B30B21 File Offset: 0x00B2ED21
+		// Token: 0x06024BD2 RID: 150482 RVA: 0x00A60AC1 File Offset: 0x00A5ECC1
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030403 RID: 197635 RVA: 0x00B30B28 File Offset: 0x00B2ED28
+		// Token: 0x06024BD3 RID: 150483 RVA: 0x00A60AC8 File Offset: 0x00A5ECC8
 		protected override void OnStart()
 		{
 			this.TargetListPanel = new PunishReportTargetListPanel();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			base.OnStart();
 		}
 
-		// Token: 0x06030404 RID: 197636 RVA: 0x00B30B50 File Offset: 0x00B2ED50
+		// Token: 0x06024BD4 RID: 150484 RVA: 0x00A60AF0 File Offset: 0x00A5ECF0
 		protected override UniTask OnBeforeShowWorldMapSecondaryUiAsync(params object[] param)
 		{
 			PunishReportPanel.<OnBeforeShowWorldMapSecondaryUiAsync>d__5 <OnBeforeShowWorldMapSecondaryUiAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			return <OnBeforeShowWorldMapSecondaryUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030405 RID: 197637 RVA: 0x00B30B9C File Offset: 0x00B2ED9C
+		// Token: 0x06024BD5 RID: 150485 RVA: 0x00A60B3C File Offset: 0x00A5ED3C
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			verticalLayout2.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06030406 RID: 197638 RVA: 0x00B30C04 File Offset: 0x00B2EE04
+		// Token: 0x06024BD6 RID: 150486 RVA: 0x00A60BA4 File Offset: 0x00A5EDA4
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
 			if (parameters.Length != 0)
@@ -132,13 +132,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			}
 		}
 
-		// Token: 0x06030407 RID: 197639 RVA: 0x00B30DFF File Offset: 0x00B2EFFF
+		// Token: 0x06024BD7 RID: 150487 RVA: 0x00A60D9F File Offset: 0x00A5EF9F
 		protected override void OnConfirmBtnClick(int index)
 		{
 			this.HandleTeleport();
 		}
 
-		// Token: 0x06030408 RID: 197640 RVA: 0x00B30E08 File Offset: 0x00B2F008
+		// Token: 0x06024BD8 RID: 150488 RVA: 0x00A60DA8 File Offset: 0x00A5EFA8
 		private void RefreshLayout()
 		{
 			if (this.SelectedMarkItem == null || this.TargetListPanel == null)
@@ -174,14 +174,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 			}
 		}
 
-		// Token: 0x06030409 RID: 197641 RVA: 0x00B30F37 File Offset: 0x00B2F137
+		// Token: 0x06024BD9 RID: 150489 RVA: 0x00A60ED7 File Offset: 0x00A5F0D7
 		protected override void OnBeforeDestroy()
 		{
 			this.TargetListPanel.Clear();
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x04019F92 RID: 106386
+		// Token: 0x04014646 RID: 83526
 		[Nullable(new byte[]
 		{
 			0,
@@ -190,15 +190,15 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.PunishReport
 		})]
 		private OneOf<LevelPlayReportMarkItem, PunishReportMarkItem>? SelectedMarkItem;
 
-		// Token: 0x04019F93 RID: 106387
+		// Token: 0x04014647 RID: 83527
 		[Nullable(2)]
 		private PunishReportTargetListPanel TargetListPanel;
 
-		// Token: 0x0200AABE RID: 43710
+		// Token: 0x0200946F RID: 37999
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033EF5 RID: 212725
+			// Token: 0x0402E678 RID: 190072
 			public const int PunishReportPanel = 0;
 		}
 	}

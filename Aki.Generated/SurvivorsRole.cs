@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001103 RID: 4355
+	// Token: 0x02001239 RID: 4665
 	public struct SurvivorsRole : IFlatbufferObject
 	{
-		// Token: 0x17003901 RID: 14593
-		// (get) Token: 0x0600DB1D RID: 56093 RVA: 0x00325430 File Offset: 0x00323630
+		// Token: 0x17003C57 RID: 15447
+		// (get) Token: 0x0600E868 RID: 59496 RVA: 0x00350768 File Offset: 0x0034E968
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DB1E RID: 56094 RVA: 0x0032543D File Offset: 0x0032363D
+		// Token: 0x0600E869 RID: 59497 RVA: 0x00350775 File Offset: 0x0034E975
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DB1F RID: 56095 RVA: 0x00325444 File Offset: 0x00323644
+		// Token: 0x0600E86A RID: 59498 RVA: 0x0035077C File Offset: 0x0034E97C
 		public static SurvivorsRole GetRootAsSurvivorsRole(ByteBuffer _bb)
 		{
 			return SurvivorsRole.GetRootAsSurvivorsRole(_bb, default(SurvivorsRole));
 		}
 
-		// Token: 0x0600DB20 RID: 56096 RVA: 0x00325460 File Offset: 0x00323660
+		// Token: 0x0600E86B RID: 59499 RVA: 0x00350798 File Offset: 0x0034E998
 		public static SurvivorsRole GetRootAsSurvivorsRole(ByteBuffer _bb, SurvivorsRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DB21 RID: 56097 RVA: 0x0032547D File Offset: 0x0032367D
+		// Token: 0x0600E86C RID: 59500 RVA: 0x003507B5 File Offset: 0x0034E9B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DB22 RID: 56098 RVA: 0x0032548C File Offset: 0x0032368C
+		// Token: 0x0600E86D RID: 59501 RVA: 0x003507C4 File Offset: 0x0034E9C4
 		public SurvivorsRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003902 RID: 14594
-		// (get) Token: 0x0600DB23 RID: 56099 RVA: 0x0032549C File Offset: 0x0032369C
+		// Token: 0x17003C58 RID: 15448
+		// (get) Token: 0x0600E86E RID: 59502 RVA: 0x003507D4 File Offset: 0x0034E9D4
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003903 RID: 14595
-		// (get) Token: 0x0600DB24 RID: 56100 RVA: 0x003254D8 File Offset: 0x003236D8
+		// Token: 0x17003C59 RID: 15449
+		// (get) Token: 0x0600E86F RID: 59503 RVA: 0x00350810 File Offset: 0x0034EA10
 		public int ActivityId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003904 RID: 14596
-		// (get) Token: 0x0600DB25 RID: 56101 RVA: 0x00325514 File Offset: 0x00323714
+		// Token: 0x17003C5A RID: 15450
+		// (get) Token: 0x0600E870 RID: 59504 RVA: 0x0035084C File Offset: 0x0034EA4C
 		public int InitWeapon
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003905 RID: 14597
-		// (get) Token: 0x0600DB26 RID: 56102 RVA: 0x00325550 File Offset: 0x00323750
+		// Token: 0x17003C5B RID: 15451
+		// (get) Token: 0x0600E871 RID: 59505 RVA: 0x00350888 File Offset: 0x0034EA88
 		public int TrialRoleId
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003906 RID: 14598
-		// (get) Token: 0x0600DB27 RID: 56103 RVA: 0x00325590 File Offset: 0x00323790
+		// Token: 0x17003C5C RID: 15452
+		// (get) Token: 0x0600E872 RID: 59506 RVA: 0x003508C8 File Offset: 0x0034EAC8
 		public int UnlockConditionId
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003907 RID: 14599
-		// (get) Token: 0x0600DB28 RID: 56104 RVA: 0x003255D0 File Offset: 0x003237D0
+		// Token: 0x17003C5D RID: 15453
+		// (get) Token: 0x0600E873 RID: 59507 RVA: 0x00350908 File Offset: 0x0034EB08
 		public int Maxlevel
 		{
 			get
@@ -141,7 +141,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DB29 RID: 56105 RVA: 0x00325610 File Offset: 0x00323810
+		// Token: 0x0600E874 RID: 59508 RVA: 0x00350948 File Offset: 0x0034EB48
 		public DicIntInt? EvolveIds(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -152,8 +152,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003908 RID: 14600
-		// (get) Token: 0x0600DB2A RID: 56106 RVA: 0x00325674 File Offset: 0x00323874
+		// Token: 0x17003C5E RID: 15454
+		// (get) Token: 0x0600E875 RID: 59509 RVA: 0x003509AC File Offset: 0x0034EBAC
 		public int EvolveIdsLength
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003909 RID: 14601
-		// (get) Token: 0x0600DB2B RID: 56107 RVA: 0x003256A0 File Offset: 0x003238A0
+		// Token: 0x17003C5F RID: 15455
+		// (get) Token: 0x0600E876 RID: 59510 RVA: 0x003509D8 File Offset: 0x0034EBD8
 		public int SortId
 		{
 			get
@@ -182,7 +182,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DB2C RID: 56108 RVA: 0x003256E0 File Offset: 0x003238E0
+		// Token: 0x0600E877 RID: 59511 RVA: 0x00350A18 File Offset: 0x0034EC18
 		public int RecommendProperty(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -193,8 +193,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700390A RID: 14602
-		// (get) Token: 0x0600DB2D RID: 56109 RVA: 0x00325720 File Offset: 0x00323920
+		// Token: 0x17003C60 RID: 15456
+		// (get) Token: 0x0600E878 RID: 59512 RVA: 0x00350A58 File Offset: 0x0034EC58
 		public int RecommendPropertyLength
 		{
 			get
@@ -208,19 +208,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DB2E RID: 56110 RVA: 0x0032574C File Offset: 0x0032394C
+		// Token: 0x0600E879 RID: 59513 RVA: 0x00350A84 File Offset: 0x0034EC84
 		public Span<int> GetRecommendPropertyBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x0600DB2F RID: 56111 RVA: 0x0032575C File Offset: 0x0032395C
+		// Token: 0x0600E87A RID: 59514 RVA: 0x00350A94 File Offset: 0x0034EC94
 		public int[] GetRecommendPropertyArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DB30 RID: 56112 RVA: 0x00325774 File Offset: 0x00323974
+		// Token: 0x0600E87B RID: 59515 RVA: 0x00350AAC File Offset: 0x0034ECAC
 		public int PropertyList(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -231,8 +231,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700390B RID: 14603
-		// (get) Token: 0x0600DB31 RID: 56113 RVA: 0x003257B4 File Offset: 0x003239B4
+		// Token: 0x17003C61 RID: 15457
+		// (get) Token: 0x0600E87C RID: 59516 RVA: 0x00350AEC File Offset: 0x0034ECEC
 		public int PropertyListLength
 		{
 			get
@@ -246,20 +246,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DB32 RID: 56114 RVA: 0x003257E0 File Offset: 0x003239E0
+		// Token: 0x0600E87D RID: 59517 RVA: 0x00350B18 File Offset: 0x0034ED18
 		public Span<int> GetPropertyListBytes()
 		{
 			return this.__p.__vector_as_span<int>(22, 4);
 		}
 
-		// Token: 0x0600DB33 RID: 56115 RVA: 0x003257F0 File Offset: 0x003239F0
+		// Token: 0x0600E87E RID: 59518 RVA: 0x00350B28 File Offset: 0x0034ED28
 		public int[] GetPropertyListArray()
 		{
 			return this.__p.__vector_as_array<int>(22) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700390C RID: 14604
-		// (get) Token: 0x0600DB34 RID: 56116 RVA: 0x00325808 File Offset: 0x00323A08
+		// Token: 0x17003C62 RID: 15458
+		// (get) Token: 0x0600E87F RID: 59519 RVA: 0x00350B40 File Offset: 0x0034ED40
 		public int TemplateId
 		{
 			get
@@ -273,8 +273,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700390D RID: 14605
-		// (get) Token: 0x0600DB35 RID: 56117 RVA: 0x00325848 File Offset: 0x00323A48
+		// Token: 0x17003C63 RID: 15459
+		// (get) Token: 0x0600E880 RID: 59520 RVA: 0x00350B80 File Offset: 0x0034ED80
 		public int PropId
 		{
 			get
@@ -288,60 +288,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DB36 RID: 56118 RVA: 0x00325888 File Offset: 0x00323A88
+		// Token: 0x0600E881 RID: 59521 RVA: 0x00350BC0 File Offset: 0x0034EDC0
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用EvolveIdsFrozenDict()缓存字典，遍历请使用EvolveIdsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> EvolveIds()
+		public Dictionary<int, int> EvolveIds()
 		{
 			return this.EvolveIdsIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600DB37 RID: 56119 RVA: 0x003258DE File Offset: 0x00323ADE
+		// Token: 0x0600E882 RID: 59522 RVA: 0x00350C16 File Offset: 0x0034EE16
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> EvolveIdsIter()
+		public IEnumerable<DicIntInt> EvolveIdsIter()
 		{
 			SurvivorsRole.<EvolveIdsIter>d__40 <EvolveIdsIter>d__ = new SurvivorsRole.<EvolveIdsIter>d__40(-2);
 			<EvolveIdsIter>d__.<>3__<>4__this = this;
 			return <EvolveIdsIter>d__;
 		}
 
-		// Token: 0x0600DB38 RID: 56120 RVA: 0x003258F4 File Offset: 0x00323AF4
+		// Token: 0x0600E883 RID: 59523 RVA: 0x00350C2B File Offset: 0x0034EE2B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PropertyListIter()或GetPropertyListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PropertyList()
+		public int[] PropertyList()
 		{
-			SurvivorsRole survivorsRole = this;
-			return survivorsRole.GetPropertyListArray() ?? Array.Empty<int>();
+			return this.GetPropertyListArray();
 		}
 
-		// Token: 0x0600DB39 RID: 56121 RVA: 0x00325918 File Offset: 0x00323B18
+		// Token: 0x0600E884 RID: 59524 RVA: 0x00350C33 File Offset: 0x0034EE33
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PropertyListIter()
+		public IEnumerable<int> PropertyListIter()
 		{
 			SurvivorsRole.<PropertyListIter>d__42 <PropertyListIter>d__ = new SurvivorsRole.<PropertyListIter>d__42(-2);
 			<PropertyListIter>d__.<>3__<>4__this = this;
 			return <PropertyListIter>d__;
 		}
 
-		// Token: 0x0600DB3A RID: 56122 RVA: 0x00325930 File Offset: 0x00323B30
+		// Token: 0x0600E885 RID: 59525 RVA: 0x00350C48 File Offset: 0x0034EE48
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RecommendPropertyIter()或GetRecommendPropertyBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RecommendProperty()
+		public int[] RecommendProperty()
 		{
-			SurvivorsRole survivorsRole = this;
-			return survivorsRole.GetRecommendPropertyArray() ?? Array.Empty<int>();
+			return this.GetRecommendPropertyArray();
 		}
 
-		// Token: 0x0600DB3B RID: 56123 RVA: 0x00325954 File Offset: 0x00323B54
+		// Token: 0x0600E886 RID: 59526 RVA: 0x00350C50 File Offset: 0x0034EE50
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RecommendPropertyIter()
+		public IEnumerable<int> RecommendPropertyIter()
 		{
 			SurvivorsRole.<RecommendPropertyIter>d__44 <RecommendPropertyIter>d__ = new SurvivorsRole.<RecommendPropertyIter>d__44(-2);
 			<RecommendPropertyIter>d__.<>3__<>4__this = this;
 			return <RecommendPropertyIter>d__;
 		}
 
-		// Token: 0x0600DB3C RID: 56124 RVA: 0x0032596C File Offset: 0x00323B6C
+		// Token: 0x0600E887 RID: 59527 RVA: 0x00350C68 File Offset: 0x0034EE68
 		public int? GetEvolveIds(int key)
 		{
 			this.EnsureEvolveIdsCacheIfNeeded();
@@ -353,7 +348,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600DB3D RID: 56125 RVA: 0x003259A0 File Offset: 0x00323BA0
+		// Token: 0x0600E888 RID: 59528 RVA: 0x00350C9C File Offset: 0x0034EE9C
 		private void EnsureEvolveIdsCacheIfNeeded()
 		{
 			if (this.EvolveIdsCache != null)
@@ -363,18 +358,18 @@ namespace Aki.Config
 			this.EvolveIdsCache = this.EvolveIdsIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600DB3E RID: 56126 RVA: 0x00325A06 File Offset: 0x00323C06
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetEvolveIdsFrozenDict(int key)
+		// Token: 0x0600E889 RID: 59529 RVA: 0x00350D02 File Offset: 0x0034EF02
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetEvolveIdsFrozenDict()
 		{
 			this.EnsureEvolveIdsCacheIfNeeded();
 			return this.EvolveIdsCache;
 		}
 
-		// Token: 0x0400523B RID: 21051
+		// Token: 0x0400587E RID: 22654
 		private Table __p;
 
-		// Token: 0x0400523C RID: 21052
+		// Token: 0x0400587F RID: 22655
 		[Nullable(2)]
 		private FrozenDictionary<int, int> EvolveIdsCache;
 	}

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200587F RID: 22655
+	// Token: 0x02004857 RID: 18519
 	public class InstanceDungeonRewardView : UiViewBase
 	{
-		// Token: 0x06039A87 RID: 236167 RVA: 0x00DB3EAB File Offset: 0x00DB20AB
+		// Token: 0x0602E9AA RID: 190890 RVA: 0x00D02DBF File Offset: 0x00D00FBF
 		[NullableContext(1)]
 		public InstanceDungeonRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039A88 RID: 236168 RVA: 0x00DB3EB4 File Offset: 0x00DB20B4
+		// Token: 0x0602E9AB RID: 190891 RVA: 0x00D02DC8 File Offset: 0x00D00FC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039A89 RID: 236169 RVA: 0x00DB3F3E File Offset: 0x00DB213E
+		// Token: 0x0602E9AC RID: 190892 RVA: 0x00D02E52 File Offset: 0x00D01052
 		protected override void OnStart()
 		{
 			this.RewardViewItemScroll = new GenericScrollViewNew<InstanceDungeonRewardItem, ValueTuple<int, int>>(base.GetScrollViewWithScrollbar(2), new Func<InstanceDungeonRewardItem>(this.InitItem), null, false, null);
 		}
 
-		// Token: 0x06039A8A RID: 236170 RVA: 0x00DB3F64 File Offset: 0x00DB2164
+		// Token: 0x0602E9AD RID: 190893 RVA: 0x00D02E78 File Offset: 0x00D01078
 		protected override void OnBeforeShow()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "InstanceRewardTitle", Array.Empty<object>());
@@ -80,14 +80,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}, false);
 		}
 
-		// Token: 0x06039A8B RID: 236171 RVA: 0x00DB40C0 File Offset: 0x00DB22C0
+		// Token: 0x0602E9AE RID: 190894 RVA: 0x00D02FD4 File Offset: 0x00D011D4
 		[NullableContext(1)]
 		private InstanceDungeonRewardItem InitItem()
 		{
 			return new InstanceDungeonRewardItem();
 		}
 
-		// Token: 0x0401E215 RID: 123413
+		// Token: 0x04018CB2 RID: 101554
 		[Nullable(new byte[]
 		{
 			2,
@@ -96,16 +96,16 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private GenericScrollViewNew<InstanceDungeonRewardItem, ValueTuple<int, int>> RewardViewItemScroll;
 
-		// Token: 0x0200BADA RID: 47834
+		// Token: 0x0200A4F3 RID: 42227
 		private static class EChildCom
 		{
-			// Token: 0x0403876E RID: 231278
+			// Token: 0x0403316F RID: 209263
 			public const int TitleText = 0;
 
-			// Token: 0x0403876F RID: 231279
+			// Token: 0x04033170 RID: 209264
 			public const int SubTitleText = 1;
 
-			// Token: 0x04038770 RID: 231280
+			// Token: 0x04033171 RID: 209265
 			public const int RewardLayout = 2;
 		}
 	}

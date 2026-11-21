@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200534B RID: 21323
+	// Token: 0x0200431B RID: 17179
 	public static class ERogueResMainSpineTypeExtensions
 	{
-		// Token: 0x0603679D RID: 223133 RVA: 0x00CE68E0 File Offset: 0x00CE4AE0
+		// Token: 0x0602B699 RID: 177817 RVA: 0x00C342B0 File Offset: 0x00C324B0
 		public static string ToEnumString(this ERogueResMainSpineType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return result;
 		}
 
-		// Token: 0x0603679E RID: 223134 RVA: 0x00CE6918 File Offset: 0x00CE4B18
+		// Token: 0x0602B69A RID: 177818 RVA: 0x00C342E8 File Offset: 0x00C324E8
 		public static ERogueResMainSpineType FromString(string name)
 		{
 			ERogueResMainSpineType result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return result;
 		}
 
-		// Token: 0x0603679F RID: 223135 RVA: 0x00CE6941 File Offset: 0x00CE4B41
+		// Token: 0x0602B69B RID: 177819 RVA: 0x00C34311 File Offset: 0x00C32511
 		public static bool TryFromString(string name, out ERogueResMainSpineType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return true;
 		}
 
-		// Token: 0x060367A0 RID: 223136 RVA: 0x00CE697A File Offset: 0x00CE4B7A
+		// Token: 0x0602B69C RID: 177820 RVA: 0x00C3434A File Offset: 0x00C3254A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060367A1 RID: 223137 RVA: 0x00CE6992 File Offset: 0x00CE4B92
+		// Token: 0x0602B69D RID: 177821 RVA: 0x00C34362 File Offset: 0x00C32562
 		public static ERogueResMainSpineType[] GetValues()
 		{
 			return new ERogueResMainSpineType[]
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060367A2 RID: 223138 RVA: 0x00CE699E File Offset: 0x00CE4B9E
+		// Token: 0x0602B69E RID: 177822 RVA: 0x00C3436E File Offset: 0x00C3256E
 		public static string[] GetNames()
 		{
 			return new string[]

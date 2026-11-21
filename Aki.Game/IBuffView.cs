@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200141A RID: 5146
+// Token: 0x020008CE RID: 2254
 public interface IBuffView
 {
-	// Token: 0x17000C6A RID: 3178
-	// (get) Token: 0x06009113 RID: 37139
-	// (set) Token: 0x06009114 RID: 37140
+	// Token: 0x17000C8A RID: 3210
+	// (get) Token: 0x060064A8 RID: 25768
+	// (set) Token: 0x060064A9 RID: 25769
 	int BuffId { get; set; }
 
-	// Token: 0x17000C6B RID: 3179
-	// (get) Token: 0x06009115 RID: 37141
-	// (set) Token: 0x06009116 RID: 37142
+	// Token: 0x17000C8B RID: 3211
+	// (get) Token: 0x060064AA RID: 25770
+	// (set) Token: 0x060064AB RID: 25771
 	EPinballBuffType BuffType { get; set; }
 
-	// Token: 0x17000C6C RID: 3180
-	// (get) Token: 0x06009117 RID: 37143
-	// (set) Token: 0x06009118 RID: 37144
+	// Token: 0x17000C8C RID: 3212
+	// (get) Token: 0x060064AC RID: 25772
+	// (set) Token: 0x060064AD RID: 25773
 	int BuffCount { get; set; }
 
-	// Token: 0x17000C6D RID: 3181
-	// (get) Token: 0x06009119 RID: 37145
-	// (set) Token: 0x0600911A RID: 37146
+	// Token: 0x17000C8D RID: 3213
+	// (get) Token: 0x060064AE RID: 25774
+	// (set) Token: 0x060064AF RID: 25775
 	int Sort { get; set; }
 }

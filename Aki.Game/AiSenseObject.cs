@@ -4,7 +4,7 @@ using Aki.Config;
 // Token: 0x020000F3 RID: 243
 public class AiSenseObject
 {
-	// Token: 0x06000DC5 RID: 3525 RVA: 0x0004D030 File Offset: 0x0004B230
+	// Token: 0x06000DCB RID: 3531 RVA: 0x0004DBC0 File Offset: 0x0004BDC0
 	public AiSenseObject(AiSense aiSense)
 	{
 		this.AiSense = aiSense;
@@ -16,7 +16,7 @@ public class AiSenseObject
 		this.SquaredAirSenseRate = this.AiSense.AirSenseRate * this.AiSense.AirSenseRate;
 	}
 
-	// Token: 0x06000DC6 RID: 3526 RVA: 0x0004D198 File Offset: 0x0004B398
+	// Token: 0x06000DCC RID: 3532 RVA: 0x0004DD28 File Offset: 0x0004BF28
 	public bool InArea(double squaredDist, float angleHorizontal, float angleVertical, ECharPositionState positionState, ECharMoveState moveState, bool inSenseBefore)
 	{
 		if (this.WithAngleHorizontal && !MathUtils.Instance.InRange((double)angleHorizontal, this.AiSense.HorizontalAngle.Value))
@@ -42,30 +42,30 @@ public class AiSenseObject
 		return !(inSenseBefore ? (num > (double)this.SquaredDisMax) : (num > (double)this.SquaredDisMin));
 	}
 
-	// Token: 0x04000B1D RID: 2845
+	// Token: 0x04000B25 RID: 2853
 	public readonly bool WithAngleHorizontal;
 
-	// Token: 0x04000B1E RID: 2846
+	// Token: 0x04000B26 RID: 2854
 	public readonly bool WithAngleVertical;
 
-	// Token: 0x04000B1F RID: 2847
+	// Token: 0x04000B27 RID: 2855
 	private readonly float SquaredDisMin;
 
-	// Token: 0x04000B20 RID: 2848
+	// Token: 0x04000B28 RID: 2856
 	private readonly float SquaredDisMax;
 
-	// Token: 0x04000B21 RID: 2849
+	// Token: 0x04000B29 RID: 2857
 	private readonly float SquaredWalkSenseRate;
 
-	// Token: 0x04000B22 RID: 2850
+	// Token: 0x04000B2A RID: 2858
 	private readonly float SquaredAirSenseRate;
 
-	// Token: 0x04000B23 RID: 2851
+	// Token: 0x04000B2B RID: 2859
 	public readonly AiSense AiSense;
 
-	// Token: 0x04000B24 RID: 2852
+	// Token: 0x04000B2C RID: 2860
 	private const float MINUS_HALF = -180f;
 
-	// Token: 0x04000B25 RID: 2853
+	// Token: 0x04000B2D RID: 2861
 	private const float MINUS_QUATER = -90f;
 }

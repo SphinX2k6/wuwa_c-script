@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025FD RID: 9725
+// Token: 0x02001AE8 RID: 6888
 [NullableContext(2)]
 [Nullable(0)]
 public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 {
-	// Token: 0x06013CA6 RID: 81062 RVA: 0x004F6A58 File Offset: 0x004F4C58
+	// Token: 0x06011188 RID: 70024 RVA: 0x005057EC File Offset: 0x005039EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,14 +35,14 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		};
 	}
 
-	// Token: 0x06013CA7 RID: 81063 RVA: 0x004F6B59 File Offset: 0x004F4D59
+	// Token: 0x06011189 RID: 70025 RVA: 0x005058ED File Offset: 0x00503AED
 	[NullableContext(1)]
 	public void SetBackBackCallBack(Action callBack)
 	{
 		this.BackBtnCallBack = callBack;
 	}
 
-	// Token: 0x06013CA8 RID: 81064 RVA: 0x004F6B62 File Offset: 0x004F4D62
+	// Token: 0x0601118A RID: 70026 RVA: 0x005058F6 File Offset: 0x00503AF6
 	private void ClickBackBtn()
 	{
 		Action backBtnCallBack = this.BackBtnCallBack;
@@ -53,7 +53,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		backBtnCallBack();
 	}
 
-	// Token: 0x06013CA9 RID: 81065 RVA: 0x004F6B74 File Offset: 0x004F4D74
+	// Token: 0x0601118B RID: 70027 RVA: 0x00505908 File Offset: 0x00503B08
 	protected override void OnStart()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), "Energy_Title", Array.Empty<object>());
@@ -64,32 +64,32 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		this.AddEventListener();
 	}
 
-	// Token: 0x06013CAA RID: 81066 RVA: 0x004F6BE8 File Offset: 0x004F4DE8
+	// Token: 0x0601118C RID: 70028 RVA: 0x0050597C File Offset: 0x00503B7C
 	private void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPowerChanged, new Action(this.OnPowerChanged));
 	}
 
-	// Token: 0x06013CAB RID: 81067 RVA: 0x004F6C06 File Offset: 0x004F4E06
+	// Token: 0x0601118D RID: 70029 RVA: 0x0050599A File Offset: 0x00503B9A
 	private void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPowerChanged, new Action(this.OnPowerChanged));
 	}
 
-	// Token: 0x06013CAC RID: 81068 RVA: 0x004F6C24 File Offset: 0x004F4E24
+	// Token: 0x0601118E RID: 70030 RVA: 0x005059B8 File Offset: 0x00503BB8
 	private void OnPowerChanged()
 	{
 		this.RefreshTitle();
 		this.RefreshRecoveryText();
 	}
 
-	// Token: 0x06013CAD RID: 81069 RVA: 0x004F6C32 File Offset: 0x004F4E32
+	// Token: 0x0601118F RID: 70031 RVA: 0x005059C6 File Offset: 0x00503BC6
 	protected override void OnBeforeShow()
 	{
 		this.PlayStartSequence();
 	}
 
-	// Token: 0x06013CAE RID: 81070 RVA: 0x004F6C3C File Offset: 0x004F4E3C
+	// Token: 0x06011190 RID: 70032 RVA: 0x005059D0 File Offset: 0x00503BD0
 	public void PlayStartSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -100,7 +100,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		levelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x06013CAF RID: 81071 RVA: 0x004F6C6C File Offset: 0x004F4E6C
+	// Token: 0x06011191 RID: 70033 RVA: 0x00505A00 File Offset: 0x00503C00
 	public UniTask PlayCloseSequence()
 	{
 		PowerTipsItem.<PlayCloseSequence>d__18 <PlayCloseSequence>d__;
@@ -111,7 +111,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013CB0 RID: 81072 RVA: 0x004F6CB0 File Offset: 0x004F4EB0
+	// Token: 0x06011192 RID: 70034 RVA: 0x00505A44 File Offset: 0x00503C44
 	protected override UniTask OnCreateAsync()
 	{
 		PowerTipsItem.<OnCreateAsync>d__19 <OnCreateAsync>d__;
@@ -122,7 +122,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013CB1 RID: 81073 RVA: 0x004F6CF4 File Offset: 0x004F4EF4
+	// Token: 0x06011193 RID: 70035 RVA: 0x00505A88 File Offset: 0x00503C88
 	[NullableContext(1)]
 	public void Refresh(ItemTipsData data)
 	{
@@ -139,7 +139,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		this.RefreshView();
 	}
 
-	// Token: 0x06013CB2 RID: 81074 RVA: 0x004F6D98 File Offset: 0x004F4F98
+	// Token: 0x06011194 RID: 70036 RVA: 0x00505B2C File Offset: 0x00503D2C
 	private void RefreshView()
 	{
 		this.RefreshTitle();
@@ -148,7 +148,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		this.RefreshRecoveryText();
 	}
 
-	// Token: 0x06013CB3 RID: 81075 RVA: 0x004F6DB4 File Offset: 0x004F4FB4
+	// Token: 0x06011195 RID: 70037 RVA: 0x00505B48 File Offset: 0x00503D48
 	private void RefreshRecoveryText()
 	{
 		EPowerRecoveryMode powerRecoveryMode = this.CurrentPowerData.GetPowerRecoveryMode();
@@ -165,7 +165,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "PowerNextRecovery", new <>z__ReadOnlySingleElementList<object>(this.CurrentPowerData.GetNextTimerRecoverText()));
 	}
 
-	// Token: 0x06013CB4 RID: 81076 RVA: 0x004F6E34 File Offset: 0x004F5034
+	// Token: 0x06011196 RID: 70038 RVA: 0x00505BC8 File Offset: 0x00503DC8
 	private void RefreshTitle()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Energy_Number", new <>z__ReadOnlyArray<object>(new object[]
@@ -175,14 +175,14 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		}));
 	}
 
-	// Token: 0x06013CB5 RID: 81077 RVA: 0x004F6E88 File Offset: 0x004F5088
+	// Token: 0x06011197 RID: 70039 RVA: 0x00505C1C File Offset: 0x00503E1C
 	private void RefreshDesc()
 	{
 		string attributesDescription = this.CurrentDataItemConfig.AttributesDescription;
 		base.GetText(3).ShowTextNew(attributesDescription);
 	}
 
-	// Token: 0x06013CB6 RID: 81078 RVA: 0x004F6EB0 File Offset: 0x004F50B0
+	// Token: 0x06011198 RID: 70040 RVA: 0x00505C44 File Offset: 0x00503E44
 	private void RefreshBgDesc()
 	{
 		string bgDescription = this.CurrentDataItemConfig.BgDescription;
@@ -192,19 +192,19 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		}
 	}
 
-	// Token: 0x06013CB7 RID: 81079 RVA: 0x004F6EE2 File Offset: 0x004F50E2
+	// Token: 0x06011199 RID: 70041 RVA: 0x00505C76 File Offset: 0x00503E76
 	private void RefreshTime()
 	{
 		this.RefreshRecoveryText();
 	}
 
-	// Token: 0x06013CB8 RID: 81080 RVA: 0x004F6EEA File Offset: 0x004F50EA
+	// Token: 0x0601119A RID: 70042 RVA: 0x00505C7E File Offset: 0x00503E7E
 	private void OnTimer()
 	{
 		this.RefreshTime();
 	}
 
-	// Token: 0x06013CB9 RID: 81081 RVA: 0x004F6EF2 File Offset: 0x004F50F2
+	// Token: 0x0601119B RID: 70043 RVA: 0x00505C86 File Offset: 0x00503E86
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
@@ -215,7 +215,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		}
 	}
 
-	// Token: 0x06013CBA RID: 81082 RVA: 0x004F6F1A File Offset: 0x004F511A
+	// Token: 0x0601119C RID: 70044 RVA: 0x00505CAE File Offset: 0x00503EAE
 	public override void SetActive(bool visibility)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -226,7 +226,7 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		rootItem.SetUIActive(visibility);
 	}
 
-	// Token: 0x06013CBB RID: 81083 RVA: 0x004F6F30 File Offset: 0x004F5130
+	// Token: 0x0601119D RID: 70045 RVA: 0x00505CC4 File Offset: 0x00503EC4
 	[NullableContext(1)]
 	private PayShopGoods ConvertToPayShopGoods(TipsOverPowerData data)
 	{
@@ -237,51 +237,51 @@ public class PowerTipsItem : UiPanelBase, IItemTipsUiProxy
 		return payShopGoods;
 	}
 
-	// Token: 0x0400951E RID: 38174
+	// Token: 0x04009675 RID: 38517
 	private const int GAP = 1000;
 
-	// Token: 0x0400951F RID: 38175
+	// Token: 0x04009676 RID: 38518
 	private PayShopItem ShowItem;
 
-	// Token: 0x04009520 RID: 38176
+	// Token: 0x04009677 RID: 38519
 	private TimerHandle TimeHandle;
 
-	// Token: 0x04009521 RID: 38177
+	// Token: 0x04009678 RID: 38520
 	private TipsOverPowerData CurrentData;
 
-	// Token: 0x04009522 RID: 38178
+	// Token: 0x04009679 RID: 38521
 	private PowerData CurrentPowerData;
 
-	// Token: 0x04009523 RID: 38179
+	// Token: 0x0400967A RID: 38522
 	private ItemConfig CurrentDataItemConfig;
 
-	// Token: 0x04009524 RID: 38180
+	// Token: 0x0400967B RID: 38523
 	private Action BackBtnCallBack;
 
-	// Token: 0x04009525 RID: 38181
+	// Token: 0x0400967C RID: 38524
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008C2F RID: 35887
+	// Token: 0x02007DB8 RID: 32184
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402D82D RID: 186413
+		// Token: 0x04028B45 RID: 166725
 		BgItem,
-		// Token: 0x0402D82E RID: 186414
+		// Token: 0x04028B46 RID: 166726
 		TitleText,
-		// Token: 0x0402D82F RID: 186415
+		// Token: 0x04028B47 RID: 166727
 		ShopItemPanel,
-		// Token: 0x0402D830 RID: 186416
+		// Token: 0x04028B48 RID: 166728
 		DetailText,
-		// Token: 0x0402D831 RID: 186417
+		// Token: 0x04028B49 RID: 166729
 		TimeText,
-		// Token: 0x0402D832 RID: 186418
+		// Token: 0x04028B4A RID: 166730
 		BackBtn,
-		// Token: 0x0402D833 RID: 186419
+		// Token: 0x04028B4B RID: 166731
 		WindowNameText,
-		// Token: 0x0402D834 RID: 186420
+		// Token: 0x04028B4C RID: 166732
 		PowerDesc,
-		// Token: 0x0402D835 RID: 186421
+		// Token: 0x04028B4D RID: 166733
 		BgDesc
 	}
 }

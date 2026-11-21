@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E37 RID: 20023
+	// Token: 0x02005348 RID: 21320
 	public enum EVehicleSeatCount : byte
 	{
-		// Token: 0x0400DBAB RID: 56235
+		// Token: 0x0400E725 RID: 59173
 		None,
-		// Token: 0x0400DBAC RID: 56236
+		// Token: 0x0400E726 RID: 59174
 		OneSeat,
-		// Token: 0x0400DBAD RID: 56237
+		// Token: 0x0400E727 RID: 59175
 		TwoSeats,
-		// Token: 0x0400DBAE RID: 56238
+		// Token: 0x0400E728 RID: 59176
 		ThreeSeats,
-		// Token: 0x0400DBAF RID: 56239
+		// Token: 0x0400E729 RID: 59177
 		FourSeats
 	}
 }

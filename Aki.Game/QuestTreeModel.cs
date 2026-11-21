@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002699 RID: 9881
+// Token: 0x02001B84 RID: 7044
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class QuestTreeModel : ModelBase
 {
-	// Token: 0x060143F8 RID: 82936 RVA: 0x0051E334 File Offset: 0x0051C534
+	// Token: 0x060118DA RID: 71898 RVA: 0x0052D06C File Offset: 0x0052B26C
 	protected override bool OnInit()
 	{
 		foreach (QuestTreeChapter config in QuestTreeConfig.Instance.GetAllChapters())
@@ -20,7 +20,7 @@ public class QuestTreeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060143F9 RID: 82937 RVA: 0x0051E398 File Offset: 0x0051C598
+	// Token: 0x060118DB RID: 71899 RVA: 0x0052D0D0 File Offset: 0x0052B2D0
 	protected override bool OnClear()
 	{
 		foreach (QuestTreeChapterData questTreeChapterData in this.ChapterDataMap.Values)
@@ -34,7 +34,7 @@ public class QuestTreeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060143FA RID: 82938 RVA: 0x0051E41C File Offset: 0x0051C61C
+	// Token: 0x060118DC RID: 71900 RVA: 0x0052D154 File Offset: 0x0052B354
 	public void UpdateServerUnlockInfo(IReadOnlyList<int> chapterIds, IReadOnlyList<int> nodeIds)
 	{
 		this.ServerUnlockedChapterIds.Clear();
@@ -49,32 +49,32 @@ public class QuestTreeModel : ModelBase
 		}
 	}
 
-	// Token: 0x060143FB RID: 82939 RVA: 0x0051E4C0 File Offset: 0x0051C6C0
+	// Token: 0x060118DD RID: 71901 RVA: 0x0052D1F8 File Offset: 0x0052B3F8
 	public bool IsNodeUnlockedByServer(int nodeId)
 	{
 		return this.ServerUnlockedNodeIds.Contains(nodeId);
 	}
 
-	// Token: 0x060143FC RID: 82940 RVA: 0x0051E4CE File Offset: 0x0051C6CE
+	// Token: 0x060118DE RID: 71902 RVA: 0x0052D206 File Offset: 0x0052B406
 	public bool IsChapterUnlockedByServer(int chapterId)
 	{
 		return this.ServerUnlockedChapterIds.Contains(chapterId);
 	}
 
-	// Token: 0x060143FD RID: 82941 RVA: 0x0051E4DC File Offset: 0x0051C6DC
+	// Token: 0x060118DF RID: 71903 RVA: 0x0052D214 File Offset: 0x0052B414
 	[NullableContext(2)]
 	public QuestTreeChapterData GetChapterDataById(int id)
 	{
 		return this.ChapterDataMap.GetValueOrDefault(id);
 	}
 
-	// Token: 0x060143FE RID: 82942 RVA: 0x0051E4EA File Offset: 0x0051C6EA
+	// Token: 0x060118E0 RID: 71904 RVA: 0x0052D222 File Offset: 0x0052B422
 	public List<QuestTreeChapterData> GetAllChapterData()
 	{
 		return new List<QuestTreeChapterData>(this.ChapterDataMap.Values);
 	}
 
-	// Token: 0x060143FF RID: 82943 RVA: 0x0051E4FC File Offset: 0x0051C6FC
+	// Token: 0x060118E1 RID: 71905 RVA: 0x0052D234 File Offset: 0x0052B434
 	public List<QuestTreeChapterData> GetVisibleChapterDataList()
 	{
 		List<QuestTreeChapterData> list = new List<QuestTreeChapterData>();
@@ -97,7 +97,7 @@ public class QuestTreeModel : ModelBase
 		goto IL_47;
 	}
 
-	// Token: 0x06014400 RID: 82944 RVA: 0x0051E560 File Offset: 0x0051C760
+	// Token: 0x060118E2 RID: 71906 RVA: 0x0052D298 File Offset: 0x0052B498
 	public List<QuestTreeNodeData> GetAllAcceptableNodeList()
 	{
 		List<QuestTreeNodeData> list = new List<QuestTreeNodeData>();
@@ -111,7 +111,7 @@ public class QuestTreeModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06014401 RID: 82945 RVA: 0x0051E5F8 File Offset: 0x0051C7F8
+	// Token: 0x060118E3 RID: 71907 RVA: 0x0052D330 File Offset: 0x0052B530
 	[NullableContext(2)]
 	public QuestTreeChapterData GetCurTrackingChapterData()
 	{
@@ -125,7 +125,7 @@ public class QuestTreeModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06014402 RID: 82946 RVA: 0x0051E658 File Offset: 0x0051C858
+	// Token: 0x060118E4 RID: 71908 RVA: 0x0052D390 File Offset: 0x0052B590
 	public QuestTreeNodeData GetOrCreateDummyQuestTreeNodeData(QuestTreeNode dummyConfig)
 	{
 		if (this.DummyQuestTreeNodeData == null)
@@ -135,7 +135,7 @@ public class QuestTreeModel : ModelBase
 		return this.DummyQuestTreeNodeData;
 	}
 
-	// Token: 0x06014403 RID: 82947 RVA: 0x0051E674 File Offset: 0x0051C874
+	// Token: 0x060118E5 RID: 71909 RVA: 0x0052D3AC File Offset: 0x0052B5AC
 	[NullableContext(2)]
 	public QuestTreeNodeData GetNodeDataFromQuestId(int questId)
 	{
@@ -152,7 +152,7 @@ public class QuestTreeModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06014404 RID: 82948 RVA: 0x0051E734 File Offset: 0x0051C934
+	// Token: 0x060118E6 RID: 71910 RVA: 0x0052D46C File Offset: 0x0052B66C
 	[NullableContext(2)]
 	public QuestTreeNodeData GetNodeDataFromNodeId(int nodeId)
 	{
@@ -167,8 +167,8 @@ public class QuestTreeModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17001A2B RID: 6699
-	// (get) Token: 0x06014405 RID: 82949 RVA: 0x0051E79C File Offset: 0x0051C99C
+	// Token: 0x17001A63 RID: 6755
+	// (get) Token: 0x060118E7 RID: 71911 RVA: 0x0052D4D4 File Offset: 0x0052B6D4
 	public static QuestTreeModel Instance
 	{
 		get
@@ -177,7 +177,7 @@ public class QuestTreeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014406 RID: 82950 RVA: 0x0051E7A3 File Offset: 0x0051C9A3
+	// Token: 0x060118E8 RID: 71912 RVA: 0x0052D4DB File Offset: 0x0052B6DB
 	public static QuestTreeModel GetOrCreateInstance()
 	{
 		if (QuestTreeModel._Instance == null)
@@ -187,7 +187,7 @@ public class QuestTreeModel : ModelBase
 		return QuestTreeModel._Instance;
 	}
 
-	// Token: 0x06014407 RID: 82951 RVA: 0x0051E7B7 File Offset: 0x0051C9B7
+	// Token: 0x060118E9 RID: 71913 RVA: 0x0052D4EF File Offset: 0x0052B6EF
 	public static bool CreateInstance()
 	{
 		if (QuestTreeModel._Instance != null)
@@ -198,43 +198,43 @@ public class QuestTreeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014408 RID: 82952 RVA: 0x0051E7CD File Offset: 0x0051C9CD
+	// Token: 0x060118EA RID: 71914 RVA: 0x0052D505 File Offset: 0x0052B705
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014409 RID: 82953 RVA: 0x0051E7CF File Offset: 0x0051C9CF
+	// Token: 0x060118EB RID: 71915 RVA: 0x0052D507 File Offset: 0x0052B707
 	public static void ResetStaticDefaultValue()
 	{
 		QuestTreeModel._Instance = null;
 	}
 
-	// Token: 0x0601440A RID: 82954 RVA: 0x0051E7D7 File Offset: 0x0051C9D7
+	// Token: 0x060118EC RID: 71916 RVA: 0x0052D50F File Offset: 0x0052B70F
 	static QuestTreeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestTreeModel.CreateStaticDefaultValue), new Action(QuestTreeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400986A RID: 39018
+	// Token: 0x040099C2 RID: 39362
 	private readonly Dictionary<int, QuestTreeChapterData> ChapterDataMap = new Dictionary<int, QuestTreeChapterData>();
 
-	// Token: 0x0400986B RID: 39019
+	// Token: 0x040099C3 RID: 39363
 	public QuestTreeMainViewModel ViewModelMain = QuestTreeMainViewModel.Create();
 
-	// Token: 0x0400986C RID: 39020
+	// Token: 0x040099C4 RID: 39364
 	public QuestTreeChapterViewModel ViewModelChapter = QuestTreeChapterViewModel.Create();
 
-	// Token: 0x0400986D RID: 39021
+	// Token: 0x040099C5 RID: 39365
 	[Nullable(2)]
 	private QuestTreeNodeData DummyQuestTreeNodeData;
 
-	// Token: 0x0400986E RID: 39022
+	// Token: 0x040099C6 RID: 39366
 	private readonly HashSet<int> ServerUnlockedChapterIds = new HashSet<int>();
 
-	// Token: 0x0400986F RID: 39023
+	// Token: 0x040099C7 RID: 39367
 	private readonly HashSet<int> ServerUnlockedNodeIds = new HashSet<int>();
 
-	// Token: 0x04009870 RID: 39024
+	// Token: 0x040099C8 RID: 39368
 	[Nullable(2)]
 	private static QuestTreeModel _Instance;
 }

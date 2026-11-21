@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048ED RID: 18669
+	// Token: 0x02003864 RID: 14436
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PcAndGamepadProgressBar
 	{
-		// Token: 0x06030D1B RID: 199963 RVA: 0x00B5606C File Offset: 0x00B5426C
+		// Token: 0x06025848 RID: 153672 RVA: 0x00A90EDC File Offset: 0x00A8F0DC
 		public UniTask Init(UUIItem pcItem, UUIItem gamePadItem)
 		{
 			PcAndGamepadProgressBar.<Init>d__2 <Init>d__;
@@ -25,14 +25,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030D1C RID: 199964 RVA: 0x00B560BF File Offset: 0x00B542BF
+		// Token: 0x06025849 RID: 153673 RVA: 0x00A90F2F File Offset: 0x00A8F12F
 		public void SetProgressPercent(float percent)
 		{
 			this.SetPercent(percent);
 			this.RefreshProgressVisible();
 		}
 
-		// Token: 0x06030D1D RID: 199965 RVA: 0x00B560CE File Offset: 0x00B542CE
+		// Token: 0x0602584A RID: 153674 RVA: 0x00A90F3E File Offset: 0x00A8F13E
 		public void SetPercent(float percent)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D1E RID: 199966 RVA: 0x00B560FF File Offset: 0x00B542FF
+		// Token: 0x0602584B RID: 153675 RVA: 0x00A90F6F File Offset: 0x00A8F16F
 		public void SetProgressVisible(bool bVisible)
 		{
 			if (bVisible)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gamepadProgress.SetActive(false);
 		}
 
-		// Token: 0x06030D1F RID: 199967 RVA: 0x00B56130 File Offset: 0x00B54330
+		// Token: 0x0602584C RID: 153676 RVA: 0x00A90FA0 File Offset: 0x00A8F1A0
 		public void RefreshProgressVisible()
 		{
 			bool flag = Info.Instance.IsInGamepad();
@@ -105,10 +105,10 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A360 RID: 107360
+		// Token: 0x04014BD3 RID: 84947
 		private ProgressBar PcProgress;
 
-		// Token: 0x0401A361 RID: 107361
+		// Token: 0x04014BD4 RID: 84948
 		private ProgressBar GamepadProgress;
 	}
 }

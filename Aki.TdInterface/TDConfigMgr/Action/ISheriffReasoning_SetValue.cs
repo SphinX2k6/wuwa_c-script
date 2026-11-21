@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E55 RID: 7765
+	// Token: 0x0200208A RID: 8330
 	public class ISheriffReasoning_SetValue
 	{
-		// Token: 0x04006344 RID: 25412
+		// Token: 0x04006928 RID: 26920
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04006345 RID: 25413
+		// Token: 0x04006929 RID: 26921
 		public int Id;
 	}
 }

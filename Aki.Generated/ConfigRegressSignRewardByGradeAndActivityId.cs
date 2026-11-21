@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007DC RID: 2012
+	// Token: 0x020007F8 RID: 2040
 	public class ConfigRegressSignRewardByGradeAndActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F3A RID: 12090 RVA: 0x0016421F File Offset: 0x0016241F
+		// Token: 0x06002FE2 RID: 12258 RVA: 0x0016B507 File Offset: 0x00169707
 		static ConfigRegressSignRewardByGradeAndActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressSignRewardByGradeAndActivityId.CreateStaticDefaultValue), new Action(ConfigRegressSignRewardByGradeAndActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F3B RID: 12091 RVA: 0x00164240 File Offset: 0x00162440
+		// Token: 0x06002FE3 RID: 12259 RVA: 0x0016B528 File Offset: 0x00169728
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressSignRewardByGradeAndActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F3C RID: 12092 RVA: 0x001642BF File Offset: 0x001624BF
+		// Token: 0x06002FE4 RID: 12260 RVA: 0x0016B5A7 File Offset: 0x001697A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressSignRewardByGradeAndActivityId.LogPair = null;
 			ConfigRegressSignRewardByGradeAndActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06002F3D RID: 12093 RVA: 0x001642CD File Offset: 0x001624CD
+		// Token: 0x06002FE5 RID: 12261 RVA: 0x0016B5B5 File Offset: 0x001697B5
 		public static void Init()
 		{
 			ConfigRegressSignRewardByGradeAndActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigRegressSignRewardByGradeAndActivityId.HandleId, "db_regressactivity.db", "select BinData from `RegressSignReward` where Grade=? And ActivityId = ?");
 		}
 
-		// Token: 0x06002F3E RID: 12094 RVA: 0x001642E8 File Offset: 0x001624E8
+		// Token: 0x06002FE6 RID: 12262 RVA: 0x0016B5D0 File Offset: 0x001697D0
 		[NullableContext(2)]
 		public static IReadOnlyList<RegressSignReward> GetConfigList(int p0Grade, int p1ActivityId, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040036EA RID: 14058
+		// Token: 0x040037AE RID: 14254
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036EB RID: 14059
+		// Token: 0x040037AF RID: 14255
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036EC RID: 14060
+		// Token: 0x040037B0 RID: 14256
 		private const string TABLE = "RegressSignReward";
 
-		// Token: 0x040036ED RID: 14061
+		// Token: 0x040037B1 RID: 14257
 		private const string COMMAND = "select BinData from `RegressSignReward` where Grade=? And ActivityId = ?";
 
-		// Token: 0x040036EE RID: 14062
+		// Token: 0x040037B2 RID: 14258
 		private const string KEY_PREFIX = "RegressSignRewardByGradeAndActivityId";
 
-		// Token: 0x040036EF RID: 14063
+		// Token: 0x040037B3 RID: 14259
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036F0 RID: 14064
+		// Token: 0x040037B4 RID: 14260
 		private static int HandleId;
 	}
 }

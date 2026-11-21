@@ -6,22 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200183F RID: 6207
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000386 RID: 902
 	[UnrealObjectPath("/Script/KuroFauxPhysics.KuroFauxPhysicsComponentBase")]
 	[UnrealStructLayout(736, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 736)]
 	public abstract class UKuroFauxPhysicsComponentBase : USceneComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016E1A RID: 93722 RVA: 0x002166D6 File Offset: 0x002148D6
+		// Token: 0x06005A81 RID: 23169 RVA: 0x0007FF4E File Offset: 0x0007E14E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroFauxPhysicsComponentBase._ClassPtr;
 		}
 
-		// Token: 0x17005C54 RID: 23636
-		// (get) Token: 0x06016E1B RID: 93723 RVA: 0x002166E2 File Offset: 0x002148E2
-		// (set) Token: 0x06016E1C RID: 93724 RVA: 0x002166F2 File Offset: 0x002148F2
+		// Token: 0x170011E7 RID: 4583
+		// (get) Token: 0x06005A82 RID: 23170 RVA: 0x0007FF5A File Offset: 0x0007E15A
+		// (set) Token: 0x06005A83 RID: 23171 RVA: 0x0007FF6A File Offset: 0x0007E16A
 		public unsafe bool bStartDisabled
 		{
 			get
@@ -34,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C55 RID: 23637
-		// (get) Token: 0x06016E1D RID: 93725 RVA: 0x00216703 File Offset: 0x00214903
-		// (set) Token: 0x06016E1E RID: 93726 RVA: 0x00216713 File Offset: 0x00214913
+		// Token: 0x170011E8 RID: 4584
+		// (get) Token: 0x06005A84 RID: 23172 RVA: 0x0007FF7B File Offset: 0x0007E17B
+		// (set) Token: 0x06005A85 RID: 23173 RVA: 0x0007FF8B File Offset: 0x0007E18B
 		public unsafe bool bIgnoreActorTimeDilation
 		{
 			get
@@ -49,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C56 RID: 23638
-		// (get) Token: 0x06016E1F RID: 93727 RVA: 0x00216724 File Offset: 0x00214924
-		// (set) Token: 0x06016E20 RID: 93728 RVA: 0x00216734 File Offset: 0x00214934
+		// Token: 0x170011E9 RID: 4585
+		// (get) Token: 0x06005A86 RID: 23174 RVA: 0x0007FF9C File Offset: 0x0007E19C
+		// (set) Token: 0x06005A87 RID: 23175 RVA: 0x0007FFAC File Offset: 0x0007E1AC
 		public unsafe bool bStopVelocityWhenDisabled
 		{
 			get
@@ -64,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C57 RID: 23639
-		// (get) Token: 0x06016E21 RID: 93729 RVA: 0x00216745 File Offset: 0x00214945
-		// (set) Token: 0x06016E22 RID: 93730 RVA: 0x00216755 File Offset: 0x00214955
+		// Token: 0x170011EA RID: 4586
+		// (get) Token: 0x06005A88 RID: 23176 RVA: 0x0007FFBD File Offset: 0x0007E1BD
+		// (set) Token: 0x06005A89 RID: 23177 RVA: 0x0007FFCD File Offset: 0x0007E1CD
 		public unsafe float PreventSleepFrameAfterWake
 		{
 			get
@@ -79,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005C58 RID: 23640
-		// (get) Token: 0x06016E23 RID: 93731 RVA: 0x00216766 File Offset: 0x00214966
-		// (set) Token: 0x06016E24 RID: 93732 RVA: 0x00216776 File Offset: 0x00214976
+		// Token: 0x170011EB RID: 4587
+		// (get) Token: 0x06005A8A RID: 23178 RVA: 0x0007FFDE File Offset: 0x0007E1DE
+		// (set) Token: 0x06005A8B RID: 23179 RVA: 0x0007FFEE File Offset: 0x0007E1EE
 		public unsafe float MaxStepTime
 		{
 			get
@@ -94,215 +92,175 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016E25 RID: 93733 RVA: 0x00216787 File Offset: 0x00214987
+		// Token: 0x06005A8C RID: 23180 RVA: 0x0007FFFF File Offset: 0x0007E1FF
 		public void Wake()
 		{
 			UKuroFauxPhysicsComponentBase.__Wake_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E26 RID: 93734 RVA: 0x00216794 File Offset: 0x00214994
+		// Token: 0x06005A8D RID: 23181 RVA: 0x0008000C File Offset: 0x0007E20C
 		public void Sleep()
 		{
 			UKuroFauxPhysicsComponentBase.__Sleep_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E27 RID: 93735 RVA: 0x002167A1 File Offset: 0x002149A1
+		// Token: 0x06005A8E RID: 23182 RVA: 0x00080019 File Offset: 0x0007E219
 		public void ResetPhysics()
 		{
 			UKuroFauxPhysicsComponentBase.__ResetPhysics_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E28 RID: 93736 RVA: 0x002167AE File Offset: 0x002149AE
+		// Token: 0x06005A8F RID: 23183 RVA: 0x00080026 File Offset: 0x0007E226
 		public void ResetInternalState()
 		{
 			UKuroFauxPhysicsComponentBase.__ResetInternalState_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E29 RID: 93737 RVA: 0x002167BB File Offset: 0x002149BB
+		// Token: 0x06005A90 RID: 23184 RVA: 0x00080033 File Offset: 0x0007E233
 		public void ResetForces()
 		{
 			UKuroFauxPhysicsComponentBase.__ResetForces_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E2A RID: 93738 RVA: 0x002167C8 File Offset: 0x002149C8
-		public void RemoveDisabler(in FKuroInstigator DisableInstigator)
-		{
-			UKuroFauxPhysicsComponentBase.__RemoveDisabler_Internal(base.NativePtr, (DisableInstigator ?? new FKuroInstigator()).NativePtr);
-		}
-
-		// Token: 0x06016E2B RID: 93739 RVA: 0x002167E5 File Offset: 0x002149E5
-		public void RemoveComponentTickBlocker(in FKuroInstigator DisableInstigator)
-		{
-			UKuroFauxPhysicsComponentBase.__RemoveComponentTickBlocker_Internal(base.NativePtr, (DisableInstigator ?? new FKuroInstigator()).NativePtr);
-		}
-
-		// Token: 0x06016E2C RID: 93740 RVA: 0x00216802 File Offset: 0x00214A02
+		// Token: 0x06005A91 RID: 23185 RVA: 0x00080040 File Offset: 0x0007E240
 		public void RemoveAllDisablers()
 		{
 			UKuroFauxPhysicsComponentBase.__RemoveAllDisablers_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E2D RID: 93741 RVA: 0x0021680F File Offset: 0x00214A0F
+		// Token: 0x06005A92 RID: 23186 RVA: 0x0008004D File Offset: 0x0007E24D
 		public bool IsSleeping()
 		{
 			return UKuroFauxPhysicsComponentBase.__IsSleeping_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E2E RID: 93742 RVA: 0x0021681C File Offset: 0x00214A1C
+		// Token: 0x06005A93 RID: 23187 RVA: 0x0008005A File Offset: 0x0007E25A
 		public bool IsEnabled()
 		{
 			return UKuroFauxPhysicsComponentBase.__IsEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E2F RID: 93743 RVA: 0x00216829 File Offset: 0x00214A29
+		// Token: 0x06005A94 RID: 23188 RVA: 0x00080067 File Offset: 0x0007E267
 		public bool HasFauxPhysicsControl()
 		{
 			return UKuroFauxPhysicsComponentBase.__HasFauxPhysicsControl_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E30 RID: 93744 RVA: 0x00216836 File Offset: 0x00214A36
+		// Token: 0x06005A95 RID: 23189 RVA: 0x00080074 File Offset: 0x0007E274
 		public bool CanSleep()
 		{
 			return UKuroFauxPhysicsComponentBase.__CanSleep_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06016E31 RID: 93745 RVA: 0x00216843 File Offset: 0x00214A43
+		// Token: 0x06005A96 RID: 23190 RVA: 0x00080081 File Offset: 0x0007E281
 		public void ApplyMovement(in FVector Origin, in FVector Movement)
 		{
 			UKuroFauxPhysicsComponentBase.__ApplyMovement_Internal(base.NativePtr, Origin, Movement);
 		}
 
-		// Token: 0x06016E32 RID: 93746 RVA: 0x00216852 File Offset: 0x00214A52
+		// Token: 0x06005A97 RID: 23191 RVA: 0x00080090 File Offset: 0x0007E290
 		public void ApplyImpulse(in FVector Origin, in FVector Impulse)
 		{
 			UKuroFauxPhysicsComponentBase.__ApplyImpulse_Internal(base.NativePtr, Origin, Impulse);
 		}
 
-		// Token: 0x06016E33 RID: 93747 RVA: 0x00216861 File Offset: 0x00214A61
+		// Token: 0x06005A98 RID: 23192 RVA: 0x0008009F File Offset: 0x0007E29F
 		public void ApplyForce(in FVector Origin, in FVector Force)
 		{
 			UKuroFauxPhysicsComponentBase.__ApplyForce_Internal(base.NativePtr, Origin, Force);
 		}
 
-		// Token: 0x06016E34 RID: 93748 RVA: 0x00216870 File Offset: 0x00214A70
-		public void AddDisabler(in FKuroInstigator DisableInstigator)
-		{
-			UKuroFauxPhysicsComponentBase.__AddDisabler_Internal(base.NativePtr, (DisableInstigator ?? new FKuroInstigator()).NativePtr);
-		}
-
-		// Token: 0x06016E35 RID: 93749 RVA: 0x0021688D File Offset: 0x00214A8D
-		public void AddComponentTickBlocker(in FKuroInstigator DisableInstigator)
-		{
-			UKuroFauxPhysicsComponentBase.__AddComponentTickBlocker_Internal(base.NativePtr, (DisableInstigator ?? new FKuroInstigator()).NativePtr);
-		}
-
-		// Token: 0x06016E36 RID: 93750
+		// Token: 0x06005A99 RID: 23193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Wake_Internal(IntPtr @this);
 
-		// Token: 0x06016E37 RID: 93751
+		// Token: 0x06005A9A RID: 23194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Sleep_Internal(IntPtr @this);
 
-		// Token: 0x06016E38 RID: 93752
+		// Token: 0x06005A9B RID: 23195
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetPhysics_Internal(IntPtr @this);
 
-		// Token: 0x06016E39 RID: 93753
+		// Token: 0x06005A9C RID: 23196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetInternalState_Internal(IntPtr @this);
 
-		// Token: 0x06016E3A RID: 93754
+		// Token: 0x06005A9D RID: 23197
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetForces_Internal(IntPtr @this);
 
-		// Token: 0x06016E3B RID: 93755
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __RemoveDisabler_Internal(IntPtr @this, IntPtr DisableInstigator);
-
-		// Token: 0x06016E3C RID: 93756
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __RemoveComponentTickBlocker_Internal(IntPtr @this, IntPtr DisableInstigator);
-
-		// Token: 0x06016E3D RID: 93757
+		// Token: 0x06005A9E RID: 23198
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveAllDisablers_Internal(IntPtr @this);
 
-		// Token: 0x06016E3E RID: 93758
+		// Token: 0x06005A9F RID: 23199
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsSleeping_Internal(IntPtr @this);
 
-		// Token: 0x06016E3F RID: 93759
+		// Token: 0x06005AA0 RID: 23200
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsEnabled_Internal(IntPtr @this);
 
-		// Token: 0x06016E40 RID: 93760
+		// Token: 0x06005AA1 RID: 23201
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasFauxPhysicsControl_Internal(IntPtr @this);
 
-		// Token: 0x06016E41 RID: 93761
+		// Token: 0x06005AA2 RID: 23202
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CanSleep_Internal(IntPtr @this);
 
-		// Token: 0x06016E42 RID: 93762
+		// Token: 0x06005AA3 RID: 23203
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyMovement_Internal(IntPtr @this, in FVector Origin, in FVector Movement);
 
-		// Token: 0x06016E43 RID: 93763
+		// Token: 0x06005AA4 RID: 23204
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyImpulse_Internal(IntPtr @this, in FVector Origin, in FVector Impulse);
 
-		// Token: 0x06016E44 RID: 93764
+		// Token: 0x06005AA5 RID: 23205
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyForce_Internal(IntPtr @this, in FVector Origin, in FVector Force);
 
-		// Token: 0x06016E45 RID: 93765
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __AddDisabler_Internal(IntPtr @this, IntPtr DisableInstigator);
-
-		// Token: 0x06016E46 RID: 93766
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __AddComponentTickBlocker_Internal(IntPtr @this, IntPtr DisableInstigator);
-
-		// Token: 0x06016E47 RID: 93767 RVA: 0x002168AA File Offset: 0x00214AAA
+		// Token: 0x06005AA6 RID: 23206 RVA: 0x000800AE File Offset: 0x0007E2AE
 		static UKuroFauxPhysicsComponentBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroFauxPhysics.KuroFauxPhysicsComponentBase");
 		}
 
-		// Token: 0x06016E48 RID: 93768 RVA: 0x002168B8 File Offset: 0x00214AB8
+		// Token: 0x06005AA7 RID: 23207 RVA: 0x000800BC File Offset: 0x0007E2BC
 		protected UKuroFauxPhysicsComponentBase() : this(BuiltinUtils.AllocNativeUObject(UKuroFauxPhysicsComponentBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016E49 RID: 93769 RVA: 0x002168E0 File Offset: 0x00214AE0
+		// Token: 0x06005AA8 RID: 23208 RVA: 0x000800E4 File Offset: 0x0007E2E4
 		protected UKuroFauxPhysicsComponentBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C700 RID: 50944
+		// Token: 0x040025A0 RID: 9632
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroFauxPhysics.KuroFauxPhysicsComponentBase";
 
-		// Token: 0x0400C701 RID: 50945
+		// Token: 0x040025A1 RID: 9633
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C702 RID: 50946
+		// Token: 0x040025A2 RID: 9634
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C703 RID: 50947
+		// Token: 0x040025A3 RID: 9635
 		internal static int __PropertyOffset_bStartDisabled;
 
-		// Token: 0x0400C704 RID: 50948
+		// Token: 0x040025A4 RID: 9636
 		internal static int __PropertyOffset_bIgnoreActorTimeDilation;
 
-		// Token: 0x0400C705 RID: 50949
+		// Token: 0x040025A5 RID: 9637
 		internal static int __PropertyOffset_bStopVelocityWhenDisabled;
 
-		// Token: 0x0400C706 RID: 50950
+		// Token: 0x040025A6 RID: 9638
 		internal static int __PropertyOffset_PreventSleepFrameAfterWake;
 
-		// Token: 0x0400C707 RID: 50951
+		// Token: 0x040025A7 RID: 9639
 		internal static int __PropertyOffset_MaxStepTime;
 	}
 }

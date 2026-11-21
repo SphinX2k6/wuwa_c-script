@@ -10,10 +10,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012C9 RID: 4809
+// Token: 0x0200077D RID: 1917
 public class ActivitySubViewMapExplore : ActivitySubViewBase
 {
-	// Token: 0x06008435 RID: 33845 RVA: 0x001C21F4 File Offset: 0x001C03F4
+	// Token: 0x060057D0 RID: 22480 RVA: 0x001CB050 File Offset: 0x001C9250
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06008436 RID: 33846 RVA: 0x001C23AE File Offset: 0x001C05AE
+	// Token: 0x060057D1 RID: 22481 RVA: 0x001CB20A File Offset: 0x001C940A
 	private void OnBtnJump()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -105,7 +105,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x06008437 RID: 33847 RVA: 0x001C23CC File Offset: 0x001C05CC
+	// Token: 0x060057D2 RID: 22482 RVA: 0x001CB228 File Offset: 0x001C9428
 	[NullableContext(2)]
 	public ExploreAreaData GetJumpExploreInfo()
 	{
@@ -132,7 +132,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		return exploreAreaData;
 	}
 
-	// Token: 0x06008438 RID: 33848 RVA: 0x001C2454 File Offset: 0x001C0654
+	// Token: 0x060057D3 RID: 22483 RVA: 0x001CB2B0 File Offset: 0x001C94B0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewMapExplore.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -143,7 +143,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008439 RID: 33849 RVA: 0x001C2497 File Offset: 0x001C0697
+	// Token: 0x060057D4 RID: 22484 RVA: 0x001CB2F3 File Offset: 0x001C94F3
 	[NullableContext(1)]
 	private ActivitySubMapExploreItem CreateItem()
 	{
@@ -153,7 +153,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x0600843A RID: 33850 RVA: 0x001C24B0 File Offset: 0x001C06B0
+	// Token: 0x060057D5 RID: 22485 RVA: 0x001CB30C File Offset: 0x001C950C
 	[NullableContext(1)]
 	private void OnGetReward(IActivitySubMapExploreItemData data)
 	{
@@ -164,7 +164,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600843B RID: 33851 RVA: 0x001C24E4 File Offset: 0x001C06E4
+	// Token: 0x060057D6 RID: 22486 RVA: 0x001CB340 File Offset: 0x001C9540
 	protected override void OnStart()
 	{
 		ActivityMapExploreData activityMapExploreData = this.ActivityBaseData as ActivityMapExploreData;
@@ -175,19 +175,19 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600843C RID: 33852 RVA: 0x001C2526 File Offset: 0x001C0726
+	// Token: 0x060057D7 RID: 22487 RVA: 0x001CB382 File Offset: 0x001C9582
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ActivityMapExploreStateUpdate, new Action(this.OnActivityMapExploreStateUpdate));
 	}
 
-	// Token: 0x0600843D RID: 33853 RVA: 0x001C2544 File Offset: 0x001C0744
+	// Token: 0x060057D8 RID: 22488 RVA: 0x001CB3A0 File Offset: 0x001C95A0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ActivityMapExploreStateUpdate, new Action(this.OnActivityMapExploreStateUpdate));
 	}
 
-	// Token: 0x0600843E RID: 33854 RVA: 0x001C2564 File Offset: 0x001C0764
+	// Token: 0x060057D9 RID: 22489 RVA: 0x001CB3C0 File Offset: 0x001C95C0
 	protected override void OnRefreshView()
 	{
 		this.UpdateTaskList();
@@ -238,7 +238,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		base.SetTextureShowUntilLoaded(value.Bg ?? "", texture2, null);
 	}
 
-	// Token: 0x0600843F RID: 33855 RVA: 0x001C27BC File Offset: 0x001C09BC
+	// Token: 0x060057DA RID: 22490 RVA: 0x001CB618 File Offset: 0x001C9818
 	public void UpdateRemainTime()
 	{
 		if (this.ActivityBaseData == null)
@@ -253,13 +253,13 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		text.SetUIActive(item);
 	}
 
-	// Token: 0x06008440 RID: 33856 RVA: 0x001C2805 File Offset: 0x001C0A05
+	// Token: 0x060057DB RID: 22491 RVA: 0x001CB661 File Offset: 0x001C9861
 	protected override void OnTimer(float gap)
 	{
 		this.UpdateRemainTime();
 	}
 
-	// Token: 0x06008441 RID: 33857 RVA: 0x001C2810 File Offset: 0x001C0A10
+	// Token: 0x060057DC RID: 22492 RVA: 0x001CB66C File Offset: 0x001C986C
 	private void UpdateTaskList()
 	{
 		ActivityMapExploreData activityMapExploreData = this.ActivityBaseData as ActivityMapExploreData;
@@ -280,7 +280,7 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		itemLayout2.RefreshByData(activityMapExploreData.TaskList, null, true);
 	}
 
-	// Token: 0x06008442 RID: 33858 RVA: 0x001C2858 File Offset: 0x001C0A58
+	// Token: 0x060057DD RID: 22493 RVA: 0x001CB6B4 File Offset: 0x001C98B4
 	private void UpdateUnlockedState()
 	{
 		ActivityMapExploreData activityMapExploreData = this.ActivityBaseData as ActivityMapExploreData;
@@ -309,13 +309,13 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008443 RID: 33859 RVA: 0x001C28FE File Offset: 0x001C0AFE
+	// Token: 0x060057DE RID: 22494 RVA: 0x001CB75A File Offset: 0x001C995A
 	private void OnActivityMapExploreStateUpdate()
 	{
 		this.UpdateTaskList();
 	}
 
-	// Token: 0x04003B70 RID: 15216
+	// Token: 0x04003C08 RID: 15368
 	[Nullable(new byte[]
 	{
 		2,
@@ -324,65 +324,65 @@ public class ActivitySubViewMapExplore : ActivitySubViewBase
 	})]
 	private GenericScrollViewNew<ActivitySubMapExploreItem, IActivitySubMapExploreItemData> ItemLayout;
 
-	// Token: 0x04003B71 RID: 15217
+	// Token: 0x04003C09 RID: 15369
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x04003B72 RID: 15218
+	// Token: 0x04003C0A RID: 15370
 	private ExploreActivity? ExploreInfo;
 
-	// Token: 0x020078E2 RID: 30946
+	// Token: 0x02006A6C RID: 27244
 	private class EChildType
 	{
-		// Token: 0x04027D2B RID: 163115
+		// Token: 0x04023059 RID: 143449
 		public const int TxtLeftTitle = 0;
 
-		// Token: 0x04027D2C RID: 163116
+		// Token: 0x0402305A RID: 143450
 		public const int TxtProgress = 1;
 
-		// Token: 0x04027D2D RID: 163117
+		// Token: 0x0402305B RID: 143451
 		public const int TxtAreaName = 2;
 
-		// Token: 0x04027D2E RID: 163118
+		// Token: 0x0402305C RID: 143452
 		public const int TxtMainTitle = 3;
 
-		// Token: 0x04027D2F RID: 163119
+		// Token: 0x0402305D RID: 143453
 		public const int TxtRemainTime = 4;
 
-		// Token: 0x04027D30 RID: 163120
+		// Token: 0x0402305E RID: 143454
 		public const int ItemDescRoot = 5;
 
-		// Token: 0x04027D31 RID: 163121
+		// Token: 0x0402305F RID: 143455
 		public const int TxtDesc = 6;
 
-		// Token: 0x04027D32 RID: 163122
+		// Token: 0x04023060 RID: 143456
 		public const int ItemRewardTitleRoot = 7;
 
-		// Token: 0x04027D33 RID: 163123
+		// Token: 0x04023061 RID: 143457
 		public const int TxtRewardNum = 8;
 
-		// Token: 0x04027D34 RID: 163124
+		// Token: 0x04023062 RID: 143458
 		public const int TxtRewardDesc = 9;
 
-		// Token: 0x04027D35 RID: 163125
+		// Token: 0x04023063 RID: 143459
 		public const int ScrollBarReward = 10;
 
-		// Token: 0x04027D36 RID: 163126
+		// Token: 0x04023064 RID: 143460
 		public const int ItemReward = 11;
 
-		// Token: 0x04027D37 RID: 163127
+		// Token: 0x04023065 RID: 143461
 		public const int BtnJump = 12;
 
-		// Token: 0x04027D38 RID: 163128
+		// Token: 0x04023066 RID: 143462
 		public const int TxtJumpDesc = 13;
 
-		// Token: 0x04027D39 RID: 163129
+		// Token: 0x04023067 RID: 143463
 		public const int ItemUnlocked = 14;
 
-		// Token: 0x04027D3A RID: 163130
+		// Token: 0x04023068 RID: 143464
 		public const int TextureLeftBg = 15;
 
-		// Token: 0x04027D3B RID: 163131
+		// Token: 0x04023069 RID: 143465
 		public const int TextureLeftBgAni = 16;
 	}
 }

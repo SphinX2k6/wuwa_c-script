@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002463 RID: 9315
+	// Token: 0x02002704 RID: 9988
 	public static class ETeamDisplayModeInSkillOpExtensions
 	{
-		// Token: 0x0600CA3C RID: 51772 RVA: 0x001DC2A4 File Offset: 0x001DA4A4
+		// Token: 0x0600D6EC RID: 55020 RVA: 0x001F6358 File Offset: 0x001F4558
 		public static string ToEnumString(this ETeamDisplayModeInSkillOp value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA3D RID: 51773 RVA: 0x001DC2DC File Offset: 0x001DA4DC
+		// Token: 0x0600D6ED RID: 55021 RVA: 0x001F6390 File Offset: 0x001F4590
 		public static ETeamDisplayModeInSkillOp FromString(string name)
 		{
 			ETeamDisplayModeInSkillOp result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA3E RID: 51774 RVA: 0x001DC305 File Offset: 0x001DA505
+		// Token: 0x0600D6EE RID: 55022 RVA: 0x001F63B9 File Offset: 0x001F45B9
 		public static bool TryFromString(string name, out ETeamDisplayModeInSkillOp value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA3F RID: 51775 RVA: 0x001DC33E File Offset: 0x001DA53E
+		// Token: 0x0600D6EF RID: 55023 RVA: 0x001F63F2 File Offset: 0x001F45F2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA40 RID: 51776 RVA: 0x001DC356 File Offset: 0x001DA556
+		// Token: 0x0600D6F0 RID: 55024 RVA: 0x001F640A File Offset: 0x001F460A
 		public static ETeamDisplayModeInSkillOp[] GetValues()
 		{
 			return new ETeamDisplayModeInSkillOp[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA41 RID: 51777 RVA: 0x001DC362 File Offset: 0x001DA562
+		// Token: 0x0600D6F1 RID: 55025 RVA: 0x001F6416 File Offset: 0x001F4616
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -15,31 +15,31 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiHateList : IStaticVariableResetter
 {
-	// Token: 0x06000D55 RID: 3413 RVA: 0x00048481 File Offset: 0x00046681
+	// Token: 0x06000D5B RID: 3419 RVA: 0x0004901D File Offset: 0x0004721D
 	static AiHateList()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiHateList.CreateStaticDefaultValue), new Action(AiHateList.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000D56 RID: 3414 RVA: 0x000484A0 File Offset: 0x000466A0
+	// Token: 0x06000D5C RID: 3420 RVA: 0x0004903C File Offset: 0x0004723C
 	public static void CreateStaticDefaultValue()
 	{
 		AiHateList.tmpVector = global::Vector.Create();
 	}
 
-	// Token: 0x06000D57 RID: 3415 RVA: 0x000484AC File Offset: 0x000466AC
+	// Token: 0x06000D5D RID: 3421 RVA: 0x00049048 File Offset: 0x00047248
 	public static void ResetStaticDefaultValue()
 	{
 		AiHateList.tmpVector = null;
 	}
 
-	// Token: 0x06000D58 RID: 3416 RVA: 0x000484B4 File Offset: 0x000466B4
+	// Token: 0x06000D5E RID: 3422 RVA: 0x00049050 File Offset: 0x00047250
 	public AiHateList(AiController aiController)
 	{
 		this.AiController = aiController;
 	}
 
-	// Token: 0x06000D59 RID: 3417 RVA: 0x00048538 File Offset: 0x00046738
+	// Token: 0x06000D5F RID: 3423 RVA: 0x000490D4 File Offset: 0x000472D4
 	public void RefreshAbilityComp()
 	{
 		CharacterAiComponent charAiDesignComp = this.AiController.CharAiDesignComp;
@@ -56,13 +56,13 @@ public class AiHateList : IStaticVariableResetter
 		this.TagComp = tagComp;
 	}
 
-	// Token: 0x06000D5A RID: 3418 RVA: 0x00048563 File Offset: 0x00046763
+	// Token: 0x06000D60 RID: 3424 RVA: 0x000490FF File Offset: 0x000472FF
 	public Dictionary<int, HatredItem> GetHatredMap()
 	{
 		return this.HatredMap;
 	}
 
-	// Token: 0x06000D5B RID: 3419 RVA: 0x0004856C File Offset: 0x0004676C
+	// Token: 0x06000D61 RID: 3425 RVA: 0x00049108 File Offset: 0x00047308
 	public string GetHatredMapDebugText()
 	{
 		string text = "";
@@ -96,15 +96,15 @@ public class AiHateList : IStaticVariableResetter
 		return text;
 	}
 
-	// Token: 0x06000D5C RID: 3420 RVA: 0x000486CC File Offset: 0x000468CC
+	// Token: 0x06000D62 RID: 3426 RVA: 0x00049268 File Offset: 0x00047468
 	[NullableContext(2)]
 	public EntityHandle GetCurrentTarget()
 	{
 		return this.CurrentTarget;
 	}
 
-	// Token: 0x1700025B RID: 603
-	// (get) Token: 0x06000D5D RID: 3421 RVA: 0x000486D4 File Offset: 0x000468D4
+	// Token: 0x1700025E RID: 606
+	// (get) Token: 0x06000D63 RID: 3427 RVA: 0x00049270 File Offset: 0x00047470
 	public bool IsCurrentTargetInMaxArea
 	{
 		get
@@ -114,9 +114,9 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700025C RID: 604
-	// (get) Token: 0x06000D5E RID: 3422 RVA: 0x0004870D File Offset: 0x0004690D
-	// (set) Token: 0x06000D5F RID: 3423 RVA: 0x00048718 File Offset: 0x00046918
+	// Token: 0x1700025F RID: 607
+	// (get) Token: 0x06000D64 RID: 3428 RVA: 0x000492A9 File Offset: 0x000474A9
+	// (set) Token: 0x06000D65 RID: 3429 RVA: 0x000492B4 File Offset: 0x000474B4
 	public unsafe AiHate? AiHate
 	{
 		get
@@ -213,7 +213,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D60 RID: 3424 RVA: 0x00048AD4 File Offset: 0x00046CD4
+	// Token: 0x06000D66 RID: 3430 RVA: 0x00049670 File Offset: 0x00047870
 	private void OnDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 	{
 		Damage damageData = damageResult.DamageData;
@@ -265,7 +265,7 @@ public class AiHateList : IStaticVariableResetter
 		this.AddHatredItemByValue(attacker.Id, Math.Max(1f, -damage), new float?(0f), new EAddHatredReason?(EAddHatredReason.Damage));
 	}
 
-	// Token: 0x06000D61 RID: 3425 RVA: 0x00048C1D File Offset: 0x00046E1D
+	// Token: 0x06000D67 RID: 3431 RVA: 0x000497B9 File Offset: 0x000479B9
 	private void OnInitRole(EntityHandle roleEntity)
 	{
 		if (this.IsListeningPlayerDamage)
@@ -278,7 +278,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D62 RID: 3426 RVA: 0x00048C48 File Offset: 0x00046E48
+	// Token: 0x06000D68 RID: 3432 RVA: 0x000497E4 File Offset: 0x000479E4
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		if (this.IsListeningPlayerDamage)
@@ -317,7 +317,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D63 RID: 3427 RVA: 0x00048DA8 File Offset: 0x00046FA8
+	// Token: 0x06000D69 RID: 3433 RVA: 0x00049944 File Offset: 0x00047B44
 	private void OnVisionMorphBegin(EntityHandle visionHandle, EntityHandle roleEntity)
 	{
 		if (this.AiHateInternal == null)
@@ -331,7 +331,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D64 RID: 3428 RVA: 0x00048DEC File Offset: 0x00046FEC
+	// Token: 0x06000D6A RID: 3434 RVA: 0x00049988 File Offset: 0x00047B88
 	private void OnVisionMorphEnd(EntityHandle roleEntity, EntityHandle visionEntity)
 	{
 		if (this.AiHateInternal == null)
@@ -345,7 +345,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D65 RID: 3429 RVA: 0x00048E30 File Offset: 0x00047030
+	// Token: 0x06000D6B RID: 3435 RVA: 0x000499CC File Offset: 0x00047BCC
 	public void BindEvents()
 	{
 		if (this.AiHateInternal == null)
@@ -359,7 +359,7 @@ public class AiHateList : IStaticVariableResetter
 		EventSystem.Instance.Add(EEventName.VisionMorphEnd, new Action<EntityHandle, EntityHandle>(this.OnVisionMorphEnd));
 	}
 
-	// Token: 0x06000D66 RID: 3430 RVA: 0x00048EE4 File Offset: 0x000470E4
+	// Token: 0x06000D6C RID: 3436 RVA: 0x00049A80 File Offset: 0x00047C80
 	public void UnBindEvents()
 	{
 		if (this.AiController.CharAiDesignComp.Valid && EventSystem.Instance.HasWithTarget(this.AiController.CharAiDesignComp.Entity, EEventName.CharBeDamage, new Action<Entity, Entity, RequirementPayload, DamageResult, FVectorDouble>(this.OnDamage)))
@@ -384,7 +384,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D67 RID: 3431 RVA: 0x0004903A File Offset: 0x0004723A
+	// Token: 0x06000D6D RID: 3437 RVA: 0x00049BD6 File Offset: 0x00047DD6
 	public void Clear(bool clearAll = true)
 	{
 		if (clearAll)
@@ -397,7 +397,7 @@ public class AiHateList : IStaticVariableResetter
 		this.RemoveHatredItem(0, ERemoveHatredReason.Clear);
 	}
 
-	// Token: 0x06000D68 RID: 3432 RVA: 0x0004906C File Offset: 0x0004726C
+	// Token: 0x06000D6E RID: 3438 RVA: 0x00049C08 File Offset: 0x00047E08
 	public void Tick(float delta)
 	{
 		if (this.AiHateInternal == null)
@@ -448,7 +448,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D69 RID: 3433 RVA: 0x00049274 File Offset: 0x00047474
+	// Token: 0x06000D6F RID: 3439 RVA: 0x00049E10 File Offset: 0x00048010
 	private unsafe void AddHatredItem(int entityId, HatredItem item, EAddHatredReason reason)
 	{
 		if (this.HatredMap.ContainsKey(entityId))
@@ -478,7 +478,7 @@ public class AiHateList : IStaticVariableResetter
 		EventSystem.Instance.EmitWithTarget<bool>(this.AiController.CharAiDesignComp.Entity, EEventName.AiInFight, this.HatredMap.Count > 0);
 	}
 
-	// Token: 0x06000D6A RID: 3434 RVA: 0x000493A8 File Offset: 0x000475A8
+	// Token: 0x06000D70 RID: 3440 RVA: 0x00049F44 File Offset: 0x00048144
 	[NullableContext(2)]
 	private unsafe HatredItem AddHatredItemByValue(int entityId, float hatredValue = 1f, float? tauntValue = null, EAddHatredReason? rs = null)
 	{
@@ -531,7 +531,7 @@ public class AiHateList : IStaticVariableResetter
 		return hatredItem;
 	}
 
-	// Token: 0x06000D6B RID: 3435 RVA: 0x0004957C File Offset: 0x0004777C
+	// Token: 0x06000D71 RID: 3441 RVA: 0x0004A118 File Offset: 0x00048318
 	private unsafe void RemoveHatredItem(int entityId, ERemoveHatredReason reason)
 	{
 		global::Log instance = global::Log.Instance;
@@ -583,7 +583,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D6C RID: 3436 RVA: 0x0004977C File Offset: 0x0004797C
+	// Token: 0x06000D72 RID: 3442 RVA: 0x0004A318 File Offset: 0x00048518
 	private int RefreshHatredAndTarget(float deltaSeconds, float halfHeight)
 	{
 		global::Vector hatredInitLocation = this.AiController.CharAiDesignComp.HatredInitLocation;
@@ -599,7 +599,7 @@ public class AiHateList : IStaticVariableResetter
 		return this.NewTargetId;
 	}
 
-	// Token: 0x06000D6D RID: 3437 RVA: 0x00049820 File Offset: 0x00047A20
+	// Token: 0x06000D73 RID: 3443 RVA: 0x0004A3BC File Offset: 0x000485BC
 	private void RefreshHateList(float deltaSeconds, global::Vector initLocation, global::Vector selfLocation, float halfHeight)
 	{
 		this.NewTargetId = 0;
@@ -678,7 +678,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D6E RID: 3438 RVA: 0x00049B80 File Offset: 0x00047D80
+	// Token: 0x06000D74 RID: 3444 RVA: 0x0004A71C File Offset: 0x0004891C
 	public void AddNewHateListForTaunt(int entityId, float tauntValue)
 	{
 		HatredItem hatredItem;
@@ -690,7 +690,7 @@ public class AiHateList : IStaticVariableResetter
 		this.AddHatredItemByValue(entityId, 1f, new float?(tauntValue), new EAddHatredReason?(EAddHatredReason.Taunt));
 	}
 
-	// Token: 0x06000D6F RID: 3439 RVA: 0x00049BC4 File Offset: 0x00047DC4
+	// Token: 0x06000D75 RID: 3445 RVA: 0x0004A760 File Offset: 0x00048960
 	public void RemoveHateListForTaunt(int entityId)
 	{
 		HatredItem hatredItem;
@@ -700,7 +700,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D70 RID: 3440 RVA: 0x00049BEC File Offset: 0x00047DEC
+	// Token: 0x06000D76 RID: 3446 RVA: 0x0004A788 File Offset: 0x00048988
 	private void AddNewHateList(global::Vector initLocation, global::Vector selfLocation, float halfHeight)
 	{
 		if (this.BaseHatredCache <= 0f || this.AiController.AiPerception == null)
@@ -744,7 +744,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D71 RID: 3441 RVA: 0x00049DC4 File Offset: 0x00047FC4
+	// Token: 0x06000D77 RID: 3447 RVA: 0x0004A960 File Offset: 0x00048B60
 	public void ChangeHatred(int entityId, float rate, float abs)
 	{
 		if (entityId == 0)
@@ -782,13 +782,13 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D72 RID: 3442 RVA: 0x00049EDC File Offset: 0x000480DC
+	// Token: 0x06000D78 RID: 3448 RVA: 0x0004AA78 File Offset: 0x00048C78
 	public void ClearHatred(int entityId)
 	{
 		this.RemoveHatredItem(entityId, ERemoveHatredReason.Clear);
 	}
 
-	// Token: 0x06000D73 RID: 3443 RVA: 0x00049EEC File Offset: 0x000480EC
+	// Token: 0x06000D79 RID: 3449 RVA: 0x0004AA88 File Offset: 0x00048C88
 	private EHatredPriority SpecialHatredState(Entity target, float tauntValue)
 	{
 		if (target == null || !target.Active)
@@ -836,19 +836,19 @@ public class AiHateList : IStaticVariableResetter
 		return EHatredPriority.Normal;
 	}
 
-	// Token: 0x06000D74 RID: 3444 RVA: 0x00049FDD File Offset: 0x000481DD
+	// Token: 0x06000D7A RID: 3450 RVA: 0x0004AB79 File Offset: 0x00048D79
 	private bool InMinArea(double squaredDist, double height, double squaredInitDist)
 	{
 		return squaredDist < (double)this.SquaredDistMin && MathUtils.Instance.InRange(height, this.DisengageHeightRangeCache) && squaredInitDist < (double)this.SquaredInitDistMin;
 	}
 
-	// Token: 0x06000D75 RID: 3445 RVA: 0x0004A008 File Offset: 0x00048208
+	// Token: 0x06000D7B RID: 3451 RVA: 0x0004ABA4 File Offset: 0x00048DA4
 	private bool InMaxArea(double squaredDist, double height, double squaredInitDist)
 	{
 		return squaredDist < (double)this.SquaredDistMax && MathUtils.Instance.InRange(height, this.DisengageHeightRangeMaxCache) && squaredInitDist < (double)this.SquaredInitDistMax;
 	}
 
-	// Token: 0x06000D76 RID: 3446 RVA: 0x0004A034 File Offset: 0x00048234
+	// Token: 0x06000D7C RID: 3452 RVA: 0x0004ABD0 File Offset: 0x00048DD0
 	public void SharedHatredTarget(int entityId)
 	{
 		if (this.AiHateInternal == null)
@@ -868,7 +868,7 @@ public class AiHateList : IStaticVariableResetter
 		this.AddHatredItemByValue(entityId, 1f, new float?(0f), new EAddHatredReason?(EAddHatredReason.Shared));
 	}
 
-	// Token: 0x06000D77 RID: 3447 RVA: 0x0004A0A4 File Offset: 0x000482A4
+	// Token: 0x06000D7D RID: 3453 RVA: 0x0004AC40 File Offset: 0x00048E40
 	[NullableContext(2)]
 	private global::Vector GetCenterLocationFromConfig()
 	{
@@ -903,7 +903,7 @@ public class AiHateList : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06000D78 RID: 3448 RVA: 0x0004A1F4 File Offset: 0x000483F4
+	// Token: 0x06000D7E RID: 3454 RVA: 0x0004AD90 File Offset: 0x00048F90
 	public void OnEntityCampModified(Entity entity, ECamp oldCamp, ECamp newCamp)
 	{
 		int id = entity.Id;
@@ -949,7 +949,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D79 RID: 3449 RVA: 0x0004A3DC File Offset: 0x000485DC
+	// Token: 0x06000D7F RID: 3455 RVA: 0x0004AF78 File Offset: 0x00049178
 	private void OnCharDead(int entityId)
 	{
 		CharacterActorComponent charActorComp = this.AiController.CharActorComp;
@@ -960,7 +960,7 @@ public class AiHateList : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D7A RID: 3450 RVA: 0x0004A434 File Offset: 0x00048634
+	// Token: 0x06000D80 RID: 3456 RVA: 0x0004AFD0 File Offset: 0x000491D0
 	private void OnPlayerDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 	{
 		if (Time.Instance.WorldTime < this.PlayerDamageNextTriggerTime)
@@ -982,7 +982,7 @@ public class AiHateList : IStaticVariableResetter
 		hatredItem.TauntValue = 100f;
 	}
 
-	// Token: 0x06000D7B RID: 3451 RVA: 0x0004A4F0 File Offset: 0x000486F0
+	// Token: 0x06000D81 RID: 3457 RVA: 0x0004B08C File Offset: 0x0004928C
 	public void BindPlayerDamageEvents()
 	{
 		if (this.IsListeningPlayerDamage)
@@ -1010,7 +1010,7 @@ public class AiHateList : IStaticVariableResetter
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000D7C RID: 3452 RVA: 0x0004A598 File Offset: 0x00048798
+	// Token: 0x06000D82 RID: 3458 RVA: 0x0004B134 File Offset: 0x00049334
 	public void UnBindPlayerDamageEvents()
 	{
 		if (!this.IsListeningPlayerDamage)
@@ -1038,101 +1038,101 @@ public class AiHateList : IStaticVariableResetter
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x04000AC2 RID: 2754
+	// Token: 0x04000ACA RID: 2762
 	private const float MIN_HATE = 1f;
 
-	// Token: 0x04000AC3 RID: 2755
+	// Token: 0x04000ACB RID: 2763
 	public const long ONE_THOUSAND_MILLISECONDS = 1000L;
 
-	// Token: 0x04000AC4 RID: 2756
+	// Token: 0x04000ACC RID: 2764
 	private static global::Vector tmpVector;
 
-	// Token: 0x04000AC5 RID: 2757
+	// Token: 0x04000ACD RID: 2765
 	private AiHate? AiHateInternal;
 
-	// Token: 0x04000AC6 RID: 2758
+	// Token: 0x04000ACE RID: 2766
 	private int? ExcludeTag;
 
-	// Token: 0x04000AC7 RID: 2759
+	// Token: 0x04000ACF RID: 2767
 	private int? SwornHatredTag;
 
-	// Token: 0x04000AC8 RID: 2760
+	// Token: 0x04000AD0 RID: 2768
 	private float SquaredDistMin;
 
-	// Token: 0x04000AC9 RID: 2761
+	// Token: 0x04000AD1 RID: 2769
 	private float SquaredDistMax;
 
-	// Token: 0x04000ACA RID: 2762
+	// Token: 0x04000AD2 RID: 2770
 	private float SquaredInitDistMin;
 
-	// Token: 0x04000ACB RID: 2763
+	// Token: 0x04000AD3 RID: 2771
 	private float SquaredInitDistMax;
 
-	// Token: 0x04000ACC RID: 2764
+	// Token: 0x04000AD4 RID: 2772
 	private float BaseHatredCache = 1f;
 
-	// Token: 0x04000ACD RID: 2765
+	// Token: 0x04000AD5 RID: 2773
 	private float DecreaseRateCache = 0.8f;
 
-	// Token: 0x04000ACE RID: 2766
+	// Token: 0x04000AD6 RID: 2774
 	private float DecreaseTimeLengthCache = 5000f;
 
-	// Token: 0x04000ACF RID: 2767
+	// Token: 0x04000AD7 RID: 2775
 	private float DecreaseTimeCdCache = 10000f;
 
-	// Token: 0x04000AD0 RID: 2768
+	// Token: 0x04000AD8 RID: 2776
 	private float IncreaseRateWhenDecreasingCache = 1f;
 
-	// Token: 0x04000AD1 RID: 2769
+	// Token: 0x04000AD9 RID: 2777
 	private float MinClearTimeCache = 1000f;
 
-	// Token: 0x04000AD2 RID: 2770
+	// Token: 0x04000ADA RID: 2778
 	private float DisengageTimeRangeMinCache;
 
-	// Token: 0x04000AD3 RID: 2771
+	// Token: 0x04000ADB RID: 2779
 	private float DisengageTimeRangeMaxCache;
 
-	// Token: 0x04000AD4 RID: 2772
+	// Token: 0x04000ADC RID: 2780
 	private FloatRange DisengageHeightRangeCache;
 
-	// Token: 0x04000AD5 RID: 2773
+	// Token: 0x04000ADD RID: 2781
 	private FloatRange DisengageHeightRangeMaxCache;
 
-	// Token: 0x04000AD6 RID: 2774
+	// Token: 0x04000ADE RID: 2782
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x04000AD7 RID: 2775
+	// Token: 0x04000ADF RID: 2783
 	[Nullable(2)]
 	private EntityHandle CurrentTarget;
 
-	// Token: 0x04000AD8 RID: 2776
+	// Token: 0x04000AE0 RID: 2784
 	private bool IsListeningPlayerDamage;
 
-	// Token: 0x04000AD9 RID: 2777
+	// Token: 0x04000AE1 RID: 2785
 	private double PlayerDamageNextTriggerTime;
 
-	// Token: 0x04000ADA RID: 2778
+	// Token: 0x04000AE2 RID: 2786
 	private readonly Dictionary<int, HatredItem> HatredMap = new Dictionary<int, HatredItem>();
 
-	// Token: 0x04000ADB RID: 2779
+	// Token: 0x04000AE3 RID: 2787
 	private readonly List<int> RemoveList = new List<int>();
 
-	// Token: 0x04000ADC RID: 2780
+	// Token: 0x04000AE4 RID: 2788
 	private readonly List<ERemoveHatredReason> RemoveReason = new List<ERemoveHatredReason>();
 
-	// Token: 0x04000ADD RID: 2781
+	// Token: 0x04000AE5 RID: 2789
 	private int NewTargetId;
 
-	// Token: 0x04000ADE RID: 2782
+	// Token: 0x04000AE6 RID: 2790
 	private double MinDistSquared;
 
-	// Token: 0x04000ADF RID: 2783
+	// Token: 0x04000AE7 RID: 2791
 	private float MaxHatredValue;
 
-	// Token: 0x04000AE0 RID: 2784
+	// Token: 0x04000AE8 RID: 2792
 	private EHatredPriority MaxHatredPriority = EHatredPriority.Dead;
 
-	// Token: 0x04000AE1 RID: 2785
+	// Token: 0x04000AE9 RID: 2793
 	private readonly AiController AiController;
 }

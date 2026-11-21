@@ -7,18 +7,18 @@ using UnrealEngine;
 [Nullable(0)]
 public struct PostEventArgs
 {
-	// Token: 0x040000A5 RID: 165
+	// Token: 0x040000A6 RID: 166
 	public ECallbackMask? CallbackMask;
 
-	// Token: 0x040000A6 RID: 166
+	// Token: 0x040000A7 RID: 167
 	public Action<EAkCallbackType, UAkCallbackInfo> CallbackHandler;
 
-	// Token: 0x040000A7 RID: 167
+	// Token: 0x040000A8 RID: 168
 	public string ExternalSourceName;
 
-	// Token: 0x040000A8 RID: 168
+	// Token: 0x040000A9 RID: 169
 	public string ExternalSourceMediaName;
 
-	// Token: 0x040000A9 RID: 169
+	// Token: 0x040000AA RID: 170
 	public bool? StopWhenOwnerDestroyed;
 }

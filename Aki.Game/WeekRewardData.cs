@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020023A5 RID: 9125
+// Token: 0x0200188A RID: 6282
 public class WeekRewardData : IWeekRewardData
 {
-	// Token: 0x170017B1 RID: 6065
-	// (get) Token: 0x060123FC RID: 74748 RVA: 0x0047E790 File Offset: 0x0047C990
-	// (set) Token: 0x060123FD RID: 74749 RVA: 0x0047E798 File Offset: 0x0047C998
+	// Token: 0x170017EB RID: 6123
+	// (get) Token: 0x0600F8AE RID: 63662 RVA: 0x0048BC64 File Offset: 0x00489E64
+	// (set) Token: 0x0600F8AF RID: 63663 RVA: 0x0048BC6C File Offset: 0x00489E6C
 	public int ItemId { get; set; }
 
-	// Token: 0x170017B2 RID: 6066
-	// (get) Token: 0x060123FE RID: 74750 RVA: 0x0047E7A1 File Offset: 0x0047C9A1
-	// (set) Token: 0x060123FF RID: 74751 RVA: 0x0047E7A9 File Offset: 0x0047C9A9
+	// Token: 0x170017EC RID: 6124
+	// (get) Token: 0x0600F8B0 RID: 63664 RVA: 0x0048BC75 File Offset: 0x00489E75
+	// (set) Token: 0x0600F8B1 RID: 63665 RVA: 0x0048BC7D File Offset: 0x00489E7D
 	public int Count { get; set; }
 }

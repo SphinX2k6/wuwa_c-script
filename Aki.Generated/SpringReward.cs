@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010F0 RID: 4336
+	// Token: 0x02001226 RID: 4646
 	public struct SpringReward : IFlatbufferObject
 	{
-		// Token: 0x1700385F RID: 14431
-		// (get) Token: 0x0600D94D RID: 55629 RVA: 0x00321239 File Offset: 0x0031F439
+		// Token: 0x17003BB5 RID: 15285
+		// (get) Token: 0x0600E698 RID: 59032 RVA: 0x0034C7A1 File Offset: 0x0034A9A1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D94E RID: 55630 RVA: 0x00321246 File Offset: 0x0031F446
+		// Token: 0x0600E699 RID: 59033 RVA: 0x0034C7AE File Offset: 0x0034A9AE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D94F RID: 55631 RVA: 0x00321250 File Offset: 0x0031F450
+		// Token: 0x0600E69A RID: 59034 RVA: 0x0034C7B8 File Offset: 0x0034A9B8
 		public static SpringReward GetRootAsSpringReward(ByteBuffer _bb)
 		{
 			return SpringReward.GetRootAsSpringReward(_bb, default(SpringReward));
 		}
 
-		// Token: 0x0600D950 RID: 55632 RVA: 0x0032126C File Offset: 0x0031F46C
+		// Token: 0x0600E69B RID: 59035 RVA: 0x0034C7D4 File Offset: 0x0034A9D4
 		public static SpringReward GetRootAsSpringReward(ByteBuffer _bb, SpringReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D951 RID: 55633 RVA: 0x00321289 File Offset: 0x0031F489
+		// Token: 0x0600E69C RID: 59036 RVA: 0x0034C7F1 File Offset: 0x0034A9F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D952 RID: 55634 RVA: 0x00321298 File Offset: 0x0031F498
+		// Token: 0x0600E69D RID: 59037 RVA: 0x0034C800 File Offset: 0x0034AA00
 		public SpringReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003860 RID: 14432
-		// (get) Token: 0x0600D953 RID: 55635 RVA: 0x003212A8 File Offset: 0x0031F4A8
+		// Token: 0x17003BB6 RID: 15286
+		// (get) Token: 0x0600E69E RID: 59038 RVA: 0x0034C810 File Offset: 0x0034AA10
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003861 RID: 14433
-		// (get) Token: 0x0600D954 RID: 55636 RVA: 0x003212E4 File Offset: 0x0031F4E4
+		// Token: 0x17003BB7 RID: 15287
+		// (get) Token: 0x0600E69F RID: 59039 RVA: 0x0034C84C File Offset: 0x0034AA4C
 		public int TaskThreshold
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003862 RID: 14434
-		// (get) Token: 0x0600D955 RID: 55637 RVA: 0x00321320 File Offset: 0x0031F520
+		// Token: 0x17003BB8 RID: 15288
+		// (get) Token: 0x0600E6A0 RID: 59040 RVA: 0x0034C888 File Offset: 0x0034AA88
 		public int ActivityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003863 RID: 14435
-		// (get) Token: 0x0600D956 RID: 55638 RVA: 0x0032135C File Offset: 0x0031F55C
+		// Token: 0x17003BB9 RID: 15289
+		// (get) Token: 0x0600E6A1 RID: 59041 RVA: 0x0034C8C4 File Offset: 0x0034AAC4
 		public int TaskReward
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003864 RID: 14436
-		// (get) Token: 0x0600D957 RID: 55639 RVA: 0x0032139C File Offset: 0x0031F59C
+		// Token: 0x17003BBA RID: 15290
+		// (get) Token: 0x0600E6A2 RID: 59042 RVA: 0x0034C904 File Offset: 0x0034AB04
 		public string TaskTitle
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D958 RID: 55640 RVA: 0x003213D4 File Offset: 0x0031F5D4
+		// Token: 0x0600E6A3 RID: 59043 RVA: 0x0034C93C File Offset: 0x0034AB3C
 		public Span<byte> GetTaskTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D959 RID: 55641 RVA: 0x003213E4 File Offset: 0x0031F5E4
+		// Token: 0x0600E6A4 RID: 59044 RVA: 0x0034C94C File Offset: 0x0034AB4C
 		public byte[] GetTaskTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005224 RID: 21028
+		// Token: 0x04005867 RID: 22631
 		private Table __p;
 	}
 }

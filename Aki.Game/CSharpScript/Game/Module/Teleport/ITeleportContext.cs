@@ -5,85 +5,81 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B6D RID: 19309
+	// Token: 0x02003B17 RID: 15127
 	[NullableContext(2)]
 	public interface ITeleportContext
 	{
-		// Token: 0x17007BDD RID: 31709
-		// (get) Token: 0x06031FF8 RID: 204792
+		// Token: 0x17004F8A RID: 20362
+		// (get) Token: 0x06026D8E RID: 159118
 		[Nullable(1)]
 		string ClientReason { [NullableContext(1)] get; }
 
-		// Token: 0x17007BDE RID: 31710
-		// (get) Token: 0x06031FF9 RID: 204793
+		// Token: 0x17004F8B RID: 20363
+		// (get) Token: 0x06026D8F RID: 159119
 		FVectorDouble TargetPosition { get; }
 
-		// Token: 0x17007BDF RID: 31711
-		// (get) Token: 0x06031FFA RID: 204794
+		// Token: 0x17004F8C RID: 20364
+		// (get) Token: 0x06026D90 RID: 159120
 		ETeleportMode? TeleportMode { get; }
 
-		// Token: 0x17007BE0 RID: 31712
-		// (get) Token: 0x06031FFB RID: 204795
+		// Token: 0x17004F8D RID: 20365
+		// (get) Token: 0x06026D91 RID: 159121
 		IRotator TargetRotation { get; }
 
-		// Token: 0x17007BE1 RID: 31713
-		// (get) Token: 0x06031FFC RID: 204796
+		// Token: 0x17004F8E RID: 20366
+		// (get) Token: 0x06026D92 RID: 159122
 		IVector TargetGravityDirect { get; }
 
-		// Token: 0x17007BE2 RID: 31714
-		// (get) Token: 0x06031FFD RID: 204797
+		// Token: 0x17004F8F RID: 20367
+		// (get) Token: 0x06026D93 RID: 159123
 		IVector TargetSpeed { get; }
 
-		// Token: 0x17007BE3 RID: 31715
-		// (get) Token: 0x06031FFE RID: 204798
+		// Token: 0x17004F90 RID: 20368
+		// (get) Token: 0x06026D94 RID: 159124
 		TeleportReason? ServerReason { get; }
 
-		// Token: 0x17007BE4 RID: 31716
-		// (get) Token: 0x06031FFF RID: 204799
+		// Token: 0x17004F91 RID: 20369
+		// (get) Token: 0x06026D95 RID: 159125
 		TransitionOptionPb Option { get; }
 
-		// Token: 0x17007BE5 RID: 31717
-		// (get) Token: 0x06032000 RID: 204800
+		// Token: 0x17004F92 RID: 20370
+		// (get) Token: 0x06026D96 RID: 159126
 		int? TransitionConfigId { get; }
 
-		// Token: 0x17007BE6 RID: 31718
-		// (get) Token: 0x06032001 RID: 204801
+		// Token: 0x17004F93 RID: 20371
+		// (get) Token: 0x06026D97 RID: 159127
 		bool? NeedRestoreCamera { get; }
 
-		// Token: 0x17007BE7 RID: 31719
-		// (get) Token: 0x06032002 RID: 204802
+		// Token: 0x17004F94 RID: 20372
+		// (get) Token: 0x06026D98 RID: 159128
 		GameCtxPb GameCtx { get; }
 
-		// Token: 0x17007BE8 RID: 31720
-		// (get) Token: 0x06032003 RID: 204803
+		// Token: 0x17004F95 RID: 20373
+		// (get) Token: 0x06026D99 RID: 159129
 		Entity ElevatorEntity { get; }
 
-		// Token: 0x17007BE9 RID: 31721
-		// (get) Token: 0x06032004 RID: 204804
+		// Token: 0x17004F96 RID: 20374
+		// (get) Token: 0x06026D9A RID: 159130
 		bool? DisableAutoFade { get; }
 
-		// Token: 0x17007BEA RID: 31722
-		// (get) Token: 0x06032005 RID: 204805
+		// Token: 0x17004F97 RID: 20375
+		// (get) Token: 0x06026D9B RID: 159131
 		int? TeleportCfgId { get; }
 
-		// Token: 0x17007BEB RID: 31723
-		// (get) Token: 0x06032006 RID: 204806
+		// Token: 0x17004F98 RID: 20376
+		// (get) Token: 0x06026D9C RID: 159132
 		bool? NeedRequestToServer { get; }
 
-		// Token: 0x17007BEC RID: 31724
-		// (get) Token: 0x06032007 RID: 204807
+		// Token: 0x17004F99 RID: 20377
+		// (get) Token: 0x06026D9D RID: 159133
 		bool? NeedWaitStreaming { get; }
 
-		// Token: 0x17007BED RID: 31725
-		// (get) Token: 0x06032008 RID: 204808
+		// Token: 0x17004F9A RID: 20378
+		// (get) Token: 0x06026D9E RID: 159134
 		bool? KeepCameraRelativeRotation { get; }
 
-		// Token: 0x17007BEE RID: 31726
-		// (get) Token: 0x06032009 RID: 204809
+		// Token: 0x17004F9B RID: 20379
+		// (get) Token: 0x06026D9F RID: 159135
 		bool? KeepSpeedRelativeRotation { get; }
-
-		// Token: 0x17007BEF RID: 31727
-		// (get) Token: 0x0603200A RID: 204810
-		bool? UseCameraCutForMotionBlur { get; }
 	}
 }

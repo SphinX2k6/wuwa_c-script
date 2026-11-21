@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001BB RID: 443
+	// Token: 0x020001CD RID: 461
 	public class ConfigDailyTaskGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A65 RID: 2661 RVA: 0x00094708 File Offset: 0x00092908
+		// Token: 0x06000AD1 RID: 2769 RVA: 0x0009A640 File Offset: 0x00098840
 		static ConfigDailyTaskGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDailyTaskGroupById.CreateStaticDefaultValue), new Action(ConfigDailyTaskGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A66 RID: 2662 RVA: 0x00094728 File Offset: 0x00092928
+		// Token: 0x06000AD2 RID: 2770 RVA: 0x0009A660 File Offset: 0x00098860
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDailyTaskGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A67 RID: 2663 RVA: 0x000947A7 File Offset: 0x000929A7
+		// Token: 0x06000AD3 RID: 2771 RVA: 0x0009A6DF File Offset: 0x000988DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDailyTaskGroupById.LogPair = null;
 			ConfigDailyTaskGroupById.HandleId = 0;
 		}
 
-		// Token: 0x06000A68 RID: 2664 RVA: 0x000947B5 File Offset: 0x000929B5
+		// Token: 0x06000AD4 RID: 2772 RVA: 0x0009A6ED File Offset: 0x000988ED
 		public static void Init()
 		{
 			ConfigDailyTaskGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigDailyTaskGroupById.HandleId, "db_daily_task.db", "select BinData from `DailyTaskGroup` where Id=?");
 		}
 
-		// Token: 0x06000A69 RID: 2665 RVA: 0x000947D0 File Offset: 0x000929D0
+		// Token: 0x06000AD5 RID: 2773 RVA: 0x0009A708 File Offset: 0x00098908
 		public static DailyTaskGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDailyTaskGroupById.HandleId, ConfigDailyTaskGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DailyTaskGroup?(rootAsDailyTaskGroup);
 		}
 
-		// Token: 0x04000C01 RID: 3073
+		// Token: 0x04000C7F RID: 3199
 		private const string DB = "db_daily_task.db";
 
-		// Token: 0x04000C02 RID: 3074
+		// Token: 0x04000C80 RID: 3200
 		private const string FILE = "m.每日任务.xlsx";
 
-		// Token: 0x04000C03 RID: 3075
+		// Token: 0x04000C81 RID: 3201
 		private const string TABLE = "DailyTaskGroup";
 
-		// Token: 0x04000C04 RID: 3076
+		// Token: 0x04000C82 RID: 3202
 		private const string COMMAND = "select BinData from `DailyTaskGroup` where Id=?";
 
-		// Token: 0x04000C05 RID: 3077
+		// Token: 0x04000C83 RID: 3203
 		private const string KEY_PREFIX = "DailyTaskGroupById";
 
-		// Token: 0x04000C06 RID: 3078
+		// Token: 0x04000C84 RID: 3204
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000C07 RID: 3079
+		// Token: 0x04000C85 RID: 3205
 		private static int HandleId;
 	}
 }

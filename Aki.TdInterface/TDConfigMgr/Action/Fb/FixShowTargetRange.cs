@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024E1 RID: 9441
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002786 RID: 10118
 	public class FixShowTargetRange : ActionParams
 	{
-		// Token: 0x0600D2BD RID: 53949 RVA: 0x001F41EC File Offset: 0x001F23EC
+		// Token: 0x0600E012 RID: 57362 RVA: 0x0020FA48 File Offset: 0x0020DC48
 		public static FixShowTargetRange Create(IFixShowTargetRange? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003ABD RID: 15037
-		// (get) Token: 0x0600D2BE RID: 53950 RVA: 0x001F420C File Offset: 0x001F240C
+		// Token: 0x17003DB4 RID: 15796
+		// (get) Token: 0x0600E013 RID: 57363 RVA: 0x0020FA68 File Offset: 0x0020DC68
 		public virtual List<int> RangeEntities
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003ABE RID: 15038
-		// (get) Token: 0x0600D2BF RID: 53951 RVA: 0x001F4270 File Offset: 0x001F2470
+		// Token: 0x17003DB5 RID: 15797
+		// (get) Token: 0x0600E014 RID: 57364 RVA: 0x0020FACC File Offset: 0x0020DCCC
 		public virtual bool DelayShow
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007397 RID: 29591
+		// Token: 0x040079E4 RID: 31204
 		private IFixShowTargetRange Instance;
 
-		// Token: 0x04007398 RID: 29592
+		// Token: 0x040079E5 RID: 31205
 		private List<int> _RangeEntitiesCache;
 
-		// Token: 0x04007399 RID: 29593
+		// Token: 0x040079E6 RID: 31206
 		private bool _RangeEntitiesInited;
 	}
 }

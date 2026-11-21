@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003250 RID: 12880
+// Token: 0x020027BF RID: 10175
 public enum EQteType
 {
-	// Token: 0x0400DB0C RID: 56076
+	// Token: 0x0400DFAB RID: 57259
 	OnLand,
-	// Token: 0x0400DB0D RID: 56077
+	// Token: 0x0400DFAC RID: 57260
 	InAir
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AD3 RID: 2771
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B9D RID: 2973
 	public class IStateConfig
 	{
-		// Token: 0x06003FD5 RID: 16341 RVA: 0x000A3352 File Offset: 0x000A1552
+		// Token: 0x060043FF RID: 17407 RVA: 0x000AC946 File Offset: 0x000AAB46
 		public static IStateConfig Create(IStateConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FEC RID: 4076
-		// (get) Token: 0x06003FD6 RID: 16342 RVA: 0x000A3371 File Offset: 0x000A1571
+		// Token: 0x170010C0 RID: 4288
+		// (get) Token: 0x06004400 RID: 17408 RVA: 0x000AC965 File Offset: 0x000AAB65
 		public virtual string State
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FED RID: 4077
-		// (get) Token: 0x06003FD7 RID: 16343 RVA: 0x000A337E File Offset: 0x000A157E
+		// Token: 0x170010C1 RID: 4289
+		// (get) Token: 0x06004401 RID: 17409 RVA: 0x000AC972 File Offset: 0x000AAB72
 		public virtual float Duration
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400238A RID: 9098
+		// Token: 0x040025A6 RID: 9638
 		private IStateConfig Instance;
 	}
 }

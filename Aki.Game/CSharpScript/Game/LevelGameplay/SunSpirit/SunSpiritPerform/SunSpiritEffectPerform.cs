@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 {
-	// Token: 0x02006A04 RID: 27140
+	// Token: 0x02005B61 RID: 23393
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SunSpiritEffectPerform : SunSpiritBasePerform, ISunSpiritScenePerform
 	{
-		// Token: 0x0604381D RID: 276509 RVA: 0x01082870 File Offset: 0x01080A70
+		// Token: 0x06039869 RID: 235625 RVA: 0x01026E94 File Offset: 0x01025094
 		public SunSpiritEffectPerform(SunSpiritData sunSpiritData, Transform initTransform) : base(sunSpiritData)
 		{
 			this.InitTransform.Set(initTransform.GetLocation(), initTransform.GetRotation(), initTransform.GetScale3D());
 		}
 
-		// Token: 0x0604381E RID: 276510 RVA: 0x010828AC File Offset: 0x01080AAC
+		// Token: 0x0603986A RID: 235626 RVA: 0x01026ED0 File Offset: 0x010250D0
 		protected override bool OnInit()
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return this.GenerateSunSpiritEffectOwner(this.InitTransform) && this.GenerateSunSpiritEffect();
 		}
 
-		// Token: 0x0604381F RID: 276511 RVA: 0x010828E0 File Offset: 0x01080AE0
+		// Token: 0x0603986B RID: 235627 RVA: 0x01026F04 File Offset: 0x01025104
 		protected override void OnDestroy()
 		{
 			this.DestroySunSpiritEffect("SunSpiritEffectPerform.OnDestroy");
 			this.DestroySunSpiritEffectOwner("SunSpiritEffectPerform.OnDestroy");
 		}
 
-		// Token: 0x06043820 RID: 276512 RVA: 0x010828F8 File Offset: 0x01080AF8
+		// Token: 0x0603986C RID: 235628 RVA: 0x01026F1C File Offset: 0x0102511C
 		public bool GetTransform(Transform outTransform)
 		{
 			AActor effectOwner = this.EffectOwner;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043821 RID: 276513 RVA: 0x01082934 File Offset: 0x01080B34
+		// Token: 0x0603986D RID: 235629 RVA: 0x01026F58 File Offset: 0x01025158
 		[NullableContext(2)]
 		public bool GetTransformData(Vector outLocation = null, object outRotation = null, Vector outScale = null)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043822 RID: 276514 RVA: 0x010829C4 File Offset: 0x01080BC4
+		// Token: 0x0603986E RID: 235630 RVA: 0x01026FE8 File Offset: 0x010251E8
 		public bool SetTransform(Transform inTransform)
 		{
 			AActor effectOwner = this.EffectOwner;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043823 RID: 276515 RVA: 0x01082A04 File Offset: 0x01080C04
+		// Token: 0x0603986F RID: 235631 RVA: 0x01027028 File Offset: 0x01025228
 		[NullableContext(2)]
 		public bool SetTransformData(Vector inLocation = null, object inRotation = null, Vector inScale = null)
 		{
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043824 RID: 276516 RVA: 0x01082B58 File Offset: 0x01080D58
+		// Token: 0x06039870 RID: 235632 RVA: 0x0102717C File Offset: 0x0102537C
 		[NullableContext(2)]
 		private bool GenerateSunSpiritEffectOwner(Transform transform = null)
 		{
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043825 RID: 276517 RVA: 0x01082BF8 File Offset: 0x01080DF8
+		// Token: 0x06039871 RID: 235633 RVA: 0x0102721C File Offset: 0x0102541C
 		private void DestroySunSpiritEffectOwner(string reason)
 		{
 			AActor effectOwner = this.EffectOwner;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			this.EffectOwner = null;
 		}
 
-		// Token: 0x06043826 RID: 276518 RVA: 0x01082C28 File Offset: 0x01080E28
+		// Token: 0x06039872 RID: 235634 RVA: 0x0102724C File Offset: 0x0102544C
 		private bool GenerateSunSpiritEffect()
 		{
 			AActor effectOwner = this.EffectOwner;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			return true;
 		}
 
-		// Token: 0x06043827 RID: 276519 RVA: 0x01082D04 File Offset: 0x01080F04
+		// Token: 0x06039873 RID: 235635 RVA: 0x01027328 File Offset: 0x01025528
 		private void DestroySunSpiritEffect(string reason)
 		{
 			if (this.FlyingEffectHandle != 0 && EffectSystem.Instance.IsValid(this.FlyingEffectHandle))
@@ -227,21 +227,21 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform
 			this.FlyingEffectHandle = 0;
 		}
 
-		// Token: 0x040233D6 RID: 144342
+		// Token: 0x0401E5C8 RID: 124360
 		[Nullable(2)]
 		private AActor EffectOwner;
 
-		// Token: 0x040233D7 RID: 144343
+		// Token: 0x0401E5C9 RID: 124361
 		private int FlyingEffectHandle;
 
-		// Token: 0x040233D8 RID: 144344
+		// Token: 0x0401E5CA RID: 124362
 		[Nullable(2)]
 		private string EffectPath;
 
-		// Token: 0x040233D9 RID: 144345
+		// Token: 0x0401E5CB RID: 124363
 		private readonly Transform InitTransform = Transform.Create();
 
-		// Token: 0x040233DA RID: 144346
+		// Token: 0x0401E5CC RID: 124364
 		private readonly Transform TempTransform = Transform.Create();
 	}
 }

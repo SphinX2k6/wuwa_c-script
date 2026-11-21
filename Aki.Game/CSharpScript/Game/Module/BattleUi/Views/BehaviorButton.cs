@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D00 RID: 23808
+	// Token: 0x02004CE2 RID: 19682
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BehaviorButton : BattleChildView
 	{
-		// Token: 0x0603C4C7 RID: 246983 RVA: 0x00E7110C File Offset: 0x00E6F30C
+		// Token: 0x06031420 RID: 201760 RVA: 0x00DC1774 File Offset: 0x00DBF974
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4C8 RID: 246984 RVA: 0x00E711E0 File Offset: 0x00E6F3E0
+		// Token: 0x06031421 RID: 201761 RVA: 0x00DC1848 File Offset: 0x00DBFA48
 		public override void Initialize(object paramsObj = null)
 		{
 			base.Initialize(paramsObj);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			throw new InvalidCastException();
 		}
 
-		// Token: 0x0603C4C9 RID: 246985 RVA: 0x00E71264 File Offset: 0x00E6F464
+		// Token: 0x06031422 RID: 201762 RVA: 0x00DC18CC File Offset: 0x00DBFACC
 		protected override UniTask InitializeAsync(object param = null)
 		{
 			BehaviorButton.<InitializeAsync>d__16 <InitializeAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4CA RID: 246986 RVA: 0x00E712A8 File Offset: 0x00E6F4A8
+		// Token: 0x06031423 RID: 201763 RVA: 0x00DC1910 File Offset: 0x00DBFB10
 		protected override void OnBeforeDestroy()
 		{
 			this.BehaviorButtonData = null;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnVisibleChangedCallback = null;
 		}
 
-		// Token: 0x0603C4CB RID: 246987 RVA: 0x00E71335 File Offset: 0x00E6F535
+		// Token: 0x06031424 RID: 201764 RVA: 0x00DC199D File Offset: 0x00DBFB9D
 		private void AddEvents()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			button.OnPointUpCallBack.Bind(new Action(this.OnReleaseBehaviorButton));
 		}
 
-		// Token: 0x0603C4CC RID: 246988 RVA: 0x00E7136B File Offset: 0x00E6F56B
+		// Token: 0x06031425 RID: 201765 RVA: 0x00DC19D3 File Offset: 0x00DBFBD3
 		private void RemoveEvents()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			button.OnPointUpCallBack.Unbind();
 		}
 
-		// Token: 0x0603C4CD RID: 246989 RVA: 0x00E71389 File Offset: 0x00E6F589
+		// Token: 0x06031426 RID: 201766 RVA: 0x00DC19F1 File Offset: 0x00DBFBF1
 		public void UpdateAlpha()
 		{
 			this.BaseAlpha = this.RootItem.GetAlpha();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TargetAlpha = this.BaseAlpha;
 		}
 
-		// Token: 0x0603C4CE RID: 246990 RVA: 0x00E713C8 File Offset: 0x00E6F5C8
+		// Token: 0x06031427 RID: 201767 RVA: 0x00DC1A30 File Offset: 0x00DBFC30
 		private void OnPressBehaviorButton()
 		{
 			if (this.TargetAlpha == 0f)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit<bool, EBehaviorType>(EEventName.OnPressOrReleaseBehaviorButton, true, this.BehaviorType);
 		}
 
-		// Token: 0x0603C4CF RID: 246991 RVA: 0x00E71434 File Offset: 0x00E6F634
+		// Token: 0x06031428 RID: 201768 RVA: 0x00DC1A9C File Offset: 0x00DBFC9C
 		private void OnReleaseBehaviorButton()
 		{
 			BehaviorButtonData behaviorButtonData = this.BehaviorButtonData;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Emit<bool, EBehaviorType>(EEventName.OnPressOrReleaseBehaviorButton, false, this.BehaviorType);
 		}
 
-		// Token: 0x0603C4D0 RID: 246992 RVA: 0x00E7148F File Offset: 0x00E6F68F
+		// Token: 0x06031429 RID: 201769 RVA: 0x00DC1AF7 File Offset: 0x00DBFCF7
 		[NullableContext(1)]
 		public void Refresh(BehaviorButtonData behaviorButtonData)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKey();
 		}
 
-		// Token: 0x0603C4D1 RID: 246993 RVA: 0x00E714B7 File Offset: 0x00E6F6B7
+		// Token: 0x0603142A RID: 201770 RVA: 0x00DC1B1F File Offset: 0x00DBFD1F
 		public void RefreshAll()
 		{
 			if (this.BehaviorButtonData == null)
@@ -175,14 +175,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Refresh(this.BehaviorButtonData);
 		}
 
-		// Token: 0x0603C4D2 RID: 246994 RVA: 0x00E714CE File Offset: 0x00E6F6CE
+		// Token: 0x0603142B RID: 201771 RVA: 0x00DC1B36 File Offset: 0x00DBFD36
 		private void InputAction(CSharpScript.Game.Input.EInputAction inputAction, EInputState inputState)
 		{
 			this.OnInputAction();
 			InputController.Instance.InputAction(inputAction, inputState);
 		}
 
-		// Token: 0x0603C4D3 RID: 246995 RVA: 0x00E714E2 File Offset: 0x00E6F6E2
+		// Token: 0x0603142C RID: 201772 RVA: 0x00DC1B4A File Offset: 0x00DBFD4A
 		public void OnInputAction()
 		{
 			if (this.TargetAlpha == 0f)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			clickEffect.Play();
 		}
 
-		// Token: 0x0603C4D4 RID: 246996 RVA: 0x00E71504 File Offset: 0x00E6F704
+		// Token: 0x0603142D RID: 201773 RVA: 0x00DC1B6C File Offset: 0x00DBFD6C
 		public void RefreshSkillIcon()
 		{
 			if (this.BehaviorButtonData == null)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetSkillIcon(skillTexturePath);
 		}
 
-		// Token: 0x0603C4D5 RID: 246997 RVA: 0x00E71530 File Offset: 0x00E6F730
+		// Token: 0x0603142E RID: 201774 RVA: 0x00DC1B98 File Offset: 0x00DBFD98
 		[NullableContext(1)]
 		private void SetSkillIcon(string skillIconPath)
 		{
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4D6 RID: 246998 RVA: 0x00E715DC File Offset: 0x00E6F7DC
+		// Token: 0x0603142F RID: 201775 RVA: 0x00DC1C44 File Offset: 0x00DBFE44
 		public void RefreshVisible()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -285,18 +285,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onVisibleChangedCallback();
 		}
 
-		// Token: 0x0603C4D7 RID: 246999 RVA: 0x00E71641 File Offset: 0x00E6F841
+		// Token: 0x06031430 RID: 201776 RVA: 0x00DC1CA9 File Offset: 0x00DBFEA9
 		public bool IsVisible()
 		{
 			return this.BehaviorButtonData != null && (this.BehaviorType != EBehaviorType.LockTarget || FunctionModel.Instance.IsOpen(10031)) && this.BehaviorButtonData.IsVisible();
 		}
 
-		// Token: 0x0603C4D8 RID: 247000 RVA: 0x00E71675 File Offset: 0x00E6F875
+		// Token: 0x06031431 RID: 201777 RVA: 0x00DC1CDD File Offset: 0x00DBFEDD
 		public void RefreshEnable(bool bForce)
 		{
 		}
 
-		// Token: 0x0603C4D9 RID: 247001 RVA: 0x00E71678 File Offset: 0x00E6F878
+		// Token: 0x06031432 RID: 201778 RVA: 0x00DC1CE0 File Offset: 0x00DBFEE0
 		public void SetVisibleByExploreMode(bool visible, bool anim = false)
 		{
 			bool raycastTarget = false;
@@ -337,14 +337,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AlphaTweenComp.Play();
 		}
 
-		// Token: 0x0603C4DA RID: 247002 RVA: 0x00E7174E File Offset: 0x00E6F94E
+		// Token: 0x06031433 RID: 201779 RVA: 0x00DC1DB6 File Offset: 0x00DBFFB6
 		[NullableContext(1)]
 		public void SetOnVisibleChangedCallback(Action callback)
 		{
 			this.OnVisibleChangedCallback = callback;
 		}
 
-		// Token: 0x0603C4DB RID: 247003 RVA: 0x00E71758 File Offset: 0x00E6F958
+		// Token: 0x06031434 RID: 201780 RVA: 0x00DC1DC0 File Offset: 0x00DBFFC0
 		public void RefreshDynamicEffect()
 		{
 			SkillButtonEffect? dynamicEffectConfig = this.GetDynamicEffectConfig();
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			dynamicEffect.RefreshDynamicEffect(dynamicEffectConfig);
 		}
 
-		// Token: 0x0603C4DC RID: 247004 RVA: 0x00E71780 File Offset: 0x00E6F980
+		// Token: 0x06031435 RID: 201781 RVA: 0x00DC1DE8 File Offset: 0x00DBFFE8
 		protected SkillButtonEffect? GetDynamicEffectConfig()
 		{
 			if (this.BehaviorButtonData == null)
@@ -366,13 +366,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.BehaviorButtonData.GetDynamicEffectConfig();
 		}
 
-		// Token: 0x0603C4DD RID: 247005 RVA: 0x00E717AA File Offset: 0x00E6F9AA
+		// Token: 0x06031436 RID: 201782 RVA: 0x00DC1E12 File Offset: 0x00DC0012
 		public InputMultiKeyItem GetKeyItem()
 		{
 			return this.KeyItem;
 		}
 
-		// Token: 0x0603C4DE RID: 247006 RVA: 0x00E717B4 File Offset: 0x00E6F9B4
+		// Token: 0x06031437 RID: 201783 RVA: 0x00DC1E1C File Offset: 0x00DC001C
 		public void RefreshKey()
 		{
 			if (Info.Instance.OperationType != EOperationType.Desktop)
@@ -396,65 +396,65 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyActionName = actionName;
 		}
 
-		// Token: 0x0603C4DF RID: 247007 RVA: 0x00E7181F File Offset: 0x00E6FA1F
+		// Token: 0x06031438 RID: 201784 RVA: 0x00DC1E87 File Offset: 0x00DC0087
 		public string GetActionName()
 		{
 			return this.KeyActionName;
 		}
 
-		// Token: 0x0401F69F RID: 128671
+		// Token: 0x0401A158 RID: 106840
 		private BehaviorButtonData BehaviorButtonData;
 
-		// Token: 0x0401F6A0 RID: 128672
+		// Token: 0x0401A159 RID: 106841
 		[Nullable(1)]
 		private string SkillIconPath = string.Empty;
 
-		// Token: 0x0401F6A1 RID: 128673
+		// Token: 0x0401A15A RID: 106842
 		private int? LoadIconHandleId;
 
-		// Token: 0x0401F6A2 RID: 128674
+		// Token: 0x0401A15B RID: 106843
 		private UUISpriteTransition SpriteTransition;
 
-		// Token: 0x0401F6A3 RID: 128675
+		// Token: 0x0401A15C RID: 106844
 		protected string KeyActionName;
 
-		// Token: 0x0401F6A4 RID: 128676
+		// Token: 0x0401A15D RID: 106845
 		public EBehaviorType BehaviorType = EBehaviorType.Aim;
 
-		// Token: 0x0401F6A5 RID: 128677
+		// Token: 0x0401A15E RID: 106846
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0401F6A6 RID: 128678
+		// Token: 0x0401A15F RID: 106847
 		private BattleUiNiagaraItem ClickEffect;
 
-		// Token: 0x0401F6A7 RID: 128679
+		// Token: 0x0401A160 RID: 106848
 		private ULGUIPlayTweenComponent AlphaTweenComp;
 
-		// Token: 0x0401F6A8 RID: 128680
+		// Token: 0x0401A161 RID: 106849
 		private float TargetAlpha = 1f;
 
-		// Token: 0x0401F6A9 RID: 128681
+		// Token: 0x0401A162 RID: 106850
 		private float BaseAlpha = 1f;
 
-		// Token: 0x0401F6AA RID: 128682
+		// Token: 0x0401A163 RID: 106851
 		private Action OnVisibleChangedCallback;
 
-		// Token: 0x0401F6AB RID: 128683
+		// Token: 0x0401A164 RID: 106852
 		private BattleSkillItemDynamicEffect DynamicEffect;
 
-		// Token: 0x0200BF74 RID: 49012
+		// Token: 0x0200A97A RID: 43386
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039BC6 RID: 236486
+			// Token: 0x04034588 RID: 214408
 			BehaviorButton,
-			// Token: 0x04039BC7 RID: 236487
+			// Token: 0x04034589 RID: 214409
 			IconSprite,
-			// Token: 0x04039BC8 RID: 236488
+			// Token: 0x0403458A RID: 214410
 			ClickEffectNiagara,
-			// Token: 0x04039BC9 RID: 236489
+			// Token: 0x0403458B RID: 214411
 			DynamicEffectNiagara,
-			// Token: 0x04039BCA RID: 236490
+			// Token: 0x0403458C RID: 214412
 			KeyItem
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200464E RID: 17998
+	// Token: 0x02004AB6 RID: 19126
 	public struct IFinishCurrentTrackQuestNode : IFlatbufferObject
 	{
-		// Token: 0x17007FB6 RID: 32694
-		// (get) Token: 0x0601B447 RID: 111687 RVA: 0x003E1388 File Offset: 0x003DF588
+		// Token: 0x170085F7 RID: 34295
+		// (get) Token: 0x0601CC1C RID: 117788 RVA: 0x0040D624 File Offset: 0x0040B824
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B448 RID: 111688 RVA: 0x003E1395 File Offset: 0x003DF595
+		// Token: 0x0601CC1D RID: 117789 RVA: 0x0040D631 File Offset: 0x0040B831
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B449 RID: 111689 RVA: 0x003E139C File Offset: 0x003DF59C
+		// Token: 0x0601CC1E RID: 117790 RVA: 0x0040D638 File Offset: 0x0040B838
 		public static IFinishCurrentTrackQuestNode GetRootAsIFinishCurrentTrackQuestNode(ByteBuffer _bb)
 		{
 			return IFinishCurrentTrackQuestNode.GetRootAsIFinishCurrentTrackQuestNode(_bb, default(IFinishCurrentTrackQuestNode));
 		}
 
-		// Token: 0x0601B44A RID: 111690 RVA: 0x003E13B8 File Offset: 0x003DF5B8
+		// Token: 0x0601CC1F RID: 117791 RVA: 0x0040D654 File Offset: 0x0040B854
 		public static IFinishCurrentTrackQuestNode GetRootAsIFinishCurrentTrackQuestNode(ByteBuffer _bb, IFinishCurrentTrackQuestNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B44B RID: 111691 RVA: 0x003E13D5 File Offset: 0x003DF5D5
+		// Token: 0x0601CC20 RID: 117792 RVA: 0x0040D671 File Offset: 0x0040B871
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B44C RID: 111692 RVA: 0x003E13E4 File Offset: 0x003DF5E4
+		// Token: 0x0601CC21 RID: 117793 RVA: 0x0040D680 File Offset: 0x0040B880
 		public IFinishCurrentTrackQuestNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007FB7 RID: 32695
-		// (get) Token: 0x0601B44D RID: 111693 RVA: 0x003E13F4 File Offset: 0x003DF5F4
+		// Token: 0x170085F8 RID: 34296
+		// (get) Token: 0x0601CC22 RID: 117794 RVA: 0x0040D690 File Offset: 0x0040B890
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007FB8 RID: 32696
-		// (get) Token: 0x0601B44E RID: 111694 RVA: 0x003E1430 File Offset: 0x003DF630
+		// Token: 0x170085F9 RID: 34297
+		// (get) Token: 0x0601CC23 RID: 117795 RVA: 0x0040D6CC File Offset: 0x0040B8CC
 		public int NodeId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007FB9 RID: 32697
-		// (get) Token: 0x0601B44F RID: 111695 RVA: 0x003E146C File Offset: 0x003DF66C
+		// Token: 0x170085FA RID: 34298
+		// (get) Token: 0x0601CC24 RID: 117796 RVA: 0x0040D708 File Offset: 0x0040B908
 		public int NodeIndex
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007FBA RID: 32698
-		// (get) Token: 0x0601B450 RID: 111696 RVA: 0x003E14A8 File Offset: 0x003DF6A8
+		// Token: 0x170085FB RID: 34299
+		// (get) Token: 0x0601CC25 RID: 117797 RVA: 0x0040D744 File Offset: 0x0040B944
 		public bool IsComplete
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007FBB RID: 32699
-		// (get) Token: 0x0601B451 RID: 111697 RVA: 0x003E14E8 File Offset: 0x003DF6E8
+		// Token: 0x170085FC RID: 34300
+		// (get) Token: 0x0601CC26 RID: 117798 RVA: 0x0040D784 File Offset: 0x0040B984
 		public byte NullMask
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B452 RID: 111698 RVA: 0x003E1525 File Offset: 0x003DF725
+		// Token: 0x0601CC27 RID: 117799 RVA: 0x0040D7C1 File Offset: 0x0040B9C1
 		public static Offset<IFinishCurrentTrackQuestNode> CreateIFinishCurrentTrackQuestNode(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, int NodeId = 0, int NodeIndex = 0, bool IsComplete = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IFinishCurrentTrackQuestNode.EndIFinishCurrentTrackQuestNode(builder);
 		}
 
-		// Token: 0x0601B453 RID: 111699 RVA: 0x003E1559 File Offset: 0x003DF759
+		// Token: 0x0601CC28 RID: 117800 RVA: 0x0040D7F5 File Offset: 0x0040B9F5
 		public static void StartIFinishCurrentTrackQuestNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601B454 RID: 111700 RVA: 0x003E1562 File Offset: 0x003DF762
+		// Token: 0x0601CC29 RID: 117801 RVA: 0x0040D7FE File Offset: 0x0040B9FE
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B455 RID: 111701 RVA: 0x003E156D File Offset: 0x003DF76D
+		// Token: 0x0601CC2A RID: 117802 RVA: 0x0040D809 File Offset: 0x0040BA09
 		public static void AddNodeId(FlatBufferBuilder builder, int nodeId)
 		{
 			builder.AddInt(1, nodeId, 0);
 		}
 
-		// Token: 0x0601B456 RID: 111702 RVA: 0x003E1578 File Offset: 0x003DF778
+		// Token: 0x0601CC2B RID: 117803 RVA: 0x0040D814 File Offset: 0x0040BA14
 		public static void AddNodeIndex(FlatBufferBuilder builder, int nodeIndex)
 		{
 			builder.AddInt(2, nodeIndex, 0);
 		}
 
-		// Token: 0x0601B457 RID: 111703 RVA: 0x003E1583 File Offset: 0x003DF783
+		// Token: 0x0601CC2C RID: 117804 RVA: 0x0040D81F File Offset: 0x0040BA1F
 		public static void AddIsComplete(FlatBufferBuilder builder, bool isComplete)
 		{
 			builder.AddBool(3, isComplete, false);
 		}
 
-		// Token: 0x0601B458 RID: 111704 RVA: 0x003E158E File Offset: 0x003DF78E
+		// Token: 0x0601CC2D RID: 117805 RVA: 0x0040D82A File Offset: 0x0040BA2A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601B459 RID: 111705 RVA: 0x003E1599 File Offset: 0x003DF799
+		// Token: 0x0601CC2E RID: 117806 RVA: 0x0040D835 File Offset: 0x0040BA35
 		public static Offset<IFinishCurrentTrackQuestNode> EndIFinishCurrentTrackQuestNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IFinishCurrentTrackQuestNode>(builder.EndTable());
 		}
 
-		// Token: 0x0601B45A RID: 111706 RVA: 0x003E15A8 File Offset: 0x003DF7A8
+		// Token: 0x0601CC2F RID: 117807 RVA: 0x0040D844 File Offset: 0x0040BA44
 		public IFinishCurrentTrackQuestNodeT UnPack()
 		{
 			IFinishCurrentTrackQuestNodeT finishCurrentTrackQuestNodeT = new IFinishCurrentTrackQuestNodeT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return finishCurrentTrackQuestNodeT;
 		}
 
-		// Token: 0x0601B45B RID: 111707 RVA: 0x003E15C3 File Offset: 0x003DF7C3
+		// Token: 0x0601CC30 RID: 117808 RVA: 0x0040D85F File Offset: 0x0040BA5F
 		public void UnPackTo(IFinishCurrentTrackQuestNodeT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601B45C RID: 111708 RVA: 0x003E1604 File Offset: 0x003DF804
+		// Token: 0x0601CC31 RID: 117809 RVA: 0x0040D8A0 File Offset: 0x0040BAA0
 		public static Offset<IFinishCurrentTrackQuestNode> Pack(FlatBufferBuilder builder, IFinishCurrentTrackQuestNodeT _o)
 		{
 			if (_o == null)
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IFinishCurrentTrackQuestNode.CreateIFinishCurrentTrackQuestNode(builder, _o.Type, _o.NodeId, _o.NodeIndex, _o.IsComplete, _o.NullMask);
 		}
 
-		// Token: 0x0400C7C6 RID: 51142
+		// Token: 0x0400D1F5 RID: 53749
 		private Table __p;
 	}
 }

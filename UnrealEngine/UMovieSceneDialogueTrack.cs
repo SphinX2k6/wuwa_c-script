@@ -6,41 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020026EF RID: 9967
+	// Token: 0x020007CB RID: 1995
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.MovieSceneDialogueTrack")]
-	[UnrealStructLayout(248, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 248)]
-	public class UMovieSceneDialogueTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject, IMovieSceneTrackTemplateProducer, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(264, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 264)]
+	public class UMovieSceneDialogueTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06024F75 RID: 151413 RVA: 0x0036AEDA File Offset: 0x003690DA
+		// Token: 0x0600AC42 RID: 44098 RVA: 0x000FE3E5 File Offset: 0x000FC5E5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneDialogueTrack._ClassPtr;
 		}
 
-		// Token: 0x06024F76 RID: 151414 RVA: 0x0036AEE6 File Offset: 0x003690E6
-		int IMovieSceneTrackTemplateProducer.InterfaceOffset()
-		{
-			return UMovieSceneDialogueTrack.__InterfaceOffset_IMovieSceneTrackTemplateProducer;
-		}
-
-		// Token: 0x06024F77 RID: 151415 RVA: 0x0036AEF0 File Offset: 0x003690F0
+		// Token: 0x0600AC43 RID: 44099 RVA: 0x000FE3F4 File Offset: 0x000FC5F4
 		public UMovieSceneDialogueTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneDialogueTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06024F78 RID: 151416 RVA: 0x0036AF18 File Offset: 0x00369118
-		[NullableContext(1)]
+		// Token: 0x0600AC44 RID: 44100 RVA: 0x000FE41C File Offset: 0x000FC61C
 		public UMovieSceneDialogueTrack(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneDialogueTrack.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008EBC RID: 36540
-		// (get) Token: 0x06024F79 RID: 151417 RVA: 0x0036AF4C File Offset: 0x0036914C
-		// (set) Token: 0x06024F7A RID: 151418 RVA: 0x0036AF85 File Offset: 0x00369185
-		[Nullable(1)]
+		// Token: 0x1700201B RID: 8219
+		// (get) Token: 0x0600AC45 RID: 44101 RVA: 0x000FE450 File Offset: 0x000FC650
+		// (set) Token: 0x0600AC46 RID: 44102 RVA: 0x000FE489 File Offset: 0x000FC689
 		public TArray<UMovieSceneSection> Sections
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -51,16 +44,15 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.Sections.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17008EBD RID: 36541
-		// (get) Token: 0x06024F7B RID: 151419 RVA: 0x0036AF93 File Offset: 0x00369193
-		// (set) Token: 0x06024F7C RID: 151420 RVA: 0x0036AFA3 File Offset: 0x003691A3
+		// Token: 0x1700201C RID: 8220
+		// (get) Token: 0x0600AC47 RID: 44103 RVA: 0x000FE497 File Offset: 0x000FC697
+		// (set) Token: 0x0600AC48 RID: 44104 RVA: 0x000FE4A7 File Offset: 0x000FC6A7
 		public unsafe ELanguageAudio LanguageType
 		{
 			get
@@ -73,34 +65,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06024F7D RID: 151421 RVA: 0x0036AFB4 File Offset: 0x003691B4
+		// Token: 0x0600AC49 RID: 44105 RVA: 0x000FE4B8 File Offset: 0x000FC6B8
 		static UMovieSceneDialogueTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SequenceDialogue.MovieSceneDialogueTrack");
 		}
 
-		// Token: 0x06024F7E RID: 151422 RVA: 0x0036AFC2 File Offset: 0x003691C2
+		// Token: 0x0600AC4A RID: 44106 RVA: 0x000FE4C6 File Offset: 0x000FC6C6
 		protected UMovieSceneDialogueTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013EBC RID: 81596
-		internal static int __InterfaceOffset_IMovieSceneTrackTemplateProducer;
-
-		// Token: 0x04013EBD RID: 81597
-		[Nullable(1)]
+		// Token: 0x04004A35 RID: 18997
 		public new const string __ObjectPath = "/Script/SequenceDialogue.MovieSceneDialogueTrack";
 
-		// Token: 0x04013EBE RID: 81598
+		// Token: 0x04004A36 RID: 18998
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013EBF RID: 81599
+		// Token: 0x04004A37 RID: 18999
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013EC0 RID: 81600
+		// Token: 0x04004A38 RID: 19000
 		internal static int __PropertyOffset_Sections;
 
-		// Token: 0x04013EC1 RID: 81601
+		// Token: 0x04004A39 RID: 19001
 		[Nullable(new byte[]
 		{
 			2,
@@ -108,7 +96,7 @@ namespace UnrealEngine
 		})]
 		private TArray<UMovieSceneSection> _Sections;
 
-		// Token: 0x04013EC2 RID: 81602
+		// Token: 0x04004A3A RID: 19002
 		internal static int __PropertyOffset_LanguageType;
 	}
 }

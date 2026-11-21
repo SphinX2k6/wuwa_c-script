@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004676 RID: 18038
+	// Token: 0x020035A7 RID: 13735
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputDistributeDefine
 	{
-		// Token: 0x0602E8F0 RID: 190704 RVA: 0x00AC70FC File Offset: 0x00AC52FC
+		// Token: 0x0602303A RID: 143418 RVA: 0x009F4C5C File Offset: 0x009F2E5C
 		// Note: this type is marked as 'beforefieldinit'.
 		static InputDistributeDefine()
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Ui
 			};
 		}
 
-		// Token: 0x0401951A RID: 103706
+		// Token: 0x04013BC1 RID: 80833
 		[TupleElementNames(new string[]
 		{
 			"Tag",
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Ui
 			new ValueTuple<string, string>("BlockAllInputTag", null)
 		};
 
-		// Token: 0x0401951B RID: 103707
+		// Token: 0x04013BC2 RID: 80834
 		[Nullable(new byte[]
 		{
 			1,
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Ui
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<int, string> touchTagMap;
 
-		// Token: 0x0401951C RID: 103708
+		// Token: 0x04013BC3 RID: 80835
 		[Nullable(new byte[]
 		{
 			1,
@@ -107,147 +107,147 @@ namespace CSharpScript.Game.Ui
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<string, string> keyTagMap;
 
-		// Token: 0x0401951D RID: 103709
+		// Token: 0x04013BC4 RID: 80836
 		[StaticVariableRuleIgnore]
 		public static readonly EEventName[] inputDistributeEvents;
 
-		// Token: 0x0401951E RID: 103710
+		// Token: 0x04013BC5 RID: 80837
 		[StaticVariableRuleIgnore]
 		public const float AXIS_TOLERANCE = 0.02f;
 
-		// Token: 0x0200A8E9 RID: 43241
+		// Token: 0x020092A4 RID: 37540
 		[Nullable(0)]
 		public static class InputDistributeTagDefine
 		{
-			// Token: 0x040336B6 RID: 210614
+			// Token: 0x0402DE4A RID: 187978
 			public const string FightInputRootTag = "FightInputRoot";
 
-			// Token: 0x040336B7 RID: 210615
+			// Token: 0x0402DE4B RID: 187979
 			public const string InteractionRootTag = "InteractionRoot";
 
-			// Token: 0x040336B8 RID: 210616
+			// Token: 0x0402DE4C RID: 187980
 			public const string UiInputRootTag = "UiInputRoot";
 
-			// Token: 0x040336B9 RID: 210617
+			// Token: 0x0402DE4D RID: 187981
 			public const string BlockAllInputTag = "BlockAllInputTag";
 
-			// Token: 0x0200D0EE RID: 53486
+			// Token: 0x0200BCCC RID: 48332
 			[Nullable(0)]
 			public static class FightInputRoot
 			{
-				// Token: 0x0403EB91 RID: 256913
+				// Token: 0x04039FD9 RID: 237529
 				public const string ActionInputTag = "FightInputRoot.FightInput.ActionInput";
 
-				// Token: 0x0403EB92 RID: 256914
+				// Token: 0x04039FDA RID: 237530
 				public const string AxisInputTag = "FightInputRoot.FightInput.AxisInput";
 
-				// Token: 0x0200D1B9 RID: 53689
+				// Token: 0x0200BD9C RID: 48540
 				[Nullable(0)]
 				public static class ActionInput
 				{
-					// Token: 0x0403EEDA RID: 257754
+					// Token: 0x0403A337 RID: 238391
 					public const string CharacterSkillInputTag = "FightInputRoot.FightInput.ActionInput.CharacterSkillInput";
 
-					// Token: 0x0403EEDB RID: 257755
+					// Token: 0x0403A338 RID: 238392
 					public const string VehicleMusicInputTag = "FightInputRoot.FightInput.ActionInput.VehicleMusicInputTag";
 				}
 
-				// Token: 0x0200D1BA RID: 53690
+				// Token: 0x0200BD9D RID: 48541
 				[Nullable(0)]
 				public static class AxisInput
 				{
-					// Token: 0x0403EEDC RID: 257756
+					// Token: 0x0403A339 RID: 238393
 					public const string CameraInputTag = "FightInputRoot.FightInput.AxisInput.CameraInput";
 
-					// Token: 0x0403EEDD RID: 257757
+					// Token: 0x0403A33A RID: 238394
 					public const string MoveInputTag = "FightInputRoot.FightInput.AxisInput.MoveInput";
 
-					// Token: 0x0200D1BB RID: 53691
+					// Token: 0x0200BD9E RID: 48542
 					[Nullable(0)]
 					public static class CameraInput
 					{
-						// Token: 0x0403EEDE RID: 257758
+						// Token: 0x0403A33B RID: 238395
 						public const string CameraRotationTag = "FightInputRoot.FightInput.AxisInput.CameraInput.CameraRotation";
 
-						// Token: 0x0403EEDF RID: 257759
+						// Token: 0x0403A33C RID: 238396
 						public const string CameraZoomTag = "FightInputRoot.FightInput.AxisInput.CameraInput.CameraZoom";
 					}
 				}
 			}
 
-			// Token: 0x0200D0EF RID: 53487
+			// Token: 0x0200BCCD RID: 48333
 			[Nullable(0)]
 			public static class UiInputRoot
 			{
-				// Token: 0x0403EB93 RID: 256915
+				// Token: 0x04039FDB RID: 237531
 				public const string ShortcutKeyTag = "UiInputRoot.ShortcutKeyTag";
 
-				// Token: 0x0403EB94 RID: 256916
+				// Token: 0x04039FDC RID: 237532
 				public const string NavigationTag = "UiInputRoot.Navigation";
 
-				// Token: 0x0403EB95 RID: 256917
+				// Token: 0x04039FDD RID: 237533
 				public const string MouseInputTag = "UiInputRoot.MouseInputTag";
 			}
 		}
 
-		// Token: 0x0200A8EA RID: 43242
+		// Token: 0x020092A5 RID: 37541
 		[NullableContext(0)]
 		public enum EActionType
 		{
-			// Token: 0x040336BB RID: 210619
+			// Token: 0x0402DE4F RID: 187983
 			Press,
-			// Token: 0x040336BC RID: 210620
+			// Token: 0x0402DE50 RID: 187984
 			Release
 		}
 
-		// Token: 0x0200A8EB RID: 43243
+		// Token: 0x020092A6 RID: 37542
 		[NullableContext(0)]
 		public enum ETouchType
 		{
-			// Token: 0x040336BE RID: 210622
+			// Token: 0x0402DE52 RID: 187986
 			TouchBegin,
-			// Token: 0x040336BF RID: 210623
+			// Token: 0x0402DE53 RID: 187987
 			TouchEnd,
-			// Token: 0x040336C0 RID: 210624
+			// Token: 0x0402DE54 RID: 187988
 			TouchMove
 		}
 
-		// Token: 0x0200A8EC RID: 43244
+		// Token: 0x020092A7 RID: 37543
 		public interface ITouchData
 		{
-			// Token: 0x1700A149 RID: 41289
-			// (get) Token: 0x0604D583 RID: 316803
-			// (set) Token: 0x0604D584 RID: 316804
+			// Token: 0x170078DF RID: 30943
+			// (get) Token: 0x06043AB0 RID: 277168
+			// (set) Token: 0x06043AB1 RID: 277169
 			InputDistributeDefine.ETouchType TouchType { get; set; }
 
-			// Token: 0x1700A14A RID: 41290
-			// (get) Token: 0x0604D585 RID: 316805
-			// (set) Token: 0x0604D586 RID: 316806
+			// Token: 0x170078E0 RID: 30944
+			// (get) Token: 0x06043AB2 RID: 277170
+			// (set) Token: 0x06043AB3 RID: 277171
 			int TouchId { get; set; }
 
-			// Token: 0x1700A14B RID: 41291
-			// (get) Token: 0x0604D587 RID: 316807
-			// (set) Token: 0x0604D588 RID: 316808
+			// Token: 0x170078E1 RID: 30945
+			// (get) Token: 0x06043AB4 RID: 277172
+			// (set) Token: 0x06043AB5 RID: 277173
 			Vector TouchPosition { get; set; }
 		}
 
-		// Token: 0x0200A8ED RID: 43245
+		// Token: 0x020092A8 RID: 37544
 		[Nullable(0)]
 		public class TouchData : InputDistributeDefine.ITouchData
 		{
-			// Token: 0x1700A14C RID: 41292
-			// (get) Token: 0x0604D589 RID: 316809 RVA: 0x01454A82 File Offset: 0x01452C82
-			// (set) Token: 0x0604D58A RID: 316810 RVA: 0x01454A8A File Offset: 0x01452C8A
+			// Token: 0x170078E2 RID: 30946
+			// (get) Token: 0x06043AB6 RID: 277174 RVA: 0x01402F2A File Offset: 0x0140112A
+			// (set) Token: 0x06043AB7 RID: 277175 RVA: 0x01402F32 File Offset: 0x01401132
 			public InputDistributeDefine.ETouchType TouchType { get; set; }
 
-			// Token: 0x1700A14D RID: 41293
-			// (get) Token: 0x0604D58B RID: 316811 RVA: 0x01454A93 File Offset: 0x01452C93
-			// (set) Token: 0x0604D58C RID: 316812 RVA: 0x01454A9B File Offset: 0x01452C9B
+			// Token: 0x170078E3 RID: 30947
+			// (get) Token: 0x06043AB8 RID: 277176 RVA: 0x01402F3B File Offset: 0x0140113B
+			// (set) Token: 0x06043AB9 RID: 277177 RVA: 0x01402F43 File Offset: 0x01401143
 			public int TouchId { get; set; }
 
-			// Token: 0x1700A14E RID: 41294
-			// (get) Token: 0x0604D58D RID: 316813 RVA: 0x01454AA4 File Offset: 0x01452CA4
-			// (set) Token: 0x0604D58E RID: 316814 RVA: 0x01454AAC File Offset: 0x01452CAC
+			// Token: 0x170078E4 RID: 30948
+			// (get) Token: 0x06043ABA RID: 277178 RVA: 0x01402F4C File Offset: 0x0140114C
+			// (set) Token: 0x06043ABB RID: 277179 RVA: 0x01402F54 File Offset: 0x01401154
 			public Vector TouchPosition { get; set; }
 		}
 	}

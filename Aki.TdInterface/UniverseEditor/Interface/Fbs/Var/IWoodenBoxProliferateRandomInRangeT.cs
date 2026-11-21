@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B33 RID: 15155
+	// Token: 0x02003F35 RID: 16181
 	public class IWoodenBoxProliferateRandomInRangeT
 	{
-		// Token: 0x17006802 RID: 26626
-		// (get) Token: 0x06014B6B RID: 84843 RVA: 0x0030338E File Offset: 0x0030158E
-		// (set) Token: 0x06014B6C RID: 84844 RVA: 0x00303396 File Offset: 0x00301596
+		// Token: 0x17006D9D RID: 28061
+		// (get) Token: 0x06016015 RID: 90133 RVA: 0x0032961E File Offset: 0x0032781E
+		// (set) Token: 0x06016016 RID: 90134 RVA: 0x00329626 File Offset: 0x00327826
 		public EWoodenBoxProliferateSpawnType Type { get; set; }
 
-		// Token: 0x17006803 RID: 26627
-		// (get) Token: 0x06014B6D RID: 84845 RVA: 0x0030339F File Offset: 0x0030159F
-		// (set) Token: 0x06014B6E RID: 84846 RVA: 0x003033A7 File Offset: 0x003015A7
+		// Token: 0x17006D9E RID: 28062
+		// (get) Token: 0x06016017 RID: 90135 RVA: 0x0032962F File Offset: 0x0032782F
+		// (set) Token: 0x06016018 RID: 90136 RVA: 0x00329637 File Offset: 0x00327837
 		public float RangeRadius { get; set; }
 
-		// Token: 0x17006804 RID: 26628
-		// (get) Token: 0x06014B6F RID: 84847 RVA: 0x003033B0 File Offset: 0x003015B0
-		// (set) Token: 0x06014B70 RID: 84848 RVA: 0x003033B8 File Offset: 0x003015B8
+		// Token: 0x17006D9F RID: 28063
+		// (get) Token: 0x06016019 RID: 90137 RVA: 0x00329640 File Offset: 0x00327840
+		// (set) Token: 0x0601601A RID: 90138 RVA: 0x00329648 File Offset: 0x00327848
 		public int Count { get; set; }
 
-		// Token: 0x06014B71 RID: 84849 RVA: 0x003033C1 File Offset: 0x003015C1
+		// Token: 0x0601601B RID: 90139 RVA: 0x00329651 File Offset: 0x00327851
 		public IWoodenBoxProliferateRandomInRangeT()
 		{
 			this.Type = EWoodenBoxProliferateSpawnType.RandomInRange;

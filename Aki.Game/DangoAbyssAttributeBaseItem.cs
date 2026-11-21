@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A26 RID: 6694
+// Token: 0x02000EE5 RID: 3813
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssAttributeBaseItem : UiPanelBase, IDynamicScrollBaseItem<DangoAbyssDefine.EquipViewAttributeData>
 {
-	// Token: 0x0600C4F1 RID: 50417 RVA: 0x002CABCC File Offset: 0x002C8DCC
+	// Token: 0x06009901 RID: 39169 RVA: 0x002D5CEC File Offset: 0x002D3EEC
 	public UniTask Init(UUIItem actor)
 	{
 		DangoAbyssAttributeBaseItem.<Init>d__0 <Init>d__;
@@ -24,7 +24,7 @@ public class DangoAbyssAttributeBaseItem : UiPanelBase, IDynamicScrollBaseItem<D
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C4F2 RID: 50418 RVA: 0x002CAC18 File Offset: 0x002C8E18
+	// Token: 0x06009902 RID: 39170 RVA: 0x002D5D38 File Offset: 0x002D3F38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class DangoAbyssAttributeBaseItem : UiPanelBase, IDynamicScrollBaseItem<D
 		};
 	}
 
-	// Token: 0x0600C4F3 RID: 50419 RVA: 0x002CAC74 File Offset: 0x002C8E74
+	// Token: 0x06009903 RID: 39171 RVA: 0x002D5D94 File Offset: 0x002D3F94
 	public FVector2D GetItemSize(DangoAbyssDefine.EquipViewAttributeData data)
 	{
 		if (data.Attribute != null)
@@ -52,7 +52,7 @@ public class DangoAbyssAttributeBaseItem : UiPanelBase, IDynamicScrollBaseItem<D
 		return new FVector2D(item3.GetWidth(), item3.GetHeight());
 	}
 
-	// Token: 0x0600C4F4 RID: 50420 RVA: 0x002CACDE File Offset: 0x002C8EDE
+	// Token: 0x06009904 RID: 39172 RVA: 0x002D5DFE File Offset: 0x002D3FFE
 	public void ClearItem()
 	{
 	}

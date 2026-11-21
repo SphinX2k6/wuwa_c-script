@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B97 RID: 27543
+	// Token: 0x02005D0F RID: 23823
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventStartMotorCruise : LevelEventBase
 	{
-		// Token: 0x060442D1 RID: 279249 RVA: 0x010CCE09 File Offset: 0x010CB009
+		// Token: 0x0603A425 RID: 238629 RVA: 0x01076C41 File Offset: 0x01074E41
 		public LevelEventStartMotorCruise(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442D2 RID: 279250 RVA: 0x010CCE14 File Offset: 0x010CB014
+		// Token: 0x0603A426 RID: 238630 RVA: 0x01076C4C File Offset: 0x01074E4C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.InParams = (inParams as StartMotorCruise);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.HandleTeleport(fvectorDouble.Value, frotator.Value);
 		}
 
-		// Token: 0x060442D3 RID: 279251 RVA: 0x010CCF68 File Offset: 0x010CB168
+		// Token: 0x0603A427 RID: 238631 RVA: 0x01076DA0 File Offset: 0x01074FA0
 		private UniTask HandleTeleport(FVectorDouble startPoint, FRotator rotator)
 		{
 			LevelEventStartMotorCruise.<HandleTeleport>d__3 <HandleTeleport>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <HandleTeleport>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060442D4 RID: 279252 RVA: 0x010CCFBC File Offset: 0x010CB1BC
+		// Token: 0x0603A428 RID: 238632 RVA: 0x01076DF4 File Offset: 0x01074FF4
 		private UniTask HandleAutoPilot()
 		{
 			LevelEventStartMotorCruise.<HandleAutoPilot>d__4 <HandleAutoPilot>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <HandleAutoPilot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060442D5 RID: 279253 RVA: 0x010CD000 File Offset: 0x010CB200
+		// Token: 0x0603A429 RID: 238633 RVA: 0x01076E38 File Offset: 0x01075038
 		private void OnAutoPilotStateChange(bool isInAutoPilot)
 		{
 			if (!isInAutoPilot)
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442D6 RID: 279254 RVA: 0x010CD056 File Offset: 0x010CB256
+		// Token: 0x0603A42A RID: 238634 RVA: 0x01076E8E File Offset: 0x0107508E
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x04023970 RID: 145776
+		// Token: 0x0401EC12 RID: 125970
 		[Nullable(2)]
 		private StartMotorCruise InParams;
 	}

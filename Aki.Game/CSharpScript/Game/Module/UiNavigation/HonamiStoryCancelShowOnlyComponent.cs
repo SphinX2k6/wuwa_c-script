@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200496F RID: 18799
+	// Token: 0x020038E7 RID: 14567
 	public class HonamiStoryCancelShowOnlyComponent : HonamiStoryComponentBase
 	{
-		// Token: 0x0603105E RID: 200798 RVA: 0x00B618CA File Offset: 0x00B5FACA
+		// Token: 0x06025B8E RID: 154510 RVA: 0x00A9C7AA File Offset: 0x00A9A9AA
 		public HonamiStoryCancelShowOnlyComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603105F RID: 200799 RVA: 0x00B618D3 File Offset: 0x00B5FAD3
+		// Token: 0x06025B8F RID: 154511 RVA: 0x00A9C7B3 File Offset: 0x00A9A9B3
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

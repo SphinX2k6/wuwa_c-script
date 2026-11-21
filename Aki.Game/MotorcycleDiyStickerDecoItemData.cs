@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200228D RID: 8845
+// Token: 0x02001771 RID: 6001
 public class MotorcycleDiyStickerDecoItemData
 {
-	// Token: 0x04008357 RID: 33623
+	// Token: 0x04008495 RID: 33941
 	public int Part;
 
-	// Token: 0x04008358 RID: 33624
+	// Token: 0x04008496 RID: 33942
 	public int ItemId;
 
-	// Token: 0x04008359 RID: 33625
+	// Token: 0x04008497 RID: 33943
 	public int QualityId;
 
-	// Token: 0x0400835A RID: 33626
+	// Token: 0x04008498 RID: 33944
 	public int SortIndex;
 
-	// Token: 0x0400835B RID: 33627
+	// Token: 0x04008499 RID: 33945
 	public bool IsSticker;
 }

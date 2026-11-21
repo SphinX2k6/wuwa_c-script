@@ -8,24 +8,24 @@ using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x02001D6B RID: 7531
+// Token: 0x0200122D RID: 4653
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 {
-	// Token: 0x0600E50F RID: 58639 RVA: 0x0035F6EB File Offset: 0x0035D8EB
+	// Token: 0x0600B92D RID: 47405 RVA: 0x0036B33F File Offset: 0x0036953F
 	public QuestFailedBehaviorNode(int NodeId) : base(NodeId)
 	{
 	}
 
-	// Token: 0x0600E510 RID: 58640 RVA: 0x0035F6FF File Offset: 0x0035D8FF
+	// Token: 0x0600B92E RID: 47406 RVA: 0x0036B353 File Offset: 0x00369553
 	static QuestFailedBehaviorNode()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestFailedBehaviorNode.CreateStaticDefaultValue), new Action(QuestFailedBehaviorNode.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700124F RID: 4687
-	// (get) Token: 0x0600E511 RID: 58641 RVA: 0x0035F71E File Offset: 0x0035D91E
+	// Token: 0x17001279 RID: 4729
+	// (get) Token: 0x0600B92F RID: 47407 RVA: 0x0036B372 File Offset: 0x00369572
 	public override EBtNode NodeType
 	{
 		get
@@ -34,8 +34,8 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001250 RID: 4688
-	// (get) Token: 0x0600E512 RID: 58642 RVA: 0x0035F721 File Offset: 0x0035D921
+	// Token: 0x1700127A RID: 4730
+	// (get) Token: 0x0600B930 RID: 47408 RVA: 0x0036B375 File Offset: 0x00369575
 	public bool? NeedSecondaryConfirm
 	{
 		get
@@ -44,8 +44,8 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001251 RID: 4689
-	// (get) Token: 0x0600E513 RID: 58643 RVA: 0x0035F729 File Offset: 0x0035D929
+	// Token: 0x1700127B RID: 4731
+	// (get) Token: 0x0600B931 RID: 47409 RVA: 0x0036B37D File Offset: 0x0036957D
 	public ETeleportTransitionType? NowTransitionType
 	{
 		get
@@ -54,8 +54,8 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17001252 RID: 4690
-	// (get) Token: 0x0600E514 RID: 58644 RVA: 0x0035F734 File Offset: 0x0035D934
+	// Token: 0x1700127C RID: 4732
+	// (get) Token: 0x0600B932 RID: 47410 RVA: 0x0036B388 File Offset: 0x00369588
 	public RangeFailedEffectHandler RangeFailedEffectChain
 	{
 		get
@@ -71,7 +71,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E515 RID: 58645 RVA: 0x0035F768 File Offset: 0x0035D968
+	// Token: 0x0600B933 RID: 47411 RVA: 0x0036B3BC File Offset: 0x003695BC
 	protected override bool OnCreate(IBtNode config)
 	{
 		if (config == null || config.Type != EBtNode.QuestFailed)
@@ -169,7 +169,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0600E516 RID: 58646 RVA: 0x0035F969 File Offset: 0x0035DB69
+	// Token: 0x0600B934 RID: 47412 RVA: 0x0036B5BD File Offset: 0x003697BD
 	protected override void OnNodeActive()
 	{
 		if (this.RangeFailedParameterContext != null)
@@ -178,7 +178,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E517 RID: 58647 RVA: 0x0035F988 File Offset: 0x0035DB88
+	// Token: 0x0600B935 RID: 47413 RVA: 0x0036B5DC File Offset: 0x003697DC
 	protected override void OnNodeDeActive(bool success)
 	{
 		this.StopFailRangeEffect();
@@ -200,7 +200,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E518 RID: 58648 RVA: 0x0035F9F4 File Offset: 0x0035DBF4
+	// Token: 0x0600B936 RID: 47414 RVA: 0x0036B648 File Offset: 0x00369848
 	private void AddSneakEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleStateChanged));
@@ -227,12 +227,12 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 			SneakTimeResponse sneakTimeResponse = (SneakTimeResponse)msg;
 			if (sneakTimeResponse.ErrorId != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(sneakTimeResponse.ErrorId, 18825, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(sneakTimeResponse.ErrorId, 16525, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600E519 RID: 58649 RVA: 0x0035FAD0 File Offset: 0x0035DCD0
+	// Token: 0x0600B937 RID: 47415 RVA: 0x0036B724 File Offset: 0x00369924
 	private void RemoveSneakEvent()
 	{
 		EventSystem.Instance.Emit(EEventName.SneakEnd);
@@ -247,7 +247,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E51A RID: 58650 RVA: 0x0035FB48 File Offset: 0x0035DD48
+	// Token: 0x0600B938 RID: 47416 RVA: 0x0036B79C File Offset: 0x0036999C
 	private void OnBattleStateChanged(bool isInBattleState)
 	{
 		this.AddOrRemoveSneakBuff(!isInBattleState);
@@ -277,18 +277,18 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 			int errorId = (int)sneakResponse.ErrorId;
 			if (errorId != 0 && errorId != 600067 && errorId != 1000054)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(sneakResponse.ErrorId, 20692, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(sneakResponse.ErrorId, 27480, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600E51B RID: 58651 RVA: 0x0035FC32 File Offset: 0x0035DE32
+	// Token: 0x0600B939 RID: 47417 RVA: 0x0036B886 File Offset: 0x00369A86
 	private void AddStalkEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnStalkFound, new Action<int>(this.OnStalkFound));
 	}
 
-	// Token: 0x0600E51C RID: 58652 RVA: 0x0035FC50 File Offset: 0x0035DE50
+	// Token: 0x0600B93A RID: 47418 RVA: 0x0036B8A4 File Offset: 0x00369AA4
 	private void RemoveStalkEvent()
 	{
 		if (EventSystem.Instance.Has(EEventName.OnStalkFound, new Action<int>(this.OnStalkFound)))
@@ -297,7 +297,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E51D RID: 58653 RVA: 0x0035FC8C File Offset: 0x0035DE8C
+	// Token: 0x0600B93B RID: 47419 RVA: 0x0036B8E0 File Offset: 0x00369AE0
 	private void OnStalkFound(int id)
 	{
 		Entity entity = EntitySystem.Instance.Get(id);
@@ -322,7 +322,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}, 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600E51E RID: 58654 RVA: 0x0035FCF0 File Offset: 0x0035DEF0
+	// Token: 0x0600B93C RID: 47420 RVA: 0x0036B944 File Offset: 0x00369B44
 	private void RequestStalkFailed()
 	{
 		int? behaviorTreeOwnerId = GeneralLogicTreeModel.Instance.GetBehaviorTreeOwnerId(new long?(base.TreeIncId));
@@ -335,12 +335,12 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 			NpcTraceFailedResponse npcTraceFailedResponse = (NpcTraceFailedResponse)msg;
 			if (npcTraceFailedResponse.ErrorId != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(npcTraceFailedResponse.ErrorId, 26082, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(npcTraceFailedResponse.ErrorId, 19981, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600E51F RID: 58655 RVA: 0x0035FD78 File Offset: 0x0035DF78
+	// Token: 0x0600B93D RID: 47421 RVA: 0x0036B9CC File Offset: 0x00369BCC
 	private void AddOrRemoveSneakBuff(bool isAdd)
 	{
 		CharacterBuffComponent component = Global.BaseCharacter.GetEntityNoBlueprint().GetComponent<CharacterBuffComponent>();
@@ -360,13 +360,13 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		component.RemoveBuff(70000049L, -1, "QuestFailedBehaviorNode", null, null, null);
 	}
 
-	// Token: 0x0600E520 RID: 58656 RVA: 0x0035FDFA File Offset: 0x0035DFFA
+	// Token: 0x0600B93E RID: 47422 RVA: 0x0036BA4E File Offset: 0x00369C4E
 	public bool IsFadeInScreen()
 	{
 		return this.TransitionType.GetValueOrDefault() == ETeleportTransitionType.FadeInScreen;
 	}
 
-	// Token: 0x0600E521 RID: 58657 RVA: 0x0035FE0A File Offset: 0x0035E00A
+	// Token: 0x0600B93F RID: 47423 RVA: 0x0036BA5E File Offset: 0x00369C5E
 	private void StopFailRangeEffect()
 	{
 		if (this.RangeFailedParameterContext != null)
@@ -375,7 +375,7 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600E522 RID: 58658 RVA: 0x0035FE28 File Offset: 0x0035E028
+	// Token: 0x0600B940 RID: 47424 RVA: 0x0036BA7C File Offset: 0x00369C7C
 	public bool IsOutFailRange(global::Vector itemPosition)
 	{
 		if (this.RangeFailedParameterContext != null)
@@ -393,57 +393,57 @@ public class QuestFailedBehaviorNode : BehaviorNodeBase, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0600E523 RID: 58659 RVA: 0x0035FEA3 File Offset: 0x0035E0A3
+	// Token: 0x0600B941 RID: 47425 RVA: 0x0036BAF7 File Offset: 0x00369CF7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E524 RID: 58660 RVA: 0x0035FEA5 File Offset: 0x0035E0A5
+	// Token: 0x0600B942 RID: 47426 RVA: 0x0036BAF9 File Offset: 0x00369CF9
 	public static void ResetStaticDefaultValue()
 	{
 		QuestFailedBehaviorNode.RangeFailedEffectChainInternal = null;
 	}
 
-	// Token: 0x0400699B RID: 27035
+	// Token: 0x04006A7B RID: 27259
 	public const int STALK_FAILED_DELAY_TIME = 1000;
 
-	// Token: 0x0400699C RID: 27036
+	// Token: 0x04006A7C RID: 27260
 	[Nullable(2)]
 	public ITimerUiConfig TimerUiConfig;
 
-	// Token: 0x0400699D RID: 27037
+	// Token: 0x04006A7D RID: 27261
 	public bool? CanGiveUp;
 
-	// Token: 0x0400699E RID: 27038
+	// Token: 0x04006A7E RID: 27262
 	private bool? SneakState;
 
-	// Token: 0x0400699F RID: 27039
+	// Token: 0x04006A7F RID: 27263
 	private bool RegisterSneakyNotify;
 
-	// Token: 0x040069A0 RID: 27040
+	// Token: 0x04006A80 RID: 27264
 	private bool? NeedConfirm;
 
-	// Token: 0x040069A1 RID: 27041
+	// Token: 0x04006A81 RID: 27265
 	private ETeleportTransitionType? TransitionType;
 
-	// Token: 0x040069A2 RID: 27042
+	// Token: 0x04006A82 RID: 27266
 	[Nullable(2)]
 	public string GiveUpText;
 
-	// Token: 0x040069A3 RID: 27043
+	// Token: 0x04006A83 RID: 27267
 	private List<int> EntitiesMonitorStalkAlert = new List<int>();
 
-	// Token: 0x040069A4 RID: 27044
+	// Token: 0x04006A84 RID: 27268
 	private bool IsRequesting;
 
-	// Token: 0x040069A5 RID: 27045
+	// Token: 0x04006A85 RID: 27269
 	public bool NeedRequiresSecondConfirmation;
 
-	// Token: 0x040069A6 RID: 27046
+	// Token: 0x04006A86 RID: 27270
 	[Nullable(2)]
 	private RangeFailedParameterContext RangeFailedParameterContext;
 
-	// Token: 0x040069A7 RID: 27047
+	// Token: 0x04006A87 RID: 27271
 	[Nullable(2)]
 	private static RangeFailedEffectHandler RangeFailedEffectChainInternal;
 }

@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F81 RID: 3969
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010AB RID: 4267
 	public class IFinishRoleTowerCondition : IQuestCondition
 	{
-		// Token: 0x0600584A RID: 22602 RVA: 0x000D7800 File Offset: 0x000D5A00
+		// Token: 0x06005E1C RID: 24092 RVA: 0x000E4228 File Offset: 0x000E2428
 		private IFinishRoleTowerCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600584B RID: 22603 RVA: 0x000D7838 File Offset: 0x000D5A38
+		// Token: 0x06005E1D RID: 24093 RVA: 0x000E4260 File Offset: 0x000E2460
 		public static IFinishRoleTowerCondition Create([Nullable(2)] IFinishRoleTowerCondition instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600584C RID: 22604 RVA: 0x000D784B File Offset: 0x000D5A4B
+		// Token: 0x06005E1E RID: 24094 RVA: 0x000E4273 File Offset: 0x000E2473
 		public static IFinishRoleTowerCondition CreateFromSetValue([Nullable(2)] IFinishRoleTowerCondition_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600584D RID: 22605 RVA: 0x000D785E File Offset: 0x000D5A5E
+		// Token: 0x06005E1F RID: 24095 RVA: 0x000E4286 File Offset: 0x000E2486
 		public new IFinishRoleTowerCondition_SetValue ToSetValue()
 		{
 			return new IFinishRoleTowerCondition_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D65 RID: 7525
-		// (get) Token: 0x0600584E RID: 22606 RVA: 0x000D7895 File Offset: 0x000D5A95
-		// (set) Token: 0x0600584F RID: 22607 RVA: 0x000D78C0 File Offset: 0x000D5AC0
+		// Token: 0x17001F0A RID: 7946
+		// (get) Token: 0x06005E20 RID: 24096 RVA: 0x000E42BD File Offset: 0x000E24BD
+		// (set) Token: 0x06005E21 RID: 24097 RVA: 0x000E42E8 File Offset: 0x000E24E8
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D66 RID: 7526
-		// (get) Token: 0x06005850 RID: 22608 RVA: 0x000D78D0 File Offset: 0x000D5AD0
-		// (set) Token: 0x06005851 RID: 22609 RVA: 0x000D7931 File Offset: 0x000D5B31
+		// Token: 0x17001F0B RID: 7947
+		// (get) Token: 0x06005E22 RID: 24098 RVA: 0x000E42F8 File Offset: 0x000E24F8
+		// (set) Token: 0x06005E23 RID: 24099 RVA: 0x000E4359 File Offset: 0x000E2559
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D67 RID: 7527
-		// (get) Token: 0x06005852 RID: 22610 RVA: 0x000D7946 File Offset: 0x000D5B46
-		// (set) Token: 0x06005853 RID: 22611 RVA: 0x000D796D File Offset: 0x000D5B6D
+		// Token: 0x17001F0C RID: 7948
+		// (get) Token: 0x06005E24 RID: 24100 RVA: 0x000E436E File Offset: 0x000E256E
+		// (set) Token: 0x06005E25 RID: 24101 RVA: 0x000E4395 File Offset: 0x000E2595
 		public virtual IRoleTowerConditionStepBase Step
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D68 RID: 7528
-		// (get) Token: 0x06005854 RID: 22612 RVA: 0x000D797B File Offset: 0x000D5B7B
-		// (set) Token: 0x06005855 RID: 22613 RVA: 0x000D79A2 File Offset: 0x000D5BA2
+		// Token: 0x17001F0D RID: 7949
+		// (get) Token: 0x06005E26 RID: 24102 RVA: 0x000E43A3 File Offset: 0x000E25A3
+		// (set) Token: 0x06005E27 RID: 24103 RVA: 0x000E43CA File Offset: 0x000E25CA
 		public virtual VarRef Batch
 		{
 			get
@@ -168,18 +166,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003558 RID: 13656
+		// Token: 0x04003888 RID: 14472
 		[Nullable(2)]
 		protected new IFinishRoleTowerCondition FbInstance;
 
-		// Token: 0x04003559 RID: 13657
+		// Token: 0x04003889 RID: 14473
 		[Nullable(2)]
 		protected new IFinishRoleTowerCondition_SetValue PocoInterface;
 
-		// Token: 0x0400355A RID: 13658
+		// Token: 0x0400388A RID: 14474
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400355B RID: 13659
+		// Token: 0x0400388B RID: 14475
 		private bool _PreConditionsInited;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E07 RID: 3591
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F03 RID: 3843
 	public class IWuWaGoLevelCenter : IWuWaGoEntityBase
 	{
-		// Token: 0x0600514A RID: 20810 RVA: 0x000C8901 File Offset: 0x000C6B01
+		// Token: 0x06005671 RID: 22129 RVA: 0x000D41C9 File Offset: 0x000D23C9
 		public static IWuWaGoLevelCenter Create(IWuWaGoLevelCenter? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AF9 RID: 6905
-		// (get) Token: 0x0600514B RID: 20811 RVA: 0x000C8920 File Offset: 0x000C6B20
+		// Token: 0x17001C66 RID: 7270
+		// (get) Token: 0x06005672 RID: 22130 RVA: 0x000D41E8 File Offset: 0x000D23E8
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AFA RID: 6906
-		// (get) Token: 0x0600514C RID: 20812 RVA: 0x000C892D File Offset: 0x000C6B2D
+		// Token: 0x17001C67 RID: 7271
+		// (get) Token: 0x06005673 RID: 22131 RVA: 0x000D41F5 File Offset: 0x000D23F5
 		public virtual string LevelKey
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AFB RID: 6907
-		// (get) Token: 0x0600514D RID: 20813 RVA: 0x000C893C File Offset: 0x000C6B3C
+		// Token: 0x17001C68 RID: 7272
+		// (get) Token: 0x06005674 RID: 22132 RVA: 0x000D4204 File Offset: 0x000D2404
 		public virtual List<int> LevelEntityIds
 		{
 			get
@@ -64,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AFC RID: 6908
-		// (get) Token: 0x0600514E RID: 20814 RVA: 0x000C89A0 File Offset: 0x000C6BA0
+		// Token: 0x17001C69 RID: 7273
+		// (get) Token: 0x06005675 RID: 22133 RVA: 0x000D4268 File Offset: 0x000D2468
 		[Nullable(2)]
 		public virtual string EdActorPath
 		{
@@ -76,13 +74,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EC8 RID: 11976
+		// Token: 0x04003190 RID: 12688
 		private IWuWaGoLevelCenter Instance;
 
-		// Token: 0x04002EC9 RID: 11977
+		// Token: 0x04003191 RID: 12689
 		private List<int> _LevelEntityIdsCache;
 
-		// Token: 0x04002ECA RID: 11978
+		// Token: 0x04003192 RID: 12690
 		private bool _LevelEntityIdsInited;
 	}
 }

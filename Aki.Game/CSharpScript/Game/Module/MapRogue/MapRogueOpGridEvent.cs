@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,17 +7,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055B7 RID: 21943
+	// Token: 0x0200458D RID: 17805
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueOpGridEvent : MapRogueOp
 	{
-		// Token: 0x170086C6 RID: 34502
-		// (get) Token: 0x06037F05 RID: 229125 RVA: 0x00D40B20 File Offset: 0x00D3ED20
-		// (set) Token: 0x06037F06 RID: 229126 RVA: 0x00D40B28 File Offset: 0x00D3ED28
+		// Token: 0x17005A8D RID: 23181
+		// (get) Token: 0x0602CE03 RID: 183811 RVA: 0x00C8E868 File Offset: 0x00C8CA68
+		// (set) Token: 0x0602CE04 RID: 183812 RVA: 0x00C8E870 File Offset: 0x00C8CA70
 		public override int StepSize { get; set; } = 2;
 
-		// Token: 0x06037F07 RID: 229127 RVA: 0x00D40B34 File Offset: 0x00D3ED34
+		// Token: 0x0602CE05 RID: 183813 RVA: 0x00C8E87C File Offset: 0x00C8CA7C
 		public override string ToString()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(47, 4);
@@ -33,7 +32,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06037F08 RID: 229128 RVA: 0x00D40BB6 File Offset: 0x00D3EDB6
+		// Token: 0x0602CE06 RID: 183814 RVA: 0x00C8E8FE File Offset: 0x00C8CAFE
 		protected override void OnUpdate(MapRogueGameInfo gameInfo)
 		{
 			if (!base.IsStartExecute)
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.RefreshEvent(gameInfo);
 		}
 
-		// Token: 0x06037F09 RID: 229129 RVA: 0x00D40BC8 File Offset: 0x00D3EDC8
+		// Token: 0x0602CE07 RID: 183815 RVA: 0x00C8E910 File Offset: 0x00C8CB10
 		private void RefreshEvent(MapRogueGameInfo gameInfo)
 		{
 			if (!this.IsInStart)
@@ -123,7 +122,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			UiManager.Instance.OpenView(EUiViewName.MapRogueEventStartView, this.IncId, null);
 		}
 
-		// Token: 0x06037F0A RID: 229130 RVA: 0x00D40D99 File Offset: 0x00D3EF99
+		// Token: 0x0602CE08 RID: 183816 RVA: 0x00C8EAE1 File Offset: 0x00C8CCE1
 		protected override void OnBattleStateUpdate(bool inBattle, MapRogueGameInfo gameInfo)
 		{
 			if (inBattle && this.InEventView)
@@ -135,13 +134,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037F0B RID: 229131 RVA: 0x00D40DC1 File Offset: 0x00D3EFC1
+		// Token: 0x0602CE09 RID: 183817 RVA: 0x00C8EB09 File Offset: 0x00C8CD09
 		protected override void OnStartExecute(MapRogueGameInfo gameInfo)
 		{
 			this.RefreshEvent(gameInfo);
 		}
 
-		// Token: 0x06037F0C RID: 229132 RVA: 0x00D40DCA File Offset: 0x00D3EFCA
+		// Token: 0x0602CE0A RID: 183818 RVA: 0x00C8EB12 File Offset: 0x00C8CD12
 		protected override void OnExecute(MapRogueGameInfo gameInfo)
 		{
 			if (this.CurrentStep == 1)
@@ -150,12 +149,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037F0D RID: 229133 RVA: 0x00D40DDC File Offset: 0x00D3EFDC
+		// Token: 0x0602CE0B RID: 183819 RVA: 0x00C8EB24 File Offset: 0x00C8CD24
 		protected override void OnFinish(MapRogueGameInfo gameInfo)
 		{
 		}
 
-		// Token: 0x06037F0E RID: 229134 RVA: 0x00D40DDE File Offset: 0x00D3EFDE
+		// Token: 0x0602CE0C RID: 183820 RVA: 0x00C8EB26 File Offset: 0x00C8CD26
 		protected override void OnDelete(MapRogueGameInfo gameInfo)
 		{
 			if (this.InEventView)
@@ -167,7 +166,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037F0F RID: 229135 RVA: 0x00D40E04 File Offset: 0x00D3F004
+		// Token: 0x0602CE0D RID: 183821 RVA: 0x00C8EB4C File Offset: 0x00C8CD4C
 		public void ExecuteStep(int stepId, int optionId)
 		{
 			if (this.CurrentStepId != stepId)
@@ -189,8 +188,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086C7 RID: 34503
-		// (get) Token: 0x06037F10 RID: 229136 RVA: 0x00D40E8C File Offset: 0x00D3F08C
+		// Token: 0x17005A8E RID: 23182
+		// (get) Token: 0x0602CE0E RID: 183822 RVA: 0x00C8EBD4 File Offset: 0x00C8CDD4
 		public bool IsInStart
 		{
 			get
@@ -200,8 +199,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086C8 RID: 34504
-		// (get) Token: 0x06037F11 RID: 229137 RVA: 0x00D40EC8 File Offset: 0x00D3F0C8
+		// Token: 0x17005A8F RID: 23183
+		// (get) Token: 0x0602CE0F RID: 183823 RVA: 0x00C8EC10 File Offset: 0x00C8CE10
 		public bool IsInPlot
 		{
 			get
@@ -211,8 +210,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086C9 RID: 34505
-		// (get) Token: 0x06037F12 RID: 229138 RVA: 0x00D40F04 File Offset: 0x00D3F104
+		// Token: 0x17005A90 RID: 23184
+		// (get) Token: 0x0602CE10 RID: 183824 RVA: 0x00C8EC4C File Offset: 0x00C8CE4C
 		public int CurrentPlotId
 		{
 			get
@@ -237,8 +236,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086CA RID: 34506
-		// (get) Token: 0x06037F13 RID: 229139 RVA: 0x00D40F5C File Offset: 0x00D3F15C
+		// Token: 0x17005A91 RID: 23185
+		// (get) Token: 0x0602CE11 RID: 183825 RVA: 0x00C8ECA4 File Offset: 0x00C8CEA4
 		public int CurrentStepId
 		{
 			get
@@ -263,8 +262,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086CB RID: 34507
-		// (get) Token: 0x06037F14 RID: 229140 RVA: 0x00D40FB4 File Offset: 0x00D3F1B4
+		// Token: 0x17005A92 RID: 23186
+		// (get) Token: 0x0602CE12 RID: 183826 RVA: 0x00C8ECFC File Offset: 0x00C8CEFC
 		public int CurrentPlotBgId
 		{
 			get
@@ -289,8 +288,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086CC RID: 34508
-		// (get) Token: 0x06037F15 RID: 229141 RVA: 0x00D4100C File Offset: 0x00D3F20C
+		// Token: 0x17005A93 RID: 23187
+		// (get) Token: 0x0602CE13 RID: 183827 RVA: 0x00C8ED54 File Offset: 0x00C8CF54
 		public int CurrentPlotBgmId
 		{
 			get
@@ -315,8 +314,8 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x170086CD RID: 34509
-		// (get) Token: 0x06037F16 RID: 229142 RVA: 0x00D41064 File Offset: 0x00D3F264
+		// Token: 0x17005A94 RID: 23188
+		// (get) Token: 0x0602CE14 RID: 183828 RVA: 0x00C8EDAC File Offset: 0x00C8CFAC
 		public IList<EventOption> CurrentOptions
 		{
 			get
@@ -329,17 +328,17 @@ namespace CSharpScript.Game.Module.MapRogue
 				{
 					return new List<EventOption>();
 				}
-				return this.Data.GridEventOp.EventPlotInfo.Options.ToList<EventOption>();
+				return new List<EventOption>(this.Data.GridEventOp.EventPlotInfo.Options);
 			}
 		}
 
-		// Token: 0x0401D621 RID: 120353
+		// Token: 0x040180AC RID: 98476
 		protected bool InEventView;
 
-		// Token: 0x0401D623 RID: 120355
+		// Token: 0x040180AE RID: 98478
 		private readonly HashSet<int> ExecutingStepIdSet = new HashSet<int>();
 
-		// Token: 0x0401D624 RID: 120356
+		// Token: 0x040180AF RID: 98479
 		[Nullable(2)]
 		public Action<int> EventStepUpdateFunc;
 	}

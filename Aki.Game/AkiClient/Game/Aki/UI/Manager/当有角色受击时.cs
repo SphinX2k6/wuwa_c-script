@@ -9,17 +9,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039F3 RID: 14835
+	// Token: 0x0200304A RID: 12362
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 当有角色受击时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F12E RID: 127278 RVA: 0x008A9B06 File Offset: 0x008A7D06
+		// Token: 0x0601D58F RID: 120207 RVA: 0x008F2166 File Offset: 0x008F0366
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 当有角色受击时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F12F RID: 127279 RVA: 0x008A9B12 File Offset: 0x008A7D12
+		// Token: 0x0601D590 RID: 120208 RVA: 0x008F2172 File Offset: 0x008F0372
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__当有角色受击时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -29,31 +29,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__当有角色受击时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F130 RID: 127280 RVA: 0x008A9B35 File Offset: 0x008A7D35
+		// Token: 0x0601D591 RID: 120209 RVA: 0x008F2195 File Offset: 0x008F0395
 		public 当有角色受击时()
 		{
 		}
 
-		// Token: 0x0601F131 RID: 127281 RVA: 0x008A9B3D File Offset: 0x008A7D3D
+		// Token: 0x0601D592 RID: 120210 RVA: 0x008F219D File Offset: 0x008F039D
 		[NullableContext(2)]
 		public 当有角色受击时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F132 RID: 127282 RVA: 0x008A9B47 File Offset: 0x008A7D47
+		// Token: 0x0601D593 RID: 120211 RVA: 0x008F21A7 File Offset: 0x008F03A7
 		public 当有角色受击时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F133 RID: 127283 RVA: 0x008A9B52 File Offset: 0x008A7D52
+		// Token: 0x0601D594 RID: 120212 RVA: 0x008F21B2 File Offset: 0x008F03B2
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TsBaseCharacter, SHitInformation>) ?? ((Action<TsBaseCharacter, SHitInformation>)Delegate.CreateDelegate(typeof(Action<TsBaseCharacter, SHitInformation>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F134 RID: 127284 RVA: 0x008A9B84 File Offset: 0x008A7D84
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D595 RID: 120213 RVA: 0x008F21E4 File Offset: 0x008F03E4
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -73,8 +72,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 当有角色受击时.RegisterId);
 		}
 
-		// Token: 0x0601F135 RID: 127285 RVA: 0x008A9BBE File Offset: 0x008A7DBE
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D596 RID: 120214 RVA: 0x008F221E File Offset: 0x008F041E
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -85,10 +83,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F136 RID: 127286 RVA: 0x008A9BC8 File Offset: 0x008A7DC8
+		// Token: 0x0601D597 RID: 120215 RVA: 0x008F2228 File Offset: 0x008F0428
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(TsBaseCharacter 角色, SHitInformation 受击数据)
 		{
 			当有角色受击时.__当有角色受击时_DelegateParams* ptr = stackalloc 当有角色受击时.__当有角色受击时_DelegateParams[(UIntPtr)2295] + 15L / (long)sizeof(当有角色受击时.__当有角色受击时_DelegateParams) & -16L;
@@ -102,10 +99,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_EventManager_C.__当有角色受击时__DelegateSignature_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F137 RID: 127287 RVA: 0x008A9C4C File Offset: 0x008A7E4C
+		// Token: 0x0601D598 RID: 120216 RVA: 0x008F22AC File Offset: 0x008F04AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TsBaseCharacter, SHitInformation> action = target as Action<TsBaseCharacter, SHitInformation>;
@@ -118,32 +114,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(orCreateUObjectByNativePointer, arg);
 		}
 
-		// Token: 0x0400EE28 RID: 60968
+		// Token: 0x0400F750 RID: 63312
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:当有角色受击时__DelegateSignature";
 
-		// Token: 0x0400EE29 RID: 60969
+		// Token: 0x0400F751 RID: 63313
 		private static int RegisterId;
 
-		// Token: 0x020099F4 RID: 39412
+		// Token: 0x02008CA8 RID: 36008
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2280)]
-		protected ref struct __当有角色受击时_DelegateParams
+		private ref struct __当有角色受击时_DelegateParams
 		{
-			// Token: 0x04030ECC RID: 200396
+			// Token: 0x0402C7AC RID: 182188
 			[FieldOffset(0)]
 			public IntPtr 角色;
 
-			// Token: 0x04030ECD RID: 200397
+			// Token: 0x0402C7AD RID: 182189
 			[FieldOffset(8)]
 			public byte 受击数据;
 		}
 
-		// Token: 0x020099F5 RID: 39413
+		// Token: 0x02008CA9 RID: 36009
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030ECE RID: 200398
+			// Token: 0x0402C7AE RID: 182190
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

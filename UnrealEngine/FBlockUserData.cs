@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E91 RID: 7825
+	// Token: 0x020005B7 RID: 1463
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.BlockUserData")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FBlockUserData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601DC39 RID: 121913 RVA: 0x002BFADE File Offset: 0x002BDCDE
+		// Token: 0x06008345 RID: 33605 RVA: 0x000C2432 File Offset: 0x000C0632
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FBlockUserData._ScriptStructPtr != 0) ? FBlockUserData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.BlockUserData", ref FBlockUserData._ScriptStructPtr);
 		}
 
-		// Token: 0x17007788 RID: 30600
-		// (get) Token: 0x0601DC3A RID: 121914 RVA: 0x002BFB02 File Offset: 0x002BDD02
-		// (set) Token: 0x0601DC3B RID: 121915 RVA: 0x002BFB12 File Offset: 0x002BDD12
+		// Token: 0x17001952 RID: 6482
+		// (get) Token: 0x06008346 RID: 33606 RVA: 0x000C2456 File Offset: 0x000C0656
+		// (set) Token: 0x06008347 RID: 33607 RVA: 0x000C2466 File Offset: 0x000C0666
 		public unsafe int nextOffset
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007789 RID: 30601
-		// (get) Token: 0x0601DC3C RID: 121916 RVA: 0x002BFB23 File Offset: 0x002BDD23
-		// (set) Token: 0x0601DC3D RID: 121917 RVA: 0x002BFB33 File Offset: 0x002BDD33
+		// Token: 0x17001953 RID: 6483
+		// (get) Token: 0x06008348 RID: 33608 RVA: 0x000C2477 File Offset: 0x000C0677
+		// (set) Token: 0x06008349 RID: 33609 RVA: 0x000C2487 File Offset: 0x000C0687
 		public unsafe int previousOffset
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700778A RID: 30602
-		// (get) Token: 0x0601DC3E RID: 121918 RVA: 0x002BFB44 File Offset: 0x002BDD44
-		// (set) Token: 0x0601DC3F RID: 121919 RVA: 0x002BFB87 File Offset: 0x002BDD87
+		// Token: 0x17001954 RID: 6484
+		// (get) Token: 0x0600834A RID: 33610 RVA: 0x000C2498 File Offset: 0x000C0698
+		// (set) Token: 0x0600834B RID: 33611 RVA: 0x000C24DB File Offset: 0x000C06DB
 		public TArray<string> blockUsers
 		{
 			get
@@ -69,64 +69,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DC40 RID: 121920 RVA: 0x002BFB95 File Offset: 0x002BDD95
+		// Token: 0x0600834C RID: 33612 RVA: 0x000C24E9 File Offset: 0x000C06E9
 		public FBlockUserData()
 		{
 		}
 
-		// Token: 0x0601DC41 RID: 121921 RVA: 0x002BFB9D File Offset: 0x002BDD9D
-		public FBlockUserData(int nextOffset, int previousOffset, TArray<string> blockUsers)
-		{
-			this.nextOffset = nextOffset;
-			this.previousOffset = previousOffset;
-			this.blockUsers = blockUsers;
-		}
-
-		// Token: 0x0601DC42 RID: 121922 RVA: 0x002BFBBA File Offset: 0x002BDDBA
+		// Token: 0x0600834D RID: 33613 RVA: 0x000C24F1 File Offset: 0x000C06F1
 		protected override IntPtr GetUStructPtr()
 		{
 			return FBlockUserData.StaticStruct();
 		}
 
-		// Token: 0x0601DC43 RID: 121923 RVA: 0x002BFBC6 File Offset: 0x002BDDC6
+		// Token: 0x0600834E RID: 33614 RVA: 0x000C24FD File Offset: 0x000C06FD
 		[NullableContext(2)]
 		public FBlockUserData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC44 RID: 121924 RVA: 0x002BFBD0 File Offset: 0x002BDDD0
+		// Token: 0x0600834F RID: 33615 RVA: 0x000C2507 File Offset: 0x000C0707
 		public FBlockUserData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC45 RID: 121925 RVA: 0x002BFBDB File Offset: 0x002BDDDB
+		// Token: 0x06008350 RID: 33616 RVA: 0x000C2512 File Offset: 0x000C0712
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FBlockUserData(Pointer, false, true);
 		}
 
-		// Token: 0x0601DC46 RID: 121926 RVA: 0x002BFBE5 File Offset: 0x002BDDE5
+		// Token: 0x06008351 RID: 33617 RVA: 0x000C251C File Offset: 0x000C071C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FBlockUserData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040101D2 RID: 66002
+		// Token: 0x04003916 RID: 14614
 		public const string __ObjectPath = "/Script/KuroUtility.BlockUserData";
 
-		// Token: 0x040101D3 RID: 66003
+		// Token: 0x04003917 RID: 14615
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040101D4 RID: 66004
+		// Token: 0x04003918 RID: 14616
 		internal static int __PropertyOffset_nextOffset;
 
-		// Token: 0x040101D5 RID: 66005
+		// Token: 0x04003919 RID: 14617
 		internal static int __PropertyOffset_previousOffset;
 
-		// Token: 0x040101D6 RID: 66006
+		// Token: 0x0400391A RID: 14618
 		internal static int __PropertyOffset_blockUsers;
 
-		// Token: 0x040101D7 RID: 66007
+		// Token: 0x0400391B RID: 14619
 		[Nullable(new byte[]
 		{
 			2,

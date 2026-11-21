@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200727A RID: 29306
+	// Token: 0x02007A4F RID: 31311
 	public struct ISyncVarToActorState : IFlatbufferObject
 	{
-		// Token: 0x1700D96F RID: 55663
-		// (get) Token: 0x06033FED RID: 212973 RVA: 0x006FDF79 File Offset: 0x006FC179
+		// Token: 0x1700E568 RID: 58728
+		// (get) Token: 0x060372EF RID: 226031 RVA: 0x0075F2D9 File Offset: 0x0075D4D9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033FEE RID: 212974 RVA: 0x006FDF86 File Offset: 0x006FC186
+		// Token: 0x060372F0 RID: 226032 RVA: 0x0075F2E6 File Offset: 0x0075D4E6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033FEF RID: 212975 RVA: 0x006FDF90 File Offset: 0x006FC190
+		// Token: 0x060372F1 RID: 226033 RVA: 0x0075F2F0 File Offset: 0x0075D4F0
 		public static ISyncVarToActorState GetRootAsISyncVarToActorState(ByteBuffer _bb)
 		{
 			return ISyncVarToActorState.GetRootAsISyncVarToActorState(_bb, default(ISyncVarToActorState));
 		}
 
-		// Token: 0x06033FF0 RID: 212976 RVA: 0x006FDFAC File Offset: 0x006FC1AC
+		// Token: 0x060372F2 RID: 226034 RVA: 0x0075F30C File Offset: 0x0075D50C
 		public static ISyncVarToActorState GetRootAsISyncVarToActorState(ByteBuffer _bb, ISyncVarToActorState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033FF1 RID: 212977 RVA: 0x006FDFC9 File Offset: 0x006FC1C9
+		// Token: 0x060372F3 RID: 226035 RVA: 0x0075F329 File Offset: 0x0075D529
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033FF2 RID: 212978 RVA: 0x006FDFD8 File Offset: 0x006FC1D8
+		// Token: 0x060372F4 RID: 226036 RVA: 0x0075F338 File Offset: 0x0075D538
 		public ISyncVarToActorState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D970 RID: 55664
-		// (get) Token: 0x06033FF3 RID: 212979 RVA: 0x006FDFE8 File Offset: 0x006FC1E8
+		// Token: 0x1700E569 RID: 58729
+		// (get) Token: 0x060372F5 RID: 226037 RVA: 0x0075F348 File Offset: 0x0075D548
 		public string VarName
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033FF4 RID: 212980 RVA: 0x006FE01F File Offset: 0x006FC21F
+		// Token: 0x060372F6 RID: 226038 RVA: 0x0075F37F File Offset: 0x0075D57F
 		public Span<byte> GetVarNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06033FF5 RID: 212981 RVA: 0x006FE02E File Offset: 0x006FC22E
+		// Token: 0x060372F7 RID: 226039 RVA: 0x0075F38E File Offset: 0x0075D58E
 		public byte[] GetVarNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700D971 RID: 55665
-		// (get) Token: 0x06033FF6 RID: 212982 RVA: 0x006FE03C File Offset: 0x006FC23C
+		// Token: 0x1700E56A RID: 58730
+		// (get) Token: 0x060372F8 RID: 226040 RVA: 0x0075F39C File Offset: 0x0075D59C
 		public string StateKey
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033FF7 RID: 212983 RVA: 0x006FE073 File Offset: 0x006FC273
+		// Token: 0x060372F9 RID: 226041 RVA: 0x0075F3D3 File Offset: 0x0075D5D3
 		public Span<byte> GetStateKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06033FF8 RID: 212984 RVA: 0x006FE082 File Offset: 0x006FC282
+		// Token: 0x060372FA RID: 226042 RVA: 0x0075F3E2 File Offset: 0x0075D5E2
 		public byte[] GetStateKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06033FF9 RID: 212985 RVA: 0x006FE090 File Offset: 0x006FC290
+		// Token: 0x060372FB RID: 226043 RVA: 0x0075F3F0 File Offset: 0x0075D5F0
 		public static Offset<ISyncVarToActorState> CreateISyncVarToActorState(FlatBufferBuilder builder, StringOffset VarNameOffset = default(StringOffset), StringOffset StateKeyOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISyncVarToActorState.EndISyncVarToActorState(builder);
 		}
 
-		// Token: 0x06033FFA RID: 212986 RVA: 0x006FE0AD File Offset: 0x006FC2AD
+		// Token: 0x060372FC RID: 226044 RVA: 0x0075F40D File Offset: 0x0075D60D
 		public static void StartISyncVarToActorState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06033FFB RID: 212987 RVA: 0x006FE0B6 File Offset: 0x006FC2B6
+		// Token: 0x060372FD RID: 226045 RVA: 0x0075F416 File Offset: 0x0075D616
 		public static void AddVarName(FlatBufferBuilder builder, StringOffset varNameOffset)
 		{
 			builder.AddOffset(0, varNameOffset.Value, 0);
 		}
 
-		// Token: 0x06033FFC RID: 212988 RVA: 0x006FE0C6 File Offset: 0x006FC2C6
+		// Token: 0x060372FE RID: 226046 RVA: 0x0075F426 File Offset: 0x0075D626
 		public static void AddStateKey(FlatBufferBuilder builder, StringOffset stateKeyOffset)
 		{
 			builder.AddOffset(1, stateKeyOffset.Value, 0);
 		}
 
-		// Token: 0x06033FFD RID: 212989 RVA: 0x006FE0D6 File Offset: 0x006FC2D6
+		// Token: 0x060372FF RID: 226047 RVA: 0x0075F436 File Offset: 0x0075D636
 		public static Offset<ISyncVarToActorState> EndISyncVarToActorState(FlatBufferBuilder builder)
 		{
 			return new Offset<ISyncVarToActorState>(builder.EndTable());
 		}
 
-		// Token: 0x06033FFE RID: 212990 RVA: 0x006FE0E4 File Offset: 0x006FC2E4
+		// Token: 0x06037300 RID: 226048 RVA: 0x0075F444 File Offset: 0x0075D644
 		public ISyncVarToActorStateT UnPack()
 		{
 			ISyncVarToActorStateT syncVarToActorStateT = new ISyncVarToActorStateT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return syncVarToActorStateT;
 		}
 
-		// Token: 0x06033FFF RID: 212991 RVA: 0x006FE0FF File Offset: 0x006FC2FF
+		// Token: 0x06037301 RID: 226049 RVA: 0x0075F45F File Offset: 0x0075D65F
 		public void UnPackTo(ISyncVarToActorStateT _o)
 		{
 			_o.VarName = this.VarName;
 			_o.StateKey = this.StateKey;
 		}
 
-		// Token: 0x06034000 RID: 212992 RVA: 0x006FE11C File Offset: 0x006FC31C
+		// Token: 0x06037302 RID: 226050 RVA: 0x0075F47C File Offset: 0x0075D67C
 		public static Offset<ISyncVarToActorState> Pack(FlatBufferBuilder builder, ISyncVarToActorStateT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISyncVarToActorState.CreateISyncVarToActorState(builder, varNameOffset, stateKeyOffset);
 		}
 
-		// Token: 0x04011D80 RID: 73088
+		// Token: 0x04012D82 RID: 77186
 		private Table __p;
 	}
 }

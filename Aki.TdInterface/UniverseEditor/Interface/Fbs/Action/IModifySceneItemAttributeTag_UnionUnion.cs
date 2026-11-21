@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ACE RID: 27342
+	// Token: 0x02007202 RID: 29186
 	public class IModifySceneItemAttributeTag_UnionUnion
 	{
-		// Token: 0x1700CAD5 RID: 51925
-		// (get) Token: 0x0602FEA0 RID: 196256 RVA: 0x00684570 File Offset: 0x00682770
-		// (set) Token: 0x0602FEA1 RID: 196257 RVA: 0x00684578 File Offset: 0x00682778
+		// Token: 0x1700D59D RID: 54685
+		// (get) Token: 0x06032C56 RID: 207958 RVA: 0x006DB814 File Offset: 0x006D9A14
+		// (set) Token: 0x06032C57 RID: 207959 RVA: 0x006DB81C File Offset: 0x006D9A1C
 		public IModifySceneItemAttributeTag_Union Type { get; set; }
 
-		// Token: 0x1700CAD6 RID: 51926
-		// (get) Token: 0x0602FEA2 RID: 196258 RVA: 0x00684581 File Offset: 0x00682781
-		// (set) Token: 0x0602FEA3 RID: 196259 RVA: 0x00684589 File Offset: 0x00682789
+		// Token: 0x1700D59E RID: 54686
+		// (get) Token: 0x06032C58 RID: 207960 RVA: 0x006DB825 File Offset: 0x006D9A25
+		// (set) Token: 0x06032C59 RID: 207961 RVA: 0x006DB82D File Offset: 0x006D9A2D
 		public object Value { get; set; }
 
-		// Token: 0x0602FEA4 RID: 196260 RVA: 0x00684592 File Offset: 0x00682792
+		// Token: 0x06032C5A RID: 207962 RVA: 0x006DB836 File Offset: 0x006D9A36
 		public IModifySceneItemAttributeTag_UnionUnion()
 		{
 			this.Type = IModifySceneItemAttributeTag_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602FEA5 RID: 196261 RVA: 0x006845A8 File Offset: 0x006827A8
+		// Token: 0x06032C5B RID: 207963 RVA: 0x006DB84C File Offset: 0x006D9A4C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602FEA6 RID: 196262 RVA: 0x006845BA File Offset: 0x006827BA
+		// Token: 0x06032C5C RID: 207964 RVA: 0x006DB85E File Offset: 0x006D9A5E
 		public IModifySceneItemAttributeTagT AsIModifySceneItemAttributeTag()
 		{
 			return this.As<IModifySceneItemAttributeTagT>();
 		}
 
-		// Token: 0x0602FEA7 RID: 196263 RVA: 0x006845C2 File Offset: 0x006827C2
+		// Token: 0x06032C5D RID: 207965 RVA: 0x006DB866 File Offset: 0x006D9A66
 		public static IModifySceneItemAttributeTag_UnionUnion FromIModifySceneItemAttributeTag(IModifySceneItemAttributeTagT _imodifysceneitemattributetag)
 		{
 			return new IModifySceneItemAttributeTag_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FEA8 RID: 196264 RVA: 0x006845D7 File Offset: 0x006827D7
+		// Token: 0x06032C5E RID: 207966 RVA: 0x006DB87B File Offset: 0x006D9A7B
 		public IModifySelfSceneItemAttributeTagT AsIModifySelfSceneItemAttributeTag()
 		{
 			return this.As<IModifySelfSceneItemAttributeTagT>();
 		}
 
-		// Token: 0x0602FEA9 RID: 196265 RVA: 0x006845DF File Offset: 0x006827DF
+		// Token: 0x06032C5F RID: 207967 RVA: 0x006DB883 File Offset: 0x006D9A83
 		public static IModifySceneItemAttributeTag_UnionUnion FromIModifySelfSceneItemAttributeTag(IModifySelfSceneItemAttributeTagT _imodifyselfsceneitemattributetag)
 		{
 			return new IModifySceneItemAttributeTag_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FEAA RID: 196266 RVA: 0x006845F4 File Offset: 0x006827F4
+		// Token: 0x06032C60 RID: 207968 RVA: 0x006DB898 File Offset: 0x006D9A98
 		public IModifyTargetSceneItemAttributeTagT AsIModifyTargetSceneItemAttributeTag()
 		{
 			return this.As<IModifyTargetSceneItemAttributeTagT>();
 		}
 
-		// Token: 0x0602FEAB RID: 196267 RVA: 0x006845FC File Offset: 0x006827FC
+		// Token: 0x06032C61 RID: 207969 RVA: 0x006DB8A0 File Offset: 0x006D9AA0
 		public static IModifySceneItemAttributeTag_UnionUnion FromIModifyTargetSceneItemAttributeTag(IModifyTargetSceneItemAttributeTagT _imodifytargetsceneitemattributetag)
 		{
 			return new IModifySceneItemAttributeTag_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602FEAC RID: 196268 RVA: 0x00684614 File Offset: 0x00682814
+		// Token: 0x06032C62 RID: 207970 RVA: 0x006DB8B8 File Offset: 0x006D9AB8
 		public static int Pack(FlatBufferBuilder builder, IModifySceneItemAttributeTag_UnionUnion _o)
 		{
 			switch (_o.Type)

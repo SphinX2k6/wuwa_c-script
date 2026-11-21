@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006120 RID: 24864
+	// Token: 0x02006782 RID: 26498
 	public class IAddBuffToFollowShooterT
 	{
-		// Token: 0x1700B73F RID: 46911
-		// (get) Token: 0x0602A7E9 RID: 174057 RVA: 0x005DA3AD File Offset: 0x005D85AD
-		// (set) Token: 0x0602A7EA RID: 174058 RVA: 0x005DA3B5 File Offset: 0x005D85B5
+		// Token: 0x1700C0AA RID: 49322
+		// (get) Token: 0x0602CECA RID: 184010 RVA: 0x00624355 File Offset: 0x00622555
+		// (set) Token: 0x0602CECB RID: 184011 RVA: 0x0062435D File Offset: 0x0062255D
 		public List<long> BuffIds { get; set; }
 
-		// Token: 0x1700B740 RID: 46912
-		// (get) Token: 0x0602A7EB RID: 174059 RVA: 0x005DA3BE File Offset: 0x005D85BE
-		// (set) Token: 0x0602A7EC RID: 174060 RVA: 0x005DA3C6 File Offset: 0x005D85C6
+		// Token: 0x1700C0AB RID: 49323
+		// (get) Token: 0x0602CECC RID: 184012 RVA: 0x00624366 File Offset: 0x00622566
+		// (set) Token: 0x0602CECD RID: 184013 RVA: 0x0062436E File Offset: 0x0062256E
 		public int FollowShooterId { get; set; }
 
-		// Token: 0x1700B741 RID: 46913
-		// (get) Token: 0x0602A7ED RID: 174061 RVA: 0x005DA3CF File Offset: 0x005D85CF
-		// (set) Token: 0x0602A7EE RID: 174062 RVA: 0x005DA3D7 File Offset: 0x005D85D7
+		// Token: 0x1700C0AC RID: 49324
+		// (get) Token: 0x0602CECE RID: 184014 RVA: 0x00624377 File Offset: 0x00622577
+		// (set) Token: 0x0602CECF RID: 184015 RVA: 0x0062437F File Offset: 0x0062257F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A7EF RID: 174063 RVA: 0x005DA3E0 File Offset: 0x005D85E0
+		// Token: 0x0602CED0 RID: 184016 RVA: 0x00624388 File Offset: 0x00622588
 		public IAddBuffToFollowShooterT()
 		{
 			this.BuffIds = null;

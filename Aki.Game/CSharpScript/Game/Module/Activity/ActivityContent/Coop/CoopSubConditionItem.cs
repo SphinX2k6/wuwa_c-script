@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068E2 RID: 26850
+	// Token: 0x02005832 RID: 22578
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 	})]
 	public class CoopSubConditionItem : GridProxyAbstract<CoopSubConditionDataBase>
 	{
-		// Token: 0x06042FD0 RID: 274384 RVA: 0x0105127C File Offset: 0x0104F47C
+		// Token: 0x06037B28 RID: 228136 RVA: 0x00F928A4 File Offset: 0x00F90AA4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FD1 RID: 274385 RVA: 0x01051310 File Offset: 0x0104F510
+		// Token: 0x06037B29 RID: 228137 RVA: 0x00F92938 File Offset: 0x00F90B38
 		public override void Refresh(CoopSubConditionDataBase data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.GetButton(1).RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x06042FD2 RID: 274386 RVA: 0x010513F8 File Offset: 0x0104F5F8
+		// Token: 0x06037B2A RID: 228138 RVA: 0x00F92A20 File Offset: 0x00F90C20
 		private void OnJumpClick()
 		{
 			CoopTaskConfig? coopTaskConfigById = CoopConfig.Instance.GetCoopTaskConfigById(this.Data.Id);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x04022DEF RID: 142831
+		// Token: 0x0401D64B RID: 120395
 		[Nullable(2)]
 		private CoopSubConditionDataBase Data;
 	}

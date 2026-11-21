@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063E3 RID: 25571
+	// Token: 0x02005361 RID: 21345
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 	})]
 	public class MowingRiskInstanceDetailAttributeGridItem : GridProxyAbstract<IMowingRiskInstanceDetailAttributeItemData>
 	{
-		// Token: 0x06040518 RID: 263448 RVA: 0x00F8E984 File Offset: 0x00F8CB84
+		// Token: 0x060351D9 RID: 217561 RVA: 0x00ED591C File Offset: 0x00ED3B1C
 		[NullableContext(1)]
 		public override void Refresh(IMowingRiskInstanceDetailAttributeItemData data, bool isSelected, int gridIndex)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x06040519 RID: 263449 RVA: 0x00F8EA13 File Offset: 0x00F8CC13
+		// Token: 0x060351DA RID: 217562 RVA: 0x00ED59AB File Offset: 0x00ED3BAB
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			};
 		}
 
-		// Token: 0x0200C5FE RID: 50686
+		// Token: 0x0200AFE5 RID: 45029
 		private static class EItemComponent
 		{
-			// Token: 0x0403BC79 RID: 244857
+			// Token: 0x040365D8 RID: 222680
 			public const int IconTexture = 0;
 
-			// Token: 0x0403BC7A RID: 244858
+			// Token: 0x040365D9 RID: 222681
 			public const int AttributeText = 1;
 		}
 	}

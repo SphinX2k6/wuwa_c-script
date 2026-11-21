@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A9B RID: 23195
+	// Token: 0x02004A77 RID: 19063
 	public enum EDreamLinkRunTaskState
 	{
-		// Token: 0x0401EA93 RID: 125587
+		// Token: 0x0401953A RID: 103738
 		Lock,
-		// Token: 0x0401EA94 RID: 125588
+		// Token: 0x0401953B RID: 103739
 		Active,
-		// Token: 0x0401EA95 RID: 125589
+		// Token: 0x0401953C RID: 103740
 		FinishedAndUnclaimed,
-		// Token: 0x0401EA96 RID: 125590
+		// Token: 0x0401953D RID: 103741
 		FinishedAndClaimed
 	}
 }

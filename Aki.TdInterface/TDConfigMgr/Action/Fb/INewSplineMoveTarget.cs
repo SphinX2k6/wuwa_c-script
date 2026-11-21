@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002726 RID: 10022
+	// Token: 0x020029F0 RID: 10736
 	public class INewSplineMoveTarget
 	{
-		// Token: 0x0600DF82 RID: 57218 RVA: 0x00211F1B File Offset: 0x0021011B
-		[NullableContext(1)]
+		// Token: 0x0600ED7A RID: 60794 RVA: 0x0022E9AB File Offset: 0x0022CBAB
 		public static INewSplineMoveTarget Create(INewSplineMoveTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042F8 RID: 17144
-		// (get) Token: 0x0600DF83 RID: 57219 RVA: 0x00211F3A File Offset: 0x0021013A
+		// Token: 0x17004648 RID: 17992
+		// (get) Token: 0x0600ED7B RID: 60795 RVA: 0x0022E9CA File Offset: 0x0022CBCA
 		public virtual ENewSplineMoveTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C0E RID: 31758
+		// Token: 0x040082B8 RID: 33464
 		private INewSplineMoveTarget Instance;
 	}
 }

@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FD7 RID: 4055
+// Token: 0x0200048C RID: 1164
 public class FurnitureGetWayView : UiViewBase
 {
-	// Token: 0x0600682B RID: 26667 RVA: 0x0014B018 File Offset: 0x00149218
+	// Token: 0x06003BC3 RID: 15299 RVA: 0x001538DC File Offset: 0x00151ADC
 	[NullableContext(1)]
 	public FurnitureGetWayView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600682C RID: 26668 RVA: 0x0014B024 File Offset: 0x00149224
+	// Token: 0x06003BC4 RID: 15300 RVA: 0x001538E8 File Offset: 0x00151AE8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class FurnitureGetWayView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600682D RID: 26669 RVA: 0x0014B0A4 File Offset: 0x001492A4
+	// Token: 0x06003BC5 RID: 15301 RVA: 0x00153968 File Offset: 0x00151B68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FurnitureGetWayView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -41,13 +41,13 @@ public class FurnitureGetWayView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600682E RID: 26670 RVA: 0x0014B0E7 File Offset: 0x001492E7
+	// Token: 0x06003BC6 RID: 15302 RVA: 0x001539AB File Offset: 0x00151BAB
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04002F87 RID: 12167
+	// Token: 0x04003020 RID: 12320
 	[Nullable(2)]
 	protected FurnitureGetWayItem GetWayItem;
 }

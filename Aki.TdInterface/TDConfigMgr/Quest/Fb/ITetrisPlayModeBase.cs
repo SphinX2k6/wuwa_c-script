@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001467 RID: 5223
+	// Token: 0x020015C0 RID: 5568
 	public class ITetrisPlayModeBase
 	{
-		// Token: 0x060076DF RID: 30431 RVA: 0x0011C330 File Offset: 0x0011A530
-		[NullableContext(1)]
+		// Token: 0x06007DAD RID: 32173 RVA: 0x0012AF48 File Offset: 0x00129148
 		public static ITetrisPlayModeBase Create(ITetrisPlayModeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170027E4 RID: 10212
-		// (get) Token: 0x060076E0 RID: 30432 RVA: 0x0011C34F File Offset: 0x0011A54F
+		// Token: 0x170029CF RID: 10703
+		// (get) Token: 0x06007DAE RID: 32174 RVA: 0x0012AF67 File Offset: 0x00129167
 		public virtual ETetrisPlayMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400451D RID: 17693
+		// Token: 0x040048B8 RID: 18616
 		private ITetrisPlayModeBase Instance;
 	}
 }

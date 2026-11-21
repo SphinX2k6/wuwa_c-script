@@ -5,17 +5,17 @@ using CSharpScript.Game.Effect;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x0200722D RID: 29229
+	// Token: 0x020062E2 RID: 25314
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class BulletCasterCommon : BulletCasterBase
 	{
-		// Token: 0x06047A49 RID: 293449 RVA: 0x012548B0 File Offset: 0x01252AB0
+		// Token: 0x0603D3AA RID: 250794 RVA: 0x011AD448 File Offset: 0x011AB648
 		protected BulletCasterCommon(BulletCasterInitParam bulletCasterInitParam) : base(bulletCasterInitParam)
 		{
 		}
 
-		// Token: 0x06047A4A RID: 293450 RVA: 0x012548DC File Offset: 0x01252ADC
+		// Token: 0x0603D3AB RID: 250795 RVA: 0x011AD474 File Offset: 0x011AB674
 		protected override void OnStop()
 		{
 			foreach (TimerHandle timerHandle in this.BulletWaitWarningTimers)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.DestroyBulletTimers.Clear();
 		}
 
-		// Token: 0x06047A4B RID: 293451 RVA: 0x01254A2C File Offset: 0x01252C2C
+		// Token: 0x0603D3AC RID: 250796 RVA: 0x011AD5C4 File Offset: 0x011AB7C4
 		protected override void OnSetTimeDilation(float timeDilation)
 		{
 			foreach (TimerHandle timerHandle in this.BulletWaitWarningTimers)
@@ -88,13 +88,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			}
 		}
 
-		// Token: 0x04025B18 RID: 154392
+		// Token: 0x04020787 RID: 132999
 		protected readonly HashSet<int> WarningEffectHandles = new HashSet<int>();
 
-		// Token: 0x04025B19 RID: 154393
+		// Token: 0x04020788 RID: 133000
 		protected readonly HashSet<TimerHandle> BulletWaitWarningTimers = new HashSet<TimerHandle>();
 
-		// Token: 0x04025B1A RID: 154394
+		// Token: 0x04020789 RID: 133001
 		protected readonly Dictionary<int, TimerHandle> DestroyBulletTimers = new Dictionary<int, TimerHandle>();
 	}
 }

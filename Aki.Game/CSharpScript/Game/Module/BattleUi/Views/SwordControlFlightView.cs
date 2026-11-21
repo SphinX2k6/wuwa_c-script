@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E3B RID: 24123
+	// Token: 0x02004E20 RID: 20000
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SwordControlFlightView : UiViewBase
 	{
-		// Token: 0x0603D55A RID: 251226 RVA: 0x00EC9182 File Offset: 0x00EC7382
+		// Token: 0x060324EA RID: 206058 RVA: 0x00E1A6EE File Offset: 0x00E188EE
 		[NullableContext(1)]
 		public SwordControlFlightView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603D55B RID: 251227 RVA: 0x00EC918C File Offset: 0x00EC738C
+		// Token: 0x060324EB RID: 206059 RVA: 0x00E1A6F8 File Offset: 0x00E188F8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D55C RID: 251228 RVA: 0x00EC9218 File Offset: 0x00EC7418
+		// Token: 0x060324EC RID: 206060 RVA: 0x00E1A784 File Offset: 0x00E18984
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SwordControlFlightView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D55D RID: 251229 RVA: 0x00EC925C File Offset: 0x00EC745C
+		// Token: 0x060324ED RID: 206061 RVA: 0x00E1A7C8 File Offset: 0x00E189C8
 		protected override void OnStart()
 		{
 			this.BtnLeftButton.OnPressCallback = new Action(this.UpdateMoveRightAxis);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnBattleUiCurRoleDataChanged));
 		}
 
-		// Token: 0x0603D55E RID: 251230 RVA: 0x00EC92FC File Offset: 0x00EC74FC
+		// Token: 0x060324EE RID: 206062 RVA: 0x00E1A868 File Offset: 0x00E18A68
 		protected override void OnBeforeDestroy()
 		{
 			SwordControlFlightDirectionButton btnLeftButton = this.BtnLeftButton;
@@ -91,25 +91,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RoleData = null;
 		}
 
-		// Token: 0x0603D55F RID: 251231 RVA: 0x00EC937D File Offset: 0x00EC757D
+		// Token: 0x060324EF RID: 206063 RVA: 0x00E1A8E9 File Offset: 0x00E18AE9
 		protected override void OnBeforeShow()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.Custom, SwordControlFlightView.HideBattleUiChildernList, false, true, 0);
 		}
 
-		// Token: 0x0603D560 RID: 251232 RVA: 0x00EC9397 File Offset: 0x00EC7597
+		// Token: 0x060324F0 RID: 206064 RVA: 0x00E1A903 File Offset: 0x00E18B03
 		protected override void OnAfterHide()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.Custom, SwordControlFlightView.HideBattleUiChildernList, true, true, 0);
 		}
 
-		// Token: 0x0603D561 RID: 251233 RVA: 0x00EC93B1 File Offset: 0x00EC75B1
+		// Token: 0x060324F1 RID: 206065 RVA: 0x00E1A91D File Offset: 0x00E18B1D
 		private void OnBattleUiCurRoleDataChanged(int newEntityId, int oldEntityId)
 		{
 			this.RefreshRoleData();
 		}
 
-		// Token: 0x0603D562 RID: 251234 RVA: 0x00EC93BC File Offset: 0x00EC75BC
+		// Token: 0x060324F2 RID: 206066 RVA: 0x00E1A928 File Offset: 0x00E18B28
 		private void RefreshRoleData()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAttackBtnVisible();
 		}
 
-		// Token: 0x0603D563 RID: 251235 RVA: 0x00EC9400 File Offset: 0x00EC7600
+		// Token: 0x060324F3 RID: 206067 RVA: 0x00E1A96C File Offset: 0x00E18B6C
 		private void ListenForHideAttackBtnTagChanged()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideSkillNorTagTask = baseTagComponent.ListenForTagAddOrRemove(new int?(SwordControlFlightView.HideAttackBtnTagId), new BaseTagComponent.TTagSwitchedCallback(this.OnHideAttackBtnTagChanged), null);
 		}
 
-		// Token: 0x0603D564 RID: 251236 RVA: 0x00EC9447 File Offset: 0x00EC7647
+		// Token: 0x060324F4 RID: 206068 RVA: 0x00E1A9B3 File Offset: 0x00E18BB3
 		private void RemoveListenHideAttackBtnTagChanged()
 		{
 			ITagTask hideSkillNorTagTask = this.HideSkillNorTagTask;
@@ -147,13 +147,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideSkillNorTagTask = null;
 		}
 
-		// Token: 0x0603D565 RID: 251237 RVA: 0x00EC9461 File Offset: 0x00EC7661
+		// Token: 0x060324F5 RID: 206069 RVA: 0x00E1A9CD File Offset: 0x00E18BCD
 		private void OnHideAttackBtnTagChanged(int tagId, bool tagExists)
 		{
 			this.SetAttackBtnVisible(!tagExists);
 		}
 
-		// Token: 0x0603D566 RID: 251238 RVA: 0x00EC9470 File Offset: 0x00EC7670
+		// Token: 0x060324F6 RID: 206070 RVA: 0x00E1A9DC File Offset: 0x00E18BDC
 		private void RefreshAttackBtnVisible()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetAttackBtnVisible(!valueOrDefault);
 		}
 
-		// Token: 0x0603D567 RID: 251239 RVA: 0x00EC94C8 File Offset: 0x00EC76C8
+		// Token: 0x060324F7 RID: 206071 RVA: 0x00E1AA34 File Offset: 0x00E18C34
 		private void SetAttackBtnVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(2);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x0603D568 RID: 251240 RVA: 0x00EC94DC File Offset: 0x00EC76DC
+		// Token: 0x060324F8 RID: 206072 RVA: 0x00E1AA48 File Offset: 0x00E18C48
 		private void UpdateMoveRightAxis()
 		{
 			SwordControlFlightDirectionButton btnLeftButton = this.BtnLeftButton;
@@ -202,10 +202,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputController.Instance.InputAxis(EInputAxis.MoveRight, value, false);
 		}
 
-		// Token: 0x0401FFE6 RID: 131046
+		// Token: 0x0401AAAD RID: 109229
 		private static readonly int HideAttackBtnTagId = GameplayTagDefine.EGameplayTagId["功能.功能制作.隐藏按钮功能.隐藏普攻按键"];
 
-		// Token: 0x0401FFE7 RID: 131047
+		// Token: 0x0401AAAE RID: 109230
 		[Nullable(1)]
 		private static readonly IReadOnlyList<EBattleUiChild> HideBattleUiChildernList = new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
 		{
@@ -214,30 +214,30 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EBattleUiChild.Joystick
 		});
 
-		// Token: 0x0401FFE8 RID: 131048
+		// Token: 0x0401AAAF RID: 109231
 		private SwordControlFlightDirectionButton BtnLeftButton;
 
-		// Token: 0x0401FFE9 RID: 131049
+		// Token: 0x0401AAB0 RID: 109232
 		private SwordControlFlightDirectionButton BtnRightButton;
 
-		// Token: 0x0401FFEA RID: 131050
+		// Token: 0x0401AAB1 RID: 109233
 		private SwordControlGroundAttackButton FlightAttackButton;
 
-		// Token: 0x0401FFEB RID: 131051
+		// Token: 0x0401AAB2 RID: 109234
 		private BattleUiRoleData RoleData;
 
-		// Token: 0x0401FFEC RID: 131052
+		// Token: 0x0401AAB3 RID: 109235
 		private ITagTask HideSkillNorTagTask;
 
-		// Token: 0x0200C1B9 RID: 49593
+		// Token: 0x0200ABC8 RID: 43976
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A8A6 RID: 239782
+			// Token: 0x04035298 RID: 217752
 			BtnLeft,
-			// Token: 0x0403A8A7 RID: 239783
+			// Token: 0x04035299 RID: 217753
 			BtnRight,
-			// Token: 0x0403A8A8 RID: 239784
+			// Token: 0x0403529A RID: 217754
 			BtnSkillNor
 		}
 	}

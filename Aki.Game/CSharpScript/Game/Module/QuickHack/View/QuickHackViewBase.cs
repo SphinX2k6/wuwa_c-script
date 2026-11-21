@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F96 RID: 20374
+	// Token: 0x02003F5F RID: 16223
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class QuickHackViewBase : UiTickViewBase, IUiProhibitRefreshData
 	{
-		// Token: 0x060342B8 RID: 213688 RVA: 0x00C3F84C File Offset: 0x00C3DA4C
+		// Token: 0x06029126 RID: 168230 RVA: 0x00B88FF8 File Offset: 0x00B871F8
 		public QuickHackViewBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060342B9 RID: 213689 RVA: 0x00C3F85C File Offset: 0x00C3DA5C
+		// Token: 0x06029127 RID: 168231 RVA: 0x00B89008 File Offset: 0x00B87208
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuickHackViewBase.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060342BA RID: 213690 RVA: 0x00C3F8A0 File Offset: 0x00C3DAA0
+		// Token: 0x06029128 RID: 168232 RVA: 0x00B8904C File Offset: 0x00B8724C
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.SkillPanelAnim = (verticalLayout.GetOwner().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController);
 		}
 
-		// Token: 0x060342BB RID: 213691 RVA: 0x00C3F908 File Offset: 0x00C3DB08
+		// Token: 0x06029129 RID: 168233 RVA: 0x00B890B4 File Offset: 0x00B872B4
 		protected override void OnBeforeShow()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshInput(true);
 		}
 
-		// Token: 0x060342BC RID: 213692 RVA: 0x00C3FAA0 File Offset: 0x00C3DCA0
+		// Token: 0x0602912A RID: 168234 RVA: 0x00B8924C File Offset: 0x00B8744C
 		protected override void OnBeforeHide()
 		{
 			QuickHackSkillInstance currentSkill = this.CurrentSkill;
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshInput(false);
 		}
 
-		// Token: 0x060342BD RID: 213693 RVA: 0x00C3FBC0 File Offset: 0x00C3DDC0
+		// Token: 0x0602912B RID: 168235 RVA: 0x00B8936C File Offset: 0x00B8756C
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.UpdateKeyItem();
 		}
 
-		// Token: 0x060342BE RID: 213694 RVA: 0x00C3FBC8 File Offset: 0x00C3DDC8
+		// Token: 0x0602912C RID: 168236 RVA: 0x00B89374 File Offset: 0x00B87574
 		private void UpdateDurationLimit(double remainTime, double totalTime)
 		{
 			double num = MathUtils.Instance.Clamp(remainTime, 0.0, totalTime);
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}));
 		}
 
-		// Token: 0x060342BF RID: 213695 RVA: 0x00C3FC9C File Offset: 0x00C3DE9C
+		// Token: 0x0602912D RID: 168237 RVA: 0x00B89448 File Offset: 0x00B87648
 		protected virtual bool UseCurrentSkill()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -168,16 +168,16 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return false;
 		}
 
-		// Token: 0x060342C0 RID: 213696
+		// Token: 0x0602912E RID: 168238
 		protected abstract void RefreshInput(bool enable);
 
-		// Token: 0x060342C1 RID: 213697
+		// Token: 0x0602912F RID: 168239
 		protected abstract int GetUiComponentType(EQuickHackUiType uiType);
 
-		// Token: 0x060342C2 RID: 213698
+		// Token: 0x06029130 RID: 168240
 		protected abstract List<UUIItem> GetSkillItems();
 
-		// Token: 0x060342C3 RID: 213699 RVA: 0x00C3FD29 File Offset: 0x00C3DF29
+		// Token: 0x06029131 RID: 168241 RVA: 0x00B894D5 File Offset: 0x00B876D5
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.SkillPanelAnim = null;
 		}
 
-		// Token: 0x060342C4 RID: 213700 RVA: 0x00C3FD69 File Offset: 0x00C3DF69
+		// Token: 0x06029132 RID: 168242 RVA: 0x00B89515 File Offset: 0x00B87715
 		protected override void OnTick(float delta)
 		{
 			QuickHackController.Instance.UpdateLockTarget(delta);
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			ramBar.TickRamBar(delta);
 		}
 
-		// Token: 0x060342C5 RID: 213701 RVA: 0x00C3FD94 File Offset: 0x00C3DF94
+		// Token: 0x06029133 RID: 168243 RVA: 0x00B89540 File Offset: 0x00B87740
 		private void OnCurrentRamChange()
 		{
 			QuickHackRamManager ramManager = QuickHackModel.Instance.RamManager;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshRam(currentRam, maxRam, true);
 		}
 
-		// Token: 0x060342C6 RID: 213702 RVA: 0x00C3FDE8 File Offset: 0x00C3DFE8
+		// Token: 0x06029134 RID: 168244 RVA: 0x00B89594 File Offset: 0x00B87794
 		private void OnMxRamChange()
 		{
 			QuickHackRamManager ramManager = QuickHackModel.Instance.RamManager;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RefreshRam(currentRam, maxRam, false);
 		}
 
-		// Token: 0x060342C7 RID: 213703 RVA: 0x00C3FE3C File Offset: 0x00C3E03C
+		// Token: 0x06029135 RID: 168245 RVA: 0x00B895E8 File Offset: 0x00B877E8
 		private void RefreshRam(int currentRam, int maxRam, bool playReduceAnim = false)
 		{
 			QuickHackRamBar ramBar = this.RamBar;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}));
 		}
 
-		// Token: 0x060342C8 RID: 213704 RVA: 0x00C3FE98 File Offset: 0x00C3E098
+		// Token: 0x06029136 RID: 168246 RVA: 0x00B89644 File Offset: 0x00B87844
 		private void UpdateLockTarget()
 		{
 			EntityHandle closestOnScreenTarget = QuickHackController.Instance.GetClosestOnScreenTarget();
@@ -308,13 +308,13 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.TargetItem.RefreshTitle(title);
 		}
 
-		// Token: 0x060342C9 RID: 213705 RVA: 0x00C3FFF1 File Offset: 0x00C3E1F1
+		// Token: 0x06029137 RID: 168247 RVA: 0x00B8979D File Offset: 0x00B8799D
 		protected virtual bool ShouldShowTargetItem()
 		{
 			return true;
 		}
 
-		// Token: 0x060342CA RID: 213706 RVA: 0x00C3FFF4 File Offset: 0x00C3E1F4
+		// Token: 0x06029138 RID: 168248 RVA: 0x00B897A0 File Offset: 0x00B879A0
 		private void UpdateUploadTime()
 		{
 			int uploadTime = this.GetUploadTime();
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342CB RID: 213707 RVA: 0x00C40078 File Offset: 0x00C3E278
+		// Token: 0x06029139 RID: 168249 RVA: 0x00B89824 File Offset: 0x00B87A24
 		private int GetUploadTime()
 		{
 			QuickHackTargetSelector targetSelector = QuickHackModel.Instance.TargetSelector;
@@ -368,19 +368,19 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			return 0;
 		}
 
-		// Token: 0x060342CC RID: 213708 RVA: 0x00C4012C File Offset: 0x00C3E32C
+		// Token: 0x0602913A RID: 168250 RVA: 0x00B898D8 File Offset: 0x00B87AD8
 		private void OnAllSkillChange()
 		{
 			this.UpdateSkillInfo(true, false);
 		}
 
-		// Token: 0x060342CD RID: 213709 RVA: 0x00C40136 File Offset: 0x00C3E336
+		// Token: 0x0602913B RID: 168251 RVA: 0x00B898E2 File Offset: 0x00B87AE2
 		private void OnSelectSkillChange()
 		{
 			this.UpdateSkillInfo(false, false);
 		}
 
-		// Token: 0x060342CE RID: 213710 RVA: 0x00C40140 File Offset: 0x00C3E340
+		// Token: 0x0602913C RID: 168252 RVA: 0x00B898EC File Offset: 0x00B87AEC
 		private void UpdateSkillInfo(bool allSkillChange, bool isInit = false)
 		{
 			this.RefreshSelectRam();
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342CF RID: 213711 RVA: 0x00C402FD File Offset: 0x00C3E4FD
+		// Token: 0x0602913D RID: 168253 RVA: 0x00B89AA9 File Offset: 0x00B87CA9
 		private void UpdateInfoLine()
 		{
 			if (this.HasUploadTimeInfo || this.HasDurationInfo)
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			base.GetItem(this.GetUiComponentType(EQuickHackUiType.InfoLineItem)).SetUIActive(false);
 		}
 
-		// Token: 0x060342D0 RID: 213712 RVA: 0x00C40338 File Offset: 0x00C3E538
+		// Token: 0x0602913E RID: 168254 RVA: 0x00B89AE4 File Offset: 0x00B87CE4
 		private void RefreshSkillPanelVisible(bool visible, bool isInit = false)
 		{
 			if (!isInit && visible == this.SkillPanelVisible && !visible)
@@ -469,22 +469,22 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342D1 RID: 213713
+		// Token: 0x0602913F RID: 168255
 		protected abstract string GetSelectSkillAudioPath();
 
-		// Token: 0x060342D2 RID: 213714 RVA: 0x00C403CF File Offset: 0x00C3E5CF
+		// Token: 0x06029140 RID: 168256 RVA: 0x00B89B7B File Offset: 0x00B87D7B
 		public bool CheckCondition()
 		{
 			return !InputManager.Instance.IsShowMouseCursor() || !Info.Instance.IsInKeyBoard();
 		}
 
-		// Token: 0x060342D3 RID: 213715 RVA: 0x00C403EC File Offset: 0x00C3E5EC
+		// Token: 0x06029141 RID: 168257 RVA: 0x00B89B98 File Offset: 0x00B87D98
 		public string[] GetDistributeTags()
 		{
 			return this.GetInputDistributeTags();
 		}
 
-		// Token: 0x060342D4 RID: 213716 RVA: 0x00C403F4 File Offset: 0x00C3E5F4
+		// Token: 0x06029142 RID: 168258 RVA: 0x00B89BA0 File Offset: 0x00B87DA0
 		protected virtual string[] GetInputDistributeTags()
 		{
 			return new string[]
@@ -495,14 +495,14 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			};
 		}
 
-		// Token: 0x060342D5 RID: 213717 RVA: 0x00C40414 File Offset: 0x00C3E614
+		// Token: 0x06029143 RID: 168259 RVA: 0x00B89BC0 File Offset: 0x00B87DC0
 		private void OnCheckCurrentSkillCanUse(QuickHackSkillConditionResult canUseInfo)
 		{
 			this.UpdateCurrentSkillCanUse(canUseInfo);
 			this.RefreshSelectRam();
 		}
 
-		// Token: 0x060342D6 RID: 213718 RVA: 0x00C40424 File Offset: 0x00C3E624
+		// Token: 0x06029144 RID: 168260 RVA: 0x00B89BD0 File Offset: 0x00B87DD0
 		private void UpdateCurrentSkillCanUse(QuickHackSkillConditionResult canUseInfo)
 		{
 			bool isSuccess = canUseInfo.IsSuccess;
@@ -516,12 +516,12 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.OnUpdateCurrentSkillCanUse(isSuccess);
 		}
 
-		// Token: 0x060342D7 RID: 213719 RVA: 0x00C40483 File Offset: 0x00C3E683
+		// Token: 0x06029145 RID: 168261 RVA: 0x00B89C2F File Offset: 0x00B87E2F
 		protected virtual void OnUpdateCurrentSkillCanUse(bool canUse)
 		{
 		}
 
-		// Token: 0x060342D8 RID: 213720 RVA: 0x00C40488 File Offset: 0x00C3E688
+		// Token: 0x06029146 RID: 168262 RVA: 0x00B89C34 File Offset: 0x00B87E34
 		private void RefreshSelectRam()
 		{
 			if (this.RamBar == null)
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.RamBar.SelectRam(skillCanUseInfo.IsSuccess ? currentSelectSkill.GetConfig().RamCost : 0);
 		}
 
-		// Token: 0x060342D9 RID: 213721 RVA: 0x00C404E4 File Offset: 0x00C3E6E4
+		// Token: 0x06029147 RID: 168263 RVA: 0x00B89C90 File Offset: 0x00B87E90
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			UUIInturnAnimController skillPanelAnim = this.SkillPanelAnim;
@@ -552,58 +552,58 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			}
 		}
 
-		// Token: 0x060342DA RID: 213722 RVA: 0x00C4051D File Offset: 0x00C3E71D
+		// Token: 0x06029148 RID: 168264 RVA: 0x00B89CC9 File Offset: 0x00B87EC9
 		protected void OnShowMouseCursor(bool value)
 		{
 			this.UpdateKeyItem();
 		}
 
-		// Token: 0x060342DB RID: 213723 RVA: 0x00C40525 File Offset: 0x00C3E725
+		// Token: 0x06029149 RID: 168265 RVA: 0x00B89CD1 File Offset: 0x00B87ED1
 		protected void UpdateKeyItem()
 		{
 			base.GetItem(this.GetUiComponentType(EQuickHackUiType.UseSkillKeyItem)).SetUIActive(Info.Instance.IsInKeyBoard() && !InputManager.Instance.IsShowMouseCursor());
 		}
 
-		// Token: 0x0401BBCD RID: 113613
+		// Token: 0x040165A2 RID: 91554
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BBCE RID: 113614
+		// Token: 0x040165A3 RID: 91555
 		[Nullable(2)]
 		private QuickHackRamBar RamBar;
 
-		// Token: 0x0401BBCF RID: 113615
+		// Token: 0x040165A4 RID: 91556
 		[Nullable(2)]
 		private QuickHackSkillPanel SkillPanel;
 
-		// Token: 0x0401BBD0 RID: 113616
+		// Token: 0x040165A5 RID: 91557
 		private int TargetItemEntityId;
 
-		// Token: 0x0401BBD1 RID: 113617
+		// Token: 0x040165A6 RID: 91558
 		[Nullable(2)]
 		private QuickHackTargetItem TargetItem;
 
-		// Token: 0x0401BBD2 RID: 113618
+		// Token: 0x040165A7 RID: 91559
 		private bool HasTarget;
 
-		// Token: 0x0401BBD3 RID: 113619
+		// Token: 0x040165A8 RID: 91560
 		[Nullable(2)]
 		private QuickHackSkillInstance CurrentSkill;
 
-		// Token: 0x0401BBD4 RID: 113620
+		// Token: 0x040165A9 RID: 91561
 		private bool SkillPanelVisible;
 
-		// Token: 0x0401BBD5 RID: 113621
+		// Token: 0x040165AA RID: 91562
 		[Nullable(2)]
 		private UUIInturnAnimController SkillPanelAnim;
 
-		// Token: 0x0401BBD6 RID: 113622
+		// Token: 0x040165AB RID: 91563
 		private int CurrentUploadTime = -1;
 
-		// Token: 0x0401BBD7 RID: 113623
+		// Token: 0x040165AC RID: 91564
 		private bool HasUploadTimeInfo;
 
-		// Token: 0x0401BBD8 RID: 113624
+		// Token: 0x040165AD RID: 91565
 		private bool HasDurationInfo;
 	}
 }

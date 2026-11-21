@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000815 RID: 2069
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008B8 RID: 2232
 	public class IWuWaGoRoleInfo
 	{
-		// Token: 0x06002CED RID: 11501 RVA: 0x000747F0 File Offset: 0x000729F0
+		// Token: 0x0600301D RID: 12317 RVA: 0x0007BB54 File Offset: 0x00079D54
 		private IWuWaGoRoleInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002CEE RID: 11502 RVA: 0x00074828 File Offset: 0x00072A28
+		// Token: 0x0600301E RID: 12318 RVA: 0x0007BB8C File Offset: 0x00079D8C
 		public static IWuWaGoRoleInfo Create([Nullable(2)] IWuWaGoRoleInfo instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CEF RID: 11503 RVA: 0x0007483B File Offset: 0x00072A3B
+		// Token: 0x0600301F RID: 12319 RVA: 0x0007BB9F File Offset: 0x00079D9F
 		public static IWuWaGoRoleInfo CreateFromSetValue([Nullable(2)] IWuWaGoRoleInfo_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002CF0 RID: 11504 RVA: 0x0007484E File Offset: 0x00072A4E
+		// Token: 0x06003020 RID: 12320 RVA: 0x0007BBB2 File Offset: 0x00079DB2
 		public IWuWaGoRoleInfo_SetValue ToSetValue()
 		{
 			return new IWuWaGoRoleInfo_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BBA RID: 3002
-		// (get) Token: 0x06002CF1 RID: 11505 RVA: 0x00074879 File Offset: 0x00072A79
-		// (set) Token: 0x06002CF2 RID: 11506 RVA: 0x000748A4 File Offset: 0x00072AA4
+		// Token: 0x17000C7D RID: 3197
+		// (get) Token: 0x06003021 RID: 12321 RVA: 0x0007BBDD File Offset: 0x00079DDD
+		// (set) Token: 0x06003022 RID: 12322 RVA: 0x0007BC08 File Offset: 0x00079E08
 		public virtual EWuWaGoRoleType RoleType
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BBB RID: 3003
-		// (get) Token: 0x06002CF3 RID: 11507 RVA: 0x000748B4 File Offset: 0x00072AB4
-		// (set) Token: 0x06002CF4 RID: 11508 RVA: 0x00074915 File Offset: 0x00072B15
+		// Token: 0x17000C7E RID: 3198
+		// (get) Token: 0x06003023 RID: 12323 RVA: 0x0007BC18 File Offset: 0x00079E18
+		// (set) Token: 0x06003024 RID: 12324 RVA: 0x0007BC79 File Offset: 0x00079E79
 		public virtual VectorInfo Position
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BBC RID: 3004
-		// (get) Token: 0x06002CF5 RID: 11509 RVA: 0x0007492C File Offset: 0x00072B2C
-		// (set) Token: 0x06002CF6 RID: 11510 RVA: 0x0007498D File Offset: 0x00072B8D
+		// Token: 0x17000C7F RID: 3199
+		// (get) Token: 0x06003025 RID: 12325 RVA: 0x0007BC90 File Offset: 0x00079E90
+		// (set) Token: 0x06003026 RID: 12326 RVA: 0x0007BCF1 File Offset: 0x00079EF1
 		public virtual VectorInfo Rotation
 		{
 			get
@@ -145,24 +143,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001DBC RID: 7612
+		// Token: 0x04001FC8 RID: 8136
 		[Nullable(2)]
 		protected IWuWaGoRoleInfo FbInstance;
 
-		// Token: 0x04001DBD RID: 7613
+		// Token: 0x04001FC9 RID: 8137
 		[Nullable(2)]
 		protected IWuWaGoRoleInfo_SetValue PocoInterface;
 
-		// Token: 0x04001DBE RID: 7614
+		// Token: 0x04001FCA RID: 8138
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04001DBF RID: 7615
+		// Token: 0x04001FCB RID: 8139
 		private bool _PositionInited;
 
-		// Token: 0x04001DC0 RID: 7616
+		// Token: 0x04001FCC RID: 8140
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04001DC1 RID: 7617
+		// Token: 0x04001FCD RID: 8141
 		private bool _RotationInited;
 	}
 }

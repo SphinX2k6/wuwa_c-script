@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020024D0 RID: 9424
+// Token: 0x020019B7 RID: 6583
 public class VisionMainAttributeComponent : UiPanelBase
 {
-	// Token: 0x06012F3C RID: 77628 RVA: 0x004B11D1 File Offset: 0x004AF3D1
+	// Token: 0x060103FB RID: 66555 RVA: 0x004BEDD5 File Offset: 0x004BCFD5
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +18,7 @@ public class VisionMainAttributeComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012F3D RID: 77629 RVA: 0x004B120A File Offset: 0x004AF40A
+	// Token: 0x060103FC RID: 66556 RVA: 0x004BEE0E File Offset: 0x004BD00E
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<VisionIdentifyAttributeItem, AttrListScrollData>(base.GetVerticalLayout(0), new Func<VisionIdentifyAttributeItem>(this.InitItem), null, false, true);
@@ -27,21 +26,21 @@ public class VisionMainAttributeComponent : UiPanelBase
 		base.GetItem(1).SetUIActive(false);
 	}
 
-	// Token: 0x06012F3E RID: 77630 RVA: 0x004B1241 File Offset: 0x004AF441
+	// Token: 0x060103FD RID: 66557 RVA: 0x004BEE45 File Offset: 0x004BD045
 	[NullableContext(1)]
 	private VisionIdentifyAttributeItem InitItem()
 	{
 		return new VisionIdentifyAttributeItem();
 	}
 
-	// Token: 0x06012F3F RID: 77631 RVA: 0x004B1248 File Offset: 0x004AF448
+	// Token: 0x060103FE RID: 66558 RVA: 0x004BEE4C File Offset: 0x004BD04C
 	[NullableContext(1)]
 	public void Update(AttrListScrollData[] data)
 	{
-		this.Layout.RefreshByData(data.ToList<AttrListScrollData>(), null, false);
+		this.Layout.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x04008EB6 RID: 36534
+	// Token: 0x04009000 RID: 36864
 	[Nullable(new byte[]
 	{
 		2,
@@ -50,12 +49,12 @@ public class VisionMainAttributeComponent : UiPanelBase
 	})]
 	protected GenericLayout<VisionIdentifyAttributeItem, AttrListScrollData> Layout;
 
-	// Token: 0x02008A62 RID: 35426
+	// Token: 0x02007BEB RID: 31723
 	private enum ELevelAttribute
 	{
-		// Token: 0x0402CEED RID: 184045
+		// Token: 0x0402820B RID: 164363
 		Layout,
-		// Token: 0x0402CEEE RID: 184046
+		// Token: 0x0402820C RID: 164364
 		Item
 	}
 }

@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CFD RID: 27901
+	// Token: 0x02007478 RID: 29816
 	public class IPlayerLookAtT
 	{
-		// Token: 0x1700CFC9 RID: 53193
-		// (get) Token: 0x06031331 RID: 201521 RVA: 0x006ACA27 File Offset: 0x006AAC27
-		// (set) Token: 0x06031332 RID: 201522 RVA: 0x006ACA2F File Offset: 0x006AAC2F
+		// Token: 0x1700DB0D RID: 56077
+		// (get) Token: 0x06034325 RID: 213797 RVA: 0x00707F57 File Offset: 0x00706157
+		// (set) Token: 0x06034326 RID: 213798 RVA: 0x00707F5F File Offset: 0x0070615F
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x1700CFCA RID: 53194
-		// (get) Token: 0x06031333 RID: 201523 RVA: 0x006ACA38 File Offset: 0x006AAC38
-		// (set) Token: 0x06031334 RID: 201524 RVA: 0x006ACA40 File Offset: 0x006AAC40
+		// Token: 0x1700DB0E RID: 56078
+		// (get) Token: 0x06034327 RID: 213799 RVA: 0x00707F68 File Offset: 0x00706168
+		// (set) Token: 0x06034328 RID: 213800 RVA: 0x00707F70 File Offset: 0x00706170
 		public bool CameraMove { get; set; }
 
-		// Token: 0x1700CFCB RID: 53195
-		// (get) Token: 0x06031335 RID: 201525 RVA: 0x006ACA49 File Offset: 0x006AAC49
-		// (set) Token: 0x06031336 RID: 201526 RVA: 0x006ACA51 File Offset: 0x006AAC51
+		// Token: 0x1700DB0F RID: 56079
+		// (get) Token: 0x06034329 RID: 213801 RVA: 0x00707F79 File Offset: 0x00706179
+		// (set) Token: 0x0603432A RID: 213802 RVA: 0x00707F81 File Offset: 0x00706181
 		public bool PlayAnimation { get; set; }
 
-		// Token: 0x1700CFCC RID: 53196
-		// (get) Token: 0x06031337 RID: 201527 RVA: 0x006ACA5A File Offset: 0x006AAC5A
-		// (set) Token: 0x06031338 RID: 201528 RVA: 0x006ACA62 File Offset: 0x006AAC62
+		// Token: 0x1700DB10 RID: 56080
+		// (get) Token: 0x0603432B RID: 213803 RVA: 0x00707F8A File Offset: 0x0070618A
+		// (set) Token: 0x0603432C RID: 213804 RVA: 0x00707F92 File Offset: 0x00706192
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031339 RID: 201529 RVA: 0x006ACA6B File Offset: 0x006AAC6B
+		// Token: 0x0603432D RID: 213805 RVA: 0x00707F9B File Offset: 0x0070619B
 		public IPlayerLookAtT()
 		{
 			this.Pos = null;

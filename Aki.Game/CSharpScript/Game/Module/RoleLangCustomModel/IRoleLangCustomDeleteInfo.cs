@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel
 {
-	// Token: 0x02004D74 RID: 19828
+	// Token: 0x02003D3D RID: 15677
 	[NullableContext(1)]
 	public interface IRoleLangCustomDeleteInfo
 	{
-		// Token: 0x17007E6F RID: 32367
-		// (get) Token: 0x060333E0 RID: 209888
-		// (set) Token: 0x060333E1 RID: 209889
+		// Token: 0x1700521F RID: 21023
+		// (get) Token: 0x0602824E RID: 164430
+		// (set) Token: 0x0602824F RID: 164431
 		int RoleId { get; set; }
 
-		// Token: 0x17007E70 RID: 32368
-		// (get) Token: 0x060333E2 RID: 209890
-		// (set) Token: 0x060333E3 RID: 209891
+		// Token: 0x17005220 RID: 21024
+		// (get) Token: 0x06028250 RID: 164432
+		// (set) Token: 0x06028251 RID: 164433
 		Action RefreshCallback { get; set; }
 
-		// Token: 0x17007E71 RID: 32369
-		// (get) Token: 0x060333E4 RID: 209892
-		// (set) Token: 0x060333E5 RID: 209893
+		// Token: 0x17005221 RID: 21025
+		// (get) Token: 0x06028252 RID: 164434
+		// (set) Token: 0x06028253 RID: 164435
 		Action CloseCallback { get; set; }
 	}
 }

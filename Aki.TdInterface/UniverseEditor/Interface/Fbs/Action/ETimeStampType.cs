@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200603A RID: 24634
+	// Token: 0x0200669A RID: 26266
 	public enum ETimeStampType : byte
 	{
-		// Token: 0x04010173 RID: 65907
+		// Token: 0x04010F63 RID: 69475
 		DungeonBegin,
-		// Token: 0x04010174 RID: 65908
+		// Token: 0x04010F64 RID: 69476
 		DungeonFinish
 	}
 }

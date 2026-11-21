@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B75 RID: 23413
+	// Token: 0x0200618B RID: 24971
 	public class IWellStreamingRenderPointConfigT
 	{
-		// Token: 0x1700B0F0 RID: 45296
-		// (get) Token: 0x06028133 RID: 164147 RVA: 0x005826B1 File Offset: 0x005808B1
-		// (set) Token: 0x06028134 RID: 164148 RVA: 0x005826B9 File Offset: 0x005808B9
+		// Token: 0x1700BA38 RID: 47672
+		// (get) Token: 0x0602A6F7 RID: 173815 RVA: 0x005CA141 File Offset: 0x005C8341
+		// (set) Token: 0x0602A6F8 RID: 173816 RVA: 0x005CA149 File Offset: 0x005C8349
 		public IPortalRenderConfigT TargetConfig { get; set; }
 
-		// Token: 0x1700B0F1 RID: 45297
-		// (get) Token: 0x06028135 RID: 164149 RVA: 0x005826C2 File Offset: 0x005808C2
-		// (set) Token: 0x06028136 RID: 164150 RVA: 0x005826CA File Offset: 0x005808CA
+		// Token: 0x1700BA39 RID: 47673
+		// (get) Token: 0x0602A6F9 RID: 173817 RVA: 0x005CA152 File Offset: 0x005C8352
+		// (set) Token: 0x0602A6FA RID: 173818 RVA: 0x005CA15A File Offset: 0x005C835A
 		public IRtSizeT RtSize { get; set; }
 
-		// Token: 0x1700B0F2 RID: 45298
-		// (get) Token: 0x06028137 RID: 164151 RVA: 0x005826D3 File Offset: 0x005808D3
-		// (set) Token: 0x06028138 RID: 164152 RVA: 0x005826DB File Offset: 0x005808DB
+		// Token: 0x1700BA3A RID: 47674
+		// (get) Token: 0x0602A6FB RID: 173819 RVA: 0x005CA163 File Offset: 0x005C8363
+		// (set) Token: 0x0602A6FC RID: 173820 RVA: 0x005CA16B File Offset: 0x005C836B
 		public bool IsRenderStreamingPointEntity { get; set; }
 
-		// Token: 0x1700B0F3 RID: 45299
-		// (get) Token: 0x06028139 RID: 164153 RVA: 0x005826E4 File Offset: 0x005808E4
-		// (set) Token: 0x0602813A RID: 164154 RVA: 0x005826EC File Offset: 0x005808EC
+		// Token: 0x1700BA3B RID: 47675
+		// (get) Token: 0x0602A6FD RID: 173821 RVA: 0x005CA174 File Offset: 0x005C8374
+		// (set) Token: 0x0602A6FE RID: 173822 RVA: 0x005CA17C File Offset: 0x005C837C
 		public string RtRenderRefPosActorKey { get; set; }
 
-		// Token: 0x1700B0F4 RID: 45300
-		// (get) Token: 0x0602813B RID: 164155 RVA: 0x005826F5 File Offset: 0x005808F5
-		// (set) Token: 0x0602813C RID: 164156 RVA: 0x005826FD File Offset: 0x005808FD
+		// Token: 0x1700BA3C RID: 47676
+		// (get) Token: 0x0602A6FF RID: 173823 RVA: 0x005CA185 File Offset: 0x005C8385
+		// (set) Token: 0x0602A700 RID: 173824 RVA: 0x005CA18D File Offset: 0x005C838D
 		public string FallbackCubeMapTexturePath { get; set; }
 
-		// Token: 0x1700B0F5 RID: 45301
-		// (get) Token: 0x0602813D RID: 164157 RVA: 0x00582706 File Offset: 0x00580906
-		// (set) Token: 0x0602813E RID: 164158 RVA: 0x0058270E File Offset: 0x0058090E
+		// Token: 0x1700BA3D RID: 47677
+		// (get) Token: 0x0602A701 RID: 173825 RVA: 0x005CA196 File Offset: 0x005C8396
+		// (set) Token: 0x0602A702 RID: 173826 RVA: 0x005CA19E File Offset: 0x005C839E
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602813F RID: 164159 RVA: 0x00582717 File Offset: 0x00580917
+		// Token: 0x0602A703 RID: 173827 RVA: 0x005CA1A7 File Offset: 0x005C83A7
 		public IWellStreamingRenderPointConfigT()
 		{
 			this.TargetConfig = null;

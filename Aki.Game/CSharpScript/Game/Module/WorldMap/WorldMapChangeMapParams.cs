@@ -3,28 +3,28 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004798 RID: 18328
+	// Token: 0x020036C9 RID: 14025
 	public class WorldMapChangeMapParams
 	{
-		// Token: 0x04019DE9 RID: 105961
+		// Token: 0x04014499 RID: 83097
 		public int MarkId;
 
-		// Token: 0x04019DEA RID: 105962
+		// Token: 0x0401449A RID: 83098
 		public EMarkType MarkType;
 
-		// Token: 0x04019DEB RID: 105963
+		// Token: 0x0401449B RID: 83099
 		public int MapId;
 
-		// Token: 0x04019DEC RID: 105964
+		// Token: 0x0401449C RID: 83100
 		public bool? Focal;
 
-		// Token: 0x04019DED RID: 105965
+		// Token: 0x0401449D RID: 83101
 		public bool? FocusTween;
 
-		// Token: 0x04019DEE RID: 105966
+		// Token: 0x0401449E RID: 83102
 		public EMapGravityDirection? Gravity;
 
-		// Token: 0x04019DEF RID: 105967
+		// Token: 0x0401449F RID: 83103
 		public bool? NeedTempShow;
 	}
 }

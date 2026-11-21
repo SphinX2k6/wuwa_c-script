@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200515F RID: 20831
+	// Token: 0x020056C4 RID: 22212
 	public enum IEntityBatchRefreshMode_Union : byte
 	{
-		// Token: 0x0400E203 RID: 57859
+		// Token: 0x0400EE00 RID: 60928
 		NONE,
-		// Token: 0x0400E204 RID: 57860
+		// Token: 0x0400EE01 RID: 60929
 		IEntityBatchRefreshMode,
-		// Token: 0x0400E205 RID: 57861
+		// Token: 0x0400EE02 RID: 60930
 		ISequenceBatchRefresh,
-		// Token: 0x0400E206 RID: 57862
+		// Token: 0x0400EE03 RID: 60931
 		IRandomBatchRefresh,
-		// Token: 0x0400E207 RID: 57863
+		// Token: 0x0400EE04 RID: 60932
 		IRandomBatchPoolRefresh
 	}
 }

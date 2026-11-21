@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018BA RID: 6330
+	// Token: 0x020003D8 RID: 984
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FKuroActorStreamingCompleted : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017664 RID: 95844 RVA: 0x00223728 File Offset: 0x00221928
+		// Token: 0x060060F7 RID: 24823 RVA: 0x0008A908 File Offset: 0x00088B08
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroActorStreamingCompleted.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017665 RID: 95845 RVA: 0x00223734 File Offset: 0x00221934
+		// Token: 0x060060F8 RID: 24824 RVA: 0x0008A914 File Offset: 0x00088B14
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroActorStreamingCompleted._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FKuroActorStreamingCompleted._FunctionPtr;
 		}
 
-		// Token: 0x06017666 RID: 95846 RVA: 0x00223757 File Offset: 0x00221957
+		// Token: 0x060060F9 RID: 24825 RVA: 0x0008A937 File Offset: 0x00088B37
 		public FKuroActorStreamingCompleted()
 		{
 		}
 
-		// Token: 0x06017667 RID: 95847 RVA: 0x0022375F File Offset: 0x0022195F
+		// Token: 0x060060FA RID: 24826 RVA: 0x0008A93F File Offset: 0x00088B3F
 		[NullableContext(2)]
 		public FKuroActorStreamingCompleted(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017668 RID: 95848 RVA: 0x00223769 File Offset: 0x00221969
+		// Token: 0x060060FB RID: 24827 RVA: 0x0008A949 File Offset: 0x00088B49
 		public FKuroActorStreamingCompleted(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017669 RID: 95849 RVA: 0x00223774 File Offset: 0x00221974
+		// Token: 0x060060FC RID: 24828 RVA: 0x0008A954 File Offset: 0x00088B54
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601766A RID: 95850 RVA: 0x002237A6 File Offset: 0x002219A6
+		// Token: 0x060060FD RID: 24829 RVA: 0x0008A986 File Offset: 0x00088B86
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FKuroActorStreamingCompleted.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FKuroActorStreamingCompleted.RegisterId);
 		}
 
-		// Token: 0x0601766B RID: 95851 RVA: 0x002237E0 File Offset: 0x002219E0
+		// Token: 0x060060FE RID: 24830 RVA: 0x0008A9C0 File Offset: 0x00088BC0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601766C RID: 95852 RVA: 0x002237E9 File Offset: 0x002219E9
+		// Token: 0x060060FF RID: 24831 RVA: 0x0008A9C9 File Offset: 0x00088BC9
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601766D RID: 95853 RVA: 0x002237F4 File Offset: 0x002219F4
+		// Token: 0x06006100 RID: 24832 RVA: 0x0008A9D4 File Offset: 0x00088BD4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400CBA9 RID: 52137
+		// Token: 0x04002955 RID: 10581
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CBAA RID: 52138
+		// Token: 0x04002956 RID: 10582
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroActorStreamingCompleted__DelegateSignature";
 
-		// Token: 0x0400CBAB RID: 52139
+		// Token: 0x04002957 RID: 10583
 		private static int RegisterId;
 
-		// Token: 0x02002FAF RID: 12207
+		// Token: 0x02000AD2 RID: 2770
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B92 RID: 93074
+			// Token: 0x04005B4F RID: 23375
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

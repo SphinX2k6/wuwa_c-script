@@ -8,13 +8,13 @@ using CSharpScript.Game.Module.Battle;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A40 RID: 23104
+	// Token: 0x02004A1C RID: 18972
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class FlagChallengeModel : ModelBase
 	{
-		// Token: 0x0603A984 RID: 240004 RVA: 0x00DF21A4 File Offset: 0x00DF03A4
+		// Token: 0x0602F8CD RID: 194765 RVA: 0x00D42728 File Offset: 0x00D40928
 		public void ParseActivityData(int activityId, FlagChallengeActivityInfo activityData)
 		{
 			FlagChallengeData flagChallengeData;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.UpdateTeleportData(activityData.UnlockTeleporterId);
 		}
 
-		// Token: 0x0603A985 RID: 240005 RVA: 0x00DF21F0 File Offset: 0x00DF03F0
+		// Token: 0x0602F8CE RID: 194766 RVA: 0x00D42774 File Offset: 0x00D40974
 		[NullableContext(2)]
 		public FlagChallengeData GetFlagChallengeData(int activityId)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return result;
 		}
 
-		// Token: 0x0603A986 RID: 240006 RVA: 0x00DF2210 File Offset: 0x00DF0410
+		// Token: 0x0602F8CF RID: 194767 RVA: 0x00D42794 File Offset: 0x00D40994
 		public void UpdateTaskData(IList<ConditionTask> tasks)
 		{
 			foreach (ConditionTask conditionTask in tasks)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A987 RID: 240007 RVA: 0x00DF2284 File Offset: 0x00DF0484
+		// Token: 0x0602F8D0 RID: 194768 RVA: 0x00D42808 File Offset: 0x00D40A08
 		public void UpdateLevelData(IList<FlagChallengeLevelInfo> levels)
 		{
 			foreach (FlagChallengeLevelInfo flagChallengeLevelInfo in levels)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A988 RID: 240008 RVA: 0x00DF22F8 File Offset: 0x00DF04F8
+		// Token: 0x0602F8D1 RID: 194769 RVA: 0x00D4287C File Offset: 0x00D40A7C
 		public void UpdateStrongholdData(IList<FlagStrongholdInfo> strongholds)
 		{
 			foreach (FlagStrongholdInfo flagStrongholdInfo in strongholds)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Emit(EEventName.OnFlagChallengeUpdateStrongholdData);
 		}
 
-		// Token: 0x0603A989 RID: 240009 RVA: 0x00DF23A8 File Offset: 0x00DF05A8
+		// Token: 0x0602F8D2 RID: 194770 RVA: 0x00D4292C File Offset: 0x00D40B2C
 		[NullableContext(2)]
 		public FlagChallengeStrongholdData GetStrongholdData(int strongholdId)
 		{
@@ -92,26 +92,26 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return flagChallengeData.GetStrongholdData(strongholdId);
 		}
 
-		// Token: 0x0603A98A RID: 240010 RVA: 0x00DF23FC File Offset: 0x00DF05FC
+		// Token: 0x0602F8D3 RID: 194771 RVA: 0x00D42980 File Offset: 0x00D40B80
 		public void UpdateRoleLevelData(int activityId, FlagChallengeRoleLevelInfo roleLevel)
 		{
 			this.GetFlagChallengeData(activityId).UpdateRoleLevelData(roleLevel);
 		}
 
-		// Token: 0x0603A98B RID: 240011 RVA: 0x00DF240B File Offset: 0x00DF060B
+		// Token: 0x0602F8D4 RID: 194772 RVA: 0x00D4298F File Offset: 0x00D40B8F
 		public bool CheckActivityTabRedoDotState(int activityId)
 		{
 			return this.HasCanReceiveTask(activityId) || this.HasNewUnlockLevel(activityId);
 		}
 
-		// Token: 0x0603A98C RID: 240012 RVA: 0x00DF2420 File Offset: 0x00DF0620
+		// Token: 0x0602F8D5 RID: 194773 RVA: 0x00D429A4 File Offset: 0x00D40BA4
 		public bool HasCanReceiveTask(int activityId)
 		{
 			FlagChallengeData flagChallengeData = this.GetFlagChallengeData(activityId);
 			return flagChallengeData != null && flagChallengeData.HasCanReceiveTask();
 		}
 
-		// Token: 0x0603A98D RID: 240013 RVA: 0x00DF2440 File Offset: 0x00DF0640
+		// Token: 0x0602F8D6 RID: 194774 RVA: 0x00D429C4 File Offset: 0x00D40BC4
 		public void SaveFormationInfo(int activityId, HashSet<int> roleIdSet)
 		{
 			FlagChallengeData flagChallengeData = this.GetFlagChallengeData(activityId);
@@ -122,14 +122,14 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			flagChallengeData.SaveFormationInfo(roleIdSet);
 		}
 
-		// Token: 0x0603A98E RID: 240014 RVA: 0x00DF2454 File Offset: 0x00DF0654
+		// Token: 0x0602F8D7 RID: 194775 RVA: 0x00D429D8 File Offset: 0x00D40BD8
 		public bool HasNewUnlockLevel(int activityId)
 		{
 			FlagChallengeData flagChallengeData = this.GetFlagChallengeData(activityId);
 			return flagChallengeData != null && flagChallengeData.HasLevelNewlyUnlocked();
 		}
 
-		// Token: 0x0603A98F RID: 240015 RVA: 0x00DF2474 File Offset: 0x00DF0674
+		// Token: 0x0602F8D8 RID: 194776 RVA: 0x00D429F8 File Offset: 0x00D40BF8
 		public EFlagChallengeLevelDiffType GetLevelDiffType(int activityId, int compareLevel, int? playerLevel = null)
 		{
 			int num = (playerLevel ?? this.GetFixedLevel(activityId)) - compareLevel;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return eflagChallengeLevelDiffType;
 		}
 
-		// Token: 0x0603A990 RID: 240016 RVA: 0x00DF2518 File Offset: 0x00DF0718
+		// Token: 0x0602F8D9 RID: 194777 RVA: 0x00D42A9C File Offset: 0x00D40C9C
 		[NullableContext(2)]
 		public int GetLevelRecommendStrongholdId(int activityId, int levelId, int[] preferAreaIds = null)
 		{
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return flagChallengeData.GetLevelStrongholdDataList(levelId)[0].Id;
 		}
 
-		// Token: 0x0603A991 RID: 240017 RVA: 0x00DF25C4 File Offset: 0x00DF07C4
+		// Token: 0x0602F8DA RID: 194778 RVA: 0x00D42B48 File Offset: 0x00D40D48
 		public int GetAreaRecommendStrongholdId(int activityId, int areaId)
 		{
 			List<FlagChallengeStrongholdData> areaStrongholdDataList = this.GetFlagChallengeData(activityId).GetAreaStrongholdDataList(areaId);
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return areaStrongholdDataList[0].Id;
 		}
 
-		// Token: 0x0603A992 RID: 240018 RVA: 0x00DF26FC File Offset: 0x00DF08FC
+		// Token: 0x0602F8DB RID: 194779 RVA: 0x00D42C80 File Offset: 0x00D40E80
 		public int? GetRecommendLevel(int activityId, bool fallbackToDefault = true)
 		{
 			List<FlagChallengeLevelData> levelDataList = this.GetFlagChallengeData(activityId).GetLevelDataList(false);
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return null;
 		}
 
-		// Token: 0x0603A993 RID: 240019 RVA: 0x00DF27A4 File Offset: 0x00DF09A4
+		// Token: 0x0602F8DC RID: 194780 RVA: 0x00D42D28 File Offset: 0x00D40F28
 		public int GetFixedLevel(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetFixedLevel();
 		}
 
-		// Token: 0x0603A994 RID: 240020 RVA: 0x00DF27C9 File Offset: 0x00DF09C9
+		// Token: 0x0602F8DD RID: 194781 RVA: 0x00D42D4D File Offset: 0x00D40F4D
 		public int GetFixedLevelExp(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetFixedLevelExp();
 		}
 
-		// Token: 0x0603A995 RID: 240021 RVA: 0x00DF27EE File Offset: 0x00DF09EE
+		// Token: 0x0602F8DE RID: 194782 RVA: 0x00D42D72 File Offset: 0x00D40F72
 		public int GetCalculatedLevel(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetFixedLevel();
 		}
 
-		// Token: 0x0603A996 RID: 240022 RVA: 0x00DF2813 File Offset: 0x00DF0A13
+		// Token: 0x0602F8DF RID: 194783 RVA: 0x00D42D97 File Offset: 0x00D40F97
 		public int GetCalculatedLevelExp(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetFixedLevelExp();
 		}
 
-		// Token: 0x0603A997 RID: 240023 RVA: 0x00DF2838 File Offset: 0x00DF0A38
+		// Token: 0x0602F8E0 RID: 194784 RVA: 0x00D42DBC File Offset: 0x00D40FBC
 		public int GetTempLevel(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetTempLevel();
 		}
 
-		// Token: 0x0603A998 RID: 240024 RVA: 0x00DF285D File Offset: 0x00DF0A5D
+		// Token: 0x0602F8E1 RID: 194785 RVA: 0x00D42DE1 File Offset: 0x00D40FE1
 		public int GetTempLevelExp(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetTempLevelExp();
 		}
 
-		// Token: 0x0603A999 RID: 240025 RVA: 0x00DF2882 File Offset: 0x00DF0A82
+		// Token: 0x0602F8E2 RID: 194786 RVA: 0x00D42E06 File Offset: 0x00D41006
 		public int GetTotalLevel(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetTotalLevel();
 		}
 
-		// Token: 0x0603A99A RID: 240026 RVA: 0x00DF28A7 File Offset: 0x00DF0AA7
+		// Token: 0x0602F8E3 RID: 194787 RVA: 0x00D42E2B File Offset: 0x00D4102B
 		public int GetTotalLevelExp(int activityId)
 		{
 			if (FlagChallengeBattleModel.Instance.IsInFlagChallengeDungeon)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return this.GetFlagChallengeData(activityId).GetTotalLevelExp();
 		}
 
-		// Token: 0x0603A99B RID: 240027 RVA: 0x00DF28CC File Offset: 0x00DF0ACC
+		// Token: 0x0602F8E4 RID: 194788 RVA: 0x00D42E50 File Offset: 0x00D41050
 		public int GetLevelExp(int activityId, int level)
 		{
 			Dictionary<int, int> dictionary;
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return roleLevelConfigByActivityIdAndLevel.Value.Experience;
 		}
 
-		// Token: 0x0603A99C RID: 240028 RVA: 0x00DF293C File Offset: 0x00DF0B3C
+		// Token: 0x0602F8E5 RID: 194789 RVA: 0x00D42EC0 File Offset: 0x00D410C0
 		public int GetMaxLevel(int activityId)
 		{
 			int num;
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return num;
 		}
 
-		// Token: 0x0603A99D RID: 240029 RVA: 0x00DF297C File Offset: 0x00DF0B7C
+		// Token: 0x0602F8E6 RID: 194790 RVA: 0x00D42F00 File Offset: 0x00D41100
 		public int GetMaxLevelExp(int activityId)
 		{
 			int experience;
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return experience;
 		}
 
-		// Token: 0x0603A99E RID: 240030 RVA: 0x00DF29CC File Offset: 0x00DF0BCC
+		// Token: 0x0602F8E7 RID: 194791 RVA: 0x00D42F50 File Offset: 0x00D41150
 		public int GetTargetLevelUpExp(int activityId, int? targetLevel = null)
 		{
 			int num = targetLevel ?? this.GetFixedLevel(activityId);
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return Math.Max(0, levelExp2 - levelExp);
 		}
 
-		// Token: 0x0603A99F RID: 240031 RVA: 0x00DF2A24 File Offset: 0x00DF0C24
+		// Token: 0x0602F8E8 RID: 194792 RVA: 0x00D42FA8 File Offset: 0x00D411A8
 		public int GetTargetLevelExp(int activityId, int? targetLevel = null, int? targetLevelExp = null)
 		{
 			int num = targetLevel ?? this.GetFixedLevel(activityId);
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return Math.Max(0, num2 - levelExp);
 		}
 
-		// Token: 0x0603A9A0 RID: 240032 RVA: 0x00DF2A9C File Offset: 0x00DF0C9C
+		// Token: 0x0602F8E9 RID: 194793 RVA: 0x00D43020 File Offset: 0x00D41220
 		public float GetTargetLevelExpProgress(int activityId, int? targetLevel = null, int? targetLevelExp = null)
 		{
 			int num = targetLevel ?? this.GetFixedLevel(activityId);
@@ -435,13 +435,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return 0f;
 		}
 
-		// Token: 0x0603A9A1 RID: 240033 RVA: 0x00DF2AFB File Offset: 0x00DF0CFB
+		// Token: 0x0602F8EA RID: 194794 RVA: 0x00D4307F File Offset: 0x00D4127F
 		public bool IsReachTargetLevel(int activityId, int targetLv)
 		{
 			return this.GetTotalLevel(activityId) >= targetLv;
 		}
 
-		// Token: 0x0603A9A2 RID: 240034 RVA: 0x00DF2B0C File Offset: 0x00DF0D0C
+		// Token: 0x0602F8EB RID: 194795 RVA: 0x00D43090 File Offset: 0x00D41290
 		public void UpdateTeleportData(IList<int> teleportIds)
 		{
 			foreach (int item in teleportIds)
@@ -450,13 +450,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A9A3 RID: 240035 RVA: 0x00DF2B5C File Offset: 0x00DF0D5C
+		// Token: 0x0602F8EC RID: 194796 RVA: 0x00D430E0 File Offset: 0x00D412E0
 		public bool IsTeleportUnlock(int teleportId)
 		{
 			return this.UnlockedTeleportId.Contains(teleportId);
 		}
 
-		// Token: 0x0603A9A4 RID: 240036 RVA: 0x00DF2B6C File Offset: 0x00DF0D6C
+		// Token: 0x0602F8ED RID: 194797 RVA: 0x00D430F0 File Offset: 0x00D412F0
 		public List<FlagChallengeBuffAddItemData> GetAllRoleAttrAddList(int activityId)
 		{
 			int totalLevel = this.GetTotalLevel(activityId);
@@ -514,7 +514,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return list2;
 		}
 
-		// Token: 0x0603A9A5 RID: 240037 RVA: 0x00DF2D94 File Offset: 0x00DF0F94
+		// Token: 0x0602F8EE RID: 194798 RVA: 0x00D43318 File Offset: 0x00D41518
 		public unsafe string GetAllRoleAttrAddDesc(int activityId)
 		{
 			IReadOnlyList<FlagChallengeRoleGrowth> roleGrowthConfigListByActivityId = FlagChallengeConfig.Instance.GetRoleGrowthConfigListByActivityId(activityId);
@@ -574,8 +574,8 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return StringUtils.Format(localTextNew, array);
 		}
 
-		// Token: 0x17008BF2 RID: 35826
-		// (get) Token: 0x0603A9A6 RID: 240038 RVA: 0x00DF2F67 File Offset: 0x00DF1167
+		// Token: 0x17005FC0 RID: 24512
+		// (get) Token: 0x0602F8EF RID: 194799 RVA: 0x00D434EB File Offset: 0x00D416EB
 		public static FlagChallengeModel Instance
 		{
 			get
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A9A7 RID: 240039 RVA: 0x00DF2F6E File Offset: 0x00DF116E
+		// Token: 0x0602F8F0 RID: 194800 RVA: 0x00D434F2 File Offset: 0x00D416F2
 		public static FlagChallengeModel GetOrCreateInstance()
 		{
 			if (FlagChallengeModel._Instance == null)
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return FlagChallengeModel._Instance;
 		}
 
-		// Token: 0x0603A9A8 RID: 240040 RVA: 0x00DF2F82 File Offset: 0x00DF1182
+		// Token: 0x0602F8F1 RID: 194801 RVA: 0x00D43506 File Offset: 0x00D41706
 		public static bool CreateInstance()
 		{
 			if (FlagChallengeModel._Instance != null)
@@ -605,39 +605,39 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return true;
 		}
 
-		// Token: 0x0603A9A9 RID: 240041 RVA: 0x00DF2F98 File Offset: 0x00DF1198
+		// Token: 0x0602F8F2 RID: 194802 RVA: 0x00D4351C File Offset: 0x00D4171C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603A9AA RID: 240042 RVA: 0x00DF2F9A File Offset: 0x00DF119A
+		// Token: 0x0602F8F3 RID: 194803 RVA: 0x00D4351E File Offset: 0x00D4171E
 		public static void ResetStaticDefaultValue()
 		{
 			FlagChallengeModel._Instance = null;
 		}
 
-		// Token: 0x0603A9AB RID: 240043 RVA: 0x00DF2FA2 File Offset: 0x00DF11A2
+		// Token: 0x0602F8F4 RID: 194804 RVA: 0x00D43526 File Offset: 0x00D41726
 		static FlagChallengeModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FlagChallengeModel.CreateStaticDefaultValue), new Action(FlagChallengeModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E873 RID: 125043
+		// Token: 0x0401931A RID: 103194
 		private readonly Dictionary<int, FlagChallengeData> FlagChallengeDataMap = new Dictionary<int, FlagChallengeData>();
 
-		// Token: 0x0401E874 RID: 125044
+		// Token: 0x0401931B RID: 103195
 		private readonly Dictionary<int, Dictionary<int, int>> LevelExpCache = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x0401E875 RID: 125045
+		// Token: 0x0401931C RID: 103196
 		private readonly Dictionary<int, int> MaxLevelCache = new Dictionary<int, int>();
 
-		// Token: 0x0401E876 RID: 125046
+		// Token: 0x0401931D RID: 103197
 		private readonly Dictionary<int, int> MaxLevelExpCache = new Dictionary<int, int>();
 
-		// Token: 0x0401E877 RID: 125047
+		// Token: 0x0401931E RID: 103198
 		private readonly HashSet<int> UnlockedTeleportId = new HashSet<int>();
 
-		// Token: 0x0401E878 RID: 125048
+		// Token: 0x0401931F RID: 103199
 		[Nullable(2)]
 		private static FlagChallengeModel _Instance;
 	}

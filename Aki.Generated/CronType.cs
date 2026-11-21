@@ -2,14 +2,14 @@
 
 namespace Aki.Config
 {
-	// Token: 0x020011B3 RID: 4531
+	// Token: 0x020012E9 RID: 4841
 	public enum CronType : sbyte
 	{
-		// Token: 0x04005302 RID: 21250
+		// Token: 0x04005945 RID: 22853
 		Daily = 1,
-		// Token: 0x04005303 RID: 21251
+		// Token: 0x04005946 RID: 22854
 		Weekly,
-		// Token: 0x04005304 RID: 21252
+		// Token: 0x04005947 RID: 22855
 		Monthly
 	}
 }

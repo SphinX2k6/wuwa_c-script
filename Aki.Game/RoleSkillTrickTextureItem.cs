@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028CC RID: 10444
+// Token: 0x02001E47 RID: 7751
 public class RoleSkillTrickTextureItem : UiPanelBase
 {
-	// Token: 0x0601590C RID: 88332 RVA: 0x00572230 File Offset: 0x00570430
+	// Token: 0x0601330C RID: 78604 RVA: 0x0059D0E8 File Offset: 0x0059B2E8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -22,7 +22,7 @@ public class RoleSkillTrickTextureItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601590D RID: 88333 RVA: 0x00572278 File Offset: 0x00570478
+	// Token: 0x0601330D RID: 78605 RVA: 0x0059D130 File Offset: 0x0059B330
 	[NullableContext(1)]
 	public UniTask SetTexture(string icon)
 	{
@@ -35,10 +35,10 @@ public class RoleSkillTrickTextureItem : UiPanelBase
 		return <SetTexture>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x02008EE1 RID: 36577
+	// Token: 0x02008129 RID: 33065
 	private enum EComponent
 	{
-		// Token: 0x0402E558 RID: 189784
+		// Token: 0x04029C53 RID: 171091
 		Texture
 	}
 }

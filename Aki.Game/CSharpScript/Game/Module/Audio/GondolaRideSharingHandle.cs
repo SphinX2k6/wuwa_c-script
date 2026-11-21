@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E9A RID: 24218
+	// Token: 0x02004E7F RID: 20095
 	internal class GondolaRideSharingHandle : GondolaPlotAudioHandle, IGondolaRideSharingHandle, IGondolaPlotAudioHandle
 	{
-		// Token: 0x17008EA3 RID: 36515
-		// (get) Token: 0x0603D9AE RID: 252334 RVA: 0x00EDF1E7 File Offset: 0x00EDD3E7
-		// (set) Token: 0x0603D9AF RID: 252335 RVA: 0x00EDF1EF File Offset: 0x00EDD3EF
+		// Token: 0x17006275 RID: 25205
+		// (get) Token: 0x0603293E RID: 207166 RVA: 0x00E30777 File Offset: 0x00E2E977
+		// (set) Token: 0x0603293F RID: 207167 RVA: 0x00E3077F File Offset: 0x00E2E97F
 		public int RoleCreatureId { get; set; }
 	}
 }

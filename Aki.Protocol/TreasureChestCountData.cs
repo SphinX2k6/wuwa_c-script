@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001462 RID: 5218
+	// Token: 0x020014D5 RID: 5333
 	public sealed class TreasureChestCountData : IMessage<TreasureChestCountData>, IMessage, IEquatable<TreasureChestCountData>, IDeepCloneable<TreasureChestCountData>, IBufferMessage
 	{
-		// Token: 0x0601BA00 RID: 113152 RVA: 0x003FF6B7 File Offset: 0x003FD8B7
+		// Token: 0x0601C48B RID: 115851 RVA: 0x0041A987 File Offset: 0x00418B87
 		[NullableContext(1)]
 		public static TreasureChestCountData Create()
 		{
 			return new TreasureChestCountData();
 		}
 
-		// Token: 0x17005D22 RID: 23842
-		// (get) Token: 0x0601BA01 RID: 113153 RVA: 0x003FF6BE File Offset: 0x003FD8BE
+		// Token: 0x17005FB7 RID: 24503
+		// (get) Token: 0x0601C48C RID: 115852 RVA: 0x0041A98E File Offset: 0x00418B8E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<TreasureChestCountData> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D23 RID: 23843
-		// (get) Token: 0x0601BA02 RID: 113154 RVA: 0x003FF6C5 File Offset: 0x003FD8C5
+		// Token: 0x17005FB8 RID: 24504
+		// (get) Token: 0x0601C48D RID: 115853 RVA: 0x0041A995 File Offset: 0x00418B95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D24 RID: 23844
-		// (get) Token: 0x0601BA03 RID: 113155 RVA: 0x003FF6C8 File Offset: 0x003FD8C8
+		// Token: 0x17005FB9 RID: 24505
+		// (get) Token: 0x0601C48E RID: 115854 RVA: 0x0041A998 File Offset: 0x00418B98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA04 RID: 113156 RVA: 0x003FF6CF File Offset: 0x003FD8CF
+		// Token: 0x0601C48F RID: 115855 RVA: 0x0041A99F File Offset: 0x00418B9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountData()
 		{
 		}
 
-		// Token: 0x0601BA05 RID: 113157 RVA: 0x003FF6D8 File Offset: 0x003FD8D8
+		// Token: 0x0601C490 RID: 115856 RVA: 0x0041A9A8 File Offset: 0x00418BA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountData(TreasureChestCountData other) : this()
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601BA06 RID: 113158 RVA: 0x003FF738 File Offset: 0x003FD938
+		// Token: 0x0601C491 RID: 115857 RVA: 0x0041AA08 File Offset: 0x00418C08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountData Clone()
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			return new TreasureChestCountData(this);
 		}
 
-		// Token: 0x17005D25 RID: 23845
-		// (get) Token: 0x0601BA07 RID: 113159 RVA: 0x003FF740 File Offset: 0x003FD940
-		// (set) Token: 0x0601BA08 RID: 113160 RVA: 0x003FF748 File Offset: 0x003FD948
+		// Token: 0x17005FBA RID: 24506
+		// (get) Token: 0x0601C492 RID: 115858 RVA: 0x0041AA10 File Offset: 0x00418C10
+		// (set) Token: 0x0601C493 RID: 115859 RVA: 0x0041AA18 File Offset: 0x00418C18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountTargetType TargetType
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D26 RID: 23846
-		// (get) Token: 0x0601BA09 RID: 113161 RVA: 0x003FF751 File Offset: 0x003FD951
-		// (set) Token: 0x0601BA0A RID: 113162 RVA: 0x003FF759 File Offset: 0x003FD959
+		// Token: 0x17005FBB RID: 24507
+		// (get) Token: 0x0601C494 RID: 115860 RVA: 0x0041AA21 File Offset: 0x00418C21
+		// (set) Token: 0x0601C495 RID: 115861 RVA: 0x0041AA29 File Offset: 0x00418C29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TargetId
@@ -115,9 +115,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D27 RID: 23847
-		// (get) Token: 0x0601BA0B RID: 113163 RVA: 0x003FF762 File Offset: 0x003FD962
-		// (set) Token: 0x0601BA0C RID: 113164 RVA: 0x003FF76A File Offset: 0x003FD96A
+		// Token: 0x17005FBC RID: 24508
+		// (get) Token: 0x0601C496 RID: 115862 RVA: 0x0041AA32 File Offset: 0x00418C32
+		// (set) Token: 0x0601C497 RID: 115863 RVA: 0x0041AA3A File Offset: 0x00418C3A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestStatType StatType
@@ -132,9 +132,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D28 RID: 23848
-		// (get) Token: 0x0601BA0D RID: 113165 RVA: 0x003FF773 File Offset: 0x003FD973
-		// (set) Token: 0x0601BA0E RID: 113166 RVA: 0x003FF77B File Offset: 0x003FD97B
+		// Token: 0x17005FBD RID: 24509
+		// (get) Token: 0x0601C498 RID: 115864 RVA: 0x0041AA43 File Offset: 0x00418C43
+		// (set) Token: 0x0601C499 RID: 115865 RVA: 0x0041AA4B File Offset: 0x00418C4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurrentCount
@@ -149,9 +149,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D29 RID: 23849
-		// (get) Token: 0x0601BA0F RID: 113167 RVA: 0x003FF784 File Offset: 0x003FD984
-		// (set) Token: 0x0601BA10 RID: 113168 RVA: 0x003FF78C File Offset: 0x003FD98C
+		// Token: 0x17005FBE RID: 24510
+		// (get) Token: 0x0601C49A RID: 115866 RVA: 0x0041AA54 File Offset: 0x00418C54
+		// (set) Token: 0x0601C49B RID: 115867 RVA: 0x0041AA5C File Offset: 0x00418C5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalCount
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA11 RID: 113169 RVA: 0x003FF795 File Offset: 0x003FD995
+		// Token: 0x0601C49C RID: 115868 RVA: 0x0041AA65 File Offset: 0x00418C65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TreasureChestCountData);
 		}
 
-		// Token: 0x0601BA12 RID: 113170 RVA: 0x003FF7A4 File Offset: 0x003FD9A4
+		// Token: 0x0601C49D RID: 115869 RVA: 0x0041AA74 File Offset: 0x00418C74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TreasureChestCountData other)
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TargetType == other.TargetType && this.TargetId == other.TargetId && this.StatType == other.StatType && this.CurrentCount == other.CurrentCount && this.TotalCount == other.TotalCount && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601BA13 RID: 113171 RVA: 0x003FF820 File Offset: 0x003FDA20
+		// Token: 0x0601C49E RID: 115870 RVA: 0x0041AAF0 File Offset: 0x00418CF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BA14 RID: 113172 RVA: 0x003FF8CF File Offset: 0x003FDACF
+		// Token: 0x0601C49F RID: 115871 RVA: 0x0041AB9F File Offset: 0x00418D9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601BA15 RID: 113173 RVA: 0x003FF8DC File Offset: 0x003FDADC
+		// Token: 0x0601C4A0 RID: 115872 RVA: 0x0041ABAC File Offset: 0x00418DAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -231,7 +231,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601BA16 RID: 113174 RVA: 0x003FF8E8 File Offset: 0x003FDAE8
+		// Token: 0x0601C4A1 RID: 115873 RVA: 0x0041ABB8 File Offset: 0x00418DB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -267,7 +267,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA17 RID: 113175 RVA: 0x003FF994 File Offset: 0x003FDB94
+		// Token: 0x0601C4A2 RID: 115874 RVA: 0x0041AC64 File Offset: 0x00418E64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -300,7 +300,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BA18 RID: 113176 RVA: 0x003FFA34 File Offset: 0x003FDC34
+		// Token: 0x0601C4A3 RID: 115875 RVA: 0x0041AD04 File Offset: 0x00418F04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TreasureChestCountData other)
@@ -332,7 +332,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601BA19 RID: 113177 RVA: 0x003FFAC0 File Offset: 0x003FDCC0
+		// Token: 0x0601C4A4 RID: 115876 RVA: 0x0041AD90 File Offset: 0x00418F90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -340,7 +340,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601BA1A RID: 113178 RVA: 0x003FFACC File Offset: 0x003FDCCC
+		// Token: 0x0601C4A5 RID: 115877 RVA: 0x0041AD9C File Offset: 0x00418F9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -387,40 +387,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009F28 RID: 40744
+		// Token: 0x0400A36F RID: 41839
 		private static readonly MessageParser<TreasureChestCountData> _parser = new MessageParser<TreasureChestCountData>(() => new TreasureChestCountData());
 
-		// Token: 0x04009F29 RID: 40745
+		// Token: 0x0400A370 RID: 41840
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009F2A RID: 40746
+		// Token: 0x0400A371 RID: 41841
 		public const int TargetTypeFieldNumber = 1;
 
-		// Token: 0x04009F2B RID: 40747
+		// Token: 0x0400A372 RID: 41842
 		private TreasureChestCountTargetType targetType_;
 
-		// Token: 0x04009F2C RID: 40748
+		// Token: 0x0400A373 RID: 41843
 		public const int TargetIdFieldNumber = 2;
 
-		// Token: 0x04009F2D RID: 40749
+		// Token: 0x0400A374 RID: 41844
 		private int targetId_;
 
-		// Token: 0x04009F2E RID: 40750
+		// Token: 0x0400A375 RID: 41845
 		public const int StatTypeFieldNumber = 3;
 
-		// Token: 0x04009F2F RID: 40751
+		// Token: 0x0400A376 RID: 41846
 		private TreasureChestStatType statType_;
 
-		// Token: 0x04009F30 RID: 40752
+		// Token: 0x0400A377 RID: 41847
 		public const int CurrentCountFieldNumber = 4;
 
-		// Token: 0x04009F31 RID: 40753
+		// Token: 0x0400A378 RID: 41848
 		private int currentCount_;
 
-		// Token: 0x04009F32 RID: 40754
+		// Token: 0x0400A379 RID: 41849
 		public const int TotalCountFieldNumber = 5;
 
-		// Token: 0x04009F33 RID: 40755
+		// Token: 0x0400A37A RID: 41850
 		private int totalCount_;
 	}
 }

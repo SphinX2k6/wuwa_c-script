@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002919 RID: 10521
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002BF5 RID: 11253
 	public class IContinualGamepadShake : IGamepadShakeConfig
 	{
-		// Token: 0x0600E981 RID: 59777 RVA: 0x00223AA3 File Offset: 0x00221CA3
-		[NullableContext(1)]
+		// Token: 0x0600F7D3 RID: 63443 RVA: 0x00240DFB File Offset: 0x0023EFFB
 		public static IContinualGamepadShake Create(IContinualGamepadShake? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004911 RID: 18705
-		// (get) Token: 0x0600E982 RID: 59778 RVA: 0x00223AC2 File Offset: 0x00221CC2
+		// Token: 0x17004C97 RID: 19607
+		// (get) Token: 0x0600F7D4 RID: 63444 RVA: 0x00240E1A File Offset: 0x0023F01A
 		public override EGamepadShakeType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004912 RID: 18706
-		// (get) Token: 0x0600E983 RID: 59779 RVA: 0x00223AD0 File Offset: 0x00221CD0
+		// Token: 0x17004C98 RID: 19608
+		// (get) Token: 0x0600F7D5 RID: 63445 RVA: 0x00240E28 File Offset: 0x0023F028
 		public virtual bool? IsIgnoreTimeDilation
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004913 RID: 18707
-		// (get) Token: 0x0600E984 RID: 59780 RVA: 0x00223B06 File Offset: 0x00221D06
+		// Token: 0x17004C99 RID: 19609
+		// (get) Token: 0x0600F7D6 RID: 63446 RVA: 0x00240E5E File Offset: 0x0023F05E
 		public virtual float Duration
 		{
 			get
@@ -57,8 +54,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004914 RID: 18708
-		// (get) Token: 0x0600E985 RID: 59781 RVA: 0x00223B13 File Offset: 0x00221D13
+		// Token: 0x17004C9A RID: 19610
+		// (get) Token: 0x0600F7D7 RID: 63447 RVA: 0x00240E6B File Offset: 0x0023F06B
 		public virtual bool IsLoop
 		{
 			get
@@ -67,17 +64,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004915 RID: 18709
-		// (get) Token: 0x0600E986 RID: 59782 RVA: 0x00223B20 File Offset: 0x00221D20
+		// Token: 0x17004C9B RID: 19611
+		// (get) Token: 0x0600F7D8 RID: 63448 RVA: 0x00240E78 File Offset: 0x0023F078
+		[Nullable(2)]
 		public virtual string GamepadShakeTag
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.GamepadShakeTag;
 			}
 		}
 
-		// Token: 0x040080DF RID: 32991
+		// Token: 0x040087AD RID: 34733
 		private IContinualGamepadShake Instance;
 	}
 }

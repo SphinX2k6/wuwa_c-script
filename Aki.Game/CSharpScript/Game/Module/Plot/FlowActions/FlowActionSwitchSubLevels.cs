@@ -8,12 +8,12 @@ using CSharpScript.Game.World.Controller;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050DB RID: 20699
+	// Token: 0x020040AB RID: 16555
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowActionSwitchSubLevels : FlowActionServerAction
 	{
-		// Token: 0x06034F63 RID: 216931 RVA: 0x00C8BBC4 File Offset: 0x00C89DC4
+		// Token: 0x06029E5C RID: 171612 RVA: 0x00BD8EAC File Offset: 0x00BD70AC
 		protected override void OnExecute()
 		{
 			SwitchSubLevels switchSubLevels = this.ActionInfo.Params as SwitchSubLevels;
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.PreloadSubLevel(switchSubLevels as IPreloadSubLevels);
 		}
 
-		// Token: 0x06034F64 RID: 216932 RVA: 0x00C8BC23 File Offset: 0x00C89E23
+		// Token: 0x06029E5D RID: 171613 RVA: 0x00BD8F0B File Offset: 0x00BD710B
 		private void PreloadSubLevel(IPreloadSubLevels parameters)
 		{
 			SubLevelController.Instance.PreloadSubLevel(parameters.PreloadLevels);
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F65 RID: 216933 RVA: 0x00C8BC40 File Offset: 0x00C89E40
+		// Token: 0x06029E5E RID: 171614 RVA: 0x00BD8F28 File Offset: 0x00BD7128
 		private void ChangeSubLevel(ISwitchSubLevelsDirectly parameters)
 		{
 			Vector location = null;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F66 RID: 216934 RVA: 0x00C8BDB8 File Offset: 0x00C89FB8
+		// Token: 0x06029E5F RID: 171615 RVA: 0x00BD90A0 File Offset: 0x00BD72A0
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

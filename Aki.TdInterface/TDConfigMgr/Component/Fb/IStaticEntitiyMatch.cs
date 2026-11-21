@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ACA RID: 2762
+	// Token: 0x02000B94 RID: 2964
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IStaticEntitiyMatch
 	{
-		// Token: 0x06003F9A RID: 16282 RVA: 0x000A2852 File Offset: 0x000A0A52
-		[NullableContext(1)]
+		// Token: 0x060043C4 RID: 17348 RVA: 0x000ABE46 File Offset: 0x000AA046
+		[NullableContext(0)]
 		public static IStaticEntitiyMatch Create(IStaticEntitiyMatch? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FC3 RID: 4035
-		// (get) Token: 0x06003F9B RID: 16283 RVA: 0x000A2871 File Offset: 0x000A0A71
+		// Token: 0x17001097 RID: 4247
+		// (get) Token: 0x060043C5 RID: 17349 RVA: 0x000ABE65 File Offset: 0x000AA065
 		public virtual IEntityCategory Category
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FC4 RID: 4036
-		// (get) Token: 0x06003F9C RID: 16284 RVA: 0x000A28A8 File Offset: 0x000A0AA8
+		// Token: 0x17001098 RID: 4248
+		// (get) Token: 0x060043C6 RID: 17350 RVA: 0x000ABE9C File Offset: 0x000AA09C
 		public virtual EEntityCategory? CategoryType
 		{
 			get
@@ -53,13 +53,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400235D RID: 9053
+		// Token: 0x04002579 RID: 9593
 		private IStaticEntitiyMatch Instance;
 
-		// Token: 0x0400235E RID: 9054
+		// Token: 0x0400257A RID: 9594
 		private IEntityCategory _CategoryCache;
 
-		// Token: 0x0400235F RID: 9055
+		// Token: 0x0400257B RID: 9595
 		private bool _CategoryInited;
 	}
 }

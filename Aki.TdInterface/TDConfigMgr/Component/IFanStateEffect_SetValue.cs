@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200037B RID: 891
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003C4 RID: 964
 	public class IFanStateEffect_SetValue
 	{
-		// Token: 0x04000E73 RID: 3699
+		// Token: 0x04000F6A RID: 3946
 		public string EntityState;
 
-		// Token: 0x04000E74 RID: 3700
+		// Token: 0x04000F6B RID: 3947
 		public IFanEffectConfig EffectConfig;
 	}
 }

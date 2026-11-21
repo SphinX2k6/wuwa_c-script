@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200493E RID: 18750
+	// Token: 0x02004DF4 RID: 19956
 	public enum EInfrastructureStage : byte
 	{
-		// Token: 0x0400D0BE RID: 53438
+		// Token: 0x0400DB82 RID: 56194
 		None,
-		// Token: 0x0400D0BF RID: 53439
+		// Token: 0x0400DB83 RID: 56195
 		StageOne,
-		// Token: 0x0400D0C0 RID: 53440
+		// Token: 0x0400DB84 RID: 56196
 		StageTwo,
-		// Token: 0x0400D0C1 RID: 53441
+		// Token: 0x0400DB85 RID: 56197
 		StageThree,
-		// Token: 0x0400D0C2 RID: 53442
+		// Token: 0x0400DB86 RID: 56198
 		StageFour
 	}
 }

@@ -8,13 +8,13 @@ namespace Aki.Config
 	// Token: 0x02000032 RID: 50
 	public class ConfigAccessPathById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600012C RID: 300 RVA: 0x00060628 File Offset: 0x0005E828
+		// Token: 0x0600012C RID: 300 RVA: 0x00063EC8 File Offset: 0x000620C8
 		static ConfigAccessPathById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAccessPathById.CreateStaticDefaultValue), new Action(ConfigAccessPathById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600012D RID: 301 RVA: 0x00060648 File Offset: 0x0005E848
+		// Token: 0x0600012D RID: 301 RVA: 0x00063EE8 File Offset: 0x000620E8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAccessPathById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600012E RID: 302 RVA: 0x000606C7 File Offset: 0x0005E8C7
+		// Token: 0x0600012E RID: 302 RVA: 0x00063F67 File Offset: 0x00062167
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAccessPathById.LogPair = null;
 			ConfigAccessPathById.HandleId = 0;
 		}
 
-		// Token: 0x0600012F RID: 303 RVA: 0x000606D5 File Offset: 0x0005E8D5
+		// Token: 0x0600012F RID: 303 RVA: 0x00063F75 File Offset: 0x00062175
 		public static void Init()
 		{
 			ConfigAccessPathById.HandleId = ConfigCommon.InitDataStatement(ConfigAccessPathById.HandleId, "db_accesspath.db", "select BinData from `AccessPath` where Id=?");
 		}
 
-		// Token: 0x06000130 RID: 304 RVA: 0x000606F0 File Offset: 0x0005E8F0
+		// Token: 0x06000130 RID: 304 RVA: 0x00063F90 File Offset: 0x00062190
 		public static AccessPath? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAccessPathById.HandleId, ConfigAccessPathById.LogPair))

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001855 RID: 6229
+	// Token: 0x020019E0 RID: 6624
 	public class ICameraTransition_SetValue
 	{
-		// Token: 0x0400547F RID: 21631
+		// Token: 0x040058CB RID: 22731
 		public ELevelSequenceTransition Type;
 
-		// Token: 0x04005480 RID: 21632
+		// Token: 0x040058CC RID: 22732
 		public float? Duration;
 	}
 }

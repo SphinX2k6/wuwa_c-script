@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 {
-	// Token: 0x02005AEC RID: 23276
+	// Token: 0x02004ACD RID: 19149
 	internal class DangoGetDetailPanel : UiPanelBase
 	{
-		// Token: 0x0603AEC7 RID: 241351 RVA: 0x00E0C510 File Offset: 0x00E0A710
+		// Token: 0x0602FE39 RID: 196153 RVA: 0x00D5D1E8 File Offset: 0x00D5B3E8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			};
 		}
 
-		// Token: 0x0603AEC8 RID: 241352 RVA: 0x00E0C5E5 File Offset: 0x00E0A7E5
+		// Token: 0x0602FE3A RID: 196154 RVA: 0x00D5D2BD File Offset: 0x00D5B4BD
 		public void OnClickBtnConfirm()
 		{
 			Action onClickCallback = this.OnClickCallback;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			onClickCallback();
 		}
 
-		// Token: 0x0603AEC9 RID: 241353 RVA: 0x00E0C5F8 File Offset: 0x00E0A7F8
+		// Token: 0x0602FE3B RID: 196155 RVA: 0x00D5D2D0 File Offset: 0x00D5B4D0
 		[NullableContext(1)]
 		public void RefreshView(DangoAbyssDefine.IDangoUnlockData data)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Dango.DangoAbyssGetDangoView
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(6), "AbyssDangoLV", new <>z__ReadOnlySingleElementList<object>(data.DangoLevel));
 		}
 
-		// Token: 0x0401EC11 RID: 125969
+		// Token: 0x040196CD RID: 104141
 		[Nullable(2)]
 		public Action OnClickCallback;
 	}

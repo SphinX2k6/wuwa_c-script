@@ -4,19 +4,19 @@ using Aki.Config;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BE9 RID: 7145
+// Token: 0x020010A8 RID: 4264
 [NullableContext(2)]
 [Nullable(0)]
 public class BattleTeamDungeonContext
 {
-	// Token: 0x0600D4C1 RID: 54465 RVA: 0x0030F7B9 File Offset: 0x0030D9B9
+	// Token: 0x0600A8D3 RID: 43219 RVA: 0x0031A92D File Offset: 0x00318B2D
 	public void SetInstanceDungeonId(int? instanceDungeonId)
 	{
 		this.InstanceDungeonIdInternal = instanceDungeonId;
 	}
 
-	// Token: 0x1700116F RID: 4463
-	// (get) Token: 0x0600D4C2 RID: 54466 RVA: 0x0030F7C2 File Offset: 0x0030D9C2
+	// Token: 0x17001194 RID: 4500
+	// (get) Token: 0x0600A8D4 RID: 43220 RVA: 0x0031A936 File Offset: 0x00318B36
 	public int? InstanceDungeonId
 	{
 		get
@@ -25,14 +25,14 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x0600D4C3 RID: 54467 RVA: 0x0030F7CA File Offset: 0x0030D9CA
+	// Token: 0x0600A8D5 RID: 43221 RVA: 0x0031A93E File Offset: 0x00318B3E
 	public void SetMultiEntry(bool value)
 	{
 		this.MultiEntryFlag = value;
 	}
 
-	// Token: 0x17001170 RID: 4464
-	// (get) Token: 0x0600D4C4 RID: 54468 RVA: 0x0030F7D3 File Offset: 0x0030D9D3
+	// Token: 0x17001195 RID: 4501
+	// (get) Token: 0x0600A8D6 RID: 43222 RVA: 0x0031A947 File Offset: 0x00318B47
 	public bool IsMultiEntry
 	{
 		get
@@ -41,7 +41,7 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x0600D4C5 RID: 54469 RVA: 0x0030F7DC File Offset: 0x0030D9DC
+	// Token: 0x0600A8D7 RID: 43223 RVA: 0x0031A950 File Offset: 0x00318B50
 	public InstanceDungeon? GetDungeonConfig()
 	{
 		if (this.InstanceDungeonIdInternal == null)
@@ -51,7 +51,7 @@ public class BattleTeamDungeonContext
 		return InstanceDungeonConfig.Instance.GetConfig(this.InstanceDungeonIdInternal.Value);
 	}
 
-	// Token: 0x0600D4C6 RID: 54470 RVA: 0x0030F818 File Offset: 0x0030DA18
+	// Token: 0x0600A8D8 RID: 43224 RVA: 0x0031A98C File Offset: 0x00318B8C
 	public FightFormation? GetFightFormation()
 	{
 		InstanceDungeon? dungeonConfig = this.GetDungeonConfig();
@@ -63,8 +63,8 @@ public class BattleTeamDungeonContext
 		return FormationConfig.Instance.GetFightFormationConfig(num.Value);
 	}
 
-	// Token: 0x17001171 RID: 4465
-	// (get) Token: 0x0600D4C7 RID: 54471 RVA: 0x0030F884 File Offset: 0x0030DA84
+	// Token: 0x17001196 RID: 4502
+	// (get) Token: 0x0600A8D9 RID: 43225 RVA: 0x0031A9F8 File Offset: 0x00318BF8
 	public bool IsMultiInstanceDungeon
 	{
 		get
@@ -78,7 +78,7 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x0600D4C8 RID: 54472 RVA: 0x0030F8C4 File Offset: 0x0030DAC4
+	// Token: 0x0600A8DA RID: 43226 RVA: 0x0031AA38 File Offset: 0x00318C38
 	public bool IsMatchingTeamLackConfirmBoxCanEnterInstance()
 	{
 		if (this.InstanceDungeonIdInternal == null)
@@ -89,8 +89,8 @@ public class BattleTeamDungeonContext
 		return ((instance != null) ? new int?(instance.GetEntranceIdByInstanceId(this.InstanceDungeonIdInternal.Value)) : null).GetValueOrDefault() != 9000;
 	}
 
-	// Token: 0x17001172 RID: 4466
-	// (get) Token: 0x0600D4C9 RID: 54473 RVA: 0x0030F91B File Offset: 0x0030DB1B
+	// Token: 0x17001197 RID: 4503
+	// (get) Token: 0x0600A8DB RID: 43227 RVA: 0x0031AA8F File Offset: 0x00318C8F
 	public bool HasAnyLimit
 	{
 		get
@@ -99,8 +99,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001173 RID: 4467
-	// (get) Token: 0x0600D4CA RID: 54474 RVA: 0x0030F940 File Offset: 0x0030DB40
+	// Token: 0x17001198 RID: 4504
+	// (get) Token: 0x0600A8DC RID: 43228 RVA: 0x0031AAB4 File Offset: 0x00318CB4
 	public bool HasLimitRole
 	{
 		get
@@ -110,8 +110,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001174 RID: 4468
-	// (get) Token: 0x0600D4CB RID: 54475 RVA: 0x0030F960 File Offset: 0x0030DB60
+	// Token: 0x17001199 RID: 4505
+	// (get) Token: 0x0600A8DD RID: 43229 RVA: 0x0031AAD4 File Offset: 0x00318CD4
 	public bool HasLimitCount
 	{
 		get
@@ -126,8 +126,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001175 RID: 4469
-	// (get) Token: 0x0600D4CC RID: 54476 RVA: 0x0030F99C File Offset: 0x0030DB9C
+	// Token: 0x1700119A RID: 4506
+	// (get) Token: 0x0600A8DE RID: 43230 RVA: 0x0031AB10 File Offset: 0x00318D10
 	public bool HasLimitElement
 	{
 		get
@@ -137,8 +137,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001176 RID: 4470
-	// (get) Token: 0x0600D4CD RID: 54477 RVA: 0x0030F9CE File Offset: 0x0030DBCE
+	// Token: 0x1700119B RID: 4507
+	// (get) Token: 0x0600A8DF RID: 43231 RVA: 0x0031AB42 File Offset: 0x00318D42
 	public bool HasLimitExtra
 	{
 		get
@@ -147,8 +147,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001177 RID: 4471
-	// (get) Token: 0x0600D4CE RID: 54478 RVA: 0x0030F9D8 File Offset: 0x0030DBD8
+	// Token: 0x1700119C RID: 4508
+	// (get) Token: 0x0600A8E0 RID: 43232 RVA: 0x0031AB4C File Offset: 0x00318D4C
 	public bool IsMowingInstance
 	{
 		get
@@ -158,8 +158,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001178 RID: 4472
-	// (get) Token: 0x0600D4CF RID: 54479 RVA: 0x0030FA0C File Offset: 0x0030DC0C
+	// Token: 0x1700119D RID: 4509
+	// (get) Token: 0x0600A8E1 RID: 43233 RVA: 0x0031AB80 File Offset: 0x00318D80
 	public int[] CurrentLimitRoleIdList
 	{
 		get
@@ -173,8 +173,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x17001179 RID: 4473
-	// (get) Token: 0x0600D4D0 RID: 54480 RVA: 0x0030FA3C File Offset: 0x0030DC3C
+	// Token: 0x1700119E RID: 4510
+	// (get) Token: 0x0600A8E2 RID: 43234 RVA: 0x0031ABB0 File Offset: 0x00318DB0
 	public int[] LimitRoleCountList
 	{
 		get
@@ -192,8 +192,8 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x1700117A RID: 4474
-	// (get) Token: 0x0600D4D1 RID: 54481 RVA: 0x0030FA80 File Offset: 0x0030DC80
+	// Token: 0x1700119F RID: 4511
+	// (get) Token: 0x0600A8E3 RID: 43235 RVA: 0x0031ABF4 File Offset: 0x00318DF4
 	public int MaxLimitRoleCount
 	{
 		get
@@ -207,14 +207,14 @@ public class BattleTeamDungeonContext
 		}
 	}
 
-	// Token: 0x0600D4D2 RID: 54482 RVA: 0x0030FAA0 File Offset: 0x0030DCA0
+	// Token: 0x0600A8E4 RID: 43236 RVA: 0x0031AC14 File Offset: 0x00318E14
 	public bool IsInLimitRoleCount(int roleCount)
 	{
 		int[] limitRoleCountList = this.LimitRoleCountList;
 		return limitRoleCountList == null || Array.IndexOf<int>(limitRoleCountList, roleCount) != -1;
 	}
 
-	// Token: 0x0600D4D3 RID: 54483 RVA: 0x0030FAC8 File Offset: 0x0030DCC8
+	// Token: 0x0600A8E5 RID: 43237 RVA: 0x0031AC3C File Offset: 0x00318E3C
 	public bool IsInLimitRole(int roleConfigId)
 	{
 		FightFormation? fightFormation;
@@ -222,7 +222,7 @@ public class BattleTeamDungeonContext
 		return array == null || array.Length == 0 || Array.IndexOf<int>(array, roleConfigId) != -1;
 	}
 
-	// Token: 0x0600D4D4 RID: 54484 RVA: 0x0030FB10 File Offset: 0x0030DD10
+	// Token: 0x0600A8E6 RID: 43238 RVA: 0x0031AC84 File Offset: 0x00318E84
 	public bool IsInLimitElement(int roleConfigId)
 	{
 		FightFormation? fightFormation;
@@ -235,18 +235,18 @@ public class BattleTeamDungeonContext
 		return roleConfig != null && Array.IndexOf<int>(array, roleConfig.Value.ElementId) != -1;
 	}
 
-	// Token: 0x0600D4D5 RID: 54485 RVA: 0x0030FB7C File Offset: 0x0030DD7C
+	// Token: 0x0600A8E7 RID: 43239 RVA: 0x0031ACF0 File Offset: 0x00318EF0
 	public bool CanAddRoleToEditTeam(int configId)
 	{
 		return RoleUtils.IsTrialRole(configId) || (this.IsInLimitRole(configId) && this.IsInLimitElement(configId));
 	}
 
-	// Token: 0x0400617C RID: 24956
+	// Token: 0x0400624B RID: 25163
 	private const int LIMIT_COUNT_FULL_LENGTH = 3;
 
-	// Token: 0x0400617D RID: 24957
+	// Token: 0x0400624C RID: 25164
 	private int? InstanceDungeonIdInternal;
 
-	// Token: 0x0400617E RID: 24958
+	// Token: 0x0400624D RID: 25165
 	private bool MultiEntryFlag;
 }

@@ -2,34 +2,34 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C6A RID: 15466
+	// Token: 0x02004079 RID: 16505
 	public enum ITriggerShape_Union : byte
 	{
-		// Token: 0x0400B291 RID: 45713
+		// Token: 0x0400BC21 RID: 48161
 		NONE,
-		// Token: 0x0400B292 RID: 45714
+		// Token: 0x0400BC22 RID: 48162
 		ITriggerShape,
-		// Token: 0x0400B293 RID: 45715
+		// Token: 0x0400BC23 RID: 48163
 		IBoxTriggerShape,
-		// Token: 0x0400B294 RID: 45716
+		// Token: 0x0400BC24 RID: 48164
 		ISphereTriggerShape,
-		// Token: 0x0400B295 RID: 45717
+		// Token: 0x0400BC25 RID: 48165
 		IHollowSphereTriggerShape,
-		// Token: 0x0400B296 RID: 45718
+		// Token: 0x0400BC26 RID: 48166
 		ICylinderTriggerShape,
-		// Token: 0x0400B297 RID: 45719
+		// Token: 0x0400BC27 RID: 48167
 		IHollowCylinderTriggerShape,
-		// Token: 0x0400B298 RID: 45720
+		// Token: 0x0400BC28 RID: 48168
 		IConeTriggerShape,
-		// Token: 0x0400B299 RID: 45721
+		// Token: 0x0400BC29 RID: 48169
 		IVolumeTriggerShape,
-		// Token: 0x0400B29A RID: 45722
+		// Token: 0x0400BC2A RID: 48170
 		IActorRefVolume,
-		// Token: 0x0400B29B RID: 45723
+		// Token: 0x0400BC2B RID: 48171
 		IActorCollisionTriggerShape,
-		// Token: 0x0400B29C RID: 45724
+		// Token: 0x0400BC2C RID: 48172
 		ICombinationTriggerShape,
-		// Token: 0x0400B29D RID: 45725
+		// Token: 0x0400BC2D RID: 48173
 		ISpotlightTriggerShape
 	}
 }

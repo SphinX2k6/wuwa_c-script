@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Advice;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016D9 RID: 5849
+// Token: 0x02000B91 RID: 2961
 internal class AdviceSelectMotionContent : UiPanelBase
 {
-	// Token: 0x0600A781 RID: 42881 RVA: 0x002595BC File Offset: 0x002577BC
+	// Token: 0x06007B61 RID: 31585 RVA: 0x002639C4 File Offset: 0x00261BC4
 	[NullableContext(1)]
 	public AdviceSelectMotionContent(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A782 RID: 42882 RVA: 0x002595D4 File Offset: 0x002577D4
+	// Token: 0x06007B62 RID: 31586 RVA: 0x002639DC File Offset: 0x00261BDC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A783 RID: 42883 RVA: 0x00259654 File Offset: 0x00257854
+	// Token: 0x06007B63 RID: 31587 RVA: 0x00263A5C File Offset: 0x00261C5C
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnClickAdviceMotion, new Action(this.OnClickMotion));
@@ -43,7 +43,7 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A784 RID: 42884 RVA: 0x002596AC File Offset: 0x002578AC
+	// Token: 0x06007B64 RID: 31588 RVA: 0x00263AB4 File Offset: 0x00261CB4
 	private bool CanClickLikeToggle()
 	{
 		if (this.Data == null)
@@ -64,7 +64,7 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0600A785 RID: 42885 RVA: 0x0025973C File Offset: 0x0025793C
+	// Token: 0x06007B65 RID: 31589 RVA: 0x00263B44 File Offset: 0x00261D44
 	private void ButtonClick(EToggleState state)
 	{
 		if (this.Data == null)
@@ -76,13 +76,13 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		EventSystem.Instance.Emit(EEventName.OnClickAdviceMotion);
 	}
 
-	// Token: 0x0600A786 RID: 42886 RVA: 0x0025978C File Offset: 0x0025798C
+	// Token: 0x06007B66 RID: 31590 RVA: 0x00263B94 File Offset: 0x00261D94
 	private void OnClickMotion()
 	{
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x0600A787 RID: 42887 RVA: 0x00259794 File Offset: 0x00257994
+	// Token: 0x06007B67 RID: 31591 RVA: 0x00263B9C File Offset: 0x00261D9C
 	[NullableContext(1)]
 	public void RefreshView(AdviceMotionSelectData data)
 	{
@@ -105,7 +105,7 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		this.RefreshToggleState();
 	}
 
-	// Token: 0x0600A788 RID: 42888 RVA: 0x00259834 File Offset: 0x00257A34
+	// Token: 0x06007B68 RID: 31592 RVA: 0x00263C3C File Offset: 0x00261E3C
 	private void RefreshToggleState()
 	{
 		if (this.Data == null)
@@ -120,7 +120,7 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A789 RID: 42889 RVA: 0x00259888 File Offset: 0x00257A88
+	// Token: 0x06007B69 RID: 31593 RVA: 0x00263C90 File Offset: 0x00261E90
 	private void RefreshLockImg()
 	{
 		if (this.Data == null)
@@ -152,26 +152,26 @@ internal class AdviceSelectMotionContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A78A RID: 42890 RVA: 0x00259918 File Offset: 0x00257B18
+	// Token: 0x06007B6A RID: 31594 RVA: 0x00263D20 File Offset: 0x00261F20
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnClickAdviceMotion, new Action(this.OnClickMotion));
 	}
 
-	// Token: 0x04004B8E RID: 19342
+	// Token: 0x04004C35 RID: 19509
 	[Nullable(2)]
 	private AdviceMotionSelectData Data;
 
-	// Token: 0x02007CAD RID: 31917
+	// Token: 0x02006E32 RID: 28210
 	private static class EAdviceSelectMotionContent
 	{
-		// Token: 0x04028E57 RID: 167511
+		// Token: 0x04024180 RID: 147840
 		public const int Toggle = 0;
 
-		// Token: 0x04028E58 RID: 167512
+		// Token: 0x04024181 RID: 147841
 		public const int LockImg = 1;
 
-		// Token: 0x04028E59 RID: 167513
+		// Token: 0x04024182 RID: 147842
 		public const int Text = 2;
 	}
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using CSharpScript.Game;
 
-// Token: 0x02001CAB RID: 7339
+// Token: 0x0200116D RID: 4461
 public class GameBudgetNormalMode : GameBudgetMode
 {
-	// Token: 0x0600DD9A RID: 56730 RVA: 0x0033D47A File Offset: 0x0033B67A
+	// Token: 0x0600B1BF RID: 45503 RVA: 0x00348DE8 File Offset: 0x00346FE8
 	public GameBudgetNormalMode() : base("EGameBudgetMode.Normal", EGameBudgetMode.Normal)
 	{
-	}
-
-	// Token: 0x0600DD9B RID: 56731 RVA: 0x0033D488 File Offset: 0x0033B688
-	public override void OnEnterMode()
-	{
-		GameBudgetInterfaceController.Instance.SetCenterRole(Global.BaseCharacter);
+		base.Active("centerRole", delegate
+		{
+			GameBudgetController.Instance.ApplyCenterRole(Global.BaseCharacter);
+		}, delegate
+		{
+		});
 	}
 }

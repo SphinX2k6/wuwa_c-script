@@ -6,11 +6,11 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 {
-	// Token: 0x020000A7 RID: 167
+	// Token: 0x020000AA RID: 170
 	public class ResourceUpdateViewAgent : IResourceUpdateView
 	{
-		// Token: 0x170000CC RID: 204
-		// (get) Token: 0x060005B7 RID: 1463 RVA: 0x000334F8 File Offset: 0x000316F8
+		// Token: 0x170000CE RID: 206
+		// (get) Token: 0x060005CF RID: 1487 RVA: 0x00034B88 File Offset: 0x00032D88
 		public long SavedSize
 		{
 			get
@@ -19,7 +19,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005B8 RID: 1464 RVA: 0x00033510 File Offset: 0x00031710
+		// Token: 0x060005D0 RID: 1488 RVA: 0x00034BA0 File Offset: 0x00032DA0
 		public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 		{
 			ResourceUpdateViewAgent.<ShowNotEnoughSpaceConfirmation>d__12 <ShowNotEnoughSpaceConfirmation>d__;
@@ -31,14 +31,14 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005B9 RID: 1465 RVA: 0x0003355B File Offset: 0x0003175B
+		// Token: 0x060005D1 RID: 1489 RVA: 0x00034BEB File Offset: 0x00032DEB
 		[NullableContext(2)]
 		public void SetImplement(IResourceUpdateView implement)
 		{
 			this.Implement = implement;
 		}
 
-		// Token: 0x060005BA RID: 1466 RVA: 0x00033564 File Offset: 0x00031764
+		// Token: 0x060005D2 RID: 1490 RVA: 0x00034BF4 File Offset: 0x00032DF4
 		public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 		{
 			this.ReceiveSize = receiveSize;
@@ -51,35 +51,35 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x0400038E RID: 910
+		// Token: 0x040003BC RID: 956
 		public long ReceiveSize;
 
-		// Token: 0x0400038F RID: 911
+		// Token: 0x040003BD RID: 957
 		public long CurProgress;
 
-		// Token: 0x04000390 RID: 912
+		// Token: 0x040003BE RID: 958
 		public long TotalProgress;
 
-		// Token: 0x04000391 RID: 913
+		// Token: 0x040003BF RID: 959
 		public long TotalSize;
 
-		// Token: 0x04000392 RID: 914
+		// Token: 0x040003C0 RID: 960
 		public bool NotEnoughSpace;
 
-		// Token: 0x04000393 RID: 915
+		// Token: 0x040003C1 RID: 961
 		public long DownloadSpeed;
 
-		// Token: 0x04000394 RID: 916
+		// Token: 0x040003C2 RID: 962
 		public long DownloadSpeedMax;
 
-		// Token: 0x04000395 RID: 917
+		// Token: 0x040003C3 RID: 963
 		public bool HasShowNotEnoughSpace;
 
-		// Token: 0x04000396 RID: 918
+		// Token: 0x040003C4 RID: 964
 		[Nullable(1)]
 		public string FileName = "";
 
-		// Token: 0x04000397 RID: 919
+		// Token: 0x040003C5 RID: 965
 		[Nullable(2)]
 		protected IResourceUpdateView Implement;
 	}

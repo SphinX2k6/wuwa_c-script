@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FE4 RID: 28644
+	// Token: 0x02006165 RID: 24933
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputActionBinding
 	{
-		// Token: 0x06045A51 RID: 285265 RVA: 0x0114B8BC File Offset: 0x01149ABC
+		// Token: 0x0603BC02 RID: 244738 RVA: 0x010F56B0 File Offset: 0x010F38B0
 		public void Initialize(ActionMapping config)
 		{
 			this.ActionName = config.ActionName;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A52 RID: 285266 RVA: 0x0114B9BC File Offset: 0x01149BBC
+		// Token: 0x0603BC03 RID: 244739 RVA: 0x010F57B0 File Offset: 0x010F39B0
 		public void Clear()
 		{
 			this.ActionName = null;
@@ -49,32 +49,32 @@ namespace CSharpScript.Game.InputSetting
 			this.GamepadKeysToBindingTypeMap.Clear();
 		}
 
-		// Token: 0x06045A53 RID: 285267 RVA: 0x0114BA25 File Offset: 0x01149C25
+		// Token: 0x0603BC04 RID: 244740 RVA: 0x010F5819 File Offset: 0x010F3A19
 		[NullableContext(2)]
 		public string GetActionName()
 		{
 			return this.ActionName;
 		}
 
-		// Token: 0x06045A54 RID: 285268 RVA: 0x0114BA2D File Offset: 0x01149C2D
+		// Token: 0x0603BC05 RID: 244741 RVA: 0x010F5821 File Offset: 0x010F3A21
 		public void SetKeyboardVersion(int version, EKeySettingExclusiveType type)
 		{
 			this.KeyboardVersionMap[type] = version;
 		}
 
-		// Token: 0x06045A55 RID: 285269 RVA: 0x0114BA3C File Offset: 0x01149C3C
+		// Token: 0x0603BC06 RID: 244742 RVA: 0x010F5830 File Offset: 0x010F3A30
 		public int GetKeyboardVersion(EKeySettingExclusiveType type)
 		{
 			return this.KeyboardVersionMap.GetValueOrDefault(type, 0);
 		}
 
-		// Token: 0x06045A56 RID: 285270 RVA: 0x0114BA4B File Offset: 0x01149C4B
+		// Token: 0x0603BC07 RID: 244743 RVA: 0x010F583F File Offset: 0x010F3A3F
 		public void SetGamepadVersion(int version, EKeySettingExclusiveType type)
 		{
 			this.GamepadVersionMap[type] = version;
 		}
 
-		// Token: 0x06045A57 RID: 285271 RVA: 0x0114BA5C File Offset: 0x01149C5C
+		// Token: 0x0603BC08 RID: 244744 RVA: 0x010F5850 File Offset: 0x010F3A50
 		public int GetGamepadVersion(EKeySettingExclusiveType type)
 		{
 			int result;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.InputSetting
 			return 0;
 		}
 
-		// Token: 0x06045A58 RID: 285272 RVA: 0x0114BA7C File Offset: 0x01149C7C
+		// Token: 0x0603BC09 RID: 244745 RVA: 0x010F5870 File Offset: 0x010F3A70
 		[NullableContext(2)]
 		public InputActionKey GetCurrentPlatformKeyByIndex(int index)
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045A59 RID: 285273 RVA: 0x0114BAA7 File Offset: 0x01149CA7
+		// Token: 0x0603BC0A RID: 244746 RVA: 0x010F589B File Offset: 0x010F3A9B
 		[NullableContext(2)]
 		public InputKey GetCurrentPlatformKey()
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045A5A RID: 285274 RVA: 0x0114BAD0 File Offset: 0x01149CD0
+		// Token: 0x0603BC0B RID: 244747 RVA: 0x010F58C4 File Offset: 0x010F3AC4
 		[NullableContext(2)]
 		public InputActionKey GetPcKeyByIndex(int index)
 		{
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.InputSetting
 			return InputSettings.Instance.GetInputActionKey(this.ActionName, this.PcKeys[index], this.CurrentBindingType);
 		}
 
-		// Token: 0x06045A5B RID: 285275 RVA: 0x0114BB08 File Offset: 0x01149D08
+		// Token: 0x0603BC0C RID: 244748 RVA: 0x010F58FC File Offset: 0x010F3AFC
 		[NullableContext(2)]
 		public InputKey GetPcKey()
 		{
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.InputSetting
 			return InputSettings.Instance.GetKey(key);
 		}
 
-		// Token: 0x06045A5C RID: 285276 RVA: 0x0114BB3C File Offset: 0x01149D3C
+		// Token: 0x0603BC0D RID: 244749 RVA: 0x010F5930 File Offset: 0x010F3B30
 		[NullableContext(2)]
 		public InputActionKey GetGamepadKeyByIndex(int index)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.InputSetting
 			return InputSettings.Instance.GetInputActionKey(this.ActionName, this.GamepadKeys[index], this.CurrentBindingType);
 		}
 
-		// Token: 0x06045A5D RID: 285277 RVA: 0x0114BB74 File Offset: 0x01149D74
+		// Token: 0x0603BC0E RID: 244750 RVA: 0x010F5968 File Offset: 0x010F3B68
 		[NullableContext(2)]
 		public InputKey GetGamepadKey()
 		{
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.InputSetting
 			return InputSettings.Instance.GetKey(key);
 		}
 
-		// Token: 0x06045A5E RID: 285278 RVA: 0x0114BBA8 File Offset: 0x01149DA8
+		// Token: 0x0603BC0F RID: 244751 RVA: 0x010F599C File Offset: 0x010F3B9C
 		public void GetAllPcKeyNameMap(Dictionary<EInputBindingType, List<string>> keyMapRef)
 		{
 			foreach (KeyValuePair<EInputBindingType, List<string>> keyValuePair in this.PcKeysToBindingTypeMap)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A5F RID: 285279 RVA: 0x0114BC08 File Offset: 0x01149E08
+		// Token: 0x0603BC10 RID: 244752 RVA: 0x010F59FC File Offset: 0x010F3BFC
 		public void GetPcKeyNameList(List<string> keyListRef)
 		{
 			foreach (string item in this.PcKeys)
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A60 RID: 285280 RVA: 0x0114BC5C File Offset: 0x01149E5C
+		// Token: 0x0603BC11 RID: 244753 RVA: 0x010F5A50 File Offset: 0x010F3C50
 		public IReadOnlyList<string> GetPcKeyNameList()
 		{
 			return this.PcKeys;
 		}
 
-		// Token: 0x06045A61 RID: 285281 RVA: 0x0114BC64 File Offset: 0x01149E64
+		// Token: 0x0603BC12 RID: 244754 RVA: 0x010F5A58 File Offset: 0x010F3C58
 		public void GetPcKeyNameListByBindingType(List<string> keyListRef, EInputBindingType bindingType)
 		{
 			List<string> list;
@@ -198,13 +198,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A62 RID: 285282 RVA: 0x0114BCC4 File Offset: 0x01149EC4
+		// Token: 0x0603BC13 RID: 244755 RVA: 0x010F5AB8 File Offset: 0x010F3CB8
 		public IReadOnlyList<string> GetPcKeyNameListReadonly()
 		{
 			return this.PcKeys;
 		}
 
-		// Token: 0x06045A63 RID: 285283 RVA: 0x0114BCCC File Offset: 0x01149ECC
+		// Token: 0x0603BC14 RID: 244756 RVA: 0x010F5AC0 File Offset: 0x010F3CC0
 		public void GetAllGamepadKeyNameMap(Dictionary<EInputBindingType, List<string>> keyMapRef)
 		{
 			foreach (KeyValuePair<EInputBindingType, List<string>> keyValuePair in this.GamepadKeysToBindingTypeMap)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A64 RID: 285284 RVA: 0x0114BD2C File Offset: 0x01149F2C
+		// Token: 0x0603BC15 RID: 244757 RVA: 0x010F5B20 File Offset: 0x010F3D20
 		public void GetGamepadKeyNameList(List<string> keyListRef)
 		{
 			foreach (string item in this.GamepadKeys)
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A65 RID: 285285 RVA: 0x0114BD80 File Offset: 0x01149F80
+		// Token: 0x0603BC16 RID: 244758 RVA: 0x010F5B74 File Offset: 0x010F3D74
 		public IReadOnlyList<string> GetGamepadKeyNameList()
 		{
 			return this.GamepadKeys;
 		}
 
-		// Token: 0x06045A66 RID: 285286 RVA: 0x0114BD88 File Offset: 0x01149F88
+		// Token: 0x0603BC17 RID: 244759 RVA: 0x010F5B7C File Offset: 0x010F3D7C
 		public void GetGamepadKeyNameListByBindingType(List<string> keyListRef, EInputBindingType bindingType)
 		{
 			List<string> list;
@@ -241,13 +241,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A67 RID: 285287 RVA: 0x0114BDE8 File Offset: 0x01149FE8
+		// Token: 0x0603BC18 RID: 244760 RVA: 0x010F5BDC File Offset: 0x010F3DDC
 		public IReadOnlyList<string> GetGamepadKeyNameListReadonly()
 		{
 			return this.GamepadKeys;
 		}
 
-		// Token: 0x06045A68 RID: 285288 RVA: 0x0114BDF0 File Offset: 0x01149FF0
+		// Token: 0x0603BC19 RID: 244761 RVA: 0x010F5BE4 File Offset: 0x010F3DE4
 		public void GetKeyNameList(List<string> keyListRef)
 		{
 			foreach (string item in this.KeyNameList)
@@ -256,13 +256,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A69 RID: 285289 RVA: 0x0114BE44 File Offset: 0x0114A044
+		// Token: 0x0603BC1A RID: 244762 RVA: 0x010F5C38 File Offset: 0x010F3E38
 		public IReadOnlyList<string> GetKeyNameList()
 		{
 			return this.KeyNameList;
 		}
 
-		// Token: 0x06045A6A RID: 285290 RVA: 0x0114BE4C File Offset: 0x0114A04C
+		// Token: 0x0603BC1B RID: 244763 RVA: 0x010F5C40 File Offset: 0x010F3E40
 		public void GetKeyNameListByBindingType(List<string> keyListRef, EInputBindingType bindingType)
 		{
 			List<string> collection;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A6B RID: 285291 RVA: 0x0114BE70 File Offset: 0x0114A070
+		// Token: 0x0603BC1C RID: 244764 RVA: 0x010F5C64 File Offset: 0x010F3E64
 		public void GetCurrentPlatformKeyNameList(List<string> keyListRef)
 		{
 			if (Info.Instance.IsInKeyBoard())
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A6C RID: 285292 RVA: 0x0114BE99 File Offset: 0x0114A099
+		// Token: 0x0603BC1D RID: 244765 RVA: 0x010F5C8D File Offset: 0x010F3E8D
 		public IReadOnlyList<string> GetCurrentPlatformKeyNameList()
 		{
 			if (Info.Instance.IsInKeyBoard())
@@ -300,32 +300,32 @@ namespace CSharpScript.Game.InputSetting
 			return Array.Empty<string>();
 		}
 
-		// Token: 0x06045A6D RID: 285293 RVA: 0x0114BEC6 File Offset: 0x0114A0C6
+		// Token: 0x0603BC1E RID: 244766 RVA: 0x010F5CBA File Offset: 0x010F3EBA
 		public void GetCurrentGamepadKeyNameList(List<string> keyListRef)
 		{
 			this.GetGamepadKeyNameList(keyListRef);
 		}
 
-		// Token: 0x06045A6E RID: 285294 RVA: 0x0114BECF File Offset: 0x0114A0CF
+		// Token: 0x0603BC1F RID: 244767 RVA: 0x010F5CC3 File Offset: 0x010F3EC3
 		public IReadOnlyList<string> GetCurrentGamepadKeyNameList()
 		{
 			return this.GetGamepadKeyNameList();
 		}
 
-		// Token: 0x06045A6F RID: 285295 RVA: 0x0114BED8 File Offset: 0x0114A0D8
+		// Token: 0x0603BC20 RID: 244768 RVA: 0x010F5CCC File Offset: 0x010F3ECC
 		public bool HasKey(string keyName)
 		{
 			Dictionary<string, InputActionKey> inputActionKeyMapByBindingType = InputSettings.Instance.GetInputActionKeyMapByBindingType(this.ActionName, this.CurrentBindingType);
 			return inputActionKeyMapByBindingType != null && inputActionKeyMapByBindingType.ContainsKey(keyName);
 		}
 
-		// Token: 0x06045A70 RID: 285296 RVA: 0x0114BF08 File Offset: 0x0114A108
+		// Token: 0x0603BC21 RID: 244769 RVA: 0x010F5CFC File Offset: 0x010F3EFC
 		public bool HasAnyKey()
 		{
 			return this.KeyNameList.Count > 0;
 		}
 
-		// Token: 0x06045A71 RID: 285297 RVA: 0x0114BF18 File Offset: 0x0114A118
+		// Token: 0x0603BC22 RID: 244770 RVA: 0x010F5D0C File Offset: 0x010F3F0C
 		public void SwitchKeysByBindingType(EInputBindingType bindingType)
 		{
 			List<string> list = this.PcKeysToBindingTypeMap.GetValueOrDefault(bindingType) ?? this.PcKeysToBindingTypeMap.GetValueOrDefault(EInputBindingType.Original);
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A72 RID: 285298 RVA: 0x0114BFA0 File Offset: 0x0114A1A0
+		// Token: 0x0603BC23 RID: 244771 RVA: 0x010F5D94 File Offset: 0x010F3F94
 		public void SetKeys(List<string> keys, EInputBindingType bindingType)
 		{
 			this.KeyNameListToBindingTypeMap[bindingType] = keys;
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.InputSetting
 			this.RefreshKeyListByBindingType(bindingType);
 		}
 
-		// Token: 0x06045A73 RID: 285299 RVA: 0x0114C01C File Offset: 0x0114A21C
+		// Token: 0x0603BC24 RID: 244772 RVA: 0x010F5E10 File Offset: 0x010F4010
 		public void SetKeyboardKeys(IReadOnlyList<string> keyboardKeys, EInputBindingType bindingType)
 		{
 			List<string> list = new List<string>(keyboardKeys);
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.InputSetting
 			this.SetKeys(list, bindingType);
 		}
 
-		// Token: 0x06045A74 RID: 285300 RVA: 0x0114C050 File Offset: 0x0114A250
+		// Token: 0x0603BC25 RID: 244773 RVA: 0x010F5E44 File Offset: 0x010F4044
 		public void SetKeyboardKeysWithoutOriginal(IReadOnlyList<string> keyboardKeys)
 		{
 			foreach (EInputBindingType einputBindingType in InputBindingDefine.inputBindingTypesArray)
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A75 RID: 285301 RVA: 0x0114C080 File Offset: 0x0114A280
+		// Token: 0x0603BC26 RID: 244774 RVA: 0x010F5E74 File Offset: 0x010F4074
 		public void SetGamepadKeys(IReadOnlyList<string> gamepadKeys, EInputBindingType bindingType)
 		{
 			List<string> list = new List<string>();
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.InputSetting
 			this.SetKeys(list, bindingType);
 		}
 
-		// Token: 0x06045A76 RID: 285302 RVA: 0x0114C0BC File Offset: 0x0114A2BC
+		// Token: 0x0603BC27 RID: 244775 RVA: 0x010F5EB0 File Offset: 0x010F40B0
 		public void SetGamepadKeysWithoutOriginal(IReadOnlyList<string> gamepadKeys)
 		{
 			foreach (EInputBindingType einputBindingType in this.PcKeysToBindingTypeMap.Keys)
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A77 RID: 285303 RVA: 0x0114C118 File Offset: 0x0114A318
+		// Token: 0x0603BC28 RID: 244776 RVA: 0x010F5F0C File Offset: 0x010F410C
 		public void RefreshKeysByActionMappings(TArray<FInputActionKeyMapping> actionMappings, EInputBindingType bindingType)
 		{
 			List<string> orCreateKeyNameList = this.GetOrCreateKeyNameList(bindingType);
@@ -432,7 +432,7 @@ namespace CSharpScript.Game.InputSetting
 			this.RefreshKeyListByBindingType(bindingType);
 		}
 
-		// Token: 0x06045A78 RID: 285304 RVA: 0x0114C1A4 File Offset: 0x0114A3A4
+		// Token: 0x0603BC29 RID: 244777 RVA: 0x010F5F98 File Offset: 0x010F4198
 		public unsafe void AddKeys([Nullable(new byte[]
 		{
 			0,
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.InputSetting
 			this.RefreshKeyListByBindingType(bindingType);
 		}
 
-		// Token: 0x06045A79 RID: 285305 RVA: 0x0114C238 File Offset: 0x0114A438
+		// Token: 0x0603BC2A RID: 244778 RVA: 0x010F602C File Offset: 0x010F422C
 		public unsafe void RemoveKeys([Nullable(new byte[]
 		{
 			0,
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.InputSetting
 			this.RefreshKeyListByBindingType(bindingType);
 		}
 
-		// Token: 0x06045A7A RID: 285306 RVA: 0x0114C2C5 File Offset: 0x0114A4C5
+		// Token: 0x0603BC2B RID: 244779 RVA: 0x010F60B9 File Offset: 0x010F42B9
 		public void ClearAllKeys()
 		{
 			this.PcKeys.Clear();
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.InputSetting
 			InputSettings.Instance.ClearActionMapping(this.ActionName);
 		}
 
-		// Token: 0x06045A7B RID: 285307 RVA: 0x0114C2F8 File Offset: 0x0114A4F8
+		// Token: 0x0603BC2C RID: 244780 RVA: 0x010F60EC File Offset: 0x010F42EC
 		public void ResetKeyStateToConfigBaseline()
 		{
 			this.PcKeys.Clear();
@@ -517,7 +517,7 @@ namespace CSharpScript.Game.InputSetting
 			InputSettings.Instance.ClearActionMapping(this.ActionName);
 		}
 
-		// Token: 0x06045A7C RID: 285308 RVA: 0x0114C394 File Offset: 0x0114A594
+		// Token: 0x0603BC2D RID: 244781 RVA: 0x010F6188 File Offset: 0x010F4388
 		public void ResetVersionMapsFromConfig()
 		{
 			this.KeyboardVersionMap.Clear();
@@ -539,25 +539,25 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045A7D RID: 285309 RVA: 0x0114C45F File Offset: 0x0114A65F
+		// Token: 0x0603BC2E RID: 244782 RVA: 0x010F6253 File Offset: 0x010F4453
 		public ActionMapping? GetActionMappingConfig()
 		{
 			return this.Config;
 		}
 
-		// Token: 0x06045A7E RID: 285310 RVA: 0x0114C467 File Offset: 0x0114A667
+		// Token: 0x0603BC2F RID: 244783 RVA: 0x010F625B File Offset: 0x010F445B
 		public int GetConfigId()
 		{
 			return this.ConfigId;
 		}
 
-		// Token: 0x06045A7F RID: 285311 RVA: 0x0114C46F File Offset: 0x0114A66F
+		// Token: 0x0603BC30 RID: 244784 RVA: 0x010F6263 File Offset: 0x010F4463
 		public EActionMappingType GetActionMappingType()
 		{
 			return this.ActionMappingType;
 		}
 
-		// Token: 0x06045A80 RID: 285312 RVA: 0x0114C478 File Offset: 0x0114A678
+		// Token: 0x0603BC31 RID: 244785 RVA: 0x010F626C File Offset: 0x010F446C
 		private void RefreshKeyListByBindingType(EInputBindingType bindingType)
 		{
 			List<string> list = new List<string>();
@@ -604,13 +604,13 @@ namespace CSharpScript.Game.InputSetting
 			this.GamepadKeysToBindingTypeMap[bindingType] = list2;
 		}
 
-		// Token: 0x06045A81 RID: 285313 RVA: 0x0114C5B4 File Offset: 0x0114A7B4
+		// Token: 0x0603BC32 RID: 244786 RVA: 0x010F63A8 File Offset: 0x010F45A8
 		private void RefreshKeyList()
 		{
 			this.RefreshKeyListByBindingType(this.CurrentBindingType);
 		}
 
-		// Token: 0x06045A82 RID: 285314 RVA: 0x0114C5C4 File Offset: 0x0114A7C4
+		// Token: 0x0603BC33 RID: 244787 RVA: 0x010F63B8 File Offset: 0x010F45B8
 		public void ConvertSort()
 		{
 			ActionMapping? actionMappingConfigByActionName = InputSettingsConfig.Instance.GetActionMappingConfigByActionName(this.ActionName);
@@ -672,19 +672,19 @@ namespace CSharpScript.Game.InputSetting
 			this.SetKeys(this.KeyNameList, this.CurrentBindingType);
 		}
 
-		// Token: 0x06045A83 RID: 285315 RVA: 0x0114C69D File Offset: 0x0114A89D
+		// Token: 0x0603BC34 RID: 244788 RVA: 0x010F6491 File Offset: 0x010F4691
 		public Dictionary<EInputBindingType, List<string>> GetKeyNameListToBindingTypeMap()
 		{
 			return this.KeyNameListToBindingTypeMap;
 		}
 
-		// Token: 0x06045A84 RID: 285316 RVA: 0x0114C6A5 File Offset: 0x0114A8A5
+		// Token: 0x0603BC35 RID: 244789 RVA: 0x010F6499 File Offset: 0x010F4699
 		public Dictionary<EInputBindingType, List<string>> GetCopyKeyNameListToBindingTypeMap()
 		{
 			return new Dictionary<EInputBindingType, List<string>>(this.KeyNameListToBindingTypeMap);
 		}
 
-		// Token: 0x06045A85 RID: 285317 RVA: 0x0114C6B4 File Offset: 0x0114A8B4
+		// Token: 0x0603BC36 RID: 244790 RVA: 0x010F64A8 File Offset: 0x010F46A8
 		private List<string> GetOrCreateKeyNameList(EInputBindingType bindingType)
 		{
 			List<string> result;
@@ -695,47 +695,47 @@ namespace CSharpScript.Game.InputSetting
 			return result;
 		}
 
-		// Token: 0x04024595 RID: 148885
+		// Token: 0x0401F84A RID: 129098
 		[Nullable(2)]
 		private string ActionName;
 
-		// Token: 0x04024596 RID: 148886
+		// Token: 0x0401F84B RID: 129099
 		private int ConfigId;
 
-		// Token: 0x04024597 RID: 148887
+		// Token: 0x0401F84C RID: 129100
 		private ActionMapping? Config;
 
-		// Token: 0x04024598 RID: 148888
+		// Token: 0x0401F84D RID: 129101
 		private EActionMappingType ActionMappingType;
 
-		// Token: 0x04024599 RID: 148889
+		// Token: 0x0401F84E RID: 129102
 		private List<string> PcKeys = new List<string>();
 
-		// Token: 0x0402459A RID: 148890
+		// Token: 0x0401F84F RID: 129103
 		private List<string> GamepadKeys = new List<string>();
 
-		// Token: 0x0402459B RID: 148891
+		// Token: 0x0401F850 RID: 129104
 		private List<string> KeyNameList = new List<string>();
 
-		// Token: 0x0402459C RID: 148892
+		// Token: 0x0401F851 RID: 129105
 		private readonly Dictionary<EKeySettingExclusiveType, int> KeyboardVersionMap = new Dictionary<EKeySettingExclusiveType, int>();
 
-		// Token: 0x0402459D RID: 148893
+		// Token: 0x0401F852 RID: 129106
 		private readonly Dictionary<EKeySettingExclusiveType, int> GamepadVersionMap = new Dictionary<EKeySettingExclusiveType, int>();
 
-		// Token: 0x0402459E RID: 148894
+		// Token: 0x0401F853 RID: 129107
 		private readonly Dictionary<EInputBindingType, List<string>> KeyNameListToBindingTypeMap = new Dictionary<EInputBindingType, List<string>>();
 
-		// Token: 0x0402459F RID: 148895
+		// Token: 0x0401F854 RID: 129108
 		private readonly Dictionary<EInputBindingType, List<string>> PcKeysToBindingTypeMap = new Dictionary<EInputBindingType, List<string>>();
 
-		// Token: 0x040245A0 RID: 148896
+		// Token: 0x0401F855 RID: 129109
 		private readonly Dictionary<EInputBindingType, List<string>> GamepadKeysToBindingTypeMap = new Dictionary<EInputBindingType, List<string>>();
 
-		// Token: 0x040245A1 RID: 148897
+		// Token: 0x0401F856 RID: 129110
 		private EInputBindingType LastBindingType;
 
-		// Token: 0x040245A2 RID: 148898
+		// Token: 0x0401F857 RID: 129111
 		public EInputBindingType CurrentBindingType;
 	}
 }

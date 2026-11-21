@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A18 RID: 6680
+// Token: 0x02000ED7 RID: 3799
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssChallengeInfo
 {
-	// Token: 0x0600C415 RID: 50197 RVA: 0x002C6730 File Offset: 0x002C4930
+	// Token: 0x06009825 RID: 38949 RVA: 0x002D17B4 File Offset: 0x002CF9B4
 	public void RefreshPlayerName(bool mode)
 	{
 		int value = PlayerInfoModel.Instance.GetId().Value;
@@ -19,7 +19,7 @@ public class AbyssChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C416 RID: 50198 RVA: 0x002C6784 File Offset: 0x002C4984
+	// Token: 0x06009826 RID: 38950 RVA: 0x002D1808 File Offset: 0x002CFA08
 	public DangoAbyssRankRoleData[] GetDangoAbyssRankRoleData()
 	{
 		if (this.RankRoleDataList.Length == 0)
@@ -77,8 +77,8 @@ public class AbyssChallengeInfo
 		return this.RankRoleDataList;
 	}
 
-	// Token: 0x1700104E RID: 4174
-	// (get) Token: 0x0600C417 RID: 50199 RVA: 0x002C6936 File Offset: 0x002C4B36
+	// Token: 0x17001073 RID: 4211
+	// (get) Token: 0x06009827 RID: 38951 RVA: 0x002D19BA File Offset: 0x002CFBBA
 	public bool IsEmpty
 	{
 		get
@@ -87,55 +87,55 @@ public class AbyssChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C418 RID: 50200 RVA: 0x002C6942 File Offset: 0x002C4B42
+	// Token: 0x06009828 RID: 38952 RVA: 0x002D19C6 File Offset: 0x002CFBC6
 	public global::AbyssChallengePassPlayerInfo[] GetPlayerInfoList()
 	{
 		return this.PlayerInfoList;
 	}
 
-	// Token: 0x0600C419 RID: 50201 RVA: 0x002C694A File Offset: 0x002C4B4A
+	// Token: 0x06009829 RID: 38953 RVA: 0x002D19CE File Offset: 0x002CFBCE
 	public int GetPassTime()
 	{
 		return this.PassTime;
 	}
 
-	// Token: 0x0600C41A RID: 50202 RVA: 0x002C6952 File Offset: 0x002C4B52
+	// Token: 0x0600982A RID: 38954 RVA: 0x002D19D6 File Offset: 0x002CFBD6
 	public int GetProgress()
 	{
 		return this.PassWave;
 	}
 
-	// Token: 0x0600C41B RID: 50203 RVA: 0x002C695A File Offset: 0x002C4B5A
+	// Token: 0x0600982B RID: 38955 RVA: 0x002D19DE File Offset: 0x002CFBDE
 	public int GetChallengeId()
 	{
 		return this.ChallengeId;
 	}
 
-	// Token: 0x0600C41C RID: 50204 RVA: 0x002C6962 File Offset: 0x002C4B62
+	// Token: 0x0600982C RID: 38956 RVA: 0x002D19E6 File Offset: 0x002CFBE6
 	public bool GetIsSingle()
 	{
 		return this.IsSingle;
 	}
 
-	// Token: 0x0600C41D RID: 50205 RVA: 0x002C696A File Offset: 0x002C4B6A
+	// Token: 0x0600982D RID: 38957 RVA: 0x002D19EE File Offset: 0x002CFBEE
 	public bool GetShowName()
 	{
 		return this.ShowName;
 	}
 
-	// Token: 0x0600C41E RID: 50206 RVA: 0x002C6972 File Offset: 0x002C4B72
+	// Token: 0x0600982E RID: 38958 RVA: 0x002D19F6 File Offset: 0x002CFBF6
 	public int GetOwnerId()
 	{
 		return this.OwnerId;
 	}
 
-	// Token: 0x0600C41F RID: 50207 RVA: 0x002C697A File Offset: 0x002C4B7A
+	// Token: 0x0600982F RID: 38959 RVA: 0x002D19FE File Offset: 0x002CFBFE
 	public void SetNameMode(bool mode)
 	{
 		this.ShowName = mode;
 	}
 
-	// Token: 0x0600C420 RID: 50208 RVA: 0x002C6984 File Offset: 0x002C4B84
+	// Token: 0x06009830 RID: 38960 RVA: 0x002D1A08 File Offset: 0x002CFC08
 	public void Phrase(Aki.Protocol.AbyssChallengeInfo data)
 	{
 		this.PlayerInfoList = Array.Empty<global::AbyssChallengePassPlayerInfo>();
@@ -166,8 +166,8 @@ public class AbyssChallengeInfo
 		this.PassWave = data.PassWave;
 	}
 
-	// Token: 0x1700104F RID: 4175
-	// (get) Token: 0x0600C421 RID: 50209 RVA: 0x002C6A92 File Offset: 0x002C4C92
+	// Token: 0x17001074 RID: 4212
+	// (get) Token: 0x06009831 RID: 38961 RVA: 0x002D1B16 File Offset: 0x002CFD16
 	public string RankBg
 	{
 		get
@@ -188,8 +188,8 @@ public class AbyssChallengeInfo
 		}
 	}
 
-	// Token: 0x17001050 RID: 4176
-	// (get) Token: 0x0600C422 RID: 50210 RVA: 0x002C6AC3 File Offset: 0x002C4CC3
+	// Token: 0x17001075 RID: 4213
+	// (get) Token: 0x06009832 RID: 38962 RVA: 0x002D1B47 File Offset: 0x002CFD47
 	public bool IsFirst
 	{
 		get
@@ -198,8 +198,8 @@ public class AbyssChallengeInfo
 		}
 	}
 
-	// Token: 0x17001051 RID: 4177
-	// (get) Token: 0x0600C423 RID: 50211 RVA: 0x002C6AD6 File Offset: 0x002C4CD6
+	// Token: 0x17001076 RID: 4214
+	// (get) Token: 0x06009833 RID: 38963 RVA: 0x002D1B5A File Offset: 0x002CFD5A
 	public bool IsSecond
 	{
 		get
@@ -208,8 +208,8 @@ public class AbyssChallengeInfo
 		}
 	}
 
-	// Token: 0x17001052 RID: 4178
-	// (get) Token: 0x0600C424 RID: 50212 RVA: 0x002C6AE9 File Offset: 0x002C4CE9
+	// Token: 0x17001077 RID: 4215
+	// (get) Token: 0x06009834 RID: 38964 RVA: 0x002D1B6D File Offset: 0x002CFD6D
 	public bool IsThird
 	{
 		get
@@ -218,48 +218,48 @@ public class AbyssChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C425 RID: 50213 RVA: 0x002C6AFC File Offset: 0x002C4CFC
+	// Token: 0x06009835 RID: 38965 RVA: 0x002D1B80 File Offset: 0x002CFD80
 	public Dictionary<int, string> GetPlayerNameMap()
 	{
 		return this.PlayerNameMap;
 	}
 
-	// Token: 0x04005A73 RID: 23155
+	// Token: 0x04005B42 RID: 23362
 	public bool IsSelf;
 
-	// Token: 0x04005A74 RID: 23156
+	// Token: 0x04005B43 RID: 23363
 	public bool IsSelfInData;
 
-	// Token: 0x04005A75 RID: 23157
+	// Token: 0x04005B44 RID: 23364
 	public bool IsInRank = true;
 
-	// Token: 0x04005A76 RID: 23158
+	// Token: 0x04005B45 RID: 23365
 	private readonly Dictionary<int, string> PlayerNameMap = new Dictionary<int, string>();
 
-	// Token: 0x04005A77 RID: 23159
+	// Token: 0x04005B46 RID: 23366
 	private global::AbyssChallengePassPlayerInfo[] PlayerInfoList = Array.Empty<global::AbyssChallengePassPlayerInfo>();
 
-	// Token: 0x04005A78 RID: 23160
+	// Token: 0x04005B47 RID: 23367
 	private int PassTime;
 
-	// Token: 0x04005A79 RID: 23161
+	// Token: 0x04005B48 RID: 23368
 	private int ChallengeId;
 
-	// Token: 0x04005A7A RID: 23162
+	// Token: 0x04005B49 RID: 23369
 	private bool IsSingle;
 
-	// Token: 0x04005A7B RID: 23163
+	// Token: 0x04005B4A RID: 23370
 	private bool ShowName;
 
-	// Token: 0x04005A7C RID: 23164
+	// Token: 0x04005B4B RID: 23371
 	private int OwnerId;
 
-	// Token: 0x04005A7D RID: 23165
+	// Token: 0x04005B4C RID: 23372
 	private int PassWave;
 
-	// Token: 0x04005A7E RID: 23166
+	// Token: 0x04005B4D RID: 23373
 	public int Rank;
 
-	// Token: 0x04005A7F RID: 23167
+	// Token: 0x04005B4E RID: 23374
 	private DangoAbyssRankRoleData[] RankRoleDataList = Array.Empty<DangoAbyssRankRoleData>();
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200596C RID: 22892
+	// Token: 0x02005F79 RID: 24441
 	public class ISpecialAnimalTypeConfigT
 	{
-		// Token: 0x1700ABD1 RID: 43985
-		// (get) Token: 0x06026C11 RID: 158737 RVA: 0x00555E82 File Offset: 0x00554082
-		// (set) Token: 0x06026C12 RID: 158738 RVA: 0x00555E8A File Offset: 0x0055408A
+		// Token: 0x1700B505 RID: 46341
+		// (get) Token: 0x0602917B RID: 168315 RVA: 0x0059CAEE File Offset: 0x0059ACEE
+		// (set) Token: 0x0602917C RID: 168316 RVA: 0x0059CAF6 File Offset: 0x0059ACF6
 		public ESpecialAnimalType Type { get; set; }
 
-		// Token: 0x06026C13 RID: 158739 RVA: 0x00555E93 File Offset: 0x00554093
+		// Token: 0x0602917D RID: 168317 RVA: 0x0059CAFF File Offset: 0x0059ACFF
 		public ISpecialAnimalTypeConfigT()
 		{
 			this.Type = ESpecialAnimalType.CollectAnimal;

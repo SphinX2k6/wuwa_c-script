@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001374 RID: 4980
+// Token: 0x02000828 RID: 2088
 internal class BuffScrollItemData
 {
-	// Token: 0x04003DD4 RID: 15828
+	// Token: 0x04003E6C RID: 15980
 	public int BuffId;
 
-	// Token: 0x04003DD5 RID: 15829
+	// Token: 0x04003E6D RID: 15981
 	public bool ChangeAble = true;
 
-	// Token: 0x04003DD6 RID: 15830
+	// Token: 0x04003E6E RID: 15982
 	public bool Selected;
 
-	// Token: 0x04003DD7 RID: 15831
+	// Token: 0x04003E6F RID: 15983
 	public bool SelectedAtStart;
 
-	// Token: 0x04003DD8 RID: 15832
+	// Token: 0x04003E70 RID: 15984
 	[Nullable(new byte[]
 	{
 		2,
@@ -24,7 +24,7 @@ internal class BuffScrollItemData
 	})]
 	public Action<BuffScrollItemData> OnClickToggle;
 
-	// Token: 0x04003DD9 RID: 15833
+	// Token: 0x04003E71 RID: 15985
 	[Nullable(new byte[]
 	{
 		2,

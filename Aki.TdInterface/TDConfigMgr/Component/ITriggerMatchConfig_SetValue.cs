@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007A9 RID: 1961
+	// Token: 0x0200084A RID: 2122
 	public class ITriggerMatchConfig_SetValue
 	{
-		// Token: 0x04001C64 RID: 7268
-		[Nullable(1)]
+		// Token: 0x04001E6D RID: 7789
 		public IEntityMatchConfig EntityMatch;
 
-		// Token: 0x04001C65 RID: 7269
+		// Token: 0x04001E6E RID: 7790
 		public int? EntityMatchCount;
 	}
 }

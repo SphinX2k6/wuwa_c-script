@@ -7,15 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B73 RID: 27507
+	// Token: 0x02005CEB RID: 23787
 	public class LevelEventSetDataLayerTransition : LevelEventBase
 	{
-		// Token: 0x0604423C RID: 279100 RVA: 0x010C8E04 File Offset: 0x010C7004
+		// Token: 0x0603A38E RID: 238478 RVA: 0x01072A78 File Offset: 0x01070C78
 		public LevelEventSetDataLayerTransition(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604423D RID: 279101 RVA: 0x010C8E10 File Offset: 0x010C7010
+		// Token: 0x0603A38F RID: 238479 RVA: 0x01072A84 File Offset: 0x01070C84
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

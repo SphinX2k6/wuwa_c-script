@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200017C RID: 380
+	// Token: 0x0200018E RID: 398
 	public class ConfigCombinationAxisAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060008E9 RID: 2281 RVA: 0x0008BCFC File Offset: 0x00089EFC
+		// Token: 0x06000955 RID: 2389 RVA: 0x00091C34 File Offset: 0x0008FE34
 		static ConfigCombinationAxisAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCombinationAxisAll.CreateStaticDefaultValue), new Action(ConfigCombinationAxisAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008EA RID: 2282 RVA: 0x0008BD1C File Offset: 0x00089F1C
+		// Token: 0x06000956 RID: 2390 RVA: 0x00091C54 File Offset: 0x0008FE54
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCombinationAxisAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060008EB RID: 2283 RVA: 0x0008BD9B File Offset: 0x00089F9B
+		// Token: 0x06000957 RID: 2391 RVA: 0x00091CD3 File Offset: 0x0008FED3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCombinationAxisAll.LogPair = null;
 			ConfigCombinationAxisAll.HandleId = 0;
 		}
 
-		// Token: 0x060008EC RID: 2284 RVA: 0x0008BDA9 File Offset: 0x00089FA9
+		// Token: 0x06000958 RID: 2392 RVA: 0x00091CE1 File Offset: 0x0008FEE1
 		public static void Init()
 		{
 			ConfigCombinationAxisAll.HandleId = ConfigCommon.InitDataStatement(ConfigCombinationAxisAll.HandleId, "db_input_settings.db", "select BinData from `CombinationAxis`");
 		}
 
-		// Token: 0x060008ED RID: 2285 RVA: 0x0008BDC4 File Offset: 0x00089FC4
+		// Token: 0x06000959 RID: 2393 RVA: 0x00091CFC File Offset: 0x0008FEFC
 		[NullableContext(2)]
 		public static IReadOnlyList<CombinationAxis> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000A48 RID: 2632
+		// Token: 0x04000AC6 RID: 2758
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x04000A49 RID: 2633
+		// Token: 0x04000AC7 RID: 2759
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x04000A4A RID: 2634
+		// Token: 0x04000AC8 RID: 2760
 		private const string TABLE = "CombinationAxis";
 
-		// Token: 0x04000A4B RID: 2635
+		// Token: 0x04000AC9 RID: 2761
 		private const string COMMAND = "select BinData from `CombinationAxis`";
 
-		// Token: 0x04000A4C RID: 2636
+		// Token: 0x04000ACA RID: 2762
 		private const string KEY_PREFIX = "CombinationAxisAll";
 
-		// Token: 0x04000A4D RID: 2637
+		// Token: 0x04000ACB RID: 2763
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A4E RID: 2638
+		// Token: 0x04000ACC RID: 2764
 		private static int HandleId;
 	}
 }

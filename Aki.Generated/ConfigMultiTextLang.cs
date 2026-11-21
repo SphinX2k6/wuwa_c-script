@@ -5,16 +5,16 @@ using Aki.Common.Proxy;
 
 namespace Aki.Config
 {
-	// Token: 0x020005DB RID: 1499
+	// Token: 0x020005F3 RID: 1523
 	public class ConfigMultiTextLang : IQueryLocalText, IConfigQuery, IStaticVariableResetter, IQueryLocalTextNew
 	{
-		// Token: 0x0600232F RID: 9007 RVA: 0x0012061C File Offset: 0x0011E81C
+		// Token: 0x060023BF RID: 9151 RVA: 0x00127098 File Offset: 0x00125298
 		static ConfigMultiTextLang()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMultiTextLang.CreateStaticDefaultValue), new Action(ConfigMultiTextLang.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002330 RID: 9008 RVA: 0x00120650 File Offset: 0x0011E850
+		// Token: 0x060023C0 RID: 9152 RVA: 0x001270CC File Offset: 0x001252CC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMultiTextLang.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,7 +27,7 @@ namespace Aki.Config
 			ConfigMultiTextLang.LangCache = new Dictionary<string, Dictionary<string, string>>();
 		}
 
-		// Token: 0x06002331 RID: 9009 RVA: 0x001206C3 File Offset: 0x0011E8C3
+		// Token: 0x060023C1 RID: 9153 RVA: 0x0012713F File Offset: 0x0012533F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMultiTextLang.LogPair = null;
@@ -35,20 +35,20 @@ namespace Aki.Config
 			ConfigMultiTextLang.HandleId = 0;
 		}
 
-		// Token: 0x06002332 RID: 9010 RVA: 0x001206D7 File Offset: 0x0011E8D7
+		// Token: 0x060023C2 RID: 9154 RVA: 0x00127153 File Offset: 0x00125353
 		public static void Init()
 		{
 			ConfigMultiTextLang.HandleId = ConfigCommon.GetLangStatementId("MultiText", "lang_multi_text.db", "select content,redirectdbindex from `MultiText` where id = ?", "");
 		}
 
-		// Token: 0x06002333 RID: 9011 RVA: 0x001206F7 File Offset: 0x0011E8F7
+		// Token: 0x060023C3 RID: 9155 RVA: 0x00127173 File Offset: 0x00125373
 		[NullableContext(2)]
 		public static string GetLocalText(int id, string culture = null)
 		{
 			return null;
 		}
 
-		// Token: 0x06002334 RID: 9012 RVA: 0x001206FC File Offset: 0x0011E8FC
+		// Token: 0x060023C4 RID: 9156 RVA: 0x00127178 File Offset: 0x00125378
 		[NullableContext(2)]
 		public static string GetLocalTextNew([Nullable(0)] string id, string culture = null)
 		{
@@ -133,7 +133,7 @@ namespace Aki.Config
 			return text;
 		}
 
-		// Token: 0x06002335 RID: 9013 RVA: 0x001209E0 File Offset: 0x0011EBE0
+		// Token: 0x060023C5 RID: 9157 RVA: 0x0012745C File Offset: 0x0012565C
 		public static void ClearMultiTextLangStatementIdsAndCache()
 		{
 			ConfigCommon.ClearLangAllStatementId("MultiText", "lang_multi_text.db");
@@ -149,28 +149,28 @@ namespace Aki.Config
 			langCache.Clear();
 		}
 
-		// Token: 0x040028E1 RID: 10465
+		// Token: 0x04002989 RID: 10633
 		private const string TEXT_NOT_FOUND = "text not found";
 
-		// Token: 0x040028E2 RID: 10466
+		// Token: 0x0400298A RID: 10634
 		private const string DB = "lang_multi_text.db";
 
-		// Token: 0x040028E3 RID: 10467
+		// Token: 0x0400298B RID: 10635
 		private const string TABLE = "MultiText";
 
-		// Token: 0x040028E4 RID: 10468
+		// Token: 0x0400298C RID: 10636
 		private const string COMMAND = "select content from `MultiText` where id = ?";
 
-		// Token: 0x040028E5 RID: 10469
+		// Token: 0x0400298D RID: 10637
 		private static readonly string[] SUB_DB_NAMES = new string[]
 		{
 			"lang_multi_text_1sthalf.db"
 		};
 
-		// Token: 0x040028E6 RID: 10470
+		// Token: 0x0400298E RID: 10638
 		private const string COMMAND_WITH_REDIRECT_DB = "select content,redirectdbindex from `MultiText` where id = ?";
 
-		// Token: 0x040028E7 RID: 10471
+		// Token: 0x0400298F RID: 10639
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,7 +180,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040028E8 RID: 10472
+		// Token: 0x04002990 RID: 10640
 		[Nullable(new byte[]
 		{
 			2,
@@ -191,7 +191,7 @@ namespace Aki.Config
 		})]
 		private static Dictionary<string, Dictionary<string, string>> LangCache;
 
-		// Token: 0x040028E9 RID: 10473
+		// Token: 0x04002991 RID: 10641
 		private static int HandleId;
 	}
 }

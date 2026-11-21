@@ -3,18 +3,18 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.World.StepSequence
 {
-	// Token: 0x02004525 RID: 17701
+	// Token: 0x0200344A RID: 13386
 	public interface ISequenceAbortSignal
 	{
-		// Token: 0x1700750F RID: 29967
-		// (get) Token: 0x0602DBA1 RID: 187297
+		// Token: 0x170047C2 RID: 18370
+		// (get) Token: 0x06022268 RID: 139880
 		bool Aborted { get; }
 
-		// Token: 0x17007510 RID: 29968
-		// (get) Token: 0x0602DBA2 RID: 187298
+		// Token: 0x170047C3 RID: 18371
+		// (get) Token: 0x06022269 RID: 139881
 		UniTask<bool>? Promise { get; }
 
-		// Token: 0x0602DBA3 RID: 187299
+		// Token: 0x0602226A RID: 139882
 		void Abort();
 	}
 }

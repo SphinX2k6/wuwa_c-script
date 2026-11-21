@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004669 RID: 18025
+	// Token: 0x02004AD1 RID: 19153
 	public struct IGmSetLevelPlaySwitchForce : IFlatbufferObject
 	{
-		// Token: 0x17007FF8 RID: 32760
-		// (get) Token: 0x0601B5A7 RID: 112039 RVA: 0x003E3A98 File Offset: 0x003E1C98
+		// Token: 0x17008639 RID: 34361
+		// (get) Token: 0x0601CD7C RID: 118140 RVA: 0x0040FD34 File Offset: 0x0040DF34
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B5A8 RID: 112040 RVA: 0x003E3AA5 File Offset: 0x003E1CA5
+		// Token: 0x0601CD7D RID: 118141 RVA: 0x0040FD41 File Offset: 0x0040DF41
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B5A9 RID: 112041 RVA: 0x003E3AAC File Offset: 0x003E1CAC
+		// Token: 0x0601CD7E RID: 118142 RVA: 0x0040FD48 File Offset: 0x0040DF48
 		public static IGmSetLevelPlaySwitchForce GetRootAsIGmSetLevelPlaySwitchForce(ByteBuffer _bb)
 		{
 			return IGmSetLevelPlaySwitchForce.GetRootAsIGmSetLevelPlaySwitchForce(_bb, default(IGmSetLevelPlaySwitchForce));
 		}
 
-		// Token: 0x0601B5AA RID: 112042 RVA: 0x003E3AC8 File Offset: 0x003E1CC8
+		// Token: 0x0601CD7F RID: 118143 RVA: 0x0040FD64 File Offset: 0x0040DF64
 		public static IGmSetLevelPlaySwitchForce GetRootAsIGmSetLevelPlaySwitchForce(ByteBuffer _bb, IGmSetLevelPlaySwitchForce obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B5AB RID: 112043 RVA: 0x003E3AE5 File Offset: 0x003E1CE5
+		// Token: 0x0601CD80 RID: 118144 RVA: 0x0040FD81 File Offset: 0x0040DF81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B5AC RID: 112044 RVA: 0x003E3AF4 File Offset: 0x003E1CF4
+		// Token: 0x0601CD81 RID: 118145 RVA: 0x0040FD90 File Offset: 0x0040DF90
 		public IGmSetLevelPlaySwitchForce __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007FF9 RID: 32761
-		// (get) Token: 0x0601B5AD RID: 112045 RVA: 0x003E3B04 File Offset: 0x003E1D04
+		// Token: 0x1700863A RID: 34362
+		// (get) Token: 0x0601CD82 RID: 118146 RVA: 0x0040FDA0 File Offset: 0x0040DFA0
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007FFA RID: 32762
-		// (get) Token: 0x0601B5AE RID: 112046 RVA: 0x003E3B40 File Offset: 0x003E1D40
+		// Token: 0x1700863B RID: 34363
+		// (get) Token: 0x0601CD83 RID: 118147 RVA: 0x0040FDDC File Offset: 0x0040DFDC
 		public int LevelPlayId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17007FFB RID: 32763
-		// (get) Token: 0x0601B5AF RID: 112047 RVA: 0x003E3B7C File Offset: 0x003E1D7C
+		// Token: 0x1700863C RID: 34364
+		// (get) Token: 0x0601CD84 RID: 118148 RVA: 0x0040FE18 File Offset: 0x0040E018
 		public bool IsOpen
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B5B0 RID: 112048 RVA: 0x003E3BBB File Offset: 0x003E1DBB
+		// Token: 0x0601CD85 RID: 118149 RVA: 0x0040FE57 File Offset: 0x0040E057
 		public static Offset<IGmSetLevelPlaySwitchForce> CreateIGmSetLevelPlaySwitchForce(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, int LevelPlayId = 0, bool IsOpen = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IGmSetLevelPlaySwitchForce.EndIGmSetLevelPlaySwitchForce(builder);
 		}
 
-		// Token: 0x0601B5B1 RID: 112049 RVA: 0x003E3BDF File Offset: 0x003E1DDF
+		// Token: 0x0601CD86 RID: 118150 RVA: 0x0040FE7B File Offset: 0x0040E07B
 		public static void StartIGmSetLevelPlaySwitchForce(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601B5B2 RID: 112050 RVA: 0x003E3BE8 File Offset: 0x003E1DE8
+		// Token: 0x0601CD87 RID: 118151 RVA: 0x0040FE84 File Offset: 0x0040E084
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B5B3 RID: 112051 RVA: 0x003E3BF3 File Offset: 0x003E1DF3
+		// Token: 0x0601CD88 RID: 118152 RVA: 0x0040FE8F File Offset: 0x0040E08F
 		public static void AddLevelPlayId(FlatBufferBuilder builder, int levelPlayId)
 		{
 			builder.AddInt(1, levelPlayId, 0);
 		}
 
-		// Token: 0x0601B5B4 RID: 112052 RVA: 0x003E3BFE File Offset: 0x003E1DFE
+		// Token: 0x0601CD89 RID: 118153 RVA: 0x0040FE9A File Offset: 0x0040E09A
 		public static void AddIsOpen(FlatBufferBuilder builder, bool isOpen)
 		{
 			builder.AddBool(2, isOpen, false);
 		}
 
-		// Token: 0x0601B5B5 RID: 112053 RVA: 0x003E3C09 File Offset: 0x003E1E09
+		// Token: 0x0601CD8A RID: 118154 RVA: 0x0040FEA5 File Offset: 0x0040E0A5
 		public static Offset<IGmSetLevelPlaySwitchForce> EndIGmSetLevelPlaySwitchForce(FlatBufferBuilder builder)
 		{
 			return new Offset<IGmSetLevelPlaySwitchForce>(builder.EndTable());
 		}
 
-		// Token: 0x0601B5B6 RID: 112054 RVA: 0x003E3C18 File Offset: 0x003E1E18
+		// Token: 0x0601CD8B RID: 118155 RVA: 0x0040FEB4 File Offset: 0x0040E0B4
 		public IGmSetLevelPlaySwitchForceT UnPack()
 		{
 			IGmSetLevelPlaySwitchForceT gmSetLevelPlaySwitchForceT = new IGmSetLevelPlaySwitchForceT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return gmSetLevelPlaySwitchForceT;
 		}
 
-		// Token: 0x0601B5B7 RID: 112055 RVA: 0x003E3C33 File Offset: 0x003E1E33
+		// Token: 0x0601CD8C RID: 118156 RVA: 0x0040FECF File Offset: 0x0040E0CF
 		public void UnPackTo(IGmSetLevelPlaySwitchForceT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			_o.IsOpen = this.IsOpen;
 		}
 
-		// Token: 0x0601B5B8 RID: 112056 RVA: 0x003E3C5C File Offset: 0x003E1E5C
+		// Token: 0x0601CD8D RID: 118157 RVA: 0x0040FEF8 File Offset: 0x0040E0F8
 		public static Offset<IGmSetLevelPlaySwitchForce> Pack(FlatBufferBuilder builder, IGmSetLevelPlaySwitchForceT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IGmSetLevelPlaySwitchForce.CreateIGmSetLevelPlaySwitchForce(builder, _o.Type, _o.LevelPlayId, _o.IsOpen);
 		}
 
-		// Token: 0x0400C827 RID: 51239
+		// Token: 0x0400D256 RID: 53846
 		private Table __p;
 	}
 }

@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005849 RID: 22601
+	// Token: 0x02004821 RID: 18465
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractionSpotComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x06039740 RID: 235328 RVA: 0x00DA3012 File Offset: 0x00DA1212
+		// Token: 0x0602E657 RID: 190039 RVA: 0x00CF1CEA File Offset: 0x00CEFEEA
 		static InteractionSpotComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InteractionSpotComponent.CreateStaticDefaultValue), new Action(InteractionSpotComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06039741 RID: 235329 RVA: 0x00DA3034 File Offset: 0x00DA1234
+		// Token: 0x0602E658 RID: 190040 RVA: 0x00CF1D0C File Offset: 0x00CEFF0C
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return true;
 		}
 
-		// Token: 0x06039742 RID: 235330 RVA: 0x00DA318C File Offset: 0x00DA138C
+		// Token: 0x0602E659 RID: 190041 RVA: 0x00CF1E64 File Offset: 0x00CF0064
 		protected override void OnTick(float delta)
 		{
 			if (this.SpotView == null)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SpotView.Update();
 		}
 
-		// Token: 0x06039743 RID: 235331 RVA: 0x00DA31B0 File Offset: 0x00DA13B0
+		// Token: 0x0602E65A RID: 190042 RVA: 0x00CF1E88 File Offset: 0x00CF0088
 		protected override bool OnEnd()
 		{
 			this.RemoveEventListeners();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return true;
 		}
 
-		// Token: 0x06039744 RID: 235332 RVA: 0x00DA31C0 File Offset: 0x00DA13C0
+		// Token: 0x0602E65B RID: 190043 RVA: 0x00CF1E98 File Offset: 0x00CF0098
 		private void AddEventListeners()
 		{
 			EventSystem.Instance.Add(EEventName.OnSelectHintChange, new Action<int>(this.OnSelectHintChange));
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Interaction
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange));
 		}
 
-		// Token: 0x06039745 RID: 235333 RVA: 0x00DA32AC File Offset: 0x00DA14AC
+		// Token: 0x0602E65C RID: 190044 RVA: 0x00CF1F84 File Offset: 0x00CF0184
 		private void RemoveEventListeners()
 		{
 			if (EventSystem.Instance.Has(EEventName.OnSelectHintChange, new Action<int>(this.OnSelectHintChange)))
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039746 RID: 235334 RVA: 0x00DA3478 File Offset: 0x00DA1678
+		// Token: 0x0602E65D RID: 190045 RVA: 0x00CF2150 File Offset: 0x00CF0350
 		private void OnSelectHintChange(int index)
 		{
 			int interactEntityByIndex = InteractionModel.Instance.GetInteractEntityByIndex(index);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Interaction
 			spotView.SetIsSelect(this.CachedIsSelect);
 		}
 
-		// Token: 0x06039747 RID: 235335 RVA: 0x00DA34BB File Offset: 0x00DA16BB
+		// Token: 0x0602E65E RID: 190046 RVA: 0x00CF2193 File Offset: 0x00CF0393
 		private void OnInEntityInteractRangeChange(bool isInEntityInteractRange)
 		{
 			this.CachedIsInEntityInteractRange = isInEntityInteractRange;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Interaction
 			spotView.SetIsInEntityInteractRange(this.CachedIsInEntityInteractRange);
 		}
 
-		// Token: 0x06039748 RID: 235336 RVA: 0x00DA34DA File Offset: 0x00DA16DA
+		// Token: 0x0602E65F RID: 190047 RVA: 0x00CF21B2 File Offset: 0x00CF03B2
 		public void SetSuppressLongPressProgress(bool suppress)
 		{
 			this.SuppressLongPressProgressState = suppress;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Interaction
 			spotView.SetSuppressLongPressProgress(suppress);
 		}
 
-		// Token: 0x06039749 RID: 235337 RVA: 0x00DA34F4 File Offset: 0x00DA16F4
+		// Token: 0x0602E660 RID: 190048 RVA: 0x00CF21CC File Offset: 0x00CF03CC
 		protected void DestroyShowSpotEvent()
 		{
 			if (this.ShowSpotEvent != null)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603974A RID: 235338 RVA: 0x00DA3515 File Offset: 0x00DA1715
+		// Token: 0x0602E661 RID: 190049 RVA: 0x00CF21ED File Offset: 0x00CF03ED
 		protected void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.CheckSpotViewShow(false);
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603974B RID: 235339 RVA: 0x00DA353C File Offset: 0x00DA173C
+		// Token: 0x0602E662 RID: 190050 RVA: 0x00CF2214 File Offset: 0x00CF0414
 		private void TryCreateSpot()
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -232,34 +232,43 @@ namespace CSharpScript.Game.Module.Interaction
 			{
 				return;
 			}
-			this.CreatedPromise = new CustomPromise();
-			this.CreateSpot().Forget();
+			CustomPromise createdPromise = new CustomPromise();
+			this.CreatedPromise = createdPromise;
+			int num = this.CreateSpotVersion + 1;
+			this.CreateSpotVersion = num;
+			int createSpotVersion = num;
+			this.CreateSpot(createSpotVersion, createdPromise).Forget();
 		}
 
-		// Token: 0x0603974C RID: 235340 RVA: 0x00DA357C File Offset: 0x00DA177C
-		private UniTask CreateSpot()
+		// Token: 0x0602E663 RID: 190051 RVA: 0x00CF2274 File Offset: 0x00CF0474
+		[NullableContext(1)]
+		private UniTask CreateSpot(int createSpotVersion, CustomPromise createdPromise)
 		{
-			InteractionSpotComponent.<CreateSpot>d__31 <CreateSpot>d__;
+			InteractionSpotComponent.<CreateSpot>d__32 <CreateSpot>d__;
 			<CreateSpot>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateSpot>d__.<>4__this = this;
+			<CreateSpot>d__.createSpotVersion = createSpotVersion;
+			<CreateSpot>d__.createdPromise = createdPromise;
 			<CreateSpot>d__.<>1__state = -1;
-			<CreateSpot>d__.<>t__builder.Start<InteractionSpotComponent.<CreateSpot>d__31>(ref <CreateSpot>d__);
+			<CreateSpot>d__.<>t__builder.Start<InteractionSpotComponent.<CreateSpot>d__32>(ref <CreateSpot>d__);
 			return <CreateSpot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603974D RID: 235341 RVA: 0x00DA35C0 File Offset: 0x00DA17C0
+		// Token: 0x0602E664 RID: 190052 RVA: 0x00CF22C8 File Offset: 0x00CF04C8
 		[NullableContext(0)]
-		private UniTask<bool> AddSpotIconAsync()
+		private UniTask<bool> AddSpotIconAsync(int createSpotVersion, [Nullable(1)] CustomPromise createdPromise)
 		{
-			InteractionSpotComponent.<AddSpotIconAsync>d__32 <AddSpotIconAsync>d__;
+			InteractionSpotComponent.<AddSpotIconAsync>d__33 <AddSpotIconAsync>d__;
 			<AddSpotIconAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<AddSpotIconAsync>d__.<>4__this = this;
+			<AddSpotIconAsync>d__.createSpotVersion = createSpotVersion;
+			<AddSpotIconAsync>d__.createdPromise = createdPromise;
 			<AddSpotIconAsync>d__.<>1__state = -1;
-			<AddSpotIconAsync>d__.<>t__builder.Start<InteractionSpotComponent.<AddSpotIconAsync>d__32>(ref <AddSpotIconAsync>d__);
+			<AddSpotIconAsync>d__.<>t__builder.Start<InteractionSpotComponent.<AddSpotIconAsync>d__33>(ref <AddSpotIconAsync>d__);
 			return <AddSpotIconAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603974E RID: 235342 RVA: 0x00DA3604 File Offset: 0x00DA1804
+		// Token: 0x0602E665 RID: 190053 RVA: 0x00CF231C File Offset: 0x00CF051C
 		private void TryDestroySpot()
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -283,19 +292,44 @@ namespace CSharpScript.Game.Module.Interaction
 			this.Destroy();
 		}
 
-		// Token: 0x0603974F RID: 235343 RVA: 0x00DA365C File Offset: 0x00DA185C
-		[NullableContext(0)]
-		private UniTask<bool> CreateSpotIcon()
+		// Token: 0x0602E666 RID: 190054 RVA: 0x00CF2374 File Offset: 0x00CF0574
+		[NullableContext(1)]
+		private bool IsCreateSpotValid(int createSpotVersion, CustomPromise createdPromise)
 		{
-			InteractionSpotComponent.<CreateSpotIcon>d__34 <CreateSpotIcon>d__;
+			return createSpotVersion == this.CreateSpotVersion && this.CreatedPromise == createdPromise && !this.IsDestroy;
+		}
+
+		// Token: 0x0602E667 RID: 190055 RVA: 0x00CF2394 File Offset: 0x00CF0594
+		[NullableContext(0)]
+		private UniTask<bool> CreateSpotIcon(int createSpotVersion, [Nullable(1)] CustomPromise createdPromise)
+		{
+			InteractionSpotComponent.<CreateSpotIcon>d__36 <CreateSpotIcon>d__;
 			<CreateSpotIcon>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CreateSpotIcon>d__.<>4__this = this;
+			<CreateSpotIcon>d__.createSpotVersion = createSpotVersion;
+			<CreateSpotIcon>d__.createdPromise = createdPromise;
 			<CreateSpotIcon>d__.<>1__state = -1;
-			<CreateSpotIcon>d__.<>t__builder.Start<InteractionSpotComponent.<CreateSpotIcon>d__34>(ref <CreateSpotIcon>d__);
+			<CreateSpotIcon>d__.<>t__builder.Start<InteractionSpotComponent.<CreateSpotIcon>d__36>(ref <CreateSpotIcon>d__);
 			return <CreateSpotIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039750 RID: 235344 RVA: 0x00DA369F File Offset: 0x00DA189F
+		// Token: 0x0602E668 RID: 190056 RVA: 0x00CF23E8 File Offset: 0x00CF05E8
+		[NullableContext(1)]
+		private void DestroySpotView(InteractionSpotView spotView, UiPoolActor uiPoolActor, string path)
+		{
+			UiModel.Instance.RemoveNpcIconViewUnit(spotView);
+			spotView.DestroySelf(delegate
+			{
+				AActor actor = uiPoolActor.Actor;
+				if (actor != null)
+				{
+					actor.DetachRootComponentFromParent(true);
+				}
+				UiActorPool.Instance.RecycleAsync(uiPoolActor, path);
+			});
+		}
+
+		// Token: 0x0602E669 RID: 190057 RVA: 0x00CF2426 File Offset: 0x00CF0626
 		private void ApplyCachedSpotViewState()
 		{
 			if (this.SpotView == null)
@@ -307,10 +341,10 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SpotView.SetSuppressLongPressProgress(this.SuppressLongPressProgressState);
 		}
 
-		// Token: 0x06039751 RID: 235345 RVA: 0x00DA36E0 File Offset: 0x00DA18E0
+		// Token: 0x0602E66A RID: 190058 RVA: 0x00CF2464 File Offset: 0x00CF0664
 		private void Destroy()
 		{
-			InteractionSpotComponent.<>c__DisplayClass36_0 CS$<>8__locals1 = new InteractionSpotComponent.<>c__DisplayClass36_0();
+			InteractionSpotComponent.<>c__DisplayClass39_0 CS$<>8__locals1 = new InteractionSpotComponent.<>c__DisplayClass39_0();
 			BaseActorComponent actorComp = this.ActorComp;
 			if (actorComp != null)
 			{
@@ -324,6 +358,7 @@ namespace CSharpScript.Game.Module.Interaction
 			CS$<>8__locals1.uiPoolActor = this.UiPoolActor;
 			CS$<>8__locals1.path = this.Path;
 			CS$<>8__locals1.trackData = this.TrackData;
+			this.CreateSpotVersion++;
 			if (spotView == null && CS$<>8__locals1.uiPoolActor == null)
 			{
 				this.IsDestroy = true;
@@ -366,7 +401,7 @@ namespace CSharpScript.Game.Module.Interaction
 			});
 		}
 
-		// Token: 0x06039752 RID: 235346 RVA: 0x00DA37F4 File Offset: 0x00DA19F4
+		// Token: 0x0602E66B RID: 190059 RVA: 0x00CF2588 File Offset: 0x00CF0788
 		private static void InitLineTraceInfo()
 		{
 			UTraceLineElement utraceLineElement = new UTraceLineElement();
@@ -382,7 +417,7 @@ namespace CSharpScript.Game.Module.Interaction
 			InteractionSpotComponent.LineTrace = utraceLineElement;
 		}
 
-		// Token: 0x06039753 RID: 235347 RVA: 0x00DA3864 File Offset: 0x00DA1A64
+		// Token: 0x0602E66C RID: 190060 RVA: 0x00CF25F8 File Offset: 0x00CF07F8
 		private void InteractSpotLineTrace()
 		{
 			if (InteractionSpotComponent.LineTrace == null)
@@ -408,7 +443,7 @@ namespace CSharpScript.Game.Module.Interaction
 			spotView.SetIsObstruct(isObstruct);
 		}
 
-		// Token: 0x06039754 RID: 235348 RVA: 0x00DA391C File Offset: 0x00DA1B1C
+		// Token: 0x0602E66D RID: 190061 RVA: 0x00CF26B0 File Offset: 0x00CF08B0
 		private UPrimitiveComponent GetAttachToMeshComponent()
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -434,7 +469,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return this.ActorComp.SkeletalMesh;
 		}
 
-		// Token: 0x06039755 RID: 235349 RVA: 0x00DA3990 File Offset: 0x00DA1B90
+		// Token: 0x0602E66E RID: 190062 RVA: 0x00CF2724 File Offset: 0x00CF0924
 		[NullableContext(1)]
 		private global::Vector GetAttachToLocation()
 		{
@@ -463,7 +498,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return vector;
 		}
 
-		// Token: 0x06039756 RID: 235350 RVA: 0x00DA3A44 File Offset: 0x00DA1C44
+		// Token: 0x0602E66F RID: 190063 RVA: 0x00CF27D8 File Offset: 0x00CF09D8
 		private void SetOffsetToView()
 		{
 			global::Vector offset = this.GetOffset();
@@ -475,7 +510,7 @@ namespace CSharpScript.Game.Module.Interaction
 			spotView.SetOffset(offset);
 		}
 
-		// Token: 0x06039757 RID: 235351 RVA: 0x00DA3A6C File Offset: 0x00DA1C6C
+		// Token: 0x0602E670 RID: 190064 RVA: 0x00CF2800 File Offset: 0x00CF0A00
 		[NullableContext(1)]
 		private global::Vector GetOffset()
 		{
@@ -504,7 +539,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return this.Offset;
 		}
 
-		// Token: 0x06039758 RID: 235352 RVA: 0x00DA3B34 File Offset: 0x00DA1D34
+		// Token: 0x0602E671 RID: 190065 RVA: 0x00CF28C8 File Offset: 0x00CF0AC8
 		private void CheckEntityIsTracking()
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -535,19 +570,19 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039759 RID: 235353 RVA: 0x00DA3BDE File Offset: 0x00DA1DDE
+		// Token: 0x0602E672 RID: 190066 RVA: 0x00CF2972 File Offset: 0x00CF0B72
 		private void OnAddDynamicOption()
 		{
 			this.CheckSpotViewShow(false);
 		}
 
-		// Token: 0x0603975A RID: 235354 RVA: 0x00DA3BE7 File Offset: 0x00DA1DE7
+		// Token: 0x0602E673 RID: 190067 RVA: 0x00CF297B File Offset: 0x00CF0B7B
 		private void OnRemoveDynamicOption()
 		{
 			this.CheckSpotViewShow(false);
 		}
 
-		// Token: 0x0603975B RID: 235355 RVA: 0x00DA3BF0 File Offset: 0x00DA1DF0
+		// Token: 0x0602E674 RID: 190068 RVA: 0x00CF2984 File Offset: 0x00CF0B84
 		private void CheckSpotViewShow(bool isInit = false)
 		{
 			if (this.SpotView == null)
@@ -571,7 +606,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SpotView.Hide(null);
 		}
 
-		// Token: 0x0603975C RID: 235356 RVA: 0x00DA3C7C File Offset: 0x00DA1E7C
+		// Token: 0x0602E675 RID: 190069 RVA: 0x00CF2A10 File Offset: 0x00CF0C10
 		[NullableContext(1)]
 		private void OnTrackMark(ITrackData data)
 		{
@@ -600,7 +635,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603975D RID: 235357 RVA: 0x00DA3D18 File Offset: 0x00DA1F18
+		// Token: 0x0602E676 RID: 190070 RVA: 0x00CF2AAC File Offset: 0x00CF0CAC
 		[NullableContext(1)]
 		private void OnUnTrackMark(ITrackData data)
 		{
@@ -629,24 +664,24 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603975E RID: 235358 RVA: 0x00DA3DA6 File Offset: 0x00DA1FA6
+		// Token: 0x0602E677 RID: 190071 RVA: 0x00CF2B3A File Offset: 0x00CF0D3A
 		public bool IsSpotViewShow()
 		{
 			return this.SpotView != null && this.IsViewShow;
 		}
 
-		// Token: 0x0603975F RID: 235359 RVA: 0x00DA3DB8 File Offset: 0x00DA1FB8
+		// Token: 0x0602E678 RID: 190072 RVA: 0x00CF2B4C File Offset: 0x00CF0D4C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039760 RID: 235360 RVA: 0x00DA3DBA File Offset: 0x00DA1FBA
+		// Token: 0x0602E679 RID: 190073 RVA: 0x00CF2B4E File Offset: 0x00CF0D4E
 		public static void ResetStaticDefaultValue()
 		{
 			InteractionSpotComponent.LineTrace = null;
 		}
 
-		// Token: 0x06039761 RID: 235361 RVA: 0x00DA3DC4 File Offset: 0x00DA1FC4
+		// Token: 0x0602E67A RID: 190074 RVA: 0x00CF2B58 File Offset: 0x00CF0D58
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -655,215 +690,198 @@ namespace CSharpScript.Game.Module.Interaction
 				return false;
 			}
 			InteractionSpotComponent interactionSpotComponent = (InteractionSpotComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (interactionSpotComponent.ActorComp == null)
 			{
-				if (interactionSpotComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("PawnInfoManageComp"))
-			{
-				if (interactionSpotComponent.PawnInfoManageComp == null)
-				{
-					this.PawnInfoManageComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInfoManageComponent>(this.PawnInfoManageComp), "PawnInfoManageComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PawnInteractComp"))
-			{
-				if (interactionSpotComponent.PawnInteractComp == null)
-				{
-					this.PawnInteractComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractNewComponent>(this.PawnInteractComp), "PawnInteractComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("UiPoolActor"))
-			{
-				if (interactionSpotComponent.UiPoolActor == null)
-				{
-					this.UiPoolActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UiPoolActor>(this.UiPoolActor), "UiPoolActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Path"))
-			{
-				this.Path = interactionSpotComponent.Path;
-			}
-			if (base.CanResetComponentProperty("SpotView"))
-			{
-				if (interactionSpotComponent.SpotView == null)
-				{
-					this.SpotView = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<InteractionSpotView>(this.SpotView), "SpotView"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CustomPromise"))
-			{
-				if (interactionSpotComponent.CustomPromise == null)
-				{
-					this.CustomPromise = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.CustomPromise), "CustomPromise"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ReCreateSpotView"))
-			{
-				if (interactionSpotComponent.ReCreateSpotView == null)
-				{
-					this.ReCreateSpotView = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.ReCreateSpotView), "ReCreateSpotView"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ShowSpotEvent"))
-			{
-				if (interactionSpotComponent.ShowSpotEvent == null)
-				{
-					this.ShowSpotEvent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.ShowSpotEvent), "ShowSpotEvent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatedPromise"))
-			{
-				if (interactionSpotComponent.CreatedPromise == null)
-				{
-					this.CreatedPromise = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.CreatedPromise), "CreatedPromise"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TmpVector") && interactionSpotComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TrackData"))
+			if (interactionSpotComponent.PawnInfoManageComp == null)
 			{
-				if (interactionSpotComponent.TrackData == null)
-				{
-					this.TrackData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITrackData>(this.TrackData), "TrackData"))
-				{
-					return false;
-				}
+				this.PawnInfoManageComp = null;
 			}
-			if (base.CanResetComponentProperty("IsDestroy"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnInfoManageComp), "PawnInfoManageComp"))
 			{
-				this.IsDestroy = interactionSpotComponent.IsDestroy;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsViewShow"))
+			if (interactionSpotComponent.PawnInteractComp == null)
 			{
-				this.IsViewShow = interactionSpotComponent.IsViewShow;
+				this.PawnInteractComp = null;
 			}
-			if (base.CanResetComponentProperty("Offset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnInteractComp), "PawnInteractComp"))
 			{
-				if (interactionSpotComponent.Offset == null)
-				{
-					this.Offset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.Offset), "Offset"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CachedIsSelect"))
+			if (interactionSpotComponent.UiPoolActor == null)
 			{
-				this.CachedIsSelect = interactionSpotComponent.CachedIsSelect;
+				this.UiPoolActor = null;
 			}
-			if (base.CanResetComponentProperty("CachedIsInEntityInteractRange"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UiPoolActor), "UiPoolActor"))
 			{
-				this.CachedIsInEntityInteractRange = interactionSpotComponent.CachedIsInEntityInteractRange;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SuppressLongPressProgressState"))
+			this.Path = interactionSpotComponent.Path;
+			if (interactionSpotComponent.SpotView == null)
 			{
-				this.SuppressLongPressProgressState = interactionSpotComponent.SuppressLongPressProgressState;
+				this.SpotView = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpotView), "SpotView"))
+			{
+				return false;
+			}
+			if (interactionSpotComponent.CustomPromise == null)
+			{
+				this.CustomPromise = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomPromise), "CustomPromise"))
+			{
+				return false;
+			}
+			if (interactionSpotComponent.ReCreateSpotView == null)
+			{
+				this.ReCreateSpotView = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReCreateSpotView), "ReCreateSpotView"))
+			{
+				return false;
+			}
+			if (interactionSpotComponent.ShowSpotEvent == null)
+			{
+				this.ShowSpotEvent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShowSpotEvent), "ShowSpotEvent"))
+			{
+				return false;
+			}
+			if (interactionSpotComponent.CreatedPromise == null)
+			{
+				this.CreatedPromise = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatedPromise), "CreatedPromise"))
+			{
+				return false;
+			}
+			this.CreateSpotVersion = interactionSpotComponent.CreateSpotVersion;
+			if (interactionSpotComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
+			{
+				return false;
+			}
+			if (interactionSpotComponent.TrackData == null)
+			{
+				this.TrackData = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TrackData), "TrackData"))
+			{
+				return false;
+			}
+			this.IsDestroy = interactionSpotComponent.IsDestroy;
+			this.IsViewShow = interactionSpotComponent.IsViewShow;
+			if (interactionSpotComponent.Offset == null)
+			{
+				this.Offset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Offset), "Offset"))
+			{
+				return false;
+			}
+			this.CachedIsSelect = interactionSpotComponent.CachedIsSelect;
+			this.CachedIsInEntityInteractRange = interactionSpotComponent.CachedIsInEntityInteractRange;
+			this.SuppressLongPressProgressState = interactionSpotComponent.SuppressLongPressProgressState;
 			return true;
 		}
 
-		// Token: 0x0401E0C4 RID: 123076
+		// Token: 0x17005E14 RID: 24084
+		// (get) Token: 0x0602E67B RID: 190075 RVA: 0x00CF2DC7 File Offset: 0x00CF0FC7
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17005E15 RID: 24085
+		// (get) Token: 0x0602E67C RID: 190076 RVA: 0x00CF2DCA File Offset: 0x00CF0FCA
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17005E16 RID: 24086
+		// (get) Token: 0x0602E67D RID: 190077 RVA: 0x00CF2DCD File Offset: 0x00CF0FCD
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04018B60 RID: 101216
 		private static UTraceLineElement LineTrace;
 
-		// Token: 0x0401E0C5 RID: 123077
+		// Token: 0x04018B61 RID: 101217
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x0401E0C6 RID: 123078
+		// Token: 0x04018B62 RID: 101218
 		private PawnInfoManageComponent PawnInfoManageComp;
 
-		// Token: 0x0401E0C7 RID: 123079
+		// Token: 0x04018B63 RID: 101219
 		private PawnInteractNewComponent PawnInteractComp;
 
-		// Token: 0x0401E0C8 RID: 123080
+		// Token: 0x04018B64 RID: 101220
 		private UiPoolActor UiPoolActor;
 
-		// Token: 0x0401E0C9 RID: 123081
+		// Token: 0x04018B65 RID: 101221
 		[Nullable(1)]
 		private string Path = "";
 
-		// Token: 0x0401E0CA RID: 123082
+		// Token: 0x04018B66 RID: 101222
 		protected InteractionSpotView SpotView;
 
-		// Token: 0x0401E0CB RID: 123083
+		// Token: 0x04018B67 RID: 101223
 		private CustomPromise CustomPromise;
 
-		// Token: 0x0401E0CC RID: 123084
+		// Token: 0x04018B68 RID: 101224
 		private Action ReCreateSpotView;
 
-		// Token: 0x0401E0CD RID: 123085
+		// Token: 0x04018B69 RID: 101225
 		private PlayerPerceptionEvent ShowSpotEvent;
 
-		// Token: 0x0401E0CE RID: 123086
+		// Token: 0x04018B6A RID: 101226
 		private CustomPromise CreatedPromise;
 
-		// Token: 0x0401E0CF RID: 123087
+		// Token: 0x04018B6B RID: 101227
+		private int CreateSpotVersion;
+
+		// Token: 0x04018B6C RID: 101228
 		[Nullable(1)]
 		private readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x0401E0D0 RID: 123088
+		// Token: 0x04018B6D RID: 101229
 		private ITrackData TrackData;
 
-		// Token: 0x0401E0D1 RID: 123089
+		// Token: 0x04018B6E RID: 101230
 		private bool IsDestroy;
 
-		// Token: 0x0401E0D2 RID: 123090
+		// Token: 0x04018B6F RID: 101231
 		private bool IsViewShow = true;
 
-		// Token: 0x0401E0D3 RID: 123091
+		// Token: 0x04018B70 RID: 101232
 		private global::Vector Offset;
 
-		// Token: 0x0401E0D4 RID: 123092
+		// Token: 0x04018B71 RID: 101233
 		private bool CachedIsSelect;
 
-		// Token: 0x0401E0D5 RID: 123093
+		// Token: 0x04018B72 RID: 101234
 		private bool CachedIsInEntityInteractRange;
 
-		// Token: 0x0401E0D6 RID: 123094
+		// Token: 0x04018B73 RID: 101235
 		private bool SuppressLongPressProgressState;
 	}
 }

@@ -14,10 +14,11 @@ using UnrealEngine;
 using UnrealEngine.Extension;
 
 // Token: 0x02000006 RID: 6
+[NullableContext(1)]
+[Nullable(0)]
 public class Launch
 {
-	// Token: 0x06000054 RID: 84 RVA: 0x00005F58 File Offset: 0x00004158
-	[NullableContext(1)]
+	// Token: 0x06000054 RID: 84 RVA: 0x00005FB0 File Offset: 0x000041B0
 	public static void DoLaunch(UGameInstance gameInstance)
 	{
 		CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
@@ -45,6 +46,8 @@ public class Launch
 		BP_MainGameInstance_C bp_MainGameInstance_C = Launch.LaunchGameInstance = (gameInstance as BP_MainGameInstance_C);
 		UWorld world = bp_MainGameInstance_C.GetWorld();
 		StaticVariableRegister.CreateRequiredStaticDefaultValue();
+		Launch.StartupTraceId = UKismetGuidLibrary.NewGuid().ToString();
+		HotPatchLogReport.Instance.Init(Launch.StartupTraceId);
 		bp_MainGameInstance_C.IsStartFromLaunch = true;
 		AppUtil.SetWorldContext(world);
 		InputDevice.Instance.Initialize();
@@ -60,6 +63,10 @@ public class Launch
 	}
 
 	// Token: 0x04000022 RID: 34
+	[StaticVariableRuleIgnore]
+	public static string StartupTraceId;
+
+	// Token: 0x04000023 RID: 35
 	[Nullable(2)]
 	[StaticVariableRuleIgnore]
 	public static BP_MainGameInstance_C LaunchGameInstance;

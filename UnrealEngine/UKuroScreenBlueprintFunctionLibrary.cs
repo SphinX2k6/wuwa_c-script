@@ -6,79 +6,79 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EC9 RID: 7881
+	// Token: 0x020005E2 RID: 1506
 	[UnrealObjectPath("/Script/KuroUtility.KuroScreenBlueprintFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroScreenBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DE6E RID: 122478 RVA: 0x002C3B1A File Offset: 0x002C1D1A
+		// Token: 0x06008518 RID: 34072 RVA: 0x000C5773 File Offset: 0x000C3973
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroScreenBlueprintFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x0601DE6F RID: 122479 RVA: 0x002C3B28 File Offset: 0x002C1D28
+		// Token: 0x06008519 RID: 34073 RVA: 0x000C5780 File Offset: 0x000C3980
 		public UKuroScreenBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroScreenBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DE70 RID: 122480 RVA: 0x002C3B50 File Offset: 0x002C1D50
+		// Token: 0x0600851A RID: 34074 RVA: 0x000C57A8 File Offset: 0x000C39A8
 		[NullableContext(1)]
 		public UKuroScreenBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroScreenBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601DE71 RID: 122481
+		// Token: 0x0600851B RID: 34075
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double GetScreenScaledDensity();
 
-		// Token: 0x0601DE72 RID: 122482
+		// Token: 0x0600851C RID: 34076
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double GetScreenLogicalDensity();
 
-		// Token: 0x0601DE73 RID: 122483
+		// Token: 0x0600851D RID: 34077
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double GetScreenDensityDPI();
 
-		// Token: 0x0601DE74 RID: 122484
+		// Token: 0x0600851E RID: 34078
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D GetPhysicalScreenResolutionV2();
 
-		// Token: 0x0601DE75 RID: 122485
+		// Token: 0x0600851F RID: 34079
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D GetPhysicalScreenResolution();
 
-		// Token: 0x0601DE76 RID: 122486
+		// Token: 0x06008520 RID: 34080
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double GetPhysicalScreenDensityDPI();
 
-		// Token: 0x0601DE77 RID: 122487
+		// Token: 0x06008521 RID: 34081
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern FVector2D GetDisplayScreenResolution();
 
-		// Token: 0x0601DE78 RID: 122488
+		// Token: 0x06008522 RID: 34082
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern double ComputePhysicalScreenDensity();
 
-		// Token: 0x0601DE79 RID: 122489 RVA: 0x002C3B83 File Offset: 0x002C1D83
+		// Token: 0x06008523 RID: 34083 RVA: 0x000C57DB File Offset: 0x000C39DB
 		static UKuroScreenBlueprintFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroScreenBlueprintFunctionLibrary");
 		}
 
-		// Token: 0x0601DE7A RID: 122490 RVA: 0x002C3B91 File Offset: 0x002C1D91
+		// Token: 0x06008524 RID: 34084 RVA: 0x000C57E9 File Offset: 0x000C39E9
 		protected UKuroScreenBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401030F RID: 66319
+		// Token: 0x04003A16 RID: 14870
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroScreenBlueprintFunctionLibrary";
 
-		// Token: 0x04010310 RID: 66320
+		// Token: 0x04003A17 RID: 14871
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010311 RID: 66321
+		// Token: 0x04003A18 RID: 14872
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

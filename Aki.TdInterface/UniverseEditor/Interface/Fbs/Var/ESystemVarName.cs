@@ -2,58 +2,58 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x020039FC RID: 14844
+	// Token: 0x02003DD7 RID: 15831
 	public enum ESystemVarName : byte
 	{
-		// Token: 0x0400AE28 RID: 44584
+		// Token: 0x0400B74A RID: 46922
 		CommonHotFixVar,
-		// Token: 0x0400AE29 RID: 44585
+		// Token: 0x0400B74B RID: 46923
 		CommonHostToTargetDistance,
-		// Token: 0x0400AE2A RID: 44586
+		// Token: 0x0400B74C RID: 46924
 		BvbFetchHandCard,
-		// Token: 0x0400AE2B RID: 44587
+		// Token: 0x0400B74D RID: 46925
 		BvbGetBoardCard,
-		// Token: 0x0400AE2C RID: 44588
+		// Token: 0x0400B74E RID: 46926
 		BvbGetCardPos,
-		// Token: 0x0400AE2D RID: 44589
+		// Token: 0x0400B74F RID: 46927
 		BvbGetCardEUse,
-		// Token: 0x0400AE2E RID: 44590
+		// Token: 0x0400B750 RID: 46928
 		BvbGetCardCUse,
-		// Token: 0x0400AE2F RID: 44591
+		// Token: 0x0400B751 RID: 46929
 		BvbRemainEvolveTimeThisTurn,
-		// Token: 0x0400AE30 RID: 44592
+		// Token: 0x0400B752 RID: 46930
 		BvbNpcCardNum,
-		// Token: 0x0400AE31 RID: 44593
+		// Token: 0x0400B753 RID: 46931
 		BvbNpcScore,
-		// Token: 0x0400AE32 RID: 44594
+		// Token: 0x0400B754 RID: 46932
 		BvbNpcCurEnergy,
-		// Token: 0x0400AE33 RID: 44595
+		// Token: 0x0400B755 RID: 46933
 		BvbAdjPosPrefer,
-		// Token: 0x0400AE34 RID: 44596
+		// Token: 0x0400B756 RID: 46934
 		BvbPlayerScore,
-		// Token: 0x0400AE35 RID: 44597
+		// Token: 0x0400B757 RID: 46935
 		BvbCurRound,
-		// Token: 0x0400AE36 RID: 44598
+		// Token: 0x0400B758 RID: 46936
 		BvbMaxRound,
-		// Token: 0x0400AE37 RID: 44599
+		// Token: 0x0400B759 RID: 46937
 		BvbPlayerHp,
-		// Token: 0x0400AE38 RID: 44600
+		// Token: 0x0400B75A RID: 46938
 		BvbNpcHp,
-		// Token: 0x0400AE39 RID: 44601
+		// Token: 0x0400B75B RID: 46939
 		BvbPlayerHpValue,
-		// Token: 0x0400AE3A RID: 44602
+		// Token: 0x0400B75C RID: 46940
 		BvbNpcHpValue,
-		// Token: 0x0400AE3B RID: 44603
+		// Token: 0x0400B75D RID: 46941
 		BvbNpcCurBoardCardCount,
-		// Token: 0x0400AE3C RID: 44604
+		// Token: 0x0400B75E RID: 46942
 		BvbMaxBoardCardCount,
-		// Token: 0x0400AE3D RID: 44605
+		// Token: 0x0400B75F RID: 46943
 		BvbDungeonStage,
-		// Token: 0x0400AE3E RID: 44606
+		// Token: 0x0400B760 RID: 46944
 		BvbCustomSystemVarInt,
-		// Token: 0x0400AE3F RID: 44607
+		// Token: 0x0400B761 RID: 46945
 		BvbCustomSystemVarFloat,
-		// Token: 0x0400AE40 RID: 44608
+		// Token: 0x0400B762 RID: 46946
 		QuestBranchPageId
 	}
 }

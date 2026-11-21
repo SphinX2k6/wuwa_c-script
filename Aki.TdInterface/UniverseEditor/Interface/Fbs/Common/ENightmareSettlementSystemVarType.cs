@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D01 RID: 23809
+	// Token: 0x02006335 RID: 25397
 	public enum ENightmareSettlementSystemVarType : byte
 	{
-		// Token: 0x0400F66E RID: 63086
+		// Token: 0x040103BD RID: 66493
 		MonsterKilled,
-		// Token: 0x0400F66F RID: 63087
+		// Token: 0x040103BE RID: 66494
 		TotalMonsterPerDay
 	}
 }

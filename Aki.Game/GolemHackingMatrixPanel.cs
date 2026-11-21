@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001018 RID: 4120
+// Token: 0x020004CC RID: 1228
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingMatrixPanel : UiPanelBase
 {
-	// Token: 0x060069CE RID: 27086 RVA: 0x00152F70 File Offset: 0x00151170
+	// Token: 0x06003D63 RID: 15715 RVA: 0x0015B898 File Offset: 0x00159A98
 	public GolemHackingMatrixPanel(GolemHackingGameProxy proxy)
 	{
 		this.Proxy = proxy;
 	}
 
-	// Token: 0x060069CF RID: 27087 RVA: 0x00152F80 File Offset: 0x00151180
+	// Token: 0x06003D64 RID: 15716 RVA: 0x0015B8A8 File Offset: 0x00159AA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -44,7 +44,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060069D0 RID: 27088 RVA: 0x001530AF File Offset: 0x001512AF
+	// Token: 0x06003D65 RID: 15717 RVA: 0x0015B9D7 File Offset: 0x00159BD7
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<GolemHackingMatrixVerticalPanel, List<GolemHackingGridInfo>>(base.GetHorizontalLayout(6), new Func<GolemHackingMatrixVerticalPanel>(this.CreateVertical), null, false, true);
@@ -53,7 +53,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		base.GetTexture(5).SetUIActive(false);
 	}
 
-	// Token: 0x060069D1 RID: 27089 RVA: 0x001530EC File Offset: 0x001512EC
+	// Token: 0x06003D66 RID: 15718 RVA: 0x0015BA14 File Offset: 0x00159C14
 	protected void InitCallback()
 	{
 		this.Proxy.ResetMatrixCallback = new Action(this.ResetMatrixCallback);
@@ -70,7 +70,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		this.Proxy.OnGetHelpTips = new Func<List<GolemHackingTipsGirdInfo>>(this.OnGetHelpTips);
 	}
 
-	// Token: 0x060069D2 RID: 27090 RVA: 0x00153184 File Offset: 0x00151384
+	// Token: 0x06003D67 RID: 15719 RVA: 0x0015BAAC File Offset: 0x00159CAC
 	protected void InitGamePlay()
 	{
 		bool needTick = this.Proxy.GetNeedTick();
@@ -100,7 +100,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x060069D3 RID: 27091 RVA: 0x00153218 File Offset: 0x00151418
+	// Token: 0x06003D68 RID: 15720 RVA: 0x0015BB40 File Offset: 0x00159D40
 	protected void UpdateBtnActiveState()
 	{
 		foreach (GolemHackingMatrixVerticalPanel golemHackingMatrixVerticalPanel in this.Layout.GetLayoutItemList())
@@ -109,7 +109,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069D4 RID: 27092 RVA: 0x00153270 File Offset: 0x00151470
+	// Token: 0x06003D69 RID: 15721 RVA: 0x0015BB98 File Offset: 0x00159D98
 	protected void OnUnHoverFakeHide(int index, bool reset = false)
 	{
 		foreach (GolemHackingMatrixVerticalPanel golemHackingMatrixVerticalPanel in this.Layout.GetLayoutItemList())
@@ -118,7 +118,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069D5 RID: 27093 RVA: 0x001532C8 File Offset: 0x001514C8
+	// Token: 0x06003D6A RID: 15722 RVA: 0x0015BBF0 File Offset: 0x00159DF0
 	protected void OnHoverFakeVisible(int index)
 	{
 		foreach (GolemHackingMatrixVerticalPanel golemHackingMatrixVerticalPanel in this.Layout.GetLayoutItemList())
@@ -127,7 +127,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069D6 RID: 27094 RVA: 0x00153320 File Offset: 0x00151520
+	// Token: 0x06003D6B RID: 15723 RVA: 0x0015BC48 File Offset: 0x00159E48
 	private void SetTimeTxt(double second)
 	{
 		int num = (int)Math.Floor(Math.Floor(second) / 60.0);
@@ -186,13 +186,13 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		text7.SetText(newText, true);
 	}
 
-	// Token: 0x060069D7 RID: 27095 RVA: 0x00153433 File Offset: 0x00151633
+	// Token: 0x06003D6C RID: 15724 RVA: 0x0015BD5B File Offset: 0x00159F5B
 	public void SetNeedTick(bool value)
 	{
 		this.NeedTick = value;
 	}
 
-	// Token: 0x060069D8 RID: 27096 RVA: 0x0015343C File Offset: 0x0015163C
+	// Token: 0x06003D6D RID: 15725 RVA: 0x0015BD64 File Offset: 0x00159F64
 	[NullableContext(2)]
 	public GolemHackingMatrixCodeButton GetCodeButtonByIndex(int index)
 	{
@@ -211,7 +211,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x060069D9 RID: 27097 RVA: 0x001534AC File Offset: 0x001516AC
+	// Token: 0x06003D6E RID: 15726 RVA: 0x0015BDD4 File Offset: 0x00159FD4
 	[NullableContext(2)]
 	public UUIItem GetCodeButtonNavListenerByIndex(int index)
 	{
@@ -223,7 +223,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		return codeButtonByIndex.GetFirstUiItemWithNavListener();
 	}
 
-	// Token: 0x060069DA RID: 27098 RVA: 0x001534CC File Offset: 0x001516CC
+	// Token: 0x06003D6F RID: 15727 RVA: 0x0015BDF4 File Offset: 0x00159FF4
 	[NullableContext(2)]
 	public GolemHackingMatrixVerticalPanel GetVerticalPanelByIndex(int index)
 	{
@@ -234,7 +234,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		return this.Layout.GetLayoutItemByIndex(index);
 	}
 
-	// Token: 0x060069DB RID: 27099 RVA: 0x001534EC File Offset: 0x001516EC
+	// Token: 0x06003D70 RID: 15728 RVA: 0x0015BE14 File Offset: 0x0015A014
 	public void OnTick(float delta)
 	{
 		if (!this.NeedTick)
@@ -260,7 +260,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069DC RID: 27100 RVA: 0x0015355C File Offset: 0x0015175C
+	// Token: 0x06003D71 RID: 15729 RVA: 0x0015BE84 File Offset: 0x0015A084
 	private GolemHackingMatrixVerticalPanel CreateVertical()
 	{
 		return new GolemHackingMatrixVerticalPanel(this.Proxy)
@@ -271,7 +271,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060069DD RID: 27101 RVA: 0x001535AC File Offset: 0x001517AC
+	// Token: 0x06003D72 RID: 15730 RVA: 0x0015BED4 File Offset: 0x0015A0D4
 	private void OnHoveredGrid(int index)
 	{
 		ValueTuple<int, bool> indexPos = this.Proxy.GetIndexPos(index);
@@ -292,7 +292,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		this.Proxy.OnHoveredMatrixGrid(index);
 	}
 
-	// Token: 0x060069DE RID: 27102 RVA: 0x00153638 File Offset: 0x00151838
+	// Token: 0x06003D73 RID: 15731 RVA: 0x0015BF60 File Offset: 0x0015A160
 	private void OnUnHoveredGrid(int index)
 	{
 		bool item = this.Proxy.GetIndexPos(index).Item2;
@@ -308,7 +308,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		this.Proxy.OnUnHoveredMatrixGrid();
 	}
 
-	// Token: 0x060069DF RID: 27103 RVA: 0x00153688 File Offset: 0x00151888
+	// Token: 0x06003D74 RID: 15732 RVA: 0x0015BFB0 File Offset: 0x0015A1B0
 	private void OnClickedGrid(int index)
 	{
 		ValueTuple<int, bool> valueTuple = this.Proxy.OnClickedGrid(index);
@@ -341,7 +341,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		texture.SetAnchorOffsetY((float)(-1 * (1 + 136 * item)));
 	}
 
-	// Token: 0x060069E0 RID: 27104 RVA: 0x00153760 File Offset: 0x00151960
+	// Token: 0x06003D75 RID: 15733 RVA: 0x0015C088 File Offset: 0x0015A288
 	private void ResetMatrixCallback()
 	{
 		this.SetNeedTick(false);
@@ -375,7 +375,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		this.SetTimeTxt(this.Proxy.GetMaxTime());
 	}
 
-	// Token: 0x060069E1 RID: 27105 RVA: 0x00153830 File Offset: 0x00151A30
+	// Token: 0x06003D76 RID: 15734 RVA: 0x0015C158 File Offset: 0x0015A358
 	private void HoverCodeCallback(string value)
 	{
 		foreach (GolemHackingMatrixVerticalPanel golemHackingMatrixVerticalPanel in this.Layout.GetLayoutItemList())
@@ -384,7 +384,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069E2 RID: 27106 RVA: 0x00153888 File Offset: 0x00151A88
+	// Token: 0x06003D77 RID: 15735 RVA: 0x0015C1B0 File Offset: 0x0015A3B0
 	private void UnHoverCodeCallback()
 	{
 		foreach (GolemHackingMatrixVerticalPanel golemHackingMatrixVerticalPanel in this.Layout.GetLayoutItemList())
@@ -393,7 +393,7 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069E3 RID: 27107 RVA: 0x001538E0 File Offset: 0x00151AE0
+	// Token: 0x06003D78 RID: 15736 RVA: 0x0015C208 File Offset: 0x0015A408
 	private List<GolemHackingTipsGirdInfo> OnGetHelpTips()
 	{
 		Dictionary<int, GolemHackingMatrixCodeButton> dictionary = new Dictionary<int, GolemHackingMatrixCodeButton>();
@@ -426,40 +426,40 @@ public class GolemHackingMatrixPanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x040030C9 RID: 12489
+	// Token: 0x04003162 RID: 12642
 	private const int GRID_WIDTH = 136;
 
-	// Token: 0x040030CA RID: 12490
+	// Token: 0x04003163 RID: 12643
 	private const string TIME_STRING = "{0}:{1}:{2}";
 
-	// Token: 0x040030CB RID: 12491
+	// Token: 0x04003164 RID: 12644
 	protected GenericLayout<GolemHackingMatrixVerticalPanel, List<GolemHackingGridInfo>> Layout;
 
-	// Token: 0x040030CC RID: 12492
+	// Token: 0x04003165 RID: 12645
 	protected bool NeedTick;
 
-	// Token: 0x040030CD RID: 12493
+	// Token: 0x04003166 RID: 12646
 	protected GolemHackingGameProxy Proxy;
 
-	// Token: 0x02007614 RID: 30228
+	// Token: 0x020067A8 RID: 26536
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x04027029 RID: 159785
+		// Token: 0x04022374 RID: 140148
 		PanelProgressEmpty,
-		// Token: 0x0402702A RID: 159786
+		// Token: 0x04022375 RID: 140149
 		PanelHackingTime,
-		// Token: 0x0402702B RID: 159787
+		// Token: 0x04022376 RID: 140150
 		TxtTime,
-		// Token: 0x0402702C RID: 159788
+		// Token: 0x04022377 RID: 140151
 		SpriteProgressFill,
-		// Token: 0x0402702D RID: 159789
+		// Token: 0x04022378 RID: 140152
 		TexBgSelFrameH,
-		// Token: 0x0402702E RID: 159790
+		// Token: 0x04022379 RID: 140153
 		TexBgSelFrameV,
-		// Token: 0x0402702F RID: 159791
+		// Token: 0x0402237A RID: 140154
 		PanelHorizon,
-		// Token: 0x04027030 RID: 159792
+		// Token: 0x0402237B RID: 140155
 		PanelVerticalItem
 	}
 }

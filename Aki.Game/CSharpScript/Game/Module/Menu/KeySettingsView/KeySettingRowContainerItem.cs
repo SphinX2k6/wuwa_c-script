@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005466 RID: 21606
+	// Token: 0x02004449 RID: 17481
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<KeySettingRowData>
 	{
-		// Token: 0x0603724A RID: 225866 RVA: 0x00D12088 File Offset: 0x00D10288
+		// Token: 0x0602C193 RID: 180627 RVA: 0x00C614A0 File Offset: 0x00C5F6A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x0603724B RID: 225867 RVA: 0x00D120E4 File Offset: 0x00D102E4
+		// Token: 0x0602C194 RID: 180628 RVA: 0x00C614FC File Offset: 0x00C5F6FC
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603724C RID: 225868 RVA: 0x00D12158 File Offset: 0x00D10358
+		// Token: 0x0602C195 RID: 180629 RVA: 0x00C61570 File Offset: 0x00C5F770
 		protected override void OnBeforeDestroy()
 		{
 			this.KeySettingRowData = null;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			extendToggle.OnUnHover.Remove(new Action(this.OnUnHover));
 		}
 
-		// Token: 0x0603724D RID: 225869 RVA: 0x00D121DD File Offset: 0x00D103DD
+		// Token: 0x0602C196 RID: 180630 RVA: 0x00C615F5 File Offset: 0x00C5F7F5
 		private void OnStateChanged(EToggleState state)
 		{
 			Action<KeySettingRowContainerItem, EToggleState> onToggleStateChanged = this.OnToggleStateChanged;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			onToggleStateChanged(this, state);
 		}
 
-		// Token: 0x0603724E RID: 225870 RVA: 0x00D121F1 File Offset: 0x00D103F1
+		// Token: 0x0602C197 RID: 180631 RVA: 0x00C61609 File Offset: 0x00C5F809
 		private void OnHover()
 		{
 			Action<KeySettingRowData> onHoverCallback = this.OnHoverCallback;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			onHoverCallback(this.KeySettingRowData);
 		}
 
-		// Token: 0x0603724F RID: 225871 RVA: 0x00D12209 File Offset: 0x00D10409
+		// Token: 0x0602C198 RID: 180632 RVA: 0x00C61621 File Offset: 0x00C5F821
 		private void OnUnHover()
 		{
 			Action<KeySettingRowData> onUnHoverCallback = this.OnUnHoverCallback;
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			onUnHoverCallback(this.KeySettingRowData);
 		}
 
-		// Token: 0x06037250 RID: 225872 RVA: 0x00D12221 File Offset: 0x00D10421
+		// Token: 0x0602C199 RID: 180633 RVA: 0x00C61639 File Offset: 0x00C5F839
 		public void BindOnToggleStateChanged(Action<KeySettingRowContainerItem, EToggleState> onToggleStateChanged)
 		{
 			this.OnToggleStateChanged = onToggleStateChanged;
 		}
 
-		// Token: 0x06037251 RID: 225873 RVA: 0x00D1222A File Offset: 0x00D1042A
+		// Token: 0x0602C19A RID: 180634 RVA: 0x00C61642 File Offset: 0x00C5F842
 		public void BindOnHover([Nullable(new byte[]
 		{
 			1,
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.OnHoverCallback = onHoverCallback;
 		}
 
-		// Token: 0x06037252 RID: 225874 RVA: 0x00D12233 File Offset: 0x00D10433
+		// Token: 0x0602C19B RID: 180635 RVA: 0x00C6164B File Offset: 0x00C5F84B
 		public void BindOnUnHover([Nullable(new byte[]
 		{
 			1,
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.OnUnHoverCallback = onUnHoverCallback;
 		}
 
-		// Token: 0x06037253 RID: 225875 RVA: 0x00D1223C File Offset: 0x00D1043C
+		// Token: 0x0602C19C RID: 180636 RVA: 0x00C61654 File Offset: 0x00C5F854
 		public UniTask Init(UUIItem actor)
 		{
 			KeySettingRowContainerItem.<Init>d__17 <Init>d__;
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037254 RID: 225876 RVA: 0x00D12287 File Offset: 0x00D10487
+		// Token: 0x0602C19D RID: 180637 RVA: 0x00C6169F File Offset: 0x00C5F89F
 		public void ClearItem()
 		{
 			this.KeySettingRowData = null;
 		}
 
-		// Token: 0x06037255 RID: 225877 RVA: 0x00D12290 File Offset: 0x00D10490
+		// Token: 0x0602C19E RID: 180638 RVA: 0x00C616A8 File Offset: 0x00C5F8A8
 		public void Update(KeySettingRowData data, int index)
 		{
 			EInputControllerType keySettingInputControllerType = MenuModel.Instance.KeySettingInputControllerType;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.SetToggleState(data.IsExpandDetail);
 		}
 
-		// Token: 0x06037256 RID: 225878 RVA: 0x00D12348 File Offset: 0x00D10548
+		// Token: 0x0602C19F RID: 180639 RVA: 0x00C61760 File Offset: 0x00C5F960
 		private UniTask NewKeySettingRowKeyItem()
 		{
 			KeySettingRowContainerItem.<NewKeySettingRowKeyItem>d__20 <NewKeySettingRowKeyItem>d__;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return <NewKeySettingRowKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037257 RID: 225879 RVA: 0x00D1238B File Offset: 0x00D1058B
+		// Token: 0x0602C1A0 RID: 180640 RVA: 0x00C617A3 File Offset: 0x00C5F9A3
 		private void OnWaitKeyInput(KeySettingRowData keySettingRowData, KeySettingRowKeyItem keySettingRowKeyItem)
 		{
 			Action<KeySettingRowData, KeySettingRowKeyItem, KeySettingRowContainerItem> onWaitInput = this.OnWaitInput;
@@ -201,13 +201,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			onWaitInput(keySettingRowData, keySettingRowKeyItem, this);
 		}
 
-		// Token: 0x06037258 RID: 225880 RVA: 0x00D123A0 File Offset: 0x00D105A0
+		// Token: 0x0602C1A1 RID: 180641 RVA: 0x00C617B8 File Offset: 0x00C5F9B8
 		public void BindOnWaitInput(Action<KeySettingRowData, KeySettingRowKeyItem, KeySettingRowContainerItem> onWaitInput)
 		{
 			this.OnWaitInput = onWaitInput;
 		}
 
-		// Token: 0x06037259 RID: 225881 RVA: 0x00D123AC File Offset: 0x00D105AC
+		// Token: 0x0602C1A2 RID: 180642 RVA: 0x00C617C4 File Offset: 0x00C5F9C4
 		private UniTask NewKeySettingRowTypeItem()
 		{
 			KeySettingRowContainerItem.<NewKeySettingRowTypeItem>d__23 <NewKeySettingRowTypeItem>d__;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return <NewKeySettingRowTypeItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603725A RID: 225882 RVA: 0x00D123F0 File Offset: 0x00D105F0
+		// Token: 0x0602C1A3 RID: 180643 RVA: 0x00C61808 File Offset: 0x00C5FA08
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(KeySettingRowData data)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			return base.GetItem(2).GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603725B RID: 225883 RVA: 0x00D12433 File Offset: 0x00D10633
+		// Token: 0x0602C1A4 RID: 180644 RVA: 0x00C6184B File Offset: 0x00C5FA4B
 		public void SetSelected(bool bSelected)
 		{
 			KeySettingRowKeyItem keySettingRowKeyItem = this.KeySettingRowKeyItem;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			keySettingRowKeyItem.SetSelected(bSelected);
 		}
 
-		// Token: 0x0603725C RID: 225884 RVA: 0x00D12446 File Offset: 0x00D10646
+		// Token: 0x0602C1A5 RID: 180645 RVA: 0x00C6185E File Offset: 0x00C5FA5E
 		public void SetDetailItemVisible(bool bVisible)
 		{
 			KeySettingRowKeyItem keySettingRowKeyItem = this.KeySettingRowKeyItem;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.SetToggleState(bVisible);
 		}
 
-		// Token: 0x0603725D RID: 225885 RVA: 0x00D12461 File Offset: 0x00D10661
+		// Token: 0x0602C1A6 RID: 180646 RVA: 0x00C61879 File Offset: 0x00C5FA79
 		private void SetToggleState(bool bChecked)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -267,19 +267,19 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			extendToggle.SetToggleState(bChecked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401D179 RID: 119161
+		// Token: 0x04017C12 RID: 97298
 		[Nullable(2)]
 		public KeySettingRowData KeySettingRowData;
 
-		// Token: 0x0401D17A RID: 119162
+		// Token: 0x04017C13 RID: 97299
 		[Nullable(2)]
 		private KeySettingRowKeyItem KeySettingRowKeyItem;
 
-		// Token: 0x0401D17B RID: 119163
+		// Token: 0x04017C14 RID: 97300
 		[Nullable(2)]
 		private KeySettingRowTypeItem KeySettingRowTypeItem;
 
-		// Token: 0x0401D17C RID: 119164
+		// Token: 0x04017C15 RID: 97301
 		[Nullable(new byte[]
 		{
 			2,
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 		})]
 		private Action<KeySettingRowData, KeySettingRowKeyItem, KeySettingRowContainerItem> OnWaitInput;
 
-		// Token: 0x0401D17D RID: 119165
+		// Token: 0x04017C16 RID: 97302
 		[Nullable(new byte[]
 		{
 			2,
@@ -297,25 +297,25 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 		})]
 		private Action<KeySettingRowContainerItem, EToggleState> OnToggleStateChanged;
 
-		// Token: 0x0401D17E RID: 119166
+		// Token: 0x04017C17 RID: 97303
 		[Nullable(2)]
 		private Action<KeySettingRowData> OnHoverCallback;
 
-		// Token: 0x0401D17F RID: 119167
+		// Token: 0x04017C18 RID: 97304
 		[Nullable(2)]
 		private Action<KeySettingRowData> OnUnHoverCallback;
 
-		// Token: 0x0200B6DD RID: 46813
+		// Token: 0x0200A115 RID: 41237
 		[NullableContext(0)]
 		public class EChildType
 		{
-			// Token: 0x04037659 RID: 226905
+			// Token: 0x040320AE RID: 204974
 			public const int Toggle = 0;
 
-			// Token: 0x0403765A RID: 226906
+			// Token: 0x040320AF RID: 204975
 			public const int KeyTypeItem = 1;
 
-			// Token: 0x0403765B RID: 226907
+			// Token: 0x040320B0 RID: 204976
 			public const int KeySettingItem = 2;
 		}
 	}

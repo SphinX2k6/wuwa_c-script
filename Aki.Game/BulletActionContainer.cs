@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D84 RID: 11652
+// Token: 0x020022DE RID: 8926
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionContainer
 {
-	// Token: 0x060187D2 RID: 100306 RVA: 0x0063B7BC File Offset: 0x006399BC
+	// Token: 0x06016074 RID: 90228 RVA: 0x006617CC File Offset: 0x0065F9CC
 	public void Init(EBulletAction type, Type actionInfoClass, Type actionClass, bool isPersistentAction = false)
 	{
 		this.Type = type;
@@ -28,8 +27,8 @@ public class BulletActionContainer
 		this.ActionList.Add(bulletActionBase);
 	}
 
-	// Token: 0x1700211B RID: 8475
-	// (get) Token: 0x060187D3 RID: 100307 RVA: 0x0063B861 File Offset: 0x00639A61
+	// Token: 0x17002176 RID: 8566
+	// (get) Token: 0x06016075 RID: 90229 RVA: 0x00661871 File Offset: 0x0065FA71
 	public EBulletAction ActionType
 	{
 		get
@@ -38,7 +37,7 @@ public class BulletActionContainer
 		}
 	}
 
-	// Token: 0x060187D4 RID: 100308 RVA: 0x0063B86C File Offset: 0x00639A6C
+	// Token: 0x06016076 RID: 90230 RVA: 0x0066187C File Offset: 0x0065FA7C
 	public void InitAsOverride(BulletActionContainer baseContainer, Type actionClass, bool isPersistentAction)
 	{
 		this.Type = baseContainer.Type;
@@ -55,7 +54,7 @@ public class BulletActionContainer
 		this.ActionList.Add(bulletActionBase);
 	}
 
-	// Token: 0x060187D5 RID: 100309 RVA: 0x0063B8F4 File Offset: 0x00639AF4
+	// Token: 0x06016077 RID: 90231 RVA: 0x00661904 File Offset: 0x0065FB04
 	private BulletActionInfoBase CreateActionInfo()
 	{
 		BulletActionInfoBase bulletActionInfoBase = (BulletActionInfoBase)Activator.CreateInstance(this.ActionInfoClass, new object[]
@@ -67,7 +66,7 @@ public class BulletActionContainer
 		return bulletActionInfoBase;
 	}
 
-	// Token: 0x060187D6 RID: 100310 RVA: 0x0063B944 File Offset: 0x00639B44
+	// Token: 0x06016078 RID: 90232 RVA: 0x00661954 File Offset: 0x0065FB54
 	public BulletActionInfoBase GetActionInfo()
 	{
 		if (this.IsSimpleActionInfo)
@@ -84,7 +83,7 @@ public class BulletActionContainer
 		return bulletActionInfoBase;
 	}
 
-	// Token: 0x060187D7 RID: 100311 RVA: 0x0063B9B4 File Offset: 0x00639BB4
+	// Token: 0x06016079 RID: 90233 RVA: 0x006619C4 File Offset: 0x0065FBC4
 	private BulletActionBase CreateAction()
 	{
 		BulletActionBase bulletActionBase = (BulletActionBase)Activator.CreateInstance(this.ActionClass, new object[]
@@ -96,7 +95,7 @@ public class BulletActionContainer
 		return bulletActionBase;
 	}
 
-	// Token: 0x060187D8 RID: 100312 RVA: 0x0063BA04 File Offset: 0x00639C04
+	// Token: 0x0601607A RID: 90234 RVA: 0x00661A14 File Offset: 0x0065FC14
 	public BulletActionBase GetAction()
 	{
 		if (!this.IsPersistentAction)
@@ -113,7 +112,7 @@ public class BulletActionContainer
 		return bulletActionBase;
 	}
 
-	// Token: 0x060187D9 RID: 100313 RVA: 0x0063BA74 File Offset: 0x00639C74
+	// Token: 0x0601607B RID: 90235 RVA: 0x00661A84 File Offset: 0x0065FC84
 	public void RecycleActionInfo(BulletActionInfoBase actionInfo)
 	{
 		if (this.IsSimpleActionInfo)
@@ -130,47 +129,12 @@ public class BulletActionContainer
 		this.ActionInfoList.Add(this.AllActionInfoList[actionInfo.Index]);
 	}
 
-	// Token: 0x060187DA RID: 100314 RVA: 0x0063BAD8 File Offset: 0x00639CD8
-	public unsafe void RecycleAction(BulletActionBase action)
+	// Token: 0x0601607C RID: 90236 RVA: 0x00661AE8 File Offset: 0x0065FCE8
+	public void RecycleAction(BulletActionBase action)
 	{
 		BulletActionInfoBase actionInfo = action.GetActionInfo();
 		this.RecycleActionInfo(actionInfo);
 		action.Clear();
-		if (BulletConstant.Instance.OpenClearCheck)
-		{
-			foreach (PropertyInfo propertyInfo in actionInfo.GetType().GetProperties())
-			{
-				object value = propertyInfo.GetValue(actionInfo);
-				Type propertyType = propertyInfo.PropertyType;
-				if ((!(propertyType == typeof(int)) || (int)value != 0) && (!(propertyType == typeof(bool)) || (bool)value) && value != null && !(propertyInfo.Name == "Type") && !(propertyInfo.Name == "Index") && !(propertyInfo.Name == "IsInPool") && !(propertyInfo.Name == "Stat") && !(propertyInfo.Name == "TickStat") && !(propertyType.GetMethod("Invoke") != null))
-				{
-					Log instance = Log.Instance;
-					ELogModule module = ELogModule.Bullet;
-					ELogAuthor author = ELogAuthor.CFT;
-					string message = "BulletActionInfo回收时，该变量不为undefined";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("type", actionInfo.Type);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("key", propertyInfo.Name);
-					instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				}
-			}
-			foreach (PropertyInfo propertyInfo2 in action.GetType().GetProperties())
-			{
-				object value2 = propertyInfo2.GetValue(action);
-				Type propertyType2 = propertyInfo2.PropertyType;
-				if ((!(propertyType2 == typeof(int)) || (int)value2 != 0) && (!(propertyType2 == typeof(bool)) || (bool)value2) && value2 != null && !(propertyInfo2.Name == "Type") && !(propertyInfo2.Name == "Index") && !(propertyInfo2.Name == "IsInPool") && !(propertyInfo2.Name == "Stat") && !(propertyInfo2.Name == "TickStat") && !(propertyType2.GetMethod("Invoke") != null))
-				{
-					Log instance2 = Log.Instance;
-					ELogModule module2 = ELogModule.Bullet;
-					ELogAuthor author2 = ELogAuthor.CFT;
-					string message2 = "BulletAction回收时，该变量不为undefined";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("type", action.Type);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("key", propertyInfo2.Name);
-					instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
-				}
-			}
-		}
 		if (!this.IsPersistentAction)
 		{
 			return;
@@ -184,21 +148,21 @@ public class BulletActionContainer
 		this.ActionList.Add(this.AllActionList[action.Index]);
 	}
 
-	// Token: 0x0400B57D RID: 46461
+	// Token: 0x0400B8F2 RID: 47346
 	private EBulletAction Type;
 
-	// Token: 0x0400B57E RID: 46462
+	// Token: 0x0400B8F3 RID: 47347
 	[Nullable(2)]
 	private Type ActionInfoClass;
 
-	// Token: 0x0400B57F RID: 46463
+	// Token: 0x0400B8F4 RID: 47348
 	[Nullable(2)]
 	private Type ActionClass;
 
-	// Token: 0x0400B580 RID: 46464
+	// Token: 0x0400B8F5 RID: 47349
 	private bool IsPersistentAction;
 
-	// Token: 0x0400B581 RID: 46465
+	// Token: 0x0400B8F6 RID: 47350
 	[Nullable(new byte[]
 	{
 		2,
@@ -206,7 +170,7 @@ public class BulletActionContainer
 	})]
 	private List<BulletActionInfoBase> AllActionInfoList;
 
-	// Token: 0x0400B582 RID: 46466
+	// Token: 0x0400B8F7 RID: 47351
 	[Nullable(new byte[]
 	{
 		2,
@@ -214,7 +178,7 @@ public class BulletActionContainer
 	})]
 	private List<BulletActionInfoBase> ActionInfoList;
 
-	// Token: 0x0400B583 RID: 46467
+	// Token: 0x0400B8F8 RID: 47352
 	[Nullable(new byte[]
 	{
 		2,
@@ -222,7 +186,7 @@ public class BulletActionContainer
 	})]
 	private List<BulletActionBase> AllActionList;
 
-	// Token: 0x0400B584 RID: 46468
+	// Token: 0x0400B8F9 RID: 47353
 	[Nullable(new byte[]
 	{
 		2,
@@ -230,6 +194,6 @@ public class BulletActionContainer
 	})]
 	private List<BulletActionBase> ActionList;
 
-	// Token: 0x0400B585 RID: 46469
+	// Token: 0x0400B8FA RID: 47354
 	private bool IsSimpleActionInfo;
 }

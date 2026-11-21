@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Role.Enum
 {
-	// Token: 0x02003EA4 RID: 16036
+	// Token: 0x02003173 RID: 12659
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Role/Enum/ERoleInteractType.ERoleInteractType")]
 	public enum ERoleInteractType : byte
 	{
-		// Token: 0x04014B07 RID: 84743
+		// Token: 0x04010B38 RID: 68408
 		SitDown,
-		// Token: 0x04014B08 RID: 84744
+		// Token: 0x04010B39 RID: 68409
 		Bounce,
-		// Token: 0x04014B09 RID: 84745
+		// Token: 0x04010B3A RID: 68410
 		Catapult,
-		// Token: 0x04014B0A RID: 84746
+		// Token: 0x04010B3B RID: 68411
 		Manipulate,
-		// Token: 0x04014B0B RID: 84747
+		// Token: 0x04010B3C RID: 68412
 		ERoleInteractType_MAX
 	}
 }

@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008CD RID: 2253
+	// Token: 0x02000970 RID: 2416
 	public class TreasureBoxComponent_SetValue
 	{
-		// Token: 0x04002162 RID: 8546
+		// Token: 0x04002372 RID: 9074
 		public bool? Disabled;
 
-		// Token: 0x04002163 RID: 8547
+		// Token: 0x04002373 RID: 9075
 		public bool? EdIsLocked;
 
-		// Token: 0x04002164 RID: 8548
+		// Token: 0x04002374 RID: 9076
 		public int TypeId;
 
-		// Token: 0x04002165 RID: 8549
+		// Token: 0x04002375 RID: 9077
 		public bool? IsSupportDiscoverDevice;
 	}
 }

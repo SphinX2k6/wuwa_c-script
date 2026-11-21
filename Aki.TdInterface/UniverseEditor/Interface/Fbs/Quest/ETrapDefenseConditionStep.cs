@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CE3 RID: 15587
+	// Token: 0x020040FA RID: 16634
 	public enum ETrapDefenseConditionStep : byte
 	{
-		// Token: 0x0400B559 RID: 46425
+		// Token: 0x0400BF06 RID: 48902
 		Reward,
-		// Token: 0x0400B55A RID: 46426
+		// Token: 0x0400BF07 RID: 48903
 		MapChange,
-		// Token: 0x0400B55B RID: 46427
+		// Token: 0x0400BF08 RID: 48904
 		Preview,
-		// Token: 0x0400B55C RID: 46428
+		// Token: 0x0400BF09 RID: 48905
 		SpawnMonster,
-		// Token: 0x0400B55D RID: 46429
+		// Token: 0x0400BF0A RID: 48906
 		LoadAndRestoreMap
 	}
 }

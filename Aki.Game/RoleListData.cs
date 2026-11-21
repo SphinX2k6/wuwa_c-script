@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200116D RID: 4461
+// Token: 0x02000621 RID: 1569
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using System.Runtime.CompilerServices;
 })]
 public class RoleListData : MultiTemplateGridDataBase<BabelTowerRoleListItemData, BabelTowerRoleListItem>
 {
-	// Token: 0x060075C3 RID: 30147 RVA: 0x00185A9F File Offset: 0x00183C9F
+	// Token: 0x0600495A RID: 18778 RVA: 0x0018E647 File Offset: 0x0018C847
 	public override int GetTemplateIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x060075C4 RID: 30148 RVA: 0x00185AA2 File Offset: 0x00183CA2
+	// Token: 0x0600495B RID: 18779 RVA: 0x0018E64A File Offset: 0x0018C84A
 	public override BabelTowerRoleListItem CreateProxy()
 	{
 		return new BabelTowerRoleListItem();

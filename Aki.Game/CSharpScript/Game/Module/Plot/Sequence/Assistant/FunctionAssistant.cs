@@ -12,12 +12,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005031 RID: 20529
+	// Token: 0x02003FFC RID: 16380
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FunctionAssistant : SeqBaseAssistant
 	{
-		// Token: 0x060348A6 RID: 215206 RVA: 0x00C647F8 File Offset: 0x00C629F8
+		// Token: 0x06029753 RID: 169811 RVA: 0x00BB0234 File Offset: 0x00BAE434
 		[NullableContext(2)]
 		public override void Load(Action<bool> callback)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060348A7 RID: 215207 RVA: 0x00C6486A File Offset: 0x00C62A6A
+		// Token: 0x06029754 RID: 169812 RVA: 0x00BB02A6 File Offset: 0x00BAE4A6
 		[NullableContext(2)]
 		public override void PreAllPlay(Action<bool> callback = null)
 		{
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			PlotModel.Instance.PlotTimeOfDay.OnSeqStart();
 		}
 
-		// Token: 0x060348A8 RID: 215208 RVA: 0x00C64882 File Offset: 0x00C62A82
+		// Token: 0x06029755 RID: 169813 RVA: 0x00BB02BE File Offset: 0x00BAE4BE
 		[NullableContext(2)]
 		public override void AllStop(Action<bool> callback = null)
 		{
 			this.Model.FrameEvents.Clear();
 		}
 
-		// Token: 0x060348A9 RID: 215209 RVA: 0x00C64894 File Offset: 0x00C62A94
+		// Token: 0x06029756 RID: 169814 RVA: 0x00BB02D0 File Offset: 0x00BAE4D0
 		public override void End()
 		{
 			if (this.WaitFunctionEntityTask != null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.RemoveDirector();
 		}
 
-		// Token: 0x060348AA RID: 215210 RVA: 0x00C6490C File Offset: 0x00C62B0C
+		// Token: 0x06029757 RID: 169815 RVA: 0x00BB0348 File Offset: 0x00BAE548
 		private List<int> ParseFrameEvent([Nullable(new byte[]
 		{
 			2,
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return list;
 		}
 
-		// Token: 0x060348AB RID: 215211 RVA: 0x00C64AD4 File Offset: 0x00C62CD4
+		// Token: 0x06029758 RID: 169816 RVA: 0x00BB0510 File Offset: 0x00BAE710
 		public void SetFrameEvents([Nullable(new byte[]
 		{
 			2,
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348AC RID: 215212 RVA: 0x00C64B5C File Offset: 0x00C62D5C
+		// Token: 0x06029759 RID: 169817 RVA: 0x00BB0598 File Offset: 0x00BAE798
 		public void RunSequenceFrameEvents(string key)
 		{
 			if (this.Model.State == ESequenceState.Ending)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348AD RID: 215213 RVA: 0x00C64CC8 File Offset: 0x00C62EC8
+		// Token: 0x0602975A RID: 169818 RVA: 0x00BB0704 File Offset: 0x00BAE904
 		public void ShowLogo(float time)
 		{
 			int num = (int)(time * 1000f);
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, (float)num, null, null, true, 1f);
 		}
 
-		// Token: 0x060348AE RID: 215214 RVA: 0x00C64D38 File Offset: 0x00C62F38
+		// Token: 0x0602975B RID: 169819 RVA: 0x00BB0774 File Offset: 0x00BAE974
 		public UniTask OpenBackgroundImage(string uiName, string spineName, bool needLoop = true, bool useFullscreenAdaptAnchor = false)
 		{
 			FunctionAssistant.<OpenBackgroundImage>d__10 <OpenBackgroundImage>d__;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <OpenBackgroundImage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348AF RID: 215215 RVA: 0x00C64D9C File Offset: 0x00C62F9C
+		// Token: 0x0602975C RID: 169820 RVA: 0x00BB07D8 File Offset: 0x00BAE9D8
 		public UniTask OpenBackgroundImageInArray(string uiName, TArray<SpineThingsInfo> spineArray, bool useFullscreenAdaptAnchor = false)
 		{
 			FunctionAssistant.<OpenBackgroundImageInArray>d__11 <OpenBackgroundImageInArray>d__;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <OpenBackgroundImageInArray>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348B0 RID: 215216 RVA: 0x00C64DF8 File Offset: 0x00C62FF8
+		// Token: 0x0602975D RID: 169821 RVA: 0x00BB0834 File Offset: 0x00BAEA34
 		public UniTask PlayUiLevelSequence(string seqName)
 		{
 			FunctionAssistant.<PlayUiLevelSequence>d__12 <PlayUiLevelSequence>d__;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <PlayUiLevelSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348B1 RID: 215217 RVA: 0x00C64E3C File Offset: 0x00C6303C
+		// Token: 0x0602975E RID: 169822 RVA: 0x00BB0878 File Offset: 0x00BAEA78
 		public UniTask CloseBackgroundImage()
 		{
 			FunctionAssistant.<CloseBackgroundImage>d__13 <CloseBackgroundImage>d__;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <CloseBackgroundImage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060348B2 RID: 215218 RVA: 0x00C64E78 File Offset: 0x00C63078
+		// Token: 0x0602975F RID: 169823 RVA: 0x00BB08B4 File Offset: 0x00BAEAB4
 		public void PlaySpineAnim(string spineName, bool needLoop = true)
 		{
 			if (string.IsNullOrEmpty(spineName))
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, null);
 		}
 
-		// Token: 0x060348B3 RID: 215219 RVA: 0x00C64EE8 File Offset: 0x00C630E8
+		// Token: 0x06029760 RID: 169824 RVA: 0x00BB0924 File Offset: 0x00BAEB24
 		public void PlaySpineAnimInArray(TArray<SpineThingsInfo> spineArray)
 		{
 			if (spineArray.Num() <= 0)
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, null);
 		}
 
-		// Token: 0x060348B4 RID: 215220 RVA: 0x00C64F50 File Offset: 0x00C63150
+		// Token: 0x06029761 RID: 169825 RVA: 0x00BB098C File Offset: 0x00BAEB8C
 		public void CloseSpineAnimation(string str)
 		{
 			PlotController.Instance.PlotViewManager.RunWithPlotSubtitleView("CloseSpineAnimation", delegate(PlotSubtitleView view)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, null);
 		}
 
-		// Token: 0x060348B5 RID: 215221 RVA: 0x00C64F8C File Offset: 0x00C6318C
+		// Token: 0x06029762 RID: 169826 RVA: 0x00BB09C8 File Offset: 0x00BAEBC8
 		public void CloseSpineAnimationInArray(TArray<string> stringArray)
 		{
 			if (stringArray.Num() <= 0)
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, null);
 		}
 
-		// Token: 0x060348B6 RID: 215222 RVA: 0x00C64FF4 File Offset: 0x00C631F4
+		// Token: 0x06029763 RID: 169827 RVA: 0x00BB0A30 File Offset: 0x00BAEC30
 		public unsafe void AdditionSeqPlay(ULevelSequence levelSequence, FName componentName, FName boneName, int frame)
 		{
 			global::Log instance = global::Log.Instance;
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.AdditionGenerateDirector(levelSequence, componentName, boneName, frame);
 		}
 
-		// Token: 0x060348B7 RID: 215223 RVA: 0x00C65084 File Offset: 0x00C63284
+		// Token: 0x06029764 RID: 169828 RVA: 0x00BB0AC0 File Offset: 0x00BAECC0
 		public void AdditionSeqEnd()
 		{
 			global::Log instance = global::Log.Instance;
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348B8 RID: 215224 RVA: 0x00C65140 File Offset: 0x00C63340
+		// Token: 0x06029765 RID: 169829 RVA: 0x00BB0B7C File Offset: 0x00BAED7C
 		private void RemoveDirector()
 		{
 			ALevelSequenceActor additionSeqDirector = this.Model.AdditionSeqDirector;
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.AdditionSeqDirector = null;
 		}
 
-		// Token: 0x060348B9 RID: 215225 RVA: 0x00C651A0 File Offset: 0x00C633A0
+		// Token: 0x06029766 RID: 169830 RVA: 0x00BB0BDC File Offset: 0x00BAEDDC
 		private void AdditionGenerateDirector(ULevelSequence levelSequence, FName componentName, FName boneName, int frame = 0)
 		{
 			FMovieSceneSequencePlaybackSettings fmovieSceneSequencePlaybackSettings = new FMovieSceneSequencePlaybackSettings();
@@ -394,7 +394,18 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.AdditionSeqDirector.PlaybackSettings = fmovieSceneSequencePlaybackSettings;
 			this.Model.AdditionSeqDirector.SetSequence(levelSequence);
 			sequencePlayer.Play();
-			sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams(new FFrameTime(new FFrameNumber(frame), 0f), 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play));
+			sequencePlayer.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+			{
+				Frame = new FFrameTime
+				{
+					FrameNumber = new FFrameNumber
+					{
+						Value = frame
+					}
+				},
+				PositionType = EMovieScenePositionType.Frame,
+				UpdateMethod = EUpdatePositionMethod.Play
+			});
 			TArray<UObject> bindingByTag = this.Model.AdditionSeqDirector.GetBindingByTag(new FName("Target"), true);
 			if (bindingByTag.Num() <= 0)
 			{
@@ -470,11 +481,11 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0401BFFD RID: 114685
+		// Token: 0x040169F3 RID: 92659
 		[Nullable(2)]
 		private WaitEntityTask WaitFunctionEntityTask;
 
-		// Token: 0x0401BFFE RID: 114686
+		// Token: 0x040169F4 RID: 92660
 		[Nullable(2)]
 		private TimerHandle ShowLogoTimer;
 	}

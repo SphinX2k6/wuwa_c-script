@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.Common.Proxy
 {
-	// Token: 0x02000023 RID: 35
+	// Token: 0x02000024 RID: 36
 	[NullableContext(1)]
 	public interface ILog
 	{
-		// Token: 0x060000F0 RID: 240
+		// Token: 0x0600015D RID: 349
 		void Error(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -16,7 +16,7 @@ namespace Aki.Common.Proxy
 			2
 		})] ReadOnlySpan<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000F1 RID: 241 RVA: 0x0000B3F1 File Offset: 0x000095F1
+		// Token: 0x0600015E RID: 350 RVA: 0x0000EBBD File Offset: 0x0000CDBD
 		void Error(ELogModule module, ELogAuthor author, string message, [Nullable(new byte[]
 		{
 			1,
@@ -28,7 +28,7 @@ namespace Aki.Common.Proxy
 			this.ErrorWithLogList(module, author, message, pairs);
 		}
 
-		// Token: 0x060000F2 RID: 242
+		// Token: 0x0600015F RID: 351
 		void ErrorWithLogList(ELogModule module, ELogAuthor author, string message, [Nullable(new byte[]
 		{
 			1,
@@ -37,7 +37,7 @@ namespace Aki.Common.Proxy
 			2
 		})] LogList<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000F3 RID: 243
+		// Token: 0x06000160 RID: 352
 		void ErrorWithStack(ELogModule module, ELogAuthor author, string message, Exception error, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -46,7 +46,7 @@ namespace Aki.Common.Proxy
 			2
 		})] ReadOnlySpan<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000F4 RID: 244
+		// Token: 0x06000161 RID: 353
 		void Warn(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -55,7 +55,7 @@ namespace Aki.Common.Proxy
 			2
 		})] ReadOnlySpan<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000F5 RID: 245
+		// Token: 0x06000162 RID: 354
 		void Info(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,

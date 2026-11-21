@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Fight.UI
 {
-	// Token: 0x02003F5B RID: 16219
+	// Token: 0x020031FE RID: 12798
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 8)]
@@ -16,32 +16,32 @@ namespace AkiClient.Game.Aki.Data.Fight.UI
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct SSpecialEnergyBarKey : IEqualityOperators<SSpecialEnergyBarKey, SSpecialEnergyBarKey, bool>, IEquatable<SSpecialEnergyBarKey>, IUnrealScriptStruct
 	{
-		// Token: 0x06029510 RID: 169232 RVA: 0x009C11AE File Offset: 0x009BF3AE
+		// Token: 0x0601FDB8 RID: 130488 RVA: 0x00937811 File Offset: 0x00935A11
 		public SSpecialEnergyBarKey(int Action, int ActionType)
 		{
 			this.Action = Action;
 			this.ActionType = ActionType;
 		}
 
-		// Token: 0x06029511 RID: 169233 RVA: 0x009C11BE File Offset: 0x009BF3BE
+		// Token: 0x0601FDB9 RID: 130489 RVA: 0x00937821 File Offset: 0x00935A21
 		public static bool operator ==(SSpecialEnergyBarKey left, SSpecialEnergyBarKey right)
 		{
 			return left.Action == right.Action && left.ActionType == right.ActionType;
 		}
 
-		// Token: 0x06029512 RID: 169234 RVA: 0x009C11DE File Offset: 0x009BF3DE
+		// Token: 0x0601FDBA RID: 130490 RVA: 0x00937841 File Offset: 0x00935A41
 		public static bool operator !=(SSpecialEnergyBarKey left, SSpecialEnergyBarKey right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06029513 RID: 169235 RVA: 0x009C11EA File Offset: 0x009BF3EA
+		// Token: 0x0601FDBB RID: 130491 RVA: 0x0093784D File Offset: 0x00935A4D
 		public bool Equals(SSpecialEnergyBarKey other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06029514 RID: 169236 RVA: 0x009C11F8 File Offset: 0x009BF3F8
+		// Token: 0x0601FDBC RID: 130492 RVA: 0x0093785C File Offset: 0x00935A5C
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -53,30 +53,30 @@ namespace AkiClient.Game.Aki.Data.Fight.UI
 			return false;
 		}
 
-		// Token: 0x06029515 RID: 169237 RVA: 0x009C121D File Offset: 0x009BF41D
+		// Token: 0x0601FDBD RID: 130493 RVA: 0x00937881 File Offset: 0x00935A81
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<int, int>(this.Action, this.ActionType);
 		}
 
-		// Token: 0x06029516 RID: 169238 RVA: 0x009C1230 File Offset: 0x009BF430
+		// Token: 0x0601FDBE RID: 130494 RVA: 0x00937894 File Offset: 0x00935A94
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSpecialEnergyBarKey._ScriptStructPtr != 0) ? SSpecialEnergyBarKey._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Fight/UI/SSpecialEnergyBarKey.SSpecialEnergyBarKey", ref SSpecialEnergyBarKey._ScriptStructPtr);
 		}
 
-		// Token: 0x040152AE RID: 86702
+		// Token: 0x040111B5 RID: 70069
 		[FieldOffset(0)]
 		public int Action;
 
-		// Token: 0x040152AF RID: 86703
+		// Token: 0x040111B6 RID: 70070
 		[FieldOffset(4)]
 		public int ActionType;
 
-		// Token: 0x040152B0 RID: 86704
+		// Token: 0x040111B7 RID: 70071
 		public const string __ObjectPath = "/Game/Aki/Data/Fight/UI/SSpecialEnergyBarKey.SSpecialEnergyBarKey";
 
-		// Token: 0x040152B1 RID: 86705
+		// Token: 0x040111B8 RID: 70072
 		private static IntPtr _ScriptStructPtr;
 	}
 }

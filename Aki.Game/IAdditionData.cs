@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020012F6 RID: 4854
+// Token: 0x020007AA RID: 1962
 [NullableContext(1)]
 public interface IAdditionData
 {
-	// Token: 0x17000B7E RID: 2942
-	// (get) Token: 0x06008641 RID: 34369
+	// Token: 0x17000B9E RID: 2974
+	// (get) Token: 0x060059DC RID: 23004
 	string TextId { get; }
 
-	// Token: 0x17000B7F RID: 2943
-	// (get) Token: 0x06008642 RID: 34370
+	// Token: 0x17000B9F RID: 2975
+	// (get) Token: 0x060059DD RID: 23005
 	string ValueText { get; }
 }

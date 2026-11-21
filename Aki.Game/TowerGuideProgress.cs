@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001524 RID: 5412
+// Token: 0x020009DC RID: 2524
 internal class TowerGuideProgress : UiPanelBase
 {
-	// Token: 0x06009A64 RID: 39524 RVA: 0x00216D12 File Offset: 0x00214F12
+	// Token: 0x06006E42 RID: 28226 RVA: 0x00220AAE File Offset: 0x0021ECAE
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ internal class TowerGuideProgress : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009A65 RID: 39525 RVA: 0x00216D4B File Offset: 0x00214F4B
+	// Token: 0x06006E43 RID: 28227 RVA: 0x00220AE7 File Offset: 0x0021ECE7
 	public void Refresh(int currentProgress, int totalProgress)
 	{
 		base.GetText(0).SetText(currentProgress.ToString(), true);

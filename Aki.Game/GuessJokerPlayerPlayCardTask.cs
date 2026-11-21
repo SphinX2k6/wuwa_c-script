@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
-// Token: 0x02001037 RID: 4151
+// Token: 0x020004EB RID: 1259
 public class GuessJokerPlayerPlayCardTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A90 RID: 27280 RVA: 0x00156E25 File Offset: 0x00155025
+	// Token: 0x06003E25 RID: 15909 RVA: 0x0015F74D File Offset: 0x0015D94D
 	public GuessJokerPlayerPlayCardTask()
 	{
 		this.TaskType = EGuessJokerTaskType.Interactive;
 	}
 
-	// Token: 0x06006A91 RID: 27281 RVA: 0x00156E34 File Offset: 0x00155034
+	// Token: 0x06003E26 RID: 15910 RVA: 0x0015F75C File Offset: 0x0015D95C
 	protected override void OnExecute()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -68,7 +67,7 @@ public class GuessJokerPlayerPlayCardTask : GuessJokerTaskBase
 				{
 					GuessJokerController.Instance.OpenGuessJokerFloatTipsView("GuessJoker_Player_GiveUpPlayCard", null);
 				}
-				GuessJokerGamePlayModel.Instance.UpdateCardBelongPlayerType(selectedPlayCardList.ToArray<int>(), null);
+				GuessJokerGamePlayModel.Instance.UpdateCardBelongPlayerType(selectedPlayCardList, null);
 				bool flag = GuessJokerGamePlayModel.Instance.GetHandCardsByPlayer(EGuessJokerPlayerType.Me).Count == 0;
 				List<GuessJokerActionBase> list2 = new List<GuessJokerActionBase>();
 				list2.Add(new GuessJokerGroupAction(new GuessJokerActionBase[]
@@ -133,7 +132,7 @@ public class GuessJokerPlayerPlayCardTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.PushActions(list.ToArray());
 	}
 
-	// Token: 0x06006A92 RID: 27282 RVA: 0x0015701C File Offset: 0x0015521C
+	// Token: 0x06003E27 RID: 15911 RVA: 0x0015F944 File Offset: 0x0015DB44
 	private void FinishWithShuffleCheck()
 	{
 		if (GuessJokerGamePlayModel.Instance.HasPlayerNewCardInHand())
@@ -153,7 +152,7 @@ public class GuessJokerPlayerPlayCardTask : GuessJokerTaskBase
 		base.FinishTask();
 	}
 
-	// Token: 0x06006A93 RID: 27283 RVA: 0x00157073 File Offset: 0x00155273
+	// Token: 0x06003E28 RID: 15912 RVA: 0x0015F99B File Offset: 0x0015DB9B
 	protected override void OnComplete()
 	{
 		GuessJokerGamePlayModel.Instance.SetNpcEnterInteractiveStage(false);

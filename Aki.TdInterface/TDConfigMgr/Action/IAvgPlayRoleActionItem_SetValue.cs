@@ -2,25 +2,25 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017EF RID: 6127
+	// Token: 0x02001978 RID: 6520
 	public class IAvgPlayRoleActionItem_SetValue
 	{
-		// Token: 0x04005375 RID: 21365
+		// Token: 0x040057BD RID: 22461
 		public EAvgPlayRoleActionType ActionType;
 
-		// Token: 0x04005376 RID: 21366
+		// Token: 0x040057BE RID: 22462
 		public int RoleId;
 
-		// Token: 0x04005377 RID: 21367
+		// Token: 0x040057BF RID: 22463
 		public EAvgRolePosition? PositionConfig;
 
-		// Token: 0x04005378 RID: 21368
+		// Token: 0x040057C0 RID: 22464
 		public EAvgRoleAnimationType AnimationType;
 
-		// Token: 0x04005379 RID: 21369
+		// Token: 0x040057C1 RID: 22465
 		public bool? IsAnimationLoop;
 
-		// Token: 0x0400537A RID: 21370
+		// Token: 0x040057C2 RID: 22466
 		public EAvgVisualEffect? VisualEffect;
 	}
 }

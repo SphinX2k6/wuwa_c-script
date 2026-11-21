@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200098E RID: 2446
+	// Token: 0x02000A63 RID: 2659
 	public class ConfigSpringSignById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003968 RID: 14696 RVA: 0x0019E1A3 File Offset: 0x0019C3A3
+		// Token: 0x06003E66 RID: 15974 RVA: 0x001BD537 File Offset: 0x001BB737
 		static ConfigSpringSignById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringSignById.CreateStaticDefaultValue), new Action(ConfigSpringSignById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003969 RID: 14697 RVA: 0x0019E1C4 File Offset: 0x0019C3C4
+		// Token: 0x06003E67 RID: 15975 RVA: 0x001BD558 File Offset: 0x001BB758
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringSignById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600396A RID: 14698 RVA: 0x0019E243 File Offset: 0x0019C443
+		// Token: 0x06003E68 RID: 15976 RVA: 0x001BD5D7 File Offset: 0x001BB7D7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringSignById.LogPair = null;
 			ConfigSpringSignById.HandleId = 0;
 		}
 
-		// Token: 0x0600396B RID: 14699 RVA: 0x0019E251 File Offset: 0x0019C451
+		// Token: 0x06003E69 RID: 15977 RVA: 0x001BD5E5 File Offset: 0x001BB7E5
 		public static void Init()
 		{
 			ConfigSpringSignById.HandleId = ConfigCommon.InitDataStatement(ConfigSpringSignById.HandleId, "db_sprintsign.db", "select BinData from `SpringSign` where Id=?");
 		}
 
-		// Token: 0x0600396C RID: 14700 RVA: 0x0019E26C File Offset: 0x0019C46C
+		// Token: 0x06003E6A RID: 15978 RVA: 0x001BD600 File Offset: 0x001BB800
 		public static SpringSign? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpringSignById.HandleId, ConfigSpringSignById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpringSign?(rootAsSpringSign);
 		}
 
-		// Token: 0x040042C8 RID: 17096
+		// Token: 0x0400489B RID: 18587
 		private const string DB = "db_sprintsign.db";
 
-		// Token: 0x040042C9 RID: 17097
+		// Token: 0x0400489C RID: 18588
 		private const string FILE = "c.2.0春节签到.xlsx";
 
-		// Token: 0x040042CA RID: 17098
+		// Token: 0x0400489D RID: 18589
 		private const string TABLE = "SpringSign";
 
-		// Token: 0x040042CB RID: 17099
+		// Token: 0x0400489E RID: 18590
 		private const string COMMAND = "select BinData from `SpringSign` where Id=?";
 
-		// Token: 0x040042CC RID: 17100
+		// Token: 0x0400489F RID: 18591
 		private const string KEY_PREFIX = "SpringSignById";
 
-		// Token: 0x040042CD RID: 17101
+		// Token: 0x040048A0 RID: 18592
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042CE RID: 17102
+		// Token: 0x040048A1 RID: 18593
 		private static int HandleId;
 	}
 }

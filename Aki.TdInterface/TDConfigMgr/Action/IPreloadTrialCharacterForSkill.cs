@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D50 RID: 7504
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F61 RID: 8033
 	public class IPreloadTrialCharacterForSkill : IPreloadCharacterType
 	{
-		// Token: 0x0600A0FB RID: 41211 RVA: 0x0016EF68 File Offset: 0x0016D168
+		// Token: 0x0600AAE7 RID: 43751 RVA: 0x0018338C File Offset: 0x0018158C
 		private IPreloadTrialCharacterForSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A0FC RID: 41212 RVA: 0x0016EFA0 File Offset: 0x0016D1A0
+		// Token: 0x0600AAE8 RID: 43752 RVA: 0x001833C4 File Offset: 0x001815C4
 		public static IPreloadTrialCharacterForSkill Create([Nullable(2)] IPreloadTrialCharacterForSkill instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0FD RID: 41213 RVA: 0x0016EFB3 File Offset: 0x0016D1B3
+		// Token: 0x0600AAE9 RID: 43753 RVA: 0x001833D7 File Offset: 0x001815D7
 		public static IPreloadTrialCharacterForSkill CreateFromSetValue([Nullable(2)] IPreloadTrialCharacterForSkill_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0FE RID: 41214 RVA: 0x0016EFC6 File Offset: 0x0016D1C6
+		// Token: 0x0600AAEA RID: 43754 RVA: 0x001833EA File Offset: 0x001815EA
 		public new IPreloadTrialCharacterForSkill_SetValue ToSetValue()
 		{
 			return new IPreloadTrialCharacterForSkill_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031DC RID: 12764
-		// (get) Token: 0x0600A0FF RID: 41215 RVA: 0x0016EFE5 File Offset: 0x0016D1E5
-		// (set) Token: 0x0600A100 RID: 41216 RVA: 0x0016F010 File Offset: 0x0016D210
+		// Token: 0x17003470 RID: 13424
+		// (get) Token: 0x0600AAEB RID: 43755 RVA: 0x00183409 File Offset: 0x00181609
+		// (set) Token: 0x0600AAEC RID: 43756 RVA: 0x00183434 File Offset: 0x00181634
 		public override EPreloadObjectType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031DD RID: 12765
-		// (get) Token: 0x0600A101 RID: 41217 RVA: 0x0016F020 File Offset: 0x0016D220
-		// (set) Token: 0x0600A102 RID: 41218 RVA: 0x0016F0B3 File Offset: 0x0016D2B3
+		// Token: 0x17003471 RID: 13425
+		// (get) Token: 0x0600AAED RID: 43757 RVA: 0x00183444 File Offset: 0x00181644
+		// (set) Token: 0x0600AAEE RID: 43758 RVA: 0x001834D7 File Offset: 0x001816D7
 		public virtual List<ICharacterGroupNew> CharacterGroupNew
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060F1 RID: 24817
+		// Token: 0x0400666D RID: 26221
 		[Nullable(2)]
 		protected new IPreloadTrialCharacterForSkill FbInstance;
 
-		// Token: 0x040060F2 RID: 24818
+		// Token: 0x0400666E RID: 26222
 		[Nullable(2)]
 		protected new IPreloadTrialCharacterForSkill_SetValue PocoInterface;
 
-		// Token: 0x040060F3 RID: 24819
+		// Token: 0x0400666F RID: 26223
 		private List<ICharacterGroupNew> _CharacterGroupNewCache;
 
-		// Token: 0x040060F4 RID: 24820
+		// Token: 0x04006670 RID: 26224
 		private bool _CharacterGroupNewInited;
 	}
 }

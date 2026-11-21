@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200236B RID: 9067
+	// Token: 0x020025E0 RID: 9696
 	public static class EKeepMovementStateExtensions
 	{
-		// Token: 0x0600C5E0 RID: 50656 RVA: 0x001CEE18 File Offset: 0x001CD018
+		// Token: 0x0600D1CA RID: 53706 RVA: 0x001E70F8 File Offset: 0x001E52F8
 		public static string ToEnumString(this EKeepMovementState value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5E1 RID: 50657 RVA: 0x001CEE50 File Offset: 0x001CD050
+		// Token: 0x0600D1CB RID: 53707 RVA: 0x001E7130 File Offset: 0x001E5330
 		public static EKeepMovementState FromString(string name)
 		{
 			EKeepMovementState result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5E2 RID: 50658 RVA: 0x001CEE79 File Offset: 0x001CD079
+		// Token: 0x0600D1CC RID: 53708 RVA: 0x001E7159 File Offset: 0x001E5359
 		public static bool TryFromString(string name, out EKeepMovementState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C5E3 RID: 50659 RVA: 0x001CEEB2 File Offset: 0x001CD0B2
+		// Token: 0x0600D1CD RID: 53709 RVA: 0x001E7192 File Offset: 0x001E5392
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5E4 RID: 50660 RVA: 0x001CEECA File Offset: 0x001CD0CA
+		// Token: 0x0600D1CE RID: 53710 RVA: 0x001E71AA File Offset: 0x001E53AA
 		public static EKeepMovementState[] GetValues()
 		{
 			return new EKeepMovementState[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5E5 RID: 50661 RVA: 0x001CEED6 File Offset: 0x001CD0D6
+		// Token: 0x0600D1CF RID: 53711 RVA: 0x001E71B6 File Offset: 0x001E53B6
 		public static string[] GetNames()
 		{
 			return new string[]

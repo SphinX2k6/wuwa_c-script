@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B51 RID: 6993
+// Token: 0x02001010 RID: 4112
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchStateBase
 {
-	// Token: 0x0600CF76 RID: 53110 RVA: 0x002F42B7 File Offset: 0x002F24B7
+	// Token: 0x0600A387 RID: 41863 RVA: 0x002FF38F File Offset: 0x002FD58F
 	public FloroRanchStateBase(FloroRanchStageFsm stageFsm)
 	{
 		this.StageFsm = stageFsm;
 	}
 
-	// Token: 0x0600CF77 RID: 53111 RVA: 0x002F42C6 File Offset: 0x002F24C6
+	// Token: 0x0600A388 RID: 41864 RVA: 0x002FF39E File Offset: 0x002FD59E
 	public void Create()
 	{
 		this.OnCreate();
 	}
 
-	// Token: 0x0600CF78 RID: 53112 RVA: 0x002F42CE File Offset: 0x002F24CE
+	// Token: 0x0600A389 RID: 41865 RVA: 0x002FF3A6 File Offset: 0x002FD5A6
 	public void Enter()
 	{
 		this.IsActive = true;
@@ -26,7 +26,7 @@ public class FloroRanchStateBase
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x0600CF79 RID: 53113 RVA: 0x002F42E3 File Offset: 0x002F24E3
+	// Token: 0x0600A38A RID: 41866 RVA: 0x002FF3BB File Offset: 0x002FD5BB
 	public void Tick(float deltaTime)
 	{
 		if (!this.IsActive)
@@ -36,7 +36,7 @@ public class FloroRanchStateBase
 		this.OnTick(deltaTime);
 	}
 
-	// Token: 0x0600CF7A RID: 53114 RVA: 0x002F42F5 File Offset: 0x002F24F5
+	// Token: 0x0600A38B RID: 41867 RVA: 0x002FF3CD File Offset: 0x002FD5CD
 	public void Exit()
 	{
 		this.OnRemoveEventListener();
@@ -44,52 +44,52 @@ public class FloroRanchStateBase
 		this.IsActive = false;
 	}
 
-	// Token: 0x0600CF7B RID: 53115 RVA: 0x002F430A File Offset: 0x002F250A
+	// Token: 0x0600A38C RID: 41868 RVA: 0x002FF3E2 File Offset: 0x002FD5E2
 	protected virtual void OnCreate()
 	{
 	}
 
-	// Token: 0x0600CF7C RID: 53116 RVA: 0x002F430C File Offset: 0x002F250C
+	// Token: 0x0600A38D RID: 41869 RVA: 0x002FF3E4 File Offset: 0x002FD5E4
 	protected virtual void OnEnter()
 	{
 	}
 
-	// Token: 0x0600CF7D RID: 53117 RVA: 0x002F430E File Offset: 0x002F250E
+	// Token: 0x0600A38E RID: 41870 RVA: 0x002FF3E6 File Offset: 0x002FD5E6
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x0600CF7E RID: 53118 RVA: 0x002F4310 File Offset: 0x002F2510
+	// Token: 0x0600A38F RID: 41871 RVA: 0x002FF3E8 File Offset: 0x002FD5E8
 	protected virtual void OnTick(float deltaTime)
 	{
 	}
 
-	// Token: 0x0600CF7F RID: 53119 RVA: 0x002F4312 File Offset: 0x002F2512
+	// Token: 0x0600A390 RID: 41872 RVA: 0x002FF3EA File Offset: 0x002FD5EA
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600CF80 RID: 53120 RVA: 0x002F4314 File Offset: 0x002F2514
+	// Token: 0x0600A391 RID: 41873 RVA: 0x002FF3EC File Offset: 0x002FD5EC
 	protected virtual void OnExit()
 	{
 	}
 
-	// Token: 0x0600CF81 RID: 53121 RVA: 0x002F4316 File Offset: 0x002F2516
+	// Token: 0x0600A392 RID: 41874 RVA: 0x002FF3EE File Offset: 0x002FD5EE
 	public void ForceExit()
 	{
 		this.IsForceExit = true;
 		this.AutoExitAfterEnter = true;
 	}
 
-	// Token: 0x04005F6E RID: 24430
+	// Token: 0x0400603D RID: 24637
 	protected bool IsActive;
 
-	// Token: 0x04005F6F RID: 24431
+	// Token: 0x0400603E RID: 24638
 	protected bool AutoExitAfterEnter;
 
-	// Token: 0x04005F70 RID: 24432
+	// Token: 0x0400603F RID: 24639
 	protected bool IsForceExit;
 
-	// Token: 0x04005F71 RID: 24433
+	// Token: 0x04006040 RID: 24640
 	protected FloroRanchStageFsm StageFsm;
 }

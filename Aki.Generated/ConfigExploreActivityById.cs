@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000292 RID: 658
+	// Token: 0x020002A6 RID: 678
 	public class ConfigExploreActivityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F71 RID: 3953 RVA: 0x000B0D44 File Offset: 0x000AEF44
+		// Token: 0x06000FE9 RID: 4073 RVA: 0x000B7008 File Offset: 0x000B5208
 		static ConfigExploreActivityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreActivityById.CreateStaticDefaultValue), new Action(ConfigExploreActivityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F72 RID: 3954 RVA: 0x000B0D64 File Offset: 0x000AEF64
+		// Token: 0x06000FEA RID: 4074 RVA: 0x000B7028 File Offset: 0x000B5228
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreActivityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F73 RID: 3955 RVA: 0x000B0DE3 File Offset: 0x000AEFE3
+		// Token: 0x06000FEB RID: 4075 RVA: 0x000B70A7 File Offset: 0x000B52A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreActivityById.LogPair = null;
 			ConfigExploreActivityById.HandleId = 0;
 		}
 
-		// Token: 0x06000F74 RID: 3956 RVA: 0x000B0DF1 File Offset: 0x000AEFF1
+		// Token: 0x06000FEC RID: 4076 RVA: 0x000B70B5 File Offset: 0x000B52B5
 		public static void Init()
 		{
 			ConfigExploreActivityById.HandleId = ConfigCommon.InitDataStatement(ConfigExploreActivityById.HandleId, "db_exploreactivity.db", "select BinData from `ExploreActivity` where Id=?");
 		}
 
-		// Token: 0x06000F75 RID: 3957 RVA: 0x000B0E0C File Offset: 0x000AF00C
+		// Token: 0x06000FED RID: 4077 RVA: 0x000B70D0 File Offset: 0x000B52D0
 		public static ExploreActivity? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExploreActivityById.HandleId, ConfigExploreActivityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExploreActivity?(rootAsExploreActivity);
 		}
 
-		// Token: 0x040011E2 RID: 4578
+		// Token: 0x0400126E RID: 4718
 		private const string DB = "db_exploreactivity.db";
 
-		// Token: 0x040011E3 RID: 4579
+		// Token: 0x0400126F RID: 4719
 		private const string FILE = "t.探索度活动.xlsx";
 
-		// Token: 0x040011E4 RID: 4580
+		// Token: 0x04001270 RID: 4720
 		private const string TABLE = "ExploreActivity";
 
-		// Token: 0x040011E5 RID: 4581
+		// Token: 0x04001271 RID: 4721
 		private const string COMMAND = "select BinData from `ExploreActivity` where Id=?";
 
-		// Token: 0x040011E6 RID: 4582
+		// Token: 0x04001272 RID: 4722
 		private const string KEY_PREFIX = "ExploreActivityById";
 
-		// Token: 0x040011E7 RID: 4583
+		// Token: 0x04001273 RID: 4723
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040011E8 RID: 4584
+		// Token: 0x04001274 RID: 4724
 		private static int HandleId;
 	}
 }

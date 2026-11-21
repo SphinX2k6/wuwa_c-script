@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011CE RID: 4558
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200130A RID: 4874
 	public class ITrapDefenseConditionStepBase
 	{
-		// Token: 0x0600679E RID: 26526 RVA: 0x000F801C File Offset: 0x000F621C
+		// Token: 0x06006DDF RID: 28127 RVA: 0x00105928 File Offset: 0x00103B28
 		private ITrapDefenseConditionStepBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600679F RID: 26527 RVA: 0x000F8054 File Offset: 0x000F6254
+		// Token: 0x06006DE0 RID: 28128 RVA: 0x00105960 File Offset: 0x00103B60
 		public static ITrapDefenseConditionStepBase Create([Nullable(2)] ITrapDefenseConditionStepBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067A0 RID: 26528 RVA: 0x000F8067 File Offset: 0x000F6267
+		// Token: 0x06006DE1 RID: 28129 RVA: 0x00105973 File Offset: 0x00103B73
 		public static ITrapDefenseConditionStepBase CreateFromSetValue([Nullable(2)] ITrapDefenseConditionStepBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067A1 RID: 26529 RVA: 0x000F807A File Offset: 0x000F627A
+		// Token: 0x06006DE2 RID: 28130 RVA: 0x00105986 File Offset: 0x00103B86
 		public ITrapDefenseConditionStepBase_SetValue ToSetValue()
 		{
 			return new ITrapDefenseConditionStepBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700219F RID: 8607
-		// (get) Token: 0x060067A2 RID: 26530 RVA: 0x000F808D File Offset: 0x000F628D
-		// (set) Token: 0x060067A3 RID: 26531 RVA: 0x000F80B8 File Offset: 0x000F62B8
+		// Token: 0x17002360 RID: 9056
+		// (get) Token: 0x06006DE3 RID: 28131 RVA: 0x00105999 File Offset: 0x00103B99
+		// (set) Token: 0x06006DE4 RID: 28132 RVA: 0x001059C4 File Offset: 0x00103BC4
 		public virtual ETrapDefenseConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E2E RID: 15918
+		// Token: 0x0400419C RID: 16796
 		[Nullable(2)]
 		protected ITrapDefenseConditionStepBase FbInstance;
 
-		// Token: 0x04003E2F RID: 15919
+		// Token: 0x0400419D RID: 16797
 		[Nullable(2)]
 		protected ITrapDefenseConditionStepBase_SetValue PocoInterface;
 	}

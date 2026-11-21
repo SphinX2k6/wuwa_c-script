@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012A9 RID: 4777
+// Token: 0x0200075D RID: 1885
 public class RoleGrowingMainView : UiViewBase
 {
-	// Token: 0x06008318 RID: 33560 RVA: 0x001BE146 File Offset: 0x001BC346
+	// Token: 0x060056AF RID: 22191 RVA: 0x001C6ED6 File Offset: 0x001C50D6
 	[NullableContext(1)]
 	public RoleGrowingMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008319 RID: 33561 RVA: 0x001BE15C File Offset: 0x001BC35C
+	// Token: 0x060056B0 RID: 22192 RVA: 0x001C6EEC File Offset: 0x001C50EC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -37,7 +37,7 @@ public class RoleGrowingMainView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600831A RID: 33562 RVA: 0x001BE228 File Offset: 0x001BC428
+	// Token: 0x060056B1 RID: 22193 RVA: 0x001C6FB8 File Offset: 0x001C51B8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleGrowingMainView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,26 +48,26 @@ public class RoleGrowingMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600831B RID: 33563 RVA: 0x001BE26C File Offset: 0x001BC46C
+	// Token: 0x060056B2 RID: 22194 RVA: 0x001C6FFC File Offset: 0x001C51FC
 	protected override void OnBeforeShow()
 	{
 		ActivityController.Instance.CheckIsActivityClose(null, new int?(this.ActivityBaseData.Id));
 		this.OnDataUpdate();
 	}
 
-	// Token: 0x0600831C RID: 33564 RVA: 0x001BE2A2 File Offset: 0x001BC4A2
+	// Token: 0x060056B3 RID: 22195 RVA: 0x001C7032 File Offset: 0x001C5232
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.LongShanUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x0600831D RID: 33565 RVA: 0x001BE2C0 File Offset: 0x001BC4C0
+	// Token: 0x060056B4 RID: 22196 RVA: 0x001C7050 File Offset: 0x001C5250
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LongShanUpdate, new Action(this.OnDataUpdate));
 	}
 
-	// Token: 0x0600831E RID: 33566 RVA: 0x001BE2E0 File Offset: 0x001BC4E0
+	// Token: 0x060056B5 RID: 22197 RVA: 0x001C7070 File Offset: 0x001C5270
 	private void OnDataUpdate()
 	{
 		foreach (RoleGrowingStageItem roleGrowingStageItem in this.StageItems)
@@ -76,7 +76,7 @@ public class RoleGrowingMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600831F RID: 33567 RVA: 0x001BE338 File Offset: 0x001BC538
+	// Token: 0x060056B6 RID: 22198 RVA: 0x001C70C8 File Offset: 0x001C52C8
 	private void OnClickStageDetail(int stageId)
 	{
 		if (this.ActivityBaseData.GetStageInfoById(stageId) != null)
@@ -91,34 +91,34 @@ public class RoleGrowingMainView : UiViewBase
 		ActivityLongShanController.Instance.ShowUnlockTip(stageId);
 	}
 
-	// Token: 0x04003B15 RID: 15125
+	// Token: 0x04003BAD RID: 15277
 	[Nullable(2)]
 	protected ActivityLongShanData ActivityBaseData;
 
-	// Token: 0x04003B16 RID: 15126
+	// Token: 0x04003BAE RID: 15278
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003B17 RID: 15127
+	// Token: 0x04003BAF RID: 15279
 	[Nullable(1)]
 	private readonly List<RoleGrowingStageItem> StageItems = new List<RoleGrowingStageItem>();
 
-	// Token: 0x020078C5 RID: 30917
+	// Token: 0x02006A4F RID: 27215
 	private class EComponents
 	{
-		// Token: 0x04027C99 RID: 162969
+		// Token: 0x04022FC7 RID: 143303
 		public const int Caption = 0;
 
-		// Token: 0x04027C9A RID: 162970
+		// Token: 0x04022FC8 RID: 143304
 		public const int Stage1 = 1;
 
-		// Token: 0x04027C9B RID: 162971
+		// Token: 0x04022FC9 RID: 143305
 		public const int Stage2 = 2;
 
-		// Token: 0x04027C9C RID: 162972
+		// Token: 0x04022FCA RID: 143306
 		public const int Stage3 = 3;
 
-		// Token: 0x04027C9D RID: 162973
+		// Token: 0x04022FCB RID: 143307
 		public const int Stage4 = 4;
 	}
 }

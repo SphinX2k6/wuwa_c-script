@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200131E RID: 4894
+// Token: 0x020007D2 RID: 2002
 [NullableContext(1)]
 public interface IRoleResultData
 {
-	// Token: 0x17000B90 RID: 2960
-	// (get) Token: 0x060087CF RID: 34767
-	// (set) Token: 0x060087D0 RID: 34768
+	// Token: 0x17000BB0 RID: 2992
+	// (get) Token: 0x06005B6A RID: 23402
+	// (set) Token: 0x06005B6B RID: 23403
 	RoleSettleResult SuccessResult { get; set; }
 
-	// Token: 0x17000B91 RID: 2961
-	// (get) Token: 0x060087D1 RID: 34769
-	// (set) Token: 0x060087D2 RID: 34770
+	// Token: 0x17000BB1 RID: 2993
+	// (get) Token: 0x06005B6C RID: 23404
+	// (set) Token: 0x06005B6D RID: 23405
 	List<int> CharacterValueList { get; set; }
 }

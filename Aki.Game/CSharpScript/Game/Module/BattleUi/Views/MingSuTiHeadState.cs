@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D4A RID: 23882
+	// Token: 0x02004D2C RID: 19756
 	public class MingSuTiHeadState : HeadStateViewBase
 	{
-		// Token: 0x0603C9FC RID: 248316 RVA: 0x00E8C59C File Offset: 0x00E8A79C
+		// Token: 0x06031955 RID: 203093 RVA: 0x00DDCD4C File Offset: 0x00DDAF4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -61,14 +61,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C9FD RID: 248317 RVA: 0x00E8C885 File Offset: 0x00E8AA85
+		// Token: 0x06031956 RID: 203094 RVA: 0x00DDD035 File Offset: 0x00DDB235
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_MingsutiState_Prefab";
 		}
 
-		// Token: 0x0603C9FE RID: 248318 RVA: 0x00E8C88C File Offset: 0x00E8AA8C
+		// Token: 0x06031957 RID: 203095 RVA: 0x00DDD03C File Offset: 0x00DDB23C
 		protected unsafe override void OnStart()
 		{
 			int num = 20;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HpStateSpriteList = list;
 		}
 
-		// Token: 0x0603C9FF RID: 248319 RVA: 0x00E8CA50 File Offset: 0x00E8AC50
+		// Token: 0x06031958 RID: 203096 RVA: 0x00DDD200 File Offset: 0x00DDB400
 		[NullableContext(1)]
 		protected override void ActiveBattleHeadState(HeadStateData headStateData)
 		{
@@ -128,20 +128,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitHp();
 		}
 
-		// Token: 0x0603CA00 RID: 248320 RVA: 0x00E8CA6B File Offset: 0x00E8AC6B
+		// Token: 0x06031959 RID: 203097 RVA: 0x00DDD21B File Offset: 0x00DDB41B
 		protected override void OnHealthChanged()
 		{
 			this.RefreshHp();
 		}
 
-		// Token: 0x0603CA01 RID: 248321 RVA: 0x00E8CA73 File Offset: 0x00E8AC73
+		// Token: 0x0603195A RID: 203098 RVA: 0x00DDD223 File Offset: 0x00DDB423
 		[NullableContext(2)]
 		private UUISprite GetHpStateSprite(int index)
 		{
 			return this.HpStateSpriteList.GetValueOrDefault(index);
 		}
 
-		// Token: 0x0603CA02 RID: 248322 RVA: 0x00E8CA84 File Offset: 0x00E8AC84
+		// Token: 0x0603195B RID: 203099 RVA: 0x00DDD234 File Offset: 0x00DDB434
 		private void RefreshHp()
 		{
 			ValueTuple<float, float> hpAndMaxHp = base.GetHpAndMaxHp();
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA03 RID: 248323 RVA: 0x00E8CAEC File Offset: 0x00E8ACEC
+		// Token: 0x0603195C RID: 203100 RVA: 0x00DDD29C File Offset: 0x00DDB49C
 		private void InitHp()
 		{
 			for (int i = (int)this.GetMaxHp(); i < this.HpStateSpriteList.Count; i++)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA04 RID: 248324 RVA: 0x00E8CB2C File Offset: 0x00E8AD2C
+		// Token: 0x0603195D RID: 203101 RVA: 0x00DDD2DC File Offset: 0x00DDB4DC
 		private void RefreshHpColor()
 		{
 			string hpColor = base.GetHpColor();
@@ -192,13 +192,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA05 RID: 248325 RVA: 0x00E8CB94 File Offset: 0x00E8AD94
+		// Token: 0x0603195E RID: 203102 RVA: 0x00DDD344 File Offset: 0x00DDB544
 		protected override void RefreshOnCampChanged()
 		{
 			this.RefreshHpColor();
 		}
 
-		// Token: 0x0401F949 RID: 129353
+		// Token: 0x0401A402 RID: 107522
 		[Nullable(new byte[]
 		{
 			2,
@@ -206,53 +206,53 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private List<UUISprite> HpStateSpriteList;
 
-		// Token: 0x0401F94A RID: 129354
+		// Token: 0x0401A403 RID: 107523
 		private float CurrentHp;
 
-		// Token: 0x0200BFEE RID: 49134
+		// Token: 0x0200A9F4 RID: 43508
 		private enum EChildType
 		{
-			// Token: 0x04039E9C RID: 237212
+			// Token: 0x0403485E RID: 215134
 			HpHorizontalBox,
-			// Token: 0x04039E9D RID: 237213
+			// Token: 0x0403485F RID: 215135
 			HpSprite1,
-			// Token: 0x04039E9E RID: 237214
+			// Token: 0x04034860 RID: 215136
 			HpSprite2,
-			// Token: 0x04039E9F RID: 237215
+			// Token: 0x04034861 RID: 215137
 			HpSprite3,
-			// Token: 0x04039EA0 RID: 237216
+			// Token: 0x04034862 RID: 215138
 			HpSprite4,
-			// Token: 0x04039EA1 RID: 237217
+			// Token: 0x04034863 RID: 215139
 			HpSprite5,
-			// Token: 0x04039EA2 RID: 237218
+			// Token: 0x04034864 RID: 215140
 			HpSprite6,
-			// Token: 0x04039EA3 RID: 237219
+			// Token: 0x04034865 RID: 215141
 			HpSprite7,
-			// Token: 0x04039EA4 RID: 237220
+			// Token: 0x04034866 RID: 215142
 			HpSprite8,
-			// Token: 0x04039EA5 RID: 237221
+			// Token: 0x04034867 RID: 215143
 			HpSprite9,
-			// Token: 0x04039EA6 RID: 237222
+			// Token: 0x04034868 RID: 215144
 			HpSprite10,
-			// Token: 0x04039EA7 RID: 237223
+			// Token: 0x04034869 RID: 215145
 			HpSprite11,
-			// Token: 0x04039EA8 RID: 237224
+			// Token: 0x0403486A RID: 215146
 			HpSprite12,
-			// Token: 0x04039EA9 RID: 237225
+			// Token: 0x0403486B RID: 215147
 			HpSprite13,
-			// Token: 0x04039EAA RID: 237226
+			// Token: 0x0403486C RID: 215148
 			HpSprite14,
-			// Token: 0x04039EAB RID: 237227
+			// Token: 0x0403486D RID: 215149
 			HpSprite15,
-			// Token: 0x04039EAC RID: 237228
+			// Token: 0x0403486E RID: 215150
 			HpSprite16,
-			// Token: 0x04039EAD RID: 237229
+			// Token: 0x0403486F RID: 215151
 			HpSprite17,
-			// Token: 0x04039EAE RID: 237230
+			// Token: 0x04034870 RID: 215152
 			HpSprite18,
-			// Token: 0x04039EAF RID: 237231
+			// Token: 0x04034871 RID: 215153
 			HpSprite19,
-			// Token: 0x04039EB0 RID: 237232
+			// Token: 0x04034872 RID: 215154
 			HpSprite20
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x0200130E RID: 4878
-// (Invoke) Token: 0x06008725 RID: 34597
+// Token: 0x020007C2 RID: 1986
+// (Invoke) Token: 0x06005AC0 RID: 23232
 public delegate bool TEditTeamItemSelected(int roleId);

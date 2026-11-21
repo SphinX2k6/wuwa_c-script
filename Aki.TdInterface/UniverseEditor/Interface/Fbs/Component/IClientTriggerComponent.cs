@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FAC RID: 20396
+	// Token: 0x02005508 RID: 21768
 	public struct IClientTriggerComponent : IFlatbufferObject
 	{
-		// Token: 0x170093B3 RID: 37811
-		// (get) Token: 0x06020755 RID: 132949 RVA: 0x00484160 File Offset: 0x00482360
+		// Token: 0x17009B8B RID: 39819
+		// (get) Token: 0x06022649 RID: 140873 RVA: 0x004BD644 File Offset: 0x004BB844
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020756 RID: 132950 RVA: 0x0048416D File Offset: 0x0048236D
+		// Token: 0x0602264A RID: 140874 RVA: 0x004BD651 File Offset: 0x004BB851
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020757 RID: 132951 RVA: 0x00484174 File Offset: 0x00482374
+		// Token: 0x0602264B RID: 140875 RVA: 0x004BD658 File Offset: 0x004BB858
 		public static IClientTriggerComponent GetRootAsIClientTriggerComponent(ByteBuffer _bb)
 		{
 			return IClientTriggerComponent.GetRootAsIClientTriggerComponent(_bb, default(IClientTriggerComponent));
 		}
 
-		// Token: 0x06020758 RID: 132952 RVA: 0x00484190 File Offset: 0x00482390
+		// Token: 0x0602264C RID: 140876 RVA: 0x004BD674 File Offset: 0x004BB874
 		public static IClientTriggerComponent GetRootAsIClientTriggerComponent(ByteBuffer _bb, IClientTriggerComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020759 RID: 132953 RVA: 0x004841AD File Offset: 0x004823AD
+		// Token: 0x0602264D RID: 140877 RVA: 0x004BD691 File Offset: 0x004BB891
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602075A RID: 132954 RVA: 0x004841BC File Offset: 0x004823BC
+		// Token: 0x0602264E RID: 140878 RVA: 0x004BD6A0 File Offset: 0x004BB8A0
 		public IClientTriggerComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170093B4 RID: 37812
-		// (get) Token: 0x0602075B RID: 132955 RVA: 0x004841CC File Offset: 0x004823CC
+		// Token: 0x17009B8C RID: 39820
+		// (get) Token: 0x0602264F RID: 140879 RVA: 0x004BD6B0 File Offset: 0x004BB8B0
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093B5 RID: 37813
-		// (get) Token: 0x0602075C RID: 132956 RVA: 0x0048420C File Offset: 0x0048240C
+		// Token: 0x17009B8D RID: 39821
+		// (get) Token: 0x06022650 RID: 140880 RVA: 0x004BD6F0 File Offset: 0x004BB8F0
 		public ITriggerMatchConfig? TriggerMatch
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093B6 RID: 37814
-		// (get) Token: 0x0602075D RID: 132957 RVA: 0x0048426C File Offset: 0x0048246C
+		// Token: 0x17009B8E RID: 39822
+		// (get) Token: 0x06022651 RID: 140881 RVA: 0x004BD750 File Offset: 0x004BB950
 		public ITriggeredConfig? OnTriggerEnter
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093B7 RID: 37815
-		// (get) Token: 0x0602075E RID: 132958 RVA: 0x004842CC File Offset: 0x004824CC
+		// Token: 0x17009B8F RID: 39823
+		// (get) Token: 0x06022652 RID: 140882 RVA: 0x004BD7B0 File Offset: 0x004BB9B0
 		public ITriggeredConfig? OnTriggerExit
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093B8 RID: 37816
-		// (get) Token: 0x0602075F RID: 132959 RVA: 0x0048432C File Offset: 0x0048252C
+		// Token: 0x17009B90 RID: 39824
+		// (get) Token: 0x06022653 RID: 140883 RVA: 0x004BD810 File Offset: 0x004BBA10
 		public byte NullMask
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020760 RID: 132960 RVA: 0x00484369 File Offset: 0x00482569
+		// Token: 0x06022654 RID: 140884 RVA: 0x004BD84D File Offset: 0x004BBA4D
 		public static Offset<IClientTriggerComponent> CreateIClientTriggerComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<ITriggerMatchConfig> TriggerMatchOffset = default(Offset<ITriggerMatchConfig>), Offset<ITriggeredConfig> OnTriggerEnterOffset = default(Offset<ITriggeredConfig>), Offset<ITriggeredConfig> OnTriggerExitOffset = default(Offset<ITriggeredConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IClientTriggerComponent.EndIClientTriggerComponent(builder);
 		}
 
-		// Token: 0x06020761 RID: 132961 RVA: 0x0048439D File Offset: 0x0048259D
+		// Token: 0x06022655 RID: 140885 RVA: 0x004BD881 File Offset: 0x004BBA81
 		public static void StartIClientTriggerComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06020762 RID: 132962 RVA: 0x004843A6 File Offset: 0x004825A6
+		// Token: 0x06022656 RID: 140886 RVA: 0x004BD88A File Offset: 0x004BBA8A
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06020763 RID: 132963 RVA: 0x004843B1 File Offset: 0x004825B1
+		// Token: 0x06022657 RID: 140887 RVA: 0x004BD895 File Offset: 0x004BBA95
 		public static void AddTriggerMatch(FlatBufferBuilder builder, Offset<ITriggerMatchConfig> triggerMatchOffset)
 		{
 			builder.AddOffset(1, triggerMatchOffset.Value, 0);
 		}
 
-		// Token: 0x06020764 RID: 132964 RVA: 0x004843C1 File Offset: 0x004825C1
+		// Token: 0x06022658 RID: 140888 RVA: 0x004BD8A5 File Offset: 0x004BBAA5
 		public static void AddOnTriggerEnter(FlatBufferBuilder builder, Offset<ITriggeredConfig> onTriggerEnterOffset)
 		{
 			builder.AddOffset(2, onTriggerEnterOffset.Value, 0);
 		}
 
-		// Token: 0x06020765 RID: 132965 RVA: 0x004843D1 File Offset: 0x004825D1
+		// Token: 0x06022659 RID: 140889 RVA: 0x004BD8B5 File Offset: 0x004BBAB5
 		public static void AddOnTriggerExit(FlatBufferBuilder builder, Offset<ITriggeredConfig> onTriggerExitOffset)
 		{
 			builder.AddOffset(3, onTriggerExitOffset.Value, 0);
 		}
 
-		// Token: 0x06020766 RID: 132966 RVA: 0x004843E1 File Offset: 0x004825E1
+		// Token: 0x0602265A RID: 140890 RVA: 0x004BD8C5 File Offset: 0x004BBAC5
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06020767 RID: 132967 RVA: 0x004843EC File Offset: 0x004825EC
+		// Token: 0x0602265B RID: 140891 RVA: 0x004BD8D0 File Offset: 0x004BBAD0
 		public static Offset<IClientTriggerComponent> EndIClientTriggerComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientTriggerComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06020768 RID: 132968 RVA: 0x004843FC File Offset: 0x004825FC
+		// Token: 0x0602265C RID: 140892 RVA: 0x004BD8E0 File Offset: 0x004BBAE0
 		public IClientTriggerComponentT UnPack()
 		{
 			IClientTriggerComponentT clientTriggerComponentT = new IClientTriggerComponentT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return clientTriggerComponentT;
 		}
 
-		// Token: 0x06020769 RID: 132969 RVA: 0x00484418 File Offset: 0x00482618
+		// Token: 0x0602265D RID: 140893 RVA: 0x004BD8FC File Offset: 0x004BBAFC
 		public void UnPackTo(IClientTriggerComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602076A RID: 132970 RVA: 0x004844CC File Offset: 0x004826CC
+		// Token: 0x0602265E RID: 140894 RVA: 0x004BD9B0 File Offset: 0x004BBBB0
 		public static Offset<IClientTriggerComponent> Pack(FlatBufferBuilder builder, IClientTriggerComponentT _o)
 		{
 			if (_o == null)
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IClientTriggerComponent.CreateIClientTriggerComponent(builder, _o.Disabled, triggerMatchOffset, onTriggerEnterOffset, onTriggerExitOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DE82 RID: 56962
+		// Token: 0x0400EA70 RID: 60016
 		private Table __p;
 	}
 }

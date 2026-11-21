@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001978 RID: 6520
+	// Token: 0x0200043A RID: 1082
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FWaitGameplayEventDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018386 RID: 99206 RVA: 0x0023B87A File Offset: 0x00239A7A
+		// Token: 0x060068D9 RID: 26841 RVA: 0x00099157 File Offset: 0x00097357
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FWaitGameplayEventDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018387 RID: 99207 RVA: 0x0023B886 File Offset: 0x00239A86
+		// Token: 0x060068DA RID: 26842 RVA: 0x00099163 File Offset: 0x00097363
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FWaitGameplayEventDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FWaitGameplayEventDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018388 RID: 99208 RVA: 0x0023B8A9 File Offset: 0x00239AA9
+		// Token: 0x060068DB RID: 26843 RVA: 0x00099186 File Offset: 0x00097386
 		public FWaitGameplayEventDelegate()
 		{
 		}
 
-		// Token: 0x06018389 RID: 99209 RVA: 0x0023B8B1 File Offset: 0x00239AB1
+		// Token: 0x060068DC RID: 26844 RVA: 0x0009918E File Offset: 0x0009738E
 		[NullableContext(2)]
 		public FWaitGameplayEventDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601838A RID: 99210 RVA: 0x0023B8BB File Offset: 0x00239ABB
+		// Token: 0x060068DD RID: 26845 RVA: 0x00099198 File Offset: 0x00097398
 		public FWaitGameplayEventDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601838B RID: 99211 RVA: 0x0023B8C6 File Offset: 0x00239AC6
+		// Token: 0x060068DE RID: 26846 RVA: 0x000991A3 File Offset: 0x000973A3
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FGameplayTag, FGameplayEventData>) ?? ((Action<FGameplayTag, FGameplayEventData>)Delegate.CreateDelegate(typeof(Action<FGameplayTag, FGameplayEventData>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601838C RID: 99212 RVA: 0x0023B8F8 File Offset: 0x00239AF8
+		// Token: 0x060068DF RID: 26847 RVA: 0x000991D5 File Offset: 0x000973D5
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FGameplayTag, FGameplayEventData> Callback)
 		{
 			if (FWaitGameplayEventDelegate.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FWaitGameplayEventDelegate.RegisterId);
 		}
 
-		// Token: 0x0601838D RID: 99213 RVA: 0x0023B932 File Offset: 0x00239B32
+		// Token: 0x060068E0 RID: 26848 RVA: 0x0009920F File Offset: 0x0009740F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FGameplayTag, FGameplayEventData> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601838E RID: 99214 RVA: 0x0023B93C File Offset: 0x00239B3C
+		// Token: 0x060068E1 RID: 26849 RVA: 0x00099218 File Offset: 0x00097418
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FGameplayTag EventTag, FGameplayEventData Payload)
 		{
 			FWaitGameplayEventDelegate.__FWaitGameplayEventDelegate_DelegateParams* ptr = stackalloc FWaitGameplayEventDelegate.__FWaitGameplayEventDelegate_DelegateParams[(UIntPtr)215] + 15L / (long)sizeof(FWaitGameplayEventDelegate.__FWaitGameplayEventDelegate_DelegateParams) & -16L;
@@ -92,10 +89,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FWaitGameplayEventDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601838F RID: 99215 RVA: 0x0023B9B0 File Offset: 0x00239BB0
+		// Token: 0x060068E2 RID: 26850 RVA: 0x0009928C File Offset: 0x0009748C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FGameplayTag, FGameplayEventData> action = target as Action<FGameplayTag, FGameplayEventData>;
@@ -107,35 +103,35 @@ namespace UnrealEngine
 			action(((FWaitGameplayEventDelegate.__FWaitGameplayEventDelegate_DelegateParams*)__Parameters)->EventTag, arg);
 		}
 
-		// Token: 0x0400D1DE RID: 53726
+		// Token: 0x04002CAD RID: 11437
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D1DF RID: 53727
+		// Token: 0x04002CAE RID: 11438
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGAS.WaitGameplayEventDelegate__DelegateSignature";
 
-		// Token: 0x0400D1E0 RID: 53728
+		// Token: 0x04002CAF RID: 11439
 		private static int RegisterId;
 
-		// Token: 0x02003072 RID: 12402
+		// Token: 0x02000B5C RID: 2908
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 200)]
-		protected ref struct __FWaitGameplayEventDelegate_DelegateParams
+		private ref struct __FWaitGameplayEventDelegate_DelegateParams
 		{
-			// Token: 0x04016D43 RID: 93507
+			// Token: 0x04005C70 RID: 23664
 			[FieldOffset(0)]
 			public FGameplayTag EventTag;
 
-			// Token: 0x04016D44 RID: 93508
+			// Token: 0x04005C71 RID: 23665
 			[FieldOffset(16)]
 			public byte Payload;
 		}
 
-		// Token: 0x02003073 RID: 12403
+		// Token: 0x02000B5D RID: 2909
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D45 RID: 93509
+			// Token: 0x04005C72 RID: 23666
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

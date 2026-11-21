@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200624D RID: 25165
+	// Token: 0x020051CB RID: 20939
 	public class RhythmShipSetTipsView : UiViewBase
 	{
-		// Token: 0x0603F64C RID: 259660 RVA: 0x00F53595 File Offset: 0x00F51795
+		// Token: 0x0603430D RID: 213773 RVA: 0x00E9A4F1 File Offset: 0x00E986F1
 		[NullableContext(1)]
 		public RhythmShipSetTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F64D RID: 259661 RVA: 0x00F5359E File Offset: 0x00F5179E
+		// Token: 0x0603430E RID: 213774 RVA: 0x00E9A4FA File Offset: 0x00E986FA
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F64E RID: 259662 RVA: 0x00F535D8 File Offset: 0x00F517D8
+		// Token: 0x0603430F RID: 213775 RVA: 0x00E9A534 File Offset: 0x00E98734
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipSetTipsView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F64F RID: 259663 RVA: 0x00F5361C File Offset: 0x00F5181C
+		// Token: 0x06034310 RID: 213776 RVA: 0x00E9A578 File Offset: 0x00E98778
 		protected override void OnStart()
 		{
 			List<int> rhythmShipActionAll = RhythmShipConfig.Instance.GetRhythmShipActionAll();
@@ -51,11 +51,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			scrollView.RefreshByData(rhythmShipActionAll, null, false);
 		}
 
-		// Token: 0x040211BD RID: 135613
+		// Token: 0x0401BAEC RID: 113388
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040211BE RID: 135614
+		// Token: 0x0401BAED RID: 113389
 		[Nullable(new byte[]
 		{
 			2,

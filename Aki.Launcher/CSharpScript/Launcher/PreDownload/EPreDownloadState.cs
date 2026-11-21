@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Launcher.PreDownload
 {
-	// Token: 0x02000111 RID: 273
+	// Token: 0x02000115 RID: 277
 	public enum EPreDownloadState
 	{
-		// Token: 0x04000508 RID: 1288
+		// Token: 0x04000543 RID: 1347
 		Disabled,
-		// Token: 0x04000509 RID: 1289
+		// Token: 0x04000544 RID: 1348
 		Enabled,
-		// Token: 0x0400050A RID: 1290
+		// Token: 0x04000545 RID: 1349
 		Downloading,
-		// Token: 0x0400050B RID: 1291
+		// Token: 0x04000546 RID: 1350
 		Patching,
-		// Token: 0x0400050C RID: 1292
+		// Token: 0x04000547 RID: 1351
 		Stopped,
-		// Token: 0x0400050D RID: 1293
+		// Token: 0x04000548 RID: 1352
 		Finished
 	}
 }

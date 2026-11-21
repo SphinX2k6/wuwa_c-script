@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,6 +11,7 @@ using CSharpScript.Game.Module.BlackScreen;
 using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Module.ResManager;
 using CSharpScript.Game.Ui;
+using CSharpScript.Launcher;
 using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.Platform;
 using CSharpScript.Launcher.Platform.PlatformSdk;
@@ -21,17 +21,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020020A7 RID: 8359
+// Token: 0x0200157E RID: 5502
 [NullableContext(1)]
 [Nullable(0)]
 public class LoginOfficialView : UiTickViewBase
 {
-	// Token: 0x060107E6 RID: 67558 RVA: 0x004075A4 File Offset: 0x004057A4
+	// Token: 0x0600DC55 RID: 56405 RVA: 0x00413C44 File Offset: 0x00411E44
 	public LoginOfficialView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060107E7 RID: 67559 RVA: 0x004076E0 File Offset: 0x004058E0
+	// Token: 0x0600DC56 RID: 56406 RVA: 0x00413D5C File Offset: 0x00411F5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 27;
@@ -120,7 +120,7 @@ public class LoginOfficialView : UiTickViewBase
 		num++;
 		*span2[num] = new ValueTuple<int, Delegate>(12, this.OnExitGameClick);
 		num++;
-		*span2[num] = new ValueTuple<int, Delegate>(14, this.OnClickServerBtn);
+		*span2[num] = new ValueTuple<int, Delegate>(14, new Action(this.OnClickServerBtn));
 		num++;
 		*span2[num] = new ValueTuple<int, Delegate>(20, new Action(this.OnClickQRCodeLoginBtn));
 		num++;
@@ -128,7 +128,7 @@ public class LoginOfficialView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060107E8 RID: 67560 RVA: 0x00407C78 File Offset: 0x00405E78
+	// Token: 0x0600DC57 RID: 56407 RVA: 0x004142F8 File Offset: 0x004124F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LoginOfficialView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -139,7 +139,7 @@ public class LoginOfficialView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107E9 RID: 67561 RVA: 0x00407CBC File Offset: 0x00405EBC
+	// Token: 0x0600DC58 RID: 56408 RVA: 0x0041433C File Offset: 0x0041253C
 	protected override void OnStart()
 	{
 		ResourceManagerController.Instance.ChangeHttpTickFrequency();
@@ -174,13 +174,13 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x060107EA RID: 67562 RVA: 0x00407DC3 File Offset: 0x00405FC3
+	// Token: 0x0600DC59 RID: 56409 RVA: 0x00414443 File Offset: 0x00412643
 	protected override void OnBeforeDestroy()
 	{
 		ResourceManagerController.Instance.RestoreHttpTickFrequency();
 	}
 
-	// Token: 0x060107EB RID: 67563 RVA: 0x00407DD0 File Offset: 0x00405FD0
+	// Token: 0x0600DC5A RID: 56410 RVA: 0x00414450 File Offset: 0x00412650
 	private void RefreshExitButton()
 	{
 		if (CloudGameManager.Instance.IsCloudGame)
@@ -194,11 +194,11 @@ public class LoginOfficialView : UiTickViewBase
 			return;
 		}
 		string value = PlatformSdkManagerNew.Instance.IsSdkOn ? PlatformSdkManagerNew.Instance.GetPlatformSdk().GetProductId() : UKuroSDKManager.GetPackageId();
-		bool uiactive = !LoginConfig.Instance.GetLoginViewNoExitButtonPackageIdList().Contains(value);
+		bool uiactive = Array.IndexOf<string>(LoginConfig.Instance.GetLoginViewNoExitButtonPackageIdList(), value) < 0;
 		base.GetButton(12).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x060107EC RID: 67564 RVA: 0x00407E80 File Offset: 0x00406080
+	// Token: 0x0600DC5B RID: 56411 RVA: 0x00414500 File Offset: 0x00412700
 	private void RefreshAccountButton(bool sdkLoginState = false)
 	{
 		if (CloudGameManager.Instance.IsCloudGame)
@@ -213,11 +213,11 @@ public class LoginOfficialView : UiTickViewBase
 		}
 		string value = PlatformSdkManagerNew.Instance.IsSdkOn ? PlatformSdkManagerNew.Instance.GetPlatformSdk().GetProductId() : UKuroSDKManager.GetPackageId();
 		string[] loginViewNoAccountButtonPackageIdList = LoginConfig.Instance.GetLoginViewNoAccountButtonPackageIdList();
-		bool uiactive = sdkLoginState && !loginViewNoAccountButtonPackageIdList.Contains(value);
+		bool uiactive = sdkLoginState && Array.IndexOf<string>(loginViewNoAccountButtonPackageIdList, value) < 0;
 		base.GetButton(1).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x060107ED RID: 67565 RVA: 0x00407F34 File Offset: 0x00406134
+	// Token: 0x0600DC5C RID: 56412 RVA: 0x004145B4 File Offset: 0x004127B4
 	protected void RefreshQRCodeLoginBtn(bool sdkLoginState = false)
 	{
 		if (CloudGameManager.Instance.IsCloudGame)
@@ -237,7 +237,7 @@ public class LoginOfficialView : UiTickViewBase
 		base.GetButton(20).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x060107EE RID: 67566 RVA: 0x00407FE0 File Offset: 0x004061E0
+	// Token: 0x0600DC5D RID: 56413 RVA: 0x00414660 File Offset: 0x00412860
 	protected void OnClickQRCodeLoginBtn()
 	{
 		if (!KuroSdkController.Instance.GetIfCanQRCodeLogin())
@@ -248,7 +248,7 @@ public class LoginOfficialView : UiTickViewBase
 		KuroSdkController.Instance.DoQRCodeLogin();
 	}
 
-	// Token: 0x060107EF RID: 67567 RVA: 0x00408020 File Offset: 0x00406220
+	// Token: 0x0600DC5E RID: 56414 RVA: 0x004146A0 File Offset: 0x004128A0
 	private void OnClickMenuBtn()
 	{
 		if (!this.IsLoginStableState())
@@ -274,7 +274,7 @@ public class LoginOfficialView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x060107F0 RID: 67568 RVA: 0x00408088 File Offset: 0x00406288
+	// Token: 0x0600DC5F RID: 56415 RVA: 0x00414708 File Offset: 0x00412908
 	private bool IsLoginStableState()
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -283,7 +283,7 @@ public class LoginOfficialView : UiTickViewBase
 		return !flag && !flag2;
 	}
 
-	// Token: 0x060107F1 RID: 67569 RVA: 0x004080E4 File Offset: 0x004062E4
+	// Token: 0x0600DC60 RID: 56416 RVA: 0x00414764 File Offset: 0x00412964
 	private void RefreshMenuBtnState()
 	{
 		UUIButtonComponent button = base.GetButton(27);
@@ -297,20 +297,20 @@ public class LoginOfficialView : UiTickViewBase
 		button.RootUIComp.Get().SetAlpha(flag ? 1f : 0.5f);
 	}
 
-	// Token: 0x060107F2 RID: 67570 RVA: 0x00408135 File Offset: 0x00406335
+	// Token: 0x0600DC61 RID: 56417 RVA: 0x004147B5 File Offset: 0x004129B5
 	private void InitAgreement()
 	{
 		this.IsAgree = true;
 		base.GetExtendToggle(5).SetToggleState(this.IsAgree ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060107F3 RID: 67571 RVA: 0x0040815A File Offset: 0x0040635A
+	// Token: 0x0600DC62 RID: 56418 RVA: 0x004147DA File Offset: 0x004129DA
 	private void InitLoginText()
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(10), "ClickEnterGame", Array.Empty<object>());
 	}
 
-	// Token: 0x060107F4 RID: 67572 RVA: 0x00408178 File Offset: 0x00406378
+	// Token: 0x0600DC63 RID: 56419 RVA: 0x004147F8 File Offset: 0x004129F8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.LoginRequestResult, new Action<bool>(this.CreateCharacterResult));
@@ -324,7 +324,7 @@ public class LoginOfficialView : UiTickViewBase
 		EventSystem.Instance.Add(EEventName.OnRefreshSubPackageDownLoadByPriority, new Action(this.OnRefreshSubPackageDownLoadByPriority));
 	}
 
-	// Token: 0x060107F5 RID: 67573 RVA: 0x0040826C File Offset: 0x0040646C
+	// Token: 0x0600DC64 RID: 56420 RVA: 0x004148EC File Offset: 0x00412AEC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.LoginRequestResult, new Action<bool>(this.CreateCharacterResult));
@@ -338,7 +338,7 @@ public class LoginOfficialView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OnRefreshSubPackageDownLoadByPriority, new Action(this.OnRefreshSubPackageDownLoadByPriority));
 	}
 
-	// Token: 0x060107F6 RID: 67574 RVA: 0x00408360 File Offset: 0x00406560
+	// Token: 0x0600DC65 RID: 56421 RVA: 0x004149E0 File Offset: 0x00412BE0
 	protected override void OnBeforeShow()
 	{
 		if (KuroSdkController.Instance.CanUseSdk())
@@ -348,7 +348,7 @@ public class LoginOfficialView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060107F7 RID: 67575 RVA: 0x0040839C File Offset: 0x0040659C
+	// Token: 0x0600DC66 RID: 56422 RVA: 0x00414A1C File Offset: 0x00412C1C
 	protected override void OnAfterShow()
 	{
 		if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -374,7 +374,7 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x060107F8 RID: 67576 RVA: 0x0040843C File Offset: 0x0040663C
+	// Token: 0x0600DC67 RID: 56423 RVA: 0x00414ABC File Offset: 0x00412CBC
 	private UniTask OnAfterShowStartSdkLogin()
 	{
 		LoginOfficialView.<OnAfterShowStartSdkLogin>d__29 <OnAfterShowStartSdkLogin>d__;
@@ -385,7 +385,7 @@ public class LoginOfficialView : UiTickViewBase
 		return <OnAfterShowStartSdkLogin>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107F9 RID: 67577 RVA: 0x00408480 File Offset: 0x00406680
+	// Token: 0x0600DC68 RID: 56424 RVA: 0x00414B00 File Offset: 0x00412D00
 	[NullableContext(0)]
 	private UniTask<bool> BindAccountWithRegion()
 	{
@@ -396,7 +396,7 @@ public class LoginOfficialView : UiTickViewBase
 		return <BindAccountWithRegion>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107FA RID: 67578 RVA: 0x004084BB File Offset: 0x004066BB
+	// Token: 0x0600DC69 RID: 56425 RVA: 0x00414B3B File Offset: 0x00412D3B
 	private void LoginBtnClick()
 	{
 		if (this.IsMenuViewOpenRequested)
@@ -410,7 +410,7 @@ public class LoginOfficialView : UiTickViewBase
 		this.TryLogin(true).Forget();
 	}
 
-	// Token: 0x060107FB RID: 67579 RVA: 0x004084E4 File Offset: 0x004066E4
+	// Token: 0x0600DC6A RID: 56426 RVA: 0x00414B64 File Offset: 0x00412D64
 	private UniTask TryLogin(bool isFromClick)
 	{
 		LoginOfficialView.<TryLogin>d__32 <TryLogin>d__;
@@ -422,7 +422,7 @@ public class LoginOfficialView : UiTickViewBase
 		return <TryLogin>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107FC RID: 67580 RVA: 0x00408530 File Offset: 0x00406730
+	// Token: 0x0600DC6B RID: 56427 RVA: 0x00414BB0 File Offset: 0x00412DB0
 	private void LogoutBtnClick()
 	{
 		if (!LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.Init))
@@ -436,13 +436,23 @@ public class LoginOfficialView : UiTickViewBase
 		KuroSdkReport.Instance.Report(new SdkReportChangeAccount(null));
 	}
 
-	// Token: 0x060107FD RID: 67581 RVA: 0x004085A2 File Offset: 0x004067A2
+	// Token: 0x0600DC6C RID: 56428 RVA: 0x00414C22 File Offset: 0x00412E22
+	private void OnClickServerBtn()
+	{
+		if (!this.IsLoginStableState())
+		{
+			return;
+		}
+		UiManager.Instance.OpenView(EUiViewName.LoginServerView, null, null);
+	}
+
+	// Token: 0x0600DC6D RID: 56429 RVA: 0x00414C3E File Offset: 0x00412E3E
 	private void OnSdkPostWebViewRedPointRefresh()
 	{
 		this.RefreshPostViewRedPoint();
 	}
 
-	// Token: 0x060107FE RID: 67582 RVA: 0x004085AC File Offset: 0x004067AC
+	// Token: 0x0600DC6E RID: 56430 RVA: 0x00414C48 File Offset: 0x00412E48
 	private void CreateCharacterResult(bool result)
 	{
 		this.IsCharacterLoginInFlight = false;
@@ -470,7 +480,7 @@ public class LoginOfficialView : UiTickViewBase
 		}, false, null);
 	}
 
-	// Token: 0x060107FF RID: 67583 RVA: 0x00408684 File Offset: 0x00406884
+	// Token: 0x0600DC6F RID: 56431 RVA: 0x00414D20 File Offset: 0x00412F20
 	private void OnSdkLoginResult()
 	{
 		if (KuroSdkController.Instance.CheckIfSingleServerAfterSelect() && !LoginServerModel.Instance.GetIfSetOnlyRegion())
@@ -518,7 +528,7 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x06010800 RID: 67584 RVA: 0x00408780 File Offset: 0x00406980
+	// Token: 0x0600DC70 RID: 56432 RVA: 0x00414E1C File Offset: 0x0041301C
 	private UniTask OnSdkLoginSuccess()
 	{
 		LoginOfficialView.<OnSdkLoginSuccess>d__44 <OnSdkLoginSuccess>d__;
@@ -529,7 +539,7 @@ public class LoginOfficialView : UiTickViewBase
 		return <OnSdkLoginSuccess>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010801 RID: 67585 RVA: 0x004087C4 File Offset: 0x004069C4
+	// Token: 0x0600DC71 RID: 56433 RVA: 0x00414E60 File Offset: 0x00413060
 	private void OnSdkLoginFinish()
 	{
 		if (base.IsShow)
@@ -548,7 +558,13 @@ public class LoginOfficialView : UiTickViewBase
 			});
 			if (this.IfAutoShowLoginServerView())
 			{
-				UiManager.Instance.OpenView(EUiViewName.LoginServerView, null, null);
+				UiManager.Instance.OpenView(EUiViewName.LoginServerView, null, delegate(bool isSuccess, int _)
+				{
+					if (isSuccess)
+					{
+						HotPatchLogReport.Instance.ReportStartupTiming(EStartupTimingStep.ServerSelectionViewShown, null);
+					}
+				});
 				LoginModel.Instance.ThirdGameAutoLoginId = "-1";
 			}
 			base.GetButton(14).RootUIComp.Get().SetUIActive(true);
@@ -565,7 +581,7 @@ public class LoginOfficialView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06010802 RID: 67586 RVA: 0x004088F8 File Offset: 0x00406AF8
+	// Token: 0x0600DC72 RID: 56434 RVA: 0x00414FB4 File Offset: 0x004131B4
 	private void AfterDownLoad()
 	{
 		Log.Instance.Info(ELogModule.Login, ELogAuthor.LJQ, "SdkLogin登录成功-最后刷新登录成功表现", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -583,7 +599,7 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x06010803 RID: 67587 RVA: 0x00408A2C File Offset: 0x00406C2C
+	// Token: 0x0600DC73 RID: 56435 RVA: 0x004150E8 File Offset: 0x004132E8
 	private void DisableDownLoadAbout()
 	{
 		Log.Instance.Info(ELogModule.Login, ELogAuthor.LJQ, "LoginOfficialView-DisableDownLoadAbout", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -596,7 +612,7 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x06010804 RID: 67588 RVA: 0x00408AC8 File Offset: 0x00406CC8
+	// Token: 0x0600DC74 RID: 56436 RVA: 0x00415184 File Offset: 0x00413384
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.MenuViewPopView)
@@ -627,13 +643,13 @@ public class LoginOfficialView : UiTickViewBase
 		this.AfterDownLoad();
 	}
 
-	// Token: 0x06010805 RID: 67589 RVA: 0x00408B2D File Offset: 0x00406D2D
+	// Token: 0x0600DC75 RID: 56437 RVA: 0x004151E9 File Offset: 0x004133E9
 	private void OnRefreshSubPackageDownLoadByPriority()
 	{
 		this.RefreshDownLoadState();
 	}
 
-	// Token: 0x06010806 RID: 67590 RVA: 0x00408B38 File Offset: 0x00406D38
+	// Token: 0x0600DC76 RID: 56438 RVA: 0x004151F4 File Offset: 0x004133F4
 	protected virtual void RefreshDownLoadState()
 	{
 		if (!ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
@@ -669,9 +685,14 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x06010807 RID: 67591 RVA: 0x00408D08 File Offset: 0x00406F08
+	// Token: 0x0600DC77 RID: 56439 RVA: 0x004153C4 File Offset: 0x004135C4
 	protected override void OnTick(float delta)
 	{
+		if (this.CurLoginState && this.PreDownloadItem != null && !this.PreDownloadItem.GetActive() && this.PreDownloadItem.CanShow(this.CurLoginState))
+		{
+			this.PreDownloadItem.Refresh(this.CurLoginState);
+			this.PreDownloadItem.RefreshDot();
+		}
 		if (this.IsLoginStableState() != this.MenuBtnEnableApplied)
 		{
 			this.RefreshMenuBtnState();
@@ -689,20 +710,20 @@ public class LoginOfficialView : UiTickViewBase
 		base.GetText(24).SetText(((int)(num3 * 100f)).ToString() + "%", true);
 	}
 
-	// Token: 0x06010808 RID: 67592 RVA: 0x00408DD9 File Offset: 0x00406FD9
+	// Token: 0x0600DC78 RID: 56440 RVA: 0x004154E1 File Offset: 0x004136E1
 	private void OnConfirmServerItem()
 	{
 		this.RefreshServerName();
 	}
 
-	// Token: 0x06010809 RID: 67593 RVA: 0x00408DE4 File Offset: 0x00406FE4
+	// Token: 0x0600DC79 RID: 56441 RVA: 0x004154EC File Offset: 0x004136EC
 	private void PlayStationJoinSessionEvent()
 	{
 		Log.Instance.Info(ELogModule.Login, ELogAuthor.LJQ, "PS5 PlaySession 直接启动 - 模拟点击登录按钮 事件触发", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.TryLogin(false).Forget();
 	}
 
-	// Token: 0x0601080A RID: 67594 RVA: 0x00408E18 File Offset: 0x00407018
+	// Token: 0x0600DC7A RID: 56442 RVA: 0x00415520 File Offset: 0x00413720
 	private bool IfAutoShowLoginServerView()
 	{
 		LoginServerModel instance = LoginServerModel.Instance;
@@ -719,7 +740,7 @@ public class LoginOfficialView : UiTickViewBase
 		return false;
 	}
 
-	// Token: 0x0601080B RID: 67595 RVA: 0x00408E63 File Offset: 0x00407063
+	// Token: 0x0600DC7B RID: 56443 RVA: 0x0041556B File Offset: 0x0041376B
 	protected string GetLoginSequenceName(LoginDefine.ELoginSex sex)
 	{
 		if (sex != LoginDefine.ELoginSex.Boy)
@@ -729,7 +750,7 @@ public class LoginOfficialView : UiTickViewBase
 		return "LevelSequence_LoginMale";
 	}
 
-	// Token: 0x0601080C RID: 67596 RVA: 0x00408E74 File Offset: 0x00407074
+	// Token: 0x0600DC7C RID: 56444 RVA: 0x0041557C File Offset: 0x0041377C
 	private void LogoutAccount()
 	{
 		ThirdPartySdkManager.Instance.Logout();
@@ -750,31 +771,31 @@ public class LoginOfficialView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0601080D RID: 67597 RVA: 0x00408F02 File Offset: 0x00407102
+	// Token: 0x0600DC7D RID: 56445 RVA: 0x0041560A File Offset: 0x0041380A
 	private void AgreeAgreement(EToggleState state)
 	{
 		this.IsAgree = (state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0601080E RID: 67598 RVA: 0x00408F10 File Offset: 0x00407110
+	// Token: 0x0600DC7E RID: 56446 RVA: 0x00415618 File Offset: 0x00413818
 	private void RefreshChildBtn()
 	{
 		base.GetButton(8).RootUIComp.Get().SetUIActive(!LoginController.Instance.IsGlobalSdkLoginMode());
 	}
 
-	// Token: 0x0601080F RID: 67599 RVA: 0x00408F44 File Offset: 0x00407144
+	// Token: 0x0600DC7F RID: 56447 RVA: 0x0041564C File Offset: 0x0041384C
 	private void RefreshAgeBtn()
 	{
 		base.GetButton(4).RootUIComp.Get().SetUIActive(!LoginController.Instance.IsGlobalSdkLoginMode());
 	}
 
-	// Token: 0x06010810 RID: 67600 RVA: 0x00408F77 File Offset: 0x00407177
+	// Token: 0x0600DC80 RID: 56448 RVA: 0x0041567F File Offset: 0x0041387F
 	private void RefreshCopyRightItem()
 	{
 		base.GetItem(16).SetUIActive(!LoginController.Instance.IsGlobalSdkLoginMode());
 	}
 
-	// Token: 0x06010811 RID: 67601 RVA: 0x00408F94 File Offset: 0x00407194
+	// Token: 0x0600DC81 RID: 56449 RVA: 0x0041569C File Offset: 0x0041389C
 	private void RefreshVersionText()
 	{
 		string text = UCSharpBlueprintFunctionLibrary.HasCSharpEnvironmentInitialized() ? (BaseConfigController.Instance.GetVersionString() + " *") : (BaseConfigController.Instance.GetVersionString() ?? "");
@@ -789,32 +810,32 @@ public class LoginOfficialView : UiTickViewBase
 		base.GetText(9).SetText(text, true);
 	}
 
-	// Token: 0x06010812 RID: 67602 RVA: 0x00409004 File Offset: 0x00407204
+	// Token: 0x0600DC82 RID: 56450 RVA: 0x0041570C File Offset: 0x0041390C
 	private void RefreshLogo()
 	{
 		string logoPathByLanguage = UiResourceConfig.Instance.GetLogoPathByLanguage("LoginLogo");
 		base.SetTextureByPath(logoPathByLanguage, base.GetTexture(17), null, null);
 	}
 
-	// Token: 0x06010813 RID: 67603 RVA: 0x0040903C File Offset: 0x0040723C
+	// Token: 0x0600DC83 RID: 56451 RVA: 0x00415744 File Offset: 0x00413944
 	private void RefreshServerName()
 	{
 		string currentSelectServerName = LoginServerModel.Instance.GetCurrentSelectServerName();
 		base.GetText(15).SetText(currentSelectServerName, true);
 	}
 
-	// Token: 0x06010814 RID: 67604 RVA: 0x00409063 File Offset: 0x00407263
+	// Token: 0x0600DC84 RID: 56452 RVA: 0x0041576B File Offset: 0x0041396B
 	private void RefreshPostViewRedPoint()
 	{
 	}
 
-	// Token: 0x06010815 RID: 67605 RVA: 0x00409068 File Offset: 0x00407268
+	// Token: 0x0600DC85 RID: 56453 RVA: 0x00415770 File Offset: 0x00413970
 	private void RefreshNoticeItemState()
 	{
 		base.GetButton(11).RootUIComp.Get().SetUIActive(LoginController.Instance.IsSdkLoginMode() && LoginModel.Instance.IsSdkLoggedIn());
 	}
 
-	// Token: 0x06010816 RID: 67606 RVA: 0x004090A8 File Offset: 0x004072A8
+	// Token: 0x0600DC86 RID: 56454 RVA: 0x004157B0 File Offset: 0x004139B0
 	private void RefreshLoginState(bool value)
 	{
 		UUIButtonComponent button = base.GetButton(2);
@@ -850,14 +871,14 @@ public class LoginOfficialView : UiTickViewBase
 		this.RefreshMenuBtnState();
 	}
 
-	// Token: 0x06010817 RID: 67607 RVA: 0x004091D5 File Offset: 0x004073D5
+	// Token: 0x0600DC87 RID: 56455 RVA: 0x004158DD File Offset: 0x00413ADD
 	private void ShowAgeTipBtnClickCallBack()
 	{
 		UiManager.Instance.OpenView(EUiViewName.LoginAgeTipView, LoginAgeTipView.ELoginShowType.AgeTip, null);
 		UiLayer.Instance.SetShowNormalMaskLayer(true, "");
 	}
 
-	// Token: 0x06010818 RID: 67608 RVA: 0x004091FD File Offset: 0x004073FD
+	// Token: 0x0600DC88 RID: 56456 RVA: 0x00415905 File Offset: 0x00413B05
 	private void OnPreDownloadUpdate()
 	{
 		PreDownloadButtonItemA preDownloadItem = this.PreDownloadItem;
@@ -868,43 +889,43 @@ public class LoginOfficialView : UiTickViewBase
 		preDownloadItem.Refresh(this.CurLoginState);
 	}
 
-	// Token: 0x040079FD RID: 31229
+	// Token: 0x04007AFC RID: 31484
 	private bool IsAgree;
 
-	// Token: 0x040079FE RID: 31230
+	// Token: 0x04007AFD RID: 31485
 	private PreDownloadButtonItemA PreDownloadItem;
 
-	// Token: 0x040079FF RID: 31231
+	// Token: 0x04007AFE RID: 31486
 	private bool CurLoginState;
 
-	// Token: 0x04007A00 RID: 31232
+	// Token: 0x04007AFF RID: 31487
 	private bool NeedTickDownLoad;
 
-	// Token: 0x04007A01 RID: 31233
+	// Token: 0x04007B00 RID: 31488
 	private bool IsSdkLoginInFlight;
 
-	// Token: 0x04007A02 RID: 31234
+	// Token: 0x04007B01 RID: 31489
 	private bool IsBindRegionPending;
 
-	// Token: 0x04007A03 RID: 31235
+	// Token: 0x04007B02 RID: 31490
 	private bool IsPostSdkLoginPending;
 
-	// Token: 0x04007A04 RID: 31236
+	// Token: 0x04007B03 RID: 31491
 	private bool IsCharacterLoginInFlight;
 
-	// Token: 0x04007A05 RID: 31237
+	// Token: 0x04007B04 RID: 31492
 	private bool IsMenuViewOpenRequested;
 
-	// Token: 0x04007A06 RID: 31238
+	// Token: 0x04007B05 RID: 31493
 	private bool MenuBtnEnableApplied;
 
-	// Token: 0x04007A07 RID: 31239
+	// Token: 0x04007B06 RID: 31494
 	private readonly Action RepairBtnClick = delegate()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ToolWindowView, null, null);
 	};
 
-	// Token: 0x04007A08 RID: 31240
+	// Token: 0x04007B07 RID: 31495
 	private readonly Action UserButtonClick = delegate()
 	{
 		bool flag = false;
@@ -930,7 +951,7 @@ public class LoginOfficialView : UiTickViewBase
 		}
 	};
 
-	// Token: 0x04007A09 RID: 31241
+	// Token: 0x04007B08 RID: 31496
 	private readonly Action SecretButtonClick = delegate()
 	{
 		bool flag = false;
@@ -956,7 +977,7 @@ public class LoginOfficialView : UiTickViewBase
 		}
 	};
 
-	// Token: 0x04007A0A RID: 31242
+	// Token: 0x04007B09 RID: 31497
 	private readonly Action ChildPrivacyButtonClick = delegate()
 	{
 		bool flag = false;
@@ -982,88 +1003,82 @@ public class LoginOfficialView : UiTickViewBase
 		}
 	};
 
-	// Token: 0x04007A0B RID: 31243
+	// Token: 0x04007B0A RID: 31498
 	private readonly Action OnClickNoticeBtn = delegate()
 	{
 		KuroSdkController.Instance.OpenNotice(EOpenNoticeStage.BeforeLogin);
 	};
 
-	// Token: 0x04007A0C RID: 31244
+	// Token: 0x04007B0B RID: 31499
 	private readonly Action OnExitGameClick = delegate()
 	{
 		ConfirmBoxController.Instance.ShowExitGameConfirmBox();
 	};
 
-	// Token: 0x04007A0D RID: 31245
-	private readonly Action OnClickServerBtn = delegate()
-	{
-		UiManager.Instance.OpenView(EUiViewName.LoginServerView, null, null);
-	};
-
-	// Token: 0x04007A0E RID: 31246
+	// Token: 0x04007B0C RID: 31500
 	private readonly Action OnGetLoginPlayerInfo = delegate()
 	{
 	};
 
-	// Token: 0x020086A1 RID: 34465
+	// Token: 0x0200782C RID: 30764
 	[NullableContext(0)]
 	private enum ELoginOfficialChildCom
 	{
-		// Token: 0x0402BCC2 RID: 179394
+		// Token: 0x04026FE3 RID: 159715
 		FullLoginBtn,
-		// Token: 0x0402BCC3 RID: 179395
+		// Token: 0x04026FE4 RID: 159716
 		LogoutBtn,
-		// Token: 0x0402BCC4 RID: 179396
+		// Token: 0x04026FE5 RID: 159717
 		RepairBtn,
-		// Token: 0x0402BCC5 RID: 179397
+		// Token: 0x04026FE6 RID: 159718
 		LoginBtn,
-		// Token: 0x0402BCC6 RID: 179398
+		// Token: 0x04026FE7 RID: 159719
 		AgeTipButton,
-		// Token: 0x0402BCC7 RID: 179399
+		// Token: 0x04026FE8 RID: 159720
 		LockExtendToggle,
-		// Token: 0x0402BCC8 RID: 179400
+		// Token: 0x04026FE9 RID: 159721
 		UserButton,
-		// Token: 0x0402BCC9 RID: 179401
+		// Token: 0x04026FEA RID: 159722
 		SecretButton,
-		// Token: 0x0402BCCA RID: 179402
+		// Token: 0x04026FEB RID: 159723
 		ChildPrivacyButton,
-		// Token: 0x0402BCCB RID: 179403
+		// Token: 0x04026FEC RID: 159724
 		VersionText,
-		// Token: 0x0402BCCC RID: 179404
+		// Token: 0x04026FED RID: 159725
 		LoginText,
-		// Token: 0x0402BCCD RID: 179405
+		// Token: 0x04026FEE RID: 159726
 		NoticeBtn,
-		// Token: 0x0402BCCE RID: 179406
+		// Token: 0x04026FEF RID: 159727
 		ExitGameButton,
-		// Token: 0x0402BCCF RID: 179407
+		// Token: 0x04026FF0 RID: 159728
 		NoticeRedPoint,
-		// Token: 0x0402BCD0 RID: 179408
+		// Token: 0x04026FF1 RID: 159729
 		ServerBtn,
-		// Token: 0x0402BCD1 RID: 179409
+		// Token: 0x04026FF2 RID: 159730
 		ServerName,
-		// Token: 0x0402BCD2 RID: 179410
+		// Token: 0x04026FF3 RID: 159731
 		CopyRightItem,
-		// Token: 0x0402BCD3 RID: 179411
+		// Token: 0x04026FF4 RID: 159732
 		LoginLogo,
-		// Token: 0x0402BCD4 RID: 179412
+		// Token: 0x04026FF5 RID: 159733
 		EnterGameItem,
-		// Token: 0x0402BCD5 RID: 179413
+		// Token: 0x04026FF6 RID: 159734
 		MobilePreDownloadBtn,
-		// Token: 0x0402BCD6 RID: 179414
+		// Token: 0x04026FF7 RID: 159735
 		QRCodeLoginBtn,
-		// Token: 0x0402BCD7 RID: 179415
+		// Token: 0x04026FF8 RID: 159736
 		DownLoadBtn,
-		// Token: 0x0402BCD8 RID: 179416
+		// Token: 0x04026FF9 RID: 159737
 		DownLoadItem,
-		// Token: 0x0402BCD9 RID: 179417
+		// Token: 0x04026FFA RID: 159738
 		DownLoadBarSprite,
-		// Token: 0x0402BCDA RID: 179418
+		// Token: 0x04026FFB RID: 159739
 		DownLoadProgressText,
-		// Token: 0x0402BCDB RID: 179419
+		// Token: 0x04026FFC RID: 159740
 		DownLoadSpeedText,
-		// Token: 0x0402BCDC RID: 179420
+		// Token: 0x04026FFD RID: 159741
 		PatchText,
-		// Token: 0x0402BCDD RID: 179421
+		// Token: 0x04026FFE RID: 159742
 		MenuBtn
 	}
 }

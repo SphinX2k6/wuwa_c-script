@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 {
-	// Token: 0x02006F2B RID: 28459
+	// Token: 0x020060AC RID: 24748
 	public interface IMoveConfig
 	{
-		// Token: 0x17009B10 RID: 39696
-		// (get) Token: 0x060453DD RID: 283613
-		// (set) Token: 0x060453DE RID: 283614
+		// Token: 0x1700704F RID: 28751
+		// (get) Token: 0x0603B58B RID: 243083
+		// (set) Token: 0x0603B58C RID: 243084
 		float RotateSpeed { get; set; }
 	}
 }

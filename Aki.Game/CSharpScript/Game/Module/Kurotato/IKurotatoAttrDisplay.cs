@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056FF RID: 22271
+	// Token: 0x020046D6 RID: 18134
 	[NullableContext(1)]
 	public interface IKurotatoAttrDisplay
 	{
-		// Token: 0x17008828 RID: 34856
-		// (get) Token: 0x06038A3A RID: 231994
-		// (set) Token: 0x06038A3B RID: 231995
+		// Token: 0x17005BF0 RID: 23536
+		// (get) Token: 0x0602D94A RID: 186698
+		// (set) Token: 0x0602D94B RID: 186699
 		string Icon { get; set; }
 
-		// Token: 0x17008829 RID: 34857
-		// (get) Token: 0x06038A3C RID: 231996
-		// (set) Token: 0x06038A3D RID: 231997
+		// Token: 0x17005BF1 RID: 23537
+		// (get) Token: 0x0602D94C RID: 186700
+		// (set) Token: 0x0602D94D RID: 186701
 		string Text { get; set; }
 
-		// Token: 0x1700882A RID: 34858
-		// (get) Token: 0x06038A3E RID: 231998
-		// (set) Token: 0x06038A3F RID: 231999
+		// Token: 0x17005BF2 RID: 23538
+		// (get) Token: 0x0602D94E RID: 186702
+		// (set) Token: 0x0602D94F RID: 186703
 		int PropertyId { get; set; }
 	}
 }

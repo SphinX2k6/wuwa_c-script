@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007430 RID: 29744
+	// Token: 0x02007C23 RID: 31779
 	public struct ITraceTracingMaxStepRewardRuleItem : IFlatbufferObject
 	{
-		// Token: 0x1700E1D9 RID: 57817
-		// (get) Token: 0x06036094 RID: 221332 RVA: 0x00759A6A File Offset: 0x00757C6A
+		// Token: 0x1700EDF6 RID: 60918
+		// (get) Token: 0x0603947D RID: 234621 RVA: 0x007BC796 File Offset: 0x007BA996
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036095 RID: 221333 RVA: 0x00759A77 File Offset: 0x00757C77
+		// Token: 0x0603947E RID: 234622 RVA: 0x007BC7A3 File Offset: 0x007BA9A3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036096 RID: 221334 RVA: 0x00759A80 File Offset: 0x00757C80
+		// Token: 0x0603947F RID: 234623 RVA: 0x007BC7AC File Offset: 0x007BA9AC
 		public static ITraceTracingMaxStepRewardRuleItem GetRootAsITraceTracingMaxStepRewardRuleItem(ByteBuffer _bb)
 		{
 			return ITraceTracingMaxStepRewardRuleItem.GetRootAsITraceTracingMaxStepRewardRuleItem(_bb, default(ITraceTracingMaxStepRewardRuleItem));
 		}
 
-		// Token: 0x06036097 RID: 221335 RVA: 0x00759A9C File Offset: 0x00757C9C
+		// Token: 0x06039480 RID: 234624 RVA: 0x007BC7C8 File Offset: 0x007BA9C8
 		public static ITraceTracingMaxStepRewardRuleItem GetRootAsITraceTracingMaxStepRewardRuleItem(ByteBuffer _bb, ITraceTracingMaxStepRewardRuleItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036098 RID: 221336 RVA: 0x00759AB9 File Offset: 0x00757CB9
+		// Token: 0x06039481 RID: 234625 RVA: 0x007BC7E5 File Offset: 0x007BA9E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036099 RID: 221337 RVA: 0x00759AC8 File Offset: 0x00757CC8
+		// Token: 0x06039482 RID: 234626 RVA: 0x007BC7F4 File Offset: 0x007BA9F4
 		public ITraceTracingMaxStepRewardRuleItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E1DA RID: 57818
-		// (get) Token: 0x0603609A RID: 221338 RVA: 0x00759AD8 File Offset: 0x00757CD8
+		// Token: 0x1700EDF7 RID: 60919
+		// (get) Token: 0x06039483 RID: 234627 RVA: 0x007BC804 File Offset: 0x007BAA04
 		public int RestartCount
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E1DB RID: 57819
-		// (get) Token: 0x0603609B RID: 221339 RVA: 0x00759B14 File Offset: 0x00757D14
+		// Token: 0x1700EDF8 RID: 60920
+		// (get) Token: 0x06039484 RID: 234628 RVA: 0x007BC840 File Offset: 0x007BAA40
 		public int AddStep
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603609C RID: 221340 RVA: 0x00759B50 File Offset: 0x00757D50
+		// Token: 0x06039485 RID: 234629 RVA: 0x007BC87C File Offset: 0x007BAA7C
 		public static Offset<ITraceTracingMaxStepRewardRuleItem> CreateITraceTracingMaxStepRewardRuleItem(FlatBufferBuilder builder, int RestartCount = 0, int AddStep = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITraceTracingMaxStepRewardRuleItem.EndITraceTracingMaxStepRewardRuleItem(builder);
 		}
 
-		// Token: 0x0603609D RID: 221341 RVA: 0x00759B6D File Offset: 0x00757D6D
+		// Token: 0x06039486 RID: 234630 RVA: 0x007BC899 File Offset: 0x007BAA99
 		public static void StartITraceTracingMaxStepRewardRuleItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603609E RID: 221342 RVA: 0x00759B76 File Offset: 0x00757D76
+		// Token: 0x06039487 RID: 234631 RVA: 0x007BC8A2 File Offset: 0x007BAAA2
 		public static void AddRestartCount(FlatBufferBuilder builder, int restartCount)
 		{
 			builder.AddInt(0, restartCount, 0);
 		}
 
-		// Token: 0x0603609F RID: 221343 RVA: 0x00759B81 File Offset: 0x00757D81
+		// Token: 0x06039488 RID: 234632 RVA: 0x007BC8AD File Offset: 0x007BAAAD
 		public static void AddAddStep(FlatBufferBuilder builder, int addStep)
 		{
 			builder.AddInt(1, addStep, 0);
 		}
 
-		// Token: 0x060360A0 RID: 221344 RVA: 0x00759B8C File Offset: 0x00757D8C
+		// Token: 0x06039489 RID: 234633 RVA: 0x007BC8B8 File Offset: 0x007BAAB8
 		public static Offset<ITraceTracingMaxStepRewardRuleItem> EndITraceTracingMaxStepRewardRuleItem(FlatBufferBuilder builder)
 		{
 			return new Offset<ITraceTracingMaxStepRewardRuleItem>(builder.EndTable());
 		}
 
-		// Token: 0x060360A1 RID: 221345 RVA: 0x00759B9C File Offset: 0x00757D9C
+		// Token: 0x0603948A RID: 234634 RVA: 0x007BC8C8 File Offset: 0x007BAAC8
 		public ITraceTracingMaxStepRewardRuleItemT UnPack()
 		{
 			ITraceTracingMaxStepRewardRuleItemT traceTracingMaxStepRewardRuleItemT = new ITraceTracingMaxStepRewardRuleItemT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return traceTracingMaxStepRewardRuleItemT;
 		}
 
-		// Token: 0x060360A2 RID: 221346 RVA: 0x00759BB7 File Offset: 0x00757DB7
+		// Token: 0x0603948B RID: 234635 RVA: 0x007BC8E3 File Offset: 0x007BAAE3
 		public void UnPackTo(ITraceTracingMaxStepRewardRuleItemT _o)
 		{
 			_o.RestartCount = this.RestartCount;
 			_o.AddStep = this.AddStep;
 		}
 
-		// Token: 0x060360A3 RID: 221347 RVA: 0x00759BD4 File Offset: 0x00757DD4
+		// Token: 0x0603948C RID: 234636 RVA: 0x007BC900 File Offset: 0x007BAB00
 		public static Offset<ITraceTracingMaxStepRewardRuleItem> Pack(FlatBufferBuilder builder, ITraceTracingMaxStepRewardRuleItemT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITraceTracingMaxStepRewardRuleItem.CreateITraceTracingMaxStepRewardRuleItem(builder, _o.RestartCount, _o.AddStep);
 		}
 
-		// Token: 0x040122A9 RID: 74409
+		// Token: 0x040132D0 RID: 78544
 		private Table __p;
 	}
 }

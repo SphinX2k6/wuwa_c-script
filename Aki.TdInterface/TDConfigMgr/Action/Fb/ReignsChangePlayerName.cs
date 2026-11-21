@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A51 RID: 10833
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D3E RID: 11582
 	public class ReignsChangePlayerName : ActionParams
 	{
-		// Token: 0x0600EE66 RID: 61030 RVA: 0x0022B4A7 File Offset: 0x002296A7
+		// Token: 0x0600FCFE RID: 64766 RVA: 0x00248E5B File Offset: 0x0024705B
 		public static ReignsChangePlayerName Create(IReignsChangePlayerName? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B86 RID: 19334
-		// (get) Token: 0x0600EE67 RID: 61031 RVA: 0x0022B4C6 File Offset: 0x002296C6
+		// Token: 0x17004F30 RID: 20272
+		// (get) Token: 0x0600FCFF RID: 64767 RVA: 0x00248E7A File Offset: 0x0024707A
 		public virtual string PlayerNameId
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400832D RID: 33581
+		// Token: 0x04008A20 RID: 35360
 		private IReignsChangePlayerName Instance;
 	}
 }

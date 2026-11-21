@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction
 {
-	// Token: 0x02003EA7 RID: 16039
+	// Token: 0x02003175 RID: 12661
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/EQtaConditionType.EQtaConditionType")]
 	public enum EQtaConditionType : byte
 	{
-		// Token: 0x04014B19 RID: 84761
+		// Token: 0x04010B45 RID: 68421
 		检查输入,
-		// Token: 0x04014B1A RID: 84762
+		// Token: 0x04010B46 RID: 68422
 		检查Tag,
-		// Token: 0x04014B1B RID: 84763
+		// Token: 0x04010B47 RID: 68423
 		事件变化,
-		// Token: 0x04014B1C RID: 84764
+		// Token: 0x04010B48 RID: 68424
 		EQtaConditionType_MAX
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F28 RID: 7976
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002161 RID: 8545
 	public class ITalkEffectStop : ITalkEffectActionType
 	{
-		// Token: 0x0600AA8C RID: 43660 RVA: 0x0017FFA8 File Offset: 0x0017E1A8
+		// Token: 0x0600B55E RID: 46430 RVA: 0x00195FA0 File Offset: 0x001941A0
 		private ITalkEffectStop_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA8D RID: 43661 RVA: 0x0017FFE0 File Offset: 0x0017E1E0
+		// Token: 0x0600B55F RID: 46431 RVA: 0x00195FD8 File Offset: 0x001941D8
 		public static ITalkEffectStop Create([Nullable(2)] ITalkEffectStop instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA8E RID: 43662 RVA: 0x0017FFF3 File Offset: 0x0017E1F3
+		// Token: 0x0600B560 RID: 46432 RVA: 0x00195FEB File Offset: 0x001941EB
 		public static ITalkEffectStop CreateFromSetValue([Nullable(2)] ITalkEffectStop_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA8F RID: 43663 RVA: 0x00180006 File Offset: 0x0017E206
+		// Token: 0x0600B561 RID: 46433 RVA: 0x00195FFE File Offset: 0x001941FE
 		public new ITalkEffectStop_SetValue ToSetValue()
 		{
 			return new ITalkEffectStop_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033E2 RID: 13282
-		// (get) Token: 0x0600AA90 RID: 43664 RVA: 0x0018003D File Offset: 0x0017E23D
-		// (set) Token: 0x0600AA91 RID: 43665 RVA: 0x00180068 File Offset: 0x0017E268
+		// Token: 0x170036AD RID: 13997
+		// (get) Token: 0x0600B562 RID: 46434 RVA: 0x00196035 File Offset: 0x00194235
+		// (set) Token: 0x0600B563 RID: 46435 RVA: 0x00196060 File Offset: 0x00194260
 		public override ETalkEffectActionType Type
 		{
 			get
@@ -86,20 +84,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033E3 RID: 13283
-		// (get) Token: 0x0600AA92 RID: 43666 RVA: 0x00180076 File Offset: 0x0017E276
-		// (set) Token: 0x0600AA93 RID: 43667 RVA: 0x0018009D File Offset: 0x0017E29D
+		// Token: 0x170036AE RID: 13998
+		// (get) Token: 0x0600B564 RID: 46436 RVA: 0x0019606E File Offset: 0x0019426E
+		// (set) Token: 0x0600B565 RID: 46437 RVA: 0x00196095 File Offset: 0x00194295
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> EffectKeys
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -117,7 +115,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -125,9 +123,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033E4 RID: 13284
-		// (get) Token: 0x0600AA94 RID: 43668 RVA: 0x001800AC File Offset: 0x0017E2AC
-		// (set) Token: 0x0600AA95 RID: 43669 RVA: 0x001800E6 File Offset: 0x0017E2E6
+		// Token: 0x170036AF RID: 13999
+		// (get) Token: 0x0600B566 RID: 46438 RVA: 0x001960A4 File Offset: 0x001942A4
+		// (set) Token: 0x0600B567 RID: 46439 RVA: 0x001960DE File Offset: 0x001942DE
 		public virtual float? DelayTime
 		{
 			get
@@ -149,9 +147,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033E5 RID: 13285
-		// (get) Token: 0x0600AA96 RID: 43670 RVA: 0x001800F4 File Offset: 0x0017E2F4
-		// (set) Token: 0x0600AA97 RID: 43671 RVA: 0x0018012E File Offset: 0x0017E32E
+		// Token: 0x170036B0 RID: 14000
+		// (get) Token: 0x0600B568 RID: 46440 RVA: 0x001960EC File Offset: 0x001942EC
+		// (set) Token: 0x0600B569 RID: 46441 RVA: 0x00196126 File Offset: 0x00194326
 		public virtual bool? ImmediatelyDestroy
 		{
 			get
@@ -173,11 +171,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400654A RID: 25930
+		// Token: 0x04006B39 RID: 27449
 		[Nullable(2)]
 		protected new ITalkEffectStop FbInstance;
 
-		// Token: 0x0400654B RID: 25931
+		// Token: 0x04006B3A RID: 27450
 		[Nullable(2)]
 		protected new ITalkEffectStop_SetValue PocoInterface;
 	}

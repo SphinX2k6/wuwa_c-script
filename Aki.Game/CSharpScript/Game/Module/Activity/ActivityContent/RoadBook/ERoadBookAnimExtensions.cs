@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061FD RID: 25085
+	// Token: 0x0200517B RID: 20859
 	public static class ERoadBookAnimExtensions
 	{
-		// Token: 0x0603F4A9 RID: 259241 RVA: 0x00F4B5A0 File Offset: 0x00F497A0
+		// Token: 0x0603416A RID: 213354 RVA: 0x00E924F8 File Offset: 0x00E906F8
 		public static string ToEnumString(this ERoadBookAnim value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return result;
 		}
 
-		// Token: 0x0603F4AA RID: 259242 RVA: 0x00F4B5D8 File Offset: 0x00F497D8
+		// Token: 0x0603416B RID: 213355 RVA: 0x00E92530 File Offset: 0x00E90730
 		public static ERoadBookAnim FromString(string name)
 		{
 			ERoadBookAnim result;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return result;
 		}
 
-		// Token: 0x0603F4AB RID: 259243 RVA: 0x00F4B601 File Offset: 0x00F49801
+		// Token: 0x0603416C RID: 213356 RVA: 0x00E92559 File Offset: 0x00E90759
 		public static bool TryFromString(string name, out ERoadBookAnim value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return true;
 		}
 
-		// Token: 0x0603F4AC RID: 259244 RVA: 0x00F4B63A File Offset: 0x00F4983A
+		// Token: 0x0603416D RID: 213357 RVA: 0x00E92592 File Offset: 0x00E90792
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F4AD RID: 259245 RVA: 0x00F4B652 File Offset: 0x00F49852
+		// Token: 0x0603416E RID: 213358 RVA: 0x00E925AA File Offset: 0x00E907AA
 		public static ERoadBookAnim[] GetValues()
 		{
 			return new ERoadBookAnim[]
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F4AE RID: 259246 RVA: 0x00F4B65E File Offset: 0x00F4985E
+		// Token: 0x0603416F RID: 213359 RVA: 0x00E925B6 File Offset: 0x00E907B6
 		public static string[] GetNames()
 		{
 			return new string[]

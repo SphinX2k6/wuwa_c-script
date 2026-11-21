@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000922 RID: 2338
+	// Token: 0x020009CF RID: 2511
 	public static class EDirectionExtensions
 	{
-		// Token: 0x060034CA RID: 13514 RVA: 0x0008A114 File Offset: 0x00088314
+		// Token: 0x06003836 RID: 14390 RVA: 0x00091C94 File Offset: 0x0008FE94
 		public static string ToEnumString(this EDirection value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034CB RID: 13515 RVA: 0x0008A14C File Offset: 0x0008834C
+		// Token: 0x06003837 RID: 14391 RVA: 0x00091CCC File Offset: 0x0008FECC
 		public static EDirection FromString(string name)
 		{
 			EDirection result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034CC RID: 13516 RVA: 0x0008A175 File Offset: 0x00088375
+		// Token: 0x06003838 RID: 14392 RVA: 0x00091CF5 File Offset: 0x0008FEF5
 		public static bool TryFromString(string name, out EDirection value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060034CD RID: 13517 RVA: 0x0008A1AE File Offset: 0x000883AE
+		// Token: 0x06003839 RID: 14393 RVA: 0x00091D2E File Offset: 0x0008FF2E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034CE RID: 13518 RVA: 0x0008A1C6 File Offset: 0x000883C6
+		// Token: 0x0600383A RID: 14394 RVA: 0x00091D46 File Offset: 0x0008FF46
 		public static EDirection[] GetValues()
 		{
 			return new EDirection[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034CF RID: 13519 RVA: 0x0008A1D2 File Offset: 0x000883D2
+		// Token: 0x0600383B RID: 14395 RVA: 0x00091D52 File Offset: 0x0008FF52
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DF8 RID: 15864
+	// Token: 0x02004233 RID: 16947
 	public class IEnterDungeonT
 	{
-		// Token: 0x17006DA3 RID: 28067
-		// (get) Token: 0x060162FF RID: 90879 RVA: 0x0033452A File Offset: 0x0033272A
-		// (set) Token: 0x06016300 RID: 90880 RVA: 0x00334532 File Offset: 0x00332732
+		// Token: 0x17007389 RID: 29577
+		// (get) Token: 0x0601792C RID: 96556 RVA: 0x0035D122 File Offset: 0x0035B322
+		// (set) Token: 0x0601792D RID: 96557 RVA: 0x0035D12A File Offset: 0x0035B32A
 		public EDungeonConditionType Type { get; set; }
 
-		// Token: 0x06016301 RID: 90881 RVA: 0x0033453B File Offset: 0x0033273B
+		// Token: 0x0601792E RID: 96558 RVA: 0x0035D133 File Offset: 0x0035B333
 		public IEnterDungeonT()
 		{
 			this.Type = EDungeonConditionType.DungeonSubType;

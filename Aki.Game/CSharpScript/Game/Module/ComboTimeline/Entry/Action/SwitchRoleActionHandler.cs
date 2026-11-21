@@ -5,13 +5,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 {
-	// Token: 0x02005BA7 RID: 23463
+	// Token: 0x02004B87 RID: 19335
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SwitchRoleActionHandler : ActionEntryHandlerBase
 	{
-		// Token: 0x17008CEB RID: 36075
-		// (get) Token: 0x0603B557 RID: 243031 RVA: 0x00E23612 File Offset: 0x00E21812
+		// Token: 0x170060BD RID: 24765
+		// (get) Token: 0x060304A4 RID: 197796 RVA: 0x00D73B62 File Offset: 0x00D71D62
 		public override EShowTimelineActionType ActionType
 		{
 			get
@@ -20,19 +20,19 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			}
 		}
 
-		// Token: 0x0603B558 RID: 243032 RVA: 0x00E23615 File Offset: 0x00E21815
+		// Token: 0x060304A5 RID: 197797 RVA: 0x00D73B65 File Offset: 0x00D71D65
 		protected override void OnStartCapture()
 		{
 			EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 		}
 
-		// Token: 0x0603B559 RID: 243033 RVA: 0x00E23633 File Offset: 0x00E21833
+		// Token: 0x060304A6 RID: 197798 RVA: 0x00D73B83 File Offset: 0x00D71D83
 		protected override void OnStopCapture()
 		{
 			EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 		}
 
-		// Token: 0x0603B55A RID: 243034 RVA: 0x00E23654 File Offset: 0x00E21854
+		// Token: 0x060304A7 RID: 197799 RVA: 0x00D73BA4 File Offset: 0x00D71DA4
 		public unsafe override bool Apply(IShowTimelineAction entry, IComboTimelineReplayContext context)
 		{
 			int actionParam = entry.ActionParam;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			return true;
 		}
 
-		// Token: 0x0603B55B RID: 243035 RVA: 0x00E23784 File Offset: 0x00E21984
+		// Token: 0x060304A8 RID: 197800 RVA: 0x00D73CD4 File Offset: 0x00D71ED4
 		public override string Describe(IShowTimelineAction entry)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(19, 1);
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry.Action
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603B55C RID: 243036 RVA: 0x00E237C8 File Offset: 0x00E219C8
+		// Token: 0x060304A9 RID: 197801 RVA: 0x00D73D18 File Offset: 0x00D71F18
 		private unsafe void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			IComboTimelineCaptureContext context = this.Context;

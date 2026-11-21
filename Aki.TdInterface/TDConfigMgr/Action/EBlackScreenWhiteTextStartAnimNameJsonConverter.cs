@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022BC RID: 8892
+	// Token: 0x0200252B RID: 9515
 	public class EBlackScreenWhiteTextStartAnimNameJsonConverter : JsonConverter<EBlackScreenWhiteTextStartAnimName>
 	{
-		// Token: 0x0600C2CE RID: 49870 RVA: 0x001C76B0 File Offset: 0x001C58B0
+		// Token: 0x0600CE9D RID: 52893 RVA: 0x001DF4B8 File Offset: 0x001DD6B8
 		public override EBlackScreenWhiteTextStartAnimName Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EBlackScreenWhiteTextStartAnimNameExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C2CF RID: 49871 RVA: 0x001C76D4 File Offset: 0x001C58D4
+		// Token: 0x0600CE9E RID: 52894 RVA: 0x001DF4DC File Offset: 0x001DD6DC
 		public override void Write(Utf8JsonWriter writer, EBlackScreenWhiteTextStartAnimName value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -9,12 +9,12 @@ using CSharpScript.Game;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x020030A3 RID: 12451
+// Token: 0x020025FA RID: 9722
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterFlowComponent : EntityComponent
 {
-	// Token: 0x0601AADD RID: 109277 RVA: 0x0072F3C4 File Offset: 0x0072D5C4
+	// Token: 0x060184E6 RID: 99558 RVA: 0x00754900 File Offset: 0x00752B00
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -39,7 +39,7 @@ public class CharacterFlowComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AADE RID: 109278 RVA: 0x0072F498 File Offset: 0x0072D698
+	// Token: 0x060184E7 RID: 99559 RVA: 0x007549D4 File Offset: 0x00752BD4
 	protected override void OnActivate()
 	{
 		if (this.ActorComp == null)
@@ -56,7 +56,7 @@ public class CharacterFlowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AADF RID: 109279 RVA: 0x0072F4F8 File Offset: 0x0072D6F8
+	// Token: 0x060184E8 RID: 99560 RVA: 0x00754A34 File Offset: 0x00752C34
 	protected override bool OnClear()
 	{
 		if (this.IsPlayDynamicFlow)
@@ -69,7 +69,7 @@ public class CharacterFlowComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AAE0 RID: 109280 RVA: 0x0072F54C File Offset: 0x0072D74C
+	// Token: 0x060184E9 RID: 99561 RVA: 0x00754A88 File Offset: 0x00752C88
 	protected virtual void InitFlowLogic(BubbleComponent flowData)
 	{
 		if (flowData == null)
@@ -92,7 +92,7 @@ public class CharacterFlowComponent : EntityComponent
 		this.IsInit = true;
 	}
 
-	// Token: 0x0601AAE1 RID: 109281 RVA: 0x0072F604 File Offset: 0x0072D804
+	// Token: 0x060184EA RID: 99562 RVA: 0x00754B40 File Offset: 0x00752D40
 	protected virtual bool InitFlowLogicRange(float? enterRange, float? leaveRange, IBubbleRangeCylinderConfig config)
 	{
 		if (this.FlowData == null || this.FlowLogic == null)
@@ -104,7 +104,7 @@ public class CharacterFlowComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AAE2 RID: 109282 RVA: 0x0072F67C File Offset: 0x0072D87C
+	// Token: 0x060184EB RID: 99563 RVA: 0x00754BB8 File Offset: 0x00752DB8
 	protected void InitCachedDynamicFlow()
 	{
 		CreatureDataComponent creatureData = this.ActorComp.CreatureData;
@@ -137,7 +137,7 @@ public class CharacterFlowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AAE3 RID: 109283 RVA: 0x0072F750 File Offset: 0x0072D950
+	// Token: 0x060184EC RID: 99564 RVA: 0x00754C8C File Offset: 0x00752E8C
 	protected virtual bool CheckCondition()
 	{
 		if (this.FlowData == null)
@@ -185,7 +185,7 @@ public class CharacterFlowComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AAE4 RID: 109284 RVA: 0x0072F808 File Offset: 0x0072DA08
+	// Token: 0x060184ED RID: 99565 RVA: 0x00754D44 File Offset: 0x00752F44
 	protected override void OnTick(float delta)
 	{
 		if (!this.CheckCondition())
@@ -194,10 +194,9 @@ public class CharacterFlowComponent : EntityComponent
 		}
 		if (this.IsRangeFollowEntity)
 		{
-			this.FlowRange.UpdateLocation(this.ActorComp.ActorLocationProxy);
+			this.FlowRange.UpdatePosition(this.ActorComp.ActorLocationProxy);
 		}
 		global::Vector actorLocationProxy = Global.BaseCharacter.CharacterActorComponent.ActorLocationProxy;
-		this.FlowRange.UpdateLocation(this.ActorComp.ActorLocationProxy);
 		if (this.FlowRange.IsInRangeInner(actorLocationProxy))
 		{
 			if (!this.IsEnter && !this.FlowLogic.IsPlaying)
@@ -219,7 +218,7 @@ public class CharacterFlowComponent : EntityComponent
 		this.FlowLogic.Tick(delta * 0.001f);
 	}
 
-	// Token: 0x0601AAE5 RID: 109285 RVA: 0x0072F8E1 File Offset: 0x0072DAE1
+	// Token: 0x060184EE RID: 99566 RVA: 0x00754E07 File Offset: 0x00753007
 	public virtual void RemoveFlowActions()
 	{
 		CharacterFlowLogic flowLogic = this.FlowLogic;
@@ -230,7 +229,7 @@ public class CharacterFlowComponent : EntityComponent
 		flowLogic.HideDialogueText();
 	}
 
-	// Token: 0x0601AAE6 RID: 109286 RVA: 0x0072F8F3 File Offset: 0x0072DAF3
+	// Token: 0x060184EF RID: 99567 RVA: 0x00754E19 File Offset: 0x00753019
 	public void ResetFlowPlayCoolDownTime()
 	{
 		if (this.FlowLogic != null)
@@ -239,7 +238,7 @@ public class CharacterFlowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AAE7 RID: 109287 RVA: 0x0072F908 File Offset: 0x0072DB08
+	// Token: 0x060184F0 RID: 99568 RVA: 0x00754E2E File Offset: 0x0075302E
 	public void ForceStopFlow()
 	{
 		this.IsEnter = false;
@@ -253,14 +252,14 @@ public class CharacterFlowComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AAE8 RID: 109288 RVA: 0x0072F93D File Offset: 0x0072DB3D
+	// Token: 0x060184F1 RID: 99569 RVA: 0x00754E63 File Offset: 0x00753063
 	public bool IsPlayingFlow()
 	{
 		CharacterFlowLogic flowLogic = this.FlowLogic;
 		return flowLogic != null && flowLogic.IsShowDialogue();
 	}
 
-	// Token: 0x0601AAE9 RID: 109289 RVA: 0x0072F950 File Offset: 0x0072DB50
+	// Token: 0x060184F2 RID: 99570 RVA: 0x00754E78 File Offset: 0x00753078
 	[NullableContext(1)]
 	public void PlayDynamicFlowBegin(CharacterDynamicFlowData flowData)
 	{
@@ -268,7 +267,7 @@ public class CharacterFlowComponent : EntityComponent
 		this.IsPlayDynamicFlow = true;
 		AddPlayBubble bubbleData = flowData.BubbleData;
 		this.IsRangeFollowEntity = ((bubbleData != null) ? bubbleData.IsRangeFollowEntity : null).GetValueOrDefault();
-		this.FlowRange.UpdateLocation(this.ActorComp.ActorLocationProxy);
+		this.FlowRange.UpdatePosition(this.ActorComp.ActorLocationProxy);
 		AddPlayBubble bubbleData2 = flowData.BubbleData;
 		float? enterRange = (bubbleData2 != null) ? bubbleData2.EnterRadius : null;
 		AddPlayBubble bubbleData3 = flowData.BubbleData;
@@ -278,7 +277,7 @@ public class CharacterFlowComponent : EntityComponent
 		this.ResetFlowPlayCoolDownTime();
 	}
 
-	// Token: 0x0601AAEA RID: 109290 RVA: 0x0072F9FC File Offset: 0x0072DBFC
+	// Token: 0x060184F3 RID: 99571 RVA: 0x00754F24 File Offset: 0x00753124
 	public void PlayDynamicFlowEnd()
 	{
 		if (!this.IsPlayDynamicFlow)
@@ -295,10 +294,10 @@ public class CharacterFlowComponent : EntityComponent
 		float? leaveRange = (flowData3 != null) ? new float?(flowData3.LeaveRange) : null;
 		BubbleComponent flowData4 = this.FlowData;
 		this.InitFlowLogicRange(enterRange, leaveRange, (flowData4 != null) ? flowData4.TriggerCylinderConfig : null);
-		this.FlowRange.UpdateLocation(this.IsRangeFollowEntity ? this.ActorComp.ActorLocationProxy : this.StaticFlowRangePosition);
+		this.FlowRange.UpdatePosition(this.IsRangeFollowEntity ? this.ActorComp.ActorLocationProxy : this.StaticFlowRangePosition);
 	}
 
-	// Token: 0x0601AAEB RID: 109291 RVA: 0x0072FAC4 File Offset: 0x0072DCC4
+	// Token: 0x060184F4 RID: 99572 RVA: 0x00754FEC File Offset: 0x007531EC
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -307,109 +306,122 @@ public class CharacterFlowComponent : EntityComponent
 			return false;
 		}
 		CharacterFlowComponent characterFlowComponent = (CharacterFlowComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterFlowComponent.ActorComp == null)
 		{
-			if (characterFlowComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("HeadInfoComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterFlowComponent.HeadInfoComp == null)
-			{
-				this.HeadInfoComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnHeadInfoComponent>(this.HeadInfoComp), "HeadInfoComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("FlowLogic"))
+		if (characterFlowComponent.HeadInfoComp == null)
 		{
-			if (characterFlowComponent.FlowLogic == null)
-			{
-				this.FlowLogic = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFlowLogic>(this.FlowLogic), "FlowLogic"))
-			{
-				return false;
-			}
+			this.HeadInfoComp = null;
 		}
-		if (base.CanResetComponentProperty("IsInit"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HeadInfoComp), "HeadInfoComp"))
 		{
-			this.IsInit = characterFlowComponent.IsInit;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsEnter"))
+		if (characterFlowComponent.FlowLogic == null)
 		{
-			this.IsEnter = characterFlowComponent.IsEnter;
+			this.FlowLogic = null;
 		}
-		if (base.CanResetComponentProperty("FlowData"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FlowLogic), "FlowLogic"))
 		{
-			if (characterFlowComponent.FlowData == null)
-			{
-				this.FlowData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BubbleComponent>(this.FlowData), "FlowData"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsPlayDynamicFlow"))
+		this.IsInit = characterFlowComponent.IsInit;
+		this.IsEnter = characterFlowComponent.IsEnter;
+		if (characterFlowComponent.FlowData == null)
 		{
-			this.IsPlayDynamicFlow = characterFlowComponent.IsPlayDynamicFlow;
+			this.FlowData = null;
 		}
-		if (base.CanResetComponentProperty("IsRangeFollowEntity"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FlowData), "FlowData"))
 		{
-			this.IsRangeFollowEntity = characterFlowComponent.IsRangeFollowEntity;
+			return false;
 		}
-		if (base.CanResetComponentProperty("FlowRange"))
+		this.IsPlayDynamicFlow = characterFlowComponent.IsPlayDynamicFlow;
+		this.IsRangeFollowEntity = characterFlowComponent.IsRangeFollowEntity;
+		if (characterFlowComponent.FlowRange == null)
 		{
-			if (characterFlowComponent.FlowRange == null)
-			{
-				this.FlowRange = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FlowTriggerRange>(this.FlowRange), "FlowRange"))
-			{
-				return false;
-			}
+			this.FlowRange = null;
 		}
-		return !base.CanResetComponentProperty("StaticFlowRangePosition") || characterFlowComponent.StaticFlowRangePosition == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.StaticFlowRangePosition), "StaticFlowRangePosition");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FlowRange), "FlowRange"))
+		{
+			return false;
+		}
+		return characterFlowComponent.StaticFlowRangePosition == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.StaticFlowRangePosition), "StaticFlowRangePosition");
 	}
 
-	// Token: 0x0400CDCE RID: 52686
+	// Token: 0x17002625 RID: 9765
+	// (get) Token: 0x060184F5 RID: 99573 RVA: 0x00755135 File Offset: 0x00753335
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002626 RID: 9766
+	// (get) Token: 0x060184F6 RID: 99574 RVA: 0x00755138 File Offset: 0x00753338
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002627 RID: 9767
+	// (get) Token: 0x060184F7 RID: 99575 RVA: 0x0075513B File Offset: 0x0075333B
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002628 RID: 9768
+	// (get) Token: 0x060184F8 RID: 99576 RVA: 0x0075513E File Offset: 0x0075333E
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D1B1 RID: 53681
 	protected BaseActorComponent ActorComp;
 
-	// Token: 0x0400CDCF RID: 52687
+	// Token: 0x0400D1B2 RID: 53682
 	protected PawnHeadInfoComponent HeadInfoComp;
 
-	// Token: 0x0400CDD0 RID: 52688
+	// Token: 0x0400D1B3 RID: 53683
 	protected CharacterFlowLogic FlowLogic;
 
-	// Token: 0x0400CDD1 RID: 52689
+	// Token: 0x0400D1B4 RID: 53684
 	protected bool IsInit;
 
-	// Token: 0x0400CDD2 RID: 52690
+	// Token: 0x0400D1B5 RID: 53685
 	protected bool IsEnter;
 
-	// Token: 0x0400CDD3 RID: 52691
+	// Token: 0x0400D1B6 RID: 53686
 	protected BubbleComponent FlowData;
 
-	// Token: 0x0400CDD4 RID: 52692
+	// Token: 0x0400D1B7 RID: 53687
 	protected bool IsPlayDynamicFlow;
 
-	// Token: 0x0400CDD5 RID: 52693
+	// Token: 0x0400D1B8 RID: 53688
 	protected bool IsRangeFollowEntity;
 
-	// Token: 0x0400CDD6 RID: 52694
+	// Token: 0x0400D1B9 RID: 53689
 	[Nullable(1)]
 	protected FlowTriggerRange FlowRange = new FlowTriggerRange();
 
-	// Token: 0x0400CDD7 RID: 52695
+	// Token: 0x0400D1BA RID: 53690
 	[Nullable(1)]
 	protected readonly global::Vector StaticFlowRangePosition = global::Vector.Create();
 }

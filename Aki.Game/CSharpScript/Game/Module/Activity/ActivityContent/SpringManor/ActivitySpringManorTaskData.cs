@@ -5,10 +5,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006039 RID: 24633
+	// Token: 0x02004FB7 RID: 20407
 	public class ActivitySpringManorTaskData
 	{
-		// Token: 0x0603E5BE RID: 255422 RVA: 0x00F0FC9C File Offset: 0x00F0DE9C
+		// Token: 0x06033282 RID: 209538 RVA: 0x00E56A60 File Offset: 0x00E54C60
 		[NullableContext(1)]
 		public void Refresh(ConditionTask taskData)
 		{
@@ -23,19 +23,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.Id = taskData.Id;
 		}
 
-		// Token: 0x04020921 RID: 133409
+		// Token: 0x0401B24E RID: 111182
 		public int Id;
 
-		// Token: 0x04020922 RID: 133410
+		// Token: 0x0401B24F RID: 111183
 		public EActivityTaskState Status = EActivityTaskState.Active;
 
-		// Token: 0x04020923 RID: 133411
+		// Token: 0x0401B250 RID: 111184
 		public int Current;
 
-		// Token: 0x04020924 RID: 133412
+		// Token: 0x0401B251 RID: 111185
 		public int Target;
 
-		// Token: 0x04020925 RID: 133413
+		// Token: 0x0401B252 RID: 111186
 		public int Sort;
 	}
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000155 RID: 341
+	// Token: 0x02000158 RID: 344
 	[NetMessage(EMessageId.BabelTowerTaskRewardRequest)]
 	public sealed class BabelTowerTaskRewardRequest : IMessage<BabelTowerTaskRewardRequest>, IMessage, IEquatable<BabelTowerTaskRewardRequest>, IDeepCloneable<BabelTowerTaskRewardRequest>, IBufferMessage
 	{
-		// Token: 0x06002B2D RID: 11053 RVA: 0x00070B49 File Offset: 0x0006ED49
+		// Token: 0x06002BA4 RID: 11172 RVA: 0x00071F75 File Offset: 0x00070175
 		[NullableContext(1)]
 		public static BabelTowerTaskRewardRequest Create()
 		{
 			return new BabelTowerTaskRewardRequest();
 		}
 
-		// Token: 0x1700066A RID: 1642
-		// (get) Token: 0x06002B2E RID: 11054 RVA: 0x00070B50 File Offset: 0x0006ED50
+		// Token: 0x1700067E RID: 1662
+		// (get) Token: 0x06002BA5 RID: 11173 RVA: 0x00071F7C File Offset: 0x0007017C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700066B RID: 1643
-		// (get) Token: 0x06002B2F RID: 11055 RVA: 0x00070B53 File Offset: 0x0006ED53
+		// Token: 0x1700067F RID: 1663
+		// (get) Token: 0x06002BA6 RID: 11174 RVA: 0x00071F7F File Offset: 0x0007017F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B30 RID: 11056 RVA: 0x00070B5A File Offset: 0x0006ED5A
+		// Token: 0x06002BA7 RID: 11175 RVA: 0x00071F86 File Offset: 0x00070186
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerTaskRewardRequest()
 		{
 		}
 
-		// Token: 0x06002B31 RID: 11057 RVA: 0x00070B70 File Offset: 0x0006ED70
+		// Token: 0x06002BA8 RID: 11176 RVA: 0x00071F9C File Offset: 0x0007019C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerTaskRewardRequest(BabelTowerTaskRewardRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002B32 RID: 11058 RVA: 0x00070BBD File Offset: 0x0006EDBD
+		// Token: 0x06002BA9 RID: 11177 RVA: 0x00071FE9 File Offset: 0x000701E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerTaskRewardRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new BabelTowerTaskRewardRequest(this);
 		}
 
-		// Token: 0x1700066C RID: 1644
-		// (get) Token: 0x06002B33 RID: 11059 RVA: 0x00070BC5 File Offset: 0x0006EDC5
-		// (set) Token: 0x06002B34 RID: 11060 RVA: 0x00070BCD File Offset: 0x0006EDCD
+		// Token: 0x17000680 RID: 1664
+		// (get) Token: 0x06002BAA RID: 11178 RVA: 0x00071FF1 File Offset: 0x000701F1
+		// (set) Token: 0x06002BAB RID: 11179 RVA: 0x00071FF9 File Offset: 0x000701F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TaskId
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700066D RID: 1645
-		// (get) Token: 0x06002B35 RID: 11061 RVA: 0x00070BD6 File Offset: 0x0006EDD6
+		// Token: 0x17000681 RID: 1665
+		// (get) Token: 0x06002BAC RID: 11180 RVA: 0x00072002 File Offset: 0x00070202
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> TaskIds
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700066E RID: 1646
-		// (get) Token: 0x06002B36 RID: 11062 RVA: 0x00070BDE File Offset: 0x0006EDDE
-		// (set) Token: 0x06002B37 RID: 11063 RVA: 0x00070BE6 File Offset: 0x0006EDE6
+		// Token: 0x17000682 RID: 1666
+		// (get) Token: 0x06002BAD RID: 11181 RVA: 0x0007200A File Offset: 0x0007020A
+		// (set) Token: 0x06002BAE RID: 11182 RVA: 0x00072012 File Offset: 0x00070212
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B38 RID: 11064 RVA: 0x00070BEF File Offset: 0x0006EDEF
+		// Token: 0x06002BAF RID: 11183 RVA: 0x0007201B File Offset: 0x0007021B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelTowerTaskRewardRequest);
 		}
 
-		// Token: 0x06002B39 RID: 11065 RVA: 0x00070C00 File Offset: 0x0006EE00
+		// Token: 0x06002BB0 RID: 11184 RVA: 0x0007202C File Offset: 0x0007022C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelTowerTaskRewardRequest other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TaskId == other.TaskId && this.taskIds_.Equals(other.taskIds_) && this.ActivityId == other.ActivityId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002B3A RID: 11066 RVA: 0x00070C60 File Offset: 0x0006EE60
+		// Token: 0x06002BB1 RID: 11185 RVA: 0x0007208C File Offset: 0x0007028C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B3B RID: 11067 RVA: 0x00070CC6 File Offset: 0x0006EEC6
+		// Token: 0x06002BB2 RID: 11186 RVA: 0x000720F2 File Offset: 0x000702F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002B3C RID: 11068 RVA: 0x00070CD3 File Offset: 0x0006EED3
+		// Token: 0x06002BB3 RID: 11187 RVA: 0x000720FF File Offset: 0x000702FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,20 +169,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002B3D RID: 11069 RVA: 0x00070CDC File Offset: 0x0006EEDC
+		// Token: 0x06002BB4 RID: 11188 RVA: 0x00072108 File Offset: 0x00070308
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.taskIds_.WriteTo(ref output, BabelTowerTaskRewardRequest._repeated_taskIds_codec);
 			if (this.TaskId != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.TaskId);
 			}
-			this.taskIds_.WriteTo(ref output, BabelTowerTaskRewardRequest._repeated_taskIds_codec);
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(120);
 				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B3E RID: 11070 RVA: 0x00070D48 File Offset: 0x0006EF48
+		// Token: 0x06002BB5 RID: 11189 RVA: 0x00072174 File Offset: 0x00070374
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B3F RID: 11071 RVA: 0x00070DB4 File Offset: 0x0006EFB4
+		// Token: 0x06002BB6 RID: 11190 RVA: 0x000721E0 File Offset: 0x000703E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelTowerTaskRewardRequest other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002B40 RID: 11072 RVA: 0x00070E15 File Offset: 0x0006F015
+		// Token: 0x06002BB7 RID: 11191 RVA: 0x00072241 File Offset: 0x00070441
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002B41 RID: 11073 RVA: 0x00070E20 File Offset: 0x0006F020
+		// Token: 0x06002BB8 RID: 11192 RVA: 0x0007224C File Offset: 0x0007044C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,59 +254,53 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 96U)
+				if (num <= 74U)
 				{
-					if (num == 88U)
+					if (num == 72U || num == 74U)
 					{
-						this.TaskId = input.ReadInt32();
+						this.taskIds_.AddEntriesFrom(ref input, BabelTowerTaskRewardRequest._repeated_taskIds_codec);
 						continue;
-					}
-					if (num == 96U)
-					{
-						goto IL_46;
 					}
 				}
 				else
 				{
-					if (num == 98U)
+					if (num == 80U)
 					{
-						goto IL_46;
+						this.TaskId = input.ReadInt32();
+						continue;
 					}
-					if (num == 104U)
+					if (num == 120U)
 					{
 						this.ActivityId = input.ReadInt32();
 						continue;
 					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
-				continue;
-				IL_46:
-				this.taskIds_.AddEntriesFrom(ref input, BabelTowerTaskRewardRequest._repeated_taskIds_codec);
 			}
 		}
 
-		// Token: 0x0400278D RID: 10125
+		// Token: 0x04002801 RID: 10241
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400278E RID: 10126
-		public const int TaskIdFieldNumber = 11;
+		// Token: 0x04002802 RID: 10242
+		public const int TaskIdFieldNumber = 10;
 
-		// Token: 0x0400278F RID: 10127
+		// Token: 0x04002803 RID: 10243
 		private int taskId_;
 
-		// Token: 0x04002790 RID: 10128
-		public const int TaskIdsFieldNumber = 12;
+		// Token: 0x04002804 RID: 10244
+		public const int TaskIdsFieldNumber = 9;
 
-		// Token: 0x04002791 RID: 10129
-		private static readonly FieldCodec<int> _repeated_taskIds_codec = FieldCodec.ForInt32(98U);
+		// Token: 0x04002805 RID: 10245
+		private static readonly FieldCodec<int> _repeated_taskIds_codec = FieldCodec.ForInt32(74U);
 
-		// Token: 0x04002792 RID: 10130
+		// Token: 0x04002806 RID: 10246
 		private readonly RepeatedField<int> taskIds_ = new RepeatedField<int>();
 
-		// Token: 0x04002793 RID: 10131
-		public const int ActivityIdFieldNumber = 13;
+		// Token: 0x04002807 RID: 10247
+		public const int ActivityIdFieldNumber = 15;
 
-		// Token: 0x04002794 RID: 10132
+		// Token: 0x04002808 RID: 10248
 		private int activityId_;
 	}
 }

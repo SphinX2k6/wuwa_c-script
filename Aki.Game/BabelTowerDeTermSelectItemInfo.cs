@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001133 RID: 4403
+// Token: 0x020005E7 RID: 1511
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerDeTermSelectItemInfo : IBabelTowerDeTermSelectItemInfo
 {
-	// Token: 0x170009DF RID: 2527
-	// (get) Token: 0x06007392 RID: 29586 RVA: 0x0017BA60 File Offset: 0x00179C60
-	// (set) Token: 0x06007393 RID: 29587 RVA: 0x0017BA68 File Offset: 0x00179C68
+	// Token: 0x170009FF RID: 2559
+	// (get) Token: 0x06004729 RID: 18217 RVA: 0x001845AE File Offset: 0x001827AE
+	// (set) Token: 0x0600472A RID: 18218 RVA: 0x001845B6 File Offset: 0x001827B6
 	public bool IsNecessary { get; set; }
 
-	// Token: 0x170009E0 RID: 2528
-	// (get) Token: 0x06007394 RID: 29588 RVA: 0x0017BA71 File Offset: 0x00179C71
-	// (set) Token: 0x06007395 RID: 29589 RVA: 0x0017BA79 File Offset: 0x00179C79
+	// Token: 0x17000A00 RID: 2560
+	// (get) Token: 0x0600472B RID: 18219 RVA: 0x001845BF File Offset: 0x001827BF
+	// (set) Token: 0x0600472C RID: 18220 RVA: 0x001845C7 File Offset: 0x001827C7
 	public List<int> AllDeTerm { get; set; }
 
-	// Token: 0x170009E1 RID: 2529
-	// (get) Token: 0x06007396 RID: 29590 RVA: 0x0017BA82 File Offset: 0x00179C82
-	// (set) Token: 0x06007397 RID: 29591 RVA: 0x0017BA8A File Offset: 0x00179C8A
+	// Token: 0x17000A01 RID: 2561
+	// (get) Token: 0x0600472D RID: 18221 RVA: 0x001845D0 File Offset: 0x001827D0
+	// (set) Token: 0x0600472E RID: 18222 RVA: 0x001845D8 File Offset: 0x001827D8
 	public List<int> DailyDeTerm { get; set; }
 
-	// Token: 0x170009E2 RID: 2530
-	// (get) Token: 0x06007398 RID: 29592 RVA: 0x0017BA93 File Offset: 0x00179C93
-	// (set) Token: 0x06007399 RID: 29593 RVA: 0x0017BA9B File Offset: 0x00179C9B
+	// Token: 0x17000A02 RID: 2562
+	// (get) Token: 0x0600472F RID: 18223 RVA: 0x001845E1 File Offset: 0x001827E1
+	// (set) Token: 0x06004730 RID: 18224 RVA: 0x001845E9 File Offset: 0x001827E9
 	public Action<int> OnChangeSelectDeTerm { get; set; }
 }

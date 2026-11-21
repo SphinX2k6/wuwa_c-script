@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E79 RID: 7801
+	// Token: 0x020005AC RID: 1452
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSoHotPatch.KuroVerify")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 72)]
 	public class UKuroVerify : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DB3C RID: 121660 RVA: 0x002BE040 File Offset: 0x002BC240
+		// Token: 0x060082A6 RID: 33446 RVA: 0x000C131C File Offset: 0x000BF51C
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroVerify._ClassPtr;
 		}
 
-		// Token: 0x0601DB3D RID: 121661 RVA: 0x002BE04C File Offset: 0x002BC24C
+		// Token: 0x060082A7 RID: 33447 RVA: 0x000C1328 File Offset: 0x000BF528
 		public UKuroVerify() : this(BuiltinUtils.AllocNativeUObject(UKuroVerify.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DB3E RID: 121662 RVA: 0x002BE074 File Offset: 0x002BC274
+		// Token: 0x060082A8 RID: 33448 RVA: 0x000C1350 File Offset: 0x000BF550
 		public UKuroVerify(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroVerify.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700776F RID: 30575
-		// (get) Token: 0x0601DB3F RID: 121663 RVA: 0x002BE0A8 File Offset: 0x002BC2A8
-		// (set) Token: 0x0601DB40 RID: 121664 RVA: 0x002BE0E1 File Offset: 0x002BC2E1
+		// Token: 0x1700194B RID: 6475
+		// (get) Token: 0x060082A9 RID: 33449 RVA: 0x000C1384 File Offset: 0x000BF584
+		// (set) Token: 0x060082AA RID: 33450 RVA: 0x000C13BD File Offset: 0x000BF5BD
 		public FKuroTinkerCheckSoCallback CheckCallback
 		{
 			get
@@ -50,7 +50,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DB41 RID: 121665 RVA: 0x002BE104 File Offset: 0x002BC304
+		// Token: 0x060082AB RID: 33451 RVA: 0x000C13E0 File Offset: 0x000BF5E0
 		public unsafe void CheckLib(string Hash)
 		{
 			FString fstring = FString.AllocTemp(Hash);
@@ -58,34 +58,34 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601DB42 RID: 121666
+		// Token: 0x060082AC RID: 33452
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CheckLib_Internal(IntPtr @this, in FString Hash);
 
-		// Token: 0x0601DB43 RID: 121667 RVA: 0x002BE12E File Offset: 0x002BC32E
+		// Token: 0x060082AD RID: 33453 RVA: 0x000C140A File Offset: 0x000BF60A
 		static UKuroVerify()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSoHotPatch.KuroVerify");
 		}
 
-		// Token: 0x0601DB44 RID: 121668 RVA: 0x002BE13C File Offset: 0x002BC33C
+		// Token: 0x060082AE RID: 33454 RVA: 0x000C1418 File Offset: 0x000BF618
 		protected UKuroVerify(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401014C RID: 65868
+		// Token: 0x040038E1 RID: 14561
 		public new const string __ObjectPath = "/Script/KuroSoHotPatch.KuroVerify";
 
-		// Token: 0x0401014D RID: 65869
+		// Token: 0x040038E2 RID: 14562
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401014E RID: 65870
+		// Token: 0x040038E3 RID: 14563
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401014F RID: 65871
+		// Token: 0x040038E4 RID: 14564
 		internal static int __PropertyOffset_CheckCallback;
 
-		// Token: 0x04010150 RID: 65872
+		// Token: 0x040038E5 RID: 14565
 		[Nullable(2)]
 		private FKuroTinkerCheckSoCallback _CheckCallback;
 	}

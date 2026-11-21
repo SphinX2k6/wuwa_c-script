@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.IosAudit
 {
-	// Token: 0x02006FC6 RID: 28614
+	// Token: 0x02006147 RID: 24903
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IosAuditDefine
 	{
-		// Token: 0x0604596E RID: 285038 RVA: 0x01147AB0 File Offset: 0x01145CB0
+		// Token: 0x0603BB1E RID: 244510 RVA: 0x010F1890 File Offset: 0x010EFA90
 		// Note: this type is marked as 'beforefieldinit'.
 		static IosAuditDefine()
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.IosAudit
 			};
 		}
 
-		// Token: 0x040244F9 RID: 148729
+		// Token: 0x0401F7AE RID: 128942
 		[StaticVariableRuleIgnore]
 		public static IReadOnlyList<string> CommonMajorPaths = new List<string>
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.IosAudit
 			"/Game/Aki/Data/Fight/DT_QteTag.DT_QteTag"
 		};
 
-		// Token: 0x040244FA RID: 148730
+		// Token: 0x0401F7AF RID: 128943
 		[StaticVariableRuleIgnore]
 		public static IReadOnlyList<string> CommonOtherPaths = new List<string>
 		{
@@ -126,11 +126,11 @@ namespace CSharpScript.Game.IosAudit
 			"/Game/Aki/Data/Fight/DT_InputCommandTransform.DT_InputCommandTransform"
 		};
 
-		// Token: 0x040244FB RID: 148731
+		// Token: 0x0401F7B0 RID: 128944
 		[StaticVariableRuleIgnore]
 		public static IReadOnlyDictionary<EDataTable, string> DataTablePaths;
 
-		// Token: 0x040244FC RID: 148732
+		// Token: 0x0401F7B1 RID: 128945
 		[StaticVariableRuleIgnore]
 		public static IReadOnlyList<string> CommonEffectPaths;
 	}

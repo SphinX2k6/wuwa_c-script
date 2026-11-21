@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001F78 RID: 8056
+// Token: 0x0200143A RID: 5178
 public interface IReputationDetailsData
 {
-	// Token: 0x1700133D RID: 4925
-	// (get) Token: 0x0600F9FA RID: 63994
-	// (set) Token: 0x0600F9FB RID: 63995
+	// Token: 0x17001367 RID: 4967
+	// (get) Token: 0x0600CE19 RID: 52761
+	// (set) Token: 0x0600CE1A RID: 52762
 	int InfluenceId { get; set; }
 
-	// Token: 0x1700133E RID: 4926
-	// (get) Token: 0x0600F9FC RID: 63996
-	// (set) Token: 0x0600F9FD RID: 63997
+	// Token: 0x17001368 RID: 4968
+	// (get) Token: 0x0600CE1B RID: 52763
+	// (set) Token: 0x0600CE1C RID: 52764
 	int CountryId { get; set; }
 }

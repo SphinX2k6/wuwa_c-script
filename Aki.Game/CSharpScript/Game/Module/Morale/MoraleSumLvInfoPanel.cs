@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053BC RID: 21436
+	// Token: 0x0200439F RID: 17311
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleSumLvInfoPanel : UiPanelBase
 	{
-		// Token: 0x06036C5E RID: 224350 RVA: 0x00CF6BD0 File Offset: 0x00CF4DD0
+		// Token: 0x0602BBA4 RID: 179108 RVA: 0x00C45C78 File Offset: 0x00C43E78
 		public UniTask Init(UUIItem item)
 		{
 			MoraleSumLvInfoPanel.<Init>d__3 <Init>d__;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C5F RID: 224351 RVA: 0x00CF6C1C File Offset: 0x00CF4E1C
+		// Token: 0x0602BBA5 RID: 179109 RVA: 0x00C45CC4 File Offset: 0x00C43EC4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C60 RID: 224352 RVA: 0x00CF6CB0 File Offset: 0x00CF4EB0
+		// Token: 0x0602BBA6 RID: 179110 RVA: 0x00C45D58 File Offset: 0x00C43F58
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleSumLvInfoPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -52,18 +52,18 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C61 RID: 224353 RVA: 0x00CF6CF3 File Offset: 0x00CF4EF3
+		// Token: 0x0602BBA7 RID: 179111 RVA: 0x00C45D9B File Offset: 0x00C43F9B
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06036C62 RID: 224354 RVA: 0x00CF6CF5 File Offset: 0x00CF4EF5
+		// Token: 0x0602BBA8 RID: 179112 RVA: 0x00C45D9D File Offset: 0x00C43F9D
 		private void OnBtnBuffSum()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MoraleBuffView, null, null);
 		}
 
-		// Token: 0x06036C63 RID: 224355 RVA: 0x00CF6D08 File Offset: 0x00CF4F08
+		// Token: 0x0602BBA9 RID: 179113 RVA: 0x00C45DB0 File Offset: 0x00C43FB0
 		public void UpdateData()
 		{
 			MoraleModel instance = MoraleModel.Instance;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateRedDot();
 		}
 
-		// Token: 0x06036C64 RID: 224356 RVA: 0x00CF6D6C File Offset: 0x00CF4F6C
+		// Token: 0x0602BBAA RID: 179114 RVA: 0x00C45E14 File Offset: 0x00C44014
 		public void UpdateRedDot()
 		{
 			bool uiactive = MoraleModel.Instance.RedDotAreaBuff();
@@ -90,26 +90,26 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0401CE7F RID: 118399
+		// Token: 0x04017917 RID: 96535
 		public MoraleLvInfoItem ItemMoraleLv;
 
-		// Token: 0x0401CE80 RID: 118400
+		// Token: 0x04017918 RID: 96536
 		public MoraleUnbreakableLvInfoItem ItemUnbreakableLv;
 
-		// Token: 0x0200B665 RID: 46693
+		// Token: 0x0200A09D RID: 41117
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04037420 RID: 226336
+			// Token: 0x04031E75 RID: 204405
 			public const int ItemMoraleLv = 0;
 
-			// Token: 0x04037421 RID: 226337
+			// Token: 0x04031E76 RID: 204406
 			public const int ItemUnbreakableLv = 1;
 
-			// Token: 0x04037422 RID: 226338
+			// Token: 0x04031E77 RID: 204407
 			public const int BtnBuffSum = 2;
 
-			// Token: 0x04037423 RID: 226339
+			// Token: 0x04031E78 RID: 204408
 			public const int ItemBuffSumRedDot = 3;
 		}
 	}

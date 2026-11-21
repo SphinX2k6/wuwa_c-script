@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001318 RID: 4888
+	// Token: 0x02001468 RID: 5224
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackTarget
 	{
-		// Token: 0x06007039 RID: 28729 RVA: 0x0010F23A File Offset: 0x0010D43A
-		[NullableContext(1)]
+		// Token: 0x060076D9 RID: 30425 RVA: 0x0011D7A6 File Offset: 0x0011B9A6
+		[NullableContext(0)]
 		public static ITrackTarget Create(ITrackTarget? instance)
 		{
 			if (instance == null)
@@ -23,12 +23,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023DC RID: 9180
-		// (get) Token: 0x0600703A RID: 28730 RVA: 0x0010F259 File Offset: 0x0010D459
-		[Nullable(1)]
+		// Token: 0x170025AB RID: 9643
+		// (get) Token: 0x060076DA RID: 30426 RVA: 0x0011D7C5 File Offset: 0x0011B9C5
+		[Nullable(0)]
 		public virtual ITrackType TrackType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TrackTypeInited)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023DD RID: 9181
-		// (get) Token: 0x0600703B RID: 28731 RVA: 0x0010F288 File Offset: 0x0010D488
+		// Token: 0x170025AC RID: 9644
+		// (get) Token: 0x060076DB RID: 30427 RVA: 0x0011D7F4 File Offset: 0x0011B9F4
 		public virtual ETrackViewMode? TrackViewMode
 		{
 			get
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023DE RID: 9182
-		// (get) Token: 0x0600703C RID: 28732 RVA: 0x0010F2C0 File Offset: 0x0010D4C0
+		// Token: 0x170025AD RID: 9645
+		// (get) Token: 0x060076DC RID: 30428 RVA: 0x0011D82C File Offset: 0x0011BA2C
 		public virtual float? Range
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023DF RID: 9183
-		// (get) Token: 0x0600703D RID: 28733 RVA: 0x0010F2F8 File Offset: 0x0010D4F8
+		// Token: 0x170025AE RID: 9646
+		// (get) Token: 0x060076DD RID: 30429 RVA: 0x0011D864 File Offset: 0x0011BA64
 		public virtual float? ViewRange
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023E0 RID: 9184
-		// (get) Token: 0x0600703E RID: 28734 RVA: 0x0010F32E File Offset: 0x0010D52E
+		// Token: 0x170025AF RID: 9647
+		// (get) Token: 0x060076DE RID: 30430 RVA: 0x0011D89A File Offset: 0x0011BA9A
 		public virtual IZaxisViewRange ZaxisViewRange
 		{
 			get
@@ -99,8 +99,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023E1 RID: 9185
-		// (get) Token: 0x0600703F RID: 28735 RVA: 0x0010F364 File Offset: 0x0010D564
+		// Token: 0x170025B0 RID: 9648
+		// (get) Token: 0x060076DF RID: 30431 RVA: 0x0011D8D0 File Offset: 0x0011BAD0
 		public virtual ETrackEffect? Effect
 		{
 			get
@@ -113,8 +113,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023E2 RID: 9186
-		// (get) Token: 0x06007040 RID: 28736 RVA: 0x0010F39A File Offset: 0x0010D59A
+		// Token: 0x170025B1 RID: 9649
+		// (get) Token: 0x060076E0 RID: 30432 RVA: 0x0011D906 File Offset: 0x0011BB06
 		public virtual ITrackEffectAutoChange EffectOption
 		{
 			get
@@ -129,26 +129,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040BE RID: 16574
+		// Token: 0x0400443A RID: 17466
 		private ITrackTarget Instance;
 
-		// Token: 0x040040BF RID: 16575
-		[Nullable(1)]
+		// Token: 0x0400443B RID: 17467
+		[Nullable(0)]
 		private ITrackType _TrackTypeCache;
 
-		// Token: 0x040040C0 RID: 16576
+		// Token: 0x0400443C RID: 17468
 		private bool _TrackTypeInited;
 
-		// Token: 0x040040C1 RID: 16577
+		// Token: 0x0400443D RID: 17469
 		private IZaxisViewRange _ZaxisViewRangeCache;
 
-		// Token: 0x040040C2 RID: 16578
+		// Token: 0x0400443E RID: 17470
 		private bool _ZaxisViewRangeInited;
 
-		// Token: 0x040040C3 RID: 16579
+		// Token: 0x0400443F RID: 17471
 		private ITrackEffectAutoChange _EffectOptionCache;
 
-		// Token: 0x040040C4 RID: 16580
+		// Token: 0x04004440 RID: 17472
 		private bool _EffectOptionInited;
 	}
 }

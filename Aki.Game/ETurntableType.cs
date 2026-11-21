@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200153D RID: 5437
+// Token: 0x020009F5 RID: 2549
 public enum ETurntableType
 {
-	// Token: 0x0400444D RID: 17485
+	// Token: 0x040044F3 RID: 17651
 	Quest = 1,
-	// Token: 0x0400444E RID: 17486
+	// Token: 0x040044F4 RID: 17652
 	Daily
 }

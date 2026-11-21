@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D2C RID: 7468
+// Token: 0x020011EE RID: 4590
 public class TrapDefenseRecyclePriceItem : UiPanelBase
 {
-	// Token: 0x0600E239 RID: 57913 RVA: 0x00352491 File Offset: 0x00350691
+	// Token: 0x0600B656 RID: 46678 RVA: 0x0035DEC1 File Offset: 0x0035C0C1
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class TrapDefenseRecyclePriceItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E23A RID: 57914 RVA: 0x003524CC File Offset: 0x003506CC
+	// Token: 0x0600B657 RID: 46679 RVA: 0x0035DEFC File Offset: 0x0035C0FC
 	public void UpdatePrice(int recyclePrice)
 	{
 		UUIText text = base.GetText(1);
@@ -31,13 +31,13 @@ public class TrapDefenseRecyclePriceItem : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x02008330 RID: 33584
+	// Token: 0x020074B9 RID: 29881
 	private static class EDefine
 	{
-		// Token: 0x0402AC8E RID: 175246
+		// Token: 0x04025FB6 RID: 155574
 		public const int Icon = 0;
 
-		// Token: 0x0402AC8F RID: 175247
+		// Token: 0x04025FB7 RID: 155575
 		public const int Value = 1;
 	}
 }

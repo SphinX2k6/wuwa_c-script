@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x0200522F RID: 21039
+	// Token: 0x020041FF RID: 16895
 	public enum EDamageStatisticsRankType
 	{
-		// Token: 0x0401C7F4 RID: 116724
+		// Token: 0x04017229 RID: 94761
 		None,
-		// Token: 0x0401C7F5 RID: 116725
+		// Token: 0x0401722A RID: 94762
 		Damage,
-		// Token: 0x0401C7F6 RID: 116726
+		// Token: 0x0401722B RID: 94763
 		Injury
 	}
 }

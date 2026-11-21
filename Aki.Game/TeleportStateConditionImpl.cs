@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002A74 RID: 10868
+// Token: 0x02001FEF RID: 8175
 public class TeleportStateConditionImpl : ISkipTeleportStateCondition, ISkipCondition<ESkipConditionType>
 {
-	// Token: 0x17001E12 RID: 7698
-	// (get) Token: 0x06016A21 RID: 92705 RVA: 0x005BC294 File Offset: 0x005BA494
-	// (set) Token: 0x06016A22 RID: 92706 RVA: 0x005BC29C File Offset: 0x005BA49C
+	// Token: 0x17001E6A RID: 7786
+	// (get) Token: 0x06014442 RID: 83010 RVA: 0x005E841C File Offset: 0x005E661C
+	// (set) Token: 0x06014443 RID: 83011 RVA: 0x005E8424 File Offset: 0x005E6624
 	public ESkipConditionType ConditionType { get; set; }
 
-	// Token: 0x17001E13 RID: 7699
-	// (get) Token: 0x06016A23 RID: 92707 RVA: 0x005BC2A5 File Offset: 0x005BA4A5
-	// (set) Token: 0x06016A24 RID: 92708 RVA: 0x005BC2AD File Offset: 0x005BA4AD
+	// Token: 0x17001E6B RID: 7787
+	// (get) Token: 0x06014444 RID: 83012 RVA: 0x005E842D File Offset: 0x005E662D
+	// (set) Token: 0x06014445 RID: 83013 RVA: 0x005E8435 File Offset: 0x005E6635
 	public int MarkId { get; set; }
 
-	// Token: 0x17001E14 RID: 7700
-	// (get) Token: 0x06016A25 RID: 92709 RVA: 0x005BC2B6 File Offset: 0x005BA4B6
-	// (set) Token: 0x06016A26 RID: 92710 RVA: 0x005BC2BE File Offset: 0x005BA4BE
+	// Token: 0x17001E6C RID: 7788
+	// (get) Token: 0x06014446 RID: 83014 RVA: 0x005E843E File Offset: 0x005E663E
+	// (set) Token: 0x06014447 RID: 83015 RVA: 0x005E8446 File Offset: 0x005E6646
 	public ETeleportState CheckTeleportState { get; set; }
 }

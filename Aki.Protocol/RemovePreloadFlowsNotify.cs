@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F04 RID: 3844
+	// Token: 0x02000EF4 RID: 3828
 	[NetMessage(EMessageId.RemovePreloadFlowsNotify)]
 	public sealed class RemovePreloadFlowsNotify : IMessage<RemovePreloadFlowsNotify>, IMessage, IEquatable<RemovePreloadFlowsNotify>, IDeepCloneable<RemovePreloadFlowsNotify>, IBufferMessage
 	{
-		// Token: 0x0601496E RID: 84334 RVA: 0x002FD86B File Offset: 0x002FBA6B
+		// Token: 0x06014889 RID: 84105 RVA: 0x002FC1AF File Offset: 0x002FA3AF
 		[NullableContext(1)]
 		public static RemovePreloadFlowsNotify Create()
 		{
 			return new RemovePreloadFlowsNotify();
 		}
 
-		// Token: 0x17004476 RID: 17526
-		// (get) Token: 0x0601496F RID: 84335 RVA: 0x002FD872 File Offset: 0x002FBA72
+		// Token: 0x1700444C RID: 17484
+		// (get) Token: 0x0601488A RID: 84106 RVA: 0x002FC1B6 File Offset: 0x002FA3B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004477 RID: 17527
-		// (get) Token: 0x06014970 RID: 84336 RVA: 0x002FD875 File Offset: 0x002FBA75
+		// Token: 0x1700444D RID: 17485
+		// (get) Token: 0x0601488B RID: 84107 RVA: 0x002FC1B9 File Offset: 0x002FA3B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014971 RID: 84337 RVA: 0x002FD87C File Offset: 0x002FBA7C
+		// Token: 0x0601488C RID: 84108 RVA: 0x002FC1C0 File Offset: 0x002FA3C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemovePreloadFlowsNotify()
 		{
 		}
 
-		// Token: 0x06014972 RID: 84338 RVA: 0x002FD89C File Offset: 0x002FBA9C
+		// Token: 0x0601488D RID: 84109 RVA: 0x002FC1E0 File Offset: 0x002FA3E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemovePreloadFlowsNotify(RemovePreloadFlowsNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014973 RID: 84339 RVA: 0x002FD8F0 File Offset: 0x002FBAF0
+		// Token: 0x0601488E RID: 84110 RVA: 0x002FC234 File Offset: 0x002FA434
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemovePreloadFlowsNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new RemovePreloadFlowsNotify(this);
 		}
 
-		// Token: 0x17004478 RID: 17528
-		// (get) Token: 0x06014974 RID: 84340 RVA: 0x002FD8F8 File Offset: 0x002FBAF8
-		// (set) Token: 0x06014975 RID: 84341 RVA: 0x002FD900 File Offset: 0x002FBB00
+		// Token: 0x1700444E RID: 17486
+		// (get) Token: 0x0601488F RID: 84111 RVA: 0x002FC23C File Offset: 0x002FA43C
+		// (set) Token: 0x06014890 RID: 84112 RVA: 0x002FC244 File Offset: 0x002FA444
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FlowId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004479 RID: 17529
-		// (get) Token: 0x06014976 RID: 84342 RVA: 0x002FD909 File Offset: 0x002FBB09
-		// (set) Token: 0x06014977 RID: 84343 RVA: 0x002FD911 File Offset: 0x002FBB11
+		// Token: 0x1700444F RID: 17487
+		// (get) Token: 0x06014891 RID: 84113 RVA: 0x002FC24D File Offset: 0x002FA44D
+		// (set) Token: 0x06014892 RID: 84114 RVA: 0x002FC255 File Offset: 0x002FA455
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int StateId
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700447A RID: 17530
-		// (get) Token: 0x06014978 RID: 84344 RVA: 0x002FD91A File Offset: 0x002FBB1A
-		// (set) Token: 0x06014979 RID: 84345 RVA: 0x002FD922 File Offset: 0x002FBB22
+		// Token: 0x17004450 RID: 17488
+		// (get) Token: 0x06014893 RID: 84115 RVA: 0x002FC25E File Offset: 0x002FA45E
+		// (set) Token: 0x06014894 RID: 84116 RVA: 0x002FC266 File Offset: 0x002FA466
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FlowListName
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700447B RID: 17531
-		// (get) Token: 0x0601497A RID: 84346 RVA: 0x002FD935 File Offset: 0x002FBB35
-		// (set) Token: 0x0601497B RID: 84347 RVA: 0x002FD93D File Offset: 0x002FBB3D
+		// Token: 0x17004451 RID: 17489
+		// (get) Token: 0x06014895 RID: 84117 RVA: 0x002FC279 File Offset: 0x002FA479
+		// (set) Token: 0x06014896 RID: 84118 RVA: 0x002FC281 File Offset: 0x002FA481
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FlowGuid
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601497C RID: 84348 RVA: 0x002FD950 File Offset: 0x002FBB50
+		// Token: 0x06014897 RID: 84119 RVA: 0x002FC294 File Offset: 0x002FA494
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RemovePreloadFlowsNotify);
 		}
 
-		// Token: 0x0601497D RID: 84349 RVA: 0x002FD960 File Offset: 0x002FBB60
+		// Token: 0x06014898 RID: 84120 RVA: 0x002FC2A4 File Offset: 0x002FA4A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RemovePreloadFlowsNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FlowId == other.FlowId && this.StateId == other.StateId && !(this.FlowListName != other.FlowListName) && !(this.FlowGuid != other.FlowGuid) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601497E RID: 84350 RVA: 0x002FD9D4 File Offset: 0x002FBBD4
+		// Token: 0x06014899 RID: 84121 RVA: 0x002FC318 File Offset: 0x002FA518
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601497F RID: 84351 RVA: 0x002FDA62 File Offset: 0x002FBC62
+		// Token: 0x0601489A RID: 84122 RVA: 0x002FC3A6 File Offset: 0x002FA5A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014980 RID: 84352 RVA: 0x002FDA6F File Offset: 0x002FBC6F
+		// Token: 0x0601489B RID: 84123 RVA: 0x002FC3B3 File Offset: 0x002FA5B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014981 RID: 84353 RVA: 0x002FDA78 File Offset: 0x002FBC78
+		// Token: 0x0601489C RID: 84124 RVA: 0x002FC3BC File Offset: 0x002FA5BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.FlowGuid.Length != 0)
+			if (this.FlowListName.Length != 0)
 			{
-				output.WriteRawTag(74);
-				output.WriteString(this.FlowGuid);
+				output.WriteRawTag(50);
+				output.WriteString(this.FlowListName);
 			}
 			if (this.StateId != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.StateId);
+			}
+			if (this.FlowGuid.Length != 0)
+			{
+				output.WriteRawTag(90);
+				output.WriteString(this.FlowGuid);
 			}
 			if (this.FlowId != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(104);
 				output.WriteInt32(this.FlowId);
-			}
-			if (this.FlowListName.Length != 0)
-			{
-				output.WriteRawTag(122);
-				output.WriteString(this.FlowListName);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014982 RID: 84354 RVA: 0x002FDB14 File Offset: 0x002FBD14
+		// Token: 0x0601489D RID: 84125 RVA: 0x002FC458 File Offset: 0x002FA658
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014983 RID: 84355 RVA: 0x002FDBA4 File Offset: 0x002FBDA4
+		// Token: 0x0601489E RID: 84126 RVA: 0x002FC4E8 File Offset: 0x002FA6E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RemovePreloadFlowsNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014984 RID: 84356 RVA: 0x002FDC26 File Offset: 0x002FBE26
+		// Token: 0x0601489F RID: 84127 RVA: 0x002FC56A File Offset: 0x002FA76A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014985 RID: 84357 RVA: 0x002FDC30 File Offset: 0x002FBE30
+		// Token: 0x060148A0 RID: 84128 RVA: 0x002FC574 File Offset: 0x002FA774
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,14 +306,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 88U)
+				if (num <= 56U)
 				{
-					if (num == 74U)
+					if (num == 50U)
 					{
-						this.FlowGuid = input.ReadString();
+						this.FlowListName = input.ReadString();
 						continue;
 					}
-					if (num == 88U)
+					if (num == 56U)
 					{
 						this.StateId = input.ReadInt32();
 						continue;
@@ -321,14 +321,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 96U)
+					if (num == 90U)
 					{
-						this.FlowId = input.ReadInt32();
+						this.FlowGuid = input.ReadString();
 						continue;
 					}
-					if (num == 122U)
+					if (num == 104U)
 					{
-						this.FlowListName = input.ReadString();
+						this.FlowId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007CB0 RID: 31920
+		// Token: 0x04007CDA RID: 31962
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007CB1 RID: 31921
-		public const int FlowIdFieldNumber = 12;
+		// Token: 0x04007CDB RID: 31963
+		public const int FlowIdFieldNumber = 13;
 
-		// Token: 0x04007CB2 RID: 31922
+		// Token: 0x04007CDC RID: 31964
 		private int flowId_;
 
-		// Token: 0x04007CB3 RID: 31923
-		public const int StateIdFieldNumber = 11;
+		// Token: 0x04007CDD RID: 31965
+		public const int StateIdFieldNumber = 7;
 
-		// Token: 0x04007CB4 RID: 31924
+		// Token: 0x04007CDE RID: 31966
 		private int stateId_;
 
-		// Token: 0x04007CB5 RID: 31925
-		public const int FlowListNameFieldNumber = 15;
+		// Token: 0x04007CDF RID: 31967
+		public const int FlowListNameFieldNumber = 6;
 
-		// Token: 0x04007CB6 RID: 31926
+		// Token: 0x04007CE0 RID: 31968
 		private string flowListName_ = "";
 
-		// Token: 0x04007CB7 RID: 31927
-		public const int FlowGuidFieldNumber = 9;
+		// Token: 0x04007CE1 RID: 31969
+		public const int FlowGuidFieldNumber = 11;
 
-		// Token: 0x04007CB8 RID: 31928
+		// Token: 0x04007CE2 RID: 31970
 		private string flowGuid_ = "";
 	}
 }

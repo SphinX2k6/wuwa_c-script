@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F05 RID: 16133
+	// Token: 0x02004343 RID: 17219
 	public struct ILevelPlayTrackRadius : IFlatbufferObject
 	{
-		// Token: 0x17006FE9 RID: 28649
-		// (get) Token: 0x06016D6C RID: 93548 RVA: 0x0034B2BB File Offset: 0x003494BB
+		// Token: 0x170075D8 RID: 30168
+		// (get) Token: 0x060183C3 RID: 99267 RVA: 0x00374487 File Offset: 0x00372687
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016D6D RID: 93549 RVA: 0x0034B2C8 File Offset: 0x003494C8
+		// Token: 0x060183C4 RID: 99268 RVA: 0x00374494 File Offset: 0x00372694
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016D6E RID: 93550 RVA: 0x0034B2D0 File Offset: 0x003494D0
+		// Token: 0x060183C5 RID: 99269 RVA: 0x0037449C File Offset: 0x0037269C
 		public static ILevelPlayTrackRadius GetRootAsILevelPlayTrackRadius(ByteBuffer _bb)
 		{
 			return ILevelPlayTrackRadius.GetRootAsILevelPlayTrackRadius(_bb, default(ILevelPlayTrackRadius));
 		}
 
-		// Token: 0x06016D6F RID: 93551 RVA: 0x0034B2EC File Offset: 0x003494EC
+		// Token: 0x060183C6 RID: 99270 RVA: 0x003744B8 File Offset: 0x003726B8
 		public static ILevelPlayTrackRadius GetRootAsILevelPlayTrackRadius(ByteBuffer _bb, ILevelPlayTrackRadius obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016D70 RID: 93552 RVA: 0x0034B309 File Offset: 0x00349509
+		// Token: 0x060183C7 RID: 99271 RVA: 0x003744D5 File Offset: 0x003726D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016D71 RID: 93553 RVA: 0x0034B318 File Offset: 0x00349518
+		// Token: 0x060183C8 RID: 99272 RVA: 0x003744E4 File Offset: 0x003726E4
 		public ILevelPlayTrackRadius __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FEA RID: 28650
-		// (get) Token: 0x06016D72 RID: 93554 RVA: 0x0034B328 File Offset: 0x00349528
+		// Token: 0x170075D9 RID: 30169
+		// (get) Token: 0x060183C9 RID: 99273 RVA: 0x003744F4 File Offset: 0x003726F4
 		public int TrackRadius
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016D73 RID: 93555 RVA: 0x0034B364 File Offset: 0x00349564
+		// Token: 0x060183CA RID: 99274 RVA: 0x00374530 File Offset: 0x00372730
 		public static Offset<ILevelPlayTrackRadius> CreateILevelPlayTrackRadius(FlatBufferBuilder builder, int TrackRadius = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ILevelPlayTrackRadius.EndILevelPlayTrackRadius(builder);
 		}
 
-		// Token: 0x06016D74 RID: 93556 RVA: 0x0034B37A File Offset: 0x0034957A
+		// Token: 0x060183CB RID: 99275 RVA: 0x00374546 File Offset: 0x00372746
 		public static void StartILevelPlayTrackRadius(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06016D75 RID: 93557 RVA: 0x0034B383 File Offset: 0x00349583
+		// Token: 0x060183CC RID: 99276 RVA: 0x0037454F File Offset: 0x0037274F
 		public static void AddTrackRadius(FlatBufferBuilder builder, int trackRadius)
 		{
 			builder.AddInt(0, trackRadius, 0);
 		}
 
-		// Token: 0x06016D76 RID: 93558 RVA: 0x0034B38E File Offset: 0x0034958E
+		// Token: 0x060183CD RID: 99277 RVA: 0x0037455A File Offset: 0x0037275A
 		public static Offset<ILevelPlayTrackRadius> EndILevelPlayTrackRadius(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlayTrackRadius>(builder.EndTable());
 		}
 
-		// Token: 0x06016D77 RID: 93559 RVA: 0x0034B39C File Offset: 0x0034959C
+		// Token: 0x060183CE RID: 99278 RVA: 0x00374568 File Offset: 0x00372768
 		public ILevelPlayTrackRadiusT UnPack()
 		{
 			ILevelPlayTrackRadiusT levelPlayTrackRadiusT = new ILevelPlayTrackRadiusT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return levelPlayTrackRadiusT;
 		}
 
-		// Token: 0x06016D78 RID: 93560 RVA: 0x0034B3B7 File Offset: 0x003495B7
+		// Token: 0x060183CF RID: 99279 RVA: 0x00374583 File Offset: 0x00372783
 		public void UnPackTo(ILevelPlayTrackRadiusT _o)
 		{
 			_o.TrackRadius = this.TrackRadius;
 		}
 
-		// Token: 0x06016D79 RID: 93561 RVA: 0x0034B3C8 File Offset: 0x003495C8
+		// Token: 0x060183D0 RID: 99280 RVA: 0x00374594 File Offset: 0x00372794
 		public static Offset<ILevelPlayTrackRadius> Pack(FlatBufferBuilder builder, ILevelPlayTrackRadiusT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ILevelPlayTrackRadius.CreateILevelPlayTrackRadius(builder, _o.TrackRadius);
 		}
 
-		// Token: 0x0400B8E3 RID: 47331
+		// Token: 0x0400C2C0 RID: 49856
 		private Table __p;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree
 {
-	// Token: 0x0200648E RID: 25742
+	// Token: 0x0200540C RID: 21516
 	public enum EMatchThreeChapterLockReason
 	{
-		// Token: 0x04021A11 RID: 137745
+		// Token: 0x0401C342 RID: 115522
 		None,
-		// Token: 0x04021A12 RID: 137746
+		// Token: 0x0401C343 RID: 115523
 		Time,
-		// Token: 0x04021A13 RID: 137747
+		// Token: 0x0401C344 RID: 115524
 		PreChapter
 	}
 }

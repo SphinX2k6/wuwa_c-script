@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001596 RID: 5526
+	// Token: 0x020016F5 RID: 5877
 	[EnumExtensions]
 	public enum EBattleStatePerceptionBehavior
 	{
-		// Token: 0x0400498A RID: 18826
+		// Token: 0x04004D3C RID: 19772
 		NotifyGatherToPlayer,
-		// Token: 0x0400498B RID: 18827
+		// Token: 0x04004D3D RID: 19773
 		NotifyGatherToEntity
 	}
 }

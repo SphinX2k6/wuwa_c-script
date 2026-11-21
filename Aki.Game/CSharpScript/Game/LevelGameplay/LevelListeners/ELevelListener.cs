@@ -2,38 +2,38 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE9 RID: 27369
+	// Token: 0x02005C61 RID: 23649
 	public enum ELevelListener
 	{
-		// Token: 0x0402387B RID: 145531
+		// Token: 0x0401EB1D RID: 125725
 		ConditionCheckClientEvent,
-		// Token: 0x0402387C RID: 145532
+		// Token: 0x0401EB1E RID: 125726
 		ConditionCheckIsInDragActorPlay,
-		// Token: 0x0402387D RID: 145533
+		// Token: 0x0401EB1F RID: 125727
 		ConditionCheckMusicBeatsEvent,
-		// Token: 0x0402387E RID: 145534
+		// Token: 0x0401EB20 RID: 125728
 		ConditionCheckSceneItemDirection,
-		// Token: 0x0402387F RID: 145535
+		// Token: 0x0401EB21 RID: 125729
 		ConditionCompareEntityState,
-		// Token: 0x04023880 RID: 145536
+		// Token: 0x0401EB22 RID: 125730
 		ConditionCompareVar,
-		// Token: 0x04023881 RID: 145537
+		// Token: 0x0401EB23 RID: 125731
 		ConditionCheckEntitiesExist,
-		// Token: 0x04023882 RID: 145538
+		// Token: 0x0401EB24 RID: 125732
 		ConditionCheckEntityHasSceneItemAttributeTag,
-		// Token: 0x04023883 RID: 145539
+		// Token: 0x0401EB25 RID: 125733
 		ConditionCheckFollowShooterActive,
-		// Token: 0x04023884 RID: 145540
+		// Token: 0x0401EB26 RID: 125734
 		ConditionCheckEntitySelfDirection,
-		// Token: 0x04023885 RID: 145541
+		// Token: 0x0401EB27 RID: 125735
 		ConditionCheckGameplayTag,
-		// Token: 0x04023886 RID: 145542
+		// Token: 0x0401EB28 RID: 125736
 		ConditionCheckEntityPerformanceType,
-		// Token: 0x04023887 RID: 145543
+		// Token: 0x0401EB29 RID: 125737
 		ConditionCheckIsInDollGrabGamePlay,
-		// Token: 0x04023888 RID: 145544
+		// Token: 0x0401EB2A RID: 125738
 		ConditionCheckElementalWaterBoxStagnationSeq,
-		// Token: 0x04023889 RID: 145545
+		// Token: 0x0401EB2B RID: 125739
 		ConditionCheckIsTargetHoldElementalBox
 	}
 }

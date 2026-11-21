@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E40 RID: 15936
+	// Token: 0x0200427B RID: 17019
 	public class IFinishKurotatoConditionT
 	{
-		// Token: 0x17006E47 RID: 28231
-		// (get) Token: 0x060165C8 RID: 91592 RVA: 0x0033A8A9 File Offset: 0x00338AA9
-		// (set) Token: 0x060165C9 RID: 91593 RVA: 0x0033A8B1 File Offset: 0x00338AB1
+		// Token: 0x1700742B RID: 29739
+		// (get) Token: 0x06017BEF RID: 97263 RVA: 0x003633D9 File Offset: 0x003615D9
+		// (set) Token: 0x06017BF0 RID: 97264 RVA: 0x003633E1 File Offset: 0x003615E1
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006E48 RID: 28232
-		// (get) Token: 0x060165CA RID: 91594 RVA: 0x0033A8BA File Offset: 0x00338ABA
-		// (set) Token: 0x060165CB RID: 91595 RVA: 0x0033A8C2 File Offset: 0x00338AC2
+		// Token: 0x1700742C RID: 29740
+		// (get) Token: 0x06017BF1 RID: 97265 RVA: 0x003633EA File Offset: 0x003615EA
+		// (set) Token: 0x06017BF2 RID: 97266 RVA: 0x003633F2 File Offset: 0x003615F2
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006E49 RID: 28233
-		// (get) Token: 0x060165CC RID: 91596 RVA: 0x0033A8CB File Offset: 0x00338ACB
-		// (set) Token: 0x060165CD RID: 91597 RVA: 0x0033A8D3 File Offset: 0x00338AD3
+		// Token: 0x1700742D RID: 29741
+		// (get) Token: 0x06017BF3 RID: 97267 RVA: 0x003633FB File Offset: 0x003615FB
+		// (set) Token: 0x06017BF4 RID: 97268 RVA: 0x00363403 File Offset: 0x00361603
 		public TKurotatoConditionStepUnion Step { get; set; }
 
-		// Token: 0x17006E4A RID: 28234
-		// (get) Token: 0x060165CE RID: 91598 RVA: 0x0033A8DC File Offset: 0x00338ADC
-		// (set) Token: 0x060165CF RID: 91599 RVA: 0x0033A8E4 File Offset: 0x00338AE4
+		// Token: 0x1700742E RID: 29742
+		// (get) Token: 0x06017BF5 RID: 97269 RVA: 0x0036340C File Offset: 0x0036160C
+		// (set) Token: 0x06017BF6 RID: 97270 RVA: 0x00363414 File Offset: 0x00361614
 		public TVarRefUnion Batch { get; set; }
 
-		// Token: 0x060165D0 RID: 91600 RVA: 0x0033A8ED File Offset: 0x00338AED
+		// Token: 0x06017BF7 RID: 97271 RVA: 0x0036341D File Offset: 0x0036161D
 		public IFinishKurotatoConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

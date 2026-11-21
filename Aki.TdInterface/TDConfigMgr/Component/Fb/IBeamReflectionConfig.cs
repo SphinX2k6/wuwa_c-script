@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF1 RID: 3313
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DE9 RID: 3561
 	public class IBeamReflectionConfig
 	{
-		// Token: 0x06004BA8 RID: 19368 RVA: 0x000BCD04 File Offset: 0x000BAF04
+		// Token: 0x060050B6 RID: 20662 RVA: 0x000C8234 File Offset: 0x000C6434
 		public static IBeamReflectionConfig Create(IBeamReflectionConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001783 RID: 6019
-		// (get) Token: 0x06004BA9 RID: 19369 RVA: 0x000BCD23 File Offset: 0x000BAF23
+		// Token: 0x170018DF RID: 6367
+		// (get) Token: 0x060050B7 RID: 20663 RVA: 0x000C8253 File Offset: 0x000C6453
 		public virtual VectorInfo NormalVector
 		{
 			get
@@ -39,14 +37,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B3C RID: 11068
+		// Token: 0x04002DF6 RID: 11766
 		private IBeamReflectionConfig Instance;
 
-		// Token: 0x04002B3D RID: 11069
+		// Token: 0x04002DF7 RID: 11767
 		[Nullable(2)]
 		private VectorInfo _NormalVectorCache;
 
-		// Token: 0x04002B3E RID: 11070
+		// Token: 0x04002DF8 RID: 11768
 		private bool _NormalVectorInited;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA4 RID: 27300
+	// Token: 0x02005C01 RID: 23553
 	public enum ERollBlockResetPhase
 	{
-		// Token: 0x040236F4 RID: 145140
+		// Token: 0x0401E8E6 RID: 125158
 		Start,
-		// Token: 0x040236F5 RID: 145141
+		// Token: 0x0401E8E7 RID: 125159
 		Failure,
-		// Token: 0x040236F6 RID: 145142
+		// Token: 0x0401E8E8 RID: 125160
 		Succeed
 	}
 }

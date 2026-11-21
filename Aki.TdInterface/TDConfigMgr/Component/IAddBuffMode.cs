@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001A7 RID: 423
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001BE RID: 446
 	public class IAddBuffMode
 	{
-		// Token: 0x06000678 RID: 1656 RVA: 0x00023038 File Offset: 0x00021238
+		// Token: 0x0600068E RID: 1678 RVA: 0x00023C98 File Offset: 0x00021E98
 		private IAddBuffMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000679 RID: 1657 RVA: 0x00023070 File Offset: 0x00021270
+		// Token: 0x0600068F RID: 1679 RVA: 0x00023CD0 File Offset: 0x00021ED0
 		public static IAddBuffMode Create([Nullable(2)] IAddBuffMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600067A RID: 1658 RVA: 0x00023083 File Offset: 0x00021283
+		// Token: 0x06000690 RID: 1680 RVA: 0x00023CE3 File Offset: 0x00021EE3
 		public static IAddBuffMode CreateFromSetValue([Nullable(2)] IAddBuffMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600067B RID: 1659 RVA: 0x00023096 File Offset: 0x00021296
+		// Token: 0x06000691 RID: 1681 RVA: 0x00023CF6 File Offset: 0x00021EF6
 		public IAddBuffMode_SetValue ToSetValue()
 		{
 			return new IAddBuffMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700021F RID: 543
-		// (get) Token: 0x0600067C RID: 1660 RVA: 0x000230A9 File Offset: 0x000212A9
-		// (set) Token: 0x0600067D RID: 1661 RVA: 0x000230D4 File Offset: 0x000212D4
+		// Token: 0x17000227 RID: 551
+		// (get) Token: 0x06000692 RID: 1682 RVA: 0x00023D09 File Offset: 0x00021F09
+		// (set) Token: 0x06000693 RID: 1683 RVA: 0x00023D34 File Offset: 0x00021F34
 		public virtual EBuffProducerMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400081B RID: 2075
+		// Token: 0x04000874 RID: 2164
 		[Nullable(2)]
 		protected IAddBuffMode FbInstance;
 
-		// Token: 0x0400081C RID: 2076
+		// Token: 0x04000875 RID: 2165
 		[Nullable(2)]
 		protected IAddBuffMode_SetValue PocoInterface;
 	}

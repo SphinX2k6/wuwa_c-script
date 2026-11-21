@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Game.World.Model;
 using CSharpScript.Utils;
 
-// Token: 0x020034CD RID: 13517
+// Token: 0x02002A41 RID: 10817
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ExpressionTreeController : ControllerBase
 {
-	// Token: 0x0601D70D RID: 120589 RVA: 0x008377A0 File Offset: 0x008359A0
+	// Token: 0x0601B40C RID: 111628 RVA: 0x0085EC48 File Offset: 0x0085CE48
 	public ExpressionTree GetDamageExpression(Damage damageData)
 	{
 		ExpressionTree expressionTree = ExpressionTreeModel.Instance.Get(damageData.Id);
@@ -29,7 +29,7 @@ public class ExpressionTreeController : ControllerBase
 		return expressionTree2;
 	}
 
-	// Token: 0x0601D70E RID: 120590 RVA: 0x0083781C File Offset: 0x00835A1C
+	// Token: 0x0601B40D RID: 111629 RVA: 0x0085ECC4 File Offset: 0x0085CEC4
 	public void DoDamageExpression(IExpressionContext context, Damage damageData, Entity attacker)
 	{
 		ExpressionTree damageExpression = this.GetDamageExpression(damageData);
@@ -38,7 +38,7 @@ public class ExpressionTreeController : ControllerBase
 		damageExpression.Evaluate(context, dictionary);
 	}
 
-	// Token: 0x0601D70F RID: 120591 RVA: 0x00837844 File Offset: 0x00835A44
+	// Token: 0x0601B40E RID: 111630 RVA: 0x0085ECEC File Offset: 0x0085CEEC
 	public long GetEffectDamageId(long damageId, Entity attacker)
 	{
 		Damage? damageConfigById = DamageModel.Instance.GetDamageConfigById(damageId);
@@ -58,22 +58,22 @@ public class ExpressionTreeController : ControllerBase
 		return damageId;
 	}
 
-	// Token: 0x0601D710 RID: 120592 RVA: 0x008378C4 File Offset: 0x00835AC4
+	// Token: 0x0601B40F RID: 111631 RVA: 0x0085ED6C File Offset: 0x0085CF6C
 	public bool ShouldPreResolveDamageIdByExecutionTiming(long damageId)
 	{
 		Damage? damageConfigById = DamageModel.Instance.GetDamageConfigById(damageId);
 		return damageConfigById != null && damageConfigById.GetValueOrDefault().ExecutionTiming == 1 && !string.IsNullOrEmpty((damageConfigById != null) ? damageConfigById.GetValueOrDefault().Condition : null);
 	}
 
-	// Token: 0x0601D711 RID: 120593 RVA: 0x00837924 File Offset: 0x00835B24
+	// Token: 0x0601B410 RID: 111632 RVA: 0x0085EDCC File Offset: 0x0085CFCC
 	public bool CheckReplaceDamageWhenHit(long damageId)
 	{
 		Damage? damageConfigById = DamageModel.Instance.GetDamageConfigById(damageId);
 		return (damageConfigById == null || damageConfigById.GetValueOrDefault().ExecutionTiming != 0) && !string.IsNullOrEmpty((damageConfigById != null) ? damageConfigById.GetValueOrDefault().Condition : null);
 	}
 
-	// Token: 0x170028D9 RID: 10457
-	// (get) Token: 0x0601D712 RID: 120594 RVA: 0x00837982 File Offset: 0x00835B82
+	// Token: 0x17002C71 RID: 11377
+	// (get) Token: 0x0601B411 RID: 111633 RVA: 0x0085EE2A File Offset: 0x0085D02A
 	public static ExpressionTreeController Instance
 	{
 		get
@@ -82,7 +82,7 @@ public class ExpressionTreeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D713 RID: 120595 RVA: 0x00837989 File Offset: 0x00835B89
+	// Token: 0x0601B412 RID: 111634 RVA: 0x0085EE31 File Offset: 0x0085D031
 	public static ExpressionTreeController GetOrCreateInstance()
 	{
 		if (ExpressionTreeController._Instance == null)
@@ -92,7 +92,7 @@ public class ExpressionTreeController : ControllerBase
 		return ExpressionTreeController._Instance;
 	}
 
-	// Token: 0x0601D714 RID: 120596 RVA: 0x0083799D File Offset: 0x00835B9D
+	// Token: 0x0601B413 RID: 111635 RVA: 0x0085EE45 File Offset: 0x0085D045
 	public static bool CreateInstance()
 	{
 		if (ExpressionTreeController._Instance != null)
@@ -103,30 +103,30 @@ public class ExpressionTreeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D715 RID: 120597 RVA: 0x008379B3 File Offset: 0x00835BB3
+	// Token: 0x0601B414 RID: 111636 RVA: 0x0085EE5B File Offset: 0x0085D05B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D716 RID: 120598 RVA: 0x008379B5 File Offset: 0x00835BB5
+	// Token: 0x0601B415 RID: 111637 RVA: 0x0085EE5D File Offset: 0x0085D05D
 	public static void ResetStaticDefaultValue()
 	{
 		ExpressionTreeController._Instance = null;
 	}
 
-	// Token: 0x0601D717 RID: 120599 RVA: 0x008379BD File Offset: 0x00835BBD
+	// Token: 0x0601B416 RID: 111638 RVA: 0x0085EE65 File Offset: 0x0085D065
 	static ExpressionTreeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExpressionTreeController.CreateStaticDefaultValue), new Action(ExpressionTreeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E7F1 RID: 59377
+	// Token: 0x0400ECA5 RID: 60581
 	private readonly Stat GetExpressionStat = Stat.Create("GetDamageExpression", "", "");
 
-	// Token: 0x0400E7F2 RID: 59378
+	// Token: 0x0400ECA6 RID: 60582
 	private readonly Stat DoExpressionStat = Stat.Create("DoDamageExpression", "", "");
 
-	// Token: 0x0400E7F3 RID: 59379
+	// Token: 0x0400ECA7 RID: 60583
 	[Nullable(2)]
 	private static ExpressionTreeController _Instance;
 }

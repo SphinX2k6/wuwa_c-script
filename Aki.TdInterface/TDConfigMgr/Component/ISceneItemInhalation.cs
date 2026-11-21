@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006A4 RID: 1700
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000745 RID: 1861
 	public class ISceneItemInhalation : IInhalationPerformanceType
 	{
-		// Token: 0x0600246E RID: 9326 RVA: 0x00062B9C File Offset: 0x00060D9C
+		// Token: 0x0600278A RID: 10122 RVA: 0x00069B64 File Offset: 0x00067D64
 		private ISceneItemInhalation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600246F RID: 9327 RVA: 0x00062BD4 File Offset: 0x00060DD4
+		// Token: 0x0600278B RID: 10123 RVA: 0x00069B9C File Offset: 0x00067D9C
 		public static ISceneItemInhalation Create([Nullable(2)] ISceneItemInhalation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002470 RID: 9328 RVA: 0x00062BE7 File Offset: 0x00060DE7
+		// Token: 0x0600278C RID: 10124 RVA: 0x00069BAF File Offset: 0x00067DAF
 		public static ISceneItemInhalation CreateFromSetValue([Nullable(2)] ISceneItemInhalation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002471 RID: 9329 RVA: 0x00062BFA File Offset: 0x00060DFA
+		// Token: 0x0600278D RID: 10125 RVA: 0x00069BC2 File Offset: 0x00067DC2
 		public new ISceneItemInhalation_SetValue ToSetValue()
 		{
 			return new ISceneItemInhalation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009A0 RID: 2464
-		// (get) Token: 0x06002472 RID: 9330 RVA: 0x00062C0D File Offset: 0x00060E0D
-		// (set) Token: 0x06002473 RID: 9331 RVA: 0x00062C38 File Offset: 0x00060E38
+		// Token: 0x17000A5C RID: 2652
+		// (get) Token: 0x0600278E RID: 10126 RVA: 0x00069BD5 File Offset: 0x00067DD5
+		// (set) Token: 0x0600278F RID: 10127 RVA: 0x00069C00 File Offset: 0x00067E00
 		public override EInhalationPerformanceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001902 RID: 6402
+		// Token: 0x04001AFF RID: 6911
 		[Nullable(2)]
 		protected new ISceneItemInhalation FbInstance;
 
-		// Token: 0x04001903 RID: 6403
+		// Token: 0x04001B00 RID: 6912
 		[Nullable(2)]
 		protected new ISceneItemInhalation_SetValue PocoInterface;
 	}

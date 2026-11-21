@@ -6,31 +6,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200491D RID: 18717
+	// Token: 0x02003894 RID: 14484
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationToggle : NavigationSelectableBase
 	{
-		// Token: 0x06030E78 RID: 200312 RVA: 0x00B5AE1F File Offset: 0x00B5901F
+		// Token: 0x060259A5 RID: 154021 RVA: 0x00A95C8F File Offset: 0x00A93E8F
 		public NavigationToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E79 RID: 200313 RVA: 0x00B5AE2A File Offset: 0x00B5902A
+		// Token: 0x060259A6 RID: 154022 RVA: 0x00A95C9A File Offset: 0x00A93E9A
 		protected override void OnInit()
 		{
 			this.RegisterHotKeyTips();
 			this.RegisterToggleClick();
 		}
 
-		// Token: 0x06030E7A RID: 200314 RVA: 0x00B5AE38 File Offset: 0x00B59038
+		// Token: 0x060259A7 RID: 154023 RVA: 0x00A95CA8 File Offset: 0x00A93EA8
 		protected override void OnClear()
 		{
 			this.UnRegisterHotKeyTips();
 			this.UnRegisterToggleClick();
 		}
 
-		// Token: 0x06030E7B RID: 200315 RVA: 0x00B5AE48 File Offset: 0x00B59048
+		// Token: 0x060259A8 RID: 154024 RVA: 0x00A95CB8 File Offset: 0x00A93EB8
 		private void RegisterHotKeyTips()
 		{
 			UUIExtendToggle uuiextendToggle = this.Selectable as UUIExtendToggle;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E7C RID: 200316 RVA: 0x00B5AE8C File Offset: 0x00B5908C
+		// Token: 0x060259A9 RID: 154025 RVA: 0x00A95CFC File Offset: 0x00A93EFC
 		private void UnRegisterHotKeyTips()
 		{
 			UUIExtendToggle uuiextendToggle = this.Selectable as UUIExtendToggle;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E7D RID: 200317 RVA: 0x00B5AECF File Offset: 0x00B590CF
+		// Token: 0x060259AA RID: 154026 RVA: 0x00A95D3F File Offset: 0x00A93F3F
 		private void OnStateChangeEvent(EToggleState state)
 		{
 			UiNavigationViewManager.Instance.RefreshCurrentHotKeyTextId();
 		}
 
-		// Token: 0x06030E7E RID: 200318 RVA: 0x00B5AEDB File Offset: 0x00B590DB
+		// Token: 0x060259AB RID: 154027 RVA: 0x00A95D4B File Offset: 0x00A93F4B
 		private void RegisterToggleClick()
 		{
 			if (this.NeedAddToggleClick())
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E7F RID: 200319 RVA: 0x00B5AF06 File Offset: 0x00B59106
+		// Token: 0x060259AC RID: 154028 RVA: 0x00A95D76 File Offset: 0x00A93F76
 		private void UnRegisterToggleClick()
 		{
 			if (this.NeedAddToggleClick())
@@ -74,18 +74,18 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E80 RID: 200320 RVA: 0x00B5AF31 File Offset: 0x00B59131
+		// Token: 0x060259AD RID: 154029 RVA: 0x00A95DA1 File Offset: 0x00A93FA1
 		private void ToggleClick(EToggleState state)
 		{
 			this.OnToggleClick(state);
 		}
 
-		// Token: 0x06030E81 RID: 200321 RVA: 0x00B5AF3A File Offset: 0x00B5913A
+		// Token: 0x060259AE RID: 154030 RVA: 0x00A95DAA File Offset: 0x00A93FAA
 		protected virtual void OnToggleClick(EToggleState state)
 		{
 		}
 
-		// Token: 0x06030E82 RID: 200322 RVA: 0x00B5AF3C File Offset: 0x00B5913C
+		// Token: 0x060259AF RID: 154031 RVA: 0x00A95DAC File Offset: 0x00A93FAC
 		protected void ScrollToSelectableComponent(UUIExtendToggle selectable)
 		{
 			if (this.Listener.HasDynamicScrollView() || this.Listener.HasMultiTemplateScrollView())
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E83 RID: 200323 RVA: 0x00B5AF93 File Offset: 0x00B59193
+		// Token: 0x060259B0 RID: 154032 RVA: 0x00A95E03 File Offset: 0x00A94003
 		protected virtual bool NeedAddToggleClick()
 		{
 			return base.GetType() != ENavigationSelectableDefine.Toggle;
 		}
 
-		// Token: 0x06030E84 RID: 200324 RVA: 0x00B5AFA4 File Offset: 0x00B591A4
+		// Token: 0x060259B1 RID: 154033 RVA: 0x00A95E14 File Offset: 0x00A94014
 		protected override bool OnCanFocusInScrollOrLayout()
 		{
 			if (!this.IsInteractive)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return (uuiextendToggle.ToggleState == EToggleState.ETT_Checked || !uuiextendToggle.bCheckToggleSelected) && this.Selectable.RootUIComp.Get().IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x06030E85 RID: 200325 RVA: 0x00B5AFF8 File Offset: 0x00B591F8
+		// Token: 0x060259B2 RID: 154034 RVA: 0x00A95E68 File Offset: 0x00A94068
 		protected override string OnGetTipsTextId()
 		{
 			if ((this.Selectable as UUIExtendToggle).ToggleState == EToggleState.ETT_Checked)
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.Listener.HotKeyTipsTextIdMap.GetValueOrDefault(EHotKeyNameStateType.Normal, string.Empty);
 		}
 
-		// Token: 0x06030E86 RID: 200326 RVA: 0x00B5B045 File Offset: 0x00B59245
+		// Token: 0x060259B3 RID: 154035 RVA: 0x00A95EB5 File Offset: 0x00A940B5
 		protected override bool OnHandlePointerEnter(ULGUIPointerEventData eventData)
 		{
 			return !(this.Selectable as UUIExtendToggle).bToggleOnSelect;
 		}
 
-		// Token: 0x06030E87 RID: 200327 RVA: 0x00B5B05C File Offset: 0x00B5925C
+		// Token: 0x060259B4 RID: 154036 RVA: 0x00A95ECC File Offset: 0x00A940CC
 		protected override bool OnHandlePointerSelect(ULGUIPointerEventData eventData)
 		{
 			if (!this.OnHandlePointerSelectInheritance(eventData))
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return base.IsAllowNavigationByGroup();
 		}
 
-		// Token: 0x06030E88 RID: 200328 RVA: 0x00B5B107 File Offset: 0x00B59307
+		// Token: 0x060259B5 RID: 154037 RVA: 0x00A95F77 File Offset: 0x00A94177
 		protected virtual bool OnHandlePointerSelectInheritance(ULGUIPointerEventData eventData)
 		{
 			return true;

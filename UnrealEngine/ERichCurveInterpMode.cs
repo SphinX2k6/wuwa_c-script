@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B49 RID: 2889
+	// Token: 0x020001F5 RID: 501
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ERichCurveInterpMode")]
 	public enum ERichCurveInterpMode
 	{
-		// Token: 0x04004F92 RID: 20370
+		// Token: 0x04000C78 RID: 3192
 		RCIM_Linear,
-		// Token: 0x04004F93 RID: 20371
+		// Token: 0x04000C79 RID: 3193
 		RCIM_Constant,
-		// Token: 0x04004F94 RID: 20372
+		// Token: 0x04000C7A RID: 3194
 		RCIM_Cubic,
-		// Token: 0x04004F95 RID: 20373
+		// Token: 0x04000C7B RID: 3195
 		RCIM_None,
-		// Token: 0x04004F96 RID: 20374
+		// Token: 0x04000C7C RID: 3196
 		RCIM_MAX
 	}
 }

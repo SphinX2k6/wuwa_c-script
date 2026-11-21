@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006114 RID: 24852
+	// Token: 0x02005092 RID: 20626
 	public class RoverlikeRewardButton : UiPanelBase
 	{
-		// Token: 0x0603ED76 RID: 257398 RVA: 0x00F2D5F4 File Offset: 0x00F2B7F4
+		// Token: 0x06033A38 RID: 211512 RVA: 0x00E74408 File Offset: 0x00E72608
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ED77 RID: 257399 RVA: 0x00F2D6BC File Offset: 0x00F2B8BC
+		// Token: 0x06033A39 RID: 211513 RVA: 0x00E744D0 File Offset: 0x00E726D0
 		public void SetProgressNumText(int curNum, int totalNum)
 		{
 			UUIText text = base.GetText(1);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603ED78 RID: 257400 RVA: 0x00F2D704 File Offset: 0x00F2B904
+		// Token: 0x06033A3A RID: 211514 RVA: 0x00E74518 File Offset: 0x00E72718
 		public void SetRedDotShow(bool isShow)
 		{
 			UUIItem item = base.GetItem(2);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED79 RID: 257401 RVA: 0x00F2D723 File Offset: 0x00F2B923
+		// Token: 0x06033A3B RID: 211515 RVA: 0x00E74537 File Offset: 0x00E72737
 		private void OnClickBtn()
 		{
 			Action clickCallback = this.ClickCallback;
@@ -65,20 +65,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			clickCallback();
 		}
 
-		// Token: 0x04020D1C RID: 134428
+		// Token: 0x0401B649 RID: 112201
 		[Nullable(2)]
 		public Action ClickCallback;
 
-		// Token: 0x0200C370 RID: 50032
+		// Token: 0x0200AD58 RID: 44376
 		protected class ERewardBtnComponent
 		{
-			// Token: 0x0403AFA3 RID: 241571
+			// Token: 0x04035908 RID: 219400
 			public const int RootBtn = 0;
 
-			// Token: 0x0403AFA4 RID: 241572
+			// Token: 0x04035909 RID: 219401
 			public const int TxtNum = 1;
 
-			// Token: 0x0403AFA5 RID: 241573
+			// Token: 0x0403590A RID: 219402
 			public const int RedDot = 2;
 		}
 	}

@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074BE RID: 29886
+	// Token: 0x02007CB4 RID: 31924
 	public class IUnLimitPlayerOperationT
 	{
 	}

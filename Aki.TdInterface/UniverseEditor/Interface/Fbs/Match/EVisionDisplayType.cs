@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F9 RID: 17401
+	// Token: 0x0200485E RID: 18526
 	public enum EVisionDisplayType : byte
 	{
-		// Token: 0x0400C344 RID: 49988
+		// Token: 0x0400CD6C RID: 52588
 		MechanicalDeer,
-		// Token: 0x0400C345 RID: 49989
+		// Token: 0x0400CD6D RID: 52589
 		MechanicalDeerSunSpirit,
-		// Token: 0x0400C346 RID: 49990
+		// Token: 0x0400CD6E RID: 52590
 		RockSpider,
-		// Token: 0x0400C347 RID: 49991
+		// Token: 0x0400CD6F RID: 52591
 		PiPapa,
-		// Token: 0x0400C348 RID: 49992
+		// Token: 0x0400CD70 RID: 52592
 		MammothCollision,
-		// Token: 0x0400C349 RID: 49993
+		// Token: 0x0400CD71 RID: 52593
 		MammothSlide,
-		// Token: 0x0400C34A RID: 49994
+		// Token: 0x0400CD72 RID: 52594
 		MammothSmashDown,
-		// Token: 0x0400C34B RID: 49995
+		// Token: 0x0400CD73 RID: 52595
 		Moth
 	}
 }

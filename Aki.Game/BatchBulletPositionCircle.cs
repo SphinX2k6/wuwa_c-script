@@ -4,51 +4,51 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Utils;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02002DE6 RID: 11750
+// Token: 0x02002341 RID: 9025
 [NullableContext(2)]
 [Nullable(0)]
 public class BatchBulletPositionCircle : IBatchBulletPositionShape
 {
-	// Token: 0x06018AA0 RID: 101024 RVA: 0x0065341A File Offset: 0x0065161A
+	// Token: 0x0601634D RID: 90957 RVA: 0x006794FA File Offset: 0x006776FA
 	private BatchBulletPositionCircle()
 	{
 	}
 
-	// Token: 0x06018AA1 RID: 101025 RVA: 0x0065343B File Offset: 0x0065163B
+	// Token: 0x0601634E RID: 90958 RVA: 0x0067951B File Offset: 0x0067771B
 	public bool IsDestroyOnEnd()
 	{
 		return false;
 	}
 
-	// Token: 0x06018AA2 RID: 101026 RVA: 0x0065343E File Offset: 0x0065163E
+	// Token: 0x0601634F RID: 90959 RVA: 0x0067951E File Offset: 0x0067771E
 	public bool IsSummonChildBullet()
 	{
 		return false;
 	}
 
-	// Token: 0x06018AA3 RID: 101027 RVA: 0x00653441 File Offset: 0x00651641
+	// Token: 0x06016350 RID: 90960 RVA: 0x00679521 File Offset: 0x00677721
 	public float GetDelay()
 	{
 		return 0f;
 	}
 
-	// Token: 0x06018AA4 RID: 101028 RVA: 0x00653448 File Offset: 0x00651648
+	// Token: 0x06016351 RID: 90961 RVA: 0x00679528 File Offset: 0x00677728
 	public void OnBreak()
 	{
 	}
 
-	// Token: 0x06018AA5 RID: 101029 RVA: 0x0065344A File Offset: 0x0065164A
+	// Token: 0x06016352 RID: 90962 RVA: 0x0067952A File Offset: 0x0067772A
 	public void OnEnd()
 	{
 	}
 
-	// Token: 0x06018AA6 RID: 101030 RVA: 0x0065344C File Offset: 0x0065164C
+	// Token: 0x06016353 RID: 90963 RVA: 0x0067952C File Offset: 0x0067772C
 	public UniTask Load()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06018AA7 RID: 101031 RVA: 0x00653453 File Offset: 0x00651653
+	// Token: 0x06016354 RID: 90964 RVA: 0x00679533 File Offset: 0x00677733
 	[NullableContext(1)]
 	public static BatchBulletPositionCircle Create(CharacterCustomValueComponent customValueComp, SBatchBulletPositionCircle config)
 	{
@@ -57,7 +57,7 @@ public class BatchBulletPositionCircle : IBatchBulletPositionShape
 		return batchBulletPositionCircle;
 	}
 
-	// Token: 0x06018AA8 RID: 101032 RVA: 0x00653464 File Offset: 0x00651664
+	// Token: 0x06016355 RID: 90965 RVA: 0x00679544 File Offset: 0x00677744
 	[NullableContext(1)]
 	public void FromUeConfig(CharacterCustomValueComponent customValueComp, SBatchBulletPositionCircle config)
 	{
@@ -79,7 +79,7 @@ public class BatchBulletPositionCircle : IBatchBulletPositionShape
 		this.StartPos = (customValueComp.GetBlackboard(config.StartPosKey, default(TFormulaValue)).TryGetVector(out vector2) ? vector2 : null);
 	}
 
-	// Token: 0x06018AA9 RID: 101033 RVA: 0x006535A0 File Offset: 0x006517A0
+	// Token: 0x06016356 RID: 90966 RVA: 0x00679680 File Offset: 0x00677880
 	public Transform ToTransform(int index)
 	{
 		Transform transform = Transform.Create();
@@ -106,7 +106,7 @@ public class BatchBulletPositionCircle : IBatchBulletPositionShape
 		return transform;
 	}
 
-	// Token: 0x06018AAA RID: 101034 RVA: 0x00653688 File Offset: 0x00651888
+	// Token: 0x06016357 RID: 90967 RVA: 0x00679768 File Offset: 0x00677968
 	public Vector ToTargetLocation(Transform transform)
 	{
 		if (transform == null || Math.Abs(this.DistToTarget) < 1E-08)
@@ -127,31 +127,31 @@ public class BatchBulletPositionCircle : IBatchBulletPositionShape
 		return vector;
 	}
 
-	// Token: 0x0400B7BF RID: 47039
+	// Token: 0x0400BB45 RID: 47941
 	public double AngleInterval;
 
-	// Token: 0x0400B7C0 RID: 47040
+	// Token: 0x0400BB46 RID: 47942
 	public Vector Center;
 
-	// Token: 0x0400B7C1 RID: 47041
+	// Token: 0x0400BB47 RID: 47943
 	public bool Clockwise = true;
 
-	// Token: 0x0400B7C2 RID: 47042
+	// Token: 0x0400BB48 RID: 47944
 	[Nullable(1)]
 	public Vector Forward = Vector.Create();
 
-	// Token: 0x0400B7C3 RID: 47043
+	// Token: 0x0400BB49 RID: 47945
 	public double Radius;
 
-	// Token: 0x0400B7C4 RID: 47044
+	// Token: 0x0400BB4A RID: 47946
 	public double BeginAngle;
 
-	// Token: 0x0400B7C5 RID: 47045
+	// Token: 0x0400BB4B RID: 47947
 	public EBatchBulletBeginRotator BeginRotator = EBatchBulletBeginRotator.切线方向;
 
-	// Token: 0x0400B7C6 RID: 47046
+	// Token: 0x0400BB4C RID: 47948
 	public double DistToTarget;
 
-	// Token: 0x0400B7C7 RID: 47047
+	// Token: 0x0400BB4D RID: 47949
 	public Vector StartPos;
 }

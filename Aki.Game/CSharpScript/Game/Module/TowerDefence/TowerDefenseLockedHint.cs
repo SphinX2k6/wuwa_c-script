@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B47 RID: 19271
+	// Token: 0x02003AEF RID: 15087
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseLockedHint : ITowerDefenseLockedHint
 	{
-		// Token: 0x17007BD7 RID: 31703
-		// (get) Token: 0x06031E75 RID: 204405 RVA: 0x00B92AD8 File Offset: 0x00B90CD8
-		// (set) Token: 0x06031E76 RID: 204406 RVA: 0x00B92AE0 File Offset: 0x00B90CE0
+		// Token: 0x17004F84 RID: 20356
+		// (get) Token: 0x06026C05 RID: 158725 RVA: 0x00AD6B3C File Offset: 0x00AD4D3C
+		// (set) Token: 0x06026C06 RID: 158726 RVA: 0x00AD6B44 File Offset: 0x00AD4D44
 		public string TextId { get; set; }
 
-		// Token: 0x17007BD8 RID: 31704
-		// (get) Token: 0x06031E77 RID: 204407 RVA: 0x00B92AE9 File Offset: 0x00B90CE9
-		// (set) Token: 0x06031E78 RID: 204408 RVA: 0x00B92AF1 File Offset: 0x00B90CF1
+		// Token: 0x17004F85 RID: 20357
+		// (get) Token: 0x06026C07 RID: 158727 RVA: 0x00AD6B4D File Offset: 0x00AD4D4D
+		// (set) Token: 0x06026C08 RID: 158728 RVA: 0x00AD6B55 File Offset: 0x00AD4D55
 		[Nullable(new byte[]
 		{
 			2,

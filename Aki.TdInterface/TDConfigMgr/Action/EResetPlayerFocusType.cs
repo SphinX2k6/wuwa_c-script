@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001689 RID: 5769
+	// Token: 0x020017FE RID: 6142
 	[EnumExtensions]
 	public enum EResetPlayerFocusType
 	{
-		// Token: 0x04004D52 RID: 19794
+		// Token: 0x0400515D RID: 20829
 		ResetToDefaultDirection,
-		// Token: 0x04004D53 RID: 19795
+		// Token: 0x0400515E RID: 20830
 		ResetToFixedDirection
 	}
 }

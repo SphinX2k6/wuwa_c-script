@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002984 RID: 10628
+	// Token: 0x02002C6A RID: 11370
 	public class IBattleSettlement : IDynamicSettlementConfig
 	{
-		// Token: 0x0600EB6A RID: 60266 RVA: 0x00226F90 File Offset: 0x00225190
-		[NullableContext(1)]
+		// Token: 0x0600F9E5 RID: 63973 RVA: 0x002446E8 File Offset: 0x002428E8
 		public static IBattleSettlement Create(IBattleSettlement? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A24 RID: 18980
-		// (get) Token: 0x0600EB6B RID: 60267 RVA: 0x00226FAF File Offset: 0x002251AF
+		// Token: 0x17004DBF RID: 19903
+		// (get) Token: 0x0600F9E6 RID: 63974 RVA: 0x00244707 File Offset: 0x00242907
 		public override EDynamicSettlementType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A25 RID: 18981
-		// (get) Token: 0x0600EB6C RID: 60268 RVA: 0x00226FBC File Offset: 0x002251BC
+		// Token: 0x17004DC0 RID: 19904
+		// (get) Token: 0x0600F9E7 RID: 63975 RVA: 0x00244714 File Offset: 0x00242914
 		public virtual int? GamePlayCue
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A26 RID: 18982
-		// (get) Token: 0x0600EB6D RID: 60269 RVA: 0x00226FF4 File Offset: 0x002251F4
+		// Token: 0x17004DC1 RID: 19905
+		// (get) Token: 0x0600F9E8 RID: 63976 RVA: 0x0024474C File Offset: 0x0024294C
 		public virtual EBattleSettlementBgmType? BgmType
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081A8 RID: 33192
+		// Token: 0x0400888C RID: 34956
 		private IBattleSettlement Instance;
 	}
 }

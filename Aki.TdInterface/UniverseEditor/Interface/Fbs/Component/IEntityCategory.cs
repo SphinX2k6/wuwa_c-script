@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200516E RID: 20846
+	// Token: 0x020056D3 RID: 22227
 	public struct IEntityCategory : IFlatbufferObject
 	{
-		// Token: 0x1700980F RID: 38927
-		// (get) Token: 0x06021A98 RID: 137880 RVA: 0x004ABCF3 File Offset: 0x004A9EF3
+		// Token: 0x17009FFC RID: 40956
+		// (get) Token: 0x060239EC RID: 145900 RVA: 0x004E5C7F File Offset: 0x004E3E7F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021A99 RID: 137881 RVA: 0x004ABD00 File Offset: 0x004A9F00
+		// Token: 0x060239ED RID: 145901 RVA: 0x004E5C8C File Offset: 0x004E3E8C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021A9A RID: 137882 RVA: 0x004ABD08 File Offset: 0x004A9F08
+		// Token: 0x060239EE RID: 145902 RVA: 0x004E5C94 File Offset: 0x004E3E94
 		public static IEntityCategory GetRootAsIEntityCategory(ByteBuffer _bb)
 		{
 			return IEntityCategory.GetRootAsIEntityCategory(_bb, default(IEntityCategory));
 		}
 
-		// Token: 0x06021A9B RID: 137883 RVA: 0x004ABD24 File Offset: 0x004A9F24
+		// Token: 0x060239EF RID: 145903 RVA: 0x004E5CB0 File Offset: 0x004E3EB0
 		public static IEntityCategory GetRootAsIEntityCategory(ByteBuffer _bb, IEntityCategory obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021A9C RID: 137884 RVA: 0x004ABD41 File Offset: 0x004A9F41
+		// Token: 0x060239F0 RID: 145904 RVA: 0x004E5CCD File Offset: 0x004E3ECD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021A9D RID: 137885 RVA: 0x004ABD50 File Offset: 0x004A9F50
+		// Token: 0x060239F1 RID: 145905 RVA: 0x004E5CDC File Offset: 0x004E3EDC
 		public IEntityCategory __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009810 RID: 38928
-		// (get) Token: 0x06021A9E RID: 137886 RVA: 0x004ABD60 File Offset: 0x004A9F60
+		// Token: 0x17009FFD RID: 40957
+		// (get) Token: 0x060239F2 RID: 145906 RVA: 0x004E5CEC File Offset: 0x004E3EEC
 		public EEntityMainType MainType
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009811 RID: 38929
-		// (get) Token: 0x06021A9F RID: 137887 RVA: 0x004ABD9C File Offset: 0x004A9F9C
+		// Token: 0x17009FFE RID: 40958
+		// (get) Token: 0x060239F3 RID: 145907 RVA: 0x004E5D28 File Offset: 0x004E3F28
 		public string EntityPlotBindingType
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021AA0 RID: 137888 RVA: 0x004ABDD3 File Offset: 0x004A9FD3
+		// Token: 0x060239F4 RID: 145908 RVA: 0x004E5D5F File Offset: 0x004E3F5F
 		public Span<byte> GetEntityPlotBindingTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06021AA1 RID: 137889 RVA: 0x004ABDE2 File Offset: 0x004A9FE2
+		// Token: 0x060239F5 RID: 145909 RVA: 0x004E5D6E File Offset: 0x004E3F6E
 		public byte[] GetEntityPlotBindingTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17009812 RID: 38930
-		// (get) Token: 0x06021AA2 RID: 137890 RVA: 0x004ABDF0 File Offset: 0x004A9FF0
+		// Token: 0x17009FFF RID: 40959
+		// (get) Token: 0x060239F6 RID: 145910 RVA: 0x004E5D7C File Offset: 0x004E3F7C
 		public EControlMatchType ControlMatchType
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009813 RID: 38931
-		// (get) Token: 0x06021AA3 RID: 137891 RVA: 0x004ABE2C File Offset: 0x004AA02C
+		// Token: 0x1700A000 RID: 40960
+		// (get) Token: 0x060239F7 RID: 145911 RVA: 0x004E5DB8 File Offset: 0x004E3FB8
 		public EMonsterMatchType MonsterMatchType
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009814 RID: 38932
-		// (get) Token: 0x06021AA4 RID: 137892 RVA: 0x004ABE6C File Offset: 0x004AA06C
+		// Token: 0x1700A001 RID: 40961
+		// (get) Token: 0x060239F8 RID: 145912 RVA: 0x004E5DF8 File Offset: 0x004E3FF8
 		public EItemFoundationMatchType ItemFoundation
 		{
 			get
@@ -136,8 +136,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009815 RID: 38933
-		// (get) Token: 0x06021AA5 RID: 137893 RVA: 0x004ABEAC File Offset: 0x004AA0AC
+		// Token: 0x1700A002 RID: 40962
+		// (get) Token: 0x060239F9 RID: 145913 RVA: 0x004E5E38 File Offset: 0x004E4038
 		public EHideInFlowType HideInFlowType
 		{
 			get
@@ -151,8 +151,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009816 RID: 38934
-		// (get) Token: 0x06021AA6 RID: 137894 RVA: 0x004ABEEC File Offset: 0x004AA0EC
+		// Token: 0x1700A003 RID: 40963
+		// (get) Token: 0x060239FA RID: 145914 RVA: 0x004E5E78 File Offset: 0x004E4078
 		public int ExploratoryDegree
 		{
 			get
@@ -166,8 +166,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009817 RID: 38935
-		// (get) Token: 0x06021AA7 RID: 137895 RVA: 0x004ABF2C File Offset: 0x004AA12C
+		// Token: 0x1700A004 RID: 40964
+		// (get) Token: 0x060239FB RID: 145915 RVA: 0x004E5EB8 File Offset: 0x004E40B8
 		public ETraceMatchType TraceMatchType
 		{
 			get
@@ -181,8 +181,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009818 RID: 38936
-		// (get) Token: 0x06021AA8 RID: 137896 RVA: 0x004ABF6C File Offset: 0x004AA16C
+		// Token: 0x1700A005 RID: 40965
+		// (get) Token: 0x060239FC RID: 145916 RVA: 0x004E5EF8 File Offset: 0x004E40F8
 		public EDestructibleType DestructibleType
 		{
 			get
@@ -196,8 +196,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009819 RID: 38937
-		// (get) Token: 0x06021AA9 RID: 137897 RVA: 0x004ABFAC File Offset: 0x004AA1AC
+		// Token: 0x1700A006 RID: 40966
+		// (get) Token: 0x060239FD RID: 145917 RVA: 0x004E5F38 File Offset: 0x004E4138
 		public ECollectType CollectType
 		{
 			get
@@ -211,8 +211,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700981A RID: 38938
-		// (get) Token: 0x06021AAA RID: 137898 RVA: 0x004ABFEC File Offset: 0x004AA1EC
+		// Token: 0x1700A007 RID: 40967
+		// (get) Token: 0x060239FE RID: 145918 RVA: 0x004E5F78 File Offset: 0x004E4178
 		public ETreasureChestStatType TreasureChestStatType
 		{
 			get
@@ -226,8 +226,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700981B RID: 38939
-		// (get) Token: 0x06021AAB RID: 137899 RVA: 0x004AC02C File Offset: 0x004AA22C
+		// Token: 0x1700A008 RID: 40968
+		// (get) Token: 0x060239FF RID: 145919 RVA: 0x004E5FB8 File Offset: 0x004E41B8
 		public ENpcType NpcType
 		{
 			get
@@ -241,8 +241,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700981C RID: 38940
-		// (get) Token: 0x06021AAC RID: 137900 RVA: 0x004AC06C File Offset: 0x004AA26C
+		// Token: 0x1700A009 RID: 40969
+		// (get) Token: 0x06023A00 RID: 145920 RVA: 0x004E5FF8 File Offset: 0x004E41F8
 		public EBulletPenetrationType BulletPenetrationType
 		{
 			get
@@ -256,8 +256,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700981D RID: 38941
-		// (get) Token: 0x06021AAD RID: 137901 RVA: 0x004AC0AC File Offset: 0x004AA2AC
+		// Token: 0x1700A00A RID: 40970
+		// (get) Token: 0x06023A01 RID: 145921 RVA: 0x004E6038 File Offset: 0x004E4238
 		public EMechanismType MechanismType
 		{
 			get
@@ -271,8 +271,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700981E RID: 38942
-		// (get) Token: 0x06021AAE RID: 137902 RVA: 0x004AC0EC File Offset: 0x004AA2EC
+		// Token: 0x1700A00B RID: 40971
+		// (get) Token: 0x06023A02 RID: 145922 RVA: 0x004E6078 File Offset: 0x004E4278
 		public EInhaledItemType InhaledItemType
 		{
 			get
@@ -286,8 +286,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700981F RID: 38943
-		// (get) Token: 0x06021AAF RID: 137903 RVA: 0x004AC12C File Offset: 0x004AA32C
+		// Token: 0x1700A00C RID: 40972
+		// (get) Token: 0x06023A03 RID: 145923 RVA: 0x004E60B8 File Offset: 0x004E42B8
 		public EPullStatueMatchType PullStatueMatchType
 		{
 			get
@@ -301,8 +301,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009820 RID: 38944
-		// (get) Token: 0x06021AB0 RID: 137904 RVA: 0x004AC16C File Offset: 0x004AA36C
+		// Token: 0x1700A00D RID: 40973
+		// (get) Token: 0x06023A04 RID: 145924 RVA: 0x004E60F8 File Offset: 0x004E42F8
 		public EVehicleType VehicleType
 		{
 			get
@@ -316,8 +316,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009821 RID: 38945
-		// (get) Token: 0x06021AB1 RID: 137905 RVA: 0x004AC1AC File Offset: 0x004AA3AC
+		// Token: 0x1700A00E RID: 40974
+		// (get) Token: 0x06023A05 RID: 145925 RVA: 0x004E6138 File Offset: 0x004E4338
 		public EFishingMechanismType FishingMechanismType
 		{
 			get
@@ -331,8 +331,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009822 RID: 38946
-		// (get) Token: 0x06021AB2 RID: 137906 RVA: 0x004AC1EC File Offset: 0x004AA3EC
+		// Token: 0x1700A00F RID: 40975
+		// (get) Token: 0x06023A06 RID: 145926 RVA: 0x004E6178 File Offset: 0x004E4378
 		public EHonamiStoryMapMarkType HonamiStoryMapMarkType
 		{
 			get
@@ -346,8 +346,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009823 RID: 38947
-		// (get) Token: 0x06021AB3 RID: 137907 RVA: 0x004AC22C File Offset: 0x004AA42C
+		// Token: 0x1700A010 RID: 40976
+		// (get) Token: 0x06023A07 RID: 145927 RVA: 0x004E61B8 File Offset: 0x004E43B8
 		public EVisionDisplayType VisionDisplayType
 		{
 			get
@@ -361,8 +361,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009824 RID: 38948
-		// (get) Token: 0x06021AB4 RID: 137908 RVA: 0x004AC26C File Offset: 0x004AA46C
+		// Token: 0x1700A011 RID: 40977
+		// (get) Token: 0x06023A08 RID: 145928 RVA: 0x004E61F8 File Offset: 0x004E43F8
 		public ESunSpiritInteractType SunSpiritInteractType
 		{
 			get
@@ -376,8 +376,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009825 RID: 38949
-		// (get) Token: 0x06021AB5 RID: 137909 RVA: 0x004AC2AC File Offset: 0x004AA4AC
+		// Token: 0x1700A012 RID: 40978
+		// (get) Token: 0x06023A09 RID: 145929 RVA: 0x004E6238 File Offset: 0x004E4438
 		public EAnimalType AnimalType
 		{
 			get
@@ -391,8 +391,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009826 RID: 38950
-		// (get) Token: 0x06021AB6 RID: 137910 RVA: 0x004AC2EC File Offset: 0x004AA4EC
+		// Token: 0x1700A013 RID: 40979
+		// (get) Token: 0x06023A0A RID: 145930 RVA: 0x004E6278 File Offset: 0x004E4478
 		public ERegionType RegionType
 		{
 			get
@@ -406,8 +406,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009827 RID: 38951
-		// (get) Token: 0x06021AB7 RID: 137911 RVA: 0x004AC32C File Offset: 0x004AA52C
+		// Token: 0x1700A014 RID: 40980
+		// (get) Token: 0x06023A0B RID: 145931 RVA: 0x004E62B8 File Offset: 0x004E44B8
 		public ERaceType RaceType
 		{
 			get
@@ -421,8 +421,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009828 RID: 38952
-		// (get) Token: 0x06021AB8 RID: 137912 RVA: 0x004AC36C File Offset: 0x004AA56C
+		// Token: 0x1700A015 RID: 40981
+		// (get) Token: 0x06023A0C RID: 145932 RVA: 0x004E62F8 File Offset: 0x004E44F8
 		public EProfessionType ProfessionType
 		{
 			get
@@ -436,8 +436,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009829 RID: 38953
-		// (get) Token: 0x06021AB9 RID: 137913 RVA: 0x004AC3AC File Offset: 0x004AA5AC
+		// Token: 0x1700A016 RID: 40982
+		// (get) Token: 0x06023A0D RID: 145933 RVA: 0x004E6338 File Offset: 0x004E4538
 		public EGenderType GenderType
 		{
 			get
@@ -451,13 +451,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700982A RID: 38954
-		// (get) Token: 0x06021ABA RID: 137914 RVA: 0x004AC3EC File Offset: 0x004AA5EC
-		public uint NullMask
+		// Token: 0x1700A017 RID: 40983
+		// (get) Token: 0x06023A0E RID: 145934 RVA: 0x004E6378 File Offset: 0x004E4578
+		public int CollectiblesDetectionId
 		{
 			get
 			{
 				int num = this.__p.__offset(56);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700A018 RID: 40984
+		// (get) Token: 0x06023A0F RID: 145935 RVA: 0x004E63B8 File Offset: 0x004E45B8
+		public uint NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(58);
 				if (num == 0)
 				{
 					return 0U;
@@ -466,11 +481,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021ABB RID: 137915 RVA: 0x004AC42C File Offset: 0x004AA62C
-		public static Offset<IEntityCategory> CreateIEntityCategory(FlatBufferBuilder builder, EEntityMainType MainType = EEntityMainType.Npc, StringOffset EntityPlotBindingTypeOffset = default(StringOffset), EControlMatchType ControlMatchType = EControlMatchType.GrowSolution, EMonsterMatchType MonsterMatchType = EMonsterMatchType.Normal, EItemFoundationMatchType ItemFoundation = EItemFoundationMatchType.Branch, EHideInFlowType HideInFlowType = EHideInFlowType.None, int ExploratoryDegree = 0, ETraceMatchType TraceMatchType = ETraceMatchType.None, EDestructibleType DestructibleType = EDestructibleType.Rock, ECollectType CollectType = ECollectType.Botany, ETreasureChestStatType TreasureChestStatType = ETreasureChestStatType.OneTime, ENpcType NpcType = ENpcType.Common, EBulletPenetrationType BulletPenetrationType = EBulletPenetrationType.Penetrable, EMechanismType MechanismType = EMechanismType.Portal, EInhaledItemType InhaledItemType = EInhaledItemType.LonelyDollPollutant, EPullStatueMatchType PullStatueMatchType = EPullStatueMatchType.Statue, EVehicleType VehicleType = EVehicleType.Gongduola, EFishingMechanismType FishingMechanismType = EFishingMechanismType.FishingPoint, EHonamiStoryMapMarkType HonamiStoryMapMarkType = EHonamiStoryMapMarkType.EvacuateMachine, EVisionDisplayType VisionDisplayType = EVisionDisplayType.MechanicalDeer, ESunSpiritInteractType SunSpiritInteractType = ESunSpiritInteractType.RollingBall, EAnimalType AnimalType = EAnimalType.Cat, ERegionType RegionType = ERegionType.Lahailuo, ERaceType RaceType = ERaceType.Luoyizu, EProfessionType ProfessionType = EProfessionType.Teacher, EGenderType GenderType = EGenderType.Male, uint NullMask = 0U)
+		// Token: 0x06023A10 RID: 145936 RVA: 0x004E63F8 File Offset: 0x004E45F8
+		public static Offset<IEntityCategory> CreateIEntityCategory(FlatBufferBuilder builder, EEntityMainType MainType = EEntityMainType.Npc, StringOffset EntityPlotBindingTypeOffset = default(StringOffset), EControlMatchType ControlMatchType = EControlMatchType.GrowSolution, EMonsterMatchType MonsterMatchType = EMonsterMatchType.Normal, EItemFoundationMatchType ItemFoundation = EItemFoundationMatchType.Branch, EHideInFlowType HideInFlowType = EHideInFlowType.None, int ExploratoryDegree = 0, ETraceMatchType TraceMatchType = ETraceMatchType.None, EDestructibleType DestructibleType = EDestructibleType.Rock, ECollectType CollectType = ECollectType.Botany, ETreasureChestStatType TreasureChestStatType = ETreasureChestStatType.OneTime, ENpcType NpcType = ENpcType.Common, EBulletPenetrationType BulletPenetrationType = EBulletPenetrationType.Penetrable, EMechanismType MechanismType = EMechanismType.Portal, EInhaledItemType InhaledItemType = EInhaledItemType.LonelyDollPollutant, EPullStatueMatchType PullStatueMatchType = EPullStatueMatchType.Statue, EVehicleType VehicleType = EVehicleType.Gongduola, EFishingMechanismType FishingMechanismType = EFishingMechanismType.FishingPoint, EHonamiStoryMapMarkType HonamiStoryMapMarkType = EHonamiStoryMapMarkType.EvacuateMachine, EVisionDisplayType VisionDisplayType = EVisionDisplayType.MechanicalDeer, ESunSpiritInteractType SunSpiritInteractType = ESunSpiritInteractType.RollingBall, EAnimalType AnimalType = EAnimalType.Cat, ERegionType RegionType = ERegionType.Lahailuo, ERaceType RaceType = ERaceType.Luoyizu, EProfessionType ProfessionType = EProfessionType.Teacher, EGenderType GenderType = EGenderType.Male, int CollectiblesDetectionId = 0, uint NullMask = 0U)
 		{
-			builder.StartTable(27);
+			builder.StartTable(28);
 			IEntityCategory.AddNullMask(builder, NullMask);
+			IEntityCategory.AddCollectiblesDetectionId(builder, CollectiblesDetectionId);
 			IEntityCategory.AddExploratoryDegree(builder, ExploratoryDegree);
 			IEntityCategory.AddEntityPlotBindingType(builder, EntityPlotBindingTypeOffset);
 			IEntityCategory.AddGenderType(builder, GenderType);
@@ -500,181 +516,187 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityCategory.EndIEntityCategory(builder);
 		}
 
-		// Token: 0x06021ABC RID: 137916 RVA: 0x004AC51C File Offset: 0x004AA71C
+		// Token: 0x06023A11 RID: 145937 RVA: 0x004E64F0 File Offset: 0x004E46F0
 		public static void StartIEntityCategory(FlatBufferBuilder builder)
 		{
-			builder.StartTable(27);
+			builder.StartTable(28);
 		}
 
-		// Token: 0x06021ABD RID: 137917 RVA: 0x004AC526 File Offset: 0x004AA726
+		// Token: 0x06023A12 RID: 145938 RVA: 0x004E64FA File Offset: 0x004E46FA
 		public static void AddMainType(FlatBufferBuilder builder, EEntityMainType mainType)
 		{
 			builder.AddByte(0, (byte)mainType, 0);
 		}
 
-		// Token: 0x06021ABE RID: 137918 RVA: 0x004AC531 File Offset: 0x004AA731
+		// Token: 0x06023A13 RID: 145939 RVA: 0x004E6505 File Offset: 0x004E4705
 		public static void AddEntityPlotBindingType(FlatBufferBuilder builder, StringOffset entityPlotBindingTypeOffset)
 		{
 			builder.AddOffset(1, entityPlotBindingTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06021ABF RID: 137919 RVA: 0x004AC541 File Offset: 0x004AA741
+		// Token: 0x06023A14 RID: 145940 RVA: 0x004E6515 File Offset: 0x004E4715
 		public static void AddControlMatchType(FlatBufferBuilder builder, EControlMatchType controlMatchType)
 		{
 			builder.AddByte(2, (byte)controlMatchType, 0);
 		}
 
-		// Token: 0x06021AC0 RID: 137920 RVA: 0x004AC54C File Offset: 0x004AA74C
+		// Token: 0x06023A15 RID: 145941 RVA: 0x004E6520 File Offset: 0x004E4720
 		public static void AddMonsterMatchType(FlatBufferBuilder builder, EMonsterMatchType monsterMatchType)
 		{
 			builder.AddByte(3, (byte)monsterMatchType, 0);
 		}
 
-		// Token: 0x06021AC1 RID: 137921 RVA: 0x004AC557 File Offset: 0x004AA757
+		// Token: 0x06023A16 RID: 145942 RVA: 0x004E652B File Offset: 0x004E472B
 		public static void AddItemFoundation(FlatBufferBuilder builder, EItemFoundationMatchType itemFoundation)
 		{
 			builder.AddByte(4, (byte)itemFoundation, 0);
 		}
 
-		// Token: 0x06021AC2 RID: 137922 RVA: 0x004AC562 File Offset: 0x004AA762
+		// Token: 0x06023A17 RID: 145943 RVA: 0x004E6536 File Offset: 0x004E4736
 		public static void AddHideInFlowType(FlatBufferBuilder builder, EHideInFlowType hideInFlowType)
 		{
 			builder.AddByte(5, (byte)hideInFlowType, 0);
 		}
 
-		// Token: 0x06021AC3 RID: 137923 RVA: 0x004AC56D File Offset: 0x004AA76D
+		// Token: 0x06023A18 RID: 145944 RVA: 0x004E6541 File Offset: 0x004E4741
 		public static void AddExploratoryDegree(FlatBufferBuilder builder, int exploratoryDegree)
 		{
 			builder.AddInt(6, exploratoryDegree, 0);
 		}
 
-		// Token: 0x06021AC4 RID: 137924 RVA: 0x004AC578 File Offset: 0x004AA778
+		// Token: 0x06023A19 RID: 145945 RVA: 0x004E654C File Offset: 0x004E474C
 		public static void AddTraceMatchType(FlatBufferBuilder builder, ETraceMatchType traceMatchType)
 		{
 			builder.AddByte(7, (byte)traceMatchType, 0);
 		}
 
-		// Token: 0x06021AC5 RID: 137925 RVA: 0x004AC583 File Offset: 0x004AA783
+		// Token: 0x06023A1A RID: 145946 RVA: 0x004E6557 File Offset: 0x004E4757
 		public static void AddDestructibleType(FlatBufferBuilder builder, EDestructibleType destructibleType)
 		{
 			builder.AddByte(8, (byte)destructibleType, 0);
 		}
 
-		// Token: 0x06021AC6 RID: 137926 RVA: 0x004AC58E File Offset: 0x004AA78E
+		// Token: 0x06023A1B RID: 145947 RVA: 0x004E6562 File Offset: 0x004E4762
 		public static void AddCollectType(FlatBufferBuilder builder, ECollectType collectType)
 		{
 			builder.AddByte(9, (byte)collectType, 0);
 		}
 
-		// Token: 0x06021AC7 RID: 137927 RVA: 0x004AC59A File Offset: 0x004AA79A
+		// Token: 0x06023A1C RID: 145948 RVA: 0x004E656E File Offset: 0x004E476E
 		public static void AddTreasureChestStatType(FlatBufferBuilder builder, ETreasureChestStatType treasureChestStatType)
 		{
 			builder.AddByte(10, (byte)treasureChestStatType, 0);
 		}
 
-		// Token: 0x06021AC8 RID: 137928 RVA: 0x004AC5A6 File Offset: 0x004AA7A6
+		// Token: 0x06023A1D RID: 145949 RVA: 0x004E657A File Offset: 0x004E477A
 		public static void AddNpcType(FlatBufferBuilder builder, ENpcType npcType)
 		{
 			builder.AddByte(11, (byte)npcType, 0);
 		}
 
-		// Token: 0x06021AC9 RID: 137929 RVA: 0x004AC5B2 File Offset: 0x004AA7B2
+		// Token: 0x06023A1E RID: 145950 RVA: 0x004E6586 File Offset: 0x004E4786
 		public static void AddBulletPenetrationType(FlatBufferBuilder builder, EBulletPenetrationType bulletPenetrationType)
 		{
 			builder.AddByte(12, (byte)bulletPenetrationType, 0);
 		}
 
-		// Token: 0x06021ACA RID: 137930 RVA: 0x004AC5BE File Offset: 0x004AA7BE
+		// Token: 0x06023A1F RID: 145951 RVA: 0x004E6592 File Offset: 0x004E4792
 		public static void AddMechanismType(FlatBufferBuilder builder, EMechanismType mechanismType)
 		{
 			builder.AddByte(13, (byte)mechanismType, 0);
 		}
 
-		// Token: 0x06021ACB RID: 137931 RVA: 0x004AC5CA File Offset: 0x004AA7CA
+		// Token: 0x06023A20 RID: 145952 RVA: 0x004E659E File Offset: 0x004E479E
 		public static void AddInhaledItemType(FlatBufferBuilder builder, EInhaledItemType inhaledItemType)
 		{
 			builder.AddByte(14, (byte)inhaledItemType, 0);
 		}
 
-		// Token: 0x06021ACC RID: 137932 RVA: 0x004AC5D6 File Offset: 0x004AA7D6
+		// Token: 0x06023A21 RID: 145953 RVA: 0x004E65AA File Offset: 0x004E47AA
 		public static void AddPullStatueMatchType(FlatBufferBuilder builder, EPullStatueMatchType pullStatueMatchType)
 		{
 			builder.AddByte(15, (byte)pullStatueMatchType, 0);
 		}
 
-		// Token: 0x06021ACD RID: 137933 RVA: 0x004AC5E2 File Offset: 0x004AA7E2
+		// Token: 0x06023A22 RID: 145954 RVA: 0x004E65B6 File Offset: 0x004E47B6
 		public static void AddVehicleType(FlatBufferBuilder builder, EVehicleType vehicleType)
 		{
 			builder.AddByte(16, (byte)vehicleType, 0);
 		}
 
-		// Token: 0x06021ACE RID: 137934 RVA: 0x004AC5EE File Offset: 0x004AA7EE
+		// Token: 0x06023A23 RID: 145955 RVA: 0x004E65C2 File Offset: 0x004E47C2
 		public static void AddFishingMechanismType(FlatBufferBuilder builder, EFishingMechanismType fishingMechanismType)
 		{
 			builder.AddByte(17, (byte)fishingMechanismType, 0);
 		}
 
-		// Token: 0x06021ACF RID: 137935 RVA: 0x004AC5FA File Offset: 0x004AA7FA
+		// Token: 0x06023A24 RID: 145956 RVA: 0x004E65CE File Offset: 0x004E47CE
 		public static void AddHonamiStoryMapMarkType(FlatBufferBuilder builder, EHonamiStoryMapMarkType honamiStoryMapMarkType)
 		{
 			builder.AddByte(18, (byte)honamiStoryMapMarkType, 0);
 		}
 
-		// Token: 0x06021AD0 RID: 137936 RVA: 0x004AC606 File Offset: 0x004AA806
+		// Token: 0x06023A25 RID: 145957 RVA: 0x004E65DA File Offset: 0x004E47DA
 		public static void AddVisionDisplayType(FlatBufferBuilder builder, EVisionDisplayType visionDisplayType)
 		{
 			builder.AddByte(19, (byte)visionDisplayType, 0);
 		}
 
-		// Token: 0x06021AD1 RID: 137937 RVA: 0x004AC612 File Offset: 0x004AA812
+		// Token: 0x06023A26 RID: 145958 RVA: 0x004E65E6 File Offset: 0x004E47E6
 		public static void AddSunSpiritInteractType(FlatBufferBuilder builder, ESunSpiritInteractType sunSpiritInteractType)
 		{
 			builder.AddByte(20, (byte)sunSpiritInteractType, 0);
 		}
 
-		// Token: 0x06021AD2 RID: 137938 RVA: 0x004AC61E File Offset: 0x004AA81E
+		// Token: 0x06023A27 RID: 145959 RVA: 0x004E65F2 File Offset: 0x004E47F2
 		public static void AddAnimalType(FlatBufferBuilder builder, EAnimalType animalType)
 		{
 			builder.AddByte(21, (byte)animalType, 0);
 		}
 
-		// Token: 0x06021AD3 RID: 137939 RVA: 0x004AC62A File Offset: 0x004AA82A
+		// Token: 0x06023A28 RID: 145960 RVA: 0x004E65FE File Offset: 0x004E47FE
 		public static void AddRegionType(FlatBufferBuilder builder, ERegionType regionType)
 		{
 			builder.AddByte(22, (byte)regionType, 0);
 		}
 
-		// Token: 0x06021AD4 RID: 137940 RVA: 0x004AC636 File Offset: 0x004AA836
+		// Token: 0x06023A29 RID: 145961 RVA: 0x004E660A File Offset: 0x004E480A
 		public static void AddRaceType(FlatBufferBuilder builder, ERaceType raceType)
 		{
 			builder.AddByte(23, (byte)raceType, 0);
 		}
 
-		// Token: 0x06021AD5 RID: 137941 RVA: 0x004AC642 File Offset: 0x004AA842
+		// Token: 0x06023A2A RID: 145962 RVA: 0x004E6616 File Offset: 0x004E4816
 		public static void AddProfessionType(FlatBufferBuilder builder, EProfessionType professionType)
 		{
 			builder.AddByte(24, (byte)professionType, 0);
 		}
 
-		// Token: 0x06021AD6 RID: 137942 RVA: 0x004AC64E File Offset: 0x004AA84E
+		// Token: 0x06023A2B RID: 145963 RVA: 0x004E6622 File Offset: 0x004E4822
 		public static void AddGenderType(FlatBufferBuilder builder, EGenderType genderType)
 		{
 			builder.AddByte(25, (byte)genderType, 0);
 		}
 
-		// Token: 0x06021AD7 RID: 137943 RVA: 0x004AC65A File Offset: 0x004AA85A
-		public static void AddNullMask(FlatBufferBuilder builder, uint nullMask)
+		// Token: 0x06023A2C RID: 145964 RVA: 0x004E662E File Offset: 0x004E482E
+		public static void AddCollectiblesDetectionId(FlatBufferBuilder builder, int collectiblesDetectionId)
 		{
-			builder.AddUint(26, nullMask, 0U);
+			builder.AddInt(26, collectiblesDetectionId, 0);
 		}
 
-		// Token: 0x06021AD8 RID: 137944 RVA: 0x004AC666 File Offset: 0x004AA866
+		// Token: 0x06023A2D RID: 145965 RVA: 0x004E663A File Offset: 0x004E483A
+		public static void AddNullMask(FlatBufferBuilder builder, uint nullMask)
+		{
+			builder.AddUint(27, nullMask, 0U);
+		}
+
+		// Token: 0x06023A2E RID: 145966 RVA: 0x004E6646 File Offset: 0x004E4846
 		public static Offset<IEntityCategory> EndIEntityCategory(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityCategory>(builder.EndTable());
 		}
 
-		// Token: 0x06021AD9 RID: 137945 RVA: 0x004AC674 File Offset: 0x004AA874
+		// Token: 0x06023A2F RID: 145967 RVA: 0x004E6654 File Offset: 0x004E4854
 		public IEntityCategoryT UnPack()
 		{
 			IEntityCategoryT entityCategoryT = new IEntityCategoryT();
@@ -682,7 +704,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityCategoryT;
 		}
 
-		// Token: 0x06021ADA RID: 137946 RVA: 0x004AC690 File Offset: 0x004AA890
+		// Token: 0x06023A30 RID: 145968 RVA: 0x004E6670 File Offset: 0x004E4870
 		public void UnPackTo(IEntityCategoryT _o)
 		{
 			_o.MainType = this.MainType;
@@ -711,10 +733,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.RaceType = this.RaceType;
 			_o.ProfessionType = this.ProfessionType;
 			_o.GenderType = this.GenderType;
+			_o.CollectiblesDetectionId = this.CollectiblesDetectionId;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021ADB RID: 137947 RVA: 0x004AC7E4 File Offset: 0x004AA9E4
+		// Token: 0x06023A31 RID: 145969 RVA: 0x004E67D0 File Offset: 0x004E49D0
 		public static Offset<IEntityCategory> Pack(FlatBufferBuilder builder, IEntityCategoryT _o)
 		{
 			if (_o == null)
@@ -722,10 +745,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				return default(Offset<IEntityCategory>);
 			}
 			StringOffset entityPlotBindingTypeOffset = (_o.EntityPlotBindingType == null) ? default(StringOffset) : builder.CreateString(_o.EntityPlotBindingType);
-			return IEntityCategory.CreateIEntityCategory(builder, _o.MainType, entityPlotBindingTypeOffset, _o.ControlMatchType, _o.MonsterMatchType, _o.ItemFoundation, _o.HideInFlowType, _o.ExploratoryDegree, _o.TraceMatchType, _o.DestructibleType, _o.CollectType, _o.TreasureChestStatType, _o.NpcType, _o.BulletPenetrationType, _o.MechanismType, _o.InhaledItemType, _o.PullStatueMatchType, _o.VehicleType, _o.FishingMechanismType, _o.HonamiStoryMapMarkType, _o.VisionDisplayType, _o.SunSpiritInteractType, _o.AnimalType, _o.RegionType, _o.RaceType, _o.ProfessionType, _o.GenderType, _o.NullMask);
+			return IEntityCategory.CreateIEntityCategory(builder, _o.MainType, entityPlotBindingTypeOffset, _o.ControlMatchType, _o.MonsterMatchType, _o.ItemFoundation, _o.HideInFlowType, _o.ExploratoryDegree, _o.TraceMatchType, _o.DestructibleType, _o.CollectType, _o.TreasureChestStatType, _o.NpcType, _o.BulletPenetrationType, _o.MechanismType, _o.InhaledItemType, _o.PullStatueMatchType, _o.VehicleType, _o.FishingMechanismType, _o.HonamiStoryMapMarkType, _o.VisionDisplayType, _o.SunSpiritInteractType, _o.AnimalType, _o.RegionType, _o.RaceType, _o.ProfessionType, _o.GenderType, _o.CollectiblesDetectionId, _o.NullMask);
 		}
 
-		// Token: 0x0400E21B RID: 57883
+		// Token: 0x0400EE18 RID: 60952
 		private Table __p;
 	}
 }

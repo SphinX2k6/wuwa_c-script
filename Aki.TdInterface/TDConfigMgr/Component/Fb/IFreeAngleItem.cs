@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C74 RID: 3188
+	// Token: 0x02000D53 RID: 3411
 	public class IFreeAngleItem
 	{
-		// Token: 0x0600490F RID: 18703 RVA: 0x000B7696 File Offset: 0x000B5896
-		[NullableContext(1)]
+		// Token: 0x06004DAE RID: 19886 RVA: 0x000C1E9A File Offset: 0x000C009A
 		public static IFreeAngleItem Create(IFreeAngleItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015E4 RID: 5604
-		// (get) Token: 0x06004910 RID: 18704 RVA: 0x000B76B5 File Offset: 0x000B58B5
+		// Token: 0x17001703 RID: 5891
+		// (get) Token: 0x06004DAF RID: 19887 RVA: 0x000C1EB9 File Offset: 0x000C00B9
 		public virtual int InitAngle
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015E5 RID: 5605
-		// (get) Token: 0x06004911 RID: 18705 RVA: 0x000B76C2 File Offset: 0x000B58C2
+		// Token: 0x17001704 RID: 5892
+		// (get) Token: 0x06004DB0 RID: 19888 RVA: 0x000C1EC6 File Offset: 0x000C00C6
 		public virtual int TargetAngle
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029AF RID: 10671
+		// Token: 0x04002C1C RID: 11292
 		private IFreeAngleItem Instance;
 	}
 }

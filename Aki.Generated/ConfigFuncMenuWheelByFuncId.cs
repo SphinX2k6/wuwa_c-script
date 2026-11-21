@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000359 RID: 857
+	// Token: 0x0200036E RID: 878
 	public class ConfigFuncMenuWheelByFuncId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600141B RID: 5147 RVA: 0x000CB213 File Offset: 0x000C9413
+		// Token: 0x06001499 RID: 5273 RVA: 0x000D171F File Offset: 0x000CF91F
 		static ConfigFuncMenuWheelByFuncId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFuncMenuWheelByFuncId.CreateStaticDefaultValue), new Action(ConfigFuncMenuWheelByFuncId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600141C RID: 5148 RVA: 0x000CB234 File Offset: 0x000C9434
+		// Token: 0x0600149A RID: 5274 RVA: 0x000D1740 File Offset: 0x000CF940
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFuncMenuWheelByFuncId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600141D RID: 5149 RVA: 0x000CB2B3 File Offset: 0x000C94B3
+		// Token: 0x0600149B RID: 5275 RVA: 0x000D17BF File Offset: 0x000CF9BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFuncMenuWheelByFuncId.LogPair = null;
 			ConfigFuncMenuWheelByFuncId.HandleId = 0;
 		}
 
-		// Token: 0x0600141E RID: 5150 RVA: 0x000CB2C1 File Offset: 0x000C94C1
+		// Token: 0x0600149C RID: 5276 RVA: 0x000D17CD File Offset: 0x000CF9CD
 		public static void Init()
 		{
 			ConfigFuncMenuWheelByFuncId.HandleId = ConfigCommon.InitDataStatement(ConfigFuncMenuWheelByFuncId.HandleId, "db_roulette.db", "select BinData from `FuncMenuWheel` where FuncId=?");
 		}
 
-		// Token: 0x0600141F RID: 5151 RVA: 0x000CB2DC File Offset: 0x000C94DC
+		// Token: 0x0600149D RID: 5277 RVA: 0x000D17E8 File Offset: 0x000CF9E8
 		public static FuncMenuWheel? GetConfig(int p0FuncId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFuncMenuWheelByFuncId.HandleId, ConfigFuncMenuWheelByFuncId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FuncMenuWheel?(rootAsFuncMenuWheel);
 		}
 
-		// Token: 0x04001753 RID: 5971
+		// Token: 0x040017E6 RID: 6118
 		private const string DB = "db_roulette.db";
 
-		// Token: 0x04001754 RID: 5972
+		// Token: 0x040017E7 RID: 6119
 		private const string FILE = "l.轮盘.xlsx";
 
-		// Token: 0x04001755 RID: 5973
+		// Token: 0x040017E8 RID: 6120
 		private const string TABLE = "FuncMenuWheel";
 
-		// Token: 0x04001756 RID: 5974
+		// Token: 0x040017E9 RID: 6121
 		private const string COMMAND = "select BinData from `FuncMenuWheel` where FuncId=?";
 
-		// Token: 0x04001757 RID: 5975
+		// Token: 0x040017EA RID: 6122
 		private const string KEY_PREFIX = "FuncMenuWheelByFuncId";
 
-		// Token: 0x04001758 RID: 5976
+		// Token: 0x040017EB RID: 6123
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001759 RID: 5977
+		// Token: 0x040017EC RID: 6124
 		private static int HandleId;
 	}
 }

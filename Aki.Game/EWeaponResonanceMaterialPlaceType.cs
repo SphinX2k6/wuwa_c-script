@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002D14 RID: 11540
+// Token: 0x0200226E RID: 8814
 public enum EWeaponResonanceMaterialPlaceType
 {
-	// Token: 0x0400B42E RID: 46126
+	// Token: 0x0400B7A3 RID: 47011
 	ManualPlace,
-	// Token: 0x0400B42F RID: 46127
+	// Token: 0x0400B7A4 RID: 47012
 	AutoPlace
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.BlackScreen;
@@ -12,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A34 RID: 10804
+// Token: 0x02001FAF RID: 8111
 [NullableContext(2)]
 [Nullable(0)]
 public class SkinObtainView : UiViewBase
 {
-	// Token: 0x060167E8 RID: 92136 RVA: 0x005B3ACE File Offset: 0x005B1CCE
+	// Token: 0x060141F1 RID: 82417 RVA: 0x005DEC46 File Offset: 0x005DCE46
 	[NullableContext(1)]
 	public SkinObtainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060167E9 RID: 92137 RVA: 0x005B3AD8 File Offset: 0x005B1CD8
+	// Token: 0x060141F2 RID: 82418 RVA: 0x005DEC50 File Offset: 0x005DCE50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -68,7 +67,7 @@ public class SkinObtainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060167EA RID: 92138 RVA: 0x005B3D14 File Offset: 0x005B1F14
+	// Token: 0x060141F3 RID: 82419 RVA: 0x005DEE8C File Offset: 0x005DD08C
 	protected override void OnStart()
 	{
 		this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(4), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
@@ -98,20 +97,20 @@ public class SkinObtainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060167EB RID: 92139 RVA: 0x005B3DF2 File Offset: 0x005B1FF2
+	// Token: 0x060141F4 RID: 82420 RVA: 0x005DEF6A File Offset: 0x005DD16A
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x060167EC RID: 92140 RVA: 0x005B3DF9 File Offset: 0x005B1FF9
+	// Token: 0x060141F5 RID: 82421 RVA: 0x005DEF71 File Offset: 0x005DD171
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060167ED RID: 92141 RVA: 0x005B3E04 File Offset: 0x005B2004
+	// Token: 0x060141F6 RID: 82422 RVA: 0x005DEF7C File Offset: 0x005DD17C
 	private void OnClickConfirmBtn()
 	{
 		int roleId = this.ObtainSkinData.GetRoleId();
@@ -137,7 +136,7 @@ public class SkinObtainView : UiViewBase
 		});
 	}
 
-	// Token: 0x060167EE RID: 92142 RVA: 0x005B3EB4 File Offset: 0x005B20B4
+	// Token: 0x060141F7 RID: 82423 RVA: 0x005DF02C File Offset: 0x005DD22C
 	private void OnClickShareBtn()
 	{
 		RoleSkinData obtainSkinData = this.ObtainSkinData;
@@ -152,19 +151,19 @@ public class SkinObtainView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhotoSaveView, param, null);
 	}
 
-	// Token: 0x060167EF RID: 92143 RVA: 0x005B3F03 File Offset: 0x005B2103
+	// Token: 0x060141F8 RID: 82424 RVA: 0x005DF07B File Offset: 0x005DD27B
 	protected override void OnBeforeShow()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), "ObtainRoleSkin", Array.Empty<object>());
 		this.RefreshView();
 	}
 
-	// Token: 0x060167F0 RID: 92144 RVA: 0x005B3F27 File Offset: 0x005B2127
+	// Token: 0x060141F9 RID: 82425 RVA: 0x005DF09F File Offset: 0x005DD29F
 	protected override void OnBeforeHide()
 	{
 	}
 
-	// Token: 0x060167F1 RID: 92145 RVA: 0x005B3F2C File Offset: 0x005B212C
+	// Token: 0x060141FA RID: 82426 RVA: 0x005DF0A4 File Offset: 0x005DD2A4
 	private void RefreshView()
 	{
 		this.RefreshName(this.ObtainSkinData);
@@ -175,7 +174,7 @@ public class SkinObtainView : UiViewBase
 		this.RefreshFrameTextureColor2(this.ObtainSkinData);
 	}
 
-	// Token: 0x060167F2 RID: 92146 RVA: 0x005B3F84 File Offset: 0x005B2184
+	// Token: 0x060141FB RID: 82427 RVA: 0x005DF0FC File Offset: 0x005DD2FC
 	private void RefreshName(RoleSkinData data)
 	{
 		if (data == null)
@@ -187,7 +186,7 @@ public class SkinObtainView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), titleName, Array.Empty<object>());
 	}
 
-	// Token: 0x060167F3 RID: 92147 RVA: 0x005B3FC8 File Offset: 0x005B21C8
+	// Token: 0x060141FC RID: 82428 RVA: 0x005DF140 File Offset: 0x005DD340
 	private void RefreshSubName(RoleSkinData data)
 	{
 		if (data == null)
@@ -199,7 +198,7 @@ public class SkinObtainView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), subTitle, Array.Empty<object>());
 	}
 
-	// Token: 0x060167F4 RID: 92148 RVA: 0x005B400C File Offset: 0x005B220C
+	// Token: 0x060141FD RID: 82429 RVA: 0x005DF184 File Offset: 0x005DD384
 	private void RefreshLayout(RoleSkinData data)
 	{
 		if (this.ExtraRewardData == null)
@@ -225,12 +224,12 @@ public class SkinObtainView : UiViewBase
 			{
 				return;
 			}
-			itemLayout3.RefreshByData(extraRewardData.ToList<TItem>(), null, false);
+			itemLayout3.RefreshByData(extraRewardData, null, false);
 			return;
 		}
 	}
 
-	// Token: 0x060167F5 RID: 92149 RVA: 0x005B4068 File Offset: 0x005B2268
+	// Token: 0x060141FE RID: 82430 RVA: 0x005DF1DC File Offset: 0x005DD3DC
 	private UniTask RefreshRoleSpine(RoleSkinData data)
 	{
 		SkinObtainView.<RefreshRoleSpine>d__17 <RefreshRoleSpine>d__;
@@ -242,7 +241,7 @@ public class SkinObtainView : UiViewBase
 		return <RefreshRoleSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060167F6 RID: 92150 RVA: 0x005B40B4 File Offset: 0x005B22B4
+	// Token: 0x060141FF RID: 82431 RVA: 0x005DF228 File Offset: 0x005DD428
 	private void RefreshFrameTextureColor(RoleSkinData data)
 	{
 		if (data == null)
@@ -255,7 +254,7 @@ public class SkinObtainView : UiViewBase
 		base.GetTexture(8).SetColor(color);
 	}
 
-	// Token: 0x060167F7 RID: 92151 RVA: 0x005B40F8 File Offset: 0x005B22F8
+	// Token: 0x06014200 RID: 82432 RVA: 0x005DF26C File Offset: 0x005DD46C
 	private void RefreshFrameTextureColor2(RoleSkinData data)
 	{
 		if (data == null)
@@ -268,13 +267,13 @@ public class SkinObtainView : UiViewBase
 		base.GetTexture(9).SetColor(color);
 	}
 
-	// Token: 0x0400A700 RID: 42752
+	// Token: 0x0400AAEB RID: 43755
 	private RoleSkinData ObtainSkinData;
 
-	// Token: 0x0400A701 RID: 42753
+	// Token: 0x0400AAEC RID: 43756
 	private TItem[] ExtraRewardData;
 
-	// Token: 0x0400A702 RID: 42754
+	// Token: 0x0400AAED RID: 43757
 	[Nullable(new byte[]
 	{
 		2,
@@ -282,35 +281,35 @@ public class SkinObtainView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-	// Token: 0x02009075 RID: 36981
+	// Token: 0x020082BC RID: 33468
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402ED1E RID: 191774
+		// Token: 0x0402A416 RID: 173078
 		BackBtn,
-		// Token: 0x0402ED1F RID: 191775
+		// Token: 0x0402A417 RID: 173079
 		TextureSpine,
-		// Token: 0x0402ED20 RID: 191776
+		// Token: 0x0402A418 RID: 173080
 		TitleText,
-		// Token: 0x0402ED21 RID: 191777
+		// Token: 0x0402A419 RID: 173081
 		TitleSubText,
-		// Token: 0x0402ED22 RID: 191778
+		// Token: 0x0402A41A RID: 173082
 		HorizontalLayout,
-		// Token: 0x0402ED23 RID: 191779
+		// Token: 0x0402A41B RID: 173083
 		RewardItem,
-		// Token: 0x0402ED24 RID: 191780
+		// Token: 0x0402A41C RID: 173084
 		ConfirmBtn,
-		// Token: 0x0402ED25 RID: 191781
+		// Token: 0x0402A41D RID: 173085
 		ShareBtn,
-		// Token: 0x0402ED26 RID: 191782
+		// Token: 0x0402A41E RID: 173086
 		FrameTexture1,
-		// Token: 0x0402ED27 RID: 191783
+		// Token: 0x0402A41F RID: 173087
 		FrameTexture2,
-		// Token: 0x0402ED28 RID: 191784
+		// Token: 0x0402A420 RID: 173088
 		TextureImage,
-		// Token: 0x0402ED29 RID: 191785
+		// Token: 0x0402A421 RID: 173089
 		RewardParentItem,
-		// Token: 0x0402ED2A RID: 191786
+		// Token: 0x0402A422 RID: 173090
 		TextObtainTip
 	}
 }

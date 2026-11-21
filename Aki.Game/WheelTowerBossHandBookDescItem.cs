@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200158B RID: 5515
+// Token: 0x02000A43 RID: 2627
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class WheelTowerBossHandBookDescItem : GridProxyAbstract<IWheelTowerBossHandBookBuffDescData>
 {
-	// Token: 0x06009D5F RID: 40287 RVA: 0x00221CC4 File Offset: 0x0021FEC4
+	// Token: 0x0600713D RID: 28989 RVA: 0x0022BA74 File Offset: 0x00229C74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -38,7 +38,7 @@ public class WheelTowerBossHandBookDescItem : GridProxyAbstract<IWheelTowerBossH
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D60 RID: 40288 RVA: 0x00221DB4 File Offset: 0x0021FFB4
+	// Token: 0x0600713E RID: 28990 RVA: 0x0022BB64 File Offset: 0x00229D64
 	public override void Refresh(IWheelTowerBossHandBookBuffDescData data, bool isSelected, int gridIndex)
 	{
 		NewTowerBossBuff? bossBuffConfigById = WheelTowerConfig.Instance.GetBossBuffConfigById(data.BuffId);

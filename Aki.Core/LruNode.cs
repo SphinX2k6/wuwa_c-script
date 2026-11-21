@@ -6,14 +6,14 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 internal class LruNode<[Nullable(2)] TK, TV> where TV : class
 {
-	// Token: 0x0600024D RID: 589 RVA: 0x0000CF56 File Offset: 0x0000B156
+	// Token: 0x0600024E RID: 590 RVA: 0x0000CC3A File Offset: 0x0000AE3A
 	public LruNode(TK key, TV value)
 	{
 		this.Key = key;
 		this.Value = value;
 	}
 
-	// Token: 0x040001C5 RID: 453
+	// Token: 0x040001C7 RID: 455
 	[Nullable(new byte[]
 	{
 		2,
@@ -22,7 +22,7 @@ internal class LruNode<[Nullable(2)] TK, TV> where TV : class
 	})]
 	public LruNode<TK, TV> Prev;
 
-	// Token: 0x040001C6 RID: 454
+	// Token: 0x040001C8 RID: 456
 	[Nullable(new byte[]
 	{
 		2,
@@ -31,12 +31,12 @@ internal class LruNode<[Nullable(2)] TK, TV> where TV : class
 	})]
 	public LruNode<TK, TV> Next;
 
-	// Token: 0x040001C7 RID: 455
+	// Token: 0x040001C9 RID: 457
 	public int Count;
 
-	// Token: 0x040001C8 RID: 456
+	// Token: 0x040001CA RID: 458
 	public readonly TK Key;
 
-	// Token: 0x040001C9 RID: 457
+	// Token: 0x040001CB RID: 459
 	public readonly TV Value;
 }

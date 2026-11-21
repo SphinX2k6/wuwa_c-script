@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -11,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x0200537C RID: 21372
+	// Token: 0x0200435F RID: 17247
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MovieModeAspectView : UiPanelBase
 	{
-		// Token: 0x17008360 RID: 33632
-		// (get) Token: 0x0603697C RID: 223612 RVA: 0x00CECE69 File Offset: 0x00CEB069
-		// (set) Token: 0x0603697D RID: 223613 RVA: 0x00CECE76 File Offset: 0x00CEB076
+		// Token: 0x1700572C RID: 22316
+		// (get) Token: 0x0602B8C2 RID: 178370 RVA: 0x00C3BD61 File Offset: 0x00C39F61
+		// (set) Token: 0x0602B8C3 RID: 178371 RVA: 0x00C3BD6E File Offset: 0x00C39F6E
 		public new MovieModeAspectViewParams OpenParam
 		{
 			get
@@ -31,7 +30,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x0603697E RID: 223614 RVA: 0x00CECE80 File Offset: 0x00CEB080
+		// Token: 0x0602B8C4 RID: 178372 RVA: 0x00C3BD78 File Offset: 0x00C39F78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603697F RID: 223615 RVA: 0x00CECEEC File Offset: 0x00CEB0EC
+		// Token: 0x0602B8C5 RID: 178373 RVA: 0x00C3BDE4 File Offset: 0x00C39FE4
 		protected unsafe override void OnStart()
 		{
 			this.Texture1 = base.GetTexture(0);
@@ -73,22 +72,28 @@ namespace CSharpScript.Game.Module.MovieMode
 			base.GetRootItem().GetRenderCanvas().bPostTickUpdate = true;
 			base.GetRootItem().SetRaycastTarget(false);
 			this.AdaptUiLayers = (this.OpenParam.AdaptUiLayers ?? this.DefaultAdaptUiLayers);
-			this.RealtimeLayers = this.AdaptUiLayers.Intersect(this.RealtimeAdaptUiLayers).ToArray<ELayerType>();
+			List<ELayerType> list = new List<ELayerType>();
+			foreach (ELayerType elayerType in this.AdaptUiLayers)
+			{
+				if (Array.IndexOf<ELayerType>(this.RealtimeAdaptUiLayers, elayerType) >= 0 && !list.Contains(elayerType))
+				{
+					list.Add(elayerType);
+				}
+			}
+			this.RealtimeLayers = list.ToArray();
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.MovieMode;
 			ELogAuthor author = ELogAuthor.CB;
 			string message = "设置适配的UI层级";
 			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("AdaptUiLayers", (from layer in this.AdaptUiLayers
-			select layer.ToString()).ToArray<string>());
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("RealtimeLayers", (from layer in this.RealtimeLayers
-			select layer.ToString()).ToArray<string>());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("AdaptUiLayers", Array.ConvertAll<ELayerType, string>(this.AdaptUiLayers, (ELayerType layer) => layer.ToString()));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("RealtimeLayers", Array.ConvertAll<ELayerType, string>(this.RealtimeLayers, (ELayerType layer) => layer.ToString()));
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 			this.IsBanAdaptation = this.OpenParam.IsBanAdaptation;
 			this.SaveUiLayerSafeZoneInfo();
 		}
 
-		// Token: 0x06036980 RID: 223616 RVA: 0x00CED080 File Offset: 0x00CEB280
+		// Token: 0x0602B8C6 RID: 178374 RVA: 0x00C3BFA0 File Offset: 0x00C3A1A0
 		protected override void OnBeforeDestroy()
 		{
 			CustomPromise fadeCompletePromise = this.FadeCompletePromise;
@@ -101,7 +106,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.AdaptUiLayer(false);
 		}
 
-		// Token: 0x06036981 RID: 223617 RVA: 0x00CED0A8 File Offset: 0x00CEB2A8
+		// Token: 0x0602B8C7 RID: 178375 RVA: 0x00C3BFC8 File Offset: 0x00C3A1C8
 		public UniTask Fade(bool isFadeIn, float blendTime)
 		{
 			MovieModeAspectView.<Fade>d__31 <Fade>d__;
@@ -114,7 +119,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return <Fade>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036982 RID: 223618 RVA: 0x00CED0FC File Offset: 0x00CEB2FC
+		// Token: 0x0602B8C8 RID: 178376 RVA: 0x00C3C01C File Offset: 0x00C3A21C
 		public void FadeReverse()
 		{
 			this.IsFadeIn = !this.IsFadeIn;
@@ -126,7 +131,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.TargetValue = (this.IsFadeIn ? num3 : num);
 		}
 
-		// Token: 0x06036983 RID: 223619 RVA: 0x00CED198 File Offset: 0x00CEB398
+		// Token: 0x0602B8C9 RID: 178377 RVA: 0x00C3C0B8 File Offset: 0x00C3A2B8
 		private void OnTick(float delta)
 		{
 			if (this.Duration >= this.BlendTime)
@@ -146,7 +151,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			EventSystem.Instance.Emit<IMovieModeAspectOffset>(EEventName.MovieModeAspectOffsetUpdate, this.AspectOffset);
 		}
 
-		// Token: 0x06036984 RID: 223620 RVA: 0x00CED2BC File Offset: 0x00CEB4BC
+		// Token: 0x0602B8CA RID: 178378 RVA: 0x00C3C1DC File Offset: 0x00C3A3DC
 		private void OnFadeComplete()
 		{
 			CustomPromise fadeCompletePromise = this.FadeCompletePromise;
@@ -158,14 +163,14 @@ namespace CSharpScript.Game.Module.MovieMode
 			Log.Instance.Info(ELogModule.MovieMode, ELogAuthor.CB, "电影模式黑边设置完成", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06036985 RID: 223621 RVA: 0x00CED2FF File Offset: 0x00CEB4FF
+		// Token: 0x0602B8CB RID: 178379 RVA: 0x00C3C21F File Offset: 0x00C3A41F
 		private void RemoveTick()
 		{
 			MovieModeController.Instance.RemoveTick(this.TickHandle);
 			this.TickHandle = -1;
 		}
 
-		// Token: 0x06036986 RID: 223622 RVA: 0x00CED318 File Offset: 0x00CEB518
+		// Token: 0x0602B8CC RID: 178380 RVA: 0x00C3C238 File Offset: 0x00C3A438
 		private unsafe void StartTransform()
 		{
 			if (!this.Enable)
@@ -209,6 +214,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			{
 				this.CurrentValue = this.TargetValue;
 				this.ApplyStretchValues(this.CurrentValue);
+				this.AdaptRealtimeUiLayer();
 				this.AspectOffset.IsFadeIn = this.IsFadeIn;
 				this.AspectOffset.IsWidthBlend = this.IsWidthBlend;
 				this.AspectOffset.Offset = (this.IsWidthBlend ? (this.OriginalUiWidth - this.CurrentValue) : (this.OriginalUiHeight - this.CurrentValue));
@@ -220,7 +226,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.TickHandle = MovieModeController.Instance.AddTick(new Action<float>(this.OnTick));
 		}
 
-		// Token: 0x06036987 RID: 223623 RVA: 0x00CED5D4 File Offset: 0x00CEB7D4
+		// Token: 0x0602B8CD RID: 178381 RVA: 0x00C3C4FC File Offset: 0x00C3A6FC
 		private void SetupAnimation(float screenSize, float targetValue)
 		{
 			this.CurrentValue = (this.IsFadeIn ? screenSize : targetValue);
@@ -230,7 +236,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.ApplyStretchValues(this.CurrentValue);
 		}
 
-		// Token: 0x06036988 RID: 223624 RVA: 0x00CED658 File Offset: 0x00CEB858
+		// Token: 0x0602B8CE RID: 178382 RVA: 0x00C3C580 File Offset: 0x00C3A780
 		private void ApplyStretchValues(float value)
 		{
 			if (this.IsWidthBlend)
@@ -285,7 +291,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x06036989 RID: 223625 RVA: 0x00CED70C File Offset: 0x00CEB90C
+		// Token: 0x0602B8CF RID: 178383 RVA: 0x00C3C634 File Offset: 0x00C3A834
 		private void AdaptUiLayer(bool bAdapt)
 		{
 			if (this.AdaptUiLayers == null)
@@ -300,7 +306,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.ApplyLayerAdaptation(this.AdaptUiLayers, bAdapt ? this.GetAspectOffsetValue() : 0f);
 		}
 
-		// Token: 0x0603698A RID: 223626 RVA: 0x00CED766 File Offset: 0x00CEB966
+		// Token: 0x0602B8D0 RID: 178384 RVA: 0x00C3C68E File Offset: 0x00C3A88E
 		private float GetAspectOffsetValue()
 		{
 			if (!this.IsWidthBlend)
@@ -310,7 +316,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			return this.OriginalUiWidth - this.CurrentValue;
 		}
 
-		// Token: 0x0603698B RID: 223627 RVA: 0x00CED78C File Offset: 0x00CEB98C
+		// Token: 0x0602B8D1 RID: 178385 RVA: 0x00C3C6B4 File Offset: 0x00C3A8B4
 		private void ApplyLayerAdaptation(ELayerType[] layers, float offset)
 		{
 			UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
@@ -366,7 +372,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x0603698C RID: 223628 RVA: 0x00CED984 File Offset: 0x00CEBB84
+		// Token: 0x0602B8D2 RID: 178386 RVA: 0x00C3C8AC File Offset: 0x00C3AAAC
 		private void AdaptRealtimeUiLayer()
 		{
 			if (this.RealtimeLayers.Length == 0 || this.IsBanAdaptation)
@@ -376,7 +382,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.ApplyLayerAdaptation(this.RealtimeLayers, this.GetAspectOffsetValue());
 		}
 
-		// Token: 0x0603698D RID: 223629 RVA: 0x00CED9AC File Offset: 0x00CEBBAC
+		// Token: 0x0602B8D3 RID: 178387 RVA: 0x00C3C8D4 File Offset: 0x00C3AAD4
 		private unsafe void SetAdaptUiLayerVisible(bool bVisible)
 		{
 			if (this.AdaptUiLayers == null || this.OpenParam.IsIgnoreUiLayerVisible.GetValueOrDefault())
@@ -385,7 +391,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 			foreach (ELayerType elayerType in this.AdaptUiLayers)
 			{
-				if (!this.RealtimeLayers.Contains(elayerType))
+				if (Array.IndexOf<ELayerType>(this.RealtimeLayers, elayerType) < 0)
 				{
 					UUIItem layerRootUiItem = UiLayer.Instance.GetLayerRootUiItem(elayerType);
 					if (layerRootUiItem != null)
@@ -404,7 +410,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x0603698E RID: 223630 RVA: 0x00CEDA88 File Offset: 0x00CEBC88
+		// Token: 0x0602B8D4 RID: 178388 RVA: 0x00C3C9B0 File Offset: 0x00C3ABB0
 		private unsafe void SaveUiLayerSafeZoneInfo()
 		{
 			if (this.AdaptUiLayers == null)
@@ -439,19 +445,19 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x0603698F RID: 223631 RVA: 0x00CEDBFF File Offset: 0x00CEBDFF
+		// Token: 0x0602B8D5 RID: 178389 RVA: 0x00C3CB27 File Offset: 0x00C3AD27
 		public bool IsHorizontalBlackBarsVisible()
 		{
 			return !this.IsBanAdaptation && !this.AspectOffset.IsWidthBlend && this.AspectOffset.Offset > 0f;
 		}
 
-		// Token: 0x06036990 RID: 223632 RVA: 0x00CEDC2A File Offset: 0x00CEBE2A
+		// Token: 0x0602B8D6 RID: 178390 RVA: 0x00C3CB52 File Offset: 0x00C3AD52
 		public IMovieModeAspectOffset GetAspectOffset()
 		{
 			return this.AspectOffset;
 		}
 
-		// Token: 0x06036991 RID: 223633 RVA: 0x00CEDC34 File Offset: 0x00CEBE34
+		// Token: 0x0602B8D7 RID: 178391 RVA: 0x00C3CB5C File Offset: 0x00C3AD5C
 		public unsafe void UpdateTransform()
 		{
 			this.OriginalUiWidth = UiLayer.Instance.UiRootItem.GetWidth();
@@ -484,55 +490,55 @@ namespace CSharpScript.Game.Module.MovieMode
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 		}
 
-		// Token: 0x0401CDAD RID: 118189
+		// Token: 0x04017845 RID: 96325
 		private bool Enable;
 
-		// Token: 0x0401CDAE RID: 118190
+		// Token: 0x04017846 RID: 96326
 		[Nullable(2)]
 		private UUITexture Texture1;
 
-		// Token: 0x0401CDAF RID: 118191
+		// Token: 0x04017847 RID: 96327
 		[Nullable(2)]
 		private UUITexture Texture2;
 
-		// Token: 0x0401CDB0 RID: 118192
+		// Token: 0x04017848 RID: 96328
 		private readonly float CacheRatio = 2.3703704f;
 
-		// Token: 0x0401CDB1 RID: 118193
+		// Token: 0x04017849 RID: 96329
 		private float BlendTime;
 
-		// Token: 0x0401CDB2 RID: 118194
+		// Token: 0x0401784A RID: 96330
 		private float Duration;
 
-		// Token: 0x0401CDB3 RID: 118195
+		// Token: 0x0401784B RID: 96331
 		private float Speed;
 
-		// Token: 0x0401CDB4 RID: 118196
+		// Token: 0x0401784C RID: 96332
 		private float CurrentValue;
 
-		// Token: 0x0401CDB5 RID: 118197
+		// Token: 0x0401784D RID: 96333
 		private float TargetValue;
 
-		// Token: 0x0401CDB6 RID: 118198
+		// Token: 0x0401784E RID: 96334
 		private bool IsWidthBlend;
 
-		// Token: 0x0401CDB7 RID: 118199
+		// Token: 0x0401784F RID: 96335
 		private int TickHandle = -1;
 
-		// Token: 0x0401CDB8 RID: 118200
+		// Token: 0x04017850 RID: 96336
 		private bool IsFadeIn = true;
 
-		// Token: 0x0401CDB9 RID: 118201
+		// Token: 0x04017851 RID: 96337
 		[Nullable(2)]
 		private CustomPromise FadeCompletePromise;
 
-		// Token: 0x0401CDBA RID: 118202
+		// Token: 0x04017852 RID: 96338
 		private float OriginalUiWidth;
 
-		// Token: 0x0401CDBB RID: 118203
+		// Token: 0x04017853 RID: 96339
 		private float OriginalUiHeight;
 
-		// Token: 0x0401CDBC RID: 118204
+		// Token: 0x04017854 RID: 96340
 		private readonly IMovieModeAspectOffset AspectOffset = new MovieModeAspectOffset
 		{
 			IsFadeIn = true,
@@ -541,10 +547,10 @@ namespace CSharpScript.Game.Module.MovieMode
 			Progress = 0f
 		};
 
-		// Token: 0x0401CDBD RID: 118205
+		// Token: 0x04017855 RID: 96341
 		private float TotalOffset;
 
-		// Token: 0x0401CDBE RID: 118206
+		// Token: 0x04017856 RID: 96342
 		private readonly ELayerType[] DefaultAdaptUiLayers = new ELayerType[]
 		{
 			ELayerType.HUD,
@@ -556,36 +562,36 @@ namespace CSharpScript.Game.Module.MovieMode
 			ELayerType.Loading
 		};
 
-		// Token: 0x0401CDBF RID: 118207
+		// Token: 0x04017857 RID: 96343
 		private readonly ELayerType[] RealtimeAdaptUiLayers = new ELayerType[]
 		{
 			ELayerType.Loading
 		};
 
-		// Token: 0x0401CDC0 RID: 118208
+		// Token: 0x04017858 RID: 96344
 		[Nullable(2)]
 		private ELayerType[] AdaptUiLayers;
 
-		// Token: 0x0401CDC1 RID: 118209
+		// Token: 0x04017859 RID: 96345
 		private ELayerType[] RealtimeLayers = Array.Empty<ELayerType>();
 
-		// Token: 0x0401CDC2 RID: 118210
+		// Token: 0x0401785A RID: 96346
 		[Nullable(2)]
 		private ULGUICanvasScaler CanvasScaler;
 
-		// Token: 0x0401CDC3 RID: 118211
+		// Token: 0x0401785B RID: 96347
 		private bool IsBanAdaptation;
 
-		// Token: 0x0401CDC4 RID: 118212
+		// Token: 0x0401785C RID: 96348
 		private readonly Dictionary<ELayerType, IUiLayerSafeZone> UiLayerSafeZoneInfos = new Dictionary<ELayerType, IUiLayerSafeZone>();
 
-		// Token: 0x0200B5ED RID: 46573
+		// Token: 0x0200A025 RID: 40997
 		[NullableContext(0)]
 		private enum EChildItem
 		{
-			// Token: 0x040371B8 RID: 225720
+			// Token: 0x04031C0D RID: 203789
 			Texture1,
-			// Token: 0x040371B9 RID: 225721
+			// Token: 0x04031C0E RID: 203790
 			Texture2
 		}
 	}

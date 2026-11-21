@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A7 RID: 8615
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002412 RID: 9234
 	public class SetCameraMode : ActionParams
 	{
-		// Token: 0x0600BD2C RID: 48428 RVA: 0x001B3B9C File Offset: 0x001B1D9C
+		// Token: 0x0600C8E6 RID: 51430 RVA: 0x001CB1D4 File Offset: 0x001C93D4
 		private SetCameraMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BD2D RID: 48429 RVA: 0x001B3BD4 File Offset: 0x001B1DD4
+		// Token: 0x0600C8E7 RID: 51431 RVA: 0x001CB20C File Offset: 0x001C940C
 		public static SetCameraMode Create([Nullable(2)] SetCameraMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD2E RID: 48430 RVA: 0x001B3BE7 File Offset: 0x001B1DE7
+		// Token: 0x0600C8E8 RID: 51432 RVA: 0x001CB21F File Offset: 0x001C941F
 		public static SetCameraMode CreateFromSetValue([Nullable(2)] SetCameraMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD2F RID: 48431 RVA: 0x001B3BFA File Offset: 0x001B1DFA
+		// Token: 0x0600C8E9 RID: 51433 RVA: 0x001CB232 File Offset: 0x001C9432
 		public SetCameraMode_SetValue ToSetValue()
 		{
 			return new SetCameraMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700397C RID: 14716
-		// (get) Token: 0x0600BD30 RID: 48432 RVA: 0x001B3C0D File Offset: 0x001B1E0D
-		// (set) Token: 0x0600BD31 RID: 48433 RVA: 0x001B3C38 File Offset: 0x001B1E38
+		// Token: 0x17003C70 RID: 15472
+		// (get) Token: 0x0600C8EA RID: 51434 RVA: 0x001CB245 File Offset: 0x001C9445
+		// (set) Token: 0x0600C8EB RID: 51435 RVA: 0x001CB270 File Offset: 0x001C9470
 		public virtual string Mode
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070E3 RID: 28899
+		// Token: 0x0400772B RID: 30507
 		[Nullable(2)]
 		protected new SetCameraMode FbInstance;
 
-		// Token: 0x040070E4 RID: 28900
+		// Token: 0x0400772C RID: 30508
 		[Nullable(2)]
 		protected SetCameraMode_SetValue PocoInterface;
 	}

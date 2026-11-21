@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EBF RID: 24255
+	// Token: 0x02004EA4 RID: 20132
 	public enum EAdventurePreOpenPlayType
 	{
-		// Token: 0x04020323 RID: 131875
+		// Token: 0x0401ADEA RID: 110058
 		All,
-		// Token: 0x04020324 RID: 131876
+		// Token: 0x0401ADEB RID: 110059
 		Beginner,
-		// Token: 0x04020325 RID: 131877
+		// Token: 0x0401ADEC RID: 110060
 		Regress
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000204 RID: 516
+	// Token: 0x02000216 RID: 534
 	public class ConfigDevicePlatformById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C1B RID: 3099 RVA: 0x0009E12B File Offset: 0x0009C32B
+		// Token: 0x06000C87 RID: 3207 RVA: 0x000A4063 File Offset: 0x000A2263
 		static ConfigDevicePlatformById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDevicePlatformById.CreateStaticDefaultValue), new Action(ConfigDevicePlatformById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C1C RID: 3100 RVA: 0x0009E14C File Offset: 0x0009C34C
+		// Token: 0x06000C88 RID: 3208 RVA: 0x000A4084 File Offset: 0x000A2284
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDevicePlatformById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C1D RID: 3101 RVA: 0x0009E1CB File Offset: 0x0009C3CB
+		// Token: 0x06000C89 RID: 3209 RVA: 0x000A4103 File Offset: 0x000A2303
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDevicePlatformById.LogPair = null;
 			ConfigDevicePlatformById.HandleId = 0;
 		}
 
-		// Token: 0x06000C1E RID: 3102 RVA: 0x0009E1D9 File Offset: 0x0009C3D9
+		// Token: 0x06000C8A RID: 3210 RVA: 0x000A4111 File Offset: 0x000A2311
 		public static void Init()
 		{
 			ConfigDevicePlatformById.HandleId = ConfigCommon.InitDataStatement(ConfigDevicePlatformById.HandleId, "db_deviceplatform.db", "select BinData from `DevicePlatform` where Id=?");
 		}
 
-		// Token: 0x06000C1F RID: 3103 RVA: 0x0009E1F4 File Offset: 0x0009C3F4
+		// Token: 0x06000C8B RID: 3211 RVA: 0x000A412C File Offset: 0x000A232C
 		public static DevicePlatform? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDevicePlatformById.HandleId, ConfigDevicePlatformById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DevicePlatform?(rootAsDevicePlatform);
 		}
 
-		// Token: 0x04000E00 RID: 3584
+		// Token: 0x04000E7E RID: 3710
 		private const string DB = "db_deviceplatform.db";
 
-		// Token: 0x04000E01 RID: 3585
+		// Token: 0x04000E7F RID: 3711
 		private const string FILE = "s.设备平台.xlsx";
 
-		// Token: 0x04000E02 RID: 3586
+		// Token: 0x04000E80 RID: 3712
 		private const string TABLE = "DevicePlatform";
 
-		// Token: 0x04000E03 RID: 3587
+		// Token: 0x04000E81 RID: 3713
 		private const string COMMAND = "select BinData from `DevicePlatform` where Id=?";
 
-		// Token: 0x04000E04 RID: 3588
+		// Token: 0x04000E82 RID: 3714
 		private const string KEY_PREFIX = "DevicePlatformById";
 
-		// Token: 0x04000E05 RID: 3589
+		// Token: 0x04000E83 RID: 3715
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E06 RID: 3590
+		// Token: 0x04000E84 RID: 3716
 		private static int HandleId;
 	}
 }

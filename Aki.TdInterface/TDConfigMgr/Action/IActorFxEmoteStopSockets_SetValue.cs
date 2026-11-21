@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001771 RID: 6001
+	// Token: 0x020018F2 RID: 6386
 	public class IActorFxEmoteStopSockets_SetValue
 	{
-		// Token: 0x040050D6 RID: 20694
+		// Token: 0x0400550C RID: 21772
 		public EActorFxEmoteStopSubType Type;
 
-		// Token: 0x040050D7 RID: 20695
-		[Nullable(1)]
+		// Token: 0x0400550D RID: 21773
 		public List<string> Sockets;
 	}
 }

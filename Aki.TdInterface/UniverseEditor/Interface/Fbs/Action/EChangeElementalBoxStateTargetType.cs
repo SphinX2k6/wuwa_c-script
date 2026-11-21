@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F30 RID: 24368
+	// Token: 0x02006574 RID: 25972
 	public enum EChangeElementalBoxStateTargetType : byte
 	{
-		// Token: 0x0400FC6F RID: 64623
+		// Token: 0x040109E5 RID: 68069
 		Player,
-		// Token: 0x0400FC70 RID: 64624
+		// Token: 0x040109E6 RID: 68070
 		TargetBoxId
 	}
 }

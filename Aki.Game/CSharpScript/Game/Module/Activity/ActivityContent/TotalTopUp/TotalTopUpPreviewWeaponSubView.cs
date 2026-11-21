@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FB0 RID: 24496
+	// Token: 0x02004F97 RID: 20375
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPreviewWeaponSubView : TotalTopUpPreviewSubViewBase
 	{
-		// Token: 0x0603E1A3 RID: 254371 RVA: 0x00EFF1CC File Offset: 0x00EFD3CC
+		// Token: 0x0603313D RID: 209213 RVA: 0x00E50E88 File Offset: 0x00E4F088
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E1A4 RID: 254372 RVA: 0x00EFF21D File Offset: 0x00EFD41D
+		// Token: 0x0603313E RID: 209214 RVA: 0x00E50ED9 File Offset: 0x00E4F0D9
 		public override void ShowPreview(ITotalTopUpPreviewViewParam param)
 		{
 			if (param == null)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.TrailIdList = new List<int>(param.RewardData.TotalTopUpWeaponPackageData.WeaponTrialIdList);
 		}
 
-		// Token: 0x0603E1A5 RID: 254373 RVA: 0x00EFF254 File Offset: 0x00EFD454
+		// Token: 0x0603313F RID: 209215 RVA: 0x00E50F10 File Offset: 0x00E4F110
 		private void OnClickCheck()
 		{
 			List<WeaponDataBase> list = new List<WeaponDataBase>();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 		}
 
-		// Token: 0x04020718 RID: 132888
+		// Token: 0x0401B1EA RID: 111082
 		private List<int> TrailIdList = new List<int>();
 	}
 }

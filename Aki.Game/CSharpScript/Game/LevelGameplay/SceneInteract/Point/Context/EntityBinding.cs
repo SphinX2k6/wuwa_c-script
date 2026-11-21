@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 {
-	// Token: 0x02006A8B RID: 27275
+	// Token: 0x02005BE8 RID: 23528
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EntityBinding
 	{
-		// Token: 0x06043C73 RID: 277619 RVA: 0x01097048 File Offset: 0x01095248
+		// Token: 0x06039CC1 RID: 236737 RVA: 0x0103B89C File Offset: 0x01039A9C
 		public EntityBinding(EntityHandle Handle)
 		{
 			this.Handle = Handle;
 		}
 
-		// Token: 0x06043C74 RID: 277620 RVA: 0x01097058 File Offset: 0x01095258
+		// Token: 0x06039CC2 RID: 236738 RVA: 0x0103B8AC File Offset: 0x01039AAC
 		public bool IsValid()
 		{
 			if (!this.Handle.Valid)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			return ((owner != null) ? new bool?(owner.IsValid()) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x04023699 RID: 145049
+		// Token: 0x0401E88B RID: 125067
 		public readonly EntityHandle Handle;
 	}
 }

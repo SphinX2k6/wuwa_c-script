@@ -7,13 +7,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000582 RID: 1410
+	// Token: 0x020005EB RID: 1515
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcStandbySit : INpcStandbyShowMode
 	{
-		// Token: 0x06001CEE RID: 7406 RVA: 0x000525B4 File Offset: 0x000507B4
-		[NullableContext(1)]
+		// Token: 0x06001EF4 RID: 7924 RVA: 0x00057470 File Offset: 0x00055670
+		[NullableContext(0)]
 		private INpcStandbySit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001CEF RID: 7407 RVA: 0x000525EC File Offset: 0x000507EC
-		[NullableContext(1)]
+		// Token: 0x06001EF5 RID: 7925 RVA: 0x000574A8 File Offset: 0x000556A8
+		[NullableContext(0)]
 		public static INpcStandbySit Create([Nullable(2)] INpcStandbySit instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CF0 RID: 7408 RVA: 0x000525FF File Offset: 0x000507FF
-		[NullableContext(1)]
+		// Token: 0x06001EF6 RID: 7926 RVA: 0x000574BB File Offset: 0x000556BB
+		[NullableContext(0)]
 		public static INpcStandbySit CreateFromSetValue([Nullable(2)] INpcStandbySit_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001CF1 RID: 7409 RVA: 0x00052614 File Offset: 0x00050814
-		[NullableContext(1)]
+		// Token: 0x06001EF7 RID: 7927 RVA: 0x000574D0 File Offset: 0x000556D0
+		[NullableContext(0)]
 		public new INpcStandbySit_SetValue ToSetValue()
 		{
 			return new INpcStandbySit_SetValue
@@ -71,9 +71,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000793 RID: 1939
-		// (get) Token: 0x06001CF2 RID: 7410 RVA: 0x0005266E File Offset: 0x0005086E
-		// (set) Token: 0x06001CF3 RID: 7411 RVA: 0x00052699 File Offset: 0x00050899
+		// Token: 0x17000818 RID: 2072
+		// (get) Token: 0x06001EF8 RID: 7928 RVA: 0x0005752A File Offset: 0x0005572A
+		// (set) Token: 0x06001EF9 RID: 7929 RVA: 0x00057555 File Offset: 0x00055755
 		public override ENpcStandbyShowMode Type
 		{
 			get
@@ -94,20 +94,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000794 RID: 1940
-		// (get) Token: 0x06001CF4 RID: 7412 RVA: 0x000526A8 File Offset: 0x000508A8
-		// (set) Token: 0x06001CF5 RID: 7413 RVA: 0x0005273B File Offset: 0x0005093B
+		// Token: 0x17000819 RID: 2073
+		// (get) Token: 0x06001EFA RID: 7930 RVA: 0x00057564 File Offset: 0x00055764
+		// (set) Token: 0x06001EFB RID: 7931 RVA: 0x000575F7 File Offset: 0x000557F7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.INpcLookAtConfig> LookAtConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -138,7 +138,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -147,9 +147,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000795 RID: 1941
-		// (get) Token: 0x06001CF6 RID: 7414 RVA: 0x00052750 File Offset: 0x00050950
-		// (set) Token: 0x06001CF7 RID: 7415 RVA: 0x00052777 File Offset: 0x00050977
+		// Token: 0x1700081A RID: 2074
+		// (get) Token: 0x06001EFC RID: 7932 RVA: 0x0005760C File Offset: 0x0005580C
+		// (set) Token: 0x06001EFD RID: 7933 RVA: 0x00057633 File Offset: 0x00055833
 		public virtual string Montage
 		{
 			get
@@ -171,9 +171,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000796 RID: 1942
-		// (get) Token: 0x06001CF8 RID: 7416 RVA: 0x00052788 File Offset: 0x00050988
-		// (set) Token: 0x06001CF9 RID: 7417 RVA: 0x000527E9 File Offset: 0x000509E9
+		// Token: 0x1700081B RID: 2075
+		// (get) Token: 0x06001EFE RID: 7934 RVA: 0x00057644 File Offset: 0x00055844
+		// (set) Token: 0x06001EFF RID: 7935 RVA: 0x000576A5 File Offset: 0x000558A5
 		public virtual Aki.TDConfigMgr.Action.IMontageId RegisteredMontageId
 		{
 			get
@@ -201,9 +201,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000797 RID: 1943
-		// (get) Token: 0x06001CFA RID: 7418 RVA: 0x00052800 File Offset: 0x00050A00
-		// (set) Token: 0x06001CFB RID: 7419 RVA: 0x0005283A File Offset: 0x00050A3A
+		// Token: 0x1700081C RID: 2076
+		// (get) Token: 0x06001F00 RID: 7936 RVA: 0x000576BC File Offset: 0x000558BC
+		// (set) Token: 0x06001F01 RID: 7937 RVA: 0x000576F6 File Offset: 0x000558F6
 		public virtual int? FaceExpressionId
 		{
 			get
@@ -225,9 +225,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000798 RID: 1944
-		// (get) Token: 0x06001CFC RID: 7420 RVA: 0x00052848 File Offset: 0x00050A48
-		// (set) Token: 0x06001CFD RID: 7421 RVA: 0x00052873 File Offset: 0x00050A73
+		// Token: 0x1700081D RID: 2077
+		// (get) Token: 0x06001F02 RID: 7938 RVA: 0x00057704 File Offset: 0x00055904
+		// (set) Token: 0x06001F03 RID: 7939 RVA: 0x0005772F File Offset: 0x0005592F
 		public virtual int PosEntityId
 		{
 			get
@@ -248,28 +248,28 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001491 RID: 5265
+		// Token: 0x040015FF RID: 5631
 		protected new INpcStandbySit FbInstance;
 
-		// Token: 0x04001492 RID: 5266
+		// Token: 0x04001600 RID: 5632
 		protected new INpcStandbySit_SetValue PocoInterface;
 
-		// Token: 0x04001493 RID: 5267
+		// Token: 0x04001601 RID: 5633
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.INpcLookAtConfig> _LookAtConfigsCache;
 
-		// Token: 0x04001494 RID: 5268
+		// Token: 0x04001602 RID: 5634
 		private bool _LookAtConfigsInited;
 
-		// Token: 0x04001495 RID: 5269
-		[Nullable(1)]
+		// Token: 0x04001603 RID: 5635
+		[Nullable(0)]
 		private Aki.TDConfigMgr.Action.IMontageId _RegisteredMontageIdCache;
 
-		// Token: 0x04001496 RID: 5270
+		// Token: 0x04001604 RID: 5636
 		private bool _RegisteredMontageIdInited;
 	}
 }

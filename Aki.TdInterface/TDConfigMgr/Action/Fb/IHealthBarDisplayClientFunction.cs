@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002939 RID: 10553
+	// Token: 0x02002C1B RID: 11291
 	public class IHealthBarDisplayClientFunction : EnableClientFunction
 	{
-		// Token: 0x0600EA10 RID: 59920 RVA: 0x002248B1 File Offset: 0x00222AB1
-		[NullableContext(1)]
+		// Token: 0x0600F87B RID: 63611 RVA: 0x00241E91 File Offset: 0x00240091
 		public static IHealthBarDisplayClientFunction Create(IHealthBarDisplayClientFunction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004960 RID: 18784
-		// (get) Token: 0x0600EA11 RID: 59921 RVA: 0x002248D0 File Offset: 0x00222AD0
+		// Token: 0x17004CF3 RID: 19699
+		// (get) Token: 0x0600F87C RID: 63612 RVA: 0x00241EB0 File Offset: 0x002400B0
 		public override EEnableClientFunctionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004961 RID: 18785
-		// (get) Token: 0x0600EA12 RID: 59922 RVA: 0x002248DD File Offset: 0x00222ADD
+		// Token: 0x17004CF4 RID: 19700
+		// (get) Token: 0x0600F87D RID: 63613 RVA: 0x00241EBD File Offset: 0x002400BD
 		public virtual int EntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004962 RID: 18786
-		// (get) Token: 0x0600EA13 RID: 59923 RVA: 0x002248EA File Offset: 0x00222AEA
+		// Token: 0x17004CF5 RID: 19701
+		// (get) Token: 0x0600F87E RID: 63614 RVA: 0x00241ECA File Offset: 0x002400CA
 		public virtual bool IsVisible
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008117 RID: 33047
+		// Token: 0x040087F3 RID: 34803
 		private IHealthBarDisplayClientFunction Instance;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007136 RID: 28982
+	// Token: 0x02007902 RID: 30978
 	public struct ISlashAndTowerGotoNextFloor : IFlatbufferObject
 	{
-		// Token: 0x1700D760 RID: 55136
-		// (get) Token: 0x06033615 RID: 210453 RVA: 0x006ECC56 File Offset: 0x006EAE56
+		// Token: 0x1700E343 RID: 58179
+		// (get) Token: 0x060368B7 RID: 223415 RVA: 0x0074D262 File Offset: 0x0074B462
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033616 RID: 210454 RVA: 0x006ECC63 File Offset: 0x006EAE63
+		// Token: 0x060368B8 RID: 223416 RVA: 0x0074D26F File Offset: 0x0074B46F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033617 RID: 210455 RVA: 0x006ECC6C File Offset: 0x006EAE6C
+		// Token: 0x060368B9 RID: 223417 RVA: 0x0074D278 File Offset: 0x0074B478
 		public static ISlashAndTowerGotoNextFloor GetRootAsISlashAndTowerGotoNextFloor(ByteBuffer _bb)
 		{
 			return ISlashAndTowerGotoNextFloor.GetRootAsISlashAndTowerGotoNextFloor(_bb, default(ISlashAndTowerGotoNextFloor));
 		}
 
-		// Token: 0x06033618 RID: 210456 RVA: 0x006ECC88 File Offset: 0x006EAE88
+		// Token: 0x060368BA RID: 223418 RVA: 0x0074D294 File Offset: 0x0074B494
 		public static ISlashAndTowerGotoNextFloor GetRootAsISlashAndTowerGotoNextFloor(ByteBuffer _bb, ISlashAndTowerGotoNextFloor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033619 RID: 210457 RVA: 0x006ECCA5 File Offset: 0x006EAEA5
+		// Token: 0x060368BB RID: 223419 RVA: 0x0074D2B1 File Offset: 0x0074B4B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603361A RID: 210458 RVA: 0x006ECCB4 File Offset: 0x006EAEB4
+		// Token: 0x060368BC RID: 223420 RVA: 0x0074D2C0 File Offset: 0x0074B4C0
 		public ISlashAndTowerGotoNextFloor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0603361B RID: 210459 RVA: 0x006ECCC4 File Offset: 0x006EAEC4
+		// Token: 0x060368BD RID: 223421 RVA: 0x0074D2D0 File Offset: 0x0074B4D0
 		public static void StartISlashAndTowerGotoNextFloor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0603361C RID: 210460 RVA: 0x006ECCCD File Offset: 0x006EAECD
+		// Token: 0x060368BE RID: 223422 RVA: 0x0074D2D9 File Offset: 0x0074B4D9
 		public static Offset<ISlashAndTowerGotoNextFloor> EndISlashAndTowerGotoNextFloor(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlashAndTowerGotoNextFloor>(builder.EndTable());
 		}
 
-		// Token: 0x0603361D RID: 210461 RVA: 0x006ECCDC File Offset: 0x006EAEDC
+		// Token: 0x060368BF RID: 223423 RVA: 0x0074D2E8 File Offset: 0x0074B4E8
 		public ISlashAndTowerGotoNextFloorT UnPack()
 		{
 			ISlashAndTowerGotoNextFloorT slashAndTowerGotoNextFloorT = new ISlashAndTowerGotoNextFloorT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return slashAndTowerGotoNextFloorT;
 		}
 
-		// Token: 0x0603361E RID: 210462 RVA: 0x006ECCF7 File Offset: 0x006EAEF7
+		// Token: 0x060368C0 RID: 223424 RVA: 0x0074D303 File Offset: 0x0074B503
 		public void UnPackTo(ISlashAndTowerGotoNextFloorT _o)
 		{
 		}
 
-		// Token: 0x0603361F RID: 210463 RVA: 0x006ECCFC File Offset: 0x006EAEFC
+		// Token: 0x060368C1 RID: 223425 RVA: 0x0074D308 File Offset: 0x0074B508
 		public static Offset<ISlashAndTowerGotoNextFloor> Pack(FlatBufferBuilder builder, ISlashAndTowerGotoNextFloorT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlashAndTowerGotoNextFloor.EndISlashAndTowerGotoNextFloor(builder);
 		}
 
-		// Token: 0x04011BD3 RID: 72659
+		// Token: 0x04012BC1 RID: 76737
 		private Table __p;
 	}
 }

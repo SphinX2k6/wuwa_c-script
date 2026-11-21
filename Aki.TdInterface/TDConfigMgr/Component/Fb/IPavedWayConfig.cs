@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C61 RID: 3169
+	// Token: 0x02000D3A RID: 3386
 	public class IPavedWayConfig
 	{
-		// Token: 0x06004895 RID: 18581 RVA: 0x000B642C File Offset: 0x000B462C
-		[NullableContext(1)]
+		// Token: 0x06004D1A RID: 19738 RVA: 0x000C0A20 File Offset: 0x000BEC20
 		public static IPavedWayConfig Create(IPavedWayConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001590 RID: 5520
-		// (get) Token: 0x06004896 RID: 18582 RVA: 0x000B644B File Offset: 0x000B464B
+		// Token: 0x170016A1 RID: 5793
+		// (get) Token: 0x06004D1B RID: 19739 RVA: 0x000C0A3F File Offset: 0x000BEC3F
 		public virtual bool AutoSprint
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400295E RID: 10590
+		// Token: 0x04002BBF RID: 11199
 		private IPavedWayConfig Instance;
 	}
 }

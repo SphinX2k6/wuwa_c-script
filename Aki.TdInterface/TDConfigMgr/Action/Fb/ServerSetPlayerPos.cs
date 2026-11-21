@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024DC RID: 9436
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002781 RID: 10113
 	public class ServerSetPlayerPos : ActionParams
 	{
-		// Token: 0x0600D2B1 RID: 53937 RVA: 0x001F40E8 File Offset: 0x001F22E8
+		// Token: 0x0600E006 RID: 57350 RVA: 0x0020F944 File Offset: 0x0020DB44
 		public static ServerSetPlayerPos Create(IServerSetPlayerPos? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003ABB RID: 15035
-		// (get) Token: 0x0600D2B2 RID: 53938 RVA: 0x001F4107 File Offset: 0x001F2307
+		// Token: 0x17003DB2 RID: 15794
+		// (get) Token: 0x0600E007 RID: 57351 RVA: 0x0020F963 File Offset: 0x0020DB63
 		public virtual PosA Pos
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007390 RID: 29584
+		// Token: 0x040079DD RID: 31197
 		private IServerSetPlayerPos Instance;
 
-		// Token: 0x04007391 RID: 29585
+		// Token: 0x040079DE RID: 31198
 		[Nullable(2)]
 		private PosA _PosCache;
 
-		// Token: 0x04007392 RID: 29586
+		// Token: 0x040079DF RID: 31199
 		private bool _PosInited;
 	}
 }

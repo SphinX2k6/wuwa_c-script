@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200050A RID: 1290
+	// Token: 0x02000520 RID: 1312
 	public class ConfigMapAudioById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E47 RID: 7751 RVA: 0x001044D4 File Offset: 0x001026D4
+		// Token: 0x06001ECB RID: 7883 RVA: 0x0010AC28 File Offset: 0x00108E28
 		static ConfigMapAudioById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapAudioById.CreateStaticDefaultValue), new Action(ConfigMapAudioById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E48 RID: 7752 RVA: 0x001044F4 File Offset: 0x001026F4
+		// Token: 0x06001ECC RID: 7884 RVA: 0x0010AC48 File Offset: 0x00108E48
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapAudioById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E49 RID: 7753 RVA: 0x00104573 File Offset: 0x00102773
+		// Token: 0x06001ECD RID: 7885 RVA: 0x0010ACC7 File Offset: 0x00108EC7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapAudioById.LogPair = null;
 			ConfigMapAudioById.HandleId = 0;
 		}
 
-		// Token: 0x06001E4A RID: 7754 RVA: 0x00104581 File Offset: 0x00102781
+		// Token: 0x06001ECE RID: 7886 RVA: 0x0010ACD5 File Offset: 0x00108ED5
 		public static void Init()
 		{
 			ConfigMapAudioById.HandleId = ConfigCommon.InitDataStatement(ConfigMapAudioById.HandleId, "db_audio.db", "select BinData from `MapAudio` where Id=?");
 		}
 
-		// Token: 0x06001E4B RID: 7755 RVA: 0x0010459C File Offset: 0x0010279C
+		// Token: 0x06001ECF RID: 7887 RVA: 0x0010ACF0 File Offset: 0x00108EF0
 		public static MapAudio? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMapAudioById.HandleId, ConfigMapAudioById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MapAudio?(rootAsMapAudio);
 		}
 
-		// Token: 0x0400232A RID: 9002
+		// Token: 0x040023C4 RID: 9156
 		private const string DB = "db_audio.db";
 
-		// Token: 0x0400232B RID: 9003
+		// Token: 0x040023C5 RID: 9157
 		private const string FILE = "y.音频.xlsx";
 
-		// Token: 0x0400232C RID: 9004
+		// Token: 0x040023C6 RID: 9158
 		private const string TABLE = "MapAudio";
 
-		// Token: 0x0400232D RID: 9005
+		// Token: 0x040023C7 RID: 9159
 		private const string COMMAND = "select BinData from `MapAudio` where Id=?";
 
-		// Token: 0x0400232E RID: 9006
+		// Token: 0x040023C8 RID: 9160
 		private const string KEY_PREFIX = "MapAudioById";
 
-		// Token: 0x0400232F RID: 9007
+		// Token: 0x040023C9 RID: 9161
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002330 RID: 9008
+		// Token: 0x040023CA RID: 9162
 		private static int HandleId;
 	}
 }

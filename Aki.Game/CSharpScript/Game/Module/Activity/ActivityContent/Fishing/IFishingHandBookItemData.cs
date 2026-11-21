@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006603 RID: 26115
+	// Token: 0x02005581 RID: 21889
 	[NullableContext(1)]
 	public interface IFishingHandBookItemData
 	{
-		// Token: 0x170095EE RID: 38382
-		// (get) Token: 0x06041735 RID: 268085
-		// (set) Token: 0x06041736 RID: 268086
+		// Token: 0x17006950 RID: 26960
+		// (get) Token: 0x060363FA RID: 222202
+		// (set) Token: 0x060363FB RID: 222203
 		int Id { get; set; }
 
-		// Token: 0x170095EF RID: 38383
-		// (get) Token: 0x06041737 RID: 268087
-		// (set) Token: 0x06041738 RID: 268088
+		// Token: 0x17006951 RID: 26961
+		// (get) Token: 0x060363FC RID: 222204
+		// (set) Token: 0x060363FD RID: 222205
 		int Type { get; set; }
 
-		// Token: 0x170095F0 RID: 38384
-		// (get) Token: 0x06041739 RID: 268089
-		// (set) Token: 0x0604173A RID: 268090
+		// Token: 0x17006952 RID: 26962
+		// (get) Token: 0x060363FE RID: 222206
+		// (set) Token: 0x060363FF RID: 222207
 		int Time { get; set; }
 
-		// Token: 0x170095F1 RID: 38385
-		// (get) Token: 0x0604173B RID: 268091
-		// (set) Token: 0x0604173C RID: 268092
+		// Token: 0x17006953 RID: 26963
+		// (get) Token: 0x06036400 RID: 222208
+		// (set) Token: 0x06036401 RID: 222209
 		List<int> Tech { get; set; }
 
-		// Token: 0x170095F2 RID: 38386
-		// (get) Token: 0x0604173D RID: 268093
-		// (set) Token: 0x0604173E RID: 268094
+		// Token: 0x17006954 RID: 26964
+		// (get) Token: 0x06036402 RID: 222210
+		// (set) Token: 0x06036403 RID: 222211
 		List<int> Area { get; set; }
 
-		// Token: 0x170095F3 RID: 38387
-		// (get) Token: 0x0604173F RID: 268095
-		// (set) Token: 0x06041740 RID: 268096
+		// Token: 0x17006955 RID: 26965
+		// (get) Token: 0x06036404 RID: 222212
+		// (set) Token: 0x06036405 RID: 222213
 		int HandBookId { get; set; }
 	}
 }

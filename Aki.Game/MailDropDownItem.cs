@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020021D2 RID: 8658
+// Token: 0x020016B6 RID: 5814
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class MailDropDownItem : DropDownItemBase<MailFilter>
 {
-	// Token: 0x06010DC2 RID: 69058 RVA: 0x0041A091 File Offset: 0x00418291
+	// Token: 0x0600E253 RID: 57939 RVA: 0x00426971 File Offset: 0x00424B71
 	public MailDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06010DC3 RID: 69059 RVA: 0x0041A09C File Offset: 0x0041829C
+	// Token: 0x0600E254 RID: 57940 RVA: 0x0042697C File Offset: 0x00424B7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,22 +32,22 @@ public abstract class MailDropDownItem : DropDownItemBase<MailFilter>
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06010DC4 RID: 69060 RVA: 0x0041A131 File Offset: 0x00418331
+	// Token: 0x0600E255 RID: 57941 RVA: 0x00426A11 File Offset: 0x00424C11
 	[NullableContext(2)]
 	protected override UUIExtendToggle GetDropDownToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06010DC5 RID: 69061 RVA: 0x0041A13A File Offset: 0x0041833A
+	// Token: 0x0600E256 RID: 57942 RVA: 0x00426A1A File Offset: 0x00424C1A
 	protected void SetMailCount(string count)
 	{
 		base.GetText(2).SetText(count, true);
 	}
 
-	// Token: 0x06010DC6 RID: 69062
+	// Token: 0x0600E257 RID: 57943
 	public abstract string GetTitleText();
 
-	// Token: 0x06010DC7 RID: 69063
+	// Token: 0x0600E258 RID: 57944
 	public abstract MailData[] GetFilteredMailList();
 }

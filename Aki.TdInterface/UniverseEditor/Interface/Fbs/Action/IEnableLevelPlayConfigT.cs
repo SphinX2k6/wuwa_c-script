@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006673 RID: 26227
+	// Token: 0x02006CE7 RID: 27879
 	public class IEnableLevelPlayConfigT
 	{
-		// Token: 0x1700C2D6 RID: 49878
-		// (get) Token: 0x0602D90F RID: 186639 RVA: 0x0063D04C File Offset: 0x0063B24C
-		// (set) Token: 0x0602D910 RID: 186640 RVA: 0x0063D054 File Offset: 0x0063B254
+		// Token: 0x1700CC79 RID: 52345
+		// (get) Token: 0x060300F8 RID: 196856 RVA: 0x00689DE8 File Offset: 0x00687FE8
+		// (set) Token: 0x060300F9 RID: 196857 RVA: 0x00689DF0 File Offset: 0x00687FF0
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x1700C2D7 RID: 49879
-		// (get) Token: 0x0602D911 RID: 186641 RVA: 0x0063D05D File Offset: 0x0063B25D
-		// (set) Token: 0x0602D912 RID: 186642 RVA: 0x0063D065 File Offset: 0x0063B265
+		// Token: 0x1700CC7A RID: 52346
+		// (get) Token: 0x060300FA RID: 196858 RVA: 0x00689DF9 File Offset: 0x00687FF9
+		// (set) Token: 0x060300FB RID: 196859 RVA: 0x00689E01 File Offset: 0x00688001
 		public bool Enable { get; set; }
 
-		// Token: 0x0602D913 RID: 186643 RVA: 0x0063D06E File Offset: 0x0063B26E
+		// Token: 0x060300FC RID: 196860 RVA: 0x00689E0A File Offset: 0x0068800A
 		public IEnableLevelPlayConfigT()
 		{
 			this.LevelPlayId = 0;

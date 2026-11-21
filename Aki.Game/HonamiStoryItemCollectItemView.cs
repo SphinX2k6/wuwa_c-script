@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001EF9 RID: 7929
+// Token: 0x020013BB RID: 5051
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryItemCollectItemView : GridProxyAbstract<HonamiStoryItemCollectionData>
 {
-	// Token: 0x0600F40C RID: 62476 RVA: 0x003ADF8C File Offset: 0x003AC18C
+	// Token: 0x0600C82B RID: 51243 RVA: 0x003B9A80 File Offset: 0x003B7C80
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class HonamiStoryItemCollectItemView : GridProxyAbstract<HonamiStoryItemC
 		};
 	}
 
-	// Token: 0x0600F40D RID: 62477 RVA: 0x003AE038 File Offset: 0x003AC238
+	// Token: 0x0600C82C RID: 51244 RVA: 0x003B9B2C File Offset: 0x003B7D2C
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(() => this.CanToggleChange == null || this.CanToggleChange(base.GridIndex));
@@ -40,7 +40,7 @@ public class HonamiStoryItemCollectItemView : GridProxyAbstract<HonamiStoryItemC
 		this.ItemIconBox.Initialize(base.GetItem(1).GetOwner());
 	}
 
-	// Token: 0x0600F40E RID: 62478 RVA: 0x003AE084 File Offset: 0x003AC284
+	// Token: 0x0600C82D RID: 51245 RVA: 0x003B9B78 File Offset: 0x003B7D78
 	[NullableContext(1)]
 	public override void Refresh(HonamiStoryItemCollectionData itemData, bool isSelected, int gridIndex)
 	{
@@ -67,19 +67,19 @@ public class HonamiStoryItemCollectItemView : GridProxyAbstract<HonamiStoryItemC
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), this.ItemData.GetConfig.Access, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F40F RID: 62479 RVA: 0x003AE1D6 File Offset: 0x003AC3D6
+	// Token: 0x0600C82E RID: 51246 RVA: 0x003B9CCA File Offset: 0x003B7ECA
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600F410 RID: 62480 RVA: 0x003AE1E9 File Offset: 0x003AC3E9
+	// Token: 0x0600C82F RID: 51247 RVA: 0x003B9CDD File Offset: 0x003B7EDD
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600F411 RID: 62481 RVA: 0x003AE1FC File Offset: 0x003AC3FC
+	// Token: 0x0600C830 RID: 51248 RVA: 0x003B9CF0 File Offset: 0x003B7EF0
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.ItemData != null)
@@ -93,13 +93,13 @@ public class HonamiStoryItemCollectItemView : GridProxyAbstract<HonamiStoryItemC
 		}
 	}
 
-	// Token: 0x040070F8 RID: 28920
+	// Token: 0x040071D9 RID: 29145
 	private HonamiStoryItemCollectionData ItemData;
 
-	// Token: 0x040070F9 RID: 28921
+	// Token: 0x040071DA RID: 29146
 	private SmallItemGrid ItemIconBox;
 
-	// Token: 0x040070FA RID: 28922
+	// Token: 0x040071DB RID: 29147
 	[Nullable(new byte[]
 	{
 		2,
@@ -107,22 +107,22 @@ public class HonamiStoryItemCollectItemView : GridProxyAbstract<HonamiStoryItemC
 	})]
 	public Action<int, HonamiStoryItemCollectionData> OnClickToggleBack;
 
-	// Token: 0x040070FB RID: 28923
+	// Token: 0x040071DC RID: 29148
 	public Func<int, bool> CanToggleChange;
 
-	// Token: 0x020084F6 RID: 34038
+	// Token: 0x0200767B RID: 30331
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B451 RID: 177233
+		// Token: 0x04026775 RID: 157557
 		TogIllustrated,
-		// Token: 0x0402B452 RID: 177234
+		// Token: 0x04026776 RID: 157558
 		ItemBaseBox,
-		// Token: 0x0402B453 RID: 177235
+		// Token: 0x04026777 RID: 157559
 		TxtTitle,
-		// Token: 0x0402B454 RID: 177236
+		// Token: 0x04026778 RID: 157560
 		TxtDesc,
-		// Token: 0x0402B455 RID: 177237
+		// Token: 0x04026779 RID: 157561
 		SprGift
 	}
 }

@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F4D RID: 8013
+// Token: 0x0200140F RID: 5135
 public class LuPaAimUnit : HudUnitBase
 {
-	// Token: 0x0600F7CE RID: 63438 RVA: 0x003BEEC0 File Offset: 0x003BD0C0
+	// Token: 0x0600CBED RID: 52205 RVA: 0x003CA9AC File Offset: 0x003C8BAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -31,7 +31,7 @@ public class LuPaAimUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F7CF RID: 63439 RVA: 0x003BEFAD File Offset: 0x003BD1AD
+	// Token: 0x0600CBEE RID: 52206 RVA: 0x003CAA99 File Offset: 0x003C8C99
 	protected override void OnStart()
 	{
 		base.InitTweenAnim(3);
@@ -39,14 +39,14 @@ public class LuPaAimUnit : HudUnitBase
 		base.InitTweenAnim(5);
 	}
 
-	// Token: 0x0600F7D0 RID: 63440 RVA: 0x003BEFC4 File Offset: 0x003BD1C4
+	// Token: 0x0600CBEF RID: 52207 RVA: 0x003CAAB0 File Offset: 0x003C8CB0
 	protected override void OnBeforeShow()
 	{
 		base.StopTweenAnim(4);
 		base.PlayTweenAnim(3);
 	}
 
-	// Token: 0x0600F7D1 RID: 63441 RVA: 0x003BEFD4 File Offset: 0x003BD1D4
+	// Token: 0x0600CBF0 RID: 52208 RVA: 0x003CAAC0 File Offset: 0x003C8CC0
 	protected override UniTask OnBeforeHideAsync()
 	{
 		LuPaAimUnit.<OnBeforeHideAsync>d__10 <OnBeforeHideAsync>d__;
@@ -57,7 +57,7 @@ public class LuPaAimUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F7D2 RID: 63442 RVA: 0x003BF017 File Offset: 0x003BD217
+	// Token: 0x0600CBF1 RID: 52209 RVA: 0x003CAB03 File Offset: 0x003C8D03
 	private void OnCloseAnimTimerEnd()
 	{
 		this.CloseTimer = null;
@@ -65,7 +65,7 @@ public class LuPaAimUnit : HudUnitBase
 		this.Promise = null;
 	}
 
-	// Token: 0x0600F7D3 RID: 63443 RVA: 0x003BF032 File Offset: 0x003BD232
+	// Token: 0x0600CBF2 RID: 52210 RVA: 0x003CAB1E File Offset: 0x003C8D1E
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CloseTimer != null)
@@ -77,20 +77,20 @@ public class LuPaAimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7D4 RID: 63444 RVA: 0x003BF066 File Offset: 0x003BD266
+	// Token: 0x0600CBF3 RID: 52211 RVA: 0x003CAB52 File Offset: 0x003C8D52
 	public void SetTargetVisible(bool visible)
 	{
 		this.TargetVisible = visible;
 		base.SetVisible(visible, 0);
 	}
 
-	// Token: 0x0600F7D5 RID: 63445 RVA: 0x003BF077 File Offset: 0x003BD277
+	// Token: 0x0600CBF4 RID: 52212 RVA: 0x003CAB63 File Offset: 0x003C8D63
 	public bool GetTargetVisible()
 	{
 		return this.TargetVisible;
 	}
 
-	// Token: 0x0600F7D6 RID: 63446 RVA: 0x003BF07F File Offset: 0x003BD27F
+	// Token: 0x0600CBF5 RID: 52213 RVA: 0x003CAB6B File Offset: 0x003C8D6B
 	public override void SetActive(bool visibility)
 	{
 		if (visibility && !this.TargetVisible)
@@ -100,7 +100,7 @@ public class LuPaAimUnit : HudUnitBase
 		base.SetActive(visibility);
 	}
 
-	// Token: 0x0600F7D7 RID: 63447 RVA: 0x003BF094 File Offset: 0x003BD294
+	// Token: 0x0600CBF6 RID: 52214 RVA: 0x003CAB80 File Offset: 0x003C8D80
 	public void SetProgress(float percent)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -111,7 +111,7 @@ public class LuPaAimUnit : HudUnitBase
 		sprite.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600F7D8 RID: 63448 RVA: 0x003BF0A8 File Offset: 0x003BD2A8
+	// Token: 0x0600CBF7 RID: 52215 RVA: 0x003CAB94 File Offset: 0x003C8D94
 	public void SetLockState(bool hasTarget)
 	{
 		if (this.LockState == hasTarget && this.IsInitLockState)
@@ -131,40 +131,40 @@ public class LuPaAimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x040072E5 RID: 29413
+	// Token: 0x040073C6 RID: 29638
 	private const int CLOSE_ANIM_TIME = 100;
 
-	// Token: 0x040072E6 RID: 29414
+	// Token: 0x040073C7 RID: 29639
 	private bool TargetVisible;
 
-	// Token: 0x040072E7 RID: 29415
+	// Token: 0x040073C8 RID: 29640
 	private bool IsInitLockState;
 
-	// Token: 0x040072E8 RID: 29416
+	// Token: 0x040073C9 RID: 29641
 	private bool LockState;
 
-	// Token: 0x040072E9 RID: 29417
+	// Token: 0x040073CA RID: 29642
 	[Nullable(2)]
 	private TimerHandle CloseTimer;
 
-	// Token: 0x040072EA RID: 29418
+	// Token: 0x040073CB RID: 29643
 	[Nullable(2)]
 	private CustomPromise Promise;
 
-	// Token: 0x02008545 RID: 34117
+	// Token: 0x020076CA RID: 30410
 	private enum EChildType
 	{
-		// Token: 0x0402B62D RID: 177709
+		// Token: 0x04026951 RID: 158033
 		ProgressSprite,
-		// Token: 0x0402B62E RID: 177710
+		// Token: 0x04026952 RID: 158034
 		StateItem1,
-		// Token: 0x0402B62F RID: 177711
+		// Token: 0x04026953 RID: 158035
 		StateItem2,
-		// Token: 0x0402B630 RID: 177712
+		// Token: 0x04026954 RID: 158036
 		AniStart,
-		// Token: 0x0402B631 RID: 177713
+		// Token: 0x04026955 RID: 158037
 		AniClose,
-		// Token: 0x0402B632 RID: 177714
+		// Token: 0x04026956 RID: 158038
 		AniSwitch
 	}
 }

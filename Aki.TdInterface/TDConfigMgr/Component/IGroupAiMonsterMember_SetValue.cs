@@ -4,17 +4,16 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003F7 RID: 1015
+	// Token: 0x02000450 RID: 1104
 	public class IGroupAiMonsterMember_SetValue
 	{
-		// Token: 0x04001012 RID: 4114
+		// Token: 0x04001134 RID: 4404
 		public int EntityId;
 
-		// Token: 0x04001013 RID: 4115
-		[Nullable(1)]
+		// Token: 0x04001135 RID: 4405
 		public PosAndRot RelativeTransform;
 
-		// Token: 0x04001014 RID: 4116
+		// Token: 0x04001136 RID: 4406
 		[Nullable(2)]
 		public IGroupAiMonsterMemberActionTagAttach ActionTagAttach;
 	}

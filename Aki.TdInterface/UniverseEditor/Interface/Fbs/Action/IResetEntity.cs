@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E7C RID: 28284
+	// Token: 0x02007600 RID: 30208
 	public struct IResetEntity : IFlatbufferObject
 	{
-		// Token: 0x1700D2A9 RID: 53929
-		// (get) Token: 0x06031FD3 RID: 204755 RVA: 0x006C324B File Offset: 0x006C144B
+		// Token: 0x1700DE00 RID: 56832
+		// (get) Token: 0x06035013 RID: 217107 RVA: 0x0071EF7F File Offset: 0x0071D17F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031FD4 RID: 204756 RVA: 0x006C3258 File Offset: 0x006C1458
+		// Token: 0x06035014 RID: 217108 RVA: 0x0071EF8C File Offset: 0x0071D18C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031FD5 RID: 204757 RVA: 0x006C3260 File Offset: 0x006C1460
+		// Token: 0x06035015 RID: 217109 RVA: 0x0071EF94 File Offset: 0x0071D194
 		public static IResetEntity GetRootAsIResetEntity(ByteBuffer _bb)
 		{
 			return IResetEntity.GetRootAsIResetEntity(_bb, default(IResetEntity));
 		}
 
-		// Token: 0x06031FD6 RID: 204758 RVA: 0x006C327C File Offset: 0x006C147C
+		// Token: 0x06035016 RID: 217110 RVA: 0x0071EFB0 File Offset: 0x0071D1B0
 		public static IResetEntity GetRootAsIResetEntity(ByteBuffer _bb, IResetEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031FD7 RID: 204759 RVA: 0x006C3299 File Offset: 0x006C1499
+		// Token: 0x06035017 RID: 217111 RVA: 0x0071EFCD File Offset: 0x0071D1CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031FD8 RID: 204760 RVA: 0x006C32A8 File Offset: 0x006C14A8
+		// Token: 0x06035018 RID: 217112 RVA: 0x0071EFDC File Offset: 0x0071D1DC
 		public IResetEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2AA RID: 53930
-		// (get) Token: 0x06031FD9 RID: 204761 RVA: 0x006C32B8 File Offset: 0x006C14B8
+		// Token: 0x1700DE01 RID: 56833
+		// (get) Token: 0x06035019 RID: 217113 RVA: 0x0071EFEC File Offset: 0x0071D1EC
 		public TResetEntityConfig ResetEntityConfigType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031FDA RID: 204762 RVA: 0x006C32F4 File Offset: 0x006C14F4
+		// Token: 0x0603501A RID: 217114 RVA: 0x0071F028 File Offset: 0x0071D228
 		public TTable? ResetEntityConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06031FDB RID: 204763 RVA: 0x006C3338 File Offset: 0x006C1538
+		// Token: 0x0603501B RID: 217115 RVA: 0x0071F06C File Offset: 0x0071D26C
 		public IJigsawItemEntity ResetEntityConfigAsIJigsawItemEntity()
 		{
 			return this.ResetEntityConfig<IJigsawItemEntity>().Value;
 		}
 
-		// Token: 0x06031FDC RID: 204764 RVA: 0x006C3354 File Offset: 0x006C1554
+		// Token: 0x0603501C RID: 217116 RVA: 0x0071F088 File Offset: 0x0071D288
 		public IResetTeleControlEntity ResetEntityConfigAsIResetTeleControlEntity()
 		{
 			return this.ResetEntityConfig<IResetTeleControlEntity>().Value;
 		}
 
-		// Token: 0x06031FDD RID: 204765 RVA: 0x006C336F File Offset: 0x006C156F
+		// Token: 0x0603501D RID: 217117 RVA: 0x0071F0A3 File Offset: 0x0071D2A3
 		public static Offset<IResetEntity> CreateIResetEntity(FlatBufferBuilder builder, TResetEntityConfig ResetEntityConfig_type = TResetEntityConfig.NONE, int ResetEntityConfigOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetEntity.EndIResetEntity(builder);
 		}
 
-		// Token: 0x06031FDE RID: 204766 RVA: 0x006C338C File Offset: 0x006C158C
+		// Token: 0x0603501E RID: 217118 RVA: 0x0071F0C0 File Offset: 0x0071D2C0
 		public static void StartIResetEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031FDF RID: 204767 RVA: 0x006C3395 File Offset: 0x006C1595
+		// Token: 0x0603501F RID: 217119 RVA: 0x0071F0C9 File Offset: 0x0071D2C9
 		public static void AddResetEntityConfigType(FlatBufferBuilder builder, TResetEntityConfig resetEntityConfigType)
 		{
 			builder.AddByte(0, (byte)resetEntityConfigType, 0);
 		}
 
-		// Token: 0x06031FE0 RID: 204768 RVA: 0x006C33A0 File Offset: 0x006C15A0
+		// Token: 0x06035020 RID: 217120 RVA: 0x0071F0D4 File Offset: 0x0071D2D4
 		public static void AddResetEntityConfig(FlatBufferBuilder builder, int resetEntityConfigOffset)
 		{
 			builder.AddOffset(1, resetEntityConfigOffset, 0);
 		}
 
-		// Token: 0x06031FE1 RID: 204769 RVA: 0x006C33AB File Offset: 0x006C15AB
+		// Token: 0x06035021 RID: 217121 RVA: 0x0071F0DF File Offset: 0x0071D2DF
 		public static Offset<IResetEntity> EndIResetEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<IResetEntity>(builder.EndTable());
 		}
 
-		// Token: 0x06031FE2 RID: 204770 RVA: 0x006C33B8 File Offset: 0x006C15B8
+		// Token: 0x06035022 RID: 217122 RVA: 0x0071F0EC File Offset: 0x0071D2EC
 		public IResetEntityT UnPack()
 		{
 			IResetEntityT resetEntityT = new IResetEntityT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return resetEntityT;
 		}
 
-		// Token: 0x06031FE3 RID: 204771 RVA: 0x006C33D4 File Offset: 0x006C15D4
+		// Token: 0x06035023 RID: 217123 RVA: 0x0071F108 File Offset: 0x0071D308
 		public void UnPackTo(IResetEntityT _o)
 		{
 			_o.ResetEntityConfig = new TResetEntityConfigUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.ResetEntityConfig.Value = ((this.ResetEntityConfig<IResetTeleControlEntity>() != null) ? this.ResetEntityConfig<IResetTeleControlEntity>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06031FE4 RID: 204772 RVA: 0x006C3478 File Offset: 0x006C1678
+		// Token: 0x06035024 RID: 217124 RVA: 0x0071F1AC File Offset: 0x0071D3AC
 		public static Offset<IResetEntity> Pack(FlatBufferBuilder builder, IResetEntityT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IResetEntity.CreateIResetEntity(builder, resetEntityConfig_type, resetEntityConfigOffset);
 		}
 
-		// Token: 0x04011868 RID: 71784
+		// Token: 0x040127ED RID: 75757
 		private Table __p;
 	}
 }

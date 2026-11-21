@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061B3 RID: 25011
+	// Token: 0x02006821 RID: 26657
 	public class IAudioStateGroupT
 	{
-		// Token: 0x1700BA7F RID: 47743
-		// (get) Token: 0x0602B19A RID: 176538 RVA: 0x005F1678 File Offset: 0x005EF878
-		// (set) Token: 0x0602B19B RID: 176539 RVA: 0x005F1680 File Offset: 0x005EF880
+		// Token: 0x1700C402 RID: 50178
+		// (get) Token: 0x0602D8E1 RID: 186593 RVA: 0x0063C0EC File Offset: 0x0063A2EC
+		// (set) Token: 0x0602D8E2 RID: 186594 RVA: 0x0063C0F4 File Offset: 0x0063A2F4
 		public string Group { get; set; }
 
-		// Token: 0x1700BA80 RID: 47744
-		// (get) Token: 0x0602B19C RID: 176540 RVA: 0x005F1689 File Offset: 0x005EF889
-		// (set) Token: 0x0602B19D RID: 176541 RVA: 0x005F1691 File Offset: 0x005EF891
+		// Token: 0x1700C403 RID: 50179
+		// (get) Token: 0x0602D8E3 RID: 186595 RVA: 0x0063C0FD File Offset: 0x0063A2FD
+		// (set) Token: 0x0602D8E4 RID: 186596 RVA: 0x0063C105 File Offset: 0x0063A305
 		public List<string> States { get; set; }
 
-		// Token: 0x0602B19E RID: 176542 RVA: 0x005F169A File Offset: 0x005EF89A
+		// Token: 0x0602D8E5 RID: 186597 RVA: 0x0063C10E File Offset: 0x0063A30E
 		public IAudioStateGroupT()
 		{
 			this.Group = null;

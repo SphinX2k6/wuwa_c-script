@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004615 RID: 17941
+	// Token: 0x0200353E RID: 13630
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupTypeDangoBrawlItem : CommonPopViewBase, ICommonPopView
 	{
-		// Token: 0x0602E3C5 RID: 189381 RVA: 0x00AB1381 File Offset: 0x00AAF581
+		// Token: 0x06022ABA RID: 142010 RVA: 0x009DDA75 File Offset: 0x009DBC75
 		public override UUIItem GetAttachParent()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x0602E3C6 RID: 189382 RVA: 0x00AB138A File Offset: 0x00AAF58A
+		// Token: 0x06022ABB RID: 142011 RVA: 0x009DDA7E File Offset: 0x009DBC7E
 		public override UUIItem GetCostParent()
 		{
 			return base.GetItem(3);
 		}
 
-		// Token: 0x0602E3C7 RID: 189383 RVA: 0x00AB1394 File Offset: 0x00AAF594
+		// Token: 0x06022ABC RID: 142012 RVA: 0x009DDA88 File Offset: 0x009DBC88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Ui
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602E3C8 RID: 189384 RVA: 0x00AB14E4 File Offset: 0x00AAF6E4
+		// Token: 0x06022ABD RID: 142013 RVA: 0x009DDBD8 File Offset: 0x009DBDD8
 		public override void OnSetBackBtnShowState(bool state)
 		{
 			UUIItem uuiitem = base.GetButton(2).RootUIComp.Get();
@@ -66,17 +66,17 @@ namespace CSharpScript.Game.Ui
 			uuiitem.SetUIActive(state);
 		}
 
-		// Token: 0x0602E3C9 RID: 189385 RVA: 0x00AB1510 File Offset: 0x00AAF710
+		// Token: 0x06022ABE RID: 142014 RVA: 0x009DDC04 File Offset: 0x009DBE04
 		public override void OnSetCloseBtnInteractive(bool state)
 		{
 		}
 
-		// Token: 0x0602E3CA RID: 189386 RVA: 0x00AB1512 File Offset: 0x00AAF712
+		// Token: 0x06022ABF RID: 142015 RVA: 0x009DDC06 File Offset: 0x009DBE06
 		public override void OnSetHelpButtonActive(bool state)
 		{
 		}
 
-		// Token: 0x0602E3CB RID: 189387 RVA: 0x00AB1514 File Offset: 0x00AAF714
+		// Token: 0x06022AC0 RID: 142016 RVA: 0x009DDC08 File Offset: 0x009DBE08
 		public override void OnSetTitleByTextIdAndArg(string textId, params object[] args)
 		{
 			base.GetText(4).SetUIActive(!StringUtils.IsBlank(textId));
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Ui
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), textId, args);
 		}
 
-		// Token: 0x0602E3CC RID: 189388 RVA: 0x00AB1574 File Offset: 0x00AAF774
+		// Token: 0x06022AC1 RID: 142017 RVA: 0x009DDC68 File Offset: 0x009DBE68
 		public override void OnRefreshCost(CommonCurrencyItem[] commonCurrencyItemList)
 		{
 			foreach (CommonCurrencyItem commonCurrencyItem in commonCurrencyItemList)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E3CD RID: 189389 RVA: 0x00AB15B2 File Offset: 0x00AAF7B2
+		// Token: 0x06022AC2 RID: 142018 RVA: 0x009DDCA6 File Offset: 0x009DBEA6
 		protected override void OnBeforeShow()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(false);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Ui
 			battleManager.SetIsPauseByView(true, "PopupTypeDangoBrawlItem");
 		}
 
-		// Token: 0x0602E3CE RID: 189390 RVA: 0x00AB15CF File Offset: 0x00AAF7CF
+		// Token: 0x06022AC3 RID: 142019 RVA: 0x009DDCC3 File Offset: 0x009DBEC3
 		protected override void OnBeforeHide()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(false);
@@ -123,26 +123,26 @@ namespace CSharpScript.Game.Ui
 			battleManager.SetIsPauseByView(false, "PopupTypeDangoBrawlItem");
 		}
 
-		// Token: 0x0200A84D RID: 43085
+		// Token: 0x02009205 RID: 37381
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x040333BF RID: 209855
+			// Token: 0x0402DB4D RID: 187213
 			public const int Mask = 0;
 
-			// Token: 0x040333C0 RID: 209856
+			// Token: 0x0402DB4E RID: 187214
 			public const int Content = 1;
 
-			// Token: 0x040333C1 RID: 209857
+			// Token: 0x0402DB4F RID: 187215
 			public const int BackBtn = 2;
 
-			// Token: 0x040333C2 RID: 209858
+			// Token: 0x0402DB50 RID: 187216
 			public const int CostContent = 3;
 
-			// Token: 0x040333C3 RID: 209859
+			// Token: 0x0402DB51 RID: 187217
 			public const int TxtTitle = 4;
 
-			// Token: 0x040333C4 RID: 209860
+			// Token: 0x0402DB52 RID: 187218
 			public const int TxtExtraTitle = 5;
 		}
 	}

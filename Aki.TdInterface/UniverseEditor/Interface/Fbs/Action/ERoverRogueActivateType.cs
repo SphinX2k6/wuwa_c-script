@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FED RID: 24557
+	// Token: 0x02006647 RID: 26183
 	public enum ERoverRogueActivateType : byte
 	{
-		// Token: 0x0400FFA8 RID: 65448
+		// Token: 0x04010D79 RID: 68985
 		Shop,
-		// Token: 0x0400FFA9 RID: 65449
+		// Token: 0x04010D7A RID: 68986
 		Event,
-		// Token: 0x0400FFAA RID: 65450
+		// Token: 0x04010D7B RID: 68987
 		BlessGroup,
-		// Token: 0x0400FFAB RID: 65451
+		// Token: 0x04010D7C RID: 68988
 		Loot
 	}
 }

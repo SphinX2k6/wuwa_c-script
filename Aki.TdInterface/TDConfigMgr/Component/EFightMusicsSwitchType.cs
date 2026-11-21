@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000AA RID: 170
+	// Token: 0x020000B0 RID: 176
 	[EnumExtensions]
 	public enum EFightMusicsSwitchType
 	{
-		// Token: 0x040003F2 RID: 1010
+		// Token: 0x0400040E RID: 1038
 		SwitchByTag
 	}
 }

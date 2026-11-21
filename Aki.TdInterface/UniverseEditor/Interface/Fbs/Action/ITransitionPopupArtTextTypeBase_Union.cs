@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007442 RID: 29762
+	// Token: 0x02007C35 RID: 31797
 	public enum ITransitionPopupArtTextTypeBase_Union : byte
 	{
-		// Token: 0x040122C1 RID: 74433
+		// Token: 0x040132E8 RID: 78568
 		NONE,
-		// Token: 0x040122C2 RID: 74434
+		// Token: 0x040132E9 RID: 78569
 		ITransitionPopupArtTextTypeBase,
-		// Token: 0x040122C3 RID: 74435
+		// Token: 0x040132EA RID: 78570
 		ITransitionPopupYuanChengArtText
 	}
 }

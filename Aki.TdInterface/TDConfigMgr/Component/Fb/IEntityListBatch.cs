@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC2 RID: 2754
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B8C RID: 2956
 	public class IEntityListBatch : IEntityBatchType
 	{
-		// Token: 0x06003F6F RID: 16239 RVA: 0x000A2082 File Offset: 0x000A0282
+		// Token: 0x06004399 RID: 17305 RVA: 0x000AB676 File Offset: 0x000A9876
 		public static IEntityListBatch Create(IEntityListBatch? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FA8 RID: 4008
-		// (get) Token: 0x06003F70 RID: 16240 RVA: 0x000A20A1 File Offset: 0x000A02A1
+		// Token: 0x1700107C RID: 4220
+		// (get) Token: 0x0600439A RID: 17306 RVA: 0x000AB695 File Offset: 0x000A9895
 		public override EEntityBatchType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FA9 RID: 4009
-		// (get) Token: 0x06003F71 RID: 16241 RVA: 0x000A20B0 File Offset: 0x000A02B0
+		// Token: 0x1700107D RID: 4221
+		// (get) Token: 0x0600439B RID: 17307 RVA: 0x000AB6A4 File Offset: 0x000A98A4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400233D RID: 9021
+		// Token: 0x04002559 RID: 9561
 		private IEntityListBatch Instance;
 
-		// Token: 0x0400233E RID: 9022
+		// Token: 0x0400255A RID: 9562
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x0400233F RID: 9023
+		// Token: 0x0400255B RID: 9563
 		private bool _EntityIdsInited;
 	}
 }

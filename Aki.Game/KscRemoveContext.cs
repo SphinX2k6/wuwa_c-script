@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 
-// Token: 0x02000E81 RID: 3713
+// Token: 0x02000336 RID: 822
 [NullableContext(1)]
 [Nullable(0)]
 public class KscRemoveContext
 {
-	// Token: 0x06005AB6 RID: 23222 RVA: 0x001087C4 File Offset: 0x001069C4
+	// Token: 0x06002E4D RID: 11853 RVA: 0x00110474 File Offset: 0x0010E674
 	public void InitFromRemoveContext(FKSC_RemoveContext context, Dictionary<int, KscEntityHandle> entities)
 	{
 		KscEntityHandle kscEntityHandle;
@@ -28,7 +28,7 @@ public class KscRemoveContext
 		this.Params = null;
 	}
 
-	// Token: 0x06005AB7 RID: 23223 RVA: 0x00108894 File Offset: 0x00106A94
+	// Token: 0x06002E4E RID: 11854 RVA: 0x00110544 File Offset: 0x0010E744
 	public void InitFromLandFireContext(FKSC_LandFireContext context, Dictionary<int, KscEntityHandle> entities)
 	{
 		KscEntityHandle kscEntityHandle;
@@ -44,34 +44,34 @@ public class KscRemoveContext
 		this.Params = context.Params;
 	}
 
-	// Token: 0x0400296A RID: 10602
+	// Token: 0x04002A05 RID: 10757
 	public long CreatureDataId;
 
-	// Token: 0x0400296B RID: 10603
+	// Token: 0x04002A06 RID: 10758
 	public long KillerId;
 
-	// Token: 0x0400296C RID: 10604
+	// Token: 0x04002A07 RID: 10759
 	public FName? KillerType;
 
-	// Token: 0x0400296D RID: 10605
+	// Token: 0x04002A08 RID: 10760
 	public bool IsPreview;
 
-	// Token: 0x0400296E RID: 10606
+	// Token: 0x04002A09 RID: 10761
 	public Vector Location = Vector.Create();
 
-	// Token: 0x0400296F RID: 10607
+	// Token: 0x04002A0A RID: 10762
 	public FName ReasonName;
 
-	// Token: 0x04002970 RID: 10608
+	// Token: 0x04002A0B RID: 10763
 	public bool ClearCell;
 
-	// Token: 0x04002971 RID: 10609
+	// Token: 0x04002A0C RID: 10764
 	public int EffectRange;
 
-	// Token: 0x04002972 RID: 10610
+	// Token: 0x04002A0D RID: 10765
 	public int FireNum;
 
-	// Token: 0x04002973 RID: 10611
+	// Token: 0x04002A0E RID: 10766
 	[Nullable(2)]
 	public TMap<EKSC_AttrType, int> Params;
 }

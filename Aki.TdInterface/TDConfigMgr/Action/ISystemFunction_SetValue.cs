@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F10 RID: 7952
+	// Token: 0x02002149 RID: 8521
 	public class ISystemFunction_SetValue
 	{
-		// Token: 0x0400650F RID: 25871
+		// Token: 0x04006AFE RID: 27390
 		public ESystemFunction Type;
 	}
 }

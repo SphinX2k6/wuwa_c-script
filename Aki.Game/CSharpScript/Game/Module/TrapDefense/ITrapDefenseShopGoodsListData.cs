@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A78 RID: 19064
+	// Token: 0x02003A20 RID: 14880
 	[NullableContext(1)]
 	public interface ITrapDefenseShopGoodsListData
 	{
-		// Token: 0x17007AD2 RID: 31442
-		// (get) Token: 0x06031690 RID: 202384
-		// (set) Token: 0x06031691 RID: 202385
+		// Token: 0x17004E7F RID: 20095
+		// (get) Token: 0x06026420 RID: 156704
+		// (set) Token: 0x06026421 RID: 156705
 		ETrapDefenseShopGoodsType Type { get; set; }
 
-		// Token: 0x17007AD3 RID: 31443
-		// (get) Token: 0x06031692 RID: 202386
-		// (set) Token: 0x06031693 RID: 202387
+		// Token: 0x17004E80 RID: 20096
+		// (get) Token: 0x06026422 RID: 156706
+		// (set) Token: 0x06026423 RID: 156707
 		List<ITrapDefenseShopGoods> GoodsList { get; set; }
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E17 RID: 24087
+	// Token: 0x02004DFC RID: 19964
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarZheZhi : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D410 RID: 250896 RVA: 0x00EC2E50 File Offset: 0x00EC1050
+		// Token: 0x0603239F RID: 205727 RVA: 0x00E143B0 File Offset: 0x00E125B0
 		protected override UniTask InitSlotItem(UUIItem slotItem)
 		{
 			SpecialEnergyBarZheZhi.<InitSlotItem>d__4 <InitSlotItem>d__;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitSlotItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D411 RID: 250897 RVA: 0x00EC2E9C File Offset: 0x00EC109C
+		// Token: 0x060323A0 RID: 205728 RVA: 0x00E143FC File Offset: 0x00E125FC
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D412 RID: 250898 RVA: 0x00EC2F4C File Offset: 0x00EC114C
+		// Token: 0x060323A1 RID: 205729 RVA: 0x00E144AC File Offset: 0x00E126AC
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -75,14 +75,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D413 RID: 250899 RVA: 0x00EC2FEC File Offset: 0x00EC11EC
+		// Token: 0x060323A2 RID: 205730 RVA: 0x00E1454C File Offset: 0x00E1274C
 		private void OnSummonedTagChange(int tagId, bool bTagExists)
 		{
 			this.UpdateSummonedEnableCount();
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D414 RID: 250900 RVA: 0x00EC2FFC File Offset: 0x00EC11FC
+		// Token: 0x060323A3 RID: 205731 RVA: 0x00E1455C File Offset: 0x00E1275C
 		private void UpdateSummonedEnableCount()
 		{
 			this.SummonedEnableCount = 0;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D415 RID: 250901 RVA: 0x00EC308C File Offset: 0x00EC128C
+		// Token: 0x060323A4 RID: 205732 RVA: 0x00E145EC File Offset: 0x00E127EC
 		protected override void OnStart()
 		{
 			for (int i = 0; i < this.SlotItemList.Count; i++)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D416 RID: 250902 RVA: 0x00EC30E0 File Offset: 0x00EC12E0
+		// Token: 0x060323A5 RID: 205733 RVA: 0x00E14640 File Offset: 0x00E12840
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -135,10 +135,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0401FF18 RID: 130840
+		// Token: 0x0401A9DF RID: 109023
 		private const int SUMMON_NUM = 3;
 
-		// Token: 0x0401FF19 RID: 130841
+		// Token: 0x0401A9E0 RID: 109024
 		[StaticVariableRuleIgnore]
 		private static readonly float[] ExtraEnergyEffectParams = new float[]
 		{
@@ -147,10 +147,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			0.6f
 		};
 
-		// Token: 0x0401FF1A RID: 130842
+		// Token: 0x0401A9E1 RID: 109025
 		private readonly List<EntityHandle> SummonedList = new List<EntityHandle>();
 
-		// Token: 0x0401FF1B RID: 130843
+		// Token: 0x0401A9E2 RID: 109026
 		private int SummonedEnableCount;
 	}
 }

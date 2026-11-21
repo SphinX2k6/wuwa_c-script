@@ -1,46 +1,46 @@
 ﻿using System;
 
-// Token: 0x02000F4D RID: 3917
+// Token: 0x02000402 RID: 1026
 internal enum <DrinksSelectRoleView>F01E2AB55D59768EB783D0CBCF708012602EC84B1F17CBF84C781480098179390__EDefine
 {
-	// Token: 0x04002D66 RID: 11622
+	// Token: 0x04002DFF RID: 11775
 	Caption,
-	// Token: 0x04002D67 RID: 11623
+	// Token: 0x04002E00 RID: 11776
 	PanelRole,
-	// Token: 0x04002D68 RID: 11624
+	// Token: 0x04002E01 RID: 11777
 	RoleItem,
-	// Token: 0x04002D69 RID: 11625
+	// Token: 0x04002E02 RID: 11778
 	TxtRoleName,
-	// Token: 0x04002D6A RID: 11626
+	// Token: 0x04002E03 RID: 11779
 	SpriteLogoNor,
-	// Token: 0x04002D6B RID: 11627
+	// Token: 0x04002E04 RID: 11780
 	PanelComplete,
-	// Token: 0x04002D6C RID: 11628
+	// Token: 0x04002E05 RID: 11781
 	TxtWineName,
-	// Token: 0x04002D6D RID: 11629
+	// Token: 0x04002E06 RID: 11782
 	TxtWineDesc,
-	// Token: 0x04002D6E RID: 11630
+	// Token: 0x04002E07 RID: 11783
 	PanelUnknown,
-	// Token: 0x04002D6F RID: 11631
+	// Token: 0x04002E08 RID: 11784
 	TexIconWine,
-	// Token: 0x04002D70 RID: 11632
+	// Token: 0x04002E09 RID: 11785
 	ScrollViewReward,
-	// Token: 0x04002D71 RID: 11633
+	// Token: 0x04002E0A RID: 11786
 	ItemReward,
-	// Token: 0x04002D72 RID: 11634
+	// Token: 0x04002E0B RID: 11787
 	SpriteLock,
-	// Token: 0x04002D73 RID: 11635
+	// Token: 0x04002E0C RID: 11788
 	SpriteFinish,
-	// Token: 0x04002D74 RID: 11636
+	// Token: 0x04002E0D RID: 11789
 	BtnConfirm,
-	// Token: 0x04002D75 RID: 11637
+	// Token: 0x04002E0E RID: 11790
 	PanelActive,
-	// Token: 0x04002D76 RID: 11638
+	// Token: 0x04002E0F RID: 11791
 	BtnWine,
-	// Token: 0x04002D77 RID: 11639
+	// Token: 0x04002E10 RID: 11792
 	NiagaraSuccessGlow,
-	// Token: 0x04002D78 RID: 11640
+	// Token: 0x04002E11 RID: 11793
 	BtnGetReward,
-	// Token: 0x04002D79 RID: 11641
+	// Token: 0x04002E12 RID: 11794
 	RewardRedDot
 }

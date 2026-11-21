@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000701 RID: 1793
+	// Token: 0x020000EC RID: 236
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.ARFilter")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 240)]
 	public class FARFilter : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06006115 RID: 24853 RVA: 0x0008B2BD File Offset: 0x000894BD
+		// Token: 0x06001082 RID: 4226 RVA: 0x0001A450 File Offset: 0x00018650
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FARFilter._ScriptStructPtr != 0) ? FARFilter._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.ARFilter", ref FARFilter._ScriptStructPtr);
 		}
 
-		// Token: 0x17001765 RID: 5989
-		// (get) Token: 0x06006116 RID: 24854 RVA: 0x0008B2E4 File Offset: 0x000894E4
-		// (set) Token: 0x06006117 RID: 24855 RVA: 0x0008B327 File Offset: 0x00089527
+		// Token: 0x17000196 RID: 406
+		// (get) Token: 0x06001083 RID: 4227 RVA: 0x0001A474 File Offset: 0x00018674
+		// (set) Token: 0x06001084 RID: 4228 RVA: 0x0001A4B7 File Offset: 0x000186B7
 		public TArray<FName> PackageNames
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001766 RID: 5990
-		// (get) Token: 0x06006118 RID: 24856 RVA: 0x0008B338 File Offset: 0x00089538
-		// (set) Token: 0x06006119 RID: 24857 RVA: 0x0008B37B File Offset: 0x0008957B
+		// Token: 0x17000197 RID: 407
+		// (get) Token: 0x06001085 RID: 4229 RVA: 0x0001A4C8 File Offset: 0x000186C8
+		// (set) Token: 0x06001086 RID: 4230 RVA: 0x0001A50B File Offset: 0x0001870B
 		public TArray<FName> PackagePaths
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001767 RID: 5991
-		// (get) Token: 0x0600611A RID: 24858 RVA: 0x0008B38C File Offset: 0x0008958C
-		// (set) Token: 0x0600611B RID: 24859 RVA: 0x0008B3CF File Offset: 0x000895CF
+		// Token: 0x17000198 RID: 408
+		// (get) Token: 0x06001087 RID: 4231 RVA: 0x0001A51C File Offset: 0x0001871C
+		// (set) Token: 0x06001088 RID: 4232 RVA: 0x0001A55F File Offset: 0x0001875F
 		public TArray<FName> ObjectPaths
 		{
 			get
@@ -81,9 +81,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001768 RID: 5992
-		// (get) Token: 0x0600611C RID: 24860 RVA: 0x0008B3E0 File Offset: 0x000895E0
-		// (set) Token: 0x0600611D RID: 24861 RVA: 0x0008B423 File Offset: 0x00089623
+		// Token: 0x17000199 RID: 409
+		// (get) Token: 0x06001089 RID: 4233 RVA: 0x0001A570 File Offset: 0x00018770
+		// (set) Token: 0x0600108A RID: 4234 RVA: 0x0001A5B3 File Offset: 0x000187B3
 		public TArray<FName> ClassNames
 		{
 			get
@@ -102,9 +102,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001769 RID: 5993
-		// (get) Token: 0x0600611E RID: 24862 RVA: 0x0008B434 File Offset: 0x00089634
-		// (set) Token: 0x0600611F RID: 24863 RVA: 0x0008B477 File Offset: 0x00089677
+		// Token: 0x1700019A RID: 410
+		// (get) Token: 0x0600108B RID: 4235 RVA: 0x0001A5C4 File Offset: 0x000187C4
+		// (set) Token: 0x0600108C RID: 4236 RVA: 0x0001A607 File Offset: 0x00018807
 		public TSet<FName> RecursiveClassesExclusionSet
 		{
 			get
@@ -123,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700176A RID: 5994
-		// (get) Token: 0x06006120 RID: 24864 RVA: 0x0008B485 File Offset: 0x00089685
-		// (set) Token: 0x06006121 RID: 24865 RVA: 0x0008B495 File Offset: 0x00089695
+		// Token: 0x1700019B RID: 411
+		// (get) Token: 0x0600108D RID: 4237 RVA: 0x0001A615 File Offset: 0x00018815
+		// (set) Token: 0x0600108E RID: 4238 RVA: 0x0001A625 File Offset: 0x00018825
 		public unsafe bool bRecursivePaths
 		{
 			get
@@ -138,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700176B RID: 5995
-		// (get) Token: 0x06006122 RID: 24866 RVA: 0x0008B4A6 File Offset: 0x000896A6
-		// (set) Token: 0x06006123 RID: 24867 RVA: 0x0008B4B6 File Offset: 0x000896B6
+		// Token: 0x1700019C RID: 412
+		// (get) Token: 0x0600108F RID: 4239 RVA: 0x0001A636 File Offset: 0x00018836
+		// (set) Token: 0x06001090 RID: 4240 RVA: 0x0001A646 File Offset: 0x00018846
 		public unsafe bool bRecursiveClasses
 		{
 			get
@@ -153,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700176C RID: 5996
-		// (get) Token: 0x06006124 RID: 24868 RVA: 0x0008B4C7 File Offset: 0x000896C7
-		// (set) Token: 0x06006125 RID: 24869 RVA: 0x0008B4D7 File Offset: 0x000896D7
+		// Token: 0x1700019D RID: 413
+		// (get) Token: 0x06001091 RID: 4241 RVA: 0x0001A657 File Offset: 0x00018857
+		// (set) Token: 0x06001092 RID: 4242 RVA: 0x0001A667 File Offset: 0x00018867
 		public unsafe bool bIncludeOnlyOnDiskAssets
 		{
 			get
@@ -168,101 +168,88 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006126 RID: 24870 RVA: 0x0008B4E8 File Offset: 0x000896E8
+		// Token: 0x06001093 RID: 4243 RVA: 0x0001A678 File Offset: 0x00018878
 		public FARFilter()
 		{
 		}
 
-		// Token: 0x06006127 RID: 24871 RVA: 0x0008B4F0 File Offset: 0x000896F0
-		public FARFilter(TArray<FName> PackageNames, TArray<FName> PackagePaths, TArray<FName> ObjectPaths, TArray<FName> ClassNames, TSet<FName> RecursiveClassesExclusionSet, bool bRecursivePaths, bool bRecursiveClasses, bool bIncludeOnlyOnDiskAssets)
-		{
-			this.PackageNames = PackageNames;
-			this.PackagePaths = PackagePaths;
-			this.ObjectPaths = ObjectPaths;
-			this.ClassNames = ClassNames;
-			this.RecursiveClassesExclusionSet = RecursiveClassesExclusionSet;
-			this.bRecursivePaths = bRecursivePaths;
-			this.bRecursiveClasses = bRecursiveClasses;
-			this.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
-		}
-
-		// Token: 0x06006128 RID: 24872 RVA: 0x0008B540 File Offset: 0x00089740
+		// Token: 0x06001094 RID: 4244 RVA: 0x0001A680 File Offset: 0x00018880
 		protected override IntPtr GetUStructPtr()
 		{
 			return FARFilter.StaticStruct();
 		}
 
-		// Token: 0x06006129 RID: 24873 RVA: 0x0008B54C File Offset: 0x0008974C
+		// Token: 0x06001095 RID: 4245 RVA: 0x0001A68C File Offset: 0x0001888C
 		[NullableContext(2)]
 		public FARFilter(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600612A RID: 24874 RVA: 0x0008B556 File Offset: 0x00089756
+		// Token: 0x06001096 RID: 4246 RVA: 0x0001A696 File Offset: 0x00018896
 		public FARFilter(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600612B RID: 24875 RVA: 0x0008B561 File Offset: 0x00089761
+		// Token: 0x06001097 RID: 4247 RVA: 0x0001A6A1 File Offset: 0x000188A1
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FARFilter(Pointer, false, true);
 		}
 
-		// Token: 0x0600612C RID: 24876 RVA: 0x0008B56B File Offset: 0x0008976B
+		// Token: 0x06001098 RID: 4248 RVA: 0x0001A6AB File Offset: 0x000188AB
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FARFilter(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04002D64 RID: 11620
+		// Token: 0x040003F3 RID: 1011
 		public const string __ObjectPath = "/Script/CoreUObject.ARFilter";
 
-		// Token: 0x04002D65 RID: 11621
+		// Token: 0x040003F4 RID: 1012
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04002D66 RID: 11622
+		// Token: 0x040003F5 RID: 1013
 		internal static int __PropertyOffset_PackageNames;
 
-		// Token: 0x04002D67 RID: 11623
+		// Token: 0x040003F6 RID: 1014
 		[Nullable(2)]
 		private TArray<FName> _PackageNames;
 
-		// Token: 0x04002D68 RID: 11624
+		// Token: 0x040003F7 RID: 1015
 		internal static int __PropertyOffset_PackagePaths;
 
-		// Token: 0x04002D69 RID: 11625
+		// Token: 0x040003F8 RID: 1016
 		[Nullable(2)]
 		private TArray<FName> _PackagePaths;
 
-		// Token: 0x04002D6A RID: 11626
+		// Token: 0x040003F9 RID: 1017
 		internal static int __PropertyOffset_ObjectPaths;
 
-		// Token: 0x04002D6B RID: 11627
+		// Token: 0x040003FA RID: 1018
 		[Nullable(2)]
 		private TArray<FName> _ObjectPaths;
 
-		// Token: 0x04002D6C RID: 11628
+		// Token: 0x040003FB RID: 1019
 		internal static int __PropertyOffset_ClassNames;
 
-		// Token: 0x04002D6D RID: 11629
+		// Token: 0x040003FC RID: 1020
 		[Nullable(2)]
 		private TArray<FName> _ClassNames;
 
-		// Token: 0x04002D6E RID: 11630
+		// Token: 0x040003FD RID: 1021
 		internal static int __PropertyOffset_RecursiveClassesExclusionSet;
 
-		// Token: 0x04002D6F RID: 11631
+		// Token: 0x040003FE RID: 1022
 		[Nullable(2)]
 		private TSet<FName> _RecursiveClassesExclusionSet;
 
-		// Token: 0x04002D70 RID: 11632
+		// Token: 0x040003FF RID: 1023
 		internal static int __PropertyOffset_bRecursivePaths;
 
-		// Token: 0x04002D71 RID: 11633
+		// Token: 0x04000400 RID: 1024
 		internal static int __PropertyOffset_bRecursiveClasses;
 
-		// Token: 0x04002D72 RID: 11634
+		// Token: 0x04000401 RID: 1025
 		internal static int __PropertyOffset_bIncludeOnlyOnDiskAssets;
 	}
 }

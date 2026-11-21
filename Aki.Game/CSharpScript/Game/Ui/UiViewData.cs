@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200466D RID: 18029
+	// Token: 0x0200359E RID: 13726
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class UiViewData
 	{
-		// Token: 0x040194EF RID: 103663
+		// Token: 0x04013B96 RID: 80790
 		public string StartSequenceName;
 
-		// Token: 0x040194F0 RID: 103664
+		// Token: 0x04013B97 RID: 80791
 		public string CloseSequenceName;
 	}
 }

@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001ADC RID: 6876
+// Token: 0x02000F9B RID: 3995
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchBuffUpdateActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC04 RID: 52228 RVA: 0x002E8FBB File Offset: 0x002E71BB
+	// Token: 0x0600A015 RID: 40981 RVA: 0x002F414F File Offset: 0x002F234F
 	public FloroRanchBuffUpdateActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.BuffData = actionData.BuffOpGroup;
 	}
 
-	// Token: 0x0600CC05 RID: 52229 RVA: 0x002E8FD0 File Offset: 0x002E71D0
+	// Token: 0x0600A016 RID: 40982 RVA: 0x002F4164 File Offset: 0x002F2364
 	public override UniTask OnExecute()
 	{
 		FloroRanchBuffUpdateActionData.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchBuffUpdateActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DC8 RID: 24008
+	// Token: 0x04005E97 RID: 24215
 	private readonly FRUnitBuffOperateActionGroup BuffData;
 }

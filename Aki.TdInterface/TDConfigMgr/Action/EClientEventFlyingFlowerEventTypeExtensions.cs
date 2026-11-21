@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022DB RID: 8923
+	// Token: 0x0200254A RID: 9546
 	public static class EClientEventFlyingFlowerEventTypeExtensions
 	{
-		// Token: 0x0600C358 RID: 50008 RVA: 0x001C8B48 File Offset: 0x001C6D48
+		// Token: 0x0600CF27 RID: 53031 RVA: 0x001E0950 File Offset: 0x001DEB50
 		public static string ToEnumString(this EClientEventFlyingFlowerEventType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C359 RID: 50009 RVA: 0x001C8B70 File Offset: 0x001C6D70
+		// Token: 0x0600CF28 RID: 53032 RVA: 0x001E0978 File Offset: 0x001DEB78
 		public static EClientEventFlyingFlowerEventType FromString(string name)
 		{
 			EClientEventFlyingFlowerEventType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C35A RID: 50010 RVA: 0x001C8B99 File Offset: 0x001C6D99
+		// Token: 0x0600CF29 RID: 53033 RVA: 0x001E09A1 File Offset: 0x001DEBA1
 		public static bool TryFromString(string name, out EClientEventFlyingFlowerEventType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C35B RID: 50011 RVA: 0x001C8BBE File Offset: 0x001C6DBE
+		// Token: 0x0600CF2A RID: 53034 RVA: 0x001E09C6 File Offset: 0x001DEBC6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C35C RID: 50012 RVA: 0x001C8BCE File Offset: 0x001C6DCE
+		// Token: 0x0600CF2B RID: 53035 RVA: 0x001E09D6 File Offset: 0x001DEBD6
 		public static EClientEventFlyingFlowerEventType[] GetValues()
 		{
 			return new EClientEventFlyingFlowerEventType[1];
 		}
 
-		// Token: 0x0600C35D RID: 50013 RVA: 0x001C8BD6 File Offset: 0x001C6DD6
+		// Token: 0x0600CF2C RID: 53036 RVA: 0x001E09DE File Offset: 0x001DEBDE
 		public static string[] GetNames()
 		{
 			return new string[]

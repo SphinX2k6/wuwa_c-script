@@ -2,97 +2,97 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005974 RID: 22900
+	// Token: 0x0200494D RID: 18765
 	public class EGiantQuestChildType
 	{
-		// Token: 0x0401E50E RID: 124174
+		// Token: 0x04018FAC RID: 102316
 		public const int UiItemCaption = 0;
 
-		// Token: 0x0401E50F RID: 124175
+		// Token: 0x04018FAD RID: 102317
 		public const int TogMindsetWood = 1;
 
-		// Token: 0x0401E510 RID: 124176
+		// Token: 0x04018FAE RID: 102318
 		public const int TogMindsetFire = 2;
 
-		// Token: 0x0401E511 RID: 124177
+		// Token: 0x04018FAF RID: 102319
 		public const int TogMindsetWater = 3;
 
-		// Token: 0x0401E512 RID: 124178
+		// Token: 0x04018FB0 RID: 102320
 		public const int SvLoopQuestList = 4;
 
-		// Token: 0x0401E513 RID: 124179
+		// Token: 0x04018FB1 RID: 102321
 		public const int QuestCellTemplate = 5;
 
-		// Token: 0x0401E514 RID: 124180
+		// Token: 0x04018FB2 RID: 102322
 		public const int TexPortraitBg = 6;
 
-		// Token: 0x0401E515 RID: 124181
+		// Token: 0x04018FB3 RID: 102323
 		public const int BtnLevelPre = 7;
 
-		// Token: 0x0401E516 RID: 124182
+		// Token: 0x04018FB4 RID: 102324
 		public const int BtnLevelNext = 8;
 
-		// Token: 0x0401E517 RID: 124183
+		// Token: 0x04018FB5 RID: 102325
 		public const int SprIconBg = 9;
 
-		// Token: 0x0401E518 RID: 124184
+		// Token: 0x04018FB6 RID: 102326
 		public const int SprIcon = 10;
 
-		// Token: 0x0401E519 RID: 124185
+		// Token: 0x04018FB7 RID: 102327
 		public const int TxtName = 11;
 
-		// Token: 0x0401E51A RID: 124186
+		// Token: 0x04018FB8 RID: 102328
 		public const int TxtLv = 12;
 
-		// Token: 0x0401E51B RID: 124187
+		// Token: 0x04018FB9 RID: 102329
 		public const int PnlFeature = 13;
 
-		// Token: 0x0401E51C RID: 124188
+		// Token: 0x04018FBA RID: 102330
 		public const int TxtFeatureContent = 14;
 
-		// Token: 0x0401E51D RID: 124189
+		// Token: 0x04018FBB RID: 102331
 		public const int PnlLine = 15;
 
-		// Token: 0x0401E51E RID: 124190
+		// Token: 0x04018FBC RID: 102332
 		public const int PnlUnlock = 16;
 
-		// Token: 0x0401E51F RID: 124191
+		// Token: 0x04018FBD RID: 102333
 		public const int TxtUnlockContent = 17;
 
-		// Token: 0x0401E520 RID: 124192
+		// Token: 0x04018FBE RID: 102334
 		public const int PnlReward = 18;
 
-		// Token: 0x0401E521 RID: 124193
+		// Token: 0x04018FBF RID: 102335
 		public const int UiItemHorizontalScroll = 19;
 
-		// Token: 0x0401E522 RID: 124194
+		// Token: 0x04018FC0 RID: 102336
 		public const int UiItemItemBaseB2 = 20;
 
-		// Token: 0x0401E523 RID: 124195
+		// Token: 0x04018FC1 RID: 102337
 		public const int PnlOwned = 21;
 
-		// Token: 0x0401E524 RID: 124196
+		// Token: 0x04018FC2 RID: 102338
 		public const int ScrollCollected = 22;
 
-		// Token: 0x0401E525 RID: 124197
+		// Token: 0x04018FC3 RID: 102339
 		public const int PnlItemTemplate = 23;
 
-		// Token: 0x0401E526 RID: 124198
+		// Token: 0x04018FC4 RID: 102340
 		public const int BtnDeliver = 24;
 
-		// Token: 0x0401E527 RID: 124199
+		// Token: 0x04018FC5 RID: 102341
 		public const int PnlGiantSystemComplete = 25;
 
-		// Token: 0x0401E528 RID: 124200
+		// Token: 0x04018FC6 RID: 102342
 		public const int SprPointFeature = 26;
 
-		// Token: 0x0401E529 RID: 124201
+		// Token: 0x04018FC7 RID: 102343
 		public const int SprPointUnlock = 27;
 
-		// Token: 0x0401E52A RID: 124202
+		// Token: 0x04018FC8 RID: 102344
 		public const int TxtTraitTitle = 28;
 
-		// Token: 0x0401E52B RID: 124203
+		// Token: 0x04018FC9 RID: 102345
 		public const int TxtRewardTitle = 29;
 	}
 }

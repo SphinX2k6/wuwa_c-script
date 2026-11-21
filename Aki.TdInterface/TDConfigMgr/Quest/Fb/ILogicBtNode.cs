@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012FD RID: 4861
+	// Token: 0x0200144D RID: 5197
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ILogicBtNode : IBtNode
 	{
-		// Token: 0x06006ED7 RID: 28375 RVA: 0x0010BA5E File Offset: 0x00109C5E
-		[NullableContext(1)]
+		// Token: 0x06007577 RID: 30071 RVA: 0x00119FCA File Offset: 0x001181CA
+		[NullableContext(0)]
 		public static ILogicBtNode Create(ILogicBtNode? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022B0 RID: 8880
-		// (get) Token: 0x06006ED8 RID: 28376 RVA: 0x0010BA7D File Offset: 0x00109C7D
+		// Token: 0x1700247F RID: 9343
+		// (get) Token: 0x06007578 RID: 30072 RVA: 0x00119FE9 File Offset: 0x001181E9
 		public override EBtNode Type
 		{
 			get
@@ -36,8 +36,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B1 RID: 8881
-		// (get) Token: 0x06006ED9 RID: 28377 RVA: 0x0010BA8A File Offset: 0x00109C8A
+		// Token: 0x17002480 RID: 9344
+		// (get) Token: 0x06007579 RID: 30073 RVA: 0x00119FF6 File Offset: 0x001181F6
 		public override int Id
 		{
 			get
@@ -46,20 +46,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B2 RID: 8882
-		// (get) Token: 0x06006EDA RID: 28378 RVA: 0x0010BA97 File Offset: 0x00109C97
-		[Nullable(1)]
+		// Token: 0x17002481 RID: 9345
+		// (get) Token: 0x0600757A RID: 30074 RVA: 0x0011A003 File Offset: 0x00118203
+		[Nullable(0)]
 		public override string Desc
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.Desc;
 			}
 		}
 
-		// Token: 0x170022B3 RID: 8883
-		// (get) Token: 0x06006EDB RID: 28379 RVA: 0x0010BAA4 File Offset: 0x00109CA4
+		// Token: 0x17002482 RID: 9346
+		// (get) Token: 0x0600757B RID: 30075 RVA: 0x0011A010 File Offset: 0x00118210
 		public override IFixProcessor FixProcessor
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B4 RID: 8884
-		// (get) Token: 0x06006EDC RID: 28380 RVA: 0x0010BAD8 File Offset: 0x00109CD8
+		// Token: 0x17002483 RID: 9347
+		// (get) Token: 0x0600757C RID: 30076 RVA: 0x0011A044 File Offset: 0x00118244
 		public override bool? _FoldedForTree
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B5 RID: 8885
-		// (get) Token: 0x06006EDD RID: 28381 RVA: 0x0010BB10 File Offset: 0x00109D10
+		// Token: 0x17002484 RID: 9348
+		// (get) Token: 0x0600757D RID: 30077 RVA: 0x0011A07C File Offset: 0x0011827C
 		public override bool? Disabled
 		{
 			get
@@ -102,8 +102,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B6 RID: 8886
-		// (get) Token: 0x06006EDE RID: 28382 RVA: 0x0010BB48 File Offset: 0x00109D48
+		// Token: 0x17002485 RID: 9349
+		// (get) Token: 0x0600757E RID: 30078 RVA: 0x0011A0B4 File Offset: 0x001182B4
 		public override int? EdFragmentId
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B7 RID: 8887
-		// (get) Token: 0x06006EDF RID: 28383 RVA: 0x0010BB60 File Offset: 0x00109D60
+		// Token: 0x17002486 RID: 9350
+		// (get) Token: 0x0600757F RID: 30079 RVA: 0x0011A0CC File Offset: 0x001182CC
 		public override int? EdSubTreeId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B8 RID: 8888
-		// (get) Token: 0x06006EE0 RID: 28384 RVA: 0x0010BB76 File Offset: 0x00109D76
+		// Token: 0x17002487 RID: 9351
+		// (get) Token: 0x06007580 RID: 30080 RVA: 0x0011A0E2 File Offset: 0x001182E2
 		public override string EdSubTreeName
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022B9 RID: 8889
-		// (get) Token: 0x06006EE1 RID: 28385 RVA: 0x0010BB7C File Offset: 0x00109D7C
+		// Token: 0x17002488 RID: 9352
+		// (get) Token: 0x06007581 RID: 30081 RVA: 0x0011A0E8 File Offset: 0x001182E8
 		public override int? EdSubTreeSegment
 		{
 			get
@@ -142,19 +142,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022BA RID: 8890
-		// (get) Token: 0x06006EE2 RID: 28386 RVA: 0x0010BB92 File Offset: 0x00109D92
+		// Token: 0x17002489 RID: 9353
+		// (get) Token: 0x06007582 RID: 30082 RVA: 0x0011A0FE File Offset: 0x001182FE
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> EdDebugEnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -162,8 +162,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022BB RID: 8891
-		// (get) Token: 0x06006EE3 RID: 28387 RVA: 0x0010BB95 File Offset: 0x00109D95
+		// Token: 0x1700248A RID: 9354
+		// (get) Token: 0x06007583 RID: 30083 RVA: 0x0011A101 File Offset: 0x00118301
 		public virtual IQuestScheduleConfig UIConfig
 		{
 			get
@@ -178,8 +178,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022BC RID: 8892
-		// (get) Token: 0x06006EE4 RID: 28388 RVA: 0x0010BBC9 File Offset: 0x00109DC9
+		// Token: 0x1700248B RID: 9355
+		// (get) Token: 0x06007584 RID: 30084 RVA: 0x0011A135 File Offset: 0x00118335
 		public virtual Aki.TDConfigMgr.Quest.Fb.IInformationViewConfig InformationView
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022BD RID: 8893
-		// (get) Token: 0x06006EE5 RID: 28389 RVA: 0x0010BBFD File Offset: 0x00109DFD
+		// Token: 0x1700248C RID: 9356
+		// (get) Token: 0x06007585 RID: 30085 RVA: 0x0011A169 File Offset: 0x00118369
 		public virtual IInformationBoardConfig InformationBoard
 		{
 			get
@@ -210,8 +210,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022BE RID: 8894
-		// (get) Token: 0x06006EE6 RID: 28390 RVA: 0x0010BC31 File Offset: 0x00109E31
+		// Token: 0x1700248D RID: 9357
+		// (get) Token: 0x06007586 RID: 30086 RVA: 0x0011A19D File Offset: 0x0011839D
 		public virtual string TidQuestAliasName
 		{
 			get
@@ -220,8 +220,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022BF RID: 8895
-		// (get) Token: 0x06006EE7 RID: 28391 RVA: 0x0010BC3E File Offset: 0x00109E3E
+		// Token: 0x1700248E RID: 9358
+		// (get) Token: 0x06007587 RID: 30087 RVA: 0x0011A1AA File Offset: 0x001183AA
 		public virtual string TidQuestAliasDesc
 		{
 			get
@@ -230,8 +230,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C0 RID: 8896
-		// (get) Token: 0x06006EE8 RID: 28392 RVA: 0x0010BC4C File Offset: 0x00109E4C
+		// Token: 0x1700248F RID: 9359
+		// (get) Token: 0x06007588 RID: 30088 RVA: 0x0011A1B8 File Offset: 0x001183B8
 		public virtual int? DungeonId
 		{
 			get
@@ -244,8 +244,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C1 RID: 8897
-		// (get) Token: 0x06006EE9 RID: 28393 RVA: 0x0010BC84 File Offset: 0x00109E84
+		// Token: 0x17002490 RID: 9360
+		// (get) Token: 0x06007589 RID: 30089 RVA: 0x0011A1F0 File Offset: 0x001183F0
 		public virtual bool? DisableOnline
 		{
 			get
@@ -258,8 +258,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C2 RID: 8898
-		// (get) Token: 0x06006EEA RID: 28394 RVA: 0x0010BCBA File Offset: 0x00109EBA
+		// Token: 0x17002491 RID: 9361
+		// (get) Token: 0x0600758A RID: 30090 RVA: 0x0011A226 File Offset: 0x00118426
 		public virtual ISaveConfig SaveConfig
 		{
 			get
@@ -274,8 +274,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C3 RID: 8899
-		// (get) Token: 0x06006EEB RID: 28395 RVA: 0x0010BCEE File Offset: 0x00109EEE
+		// Token: 0x17002492 RID: 9362
+		// (get) Token: 0x0600758B RID: 30091 RVA: 0x0011A25A File Offset: 0x0011845A
 		public virtual IForceClosedRestriction ForceClosedRestriction
 		{
 			get
@@ -290,19 +290,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C4 RID: 8900
-		// (get) Token: 0x06006EEC RID: 28396 RVA: 0x0010BD24 File Offset: 0x00109F24
+		// Token: 0x17002493 RID: 9363
+		// (get) Token: 0x0600758C RID: 30092 RVA: 0x0011A290 File Offset: 0x00118490
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> Occupations
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -325,8 +325,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C5 RID: 8901
-		// (get) Token: 0x06006EED RID: 28397 RVA: 0x0010BD9A File Offset: 0x00109F9A
+		// Token: 0x17002494 RID: 9364
+		// (get) Token: 0x0600758D RID: 30093 RVA: 0x0011A306 File Offset: 0x00118506
 		public virtual ILogicNodeOccupation OccupationConfig
 		{
 			get
@@ -341,8 +341,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C6 RID: 8902
-		// (get) Token: 0x06006EEE RID: 28398 RVA: 0x0010BDD0 File Offset: 0x00109FD0
+		// Token: 0x17002495 RID: 9365
+		// (get) Token: 0x0600758E RID: 30094 RVA: 0x0011A33C File Offset: 0x0011853C
 		public virtual bool? DisableSwitchOccupation
 		{
 			get
@@ -355,8 +355,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C7 RID: 8903
-		// (get) Token: 0x06006EEF RID: 28399 RVA: 0x0010BE08 File Offset: 0x0010A008
+		// Token: 0x17002496 RID: 9366
+		// (get) Token: 0x0600758F RID: 30095 RVA: 0x0011A374 File Offset: 0x00118574
 		public virtual EBudgetCameraType? BudgetCameraType
 		{
 			get
@@ -369,8 +369,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C8 RID: 8904
-		// (get) Token: 0x06006EF0 RID: 28400 RVA: 0x0010BE3F File Offset: 0x0010A03F
+		// Token: 0x17002497 RID: 9367
+		// (get) Token: 0x06007590 RID: 30096 RVA: 0x0011A3AB File Offset: 0x001185AB
 		public virtual IQuestStatistics Statistics
 		{
 			get
@@ -385,8 +385,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022C9 RID: 8905
-		// (get) Token: 0x06006EF1 RID: 28401 RVA: 0x0010BE74 File Offset: 0x0010A074
+		// Token: 0x17002498 RID: 9368
+		// (get) Token: 0x06007591 RID: 30097 RVA: 0x0011A3E0 File Offset: 0x001185E0
 		public virtual ETrackViewMode? CompositeTrackViewMode
 		{
 			get
@@ -399,8 +399,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022CA RID: 8906
-		// (get) Token: 0x06006EF2 RID: 28402 RVA: 0x0010BEAE File Offset: 0x0010A0AE
+		// Token: 0x17002499 RID: 9369
+		// (get) Token: 0x06007592 RID: 30098 RVA: 0x0011A41A File Offset: 0x0011861A
 		public virtual IQuestRewardConfig RewardConfig
 		{
 			get
@@ -415,12 +415,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022CB RID: 8907
-		// (get) Token: 0x06006EF3 RID: 28403 RVA: 0x0010BEE2 File Offset: 0x0010A0E2
-		[Nullable(1)]
+		// Token: 0x1700249A RID: 9370
+		// (get) Token: 0x06007593 RID: 30099 RVA: 0x0011A44E File Offset: 0x0011864E
+		[Nullable(0)]
 		public virtual ISpecialGamePlayConfig SpecialGamePlayConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._SpecialGamePlayConfigInited)
@@ -433,12 +433,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022CC RID: 8908
-		// (get) Token: 0x06006EF4 RID: 28404 RVA: 0x0010BF11 File Offset: 0x0010A111
-		[Nullable(1)]
+		// Token: 0x1700249B RID: 9371
+		// (get) Token: 0x06007594 RID: 30100 RVA: 0x0011A47D File Offset: 0x0011867D
+		[Nullable(0)]
 		public virtual IEnableSystemConfig EnableSystem
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._EnableSystemInited)
@@ -451,8 +451,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022CD RID: 8909
-		// (get) Token: 0x06006EF5 RID: 28405 RVA: 0x0010BF40 File Offset: 0x0010A140
+		// Token: 0x1700249C RID: 9372
+		// (get) Token: 0x06007595 RID: 30101 RVA: 0x0011A4AC File Offset: 0x001186AC
 		public virtual IWaveConfig StartWave
 		{
 			get
@@ -467,8 +467,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022CE RID: 8910
-		// (get) Token: 0x06006EF6 RID: 28406 RVA: 0x0010BF74 File Offset: 0x0010A174
+		// Token: 0x1700249D RID: 9373
+		// (get) Token: 0x06007596 RID: 30102 RVA: 0x0011A4E0 File Offset: 0x001186E0
 		public virtual IDisableTrackAnim DisableTrackAnim
 		{
 			get
@@ -483,8 +483,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022CF RID: 8911
-		// (get) Token: 0x06006EF7 RID: 28407 RVA: 0x0010BFA8 File Offset: 0x0010A1A8
+		// Token: 0x1700249E RID: 9374
+		// (get) Token: 0x06007597 RID: 30103 RVA: 0x0011A514 File Offset: 0x00118714
 		public virtual bool? DisableSwitchGender
 		{
 			get
@@ -497,8 +497,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D0 RID: 8912
-		// (get) Token: 0x06006EF8 RID: 28408 RVA: 0x0010BFE4 File Offset: 0x0010A1E4
+		// Token: 0x1700249F RID: 9375
+		// (get) Token: 0x06007598 RID: 30104 RVA: 0x0011A550 File Offset: 0x00118750
 		public virtual bool? DisableFocusMode
 		{
 			get
@@ -511,8 +511,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D1 RID: 8913
-		// (get) Token: 0x06006EF9 RID: 28409 RVA: 0x0010C020 File Offset: 0x0010A220
+		// Token: 0x170024A0 RID: 9376
+		// (get) Token: 0x06007599 RID: 30105 RVA: 0x0011A58C File Offset: 0x0011878C
 		public virtual bool? DisableSkeletalAnimationCheck
 		{
 			get
@@ -525,8 +525,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D2 RID: 8914
-		// (get) Token: 0x06006EFA RID: 28410 RVA: 0x0010C05A File Offset: 0x0010A25A
+		// Token: 0x170024A1 RID: 9377
+		// (get) Token: 0x0600759A RID: 30106 RVA: 0x0011A5C6 File Offset: 0x001187C6
 		public virtual ILogicProgramSpecialProcess LogicProgramSpecialProcess
 		{
 			get
@@ -541,8 +541,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D3 RID: 8915
-		// (get) Token: 0x06006EFB RID: 28411 RVA: 0x0010C08E File Offset: 0x0010A28E
+		// Token: 0x170024A2 RID: 9378
+		// (get) Token: 0x0600759B RID: 30107 RVA: 0x0011A5FA File Offset: 0x001187FA
 		public virtual IQuestBuffActiveRange QuestBuffActiveRange
 		{
 			get
@@ -557,8 +557,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D4 RID: 8916
-		// (get) Token: 0x06006EFC RID: 28412 RVA: 0x0010C0C2 File Offset: 0x0010A2C2
+		// Token: 0x170024A3 RID: 9379
+		// (get) Token: 0x0600759C RID: 30108 RVA: 0x0011A62E File Offset: 0x0011882E
 		public virtual ISunSpiritProcess SunSpiritProcess
 		{
 			get
@@ -573,8 +573,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D5 RID: 8917
-		// (get) Token: 0x06006EFD RID: 28413 RVA: 0x0010C0F6 File Offset: 0x0010A2F6
+		// Token: 0x170024A4 RID: 9380
+		// (get) Token: 0x0600759D RID: 30109 RVA: 0x0011A662 File Offset: 0x00118862
 		public virtual ITrackAreaText ModifyTrackAreaText
 		{
 			get
@@ -589,8 +589,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D6 RID: 8918
-		// (get) Token: 0x06006EFE RID: 28414 RVA: 0x0010C12C File Offset: 0x0010A32C
+		// Token: 0x170024A5 RID: 9381
+		// (get) Token: 0x0600759E RID: 30110 RVA: 0x0011A698 File Offset: 0x00118898
 		public virtual bool? DisableGlobalTraffic
 		{
 			get
@@ -603,19 +603,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D7 RID: 8919
-		// (get) Token: 0x06006EFF RID: 28415 RVA: 0x0010C168 File Offset: 0x0010A368
+		// Token: 0x170024A6 RID: 9382
+		// (get) Token: 0x0600759F RID: 30111 RVA: 0x0011A6D4 File Offset: 0x001188D4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IAreaNameSystemPrompt> DisableSystemPrompt
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -638,8 +638,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D8 RID: 8920
-		// (get) Token: 0x06006F00 RID: 28416 RVA: 0x0010C1E6 File Offset: 0x0010A3E6
+		// Token: 0x170024A7 RID: 9383
+		// (get) Token: 0x060075A0 RID: 30112 RVA: 0x0011A752 File Offset: 0x00118952
 		public virtual ITrackCustomBoardOnBtLogicNode TrackCustomBoard
 		{
 			get
@@ -654,8 +654,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022D9 RID: 8921
-		// (get) Token: 0x06006F01 RID: 28417 RVA: 0x0010C21A File Offset: 0x0010A41A
+		// Token: 0x170024A8 RID: 9384
+		// (get) Token: 0x060075A1 RID: 30113 RVA: 0x0011A786 File Offset: 0x00118986
 		public virtual string EdTidQuestAliasName
 		{
 			get
@@ -664,8 +664,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022DA RID: 8922
-		// (get) Token: 0x06006F02 RID: 28418 RVA: 0x0010C21D File Offset: 0x0010A41D
+		// Token: 0x170024A9 RID: 9385
+		// (get) Token: 0x060075A2 RID: 30114 RVA: 0x0011A789 File Offset: 0x00118989
 		public virtual string EdTidQuestAliasDesc
 		{
 			get
@@ -674,139 +674,139 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F89 RID: 16265
+		// Token: 0x04004305 RID: 17157
 		private ILogicBtNode Instance;
 
-		// Token: 0x04003F8A RID: 16266
+		// Token: 0x04004306 RID: 17158
 		private IFixProcessor _FixProcessorCache;
 
-		// Token: 0x04003F8B RID: 16267
+		// Token: 0x04004307 RID: 17159
 		private bool _FixProcessorInited;
 
-		// Token: 0x04003F8C RID: 16268
+		// Token: 0x04004308 RID: 17160
 		private IQuestScheduleConfig _UIConfigCache;
 
-		// Token: 0x04003F8D RID: 16269
+		// Token: 0x04004309 RID: 17161
 		private bool _UIConfigInited;
 
-		// Token: 0x04003F8E RID: 16270
+		// Token: 0x0400430A RID: 17162
 		private Aki.TDConfigMgr.Quest.Fb.IInformationViewConfig _InformationViewCache;
 
-		// Token: 0x04003F8F RID: 16271
+		// Token: 0x0400430B RID: 17163
 		private bool _InformationViewInited;
 
-		// Token: 0x04003F90 RID: 16272
+		// Token: 0x0400430C RID: 17164
 		private IInformationBoardConfig _InformationBoardCache;
 
-		// Token: 0x04003F91 RID: 16273
+		// Token: 0x0400430D RID: 17165
 		private bool _InformationBoardInited;
 
-		// Token: 0x04003F92 RID: 16274
+		// Token: 0x0400430E RID: 17166
 		private ISaveConfig _SaveConfigCache;
 
-		// Token: 0x04003F93 RID: 16275
+		// Token: 0x0400430F RID: 17167
 		private bool _SaveConfigInited;
 
-		// Token: 0x04003F94 RID: 16276
+		// Token: 0x04004310 RID: 17168
 		private IForceClosedRestriction _ForceClosedRestrictionCache;
 
-		// Token: 0x04003F95 RID: 16277
+		// Token: 0x04004311 RID: 17169
 		private bool _ForceClosedRestrictionInited;
 
-		// Token: 0x04003F96 RID: 16278
+		// Token: 0x04004312 RID: 17170
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _OccupationsCache;
 
-		// Token: 0x04003F97 RID: 16279
+		// Token: 0x04004313 RID: 17171
 		private bool _OccupationsInited;
 
-		// Token: 0x04003F98 RID: 16280
+		// Token: 0x04004314 RID: 17172
 		private ILogicNodeOccupation _OccupationConfigCache;
 
-		// Token: 0x04003F99 RID: 16281
+		// Token: 0x04004315 RID: 17173
 		private bool _OccupationConfigInited;
 
-		// Token: 0x04003F9A RID: 16282
+		// Token: 0x04004316 RID: 17174
 		private IQuestStatistics _StatisticsCache;
 
-		// Token: 0x04003F9B RID: 16283
+		// Token: 0x04004317 RID: 17175
 		private bool _StatisticsInited;
 
-		// Token: 0x04003F9C RID: 16284
+		// Token: 0x04004318 RID: 17176
 		private IQuestRewardConfig _RewardConfigCache;
 
-		// Token: 0x04003F9D RID: 16285
+		// Token: 0x04004319 RID: 17177
 		private bool _RewardConfigInited;
 
-		// Token: 0x04003F9E RID: 16286
-		[Nullable(1)]
+		// Token: 0x0400431A RID: 17178
+		[Nullable(0)]
 		private ISpecialGamePlayConfig _SpecialGamePlayConfigCache;
 
-		// Token: 0x04003F9F RID: 16287
+		// Token: 0x0400431B RID: 17179
 		private bool _SpecialGamePlayConfigInited;
 
-		// Token: 0x04003FA0 RID: 16288
-		[Nullable(1)]
+		// Token: 0x0400431C RID: 17180
+		[Nullable(0)]
 		private IEnableSystemConfig _EnableSystemCache;
 
-		// Token: 0x04003FA1 RID: 16289
+		// Token: 0x0400431D RID: 17181
 		private bool _EnableSystemInited;
 
-		// Token: 0x04003FA2 RID: 16290
+		// Token: 0x0400431E RID: 17182
 		private IWaveConfig _StartWaveCache;
 
-		// Token: 0x04003FA3 RID: 16291
+		// Token: 0x0400431F RID: 17183
 		private bool _StartWaveInited;
 
-		// Token: 0x04003FA4 RID: 16292
+		// Token: 0x04004320 RID: 17184
 		private IDisableTrackAnim _DisableTrackAnimCache;
 
-		// Token: 0x04003FA5 RID: 16293
+		// Token: 0x04004321 RID: 17185
 		private bool _DisableTrackAnimInited;
 
-		// Token: 0x04003FA6 RID: 16294
+		// Token: 0x04004322 RID: 17186
 		private ILogicProgramSpecialProcess _LogicProgramSpecialProcessCache;
 
-		// Token: 0x04003FA7 RID: 16295
+		// Token: 0x04004323 RID: 17187
 		private bool _LogicProgramSpecialProcessInited;
 
-		// Token: 0x04003FA8 RID: 16296
+		// Token: 0x04004324 RID: 17188
 		private IQuestBuffActiveRange _QuestBuffActiveRangeCache;
 
-		// Token: 0x04003FA9 RID: 16297
+		// Token: 0x04004325 RID: 17189
 		private bool _QuestBuffActiveRangeInited;
 
-		// Token: 0x04003FAA RID: 16298
+		// Token: 0x04004326 RID: 17190
 		private ISunSpiritProcess _SunSpiritProcessCache;
 
-		// Token: 0x04003FAB RID: 16299
+		// Token: 0x04004327 RID: 17191
 		private bool _SunSpiritProcessInited;
 
-		// Token: 0x04003FAC RID: 16300
+		// Token: 0x04004328 RID: 17192
 		private ITrackAreaText _ModifyTrackAreaTextCache;
 
-		// Token: 0x04003FAD RID: 16301
+		// Token: 0x04004329 RID: 17193
 		private bool _ModifyTrackAreaTextInited;
 
-		// Token: 0x04003FAE RID: 16302
+		// Token: 0x0400432A RID: 17194
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAreaNameSystemPrompt> _DisableSystemPromptCache;
 
-		// Token: 0x04003FAF RID: 16303
+		// Token: 0x0400432B RID: 17195
 		private bool _DisableSystemPromptInited;
 
-		// Token: 0x04003FB0 RID: 16304
+		// Token: 0x0400432C RID: 17196
 		private ITrackCustomBoardOnBtLogicNode _TrackCustomBoardCache;
 
-		// Token: 0x04003FB1 RID: 16305
+		// Token: 0x0400432D RID: 17197
 		private bool _TrackCustomBoardInited;
 	}
 }

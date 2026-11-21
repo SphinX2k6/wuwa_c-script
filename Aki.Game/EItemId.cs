@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002012 RID: 8210
+// Token: 0x020014E5 RID: 5349
 public enum EItemId
 {
-	// Token: 0x04007729 RID: 30505
+	// Token: 0x04007812 RID: 30738
 	LevelExp = 1,
-	// Token: 0x0400772A RID: 30506
+	// Token: 0x04007813 RID: 30739
 	Gold,
-	// Token: 0x0400772B RID: 30507
+	// Token: 0x04007814 RID: 30740
 	BlackCard,
-	// Token: 0x0400772C RID: 30508
+	// Token: 0x04007815 RID: 30741
 	PayGold,
-	// Token: 0x0400772D RID: 30509
+	// Token: 0x04007816 RID: 30742
 	Power,
-	// Token: 0x0400772E RID: 30510
+	// Token: 0x04007817 RID: 30743
 	OverPower
 }

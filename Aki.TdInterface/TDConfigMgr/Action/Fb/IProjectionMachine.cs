@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002843 RID: 10307
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B16 RID: 11030
 	public class IProjectionMachine : IUiGame
 	{
-		// Token: 0x0600E480 RID: 58496 RVA: 0x0021A139 File Offset: 0x00218339
+		// Token: 0x0600F2A5 RID: 62117 RVA: 0x00236F9D File Offset: 0x0023519D
 		public static IProjectionMachine Create(IProjectionMachine? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045BC RID: 17852
-		// (get) Token: 0x0600E481 RID: 58497 RVA: 0x0021A158 File Offset: 0x00218358
+		// Token: 0x17004927 RID: 18727
+		// (get) Token: 0x0600F2A6 RID: 62118 RVA: 0x00236FBC File Offset: 0x002351BC
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045BD RID: 17853
-		// (get) Token: 0x0600E482 RID: 58498 RVA: 0x0021A165 File Offset: 0x00218365
+		// Token: 0x17004928 RID: 18728
+		// (get) Token: 0x0600F2A7 RID: 62119 RVA: 0x00236FC9 File Offset: 0x002351C9
 		public virtual int ItemId
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045BE RID: 17854
-		// (get) Token: 0x0600E483 RID: 58499 RVA: 0x0021A172 File Offset: 0x00218372
+		// Token: 0x17004929 RID: 18729
+		// (get) Token: 0x0600F2A8 RID: 62120 RVA: 0x00236FD6 File Offset: 0x002351D6
 		public virtual string PhotoAsset
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045BF RID: 17855
-		// (get) Token: 0x0600E484 RID: 58500 RVA: 0x0021A180 File Offset: 0x00218380
+		// Token: 0x1700492A RID: 18730
+		// (get) Token: 0x0600F2A9 RID: 62121 RVA: 0x00236FE4 File Offset: 0x002351E4
 		public virtual bool? HideFixedPhoto
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045C0 RID: 17856
-		// (get) Token: 0x0600E485 RID: 58501 RVA: 0x0021A1B6 File Offset: 0x002183B6
+		// Token: 0x1700492B RID: 18731
+		// (get) Token: 0x0600F2AA RID: 62122 RVA: 0x0023701A File Offset: 0x0023521A
 		[Nullable(2)]
 		public virtual IProjectionMachinePhotoFilter PhotoFilter
 		{
@@ -84,14 +82,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E6B RID: 32363
+		// Token: 0x04008528 RID: 34088
 		private IProjectionMachine Instance;
 
-		// Token: 0x04007E6C RID: 32364
+		// Token: 0x04008529 RID: 34089
 		[Nullable(2)]
 		private IProjectionMachinePhotoFilter _PhotoFilterCache;
 
-		// Token: 0x04007E6D RID: 32365
+		// Token: 0x0400852A RID: 34090
 		private bool _PhotoFilterInited;
 	}
 }

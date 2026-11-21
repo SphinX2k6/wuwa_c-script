@@ -4,17 +4,37 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
+using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C6 RID: 29382
-	[NullableContext(2)]
+	// Token: 0x02006448 RID: 25672
+	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraRotationZone
 	{
-		// Token: 0x06048141 RID: 295233 RVA: 0x0127B498 File Offset: 0x01279698
-		[NullableContext(1)]
+		// Token: 0x17007697 RID: 30359
+		// (get) Token: 0x0603E535 RID: 255285 RVA: 0x0121D82E File Offset: 0x0121BA2E
+		public string DebugPitchZoneState
+		{
+			get
+			{
+				return this.CameraPitchZoneState.ToString();
+			}
+		}
+
+		// Token: 0x17007698 RID: 30360
+		// (get) Token: 0x0603E536 RID: 255286 RVA: 0x0121D841 File Offset: 0x0121BA41
+		public string DebugYawZoneState
+		{
+			get
+			{
+				return this.CameraYawZoneState.ToString();
+			}
+		}
+
+		// Token: 0x0603E537 RID: 255287 RVA: 0x0121D854 File Offset: 0x0121BA54
 		public void Init(FightCameraLogicComponent camera)
 		{
 			this.Camera = camera;
@@ -22,7 +42,8 @@ namespace CSharpScript.Game.Camera
 			this.MotorStandByLargePitchTime = ConfigCommonParamById.GetFloatConfig("MotorJumpPitchTime").GetValueOrDefault(0.5f);
 		}
 
-		// Token: 0x06048142 RID: 295234 RVA: 0x0127B4E8 File Offset: 0x012796E8
+		// Token: 0x0603E538 RID: 255288 RVA: 0x0121D8A4 File Offset: 0x0121BAA4
+		[NullableContext(2)]
 		public void SetCharacter(EntityHandle characterEntityHandle)
 		{
 			this.CharacterEntityHandle = characterEntityHandle;
@@ -35,9 +56,11 @@ namespace CSharpScript.Game.Camera
 			this.CharacterActorComponent = this.CharacterEntityHandle.Entity.GetComponent<CharacterActorComponent>();
 			this.CharacterGlideComponent = this.CharacterEntityHandle.Entity.GetComponent<CharacterGlideComponent>();
 			this.CharacterAnimationComponent = this.CharacterEntityHandle.Entity.GetComponent<CharacterAnimationComponent>();
+			this.CharacterFlowerFlyingComponent = this.CharacterEntityHandle.Entity.GetComponent<CharacterFlowerFlyingComponent>();
 		}
 
-		// Token: 0x06048143 RID: 295235 RVA: 0x0127B56C File Offset: 0x0127976C
+		// Token: 0x0603E539 RID: 255289 RVA: 0x0121D940 File Offset: 0x0121BB40
+		[NullableContext(2)]
 		public void SetVehicle(EntityHandle vehicleEntityHandle)
 		{
 			this.VehicleEntityHandle = vehicleEntityHandle;
@@ -52,7 +75,7 @@ namespace CSharpScript.Game.Camera
 			this.VehicleTagComponent = this.VehicleEntityHandle.Entity.GetComponent<VehicleTagComponent>();
 		}
 
-		// Token: 0x06048144 RID: 295236 RVA: 0x0127B5D4 File Offset: 0x012797D4
+		// Token: 0x0603E53A RID: 255290 RVA: 0x0121D9A8 File Offset: 0x0121BBA8
 		public void UpdateInputState(float deltaTime)
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.None)
@@ -101,6 +124,22 @@ namespace CSharpScript.Game.Camera
 			{
 				this.YawRollbackTime += deltaTime;
 			}
+			if (!MathUtils.Instance.IsNearlyZero(this.InputVector.X, new double?(0.0001)))
+			{
+				this.PitchMovementRollbackTime = 0f;
+			}
+			else
+			{
+				this.PitchMovementRollbackTime += deltaTime;
+			}
+			if (!MathUtils.Instance.IsNearlyZero(this.InputVector.Y, new double?(0.0001)))
+			{
+				this.YawMovementRollbackTime = 0f;
+			}
+			else
+			{
+				this.YawMovementRollbackTime += deltaTime;
+			}
 			if (this.Camera.PlayerRotatorInGravity.Pitch > this.GetLargePitchStandByAngle())
 			{
 				this.StandByLargePitchAngle = 0f;
@@ -109,7 +148,7 @@ namespace CSharpScript.Game.Camera
 			this.StandByLargePitchAngle += deltaTime;
 		}
 
-		// Token: 0x06048145 RID: 295237 RVA: 0x0127B730 File Offset: 0x01279930
+		// Token: 0x0603E53B RID: 255291 RVA: 0x0121DB84 File Offset: 0x0121BD84
 		public void UpdatePitchZone(float deltaTime)
 		{
 			if (!this.CheckValid())
@@ -122,7 +161,7 @@ namespace CSharpScript.Game.Camera
 			}
 			this.UpdatePitchZoneLimit();
 			float num = this.Camera.PlayerRotatorInGravity.Pitch;
-			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
+			if ((this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower) && !this.CharacterActorComponent.ActorVelocityProxy.IsNearlyZero(9.999999747378752E-05))
 			{
 				global::Vector actorVelocityProxy = this.CharacterActorComponent.ActorVelocityProxy;
 				if (this.Camera.IsInNormalGravityMode())
@@ -140,12 +179,20 @@ namespace CSharpScript.Game.Camera
 			num += this.Camera.PitchBasis;
 			float pitchInGravity = CameraUtility.GetPitchInGravity(this.Camera.DesiredCamera.ArmRotation);
 			float deltaPitch = MathUtils.Instance.WrapAngle(num - pitchInGravity);
-			this.UpdateZonePitchState(deltaPitch, pitchInGravity);
-			float targetPitch = this.GetTargetPitch(num, pitchInGravity, deltaPitch, deltaTime);
-			CameraUtility.SetPitchInGravity(this.Camera.DesiredCamera.ArmRotation, (double)targetPitch, this.Camera.DesiredCamera.ArmRotation);
+			float num2;
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower)
+			{
+				num2 = this.GetTargetFlowerPitch(num, pitchInGravity, deltaPitch, deltaTime);
+			}
+			else
+			{
+				this.UpdateZonePitchState(deltaPitch, pitchInGravity);
+				num2 = this.GetTargetPitch(num, pitchInGravity, deltaPitch, deltaTime);
+			}
+			CameraUtility.SetPitchInGravity(this.Camera.DesiredCamera.ArmRotation, (double)num2, this.Camera.DesiredCamera.ArmRotation);
 		}
 
-		// Token: 0x06048146 RID: 295238 RVA: 0x0127B854 File Offset: 0x01279A54
+		// Token: 0x0603E53C RID: 255292 RVA: 0x0121DCEC File Offset: 0x0121BEEC
 		private void UpdatePitchZoneLimit()
 		{
 			this.PitchSoftZoneMin = this.Camera.PitchSoftZoneMin;
@@ -158,7 +205,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048147 RID: 295239 RVA: 0x0127B8DC File Offset: 0x01279ADC
+		// Token: 0x0603E53D RID: 255293 RVA: 0x0121DD74 File Offset: 0x0121BF74
 		private void UpdateZonePitchState(float deltaPitch, float cameraPitch)
 		{
 			if (deltaPitch >= this.PitchSoftZoneMin && deltaPitch <= this.PitchSoftZoneMax)
@@ -187,7 +234,7 @@ namespace CSharpScript.Game.Camera
 			bool enableDebug = this.EnableDebug;
 		}
 
-		// Token: 0x06048148 RID: 295240 RVA: 0x0127B974 File Offset: 0x01279B74
+		// Token: 0x0603E53E RID: 255294 RVA: 0x0121DE0C File Offset: 0x0121C00C
 		private float GetTargetPitch(float actorPitch, float cameraPitch, float deltaPitch, float deltaTime)
 		{
 			if (this.CameraPitchZoneState == CameraRotationZone.ECameraZoneState.Standby && this.IsStandByPitchFreeLook())
@@ -218,7 +265,7 @@ namespace CSharpScript.Game.Camera
 			return num2;
 		}
 
-		// Token: 0x06048149 RID: 295241 RVA: 0x0127BA98 File Offset: 0x01279C98
+		// Token: 0x0603E53F RID: 255295 RVA: 0x0121DF30 File Offset: 0x0121C130
 		public void UpdateYawZone(float deltaTime)
 		{
 			if (!this.CheckValid())
@@ -230,12 +277,20 @@ namespace CSharpScript.Game.Camera
 				return;
 			}
 			this.UpdateYawZoneLimit();
-			this.UpdateZoneYawState();
-			float targetYaw = this.GetTargetYaw(deltaTime);
-			CameraUtility.SetYawInGravity(this.Camera.DesiredCamera.ArmRotation, (double)targetYaw, this.Camera.DesiredCamera.ArmRotation);
+			float num;
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower)
+			{
+				num = this.GetTargetFlowerYaw(deltaTime);
+			}
+			else
+			{
+				this.UpdateZoneYawState();
+				num = this.GetTargetYaw(deltaTime);
+			}
+			CameraUtility.SetYawInGravity(this.Camera.DesiredCamera.ArmRotation, (double)num, this.Camera.DesiredCamera.ArmRotation);
 		}
 
-		// Token: 0x0604814A RID: 295242 RVA: 0x0127BAF4 File Offset: 0x01279CF4
+		// Token: 0x0603E540 RID: 255296 RVA: 0x0121DFA4 File Offset: 0x0121C1A4
 		private void UpdateYawZoneLimit()
 		{
 			this.YawSoftZoneMin = this.Camera.YawSoftZoneMin;
@@ -244,7 +299,7 @@ namespace CSharpScript.Game.Camera
 			this.YawDeadZoneMax = this.Camera.YawDeadZoneMax;
 		}
 
-		// Token: 0x0604814B RID: 295243 RVA: 0x0127BB48 File Offset: 0x01279D48
+		// Token: 0x0603E541 RID: 255297 RVA: 0x0121DFF8 File Offset: 0x0121C1F8
 		private void UpdateZoneYawState()
 		{
 			float yaw = this.Camera.PlayerRotatorInGravity.Yaw;
@@ -283,7 +338,7 @@ namespace CSharpScript.Game.Camera
 			bool enableDebug = this.EnableDebug;
 		}
 
-		// Token: 0x0604814C RID: 295244 RVA: 0x0127BC38 File Offset: 0x01279E38
+		// Token: 0x0603E542 RID: 255298 RVA: 0x0121E0E8 File Offset: 0x0121C2E8
 		private float GetTargetYaw(float deltaTime)
 		{
 			if (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.Standby && this.IsStandByYawFreeLook())
@@ -324,7 +379,7 @@ namespace CSharpScript.Game.Camera
 			return num2;
 		}
 
-		// Token: 0x0604814D RID: 295245 RVA: 0x0127BDB8 File Offset: 0x01279FB8
+		// Token: 0x0603E543 RID: 255299 RVA: 0x0121E268 File Offset: 0x0121C468
 		private float GetTargetYawInSoftZone(float cameraYaw, float targetDeltaYaw)
 		{
 			if (this.Camera.CameraZoneMode != EFightCameraZoneMode.Motor || !this.IsEnableSoftYawAddAngle() || MathUtils.Instance.IsNearlyZero(this.InputVector.Y, new double?(0.0001)))
@@ -338,7 +393,7 @@ namespace CSharpScript.Game.Camera
 			return MathUtils.Instance.WrapAngle(cameraYaw - targetDeltaYaw * this.Camera.YawSoftZoneSpeedRatio);
 		}
 
-		// Token: 0x0604814E RID: 295246 RVA: 0x0127BE64 File Offset: 0x0127A064
+		// Token: 0x0603E544 RID: 255300 RVA: 0x0121E314 File Offset: 0x0121C514
 		private float GetTargetYawDeadZoneTransitionToSoftZone(float cameraYaw, float targetDeltaYaw, float deltaYaw, float targetYaw)
 		{
 			if (this.IsDeadYawTransitionToSoftYawAddAngle(deltaYaw))
@@ -352,7 +407,7 @@ namespace CSharpScript.Game.Camera
 			return targetYaw;
 		}
 
-		// Token: 0x0604814F RID: 295247 RVA: 0x0127BEBC File Offset: 0x0127A0BC
+		// Token: 0x0603E545 RID: 255301 RVA: 0x0121E36C File Offset: 0x0121C56C
 		private float GetTargetYawTransitionToForward(float cameraYaw, float actorYaw, float targetDeltaYaw, float deltaYaw)
 		{
 			if (deltaYaw < 0f)
@@ -375,7 +430,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048150 RID: 295248 RVA: 0x0127BF38 File Offset: 0x0127A138
+		// Token: 0x0603E546 RID: 255302 RVA: 0x0121E3E8 File Offset: 0x0121C5E8
 		private float GetTargetPitchTransitionToForward(float cameraPitch, float actorPitch, float targetDeltaPitch, float deltaPitch)
 		{
 			if (deltaPitch < 0f)
@@ -398,7 +453,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048151 RID: 295249 RVA: 0x0127BF9C File Offset: 0x0127A19C
+		// Token: 0x0603E547 RID: 255303 RVA: 0x0121E44C File Offset: 0x0121C64C
 		private float ClampAxisAngle(bool isInSoftZone, float actorAngle, float targetAngle, float softZoneMinAngle, float softZoneMaxAngle, float deadZoneMinAngle, float deadZoneMaxAngle)
 		{
 			float num = MathUtils.Instance.WrapAngle(actorAngle - targetAngle);
@@ -415,7 +470,7 @@ namespace CSharpScript.Game.Camera
 			return targetAngle;
 		}
 
-		// Token: 0x06048152 RID: 295250 RVA: 0x0127BFF0 File Offset: 0x0127A1F0
+		// Token: 0x0603E548 RID: 255304 RVA: 0x0121E4A0 File Offset: 0x0121C6A0
 		private float ClampRelativePitchAngle(bool isInSoftZone, float targetPitch, float softZoneMinAngle, float softZoneMaxAngle, float deadZoneMinAngle, float deadZoneMaxAngle)
 		{
 			Rotator tmpRotator = this.TmpRotator;
@@ -436,7 +491,7 @@ namespace CSharpScript.Game.Camera
 			return tmpRotator.Pitch;
 		}
 
-		// Token: 0x06048153 RID: 295251 RVA: 0x0127C0B4 File Offset: 0x0127A2B4
+		// Token: 0x0603E549 RID: 255305 RVA: 0x0121E564 File Offset: 0x0121C764
 		private float ClampRelativeAxisAngle(bool isInSoftZone, float targetAngle, float softZoneMinAngle, float softZoneMaxAngle, float deadZoneMinAngle, float deadZoneMaxAngle)
 		{
 			float num = isInSoftZone ? softZoneMinAngle : deadZoneMinAngle;
@@ -452,67 +507,88 @@ namespace CSharpScript.Game.Camera
 			return targetAngle;
 		}
 
-		// Token: 0x06048154 RID: 295252 RVA: 0x0127C0E5 File Offset: 0x0127A2E5
+		// Token: 0x0603E54A RID: 255306 RVA: 0x0121E595 File Offset: 0x0121C795
 		private bool IsPitchZoneEnable()
 		{
 			return this.Camera.CameraZoneMode != EFightCameraZoneMode.None && this.Camera.CameraZoneMode != EFightCameraZoneMode.Horizontal;
 		}
 
-		// Token: 0x06048155 RID: 295253 RVA: 0x0127C107 File Offset: 0x0127A307
+		// Token: 0x0603E54B RID: 255307 RVA: 0x0121E5B7 File Offset: 0x0121C7B7
 		private bool IsYawZoneEnable()
 		{
 			return this.Camera.CameraZoneMode != EFightCameraZoneMode.None && this.Camera.CameraZoneMode != EFightCameraZoneMode.Horizontal;
 		}
 
-		// Token: 0x06048156 RID: 295254 RVA: 0x0127C12C File Offset: 0x0127A32C
+		// Token: 0x0603E54C RID: 255308 RVA: 0x0121E5DC File Offset: 0x0121C7DC
 		private bool IsStandbyYawEnable()
 		{
 			if (this.BlockSet.Count > 0)
 			{
 				return false;
 			}
+			bool flag = this.IsInCameraDrivenMove();
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
 			{
-				return this.Camera.CharacterMoveEnterState == ECharMoveState.Soar || this.CharacterAnimationComponent.HasKuroRootMotion || this.CharacterInputComponent.IsInCameraDrivenAutoFlightMode() || (this.YawInputTime > 0f && this.YawRollbackTime > 0f && !this.IsYawRollback());
+				return this.Camera.CharacterMoveEnterState == ECharMoveState.Soar || this.CharacterAnimationComponent.HasKuroRootMotion || flag || (this.YawInputTime > 0f && this.YawRollbackTime > 0f && !this.IsYawRollback());
 			}
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Vehicle)
 			{
 				return this.YawInputTime > 0f && this.YawRollbackTime > 0f && !this.IsYawRollback();
 			}
-			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && (!this.IsStandByLargePitchAngle() || this.VehicleTagComponent.HasAnyTag(this.VehicleStandbyZone) || this.VehicleActorComponent.ActorVelocityProxy.Size() <= 5.0 || (this.YawInputTime > 0f && this.YawRollbackTime > 0f && !this.IsYawRollback()));
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor)
+			{
+				return !this.IsStandByLargePitchAngle() || this.VehicleTagComponent.HasAnyTag(this.VehicleStandbyZone) || this.VehicleActorComponent.ActorVelocityProxy.Size() <= 5.0 || (this.YawInputTime > 0f && this.YawRollbackTime > 0f && !this.IsYawRollback());
+			}
+			return flag;
 		}
 
-		// Token: 0x06048157 RID: 295255 RVA: 0x0127C24C File Offset: 0x0127A44C
+		// Token: 0x0603E54D RID: 255309 RVA: 0x0121E6F8 File Offset: 0x0121C8F8
+		private bool IsInCameraDrivenMove()
+		{
+			bool flag = false;
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
+			{
+				flag |= this.CharacterInputComponent.IsInCameraDrivenAutoFlightMode();
+			}
+			return flag;
+		}
+
+		// Token: 0x0603E54E RID: 255310 RVA: 0x0121E724 File Offset: 0x0121C924
 		private bool IsStandbyPitchEnable()
 		{
 			if (this.BlockSet.Count > 0)
 			{
 				return false;
 			}
+			bool flag = this.IsInCameraDrivenMove();
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
 			{
-				return this.Camera.CharacterMoveEnterState == ECharMoveState.Soar || this.CharacterAnimationComponent.HasKuroRootMotion || this.CharacterInputComponent.IsInCameraDrivenAutoFlightMode() || (this.PitchRollbackTime > 0f && !this.IsPitchRollback());
+				return this.Camera.CharacterMoveEnterState == ECharMoveState.Soar || this.CharacterAnimationComponent.HasKuroRootMotion || flag || (this.PitchRollbackTime > 0f && !this.IsPitchRollback());
 			}
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Vehicle)
 			{
 				return this.PitchRollbackTime > 0f && !this.IsPitchRollback();
 			}
-			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && (!this.IsStandByLargePitchAngle() || this.VehicleTagComponent.HasAnyTag(this.VehicleStandbyZone) || this.VehicleActorComponent.ActorVelocityProxy.Size() <= 5.0 || (this.PitchRollbackTime > 0f && !this.IsPitchRollback()));
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor)
+			{
+				return !this.IsStandByLargePitchAngle() || this.VehicleTagComponent.HasAnyTag(this.VehicleStandbyZone) || this.VehicleActorComponent.ActorVelocityProxy.Size() <= 5.0 || (this.PitchRollbackTime > 0f && !this.IsPitchRollback());
+			}
+			return flag;
 		}
 
-		// Token: 0x06048158 RID: 295256 RVA: 0x0127C342 File Offset: 0x0127A542
+		// Token: 0x0603E54F RID: 255311 RVA: 0x0121E819 File Offset: 0x0121CA19
 		private bool IsDeadYawEnable()
 		{
-			return this.Camera.CameraZoneMode != EFightCameraZoneMode.Soar || !this.CharacterInputComponent.IsInCameraDrivenAutoFlightMode();
+			return this.Camera.CameraZoneMode != EFightCameraZoneMode.Soar || !this.IsInCameraDrivenMove();
 		}
 
-		// Token: 0x06048159 RID: 295257 RVA: 0x0127C362 File Offset: 0x0127A562
+		// Token: 0x0603E550 RID: 255312 RVA: 0x0121E834 File Offset: 0x0121CA34
 		private bool IsSoftYawEnable()
 		{
 			return (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor) && this.IsYawInputEnable() && this.IsYawRollback();
 		}
 
-		// Token: 0x0604815A RID: 295258 RVA: 0x0127C394 File Offset: 0x0127A594
+		// Token: 0x0603E551 RID: 255313 RVA: 0x0121E864 File Offset: 0x0121CA64
 		private bool IsSoftPitchEnable()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
@@ -522,13 +598,13 @@ namespace CSharpScript.Game.Camera
 			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && this.IsPitchInputEnable() && this.IsPitchRollback();
 		}
 
-		// Token: 0x0604815B RID: 295259 RVA: 0x0127C3ED File Offset: 0x0127A5ED
+		// Token: 0x0603E552 RID: 255314 RVA: 0x0121E8BD File Offset: 0x0121CABD
 		private bool IsEnableSoftYawAddAngle()
 		{
 			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor;
 		}
 
-		// Token: 0x0604815C RID: 295260 RVA: 0x0127C410 File Offset: 0x0127A610
+		// Token: 0x0603E553 RID: 255315 RVA: 0x0121E8E0 File Offset: 0x0121CAE0
 		private bool IsSoftYawAddAngle()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
@@ -538,25 +614,25 @@ namespace CSharpScript.Game.Camera
 			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && this.InputVector.Y > 0.0;
 		}
 
-		// Token: 0x0604815D RID: 295261 RVA: 0x0127C468 File Offset: 0x0127A668
+		// Token: 0x0603E554 RID: 255316 RVA: 0x0121E938 File Offset: 0x0121CB38
 		private bool IsDeadZoneTransitionToSoftZoneEnable()
 		{
 			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor;
 		}
 
-		// Token: 0x0604815E RID: 295262 RVA: 0x0127C489 File Offset: 0x0127A689
+		// Token: 0x0603E555 RID: 255317 RVA: 0x0121E959 File Offset: 0x0121CB59
 		private bool IsDeadYawTransitionToSoftYawAddAngle(float deltaYaw)
 		{
 			return (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor) && this.InputVector.Y > 0.0 && deltaYaw > 0f;
 		}
 
-		// Token: 0x0604815F RID: 295263 RVA: 0x0127C4C9 File Offset: 0x0127A6C9
+		// Token: 0x0603E556 RID: 255318 RVA: 0x0121E999 File Offset: 0x0121CB99
 		private bool IsDeadYawTransitionToSoftYawMinusAngle(float deltaYaw)
 		{
 			return (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor) && this.InputVector.Y < 0.0 && deltaYaw < 0f;
 		}
 
-		// Token: 0x06048160 RID: 295264 RVA: 0x0127C50C File Offset: 0x0127A70C
+		// Token: 0x0603E557 RID: 255319 RVA: 0x0121E9DC File Offset: 0x0121CBDC
 		private bool IsYawTransitionToForwardEnable()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar || this.Camera.CameraZoneMode == EFightCameraZoneMode.Vehicle)
@@ -566,7 +642,7 @@ namespace CSharpScript.Game.Camera
 			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && (this.IsYawRollback() || (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.InSoftZone && !MathUtils.Instance.IsNearlyZero(this.InputVector.Y, new double?(0.0001))));
 		}
 
-		// Token: 0x06048161 RID: 295265 RVA: 0x0127C588 File Offset: 0x0127A788
+		// Token: 0x0603E558 RID: 255320 RVA: 0x0121EA58 File Offset: 0x0121CC58
 		private bool IsPitchTransitionToForwardEnable()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Soar)
@@ -580,7 +656,7 @@ namespace CSharpScript.Game.Camera
 			return this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && (this.IsPitchRollback() || (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.InSoftZone && !MathUtils.Instance.IsNearlyZero(this.InputVector.X, new double?(0.0001))));
 		}
 
-		// Token: 0x06048162 RID: 295266 RVA: 0x0127C61C File Offset: 0x0127A81C
+		// Token: 0x0603E559 RID: 255321 RVA: 0x0121EAEC File Offset: 0x0121CCEC
 		private float GetYawSpeed()
 		{
 			float yaw = this.Camera.PlayerRotatorInGravity.Yaw;
@@ -589,19 +665,19 @@ namespace CSharpScript.Game.Camera
 			return MathUtils.Instance.Lerp(this.Camera.YawZoneSpeedMin, this.Camera.YawZoneSpeedMax, MathUtils.Instance.Clamp(Math.Abs(value) / this.YawDeadZoneMax, 0f, 1f));
 		}
 
-		// Token: 0x06048163 RID: 295267 RVA: 0x0127C69F File Offset: 0x0127A89F
+		// Token: 0x0603E55A RID: 255322 RVA: 0x0121EB6F File Offset: 0x0121CD6F
 		private bool IsStandByPitchFreeLook()
 		{
 			return this.Camera.CameraZoneMode != EFightCameraZoneMode.Motor;
 		}
 
-		// Token: 0x06048164 RID: 295268 RVA: 0x0127C6B2 File Offset: 0x0127A8B2
+		// Token: 0x0603E55B RID: 255323 RVA: 0x0121EB82 File Offset: 0x0121CD82
 		private bool IsStandByYawFreeLook()
 		{
 			return this.Camera.CameraZoneMode != EFightCameraZoneMode.Motor;
 		}
 
-		// Token: 0x06048165 RID: 295269 RVA: 0x0127C6C8 File Offset: 0x0127A8C8
+		// Token: 0x0603E55C RID: 255324 RVA: 0x0121EB98 File Offset: 0x0121CD98
 		private bool CheckValid()
 		{
 			EntityHandle characterEntityHandle = this.CharacterEntityHandle;
@@ -619,16 +695,20 @@ namespace CSharpScript.Game.Camera
 			{
 				return false;
 			}
-			CharacterGlideComponent characterGlideComponent = this.CharacterGlideComponent;
-			if (characterGlideComponent == null || !characterGlideComponent.Valid)
+			CharacterAnimationComponent characterAnimationComponent = this.CharacterAnimationComponent;
+			if (characterAnimationComponent == null || !characterAnimationComponent.Valid)
 			{
 				return false;
 			}
-			CharacterAnimationComponent characterAnimationComponent = this.CharacterAnimationComponent;
-			return characterAnimationComponent != null && characterAnimationComponent.Valid && (this.Camera.CameraZoneMode != EFightCameraZoneMode.Motor || this.IsVehicleValid());
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower)
+			{
+				return this.CheckFlowerValid();
+			}
+			CharacterGlideComponent characterGlideComponent = this.CharacterGlideComponent;
+			return characterGlideComponent != null && characterGlideComponent.Valid && (this.Camera.CameraZoneMode != EFightCameraZoneMode.Motor || this.IsVehicleValid());
 		}
 
-		// Token: 0x06048166 RID: 295270 RVA: 0x0127C76B File Offset: 0x0127A96B
+		// Token: 0x0603E55D RID: 255325 RVA: 0x0121EC50 File Offset: 0x0121CE50
 		private float GetLargePitchStandByAngle()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor)
@@ -638,7 +718,7 @@ namespace CSharpScript.Game.Camera
 			return 100f;
 		}
 
-		// Token: 0x06048167 RID: 295271 RVA: 0x0127C787 File Offset: 0x0127A987
+		// Token: 0x0603E55E RID: 255326 RVA: 0x0121EC6C File Offset: 0x0121CE6C
 		public float GetLargePitchStandByTime()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor)
@@ -648,39 +728,43 @@ namespace CSharpScript.Game.Camera
 			return 0.5f;
 		}
 
-		// Token: 0x06048168 RID: 295272 RVA: 0x0127C7A3 File Offset: 0x0127A9A3
+		// Token: 0x0603E55F RID: 255327 RVA: 0x0121EC88 File Offset: 0x0121CE88
 		public bool IsPitchRollback()
 		{
 			return this.PitchRollbackTime >= this.Camera.PitchRollbackEnableTime;
 		}
 
-		// Token: 0x06048169 RID: 295273 RVA: 0x0127C7BB File Offset: 0x0127A9BB
+		// Token: 0x0603E560 RID: 255328 RVA: 0x0121ECA0 File Offset: 0x0121CEA0
 		private bool IsPitchInputEnable()
 		{
 			return this.PitchInputTime >= this.Camera.PitchInputEnableTime;
 		}
 
-		// Token: 0x0604816A RID: 295274 RVA: 0x0127C7D3 File Offset: 0x0127A9D3
+		// Token: 0x0603E561 RID: 255329 RVA: 0x0121ECB8 File Offset: 0x0121CEB8
 		private bool IsYawRollback()
 		{
 			return this.YawRollbackTime >= this.Camera.YawRollbackEnableTime;
 		}
 
-		// Token: 0x0604816B RID: 295275 RVA: 0x0127C7EB File Offset: 0x0127A9EB
+		// Token: 0x0603E562 RID: 255330 RVA: 0x0121ECD0 File Offset: 0x0121CED0
 		public bool IsYawInputEnable()
 		{
 			return this.YawInputTime >= this.Camera.YawInputEnableTime;
 		}
 
-		// Token: 0x0604816C RID: 295276 RVA: 0x0127C803 File Offset: 0x0127AA03
+		// Token: 0x0603E563 RID: 255331 RVA: 0x0121ECE8 File Offset: 0x0121CEE8
 		private bool IsStandByLargePitchAngle()
 		{
 			return this.StandByLargePitchAngle >= this.GetLargePitchStandByTime();
 		}
 
-		// Token: 0x0604816D RID: 295277 RVA: 0x0127C818 File Offset: 0x0127AA18
+		// Token: 0x0603E564 RID: 255332 RVA: 0x0121ECFC File Offset: 0x0121CEFC
 		private bool IsHasPitchMovement()
 		{
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower)
+			{
+				return this.IsHasFlowerPitchMovement();
+			}
 			CharacterGlideComponent characterGlideComponent = this.CharacterGlideComponent;
 			if (characterGlideComponent != null && characterGlideComponent.Valid)
 			{
@@ -693,16 +777,24 @@ namespace CSharpScript.Game.Camera
 			return false;
 		}
 
-		// Token: 0x0604816E RID: 295278 RVA: 0x0127C87B File Offset: 0x0127AA7B
+		// Token: 0x0603E565 RID: 255333 RVA: 0x0121ED74 File Offset: 0x0121CF74
 		public bool IsHasPitchUpMovement()
 		{
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower)
+			{
+				return this.IsHasFlowerPitchUpMovement();
+			}
 			CharacterGlideComponent characterGlideComponent = this.CharacterGlideComponent;
 			return characterGlideComponent != null && characterGlideComponent.Valid && this.InputVector.X < 0.0;
 		}
 
-		// Token: 0x0604816F RID: 295279 RVA: 0x0127C8AC File Offset: 0x0127AAAC
+		// Token: 0x0603E566 RID: 255334 RVA: 0x0121EDC8 File Offset: 0x0121CFC8
 		public bool IsHasPitchHorizontalMovement()
 		{
+			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Flower)
+			{
+				return this.IsHasFlowerPitchHorizontalMovement();
+			}
 			CharacterGlideComponent characterGlideComponent = this.CharacterGlideComponent;
 			if (characterGlideComponent != null && characterGlideComponent.Valid)
 			{
@@ -715,7 +807,7 @@ namespace CSharpScript.Game.Camera
 			return false;
 		}
 
-		// Token: 0x06048170 RID: 295280 RVA: 0x0127C8EC File Offset: 0x0127AAEC
+		// Token: 0x0603E567 RID: 255335 RVA: 0x0121EE28 File Offset: 0x0121D028
 		public bool IsHasYawHorizontalMovement()
 		{
 			if (this.Camera.CameraZoneMode == EFightCameraZoneMode.Motor && this.IsVehicleValid())
@@ -725,46 +817,44 @@ namespace CSharpScript.Game.Camera
 			return !MathUtils.Instance.IsNearlyZero(this.InputVector.Y, new double?(0.0001));
 		}
 
-		// Token: 0x06048171 RID: 295281 RVA: 0x0127C981 File Offset: 0x0127AB81
-		[NullableContext(1)]
+		// Token: 0x0603E568 RID: 255336 RVA: 0x0121EEBD File Offset: 0x0121D0BD
 		public void Lock(object control)
 		{
 			this.BlockSet.Add(control);
 		}
 
-		// Token: 0x06048172 RID: 295282 RVA: 0x0127C990 File Offset: 0x0127AB90
-		[NullableContext(1)]
+		// Token: 0x0603E569 RID: 255337 RVA: 0x0121EECC File Offset: 0x0121D0CC
 		public void Unlock(object control)
 		{
 			this.BlockSet.Remove(control);
 		}
 
-		// Token: 0x06048173 RID: 295283 RVA: 0x0127C99F File Offset: 0x0127AB9F
+		// Token: 0x0603E56A RID: 255338 RVA: 0x0121EEDB File Offset: 0x0121D0DB
 		private bool IsVehicleValid()
 		{
 			EntityHandle vehicleEntityHandle = this.VehicleEntityHandle;
 			return vehicleEntityHandle != null && vehicleEntityHandle.Valid;
 		}
 
-		// Token: 0x06048174 RID: 295284 RVA: 0x0127C9B2 File Offset: 0x0127ABB2
+		// Token: 0x0603E56B RID: 255339 RVA: 0x0121EEEE File Offset: 0x0121D0EE
 		[Conditional("DEBUG")]
 		public void DebugDrawZone()
 		{
 		}
 
-		// Token: 0x06048175 RID: 295285 RVA: 0x0127C9B4 File Offset: 0x0127ABB4
+		// Token: 0x0603E56C RID: 255340 RVA: 0x0121EEF0 File Offset: 0x0121D0F0
 		[Conditional("DEBUG")]
 		private void DebugDrawYawSoftZone(float leftAngle, float rightAngle, float playerPitch, float playerYaw, FLinearColor color)
 		{
 		}
 
-		// Token: 0x06048176 RID: 295286 RVA: 0x0127C9B6 File Offset: 0x0127ABB6
+		// Token: 0x0603E56D RID: 255341 RVA: 0x0121EEF2 File Offset: 0x0121D0F2
 		[Conditional("DEBUG")]
 		private void DrawCamera()
 		{
 		}
 
-		// Token: 0x06048177 RID: 295287 RVA: 0x0127C9B8 File Offset: 0x0127ABB8
+		// Token: 0x0603E56E RID: 255342 RVA: 0x0121EEF4 File Offset: 0x0121D0F4
 		public void Clear()
 		{
 			this.Camera = null;
@@ -772,151 +862,309 @@ namespace CSharpScript.Game.Camera
 			this.CharacterInputComponent = null;
 			this.CharacterActorComponent = null;
 			this.CharacterGlideComponent = null;
+			this.CharacterFlowerFlyingComponent = null;
+			this.InputVector.Reset();
+			this.YawInputTime = 0f;
+			this.PitchInputTime = 0f;
+			this.YawRollbackTime = 0f;
+			this.PitchRollbackTime = 0f;
+			this.YawMovementRollbackTime = 0f;
+			this.PitchMovementRollbackTime = 0f;
 			this.CharacterAnimationComponent = null;
 			this.VehicleEntityHandle = null;
 			this.VehicleActorComponent = null;
 			this.VehicleTagComponent = null;
 		}
 
-		// Token: 0x04026076 RID: 155766
+		// Token: 0x0603E56F RID: 255343 RVA: 0x0121EF94 File Offset: 0x0121D194
+		private bool CheckFlowerValid()
+		{
+			CharacterFlowerFlyingComponent characterFlowerFlyingComponent = this.CharacterFlowerFlyingComponent;
+			return characterFlowerFlyingComponent != null && characterFlowerFlyingComponent.Valid && this.CharacterFlowerFlyingComponent.FlowerFlyingExtension != null;
+		}
+
+		// Token: 0x0603E570 RID: 255344 RVA: 0x0121EFBC File Offset: 0x0121D1BC
+		private float GetTargetFlowerPitch(float actorPitch, float cameraPitch, float deltaPitch, float deltaTime)
+		{
+			this.CameraPitchZoneState = this.GetFlowerPitchZoneState(deltaPitch);
+			float num = MathUtils.Instance.Lerp(this.Camera.PitchZoneSpeedMin, this.Camera.PitchZoneSpeedMax, MathUtils.Instance.Clamp(Math.Abs(deltaPitch) / this.PitchSoftZoneMax, 0f, 1f));
+			float targetDeltaPitch = deltaTime * num;
+			float num2 = cameraPitch;
+			if (this.CameraPitchZoneState != CameraRotationZone.ECameraZoneState.Standby && this.CameraPitchZoneState != CameraRotationZone.ECameraZoneState.InDeadZone)
+			{
+				num2 = this.GetTargetPitchTransitionToForward(cameraPitch, actorPitch, targetDeltaPitch, deltaPitch);
+				this.CameraPitchZoneState = this.GetFlowerPitchZoneState(MathUtils.Instance.WrapAngle(actorPitch - num2));
+			}
+			bool enableDebug = this.EnableDebug;
+			return this.ClampAxisAngle(this.CameraPitchZoneState == CameraRotationZone.ECameraZoneState.InSoftZone || this.CameraPitchZoneState == CameraRotationZone.ECameraZoneState.TransitionToForwardWithSoftZone, actorPitch, num2, this.PitchSoftZoneMin, this.PitchSoftZoneMax, this.PitchDeadZoneMin, this.PitchDeadZoneMax);
+		}
+
+		// Token: 0x0603E571 RID: 255345 RVA: 0x0121F090 File Offset: 0x0121D290
+		private float GetTargetFlowerYaw(float deltaTime)
+		{
+			float yaw = this.Camera.PlayerRotatorInGravity.Yaw;
+			float yawInGravity = CameraUtility.GetYawInGravity(this.Camera.DesiredCamera.ArmRotation);
+			float deltaYaw = MathUtils.Instance.WrapAngle(yaw - yawInGravity);
+			this.CameraYawZoneState = this.GetFlowerYawZoneState(deltaYaw);
+			float targetDeltaYaw = deltaTime * this.GetFlowerYawSpeed(deltaYaw);
+			float num = yawInGravity;
+			if (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.InSoftZone)
+			{
+				num = this.GetTargetFlowerYawInSoftZone(yawInGravity, targetDeltaYaw);
+			}
+			else if (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.DeadZoneTransitionToSoftZone)
+			{
+				num = this.GetTargetFlowerYawDeadZoneTransitionToSoftZone(yawInGravity, targetDeltaYaw, deltaYaw);
+				this.CameraYawZoneState = this.GetFlowerYawZoneState(MathUtils.Instance.WrapAngle(yaw - num));
+			}
+			else if (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.TransitionToForwardWithSoftZone)
+			{
+				num = this.GetTargetYawTransitionToForward(yawInGravity, yaw, targetDeltaYaw, deltaYaw);
+			}
+			bool enableDebug = this.EnableDebug;
+			num = this.ClampAxisAngle(this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.InSoftZone || this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.TransitionToForwardWithSoftZone, yaw, num, this.YawSoftZoneMin, this.YawSoftZoneMax, this.YawDeadZoneMin, this.YawDeadZoneMax);
+			bool enableDebug2 = this.EnableDebug;
+			return num;
+		}
+
+		// Token: 0x0603E572 RID: 255346 RVA: 0x0121F190 File Offset: 0x0121D390
+		private float GetTargetFlowerYawInSoftZone(float cameraYaw, float targetDeltaYaw)
+		{
+			if (MathUtils.Instance.IsNearlyZero(this.InputVector.Y, new double?(0.0001)))
+			{
+				return cameraYaw;
+			}
+			float num = targetDeltaYaw * this.Camera.YawSoftZoneSpeedRatio;
+			return MathUtils.Instance.WrapAngle(cameraYaw + ((this.InputVector.Y > 0.0) ? num : (-num)));
+		}
+
+		// Token: 0x0603E573 RID: 255347 RVA: 0x0121F1FC File Offset: 0x0121D3FC
+		private float GetTargetFlowerYawDeadZoneTransitionToSoftZone(float cameraYaw, float targetDeltaYaw, float deltaYaw)
+		{
+			float num = MathUtils.Instance.WrapAngle(deltaYaw - this.YawSoftZoneMin);
+			float num2 = MathUtils.Instance.WrapAngle(deltaYaw - this.YawSoftZoneMax);
+			float currentValue = (Math.Abs(num) < Math.Abs(num2)) ? num : num2;
+			float num3 = Math.Max(0f, targetDeltaYaw * this.Camera.YawDeadZoneTransToSoftZoneSpeedRatio);
+			return MathUtils.Instance.WrapAngle(cameraYaw + MathUtils.Instance.Clamp(currentValue, -num3, num3));
+		}
+
+		// Token: 0x0603E574 RID: 255348 RVA: 0x0121F274 File Offset: 0x0121D474
+		private float GetFlowerYawSpeed(float deltaYaw)
+		{
+			float num = (this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.InSoftZone || this.CameraYawZoneState == CameraRotationZone.ECameraZoneState.TransitionToForwardWithSoftZone) ? this.YawSoftZoneMax : this.YawDeadZoneMax;
+			num = Math.Max(0.0001f, num);
+			return MathUtils.Instance.Lerp(this.Camera.YawZoneSpeedMin, this.Camera.YawZoneSpeedMax, MathUtils.Instance.Clamp(Math.Abs(deltaYaw) / num, 0f, 1f));
+		}
+
+		// Token: 0x0603E575 RID: 255349 RVA: 0x0121F2EC File Offset: 0x0121D4EC
+		private CameraRotationZone.ECameraZoneState GetFlowerPitchZoneState(float deltaPitch)
+		{
+			float item = this.CharacterInputComponent.GetCameraInput().Item2;
+			return this.GetFlowerZoneState(this.CameraPitchZoneState, deltaPitch, this.PitchSoftZoneMin, this.PitchSoftZoneMax, this.PitchRollbackTime, this.PitchMovementRollbackTime, this.Camera.PitchRollbackEnableTime, this.Camera.PitchRollbackEnableTime, !MathUtils.Instance.IsNearlyZero((double)item, new double?(0.0001)));
+		}
+
+		// Token: 0x0603E576 RID: 255350 RVA: 0x0121F364 File Offset: 0x0121D564
+		private CameraRotationZone.ECameraZoneState GetFlowerYawZoneState(float deltaYaw)
+		{
+			float item = this.CharacterInputComponent.GetCameraInput().Item1;
+			return this.GetFlowerZoneState(this.CameraYawZoneState, deltaYaw, this.YawSoftZoneMin, this.YawSoftZoneMax, this.YawRollbackTime, this.YawMovementRollbackTime, this.Camera.YawRollbackEnableTime, this.Camera.YawSoftZoneRollbackEnableTime, !MathUtils.Instance.IsNearlyZero((double)item, new double?(0.0001)));
+		}
+
+		// Token: 0x0603E577 RID: 255351 RVA: 0x0121F3DC File Offset: 0x0121D5DC
+		private CameraRotationZone.ECameraZoneState GetFlowerZoneState(CameraRotationZone.ECameraZoneState currentState, float deltaAngle, float softZoneMin, float softZoneMax, float rollbackTime, float movementRollbackTime, float rollbackEnableTime, float movementRollbackEnableTime, bool hasCameraInput)
+		{
+			if (hasCameraInput || this.BlockSet.Count > 0)
+			{
+				return CameraRotationZone.ECameraZoneState.InDeadZone;
+			}
+			if (rollbackTime < rollbackEnableTime)
+			{
+				return CameraRotationZone.ECameraZoneState.Standby;
+			}
+			if (currentState != CameraRotationZone.ECameraZoneState.InSoftZone && currentState != CameraRotationZone.ECameraZoneState.TransitionToForwardWithSoftZone && ((double)deltaAngle < (double)softZoneMin - 0.0001 || (double)deltaAngle > (double)softZoneMax + 0.0001))
+			{
+				return CameraRotationZone.ECameraZoneState.DeadZoneTransitionToSoftZone;
+			}
+			if (movementRollbackTime < movementRollbackEnableTime)
+			{
+				return CameraRotationZone.ECameraZoneState.InSoftZone;
+			}
+			return CameraRotationZone.ECameraZoneState.TransitionToForwardWithSoftZone;
+		}
+
+		// Token: 0x0603E578 RID: 255352 RVA: 0x0121F439 File Offset: 0x0121D639
+		private bool IsHasFlowerPitchMovement()
+		{
+			return !MathUtils.Instance.IsNearlyZero(this.InputVector.X, new double?(0.0001));
+		}
+
+		// Token: 0x0603E579 RID: 255353 RVA: 0x0121F461 File Offset: 0x0121D661
+		private bool IsHasFlowerPitchUpMovement()
+		{
+			return this.InputVector.X > 0.0;
+		}
+
+		// Token: 0x0603E57A RID: 255354 RVA: 0x0121F47C File Offset: 0x0121D67C
+		private bool IsHasFlowerPitchHorizontalMovement()
+		{
+			CharacterFlowerFlyingComponent characterFlowerFlyingComponent = this.CharacterFlowerFlyingComponent;
+			UKuroCustomMovementFlowerFlying ukuroCustomMovementFlowerFlying = (characterFlowerFlyingComponent != null) ? characterFlowerFlyingComponent.FlowerFlyingExtension : null;
+			float value = (ukuroCustomMovementFlowerFlying != null) ? ukuroCustomMovementFlowerFlying.GetDirectionInput().X : 0f;
+			float value2 = (ukuroCustomMovementFlowerFlying != null) ? ukuroCustomMovementFlowerFlying.GetCurrentPitch() : 0f;
+			return MathUtils.Instance.IsNearlyZero((double)Math.Abs(value), new double?((double)0.001f)) && MathUtils.Instance.IsNearlyZero((double)Math.Abs(value2), new double?((double)0.001f));
+		}
+
+		// Token: 0x04021356 RID: 136022
 		private const int CAMERA_DIRECTION_LENGTH = 500;
 
-		// Token: 0x04026077 RID: 155767
+		// Token: 0x04021357 RID: 136023
 		private const int CAMERA_DIRECTION_ARROW_SIZE = 2000;
 
-		// Token: 0x04026078 RID: 155768
+		// Token: 0x04021358 RID: 136024
 		private const int INVALID_PITCH_THRESHOLD = 100;
 
-		// Token: 0x04026079 RID: 155769
+		// Token: 0x04021359 RID: 136025
 		private const float INVALID_PITCH_TIME = 0.5f;
 
-		// Token: 0x0402607A RID: 155770
-		[Nullable(1)]
+		// Token: 0x0402135A RID: 136026
 		private readonly int[] VehicleStandbyZone = new int[]
 		{
 			GameplayTagDefine.EGameplayTagId["载具.摩托.功能开关.镜头保持"]
 		};
 
-		// Token: 0x0402607B RID: 155771
+		// Token: 0x0402135B RID: 136027
 		private float MotorStandByLargePitchAngle = 85f;
 
-		// Token: 0x0402607C RID: 155772
+		// Token: 0x0402135C RID: 136028
 		private float MotorStandByLargePitchTime = 2f;
 
-		// Token: 0x0402607D RID: 155773
+		// Token: 0x0402135D RID: 136029
+		[Nullable(2)]
 		private FightCameraLogicComponent Camera;
 
-		// Token: 0x0402607E RID: 155774
+		// Token: 0x0402135E RID: 136030
+		[Nullable(2)]
 		private EntityHandle CharacterEntityHandle;
 
-		// Token: 0x0402607F RID: 155775
+		// Token: 0x0402135F RID: 136031
+		[Nullable(2)]
 		private CharacterInputComponent CharacterInputComponent;
 
-		// Token: 0x04026080 RID: 155776
+		// Token: 0x04021360 RID: 136032
+		[Nullable(2)]
 		private CharacterActorComponent CharacterActorComponent;
 
-		// Token: 0x04026081 RID: 155777
+		// Token: 0x04021361 RID: 136033
+		[Nullable(2)]
 		private CharacterGlideComponent CharacterGlideComponent;
 
-		// Token: 0x04026082 RID: 155778
+		// Token: 0x04021362 RID: 136034
+		[Nullable(2)]
 		private CharacterAnimationComponent CharacterAnimationComponent;
 
-		// Token: 0x04026083 RID: 155779
+		// Token: 0x04021363 RID: 136035
+		[Nullable(2)]
+		private CharacterFlowerFlyingComponent CharacterFlowerFlyingComponent;
+
+		// Token: 0x04021364 RID: 136036
+		[Nullable(2)]
 		private EntityHandle VehicleEntityHandle;
 
-		// Token: 0x04026084 RID: 155780
+		// Token: 0x04021365 RID: 136037
+		[Nullable(2)]
 		private VehicleActorComponent VehicleActorComponent;
 
-		// Token: 0x04026085 RID: 155781
+		// Token: 0x04021366 RID: 136038
+		[Nullable(2)]
 		private VehicleTagComponent VehicleTagComponent;
 
-		// Token: 0x04026086 RID: 155782
+		// Token: 0x04021367 RID: 136039
 		private CameraRotationZone.ECameraZoneState CameraPitchZoneState;
 
-		// Token: 0x04026087 RID: 155783
+		// Token: 0x04021368 RID: 136040
 		private CameraRotationZone.ECameraZoneState CameraYawZoneState;
 
-		// Token: 0x04026088 RID: 155784
+		// Token: 0x04021369 RID: 136041
 		private float StandByLargePitchAngle;
 
-		// Token: 0x04026089 RID: 155785
+		// Token: 0x0402136A RID: 136042
 		private float YawInputTime;
 
-		// Token: 0x0402608A RID: 155786
+		// Token: 0x0402136B RID: 136043
 		private float YawRollbackTime;
 
-		// Token: 0x0402608B RID: 155787
+		// Token: 0x0402136C RID: 136044
+		private float YawMovementRollbackTime;
+
+		// Token: 0x0402136D RID: 136045
 		private float YawSoftZoneMin;
 
-		// Token: 0x0402608C RID: 155788
+		// Token: 0x0402136E RID: 136046
 		private float YawSoftZoneMax;
 
-		// Token: 0x0402608D RID: 155789
+		// Token: 0x0402136F RID: 136047
 		private float YawDeadZoneMin;
 
-		// Token: 0x0402608E RID: 155790
+		// Token: 0x04021370 RID: 136048
 		private float YawDeadZoneMax;
 
-		// Token: 0x0402608F RID: 155791
+		// Token: 0x04021371 RID: 136049
 		private float PitchInputTime;
 
-		// Token: 0x04026090 RID: 155792
+		// Token: 0x04021372 RID: 136050
 		private float PitchRollbackTime;
 
-		// Token: 0x04026091 RID: 155793
+		// Token: 0x04021373 RID: 136051
+		private float PitchMovementRollbackTime;
+
+		// Token: 0x04021374 RID: 136052
 		private float PitchSoftZoneMin;
 
-		// Token: 0x04026092 RID: 155794
+		// Token: 0x04021375 RID: 136053
 		private float PitchSoftZoneMax;
 
-		// Token: 0x04026093 RID: 155795
+		// Token: 0x04021376 RID: 136054
 		private float PitchDeadZoneMin;
 
-		// Token: 0x04026094 RID: 155796
+		// Token: 0x04021377 RID: 136055
 		private float PitchDeadZoneMax;
 
-		// Token: 0x04026095 RID: 155797
-		[Nullable(1)]
+		// Token: 0x04021378 RID: 136056
 		private readonly global::Vector InputVector = global::Vector.Create();
 
-		// Token: 0x04026096 RID: 155798
-		[Nullable(1)]
+		// Token: 0x04021379 RID: 136057
 		private readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x04026097 RID: 155799
-		[Nullable(1)]
+		// Token: 0x0402137A RID: 136058
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026098 RID: 155800
-		[Nullable(1)]
+		// Token: 0x0402137B RID: 136059
 		private readonly Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x04026099 RID: 155801
-		[Nullable(1)]
+		// Token: 0x0402137C RID: 136060
 		private readonly Rotator TmpRotator1 = Rotator.Create();
 
-		// Token: 0x0402609A RID: 155802
-		[Nullable(1)]
+		// Token: 0x0402137D RID: 136061
 		private readonly HashSet<object> BlockSet = new HashSet<object>();
 
-		// Token: 0x0402609B RID: 155803
+		// Token: 0x0402137E RID: 136062
 		private readonly bool EnableDebug;
 
-		// Token: 0x0200CFCA RID: 53194
+		// Token: 0x0200BBA5 RID: 48037
 		[NullableContext(0)]
 		private enum ECameraZoneState
 		{
-			// Token: 0x0403E7BC RID: 255932
+			// Token: 0x04039BF9 RID: 236537
 			Standby,
-			// Token: 0x0403E7BD RID: 255933
+			// Token: 0x04039BFA RID: 236538
 			InDeadZone,
-			// Token: 0x0403E7BE RID: 255934
+			// Token: 0x04039BFB RID: 236539
 			InSoftZone,
-			// Token: 0x0403E7BF RID: 255935
+			// Token: 0x04039BFC RID: 236540
 			DeadZoneTransitionToSoftZone,
-			// Token: 0x0403E7C0 RID: 255936
+			// Token: 0x04039BFD RID: 236541
 			TransitionToForward,
-			// Token: 0x0403E7C1 RID: 255937
+			// Token: 0x04039BFE RID: 236542
 			TransitionToForwardWithSoftZone
 		}
 	}

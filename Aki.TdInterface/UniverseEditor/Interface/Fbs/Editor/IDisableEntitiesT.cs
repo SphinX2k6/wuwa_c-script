@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004854 RID: 18516
+	// Token: 0x02004CBC RID: 19644
 	public class IDisableEntitiesT
 	{
-		// Token: 0x170084FB RID: 34043
-		// (get) Token: 0x0601CAA0 RID: 117408 RVA: 0x0040D5F7 File Offset: 0x0040B7F7
-		// (set) Token: 0x0601CAA1 RID: 117409 RVA: 0x0040D5FF File Offset: 0x0040B7FF
+		// Token: 0x17008B46 RID: 35654
+		// (get) Token: 0x0601E29D RID: 123549 RVA: 0x00439F47 File Offset: 0x00438147
+		// (set) Token: 0x0601E29E RID: 123550 RVA: 0x00439F4F File Offset: 0x0043814F
 		public bool IsDisabled { get; set; }
 
-		// Token: 0x170084FC RID: 34044
-		// (get) Token: 0x0601CAA2 RID: 117410 RVA: 0x0040D608 File Offset: 0x0040B808
-		// (set) Token: 0x0601CAA3 RID: 117411 RVA: 0x0040D610 File Offset: 0x0040B810
+		// Token: 0x17008B47 RID: 35655
+		// (get) Token: 0x0601E29F RID: 123551 RVA: 0x00439F58 File Offset: 0x00438158
+		// (set) Token: 0x0601E2A0 RID: 123552 RVA: 0x00439F60 File Offset: 0x00438160
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x0601CAA4 RID: 117412 RVA: 0x0040D619 File Offset: 0x0040B819
+		// Token: 0x0601E2A1 RID: 123553 RVA: 0x00439F69 File Offset: 0x00438169
 		public IDisableEntitiesT()
 		{
 			this.IsDisabled = false;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009D6 RID: 2518
+	// Token: 0x02000A9B RID: 2715
 	public static class EPointChooseTypeExtensions
 	{
-		// Token: 0x060037F4 RID: 14324 RVA: 0x00091404 File Offset: 0x0008F604
+		// Token: 0x06003BCC RID: 15308 RVA: 0x00099CC4 File Offset: 0x00097EC4
 		public static string ToEnumString(this EPointChooseType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037F5 RID: 14325 RVA: 0x0009142C File Offset: 0x0008F62C
+		// Token: 0x06003BCD RID: 15309 RVA: 0x00099CEC File Offset: 0x00097EEC
 		public static EPointChooseType FromString(string name)
 		{
 			EPointChooseType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037F6 RID: 14326 RVA: 0x00091455 File Offset: 0x0008F655
+		// Token: 0x06003BCE RID: 15310 RVA: 0x00099D15 File Offset: 0x00097F15
 		public static bool TryFromString(string name, out EPointChooseType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060037F7 RID: 14327 RVA: 0x0009147A File Offset: 0x0008F67A
+		// Token: 0x06003BCF RID: 15311 RVA: 0x00099D3A File Offset: 0x00097F3A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037F8 RID: 14328 RVA: 0x0009148A File Offset: 0x0008F68A
+		// Token: 0x06003BD0 RID: 15312 RVA: 0x00099D4A File Offset: 0x00097F4A
 		public static EPointChooseType[] GetValues()
 		{
 			return new EPointChooseType[1];
 		}
 
-		// Token: 0x060037F9 RID: 14329 RVA: 0x00091492 File Offset: 0x0008F692
+		// Token: 0x06003BD1 RID: 15313 RVA: 0x00099D52 File Offset: 0x00097F52
 		public static string[] GetNames()
 		{
 			return new string[]

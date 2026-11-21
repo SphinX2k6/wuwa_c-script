@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001DDD RID: 7645
+// Token: 0x0200129F RID: 4767
 [NullableContext(1)]
 public interface IGeographyHandBookItemData
 {
-	// Token: 0x17001278 RID: 4728
-	// (get) Token: 0x0600E8B7 RID: 59575
-	// (set) Token: 0x0600E8B8 RID: 59576
+	// Token: 0x170012A2 RID: 4770
+	// (get) Token: 0x0600BCD6 RID: 48342
+	// (set) Token: 0x0600BCD7 RID: 48343
 	GeographyTabType TabType { get; set; }
 
-	// Token: 0x17001279 RID: 4729
-	// (get) Token: 0x0600E8B9 RID: 59577
-	// (set) Token: 0x0600E8BA RID: 59578
+	// Token: 0x170012A3 RID: 4771
+	// (get) Token: 0x0600BCD8 RID: 48344
+	// (set) Token: 0x0600BCD9 RID: 48345
 	GeographyType Type { get; set; }
 
-	// Token: 0x1700127A RID: 4730
-	// (get) Token: 0x0600E8BB RID: 59579
-	// (set) Token: 0x0600E8BC RID: 59580
+	// Token: 0x170012A4 RID: 4772
+	// (get) Token: 0x0600BCDA RID: 48346
+	// (set) Token: 0x0600BCDB RID: 48347
 	List<GeographyHandBook> HandBookList { get; set; }
 }

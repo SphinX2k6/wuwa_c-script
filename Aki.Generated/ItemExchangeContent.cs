@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D7C RID: 3452
+	// Token: 0x02000E61 RID: 3681
 	public struct ItemExchangeContent : IFlatbufferObject
 	{
-		// Token: 0x170019F4 RID: 6644
-		// (get) Token: 0x0600863D RID: 34365 RVA: 0x00265995 File Offset: 0x00263B95
+		// Token: 0x17001A58 RID: 6744
+		// (get) Token: 0x06008C58 RID: 35928 RVA: 0x00283C26 File Offset: 0x00281E26
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600863E RID: 34366 RVA: 0x002659A2 File Offset: 0x00263BA2
+		// Token: 0x06008C59 RID: 35929 RVA: 0x00283C33 File Offset: 0x00281E33
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600863F RID: 34367 RVA: 0x002659AC File Offset: 0x00263BAC
+		// Token: 0x06008C5A RID: 35930 RVA: 0x00283C3C File Offset: 0x00281E3C
 		public static ItemExchangeContent GetRootAsItemExchangeContent(ByteBuffer _bb)
 		{
 			return ItemExchangeContent.GetRootAsItemExchangeContent(_bb, default(ItemExchangeContent));
 		}
 
-		// Token: 0x06008640 RID: 34368 RVA: 0x002659C8 File Offset: 0x00263BC8
+		// Token: 0x06008C5B RID: 35931 RVA: 0x00283C58 File Offset: 0x00281E58
 		public static ItemExchangeContent GetRootAsItemExchangeContent(ByteBuffer _bb, ItemExchangeContent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008641 RID: 34369 RVA: 0x002659E5 File Offset: 0x00263BE5
+		// Token: 0x06008C5C RID: 35932 RVA: 0x00283C75 File Offset: 0x00281E75
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008642 RID: 34370 RVA: 0x002659F4 File Offset: 0x00263BF4
+		// Token: 0x06008C5D RID: 35933 RVA: 0x00283C84 File Offset: 0x00281E84
 		public ItemExchangeContent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170019F5 RID: 6645
-		// (get) Token: 0x06008643 RID: 34371 RVA: 0x00265A04 File Offset: 0x00263C04
+		// Token: 0x17001A59 RID: 6745
+		// (get) Token: 0x06008C5E RID: 35934 RVA: 0x00283C94 File Offset: 0x00281E94
 		public int ItemId
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019F6 RID: 6646
-		// (get) Token: 0x06008644 RID: 34372 RVA: 0x00265A40 File Offset: 0x00263C40
+		// Token: 0x17001A5A RID: 6746
+		// (get) Token: 0x06008C5F RID: 35935 RVA: 0x00283CD0 File Offset: 0x00281ED0
 		public int Times
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019F7 RID: 6647
-		// (get) Token: 0x06008645 RID: 34373 RVA: 0x00265A7C File Offset: 0x00263C7C
+		// Token: 0x17001A5B RID: 6747
+		// (get) Token: 0x06008C60 RID: 35936 RVA: 0x00283D0C File Offset: 0x00281F0C
 		public int GainCount
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008646 RID: 34374 RVA: 0x00265AB8 File Offset: 0x00263CB8
+		// Token: 0x06008C61 RID: 35937 RVA: 0x00283D48 File Offset: 0x00281F48
 		public DicIntInt? Consume(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170019F8 RID: 6648
-		// (get) Token: 0x06008647 RID: 34375 RVA: 0x00265B1C File Offset: 0x00263D1C
+		// Token: 0x17001A5C RID: 6748
+		// (get) Token: 0x06008C62 RID: 35938 RVA: 0x00283DAC File Offset: 0x00281FAC
 		public int ConsumeLength
 		{
 			get
@@ -122,24 +122,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008648 RID: 34376 RVA: 0x00265B48 File Offset: 0x00263D48
+		// Token: 0x06008C63 RID: 35939 RVA: 0x00283DD8 File Offset: 0x00281FD8
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ConsumeFrozenDict()缓存字典，遍历请使用ConsumeIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Consume()
+		public Dictionary<int, int> Consume()
 		{
 			return this.ConsumeIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06008649 RID: 34377 RVA: 0x00265B9E File Offset: 0x00263D9E
+		// Token: 0x06008C64 RID: 35940 RVA: 0x00283E2E File Offset: 0x0028202E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ConsumeIter()
+		public IEnumerable<DicIntInt> ConsumeIter()
 		{
 			ItemExchangeContent.<ConsumeIter>d__18 <ConsumeIter>d__ = new ItemExchangeContent.<ConsumeIter>d__18(-2);
 			<ConsumeIter>d__.<>3__<>4__this = this;
 			return <ConsumeIter>d__;
 		}
 
-		// Token: 0x0600864A RID: 34378 RVA: 0x00265BB4 File Offset: 0x00263DB4
+		// Token: 0x06008C65 RID: 35941 RVA: 0x00283E44 File Offset: 0x00282044
 		public int? GetConsume(int key)
 		{
 			this.EnsureConsumeCacheIfNeeded();
@@ -151,7 +150,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600864B RID: 34379 RVA: 0x00265BE8 File Offset: 0x00263DE8
+		// Token: 0x06008C66 RID: 35942 RVA: 0x00283E78 File Offset: 0x00282078
 		private void EnsureConsumeCacheIfNeeded()
 		{
 			if (this.ConsumeCache != null)
@@ -161,18 +160,18 @@ namespace Aki.Config
 			this.ConsumeCache = this.ConsumeIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600864C RID: 34380 RVA: 0x00265C4E File Offset: 0x00263E4E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetConsumeFrozenDict(int key)
+		// Token: 0x06008C67 RID: 35943 RVA: 0x00283EDE File Offset: 0x002820DE
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetConsumeFrozenDict()
 		{
 			this.EnsureConsumeCacheIfNeeded();
 			return this.ConsumeCache;
 		}
 
-		// Token: 0x04004E04 RID: 19972
+		// Token: 0x040053E9 RID: 21481
 		private Table __p;
 
-		// Token: 0x04004E05 RID: 19973
+		// Token: 0x040053EA RID: 21482
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ConsumeCache;
 	}

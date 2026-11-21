@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002736 RID: 10038
+// Token: 0x02001C21 RID: 7201
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsMatchTableView : UiViewBase
 {
-	// Token: 0x06014986 RID: 84358 RVA: 0x0053613C File Offset: 0x0053433C
+	// Token: 0x06011E68 RID: 73320 RVA: 0x00544E48 File Offset: 0x00543048
 	public RacingBetsMatchTableView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014987 RID: 84359 RVA: 0x0053614C File Offset: 0x0053434C
+	// Token: 0x06011E69 RID: 73321 RVA: 0x00544E58 File Offset: 0x00543058
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,19 +37,19 @@ public class RacingBetsMatchTableView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014988 RID: 84360 RVA: 0x005361DF File Offset: 0x005343DF
+	// Token: 0x06011E6A RID: 73322 RVA: 0x00544EEB File Offset: 0x005430EB
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRacingBetsReplay, new Action(this.OnCloseBtnClick));
 	}
 
-	// Token: 0x06014989 RID: 84361 RVA: 0x005361FD File Offset: 0x005343FD
+	// Token: 0x06011E6B RID: 73323 RVA: 0x00544F09 File Offset: 0x00543109
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsReplay, new Action(this.OnCloseBtnClick));
 	}
 
-	// Token: 0x0601498A RID: 84362 RVA: 0x0053621C File Offset: 0x0053441C
+	// Token: 0x06011E6C RID: 73324 RVA: 0x00544F28 File Offset: 0x00543128
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsMatchTableView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class RacingBetsMatchTableView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601498B RID: 84363 RVA: 0x00536260 File Offset: 0x00534460
+	// Token: 0x06011E6D RID: 73325 RVA: 0x00544F6C File Offset: 0x0054316C
 	private ERacingBetsMatchTableType GetCurTabId(List<ERacingBetsMatchTableType> tabList, int curLegMatchDataId)
 	{
 		foreach (ERacingBetsMatchTableType eracingBetsMatchTableType in tabList)
@@ -86,7 +86,7 @@ public class RacingBetsMatchTableView : UiViewBase
 		return tabList[0];
 	}
 
-	// Token: 0x0601498C RID: 84364 RVA: 0x00536364 File Offset: 0x00534564
+	// Token: 0x06011E6E RID: 73326 RVA: 0x00545070 File Offset: 0x00543270
 	public UniTask ShowContent(ERacingBetsMatchTableType type)
 	{
 		RacingBetsMatchTableView.<ShowContent>d__12 <ShowContent>d__;
@@ -98,7 +98,7 @@ public class RacingBetsMatchTableView : UiViewBase
 		return <ShowContent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601498D RID: 84365 RVA: 0x005363AF File Offset: 0x005345AF
+	// Token: 0x06011E6F RID: 73327 RVA: 0x005450BB File Offset: 0x005432BB
 	private void OnTabClick(ERacingBetsMatchTableType type)
 	{
 		GenericLayout<RacingBetsMatchTableTabItem, ERacingBetsMatchTableType> tabLayout = this.TabLayout;
@@ -109,7 +109,7 @@ public class RacingBetsMatchTableView : UiViewBase
 		this.ShowContent(type).Forget();
 	}
 
-	// Token: 0x0601498E RID: 84366 RVA: 0x005363D5 File Offset: 0x005345D5
+	// Token: 0x06011E70 RID: 73328 RVA: 0x005450E1 File Offset: 0x005432E1
 	private RacingBetsMatchTableTabItem CreateTabItem()
 	{
 		return new RacingBetsMatchTableTabItem
@@ -118,28 +118,28 @@ public class RacingBetsMatchTableView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601498F RID: 84367 RVA: 0x005363EE File Offset: 0x005345EE
+	// Token: 0x06011E71 RID: 73329 RVA: 0x005450FA File Offset: 0x005432FA
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009AC8 RID: 39624
+	// Token: 0x04009C20 RID: 39968
 	private ERacingBetsMatchTableType SelectedTabType = ERacingBetsMatchTableType.GroupMatch;
 
-	// Token: 0x04009AC9 RID: 39625
+	// Token: 0x04009C21 RID: 39969
 	[Nullable(2)]
 	private RacingBetsGroupMatchPanel GroupMatchPanel;
 
-	// Token: 0x04009ACA RID: 39626
+	// Token: 0x04009C22 RID: 39970
 	[Nullable(2)]
 	private RacingBetsEliminationMatchPanel EliminationMatchPanel;
 
-	// Token: 0x04009ACB RID: 39627
+	// Token: 0x04009C23 RID: 39971
 	[Nullable(2)]
 	private RacingBetsFinalMatchPanel FinalMatchPanel;
 
-	// Token: 0x04009ACC RID: 39628
+	// Token: 0x04009C24 RID: 39972
 	[Nullable(new byte[]
 	{
 		2,
@@ -147,23 +147,23 @@ public class RacingBetsMatchTableView : UiViewBase
 	})]
 	private GenericLayout<RacingBetsMatchTableTabItem, ERacingBetsMatchTableType> TabLayout;
 
-	// Token: 0x02008DA7 RID: 36263
+	// Token: 0x02007F2F RID: 32559
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DFB9 RID: 188345
+		// Token: 0x040292CF RID: 168655
 		public const int BtnClose = 0;
 
-		// Token: 0x0402DFBA RID: 188346
+		// Token: 0x040292D0 RID: 168656
 		public const int ItemSponsor = 1;
 
-		// Token: 0x0402DFBB RID: 188347
+		// Token: 0x040292D1 RID: 168657
 		public const int LayoutTab = 2;
 
-		// Token: 0x0402DFBC RID: 188348
+		// Token: 0x040292D2 RID: 168658
 		public const int ItemTab = 3;
 
-		// Token: 0x0402DFBD RID: 188349
+		// Token: 0x040292D3 RID: 168659
 		public const int ItemParent = 4;
 	}
 }

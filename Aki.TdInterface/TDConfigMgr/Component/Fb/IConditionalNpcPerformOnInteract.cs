@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD3 RID: 3027
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CA2 RID: 3234
 	public class IConditionalNpcPerformOnInteract
 	{
-		// Token: 0x06004587 RID: 17799 RVA: 0x000B001D File Offset: 0x000AE21D
+		// Token: 0x060049E4 RID: 18916 RVA: 0x000BA122 File Offset: 0x000B8322
 		public static IConditionalNpcPerformOnInteract Create(IConditionalNpcPerformOnInteract? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700139E RID: 5022
-		// (get) Token: 0x06004588 RID: 17800 RVA: 0x000B003C File Offset: 0x000AE23C
+		// Token: 0x1700149B RID: 5275
+		// (get) Token: 0x060049E5 RID: 18917 RVA: 0x000BA141 File Offset: 0x000B8341
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700139F RID: 5023
-		// (get) Token: 0x06004589 RID: 17801 RVA: 0x000B0070 File Offset: 0x000AE270
+		// Token: 0x1700149C RID: 5276
+		// (get) Token: 0x060049E6 RID: 18918 RVA: 0x000BA175 File Offset: 0x000B8375
 		public virtual INpcPerformOnInteract Perform
 		{
 			get
@@ -55,21 +53,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400278C RID: 10124
+		// Token: 0x040029D5 RID: 10709
 		private IConditionalNpcPerformOnInteract Instance;
 
-		// Token: 0x0400278D RID: 10125
+		// Token: 0x040029D6 RID: 10710
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400278E RID: 10126
+		// Token: 0x040029D7 RID: 10711
 		private bool _ConditionInited;
 
-		// Token: 0x0400278F RID: 10127
+		// Token: 0x040029D8 RID: 10712
 		[Nullable(2)]
 		private INpcPerformOnInteract _PerformCache;
 
-		// Token: 0x04002790 RID: 10128
+		// Token: 0x040029D9 RID: 10713
 		private bool _PerformInited;
 	}
 }

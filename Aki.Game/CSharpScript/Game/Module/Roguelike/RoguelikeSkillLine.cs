@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E2C RID: 20012
+	// Token: 0x02003DF5 RID: 15861
 	public class RoguelikeSkillLine : UiPanelBase
 	{
-		// Token: 0x060339AE RID: 211374 RVA: 0x00C13118 File Offset: 0x00C11318
+		// Token: 0x06028819 RID: 165913 RVA: 0x00B5C64C File Offset: 0x00B5A84C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060339AF RID: 211375 RVA: 0x00C131E4 File Offset: 0x00C113E4
+		// Token: 0x0602881A RID: 165914 RVA: 0x00B5C718 File Offset: 0x00B5A918
 		public void Refresh(bool isUnlock, int offset, int pos)
 		{
 			if (isUnlock)
@@ -45,22 +45,22 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(2).SetUIActive(pos == 1 && offset == -1);
 		}
 
-		// Token: 0x0200AFDB RID: 45019
+		// Token: 0x02009A0D RID: 39437
 		public static class ERoguelikeSkillLineDefine
 		{
-			// Token: 0x04035636 RID: 218678
+			// Token: 0x04030066 RID: 196710
 			public const int RightItem = 0;
 
-			// Token: 0x04035637 RID: 218679
+			// Token: 0x04030067 RID: 196711
 			public const int LeftItem = 1;
 
-			// Token: 0x04035638 RID: 218680
+			// Token: 0x04030068 RID: 196712
 			public const int UpItem = 2;
 
-			// Token: 0x04035639 RID: 218681
+			// Token: 0x04030069 RID: 196713
 			public const int DownItem = 3;
 
-			// Token: 0x0403563A RID: 218682
+			// Token: 0x0403006A RID: 196714
 			public const int SpriteLine = 4;
 		}
 	}

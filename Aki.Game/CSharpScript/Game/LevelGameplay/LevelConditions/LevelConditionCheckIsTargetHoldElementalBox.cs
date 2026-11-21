@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CB7 RID: 27831
+	// Token: 0x02005E31 RID: 24113
 	public class LevelConditionCheckIsTargetHoldElementalBox : LevelConditionBase
 	{
-		// Token: 0x06044601 RID: 280065 RVA: 0x010DC6E8 File Offset: 0x010DA8E8
+		// Token: 0x0603A75B RID: 239451 RVA: 0x01086694 File Offset: 0x01084894
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return flag;
 		}
 
-		// Token: 0x06044602 RID: 280066 RVA: 0x010DC79C File Offset: 0x010DA99C
+		// Token: 0x0603A75C RID: 239452 RVA: 0x01086748 File Offset: 0x01084948
 		[NullableContext(2)]
 		private ElementalCoreData GetHoldingCoreData([Nullable(1)] ICheckIsTargetHoldElementalBox config, AActor inTrigger, GeneralContext context)
 		{

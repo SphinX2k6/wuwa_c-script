@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019B0 RID: 6576
+// Token: 0x02000E6E RID: 3694
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonTabData
 {
-	// Token: 0x0600BFD1 RID: 49105 RVA: 0x002B473F File Offset: 0x002B293F
+	// Token: 0x060093DB RID: 37851 RVA: 0x002BF6CF File Offset: 0x002BD8CF
 	[NullableContext(2)]
 	public CommonTabData([Nullable(1)] string icon, CommonTabTitleData titleData, CommonTabTitleData tabItemTitleData = null)
 	{
@@ -15,13 +15,13 @@ public class CommonTabData
 		this.TabItemTitleData = tabItemTitleData;
 	}
 
-	// Token: 0x0600BFD2 RID: 49106 RVA: 0x002B4767 File Offset: 0x002B2967
+	// Token: 0x060093DC RID: 37852 RVA: 0x002BF6F7 File Offset: 0x002BD8F7
 	public void SetSmallIcon(string icon)
 	{
 		this.SmallIcon = icon;
 	}
 
-	// Token: 0x0600BFD3 RID: 49107 RVA: 0x002B4770 File Offset: 0x002B2970
+	// Token: 0x060093DD RID: 37853 RVA: 0x002BF700 File Offset: 0x002BD900
 	public string GetSmallIcon()
 	{
 		if (string.IsNullOrEmpty(this.SmallIcon))
@@ -31,37 +31,37 @@ public class CommonTabData
 		return this.SmallIcon;
 	}
 
-	// Token: 0x0600BFD4 RID: 49108 RVA: 0x002B478C File Offset: 0x002B298C
+	// Token: 0x060093DE RID: 37854 RVA: 0x002BF71C File Offset: 0x002BD91C
 	public string GetIcon()
 	{
 		return this.Icon;
 	}
 
-	// Token: 0x0600BFD5 RID: 49109 RVA: 0x002B4794 File Offset: 0x002B2994
+	// Token: 0x060093DF RID: 37855 RVA: 0x002BF724 File Offset: 0x002BD924
 	[NullableContext(2)]
 	public CommonTabTitleData GetTitleData()
 	{
 		return this.TitleData;
 	}
 
-	// Token: 0x0600BFD6 RID: 49110 RVA: 0x002B479C File Offset: 0x002B299C
+	// Token: 0x060093E0 RID: 37856 RVA: 0x002BF72C File Offset: 0x002BD92C
 	[NullableContext(2)]
 	public CommonTabTitleData GetTabItemTitleData()
 	{
 		return this.TabItemTitleData;
 	}
 
-	// Token: 0x04005642 RID: 22082
+	// Token: 0x040056F4 RID: 22260
 	private readonly string Icon;
 
-	// Token: 0x04005643 RID: 22083
+	// Token: 0x040056F5 RID: 22261
 	[Nullable(2)]
 	private readonly CommonTabTitleData TitleData;
 
-	// Token: 0x04005644 RID: 22084
+	// Token: 0x040056F6 RID: 22262
 	[Nullable(2)]
 	private readonly CommonTabTitleData TabItemTitleData;
 
-	// Token: 0x04005645 RID: 22085
+	// Token: 0x040056F7 RID: 22263
 	private string SmallIcon = "";
 }

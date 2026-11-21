@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E9 RID: 10729
+	// Token: 0x02002CD6 RID: 11478
 	public class IDelayRemoveAfterSkillFinish : IDelayRemoveType
 	{
-		// Token: 0x0600ECEF RID: 60655 RVA: 0x00229414 File Offset: 0x00227614
-		[NullableContext(1)]
+		// Token: 0x0600FB86 RID: 64390 RVA: 0x00246D98 File Offset: 0x00244F98
 		public static IDelayRemoveAfterSkillFinish Create(IDelayRemoveAfterSkillFinish? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004ADF RID: 19167
-		// (get) Token: 0x0600ECF0 RID: 60656 RVA: 0x00229433 File Offset: 0x00227633
+		// Token: 0x17004E88 RID: 20104
+		// (get) Token: 0x0600FB87 RID: 64391 RVA: 0x00246DB7 File Offset: 0x00244FB7
 		public override EDelayRemoveType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400827D RID: 33405
+		// Token: 0x0400896E RID: 35182
 		private IDelayRemoveAfterSkillFinish Instance;
 	}
 }

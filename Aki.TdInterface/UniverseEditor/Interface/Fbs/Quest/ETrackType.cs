@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CE1 RID: 15585
+	// Token: 0x020040F8 RID: 16632
 	public enum ETrackType : byte
 	{
-		// Token: 0x0400B550 RID: 46416
+		// Token: 0x0400BEFD RID: 48893
 		Locations,
-		// Token: 0x0400B551 RID: 46417
+		// Token: 0x0400BEFE RID: 48894
 		Entities,
-		// Token: 0x0400B552 RID: 46418
+		// Token: 0x0400BEFF RID: 48895
 		CaptureVisions,
-		// Token: 0x0400B553 RID: 46419
+		// Token: 0x0400BF00 RID: 48896
 		EntityGroup,
-		// Token: 0x0400B554 RID: 46420
+		// Token: 0x0400BF01 RID: 48897
 		LevelPlay
 	}
 }

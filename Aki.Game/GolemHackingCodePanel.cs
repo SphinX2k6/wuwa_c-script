@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001015 RID: 4117
+// Token: 0x020004C9 RID: 1225
 [NullableContext(1)]
 [Nullable(0)]
 public class GolemHackingCodePanel : UiPanelBase
 {
-	// Token: 0x0600699E RID: 27038 RVA: 0x0015176A File Offset: 0x0014F96A
+	// Token: 0x06003D33 RID: 15667 RVA: 0x0015A092 File Offset: 0x00158292
 	public GolemHackingCodePanel(GolemHackingGameProxy proxy)
 	{
 		this.Proxy = proxy;
 	}
 
-	// Token: 0x0600699F RID: 27039 RVA: 0x00151780 File Offset: 0x0014F980
+	// Token: 0x06003D34 RID: 15668 RVA: 0x0015A0A8 File Offset: 0x001582A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -60,7 +60,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060069A0 RID: 27040 RVA: 0x00151999 File Offset: 0x0014FB99
+	// Token: 0x06003D35 RID: 15669 RVA: 0x0015A2C1 File Offset: 0x001584C1
 	protected override void OnStart()
 	{
 		this.InitLayout();
@@ -68,7 +68,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.InitInfo();
 	}
 
-	// Token: 0x060069A1 RID: 27041 RVA: 0x001519B0 File Offset: 0x0014FBB0
+	// Token: 0x06003D36 RID: 15670 RVA: 0x0015A2D8 File Offset: 0x001584D8
 	protected void InitLayout()
 	{
 		this.CodeLayout = new GenericLayout<GolemHackingCodeKeyListItem, List<GolemHackingCodeGridInfo>>(base.GetVerticalLayout(0), new Func<GolemHackingCodeKeyListItem>(this.CreateCodePanelItem), null, false, true);
@@ -77,7 +77,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.InputLayout = new GenericLayout<GolemHackingCodeInputItem, GolemHackingInputInfo>(base.GetHorizontalLayout(8), new Func<GolemHackingCodeInputItem>(this.CreateInputItem), null, false, true);
 	}
 
-	// Token: 0x060069A2 RID: 27042 RVA: 0x00151A44 File Offset: 0x0014FC44
+	// Token: 0x06003D37 RID: 15671 RVA: 0x0015A36C File Offset: 0x0015856C
 	protected void InitGamePlay()
 	{
 		this.Proxy.ResetCodeCallback = new Action(this.OnResetCallBack);
@@ -86,7 +86,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.Proxy.EnterCodeCallback = new Action<List<string>, List<GolemHackingCodeEnterResult>>(this.OnMatrixEnterCallBack);
 	}
 
-	// Token: 0x060069A3 RID: 27043 RVA: 0x00151AB0 File Offset: 0x0014FCB0
+	// Token: 0x06003D38 RID: 15672 RVA: 0x0015A3D8 File Offset: 0x001585D8
 	protected void InitInfo()
 	{
 		UUIButtonComponent button = base.GetButton(10);
@@ -97,7 +97,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.Proxy.InitCodePanelInfo();
 	}
 
-	// Token: 0x060069A4 RID: 27044 RVA: 0x00151AF4 File Offset: 0x0014FCF4
+	// Token: 0x06003D39 RID: 15673 RVA: 0x0015A41C File Offset: 0x0015861C
 	protected void RefreshEnterPanel(List<string> inputList, List<GolemHackingCodeEnterResult> codeParam)
 	{
 		int maxLength = this.Proxy.GetMaxLength();
@@ -124,7 +124,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.InputLayout.RefreshByData(inputDataList, null, false);
 	}
 
-	// Token: 0x060069A5 RID: 27045 RVA: 0x00151BE0 File Offset: 0x0014FDE0
+	// Token: 0x06003D3A RID: 15674 RVA: 0x0015A508 File Offset: 0x00158708
 	protected List<GolemHackingInputInfo> GetInputDataList(List<string> inputList, List<GolemHackingCodeEnterResult> codeParam)
 	{
 		int maxLength = this.Proxy.GetMaxLength();
@@ -206,7 +206,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x060069A6 RID: 27046 RVA: 0x00151D7C File Offset: 0x0014FF7C
+	// Token: 0x06003D3B RID: 15675 RVA: 0x0015A6A4 File Offset: 0x001588A4
 	protected void RefreshCodePanel(List<GolemHackingCodeEnterResult> codeParam, bool needAnim)
 	{
 		List<EGolemHackingBarState> list = new List<EGolemHackingBarState>();
@@ -255,14 +255,14 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.IconLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060069A7 RID: 27047 RVA: 0x00151ECC File Offset: 0x001500CC
+	// Token: 0x06003D3C RID: 15676 RVA: 0x0015A7F4 File Offset: 0x001589F4
 	private void OnClickedHelp()
 	{
 		List<GolemHackingTipsGirdInfo> helpTipsInfo = this.Proxy.GetHelpTipsInfo();
 		UiManager.Instance.OpenView(EUiViewName.GolemHackingGameTipsPopView, helpTipsInfo, null);
 	}
 
-	// Token: 0x060069A8 RID: 27048 RVA: 0x00151EF8 File Offset: 0x001500F8
+	// Token: 0x06003D3D RID: 15677 RVA: 0x0015A820 File Offset: 0x00158A20
 	private void OnClickedReset()
 	{
 		double now = Time.Instance.Now;
@@ -274,7 +274,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		this.Proxy.Reset();
 	}
 
-	// Token: 0x060069A9 RID: 27049 RVA: 0x00151F38 File Offset: 0x00150138
+	// Token: 0x06003D3E RID: 15678 RVA: 0x0015A860 File Offset: 0x00158A60
 	private void OnMatrixHoverCallBack(int curIndex, string code)
 	{
 		foreach (GolemHackingCodeKeyListItem golemHackingCodeKeyListItem in this.CodeLayout.GetLayoutItemList())
@@ -289,7 +289,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		layoutItemByIndex.EnterInputCode(code);
 	}
 
-	// Token: 0x060069AA RID: 27050 RVA: 0x00151FA8 File Offset: 0x001501A8
+	// Token: 0x06003D3F RID: 15679 RVA: 0x0015A8D0 File Offset: 0x00158AD0
 	private void OnMatrixUnHoverCallBack()
 	{
 		foreach (GolemHackingCodeKeyListItem golemHackingCodeKeyListItem in this.CodeLayout.GetLayoutItemList())
@@ -302,14 +302,14 @@ public class GolemHackingCodePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069AB RID: 27051 RVA: 0x00152044 File Offset: 0x00150244
+	// Token: 0x06003D40 RID: 15680 RVA: 0x0015A96C File Offset: 0x00158B6C
 	private void OnMatrixEnterCallBack(List<string> curEnter, List<GolemHackingCodeEnterResult> codeParam)
 	{
 		this.RefreshEnterPanel(curEnter, codeParam);
 		this.RefreshCodePanel(codeParam, curEnter.Count == 0);
 	}
 
-	// Token: 0x060069AC RID: 27052 RVA: 0x00152060 File Offset: 0x00150260
+	// Token: 0x06003D41 RID: 15681 RVA: 0x0015A988 File Offset: 0x00158B88
 	private void OnResetCallBack()
 	{
 		UUIButtonComponent button = base.GetButton(10);
@@ -329,7 +329,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069AD RID: 27053 RVA: 0x00152104 File Offset: 0x00150304
+	// Token: 0x06003D42 RID: 15682 RVA: 0x0015AA2C File Offset: 0x00158C2C
 	private void OnBarAnimEnd()
 	{
 		if (this.BarAnimCount == -1)
@@ -345,19 +345,19 @@ public class GolemHackingCodePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060069AE RID: 27054 RVA: 0x00152153 File Offset: 0x00150353
+	// Token: 0x06003D43 RID: 15683 RVA: 0x0015AA7B File Offset: 0x00158C7B
 	private GolemHackingCodeKeyListItem CreateCodePanelItem()
 	{
 		return new GolemHackingCodeKeyListItem(this.Proxy);
 	}
 
-	// Token: 0x060069AF RID: 27055 RVA: 0x00152160 File Offset: 0x00150360
+	// Token: 0x06003D44 RID: 15684 RVA: 0x0015AA88 File Offset: 0x00158C88
 	private GolemHackingCodeIconItem CreateIconItem()
 	{
 		return new GolemHackingCodeIconItem();
 	}
 
-	// Token: 0x060069B0 RID: 27056 RVA: 0x00152167 File Offset: 0x00150367
+	// Token: 0x06003D45 RID: 15685 RVA: 0x0015AA8F File Offset: 0x00158C8F
 	private GolemHackingCodeKeyBarItem CreateBarItem()
 	{
 		return new GolemHackingCodeKeyBarItem
@@ -366,7 +366,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060069B1 RID: 27057 RVA: 0x00152180 File Offset: 0x00150380
+	// Token: 0x06003D46 RID: 15686 RVA: 0x0015AAA8 File Offset: 0x00158CA8
 	private GolemHackingCodeInputItem CreateInputItem()
 	{
 		return new GolemHackingCodeInputItem
@@ -375,7 +375,7 @@ public class GolemHackingCodePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060069B2 RID: 27058 RVA: 0x00152199 File Offset: 0x00150399
+	// Token: 0x06003D47 RID: 15687 RVA: 0x0015AAC1 File Offset: 0x00158CC1
 	[NullableContext(2)]
 	public GolemHackingCodeKeyListItem GetHorizontalPanelByIndex(int index)
 	{
@@ -386,63 +386,63 @@ public class GolemHackingCodePanel : UiPanelBase
 		return this.CodeLayout.GetLayoutItemByIndex(index);
 	}
 
-	// Token: 0x040030B4 RID: 12468
+	// Token: 0x0400314D RID: 12621
 	private const int SCAN_INTERNAL = 133;
 
-	// Token: 0x040030B5 RID: 12469
+	// Token: 0x0400314E RID: 12622
 	private const int SCAN_START = 9;
 
-	// Token: 0x040030B6 RID: 12470
+	// Token: 0x0400314F RID: 12623
 	private const int RESET_COOLDOWN = 400;
 
-	// Token: 0x040030B7 RID: 12471
+	// Token: 0x04003150 RID: 12624
 	protected GenericLayout<GolemHackingCodeKeyListItem, List<GolemHackingCodeGridInfo>> CodeLayout;
 
-	// Token: 0x040030B8 RID: 12472
+	// Token: 0x04003151 RID: 12625
 	protected GenericLayout<GolemHackingCodeIconItem, EGolemHackingBarState> IconLayout;
 
-	// Token: 0x040030B9 RID: 12473
+	// Token: 0x04003152 RID: 12626
 	protected GenericLayout<GolemHackingCodeKeyBarItem, EGolemHackingBarState> BarLayout;
 
-	// Token: 0x040030BA RID: 12474
+	// Token: 0x04003153 RID: 12627
 	protected GenericLayout<GolemHackingCodeInputItem, GolemHackingInputInfo> InputLayout;
 
-	// Token: 0x040030BB RID: 12475
+	// Token: 0x04003154 RID: 12628
 	protected int BarAnimCount = -1;
 
-	// Token: 0x040030BC RID: 12476
+	// Token: 0x04003155 RID: 12629
 	private double ResetTimeRecord;
 
-	// Token: 0x040030BD RID: 12477
+	// Token: 0x04003156 RID: 12630
 	protected GolemHackingGameProxy Proxy;
 
-	// Token: 0x0200760E RID: 30222
+	// Token: 0x020067A2 RID: 26530
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x04026FFB RID: 159739
+		// Token: 0x04022346 RID: 140102
 		PanelKeyList,
-		// Token: 0x04026FFC RID: 159740
+		// Token: 0x04022347 RID: 140103
 		TexBgSelectFrame,
-		// Token: 0x04026FFD RID: 159741
+		// Token: 0x04022348 RID: 140104
 		PanelHackingKeyGroup,
-		// Token: 0x04026FFE RID: 159742
+		// Token: 0x04022349 RID: 140105
 		PanelLevelIcon,
-		// Token: 0x04026FFF RID: 159743
+		// Token: 0x0402234A RID: 140106
 		SpriteLevel,
-		// Token: 0x04027000 RID: 159744
+		// Token: 0x0402234B RID: 140107
 		PanelStateList,
-		// Token: 0x04027001 RID: 159745
+		// Token: 0x0402234C RID: 140108
 		PanelStateBar,
-		// Token: 0x04027002 RID: 159746
+		// Token: 0x0402234D RID: 140109
 		TxtKeyCount,
-		// Token: 0x04027003 RID: 159747
+		// Token: 0x0402234E RID: 140110
 		PanelCodeGrid,
-		// Token: 0x04027004 RID: 159748
+		// Token: 0x0402234F RID: 140111
 		CodeItem,
-		// Token: 0x04027005 RID: 159749
+		// Token: 0x04022350 RID: 140112
 		BtnHelp,
-		// Token: 0x04027006 RID: 159750
+		// Token: 0x04022351 RID: 140113
 		BtnReset
 	}
 }

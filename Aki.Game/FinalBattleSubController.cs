@@ -5,66 +5,66 @@ using Aki.Protocol;
 using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 
-// Token: 0x02000E74 RID: 3700
+// Token: 0x02000329 RID: 809
 [NullableContext(1)]
 [Nullable(0)]
 public class FinalBattleSubController : KscSubControllerBase
 {
-	// Token: 0x06005A0C RID: 23052 RVA: 0x00106A34 File Offset: 0x00104C34
+	// Token: 0x06002DA3 RID: 11683 RVA: 0x0010E6E4 File Offset: 0x0010C8E4
 	protected override void CreateModel()
 	{
 		this.SubModel = new FinalBattleSubModel();
 	}
 
-	// Token: 0x06005A0D RID: 23053 RVA: 0x00106A41 File Offset: 0x00104C41
+	// Token: 0x06002DA4 RID: 11684 RVA: 0x0010E6F1 File Offset: 0x0010C8F1
 	public FinalBattleSubModel GetModel()
 	{
 		return (FinalBattleSubModel)this.SubModel;
 	}
 
-	// Token: 0x06005A0E RID: 23054 RVA: 0x00106A4E File Offset: 0x00104C4E
+	// Token: 0x06002DA5 RID: 11685 RVA: 0x0010E6FE File Offset: 0x0010C8FE
 	public override bool IsTargetMap(int instSubType)
 	{
 		return false;
 	}
 
-	// Token: 0x06005A0F RID: 23055 RVA: 0x00106A51 File Offset: 0x00104C51
+	// Token: 0x06002DA6 RID: 11686 RVA: 0x0010E701 File Offset: 0x0010C901
 	protected override void CreateEntityFilter()
 	{
 		this.RedirectFilter = this.EntityRedirectFilter;
 	}
 
-	// Token: 0x06005A10 RID: 23056 RVA: 0x00106A5F File Offset: 0x00104C5F
+	// Token: 0x06002DA7 RID: 11687 RVA: 0x0010E70F File Offset: 0x0010C90F
 	protected override void OnInitMap()
 	{
 	}
 
-	// Token: 0x06005A11 RID: 23057 RVA: 0x00106A61 File Offset: 0x00104C61
+	// Token: 0x06002DA8 RID: 11688 RVA: 0x0010E711 File Offset: 0x0010C911
 	protected override void OnMapLoaded()
 	{
 		this.InitBulletWorld();
 		this.LoadBulletDataTable();
 	}
 
-	// Token: 0x06005A12 RID: 23058 RVA: 0x00106A6F File Offset: 0x00104C6F
+	// Token: 0x06002DA9 RID: 11689 RVA: 0x0010E71F File Offset: 0x0010C91F
 	protected override void OnWorldDone()
 	{
 		DamageUiController.Instance.UpdateKscWorld();
 	}
 
-	// Token: 0x06005A13 RID: 23059 RVA: 0x00106A7B File Offset: 0x00104C7B
+	// Token: 0x06002DAA RID: 11690 RVA: 0x0010E72B File Offset: 0x0010C92B
 	protected override void OnWorldReset()
 	{
 		this.ClearBulletWorld();
 		this.GetModel().BulletDataTable = null;
 	}
 
-	// Token: 0x06005A14 RID: 23060 RVA: 0x00106A8F File Offset: 0x00104C8F
+	// Token: 0x06002DAB RID: 11691 RVA: 0x0010E73F File Offset: 0x0010C93F
 	protected override void AddKscPlayerEntity()
 	{
 	}
 
-	// Token: 0x06005A15 RID: 23061 RVA: 0x00106A94 File Offset: 0x00104C94
+	// Token: 0x06002DAC RID: 11692 RVA: 0x0010E744 File Offset: 0x0010C944
 	private void LoadBulletDataTable()
 	{
 		FinalBattleSubModel model = this.GetModel();
@@ -94,7 +94,7 @@ public class FinalBattleSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005A16 RID: 23062 RVA: 0x00106B2C File Offset: 0x00104D2C
+	// Token: 0x06002DAD RID: 11693 RVA: 0x0010E7DC File Offset: 0x0010C9DC
 	public override void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 	{
 		IFinalBattleCombatInfo entity = this.GetModel().GetEntity((int)context.CreatureDataId);
@@ -123,7 +123,7 @@ public class FinalBattleSubController : KscSubControllerBase
 		protoContexts[context.CreatureDataId] = simpleCombatEntityDieContext;
 	}
 
-	// Token: 0x06005A17 RID: 23063 RVA: 0x00106BF0 File Offset: 0x00104DF0
+	// Token: 0x06002DAE RID: 11694 RVA: 0x0010E8A0 File Offset: 0x0010CAA0
 	protected override void SyncPlayerTransform()
 	{
 		if (this.GetModel().KscPlayerEntity == null)
@@ -144,6 +144,6 @@ public class FinalBattleSubController : KscSubControllerBase
 		kscPlayerEntity.SetTransformByWorld(ftransformDouble);
 	}
 
-	// Token: 0x04002927 RID: 10535
+	// Token: 0x040029C2 RID: 10690
 	private readonly FinalBattleEntityRedirectFilter EntityRedirectFilter = new FinalBattleEntityRedirectFilter();
 }

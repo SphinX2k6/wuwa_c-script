@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x0200190B RID: 6411
+// Token: 0x02000DC4 RID: 3524
 public class MediumItemGridCostComponent : MediumItemGridComponent
 {
-	// Token: 0x17000FA9 RID: 4009
-	// (get) Token: 0x0600BBE8 RID: 48104 RVA: 0x002A96F1 File Offset: 0x002A78F1
+	// Token: 0x17000FCC RID: 4044
+	// (get) Token: 0x06008FD2 RID: 36818 RVA: 0x002B3E4D File Offset: 0x002B204D
 	private static FColor NotEnoughColor
 	{
 		get
@@ -18,14 +18,14 @@ public class MediumItemGridCostComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BBE9 RID: 48105 RVA: 0x002A96FD File Offset: 0x002A78FD
+	// Token: 0x06008FD3 RID: 36819 RVA: 0x002B3E59 File Offset: 0x002B2059
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemEnergy";
 	}
 
-	// Token: 0x0600BBEA RID: 48106 RVA: 0x002A9704 File Offset: 0x002A7904
+	// Token: 0x06008FD4 RID: 36820 RVA: 0x002B3E60 File Offset: 0x002B2060
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -45,7 +45,7 @@ public class MediumItemGridCostComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBEB RID: 48107 RVA: 0x002A97D0 File Offset: 0x002A79D0
+	// Token: 0x06008FD5 RID: 36821 RVA: 0x002B3F2C File Offset: 0x002B212C
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -105,22 +105,22 @@ public class MediumItemGridCostComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007E7F RID: 32383
+	// Token: 0x02007006 RID: 28678
 	private class ECostItem
 	{
-		// Token: 0x04029640 RID: 169536
+		// Token: 0x0402496C RID: 149868
 		public const int NumberText = 0;
 
-		// Token: 0x04029641 RID: 169537
+		// Token: 0x0402496D RID: 149869
 		public const int IconItem = 1;
 
-		// Token: 0x04029642 RID: 169538
+		// Token: 0x0402496E RID: 149870
 		public const int BeforeItem = 2;
 
-		// Token: 0x04029643 RID: 169539
+		// Token: 0x0402496F RID: 149871
 		public const int BeforeCostText = 3;
 
-		// Token: 0x04029644 RID: 169540
+		// Token: 0x04024970 RID: 149872
 		public const int BeforeCostIconItem = 4;
 	}
 }

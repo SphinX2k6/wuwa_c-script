@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000705 RID: 1797
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007A6 RID: 1958
 	public class IStartRotationConfig
 	{
-		// Token: 0x060026A9 RID: 9897 RVA: 0x000674C4 File Offset: 0x000656C4
+		// Token: 0x060029C9 RID: 10697 RVA: 0x0006E534 File Offset: 0x0006C734
 		private IStartRotationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060026AA RID: 9898 RVA: 0x000674FC File Offset: 0x000656FC
+		// Token: 0x060029CA RID: 10698 RVA: 0x0006E56C File Offset: 0x0006C76C
 		public static IStartRotationConfig Create([Nullable(2)] IStartRotationConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026AB RID: 9899 RVA: 0x0006750F File Offset: 0x0006570F
+		// Token: 0x060029CB RID: 10699 RVA: 0x0006E57F File Offset: 0x0006C77F
 		public static IStartRotationConfig CreateFromSetValue([Nullable(2)] IStartRotationConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026AC RID: 9900 RVA: 0x00067522 File Offset: 0x00065722
+		// Token: 0x060029CC RID: 10700 RVA: 0x0006E592 File Offset: 0x0006C792
 		public IStartRotationConfig_SetValue ToSetValue()
 		{
 			return new IStartRotationConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A2D RID: 2605
-		// (get) Token: 0x060026AD RID: 9901 RVA: 0x00067544 File Offset: 0x00065744
-		// (set) Token: 0x060026AE RID: 9902 RVA: 0x000675A5 File Offset: 0x000657A5
+		// Token: 0x17000AEB RID: 2795
+		// (get) Token: 0x060029CD RID: 10701 RVA: 0x0006E5B4 File Offset: 0x0006C7B4
+		// (set) Token: 0x060029CE RID: 10702 RVA: 0x0006E615 File Offset: 0x0006C815
 		public virtual VectorInfo TargetRotation
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A2E RID: 2606
-		// (get) Token: 0x060026AF RID: 9903 RVA: 0x000675BA File Offset: 0x000657BA
-		// (set) Token: 0x060026B0 RID: 9904 RVA: 0x000675E9 File Offset: 0x000657E9
+		// Token: 0x17000AEC RID: 2796
+		// (get) Token: 0x060029CF RID: 10703 RVA: 0x0006E62A File Offset: 0x0006C82A
+		// (set) Token: 0x060029D0 RID: 10704 RVA: 0x0006E659 File Offset: 0x0006C859
 		public virtual float AngularSpeed
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A2D RID: 6701
+		// Token: 0x04001C2C RID: 7212
 		[Nullable(2)]
 		protected IStartRotationConfig FbInstance;
 
-		// Token: 0x04001A2E RID: 6702
+		// Token: 0x04001C2D RID: 7213
 		[Nullable(2)]
 		protected IStartRotationConfig_SetValue PocoInterface;
 
-		// Token: 0x04001A2F RID: 6703
+		// Token: 0x04001C2E RID: 7214
 		private VectorInfo _TargetRotationCache;
 
-		// Token: 0x04001A30 RID: 6704
+		// Token: 0x04001C2F RID: 7215
 		private bool _TargetRotationInited;
 	}
 }

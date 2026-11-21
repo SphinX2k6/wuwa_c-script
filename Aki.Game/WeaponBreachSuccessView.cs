@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CF5 RID: 11509
+// Token: 0x0200224F RID: 8783
 public class WeaponBreachSuccessView : UiViewBase
 {
-	// Token: 0x060182B5 RID: 98997 RVA: 0x00625A16 File Offset: 0x00623C16
+	// Token: 0x06015B56 RID: 88918 RVA: 0x0064B9E2 File Offset: 0x00649BE2
 	[NullableContext(1)]
 	public WeaponBreachSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060182B6 RID: 98998 RVA: 0x00625A20 File Offset: 0x00623C20
+	// Token: 0x06015B57 RID: 88919 RVA: 0x0064B9EC File Offset: 0x00649BEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -43,7 +43,7 @@ public class WeaponBreachSuccessView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060182B7 RID: 98999 RVA: 0x00625B08 File Offset: 0x00623D08
+	// Token: 0x06015B58 RID: 88920 RVA: 0x0064BAD4 File Offset: 0x00649CD4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeaponBreachSuccessView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,14 +54,14 @@ public class WeaponBreachSuccessView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060182B8 RID: 99000 RVA: 0x00625B4B File Offset: 0x00623D4B
+	// Token: 0x06015B59 RID: 88921 RVA: 0x0064BB17 File Offset: 0x00649D17
 	[NullableContext(1)]
 	private CSharpScript.Game.Module.RoleUi.StarItem InitStarItem()
 	{
 		return new CSharpScript.Game.Module.RoleUi.StarItem();
 	}
 
-	// Token: 0x060182B9 RID: 99001 RVA: 0x00625B52 File Offset: 0x00623D52
+	// Token: 0x06015B5A RID: 88922 RVA: 0x0064BB1E File Offset: 0x00649D1E
 	protected override void OnAfterPlayStartSequence()
 	{
 		CSharpScript.Game.Module.RoleUi.StarItem successStarItem = this.SuccessStarItem;
@@ -72,7 +72,7 @@ public class WeaponBreachSuccessView : UiViewBase
 		this.UiViewSequence.PlaySequencePurely("Loop", false, false);
 	}
 
-	// Token: 0x060182BA RID: 99002 RVA: 0x00625B77 File Offset: 0x00623D77
+	// Token: 0x06015B5B RID: 88923 RVA: 0x0064BB43 File Offset: 0x00649D43
 	private void ConfirmClick()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.WeaponBreach);
@@ -82,7 +82,7 @@ public class WeaponBreachSuccessView : UiViewBase
 		}
 	}
 
-	// Token: 0x060182BB RID: 99003 RVA: 0x00625BA0 File Offset: 0x00623DA0
+	// Token: 0x06015B5C RID: 88924 RVA: 0x0064BB6C File Offset: 0x00649D6C
 	protected UniTask UpdateStar(int breachLevel, int maxLevel)
 	{
 		WeaponBreachSuccessView.<UpdateStar>d__10 <UpdateStar>d__;
@@ -95,7 +95,7 @@ public class WeaponBreachSuccessView : UiViewBase
 		return <UpdateStar>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400B3C5 RID: 46021
+	// Token: 0x0400B73A RID: 46906
 	[Nullable(new byte[]
 	{
 		2,
@@ -104,23 +104,23 @@ public class WeaponBreachSuccessView : UiViewBase
 	})]
 	protected GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData> StarLayout;
 
-	// Token: 0x0400B3C6 RID: 46022
+	// Token: 0x0400B73B RID: 46907
 	[Nullable(2)]
 	protected CSharpScript.Game.Module.RoleUi.StarItem SuccessStarItem;
 
-	// Token: 0x0400B3C7 RID: 46023
+	// Token: 0x0400B73C RID: 46908
 	private int WeaponIncId;
 
-	// Token: 0x02009286 RID: 37510
+	// Token: 0x020084AE RID: 33966
 	private enum EComponent
 	{
-		// Token: 0x0402F60A RID: 194058
+		// Token: 0x0402AC94 RID: 175252
 		StarHorizontalLayout,
-		// Token: 0x0402F60B RID: 194059
+		// Token: 0x0402AC95 RID: 175253
 		ConfirmButton,
-		// Token: 0x0402F60C RID: 194060
+		// Token: 0x0402AC96 RID: 175254
 		LastLevelText,
-		// Token: 0x0402F60D RID: 194061
+		// Token: 0x0402AC97 RID: 175255
 		CurLevelText
 	}
 }

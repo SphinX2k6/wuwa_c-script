@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012EE RID: 4846
+// Token: 0x020007A2 RID: 1954
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingMainModule : UiPanelBase
 {
-	// Token: 0x060085F7 RID: 34295 RVA: 0x001C8B88 File Offset: 0x001C6D88
+	// Token: 0x06005992 RID: 22930 RVA: 0x001D19F4 File Offset: 0x001CFBF4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class BuildingMainModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x060085F8 RID: 34296 RVA: 0x001C8C10 File Offset: 0x001C6E10
+	// Token: 0x06005993 RID: 22931 RVA: 0x001D1A7C File Offset: 0x001CFC7C
 	private UniTask InitMapTile()
 	{
 		BuildingMainModule.<InitMapTile>d__7 <InitMapTile>d__;
@@ -37,7 +37,7 @@ public class BuildingMainModule : UiPanelBase
 		return <InitMapTile>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060085F9 RID: 34297 RVA: 0x001C8C54 File Offset: 0x001C6E54
+	// Token: 0x06005994 RID: 22932 RVA: 0x001D1AC0 File Offset: 0x001CFCC0
 	private void InitMoveComponent()
 	{
 		this.MoveComponent = new BuildingMapMoveComponent(base.GetDraggable(0), true, true, false);
@@ -45,7 +45,7 @@ public class BuildingMainModule : UiPanelBase
 		this.MoveComponent.SetChangeScaleCallback(new Action<ESetScaleSource>(this.OnChangeSlider));
 	}
 
-	// Token: 0x060085FA RID: 34298 RVA: 0x001C8CAC File Offset: 0x001C6EAC
+	// Token: 0x06005995 RID: 22933 RVA: 0x001D1B18 File Offset: 0x001CFD18
 	private void InitZoom()
 	{
 		this.Slider = base.GetSlider(2);
@@ -69,7 +69,7 @@ public class BuildingMainModule : UiPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x060085FB RID: 34299 RVA: 0x001C8D90 File Offset: 0x001C6F90
+	// Token: 0x06005996 RID: 22934 RVA: 0x001D1BFC File Offset: 0x001CFDFC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BuildingMainModule.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -80,40 +80,40 @@ public class BuildingMainModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060085FC RID: 34300 RVA: 0x001C8DD3 File Offset: 0x001C6FD3
+	// Token: 0x06005997 RID: 22935 RVA: 0x001D1C3F File Offset: 0x001CFE3F
 	protected override void OnStart()
 	{
 		this.InitMoveComponent();
 		this.InitZoom();
 	}
 
-	// Token: 0x060085FD RID: 34301 RVA: 0x001C8DE1 File Offset: 0x001C6FE1
+	// Token: 0x06005998 RID: 22936 RVA: 0x001D1C4D File Offset: 0x001CFE4D
 	public void RefreshModule()
 	{
 		this.MapTile.RefreshRole();
 	}
 
-	// Token: 0x060085FE RID: 34302 RVA: 0x001C8DEE File Offset: 0x001C6FEE
+	// Token: 0x06005999 RID: 22937 RVA: 0x001D1C5A File Offset: 0x001CFE5A
 	protected override void OnBeforeShow()
 	{
 		this.MoveComponent.BindTouch();
 		this.MoveComponent.AddGamepadEvent();
 	}
 
-	// Token: 0x060085FF RID: 34303 RVA: 0x001C8E06 File Offset: 0x001C7006
+	// Token: 0x0600599A RID: 22938 RVA: 0x001D1C72 File Offset: 0x001CFE72
 	protected override void OnAfterHide()
 	{
 		this.MoveComponent.UnbindTouch();
 		this.MoveComponent.RemoveGamepadEvent();
 	}
 
-	// Token: 0x06008600 RID: 34304 RVA: 0x001C8E1E File Offset: 0x001C701E
+	// Token: 0x0600599B RID: 22939 RVA: 0x001D1C8A File Offset: 0x001CFE8A
 	protected override void OnBeforeDestroy()
 	{
 		this.MoveComponent.Destroy();
 	}
 
-	// Token: 0x06008601 RID: 34305 RVA: 0x001C8E2B File Offset: 0x001C702B
+	// Token: 0x0600599C RID: 22940 RVA: 0x001D1C97 File Offset: 0x001CFE97
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -124,7 +124,7 @@ public class BuildingMainModule : UiPanelBase
 		return this.MapTile.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x06008602 RID: 34306 RVA: 0x001C8E39 File Offset: 0x001C7039
+	// Token: 0x0600599D RID: 22941 RVA: 0x001D1CA5 File Offset: 0x001CFEA5
 	private void OnChangeSlider(ESetScaleSource source)
 	{
 		if (source != ESetScaleSource.Slider)
@@ -133,25 +133,25 @@ public class BuildingMainModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008603 RID: 34307 RVA: 0x001C8E57 File Offset: 0x001C7057
+	// Token: 0x0600599E RID: 22942 RVA: 0x001D1CC3 File Offset: 0x001CFEC3
 	private void OnZoomOut()
 	{
 		this.MoveComponent.LongPressScroll((float)(-(float)this.MoveComponent.ScaleStep));
 	}
 
-	// Token: 0x06008604 RID: 34308 RVA: 0x001C8E71 File Offset: 0x001C7071
+	// Token: 0x0600599F RID: 22943 RVA: 0x001D1CDD File Offset: 0x001CFEDD
 	private void OnZoomIn()
 	{
 		this.MoveComponent.LongPressScroll((float)this.MoveComponent.ScaleStep);
 	}
 
-	// Token: 0x06008605 RID: 34309 RVA: 0x001C8E8A File Offset: 0x001C708A
+	// Token: 0x060059A0 RID: 22944 RVA: 0x001D1CF6 File Offset: 0x001CFEF6
 	private void OnSliderValueChange(float value)
 	{
 		this.MoveComponent.SliderScroll(value);
 	}
 
-	// Token: 0x06008606 RID: 34310 RVA: 0x001C8E98 File Offset: 0x001C7098
+	// Token: 0x060059A1 RID: 22945 RVA: 0x001D1D04 File Offset: 0x001CFF04
 	public void HideBuildingModule()
 	{
 		UUIItem item = base.GetItem(1);
@@ -162,7 +162,7 @@ public class BuildingMainModule : UiPanelBase
 		this.MapTile.SetBuildingItemActive(false);
 	}
 
-	// Token: 0x06008607 RID: 34311 RVA: 0x001C8EB9 File Offset: 0x001C70B9
+	// Token: 0x060059A2 RID: 22946 RVA: 0x001D1D25 File Offset: 0x001CFF25
 	public void ShowBuilding()
 	{
 		UUIItem item = base.GetItem(1);
@@ -173,44 +173,44 @@ public class BuildingMainModule : UiPanelBase
 		this.MapTile.SetBuildingItemActive(true);
 	}
 
-	// Token: 0x06008608 RID: 34312 RVA: 0x001C8EDA File Offset: 0x001C70DA
+	// Token: 0x060059A3 RID: 22947 RVA: 0x001D1D46 File Offset: 0x001CFF46
 	public void RefreshBuilding(int buildingId)
 	{
 		this.MapTile.RefreshBuildingItem(buildingId);
 	}
 
-	// Token: 0x04003C08 RID: 15368
+	// Token: 0x04003CA0 RID: 15520
 	private BuildingMapTileModule MapTile;
 
-	// Token: 0x04003C09 RID: 15369
+	// Token: 0x04003CA1 RID: 15521
 	private BuildingMapMoveComponent MoveComponent;
 
-	// Token: 0x04003C0A RID: 15370
+	// Token: 0x04003CA2 RID: 15522
 	private UUISliderComponent Slider;
 
-	// Token: 0x04003C0B RID: 15371
+	// Token: 0x04003CA3 RID: 15523
 	protected LongPressButton ZoomIn;
 
-	// Token: 0x04003C0C RID: 15372
+	// Token: 0x04003CA4 RID: 15524
 	protected LongPressButton ZoomOut;
 
-	// Token: 0x0200790E RID: 30990
+	// Token: 0x02006A98 RID: 27288
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027E1A RID: 163354
+		// Token: 0x04023147 RID: 143687
 		public const int MapItem = 0;
 
-		// Token: 0x04027E1B RID: 163355
+		// Token: 0x04023148 RID: 143688
 		public const int ZoomItem = 1;
 
-		// Token: 0x04027E1C RID: 163356
+		// Token: 0x04023149 RID: 143689
 		public const int ScaleSlider = 2;
 
-		// Token: 0x04027E1D RID: 163357
+		// Token: 0x0402314A RID: 143690
 		public const int ZoomIn = 3;
 
-		// Token: 0x04027E1E RID: 163358
+		// Token: 0x0402314B RID: 143691
 		public const int ZoomOut = 4;
 	}
 }

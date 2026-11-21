@@ -5,20 +5,20 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Interaction;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029F4 RID: 10740
+// Token: 0x02001F6F RID: 8047
 [NullableContext(2)]
 [Nullable(0)]
-public class ShopView : UiTickViewBase, IUiCameraBehavior
+public class ShopView : UiTickViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x17001DBF RID: 7615
-	// (get) Token: 0x0601645D RID: 91229 RVA: 0x005A1E82 File Offset: 0x005A0082
+	// Token: 0x17001E18 RID: 7704
+	// (get) Token: 0x06013E64 RID: 81508 RVA: 0x005CCE62 File Offset: 0x005CB062
 	public Shop ShopInfo
 	{
 		get
@@ -27,8 +27,8 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x17001DC0 RID: 7616
-	// (get) Token: 0x0601645E RID: 91230 RVA: 0x005A1E94 File Offset: 0x005A0094
+	// Token: 0x17001E19 RID: 7705
+	// (get) Token: 0x06013E65 RID: 81509 RVA: 0x005CCE74 File Offset: 0x005CB074
 	private uint? RefreshTime
 	{
 		get
@@ -42,9 +42,9 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x17001DC1 RID: 7617
-	// (get) Token: 0x0601645F RID: 91231 RVA: 0x005A1EBF File Offset: 0x005A00BF
-	// (set) Token: 0x06016460 RID: 91232 RVA: 0x005A1EC7 File Offset: 0x005A00C7
+	// Token: 0x17001E1A RID: 7706
+	// (get) Token: 0x06013E66 RID: 81510 RVA: 0x005CCE9F File Offset: 0x005CB09F
+	// (set) Token: 0x06013E67 RID: 81511 RVA: 0x005CCEA7 File Offset: 0x005CB0A7
 	public int? SecondsToRefresh
 	{
 		get
@@ -61,14 +61,14 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06016461 RID: 91233 RVA: 0x005A1F04 File Offset: 0x005A0104
+	// Token: 0x06013E68 RID: 81512 RVA: 0x005CCEE4 File Offset: 0x005CB0E4
 	[NullableContext(1)]
 	public ShopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016462 RID: 91234 RVA: 0x005A1F18 File Offset: 0x005A0118
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06013E69 RID: 81513 RVA: 0x005CCEF8 File Offset: 0x005CB0F8
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 		IShopOpenParam shopOpenParam = this.OpenParam as IShopOpenParam;
 		string handleName = "";
@@ -80,16 +80,16 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		{
 			handleName = ShopConfig.Instance.GetShopInfoConfig(shopOpenParam.ShopId).UiCamera;
 		}
-		this.ViewHandleData = UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(handleName, true, true, "1001", false, null, null);
+		this.ViewHandleData = UiCameraModel.Instance.PushCameraHandleByHandleName(handleName, true, true, "1001", false, null);
 	}
 
-	// Token: 0x06016463 RID: 91235 RVA: 0x005A1F9C File Offset: 0x005A019C
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06013E6A RID: 81514 RVA: 0x005CCF73 File Offset: 0x005CB173
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationManager.Instance.PopCameraHandle(this.ViewHandleData, null);
+		UiCameraModel.Instance.PopCameraHandle(this.ViewHandleData, null);
 	}
 
-	// Token: 0x06016464 RID: 91236 RVA: 0x005A1FB0 File Offset: 0x005A01B0
+	// Token: 0x06013E6B RID: 81515 RVA: 0x005CCF88 File Offset: 0x005CB188
 	protected override void OnBeforeCreate()
 	{
 		IShopOpenParam shopOpenParam = this.OpenParam as IShopOpenParam;
@@ -103,7 +103,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06016465 RID: 91237 RVA: 0x005A2008 File Offset: 0x005A0208
+	// Token: 0x06013E6C RID: 81516 RVA: 0x005CCFE0 File Offset: 0x005CB1E0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -118,7 +118,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06016466 RID: 91238 RVA: 0x005A20BC File Offset: 0x005A02BC
+	// Token: 0x06013E6D RID: 81517 RVA: 0x005CD094 File Offset: 0x005CB294
 	[NullableContext(1)]
 	private void OnExtendToggleStateChanged(MediumItemGridExtendCallback callbackParameter)
 	{
@@ -136,7 +136,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		this.ShopItemScrollView.SelectGridProxy(num, false);
 	}
 
-	// Token: 0x06016467 RID: 91239 RVA: 0x005A210C File Offset: 0x005A030C
+	// Token: 0x06013E6E RID: 81518 RVA: 0x005CD0E4 File Offset: 0x005CB2E4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShopView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -147,7 +147,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016468 RID: 91240 RVA: 0x005A2150 File Offset: 0x005A0350
+	// Token: 0x06013E6F RID: 81519 RVA: 0x005CD128 File Offset: 0x005CB328
 	protected override void OnStart()
 	{
 		IShopOpenParam shopOpenParam = this.OpenParam as IShopOpenParam;
@@ -186,7 +186,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		ShopModel.Instance.CurrentInteractCreatureDataLongId = InteractionModel.Instance.InteractCreatureDataLongId;
 	}
 
-	// Token: 0x06016469 RID: 91241 RVA: 0x005A2228 File Offset: 0x005A0428
+	// Token: 0x06013E70 RID: 81520 RVA: 0x005CD200 File Offset: 0x005CB400
 	private void ShowNpcName(ShopInfo shopInfo)
 	{
 		string newText = "";
@@ -199,7 +199,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		base.GetText(2).SetText(newText, true);
 	}
 
-	// Token: 0x0601646A RID: 91242 RVA: 0x005A2280 File Offset: 0x005A0480
+	// Token: 0x06013E71 RID: 81521 RVA: 0x005CD258 File Offset: 0x005CB458
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OpenItemInfo, new Action(this.OpenItemInfoEvent));
@@ -208,7 +208,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		EventSystem.Instance.Add<int?>(EEventName.ShopUpdate, new Action<int?>(this.OnShopUpdate));
 	}
 
-	// Token: 0x0601646B RID: 91243 RVA: 0x005A2300 File Offset: 0x005A0500
+	// Token: 0x06013E72 RID: 81522 RVA: 0x005CD2D8 File Offset: 0x005CB4D8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OpenItemInfo, new Action(this.OpenItemInfoEvent));
@@ -217,7 +217,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		EventSystem.Instance.Remove(EEventName.ShopUpdate, new Action<int?>(this.OnShopUpdate));
 	}
 
-	// Token: 0x0601646C RID: 91244 RVA: 0x005A2380 File Offset: 0x005A0580
+	// Token: 0x06013E73 RID: 81523 RVA: 0x005CD358 File Offset: 0x005CB558
 	private void OnSequenceFinish()
 	{
 		ShopPanelData shopPanelData = new ShopPanelData();
@@ -236,7 +236,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		this.ShopItemInfoPanelInternal.UpdatePanel(shopPanelData);
 	}
 
-	// Token: 0x0601646D RID: 91245 RVA: 0x005A243E File Offset: 0x005A063E
+	// Token: 0x06013E74 RID: 81524 RVA: 0x005CD416 File Offset: 0x005CB616
 	[NullableContext(1)]
 	private void RequestServer(int itemId, int buyCount, int currencyId, object param)
 	{
@@ -260,13 +260,13 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x0601646E RID: 91246 RVA: 0x005A2465 File Offset: 0x005A0665
+	// Token: 0x06013E75 RID: 81525 RVA: 0x005CD43D File Offset: 0x005CB63D
 	protected override void OnTick(float delta)
 	{
 		this.RefreshTimeOnTick();
 	}
 
-	// Token: 0x0601646F RID: 91247 RVA: 0x005A2470 File Offset: 0x005A0670
+	// Token: 0x06013E76 RID: 81526 RVA: 0x005CD448 File Offset: 0x005CB648
 	private void RefreshTimeOnTick()
 	{
 		if (this.RefreshTime != null)
@@ -286,7 +286,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		base.GetItem(1).SetUIActive(false);
 	}
 
-	// Token: 0x06016470 RID: 91248 RVA: 0x005A24E0 File Offset: 0x005A06E0
+	// Token: 0x06013E77 RID: 81527 RVA: 0x005CD4B8 File Offset: 0x005CB6B8
 	protected override void OnBeforeDestroy()
 	{
 		List<ShopItemFullInfo> shopItemInfoList = this.ShopItemInfoList;
@@ -313,14 +313,14 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06016471 RID: 91249 RVA: 0x005A2580 File Offset: 0x005A0780
+	// Token: 0x06013E78 RID: 81528 RVA: 0x005CD558 File Offset: 0x005CB758
 	private void OnBuyItem(int shopId, int id)
 	{
 		this.RefreshShopItemList(false, false);
 		this.UpdateCurrency();
 	}
 
-	// Token: 0x06016472 RID: 91250 RVA: 0x005A2590 File Offset: 0x005A0790
+	// Token: 0x06013E79 RID: 81529 RVA: 0x005CD568 File Offset: 0x005CB768
 	private void OnShopUpdate(int? shopId)
 	{
 		int shopId2 = this.ShopId;
@@ -331,7 +331,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06016473 RID: 91251 RVA: 0x005A25C0 File Offset: 0x005A07C0
+	// Token: 0x06013E7A RID: 81530 RVA: 0x005CD598 File Offset: 0x005CB798
 	private void OpenItemInfoEvent()
 	{
 		base.PlaySequence("Sle", new Action(this.OnSequenceFinish), false);
@@ -352,7 +352,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		this.ShopItemInfoPanelInternal.UpdatePanel(shopPanelData);
 	}
 
-	// Token: 0x06016474 RID: 91252 RVA: 0x005A26C0 File Offset: 0x005A08C0
+	// Token: 0x06013E7B RID: 81531 RVA: 0x005CD698 File Offset: 0x005CB898
 	private void CloseItemInfoEvent()
 	{
 		if (this.UiViewSequence != null)
@@ -361,12 +361,12 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06016475 RID: 91253 RVA: 0x005A26EF File Offset: 0x005A08EF
+	// Token: 0x06013E7C RID: 81532 RVA: 0x005CD6C7 File Offset: 0x005CB8C7
 	protected void SetShopName()
 	{
 	}
 
-	// Token: 0x06016476 RID: 91254 RVA: 0x005A26F4 File Offset: 0x005A08F4
+	// Token: 0x06013E7D RID: 81533 RVA: 0x005CD6CC File Offset: 0x005CB8CC
 	protected void UpdateCurrency()
 	{
 		ShopInfo? shopConfig = ShopModel.Instance.GetShopConfig(this.ShopId);
@@ -376,7 +376,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06016477 RID: 91255 RVA: 0x005A2728 File Offset: 0x005A0928
+	// Token: 0x06013E7E RID: 81534 RVA: 0x005CD700 File Offset: 0x005CB900
 	protected void RefreshShopItemList(bool isFirstRefresh = false, bool refreshItemInfo = false)
 	{
 		ShopView.<>c__DisplayClass37_0 CS$<>8__locals1 = new ShopView.<>c__DisplayClass37_0();
@@ -395,7 +395,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06016478 RID: 91256 RVA: 0x005A2770 File Offset: 0x005A0970
+	// Token: 0x06013E7F RID: 81535 RVA: 0x005CD748 File Offset: 0x005CB948
 	protected string FormatCountdown()
 	{
 		uint? refreshTime = this.RefreshTime;
@@ -413,7 +413,7 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		return ShopUtils.FormatTime(num);
 	}
 
-	// Token: 0x06016479 RID: 91257 RVA: 0x005A27D4 File Offset: 0x005A09D4
+	// Token: 0x06013E80 RID: 81536 RVA: 0x005CD7AC File Offset: 0x005CB9AC
 	private void ShowRefreshBox()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ShowTimeDownTips);
@@ -425,10 +425,10 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0400A5B0 RID: 42416
+	// Token: 0x0400A99A RID: 43418
 	private int ShopId;
 
-	// Token: 0x0400A5B1 RID: 42417
+	// Token: 0x0400A99B RID: 43419
 	[Nullable(new byte[]
 	{
 		2,
@@ -437,14 +437,14 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 	})]
 	protected LoopScrollView<ShopMediumItemGrid, ShopItemFullInfo> ShopItemScrollView;
 
-	// Token: 0x0400A5B2 RID: 42418
+	// Token: 0x0400A99C RID: 43420
 	private ShopItemInfoDetailPanel ShopItemInfoPanelInternal;
 
-	// Token: 0x0400A5B3 RID: 42419
+	// Token: 0x0400A99D RID: 43421
 	[Nullable(1)]
 	private readonly List<CommonCurrencyItem> CurrencyItemList = new List<CommonCurrencyItem>();
 
-	// Token: 0x0400A5B4 RID: 42420
+	// Token: 0x0400A99E RID: 43422
 	[Nullable(new byte[]
 	{
 		2,
@@ -452,29 +452,29 @@ public class ShopView : UiTickViewBase, IUiCameraBehavior
 	})]
 	private List<ShopItemFullInfo> ShopItemInfoList;
 
-	// Token: 0x0400A5B5 RID: 42421
+	// Token: 0x0400A99F RID: 43423
 	private int? SecondsToRefreshInner;
 
-	// Token: 0x0400A5B6 RID: 42422
+	// Token: 0x0400A9A0 RID: 43424
 	private UiCameraHandleData ViewHandleData;
 
-	// Token: 0x0200902B RID: 36907
+	// Token: 0x02008272 RID: 33394
 	[NullableContext(0)]
 	private enum EShopViewDefine
 	{
-		// Token: 0x0402EACB RID: 191179
+		// Token: 0x0402A1C3 RID: 172483
 		RefreshTimeText,
-		// Token: 0x0402EACC RID: 191180
+		// Token: 0x0402A1C4 RID: 172484
 		RefreshTimeItem,
-		// Token: 0x0402EACD RID: 191181
+		// Token: 0x0402A1C5 RID: 172485
 		NpcName,
-		// Token: 0x0402EACE RID: 191182
+		// Token: 0x0402A1C6 RID: 172486
 		DialogueText,
-		// Token: 0x0402EACF RID: 191183
+		// Token: 0x0402A1C7 RID: 172487
 		ScrollView,
-		// Token: 0x0402EAD0 RID: 191184
+		// Token: 0x0402A1C8 RID: 172488
 		InfoPanel,
-		// Token: 0x0402EAD1 RID: 191185
+		// Token: 0x0402A1C9 RID: 172489
 		GridItem
 	}
 }

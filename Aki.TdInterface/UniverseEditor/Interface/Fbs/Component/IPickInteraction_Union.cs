@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200573C RID: 22332
+	// Token: 0x02005D43 RID: 23875
 	public enum IPickInteraction_Union : byte
 	{
-		// Token: 0x0400EBC4 RID: 60356
+		// Token: 0x0400F8AF RID: 63663
 		NONE,
-		// Token: 0x0400EBC5 RID: 60357
+		// Token: 0x0400F8B0 RID: 63664
 		IPickInteraction,
-		// Token: 0x0400EBC6 RID: 60358
+		// Token: 0x0400F8B1 RID: 63665
 		IChessmanPickInteraction
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF1 RID: 3057
+	// Token: 0x02000CC0 RID: 3264
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IIconNearByTrackingConfig
 	{
-		// Token: 0x06004636 RID: 17974 RVA: 0x000B1711 File Offset: 0x000AF911
-		[NullableContext(1)]
+		// Token: 0x06004A94 RID: 19092 RVA: 0x000BB88D File Offset: 0x000B9A8D
+		[NullableContext(0)]
 		public static IIconNearByTrackingConfig Create(IIconNearByTrackingConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001411 RID: 5137
-		// (get) Token: 0x06004637 RID: 17975 RVA: 0x000B1730 File Offset: 0x000AF930
+		// Token: 0x1700150F RID: 5391
+		// (get) Token: 0x06004A95 RID: 19093 RVA: 0x000BB8AC File Offset: 0x000B9AAC
 		public virtual int ShowRange
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001412 RID: 5138
-		// (get) Token: 0x06004638 RID: 17976 RVA: 0x000B173D File Offset: 0x000AF93D
+		// Token: 0x17001510 RID: 5392
+		// (get) Token: 0x06004A96 RID: 19094 RVA: 0x000BB8B9 File Offset: 0x000B9AB9
 		public virtual int HideRange
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001413 RID: 5139
-		// (get) Token: 0x06004639 RID: 17977 RVA: 0x000B174C File Offset: 0x000AF94C
+		// Token: 0x17001511 RID: 5393
+		// (get) Token: 0x06004A97 RID: 19095 RVA: 0x000BB8C8 File Offset: 0x000B9AC8
 		public virtual ENearbyTrackingTexture? TexturePath
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001414 RID: 5140
-		// (get) Token: 0x0600463A RID: 17978 RVA: 0x000B1782 File Offset: 0x000AF982
+		// Token: 0x17001512 RID: 5394
+		// (get) Token: 0x06004A98 RID: 19096 RVA: 0x000BB8FE File Offset: 0x000B9AFE
 		public virtual VectorInfo UiOffset
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001415 RID: 5141
-		// (get) Token: 0x0600463B RID: 17979 RVA: 0x000B17B8 File Offset: 0x000AF9B8
+		// Token: 0x17001513 RID: 5395
+		// (get) Token: 0x06004A99 RID: 19097 RVA: 0x000BB934 File Offset: 0x000B9B34
 		public virtual float? Duration
 		{
 			get
@@ -88,13 +88,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027FA RID: 10234
+		// Token: 0x04002A45 RID: 10821
 		private IIconNearByTrackingConfig Instance;
 
-		// Token: 0x040027FB RID: 10235
+		// Token: 0x04002A46 RID: 10822
 		private VectorInfo _UiOffsetCache;
 
-		// Token: 0x040027FC RID: 10236
+		// Token: 0x04002A47 RID: 10823
 		private bool _UiOffsetInited;
 	}
 }

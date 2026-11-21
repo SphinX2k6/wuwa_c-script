@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025F9 RID: 9721
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028B9 RID: 10425
 	public class SetPosA : ActionParams
 	{
-		// Token: 0x0600DA69 RID: 55913 RVA: 0x00208C46 File Offset: 0x00206E46
+		// Token: 0x0600E836 RID: 59446 RVA: 0x0022539A File Offset: 0x0022359A
 		public static SetPosA Create(ISetPosA? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004039 RID: 16441
-		// (get) Token: 0x0600DA6A RID: 55914 RVA: 0x00208C65 File Offset: 0x00206E65
+		// Token: 0x17004372 RID: 17266
+		// (get) Token: 0x0600E837 RID: 59447 RVA: 0x002253B9 File Offset: 0x002235B9
 		public virtual PosA Pos
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007943 RID: 31043
+		// Token: 0x04007FDD RID: 32733
 		private ISetPosA Instance;
 
-		// Token: 0x04007944 RID: 31044
+		// Token: 0x04007FDE RID: 32734
 		[Nullable(2)]
 		private PosA _PosCache;
 
-		// Token: 0x04007945 RID: 31045
+		// Token: 0x04007FDF RID: 32735
 		private bool _PosInited;
 	}
 }

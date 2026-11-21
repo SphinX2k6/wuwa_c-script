@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E00 RID: 7680
+// Token: 0x020012C2 RID: 4802
 public class HandBookEntranceItem : GridProxyAbstract<HandBookEntrance>
 {
-	// Token: 0x0600E99A RID: 59802 RVA: 0x00374450 File Offset: 0x00372650
+	// Token: 0x0600BDB9 RID: 48569 RVA: 0x00380158 File Offset: 0x0037E358
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,12 +26,12 @@ public class HandBookEntranceItem : GridProxyAbstract<HandBookEntrance>
 		};
 	}
 
-	// Token: 0x0600E99B RID: 59803 RVA: 0x0037450F File Offset: 0x0037270F
+	// Token: 0x0600BDBA RID: 48570 RVA: 0x00380217 File Offset: 0x0037E417
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600E99C RID: 59804 RVA: 0x00374514 File Offset: 0x00372714
+	// Token: 0x0600BDBB RID: 48571 RVA: 0x0038021C File Offset: 0x0037E41C
 	public override void Refresh(HandBookEntrance handBookEntrance, bool isSelected, int gridIndex)
 	{
 		this.HandBookEntrance = new HandBookEntrance?(handBookEntrance);
@@ -41,7 +41,7 @@ public class HandBookEntranceItem : GridProxyAbstract<HandBookEntrance>
 		this.RefreshCollectProgress();
 	}
 
-	// Token: 0x0600E99D RID: 59805 RVA: 0x00374578 File Offset: 0x00372778
+	// Token: 0x0600BDBC RID: 48572 RVA: 0x00380280 File Offset: 0x0037E480
 	public void RefreshRedDot()
 	{
 		if (this.HandBookEntrance == null)
@@ -56,7 +56,7 @@ public class HandBookEntranceItem : GridProxyAbstract<HandBookEntrance>
 		}
 	}
 
-	// Token: 0x0600E99E RID: 59806 RVA: 0x003745C4 File Offset: 0x003727C4
+	// Token: 0x0600BDBD RID: 48573 RVA: 0x003802CC File Offset: 0x0037E4CC
 	public void RefreshCollectProgress()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress((EHandBookTabType)this.HandBookEntrance.Value.Id);
@@ -77,7 +77,7 @@ public class HandBookEntranceItem : GridProxyAbstract<HandBookEntrance>
 		text.SetText(collectProgress[0].ToString(), true);
 	}
 
-	// Token: 0x0600E99F RID: 59807 RVA: 0x0037465C File Offset: 0x0037285C
+	// Token: 0x0600BDBE RID: 48574 RVA: 0x00380364 File Offset: 0x0037E564
 	private void OnButtonClicked()
 	{
 		switch (this.HandBookEntrance.Value.Id)
@@ -121,28 +121,28 @@ public class HandBookEntranceItem : GridProxyAbstract<HandBookEntrance>
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x04006C67 RID: 27751
+	// Token: 0x04006D48 RID: 27976
 	private HandBookEntrance? HandBookEntrance;
 
-	// Token: 0x020083C3 RID: 33731
+	// Token: 0x02007548 RID: 30024
 	private class EHandBookEntranceItemDefine
 	{
-		// Token: 0x0402AE76 RID: 175734
+		// Token: 0x04026199 RID: 156057
 		public const int NameText = 0;
 
-		// Token: 0x0402AE77 RID: 175735
+		// Token: 0x0402619A RID: 156058
 		public const int Texture = 1;
 
-		// Token: 0x0402AE78 RID: 175736
+		// Token: 0x0402619B RID: 156059
 		public const int CollectCountText = 2;
 
-		// Token: 0x0402AE79 RID: 175737
+		// Token: 0x0402619C RID: 156060
 		public const int Button = 3;
 
-		// Token: 0x0402AE7A RID: 175738
+		// Token: 0x0402619D RID: 156061
 		public const int RedDotItem = 4;
 
-		// Token: 0x0402AE7B RID: 175739
+		// Token: 0x0402619E RID: 156062
 		public const int NewCollectCountText = 5;
 	}
 }

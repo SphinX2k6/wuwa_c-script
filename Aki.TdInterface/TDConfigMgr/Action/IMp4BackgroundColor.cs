@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C46 RID: 7238
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E3D RID: 7741
 	public class IMp4BackgroundColor
 	{
-		// Token: 0x06009B47 RID: 39751 RVA: 0x00164B74 File Offset: 0x00162D74
+		// Token: 0x0600A49F RID: 42143 RVA: 0x00177EB4 File Offset: 0x001760B4
 		private IMp4BackgroundColor_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009B48 RID: 39752 RVA: 0x00164BAC File Offset: 0x00162DAC
+		// Token: 0x0600A4A0 RID: 42144 RVA: 0x00177EEC File Offset: 0x001760EC
 		public static IMp4BackgroundColor Create([Nullable(2)] IMp4BackgroundColor instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B49 RID: 39753 RVA: 0x00164BBF File Offset: 0x00162DBF
+		// Token: 0x0600A4A1 RID: 42145 RVA: 0x00177EFF File Offset: 0x001760FF
 		public static IMp4BackgroundColor CreateFromSetValue([Nullable(2)] IMp4BackgroundColor_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009B4A RID: 39754 RVA: 0x00164BD2 File Offset: 0x00162DD2
+		// Token: 0x0600A4A2 RID: 42146 RVA: 0x00177F12 File Offset: 0x00176112
 		public IMp4BackgroundColor_SetValue ToSetValue()
 		{
 			return new IMp4BackgroundColor_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003091 RID: 12433
-		// (get) Token: 0x06009B4B RID: 39755 RVA: 0x00164BF1 File Offset: 0x00162DF1
-		// (set) Token: 0x06009B4C RID: 39756 RVA: 0x00164C1C File Offset: 0x00162E1C
+		// Token: 0x17003302 RID: 13058
+		// (get) Token: 0x0600A4A3 RID: 42147 RVA: 0x00177F31 File Offset: 0x00176131
+		// (set) Token: 0x0600A4A4 RID: 42148 RVA: 0x00177F5C File Offset: 0x0017615C
 		public virtual EMp4BackgroundColor FadeIn
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003092 RID: 12434
-		// (get) Token: 0x06009B4D RID: 39757 RVA: 0x00164C2A File Offset: 0x00162E2A
-		// (set) Token: 0x06009B4E RID: 39758 RVA: 0x00164C55 File Offset: 0x00162E55
+		// Token: 0x17003303 RID: 13059
+		// (get) Token: 0x0600A4A5 RID: 42149 RVA: 0x00177F6A File Offset: 0x0017616A
+		// (set) Token: 0x0600A4A6 RID: 42150 RVA: 0x00177F95 File Offset: 0x00176195
 		public virtual EMp4BackgroundColor FadeOut
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E54 RID: 24148
+		// Token: 0x0400638B RID: 25483
 		[Nullable(2)]
 		protected IMp4BackgroundColor FbInstance;
 
-		// Token: 0x04005E55 RID: 24149
+		// Token: 0x0400638C RID: 25484
 		[Nullable(2)]
 		protected IMp4BackgroundColor_SetValue PocoInterface;
 	}

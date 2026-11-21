@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CCE RID: 3278
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DB2 RID: 3506
 	public class IFanInteractByFKey : IFanInteractType
 	{
-		// Token: 0x06004AEF RID: 19183 RVA: 0x000BB73B File Offset: 0x000B993B
+		// Token: 0x06004FAA RID: 20394 RVA: 0x000C6373 File Offset: 0x000C4573
 		public static IFanInteractByFKey Create(IFanInteractByFKey? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001710 RID: 5904
-		// (get) Token: 0x06004AF0 RID: 19184 RVA: 0x000BB75A File Offset: 0x000B995A
+		// Token: 0x17001841 RID: 6209
+		// (get) Token: 0x06004FAB RID: 20395 RVA: 0x000C6392 File Offset: 0x000C4592
 		public override EFanInteractType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001711 RID: 5905
-		// (get) Token: 0x06004AF1 RID: 19185 RVA: 0x000BB767 File Offset: 0x000B9967
+		// Token: 0x17001842 RID: 6210
+		// (get) Token: 0x06004FAC RID: 20396 RVA: 0x000C639F File Offset: 0x000C459F
 		public virtual string TidInteractOptionText
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001712 RID: 5906
-		// (get) Token: 0x06004AF2 RID: 19186 RVA: 0x000BB774 File Offset: 0x000B9974
+		// Token: 0x17001843 RID: 6211
+		// (get) Token: 0x06004FAD RID: 20397 RVA: 0x000C63AC File Offset: 0x000C45AC
 		[Nullable(2)]
 		public virtual string EdTidInteractOptionText
 		{
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AE3 RID: 10979
+		// Token: 0x04002D69 RID: 11625
 		private IFanInteractByFKey Instance;
 	}
 }

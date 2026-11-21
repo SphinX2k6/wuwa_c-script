@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002DB7 RID: 11703
+// Token: 0x02002311 RID: 8977
 public enum EBulletSyncTypeTs
 {
-	// Token: 0x0400B6EA RID: 46826
+	// Token: 0x0400BA64 RID: 47716
 	Local,
-	// Token: 0x0400B6EB RID: 46827
+	// Token: 0x0400BA65 RID: 47717
 	Remote
 }

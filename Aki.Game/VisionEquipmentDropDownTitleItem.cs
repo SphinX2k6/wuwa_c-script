@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020024A4 RID: 9380
+// Token: 0x0200198B RID: 6539
 public class VisionEquipmentDropDownTitleItem : TitleItemBase<int>
 {
-	// Token: 0x06012D4B RID: 77131 RVA: 0x004A5FC9 File Offset: 0x004A41C9
+	// Token: 0x0601020C RID: 66060 RVA: 0x004B3AA1 File Offset: 0x004B1CA1
 	[NullableContext(1)]
 	public VisionEquipmentDropDownTitleItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x06012D4C RID: 77132 RVA: 0x004A5FD2 File Offset: 0x004A41D2
+	// Token: 0x0601020D RID: 66061 RVA: 0x004B3AAA File Offset: 0x004B1CAA
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class VisionEquipmentDropDownTitleItem : TitleItemBase<int>
 		};
 	}
 
-	// Token: 0x06012D4D RID: 77133 RVA: 0x004A600C File Offset: 0x004A420C
+	// Token: 0x0601020E RID: 66062 RVA: 0x004B3AE4 File Offset: 0x004B1CE4
 	[NullableContext(1)]
 	public override void ShowTemp(int data, DropDownItemBase<int> selectedItemObj)
 	{
@@ -51,7 +51,7 @@ public class VisionEquipmentDropDownTitleItem : TitleItemBase<int>
 		this.VisionFetterSuitItem.SetActive(flag);
 	}
 
-	// Token: 0x06012D4E RID: 77134 RVA: 0x004A60CD File Offset: 0x004A42CD
+	// Token: 0x0601020F RID: 66063 RVA: 0x004B3BA5 File Offset: 0x004B1DA5
 	protected override void OnBeforeDestroy()
 	{
 		VisionFetterSuitItem visionFetterSuitItem = this.VisionFetterSuitItem;
@@ -62,16 +62,16 @@ public class VisionEquipmentDropDownTitleItem : TitleItemBase<int>
 		visionFetterSuitItem.Destroy(null);
 	}
 
-	// Token: 0x04008DD3 RID: 36307
+	// Token: 0x04008F1D RID: 36637
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02008A29 RID: 35369
+	// Token: 0x02007BB3 RID: 31667
 	private enum EComponent
 	{
-		// Token: 0x0402CDCA RID: 183754
+		// Token: 0x040280EA RID: 164074
 		TxtOption,
-		// Token: 0x0402CDCB RID: 183755
+		// Token: 0x040280EB RID: 164075
 		SuitElementItem
 	}
 }

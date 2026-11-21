@@ -7,12 +7,12 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200307D RID: 12413
+// Token: 0x020025D4 RID: 9684
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterPart
 {
-	// Token: 0x0601A834 RID: 108596 RVA: 0x0071800C File Offset: 0x0071620C
+	// Token: 0x0601820A RID: 98826 RVA: 0x0073E6D0 File Offset: 0x0073C8D0
 	[NullableContext(1)]
 	public CharacterPart(Entity baseEntity, int index, SCharacterPart table)
 	{
@@ -64,13 +64,13 @@ public class CharacterPart
 		this.Life = this.LifeMax;
 	}
 
-	// Token: 0x0601A835 RID: 108597 RVA: 0x0071826F File Offset: 0x0071646F
+	// Token: 0x0601820B RID: 98827 RVA: 0x0073E933 File Offset: 0x0073CB33
 	public void SetActive(bool active)
 	{
 		this.Active = active;
 	}
 
-	// Token: 0x0601A836 RID: 108598 RVA: 0x00718278 File Offset: 0x00716478
+	// Token: 0x0601820C RID: 98828 RVA: 0x0073E93C File Offset: 0x0073CB3C
 	private void HandleSetActive(bool active)
 	{
 		if (this.Active == active)
@@ -86,7 +86,7 @@ public class CharacterPart
 		this.TagComponent.RemoveTag((this.ActiveTag != null) ? new int?(this.ActiveTag.GetValueOrDefault().TagId()) : null);
 	}
 
-	// Token: 0x0601A837 RID: 108599 RVA: 0x00718300 File Offset: 0x00716500
+	// Token: 0x0601820D RID: 98829 RVA: 0x0073E9C4 File Offset: 0x0073CBC4
 	[NullableContext(1)]
 	public unsafe void UpdatePartInfo(PartInformation data, bool triggerEvent = true)
 	{
@@ -104,7 +104,7 @@ public class CharacterPart
 		this.HandleChangeLife(data.LifeValue, triggerEvent);
 	}
 
-	// Token: 0x0601A838 RID: 108600 RVA: 0x007183E4 File Offset: 0x007165E4
+	// Token: 0x0601820E RID: 98830 RVA: 0x0073EAA8 File Offset: 0x0073CCA8
 	[NullableContext(1)]
 	public bool OnDamage(float damage, bool hitWeakness, Entity attacker, bool deductLife = true)
 	{
@@ -130,7 +130,7 @@ public class CharacterPart
 		return result;
 	}
 
-	// Token: 0x0601A839 RID: 108601 RVA: 0x00718494 File Offset: 0x00716694
+	// Token: 0x0601820F RID: 98831 RVA: 0x0073EB58 File Offset: 0x0073CD58
 	public void HandleChangeLife(float value, bool triggerEvent = true)
 	{
 		float num = this.Life - value;
@@ -152,7 +152,7 @@ public class CharacterPart
 		}
 	}
 
-	// Token: 0x0601A83A RID: 108602 RVA: 0x0071850D File Offset: 0x0071670D
+	// Token: 0x06018210 RID: 98832 RVA: 0x0073EBD1 File Offset: 0x0073CDD1
 	public float RemainedLife()
 	{
 		if (!this.InheritLife)
@@ -166,7 +166,7 @@ public class CharacterPart
 		return this.Life;
 	}
 
-	// Token: 0x0601A83B RID: 108603 RVA: 0x00718536 File Offset: 0x00716736
+	// Token: 0x06018211 RID: 98833 RVA: 0x0073EBFA File Offset: 0x0073CDFA
 	public float RemainedLifeRate()
 	{
 		if (!this.InheritLife)
@@ -176,100 +176,100 @@ public class CharacterPart
 		return this.RemainedLife() / this.LifeMax;
 	}
 
-	// Token: 0x0601A83C RID: 108604 RVA: 0x00718553 File Offset: 0x00716753
+	// Token: 0x06018212 RID: 98834 RVA: 0x0073EC17 File Offset: 0x0073CE17
 	public void ResetLife()
 	{
 	}
 
-	// Token: 0x0400CB72 RID: 52082
+	// Token: 0x0400CF55 RID: 53077
 	public Entity BaseEntity;
 
-	// Token: 0x0400CB73 RID: 52083
+	// Token: 0x0400CF56 RID: 53078
 	public CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CB74 RID: 52084
+	// Token: 0x0400CF57 RID: 53079
 	public BaseTagComponent TagComponent;
 
-	// Token: 0x0400CB75 RID: 52085
+	// Token: 0x0400CF58 RID: 53080
 	public BaseAttributeComponent AttributeComp;
 
-	// Token: 0x0400CB76 RID: 52086
+	// Token: 0x0400CF59 RID: 53081
 	public int Index;
 
-	// Token: 0x0400CB77 RID: 52087
+	// Token: 0x0400CF5A RID: 53082
 	public FGameplayTag? PartTag;
 
-	// Token: 0x0400CB78 RID: 52088
+	// Token: 0x0400CF5B RID: 53083
 	public FGameplayTag? ActiveTag;
 
-	// Token: 0x0400CB79 RID: 52089
+	// Token: 0x0400CF5C RID: 53084
 	public FName? BoneName;
 
-	// Token: 0x0400CB7A RID: 52090
+	// Token: 0x0400CF5D RID: 53085
 	public bool SeparateDamage;
 
-	// Token: 0x0400CB7B RID: 52091
+	// Token: 0x0400CF5E RID: 53086
 	public bool IsWeakness;
 
-	// Token: 0x0400CB7C RID: 52092
+	// Token: 0x0400CF5F RID: 53087
 	public HashSet<global::EBulletType> WeaknessTypeSet;
 
-	// Token: 0x0400CB7D RID: 52093
+	// Token: 0x0400CF60 RID: 53088
 	public float WeaknessAngle;
 
-	// Token: 0x0400CB7E RID: 52094
+	// Token: 0x0400CF61 RID: 53089
 	public bool PreciseWeaknessAngle;
 
-	// Token: 0x0400CB7F RID: 52095
+	// Token: 0x0400CF62 RID: 53090
 	public bool InheritLife;
 
-	// Token: 0x0400CB80 RID: 52096
+	// Token: 0x0400CF63 RID: 53091
 	public float LifeMax;
 
-	// Token: 0x0400CB81 RID: 52097
+	// Token: 0x0400CF64 RID: 53092
 	public float Life;
 
-	// Token: 0x0400CB82 RID: 52098
+	// Token: 0x0400CF65 RID: 53093
 	public bool Active;
 
-	// Token: 0x0400CB83 RID: 52099
+	// Token: 0x0400CF66 RID: 53094
 	public FName? PartSocketName;
 
-	// Token: 0x0400CB84 RID: 52100
+	// Token: 0x0400CF67 RID: 53095
 	public bool IsPartStateVisible;
 
-	// Token: 0x0400CB85 RID: 52101
+	// Token: 0x0400CF68 RID: 53096
 	public float HitPartStateVisibleDuration;
 
-	// Token: 0x0400CB86 RID: 52102
+	// Token: 0x0400CF69 RID: 53097
 	public bool IsShield;
 
-	// Token: 0x0400CB87 RID: 52103
+	// Token: 0x0400CF6A RID: 53098
 	public bool IsTransferDamage;
 
-	// Token: 0x0400CB88 RID: 52104
+	// Token: 0x0400CF6B RID: 53099
 	public float BlockAngle;
 
-	// Token: 0x0400CB89 RID: 52105
+	// Token: 0x0400CF6C RID: 53100
 	public long[] AttributeBuffList;
 
-	// Token: 0x0400CB8A RID: 52106
+	// Token: 0x0400CF6D RID: 53101
 	[Nullable(1)]
 	public string ScanEffect = "";
 
-	// Token: 0x0400CB8B RID: 52107
+	// Token: 0x0400CF6E RID: 53102
 	public FName? ScanEffectSocketName;
 
-	// Token: 0x0400CB8C RID: 52108
+	// Token: 0x0400CF6F RID: 53103
 	public PD_CharacterControllerData_C ScanMaterialEffect;
 
-	// Token: 0x0400CB8D RID: 52109
+	// Token: 0x0400CF70 RID: 53104
 	public FName? CombinePartSocketName;
 
-	// Token: 0x0400CB8E RID: 52110
+	// Token: 0x0400CF71 RID: 53105
 	public bool IsWeaknessHit;
 
-	// Token: 0x0400CB8F RID: 52111
+	// Token: 0x0400CF72 RID: 53106
 	[Nullable(1)]
 	public string HitBoneName = "";
 }

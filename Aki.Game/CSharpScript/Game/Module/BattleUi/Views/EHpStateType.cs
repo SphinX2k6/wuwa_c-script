@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D5B RID: 23899
+	// Token: 0x02004D3D RID: 19773
 	public enum EHpStateType
 	{
-		// Token: 0x0401F9A1 RID: 129441
+		// Token: 0x0401A45A RID: 107610
 		Normal,
-		// Token: 0x0401F9A2 RID: 129442
+		// Token: 0x0401A45B RID: 107611
 		Danger,
-		// Token: 0x0401F9A3 RID: 129443
+		// Token: 0x0401A45C RID: 107612
 		Dead
 	}
 }

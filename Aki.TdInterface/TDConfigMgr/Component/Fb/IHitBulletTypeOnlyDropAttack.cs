@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B93 RID: 2963
+	// Token: 0x02000C61 RID: 3169
 	public class IHitBulletTypeOnlyDropAttack : IHitBulletType
 	{
-		// Token: 0x06004418 RID: 17432 RVA: 0x000AD2E6 File Offset: 0x000AB4E6
-		[NullableContext(1)]
+		// Token: 0x06004871 RID: 18545 RVA: 0x000B73AA File Offset: 0x000B55AA
 		public static IHitBulletTypeOnlyDropAttack Create(IHitBulletTypeOnlyDropAttack? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012AF RID: 4783
-		// (get) Token: 0x06004419 RID: 17433 RVA: 0x000AD305 File Offset: 0x000AB505
+		// Token: 0x170013AA RID: 5034
+		// (get) Token: 0x06004872 RID: 18546 RVA: 0x000B73C9 File Offset: 0x000B55C9
 		public override EHitBulletType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400266E RID: 9838
+		// Token: 0x040028B6 RID: 10422
 		private IHitBulletTypeOnlyDropAttack Instance;
 	}
 }

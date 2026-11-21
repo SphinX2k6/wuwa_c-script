@@ -2,52 +2,52 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D0 RID: 18384
+	// Token: 0x02003701 RID: 14081
 	public class QuickNavigateDynamicData
 	{
-		// Token: 0x170078AC RID: 30892
-		// (get) Token: 0x060302B9 RID: 197305 RVA: 0x00B29BB0 File Offset: 0x00B27DB0
-		// (set) Token: 0x060302BA RID: 197306 RVA: 0x00B29BB8 File Offset: 0x00B27DB8
+		// Token: 0x17004B69 RID: 19305
+		// (get) Token: 0x06024A89 RID: 150153 RVA: 0x00A59A4C File Offset: 0x00A57C4C
+		// (set) Token: 0x06024A8A RID: 150154 RVA: 0x00A59A54 File Offset: 0x00A57C54
 		public EQuickNavigateItemType ItemType { get; set; }
 
-		// Token: 0x170078AD RID: 30893
-		// (get) Token: 0x060302BB RID: 197307 RVA: 0x00B29BC1 File Offset: 0x00B27DC1
-		// (set) Token: 0x060302BC RID: 197308 RVA: 0x00B29BC9 File Offset: 0x00B27DC9
+		// Token: 0x17004B6A RID: 19306
+		// (get) Token: 0x06024A8B RID: 150155 RVA: 0x00A59A5D File Offset: 0x00A57C5D
+		// (set) Token: 0x06024A8C RID: 150156 RVA: 0x00A59A65 File Offset: 0x00A57C65
 		public int CountryId { get; set; }
 
-		// Token: 0x170078AE RID: 30894
-		// (get) Token: 0x060302BD RID: 197309 RVA: 0x00B29BD2 File Offset: 0x00B27DD2
-		// (set) Token: 0x060302BE RID: 197310 RVA: 0x00B29BDA File Offset: 0x00B27DDA
+		// Token: 0x17004B6B RID: 19307
+		// (get) Token: 0x06024A8D RID: 150157 RVA: 0x00A59A6E File Offset: 0x00A57C6E
+		// (set) Token: 0x06024A8E RID: 150158 RVA: 0x00A59A76 File Offset: 0x00A57C76
 		public int StateId { get; set; }
 
-		// Token: 0x170078AF RID: 30895
-		// (get) Token: 0x060302BF RID: 197311 RVA: 0x00B29BE3 File Offset: 0x00B27DE3
-		// (set) Token: 0x060302C0 RID: 197312 RVA: 0x00B29BEB File Offset: 0x00B27DEB
+		// Token: 0x17004B6C RID: 19308
+		// (get) Token: 0x06024A8F RID: 150159 RVA: 0x00A59A7F File Offset: 0x00A57C7F
+		// (set) Token: 0x06024A90 RID: 150160 RVA: 0x00A59A87 File Offset: 0x00A57C87
 		public int AreaId { get; set; }
 
-		// Token: 0x170078B0 RID: 30896
-		// (get) Token: 0x060302C1 RID: 197313 RVA: 0x00B29BF4 File Offset: 0x00B27DF4
-		// (set) Token: 0x060302C2 RID: 197314 RVA: 0x00B29BFC File Offset: 0x00B27DFC
+		// Token: 0x17004B6D RID: 19309
+		// (get) Token: 0x06024A91 RID: 150161 RVA: 0x00A59A90 File Offset: 0x00A57C90
+		// (set) Token: 0x06024A92 RID: 150162 RVA: 0x00A59A98 File Offset: 0x00A57C98
 		public int Index { get; set; }
 
-		// Token: 0x170078B1 RID: 30897
-		// (get) Token: 0x060302C3 RID: 197315 RVA: 0x00B29C05 File Offset: 0x00B27E05
-		// (set) Token: 0x060302C4 RID: 197316 RVA: 0x00B29C0D File Offset: 0x00B27E0D
+		// Token: 0x17004B6E RID: 19310
+		// (get) Token: 0x06024A93 RID: 150163 RVA: 0x00A59AA1 File Offset: 0x00A57CA1
+		// (set) Token: 0x06024A94 RID: 150164 RVA: 0x00A59AA9 File Offset: 0x00A57CA9
 		public bool IsSelected { get; set; }
 
-		// Token: 0x170078B2 RID: 30898
-		// (get) Token: 0x060302C5 RID: 197317 RVA: 0x00B29C16 File Offset: 0x00B27E16
-		// (set) Token: 0x060302C6 RID: 197318 RVA: 0x00B29C1E File Offset: 0x00B27E1E
+		// Token: 0x17004B6F RID: 19311
+		// (get) Token: 0x06024A95 RID: 150165 RVA: 0x00A59AB2 File Offset: 0x00A57CB2
+		// (set) Token: 0x06024A96 RID: 150166 RVA: 0x00A59ABA File Offset: 0x00A57CBA
 		public ERefreshNavigateType RefreshType { get; set; }
 
-		// Token: 0x170078B3 RID: 30899
-		// (get) Token: 0x060302C7 RID: 197319 RVA: 0x00B29C27 File Offset: 0x00B27E27
-		// (set) Token: 0x060302C8 RID: 197320 RVA: 0x00B29C2F File Offset: 0x00B27E2F
+		// Token: 0x17004B70 RID: 19312
+		// (get) Token: 0x06024A97 RID: 150167 RVA: 0x00A59AC3 File Offset: 0x00A57CC3
+		// (set) Token: 0x06024A98 RID: 150168 RVA: 0x00A59ACB File Offset: 0x00A57CCB
 		public bool HasState { get; set; } = true;
 
-		// Token: 0x170078B4 RID: 30900
-		// (get) Token: 0x060302C9 RID: 197321 RVA: 0x00B29C38 File Offset: 0x00B27E38
-		// (set) Token: 0x060302CA RID: 197322 RVA: 0x00B29C40 File Offset: 0x00B27E40
+		// Token: 0x17004B71 RID: 19313
+		// (get) Token: 0x06024A99 RID: 150169 RVA: 0x00A59AD4 File Offset: 0x00A57CD4
+		// (set) Token: 0x06024A9A RID: 150170 RVA: 0x00A59ADC File Offset: 0x00A57CDC
 		public bool IsExpand { get; set; }
 	}
 }

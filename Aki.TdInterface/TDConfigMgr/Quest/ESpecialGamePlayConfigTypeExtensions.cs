@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001290 RID: 4752
+	// Token: 0x020013D0 RID: 5072
 	public static class ESpecialGamePlayConfigTypeExtensions
 	{
-		// Token: 0x06006B2F RID: 27439 RVA: 0x00101470 File Offset: 0x000FF670
+		// Token: 0x06007182 RID: 29058 RVA: 0x0010F16C File Offset: 0x0010D36C
 		public static string ToEnumString(this ESpecialGamePlayConfigType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B30 RID: 27440 RVA: 0x001014C4 File Offset: 0x000FF6C4
+		// Token: 0x06007183 RID: 29059 RVA: 0x0010F1C0 File Offset: 0x0010D3C0
 		public static ESpecialGamePlayConfigType FromString(string name)
 		{
 			ESpecialGamePlayConfigType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B31 RID: 27441 RVA: 0x001014F0 File Offset: 0x000FF6F0
+		// Token: 0x06007184 RID: 29060 RVA: 0x0010F1EC File Offset: 0x0010D3EC
 		public static bool TryFromString(string name, out ESpecialGamePlayConfigType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B32 RID: 27442 RVA: 0x00101558 File Offset: 0x000FF758
+		// Token: 0x06007185 RID: 29061 RVA: 0x0010F254 File Offset: 0x0010D454
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B33 RID: 27443 RVA: 0x00101580 File Offset: 0x000FF780
+		// Token: 0x06007186 RID: 29062 RVA: 0x0010F27C File Offset: 0x0010D47C
 		public static ESpecialGamePlayConfigType[] GetValues()
 		{
 			return new ESpecialGamePlayConfigType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B34 RID: 27444 RVA: 0x00101593 File Offset: 0x000FF793
+		// Token: 0x06007187 RID: 29063 RVA: 0x0010F28F File Offset: 0x0010D48F
 		public static string[] GetNames()
 		{
 			return new string[]

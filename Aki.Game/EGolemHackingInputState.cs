@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000FF8 RID: 4088
+// Token: 0x020004AC RID: 1196
 public enum EGolemHackingInputState
 {
-	// Token: 0x0400301B RID: 12315
+	// Token: 0x040030B2 RID: 12466
 	Empty,
-	// Token: 0x0400301C RID: 12316
+	// Token: 0x040030B3 RID: 12467
 	Enterring,
-	// Token: 0x0400301D RID: 12317
+	// Token: 0x040030B4 RID: 12468
 	Occupy,
-	// Token: 0x0400301E RID: 12318
+	// Token: 0x040030B5 RID: 12469
 	Block
 }

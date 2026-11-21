@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001EFF RID: 7935
+// Token: 0x020013C1 RID: 5057
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryQuestPanelQuestItem : GridProxyAbstract<HonamiStoryQuestDataBase>
 {
-	// Token: 0x0600F45A RID: 62554 RVA: 0x003AF108 File Offset: 0x003AD308
+	// Token: 0x0600C879 RID: 51321 RVA: 0x003BABFC File Offset: 0x003B8DFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,7 +31,7 @@ public class HonamiStoryQuestPanelQuestItem : GridProxyAbstract<HonamiStoryQuest
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F45B RID: 62555 RVA: 0x003AF194 File Offset: 0x003AD394
+	// Token: 0x0600C87A RID: 51322 RVA: 0x003BAC88 File Offset: 0x003B8E88
 	[NullableContext(1)]
 	public override void Refresh(HonamiStoryQuestDataBase data, bool isSelected, int gridIndex)
 	{
@@ -92,14 +92,14 @@ public class HonamiStoryQuestPanelQuestItem : GridProxyAbstract<HonamiStoryQuest
 		base.GetSprite(1).SetUIActive(true);
 	}
 
-	// Token: 0x02008500 RID: 34048
+	// Token: 0x02007685 RID: 30341
 	private enum EHonamiStoryQuestItemComponent
 	{
-		// Token: 0x0402B489 RID: 177289
+		// Token: 0x040267AD RID: 157613
 		QuestNameText,
-		// Token: 0x0402B48A RID: 177290
+		// Token: 0x040267AE RID: 157614
 		UnFinishSprite,
-		// Token: 0x0402B48B RID: 177291
+		// Token: 0x040267AF RID: 157615
 		FinishSprite
 	}
 }

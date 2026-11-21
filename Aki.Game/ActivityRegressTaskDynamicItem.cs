@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014AC RID: 5292
+// Token: 0x02000960 RID: 2400
 public class ActivityRegressTaskDynamicItem : UiPanelBase, IDynamicScrollBaseItem<ActivityRegressTaskDynamicData>
 {
-	// Token: 0x060095E2 RID: 38370 RVA: 0x002052C0 File Offset: 0x002034C0
+	// Token: 0x06006977 RID: 26999 RVA: 0x0020E228 File Offset: 0x0020C428
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -23,7 +23,7 @@ public class ActivityRegressTaskDynamicItem : UiPanelBase, IDynamicScrollBaseIte
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060095E3 RID: 38371 RVA: 0x0020530B File Offset: 0x0020350B
+	// Token: 0x06006978 RID: 27000 RVA: 0x0020E273 File Offset: 0x0020C473
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class ActivityRegressTaskDynamicItem : UiPanelBase, IDynamicScrollBaseIte
 		};
 	}
 
-	// Token: 0x060095E4 RID: 38372 RVA: 0x00205344 File Offset: 0x00203544
+	// Token: 0x06006979 RID: 27001 RVA: 0x0020E2AC File Offset: 0x0020C4AC
 	[NullableContext(1)]
 	public FVector2D GetItemSize(ActivityRegressTaskDynamicData data)
 	{
@@ -46,18 +46,18 @@ public class ActivityRegressTaskDynamicItem : UiPanelBase, IDynamicScrollBaseIte
 		return new FVector2D(item2.GetWidth(), item2.GetHeight());
 	}
 
-	// Token: 0x060095E5 RID: 38373 RVA: 0x0020538D File Offset: 0x0020358D
+	// Token: 0x0600697A RID: 27002 RVA: 0x0020E2F5 File Offset: 0x0020C4F5
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x02007ADF RID: 31455
+	// Token: 0x02006C63 RID: 27747
 	private class EComponents
 	{
-		// Token: 0x040286B8 RID: 165560
+		// Token: 0x040239D2 RID: 145874
 		public const int StripBtn = 0;
 
-		// Token: 0x040286B9 RID: 165561
+		// Token: 0x040239D3 RID: 145875
 		public const int TitlePnl = 1;
 	}
 }

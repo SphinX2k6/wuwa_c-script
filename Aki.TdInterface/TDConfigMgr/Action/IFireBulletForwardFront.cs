@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A61 RID: 6753
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BF6 RID: 7158
 	public class IFireBulletForwardFront : IFireBulletType
 	{
-		// Token: 0x06009094 RID: 37012 RVA: 0x00150FC4 File Offset: 0x0014F1C4
+		// Token: 0x060097FE RID: 38910 RVA: 0x00160EF0 File Offset: 0x0015F0F0
 		private IFireBulletForwardFront_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009095 RID: 37013 RVA: 0x00150FFC File Offset: 0x0014F1FC
+		// Token: 0x060097FF RID: 38911 RVA: 0x00160F28 File Offset: 0x0015F128
 		public static IFireBulletForwardFront Create([Nullable(2)] IFireBulletForwardFront instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009096 RID: 37014 RVA: 0x0015100F File Offset: 0x0014F20F
+		// Token: 0x06009800 RID: 38912 RVA: 0x00160F3B File Offset: 0x0015F13B
 		public static IFireBulletForwardFront CreateFromSetValue([Nullable(2)] IFireBulletForwardFront_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009097 RID: 37015 RVA: 0x00151022 File Offset: 0x0014F222
+		// Token: 0x06009801 RID: 38913 RVA: 0x00160F4E File Offset: 0x0015F14E
 		public new IFireBulletForwardFront_SetValue ToSetValue()
 		{
 			return new IFireBulletForwardFront_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E0E RID: 11790
-		// (get) Token: 0x06009098 RID: 37016 RVA: 0x0015104D File Offset: 0x0014F24D
-		// (set) Token: 0x06009099 RID: 37017 RVA: 0x00151078 File Offset: 0x0014F278
+		// Token: 0x1700301B RID: 12315
+		// (get) Token: 0x06009802 RID: 38914 RVA: 0x00160F79 File Offset: 0x0015F179
+		// (set) Token: 0x06009803 RID: 38915 RVA: 0x00160FA4 File Offset: 0x0015F1A4
 		public override EFireBulletType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E0F RID: 11791
-		// (get) Token: 0x0600909A RID: 37018 RVA: 0x00151086 File Offset: 0x0014F286
-		// (set) Token: 0x0600909B RID: 37019 RVA: 0x001510B2 File Offset: 0x0014F2B2
+		// Token: 0x1700301C RID: 12316
+		// (get) Token: 0x06009804 RID: 38916 RVA: 0x00160FB2 File Offset: 0x0015F1B2
+		// (set) Token: 0x06009805 RID: 38917 RVA: 0x00160FDE File Offset: 0x0015F1DE
 		public virtual long BulletId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E10 RID: 11792
-		// (get) Token: 0x0600909C RID: 37020 RVA: 0x001510C0 File Offset: 0x0014F2C0
-		// (set) Token: 0x0600909D RID: 37021 RVA: 0x001510E7 File Offset: 0x0014F2E7
+		// Token: 0x1700301D RID: 12317
+		// (get) Token: 0x06009806 RID: 38918 RVA: 0x00160FEC File Offset: 0x0015F1EC
+		// (set) Token: 0x06009807 RID: 38919 RVA: 0x00161013 File Offset: 0x0015F213
 		public virtual ITargetEntityType Launcher
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005949 RID: 22857
+		// Token: 0x04005DAE RID: 23982
 		[Nullable(2)]
 		protected new IFireBulletForwardFront FbInstance;
 
-		// Token: 0x0400594A RID: 22858
+		// Token: 0x04005DAF RID: 23983
 		[Nullable(2)]
 		protected new IFireBulletForwardFront_SetValue PocoInterface;
 	}

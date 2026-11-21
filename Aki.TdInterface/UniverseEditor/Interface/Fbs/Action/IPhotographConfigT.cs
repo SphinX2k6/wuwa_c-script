@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CC1 RID: 27841
+	// Token: 0x02007437 RID: 29751
 	public class IPhotographConfigT
 	{
-		// Token: 0x1700CF44 RID: 53060
-		// (get) Token: 0x0603110D RID: 200973 RVA: 0x006A8B81 File Offset: 0x006A6D81
-		// (set) Token: 0x0603110E RID: 200974 RVA: 0x006A8B89 File Offset: 0x006A6D89
+		// Token: 0x1700DA81 RID: 55937
+		// (get) Token: 0x060340E4 RID: 213220 RVA: 0x00703DB5 File Offset: 0x00701FB5
+		// (set) Token: 0x060340E5 RID: 213221 RVA: 0x00703DBD File Offset: 0x00701FBD
 		public List<int> PhotoTargets { get; set; }
 
-		// Token: 0x1700CF45 RID: 53061
-		// (get) Token: 0x0603110F RID: 200975 RVA: 0x006A8B92 File Offset: 0x006A6D92
-		// (set) Token: 0x06031110 RID: 200976 RVA: 0x006A8B9A File Offset: 0x006A6D9A
+		// Token: 0x1700DA82 RID: 55938
+		// (get) Token: 0x060340E6 RID: 213222 RVA: 0x00703DC6 File Offset: 0x00701FC6
+		// (set) Token: 0x060340E7 RID: 213223 RVA: 0x00703DCE File Offset: 0x00701FCE
 		public IPhotographPlayerPerformT PlayerPerform { get; set; }
 
-		// Token: 0x1700CF46 RID: 53062
-		// (get) Token: 0x06031111 RID: 200977 RVA: 0x006A8BA3 File Offset: 0x006A6DA3
-		// (set) Token: 0x06031112 RID: 200978 RVA: 0x006A8BAB File Offset: 0x006A6DAB
+		// Token: 0x1700DA83 RID: 55939
+		// (get) Token: 0x060340E8 RID: 213224 RVA: 0x00703DD7 File Offset: 0x00701FD7
+		// (set) Token: 0x060340E9 RID: 213225 RVA: 0x00703DDF File Offset: 0x00701FDF
 		public IPhotographCameraParamsT CameraParams { get; set; }
 
-		// Token: 0x1700CF47 RID: 53063
-		// (get) Token: 0x06031113 RID: 200979 RVA: 0x006A8BB4 File Offset: 0x006A6DB4
-		// (set) Token: 0x06031114 RID: 200980 RVA: 0x006A8BBC File Offset: 0x006A6DBC
+		// Token: 0x1700DA84 RID: 55940
+		// (get) Token: 0x060340EA RID: 213226 RVA: 0x00703DE8 File Offset: 0x00701FE8
+		// (set) Token: 0x060340EB RID: 213227 RVA: 0x00703DF0 File Offset: 0x00701FF0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031115 RID: 200981 RVA: 0x006A8BC5 File Offset: 0x006A6DC5
+		// Token: 0x060340EC RID: 213228 RVA: 0x00703DF9 File Offset: 0x00701FF9
 		public IPhotographConfigT()
 		{
 			this.PhotoTargets = null;

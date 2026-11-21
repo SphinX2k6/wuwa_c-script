@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D92 RID: 23954
+	// Token: 0x020063CF RID: 25551
 	public class IDynamicSummonGongduolaPointT
 	{
-		// Token: 0x1700B367 RID: 45927
-		// (get) Token: 0x06028FE8 RID: 167912 RVA: 0x005A17DE File Offset: 0x0059F9DE
-		// (set) Token: 0x06028FE9 RID: 167913 RVA: 0x005A17E6 File Offset: 0x0059F9E6
+		// Token: 0x1700BCCD RID: 48333
+		// (get) Token: 0x0602B672 RID: 177778 RVA: 0x005EA50E File Offset: 0x005E870E
+		// (set) Token: 0x0602B673 RID: 177779 RVA: 0x005EA516 File Offset: 0x005E8716
 		public int EntityId { get; set; }
 
-		// Token: 0x1700B368 RID: 45928
-		// (get) Token: 0x06028FEA RID: 167914 RVA: 0x005A17EF File Offset: 0x0059F9EF
-		// (set) Token: 0x06028FEB RID: 167915 RVA: 0x005A17F7 File Offset: 0x0059F9F7
+		// Token: 0x1700BCCE RID: 48334
+		// (get) Token: 0x0602B674 RID: 177780 RVA: 0x005EA51F File Offset: 0x005E871F
+		// (set) Token: 0x0602B675 RID: 177781 RVA: 0x005EA527 File Offset: 0x005E8727
 		public string Id { get; set; }
 
-		// Token: 0x1700B369 RID: 45929
-		// (get) Token: 0x06028FEC RID: 167916 RVA: 0x005A1800 File Offset: 0x0059FA00
-		// (set) Token: 0x06028FED RID: 167917 RVA: 0x005A1808 File Offset: 0x0059FA08
+		// Token: 0x1700BCCF RID: 48335
+		// (get) Token: 0x0602B676 RID: 177782 RVA: 0x005EA530 File Offset: 0x005E8730
+		// (set) Token: 0x0602B677 RID: 177783 RVA: 0x005EA538 File Offset: 0x005E8738
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700B36A RID: 45930
-		// (get) Token: 0x06028FEE RID: 167918 RVA: 0x005A1811 File Offset: 0x0059FA11
-		// (set) Token: 0x06028FEF RID: 167919 RVA: 0x005A1819 File Offset: 0x0059FA19
+		// Token: 0x1700BCD0 RID: 48336
+		// (get) Token: 0x0602B678 RID: 177784 RVA: 0x005EA541 File Offset: 0x005E8741
+		// (set) Token: 0x0602B679 RID: 177785 RVA: 0x005EA549 File Offset: 0x005E8749
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x1700B36B RID: 45931
-		// (get) Token: 0x06028FF0 RID: 167920 RVA: 0x005A1822 File Offset: 0x0059FA22
-		// (set) Token: 0x06028FF1 RID: 167921 RVA: 0x005A182A File Offset: 0x0059FA2A
+		// Token: 0x1700BCD1 RID: 48337
+		// (get) Token: 0x0602B67A RID: 177786 RVA: 0x005EA552 File Offset: 0x005E8752
+		// (set) Token: 0x0602B67B RID: 177787 RVA: 0x005EA55A File Offset: 0x005E875A
 		public EWorldAxisType Gravity { get; set; }
 
-		// Token: 0x06028FF2 RID: 167922 RVA: 0x005A1833 File Offset: 0x0059FA33
+		// Token: 0x0602B67C RID: 177788 RVA: 0x005EA563 File Offset: 0x005E8763
 		public IDynamicSummonGongduolaPointT()
 		{
 			this.EntityId = 0;

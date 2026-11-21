@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006590 RID: 26000
+	// Token: 0x0200550E RID: 21774
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardBackpackGridData
 	{
-		// Token: 0x17009553 RID: 38227
-		// (get) Token: 0x060412EB RID: 266987 RVA: 0x00FCD13D File Offset: 0x00FCB33D
+		// Token: 0x170068B5 RID: 26805
+		// (get) Token: 0x06035FB0 RID: 221104 RVA: 0x00F14151 File Offset: 0x00F12351
 		public int ItemBlockId
 		{
 			get
@@ -18,14 +18,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060412EC RID: 266988 RVA: 0x00FCD145 File Offset: 0x00FCB345
+		// Token: 0x06035FB1 RID: 221105 RVA: 0x00F14159 File Offset: 0x00F12359
 		public DockyardBackpackGridData(IPanelPos posData)
 		{
 			this.PosData = posData;
 		}
 
-		// Token: 0x17009554 RID: 38228
-		// (get) Token: 0x060412ED RID: 266989 RVA: 0x00FCD162 File Offset: 0x00FCB362
+		// Token: 0x170068B6 RID: 26806
+		// (get) Token: 0x06035FB2 RID: 221106 RVA: 0x00F14176 File Offset: 0x00F12376
 		public bool IsValid
 		{
 			get
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060412EE RID: 266990 RVA: 0x00FCD16D File Offset: 0x00FCB36D
+		// Token: 0x06035FB3 RID: 221107 RVA: 0x00F14181 File Offset: 0x00F12381
 		public void SetIsQuicklySell(bool value)
 		{
 			this.IsQuicklySellInternal = value;
 		}
 
-		// Token: 0x17009555 RID: 38229
-		// (get) Token: 0x060412EF RID: 266991 RVA: 0x00FCD176 File Offset: 0x00FCB376
+		// Token: 0x170068B7 RID: 26807
+		// (get) Token: 0x06035FB4 RID: 221108 RVA: 0x00F1418A File Offset: 0x00F1238A
 		public bool IsQuicklySell
 		{
 			get
@@ -50,28 +50,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060412F0 RID: 266992 RVA: 0x00FCD17E File Offset: 0x00FCB37E
+		// Token: 0x06035FB5 RID: 221109 RVA: 0x00F14192 File Offset: 0x00F12392
 		public void SetGridType(EBackpackGridType type)
 		{
 			this.Type = type;
 		}
 
-		// Token: 0x060412F1 RID: 266993 RVA: 0x00FCD187 File Offset: 0x00FCB387
+		// Token: 0x06035FB6 RID: 221110 RVA: 0x00F1419B File Offset: 0x00F1239B
 		public void SetItemBlockId(int id)
 		{
 			this.ItemBlockIdInternal = id;
 		}
 
-		// Token: 0x04021F2D RID: 139053
+		// Token: 0x0401C85E RID: 116830
 		private EBackpackGridType Type = EBackpackGridType.Enable;
 
-		// Token: 0x04021F2E RID: 139054
+		// Token: 0x0401C85F RID: 116831
 		private bool IsQuicklySellInternal;
 
-		// Token: 0x04021F2F RID: 139055
+		// Token: 0x0401C860 RID: 116832
 		private int ItemBlockIdInternal = -1;
 
-		// Token: 0x04021F30 RID: 139056
+		// Token: 0x0401C861 RID: 116833
 		protected readonly IPanelPos PosData;
 	}
 }

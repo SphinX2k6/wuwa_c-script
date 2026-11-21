@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F8B RID: 20363
+	// Token: 0x02003F54 RID: 16212
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackCameraControlView : UiTickViewBase, IUiProhibitRefreshData
 	{
-		// Token: 0x06034234 RID: 213556 RVA: 0x00C3C527 File Offset: 0x00C3A727
+		// Token: 0x060290A2 RID: 168098 RVA: 0x00B85CD3 File Offset: 0x00B83ED3
 		public QuickHackCameraControlView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034235 RID: 213557 RVA: 0x00C3C53C File Offset: 0x00C3A73C
+		// Token: 0x060290A3 RID: 168099 RVA: 0x00B85CE8 File Offset: 0x00B83EE8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06034236 RID: 213558 RVA: 0x00C3C804 File Offset: 0x00C3AA04
+		// Token: 0x060290A4 RID: 168100 RVA: 0x00B85FB0 File Offset: 0x00B841B0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuickHackCameraControlView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034237 RID: 213559 RVA: 0x00C3C848 File Offset: 0x00C3AA48
+		// Token: 0x060290A5 RID: 168101 RVA: 0x00B85FF4 File Offset: 0x00B841F4
 		protected override void OnStart()
 		{
 			this.CameraZoomAxisSpeed = ConfigCommonParamById.GetFloatConfig("CommonCameraZoomSpeed").GetValueOrDefault(1f);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEnd));
 		}
 
-		// Token: 0x06034238 RID: 213560 RVA: 0x00C3C8CC File Offset: 0x00C3AACC
+		// Token: 0x060290A6 RID: 168102 RVA: 0x00B86078 File Offset: 0x00B84278
 		protected override void OnBeforeShow()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateZoomSliderDefaultValue();
 		}
 
-		// Token: 0x06034239 RID: 213561 RVA: 0x00C3C9DC File Offset: 0x00C3ABDC
+		// Token: 0x060290A7 RID: 168103 RVA: 0x00B86188 File Offset: 0x00B84388
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			QuickHackCameraControlView.<OnPlayingStartSequenceAsync>d__17 <OnPlayingStartSequenceAsync>d__;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603423A RID: 213562 RVA: 0x00C3CA20 File Offset: 0x00C3AC20
+		// Token: 0x060290A8 RID: 168104 RVA: 0x00B861CC File Offset: 0x00B843CC
 		protected override void OnAfterShow()
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -155,13 +155,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603423B RID: 213563 RVA: 0x00C3CAF0 File Offset: 0x00C3ACF0
+		// Token: 0x060290A9 RID: 168105 RVA: 0x00B8629C File Offset: 0x00B8449C
 		protected override void OnTick(float delta)
 		{
 			this.UpdateCameraSlider(false);
 		}
 
-		// Token: 0x0603423C RID: 213564 RVA: 0x00C3CAFC File Offset: 0x00C3ACFC
+		// Token: 0x060290AA RID: 168106 RVA: 0x00B862A8 File Offset: 0x00B844A8
 		private void UpdateCameraSlider(bool force = false)
 		{
 			Rotator cameraRotator = CameraModel.Instance.MainModel.CameraRotator;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603423D RID: 213565 RVA: 0x00C3CB5C File Offset: 0x00C3AD5C
+		// Token: 0x060290AB RID: 168107 RVA: 0x00B86308 File Offset: 0x00B84508
 		private void UpdateCameraPitch(float pitch)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			base.GetSlider(14).SetValue(inValue, false);
 		}
 
-		// Token: 0x0603423E RID: 213566 RVA: 0x00C3CBF8 File Offset: 0x00C3ADF8
+		// Token: 0x060290AC RID: 168108 RVA: 0x00B863A4 File Offset: 0x00B845A4
 		private void UpdateCameraYaw(float yaw)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			base.GetSlider(13).SetValue(inValue, false);
 		}
 
-		// Token: 0x0603423F RID: 213567 RVA: 0x00C3CC92 File Offset: 0x00C3AE92
+		// Token: 0x060290AD RID: 168109 RVA: 0x00B8643E File Offset: 0x00B8463E
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackController.Instance.CloseQuickHackCameraControl();
 		}
 
-		// Token: 0x06034240 RID: 213568 RVA: 0x00C3CCB8 File Offset: 0x00C3AEB8
+		// Token: 0x060290AE RID: 168110 RVA: 0x00B86464 File Offset: 0x00B84664
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Remove(EEventName.OnShowMouseCursor, new Action<bool>(this.OnShowMouseCursor));
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			InputDistributeController.Instance.UnBindAxis("WheelAxis", new TInputHandle<float>(this.OnInputWheelAxis));
 		}
 
-		// Token: 0x06034241 RID: 213569 RVA: 0x00C3CD69 File Offset: 0x00C3AF69
+		// Token: 0x060290AF RID: 168111 RVA: 0x00B86515 File Offset: 0x00B84715
 		private QuickHackCameraControlItem CreateCameraItem()
 		{
 			QuickHackCameraControlItem quickHackCameraControlItem = new QuickHackCameraControlItem();
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return quickHackCameraControlItem;
 		}
 
-		// Token: 0x06034242 RID: 213570 RVA: 0x00C3CD84 File Offset: 0x00C3AF84
+		// Token: 0x060290B0 RID: 168112 RVA: 0x00B86530 File Offset: 0x00B84730
 		private void OnCameraControlChange(int pbDataId)
 		{
 			this.SequencePlayer.StopSequenceByKey("Switch", false, false);
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateCameraSlider(true);
 		}
 
-		// Token: 0x06034243 RID: 213571 RVA: 0x00C3CE08 File Offset: 0x00C3B008
+		// Token: 0x060290B1 RID: 168113 RVA: 0x00B865B4 File Offset: 0x00B847B4
 		private void UpdateZoomSliderDefaultValue()
 		{
 			UUISliderComponent slider = base.GetSlider(4);
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			slider.SetValue(inValue, false);
 		}
 
-		// Token: 0x06034244 RID: 213572 RVA: 0x00C3CE5E File Offset: 0x00C3B05E
+		// Token: 0x060290B2 RID: 168114 RVA: 0x00B8660A File Offset: 0x00B8480A
 		private void OnSequenceEnd(string sequenceName)
 		{
 			if (sequenceName == "Switch" && this.CameraSwitching)
@@ -294,31 +294,31 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034245 RID: 213573 RVA: 0x00C3CE8E File Offset: 0x00C3B08E
+		// Token: 0x060290B3 RID: 168115 RVA: 0x00B8663A File Offset: 0x00B8483A
 		protected void OnShowMouseCursor(bool value)
 		{
 			this.UpdateKeyItem();
 		}
 
-		// Token: 0x06034246 RID: 213574 RVA: 0x00C3CE96 File Offset: 0x00C3B096
+		// Token: 0x060290B4 RID: 168116 RVA: 0x00B86642 File Offset: 0x00B84842
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			this.UpdateKeyItem();
 		}
 
-		// Token: 0x06034247 RID: 213575 RVA: 0x00C3CE9E File Offset: 0x00C3B09E
+		// Token: 0x060290B5 RID: 168117 RVA: 0x00B8664A File Offset: 0x00B8484A
 		private void UpdateKeyItem()
 		{
 			base.GetItem(12).SetUIActive(Info.Instance.IsInKeyBoard() && !InputManager.Instance.IsShowMouseCursor());
 		}
 
-		// Token: 0x06034248 RID: 213576 RVA: 0x00C3CEC9 File Offset: 0x00C3B0C9
+		// Token: 0x060290B6 RID: 168118 RVA: 0x00B86675 File Offset: 0x00B84875
 		public bool CheckCondition()
 		{
 			return !InputManager.Instance.IsShowMouseCursor() || !Info.Instance.IsInKeyBoard();
 		}
 
-		// Token: 0x06034249 RID: 213577 RVA: 0x00C3CEE6 File Offset: 0x00C3B0E6
+		// Token: 0x060290B7 RID: 168119 RVA: 0x00B86692 File Offset: 0x00B84892
 		public string[] GetDistributeTags()
 		{
 			return new string[]
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			};
 		}
 
-		// Token: 0x0603424A RID: 213578 RVA: 0x00C3CF06 File Offset: 0x00C3B106
+		// Token: 0x060290B8 RID: 168120 RVA: 0x00B866B2 File Offset: 0x00B848B2
 		private void OnLeftCameraClick()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackController.Instance.ChangeNextCamera(false);
 		}
 
-		// Token: 0x0603424B RID: 213579 RVA: 0x00C3CF20 File Offset: 0x00C3B120
+		// Token: 0x060290B9 RID: 168121 RVA: 0x00B866CC File Offset: 0x00B848CC
 		private void OnRightCameraClick()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackController.Instance.ChangeNextCamera(true);
 		}
 
-		// Token: 0x0603424C RID: 213580 RVA: 0x00C3CF3A File Offset: 0x00C3B13A
+		// Token: 0x060290BA RID: 168122 RVA: 0x00B866E6 File Offset: 0x00B848E6
 		private void OnCameraItemClick(int pbDataId)
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackController.Instance.ChangeCameraByPbDataId(pbDataId);
 		}
 
-		// Token: 0x0603424D RID: 213581 RVA: 0x00C3CF54 File Offset: 0x00C3B154
+		// Token: 0x060290BB RID: 168123 RVA: 0x00B86700 File Offset: 0x00B84900
 		private void OnPhotoClick()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			});
 		}
 
-		// Token: 0x0603424E RID: 213582 RVA: 0x00C3CFB5 File Offset: 0x00C3B1B5
+		// Token: 0x060290BC RID: 168124 RVA: 0x00B86761 File Offset: 0x00B84961
 		private void OnQuickHackClick()
 		{
 			if (base.IsShow)
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603424F RID: 213583 RVA: 0x00C3CFC8 File Offset: 0x00C3B1C8
+		// Token: 0x060290BD RID: 168125 RVA: 0x00B86774 File Offset: 0x00B84974
 		private void OpenQuickHack()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			});
 		}
 
-		// Token: 0x06034250 RID: 213584 RVA: 0x00C3D016 File Offset: 0x00C3B216
+		// Token: 0x060290BE RID: 168126 RVA: 0x00B867C2 File Offset: 0x00B849C2
 		private void OnCloseClick()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackController.Instance.CloseQuickHackCameraControl();
 		}
 
-		// Token: 0x06034251 RID: 213585 RVA: 0x00C3D030 File Offset: 0x00C3B230
+		// Token: 0x060290BF RID: 168127 RVA: 0x00B867DC File Offset: 0x00B849DC
 		private void OnZoomIncreasePress()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateFovTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnIncreaseFov), 100f, 1f, null, null, true);
 		}
 
-		// Token: 0x06034252 RID: 213586 RVA: 0x00C3D084 File Offset: 0x00C3B284
+		// Token: 0x060290C0 RID: 168128 RVA: 0x00B86830 File Offset: 0x00B84A30
 		private void OnZoomDecreasePress()
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -442,19 +442,19 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateFovTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnReduceFov), 100f, 1f, null, null, true);
 		}
 
-		// Token: 0x06034253 RID: 213587 RVA: 0x00C3D0D8 File Offset: 0x00C3B2D8
+		// Token: 0x060290C1 RID: 168129 RVA: 0x00B86884 File Offset: 0x00B84A84
 		private void OnZoomIncreaseRelease()
 		{
 			this.RemoveUpdateFovTimer();
 		}
 
-		// Token: 0x06034254 RID: 213588 RVA: 0x00C3D0E0 File Offset: 0x00C3B2E0
+		// Token: 0x060290C2 RID: 168130 RVA: 0x00B8688C File Offset: 0x00B84A8C
 		private void OnZoomDecreaseRelease()
 		{
 			this.RemoveUpdateFovTimer();
 		}
 
-		// Token: 0x06034255 RID: 213589 RVA: 0x00C3D0E8 File Offset: 0x00C3B2E8
+		// Token: 0x060290C3 RID: 168131 RVA: 0x00B86894 File Offset: 0x00B84A94
 		private void RemoveUpdateFovTimer()
 		{
 			TimerHandle updateFovTimer = this.UpdateFovTimer;
@@ -465,25 +465,25 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateFovTimer = null;
 		}
 
-		// Token: 0x06034256 RID: 213590 RVA: 0x00C3D103 File Offset: 0x00C3B303
+		// Token: 0x060290C4 RID: 168132 RVA: 0x00B868AF File Offset: 0x00B84AAF
 		private void OnIncreaseFov(float delta)
 		{
 			this.UpdateSliderByDeltaValue(1f);
 		}
 
-		// Token: 0x06034257 RID: 213591 RVA: 0x00C3D110 File Offset: 0x00C3B310
+		// Token: 0x060290C5 RID: 168133 RVA: 0x00B868BC File Offset: 0x00B84ABC
 		private void OnReduceFov(float delta)
 		{
 			this.UpdateSliderByDeltaValue(-1f);
 		}
 
-		// Token: 0x06034258 RID: 213592 RVA: 0x00C3D11D File Offset: 0x00C3B31D
+		// Token: 0x060290C6 RID: 168134 RVA: 0x00B868C9 File Offset: 0x00B84AC9
 		private void OnSliderValueChange(float value)
 		{
 			this.UpdateSliderValue(value);
 		}
 
-		// Token: 0x06034259 RID: 213593 RVA: 0x00C3D128 File Offset: 0x00C3B328
+		// Token: 0x060290C7 RID: 168135 RVA: 0x00B868D4 File Offset: 0x00B84AD4
 		private void UpdateSliderByDeltaValue(float delta)
 		{
 			UUISliderComponent slider = base.GetSlider(4);
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.UpdateSliderValue(num);
 		}
 
-		// Token: 0x0603425A RID: 213594 RVA: 0x00C3D154 File Offset: 0x00C3B354
+		// Token: 0x060290C8 RID: 168136 RVA: 0x00B86900 File Offset: 0x00B84B00
 		private void UpdateSliderValue(float value)
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			QuickHackController.Instance.UpdateCameraControlFov(fov);
 		}
 
-		// Token: 0x0603425B RID: 213595 RVA: 0x00C3D18E File Offset: 0x00C3B38E
+		// Token: 0x060290C9 RID: 168137 RVA: 0x00B8693A File Offset: 0x00B84B3A
 		private void OnInputWheelAxis(string name, float value, InputIdentification inputIdentification)
 		{
 			if (QuickHackModel.Instance.IsQuickHacking)
@@ -515,11 +515,11 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BB89 RID: 113545
+		// Token: 0x0401655E RID: 91486
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401BB8A RID: 113546
+		// Token: 0x0401655F RID: 91487
 		[Nullable(new byte[]
 		{
 			2,
@@ -527,82 +527,82 @@ namespace CSharpScript.Game.Module.QuickHack
 		})]
 		private GenericLayout<QuickHackCameraControlItem, int> CameraPanel;
 
-		// Token: 0x0401BB8B RID: 113547
+		// Token: 0x04016560 RID: 91488
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BB8C RID: 113548
+		// Token: 0x04016561 RID: 91489
 		private float CameraZoomAxisSpeed = 1f;
 
-		// Token: 0x0401BB8D RID: 113549
+		// Token: 0x04016562 RID: 91490
 		[Nullable(2)]
 		private TimerHandle UpdateFovTimer;
 
-		// Token: 0x0401BB8E RID: 113550
+		// Token: 0x04016563 RID: 91491
 		private bool CameraSwitching;
 
-		// Token: 0x0401BB8F RID: 113551
+		// Token: 0x04016564 RID: 91492
 		private float CameraPitch;
 
-		// Token: 0x0401BB90 RID: 113552
+		// Token: 0x04016565 RID: 91493
 		private float CameraYaw;
 
-		// Token: 0x0401BB91 RID: 113553
+		// Token: 0x04016566 RID: 91494
 		private const float CHANGE_FOV_INTERVAL = 100f;
 
-		// Token: 0x0401BB92 RID: 113554
+		// Token: 0x04016567 RID: 91495
 		private const float CAMERA_YAW_SLIDER_OFFSET = 0.015f;
 
-		// Token: 0x0401BB93 RID: 113555
+		// Token: 0x04016568 RID: 91496
 		private const float CAMERA_PITCH_SLIDER_OFFSET = 0.04f;
 
-		// Token: 0x0200B09F RID: 45215
+		// Token: 0x02009ACF RID: 39631
 		[NullableContext(0)]
 		private class EComponentType
 		{
-			// Token: 0x04035995 RID: 219541
+			// Token: 0x040303C0 RID: 197568
 			public const int CameraPitchText = 0;
 
-			// Token: 0x04035996 RID: 219542
+			// Token: 0x040303C1 RID: 197569
 			public const int CameraYawText = 1;
 
-			// Token: 0x04035997 RID: 219543
+			// Token: 0x040303C2 RID: 197570
 			public const int CaptionItem = 2;
 
-			// Token: 0x04035998 RID: 219544
+			// Token: 0x040303C3 RID: 197571
 			public const int ZoomIncreaseButton = 3;
 
-			// Token: 0x04035999 RID: 219545
+			// Token: 0x040303C4 RID: 197572
 			public const int ZoomSlider = 4;
 
-			// Token: 0x0403599A RID: 219546
+			// Token: 0x040303C5 RID: 197573
 			public const int ZoomDecreaseButton = 5;
 
-			// Token: 0x0403599B RID: 219547
+			// Token: 0x040303C6 RID: 197574
 			public const int LeftCameraButton = 6;
 
-			// Token: 0x0403599C RID: 219548
+			// Token: 0x040303C7 RID: 197575
 			public const int RightCameraButton = 7;
 
-			// Token: 0x0403599D RID: 219549
+			// Token: 0x040303C8 RID: 197576
 			public const int CameraListPanel = 8;
 
-			// Token: 0x0403599E RID: 219550
+			// Token: 0x040303C9 RID: 197577
 			public const int CameraItem = 9;
 
-			// Token: 0x0403599F RID: 219551
+			// Token: 0x040303CA RID: 197578
 			public const int PhotoButton = 10;
 
-			// Token: 0x040359A0 RID: 219552
+			// Token: 0x040303CB RID: 197579
 			public const int QuickHackButton = 11;
 
-			// Token: 0x040359A1 RID: 219553
+			// Token: 0x040303CC RID: 197580
 			public const int QuickHackKeyItem = 12;
 
-			// Token: 0x040359A2 RID: 219554
+			// Token: 0x040303CD RID: 197581
 			public const int CameraYawSlider = 13;
 
-			// Token: 0x040359A3 RID: 219555
+			// Token: 0x040303CE RID: 197582
 			public const int CameraPitchSlider = 14;
 		}
 	}

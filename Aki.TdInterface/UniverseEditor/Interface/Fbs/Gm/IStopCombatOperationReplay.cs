@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046B1 RID: 18097
+	// Token: 0x02004B19 RID: 19225
 	public struct IStopCombatOperationReplay : IFlatbufferObject
 	{
-		// Token: 0x17008088 RID: 32904
-		// (get) Token: 0x0601B7F1 RID: 112625 RVA: 0x003E739D File Offset: 0x003E559D
+		// Token: 0x170086C9 RID: 34505
+		// (get) Token: 0x0601CFC6 RID: 118726 RVA: 0x00413639 File Offset: 0x00411839
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B7F2 RID: 112626 RVA: 0x003E73AA File Offset: 0x003E55AA
+		// Token: 0x0601CFC7 RID: 118727 RVA: 0x00413646 File Offset: 0x00411846
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B7F3 RID: 112627 RVA: 0x003E73B4 File Offset: 0x003E55B4
+		// Token: 0x0601CFC8 RID: 118728 RVA: 0x00413650 File Offset: 0x00411850
 		public static IStopCombatOperationReplay GetRootAsIStopCombatOperationReplay(ByteBuffer _bb)
 		{
 			return IStopCombatOperationReplay.GetRootAsIStopCombatOperationReplay(_bb, default(IStopCombatOperationReplay));
 		}
 
-		// Token: 0x0601B7F4 RID: 112628 RVA: 0x003E73D0 File Offset: 0x003E55D0
+		// Token: 0x0601CFC9 RID: 118729 RVA: 0x0041366C File Offset: 0x0041186C
 		public static IStopCombatOperationReplay GetRootAsIStopCombatOperationReplay(ByteBuffer _bb, IStopCombatOperationReplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B7F5 RID: 112629 RVA: 0x003E73ED File Offset: 0x003E55ED
+		// Token: 0x0601CFCA RID: 118730 RVA: 0x00413689 File Offset: 0x00411889
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B7F6 RID: 112630 RVA: 0x003E73FC File Offset: 0x003E55FC
+		// Token: 0x0601CFCB RID: 118731 RVA: 0x00413698 File Offset: 0x00411898
 		public IStopCombatOperationReplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008089 RID: 32905
-		// (get) Token: 0x0601B7F7 RID: 112631 RVA: 0x003E740C File Offset: 0x003E560C
+		// Token: 0x170086CA RID: 34506
+		// (get) Token: 0x0601CFCC RID: 118732 RVA: 0x004136A8 File Offset: 0x004118A8
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B7F8 RID: 112632 RVA: 0x003E7448 File Offset: 0x003E5648
+		// Token: 0x0601CFCD RID: 118733 RVA: 0x004136E4 File Offset: 0x004118E4
 		public static Offset<IStopCombatOperationReplay> CreateIStopCombatOperationReplay(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IStopCombatOperationReplay.EndIStopCombatOperationReplay(builder);
 		}
 
-		// Token: 0x0601B7F9 RID: 112633 RVA: 0x003E745E File Offset: 0x003E565E
+		// Token: 0x0601CFCE RID: 118734 RVA: 0x004136FA File Offset: 0x004118FA
 		public static void StartIStopCombatOperationReplay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B7FA RID: 112634 RVA: 0x003E7467 File Offset: 0x003E5667
+		// Token: 0x0601CFCF RID: 118735 RVA: 0x00413703 File Offset: 0x00411903
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B7FB RID: 112635 RVA: 0x003E7472 File Offset: 0x003E5672
+		// Token: 0x0601CFD0 RID: 118736 RVA: 0x0041370E File Offset: 0x0041190E
 		public static Offset<IStopCombatOperationReplay> EndIStopCombatOperationReplay(FlatBufferBuilder builder)
 		{
 			return new Offset<IStopCombatOperationReplay>(builder.EndTable());
 		}
 
-		// Token: 0x0601B7FC RID: 112636 RVA: 0x003E7480 File Offset: 0x003E5680
+		// Token: 0x0601CFD1 RID: 118737 RVA: 0x0041371C File Offset: 0x0041191C
 		public IStopCombatOperationReplayT UnPack()
 		{
 			IStopCombatOperationReplayT stopCombatOperationReplayT = new IStopCombatOperationReplayT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return stopCombatOperationReplayT;
 		}
 
-		// Token: 0x0601B7FD RID: 112637 RVA: 0x003E749B File Offset: 0x003E569B
+		// Token: 0x0601CFD2 RID: 118738 RVA: 0x00413737 File Offset: 0x00411937
 		public void UnPackTo(IStopCombatOperationReplayT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B7FE RID: 112638 RVA: 0x003E74AC File Offset: 0x003E56AC
+		// Token: 0x0601CFD3 RID: 118739 RVA: 0x00413748 File Offset: 0x00411948
 		public static Offset<IStopCombatOperationReplay> Pack(FlatBufferBuilder builder, IStopCombatOperationReplayT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IStopCombatOperationReplay.CreateIStopCombatOperationReplay(builder, _o.Type);
 		}
 
-		// Token: 0x0400C87B RID: 51323
+		// Token: 0x0400D2AA RID: 53930
 		private Table __p;
 	}
 }

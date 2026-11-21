@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006380 RID: 25472
+	// Token: 0x020069F1 RID: 27121
 	public class IClaimLevelPlayRewardT
 	{
 	}

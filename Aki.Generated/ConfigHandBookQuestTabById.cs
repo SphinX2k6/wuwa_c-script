@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003CE RID: 974
+	// Token: 0x020003E4 RID: 996
 	public class ConfigHandBookQuestTabById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016DB RID: 5851 RVA: 0x000DAAFB File Offset: 0x000D8CFB
+		// Token: 0x0600175F RID: 5983 RVA: 0x000E124F File Offset: 0x000DF44F
 		static ConfigHandBookQuestTabById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHandBookQuestTabById.CreateStaticDefaultValue), new Action(ConfigHandBookQuestTabById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060016DC RID: 5852 RVA: 0x000DAB1C File Offset: 0x000D8D1C
+		// Token: 0x06001760 RID: 5984 RVA: 0x000E1270 File Offset: 0x000DF470
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHandBookQuestTabById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060016DD RID: 5853 RVA: 0x000DAB9B File Offset: 0x000D8D9B
+		// Token: 0x06001761 RID: 5985 RVA: 0x000E12EF File Offset: 0x000DF4EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHandBookQuestTabById.LogPair = null;
 			ConfigHandBookQuestTabById.HandleId = 0;
 		}
 
-		// Token: 0x060016DE RID: 5854 RVA: 0x000DABA9 File Offset: 0x000D8DA9
+		// Token: 0x06001762 RID: 5986 RVA: 0x000E12FD File Offset: 0x000DF4FD
 		public static void Init()
 		{
 			ConfigHandBookQuestTabById.HandleId = ConfigCommon.InitDataStatement(ConfigHandBookQuestTabById.HandleId, "db_handbook.db", "select BinData from `HandBookQuestTab` where Id=?");
 		}
 
-		// Token: 0x060016DF RID: 5855 RVA: 0x000DABC4 File Offset: 0x000D8DC4
+		// Token: 0x06001763 RID: 5987 RVA: 0x000E1318 File Offset: 0x000DF518
 		public static HandBookQuestTab? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHandBookQuestTabById.HandleId, ConfigHandBookQuestTabById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HandBookQuestTab?(rootAsHandBookQuestTab);
 		}
 
-		// Token: 0x04001A86 RID: 6790
+		// Token: 0x04001B20 RID: 6944
 		private const string DB = "db_handbook.db";
 
-		// Token: 0x04001A87 RID: 6791
+		// Token: 0x04001B21 RID: 6945
 		private const string FILE = "t.图鉴系统.xlsx";
 
-		// Token: 0x04001A88 RID: 6792
+		// Token: 0x04001B22 RID: 6946
 		private const string TABLE = "HandBookQuestTab";
 
-		// Token: 0x04001A89 RID: 6793
+		// Token: 0x04001B23 RID: 6947
 		private const string COMMAND = "select BinData from `HandBookQuestTab` where Id=?";
 
-		// Token: 0x04001A8A RID: 6794
+		// Token: 0x04001B24 RID: 6948
 		private const string KEY_PREFIX = "HandBookQuestTabById";
 
-		// Token: 0x04001A8B RID: 6795
+		// Token: 0x04001B25 RID: 6949
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A8C RID: 6796
+		// Token: 0x04001B26 RID: 6950
 		private static int HandleId;
 	}
 }

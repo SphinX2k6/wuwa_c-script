@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C9C RID: 19612
+	// Token: 0x02003C4D RID: 15437
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 	})]
 	public class CommonItemSmallItemGridWrap : GridProxyAbstract<ItemRefreshData>
 	{
-		// Token: 0x06032AE1 RID: 207585 RVA: 0x00BD28BC File Offset: 0x00BD0ABC
+		// Token: 0x06027894 RID: 161940 RVA: 0x00B17520 File Offset: 0x00B15720
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032AE2 RID: 207586 RVA: 0x00BD2904 File Offset: 0x00BD0B04
+		// Token: 0x06027895 RID: 161941 RVA: 0x00B17568 File Offset: 0x00B15768
 		public override void Refresh(ItemRefreshData data, bool isSelected, int gridIndex)
 		{
 			this.GridItem.RefreshByConfigId(data.ItemId, null, null, false, false);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032AE3 RID: 207587 RVA: 0x00BD296C File Offset: 0x00BD0B6C
+		// Token: 0x06027896 RID: 161942 RVA: 0x00B175D0 File Offset: 0x00B157D0
 		protected override void OnStart()
 		{
 			this.GridItem = new CommonItemSmallItemGrid();
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.GridItem.Initialize(item.GetOwner());
 		}
 
-		// Token: 0x06032AE4 RID: 207588 RVA: 0x00BD299D File Offset: 0x00BD0B9D
+		// Token: 0x06027897 RID: 161943 RVA: 0x00B17601 File Offset: 0x00B15801
 		protected override void OnBeforeDestroy()
 		{
 			this.GridItem.Destroy(null);
 		}
 
-		// Token: 0x0401AFB1 RID: 110513
+		// Token: 0x0401590E RID: 88334
 		[Nullable(2)]
 		public CommonItemSmallItemGrid GridItem;
 	}

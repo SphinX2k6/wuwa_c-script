@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001903 RID: 6403
+	// Token: 0x020003FD RID: 1021
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroResourceSystemFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroResourceSystemFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017C3D RID: 97341 RVA: 0x0022D042 File Offset: 0x0022B242
+		// Token: 0x06006432 RID: 25650 RVA: 0x0008F176 File Offset: 0x0008D376
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroResourceSystemFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x06017C3E RID: 97342 RVA: 0x0022D050 File Offset: 0x0022B250
+		// Token: 0x06006433 RID: 25651 RVA: 0x0008F184 File Offset: 0x0008D384
 		public UKuroResourceSystemFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroResourceSystemFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017C3F RID: 97343 RVA: 0x0022D078 File Offset: 0x0022B278
+		// Token: 0x06006434 RID: 25652 RVA: 0x0008F1AC File Offset: 0x0008D3AC
 		public UKuroResourceSystemFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroResourceSystemFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06017C40 RID: 97344 RVA: 0x0022D0AC File Offset: 0x0022B2AC
+		// Token: 0x06006435 RID: 25653 RVA: 0x0008F1E0 File Offset: 0x0008D3E0
 		public unsafe static bool TryGetAssetBlockInfo(string AssetPath, ref string OutReason)
 		{
 			FString fstring = FString.AllocTemp(AssetPath);
@@ -41,11 +41,11 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017C41 RID: 97345
+		// Token: 0x06006436 RID: 25654
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetCallbackTimeLimit(float TimeLimit);
 
-		// Token: 0x06017C42 RID: 97346 RVA: 0x0022D0EC File Offset: 0x0022B2EC
+		// Token: 0x06006437 RID: 25655 RVA: 0x0008F220 File Offset: 0x0008D420
 		public static void RefreshBlockedAssetPath([Nullable(new byte[]
 		{
 			2,
@@ -55,7 +55,7 @@ namespace UnrealEngine
 			UKuroResourceSystemFunctionLibrary.__RefreshBlockedAssetPath_Internal((OpenActivityTypes ?? new TSet<string>()).NativeSetPtr);
 		}
 
-		// Token: 0x06017C43 RID: 97347 RVA: 0x0022D104 File Offset: 0x0022B304
+		// Token: 0x06006438 RID: 25656 RVA: 0x0008F238 File Offset: 0x0008D438
 		public unsafe static bool IsAssetBlocked(string AssetPath)
 		{
 			FString fstring = FString.AllocTemp(AssetPath);
@@ -64,51 +64,51 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017C44 RID: 97348 RVA: 0x0022D128 File Offset: 0x0022B328
+		// Token: 0x06006439 RID: 25657 RVA: 0x0008F25C File Offset: 0x0008D45C
 		[NullableContext(2)]
 		public static void Initialize(UWorld World, float TimeLimit)
 		{
 			UKuroResourceSystemFunctionLibrary.__Initialize_Internal((World != null) ? World.NativePtr : IntPtr.Zero, TimeLimit);
 		}
 
-		// Token: 0x06017C45 RID: 97349
+		// Token: 0x0600643A RID: 25658
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Clear();
 
-		// Token: 0x06017C46 RID: 97350
+		// Token: 0x0600643B RID: 25659
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TryGetAssetBlockInfo_Internal(in FString AssetPath, ref FString OutReason);
 
-		// Token: 0x06017C47 RID: 97351
+		// Token: 0x0600643C RID: 25660
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RefreshBlockedAssetPath_Internal(IntPtr OpenActivityTypes);
 
-		// Token: 0x06017C48 RID: 97352
+		// Token: 0x0600643D RID: 25661
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsAssetBlocked_Internal(in FString AssetPath);
 
-		// Token: 0x06017C49 RID: 97353
+		// Token: 0x0600643E RID: 25662
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Initialize_Internal(IntPtr World, float TimeLimit);
 
-		// Token: 0x06017C4A RID: 97354 RVA: 0x0022D140 File Offset: 0x0022B340
+		// Token: 0x0600643F RID: 25663 RVA: 0x0008F274 File Offset: 0x0008D474
 		static UKuroResourceSystemFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroResourceSystemFunctionLibrary");
 		}
 
-		// Token: 0x06017C4B RID: 97355 RVA: 0x0022D14E File Offset: 0x0022B34E
+		// Token: 0x06006440 RID: 25664 RVA: 0x0008F282 File Offset: 0x0008D482
 		protected UKuroResourceSystemFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CE3F RID: 52799
+		// Token: 0x04002A45 RID: 10821
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroResourceSystemFunctionLibrary";
 
-		// Token: 0x0400CE40 RID: 52800
+		// Token: 0x04002A46 RID: 10822
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CE41 RID: 52801
+		// Token: 0x04002A47 RID: 10823
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

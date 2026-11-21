@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006142 RID: 24898
+	// Token: 0x020050C0 RID: 20672
 	public class RoverlikeTopCurrencyItem : UiPanelBase
 	{
-		// Token: 0x0603EEFE RID: 257790 RVA: 0x00F33DAC File Offset: 0x00F31FAC
+		// Token: 0x06033BBE RID: 211902 RVA: 0x00E7AC8C File Offset: 0x00E78E8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EEFF RID: 257791 RVA: 0x00F33E94 File Offset: 0x00F32094
+		// Token: 0x06033BBF RID: 211903 RVA: 0x00E7AD74 File Offset: 0x00E78F74
 		public void SetBtnEnable(bool bEnable)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			button.SetSelfInteractive(bEnable);
 		}
 
-		// Token: 0x0603EF00 RID: 257792 RVA: 0x00F33EA8 File Offset: 0x00F320A8
+		// Token: 0x06033BC0 RID: 211904 RVA: 0x00E7AD88 File Offset: 0x00E78F88
 		private void Refresh(bool emitAnim = false)
 		{
 			int gold = RoverlikeModel.Instance.Gold;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.TempCurrencyCount = gold;
 		}
 
-		// Token: 0x0603EF01 RID: 257793 RVA: 0x00F33EEC File Offset: 0x00F320EC
+		// Token: 0x06033BC1 RID: 211905 RVA: 0x00E7ADCC File Offset: 0x00E78FCC
 		private void ShowAddNumAnim(int delta)
 		{
 			if (delta == 0)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelSequencePlayer.PlayOrReplaySequenceByName("Up", false, null);
 		}
 
-		// Token: 0x0603EF02 RID: 257794 RVA: 0x00F33F7B File Offset: 0x00F3217B
+		// Token: 0x06033BC2 RID: 211906 RVA: 0x00E7AE5B File Offset: 0x00E7905B
 		[NullableContext(1)]
 		private void OnAddNumAnimFinish(string sequenceName)
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x0603EF03 RID: 257795 RVA: 0x00F33FA0 File Offset: 0x00F321A0
+		// Token: 0x06033BC3 RID: 211907 RVA: 0x00E7AE80 File Offset: 0x00E79080
 		private void OnCurrencyChange(int itemId)
 		{
 			RoverlikeModel instance = RoverlikeModel.Instance;
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EF04 RID: 257796 RVA: 0x00F33FDE File Offset: 0x00F321DE
+		// Token: 0x06033BC4 RID: 211908 RVA: 0x00E7AEBE File Offset: 0x00E790BE
 		private void OnBtnCurrencyClick()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.CurrencyItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.CurrencyItemId, true, null, false);
 		}
 
-		// Token: 0x0603EF05 RID: 257797 RVA: 0x00F33FF2 File Offset: 0x00F321F2
+		// Token: 0x06033BC5 RID: 211909 RVA: 0x00E7AED3 File Offset: 0x00E790D3
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.InitCurrency();
 		}
 
-		// Token: 0x0603EF06 RID: 257798 RVA: 0x00F34024 File Offset: 0x00F32224
+		// Token: 0x06033BC6 RID: 211910 RVA: 0x00E7AF04 File Offset: 0x00E79104
 		public void InitCurrency()
 		{
 			RoverlikeModel instance = RoverlikeModel.Instance;
@@ -153,20 +153,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.Refresh(false);
 		}
 
-		// Token: 0x0603EF07 RID: 257799 RVA: 0x00F34084 File Offset: 0x00F32284
+		// Token: 0x06033BC7 RID: 211911 RVA: 0x00E7AF64 File Offset: 0x00E79164
 		public void BeginShow()
 		{
 			this.Refresh(false);
 			EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x0603EF08 RID: 257800 RVA: 0x00F340A9 File Offset: 0x00F322A9
+		// Token: 0x06033BC8 RID: 211912 RVA: 0x00E7AF89 File Offset: 0x00E79189
 		public void BeginHide()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x0603EF09 RID: 257801 RVA: 0x00F340C7 File Offset: 0x00F322C7
+		// Token: 0x06033BC9 RID: 211913 RVA: 0x00E7AFA7 File Offset: 0x00E791A7
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -177,29 +177,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x04020D9C RID: 134556
+		// Token: 0x0401B6C9 RID: 112329
 		private int TempCurrencyCount;
 
-		// Token: 0x04020D9D RID: 134557
+		// Token: 0x0401B6CA RID: 112330
 		private int CurrencyItemId;
 
-		// Token: 0x04020D9E RID: 134558
+		// Token: 0x0401B6CB RID: 112331
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C39E RID: 50078
+		// Token: 0x0200AD85 RID: 44421
 		private class EComponents
 		{
-			// Token: 0x0403B07C RID: 241788
+			// Token: 0x040359DD RID: 219613
 			public const int BtnCurrency = 0;
 
-			// Token: 0x0403B07D RID: 241789
+			// Token: 0x040359DE RID: 219614
 			public const int TxtNum = 1;
 
-			// Token: 0x0403B07E RID: 241790
+			// Token: 0x040359DF RID: 219615
 			public const int TxtAddNum = 2;
 
-			// Token: 0x0403B07F RID: 241791
+			// Token: 0x040359E0 RID: 219616
 			public const int TexIcon = 3;
 		}
 	}

@@ -2,20 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007783 RID: 30595
+	// Token: 0x02007FBB RID: 32699
 	public enum TSetNpcGroupPerformType : byte
 	{
-		// Token: 0x0401292C RID: 76076
+		// Token: 0x040139E0 RID: 80352
 		NONE,
-		// Token: 0x0401292D RID: 76077
+		// Token: 0x040139E1 RID: 80353
 		ISetNpcHandInHandPerform,
-		// Token: 0x0401292E RID: 76078
+		// Token: 0x040139E2 RID: 80354
 		ISetNpcHighFivePerform,
-		// Token: 0x0401292F RID: 76079
+		// Token: 0x040139E3 RID: 80355
 		ISetNpcHuggingBearPerform,
-		// Token: 0x04012930 RID: 76080
+		// Token: 0x040139E4 RID: 80356
+		ISetNpcSequencePerform,
+		// Token: 0x040139E5 RID: 80357
 		ISetNpcSupportedWalkingPerform,
-		// Token: 0x04012931 RID: 76081
+		// Token: 0x040139E6 RID: 80358
 		ISetNpcTwoPersonPerform
 	}
 }

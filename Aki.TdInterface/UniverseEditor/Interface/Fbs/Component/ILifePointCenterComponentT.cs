@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054F8 RID: 21752
+	// Token: 0x02005A7E RID: 23166
 	public class ILifePointCenterComponentT
 	{
-		// Token: 0x1700A086 RID: 41094
-		// (get) Token: 0x06023E8B RID: 147083 RVA: 0x004F6F1C File Offset: 0x004F511C
-		// (set) Token: 0x06023E8C RID: 147084 RVA: 0x004F6F24 File Offset: 0x004F5124
+		// Token: 0x1700A8C0 RID: 43200
+		// (get) Token: 0x06025F45 RID: 155461 RVA: 0x00534040 File Offset: 0x00532240
+		// (set) Token: 0x06025F46 RID: 155462 RVA: 0x00534048 File Offset: 0x00532248
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A087 RID: 41095
-		// (get) Token: 0x06023E8D RID: 147085 RVA: 0x004F6F2D File Offset: 0x004F512D
-		// (set) Token: 0x06023E8E RID: 147086 RVA: 0x004F6F35 File Offset: 0x004F5135
+		// Token: 0x1700A8C1 RID: 43201
+		// (get) Token: 0x06025F47 RID: 155463 RVA: 0x00534051 File Offset: 0x00532251
+		// (set) Token: 0x06025F48 RID: 155464 RVA: 0x00534059 File Offset: 0x00532259
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023E8F RID: 147087 RVA: 0x004F6F3E File Offset: 0x004F513E
+		// Token: 0x06025F49 RID: 155465 RVA: 0x00534062 File Offset: 0x00532262
 		public ILifePointCenterComponentT()
 		{
 			this.Disabled = false;

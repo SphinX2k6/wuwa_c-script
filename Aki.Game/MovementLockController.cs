@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020022D0 RID: 8912
+// Token: 0x020017B4 RID: 6068
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MovementLockController : ControllerBase
 {
-	// Token: 0x060117F6 RID: 71670 RVA: 0x0044A7C2 File Offset: 0x004489C2
+	// Token: 0x0600EC8D RID: 60557 RVA: 0x004574EA File Offset: 0x004556EA
 	protected override bool OnLeaveLevel()
 	{
 		if (this.LockMode != EMovementLockMode.None)
@@ -17,7 +17,7 @@ public class MovementLockController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060117F7 RID: 71671 RVA: 0x0044A7D3 File Offset: 0x004489D3
+	// Token: 0x0600EC8E RID: 60558 RVA: 0x004574FB File Offset: 0x004556FB
 	public void Lock(EMovementLockMode lockMode)
 	{
 		if (this.LockMode != EMovementLockMode.None)
@@ -31,28 +31,23 @@ public class MovementLockController : ControllerBase
 		else if (lockMode == EMovementLockMode.StreamingSource)
 		{
 			UeMovementTickController.SetTickManageMode(EMovementManageMode.TickWithDistance);
-			GameBudgetController.Instance.OpenStreamingSourceMode();
 		}
 		this.LockMode = lockMode;
 	}
 
-	// Token: 0x060117F8 RID: 71672 RVA: 0x0044A80A File Offset: 0x00448A0A
+	// Token: 0x0600EC8F RID: 60559 RVA: 0x00457528 File Offset: 0x00455728
 	public void Unlock()
 	{
 		if (this.LockMode == EMovementLockMode.None)
 		{
 			return;
 		}
-		if (this.LockMode == EMovementLockMode.StreamingSource)
-		{
-			GameBudgetController.Instance.CloseStreamingSourceMode();
-		}
 		UeMovementTickController.SetTickManageMode(EMovementManageMode.Default);
 		this.LockMode = EMovementLockMode.None;
 	}
 
-	// Token: 0x17001648 RID: 5704
-	// (get) Token: 0x060117F9 RID: 71673 RVA: 0x0044A835 File Offset: 0x00448A35
+	// Token: 0x1700167F RID: 5759
+	// (get) Token: 0x0600EC90 RID: 60560 RVA: 0x00457540 File Offset: 0x00455740
 	public static MovementLockController Instance
 	{
 		get
@@ -61,7 +56,7 @@ public class MovementLockController : ControllerBase
 		}
 	}
 
-	// Token: 0x060117FA RID: 71674 RVA: 0x0044A83C File Offset: 0x00448A3C
+	// Token: 0x0600EC91 RID: 60561 RVA: 0x00457547 File Offset: 0x00455747
 	public static MovementLockController GetOrCreateInstance()
 	{
 		if (MovementLockController._Instance == null)
@@ -71,7 +66,7 @@ public class MovementLockController : ControllerBase
 		return MovementLockController._Instance;
 	}
 
-	// Token: 0x060117FB RID: 71675 RVA: 0x0044A850 File Offset: 0x00448A50
+	// Token: 0x0600EC92 RID: 60562 RVA: 0x0045755B File Offset: 0x0045575B
 	public static bool CreateInstance()
 	{
 		if (MovementLockController._Instance != null)
@@ -82,27 +77,27 @@ public class MovementLockController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060117FC RID: 71676 RVA: 0x0044A866 File Offset: 0x00448A66
+	// Token: 0x0600EC93 RID: 60563 RVA: 0x00457571 File Offset: 0x00455771
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060117FD RID: 71677 RVA: 0x0044A868 File Offset: 0x00448A68
+	// Token: 0x0600EC94 RID: 60564 RVA: 0x00457573 File Offset: 0x00455773
 	public static void ResetStaticDefaultValue()
 	{
 		MovementLockController._Instance = null;
 	}
 
-	// Token: 0x060117FE RID: 71678 RVA: 0x0044A870 File Offset: 0x00448A70
+	// Token: 0x0600EC95 RID: 60565 RVA: 0x0045757B File Offset: 0x0045577B
 	static MovementLockController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MovementLockController.CreateStaticDefaultValue), new Action(MovementLockController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040084D8 RID: 34008
+	// Token: 0x04008616 RID: 34326
 	public EMovementLockMode LockMode;
 
-	// Token: 0x040084D9 RID: 34009
+	// Token: 0x04008617 RID: 34327
 	[Nullable(2)]
 	private static MovementLockController _Instance;
 }

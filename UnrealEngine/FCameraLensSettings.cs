@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000472 RID: 1138
+	// Token: 0x020000E4 RID: 228
 	[UnrealObjectPath("/Script/CinematicCamera.CameraLensSettings")]
 	[UnrealStructLayout(24, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FCameraLensSettings : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06003CD6 RID: 15574 RVA: 0x0005B920 File Offset: 0x00059B20
+		// Token: 0x06000FF5 RID: 4085 RVA: 0x000198C6 File Offset: 0x00017AC6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FCameraLensSettings._ScriptStructPtr != 0) ? FCameraLensSettings._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CinematicCamera.CameraLensSettings", ref FCameraLensSettings._ScriptStructPtr);
 		}
 
-		// Token: 0x17000EC1 RID: 3777
-		// (get) Token: 0x06003CD7 RID: 15575 RVA: 0x0005B944 File Offset: 0x00059B44
-		// (set) Token: 0x06003CD8 RID: 15576 RVA: 0x0005B954 File Offset: 0x00059B54
+		// Token: 0x17000172 RID: 370
+		// (get) Token: 0x06000FF6 RID: 4086 RVA: 0x000198EA File Offset: 0x00017AEA
+		// (set) Token: 0x06000FF7 RID: 4087 RVA: 0x000198FA File Offset: 0x00017AFA
 		public unsafe float MinFocalLength
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC2 RID: 3778
-		// (get) Token: 0x06003CD9 RID: 15577 RVA: 0x0005B965 File Offset: 0x00059B65
-		// (set) Token: 0x06003CDA RID: 15578 RVA: 0x0005B975 File Offset: 0x00059B75
+		// Token: 0x17000173 RID: 371
+		// (get) Token: 0x06000FF8 RID: 4088 RVA: 0x0001990B File Offset: 0x00017B0B
+		// (set) Token: 0x06000FF9 RID: 4089 RVA: 0x0001991B File Offset: 0x00017B1B
 		public unsafe float MaxFocalLength
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC3 RID: 3779
-		// (get) Token: 0x06003CDB RID: 15579 RVA: 0x0005B986 File Offset: 0x00059B86
-		// (set) Token: 0x06003CDC RID: 15580 RVA: 0x0005B996 File Offset: 0x00059B96
+		// Token: 0x17000174 RID: 372
+		// (get) Token: 0x06000FFA RID: 4090 RVA: 0x0001992C File Offset: 0x00017B2C
+		// (set) Token: 0x06000FFB RID: 4091 RVA: 0x0001993C File Offset: 0x00017B3C
 		public unsafe float MinFStop
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC4 RID: 3780
-		// (get) Token: 0x06003CDD RID: 15581 RVA: 0x0005B9A7 File Offset: 0x00059BA7
-		// (set) Token: 0x06003CDE RID: 15582 RVA: 0x0005B9B7 File Offset: 0x00059BB7
+		// Token: 0x17000175 RID: 373
+		// (get) Token: 0x06000FFC RID: 4092 RVA: 0x0001994D File Offset: 0x00017B4D
+		// (set) Token: 0x06000FFD RID: 4093 RVA: 0x0001995D File Offset: 0x00017B5D
 		public unsafe float MaxFStop
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC5 RID: 3781
-		// (get) Token: 0x06003CDF RID: 15583 RVA: 0x0005B9C8 File Offset: 0x00059BC8
-		// (set) Token: 0x06003CE0 RID: 15584 RVA: 0x0005B9D8 File Offset: 0x00059BD8
+		// Token: 0x17000176 RID: 374
+		// (get) Token: 0x06000FFE RID: 4094 RVA: 0x0001996E File Offset: 0x00017B6E
+		// (set) Token: 0x06000FFF RID: 4095 RVA: 0x0001997E File Offset: 0x00017B7E
 		public unsafe float MinimumFocusDistance
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000EC6 RID: 3782
-		// (get) Token: 0x06003CE1 RID: 15585 RVA: 0x0005B9E9 File Offset: 0x00059BE9
-		// (set) Token: 0x06003CE2 RID: 15586 RVA: 0x0005B9F9 File Offset: 0x00059BF9
+		// Token: 0x17000177 RID: 375
+		// (get) Token: 0x06001000 RID: 4096 RVA: 0x0001998F File Offset: 0x00017B8F
+		// (set) Token: 0x06001001 RID: 4097 RVA: 0x0001999F File Offset: 0x00017B9F
 		public unsafe int DiaphragmBladeCount
 		{
 			get
@@ -106,76 +106,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06003CE3 RID: 15587 RVA: 0x0005BA0A File Offset: 0x00059C0A
+		// Token: 0x06001002 RID: 4098 RVA: 0x000199B0 File Offset: 0x00017BB0
 		public FCameraLensSettings()
 		{
 		}
 
-		// Token: 0x06003CE4 RID: 15588 RVA: 0x0005BA12 File Offset: 0x00059C12
-		public FCameraLensSettings(float MinFocalLength, float MaxFocalLength, float MinFStop, float MaxFStop, float MinimumFocusDistance, int DiaphragmBladeCount)
-		{
-			this.MinFocalLength = MinFocalLength;
-			this.MaxFocalLength = MaxFocalLength;
-			this.MinFStop = MinFStop;
-			this.MaxFStop = MaxFStop;
-			this.MinimumFocusDistance = MinimumFocusDistance;
-			this.DiaphragmBladeCount = DiaphragmBladeCount;
-		}
-
-		// Token: 0x06003CE5 RID: 15589 RVA: 0x0005BA47 File Offset: 0x00059C47
+		// Token: 0x06001003 RID: 4099 RVA: 0x000199B8 File Offset: 0x00017BB8
 		protected override IntPtr GetUStructPtr()
 		{
 			return FCameraLensSettings.StaticStruct();
 		}
 
-		// Token: 0x06003CE6 RID: 15590 RVA: 0x0005BA53 File Offset: 0x00059C53
+		// Token: 0x06001004 RID: 4100 RVA: 0x000199C4 File Offset: 0x00017BC4
 		[NullableContext(2)]
 		public FCameraLensSettings(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06003CE7 RID: 15591 RVA: 0x0005BA5D File Offset: 0x00059C5D
+		// Token: 0x06001005 RID: 4101 RVA: 0x000199CE File Offset: 0x00017BCE
 		public FCameraLensSettings(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06003CE8 RID: 15592 RVA: 0x0005BA68 File Offset: 0x00059C68
+		// Token: 0x06001006 RID: 4102 RVA: 0x000199D9 File Offset: 0x00017BD9
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FCameraLensSettings(Pointer, false, true);
 		}
 
-		// Token: 0x06003CE9 RID: 15593 RVA: 0x0005BA72 File Offset: 0x00059C72
+		// Token: 0x06001007 RID: 4103 RVA: 0x000199E3 File Offset: 0x00017BE3
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FCameraLensSettings(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04001C87 RID: 7303
+		// Token: 0x040003AC RID: 940
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/CinematicCamera.CameraLensSettings";
 
-		// Token: 0x04001C88 RID: 7304
+		// Token: 0x040003AD RID: 941
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04001C89 RID: 7305
+		// Token: 0x040003AE RID: 942
 		internal static int __PropertyOffset_MinFocalLength;
 
-		// Token: 0x04001C8A RID: 7306
+		// Token: 0x040003AF RID: 943
 		internal static int __PropertyOffset_MaxFocalLength;
 
-		// Token: 0x04001C8B RID: 7307
+		// Token: 0x040003B0 RID: 944
 		internal static int __PropertyOffset_MinFStop;
 
-		// Token: 0x04001C8C RID: 7308
+		// Token: 0x040003B1 RID: 945
 		internal static int __PropertyOffset_MaxFStop;
 
-		// Token: 0x04001C8D RID: 7309
+		// Token: 0x040003B2 RID: 946
 		internal static int __PropertyOffset_MinimumFocusDistance;
 
-		// Token: 0x04001C8E RID: 7310
+		// Token: 0x040003B3 RID: 947
 		internal static int __PropertyOffset_DiaphragmBladeCount;
 	}
 }

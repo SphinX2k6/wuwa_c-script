@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CDF RID: 15583
+	// Token: 0x020040F6 RID: 16630
 	public enum ETrackEffectType : byte
 	{
-		// Token: 0x0400B54B RID: 46411
+		// Token: 0x0400BEF8 RID: 48888
 		AutoChange
 	}
 }

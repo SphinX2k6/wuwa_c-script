@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B3F RID: 2879
+	// Token: 0x02000B2E RID: 2862
 	public sealed class NewTowerRecommendLevel : IMessage<NewTowerRecommendLevel>, IMessage, IEquatable<NewTowerRecommendLevel>, IDeepCloneable<NewTowerRecommendLevel>, IBufferMessage
 	{
-		// Token: 0x0600F9CC RID: 63948 RVA: 0x00246BB1 File Offset: 0x00244DB1
+		// Token: 0x0600F8B2 RID: 63666 RVA: 0x00244995 File Offset: 0x00242B95
 		[NullableContext(1)]
 		public static NewTowerRecommendLevel Create()
 		{
 			return new NewTowerRecommendLevel();
 		}
 
-		// Token: 0x170032EC RID: 13036
-		// (get) Token: 0x0600F9CD RID: 63949 RVA: 0x00246BB8 File Offset: 0x00244DB8
+		// Token: 0x170032AE RID: 12974
+		// (get) Token: 0x0600F8B3 RID: 63667 RVA: 0x0024499C File Offset: 0x00242B9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<NewTowerRecommendLevel> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170032ED RID: 13037
-		// (get) Token: 0x0600F9CE RID: 63950 RVA: 0x00246BBF File Offset: 0x00244DBF
+		// Token: 0x170032AF RID: 12975
+		// (get) Token: 0x0600F8B4 RID: 63668 RVA: 0x002449A3 File Offset: 0x00242BA3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170032EE RID: 13038
-		// (get) Token: 0x0600F9CF RID: 63951 RVA: 0x00246BC2 File Offset: 0x00244DC2
+		// Token: 0x170032B0 RID: 12976
+		// (get) Token: 0x0600F8B5 RID: 63669 RVA: 0x002449A6 File Offset: 0x00242BA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F9D0 RID: 63952 RVA: 0x00246BC9 File Offset: 0x00244DC9
+		// Token: 0x0600F8B6 RID: 63670 RVA: 0x002449AD File Offset: 0x00242BAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerRecommendLevel()
 		{
 		}
 
-		// Token: 0x0600F9D1 RID: 63953 RVA: 0x00246BDC File Offset: 0x00244DDC
+		// Token: 0x0600F8B7 RID: 63671 RVA: 0x002449C0 File Offset: 0x00242BC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerRecommendLevel(NewTowerRecommendLevel other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F9D2 RID: 63954 RVA: 0x00246C29 File Offset: 0x00244E29
+		// Token: 0x0600F8B8 RID: 63672 RVA: 0x00244A0D File Offset: 0x00242C0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerRecommendLevel Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new NewTowerRecommendLevel(this);
 		}
 
-		// Token: 0x170032EF RID: 13039
-		// (get) Token: 0x0600F9D3 RID: 63955 RVA: 0x00246C31 File Offset: 0x00244E31
-		// (set) Token: 0x0600F9D4 RID: 63956 RVA: 0x00246C39 File Offset: 0x00244E39
+		// Token: 0x170032B1 RID: 12977
+		// (get) Token: 0x0600F8B9 RID: 63673 RVA: 0x00244A15 File Offset: 0x00242C15
+		// (set) Token: 0x0600F8BA RID: 63674 RVA: 0x00244A1D File Offset: 0x00242C1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170032F0 RID: 13040
-		// (get) Token: 0x0600F9D5 RID: 63957 RVA: 0x00246C42 File Offset: 0x00244E42
-		// (set) Token: 0x0600F9D6 RID: 63958 RVA: 0x00246C4A File Offset: 0x00244E4A
+		// Token: 0x170032B2 RID: 12978
+		// (get) Token: 0x0600F8BB RID: 63675 RVA: 0x00244A26 File Offset: 0x00242C26
+		// (set) Token: 0x0600F8BC RID: 63676 RVA: 0x00244A2E File Offset: 0x00242C2E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RecommendId
@@ -114,8 +114,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170032F1 RID: 13041
-		// (get) Token: 0x0600F9D7 RID: 63959 RVA: 0x00246C53 File Offset: 0x00244E53
+		// Token: 0x170032B3 RID: 12979
+		// (get) Token: 0x0600F8BD RID: 63677 RVA: 0x00244A37 File Offset: 0x00242C37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<NewTowerRecommendTeam> RecommendTeams
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F9D8 RID: 63960 RVA: 0x00246C5B File Offset: 0x00244E5B
+		// Token: 0x0600F8BE RID: 63678 RVA: 0x00244A3F File Offset: 0x00242C3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NewTowerRecommendLevel);
 		}
 
-		// Token: 0x0600F9D9 RID: 63961 RVA: 0x00246C6C File Offset: 0x00244E6C
+		// Token: 0x0600F8BF RID: 63679 RVA: 0x00244A50 File Offset: 0x00242C50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NewTowerRecommendLevel other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelId == other.LevelId && this.RecommendId == other.RecommendId && this.recommendTeams_.Equals(other.recommendTeams_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F9DA RID: 63962 RVA: 0x00246CCC File Offset: 0x00244ECC
+		// Token: 0x0600F8C0 RID: 63680 RVA: 0x00244AB0 File Offset: 0x00242CB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F9DB RID: 63963 RVA: 0x00246D32 File Offset: 0x00244F32
+		// Token: 0x0600F8C1 RID: 63681 RVA: 0x00244B16 File Offset: 0x00242D16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F9DC RID: 63964 RVA: 0x00246D3F File Offset: 0x00244F3F
+		// Token: 0x0600F8C2 RID: 63682 RVA: 0x00244B23 File Offset: 0x00242D23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F9DD RID: 63965 RVA: 0x00246D48 File Offset: 0x00244F48
+		// Token: 0x0600F8C3 RID: 63683 RVA: 0x00244B2C File Offset: 0x00242D2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F9DE RID: 63966 RVA: 0x00246DB4 File Offset: 0x00244FB4
+		// Token: 0x0600F8C4 RID: 63684 RVA: 0x00244B98 File Offset: 0x00242D98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F9DF RID: 63967 RVA: 0x00246E20 File Offset: 0x00245020
+		// Token: 0x0600F8C5 RID: 63685 RVA: 0x00244C04 File Offset: 0x00242E04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NewTowerRecommendLevel other)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F9E0 RID: 63968 RVA: 0x00246E81 File Offset: 0x00245081
+		// Token: 0x0600F8C6 RID: 63686 RVA: 0x00244C65 File Offset: 0x00242E65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F9E1 RID: 63969 RVA: 0x00246E8C File Offset: 0x0024508C
+		// Token: 0x0600F8C7 RID: 63687 RVA: 0x00244C70 File Offset: 0x00242E70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -290,31 +290,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006409 RID: 25609
+		// Token: 0x04006412 RID: 25618
 		private static readonly MessageParser<NewTowerRecommendLevel> _parser = new MessageParser<NewTowerRecommendLevel>(() => new NewTowerRecommendLevel());
 
-		// Token: 0x0400640A RID: 25610
+		// Token: 0x04006413 RID: 25619
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400640B RID: 25611
+		// Token: 0x04006414 RID: 25620
 		public const int LevelIdFieldNumber = 1;
 
-		// Token: 0x0400640C RID: 25612
+		// Token: 0x04006415 RID: 25621
 		private int levelId_;
 
-		// Token: 0x0400640D RID: 25613
+		// Token: 0x04006416 RID: 25622
 		public const int RecommendIdFieldNumber = 2;
 
-		// Token: 0x0400640E RID: 25614
+		// Token: 0x04006417 RID: 25623
 		private int recommendId_;
 
-		// Token: 0x0400640F RID: 25615
+		// Token: 0x04006418 RID: 25624
 		public const int RecommendTeamsFieldNumber = 3;
 
-		// Token: 0x04006410 RID: 25616
+		// Token: 0x04006419 RID: 25625
 		private static readonly FieldCodec<NewTowerRecommendTeam> _repeated_recommendTeams_codec = FieldCodec.ForMessage<NewTowerRecommendTeam>(26U, NewTowerRecommendTeam.Parser);
 
-		// Token: 0x04006411 RID: 25617
+		// Token: 0x0400641A RID: 25626
 		private readonly RepeatedField<NewTowerRecommendTeam> recommendTeams_ = new RepeatedField<NewTowerRecommendTeam>();
 	}
 }

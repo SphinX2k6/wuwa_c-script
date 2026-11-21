@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064A4 RID: 25764
+	// Token: 0x02006B0F RID: 27407
 	public struct ICommonTipMissionCompleteNew : IFlatbufferObject
 	{
-		// Token: 0x1700BFB9 RID: 49081
-		// (get) Token: 0x0602CA7A RID: 182906 RVA: 0x00621575 File Offset: 0x0061F775
+		// Token: 0x1700C946 RID: 51526
+		// (get) Token: 0x0602F1F4 RID: 193012 RVA: 0x0066D149 File Offset: 0x0066B349
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CA7B RID: 182907 RVA: 0x00621582 File Offset: 0x0061F782
+		// Token: 0x0602F1F5 RID: 193013 RVA: 0x0066D156 File Offset: 0x0066B356
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CA7C RID: 182908 RVA: 0x0062158C File Offset: 0x0061F78C
+		// Token: 0x0602F1F6 RID: 193014 RVA: 0x0066D160 File Offset: 0x0066B360
 		public static ICommonTipMissionCompleteNew GetRootAsICommonTipMissionCompleteNew(ByteBuffer _bb)
 		{
 			return ICommonTipMissionCompleteNew.GetRootAsICommonTipMissionCompleteNew(_bb, default(ICommonTipMissionCompleteNew));
 		}
 
-		// Token: 0x0602CA7D RID: 182909 RVA: 0x006215A8 File Offset: 0x0061F7A8
+		// Token: 0x0602F1F7 RID: 193015 RVA: 0x0066D17C File Offset: 0x0066B37C
 		public static ICommonTipMissionCompleteNew GetRootAsICommonTipMissionCompleteNew(ByteBuffer _bb, ICommonTipMissionCompleteNew obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CA7E RID: 182910 RVA: 0x006215C5 File Offset: 0x0061F7C5
+		// Token: 0x0602F1F8 RID: 193016 RVA: 0x0066D199 File Offset: 0x0066B399
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CA7F RID: 182911 RVA: 0x006215D4 File Offset: 0x0061F7D4
+		// Token: 0x0602F1F9 RID: 193017 RVA: 0x0066D1A8 File Offset: 0x0066B3A8
 		public ICommonTipMissionCompleteNew __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BFBA RID: 49082
-		// (get) Token: 0x0602CA80 RID: 182912 RVA: 0x006215E4 File Offset: 0x0061F7E4
+		// Token: 0x1700C947 RID: 51527
+		// (get) Token: 0x0602F1FA RID: 193018 RVA: 0x0066D1B8 File Offset: 0x0066B3B8
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BFBB RID: 49083
-		// (get) Token: 0x0602CA81 RID: 182913 RVA: 0x00621620 File Offset: 0x0061F820
+		// Token: 0x1700C948 RID: 51528
+		// (get) Token: 0x0602F1FB RID: 193019 RVA: 0x0066D1F4 File Offset: 0x0066B3F4
 		public EQuestCommonTipType QuestType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BFBC RID: 49084
-		// (get) Token: 0x0602CA82 RID: 182914 RVA: 0x0062165C File Offset: 0x0061F85C
+		// Token: 0x1700C949 RID: 51529
+		// (get) Token: 0x0602F1FC RID: 193020 RVA: 0x0066D230 File Offset: 0x0066B430
 		public string TipTextKey
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CA83 RID: 182915 RVA: 0x00621693 File Offset: 0x0061F893
+		// Token: 0x0602F1FD RID: 193021 RVA: 0x0066D267 File Offset: 0x0066B467
 		public Span<byte> GetTipTextKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602CA84 RID: 182916 RVA: 0x006216A2 File Offset: 0x0061F8A2
+		// Token: 0x0602F1FE RID: 193022 RVA: 0x0066D276 File Offset: 0x0066B476
 		public byte[] GetTipTextKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x0602CA85 RID: 182917 RVA: 0x006216B0 File Offset: 0x0061F8B0
+		// Token: 0x0602F1FF RID: 193023 RVA: 0x0066D284 File Offset: 0x0066B484
 		public static Offset<ICommonTipMissionCompleteNew> CreateICommonTipMissionCompleteNew(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, EQuestCommonTipType QuestType = EQuestCommonTipType.Branch, StringOffset TipTextKeyOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICommonTipMissionCompleteNew.EndICommonTipMissionCompleteNew(builder);
 		}
 
-		// Token: 0x0602CA86 RID: 182918 RVA: 0x006216D4 File Offset: 0x0061F8D4
+		// Token: 0x0602F200 RID: 193024 RVA: 0x0066D2A8 File Offset: 0x0066B4A8
 		public static void StartICommonTipMissionCompleteNew(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602CA87 RID: 182919 RVA: 0x006216DD File Offset: 0x0061F8DD
+		// Token: 0x0602F201 RID: 193025 RVA: 0x0066D2B1 File Offset: 0x0066B4B1
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CA88 RID: 182920 RVA: 0x006216E8 File Offset: 0x0061F8E8
+		// Token: 0x0602F202 RID: 193026 RVA: 0x0066D2BC File Offset: 0x0066B4BC
 		public static void AddQuestType(FlatBufferBuilder builder, EQuestCommonTipType questType)
 		{
 			builder.AddByte(1, (byte)questType, 0);
 		}
 
-		// Token: 0x0602CA89 RID: 182921 RVA: 0x006216F3 File Offset: 0x0061F8F3
+		// Token: 0x0602F203 RID: 193027 RVA: 0x0066D2C7 File Offset: 0x0066B4C7
 		public static void AddTipTextKey(FlatBufferBuilder builder, StringOffset tipTextKeyOffset)
 		{
 			builder.AddOffset(2, tipTextKeyOffset.Value, 0);
 		}
 
-		// Token: 0x0602CA8A RID: 182922 RVA: 0x00621703 File Offset: 0x0061F903
+		// Token: 0x0602F204 RID: 193028 RVA: 0x0066D2D7 File Offset: 0x0066B4D7
 		public static Offset<ICommonTipMissionCompleteNew> EndICommonTipMissionCompleteNew(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonTipMissionCompleteNew>(builder.EndTable());
 		}
 
-		// Token: 0x0602CA8B RID: 182923 RVA: 0x00621710 File Offset: 0x0061F910
+		// Token: 0x0602F205 RID: 193029 RVA: 0x0066D2E4 File Offset: 0x0066B4E4
 		public ICommonTipMissionCompleteNewT UnPack()
 		{
 			ICommonTipMissionCompleteNewT commonTipMissionCompleteNewT = new ICommonTipMissionCompleteNewT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return commonTipMissionCompleteNewT;
 		}
 
-		// Token: 0x0602CA8C RID: 182924 RVA: 0x0062172B File Offset: 0x0061F92B
+		// Token: 0x0602F206 RID: 193030 RVA: 0x0066D2FF File Offset: 0x0066B4FF
 		public void UnPackTo(ICommonTipMissionCompleteNewT _o)
 		{
 			_o.Type = this.Type;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TipTextKey = this.TipTextKey;
 		}
 
-		// Token: 0x0602CA8D RID: 182925 RVA: 0x00621754 File Offset: 0x0061F954
+		// Token: 0x0602F207 RID: 193031 RVA: 0x0066D328 File Offset: 0x0066B528
 		public static Offset<ICommonTipMissionCompleteNew> Pack(FlatBufferBuilder builder, ICommonTipMissionCompleteNewT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICommonTipMissionCompleteNew.CreateICommonTipMissionCompleteNew(builder, _o.Type, _o.QuestType, tipTextKeyOffset);
 		}
 
-		// Token: 0x04010AB2 RID: 68274
+		// Token: 0x040118C3 RID: 71875
 		private Table __p;
 	}
 }

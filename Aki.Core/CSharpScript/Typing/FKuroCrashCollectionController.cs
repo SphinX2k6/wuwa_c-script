@@ -4,14 +4,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Typing
 {
-	// Token: 0x0200011D RID: 285
+	// Token: 0x0200011E RID: 286
 	public static class FKuroCrashCollectionController
 	{
-		// Token: 0x06000A3A RID: 2618
+		// Token: 0x06000A91 RID: 2705
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Initialize_Internal(IntPtr world, FName actorLocationName, FName actorRotationName, FName cameraLocationName, FName cameraRotationName, FName worldName);
 
-		// Token: 0x06000A3B RID: 2619 RVA: 0x00033AE0 File Offset: 0x00031CE0
+		// Token: 0x06000A92 RID: 2706 RVA: 0x00034554 File Offset: 0x00032754
 		[NullableContext(2)]
 		public static void Initialize(UWorld world, FName actorLocationName, FName actorRotationName, FName cameraLocationName, FName cameraRotationName, FName worldName)
 		{

@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E65 RID: 7781
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200209A RID: 8346
 	public class IShowTalkFrameEvent_SetValue
 	{
-		// Token: 0x0400637E RID: 25470
+		// Token: 0x04006962 RID: 26978
 		public ISequenceFrameEvent FrameEvent;
 
-		// Token: 0x0400637F RID: 25471
+		// Token: 0x04006963 RID: 26979
 		public IShowTalkFrameEventPosition Position;
 	}
 }

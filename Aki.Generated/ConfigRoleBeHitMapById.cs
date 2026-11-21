@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000889 RID: 2185
+	// Token: 0x020008A5 RID: 2213
 	public class ConfigRoleBeHitMapById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003348 RID: 13128 RVA: 0x0017B493 File Offset: 0x00179693
+		// Token: 0x060033F0 RID: 13296 RVA: 0x0018277B File Offset: 0x0018097B
 		static ConfigRoleBeHitMapById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleBeHitMapById.CreateStaticDefaultValue), new Action(ConfigRoleBeHitMapById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003349 RID: 13129 RVA: 0x0017B4B4 File Offset: 0x001796B4
+		// Token: 0x060033F1 RID: 13297 RVA: 0x0018279C File Offset: 0x0018099C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleBeHitMapById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600334A RID: 13130 RVA: 0x0017B533 File Offset: 0x00179733
+		// Token: 0x060033F2 RID: 13298 RVA: 0x0018281B File Offset: 0x00180A1B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleBeHitMapById.LogPair = null;
 			ConfigRoleBeHitMapById.HandleId = 0;
 		}
 
-		// Token: 0x0600334B RID: 13131 RVA: 0x0017B541 File Offset: 0x00179741
+		// Token: 0x060033F3 RID: 13299 RVA: 0x00182829 File Offset: 0x00180A29
 		public static void Init()
 		{
 			ConfigRoleBeHitMapById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleBeHitMapById.HandleId, "db_rolebehitmap.db", "select BinData from `RoleBeHitMap` where Id=?");
 		}
 
-		// Token: 0x0600334C RID: 13132 RVA: 0x0017B55C File Offset: 0x0017975C
+		// Token: 0x060033F4 RID: 13300 RVA: 0x00182844 File Offset: 0x00180A44
 		public static RoleBeHitMap? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleBeHitMapById.HandleId, ConfigRoleBeHitMapById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleBeHitMap?(rootAsRoleBeHitMap);
 		}
 
-		// Token: 0x04003BA5 RID: 15269
+		// Token: 0x04003C69 RID: 15465
 		private const string DB = "db_rolebehitmap.db";
 
-		// Token: 0x04003BA6 RID: 15270
+		// Token: 0x04003C6A RID: 15466
 		private const string FILE = "j.角色受击状态机.xlsx";
 
-		// Token: 0x04003BA7 RID: 15271
+		// Token: 0x04003C6B RID: 15467
 		private const string TABLE = "RoleBeHitMap";
 
-		// Token: 0x04003BA8 RID: 15272
+		// Token: 0x04003C6C RID: 15468
 		private const string COMMAND = "select BinData from `RoleBeHitMap` where Id=?";
 
-		// Token: 0x04003BA9 RID: 15273
+		// Token: 0x04003C6D RID: 15469
 		private const string KEY_PREFIX = "RoleBeHitMapById";
 
-		// Token: 0x04003BAA RID: 15274
+		// Token: 0x04003C6E RID: 15470
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003BAB RID: 15275
+		// Token: 0x04003C6F RID: 15471
 		private static int HandleId;
 	}
 }

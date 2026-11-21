@@ -9,33 +9,33 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200154F RID: 5455
+// Token: 0x02000A07 RID: 2567
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityFunctionalArea : UiPanelBase
 {
-	// Token: 0x17000D5E RID: 3422
-	// (get) Token: 0x06009BF5 RID: 39925 RVA: 0x0021C15A File Offset: 0x0021A35A
-	// (set) Token: 0x06009BF6 RID: 39926 RVA: 0x0021C162 File Offset: 0x0021A362
+	// Token: 0x17000D7F RID: 3455
+	// (get) Token: 0x06006FD3 RID: 28627 RVA: 0x00225F0A File Offset: 0x0022410A
+	// (set) Token: 0x06006FD4 RID: 28628 RVA: 0x00225F12 File Offset: 0x00224112
 	public ActivityButtonItem FunctionButton { get; set; }
 
-	// Token: 0x17000D5F RID: 3423
-	// (get) Token: 0x06009BF7 RID: 39927 RVA: 0x0021C16B File Offset: 0x0021A36B
-	// (set) Token: 0x06009BF8 RID: 39928 RVA: 0x0021C173 File Offset: 0x0021A373
+	// Token: 0x17000D80 RID: 3456
+	// (get) Token: 0x06006FD5 RID: 28629 RVA: 0x00225F1B File Offset: 0x0022411B
+	// (set) Token: 0x06006FD6 RID: 28630 RVA: 0x00225F23 File Offset: 0x00224123
 	public ButtonSpriteItem CircleButton { get; set; }
 
-	// Token: 0x17000D60 RID: 3424
-	// (get) Token: 0x06009BF9 RID: 39929 RVA: 0x0021C17C File Offset: 0x0021A37C
-	// (set) Token: 0x06009BFA RID: 39930 RVA: 0x0021C184 File Offset: 0x0021A384
+	// Token: 0x17000D81 RID: 3457
+	// (get) Token: 0x06006FD7 RID: 28631 RVA: 0x00225F2C File Offset: 0x0022412C
+	// (set) Token: 0x06006FD8 RID: 28632 RVA: 0x00225F34 File Offset: 0x00224134
 	public FunctionalPanelConditionLock PanelLock { get; set; }
 
-	// Token: 0x06009BFB RID: 39931 RVA: 0x0021C18D File Offset: 0x0021A38D
+	// Token: 0x06006FD9 RID: 28633 RVA: 0x00225F3D File Offset: 0x0022413D
 	public ActivityFunctionalArea(ActivityBaseData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06009BFC RID: 39932 RVA: 0x0021C19C File Offset: 0x0021A39C
+	// Token: 0x06006FDA RID: 28634 RVA: 0x00225F4C File Offset: 0x0022414C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -57,7 +57,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009BFD RID: 39933 RVA: 0x0021C28C File Offset: 0x0021A48C
+	// Token: 0x06006FDB RID: 28635 RVA: 0x0022603C File Offset: 0x0022423C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityFunctionalArea.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009BFE RID: 39934 RVA: 0x0021C2D0 File Offset: 0x0021A4D0
+	// Token: 0x06006FDC RID: 28636 RVA: 0x00226080 File Offset: 0x00224280
 	private UniTask CreatePanelLockAsync()
 	{
 		ActivityFunctionalArea.<CreatePanelLockAsync>d__17 <CreatePanelLockAsync>d__;
@@ -79,7 +79,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		return <CreatePanelLockAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009BFF RID: 39935 RVA: 0x0021C314 File Offset: 0x0021A514
+	// Token: 0x06006FDD RID: 28637 RVA: 0x002260C4 File Offset: 0x002242C4
 	private UniTask CreateCircleButtonAsync()
 	{
 		ActivityFunctionalArea.<CreateCircleButtonAsync>d__18 <CreateCircleButtonAsync>d__;
@@ -90,7 +90,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		return <CreateCircleButtonAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009C00 RID: 39936 RVA: 0x0021C358 File Offset: 0x0021A558
+	// Token: 0x06006FDE RID: 28638 RVA: 0x00226108 File Offset: 0x00224308
 	private UniTask CreateFunctionButtonAsync()
 	{
 		ActivityFunctionalArea.<CreateFunctionButtonAsync>d__19 <CreateFunctionButtonAsync>d__;
@@ -101,70 +101,70 @@ public class ActivityFunctionalArea : UiPanelBase
 		return <CreateFunctionButtonAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009C01 RID: 39937 RVA: 0x0021C39B File Offset: 0x0021A59B
+	// Token: 0x06006FDF RID: 28639 RVA: 0x0022614B File Offset: 0x0022434B
 	protected override void OnStart()
 	{
 		this.SetRewardRedDotVisible(false);
 	}
 
-	// Token: 0x06009C02 RID: 39938 RVA: 0x0021C3A4 File Offset: 0x0021A5A4
+	// Token: 0x06006FE0 RID: 28640 RVA: 0x00226154 File Offset: 0x00224354
 	[NullableContext(1)]
 	public void SetLockTextByTextId(string textId, params string[] args)
 	{
 		this.PanelLock.SetTextByTextId(textId, args);
 	}
 
-	// Token: 0x06009C03 RID: 39939 RVA: 0x0021C3B3 File Offset: 0x0021A5B3
+	// Token: 0x06006FE1 RID: 28641 RVA: 0x00226163 File Offset: 0x00224363
 	[NullableContext(1)]
 	public void SetLockTextByText(string text)
 	{
 		this.PanelLock.SetTextByText(text);
 	}
 
-	// Token: 0x06009C04 RID: 39940 RVA: 0x0021C3C1 File Offset: 0x0021A5C1
+	// Token: 0x06006FE2 RID: 28642 RVA: 0x00226171 File Offset: 0x00224371
 	public void SetLockSpriteVisible(bool bVisible)
 	{
 		this.PanelLock.SetSpriteVisible(bVisible);
 	}
 
-	// Token: 0x06009C05 RID: 39941 RVA: 0x0021C3CF File Offset: 0x0021A5CF
+	// Token: 0x06006FE3 RID: 28643 RVA: 0x0022617F File Offset: 0x0022437F
 	public void SetPanelConditionVisible(bool bVisible)
 	{
 		base.GetItem(0).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C06 RID: 39942 RVA: 0x0021C3DE File Offset: 0x0021A5DE
+	// Token: 0x06006FE4 RID: 28644 RVA: 0x0022618E File Offset: 0x0022438E
 	public void SetRewardButtonVisible(bool state)
 	{
 		base.GetItem(2).SetUIActive(state);
 	}
 
-	// Token: 0x06009C07 RID: 39943 RVA: 0x0021C3ED File Offset: 0x0021A5ED
+	// Token: 0x06006FE5 RID: 28645 RVA: 0x0022619D File Offset: 0x0022439D
 	[NullableContext(1)]
 	public void SetRewardButtonFunction(Action buttonFunction)
 	{
 		this.CircleButton.SetFunction(buttonFunction);
 	}
 
-	// Token: 0x06009C08 RID: 39944 RVA: 0x0021C3FB File Offset: 0x0021A5FB
+	// Token: 0x06006FE6 RID: 28646 RVA: 0x002261AB File Offset: 0x002243AB
 	public void SetRewardRedDotVisible(bool bVisible)
 	{
 		this.CircleButton.SetRedDotVisible(bVisible);
 	}
 
-	// Token: 0x06009C09 RID: 39945 RVA: 0x0021C409 File Offset: 0x0021A609
+	// Token: 0x06006FE7 RID: 28647 RVA: 0x002261B9 File Offset: 0x002243B9
 	public void BindRewardRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		this.CircleButton.BindRedDot(redDotName, uId);
 	}
 
-	// Token: 0x06009C0A RID: 39946 RVA: 0x0021C418 File Offset: 0x0021A618
+	// Token: 0x06006FE8 RID: 28648 RVA: 0x002261C8 File Offset: 0x002243C8
 	public void UnbindRewardRedDot()
 	{
 		this.CircleButton.UnBindRedDot();
 	}
 
-	// Token: 0x06009C0B RID: 39947 RVA: 0x0021C425 File Offset: 0x0021A625
+	// Token: 0x06006FE9 RID: 28649 RVA: 0x002261D5 File Offset: 0x002243D5
 	public void SetFunctionButtonVisible(bool bVisible)
 	{
 		ActivityButtonItem functionButton = this.FunctionButton;
@@ -175,27 +175,27 @@ public class ActivityFunctionalArea : UiPanelBase
 		functionButton.SetUiActive(bVisible);
 	}
 
-	// Token: 0x06009C0C RID: 39948 RVA: 0x0021C438 File Offset: 0x0021A638
+	// Token: 0x06006FEA RID: 28650 RVA: 0x002261E8 File Offset: 0x002243E8
 	[NullableContext(1)]
 	public void SetPanelTipByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), textId, args);
 	}
 
-	// Token: 0x06009C0D RID: 39949 RVA: 0x0021C44D File Offset: 0x0021A64D
+	// Token: 0x06006FEB RID: 28651 RVA: 0x002261FD File Offset: 0x002243FD
 	[NullableContext(1)]
 	public void SetPanelTipByText(string text)
 	{
 		base.GetText(5).SetText(text, true);
 	}
 
-	// Token: 0x06009C0E RID: 39950 RVA: 0x0021C45D File Offset: 0x0021A65D
+	// Token: 0x06006FEC RID: 28652 RVA: 0x0022620D File Offset: 0x0022440D
 	public void SetPanelTipVisible(bool bVisible)
 	{
 		base.GetItem(4).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C0F RID: 39951 RVA: 0x0021C46C File Offset: 0x0021A66C
+	// Token: 0x06006FED RID: 28653 RVA: 0x0022621C File Offset: 0x0022441C
 	public void RefreshGeneralPerformance(IActivityFunctionAreaParams @params = null)
 	{
 		if (this.Data == null)
@@ -253,7 +253,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		this.SetPerformanceConditionLock(this.Data.PreOpenConditionGroupId, this.Data.Id);
 	}
 
-	// Token: 0x06009C10 RID: 39952 RVA: 0x0021C5A0 File Offset: 0x0021A7A0
+	// Token: 0x06006FEE RID: 28654 RVA: 0x00226350 File Offset: 0x00224550
 	[NullableContext(1)]
 	public void SetGeneralUnlockPerformance(IActivityFunctionAreaParams @params)
 	{
@@ -279,7 +279,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		this.FunctionButton.SetUiActive(true);
 	}
 
-	// Token: 0x06009C11 RID: 39953 RVA: 0x0021C61A File Offset: 0x0021A81A
+	// Token: 0x06006FEF RID: 28655 RVA: 0x002263CA File Offset: 0x002245CA
 	public void SetPerformanceOpenTimeOver()
 	{
 		this.SetPanelConditionVisible(true);
@@ -289,7 +289,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		this.FunctionButton.SetUiActive(false);
 	}
 
-	// Token: 0x06009C12 RID: 39954 RVA: 0x0021C654 File Offset: 0x0021A854
+	// Token: 0x06006FF0 RID: 28656 RVA: 0x00226404 File Offset: 0x00224604
 	public void SetPerformanceConditionLock(int conditionGroupId, int activityId)
 	{
 		this.SetPanelConditionVisible(true);
@@ -305,7 +305,7 @@ public class ActivityFunctionalArea : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009C13 RID: 39955 RVA: 0x0021C6B0 File Offset: 0x0021A8B0
+	// Token: 0x06006FF1 RID: 28657 RVA: 0x00226460 File Offset: 0x00224660
 	public void OpenPreOpenRequestConfirmBox()
 	{
 		if (this.Data == null)
@@ -337,29 +337,29 @@ public class ActivityFunctionalArea : UiPanelBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x04004475 RID: 17525
+	// Token: 0x0400451B RID: 17691
 	protected readonly ActivityBaseData Data;
 
-	// Token: 0x02007B85 RID: 31621
+	// Token: 0x02006D10 RID: 27920
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040289B5 RID: 166325
+		// Token: 0x04023CF0 RID: 146672
 		public const int PanelCondition = 0;
 
-		// Token: 0x040289B6 RID: 166326
+		// Token: 0x04023CF1 RID: 146673
 		public const int ButtonFunction = 1;
 
-		// Token: 0x040289B7 RID: 166327
+		// Token: 0x04023CF2 RID: 146674
 		public const int PanelCircle = 2;
 
-		// Token: 0x040289B8 RID: 166328
+		// Token: 0x04023CF3 RID: 146675
 		public const int ButtonCircle = 3;
 
-		// Token: 0x040289B9 RID: 166329
+		// Token: 0x04023CF4 RID: 146676
 		public const int PanelTip = 4;
 
-		// Token: 0x040289BA RID: 166330
+		// Token: 0x04023CF5 RID: 146677
 		public const int TxtTip = 5;
 	}
 }

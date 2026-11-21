@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072D8 RID: 29400
+	// Token: 0x0200645A RID: 25690
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraAberrationView
 	{
-		// Token: 0x06048252 RID: 295506 RVA: 0x0128270C File Offset: 0x0128090C
+		// Token: 0x0603E666 RID: 255590 RVA: 0x01224EF4 File Offset: 0x012230F4
 		public CameraAberrationView Set(Vector basicLocation, float fadeInTime, float fadeOutTime, float sceneCameraFadeOutTime)
 		{
 			this.BasicLocation.DeepCopy(basicLocation);
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Camera
 			return this;
 		}
 
-		// Token: 0x06048253 RID: 295507 RVA: 0x0128275C File Offset: 0x0128095C
+		// Token: 0x0603E667 RID: 255591 RVA: 0x01224F44 File Offset: 0x01223144
 		[NullableContext(2)]
 		public unsafe void EnablePerspectiveToOrthographicView(BP_CineCamera_C camera, Action callback = null)
 		{
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Camera
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MotionBlur.TargetFPS 1200", null);
 		}
 
-		// Token: 0x06048254 RID: 295508 RVA: 0x0128289C File Offset: 0x01280A9C
+		// Token: 0x0603E668 RID: 255592 RVA: 0x01225084 File Offset: 0x01223284
 		[NullableContext(2)]
 		public unsafe void EnableOrthographicToPerspectiveToView(BP_CineCamera_C camera, Action callback = null)
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Camera
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MotionBlur.TargetFPS -1", null);
 		}
 
-		// Token: 0x06048255 RID: 295509 RVA: 0x012829DC File Offset: 0x01280BDC
+		// Token: 0x0603E669 RID: 255593 RVA: 0x012251C4 File Offset: 0x012233C4
 		public void Update(float second)
 		{
 			if (this.IsLerpPerspectiveToOrthographicView)
@@ -162,69 +162,69 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x04026123 RID: 155939
+		// Token: 0x04021406 RID: 136198
 		private const float DEFAULT_CAMERA_FOV = 75f;
 
-		// Token: 0x04026124 RID: 155940
+		// Token: 0x04021407 RID: 136199
 		private const float MINI_CAMERA_FOV = 15f;
 
-		// Token: 0x04026125 RID: 155941
+		// Token: 0x04021408 RID: 136200
 		[Nullable(2)]
 		public BP_CineCamera_C Camera;
 
-		// Token: 0x04026126 RID: 155942
+		// Token: 0x04021409 RID: 136201
 		public readonly Vector BasicLocation = Vector.Create();
 
-		// Token: 0x04026127 RID: 155943
+		// Token: 0x0402140A RID: 136202
 		public float FadeInTime;
 
-		// Token: 0x04026128 RID: 155944
+		// Token: 0x0402140B RID: 136203
 		public float FadeOutTime;
 
-		// Token: 0x04026129 RID: 155945
+		// Token: 0x0402140C RID: 136204
 		public float SceneCameraFadeOutTime;
 
-		// Token: 0x0402612A RID: 155946
+		// Token: 0x0402140D RID: 136205
 		private float InitialFov = 75f;
 
-		// Token: 0x0402612B RID: 155947
+		// Token: 0x0402140E RID: 136206
 		private bool IsLerpPerspectiveToOrthographicView;
 
-		// Token: 0x0402612C RID: 155948
+		// Token: 0x0402140F RID: 136207
 		private bool IsLerpOrthographicToPerspectiveView;
 
-		// Token: 0x0402612D RID: 155949
+		// Token: 0x04021410 RID: 136208
 		private readonly Vector LerpBeginCameraLocation = Vector.Create();
 
-		// Token: 0x0402612E RID: 155950
+		// Token: 0x04021411 RID: 136209
 		private float LerpBeginDistance;
 
-		// Token: 0x0402612F RID: 155951
+		// Token: 0x04021412 RID: 136210
 		private float LerpBeginFov = 75f;
 
-		// Token: 0x04026130 RID: 155952
+		// Token: 0x04021413 RID: 136211
 		private float LerpOrthoWidth;
 
-		// Token: 0x04026131 RID: 155953
+		// Token: 0x04021414 RID: 136212
 		private float LerpTime;
 
-		// Token: 0x04026132 RID: 155954
+		// Token: 0x04021415 RID: 136213
 		[Nullable(2)]
 		private Action LerpFinishCallback;
 
-		// Token: 0x04026133 RID: 155955
+		// Token: 0x04021416 RID: 136214
 		private bool TriggeredCallback;
 
-		// Token: 0x04026134 RID: 155956
+		// Token: 0x04021417 RID: 136215
 		private float LeaveTriggerTime;
 
-		// Token: 0x04026135 RID: 155957
+		// Token: 0x04021418 RID: 136216
 		private readonly Rotator TempRotator = Rotator.Create();
 
-		// Token: 0x04026136 RID: 155958
+		// Token: 0x04021419 RID: 136217
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04026137 RID: 155959
+		// Token: 0x0402141A RID: 136218
 		private readonly Vector TempVector2 = Vector.Create();
 	}
 }

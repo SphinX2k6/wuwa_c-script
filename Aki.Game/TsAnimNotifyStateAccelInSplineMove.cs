@@ -13,33 +13,29 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateAccelInSplineMove.TsAnimNotifyStateAccelInSplineMove_C")]
 public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06000F0E RID: 3854 RVA: 0x000575D0 File Offset: 0x000557D0
+	// Token: 0x06000F14 RID: 3860 RVA: 0x000584E4 File Offset: 0x000566E4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyTick(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateAccelInSplineMove) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyTick"), TsAnimNotifyStateAccelInSplineMove.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->FrameDeltaTime = frameDeltaTime;
+			return this.K2_NotifyTick_Implementation(meshComp, animation, frameDeltaTime);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->FrameDeltaTime = frameDeltaTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000F0F RID: 3855 RVA: 0x00057678 File Offset: 0x00055878
+	// Token: 0x06000F15 RID: 3861 RVA: 0x000585A4 File Offset: 0x000567A4
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyTick_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
@@ -121,32 +117,28 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		}
 	}
 
-	// Token: 0x06000F10 RID: 3856 RVA: 0x00057894 File Offset: 0x00055A94
+	// Token: 0x06000F16 RID: 3862 RVA: 0x000587C0 File Offset: 0x000569C0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateAccelInSplineMove) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateAccelInSplineMove.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06000F11 RID: 3857 RVA: 0x00057934 File Offset: 0x00055B34
+	// Token: 0x06000F17 RID: 3863 RVA: 0x00058878 File Offset: 0x00056A78
 	[NullableContext(1)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -162,7 +154,7 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		return true;
 	}
 
-	// Token: 0x06000F12 RID: 3858 RVA: 0x00057960 File Offset: 0x00055B60
+	// Token: 0x06000F18 RID: 3864 RVA: 0x000588A4 File Offset: 0x00056AA4
 	[NullableContext(1)]
 	private unsafe bool CalculateNewSpeed(Vector inOutSpeed, CharacterActorComponent actorComp, float frameDeltaTime, TsBaseCharacter owner)
 	{
@@ -205,7 +197,7 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		return true;
 	}
 
-	// Token: 0x06000F13 RID: 3859 RVA: 0x00057AFE File Offset: 0x00055CFE
+	// Token: 0x06000F19 RID: 3865 RVA: 0x00058A42 File Offset: 0x00056C42
 	private static void Initialize()
 	{
 		if (TsAnimNotifyStateAccelInSplineMove.CurrentSpeed != null)
@@ -216,7 +208,7 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		TsAnimNotifyStateAccelInSplineMove.TmpVector = Vector.Create();
 	}
 
-	// Token: 0x06000F14 RID: 3860 RVA: 0x00057B1C File Offset: 0x00055D1C
+	// Token: 0x06000F1A RID: 3866 RVA: 0x00058A60 File Offset: 0x00056C60
 	private void InitializeSelf()
 	{
 		if (this.AddSpeedMap != null)
@@ -226,7 +218,7 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		this.AddSpeedMap = new Dictionary<AActor, Vector>();
 	}
 
-	// Token: 0x06000F15 RID: 3861 RVA: 0x00057B32 File Offset: 0x00055D32
+	// Token: 0x06000F1B RID: 3867 RVA: 0x00058A76 File Offset: 0x00056C76
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateAccelInSplineMove._ClassPtr == IntPtr.Zero)
@@ -236,23 +228,23 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		return TsAnimNotifyStateAccelInSplineMove._ClassPtr;
 	}
 
-	// Token: 0x06000F16 RID: 3862 RVA: 0x00057B58 File Offset: 0x00055D58
+	// Token: 0x06000F1C RID: 3868 RVA: 0x00058A9C File Offset: 0x00056C9C
 	public TsAnimNotifyStateAccelInSplineMove() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateAccelInSplineMove.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000F17 RID: 3863 RVA: 0x00057B80 File Offset: 0x00055D80
+	// Token: 0x06000F1D RID: 3869 RVA: 0x00058AC4 File Offset: 0x00056CC4
 	[NullableContext(1)]
 	public TsAnimNotifyStateAccelInSplineMove(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateAccelInSplineMove.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000F18 RID: 3864 RVA: 0x00057BB3 File Offset: 0x00055DB3
+	// Token: 0x06000F1E RID: 3870 RVA: 0x00058AF7 File Offset: 0x00056CF7
 	protected TsAnimNotifyStateAccelInSplineMove(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000F19 RID: 3865 RVA: 0x00057BBC File Offset: 0x00055DBC
+	// Token: 0x06000F1F RID: 3871 RVA: 0x00058B00 File Offset: 0x00056D00
 	protected unsafe virtual void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -260,7 +252,7 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		__Params->__Result = this.K2_NotifyTick_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x06000F1A RID: 3866 RVA: 0x00057BF8 File Offset: 0x00055DF8
+	// Token: 0x06000F20 RID: 3872 RVA: 0x00058B3C File Offset: 0x00056D3C
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -268,17 +260,17 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000BF5 RID: 3061
+	// Token: 0x04000BFD RID: 3069
 	[Nullable(2)]
 	[StaticVariableRuleIgnore]
 	private static Vector CurrentSpeed;
 
-	// Token: 0x04000BF6 RID: 3062
+	// Token: 0x04000BFE RID: 3070
 	[Nullable(2)]
 	[StaticVariableRuleIgnore]
 	private static Vector TmpVector;
 
-	// Token: 0x04000BF7 RID: 3063
+	// Token: 0x04000BFF RID: 3071
 	[Nullable(new byte[]
 	{
 		2,
@@ -287,13 +279,13 @@ public class TsAnimNotifyStateAccelInSplineMove : TsAnimNotifyStateBase, IUnreal
 	})]
 	private Dictionary<AActor, Vector> AddSpeedMap;
 
-	// Token: 0x04000BF8 RID: 3064
+	// Token: 0x04000C00 RID: 3072
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateAccelInSplineMove.TsAnimNotifyStateAccelInSplineMove_C";
 
-	// Token: 0x04000BF9 RID: 3065
+	// Token: 0x04000C01 RID: 3073
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000BFA RID: 3066
+	// Token: 0x04000C02 RID: 3074
 	private static IntPtr _ClassDefaultObjectPtr;
 }

@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005881 RID: 22657
+	// Token: 0x02004859 RID: 18521
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonVictoryView : CommonResultView
 	{
-		// Token: 0x06039A92 RID: 236178 RVA: 0x00DB423F File Offset: 0x00DB243F
+		// Token: 0x0602E9B5 RID: 190901 RVA: 0x00D03153 File Offset: 0x00D01353
 		public InstanceDungeonVictoryView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17008A7D RID: 35453
-		// (get) Token: 0x06039A93 RID: 236179 RVA: 0x00DB4254 File Offset: 0x00DB2454
+		// Token: 0x17005E49 RID: 24137
+		// (get) Token: 0x0602E9B6 RID: 190902 RVA: 0x00D03168 File Offset: 0x00D01368
 		private InstanceDungeon? InstanceConfig
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A94 RID: 236180 RVA: 0x00DB4284 File Offset: 0x00DB2484
+		// Token: 0x0602E9B7 RID: 190903 RVA: 0x00D03198 File Offset: 0x00D01398
 		protected override void OnStart()
 		{
 			this.InstanceId = InstanceDungeonEntranceModel.Instance.InstanceId;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A95 RID: 236181 RVA: 0x00DB42DA File Offset: 0x00DB24DA
+		// Token: 0x0602E9B8 RID: 190904 RVA: 0x00D031EE File Offset: 0x00D013EE
 		private List<CommonResultButtonData> CreateInstanceDungeonCommonButtonData()
 		{
 			List<CommonResultButtonData> list = new List<CommonResultButtonData>(2);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return list;
 		}
 
-		// Token: 0x06039A96 RID: 236182 RVA: 0x00DB42FC File Offset: 0x00DB24FC
+		// Token: 0x0602E9B9 RID: 190905 RVA: 0x00D03210 File Offset: 0x00D01410
 		private CommonResultButtonData CreateFirstButtonData()
 		{
 			CommonResultButtonData commonResultButtonData = new CommonResultButtonData();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return commonResultButtonData;
 		}
 
-		// Token: 0x06039A97 RID: 236183 RVA: 0x00DB4327 File Offset: 0x00DB2527
+		// Token: 0x0602E9BA RID: 190906 RVA: 0x00D0323B File Offset: 0x00D0143B
 		private CommonResultButtonData CreateSecondButtonData()
 		{
 			CommonResultButtonData commonResultButtonData = new CommonResultButtonData();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return commonResultButtonData;
 		}
 
-		// Token: 0x06039A98 RID: 236184 RVA: 0x00DB4354 File Offset: 0x00DB2554
+		// Token: 0x0602E9BB RID: 190907 RVA: 0x00D03268 File Offset: 0x00D01468
 		private void UpdateButtonPowerTips(CommonResultButton button)
 		{
 			int? instancePowerCost = InstanceDungeonEntranceModel.Instance.GetInstancePowerCost(this.InstanceId);
@@ -118,52 +118,52 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			button.SetTipsItemTextColor(InstanceDungeonVictoryView.ConditionTextColorRed);
 		}
 
-		// Token: 0x06039A99 RID: 236185 RVA: 0x00DB43D8 File Offset: 0x00DB25D8
+		// Token: 0x0602E9BC RID: 190908 RVA: 0x00D032EC File Offset: 0x00D014EC
 		protected override void OnAfterShow()
 		{
 			this.UpdateView();
 		}
 
-		// Token: 0x06039A9A RID: 236186 RVA: 0x00DB43E0 File Offset: 0x00DB25E0
+		// Token: 0x0602E9BD RID: 190909 RVA: 0x00D032F4 File Offset: 0x00D014F4
 		protected override void OnBeforeDestroy()
 		{
 			ItemHintModel.Instance.CleanItemRewardList();
 			this.PlayerStateItemMap.Clear();
 		}
 
-		// Token: 0x06039A9B RID: 236187 RVA: 0x00DB43F7 File Offset: 0x00DB25F7
+		// Token: 0x0602E9BE RID: 190910 RVA: 0x00D0330B File Offset: 0x00D0150B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, EContinuingChallenge>(EEventName.PlayerChallengeStateChange, new Action<int, EContinuingChallenge>(this.OnlineTeamPlayerAccept));
 		}
 
-		// Token: 0x06039A9C RID: 236188 RVA: 0x00DB4415 File Offset: 0x00DB2615
+		// Token: 0x0602E9BF RID: 190911 RVA: 0x00D03329 File Offset: 0x00D01529
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, EContinuingChallenge>(EEventName.PlayerChallengeStateChange, new Action<int, EContinuingChallenge>(this.OnlineTeamPlayerAccept));
 		}
 
-		// Token: 0x06039A9D RID: 236189 RVA: 0x00DB4433 File Offset: 0x00DB2633
+		// Token: 0x0602E9C0 RID: 190912 RVA: 0x00D03347 File Offset: 0x00D01547
 		private void UpdateView()
 		{
 			this.UpdateRewardPreview();
 		}
 
-		// Token: 0x06039A9E RID: 236190 RVA: 0x00DB443C File Offset: 0x00DB263C
+		// Token: 0x0602E9C1 RID: 190913 RVA: 0x00D03350 File Offset: 0x00D01550
 		private void UpdateRewardPreview()
 		{
 			this.RewardItemList = InstanceDungeonEntranceModel.Instance.SettleRewardItemList;
 			this.RewardLayout.RebuildLayoutByDataNew<TItem>(this.RewardItemList, null);
 		}
 
-		// Token: 0x06039A9F RID: 236191 RVA: 0x00DB4474 File Offset: 0x00DB2674
+		// Token: 0x0602E9C2 RID: 190914 RVA: 0x00D03388 File Offset: 0x00D01588
 		protected override void SetupButtonFormat()
 		{
 			List<CommonResultButtonData> dataList = this.CreateInstanceDungeonCommonButtonData();
 			base.RefreshButtonList(dataList);
 		}
 
-		// Token: 0x06039AA0 RID: 236192 RVA: 0x00DB448F File Offset: 0x00DB268F
+		// Token: 0x0602E9C3 RID: 190915 RVA: 0x00D033A3 File Offset: 0x00D015A3
 		private void OnClickBtnLeave()
 		{
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().ContinueWith(delegate(bool _)
@@ -175,12 +175,12 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			});
 		}
 
-		// Token: 0x06039AA1 RID: 236193 RVA: 0x00DB44B0 File Offset: 0x00DB26B0
+		// Token: 0x0602E9C4 RID: 190916 RVA: 0x00D033C4 File Offset: 0x00D015C4
 		private void OnClickBtnAgain()
 		{
 			if (!GameModeModel.Instance.IsMulti)
 			{
-				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon().ContinueWith(delegate(bool _)
+				InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false).ContinueWith(delegate(bool _)
 				{
 					if (UiManager.Instance.IsViewShow(this.ViewInfo.Name))
 					{
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039AA2 RID: 236194 RVA: 0x00DB45C0 File Offset: 0x00DB27C0
+		// Token: 0x0602E9C5 RID: 190917 RVA: 0x00D034D8 File Offset: 0x00D016D8
 		private void UpdateOnlineTeamPlayer()
 		{
 			List<ScenePlayerData> allScenePlayers = CreatureModel.Instance.GetAllScenePlayers();
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039AA3 RID: 236195 RVA: 0x00DB46EC File Offset: 0x00DB28EC
+		// Token: 0x0602E9C6 RID: 190918 RVA: 0x00D03604 File Offset: 0x00D01804
 		private void SetTeamPlayerSprite(EContinuingChallenge state, UUISprite playerSprite)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(OnlineDefine.onlineContinuingChallengeIcon[state]);
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039AA4 RID: 236196 RVA: 0x00DB472C File Offset: 0x00DB292C
+		// Token: 0x0602E9C7 RID: 190919 RVA: 0x00D03644 File Offset: 0x00D01844
 		private void OnlineTeamPlayerAccept(int playerId, EContinuingChallenge state)
 		{
 			UUISprite playerSprite;
@@ -289,20 +289,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.SetTeamPlayerSprite(state, playerSprite);
 		}
 
-		// Token: 0x0401E217 RID: 123415
+		// Token: 0x04018CB4 RID: 101556
 		private int InstanceId;
 
-		// Token: 0x0401E218 RID: 123416
+		// Token: 0x04018CB5 RID: 101557
 		private readonly Dictionary<int, UUISprite> PlayerStateItemMap = new Dictionary<int, UUISprite>();
 
-		// Token: 0x0401E219 RID: 123417
+		// Token: 0x04018CB6 RID: 101558
 		[Nullable(2)]
 		private TItem[] RewardItemList;
 
-		// Token: 0x0401E21A RID: 123418
+		// Token: 0x04018CB7 RID: 101559
 		private static readonly FColor ConditionTextColorRed = new FColor(246, 93, 88, byte.MaxValue);
 
-		// Token: 0x0401E21B RID: 123419
+		// Token: 0x04018CB8 RID: 101560
 		private static readonly FColor ConditionTextColorWhite = new FColor(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue);
 	}
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020005BF RID: 1471
+	// Token: 0x020005AA RID: 1450
 	[NetMessage(EMessageId.FloroRanchPlayGachaResponse)]
 	public sealed class FloroRanchPlayGachaResponse : IMessage<FloroRanchPlayGachaResponse>, IMessage, IEquatable<FloroRanchPlayGachaResponse>, IDeepCloneable<FloroRanchPlayGachaResponse>, IBufferMessage
 	{
-		// Token: 0x060087E3 RID: 34787 RVA: 0x00146FA1 File Offset: 0x001451A1
+		// Token: 0x0600867B RID: 34427 RVA: 0x00144389 File Offset: 0x00142589
 		[NullableContext(1)]
 		public static FloroRanchPlayGachaResponse Create()
 		{
 			return new FloroRanchPlayGachaResponse();
 		}
 
-		// Token: 0x17001A98 RID: 6808
-		// (get) Token: 0x060087E4 RID: 34788 RVA: 0x00146FA8 File Offset: 0x001451A8
+		// Token: 0x17001A4B RID: 6731
+		// (get) Token: 0x0600867C RID: 34428 RVA: 0x00144390 File Offset: 0x00142590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A99 RID: 6809
-		// (get) Token: 0x060087E5 RID: 34789 RVA: 0x00146FAB File Offset: 0x001451AB
+		// Token: 0x17001A4C RID: 6732
+		// (get) Token: 0x0600867D RID: 34429 RVA: 0x00144393 File Offset: 0x00142593
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060087E6 RID: 34790 RVA: 0x00146FB2 File Offset: 0x001451B2
+		// Token: 0x0600867E RID: 34430 RVA: 0x0014439A File Offset: 0x0014259A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayGachaResponse()
 		{
 		}
 
-		// Token: 0x060087E7 RID: 34791 RVA: 0x00146FC8 File Offset: 0x001451C8
+		// Token: 0x0600867F RID: 34431 RVA: 0x001443B0 File Offset: 0x001425B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayGachaResponse(FloroRanchPlayGachaResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060087E8 RID: 34792 RVA: 0x00147025 File Offset: 0x00145225
+		// Token: 0x06008680 RID: 34432 RVA: 0x0014440D File Offset: 0x0014260D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayGachaResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new FloroRanchPlayGachaResponse(this);
 		}
 
-		// Token: 0x17001A9A RID: 6810
-		// (get) Token: 0x060087E9 RID: 34793 RVA: 0x0014702D File Offset: 0x0014522D
-		// (set) Token: 0x060087EA RID: 34794 RVA: 0x00147035 File Offset: 0x00145235
+		// Token: 0x17001A4D RID: 6733
+		// (get) Token: 0x06008681 RID: 34433 RVA: 0x00144415 File Offset: 0x00142615
+		// (set) Token: 0x06008682 RID: 34434 RVA: 0x0014441D File Offset: 0x0014261D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A9B RID: 6811
-		// (get) Token: 0x060087EB RID: 34795 RVA: 0x0014703E File Offset: 0x0014523E
-		// (set) Token: 0x060087EC RID: 34796 RVA: 0x00147046 File Offset: 0x00145246
+		// Token: 0x17001A4E RID: 6734
+		// (get) Token: 0x06008683 RID: 34435 RVA: 0x00144426 File Offset: 0x00142626
+		// (set) Token: 0x06008684 RID: 34436 RVA: 0x0014442E File Offset: 0x0014262E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayUnit Unit
@@ -103,8 +103,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A9C RID: 6812
-		// (get) Token: 0x060087ED RID: 34797 RVA: 0x0014704F File Offset: 0x0014524F
+		// Token: 0x17001A4F RID: 6735
+		// (get) Token: 0x06008685 RID: 34437 RVA: 0x00144437 File Offset: 0x00142637
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FloroRanchPlayUnit> GachaResult
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060087EE RID: 34798 RVA: 0x00147057 File Offset: 0x00145257
+		// Token: 0x06008686 RID: 34438 RVA: 0x0014443F File Offset: 0x0014263F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FloroRanchPlayGachaResponse);
 		}
 
-		// Token: 0x060087EF RID: 34799 RVA: 0x00147068 File Offset: 0x00145268
+		// Token: 0x06008687 RID: 34439 RVA: 0x00144450 File Offset: 0x00142650
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FloroRanchPlayGachaResponse other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && object.Equals(this.Unit, other.Unit) && this.gachaResult_.Equals(other.gachaResult_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060087F0 RID: 34800 RVA: 0x001470CC File Offset: 0x001452CC
+		// Token: 0x06008688 RID: 34440 RVA: 0x001444B4 File Offset: 0x001426B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060087F1 RID: 34801 RVA: 0x00147135 File Offset: 0x00145335
+		// Token: 0x06008689 RID: 34441 RVA: 0x0014451D File Offset: 0x0014271D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060087F2 RID: 34802 RVA: 0x00147142 File Offset: 0x00145342
+		// Token: 0x0600868A RID: 34442 RVA: 0x0014452A File Offset: 0x0014272A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,20 +169,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060087F3 RID: 34803 RVA: 0x0014714C File Offset: 0x0014534C
+		// Token: 0x0600868B RID: 34443 RVA: 0x00144534 File Offset: 0x00142734
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.gachaResult_.WriteTo(ref output, FloroRanchPlayGachaResponse._repeated_gachaResult_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(16);
 				output.WriteEnum((int)this.ErrorCode);
 			}
+			this.gachaResult_.WriteTo(ref output, FloroRanchPlayGachaResponse._repeated_gachaResult_codec);
 			if (this.unit_ != null)
 			{
-				output.WriteRawTag(98);
+				output.WriteRawTag(74);
 				output.WriteMessage(this.Unit);
 			}
 			if (this._unknownFields != null)
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060087F4 RID: 34804 RVA: 0x001471B8 File Offset: 0x001453B8
+		// Token: 0x0600868C RID: 34444 RVA: 0x001445A0 File Offset: 0x001427A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060087F5 RID: 34805 RVA: 0x00147224 File Offset: 0x00145424
+		// Token: 0x0600868D RID: 34445 RVA: 0x0014460C File Offset: 0x0014280C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FloroRanchPlayGachaResponse other)
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060087F6 RID: 34806 RVA: 0x0014729D File Offset: 0x0014549D
+		// Token: 0x0600868E RID: 34446 RVA: 0x00144685 File Offset: 0x00142885
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -246,7 +246,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060087F7 RID: 34807 RVA: 0x001472A8 File Offset: 0x001454A8
+		// Token: 0x0600868F RID: 34447 RVA: 0x00144690 File Offset: 0x00142890
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -258,11 +258,11 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 18U)
+				if (num != 16U)
 				{
-					if (num != 56U)
+					if (num != 34U)
 					{
-						if (num != 98U)
+						if (num != 74U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
@@ -277,38 +277,38 @@ namespace Aki.Protocol
 					}
 					else
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						this.gachaResult_.AddEntriesFrom(ref input, FloroRanchPlayGachaResponse._repeated_gachaResult_codec);
 					}
 				}
 				else
 				{
-					this.gachaResult_.AddEntriesFrom(ref input, FloroRanchPlayGachaResponse._repeated_gachaResult_codec);
+					this.ErrorCode = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x040042E7 RID: 17127
+		// Token: 0x040042DD RID: 17117
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040042E8 RID: 17128
-		public const int ErrorCodeFieldNumber = 7;
+		// Token: 0x040042DE RID: 17118
+		public const int ErrorCodeFieldNumber = 2;
 
-		// Token: 0x040042E9 RID: 17129
+		// Token: 0x040042DF RID: 17119
 		private ErrorCode errorCode_;
 
-		// Token: 0x040042EA RID: 17130
-		public const int UnitFieldNumber = 12;
+		// Token: 0x040042E0 RID: 17120
+		public const int UnitFieldNumber = 9;
 
-		// Token: 0x040042EB RID: 17131
+		// Token: 0x040042E1 RID: 17121
 		private FloroRanchPlayUnit unit_;
 
-		// Token: 0x040042EC RID: 17132
-		public const int GachaResultFieldNumber = 2;
+		// Token: 0x040042E2 RID: 17122
+		public const int GachaResultFieldNumber = 4;
 
-		// Token: 0x040042ED RID: 17133
-		private static readonly FieldCodec<FloroRanchPlayUnit> _repeated_gachaResult_codec = FieldCodec.ForMessage<FloroRanchPlayUnit>(18U, FloroRanchPlayUnit.Parser);
+		// Token: 0x040042E3 RID: 17123
+		private static readonly FieldCodec<FloroRanchPlayUnit> _repeated_gachaResult_codec = FieldCodec.ForMessage<FloroRanchPlayUnit>(34U, FloroRanchPlayUnit.Parser);
 
-		// Token: 0x040042EE RID: 17134
+		// Token: 0x040042E4 RID: 17124
 		private readonly RepeatedField<FloroRanchPlayUnit> gachaResult_ = new RepeatedField<FloroRanchPlayUnit>();
 	}
 }

@@ -10,19 +10,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 {
-	// Token: 0x02006A62 RID: 27234
+	// Token: 0x02005BBF RID: 23487
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeekTraceContentPanel : UiPanelBase
 	{
-		// Token: 0x06043B4A RID: 277322 RVA: 0x01092014 File Offset: 0x01090214
+		// Token: 0x06039B98 RID: 236440 RVA: 0x01036848 File Offset: 0x01034A48
 		public void SetItemCallback(Action onSelectedItem, Action onPlacedItem)
 		{
 			this.OnSelectedItem = onSelectedItem;
 			this.OnPlacedItem = onPlacedItem;
 		}
 
-		// Token: 0x06043B4B RID: 277323 RVA: 0x01092024 File Offset: 0x01090224
+		// Token: 0x06039B99 RID: 236441 RVA: 0x01036858 File Offset: 0x01034A58
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			};
 		}
 
-		// Token: 0x06043B4C RID: 277324 RVA: 0x0109218C File Offset: 0x0109038C
+		// Token: 0x06039B9A RID: 236442 RVA: 0x010369C0 File Offset: 0x01034BC0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SeekTraceContentPanel.<OnBeforeStartAsync>d__32 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043B4D RID: 277325 RVA: 0x010921D0 File Offset: 0x010903D0
+		// Token: 0x06039B9B RID: 236443 RVA: 0x01036A04 File Offset: 0x01034C04
 		protected override void OnStart()
 		{
 			int panelWidth = SeekTraceModel.Instance.PanelWidth;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.StartInitNiagara();
 		}
 
-		// Token: 0x06043B4E RID: 277326 RVA: 0x01092318 File Offset: 0x01090518
+		// Token: 0x06039B9C RID: 236444 RVA: 0x01036B4C File Offset: 0x01034D4C
 		private void StartInitNiagara()
 		{
 			Dictionary<int, ULGUINiagaraComponent> dictionary = new Dictionary<int, ULGUINiagaraComponent>();
@@ -135,13 +135,13 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B4F RID: 277327 RVA: 0x010924C4 File Offset: 0x010906C4
+		// Token: 0x06039B9D RID: 236445 RVA: 0x01036CF8 File Offset: 0x01034EF8
 		protected override void OnBeforeShow()
 		{
 			this.PlayOnceNiagara(12, 400, null, null);
 		}
 
-		// Token: 0x06043B50 RID: 277328 RVA: 0x010924D8 File Offset: 0x010906D8
+		// Token: 0x06039B9E RID: 236446 RVA: 0x01036D0C File Offset: 0x01034F0C
 		protected override void OnBeforeDestroy()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(7);
@@ -153,13 +153,13 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			draggable.OnPointerUpCallBack.Unbind();
 		}
 
-		// Token: 0x06043B51 RID: 277329 RVA: 0x0109252D File Offset: 0x0109072D
+		// Token: 0x06039B9F RID: 236447 RVA: 0x01036D61 File Offset: 0x01034F61
 		public void SetInteractEnable(bool enable)
 		{
 			this.IsInteractEnable = enable;
 		}
 
-		// Token: 0x06043B52 RID: 277330 RVA: 0x01092536 File Offset: 0x01090736
+		// Token: 0x06039BA0 RID: 236448 RVA: 0x01036D6A File Offset: 0x01034F6A
 		public void ResetView()
 		{
 			this.RefreshDragView(false);
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			});
 		}
 
-		// Token: 0x06043B53 RID: 277331 RVA: 0x01092564 File Offset: 0x01090764
+		// Token: 0x06039BA1 RID: 236449 RVA: 0x01036D98 File Offset: 0x01034F98
 		public void OnInputControllerChange()
 		{
 			if (SeekTraceModel.Instance.SelectedItem != null)
@@ -186,13 +186,13 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.InitSelectFrame();
 		}
 
-		// Token: 0x06043B54 RID: 277332 RVA: 0x01092589 File Offset: 0x01090789
+		// Token: 0x06039BA2 RID: 236450 RVA: 0x01036DBD File Offset: 0x01034FBD
 		public void OnSeekTraceSucceed()
 		{
 			this.PlayOnceNiagara(14, 400, null, null);
 		}
 
-		// Token: 0x06043B55 RID: 277333 RVA: 0x0109259C File Offset: 0x0109079C
+		// Token: 0x06039BA3 RID: 236451 RVA: 0x01036DD0 File Offset: 0x01034FD0
 		private void InitSelectFrame()
 		{
 			bool flag = Info.Instance.IsInTouch();
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.UpdateSelectFrameByPosition(0, 0);
 		}
 
-		// Token: 0x06043B56 RID: 277334 RVA: 0x01092630 File Offset: 0x01090830
+		// Token: 0x06039BA4 RID: 236452 RVA: 0x01036E64 File Offset: 0x01035064
 		public void UpdateKeyBoardSelectFrame()
 		{
 			if (!Info.Instance.IsInKeyBoard())
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.UpdateSelectFrameByPosition(num, num2);
 		}
 
-		// Token: 0x06043B57 RID: 277335 RVA: 0x010926F4 File Offset: 0x010908F4
+		// Token: 0x06039BA5 RID: 236453 RVA: 0x01036F28 File Offset: 0x01035128
 		private void UpdateSelectFrameByPosition(int positionX, int positionY)
 		{
 			if (positionX == this.LastFramePosition[0] && positionY == this.LastFramePosition[1])
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			base.GetItem(11).SetAnchorOffset(tempVector2D.ToUeVector2D(false));
 		}
 
-		// Token: 0x06043B58 RID: 277336 RVA: 0x0109279D File Offset: 0x0109099D
+		// Token: 0x06039BA6 RID: 236454 RVA: 0x01036FD1 File Offset: 0x010351D1
 		private void ResetSelectFrame()
 		{
 			if (!this.IsOpenSelectFrame)
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.FrameSequencePlayer.PlaySequencePurely("Move", false, false);
 		}
 
-		// Token: 0x06043B59 RID: 277337 RVA: 0x010927D4 File Offset: 0x010909D4
+		// Token: 0x06039BA7 RID: 236455 RVA: 0x01037008 File Offset: 0x01035208
 		private void OnFrameSequenceEnd(string sequenceName)
 		{
 			if (sequenceName == "Move")
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B5A RID: 277338 RVA: 0x010927EC File Offset: 0x010909EC
+		// Token: 0x06039BA8 RID: 236456 RVA: 0x01037020 File Offset: 0x01035220
 		[NullableContext(2)]
 		private void OnPointerBegin(ULGUIPointerEventData eventData)
 		{
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			onSelectedItem();
 		}
 
-		// Token: 0x06043B5B RID: 277339 RVA: 0x01092934 File Offset: 0x01090B34
+		// Token: 0x06039BA9 RID: 236457 RVA: 0x01037168 File Offset: 0x01035368
 		[NullableContext(2)]
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
@@ -373,14 +373,14 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.RefreshDragPositionByPointer(tempVector2D, false);
 		}
 
-		// Token: 0x06043B5C RID: 277340 RVA: 0x010929D0 File Offset: 0x01090BD0
+		// Token: 0x06039BAA RID: 236458 RVA: 0x01037204 File Offset: 0x01035404
 		[NullableContext(2)]
 		private void OnPointerEnd(ULGUIPointerEventData eventData)
 		{
 			this.PlaceItem(false, false);
 		}
 
-		// Token: 0x06043B5D RID: 277341 RVA: 0x010929DC File Offset: 0x01090BDC
+		// Token: 0x06039BAB RID: 236459 RVA: 0x01037210 File Offset: 0x01035410
 		public void GamePadMovePosition(int offsetX, int offsetY)
 		{
 			SeekTraceModel instance = SeekTraceModel.Instance;
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.UpdateGamePadPosition(positionX, positionY);
 		}
 
-		// Token: 0x06043B5E RID: 277342 RVA: 0x01092A24 File Offset: 0x01090C24
+		// Token: 0x06039BAC RID: 236460 RVA: 0x01037258 File Offset: 0x01035458
 		private void UpdateGamePadPosition(int positionX, int positionY)
 		{
 			int[] gamePadPosition = this.GamePadPosition;
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B5F RID: 277343 RVA: 0x01092A50 File Offset: 0x01090C50
+		// Token: 0x06039BAD RID: 236461 RVA: 0x01037284 File Offset: 0x01035484
 		private void MoveGamePadSelectedItem()
 		{
 			if (SeekTraceModel.Instance.SelectedItem == null)
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.RefreshContentView();
 		}
 
-		// Token: 0x06043B60 RID: 277344 RVA: 0x01092B04 File Offset: 0x01090D04
+		// Token: 0x06039BAE RID: 236462 RVA: 0x01037338 File Offset: 0x01035538
 		public void GamePadSelectItem()
 		{
 			if (!this.IsInteractEnable)
@@ -460,13 +460,13 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			onSelectedItem();
 		}
 
-		// Token: 0x06043B61 RID: 277345 RVA: 0x01092BC0 File Offset: 0x01090DC0
+		// Token: 0x06039BAF RID: 236463 RVA: 0x010373F4 File Offset: 0x010355F4
 		public void GamePadResetItem()
 		{
 			this.PlaceItem(true, true);
 		}
 
-		// Token: 0x06043B62 RID: 277346 RVA: 0x01092BCC File Offset: 0x01090DCC
+		// Token: 0x06039BB0 RID: 236464 RVA: 0x01037400 File Offset: 0x01035600
 		private void PlaceItem(bool resetToStart, bool isGamePad)
 		{
 			SeekTraceItemData selectedItem = SeekTraceModel.Instance.SelectedItem;
@@ -522,7 +522,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			onPlacedItem();
 		}
 
-		// Token: 0x06043B63 RID: 277347 RVA: 0x01092D0C File Offset: 0x01090F0C
+		// Token: 0x06039BB1 RID: 236465 RVA: 0x01037540 File Offset: 0x01035740
 		private void RefreshDragView(bool enable)
 		{
 			if (enable)
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B64 RID: 277348 RVA: 0x01092DB4 File Offset: 0x01090FB4
+		// Token: 0x06039BB2 RID: 236466 RVA: 0x010375E8 File Offset: 0x010357E8
 		private void RefreshDragPositionByPointer(Vector2D pointerPosition, bool playSelectSequence)
 		{
 			pointerPosition.AdditionEqual(this.SelectUiOffset);
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			base.GetItem(8).SetAnchorOffset(pointerPosition.ToUeVector2D(false));
 		}
 
-		// Token: 0x06043B65 RID: 277349 RVA: 0x01092ED4 File Offset: 0x010910D4
+		// Token: 0x06039BB3 RID: 236467 RVA: 0x01037708 File Offset: 0x01035908
 		private void RefreshContentView()
 		{
 			this.RefreshContentData();
@@ -585,7 +585,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			stateLayout.RefreshByData(this.ContentGridStateList, null, false);
 		}
 
-		// Token: 0x06043B66 RID: 277350 RVA: 0x01092F48 File Offset: 0x01091148
+		// Token: 0x06039BB4 RID: 236468 RVA: 0x0103777C File Offset: 0x0103597C
 		private void RefreshContentData()
 		{
 			List<ESeekTraceGridStateViewType> contentGridStateList = this.ContentGridStateList;
@@ -795,19 +795,19 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B67 RID: 277351 RVA: 0x010934E8 File Offset: 0x010916E8
+		// Token: 0x06039BB5 RID: 236469 RVA: 0x01037D1C File Offset: 0x01035F1C
 		private SeekTraceGridStateView InitStateItem()
 		{
 			return new SeekTraceGridStateView();
 		}
 
-		// Token: 0x06043B68 RID: 277352 RVA: 0x010934EF File Offset: 0x010916EF
+		// Token: 0x06039BB6 RID: 236470 RVA: 0x01037D23 File Offset: 0x01035F23
 		private SeekTraceGridBackgroundView InitBackgroundItem()
 		{
 			return new SeekTraceGridBackgroundView();
 		}
 
-		// Token: 0x06043B69 RID: 277353 RVA: 0x010934F8 File Offset: 0x010916F8
+		// Token: 0x06039BB7 RID: 236471 RVA: 0x01037D2C File Offset: 0x01035F2C
 		[NullableContext(2)]
 		private void PlayOnceNiagara(int type, int duration, Action onStart = null, TTimerAction onFinish = null)
 		{
@@ -826,7 +826,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			});
 		}
 
-		// Token: 0x06043B6A RID: 277354 RVA: 0x01093544 File Offset: 0x01091744
+		// Token: 0x06039BB8 RID: 236472 RVA: 0x01037D78 File Offset: 0x01035F78
 		private void StartOnceNiagara(int type, Action onStart)
 		{
 			if (type != 12 && type != 13 && type != 14)
@@ -856,34 +856,34 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			onStart();
 		}
 
-		// Token: 0x040235E6 RID: 144870
+		// Token: 0x0401E7D8 RID: 124888
 		public const int DEFAULT_GRID_SIZE = 5;
 
-		// Token: 0x040235E7 RID: 144871
+		// Token: 0x0401E7D9 RID: 124889
 		public const int NIAGARA_DURATION = 400;
 
-		// Token: 0x040235E8 RID: 144872
+		// Token: 0x0401E7DA RID: 124890
 		private readonly List<ESeekTraceGridStateViewType> ContentGridStateList = new List<ESeekTraceGridStateViewType>();
 
-		// Token: 0x040235E9 RID: 144873
+		// Token: 0x0401E7DB RID: 124891
 		private readonly TArray<int> ContentEffectList = new TArray<int>();
 
-		// Token: 0x040235EA RID: 144874
+		// Token: 0x0401E7DC RID: 124892
 		private readonly TArray<int> ContentEffectStateList = new TArray<int>();
 
-		// Token: 0x040235EB RID: 144875
+		// Token: 0x0401E7DD RID: 124893
 		private readonly TArray<int> DragEffectList = new TArray<int>();
 
-		// Token: 0x040235EC RID: 144876
+		// Token: 0x0401E7DE RID: 124894
 		private readonly TArray<int> EffectEmptyList = new TArray<int>();
 
-		// Token: 0x040235ED RID: 144877
+		// Token: 0x0401E7DF RID: 124895
 		private readonly FName GridArrayName = new FName("GridArray");
 
-		// Token: 0x040235EE RID: 144878
+		// Token: 0x0401E7E0 RID: 124896
 		private readonly FName StateArrayName = new FName("StateArray");
 
-		// Token: 0x040235EF RID: 144879
+		// Token: 0x0401E7E1 RID: 124897
 		[Nullable(new byte[]
 		{
 			2,
@@ -891,7 +891,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 		})]
 		private GenericLayout<SeekTraceGridBackgroundView, bool> BackgroundLayout;
 
-		// Token: 0x040235F0 RID: 144880
+		// Token: 0x0401E7E2 RID: 124898
 		[Nullable(new byte[]
 		{
 			2,
@@ -899,21 +899,21 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 		})]
 		private GenericLayout<SeekTraceGridStateView, ESeekTraceGridStateViewType> StateLayout;
 
-		// Token: 0x040235F1 RID: 144881
+		// Token: 0x0401E7E3 RID: 124899
 		private readonly int[] ContentNiagaraKeys = new int[]
 		{
 			5,
 			6
 		};
 
-		// Token: 0x040235F2 RID: 144882
+		// Token: 0x0401E7E4 RID: 124900
 		private readonly int[] DragNiagaraKeys = new int[]
 		{
 			9,
 			10
 		};
 
-		// Token: 0x040235F3 RID: 144883
+		// Token: 0x0401E7E5 RID: 124901
 		private readonly int[] InitNiagaraKeys = new int[]
 		{
 			5,
@@ -922,91 +922,91 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			10
 		};
 
-		// Token: 0x040235F4 RID: 144884
+		// Token: 0x0401E7E6 RID: 124902
 		private bool IsInteractEnable;
 
-		// Token: 0x040235F5 RID: 144885
+		// Token: 0x0401E7E7 RID: 124903
 		private double PositionOffset = 1.0;
 
-		// Token: 0x040235F6 RID: 144886
+		// Token: 0x0401E7E8 RID: 124904
 		private double TopLeftToCenterOffset;
 
-		// Token: 0x040235F7 RID: 144887
+		// Token: 0x0401E7E9 RID: 124905
 		private double CellSize = 1.0;
 
-		// Token: 0x040235F8 RID: 144888
+		// Token: 0x0401E7EA RID: 124906
 		private bool IsOpenSelectFrame;
 
-		// Token: 0x040235F9 RID: 144889
+		// Token: 0x0401E7EB RID: 124907
 		private int[] LastFramePosition = new int[]
 		{
 			-1,
 			-1
 		};
 
-		// Token: 0x040235FA RID: 144890
+		// Token: 0x0401E7EC RID: 124908
 		[Nullable(2)]
 		private UiSequencePlayer FrameSequencePlayer;
 
-		// Token: 0x040235FB RID: 144891
+		// Token: 0x0401E7ED RID: 124909
 		private readonly Vector2D TempVector2D = Vector2D.Create();
 
-		// Token: 0x040235FC RID: 144892
+		// Token: 0x0401E7EE RID: 124910
 		private readonly int[] TempPosition = new int[2];
 
-		// Token: 0x040235FD RID: 144893
+		// Token: 0x0401E7EF RID: 124911
 		private readonly int[] SelectPositionOffset = new int[2];
 
-		// Token: 0x040235FE RID: 144894
+		// Token: 0x0401E7F0 RID: 124912
 		private readonly int[] ClickStartPosition = new int[2];
 
-		// Token: 0x040235FF RID: 144895
+		// Token: 0x0401E7F1 RID: 124913
 		private readonly int[] GamePadPosition = new int[2];
 
-		// Token: 0x04023600 RID: 144896
+		// Token: 0x0401E7F2 RID: 124914
 		private readonly Vector2D SelectUiOffset = Vector2D.Create();
 
-		// Token: 0x04023601 RID: 144897
+		// Token: 0x0401E7F3 RID: 124915
 		[Nullable(2)]
 		private Action OnSelectedItem;
 
-		// Token: 0x04023602 RID: 144898
+		// Token: 0x0401E7F4 RID: 124916
 		[Nullable(2)]
 		private Action OnPlacedItem;
 
-		// Token: 0x0200CB80 RID: 52096
+		// Token: 0x0200B75F RID: 46943
 		[NullableContext(0)]
 		public enum EComponentType
 		{
-			// Token: 0x0403D6FA RID: 251642
+			// Token: 0x04038ADC RID: 232156
 			BackgroundGridLayout,
-			// Token: 0x0403D6FB RID: 251643
+			// Token: 0x04038ADD RID: 232157
 			BackgroundItem,
-			// Token: 0x0403D6FC RID: 251644
+			// Token: 0x04038ADE RID: 232158
 			StateGridLayout,
-			// Token: 0x0403D6FD RID: 251645
+			// Token: 0x04038ADF RID: 232159
 			StateGridItem,
-			// Token: 0x0403D6FE RID: 251646
+			// Token: 0x04038AE0 RID: 232160
 			ContentItem,
-			// Token: 0x0403D6FF RID: 251647
+			// Token: 0x04038AE1 RID: 232161
 			ContentSphereNiagara,
-			// Token: 0x0403D700 RID: 251648
+			// Token: 0x04038AE2 RID: 232162
 			ContentIconNiagara,
-			// Token: 0x0403D701 RID: 251649
+			// Token: 0x04038AE3 RID: 232163
 			DragComponent,
-			// Token: 0x0403D702 RID: 251650
+			// Token: 0x04038AE4 RID: 232164
 			DragItem,
-			// Token: 0x0403D703 RID: 251651
+			// Token: 0x04038AE5 RID: 232165
 			DragSphereNiagara,
-			// Token: 0x0403D704 RID: 251652
+			// Token: 0x04038AE6 RID: 232166
 			DragIconNiagara,
-			// Token: 0x0403D705 RID: 251653
+			// Token: 0x04038AE7 RID: 232167
 			SelectFrameItem,
-			// Token: 0x0403D706 RID: 251654
+			// Token: 0x04038AE8 RID: 232168
 			StartNiagara,
-			// Token: 0x0403D707 RID: 251655
+			// Token: 0x04038AE9 RID: 232169
 			ResetNiagara,
-			// Token: 0x0403D708 RID: 251656
+			// Token: 0x04038AEA RID: 232170
 			SucceedNiagara
 		}
 	}

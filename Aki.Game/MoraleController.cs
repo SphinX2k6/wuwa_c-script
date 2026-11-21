@@ -8,13 +8,13 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200221E RID: 8734
+// Token: 0x02001702 RID: 5890
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class MoraleController : UiControllerBase
 {
-	// Token: 0x0601108F RID: 69775 RVA: 0x00426F9C File Offset: 0x0042519C
+	// Token: 0x0600E525 RID: 58661 RVA: 0x00433B2C File Offset: 0x00431D2C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemNotify, new Action<IReadOnlyList<IProto_NormalItem>>(this.EventOnAddCommonItemNotify));
@@ -26,7 +26,7 @@ public class MoraleController : UiControllerBase
 		EventSystem.Instance.Add<int>(EEventName.OpenTreasureBox, new Action<int>(this.EventOpenTreasureBox));
 	}
 
-	// Token: 0x06011090 RID: 69776 RVA: 0x00427070 File Offset: 0x00425270
+	// Token: 0x0600E526 RID: 58662 RVA: 0x00433C00 File Offset: 0x00431E00
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemNotify, new Action<IReadOnlyList<IProto_NormalItem>>(this.EventOnAddCommonItemNotify));
@@ -38,7 +38,7 @@ public class MoraleController : UiControllerBase
 		EventSystem.Instance.Remove<int>(EEventName.OpenTreasureBox, new Action<int>(this.EventOpenTreasureBox));
 	}
 
-	// Token: 0x06011091 RID: 69777 RVA: 0x00427144 File Offset: 0x00425344
+	// Token: 0x0600E527 RID: 58663 RVA: 0x00433CD4 File Offset: 0x00431ED4
 	public UniTask RequestProgressReward(int[] ids)
 	{
 		MoraleController.<RequestProgressReward>d__3 <RequestProgressReward>d__;
@@ -49,7 +49,7 @@ public class MoraleController : UiControllerBase
 		return <RequestProgressReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011092 RID: 69778 RVA: 0x00427188 File Offset: 0x00425388
+	// Token: 0x0600E528 RID: 58664 RVA: 0x00433D18 File Offset: 0x00431F18
 	public UniTask RequestGetPlayerMoraleAreaId()
 	{
 		MoraleController.<RequestGetPlayerMoraleAreaId>d__4 <RequestGetPlayerMoraleAreaId>d__;
@@ -59,7 +59,7 @@ public class MoraleController : UiControllerBase
 		return <RequestGetPlayerMoraleAreaId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011093 RID: 69779 RVA: 0x004271C4 File Offset: 0x004253C4
+	// Token: 0x0600E529 RID: 58665 RVA: 0x00433D54 File Offset: 0x00431F54
 	public UniTask RequestGetExplorerBoxTrackList(int areaId)
 	{
 		MoraleController.<RequestGetExplorerBoxTrackList>d__5 <RequestGetExplorerBoxTrackList>d__;
@@ -70,7 +70,7 @@ public class MoraleController : UiControllerBase
 		return <RequestGetExplorerBoxTrackList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011094 RID: 69780 RVA: 0x00427207 File Offset: 0x00425407
+	// Token: 0x0600E52A RID: 58666 RVA: 0x00433D97 File Offset: 0x00431F97
 	private void EventOnMoraleActiveChanged(bool active)
 	{
 		if (active)
@@ -84,7 +84,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011095 RID: 69781 RVA: 0x0042721C File Offset: 0x0042541C
+	// Token: 0x0600E52B RID: 58667 RVA: 0x00433DAC File Offset: 0x00431FAC
 	private void EventOnMoraleSumLevelChanged(int oldLevel, int newLevel, int oldTemp, int newTemp)
 	{
 		if (oldLevel != newLevel)
@@ -112,7 +112,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011096 RID: 69782 RVA: 0x0042726C File Offset: 0x0042546C
+	// Token: 0x0600E52C RID: 58668 RVA: 0x00433DFC File Offset: 0x00431FFC
 	private void EventOnAddCommonItemNotify(IReadOnlyList<IProto_NormalItem> commonItemList)
 	{
 		IProto_NormalItem proto_NormalItem = null;
@@ -132,7 +132,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011097 RID: 69783 RVA: 0x004272D3 File Offset: 0x004254D3
+	// Token: 0x0600E52D RID: 58669 RVA: 0x00433E63 File Offset: 0x00432063
 	private void EventOnCommonItemCountRefresh(IProto_NormalItem item, int count, int lastCount)
 	{
 		MoraleModel instance = MoraleModel.Instance;
@@ -142,7 +142,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011098 RID: 69784 RVA: 0x00427307 File Offset: 0x00425507
+	// Token: 0x0600E52E RID: 58670 RVA: 0x00433E97 File Offset: 0x00432097
 	private void EventCommonItemFinished()
 	{
 		MoraleModel instance = MoraleModel.Instance;
@@ -152,7 +152,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011099 RID: 69785 RVA: 0x00427328 File Offset: 0x00425528
+	// Token: 0x0600E52F RID: 58671 RVA: 0x00433EB8 File Offset: 0x004320B8
 	private void EventOnShowMoraleBuffTips(int entityId, GameplayCue cue, bool isAdd, int handleId)
 	{
 		if (!isAdd || cue.Parameters(0) != "0")
@@ -172,7 +172,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601109A RID: 69786 RVA: 0x00427388 File Offset: 0x00425588
+	// Token: 0x0600E530 RID: 58672 RVA: 0x00433F18 File Offset: 0x00432118
 	private void EventOpenTreasureBox(int entityId)
 	{
 		MoraleModel instance = MoraleModel.Instance;
@@ -183,8 +183,8 @@ public class MoraleController : UiControllerBase
 		instance.CheckExplorerBoxOpen(entityId);
 	}
 
-	// Token: 0x170015A9 RID: 5545
-	// (get) Token: 0x0601109B RID: 69787 RVA: 0x0042739A File Offset: 0x0042559A
+	// Token: 0x170015E0 RID: 5600
+	// (get) Token: 0x0600E531 RID: 58673 RVA: 0x00433F2A File Offset: 0x0043212A
 	public static MoraleController Instance
 	{
 		get
@@ -193,7 +193,7 @@ public class MoraleController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601109C RID: 69788 RVA: 0x004273A1 File Offset: 0x004255A1
+	// Token: 0x0600E532 RID: 58674 RVA: 0x00433F31 File Offset: 0x00432131
 	public static MoraleController GetOrCreateInstance()
 	{
 		if (MoraleController._Instance == null)
@@ -203,7 +203,7 @@ public class MoraleController : UiControllerBase
 		return MoraleController._Instance;
 	}
 
-	// Token: 0x0601109D RID: 69789 RVA: 0x004273B5 File Offset: 0x004255B5
+	// Token: 0x0600E533 RID: 58675 RVA: 0x00433F45 File Offset: 0x00432145
 	public static bool CreateInstance()
 	{
 		if (MoraleController._Instance != null)
@@ -214,27 +214,27 @@ public class MoraleController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601109E RID: 69790 RVA: 0x004273CB File Offset: 0x004255CB
+	// Token: 0x0600E534 RID: 58676 RVA: 0x00433F5B File Offset: 0x0043215B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601109F RID: 69791 RVA: 0x004273CD File Offset: 0x004255CD
+	// Token: 0x0600E535 RID: 58677 RVA: 0x00433F5D File Offset: 0x0043215D
 	public static void ResetStaticDefaultValue()
 	{
 		MoraleController._Instance = null;
 	}
 
-	// Token: 0x060110A0 RID: 69792 RVA: 0x004273D5 File Offset: 0x004255D5
+	// Token: 0x0600E536 RID: 58678 RVA: 0x00433F65 File Offset: 0x00432165
 	static MoraleController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoraleController.CreateStaticDefaultValue), new Action(MoraleController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400819F RID: 33183
+	// Token: 0x040082DD RID: 33501
 	private const string MORALE_CHARACTER_BUFF_TIPS_PARAM = "0";
 
-	// Token: 0x040081A0 RID: 33184
+	// Token: 0x040082DE RID: 33502
 	[Nullable(2)]
 	private static MoraleController _Instance;
 }

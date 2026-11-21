@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010DC RID: 4316
+	// Token: 0x02001212 RID: 4626
 	public struct SpeakerChange : IFlatbufferObject
 	{
-		// Token: 0x170037BC RID: 14268
-		// (get) Token: 0x0600D7B3 RID: 55219 RVA: 0x0031D8F1 File Offset: 0x0031BAF1
+		// Token: 0x17003B12 RID: 15122
+		// (get) Token: 0x0600E4FE RID: 58622 RVA: 0x00348F65 File Offset: 0x00347165
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7B4 RID: 55220 RVA: 0x0031D8FE File Offset: 0x0031BAFE
+		// Token: 0x0600E4FF RID: 58623 RVA: 0x00348F72 File Offset: 0x00347172
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D7B5 RID: 55221 RVA: 0x0031D908 File Offset: 0x0031BB08
+		// Token: 0x0600E500 RID: 58624 RVA: 0x00348F7C File Offset: 0x0034717C
 		public static SpeakerChange GetRootAsSpeakerChange(ByteBuffer _bb)
 		{
 			return SpeakerChange.GetRootAsSpeakerChange(_bb, default(SpeakerChange));
 		}
 
-		// Token: 0x0600D7B6 RID: 55222 RVA: 0x0031D924 File Offset: 0x0031BB24
+		// Token: 0x0600E501 RID: 58625 RVA: 0x00348F98 File Offset: 0x00347198
 		public static SpeakerChange GetRootAsSpeakerChange(ByteBuffer _bb, SpeakerChange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D7B7 RID: 55223 RVA: 0x0031D941 File Offset: 0x0031BB41
+		// Token: 0x0600E502 RID: 58626 RVA: 0x00348FB5 File Offset: 0x003471B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D7B8 RID: 55224 RVA: 0x0031D950 File Offset: 0x0031BB50
+		// Token: 0x0600E503 RID: 58627 RVA: 0x00348FC4 File Offset: 0x003471C4
 		public SpeakerChange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170037BD RID: 14269
-		// (get) Token: 0x0600D7B9 RID: 55225 RVA: 0x0031D960 File Offset: 0x0031BB60
+		// Token: 0x17003B13 RID: 15123
+		// (get) Token: 0x0600E504 RID: 58628 RVA: 0x00348FD4 File Offset: 0x003471D4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037BE RID: 14270
-		// (get) Token: 0x0600D7BA RID: 55226 RVA: 0x0031D99C File Offset: 0x0031BB9C
+		// Token: 0x17003B14 RID: 15124
+		// (get) Token: 0x0600E505 RID: 58629 RVA: 0x00349010 File Offset: 0x00347210
 		public int PartnerBefore
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037BF RID: 14271
-		// (get) Token: 0x0600D7BB RID: 55227 RVA: 0x0031D9D8 File Offset: 0x0031BBD8
+		// Token: 0x17003B15 RID: 15125
+		// (get) Token: 0x0600E506 RID: 58630 RVA: 0x0034904C File Offset: 0x0034724C
 		public int ImageId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037C0 RID: 14272
-		// (get) Token: 0x0600D7BC RID: 55228 RVA: 0x0031DA14 File Offset: 0x0031BC14
+		// Token: 0x17003B16 RID: 15126
+		// (get) Token: 0x0600E507 RID: 58631 RVA: 0x00349088 File Offset: 0x00347288
 		public int SpeakerBefore
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400520F RID: 21007
+		// Token: 0x04005852 RID: 22610
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001135 RID: 4405
+	// Token: 0x0200126B RID: 4715
 	public struct ToughCalcRatio : IFlatbufferObject
 	{
-		// Token: 0x17003AA1 RID: 15009
-		// (get) Token: 0x0600DF5F RID: 57183 RVA: 0x0032F060 File Offset: 0x0032D260
+		// Token: 0x17003E05 RID: 15877
+		// (get) Token: 0x0600ECCD RID: 60621 RVA: 0x0035A5D8 File Offset: 0x003587D8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DF60 RID: 57184 RVA: 0x0032F06D File Offset: 0x0032D26D
+		// Token: 0x0600ECCE RID: 60622 RVA: 0x0035A5E5 File Offset: 0x003587E5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DF61 RID: 57185 RVA: 0x0032F074 File Offset: 0x0032D274
+		// Token: 0x0600ECCF RID: 60623 RVA: 0x0035A5EC File Offset: 0x003587EC
 		public static ToughCalcRatio GetRootAsToughCalcRatio(ByteBuffer _bb)
 		{
 			return ToughCalcRatio.GetRootAsToughCalcRatio(_bb, default(ToughCalcRatio));
 		}
 
-		// Token: 0x0600DF62 RID: 57186 RVA: 0x0032F090 File Offset: 0x0032D290
+		// Token: 0x0600ECD0 RID: 60624 RVA: 0x0035A608 File Offset: 0x00358808
 		public static ToughCalcRatio GetRootAsToughCalcRatio(ByteBuffer _bb, ToughCalcRatio obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DF63 RID: 57187 RVA: 0x0032F0AD File Offset: 0x0032D2AD
+		// Token: 0x0600ECD1 RID: 60625 RVA: 0x0035A625 File Offset: 0x00358825
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DF64 RID: 57188 RVA: 0x0032F0BC File Offset: 0x0032D2BC
+		// Token: 0x0600ECD2 RID: 60626 RVA: 0x0035A634 File Offset: 0x00358834
 		public ToughCalcRatio __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003AA2 RID: 15010
-		// (get) Token: 0x0600DF65 RID: 57189 RVA: 0x0032F0CC File Offset: 0x0032D2CC
+		// Token: 0x17003E06 RID: 15878
+		// (get) Token: 0x0600ECD3 RID: 60627 RVA: 0x0035A644 File Offset: 0x00358844
 		public long Id
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003AA3 RID: 15011
-		// (get) Token: 0x0600DF66 RID: 57190 RVA: 0x0032F114 File Offset: 0x0032D314
+		// Token: 0x17003E07 RID: 15879
+		// (get) Token: 0x0600ECD4 RID: 60628 RVA: 0x0035A68C File Offset: 0x0035888C
 		public int RatioNormal
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003AA4 RID: 15012
-		// (get) Token: 0x0600DF67 RID: 57191 RVA: 0x0032F150 File Offset: 0x0032D350
+		// Token: 0x17003E08 RID: 15880
+		// (get) Token: 0x0600ECD5 RID: 60629 RVA: 0x0035A6C8 File Offset: 0x003588C8
 		public int RatioSpecial
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005276 RID: 21110
+		// Token: 0x040058B9 RID: 22713
 		private Table __p;
 	}
 }

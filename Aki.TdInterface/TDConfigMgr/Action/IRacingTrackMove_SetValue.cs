@@ -2,31 +2,31 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D85 RID: 7557
+	// Token: 0x02001F96 RID: 8086
 	public class IRacingTrackMove_SetValue
 	{
-		// Token: 0x04006159 RID: 24921
+		// Token: 0x040066D5 RID: 26325
 		public ESplineMovePattern Type;
 
-		// Token: 0x0400615A RID: 24922
+		// Token: 0x040066D6 RID: 26326
 		public float? MaxOffsetDistance;
 
-		// Token: 0x0400615B RID: 24923
+		// Token: 0x040066D7 RID: 26327
 		public bool? IsOneWay;
 
-		// Token: 0x0400615C RID: 24924
+		// Token: 0x040066D8 RID: 26328
 		public float? LayerVerticalLimit;
 
-		// Token: 0x0400615D RID: 24925
+		// Token: 0x040066D9 RID: 26329
 		public bool? DynamicGravity;
 
-		// Token: 0x0400615E RID: 24926
+		// Token: 0x040066DA RID: 26330
 		public float? GravitySwitchAngularVelocity;
 
-		// Token: 0x0400615F RID: 24927
+		// Token: 0x040066DB RID: 26331
 		public int? AutoExitDistance;
 
-		// Token: 0x04006160 RID: 24928
+		// Token: 0x040066DC RID: 26332
 		public float DirectionAngleLimit;
 	}
 }

@@ -6,29 +6,29 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BB9 RID: 7097
+	// Token: 0x020004E3 RID: 1251
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroSequencePerformanceManager")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public class UKuroSequencePerformanceManager : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B28B RID: 111243 RVA: 0x00280596 File Offset: 0x0027E796
+		// Token: 0x0600760A RID: 30218 RVA: 0x000AC7DD File Offset: 0x000AA9DD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroSequencePerformanceManager._ClassPtr;
 		}
 
-		// Token: 0x0601B28C RID: 111244 RVA: 0x002805A4 File Offset: 0x0027E7A4
+		// Token: 0x0600760B RID: 30219 RVA: 0x000AC7EC File Offset: 0x000AA9EC
 		public UKuroSequencePerformanceManager() : this(BuiltinUtils.AllocNativeUObject(UKuroSequencePerformanceManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B28D RID: 111245 RVA: 0x002805CC File Offset: 0x0027E7CC
+		// Token: 0x0600760C RID: 30220 RVA: 0x000AC814 File Offset: 0x000AAA14
 		[NullableContext(1)]
 		public UKuroSequencePerformanceManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroSequencePerformanceManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601B28E RID: 111246 RVA: 0x00280600 File Offset: 0x0027E800
+		// Token: 0x0600760D RID: 30221 RVA: 0x000AC848 File Offset: 0x000AAA48
 		[NullableContext(1)]
 		public unsafe static void SimpleExecuteCommand(string Command)
 		{
@@ -37,51 +37,51 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601B28F RID: 111247
+		// Token: 0x0600760E RID: 30222
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetPerformanceMode(EKuroPerformanceMode CurrentPerformanceMode);
 
-		// Token: 0x0601B290 RID: 111248 RVA: 0x00280624 File Offset: 0x0027E824
+		// Token: 0x0600760F RID: 30223 RVA: 0x000AC86C File Offset: 0x000AAA6C
 		[NullableContext(2)]
 		public static void OpenKuroPerformanceModeInPhotographModel(UKuroSequenceConsoleCommandDataAsset PhotographModelDA)
 		{
 			UKuroSequencePerformanceManager.__OpenKuroPerformanceModeInPhotographModel_Internal((PhotographModelDA != null) ? PhotographModelDA.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601B291 RID: 111249 RVA: 0x0028063B File Offset: 0x0027E83B
+		// Token: 0x06007610 RID: 30224 RVA: 0x000AC883 File Offset: 0x000AAA83
 		public void OpenKuroPerformanceModeInEditor()
 		{
 			UKuroSequencePerformanceManager.__OpenKuroPerformanceModeInEditor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B292 RID: 111250 RVA: 0x00280648 File Offset: 0x0027E848
+		// Token: 0x06007611 RID: 30225 RVA: 0x000AC890 File Offset: 0x000AAA90
 		[NullableContext(2)]
 		public static void OpenKuroPerformanceMode(ULevelSequence Sequence)
 		{
 			UKuroSequencePerformanceManager.__OpenKuroPerformanceMode_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601B293 RID: 111251
+		// Token: 0x06007612 RID: 30226
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsLowMemoryDeviceInPerformance();
 
-		// Token: 0x0601B294 RID: 111252
+		// Token: 0x06007613 RID: 30227
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern long GetTotalPhysicalMemoryInPerformance();
 
-		// Token: 0x0601B295 RID: 111253
+		// Token: 0x06007614 RID: 30228
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool GetShadowUpdateCVar();
 
-		// Token: 0x0601B296 RID: 111254
+		// Token: 0x06007615 RID: 30229
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern TEnumAsByte<EKuroPerformanceMode> GetPerformanceMode();
 
-		// Token: 0x0601B297 RID: 111255
+		// Token: 0x06007616 RID: 30230
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int GetCurrentFrameTime();
 
-		// Token: 0x0601B298 RID: 111256 RVA: 0x00280660 File Offset: 0x0027E860
+		// Token: 0x06007617 RID: 30231 RVA: 0x000AC8A8 File Offset: 0x000AAAA8
 		[NullableContext(1)]
 		public unsafe static void ExecuteCommandInPerformance(string Command)
 		{
@@ -90,7 +90,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x0601B299 RID: 111257 RVA: 0x00280684 File Offset: 0x0027E884
+		// Token: 0x06007618 RID: 30232 RVA: 0x000AC8CC File Offset: 0x000AAACC
 		public static void EditPerformanceConfiguration([Nullable(new byte[]
 		{
 			2,
@@ -100,78 +100,67 @@ namespace UnrealEngine
 			UKuroSequencePerformanceManager.__EditPerformanceConfiguration_Internal((CmdArray ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x0601B29A RID: 111258 RVA: 0x0028069A File Offset: 0x0027E89A
+		// Token: 0x06007619 RID: 30233 RVA: 0x000AC8E2 File Offset: 0x000AAAE2
 		public void CloseKuroPerformanceModeInEditor()
 		{
 			UKuroSequencePerformanceManager.__CloseKuroPerformanceModeInEditor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B29B RID: 111259
+		// Token: 0x0600761A RID: 30234
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void CloseKuroPerformanceMode();
 
-		// Token: 0x0601B29C RID: 111260 RVA: 0x002806A7 File Offset: 0x0027E8A7
-		[NullableContext(2)]
-		public static void ApplyVolumetricFogHighQualityMode(UObject WorldContextObject, UExponentialHeightFogComponent HeightFog)
-		{
-			UKuroSequencePerformanceManager.__ApplyVolumetricFogHighQualityMode_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, (HeightFog != null) ? HeightFog.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x0601B29D RID: 111261
+		// Token: 0x0600761B RID: 30235
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void AlwaysTriggered();
 
-		// Token: 0x0601B29E RID: 111262
+		// Token: 0x0600761C RID: 30236
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SimpleExecuteCommand_Internal(in FString Command);
 
-		// Token: 0x0601B29F RID: 111263
+		// Token: 0x0600761D RID: 30237
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OpenKuroPerformanceModeInPhotographModel_Internal(IntPtr PhotographModelDA);
 
-		// Token: 0x0601B2A0 RID: 111264
+		// Token: 0x0600761E RID: 30238
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OpenKuroPerformanceModeInEditor_Internal(IntPtr @this);
 
-		// Token: 0x0601B2A1 RID: 111265
+		// Token: 0x0600761F RID: 30239
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OpenKuroPerformanceMode_Internal(IntPtr Sequence);
 
-		// Token: 0x0601B2A2 RID: 111266
+		// Token: 0x06007620 RID: 30240
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ExecuteCommandInPerformance_Internal(in FString Command);
 
-		// Token: 0x0601B2A3 RID: 111267
+		// Token: 0x06007621 RID: 30241
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __EditPerformanceConfiguration_Internal(IntPtr CmdArray);
 
-		// Token: 0x0601B2A4 RID: 111268
+		// Token: 0x06007622 RID: 30242
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CloseKuroPerformanceModeInEditor_Internal(IntPtr @this);
 
-		// Token: 0x0601B2A5 RID: 111269
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ApplyVolumetricFogHighQualityMode_Internal(IntPtr WorldContextObject, IntPtr HeightFog);
-
-		// Token: 0x0601B2A6 RID: 111270 RVA: 0x002806CE File Offset: 0x0027E8CE
+		// Token: 0x06007623 RID: 30243 RVA: 0x000AC8EF File Offset: 0x000AAAEF
 		static UKuroSequencePerformanceManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroSequencePerformanceManager");
 		}
 
-		// Token: 0x0601B2A7 RID: 111271 RVA: 0x002806DC File Offset: 0x0027E8DC
+		// Token: 0x06007624 RID: 30244 RVA: 0x000AC8FD File Offset: 0x000AAAFD
 		protected UKuroSequencePerformanceManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EA07 RID: 59911
+		// Token: 0x040031CA RID: 12746
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroSequencePerformanceManager";
 
-		// Token: 0x0400EA08 RID: 59912
+		// Token: 0x040031CB RID: 12747
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EA09 RID: 59913
+		// Token: 0x040031CC RID: 12748
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

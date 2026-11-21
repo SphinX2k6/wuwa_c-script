@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025B9 RID: 9657
+	// Token: 0x02002868 RID: 10344
 	public class ChangeBehaviorState : ActionParams
 	{
-		// Token: 0x0600D93F RID: 55615 RVA: 0x00206995 File Offset: 0x00204B95
-		[NullableContext(1)]
+		// Token: 0x0600E6B9 RID: 59065 RVA: 0x00222669 File Offset: 0x00220869
 		public static ChangeBehaviorState Create(IChangeBehaviorState? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F8F RID: 16271
-		// (get) Token: 0x0600D940 RID: 55616 RVA: 0x002069B4 File Offset: 0x00204BB4
+		// Token: 0x17004297 RID: 17047
+		// (get) Token: 0x0600E6BA RID: 59066 RVA: 0x00222688 File Offset: 0x00220888
 		public virtual int StateId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F90 RID: 16272
-		// (get) Token: 0x0600D941 RID: 55617 RVA: 0x002069C1 File Offset: 0x00204BC1
+		// Token: 0x17004298 RID: 17048
+		// (get) Token: 0x0600E6BB RID: 59067 RVA: 0x00222695 File Offset: 0x00220895
 		public virtual bool IsInstant
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078AD RID: 30893
+		// Token: 0x04007F14 RID: 32532
 		private IChangeBehaviorState Instance;
 	}
 }

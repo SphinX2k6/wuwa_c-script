@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 {
-	// Token: 0x0200528E RID: 21134
+	// Token: 0x0200425E RID: 16990
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpponentFunctionalProxy : OpponentFunctionAreaProxy
 	{
-		// Token: 0x17008280 RID: 33408
-		// (get) Token: 0x0603608F RID: 221327 RVA: 0x00CC9A46 File Offset: 0x00CC7C46
-		// (set) Token: 0x06036090 RID: 221328 RVA: 0x00CC9A53 File Offset: 0x00CC7C53
+		// Token: 0x17005640 RID: 22080
+		// (get) Token: 0x0602AF8A RID: 176010 RVA: 0x00C1714A File Offset: 0x00C1534A
+		// (set) Token: 0x0602AF8B RID: 176011 RVA: 0x00C17157 File Offset: 0x00C15357
 		public new PhantomArenaAreaFunctionalItem AreaItem
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			}
 		}
 
-		// Token: 0x17008281 RID: 33409
-		// (get) Token: 0x06036091 RID: 221329 RVA: 0x00CC9A5C File Offset: 0x00CC7C5C
+		// Token: 0x17005641 RID: 22081
+		// (get) Token: 0x0602AF8C RID: 176012 RVA: 0x00C17160 File Offset: 0x00C15360
 		public override bool IsMonster
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			}
 		}
 
-		// Token: 0x17008282 RID: 33410
-		// (get) Token: 0x06036092 RID: 221330 RVA: 0x00CC9A5F File Offset: 0x00CC7C5F
+		// Token: 0x17005642 RID: 22082
+		// (get) Token: 0x0602AF8D RID: 176013 RVA: 0x00C17163 File Offset: 0x00C15363
 		public override bool IsNeedPreload
 		{
 			get
@@ -48,18 +48,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			}
 		}
 
-		// Token: 0x06036093 RID: 221331 RVA: 0x00CC9A62 File Offset: 0x00CC7C62
+		// Token: 0x0602AF8E RID: 176014 RVA: 0x00C17166 File Offset: 0x00C15366
 		public OpponentFunctionalProxy(int index, OpponentFunctionArea area) : base(index, area)
 		{
 		}
 
-		// Token: 0x06036094 RID: 221332 RVA: 0x00CC9A6C File Offset: 0x00CC7C6C
+		// Token: 0x0602AF8F RID: 176015 RVA: 0x00C17170 File Offset: 0x00C15370
 		protected override UUIItem GetCardAttachItem()
 		{
 			return this.AreaItem.GetRootItem();
 		}
 
-		// Token: 0x06036095 RID: 221333 RVA: 0x00CC9A7C File Offset: 0x00CC7C7C
+		// Token: 0x0602AF90 RID: 176016 RVA: 0x00C17180 File Offset: 0x00C15380
 		public UniTask UseCardSkill(PhantomCardData cardData)
 		{
 			OpponentFunctionalProxy.<UseCardSkill>d__9 <UseCardSkill>d__;

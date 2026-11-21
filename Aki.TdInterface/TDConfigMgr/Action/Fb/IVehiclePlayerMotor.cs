@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029C9 RID: 10697
+	// Token: 0x02002CB6 RID: 11446
 	public class IVehiclePlayerMotor : ITargetVehicle
 	{
-		// Token: 0x0600EC72 RID: 60530 RVA: 0x0022867A File Offset: 0x0022687A
-		[NullableContext(1)]
+		// Token: 0x0600FB09 RID: 64265 RVA: 0x00245FFE File Offset: 0x002441FE
 		public static IVehiclePlayerMotor Create(IVehiclePlayerMotor? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AA2 RID: 19106
-		// (get) Token: 0x0600EC73 RID: 60531 RVA: 0x00228699 File Offset: 0x00226899
+		// Token: 0x17004E4B RID: 20043
+		// (get) Token: 0x0600FB0A RID: 64266 RVA: 0x0024601D File Offset: 0x0024421D
 		public override ETargetVehicle Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AA3 RID: 19107
-		// (get) Token: 0x0600EC74 RID: 60532 RVA: 0x002286A8 File Offset: 0x002268A8
+		// Token: 0x17004E4C RID: 20044
+		// (get) Token: 0x0600FB0B RID: 64267 RVA: 0x0024602C File Offset: 0x0024422C
 		public virtual int? SummonPositionEntityId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008229 RID: 33321
+		// Token: 0x0400891A RID: 35098
 		private IVehiclePlayerMotor Instance;
 	}
 }

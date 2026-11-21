@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018A4 RID: 6308
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A2F RID: 6703
 	public class IClientEnableAllPlayerOperation : ClientSetPlayerOperationRestriction
 	{
-		// Token: 0x06008771 RID: 34673 RVA: 0x00141160 File Offset: 0x0013F360
+		// Token: 0x06008E99 RID: 36505 RVA: 0x00150994 File Offset: 0x0014EB94
 		private IClientEnableAllPlayerOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008772 RID: 34674 RVA: 0x00141198 File Offset: 0x0013F398
+		// Token: 0x06008E9A RID: 36506 RVA: 0x001509CC File Offset: 0x0014EBCC
 		public static IClientEnableAllPlayerOperation Create([Nullable(2)] IClientEnableAllPlayerOperation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008773 RID: 34675 RVA: 0x001411AB File Offset: 0x0013F3AB
+		// Token: 0x06008E9B RID: 36507 RVA: 0x001509DF File Offset: 0x0014EBDF
 		public static IClientEnableAllPlayerOperation CreateFromSetValue([Nullable(2)] IClientEnableAllPlayerOperation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008774 RID: 34676 RVA: 0x001411BE File Offset: 0x0013F3BE
+		// Token: 0x06008E9C RID: 36508 RVA: 0x001509F2 File Offset: 0x0014EBF2
 		public new IClientEnableAllPlayerOperation_SetValue ToSetValue()
 		{
 			return new IClientEnableAllPlayerOperation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C17 RID: 11287
-		// (get) Token: 0x06008775 RID: 34677 RVA: 0x001411D1 File Offset: 0x0013F3D1
-		// (set) Token: 0x06008776 RID: 34678 RVA: 0x001411FC File Offset: 0x0013F3FC
+		// Token: 0x17002E12 RID: 11794
+		// (get) Token: 0x06008E9D RID: 36509 RVA: 0x00150A05 File Offset: 0x0014EC05
+		// (set) Token: 0x06008E9E RID: 36510 RVA: 0x00150A30 File Offset: 0x0014EC30
 		public override EPlayerOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400553E RID: 21822
+		// Token: 0x0400598B RID: 22923
 		[Nullable(2)]
 		protected new IClientEnableAllPlayerOperation FbInstance;
 
-		// Token: 0x0400553F RID: 21823
+		// Token: 0x0400598C RID: 22924
 		[Nullable(2)]
 		protected new IClientEnableAllPlayerOperation_SetValue PocoInterface;
 	}

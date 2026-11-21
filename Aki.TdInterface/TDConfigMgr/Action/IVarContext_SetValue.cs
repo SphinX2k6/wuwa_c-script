@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200202E RID: 8238
+	// Token: 0x02002277 RID: 8823
 	public class IVarContext_SetValue
 	{
-		// Token: 0x04006D05 RID: 27909
+		// Token: 0x0400730E RID: 29454
 		public EVarContext Type;
 	}
 }

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CDE RID: 19678
+	// Token: 0x02003C90 RID: 15504
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttributeSlotDynItem : UiPanelBase, IDynamicScrollBaseItem<IAttributeInfo>
 	{
-		// Token: 0x06032CBC RID: 208060 RVA: 0x00BD5FCC File Offset: 0x00BD41CC
+		// Token: 0x06027A91 RID: 162449 RVA: 0x00B1B6D4 File Offset: 0x00B198D4
 		public FVector2D GetItemSize(IAttributeInfo data)
 		{
 			if (this.ItemSizeVector == null)
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return this.ItemSizeVector.ToUeVector2D(false);
 		}
 
-		// Token: 0x06032CBD RID: 208061 RVA: 0x00BD6018 File Offset: 0x00BD4218
+		// Token: 0x06027A92 RID: 162450 RVA: 0x00B1B720 File Offset: 0x00B19920
 		public UniTask Init(UUIItem actor)
 		{
 			AttributeSlotDynItem.<Init>d__2 <Init>d__;
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.RoleUi
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CBE RID: 208062 RVA: 0x00BD6063 File Offset: 0x00BD4263
+		// Token: 0x06027A93 RID: 162451 RVA: 0x00B1B76B File Offset: 0x00B1996B
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401B0AA RID: 110762
+		// Token: 0x04015A2E RID: 88622
 		[Nullable(2)]
 		private Vector2D ItemSizeVector;
 	}

@@ -5,10 +5,28 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions
 {
-	// Token: 0x02006E15 RID: 28181
-	public class GuaranteeActionRestorePlayerCameraAdjustment : GuaranteeActionBase
+	// Token: 0x02005F95 RID: 24469
+	public class GuaranteeActionRestorePlayerCameraAdjustment : GuaranteeActionBase, IGuaranteeActionComparer
 	{
-		// Token: 0x06044B70 RID: 281456 RVA: 0x010F5B60 File Offset: 0x010F3D60
+		// Token: 0x0603ACD7 RID: 240855 RVA: 0x0109FF94 File Offset: 0x0109E194
+		[NullableContext(2)]
+		public bool IsSameAction(ActionParams left, ActionParams right)
+		{
+			RestorePlayerCameraAdjustment restorePlayerCameraAdjustment = left as RestorePlayerCameraAdjustment;
+			if (restorePlayerCameraAdjustment != null)
+			{
+				RestorePlayerCameraAdjustment restorePlayerCameraAdjustment2 = right as RestorePlayerCameraAdjustment;
+				if (restorePlayerCameraAdjustment2 != null)
+				{
+					string a = StringUtils.IsNothing(restorePlayerCameraAdjustment.SubScreenKey ?? string.Empty) ? "MainCamera" : restorePlayerCameraAdjustment.SubScreenKey;
+					string b = StringUtils.IsNothing(restorePlayerCameraAdjustment2.SubScreenKey ?? string.Empty) ? "MainCamera" : restorePlayerCameraAdjustment2.SubScreenKey;
+					return a == b;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x0603ACD8 RID: 240856 RVA: 0x010A0004 File Offset: 0x0109E204
 		[NullableContext(2)]
 		protected unsafe override void OnExecute(ActionParams inParams = null)
 		{

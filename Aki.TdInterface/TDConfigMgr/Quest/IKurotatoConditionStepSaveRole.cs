@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FE1 RID: 4065
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200110D RID: 4365
 	public class IKurotatoConditionStepSaveRole : IKurotatoConditionStepBase
 	{
-		// Token: 0x06005A84 RID: 23172 RVA: 0x000DBE20 File Offset: 0x000DA020
+		// Token: 0x06006064 RID: 24676 RVA: 0x000E8A60 File Offset: 0x000E6C60
 		private IKurotatoConditionStepSaveRole_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A85 RID: 23173 RVA: 0x000DBE58 File Offset: 0x000DA058
+		// Token: 0x06006065 RID: 24677 RVA: 0x000E8A98 File Offset: 0x000E6C98
 		public static IKurotatoConditionStepSaveRole Create([Nullable(2)] IKurotatoConditionStepSaveRole instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A86 RID: 23174 RVA: 0x000DBE6B File Offset: 0x000DA06B
+		// Token: 0x06006066 RID: 24678 RVA: 0x000E8AAB File Offset: 0x000E6CAB
 		public static IKurotatoConditionStepSaveRole CreateFromSetValue([Nullable(2)] IKurotatoConditionStepSaveRole_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A87 RID: 23175 RVA: 0x000DBE7E File Offset: 0x000DA07E
+		// Token: 0x06006067 RID: 24679 RVA: 0x000E8ABE File Offset: 0x000E6CBE
 		public new IKurotatoConditionStepSaveRole_SetValue ToSetValue()
 		{
 			return new IKurotatoConditionStepSaveRole_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DF2 RID: 7666
-		// (get) Token: 0x06005A88 RID: 23176 RVA: 0x000DBE91 File Offset: 0x000DA091
-		// (set) Token: 0x06005A89 RID: 23177 RVA: 0x000DBEBC File Offset: 0x000DA0BC
+		// Token: 0x17001F9B RID: 8091
+		// (get) Token: 0x06006068 RID: 24680 RVA: 0x000E8AD1 File Offset: 0x000E6CD1
+		// (set) Token: 0x06006069 RID: 24681 RVA: 0x000E8AFC File Offset: 0x000E6CFC
 		public override EKurotatoConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003683 RID: 13955
+		// Token: 0x040039BB RID: 14779
 		[Nullable(2)]
 		protected new IKurotatoConditionStepSaveRole FbInstance;
 
-		// Token: 0x04003684 RID: 13956
+		// Token: 0x040039BC RID: 14780
 		[Nullable(2)]
 		protected new IKurotatoConditionStepSaveRole_SetValue PocoInterface;
 	}

@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 {
-	// Token: 0x02004D5B RID: 19803
+	// Token: 0x02003D24 RID: 15652
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopData
 	{
-		// Token: 0x060332B7 RID: 209591 RVA: 0x00BEF830 File Offset: 0x00BEDA30
+		// Token: 0x06028121 RID: 164129 RVA: 0x00B38964 File Offset: 0x00B36B64
 		public RoleDevelopData(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x060332B8 RID: 209592 RVA: 0x00BEF83F File Offset: 0x00BEDA3F
+		// Token: 0x06028122 RID: 164130 RVA: 0x00B38973 File Offset: 0x00B36B73
 		public int GetId()
 		{
 			return this.Id;
 		}
 
-		// Token: 0x060332B9 RID: 209593 RVA: 0x00BEF848 File Offset: 0x00BEDA48
+		// Token: 0x06028123 RID: 164131 RVA: 0x00B3897C File Offset: 0x00B36B7C
 		public RoleDevelopRoleBaseData GetDevelopRoleData()
 		{
 			bool flag = RoleDevelopUtil.IsProspectRole(this.Id);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return this.DevelopRoleData;
 		}
 
-		// Token: 0x060332BA RID: 209594 RVA: 0x00BEF8B0 File Offset: 0x00BEDAB0
+		// Token: 0x06028124 RID: 164132 RVA: 0x00B389E4 File Offset: 0x00B36BE4
 		public RoleDevelopProjectBaseData GetProjectData()
 		{
 			bool flag = RoleDevelopUtil.IsProspectRole(this.Id);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return this.DevelopProjectData;
 		}
 
-		// Token: 0x060332BB RID: 209595 RVA: 0x00BEF920 File Offset: 0x00BEDB20
+		// Token: 0x06028125 RID: 164133 RVA: 0x00B38A54 File Offset: 0x00B36C54
 		public ERoleDevelopHotRoleTag GetHotRoleTag()
 		{
 			if (!RoleDevelopUtil.IsHotRoleDevelopValid(this.Id))
@@ -74,14 +74,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return ERoleDevelopHotRoleTag.None;
 		}
 
-		// Token: 0x0401B307 RID: 111367
+		// Token: 0x04015CD8 RID: 89304
 		private int Id;
 
-		// Token: 0x0401B308 RID: 111368
+		// Token: 0x04015CD9 RID: 89305
 		[Nullable(2)]
 		private RoleDevelopRoleBaseData DevelopRoleData;
 
-		// Token: 0x0401B309 RID: 111369
+		// Token: 0x04015CDA RID: 89306
 		[Nullable(2)]
 		private RoleDevelopProjectBaseData DevelopProjectData;
 	}

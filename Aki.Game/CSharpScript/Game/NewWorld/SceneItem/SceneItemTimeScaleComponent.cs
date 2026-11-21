@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007195 RID: 29077
+	// Token: 0x0200624A RID: 25162
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemTimeScaleComponent : PawnTimeScaleComponent
 	{
-		// Token: 0x06047247 RID: 291399 RVA: 0x012116EC File Offset: 0x0120F8EC
+		// Token: 0x0603CB2C RID: 248620 RVA: 0x0116BC5F File Offset: 0x01169E5F
 		protected override bool OnInit()
 		{
 			if (!base.OnInit())
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047248 RID: 291400 RVA: 0x0121170A File Offset: 0x0120F90A
+		// Token: 0x0603CB2D RID: 248621 RVA: 0x0116BC7D File Offset: 0x01169E7D
 		protected override bool OnStart()
 		{
 			if (!base.OnStart())
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047249 RID: 291401 RVA: 0x01211744 File Offset: 0x0120F944
+		// Token: 0x0603CB2E RID: 248622 RVA: 0x0116BCB4 File Offset: 0x01169EB4
 		public override void SetTimeScaleTicking(bool enable, string reason = null)
 		{
 			if (enable && this.DisableHandle != null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604724A RID: 291402 RVA: 0x012117C4 File Offset: 0x0120F9C4
+		// Token: 0x0603CB2F RID: 248623 RVA: 0x0116BD34 File Offset: 0x01169F34
 		protected override void OnTick(float delta)
 		{
 			float num = 1f;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604724B RID: 291403 RVA: 0x01211923 File Offset: 0x0120FB23
+		// Token: 0x0603CB30 RID: 248624 RVA: 0x0116BE93 File Offset: 0x0116A093
 		public override int SetTimeScale(int priority, float timeDilation, UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, bool needAddSceneItemTag = false, bool immuneSelfCenter = false)
 		{
 			int num = base.SetTimeScale(priority, timeDilation, curve, duration, sourceType, needAddSceneItemTag, false);
@@ -131,14 +131,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return num;
 		}
 
-		// Token: 0x0604724C RID: 291404 RVA: 0x0121194C File Offset: 0x0120FB4C
+		// Token: 0x0603CB31 RID: 248625 RVA: 0x0116BEBC File Offset: 0x0116A0BC
 		public override void RemoveTimeScale(int id)
 		{
 			base.RemoveTimeScale(id);
 			this.OnTick(0f);
 		}
 
-		// Token: 0x0604724D RID: 291405 RVA: 0x01211960 File Offset: 0x0120FB60
+		// Token: 0x0603CB32 RID: 248626 RVA: 0x0116BED0 File Offset: 0x0116A0D0
 		public override int SetForeverTimeScale(ETimeScaleSourceType type, float timeScale, int priority = 0, bool refreshImmediately = false)
 		{
 			int result = base.SetForeverTimeScale(type, timeScale, priority, false);
@@ -146,14 +146,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return result;
 		}
 
-		// Token: 0x0604724E RID: 291406 RVA: 0x01211977 File Offset: 0x0120FB77
+		// Token: 0x0603CB33 RID: 248627 RVA: 0x0116BEE7 File Offset: 0x0116A0E7
 		public override void RemoveForeverTimeScale(int id, bool refreshImmediately = false)
 		{
 			base.RemoveForeverTimeScale(id, false);
 			this.OnTick(0f);
 		}
 
-		// Token: 0x0604724F RID: 291407 RVA: 0x0121198C File Offset: 0x0120FB8C
+		// Token: 0x0603CB34 RID: 248628 RVA: 0x0116BEFC File Offset: 0x0116A0FC
 		private void ClearTimeScaleTag()
 		{
 			if (this.TagComponent != null)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047250 RID: 291408 RVA: 0x012119C4 File Offset: 0x0120FBC4
+		// Token: 0x0603CB35 RID: 248629 RVA: 0x0116BF34 File Offset: 0x0116A134
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			base.OnChangeTimeDilation(timeDilation);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047251 RID: 291409 RVA: 0x01211A34 File Offset: 0x0120FC34
+		// Token: 0x0603CB36 RID: 248630 RVA: 0x0116BFA4 File Offset: 0x0116A1A4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -192,41 +192,75 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemTimeScaleComponent sceneItemTimeScaleComponent = (SceneItemTimeScaleComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (sceneItemTimeScaleComponent.TagComponent == null)
 			{
-				if (sceneItemTimeScaleComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				if (sceneItemTimeScaleComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemTimeScaleComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x0402566E RID: 153198
+		// Token: 0x170072D2 RID: 29394
+		// (get) Token: 0x0603CB37 RID: 248631 RVA: 0x0116C01A File Offset: 0x0116A21A
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072D3 RID: 29395
+		// (get) Token: 0x0603CB38 RID: 248632 RVA: 0x0116C01D File Offset: 0x0116A21D
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072D4 RID: 29396
+		// (get) Token: 0x0603CB39 RID: 248633 RVA: 0x0116C020 File Offset: 0x0116A220
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072D5 RID: 29397
+		// (get) Token: 0x0603CB3A RID: 248634 RVA: 0x0116C023 File Offset: 0x0116A223
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040202DE RID: 131806
 		private static readonly int downsizeTag = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.时间缩放.缩小"];
 
-		// Token: 0x0402566F RID: 153199
+		// Token: 0x040202DF RID: 131807
 		private static readonly int upsizeTag = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.时间缩放.放大"];
 
-		// Token: 0x04025670 RID: 153200
+		// Token: 0x040202E0 RID: 131808
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x04025671 RID: 153201
+		// Token: 0x040202E1 RID: 131809
 		private CreatureDataComponent CreatureDataComp;
 	}
 }

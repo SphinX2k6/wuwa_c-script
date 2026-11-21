@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CE7 RID: 3303
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DDF RID: 3551
 	public class IMeshAnimalModel : IAnimalModelConfig
 	{
-		// Token: 0x06004B71 RID: 19313 RVA: 0x000BC6A3 File Offset: 0x000BA8A3
+		// Token: 0x0600507E RID: 20606 RVA: 0x000C7B57 File Offset: 0x000C5D57
 		public static IMeshAnimalModel Create(IMeshAnimalModel? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001760 RID: 5984
-		// (get) Token: 0x06004B72 RID: 19314 RVA: 0x000BC6C2 File Offset: 0x000BA8C2
+		// Token: 0x170018BB RID: 6331
+		// (get) Token: 0x0600507F RID: 20607 RVA: 0x000C7B76 File Offset: 0x000C5D76
 		public override EAnimalModelType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001761 RID: 5985
-		// (get) Token: 0x06004B73 RID: 19315 RVA: 0x000BC6CF File Offset: 0x000BA8CF
+		// Token: 0x170018BC RID: 6332
+		// (get) Token: 0x06005080 RID: 20608 RVA: 0x000C7B83 File Offset: 0x000C5D83
 		public virtual string Mesh
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B24 RID: 11044
+		// Token: 0x04002DDC RID: 11740
 		private IMeshAnimalModel Instance;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005AC3 RID: 23235
+	// Token: 0x02004AA4 RID: 19108
 	public enum EReviveMode
 	{
-		// Token: 0x0401EB50 RID: 125776
+		// Token: 0x0401960B RID: 103947
 		Common,
-		// Token: 0x0401EB51 RID: 125777
+		// Token: 0x0401960C RID: 103948
 		ShareReviveTimes
 	}
 }

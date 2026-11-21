@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DFC RID: 7676
+// Token: 0x020012BE RID: 4798
 [NullableContext(2)]
 [Nullable(0)]
 public class MonsterHandBookDynamicData
 {
-	// Token: 0x04006C5F RID: 27743
+	// Token: 0x04006D40 RID: 27968
 	public string TitleId;
 
-	// Token: 0x04006C60 RID: 27744
+	// Token: 0x04006D41 RID: 27969
 	public int[] MonsterList;
 }

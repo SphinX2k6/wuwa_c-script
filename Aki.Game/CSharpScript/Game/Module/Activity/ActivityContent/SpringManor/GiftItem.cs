@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200606B RID: 24683
+	// Token: 0x02004FE9 RID: 20457
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GiftItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E6E1 RID: 255713 RVA: 0x00F14DB4 File Offset: 0x00F12FB4
+		// Token: 0x060333A5 RID: 209829 RVA: 0x00E5BB78 File Offset: 0x00E59D78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E6E2 RID: 255714 RVA: 0x00F14E40 File Offset: 0x00F13040
+		// Token: 0x060333A6 RID: 209830 RVA: 0x00E5BC04 File Offset: 0x00E59E04
 		protected override void OnStart()
 		{
 			this.ItemGridGrid = new SmallItemGrid();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ItemGridGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickedGrid));
 		}
 
-		// Token: 0x0603E6E3 RID: 255715 RVA: 0x00F14EB0 File Offset: 0x00F130B0
+		// Token: 0x060333A7 RID: 209831 RVA: 0x00E5BC74 File Offset: 0x00E59E74
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ConfigId = data;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshGrid(scoreRewardConfigById.Value);
 		}
 
-		// Token: 0x0603E6E4 RID: 255716 RVA: 0x00F14F60 File Offset: 0x00F13160
+		// Token: 0x060333A8 RID: 209832 RVA: 0x00E5BD24 File Offset: 0x00E59F24
 		private void RefreshGrid(SpringFestivalScoreReward config)
 		{
 			SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -74,14 +74,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ItemGridGrid.SetLockBlackVisible(lockBlackVisible);
 		}
 
-		// Token: 0x0603E6E5 RID: 255717 RVA: 0x00F1502C File Offset: 0x00F1322C
+		// Token: 0x060333A9 RID: 209833 RVA: 0x00E5BDF0 File Offset: 0x00E59FF0
 		[NullableContext(1)]
 		private void OnClickedGrid(MediumItemGridExtendCallback _)
 		{
 			SpringFestivalScoreReward? scoreRewardConfigById = SpringManorConfig.Instance.GetScoreRewardConfigById(this.ConfigId);
 			if (!SpringManorModel.Instance.ActivityData.IsScoreRewardCanReceived(scoreRewardConfigById.Value.Id))
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.ItemGrid.Value.ItemData.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.ItemGrid.Value.ItemData.ItemId, true, null, false);
 				return;
 			}
 			SpringManorController instance = SpringManorController.Instance;
@@ -92,16 +92,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.RequestScoreRewardReceive(this.ReceiveCallback);
 		}
 
-		// Token: 0x04020A24 RID: 133668
+		// Token: 0x0401B351 RID: 111441
 		private int ConfigId;
 
-		// Token: 0x04020A25 RID: 133669
+		// Token: 0x0401B352 RID: 111442
 		private SmallItemGrid ItemGridGrid;
 
-		// Token: 0x04020A26 RID: 133670
+		// Token: 0x0401B353 RID: 111443
 		private TItem? ItemGrid;
 
-		// Token: 0x04020A27 RID: 133671
+		// Token: 0x0401B354 RID: 111444
 		public Action ReceiveCallback;
 	}
 }

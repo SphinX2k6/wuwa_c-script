@@ -4,27 +4,27 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Google.Protobuf;
 
-// Token: 0x02003122 RID: 12578
+// Token: 0x0200267D RID: 9853
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PerformController : ControllerBase
 {
-	// Token: 0x0601B075 RID: 110709 RVA: 0x007562E1 File Offset: 0x007544E1
+	// Token: 0x06018AD0 RID: 101072 RVA: 0x0077C34D File Offset: 0x0077A54D
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.CharacterLookAtNotify, new Action<IMessage, Net.CallbackStatus>(this.OnCharacterLookAtNotify));
 		return true;
 	}
 
-	// Token: 0x0601B076 RID: 110710 RVA: 0x00756300 File Offset: 0x00754500
+	// Token: 0x06018AD1 RID: 101073 RVA: 0x0077C36C File Offset: 0x0077A56C
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.CharacterLookAtNotify);
 		return true;
 	}
 
-	// Token: 0x0601B077 RID: 110711 RVA: 0x00756314 File Offset: 0x00754514
+	// Token: 0x06018AD2 RID: 101074 RVA: 0x0077C380 File Offset: 0x0077A580
 	[NullableContext(2)]
 	private void OnCharacterLookAtNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -34,7 +34,7 @@ public class PerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B078 RID: 110712 RVA: 0x0075636C File Offset: 0x0075456C
+	// Token: 0x06018AD3 RID: 101075 RVA: 0x0077C3D8 File Offset: 0x0077A5D8
 	public void RecoverTreeInfo(IList<CharacterLookAtInfo> data)
 	{
 		foreach (CharacterLookAtInfo sightTarget in data)
@@ -43,15 +43,15 @@ public class PerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B079 RID: 110713 RVA: 0x007563B8 File Offset: 0x007545B8
+	// Token: 0x06018AD4 RID: 101076 RVA: 0x0077C424 File Offset: 0x0077A624
 	protected override bool OnLeaveLevel()
 	{
 		PerformActionPool.Clear();
 		return true;
 	}
 
-	// Token: 0x1700256D RID: 9581
-	// (get) Token: 0x0601B07A RID: 110714 RVA: 0x007563C0 File Offset: 0x007545C0
+	// Token: 0x17002718 RID: 10008
+	// (get) Token: 0x06018AD5 RID: 101077 RVA: 0x0077C42C File Offset: 0x0077A62C
 	public static PerformController Instance
 	{
 		get
@@ -60,7 +60,7 @@ public class PerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601B07B RID: 110715 RVA: 0x007563C7 File Offset: 0x007545C7
+	// Token: 0x06018AD6 RID: 101078 RVA: 0x0077C433 File Offset: 0x0077A633
 	public static PerformController GetOrCreateInstance()
 	{
 		if (PerformController._Instance == null)
@@ -70,7 +70,7 @@ public class PerformController : ControllerBase
 		return PerformController._Instance;
 	}
 
-	// Token: 0x0601B07C RID: 110716 RVA: 0x007563DB File Offset: 0x007545DB
+	// Token: 0x06018AD7 RID: 101079 RVA: 0x0077C447 File Offset: 0x0077A647
 	public static bool CreateInstance()
 	{
 		if (PerformController._Instance != null)
@@ -81,24 +81,24 @@ public class PerformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601B07D RID: 110717 RVA: 0x007563F1 File Offset: 0x007545F1
+	// Token: 0x06018AD8 RID: 101080 RVA: 0x0077C45D File Offset: 0x0077A65D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B07E RID: 110718 RVA: 0x007563F3 File Offset: 0x007545F3
+	// Token: 0x06018AD9 RID: 101081 RVA: 0x0077C45F File Offset: 0x0077A65F
 	public static void ResetStaticDefaultValue()
 	{
 		PerformController._Instance = null;
 	}
 
-	// Token: 0x0601B07F RID: 110719 RVA: 0x007563FB File Offset: 0x007545FB
+	// Token: 0x06018ADA RID: 101082 RVA: 0x0077C467 File Offset: 0x0077A667
 	static PerformController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PerformController.CreateStaticDefaultValue), new Action(PerformController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D22E RID: 53806
+	// Token: 0x0400D650 RID: 54864
 	[Nullable(2)]
 	private static PerformController _Instance;
 }

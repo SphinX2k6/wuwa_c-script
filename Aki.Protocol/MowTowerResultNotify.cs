@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000AD0 RID: 2768
+	// Token: 0x02000ABF RID: 2751
 	[NetMessage(EMessageId.MowTowerResultNotify)]
 	public sealed class MowTowerResultNotify : IMessage<MowTowerResultNotify>, IMessage, IEquatable<MowTowerResultNotify>, IDeepCloneable<MowTowerResultNotify>, IBufferMessage
 	{
-		// Token: 0x0600F0F9 RID: 61689 RVA: 0x00233531 File Offset: 0x00231731
+		// Token: 0x0600EFDF RID: 61407 RVA: 0x00231321 File Offset: 0x0022F521
 		[NullableContext(1)]
 		public static MowTowerResultNotify Create()
 		{
 			return new MowTowerResultNotify();
 		}
 
-		// Token: 0x17003113 RID: 12563
-		// (get) Token: 0x0600F0FA RID: 61690 RVA: 0x00233538 File Offset: 0x00231738
+		// Token: 0x170030D5 RID: 12501
+		// (get) Token: 0x0600EFE0 RID: 61408 RVA: 0x00231328 File Offset: 0x0022F528
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003114 RID: 12564
-		// (get) Token: 0x0600F0FB RID: 61691 RVA: 0x0023353B File Offset: 0x0023173B
+		// Token: 0x170030D6 RID: 12502
+		// (get) Token: 0x0600EFE1 RID: 61409 RVA: 0x0023132B File Offset: 0x0022F52B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F0FC RID: 61692 RVA: 0x00233542 File Offset: 0x00231742
+		// Token: 0x0600EFE2 RID: 61410 RVA: 0x00231332 File Offset: 0x0022F532
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MowTowerResultNotify()
 		{
 		}
 
-		// Token: 0x0600F0FD RID: 61693 RVA: 0x0023354C File Offset: 0x0023174C
+		// Token: 0x0600EFE3 RID: 61411 RVA: 0x0023133C File Offset: 0x0022F53C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MowTowerResultNotify(MowTowerResultNotify other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F0FE RID: 61694 RVA: 0x002335B8 File Offset: 0x002317B8
+		// Token: 0x0600EFE4 RID: 61412 RVA: 0x002313A8 File Offset: 0x0022F5A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MowTowerResultNotify Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new MowTowerResultNotify(this);
 		}
 
-		// Token: 0x17003115 RID: 12565
-		// (get) Token: 0x0600F0FF RID: 61695 RVA: 0x002335C0 File Offset: 0x002317C0
-		// (set) Token: 0x0600F100 RID: 61696 RVA: 0x002335C8 File Offset: 0x002317C8
+		// Token: 0x170030D7 RID: 12503
+		// (get) Token: 0x0600EFE5 RID: 61413 RVA: 0x002313B0 File Offset: 0x0022F5B0
+		// (set) Token: 0x0600EFE6 RID: 61414 RVA: 0x002313B8 File Offset: 0x0022F5B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelsId
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003116 RID: 12566
-		// (get) Token: 0x0600F101 RID: 61697 RVA: 0x002335D1 File Offset: 0x002317D1
-		// (set) Token: 0x0600F102 RID: 61698 RVA: 0x002335D9 File Offset: 0x002317D9
+		// Token: 0x170030D8 RID: 12504
+		// (get) Token: 0x0600EFE7 RID: 61415 RVA: 0x002313C1 File Offset: 0x0022F5C1
+		// (set) Token: 0x0600EFE8 RID: 61416 RVA: 0x002313C9 File Offset: 0x0022F5C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FirstKilMonsterScore
@@ -105,9 +105,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003117 RID: 12567
-		// (get) Token: 0x0600F103 RID: 61699 RVA: 0x002335E2 File Offset: 0x002317E2
-		// (set) Token: 0x0600F104 RID: 61700 RVA: 0x002335EA File Offset: 0x002317EA
+		// Token: 0x170030D9 RID: 12505
+		// (get) Token: 0x0600EFE9 RID: 61417 RVA: 0x002313D2 File Offset: 0x0022F5D2
+		// (set) Token: 0x0600EFEA RID: 61418 RVA: 0x002313DA File Offset: 0x0022F5DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FirstTimerScore
@@ -122,9 +122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003118 RID: 12568
-		// (get) Token: 0x0600F105 RID: 61701 RVA: 0x002335F3 File Offset: 0x002317F3
-		// (set) Token: 0x0600F106 RID: 61702 RVA: 0x002335FB File Offset: 0x002317FB
+		// Token: 0x170030DA RID: 12506
+		// (get) Token: 0x0600EFEB RID: 61419 RVA: 0x002313E3 File Offset: 0x0022F5E3
+		// (set) Token: 0x0600EFEC RID: 61420 RVA: 0x002313EB File Offset: 0x0022F5EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SecondKilMonsterScore
@@ -139,9 +139,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003119 RID: 12569
-		// (get) Token: 0x0600F107 RID: 61703 RVA: 0x00233604 File Offset: 0x00231804
-		// (set) Token: 0x0600F108 RID: 61704 RVA: 0x0023360C File Offset: 0x0023180C
+		// Token: 0x170030DB RID: 12507
+		// (get) Token: 0x0600EFED RID: 61421 RVA: 0x002313F4 File Offset: 0x0022F5F4
+		// (set) Token: 0x0600EFEE RID: 61422 RVA: 0x002313FC File Offset: 0x0022F5FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SecondTimerScore
@@ -156,9 +156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700311A RID: 12570
-		// (get) Token: 0x0600F109 RID: 61705 RVA: 0x00233615 File Offset: 0x00231815
-		// (set) Token: 0x0600F10A RID: 61706 RVA: 0x0023361D File Offset: 0x0023181D
+		// Token: 0x170030DC RID: 12508
+		// (get) Token: 0x0600EFEF RID: 61423 RVA: 0x00231405 File Offset: 0x0022F605
+		// (set) Token: 0x0600EFF0 RID: 61424 RVA: 0x0023140D File Offset: 0x0022F60D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int HighScore
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F10B RID: 61707 RVA: 0x00233626 File Offset: 0x00231826
+		// Token: 0x0600EFF1 RID: 61425 RVA: 0x00231416 File Offset: 0x0022F616
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MowTowerResultNotify);
 		}
 
-		// Token: 0x0600F10C RID: 61708 RVA: 0x00233634 File Offset: 0x00231834
+		// Token: 0x0600EFF2 RID: 61426 RVA: 0x00231424 File Offset: 0x0022F624
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MowTowerResultNotify other)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelsId == other.LevelsId && this.FirstKilMonsterScore == other.FirstKilMonsterScore && this.FirstTimerScore == other.FirstTimerScore && this.SecondKilMonsterScore == other.SecondKilMonsterScore && this.SecondTimerScore == other.SecondTimerScore && this.HighScore == other.HighScore && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F10D RID: 61709 RVA: 0x002336C0 File Offset: 0x002318C0
+		// Token: 0x0600EFF3 RID: 61427 RVA: 0x002314B0 File Offset: 0x0022F6B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F10E RID: 61710 RVA: 0x0023377C File Offset: 0x0023197C
+		// Token: 0x0600EFF4 RID: 61428 RVA: 0x0023156C File Offset: 0x0022F76C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F10F RID: 61711 RVA: 0x00233789 File Offset: 0x00231989
+		// Token: 0x0600EFF5 RID: 61429 RVA: 0x00231579 File Offset: 0x0022F779
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -242,40 +242,40 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F110 RID: 61712 RVA: 0x00233794 File Offset: 0x00231994
+		// Token: 0x0600EFF6 RID: 61430 RVA: 0x00231584 File Offset: 0x0022F784
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.LevelsId != 0)
 			{
-				output.WriteRawTag(8);
+				output.WriteRawTag(16);
 				output.WriteInt32(this.LevelsId);
 			}
 			if (this.FirstTimerScore != 0)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.FirstTimerScore);
 			}
 			if (this.HighScore != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(72);
 				output.WriteInt32(this.HighScore);
-			}
-			if (this.FirstKilMonsterScore != 0)
-			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.FirstKilMonsterScore);
-			}
-			if (this.SecondKilMonsterScore != 0)
-			{
-				output.WriteRawTag(80);
-				output.WriteInt32(this.SecondKilMonsterScore);
 			}
 			if (this.SecondTimerScore != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(88);
 				output.WriteInt32(this.SecondTimerScore);
+			}
+			if (this.SecondKilMonsterScore != 0)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt32(this.SecondKilMonsterScore);
+			}
+			if (this.FirstKilMonsterScore != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.FirstKilMonsterScore);
 			}
 			if (this._unknownFields != null)
 			{
@@ -283,7 +283,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F111 RID: 61713 RVA: 0x0023385C File Offset: 0x00231A5C
+		// Token: 0x0600EFF7 RID: 61431 RVA: 0x00231650 File Offset: 0x0022F850
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -320,7 +320,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F112 RID: 61714 RVA: 0x00233914 File Offset: 0x00231B14
+		// Token: 0x0600EFF8 RID: 61432 RVA: 0x00231708 File Offset: 0x0022F908
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MowTowerResultNotify other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F113 RID: 61715 RVA: 0x002339B4 File Offset: 0x00231BB4
+		// Token: 0x0600EFF9 RID: 61433 RVA: 0x002317A8 File Offset: 0x0022F9A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F114 RID: 61716 RVA: 0x002339C0 File Offset: 0x00231BC0
+		// Token: 0x0600EFFA RID: 61434 RVA: 0x002317B4 File Offset: 0x0022F9B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,19 +376,19 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 56U)
+				if (num <= 72U)
 				{
-					if (num == 8U)
+					if (num == 16U)
 					{
 						this.LevelsId = input.ReadInt32();
 						continue;
 					}
-					if (num == 32U)
+					if (num == 24U)
 					{
 						this.FirstTimerScore = input.ReadInt32();
 						continue;
 					}
-					if (num == 56U)
+					if (num == 72U)
 					{
 						this.HighScore = input.ReadInt32();
 						continue;
@@ -396,19 +396,19 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 64U)
+					if (num == 88U)
 					{
-						this.FirstKilMonsterScore = input.ReadInt32();
+						this.SecondTimerScore = input.ReadInt32();
 						continue;
 					}
-					if (num == 80U)
+					if (num == 112U)
 					{
 						this.SecondKilMonsterScore = input.ReadInt32();
 						continue;
 					}
 					if (num == 120U)
 					{
-						this.SecondTimerScore = input.ReadInt32();
+						this.FirstKilMonsterScore = input.ReadInt32();
 						continue;
 					}
 				}
@@ -416,43 +416,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006165 RID: 24933
+		// Token: 0x0400616E RID: 24942
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006166 RID: 24934
-		public const int LevelsIdFieldNumber = 1;
-
-		// Token: 0x04006167 RID: 24935
-		private int levelsId_;
-
-		// Token: 0x04006168 RID: 24936
-		public const int FirstKilMonsterScoreFieldNumber = 8;
-
-		// Token: 0x04006169 RID: 24937
-		private int firstKilMonsterScore_;
-
-		// Token: 0x0400616A RID: 24938
-		public const int FirstTimerScoreFieldNumber = 4;
-
-		// Token: 0x0400616B RID: 24939
-		private int firstTimerScore_;
-
-		// Token: 0x0400616C RID: 24940
-		public const int SecondKilMonsterScoreFieldNumber = 10;
-
-		// Token: 0x0400616D RID: 24941
-		private int secondKilMonsterScore_;
-
-		// Token: 0x0400616E RID: 24942
-		public const int SecondTimerScoreFieldNumber = 15;
-
 		// Token: 0x0400616F RID: 24943
-		private int secondTimerScore_;
+		public const int LevelsIdFieldNumber = 2;
 
 		// Token: 0x04006170 RID: 24944
-		public const int HighScoreFieldNumber = 7;
+		private int levelsId_;
 
 		// Token: 0x04006171 RID: 24945
+		public const int FirstKilMonsterScoreFieldNumber = 15;
+
+		// Token: 0x04006172 RID: 24946
+		private int firstKilMonsterScore_;
+
+		// Token: 0x04006173 RID: 24947
+		public const int FirstTimerScoreFieldNumber = 3;
+
+		// Token: 0x04006174 RID: 24948
+		private int firstTimerScore_;
+
+		// Token: 0x04006175 RID: 24949
+		public const int SecondKilMonsterScoreFieldNumber = 14;
+
+		// Token: 0x04006176 RID: 24950
+		private int secondKilMonsterScore_;
+
+		// Token: 0x04006177 RID: 24951
+		public const int SecondTimerScoreFieldNumber = 11;
+
+		// Token: 0x04006178 RID: 24952
+		private int secondTimerScore_;
+
+		// Token: 0x04006179 RID: 24953
+		public const int HighScoreFieldNumber = 9;
+
+		// Token: 0x0400617A RID: 24954
 		private int highScore_;
 	}
 }

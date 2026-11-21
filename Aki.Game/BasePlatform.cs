@@ -4,24 +4,24 @@ using Aki.Protocol;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02003269 RID: 12905
+// Token: 0x020027D8 RID: 10200
 [NullableContext(1)]
 [Nullable(0)]
 public class BasePlatform
 {
-	// Token: 0x0601BE56 RID: 114262 RVA: 0x007BBE5D File Offset: 0x007BA05D
+	// Token: 0x06019A31 RID: 105009 RVA: 0x007E3735 File Offset: 0x007E1935
 	public BasePlatform(EntityHandle entityHandle)
 	{
 		this.EntityHandle = entityHandle;
 	}
 
-	// Token: 0x0601BE57 RID: 114263 RVA: 0x007BBE6C File Offset: 0x007BA06C
+	// Token: 0x06019A32 RID: 105010 RVA: 0x007E3744 File Offset: 0x007E1944
 	public virtual FTransformDouble? GetTransform()
 	{
 		return null;
 	}
 
-	// Token: 0x0601BE58 RID: 114264 RVA: 0x007BBE84 File Offset: 0x007BA084
+	// Token: 0x06019A33 RID: 105011 RVA: 0x007E375C File Offset: 0x007E195C
 	public virtual void TransformFromRelativeSpace(FVectorDouble inPosition, FRotator inRotation, ref FVectorDouble outPosition, ref FRotator outRotation)
 	{
 		FTransformDouble? transform = this.GetTransform();
@@ -31,7 +31,7 @@ public class BasePlatform
 		outRotation = UKismetMathLibrary.D_TransformRotation(ftransformDouble, inRotation);
 	}
 
-	// Token: 0x0601BE59 RID: 114265 RVA: 0x007BBEEC File Offset: 0x007BA0EC
+	// Token: 0x06019A34 RID: 105012 RVA: 0x007E37C4 File Offset: 0x007E19C4
 	public virtual void TransformToRelativeSpace(FVectorDouble inPosition, FRotator inRotation, ref FVectorDouble outPosition, ref FRotator outRotation)
 	{
 		FTransformDouble? transform = this.GetTransform();
@@ -41,18 +41,18 @@ public class BasePlatform
 		outRotation = UKismetMathLibrary.D_InverseTransformRotation(ftransformDouble, inRotation);
 	}
 
-	// Token: 0x0601BE5A RID: 114266 RVA: 0x007BBF51 File Offset: 0x007BA151
+	// Token: 0x06019A35 RID: 105013 RVA: 0x007E3829 File Offset: 0x007E1A29
 	public virtual bool CheckLeave(Entity entity, global::Vector location)
 	{
 		return false;
 	}
 
-	// Token: 0x0601BE5B RID: 114267 RVA: 0x007BBF54 File Offset: 0x007BA154
+	// Token: 0x06019A36 RID: 105014 RVA: 0x007E382C File Offset: 0x007E1A2C
 	public virtual void OnCharacterEnter(Entity entity, UCharacterMovementComponent characterMovement)
 	{
 	}
 
-	// Token: 0x0601BE5C RID: 114268 RVA: 0x007BBF58 File Offset: 0x007BA158
+	// Token: 0x06019A37 RID: 105015 RVA: 0x007E3830 File Offset: 0x007E1A30
 	protected void RequestEnterOrLeave(bool isEnter)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -70,13 +70,13 @@ public class BasePlatform
 		}, 0);
 	}
 
-	// Token: 0x0400DC26 RID: 56358
+	// Token: 0x0400E0C5 RID: 57541
 	[Nullable(2)]
 	public EntityHandle EntityHandle;
 
-	// Token: 0x0400DC27 RID: 56359
+	// Token: 0x0400E0C6 RID: 57542
 	public int CreatureDataId;
 
-	// Token: 0x0400DC28 RID: 56360
+	// Token: 0x0400E0C7 RID: 57543
 	public bool IsDeltaBaseSpeedNeedZ;
 }

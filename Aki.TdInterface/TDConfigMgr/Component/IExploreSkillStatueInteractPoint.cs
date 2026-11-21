@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000362 RID: 866
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003AB RID: 939
 	public class IExploreSkillStatueInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x0600112F RID: 4399 RVA: 0x0003A7F8 File Offset: 0x000389F8
+		// Token: 0x06001273 RID: 4723 RVA: 0x0003DADC File Offset: 0x0003BCDC
 		private IExploreSkillStatueInteractPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001130 RID: 4400 RVA: 0x0003A830 File Offset: 0x00038A30
+		// Token: 0x06001274 RID: 4724 RVA: 0x0003DB14 File Offset: 0x0003BD14
 		public static IExploreSkillStatueInteractPoint Create([Nullable(2)] IExploreSkillStatueInteractPoint instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001131 RID: 4401 RVA: 0x0003A843 File Offset: 0x00038A43
+		// Token: 0x06001275 RID: 4725 RVA: 0x0003DB27 File Offset: 0x0003BD27
 		public static IExploreSkillStatueInteractPoint CreateFromSetValue([Nullable(2)] IExploreSkillStatueInteractPoint_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001132 RID: 4402 RVA: 0x0003A856 File Offset: 0x00038A56
+		// Token: 0x06001276 RID: 4726 RVA: 0x0003DB3A File Offset: 0x0003BD3A
 		public new IExploreSkillStatueInteractPoint_SetValue ToSetValue()
 		{
 			return new IExploreSkillStatueInteractPoint_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004E2 RID: 1250
-		// (get) Token: 0x06001133 RID: 4403 RVA: 0x0003A881 File Offset: 0x00038A81
-		// (set) Token: 0x06001134 RID: 4404 RVA: 0x0003A8AC File Offset: 0x00038AAC
+		// Token: 0x17000536 RID: 1334
+		// (get) Token: 0x06001277 RID: 4727 RVA: 0x0003DB65 File Offset: 0x0003BD65
+		// (set) Token: 0x06001278 RID: 4728 RVA: 0x0003DB90 File Offset: 0x0003BD90
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004E3 RID: 1251
-		// (get) Token: 0x06001135 RID: 4405 RVA: 0x0003A8BA File Offset: 0x00038ABA
-		// (set) Token: 0x06001136 RID: 4406 RVA: 0x0003A8E9 File Offset: 0x00038AE9
+		// Token: 0x17000537 RID: 1335
+		// (get) Token: 0x06001279 RID: 4729 RVA: 0x0003DB9E File Offset: 0x0003BD9E
+		// (set) Token: 0x0600127A RID: 4730 RVA: 0x0003DBCD File Offset: 0x0003BDCD
 		public virtual float PullTime
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004E4 RID: 1252
-		// (get) Token: 0x06001137 RID: 4407 RVA: 0x0003A8F7 File Offset: 0x00038AF7
-		// (set) Token: 0x06001138 RID: 4408 RVA: 0x0003A91E File Offset: 0x00038B1E
+		// Token: 0x17000538 RID: 1336
+		// (get) Token: 0x0600127B RID: 4731 RVA: 0x0003DBDB File Offset: 0x0003BDDB
+		// (set) Token: 0x0600127C RID: 4732 RVA: 0x0003DC02 File Offset: 0x0003BE02
 		public virtual List<string> HangingPointList
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E39 RID: 3641
+		// Token: 0x04000F30 RID: 3888
 		[Nullable(2)]
 		protected new IExploreSkillStatueInteractPoint FbInstance;
 
-		// Token: 0x04000E3A RID: 3642
+		// Token: 0x04000F31 RID: 3889
 		[Nullable(2)]
 		protected new IExploreSkillStatueInteractPoint_SetValue PocoInterface;
 	}

@@ -2,46 +2,46 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F0C RID: 24332
+	// Token: 0x0200654F RID: 25935
 	public enum EActorType : byte
 	{
-		// Token: 0x0400FBC1 RID: 64449
+		// Token: 0x04010934 RID: 67892
 		MeshActor,
-		// Token: 0x0400FBC2 RID: 64450
+		// Token: 0x04010935 RID: 67893
 		SoundActor,
-		// Token: 0x0400FBC3 RID: 64451
+		// Token: 0x04010936 RID: 67894
 		EffectActor,
-		// Token: 0x0400FBC4 RID: 64452
+		// Token: 0x04010937 RID: 67895
 		TriggerVolume,
-		// Token: 0x0400FBC5 RID: 64453
+		// Token: 0x04010938 RID: 67896
 		WorldPartitionTriggerVolumeWrapper,
-		// Token: 0x0400FBC6 RID: 64454
+		// Token: 0x04010939 RID: 67897
 		LightsGroup,
-		// Token: 0x0400FBC7 RID: 64455
+		// Token: 0x0401093A RID: 67898
 		PPVolume,
-		// Token: 0x0400FBC8 RID: 64456
+		// Token: 0x0401093B RID: 67899
 		CullDistanceVolume,
-		// Token: 0x0400FBC9 RID: 64457
+		// Token: 0x0401093C RID: 67900
 		Skybox,
-		// Token: 0x0400FBCA RID: 64458
+		// Token: 0x0401093D RID: 67901
 		FloatingActor,
-		// Token: 0x0400FBCB RID: 64459
+		// Token: 0x0401093E RID: 67902
 		GpuNpc,
-		// Token: 0x0400FBCC RID: 64460
+		// Token: 0x0401093F RID: 67903
 		ToonDepth,
-		// Token: 0x0400FBCD RID: 64461
+		// Token: 0x04010940 RID: 67904
 		DecalActor,
-		// Token: 0x0400FBCE RID: 64462
+		// Token: 0x04010941 RID: 67905
 		NvClothPlacement,
-		// Token: 0x0400FBCF RID: 64463
+		// Token: 0x04010942 RID: 67906
 		PhysicalActor,
-		// Token: 0x0400FBD0 RID: 64464
+		// Token: 0x04010943 RID: 67907
 		SmartLightActor,
-		// Token: 0x0400FBD1 RID: 64465
+		// Token: 0x04010944 RID: 67908
 		MediaPlayer,
-		// Token: 0x0400FBD2 RID: 64466
+		// Token: 0x04010945 RID: 67909
 		KuroAttachGroupActor,
-		// Token: 0x0400FBD3 RID: 64467
+		// Token: 0x04010946 RID: 67910
 		LoopTeleportVolume
 	}
 }

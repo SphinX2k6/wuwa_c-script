@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071C0 RID: 29120
+	// Token: 0x02006275 RID: 25205
 	public enum EStagnationSource
 	{
-		// Token: 0x040257A4 RID: 153508
+		// Token: 0x04020413 RID: 132115
 		InitialConfig = 1,
-		// Token: 0x040257A5 RID: 153509
+		// Token: 0x04020414 RID: 132116
 		ElementalField
 	}
 }

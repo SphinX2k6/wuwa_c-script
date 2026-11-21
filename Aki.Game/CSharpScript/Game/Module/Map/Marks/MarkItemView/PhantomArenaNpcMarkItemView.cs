@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200551C RID: 21788
+	// Token: 0x020044EF RID: 17647
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaNpcMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x06037A51 RID: 227921 RVA: 0x00D35719 File Offset: 0x00D33919
+		// Token: 0x0602C91F RID: 182559 RVA: 0x00C834ED File Offset: 0x00C816ED
 		public PhantomArenaNpcMarkItemView(PhantomArenaNpcMarkItem markItem) : base(markItem)
 		{
 		}
 
-		// Token: 0x06037A52 RID: 227922 RVA: 0x00D35724 File Offset: 0x00D33924
+		// Token: 0x0602C920 RID: 182560 RVA: 0x00C834F8 File Offset: 0x00C816F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaNpcMarkItemView.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -30,7 +30,18 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A53 RID: 227923 RVA: 0x00D35768 File Offset: 0x00D33968
+		// Token: 0x0602C921 RID: 182561 RVA: 0x00C8353B File Offset: 0x00C8173B
+		protected override void OnBeforeDestroy()
+		{
+			PhantomArenaMapNpcUi phantomArenaMapNpcUi = this.PhantomArenaMapNpcUi;
+			if (phantomArenaMapNpcUi != null)
+			{
+				phantomArenaMapNpcUi.Destroy(null);
+			}
+			base.OnBeforeDestroy();
+		}
+
+		// Token: 0x0602C922 RID: 182562 RVA: 0x00C83558 File Offset: 0x00C81758
 		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			if (MapModel.Instance.IsExtraUiMarkType(this.Holder.MapType, this.Holder.MarkType))
@@ -70,14 +81,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A54 RID: 227924 RVA: 0x00D357FC File Offset: 0x00D339FC
+		// Token: 0x0602C923 RID: 182563 RVA: 0x00C835EC File Offset: 0x00C817EC
 		[PreserveBaseOverrides]
 		protected new virtual MarkItemSelectHandle CreateSelectHandle(IMarkItemComponentContext markComponentContext)
 		{
 			return new PhantomArenaNpcMarkItemSelectHandle(markComponentContext);
 		}
 
-		// Token: 0x06037A55 RID: 227925 RVA: 0x00D35804 File Offset: 0x00D33A04
+		// Token: 0x0602C924 RID: 182564 RVA: 0x00C835F4 File Offset: 0x00C817F4
 		[NullableContext(2)]
 		public override UUIItem GetIconItem()
 		{
@@ -89,7 +100,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return phantomArenaMapNpcUi.GetRootItem();
 		}
 
-		// Token: 0x0401D426 RID: 119846
+		// Token: 0x04017EA9 RID: 97961
 		[Nullable(2)]
 		private PhantomArenaMapNpcUi PhantomArenaMapNpcUi;
 	}

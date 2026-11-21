@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200153A RID: 5434
+// Token: 0x020009F2 RID: 2546
 public class TurntableQuestInfo : ITurntableQuestInfo
 {
-	// Token: 0x17000D52 RID: 3410
-	// (get) Token: 0x06009B67 RID: 39783 RVA: 0x0021A953 File Offset: 0x00218B53
-	// (set) Token: 0x06009B68 RID: 39784 RVA: 0x0021A95B File Offset: 0x00218B5B
+	// Token: 0x17000D73 RID: 3443
+	// (get) Token: 0x06006F45 RID: 28485 RVA: 0x00224703 File Offset: 0x00222903
+	// (set) Token: 0x06006F46 RID: 28486 RVA: 0x0022470B File Offset: 0x0022290B
 	public int QuestState { get; set; }
 
-	// Token: 0x17000D53 RID: 3411
-	// (get) Token: 0x06009B69 RID: 39785 RVA: 0x0021A964 File Offset: 0x00218B64
-	// (set) Token: 0x06009B6A RID: 39786 RVA: 0x0021A96C File Offset: 0x00218B6C
+	// Token: 0x17000D74 RID: 3444
+	// (get) Token: 0x06006F47 RID: 28487 RVA: 0x00224714 File Offset: 0x00222914
+	// (set) Token: 0x06006F48 RID: 28488 RVA: 0x0022471C File Offset: 0x0022291C
 	public long QuestUnlockStamp { get; set; }
 }

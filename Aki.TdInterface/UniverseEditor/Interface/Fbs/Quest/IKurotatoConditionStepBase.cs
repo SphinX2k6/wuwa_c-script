@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003ED2 RID: 16082
+	// Token: 0x02004310 RID: 17168
 	public struct IKurotatoConditionStepBase : IFlatbufferObject
 	{
-		// Token: 0x17006FA7 RID: 28583
-		// (get) Token: 0x06016BEF RID: 93167 RVA: 0x00348A11 File Offset: 0x00346C11
+		// Token: 0x17007596 RID: 30102
+		// (get) Token: 0x06018246 RID: 98886 RVA: 0x00371BDD File Offset: 0x0036FDDD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BF0 RID: 93168 RVA: 0x00348A1E File Offset: 0x00346C1E
+		// Token: 0x06018247 RID: 98887 RVA: 0x00371BEA File Offset: 0x0036FDEA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016BF1 RID: 93169 RVA: 0x00348A28 File Offset: 0x00346C28
+		// Token: 0x06018248 RID: 98888 RVA: 0x00371BF4 File Offset: 0x0036FDF4
 		public static IKurotatoConditionStepBase GetRootAsIKurotatoConditionStepBase(ByteBuffer _bb)
 		{
 			return IKurotatoConditionStepBase.GetRootAsIKurotatoConditionStepBase(_bb, default(IKurotatoConditionStepBase));
 		}
 
-		// Token: 0x06016BF2 RID: 93170 RVA: 0x00348A44 File Offset: 0x00346C44
+		// Token: 0x06018249 RID: 98889 RVA: 0x00371C10 File Offset: 0x0036FE10
 		public static IKurotatoConditionStepBase GetRootAsIKurotatoConditionStepBase(ByteBuffer _bb, IKurotatoConditionStepBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016BF3 RID: 93171 RVA: 0x00348A61 File Offset: 0x00346C61
+		// Token: 0x0601824A RID: 98890 RVA: 0x00371C2D File Offset: 0x0036FE2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016BF4 RID: 93172 RVA: 0x00348A70 File Offset: 0x00346C70
+		// Token: 0x0601824B RID: 98891 RVA: 0x00371C3C File Offset: 0x0036FE3C
 		public IKurotatoConditionStepBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FA8 RID: 28584
-		// (get) Token: 0x06016BF5 RID: 93173 RVA: 0x00348A80 File Offset: 0x00346C80
+		// Token: 0x17007597 RID: 30103
+		// (get) Token: 0x0601824C RID: 98892 RVA: 0x00371C4C File Offset: 0x0036FE4C
 		public EKurotatoConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016BF6 RID: 93174 RVA: 0x00348ABC File Offset: 0x00346CBC
+		// Token: 0x0601824D RID: 98893 RVA: 0x00371C88 File Offset: 0x0036FE88
 		public static Offset<IKurotatoConditionStepBase> CreateIKurotatoConditionStepBase(FlatBufferBuilder builder, EKurotatoConditionStep Type = EKurotatoConditionStep.Prepare)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKurotatoConditionStepBase.EndIKurotatoConditionStepBase(builder);
 		}
 
-		// Token: 0x06016BF7 RID: 93175 RVA: 0x00348AD2 File Offset: 0x00346CD2
+		// Token: 0x0601824E RID: 98894 RVA: 0x00371C9E File Offset: 0x0036FE9E
 		public static void StartIKurotatoConditionStepBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06016BF8 RID: 93176 RVA: 0x00348ADB File Offset: 0x00346CDB
+		// Token: 0x0601824F RID: 98895 RVA: 0x00371CA7 File Offset: 0x0036FEA7
 		public static void AddType(FlatBufferBuilder builder, EKurotatoConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016BF9 RID: 93177 RVA: 0x00348AE6 File Offset: 0x00346CE6
+		// Token: 0x06018250 RID: 98896 RVA: 0x00371CB2 File Offset: 0x0036FEB2
 		public static Offset<IKurotatoConditionStepBase> EndIKurotatoConditionStepBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IKurotatoConditionStepBase>(builder.EndTable());
 		}
 
-		// Token: 0x06016BFA RID: 93178 RVA: 0x00348AF4 File Offset: 0x00346CF4
+		// Token: 0x06018251 RID: 98897 RVA: 0x00371CC0 File Offset: 0x0036FEC0
 		public IKurotatoConditionStepBaseT UnPack()
 		{
 			IKurotatoConditionStepBaseT kurotatoConditionStepBaseT = new IKurotatoConditionStepBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return kurotatoConditionStepBaseT;
 		}
 
-		// Token: 0x06016BFB RID: 93179 RVA: 0x00348B0F File Offset: 0x00346D0F
+		// Token: 0x06018252 RID: 98898 RVA: 0x00371CDB File Offset: 0x0036FEDB
 		public void UnPackTo(IKurotatoConditionStepBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06016BFC RID: 93180 RVA: 0x00348B20 File Offset: 0x00346D20
+		// Token: 0x06018253 RID: 98899 RVA: 0x00371CEC File Offset: 0x0036FEEC
 		public static Offset<IKurotatoConditionStepBase> Pack(FlatBufferBuilder builder, IKurotatoConditionStepBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IKurotatoConditionStepBase.CreateIKurotatoConditionStepBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400B8AE RID: 47278
+		// Token: 0x0400C28B RID: 49803
 		private Table __p;
 	}
 }

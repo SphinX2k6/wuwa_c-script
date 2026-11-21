@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001944 RID: 6468
+	// Token: 0x02000424 RID: 1060
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameScreenshot.GameScreenshotTask")]
-	[UnrealStructLayout(176, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 176)]
+	[UnrealStructLayout(184, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 184)]
 	public class UGameScreenshotTask : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017F80 RID: 98176 RVA: 0x0023244F File Offset: 0x0023064F
+		// Token: 0x06006623 RID: 26147 RVA: 0x00092AA0 File Offset: 0x00090CA0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UGameScreenshotTask._ClassPtr;
 		}
 
-		// Token: 0x06017F81 RID: 98177 RVA: 0x0023245C File Offset: 0x0023065C
+		// Token: 0x06006624 RID: 26148 RVA: 0x00092AAC File Offset: 0x00090CAC
 		public UGameScreenshotTask() : this(BuiltinUtils.AllocNativeUObject(UGameScreenshotTask.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017F82 RID: 98178 RVA: 0x00232484 File Offset: 0x00230684
+		// Token: 0x06006625 RID: 26149 RVA: 0x00092AD4 File Offset: 0x00090CD4
 		public UGameScreenshotTask(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UGameScreenshotTask.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700600C RID: 24588
-		// (get) Token: 0x06017F83 RID: 98179 RVA: 0x002324B8 File Offset: 0x002306B8
-		// (set) Token: 0x06017F84 RID: 98180 RVA: 0x002324F1 File Offset: 0x002306F1
+		// Token: 0x17001448 RID: 5192
+		// (get) Token: 0x06006626 RID: 26150 RVA: 0x00092B08 File Offset: 0x00090D08
+		// (set) Token: 0x06006627 RID: 26151 RVA: 0x00092B41 File Offset: 0x00090D41
 		public FOnTakeScreenshotCaptured OnTakeScreenshotCapturedDelegate
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700600D RID: 24589
-		// (get) Token: 0x06017F85 RID: 98181 RVA: 0x00232514 File Offset: 0x00230714
-		// (set) Token: 0x06017F86 RID: 98182 RVA: 0x0023254D File Offset: 0x0023074D
+		// Token: 0x17001449 RID: 5193
+		// (get) Token: 0x06006628 RID: 26152 RVA: 0x00092B64 File Offset: 0x00090D64
+		// (set) Token: 0x06006629 RID: 26153 RVA: 0x00092B9D File Offset: 0x00090D9D
 		public FOnTakeScreenshotCompressed OnTakeScreenshotCompressedDelegate
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700600E RID: 24590
-		// (get) Token: 0x06017F87 RID: 98183 RVA: 0x00232570 File Offset: 0x00230770
-		// (set) Token: 0x06017F88 RID: 98184 RVA: 0x002325A9 File Offset: 0x002307A9
+		// Token: 0x1700144A RID: 5194
+		// (get) Token: 0x0600662A RID: 26154 RVA: 0x00092BC0 File Offset: 0x00090DC0
+		// (set) Token: 0x0600662B RID: 26155 RVA: 0x00092BF9 File Offset: 0x00090DF9
 		public FOnIOSPhotoLibraryAuthorizationCompleted OnIOSPhotoLibraryAuthorizationCompletedDelegate
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700600F RID: 24591
-		// (get) Token: 0x06017F89 RID: 98185 RVA: 0x002325CC File Offset: 0x002307CC
-		// (set) Token: 0x06017F8A RID: 98186 RVA: 0x00232605 File Offset: 0x00230805
+		// Token: 0x1700144B RID: 5195
+		// (get) Token: 0x0600662C RID: 26156 RVA: 0x00092C1C File Offset: 0x00090E1C
+		// (set) Token: 0x0600662D RID: 26157 RVA: 0x00092C55 File Offset: 0x00090E55
 		public FOnHighResShotSaved OnHighResShotSavedDelegate
 		{
 			get
@@ -113,123 +113,123 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017F8B RID: 98187 RVA: 0x00232626 File Offset: 0x00230826
+		// Token: 0x0600662E RID: 26158 RVA: 0x00092C76 File Offset: 0x00090E76
 		public bool TakeScreenshotHighRes(int MultiplierScale)
 		{
 			return UGameScreenshotTask.__TakeScreenshotHighRes_Internal(base.NativePtr, MultiplierScale);
 		}
 
-		// Token: 0x06017F8C RID: 98188 RVA: 0x00232634 File Offset: 0x00230834
+		// Token: 0x0600662F RID: 26159 RVA: 0x00092C84 File Offset: 0x00090E84
 		public bool TakeScreenshot()
 		{
 			return UGameScreenshotTask.__TakeScreenshot_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017F8D RID: 98189 RVA: 0x00232641 File Offset: 0x00230841
+		// Token: 0x06006630 RID: 26160 RVA: 0x00092C91 File Offset: 0x00090E91
 		public void Reset()
 		{
 			UGameScreenshotTask.__Reset_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017F8E RID: 98190 RVA: 0x0023264E File Offset: 0x0023084E
+		// Token: 0x06006631 RID: 26161 RVA: 0x00092C9E File Offset: 0x00090E9E
 		public void RequestIOSPhotoLibraryAuthorization()
 		{
 			UGameScreenshotTask.__RequestIOSPhotoLibraryAuthorization_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017F8F RID: 98191 RVA: 0x0023265B File Offset: 0x0023085B
+		// Token: 0x06006632 RID: 26162 RVA: 0x00092CAB File Offset: 0x00090EAB
 		[NullableContext(2)]
 		public void OnScreenshotCompressed(in TArray<byte> CompressedBitMap)
 		{
 			UGameScreenshotTask.__OnScreenshotCompressed_Internal(base.NativePtr, (CompressedBitMap ?? new TArray<byte>()).NativePtr);
 		}
 
-		// Token: 0x06017F90 RID: 98192 RVA: 0x00232678 File Offset: 0x00230878
+		// Token: 0x06006633 RID: 26163 RVA: 0x00092CC8 File Offset: 0x00090EC8
 		[NullableContext(2)]
 		public void OnScreenshotCaptured(int Width, int Height, in TArray<FColor> Colors)
 		{
 			UGameScreenshotTask.__OnScreenshotCaptured_Internal(base.NativePtr, Width, Height, (Colors ?? new TArray<FColor>()).NativePtr);
 		}
 
-		// Token: 0x06017F91 RID: 98193 RVA: 0x00232697 File Offset: 0x00230897
+		// Token: 0x06006634 RID: 26164 RVA: 0x00092CE7 File Offset: 0x00090EE7
 		public void OnIOSPhotoLibraryAuthorizationCompleted(bool IsGranted)
 		{
 			UGameScreenshotTask.__OnIOSPhotoLibraryAuthorizationCompleted_Internal(base.NativePtr, IsGranted);
 		}
 
-		// Token: 0x06017F92 RID: 98194
+		// Token: 0x06006635 RID: 26165
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TakeScreenshotHighRes_Internal(IntPtr @this, int MultiplierScale);
 
-		// Token: 0x06017F93 RID: 98195
+		// Token: 0x06006636 RID: 26166
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __TakeScreenshot_Internal(IntPtr @this);
 
-		// Token: 0x06017F94 RID: 98196
+		// Token: 0x06006637 RID: 26167
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Reset_Internal(IntPtr @this);
 
-		// Token: 0x06017F95 RID: 98197
+		// Token: 0x06006638 RID: 26168
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RequestIOSPhotoLibraryAuthorization_Internal(IntPtr @this);
 
-		// Token: 0x06017F96 RID: 98198
+		// Token: 0x06006639 RID: 26169
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnScreenshotCompressed_Internal(IntPtr @this, IntPtr CompressedBitMap);
 
-		// Token: 0x06017F97 RID: 98199
+		// Token: 0x0600663A RID: 26170
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnScreenshotCaptured_Internal(IntPtr @this, int Width, int Height, IntPtr Colors);
 
-		// Token: 0x06017F98 RID: 98200
+		// Token: 0x0600663B RID: 26171
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnIOSPhotoLibraryAuthorizationCompleted_Internal(IntPtr @this, bool IsGranted);
 
-		// Token: 0x06017F99 RID: 98201 RVA: 0x002326A5 File Offset: 0x002308A5
+		// Token: 0x0600663C RID: 26172 RVA: 0x00092CF5 File Offset: 0x00090EF5
 		static UGameScreenshotTask()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameScreenshot.GameScreenshotTask");
 		}
 
-		// Token: 0x06017F9A RID: 98202 RVA: 0x002326B3 File Offset: 0x002308B3
+		// Token: 0x0600663D RID: 26173 RVA: 0x00092D03 File Offset: 0x00090F03
 		protected UGameScreenshotTask(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CF76 RID: 53110
+		// Token: 0x04002AF0 RID: 10992
 		public new const string __ObjectPath = "/Script/KuroGameScreenshot.GameScreenshotTask";
 
-		// Token: 0x0400CF77 RID: 53111
+		// Token: 0x04002AF1 RID: 10993
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CF78 RID: 53112
+		// Token: 0x04002AF2 RID: 10994
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CF79 RID: 53113
+		// Token: 0x04002AF3 RID: 10995
 		internal static int __PropertyOffset_OnTakeScreenshotCapturedDelegate;
 
-		// Token: 0x0400CF7A RID: 53114
+		// Token: 0x04002AF4 RID: 10996
 		[Nullable(2)]
 		private FOnTakeScreenshotCaptured _OnTakeScreenshotCapturedDelegate;
 
-		// Token: 0x0400CF7B RID: 53115
+		// Token: 0x04002AF5 RID: 10997
 		internal static int __PropertyOffset_OnTakeScreenshotCompressedDelegate;
 
-		// Token: 0x0400CF7C RID: 53116
+		// Token: 0x04002AF6 RID: 10998
 		[Nullable(2)]
 		private FOnTakeScreenshotCompressed _OnTakeScreenshotCompressedDelegate;
 
-		// Token: 0x0400CF7D RID: 53117
+		// Token: 0x04002AF7 RID: 10999
 		internal static int __PropertyOffset_OnIOSPhotoLibraryAuthorizationCompletedDelegate;
 
-		// Token: 0x0400CF7E RID: 53118
+		// Token: 0x04002AF8 RID: 11000
 		[Nullable(2)]
 		private FOnIOSPhotoLibraryAuthorizationCompleted _OnIOSPhotoLibraryAuthorizationCompletedDelegate;
 
-		// Token: 0x0400CF7F RID: 53119
+		// Token: 0x04002AF9 RID: 11001
 		internal static int __PropertyOffset_OnHighResShotSavedDelegate;
 
-		// Token: 0x0400CF80 RID: 53120
+		// Token: 0x04002AFA RID: 11002
 		[Nullable(2)]
 		private FOnHighResShotSaved _OnHighResShotSavedDelegate;
 	}

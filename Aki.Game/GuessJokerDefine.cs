@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02001049 RID: 4169
+// Token: 0x020004FD RID: 1277
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerDefine : IStaticVariableResetter
 {
-	// Token: 0x06006B02 RID: 27394 RVA: 0x00158A40 File Offset: 0x00156C40
+	// Token: 0x06003E97 RID: 16023 RVA: 0x00161368 File Offset: 0x0015F568
 	static GuessJokerDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuessJokerDefine.CreateStaticDefaultValue), new Action(GuessJokerDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06006B03 RID: 27395 RVA: 0x00158A60 File Offset: 0x00156C60
+	// Token: 0x06003E98 RID: 16024 RVA: 0x00161388 File Offset: 0x0015F588
 	public static void CreateStaticDefaultValue()
 	{
 		GuessJokerDefine.GuessJokerCardStageTransitionMap = new Dictionary<EGuessJokerCardStateType, EGuessJokerCardStateType[]>
@@ -151,20 +151,20 @@ public class GuessJokerDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06006B04 RID: 27396 RVA: 0x00158CC9 File Offset: 0x00156EC9
+	// Token: 0x06003E99 RID: 16025 RVA: 0x001615F1 File Offset: 0x0015F7F1
 	public static void ResetStaticDefaultValue()
 	{
 		GuessJokerDefine.GuessJokerCardStageTransitionMap = null;
 		GuessJokerDefine.GuessJokerCardPositionConfig = null;
 	}
 
-	// Token: 0x06006B05 RID: 27397 RVA: 0x00158CD7 File Offset: 0x00156ED7
+	// Token: 0x06003E9A RID: 16026 RVA: 0x001615FF File Offset: 0x0015F7FF
 	public static IReadOnlyDictionary<EGuessJokerCardStateType, EGuessJokerCardStateType[]> GetGuessJokerCardStageTransitionMap()
 	{
 		return GuessJokerDefine.GuessJokerCardStageTransitionMap;
 	}
 
-	// Token: 0x06006B06 RID: 27398 RVA: 0x00158CE0 File Offset: 0x00156EE0
+	// Token: 0x06003E9B RID: 16027 RVA: 0x00161608 File Offset: 0x0015F808
 	public static ICardPositionConfig GetCardPositionConfig(ECardPositionType cardPositionType)
 	{
 		ICardPositionConfig cardPositionConfig = GuessJokerDefine.GuessJokerCardPositionConfig[cardPositionType];
@@ -178,7 +178,7 @@ public class GuessJokerDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06006B07 RID: 27399 RVA: 0x00158D70 File Offset: 0x00156F70
+	// Token: 0x06003E9C RID: 16028 RVA: 0x00161698 File Offset: 0x0015F898
 	public static float CalculateCardScaleByIndex(int index, int totalCount)
 	{
 		if (totalCount <= 1)
@@ -198,7 +198,7 @@ public class GuessJokerDefine : IStaticVariableResetter
 		return (float)1;
 	}
 
-	// Token: 0x06006B08 RID: 27400 RVA: 0x00158DC8 File Offset: 0x00156FC8
+	// Token: 0x06003E9D RID: 16029 RVA: 0x001616F0 File Offset: 0x0015F8F0
 	public static float CalculateCardRotation(int index, int totalCount)
 	{
 		if (totalCount <= 1)
@@ -218,7 +218,7 @@ public class GuessJokerDefine : IStaticVariableResetter
 		return (float)0;
 	}
 
-	// Token: 0x06006B09 RID: 27401 RVA: 0x00158E20 File Offset: 0x00157020
+	// Token: 0x06003E9E RID: 16030 RVA: 0x00161748 File Offset: 0x0015F948
 	public static string GetPokerStateName(EPokerStateType state)
 	{
 		Dictionary<EPokerStateType, string> dictionary = new Dictionary<EPokerStateType, string>
@@ -284,7 +284,7 @@ public class GuessJokerDefine : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06006B0A RID: 27402 RVA: 0x00158EE8 File Offset: 0x001570E8
+	// Token: 0x06003E9F RID: 16031 RVA: 0x00161810 File Offset: 0x0015FA10
 	public static string GetPokerIdleStateName(EPokerIdleState state)
 	{
 		Dictionary<EPokerIdleState, string> dictionary = new Dictionary<EPokerIdleState, string>
@@ -314,72 +314,72 @@ public class GuessJokerDefine : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0400313A RID: 12602
+	// Token: 0x040031D3 RID: 12755
 	public const int GUESS_JOKER_LUHESI_SKILL_ID = 151001;
 
-	// Token: 0x0400313B RID: 12603
+	// Token: 0x040031D4 RID: 12756
 	public const int GUESS_JOKER_JIABEI_SKILL_ID = 120801;
 
-	// Token: 0x0400313C RID: 12604
+	// Token: 0x040031D5 RID: 12757
 	public const int GUESS_JOKER_JINXI_SKILL_ID = 130401;
 
-	// Token: 0x0400313D RID: 12605
+	// Token: 0x040031D6 RID: 12758
 	public const int GUESS_JOKER_PLAYER_SKILL_ID = 100001;
 
-	// Token: 0x0400313E RID: 12606
+	// Token: 0x040031D7 RID: 12759
 	public const int GUESS_JOKER_JINXI_LEVEL_ID = 1010;
 
-	// Token: 0x0400313F RID: 12607
+	// Token: 0x040031D8 RID: 12760
 	public const int GUESS_JOKER_AI_CHECK_CARD_MAX_LENGTH = 3;
 
-	// Token: 0x04003140 RID: 12608
+	// Token: 0x040031D9 RID: 12761
 	public const int GUESS_JOKER_AI_CHECK_CARD_MIN_LENGTH = 1;
 
-	// Token: 0x04003141 RID: 12609
+	// Token: 0x040031DA RID: 12762
 	public const int GUESS_JOKER_CARD_CHECK_ITEM_UP_OFFSET = 200;
 
-	// Token: 0x04003142 RID: 12610
+	// Token: 0x040031DB RID: 12763
 	public const float GUESS_JOKER_CARD_DISABLE_ALPHA = 0.3f;
 
-	// Token: 0x04003143 RID: 12611
+	// Token: 0x040031DC RID: 12764
 	public const int GUESS_JOKER_AI_BECHOOSE_CARD_EMOTION_COUNT = 2;
 
-	// Token: 0x04003144 RID: 12612
+	// Token: 0x040031DD RID: 12765
 	public const float GUESS_JOKER_SKILL_PROGRESS_THRESHOLD = 0.3f;
 
-	// Token: 0x04003145 RID: 12613
+	// Token: 0x040031DE RID: 12766
 	public const int GUESS_JOKER_START_CARD_SIZE = 1;
 
-	// Token: 0x04003146 RID: 12614
+	// Token: 0x040031DF RID: 12767
 	public const int GUESS_JOKER_START_CARD_SCALE_RANGE = 0;
 
-	// Token: 0x04003147 RID: 12615
+	// Token: 0x040031E0 RID: 12768
 	public const int GUESS_JOKER_START_CARD_ROTATION = 0;
 
-	// Token: 0x04003148 RID: 12616
+	// Token: 0x040031E1 RID: 12769
 	public const int GUESS_JOKER_START_CARD_ROTATION_RANGE = 0;
 
-	// Token: 0x04003149 RID: 12617
+	// Token: 0x040031E2 RID: 12770
 	public const int GUESS_JOKER_CARD_AI_CARDS_COUNT_LIMIT = 3;
 
-	// Token: 0x0400314A RID: 12618
+	// Token: 0x040031E3 RID: 12771
 	public const int GUESS_JOKER_CARD_PLAYER_CARDS_COUNT_LIMIT_ADVANTAGE = 4;
 
-	// Token: 0x0400314B RID: 12619
+	// Token: 0x040031E4 RID: 12772
 	public const int GUESS_JOKER_CARD_AI_CARDS_COUNT_LIMIT_ADVANTAGE = 4;
 
-	// Token: 0x0400314C RID: 12620
+	// Token: 0x040031E5 RID: 12773
 	public const int GUESS_JOKER_CARD_SHOW_TIME = 1000;
 
-	// Token: 0x0400314D RID: 12621
+	// Token: 0x040031E6 RID: 12774
 	public const int GUESS_JOKER_CARD_SKILL_EXECUTE_TIME = 1500;
 
-	// Token: 0x0400314E RID: 12622
+	// Token: 0x040031E7 RID: 12775
 	public const int GUESS_JOKER_CARD_WIDTH = 240;
 
-	// Token: 0x0400314F RID: 12623
+	// Token: 0x040031E8 RID: 12776
 	private static Dictionary<EGuessJokerCardStateType, EGuessJokerCardStateType[]> GuessJokerCardStageTransitionMap;
 
-	// Token: 0x04003150 RID: 12624
+	// Token: 0x040031E9 RID: 12777
 	private static Dictionary<ECardPositionType, ICardPositionConfig> GuessJokerCardPositionConfig;
 }

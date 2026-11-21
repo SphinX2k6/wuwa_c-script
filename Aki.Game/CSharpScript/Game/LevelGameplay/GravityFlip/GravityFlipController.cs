@@ -7,13 +7,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 {
-	// Token: 0x02006E19 RID: 28185
+	// Token: 0x02005F99 RID: 24473
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class GravityFlipController : UiControllerBase
 	{
-		// Token: 0x06044B79 RID: 281465 RVA: 0x010F5F33 File Offset: 0x010F4133
+		// Token: 0x0603ACE2 RID: 240866 RVA: 0x010A046F File Offset: 0x0109E66F
 		public void OnChangeGravityDirection(EGravityDirection offsetAngle)
 		{
 			SceneItemGravityFlipComponent gravityFlipComp = GravityFlipModel.Instance.GravityFlipComp;
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			gravityFlipComp.UpdatePrefabState(false);
 		}
 
-		// Token: 0x06044B7A RID: 281466 RVA: 0x010F5F4A File Offset: 0x010F414A
+		// Token: 0x0603ACE3 RID: 240867 RVA: 0x010A0486 File Offset: 0x0109E686
 		public void ListenTeleportCompleteEvent(Action<int> callback)
 		{
 			EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 			this.TeleportCompleteCallback = callback;
 		}
 
-		// Token: 0x06044B7B RID: 281467 RVA: 0x010F5F6F File Offset: 0x010F416F
+		// Token: 0x0603ACE4 RID: 240868 RVA: 0x010A04AB File Offset: 0x0109E6AB
 		private void OnTeleportComplete(TeleportContext context = null)
 		{
 			EventSystem.Instance.Remove(EEventName.TeleportComplete, new <>f__AnonymousDelegate11<TeleportContext>(this.OnTeleportComplete));
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			teleportCompleteCallback(3);
 		}
 
-		// Token: 0x06044B7C RID: 281468 RVA: 0x010F5FA0 File Offset: 0x010F41A0
+		// Token: 0x0603ACE5 RID: 240869 RVA: 0x010A04DC File Offset: 0x0109E6DC
 		public void CancelWaitTeleport()
 		{
 			if (EventSystem.Instance.Has(EEventName.TeleportComplete, new <>f__AnonymousDelegate11<TeleportContext>(this.OnTeleportComplete)))
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			teleportCompleteCallback(3);
 		}
 
-		// Token: 0x170099F6 RID: 39414
-		// (get) Token: 0x06044B7D RID: 281469 RVA: 0x010F5FF7 File Offset: 0x010F41F7
+		// Token: 0x17006EF9 RID: 28409
+		// (get) Token: 0x0603ACE6 RID: 240870 RVA: 0x010A0533 File Offset: 0x0109E733
 		[Nullable(1)]
 		public static GravityFlipController Instance
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			}
 		}
 
-		// Token: 0x06044B7E RID: 281470 RVA: 0x010F5FFE File Offset: 0x010F41FE
+		// Token: 0x0603ACE7 RID: 240871 RVA: 0x010A053A File Offset: 0x0109E73A
 		[NullableContext(1)]
 		public static GravityFlipController GetOrCreateInstance()
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			return GravityFlipController._Instance;
 		}
 
-		// Token: 0x06044B7F RID: 281471 RVA: 0x010F6012 File Offset: 0x010F4212
+		// Token: 0x0603ACE8 RID: 240872 RVA: 0x010A054E File Offset: 0x0109E74E
 		public static bool CreateInstance()
 		{
 			if (GravityFlipController._Instance != null)
@@ -92,27 +92,27 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			return true;
 		}
 
-		// Token: 0x06044B80 RID: 281472 RVA: 0x010F6028 File Offset: 0x010F4228
+		// Token: 0x0603ACE9 RID: 240873 RVA: 0x010A0564 File Offset: 0x0109E764
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044B81 RID: 281473 RVA: 0x010F602A File Offset: 0x010F422A
+		// Token: 0x0603ACEA RID: 240874 RVA: 0x010A0566 File Offset: 0x0109E766
 		public static void ResetStaticDefaultValue()
 		{
 			GravityFlipController._Instance = null;
 		}
 
-		// Token: 0x06044B82 RID: 281474 RVA: 0x010F6032 File Offset: 0x010F4232
+		// Token: 0x0603ACEB RID: 240875 RVA: 0x010A056E File Offset: 0x0109E76E
 		static GravityFlipController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GravityFlipController.CreateStaticDefaultValue), new Action(GravityFlipController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023BEC RID: 146412
+		// Token: 0x0401EE8F RID: 126607
 		private Action<int> TeleportCompleteCallback;
 
-		// Token: 0x04023BED RID: 146413
+		// Token: 0x0401EE90 RID: 126608
 		private static GravityFlipController _Instance;
 	}
 }

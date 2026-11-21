@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x02000201 RID: 513
+	// Token: 0x02000206 RID: 518
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UrlPrefixHttpRequest
 	{
-		// Token: 0x06000D33 RID: 3379 RVA: 0x0004FF7C File Offset: 0x0004E17C
+		// Token: 0x06000D74 RID: 3444 RVA: 0x00052A68 File Offset: 0x00050C68
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -26,7 +26,7 @@ namespace CSharpScript.Launcher.Download
 			return <httpRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D34 RID: 3380 RVA: 0x0004FFC0 File Offset: 0x0004E1C0
+		// Token: 0x06000D75 RID: 3445 RVA: 0x00052AAC File Offset: 0x00050CAC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -42,7 +42,7 @@ namespace CSharpScript.Launcher.Download
 			return <HttpRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04000848 RID: 2120
+		// Token: 0x04000888 RID: 2184
 		private const float TimeOut = 3f;
 	}
 }

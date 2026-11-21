@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200615C RID: 24924
+	// Token: 0x020050DA RID: 20698
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class ShopGridSortInfo : IShopGridSortInfo
 	{
-		// Token: 0x170091B4 RID: 37300
-		// (get) Token: 0x0603EFEA RID: 258026 RVA: 0x00F37ADD File Offset: 0x00F35CDD
-		// (set) Token: 0x0603EFEB RID: 258027 RVA: 0x00F37AE5 File Offset: 0x00F35CE5
+		// Token: 0x17006516 RID: 25878
+		// (get) Token: 0x06033CAA RID: 212138 RVA: 0x00E7E9B1 File Offset: 0x00E7CBB1
+		// (set) Token: 0x06033CAB RID: 212139 RVA: 0x00E7E9B9 File Offset: 0x00E7CBB9
 		public IRoverlikeGameShopGridData Data { get; set; }
 
-		// Token: 0x170091B5 RID: 37301
-		// (get) Token: 0x0603EFEC RID: 258028 RVA: 0x00F37AEE File Offset: 0x00F35CEE
-		// (set) Token: 0x0603EFED RID: 258029 RVA: 0x00F37AF6 File Offset: 0x00F35CF6
+		// Token: 0x17006517 RID: 25879
+		// (get) Token: 0x06033CAC RID: 212140 RVA: 0x00E7E9C2 File Offset: 0x00E7CBC2
+		// (set) Token: 0x06033CAD RID: 212141 RVA: 0x00E7E9CA File Offset: 0x00E7CBCA
 		public int OriginalIndex { get; set; }
 	}
 }

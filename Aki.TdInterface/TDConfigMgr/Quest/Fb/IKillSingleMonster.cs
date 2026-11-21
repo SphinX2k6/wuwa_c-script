@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001437 RID: 5175
+	// Token: 0x0200158F RID: 5519
 	public class IKillSingleMonster
 	{
-		// Token: 0x060075A9 RID: 30121 RVA: 0x0011905D File Offset: 0x0011725D
-		[NullableContext(1)]
+		// Token: 0x06007C6E RID: 31854 RVA: 0x00127AA9 File Offset: 0x00125CA9
 		public static IKillSingleMonster Create(IKillSingleMonster? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700270E RID: 9998
-		// (get) Token: 0x060075AA RID: 30122 RVA: 0x0011907C File Offset: 0x0011727C
+		// Token: 0x170028F2 RID: 10482
+		// (get) Token: 0x06007C6F RID: 31855 RVA: 0x00127AC8 File Offset: 0x00125CC8
 		public virtual int EntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700270F RID: 9999
-		// (get) Token: 0x060075AB RID: 30123 RVA: 0x00119089 File Offset: 0x00117289
+		// Token: 0x170028F3 RID: 10483
+		// (get) Token: 0x06007C70 RID: 31856 RVA: 0x00127AD5 File Offset: 0x00125CD5
 		public virtual int AddTime
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400442D RID: 17453
+		// Token: 0x040047C1 RID: 18369
 		private IKillSingleMonster Instance;
 	}
 }

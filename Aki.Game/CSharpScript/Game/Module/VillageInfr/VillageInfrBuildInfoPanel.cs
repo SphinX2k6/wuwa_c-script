@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004871 RID: 18545
+	// Token: 0x020037E8 RID: 14312
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VillageInfrBuildInfoPanel : UiPanelBase
 	{
-		// Token: 0x06030889 RID: 198793 RVA: 0x00B45208 File Offset: 0x00B43408
+		// Token: 0x060253B5 RID: 152501 RVA: 0x00A7FFA4 File Offset: 0x00A7E1A4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,19 +37,19 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x0603088A RID: 198794 RVA: 0x00B4535C File Offset: 0x00B4355C
+		// Token: 0x060253B6 RID: 152502 RVA: 0x00A800F8 File Offset: 0x00A7E2F8
 		private InfrV2TreeBuild GetTreeConfig()
 		{
 			return VillageInfrConfig.Instance.GetInfrTreeBuild(this.SelectId).Value;
 		}
 
-		// Token: 0x0603088B RID: 198795 RVA: 0x00B45384 File Offset: 0x00B43584
+		// Token: 0x060253B7 RID: 152503 RVA: 0x00A80120 File Offset: 0x00A7E320
 		private InfrV2Level GetVillageConfig()
 		{
 			return VillageInfrConfig.Instance.GetInfrLevel(this.SelectId).Value;
 		}
 
-		// Token: 0x0603088C RID: 198796 RVA: 0x00B453AC File Offset: 0x00B435AC
+		// Token: 0x060253B8 RID: 152504 RVA: 0x00A80148 File Offset: 0x00A7E348
 		private string GetDescription()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Tree)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return "";
 		}
 
-		// Token: 0x0603088D RID: 198797 RVA: 0x00B453F0 File Offset: 0x00B435F0
+		// Token: 0x060253B9 RID: 152505 RVA: 0x00A8018C File Offset: 0x00A7E38C
 		private string GetMapTexturePath()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Tree)
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return "";
 		}
 
-		// Token: 0x0603088E RID: 198798 RVA: 0x00B45432 File Offset: 0x00B43632
+		// Token: 0x060253BA RID: 152506 RVA: 0x00A801CE File Offset: 0x00A7E3CE
 		private bool GetIsLock()
 		{
 			return this.SelectType == EVillageInfrSelectType.Tree && !VillageInfrModel.Instance.GetTreeIsUnlock(this.SelectId);
 		}
 
-		// Token: 0x0603088F RID: 198799 RVA: 0x00B45454 File Offset: 0x00B43654
+		// Token: 0x060253BB RID: 152507 RVA: 0x00A801F0 File Offset: 0x00A7E3F0
 		private void SetOpenParam()
 		{
 			IVillageInfrBuildInfoParam villageInfrBuildInfoParam = this.OpenParam as IVillageInfrBuildInfoParam;
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.SelectId = villageInfrBuildInfoParam.SelectId;
 		}
 
-		// Token: 0x06030890 RID: 198800 RVA: 0x00B45485 File Offset: 0x00B43685
+		// Token: 0x060253BC RID: 152508 RVA: 0x00A80221 File Offset: 0x00A7E421
 		private void CreateMissionList()
 		{
 			this.MissionList = new GenericLayout<VillageInfrMissionListItem, IVillageInfrBuildQuestParam>(base.GetVerticalLayout(5), () => new VillageInfrMissionListItem(), null, false, true);
 		}
 
-		// Token: 0x06030891 RID: 198801 RVA: 0x00B454BB File Offset: 0x00B436BB
+		// Token: 0x060253BD RID: 152509 RVA: 0x00A80257 File Offset: 0x00A7E457
 		private void CreateDescList()
 		{
 			this.DescList = new GenericLayout<VillageInfrBuildInfoDescItem, string>(base.GetVerticalLayout(9), () => new VillageInfrBuildInfoDescItem(), null, false, true);
 		}
 
-		// Token: 0x06030892 RID: 198802 RVA: 0x00B454F2 File Offset: 0x00B436F2
+		// Token: 0x060253BE RID: 152510 RVA: 0x00A8028E File Offset: 0x00A7E48E
 		protected override void OnStart()
 		{
 			this.SetOpenParam();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.Refresh(null);
 		}
 
-		// Token: 0x06030893 RID: 198803 RVA: 0x00B4550D File Offset: 0x00B4370D
+		// Token: 0x060253BF RID: 152511 RVA: 0x00A802A9 File Offset: 0x00A7E4A9
 		[NullableContext(2)]
 		public void Refresh(IVillageInfrBuildInfoParam param = null)
 		{
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshMissionList();
 		}
 
-		// Token: 0x06030894 RID: 198804 RVA: 0x00B45540 File Offset: 0x00B43740
+		// Token: 0x060253C0 RID: 152512 RVA: 0x00A802DC File Offset: 0x00A7E4DC
 		private void RefreshEmpty()
 		{
 			base.GetItem(0).SetUIActive(this.GetIsLock());
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x06030895 RID: 198805 RVA: 0x00B455C2 File Offset: 0x00B437C2
+		// Token: 0x060253C1 RID: 152513 RVA: 0x00A8035E File Offset: 0x00A7E55E
 		private void RefreshTitle()
 		{
 			if (this.GetIsLock())
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetText(4).ShowTextNew(this.GetDescription());
 		}
 
-		// Token: 0x06030896 RID: 198806 RVA: 0x00B455FC File Offset: 0x00B437FC
+		// Token: 0x060253C2 RID: 152514 RVA: 0x00A80398 File Offset: 0x00A7E598
 		private void RefreshMap()
 		{
 			if (this.GetIsLock())
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.SetTextureByPath(this.GetMapTexturePath(), base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x06030897 RID: 198807 RVA: 0x00B45664 File Offset: 0x00B43864
+		// Token: 0x060253C3 RID: 152515 RVA: 0x00A80400 File Offset: 0x00A7E600
 		private void RefreshMissionList()
 		{
 			if (this.GetIsLock() || this.SelectType == EVillageInfrSelectType.Village)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.MissionList.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06030898 RID: 198808 RVA: 0x00B456F0 File Offset: 0x00B438F0
+		// Token: 0x060253C4 RID: 152516 RVA: 0x00A8048C File Offset: 0x00A7E68C
 		private void RefreshDesc()
 		{
 			if (this.GetIsLock() || this.SelectType == EVillageInfrSelectType.Tree)
@@ -222,13 +222,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetItem(11).SetUIActive(true);
 		}
 
-		// Token: 0x0401A11E RID: 106782
+		// Token: 0x04014991 RID: 84369
 		private int SelectId;
 
-		// Token: 0x0401A11F RID: 106783
+		// Token: 0x04014992 RID: 84370
 		private EVillageInfrSelectType SelectType;
 
-		// Token: 0x0401A120 RID: 106784
+		// Token: 0x04014993 RID: 84371
 		[Nullable(new byte[]
 		{
 			2,
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 		})]
 		private GenericLayout<VillageInfrMissionListItem, IVillageInfrBuildQuestParam> MissionList;
 
-		// Token: 0x0401A121 RID: 106785
+		// Token: 0x04014994 RID: 84372
 		[Nullable(new byte[]
 		{
 			2,

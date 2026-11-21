@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006745 RID: 26437
+	// Token: 0x02006DC5 RID: 28101
 	public class IFaceExpressionAnimSequenceConfigT
 	{
-		// Token: 0x1700C446 RID: 50246
-		// (get) Token: 0x0602DFBF RID: 188351 RVA: 0x00648DDF File Offset: 0x00646FDF
-		// (set) Token: 0x0602DFC0 RID: 188352 RVA: 0x00648DE7 File Offset: 0x00646FE7
+		// Token: 0x1700CDFC RID: 52732
+		// (get) Token: 0x06030805 RID: 198661 RVA: 0x00696523 File Offset: 0x00694723
+		// (set) Token: 0x06030806 RID: 198662 RVA: 0x0069652B File Offset: 0x0069472B
 		public EFaceExpressionConfigType Type { get; set; }
 
-		// Token: 0x1700C447 RID: 50247
-		// (get) Token: 0x0602DFC1 RID: 188353 RVA: 0x00648DF0 File Offset: 0x00646FF0
-		// (set) Token: 0x0602DFC2 RID: 188354 RVA: 0x00648DF8 File Offset: 0x00646FF8
+		// Token: 0x1700CDFD RID: 52733
+		// (get) Token: 0x06030807 RID: 198663 RVA: 0x00696534 File Offset: 0x00694734
+		// (set) Token: 0x06030808 RID: 198664 RVA: 0x0069653C File Offset: 0x0069473C
 		public string Path { get; set; }
 
-		// Token: 0x0602DFC3 RID: 188355 RVA: 0x00648E01 File Offset: 0x00647001
+		// Token: 0x06030809 RID: 198665 RVA: 0x00696545 File Offset: 0x00694745
 		public IFaceExpressionAnimSequenceConfigT()
 		{
 			this.Type = EFaceExpressionConfigType.Morph;

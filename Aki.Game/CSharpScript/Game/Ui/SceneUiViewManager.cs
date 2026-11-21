@@ -1,27 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using CSharpScript.Game.LevelGamePlay.PianoGameplay;
 using CSharpScript.Game.Module.Plot.PlotView;
 using CSharpScript.Game.Module.Plot.PlotView.PlotSceneView;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046BF RID: 18111
+	// Token: 0x020035F0 RID: 13808
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneUiViewManager : Singleton
 	{
-		// Token: 0x0602EB6D RID: 191341 RVA: 0x00ACF980 File Offset: 0x00ACDB80
+		// Token: 0x060232B9 RID: 144057 RVA: 0x009FE2A8 File Offset: 0x009FC4A8
 		public void Init()
 		{
 			SceneUiStorage instance = SceneUiStorage.Instance;
-			ValueTuple<string, Func<SceneUiView>, string>[] array = new ValueTuple<string, Func<SceneUiView>, string>[2];
+			ValueTuple<string, Func<SceneUiView>, string>[] array = new ValueTuple<string, Func<SceneUiView>, string>[4];
 			array[0] = new ValueTuple<string, Func<SceneUiView>, string>("PlotSequenceSceneWordArtView", () => new PlotSequenceSceneWordArtView(), "UiView_MainStoryTextB");
 			array[1] = new ValueTuple<string, Func<SceneUiView>, string>("PlotSceneArtWordView", () => new PlotSceneArtWordView(), "UiView_PopupTextAMain");
+			array[2] = new ValueTuple<string, Func<SceneUiView>, string>("PianoSceneUiView", () => new PianoSceneUiView(), "UiItem_ScreenTxt");
+			array[3] = new ValueTuple<string, Func<SceneUiView>, string>("PianoSceneUiViewCover", () => new PianoSceneUiView(), "UiItem_ScreenTxtCover");
 			instance.Register(array);
 		}
 
-		// Token: 0x17007669 RID: 30313
-		// (get) Token: 0x0602EB6E RID: 191342 RVA: 0x00ACFA07 File Offset: 0x00ACDC07
+		// Token: 0x17004925 RID: 18725
+		// (get) Token: 0x060232BA RID: 144058 RVA: 0x009FE399 File Offset: 0x009FC599
 		public static SceneUiViewManager Instance
 		{
 			get
@@ -35,12 +38,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB6F RID: 191343 RVA: 0x00ACFA2A File Offset: 0x00ACDC2A
+		// Token: 0x060232BB RID: 144059 RVA: 0x009FE3BC File Offset: 0x009FC5BC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EB70 RID: 191344 RVA: 0x00ACFA2C File Offset: 0x00ACDC2C
+		// Token: 0x060232BC RID: 144060 RVA: 0x009FE3BE File Offset: 0x009FC5BE
 		public static void ResetStaticDefaultValue()
 		{
 			SceneUiViewManager instance = SceneUiViewManager._instance;
@@ -51,13 +54,13 @@ namespace CSharpScript.Game.Ui
 			SceneUiViewManager._instance = null;
 		}
 
-		// Token: 0x0602EB71 RID: 191345 RVA: 0x00ACFA45 File Offset: 0x00ACDC45
+		// Token: 0x060232BD RID: 144061 RVA: 0x009FE3D7 File Offset: 0x009FC5D7
 		static SceneUiViewManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneUiViewManager.CreateStaticDefaultValue), new Action(SceneUiViewManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040196DD RID: 104157
+		// Token: 0x04013D84 RID: 81284
 		[Nullable(2)]
 		private static SceneUiViewManager _instance;
 	}

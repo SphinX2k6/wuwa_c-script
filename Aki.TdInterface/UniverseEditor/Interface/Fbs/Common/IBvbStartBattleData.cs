@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D67 RID: 23911
+	// Token: 0x0200639E RID: 25502
 	public struct IBvbStartBattleData : IFlatbufferObject
 	{
-		// Token: 0x1700B31C RID: 45852
-		// (get) Token: 0x06028E76 RID: 167542 RVA: 0x0059E8FD File Offset: 0x0059CAFD
+		// Token: 0x1700BC7D RID: 48253
+		// (get) Token: 0x0602B4E0 RID: 177376 RVA: 0x005E736D File Offset: 0x005E556D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028E77 RID: 167543 RVA: 0x0059E90A File Offset: 0x0059CB0A
+		// Token: 0x0602B4E1 RID: 177377 RVA: 0x005E737A File Offset: 0x005E557A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028E78 RID: 167544 RVA: 0x0059E914 File Offset: 0x0059CB14
+		// Token: 0x0602B4E2 RID: 177378 RVA: 0x005E7384 File Offset: 0x005E5584
 		public static IBvbStartBattleData GetRootAsIBvbStartBattleData(ByteBuffer _bb)
 		{
 			return IBvbStartBattleData.GetRootAsIBvbStartBattleData(_bb, default(IBvbStartBattleData));
 		}
 
-		// Token: 0x06028E79 RID: 167545 RVA: 0x0059E930 File Offset: 0x0059CB30
+		// Token: 0x0602B4E3 RID: 177379 RVA: 0x005E73A0 File Offset: 0x005E55A0
 		public static IBvbStartBattleData GetRootAsIBvbStartBattleData(ByteBuffer _bb, IBvbStartBattleData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028E7A RID: 167546 RVA: 0x0059E94D File Offset: 0x0059CB4D
+		// Token: 0x0602B4E4 RID: 177380 RVA: 0x005E73BD File Offset: 0x005E55BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028E7B RID: 167547 RVA: 0x0059E95C File Offset: 0x0059CB5C
+		// Token: 0x0602B4E5 RID: 177381 RVA: 0x005E73CC File Offset: 0x005E55CC
 		public IBvbStartBattleData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B31D RID: 45853
-		// (get) Token: 0x06028E7C RID: 167548 RVA: 0x0059E96C File Offset: 0x0059CB6C
+		// Token: 0x1700BC7E RID: 48254
+		// (get) Token: 0x0602B4E6 RID: 177382 RVA: 0x005E73DC File Offset: 0x005E55DC
 		public EBvbEventName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028E7D RID: 167549 RVA: 0x0059E9A8 File Offset: 0x0059CBA8
+		// Token: 0x0602B4E7 RID: 177383 RVA: 0x005E7418 File Offset: 0x005E5618
 		public static Offset<IBvbStartBattleData> CreateIBvbStartBattleData(FlatBufferBuilder builder, EBvbEventName Type = EBvbEventName.AIEvolution)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbStartBattleData.EndIBvbStartBattleData(builder);
 		}
 
-		// Token: 0x06028E7E RID: 167550 RVA: 0x0059E9BE File Offset: 0x0059CBBE
+		// Token: 0x0602B4E8 RID: 177384 RVA: 0x005E742E File Offset: 0x005E562E
 		public static void StartIBvbStartBattleData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028E7F RID: 167551 RVA: 0x0059E9C7 File Offset: 0x0059CBC7
+		// Token: 0x0602B4E9 RID: 177385 RVA: 0x005E7437 File Offset: 0x005E5637
 		public static void AddType(FlatBufferBuilder builder, EBvbEventName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028E80 RID: 167552 RVA: 0x0059E9D2 File Offset: 0x0059CBD2
+		// Token: 0x0602B4EA RID: 177386 RVA: 0x005E7442 File Offset: 0x005E5642
 		public static Offset<IBvbStartBattleData> EndIBvbStartBattleData(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbStartBattleData>(builder.EndTable());
 		}
 
-		// Token: 0x06028E81 RID: 167553 RVA: 0x0059E9E0 File Offset: 0x0059CBE0
+		// Token: 0x0602B4EB RID: 177387 RVA: 0x005E7450 File Offset: 0x005E5650
 		public IBvbStartBattleDataT UnPack()
 		{
 			IBvbStartBattleDataT bvbStartBattleDataT = new IBvbStartBattleDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return bvbStartBattleDataT;
 		}
 
-		// Token: 0x06028E82 RID: 167554 RVA: 0x0059E9FB File Offset: 0x0059CBFB
+		// Token: 0x0602B4EC RID: 177388 RVA: 0x005E746B File Offset: 0x005E566B
 		public void UnPackTo(IBvbStartBattleDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06028E83 RID: 167555 RVA: 0x0059EA0C File Offset: 0x0059CC0C
+		// Token: 0x0602B4ED RID: 177389 RVA: 0x005E747C File Offset: 0x005E567C
 		public static Offset<IBvbStartBattleData> Pack(FlatBufferBuilder builder, IBvbStartBattleDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IBvbStartBattleData.CreateIBvbStartBattleData(builder, _o.Type);
 		}
 
-		// Token: 0x0400F732 RID: 63282
+		// Token: 0x04010484 RID: 66692
 		private Table __p;
 	}
 }

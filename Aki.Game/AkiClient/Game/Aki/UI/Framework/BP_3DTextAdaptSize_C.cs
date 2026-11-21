@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Framework
 {
-	// Token: 0x02003A07 RID: 14855
+	// Token: 0x0200305F RID: 12383
 	[UnrealObjectPath("/Game/Aki/UI/Framework/BP_3DTextAdaptSize.BP_3DTextAdaptSize_C")]
 	[UnrealStructLayout(280, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 280)]
 	public class BP_3DTextAdaptSize_C : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F1F6 RID: 127478 RVA: 0x008AB69E File Offset: 0x008A989E
+		// Token: 0x0601D661 RID: 120417 RVA: 0x008F3EC2 File Offset: 0x008F20C2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_3DTextAdaptSize_C._ClassPtr == IntPtr.Zero)
@@ -23,158 +23,157 @@ namespace AkiClient.Game.Aki.UI.Framework
 			return BP_3DTextAdaptSize_C._ClassPtr;
 		}
 
-		// Token: 0x0601F1F7 RID: 127479 RVA: 0x008AB6C4 File Offset: 0x008A98C4
+		// Token: 0x0601D662 RID: 120418 RVA: 0x008F3EE8 File Offset: 0x008F20E8
 		public BP_3DTextAdaptSize_C() : this(BuiltinUtils.AllocNativeUObject(BP_3DTextAdaptSize_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F1F8 RID: 127480 RVA: 0x008AB6EC File Offset: 0x008A98EC
+		// Token: 0x0601D663 RID: 120419 RVA: 0x008F3F10 File Offset: 0x008F2110
 		[NullableContext(1)]
 		public BP_3DTextAdaptSize_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_3DTextAdaptSize_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170029FE RID: 10750
-		// (get) Token: 0x0601F1F9 RID: 127481 RVA: 0x008AB71F File Offset: 0x008A991F
-		// (set) Token: 0x0601F1FA RID: 127482 RVA: 0x008AB733 File Offset: 0x008A9933
+		// Token: 0x17002EB7 RID: 11959
+		// (get) Token: 0x0601D664 RID: 120420 RVA: 0x008F3F43 File Offset: 0x008F2143
+		// (set) Token: 0x0601D665 RID: 120421 RVA: 0x008F3F57 File Offset: 0x008F2157
 		public unsafe FVectorDouble CurrentLocation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_CurrentLocation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_CurrentLocation) = value;
 			}
 		}
 
-		// Token: 0x170029FF RID: 10751
-		// (get) Token: 0x0601F1FB RID: 127483 RVA: 0x008AB748 File Offset: 0x008A9948
-		// (set) Token: 0x0601F1FC RID: 127484 RVA: 0x008AB75C File Offset: 0x008A995C
+		// Token: 0x17002EB8 RID: 11960
+		// (get) Token: 0x0601D666 RID: 120422 RVA: 0x008F3F6C File Offset: 0x008F216C
+		// (set) Token: 0x0601D667 RID: 120423 RVA: 0x008F3F80 File Offset: 0x008F2180
 		[Nullable(2)]
 		public unsafe UUIText UIText
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UUIText>(base.NativePtr / (IntPtr)sizeof(void*) + BP_3DTextAdaptSize_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UUIText>(base.NativePtr / (IntPtr)sizeof(void*) + BP_3DTextAdaptSize_C.__PropertyOffset_UIText);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_3DTextAdaptSize_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_3DTextAdaptSize_C.__PropertyOffset_UIText, value);
 			}
 		}
 
-		// Token: 0x17002A00 RID: 10752
-		// (get) Token: 0x0601F1FD RID: 127485 RVA: 0x008AB771 File Offset: 0x008A9971
-		// (set) Token: 0x0601F1FE RID: 127486 RVA: 0x008AB781 File Offset: 0x008A9981
+		// Token: 0x17002EB9 RID: 11961
+		// (get) Token: 0x0601D668 RID: 120424 RVA: 0x008F3F95 File Offset: 0x008F2195
+		// (set) Token: 0x0601D669 RID: 120425 RVA: 0x008F3FA5 File Offset: 0x008F21A5
 		public unsafe double TargetDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_TargetDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_TargetDistance) = value;
 			}
 		}
 
-		// Token: 0x17002A01 RID: 10753
-		// (get) Token: 0x0601F1FF RID: 127487 RVA: 0x008AB792 File Offset: 0x008A9992
-		// (set) Token: 0x0601F200 RID: 127488 RVA: 0x008AB7A2 File Offset: 0x008A99A2
+		// Token: 0x17002EBA RID: 11962
+		// (get) Token: 0x0601D66A RID: 120426 RVA: 0x008F3FB6 File Offset: 0x008F21B6
+		// (set) Token: 0x0601D66B RID: 120427 RVA: 0x008F3FC6 File Offset: 0x008F21C6
 		public unsafe float OriginalSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_OriginalSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_OriginalSize) = value;
 			}
 		}
 
-		// Token: 0x17002A02 RID: 10754
-		// (get) Token: 0x0601F201 RID: 127489 RVA: 0x008AB7B3 File Offset: 0x008A99B3
-		// (set) Token: 0x0601F202 RID: 127490 RVA: 0x008AB7C3 File Offset: 0x008A99C3
+		// Token: 0x17002EBB RID: 11963
+		// (get) Token: 0x0601D66C RID: 120428 RVA: 0x008F3FD7 File Offset: 0x008F21D7
+		// (set) Token: 0x0601D66D RID: 120429 RVA: 0x008F3FE7 File Offset: 0x008F21E7
 		public unsafe bool bSetOriginRealSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_bSetOriginRealSize) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_bSetOriginRealSize) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002A03 RID: 10755
-		// (get) Token: 0x0601F203 RID: 127491 RVA: 0x008AB7D4 File Offset: 0x008A99D4
-		// (set) Token: 0x0601F204 RID: 127492 RVA: 0x008AB7E8 File Offset: 0x008A99E8
+		// Token: 0x17002EBC RID: 11964
+		// (get) Token: 0x0601D66E RID: 120430 RVA: 0x008F3FF8 File Offset: 0x008F21F8
+		// (set) Token: 0x0601D66F RID: 120431 RVA: 0x008F400C File Offset: 0x008F220C
 		public unsafe FVector2D OriginalRealSize
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_OriginalRealSize);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_OriginalRealSize) = value;
 			}
 		}
 
-		// Token: 0x17002A04 RID: 10756
-		// (get) Token: 0x0601F205 RID: 127493 RVA: 0x008AB7FD File Offset: 0x008A99FD
-		// (set) Token: 0x0601F206 RID: 127494 RVA: 0x008AB80D File Offset: 0x008A9A0D
+		// Token: 0x17002EBD RID: 11965
+		// (get) Token: 0x0601D670 RID: 120432 RVA: 0x008F4021 File Offset: 0x008F2221
+		// (set) Token: 0x0601D671 RID: 120433 RVA: 0x008F4031 File Offset: 0x008F2231
 		public unsafe bool AdaptEnabled
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_AdaptEnabled) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_AdaptEnabled) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002A05 RID: 10757
-		// (get) Token: 0x0601F207 RID: 127495 RVA: 0x008AB81E File Offset: 0x008A9A1E
-		// (set) Token: 0x0601F208 RID: 127496 RVA: 0x008AB82E File Offset: 0x008A9A2E
+		// Token: 0x17002EBE RID: 11966
+		// (get) Token: 0x0601D672 RID: 120434 RVA: 0x008F4042 File Offset: 0x008F2242
+		// (set) Token: 0x0601D673 RID: 120435 RVA: 0x008F4052 File Offset: 0x008F2252
 		public unsafe bool Vertical
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_Vertical) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_Vertical) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17002A06 RID: 10758
-		// (get) Token: 0x0601F209 RID: 127497 RVA: 0x008AB83F File Offset: 0x008A9A3F
-		// (set) Token: 0x0601F20A RID: 127498 RVA: 0x008AB84F File Offset: 0x008A9A4F
+		// Token: 0x17002EBF RID: 11967
+		// (get) Token: 0x0601D674 RID: 120436 RVA: 0x008F4063 File Offset: 0x008F2263
+		// (set) Token: 0x0601D675 RID: 120437 RVA: 0x008F4073 File Offset: 0x008F2273
 		public unsafe float FontSizeMax
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_FontSizeMax);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_3DTextAdaptSize_C.__PropertyOffset_FontSizeMax) = value;
 			}
 		}
 
-		// Token: 0x0601F20B RID: 127499 RVA: 0x008AB860 File Offset: 0x008A9A60
+		// Token: 0x0601D676 RID: 120438 RVA: 0x008F4084 File Offset: 0x008F2284
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetAppropriateScale(ref float Result)
 		{
 			BP_3DTextAdaptSize_C.__GetAppropriateScale_FunctionParams* ptr = stackalloc BP_3DTextAdaptSize_C.__GetAppropriateScale_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(BP_3DTextAdaptSize_C.__GetAppropriateScale_FunctionParams) & -16L;
@@ -184,9 +183,8 @@ namespace AkiClient.Game.Aki.UI.Framework
 			Result = ptr->Result;
 		}
 
-		// Token: 0x0601F20C RID: 127500 RVA: 0x008AB8B0 File Offset: 0x008A9AB0
+		// Token: 0x0601D677 RID: 120439 RVA: 0x008F40D4 File Offset: 0x008F22D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void AdjustTextSize(float ToAdjustSize)
 		{
 			BP_3DTextAdaptSize_C.__AdjustTextSize_FunctionParams* ptr = stackalloc BP_3DTextAdaptSize_C.__AdjustTextSize_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(BP_3DTextAdaptSize_C.__AdjustTextSize_FunctionParams) & -16L;
@@ -195,9 +193,8 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__AdjustTextSize_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F20D RID: 127501 RVA: 0x008AB8F8 File Offset: 0x008A9AF8
+		// Token: 0x0601D678 RID: 120440 RVA: 0x008F411C File Offset: 0x008F231C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void CalculateTargetDistance(float FontSize, ref double TargetDistance)
 		{
 			BP_3DTextAdaptSize_C.__CalculateTargetDistance_FunctionParams* ptr = stackalloc BP_3DTextAdaptSize_C.__CalculateTargetDistance_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BP_3DTextAdaptSize_C.__CalculateTargetDistance_FunctionParams) & -16L;
@@ -208,9 +205,8 @@ namespace AkiClient.Game.Aki.UI.Framework
 			TargetDistance = ptr->TargetDistance;
 		}
 
-		// Token: 0x0601F20E RID: 127502 RVA: 0x008AB950 File Offset: 0x008A9B50
+		// Token: 0x0601D679 RID: 120441 RVA: 0x008F4174 File Offset: 0x008F2374
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void CalculatePower(float FontSize, ref float Power)
 		{
 			BP_3DTextAdaptSize_C.__CalculatePower_FunctionParams* ptr = stackalloc BP_3DTextAdaptSize_C.__CalculatePower_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(BP_3DTextAdaptSize_C.__CalculatePower_FunctionParams) & -16L;
@@ -221,33 +217,29 @@ namespace AkiClient.Game.Aki.UI.Framework
 			Power = ptr->Power;
 		}
 
-		// Token: 0x0601F20F RID: 127503 RVA: 0x008AB9A6 File Offset: 0x008A9BA6
+		// Token: 0x0601D67A RID: 120442 RVA: 0x008F41CA File Offset: 0x008F23CA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void RefreshOriginalInfo()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__RefreshOriginalInfo_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F210 RID: 127504 RVA: 0x008AB9BA File Offset: 0x008A9BBA
+		// Token: 0x0601D67B RID: 120443 RVA: 0x008F41DE File Offset: 0x008F23DE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F211 RID: 127505 RVA: 0x008AB9CE File Offset: 0x008A9BCE
+		// Token: 0x0601D67C RID: 120444 RVA: 0x008F41F2 File Offset: 0x008F23F2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601F212 RID: 127506 RVA: 0x008AB9E4 File Offset: 0x008A9BE4
+		// Token: 0x0601D67D RID: 120445 RVA: 0x008F4208 File Offset: 0x008F2408
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_3DTextAdaptSize_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_3DTextAdaptSize_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_3DTextAdaptSize_C.__ReceiveTick_FunctionParams) & -16L;
@@ -256,134 +248,133 @@ namespace AkiClient.Game.Aki.UI.Framework
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F213 RID: 127507 RVA: 0x008ABA2C File Offset: 0x008A9C2C
+		// Token: 0x0601D67E RID: 120446 RVA: 0x008F4250 File Offset: 0x008F2450
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_3DTextAdaptSize_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_3DTextAdaptSize_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_3DTextAdaptSize_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_3DTextAdaptSize_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_3DTextAdaptSize_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F214 RID: 127508 RVA: 0x008ABA73 File Offset: 0x008A9C73
+		// Token: 0x0601D67F RID: 120447 RVA: 0x008F4296 File Offset: 0x008F2496
 		protected BP_3DTextAdaptSize_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EE50 RID: 61008
+		// Token: 0x0400F77A RID: 63354
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/UI/Framework/BP_3DTextAdaptSize.BP_3DTextAdaptSize_C";
 
-		// Token: 0x0400EE51 RID: 61009
+		// Token: 0x0400F77B RID: 63355
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EE52 RID: 61010
+		// Token: 0x0400F77C RID: 63356
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400EE53 RID: 61011
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F77D RID: 63357
+		internal static int __PropertyOffset_CurrentLocation;
 
-		// Token: 0x0400EE54 RID: 61012
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F77E RID: 63358
+		internal static int __PropertyOffset_UIText;
 
-		// Token: 0x0400EE55 RID: 61013
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F77F RID: 63359
+		internal static int __PropertyOffset_TargetDistance;
 
-		// Token: 0x0400EE56 RID: 61014
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F780 RID: 63360
+		internal static int __PropertyOffset_OriginalSize;
 
-		// Token: 0x0400EE57 RID: 61015
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F781 RID: 63361
+		internal static int __PropertyOffset_bSetOriginRealSize;
 
-		// Token: 0x0400EE58 RID: 61016
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400F782 RID: 63362
+		internal static int __PropertyOffset_OriginalRealSize;
 
-		// Token: 0x0400EE59 RID: 61017
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400F783 RID: 63363
+		internal static int __PropertyOffset_AdaptEnabled;
 
-		// Token: 0x0400EE5A RID: 61018
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400F784 RID: 63364
+		internal static int __PropertyOffset_Vertical;
 
-		// Token: 0x0400EE5B RID: 61019
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400F785 RID: 63365
+		internal static int __PropertyOffset_FontSizeMax;
 
-		// Token: 0x0400EE5C RID: 61020
+		// Token: 0x0400F786 RID: 63366
 		private static IntPtr __GetAppropriateScale_NativeFunctionPtr;
 
-		// Token: 0x0400EE5D RID: 61021
+		// Token: 0x0400F787 RID: 63367
 		private static IntPtr __AdjustTextSize_NativeFunctionPtr;
 
-		// Token: 0x0400EE5E RID: 61022
+		// Token: 0x0400F788 RID: 63368
 		private static IntPtr __CalculateTargetDistance_NativeFunctionPtr;
 
-		// Token: 0x0400EE5F RID: 61023
+		// Token: 0x0400F789 RID: 63369
 		private static IntPtr __CalculatePower_NativeFunctionPtr;
 
-		// Token: 0x0400EE60 RID: 61024
+		// Token: 0x0400F78A RID: 63370
 		private static IntPtr __RefreshOriginalInfo_NativeFunctionPtr;
 
-		// Token: 0x0400EE61 RID: 61025
+		// Token: 0x0400F78B RID: 63371
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x0400EE62 RID: 61026
+		// Token: 0x0400F78C RID: 63372
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x02009A18 RID: 39448
+		// Token: 0x02008CCF RID: 36047
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetAppropriateScale_FunctionParams
 		{
-			// Token: 0x04030F02 RID: 200450
+			// Token: 0x0402C7E5 RID: 182245
 			[FieldOffset(0)]
 			public float Result;
 		}
 
-		// Token: 0x02009A19 RID: 39449
+		// Token: 0x02008CD0 RID: 36048
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __AdjustTextSize_FunctionParams
 		{
-			// Token: 0x04030F03 RID: 200451
+			// Token: 0x0402C7E6 RID: 182246
 			[FieldOffset(0)]
 			public float ToAdjustSize;
 		}
 
-		// Token: 0x02009A1A RID: 39450
+		// Token: 0x02008CD1 RID: 36049
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __CalculateTargetDistance_FunctionParams
 		{
-			// Token: 0x04030F04 RID: 200452
+			// Token: 0x0402C7E7 RID: 182247
 			[FieldOffset(0)]
 			public float FontSize;
 
-			// Token: 0x04030F05 RID: 200453
+			// Token: 0x0402C7E8 RID: 182248
 			[FieldOffset(8)]
 			public double TargetDistance;
 		}
 
-		// Token: 0x02009A1B RID: 39451
+		// Token: 0x02008CD2 RID: 36050
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __CalculatePower_FunctionParams
 		{
-			// Token: 0x04030F06 RID: 200454
+			// Token: 0x0402C7E9 RID: 182249
 			[FieldOffset(0)]
 			public float FontSize;
 
-			// Token: 0x04030F07 RID: 200455
+			// Token: 0x0402C7EA RID: 182250
 			[FieldOffset(4)]
 			public float Power;
 		}
 
-		// Token: 0x02009A1C RID: 39452
+		// Token: 0x02008CD3 RID: 36051
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04030F08 RID: 200456
+			// Token: 0x0402C7EB RID: 182251
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F16 RID: 7958
+	// Token: 0x02000621 RID: 1569
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.XboxInviteInfo")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FXboxInviteInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E31E RID: 123678 RVA: 0x002CE49F File Offset: 0x002CC69F
+		// Token: 0x06008941 RID: 35137 RVA: 0x000CF0CB File Offset: 0x000CD2CB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxInviteInfo._ScriptStructPtr != 0) ? FXboxInviteInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxInviteInfo", ref FXboxInviteInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x170077EA RID: 30698
-		// (get) Token: 0x0601E31F RID: 123679 RVA: 0x002CE4C3 File Offset: 0x002CC6C3
-		// (set) Token: 0x0601E320 RID: 123680 RVA: 0x002CE4D3 File Offset: 0x002CC6D3
+		// Token: 0x1700199A RID: 6554
+		// (get) Token: 0x06008942 RID: 35138 RVA: 0x000CF0EF File Offset: 0x000CD2EF
+		// (set) Token: 0x06008943 RID: 35139 RVA: 0x000CF0FF File Offset: 0x000CD2FF
 		public unsafe bool bHasInvite
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077EB RID: 30699
-		// (get) Token: 0x0601E321 RID: 123681 RVA: 0x002CE4E4 File Offset: 0x002CC6E4
-		// (set) Token: 0x0601E322 RID: 123682 RVA: 0x002CE4F8 File Offset: 0x002CC6F8
+		// Token: 0x1700199B RID: 6555
+		// (get) Token: 0x06008944 RID: 35140 RVA: 0x000CF110 File Offset: 0x000CD310
+		// (set) Token: 0x06008945 RID: 35141 RVA: 0x000CF124 File Offset: 0x000CD324
 		public unsafe string HandleId
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077EC RID: 30700
-		// (get) Token: 0x0601E323 RID: 123683 RVA: 0x002CE50D File Offset: 0x002CC70D
-		// (set) Token: 0x0601E324 RID: 123684 RVA: 0x002CE51D File Offset: 0x002CC71D
+		// Token: 0x1700199C RID: 6556
+		// (get) Token: 0x06008946 RID: 35142 RVA: 0x000CF139 File Offset: 0x000CD339
+		// (set) Token: 0x06008947 RID: 35143 RVA: 0x000CF149 File Offset: 0x000CD349
 		public unsafe long InvitedXuid
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077ED RID: 30701
-		// (get) Token: 0x0601E325 RID: 123685 RVA: 0x002CE52E File Offset: 0x002CC72E
-		// (set) Token: 0x0601E326 RID: 123686 RVA: 0x002CE53E File Offset: 0x002CC73E
+		// Token: 0x1700199D RID: 6557
+		// (get) Token: 0x06008948 RID: 35144 RVA: 0x000CF15A File Offset: 0x000CD35A
+		// (set) Token: 0x06008949 RID: 35145 RVA: 0x000CF16A File Offset: 0x000CD36A
 		public unsafe long SenderXuid
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077EE RID: 30702
-		// (get) Token: 0x0601E327 RID: 123687 RVA: 0x002CE54F File Offset: 0x002CC74F
-		// (set) Token: 0x0601E328 RID: 123688 RVA: 0x002CE563 File Offset: 0x002CC763
+		// Token: 0x1700199E RID: 6558
+		// (get) Token: 0x0600894A RID: 35146 RVA: 0x000CF17B File Offset: 0x000CD37B
+		// (set) Token: 0x0600894B RID: 35147 RVA: 0x000CF18F File Offset: 0x000CD38F
 		public unsafe string Context
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077EF RID: 30703
-		// (get) Token: 0x0601E329 RID: 123689 RVA: 0x002CE578 File Offset: 0x002CC778
-		// (set) Token: 0x0601E32A RID: 123690 RVA: 0x002CE58C File Offset: 0x002CC78C
+		// Token: 0x1700199F RID: 6559
+		// (get) Token: 0x0600894C RID: 35148 RVA: 0x000CF1A4 File Offset: 0x000CD3A4
+		// (set) Token: 0x0600894D RID: 35149 RVA: 0x000CF1B8 File Offset: 0x000CD3B8
 		public unsafe string ConnectionString
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077F0 RID: 30704
-		// (get) Token: 0x0601E32B RID: 123691 RVA: 0x002CE5A1 File Offset: 0x002CC7A1
-		// (set) Token: 0x0601E32C RID: 123692 RVA: 0x002CE5B5 File Offset: 0x002CC7B5
+		// Token: 0x170019A0 RID: 6560
+		// (get) Token: 0x0600894E RID: 35150 RVA: 0x000CF1CD File Offset: 0x000CD3CD
+		// (set) Token: 0x0600894F RID: 35151 RVA: 0x000CF1E1 File Offset: 0x000CD3E1
 		public unsafe string RawInviteUri
 		{
 			get
@@ -123,77 +123,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E32D RID: 123693 RVA: 0x002CE5CA File Offset: 0x002CC7CA
+		// Token: 0x06008950 RID: 35152 RVA: 0x000CF1F6 File Offset: 0x000CD3F6
 		public FXboxInviteInfo()
 		{
 		}
 
-		// Token: 0x0601E32E RID: 123694 RVA: 0x002CE5D2 File Offset: 0x002CC7D2
-		public FXboxInviteInfo(bool bHasInvite, string HandleId, long InvitedXuid, long SenderXuid, string Context, string ConnectionString, string RawInviteUri)
-		{
-			this.bHasInvite = bHasInvite;
-			this.HandleId = HandleId;
-			this.InvitedXuid = InvitedXuid;
-			this.SenderXuid = SenderXuid;
-			this.Context = Context;
-			this.ConnectionString = ConnectionString;
-			this.RawInviteUri = RawInviteUri;
-		}
-
-		// Token: 0x0601E32F RID: 123695 RVA: 0x002CE60F File Offset: 0x002CC80F
+		// Token: 0x06008951 RID: 35153 RVA: 0x000CF1FE File Offset: 0x000CD3FE
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxInviteInfo.StaticStruct();
 		}
 
-		// Token: 0x0601E330 RID: 123696 RVA: 0x002CE61B File Offset: 0x002CC81B
+		// Token: 0x06008952 RID: 35154 RVA: 0x000CF20A File Offset: 0x000CD40A
 		[NullableContext(2)]
 		public FXboxInviteInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E331 RID: 123697 RVA: 0x002CE625 File Offset: 0x002CC825
+		// Token: 0x06008953 RID: 35155 RVA: 0x000CF214 File Offset: 0x000CD414
 		public FXboxInviteInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E332 RID: 123698 RVA: 0x002CE630 File Offset: 0x002CC830
+		// Token: 0x06008954 RID: 35156 RVA: 0x000CF21F File Offset: 0x000CD41F
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxInviteInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0601E333 RID: 123699 RVA: 0x002CE63A File Offset: 0x002CC83A
+		// Token: 0x06008955 RID: 35157 RVA: 0x000CF229 File Offset: 0x000CD429
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxInviteInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104C7 RID: 66759
+		// Token: 0x04003B92 RID: 15250
 		public const string __ObjectPath = "/Script/KuroUtility.XboxInviteInfo";
 
-		// Token: 0x040104C8 RID: 66760
+		// Token: 0x04003B93 RID: 15251
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104C9 RID: 66761
+		// Token: 0x04003B94 RID: 15252
 		internal static int __PropertyOffset_bHasInvite;
 
-		// Token: 0x040104CA RID: 66762
+		// Token: 0x04003B95 RID: 15253
 		internal static int __PropertyOffset_HandleId;
 
-		// Token: 0x040104CB RID: 66763
+		// Token: 0x04003B96 RID: 15254
 		internal static int __PropertyOffset_InvitedXuid;
 
-		// Token: 0x040104CC RID: 66764
+		// Token: 0x04003B97 RID: 15255
 		internal static int __PropertyOffset_SenderXuid;
 
-		// Token: 0x040104CD RID: 66765
+		// Token: 0x04003B98 RID: 15256
 		internal static int __PropertyOffset_Context;
 
-		// Token: 0x040104CE RID: 66766
+		// Token: 0x04003B99 RID: 15257
 		internal static int __PropertyOffset_ConnectionString;
 
-		// Token: 0x040104CF RID: 66767
+		// Token: 0x04003B9A RID: 15258
 		internal static int __PropertyOffset_RawInviteUri;
 	}
 }

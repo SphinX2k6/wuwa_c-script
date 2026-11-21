@@ -9,10 +9,10 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058D4 RID: 22740
+	// Token: 0x020048AC RID: 18604
 	public class InstanceDungeonEntranceFlowAbyss : InstanceDungeonEntranceFlowBase
 	{
-		// Token: 0x06039C97 RID: 236695 RVA: 0x00DBA396 File Offset: 0x00DB8596
+		// Token: 0x0602EBBA RID: 191418 RVA: 0x00D092AE File Offset: 0x00D074AE
 		protected override void OnCreate()
 		{
 			base.AddStep(delegate
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			});
 		}
 
-		// Token: 0x06039C98 RID: 236696 RVA: 0x00DBA3D0 File Offset: 0x00DB85D0
+		// Token: 0x0602EBBB RID: 191419 RVA: 0x00D092E8 File Offset: 0x00D074E8
 		[NullableContext(1)]
 		private UniTask TryEnterAbyss(int insId, List<int> roleIds, int entranceId)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			return <TryEnterAbyss>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039C99 RID: 236697 RVA: 0x00DBA42B File Offset: 0x00DB862B
+		// Token: 0x0602EBBC RID: 191420 RVA: 0x00D09343 File Offset: 0x00D07543
 		protected override void OnEditBattleViewCloseCall()
 		{
 			DangoAbyssModel.Instance.SetInAbyssFlow(false);

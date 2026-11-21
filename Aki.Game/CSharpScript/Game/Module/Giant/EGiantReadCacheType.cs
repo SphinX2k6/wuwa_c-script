@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005960 RID: 22880
+	// Token: 0x02004939 RID: 18745
 	public enum EGiantReadCacheType
 	{
-		// Token: 0x0401E47B RID: 124027
+		// Token: 0x04018F18 RID: 102168
 		Access,
-		// Token: 0x0401E47C RID: 124028
+		// Token: 0x04018F19 RID: 102169
 		Node
 	}
 }

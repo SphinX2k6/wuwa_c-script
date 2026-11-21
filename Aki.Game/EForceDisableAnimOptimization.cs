@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x020032B8 RID: 12984
+// Token: 0x02002829 RID: 10281
 public enum EForceDisableAnimOptimization
 {
-	// Token: 0x0400DE96 RID: 56982
+	// Token: 0x0400E33C RID: 58172
 	Plot,
-	// Token: 0x0400DE97 RID: 56983
+	// Token: 0x0400E33D RID: 58173
 	ShowDelay,
-	// Token: 0x0400DE98 RID: 56984
+	// Token: 0x0400E33E RID: 58174
 	HideMesh,
-	// Token: 0x0400DE99 RID: 56985
+	// Token: 0x0400E33F RID: 58175
 	SpecialAction,
-	// Token: 0x0400DE9A RID: 56986
+	// Token: 0x0400E340 RID: 58176
 	Skill,
-	// Token: 0x0400DE9B RID: 56987
+	// Token: 0x0400E341 RID: 58177
 	RayTrace,
-	// Token: 0x0400DE9C RID: 56988
+	// Token: 0x0400E342 RID: 58178
 	Death,
-	// Token: 0x0400DE9D RID: 56989
+	// Token: 0x0400E343 RID: 58179
 	Driving,
-	// Token: 0x0400DE9E RID: 56990
+	// Token: 0x0400E344 RID: 58180
 	PlotShotCut
 }

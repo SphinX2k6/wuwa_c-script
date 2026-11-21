@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 {
-	// Token: 0x02003DB9 RID: 15801
+	// Token: 0x02003103 RID: 12547
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/PDA_WaterEffectConfigs.PDA_WaterEffectConfigs_C")]
 	[UnrealStructLayout(440, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 440)]
 	public class PDA_WaterEffectConfigs_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027464 RID: 160868 RVA: 0x0098CFE4 File Offset: 0x0098B1E4
+		// Token: 0x0601EB4A RID: 125770 RVA: 0x0091AFAB File Offset: 0x009191AB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PDA_WaterEffectConfigs_C._ClassPtr == IntPtr.Zero)
@@ -24,49 +24,49 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			return PDA_WaterEffectConfigs_C._ClassPtr;
 		}
 
-		// Token: 0x06027465 RID: 160869 RVA: 0x0098D008 File Offset: 0x0098B208
+		// Token: 0x0601EB4B RID: 125771 RVA: 0x0091AFD0 File Offset: 0x009191D0
 		public PDA_WaterEffectConfigs_C() : this(BuiltinUtils.AllocNativeUObject(PDA_WaterEffectConfigs_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027466 RID: 160870 RVA: 0x0098D030 File Offset: 0x0098B230
+		// Token: 0x0601EB4C RID: 125772 RVA: 0x0091AFF8 File Offset: 0x009191F8
 		public PDA_WaterEffectConfigs_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PDA_WaterEffectConfigs_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700572C RID: 22316
-		// (get) Token: 0x06027467 RID: 160871 RVA: 0x0098D063 File Offset: 0x0098B263
-		// (set) Token: 0x06027468 RID: 160872 RVA: 0x0098D073 File Offset: 0x0098B273
+		// Token: 0x17003521 RID: 13601
+		// (get) Token: 0x0601EB4D RID: 125773 RVA: 0x0091B02B File Offset: 0x0091922B
+		// (set) Token: 0x0601EB4E RID: 125774 RVA: 0x0091B03B File Offset: 0x0091923B
 		public unsafe float TimeExistAfterDead
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_TimeExistAfterDead);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_TimeExistAfterDead) = value;
 			}
 		}
 
-		// Token: 0x1700572D RID: 22317
-		// (get) Token: 0x06027469 RID: 160873 RVA: 0x0098D084 File Offset: 0x0098B284
-		// (set) Token: 0x0602746A RID: 160874 RVA: 0x0098D094 File Offset: 0x0098B294
+		// Token: 0x17003522 RID: 13602
+		// (get) Token: 0x0601EB4F RID: 125775 RVA: 0x0091B04C File Offset: 0x0091924C
+		// (set) Token: 0x0601EB50 RID: 125776 RVA: 0x0091B05C File Offset: 0x0091925C
 		public unsafe float FallJumpPositionFix
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_FallJumpPositionFix);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_FallJumpPositionFix) = value;
 			}
 		}
 
-		// Token: 0x1700572E RID: 22318
-		// (get) Token: 0x0602746B RID: 160875 RVA: 0x0098D0A8 File Offset: 0x0098B2A8
-		// (set) Token: 0x0602746C RID: 160876 RVA: 0x0098D0E1 File Offset: 0x0098B2E1
+		// Token: 0x17003523 RID: 13603
+		// (get) Token: 0x0601EB51 RID: 125777 RVA: 0x0091B070 File Offset: 0x00919270
+		// (set) Token: 0x0601EB52 RID: 125778 RVA: 0x0091B0A9 File Offset: 0x009192A9
 		public SWaterEffectSubConfig WaterEffectConfig
 		{
 			get
@@ -75,64 +75,64 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				SWaterEffectSubConfig result;
 				if ((result = this._WaterEffectConfig) == null)
 				{
-					result = (this._WaterEffectConfig = new SWaterEffectSubConfig(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_2, this));
+					result = (this._WaterEffectConfig = new SWaterEffectSubConfig(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_WaterEffectConfig, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SWaterEffectSubConfig.StaticStruct(), base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SWaterEffectSubConfig.StaticStruct(), base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_WaterEffectConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700572F RID: 22319
-		// (get) Token: 0x0602746D RID: 160877 RVA: 0x0098D102 File Offset: 0x0098B302
-		// (set) Token: 0x0602746E RID: 160878 RVA: 0x0098D117 File Offset: 0x0098B317
+		// Token: 0x17003524 RID: 13604
+		// (get) Token: 0x0601EB53 RID: 125779 RVA: 0x0091B0CA File Offset: 0x009192CA
+		// (set) Token: 0x0601EB54 RID: 125780 RVA: 0x0091B0DF File Offset: 0x009192DF
 		public TSoftObjectPtr<UEffectModelBase> SwimIdleEffectRef
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_3, this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_SwimIdleEffectRef, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_3, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_SwimIdleEffectRef, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005730 RID: 22320
-		// (get) Token: 0x0602746F RID: 160879 RVA: 0x0098D13C File Offset: 0x0098B33C
-		// (set) Token: 0x06027470 RID: 160880 RVA: 0x0098D151 File Offset: 0x0098B351
+		// Token: 0x17003525 RID: 13605
+		// (get) Token: 0x0601EB55 RID: 125781 RVA: 0x0091B104 File Offset: 0x00919304
+		// (set) Token: 0x0601EB56 RID: 125782 RVA: 0x0091B119 File Offset: 0x00919319
 		public TSoftObjectPtr<UEffectModelBase> SwimNormalEffectRef
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_4, this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_SwimNormalEffectRef, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_4, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_SwimNormalEffectRef, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005731 RID: 22321
-		// (get) Token: 0x06027471 RID: 160881 RVA: 0x0098D176 File Offset: 0x0098B376
-		// (set) Token: 0x06027472 RID: 160882 RVA: 0x0098D18B File Offset: 0x0098B38B
+		// Token: 0x17003526 RID: 13606
+		// (get) Token: 0x0601EB57 RID: 125783 RVA: 0x0091B13E File Offset: 0x0091933E
+		// (set) Token: 0x0601EB58 RID: 125784 RVA: 0x0091B153 File Offset: 0x00919353
 		public TSoftObjectPtr<UEffectModelBase> SwimFastEffectRef
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_5, this);
+				return new TSoftObjectPtr<UEffectModelBase>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_SwimFastEffectRef, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_5, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_SwimFastEffectRef, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005732 RID: 22322
-		// (get) Token: 0x06027473 RID: 160883 RVA: 0x0098D1B0 File Offset: 0x0098B3B0
-		// (set) Token: 0x06027474 RID: 160884 RVA: 0x0098D1E9 File Offset: 0x0098B3E9
+		// Token: 0x17003527 RID: 13607
+		// (get) Token: 0x0601EB59 RID: 125785 RVA: 0x0091B178 File Offset: 0x00919378
+		// (set) Token: 0x0601EB5A RID: 125786 RVA: 0x0091B1B1 File Offset: 0x009193B1
 		public TMap<UPhysicalMaterial, SWaterEffectSubConfig> MaterialEffectConfig
 		{
 			get
@@ -141,7 +141,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				TMap<UPhysicalMaterial, SWaterEffectSubConfig> result;
 				if ((result = this._MaterialEffectConfig) == null)
 				{
-					result = (this._MaterialEffectConfig = new TMap<UPhysicalMaterial, SWaterEffectSubConfig>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_6, this));
+					result = (this._MaterialEffectConfig = new TMap<UPhysicalMaterial, SWaterEffectSubConfig>(base.NativePtr + (IntPtr)PDA_WaterEffectConfigs_C.__PropertyOffset_MaterialEffectConfig, this));
 				}
 				return result;
 			}
@@ -151,46 +151,46 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			}
 		}
 
-		// Token: 0x06027475 RID: 160885 RVA: 0x0098D1F7 File Offset: 0x0098B3F7
+		// Token: 0x0601EB5B RID: 125787 RVA: 0x0091B1BF File Offset: 0x009193BF
 		protected PDA_WaterEffectConfigs_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013D14 RID: 81172
+		// Token: 0x040104BF RID: 66751
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/PDA_WaterEffectConfigs.PDA_WaterEffectConfigs_C";
 
-		// Token: 0x04013D15 RID: 81173
+		// Token: 0x040104C0 RID: 66752
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013D16 RID: 81174
+		// Token: 0x040104C1 RID: 66753
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013D17 RID: 81175
-		internal static int __PropertyOffset_0;
+		// Token: 0x040104C2 RID: 66754
+		internal static int __PropertyOffset_TimeExistAfterDead;
 
-		// Token: 0x04013D18 RID: 81176
-		internal static int __PropertyOffset_1;
+		// Token: 0x040104C3 RID: 66755
+		internal static int __PropertyOffset_FallJumpPositionFix;
 
-		// Token: 0x04013D19 RID: 81177
-		internal static int __PropertyOffset_2;
+		// Token: 0x040104C4 RID: 66756
+		internal static int __PropertyOffset_WaterEffectConfig;
 
-		// Token: 0x04013D1A RID: 81178
+		// Token: 0x040104C5 RID: 66757
 		[Nullable(2)]
 		private SWaterEffectSubConfig _WaterEffectConfig;
 
-		// Token: 0x04013D1B RID: 81179
-		internal static int __PropertyOffset_3;
+		// Token: 0x040104C6 RID: 66758
+		internal static int __PropertyOffset_SwimIdleEffectRef;
 
-		// Token: 0x04013D1C RID: 81180
-		internal static int __PropertyOffset_4;
+		// Token: 0x040104C7 RID: 66759
+		internal static int __PropertyOffset_SwimNormalEffectRef;
 
-		// Token: 0x04013D1D RID: 81181
-		internal static int __PropertyOffset_5;
+		// Token: 0x040104C8 RID: 66760
+		internal static int __PropertyOffset_SwimFastEffectRef;
 
-		// Token: 0x04013D1E RID: 81182
-		internal static int __PropertyOffset_6;
+		// Token: 0x040104C9 RID: 66761
+		internal static int __PropertyOffset_MaterialEffectConfig;
 
-		// Token: 0x04013D1F RID: 81183
+		// Token: 0x040104CA RID: 66762
 		[Nullable(new byte[]
 		{
 			2,

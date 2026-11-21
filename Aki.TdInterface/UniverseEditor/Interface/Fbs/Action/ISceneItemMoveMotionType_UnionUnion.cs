@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F3D RID: 28477
+	// Token: 0x020076C4 RID: 30404
 	public class ISceneItemMoveMotionType_UnionUnion
 	{
-		// Token: 0x1700D39F RID: 54175
-		// (get) Token: 0x060324F1 RID: 206065 RVA: 0x006CB69D File Offset: 0x006C989D
-		// (set) Token: 0x060324F2 RID: 206066 RVA: 0x006CB6A5 File Offset: 0x006C98A5
+		// Token: 0x1700DEFB RID: 57083
+		// (get) Token: 0x06035549 RID: 218441 RVA: 0x00727605 File Offset: 0x00725805
+		// (set) Token: 0x0603554A RID: 218442 RVA: 0x0072760D File Offset: 0x0072580D
 		public ISceneItemMoveMotionType_Union Type { get; set; }
 
-		// Token: 0x1700D3A0 RID: 54176
-		// (get) Token: 0x060324F3 RID: 206067 RVA: 0x006CB6AE File Offset: 0x006C98AE
-		// (set) Token: 0x060324F4 RID: 206068 RVA: 0x006CB6B6 File Offset: 0x006C98B6
+		// Token: 0x1700DEFC RID: 57084
+		// (get) Token: 0x0603554B RID: 218443 RVA: 0x00727616 File Offset: 0x00725816
+		// (set) Token: 0x0603554C RID: 218444 RVA: 0x0072761E File Offset: 0x0072581E
 		public object Value { get; set; }
 
-		// Token: 0x060324F5 RID: 206069 RVA: 0x006CB6BF File Offset: 0x006C98BF
+		// Token: 0x0603554D RID: 218445 RVA: 0x00727627 File Offset: 0x00725827
 		public ISceneItemMoveMotionType_UnionUnion()
 		{
 			this.Type = ISceneItemMoveMotionType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060324F6 RID: 206070 RVA: 0x006CB6D5 File Offset: 0x006C98D5
+		// Token: 0x0603554E RID: 218446 RVA: 0x0072763D File Offset: 0x0072583D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060324F7 RID: 206071 RVA: 0x006CB6E7 File Offset: 0x006C98E7
+		// Token: 0x0603554F RID: 218447 RVA: 0x0072764F File Offset: 0x0072584F
 		public ISceneItemMoveMotionTypeT AsISceneItemMoveMotionType()
 		{
 			return this.As<ISceneItemMoveMotionTypeT>();
 		}
 
-		// Token: 0x060324F8 RID: 206072 RVA: 0x006CB6EF File Offset: 0x006C98EF
+		// Token: 0x06035550 RID: 218448 RVA: 0x00727657 File Offset: 0x00725857
 		public static ISceneItemMoveMotionType_UnionUnion FromISceneItemMoveMotionType(ISceneItemMoveMotionTypeT _isceneitemmovemotiontype)
 		{
 			return new ISceneItemMoveMotionType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060324F9 RID: 206073 RVA: 0x006CB704 File Offset: 0x006C9904
+		// Token: 0x06035551 RID: 218449 RVA: 0x0072766C File Offset: 0x0072586C
 		public IUniformMotionT AsIUniformMotion()
 		{
 			return this.As<IUniformMotionT>();
 		}
 
-		// Token: 0x060324FA RID: 206074 RVA: 0x006CB70C File Offset: 0x006C990C
+		// Token: 0x06035552 RID: 218450 RVA: 0x00727674 File Offset: 0x00725874
 		public static ISceneItemMoveMotionType_UnionUnion FromIUniformMotion(IUniformMotionT _iuniformmotion)
 		{
 			return new ISceneItemMoveMotionType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060324FB RID: 206075 RVA: 0x006CB721 File Offset: 0x006C9921
+		// Token: 0x06035553 RID: 218451 RVA: 0x00727689 File Offset: 0x00725889
 		public IVariableMotionT AsIVariableMotion()
 		{
 			return this.As<IVariableMotionT>();
 		}
 
-		// Token: 0x060324FC RID: 206076 RVA: 0x006CB729 File Offset: 0x006C9929
+		// Token: 0x06035554 RID: 218452 RVA: 0x00727691 File Offset: 0x00725891
 		public static ISceneItemMoveMotionType_UnionUnion FromIVariableMotion(IVariableMotionT _ivariablemotion)
 		{
 			return new ISceneItemMoveMotionType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060324FD RID: 206077 RVA: 0x006CB740 File Offset: 0x006C9940
+		// Token: 0x06035555 RID: 218453 RVA: 0x007276A8 File Offset: 0x007258A8
 		public static int Pack(FlatBufferBuilder builder, ISceneItemMoveMotionType_UnionUnion _o)
 		{
 			switch (_o.Type)

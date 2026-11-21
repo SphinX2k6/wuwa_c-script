@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002844 RID: 10308
+	// Token: 0x02002B17 RID: 11031
 	public class IInteractPointConfig
 	{
-		// Token: 0x0600E487 RID: 58503 RVA: 0x0021A1F2 File Offset: 0x002183F2
-		[NullableContext(1)]
+		// Token: 0x0600F2AC RID: 62124 RVA: 0x00237056 File Offset: 0x00235256
 		public static IInteractPointConfig Create(IInteractPointConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045C1 RID: 17857
-		// (get) Token: 0x0600E488 RID: 58504 RVA: 0x0021A211 File Offset: 0x00218411
+		// Token: 0x1700492C RID: 18732
+		// (get) Token: 0x0600F2AD RID: 62125 RVA: 0x00237075 File Offset: 0x00235275
 		public virtual EInteractUnlockType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E6E RID: 32366
+		// Token: 0x0400852B RID: 34091
 		private IInteractPointConfig Instance;
 	}
 }

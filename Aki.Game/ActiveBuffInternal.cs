@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.CombatMessage;
 
-// Token: 0x02002E7E RID: 11902
+// Token: 0x020023D0 RID: 9168
 [NullableContext(1)]
 [Nullable(0)]
 public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 {
-	// Token: 0x06019721 RID: 104225 RVA: 0x00692168 File Offset: 0x00690368
+	// Token: 0x06016FF7 RID: 94199 RVA: 0x006B8524 File Offset: 0x006B6724
 	static ActiveBuffInternal()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActiveBuffInternal.CreateStaticDefaultValue), new Action(ActiveBuffInternal.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06019722 RID: 104226 RVA: 0x00692244 File Offset: 0x00690444
+	// Token: 0x06016FF8 RID: 94200 RVA: 0x006B8600 File Offset: 0x006B6800
 	private ActiveBuffInternal(BuffDefinition configInternal)
 	{
 		this.ConfigInternal = configInternal;
 	}
 
-	// Token: 0x17002300 RID: 8960
-	// (get) Token: 0x06019723 RID: 104227 RVA: 0x006922FC File Offset: 0x006904FC
+	// Token: 0x1700238B RID: 9099
+	// (get) Token: 0x06016FF9 RID: 94201 RVA: 0x006B86B8 File Offset: 0x006B68B8
 	public static List<ActiveBuffInternal> BuffPool
 	{
 		get
@@ -31,7 +31,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019724 RID: 104228 RVA: 0x00692304 File Offset: 0x00690504
+	// Token: 0x06016FFA RID: 94202 RVA: 0x006B86C0 File Offset: 0x006B68C0
 	public static ActiveBuffInternal AllocBuff(BuffDefinition config, int handle, long? instigatorId, BaseBuffComponent ownerBuffComp, int serverId, long? preMessageId, long? messageId, int level, int stackCount, float? duration, ApplyGEType applyType, long originalBuffId)
 	{
 		ActiveBuffInternal activeBuffInternal = null;
@@ -48,7 +48,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return activeBuffInternal;
 	}
 
-	// Token: 0x06019725 RID: 104229 RVA: 0x00692373 File Offset: 0x00690573
+	// Token: 0x06016FFB RID: 94203 RVA: 0x006B872F File Offset: 0x006B692F
 	public static void ReleaseBuff(ActiveBuffInternal buff)
 	{
 		if (buff.IsValid())
@@ -61,7 +61,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019726 RID: 104230 RVA: 0x006923A0 File Offset: 0x006905A0
+	// Token: 0x06016FFC RID: 94204 RVA: 0x006B875C File Offset: 0x006B695C
 	private ActiveBuffInternal Init(BuffDefinition config, int handle, long? instigatorId, BaseBuffComponent ownerBuffComp, int serverId, long? preMessageId, long? messageId, int level, int stackCount, float? duration, ApplyGEType applyType, long originalBuffId)
 	{
 		this.ConfigInternal = config;
@@ -111,7 +111,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return this;
 	}
 
-	// Token: 0x06019727 RID: 104231 RVA: 0x00692500 File Offset: 0x00690700
+	// Token: 0x06016FFD RID: 94205 RVA: 0x006B88BC File Offset: 0x006B6ABC
 	public void Destroy()
 	{
 		if (this.IsActive())
@@ -150,7 +150,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		this.StackCountInternal = 0;
 	}
 
-	// Token: 0x06019728 RID: 104232 RVA: 0x006925B8 File Offset: 0x006907B8
+	// Token: 0x06016FFE RID: 94206 RVA: 0x006B8974 File Offset: 0x006B6B74
 	public bool IsValid()
 	{
 		if (!this.PrepareToDestroy)
@@ -172,8 +172,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x17002301 RID: 8961
-	// (get) Token: 0x06019729 RID: 104233 RVA: 0x0069260A File Offset: 0x0069080A
+	// Token: 0x1700238C RID: 9100
+	// (get) Token: 0x06016FFF RID: 94207 RVA: 0x006B89C6 File Offset: 0x006B6BC6
 	public BuffDefinition Config
 	{
 		get
@@ -182,8 +182,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002302 RID: 8962
-	// (get) Token: 0x0601972A RID: 104234 RVA: 0x00692612 File Offset: 0x00690812
+	// Token: 0x1700238D RID: 9101
+	// (get) Token: 0x06017000 RID: 94208 RVA: 0x006B89CE File Offset: 0x006B6BCE
 	public int Handle
 	{
 		get
@@ -192,8 +192,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002303 RID: 8963
-	// (get) Token: 0x0601972B RID: 104235 RVA: 0x0069261A File Offset: 0x0069081A
+	// Token: 0x1700238E RID: 9102
+	// (get) Token: 0x06017001 RID: 94209 RVA: 0x006B89D6 File Offset: 0x006B6BD6
 	public long? PreMessageId
 	{
 		get
@@ -202,8 +202,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002304 RID: 8964
-	// (get) Token: 0x0601972C RID: 104236 RVA: 0x00692622 File Offset: 0x00690822
+	// Token: 0x1700238F RID: 9103
+	// (get) Token: 0x06017002 RID: 94210 RVA: 0x006B89DE File Offset: 0x006B6BDE
 	public long? MessageId
 	{
 		get
@@ -212,7 +212,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601972D RID: 104237 RVA: 0x0069262F File Offset: 0x0069082F
+	// Token: 0x06017003 RID: 94211 RVA: 0x006B89EB File Offset: 0x006B6BEB
 	[NullableContext(2)]
 	public Entity GetOwner()
 	{
@@ -224,21 +224,21 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return ownerBuffCompInternal.Entity;
 	}
 
-	// Token: 0x0601972E RID: 104238 RVA: 0x00692642 File Offset: 0x00690842
+	// Token: 0x06017004 RID: 94212 RVA: 0x006B89FE File Offset: 0x006B6BFE
 	public string GetOwnerDebugName()
 	{
 		return this.OwnerDebugName;
 	}
 
-	// Token: 0x0601972F RID: 104239 RVA: 0x0069264A File Offset: 0x0069084A
+	// Token: 0x06017005 RID: 94213 RVA: 0x006B8A06 File Offset: 0x006B6C06
 	[NullableContext(2)]
 	public IBuffComponent GetOwnerBuffComponent()
 	{
 		return this.OwnerBuffCompInternal;
 	}
 
-	// Token: 0x17002305 RID: 8965
-	// (get) Token: 0x06019730 RID: 104240 RVA: 0x00692652 File Offset: 0x00690852
+	// Token: 0x17002390 RID: 9104
+	// (get) Token: 0x06017006 RID: 94214 RVA: 0x006B8A0E File Offset: 0x006B6C0E
 	public long? InstigatorId
 	{
 		get
@@ -247,7 +247,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019731 RID: 104241 RVA: 0x00692660 File Offset: 0x00690860
+	// Token: 0x06017007 RID: 94215 RVA: 0x006B8A1C File Offset: 0x006B6C1C
 	[NullableContext(2)]
 	public Entity GetInstigator()
 	{
@@ -263,7 +263,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return entity.Entity;
 	}
 
-	// Token: 0x06019732 RID: 104242 RVA: 0x006926A4 File Offset: 0x006908A4
+	// Token: 0x06017008 RID: 94216 RVA: 0x006B8A60 File Offset: 0x006B6C60
 	[NullableContext(2)]
 	public CharacterBuffComponent GetInstigatorBuffComponent()
 	{
@@ -284,7 +284,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return entity2.GetComponent<CharacterBuffComponent>();
 	}
 
-	// Token: 0x06019733 RID: 104243 RVA: 0x006926F4 File Offset: 0x006908F4
+	// Token: 0x06017009 RID: 94217 RVA: 0x006B8AB0 File Offset: 0x006B6CB0
 	[NullableContext(2)]
 	public CharacterActorComponent GetInstigatorActorComponent()
 	{
@@ -305,7 +305,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return entity2.GetComponent<CharacterActorComponent>();
 	}
 
-	// Token: 0x06019734 RID: 104244 RVA: 0x00692744 File Offset: 0x00690944
+	// Token: 0x0601700A RID: 94218 RVA: 0x006B8B00 File Offset: 0x006B6D00
 	[NullableContext(2)]
 	public BaseAttributeComponent GetInstigatorAttributeSet()
 	{
@@ -326,7 +326,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return entity2.GetComponent<BaseAttributeComponent>();
 	}
 
-	// Token: 0x06019735 RID: 104245 RVA: 0x00692791 File Offset: 0x00690991
+	// Token: 0x0601700B RID: 94219 RVA: 0x006B8B4D File Offset: 0x006B6D4D
 	[NullableContext(2)]
 	public BaseAttributeComponent GetOwnerAttributeSet()
 	{
@@ -343,8 +343,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return entity.GetComponent<BaseAttributeComponent>();
 	}
 
-	// Token: 0x17002306 RID: 8966
-	// (get) Token: 0x06019736 RID: 104246 RVA: 0x006927AF File Offset: 0x006909AF
+	// Token: 0x17002391 RID: 9105
+	// (get) Token: 0x0601700C RID: 94220 RVA: 0x006B8B6B File Offset: 0x006B6D6B
 	public long Id
 	{
 		get
@@ -353,8 +353,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002307 RID: 8967
-	// (get) Token: 0x06019737 RID: 104247 RVA: 0x006927B7 File Offset: 0x006909B7
+	// Token: 0x17002392 RID: 9106
+	// (get) Token: 0x0601700D RID: 94221 RVA: 0x006B8B73 File Offset: 0x006B6D73
 	public int ServerId
 	{
 		get
@@ -363,8 +363,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17002308 RID: 8968
-	// (get) Token: 0x06019738 RID: 104248 RVA: 0x006927BF File Offset: 0x006909BF
+	// Token: 0x17002393 RID: 9107
+	// (get) Token: 0x0601700E RID: 94222 RVA: 0x006B8B7B File Offset: 0x006B6D7B
 	public long OriginalBuffId
 	{
 		get
@@ -373,19 +373,19 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019739 RID: 104249 RVA: 0x006927C7 File Offset: 0x006909C7
+	// Token: 0x0601700F RID: 94223 RVA: 0x006B8B83 File Offset: 0x006B6D83
 	public int? GetConfigOverrideListenerId()
 	{
 		return this.ConfigOverrideListenerId;
 	}
 
-	// Token: 0x0601973A RID: 104250 RVA: 0x006927CF File Offset: 0x006909CF
+	// Token: 0x06017010 RID: 94224 RVA: 0x006B8B8B File Offset: 0x006B6D8B
 	public void SetConfigOverrideListenerId(int listenerId)
 	{
 		this.ConfigOverrideListenerId = new int?(listenerId);
 	}
 
-	// Token: 0x0601973B RID: 104251 RVA: 0x006927E0 File Offset: 0x006909E0
+	// Token: 0x06017011 RID: 94225 RVA: 0x006B8B9C File Offset: 0x006B6D9C
 	public void OnConfigOverrideChanged()
 	{
 		BaseBuffComponent ownerBuffCompInternal = this.OwnerBuffCompInternal;
@@ -396,20 +396,20 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		ownerBuffCompInternal.RemoveBuffByHandle(this.Handle, -1, "配置覆盖条件变化", null, null, null);
 	}
 
-	// Token: 0x0601973C RID: 104252 RVA: 0x00692825 File Offset: 0x00690A25
+	// Token: 0x06017012 RID: 94226 RVA: 0x006B8BE1 File Offset: 0x006B6DE1
 	public bool IsInstantBuff()
 	{
 		return this.Config.DurationPolicy == EBuffDurationType.Instant;
 	}
 
-	// Token: 0x0601973D RID: 104253 RVA: 0x00692835 File Offset: 0x00690A35
+	// Token: 0x06017013 RID: 94227 RVA: 0x006B8BF1 File Offset: 0x006B6DF1
 	public void SetBuffTimeScale(int buffHandle, float timeScale)
 	{
 		this.BuffTimeScaleMap[buffHandle] = timeScale;
 		this.RefreshBuffTimeScale();
 	}
 
-	// Token: 0x0601973E RID: 104254 RVA: 0x0069284A File Offset: 0x00690A4A
+	// Token: 0x06017014 RID: 94228 RVA: 0x006B8C06 File Offset: 0x006B6E06
 	public void RemoveBuffTimeScale(int buffHandle)
 	{
 		if (this.BuffTimeScaleMap.ContainsKey(buffHandle))
@@ -419,7 +419,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601973F RID: 104255 RVA: 0x00692870 File Offset: 0x00690A70
+	// Token: 0x06017015 RID: 94229 RVA: 0x006B8C2C File Offset: 0x006B6E2C
 	private void RefreshBuffTimeScale()
 	{
 		float num = 1f;
@@ -438,15 +438,15 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019740 RID: 104256 RVA: 0x00692910 File Offset: 0x00690B10
+	// Token: 0x06017016 RID: 94230 RVA: 0x006B8CCC File Offset: 0x006B6ECC
 	private void ClearBuffTimeScale()
 	{
 		this.BuffTimeScale = 1f;
 		this.BuffTimeScaleMap.Clear();
 	}
 
-	// Token: 0x17002309 RID: 8969
-	// (get) Token: 0x06019741 RID: 104257 RVA: 0x00692928 File Offset: 0x00690B28
+	// Token: 0x17002394 RID: 9108
+	// (get) Token: 0x06017017 RID: 94231 RVA: 0x006B8CE4 File Offset: 0x006B6EE4
 	public float Duration
 	{
 		get
@@ -455,7 +455,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019742 RID: 104258 RVA: 0x00692930 File Offset: 0x00690B30
+	// Token: 0x06017018 RID: 94232 RVA: 0x006B8CEC File Offset: 0x006B6EEC
 	private void ClearDurationTimer()
 	{
 		if (this.DurationTimer != null)
@@ -468,7 +468,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019743 RID: 104259 RVA: 0x00692964 File Offset: 0x00690B64
+	// Token: 0x06017019 RID: 94233 RVA: 0x006B8D20 File Offset: 0x006B6F20
 	private void ResetDurationTimer(float remainingTime)
 	{
 		this.ClearDurationTimer();
@@ -486,8 +486,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700230A RID: 8970
-	// (get) Token: 0x06019744 RID: 104260 RVA: 0x00692A0F File Offset: 0x00690C0F
+	// Token: 0x17002395 RID: 9109
+	// (get) Token: 0x0601701A RID: 94234 RVA: 0x006B8DCB File Offset: 0x006B6FCB
 	public float CreateTimestamp
 	{
 		get
@@ -496,13 +496,13 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019745 RID: 104261 RVA: 0x00692A17 File Offset: 0x00690C17
+	// Token: 0x0601701B RID: 94235 RVA: 0x006B8DD3 File Offset: 0x006B6FD3
 	protected float GetCurrentTime()
 	{
 		return (float)Time.Instance.Now;
 	}
 
-	// Token: 0x06019746 RID: 104262 RVA: 0x00692A24 File Offset: 0x00690C24
+	// Token: 0x0601701C RID: 94236 RVA: 0x006B8DE0 File Offset: 0x006B6FE0
 	public unsafe void SetDuration(float? duration = null)
 	{
 		BuffDefinition config = this.Config;
@@ -598,7 +598,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		this.ResetDurationTimer(num);
 	}
 
-	// Token: 0x06019747 RID: 104263 RVA: 0x00692DB5 File Offset: 0x00690FB5
+	// Token: 0x0601701D RID: 94237 RVA: 0x006B9171 File Offset: 0x006B7371
 	public void SetRemainDuration(float remainDuration)
 	{
 		if (this.Config.DurationPolicy != EBuffDurationType.HasDuration)
@@ -608,7 +608,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		this.ResetDurationTimer((remainDuration > 0f) ? remainDuration : 0.034f);
 	}
 
-	// Token: 0x06019748 RID: 104264 RVA: 0x00692DDC File Offset: 0x00690FDC
+	// Token: 0x0601701E RID: 94238 RVA: 0x006B9198 File Offset: 0x006B7398
 	public float GetRemainDuration()
 	{
 		if (!this.IsValid())
@@ -637,7 +637,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return -1f;
 	}
 
-	// Token: 0x06019749 RID: 104265 RVA: 0x00692E7C File Offset: 0x0069107C
+	// Token: 0x0601701F RID: 94239 RVA: 0x006B9238 File Offset: 0x006B7438
 	public HashSet<int> GetOrCreateExecutionState(int index)
 	{
 		if (this.ExecutionStateData == null)
@@ -653,7 +653,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return hashSet;
 	}
 
-	// Token: 0x0601974A RID: 104266 RVA: 0x00692EC0 File Offset: 0x006910C0
+	// Token: 0x06017020 RID: 94240 RVA: 0x006B927C File Offset: 0x006B747C
 	protected void RefreshPeriodInternal()
 	{
 		this.PeriodInternal = this.Config.Period;
@@ -701,7 +701,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601974B RID: 104267 RVA: 0x00693060 File Offset: 0x00691260
+	// Token: 0x06017021 RID: 94241 RVA: 0x006B941C File Offset: 0x006B761C
 	protected bool SetPeriod()
 	{
 		this.RefreshPeriodInternal();
@@ -709,8 +709,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x1700230B RID: 8971
-	// (get) Token: 0x0601974C RID: 104268 RVA: 0x00693075 File Offset: 0x00691275
+	// Token: 0x17002396 RID: 9110
+	// (get) Token: 0x06017022 RID: 94242 RVA: 0x006B9431 File Offset: 0x006B7631
 	public float Period
 	{
 		get
@@ -719,7 +719,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601974D RID: 104269 RVA: 0x00693080 File Offset: 0x00691280
+	// Token: 0x06017023 RID: 94243 RVA: 0x006B943C File Offset: 0x006B763C
 	public void OnTimeScaleChanged(float newSpeed, bool forcePaused)
 	{
 		if (forcePaused)
@@ -776,7 +776,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601974E RID: 104270 RVA: 0x006931F0 File Offset: 0x006913F0
+	// Token: 0x06017024 RID: 94244 RVA: 0x006B95AC File Offset: 0x006B77AC
 	protected void DurationCallback(float delta)
 	{
 		if (!this.IsValid())
@@ -791,7 +791,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		ownerBuffComponent.RemoveBuffWhenTimeout(this);
 	}
 
-	// Token: 0x0601974F RID: 104271 RVA: 0x00693218 File Offset: 0x00691418
+	// Token: 0x06017025 RID: 94245 RVA: 0x006B95D4 File Offset: 0x006B77D4
 	private void ClearPeriodCallback()
 	{
 		if (this.PeriodTimer != null)
@@ -804,7 +804,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019750 RID: 104272 RVA: 0x0069324C File Offset: 0x0069144C
+	// Token: 0x06017026 RID: 94246 RVA: 0x006B9608 File Offset: 0x006B7808
 	public void ResetPeriodTimer(float remainingTime)
 	{
 		this.ClearPeriodCallback();
@@ -828,7 +828,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019751 RID: 104273 RVA: 0x006932F0 File Offset: 0x006914F0
+	// Token: 0x06017027 RID: 94247 RVA: 0x006B96AC File Offset: 0x006B78AC
 	private void PeriodCallback()
 	{
 		if (!this.IsValid())
@@ -856,7 +856,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019752 RID: 104274 RVA: 0x00693378 File Offset: 0x00691578
+	// Token: 0x06017028 RID: 94248 RVA: 0x006B9734 File Offset: 0x006B7934
 	public float? GetRemainPeriod()
 	{
 		float num = (this.GetCurrentTime() - this.PeriodUpdateTimestamp) * this.Timescale;
@@ -867,13 +867,13 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return new float?(this.LastRemainingPeriod - num / 1000f);
 	}
 
-	// Token: 0x06019753 RID: 104275 RVA: 0x006933C4 File Offset: 0x006915C4
+	// Token: 0x06017029 RID: 94249 RVA: 0x006B9780 File Offset: 0x006B7980
 	public bool IsActive()
 	{
 		return this.IsActiveInternal;
 	}
 
-	// Token: 0x06019754 RID: 104276 RVA: 0x006933CC File Offset: 0x006915CC
+	// Token: 0x0601702A RID: 94250 RVA: 0x006B9788 File Offset: 0x006B7988
 	public unsafe bool SetActivate(bool isActive)
 	{
 		if (this.IsActiveInternal == isActive)
@@ -949,8 +949,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x1700230C RID: 8972
-	// (get) Token: 0x06019755 RID: 104277 RVA: 0x00693597 File Offset: 0x00691797
+	// Token: 0x17002397 RID: 9111
+	// (get) Token: 0x0601702B RID: 94251 RVA: 0x006B9953 File Offset: 0x006B7B53
 	public int StackCount
 	{
 		get
@@ -959,7 +959,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019756 RID: 104278 RVA: 0x006935A0 File Offset: 0x006917A0
+	// Token: 0x0601702C RID: 94252 RVA: 0x006B995C File Offset: 0x006B7B5C
 	public unsafe void SetStackCount(int newStack, EBuffStackPeriodResetOverride stackPeriodResetPolicy)
 	{
 		BuffDefinition config = this.Config;
@@ -1010,8 +1010,8 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700230D RID: 8973
-	// (get) Token: 0x06019757 RID: 104279 RVA: 0x006936E9 File Offset: 0x006918E9
+	// Token: 0x17002398 RID: 9112
+	// (get) Token: 0x0601702D RID: 94253 RVA: 0x006B9AA5 File Offset: 0x006B7CA5
 	public int Level
 	{
 		get
@@ -1020,7 +1020,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019758 RID: 104280 RVA: 0x006936F4 File Offset: 0x006918F4
+	// Token: 0x0601702E RID: 94254 RVA: 0x006B9AB0 File Offset: 0x006B7CB0
 	public void ClearModifiers()
 	{
 		this.StateModifiers.Clear();
@@ -1036,7 +1036,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019759 RID: 104281 RVA: 0x0069378C File Offset: 0x0069198C
+	// Token: 0x0601702F RID: 94255 RVA: 0x006B9B48 File Offset: 0x006B7D48
 	public void ResetModifiers()
 	{
 		this.ClearModifiers();
@@ -1057,7 +1057,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601975A RID: 104282 RVA: 0x006937EC File Offset: 0x006919EC
+	// Token: 0x06017030 RID: 94256 RVA: 0x006B9BA8 File Offset: 0x006B7DA8
 	private unsafe void SetStateModifier(IBuffModifierData modifier)
 	{
 		ECalculationPolicyType ecalculationPolicyType = (ECalculationPolicyType)modifier.CalculationPolicy[0];
@@ -1092,7 +1092,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		this.StateModifiers.Add(new ValueTuple<IBuffModifierData, float?>(modifier, null));
 	}
 
-	// Token: 0x0601975B RID: 104283 RVA: 0x00693978 File Offset: 0x00691B78
+	// Token: 0x06017031 RID: 94257 RVA: 0x006B9D34 File Offset: 0x006B7F34
 	private unsafe void SetNonStateModifier(IBuffModifierData modifier)
 	{
 		int num = (this.StackCountInternal != 0) ? this.StackCountInternal : 1;
@@ -1181,7 +1181,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		this.NonStateModifierHandles.Add(new ValueTuple<int, int>((int)attributeId, item));
 	}
 
-	// Token: 0x0601975C RID: 104284 RVA: 0x00693D04 File Offset: 0x00691F04
+	// Token: 0x06017032 RID: 94258 RVA: 0x006BA0C0 File Offset: 0x006B82C0
 	public static void ModifyStateAttribute([Nullable(2)] IAttributeSet instigator, BaseAttributeComponent owner, IBuffModifierData modifier, int level, float timeDilation, int stackCount, float? snapshot = null)
 	{
 		EAttributeType attributeId = modifier.AttributeId;
@@ -1284,22 +1284,22 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601975D RID: 104285 RVA: 0x00694017 File Offset: 0x00692217
+	// Token: 0x06017033 RID: 94259 RVA: 0x006BA3D3 File Offset: 0x006B85D3
 	public static void CreateStaticDefaultValue()
 	{
 		ActiveBuffInternal._buffPool = new List<ActiveBuffInternal>();
 	}
 
-	// Token: 0x0601975E RID: 104286 RVA: 0x00694023 File Offset: 0x00692223
+	// Token: 0x06017034 RID: 94260 RVA: 0x006BA3DF File Offset: 0x006B85DF
 	public static void ResetStaticDefaultValue()
 	{
 		ActiveBuffInternal._buffPool = null;
 	}
 
-	// Token: 0x0400BD46 RID: 48454
+	// Token: 0x0400C0DD RID: 49373
 	private const int MAX_POOL_COUNT = 100;
 
-	// Token: 0x0400BD47 RID: 48455
+	// Token: 0x0400C0DE RID: 49374
 	[Nullable(new byte[]
 	{
 		2,
@@ -1307,72 +1307,72 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 	})]
 	private static List<ActiveBuffInternal> _buffPool;
 
-	// Token: 0x0400BD48 RID: 48456
+	// Token: 0x0400C0DF RID: 49375
 	private BuffDefinition ConfigInternal;
 
-	// Token: 0x0400BD49 RID: 48457
+	// Token: 0x0400C0E0 RID: 49376
 	private int HandleInternal = -1;
 
-	// Token: 0x0400BD4A RID: 48458
+	// Token: 0x0400C0E1 RID: 49377
 	private long? _preMessageId;
 
-	// Token: 0x0400BD4B RID: 48459
+	// Token: 0x0400C0E2 RID: 49378
 	private long _messageId = -1L;
 
-	// Token: 0x0400BD4C RID: 48460
+	// Token: 0x0400C0E3 RID: 49379
 	private string OwnerDebugName = "";
 
-	// Token: 0x0400BD4D RID: 48461
+	// Token: 0x0400C0E4 RID: 49380
 	[Nullable(2)]
 	private BaseBuffComponent OwnerBuffCompInternal;
 
-	// Token: 0x0400BD4E RID: 48462
+	// Token: 0x0400C0E5 RID: 49381
 	private bool RemoveBuffWhenTimeout = true;
 
-	// Token: 0x0400BD4F RID: 48463
+	// Token: 0x0400C0E6 RID: 49382
 	private long InstigatorIdInternal;
 
-	// Token: 0x0400BD50 RID: 48464
+	// Token: 0x0400C0E7 RID: 49383
 	private int ServerIdInternal = -1;
 
-	// Token: 0x0400BD51 RID: 48465
+	// Token: 0x0400C0E8 RID: 49384
 	private long OriginalBuffIdInternal;
 
-	// Token: 0x0400BD52 RID: 48466
+	// Token: 0x0400C0E9 RID: 49385
 	private int? ConfigOverrideListenerId;
 
-	// Token: 0x0400BD53 RID: 48467
+	// Token: 0x0400C0EA RID: 49386
 	protected Dictionary<int, float> BuffTimeScaleMap = new Dictionary<int, float>();
 
-	// Token: 0x0400BD54 RID: 48468
+	// Token: 0x0400C0EB RID: 49387
 	protected float BuffTimeScale = 1f;
 
-	// Token: 0x0400BD55 RID: 48469
+	// Token: 0x0400C0EC RID: 49388
 	[Nullable(2)]
 	protected TimerHandle DurationTimer;
 
-	// Token: 0x0400BD56 RID: 48470
+	// Token: 0x0400C0ED RID: 49389
 	private float DurationInternal = 1f;
 
-	// Token: 0x0400BD57 RID: 48471
+	// Token: 0x0400C0EE RID: 49390
 	private readonly Stat ResetDurationTimerStat = Stat.Create("ActiveBuff.ResetDurationTimer", "", "");
 
-	// Token: 0x0400BD58 RID: 48472
+	// Token: 0x0400C0EF RID: 49391
 	private float InnerCreateTimestamp;
 
-	// Token: 0x0400BD59 RID: 48473
+	// Token: 0x0400C0F0 RID: 49392
 	private float LastTimestamp;
 
-	// Token: 0x0400BD5A RID: 48474
+	// Token: 0x0400C0F1 RID: 49393
 	private float LastRemainingDuration;
 
-	// Token: 0x0400BD5B RID: 48475
+	// Token: 0x0400C0F2 RID: 49394
 	private float Timescale = 1f;
 
-	// Token: 0x0400BD5C RID: 48476
+	// Token: 0x0400C0F3 RID: 49395
 	private bool PrepareToDestroy;
 
-	// Token: 0x0400BD5D RID: 48477
+	// Token: 0x0400C0F4 RID: 49396
 	[Nullable(new byte[]
 	{
 		2,
@@ -1380,43 +1380,43 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 	})]
 	public Dictionary<int, HashSet<int>> ExecutionStateData;
 
-	// Token: 0x0400BD5E RID: 48478
+	// Token: 0x0400C0F5 RID: 49397
 	private float PeriodUpdateTimestamp;
 
-	// Token: 0x0400BD5F RID: 48479
+	// Token: 0x0400C0F6 RID: 49398
 	private float LastRemainingPeriod;
 
-	// Token: 0x0400BD60 RID: 48480
+	// Token: 0x0400C0F7 RID: 49399
 	protected float PeriodInternal;
 
-	// Token: 0x0400BD61 RID: 48481
+	// Token: 0x0400C0F8 RID: 49400
 	[Nullable(2)]
 	private TimerHandle PeriodTimer;
 
-	// Token: 0x0400BD62 RID: 48482
+	// Token: 0x0400C0F9 RID: 49401
 	private readonly Stat ResetPeriodTimerStat = Stat.Create("ActiveBuff.ResetPeriodTimer", "", "");
 
-	// Token: 0x0400BD63 RID: 48483
+	// Token: 0x0400C0FA RID: 49402
 	private bool IsActiveInternal;
 
-	// Token: 0x0400BD64 RID: 48484
+	// Token: 0x0400C0FB RID: 49403
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SetActivateEnableStat = Stat.Create("ActiveBuffInternal.SetActivate_Enable", "", "");
 
-	// Token: 0x0400BD65 RID: 48485
+	// Token: 0x0400C0FC RID: 49404
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SetActivateDisableStat = Stat.Create("ActiveBuffInternal.SetActivate_Disable", "", "");
 
-	// Token: 0x0400BD66 RID: 48486
+	// Token: 0x0400C0FD RID: 49405
 	protected int StackCountInternal;
 
-	// Token: 0x0400BD67 RID: 48487
+	// Token: 0x0400C0FE RID: 49406
 	public int StackLimitCount;
 
-	// Token: 0x0400BD68 RID: 48488
+	// Token: 0x0400C0FF RID: 49407
 	private int LevelInternal;
 
-	// Token: 0x0400BD69 RID: 48489
+	// Token: 0x0400C100 RID: 49408
 	[TupleElementNames(new string[]
 	{
 		"AttributeId",
@@ -1429,7 +1429,7 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 	})]
 	private readonly List<ValueTuple<int, int>> NonStateModifierHandles = new List<ValueTuple<int, int>>();
 
-	// Token: 0x0400BD6A RID: 48490
+	// Token: 0x0400C101 RID: 49409
 	[TupleElementNames(new string[]
 	{
 		"Modifier",
@@ -1443,23 +1443,23 @@ public class ActiveBuffInternal : IActiveBuff, IStaticVariableResetter
 	})]
 	public readonly List<ValueTuple<IBuffModifierData, float?>> StateModifiers = new List<ValueTuple<IBuffModifierData, float?>>();
 
-	// Token: 0x0400BD6B RID: 48491
+	// Token: 0x0400C102 RID: 49410
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ClearModifiersStat = Stat.Create("ActiveBuffInternal.ClearModifiers", "", "");
 
-	// Token: 0x0400BD6C RID: 48492
+	// Token: 0x0400C103 RID: 49411
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ResetModifiersStat = Stat.Create("ActiveBuffInternal.ResetModifiers", "", "");
 
-	// Token: 0x0400BD6D RID: 48493
+	// Token: 0x0400C104 RID: 49412
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SetStateModifiersStat = Stat.Create("ActiveBuffInternal.SetStateModifier", "", "");
 
-	// Token: 0x0400BD6E RID: 48494
+	// Token: 0x0400C105 RID: 49413
 	[StaticVariableRuleIgnore]
 	private static readonly Stat SetNonStateModifierStat = Stat.Create("ActiveBuffInternal.SetNonStateModifier", "", "");
 
-	// Token: 0x0400BD6F RID: 48495
+	// Token: 0x0400C106 RID: 49414
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ModifyStateAttributeStat = Stat.Create("ActiveBuffInternal.ModifyStateAttribute", "", "");
 }

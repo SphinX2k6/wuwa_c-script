@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005262 RID: 21090
+	// Token: 0x020057CA RID: 22474
 	public class IFishingPointAdditionalInfoT
 	{
-		// Token: 0x17009A77 RID: 39543
-		// (get) Token: 0x060224F1 RID: 140529 RVA: 0x004C1ABA File Offset: 0x004BFCBA
-		// (set) Token: 0x060224F2 RID: 140530 RVA: 0x004C1AC2 File Offset: 0x004BFCC2
+		// Token: 0x1700A273 RID: 41587
+		// (get) Token: 0x06024487 RID: 148615 RVA: 0x004FC57E File Offset: 0x004FA77E
+		// (set) Token: 0x06024488 RID: 148616 RVA: 0x004FC586 File Offset: 0x004FA786
 		public EInteractAdditionalInfoType Type { get; set; }
 
-		// Token: 0x060224F3 RID: 140531 RVA: 0x004C1ACB File Offset: 0x004BFCCB
+		// Token: 0x06024489 RID: 148617 RVA: 0x004FC58F File Offset: 0x004FA78F
 		public IFishingPointAdditionalInfoT()
 		{
 			this.Type = EInteractAdditionalInfoType.FishingPoint;

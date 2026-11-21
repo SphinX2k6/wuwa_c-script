@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A05 RID: 6661
+	// Token: 0x02001B98 RID: 7064
 	public class IEnterRandomMovieCamera_SetValue
 	{
-		// Token: 0x04005867 RID: 22631
+		// Token: 0x04005CC9 RID: 23753
 		public EMovieCameraType Type;
 
-		// Token: 0x04005868 RID: 22632
-		[Nullable(1)]
+		// Token: 0x04005CCA RID: 23754
 		public List<string> RowNames;
 	}
 }

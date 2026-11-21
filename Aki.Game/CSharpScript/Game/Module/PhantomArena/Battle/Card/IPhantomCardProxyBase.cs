@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 {
-	// Token: 0x020052B8 RID: 21176
+	// Token: 0x02004288 RID: 17032
 	public interface IPhantomCardProxyBase
 	{
 	}

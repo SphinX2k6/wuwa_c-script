@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FF6 RID: 24566
+	// Token: 0x02006654 RID: 26196
 	public enum ESetJigsawFoundationType : byte
 	{
-		// Token: 0x0400FFCA RID: 65482
+		// Token: 0x04010DA7 RID: 69031
 		SetPieceState
 	}
 }

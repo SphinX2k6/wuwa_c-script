@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D9D RID: 15773
+	// Token: 0x020041B4 RID: 16820
 	public struct ICompareActorVarInChildQuest : IFlatbufferObject
 	{
-		// Token: 0x17006C7D RID: 27773
-		// (get) Token: 0x06015E9D RID: 89757 RVA: 0x0032A036 File Offset: 0x00328236
+		// Token: 0x17007237 RID: 29239
+		// (get) Token: 0x060173D5 RID: 95189 RVA: 0x00351362 File Offset: 0x0034F562
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015E9E RID: 89758 RVA: 0x0032A043 File Offset: 0x00328243
+		// Token: 0x060173D6 RID: 95190 RVA: 0x0035136F File Offset: 0x0034F56F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015E9F RID: 89759 RVA: 0x0032A04C File Offset: 0x0032824C
+		// Token: 0x060173D7 RID: 95191 RVA: 0x00351378 File Offset: 0x0034F578
 		public static ICompareActorVarInChildQuest GetRootAsICompareActorVarInChildQuest(ByteBuffer _bb)
 		{
 			return ICompareActorVarInChildQuest.GetRootAsICompareActorVarInChildQuest(_bb, default(ICompareActorVarInChildQuest));
 		}
 
-		// Token: 0x06015EA0 RID: 89760 RVA: 0x0032A068 File Offset: 0x00328268
+		// Token: 0x060173D8 RID: 95192 RVA: 0x00351394 File Offset: 0x0034F594
 		public static ICompareActorVarInChildQuest GetRootAsICompareActorVarInChildQuest(ByteBuffer _bb, ICompareActorVarInChildQuest obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015EA1 RID: 89761 RVA: 0x0032A085 File Offset: 0x00328285
+		// Token: 0x060173D9 RID: 95193 RVA: 0x003513B1 File Offset: 0x0034F5B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015EA2 RID: 89762 RVA: 0x0032A094 File Offset: 0x00328294
+		// Token: 0x060173DA RID: 95194 RVA: 0x003513C0 File Offset: 0x0034F5C0
 		public ICompareActorVarInChildQuest __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C7E RID: 27774
-		// (get) Token: 0x06015EA3 RID: 89763 RVA: 0x0032A0A4 File Offset: 0x003282A4
+		// Token: 0x17007238 RID: 29240
+		// (get) Token: 0x060173DB RID: 95195 RVA: 0x003513D0 File Offset: 0x0034F5D0
 		public IActorRef? ActorRef
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C7F RID: 27775
-		// (get) Token: 0x06015EA4 RID: 89764 RVA: 0x0032A104 File Offset: 0x00328304
+		// Token: 0x17007239 RID: 29241
+		// (get) Token: 0x060173DC RID: 95196 RVA: 0x00351430 File Offset: 0x0034F630
 		public string Var1
 		{
 			get
@@ -80,20 +80,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EA5 RID: 89765 RVA: 0x0032A13B File Offset: 0x0032833B
+		// Token: 0x060173DD RID: 95197 RVA: 0x00351467 File Offset: 0x0034F667
 		public Span<byte> GetVar1Bytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06015EA6 RID: 89766 RVA: 0x0032A14A File Offset: 0x0032834A
+		// Token: 0x060173DE RID: 95198 RVA: 0x00351476 File Offset: 0x0034F676
 		public byte[] GetVar1Array()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17006C80 RID: 27776
-		// (get) Token: 0x06015EA7 RID: 89767 RVA: 0x0032A158 File Offset: 0x00328358
+		// Token: 0x1700723A RID: 29242
+		// (get) Token: 0x060173DF RID: 95199 RVA: 0x00351484 File Offset: 0x0034F684
 		public ECompare Compare
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C81 RID: 27777
-		// (get) Token: 0x06015EA8 RID: 89768 RVA: 0x0032A194 File Offset: 0x00328394
+		// Token: 0x1700723B RID: 29243
+		// (get) Token: 0x060173E0 RID: 95200 RVA: 0x003514C0 File Offset: 0x0034F6C0
 		public TVarRef Var2Type
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EA9 RID: 89769 RVA: 0x0032A1D4 File Offset: 0x003283D4
+		// Token: 0x060173E1 RID: 95201 RVA: 0x00351500 File Offset: 0x0034F700
 		public TTable? Var2<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -133,37 +133,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06015EAA RID: 89770 RVA: 0x0032A21C File Offset: 0x0032841C
+		// Token: 0x060173E2 RID: 95202 RVA: 0x00351548 File Offset: 0x0034F748
 		public IConstVarRef Var2AsIConstVarRef()
 		{
 			return this.Var2<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06015EAB RID: 89771 RVA: 0x0032A238 File Offset: 0x00328438
+		// Token: 0x060173E3 RID: 95203 RVA: 0x00351564 File Offset: 0x0034F764
 		public IGlobalVarRef Var2AsIGlobalVarRef()
 		{
 			return this.Var2<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06015EAC RID: 89772 RVA: 0x0032A254 File Offset: 0x00328454
+		// Token: 0x060173E4 RID: 95204 RVA: 0x00351580 File Offset: 0x0034F780
 		public IOtherVarRef Var2AsIOtherVarRef()
 		{
 			return this.Var2<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06015EAD RID: 89773 RVA: 0x0032A270 File Offset: 0x00328470
+		// Token: 0x060173E5 RID: 95205 RVA: 0x0035159C File Offset: 0x0034F79C
 		public ISelfVarRef Var2AsISelfVarRef()
 		{
 			return this.Var2<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06015EAE RID: 89774 RVA: 0x0032A28C File Offset: 0x0032848C
+		// Token: 0x060173E6 RID: 95206 RVA: 0x003515B8 File Offset: 0x0034F7B8
 		public ISystemVarRef Var2AsISystemVarRef()
 		{
 			return this.Var2<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06015EAF RID: 89775 RVA: 0x0032A2A7 File Offset: 0x003284A7
+		// Token: 0x060173E7 RID: 95207 RVA: 0x003515D3 File Offset: 0x0034F7D3
 		public static Offset<ICompareActorVarInChildQuest> CreateICompareActorVarInChildQuest(FlatBufferBuilder builder, Offset<IActorRef> ActorRefOffset = default(Offset<IActorRef>), StringOffset Var1Offset = default(StringOffset), ECompare Compare = ECompare.Eq, TVarRef Var2_type = TVarRef.NONE, int Var2Offset = 0)
 		{
 			builder.StartTable(5);
@@ -175,49 +175,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICompareActorVarInChildQuest.EndICompareActorVarInChildQuest(builder);
 		}
 
-		// Token: 0x06015EB0 RID: 89776 RVA: 0x0032A2DB File Offset: 0x003284DB
+		// Token: 0x060173E8 RID: 95208 RVA: 0x00351607 File Offset: 0x0034F807
 		public static void StartICompareActorVarInChildQuest(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06015EB1 RID: 89777 RVA: 0x0032A2E4 File Offset: 0x003284E4
+		// Token: 0x060173E9 RID: 95209 RVA: 0x00351610 File Offset: 0x0034F810
 		public static void AddActorRef(FlatBufferBuilder builder, Offset<IActorRef> actorRefOffset)
 		{
 			builder.AddOffset(0, actorRefOffset.Value, 0);
 		}
 
-		// Token: 0x06015EB2 RID: 89778 RVA: 0x0032A2F4 File Offset: 0x003284F4
+		// Token: 0x060173EA RID: 95210 RVA: 0x00351620 File Offset: 0x0034F820
 		public static void AddVar1(FlatBufferBuilder builder, StringOffset var1Offset)
 		{
 			builder.AddOffset(1, var1Offset.Value, 0);
 		}
 
-		// Token: 0x06015EB3 RID: 89779 RVA: 0x0032A304 File Offset: 0x00328504
+		// Token: 0x060173EB RID: 95211 RVA: 0x00351630 File Offset: 0x0034F830
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x06015EB4 RID: 89780 RVA: 0x0032A30F File Offset: 0x0032850F
+		// Token: 0x060173EC RID: 95212 RVA: 0x0035163B File Offset: 0x0034F83B
 		public static void AddVar2Type(FlatBufferBuilder builder, TVarRef var2Type)
 		{
 			builder.AddByte(3, (byte)var2Type, 0);
 		}
 
-		// Token: 0x06015EB5 RID: 89781 RVA: 0x0032A31A File Offset: 0x0032851A
+		// Token: 0x060173ED RID: 95213 RVA: 0x00351646 File Offset: 0x0034F846
 		public static void AddVar2(FlatBufferBuilder builder, int var2Offset)
 		{
 			builder.AddOffset(4, var2Offset, 0);
 		}
 
-		// Token: 0x06015EB6 RID: 89782 RVA: 0x0032A325 File Offset: 0x00328525
+		// Token: 0x060173EE RID: 95214 RVA: 0x00351651 File Offset: 0x0034F851
 		public static Offset<ICompareActorVarInChildQuest> EndICompareActorVarInChildQuest(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareActorVarInChildQuest>(builder.EndTable());
 		}
 
-		// Token: 0x06015EB7 RID: 89783 RVA: 0x0032A334 File Offset: 0x00328534
+		// Token: 0x060173EF RID: 95215 RVA: 0x00351660 File Offset: 0x0034F860
 		public ICompareActorVarInChildQuestT UnPack()
 		{
 			ICompareActorVarInChildQuestT compareActorVarInChildQuestT = new ICompareActorVarInChildQuestT();
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return compareActorVarInChildQuestT;
 		}
 
-		// Token: 0x06015EB8 RID: 89784 RVA: 0x0032A350 File Offset: 0x00328550
+		// Token: 0x060173F0 RID: 95216 RVA: 0x0035167C File Offset: 0x0034F87C
 		public void UnPackTo(ICompareActorVarInChildQuestT _o)
 		{
 			_o.ActorRef = ((this.ActorRef != null) ? this.ActorRef.Value.UnPack() : null);
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015EB9 RID: 89785 RVA: 0x0032A4FC File Offset: 0x003286FC
+		// Token: 0x060173F1 RID: 95217 RVA: 0x00351828 File Offset: 0x0034FA28
 		public static Offset<ICompareActorVarInChildQuest> Pack(FlatBufferBuilder builder, ICompareActorVarInChildQuestT _o)
 		{
 			if (_o == null)
@@ -269,7 +269,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICompareActorVarInChildQuest.CreateICompareActorVarInChildQuest(builder, actorRefOffset, var1Offset, _o.Compare, var2_type, var2Offset);
 		}
 
-		// Token: 0x0400B6AA RID: 46762
+		// Token: 0x0400C057 RID: 49239
 		private Table __p;
 	}
 }

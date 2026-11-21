@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D49 RID: 19785
+	// Token: 0x02005245 RID: 21061
 	public class TMusicConditionUnion
 	{
-		// Token: 0x17008F4B RID: 36683
-		// (get) Token: 0x0601F662 RID: 128610 RVA: 0x0046023E File Offset: 0x0045E43E
-		// (set) Token: 0x0601F663 RID: 128611 RVA: 0x00460246 File Offset: 0x0045E446
+		// Token: 0x17009684 RID: 38532
+		// (get) Token: 0x060212AB RID: 135851 RVA: 0x00494212 File Offset: 0x00492412
+		// (set) Token: 0x060212AC RID: 135852 RVA: 0x0049421A File Offset: 0x0049241A
 		public TMusicCondition Type { get; set; }
 
-		// Token: 0x17008F4C RID: 36684
-		// (get) Token: 0x0601F664 RID: 128612 RVA: 0x0046024F File Offset: 0x0045E44F
-		// (set) Token: 0x0601F665 RID: 128613 RVA: 0x00460257 File Offset: 0x0045E457
+		// Token: 0x17009685 RID: 38533
+		// (get) Token: 0x060212AD RID: 135853 RVA: 0x00494223 File Offset: 0x00492423
+		// (set) Token: 0x060212AE RID: 135854 RVA: 0x0049422B File Offset: 0x0049242B
 		public object Value { get; set; }
 
-		// Token: 0x0601F666 RID: 128614 RVA: 0x00460260 File Offset: 0x0045E460
+		// Token: 0x060212AF RID: 135855 RVA: 0x00494234 File Offset: 0x00492434
 		public TMusicConditionUnion()
 		{
 			this.Type = TMusicCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F667 RID: 128615 RVA: 0x00460276 File Offset: 0x0045E476
+		// Token: 0x060212B0 RID: 135856 RVA: 0x0049424A File Offset: 0x0049244A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F668 RID: 128616 RVA: 0x00460288 File Offset: 0x0045E488
+		// Token: 0x060212B1 RID: 135857 RVA: 0x0049425C File Offset: 0x0049245C
 		public ICheckFlForestMusicBeatsT AsICheckFlForestMusicBeats()
 		{
 			return this.As<ICheckFlForestMusicBeatsT>();
 		}
 
-		// Token: 0x0601F669 RID: 128617 RVA: 0x00460290 File Offset: 0x0045E490
+		// Token: 0x060212B2 RID: 135858 RVA: 0x00494264 File Offset: 0x00492464
 		public static TMusicConditionUnion FromICheckFlForestMusicBeats(ICheckFlForestMusicBeatsT _icheckflforestmusicbeats)
 		{
 			return new TMusicConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F66A RID: 128618 RVA: 0x004602A5 File Offset: 0x0045E4A5
+		// Token: 0x060212B3 RID: 135859 RVA: 0x00494279 File Offset: 0x00492479
 		public ICheckHcMusicBeatsT AsICheckHcMusicBeats()
 		{
 			return this.As<ICheckHcMusicBeatsT>();
 		}
 
-		// Token: 0x0601F66B RID: 128619 RVA: 0x004602AD File Offset: 0x0045E4AD
+		// Token: 0x060212B4 RID: 135860 RVA: 0x00494281 File Offset: 0x00492481
 		public static TMusicConditionUnion FromICheckHcMusicBeats(ICheckHcMusicBeatsT _icheckhcmusicbeats)
 		{
 			return new TMusicConditionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F66C RID: 128620 RVA: 0x004602C4 File Offset: 0x0045E4C4
+		// Token: 0x060212B5 RID: 135861 RVA: 0x00494298 File Offset: 0x00492498
 		public static int Pack(FlatBufferBuilder builder, TMusicConditionUnion _o)
 		{
 			TMusicCondition type = _o.Type;

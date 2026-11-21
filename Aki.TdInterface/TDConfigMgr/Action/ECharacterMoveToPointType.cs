@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A9 RID: 5545
+	// Token: 0x02001708 RID: 5896
 	[EnumExtensions]
 	public enum ECharacterMoveToPointType
 	{
-		// Token: 0x040049D6 RID: 18902
+		// Token: 0x04004D88 RID: 19848
 		Walk,
-		// Token: 0x040049D7 RID: 18903
+		// Token: 0x04004D89 RID: 19849
 		Adaptive
 	}
 }

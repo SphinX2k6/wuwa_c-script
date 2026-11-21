@@ -4,23 +4,23 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x02005381 RID: 21377
+	// Token: 0x02004364 RID: 17252
 	[NullableContext(2)]
 	public interface IExitMovieModeParams
 	{
-		// Token: 0x1700837B RID: 33659
-		// (get) Token: 0x060369EA RID: 223722
-		// (set) Token: 0x060369EB RID: 223723
+		// Token: 0x17005747 RID: 22343
+		// (get) Token: 0x0602B930 RID: 178480
+		// (set) Token: 0x0602B931 RID: 178481
 		float BlendTime { get; set; }
 
-		// Token: 0x1700837C RID: 33660
-		// (get) Token: 0x060369EC RID: 223724
-		// (set) Token: 0x060369ED RID: 223725
+		// Token: 0x17005748 RID: 22344
+		// (get) Token: 0x0602B932 RID: 178482
+		// (set) Token: 0x0602B933 RID: 178483
 		float? BlackFadeInTime { get; set; }
 
-		// Token: 0x1700837D RID: 33661
-		// (get) Token: 0x060369EE RID: 223726
-		// (set) Token: 0x060369EF RID: 223727
+		// Token: 0x17005749 RID: 22345
+		// (get) Token: 0x0602B934 RID: 178484
+		// (set) Token: 0x0602B935 RID: 178485
 		Func<UniTask> AfterBlackFadeInCallbackAsync { get; set; }
 	}
 }

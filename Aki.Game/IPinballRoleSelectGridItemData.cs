@@ -2,32 +2,32 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001412 RID: 5138
+// Token: 0x020008C6 RID: 2246
 [NullableContext(1)]
 public interface IPinballRoleSelectGridItemData
 {
-	// Token: 0x17000C5F RID: 3167
-	// (get) Token: 0x060090FE RID: 37118
-	// (set) Token: 0x060090FF RID: 37119
+	// Token: 0x17000C7F RID: 3199
+	// (get) Token: 0x06006493 RID: 25747
+	// (set) Token: 0x06006494 RID: 25748
 	PinballRoleDataBase RoleData { get; set; }
 
-	// Token: 0x17000C60 RID: 3168
-	// (get) Token: 0x06009100 RID: 37120
-	// (set) Token: 0x06009101 RID: 37121
+	// Token: 0x17000C80 RID: 3200
+	// (get) Token: 0x06006495 RID: 25749
+	// (set) Token: 0x06006496 RID: 25750
 	IPinballItemDataRole ItemData { get; set; }
 
-	// Token: 0x17000C61 RID: 3169
-	// (get) Token: 0x06009102 RID: 37122
-	// (set) Token: 0x06009103 RID: 37123
+	// Token: 0x17000C81 RID: 3201
+	// (get) Token: 0x06006497 RID: 25751
+	// (set) Token: 0x06006498 RID: 25752
 	List<int> ClassIdList { get; set; }
 
-	// Token: 0x17000C62 RID: 3170
-	// (get) Token: 0x06009104 RID: 37124
-	// (set) Token: 0x06009105 RID: 37125
+	// Token: 0x17000C82 RID: 3202
+	// (get) Token: 0x06006499 RID: 25753
+	// (set) Token: 0x0600649A RID: 25754
 	bool IsSelected { get; set; }
 
-	// Token: 0x17000C63 RID: 3171
-	// (get) Token: 0x06009106 RID: 37126
-	// (set) Token: 0x06009107 RID: 37127
+	// Token: 0x17000C83 RID: 3203
+	// (get) Token: 0x0600649B RID: 25755
+	// (set) Token: 0x0600649C RID: 25756
 	int FormationIndex { get; set; }
 }

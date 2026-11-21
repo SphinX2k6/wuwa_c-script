@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028DA RID: 10458
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BAF RID: 11183
 	public class IPathLineMove : ISplineMovePattern
 	{
-		// Token: 0x0600E83A RID: 59450 RVA: 0x002214E7 File Offset: 0x0021F6E7
+		// Token: 0x0600F669 RID: 63081 RVA: 0x0023E467 File Offset: 0x0023C667
 		public static IPathLineMove Create(IPathLineMove? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004848 RID: 18504
-		// (get) Token: 0x0600E83B RID: 59451 RVA: 0x00221506 File Offset: 0x0021F706
+		// Token: 0x17004BB9 RID: 19385
+		// (get) Token: 0x0600F66A RID: 63082 RVA: 0x0023E486 File Offset: 0x0023C686
 		public override ESplineMovePattern Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004849 RID: 18505
-		// (get) Token: 0x0600E83C RID: 59452 RVA: 0x00221514 File Offset: 0x0021F714
+		// Token: 0x17004BBA RID: 19386
+		// (get) Token: 0x0600F66B RID: 63083 RVA: 0x0023E494 File Offset: 0x0023C694
 		public override float? MaxOffsetDistance
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700484A RID: 18506
-		// (get) Token: 0x0600E83D RID: 59453 RVA: 0x0022154C File Offset: 0x0021F74C
+		// Token: 0x17004BBB RID: 19387
+		// (get) Token: 0x0600F66C RID: 63084 RVA: 0x0023E4CC File Offset: 0x0023C6CC
 		public override bool? IsOneWay
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700484B RID: 18507
-		// (get) Token: 0x0600E83E RID: 59454 RVA: 0x00221584 File Offset: 0x0021F784
+		// Token: 0x17004BBC RID: 19388
+		// (get) Token: 0x0600F66D RID: 63085 RVA: 0x0023E504 File Offset: 0x0023C704
 		public override float? LayerVerticalLimit
 		{
 			get
@@ -74,8 +72,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700484C RID: 18508
-		// (get) Token: 0x0600E83F RID: 59455 RVA: 0x002215BC File Offset: 0x0021F7BC
+		// Token: 0x17004BBD RID: 19389
+		// (get) Token: 0x0600F66E RID: 63086 RVA: 0x0023E53C File Offset: 0x0023C73C
 		public override bool? DynamicGravity
 		{
 			get
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700484D RID: 18509
-		// (get) Token: 0x0600E840 RID: 59456 RVA: 0x002215F4 File Offset: 0x0021F7F4
+		// Token: 0x17004BBE RID: 19390
+		// (get) Token: 0x0600F66F RID: 63087 RVA: 0x0023E574 File Offset: 0x0023C774
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -102,8 +100,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700484E RID: 18510
-		// (get) Token: 0x0600E841 RID: 59457 RVA: 0x0022162C File Offset: 0x0021F82C
+		// Token: 0x17004BBF RID: 19391
+		// (get) Token: 0x0600F670 RID: 63088 RVA: 0x0023E5AC File Offset: 0x0023C7AC
 		public override int? AutoExitDistance
 		{
 			get
@@ -116,8 +114,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700484F RID: 18511
-		// (get) Token: 0x0600E842 RID: 59458 RVA: 0x00221663 File Offset: 0x0021F863
+		// Token: 0x17004BC0 RID: 19392
+		// (get) Token: 0x0600F671 RID: 63089 RVA: 0x0023E5E3 File Offset: 0x0023C7E3
 		public virtual IPathLineFacingType FacingConfig
 		{
 			get
@@ -132,8 +130,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004850 RID: 18512
-		// (get) Token: 0x0600E843 RID: 59459 RVA: 0x00221692 File Offset: 0x0021F892
+		// Token: 0x17004BC1 RID: 19393
+		// (get) Token: 0x0600F672 RID: 63090 RVA: 0x0023E612 File Offset: 0x0023C812
 		[Nullable(2)]
 		public virtual string SplineMoveConfigDaPath
 		{
@@ -144,8 +142,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004851 RID: 18513
-		// (get) Token: 0x0600E844 RID: 59460 RVA: 0x002216A0 File Offset: 0x0021F8A0
+		// Token: 0x17004BC2 RID: 19394
+		// (get) Token: 0x0600F673 RID: 63091 RVA: 0x0023E620 File Offset: 0x0023C820
 		public virtual bool? IsAdaptiveClimbInput
 		{
 			get
@@ -158,8 +156,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004852 RID: 18514
-		// (get) Token: 0x0600E845 RID: 59461 RVA: 0x002216D8 File Offset: 0x0021F8D8
+		// Token: 0x17004BC3 RID: 19395
+		// (get) Token: 0x0600F674 RID: 63092 RVA: 0x0023E658 File Offset: 0x0023C858
 		public virtual bool? IsDisableStopAnim
 		{
 			get
@@ -172,8 +170,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004853 RID: 18515
-		// (get) Token: 0x0600E846 RID: 59462 RVA: 0x00221714 File Offset: 0x0021F914
+		// Token: 0x17004BC4 RID: 19396
+		// (get) Token: 0x0600F675 RID: 63093 RVA: 0x0023E694 File Offset: 0x0023C894
 		public virtual bool? IsAllowEarlyExitClimb
 		{
 			get
@@ -186,13 +184,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008058 RID: 32856
+		// Token: 0x04008717 RID: 34583
 		private IPathLineMove Instance;
 
-		// Token: 0x04008059 RID: 32857
+		// Token: 0x04008718 RID: 34584
 		private IPathLineFacingType _FacingConfigCache;
 
-		// Token: 0x0400805A RID: 32858
+		// Token: 0x04008719 RID: 34585
 		private bool _FacingConfigInited;
 	}
 }

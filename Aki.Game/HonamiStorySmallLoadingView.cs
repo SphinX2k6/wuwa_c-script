@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001EF2 RID: 7922
+// Token: 0x020013B4 RID: 5044
 public class HonamiStorySmallLoadingView : UiViewBase
 {
-	// Token: 0x0600F3D3 RID: 62419 RVA: 0x003AC939 File Offset: 0x003AAB39
+	// Token: 0x0600C7F2 RID: 51186 RVA: 0x003B8435 File Offset: 0x003B6635
 	[NullableContext(1)]
 	public HonamiStorySmallLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F3D4 RID: 62420 RVA: 0x003AC944 File Offset: 0x003AAB44
+	// Token: 0x0600C7F3 RID: 51187 RVA: 0x003B8440 File Offset: 0x003B6640
 	protected override void OnStart()
 	{
 		bool needOpenMainView = this.OpenParam != null;

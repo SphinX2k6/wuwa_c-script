@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x0200490C RID: 18700
+	// Token: 0x02004DA7 RID: 19879
 	public class ILoopTeleportClientPlayEffectBase_UnionUnion
 	{
-		// Token: 0x17008794 RID: 34708
-		// (get) Token: 0x0601D3B4 RID: 119732 RVA: 0x0041FA41 File Offset: 0x0041DC41
-		// (set) Token: 0x0601D3B5 RID: 119733 RVA: 0x0041FA49 File Offset: 0x0041DC49
+		// Token: 0x17008E37 RID: 36407
+		// (get) Token: 0x0601ED4D RID: 126285 RVA: 0x0044F1A1 File Offset: 0x0044D3A1
+		// (set) Token: 0x0601ED4E RID: 126286 RVA: 0x0044F1A9 File Offset: 0x0044D3A9
 		public ILoopTeleportClientPlayEffectBase_Union Type { get; set; }
 
-		// Token: 0x17008795 RID: 34709
-		// (get) Token: 0x0601D3B6 RID: 119734 RVA: 0x0041FA52 File Offset: 0x0041DC52
-		// (set) Token: 0x0601D3B7 RID: 119735 RVA: 0x0041FA5A File Offset: 0x0041DC5A
+		// Token: 0x17008E38 RID: 36408
+		// (get) Token: 0x0601ED4F RID: 126287 RVA: 0x0044F1B2 File Offset: 0x0044D3B2
+		// (set) Token: 0x0601ED50 RID: 126288 RVA: 0x0044F1BA File Offset: 0x0044D3BA
 		public object Value { get; set; }
 
-		// Token: 0x0601D3B8 RID: 119736 RVA: 0x0041FA63 File Offset: 0x0041DC63
+		// Token: 0x0601ED51 RID: 126289 RVA: 0x0044F1C3 File Offset: 0x0044D3C3
 		public ILoopTeleportClientPlayEffectBase_UnionUnion()
 		{
 			this.Type = ILoopTeleportClientPlayEffectBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601D3B9 RID: 119737 RVA: 0x0041FA79 File Offset: 0x0041DC79
+		// Token: 0x0601ED52 RID: 126290 RVA: 0x0044F1D9 File Offset: 0x0044D3D9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601D3BA RID: 119738 RVA: 0x0041FA8B File Offset: 0x0041DC8B
+		// Token: 0x0601ED53 RID: 126291 RVA: 0x0044F1EB File Offset: 0x0044D3EB
 		public ILoopTeleportClientPlayEffectBaseT AsILoopTeleportClientPlayEffectBase()
 		{
 			return this.As<ILoopTeleportClientPlayEffectBaseT>();
 		}
 
-		// Token: 0x0601D3BB RID: 119739 RVA: 0x0041FA93 File Offset: 0x0041DC93
+		// Token: 0x0601ED54 RID: 126292 RVA: 0x0044F1F3 File Offset: 0x0044D3F3
 		public static ILoopTeleportClientPlayEffectBase_UnionUnion FromILoopTeleportClientPlayEffectBase(ILoopTeleportClientPlayEffectBaseT _iloopteleportclientplayeffectbase)
 		{
 			return new ILoopTeleportClientPlayEffectBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			};
 		}
 
-		// Token: 0x0601D3BC RID: 119740 RVA: 0x0041FAA8 File Offset: 0x0041DCA8
+		// Token: 0x0601ED55 RID: 126293 RVA: 0x0044F208 File Offset: 0x0044D408
 		public ILoopTeleportClientScreenEffectT AsILoopTeleportClientScreenEffect()
 		{
 			return this.As<ILoopTeleportClientScreenEffectT>();
 		}
 
-		// Token: 0x0601D3BD RID: 119741 RVA: 0x0041FAB0 File Offset: 0x0041DCB0
+		// Token: 0x0601ED56 RID: 126294 RVA: 0x0044F210 File Offset: 0x0044D410
 		public static ILoopTeleportClientPlayEffectBase_UnionUnion FromILoopTeleportClientScreenEffect(ILoopTeleportClientScreenEffectT _iloopteleportclientscreeneffect)
 		{
 			return new ILoopTeleportClientPlayEffectBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			};
 		}
 
-		// Token: 0x0601D3BE RID: 119742 RVA: 0x0041FAC5 File Offset: 0x0041DCC5
+		// Token: 0x0601ED57 RID: 126295 RVA: 0x0044F225 File Offset: 0x0044D425
 		public ILoopTeleportClientMpcEffectT AsILoopTeleportClientMpcEffect()
 		{
 			return this.As<ILoopTeleportClientMpcEffectT>();
 		}
 
-		// Token: 0x0601D3BF RID: 119743 RVA: 0x0041FACD File Offset: 0x0041DCCD
+		// Token: 0x0601ED58 RID: 126296 RVA: 0x0044F22D File Offset: 0x0044D42D
 		public static ILoopTeleportClientPlayEffectBase_UnionUnion FromILoopTeleportClientMpcEffect(ILoopTeleportClientMpcEffectT _iloopteleportclientmpceffect)
 		{
 			return new ILoopTeleportClientPlayEffectBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			};
 		}
 
-		// Token: 0x0601D3C0 RID: 119744 RVA: 0x0041FAE4 File Offset: 0x0041DCE4
+		// Token: 0x0601ED59 RID: 126297 RVA: 0x0044F244 File Offset: 0x0044D444
 		public static int Pack(FlatBufferBuilder builder, ILoopTeleportClientPlayEffectBase_UnionUnion _o)
 		{
 			switch (_o.Type)

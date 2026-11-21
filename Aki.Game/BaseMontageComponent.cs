@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x02002E7C RID: 11900
+// Token: 0x020023CE RID: 9166
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x060196F1 RID: 104177 RVA: 0x006916C4 File Offset: 0x0068F8C4
+	// Token: 0x06016FC5 RID: 94149 RVA: 0x006B7AF0 File Offset: 0x006B5CF0
 	static BaseMontageComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseMontageComponent.CreateStaticDefaultValue), new Action(BaseMontageComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060196F2 RID: 104178 RVA: 0x006916E4 File Offset: 0x0068F8E4
+	// Token: 0x06016FC6 RID: 94150 RVA: 0x006B7B10 File Offset: 0x006B5D10
 	protected override bool OnStart()
 	{
 		if (BaseMontageComponent.AnimNotifyClass2Server == null)
@@ -44,7 +44,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060196F3 RID: 104179 RVA: 0x006917D4 File Offset: 0x0068F9D4
+	// Token: 0x06016FC7 RID: 94151 RVA: 0x006B7C00 File Offset: 0x006B5E00
 	protected override bool OnEnd()
 	{
 		this.MontageMapByName.Clear();
@@ -64,14 +64,14 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060196F4 RID: 104180 RVA: 0x006918AC File Offset: 0x0068FAAC
+	// Token: 0x06016FC8 RID: 94152 RVA: 0x006B7CD8 File Offset: 0x006B5ED8
 	[NullableContext(2)]
 	public virtual UAnimInstance GetMainAnimInstance()
 	{
 		return null;
 	}
 
-	// Token: 0x060196F5 RID: 104181 RVA: 0x006918B0 File Offset: 0x0068FAB0
+	// Token: 0x06016FC9 RID: 94153 RVA: 0x006B7CDC File Offset: 0x006B5EDC
 	[NullableContext(2)]
 	public int? CreateTaskWithName([Nullable(1)] string montageName, Action playCallback = null, Action<bool> endCallback = null, float blendInTime = -1f)
 	{
@@ -88,7 +88,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return new int?(num2);
 	}
 
-	// Token: 0x060196F6 RID: 104182 RVA: 0x00691908 File Offset: 0x0068FB08
+	// Token: 0x06016FCA RID: 94154 RVA: 0x006B7D34 File Offset: 0x006B5F34
 	[NullableContext(2)]
 	public int? CreateTaskWithMontage([Nullable(1)] UAnimMontage montage, Action playCallback = null, Action<bool> endCallback = null, float blendInTime = -1f)
 	{
@@ -105,7 +105,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return new int?(num2);
 	}
 
-	// Token: 0x060196F7 RID: 104183 RVA: 0x00691960 File Offset: 0x0068FB60
+	// Token: 0x06016FCB RID: 94155 RVA: 0x006B7D8C File Offset: 0x006B5F8C
 	public void PlayMontageTaskWhenReady(int taskHandle, float startPos, long? contextId = null, float remainedTrigger = -1f)
 	{
 		MontageTask valueOrDefault = this.MontageTaskMap.GetValueOrDefault(taskHandle);
@@ -144,7 +144,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		valueOrDefault.Play(startPos, remainedTrigger);
 	}
 
-	// Token: 0x060196F8 RID: 104184 RVA: 0x00691A78 File Offset: 0x0068FC78
+	// Token: 0x06016FCC RID: 94156 RVA: 0x006B7EA4 File Offset: 0x006B60A4
 	public void EndMontageTask(int handle)
 	{
 		MontageTask valueOrDefault = this.MontageTaskMap.GetValueOrDefault(handle);
@@ -155,7 +155,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060196F9 RID: 104185 RVA: 0x00691AA8 File Offset: 0x0068FCA8
+	// Token: 0x06016FCD RID: 94157 RVA: 0x006B7ED4 File Offset: 0x006B60D4
 	public float GetMontageTimeRemaining(int handle)
 	{
 		MontageTask valueOrDefault = this.MontageTaskMap.GetValueOrDefault(handle);
@@ -168,7 +168,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return -1f;
 	}
 
-	// Token: 0x060196FA RID: 104186 RVA: 0x00691AFC File Offset: 0x0068FCFC
+	// Token: 0x06016FCE RID: 94158 RVA: 0x006B7F28 File Offset: 0x006B6128
 	public float GetMontageTimeElapsing(int handle)
 	{
 		MontageTask valueOrDefault = this.MontageTaskMap.GetValueOrDefault(handle);
@@ -179,7 +179,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return -1f;
 	}
 
-	// Token: 0x060196FB RID: 104187 RVA: 0x00691B40 File Offset: 0x0068FD40
+	// Token: 0x06016FCF RID: 94159 RVA: 0x006B7F6C File Offset: 0x006B616C
 	public float GetMontageTimeLength(int handle)
 	{
 		MontageTask valueOrDefault = this.MontageTaskMap.GetValueOrDefault(handle);
@@ -190,7 +190,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return -1f;
 	}
 
-	// Token: 0x060196FC RID: 104188 RVA: 0x00691B7C File Offset: 0x0068FD7C
+	// Token: 0x06016FD0 RID: 94160 RVA: 0x006B7FA8 File Offset: 0x006B61A8
 	[NullableContext(2)]
 	public string GetMontageTaskNameByHandle(int handle)
 	{
@@ -202,7 +202,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x060196FD RID: 104189 RVA: 0x00691BB4 File Offset: 0x0068FDB4
+	// Token: 0x06016FD1 RID: 94161 RVA: 0x006B7FE0 File Offset: 0x006B61E0
 	[NullableContext(2)]
 	public void SetMontageTaskRemainCb(int handle, Action<float> cb = null)
 	{
@@ -220,7 +220,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060196FE RID: 104190 RVA: 0x00691C10 File Offset: 0x0068FE10
+	// Token: 0x06016FD2 RID: 94162 RVA: 0x006B803C File Offset: 0x006B623C
 	public void PushMontageInfo(MontageInfo montageInfo, UAnimMontage montage)
 	{
 		if (this.MontageInfoQueue.Size == 4)
@@ -243,7 +243,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		this.MontageInfoQueue.Push(montageInfo);
 	}
 
-	// Token: 0x060196FF RID: 104191 RVA: 0x00691CC0 File Offset: 0x0068FEC0
+	// Token: 0x06016FD3 RID: 94163 RVA: 0x006B80EC File Offset: 0x006B62EC
 	[return: Nullable(2)]
 	public MontageInfo GetMontageInfo(string montageName)
 	{
@@ -258,7 +258,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06019700 RID: 104192 RVA: 0x00691D04 File Offset: 0x0068FF04
+	// Token: 0x06016FD4 RID: 94164 RVA: 0x006B8130 File Offset: 0x006B6330
 	public virtual void AddMontage(string name, UAnimMontage montage, string path)
 	{
 		if (montage == null)
@@ -276,7 +276,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		this.MontagePathMapByName[name] = path;
 	}
 
-	// Token: 0x06019701 RID: 104193 RVA: 0x00691D5C File Offset: 0x0068FF5C
+	// Token: 0x06016FD5 RID: 94165 RVA: 0x006B8188 File Offset: 0x006B6388
 	[return: Nullable(2)]
 	public virtual UAnimMontage GetMontageByName(string name, bool includeMorphMontage = true, bool replaceMorphMontage = false)
 	{
@@ -293,7 +293,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return this.MontageMapByName.GetValueOrDefault(name);
 	}
 
-	// Token: 0x06019702 RID: 104194 RVA: 0x00691DA8 File Offset: 0x0068FFA8
+	// Token: 0x06016FD6 RID: 94166 RVA: 0x006B81D4 File Offset: 0x006B63D4
 	[return: Nullable(2)]
 	public virtual string GetMontagePathByName(string name, bool includeMorphMontage = true, bool replaceMorphMontage = false)
 	{
@@ -310,7 +310,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return this.MontagePathMapByName.GetValueOrDefault(name);
 	}
 
-	// Token: 0x06019703 RID: 104195 RVA: 0x00691DF4 File Offset: 0x0068FFF4
+	// Token: 0x06016FD7 RID: 94167 RVA: 0x006B8220 File Offset: 0x006B6420
 	public virtual bool IsMontageNeedPush2Server(string name)
 	{
 		UAnimMontage montageByName = this.GetMontageByName(name, true, false);
@@ -339,7 +339,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x06019704 RID: 104196 RVA: 0x00691E84 File Offset: 0x00690084
+	// Token: 0x06016FD8 RID: 94168 RVA: 0x006B82B0 File Offset: 0x006B64B0
 	public void AddForcePushMontage(string montageName)
 	{
 		if (this.GetMontageByName(montageName, true, false) == null)
@@ -355,7 +355,7 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		this.TaskForcePushMontageSet.Add(montageName);
 	}
 
-	// Token: 0x06019705 RID: 104197 RVA: 0x00691ED4 File Offset: 0x006900D4
+	// Token: 0x06016FD9 RID: 94169 RVA: 0x006B8300 File Offset: 0x006B6500
 	public bool RemoveForcePushMontage(string montageName)
 	{
 		if (this.GetMontageByName(montageName, true, false) == null)
@@ -381,21 +381,21 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x06019706 RID: 104198 RVA: 0x00691F4B File Offset: 0x0069014B
+	// Token: 0x06016FDA RID: 94170 RVA: 0x006B8377 File Offset: 0x006B6577
 	public static void CreateStaticDefaultValue()
 	{
 		BaseMontageComponent.AnimNotifyClass2Server = null;
 		BaseMontageComponent.RemainedTriggerOn = true;
 	}
 
-	// Token: 0x06019707 RID: 104199 RVA: 0x00691F59 File Offset: 0x00690159
+	// Token: 0x06016FDB RID: 94171 RVA: 0x006B8385 File Offset: 0x006B6585
 	public static void ResetStaticDefaultValue()
 	{
 		BaseMontageComponent.AnimNotifyClass2Server = null;
 		BaseMontageComponent.RemainedTriggerOn = true;
 	}
 
-	// Token: 0x06019708 RID: 104200 RVA: 0x00691F68 File Offset: 0x00690168
+	// Token: 0x06016FDC RID: 94172 RVA: 0x006B8394 File Offset: 0x006B6594
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -403,53 +403,67 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		BaseMontageComponent baseMontageComponent = (BaseMontageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MontageMapByName") && baseMontageComponent.MontageMapByName != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, UAnimMontage>>(this.MontageMapByName), "MontageMapByName"))
+		if (baseMontageComponent.MontageMapByName != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontageMapByName), "MontageMapByName"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MontagePathMapByName") && baseMontageComponent.MontagePathMapByName != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, string>>(this.MontagePathMapByName), "MontagePathMapByName"))
+		if (baseMontageComponent.MontagePathMapByName != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontagePathMapByName), "MontagePathMapByName"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MontageNeedPush2ServerMapByName") && baseMontageComponent.MontageNeedPush2ServerMapByName != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, bool>>(this.MontageNeedPush2ServerMapByName), "MontageNeedPush2ServerMapByName"))
+		if (baseMontageComponent.MontageNeedPush2ServerMapByName != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontageNeedPush2ServerMapByName), "MontageNeedPush2ServerMapByName"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TaskForcePushMontageSet") && baseMontageComponent.TaskForcePushMontageSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.TaskForcePushMontageSet), "TaskForcePushMontageSet"))
+		if (baseMontageComponent.TaskForcePushMontageSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.TaskForcePushMontageSet), "TaskForcePushMontageSet"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedTask") && baseMontageComponent.CachedTask != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<UAsyncTaskPlayMontageAndWait>>(this.CachedTask), "CachedTask"))
+		if (baseMontageComponent.CachedTask != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedTask), "CachedTask"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IncHandleId"))
-		{
-			this.IncHandleId = baseMontageComponent.IncHandleId;
-		}
-		if (base.CanResetComponentProperty("MontageTaskMessageId"))
-		{
-			this.MontageTaskMessageId = baseMontageComponent.MontageTaskMessageId;
-		}
-		return (!base.CanResetComponentProperty("MontageTaskMap") || baseMontageComponent.MontageTaskMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, MontageTask>>(this.MontageTaskMap), "MontageTaskMap")) && (!base.CanResetComponentProperty("MontageInfoQueue") || baseMontageComponent.MontageInfoQueue == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Queue<MontageInfo>>(this.MontageInfoQueue), "MontageInfoQueue"));
+		this.IncHandleId = baseMontageComponent.IncHandleId;
+		this.MontageTaskMessageId = baseMontageComponent.MontageTaskMessageId;
+		return (baseMontageComponent.MontageTaskMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontageTaskMap), "MontageTaskMap")) && (baseMontageComponent.MontageInfoQueue == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontageInfoQueue), "MontageInfoQueue"));
 	}
 
-	// Token: 0x0400BD3B RID: 48443
+	// Token: 0x1700237E RID: 9086
+	// (get) Token: 0x06016FDD RID: 94173 RVA: 0x006B84BA File Offset: 0x006B66BA
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700237F RID: 9087
+	// (get) Token: 0x06016FDE RID: 94174 RVA: 0x006B84BD File Offset: 0x006B66BD
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C0D2 RID: 49362
 	protected readonly Dictionary<string, UAnimMontage> MontageMapByName = new Dictionary<string, UAnimMontage>();
 
-	// Token: 0x0400BD3C RID: 48444
+	// Token: 0x0400C0D3 RID: 49363
 	protected readonly Dictionary<string, string> MontagePathMapByName = new Dictionary<string, string>();
 
-	// Token: 0x0400BD3D RID: 48445
+	// Token: 0x0400C0D4 RID: 49364
 	private readonly Dictionary<string, bool> MontageNeedPush2ServerMapByName = new Dictionary<string, bool>();
 
-	// Token: 0x0400BD3E RID: 48446
+	// Token: 0x0400C0D5 RID: 49365
 	private readonly HashSet<string> TaskForcePushMontageSet = new HashSet<string>();
 
-	// Token: 0x0400BD3F RID: 48447
+	// Token: 0x0400C0D6 RID: 49366
 	private readonly List<UAsyncTaskPlayMontageAndWait> CachedTask = new List<UAsyncTaskPlayMontageAndWait>();
 
-	// Token: 0x0400BD40 RID: 48448
+	// Token: 0x0400C0D7 RID: 49367
 	[Nullable(new byte[]
 	{
 		2,
@@ -457,18 +471,18 @@ public class BaseMontageComponent : EntityComponent, IStaticVariableResetter
 	})]
 	private static TSet<string> AnimNotifyClass2Server;
 
-	// Token: 0x0400BD41 RID: 48449
+	// Token: 0x0400C0D8 RID: 49368
 	public static bool RemainedTriggerOn;
 
-	// Token: 0x0400BD42 RID: 48450
+	// Token: 0x0400C0D9 RID: 49369
 	private int IncHandleId;
 
-	// Token: 0x0400BD43 RID: 48451
+	// Token: 0x0400C0DA RID: 49370
 	public long? MontageTaskMessageId;
 
-	// Token: 0x0400BD44 RID: 48452
+	// Token: 0x0400C0DB RID: 49371
 	private readonly Dictionary<int, MontageTask> MontageTaskMap = new Dictionary<int, MontageTask>();
 
-	// Token: 0x0400BD45 RID: 48453
+	// Token: 0x0400C0DC RID: 49372
 	private readonly Queue<MontageInfo> MontageInfoQueue = new Queue<MontageInfo>(4);
 }

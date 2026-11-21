@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D1A RID: 11546
+// Token: 0x02002274 RID: 8820
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponListComponent
 {
-	// Token: 0x06018439 RID: 99385 RVA: 0x0062C58F File Offset: 0x0062A78F
+	// Token: 0x06015CDA RID: 89306 RVA: 0x00652583 File Offset: 0x00650783
 	public void Init(UUIScrollViewWithScrollbarComponent scrollView)
 	{
 		this.ScrollView = new GenericScrollViewNew<WeaponItemSmallItemGrid, WeaponDataBase>(scrollView, new Func<WeaponItemSmallItemGrid>(this.InitWeaponItem), null, false, null);
 	}
 
-	// Token: 0x0601843A RID: 99386 RVA: 0x0062C5AC File Offset: 0x0062A7AC
+	// Token: 0x06015CDB RID: 89307 RVA: 0x006525A0 File Offset: 0x006507A0
 	protected WeaponItemSmallItemGrid InitWeaponItem()
 	{
 		WeaponItemSmallItemGrid weaponItemSmallItemGrid = new WeaponItemSmallItemGrid();
@@ -27,13 +27,13 @@ public class WeaponListComponent
 		return weaponItemSmallItemGrid;
 	}
 
-	// Token: 0x0601843B RID: 99387 RVA: 0x0062C5D7 File Offset: 0x0062A7D7
+	// Token: 0x06015CDC RID: 89308 RVA: 0x006525CB File Offset: 0x006507CB
 	public void SetWeaponChangeCallBack(Action callBack)
 	{
 		this.OnWeaponChangeCallBack = callBack;
 	}
 
-	// Token: 0x0601843C RID: 99388 RVA: 0x0062C5E0 File Offset: 0x0062A7E0
+	// Token: 0x06015CDD RID: 89309 RVA: 0x006525D4 File Offset: 0x006507D4
 	public UniTask UpdateDataList(List<WeaponDataBase> dataList)
 	{
 		WeaponListComponent.<UpdateDataList>d__6 <UpdateDataList>d__;
@@ -45,7 +45,7 @@ public class WeaponListComponent
 		return <UpdateDataList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601843D RID: 99389 RVA: 0x0062C62C File Offset: 0x0062A82C
+	// Token: 0x06015CDE RID: 89310 RVA: 0x00652620 File Offset: 0x00650820
 	public void SetCurSelect(int selectedIndex)
 	{
 		if (this.WeaponDataList == null || selectedIndex < 0 || selectedIndex >= this.WeaponDataList.Count || selectedIndex == this.ScrollView.GetGenericLayout().GetSelectedGridIndex())
@@ -63,13 +63,13 @@ public class WeaponListComponent
 		}
 	}
 
-	// Token: 0x0601843E RID: 99390 RVA: 0x0062C689 File Offset: 0x0062A889
+	// Token: 0x06015CDF RID: 89311 RVA: 0x0065267D File Offset: 0x0065087D
 	private bool CanToggleExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
 		return this.GetCurSelectedData() != data;
 	}
 
-	// Token: 0x0601843F RID: 99391 RVA: 0x0062C698 File Offset: 0x0062A898
+	// Token: 0x06015CE0 RID: 89312 RVA: 0x0065268C File Offset: 0x0065088C
 	private void OnToggleClick(MediumItemGridExtendCallback callbackParameter)
 	{
 		if (callbackParameter.State == EToggleState.ETT_Checked)
@@ -82,7 +82,7 @@ public class WeaponListComponent
 		}
 	}
 
-	// Token: 0x06018440 RID: 99392 RVA: 0x0062C6C9 File Offset: 0x0062A8C9
+	// Token: 0x06015CE1 RID: 89313 RVA: 0x006526BD File Offset: 0x006508BD
 	private void OnItemToggleCallBack(int index)
 	{
 		GenericLayout<WeaponItemSmallItemGrid, WeaponDataBase> genericLayout = this.ScrollView.GetGenericLayout();
@@ -103,7 +103,7 @@ public class WeaponListComponent
 		onWeaponChangeCallBack();
 	}
 
-	// Token: 0x06018441 RID: 99393 RVA: 0x0062C70C File Offset: 0x0062A90C
+	// Token: 0x06015CE2 RID: 89314 RVA: 0x00652700 File Offset: 0x00650900
 	[NullableContext(2)]
 	public WeaponDataBase GetCurSelectedData()
 	{
@@ -115,7 +115,7 @@ public class WeaponListComponent
 		return this.WeaponDataList[selectedGridIndex];
 	}
 
-	// Token: 0x06018442 RID: 99394 RVA: 0x0062C752 File Offset: 0x0062A952
+	// Token: 0x06015CE3 RID: 89315 RVA: 0x00652746 File Offset: 0x00650946
 	public void CancelSelect()
 	{
 		GenericLayout<WeaponItemSmallItemGrid, WeaponDataBase> genericLayout = this.ScrollView.GetGenericLayout();
@@ -126,7 +126,7 @@ public class WeaponListComponent
 		genericLayout.DeselectCurrentGridProxy();
 	}
 
-	// Token: 0x0400B439 RID: 46137
+	// Token: 0x0400B7AE RID: 47022
 	[Nullable(new byte[]
 	{
 		2,
@@ -134,7 +134,7 @@ public class WeaponListComponent
 	})]
 	private List<WeaponDataBase> WeaponDataList;
 
-	// Token: 0x0400B43A RID: 46138
+	// Token: 0x0400B7AF RID: 47023
 	[Nullable(new byte[]
 	{
 		2,
@@ -143,7 +143,7 @@ public class WeaponListComponent
 	})]
 	private GenericScrollViewNew<WeaponItemSmallItemGrid, WeaponDataBase> ScrollView;
 
-	// Token: 0x0400B43B RID: 46139
+	// Token: 0x0400B7B0 RID: 47024
 	[Nullable(2)]
 	private Action OnWeaponChangeCallBack;
 }

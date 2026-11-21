@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045AE RID: 17838
+	// Token: 0x020034D6 RID: 13526
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharMaterialSlot
 	{
-		// Token: 0x0602E023 RID: 188451 RVA: 0x00A97EDC File Offset: 0x00A960DC
+		// Token: 0x0602270D RID: 141069 RVA: 0x009C40FC File Offset: 0x009C22FC
 		public void Init(int materialIndex, string slotName, [Nullable(2)] UMaterialInstanceDynamic dynamicMaterial)
 		{
 			this.SlotName = slotName;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Render
 			this.ReplaceMaterialArray = new List<UMaterialInstanceDynamic>();
 		}
 
-		// Token: 0x0602E024 RID: 188452 RVA: 0x00A97F52 File Offset: 0x00A96152
+		// Token: 0x0602270E RID: 141070 RVA: 0x009C4172 File Offset: 0x009C2372
 		[NullableContext(2)]
 		public void SetDynamicMaterial(UMaterialInstanceDynamic dynamicMaterial)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Render
 			this.MaterialDirty = true;
 		}
 
-		// Token: 0x0602E025 RID: 188453 RVA: 0x00A97F88 File Offset: 0x00A96188
+		// Token: 0x0602270F RID: 141071 RVA: 0x009C41A8 File Offset: 0x009C23A8
 		public void SetSkeletalMeshMaterial(USkeletalMeshComponent skeletalComp)
 		{
 			if (this.MaterialDirty)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E026 RID: 188454 RVA: 0x00A97FF0 File Offset: 0x00A961F0
+		// Token: 0x06022710 RID: 141072 RVA: 0x009C4210 File Offset: 0x009C2410
 		public int UpdateMaterialParam()
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -118,14 +118,14 @@ namespace CSharpScript.Game.Render
 			return num;
 		}
 
-		// Token: 0x0602E027 RID: 188455 RVA: 0x00A981EC File Offset: 0x00A963EC
+		// Token: 0x06022711 RID: 141073 RVA: 0x009C440C File Offset: 0x009C260C
 		public void SetReplaceMaterial(UMaterialInstanceDynamic replaceMaterial)
 		{
 			this.ReplaceMaterialArray.Add(replaceMaterial);
 			this.MaterialDirty = true;
 		}
 
-		// Token: 0x0602E028 RID: 188456 RVA: 0x00A98204 File Offset: 0x00A96404
+		// Token: 0x06022712 RID: 141074 RVA: 0x009C4424 File Offset: 0x009C2624
 		public bool RevertReplaceMaterial(UMaterialInstanceDynamic replaceMaterial)
 		{
 			List<UMaterialInstanceDynamic> list = new List<UMaterialInstanceDynamic>();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Render
 			return result;
 		}
 
-		// Token: 0x0602E029 RID: 188457 RVA: 0x00A98264 File Offset: 0x00A96464
+		// Token: 0x06022713 RID: 141075 RVA: 0x009C4484 File Offset: 0x009C2684
 		public void SetFloat(FName property, float value)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Render
 			this.FloatParamMap[key][2] = value;
 		}
 
-		// Token: 0x0602E02A RID: 188458 RVA: 0x00A982DC File Offset: 0x00A964DC
+		// Token: 0x06022714 RID: 141076 RVA: 0x009C44FC File Offset: 0x009C26FC
 		public void RevertFloat(string propertyStr)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E02B RID: 188459 RVA: 0x00A9831C File Offset: 0x00A9651C
+		// Token: 0x06022715 RID: 141077 RVA: 0x009C453C File Offset: 0x009C273C
 		public void SetColor(FName property, FLinearColor value)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Render
 			this.VectorParamMap[key][2] = colorTempContainer;
 		}
 
-		// Token: 0x0602E02C RID: 188460 RVA: 0x00A983F8 File Offset: 0x00A965F8
+		// Token: 0x06022716 RID: 141078 RVA: 0x009C4618 File Offset: 0x009C2818
 		public void RevertColor(string propertyStr)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E02D RID: 188461 RVA: 0x00A98438 File Offset: 0x00A96638
+		// Token: 0x06022717 RID: 141079 RVA: 0x009C4658 File Offset: 0x009C2858
 		public void SetTexture(FName property, UTexture value)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Render
 			this.TextureParamMap[key][2] = value;
 		}
 
-		// Token: 0x0602E02E RID: 188462 RVA: 0x00A984A8 File Offset: 0x00A966A8
+		// Token: 0x06022718 RID: 141080 RVA: 0x009C46C8 File Offset: 0x009C28C8
 		public void RevertTexture(string propertyStr)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E02F RID: 188463 RVA: 0x00A984E8 File Offset: 0x00A966E8
+		// Token: 0x06022719 RID: 141081 RVA: 0x009C4708 File Offset: 0x009C2908
 		public void RevertProperty(FName property)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Render
 			this.RevertTexture(propertyStr);
 		}
 
-		// Token: 0x0602E030 RID: 188464 RVA: 0x00A98521 File Offset: 0x00A96721
+		// Token: 0x0602271A RID: 141082 RVA: 0x009C4741 File Offset: 0x009C2941
 		public void SetStarScarEnergy(float energy)
 		{
 			if (!this.IsDynamicMaterialValid())
@@ -298,17 +298,17 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E031 RID: 188465 RVA: 0x00A98540 File Offset: 0x00A96740
+		// Token: 0x0602271B RID: 141083 RVA: 0x009C4760 File Offset: 0x009C2960
 		public bool IsDynamicMaterialValid()
 		{
 			return this.DynamicMaterial != null && this.DynamicMaterial.IsValid();
 		}
 
-		// Token: 0x040188F4 RID: 100596
+		// Token: 0x04012F2F RID: 77615
 		[Nullable(2)]
 		public UMaterialInstanceDynamic DynamicMaterial;
 
-		// Token: 0x040188F5 RID: 100597
+		// Token: 0x04012F30 RID: 77616
 		[Nullable(new byte[]
 		{
 			2,
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<string, float[]> FloatParamMap;
 
-		// Token: 0x040188F6 RID: 100598
+		// Token: 0x04012F31 RID: 77617
 		[Nullable(new byte[]
 		{
 			2,
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<string, ColorTempContainer[]> VectorParamMap;
 
-		// Token: 0x040188F7 RID: 100599
+		// Token: 0x04012F32 RID: 77618
 		[Nullable(new byte[]
 		{
 			2,
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<string, UTexture[]> TextureParamMap;
 
-		// Token: 0x040188F8 RID: 100600
+		// Token: 0x04012F33 RID: 77619
 		[Nullable(new byte[]
 		{
 			2,
@@ -345,46 +345,46 @@ namespace CSharpScript.Game.Render
 		})]
 		public List<UMaterialInstanceDynamic> ReplaceMaterialArray;
 
-		// Token: 0x040188F9 RID: 100601
+		// Token: 0x04012F34 RID: 77620
 		public string SlotName = string.Empty;
 
-		// Token: 0x040188FA RID: 100602
+		// Token: 0x04012F35 RID: 77621
 		public int MaterialIndex;
 
-		// Token: 0x040188FB RID: 100603
+		// Token: 0x04012F36 RID: 77622
 		public int SectionIndex;
 
-		// Token: 0x040188FC RID: 100604
+		// Token: 0x04012F37 RID: 77623
 		public bool IsStarScar;
 
-		// Token: 0x040188FD RID: 100605
+		// Token: 0x04012F38 RID: 77624
 		public ECharacterMeshPart MaterialPartType;
 
-		// Token: 0x040188FE RID: 100606
+		// Token: 0x04012F39 RID: 77625
 		public ECharacterSlotType SlotType;
 
-		// Token: 0x040188FF RID: 100607
+		// Token: 0x04012F3A RID: 77626
 		public bool MaterialDirty;
 
-		// Token: 0x04018900 RID: 100608
+		// Token: 0x04012F3B RID: 77627
 		private bool FloatParamDirty;
 
-		// Token: 0x04018901 RID: 100609
+		// Token: 0x04012F3C RID: 77628
 		private bool VectorParamDirty;
 
-		// Token: 0x04018902 RID: 100610
+		// Token: 0x04012F3D RID: 77629
 		private bool TextureParamDirty;
 
-		// Token: 0x04018903 RID: 100611
+		// Token: 0x04012F3E RID: 77630
 		private const string STAR_SCAR_SLOT_NAME = "MI_Star";
 
-		// Token: 0x04018904 RID: 100612
+		// Token: 0x04012F3F RID: 77631
 		private const int ORIGINAL_INDEX = 0;
 
-		// Token: 0x04018905 RID: 100613
+		// Token: 0x04012F40 RID: 77632
 		private const int CACHE_INDEX = 1;
 
-		// Token: 0x04018906 RID: 100614
+		// Token: 0x04012F41 RID: 77633
 		private const int TARGET_INDEX = 2;
 	}
 }

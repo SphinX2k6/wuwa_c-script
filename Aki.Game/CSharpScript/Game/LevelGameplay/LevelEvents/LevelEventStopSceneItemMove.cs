@@ -9,15 +9,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B9C RID: 27548
+	// Token: 0x02005D14 RID: 23828
 	public class LevelEventStopSceneItemMove : LevelEventBase
 	{
-		// Token: 0x060442E0 RID: 279264 RVA: 0x010CD5F3 File Offset: 0x010CB7F3
+		// Token: 0x0603A434 RID: 238644 RVA: 0x0107742B File Offset: 0x0107562B
 		public LevelEventStopSceneItemMove(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442E1 RID: 279265 RVA: 0x010CD5FC File Offset: 0x010CB7FC
+		// Token: 0x0603A435 RID: 238645 RVA: 0x01077434 File Offset: 0x01075634
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(entityIds);
 		}
 
-		// Token: 0x060442E2 RID: 279266 RVA: 0x010CD654 File Offset: 0x010CB854
+		// Token: 0x0603A436 RID: 238646 RVA: 0x0107748C File Offset: 0x0107568C
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			if (this.Params == null)
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442E3 RID: 279267 RVA: 0x010CDA88 File Offset: 0x010CBC88
+		// Token: 0x0603A437 RID: 238647 RVA: 0x010778C0 File Offset: 0x01075AC0
 		protected override void OnReset()
 		{
 			this.Params = null;
 		}
 
-		// Token: 0x04023971 RID: 145777
+		// Token: 0x0401EC13 RID: 125971
 		[Nullable(2)]
 		private StopSceneItemMove Params;
 	}

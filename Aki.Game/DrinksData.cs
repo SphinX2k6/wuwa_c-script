@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
 using CSharpScript.Game.Module.ActivityGamePlay.Drinks;
 
-// Token: 0x02000F3B RID: 3899
+// Token: 0x020003F0 RID: 1008
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksData
 {
-	// Token: 0x06006375 RID: 25461 RVA: 0x00138EC8 File Offset: 0x001370C8
+	// Token: 0x0600370D RID: 14093 RVA: 0x00141794 File Offset: 0x0013F994
 	public unsafe void Init(int roleId, int? requireId = null)
 	{
 		this.CurStep = EDrinksPlayStep.Drink1;
@@ -48,13 +47,13 @@ public class DrinksData
 		this.GetRandomSort();
 	}
 
-	// Token: 0x06006376 RID: 25462 RVA: 0x00138FCF File Offset: 0x001371CF
+	// Token: 0x0600370E RID: 14094 RVA: 0x0014189B File Offset: 0x0013FA9B
 	public DrinksResultInfo GetCurData()
 	{
 		return this.Data;
 	}
 
-	// Token: 0x06006377 RID: 25463 RVA: 0x00138FD8 File Offset: 0x001371D8
+	// Token: 0x0600370F RID: 14095 RVA: 0x001418A4 File Offset: 0x0013FAA4
 	public int[] UpdateFlavorValue()
 	{
 		int[] array = new int[3];
@@ -90,25 +89,25 @@ public class DrinksData
 		return this.FlavorValue;
 	}
 
-	// Token: 0x06006378 RID: 25464 RVA: 0x001391E0 File Offset: 0x001373E0
+	// Token: 0x06003710 RID: 14096 RVA: 0x00141AAC File Offset: 0x0013FCAC
 	public int[] GetFlavorValue()
 	{
 		return this.FlavorValue;
 	}
 
-	// Token: 0x06006379 RID: 25465 RVA: 0x001391E8 File Offset: 0x001373E8
+	// Token: 0x06003711 RID: 14097 RVA: 0x00141AB4 File Offset: 0x0013FCB4
 	public int GetRequireId()
 	{
 		return this.RequireId;
 	}
 
-	// Token: 0x0600637A RID: 25466 RVA: 0x001391F0 File Offset: 0x001373F0
+	// Token: 0x06003712 RID: 14098 RVA: 0x00141ABC File Offset: 0x0013FCBC
 	public DrinksRequireList GetRequireConfig()
 	{
 		return DrinksConfig.Instance.GetRequireList(this.RequireId).Value;
 	}
 
-	// Token: 0x0600637B RID: 25467 RVA: 0x00139218 File Offset: 0x00137418
+	// Token: 0x06003713 RID: 14099 RVA: 0x00141AE4 File Offset: 0x0013FCE4
 	public int[] GetCurFlavor(bool force = false)
 	{
 		int[] array = new int[3];
@@ -139,7 +138,7 @@ public class DrinksData
 		return array;
 	}
 
-	// Token: 0x0600637C RID: 25468 RVA: 0x00139448 File Offset: 0x00137648
+	// Token: 0x06003714 RID: 14100 RVA: 0x00141D14 File Offset: 0x0013FF14
 	public void UpdateBase(int step, int id)
 	{
 		if (this.Data == null)
@@ -153,7 +152,7 @@ public class DrinksData
 		}
 	}
 
-	// Token: 0x0600637D RID: 25469 RVA: 0x0013949F File Offset: 0x0013769F
+	// Token: 0x06003715 RID: 14101 RVA: 0x00141D6B File Offset: 0x0013FF6B
 	public void UpdateBatching(HashSet<int> set)
 	{
 		if (this.Data == null || set.Count > 2)
@@ -163,7 +162,7 @@ public class DrinksData
 		this.Data.Batching = new List<int>(set);
 	}
 
-	// Token: 0x0600637E RID: 25470 RVA: 0x001394C4 File Offset: 0x001376C4
+	// Token: 0x06003716 RID: 14102 RVA: 0x00141D90 File Offset: 0x0013FF90
 	public void UpdateOrnament(int id)
 	{
 		if (this.Data == null)
@@ -176,19 +175,19 @@ public class DrinksData
 		sceneController.OnSetOrnament(id, roleId, null, true);
 	}
 
-	// Token: 0x0600637F RID: 25471 RVA: 0x00139504 File Offset: 0x00137704
+	// Token: 0x06003717 RID: 14103 RVA: 0x00141DD0 File Offset: 0x0013FFD0
 	public EDrinksPlayStep GetCurStep()
 	{
 		return this.CurStep;
 	}
 
-	// Token: 0x06006380 RID: 25472 RVA: 0x0013950C File Offset: 0x0013770C
+	// Token: 0x06003718 RID: 14104 RVA: 0x00141DD8 File Offset: 0x0013FFD8
 	public void EnterNextStep()
 	{
 		this.CurStep = DrinksData.NextStep[(int)this.CurStep];
 	}
 
-	// Token: 0x06006381 RID: 25473 RVA: 0x00139520 File Offset: 0x00137720
+	// Token: 0x06003719 RID: 14105 RVA: 0x00141DEC File Offset: 0x0013FFEC
 	public void BackToPrevStep()
 	{
 		if (this.CurStep == EDrinksPlayStep.Drink2)
@@ -212,7 +211,7 @@ public class DrinksData
 		this.UpdateFlavorValue();
 	}
 
-	// Token: 0x06006382 RID: 25474 RVA: 0x001395EC File Offset: 0x001377EC
+	// Token: 0x0600371A RID: 14106 RVA: 0x00141EB8 File Offset: 0x001400B8
 	public unsafe void RestartGame()
 	{
 		DrinksResultInfo data = this.Data;
@@ -237,13 +236,13 @@ public class DrinksData
 		this.UpdateFlavorValue();
 	}
 
-	// Token: 0x06006383 RID: 25475 RVA: 0x001396A3 File Offset: 0x001378A3
+	// Token: 0x0600371B RID: 14107 RVA: 0x00141F6F File Offset: 0x0014016F
 	public int GetDrinkBaseShowId(int id)
 	{
 		return DrinksModel.Instance.GetDrinksByBaseId(id).GetMenuBaseId();
 	}
 
-	// Token: 0x06006384 RID: 25476 RVA: 0x001396B8 File Offset: 0x001378B8
+	// Token: 0x0600371C RID: 14108 RVA: 0x00141F84 File Offset: 0x00140184
 	[NullableContext(2)]
 	public DrinksDialogBubbleInfo GetDialogBubbleInfo(int inId)
 	{
@@ -309,7 +308,7 @@ public class DrinksData
 		return null;
 	}
 
-	// Token: 0x06006385 RID: 25477 RVA: 0x001398C6 File Offset: 0x00137AC6
+	// Token: 0x0600371D RID: 14109 RVA: 0x00142192 File Offset: 0x00140392
 	[NullableContext(2)]
 	public DrinksDialogBubbleInfo GetDialogHintBubbleInfo()
 	{
@@ -320,7 +319,7 @@ public class DrinksData
 		return this.GetDialogBubbleInfoOrnament();
 	}
 
-	// Token: 0x06006386 RID: 25478 RVA: 0x001398DC File Offset: 0x00137ADC
+	// Token: 0x0600371E RID: 14110 RVA: 0x001421A8 File Offset: 0x001403A8
 	[NullableContext(2)]
 	private DrinksDialogBubbleInfo GetDialogBubbleInfoOrnament()
 	{
@@ -345,25 +344,25 @@ public class DrinksData
 		};
 	}
 
-	// Token: 0x06006387 RID: 25479 RVA: 0x00139985 File Offset: 0x00137B85
+	// Token: 0x0600371F RID: 14111 RVA: 0x00142251 File Offset: 0x00140451
 	public void UpdateStepEnd(EDrinksPlayStep step, bool value)
 	{
 		this.SelectedEndMap[step] = value;
 	}
 
-	// Token: 0x06006388 RID: 25480 RVA: 0x00139994 File Offset: 0x00137B94
+	// Token: 0x06003720 RID: 14112 RVA: 0x00142260 File Offset: 0x00140460
 	private void GetRandomSort()
 	{
 		this.RandomSort.Clear();
-		this.RandomSort = MathUtils.Instance.Shuffle<int>(new int[]
+		this.RandomSort = new List<int>(MathUtils.Instance.Shuffle<int>(new int[]
 		{
 			1,
 			2,
 			3
-		}).ToList<int>();
+		}));
 	}
 
-	// Token: 0x06006389 RID: 25481 RVA: 0x001399C8 File Offset: 0x00137BC8
+	// Token: 0x06003721 RID: 14113 RVA: 0x00142294 File Offset: 0x00140494
 	private string GetRandomId()
 	{
 		if (this.RandomSort.Count == 0)
@@ -375,7 +374,7 @@ public class DrinksData
 		return num.ToString();
 	}
 
-	// Token: 0x04002D15 RID: 11541
+	// Token: 0x04002DAE RID: 11694
 	[StaticVariableRuleIgnore]
 	private static EDrinksPlayStep[] PrevStep = new EDrinksPlayStep[]
 	{
@@ -386,7 +385,7 @@ public class DrinksData
 		EDrinksPlayStep.Batching
 	};
 
-	// Token: 0x04002D16 RID: 11542
+	// Token: 0x04002DAF RID: 11695
 	[StaticVariableRuleIgnore]
 	private static EDrinksPlayStep[] NextStep = new EDrinksPlayStep[]
 	{
@@ -396,32 +395,32 @@ public class DrinksData
 		EDrinksPlayStep.Ornament
 	};
 
-	// Token: 0x04002D17 RID: 11543
+	// Token: 0x04002DB0 RID: 11696
 	private const string BUBBLE_DRINK_LIKE = "Dialog_{0}_Like0{1}";
 
-	// Token: 0x04002D18 RID: 11544
+	// Token: 0x04002DB1 RID: 11697
 	private const string BUBBLE_DRINK_DISLIKE = "Dialog_{0}_Dislike0{1}";
 
-	// Token: 0x04002D19 RID: 11545
+	// Token: 0x04002DB2 RID: 11698
 	public EDrinksPlayStep CurStep;
 
-	// Token: 0x04002D1A RID: 11546
+	// Token: 0x04002DB3 RID: 11699
 	[Nullable(2)]
 	public DrinksResultInfo Data;
 
-	// Token: 0x04002D1B RID: 11547
+	// Token: 0x04002DB4 RID: 11700
 	public int RoleId;
 
-	// Token: 0x04002D1C RID: 11548
+	// Token: 0x04002DB5 RID: 11701
 	public int RequireId;
 
-	// Token: 0x04002D1D RID: 11549
+	// Token: 0x04002DB6 RID: 11702
 	protected int[] FlavorValue = new int[3];
 
-	// Token: 0x04002D1E RID: 11550
+	// Token: 0x04002DB7 RID: 11703
 	protected List<int> RandomSort = new List<int>();
 
-	// Token: 0x04002D1F RID: 11551
+	// Token: 0x04002DB8 RID: 11704
 	public Dictionary<EDrinksPlayStep, bool> SelectedEndMap = new Dictionary<EDrinksPlayStep, bool>
 	{
 		{

@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B5E RID: 11102
+// Token: 0x020020DA RID: 8410
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCurrencyItem : CommonCurrencyItem
 {
-	// Token: 0x06017045 RID: 94277 RVA: 0x005D81FC File Offset: 0x005D63FC
+	// Token: 0x06014A76 RID: 84598 RVA: 0x00604D64 File Offset: 0x00602F64
 	public UniTask Init(UUIItem item)
 	{
 		SurvivorsRogueCurrencyItem.<Init>d__0 <Init>d__;
@@ -23,19 +23,19 @@ public class SurvivorsRogueCurrencyItem : CommonCurrencyItem
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017046 RID: 94278 RVA: 0x005D8247 File Offset: 0x005D6447
+	// Token: 0x06014A77 RID: 84599 RVA: 0x00604DAF File Offset: 0x00602FAF
 	public override void AddEventListener()
 	{
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.AddTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.Gold.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsCurrencyUpdate));
 	}
 
-	// Token: 0x06017047 RID: 94279 RVA: 0x005D826F File Offset: 0x005D646F
+	// Token: 0x06014A78 RID: 84600 RVA: 0x00604DD7 File Offset: 0x00602FD7
 	public override void RemoveEventListener()
 	{
 		SurvivorsRogueModel.Instance.BattleData.BehaviorDelegate.RemoveTreeVarUpdateDelegate(ESurvivorsRougeSystemVarType.Gold.ToEnumString(), new TTreeVarUpdateDelegate(this.OnSurvivorsCurrencyUpdate));
 	}
 
-	// Token: 0x06017048 RID: 94280 RVA: 0x005D8298 File Offset: 0x005D6498
+	// Token: 0x06014A79 RID: 84601 RVA: 0x00604E00 File Offset: 0x00603000
 	private void OnSurvivorsCurrencyUpdate(VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 	{
 		long num = MathUtils.Instance.LongToNumber(newVarDefine.Int);

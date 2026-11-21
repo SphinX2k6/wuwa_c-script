@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002F31 RID: 12081
+// Token: 0x02002484 RID: 9348
 public enum EDamageTransferType
 {
-	// Token: 0x0400C1FC RID: 49660
+	// Token: 0x0400C59E RID: 50590
 	Instigator,
-	// Token: 0x0400C1FD RID: 49661
+	// Token: 0x0400C59F RID: 50591
 	Owner
 }

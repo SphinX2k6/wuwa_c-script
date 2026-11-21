@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063B9 RID: 25529
+	// Token: 0x02005337 RID: 21303
 	[NullableContext(1)]
 	public interface IMowingBuffCaptionData
 	{
-		// Token: 0x170093A7 RID: 37799
-		// (get) Token: 0x060403AA RID: 263082
-		// (set) Token: 0x060403AB RID: 263083
+		// Token: 0x17006709 RID: 26377
+		// (get) Token: 0x0603506B RID: 217195
+		// (set) Token: 0x0603506C RID: 217196
 		string IconPath { get; set; }
 
-		// Token: 0x170093A8 RID: 37800
-		// (get) Token: 0x060403AC RID: 263084
-		// (set) Token: 0x060403AD RID: 263085
+		// Token: 0x1700670A RID: 26378
+		// (get) Token: 0x0603506D RID: 217197
+		// (set) Token: 0x0603506E RID: 217198
 		string TitleTextId { get; set; }
 	}
 }

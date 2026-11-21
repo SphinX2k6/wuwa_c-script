@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Container.MapOperation
 {
-	// Token: 0x02005595 RID: 21909
+	// Token: 0x0200456B RID: 17771
 	[NullableContext(1)]
 	[Nullable(0)]
 	[StaticVariableRuleIgnore]
 	public static class MapOperationQueue
 	{
-		// Token: 0x06037D78 RID: 228728 RVA: 0x00D3C4F4 File Offset: 0x00D3A6F4
+		// Token: 0x0602CC76 RID: 183414 RVA: 0x00C8A23C File Offset: 0x00C8843C
 		public static void Run(IMapOperation op)
 		{
 			MapOperationQueue.<>c__DisplayClass1_0 CS$<>8__locals1 = new MapOperationQueue.<>c__DisplayClass1_0();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Map.Container.MapOperation
 			MapOperationQueue.AsyncTaskManager.RunTask(task);
 		}
 
-		// Token: 0x06037D79 RID: 228729 RVA: 0x00D3C544 File Offset: 0x00D3A744
+		// Token: 0x0602CC77 RID: 183415 RVA: 0x00C8A28C File Offset: 0x00C8848C
 		public static void RunMapMark(IMapMarkOperation op)
 		{
 			if (op.OpName == null)
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Map.Container.MapOperation
 			MapOperationQueue.Run(op);
 		}
 
-		// Token: 0x06037D7A RID: 228730 RVA: 0x00D3C59F File Offset: 0x00D3A79F
+		// Token: 0x0602CC78 RID: 183416 RVA: 0x00C8A2E7 File Offset: 0x00C884E7
 		public static void Clear()
 		{
 			MapOperationQueue.AsyncTaskManager.CancelAllTask();
 		}
 
-		// Token: 0x0401D573 RID: 120179
+		// Token: 0x04017FFE RID: 98302
 		private static readonly UiAsyncTaskManager AsyncTaskManager = new UiAsyncTaskManager();
 	}
 }

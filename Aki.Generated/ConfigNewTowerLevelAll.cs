@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005FC RID: 1532
+	// Token: 0x02000614 RID: 1556
 	public class ConfigNewTowerLevelAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023F8 RID: 9208 RVA: 0x00124F14 File Offset: 0x00123114
+		// Token: 0x06002488 RID: 9352 RVA: 0x0012B990 File Offset: 0x00129B90
 		static ConfigNewTowerLevelAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewTowerLevelAll.CreateStaticDefaultValue), new Action(ConfigNewTowerLevelAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023F9 RID: 9209 RVA: 0x00124F34 File Offset: 0x00123134
+		// Token: 0x06002489 RID: 9353 RVA: 0x0012B9B0 File Offset: 0x00129BB0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewTowerLevelAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023FA RID: 9210 RVA: 0x00124FB3 File Offset: 0x001231B3
+		// Token: 0x0600248A RID: 9354 RVA: 0x0012BA2F File Offset: 0x00129C2F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewTowerLevelAll.LogPair = null;
 			ConfigNewTowerLevelAll.HandleId = 0;
 		}
 
-		// Token: 0x060023FB RID: 9211 RVA: 0x00124FC1 File Offset: 0x001231C1
+		// Token: 0x0600248B RID: 9355 RVA: 0x0012BA3D File Offset: 0x00129C3D
 		public static void Init()
 		{
 			ConfigNewTowerLevelAll.HandleId = ConfigCommon.InitDataStatement(ConfigNewTowerLevelAll.HandleId, "db_newtower.db", "select BinData from `NewTowerLevel`");
 		}
 
-		// Token: 0x060023FC RID: 9212 RVA: 0x00124FDC File Offset: 0x001231DC
+		// Token: 0x0600248C RID: 9356 RVA: 0x0012BA58 File Offset: 0x00129C58
 		[NullableContext(2)]
 		public static IReadOnlyList<NewTowerLevel> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040029CA RID: 10698
+		// Token: 0x04002A72 RID: 10866
 		private const string DB = "db_newtower.db";
 
-		// Token: 0x040029CB RID: 10699
+		// Token: 0x04002A73 RID: 10867
 		private const string FILE = "x.3.0新爬塔.xlsx";
 
-		// Token: 0x040029CC RID: 10700
+		// Token: 0x04002A74 RID: 10868
 		private const string TABLE = "NewTowerLevel";
 
-		// Token: 0x040029CD RID: 10701
+		// Token: 0x04002A75 RID: 10869
 		private const string COMMAND = "select BinData from `NewTowerLevel`";
 
-		// Token: 0x040029CE RID: 10702
+		// Token: 0x04002A76 RID: 10870
 		private const string KEY_PREFIX = "NewTowerLevelAll";
 
-		// Token: 0x040029CF RID: 10703
+		// Token: 0x04002A77 RID: 10871
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040029D0 RID: 10704
+		// Token: 0x04002A78 RID: 10872
 		private static int HandleId;
 	}
 }

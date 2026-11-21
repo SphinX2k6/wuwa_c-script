@@ -6,58 +6,58 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002612 RID: 9746
+	// Token: 0x020007B0 RID: 1968
 	[UnrealObjectPath("/Script/OHNearby.OHNearbyNotifyLib")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UOHNearbyNotifyLib : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602440A RID: 148490 RVA: 0x0035AD35 File Offset: 0x00358F35
+		// Token: 0x0600AAEB RID: 43755 RVA: 0x000FC225 File Offset: 0x000FA425
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UOHNearbyNotifyLib._ClassPtr;
 		}
 
-		// Token: 0x0602440B RID: 148491 RVA: 0x0035AD44 File Offset: 0x00358F44
+		// Token: 0x0600AAEC RID: 43756 RVA: 0x000FC234 File Offset: 0x000FA434
 		public UOHNearbyNotifyLib() : this(BuiltinUtils.AllocNativeUObject(UOHNearbyNotifyLib.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602440C RID: 148492 RVA: 0x0035AD6C File Offset: 0x00358F6C
+		// Token: 0x0600AAED RID: 43757 RVA: 0x000FC25C File Offset: 0x000FA45C
 		[NullableContext(1)]
 		public UOHNearbyNotifyLib(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UOHNearbyNotifyLib.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0602440D RID: 148493 RVA: 0x0035AD9F File Offset: 0x00358F9F
+		// Token: 0x0600AAEE RID: 43758 RVA: 0x000FC28F File Offset: 0x000FA48F
 		[NullableContext(2)]
 		public static UOHNearbyNotify GetNotify()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UOHNearbyNotify>(UOHNearbyNotifyLib.__GetNotify_Internal());
 		}
 
-		// Token: 0x0602440E RID: 148494
+		// Token: 0x0600AAEF RID: 43759
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetNotify_Internal();
 
-		// Token: 0x0602440F RID: 148495 RVA: 0x0035ADAB File Offset: 0x00358FAB
+		// Token: 0x0600AAF0 RID: 43760 RVA: 0x000FC29B File Offset: 0x000FA49B
 		static UOHNearbyNotifyLib()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/OHNearby.OHNearbyNotifyLib");
 		}
 
-		// Token: 0x06024410 RID: 148496 RVA: 0x0035ADB9 File Offset: 0x00358FB9
+		// Token: 0x0600AAF1 RID: 43761 RVA: 0x000FC2A9 File Offset: 0x000FA4A9
 		protected UOHNearbyNotifyLib(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401372F RID: 79663
+		// Token: 0x0400492D RID: 18733
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/OHNearby.OHNearbyNotifyLib";
 
-		// Token: 0x04013730 RID: 79664
+		// Token: 0x0400492E RID: 18734
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013731 RID: 79665
+		// Token: 0x0400492F RID: 18735
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

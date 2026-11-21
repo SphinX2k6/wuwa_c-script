@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AC0 RID: 6848
+// Token: 0x02000F7F RID: 3967
 [NullableContext(1)]
 [Nullable(0)]
 public class MapAreaRewardParam : IMapAreaRewardParam
 {
-	// Token: 0x170010CD RID: 4301
-	// (get) Token: 0x0600CAFE RID: 51966 RVA: 0x002E4578 File Offset: 0x002E2778
-	// (set) Token: 0x0600CAFF RID: 51967 RVA: 0x002E4580 File Offset: 0x002E2780
+	// Token: 0x170010F2 RID: 4338
+	// (get) Token: 0x06009F0F RID: 40719 RVA: 0x002EF6FC File Offset: 0x002ED8FC
+	// (set) Token: 0x06009F10 RID: 40720 RVA: 0x002EF704 File Offset: 0x002ED904
 	public int InitValue { get; set; }
 
-	// Token: 0x170010CE RID: 4302
-	// (get) Token: 0x0600CB00 RID: 51968 RVA: 0x002E4589 File Offset: 0x002E2789
-	// (set) Token: 0x0600CB01 RID: 51969 RVA: 0x002E4591 File Offset: 0x002E2791
+	// Token: 0x170010F3 RID: 4339
+	// (get) Token: 0x06009F11 RID: 40721 RVA: 0x002EF70D File Offset: 0x002ED90D
+	// (set) Token: 0x06009F12 RID: 40722 RVA: 0x002EF715 File Offset: 0x002ED915
 	public int MaxValue { get; set; }
 
-	// Token: 0x170010CF RID: 4303
-	// (get) Token: 0x0600CB02 RID: 51970 RVA: 0x002E459A File Offset: 0x002E279A
-	// (set) Token: 0x0600CB03 RID: 51971 RVA: 0x002E45A2 File Offset: 0x002E27A2
+	// Token: 0x170010F4 RID: 4340
+	// (get) Token: 0x06009F13 RID: 40723 RVA: 0x002EF71E File Offset: 0x002ED91E
+	// (set) Token: 0x06009F14 RID: 40724 RVA: 0x002EF726 File Offset: 0x002ED926
 	public List<DailyActivityDefine.IActivityGoalData> RewardDataList { get; set; }
 
-	// Token: 0x170010D0 RID: 4304
-	// (get) Token: 0x0600CB04 RID: 51972 RVA: 0x002E45AB File Offset: 0x002E27AB
-	// (set) Token: 0x0600CB05 RID: 51973 RVA: 0x002E45B3 File Offset: 0x002E27B3
+	// Token: 0x170010F5 RID: 4341
+	// (get) Token: 0x06009F15 RID: 40725 RVA: 0x002EF72F File Offset: 0x002ED92F
+	// (set) Token: 0x06009F16 RID: 40726 RVA: 0x002EF737 File Offset: 0x002ED937
 	public Action GetRewardCallback { get; set; }
 }

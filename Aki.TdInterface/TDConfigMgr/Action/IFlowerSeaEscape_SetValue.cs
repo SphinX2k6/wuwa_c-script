@@ -1,29 +1,26 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A90 RID: 6800
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C25 RID: 7205
 	public class IFlowerSeaEscape_SetValue
 	{
-		// Token: 0x040059C2 RID: 22978
+		// Token: 0x04005E27 RID: 24103
 		public ESimpleGameplayType Type;
 
-		// Token: 0x040059C3 RID: 22979
+		// Token: 0x04005E28 RID: 24104
 		public int EndAreaEntityId;
 
-		// Token: 0x040059C4 RID: 22980
+		// Token: 0x04005E29 RID: 24105
 		public string ConfigDa;
 
-		// Token: 0x040059C5 RID: 22981
+		// Token: 0x04005E2A RID: 24106
 		public string SpreadingState;
 
-		// Token: 0x040059C6 RID: 22982
+		// Token: 0x04005E2B RID: 24107
 		public string PausedState;
 
-		// Token: 0x040059C7 RID: 22983
+		// Token: 0x04005E2C RID: 24108
 		public string ResetState;
 	}
 }

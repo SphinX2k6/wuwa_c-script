@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 
-// Token: 0x020031BA RID: 12730
+// Token: 0x02002729 RID: 10025
 [NullableContext(1)]
 [Nullable(0)]
 public static class GrapplingHookPointDefine
 {
-	// Token: 0x0400D729 RID: 55081
+	// Token: 0x0400DBB0 RID: 56240
 	public const int HOOK_VISION_ID = 1001;
 
-	// Token: 0x0400D72A RID: 55082
+	// Token: 0x0400DBB1 RID: 56241
 	public const int HOOK_MAX_SPEED = 3500;
 
-	// Token: 0x0400D72B RID: 55083
+	// Token: 0x0400DBB2 RID: 56242
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<int> UpdateTargetSkillIds = new HashSet<int>
 	{
@@ -48,7 +48,7 @@ public static class GrapplingHookPointDefine
 		210063
 	};
 
-	// Token: 0x0400D72C RID: 55084
+	// Token: 0x0400DBB3 RID: 56243
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EHookPointState, int> HookPointStateToTagMap = new Dictionary<EHookPointState, int>
 	{
@@ -70,7 +70,7 @@ public static class GrapplingHookPointDefine
 		}
 	};
 
-	// Token: 0x0400D72D RID: 55085
+	// Token: 0x0400DBB4 RID: 56244
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EHookInteractType, int> NormalHookTagMap = new Dictionary<EHookInteractType, int>
 	{
@@ -148,7 +148,7 @@ public static class GrapplingHookPointDefine
 		}
 	};
 
-	// Token: 0x0400D72E RID: 55086
+	// Token: 0x0400DBB5 RID: 56245
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EHookInteractType, int[]> MultipurposeHookTagMap = new Dictionary<EHookInteractType, int[]>
 	{
@@ -186,7 +186,7 @@ public static class GrapplingHookPointDefine
 		}
 	};
 
-	// Token: 0x0400D72F RID: 55087
+	// Token: 0x0400DBB6 RID: 56246
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<EHookInteractType> MotorcycleDetectableHookType = new HashSet<EHookInteractType>
 	{
@@ -196,7 +196,7 @@ public static class GrapplingHookPointDefine
 		EHookInteractType.FollowerShoot
 	};
 
-	// Token: 0x0400D730 RID: 55088
+	// Token: 0x0400DBB7 RID: 56247
 	[Nullable(new byte[]
 	{
 		1,

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005A6 RID: 1446
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200060F RID: 1551
 	public class IOnCollisionCondition : IBulletCreateCondition
 	{
-		// Token: 0x06001E84 RID: 7812 RVA: 0x00056648 File Offset: 0x00054848
+		// Token: 0x0600208A RID: 8330 RVA: 0x0005B504 File Offset: 0x00059704
 		private IOnCollisionCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001E85 RID: 7813 RVA: 0x00056680 File Offset: 0x00054880
+		// Token: 0x0600208B RID: 8331 RVA: 0x0005B53C File Offset: 0x0005973C
 		public static IOnCollisionCondition Create([Nullable(2)] IOnCollisionCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E86 RID: 7814 RVA: 0x00056693 File Offset: 0x00054893
+		// Token: 0x0600208C RID: 8332 RVA: 0x0005B54F File Offset: 0x0005974F
 		public static IOnCollisionCondition CreateFromSetValue([Nullable(2)] IOnCollisionCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E87 RID: 7815 RVA: 0x000566A6 File Offset: 0x000548A6
+		// Token: 0x0600208D RID: 8333 RVA: 0x0005B562 File Offset: 0x00059762
 		public new IOnCollisionCondition_SetValue ToSetValue()
 		{
 			return new IOnCollisionCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000828 RID: 2088
-		// (get) Token: 0x06001E88 RID: 7816 RVA: 0x000566D1 File Offset: 0x000548D1
-		// (set) Token: 0x06001E89 RID: 7817 RVA: 0x000566FC File Offset: 0x000548FC
+		// Token: 0x170008AD RID: 2221
+		// (get) Token: 0x0600208E RID: 8334 RVA: 0x0005B58D File Offset: 0x0005978D
+		// (set) Token: 0x0600208F RID: 8335 RVA: 0x0005B5B8 File Offset: 0x000597B8
 		public override EBulletCreateCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000829 RID: 2089
-		// (get) Token: 0x06001E8A RID: 7818 RVA: 0x0005670A File Offset: 0x0005490A
-		// (set) Token: 0x06001E8B RID: 7819 RVA: 0x00056736 File Offset: 0x00054936
+		// Token: 0x170008AE RID: 2222
+		// (get) Token: 0x06002090 RID: 8336 RVA: 0x0005B5C6 File Offset: 0x000597C6
+		// (set) Token: 0x06002091 RID: 8337 RVA: 0x0005B5F2 File Offset: 0x000597F2
 		public override long BulletId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700082A RID: 2090
-		// (get) Token: 0x06001E8C RID: 7820 RVA: 0x00056744 File Offset: 0x00054944
-		// (set) Token: 0x06001E8D RID: 7821 RVA: 0x000567A5 File Offset: 0x000549A5
+		// Token: 0x170008AF RID: 2223
+		// (get) Token: 0x06002092 RID: 8338 RVA: 0x0005B600 File Offset: 0x00059800
+		// (set) Token: 0x06002093 RID: 8339 RVA: 0x0005B661 File Offset: 0x00059861
 		[Nullable(2)]
 		public virtual ITriggerCountConfig TriggerCount
 		{
@@ -140,18 +138,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015BE RID: 5566
+		// Token: 0x0400172C RID: 5932
 		[Nullable(2)]
 		protected new IOnCollisionCondition FbInstance;
 
-		// Token: 0x040015BF RID: 5567
+		// Token: 0x0400172D RID: 5933
 		[Nullable(2)]
 		protected new IOnCollisionCondition_SetValue PocoInterface;
 
-		// Token: 0x040015C0 RID: 5568
+		// Token: 0x0400172E RID: 5934
 		private ITriggerCountConfig _TriggerCountCache;
 
-		// Token: 0x040015C1 RID: 5569
+		// Token: 0x0400172F RID: 5935
 		private bool _TriggerCountInited;
 	}
 }

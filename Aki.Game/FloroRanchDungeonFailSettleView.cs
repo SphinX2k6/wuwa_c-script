@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B5F RID: 7007
+// Token: 0x0200101E RID: 4126
 public class FloroRanchDungeonFailSettleView : UiViewBase
 {
-	// Token: 0x0600CFEF RID: 53231 RVA: 0x002F6358 File Offset: 0x002F4558
+	// Token: 0x0600A400 RID: 41984 RVA: 0x00301430 File Offset: 0x002FF630
 	[NullableContext(1)]
 	public FloroRanchDungeonFailSettleView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600CFF0 RID: 53232 RVA: 0x002F6364 File Offset: 0x002F4564
+	// Token: 0x0600A401 RID: 41985 RVA: 0x0030143C File Offset: 0x002FF63C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -41,7 +41,7 @@ public class FloroRanchDungeonFailSettleView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CFF1 RID: 53233 RVA: 0x002F6450 File Offset: 0x002F4650
+	// Token: 0x0600A402 RID: 41986 RVA: 0x00301528 File Offset: 0x002FF728
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchDungeonFailSettleView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -52,28 +52,28 @@ public class FloroRanchDungeonFailSettleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CFF2 RID: 53234 RVA: 0x002F6493 File Offset: 0x002F4693
+	// Token: 0x0600A403 RID: 41987 RVA: 0x0030156B File Offset: 0x002FF76B
 	private void OnClickReChallengeButton()
 	{
 		FloroRanchGamePlayModel.Instance.ReStartGame();
 	}
 
-	// Token: 0x0600CFF3 RID: 53235 RVA: 0x002F649F File Offset: 0x002F469F
+	// Token: 0x0600A404 RID: 41988 RVA: 0x00301577 File Offset: 0x002FF777
 	private void OnClickExitGameButton()
 	{
 		FloroRanchGamePlayModel.Instance.ExitGame(true);
 	}
 
-	// Token: 0x020080B4 RID: 32948
+	// Token: 0x02007242 RID: 29250
 	private class EComponent
 	{
-		// Token: 0x04029FA1 RID: 171937
+		// Token: 0x040252D5 RID: 152277
 		public const int DungeonSettleItem = 0;
 
-		// Token: 0x04029FA2 RID: 171938
+		// Token: 0x040252D6 RID: 152278
 		public const int ReChallengeButton = 1;
 
-		// Token: 0x04029FA3 RID: 171939
+		// Token: 0x040252D7 RID: 152279
 		public const int ExitGameButton = 2;
 	}
 }

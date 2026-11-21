@@ -6,7 +6,7 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B9D RID: 7069
+// Token: 0x0200105C RID: 4188
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchSkillCardItem : GridProxyAbstract<FloroRanchSkillData>
 {
-	// Token: 0x0600D27E RID: 53886 RVA: 0x0030593C File Offset: 0x00303B3C
+	// Token: 0x0600A68F RID: 42639 RVA: 0x00310A1C File Offset: 0x0030EC1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -54,7 +54,7 @@ public class FloroRanchSkillCardItem : GridProxyAbstract<FloroRanchSkillData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D27F RID: 53887 RVA: 0x00305B10 File Offset: 0x00303D10
+	// Token: 0x0600A690 RID: 42640 RVA: 0x00310BF0 File Offset: 0x0030EDF0
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(9);
@@ -70,13 +70,13 @@ public class FloroRanchSkillCardItem : GridProxyAbstract<FloroRanchSkillData>
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D280 RID: 53888 RVA: 0x00305B80 File Offset: 0x00303D80
+	// Token: 0x0600A691 RID: 42641 RVA: 0x00310C60 File Offset: 0x0030EE60
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(5));
 	}
 
-	// Token: 0x0600D281 RID: 53889 RVA: 0x00305B94 File Offset: 0x00303D94
+	// Token: 0x0600A692 RID: 42642 RVA: 0x00310C74 File Offset: 0x0030EE74
 	[NullableContext(1)]
 	public override void Refresh(FloroRanchSkillData data, bool isSelected, int gridIndex)
 	{
@@ -106,7 +106,7 @@ public class FloroRanchSkillCardItem : GridProxyAbstract<FloroRanchSkillData>
 		item.SetUIActive(activityData.IsSkillHasNewLabel(data.Id));
 	}
 
-	// Token: 0x0600D282 RID: 53890 RVA: 0x00305CEC File Offset: 0x00303EEC
+	// Token: 0x0600A693 RID: 42643 RVA: 0x00310DCC File Offset: 0x0030EFCC
 	private bool OnCanExecuteChange()
 	{
 		UUIItem item = base.GetItem(10);
@@ -118,7 +118,7 @@ public class FloroRanchSkillCardItem : GridProxyAbstract<FloroRanchSkillData>
 		return this.CanSelect && activityData.IsSkillUnlocked(this.SkillData.Id) && (this.OnCanExecuteChangeFunc == null || this.OnCanExecuteChangeFunc(this.SkillData.Id));
 	}
 
-	// Token: 0x0600D283 RID: 53891 RVA: 0x00305D5C File Offset: 0x00303F5C
+	// Token: 0x0600A694 RID: 42644 RVA: 0x00310E3C File Offset: 0x0030F03C
 	private void OnClickToggle(EToggleState _)
 	{
 		UUIItem item = base.GetItem(10);
@@ -132,82 +132,82 @@ public class FloroRanchSkillCardItem : GridProxyAbstract<FloroRanchSkillData>
 		}
 	}
 
-	// Token: 0x0600D284 RID: 53892 RVA: 0x00305D90 File Offset: 0x00303F90
+	// Token: 0x0600A695 RID: 42645 RVA: 0x00310E70 File Offset: 0x0030F070
 	[NullableContext(1)]
 	public override object GetKey(FloroRanchSkillData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0600D285 RID: 53893 RVA: 0x00305DA0 File Offset: 0x00303FA0
+	// Token: 0x0600A696 RID: 42646 RVA: 0x00310E80 File Offset: 0x0030F080
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(9).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600D286 RID: 53894 RVA: 0x00305DC7 File Offset: 0x00303FC7
+	// Token: 0x0600A697 RID: 42647 RVA: 0x00310EA7 File Offset: 0x0030F0A7
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x0600D287 RID: 53895 RVA: 0x00305DD0 File Offset: 0x00303FD0
+	// Token: 0x0600A698 RID: 42648 RVA: 0x00310EB0 File Offset: 0x0030F0B0
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x04006082 RID: 24706
+	// Token: 0x04006151 RID: 24913
 	private FloroRanchSkillData SkillData;
 
-	// Token: 0x04006083 RID: 24707
+	// Token: 0x04006152 RID: 24914
 	public bool CanSelect;
 
-	// Token: 0x04006084 RID: 24708
+	// Token: 0x04006153 RID: 24915
 	public EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x04006085 RID: 24709
+	// Token: 0x04006154 RID: 24916
 	public Action<int> OnToggleCallBack;
 
-	// Token: 0x04006086 RID: 24710
+	// Token: 0x04006155 RID: 24917
 	public Func<int, bool> OnCanExecuteChangeFunc;
 
-	// Token: 0x02008138 RID: 33080
+	// Token: 0x020072C6 RID: 29382
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A2D7 RID: 172759
+		// Token: 0x0402560B RID: 153099
 		public const int SpriteSelected = 0;
 
-		// Token: 0x0402A2D8 RID: 172760
+		// Token: 0x0402560C RID: 153100
 		public const int TextureIcon = 1;
 
-		// Token: 0x0402A2D9 RID: 172761
+		// Token: 0x0402560D RID: 153101
 		public const int TextName = 2;
 
-		// Token: 0x0402A2DA RID: 172762
+		// Token: 0x0402560E RID: 153102
 		public const int SpriteTagBg = 3;
 
-		// Token: 0x0402A2DB RID: 172763
+		// Token: 0x0402560F RID: 153103
 		public const int TextTag = 4;
 
-		// Token: 0x0402A2DC RID: 172764
+		// Token: 0x04025610 RID: 153104
 		public const int TextDescription = 5;
 
-		// Token: 0x0402A2DD RID: 172765
+		// Token: 0x04025611 RID: 153105
 		public const int ItemLockPanel = 6;
 
-		// Token: 0x0402A2DE RID: 172766
+		// Token: 0x04025612 RID: 153106
 		public const int TextLock = 7;
 
-		// Token: 0x0402A2DF RID: 172767
+		// Token: 0x04025613 RID: 153107
 		public const int ItemEquipped = 8;
 
-		// Token: 0x0402A2E0 RID: 172768
+		// Token: 0x04025614 RID: 153108
 		public const int ToggleRoot = 9;
 
-		// Token: 0x0402A2E1 RID: 172769
+		// Token: 0x04025615 RID: 153109
 		public const int ItemNew = 10;
 	}
 }

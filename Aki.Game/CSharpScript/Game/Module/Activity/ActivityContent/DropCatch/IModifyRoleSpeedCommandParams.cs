@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006692 RID: 26258
+	// Token: 0x020055E2 RID: 21986
 	public class IModifyRoleSpeedCommandParams
 	{
-		// Token: 0x040223AD RID: 140205
+		// Token: 0x0401CC06 RID: 117766
 		public EDropCatchModifierType Type;
 
-		// Token: 0x040223AE RID: 140206
+		// Token: 0x0401CC07 RID: 117767
 		public float Value;
 
-		// Token: 0x040223AF RID: 140207
+		// Token: 0x0401CC08 RID: 117768
 		public float Duration;
 
-		// Token: 0x040223B0 RID: 140208
+		// Token: 0x0401CC09 RID: 117769
 		public EDropCatchCommandSource? Source;
 	}
 }

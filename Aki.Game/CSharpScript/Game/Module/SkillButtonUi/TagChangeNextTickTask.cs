@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C1C RID: 19484
+	// Token: 0x02003BCD RID: 15309
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TagChangeNextTickTask
 	{
-		// Token: 0x06032702 RID: 206594 RVA: 0x00BC0D34 File Offset: 0x00BBEF34
+		// Token: 0x060274B5 RID: 160949 RVA: 0x00B059C0 File Offset: 0x00B03BC0
 		public void TagChangeWaitNextTick(int gameplayTagId, bool bTagExist, Action<Dictionary<int, bool>> callback)
 		{
 			this.TagChangeMap[gameplayTagId] = bTagExist;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.TagChangeWaitTimerId = TimerSystem.Instance.Next(new TTimerAction(this.OnTagChangeWait), null, null);
 		}
 
-		// Token: 0x06032703 RID: 206595 RVA: 0x00BC0D84 File Offset: 0x00BBEF84
+		// Token: 0x060274B6 RID: 160950 RVA: 0x00B05A10 File Offset: 0x00B03C10
 		public void Clear()
 		{
 			if (this.TagChangeWaitTimerId != null && TimerSystem.Instance.Has(this.TagChangeWaitTimerId))
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.CallbackList = null;
 		}
 
-		// Token: 0x06032704 RID: 206596 RVA: 0x00BC0DE0 File Offset: 0x00BBEFE0
+		// Token: 0x060274B7 RID: 160951 RVA: 0x00B05A6C File Offset: 0x00B03C6C
 		private void OnTagChangeWait(float _)
 		{
 			this.TagChangeWaitTimerId = null;
@@ -49,14 +49,14 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.TagChangeMap.Clear();
 		}
 
-		// Token: 0x0401AD9A RID: 109978
+		// Token: 0x040156F7 RID: 87799
 		private readonly Dictionary<int, bool> TagChangeMap = new Dictionary<int, bool>();
 
-		// Token: 0x0401AD9B RID: 109979
+		// Token: 0x040156F8 RID: 87800
 		[Nullable(2)]
 		private TimerHandle TagChangeWaitTimerId;
 
-		// Token: 0x0401AD9C RID: 109980
+		// Token: 0x040156F9 RID: 87801
 		[Nullable(new byte[]
 		{
 			2,

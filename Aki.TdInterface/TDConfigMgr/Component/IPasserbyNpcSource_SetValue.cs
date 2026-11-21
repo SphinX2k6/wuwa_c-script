@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005CB RID: 1483
+	// Token: 0x02000658 RID: 1624
 	public class IPasserbyNpcSource_SetValue
 	{
-		// Token: 0x04001634 RID: 5684
+		// Token: 0x04001802 RID: 6146
 		public EPasserbyNpcSource Type;
 	}
 }

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200551A RID: 21786
+	// Token: 0x020044ED RID: 17645
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MingSuNpcMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x06037A45 RID: 227909 RVA: 0x00D3546B File Offset: 0x00D3366B
+		// Token: 0x0602C913 RID: 182547 RVA: 0x00C8323C File Offset: 0x00C8143C
 		public MingSuNpcMarkItemView(MingSuNpcMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x06037A46 RID: 227910 RVA: 0x00D35480 File Offset: 0x00D33680
+		// Token: 0x0602C914 RID: 182548 RVA: 0x00C83250 File Offset: 0x00C81450
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MingSuNpcMarkItemView.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A47 RID: 227911 RVA: 0x00D354C3 File Offset: 0x00D336C3
+		// Token: 0x0602C915 RID: 182549 RVA: 0x00C83293 File Offset: 0x00C81493
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.NpcIcon.SetUiActive(false);
 		}
 
-		// Token: 0x06037A48 RID: 227912 RVA: 0x00D354EC File Offset: 0x00D336EC
+		// Token: 0x0602C916 RID: 182550 RVA: 0x00C832BC File Offset: 0x00C814BC
 		protected override void OnViewRefresh()
 		{
 			base.OnViewRefresh();
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			iconItem.SetUIActive(!isWithSeqNpc);
 		}
 
-		// Token: 0x06037A49 RID: 227913 RVA: 0x00D35594 File Offset: 0x00D33794
+		// Token: 0x0602C917 RID: 182551 RVA: 0x00C8336A File Offset: 0x00C8156A
 		protected override void OnViewRecycle()
 		{
 			this.NpcIcon.SetUiActive(false);
 		}
 
-		// Token: 0x06037A4A RID: 227914 RVA: 0x00D355A4 File Offset: 0x00D337A4
+		// Token: 0x0602C918 RID: 182552 RVA: 0x00C83378 File Offset: 0x00C81578
 		private void ProcessSequence()
 		{
 			if (this.Holder.MarkId == 0 || this.Holder.MapType != EMapType.WorldMap)
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.MapNPCMarkShowSeq, hashSet);
 		}
 
-		// Token: 0x06037A4B RID: 227915 RVA: 0x00D3561E File Offset: 0x00D3381E
+		// Token: 0x0602C919 RID: 182553 RVA: 0x00C833F2 File Offset: 0x00C815F2
 		protected override IMarkItemHandle CreateTopRightHandle(IMarkItemComponentContext markComponentContext)
 		{
 			return new MingSuNpcTopRightIconHandle(markComponentContext);
 		}
 
-		// Token: 0x0401D424 RID: 119844
+		// Token: 0x04017EA7 RID: 97959
 		private NpcIconPanel NpcIcon = new NpcIconPanel();
 	}
 }

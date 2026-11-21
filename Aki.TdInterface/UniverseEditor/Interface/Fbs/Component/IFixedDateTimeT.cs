@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200526B RID: 21099
+	// Token: 0x020057D3 RID: 22483
 	public class IFixedDateTimeT
 	{
-		// Token: 0x17009A8A RID: 39562
-		// (get) Token: 0x06022541 RID: 140609 RVA: 0x004C23BA File Offset: 0x004C05BA
-		// (set) Token: 0x06022542 RID: 140610 RVA: 0x004C23C2 File Offset: 0x004C05C2
+		// Token: 0x1700A286 RID: 41606
+		// (get) Token: 0x060244D7 RID: 148695 RVA: 0x004FCE7E File Offset: 0x004FB07E
+		// (set) Token: 0x060244D8 RID: 148696 RVA: 0x004FCE86 File Offset: 0x004FB086
 		public int Hours { get; set; }
 
-		// Token: 0x17009A8B RID: 39563
-		// (get) Token: 0x06022543 RID: 140611 RVA: 0x004C23CB File Offset: 0x004C05CB
-		// (set) Token: 0x06022544 RID: 140612 RVA: 0x004C23D3 File Offset: 0x004C05D3
+		// Token: 0x1700A287 RID: 41607
+		// (get) Token: 0x060244D9 RID: 148697 RVA: 0x004FCE8F File Offset: 0x004FB08F
+		// (set) Token: 0x060244DA RID: 148698 RVA: 0x004FCE97 File Offset: 0x004FB097
 		public int Minutes { get; set; }
 
-		// Token: 0x17009A8C RID: 39564
-		// (get) Token: 0x06022545 RID: 140613 RVA: 0x004C23DC File Offset: 0x004C05DC
-		// (set) Token: 0x06022546 RID: 140614 RVA: 0x004C23E4 File Offset: 0x004C05E4
+		// Token: 0x1700A288 RID: 41608
+		// (get) Token: 0x060244DB RID: 148699 RVA: 0x004FCEA0 File Offset: 0x004FB0A0
+		// (set) Token: 0x060244DC RID: 148700 RVA: 0x004FCEA8 File Offset: 0x004FB0A8
 		public int Seconds { get; set; }
 
-		// Token: 0x06022547 RID: 140615 RVA: 0x004C23ED File Offset: 0x004C05ED
+		// Token: 0x060244DD RID: 148701 RVA: 0x004FCEB1 File Offset: 0x004FB0B1
 		public IFixedDateTimeT()
 		{
 			this.Hours = 0;

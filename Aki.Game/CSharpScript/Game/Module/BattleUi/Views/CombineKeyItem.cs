@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D60 RID: 23904
+	// Token: 0x02004D42 RID: 19778
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CombineKeyItem : KeyItemBase
 	{
-		// Token: 0x0603CAFE RID: 248574 RVA: 0x00E92484 File Offset: 0x00E90684
+		// Token: 0x06031A59 RID: 203353 RVA: 0x00DE2C70 File Offset: 0x00DE0E70
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,28 +31,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CAFF RID: 248575 RVA: 0x00E9250E File Offset: 0x00E9070E
+		// Token: 0x06031A5A RID: 203354 RVA: 0x00DE2CFA File Offset: 0x00DE0EFA
 		public override void Reset()
 		{
 			base.Reset();
 			this.SubKeyTexturePath = null;
 		}
 
-		// Token: 0x0603CB00 RID: 248576 RVA: 0x00E9251D File Offset: 0x00E9071D
+		// Token: 0x06031A5B RID: 203355 RVA: 0x00DE2D09 File Offset: 0x00DE0F09
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			EventSystem.Instance.Add(EEventName.BattleUiSwitchInteractStateChanged, new Action(this.OnSwitchInteractStateChanged));
 		}
 
-		// Token: 0x0603CB01 RID: 248577 RVA: 0x00E92541 File Offset: 0x00E90741
+		// Token: 0x06031A5C RID: 203356 RVA: 0x00DE2D2D File Offset: 0x00DE0F2D
 		protected override void RemoveEvents()
 		{
 			base.RemoveEvents();
 			EventSystem.Instance.Remove(EEventName.BattleUiSwitchInteractStateChanged, new Action(this.OnSwitchInteractStateChanged));
 		}
 
-		// Token: 0x0603CB02 RID: 248578 RVA: 0x00E92565 File Offset: 0x00E90765
+		// Token: 0x06031A5D RID: 203357 RVA: 0x00DE2D51 File Offset: 0x00DE0F51
 		private void OnSwitchInteractStateChanged()
 		{
 			if (Info.Instance.IsInGamepad() && (this.ActionName == "幻象1" || this.ActionName == "载具探索工具"))
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB03 RID: 248579 RVA: 0x00E925A3 File Offset: 0x00E907A3
+		// Token: 0x06031A5E RID: 203358 RVA: 0x00DE2D8F File Offset: 0x00DE0F8F
 		protected override UUIText GetKeyText()
 		{
 			return null;
 		}
 
-		// Token: 0x0603CB04 RID: 248580 RVA: 0x00E925A6 File Offset: 0x00E907A6
+		// Token: 0x06031A5F RID: 203359 RVA: 0x00DE2D92 File Offset: 0x00DE0F92
 		protected override UUITexture GetKeyTexture()
 		{
 			return base.GetTexture(0);
 		}
 
-		// Token: 0x0603CB05 RID: 248581 RVA: 0x00E925B0 File Offset: 0x00E907B0
+		// Token: 0x06031A60 RID: 203360 RVA: 0x00DE2D9C File Offset: 0x00DE0F9C
 		[NullableContext(1)]
 		public override void RefreshAction(string actionName)
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CB06 RID: 248582 RVA: 0x00E92714 File Offset: 0x00E90914
+		// Token: 0x06031A61 RID: 203361 RVA: 0x00DE2F00 File Offset: 0x00DE1100
 		private bool CheckGamepadSwitchInteract()
 		{
 			if (Info.Instance.IsInGamepad() && (this.ActionName == "幻象1" || this.ActionName == "载具探索工具"))
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603CB07 RID: 248583 RVA: 0x00E928B8 File Offset: 0x00E90AB8
+		// Token: 0x06031A62 RID: 203362 RVA: 0x00DE30A4 File Offset: 0x00DE12A4
 		[NullableContext(1)]
 		public void RefreshSubKey(InputKey key)
 		{
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SubKeyName = keyName;
 		}
 
-		// Token: 0x0603CB08 RID: 248584 RVA: 0x00E92954 File Offset: 0x00E90B54
+		// Token: 0x06031A63 RID: 203363 RVA: 0x00DE3140 File Offset: 0x00DE1340
 		public void HideMainKey(bool bHide)
 		{
 			if (this.IsHideMainKey == bHide)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.GetKeyTexture().SetUIActive(!this.IsHideMainKey || !this.IsCombineKey);
 		}
 
-		// Token: 0x0603CB09 RID: 248585 RVA: 0x00E929B0 File Offset: 0x00E90BB0
+		// Token: 0x06031A64 RID: 203364 RVA: 0x00DE319C File Offset: 0x00DE139C
 		protected override void OnSetGray()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -221,34 +221,34 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uuiitem2.SetChangeColor(isGray2, fcolor);
 		}
 
-		// Token: 0x0603CB0A RID: 248586 RVA: 0x00E92A01 File Offset: 0x00E90C01
+		// Token: 0x06031A65 RID: 203365 RVA: 0x00DE31ED File Offset: 0x00DE13ED
 		public string GetKeyName()
 		{
 			return this.KeyName;
 		}
 
-		// Token: 0x0401F9DC RID: 129500
+		// Token: 0x0401A494 RID: 107668
 		[Nullable(1)]
 		private string SubKeyName = string.Empty;
 
-		// Token: 0x0401F9DD RID: 129501
+		// Token: 0x0401A495 RID: 107669
 		private string SubKeyTexturePath;
 
-		// Token: 0x0401F9DE RID: 129502
+		// Token: 0x0401A496 RID: 107670
 		private bool IsHideMainKey;
 
-		// Token: 0x0401F9DF RID: 129503
+		// Token: 0x0401A497 RID: 107671
 		private bool IsCombineKey;
 
-		// Token: 0x0200C00F RID: 49167
+		// Token: 0x0200AA15 RID: 43541
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039F4E RID: 237390
+			// Token: 0x04034910 RID: 215312
 			KeyTextureMain,
-			// Token: 0x04039F4F RID: 237391
+			// Token: 0x04034911 RID: 215313
 			AddText,
-			// Token: 0x04039F50 RID: 237392
+			// Token: 0x04034912 RID: 215314
 			KeyTextureSub
 		}
 	}

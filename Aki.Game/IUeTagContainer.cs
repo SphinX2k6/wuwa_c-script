@@ -1,9 +1,9 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002EE6 RID: 12006
+// Token: 0x02002439 RID: 9273
 public interface IUeTagContainer
 {
-	// Token: 0x06019A59 RID: 105049
+	// Token: 0x0601735C RID: 95068
 	void UpdateTagMap(FGameplayTag tag, int count);
 }

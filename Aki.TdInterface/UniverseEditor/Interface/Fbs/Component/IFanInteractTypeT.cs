@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005238 RID: 21048
+	// Token: 0x020057A0 RID: 22432
 	public class IFanInteractTypeT
 	{
-		// Token: 0x17009A38 RID: 39480
-		// (get) Token: 0x060223C5 RID: 140229 RVA: 0x004BFB5E File Offset: 0x004BDD5E
-		// (set) Token: 0x060223C6 RID: 140230 RVA: 0x004BFB66 File Offset: 0x004BDD66
+		// Token: 0x1700A234 RID: 41524
+		// (get) Token: 0x0602435B RID: 148315 RVA: 0x004FA622 File Offset: 0x004F8822
+		// (set) Token: 0x0602435C RID: 148316 RVA: 0x004FA62A File Offset: 0x004F882A
 		public EFanInteractType Type { get; set; }
 
-		// Token: 0x060223C7 RID: 140231 RVA: 0x004BFB6F File Offset: 0x004BDD6F
+		// Token: 0x0602435D RID: 148317 RVA: 0x004FA633 File Offset: 0x004F8833
 		public IFanInteractTypeT()
 		{
 			this.Type = EFanInteractType.Hit;

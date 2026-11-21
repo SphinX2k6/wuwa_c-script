@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A5F RID: 19039
+	// Token: 0x02003A07 RID: 14855
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ITrapDefenseResultUnlockTab
 	{
-		// Token: 0x17007A88 RID: 31368
-		// (get) Token: 0x06031610 RID: 202256 RVA: 0x00B72577 File Offset: 0x00B70777
-		// (set) Token: 0x06031611 RID: 202257 RVA: 0x00B7257F File Offset: 0x00B7077F
+		// Token: 0x17004E35 RID: 20021
+		// (get) Token: 0x060263A0 RID: 156576 RVA: 0x00AB64FB File Offset: 0x00AB46FB
+		// (set) Token: 0x060263A1 RID: 156577 RVA: 0x00AB6503 File Offset: 0x00AB4703
 		public ETrapDefenseResultUnlockType Type { get; set; }
 
-		// Token: 0x17007A89 RID: 31369
-		// (get) Token: 0x06031612 RID: 202258 RVA: 0x00B72588 File Offset: 0x00B70788
-		// (set) Token: 0x06031613 RID: 202259 RVA: 0x00B72590 File Offset: 0x00B70790
+		// Token: 0x17004E36 RID: 20022
+		// (get) Token: 0x060263A2 RID: 156578 RVA: 0x00AB650C File Offset: 0x00AB470C
+		// (set) Token: 0x060263A3 RID: 156579 RVA: 0x00AB6514 File Offset: 0x00AB4714
 		public List<ITrapDefenseResultUnlockInfo> DataList { get; set; }
 	}
 }

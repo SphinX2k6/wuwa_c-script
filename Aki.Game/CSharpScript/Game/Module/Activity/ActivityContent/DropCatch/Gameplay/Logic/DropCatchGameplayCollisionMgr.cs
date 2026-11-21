@@ -4,30 +4,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006718 RID: 26392
+	// Token: 0x02005668 RID: 22120
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayCollisionMgr : DropCatchGameplayBaseMgr
 	{
-		// Token: 0x06041E89 RID: 269961 RVA: 0x00FFC81D File Offset: 0x00FFAA1D
+		// Token: 0x060369D5 RID: 223701 RVA: 0x00F3DBE9 File Offset: 0x00F3BDE9
 		public DropCatchGameplayCollisionMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041E8A RID: 269962 RVA: 0x00FFC83C File Offset: 0x00FFAA3C
+		// Token: 0x060369D6 RID: 223702 RVA: 0x00F3DC08 File Offset: 0x00F3BE08
 		public override void Init()
 		{
 			this.TmpCollisionList.Clear();
 			this.CheckCollisionDropItemInstanceIds.Clear();
 		}
 
-		// Token: 0x06041E8B RID: 269963 RVA: 0x00FFC854 File Offset: 0x00FFAA54
+		// Token: 0x060369D7 RID: 223703 RVA: 0x00F3DC20 File Offset: 0x00F3BE20
 		public override void OnTick(float deltaTime)
 		{
 			this.UpdateCollisions();
 		}
 
-		// Token: 0x06041E8C RID: 269964 RVA: 0x00FFC85C File Offset: 0x00FFAA5C
+		// Token: 0x060369D8 RID: 223704 RVA: 0x00F3DC28 File Offset: 0x00F3BE28
 		private void UpdateCollisions()
 		{
 			IRoleInstance role = this.Context.GetGameplayRoleMgr().GetRole();
@@ -65,28 +65,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041E8D RID: 269965 RVA: 0x00FFC9A8 File Offset: 0x00FFABA8
+		// Token: 0x060369D9 RID: 223705 RVA: 0x00F3DD74 File Offset: 0x00F3BF74
 		private bool CheckCollision(IDropCatchBounds collisionA, IDropCatchBounds collisionB)
 		{
 			return collisionA.Left <= collisionB.Right && collisionA.Right >= collisionB.Left && collisionA.Bottom <= collisionB.Top && collisionA.Top >= collisionB.Bottom;
 		}
 
-		// Token: 0x06041E8E RID: 269966 RVA: 0x00FFC9E7 File Offset: 0x00FFABE7
+		// Token: 0x060369DA RID: 223706 RVA: 0x00F3DDB3 File Offset: 0x00F3BFB3
 		public void AddCheckCollisionDropItemInstanceId(int instanceId)
 		{
 			this.CheckCollisionDropItemInstanceIds.Add(instanceId);
 		}
 
-		// Token: 0x06041E8F RID: 269967 RVA: 0x00FFC9F6 File Offset: 0x00FFABF6
+		// Token: 0x060369DB RID: 223707 RVA: 0x00F3DDC2 File Offset: 0x00F3BFC2
 		public void RemoveCheckCollisionDropItemInstanceId(int instanceId)
 		{
 			this.CheckCollisionDropItemInstanceIds.Remove(instanceId);
 		}
 
-		// Token: 0x0402257F RID: 140671
+		// Token: 0x0401CDD8 RID: 118232
 		private readonly List<int> TmpCollisionList = new List<int>();
 
-		// Token: 0x04022580 RID: 140672
+		// Token: 0x0401CDD9 RID: 118233
 		private readonly HashSet<int> CheckCollisionDropItemInstanceIds = new HashSet<int>();
 	}
 }

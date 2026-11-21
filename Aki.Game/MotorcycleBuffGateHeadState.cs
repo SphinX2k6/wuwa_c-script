@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CD9 RID: 7385
+// Token: 0x0200119B RID: 4507
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleBuffGateHeadState : UiPanelBase
 {
-	// Token: 0x0600DFBA RID: 57274 RVA: 0x0034669F File Offset: 0x0034489F
+	// Token: 0x0600B3D7 RID: 46039 RVA: 0x003520C7 File Offset: 0x003502C7
 	protected virtual string GetResourceId()
 	{
 		return "UiItem_WorldPosBuff2";
 	}
 
-	// Token: 0x0600DFBB RID: 57275 RVA: 0x003466A8 File Offset: 0x003448A8
+	// Token: 0x0600B3D8 RID: 46040 RVA: 0x003520D0 File Offset: 0x003502D0
 	public void CreateHeadStateView(USceneComponent parentComponent, [Nullable(2)] IBuffGateDesc buffGateInfo = null)
 	{
 		string resourceId = this.GetResourceId();
@@ -27,7 +27,7 @@ public class MotorcycleBuffGateHeadState : UiPanelBase
 		this.BuffGateInfo = buffGateInfo;
 	}
 
-	// Token: 0x0600DFBC RID: 57276 RVA: 0x003466E2 File Offset: 0x003448E2
+	// Token: 0x0600B3D9 RID: 46041 RVA: 0x0035210A File Offset: 0x0035030A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class MotorcycleBuffGateHeadState : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DFBD RID: 57277 RVA: 0x0034671C File Offset: 0x0034491C
+	// Token: 0x0600B3DA RID: 46042 RVA: 0x00352144 File Offset: 0x00350344
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleBuffGateHeadState.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,13 +48,13 @@ public class MotorcycleBuffGateHeadState : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFBE RID: 57278 RVA: 0x0034675F File Offset: 0x0034495F
+	// Token: 0x0600B3DB RID: 46043 RVA: 0x00352187 File Offset: 0x00350387
 	public void UpdateByHeadInfo(FKSC_HeadHpContext headInfo)
 	{
 		this.UpdateHeadStateLocation(headInfo.Location);
 	}
 
-	// Token: 0x0600DFBF RID: 57279 RVA: 0x00346770 File Offset: 0x00344970
+	// Token: 0x0600B3DC RID: 46044 RVA: 0x00352198 File Offset: 0x00350398
 	private void UpdateHeadStateLocation(FVectorDouble location)
 	{
 		if (this.RootItem == null)
@@ -72,7 +72,7 @@ public class MotorcycleBuffGateHeadState : UiPanelBase
 		rootItem.SetUIRelativeLocation(commonTempVector.ToUeVectorOld());
 	}
 
-	// Token: 0x0600DFC0 RID: 57280 RVA: 0x003467BC File Offset: 0x003449BC
+	// Token: 0x0600B3DD RID: 46045 RVA: 0x003521E4 File Offset: 0x003503E4
 	protected void RefreshHeadStateRotation()
 	{
 		Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -85,21 +85,21 @@ public class MotorcycleBuffGateHeadState : UiPanelBase
 		rootItem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x040066FA RID: 26362
+	// Token: 0x040067D9 RID: 26585
 	[Nullable(2)]
 	private IBuffGateDesc BuffGateInfo;
 
-	// Token: 0x040066FB RID: 26363
+	// Token: 0x040067DA RID: 26586
 	private FVectorDouble? Location;
 
-	// Token: 0x020082DD RID: 33501
+	// Token: 0x02007466 RID: 29798
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AB1A RID: 174874
+		// Token: 0x04025E42 RID: 155202
 		public const int TextureQuality = 0;
 
-		// Token: 0x0402AB1B RID: 174875
+		// Token: 0x04025E43 RID: 155203
 		public const int TextDialogue = 1;
 	}
 }

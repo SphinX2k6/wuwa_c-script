@@ -29,31 +29,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C7 RID: 28871
+	// Token: 0x0200632B RID: 25387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterManipulateComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x0604668C RID: 288396 RVA: 0x011A8EE8 File Offset: 0x011A70E8
+		// Token: 0x0603D776 RID: 251766 RVA: 0x011C84C8 File Offset: 0x011C66C8
 		static CharacterManipulateComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterManipulateComponent.CreateStaticDefaultValue), new Action(CharacterManipulateComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604668D RID: 288397 RVA: 0x011A8FB7 File Offset: 0x011A71B7
+		// Token: 0x0603D777 RID: 251767 RVA: 0x011C8597 File Offset: 0x011C6797
 		public static void CreateStaticDefaultValue()
 		{
 			CharacterManipulateComponent.SkillEnabled = false;
 		}
 
-		// Token: 0x0604668E RID: 288398 RVA: 0x011A8FBF File Offset: 0x011A71BF
+		// Token: 0x0603D778 RID: 251768 RVA: 0x011C859F File Offset: 0x011C679F
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterManipulateComponent.SkillEnabled = false;
 		}
 
-		// Token: 0x17009C8F RID: 40079
-		// (get) Token: 0x0604668F RID: 288399 RVA: 0x011A8FC7 File Offset: 0x011A71C7
+		// Token: 0x17007498 RID: 29848
+		// (get) Token: 0x0603D779 RID: 251769 RVA: 0x011C85A7 File Offset: 0x011C67A7
 		public int StateProp
 		{
 			get
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C90 RID: 40080
-		// (get) Token: 0x06046690 RID: 288400 RVA: 0x011A8FCF File Offset: 0x011A71CF
+		// Token: 0x17007499 RID: 29849
+		// (get) Token: 0x0603D77A RID: 251770 RVA: 0x011C85AF File Offset: 0x011C67AF
 		[Nullable(2)]
 		public Entity SelectedEntityProp
 		{
@@ -74,8 +74,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C91 RID: 40081
-		// (get) Token: 0x06046691 RID: 288401 RVA: 0x011A8FD7 File Offset: 0x011A71D7
+		// Token: 0x1700749A RID: 29850
+		// (get) Token: 0x0603D77B RID: 251771 RVA: 0x011C85B7 File Offset: 0x011C67B7
 		[Nullable(2)]
 		public Entity HoldingEntityProp
 		{
@@ -86,9 +86,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C92 RID: 40082
-		// (get) Token: 0x06046692 RID: 288402 RVA: 0x011A8FDF File Offset: 0x011A71DF
-		// (set) Token: 0x06046693 RID: 288403 RVA: 0x011A8FE7 File Offset: 0x011A71E7
+		// Token: 0x1700749B RID: 29851
+		// (get) Token: 0x0603D77C RID: 251772 RVA: 0x011C85BF File Offset: 0x011C67BF
+		// (set) Token: 0x0603D77D RID: 251773 RVA: 0x011C85C7 File Offset: 0x011C67C7
 		public bool DebugDrawSphereAndArrow
 		{
 			get
@@ -101,9 +101,9 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009C93 RID: 40083
-		// (get) Token: 0x06046694 RID: 288404 RVA: 0x011A8FF0 File Offset: 0x011A71F0
-		// (set) Token: 0x06046695 RID: 288405 RVA: 0x011A8FF8 File Offset: 0x011A71F8
+		// Token: 0x1700749C RID: 29852
+		// (get) Token: 0x0603D77E RID: 251774 RVA: 0x011C85D0 File Offset: 0x011C67D0
+		// (set) Token: 0x0603D77F RID: 251775 RVA: 0x011C85D8 File Offset: 0x011C67D8
 		public bool TraceDebug
 		{
 			get
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046696 RID: 288406 RVA: 0x011A9001 File Offset: 0x011A7201
+		// Token: 0x0603D780 RID: 251776 RVA: 0x011C85E1 File Offset: 0x011C67E1
 		protected override bool OnInit()
 		{
 			this.State = CharacterManipulateComponent.EState.Reset;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046697 RID: 288407 RVA: 0x011A9024 File Offset: 0x011A7224
+		// Token: 0x0603D781 RID: 251777 RVA: 0x011C8604 File Offset: 0x011C6804
 		protected override bool OnStart()
 		{
 			this.ActorComponent = base.Entity.GetComponent<CharacterActorComponent>();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046698 RID: 288408 RVA: 0x011A90F4 File Offset: 0x011A72F4
+		// Token: 0x0603D782 RID: 251778 RVA: 0x011C86D4 File Offset: 0x011C68D4
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<FGameplayTag>(EEventName.AddSubCameraTag, new Action<FGameplayTag>(this.OnAddSubCameraTag));
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.CharOnRevive, new Action(this.OnRoleRevive));
 		}
 
-		// Token: 0x06046699 RID: 288409 RVA: 0x011A925C File Offset: 0x011A745C
+		// Token: 0x0603D783 RID: 251779 RVA: 0x011C883C File Offset: 0x011C6A3C
 		private void AddInputLayer()
 		{
 			if (this.InputLayer != null)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604669A RID: 288410 RVA: 0x011A92D0 File Offset: 0x011A74D0
+		// Token: 0x0603D784 RID: 251780 RVA: 0x011C88B0 File Offset: 0x011C6AB0
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<FGameplayTag>(EEventName.AddSubCameraTag, new Action<FGameplayTag>(this.OnAddSubCameraTag));
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnRevive, new Action(this.OnRoleRevive));
 		}
 
-		// Token: 0x0604669B RID: 288411 RVA: 0x011A9436 File Offset: 0x011A7636
+		// Token: 0x0603D785 RID: 251781 RVA: 0x011C8A16 File Offset: 0x011C6C16
 		private void RemoveInputLayer()
 		{
 			if (this.InputLayer != null)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604669C RID: 288412 RVA: 0x011A9462 File Offset: 0x011A7662
+		// Token: 0x0603D786 RID: 251782 RVA: 0x011C8A42 File Offset: 0x011C6C42
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.HoldingEntity == handle.Entity)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604669D RID: 288413 RVA: 0x011A949C File Offset: 0x011A769C
+		// Token: 0x0603D787 RID: 251783 RVA: 0x011C8A7C File Offset: 0x011C6C7C
 		private void OnExploreVisionSkillChange()
 		{
 			if ((long)RouletteModel.Instance.CurrentExploreSkillId == 1003L)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604669E RID: 288414 RVA: 0x011A954C File Offset: 0x011A774C
+		// Token: 0x0603D788 RID: 251784 RVA: 0x011C8B2C File Offset: 0x011C6D2C
 		protected override void OnTick(float delta)
 		{
 			if (!this.ActorComponent.IsMoveAutonomousProxy)
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604669F RID: 288415 RVA: 0x011A9624 File Offset: 0x011A7824
+		// Token: 0x0603D789 RID: 251785 RVA: 0x011C8C04 File Offset: 0x011C6E04
 		protected override bool OnEnd()
 		{
 			this.Reset();
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466A0 RID: 288416 RVA: 0x011A96AC File Offset: 0x011A78AC
+		// Token: 0x0603D78A RID: 251786 RVA: 0x011C8C8C File Offset: 0x011C6E8C
 		[NullableContext(2)]
 		public AActor GetDrawTarget()
 		{
@@ -355,13 +355,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return component.Owner;
 		}
 
-		// Token: 0x060466A1 RID: 288417 RVA: 0x011A9705 File Offset: 0x011A7905
+		// Token: 0x0603D78B RID: 251787 RVA: 0x011C8CE5 File Offset: 0x011C6EE5
 		public void SetDrawTargetEntity(Entity entity)
 		{
 			this.SelectedEntity = entity;
 		}
 
-		// Token: 0x060466A2 RID: 288418 RVA: 0x011A9710 File Offset: 0x011A7910
+		// Token: 0x0603D78C RID: 251788 RVA: 0x011C8CF0 File Offset: 0x011C6EF0
 		public float GetDrawTargetChantTime()
 		{
 			Entity selectedEntity = this.SelectedEntity;
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return component.ManipulateBaseConfig.读条时间;
 		}
 
-		// Token: 0x060466A3 RID: 288419 RVA: 0x011A975C File Offset: 0x011A795C
+		// Token: 0x0603D78D RID: 251789 RVA: 0x011C8D3C File Offset: 0x011C6F3C
 		[NullableContext(2)]
 		public AActor GetCastTarget()
 		{
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return component.Owner;
 		}
 
-		// Token: 0x060466A4 RID: 288420 RVA: 0x011A97A4 File Offset: 0x011A79A4
+		// Token: 0x0603D78E RID: 251790 RVA: 0x011C8D84 File Offset: 0x011C6F84
 		public bool Chant(UKuroBooleanEventBinder eventBinder)
 		{
 			Entity selectedEntity = this.SelectedEntity;
@@ -429,7 +429,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466A5 RID: 288421 RVA: 0x011A9824 File Offset: 0x011A7A24
+		// Token: 0x0603D78F RID: 251791 RVA: 0x011C8E04 File Offset: 0x011C7004
 		private void RequestChant(UKuroBooleanEventBinder eventBinder)
 		{
 			CreatureDataComponent component = this.SelectedEntity.GetComponent<CreatureDataComponent>();
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}, 0);
 		}
 
-		// Token: 0x060466A6 RID: 288422 RVA: 0x011A98BC File Offset: 0x011A7ABC
+		// Token: 0x0603D790 RID: 251792 RVA: 0x011C8E9C File Offset: 0x011C709C
 		private bool ChantInternal(UKuroBooleanEventBinder eventBinder)
 		{
 			if (!this.IsRequestingManipulate)
@@ -531,7 +531,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466A7 RID: 288423 RVA: 0x011A99F4 File Offset: 0x011A7BF4
+		// Token: 0x0603D791 RID: 251793 RVA: 0x011C8FD4 File Offset: 0x011C71D4
 		public bool Draw()
 		{
 			Entity selectedEntity = this.SelectedEntity;
@@ -570,13 +570,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466A8 RID: 288424 RVA: 0x011A9B47 File Offset: 0x011A7D47
+		// Token: 0x0603D792 RID: 251794 RVA: 0x011C9127 File Offset: 0x011C7327
 		public void MarkCastOnDetach()
 		{
 			this.ShouldCastOnDetach = true;
 		}
 
-		// Token: 0x060466A9 RID: 288425 RVA: 0x011A9B50 File Offset: 0x011A7D50
+		// Token: 0x0603D793 RID: 251795 RVA: 0x011C9130 File Offset: 0x011C7330
 		public void TryCastOnDetach()
 		{
 			if (!this.ShouldCastOnDetach)
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.Cast();
 		}
 
-		// Token: 0x060466AA RID: 288426 RVA: 0x011A9B6C File Offset: 0x011A7D6C
+		// Token: 0x0603D794 RID: 251796 RVA: 0x011C914C File Offset: 0x011C734C
 		public bool Cast()
 		{
 			if (this.State != CharacterManipulateComponent.EState.Precasting)
@@ -690,7 +690,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466AB RID: 288427 RVA: 0x011A9E14 File Offset: 0x011A8014
+		// Token: 0x0603D795 RID: 251797 RVA: 0x011C93F4 File Offset: 0x011C75F4
 		private void CastFree()
 		{
 			FRotator cameraRot = this.GetCameraRot();
@@ -746,7 +746,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.SpawnEffectTransform = new FTransformDouble?(value);
 		}
 
-		// Token: 0x060466AC RID: 288428 RVA: 0x011A9F20 File Offset: 0x011A8120
+		// Token: 0x0603D796 RID: 251798 RVA: 0x011C9500 File Offset: 0x011C7700
 		private FRotator GetCameraRot()
 		{
 			FRotator frotator = Global.CharacterCameraManager.GetCameraRotation();
@@ -769,7 +769,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return frotator;
 		}
 
-		// Token: 0x060466AD RID: 288429 RVA: 0x011AA040 File Offset: 0x011A8240
+		// Token: 0x0603D797 RID: 251799 RVA: 0x011C9620 File Offset: 0x011C7820
 		public bool Drop()
 		{
 			EventSystem.Instance.Emit(EEventName.HideJigsawBaseHint);
@@ -816,7 +816,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466AE RID: 288430 RVA: 0x011AA170 File Offset: 0x011A8370
+		// Token: 0x0603D798 RID: 251800 RVA: 0x011C9750 File Offset: 0x011C7950
 		public unsafe void Reset()
 		{
 			Entity entity = this.HoldingEntity ?? this.SelectedEntity;
@@ -864,7 +864,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.ResetState();
 		}
 
-		// Token: 0x060466AF RID: 288431 RVA: 0x011AA344 File Offset: 0x011A8544
+		// Token: 0x0603D799 RID: 251801 RVA: 0x011C9924 File Offset: 0x011C7B24
 		private void Hold()
 		{
 			Entity holdingEntity = this.HoldingEntity;
@@ -926,7 +926,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.State = CharacterManipulateComponent.EState.Holding;
 		}
 
-		// Token: 0x060466B0 RID: 288432 RVA: 0x011AA5A0 File Offset: 0x011A87A0
+		// Token: 0x0603D79A RID: 251802 RVA: 0x011C9B80 File Offset: 0x011C7D80
 		public bool Precast(int direction)
 		{
 			if (this.State != CharacterManipulateComponent.EState.Holding)
@@ -947,9 +947,10 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466B1 RID: 288433 RVA: 0x011AA63C File Offset: 0x011A883C
+		// Token: 0x0603D79B RID: 251803 RVA: 0x011C9C1C File Offset: 0x011C7E1C
 		private void ResetState()
 		{
+			this.RestoreProjectileAimDirection();
 			BaseTagComponent tagComponent = this.TagComponent;
 			if (tagComponent != null && tagComponent.Valid)
 			{
@@ -1012,7 +1013,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.LastSelectPart = null;
 		}
 
-		// Token: 0x060466B2 RID: 288434 RVA: 0x011AA894 File Offset: 0x011A8A94
+		// Token: 0x0603D79C RID: 251804 RVA: 0x011C9E7C File Offset: 0x011C807C
 		private void FindTarget(bool isCastTarget)
 		{
 			AActor aactor = this.MoveComponent.CharacterMovement.CurrentFloor.HitResult.Actor.Get();
@@ -1052,7 +1053,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466B3 RID: 288435 RVA: 0x011AA9A0 File Offset: 0x011A8BA0
+		// Token: 0x0603D79D RID: 251805 RVA: 0x011C9F88 File Offset: 0x011C8188
 		private void ResetFindTargetData()
 		{
 			CameraController.Instance.MainModel.CameraRotator.Vector(this.TempCameraDir);
@@ -1063,7 +1064,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.LastSelectPart = null;
 		}
 
-		// Token: 0x060466B4 RID: 288436 RVA: 0x011AAA04 File Offset: 0x011A8C04
+		// Token: 0x0603D79E RID: 251806 RVA: 0x011C9FEC File Offset: 0x011C81EC
 		private void CollectionPotentialTargets(AActor floorActor, bool isCastTarget)
 		{
 			float distance = this.SearchRange;
@@ -1125,7 +1126,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466B5 RID: 288437 RVA: 0x011AAD00 File Offset: 0x011A8F00
+		// Token: 0x0603D79F RID: 251807 RVA: 0x011CA2E8 File Offset: 0x011C84E8
 		private bool ChooseEntityConditions([Nullable(2)] Entity entity, AActor floorActor, bool isCastTarget)
 		{
 			if (entity == null || !entity.Valid)
@@ -1169,7 +1170,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466B6 RID: 288438 RVA: 0x011AADDC File Offset: 0x011A8FDC
+		// Token: 0x0603D7A0 RID: 251808 RVA: 0x011CA3C4 File Offset: 0x011C85C4
 		private void CollectionPotentialTargetsThroughPortal(long pathwayPortalPairId, bool pathwayPortalA2B, float distance, AActor floorActor, bool isCastTarget)
 		{
 			if (pathwayPortalPairId == 0L)
@@ -1277,7 +1278,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466B7 RID: 288439 RVA: 0x011AB1A8 File Offset: 0x011A93A8
+		// Token: 0x0603D7A1 RID: 251809 RVA: 0x011CA790 File Offset: 0x011C8990
 		private void SpliFrameCalcWeight(AActor floorActor, bool isCastTarget)
 		{
 			int i = 0;
@@ -1313,7 +1314,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466B8 RID: 288440 RVA: 0x011AB254 File Offset: 0x011A9454
+		// Token: 0x0603D7A2 RID: 251810 RVA: 0x011CA83C File Offset: 0x011C8A3C
 		[NullableContext(2)]
 		private void AfterFindTarget(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam, bool isCastTarget)
 		{
@@ -1464,7 +1465,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466B9 RID: 288441 RVA: 0x011AB700 File Offset: 0x011A9900
+		// Token: 0x0603D7A3 RID: 251811 RVA: 0x011CACE8 File Offset: 0x011C8EE8
 		[NullableContext(2)]
 		private void CheckTagWithJigsaw(Entity entity)
 		{
@@ -1543,7 +1544,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466BA RID: 288442 RVA: 0x011AB85C File Offset: 0x011A9A5C
+		// Token: 0x0603D7A4 RID: 251812 RVA: 0x011CAE44 File Offset: 0x011C9044
 		private double CalcTargetWeight(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam, bool isCastTarget)
 		{
 			double num = -3.402823466E+38;
@@ -1710,7 +1711,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return num2 * this.GetWeight(entityWithParam, num, isMultPart, isCastTarget);
 		}
 
-		// Token: 0x060466BB RID: 288443 RVA: 0x011ABC24 File Offset: 0x011A9E24
+		// Token: 0x0603D7A5 RID: 251813 RVA: 0x011CB20C File Offset: 0x011C940C
 		private void InitLineTraceInfo()
 		{
 			this.LineTrace = new UTraceLineElement();
@@ -1723,7 +1724,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			TraceElementCommon.Instance.SetTraceHitColor(this.LineTrace, new FLinearColor(0f, 1f, 0f, 1f));
 		}
 
-		// Token: 0x060466BC RID: 288444 RVA: 0x011ABCC4 File Offset: 0x011A9EC4
+		// Token: 0x0603D7A6 RID: 251814 RVA: 0x011CB2AC File Offset: 0x011C94AC
 		private void InitSphereTraceInfo()
 		{
 			this.ForwardObstacleTrace = new UTraceSphereElement();
@@ -1737,7 +1738,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			TraceElementCommon.Instance.SetTraceHitColor(this.ForwardObstacleTrace, CharacterManipulateComponent.LineTraceColor);
 		}
 
-		// Token: 0x060466BD RID: 288445 RVA: 0x011ABD60 File Offset: 0x011A9F60
+		// Token: 0x0603D7A7 RID: 251815 RVA: 0x011CB348 File Offset: 0x011C9548
 		private bool LineTarceTestWithTarget(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam)
 		{
 			if (this.LineTrace == null)
@@ -1821,7 +1822,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return this.TraceCharacterAndHoldingPoint(this.HoldingActorComponent, flag);
 		}
 
-		// Token: 0x060466BE RID: 288446 RVA: 0x011AC150 File Offset: 0x011AA350
+		// Token: 0x0603D7A8 RID: 251816 RVA: 0x011CB738 File Offset: 0x011C9938
 		private bool ProcessLineTraceResult(BaseActorComponent actorComponent)
 		{
 			if (this.LineTrace.HitResult.bBlockingHit)
@@ -1847,7 +1848,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466BF RID: 288447 RVA: 0x011AC208 File Offset: 0x011AA408
+		// Token: 0x0603D7A9 RID: 251817 RVA: 0x011CB7F0 File Offset: 0x011C99F0
 		[NullableContext(2)]
 		private bool TraceCharacterAndHoldingPoint(BaseActorComponent actorComponent, bool isValid)
 		{
@@ -1902,7 +1903,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466C0 RID: 288448 RVA: 0x011AC408 File Offset: 0x011AA608
+		// Token: 0x0603D7AA RID: 251818 RVA: 0x011CB9F0 File Offset: 0x011C9BF0
 		private bool IsObstacleCheck(AActor actor, [Nullable(2)] UPrimitiveComponent component, int hitItem)
 		{
 			SceneItemActorComponent holdingActorComponent = this.HoldingActorComponent;
@@ -1922,7 +1923,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return !(RenderConfig.WaterCollisionProfileName == collisionProfileName) && !(CharacterManipulateComponent.HIT_COLLISION_NAME == collisionProfileName);
 		}
 
-		// Token: 0x060466C1 RID: 288449 RVA: 0x011AC468 File Offset: 0x011AA668
+		// Token: 0x0603D7AB RID: 251819 RVA: 0x011CBA50 File Offset: 0x011C9C50
 		private void ForwardObstacleCheck()
 		{
 			SceneItemManipulatableComponent holdingManipulatable = this.HoldingManipulatable;
@@ -1989,7 +1990,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466C2 RID: 288450 RVA: 0x011AC760 File Offset: 0x011AA960
+		// Token: 0x0603D7AC RID: 251820 RVA: 0x011CBD48 File Offset: 0x011C9F48
 		private bool IsTargetCheck(AActor actor, [Nullable(2)] BaseActorComponent actorComp)
 		{
 			EntityHandle entityByActor;
@@ -2006,13 +2007,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return num.GetValueOrDefault() == num2.GetValueOrDefault() & num != null == (num2 != null);
 		}
 
-		// Token: 0x060466C3 RID: 288451 RVA: 0x011AC7ED File Offset: 0x011AA9ED
+		// Token: 0x0603D7AD RID: 251821 RVA: 0x011CBDD5 File Offset: 0x011C9FD5
 		private bool CheckEntityVaild(Entity entity, bool isCastTarget, [Nullable(2)] BaseActorComponent actorComponent)
 		{
 			return entity.Active && (!isCastTarget || entity != this.HoldingEntity) && (actorComponent != null && actorComponent.Valid);
 		}
 
-		// Token: 0x060466C4 RID: 288452 RVA: 0x011AC81C File Offset: 0x011AAA1C
+		// Token: 0x0603D7AE RID: 251822 RVA: 0x011CBE04 File Offset: 0x011CA004
 		private double GetWeight(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam, double weight, bool isMultPart, bool isCastTarget = false)
 		{
 			double result;
@@ -2035,7 +2036,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return result;
 		}
 
-		// Token: 0x060466C5 RID: 288453 RVA: 0x011AC86C File Offset: 0x011AAA6C
+		// Token: 0x0603D7AF RID: 251823 RVA: 0x011CBE54 File Offset: 0x011CA054
 		private double GetWeightNormalNew(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam, double defaultWeight, bool isCastTarget)
 		{
 			BaseActorComponent component = entityWithParam.Entity.GetComponent<BaseActorComponent>();
@@ -2051,7 +2052,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			List<double> list2 = new List<double>();
 			if (!isCastTarget)
 			{
-				using (IEnumerator<KeyValuePair<float, float>> enumerator = component3.ManipulateBaseConfig.被感知角度权重.GetEnumerator())
+				using (TMap<float, float>.Enumerator enumerator = component3.ManipulateBaseConfig.被感知角度权重.GetEnumerator())
 				{
 					while (enumerator.MoveNext())
 					{
@@ -2064,7 +2065,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 						list.Add((double)num4);
 						list2.Add((double)num5);
 					}
-					goto IL_11F;
+					goto IL_121;
 				}
 			}
 			foreach (IEntityAngleWeight entityAngleWeight in this.HoldingManipulatable.Config.SearchTargetCfg.AngleWeight)
@@ -2072,7 +2073,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				list.Add((double)entityAngleWeight.Angle);
 				list2.Add((double)entityAngleWeight.Weight);
 			}
-			IL_11F:
+			IL_121:
 			for (int i = 0; i < list.Count; i++)
 			{
 				double num6 = list[i];
@@ -2091,7 +2092,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return num * num8;
 		}
 
-		// Token: 0x060466C6 RID: 288454 RVA: 0x011ACA78 File Offset: 0x011AAC78
+		// Token: 0x0603D7B0 RID: 251824 RVA: 0x011CC064 File Offset: 0x011CA264
 		private double GetWeightMultParts(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam, double weight)
 		{
 			Entity entity = entityWithParam.Entity;
@@ -2148,7 +2149,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return weight;
 		}
 
-		// Token: 0x060466C7 RID: 288455 RVA: 0x011ACCD0 File Offset: 0x011AAED0
+		// Token: 0x0603D7B1 RID: 251825 RVA: 0x011CC2BC File Offset: 0x011CA4BC
 		private double GetWeightJigsawItemComp(CharacterManipulateComponent.FindedEntityWithPortalParam entityWithParam, double defaultWeight, bool isCastTarget)
 		{
 			SceneItemJigsawItemComponent component = entityWithParam.Entity.GetComponent<SceneItemJigsawItemComponent>();
@@ -2159,7 +2160,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			double num2 = -1.0;
 			if (!isCastTarget)
 			{
-				using (IEnumerator<KeyValuePair<float, float>> enumerator = entityWithParam.Entity.GetComponent<SceneItemManipulatableComponent>().ManipulateBaseConfig.被感知角度权重.GetEnumerator())
+				using (TMap<float, float>.Enumerator enumerator = entityWithParam.Entity.GetComponent<SceneItemManipulatableComponent>().ManipulateBaseConfig.被感知角度权重.GetEnumerator())
 				{
 					while (enumerator.MoveNext())
 					{
@@ -2172,7 +2173,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 						list.Add((double)num5);
 						list2.Add((double)num6);
 					}
-					goto IL_113;
+					goto IL_115;
 				}
 			}
 			foreach (IEntityAngleWeight entityAngleWeight in this.HoldingManipulatable.Config.SearchTargetCfg.AngleWeight)
@@ -2180,7 +2181,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				list.Add((double)entityAngleWeight.Angle);
 				list2.Add((double)entityAngleWeight.Weight);
 			}
-			IL_113:
+			IL_115:
 			foreach (global::Vector vector2 in component.GetAllActivatedBlockPos())
 			{
 				vector2.Subtraction(CameraController.Instance.MainModel.CameraLocation, vector);
@@ -2211,7 +2212,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return defaultWeight;
 		}
 
-		// Token: 0x060466C8 RID: 288456 RVA: 0x011ACF04 File Offset: 0x011AB104
+		// Token: 0x0603D7B2 RID: 251826 RVA: 0x011CC4F4 File Offset: 0x011CA6F4
 		private void TickWaitingToManipulate(float delta)
 		{
 			Entity selectedEntity = this.SelectedEntity;
@@ -2243,7 +2244,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.Reset();
 		}
 
-		// Token: 0x060466C9 RID: 288457 RVA: 0x011ACFAC File Offset: 0x011AB1AC
+		// Token: 0x0603D7B3 RID: 251827 RVA: 0x011CC59C File Offset: 0x011CA79C
 		private void TickChanting(float delta)
 		{
 			this.ChantTimer += delta * 0.001f;
@@ -2269,7 +2270,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466CA RID: 288458 RVA: 0x011AD040 File Offset: 0x011AB240
+		// Token: 0x0603D7B4 RID: 251828 RVA: 0x011CC630 File Offset: 0x011CA830
 		private void TickDrawing(float delta)
 		{
 			SceneItemManipulatableComponent holdingManipulatable = this.HoldingManipulatable;
@@ -2309,7 +2310,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466CB RID: 288459 RVA: 0x011AD144 File Offset: 0x011AB344
+		// Token: 0x0603D7B5 RID: 251829 RVA: 0x011CC734 File Offset: 0x011CA934
 		private void TickHolding(float delta)
 		{
 			this.DrawTimer += delta * 0.001f;
@@ -2417,7 +2418,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466CC RID: 288460 RVA: 0x011AD470 File Offset: 0x011AB670
+		// Token: 0x0603D7B6 RID: 251830 RVA: 0x011CCA60 File Offset: 0x011CAC60
 		private void TickPrecasting(float delta)
 		{
 			this.PrecastTimer += delta;
@@ -2435,7 +2436,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466CD RID: 288461 RVA: 0x011AD4C4 File Offset: 0x011AB6C4
+		// Token: 0x0603D7B7 RID: 251831 RVA: 0x011CCAB4 File Offset: 0x011CACB4
 		public void StopManipulate()
 		{
 			CharacterSkillComponent component = base.Entity.GetComponent<CharacterSkillComponent>();
@@ -2465,27 +2466,27 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.SelectedEntity = null;
 		}
 
-		// Token: 0x060466CE RID: 288462 RVA: 0x011AD579 File Offset: 0x011AB779
+		// Token: 0x0603D7B8 RID: 251832 RVA: 0x011CCB69 File Offset: 0x011CAD69
 		public AActor GetHoldingActor()
 		{
 			return this.HoldingActorComponent.Owner;
 		}
 
-		// Token: 0x060466CF RID: 288463 RVA: 0x011AD586 File Offset: 0x011AB786
+		// Token: 0x0603D7B9 RID: 251833 RVA: 0x011CCB76 File Offset: 0x011CAD76
 		public bool HasHoldingActor()
 		{
 			SceneItemActorComponent holdingActorComponent = this.HoldingActorComponent;
 			return ((holdingActorComponent != null) ? holdingActorComponent.Owner : null) != null;
 		}
 
-		// Token: 0x060466D0 RID: 288464 RVA: 0x011AD59D File Offset: 0x011AB79D
+		// Token: 0x0603D7BA RID: 251834 RVA: 0x011CCB8D File Offset: 0x011CAD8D
 		[NullableContext(2)]
 		public Entity GetHoldingEntity()
 		{
 			return this.HoldingEntity;
 		}
 
-		// Token: 0x060466D1 RID: 288465 RVA: 0x011AD5A5 File Offset: 0x011AB7A5
+		// Token: 0x0603D7BB RID: 251835 RVA: 0x011CCB95 File Offset: 0x011CAD95
 		private void OnAddSubCameraTag(FGameplayTag tag)
 		{
 			if (!tag.TagName.IsNone())
@@ -2499,7 +2500,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466D2 RID: 288466 RVA: 0x011AD5D0 File Offset: 0x011AB7D0
+		// Token: 0x0603D7BC RID: 251836 RVA: 0x011CCBC0 File Offset: 0x011CADC0
 		private void OnRemoveSubCameraTag(FGameplayTag tag)
 		{
 			if (!tag.TagName.IsNone())
@@ -2513,7 +2514,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466D3 RID: 288467 RVA: 0x011AD5FC File Offset: 0x011AB7FC
+		// Token: 0x0603D7BD RID: 251837 RVA: 0x011CCBEC File Offset: 0x011CADEC
 		private void OnAddExtraHoldingTags(TArray<FGameplayTag> tags)
 		{
 			for (int i = 0; i < tags.Num(); i++)
@@ -2530,7 +2531,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466D4 RID: 288468 RVA: 0x011AD64C File Offset: 0x011AB84C
+		// Token: 0x0603D7BE RID: 251838 RVA: 0x011CCC3C File Offset: 0x011CAE3C
 		private void OnRemoveExtraHoldingTags(TArray<FGameplayTag> tags)
 		{
 			for (int i = 0; i < tags.Num(); i++)
@@ -2547,7 +2548,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466D5 RID: 288469 RVA: 0x011AD6A0 File Offset: 0x011AB8A0
+		// Token: 0x0603D7BF RID: 251839 RVA: 0x011CCC90 File Offset: 0x011CAE90
 		public void SetDataFromOldRole(EntityHandle oldEntity)
 		{
 			CharacterManipulateComponent component = oldEntity.Entity.GetComponent<CharacterManipulateComponent>();
@@ -2562,7 +2563,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TryRemoveTagById(GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.控物可用"]);
 		}
 
-		// Token: 0x060466D6 RID: 288470 RVA: 0x011AD711 File Offset: 0x011AB911
+		// Token: 0x0603D7C0 RID: 251840 RVA: 0x011CCD01 File Offset: 0x011CAF01
 		private void TryAddTagById(int tagId)
 		{
 			if (!this.TagComponent.HasTag(tagId))
@@ -2571,7 +2572,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466D7 RID: 288471 RVA: 0x011AD732 File Offset: 0x011AB932
+		// Token: 0x0603D7C1 RID: 251841 RVA: 0x011CCD22 File Offset: 0x011CAF22
 		private void TryRemoveTagById(int tagId)
 		{
 			if (this.TagComponent.HasTag(tagId))
@@ -2580,19 +2581,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466D8 RID: 288472 RVA: 0x011AD754 File Offset: 0x011AB954
+		// Token: 0x0603D7C2 RID: 251842 RVA: 0x011CCD44 File Offset: 0x011CAF44
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			this.OnStopManipulateEvent();
 		}
 
-		// Token: 0x060466D9 RID: 288473 RVA: 0x011AD75C File Offset: 0x011AB95C
+		// Token: 0x0603D7C3 RID: 251843 RVA: 0x011CCD4C File Offset: 0x011CAF4C
 		private void OnStopManipulateEvent()
 		{
 			this.StopManipulate();
 		}
 
-		// Token: 0x060466DA RID: 288474 RVA: 0x011AD764 File Offset: 0x011AB964
+		// Token: 0x0603D7C4 RID: 251844 RVA: 0x011CCD54 File Offset: 0x011CAF54
 		private void OnWorldOriginInUiMode(bool inUiMode)
 		{
 			UPhysicsHandleComponent physicsHandle = this.PhysicsHandle;
@@ -2603,7 +2604,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			physicsHandle.SetComponentTickEnabled(!inUiMode);
 		}
 
-		// Token: 0x060466DB RID: 288475 RVA: 0x011AD77C File Offset: 0x011AB97C
+		// Token: 0x0603D7C5 RID: 251845 RVA: 0x011CCD6C File Offset: 0x011CAF6C
 		private void OnShowLandTips(bool isShow)
 		{
 			Entity holdingEntity = this.HoldingEntity;
@@ -2619,7 +2620,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466DC RID: 288476 RVA: 0x011AD7D8 File Offset: 0x011AB9D8
+		// Token: 0x0603D7C6 RID: 251846 RVA: 0x011CCDC8 File Offset: 0x011CAFC8
 		public void ActiveHandFX(Entity endActorEntity, bool hasHookActor = false)
 		{
 			LevelTagComponent component = endActorEntity.GetComponent<LevelTagComponent>();
@@ -2638,7 +2639,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.IsShowingLinkFx = true;
 		}
 
-		// Token: 0x060466DD RID: 288477 RVA: 0x011AD83F File Offset: 0x011ABA3F
+		// Token: 0x0603D7C7 RID: 251847 RVA: 0x011CCE2F File Offset: 0x011CB02F
 		public void DeactiveHandFx()
 		{
 			if (this.AddedContolTagComp == null)
@@ -2650,7 +2651,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.IsShowingLinkFx = false;
 		}
 
-		// Token: 0x060466DE RID: 288478 RVA: 0x011AD878 File Offset: 0x011ABA78
+		// Token: 0x0603D7C8 RID: 251848 RVA: 0x011CCE68 File Offset: 0x011CB068
 		private void CancelManipulateRequest()
 		{
 			Entity entity = this.SelectedEntity ?? this.HoldingEntity;
@@ -2666,7 +2667,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			Net.Instance.Call(ERequestMessageId.BeControlledRequest, beControlledRequest, null, 0);
 		}
 
-		// Token: 0x060466DF RID: 288479 RVA: 0x011AD8F4 File Offset: 0x011ABAF4
+		// Token: 0x0603D7C9 RID: 251849 RVA: 0x011CCEE4 File Offset: 0x011CB0E4
 		private void OnGameplayTagChanged(int tagId, bool bTagExists)
 		{
 			if ((long)RouletteModel.Instance.CurrentExploreSkillId != 1003L)
@@ -2676,7 +2677,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.AddOrRemoveManipulateAirTag(bTagExists);
 		}
 
-		// Token: 0x060466E0 RID: 288480 RVA: 0x011AD914 File Offset: 0x011ABB14
+		// Token: 0x0603D7CA RID: 251850 RVA: 0x011CCF04 File Offset: 0x011CB104
 		private void OnRoleRevive()
 		{
 			this.TryRemoveTagById(GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.控物可用"]);
@@ -2684,7 +2685,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.控物.控物空中投掷禁止"]));
 		}
 
-		// Token: 0x060466E1 RID: 288481 RVA: 0x011AD978 File Offset: 0x011ABB78
+		// Token: 0x0603D7CB RID: 251851 RVA: 0x011CCF68 File Offset: 0x011CB168
 		public void AddOrRemoveManipulateAirTag(bool isAdd)
 		{
 			int num;
@@ -2711,7 +2712,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466E2 RID: 288482 RVA: 0x011ADA18 File Offset: 0x011ABC18
+		// Token: 0x0603D7CC RID: 251852 RVA: 0x011CD008 File Offset: 0x011CB208
 		[NullableContext(0)]
 		private ValueTuple<FTransformDouble?, FName?> GetBoneTransformAndName([Nullable(1)] Entity entity, FName partName)
 		{
@@ -2754,7 +2755,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return new ValueTuple<FTransformDouble?, FName?>(null, null);
 		}
 
-		// Token: 0x060466E3 RID: 288483 RVA: 0x011ADB18 File Offset: 0x011ABD18
+		// Token: 0x0603D7CD RID: 251853 RVA: 0x011CD108 File Offset: 0x011CB308
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -2798,7 +2799,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return list;
 		}
 
-		// Token: 0x060466E4 RID: 288484 RVA: 0x011ADC58 File Offset: 0x011ABE58
+		// Token: 0x0603D7CE RID: 251854 RVA: 0x011CD248 File Offset: 0x011CB448
 		public void ExtraAction()
 		{
 			if (this.State != CharacterManipulateComponent.EState.Holding)
@@ -2827,7 +2828,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466E5 RID: 288485 RVA: 0x011ADCE8 File Offset: 0x011ABEE8
+		// Token: 0x0603D7CF RID: 251855 RVA: 0x011CD2D8 File Offset: 0x011CB4D8
 		public bool GetIsCharRotateWithCameraWhenManipulate()
 		{
 			if (this.State != CharacterManipulateComponent.EState.Drawing && this.State != CharacterManipulateComponent.EState.Holding)
@@ -2838,26 +2839,60 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return this.HoldingManipulatable.ManipulateBaseConfig.角色是否随相机旋转;
 		}
 
-		// Token: 0x060466E6 RID: 288486 RVA: 0x011ADD38 File Offset: 0x011ABF38
+		// Token: 0x0603D7D0 RID: 251856 RVA: 0x011CD328 File Offset: 0x011CB528
+		private void EnterProjectileAimDirection()
+		{
+			CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
+			CharacterActorComponent actorComponent = this.ActorComponent;
+			if (actorComponent == null || !actorComponent.IsAutonomousProxy || (component == null || !component.Valid) || component.DirectionState != ECharDirectionState.FaceDirection)
+			{
+				return;
+			}
+			this.HasChangedProjectileAimDirection = true;
+			component.SetDirectionState(ECharDirectionState.CameraDirection);
+			if (component.DirectionState != ECharDirectionState.CameraDirection)
+			{
+				this.HasChangedProjectileAimDirection = false;
+			}
+		}
+
+		// Token: 0x0603D7D1 RID: 251857 RVA: 0x011CD394 File Offset: 0x011CB594
+		private void RestoreProjectileAimDirection()
+		{
+			if (!this.HasChangedProjectileAimDirection)
+			{
+				return;
+			}
+			this.HasChangedProjectileAimDirection = false;
+			CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
+			if (component != null && component.Valid && component.DirectionState == ECharDirectionState.CameraDirection)
+			{
+				component.SetDirectionState(ECharDirectionState.FaceDirection);
+			}
+		}
+
+		// Token: 0x0603D7D2 RID: 251858 RVA: 0x011CD3D8 File Offset: 0x011CB5D8
 		public bool ChangeToProjectileState()
 		{
 			if (this.State != CharacterManipulateComponent.EState.Holding || this.HoldingManipulatable.IsProjectileAimMode || !this.HoldingManipulatable.ManipulateBaseConfig.抛物瞄准模式开关)
 			{
 				return false;
 			}
+			this.EnterProjectileAimDirection();
 			this.HoldingManipulatable.IsProjectileAimMode = true;
 			EventSystem.Instance.Emit(EEventName.ManipulateEndLockCastTarget);
 			EventSystem.Instance.Emit<bool, Entity, bool>(EEventName.OnManipulateSwitchToNewTarget, false, null, true);
 			return true;
 		}
 
-		// Token: 0x060466E7 RID: 288487 RVA: 0x011ADDA0 File Offset: 0x011ABFA0
+		// Token: 0x0603D7D3 RID: 251859 RVA: 0x011CD448 File Offset: 0x011CB648
 		public bool ChangeToNormalState()
 		{
 			if (this.State != CharacterManipulateComponent.EState.Holding || !this.HoldingManipulatable.IsProjectileAimMode || !this.HoldingManipulatable.ManipulateBaseConfig.抛物瞄准模式开关)
 			{
 				return false;
 			}
+			this.RestoreProjectileAimDirection();
 			this.HoldingManipulatable.IsProjectileAimMode = false;
 			Entity selectedEntity = this.SelectedEntity;
 			if (selectedEntity != null && selectedEntity.Valid)
@@ -2867,7 +2902,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466E8 RID: 288488 RVA: 0x011ADE14 File Offset: 0x011AC014
+		// Token: 0x0603D7D4 RID: 251860 RVA: 0x011CD4C4 File Offset: 0x011CB6C4
 		private unsafe bool ManipulateSelectedTarget()
 		{
 			Log instance = Log.Instance;
@@ -2901,20 +2936,20 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			});
 		}
 
-		// Token: 0x060466E9 RID: 288489 RVA: 0x011ADF3C File Offset: 0x011AC13C
+		// Token: 0x0603D7D5 RID: 251861 RVA: 0x011CD5EC File Offset: 0x011CB7EC
 		public bool CanManipulate()
 		{
 			return this.ActorComponent.IsMoveAutonomousProxy && CharacterManipulateComponent.SkillEnabled && this.State == CharacterManipulateComponent.EState.Reset && !this.IsRequestingManipulate && base.Entity.GetComponent<CharacterSkillComponent>().Valid;
 		}
 
-		// Token: 0x060466EA RID: 288490 RVA: 0x011ADF88 File Offset: 0x011AC188
+		// Token: 0x0603D7D6 RID: 251862 RVA: 0x011CD638 File Offset: 0x011CB838
 		private ManipulateSkillConfigData GetManipulateSkillConfig()
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
 			return ManipulateSkillConfig.GetSkillConfig((component != null) ? component.GetRoleId() : 0);
 		}
 
-		// Token: 0x060466EB RID: 288491 RVA: 0x011ADFA8 File Offset: 0x011AC1A8
+		// Token: 0x0603D7D7 RID: 251863 RVA: 0x011CD658 File Offset: 0x011CB858
 		public bool TryManipulateSpecificItem(Entity targetEntiy)
 		{
 			if (!this.CanManipulate())
@@ -2938,7 +2973,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x060466EC RID: 288492 RVA: 0x011AE008 File Offset: 0x011AC208
+		// Token: 0x0603D7D8 RID: 251864 RVA: 0x011CD6B8 File Offset: 0x011CB8B8
 		public void StopWaitingToManipulate()
 		{
 			this.SelectedEntityWaitManipulateTime = 0;
@@ -2950,7 +2985,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TryRemoveTagById(GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.控物可用"]);
 		}
 
-		// Token: 0x060466ED RID: 288493 RVA: 0x011AE080 File Offset: 0x011AC280
+		// Token: 0x0603D7D9 RID: 251865 RVA: 0x011CD730 File Offset: 0x011CB930
 		public void OnRoleTeleport()
 		{
 			if (this.State != CharacterManipulateComponent.EState.Holding)
@@ -2975,14 +3010,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466EE RID: 288494 RVA: 0x011AE167 File Offset: 0x011AC367
+		// Token: 0x0603D7DA RID: 251866 RVA: 0x011CD817 File Offset: 0x011CBA17
 		public bool IsManipulating()
 		{
 			return this.State > CharacterManipulateComponent.EState.Reset;
 		}
 
-		// Token: 0x17009C94 RID: 40084
-		// (get) Token: 0x060466EF RID: 288495 RVA: 0x011AE172 File Offset: 0x011AC372
+		// Token: 0x1700749D RID: 29853
+		// (get) Token: 0x0603D7DB RID: 251867 RVA: 0x011CD822 File Offset: 0x011CBA22
 		[Nullable(2)]
 		public Entity CurSelectedEntity
 		{
@@ -2993,7 +3028,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x060466F0 RID: 288496 RVA: 0x011AE17C File Offset: 0x011AC37C
+		// Token: 0x0603D7DC RID: 251868 RVA: 0x011CD82C File Offset: 0x011CBA2C
 		private bool CheckTargetCravityDirect(Entity target)
 		{
 			CreatureDataComponent component = target.GetComponent<CreatureDataComponent>();
@@ -3026,7 +3061,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return gravityDirectByEntityData.Equals(this.ActorComponent.ActorGravityDirectProxy, 9.999999747378752E-05);
 		}
 
-		// Token: 0x060466F1 RID: 288497 RVA: 0x011AE234 File Offset: 0x011AC434
+		// Token: 0x0603D7DD RID: 251869 RVA: 0x011CD8E4 File Offset: 0x011CBAE4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -3034,577 +3069,507 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterManipulateComponent characterManipulateComponent = (CharacterManipulateComponent)componentTemplate;
-			if (base.CanResetComponentProperty("State"))
+			this.State = characterManipulateComponent.State;
+			if (characterManipulateComponent.OwningActor == null)
 			{
-				this.State = characterManipulateComponent.State;
+				this.OwningActor = null;
 			}
-			if (base.CanResetComponentProperty("OwningActor"))
-			{
-				if (characterManipulateComponent.OwningActor == null)
-				{
-					this.OwningActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.OwningActor), "OwningActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SelectedEntity"))
-			{
-				if (characterManipulateComponent.SelectedEntity == null)
-				{
-					this.SelectedEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.SelectedEntity), "SelectedEntity"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SelectedManipulatable"))
-			{
-				if (characterManipulateComponent.SelectedManipulatable == null)
-				{
-					this.SelectedManipulatable = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulatableComponent>(this.SelectedManipulatable), "SelectedManipulatable"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HoldingEntity"))
-			{
-				if (characterManipulateComponent.HoldingEntity == null)
-				{
-					this.HoldingEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.HoldingEntity), "HoldingEntity"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HoldingActorComponent"))
-			{
-				if (characterManipulateComponent.HoldingActorComponent == null)
-				{
-					this.HoldingActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.HoldingActorComponent), "HoldingActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HoldingManipulatable"))
-			{
-				if (characterManipulateComponent.HoldingManipulatable == null)
-				{
-					this.HoldingManipulatable = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulatableComponent>(this.HoldingManipulatable), "HoldingManipulatable"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PhysicsHandle"))
-			{
-				if (characterManipulateComponent.PhysicsHandle == null)
-				{
-					this.PhysicsHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPhysicsHandleComponent>(this.PhysicsHandle), "PhysicsHandle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComponent"))
-			{
-				if (characterManipulateComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveComponent"))
-			{
-				if (characterManipulateComponent.MoveComponent == null)
-				{
-					this.MoveComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComponent), "MoveComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComponent"))
-			{
-				if (characterManipulateComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("QueryEntityResultCache") && characterManipulateComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.QueryEntityResultCache), "QueryEntityResultCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwningActor), "OwningActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ChantTimer"))
+			if (characterManipulateComponent.SelectedEntity == null)
 			{
-				this.ChantTimer = characterManipulateComponent.ChantTimer;
+				this.SelectedEntity = null;
 			}
-			if (base.CanResetComponentProperty("DrawTimer"))
-			{
-				this.DrawTimer = characterManipulateComponent.DrawTimer;
-			}
-			if (base.CanResetComponentProperty("PrecastTimer"))
-			{
-				this.PrecastTimer = characterManipulateComponent.PrecastTimer;
-			}
-			if (base.CanResetComponentProperty("ShouldCastOnDetach"))
-			{
-				this.ShouldCastOnDetach = characterManipulateComponent.ShouldCastOnDetach;
-			}
-			if (base.CanResetComponentProperty("SpawnEffectTransform"))
-			{
-				this.SpawnEffectTransform = characterManipulateComponent.SpawnEffectTransform;
-			}
-			if (base.CanResetComponentProperty("DrawSphereDebug"))
-			{
-				this.DrawSphereDebug = characterManipulateComponent.DrawSphereDebug;
-			}
-			if (base.CanResetComponentProperty("DrawTraceDebug"))
-			{
-				this.DrawTraceDebug = characterManipulateComponent.DrawTraceDebug;
-			}
-			if (base.CanResetComponentProperty("SearchRange"))
-			{
-				this.SearchRange = characterManipulateComponent.SearchRange;
-			}
-			if (base.CanResetComponentProperty("LineTrace"))
-			{
-				if (characterManipulateComponent.LineTrace == null)
-				{
-					this.LineTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.LineTrace), "LineTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ForwardObstacleTrace"))
-			{
-				if (characterManipulateComponent.ForwardObstacleTrace == null)
-				{
-					this.ForwardObstacleTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.ForwardObstacleTrace), "ForwardObstacleTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsRequestingManipulate"))
-			{
-				this.IsRequestingManipulate = characterManipulateComponent.IsRequestingManipulate;
-			}
-			if (base.CanResetComponentProperty("AngleFactor"))
-			{
-				this.AngleFactor = characterManipulateComponent.AngleFactor;
-			}
-			if (base.CanResetComponentProperty("SelectPart"))
-			{
-				if (characterManipulateComponent.SelectPart == null)
-				{
-					this.SelectPart = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart>(this.SelectPart), "SelectPart"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LastSelectPart"))
-			{
-				if (characterManipulateComponent.LastSelectPart == null)
-				{
-					this.LastSelectPart = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart>(this.LastSelectPart), "LastSelectPart"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsShowingLinkFx"))
-			{
-				this.IsShowingLinkFx = characterManipulateComponent.IsShowingLinkFx;
-			}
-			if (base.CanResetComponentProperty("IsPlayingAimLine"))
-			{
-				this.IsPlayingAimLine = characterManipulateComponent.IsPlayingAimLine;
-			}
-			if (base.CanResetComponentProperty("AddedContolTagComp"))
-			{
-				if (characterManipulateComponent.AddedContolTagComp == null)
-				{
-					this.AddedContolTagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.AddedContolTagComp), "AddedContolTagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LocingEffectHandle"))
-			{
-				this.LocingEffectHandle = characterManipulateComponent.LocingEffectHandle;
-			}
-			if (base.CanResetComponentProperty("LocingItemTagId"))
-			{
-				this.LocingItemTagId = characterManipulateComponent.LocingItemTagId;
-			}
-			if (base.CanResetComponentProperty("TempBestWeight"))
-			{
-				this.TempBestWeight = characterManipulateComponent.TempBestWeight;
-			}
-			if (base.CanResetComponentProperty("TempBestEntity"))
-			{
-				if (characterManipulateComponent.TempBestEntity == null)
-				{
-					this.TempBestEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterManipulateComponent.FindedEntityWithPortalParam>(this.TempBestEntity), "TempBestEntity"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TempBestPart"))
-			{
-				if (characterManipulateComponent.TempBestPart == null)
-				{
-					this.TempBestPart = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart>(this.TempBestPart), "TempBestPart"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PendingEntity"))
-			{
-				if (characterManipulateComponent.PendingEntity == null)
-				{
-					this.PendingEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<CharacterManipulateComponent.FindedEntityWithPortalParam>>(this.PendingEntity), "PendingEntity"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TempCameraDir") && characterManipulateComponent.TempCameraDir != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempCameraDir), "TempCameraDir"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelectedEntity), "SelectedEntity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpPortalOrigin") && characterManipulateComponent.TmpPortalOrigin != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpPortalOrigin), "TmpPortalOrigin"))
+			if (characterManipulateComponent.SelectedManipulatable == null)
+			{
+				this.SelectedManipulatable = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelectedManipulatable), "SelectedManipulatable"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpPortalNormal") && characterManipulateComponent.TmpPortalNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpPortalNormal), "TmpPortalNormal"))
+			if (characterManipulateComponent.HoldingEntity == null)
+			{
+				this.HoldingEntity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HoldingEntity), "HoldingEntity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpSelfLocation") && characterManipulateComponent.TmpSelfLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpSelfLocation), "TmpSelfLocation"))
+			if (characterManipulateComponent.HoldingActorComponent == null)
+			{
+				this.HoldingActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HoldingActorComponent), "HoldingActorComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurCalcStage"))
+			if (characterManipulateComponent.HoldingManipulatable == null)
 			{
-				this.CurCalcStage = characterManipulateComponent.CurCalcStage;
+				this.HoldingManipulatable = null;
 			}
-			if (base.CanResetComponentProperty("InputLayer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HoldingManipulatable), "HoldingManipulatable"))
 			{
-				if (characterManipulateComponent.InputLayer == null)
-				{
-					this.InputLayer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ManipulateInputLayer>(this.InputLayer), "InputLayer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayTagWaitTask"))
+			if (characterManipulateComponent.PhysicsHandle == null)
 			{
-				if (characterManipulateComponent.DelayTagWaitTask == null)
-				{
-					this.DelayTagWaitTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.DelayTagWaitTask), "DelayTagWaitTask"))
-				{
-					return false;
-				}
+				this.PhysicsHandle = null;
 			}
-			if (base.CanResetComponentProperty("SelectedEntityWaitManipulateTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PhysicsHandle), "PhysicsHandle"))
 			{
-				this.SelectedEntityWaitManipulateTime = characterManipulateComponent.SelectedEntityWaitManipulateTime;
+				return false;
 			}
+			if (characterManipulateComponent.ActorComponent == null)
+			{
+				this.ActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.MoveComponent == null)
+			{
+				this.MoveComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComponent), "MoveComponent"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.TagComponent == null)
+			{
+				this.TagComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.QueryEntityResultCache), "QueryEntityResultCache"))
+			{
+				return false;
+			}
+			this.ChantTimer = characterManipulateComponent.ChantTimer;
+			this.DrawTimer = characterManipulateComponent.DrawTimer;
+			this.PrecastTimer = characterManipulateComponent.PrecastTimer;
+			this.ShouldCastOnDetach = characterManipulateComponent.ShouldCastOnDetach;
+			this.SpawnEffectTransform = characterManipulateComponent.SpawnEffectTransform;
+			this.DrawSphereDebug = characterManipulateComponent.DrawSphereDebug;
+			this.DrawTraceDebug = characterManipulateComponent.DrawTraceDebug;
+			this.SearchRange = characterManipulateComponent.SearchRange;
+			if (characterManipulateComponent.LineTrace == null)
+			{
+				this.LineTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LineTrace), "LineTrace"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.ForwardObstacleTrace == null)
+			{
+				this.ForwardObstacleTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForwardObstacleTrace), "ForwardObstacleTrace"))
+			{
+				return false;
+			}
+			this.IsRequestingManipulate = characterManipulateComponent.IsRequestingManipulate;
+			this.AngleFactor = characterManipulateComponent.AngleFactor;
+			if (characterManipulateComponent.SelectPart == null)
+			{
+				this.SelectPart = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelectPart), "SelectPart"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.LastSelectPart == null)
+			{
+				this.LastSelectPart = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSelectPart), "LastSelectPart"))
+			{
+				return false;
+			}
+			this.IsShowingLinkFx = characterManipulateComponent.IsShowingLinkFx;
+			this.IsPlayingAimLine = characterManipulateComponent.IsPlayingAimLine;
+			if (characterManipulateComponent.AddedContolTagComp == null)
+			{
+				this.AddedContolTagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AddedContolTagComp), "AddedContolTagComp"))
+			{
+				return false;
+			}
+			this.LocingEffectHandle = characterManipulateComponent.LocingEffectHandle;
+			this.LocingItemTagId = characterManipulateComponent.LocingItemTagId;
+			this.TempBestWeight = characterManipulateComponent.TempBestWeight;
+			if (characterManipulateComponent.TempBestEntity == null)
+			{
+				this.TempBestEntity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempBestEntity), "TempBestEntity"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.TempBestPart == null)
+			{
+				this.TempBestPart = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempBestPart), "TempBestPart"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.PendingEntity == null)
+			{
+				this.PendingEntity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingEntity), "PendingEntity"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.TempCameraDir != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempCameraDir), "TempCameraDir"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.TmpPortalOrigin != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpPortalOrigin), "TmpPortalOrigin"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.TmpPortalNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpPortalNormal), "TmpPortalNormal"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.TmpSelfLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpSelfLocation), "TmpSelfLocation"))
+			{
+				return false;
+			}
+			this.CurCalcStage = characterManipulateComponent.CurCalcStage;
+			if (characterManipulateComponent.InputLayer == null)
+			{
+				this.InputLayer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputLayer), "InputLayer"))
+			{
+				return false;
+			}
+			if (characterManipulateComponent.DelayTagWaitTask == null)
+			{
+				this.DelayTagWaitTask = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayTagWaitTask), "DelayTagWaitTask"))
+			{
+				return false;
+			}
+			this.SelectedEntityWaitManipulateTime = characterManipulateComponent.SelectedEntityWaitManipulateTime;
+			this.HasChangedProjectileAimDirection = characterManipulateComponent.HasChangedProjectileAimDirection;
 			return true;
 		}
 
-		// Token: 0x04024E55 RID: 151125
+		// Token: 0x1700749E RID: 29854
+		// (get) Token: 0x0603D7DE RID: 251870 RVA: 0x011CDDEE File Offset: 0x011CBFEE
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700749F RID: 29855
+		// (get) Token: 0x0603D7DF RID: 251871 RVA: 0x011CDDF1 File Offset: 0x011CBFF1
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074A0 RID: 29856
+		// (get) Token: 0x0603D7E0 RID: 251872 RVA: 0x011CDDF4 File Offset: 0x011CBFF4
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074A1 RID: 29857
+		// (get) Token: 0x0603D7E1 RID: 251873 RVA: 0x011CDDF7 File Offset: 0x011CBFF7
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020993 RID: 133523
 		private const string PROFILE_KEY = "CharacterManipulateComponent_LineTarceTestWithTarget";
 
-		// Token: 0x04024E56 RID: 151126
+		// Token: 0x04020994 RID: 133524
 		private const float CAST_PITCH_MAX = 75f;
 
-		// Token: 0x04024E57 RID: 151127
+		// Token: 0x04020995 RID: 133525
 		private const float CAST_PITCH_MIN = -45f;
 
-		// Token: 0x04024E58 RID: 151128
+		// Token: 0x04020996 RID: 133526
 		private static readonly FName TARGET_ACTOR_TAG = new FName("ControlObj");
 
-		// Token: 0x04024E59 RID: 151129
+		// Token: 0x04020997 RID: 133527
 		private const bool DRAW_SPHERE_DEBUG = false;
 
-		// Token: 0x04024E5A RID: 151130
+		// Token: 0x04020998 RID: 133528
 		private const long MANIPULATE_SKILL_ID = 1003L;
 
-		// Token: 0x04024E5B RID: 151131
+		// Token: 0x04020999 RID: 133529
 		private static readonly FName HIT_COLLISION_NAME = new FName("攻击碰撞");
 
-		// Token: 0x04024E5C RID: 151132
+		// Token: 0x0402099A RID: 133530
 		private static readonly FName MANIPULATE_CHECK_IGNORE_TAG = new FName("ManipulateCheck_Ignore");
 
-		// Token: 0x04024E5D RID: 151133
+		// Token: 0x0402099B RID: 133531
 		private static readonly FName NORMAL_CHECK_PRESET_NAME = new FName("被控物检测_Normal");
 
-		// Token: 0x04024E5E RID: 151134
+		// Token: 0x0402099C RID: 133532
 		private static readonly FName MONSTER_PART_CHECK_PRESET_NAME = new FName("被控物检测_Part");
 
-		// Token: 0x04024E5F RID: 151135
+		// Token: 0x0402099D RID: 133533
 		private const float TEMP_HALF_HEIGHT = 80f;
 
-		// Token: 0x04024E60 RID: 151136
+		// Token: 0x0402099E RID: 133534
 		private const int MAX_CALC_WEIGTH_NUMBER_PER_FRAME = 3;
 
-		// Token: 0x04024E61 RID: 151137
+		// Token: 0x0402099F RID: 133535
 		private const float MAX_WAIT_MANIPULATE_TIME = 5000f;
 
-		// Token: 0x04024E62 RID: 151138
+		// Token: 0x040209A0 RID: 133536
 		private static readonly FLinearColor LineTraceColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-		// Token: 0x04024E63 RID: 151139
+		// Token: 0x040209A1 RID: 133537
 		private CharacterManipulateComponent.EState State;
 
-		// Token: 0x04024E64 RID: 151140
+		// Token: 0x040209A2 RID: 133538
 		[Nullable(2)]
 		private AActor OwningActor;
 
-		// Token: 0x04024E65 RID: 151141
+		// Token: 0x040209A3 RID: 133539
 		[Nullable(2)]
 		private Entity SelectedEntity;
 
-		// Token: 0x04024E66 RID: 151142
+		// Token: 0x040209A4 RID: 133540
 		[Nullable(2)]
 		private SceneItemManipulatableComponent SelectedManipulatable;
 
-		// Token: 0x04024E67 RID: 151143
+		// Token: 0x040209A5 RID: 133541
 		[Nullable(2)]
 		private Entity HoldingEntity;
 
-		// Token: 0x04024E68 RID: 151144
+		// Token: 0x040209A6 RID: 133542
 		[Nullable(2)]
 		private SceneItemActorComponent HoldingActorComponent;
 
-		// Token: 0x04024E69 RID: 151145
+		// Token: 0x040209A7 RID: 133543
 		[Nullable(2)]
 		private SceneItemManipulatableComponent HoldingManipulatable;
 
-		// Token: 0x04024E6A RID: 151146
+		// Token: 0x040209A8 RID: 133544
 		[Nullable(2)]
 		private UPhysicsHandleComponent PhysicsHandle;
 
-		// Token: 0x04024E6B RID: 151147
+		// Token: 0x040209A9 RID: 133545
 		[Nullable(2)]
 		private CharacterActorComponent ActorComponent;
 
-		// Token: 0x04024E6C RID: 151148
+		// Token: 0x040209AA RID: 133546
 		[Nullable(2)]
 		private CharacterMoveComponent MoveComponent;
 
-		// Token: 0x04024E6D RID: 151149
+		// Token: 0x040209AB RID: 133547
 		[Nullable(2)]
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x04024E6E RID: 151150
+		// Token: 0x040209AC RID: 133548
 		private readonly List<EntityHandle> QueryEntityResultCache = new List<EntityHandle>();
 
-		// Token: 0x04024E6F RID: 151151
+		// Token: 0x040209AD RID: 133549
 		private float ChantTimer;
 
-		// Token: 0x04024E70 RID: 151152
+		// Token: 0x040209AE RID: 133550
 		private float DrawTimer;
 
-		// Token: 0x04024E71 RID: 151153
+		// Token: 0x040209AF RID: 133551
 		private float PrecastTimer;
 
-		// Token: 0x04024E72 RID: 151154
+		// Token: 0x040209B0 RID: 133552
 		private bool ShouldCastOnDetach;
 
-		// Token: 0x04024E73 RID: 151155
+		// Token: 0x040209B1 RID: 133553
 		private FTransformDouble? SpawnEffectTransform;
 
-		// Token: 0x04024E74 RID: 151156
+		// Token: 0x040209B2 RID: 133554
 		private bool DrawSphereDebug;
 
-		// Token: 0x04024E75 RID: 151157
+		// Token: 0x040209B3 RID: 133555
 		private bool DrawTraceDebug;
 
-		// Token: 0x04024E76 RID: 151158
+		// Token: 0x040209B4 RID: 133556
 		private float SearchRange;
 
-		// Token: 0x04024E77 RID: 151159
+		// Token: 0x040209B5 RID: 133557
 		[Nullable(2)]
 		private UTraceLineElement LineTrace;
 
-		// Token: 0x04024E78 RID: 151160
+		// Token: 0x040209B6 RID: 133558
 		[Nullable(2)]
 		private UTraceSphereElement ForwardObstacleTrace;
 
-		// Token: 0x04024E79 RID: 151161
+		// Token: 0x040209B7 RID: 133559
 		private bool IsRequestingManipulate;
 
-		// Token: 0x04024E7A RID: 151162
+		// Token: 0x040209B8 RID: 133560
 		private static bool SkillEnabled;
 
-		// Token: 0x04024E7B RID: 151163
+		// Token: 0x040209B9 RID: 133561
 		private float AngleFactor = 1f;
 
-		// Token: 0x04024E7C RID: 151164
+		// Token: 0x040209BA RID: 133562
 		[Nullable(2)]
 		private CharacterPart SelectPart;
 
-		// Token: 0x04024E7D RID: 151165
+		// Token: 0x040209BB RID: 133563
 		[Nullable(2)]
 		private CharacterPart LastSelectPart;
 
-		// Token: 0x04024E7E RID: 151166
+		// Token: 0x040209BC RID: 133564
 		[StaticVariableRuleIgnore]
 		public static readonly int SkillId = ManipulateSkillConfig.GetDefaultConfig().SkillId;
 
-		// Token: 0x04024E7F RID: 151167
+		// Token: 0x040209BD RID: 133565
 		[StaticVariableRuleIgnore]
 		public static readonly int CastSkillId = ManipulateSkillConfig.GetDefaultConfig().CastSkillId;
 
-		// Token: 0x04024E80 RID: 151168
+		// Token: 0x040209BE RID: 133566
 		[StaticVariableRuleIgnore]
 		public static readonly int CancelSkillId = ManipulateSkillConfig.GetDefaultConfig().CancelSkillId;
 
-		// Token: 0x04024E81 RID: 151169
+		// Token: 0x040209BF RID: 133567
 		[StaticVariableRuleIgnore]
 		public static readonly int HoldingSkillId = ManipulateSkillConfig.GetDefaultConfig().HoldingSkillId;
 
-		// Token: 0x04024E82 RID: 151170
+		// Token: 0x040209C0 RID: 133568
 		private bool IsShowingLinkFx;
 
-		// Token: 0x04024E83 RID: 151171
+		// Token: 0x040209C1 RID: 133569
 		private bool IsPlayingAimLine;
 
-		// Token: 0x04024E84 RID: 151172
+		// Token: 0x040209C2 RID: 133570
 		[Nullable(2)]
 		private LevelTagComponent AddedContolTagComp;
 
-		// Token: 0x04024E85 RID: 151173
+		// Token: 0x040209C3 RID: 133571
 		private int? LocingEffectHandle;
 
-		// Token: 0x04024E86 RID: 151174
+		// Token: 0x040209C4 RID: 133572
 		private int? LocingItemTagId;
 
-		// Token: 0x04024E87 RID: 151175
+		// Token: 0x040209C5 RID: 133573
 		private double TempBestWeight = -3.402823466E+38;
 
-		// Token: 0x04024E88 RID: 151176
+		// Token: 0x040209C6 RID: 133574
 		[Nullable(2)]
 		private CharacterManipulateComponent.FindedEntityWithPortalParam TempBestEntity;
 
-		// Token: 0x04024E89 RID: 151177
+		// Token: 0x040209C7 RID: 133575
 		[Nullable(2)]
 		private CharacterPart TempBestPart;
 
-		// Token: 0x04024E8A RID: 151178
+		// Token: 0x040209C8 RID: 133576
 		private List<CharacterManipulateComponent.FindedEntityWithPortalParam> PendingEntity = new List<CharacterManipulateComponent.FindedEntityWithPortalParam>();
 
-		// Token: 0x04024E8B RID: 151179
+		// Token: 0x040209C9 RID: 133577
 		private readonly global::Vector TempCameraDir = global::Vector.Create();
 
-		// Token: 0x04024E8C RID: 151180
+		// Token: 0x040209CA RID: 133578
 		private readonly global::Vector TmpPortalOrigin = global::Vector.Create();
 
-		// Token: 0x04024E8D RID: 151181
+		// Token: 0x040209CB RID: 133579
 		private readonly global::Vector TmpPortalNormal = global::Vector.Create();
 
-		// Token: 0x04024E8E RID: 151182
+		// Token: 0x040209CC RID: 133580
 		private readonly global::Vector TmpSelfLocation = global::Vector.Create();
 
-		// Token: 0x04024E8F RID: 151183
+		// Token: 0x040209CD RID: 133581
 		private CharacterManipulateComponent.ESplitFrameCalcStage CurCalcStage = CharacterManipulateComponent.ESplitFrameCalcStage.Finish;
 
-		// Token: 0x04024E90 RID: 151184
+		// Token: 0x040209CE RID: 133582
 		[Nullable(2)]
 		private ManipulateInputLayer InputLayer;
 
-		// Token: 0x04024E91 RID: 151185
+		// Token: 0x040209CF RID: 133583
 		[Nullable(2)]
 		private ITagTask DelayTagWaitTask;
 
-		// Token: 0x04024E92 RID: 151186
+		// Token: 0x040209D0 RID: 133584
 		private Number SelectedEntityWaitManipulateTime;
 
-		// Token: 0x0200CE65 RID: 52837
+		// Token: 0x040209D1 RID: 133585
+		private bool HasChangedProjectileAimDirection;
+
+		// Token: 0x0200BB3A RID: 47930
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403E22B RID: 254507
+			// Token: 0x0403995F RID: 235871
 			Reset,
-			// Token: 0x0403E22C RID: 254508
+			// Token: 0x04039960 RID: 235872
 			WaitingToManipulate,
-			// Token: 0x0403E22D RID: 254509
+			// Token: 0x04039961 RID: 235873
 			Chanting,
-			// Token: 0x0403E22E RID: 254510
+			// Token: 0x04039962 RID: 235874
 			Drawing,
-			// Token: 0x0403E22F RID: 254511
+			// Token: 0x04039963 RID: 235875
 			Holding,
-			// Token: 0x0403E230 RID: 254512
+			// Token: 0x04039964 RID: 235876
 			Precasting
 		}
 
-		// Token: 0x0200CE66 RID: 52838
+		// Token: 0x0200BB3B RID: 47931
 		[NullableContext(0)]
 		private enum ESplitFrameCalcStage
 		{
-			// Token: 0x0403E232 RID: 254514
+			// Token: 0x04039966 RID: 235878
 			Calc,
-			// Token: 0x0403E233 RID: 254515
+			// Token: 0x04039967 RID: 235879
 			AfterFindTarget,
-			// Token: 0x0403E234 RID: 254516
+			// Token: 0x04039968 RID: 235880
 			Finish
 		}
 
-		// Token: 0x0200CE67 RID: 52839
+		// Token: 0x0200BB3C RID: 47932
 		[NullableContext(0)]
 		public enum EPassThroughPortalType
 		{
-			// Token: 0x0403E236 RID: 254518
+			// Token: 0x0403996A RID: 235882
 			None,
-			// Token: 0x0403E237 RID: 254519
+			// Token: 0x0403996B RID: 235883
 			AToB,
-			// Token: 0x0403E238 RID: 254520
+			// Token: 0x0403996C RID: 235884
 			BToA
 		}
 
-		// Token: 0x0200CE68 RID: 52840
+		// Token: 0x0200BB3D RID: 47933
 		[Nullable(0)]
 		private class FindedEntityWithPortalParam
 		{
-			// Token: 0x06051E8C RID: 335500 RVA: 0x01641E53 File Offset: 0x01640053
+			// Token: 0x060488FC RID: 297212 RVA: 0x0161F8E9 File Offset: 0x0161DAE9
 			public FindedEntityWithPortalParam(Entity entity, CharacterManipulateComponent.EPassThroughPortalType type, double dist, double dot, long? portalPairId)
 			{
 				this.Entity = entity;
@@ -3614,19 +3579,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				this.PortalPairId = portalPairId;
 			}
 
-			// Token: 0x0403E239 RID: 254521
+			// Token: 0x0403996D RID: 235885
 			public Entity Entity;
 
-			// Token: 0x0403E23A RID: 254522
+			// Token: 0x0403996E RID: 235886
 			public CharacterManipulateComponent.EPassThroughPortalType PortalType;
 
-			// Token: 0x0403E23B RID: 254523
+			// Token: 0x0403996F RID: 235887
 			public double Dist;
 
-			// Token: 0x0403E23C RID: 254524
+			// Token: 0x04039970 RID: 235888
 			public double Dot;
 
-			// Token: 0x0403E23D RID: 254525
+			// Token: 0x04039971 RID: 235889
 			public long? PortalPairId;
 		}
 	}

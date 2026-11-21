@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B74 RID: 2932
+	// Token: 0x02000B64 RID: 2916
 	[NetMessage(EMessageId.NpcPhantomBattleFightInfoNotify)]
 	public sealed class NpcPhantomBattleFightInfoNotify : IMessage<NpcPhantomBattleFightInfoNotify>, IMessage, IEquatable<NpcPhantomBattleFightInfoNotify>, IDeepCloneable<NpcPhantomBattleFightInfoNotify>, IBufferMessage
 	{
-		// Token: 0x0600FE2E RID: 65070 RVA: 0x0025147B File Offset: 0x0024F67B
+		// Token: 0x0600FD2A RID: 64810 RVA: 0x0024F5AB File Offset: 0x0024D7AB
 		[NullableContext(1)]
 		public static NpcPhantomBattleFightInfoNotify Create()
 		{
 			return new NpcPhantomBattleFightInfoNotify();
 		}
 
-		// Token: 0x170033E4 RID: 13284
-		// (get) Token: 0x0600FE2F RID: 65071 RVA: 0x00251482 File Offset: 0x0024F682
+		// Token: 0x170033AB RID: 13227
+		// (get) Token: 0x0600FD2B RID: 64811 RVA: 0x0024F5B2 File Offset: 0x0024D7B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170033E5 RID: 13285
-		// (get) Token: 0x0600FE30 RID: 65072 RVA: 0x00251485 File Offset: 0x0024F685
+		// Token: 0x170033AC RID: 13228
+		// (get) Token: 0x0600FD2C RID: 64812 RVA: 0x0024F5B5 File Offset: 0x0024D7B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FE31 RID: 65073 RVA: 0x0025148C File Offset: 0x0024F68C
+		// Token: 0x0600FD2D RID: 64813 RVA: 0x0024F5BC File Offset: 0x0024D7BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfoNotify()
 		{
 		}
 
-		// Token: 0x0600FE32 RID: 65074 RVA: 0x0025149F File Offset: 0x0024F69F
+		// Token: 0x0600FD2E RID: 64814 RVA: 0x0024F5CF File Offset: 0x0024D7CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfoNotify(NpcPhantomBattleFightInfoNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FE33 RID: 65075 RVA: 0x002514C9 File Offset: 0x0024F6C9
+		// Token: 0x0600FD2F RID: 64815 RVA: 0x0024F5F9 File Offset: 0x0024D7F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPhantomBattleFightInfoNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new NpcPhantomBattleFightInfoNotify(this);
 		}
 
-		// Token: 0x170033E6 RID: 13286
-		// (get) Token: 0x0600FE34 RID: 65076 RVA: 0x002514D1 File Offset: 0x0024F6D1
+		// Token: 0x170033AD RID: 13229
+		// (get) Token: 0x0600FD30 RID: 64816 RVA: 0x0024F601 File Offset: 0x0024D801
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<NpcPhantomBattleFightInfo> PhantomBattleFightInfos
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FE35 RID: 65077 RVA: 0x002514D9 File Offset: 0x0024F6D9
+		// Token: 0x0600FD31 RID: 64817 RVA: 0x0024F609 File Offset: 0x0024D809
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NpcPhantomBattleFightInfoNotify);
 		}
 
-		// Token: 0x0600FE36 RID: 65078 RVA: 0x002514E7 File Offset: 0x0024F6E7
+		// Token: 0x0600FD32 RID: 64818 RVA: 0x0024F617 File Offset: 0x0024D817
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NpcPhantomBattleFightInfoNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.phantomBattleFightInfos_.Equals(other.phantomBattleFightInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FE37 RID: 65079 RVA: 0x0025151C File Offset: 0x0024F71C
+		// Token: 0x0600FD33 RID: 64819 RVA: 0x0024F64C File Offset: 0x0024D84C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FE38 RID: 65080 RVA: 0x00251550 File Offset: 0x0024F750
+		// Token: 0x0600FD34 RID: 64820 RVA: 0x0024F680 File Offset: 0x0024D880
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FE39 RID: 65081 RVA: 0x0025155D File Offset: 0x0024F75D
+		// Token: 0x0600FD35 RID: 64821 RVA: 0x0024F68D File Offset: 0x0024D88D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FE3A RID: 65082 RVA: 0x00251566 File Offset: 0x0024F766
+		// Token: 0x0600FD36 RID: 64822 RVA: 0x0024F696 File Offset: 0x0024D896
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FE3B RID: 65083 RVA: 0x00251590 File Offset: 0x0024F790
+		// Token: 0x0600FD37 RID: 64823 RVA: 0x0024F6C0 File Offset: 0x0024D8C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FE3C RID: 65084 RVA: 0x002515C9 File Offset: 0x0024F7C9
+		// Token: 0x0600FD38 RID: 64824 RVA: 0x0024F6F9 File Offset: 0x0024D8F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NpcPhantomBattleFightInfoNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FE3D RID: 65085 RVA: 0x002515F7 File Offset: 0x0024F7F7
+		// Token: 0x0600FD39 RID: 64825 RVA: 0x0024F727 File Offset: 0x0024D927
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FE3E RID: 65086 RVA: 0x00251600 File Offset: 0x0024F800
+		// Token: 0x0600FD3A RID: 64826 RVA: 0x0024F730 File Offset: 0x0024D930
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400655C RID: 25948
+		// Token: 0x0400656C RID: 25964
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400655D RID: 25949
+		// Token: 0x0400656D RID: 25965
 		public const int PhantomBattleFightInfosFieldNumber = 1;
 
-		// Token: 0x0400655E RID: 25950
+		// Token: 0x0400656E RID: 25966
 		private static readonly FieldCodec<NpcPhantomBattleFightInfo> _repeated_phantomBattleFightInfos_codec = FieldCodec.ForMessage<NpcPhantomBattleFightInfo>(10U, NpcPhantomBattleFightInfo.Parser);
 
-		// Token: 0x0400655F RID: 25951
+		// Token: 0x0400656F RID: 25967
 		private readonly RepeatedField<NpcPhantomBattleFightInfo> phantomBattleFightInfos_ = new RepeatedField<NpcPhantomBattleFightInfo>();
 	}
 }

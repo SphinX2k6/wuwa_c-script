@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200216B RID: 8555
+	// Token: 0x02000703 RID: 1795
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIExtendToggleTextTransition")]
 	[UnrealStructLayout(744, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 744)]
 	public class UUIExtendToggleTextTransition : UUIExtendToggleTransitionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060204BD RID: 132285 RVA: 0x002FF6A2 File Offset: 0x002FD8A2
+		// Token: 0x060098EF RID: 39151 RVA: 0x000E65CE File Offset: 0x000E47CE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIExtendToggleTextTransition._ClassPtr;
 		}
 
-		// Token: 0x060204BE RID: 132286 RVA: 0x002FF6B0 File Offset: 0x002FD8B0
+		// Token: 0x060098F0 RID: 39152 RVA: 0x000E65DC File Offset: 0x000E47DC
 		public UUIExtendToggleTextTransition() : this(BuiltinUtils.AllocNativeUObject(UUIExtendToggleTextTransition.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060204BF RID: 132287 RVA: 0x002FF6D8 File Offset: 0x002FD8D8
+		// Token: 0x060098F1 RID: 39153 RVA: 0x000E6604 File Offset: 0x000E4804
 		[NullableContext(1)]
 		public UUIExtendToggleTextTransition(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIExtendToggleTextTransition.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E97 RID: 32407
-		// (get) Token: 0x060204C0 RID: 132288 RVA: 0x002FF70C File Offset: 0x002FD90C
-		// (set) Token: 0x060204C1 RID: 132289 RVA: 0x002FF745 File Offset: 0x002FD945
+		// Token: 0x17001C6E RID: 7278
+		// (get) Token: 0x060098F2 RID: 39154 RVA: 0x000E6638 File Offset: 0x000E4838
+		// (set) Token: 0x060098F3 RID: 39155 RVA: 0x000E6671 File Offset: 0x000E4871
 		[Nullable(1)]
 		public FExtendToggleTextTransitionState TransitionState
 		{
@@ -54,9 +54,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E98 RID: 32408
-		// (get) Token: 0x060204C2 RID: 132290 RVA: 0x002FF766 File Offset: 0x002FD966
-		// (set) Token: 0x060204C3 RID: 132291 RVA: 0x002FF77A File Offset: 0x002FD97A
+		// Token: 0x17001C6F RID: 7279
+		// (get) Token: 0x060098F4 RID: 39156 RVA: 0x000E6692 File Offset: 0x000E4892
+		// (set) Token: 0x060098F5 RID: 39157 RVA: 0x000E66A6 File Offset: 0x000E48A6
 		public unsafe ULTweener ColorTweener
 		{
 			get
@@ -69,9 +69,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E99 RID: 32409
-		// (get) Token: 0x060204C4 RID: 132292 RVA: 0x002FF78F File Offset: 0x002FD98F
-		// (set) Token: 0x060204C5 RID: 132293 RVA: 0x002FF7A3 File Offset: 0x002FD9A3
+		// Token: 0x17001C70 RID: 7280
+		// (get) Token: 0x060098F6 RID: 39158 RVA: 0x000E66BB File Offset: 0x000E48BB
+		// (set) Token: 0x060098F7 RID: 39159 RVA: 0x000E66CF File Offset: 0x000E48CF
 		public unsafe ULTweener OutlineColorTweener
 		{
 			get
@@ -84,37 +84,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060204C6 RID: 132294 RVA: 0x002FF7B8 File Offset: 0x002FD9B8
+		// Token: 0x060098F8 RID: 39160 RVA: 0x000E66E4 File Offset: 0x000E48E4
 		static UUIExtendToggleTextTransition()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIExtendToggleTextTransition");
 		}
 
-		// Token: 0x060204C7 RID: 132295 RVA: 0x002FF7C6 File Offset: 0x002FD9C6
+		// Token: 0x060098F9 RID: 39161 RVA: 0x000E66F2 File Offset: 0x000E48F2
 		protected UUIExtendToggleTextTransition(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040115A0 RID: 71072
+		// Token: 0x0400427C RID: 17020
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIExtendToggleTextTransition";
 
-		// Token: 0x040115A1 RID: 71073
+		// Token: 0x0400427D RID: 17021
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040115A2 RID: 71074
+		// Token: 0x0400427E RID: 17022
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040115A3 RID: 71075
+		// Token: 0x0400427F RID: 17023
 		internal static int __PropertyOffset_TransitionState;
 
-		// Token: 0x040115A4 RID: 71076
+		// Token: 0x04004280 RID: 17024
 		private FExtendToggleTextTransitionState _TransitionState;
 
-		// Token: 0x040115A5 RID: 71077
+		// Token: 0x04004281 RID: 17025
 		internal static int __PropertyOffset_ColorTweener;
 
-		// Token: 0x040115A6 RID: 71078
+		// Token: 0x04004282 RID: 17026
 		internal static int __PropertyOffset_OutlineColorTweener;
 	}
 }

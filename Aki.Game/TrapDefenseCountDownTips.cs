@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.GameMainView.TrapDefense;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D44 RID: 7492
+// Token: 0x02001206 RID: 4614
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseCountDownTips : UiTickViewBase
 {
-	// Token: 0x0600E337 RID: 58167 RVA: 0x00356363 File Offset: 0x00354563
+	// Token: 0x0600B754 RID: 46932 RVA: 0x00361D93 File Offset: 0x0035FF93
 	public TrapDefenseCountDownTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E338 RID: 58168 RVA: 0x00356373 File Offset: 0x00354573
+	// Token: 0x0600B755 RID: 46933 RVA: 0x00361DA3 File Offset: 0x0035FFA3
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class TrapDefenseCountDownTips : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600E339 RID: 58169 RVA: 0x003563AC File Offset: 0x003545AC
+	// Token: 0x0600B756 RID: 46934 RVA: 0x00361DDC File Offset: 0x0035FFDC
 	protected override void OnStart()
 	{
 		this.Sequence = new UiSequencePlayer(base.GetRootItem());
@@ -36,7 +36,7 @@ public class TrapDefenseCountDownTips : UiTickViewBase
 		this.SetCountDownText(this.ShowTextNum);
 	}
 
-	// Token: 0x0600E33A RID: 58170 RVA: 0x00356424 File Offset: 0x00354624
+	// Token: 0x0600B757 RID: 46935 RVA: 0x00361E54 File Offset: 0x00360054
 	protected override void OnBeforeDestroy()
 	{
 		this.Sequence.Clear();
@@ -48,7 +48,7 @@ public class TrapDefenseCountDownTips : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600E33B RID: 58171 RVA: 0x00356458 File Offset: 0x00354658
+	// Token: 0x0600B758 RID: 46936 RVA: 0x00361E88 File Offset: 0x00360088
 	protected override void OnTick(float deltaTime)
 	{
 		if (!this.CanTick)
@@ -69,7 +69,7 @@ public class TrapDefenseCountDownTips : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600E33C RID: 58172 RVA: 0x003564D8 File Offset: 0x003546D8
+	// Token: 0x0600B759 RID: 46937 RVA: 0x00361F08 File Offset: 0x00360108
 	private void SetCountDownText(float num)
 	{
 		this.Niagara.SetNiagaraVarInt("Number_Start Frame", (int)(num - 1f));
@@ -82,33 +82,33 @@ public class TrapDefenseCountDownTips : UiTickViewBase
 		this.Sequence.PlaySequencePurely("Change", false, false);
 	}
 
-	// Token: 0x040068EA RID: 26858
+	// Token: 0x040069C9 RID: 27081
 	[Nullable(2)]
 	protected ITrapDefenseCountDownTipsData Data;
 
-	// Token: 0x040068EB RID: 26859
+	// Token: 0x040069CA RID: 27082
 	private float CountDownTime;
 
-	// Token: 0x040068EC RID: 26860
+	// Token: 0x040069CB RID: 27083
 	private float ShowTextNum;
 
-	// Token: 0x040068ED RID: 26861
+	// Token: 0x040069CC RID: 27084
 	private bool CanTick = true;
 
-	// Token: 0x040068EE RID: 26862
+	// Token: 0x040069CD RID: 27085
 	private UUINiagara Niagara;
 
-	// Token: 0x040068EF RID: 26863
+	// Token: 0x040069CE RID: 27086
 	private UiSequencePlayer Sequence;
 
-	// Token: 0x02008355 RID: 33621
+	// Token: 0x020074DE RID: 29918
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AD17 RID: 175383
+		// Token: 0x0402603F RID: 155711
 		public const int CountDownText = 0;
 
-		// Token: 0x0402AD18 RID: 175384
+		// Token: 0x04026040 RID: 155712
 		public const int Niagara = 1;
 	}
 }

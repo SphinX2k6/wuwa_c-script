@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018FD RID: 6397
+	// Token: 0x02001A84 RID: 6788
 	public class ICommonBtContext_SetValue
 	{
-		// Token: 0x040055F0 RID: 22000
+		// Token: 0x04005A3A RID: 23098
 		public EVarContext Type;
 
-		// Token: 0x040055F1 RID: 22001
+		// Token: 0x04005A3B RID: 23099
 		public int Id;
 	}
 }

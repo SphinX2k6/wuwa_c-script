@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005E3 RID: 1507
+	// Token: 0x020005FB RID: 1531
 	public class ConfigNewbieCarnivalTaskByTaskId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002361 RID: 9057 RVA: 0x0012197C File Offset: 0x0011FB7C
+		// Token: 0x060023F1 RID: 9201 RVA: 0x001283F8 File Offset: 0x001265F8
 		static ConfigNewbieCarnivalTaskByTaskId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewbieCarnivalTaskByTaskId.CreateStaticDefaultValue), new Action(ConfigNewbieCarnivalTaskByTaskId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002362 RID: 9058 RVA: 0x0012199C File Offset: 0x0011FB9C
+		// Token: 0x060023F2 RID: 9202 RVA: 0x00128418 File Offset: 0x00126618
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewbieCarnivalTaskByTaskId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002363 RID: 9059 RVA: 0x00121A1B File Offset: 0x0011FC1B
+		// Token: 0x060023F3 RID: 9203 RVA: 0x00128497 File Offset: 0x00126697
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewbieCarnivalTaskByTaskId.LogPair = null;
 			ConfigNewbieCarnivalTaskByTaskId.HandleId = 0;
 		}
 
-		// Token: 0x06002364 RID: 9060 RVA: 0x00121A29 File Offset: 0x0011FC29
+		// Token: 0x060023F4 RID: 9204 RVA: 0x001284A5 File Offset: 0x001266A5
 		public static void Init()
 		{
 			ConfigNewbieCarnivalTaskByTaskId.HandleId = ConfigCommon.InitDataStatement(ConfigNewbieCarnivalTaskByTaskId.HandleId, "db_newbiecarnival.db", "select BinData from `NewbieCarnivalTask` where TaskId=?");
 		}
 
-		// Token: 0x06002365 RID: 9061 RVA: 0x00121A44 File Offset: 0x0011FC44
+		// Token: 0x060023F5 RID: 9205 RVA: 0x001284C0 File Offset: 0x001266C0
 		public static NewbieCarnivalTask? GetConfig(int p0TaskId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigNewbieCarnivalTaskByTaskId.HandleId, ConfigNewbieCarnivalTaskByTaskId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new NewbieCarnivalTask?(rootAsNewbieCarnivalTask);
 		}
 
-		// Token: 0x0400291B RID: 10523
+		// Token: 0x040029C3 RID: 10691
 		private const string DB = "db_newbiecarnival.db";
 
-		// Token: 0x0400291C RID: 10524
+		// Token: 0x040029C4 RID: 10692
 		private const string FILE = "x.新手嘉年华.xlsx";
 
-		// Token: 0x0400291D RID: 10525
+		// Token: 0x040029C5 RID: 10693
 		private const string TABLE = "NewbieCarnivalTask";
 
-		// Token: 0x0400291E RID: 10526
+		// Token: 0x040029C6 RID: 10694
 		private const string COMMAND = "select BinData from `NewbieCarnivalTask` where TaskId=?";
 
-		// Token: 0x0400291F RID: 10527
+		// Token: 0x040029C7 RID: 10695
 		private const string KEY_PREFIX = "NewbieCarnivalTaskByTaskId";
 
-		// Token: 0x04002920 RID: 10528
+		// Token: 0x040029C8 RID: 10696
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002921 RID: 10529
+		// Token: 0x040029C9 RID: 10697
 		private static int HandleId;
 	}
 }

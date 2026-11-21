@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.AdventureGuide;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F3 RID: 22771
+	// Token: 0x020048CB RID: 18635
 	public class LordInInstanceExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D22 RID: 236834 RVA: 0x00DBBEB4 File Offset: 0x00DBA0B4
+		// Token: 0x0602EC45 RID: 191557 RVA: 0x00D0AE18 File Offset: 0x00D09018
 		public override bool Checker()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return config != null && LordInInstanceExitHandler.CheckSubTypes.Contains((EDungeonSubType)config.Value.InstSubType);
 		}
 
-		// Token: 0x06039D23 RID: 236835 RVA: 0x00DBBF10 File Offset: 0x00DBA110
+		// Token: 0x0602EC46 RID: 191558 RVA: 0x00D0AE74 File Offset: 0x00D09074
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0401E2D9 RID: 123609
+		// Token: 0x04018D76 RID: 101750
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<EDungeonSubType> CheckSubTypes = new HashSet<EDungeonSubType>

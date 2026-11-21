@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 {
-	// Token: 0x020052C0 RID: 21184
+	// Token: 0x02004290 RID: 17040
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 	})]
 	public class PhantomArenaReplaceCard : GridProxyAbstract<PhantomCardData>, IPhantomCardProxy, IPhantomCardProxyBase
 	{
-		// Token: 0x06036300 RID: 221952 RVA: 0x00CD1F84 File Offset: 0x00CD0184
+		// Token: 0x0602B1FB RID: 176635 RVA: 0x00C1F6AC File Offset: 0x00C1D8AC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaReplaceCard.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036301 RID: 221953 RVA: 0x00CD1FC7 File Offset: 0x00CD01C7
+		// Token: 0x0602B1FC RID: 176636 RVA: 0x00C1F6EF File Offset: 0x00C1D8EF
 		public override void Refresh(PhantomCardData data, bool isSelected, int gridIndex)
 		{
 			this.Card.Refresh(data);
 		}
 
-		// Token: 0x06036302 RID: 221954 RVA: 0x00CD1FD5 File Offset: 0x00CD01D5
+		// Token: 0x0602B1FD RID: 176637 RVA: 0x00C1F6FD File Offset: 0x00C1D8FD
 		private void ShowReplaceState()
 		{
 			CardReplaceComponent component = this.Card.GetComponent<CardReplaceComponent>(ECardItemComponent.CardReplaceComponent);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			component.SetActive(true);
 		}
 
-		// Token: 0x06036303 RID: 221955 RVA: 0x00CD1FEE File Offset: 0x00CD01EE
+		// Token: 0x0602B1FE RID: 176638 RVA: 0x00C1F716 File Offset: 0x00C1D916
 		private void HideReplaceState()
 		{
 			CardReplaceComponent component = this.Card.GetComponent<CardReplaceComponent>(ECardItemComponent.CardReplaceComponent);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			component.SetActive(false);
 		}
 
-		// Token: 0x06036304 RID: 221956 RVA: 0x00CD2007 File Offset: 0x00CD0207
+		// Token: 0x0602B1FF RID: 176639 RVA: 0x00C1F72F File Offset: 0x00C1D92F
 		public void PointerClickCard(int id, EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -85,32 +85,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Card
 			}
 		}
 
-		// Token: 0x06036305 RID: 221957 RVA: 0x00CD203E File Offset: 0x00CD023E
+		// Token: 0x0602B200 RID: 176640 RVA: 0x00C1F766 File Offset: 0x00C1D966
 		public void SetSelectState(bool value)
 		{
 			this.Card.SetSelectedState(value);
 		}
 
-		// Token: 0x06036306 RID: 221958 RVA: 0x00CD204C File Offset: 0x00CD024C
+		// Token: 0x0602B201 RID: 176641 RVA: 0x00C1F774 File Offset: 0x00C1D974
 		public void PointerEnterCard(int id)
 		{
 		}
 
-		// Token: 0x06036307 RID: 221959 RVA: 0x00CD204E File Offset: 0x00CD024E
+		// Token: 0x0602B202 RID: 176642 RVA: 0x00C1F776 File Offset: 0x00C1D976
 		public void PointerDownCard(int id, ULGUIPointerEventData eventData)
 		{
 		}
 
-		// Token: 0x06036308 RID: 221960 RVA: 0x00CD2050 File Offset: 0x00CD0250
+		// Token: 0x0602B203 RID: 176643 RVA: 0x00C1F778 File Offset: 0x00C1D978
 		public override object GetKey(PhantomCardData data, int displayIndex)
 		{
 			return data.CardId;
 		}
 
-		// Token: 0x0401CAAA RID: 117418
+		// Token: 0x040174DF RID: 95455
 		public PhantomArenaCard Card;
 
-		// Token: 0x0401CAAB RID: 117419
+		// Token: 0x040174E0 RID: 95456
 		public Action<int, bool> ClickCallback;
 	}
 }

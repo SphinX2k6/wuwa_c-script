@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020017AF RID: 6063
+// Token: 0x02000C68 RID: 3176
 public class WorldChatRoom : TeamChatRoomBase
 {
-	// Token: 0x0600B0F6 RID: 45302 RVA: 0x00281442 File Offset: 0x0027F642
+	// Token: 0x060084DE RID: 34014 RVA: 0x0028B9DA File Offset: 0x00289BDA
 	public WorldChatRoom(int configId) : base(EChatRoomType.World, configId)
 	{
 	}
 
-	// Token: 0x0600B0F7 RID: 45303 RVA: 0x0028144C File Offset: 0x0027F64C
+	// Token: 0x060084DF RID: 34015 RVA: 0x0028B9E4 File Offset: 0x00289BE4
 	public override int GetUniqueId()
 	{
 		return 3;

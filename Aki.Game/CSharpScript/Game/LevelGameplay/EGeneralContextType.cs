@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006996 RID: 27030
+	// Token: 0x02005AF2 RID: 23282
 	public enum EGeneralContextType
 	{
-		// Token: 0x04023088 RID: 143496
+		// Token: 0x0401E272 RID: 123506
 		Invalid,
-		// Token: 0x04023089 RID: 143497
+		// Token: 0x0401E273 RID: 123507
 		Entity,
-		// Token: 0x0402308A RID: 143498
+		// Token: 0x0401E274 RID: 123508
 		Quest,
-		// Token: 0x0402308B RID: 143499
+		// Token: 0x0401E275 RID: 123509
 		LevelPlay,
-		// Token: 0x0402308C RID: 143500
+		// Token: 0x0401E276 RID: 123510
 		InstanceDungeon,
-		// Token: 0x0402308D RID: 143501
+		// Token: 0x0401E277 RID: 123511
 		Trigger,
-		// Token: 0x0402308E RID: 143502
+		// Token: 0x0401E278 RID: 123512
 		GeneralLogicTree,
-		// Token: 0x0402308F RID: 143503
+		// Token: 0x0401E279 RID: 123513
 		Guarantee,
-		// Token: 0x04023090 RID: 143504
+		// Token: 0x0401E27A RID: 123514
 		GmLevelAction,
-		// Token: 0x04023091 RID: 143505
+		// Token: 0x0401E27B RID: 123515
 		Plot,
-		// Token: 0x04023092 RID: 143506
+		// Token: 0x0401E27C RID: 123516
 		ClientEvent,
-		// Token: 0x04023093 RID: 143507
+		// Token: 0x0401E27D RID: 123517
 		Combination,
-		// Token: 0x04023094 RID: 143508
+		// Token: 0x0401E27E RID: 123518
 		Custom,
-		// Token: 0x04023095 RID: 143509
+		// Token: 0x0401E27F RID: 123519
 		DynamicInteract,
-		// Token: 0x04023096 RID: 143510
+		// Token: 0x0401E280 RID: 123520
 		InteractSecondConfirm,
-		// Token: 0x04023097 RID: 143511
+		// Token: 0x0401E281 RID: 123521
 		FlowAction,
-		// Token: 0x04023098 RID: 143512
+		// Token: 0x0401E282 RID: 123522
 		SplinePointArrival
 	}
 }

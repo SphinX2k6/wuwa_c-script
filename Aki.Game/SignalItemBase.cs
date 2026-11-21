@@ -1,10 +1,10 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002A12 RID: 10770
+// Token: 0x02001F8D RID: 8077
 public class SignalItemBase : UiComponentAction
 {
-	// Token: 0x060165AF RID: 91567 RVA: 0x005A8995 File Offset: 0x005A6B95
+	// Token: 0x06013FB6 RID: 81846 RVA: 0x005D396D File Offset: 0x005D1B6D
 	public SignalItemBase(ESignalType type, float rootHalfWidth, int startDecisionSize, int endDecisionSize)
 	{
 		this.Type = type;
@@ -13,52 +13,52 @@ public class SignalItemBase : UiComponentAction
 		this.EndDecisionSize = endDecisionSize;
 	}
 
-	// Token: 0x060165B0 RID: 91568 RVA: 0x005A89C9 File Offset: 0x005A6BC9
+	// Token: 0x06013FB7 RID: 81847 RVA: 0x005D39A1 File Offset: 0x005D1BA1
 	public void Reset()
 	{
 		this.CurrentRelativeX = 0f;
 		this.OnReset();
 	}
 
-	// Token: 0x060165B1 RID: 91569 RVA: 0x005A89DC File Offset: 0x005A6BDC
+	// Token: 0x06013FB8 RID: 81848 RVA: 0x005D39B4 File Offset: 0x005D1BB4
 	public virtual void InitByGameplayType(ESignalGameplayType type)
 	{
 		this.GameplayType = type;
 	}
 
-	// Token: 0x060165B2 RID: 91570 RVA: 0x005A89E5 File Offset: 0x005A6BE5
+	// Token: 0x06013FB9 RID: 81849 RVA: 0x005D39BD File Offset: 0x005D1BBD
 	public void Update(float relativeX)
 	{
 		this.CurrentRelativeX = relativeX;
 		this.OnUpdate();
 	}
 
-	// Token: 0x060165B3 RID: 91571 RVA: 0x005A89F5 File Offset: 0x005A6BF5
+	// Token: 0x06013FBA RID: 81850 RVA: 0x005D39CD File Offset: 0x005D1BCD
 	public virtual float GetProgress()
 	{
 		return 0f;
 	}
 
-	// Token: 0x060165B4 RID: 91572 RVA: 0x005A89FC File Offset: 0x005A6BFC
+	// Token: 0x06013FBB RID: 81851 RVA: 0x005D39D4 File Offset: 0x005D1BD4
 	public virtual void OnCatchBtnDown()
 	{
 		this.IsCatchBtnDown = true;
 		this.RelativeXWhenCatchDown = this.CurrentRelativeX;
 	}
 
-	// Token: 0x060165B5 RID: 91573 RVA: 0x005A8A11 File Offset: 0x005A6C11
+	// Token: 0x06013FBC RID: 81852 RVA: 0x005D39E9 File Offset: 0x005D1BE9
 	public virtual void OnCatchBtnUp()
 	{
 		this.IsCatchBtnDown = false;
 		this.RelativeXWhenCatchUp = this.CurrentRelativeX;
 	}
 
-	// Token: 0x060165B6 RID: 91574 RVA: 0x005A8A26 File Offset: 0x005A6C26
+	// Token: 0x06013FBD RID: 81853 RVA: 0x005D39FE File Offset: 0x005D1BFE
 	protected virtual void OnReset()
 	{
 	}
 
-	// Token: 0x060165B7 RID: 91575 RVA: 0x005A8A28 File Offset: 0x005A6C28
+	// Token: 0x06013FBE RID: 81854 RVA: 0x005D3A00 File Offset: 0x005D1C00
 	protected virtual bool OnUpdate()
 	{
 		if (this.RootHalfWidth == 0f)
@@ -75,48 +75,48 @@ public class SignalItemBase : UiComponentAction
 		return flag;
 	}
 
-	// Token: 0x060165B8 RID: 91576 RVA: 0x005A8A84 File Offset: 0x005A6C84
+	// Token: 0x06013FBF RID: 81855 RVA: 0x005D3A5C File Offset: 0x005D1C5C
 	public virtual bool TestCanBtnDown()
 	{
 		return false;
 	}
 
-	// Token: 0x060165B9 RID: 91577 RVA: 0x005A8A87 File Offset: 0x005A6C87
+	// Token: 0x06013FC0 RID: 81856 RVA: 0x005D3A5F File Offset: 0x005D1C5F
 	public virtual bool TestCanBtnUp()
 	{
 		return false;
 	}
 
-	// Token: 0x0400A662 RID: 42594
+	// Token: 0x0400AA4C RID: 43596
 	public ESignalType Type;
 
-	// Token: 0x0400A663 RID: 42595
+	// Token: 0x0400AA4D RID: 43597
 	protected ESignalGameplayType GameplayType = ESignalGameplayType.Send;
 
-	// Token: 0x0400A664 RID: 42596
+	// Token: 0x0400AA4E RID: 43598
 	public float Width;
 
-	// Token: 0x0400A665 RID: 42597
+	// Token: 0x0400AA4F RID: 43599
 	protected int DecisionShowSize = 36;
 
-	// Token: 0x0400A666 RID: 42598
+	// Token: 0x0400AA50 RID: 43600
 	protected float CurrentRelativeX;
 
-	// Token: 0x0400A667 RID: 42599
+	// Token: 0x0400AA51 RID: 43601
 	protected int StartDecisionSize;
 
-	// Token: 0x0400A668 RID: 42600
+	// Token: 0x0400AA52 RID: 43602
 	protected int EndDecisionSize;
 
-	// Token: 0x0400A669 RID: 42601
+	// Token: 0x0400AA53 RID: 43603
 	protected bool IsCatchBtnDown;
 
-	// Token: 0x0400A66A RID: 42602
+	// Token: 0x0400AA54 RID: 43604
 	protected float RelativeXWhenCatchDown;
 
-	// Token: 0x0400A66B RID: 42603
+	// Token: 0x0400AA55 RID: 43605
 	protected float RelativeXWhenCatchUp;
 
-	// Token: 0x0400A66C RID: 42604
+	// Token: 0x0400AA56 RID: 43606
 	protected float RootHalfWidth;
 }

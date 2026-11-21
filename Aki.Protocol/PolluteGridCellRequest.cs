@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000DC7 RID: 3527
+	// Token: 0x02000DB6 RID: 3510
 	[NetMessage(EMessageId.PolluteGridCellRequest)]
 	public sealed class PolluteGridCellRequest : IMessage<PolluteGridCellRequest>, IMessage, IEquatable<PolluteGridCellRequest>, IDeepCloneable<PolluteGridCellRequest>, IBufferMessage
 	{
-		// Token: 0x06012FD9 RID: 77785 RVA: 0x002C4AF2 File Offset: 0x002C2CF2
+		// Token: 0x06012EC9 RID: 77513 RVA: 0x002C2C42 File Offset: 0x002C0E42
 		[NullableContext(1)]
 		public static PolluteGridCellRequest Create()
 		{
 			return new PolluteGridCellRequest();
 		}
 
-		// Token: 0x17003F04 RID: 16132
-		// (get) Token: 0x06012FDA RID: 77786 RVA: 0x002C4AF9 File Offset: 0x002C2CF9
+		// Token: 0x17003ECB RID: 16075
+		// (get) Token: 0x06012ECA RID: 77514 RVA: 0x002C2C49 File Offset: 0x002C0E49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003F05 RID: 16133
-		// (get) Token: 0x06012FDB RID: 77787 RVA: 0x002C4AFC File Offset: 0x002C2CFC
+		// Token: 0x17003ECC RID: 16076
+		// (get) Token: 0x06012ECB RID: 77515 RVA: 0x002C2C4C File Offset: 0x002C0E4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012FDC RID: 77788 RVA: 0x002C4B03 File Offset: 0x002C2D03
+		// Token: 0x06012ECC RID: 77516 RVA: 0x002C2C53 File Offset: 0x002C0E53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PolluteGridCellRequest()
 		{
 		}
 
-		// Token: 0x06012FDD RID: 77789 RVA: 0x002C4B0C File Offset: 0x002C2D0C
+		// Token: 0x06012ECD RID: 77517 RVA: 0x002C2C5C File Offset: 0x002C0E5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PolluteGridCellRequest(PolluteGridCellRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012FDE RID: 77790 RVA: 0x002C4B58 File Offset: 0x002C2D58
+		// Token: 0x06012ECE RID: 77518 RVA: 0x002C2CA8 File Offset: 0x002C0EA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PolluteGridCellRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new PolluteGridCellRequest(this);
 		}
 
-		// Token: 0x17003F06 RID: 16134
-		// (get) Token: 0x06012FDF RID: 77791 RVA: 0x002C4B60 File Offset: 0x002C2D60
-		// (set) Token: 0x06012FE0 RID: 77792 RVA: 0x002C4B68 File Offset: 0x002C2D68
+		// Token: 0x17003ECD RID: 16077
+		// (get) Token: 0x06012ECF RID: 77519 RVA: 0x002C2CB0 File Offset: 0x002C0EB0
+		// (set) Token: 0x06012ED0 RID: 77520 RVA: 0x002C2CB8 File Offset: 0x002C0EB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GridPlacementPbInfo TrapGridPlacementPbInfo
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003F07 RID: 16135
-		// (get) Token: 0x06012FE1 RID: 77793 RVA: 0x002C4B71 File Offset: 0x002C2D71
-		// (set) Token: 0x06012FE2 RID: 77794 RVA: 0x002C4B79 File Offset: 0x002C2D79
+		// Token: 0x17003ECE RID: 16078
+		// (get) Token: 0x06012ED1 RID: 77521 RVA: 0x002C2CC1 File Offset: 0x002C0EC1
+		// (set) Token: 0x06012ED2 RID: 77522 RVA: 0x002C2CC9 File Offset: 0x002C0EC9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsPolluted
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012FE3 RID: 77795 RVA: 0x002C4B82 File Offset: 0x002C2D82
+		// Token: 0x06012ED3 RID: 77523 RVA: 0x002C2CD2 File Offset: 0x002C0ED2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PolluteGridCellRequest);
 		}
 
-		// Token: 0x06012FE4 RID: 77796 RVA: 0x002C4B90 File Offset: 0x002C2D90
+		// Token: 0x06012ED4 RID: 77524 RVA: 0x002C2CE0 File Offset: 0x002C0EE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PolluteGridCellRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.TrapGridPlacementPbInfo, other.TrapGridPlacementPbInfo) && this.IsPolluted == other.IsPolluted && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012FE5 RID: 77797 RVA: 0x002C4BE0 File Offset: 0x002C2DE0
+		// Token: 0x06012ED5 RID: 77525 RVA: 0x002C2D30 File Offset: 0x002C0F30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012FE6 RID: 77798 RVA: 0x002C4C35 File Offset: 0x002C2E35
+		// Token: 0x06012ED6 RID: 77526 RVA: 0x002C2D85 File Offset: 0x002C0F85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012FE7 RID: 77799 RVA: 0x002C4C42 File Offset: 0x002C2E42
+		// Token: 0x06012ED7 RID: 77527 RVA: 0x002C2D92 File Offset: 0x002C0F92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012FE8 RID: 77800 RVA: 0x002C4C4C File Offset: 0x002C2E4C
+		// Token: 0x06012ED8 RID: 77528 RVA: 0x002C2D9C File Offset: 0x002C0F9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.IsPolluted)
-			{
-				output.WriteRawTag(64);
-				output.WriteBool(this.IsPolluted);
-			}
 			if (this.trapGridPlacementPbInfo_ != null)
 			{
-				output.WriteRawTag(106);
+				output.WriteRawTag(18);
 				output.WriteMessage(this.TrapGridPlacementPbInfo);
+			}
+			if (this.IsPolluted)
+			{
+				output.WriteRawTag(56);
+				output.WriteBool(this.IsPolluted);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012FE9 RID: 77801 RVA: 0x002C4CA8 File Offset: 0x002C2EA8
+		// Token: 0x06012ED9 RID: 77529 RVA: 0x002C2DF8 File Offset: 0x002C0FF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012FEA RID: 77802 RVA: 0x002C4CF4 File Offset: 0x002C2EF4
+		// Token: 0x06012EDA RID: 77530 RVA: 0x002C2E44 File Offset: 0x002C1044
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PolluteGridCellRequest other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012FEB RID: 77803 RVA: 0x002C4D5C File Offset: 0x002C2F5C
+		// Token: 0x06012EDB RID: 77531 RVA: 0x002C2EAC File Offset: 0x002C10AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012FEC RID: 77804 RVA: 0x002C4D68 File Offset: 0x002C2F68
+		// Token: 0x06012EDC RID: 77532 RVA: 0x002C2EB8 File Offset: 0x002C10B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,41 +240,41 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 64U)
+				if (num != 18U)
 				{
-					if (num != 106U)
+					if (num != 56U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						if (this.trapGridPlacementPbInfo_ == null)
-						{
-							this.TrapGridPlacementPbInfo = new GridPlacementPbInfo();
-						}
-						input.ReadMessage(this.TrapGridPlacementPbInfo);
+						this.IsPolluted = input.ReadBool();
 					}
 				}
 				else
 				{
-					this.IsPolluted = input.ReadBool();
+					if (this.trapGridPlacementPbInfo_ == null)
+					{
+						this.TrapGridPlacementPbInfo = new GridPlacementPbInfo();
+					}
+					input.ReadMessage(this.TrapGridPlacementPbInfo);
 				}
 			}
 		}
 
-		// Token: 0x04007552 RID: 30034
+		// Token: 0x04007565 RID: 30053
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007553 RID: 30035
-		public const int TrapGridPlacementPbInfoFieldNumber = 13;
+		// Token: 0x04007566 RID: 30054
+		public const int TrapGridPlacementPbInfoFieldNumber = 2;
 
-		// Token: 0x04007554 RID: 30036
+		// Token: 0x04007567 RID: 30055
 		private GridPlacementPbInfo trapGridPlacementPbInfo_;
 
-		// Token: 0x04007555 RID: 30037
-		public const int IsPollutedFieldNumber = 8;
+		// Token: 0x04007568 RID: 30056
+		public const int IsPollutedFieldNumber = 7;
 
-		// Token: 0x04007556 RID: 30038
+		// Token: 0x04007569 RID: 30057
 		private bool isPolluted_;
 	}
 }

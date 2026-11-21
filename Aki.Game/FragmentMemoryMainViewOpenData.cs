@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C1D RID: 7197
+// Token: 0x020010DC RID: 4316
 public class FragmentMemoryMainViewOpenData
 {
-	// Token: 0x0400628A RID: 25226
+	// Token: 0x0400635C RID: 25436
 	[Nullable(2)]
 	public FragmentMemoryTopicData FragmentMemoryTopicData;
 
-	// Token: 0x0400628B RID: 25227
+	// Token: 0x0400635D RID: 25437
 	public int CurrentSelectId;
 }

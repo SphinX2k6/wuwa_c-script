@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001595 RID: 5525
+	// Token: 0x020016F4 RID: 5876
 	[EnumExtensions]
 	public enum EBattleSettlementBgmType
 	{
-		// Token: 0x04004988 RID: 18824
+		// Token: 0x04004D3A RID: 19770
 		BattleSoundWave
 	}
 }

@@ -6,12 +6,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Battle;
 using UnrealEngine;
 
-// Token: 0x020031A1 RID: 12705
+// Token: 0x02002710 RID: 10000
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionSkillComponent : CharacterSkillComponent
 {
-	// Token: 0x0601B5F9 RID: 112121 RVA: 0x0077B8A0 File Offset: 0x00779AA0
+	// Token: 0x06019119 RID: 102681 RVA: 0x007A3B2C File Offset: 0x007A1D2C
 	protected override bool OnStart()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -19,9 +19,9 @@ public class VisionSkillComponent : CharacterSkillComponent
 		return base.OnStart();
 	}
 
-	// Token: 0x0601B5FA RID: 112122 RVA: 0x0077B8CC File Offset: 0x00779ACC
+	// Token: 0x0601911A RID: 102682 RVA: 0x007A3B58 File Offset: 0x007A1D58
 	[NullableContext(1)]
-	public void InitVisionSkill(EntityHandle summonerEntity, bool isMorphVision = false)
+	public void InitVisionSkill(EntityHandle summonerEntity, bool isMorphVision = false, ECheckVisionType checkVisionType = ECheckVisionType.Vision)
 	{
 		if (this.SummonerEntity != summonerEntity)
 		{
@@ -40,9 +40,10 @@ public class VisionSkillComponent : CharacterSkillComponent
 		this.KeepMultiSkillOnMorphEnd = false;
 		this.KeepMultiSkillOnGoDown = false;
 		this.EnableAttackInputAction = true;
+		this.CheckVisionType = checkVisionType;
 	}
 
-	// Token: 0x0601B5FB RID: 112123 RVA: 0x0077B96C File Offset: 0x00779B6C
+	// Token: 0x0601911B RID: 102683 RVA: 0x007A3C00 File Offset: 0x007A1E00
 	public unsafe override bool BeginSkill(int skillId, ISkillParam skillParam = null)
 	{
 		if (skillParam == null)
@@ -109,7 +110,7 @@ public class VisionSkillComponent : CharacterSkillComponent
 		return true;
 	}
 
-	// Token: 0x0601B5FC RID: 112124 RVA: 0x0077BB2C File Offset: 0x00779D2C
+	// Token: 0x0601911C RID: 102684 RVA: 0x007A3DC0 File Offset: 0x007A1FC0
 	public void OnMorphEnd()
 	{
 		if (!this.KeepMultiSkillOnMorphEnd)
@@ -119,26 +120,26 @@ public class VisionSkillComponent : CharacterSkillComponent
 		this.IsMorph = false;
 	}
 
-	// Token: 0x0601B5FD RID: 112125 RVA: 0x0077BB43 File Offset: 0x00779D43
+	// Token: 0x0601911D RID: 102685 RVA: 0x007A3DD7 File Offset: 0x007A1FD7
 	public void ExitMultiSkillState()
 	{
 		this.ClearMultiSkillState();
 	}
 
-	// Token: 0x0601B5FE RID: 112126 RVA: 0x0077BB4B File Offset: 0x00779D4B
+	// Token: 0x0601911E RID: 102686 RVA: 0x007A3DDF File Offset: 0x007A1FDF
 	public void SetKeepMultiSkillState(bool keepOnMorphEnd, bool keepOnGoDown)
 	{
 		this.KeepMultiSkillOnMorphEnd = keepOnMorphEnd;
 		this.KeepMultiSkillOnGoDown = keepOnGoDown;
 	}
 
-	// Token: 0x0601B5FF RID: 112127 RVA: 0x0077BB5B File Offset: 0x00779D5B
+	// Token: 0x0601911F RID: 102687 RVA: 0x007A3DEF File Offset: 0x007A1FEF
 	public void SetEnableAttackInputAction(bool bEnable)
 	{
 		this.EnableAttackInputAction = bEnable;
 	}
 
-	// Token: 0x0601B600 RID: 112128 RVA: 0x0077BB64 File Offset: 0x00779D64
+	// Token: 0x06019120 RID: 102688 RVA: 0x007A3DF8 File Offset: 0x007A1FF8
 	public bool CanSummonerStartNextMultiSkill()
 	{
 		if (this.CurMultiSkillId <= 0)
@@ -169,7 +170,7 @@ public class VisionSkillComponent : CharacterSkillComponent
 		return this.MultiSkillData.CanStartMultiSkill(skill);
 	}
 
-	// Token: 0x0601B601 RID: 112129 RVA: 0x0077BC10 File Offset: 0x00779E10
+	// Token: 0x06019121 RID: 102689 RVA: 0x007A3EA4 File Offset: 0x007A20A4
 	public bool IsInMultiSkill()
 	{
 		if (this.CurMultiSkillId <= 0)
@@ -180,7 +181,7 @@ public class VisionSkillComponent : CharacterSkillComponent
 		return ((multiSkillInfo != null) ? multiSkillInfo.NextSkillId : null).GetValueOrDefault() != 0;
 	}
 
-	// Token: 0x0601B602 RID: 112130 RVA: 0x0077BC5C File Offset: 0x00779E5C
+	// Token: 0x06019122 RID: 102690 RVA: 0x007A3EF0 File Offset: 0x007A20F0
 	public void OnVisionAbilityDestroy()
 	{
 		if (this.CurWorldSkillCdData != null)
@@ -202,14 +203,14 @@ public class VisionSkillComponent : CharacterSkillComponent
 		this.CurMultiSkillId = 0;
 	}
 
-	// Token: 0x0601B603 RID: 112131 RVA: 0x0077BCC4 File Offset: 0x00779EC4
+	// Token: 0x06019123 RID: 102691 RVA: 0x007A3F58 File Offset: 0x007A2158
 	protected override bool OnEnd()
 	{
 		this.OnVisionAbilityDestroy();
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601B604 RID: 112132 RVA: 0x0077BCD2 File Offset: 0x00779ED2
+	// Token: 0x06019124 RID: 102692 RVA: 0x007A3F66 File Offset: 0x007A2166
 	private void ClearMultiSkillState()
 	{
 		if (this.CurMultiSkillId != 0)
@@ -221,7 +222,7 @@ public class VisionSkillComponent : CharacterSkillComponent
 		this.TryRemoveEvents(true, false);
 	}
 
-	// Token: 0x0601B605 RID: 112133 RVA: 0x0077BD04 File Offset: 0x00779F04
+	// Token: 0x06019125 RID: 102693 RVA: 0x007A3F98 File Offset: 0x007A2198
 	private void TryAddEvents(bool bCharInputPress, bool bChangeRole)
 	{
 		EntityHandle summonerEntity = this.SummonerEntity;
@@ -237,7 +238,7 @@ public class VisionSkillComponent : CharacterSkillComponent
 		}
 	}
 
-	// Token: 0x0601B606 RID: 112134 RVA: 0x0077BD7C File Offset: 0x00779F7C
+	// Token: 0x06019126 RID: 102694 RVA: 0x007A4010 File Offset: 0x007A2210
 	private void TryRemoveEvents(bool bCharInputPress, bool bChangeRole)
 	{
 		EntityHandle summonerEntity = this.SummonerEntity;
@@ -253,17 +254,14 @@ public class VisionSkillComponent : CharacterSkillComponent
 		}
 	}
 
-	// Token: 0x0601B607 RID: 112135 RVA: 0x0077BDF4 File Offset: 0x00779FF4
+	// Token: 0x06019127 RID: 102695 RVA: 0x007A4088 File Offset: 0x007A2288
 	private unsafe bool OnCharInputPress(EInputAction action)
 	{
 		if (action != EInputAction.幻象2 && (action != EInputAction.攻击 || !this.EnableAttackInputAction))
 		{
 			return false;
 		}
-		CharacterVisionComponent component = this.SummonerEntity.Entity.GetComponent<CharacterVisionComponent>();
-		long creatureDataId = this.CreatureDataId;
-		long? num = (component != null) ? new long?(component.GetVisionCreatureDataId()) : null;
-		if (!(creatureDataId == num.GetValueOrDefault() & num != null))
+		if (!this.CheckVisionCreature())
 		{
 			return false;
 		}
@@ -340,7 +338,7 @@ public class VisionSkillComponent : CharacterSkillComponent
 		return false;
 	}
 
-	// Token: 0x0601B608 RID: 112136 RVA: 0x0077C078 File Offset: 0x0077A278
+	// Token: 0x06019128 RID: 102696 RVA: 0x007A42CB File Offset: 0x007A24CB
 	private void OnSummonerDown(double _)
 	{
 		if (!this.KeepMultiSkillOnGoDown)
@@ -349,13 +347,29 @@ public class VisionSkillComponent : CharacterSkillComponent
 		}
 	}
 
-	// Token: 0x0601B609 RID: 112137 RVA: 0x0077C088 File Offset: 0x0077A288
+	// Token: 0x06019129 RID: 102697 RVA: 0x007A42DB File Offset: 0x007A24DB
 	public bool HandlePress(EInputAction action, float time)
 	{
 		return this.EnableInput && this.OnCharInputPress(action);
 	}
 
-	// Token: 0x0601B60A RID: 112138 RVA: 0x0077C09C File Offset: 0x0077A29C
+	// Token: 0x0601912A RID: 102698 RVA: 0x007A42F0 File Offset: 0x007A24F0
+	private bool CheckVisionCreature()
+	{
+		if (this.CheckVisionType == ECheckVisionType.Vision)
+		{
+			CharacterVisionComponent component = this.SummonerEntity.Entity.GetComponent<CharacterVisionComponent>();
+			long creatureDataId = this.CreatureDataId;
+			long? num = (component != null) ? new long?(component.GetVisionCreatureDataId()) : null;
+			if (!(creatureDataId == num.GetValueOrDefault() & num != null))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	// Token: 0x0601912B RID: 102699 RVA: 0x007A4350 File Offset: 0x007A2550
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -364,115 +378,163 @@ public class VisionSkillComponent : CharacterSkillComponent
 			return false;
 		}
 		VisionSkillComponent visionSkillComponent = (VisionSkillComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataId"))
+		this.CreatureDataId = visionSkillComponent.CreatureDataId;
+		if (visionSkillComponent.CurWorldSkillCdData == null)
 		{
-			this.CreatureDataId = visionSkillComponent.CreatureDataId;
+			this.CurWorldSkillCdData = null;
 		}
-		if (base.CanResetComponentProperty("CurWorldSkillCdData"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurWorldSkillCdData), "CurWorldSkillCdData"))
 		{
-			if (visionSkillComponent.CurWorldSkillCdData == null)
-			{
-				this.CurWorldSkillCdData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WorldSkillCdData>(this.CurWorldSkillCdData), "CurWorldSkillCdData"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SummonerEntity"))
+		if (visionSkillComponent.SummonerEntity == null)
 		{
-			if (visionSkillComponent.SummonerEntity == null)
-			{
-				this.SummonerEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.SummonerEntity), "SummonerEntity"))
-			{
-				return false;
-			}
+			this.SummonerEntity = null;
 		}
-		if (base.CanResetComponentProperty("MultiSkillData"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SummonerEntity), "SummonerEntity"))
 		{
-			if (visionSkillComponent.MultiSkillData == null)
-			{
-				this.MultiSkillData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MultiSkillData>(this.MultiSkillData), "MultiSkillData"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurMultiSkillId"))
+		if (visionSkillComponent.MultiSkillData == null)
 		{
-			this.CurMultiSkillId = visionSkillComponent.CurMultiSkillId;
+			this.MultiSkillData = null;
 		}
-		if (base.CanResetComponentProperty("TargetMultiSkillId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MultiSkillData), "MultiSkillData"))
 		{
-			this.TargetMultiSkillId = visionSkillComponent.TargetMultiSkillId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsMorphVision"))
-		{
-			this.IsMorphVision = visionSkillComponent.IsMorphVision;
-		}
-		if (base.CanResetComponentProperty("IsMorph"))
-		{
-			this.IsMorph = visionSkillComponent.IsMorph;
-		}
-		if (base.CanResetComponentProperty("KeepMultiSkillOnMorphEnd"))
-		{
-			this.KeepMultiSkillOnMorphEnd = visionSkillComponent.KeepMultiSkillOnMorphEnd;
-		}
-		if (base.CanResetComponentProperty("KeepMultiSkillOnGoDown"))
-		{
-			this.KeepMultiSkillOnGoDown = visionSkillComponent.KeepMultiSkillOnGoDown;
-		}
-		if (base.CanResetComponentProperty("EnableAttackInputAction"))
-		{
-			this.EnableAttackInputAction = visionSkillComponent.EnableAttackInputAction;
-		}
-		if (base.CanResetComponentProperty("EnableInput"))
-		{
-			this.EnableInput = visionSkillComponent.EnableInput;
-		}
+		this.CurMultiSkillId = visionSkillComponent.CurMultiSkillId;
+		this.TargetMultiSkillId = visionSkillComponent.TargetMultiSkillId;
+		this.IsMorphVision = visionSkillComponent.IsMorphVision;
+		this.IsMorph = visionSkillComponent.IsMorph;
+		this.KeepMultiSkillOnMorphEnd = visionSkillComponent.KeepMultiSkillOnMorphEnd;
+		this.KeepMultiSkillOnGoDown = visionSkillComponent.KeepMultiSkillOnGoDown;
+		this.EnableAttackInputAction = visionSkillComponent.EnableAttackInputAction;
+		this.EnableInput = visionSkillComponent.EnableInput;
+		this.CheckVisionType = visionSkillComponent.CheckVisionType;
 		return true;
 	}
 
-	// Token: 0x0400D66C RID: 54892
+	// Token: 0x170027C9 RID: 10185
+	// (get) Token: 0x0601912C RID: 102700 RVA: 0x007A4469 File Offset: 0x007A2669
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027CA RID: 10186
+	// (get) Token: 0x0601912D RID: 102701 RVA: 0x007A446C File Offset: 0x007A266C
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027CB RID: 10187
+	// (get) Token: 0x0601912E RID: 102702 RVA: 0x007A446F File Offset: 0x007A266F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027CC RID: 10188
+	// (get) Token: 0x0601912F RID: 102703 RVA: 0x007A4472 File Offset: 0x007A2672
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027CD RID: 10189
+	// (get) Token: 0x06019130 RID: 102704 RVA: 0x007A4475 File Offset: 0x007A2675
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027CE RID: 10190
+	// (get) Token: 0x06019131 RID: 102705 RVA: 0x007A4478 File Offset: 0x007A2678
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027CF RID: 10191
+	// (get) Token: 0x06019132 RID: 102706 RVA: 0x007A447B File Offset: 0x007A267B
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027D0 RID: 10192
+	// (get) Token: 0x06019133 RID: 102707 RVA: 0x007A447E File Offset: 0x007A267E
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DAF1 RID: 56049
 	[StaticVariableRuleIgnore]
 	private static int _useNextSkillTagId = GameplayTagDefine.EGameplayTagId["幻象.技能.使用下一段技能"];
 
-	// Token: 0x0400D66D RID: 54893
+	// Token: 0x0400DAF2 RID: 56050
 	private long CreatureDataId;
 
-	// Token: 0x0400D66E RID: 54894
+	// Token: 0x0400DAF3 RID: 56051
 	private WorldSkillCdData CurWorldSkillCdData;
 
-	// Token: 0x0400D66F RID: 54895
+	// Token: 0x0400DAF4 RID: 56052
 	private EntityHandle SummonerEntity;
 
-	// Token: 0x0400D670 RID: 54896
+	// Token: 0x0400DAF5 RID: 56053
 	private MultiSkillData MultiSkillData;
 
-	// Token: 0x0400D671 RID: 54897
+	// Token: 0x0400DAF6 RID: 56054
 	private int CurMultiSkillId;
 
-	// Token: 0x0400D672 RID: 54898
+	// Token: 0x0400DAF7 RID: 56055
 	private int TargetMultiSkillId;
 
-	// Token: 0x0400D673 RID: 54899
+	// Token: 0x0400DAF8 RID: 56056
 	private bool IsMorphVision;
 
-	// Token: 0x0400D674 RID: 54900
+	// Token: 0x0400DAF9 RID: 56057
 	private bool IsMorph;
 
-	// Token: 0x0400D675 RID: 54901
+	// Token: 0x0400DAFA RID: 56058
 	private bool KeepMultiSkillOnMorphEnd;
 
-	// Token: 0x0400D676 RID: 54902
+	// Token: 0x0400DAFB RID: 56059
 	private bool KeepMultiSkillOnGoDown;
 
-	// Token: 0x0400D677 RID: 54903
+	// Token: 0x0400DAFC RID: 56060
 	private bool EnableAttackInputAction = true;
 
-	// Token: 0x0400D678 RID: 54904
+	// Token: 0x0400DAFD RID: 56061
 	private bool EnableInput;
+
+	// Token: 0x0400DAFE RID: 56062
+	private ECheckVisionType CheckVisionType;
 }

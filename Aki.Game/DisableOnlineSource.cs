@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020022E6 RID: 8934
+// Token: 0x020017CA RID: 6090
 public class DisableOnlineSource
 {
-	// Token: 0x0400858C RID: 34188
+	// Token: 0x040086CA RID: 34506
 	public EDisableOnlineType Type;
 
-	// Token: 0x0400858D RID: 34189
+	// Token: 0x040086CB RID: 34507
 	public int TreeId;
 
-	// Token: 0x0400858E RID: 34190
+	// Token: 0x040086CC RID: 34508
 	public int NodeId;
 }

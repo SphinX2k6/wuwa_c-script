@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.Common.Proxy
 {
-	// Token: 0x0200001D RID: 29
+	// Token: 0x0200001E RID: 30
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ConfigCommonParamLang
 	{
-		// Token: 0x060000CB RID: 203 RVA: 0x0000B215 File Offset: 0x00009415
+		// Token: 0x06000138 RID: 312 RVA: 0x0000E9E1 File Offset: 0x0000CBE1
 		public static string GetLocalText(int id, string culture = null)
 		{
 			Func<int, string, string> getLocalTextFunc = ConfigCommonParamLang.GetLocalTextFunc;
@@ -19,7 +19,7 @@ namespace Aki.Common.Proxy
 			return getLocalTextFunc(id, culture);
 		}
 
-		// Token: 0x04000221 RID: 545
+		// Token: 0x04000226 RID: 550
 		public static Func<int, string, string> GetLocalTextFunc;
 	}
 }

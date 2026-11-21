@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000183 RID: 387
+	// Token: 0x02000195 RID: 405
 	public class ConfigComicPrefabConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000913 RID: 2323 RVA: 0x0008CBE0 File Offset: 0x0008ADE0
+		// Token: 0x0600097F RID: 2431 RVA: 0x00092B18 File Offset: 0x00090D18
 		static ConfigComicPrefabConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigComicPrefabConfigById.CreateStaticDefaultValue), new Action(ConfigComicPrefabConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000914 RID: 2324 RVA: 0x0008CC00 File Offset: 0x0008AE00
+		// Token: 0x06000980 RID: 2432 RVA: 0x00092B38 File Offset: 0x00090D38
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigComicPrefabConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000915 RID: 2325 RVA: 0x0008CC7F File Offset: 0x0008AE7F
+		// Token: 0x06000981 RID: 2433 RVA: 0x00092BB7 File Offset: 0x00090DB7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigComicPrefabConfigById.LogPair = null;
 			ConfigComicPrefabConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000916 RID: 2326 RVA: 0x0008CC8D File Offset: 0x0008AE8D
+		// Token: 0x06000982 RID: 2434 RVA: 0x00092BC5 File Offset: 0x00090DC5
 		public static void Init()
 		{
 			ConfigComicPrefabConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigComicPrefabConfigById.HandleId, "db_comic.db", "select BinData from `ComicPrefabConfig` where Id=?");
 		}
 
-		// Token: 0x06000917 RID: 2327 RVA: 0x0008CCA8 File Offset: 0x0008AEA8
+		// Token: 0x06000983 RID: 2435 RVA: 0x00092BE0 File Offset: 0x00090DE0
 		public static ComicPrefabConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigComicPrefabConfigById.HandleId, ConfigComicPrefabConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ComicPrefabConfig?(rootAsComicPrefabConfig);
 		}
 
-		// Token: 0x04000A79 RID: 2681
+		// Token: 0x04000AF7 RID: 2807
 		private const string DB = "db_comic.db";
 
-		// Token: 0x04000A7A RID: 2682
+		// Token: 0x04000AF8 RID: 2808
 		private const string FILE = "m.漫画.xlsx";
 
-		// Token: 0x04000A7B RID: 2683
+		// Token: 0x04000AF9 RID: 2809
 		private const string TABLE = "ComicPrefabConfig";
 
-		// Token: 0x04000A7C RID: 2684
+		// Token: 0x04000AFA RID: 2810
 		private const string COMMAND = "select BinData from `ComicPrefabConfig` where Id=?";
 
-		// Token: 0x04000A7D RID: 2685
+		// Token: 0x04000AFB RID: 2811
 		private const string KEY_PREFIX = "ComicPrefabConfigById";
 
-		// Token: 0x04000A7E RID: 2686
+		// Token: 0x04000AFC RID: 2812
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A7F RID: 2687
+		// Token: 0x04000AFD RID: 2813
 		private static int HandleId;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005761 RID: 22369
+	// Token: 0x02005D68 RID: 23912
 	public class IPointGroupGenerateTypeT
 	{
-		// Token: 0x1700A6DD RID: 42717
-		// (get) Token: 0x060257D3 RID: 153555 RVA: 0x0052C13A File Offset: 0x0052A33A
-		// (set) Token: 0x060257D4 RID: 153556 RVA: 0x0052C142 File Offset: 0x0052A342
+		// Token: 0x1700B001 RID: 45057
+		// (get) Token: 0x06027CF3 RID: 163059 RVA: 0x005722C6 File Offset: 0x005704C6
+		// (set) Token: 0x06027CF4 RID: 163060 RVA: 0x005722CE File Offset: 0x005704CE
 		public EPointGroupGenerateType Type { get; set; }
 
-		// Token: 0x060257D5 RID: 153557 RVA: 0x0052C14B File Offset: 0x0052A34B
+		// Token: 0x06027CF5 RID: 163061 RVA: 0x005722D7 File Offset: 0x005704D7
 		public IPointGroupGenerateTypeT()
 		{
 			this.Type = EPointGroupGenerateType.Layer;

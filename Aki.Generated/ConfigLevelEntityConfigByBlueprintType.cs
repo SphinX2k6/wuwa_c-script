@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004CB RID: 1227
+	// Token: 0x020004E1 RID: 1249
 	public class ConfigLevelEntityConfigByBlueprintType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CCD RID: 7373 RVA: 0x000FBE7B File Offset: 0x000FA07B
+		// Token: 0x06001D51 RID: 7505 RVA: 0x001025CF File Offset: 0x001007CF
 		static ConfigLevelEntityConfigByBlueprintType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLevelEntityConfigByBlueprintType.CreateStaticDefaultValue), new Action(ConfigLevelEntityConfigByBlueprintType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CCE RID: 7374 RVA: 0x000FBE9C File Offset: 0x000FA09C
+		// Token: 0x06001D52 RID: 7506 RVA: 0x001025F0 File Offset: 0x001007F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLevelEntityConfigByBlueprintType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CCF RID: 7375 RVA: 0x000FBF1B File Offset: 0x000FA11B
+		// Token: 0x06001D53 RID: 7507 RVA: 0x0010266F File Offset: 0x0010086F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLevelEntityConfigByBlueprintType.LogPair = null;
 			ConfigLevelEntityConfigByBlueprintType.HandleId = 0;
 		}
 
-		// Token: 0x06001CD0 RID: 7376 RVA: 0x000FBF29 File Offset: 0x000FA129
+		// Token: 0x06001D54 RID: 7508 RVA: 0x0010267D File Offset: 0x0010087D
 		public static void Init()
 		{
 			ConfigLevelEntityConfigByBlueprintType.HandleId = ConfigCommon.InitDataStatement(ConfigLevelEntityConfigByBlueprintType.HandleId, "db_level_entity.db", "select BinData from `LevelEntityConfig` where BlueprintType=?");
 		}
 
-		// Token: 0x06001CD1 RID: 7377 RVA: 0x000FBF44 File Offset: 0x000FA144
+		// Token: 0x06001D55 RID: 7509 RVA: 0x00102698 File Offset: 0x00100898
 		[return: Nullable(2)]
 		public static IReadOnlyList<LevelEntityConfig> GetConfigList(string p0BlueprintType, bool useCache = true)
 		{
@@ -86,22 +86,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002171 RID: 8561
+		// Token: 0x0400220B RID: 8715
 		private const string DB = "db_level_entity.db";
 
-		// Token: 0x04002172 RID: 8562
+		// Token: 0x0400220C RID: 8716
 		private const string FILE = "UniverseEditor/Entity/LevelEntity.csv";
 
-		// Token: 0x04002173 RID: 8563
+		// Token: 0x0400220D RID: 8717
 		private const string TABLE = "LevelEntityConfig";
 
-		// Token: 0x04002174 RID: 8564
+		// Token: 0x0400220E RID: 8718
 		private const string COMMAND = "select BinData from `LevelEntityConfig` where BlueprintType=?";
 
-		// Token: 0x04002175 RID: 8565
+		// Token: 0x0400220F RID: 8719
 		private const string KEY_PREFIX = "LevelEntityConfigByBlueprintType";
 
-		// Token: 0x04002176 RID: 8566
+		// Token: 0x04002210 RID: 8720
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002177 RID: 8567
+		// Token: 0x04002211 RID: 8721
 		private static int HandleId;
 	}
 }

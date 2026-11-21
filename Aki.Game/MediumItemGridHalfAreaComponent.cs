@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001917 RID: 6423
+// Token: 0x02000DD0 RID: 3536
 public class MediumItemGridHalfAreaComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BC23 RID: 48163 RVA: 0x002AA245 File Offset: 0x002A8445
+	// Token: 0x0600900D RID: 36877 RVA: 0x002B49A1 File Offset: 0x002B2BA1
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemTagTeam";
 	}
 
-	// Token: 0x0600BC24 RID: 48164 RVA: 0x002AA24C File Offset: 0x002A844C
+	// Token: 0x0600900E RID: 36878 RVA: 0x002B49A8 File Offset: 0x002B2BA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -27,7 +27,7 @@ public class MediumItemGridHalfAreaComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BC25 RID: 48165 RVA: 0x002AA294 File Offset: 0x002A8494
+	// Token: 0x0600900F RID: 36879 RVA: 0x002B49F0 File Offset: 0x002B2BF0
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -42,7 +42,7 @@ public class MediumItemGridHalfAreaComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BC26 RID: 48166 RVA: 0x002AA2E5 File Offset: 0x002A84E5
+	// Token: 0x06009010 RID: 36880 RVA: 0x002B4A41 File Offset: 0x002B2C41
 	[NullableContext(1)]
 	private string GetHalfAreaResId(ETeamBelong belongTo = ETeamBelong.FirstPart)
 	{
@@ -53,10 +53,10 @@ public class MediumItemGridHalfAreaComponent : MediumItemGridComponent
 		return "SP_ComTagTeam1";
 	}
 
-	// Token: 0x02007E89 RID: 32393
+	// Token: 0x02007010 RID: 28688
 	private class EChildType
 	{
-		// Token: 0x04029656 RID: 169558
+		// Token: 0x04024982 RID: 149890
 		public const int Sprite = 0;
 	}
 }

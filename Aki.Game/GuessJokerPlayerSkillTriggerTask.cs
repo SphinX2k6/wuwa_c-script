@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001038 RID: 4152
+// Token: 0x020004EC RID: 1260
 public class GuessJokerPlayerSkillTriggerTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A95 RID: 27285 RVA: 0x00157094 File Offset: 0x00155294
+	// Token: 0x06003E2A RID: 15914 RVA: 0x0015F9BC File Offset: 0x0015DBBC
 	[NullableContext(1)]
 	public GuessJokerPlayerSkillTriggerTask(JokerGuessSkillTriggerAction data)
 	{
@@ -16,7 +16,7 @@ public class GuessJokerPlayerSkillTriggerTask : GuessJokerTaskBase
 		this.FinishTime = (float)GuessJokerUtils.GetJokerParamConfig(EGuessJokerParamKey.GuessJokerPlayerSkillConsiderTime.ToString());
 	}
 
-	// Token: 0x06006A96 RID: 27286 RVA: 0x001570EC File Offset: 0x001552EC
+	// Token: 0x06003E2B RID: 15915 RVA: 0x0015FA14 File Offset: 0x0015DC14
 	protected override void OnExecute()
 	{
 		Log.Instance.Info(ELogModule.GuessJokerCard, ELogAuthor.LRC, string.Format("玩家技能触发：{0} 剩余次数：{1}", this.SkillId, this.SkillRemindCount), default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -65,7 +65,7 @@ public class GuessJokerPlayerSkillTriggerTask : GuessJokerTaskBase
 		});
 	}
 
-	// Token: 0x06006A97 RID: 27287 RVA: 0x001571E4 File Offset: 0x001553E4
+	// Token: 0x06003E2C RID: 15916 RVA: 0x0015FB0C File Offset: 0x0015DD0C
 	protected override void OnTick(float deltaTime)
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -79,7 +79,7 @@ public class GuessJokerPlayerSkillTriggerTask : GuessJokerTaskBase
 		guessJokerGamePlayView.SetSkillProgress(EGuessJokerPlayerType.Me, progress);
 	}
 
-	// Token: 0x06006A98 RID: 27288 RVA: 0x00157244 File Offset: 0x00155444
+	// Token: 0x06003E2D RID: 15917 RVA: 0x0015FB6C File Offset: 0x0015DD6C
 	protected override void OnComplete()
 	{
 		GuessJokerPlayerSkillTriggerTask.<>c__DisplayClass8_0 CS$<>8__locals1 = new GuessJokerPlayerSkillTriggerTask.<>c__DisplayClass8_0();
@@ -106,18 +106,18 @@ public class GuessJokerPlayerSkillTriggerTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.SetNpcEnterInteractiveStage(false);
 	}
 
-	// Token: 0x0400311B RID: 12571
+	// Token: 0x040031B4 RID: 12724
 	private readonly int SkillId;
 
-	// Token: 0x0400311C RID: 12572
+	// Token: 0x040031B5 RID: 12725
 	private readonly int SkillRemindCount;
 
-	// Token: 0x0400311D RID: 12573
+	// Token: 0x040031B6 RID: 12726
 	private bool HasPlayerChosen;
 
-	// Token: 0x0400311E RID: 12574
+	// Token: 0x040031B7 RID: 12727
 	private bool IsAutoAbandoning;
 
-	// Token: 0x0400311F RID: 12575
+	// Token: 0x040031B8 RID: 12728
 	private float ThinkTime;
 }

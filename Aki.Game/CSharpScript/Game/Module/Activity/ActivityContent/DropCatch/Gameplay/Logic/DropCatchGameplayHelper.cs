@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006732 RID: 26418
+	// Token: 0x02005682 RID: 22146
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayHelper
 	{
-		// Token: 0x06041EEB RID: 270059 RVA: 0x00FFE6E4 File Offset: 0x00FFC8E4
+		// Token: 0x06036A37 RID: 223799 RVA: 0x00F3FAB0 File Offset: 0x00F3DCB0
 		public static IAliasTable BuildAliasTable(Dictionary<int, int> itemWeightMap)
 		{
 			List<int> list = new List<int>();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			};
 		}
 
-		// Token: 0x06041EEC RID: 270060 RVA: 0x00FFE8BC File Offset: 0x00FFCABC
+		// Token: 0x06036A38 RID: 223800 RVA: 0x00F3FC88 File Offset: 0x00F3DE88
 		public static int SampleFromAliasTable(IAliasTable table)
 		{
 			int num = table.Items.Length;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return table.Items[num2];
 		}
 
-		// Token: 0x06041EED RID: 270061 RVA: 0x00FFE914 File Offset: 0x00FFCB14
+		// Token: 0x06036A39 RID: 223801 RVA: 0x00F3FCE0 File Offset: 0x00F3DEE0
 		public static void CalculateBounds(Vector2D pos, Vector2D size, IDropCatchBounds outBounds)
 		{
 			outBounds.Left = pos.X - size.X / 2.0;

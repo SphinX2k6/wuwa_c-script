@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000B7 RID: 183
+	// Token: 0x020000BF RID: 191
 	[EnumExtensions]
 	public enum EGroupFinishConfig
 	{
-		// Token: 0x04000417 RID: 1047
+		// Token: 0x0400043B RID: 1083
 		Silence,
-		// Token: 0x04000418 RID: 1048
+		// Token: 0x0400043C RID: 1084
 		Destroy
 	}
 }

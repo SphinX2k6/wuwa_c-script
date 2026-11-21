@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001515 RID: 5397
+// Token: 0x020009CD RID: 2509
 [NullableContext(2)]
 [Nullable(0)]
 [RequiredMember]
 public class Spring25LetterListTabData
 {
-	// Token: 0x06009A06 RID: 39430 RVA: 0x00215443 File Offset: 0x00213643
+	// Token: 0x06006DE4 RID: 28132 RVA: 0x0021F1DF File Offset: 0x0021D3DF
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public Spring25LetterListTabData()
 	{
 	}
 
-	// Token: 0x040043B4 RID: 17332
+	// Token: 0x0400445A RID: 17498
 	[RequiredMember]
 	public int SignId;
 
-	// Token: 0x040043B5 RID: 17333
+	// Token: 0x0400445B RID: 17499
 	[RequiredMember]
 	public bool IsChosen;
 
-	// Token: 0x040043B6 RID: 17334
+	// Token: 0x0400445C RID: 17500
 	[RequiredMember]
 	public bool IsNew;
 
-	// Token: 0x040043B7 RID: 17335
+	// Token: 0x0400445D RID: 17501
 	public string TexturePath;
 
-	// Token: 0x040043B8 RID: 17336
+	// Token: 0x0400445E RID: 17502
 	public string DescriptionTextId;
 }

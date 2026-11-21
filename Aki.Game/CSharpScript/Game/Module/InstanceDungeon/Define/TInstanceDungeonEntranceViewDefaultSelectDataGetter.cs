@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058CD RID: 22733
-	// (Invoke) Token: 0x06039C76 RID: 236662
+	// Token: 0x020048A5 RID: 18597
+	// (Invoke) Token: 0x0602EB99 RID: 191385
 	public delegate IInstanceDungeonEntranceViewSelectData TInstanceDungeonEntranceViewDefaultSelectDataGetter(Dictionary<int, List<int>> instanceByTitleMap);
 }

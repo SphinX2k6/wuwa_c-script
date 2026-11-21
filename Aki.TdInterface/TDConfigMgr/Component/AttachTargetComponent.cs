@@ -9,8 +9,8 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class AttachTargetComponent : IComponentBase
 	{
-		// Token: 0x060000D4 RID: 212 RVA: 0x000157E8 File Offset: 0x000139E8
-		[NullableContext(1)]
+		// Token: 0x060000D8 RID: 216 RVA: 0x0001615C File Offset: 0x0001435C
+		[NullableContext(0)]
 		private AttachTargetComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060000D5 RID: 213 RVA: 0x00015820 File Offset: 0x00013A20
-		[NullableContext(1)]
+		// Token: 0x060000D9 RID: 217 RVA: 0x00016194 File Offset: 0x00014394
+		[NullableContext(0)]
 		public static AttachTargetComponent Create([Nullable(2)] AttachTargetComponent instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060000D6 RID: 214 RVA: 0x00015833 File Offset: 0x00013A33
-		[NullableContext(1)]
+		// Token: 0x060000DA RID: 218 RVA: 0x000161A7 File Offset: 0x000143A7
+		[NullableContext(0)]
 		public static AttachTargetComponent CreateFromSetValue([Nullable(2)] AttachTargetComponent_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060000D7 RID: 215 RVA: 0x00015848 File Offset: 0x00013A48
-		[NullableContext(1)]
+		// Token: 0x060000DB RID: 219 RVA: 0x000161BC File Offset: 0x000143BC
+		[NullableContext(0)]
 		public new AttachTargetComponent_SetValue ToSetValue()
 		{
 			return new AttachTargetComponent_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000046 RID: 70
-		// (get) Token: 0x060000D8 RID: 216 RVA: 0x000158A4 File Offset: 0x00013AA4
-		// (set) Token: 0x060000D9 RID: 217 RVA: 0x000158DE File Offset: 0x00013ADE
+		// Token: 0x17000048 RID: 72
+		// (get) Token: 0x060000DC RID: 220 RVA: 0x00016218 File Offset: 0x00014418
+		// (set) Token: 0x060000DD RID: 221 RVA: 0x00016252 File Offset: 0x00014452
 		public override bool? Disabled
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000047 RID: 71
-		// (get) Token: 0x060000DA RID: 218 RVA: 0x000158EC File Offset: 0x00013AEC
-		// (set) Token: 0x060000DB RID: 219 RVA: 0x00015916 File Offset: 0x00013B16
+		// Token: 0x17000049 RID: 73
+		// (get) Token: 0x060000DE RID: 222 RVA: 0x00016260 File Offset: 0x00014460
+		// (set) Token: 0x060000DF RID: 223 RVA: 0x0001628A File Offset: 0x0001448A
 		public override bool? EdIsLocked
 		{
 			get
@@ -111,9 +111,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000048 RID: 72
-		// (get) Token: 0x060000DC RID: 220 RVA: 0x00015924 File Offset: 0x00013B24
-		// (set) Token: 0x060000DD RID: 221 RVA: 0x0001594B File Offset: 0x00013B4B
+		// Token: 0x1700004A RID: 74
+		// (get) Token: 0x060000E0 RID: 224 RVA: 0x00016298 File Offset: 0x00014498
+		// (set) Token: 0x060000E1 RID: 225 RVA: 0x000162BF File Offset: 0x000144BF
 		public virtual IAttachTarget AttachTarget
 		{
 			get
@@ -135,9 +135,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000049 RID: 73
-		// (get) Token: 0x060000DE RID: 222 RVA: 0x0001595C File Offset: 0x00013B5C
-		// (set) Token: 0x060000DF RID: 223 RVA: 0x00015996 File Offset: 0x00013B96
+		// Token: 0x1700004B RID: 75
+		// (get) Token: 0x060000E2 RID: 226 RVA: 0x000162D0 File Offset: 0x000144D0
+		// (set) Token: 0x060000E3 RID: 227 RVA: 0x0001630A File Offset: 0x0001450A
 		public virtual EAttachRuleType? PosRule
 		{
 			get
@@ -159,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700004A RID: 74
-		// (get) Token: 0x060000E0 RID: 224 RVA: 0x000159A4 File Offset: 0x00013BA4
-		// (set) Token: 0x060000E1 RID: 225 RVA: 0x000159DE File Offset: 0x00013BDE
+		// Token: 0x1700004C RID: 76
+		// (get) Token: 0x060000E4 RID: 228 RVA: 0x00016318 File Offset: 0x00014518
+		// (set) Token: 0x060000E5 RID: 229 RVA: 0x00016352 File Offset: 0x00014552
 		public virtual EAttachRuleType? RotRule
 		{
 			get
@@ -183,9 +183,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700004B RID: 75
-		// (get) Token: 0x060000E2 RID: 226 RVA: 0x000159EC File Offset: 0x00013BEC
-		// (set) Token: 0x060000E3 RID: 227 RVA: 0x00015A13 File Offset: 0x00013C13
+		// Token: 0x1700004D RID: 77
+		// (get) Token: 0x060000E6 RID: 230 RVA: 0x00016360 File Offset: 0x00014560
+		// (set) Token: 0x060000E7 RID: 231 RVA: 0x00016387 File Offset: 0x00014587
 		public virtual IAttachTiming AttachTiming
 		{
 			get
@@ -207,10 +207,10 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400008B RID: 139
+		// Token: 0x04000090 RID: 144
 		protected new AttachTargetComponent FbInstance;
 
-		// Token: 0x0400008C RID: 140
+		// Token: 0x04000091 RID: 145
 		protected new AttachTargetComponent_SetValue PocoInterface;
 	}
 }

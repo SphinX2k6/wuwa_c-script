@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001160 RID: 4448
+	// Token: 0x02001296 RID: 4758
 	public struct TrapDefenseDeathrattle : IFlatbufferObject
 	{
-		// Token: 0x17003C19 RID: 15385
-		// (get) Token: 0x0600E35B RID: 58203 RVA: 0x00338201 File Offset: 0x00336401
+		// Token: 0x17003F7D RID: 16253
+		// (get) Token: 0x0600F0C9 RID: 61641 RVA: 0x003632B9 File Offset: 0x003614B9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E35C RID: 58204 RVA: 0x0033820E File Offset: 0x0033640E
+		// Token: 0x0600F0CA RID: 61642 RVA: 0x003632C6 File Offset: 0x003614C6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E35D RID: 58205 RVA: 0x00338218 File Offset: 0x00336418
+		// Token: 0x0600F0CB RID: 61643 RVA: 0x003632D0 File Offset: 0x003614D0
 		public static TrapDefenseDeathrattle GetRootAsTrapDefenseDeathrattle(ByteBuffer _bb)
 		{
 			return TrapDefenseDeathrattle.GetRootAsTrapDefenseDeathrattle(_bb, default(TrapDefenseDeathrattle));
 		}
 
-		// Token: 0x0600E35E RID: 58206 RVA: 0x00338234 File Offset: 0x00336434
+		// Token: 0x0600F0CC RID: 61644 RVA: 0x003632EC File Offset: 0x003614EC
 		public static TrapDefenseDeathrattle GetRootAsTrapDefenseDeathrattle(ByteBuffer _bb, TrapDefenseDeathrattle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E35F RID: 58207 RVA: 0x00338251 File Offset: 0x00336451
+		// Token: 0x0600F0CD RID: 61645 RVA: 0x00363309 File Offset: 0x00361509
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E360 RID: 58208 RVA: 0x00338260 File Offset: 0x00336460
+		// Token: 0x0600F0CE RID: 61646 RVA: 0x00363318 File Offset: 0x00361518
 		public TrapDefenseDeathrattle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003C1A RID: 15386
-		// (get) Token: 0x0600E361 RID: 58209 RVA: 0x00338270 File Offset: 0x00336470
+		// Token: 0x17003F7E RID: 16254
+		// (get) Token: 0x0600F0CF RID: 61647 RVA: 0x00363328 File Offset: 0x00361528
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C1B RID: 15387
-		// (get) Token: 0x0600E362 RID: 58210 RVA: 0x003382AC File Offset: 0x003364AC
+		// Token: 0x17003F7F RID: 16255
+		// (get) Token: 0x0600F0D0 RID: 61648 RVA: 0x00363364 File Offset: 0x00361564
 		public int Type
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C1C RID: 15388
-		// (get) Token: 0x0600E363 RID: 58211 RVA: 0x003382E8 File Offset: 0x003364E8
+		// Token: 0x17003F80 RID: 16256
+		// (get) Token: 0x0600F0D1 RID: 61649 RVA: 0x003633A0 File Offset: 0x003615A0
 		public int NearbyMonsterRadius
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E364 RID: 58212 RVA: 0x00338324 File Offset: 0x00336524
+		// Token: 0x0600F0D2 RID: 61650 RVA: 0x003633DC File Offset: 0x003615DC
 		public int NearbyMonsterBuffs(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C1D RID: 15389
-		// (get) Token: 0x0600E365 RID: 58213 RVA: 0x00338364 File Offset: 0x00336564
+		// Token: 0x17003F81 RID: 16257
+		// (get) Token: 0x0600F0D3 RID: 61651 RVA: 0x0036341C File Offset: 0x0036161C
 		public int NearbyMonsterBuffsLength
 		{
 			get
@@ -120,20 +120,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E366 RID: 58214 RVA: 0x00338390 File Offset: 0x00336590
+		// Token: 0x0600F0D4 RID: 61652 RVA: 0x00363448 File Offset: 0x00361648
 		public Span<int> GetNearbyMonsterBuffsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600E367 RID: 58215 RVA: 0x003383A0 File Offset: 0x003365A0
+		// Token: 0x0600F0D5 RID: 61653 RVA: 0x00363458 File Offset: 0x00361658
 		public int[] GetNearbyMonsterBuffsArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003C1E RID: 15390
-		// (get) Token: 0x0600E368 RID: 58216 RVA: 0x003383B8 File Offset: 0x003365B8
+		// Token: 0x17003F82 RID: 16258
+		// (get) Token: 0x0600F0D6 RID: 61654 RVA: 0x00363470 File Offset: 0x00361670
 		public int PolluteRadius
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C1F RID: 15391
-		// (get) Token: 0x0600E369 RID: 58217 RVA: 0x003383F8 File Offset: 0x003365F8
+		// Token: 0x17003F83 RID: 16259
+		// (get) Token: 0x0600F0D7 RID: 61655 RVA: 0x003634B0 File Offset: 0x003616B0
 		public int PolluteCellCount
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E36A RID: 58218 RVA: 0x00338438 File Offset: 0x00336638
+		// Token: 0x0600F0D8 RID: 61656 RVA: 0x003634F0 File Offset: 0x003616F0
 		public int SpawnMonsters(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -173,8 +173,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C20 RID: 15392
-		// (get) Token: 0x0600E36B RID: 58219 RVA: 0x00338478 File Offset: 0x00336678
+		// Token: 0x17003F84 RID: 16260
+		// (get) Token: 0x0600F0D9 RID: 61657 RVA: 0x00363530 File Offset: 0x00361730
 		public int SpawnMonstersLength
 		{
 			get
@@ -188,19 +188,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E36C RID: 58220 RVA: 0x003384A4 File Offset: 0x003366A4
+		// Token: 0x0600F0DA RID: 61658 RVA: 0x0036355C File Offset: 0x0036175C
 		public Span<int> GetSpawnMonstersBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x0600E36D RID: 58221 RVA: 0x003384B4 File Offset: 0x003366B4
+		// Token: 0x0600F0DB RID: 61659 RVA: 0x0036356C File Offset: 0x0036176C
 		public int[] GetSpawnMonstersArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E36E RID: 58222 RVA: 0x003384CC File Offset: 0x003366CC
+		// Token: 0x0600F0DC RID: 61660 RVA: 0x00363584 File Offset: 0x00361784
 		public int SpawnGoldenCoins(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -211,8 +211,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C21 RID: 15393
-		// (get) Token: 0x0600E36F RID: 58223 RVA: 0x0033850C File Offset: 0x0033670C
+		// Token: 0x17003F85 RID: 16261
+		// (get) Token: 0x0600F0DD RID: 61661 RVA: 0x003635C4 File Offset: 0x003617C4
 		public int SpawnGoldenCoinsLength
 		{
 			get
@@ -226,73 +226,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E370 RID: 58224 RVA: 0x00338538 File Offset: 0x00336738
+		// Token: 0x0600F0DE RID: 61662 RVA: 0x003635F0 File Offset: 0x003617F0
 		public Span<int> GetSpawnGoldenCoinsBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x0600E371 RID: 58225 RVA: 0x00338548 File Offset: 0x00336748
+		// Token: 0x0600F0DF RID: 61663 RVA: 0x00363600 File Offset: 0x00361800
 		public int[] GetSpawnGoldenCoinsArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E372 RID: 58226 RVA: 0x00338560 File Offset: 0x00336760
+		// Token: 0x0600F0E0 RID: 61664 RVA: 0x00363618 File Offset: 0x00361818
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用NearbyMonsterBuffsIter()或GetNearbyMonsterBuffsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] NearbyMonsterBuffs()
+		public int[] NearbyMonsterBuffs()
 		{
-			TrapDefenseDeathrattle trapDefenseDeathrattle = this;
-			return trapDefenseDeathrattle.GetNearbyMonsterBuffsArray() ?? Array.Empty<int>();
+			return this.GetNearbyMonsterBuffsArray();
 		}
 
-		// Token: 0x0600E373 RID: 58227 RVA: 0x00338584 File Offset: 0x00336784
+		// Token: 0x0600F0E1 RID: 61665 RVA: 0x00363620 File Offset: 0x00361820
 		[NullableContext(1)]
-		public readonly IEnumerable<int> NearbyMonsterBuffsIter()
+		public IEnumerable<int> NearbyMonsterBuffsIter()
 		{
 			TrapDefenseDeathrattle.<NearbyMonsterBuffsIter>d__34 <NearbyMonsterBuffsIter>d__ = new TrapDefenseDeathrattle.<NearbyMonsterBuffsIter>d__34(-2);
 			<NearbyMonsterBuffsIter>d__.<>3__<>4__this = this;
 			return <NearbyMonsterBuffsIter>d__;
 		}
 
-		// Token: 0x0600E374 RID: 58228 RVA: 0x0033859C File Offset: 0x0033679C
+		// Token: 0x0600F0E2 RID: 61666 RVA: 0x00363635 File Offset: 0x00361835
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpawnGoldenCoinsIter()或GetSpawnGoldenCoinsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SpawnGoldenCoins()
+		public int[] SpawnGoldenCoins()
 		{
-			TrapDefenseDeathrattle trapDefenseDeathrattle = this;
-			return trapDefenseDeathrattle.GetSpawnGoldenCoinsArray() ?? Array.Empty<int>();
+			return this.GetSpawnGoldenCoinsArray();
 		}
 
-		// Token: 0x0600E375 RID: 58229 RVA: 0x003385C0 File Offset: 0x003367C0
+		// Token: 0x0600F0E3 RID: 61667 RVA: 0x0036363D File Offset: 0x0036183D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SpawnGoldenCoinsIter()
+		public IEnumerable<int> SpawnGoldenCoinsIter()
 		{
 			TrapDefenseDeathrattle.<SpawnGoldenCoinsIter>d__36 <SpawnGoldenCoinsIter>d__ = new TrapDefenseDeathrattle.<SpawnGoldenCoinsIter>d__36(-2);
 			<SpawnGoldenCoinsIter>d__.<>3__<>4__this = this;
 			return <SpawnGoldenCoinsIter>d__;
 		}
 
-		// Token: 0x0600E376 RID: 58230 RVA: 0x003385D8 File Offset: 0x003367D8
+		// Token: 0x0600F0E4 RID: 61668 RVA: 0x00363652 File Offset: 0x00361852
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpawnMonstersIter()或GetSpawnMonstersBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SpawnMonsters()
+		public int[] SpawnMonsters()
 		{
-			TrapDefenseDeathrattle trapDefenseDeathrattle = this;
-			return trapDefenseDeathrattle.GetSpawnMonstersArray() ?? Array.Empty<int>();
+			return this.GetSpawnMonstersArray();
 		}
 
-		// Token: 0x0600E377 RID: 58231 RVA: 0x003385FC File Offset: 0x003367FC
+		// Token: 0x0600F0E5 RID: 61669 RVA: 0x0036365A File Offset: 0x0036185A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SpawnMonstersIter()
+		public IEnumerable<int> SpawnMonstersIter()
 		{
 			TrapDefenseDeathrattle.<SpawnMonstersIter>d__38 <SpawnMonstersIter>d__ = new TrapDefenseDeathrattle.<SpawnMonstersIter>d__38(-2);
 			<SpawnMonstersIter>d__.<>3__<>4__this = this;
 			return <SpawnMonstersIter>d__;
 		}
 
-		// Token: 0x040052A5 RID: 21157
+		// Token: 0x040058E8 RID: 22760
 		private Table __p;
 	}
 }

@@ -4,26 +4,26 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FE3 RID: 8163
+	// Token: 0x0200064D RID: 1613
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.ELGUINavigationDirection")]
 	public enum ELGUINavigationDirection : byte
 	{
-		// Token: 0x04010B82 RID: 68482
+		// Token: 0x04003DB7 RID: 15799
 		None,
-		// Token: 0x04010B83 RID: 68483
+		// Token: 0x04003DB8 RID: 15800
 		Left,
-		// Token: 0x04010B84 RID: 68484
+		// Token: 0x04003DB9 RID: 15801
 		Right,
-		// Token: 0x04010B85 RID: 68485
+		// Token: 0x04003DBA RID: 15802
 		Up,
-		// Token: 0x04010B86 RID: 68486
+		// Token: 0x04003DBB RID: 15803
 		Down,
-		// Token: 0x04010B87 RID: 68487
+		// Token: 0x04003DBC RID: 15804
 		Next,
-		// Token: 0x04010B88 RID: 68488
+		// Token: 0x04003DBD RID: 15805
 		Prev,
-		// Token: 0x04010B89 RID: 68489
+		// Token: 0x04003DBE RID: 15806
 		ELGUINavigationDirection_MAX
 	}
 }

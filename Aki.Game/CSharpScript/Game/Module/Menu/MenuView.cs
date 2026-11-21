@@ -15,13 +15,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x02005408 RID: 21512
+	// Token: 0x020043EB RID: 17387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuView : UiViewBase
 	{
-		// Token: 0x17008430 RID: 33840
-		// (get) Token: 0x06036F6A RID: 225130 RVA: 0x00D05157 File Offset: 0x00D03357
+		// Token: 0x170057FC RID: 22524
+		// (get) Token: 0x0602BEB2 RID: 179890 RVA: 0x00C5459B File Offset: 0x00C5279B
 		public MenuViewData MenuViewDataExternal
 		{
 			get
@@ -30,12 +30,12 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F6B RID: 225131 RVA: 0x00D0515F File Offset: 0x00D0335F
+		// Token: 0x0602BEB3 RID: 179891 RVA: 0x00C545A3 File Offset: 0x00C527A3
 		public MenuView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036F6C RID: 225132 RVA: 0x00D0518C File Offset: 0x00D0338C
+		// Token: 0x0602BEB4 RID: 179892 RVA: 0x00C545D0 File Offset: 0x00C527D0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Menu
 			};
 		}
 
-		// Token: 0x06036F6D RID: 225133 RVA: 0x00D052A4 File Offset: 0x00D034A4
+		// Token: 0x0602BEB5 RID: 179893 RVA: 0x00C546E8 File Offset: 0x00C528E8
 		protected override void OnStart()
 		{
 			if (CloudGameManager.Instance.IsCloudGame || Info.Instance.IsHomeConsolePlatform())
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Menu
 			MenuModel.Instance.HasApplyRecommendData = false;
 		}
 
-		// Token: 0x06036F6E RID: 225134 RVA: 0x00D0536C File Offset: 0x00D0356C
+		// Token: 0x0602BEB6 RID: 179894 RVA: 0x00C547B0 File Offset: 0x00C529B0
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TabComponent != null)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Menu
 			instance.HasApplyRecommendData = false;
 		}
 
-		// Token: 0x06036F6F RID: 225135 RVA: 0x00D05424 File Offset: 0x00D03624
+		// Token: 0x0602BEB7 RID: 179895 RVA: 0x00C54868 File Offset: 0x00C52A68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MenuView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Menu
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036F70 RID: 225136 RVA: 0x00D05468 File Offset: 0x00D03668
+		// Token: 0x0602BEB8 RID: 179896 RVA: 0x00C548AC File Offset: 0x00C52AAC
 		[NullableContext(2)]
 		private TMenuItemFilter GetItemFilterByOpenScene(EMenuViewOpenScene? openScene)
 		{
@@ -143,13 +143,13 @@ namespace CSharpScript.Game.Module.Menu
 			return null;
 		}
 
-		// Token: 0x06036F71 RID: 225137 RVA: 0x00D054A5 File Offset: 0x00D036A5
+		// Token: 0x0602BEB9 RID: 179897 RVA: 0x00C548E9 File Offset: 0x00C52AE9
 		private MenuScrollItemData Creator()
 		{
 			return new MenuScrollItemData();
 		}
 
-		// Token: 0x06036F72 RID: 225138 RVA: 0x00D054AC File Offset: 0x00D036AC
+		// Token: 0x0602BEBA RID: 179898 RVA: 0x00C548F0 File Offset: 0x00C52AF0
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.OnDropDownListVisibleChanged, new Action<bool>(this.OnDropDownListVisibleChanged));
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Menu
 			gameUserSettings.OnGameUserSettingsUINeedsUpdate.Add(new Action(GameSettingsController.Instance.OnGameUserSettingsUINeedsUpdate));
 		}
 
-		// Token: 0x06036F73 RID: 225139 RVA: 0x00D05568 File Offset: 0x00D03768
+		// Token: 0x0602BEBB RID: 179899 RVA: 0x00C549AC File Offset: 0x00C52BAC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDropDownListVisibleChanged, new Action<bool>(this.OnDropDownListVisibleChanged));
@@ -185,13 +185,13 @@ namespace CSharpScript.Game.Module.Menu
 			gameUserSettings.OnGameUserSettingsUINeedsUpdate.Remove(new Action(GameSettingsController.Instance.OnGameUserSettingsUINeedsUpdate));
 		}
 
-		// Token: 0x06036F74 RID: 225140 RVA: 0x00D05621 File Offset: 0x00D03821
+		// Token: 0x0602BEBC RID: 179900 RVA: 0x00C54A65 File Offset: 0x00C52C65
 		private void RefreshTextLanguage(string s, string s1)
 		{
 			this.RefreshConfig();
 		}
 
-		// Token: 0x06036F75 RID: 225141 RVA: 0x00D05629 File Offset: 0x00D03829
+		// Token: 0x0602BEBD RID: 179901 RVA: 0x00C54A6D File Offset: 0x00C52C6D
 		private void OnRefreshMenuSetting(EFunction functionId)
 		{
 			if (functionId == EFunction.IMAGEQUALITY)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F76 RID: 225142 RVA: 0x00D05636 File Offset: 0x00D03836
+		// Token: 0x0602BEBE RID: 179902 RVA: 0x00C54A7A File Offset: 0x00C52C7A
 		private void OnDropDownListVisibleChanged(bool bVisible)
 		{
 			if (!bVisible)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Menu
 			base.GetUIDynScrollViewComponent(0).StopMovement();
 		}
 
-		// Token: 0x06036F77 RID: 225143 RVA: 0x00D05648 File Offset: 0x00D03848
+		// Token: 0x0602BEBF RID: 179903 RVA: 0x00C54A8C File Offset: 0x00C52C8C
 		private void RefreshGameQualityLoad(bool needLoadConfirmBox = true)
 		{
 			if (!Platform.Instance.IsMobilePlatform() && !Platform.Instance.IsPcPlatform())
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.SetLoadDesc(gameQualityLoadInfo.Desc);
 		}
 
-		// Token: 0x06036F78 RID: 225144 RVA: 0x00D056F0 File Offset: 0x00D038F0
+		// Token: 0x0602BEC0 RID: 179904 RVA: 0x00C54B34 File Offset: 0x00C52D34
 		private void MobileSwitchTouch()
 		{
 			if (Info.Instance.IsMobileInputModel() && Info.Instance.IsInGamepad())
@@ -246,34 +246,32 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F79 RID: 225145 RVA: 0x00D05714 File Offset: 0x00D03914
+		// Token: 0x0602BEC1 RID: 179905 RVA: 0x00C54B58 File Offset: 0x00C52D58
 		private void OnClickApplyBtn(int _)
 		{
-			EGameQualitySettingLevel? recommendQualityLv = GameSettingsDeviceRender.Instance.GetRecommendQualityLv();
-			if (recommendQualityLv == null)
+			EGameQualitySettingLevel? recommendLevel = GameSettingsDeviceRender.Instance.GetRecommendQualityLv();
+			if (recommendLevel == null)
 			{
 				return;
 			}
-			EGameQualitySettingLevel targetLevel = GameSettingsManager.Instance.ClampQualityByResourceTier(recommendQualityLv.Value);
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ApplyImageQualityConfirm);
 			confirmBoxDataNew.FunctionMap.Add(2, delegate
 			{
 				MenuModel.Instance.HasApplyRecommendData = true;
-				MenuController.Instance.HandleFireSaveMenuChange(MenuModel.Instance.GetMenuDataByFunctionId(10), (float)targetLevel);
+				MenuController.Instance.HandleFireSaveMenuChange(MenuModel.Instance.GetMenuDataByFunctionId(10), (float)recommendLevel.Value);
 				this.RefreshApplyBtn();
 			});
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06036F7A RID: 225146 RVA: 0x00D0578C File Offset: 0x00D0398C
+		// Token: 0x0602BEC2 RID: 179906 RVA: 0x00C54BC0 File Offset: 0x00C52DC0
 		private void RefreshApplyBtn()
 		{
 			EGameQualitySettingLevel? recommendQualityLv = GameSettingsDeviceRender.Instance.GetRecommendQualityLv();
-			EGameQualitySettingLevel? egameQualitySettingLevel = (recommendQualityLv != null) ? new EGameQualitySettingLevel?(GameSettingsManager.Instance.ClampQualityByResourceTier(recommendQualityLv.Value)) : null;
-			if (egameQualitySettingLevel != null)
+			if (recommendQualityLv != null)
 			{
 				int? dataCacheOrCurValue = MenuModel.Instance.GetDataCacheOrCurValue(EFunction.IMAGEQUALITY);
-				int value = (int)egameQualitySettingLevel.Value;
+				int value = (int)recommendQualityLv.Value;
 				if ((dataCacheOrCurValue.GetValueOrDefault() == value & dataCacheOrCurValue != null) && !MenuModel.Instance.IsImageQualityCustom)
 				{
 					this.SetEnableApplyButton(false);
@@ -283,7 +281,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.SetEnableApplyButton(true);
 		}
 
-		// Token: 0x06036F7B RID: 225147 RVA: 0x00D0581E File Offset: 0x00D03A1E
+		// Token: 0x0602BEC3 RID: 179907 RVA: 0x00C54C25 File Offset: 0x00C52E25
 		private void SetEnableApplyButton(bool enable)
 		{
 			if (this.ApplyBtnItem == null)
@@ -294,7 +292,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.ApplyBtnItem.SetLocalTextNew(enable ? "ImageSetting_ApplyRec" : "ImageSetting_AppledRec", Array.Empty<object>());
 		}
 
-		// Token: 0x06036F7C RID: 225148 RVA: 0x00D05854 File Offset: 0x00D03A54
+		// Token: 0x0602BEC4 RID: 179908 RVA: 0x00C54C5C File Offset: 0x00C52E5C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -342,7 +340,7 @@ namespace CSharpScript.Game.Module.Menu
 			};
 		}
 
-		// Token: 0x06036F7D RID: 225149 RVA: 0x00D05930 File Offset: 0x00D03B30
+		// Token: 0x0602BEC5 RID: 179909 RVA: 0x00C54D38 File Offset: 0x00C52F38
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -384,7 +382,7 @@ namespace CSharpScript.Game.Module.Menu
 			};
 		}
 
-		// Token: 0x06036F7E RID: 225150 RVA: 0x00D059E4 File Offset: 0x00D03BE4
+		// Token: 0x0602BEC6 RID: 179910 RVA: 0x00C54DEC File Offset: 0x00C52FEC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -456,8 +454,8 @@ namespace CSharpScript.Game.Module.Menu
 			return null;
 		}
 
-		// Token: 0x17008431 RID: 33841
-		// (get) Token: 0x06036F7F RID: 225151 RVA: 0x00D05B64 File Offset: 0x00D03D64
+		// Token: 0x170057FD RID: 22525
+		// (get) Token: 0x0602BEC7 RID: 179911 RVA: 0x00C54F6C File Offset: 0x00C5316C
 		private Dictionary<string, TGuideItemBuilder> GuideUiItemBuilders
 		{
 			get
@@ -484,7 +482,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F80 RID: 225152 RVA: 0x00D05BDC File Offset: 0x00D03DDC
+		// Token: 0x0602BEC8 RID: 179912 RVA: 0x00C54FE4 File Offset: 0x00C531E4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -511,7 +509,7 @@ namespace CSharpScript.Game.Module.Menu
 			return null;
 		}
 
-		// Token: 0x06036F81 RID: 225153 RVA: 0x00D05C51 File Offset: 0x00D03E51
+		// Token: 0x0602BEC9 RID: 179913 RVA: 0x00C55059 File Offset: 0x00C53259
 		private MenuScrollSettingContainerItem OnSettingItemCreate(MenuScrollItemData data, UUIItem uiItem, int index)
 		{
 			MenuScrollSettingContainerItem menuScrollSettingContainerItem = new MenuScrollSettingContainerItem();
@@ -520,7 +518,7 @@ namespace CSharpScript.Game.Module.Menu
 			return menuScrollSettingContainerItem;
 		}
 
-		// Token: 0x06036F82 RID: 225154 RVA: 0x00D05C7C File Offset: 0x00D03E7C
+		// Token: 0x0602BECA RID: 179914 RVA: 0x00C55084 File Offset: 0x00C53284
 		private void OnMenuScrollSettingContainerItemToggleReleased(MenuScrollSettingContainerItem item, EToggleState state)
 		{
 			EMenuScrollItemType? type = item.Type;
@@ -578,7 +576,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F83 RID: 225155 RVA: 0x00D05DC8 File Offset: 0x00D03FC8
+		// Token: 0x0602BECB RID: 179915 RVA: 0x00C551D0 File Offset: 0x00C533D0
 		private void OnDetailPopOpenCallback(MenuScrollSettingContainerItem item)
 		{
 			MenuData menuData = item.GetMenuData();
@@ -593,7 +591,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F84 RID: 225156 RVA: 0x00D05E01 File Offset: 0x00D04001
+		// Token: 0x0602BECC RID: 179916 RVA: 0x00C55209 File Offset: 0x00C53409
 		private void RemoveNextScrollToButtonTimerHandle()
 		{
 			if (this.NextScrollToButtonTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.NextScrollToButtonTimerHandle))
@@ -603,7 +601,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.NextScrollToButtonTimerHandle = null;
 		}
 
-		// Token: 0x06036F85 RID: 225157 RVA: 0x00D05E38 File Offset: 0x00D04038
+		// Token: 0x0602BECD RID: 179917 RVA: 0x00C55240 File Offset: 0x00C53440
 		[NullableContext(2)]
 		private void ClearSelectedDisplay(MenuScrollSettingContainerItem selectedItem)
 		{
@@ -640,7 +638,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.SelectedDetailMenuData = null;
 		}
 
-		// Token: 0x06036F86 RID: 225158 RVA: 0x00D05EA8 File Offset: 0x00D040A8
+		// Token: 0x0602BECE RID: 179918 RVA: 0x00C552B0 File Offset: 0x00C534B0
 		private UniTask InitTabScroll()
 		{
 			MenuView.<InitTabScroll>d__50 <InitTabScroll>d__;
@@ -651,13 +649,13 @@ namespace CSharpScript.Game.Module.Menu
 			return <InitTabScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036F87 RID: 225159 RVA: 0x00D05EEB File Offset: 0x00D040EB
+		// Token: 0x0602BECF RID: 179919 RVA: 0x00C552F3 File Offset: 0x00C534F3
 		private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x06036F88 RID: 225160 RVA: 0x00D05EF4 File Offset: 0x00D040F4
+		// Token: 0x0602BED0 RID: 179920 RVA: 0x00C552FC File Offset: 0x00C534FC
 		private List<CommonTabItemData> CreateTabItemData()
 		{
 			List<CommonTabItemData> list = new List<CommonTabItemData>();
@@ -675,7 +673,7 @@ namespace CSharpScript.Game.Module.Menu
 			return list;
 		}
 
-		// Token: 0x06036F89 RID: 225161 RVA: 0x00D05F60 File Offset: 0x00D04160
+		// Token: 0x0602BED1 RID: 179921 RVA: 0x00C55368 File Offset: 0x00C53568
 		private void OnClickedItem(int index)
 		{
 			int num = this.MainTypeList[index];
@@ -765,7 +763,7 @@ namespace CSharpScript.Game.Module.Menu
 			EventSystem.Instance.Emit<string>(EEventName.FinishGuideStepByEvent, "MenuView");
 		}
 
-		// Token: 0x06036F8A RID: 225162 RVA: 0x00D06174 File Offset: 0x00D04374
+		// Token: 0x0602BED2 RID: 179922 RVA: 0x00C5557C File Offset: 0x00C5377C
 		private CommonTabData GetCommonData(int index)
 		{
 			int typeId = this.MainTypeList[index];
@@ -773,13 +771,13 @@ namespace CSharpScript.Game.Module.Menu
 			return new CommonTabData(targetMainInfo.MainIcon, new CommonTabTitleData(targetMainInfo.MainName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06036F8B RID: 225163 RVA: 0x00D061B8 File Offset: 0x00D043B8
+		// Token: 0x0602BED3 RID: 179923 RVA: 0x00C555C0 File Offset: 0x00C537C0
 		private void RefreshCommonSetting()
 		{
 			this.RefreshConfig();
 		}
 
-		// Token: 0x06036F8C RID: 225164 RVA: 0x00D061C0 File Offset: 0x00D043C0
+		// Token: 0x0602BED4 RID: 179924 RVA: 0x00C555C8 File Offset: 0x00C537C8
 		private void RefreshKeySetting()
 		{
 			EInputControllerType inputControllerType = EInputControllerType.None;
@@ -803,10 +801,14 @@ namespace CSharpScript.Game.Module.Menu
 			this.KeySettingPanel.Refresh(inputControllerType);
 		}
 
-		// Token: 0x06036F8D RID: 225165 RVA: 0x00D0625C File Offset: 0x00D0445C
+		// Token: 0x0602BED5 RID: 179925 RVA: 0x00C55664 File Offset: 0x00C53864
 		private void RefreshConfig()
 		{
 			List<MenuData> targetBaseConfigData = MenuController.Instance.GetTargetBaseConfigData(this.MenuViewData.MenuViewDataCurMainType, this.ItemFilter);
+			if (this.MenuViewData.MenuViewDataCurMainType == 2)
+			{
+				this.RestoreUnavailableTestImageSettings();
+			}
 			if (this.MenuViewData.MenuViewDataCurMainType == 2 && (Platform.Instance.IsMobilePlatform() || Platform.Instance.IsPcPlatform()))
 			{
 				UUIItem item = base.GetItem(3);
@@ -829,7 +831,12 @@ namespace CSharpScript.Game.Module.Menu
 			this.RefreshMenuInfoDataArray(targetBaseConfigData);
 		}
 
-		// Token: 0x06036F8E RID: 225166 RVA: 0x00D062F4 File Offset: 0x00D044F4
+		// Token: 0x0602BED6 RID: 179926 RVA: 0x00C5570F File Offset: 0x00C5390F
+		private void RestoreUnavailableTestImageSettings()
+		{
+		}
+
+		// Token: 0x0602BED7 RID: 179927 RVA: 0x00C55714 File Offset: 0x00C53914
 		private void SetLoadDesc(string desc)
 		{
 			UUIItem item = base.GetItem(3);
@@ -837,7 +844,7 @@ namespace CSharpScript.Game.Module.Menu
 			LguiUtil.Instance.SetLocalTextNew(uiText, desc, Array.Empty<object>());
 		}
 
-		// Token: 0x06036F8F RID: 225167 RVA: 0x00D06334 File Offset: 0x00D04534
+		// Token: 0x0602BED8 RID: 179928 RVA: 0x00C55754 File Offset: 0x00C53954
 		private void SetLoadPercentage(float val, string color)
 		{
 			UUIItem item = base.GetItem(3);
@@ -910,7 +917,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036F90 RID: 225168 RVA: 0x00D06534 File Offset: 0x00D04734
+		// Token: 0x0602BED9 RID: 179929 RVA: 0x00C55954 File Offset: 0x00C53B54
 		private void RecycleInfoDataArray()
 		{
 			foreach (MenuScrollItemData value in this.MenuInfoDataArray)
@@ -920,7 +927,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.MenuInfoDataArray.Clear();
 		}
 
-		// Token: 0x06036F91 RID: 225169 RVA: 0x00D06598 File Offset: 0x00D04798
+		// Token: 0x0602BEDA RID: 179930 RVA: 0x00C559B8 File Offset: 0x00C53BB8
 		private void GetMenuScrollItemData(MenuData data, EMenuScrollItemType itemType)
 		{
 			MenuScrollItemData menuScrollItemData = this.ScrollItemPool.Get();
@@ -933,7 +940,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.MenuInfoDataArray.Add(menuScrollItemData);
 		}
 
-		// Token: 0x06036F92 RID: 225170 RVA: 0x00D065DC File Offset: 0x00D047DC
+		// Token: 0x0602BEDB RID: 179931 RVA: 0x00C559FC File Offset: 0x00C53BFC
 		private void RefreshMenuInfoDataArray(List<MenuData> menuDataArray)
 		{
 			foreach (MenuData menuData in menuDataArray)
@@ -950,7 +957,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.ScrollView.BindLateUpdate(new Action<float>(this.OnLateUpdate));
 		}
 
-		// Token: 0x06036F93 RID: 225171 RVA: 0x00D06690 File Offset: 0x00D04890
+		// Token: 0x0602BEDC RID: 179932 RVA: 0x00C55AB0 File Offset: 0x00C53CB0
 		private void OnLateUpdate(float _)
 		{
 			this.ScrollView.ScrollToItemIndex(0, true, true).Forget();
@@ -958,7 +965,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.IsLateUpdateDone = true;
 		}
 
-		// Token: 0x06036F94 RID: 225172 RVA: 0x00D066B8 File Offset: 0x00D048B8
+		// Token: 0x0602BEDD RID: 179933 RVA: 0x00C55AD8 File Offset: 0x00C53CD8
 		private void OnCloseView()
 		{
 			MenuModel instance = MenuModel.Instance;
@@ -975,7 +982,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.CloseMySelf().Forget();
 		}
 
-		// Token: 0x06036F95 RID: 225173 RVA: 0x00D06714 File Offset: 0x00D04914
+		// Token: 0x0602BEDE RID: 179934 RVA: 0x00C55B34 File Offset: 0x00C53D34
 		public void OpenConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.GameQualityLoadOver);
@@ -991,18 +998,18 @@ namespace CSharpScript.Game.Module.Menu
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06036F96 RID: 225174 RVA: 0x00D06770 File Offset: 0x00D04970
+		// Token: 0x0602BEDF RID: 179935 RVA: 0x00C55B90 File Offset: 0x00C53D90
 		private UniTask CloseMySelf()
 		{
-			MenuView.<CloseMySelf>d__66 <CloseMySelf>d__;
+			MenuView.<CloseMySelf>d__67 <CloseMySelf>d__;
 			<CloseMySelf>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CloseMySelf>d__.<>4__this = this;
 			<CloseMySelf>d__.<>1__state = -1;
-			<CloseMySelf>d__.<>t__builder.Start<MenuView.<CloseMySelf>d__66>(ref <CloseMySelf>d__);
+			<CloseMySelf>d__.<>t__builder.Start<MenuView.<CloseMySelf>d__67>(ref <CloseMySelf>d__);
 			return <CloseMySelf>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036F97 RID: 225175 RVA: 0x00D067B3 File Offset: 0x00D049B3
+		// Token: 0x0602BEE0 RID: 179936 RVA: 0x00C55BD3 File Offset: 0x00C53DD3
 		private void RefreshLoginCacheIfNeed()
 		{
 			if (!GameSettingsManager.Instance.IsGameSettingsAppliedOnOpenLoading)
@@ -1011,46 +1018,46 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x0401D011 RID: 118801
+		// Token: 0x04017AAA RID: 96938
 		private const int CAPACITY = 20;
 
-		// Token: 0x0401D012 RID: 118802
+		// Token: 0x04017AAB RID: 96939
 		private List<int> MainTypeList = new List<int>();
 
-		// Token: 0x0401D013 RID: 118803
+		// Token: 0x04017AAC RID: 96940
 		private List<MenuScrollItemData> MenuInfoDataArray = new List<MenuScrollItemData>();
 
-		// Token: 0x0401D014 RID: 118804
+		// Token: 0x04017AAD RID: 96941
 		[Nullable(2)]
 		private MenuScrollSettingContainerDynItem MenuScrollSettingContainerDynItem;
 
-		// Token: 0x0401D015 RID: 118805
+		// Token: 0x04017AAE RID: 96942
 		private readonly MenuViewData MenuViewData = new MenuViewData();
 
-		// Token: 0x0401D016 RID: 118806
+		// Token: 0x04017AAF RID: 96943
 		[Nullable(2)]
 		private MenuScrollSettingContainerItem SelectedItem;
 
-		// Token: 0x0401D017 RID: 118807
+		// Token: 0x04017AB0 RID: 96944
 		[Nullable(2)]
 		private MenuData SelectedDetailMenuData;
 
-		// Token: 0x0401D018 RID: 118808
+		// Token: 0x04017AB1 RID: 96945
 		[Nullable(2)]
 		private TimerHandle NextScrollToButtonTimerHandle;
 
-		// Token: 0x0401D019 RID: 118809
+		// Token: 0x04017AB2 RID: 96946
 		[Nullable(2)]
 		private UiSequencePlayer ProgressSequencePlayer;
 
-		// Token: 0x0401D01A RID: 118810
+		// Token: 0x04017AB3 RID: 96947
 		private bool IsClosing;
 
-		// Token: 0x0401D01B RID: 118811
+		// Token: 0x04017AB4 RID: 96948
 		[Nullable(2)]
 		private ButtonItem ApplyBtnItem;
 
-		// Token: 0x0401D01C RID: 118812
+		// Token: 0x04017AB5 RID: 96949
 		[Nullable(new byte[]
 		{
 			2,
@@ -1058,7 +1065,7 @@ namespace CSharpScript.Game.Module.Menu
 		})]
 		private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401D01D RID: 118813
+		// Token: 0x04017AB6 RID: 96950
 		[Nullable(new byte[]
 		{
 			2,
@@ -1068,7 +1075,7 @@ namespace CSharpScript.Game.Module.Menu
 		})]
 		private DynamicScrollView<MenuScrollSettingContainerItem, MenuScrollSettingContainerDynItem, MenuScrollItemData> ScrollView;
 
-		// Token: 0x0401D01E RID: 118814
+		// Token: 0x04017AB7 RID: 96951
 		[Nullable(new byte[]
 		{
 			2,
@@ -1076,46 +1083,46 @@ namespace CSharpScript.Game.Module.Menu
 		})]
 		private Pool<MenuScrollItemData> ScrollItemPool;
 
-		// Token: 0x0401D01F RID: 118815
+		// Token: 0x04017AB8 RID: 96952
 		[Nullable(2)]
 		private PcAndGamepadKeySettingPanel KeySettingPanel;
 
-		// Token: 0x0401D020 RID: 118816
+		// Token: 0x04017AB9 RID: 96953
 		[Nullable(2)]
 		private TMenuItemFilter ItemFilter;
 
-		// Token: 0x0401D021 RID: 118817
+		// Token: 0x04017ABA RID: 96954
 		private bool IsLateUpdateDone;
 
-		// Token: 0x0401D022 RID: 118818
+		// Token: 0x04017ABB RID: 96955
 		private bool? IsScrolling;
 
-		// Token: 0x0401D023 RID: 118819
+		// Token: 0x04017ABC RID: 96956
 		private Dictionary<string, TGuideItemBuilder> GuideUiItemBuildersInternal;
 
-		// Token: 0x0200B68F RID: 46735
+		// Token: 0x0200A0C7 RID: 41159
 		[NullableContext(0)]
 		private enum EMenuViewComponent
 		{
-			// Token: 0x040374F6 RID: 226550
+			// Token: 0x04031F4B RID: 204619
 			ScrollView,
-			// Token: 0x040374F7 RID: 226551
+			// Token: 0x04031F4C RID: 204620
 			TabComponent,
-			// Token: 0x040374F8 RID: 226552
+			// Token: 0x04031F4D RID: 204621
 			SettingItem,
-			// Token: 0x040374F9 RID: 226553
+			// Token: 0x04031F4E RID: 204622
 			PnlLoad,
-			// Token: 0x040374FA RID: 226554
+			// Token: 0x04031F4F RID: 204623
 			KeySettingPanelItem,
-			// Token: 0x040374FB RID: 226555
+			// Token: 0x04031F50 RID: 204624
 			CommonSettingPanelItem,
-			// Token: 0x040374FC RID: 226556
+			// Token: 0x04031F51 RID: 204625
 			MobileSwitchTouchBtn,
-			// Token: 0x040374FD RID: 226557
+			// Token: 0x04031F52 RID: 204626
 			ProgressBar,
-			// Token: 0x040374FE RID: 226558
+			// Token: 0x04031F53 RID: 204627
 			ProgressText,
-			// Token: 0x040374FF RID: 226559
+			// Token: 0x04031F54 RID: 204628
 			ApplyBtn
 		}
 	}

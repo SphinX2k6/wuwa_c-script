@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AC5 RID: 6853
+// Token: 0x02000F84 RID: 3972
 [RequiredMember]
 public class MapAreaShowViewParams
 {
-	// Token: 0x0600CB2F RID: 52015 RVA: 0x002E5127 File Offset: 0x002E3327
+	// Token: 0x06009F40 RID: 40768 RVA: 0x002F02AB File Offset: 0x002EE4AB
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public MapAreaShowViewParams()
 	{
 	}
 
-	// Token: 0x04005D82 RID: 23938
+	// Token: 0x04005E51 RID: 24145
 	public int? CountryId;
 
-	// Token: 0x04005D83 RID: 23939
+	// Token: 0x04005E52 RID: 24146
 	public int? AreaId;
 
-	// Token: 0x04005D84 RID: 23940
+	// Token: 0x04005E53 RID: 24147
 	[Nullable(1)]
 	[RequiredMember]
 	public Action<int> OnClickArea;

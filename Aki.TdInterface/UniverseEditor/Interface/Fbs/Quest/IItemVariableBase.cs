@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EC0 RID: 16064
+	// Token: 0x020042FE RID: 17150
 	public struct IItemVariableBase : IFlatbufferObject
 	{
-		// Token: 0x17006F82 RID: 28546
-		// (get) Token: 0x06016B35 RID: 92981 RVA: 0x00347094 File Offset: 0x00345294
+		// Token: 0x1700756F RID: 30063
+		// (get) Token: 0x06018182 RID: 98690 RVA: 0x0037001C File Offset: 0x0036E21C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016B36 RID: 92982 RVA: 0x003470A1 File Offset: 0x003452A1
+		// Token: 0x06018183 RID: 98691 RVA: 0x00370029 File Offset: 0x0036E229
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016B37 RID: 92983 RVA: 0x003470A8 File Offset: 0x003452A8
+		// Token: 0x06018184 RID: 98692 RVA: 0x00370030 File Offset: 0x0036E230
 		public static IItemVariableBase GetRootAsIItemVariableBase(ByteBuffer _bb)
 		{
 			return IItemVariableBase.GetRootAsIItemVariableBase(_bb, default(IItemVariableBase));
 		}
 
-		// Token: 0x06016B38 RID: 92984 RVA: 0x003470C4 File Offset: 0x003452C4
+		// Token: 0x06018185 RID: 98693 RVA: 0x0037004C File Offset: 0x0036E24C
 		public static IItemVariableBase GetRootAsIItemVariableBase(ByteBuffer _bb, IItemVariableBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016B39 RID: 92985 RVA: 0x003470E1 File Offset: 0x003452E1
+		// Token: 0x06018186 RID: 98694 RVA: 0x00370069 File Offset: 0x0036E269
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016B3A RID: 92986 RVA: 0x003470F0 File Offset: 0x003452F0
+		// Token: 0x06018187 RID: 98695 RVA: 0x00370078 File Offset: 0x0036E278
 		public IItemVariableBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006F83 RID: 28547
-		// (get) Token: 0x06016B3B RID: 92987 RVA: 0x00347100 File Offset: 0x00345300
+		// Token: 0x17007570 RID: 30064
+		// (get) Token: 0x06018188 RID: 98696 RVA: 0x00370088 File Offset: 0x0036E288
 		public EHandInItemType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F84 RID: 28548
-		// (get) Token: 0x06016B3C RID: 92988 RVA: 0x0034713C File Offset: 0x0034533C
+		// Token: 0x17007571 RID: 30065
+		// (get) Token: 0x06018189 RID: 98697 RVA: 0x003700C4 File Offset: 0x0036E2C4
 		public TVarRef VarType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016B3D RID: 92989 RVA: 0x00347178 File Offset: 0x00345378
+		// Token: 0x0601818A RID: 98698 RVA: 0x00370100 File Offset: 0x0036E300
 		public TTable? Var<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06016B3E RID: 92990 RVA: 0x003471BC File Offset: 0x003453BC
+		// Token: 0x0601818B RID: 98699 RVA: 0x00370144 File Offset: 0x0036E344
 		public IConstVarRef VarAsIConstVarRef()
 		{
 			return this.Var<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06016B3F RID: 92991 RVA: 0x003471D8 File Offset: 0x003453D8
+		// Token: 0x0601818C RID: 98700 RVA: 0x00370160 File Offset: 0x0036E360
 		public IGlobalVarRef VarAsIGlobalVarRef()
 		{
 			return this.Var<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06016B40 RID: 92992 RVA: 0x003471F4 File Offset: 0x003453F4
+		// Token: 0x0601818D RID: 98701 RVA: 0x0037017C File Offset: 0x0036E37C
 		public IOtherVarRef VarAsIOtherVarRef()
 		{
 			return this.Var<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06016B41 RID: 92993 RVA: 0x00347210 File Offset: 0x00345410
+		// Token: 0x0601818E RID: 98702 RVA: 0x00370198 File Offset: 0x0036E398
 		public ISelfVarRef VarAsISelfVarRef()
 		{
 			return this.Var<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06016B42 RID: 92994 RVA: 0x0034722C File Offset: 0x0034542C
+		// Token: 0x0601818F RID: 98703 RVA: 0x003701B4 File Offset: 0x0036E3B4
 		public ISystemVarRef VarAsISystemVarRef()
 		{
 			return this.Var<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06016B43 RID: 92995 RVA: 0x00347247 File Offset: 0x00345447
+		// Token: 0x06018190 RID: 98704 RVA: 0x003701CF File Offset: 0x0036E3CF
 		public static Offset<IItemVariableBase> CreateIItemVariableBase(FlatBufferBuilder builder, EHandInItemType Type = EHandInItemType.ItemIds, TVarRef Var_type = TVarRef.NONE, int VarOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IItemVariableBase.EndIItemVariableBase(builder);
 		}
 
-		// Token: 0x06016B44 RID: 92996 RVA: 0x0034726B File Offset: 0x0034546B
+		// Token: 0x06018191 RID: 98705 RVA: 0x003701F3 File Offset: 0x0036E3F3
 		public static void StartIItemVariableBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06016B45 RID: 92997 RVA: 0x00347274 File Offset: 0x00345474
+		// Token: 0x06018192 RID: 98706 RVA: 0x003701FC File Offset: 0x0036E3FC
 		public static void AddType(FlatBufferBuilder builder, EHandInItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016B46 RID: 92998 RVA: 0x0034727F File Offset: 0x0034547F
+		// Token: 0x06018193 RID: 98707 RVA: 0x00370207 File Offset: 0x0036E407
 		public static void AddVarType(FlatBufferBuilder builder, TVarRef varType)
 		{
 			builder.AddByte(1, (byte)varType, 0);
 		}
 
-		// Token: 0x06016B47 RID: 92999 RVA: 0x0034728A File Offset: 0x0034548A
+		// Token: 0x06018194 RID: 98708 RVA: 0x00370212 File Offset: 0x0036E412
 		public static void AddVar(FlatBufferBuilder builder, int varOffset)
 		{
 			builder.AddOffset(2, varOffset, 0);
 		}
 
-		// Token: 0x06016B48 RID: 93000 RVA: 0x00347295 File Offset: 0x00345495
+		// Token: 0x06018195 RID: 98709 RVA: 0x0037021D File Offset: 0x0036E41D
 		public static Offset<IItemVariableBase> EndIItemVariableBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IItemVariableBase>(builder.EndTable());
 		}
 
-		// Token: 0x06016B49 RID: 93001 RVA: 0x003472A4 File Offset: 0x003454A4
+		// Token: 0x06018196 RID: 98710 RVA: 0x0037022C File Offset: 0x0036E42C
 		public IItemVariableBaseT UnPack()
 		{
 			IItemVariableBaseT itemVariableBaseT = new IItemVariableBaseT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return itemVariableBaseT;
 		}
 
-		// Token: 0x06016B4A RID: 93002 RVA: 0x003472C0 File Offset: 0x003454C0
+		// Token: 0x06018197 RID: 98711 RVA: 0x00370248 File Offset: 0x0036E448
 		public void UnPackTo(IItemVariableBaseT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016B4B RID: 93003 RVA: 0x0034742C File Offset: 0x0034562C
+		// Token: 0x06018198 RID: 98712 RVA: 0x003703B4 File Offset: 0x0036E5B4
 		public static Offset<IItemVariableBase> Pack(FlatBufferBuilder builder, IItemVariableBaseT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IItemVariableBase.CreateIItemVariableBase(builder, _o.Type, var_type, varOffset);
 		}
 
-		// Token: 0x0400B893 RID: 47251
+		// Token: 0x0400C26F RID: 49775
 		private Table __p;
 	}
 }

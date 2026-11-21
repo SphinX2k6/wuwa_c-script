@@ -4,26 +4,26 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001D94 RID: 7572
+// Token: 0x02001256 RID: 4694
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class LogicTreeContainer
 {
-	// Token: 0x17001258 RID: 4696
-	// (get) Token: 0x0600E5CA RID: 58826
+	// Token: 0x17001282 RID: 4738
+	// (get) Token: 0x0600B9E8 RID: 47592
 	public abstract int Id { get; }
 
-	// Token: 0x17001259 RID: 4697
-	// (get) Token: 0x0600E5CB RID: 58827
+	// Token: 0x17001283 RID: 4739
+	// (get) Token: 0x0600B9E9 RID: 47593
 	public abstract bool IsInteractValid { get; }
 
-	// Token: 0x1700125A RID: 4698
-	// (get) Token: 0x0600E5CC RID: 58828
+	// Token: 0x17001284 RID: 4740
+	// (get) Token: 0x0600B9EA RID: 47594
 	[Nullable(1)]
 	public abstract string Name { [NullableContext(1)] get; }
 
-	// Token: 0x1700125B RID: 4699
-	// (get) Token: 0x0600E5CD RID: 58829 RVA: 0x003627CA File Offset: 0x003609CA
+	// Token: 0x17001285 RID: 4741
+	// (get) Token: 0x0600B9EB RID: 47595 RVA: 0x0036E42A File Offset: 0x0036C62A
 	public BaseBehaviorTree Tree
 	{
 		get
@@ -36,8 +36,8 @@ public abstract class LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700125C RID: 4700
-	// (get) Token: 0x0600E5CE RID: 58830 RVA: 0x003627DC File Offset: 0x003609DC
+	// Token: 0x17001286 RID: 4742
+	// (get) Token: 0x0600B9EC RID: 47596 RVA: 0x0036E43C File Offset: 0x0036C63C
 	public long? TreeId
 	{
 		get
@@ -51,8 +51,8 @@ public abstract class LogicTreeContainer
 		}
 	}
 
-	// Token: 0x1700125D RID: 4701
-	// (get) Token: 0x0600E5CF RID: 58831 RVA: 0x00362808 File Offset: 0x00360A08
+	// Token: 0x17001287 RID: 4743
+	// (get) Token: 0x0600B9ED RID: 47597 RVA: 0x0036E468 File Offset: 0x0036C668
 	public int? TreeConfigId
 	{
 		get
@@ -66,14 +66,14 @@ public abstract class LogicTreeContainer
 		}
 	}
 
-	// Token: 0x0600E5D0 RID: 58832 RVA: 0x00362833 File Offset: 0x00360A33
+	// Token: 0x0600B9EE RID: 47598 RVA: 0x0036E493 File Offset: 0x0036C693
 	public virtual void Destroy()
 	{
 		this.TearDownBehaviorTree();
 	}
 
-	// Token: 0x1700125E RID: 4702
-	// (get) Token: 0x0600E5D1 RID: 58833 RVA: 0x0036283B File Offset: 0x00360A3B
+	// Token: 0x17001288 RID: 4744
+	// (get) Token: 0x0600B9EF RID: 47599 RVA: 0x0036E49B File Offset: 0x0036C69B
 	public bool IsBelongPlayer
 	{
 		get
@@ -82,7 +82,7 @@ public abstract class LogicTreeContainer
 		}
 	}
 
-	// Token: 0x0600E5D2 RID: 58834 RVA: 0x00362843 File Offset: 0x00360A43
+	// Token: 0x0600B9F0 RID: 47600 RVA: 0x0036E4A3 File Offset: 0x0036C6A3
 	[NullableContext(1)]
 	public virtual void SetUpBehaviorTree(BaseBehaviorTree behaviorTree)
 	{
@@ -93,7 +93,7 @@ public abstract class LogicTreeContainer
 		}
 	}
 
-	// Token: 0x0600E5D3 RID: 58835 RVA: 0x00362858 File Offset: 0x00360A58
+	// Token: 0x0600B9F1 RID: 47601 RVA: 0x0036E4B8 File Offset: 0x0036C6B8
 	private void TearDownBehaviorTree()
 	{
 		if (this.BehaviorTree == null)
@@ -104,7 +104,7 @@ public abstract class LogicTreeContainer
 		this.BehaviorTree = null;
 	}
 
-	// Token: 0x0600E5D4 RID: 58836 RVA: 0x00362899 File Offset: 0x00360A99
+	// Token: 0x0600B9F2 RID: 47602 RVA: 0x0036E4F9 File Offset: 0x0036C6F9
 	public BehaviorNodeBase GetNode(int nodeId)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -115,7 +115,7 @@ public abstract class LogicTreeContainer
 		return tree.GetNode(nodeId);
 	}
 
-	// Token: 0x0600E5D5 RID: 58837 RVA: 0x003628AD File Offset: 0x00360AAD
+	// Token: 0x0600B9F3 RID: 47603 RVA: 0x0036E50D File Offset: 0x0036C70D
 	public BehaviorNodeBase GetCurrentActiveChildQuestNode()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -126,7 +126,7 @@ public abstract class LogicTreeContainer
 		return tree.GetCurrentActiveChildQuestNode(true);
 	}
 
-	// Token: 0x0600E5D6 RID: 58838 RVA: 0x003628C1 File Offset: 0x00360AC1
+	// Token: 0x0600B9F4 RID: 47604 RVA: 0x0036E521 File Offset: 0x0036C721
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -142,7 +142,7 @@ public abstract class LogicTreeContainer
 		return tree.GetCurrentActiveChildQuestNodes();
 	}
 
-	// Token: 0x0600E5D7 RID: 58839 RVA: 0x003628D4 File Offset: 0x00360AD4
+	// Token: 0x0600B9F5 RID: 47605 RVA: 0x0036E534 File Offset: 0x0036C734
 	public List<int> GetActiveChildQuestNodesId()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -153,7 +153,7 @@ public abstract class LogicTreeContainer
 		return tree.GetActiveChildQuestNodesId();
 	}
 
-	// Token: 0x0600E5D8 RID: 58840 RVA: 0x003628E7 File Offset: 0x00360AE7
+	// Token: 0x0600B9F6 RID: 47606 RVA: 0x0036E547 File Offset: 0x0036C747
 	public IReadOnlyList<int> GetCurrentCorrelativeEntities()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -164,7 +164,7 @@ public abstract class LogicTreeContainer
 		return tree.GetCurrentCorrelativeEntities();
 	}
 
-	// Token: 0x0600E5D9 RID: 58841 RVA: 0x003628FA File Offset: 0x00360AFA
+	// Token: 0x0600B9F7 RID: 47607 RVA: 0x0036E55A File Offset: 0x0036C75A
 	public ITrackCustomBoard GetCurrentTrackCustomBoard()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -175,7 +175,7 @@ public abstract class LogicTreeContainer
 		return tree.GetCurrentNodeCustomTrackBoard();
 	}
 
-	// Token: 0x0600E5DA RID: 58842 RVA: 0x0036290D File Offset: 0x00360B0D
+	// Token: 0x0600B9F8 RID: 47608 RVA: 0x0036E56D File Offset: 0x0036C76D
 	public virtual void SetTrack(bool value, ESetTrackReason reason = ESetTrackReason.None)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -186,7 +186,7 @@ public abstract class LogicTreeContainer
 		tree.SetTrack(value, reason);
 	}
 
-	// Token: 0x0600E5DB RID: 58843 RVA: 0x00362921 File Offset: 0x00360B21
+	// Token: 0x0600B9F9 RID: 47609 RVA: 0x0036E581 File Offset: 0x0036C781
 	public Vector GetNodeTrackPosition(int nodeId)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -197,7 +197,7 @@ public abstract class LogicTreeContainer
 		return tree.GetNodeTrackPosition(nodeId);
 	}
 
-	// Token: 0x0600E5DC RID: 58844 RVA: 0x00362938 File Offset: 0x00360B38
+	// Token: 0x0600B9FA RID: 47610 RVA: 0x0036E598 File Offset: 0x0036C798
 	public double? GetTrackDistance(int nodeId)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -208,7 +208,7 @@ public abstract class LogicTreeContainer
 		return new double?(tree.GetTrackDistance(nodeId));
 	}
 
-	// Token: 0x0600E5DD RID: 58845 RVA: 0x00362964 File Offset: 0x00360B64
+	// Token: 0x0600B9FB RID: 47611 RVA: 0x0036E5C4 File Offset: 0x0036C7C4
 	public int? GetDefaultMark(int nodeId)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -219,7 +219,7 @@ public abstract class LogicTreeContainer
 		return tree.GetDefaultMark(nodeId);
 	}
 
-	// Token: 0x0600E5DE RID: 58846 RVA: 0x0036298C File Offset: 0x00360B8C
+	// Token: 0x0600B9FC RID: 47612 RVA: 0x0036E5EC File Offset: 0x0036C7EC
 	public double? GetGuideLineHideDistance(int nodeId)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -230,45 +230,45 @@ public abstract class LogicTreeContainer
 		return new double?(tree.GetGuideLineHideDistance(nodeId));
 	}
 
-	// Token: 0x0600E5DF RID: 58847 RVA: 0x003629B8 File Offset: 0x00360BB8
+	// Token: 0x0600B9FD RID: 47613 RVA: 0x0036E618 File Offset: 0x0036C818
 	public virtual bool IsInTrackRange()
 	{
 		return this.Tree.IsInTrackRange();
 	}
 
-	// Token: 0x0600E5E0 RID: 58848 RVA: 0x003629C5 File Offset: 0x00360BC5
+	// Token: 0x0600B9FE RID: 47614 RVA: 0x0036E625 File Offset: 0x0036C825
 	public bool IsRangeTrack(int nodeId)
 	{
 		return this.Tree.IsRangeTrack(nodeId);
 	}
 
-	// Token: 0x0600E5E1 RID: 58849 RVA: 0x003629D3 File Offset: 0x00360BD3
+	// Token: 0x0600B9FF RID: 47615 RVA: 0x0036E633 File Offset: 0x0036C833
 	public void CreateMapMarks()
 	{
 		this.Tree.CreateMapMarks();
 	}
 
-	// Token: 0x0600E5E2 RID: 58850 RVA: 0x003629E0 File Offset: 0x00360BE0
+	// Token: 0x0600BA00 RID: 47616 RVA: 0x0036E640 File Offset: 0x0036C840
 	public virtual int GetUiPriority()
 	{
 		return 0;
 	}
 
-	// Token: 0x0600E5E3 RID: 58851 RVA: 0x003629E3 File Offset: 0x00360BE3
+	// Token: 0x0600BA01 RID: 47617 RVA: 0x0036E643 File Offset: 0x0036C843
 	public virtual bool CanShowInUiPanel()
 	{
 		BaseBehaviorTree tree = this.Tree;
 		return tree != null && tree.CheckCanShow();
 	}
 
-	// Token: 0x0600E5E4 RID: 58852 RVA: 0x003629F6 File Offset: 0x00360BF6
+	// Token: 0x0600BA02 RID: 47618 RVA: 0x0036E656 File Offset: 0x0036C856
 	public bool CanShowTrackExpression()
 	{
 		BaseBehaviorTree tree = this.Tree;
 		return tree != null && tree.CanShowTrackExpression();
 	}
 
-	// Token: 0x0600E5E5 RID: 58853 RVA: 0x00362A09 File Offset: 0x00360C09
+	// Token: 0x0600BA03 RID: 47619 RVA: 0x0036E669 File Offset: 0x0036C869
 	public void StartTextExpress(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -279,7 +279,7 @@ public abstract class LogicTreeContainer
 		tree.StartTextExpress(reason);
 	}
 
-	// Token: 0x0600E5E6 RID: 58854 RVA: 0x00362A1C File Offset: 0x00360C1C
+	// Token: 0x0600BA04 RID: 47620 RVA: 0x0036E67C File Offset: 0x0036C87C
 	public void EndTextExpress(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -290,14 +290,14 @@ public abstract class LogicTreeContainer
 		tree.EndTextExpress(reason);
 	}
 
-	// Token: 0x0600E5E7 RID: 58855 RVA: 0x00362A2F File Offset: 0x00360C2F
+	// Token: 0x0600BA05 RID: 47621 RVA: 0x0036E68F File Offset: 0x0036C88F
 	public bool IsSuspend()
 	{
 		BaseBehaviorTree tree = this.Tree;
 		return tree != null && tree.IsSuspend();
 	}
 
-	// Token: 0x0600E5E8 RID: 58856 RVA: 0x00362A42 File Offset: 0x00360C42
+	// Token: 0x0600BA06 RID: 47622 RVA: 0x0036E6A2 File Offset: 0x0036C8A2
 	public EBehaviorTreeSuspendType GetSuspendType()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -308,7 +308,7 @@ public abstract class LogicTreeContainer
 		return tree.GetSuspendType();
 	}
 
-	// Token: 0x0600E5E9 RID: 58857 RVA: 0x00362A55 File Offset: 0x00360C55
+	// Token: 0x0600BA07 RID: 47623 RVA: 0x0036E6B5 File Offset: 0x0036C8B5
 	public string GetSuspendText()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -319,7 +319,7 @@ public abstract class LogicTreeContainer
 		return tree.GetSuspendText();
 	}
 
-	// Token: 0x0600E5EA RID: 58858 RVA: 0x00362A68 File Offset: 0x00360C68
+	// Token: 0x0600BA08 RID: 47624 RVA: 0x0036E6C8 File Offset: 0x0036C8C8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -335,14 +335,14 @@ public abstract class LogicTreeContainer
 		return tree.GetOccupations();
 	}
 
-	// Token: 0x0600E5EB RID: 58859 RVA: 0x00362A7B File Offset: 0x00360C7B
+	// Token: 0x0600BA09 RID: 47625 RVA: 0x0036E6DB File Offset: 0x0036C8DB
 	public bool HasRefOccupiedEntity()
 	{
 		BaseBehaviorTree tree = this.Tree;
 		return tree != null && tree.HasRefOccupiedEntity();
 	}
 
-	// Token: 0x0600E5EC RID: 58860 RVA: 0x00362A8E File Offset: 0x00360C8E
+	// Token: 0x0600BA0A RID: 47626 RVA: 0x0036E6EE File Offset: 0x0036C8EE
 	public string GetRefOccupiedEntityText()
 	{
 		BaseBehaviorTree tree = this.Tree;
@@ -353,13 +353,13 @@ public abstract class LogicTreeContainer
 		return tree.GetRefOccupiedEntityText();
 	}
 
-	// Token: 0x0600E5ED RID: 58861 RVA: 0x00362AA1 File Offset: 0x00360CA1
+	// Token: 0x0600BA0B RID: 47627 RVA: 0x0036E701 File Offset: 0x0036C901
 	public bool HasBehaviorTree()
 	{
 		return this.BehaviorTree != null;
 	}
 
-	// Token: 0x0600E5EE RID: 58862 RVA: 0x00362AAC File Offset: 0x00360CAC
+	// Token: 0x0600BA0C RID: 47628 RVA: 0x0036E70C File Offset: 0x0036C90C
 	public bool CanShowGuideLine()
 	{
 		List<BehaviorNodeBase> currentActiveChildQuestNodes = this.GetCurrentActiveChildQuestNodes();
@@ -380,7 +380,7 @@ public abstract class LogicTreeContainer
 		return false;
 	}
 
-	// Token: 0x0600E5EF RID: 58863 RVA: 0x00362B10 File Offset: 0x00360D10
+	// Token: 0x0600BA0D RID: 47629 RVA: 0x0036E770 File Offset: 0x0036C970
 	public bool IsAlwaysShowGuideLine()
 	{
 		List<BehaviorNodeBase> currentActiveChildQuestNodes = this.GetCurrentActiveChildQuestNodes();
@@ -401,7 +401,7 @@ public abstract class LogicTreeContainer
 		return false;
 	}
 
-	// Token: 0x0600E5F0 RID: 58864 RVA: 0x00362B74 File Offset: 0x00360D74
+	// Token: 0x0600BA0E RID: 47630 RVA: 0x0036E7D4 File Offset: 0x0036C9D4
 	public BehaviorNodeBase GetShowGuideLineNode()
 	{
 		List<BehaviorNodeBase> currentActiveChildQuestNodes = this.GetCurrentActiveChildQuestNodes();
@@ -419,9 +419,9 @@ public abstract class LogicTreeContainer
 		return null;
 	}
 
-	// Token: 0x04006A5C RID: 27228
+	// Token: 0x04006B3D RID: 27453
 	protected BaseBehaviorTree BehaviorTree;
 
-	// Token: 0x04006A5D RID: 27229
+	// Token: 0x04006B3E RID: 27454
 	private bool IsBelongPlayerInternal;
 }

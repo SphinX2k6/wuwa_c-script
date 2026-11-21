@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -12,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006620 RID: 26144
+	// Token: 0x0200559E RID: 21918
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingNormalTechCostItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060418BD RID: 268477 RVA: 0x00FE45CC File Offset: 0x00FE27CC
+		// Token: 0x06036582 RID: 222594 RVA: 0x00F2B63C File Offset: 0x00F2983C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,19 +41,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060418BE RID: 268478 RVA: 0x00FE46B4 File Offset: 0x00FE28B4
+		// Token: 0x06036583 RID: 222595 RVA: 0x00F2B724 File Offset: 0x00F29924
 		protected override void OnStart()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x060418BF RID: 268479 RVA: 0x00FE46BC File Offset: 0x00FE28BC
+		// Token: 0x06036584 RID: 222596 RVA: 0x00F2B72C File Offset: 0x00F2992C
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x060418C0 RID: 268480 RVA: 0x00FE46C4 File Offset: 0x00FE28C4
+		// Token: 0x06036585 RID: 222597 RVA: 0x00F2B734 File Offset: 0x00F29934
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlyList<IProto_NormalItem>>(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 		}
 
-		// Token: 0x060418C1 RID: 268481 RVA: 0x00FE4728 File Offset: 0x00FE2928
+		// Token: 0x06036586 RID: 222598 RVA: 0x00F2B798 File Offset: 0x00F29998
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAddCommonItemList, new Action<IReadOnlyList<IProto_NormalItem>>(this.OnAddCommonItemList));
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 		}
 
-		// Token: 0x060418C2 RID: 268482 RVA: 0x00FE478C File Offset: 0x00FE298C
+		// Token: 0x06036587 RID: 222599 RVA: 0x00F2B7FC File Offset: 0x00F299FC
 		private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> normalItemList)
 		{
 			foreach (IProto_NormalItem proto_NormalItem in normalItemList)
@@ -83,17 +82,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418C3 RID: 268483 RVA: 0x00FE47E4 File Offset: 0x00FE29E4
+		// Token: 0x06036588 RID: 222600 RVA: 0x00F2B854 File Offset: 0x00F29A54
 		private void OnRemoveCommonItem(IReadOnlyList<int> configId)
 		{
-			if (!configId.Contains(this.ItemId))
+			bool flag = false;
+			using (IEnumerator<int> enumerator = configId.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current == this.ItemId)
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+			if (!flag)
 			{
 				return;
 			}
 			this.RefreshCountText();
 		}
 
-		// Token: 0x060418C4 RID: 268484 RVA: 0x00FE47FB File Offset: 0x00FE29FB
+		// Token: 0x06036589 RID: 222601 RVA: 0x00F2B8AC File Offset: 0x00F29AAC
 		private void OnCommonItemCountRefresh(IProto_NormalItem normalItem, int count, int lastCount)
 		{
 			if (this.ItemId != normalItem.Id)
@@ -103,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshCountText();
 		}
 
-		// Token: 0x060418C5 RID: 268485 RVA: 0x00FE4814 File Offset: 0x00FE2A14
+		// Token: 0x0603658A RID: 222602 RVA: 0x00F2B8C4 File Offset: 0x00F29AC4
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data;
@@ -120,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x060418C6 RID: 268486 RVA: 0x00FE488C File Offset: 0x00FE2A8C
+		// Token: 0x0603658B RID: 222603 RVA: 0x00F2B93C File Offset: 0x00F29B3C
 		private void RefreshCountText()
 		{
 			int itemCountByConfigId = InventoryModel.Instance.GetItemCountByConfigId(this.ItemId, 0);
@@ -130,32 +141,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x060418C7 RID: 268487 RVA: 0x00FE48D0 File Offset: 0x00FE2AD0
+		// Token: 0x0603658C RID: 222604 RVA: 0x00F2B980 File Offset: 0x00F29B80
 		private void OnClickBtn()
 		{
 			if (this.ItemId != 0)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 			}
 		}
 
-		// Token: 0x040221A5 RID: 139685
+		// Token: 0x0401CAD6 RID: 117462
 		private int ItemId;
 
-		// Token: 0x0200C837 RID: 51255
+		// Token: 0x0200B219 RID: 45593
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C796 RID: 247702
+			// Token: 0x040370DB RID: 225499
 			public const int Btn = 0;
 
-			// Token: 0x0403C797 RID: 247703
+			// Token: 0x040370DC RID: 225500
 			public const int TipsText = 1;
 
-			// Token: 0x0403C798 RID: 247704
+			// Token: 0x040370DD RID: 225501
 			public const int IconTexture = 2;
 
-			// Token: 0x0403C799 RID: 247705
+			// Token: 0x040370DE RID: 225502
 			public const int CostText = 3;
 		}
 	}

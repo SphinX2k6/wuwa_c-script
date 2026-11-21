@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066C9 RID: 26313
+	// Token: 0x02006D43 RID: 27971
 	public enum IEnterOrbitalCameraType_Union : byte
 	{
-		// Token: 0x04010D92 RID: 69010
+		// Token: 0x04011BB8 RID: 72632
 		NONE,
-		// Token: 0x04010D93 RID: 69011
+		// Token: 0x04011BB9 RID: 72633
 		IEnterOrbitalCameraType,
-		// Token: 0x04010D94 RID: 69012
+		// Token: 0x04011BBA RID: 72634
 		IEnterOrbitalCameraControlByMove
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011B4 RID: 4532
+	// Token: 0x020012EA RID: 4842
 	public struct CycleTime : IFlatbufferObject
 	{
-		// Token: 0x17003EB5 RID: 16053
-		// (get) Token: 0x0600E9E1 RID: 59873 RVA: 0x003470E0 File Offset: 0x003452E0
+		// Token: 0x1700421A RID: 16922
+		// (get) Token: 0x0600F752 RID: 63314 RVA: 0x00371D6C File Offset: 0x0036FF6C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E9E2 RID: 59874 RVA: 0x003470ED File Offset: 0x003452ED
+		// Token: 0x0600F753 RID: 63315 RVA: 0x00371D79 File Offset: 0x0036FF79
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E9E3 RID: 59875 RVA: 0x003470F4 File Offset: 0x003452F4
+		// Token: 0x0600F754 RID: 63316 RVA: 0x00371D80 File Offset: 0x0036FF80
 		public static CycleTime GetRootAsCycleTime(ByteBuffer _bb)
 		{
 			return CycleTime.GetRootAsCycleTime(_bb, default(CycleTime));
 		}
 
-		// Token: 0x0600E9E4 RID: 59876 RVA: 0x00347110 File Offset: 0x00345310
+		// Token: 0x0600F755 RID: 63317 RVA: 0x00371D9C File Offset: 0x0036FF9C
 		public static CycleTime GetRootAsCycleTime(ByteBuffer _bb, CycleTime obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E9E5 RID: 59877 RVA: 0x0034712D File Offset: 0x0034532D
+		// Token: 0x0600F756 RID: 63318 RVA: 0x00371DB9 File Offset: 0x0036FFB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E9E6 RID: 59878 RVA: 0x0034713C File Offset: 0x0034533C
+		// Token: 0x0600F757 RID: 63319 RVA: 0x00371DC8 File Offset: 0x0036FFC8
 		public CycleTime __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003EB6 RID: 16054
-		// (get) Token: 0x0600E9E7 RID: 59879 RVA: 0x0034714C File Offset: 0x0034534C
+		// Token: 0x1700421B RID: 16923
+		// (get) Token: 0x0600F758 RID: 63320 RVA: 0x00371DD8 File Offset: 0x0036FFD8
 		public int CycleType
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EB7 RID: 16055
-		// (get) Token: 0x0600E9E8 RID: 59880 RVA: 0x00347188 File Offset: 0x00345388
+		// Token: 0x1700421C RID: 16924
+		// (get) Token: 0x0600F759 RID: 63321 RVA: 0x00371E14 File Offset: 0x00370014
 		public int CycleParam
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EB8 RID: 16056
-		// (get) Token: 0x0600E9E9 RID: 59881 RVA: 0x003471C4 File Offset: 0x003453C4
+		// Token: 0x1700421D RID: 16925
+		// (get) Token: 0x0600F75A RID: 63322 RVA: 0x00371E50 File Offset: 0x00370050
 		public string TimeParam
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E9EA RID: 59882 RVA: 0x003471FB File Offset: 0x003453FB
+		// Token: 0x0600F75B RID: 63323 RVA: 0x00371E87 File Offset: 0x00370087
 		public Span<byte> GetTimeParamBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600E9EB RID: 59883 RVA: 0x0034720A File Offset: 0x0034540A
+		// Token: 0x0600F75C RID: 63324 RVA: 0x00371E96 File Offset: 0x00370096
 		public byte[] GetTimeParamArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005305 RID: 21253
+		// Token: 0x04005948 RID: 22856
 		private Table __p;
 	}
 }

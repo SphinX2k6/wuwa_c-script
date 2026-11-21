@@ -4,19 +4,18 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Core.Fight;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DA3 RID: 11683
+// Token: 0x020022FD RID: 8957
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C")]
 public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06018885 RID: 100485 RVA: 0x00644AB8 File Offset: 0x00642CB8
+	// Token: 0x0601612A RID: 90410 RVA: 0x0066A8F4 File Offset: 0x00668AF4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float CreateBulletForDebug(TsBaseCharacter owner, string bulletRowName)
@@ -24,7 +23,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return (float)BulletController.Instance.CreateBulletForDebug(owner, bulletRowName);
 	}
 
-	// Token: 0x06018886 RID: 100486 RVA: 0x00644AC8 File Offset: 0x00642CC8
+	// Token: 0x0601612B RID: 90411 RVA: 0x0066A904 File Offset: 0x00668B04
 	[NullableContext(1)]
 	private static string GetSpecialBulletToSkillId(string bulletRowName, string skillId)
 	{
@@ -40,7 +39,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return valueOrDefault.ToString();
 	}
 
-	// Token: 0x06018887 RID: 100487 RVA: 0x00644B04 File Offset: 0x00642D04
+	// Token: 0x0601612C RID: 90412 RVA: 0x0066A940 File Offset: 0x00668B40
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int CreateBulletFromGA(TsBaseCharacter owner, string bulletRowName, FTransformDouble initialTransform, string skillId, bool needSync = true, FVectorDouble targetLocation = default(FVectorDouble))
@@ -92,7 +91,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return -1;
 	}
 
-	// Token: 0x06018888 RID: 100488 RVA: 0x00644BEC File Offset: 0x00642DEC
+	// Token: 0x0601612D RID: 90413 RVA: 0x0066AA28 File Offset: 0x00668C28
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static AActor GetBulletActorById(int id)
@@ -105,7 +104,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return entity.GetComponent<BulletActorComponent>().Owner;
 	}
 
-	// Token: 0x06018889 RID: 100489 RVA: 0x00644C23 File Offset: 0x00642E23
+	// Token: 0x0601612E RID: 90414 RVA: 0x0066AA5F File Offset: 0x00668C5F
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool DestroyBullet(int id, bool isSummonChildBullet, bool destroyEffectImmediately = false)
 	{
@@ -113,28 +112,28 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return true;
 	}
 
-	// Token: 0x0601888A RID: 100490 RVA: 0x00644C34 File Offset: 0x00642E34
+	// Token: 0x0601612F RID: 90415 RVA: 0x0066AA70 File Offset: 0x00668C70
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void DestroyAllBullet(bool summonChild = false)
 	{
 		BulletController.Instance.DestroyAllBullet(summonChild);
 	}
 
-	// Token: 0x0601888B RID: 100491 RVA: 0x00644C41 File Offset: 0x00642E41
+	// Token: 0x06016130 RID: 90416 RVA: 0x0066AA7D File Offset: 0x00668C7D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void DestroySpecifiedBullet(int ownerId, FName bulletName, bool summonChild = false, int includeTeammate = 0, float interval = 0f)
 	{
 		BulletController.Instance.DestroySpecifiedBullet(ownerId, bulletName, summonChild, includeTeammate, interval);
 	}
 
-	// Token: 0x0601888C RID: 100492 RVA: 0x00644C53 File Offset: 0x00642E53
+	// Token: 0x06016131 RID: 90417 RVA: 0x0066AA8F File Offset: 0x00668C8F
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetSpecifiedBulletCount(int ownerId, FName bulletName)
 	{
 		return BulletController.Instance.GetSpecifiedBulletCount(ownerId, bulletName);
 	}
 
-	// Token: 0x0601888D RID: 100493 RVA: 0x00644C64 File Offset: 0x00642E64
+	// Token: 0x06016132 RID: 90418 RVA: 0x0066AAA0 File Offset: 0x00668CA0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetCharacterLaunchedBulletIds(int characterId)
@@ -152,28 +151,28 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return tarray;
 	}
 
-	// Token: 0x0601888E RID: 100494 RVA: 0x00644CCC File Offset: 0x00642ECC
+	// Token: 0x06016133 RID: 90419 RVA: 0x0066AB08 File Offset: 0x00668D08
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void DebugShowBulletCollision(bool isShow, int entityId)
 	{
 		BulletModel.Instance.SetBulletCollisionDraw(entityId, isShow);
 	}
 
-	// Token: 0x0601888F RID: 100495 RVA: 0x00644CDA File Offset: 0x00642EDA
+	// Token: 0x06016134 RID: 90420 RVA: 0x0066AB16 File Offset: 0x00668D16
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void DebugShowBulletTrace(bool isShow, int entityId)
 	{
 		BulletModel.Instance.SetBulletTraceDraw(entityId, isShow);
 	}
 
-	// Token: 0x06018890 RID: 100496 RVA: 0x00644CE8 File Offset: 0x00642EE8
+	// Token: 0x06016135 RID: 90421 RVA: 0x0066AB24 File Offset: 0x00668D24
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetIsShowBulletCollision(int entityId)
 	{
 		return BulletModel.Instance.ShowBulletCollision(entityId);
 	}
 
-	// Token: 0x06018891 RID: 100497 RVA: 0x00644CF5 File Offset: 0x00642EF5
+	// Token: 0x06016136 RID: 90422 RVA: 0x0066AB31 File Offset: 0x00668D31
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetIsShowBulletTrace(int entityId)
 	{
@@ -181,7 +180,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return instance != null && instance.ShowBulletTrace(entityId);
 	}
 
-	// Token: 0x06018892 RID: 100498 RVA: 0x00644D08 File Offset: 0x00642F08
+	// Token: 0x06016137 RID: 90423 RVA: 0x0066AB44 File Offset: 0x00668D44
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void FrozenBulletTimeByBulletName(TsBaseCharacter character, string bulletDataName, float time)
@@ -189,7 +188,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		BulletUtil.FrozenCharacterBullet(character.GetEntityIdNoBlueprint(), bulletDataName, time);
 	}
 
-	// Token: 0x06018893 RID: 100499 RVA: 0x00644D17 File Offset: 0x00642F17
+	// Token: 0x06016138 RID: 90424 RVA: 0x0066AB53 File Offset: 0x00668D53
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityIdByCustomKey(int attackerId, string customKey, int targetId)
@@ -197,7 +196,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		BulletModel.Instance.SetEntityIdByCustomKey(attackerId, customKey, targetId);
 	}
 
-	// Token: 0x06018894 RID: 100500 RVA: 0x00644D28 File Offset: 0x00642F28
+	// Token: 0x06016139 RID: 90425 RVA: 0x0066AB64 File Offset: 0x00668D64
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetAllBullet()
@@ -213,7 +212,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return tarray;
 	}
 
-	// Token: 0x06018895 RID: 100501 RVA: 0x00644DBC File Offset: 0x00642FBC
+	// Token: 0x0601613A RID: 90426 RVA: 0x0066ABF8 File Offset: 0x00668DF8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FTransformDouble GetBulletTransform(int id)
 	{
@@ -236,7 +235,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return ftransformDouble2.GetValueOrDefault();
 	}
 
-	// Token: 0x06018896 RID: 100502 RVA: 0x00644E13 File Offset: 0x00643013
+	// Token: 0x0601613B RID: 90427 RVA: 0x0066AC4F File Offset: 0x00668E4F
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TsBaseCharacter GetBulletAttacker(int id)
@@ -245,7 +244,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return ((bulletInfo != null) ? bulletInfo.AttackerActorComp.Owner : null) as TsBaseCharacter;
 	}
 
-	// Token: 0x06018897 RID: 100503 RVA: 0x00644E31 File Offset: 0x00643031
+	// Token: 0x0601613C RID: 90428 RVA: 0x0066AC6D File Offset: 0x00668E6D
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static UPrimitiveComponent GetBulletCollision(int id)
@@ -258,7 +257,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return bulletInfo.CollisionInfo.CollisionComponent;
 	}
 
-	// Token: 0x06018898 RID: 100504 RVA: 0x00644E49 File Offset: 0x00643049
+	// Token: 0x0601613D RID: 90429 RVA: 0x0066AC85 File Offset: 0x00668E85
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetBulletName(int id)
@@ -271,7 +270,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return bulletInfo.BulletDataMain.BulletName;
 	}
 
-	// Token: 0x06018899 RID: 100505 RVA: 0x00644E64 File Offset: 0x00643064
+	// Token: 0x0601613E RID: 90430 RVA: 0x0066ACA0 File Offset: 0x00668EA0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBulletStopHitTrue(int id)
 	{
@@ -283,7 +282,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x0601889A RID: 100506 RVA: 0x00644E90 File Offset: 0x00643090
+	// Token: 0x0601613F RID: 90431 RVA: 0x0066ACCC File Offset: 0x00668ECC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBulletTarget(int id, TsBaseCharacter character)
@@ -303,7 +302,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x0601889B RID: 100507 RVA: 0x00644EC1 File Offset: 0x006430C1
+	// Token: 0x06016140 RID: 90432 RVA: 0x0066ACFD File Offset: 0x00668EFD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBulletSummon(int id)
 	{
@@ -320,7 +319,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		childInfo.SetIsActiveSummonChildBullet(true);
 	}
 
-	// Token: 0x0601889C RID: 100508 RVA: 0x00644EE0 File Offset: 0x006430E0
+	// Token: 0x06016141 RID: 90433 RVA: 0x0066AD1C File Offset: 0x00668F1C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBulletTransform(int id, FTransformDouble newTransform)
 	{
@@ -332,14 +331,14 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		bulletInfo.ActorComponent.SetActorTransform(newTransform, "unknown", true, null);
 	}
 
-	// Token: 0x0601889D RID: 100509 RVA: 0x00644F13 File Offset: 0x00643113
+	// Token: 0x06016142 RID: 90434 RVA: 0x0066AD4F File Offset: 0x00668F4F
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBeginSpeed(int id, float newSpeed)
 	{
 		BulletController.Instance.SetBulletSpeedRatio(id, newSpeed);
 	}
 
-	// Token: 0x0601889E RID: 100510 RVA: 0x00644F21 File Offset: 0x00643121
+	// Token: 0x06016143 RID: 90435 RVA: 0x0066AD5D File Offset: 0x00668F5D
 	[NullableContext(2)]
 	private static BulletInfo GetBulletInfo(int id)
 	{
@@ -351,7 +350,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return bulletEntityById.GetBulletInfo();
 	}
 
-	// Token: 0x0601889F RID: 100511 RVA: 0x00644F3C File Offset: 0x0064313C
+	// Token: 0x06016144 RID: 90436 RVA: 0x0066AD78 File Offset: 0x00668F78
 	[NullableContext(1)]
 	private static void CalSectorPoints(FVector centerPoint, FVector forward, FVector up, float angle, float radius, int sectionNum, TArray<FVector> outVectorArray)
 	{
@@ -370,7 +369,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188A0 RID: 100512 RVA: 0x00644FD2 File Offset: 0x006431D2
+	// Token: 0x06016145 RID: 90437 RVA: 0x0066AE0E File Offset: 0x0066900E
 	[NullableContext(1)]
 	private static void RectangleTriangles(int leftDown, int leftTop, int rightDown, int rightTop, TArray<int> outTriangles)
 	{
@@ -382,7 +381,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		outTriangles.Add(leftDown);
 	}
 
-	// Token: 0x060188A1 RID: 100513 RVA: 0x00645004 File Offset: 0x00643204
+	// Token: 0x06016146 RID: 90438 RVA: 0x0066AE40 File Offset: 0x00669040
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CalcPipe(FVector centerPoint, FVector forward, FVector up, float outsideRadius, float insideRadius, float height, int sectionNum, ref TArray<FVector> outVertices, ref TArray<int> outTriangles)
@@ -429,7 +428,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188A2 RID: 100514 RVA: 0x006451CC File Offset: 0x006433CC
+	// Token: 0x06016147 RID: 90439 RVA: 0x0066B008 File Offset: 0x00669208
 	[NullableContext(1)]
 	private static void CircleTriangles(int centerIndex, int startIndex, int endIndex, bool bAnticlockwise, TArray<int> triangles)
 	{
@@ -450,7 +449,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188A3 RID: 100515 RVA: 0x00645220 File Offset: 0x00643420
+	// Token: 0x06016148 RID: 90440 RVA: 0x0066B05C File Offset: 0x0066925C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CalcSector(FVector centerPoint, FVector forward, FVector up, float inAngle, float radius, float height, int sectionNum, ref TArray<FVector> verticesArray, ref TArray<int> trianglesArray)
@@ -487,7 +486,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188A4 RID: 100516 RVA: 0x00645374 File Offset: 0x00643574
+	// Token: 0x06016149 RID: 90441 RVA: 0x0066B1B0 File Offset: 0x006693B0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FVectorDouble CalcBulletInitLocation(SReBulletDataMain dataMain, AActor attacker, FTransformDouble target)
@@ -564,7 +563,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return vector.ToUeVector(false);
 	}
 
-	// Token: 0x060188A5 RID: 100517 RVA: 0x006455E0 File Offset: 0x006437E0
+	// Token: 0x0601614A RID: 90442 RVA: 0x0066B41C File Offset: 0x0066961C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AttachToBone(USkeletalMeshComponent meshComp, AActor bulletActor, SReBulletDataMain dataMain)
@@ -586,7 +585,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188A6 RID: 100518 RVA: 0x00645674 File Offset: 0x00643874
+	// Token: 0x0601614B RID: 90443 RVA: 0x0066B4B0 File Offset: 0x006696B0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FRotator CalcBulletInitRotator(SReBulletDataMain dataMain, AActor bulletActor, AActor attacker, FTransformDouble target, AActor parentBulletActor)
@@ -650,7 +649,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return rotator.ToUeRotator();
 	}
 
-	// Token: 0x060188A7 RID: 100519 RVA: 0x006457A0 File Offset: 0x006439A0
+	// Token: 0x0601614C RID: 90444 RVA: 0x0066B5DC File Offset: 0x006697DC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FRotator CalcBulletRotator(SReBulletDataMain dataMain, AActor bulletActor, AActor attacker, FVectorDouble target, float delta)
@@ -704,7 +703,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return rotator.ToUeRotator();
 	}
 
-	// Token: 0x060188A8 RID: 100520 RVA: 0x00645914 File Offset: 0x00643B14
+	// Token: 0x0601614D RID: 90445 RVA: 0x0066B750 File Offset: 0x00669950
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FVectorDouble CalcBulletLocation(SReBulletDataMain dataMain, AActor bulletActor, float delta)
@@ -715,14 +714,14 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return fvectorDouble + fvectorDouble3;
 	}
 
-	// Token: 0x060188A9 RID: 100521 RVA: 0x0064594E File Offset: 0x00643B4E
+	// Token: 0x0601614E RID: 90446 RVA: 0x0066B78A File Offset: 0x0066998A
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetCampRelationship(int camp1, int camp2)
 	{
 		return (int)CampUtils.GetCampRelationship((ECamp)camp1, (ECamp)camp2);
 	}
 
-	// Token: 0x060188AA RID: 100522 RVA: 0x0064595C File Offset: 0x00643B5C
+	// Token: 0x0601614F RID: 90447 RVA: 0x0066B798 File Offset: 0x00669998
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetCamp(int entityId)
 	{
@@ -739,14 +738,14 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return -1;
 	}
 
-	// Token: 0x060188AB RID: 100523 RVA: 0x0064599E File Offset: 0x00643B9E
+	// Token: 0x06016150 RID: 90448 RVA: 0x0066B7DA File Offset: 0x006699DA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void NotifyProcessKuroBulletOperationList()
 	{
 		BulletController.Instance.ProcessKuroBulletOperationList();
 	}
 
-	// Token: 0x060188AC RID: 100524 RVA: 0x006459AA File Offset: 0x00643BAA
+	// Token: 0x06016151 RID: 90449 RVA: 0x0066B7E6 File Offset: 0x006699E6
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void NotifyExistedImmediatelyOperation(FBulletHitWorldEntityOperation operation)
@@ -754,7 +753,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		BulletController.Instance.ProcessKuroBulletOperation(operation);
 	}
 
-	// Token: 0x060188AD RID: 100525 RVA: 0x006459B7 File Offset: 0x00643BB7
+	// Token: 0x06016152 RID: 90450 RVA: 0x0066B7F3 File Offset: 0x006699F3
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (BulletBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -764,23 +763,23 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return BulletBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x060188AE RID: 100526 RVA: 0x006459DC File Offset: 0x00643BDC
+	// Token: 0x06016153 RID: 90451 RVA: 0x0066B818 File Offset: 0x00669A18
 	public BulletBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(BulletBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060188AF RID: 100527 RVA: 0x00645A04 File Offset: 0x00643C04
+	// Token: 0x06016154 RID: 90452 RVA: 0x0066B840 File Offset: 0x00669A40
 	[NullableContext(1)]
 	public BulletBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BulletBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060188B0 RID: 100528 RVA: 0x00645A37 File Offset: 0x00643C37
+	// Token: 0x06016155 RID: 90453 RVA: 0x0066B873 File Offset: 0x00669A73
 	protected BulletBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060188B1 RID: 100529 RVA: 0x00645A40 File Offset: 0x00643C40
+	// Token: 0x06016156 RID: 90454 RVA: 0x0066B87C File Offset: 0x00669A7C
 	protected unsafe static void __CPPCALL_CreateBulletForDebug_Implementation(BulletBlueprintFunctionLibrary.__CreateBulletForDebug_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->owner);
@@ -788,7 +787,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		__Params->__Result = BulletBlueprintFunctionLibrary.CreateBulletForDebug(orCreateUObjectByNativePointer, bulletRowName);
 	}
 
-	// Token: 0x060188B2 RID: 100530 RVA: 0x00645A74 File Offset: 0x00643C74
+	// Token: 0x06016157 RID: 90455 RVA: 0x0066B8B0 File Offset: 0x00669AB0
 	protected unsafe static void __CPPCALL_CreateBulletFromGA_Implementation(BulletBlueprintFunctionLibrary.__CreateBulletFromGA_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->owner);
@@ -797,7 +796,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		__Params->__Result = BulletBlueprintFunctionLibrary.CreateBulletFromGA(orCreateUObjectByNativePointer, bulletRowName, __Params->initialTransform, skillId, __Params->needSync, __Params->targetLocation);
 	}
 
-	// Token: 0x060188B3 RID: 100531 RVA: 0x00645AC7 File Offset: 0x00643CC7
+	// Token: 0x06016158 RID: 90456 RVA: 0x0066B903 File Offset: 0x00669B03
 	protected unsafe static void __CPPCALL_GetBulletActorById_Implementation(BulletBlueprintFunctionLibrary.__GetBulletActorById_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -805,31 +804,31 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		ptr = ((bulletActorById != null) ? bulletActorById.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x060188B4 RID: 100532 RVA: 0x00645AE9 File Offset: 0x00643CE9
+	// Token: 0x06016159 RID: 90457 RVA: 0x0066B925 File Offset: 0x00669B25
 	protected unsafe static void __CPPCALL_DestroyBullet_Implementation(BulletBlueprintFunctionLibrary.__DestroyBullet_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.DestroyBullet(__Params->id, __Params->isSummonChildBullet, __Params->destroyEffectImmediately);
 	}
 
-	// Token: 0x060188B5 RID: 100533 RVA: 0x00645B08 File Offset: 0x00643D08
+	// Token: 0x0601615A RID: 90458 RVA: 0x0066B944 File Offset: 0x00669B44
 	protected unsafe static void __CPPCALL_DestroyAllBullet_Implementation(BulletBlueprintFunctionLibrary.__DestroyAllBullet_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.DestroyAllBullet(__Params->summonChild);
 	}
 
-	// Token: 0x060188B6 RID: 100534 RVA: 0x00645B15 File Offset: 0x00643D15
+	// Token: 0x0601615B RID: 90459 RVA: 0x0066B951 File Offset: 0x00669B51
 	protected unsafe static void __CPPCALL_DestroySpecifiedBullet_Implementation(BulletBlueprintFunctionLibrary.__DestroySpecifiedBullet_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.DestroySpecifiedBullet(__Params->ownerId, __Params->bulletName, __Params->summonChild, __Params->includeTeammate, __Params->interval);
 	}
 
-	// Token: 0x060188B7 RID: 100535 RVA: 0x00645B3A File Offset: 0x00643D3A
+	// Token: 0x0601615C RID: 90460 RVA: 0x0066B976 File Offset: 0x00669B76
 	protected unsafe static void __CPPCALL_GetSpecifiedBulletCount_Implementation(BulletBlueprintFunctionLibrary.__GetSpecifiedBulletCount_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.GetSpecifiedBulletCount(__Params->ownerId, __Params->bulletName);
 	}
 
-	// Token: 0x060188B8 RID: 100536 RVA: 0x00645B54 File Offset: 0x00643D54
+	// Token: 0x0601615D RID: 90461 RVA: 0x0066B990 File Offset: 0x00669B90
 	protected unsafe static void __CPPCALL_GetCharacterLaunchedBulletIds_Implementation(BulletBlueprintFunctionLibrary.__GetCharacterLaunchedBulletIds_FunctionParams* __Params)
 	{
 		TArray<int> characterLaunchedBulletIds = BulletBlueprintFunctionLibrary.GetCharacterLaunchedBulletIds(__Params->characterId);
@@ -840,31 +839,31 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		characterLaunchedBulletIds.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x060188B9 RID: 100537 RVA: 0x00645B86 File Offset: 0x00643D86
+	// Token: 0x0601615E RID: 90462 RVA: 0x0066B9C2 File Offset: 0x00669BC2
 	protected unsafe static void __CPPCALL_DebugShowBulletCollision_Implementation(BulletBlueprintFunctionLibrary.__DebugShowBulletCollision_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.DebugShowBulletCollision(__Params->isShow, __Params->entityId);
 	}
 
-	// Token: 0x060188BA RID: 100538 RVA: 0x00645B99 File Offset: 0x00643D99
+	// Token: 0x0601615F RID: 90463 RVA: 0x0066B9D5 File Offset: 0x00669BD5
 	protected unsafe static void __CPPCALL_DebugShowBulletTrace_Implementation(BulletBlueprintFunctionLibrary.__DebugShowBulletTrace_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.DebugShowBulletTrace(__Params->isShow, __Params->entityId);
 	}
 
-	// Token: 0x060188BB RID: 100539 RVA: 0x00645BAC File Offset: 0x00643DAC
+	// Token: 0x06016160 RID: 90464 RVA: 0x0066B9E8 File Offset: 0x00669BE8
 	protected unsafe static void __CPPCALL_GetIsShowBulletCollision_Implementation(BulletBlueprintFunctionLibrary.__GetIsShowBulletCollision_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.GetIsShowBulletCollision(__Params->entityId);
 	}
 
-	// Token: 0x060188BC RID: 100540 RVA: 0x00645BBF File Offset: 0x00643DBF
+	// Token: 0x06016161 RID: 90465 RVA: 0x0066B9FB File Offset: 0x00669BFB
 	protected unsafe static void __CPPCALL_GetIsShowBulletTrace_Implementation(BulletBlueprintFunctionLibrary.__GetIsShowBulletTrace_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.GetIsShowBulletTrace(__Params->entityId);
 	}
 
-	// Token: 0x060188BD RID: 100541 RVA: 0x00645BD4 File Offset: 0x00643DD4
+	// Token: 0x06016162 RID: 90466 RVA: 0x0066BA10 File Offset: 0x00669C10
 	protected unsafe static void __CPPCALL_FrozenBulletTimeByBulletName_Implementation(BulletBlueprintFunctionLibrary.__FrozenBulletTimeByBulletName_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->character);
@@ -872,14 +871,14 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		BulletBlueprintFunctionLibrary.FrozenBulletTimeByBulletName(orCreateUObjectByNativePointer, bulletDataName, __Params->time);
 	}
 
-	// Token: 0x060188BE RID: 100542 RVA: 0x00645C08 File Offset: 0x00643E08
+	// Token: 0x06016163 RID: 90467 RVA: 0x0066BA44 File Offset: 0x00669C44
 	protected unsafe static void __CPPCALL_SetEntityIdByCustomKey_Implementation(BulletBlueprintFunctionLibrary.__SetEntityIdByCustomKey_FunctionParams* __Params)
 	{
 		string customKey = FString.ToString((void*)(&__Params->customKey));
 		BulletBlueprintFunctionLibrary.SetEntityIdByCustomKey(__Params->attackerId, customKey, __Params->targetId);
 	}
 
-	// Token: 0x060188BF RID: 100543 RVA: 0x00645C34 File Offset: 0x00643E34
+	// Token: 0x06016164 RID: 90468 RVA: 0x0066BA70 File Offset: 0x00669C70
 	protected unsafe static void __CPPCALL_GetAllBullet_Implementation(BulletBlueprintFunctionLibrary.__GetAllBullet_FunctionParams* __Params)
 	{
 		TArray<int> allBullet = BulletBlueprintFunctionLibrary.GetAllBullet();
@@ -890,13 +889,13 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		allBullet.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x060188C0 RID: 100544 RVA: 0x00645C60 File Offset: 0x00643E60
+	// Token: 0x06016165 RID: 90469 RVA: 0x0066BA9C File Offset: 0x00669C9C
 	protected unsafe static void __CPPCALL_GetBulletTransform_Implementation(BulletBlueprintFunctionLibrary.__GetBulletTransform_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.GetBulletTransform(__Params->id);
 	}
 
-	// Token: 0x060188C1 RID: 100545 RVA: 0x00645C73 File Offset: 0x00643E73
+	// Token: 0x06016166 RID: 90470 RVA: 0x0066BAAF File Offset: 0x00669CAF
 	protected unsafe static void __CPPCALL_GetBulletAttacker_Implementation(BulletBlueprintFunctionLibrary.__GetBulletAttacker_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -904,7 +903,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		ptr = ((bulletAttacker != null) ? bulletAttacker.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x060188C2 RID: 100546 RVA: 0x00645C95 File Offset: 0x00643E95
+	// Token: 0x06016167 RID: 90471 RVA: 0x0066BAD1 File Offset: 0x00669CD1
 	protected unsafe static void __CPPCALL_GetBulletCollision_Implementation(BulletBlueprintFunctionLibrary.__GetBulletCollision_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -912,44 +911,44 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		ptr = ((bulletCollision != null) ? bulletCollision.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x060188C3 RID: 100547 RVA: 0x00645CB7 File Offset: 0x00643EB7
+	// Token: 0x06016168 RID: 90472 RVA: 0x0066BAF3 File Offset: 0x00669CF3
 	protected unsafe static void __CPPCALL_GetBulletName_Implementation(BulletBlueprintFunctionLibrary.__GetBulletName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), BulletBlueprintFunctionLibrary.GetBulletName(__Params->id));
 	}
 
-	// Token: 0x060188C4 RID: 100548 RVA: 0x00645CD0 File Offset: 0x00643ED0
+	// Token: 0x06016169 RID: 90473 RVA: 0x0066BB0C File Offset: 0x00669D0C
 	protected unsafe static void __CPPCALL_SetBulletStopHitTrue_Implementation(BulletBlueprintFunctionLibrary.__SetBulletStopHitTrue_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.SetBulletStopHitTrue(__Params->id);
 	}
 
-	// Token: 0x060188C5 RID: 100549 RVA: 0x00645CE0 File Offset: 0x00643EE0
+	// Token: 0x0601616A RID: 90474 RVA: 0x0066BB1C File Offset: 0x00669D1C
 	protected unsafe static void __CPPCALL_SetBulletTarget_Implementation(BulletBlueprintFunctionLibrary.__SetBulletTarget_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->character);
 		BulletBlueprintFunctionLibrary.SetBulletTarget(__Params->id, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x060188C6 RID: 100550 RVA: 0x00645D05 File Offset: 0x00643F05
+	// Token: 0x0601616B RID: 90475 RVA: 0x0066BB41 File Offset: 0x00669D41
 	protected unsafe static void __CPPCALL_SetBulletSummon_Implementation(BulletBlueprintFunctionLibrary.__SetBulletSummon_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.SetBulletSummon(__Params->id);
 	}
 
-	// Token: 0x060188C7 RID: 100551 RVA: 0x00645D12 File Offset: 0x00643F12
+	// Token: 0x0601616C RID: 90476 RVA: 0x0066BB4E File Offset: 0x00669D4E
 	protected unsafe static void __CPPCALL_SetBulletTransform_Implementation(BulletBlueprintFunctionLibrary.__SetBulletTransform_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.SetBulletTransform(__Params->id, __Params->newTransform);
 	}
 
-	// Token: 0x060188C8 RID: 100552 RVA: 0x00645D25 File Offset: 0x00643F25
+	// Token: 0x0601616D RID: 90477 RVA: 0x0066BB61 File Offset: 0x00669D61
 	protected unsafe static void __CPPCALL_SetBeginSpeed_Implementation(BulletBlueprintFunctionLibrary.__SetBeginSpeed_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.SetBeginSpeed(__Params->id, __Params->newSpeed);
 	}
 
-	// Token: 0x060188C9 RID: 100553 RVA: 0x00645D38 File Offset: 0x00643F38
+	// Token: 0x0601616E RID: 90478 RVA: 0x0066BB74 File Offset: 0x00669D74
 	protected unsafe static void __CPPCALL_CalcPipe_Implementation(BulletBlueprintFunctionLibrary.__CalcPipe_FunctionParams* __Params)
 	{
 		TArray<FVector> tarray = new TArray<FVector>(&__Params->outVertices, true, true);
@@ -965,7 +964,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188CA RID: 100554 RVA: 0x00645DC8 File Offset: 0x00643FC8
+	// Token: 0x0601616F RID: 90479 RVA: 0x0066BC04 File Offset: 0x00669E04
 	protected unsafe static void __CPPCALL_CalcSector_Implementation(BulletBlueprintFunctionLibrary.__CalcSector_FunctionParams* __Params)
 	{
 		TArray<FVector> tarray = new TArray<FVector>(&__Params->verticesArray, true, true);
@@ -981,7 +980,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x060188CB RID: 100555 RVA: 0x00645E58 File Offset: 0x00644058
+	// Token: 0x06016170 RID: 90480 RVA: 0x0066BC94 File Offset: 0x00669E94
 	protected unsafe static void __CPPCALL_CalcBulletInitLocation_Implementation(BulletBlueprintFunctionLibrary.__CalcBulletInitLocation_FunctionParams* __Params)
 	{
 		SReBulletDataMain dataMain = new SReBulletDataMain(&__Params->dataMain, true, true);
@@ -989,7 +988,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		__Params->__Result = BulletBlueprintFunctionLibrary.CalcBulletInitLocation(dataMain, orCreateUObjectByNativePointer, __Params->target);
 	}
 
-	// Token: 0x060188CC RID: 100556 RVA: 0x00645E94 File Offset: 0x00644094
+	// Token: 0x06016171 RID: 90481 RVA: 0x0066BCD0 File Offset: 0x00669ED0
 	protected unsafe static void __CPPCALL_AttachToBone_Implementation(BulletBlueprintFunctionLibrary.__AttachToBone_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->meshComp);
@@ -998,7 +997,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		BulletBlueprintFunctionLibrary.AttachToBone(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, dataMain);
 	}
 
-	// Token: 0x060188CD RID: 100557 RVA: 0x00645ED0 File Offset: 0x006440D0
+	// Token: 0x06016172 RID: 90482 RVA: 0x0066BD0C File Offset: 0x00669F0C
 	protected unsafe static void __CPPCALL_CalcBulletInitRotator_Implementation(BulletBlueprintFunctionLibrary.__CalcBulletInitRotator_FunctionParams* __Params)
 	{
 		SReBulletDataMain dataMain = new SReBulletDataMain(&__Params->dataMain, true, true);
@@ -1008,7 +1007,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		__Params->__Result = BulletBlueprintFunctionLibrary.CalcBulletInitRotator(dataMain, orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->target, orCreateUObjectByNativePointer3);
 	}
 
-	// Token: 0x060188CE RID: 100558 RVA: 0x00645F28 File Offset: 0x00644128
+	// Token: 0x06016173 RID: 90483 RVA: 0x0066BD64 File Offset: 0x00669F64
 	protected unsafe static void __CPPCALL_CalcBulletRotator_Implementation(BulletBlueprintFunctionLibrary.__CalcBulletRotator_FunctionParams* __Params)
 	{
 		SReBulletDataMain dataMain = new SReBulletDataMain(&__Params->dataMain, true, true);
@@ -1017,7 +1016,7 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		__Params->__Result = BulletBlueprintFunctionLibrary.CalcBulletRotator(dataMain, orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->target, __Params->delta);
 	}
 
-	// Token: 0x060188CF RID: 100559 RVA: 0x00645F78 File Offset: 0x00644178
+	// Token: 0x06016174 RID: 90484 RVA: 0x0066BDB4 File Offset: 0x00669FB4
 	protected unsafe static void __CPPCALL_CalcBulletLocation_Implementation(BulletBlueprintFunctionLibrary.__CalcBulletLocation_FunctionParams* __Params)
 	{
 		SReBulletDataMain dataMain = new SReBulletDataMain(&__Params->dataMain, true, true);
@@ -1025,806 +1024,806 @@ public class BulletBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		__Params->__Result = BulletBlueprintFunctionLibrary.CalcBulletLocation(dataMain, orCreateUObjectByNativePointer, __Params->delta);
 	}
 
-	// Token: 0x060188D0 RID: 100560 RVA: 0x00645FB3 File Offset: 0x006441B3
+	// Token: 0x06016175 RID: 90485 RVA: 0x0066BDEF File Offset: 0x00669FEF
 	protected unsafe static void __CPPCALL_GetCampRelationship_Implementation(BulletBlueprintFunctionLibrary.__GetCampRelationship_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.GetCampRelationship(__Params->camp1, __Params->camp2);
 	}
 
-	// Token: 0x060188D1 RID: 100561 RVA: 0x00645FCC File Offset: 0x006441CC
+	// Token: 0x06016176 RID: 90486 RVA: 0x0066BE08 File Offset: 0x0066A008
 	protected unsafe static void __CPPCALL_GetCamp_Implementation(BulletBlueprintFunctionLibrary.__GetCamp_FunctionParams* __Params)
 	{
 		__Params->__Result = BulletBlueprintFunctionLibrary.GetCamp(__Params->entityId);
 	}
 
-	// Token: 0x060188D2 RID: 100562 RVA: 0x00645FDF File Offset: 0x006441DF
+	// Token: 0x06016177 RID: 90487 RVA: 0x0066BE1B File Offset: 0x0066A01B
 	protected unsafe static void __CPPCALL_NotifyProcessKuroBulletOperationList_Implementation(BulletBlueprintFunctionLibrary.__NotifyProcessKuroBulletOperationList_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.NotifyProcessKuroBulletOperationList();
 	}
 
-	// Token: 0x060188D3 RID: 100563 RVA: 0x00645FE6 File Offset: 0x006441E6
+	// Token: 0x06016178 RID: 90488 RVA: 0x0066BE22 File Offset: 0x0066A022
 	protected unsafe static void __CPPCALL_NotifyExistedImmediatelyOperation_Implementation(BulletBlueprintFunctionLibrary.__NotifyExistedImmediatelyOperation_FunctionParams* __Params)
 	{
 		BulletBlueprintFunctionLibrary.NotifyExistedImmediatelyOperation(new FBulletHitWorldEntityOperation(&__Params->operation, true, true));
 	}
 
-	// Token: 0x0400B5F0 RID: 46576
+	// Token: 0x0400B966 RID: 47462
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400B5F1 RID: 46577
+	// Token: 0x0400B967 RID: 47463
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B5F2 RID: 46578
+	// Token: 0x0400B968 RID: 47464
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02009316 RID: 37654
+	// Token: 0x0200853D RID: 34109
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __CreateBulletForDebug_FunctionParams
 	{
-		// Token: 0x0402F86C RID: 194668
+		// Token: 0x0402AEF4 RID: 175860
 		[FieldOffset(0)]
 		public IntPtr owner;
 
-		// Token: 0x0402F86D RID: 194669
+		// Token: 0x0402AEF5 RID: 175861
 		[FieldOffset(8)]
 		public FString bulletRowName;
 
-		// Token: 0x0402F86E RID: 194670
+		// Token: 0x0402AEF6 RID: 175862
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F86F RID: 194671
+		// Token: 0x0402AEF7 RID: 175863
 		[FieldOffset(32)]
 		public float __Result;
 	}
 
-	// Token: 0x02009317 RID: 37655
+	// Token: 0x0200853E RID: 34110
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 160)]
 	protected ref struct __CreateBulletFromGA_FunctionParams
 	{
-		// Token: 0x0402F870 RID: 194672
+		// Token: 0x0402AEF8 RID: 175864
 		[FieldOffset(0)]
 		public IntPtr owner;
 
-		// Token: 0x0402F871 RID: 194673
+		// Token: 0x0402AEF9 RID: 175865
 		[FieldOffset(8)]
 		public FString bulletRowName;
 
-		// Token: 0x0402F872 RID: 194674
+		// Token: 0x0402AEFA RID: 175866
 		[FieldOffset(32)]
 		public FTransformDouble initialTransform;
 
-		// Token: 0x0402F873 RID: 194675
+		// Token: 0x0402AEFB RID: 175867
 		[FieldOffset(96)]
 		public FString skillId;
 
-		// Token: 0x0402F874 RID: 194676
+		// Token: 0x0402AEFC RID: 175868
 		[FieldOffset(112)]
 		public bool needSync;
 
-		// Token: 0x0402F875 RID: 194677
+		// Token: 0x0402AEFD RID: 175869
 		[FieldOffset(120)]
 		public FVectorDouble targetLocation;
 
-		// Token: 0x0402F876 RID: 194678
+		// Token: 0x0402AEFE RID: 175870
 		[FieldOffset(144)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F877 RID: 194679
+		// Token: 0x0402AEFF RID: 175871
 		[FieldOffset(152)]
 		public int __Result;
 	}
 
-	// Token: 0x02009318 RID: 37656
+	// Token: 0x0200853F RID: 34111
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetBulletActorById_FunctionParams
 	{
-		// Token: 0x0402F878 RID: 194680
+		// Token: 0x0402AF00 RID: 175872
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F879 RID: 194681
+		// Token: 0x0402AF01 RID: 175873
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F87A RID: 194682
+		// Token: 0x0402AF02 RID: 175874
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009319 RID: 37657
+	// Token: 0x02008540 RID: 34112
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __DestroyBullet_FunctionParams
 	{
-		// Token: 0x0402F87B RID: 194683
+		// Token: 0x0402AF03 RID: 175875
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F87C RID: 194684
+		// Token: 0x0402AF04 RID: 175876
 		[FieldOffset(4)]
 		public bool isSummonChildBullet;
 
-		// Token: 0x0402F87D RID: 194685
+		// Token: 0x0402AF05 RID: 175877
 		[FieldOffset(5)]
 		public bool destroyEffectImmediately;
 
-		// Token: 0x0402F87E RID: 194686
+		// Token: 0x0402AF06 RID: 175878
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F87F RID: 194687
+		// Token: 0x0402AF07 RID: 175879
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200931A RID: 37658
+	// Token: 0x02008541 RID: 34113
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __DestroyAllBullet_FunctionParams
 	{
-		// Token: 0x0402F880 RID: 194688
+		// Token: 0x0402AF08 RID: 175880
 		[FieldOffset(0)]
 		public bool summonChild;
 
-		// Token: 0x0402F881 RID: 194689
+		// Token: 0x0402AF09 RID: 175881
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200931B RID: 37659
+	// Token: 0x02008542 RID: 34114
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __DestroySpecifiedBullet_FunctionParams
 	{
-		// Token: 0x0402F882 RID: 194690
+		// Token: 0x0402AF0A RID: 175882
 		[FieldOffset(0)]
 		public int ownerId;
 
-		// Token: 0x0402F883 RID: 194691
+		// Token: 0x0402AF0B RID: 175883
 		[FieldOffset(4)]
 		public FName bulletName;
 
-		// Token: 0x0402F884 RID: 194692
+		// Token: 0x0402AF0C RID: 175884
 		[FieldOffset(16)]
 		public bool summonChild;
 
-		// Token: 0x0402F885 RID: 194693
+		// Token: 0x0402AF0D RID: 175885
 		[FieldOffset(20)]
 		public int includeTeammate;
 
-		// Token: 0x0402F886 RID: 194694
+		// Token: 0x0402AF0E RID: 175886
 		[FieldOffset(24)]
 		public float interval;
 
-		// Token: 0x0402F887 RID: 194695
+		// Token: 0x0402AF0F RID: 175887
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200931C RID: 37660
+	// Token: 0x02008543 RID: 34115
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetSpecifiedBulletCount_FunctionParams
 	{
-		// Token: 0x0402F888 RID: 194696
+		// Token: 0x0402AF10 RID: 175888
 		[FieldOffset(0)]
 		public int ownerId;
 
-		// Token: 0x0402F889 RID: 194697
+		// Token: 0x0402AF11 RID: 175889
 		[FieldOffset(4)]
 		public FName bulletName;
 
-		// Token: 0x0402F88A RID: 194698
+		// Token: 0x0402AF12 RID: 175890
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F88B RID: 194699
+		// Token: 0x0402AF13 RID: 175891
 		[FieldOffset(24)]
 		public int __Result;
 	}
 
-	// Token: 0x0200931D RID: 37661
+	// Token: 0x02008544 RID: 34116
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetCharacterLaunchedBulletIds_FunctionParams
 	{
-		// Token: 0x0402F88C RID: 194700
+		// Token: 0x0402AF14 RID: 175892
 		[FieldOffset(0)]
 		public int characterId;
 
-		// Token: 0x0402F88D RID: 194701
+		// Token: 0x0402AF15 RID: 175893
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F88E RID: 194702
+		// Token: 0x0402AF16 RID: 175894
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x0200931E RID: 37662
+	// Token: 0x02008545 RID: 34117
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __DebugShowBulletCollision_FunctionParams
 	{
-		// Token: 0x0402F88F RID: 194703
+		// Token: 0x0402AF17 RID: 175895
 		[FieldOffset(0)]
 		public bool isShow;
 
-		// Token: 0x0402F890 RID: 194704
+		// Token: 0x0402AF18 RID: 175896
 		[FieldOffset(4)]
 		public int entityId;
 
-		// Token: 0x0402F891 RID: 194705
+		// Token: 0x0402AF19 RID: 175897
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200931F RID: 37663
+	// Token: 0x02008546 RID: 34118
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __DebugShowBulletTrace_FunctionParams
 	{
-		// Token: 0x0402F892 RID: 194706
+		// Token: 0x0402AF1A RID: 175898
 		[FieldOffset(0)]
 		public bool isShow;
 
-		// Token: 0x0402F893 RID: 194707
+		// Token: 0x0402AF1B RID: 175899
 		[FieldOffset(4)]
 		public int entityId;
 
-		// Token: 0x0402F894 RID: 194708
+		// Token: 0x0402AF1C RID: 175900
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009320 RID: 37664
+	// Token: 0x02008547 RID: 34119
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetIsShowBulletCollision_FunctionParams
 	{
-		// Token: 0x0402F895 RID: 194709
+		// Token: 0x0402AF1D RID: 175901
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F896 RID: 194710
+		// Token: 0x0402AF1E RID: 175902
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F897 RID: 194711
+		// Token: 0x0402AF1F RID: 175903
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009321 RID: 37665
+	// Token: 0x02008548 RID: 34120
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetIsShowBulletTrace_FunctionParams
 	{
-		// Token: 0x0402F898 RID: 194712
+		// Token: 0x0402AF20 RID: 175904
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F899 RID: 194713
+		// Token: 0x0402AF21 RID: 175905
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F89A RID: 194714
+		// Token: 0x0402AF22 RID: 175906
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009322 RID: 37666
+	// Token: 0x02008549 RID: 34121
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __FrozenBulletTimeByBulletName_FunctionParams
 	{
-		// Token: 0x0402F89B RID: 194715
+		// Token: 0x0402AF23 RID: 175907
 		[FieldOffset(0)]
 		public IntPtr character;
 
-		// Token: 0x0402F89C RID: 194716
+		// Token: 0x0402AF24 RID: 175908
 		[FieldOffset(8)]
 		public FString bulletDataName;
 
-		// Token: 0x0402F89D RID: 194717
+		// Token: 0x0402AF25 RID: 175909
 		[FieldOffset(24)]
 		public float time;
 
-		// Token: 0x0402F89E RID: 194718
+		// Token: 0x0402AF26 RID: 175910
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009323 RID: 37667
+	// Token: 0x0200854A RID: 34122
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetEntityIdByCustomKey_FunctionParams
 	{
-		// Token: 0x0402F89F RID: 194719
+		// Token: 0x0402AF27 RID: 175911
 		[FieldOffset(0)]
 		public int attackerId;
 
-		// Token: 0x0402F8A0 RID: 194720
+		// Token: 0x0402AF28 RID: 175912
 		[FieldOffset(8)]
 		public FString customKey;
 
-		// Token: 0x0402F8A1 RID: 194721
+		// Token: 0x0402AF29 RID: 175913
 		[FieldOffset(24)]
 		public int targetId;
 
-		// Token: 0x0402F8A2 RID: 194722
+		// Token: 0x0402AF2A RID: 175914
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009324 RID: 37668
+	// Token: 0x0200854B RID: 34123
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAllBullet_FunctionParams
 	{
-		// Token: 0x0402F8A3 RID: 194723
+		// Token: 0x0402AF2B RID: 175915
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8A4 RID: 194724
+		// Token: 0x0402AF2C RID: 175916
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009325 RID: 37669
+	// Token: 0x0200854C RID: 34124
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 80)]
 	protected ref struct __GetBulletTransform_FunctionParams
 	{
-		// Token: 0x0402F8A5 RID: 194725
+		// Token: 0x0402AF2D RID: 175917
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8A6 RID: 194726
+		// Token: 0x0402AF2E RID: 175918
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8A7 RID: 194727
+		// Token: 0x0402AF2F RID: 175919
 		[FieldOffset(16)]
 		public FTransformDouble __Result;
 	}
 
-	// Token: 0x02009326 RID: 37670
+	// Token: 0x0200854D RID: 34125
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetBulletAttacker_FunctionParams
 	{
-		// Token: 0x0402F8A8 RID: 194728
+		// Token: 0x0402AF30 RID: 175920
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8A9 RID: 194729
+		// Token: 0x0402AF31 RID: 175921
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8AA RID: 194730
+		// Token: 0x0402AF32 RID: 175922
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009327 RID: 37671
+	// Token: 0x0200854E RID: 34126
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetBulletCollision_FunctionParams
 	{
-		// Token: 0x0402F8AB RID: 194731
+		// Token: 0x0402AF33 RID: 175923
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8AC RID: 194732
+		// Token: 0x0402AF34 RID: 175924
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8AD RID: 194733
+		// Token: 0x0402AF35 RID: 175925
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009328 RID: 37672
+	// Token: 0x0200854F RID: 34127
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetBulletName_FunctionParams
 	{
-		// Token: 0x0402F8AE RID: 194734
+		// Token: 0x0402AF36 RID: 175926
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8AF RID: 194735
+		// Token: 0x0402AF37 RID: 175927
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8B0 RID: 194736
+		// Token: 0x0402AF38 RID: 175928
 		[FieldOffset(16)]
 		public FString __Result;
 	}
 
-	// Token: 0x02009329 RID: 37673
+	// Token: 0x02008550 RID: 34128
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetBulletStopHitTrue_FunctionParams
 	{
-		// Token: 0x0402F8B1 RID: 194737
+		// Token: 0x0402AF39 RID: 175929
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8B2 RID: 194738
+		// Token: 0x0402AF3A RID: 175930
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200932A RID: 37674
+	// Token: 0x02008551 RID: 34129
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetBulletTarget_FunctionParams
 	{
-		// Token: 0x0402F8B3 RID: 194739
+		// Token: 0x0402AF3B RID: 175931
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8B4 RID: 194740
+		// Token: 0x0402AF3C RID: 175932
 		[FieldOffset(8)]
 		public IntPtr character;
 
-		// Token: 0x0402F8B5 RID: 194741
+		// Token: 0x0402AF3D RID: 175933
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200932B RID: 37675
+	// Token: 0x02008552 RID: 34130
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetBulletSummon_FunctionParams
 	{
-		// Token: 0x0402F8B6 RID: 194742
+		// Token: 0x0402AF3E RID: 175934
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8B7 RID: 194743
+		// Token: 0x0402AF3F RID: 175935
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200932C RID: 37676
+	// Token: 0x02008553 RID: 34131
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __SetBulletTransform_FunctionParams
 	{
-		// Token: 0x0402F8B8 RID: 194744
+		// Token: 0x0402AF40 RID: 175936
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8B9 RID: 194745
+		// Token: 0x0402AF41 RID: 175937
 		[FieldOffset(16)]
 		public FTransformDouble newTransform;
 
-		// Token: 0x0402F8BA RID: 194746
+		// Token: 0x0402AF42 RID: 175938
 		[FieldOffset(80)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200932D RID: 37677
+	// Token: 0x02008554 RID: 34132
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetBeginSpeed_FunctionParams
 	{
-		// Token: 0x0402F8BB RID: 194747
+		// Token: 0x0402AF43 RID: 175939
 		[FieldOffset(0)]
 		public int id;
 
-		// Token: 0x0402F8BC RID: 194748
+		// Token: 0x0402AF44 RID: 175940
 		[FieldOffset(4)]
 		public float newSpeed;
 
-		// Token: 0x0402F8BD RID: 194749
+		// Token: 0x0402AF45 RID: 175941
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200932E RID: 37678
+	// Token: 0x02008555 RID: 34133
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __CalcPipe_FunctionParams
 	{
-		// Token: 0x0402F8BE RID: 194750
+		// Token: 0x0402AF46 RID: 175942
 		[FieldOffset(0)]
 		public FVector centerPoint;
 
-		// Token: 0x0402F8BF RID: 194751
+		// Token: 0x0402AF47 RID: 175943
 		[FieldOffset(12)]
 		public FVector forward;
 
-		// Token: 0x0402F8C0 RID: 194752
+		// Token: 0x0402AF48 RID: 175944
 		[FieldOffset(24)]
 		public FVector up;
 
-		// Token: 0x0402F8C1 RID: 194753
+		// Token: 0x0402AF49 RID: 175945
 		[FieldOffset(36)]
 		public float outsideRadius;
 
-		// Token: 0x0402F8C2 RID: 194754
+		// Token: 0x0402AF4A RID: 175946
 		[FieldOffset(40)]
 		public float insideRadius;
 
-		// Token: 0x0402F8C3 RID: 194755
+		// Token: 0x0402AF4B RID: 175947
 		[FieldOffset(44)]
 		public float height;
 
-		// Token: 0x0402F8C4 RID: 194756
+		// Token: 0x0402AF4C RID: 175948
 		[FieldOffset(48)]
 		public int sectionNum;
 
-		// Token: 0x0402F8C5 RID: 194757
+		// Token: 0x0402AF4D RID: 175949
 		[FieldOffset(56)]
 		public byte outVertices;
 
-		// Token: 0x0402F8C6 RID: 194758
+		// Token: 0x0402AF4E RID: 175950
 		[FieldOffset(72)]
 		public byte outTriangles;
 
-		// Token: 0x0402F8C7 RID: 194759
+		// Token: 0x0402AF4F RID: 175951
 		[FieldOffset(88)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200932F RID: 37679
+	// Token: 0x02008556 RID: 34134
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __CalcSector_FunctionParams
 	{
-		// Token: 0x0402F8C8 RID: 194760
+		// Token: 0x0402AF50 RID: 175952
 		[FieldOffset(0)]
 		public FVector centerPoint;
 
-		// Token: 0x0402F8C9 RID: 194761
+		// Token: 0x0402AF51 RID: 175953
 		[FieldOffset(12)]
 		public FVector forward;
 
-		// Token: 0x0402F8CA RID: 194762
+		// Token: 0x0402AF52 RID: 175954
 		[FieldOffset(24)]
 		public FVector up;
 
-		// Token: 0x0402F8CB RID: 194763
+		// Token: 0x0402AF53 RID: 175955
 		[FieldOffset(36)]
 		public float inAngle;
 
-		// Token: 0x0402F8CC RID: 194764
+		// Token: 0x0402AF54 RID: 175956
 		[FieldOffset(40)]
 		public float radius;
 
-		// Token: 0x0402F8CD RID: 194765
+		// Token: 0x0402AF55 RID: 175957
 		[FieldOffset(44)]
 		public float height;
 
-		// Token: 0x0402F8CE RID: 194766
+		// Token: 0x0402AF56 RID: 175958
 		[FieldOffset(48)]
 		public int sectionNum;
 
-		// Token: 0x0402F8CF RID: 194767
+		// Token: 0x0402AF57 RID: 175959
 		[FieldOffset(56)]
 		public byte verticesArray;
 
-		// Token: 0x0402F8D0 RID: 194768
+		// Token: 0x0402AF58 RID: 175960
 		[FieldOffset(72)]
 		public byte trianglesArray;
 
-		// Token: 0x0402F8D1 RID: 194769
+		// Token: 0x0402AF59 RID: 175961
 		[FieldOffset(88)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009330 RID: 37680
+	// Token: 0x02008557 RID: 34135
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 2096)]
 	protected ref struct __CalcBulletInitLocation_FunctionParams
 	{
-		// Token: 0x0402F8D2 RID: 194770
+		// Token: 0x0402AF5A RID: 175962
 		[FieldOffset(0)]
 		public byte dataMain;
 
-		// Token: 0x0402F8D3 RID: 194771
+		// Token: 0x0402AF5B RID: 175963
 		[FieldOffset(1992)]
 		public IntPtr attacker;
 
-		// Token: 0x0402F8D4 RID: 194772
+		// Token: 0x0402AF5C RID: 175964
 		[FieldOffset(2000)]
 		public FTransformDouble target;
 
-		// Token: 0x0402F8D5 RID: 194773
+		// Token: 0x0402AF5D RID: 175965
 		[FieldOffset(2064)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8D6 RID: 194774
+		// Token: 0x0402AF5E RID: 175966
 		[FieldOffset(2072)]
 		public FVectorDouble __Result;
 	}
 
-	// Token: 0x02009331 RID: 37681
+	// Token: 0x02008558 RID: 34136
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 2016)]
 	protected ref struct __AttachToBone_FunctionParams
 	{
-		// Token: 0x0402F8D7 RID: 194775
+		// Token: 0x0402AF5F RID: 175967
 		[FieldOffset(0)]
 		public IntPtr meshComp;
 
-		// Token: 0x0402F8D8 RID: 194776
+		// Token: 0x0402AF60 RID: 175968
 		[FieldOffset(8)]
 		public IntPtr bulletActor;
 
-		// Token: 0x0402F8D9 RID: 194777
+		// Token: 0x0402AF61 RID: 175969
 		[FieldOffset(16)]
 		public byte dataMain;
 
-		// Token: 0x0402F8DA RID: 194778
+		// Token: 0x0402AF62 RID: 175970
 		[FieldOffset(2008)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009332 RID: 37682
+	// Token: 0x02008559 RID: 34137
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 2112)]
 	protected ref struct __CalcBulletInitRotator_FunctionParams
 	{
-		// Token: 0x0402F8DB RID: 194779
+		// Token: 0x0402AF63 RID: 175971
 		[FieldOffset(0)]
 		public byte dataMain;
 
-		// Token: 0x0402F8DC RID: 194780
+		// Token: 0x0402AF64 RID: 175972
 		[FieldOffset(1992)]
 		public IntPtr bulletActor;
 
-		// Token: 0x0402F8DD RID: 194781
+		// Token: 0x0402AF65 RID: 175973
 		[FieldOffset(2000)]
 		public IntPtr attacker;
 
-		// Token: 0x0402F8DE RID: 194782
+		// Token: 0x0402AF66 RID: 175974
 		[FieldOffset(2016)]
 		public FTransformDouble target;
 
-		// Token: 0x0402F8DF RID: 194783
+		// Token: 0x0402AF67 RID: 175975
 		[FieldOffset(2080)]
 		public IntPtr parentBulletActor;
 
-		// Token: 0x0402F8E0 RID: 194784
+		// Token: 0x0402AF68 RID: 175976
 		[FieldOffset(2088)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8E1 RID: 194785
+		// Token: 0x0402AF69 RID: 175977
 		[FieldOffset(2096)]
 		public FRotator __Result;
 	}
 
-	// Token: 0x02009333 RID: 37683
+	// Token: 0x0200855A RID: 34138
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 2064)]
 	protected ref struct __CalcBulletRotator_FunctionParams
 	{
-		// Token: 0x0402F8E2 RID: 194786
+		// Token: 0x0402AF6A RID: 175978
 		[FieldOffset(0)]
 		public byte dataMain;
 
-		// Token: 0x0402F8E3 RID: 194787
+		// Token: 0x0402AF6B RID: 175979
 		[FieldOffset(1992)]
 		public IntPtr bulletActor;
 
-		// Token: 0x0402F8E4 RID: 194788
+		// Token: 0x0402AF6C RID: 175980
 		[FieldOffset(2000)]
 		public IntPtr attacker;
 
-		// Token: 0x0402F8E5 RID: 194789
+		// Token: 0x0402AF6D RID: 175981
 		[FieldOffset(2008)]
 		public FVectorDouble target;
 
-		// Token: 0x0402F8E6 RID: 194790
+		// Token: 0x0402AF6E RID: 175982
 		[FieldOffset(2032)]
 		public float delta;
 
-		// Token: 0x0402F8E7 RID: 194791
+		// Token: 0x0402AF6F RID: 175983
 		[FieldOffset(2040)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8E8 RID: 194792
+		// Token: 0x0402AF70 RID: 175984
 		[FieldOffset(2048)]
 		public FRotator __Result;
 	}
 
-	// Token: 0x02009334 RID: 37684
+	// Token: 0x0200855B RID: 34139
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 2040)]
 	protected ref struct __CalcBulletLocation_FunctionParams
 	{
-		// Token: 0x0402F8E9 RID: 194793
+		// Token: 0x0402AF71 RID: 175985
 		[FieldOffset(0)]
 		public byte dataMain;
 
-		// Token: 0x0402F8EA RID: 194794
+		// Token: 0x0402AF72 RID: 175986
 		[FieldOffset(1992)]
 		public IntPtr bulletActor;
 
-		// Token: 0x0402F8EB RID: 194795
+		// Token: 0x0402AF73 RID: 175987
 		[FieldOffset(2000)]
 		public float delta;
 
-		// Token: 0x0402F8EC RID: 194796
+		// Token: 0x0402AF74 RID: 175988
 		[FieldOffset(2008)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8ED RID: 194797
+		// Token: 0x0402AF75 RID: 175989
 		[FieldOffset(2016)]
 		public FVectorDouble __Result;
 	}
 
-	// Token: 0x02009335 RID: 37685
+	// Token: 0x0200855C RID: 34140
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetCampRelationship_FunctionParams
 	{
-		// Token: 0x0402F8EE RID: 194798
+		// Token: 0x0402AF76 RID: 175990
 		[FieldOffset(0)]
 		public int camp1;
 
-		// Token: 0x0402F8EF RID: 194799
+		// Token: 0x0402AF77 RID: 175991
 		[FieldOffset(4)]
 		public int camp2;
 
-		// Token: 0x0402F8F0 RID: 194800
+		// Token: 0x0402AF78 RID: 175992
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8F1 RID: 194801
+		// Token: 0x0402AF79 RID: 175993
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009336 RID: 37686
+	// Token: 0x0200855D RID: 34141
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetCamp_FunctionParams
 	{
-		// Token: 0x0402F8F2 RID: 194802
+		// Token: 0x0402AF7A RID: 175994
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402F8F3 RID: 194803
+		// Token: 0x0402AF7B RID: 175995
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402F8F4 RID: 194804
+		// Token: 0x0402AF7C RID: 175996
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009337 RID: 37687
+	// Token: 0x0200855E RID: 34142
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __NotifyProcessKuroBulletOperationList_FunctionParams
 	{
-		// Token: 0x0402F8F5 RID: 194805
+		// Token: 0x0402AF7D RID: 175997
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009338 RID: 37688
+	// Token: 0x0200855F RID: 34143
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __NotifyExistedImmediatelyOperation_FunctionParams
 	{
-		// Token: 0x0402F8F6 RID: 194806
+		// Token: 0x0402AF7E RID: 175998
 		[FieldOffset(0)]
 		public byte operation;
 
-		// Token: 0x0402F8F7 RID: 194807
+		// Token: 0x0402AF7F RID: 175999
 		[FieldOffset(88)]
 		public IntPtr __WorldContext;
 	}

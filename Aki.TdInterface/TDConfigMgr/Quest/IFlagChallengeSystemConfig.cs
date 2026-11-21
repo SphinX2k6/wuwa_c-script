@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F8D RID: 3981
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010B7 RID: 4279
 	public class IFlagChallengeSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x060058BA RID: 22714 RVA: 0x000D87F4 File Offset: 0x000D69F4
+		// Token: 0x06005E8C RID: 24204 RVA: 0x000E521C File Offset: 0x000E341C
 		private IFlagChallengeSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060058BB RID: 22715 RVA: 0x000D882C File Offset: 0x000D6A2C
+		// Token: 0x06005E8D RID: 24205 RVA: 0x000E5254 File Offset: 0x000E3454
 		public static IFlagChallengeSystemConfig Create([Nullable(2)] IFlagChallengeSystemConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058BC RID: 22716 RVA: 0x000D883F File Offset: 0x000D6A3F
+		// Token: 0x06005E8E RID: 24206 RVA: 0x000E5267 File Offset: 0x000E3467
 		public static IFlagChallengeSystemConfig CreateFromSetValue([Nullable(2)] IFlagChallengeSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058BD RID: 22717 RVA: 0x000D8852 File Offset: 0x000D6A52
+		// Token: 0x06005E8F RID: 24207 RVA: 0x000E527A File Offset: 0x000E347A
 		public new IFlagChallengeSystemConfig_SetValue ToSetValue()
 		{
 			return new IFlagChallengeSystemConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D8B RID: 7563
-		// (get) Token: 0x060058BE RID: 22718 RVA: 0x000D8871 File Offset: 0x000D6A71
-		// (set) Token: 0x060058BF RID: 22719 RVA: 0x000D889C File Offset: 0x000D6A9C
+		// Token: 0x17001F30 RID: 7984
+		// (get) Token: 0x06005E90 RID: 24208 RVA: 0x000E5299 File Offset: 0x000E3499
+		// (set) Token: 0x06005E91 RID: 24209 RVA: 0x000E52C4 File Offset: 0x000E34C4
 		public override EEnableSystemType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D8C RID: 7564
-		// (get) Token: 0x060058C0 RID: 22720 RVA: 0x000D88AC File Offset: 0x000D6AAC
-		// (set) Token: 0x060058C1 RID: 22721 RVA: 0x000D893F File Offset: 0x000D6B3F
+		// Token: 0x17001F31 RID: 7985
+		// (get) Token: 0x06005E92 RID: 24210 RVA: 0x000E52D4 File Offset: 0x000E34D4
+		// (set) Token: 0x06005E93 RID: 24211 RVA: 0x000E5367 File Offset: 0x000E3567
 		public virtual List<IFlagChallengeSystemVar> Vars
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400359C RID: 13724
+		// Token: 0x040038CC RID: 14540
 		[Nullable(2)]
 		protected new IFlagChallengeSystemConfig FbInstance;
 
-		// Token: 0x0400359D RID: 13725
+		// Token: 0x040038CD RID: 14541
 		[Nullable(2)]
 		protected new IFlagChallengeSystemConfig_SetValue PocoInterface;
 
-		// Token: 0x0400359E RID: 13726
+		// Token: 0x040038CE RID: 14542
 		private List<IFlagChallengeSystemVar> _VarsCache;
 
-		// Token: 0x0400359F RID: 13727
+		// Token: 0x040038CF RID: 14543
 		private bool _VarsInited;
 	}
 }

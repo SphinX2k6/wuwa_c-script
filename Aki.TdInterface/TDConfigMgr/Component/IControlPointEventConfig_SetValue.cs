@@ -5,41 +5,41 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000286 RID: 646
+	// Token: 0x020002C9 RID: 713
 	public class IControlPointEventConfig_SetValue
 	{
-		// Token: 0x04000B7B RID: 2939
+		// Token: 0x04000C5C RID: 3164
 		public int Index;
 
-		// Token: 0x04000B7C RID: 2940
+		// Token: 0x04000C5D RID: 3165
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> LeftInEventActions;
 
-		// Token: 0x04000B7D RID: 2941
+		// Token: 0x04000C5E RID: 3166
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> LeftOutEventActions;
 
-		// Token: 0x04000B7E RID: 2942
+		// Token: 0x04000C5F RID: 3167
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> RightInEventActions;
 
-		// Token: 0x04000B7F RID: 2943
+		// Token: 0x04000C60 RID: 3168
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> RightOutEventActions;
 	}

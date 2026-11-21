@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200286A RID: 10346
+	// Token: 0x02002B40 RID: 11072
 	public class IWuWaGoGame : IUiGame
 	{
-		// Token: 0x0600E546 RID: 58694 RVA: 0x0021B797 File Offset: 0x00219997
-		[NullableContext(1)]
+		// Token: 0x0600F376 RID: 62326 RVA: 0x002386B1 File Offset: 0x002368B1
 		public static IWuWaGoGame Create(IWuWaGoGame? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004634 RID: 17972
-		// (get) Token: 0x0600E547 RID: 58695 RVA: 0x0021B7B6 File Offset: 0x002199B6
+		// Token: 0x170049A4 RID: 18852
+		// (get) Token: 0x0600F377 RID: 62327 RVA: 0x002386D0 File Offset: 0x002368D0
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004635 RID: 17973
-		// (get) Token: 0x0600E548 RID: 58696 RVA: 0x0021B7C3 File Offset: 0x002199C3
+		// Token: 0x170049A5 RID: 18853
+		// (get) Token: 0x0600F378 RID: 62328 RVA: 0x002386DD File Offset: 0x002368DD
 		public virtual int LevelCenterId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ECC RID: 32460
+		// Token: 0x0400858C RID: 34188
 		private IWuWaGoGame Instance;
 	}
 }

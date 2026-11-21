@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000181 RID: 385
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000198 RID: 408
 	public class GodKingFrequencyControllerComponent : IComponentBase
 	{
-		// Token: 0x0600054A RID: 1354 RVA: 0x000202B8 File Offset: 0x0001E4B8
+		// Token: 0x0600055E RID: 1374 RVA: 0x00020E94 File Offset: 0x0001F094
 		private GodKingFrequencyControllerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600054B RID: 1355 RVA: 0x000202F0 File Offset: 0x0001E4F0
+		// Token: 0x0600055F RID: 1375 RVA: 0x00020ECC File Offset: 0x0001F0CC
 		public static GodKingFrequencyControllerComponent Create([Nullable(2)] GodKingFrequencyControllerComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600054C RID: 1356 RVA: 0x00020303 File Offset: 0x0001E503
+		// Token: 0x06000560 RID: 1376 RVA: 0x00020EDF File Offset: 0x0001F0DF
 		public static GodKingFrequencyControllerComponent CreateFromSetValue([Nullable(2)] GodKingFrequencyControllerComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600054D RID: 1357 RVA: 0x00020318 File Offset: 0x0001E518
+		// Token: 0x06000561 RID: 1377 RVA: 0x00020EF4 File Offset: 0x0001F0F4
 		public new GodKingFrequencyControllerComponent_SetValue ToSetValue()
 		{
 			return new GodKingFrequencyControllerComponent_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001C1 RID: 449
-		// (get) Token: 0x0600054E RID: 1358 RVA: 0x0002038C File Offset: 0x0001E58C
-		// (set) Token: 0x0600054F RID: 1359 RVA: 0x000203C6 File Offset: 0x0001E5C6
+		// Token: 0x170001C8 RID: 456
+		// (get) Token: 0x06000562 RID: 1378 RVA: 0x00020F68 File Offset: 0x0001F168
+		// (set) Token: 0x06000563 RID: 1379 RVA: 0x00020FA2 File Offset: 0x0001F1A2
 		public override bool? Disabled
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C2 RID: 450
-		// (get) Token: 0x06000550 RID: 1360 RVA: 0x000203D4 File Offset: 0x0001E5D4
-		// (set) Token: 0x06000551 RID: 1361 RVA: 0x000203FE File Offset: 0x0001E5FE
+		// Token: 0x170001C9 RID: 457
+		// (get) Token: 0x06000564 RID: 1380 RVA: 0x00020FB0 File Offset: 0x0001F1B0
+		// (set) Token: 0x06000565 RID: 1381 RVA: 0x00020FDA File Offset: 0x0001F1DA
 		public override bool? EdIsLocked
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C3 RID: 451
-		// (get) Token: 0x06000552 RID: 1362 RVA: 0x0002040C File Offset: 0x0001E60C
-		// (set) Token: 0x06000553 RID: 1363 RVA: 0x00020433 File Offset: 0x0001E633
+		// Token: 0x170001CA RID: 458
+		// (get) Token: 0x06000566 RID: 1382 RVA: 0x00020FE8 File Offset: 0x0001F1E8
+		// (set) Token: 0x06000567 RID: 1383 RVA: 0x0002100F File Offset: 0x0001F20F
 		public virtual List<int> StatueEntityIdList
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C4 RID: 452
-		// (get) Token: 0x06000554 RID: 1364 RVA: 0x00020441 File Offset: 0x0001E641
-		// (set) Token: 0x06000555 RID: 1365 RVA: 0x0002046C File Offset: 0x0001E66C
+		// Token: 0x170001CB RID: 459
+		// (get) Token: 0x06000568 RID: 1384 RVA: 0x0002101D File Offset: 0x0001F21D
+		// (set) Token: 0x06000569 RID: 1385 RVA: 0x00021048 File Offset: 0x0001F248
 		public virtual int InitialAttachStatue
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C5 RID: 453
-		// (get) Token: 0x06000556 RID: 1366 RVA: 0x0002047A File Offset: 0x0001E67A
-		// (set) Token: 0x06000557 RID: 1367 RVA: 0x000204A5 File Offset: 0x0001E6A5
+		// Token: 0x170001CC RID: 460
+		// (get) Token: 0x0600056A RID: 1386 RVA: 0x00021056 File Offset: 0x0001F256
+		// (set) Token: 0x0600056B RID: 1387 RVA: 0x00021081 File Offset: 0x0001F281
 		public virtual int GodKingFrequencyEntity
 		{
 			get
@@ -180,9 +178,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C6 RID: 454
-		// (get) Token: 0x06000558 RID: 1368 RVA: 0x000204B3 File Offset: 0x0001E6B3
-		// (set) Token: 0x06000559 RID: 1369 RVA: 0x000204DE File Offset: 0x0001E6DE
+		// Token: 0x170001CD RID: 461
+		// (get) Token: 0x0600056C RID: 1388 RVA: 0x0002108F File Offset: 0x0001F28F
+		// (set) Token: 0x0600056D RID: 1389 RVA: 0x000210BA File Offset: 0x0001F2BA
 		public virtual string AttachSocket
 		{
 			get
@@ -203,9 +201,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C7 RID: 455
-		// (get) Token: 0x0600055A RID: 1370 RVA: 0x000204EC File Offset: 0x0001E6EC
-		// (set) Token: 0x0600055B RID: 1371 RVA: 0x0002051B File Offset: 0x0001E71B
+		// Token: 0x170001CE RID: 462
+		// (get) Token: 0x0600056E RID: 1390 RVA: 0x000210C8 File Offset: 0x0001F2C8
+		// (set) Token: 0x0600056F RID: 1391 RVA: 0x000210F7 File Offset: 0x0001F2F7
 		public virtual float FlySpeed
 		{
 			get
@@ -226,9 +224,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001C8 RID: 456
-		// (get) Token: 0x0600055C RID: 1372 RVA: 0x00020529 File Offset: 0x0001E729
-		// (set) Token: 0x0600055D RID: 1373 RVA: 0x00020558 File Offset: 0x0001E758
+		// Token: 0x170001CF RID: 463
+		// (get) Token: 0x06000570 RID: 1392 RVA: 0x00021105 File Offset: 0x0001F305
+		// (set) Token: 0x06000571 RID: 1393 RVA: 0x00021134 File Offset: 0x0001F334
 		public virtual float MaxFlyTime
 		{
 			get
@@ -249,11 +247,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000757 RID: 1879
+		// Token: 0x040007AD RID: 1965
 		[Nullable(2)]
 		protected new GodKingFrequencyControllerComponent FbInstance;
 
-		// Token: 0x04000758 RID: 1880
+		// Token: 0x040007AE RID: 1966
 		[Nullable(2)]
 		protected new GodKingFrequencyControllerComponent_SetValue PocoInterface;
 	}

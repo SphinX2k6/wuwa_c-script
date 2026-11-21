@@ -11,6 +11,7 @@ using AkiClient.Game.Aki.Scene.NewGacha.BP;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Effect;
 using CSharpScript.Game.Module.BlackScreen;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
@@ -22,25 +23,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C9F RID: 7327
+// Token: 0x0200115E RID: 4446
 [NullableContext(2)]
 [Nullable(0)]
 public class GachaScanView : GachaSceneView
 {
-	// Token: 0x0600DD23 RID: 56611 RVA: 0x00339FA5 File Offset: 0x003381A5
+	// Token: 0x0600B139 RID: 45369 RVA: 0x003454C9 File Offset: 0x003436C9
 	[NullableContext(1)]
 	public GachaScanView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DD24 RID: 56612 RVA: 0x00339FCB File Offset: 0x003381CB
+	// Token: 0x0600B13A RID: 45370 RVA: 0x003454EF File Offset: 0x003436EF
 	[NullableContext(1)]
 	private global::GachaResult GetCurResult()
 	{
 		return this.GachaResult[this.CurIndex];
 	}
 
-	// Token: 0x0600DD25 RID: 56613 RVA: 0x00339FDA File Offset: 0x003381DA
+	// Token: 0x0600B13B RID: 45371 RVA: 0x003454FE File Offset: 0x003436FE
 	private global::GachaResult GetLastResult()
 	{
 		if (this.LastIndex < 0)
@@ -50,7 +51,7 @@ public class GachaScanView : GachaSceneView
 		return this.GachaResult[this.LastIndex];
 	}
 
-	// Token: 0x0600DD26 RID: 56614 RVA: 0x00339FF4 File Offset: 0x003381F4
+	// Token: 0x0600B13C RID: 45372 RVA: 0x00345518 File Offset: 0x00343718
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -86,18 +87,18 @@ public class GachaScanView : GachaSceneView
 		};
 	}
 
-	// Token: 0x0600DD27 RID: 56615 RVA: 0x0033A254 File Offset: 0x00338454
+	// Token: 0x0600B13D RID: 45373 RVA: 0x00345778 File Offset: 0x00343978
 	protected override UniTask OnBeforeStartAsync()
 	{
-		GachaScanView.<OnBeforeStartAsync>d__44 <OnBeforeStartAsync>d__;
+		GachaScanView.<OnBeforeStartAsync>d__43 <OnBeforeStartAsync>d__;
 		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnBeforeStartAsync>d__.<>4__this = this;
 		<OnBeforeStartAsync>d__.<>1__state = -1;
-		<OnBeforeStartAsync>d__.<>t__builder.Start<GachaScanView.<OnBeforeStartAsync>d__44>(ref <OnBeforeStartAsync>d__);
+		<OnBeforeStartAsync>d__.<>t__builder.Start<GachaScanView.<OnBeforeStartAsync>d__43>(ref <OnBeforeStartAsync>d__);
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD28 RID: 56616 RVA: 0x0033A298 File Offset: 0x00338498
+	// Token: 0x0600B13E RID: 45374 RVA: 0x003457BC File Offset: 0x003439BC
 	protected override void OnAfterOpenUiScene()
 	{
 		this.SceneCamera = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("SceneCamera1").Value, ECollectActorType.Default);
@@ -153,7 +154,7 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD29 RID: 56617 RVA: 0x0033A544 File Offset: 0x00338744
+	// Token: 0x0600B13F RID: 45375 RVA: 0x00345A68 File Offset: 0x00343C68
 	private void HideBackgroundEffects()
 	{
 		ANiagaraActor effectGold = this.EffectGold;
@@ -202,7 +203,7 @@ public class GachaScanView : GachaSceneView
 		niagaraComponent3.Deactivate();
 	}
 
-	// Token: 0x0600DD2A RID: 56618 RVA: 0x0033A5DC File Offset: 0x003387DC
+	// Token: 0x0600B140 RID: 45376 RVA: 0x00345B00 File Offset: 0x00343D00
 	private void InitProduct()
 	{
 		this.ConvertItem = new SmallItemGrid();
@@ -211,7 +212,7 @@ public class GachaScanView : GachaSceneView
 		this.ExtraItem.Initialize(base.GetItem(10).GetOwner());
 	}
 
-	// Token: 0x0600DD2B RID: 56619 RVA: 0x0033A630 File Offset: 0x00338830
+	// Token: 0x0600B141 RID: 45377 RVA: 0x00345B54 File Offset: 0x00343D54
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.PlaySequenceEventByStringParam, new Action<string>(this.OnSequenceEventByStringParam));
@@ -219,7 +220,7 @@ public class GachaScanView : GachaSceneView
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600DD2C RID: 56620 RVA: 0x0033A694 File Offset: 0x00338894
+	// Token: 0x0600B142 RID: 45378 RVA: 0x00345BB8 File Offset: 0x00343DB8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PlaySequenceEventByStringParam, new Action<string>(this.OnSequenceEventByStringParam));
@@ -227,7 +228,7 @@ public class GachaScanView : GachaSceneView
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x0600DD2D RID: 56621 RVA: 0x0033A6F8 File Offset: 0x003388F8
+	// Token: 0x0600B143 RID: 45379 RVA: 0x00345C1C File Offset: 0x00343E1C
 	protected void Refresh()
 	{
 		this.HideBackgroundEffects();
@@ -266,7 +267,7 @@ public class GachaScanView : GachaSceneView
 		fiveStarLevelSequencePlayer.PlayLevelSequenceByName("Start", true, null, false);
 	}
 
-	// Token: 0x0600DD2E RID: 56622 RVA: 0x0033A7EC File Offset: 0x003389EC
+	// Token: 0x0600B144 RID: 45380 RVA: 0x00345D10 File Offset: 0x00343F10
 	private void RefreshShare()
 	{
 		bool flag = this.CurQuality >= 5 && ChannelController.Instance.CouldShare();
@@ -306,7 +307,7 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD2F RID: 56623 RVA: 0x0033A924 File Offset: 0x00338B24
+	// Token: 0x0600B145 RID: 45381 RVA: 0x00345E48 File Offset: 0x00344048
 	protected void AfterFiveStarAnimation()
 	{
 		this.RefreshModel();
@@ -314,7 +315,7 @@ public class GachaScanView : GachaSceneView
 		this.RefreshShare();
 	}
 
-	// Token: 0x0600DD30 RID: 56624 RVA: 0x0033A938 File Offset: 0x00338B38
+	// Token: 0x0600B146 RID: 45382 RVA: 0x00345E5C File Offset: 0x0034405C
 	protected unsafe void RefreshView()
 	{
 		global::GachaResult curResult = this.GetCurResult();
@@ -408,7 +409,7 @@ public class GachaScanView : GachaSceneView
 			this.ConvertItem.BindOnCanExecuteChange((object _1, bool _2, EToggleState _3) => false);
 			this.ConvertItem.BindOnExtendToggleRelease(delegate(MediumItemGridExtendCallback _)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(reward.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(reward.ItemId, true, null, false);
 			});
 		}
 		else
@@ -431,7 +432,7 @@ public class GachaScanView : GachaSceneView
 			this.ExtraItem.BindOnCanExecuteChange((object _1, bool _2, EToggleState _3) => false);
 			this.ExtraItem.BindOnExtendToggleRelease(delegate(MediumItemGridExtendCallback _)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(reward.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(reward.ItemId, true, null, false);
 			});
 		}
 		else
@@ -466,7 +467,7 @@ public class GachaScanView : GachaSceneView
 		base.GetItem(14).SetUIActive(false);
 	}
 
-	// Token: 0x0600DD31 RID: 56625 RVA: 0x0033AF30 File Offset: 0x00339130
+	// Token: 0x0600B147 RID: 45383 RVA: 0x00346454 File Offset: 0x00344654
 	protected void RefreshModel()
 	{
 		global::GachaResult lastResult = this.GetLastResult();
@@ -608,7 +609,14 @@ public class GachaScanView : GachaSceneView
 					this.IsCanContinue = true;
 				});
 				FFrameTime time = this.LevelSequencePlayer.GetStartTime().Time;
-				this.LevelSequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams(time, 0f, "A", EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play));
+				this.LevelSequencePlayer.PlayToWithEventSweep(new FMovieSceneSequencePlaybackParams
+				{
+					Frame = time,
+					Time = 0f,
+					MarkedFrame = "A",
+					PositionType = EMovieScenePositionType.MarkedFrame,
+					UpdateMethod = EUpdatePositionMethod.Play
+				});
 			}
 			else
 			{
@@ -627,8 +635,13 @@ public class GachaScanView : GachaSceneView
 				});
 				this.IsWeaponToEnd = false;
 				FFrameTime time2 = this.LevelSequencePlayer.GetStartTime().Time;
-				this.TryDisableDlss(itemId2);
-				this.LevelSequencePlayer.PlayTo(new FMovieSceneSequencePlaybackParams(time2, 0f, "A", EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play));
+				this.LevelSequencePlayer.PlayToWithEventSweep(new FMovieSceneSequencePlaybackParams
+				{
+					Frame = time2,
+					MarkedFrame = "A",
+					PositionType = EMovieScenePositionType.MarkedFrame,
+					UpdateMethod = EUpdatePositionMethod.Play
+				});
 			}
 			PersonalUtil.ApplyTickableWhenPausedOnRuntimeBindings(this.SequenceActor, true);
 			if (this.PlayUiSequenceTimerId != null)
@@ -676,7 +689,7 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD32 RID: 56626 RVA: 0x0033B4E0 File Offset: 0x003396E0
+	// Token: 0x0600B148 RID: 45384 RVA: 0x00346A30 File Offset: 0x00344C30
 	private void HideWeaponObserver()
 	{
 		SkeletalObserverHandle gachaItemObserver = this.GachaItemObserver;
@@ -694,7 +707,7 @@ public class GachaScanView : GachaSceneView
 		this.DestroySequence();
 	}
 
-	// Token: 0x0600DD33 RID: 56627 RVA: 0x0033B53C File Offset: 0x0033973C
+	// Token: 0x0600B149 RID: 45385 RVA: 0x00346A8C File Offset: 0x00344C8C
 	private void ShowRole()
 	{
 		int itemId = this.GetCurResult().Proto_GachaReward.ItemId;
@@ -725,88 +738,33 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD34 RID: 56628 RVA: 0x0033B5C3 File Offset: 0x003397C3
+	// Token: 0x0600B14A RID: 45386 RVA: 0x00346B13 File Offset: 0x00344D13
 	private void HideRoleSequence()
 	{
 		this.DestroySequence();
 	}
 
-	// Token: 0x0600DD35 RID: 56629 RVA: 0x0033B5CC File Offset: 0x003397CC
+	// Token: 0x0600B14B RID: 45387 RVA: 0x00346B1C File Offset: 0x00344D1C
 	private void DestroySequence()
 	{
-		try
+		if (this.LevelSequencePlayer != null)
 		{
-			if (this.LevelSequencePlayer != null)
-			{
-				this.LevelSequencePlayer.OnStop.Clear();
-				this.LevelSequencePlayer.OnPause.Clear();
-				this.LevelSequencePlayer.Stop();
-				this.LevelSequencePlayer = null;
-			}
-			ALevelSequenceActor sequenceActor = this.SequenceActor;
-			if (sequenceActor != null && sequenceActor.IsValid())
-			{
-				this.SequenceActor.ResetBindings();
-				this.SequenceActor.SetSequence(null);
-				this.SequenceActor.K2_DestroyActor();
-				this.SequenceActor = null;
-			}
+			this.LevelSequencePlayer.OnStop.Clear();
+			this.LevelSequencePlayer.OnPause.Clear();
+			this.LevelSequencePlayer.Stop();
+			this.LevelSequencePlayer = null;
 		}
-		finally
+		ALevelSequenceActor sequenceActor = this.SequenceActor;
+		if (sequenceActor != null && sequenceActor.IsValid())
 		{
-			this.RestoreDlss();
+			this.SequenceActor.ResetBindings();
+			this.SequenceActor.SetSequence(null);
+			this.SequenceActor.K2_DestroyActor();
+			this.SequenceActor = null;
 		}
 	}
 
-	// Token: 0x0600DD36 RID: 56630 RVA: 0x0033B66C File Offset: 0x0033986C
-	private unsafe void TryDisableDlss(int itemId)
-	{
-		if (itemId != 21050116 || this.OriginDlssEnableValue != null)
-		{
-			return;
-		}
-		this.OriginDlssEnableValue = new int?(UKismetSystemLibrary.GetConsoleVariableIntValue("r.NGX.DLSS.Enable"));
-		if (this.OriginDlssEnableValue.Value != 0)
-		{
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.NGX.DLSS.Enable 0", null);
-		}
-		Log instance = Log.Instance;
-		ELogModule module = ELogModule.Gacha;
-		ELogAuthor author = ELogAuthor.LZK;
-		string message = "[GachaScanView][DLSS][Begin] 心月狐武器Seq关闭DLSS";
-		<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
-		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("itemId", itemId);
-		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("originValue", this.OriginDlssEnableValue.Value);
-		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("targetValue", 0);
-		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
-	}
-
-	// Token: 0x0600DD37 RID: 56631 RVA: 0x0033B748 File Offset: 0x00339948
-	private unsafe void RestoreDlss()
-	{
-		if (this.OriginDlssEnableValue == null)
-		{
-			return;
-		}
-		int value = this.OriginDlssEnableValue.Value;
-		UObject world = GlobalData.World;
-		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-		defaultInterpolatedStringHandler.AppendFormatted("r.NGX.DLSS.Enable");
-		defaultInterpolatedStringHandler.AppendLiteral(" ");
-		defaultInterpolatedStringHandler.AppendFormatted<int>(value);
-		UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
-		Log instance = Log.Instance;
-		ELogModule module = ELogModule.Gacha;
-		ELogAuthor author = ELogAuthor.LZK;
-		string message = "[GachaScanView][DLSS][End] 心月狐武器Seq恢复DLSS";
-		<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("itemId", 21050116);
-		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("restoreValue", value);
-		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-		this.OriginDlssEnableValue = null;
-	}
-
-	// Token: 0x0600DD38 RID: 56632 RVA: 0x0033B81A File Offset: 0x00339A1A
+	// Token: 0x0600B14C RID: 45388 RVA: 0x00346BA0 File Offset: 0x00344DA0
 	private void ShowItemObserver(int itemId)
 	{
 		if (GachaConfig.Instance.GetItemIdType(itemId) == InventoryDefine.EItemDataType.WeaponItem)
@@ -815,10 +773,10 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD39 RID: 56633 RVA: 0x0033B834 File Offset: 0x00339A34
+	// Token: 0x0600B14D RID: 45389 RVA: 0x00346BB8 File Offset: 0x00344DB8
 	private void HandleWeapon(int itemId)
 	{
-		GachaScanView.<>c__DisplayClass62_0 CS$<>8__locals1 = new GachaScanView.<>c__DisplayClass62_0();
+		GachaScanView.<>c__DisplayClass59_0 CS$<>8__locals1 = new GachaScanView.<>c__DisplayClass59_0();
 		SkeletalObserverHandle gachaItemObserver = this.GachaItemObserver;
 		if (gachaItemObserver == null)
 		{
@@ -923,7 +881,7 @@ public class GachaScanView : GachaSceneView
 				updateInteractBP3.WeaponNormal();
 			}
 		}
-		GachaScanView.<>c__DisplayClass62_0 CS$<>8__locals2 = CS$<>8__locals1;
+		GachaScanView.<>c__DisplayClass59_0 CS$<>8__locals2 = CS$<>8__locals1;
 		SkeletalObserverHandle gachaWeaponScabbardObserver = this.GachaWeaponScabbardObserver;
 		CS$<>8__locals2.scabbardModel = ((gachaWeaponScabbardObserver != null) ? gachaWeaponScabbardObserver.Model : null);
 		if (CS$<>8__locals1.scabbardModel == null)
@@ -974,7 +932,7 @@ public class GachaScanView : GachaSceneView
 		uiModelLoadComponent2.LoadModelByModelId(modelId, false, loadFinishCallBack2, null);
 	}
 
-	// Token: 0x0600DD3A RID: 56634 RVA: 0x0033BA4E File Offset: 0x00339C4E
+	// Token: 0x0600B14E RID: 45390 RVA: 0x00346DD2 File Offset: 0x00344FD2
 	private void ShareBtn()
 	{
 		ChannelController.Instance.ShareGacha(new global::GachaResult[]
@@ -983,14 +941,14 @@ public class GachaScanView : GachaSceneView
 		});
 	}
 
-	// Token: 0x0600DD3B RID: 56635 RVA: 0x0033BA69 File Offset: 0x00339C69
+	// Token: 0x0600B14F RID: 45391 RVA: 0x00346DED File Offset: 0x00344FED
 	private void SkipBtn()
 	{
 		this.IsOnlyShowGold = true;
 		this.AddIndex();
 	}
 
-	// Token: 0x0600DD3C RID: 56636 RVA: 0x0033BA78 File Offset: 0x00339C78
+	// Token: 0x0600B150 RID: 45392 RVA: 0x00346DFC File Offset: 0x00344FFC
 	private void NextBtn()
 	{
 		if (!this.IsCanContinue)
@@ -1000,7 +958,7 @@ public class GachaScanView : GachaSceneView
 		this.AddIndex();
 	}
 
-	// Token: 0x0600DD3D RID: 56637 RVA: 0x0033BA8C File Offset: 0x00339C8C
+	// Token: 0x0600B151 RID: 45393 RVA: 0x00346E10 File Offset: 0x00345010
 	protected void AddIndex()
 	{
 		if (this.CurIndex >= this.GachaResult.Length - 1)
@@ -1027,7 +985,7 @@ public class GachaScanView : GachaSceneView
 		this.Refresh();
 	}
 
-	// Token: 0x0600DD3E RID: 56638 RVA: 0x0033BB04 File Offset: 0x00339D04
+	// Token: 0x0600B152 RID: 45394 RVA: 0x00346E88 File Offset: 0x00345088
 	private int FindNextGoldIndex()
 	{
 		for (int i = this.CurIndex + 1; i < this.GachaResult.Length; i++)
@@ -1043,7 +1001,7 @@ public class GachaScanView : GachaSceneView
 		return -1;
 	}
 
-	// Token: 0x0600DD3F RID: 56639 RVA: 0x0033BB5F File Offset: 0x00339D5F
+	// Token: 0x0600B153 RID: 45395 RVA: 0x00346EE3 File Offset: 0x003450E3
 	protected void Finish()
 	{
 		GachaModel.Instance.CanCloseView = true;
@@ -1051,18 +1009,46 @@ public class GachaScanView : GachaSceneView
 		GachaModel.Instance.CanCloseView = false;
 	}
 
-	// Token: 0x0600DD40 RID: 56640 RVA: 0x0033BB84 File Offset: 0x00339D84
+	// Token: 0x0600B154 RID: 45396 RVA: 0x00346F08 File Offset: 0x00345108
 	private UniTask FinishAsync()
 	{
-		GachaScanView.<FinishAsync>d__69 <FinishAsync>d__;
+		GachaScanView.<FinishAsync>d__66 <FinishAsync>d__;
 		<FinishAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<FinishAsync>d__.<>4__this = this;
 		<FinishAsync>d__.<>1__state = -1;
-		<FinishAsync>d__.<>t__builder.Start<GachaScanView.<FinishAsync>d__69>(ref <FinishAsync>d__);
+		<FinishAsync>d__.<>t__builder.Start<GachaScanView.<FinishAsync>d__66>(ref <FinishAsync>d__);
 		return <FinishAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DD41 RID: 56641 RVA: 0x0033BBC8 File Offset: 0x00339DC8
+	// Token: 0x0600B155 RID: 45397 RVA: 0x00346F4B File Offset: 0x0034514B
+	private void DisableNiagaraDownSamplingForGacha()
+	{
+		if (this.NiagaraTickOptimizeBeforeGacha != null)
+		{
+			return;
+		}
+		this.NiagaraTickOptimizeBeforeGacha = new int?(UKismetSystemLibrary.GetConsoleVariableIntValue("Kuro.Niagara.SystemSimulation.TickOptimizeEnable"));
+		EffectSystem.Instance.DisableNiagaraDownSampling();
+	}
+
+	// Token: 0x0600B156 RID: 45398 RVA: 0x00346F7C File Offset: 0x0034517C
+	private void RestoreNiagaraDownSamplingAfterGacha()
+	{
+		if (this.NiagaraTickOptimizeBeforeGacha == null)
+		{
+			return;
+		}
+		int value = this.NiagaraTickOptimizeBeforeGacha.Value;
+		UObject world = GlobalData.World;
+		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
+		defaultInterpolatedStringHandler.AppendFormatted("Kuro.Niagara.SystemSimulation.TickOptimizeEnable");
+		defaultInterpolatedStringHandler.AppendLiteral(" ");
+		defaultInterpolatedStringHandler.AppendFormatted<int>(value);
+		UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
+		this.NiagaraTickOptimizeBeforeGacha = null;
+	}
+
+	// Token: 0x0600B157 RID: 45399 RVA: 0x00346FEC File Offset: 0x003451EC
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -1111,12 +1097,22 @@ public class GachaScanView : GachaSceneView
 		{
 			this.WeaponBeforeEndFrame = intConfig2.Value;
 		}
-		this.Refresh();
+		try
+		{
+			this.DisableNiagaraDownSamplingForGacha();
+			this.Refresh();
+		}
+		catch
+		{
+			this.RestoreNiagaraDownSamplingAfterGacha();
+			throw;
+		}
 	}
 
-	// Token: 0x0600DD42 RID: 56642 RVA: 0x0033BD64 File Offset: 0x00339F64
+	// Token: 0x0600B158 RID: 45400 RVA: 0x003471A8 File Offset: 0x003453A8
 	protected override void OnBeforeHideImplement()
 	{
+		this.RestoreNiagaraDownSamplingAfterGacha();
 		GameSettingsManager.Instance.ReApply(EFunction.BLOOM, EGameSettingsApplyReason.AnyTime, true);
 		BP_UpdateInteract_C updateInteractBP = this.UpdateInteractBP;
 		if (updateInteractBP != null && updateInteractBP.IsValid())
@@ -1130,7 +1126,7 @@ public class GachaScanView : GachaSceneView
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.None);
 	}
 
-	// Token: 0x0600DD43 RID: 56643 RVA: 0x0033BDB4 File Offset: 0x00339FB4
+	// Token: 0x0600B159 RID: 45401 RVA: 0x00347200 File Offset: 0x00345400
 	protected override void OnBeforeDestroyImplementImplement()
 	{
 		this.WeaponDataTable = null;
@@ -1155,10 +1151,9 @@ public class GachaScanView : GachaSceneView
 			TimerSystem.GameplayTimeInstance.Remove(this.PlayUiSequenceTimerId);
 			this.PlayUiSequenceTimerId = null;
 		}
-		this.RestoreDlss();
 	}
 
-	// Token: 0x0600DD44 RID: 56644 RVA: 0x0033BE48 File Offset: 0x0033A048
+	// Token: 0x0600B15A RID: 45402 RVA: 0x0034728C File Offset: 0x0034548C
 	[NullableContext(1)]
 	protected void OnSequenceEventByStringParam(string param)
 	{
@@ -1281,9 +1276,10 @@ public class GachaScanView : GachaSceneView
 		this.CameraEffect.NiagaraComponent.ReinitializeSystem();
 	}
 
-	// Token: 0x0600DD45 RID: 56645 RVA: 0x0033C0A8 File Offset: 0x0033A2A8
+	// Token: 0x0600B15B RID: 45403 RVA: 0x003474EC File Offset: 0x003456EC
 	protected override void OnBeforeDestroy()
 	{
+		this.RestoreNiagaraDownSamplingAfterGacha();
 		base.AddChild(this.ConvertItem);
 		base.AddChild(this.ExtraItem);
 		this.HideRoleSequence();
@@ -1308,7 +1304,7 @@ public class GachaScanView : GachaSceneView
 		RenderUtil.EndPSOSyncMode();
 	}
 
-	// Token: 0x0600DD46 RID: 56646 RVA: 0x0033C168 File Offset: 0x0033A368
+	// Token: 0x0600B15C RID: 45404 RVA: 0x003475B4 File Offset: 0x003457B4
 	[NullableContext(1)]
 	private void OnActivitySequenceEmitEvent(string param)
 	{
@@ -1326,7 +1322,7 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0600DD47 RID: 56647 RVA: 0x0033C1C6 File Offset: 0x0033A3C6
+	// Token: 0x0600B15D RID: 45405 RVA: 0x00347612 File Offset: 0x00345812
 	[NullableContext(1)]
 	private void OnUiLevelSequenceStop(string seqName)
 	{
@@ -1336,20 +1332,13 @@ public class GachaScanView : GachaSceneView
 		}
 	}
 
-	// Token: 0x0400656E RID: 25966
-	private const int XINYUEHU_WEAPON_ID = 21050116;
-
-	// Token: 0x0400656F RID: 25967
-	[Nullable(1)]
-	private const string DLSS_ENABLE_CVAR = "r.NGX.DLSS.Enable";
-
-	// Token: 0x04006570 RID: 25968
+	// Token: 0x04006640 RID: 26176
 	public static readonly FName SCENE_CAMERA_TAG = FNameUtil.GetDynamicFName("SequenceCamera").Value;
 
-	// Token: 0x04006571 RID: 25969
+	// Token: 0x04006641 RID: 26177
 	public static readonly FName SCENE_ROLE_TAG = FNameUtil.GetDynamicFName("Role").Value;
 
-	// Token: 0x04006572 RID: 25970
+	// Token: 0x04006642 RID: 26178
 	[Nullable(new byte[]
 	{
 		2,
@@ -1357,157 +1346,161 @@ public class GachaScanView : GachaSceneView
 	})]
 	protected global::GachaResult[] GachaResult;
 
-	// Token: 0x04006573 RID: 25971
+	// Token: 0x04006643 RID: 26179
 	protected int CurIndex;
 
-	// Token: 0x04006574 RID: 25972
+	// Token: 0x04006644 RID: 26180
 	protected int LastIndex = -1;
 
-	// Token: 0x04006575 RID: 25973
+	// Token: 0x04006645 RID: 26181
 	private SmallItemGrid ConvertItem;
 
-	// Token: 0x04006576 RID: 25974
+	// Token: 0x04006646 RID: 26182
 	private SmallItemGrid ExtraItem;
 
-	// Token: 0x04006577 RID: 25975
+	// Token: 0x04006647 RID: 26183
 	private ULevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006578 RID: 25976
+	// Token: 0x04006648 RID: 26184
 	private LevelSequencePlayer FiveStarLevelSequencePlayer;
 
-	// Token: 0x04006579 RID: 25977
+	// Token: 0x04006649 RID: 26185
 	private LevelSequencePlayer UiLevelSequencePlayer;
 
-	// Token: 0x0400657A RID: 25978
+	// Token: 0x0400664A RID: 26186
 	private ALevelSequenceActor SequenceActor;
 
-	// Token: 0x0400657B RID: 25979
+	// Token: 0x0400664B RID: 26187
 	private ANiagaraActor CameraEffect;
 
-	// Token: 0x0400657C RID: 25980
+	// Token: 0x0400664C RID: 26188
 	private ANiagaraActor EffectGold;
 
-	// Token: 0x0400657D RID: 25981
+	// Token: 0x0400664D RID: 26189
 	private ANiagaraActor EffectPurple;
 
-	// Token: 0x0400657E RID: 25982
+	// Token: 0x0400664E RID: 26190
 	private ANiagaraActor EffectWhite;
 
-	// Token: 0x0400657F RID: 25983
+	// Token: 0x0400664F RID: 26191
 	private AActor SceneCamera;
 
-	// Token: 0x04006580 RID: 25984
+	// Token: 0x04006650 RID: 26192
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x04006581 RID: 25985
+	// Token: 0x04006651 RID: 26193
 	private ShareRewardInfo ShareRewardInfo;
 
-	// Token: 0x04006582 RID: 25986
+	// Token: 0x04006652 RID: 26194
 	private int MaterialId;
 
-	// Token: 0x04006583 RID: 25987
+	// Token: 0x04006653 RID: 26195
 	private int ScabbardMaterialId;
 
-	// Token: 0x04006584 RID: 25988
+	// Token: 0x04006654 RID: 26196
 	private int WeaponColorMaterialId;
 
-	// Token: 0x04006585 RID: 25989
+	// Token: 0x04006655 RID: 26197
 	private int WeaponColorScabbardMaterialId;
 
-	// Token: 0x04006586 RID: 25990
+	// Token: 0x04006656 RID: 26198
 	private BP_UpdateInteract_C UpdateInteractBP;
 
-	// Token: 0x04006587 RID: 25991
+	// Token: 0x04006657 RID: 26199
 	private int CurQuality;
 
-	// Token: 0x04006588 RID: 25992
+	// Token: 0x04006658 RID: 26200
 	private bool IsOnlyShowGold;
 
-	// Token: 0x04006589 RID: 25993
+	// Token: 0x04006659 RID: 26201
 	private UDataTable WeaponDataTable;
 
-	// Token: 0x0400658A RID: 25994
+	// Token: 0x0400665A RID: 26202
 	private TimerHandle PlayUiSequenceTimerId;
 
-	// Token: 0x0400658B RID: 25995
+	// Token: 0x0400665B RID: 26203
 	private int RoleBeforeEndFrame = 190;
 
-	// Token: 0x0400658C RID: 25996
+	// Token: 0x0400665C RID: 26204
 	private int WeaponBeforeEndFrame = 190;
 
-	// Token: 0x0400658D RID: 25997
+	// Token: 0x0400665D RID: 26205
 	private bool IsCanContinue;
 
-	// Token: 0x0400658E RID: 25998
+	// Token: 0x0400665E RID: 26206
 	private bool IsWeaponToEnd;
 
-	// Token: 0x0400658F RID: 25999
+	// Token: 0x0400665F RID: 26207
 	private AActor OriginalCamera;
 
-	// Token: 0x04006590 RID: 26000
+	// Token: 0x04006660 RID: 26208
 	private bool NeedProcessSkyBlending;
 
-	// Token: 0x04006591 RID: 26001
+	// Token: 0x04006661 RID: 26209
 	private int OriginDepthOfFieldQuality;
 
-	// Token: 0x04006592 RID: 26002
-	private int? OriginDlssEnableValue;
+	// Token: 0x04006662 RID: 26210
+	[Nullable(1)]
+	private const string NIAGARA_TICK_OPTIMIZE_CVAR = "Kuro.Niagara.SystemSimulation.TickOptimizeEnable";
 
-	// Token: 0x04006593 RID: 26003
+	// Token: 0x04006663 RID: 26211
+	private int? NiagaraTickOptimizeBeforeGacha;
+
+	// Token: 0x04006664 RID: 26212
 	private SkeletalObserverHandle GachaItemObserver;
 
-	// Token: 0x04006594 RID: 26004
+	// Token: 0x04006665 RID: 26213
 	private SkeletalObserverHandle GachaWeaponScabbardObserver;
 
-	// Token: 0x0200827D RID: 33405
+	// Token: 0x02007404 RID: 29700
 	[NullableContext(0)]
 	private enum EGachaScanCom
 	{
-		// Token: 0x0402A92F RID: 174383
+		// Token: 0x04025C4E RID: 154702
 		SkipBtn,
-		// Token: 0x0402A930 RID: 174384
+		// Token: 0x04025C4F RID: 154703
 		NextBtn,
-		// Token: 0x0402A931 RID: 174385
+		// Token: 0x04025C50 RID: 154704
 		NameText,
-		// Token: 0x0402A932 RID: 174386
+		// Token: 0x04025C51 RID: 154705
 		AttributesItem,
-		// Token: 0x0402A933 RID: 174387
+		// Token: 0x04025C52 RID: 154706
 		AttributeTexture,
-		// Token: 0x0402A934 RID: 174388
+		// Token: 0x04025C53 RID: 154707
 		AttributeBoxTexture,
-		// Token: 0x0402A935 RID: 174389
+		// Token: 0x04025C54 RID: 154708
 		StarLayout,
-		// Token: 0x0402A936 RID: 174390
+		// Token: 0x04025C55 RID: 154709
 		ConvertParentItem,
-		// Token: 0x0402A937 RID: 174391
+		// Token: 0x04025C56 RID: 154710
 		ConvertItem,
-		// Token: 0x0402A938 RID: 174392
+		// Token: 0x04025C57 RID: 154711
 		ExtraParentItem,
-		// Token: 0x0402A939 RID: 174393
+		// Token: 0x04025C58 RID: 154712
 		ExtraItem,
-		// Token: 0x0402A93A RID: 174394
+		// Token: 0x04025C59 RID: 154713
 		NewItem,
-		// Token: 0x0402A93B RID: 174395
+		// Token: 0x04025C5A RID: 154714
 		FiveStarPanel,
-		// Token: 0x0402A93C RID: 174396
+		// Token: 0x04025C5B RID: 154715
 		InfoPanel,
-		// Token: 0x0402A93D RID: 174397
+		// Token: 0x04025C5C RID: 154716
 		BottomExtraRewardParentItem,
-		// Token: 0x0402A93E RID: 174398
+		// Token: 0x04025C5D RID: 154717
 		BottomExtraRewardTexture,
-		// Token: 0x0402A93F RID: 174399
+		// Token: 0x04025C5E RID: 154718
 		BottomExtraRewardCountText,
-		// Token: 0x0402A940 RID: 174400
+		// Token: 0x04025C5F RID: 154719
 		BottomExtraRewardNameText,
-		// Token: 0x0402A941 RID: 174401
+		// Token: 0x04025C60 RID: 154720
 		ShareInfo,
-		// Token: 0x0402A942 RID: 174402
+		// Token: 0x04025C61 RID: 154721
 		ShareBtn,
-		// Token: 0x0402A943 RID: 174403
+		// Token: 0x04025C62 RID: 154722
 		ShareReward,
-		// Token: 0x0402A944 RID: 174404
+		// Token: 0x04025C63 RID: 154723
 		ShareRewardTip,
-		// Token: 0x0402A945 RID: 174405
+		// Token: 0x04025C64 RID: 154724
 		PanelMask
 	}
 }

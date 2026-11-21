@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D16 RID: 7446
+// Token: 0x020011D8 RID: 4568
 public class SpringManorQuestButton : UiPanelBase
 {
-	// Token: 0x0600E131 RID: 57649 RVA: 0x0034D73C File Offset: 0x0034B93C
+	// Token: 0x0600B54E RID: 46414 RVA: 0x0035916C File Offset: 0x0035736C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class SpringManorQuestButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E132 RID: 57650 RVA: 0x0034D7A3 File Offset: 0x0034B9A3
+	// Token: 0x0600B54F RID: 46415 RVA: 0x003591D3 File Offset: 0x003573D3
 	private void OnClickButton()
 	{
 		Action clickCallback = this.ClickCallback;
@@ -33,7 +33,7 @@ public class SpringManorQuestButton : UiPanelBase
 		clickCallback();
 	}
 
-	// Token: 0x0600E133 RID: 57651 RVA: 0x0034D7B8 File Offset: 0x0034B9B8
+	// Token: 0x0600B550 RID: 46416 RVA: 0x003591E8 File Offset: 0x003573E8
 	public void RefreshRedDot()
 	{
 		SpringManorModel instance = SpringManorModel.Instance;
@@ -46,17 +46,17 @@ public class SpringManorQuestButton : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x040067FE RID: 26622
+	// Token: 0x040068DD RID: 26845
 	[Nullable(2)]
 	public Action ClickCallback;
 
-	// Token: 0x02008306 RID: 33542
+	// Token: 0x0200748F RID: 29839
 	private static class ESpringManorQuestButton
 	{
-		// Token: 0x0402ABCB RID: 175051
+		// Token: 0x04025EF3 RID: 155379
 		public const int Button = 0;
 
-		// Token: 0x0402ABCC RID: 175052
+		// Token: 0x04025EF4 RID: 155380
 		public const int RedDot = 1;
 	}
 }

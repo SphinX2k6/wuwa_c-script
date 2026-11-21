@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200114F RID: 4431
+	// Token: 0x02001189 RID: 4489
 	public sealed class SceneFishPointInfo : IMessage<SceneFishPointInfo>, IMessage, IEquatable<SceneFishPointInfo>, IDeepCloneable<SceneFishPointInfo>, IBufferMessage
 	{
-		// Token: 0x060179F1 RID: 96753 RVA: 0x0036DD8B File Offset: 0x0036BF8B
+		// Token: 0x06017F92 RID: 98194 RVA: 0x0037D0D7 File Offset: 0x0037B2D7
 		[NullableContext(1)]
 		public static SceneFishPointInfo Create()
 		{
 			return new SceneFishPointInfo();
 		}
 
-		// Token: 0x17004F46 RID: 20294
-		// (get) Token: 0x060179F2 RID: 96754 RVA: 0x0036DD92 File Offset: 0x0036BF92
+		// Token: 0x170050B2 RID: 20658
+		// (get) Token: 0x06017F93 RID: 98195 RVA: 0x0037D0DE File Offset: 0x0037B2DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SceneFishPointInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F47 RID: 20295
-		// (get) Token: 0x060179F3 RID: 96755 RVA: 0x0036DD99 File Offset: 0x0036BF99
+		// Token: 0x170050B3 RID: 20659
+		// (get) Token: 0x06017F94 RID: 98196 RVA: 0x0037D0E5 File Offset: 0x0037B2E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F48 RID: 20296
-		// (get) Token: 0x060179F4 RID: 96756 RVA: 0x0036DD9C File Offset: 0x0036BF9C
+		// Token: 0x170050B4 RID: 20660
+		// (get) Token: 0x06017F95 RID: 98197 RVA: 0x0037D0E8 File Offset: 0x0037B2E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179F5 RID: 96757 RVA: 0x0036DDA3 File Offset: 0x0036BFA3
+		// Token: 0x06017F96 RID: 98198 RVA: 0x0037D0EF File Offset: 0x0037B2EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneFishPointInfo()
 		{
 		}
 
-		// Token: 0x060179F6 RID: 96758 RVA: 0x0036DDC1 File Offset: 0x0036BFC1
+		// Token: 0x06017F97 RID: 98199 RVA: 0x0037D10D File Offset: 0x0037B30D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneFishPointInfo(SceneFishPointInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060179F7 RID: 96759 RVA: 0x0036DDFC File Offset: 0x0036BFFC
+		// Token: 0x06017F98 RID: 98200 RVA: 0x0037D148 File Offset: 0x0037B348
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneFishPointInfo Clone()
@@ -79,8 +79,8 @@ namespace Aki.Protocol
 			return new SceneFishPointInfo(this);
 		}
 
-		// Token: 0x17004F49 RID: 20297
-		// (get) Token: 0x060179F8 RID: 96760 RVA: 0x0036DE04 File Offset: 0x0036C004
+		// Token: 0x170050B5 RID: 20661
+		// (get) Token: 0x06017F99 RID: 98201 RVA: 0x0037D150 File Offset: 0x0037B350
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OneFishPointInfo> FishPoints
@@ -91,8 +91,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F4A RID: 20298
-		// (get) Token: 0x060179F9 RID: 96761 RVA: 0x0036DE0C File Offset: 0x0036C00C
+		// Token: 0x170050B6 RID: 20662
+		// (get) Token: 0x06017F9A RID: 98202 RVA: 0x0037D158 File Offset: 0x0037B358
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<TempFishPointInfo> TempFishPoints
@@ -103,7 +103,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179FA RID: 96762 RVA: 0x0036DE14 File Offset: 0x0036C014
+		// Token: 0x06017F9B RID: 98203 RVA: 0x0037D160 File Offset: 0x0037B360
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -111,7 +111,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneFishPointInfo);
 		}
 
-		// Token: 0x060179FB RID: 96763 RVA: 0x0036DE24 File Offset: 0x0036C024
+		// Token: 0x06017F9C RID: 98204 RVA: 0x0037D170 File Offset: 0x0037B370
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneFishPointInfo other)
@@ -119,7 +119,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.fishPoints_.Equals(other.fishPoints_) && this.tempFishPoints_.Equals(other.tempFishPoints_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060179FC RID: 96764 RVA: 0x0036DE78 File Offset: 0x0036C078
+		// Token: 0x06017F9D RID: 98205 RVA: 0x0037D1C4 File Offset: 0x0037B3C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060179FD RID: 96765 RVA: 0x0036DEBA File Offset: 0x0036C0BA
+		// Token: 0x06017F9E RID: 98206 RVA: 0x0037D206 File Offset: 0x0037B406
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060179FE RID: 96766 RVA: 0x0036DEC7 File Offset: 0x0036C0C7
+		// Token: 0x06017F9F RID: 98207 RVA: 0x0037D213 File Offset: 0x0037B413
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060179FF RID: 96767 RVA: 0x0036DED0 File Offset: 0x0036C0D0
+		// Token: 0x06017FA0 RID: 98208 RVA: 0x0037D21C File Offset: 0x0037B41C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017A00 RID: 96768 RVA: 0x0036DF08 File Offset: 0x0036C108
+		// Token: 0x06017FA1 RID: 98209 RVA: 0x0037D254 File Offset: 0x0037B454
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017A01 RID: 96769 RVA: 0x0036DF54 File Offset: 0x0036C154
+		// Token: 0x06017FA2 RID: 98210 RVA: 0x0037D2A0 File Offset: 0x0037B4A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneFishPointInfo other)
@@ -192,7 +192,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017A02 RID: 96770 RVA: 0x0036DF93 File Offset: 0x0036C193
+		// Token: 0x06017FA3 RID: 98211 RVA: 0x0037D2DF File Offset: 0x0037B4DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017A03 RID: 96771 RVA: 0x0036DF9C File Offset: 0x0036C19C
+		// Token: 0x06017FA4 RID: 98212 RVA: 0x0037D2E8 File Offset: 0x0037B4E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -230,28 +230,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008C38 RID: 35896
+		// Token: 0x04008ECB RID: 36555
 		private static readonly MessageParser<SceneFishPointInfo> _parser = new MessageParser<SceneFishPointInfo>(() => new SceneFishPointInfo());
 
-		// Token: 0x04008C39 RID: 35897
+		// Token: 0x04008ECC RID: 36556
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008C3A RID: 35898
+		// Token: 0x04008ECD RID: 36557
 		public const int FishPointsFieldNumber = 1;
 
-		// Token: 0x04008C3B RID: 35899
+		// Token: 0x04008ECE RID: 36558
 		private static readonly FieldCodec<OneFishPointInfo> _repeated_fishPoints_codec = FieldCodec.ForMessage<OneFishPointInfo>(10U, OneFishPointInfo.Parser);
 
-		// Token: 0x04008C3C RID: 35900
+		// Token: 0x04008ECF RID: 36559
 		private readonly RepeatedField<OneFishPointInfo> fishPoints_ = new RepeatedField<OneFishPointInfo>();
 
-		// Token: 0x04008C3D RID: 35901
+		// Token: 0x04008ED0 RID: 36560
 		public const int TempFishPointsFieldNumber = 2;
 
-		// Token: 0x04008C3E RID: 35902
+		// Token: 0x04008ED1 RID: 36561
 		private static readonly FieldCodec<TempFishPointInfo> _repeated_tempFishPoints_codec = FieldCodec.ForMessage<TempFishPointInfo>(18U, TempFishPointInfo.Parser);
 
-		// Token: 0x04008C3F RID: 35903
+		// Token: 0x04008ED2 RID: 36562
 		private readonly RepeatedField<TempFishPointInfo> tempFishPoints_ = new RepeatedField<TempFishPointInfo>();
 	}
 }

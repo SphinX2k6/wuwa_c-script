@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200065E RID: 1630
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006FB RID: 1787
 	public class IRangeConstraint
 	{
-		// Token: 0x060022E4 RID: 8932 RVA: 0x0005FC20 File Offset: 0x0005DE20
+		// Token: 0x060025EA RID: 9706 RVA: 0x00066934 File Offset: 0x00064B34
 		private IRangeConstraint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022E5 RID: 8933 RVA: 0x0005FC58 File Offset: 0x0005DE58
+		// Token: 0x060025EB RID: 9707 RVA: 0x0006696C File Offset: 0x00064B6C
 		public static IRangeConstraint Create([Nullable(2)] IRangeConstraint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022E6 RID: 8934 RVA: 0x0005FC6B File Offset: 0x0005DE6B
+		// Token: 0x060025EC RID: 9708 RVA: 0x0006697F File Offset: 0x00064B7F
 		public static IRangeConstraint CreateFromSetValue([Nullable(2)] IRangeConstraint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022E7 RID: 8935 RVA: 0x0005FC7E File Offset: 0x0005DE7E
+		// Token: 0x060025ED RID: 9709 RVA: 0x00066992 File Offset: 0x00064B92
 		public IRangeConstraint_SetValue ToSetValue()
 		{
 			return new IRangeConstraint_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000944 RID: 2372
-		// (get) Token: 0x060022E8 RID: 8936 RVA: 0x0005FC91 File Offset: 0x0005DE91
-		// (set) Token: 0x060022E9 RID: 8937 RVA: 0x0005FCBC File Offset: 0x0005DEBC
+		// Token: 0x170009FB RID: 2555
+		// (get) Token: 0x060025EE RID: 9710 RVA: 0x000669A5 File Offset: 0x00064BA5
+		// (set) Token: 0x060025EF RID: 9711 RVA: 0x000669D0 File Offset: 0x00064BD0
 		public virtual ERangeConstraint Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001838 RID: 6200
+		// Token: 0x04001A2A RID: 6698
 		[Nullable(2)]
 		protected IRangeConstraint FbInstance;
 
-		// Token: 0x04001839 RID: 6201
+		// Token: 0x04001A2B RID: 6699
 		[Nullable(2)]
 		protected IRangeConstraint_SetValue PocoInterface;
 	}

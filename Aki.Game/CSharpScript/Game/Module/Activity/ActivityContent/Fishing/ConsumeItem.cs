@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065C9 RID: 26057
+	// Token: 0x02005547 RID: 21831
 	internal class ConsumeItem : UiPanelBase
 	{
-		// Token: 0x060415BA RID: 267706 RVA: 0x00FD6890 File Offset: 0x00FD4A90
+		// Token: 0x0603627F RID: 221823 RVA: 0x00F1D8D0 File Offset: 0x00F1BAD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,32 +36,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060415BB RID: 267707 RVA: 0x00FD6957 File Offset: 0x00FD4B57
+		// Token: 0x06036280 RID: 221824 RVA: 0x00F1D997 File Offset: 0x00F1BB97
 		private void OnClick()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 		}
 
-		// Token: 0x060415BC RID: 267708 RVA: 0x00FD696B File Offset: 0x00FD4B6B
+		// Token: 0x06036281 RID: 221825 RVA: 0x00F1D9AC File Offset: 0x00F1BBAC
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.RefreshCount));
 		}
 
-		// Token: 0x060415BD RID: 267709 RVA: 0x00FD6989 File Offset: 0x00FD4B89
+		// Token: 0x06036282 RID: 221826 RVA: 0x00F1D9CA File Offset: 0x00F1BBCA
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.RefreshCount));
 		}
 
-		// Token: 0x060415BE RID: 267710 RVA: 0x00FD69A7 File Offset: 0x00FD4BA7
+		// Token: 0x06036283 RID: 221827 RVA: 0x00F1D9E8 File Offset: 0x00F1BBE8
 		[NullableContext(1)]
 		private void RefreshCount(IProto_NormalItem normalItem, int i, int arg3)
 		{
 			this.Refresh(this.ItemId);
 		}
 
-		// Token: 0x060415BF RID: 267711 RVA: 0x00FD69B8 File Offset: 0x00FD4BB8
+		// Token: 0x06036284 RID: 221828 RVA: 0x00F1D9F8 File Offset: 0x00F1BBF8
 		public void Refresh(int itemId)
 		{
 			this.ItemId = itemId;
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.SetItemIcon(base.GetTexture(0), itemId, null, null);
 		}
 
-		// Token: 0x0402201C RID: 139292
+		// Token: 0x0401C94D RID: 117069
 		private int ItemId;
 
-		// Token: 0x0200C7EE RID: 51182
+		// Token: 0x0200B1D1 RID: 45521
 		private class EConsumeItem
 		{
-			// Token: 0x0403C61C RID: 247324
+			// Token: 0x04036F6A RID: 225130
 			public const int Icon = 0;
 
-			// Token: 0x0403C61D RID: 247325
+			// Token: 0x04036F6B RID: 225131
 			public const int Text = 1;
 
-			// Token: 0x0403C61E RID: 247326
+			// Token: 0x04036F6C RID: 225132
 			public const int Btn = 2;
 		}
 	}

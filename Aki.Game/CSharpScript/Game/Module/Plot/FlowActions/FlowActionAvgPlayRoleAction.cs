@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050A6 RID: 20646
+	// Token: 0x02004076 RID: 16502
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowActionAvgPlayRoleAction : FlowActionBase
 	{
-		// Token: 0x06034E8E RID: 216718 RVA: 0x00C8802C File Offset: 0x00C8622C
+		// Token: 0x06029D87 RID: 171399 RVA: 0x00BD52AC File Offset: 0x00BD34AC
 		protected override void OnExecute()
 		{
 			List<IAvgPlayRoleActionItem> roleActionList = (this.ActionInfo.Params as AvgPlayRoleAction).RoleActionList;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}).Forget();
 		}
 
-		// Token: 0x06034E8F RID: 216719 RVA: 0x00C880D4 File Offset: 0x00C862D4
+		// Token: 0x06029D88 RID: 171400 RVA: 0x00BD5354 File Offset: 0x00BD3554
 		private UniTask ExecuteRoleAction(IAvgPlayRoleActionItem roleAction)
 		{
 			FlowActionAvgPlayRoleAction.<ExecuteRoleAction>d__1 <ExecuteRoleAction>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <ExecuteRoleAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E90 RID: 216720 RVA: 0x00C88120 File Offset: 0x00C86320
+		// Token: 0x06029D89 RID: 171401 RVA: 0x00BD53A0 File Offset: 0x00BD35A0
 		private UniTask EnterAsync(IAvgPlayRoleActionItem roleAction)
 		{
 			FlowActionAvgPlayRoleAction.<EnterAsync>d__2 <EnterAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			return <EnterAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E91 RID: 216721 RVA: 0x00C88164 File Offset: 0x00C86364
+		// Token: 0x06029D8A RID: 171402 RVA: 0x00BD53E4 File Offset: 0x00BD35E4
 		private UniTask ExitAsync(IAvgPlayRoleActionItem roleAction)
 		{
 			FlowActionAvgPlayRoleAction.<ExitAsync>d__3 <ExitAsync>d__;

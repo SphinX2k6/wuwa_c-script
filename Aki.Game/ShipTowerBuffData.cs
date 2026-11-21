@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Item;
 using UnrealEngine;
 
-// Token: 0x02002978 RID: 10616
+// Token: 0x02001EF3 RID: 7923
 [NullableContext(1)]
 [Nullable(0)]
 public class ShipTowerBuffData
 {
-	// Token: 0x06015FEF RID: 90095 RVA: 0x0058E27A File Offset: 0x0058C47A
+	// Token: 0x060139F5 RID: 80373 RVA: 0x005B923F File Offset: 0x005B743F
 	public ShipTowerBuffData()
 	{
 		this.BuffIds = new List<long>();
@@ -19,8 +19,8 @@ public class ShipTowerBuffData
 		this.BgDescKey = "";
 	}
 
-	// Token: 0x17001D8A RID: 7562
-	// (get) Token: 0x06015FF0 RID: 90096 RVA: 0x0058E2AE File Offset: 0x0058C4AE
+	// Token: 0x17001DE3 RID: 7651
+	// (get) Token: 0x060139F6 RID: 80374 RVA: 0x005B9273 File Offset: 0x005B7473
 	public int CanUseCount
 	{
 		get
@@ -29,8 +29,8 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x17001D8B RID: 7563
-	// (get) Token: 0x06015FF1 RID: 90097 RVA: 0x0058E2BD File Offset: 0x0058C4BD
+	// Token: 0x17001DE4 RID: 7652
+	// (get) Token: 0x060139F7 RID: 80375 RVA: 0x005B9282 File Offset: 0x005B7482
 	public int CanUseCountNoEdit
 	{
 		get
@@ -39,8 +39,8 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x17001D8C RID: 7564
-	// (get) Token: 0x06015FF2 RID: 90098 RVA: 0x0058E2CC File Offset: 0x0058C4CC
+	// Token: 0x17001DE5 RID: 7653
+	// (get) Token: 0x060139F8 RID: 80376 RVA: 0x005B9291 File Offset: 0x005B7491
 	public bool IsUnlock
 	{
 		get
@@ -49,8 +49,8 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x17001D8D RID: 7565
-	// (get) Token: 0x06015FF3 RID: 90099 RVA: 0x0058E2D7 File Offset: 0x0058C4D7
+	// Token: 0x17001DE6 RID: 7654
+	// (get) Token: 0x060139F9 RID: 80377 RVA: 0x005B929C File Offset: 0x005B749C
 	public int TotalUseCount
 	{
 		get
@@ -59,8 +59,8 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x17001D8E RID: 7566
-	// (get) Token: 0x06015FF4 RID: 90100 RVA: 0x0058E2EC File Offset: 0x0058C4EC
+	// Token: 0x17001DE7 RID: 7655
+	// (get) Token: 0x060139FA RID: 80378 RVA: 0x005B92B0 File Offset: 0x005B74B0
 	public int UsedCount
 	{
 		get
@@ -95,8 +95,8 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x17001D8F RID: 7567
-	// (get) Token: 0x06015FF5 RID: 90101 RVA: 0x0058E3F0 File Offset: 0x0058C5F0
+	// Token: 0x17001DE8 RID: 7656
+	// (get) Token: 0x060139FB RID: 80379 RVA: 0x005B93B4 File Offset: 0x005B75B4
 	public int UsedCountNoEdit
 	{
 		get
@@ -131,7 +131,7 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x06015FF6 RID: 90102 RVA: 0x0058E4F4 File Offset: 0x0058C6F4
+	// Token: 0x060139FC RID: 80380 RVA: 0x005B94B8 File Offset: 0x005B76B8
 	public void Init(SlashBuffToItem cfg)
 	{
 		this.Id = cfg.Id;
@@ -142,7 +142,7 @@ public class ShipTowerBuffData
 		this.UpdateItemInfo();
 	}
 
-	// Token: 0x06015FF7 RID: 90103 RVA: 0x0058E550 File Offset: 0x0058C750
+	// Token: 0x060139FD RID: 80381 RVA: 0x005B9514 File Offset: 0x005B7714
 	private void UpdateItemInfo()
 	{
 		ItemInfo? config = ItemConfig.Instance.GetConfig(this.ItemId);
@@ -155,7 +155,7 @@ public class ShipTowerBuffData
 		}
 	}
 
-	// Token: 0x06015FF8 RID: 90104 RVA: 0x0058E5CB File Offset: 0x0058C7CB
+	// Token: 0x060139FE RID: 80382 RVA: 0x005B958F File Offset: 0x005B778F
 	public void SetSelected(bool isSelected)
 	{
 		if (isSelected)
@@ -170,13 +170,13 @@ public class ShipTowerBuffData
 		this.IsSelected = isSelected;
 	}
 
-	// Token: 0x06015FF9 RID: 90105 RVA: 0x0058E5F8 File Offset: 0x0058C7F8
+	// Token: 0x060139FF RID: 80383 RVA: 0x005B95BC File Offset: 0x005B77BC
 	public void ClearSelected()
 	{
 		this.IsSelected = false;
 	}
 
-	// Token: 0x06015FFA RID: 90106 RVA: 0x0058E604 File Offset: 0x0058C804
+	// Token: 0x06013A00 RID: 80384 RVA: 0x005B95C8 File Offset: 0x005B77C8
 	public string CanUseCountStr(int? stageId = null)
 	{
 		if (!this.IsUnlimited(stageId))
@@ -186,7 +186,7 @@ public class ShipTowerBuffData
 		return "∞";
 	}
 
-	// Token: 0x06015FFB RID: 90107 RVA: 0x0058E62E File Offset: 0x0058C82E
+	// Token: 0x06013A01 RID: 80385 RVA: 0x005B95F2 File Offset: 0x005B77F2
 	public bool IsUnlimited(int? stageId = null)
 	{
 		if (this.Unlimited)
@@ -204,13 +204,13 @@ public class ShipTowerBuffData
 		return false;
 	}
 
-	// Token: 0x06015FFC RID: 90108 RVA: 0x0058E665 File Offset: 0x0058C865
+	// Token: 0x06013A02 RID: 80386 RVA: 0x005B9629 File Offset: 0x005B7829
 	public bool IsShowNumTextCallback(int? stageId = null)
 	{
 		return !this.IsUnlimited(stageId);
 	}
 
-	// Token: 0x06015FFD RID: 90109 RVA: 0x0058E674 File Offset: 0x0058C874
+	// Token: 0x06013A03 RID: 80387 RVA: 0x005B9638 File Offset: 0x005B7838
 	public FColor GetQualityColor()
 	{
 		QualityInfo? qualityConfig = ItemConfig.Instance.GetQualityConfig(this.Quality);
@@ -221,14 +221,14 @@ public class ShipTowerBuffData
 		return new FColor();
 	}
 
-	// Token: 0x06015FFE RID: 90110 RVA: 0x0058E6B5 File Offset: 0x0058C8B5
+	// Token: 0x06013A04 RID: 80388 RVA: 0x005B9679 File Offset: 0x005B7879
 	public bool IsCanUse(int? stageId = null)
 	{
 		ShipTowerModel instance = ShipTowerModel.Instance;
 		return (instance == null || !instance.IsOldSeason(this.Season)) && this.IsUnlock && (this.IsUnlimited(stageId) || this.CanUseCount > 0);
 	}
 
-	// Token: 0x06015FFF RID: 90111 RVA: 0x0058E6F0 File Offset: 0x0058C8F0
+	// Token: 0x06013A05 RID: 80389 RVA: 0x005B96B4 File Offset: 0x005B78B4
 	public string GetQualityTitle()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 1);
@@ -237,13 +237,13 @@ public class ShipTowerBuffData
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016000 RID: 90112 RVA: 0x0058E727 File Offset: 0x0058C927
+	// Token: 0x06013A06 RID: 80390 RVA: 0x005B96EB File Offset: 0x005B78EB
 	public bool IsFirstGet()
 	{
 		return this.IsUnlock && !ShipTowerModel.Instance.PlayerGetBuffSet.Contains(this.Id);
 	}
 
-	// Token: 0x06016001 RID: 90113 RVA: 0x0058E74D File Offset: 0x0058C94D
+	// Token: 0x06013A07 RID: 80391 RVA: 0x005B9711 File Offset: 0x005B7911
 	public bool AddToGetState()
 	{
 		if (!this.IsFirstGet())
@@ -254,33 +254,33 @@ public class ShipTowerBuffData
 		return true;
 	}
 
-	// Token: 0x0400A398 RID: 41880
+	// Token: 0x0400A782 RID: 42882
 	public int Id;
 
-	// Token: 0x0400A399 RID: 41881
+	// Token: 0x0400A783 RID: 42883
 	public List<long> BuffIds;
 
-	// Token: 0x0400A39A RID: 41882
+	// Token: 0x0400A784 RID: 42884
 	public int ItemId;
 
-	// Token: 0x0400A39B RID: 41883
+	// Token: 0x0400A785 RID: 42885
 	public int Quality;
 
-	// Token: 0x0400A39C RID: 41884
+	// Token: 0x0400A786 RID: 42886
 	public string ItemNameKey;
 
-	// Token: 0x0400A39D RID: 41885
+	// Token: 0x0400A787 RID: 42887
 	public string ObtainedShowDescKey;
 
-	// Token: 0x0400A39E RID: 41886
+	// Token: 0x0400A788 RID: 42888
 	public string BgDescKey;
 
-	// Token: 0x0400A39F RID: 41887
+	// Token: 0x0400A789 RID: 42889
 	public bool IsSelected;
 
-	// Token: 0x0400A3A0 RID: 41888
+	// Token: 0x0400A78A RID: 42890
 	private bool Unlimited;
 
-	// Token: 0x0400A3A1 RID: 41889
+	// Token: 0x0400A78B RID: 42891
 	public int Season;
 }

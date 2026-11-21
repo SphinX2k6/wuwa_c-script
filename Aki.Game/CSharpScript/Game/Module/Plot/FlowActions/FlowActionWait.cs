@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050DE RID: 20702
+	// Token: 0x020040AE RID: 16558
 	public class FlowActionWait : FlowActionBase
 	{
-		// Token: 0x06034F6D RID: 216941 RVA: 0x00C8BF44 File Offset: 0x00C8A144
+		// Token: 0x06029E66 RID: 171622 RVA: 0x00BD922C File Offset: 0x00BD742C
 		protected override void OnExecute()
 		{
 			Wait wait = this.ActionInfo.Params as Wait;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}, wait.Time * (float)TimeUtil.Instance.InverseMillisecond, null, null, true, 1f);
 		}
 
-		// Token: 0x06034F6E RID: 216942 RVA: 0x00C8BF98 File Offset: 0x00C8A198
+		// Token: 0x06029E67 RID: 171623 RVA: 0x00BD9280 File Offset: 0x00BD7480
 		protected override void OnInterruptExecute()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.TimerId))
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x0401C318 RID: 115480
+		// Token: 0x04016D49 RID: 93513
 		[Nullable(2)]
 		private TimerHandle TimerId;
 	}

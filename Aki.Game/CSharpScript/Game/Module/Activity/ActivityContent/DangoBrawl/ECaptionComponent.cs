@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200682E RID: 26670
+	// Token: 0x0200577E RID: 22398
 	internal enum ECaptionComponent
 	{
-		// Token: 0x04022AD3 RID: 142035
+		// Token: 0x0401D330 RID: 119600
 		SprTitleIcon,
-		// Token: 0x04022AD4 RID: 142036
+		// Token: 0x0401D331 RID: 119601
 		TxtTitle,
-		// Token: 0x04022AD5 RID: 142037
+		// Token: 0x0401D332 RID: 119602
 		BtnHelpInfo,
-		// Token: 0x04022AD6 RID: 142038
+		// Token: 0x0401D333 RID: 119603
 		BtnBack,
-		// Token: 0x04022AD7 RID: 142039
+		// Token: 0x0401D334 RID: 119604
 		PnlCost,
-		// Token: 0x04022AD8 RID: 142040
+		// Token: 0x0401D335 RID: 119605
 		PnlTabInfo,
-		// Token: 0x04022AD9 RID: 142041
+		// Token: 0x0401D336 RID: 119606
 		PnlHome,
-		// Token: 0x04022ADA RID: 142042
+		// Token: 0x0401D337 RID: 119607
 		PnlTabInfoNoInter
 	}
 }

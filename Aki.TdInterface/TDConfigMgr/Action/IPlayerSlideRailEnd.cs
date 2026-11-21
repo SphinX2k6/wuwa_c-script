@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D0C RID: 7436
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F1D RID: 7965
 	public class IPlayerSlideRailEnd : ISlideRailEndType
 	{
-		// Token: 0x06009F91 RID: 40849 RVA: 0x0016C70C File Offset: 0x0016A90C
+		// Token: 0x0600A97B RID: 43387 RVA: 0x00180AAC File Offset: 0x0017ECAC
 		private IPlayerSlideRailEnd_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F92 RID: 40850 RVA: 0x0016C744 File Offset: 0x0016A944
+		// Token: 0x0600A97C RID: 43388 RVA: 0x00180AE4 File Offset: 0x0017ECE4
 		public static IPlayerSlideRailEnd Create([Nullable(2)] IPlayerSlideRailEnd instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F93 RID: 40851 RVA: 0x0016C757 File Offset: 0x0016A957
+		// Token: 0x0600A97D RID: 43389 RVA: 0x00180AF7 File Offset: 0x0017ECF7
 		public static IPlayerSlideRailEnd CreateFromSetValue([Nullable(2)] IPlayerSlideRailEnd_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F94 RID: 40852 RVA: 0x0016C76A File Offset: 0x0016A96A
+		// Token: 0x0600A97E RID: 43390 RVA: 0x00180B0A File Offset: 0x0017ED0A
 		public new IPlayerSlideRailEnd_SetValue ToSetValue()
 		{
 			return new IPlayerSlideRailEnd_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700318D RID: 12685
-		// (get) Token: 0x06009F95 RID: 40853 RVA: 0x0016C77D File Offset: 0x0016A97D
-		// (set) Token: 0x06009F96 RID: 40854 RVA: 0x0016C7A8 File Offset: 0x0016A9A8
+		// Token: 0x17003420 RID: 13344
+		// (get) Token: 0x0600A97F RID: 43391 RVA: 0x00180B1D File Offset: 0x0017ED1D
+		// (set) Token: 0x0600A980 RID: 43392 RVA: 0x00180B48 File Offset: 0x0017ED48
 		public override ESlideRailEndType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400604A RID: 24650
+		// Token: 0x040065C3 RID: 26051
 		[Nullable(2)]
 		protected new IPlayerSlideRailEnd FbInstance;
 
-		// Token: 0x0400604B RID: 24651
+		// Token: 0x040065C4 RID: 26052
 		[Nullable(2)]
 		protected new IPlayerSlideRailEnd_SetValue PocoInterface;
 	}

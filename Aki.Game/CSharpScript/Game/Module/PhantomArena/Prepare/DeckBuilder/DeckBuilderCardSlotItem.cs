@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005196 RID: 20886
+	// Token: 0x02004166 RID: 16742
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 	})]
 	public class DeckBuilderCardSlotItem : GridProxyAbstract<IDeckBuilderCardSlotItemData>
 	{
-		// Token: 0x0603569B RID: 218779 RVA: 0x00CA63A8 File Offset: 0x00CA45A8
+		// Token: 0x0602A596 RID: 173462 RVA: 0x00BF395C File Offset: 0x00BF1B5C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x0603569C RID: 218780 RVA: 0x00CA64A0 File Offset: 0x00CA46A0
+		// Token: 0x0602A597 RID: 173463 RVA: 0x00BF3A54 File Offset: 0x00BF1C54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DeckBuilderCardSlotItem.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603569D RID: 218781 RVA: 0x00CA64E4 File Offset: 0x00CA46E4
+		// Token: 0x0602A598 RID: 173464 RVA: 0x00BF3A98 File Offset: 0x00BF1C98
 		[NullableContext(1)]
 		public override void Refresh(IDeckBuilderCardSlotItemData data, bool isSelected, int gridIndex)
 		{
@@ -76,50 +76,50 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603569E RID: 218782 RVA: 0x00CA65FD File Offset: 0x00CA47FD
+		// Token: 0x0602A599 RID: 173465 RVA: 0x00BF3BB1 File Offset: 0x00BF1DB1
 		public void RefreshLockState()
 		{
 			base.GetItem(6).SetUIActive(this.Data.Locked);
 		}
 
-		// Token: 0x0603569F RID: 218783 RVA: 0x00CA6618 File Offset: 0x00CA4818
+		// Token: 0x0602A59A RID: 173466 RVA: 0x00BF3BCC File Offset: 0x00BF1DCC
 		public void RefreshOutlookState()
 		{
 			string path = this.Data.OutlookUnlocked ? "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity24/SoundRemnantArena/Outside/SP_IconOutsideTeamListGold.SP_IconOutsideTeamListGold" : "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity24/SoundRemnantArena/Outside/SP_IconOutsideTeamListNor.SP_IconOutsideTeamListNor";
 			this.SetSpriteByPath(path, base.GetSprite(9), false, null, null);
 		}
 
-		// Token: 0x060356A0 RID: 218784 RVA: 0x00CA6659 File Offset: 0x00CA4859
+		// Token: 0x0602A59B RID: 173467 RVA: 0x00BF3C0D File Offset: 0x00BF1E0D
 		public void RefreshRedDot()
 		{
 			base.GetItem(7).SetUIActive(this.Data.RedDotState);
 		}
 
-		// Token: 0x060356A1 RID: 218785 RVA: 0x00CA6672 File Offset: 0x00CA4872
+		// Token: 0x0602A59C RID: 173468 RVA: 0x00BF3C26 File Offset: 0x00BF1E26
 		private void RefreshElement(int elementId)
 		{
 			this.ElementItem.Refresh((ECardElement)elementId, false, 0);
 		}
 
-		// Token: 0x060356A2 RID: 218786 RVA: 0x00CA6682 File Offset: 0x00CA4882
+		// Token: 0x0602A59D RID: 173469 RVA: 0x00BF3C36 File Offset: 0x00BF1E36
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x060356A3 RID: 218787 RVA: 0x00CA6695 File Offset: 0x00CA4895
+		// Token: 0x0602A59E RID: 173470 RVA: 0x00BF3C49 File Offset: 0x00BF1E49
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060356A4 RID: 218788 RVA: 0x00CA66A8 File Offset: 0x00CA48A8
+		// Token: 0x0602A59F RID: 173471 RVA: 0x00BF3C5C File Offset: 0x00BF1E5C
 		private bool CanToggleExecuteChangeInternal()
 		{
 			return this.CanToggleChange == null || this.CanToggleChange(this);
 		}
 
-		// Token: 0x060356A5 RID: 218789 RVA: 0x00CA66C0 File Offset: 0x00CA48C0
+		// Token: 0x0602A5A0 RID: 173472 RVA: 0x00BF3C74 File Offset: 0x00BF1E74
 		private void OnItemTogglePointDownCallBack(EToggleState _)
 		{
 			if (this.TickHandleId != -1)
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.TickHandleId = ((ticker != null) ? ticker.Id : -1);
 		}
 
-		// Token: 0x060356A6 RID: 218790 RVA: 0x00CA672C File Offset: 0x00CA492C
+		// Token: 0x0602A5A1 RID: 173473 RVA: 0x00BF3CE0 File Offset: 0x00BF1EE0
 		private void OnItemTogglePointUpCallBackWithEventData(EToggleState state, ULGUIPointerEventData eventData)
 		{
 			USceneComponent usceneComponent = (eventData != null) ? eventData.dragComponent : null;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			this.HoldTime = 0f;
 		}
 
-		// Token: 0x060356A7 RID: 218791 RVA: 0x00CA67B6 File Offset: 0x00CA49B6
+		// Token: 0x0602A5A2 RID: 173474 RVA: 0x00BF3D6A File Offset: 0x00BF1F6A
 		private void OnToggleStateChangeInternal(EToggleState state)
 		{
 			Action<DeckBuilderCardSlotItem, EToggleState> onToggleStateChange = this.OnToggleStateChange;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			onToggleStateChange(this, state);
 		}
 
-		// Token: 0x060356A8 RID: 218792 RVA: 0x00CA67CC File Offset: 0x00CA49CC
+		// Token: 0x0602A5A3 RID: 173475 RVA: 0x00BF3D80 File Offset: 0x00BF1F80
 		private void PressTick(float deltaTime)
 		{
 			this.HoldTime += deltaTime;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x060356A9 RID: 218793 RVA: 0x00CA6864 File Offset: 0x00CA4A64
+		// Token: 0x0602A5A4 RID: 173476 RVA: 0x00BF3E18 File Offset: 0x00BF2018
 		private bool OnItemTogglePointerBeginDragCallBack(ULGUIPointerEventData _)
 		{
 			Action longPressEndCallback = this.LongPressEndCallback;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return true;
 		}
 
-		// Token: 0x060356AA RID: 218794 RVA: 0x00CA6899 File Offset: 0x00CA4A99
+		// Token: 0x0602A5A5 RID: 173477 RVA: 0x00BF3E4D File Offset: 0x00BF204D
 		private void OnPointEnter(EToggleState _)
 		{
 			if (Info.Instance.IsInTouch())
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			onPointEnterCallback(this.Data.SlotInfo.CardId);
 		}
 
-		// Token: 0x060356AB RID: 218795 RVA: 0x00CA68C8 File Offset: 0x00CA4AC8
+		// Token: 0x0602A5A6 RID: 173478 RVA: 0x00BF3E7C File Offset: 0x00BF207C
 		private void OnPointExit(EToggleState _)
 		{
 			if (Info.Instance.IsInTouch())
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			onPointExitCallback();
 		}
 
-		// Token: 0x060356AC RID: 218796 RVA: 0x00CA68E7 File Offset: 0x00CA4AE7
+		// Token: 0x0602A5A7 RID: 173479 RVA: 0x00BF3E9B File Offset: 0x00BF209B
 		public DeckCardSlotInfo GetData()
 		{
 			IDeckBuilderCardSlotItemData data = this.Data;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			return data.SlotInfo;
 		}
 
-		// Token: 0x060356AD RID: 218797 RVA: 0x00CA68FA File Offset: 0x00CA4AFA
+		// Token: 0x0602A5A8 RID: 173480 RVA: 0x00BF3EAE File Offset: 0x00BF20AE
 		public void TriggerLongPress()
 		{
 			Action<DeckBuilderCardSlotItem, float> longPressCallback = this.LongPressCallback;
@@ -269,28 +269,28 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			longPressCallback(this, -1f);
 		}
 
-		// Token: 0x0401C623 RID: 116259
+		// Token: 0x04017058 RID: 94296
 		protected IDeckBuilderCardSlotItemData Data;
 
-		// Token: 0x0401C624 RID: 116260
+		// Token: 0x04017059 RID: 94297
 		private CardElementItem ElementItem;
 
-		// Token: 0x0401C625 RID: 116261
+		// Token: 0x0401705A RID: 94298
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401C626 RID: 116262
+		// Token: 0x0401705B RID: 94299
 		private float HoldTime;
 
-		// Token: 0x0401C627 RID: 116263
+		// Token: 0x0401705C RID: 94300
 		private int TickHandleId = -1;
 
-		// Token: 0x0401C628 RID: 116264
+		// Token: 0x0401705D RID: 94301
 		public float LongPressStartTime;
 
-		// Token: 0x0401C629 RID: 116265
+		// Token: 0x0401705E RID: 94302
 		public float LongPressEndTime;
 
-		// Token: 0x0401C62A RID: 116266
+		// Token: 0x0401705F RID: 94303
 		[Nullable(new byte[]
 		{
 			2,
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 		})]
 		public Func<DeckBuilderCardSlotItem, bool> CanToggleChange;
 
-		// Token: 0x0401C62B RID: 116267
+		// Token: 0x04017060 RID: 94304
 		[Nullable(new byte[]
 		{
 			2,
@@ -306,10 +306,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 		})]
 		public Action<DeckBuilderCardSlotItem, float> LongPressCallback;
 
-		// Token: 0x0401C62C RID: 116268
+		// Token: 0x04017061 RID: 94305
 		public Action LongPressEndCallback;
 
-		// Token: 0x0401C62D RID: 116269
+		// Token: 0x04017062 RID: 94306
 		[Nullable(new byte[]
 		{
 			2,
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 		})]
 		public Action<DeckBuilderCardSlotItem> ShortClickCallback;
 
-		// Token: 0x0401C62E RID: 116270
+		// Token: 0x04017063 RID: 94307
 		[Nullable(new byte[]
 		{
 			2,
@@ -325,44 +325,44 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 		})]
 		public Action<DeckBuilderCardSlotItem, EToggleState> OnToggleStateChange;
 
-		// Token: 0x0401C62F RID: 116271
+		// Token: 0x04017064 RID: 94308
 		public Action<int> OnPointEnterCallback;
 
-		// Token: 0x0401C630 RID: 116272
+		// Token: 0x04017065 RID: 94309
 		public Action OnPointExitCallback;
 
-		// Token: 0x0200B306 RID: 45830
+		// Token: 0x02009D3F RID: 40255
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036416 RID: 222230
+			// Token: 0x04030E6B RID: 200299
 			public const int ItemToggle = 0;
 
-			// Token: 0x04036417 RID: 222231
+			// Token: 0x04030E6C RID: 200300
 			public const int CardSlotTexture = 1;
 
-			// Token: 0x04036418 RID: 222232
+			// Token: 0x04030E6D RID: 200301
 			public const int NameText = 2;
 
-			// Token: 0x04036419 RID: 222233
+			// Token: 0x04030E6E RID: 200302
 			public const int CostText = 3;
 
-			// Token: 0x0403641A RID: 222234
+			// Token: 0x04030E6F RID: 200303
 			public const int CountText = 4;
 
-			// Token: 0x0403641B RID: 222235
+			// Token: 0x04030E70 RID: 200304
 			public const int ElementItem = 5;
 
-			// Token: 0x0403641C RID: 222236
+			// Token: 0x04030E71 RID: 200305
 			public const int LockItem = 6;
 
-			// Token: 0x0403641D RID: 222237
+			// Token: 0x04030E72 RID: 200306
 			public const int RedDotItem = 7;
 
-			// Token: 0x0403641E RID: 222238
+			// Token: 0x04030E73 RID: 200307
 			public const int LineItem = 8;
 
-			// Token: 0x0403641F RID: 222239
+			// Token: 0x04030E74 RID: 200308
 			public const int BgSprite = 9;
 		}
 	}

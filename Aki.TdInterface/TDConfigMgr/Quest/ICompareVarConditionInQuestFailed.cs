@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F1E RID: 3870
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001034 RID: 4148
 	public class ICompareVarConditionInQuestFailed
 	{
-		// Token: 0x06005598 RID: 21912 RVA: 0x000D1BF8 File Offset: 0x000CFDF8
+		// Token: 0x06005B14 RID: 23316 RVA: 0x000DDDA0 File Offset: 0x000DBFA0
 		private ICompareVarConditionInQuestFailed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005599 RID: 21913 RVA: 0x000D1C30 File Offset: 0x000CFE30
+		// Token: 0x06005B15 RID: 23317 RVA: 0x000DDDD8 File Offset: 0x000DBFD8
 		public static ICompareVarConditionInQuestFailed Create([Nullable(2)] ICompareVarConditionInQuestFailed instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600559A RID: 21914 RVA: 0x000D1C43 File Offset: 0x000CFE43
+		// Token: 0x06005B16 RID: 23318 RVA: 0x000DDDEB File Offset: 0x000DBFEB
 		public static ICompareVarConditionInQuestFailed CreateFromSetValue([Nullable(2)] ICompareVarConditionInQuestFailed_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600559B RID: 21915 RVA: 0x000D1C56 File Offset: 0x000CFE56
+		// Token: 0x06005B17 RID: 23319 RVA: 0x000DDDFE File Offset: 0x000DBFFE
 		public ICompareVarConditionInQuestFailed_SetValue ToSetValue()
 		{
 			return new ICompareVarConditionInQuestFailed_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CA0 RID: 7328
-		// (get) Token: 0x0600559C RID: 21916 RVA: 0x000D1C75 File Offset: 0x000CFE75
-		// (set) Token: 0x0600559D RID: 21917 RVA: 0x000D1CA0 File Offset: 0x000CFEA0
+		// Token: 0x17001E38 RID: 7736
+		// (get) Token: 0x06005B18 RID: 23320 RVA: 0x000DDE1D File Offset: 0x000DC01D
+		// (set) Token: 0x06005B19 RID: 23321 RVA: 0x000DDE48 File Offset: 0x000DC048
 		public virtual EConditionCount Count
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CA1 RID: 7329
-		// (get) Token: 0x0600559E RID: 21918 RVA: 0x000D1CB0 File Offset: 0x000CFEB0
-		// (set) Token: 0x0600559F RID: 21919 RVA: 0x000D1D43 File Offset: 0x000CFF43
+		// Token: 0x17001E39 RID: 7737
+		// (get) Token: 0x06005B1A RID: 23322 RVA: 0x000DDE58 File Offset: 0x000DC058
+		// (set) Token: 0x06005B1B RID: 23323 RVA: 0x000DDEEB File Offset: 0x000DC0EB
 		public virtual List<ICompareVarInChildQuest> Conditions
 		{
 			get
@@ -123,18 +121,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033CB RID: 13259
+		// Token: 0x040036D8 RID: 14040
 		[Nullable(2)]
 		protected ICompareVarConditionInQuestFailed FbInstance;
 
-		// Token: 0x040033CC RID: 13260
+		// Token: 0x040036D9 RID: 14041
 		[Nullable(2)]
 		protected ICompareVarConditionInQuestFailed_SetValue PocoInterface;
 
-		// Token: 0x040033CD RID: 13261
+		// Token: 0x040036DA RID: 14042
 		private List<ICompareVarInChildQuest> _ConditionsCache;
 
-		// Token: 0x040033CE RID: 13262
+		// Token: 0x040036DB RID: 14043
 		private bool _ConditionsInited;
 	}
 }

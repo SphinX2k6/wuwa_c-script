@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001650 RID: 5712
+// Token: 0x02000B08 RID: 2824
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerSubView : ActivitySubViewBase
 {
-	// Token: 0x0600A059 RID: 41049 RVA: 0x00235174 File Offset: 0x00233374
+	// Token: 0x06007437 RID: 29751 RVA: 0x0023EFB0 File Offset: 0x0023D1B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -32,7 +32,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A05A RID: 41050 RVA: 0x00235220 File Offset: 0x00233420
+	// Token: 0x06007438 RID: 29752 RVA: 0x0023F05C File Offset: 0x0023D25C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerSubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A05B RID: 41051 RVA: 0x00235264 File Offset: 0x00233464
+	// Token: 0x06007439 RID: 29753 RVA: 0x0023F0A0 File Offset: 0x0023D2A0
 	protected override void OnStart()
 	{
 		WheelTowerSubViewGeneralInfo commonActivityInfo = this.CommonActivityInfo;
@@ -72,19 +72,19 @@ public class WheelTowerSubView : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600A05C RID: 41052 RVA: 0x002352E2 File Offset: 0x002334E2
+	// Token: 0x0600743A RID: 29754 RVA: 0x0023F11E File Offset: 0x0023D31E
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 	}
 
-	// Token: 0x0600A05D RID: 41053 RVA: 0x00235300 File Offset: 0x00233500
+	// Token: 0x0600743B RID: 29755 RVA: 0x0023F13C File Offset: 0x0023D33C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 	}
 
-	// Token: 0x0600A05E RID: 41054 RVA: 0x00235320 File Offset: 0x00233520
+	// Token: 0x0600743C RID: 29756 RVA: 0x0023F15C File Offset: 0x0023D35C
 	protected override void OnRefreshView()
 	{
 		WheelTowerData wheelTowerData = this.ActivityBaseData as WheelTowerData;
@@ -105,14 +105,14 @@ public class WheelTowerSubView : ActivitySubViewBase
 		commonActivityInfo.OnRefreshView();
 	}
 
-	// Token: 0x0600A05F RID: 41055 RVA: 0x0023537C File Offset: 0x0023357C
+	// Token: 0x0600743D RID: 29757 RVA: 0x0023F1B8 File Offset: 0x0023D3B8
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshUnlockTimeText();
 		this.CheckUpdateData();
 	}
 
-	// Token: 0x0600A060 RID: 41056 RVA: 0x0023538C File Offset: 0x0023358C
+	// Token: 0x0600743E RID: 29758 RVA: 0x0023F1C8 File Offset: 0x0023D3C8
 	private void OnRedDotRefresh(int activityId)
 	{
 		ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -124,7 +124,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600A061 RID: 41057 RVA: 0x002353D4 File Offset: 0x002335D4
+	// Token: 0x0600743F RID: 29759 RVA: 0x0023F210 File Offset: 0x0023D410
 	private bool ShouldUpdateData()
 	{
 		WheelTowerData wheelTowerData = this.ActivityBaseData as WheelTowerData;
@@ -148,7 +148,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		return flag && flag2 && !flag3;
 	}
 
-	// Token: 0x0600A062 RID: 41058 RVA: 0x00235455 File Offset: 0x00233655
+	// Token: 0x06007440 RID: 29760 RVA: 0x0023F291 File Offset: 0x0023D491
 	private void CheckUpdateData()
 	{
 		if (!this.ShouldUpdateData())
@@ -159,7 +159,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		ActivityController.Instance.RequestActivityData().ContinueWith((bool result) => this.IsUpdatingData = false);
 	}
 
-	// Token: 0x0600A063 RID: 41059 RVA: 0x00235484 File Offset: 0x00233684
+	// Token: 0x06007441 RID: 29761 RVA: 0x0023F2C0 File Offset: 0x0023D4C0
 	private UniTask CheckUpdateDataAsync()
 	{
 		WheelTowerSubView.<CheckUpdateDataAsync>d__15 <CheckUpdateDataAsync>d__;
@@ -170,7 +170,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		return <CheckUpdateDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A064 RID: 41060 RVA: 0x002354C8 File Offset: 0x002336C8
+	// Token: 0x06007442 RID: 29762 RVA: 0x0023F304 File Offset: 0x0023D504
 	private void RefreshUnlockState()
 	{
 		ActivityCircleButtonItem rewardButton = this.RewardButton;
@@ -199,7 +199,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		this.RefreshUnlockTimeText();
 	}
 
-	// Token: 0x0600A065 RID: 41061 RVA: 0x00235530 File Offset: 0x00233730
+	// Token: 0x06007443 RID: 29763 RVA: 0x0023F36C File Offset: 0x0023D56C
 	private void RefreshUnlockTimeText()
 	{
 		WheelTowerData wheelTowerData = this.ActivityBaseData as WheelTowerData;
@@ -261,7 +261,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A066 RID: 41062 RVA: 0x002355E8 File Offset: 0x002337E8
+	// Token: 0x06007444 RID: 29764 RVA: 0x0023F424 File Offset: 0x0023D624
 	private void RefreshRewardButton()
 	{
 		WheelTowerData wheelTowerData = this.ActivityBaseData as WheelTowerData;
@@ -302,7 +302,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		endlessProgress.Refresh(wheelTowerData.GetTotalScore(true));
 	}
 
-	// Token: 0x0600A067 RID: 41063 RVA: 0x002356B8 File Offset: 0x002338B8
+	// Token: 0x06007445 RID: 29765 RVA: 0x0023F4F4 File Offset: 0x0023D6F4
 	private void RefreshFunctionButton()
 	{
 		WheelTowerData wheelTowerData = this.ActivityBaseData as WheelTowerData;
@@ -318,7 +318,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		commonActivityInfo.SetFunctionRedDotVisible(wheelTowerData.HasAnyLevelRedDot());
 	}
 
-	// Token: 0x0600A068 RID: 41064 RVA: 0x002356EB File Offset: 0x002338EB
+	// Token: 0x06007446 RID: 29766 RVA: 0x0023F527 File Offset: 0x0023D727
 	private void OnClickEnter()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -332,7 +332,7 @@ public class WheelTowerSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600A069 RID: 41065 RVA: 0x0023571C File Offset: 0x0023391C
+	// Token: 0x06007447 RID: 29767 RVA: 0x0023F558 File Offset: 0x0023D758
 	private void OnClickReward()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerRewardView, null, delegate(bool success, int viewId)
@@ -349,18 +349,18 @@ public class WheelTowerSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0400492C RID: 18732
+	// Token: 0x040049D2 RID: 18898
 	private WheelTowerSubViewGeneralInfo CommonActivityInfo;
 
-	// Token: 0x0400492D RID: 18733
+	// Token: 0x040049D3 RID: 18899
 	private ActivityCircleButtonItem RewardButton;
 
-	// Token: 0x0400492E RID: 18734
+	// Token: 0x040049D4 RID: 18900
 	private WheelTowerProgressBar NormalProgress;
 
-	// Token: 0x0400492F RID: 18735
+	// Token: 0x040049D5 RID: 18901
 	private WheelTowerProgressBar EndlessProgress;
 
-	// Token: 0x04004930 RID: 18736
+	// Token: 0x040049D6 RID: 18902
 	private bool IsUpdatingData;
 }

@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F2 RID: 25586
+	// Token: 0x02005370 RID: 21360
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 	})]
 	public class MotorParkourLevelItem : GridProxyAbstract<MotorParkourLevelData>
 	{
-		// Token: 0x060405A7 RID: 263591 RVA: 0x00F90D0C File Offset: 0x00F8EF0C
+		// Token: 0x06035268 RID: 217704 RVA: 0x00ED7CF4 File Offset: 0x00ED5EF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060405A8 RID: 263592 RVA: 0x00F90E57 File Offset: 0x00F8F057
+		// Token: 0x06035269 RID: 217705 RVA: 0x00ED7E3F File Offset: 0x00ED603F
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).bLockStateOnSelect = true;
 		}
 
-		// Token: 0x060405A9 RID: 263593 RVA: 0x00F90E68 File Offset: 0x00F8F068
+		// Token: 0x0603526A RID: 217706 RVA: 0x00ED7E50 File Offset: 0x00ED6050
 		public override UniTask RefreshAsync(MotorParkourLevelData data, bool isSelected, int gridIndex)
 		{
 			MotorParkourLevelItem.<RefreshAsync>d__6 <RefreshAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060405AA RID: 263594 RVA: 0x00F90EB3 File Offset: 0x00F8F0B3
+		// Token: 0x0603526B RID: 217707 RVA: 0x00ED7E9B File Offset: 0x00ED609B
 		private void UpdateUnlock()
 		{
 			if (this.Data != null && this.Data.IsUnLock)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x060405AB RID: 263595 RVA: 0x00F90ED9 File Offset: 0x00F8F0D9
+		// Token: 0x0603526C RID: 217708 RVA: 0x00ED7EC1 File Offset: 0x00ED60C1
 		private void AddTimer()
 		{
 			this.RemoveTimer();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}, (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 		}
 
-		// Token: 0x060405AC RID: 263596 RVA: 0x00F90F10 File Offset: 0x00F8F110
+		// Token: 0x0603526D RID: 217709 RVA: 0x00ED7EF8 File Offset: 0x00ED60F8
 		private void RemoveTimer()
 		{
 			if (this.TimerHandle != null)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x060405AD RID: 263597 RVA: 0x00F90F34 File Offset: 0x00F8F134
+		// Token: 0x0603526E RID: 217710 RVA: 0x00ED7F1C File Offset: 0x00ED611C
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			item.SetUIActive(this.Data.HasLevelRedDot);
 		}
 
-		// Token: 0x060405AE RID: 263598 RVA: 0x00F90FA7 File Offset: 0x00F8F1A7
+		// Token: 0x0603526F RID: 217711 RVA: 0x00ED7F8F File Offset: 0x00ED618F
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060405AF RID: 263599 RVA: 0x00F90FBF File Offset: 0x00F8F1BF
+		// Token: 0x06035270 RID: 217712 RVA: 0x00ED7FA7 File Offset: 0x00ED61A7
 		private void OnToggleClick(EToggleState _)
 		{
 			if (!this.Data.IsUnLock)
@@ -144,47 +144,47 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			onToggleCallback(this.Data);
 		}
 
-		// Token: 0x060405B0 RID: 263600 RVA: 0x00F90FEB File Offset: 0x00F8F1EB
+		// Token: 0x06035271 RID: 217713 RVA: 0x00ED7FD3 File Offset: 0x00ED61D3
 		public override object GetKey(MotorParkourLevelData data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x04021798 RID: 137112
+		// Token: 0x0401C0C7 RID: 114887
 		private MotorParkourLevelData Data;
 
-		// Token: 0x04021799 RID: 137113
+		// Token: 0x0401C0C8 RID: 114888
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0402179A RID: 137114
+		// Token: 0x0401C0C9 RID: 114889
 		public Action<MotorParkourLevelData> OnToggleCallback = delegate(MotorParkourLevelData data)
 		{
 		};
 
-		// Token: 0x0200C60B RID: 50699
+		// Token: 0x0200AFF2 RID: 45042
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BCA9 RID: 244905
+			// Token: 0x04036608 RID: 222728
 			public const int ToggleRoot = 0;
 
-			// Token: 0x0403BCAA RID: 244906
+			// Token: 0x04036609 RID: 222729
 			public const int TextureMap = 1;
 
-			// Token: 0x0403BCAB RID: 244907
+			// Token: 0x0403660A RID: 222730
 			public const int ArtTextNum = 2;
 
-			// Token: 0x0403BCAC RID: 244908
+			// Token: 0x0403660B RID: 222731
 			public const int ItemFinish = 3;
 
-			// Token: 0x0403BCAD RID: 244909
+			// Token: 0x0403660C RID: 222732
 			public const int ItemLock = 4;
 
-			// Token: 0x0403BCAE RID: 244910
+			// Token: 0x0403660D RID: 222733
 			public const int TextureTransitionMap = 5;
 
-			// Token: 0x0403BCAF RID: 244911
+			// Token: 0x0403660E RID: 222734
 			public const int ItemRedDot = 6;
 		}
 	}

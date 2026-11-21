@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C22 RID: 23586
+	// Token: 0x02004C02 RID: 19458
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 	})]
 	public class BossPilingBuffItem : SyncGridProxyAbstract<BossPilingBuffCountInfo>
 	{
-		// Token: 0x0603B967 RID: 244071 RVA: 0x00E363E4 File Offset: 0x00E345E4
+		// Token: 0x060308B2 RID: 198834 RVA: 0x00D86740 File Offset: 0x00D84940
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B968 RID: 244072 RVA: 0x00E36538 File Offset: 0x00E34738
+		// Token: 0x060308B3 RID: 198835 RVA: 0x00D86894 File Offset: 0x00D84A94
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(6).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			});
 		}
 
-		// Token: 0x0603B969 RID: 244073 RVA: 0x00E365B8 File Offset: 0x00E347B8
+		// Token: 0x060308B4 RID: 198836 RVA: 0x00D86914 File Offset: 0x00D84B14
 		public override void Refresh(BossPilingBuffCountInfo data)
 		{
 			this.CurInfo = data;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		}
 
-		// Token: 0x0603B96A RID: 244074 RVA: 0x00E3667C File Offset: 0x00E3487C
+		// Token: 0x060308B5 RID: 198837 RVA: 0x00D869D8 File Offset: 0x00D84BD8
 		protected void SetSelected(bool isSelected)
 		{
 			EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			extendToggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603B96B RID: 244075 RVA: 0x00E366A7 File Offset: 0x00E348A7
+		// Token: 0x060308B6 RID: 198838 RVA: 0x00D86A03 File Offset: 0x00D84C03
 		private void OnToggleStateChange(EToggleState _)
 		{
 			if (this.OnToggleClicked != null)
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		}
 
-		// Token: 0x0401F05F RID: 127071
+		// Token: 0x04019B10 RID: 105232
 		[Nullable(new byte[]
 		{
 			2,
@@ -108,38 +108,38 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 		})]
 		public Action<BossPilingBuffCountInfo> OnToggleClicked;
 
-		// Token: 0x0401F060 RID: 127072
+		// Token: 0x04019B11 RID: 105233
 		[Nullable(2)]
 		public Func<int, bool> IsSelectedCb;
 
-		// Token: 0x0401F061 RID: 127073
+		// Token: 0x04019B12 RID: 105234
 		[Nullable(2)]
 		protected BossPilingBuffCountItem CountItem;
 
-		// Token: 0x0401F062 RID: 127074
+		// Token: 0x04019B13 RID: 105235
 		protected BossPilingBuffCountInfo CurInfo;
 
-		// Token: 0x0200BE0C RID: 48652
+		// Token: 0x0200A814 RID: 43028
 		[NullableContext(0)]
 		private enum EBuff
 		{
-			// Token: 0x040394E2 RID: 234722
+			// Token: 0x04033EA5 RID: 212645
 			QualitySprite,
-			// Token: 0x040394E3 RID: 234723
+			// Token: 0x04033EA6 RID: 212646
 			ItemTexture,
-			// Token: 0x040394E4 RID: 234724
+			// Token: 0x04033EA7 RID: 212647
 			BottomText,
-			// Token: 0x040394E5 RID: 234725
+			// Token: 0x04033EA8 RID: 212648
 			BottomTextBgSprite,
-			// Token: 0x040394E6 RID: 234726
+			// Token: 0x04033EA9 RID: 212649
 			TopAdditionItem,
-			// Token: 0x040394E7 RID: 234727
+			// Token: 0x04033EAA RID: 212650
 			BottomAdditionItem,
-			// Token: 0x040394E8 RID: 234728
+			// Token: 0x04033EAB RID: 212651
 			ExtendToggle,
-			// Token: 0x040394E9 RID: 234729
+			// Token: 0x04033EAC RID: 212652
 			UnderTextAdditionItem,
-			// Token: 0x040394EA RID: 234730
+			// Token: 0x04033EAD RID: 212653
 			SkinQualitySprite
 		}
 	}

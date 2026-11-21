@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E26 RID: 7718
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002059 RID: 8281
 	public class ISetJigsawItemType
 	{
-		// Token: 0x0600A515 RID: 42261 RVA: 0x0017617C File Offset: 0x0017437C
+		// Token: 0x0600AFBD RID: 44989 RVA: 0x0018BB84 File Offset: 0x00189D84
 		private ISetJigsawItemType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A516 RID: 42262 RVA: 0x001761B4 File Offset: 0x001743B4
+		// Token: 0x0600AFBE RID: 44990 RVA: 0x0018BBBC File Offset: 0x00189DBC
 		public static ISetJigsawItemType Create([Nullable(2)] ISetJigsawItemType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A517 RID: 42263 RVA: 0x001761C7 File Offset: 0x001743C7
+		// Token: 0x0600AFBF RID: 44991 RVA: 0x0018BBCF File Offset: 0x00189DCF
 		public static ISetJigsawItemType CreateFromSetValue([Nullable(2)] ISetJigsawItemType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A518 RID: 42264 RVA: 0x001761DA File Offset: 0x001743DA
+		// Token: 0x0600AFC0 RID: 44992 RVA: 0x0018BBE2 File Offset: 0x00189DE2
 		public ISetJigsawItemType_SetValue ToSetValue()
 		{
 			return new ISetJigsawItemType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032A8 RID: 12968
-		// (get) Token: 0x0600A519 RID: 42265 RVA: 0x001761ED File Offset: 0x001743ED
-		// (set) Token: 0x0600A51A RID: 42266 RVA: 0x00176218 File Offset: 0x00174418
+		// Token: 0x17003567 RID: 13671
+		// (get) Token: 0x0600AFC1 RID: 44993 RVA: 0x0018BBF5 File Offset: 0x00189DF5
+		// (set) Token: 0x0600AFC2 RID: 44994 RVA: 0x0018BC20 File Offset: 0x00189E20
 		public virtual ESetJigsawItemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062C1 RID: 25281
+		// Token: 0x04006898 RID: 26776
 		[Nullable(2)]
 		protected ISetJigsawItemType FbInstance;
 
-		// Token: 0x040062C2 RID: 25282
+		// Token: 0x04006899 RID: 26777
 		[Nullable(2)]
 		protected ISetJigsawItemType_SetValue PocoInterface;
 	}

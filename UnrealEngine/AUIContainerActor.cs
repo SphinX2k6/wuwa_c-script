@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002135 RID: 8501
+	// Token: 0x020006EF RID: 1775
 	[UnrealObjectPath("/Script/LGUI.UIContainerActor")]
 	[UnrealStructLayout(1672, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1672)]
 	public class AUIContainerActor : AUIBaseActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602001A RID: 131098 RVA: 0x002F9908 File Offset: 0x002F7B08
+		// Token: 0x060096D2 RID: 38610 RVA: 0x000E3851 File Offset: 0x000E1A51
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AUIContainerActor._ClassPtr;
 		}
 
-		// Token: 0x0602001B RID: 131099 RVA: 0x002F9914 File Offset: 0x002F7B14
+		// Token: 0x060096D3 RID: 38611 RVA: 0x000E3860 File Offset: 0x000E1A60
 		public AUIContainerActor() : this(BuiltinUtils.AllocNativeUObject(AUIContainerActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602001C RID: 131100 RVA: 0x002F993C File Offset: 0x002F7B3C
+		// Token: 0x060096D4 RID: 38612 RVA: 0x000E3888 File Offset: 0x000E1A88
 		[NullableContext(1)]
 		public AUIContainerActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AUIContainerActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007DBF RID: 32191
-		// (get) Token: 0x0602001D RID: 131101 RVA: 0x002F996F File Offset: 0x002F7B6F
-		// (set) Token: 0x0602001E RID: 131102 RVA: 0x002F9983 File Offset: 0x002F7B83
+		// Token: 0x17001BFF RID: 7167
+		// (get) Token: 0x060096D5 RID: 38613 RVA: 0x000E38BB File Offset: 0x000E1ABB
+		// (set) Token: 0x060096D6 RID: 38614 RVA: 0x000E38CF File Offset: 0x000E1ACF
 		[Nullable(2)]
 		public unsafe UUIItem UIItem
 		{
@@ -46,28 +46,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602001F RID: 131103 RVA: 0x002F9998 File Offset: 0x002F7B98
+		// Token: 0x060096D7 RID: 38615 RVA: 0x000E38E4 File Offset: 0x000E1AE4
 		static AUIContainerActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIContainerActor");
 		}
 
-		// Token: 0x06020020 RID: 131104 RVA: 0x002F99A6 File Offset: 0x002F7BA6
+		// Token: 0x060096D8 RID: 38616 RVA: 0x000E38F2 File Offset: 0x000E1AF2
 		protected AUIContainerActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040113B6 RID: 70582
+		// Token: 0x0400419B RID: 16795
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIContainerActor";
 
-		// Token: 0x040113B7 RID: 70583
+		// Token: 0x0400419C RID: 16796
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040113B8 RID: 70584
+		// Token: 0x0400419D RID: 16797
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040113B9 RID: 70585
+		// Token: 0x0400419E RID: 16798
 		internal static int __PropertyOffset_UIItem;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002218 RID: 8728
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002483 RID: 9347
 	public class StartFlowTemplate : ActionParams
 	{
-		// Token: 0x0600BF9C RID: 49052 RVA: 0x001B8764 File Offset: 0x001B6964
+		// Token: 0x0600CB5A RID: 52058 RVA: 0x001CFE30 File Offset: 0x001CE030
 		private StartFlowTemplate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF9D RID: 49053 RVA: 0x001B879C File Offset: 0x001B699C
+		// Token: 0x0600CB5B RID: 52059 RVA: 0x001CFE68 File Offset: 0x001CE068
 		public static StartFlowTemplate Create([Nullable(2)] StartFlowTemplate instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF9E RID: 49054 RVA: 0x001B87AF File Offset: 0x001B69AF
+		// Token: 0x0600CB5C RID: 52060 RVA: 0x001CFE7B File Offset: 0x001CE07B
 		public static StartFlowTemplate CreateFromSetValue([Nullable(2)] StartFlowTemplate_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF9F RID: 49055 RVA: 0x001B87C2 File Offset: 0x001B69C2
+		// Token: 0x0600CB5D RID: 52061 RVA: 0x001CFE8E File Offset: 0x001CE08E
 		public StartFlowTemplate_SetValue ToSetValue()
 		{
 			return new StartFlowTemplate_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A0E RID: 14862
-		// (get) Token: 0x0600BFA0 RID: 49056 RVA: 0x001B87FC File Offset: 0x001B69FC
-		// (set) Token: 0x0600BFA1 RID: 49057 RVA: 0x001B885D File Offset: 0x001B6A5D
+		// Token: 0x17003D04 RID: 15620
+		// (get) Token: 0x0600CB5E RID: 52062 RVA: 0x001CFEC8 File Offset: 0x001CE0C8
+		// (set) Token: 0x0600CB5F RID: 52063 RVA: 0x001CFF29 File Offset: 0x001CE129
 		public virtual IFlowTemplateMode TemplateMode
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A0F RID: 14863
-		// (get) Token: 0x0600BFA2 RID: 49058 RVA: 0x001B8874 File Offset: 0x001B6A74
-		// (set) Token: 0x0600BFA3 RID: 49059 RVA: 0x001B88D5 File Offset: 0x001B6AD5
+		// Token: 0x17003D05 RID: 15621
+		// (get) Token: 0x0600CB60 RID: 52064 RVA: 0x001CFF40 File Offset: 0x001CE140
+		// (set) Token: 0x0600CB61 RID: 52065 RVA: 0x001CFFA1 File Offset: 0x001CE1A1
 		public virtual PosA TargetPos
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A10 RID: 14864
-		// (get) Token: 0x0600BFA4 RID: 49060 RVA: 0x001B88EA File Offset: 0x001B6AEA
-		// (set) Token: 0x0600BFA5 RID: 49061 RVA: 0x001B8911 File Offset: 0x001B6B11
+		// Token: 0x17003D06 RID: 15622
+		// (get) Token: 0x0600CB62 RID: 52066 RVA: 0x001CFFB6 File Offset: 0x001CE1B6
+		// (set) Token: 0x0600CB63 RID: 52067 RVA: 0x001CFFDD File Offset: 0x001CE1DD
 		public virtual List<int> ActorIdArray
 		{
 			get
@@ -147,9 +145,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A11 RID: 14865
-		// (get) Token: 0x0600BFA6 RID: 49062 RVA: 0x001B891F File Offset: 0x001B6B1F
-		// (set) Token: 0x0600BFA7 RID: 49063 RVA: 0x001B8946 File Offset: 0x001B6B46
+		// Token: 0x17003D07 RID: 15623
+		// (get) Token: 0x0600CB64 RID: 52068 RVA: 0x001CFFEB File Offset: 0x001CE1EB
+		// (set) Token: 0x0600CB65 RID: 52069 RVA: 0x001D0012 File Offset: 0x001CE212
 		[Nullable(2)]
 		public virtual List<int> TalkerIds
 		{
@@ -174,24 +172,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400723E RID: 29246
+		// Token: 0x04007888 RID: 30856
 		[Nullable(2)]
 		protected new StartFlowTemplate FbInstance;
 
-		// Token: 0x0400723F RID: 29247
+		// Token: 0x04007889 RID: 30857
 		[Nullable(2)]
 		protected StartFlowTemplate_SetValue PocoInterface;
 
-		// Token: 0x04007240 RID: 29248
+		// Token: 0x0400788A RID: 30858
 		private IFlowTemplateMode _TemplateModeCache;
 
-		// Token: 0x04007241 RID: 29249
+		// Token: 0x0400788B RID: 30859
 		private bool _TemplateModeInited;
 
-		// Token: 0x04007242 RID: 29250
+		// Token: 0x0400788C RID: 30860
 		private PosA _TargetPosCache;
 
-		// Token: 0x04007243 RID: 29251
+		// Token: 0x0400788D RID: 30861
 		private bool _TargetPosInited;
 	}
 }

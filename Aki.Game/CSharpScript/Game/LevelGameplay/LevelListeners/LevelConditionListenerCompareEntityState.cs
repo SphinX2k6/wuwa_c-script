@@ -7,12 +7,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE4 RID: 27364
+	// Token: 0x02005C5C RID: 23644
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelConditionListenerCompareEntityState : LevelListenerBase
 	{
-		// Token: 0x06043F91 RID: 278417 RVA: 0x010AC44C File Offset: 0x010AA64C
+		// Token: 0x0603A0E3 RID: 237795 RVA: 0x01055CC4 File Offset: 0x01053EC4
 		private void EventHandle(int _1, bool _2)
 		{
 			this.LastStateTagId = new int?(_1);
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}), Array.Empty<object>());
 		}
 
-		// Token: 0x06043F92 RID: 278418 RVA: 0x010AC49C File Offset: 0x010AA69C
+		// Token: 0x0603A0E4 RID: 237796 RVA: 0x01055D14 File Offset: 0x01053F14
 		[NullableContext(1)]
 		private void RemoveEntityHandle(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.ReWaitListeningEntity(true);
 		}
 
-		// Token: 0x06043F93 RID: 278419 RVA: 0x010AC4AC File Offset: 0x010AA6AC
+		// Token: 0x0603A0E5 RID: 237797 RVA: 0x01055D24 File Offset: 0x01053F24
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			Log.Instance.Error(ELogModule.LevelCondition, ELogAuthor.ZYL, "实体状态条件监听失败: 未知条件类型", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06043F94 RID: 278420 RVA: 0x010AC550 File Offset: 0x010AA750
+		// Token: 0x0603A0E6 RID: 237798 RVA: 0x01055DC8 File Offset: 0x01053FC8
 		private int? GetListeningStateTagId()
 		{
 			Entity listeningEntity = this.ListeningEntity;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			return new int?(component.StateTagId);
 		}
 
-		// Token: 0x06043F95 RID: 278421 RVA: 0x010AC590 File Offset: 0x010AA790
+		// Token: 0x0603A0E7 RID: 237799 RVA: 0x01055E08 File Offset: 0x01054008
 		private void StartWaitListeningEntity(bool isReListen = false)
 		{
 			int? pbDataId = this.ListeningPbDataId;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F96 RID: 278422 RVA: 0x010AC610 File Offset: 0x010AA810
+		// Token: 0x0603A0E8 RID: 237800 RVA: 0x01055E88 File Offset: 0x01054088
 		private void ReWaitListeningEntity(bool isReListen)
 		{
 			this.CancelReListenTimer();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}, null, null);
 		}
 
-		// Token: 0x06043F97 RID: 278423 RVA: 0x010AC655 File Offset: 0x010AA855
+		// Token: 0x0603A0E9 RID: 237801 RVA: 0x01055ECD File Offset: 0x010540CD
 		private void CancelReListenTimer()
 		{
 			if (this.ReListenTimer != null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F98 RID: 278424 RVA: 0x010AC677 File Offset: 0x010AA877
+		// Token: 0x0603A0EA RID: 237802 RVA: 0x01055EEF File Offset: 0x010540EF
 		private void CancelWaitEntityTask()
 		{
 			if (this.WaitEntityTask != null)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.WaitEntityTask = null;
 		}
 
-		// Token: 0x06043F99 RID: 278425 RVA: 0x010AC694 File Offset: 0x010AA894
+		// Token: 0x0603A0EB RID: 237803 RVA: 0x01055F0C File Offset: 0x0105410C
 		private void BindListeningEntity()
 		{
 			Entity listeningEntity = this.ListeningEntity;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F9A RID: 278426 RVA: 0x010AC78B File Offset: 0x010AA98B
+		// Token: 0x0603A0EC RID: 237804 RVA: 0x01056003 File Offset: 0x01054203
 		private void UnBindListeningEntity()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.ListeningEntityHandle = null;
 		}
 
-		// Token: 0x06043F9B RID: 278427 RVA: 0x010AC7A7 File Offset: 0x010AA9A7
+		// Token: 0x0603A0ED RID: 237805 RVA: 0x0105601F File Offset: 0x0105421F
 		protected override void OnUnListen()
 		{
 			this.UnBindListeningEntity();
@@ -197,22 +197,22 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.CancelWaitEntityTask();
 		}
 
-		// Token: 0x04023865 RID: 145509
+		// Token: 0x0401EB07 RID: 125703
 		private Entity ListeningEntity;
 
-		// Token: 0x04023866 RID: 145510
+		// Token: 0x0401EB08 RID: 125704
 		private EntityHandle ListeningEntityHandle;
 
-		// Token: 0x04023867 RID: 145511
+		// Token: 0x0401EB09 RID: 125705
 		private WaitEntityTask WaitEntityTask;
 
-		// Token: 0x04023868 RID: 145512
+		// Token: 0x0401EB0A RID: 125706
 		private TimerHandle ReListenTimer;
 
-		// Token: 0x04023869 RID: 145513
+		// Token: 0x0401EB0B RID: 125707
 		private int? ListeningPbDataId;
 
-		// Token: 0x0402386A RID: 145514
+		// Token: 0x0401EB0C RID: 125708
 		private int? LastStateTagId;
 	}
 }

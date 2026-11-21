@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200680A RID: 26634
+	// Token: 0x0200575A RID: 22362
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookItemTipsSlot : UiPanelBase
 	{
-		// Token: 0x060426E4 RID: 272100 RVA: 0x010227E8 File Offset: 0x010209E8
+		// Token: 0x06037239 RID: 225849 RVA: 0x00F63D2C File Offset: 0x00F61F2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060426E5 RID: 272101 RVA: 0x010228D5 File Offset: 0x01020AD5
+		// Token: 0x0603723A RID: 225850 RVA: 0x00F63E19 File Offset: 0x00F62019
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item3.SetUIActive(false);
 		}
 
-		// Token: 0x060426E6 RID: 272102 RVA: 0x01022910 File Offset: 0x01020B10
+		// Token: 0x0603723B RID: 225851 RVA: 0x00F63E54 File Offset: 0x00F62054
 		public UniTask RefreshAsync(int itemId)
 		{
 			DangoBrawlHandBookItemTipsSlot.<RefreshAsync>d__6 <RefreshAsync>d__;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060426E7 RID: 272103 RVA: 0x0102295B File Offset: 0x01020B5B
+		// Token: 0x0603723C RID: 225852 RVA: 0x00F63E9F File Offset: 0x00F6209F
 		private float GetGridSize()
 		{
 			return base.GetItem(2).GetHeight();
 		}
 
-		// Token: 0x060426E8 RID: 272104 RVA: 0x0102296C File Offset: 0x01020B6C
+		// Token: 0x0603723D RID: 225853 RVA: 0x00F63EB0 File Offset: 0x00F620B0
 		private void RefreshBlurGrids(PanelPos[] posList)
 		{
 			UUIItem item = base.GetItem(2);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060426E9 RID: 272105 RVA: 0x01022A58 File Offset: 0x01020C58
+		// Token: 0x0603723E RID: 225854 RVA: 0x00F63F9C File Offset: 0x00F6219C
 		private UniTask RefreshStarsAsync(PanelPos[] starPosList)
 		{
 			DangoBrawlHandBookItemTipsSlot.<RefreshStarsAsync>d__9 <RefreshStarsAsync>d__;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshStarsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060426EA RID: 272106 RVA: 0x01022AA4 File Offset: 0x01020CA4
+		// Token: 0x0603723F RID: 225855 RVA: 0x00F63FE8 File Offset: 0x00F621E8
 		private UniTask EnsureStarPanelsAsync(int need)
 		{
 			DangoBrawlHandBookItemTipsSlot.<EnsureStarPanelsAsync>d__10 <EnsureStarPanelsAsync>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <EnsureStarPanelsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060426EB RID: 272107 RVA: 0x01022AF0 File Offset: 0x01020CF0
+		// Token: 0x06037240 RID: 225856 RVA: 0x00F64034 File Offset: 0x00F62234
 		private void ApplyStarLayout(PanelPos[] starPosList)
 		{
 			float gridSize = this.GetGridSize();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060426EC RID: 272108 RVA: 0x01022B88 File Offset: 0x01020D88
+		// Token: 0x06037241 RID: 225857 RVA: 0x00F640CC File Offset: 0x00F622CC
 		private UniTask RefreshIconAsync()
 		{
 			DangoBrawlHandBookItemTipsSlot.<RefreshIconAsync>d__12 <RefreshIconAsync>d__;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshIconAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060426ED RID: 272109 RVA: 0x01022BCC File Offset: 0x01020DCC
+		// Token: 0x06037242 RID: 225858 RVA: 0x00F64110 File Offset: 0x00F62310
 		private void ApplyIconScale()
 		{
 			DangoBrawlItem? dangoBrawlItemById = DangoBrawlConfig.Instance.GetDangoBrawlItemById(this.ItemId);
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			texture.SetRelativeScale3D(new FVector(num, num, num));
 		}
 
-		// Token: 0x060426EE RID: 272110 RVA: 0x01022C24 File Offset: 0x01020E24
+		// Token: 0x06037243 RID: 225859 RVA: 0x00F64168 File Offset: 0x00F62368
 		private void RefreshSize(PanelPos[] posList)
 		{
 			int num = 0;
@@ -210,38 +210,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			rootItem.SetHeight((float)(num2 + 1) * gridSize);
 		}
 
-		// Token: 0x040229FD RID: 141821
+		// Token: 0x0401D25A RID: 119386
 		private int ItemId = -1;
 
-		// Token: 0x040229FE RID: 141822
+		// Token: 0x0401D25B RID: 119387
 		private readonly List<UUIItem> BlurGridPool = new List<UUIItem>();
 
-		// Token: 0x040229FF RID: 141823
+		// Token: 0x0401D25C RID: 119388
 		private readonly List<DangoBrawlGeneralStar> StarPanels = new List<DangoBrawlGeneralStar>();
 
-		// Token: 0x0200C980 RID: 51584
+		// Token: 0x0200B34D RID: 45901
 		[NullableContext(0)]
 		private enum EItemComponents
 		{
-			// Token: 0x0403CDA5 RID: 249253
+			// Token: 0x04037692 RID: 226962
 			TogItem,
-			// Token: 0x0403CDA6 RID: 249254
+			// Token: 0x04037693 RID: 226963
 			ContentBlurGrid,
-			// Token: 0x0403CDA7 RID: 249255
+			// Token: 0x04037694 RID: 226964
 			TemplateBlurGrid,
-			// Token: 0x0403CDA8 RID: 249256
+			// Token: 0x04037695 RID: 226965
 			TexIcon,
-			// Token: 0x0403CDA9 RID: 249257
+			// Token: 0x04037696 RID: 226966
 			PnlRaycast,
-			// Token: 0x0403CDAA RID: 249258
+			// Token: 0x04037697 RID: 226967
 			ContentStar,
-			// Token: 0x0403CDAB RID: 249259
+			// Token: 0x04037698 RID: 226968
 			StarItem,
-			// Token: 0x0403CDAC RID: 249260
+			// Token: 0x04037699 RID: 226969
 			PnlLine,
-			// Token: 0x0403CDAD RID: 249261
+			// Token: 0x0403769A RID: 226970
 			PnlCombineLine,
-			// Token: 0x0403CDAE RID: 249262
+			// Token: 0x0403769B RID: 226971
 			PnlFrame
 		}
 	}

@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005158 RID: 20824
+	// Token: 0x02004128 RID: 16680
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DragInteractComponent
 	{
-		// Token: 0x17008112 RID: 33042
-		// (get) Token: 0x060353BE RID: 218046 RVA: 0x00C9A6D1 File Offset: 0x00C988D1
+		// Token: 0x170054D2 RID: 21714
+		// (get) Token: 0x0602A2BA RID: 172730 RVA: 0x00BE7BD1 File Offset: 0x00BE5DD1
 		public bool IsJoystickZoom
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x17008113 RID: 33043
-		// (get) Token: 0x060353BF RID: 218047 RVA: 0x00C9A6E3 File Offset: 0x00C988E3
+		// Token: 0x170054D3 RID: 21715
+		// (get) Token: 0x0602A2BB RID: 172731 RVA: 0x00BE7BE3 File Offset: 0x00BE5DE3
 		public Vector2D MultiTouchOriginCenter
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353C0 RID: 218048 RVA: 0x00C9A6EC File Offset: 0x00C988EC
+		// Token: 0x0602A2BC RID: 172732 RVA: 0x00BE7BEC File Offset: 0x00BE5DEC
 		public DragInteractComponent(IDragInteractParam param)
 		{
 			this.Draggable = param.Draggable;
@@ -48,8 +48,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.PrevPointerDownPosition = Vector2D.Create();
 		}
 
-		// Token: 0x17008114 RID: 33044
-		// (get) Token: 0x060353C1 RID: 218049 RVA: 0x00C9A7D6 File Offset: 0x00C989D6
+		// Token: 0x170054D4 RID: 21716
+		// (get) Token: 0x0602A2BD RID: 172733 RVA: 0x00BE7CD6 File Offset: 0x00BE5ED6
 		public bool IsDragging
 		{
 			get
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x17008115 RID: 33045
-		// (get) Token: 0x060353C2 RID: 218050 RVA: 0x00C9A7E0 File Offset: 0x00C989E0
+		// Token: 0x170054D5 RID: 21717
+		// (get) Token: 0x0602A2BE RID: 172734 RVA: 0x00BE7CE0 File Offset: 0x00BE5EE0
 		private Vector2D DragSize
 		{
 			get
@@ -71,8 +71,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x17008116 RID: 33046
-		// (get) Token: 0x060353C3 RID: 218051 RVA: 0x00C9A83A File Offset: 0x00C98A3A
+		// Token: 0x170054D6 RID: 21718
+		// (get) Token: 0x0602A2BF RID: 172735 RVA: 0x00BE7D3A File Offset: 0x00BE5F3A
 		public bool IsJoystickMoving
 		{
 			get
@@ -81,8 +81,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x17008117 RID: 33047
-		// (get) Token: 0x060353C4 RID: 218052 RVA: 0x00C9A84C File Offset: 0x00C98A4C
+		// Token: 0x170054D7 RID: 21719
+		// (get) Token: 0x0602A2C0 RID: 172736 RVA: 0x00BE7D4C File Offset: 0x00BE5F4C
 		public bool IsJoystickFocus
 		{
 			get
@@ -91,15 +91,15 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353C5 RID: 218053 RVA: 0x00C9A854 File Offset: 0x00C98A54
+		// Token: 0x0602A2C1 RID: 172737 RVA: 0x00BE7D54 File Offset: 0x00BE5F54
 		public void SetJoystickFocus(bool value)
 		{
 			this.JoystickFocus = value;
 		}
 
-		// Token: 0x17008118 RID: 33048
-		// (get) Token: 0x060353C6 RID: 218054 RVA: 0x00C9A85D File Offset: 0x00C98A5D
-		// (set) Token: 0x060353C7 RID: 218055 RVA: 0x00C9A865 File Offset: 0x00C98A65
+		// Token: 0x170054D8 RID: 21720
+		// (get) Token: 0x0602A2C2 RID: 172738 RVA: 0x00BE7D5D File Offset: 0x00BE5F5D
+		// (set) Token: 0x0602A2C3 RID: 172739 RVA: 0x00BE7D65 File Offset: 0x00BE5F65
 		public bool IsMultiFingerControl
 		{
 			get
@@ -123,19 +123,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353C8 RID: 218056 RVA: 0x00C9A8A1 File Offset: 0x00C98AA1
+		// Token: 0x0602A2C4 RID: 172740 RVA: 0x00BE7DA1 File Offset: 0x00BE5FA1
 		public void Enable()
 		{
 			this.AddEventListener();
 		}
 
-		// Token: 0x060353C9 RID: 218057 RVA: 0x00C9A8A9 File Offset: 0x00C98AA9
+		// Token: 0x0602A2C5 RID: 172741 RVA: 0x00BE7DA9 File Offset: 0x00BE5FA9
 		public void Disable()
 		{
 			this.RemoveEventListener();
 		}
 
-		// Token: 0x060353CA RID: 218058 RVA: 0x00C9A8B4 File Offset: 0x00C98AB4
+		// Token: 0x0602A2C6 RID: 172742 RVA: 0x00BE7DB4 File Offset: 0x00BE5FB4
 		private void AddEventListener()
 		{
 			InputDistributeController.Instance.BindTouches(new int[]
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			EventSystem.Instance.Add<string, float>(EEventName.NavigationTriggerMapZoom, new Action<string, float>(this.OnHandleTriggerInput));
 		}
 
-		// Token: 0x060353CB RID: 218059 RVA: 0x00C9A938 File Offset: 0x00C98B38
+		// Token: 0x0602A2C7 RID: 172743 RVA: 0x00BE7E38 File Offset: 0x00BE6038
 		private void RemoveEventListener()
 		{
 			InputDistributeController.Instance.UnBindTouches(new int[]
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			EventSystem.Instance.Remove(EEventName.NavigationTriggerMapZoom, new Action<string, float>(this.OnHandleTriggerInput));
 		}
 
-		// Token: 0x060353CC RID: 218060 RVA: 0x00C9A9BC File Offset: 0x00C98BBC
+		// Token: 0x0602A2C8 RID: 172744 RVA: 0x00BE7EBC File Offset: 0x00BE60BC
 		[NullableContext(2)]
 		private void OnPointerDown(ULGUIPointerEventData eventData)
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			callbackOnDown();
 		}
 
-		// Token: 0x060353CD RID: 218061 RVA: 0x00C9AA28 File Offset: 0x00C98C28
+		// Token: 0x0602A2C9 RID: 172745 RVA: 0x00BE7F28 File Offset: 0x00BE6128
 		[NullableContext(2)]
 		private void OnPointerDrag(ULGUIPointerEventData eventData)
 		{
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			callbackOnDrag(this.PointerDeltaPosition);
 		}
 
-		// Token: 0x060353CE RID: 218062 RVA: 0x00C9AAF8 File Offset: 0x00C98CF8
+		// Token: 0x0602A2CA RID: 172746 RVA: 0x00BE7FF8 File Offset: 0x00BE61F8
 		[NullableContext(2)]
 		private void OnPointerUp(ULGUIPointerEventData eventData)
 		{
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.DragInertia();
 		}
 
-		// Token: 0x060353CF RID: 218063 RVA: 0x00C9AB3C File Offset: 0x00C98D3C
+		// Token: 0x0602A2CB RID: 172747 RVA: 0x00BE803C File Offset: 0x00BE623C
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 		{
 			InputDistributeDefine.ETouchType touchType = touchData.TouchType;
@@ -238,13 +238,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.TouchTrigger(false, touchId, null);
 		}
 
-		// Token: 0x060353D0 RID: 218064 RVA: 0x00C9AB72 File Offset: 0x00C98D72
+		// Token: 0x0602A2CC RID: 172748 RVA: 0x00BE8072 File Offset: 0x00BE6272
 		[NullableContext(2)]
 		private void OnWheelAxisInput(ULGUIPointerEventData eventData)
 		{
 		}
 
-		// Token: 0x060353D1 RID: 218065 RVA: 0x00C9AB74 File Offset: 0x00C98D74
+		// Token: 0x0602A2CD RID: 172749 RVA: 0x00BE8074 File Offset: 0x00BE6274
 		[NullableContext(2)]
 		private void TouchTrigger(bool bTouchPress, int touchId, InputDistributeDefine.ITouchData touchData = null)
 		{
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353D2 RID: 218066 RVA: 0x00C9AC4C File Offset: 0x00C98E4C
+		// Token: 0x0602A2CE RID: 172750 RVA: 0x00BE814C File Offset: 0x00BE634C
 		private Vector2D MousePositionConvertToLgui(double x, double y)
 		{
 			Vector2D vector2D = Vector2D.Create(x, y);
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return vector2D;
 		}
 
-		// Token: 0x060353D3 RID: 218067 RVA: 0x00C9AC8C File Offset: 0x00C98E8C
+		// Token: 0x0602A2CF RID: 172751 RVA: 0x00BE818C File Offset: 0x00BE638C
 		private void DragInertia()
 		{
 			if (this.PointerDeltaPosition.X == 0.0 && this.PointerDeltaPosition.Y == 0.0)
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.PointerDeltaPosition.Reset();
 		}
 
-		// Token: 0x060353D4 RID: 218068 RVA: 0x00C9AD7A File Offset: 0x00C98F7A
+		// Token: 0x0602A2D0 RID: 172752 RVA: 0x00BE827A File Offset: 0x00BE647A
 		private void OnHandleTriggerInput(string axisName, float value)
 		{
 			if (value == 0f)
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.ZoomAxis = axisName;
 		}
 
-		// Token: 0x060353D5 RID: 218069 RVA: 0x00C9ADA5 File Offset: 0x00C98FA5
+		// Token: 0x0602A2D1 RID: 172753 RVA: 0x00BE82A5 File Offset: 0x00BE64A5
 		private void OnUiForwardInput(float value)
 		{
 			if (value == 0f)
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.JoystickFocus = false;
 		}
 
-		// Token: 0x060353D6 RID: 218070 RVA: 0x00C9ADC5 File Offset: 0x00C98FC5
+		// Token: 0x0602A2D2 RID: 172754 RVA: 0x00BE82C5 File Offset: 0x00BE64C5
 		private void OnUiRightInput(float value)
 		{
 			if (value == 0f)
@@ -349,11 +349,11 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.JoystickFocus = false;
 		}
 
-		// Token: 0x0401C53B RID: 116027
+		// Token: 0x04016F70 RID: 94064
 		[Nullable(2)]
 		private readonly UUIDraggableComponent Draggable;
 
-		// Token: 0x0401C53C RID: 116028
+		// Token: 0x04016F71 RID: 94065
 		[Nullable(new byte[]
 		{
 			2,
@@ -361,11 +361,11 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private readonly Action<Vector2D> CallbackOnDrag;
 
-		// Token: 0x0401C53D RID: 116029
+		// Token: 0x04016F72 RID: 94066
 		[Nullable(2)]
 		private readonly Action CallbackOnDown;
 
-		// Token: 0x0401C53E RID: 116030
+		// Token: 0x04016F73 RID: 94067
 		[Nullable(new byte[]
 		{
 			2,
@@ -373,39 +373,39 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private readonly Action<Vector2D> CallbackOnInertia;
 
-		// Token: 0x0401C53F RID: 116031
+		// Token: 0x04016F74 RID: 94068
 		private bool Dragging;
 
-		// Token: 0x0401C540 RID: 116032
+		// Token: 0x04016F75 RID: 94069
 		private bool MultiFingerControl;
 
-		// Token: 0x0401C541 RID: 116033
+		// Token: 0x04016F76 RID: 94070
 		private double LastMultiTouchEndTime;
 
-		// Token: 0x0401C542 RID: 116034
+		// Token: 0x04016F77 RID: 94071
 		private string ZoomAxis = "";
 
-		// Token: 0x0401C543 RID: 116035
+		// Token: 0x04016F78 RID: 94072
 		private bool JoystickMovingRight;
 
-		// Token: 0x0401C544 RID: 116036
+		// Token: 0x04016F79 RID: 94073
 		private bool JoystickMovingForward;
 
-		// Token: 0x0401C545 RID: 116037
+		// Token: 0x04016F7A RID: 94074
 		private bool JoystickFocus;
 
-		// Token: 0x0401C546 RID: 116038
+		// Token: 0x04016F7B RID: 94075
 		[Nullable(2)]
 		private Vector2D PrevPointerDownPosition;
 
-		// Token: 0x0401C547 RID: 116039
+		// Token: 0x04016F7C RID: 94076
 		[Nullable(2)]
 		private Vector2D PointerDeltaPosition;
 
-		// Token: 0x0401C548 RID: 116040
+		// Token: 0x04016F7D RID: 94077
 		private double PointerDownTime;
 
-		// Token: 0x0401C549 RID: 116041
+		// Token: 0x04016F7E RID: 94078
 		[Nullable(new byte[]
 		{
 			2,
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		})]
 		private Dictionary<int, InputDistributeDefine.ITouchData> TouchMap;
 
-		// Token: 0x0401C54A RID: 116042
+		// Token: 0x04016F7F RID: 94079
 		private readonly Vector2D InternalMultiTouchOriginCenter = Vector2D.Create();
 	}
 }

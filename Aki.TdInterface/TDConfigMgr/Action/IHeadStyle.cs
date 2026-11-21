@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AED RID: 6893
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C9A RID: 7322
 	public class IHeadStyle
 	{
-		// Token: 0x060093AC RID: 37804 RVA: 0x00156854 File Offset: 0x00154A54
+		// Token: 0x06009B8A RID: 39818 RVA: 0x0016739C File Offset: 0x0016559C
 		private IHeadStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093AD RID: 37805 RVA: 0x0015688C File Offset: 0x00154A8C
+		// Token: 0x06009B8B RID: 39819 RVA: 0x001673D4 File Offset: 0x001655D4
 		public static IHeadStyle Create([Nullable(2)] IHeadStyle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093AE RID: 37806 RVA: 0x0015689F File Offset: 0x00154A9F
+		// Token: 0x06009B8C RID: 39820 RVA: 0x001673E7 File Offset: 0x001655E7
 		public static IHeadStyle CreateFromSetValue([Nullable(2)] IHeadStyle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093AF RID: 37807 RVA: 0x001568B2 File Offset: 0x00154AB2
+		// Token: 0x06009B8D RID: 39821 RVA: 0x001673FA File Offset: 0x001655FA
 		public IHeadStyle_SetValue ToSetValue()
 		{
 			return new IHeadStyle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EC8 RID: 11976
-		// (get) Token: 0x060093B0 RID: 37808 RVA: 0x001568C5 File Offset: 0x00154AC5
-		// (set) Token: 0x060093B1 RID: 37809 RVA: 0x001568F0 File Offset: 0x00154AF0
+		// Token: 0x170030EB RID: 12523
+		// (get) Token: 0x06009B8E RID: 39822 RVA: 0x0016740D File Offset: 0x0016560D
+		// (set) Token: 0x06009B8F RID: 39823 RVA: 0x00167438 File Offset: 0x00165638
 		public virtual EHeadStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AB3 RID: 23219
+		// Token: 0x04005F4A RID: 24394
 		[Nullable(2)]
 		protected IHeadStyle FbInstance;
 
-		// Token: 0x04005AB4 RID: 23220
+		// Token: 0x04005F4B RID: 24395
 		[Nullable(2)]
 		protected IHeadStyle_SetValue PocoInterface;
 	}

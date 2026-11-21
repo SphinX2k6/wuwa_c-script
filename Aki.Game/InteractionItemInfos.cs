@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020016F3 RID: 5875
+// Token: 0x02000BAB RID: 2987
 [NullableContext(1)]
 [Nullable(0)]
 public class InteractionItemInfos
 {
-	// Token: 0x04004CCC RID: 19660
+	// Token: 0x04004D73 RID: 19827
 	[StaticVariableRuleIgnore]
 	private static IReadOnlySet<string> CyberGrassFoliageArray = new HashSet<string>
 	{
@@ -23,7 +23,7 @@ public class InteractionItemInfos
 		"/Game/Aki/Scene/Assets/Levels/LaHaiLuo/TianWenTai/Common/Foliage/FT/FT_Small3_Obs_Gra_01DS.FT_Small3_Obs_Gra_01DS"
 	};
 
-	// Token: 0x04004CCD RID: 19661
+	// Token: 0x04004D74 RID: 19828
 	[StaticVariableRuleIgnore]
 	public static IReadOnlySet<string> CyberGrassStaticMeshArray = new HashSet<string>
 	{
@@ -65,11 +65,11 @@ public class InteractionItemInfos
 		"/Game/Aki/Scene/Assets/Levels/LaHaiLuo/Common/Foliage/Mesh/SM_Com3_Gra_18BM.SM_Com3_Gra_18BM"
 	};
 
-	// Token: 0x04004CCE RID: 19662
+	// Token: 0x04004D75 RID: 19829
 	[StaticVariableRuleIgnore]
 	public static readonly string CYBER_GRASS_AUDIO_KEY = "play_interact_cyber_grass_cut";
 
-	// Token: 0x04004CCF RID: 19663
+	// Token: 0x04004D76 RID: 19830
 	[StaticVariableRuleIgnore]
 	public static readonly IReadOnlySet<string> PhantomBlastGrassFoliageArray = new HashSet<string>
 	{
@@ -79,11 +79,11 @@ public class InteractionItemInfos
 		"/Game/Aki/Scene/Assets/Levels/LaHaiLuo/RiLingGuan/Foliage/FT/FT_Small3_Dai_Gra_05AS.FT_Small3_Dai_Gra_05AS"
 	};
 
-	// Token: 0x04004CD0 RID: 19664
+	// Token: 0x04004D77 RID: 19831
 	[StaticVariableRuleIgnore]
 	public static readonly string PHANTOM_BLAST_GRASS_AUDIO_KEY = "play_sfx_gp_vegetation_cut_phantomblast_grass";
 
-	// Token: 0x04004CD1 RID: 19665
+	// Token: 0x04004D78 RID: 19832
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyList<InteractionItemInfo> Items = new <>z__ReadOnlyArray<InteractionItemInfo>(new InteractionItemInfo[]
 	{

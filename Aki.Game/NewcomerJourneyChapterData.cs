@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020013A6 RID: 5030
+// Token: 0x0200085A RID: 2138
 public class NewcomerJourneyChapterData
 {
-	// Token: 0x06008D4F RID: 36175 RVA: 0x001E628D File Offset: 0x001E448D
+	// Token: 0x060060E5 RID: 24805 RVA: 0x001EEEC1 File Offset: 0x001ED0C1
 	public NewcomerJourneyChapterData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x04003EA6 RID: 16038
+	// Token: 0x04003F3E RID: 16190
 	public int Id;
 
-	// Token: 0x04003EA7 RID: 16039
+	// Token: 0x04003F3F RID: 16191
 	[Nullable(new byte[]
 	{
 		2,
@@ -23,7 +23,7 @@ public class NewcomerJourneyChapterData
 	})]
 	public List<NewcomerJourneyTaskData> TaskDataList;
 
-	// Token: 0x04003EA8 RID: 16040
+	// Token: 0x04003F40 RID: 16192
 	[Nullable(new byte[]
 	{
 		2,
@@ -31,10 +31,10 @@ public class NewcomerJourneyChapterData
 	})]
 	public Dictionary<int, NewcomerJourneyTaskData> TaskDataMap;
 
-	// Token: 0x04003EA9 RID: 16041
+	// Token: 0x04003F41 RID: 16193
 	[Nullable(2)]
 	public NewbieAdventureV2ChapterPb Data;
 
-	// Token: 0x04003EAA RID: 16042
+	// Token: 0x04003F42 RID: 16194
 	public int ChapterId = -1;
 }

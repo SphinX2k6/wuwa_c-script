@@ -2,25 +2,25 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002564 RID: 9572
+// Token: 0x02001A4F RID: 6735
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoWeatherData
 {
-	// Token: 0x0601350C RID: 79116 RVA: 0x004CE4CB File Offset: 0x004CC6CB
+	// Token: 0x060109EE RID: 68078 RVA: 0x004DD103 File Offset: 0x004DB303
 	public PhotoWeatherData()
 	{
 	}
 
-	// Token: 0x0601350D RID: 79117 RVA: 0x004CE4D3 File Offset: 0x004CC6D3
+	// Token: 0x060109EF RID: 68079 RVA: 0x004DD10B File Offset: 0x004DB30B
 	public PhotoWeatherData(int weatherId, PhotoWeather config)
 	{
 		this.WeatherId = weatherId;
 		this.Config = new PhotoWeather?(config);
 	}
 
-	// Token: 0x170018F2 RID: 6386
-	// (get) Token: 0x0601350E RID: 79118 RVA: 0x004CE4EE File Offset: 0x004CC6EE
+	// Token: 0x1700192C RID: 6444
+	// (get) Token: 0x060109F0 RID: 68080 RVA: 0x004DD126 File Offset: 0x004DB326
 	public bool IsDefault
 	{
 		get
@@ -29,8 +29,8 @@ public class PhotoWeatherData
 		}
 	}
 
-	// Token: 0x170018F3 RID: 6387
-	// (get) Token: 0x0601350F RID: 79119 RVA: 0x004CE500 File Offset: 0x004CC700
+	// Token: 0x1700192D RID: 6445
+	// (get) Token: 0x060109F1 RID: 68081 RVA: 0x004DD138 File Offset: 0x004DB338
 	public int PhotoWeatherType
 	{
 		get
@@ -43,8 +43,8 @@ public class PhotoWeatherData
 		}
 	}
 
-	// Token: 0x170018F4 RID: 6388
-	// (get) Token: 0x06013510 RID: 79120 RVA: 0x004CE52C File Offset: 0x004CC72C
+	// Token: 0x1700192E RID: 6446
+	// (get) Token: 0x060109F2 RID: 68082 RVA: 0x004DD164 File Offset: 0x004DB364
 	public string Icon
 	{
 		get
@@ -53,8 +53,8 @@ public class PhotoWeatherData
 		}
 	}
 
-	// Token: 0x170018F5 RID: 6389
-	// (get) Token: 0x06013511 RID: 79121 RVA: 0x004CE564 File Offset: 0x004CC764
+	// Token: 0x1700192F RID: 6447
+	// (get) Token: 0x060109F3 RID: 68083 RVA: 0x004DD19C File Offset: 0x004DB39C
 	public string Name
 	{
 		get
@@ -63,9 +63,9 @@ public class PhotoWeatherData
 		}
 	}
 
-	// Token: 0x040091B1 RID: 37297
+	// Token: 0x0400930A RID: 37642
 	public int WeatherId;
 
-	// Token: 0x040091B2 RID: 37298
+	// Token: 0x0400930B RID: 37643
 	private readonly PhotoWeather? Config;
 }

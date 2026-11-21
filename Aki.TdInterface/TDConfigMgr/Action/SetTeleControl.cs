@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E2 RID: 8674
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200244D RID: 9293
 	public class SetTeleControl : ActionParams
 	{
-		// Token: 0x0600BE95 RID: 48789 RVA: 0x001B6B1C File Offset: 0x001B4D1C
+		// Token: 0x0600CA51 RID: 51793 RVA: 0x001CE1A8 File Offset: 0x001CC3A8
 		private SetTeleControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE96 RID: 48790 RVA: 0x001B6B54 File Offset: 0x001B4D54
+		// Token: 0x0600CA52 RID: 51794 RVA: 0x001CE1E0 File Offset: 0x001CC3E0
 		public static SetTeleControl Create([Nullable(2)] SetTeleControl instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE97 RID: 48791 RVA: 0x001B6B67 File Offset: 0x001B4D67
+		// Token: 0x0600CA53 RID: 51795 RVA: 0x001CE1F3 File Offset: 0x001CC3F3
 		public static SetTeleControl CreateFromSetValue([Nullable(2)] SetTeleControl_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE98 RID: 48792 RVA: 0x001B6B7A File Offset: 0x001B4D7A
+		// Token: 0x0600CA54 RID: 51796 RVA: 0x001CE206 File Offset: 0x001CC406
 		public SetTeleControl_SetValue ToSetValue()
 		{
 			return new SetTeleControl_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039D9 RID: 14809
-		// (get) Token: 0x0600BE99 RID: 48793 RVA: 0x001B6B8D File Offset: 0x001B4D8D
-		// (set) Token: 0x0600BE9A RID: 48794 RVA: 0x001B6BB4 File Offset: 0x001B4DB4
+		// Token: 0x17003CCE RID: 15566
+		// (get) Token: 0x0600CA55 RID: 51797 RVA: 0x001CE219 File Offset: 0x001CC419
+		// (set) Token: 0x0600CA56 RID: 51798 RVA: 0x001CE240 File Offset: 0x001CC440
 		public virtual ISetTeleControlConfig Config
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071B7 RID: 29111
+		// Token: 0x04007800 RID: 30720
 		[Nullable(2)]
 		protected new SetTeleControl FbInstance;
 
-		// Token: 0x040071B8 RID: 29112
+		// Token: 0x04007801 RID: 30721
 		[Nullable(2)]
 		protected SetTeleControl_SetValue PocoInterface;
 	}

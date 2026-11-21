@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064D1 RID: 25809
+	// Token: 0x0200544F RID: 21583
 	public static class EMatchThreeTextIdExtensions
 	{
-		// Token: 0x06040C40 RID: 265280 RVA: 0x00FAEF18 File Offset: 0x00FAD118
+		// Token: 0x06035904 RID: 219396 RVA: 0x00EF5F60 File Offset: 0x00EF4160
 		public static string ToEnumString(this EMatchThreeTextId value)
 		{
 			string result;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return result;
 		}
 
-		// Token: 0x06040C41 RID: 265281 RVA: 0x00FAEFB4 File Offset: 0x00FAD1B4
+		// Token: 0x06035905 RID: 219397 RVA: 0x00EF5FFC File Offset: 0x00EF41FC
 		public static EMatchThreeTextId FromString(string name)
 		{
 			EMatchThreeTextId result;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return result;
 		}
 
-		// Token: 0x06040C42 RID: 265282 RVA: 0x00FAEFE0 File Offset: 0x00FAD1E0
+		// Token: 0x06035906 RID: 219398 RVA: 0x00EF6028 File Offset: 0x00EF4228
 		public static bool TryFromString(string name, out EMatchThreeTextId value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			return false;
 		}
 
-		// Token: 0x06040C43 RID: 265283 RVA: 0x00FAF13C File Offset: 0x00FAD33C
+		// Token: 0x06035907 RID: 219399 RVA: 0x00EF6184 File Offset: 0x00EF4384
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			};
 		}
 
-		// Token: 0x06040C44 RID: 265284 RVA: 0x00FAF1A1 File Offset: 0x00FAD3A1
+		// Token: 0x06035908 RID: 219400 RVA: 0x00EF61E9 File Offset: 0x00EF43E9
 		public static EMatchThreeTextId[] GetValues()
 		{
 			return new EMatchThreeTextId[]
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 			};
 		}
 
-		// Token: 0x06040C45 RID: 265285 RVA: 0x00FAF1B8 File Offset: 0x00FAD3B8
+		// Token: 0x06035909 RID: 219401 RVA: 0x00EF6200 File Offset: 0x00EF4400
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,43 +2,43 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001C17 RID: 7191
+// Token: 0x020010D6 RID: 4310
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FragmentMemoryActivityController : ActivityControllerBase
 {
-	// Token: 0x0600D7AD RID: 55213 RVA: 0x0031EFCC File Offset: 0x0031D1CC
+	// Token: 0x0600ABC1 RID: 43969 RVA: 0x0032A31C File Offset: 0x0032851C
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x0600D7AE RID: 55214 RVA: 0x0031EFCE File Offset: 0x0031D1CE
+	// Token: 0x0600ABC2 RID: 43970 RVA: 0x0032A31E File Offset: 0x0032851E
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityProcessMemory";
 	}
 
-	// Token: 0x0600D7AF RID: 55215 RVA: 0x0031EFD5 File Offset: 0x0031D1D5
+	// Token: 0x0600ABC3 RID: 43971 RVA: 0x0032A325 File Offset: 0x00328525
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new FragmentMemorySubView();
 	}
 
-	// Token: 0x0600D7B0 RID: 55216 RVA: 0x0031EFDC File Offset: 0x0031D1DC
+	// Token: 0x0600ABC4 RID: 43972 RVA: 0x0032A32C File Offset: 0x0032852C
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new FragmentMemoryActivityData();
 	}
 
-	// Token: 0x0600D7B1 RID: 55217 RVA: 0x0031EFE3 File Offset: 0x0031D1E3
+	// Token: 0x0600ABC5 RID: 43973 RVA: 0x0032A333 File Offset: 0x00328533
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x170011B3 RID: 4531
-	// (get) Token: 0x0600D7B2 RID: 55218 RVA: 0x0031EFE6 File Offset: 0x0031D1E6
+	// Token: 0x170011D9 RID: 4569
+	// (get) Token: 0x0600ABC6 RID: 43974 RVA: 0x0032A336 File Offset: 0x00328536
 	public static FragmentMemoryActivityController Instance
 	{
 		get
@@ -47,7 +47,7 @@ public class FragmentMemoryActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600D7B3 RID: 55219 RVA: 0x0031EFED File Offset: 0x0031D1ED
+	// Token: 0x0600ABC7 RID: 43975 RVA: 0x0032A33D File Offset: 0x0032853D
 	public static FragmentMemoryActivityController GetOrCreateInstance()
 	{
 		if (FragmentMemoryActivityController._Instance == null)
@@ -57,7 +57,7 @@ public class FragmentMemoryActivityController : ActivityControllerBase
 		return FragmentMemoryActivityController._Instance;
 	}
 
-	// Token: 0x0600D7B4 RID: 55220 RVA: 0x0031F001 File Offset: 0x0031D201
+	// Token: 0x0600ABC8 RID: 43976 RVA: 0x0032A351 File Offset: 0x00328551
 	public static bool CreateInstance()
 	{
 		if (FragmentMemoryActivityController._Instance != null)
@@ -68,24 +68,24 @@ public class FragmentMemoryActivityController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D7B5 RID: 55221 RVA: 0x0031F017 File Offset: 0x0031D217
+	// Token: 0x0600ABC9 RID: 43977 RVA: 0x0032A367 File Offset: 0x00328567
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600D7B6 RID: 55222 RVA: 0x0031F019 File Offset: 0x0031D219
+	// Token: 0x0600ABCA RID: 43978 RVA: 0x0032A369 File Offset: 0x00328569
 	public static void ResetStaticDefaultValue()
 	{
 		FragmentMemoryActivityController._Instance = null;
 	}
 
-	// Token: 0x0600D7B7 RID: 55223 RVA: 0x0031F021 File Offset: 0x0031D221
+	// Token: 0x0600ABCB RID: 43979 RVA: 0x0032A371 File Offset: 0x00328571
 	static FragmentMemoryActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FragmentMemoryActivityController.CreateStaticDefaultValue), new Action(FragmentMemoryActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400627F RID: 25215
+	// Token: 0x04006351 RID: 25425
 	[Nullable(2)]
 	private static FragmentMemoryActivityController _Instance;
 }

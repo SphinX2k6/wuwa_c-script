@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x0200522D RID: 21037
+	// Token: 0x020041FD RID: 16893
 	public enum EPhantomArenaBattleShowTipsType
 	{
-		// Token: 0x0401C7E9 RID: 116713
+		// Token: 0x0401721E RID: 94750
 		None,
-		// Token: 0x0401C7EA RID: 116714
+		// Token: 0x0401721F RID: 94751
 		CardTips,
-		// Token: 0x0401C7EB RID: 116715
+		// Token: 0x04017220 RID: 94752
 		DetailsTips,
-		// Token: 0x0401C7EC RID: 116716
+		// Token: 0x04017221 RID: 94753
 		FieldDetailsTips,
-		// Token: 0x0401C7ED RID: 116717
+		// Token: 0x04017222 RID: 94754
 		SkillTips
 	}
 }

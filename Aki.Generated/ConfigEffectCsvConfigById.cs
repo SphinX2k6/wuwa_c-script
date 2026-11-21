@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000257 RID: 599
+	// Token: 0x0200026B RID: 619
 	public class ConfigEffectCsvConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E0E RID: 3598 RVA: 0x000A8EE5 File Offset: 0x000A70E5
+		// Token: 0x06000E86 RID: 3718 RVA: 0x000AF1A9 File Offset: 0x000AD3A9
 		static ConfigEffectCsvConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEffectCsvConfigById.CreateStaticDefaultValue), new Action(ConfigEffectCsvConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E0F RID: 3599 RVA: 0x000A8F04 File Offset: 0x000A7104
+		// Token: 0x06000E87 RID: 3719 RVA: 0x000AF1C8 File Offset: 0x000AD3C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEffectCsvConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E10 RID: 3600 RVA: 0x000A8F83 File Offset: 0x000A7183
+		// Token: 0x06000E88 RID: 3720 RVA: 0x000AF247 File Offset: 0x000AD447
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEffectCsvConfigById.LogPair = null;
 			ConfigEffectCsvConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000E11 RID: 3601 RVA: 0x000A8F91 File Offset: 0x000A7191
+		// Token: 0x06000E89 RID: 3721 RVA: 0x000AF255 File Offset: 0x000AD455
 		public static void Init()
 		{
 			ConfigEffectCsvConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigEffectCsvConfigById.HandleId, "db_effectcsvconfig.db", "select BinData from `EffectCsvConfig` where Id=?");
 		}
 
-		// Token: 0x06000E12 RID: 3602 RVA: 0x000A8FAC File Offset: 0x000A71AC
+		// Token: 0x06000E8A RID: 3722 RVA: 0x000AF270 File Offset: 0x000AD470
 		public static EffectCsvConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEffectCsvConfigById.HandleId, ConfigEffectCsvConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EffectCsvConfig?(rootAsEffectCsvConfig);
 		}
 
-		// Token: 0x04001045 RID: 4165
+		// Token: 0x040010D1 RID: 4305
 		private const string DB = "db_effectcsvconfig.db";
 
-		// Token: 0x04001046 RID: 4166
+		// Token: 0x040010D2 RID: 4306
 		private const string FILE = "k.可视化编辑/c.Csv/t.特效配置/*.csv*";
 
-		// Token: 0x04001047 RID: 4167
+		// Token: 0x040010D3 RID: 4307
 		private const string TABLE = "EffectCsvConfig";
 
-		// Token: 0x04001048 RID: 4168
+		// Token: 0x040010D4 RID: 4308
 		private const string COMMAND = "select BinData from `EffectCsvConfig` where Id=?";
 
-		// Token: 0x04001049 RID: 4169
+		// Token: 0x040010D5 RID: 4309
 		private const string KEY_PREFIX = "EffectCsvConfigById";
 
-		// Token: 0x0400104A RID: 4170
+		// Token: 0x040010D6 RID: 4310
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400104B RID: 4171
+		// Token: 0x040010D7 RID: 4311
 		private static int HandleId;
 	}
 }

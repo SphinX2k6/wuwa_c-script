@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AF0 RID: 6896
+	// Token: 0x02001C9D RID: 7325
 	public class IHeadStyleMonsterDisplay_SetValue
 	{
-		// Token: 0x04005AB8 RID: 23224
+		// Token: 0x04005F4F RID: 24399
 		public EHeadStyle Type;
 
-		// Token: 0x04005AB9 RID: 23225
+		// Token: 0x04005F50 RID: 24400
 		public int MonsterDisplayId;
 	}
 }

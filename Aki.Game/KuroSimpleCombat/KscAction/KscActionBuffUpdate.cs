@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace KuroSimpleCombat.KscAction
 {
-	// Token: 0x020044E5 RID: 17637
+	// Token: 0x02003031 RID: 12337
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KscActionBuffUpdate : KscActionBase
 	{
-		// Token: 0x0602D6E2 RID: 186082 RVA: 0x00A411A3 File Offset: 0x00A3F3A3
+		// Token: 0x0601D42C RID: 119852 RVA: 0x008EF03B File Offset: 0x008ED23B
 		public KscActionBuffUpdate(SimpleCombatEntityBuffUpdateNotify params_) : base(params_.EntityId)
 		{
 			this.Params = params_;
 		}
 
-		// Token: 0x0602D6E3 RID: 186083 RVA: 0x00A411B8 File Offset: 0x00A3F3B8
+		// Token: 0x0601D42D RID: 119853 RVA: 0x008EF050 File Offset: 0x008ED250
 		protected override UniTask RunContent()
 		{
 			KscActionBuffUpdate.<RunContent>d__2 <RunContent>d__;
@@ -31,7 +31,7 @@ namespace KuroSimpleCombat.KscAction
 			return <RunContent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D6E4 RID: 186084 RVA: 0x00A411FC File Offset: 0x00A3F3FC
+		// Token: 0x0601D42E RID: 119854 RVA: 0x008EF094 File Offset: 0x008ED294
 		private unsafe void ModifyBuffAsync(int kscEntityId)
 		{
 			bool isAdd = this.Params.IsBuffAdd;
@@ -112,7 +112,7 @@ namespace KuroSimpleCombat.KscAction
 			KscUtil.AsyncLoadKscAsset<UKSC_DA_Buff>(loadAssetParams);
 		}
 
-		// Token: 0x040184B2 RID: 99506
+		// Token: 0x0400F67D RID: 63101
 		public SimpleCombatEntityBuffUpdateNotify Params;
 	}
 }

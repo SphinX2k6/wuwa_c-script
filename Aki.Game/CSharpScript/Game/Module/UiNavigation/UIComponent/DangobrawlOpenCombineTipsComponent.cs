@@ -8,15 +8,15 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 {
-	// Token: 0x020049FE RID: 18942
+	// Token: 0x02003978 RID: 14712
 	public class DangobrawlOpenCombineTipsComponent : DangobrawlHotKeyComponentBase
 	{
-		// Token: 0x060312C2 RID: 201410 RVA: 0x00B67B1B File Offset: 0x00B65D1B
+		// Token: 0x06025DF8 RID: 155128 RVA: 0x00AA2AD7 File Offset: 0x00AA0CD7
 		public DangobrawlOpenCombineTipsComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060312C3 RID: 201411 RVA: 0x00B67B24 File Offset: 0x00B65D24
+		// Token: 0x06025DF9 RID: 155129 RVA: 0x00AA2AE0 File Offset: 0x00AA0CE0
 		protected override bool ShouldShow()
 		{
 			int hoveredConfigId = DangobrawlOpenCombineTipsComponent.GetHoveredConfigId();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return DangobrawlHotKeyComponentBase.CurrentSelection == null && flag;
 		}
 
-		// Token: 0x060312C4 RID: 201412 RVA: 0x00B67B50 File Offset: 0x00B65D50
+		// Token: 0x06025DFA RID: 155130 RVA: 0x00AA2B0C File Offset: 0x00AA0D0C
 		protected override void OnRelease(HotKeyMap config)
 		{
 			DangoBrawlSelection currentHovered = DangobrawlHotKeyComponentBase.CurrentHovered;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			}, null);
 		}
 
-		// Token: 0x060312C5 RID: 201413 RVA: 0x00B67BD8 File Offset: 0x00B65DD8
+		// Token: 0x06025DFB RID: 155131 RVA: 0x00AA2B94 File Offset: 0x00AA0D94
 		private static int GetHoveredConfigId()
 		{
 			DangoBrawlSelection currentHovered = DangobrawlHotKeyComponentBase.CurrentHovered;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.UiNavigation.UIComponent
 			return result;
 		}
 
-		// Token: 0x060312C6 RID: 201414 RVA: 0x00B67CD0 File Offset: 0x00B65ED0
+		// Token: 0x06025DFC RID: 155132 RVA: 0x00AA2C8C File Offset: 0x00AA0E8C
 		[NullableContext(1)]
 		private static int GetShopHoveredConfigId(ActivityDangoBrawlData actData, int uid)
 		{

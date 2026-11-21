@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002970 RID: 10608
+	// Token: 0x0200085C RID: 2140
 	public sealed class FGetSlateColor : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060273C0 RID: 160704 RVA: 0x003BD3E7 File Offset: 0x003BB5E7
+		// Token: 0x0600BA2A RID: 47658 RVA: 0x0012A218 File Offset: 0x00128418
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FGetSlateColor.StaticFunctionPtr();
 		}
 
-		// Token: 0x060273C1 RID: 160705 RVA: 0x003BD3F3 File Offset: 0x003BB5F3
+		// Token: 0x0600BA2B RID: 47659 RVA: 0x0012A224 File Offset: 0x00128424
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (UWidget.__GetSlateColor__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return UWidget.__GetSlateColor__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x060273C2 RID: 160706 RVA: 0x003BD416 File Offset: 0x003BB616
+		// Token: 0x0600BA2C RID: 47660 RVA: 0x0012A247 File Offset: 0x00128447
 		public FGetSlateColor()
 		{
 		}
 
-		// Token: 0x060273C3 RID: 160707 RVA: 0x003BD41E File Offset: 0x003BB61E
+		// Token: 0x0600BA2D RID: 47661 RVA: 0x0012A24F File Offset: 0x0012844F
 		[NullableContext(2)]
 		public FGetSlateColor(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060273C4 RID: 160708 RVA: 0x003BD428 File Offset: 0x003BB628
+		// Token: 0x0600BA2E RID: 47662 RVA: 0x0012A259 File Offset: 0x00128459
 		public FGetSlateColor(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060273C5 RID: 160709 RVA: 0x003BD433 File Offset: 0x003BB633
+		// Token: 0x0600BA2F RID: 47663 RVA: 0x0012A264 File Offset: 0x00128464
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<FSlateColor>) ?? ((Func<FSlateColor>)Delegate.CreateDelegate(typeof(Func<FSlateColor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060273C6 RID: 160710 RVA: 0x003BD465 File Offset: 0x003BB665
+		// Token: 0x0600BA30 RID: 47664 RVA: 0x0012A296 File Offset: 0x00128496
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<FSlateColor> Callback)
 		{
 			if (FGetSlateColor.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FGetSlateColor.RegisterId);
 		}
 
-		// Token: 0x060273C7 RID: 160711 RVA: 0x003BD4A0 File Offset: 0x003BB6A0
+		// Token: 0x0600BA31 RID: 47665 RVA: 0x0012A2D0 File Offset: 0x001284D0
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FSlateColor Execute()
 		{
 			FGetSlateColor.__FGetSlateColor_DelegateParams* ptr = stackalloc FGetSlateColor.__FGetSlateColor_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FGetSlateColor.__FGetSlateColor_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060273C8 RID: 160712 RVA: 0x003BD4F8 File Offset: 0x003BB6F8
+		// Token: 0x0600BA32 RID: 47666 RVA: 0x0012A328 File Offset: 0x00128528
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<FSlateColor> func = target as Func<FSlateColor>;
@@ -97,28 +94,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x040158FB RID: 88315
+		// Token: 0x04005484 RID: 21636
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.Widget:GetSlateColor__DelegateSignature";
 
-		// Token: 0x040158FC RID: 88316
+		// Token: 0x04005485 RID: 21637
 		private static int RegisterId;
 
-		// Token: 0x02003B7B RID: 15227
+		// Token: 0x020013F5 RID: 5109
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FGetSlateColor_DelegateParams
+		private ref struct __FGetSlateColor_DelegateParams
 		{
-			// Token: 0x04017D55 RID: 97621
+			// Token: 0x0400689F RID: 26783
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003B7C RID: 15228
+		// Token: 0x020013F6 RID: 5110
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D56 RID: 97622
+			// Token: 0x040068A0 RID: 26784
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

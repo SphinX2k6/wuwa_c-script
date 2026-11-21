@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020021AE RID: 8622
+// Token: 0x02001692 RID: 5778
 public class LordGymLordStarItem : GridProxyAbstract<bool>
 {
-	// Token: 0x06010C62 RID: 68706 RVA: 0x00413058 File Offset: 0x00411258
+	// Token: 0x0600E0F3 RID: 57587 RVA: 0x0041F940 File Offset: 0x0041DB40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ public class LordGymLordStarItem : GridProxyAbstract<bool>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06010C63 RID: 68707 RVA: 0x004130A0 File Offset: 0x004112A0
+	// Token: 0x0600E0F4 RID: 57588 RVA: 0x0041F988 File Offset: 0x0041DB88
 	public override void Refresh(bool data, bool isSelected, int gridIndex)
 	{
 		UUIItem item = base.GetItem(0);
@@ -30,10 +30,10 @@ public class LordGymLordStarItem : GridProxyAbstract<bool>
 		item.SetUIActive(data);
 	}
 
-	// Token: 0x020086E4 RID: 34532
+	// Token: 0x0200786F RID: 30831
 	private class EComponent
 	{
-		// Token: 0x0402BE3D RID: 179773
+		// Token: 0x0402715E RID: 160094
 		public const int ActiveStarItem = 0;
 	}
 }

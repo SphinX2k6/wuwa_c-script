@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000451 RID: 1105
+	// Token: 0x02000467 RID: 1127
 	public class ConfigInteractDataByGuid : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019F0 RID: 6640 RVA: 0x000EC181 File Offset: 0x000EA381
+		// Token: 0x06001A74 RID: 6772 RVA: 0x000F28D5 File Offset: 0x000F0AD5
 		static ConfigInteractDataByGuid()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInteractDataByGuid.CreateStaticDefaultValue), new Action(ConfigInteractDataByGuid.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019F1 RID: 6641 RVA: 0x000EC1A0 File Offset: 0x000EA3A0
+		// Token: 0x06001A75 RID: 6773 RVA: 0x000F28F4 File Offset: 0x000F0AF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInteractDataByGuid.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019F2 RID: 6642 RVA: 0x000EC21F File Offset: 0x000EA41F
+		// Token: 0x06001A76 RID: 6774 RVA: 0x000F2973 File Offset: 0x000F0B73
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInteractDataByGuid.LogPair = null;
 			ConfigInteractDataByGuid.HandleId = 0;
 		}
 
-		// Token: 0x060019F3 RID: 6643 RVA: 0x000EC22D File Offset: 0x000EA42D
+		// Token: 0x06001A77 RID: 6775 RVA: 0x000F2981 File Offset: 0x000F0B81
 		public static void Init()
 		{
 			ConfigInteractDataByGuid.HandleId = ConfigCommon.InitDataStatement(ConfigInteractDataByGuid.HandleId, "db_interactdata.db", "select BinData from `InteractData` where Guid=?");
 		}
 
-		// Token: 0x060019F4 RID: 6644 RVA: 0x000EC248 File Offset: 0x000EA448
+		// Token: 0x06001A78 RID: 6776 RVA: 0x000F299C File Offset: 0x000F0B9C
 		public static InteractData? GetConfig(string p0Guid, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInteractDataByGuid.HandleId, ConfigInteractDataByGuid.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new InteractData?(rootAsInteractData);
 		}
 
-		// Token: 0x04001E1B RID: 7707
+		// Token: 0x04001EB5 RID: 7861
 		private const string DB = "db_interactdata.db";
 
-		// Token: 0x04001E1C RID: 7708
+		// Token: 0x04001EB6 RID: 7862
 		private const string FILE = "UniverseEditor/InteractOption/InteractOption.csv";
 
-		// Token: 0x04001E1D RID: 7709
+		// Token: 0x04001EB7 RID: 7863
 		private const string TABLE = "InteractData";
 
-		// Token: 0x04001E1E RID: 7710
+		// Token: 0x04001EB8 RID: 7864
 		private const string COMMAND = "select BinData from `InteractData` where Guid=?";
 
-		// Token: 0x04001E1F RID: 7711
+		// Token: 0x04001EB9 RID: 7865
 		private const string KEY_PREFIX = "InteractDataByGuid";
 
-		// Token: 0x04001E20 RID: 7712
+		// Token: 0x04001EBA RID: 7866
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001E21 RID: 7713
+		// Token: 0x04001EBB RID: 7867
 		private static int HandleId;
 	}
 }

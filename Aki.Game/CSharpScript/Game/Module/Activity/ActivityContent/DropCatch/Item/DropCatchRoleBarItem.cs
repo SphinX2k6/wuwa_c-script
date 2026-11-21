@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066E5 RID: 26341
+	// Token: 0x02005635 RID: 22069
 	public class DropCatchRoleBarItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06041D51 RID: 269649 RVA: 0x00FF727A File Offset: 0x00FF547A
+		// Token: 0x0603689D RID: 223389 RVA: 0x00F3867E File Offset: 0x00F3687E
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,12 +18,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D52 RID: 269650 RVA: 0x00FF729D File Offset: 0x00FF549D
+		// Token: 0x0603689E RID: 223390 RVA: 0x00F386A1 File Offset: 0x00F368A1
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 		}
 
-		// Token: 0x06041D53 RID: 269651 RVA: 0x00FF729F File Offset: 0x00FF549F
+		// Token: 0x0603689F RID: 223391 RVA: 0x00F386A3 File Offset: 0x00F368A3
 		public override UniTask RefreshAsync(int data, bool isSelected, int gridIndex)
 		{
 			return UniTask.CompletedTask;

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C07 RID: 3079
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CD7 RID: 3287
 	public class BuffProducerComponent : IComponentBase
 	{
-		// Token: 0x060046B0 RID: 18096 RVA: 0x000B26EC File Offset: 0x000B08EC
+		// Token: 0x06004B13 RID: 19219 RVA: 0x000BC8B8 File Offset: 0x000BAAB8
 		public static BuffProducerComponent Create(IBuffProducerComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700145F RID: 5215
-		// (get) Token: 0x060046B1 RID: 18097 RVA: 0x000B270C File Offset: 0x000B090C
+		// Token: 0x17001560 RID: 5472
+		// (get) Token: 0x06004B14 RID: 19220 RVA: 0x000BC8D8 File Offset: 0x000BAAD8
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001460 RID: 5216
-		// (get) Token: 0x060046B2 RID: 18098 RVA: 0x000B2744 File Offset: 0x000B0944
+		// Token: 0x17001561 RID: 5473
+		// (get) Token: 0x06004B15 RID: 19221 RVA: 0x000BC910 File Offset: 0x000BAB10
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001461 RID: 5217
-		// (get) Token: 0x060046B3 RID: 18099 RVA: 0x000B275A File Offset: 0x000B095A
+		// Token: 0x17001562 RID: 5474
+		// (get) Token: 0x06004B16 RID: 19222 RVA: 0x000BC926 File Offset: 0x000BAB26
 		public virtual IAddBuffMode AddBuffMode
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001462 RID: 5218
-		// (get) Token: 0x060046B4 RID: 18100 RVA: 0x000B2789 File Offset: 0x000B0989
+		// Token: 0x17001563 RID: 5475
+		// (get) Token: 0x06004B17 RID: 19223 RVA: 0x000BC955 File Offset: 0x000BAB55
 		public virtual long BuffId
 		{
 			get
@@ -72,13 +69,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002834 RID: 10292
+		// Token: 0x04002A80 RID: 10880
 		private IBuffProducerComponent Instance;
 
-		// Token: 0x04002835 RID: 10293
+		// Token: 0x04002A81 RID: 10881
 		private IAddBuffMode _AddBuffModeCache;
 
-		// Token: 0x04002836 RID: 10294
+		// Token: 0x04002A82 RID: 10882
 		private bool _AddBuffModeInited;
 	}
 }

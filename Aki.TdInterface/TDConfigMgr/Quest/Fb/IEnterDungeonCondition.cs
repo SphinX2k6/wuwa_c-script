@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200138B RID: 5003
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014DC RID: 5340
 	public class IEnterDungeonCondition : IQuestCondition
 	{
-		// Token: 0x06007273 RID: 29299 RVA: 0x001133D2 File Offset: 0x001115D2
+		// Token: 0x06007919 RID: 31001 RVA: 0x00121A56 File Offset: 0x0011FC56
 		public static IEnterDungeonCondition Create(IEnterDungeonCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002530 RID: 9520
-		// (get) Token: 0x06007274 RID: 29300 RVA: 0x001133F1 File Offset: 0x001115F1
+		// Token: 0x17002703 RID: 9987
+		// (get) Token: 0x0600791A RID: 31002 RVA: 0x00121A75 File Offset: 0x0011FC75
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002531 RID: 9521
-		// (get) Token: 0x06007275 RID: 29301 RVA: 0x001133FE File Offset: 0x001115FE
+		// Token: 0x17002704 RID: 9988
+		// (get) Token: 0x0600791B RID: 31003 RVA: 0x00121A82 File Offset: 0x0011FC82
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002532 RID: 9522
-		// (get) Token: 0x06007276 RID: 29302 RVA: 0x00113432 File Offset: 0x00111632
+		// Token: 0x17002705 RID: 9989
+		// (get) Token: 0x0600791C RID: 31004 RVA: 0x00121AB6 File Offset: 0x0011FCB6
 		public virtual IEnterDungeon EnterType
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004223 RID: 16931
+		// Token: 0x040045A4 RID: 17828
 		private IEnterDungeonCondition Instance;
 
-		// Token: 0x04004224 RID: 16932
+		// Token: 0x040045A5 RID: 17829
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004225 RID: 16933
+		// Token: 0x040045A6 RID: 17830
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004226 RID: 16934
+		// Token: 0x040045A7 RID: 17831
 		private IEnterDungeon _EnterTypeCache;
 
-		// Token: 0x04004227 RID: 16935
+		// Token: 0x040045A8 RID: 17832
 		private bool _EnterTypeInited;
 	}
 }

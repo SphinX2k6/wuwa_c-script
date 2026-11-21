@@ -5,18 +5,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026AE RID: 9902
+// Token: 0x02001B99 RID: 7065
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeNodeItemLoader : IQuestTreeNodeItemLoader
 {
-	// Token: 0x06014489 RID: 83081 RVA: 0x0051FEA5 File Offset: 0x0051E0A5
+	// Token: 0x0601196B RID: 72043 RVA: 0x0052EBDD File Offset: 0x0052CDDD
 	public void RegisterNodeType(EQuestTreeNodeType type, Type ctorType)
 	{
 		this._nodeConstructors[type] = ctorType;
 	}
 
-	// Token: 0x0601448A RID: 83082 RVA: 0x0051FEB4 File Offset: 0x0051E0B4
+	// Token: 0x0601196C RID: 72044 RVA: 0x0052EBEC File Offset: 0x0052CDEC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -34,7 +34,7 @@ public class QuestTreeNodeItemLoader : IQuestTreeNodeItemLoader
 		return <LoadNodeItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601448B RID: 83083 RVA: 0x0051FF08 File Offset: 0x0051E108
+	// Token: 0x0601196D RID: 72045 RVA: 0x0052EC40 File Offset: 0x0052CE40
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -52,7 +52,7 @@ public class QuestTreeNodeItemLoader : IQuestTreeNodeItemLoader
 		return <LoadNodeContainer>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601448C RID: 83084 RVA: 0x0051FF5C File Offset: 0x0051E15C
+	// Token: 0x0601196E RID: 72046 RVA: 0x0052EC94 File Offset: 0x0052CE94
 	[NullableContext(2)]
 	[return: Nullable(new byte[]
 	{
@@ -71,6 +71,6 @@ public class QuestTreeNodeItemLoader : IQuestTreeNodeItemLoader
 		return questTreeNodeItemBase;
 	}
 
-	// Token: 0x0400988F RID: 39055
+	// Token: 0x040099E7 RID: 39399
 	private readonly Dictionary<EQuestTreeNodeType, Type> _nodeConstructors = new Dictionary<EQuestTreeNodeType, Type>();
 }

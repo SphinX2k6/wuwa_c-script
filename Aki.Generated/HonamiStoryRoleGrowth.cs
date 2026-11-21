@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D4D RID: 3405
+	// Token: 0x02000E32 RID: 3634
 	public struct HonamiStoryRoleGrowth : IFlatbufferObject
 	{
-		// Token: 0x1700182E RID: 6190
-		// (get) Token: 0x06008127 RID: 33063 RVA: 0x0025A05D File Offset: 0x0025825D
+		// Token: 0x17001891 RID: 6289
+		// (get) Token: 0x06008741 RID: 34625 RVA: 0x00278839 File Offset: 0x00276A39
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008128 RID: 33064 RVA: 0x0025A06A File Offset: 0x0025826A
+		// Token: 0x06008742 RID: 34626 RVA: 0x00278846 File Offset: 0x00276A46
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008129 RID: 33065 RVA: 0x0025A074 File Offset: 0x00258274
+		// Token: 0x06008743 RID: 34627 RVA: 0x00278850 File Offset: 0x00276A50
 		public static HonamiStoryRoleGrowth GetRootAsHonamiStoryRoleGrowth(ByteBuffer _bb)
 		{
 			return HonamiStoryRoleGrowth.GetRootAsHonamiStoryRoleGrowth(_bb, default(HonamiStoryRoleGrowth));
 		}
 
-		// Token: 0x0600812A RID: 33066 RVA: 0x0025A090 File Offset: 0x00258290
+		// Token: 0x06008744 RID: 34628 RVA: 0x0027886C File Offset: 0x00276A6C
 		public static HonamiStoryRoleGrowth GetRootAsHonamiStoryRoleGrowth(ByteBuffer _bb, HonamiStoryRoleGrowth obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600812B RID: 33067 RVA: 0x0025A0AD File Offset: 0x002582AD
+		// Token: 0x06008745 RID: 34629 RVA: 0x00278889 File Offset: 0x00276A89
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600812C RID: 33068 RVA: 0x0025A0BC File Offset: 0x002582BC
+		// Token: 0x06008746 RID: 34630 RVA: 0x00278898 File Offset: 0x00276A98
 		public HonamiStoryRoleGrowth __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700182F RID: 6191
-		// (get) Token: 0x0600812D RID: 33069 RVA: 0x0025A0CC File Offset: 0x002582CC
+		// Token: 0x17001892 RID: 6290
+		// (get) Token: 0x06008747 RID: 34631 RVA: 0x002788A8 File Offset: 0x00276AA8
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001830 RID: 6192
-		// (get) Token: 0x0600812E RID: 33070 RVA: 0x0025A108 File Offset: 0x00258308
+		// Token: 0x17001893 RID: 6291
+		// (get) Token: 0x06008748 RID: 34632 RVA: 0x002788E4 File Offset: 0x00276AE4
 		public int ActivityId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001831 RID: 6193
-		// (get) Token: 0x0600812F RID: 33071 RVA: 0x0025A144 File Offset: 0x00258344
+		// Token: 0x17001894 RID: 6292
+		// (get) Token: 0x06008749 RID: 34633 RVA: 0x00278920 File Offset: 0x00276B20
 		public int Level
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008130 RID: 33072 RVA: 0x0025A180 File Offset: 0x00258380
+		// Token: 0x0600874A RID: 34634 RVA: 0x0027895C File Offset: 0x00276B5C
 		public DicIntInt? AddPro(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001832 RID: 6194
-		// (get) Token: 0x06008131 RID: 33073 RVA: 0x0025A1E4 File Offset: 0x002583E4
+		// Token: 0x17001895 RID: 6293
+		// (get) Token: 0x0600874B RID: 34635 RVA: 0x002789C0 File Offset: 0x00276BC0
 		public int AddProLength
 		{
 			get
@@ -122,24 +122,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008132 RID: 33074 RVA: 0x0025A210 File Offset: 0x00258410
+		// Token: 0x0600874C RID: 34636 RVA: 0x002789EC File Offset: 0x00276BEC
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用AddProFrozenDict()缓存字典，遍历请使用AddProIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> AddPro()
+		public Dictionary<int, int> AddPro()
 		{
 			return this.AddProIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06008133 RID: 33075 RVA: 0x0025A266 File Offset: 0x00258466
+		// Token: 0x0600874D RID: 34637 RVA: 0x00278A42 File Offset: 0x00276C42
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> AddProIter()
+		public IEnumerable<DicIntInt> AddProIter()
 		{
 			HonamiStoryRoleGrowth.<AddProIter>d__18 <AddProIter>d__ = new HonamiStoryRoleGrowth.<AddProIter>d__18(-2);
 			<AddProIter>d__.<>3__<>4__this = this;
 			return <AddProIter>d__;
 		}
 
-		// Token: 0x06008134 RID: 33076 RVA: 0x0025A27C File Offset: 0x0025847C
+		// Token: 0x0600874E RID: 34638 RVA: 0x00278A58 File Offset: 0x00276C58
 		public int? GetAddPro(int key)
 		{
 			this.EnsureAddProCacheIfNeeded();
@@ -151,7 +150,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06008135 RID: 33077 RVA: 0x0025A2B0 File Offset: 0x002584B0
+		// Token: 0x0600874F RID: 34639 RVA: 0x00278A8C File Offset: 0x00276C8C
 		private void EnsureAddProCacheIfNeeded()
 		{
 			if (this.AddProCache != null)
@@ -161,18 +160,18 @@ namespace Aki.Config
 			this.AddProCache = this.AddProIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06008136 RID: 33078 RVA: 0x0025A316 File Offset: 0x00258516
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetAddProFrozenDict(int key)
+		// Token: 0x06008750 RID: 34640 RVA: 0x00278AF2 File Offset: 0x00276CF2
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetAddProFrozenDict()
 		{
 			this.EnsureAddProCacheIfNeeded();
 			return this.AddProCache;
 		}
 
-		// Token: 0x04004DC9 RID: 19913
+		// Token: 0x040053AE RID: 21422
 		private Table __p;
 
-		// Token: 0x04004DCA RID: 19914
+		// Token: 0x040053AF RID: 21423
 		[Nullable(2)]
 		private FrozenDictionary<int, int> AddProCache;
 	}

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005698 RID: 22168
+	// Token: 0x0200466E RID: 18030
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ManufactureView : UiNavigationView
 	{
-		// Token: 0x06038685 RID: 231045 RVA: 0x00D641F4 File Offset: 0x00D623F4
+		// Token: 0x0602D582 RID: 185730 RVA: 0x00CB2344 File Offset: 0x00CB0544
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038686 RID: 231046 RVA: 0x00D64364 File Offset: 0x00D62564
+		// Token: 0x0602D583 RID: 185731 RVA: 0x00CB24B4 File Offset: 0x00CB06B4
 		protected override void OnStart()
 		{
 			this.OpenHelpRoleButton = new OpenHelpRoleButton(base.GetItem(4));
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.IconItem = new IconItem(base.GetItem(1));
 		}
 
-		// Token: 0x06038687 RID: 231047 RVA: 0x00D6443C File Offset: 0x00D6263C
+		// Token: 0x0602D584 RID: 185732 RVA: 0x00CB258C File Offset: 0x00CB078C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -92,20 +92,20 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			};
 		}
 
-		// Token: 0x06038688 RID: 231048 RVA: 0x00D6448D File Offset: 0x00D6268D
+		// Token: 0x0602D585 RID: 185733 RVA: 0x00CB25DD File Offset: 0x00CB07DD
 		private int GetMaxCount()
 		{
 			return CommonManager.Instance.GetMaxCreateCount(this.ItemId);
 		}
 
-		// Token: 0x06038689 RID: 231049 RVA: 0x00D6449F File Offset: 0x00D6269F
+		// Token: 0x0602D586 RID: 185734 RVA: 0x00CB25EF File Offset: 0x00CB07EF
 		private void SetSum(int sum)
 		{
 			this.Count = sum;
 			this.RefreshMaterialNeedNum();
 		}
 
-		// Token: 0x0603868A RID: 231050 RVA: 0x00D644AE File Offset: 0x00D626AE
+		// Token: 0x0602D587 RID: 185735 RVA: 0x00CB25FE File Offset: 0x00CB07FE
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEventListener();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.AmountItem = null;
 		}
 
-		// Token: 0x0603868B RID: 231051 RVA: 0x00D644D0 File Offset: 0x00D626D0
+		// Token: 0x0602D588 RID: 185736 RVA: 0x00CB2620 File Offset: 0x00CB0820
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.ComposeSuccess, new Action(this.OnComposeOpenRewardPopView));
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			EventSystem.Instance.Add(EEventName.CloseHelpRole, new Action(this.RefreshCurrentRole));
 		}
 
-		// Token: 0x0603868C RID: 231052 RVA: 0x00D6456C File Offset: 0x00D6276C
+		// Token: 0x0602D589 RID: 185737 RVA: 0x00CB26BC File Offset: 0x00CB08BC
 		private void RemoveEventListener()
 		{
 			if (!this.IsFirstShow)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0603868D RID: 231053 RVA: 0x00D64610 File Offset: 0x00D62810
+		// Token: 0x0602D58A RID: 185738 RVA: 0x00CB2760 File Offset: 0x00CB0960
 		public void HideView(bool isHide)
 		{
 			this.SetActive(!isHide);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0603868E RID: 231054 RVA: 0x00D64630 File Offset: 0x00D62830
+		// Token: 0x0602D58B RID: 185739 RVA: 0x00CB2780 File Offset: 0x00CB0980
 		public void ShowView(int itemId)
 		{
 			EventSystem.Instance.Emit<EViewType>(EEventName.SwitchViewType, EViewType.ManufactureViewType);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.Refresh();
 		}
 
-		// Token: 0x0603868F RID: 231055 RVA: 0x00D6466C File Offset: 0x00D6286C
+		// Token: 0x0602D58C RID: 185740 RVA: 0x00CB27BC File Offset: 0x00CB09BC
 		private void Refresh()
 		{
 			if (!base.GetActive())
@@ -178,14 +178,14 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RefreshAmountItem();
 		}
 
-		// Token: 0x06038690 RID: 231056 RVA: 0x00D646D0 File Offset: 0x00D628D0
+		// Token: 0x0602D58D RID: 185741 RVA: 0x00CB2820 File Offset: 0x00CB0A20
 		private void RefreshText()
 		{
 			string commonManufactureText = CommonManager.Instance.GetCommonManufactureText(this.ItemId);
 			base.GetText(0).SetText(commonManufactureText, true);
 		}
 
-		// Token: 0x06038691 RID: 231057 RVA: 0x00D646FC File Offset: 0x00D628FC
+		// Token: 0x0602D58E RID: 185742 RVA: 0x00CB284C File Offset: 0x00CB0A4C
 		private void RefreshItemIcon()
 		{
 			int value = CommonManager.Instance.GetCommonManufactureId(this.ItemId).Value;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.IconItem.SetQuality(value);
 		}
 
-		// Token: 0x06038692 RID: 231058 RVA: 0x00D6473C File Offset: 0x00D6293C
+		// Token: 0x0602D58F RID: 185743 RVA: 0x00CB288C File Offset: 0x00CB0A8C
 		private void RefreshOpenRoleButton()
 		{
 			if (CommonManager.Instance.CheckShowRoleView().GetValueOrDefault())
@@ -206,19 +206,19 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.OpenHelpRoleButton.SetActive(false);
 		}
 
-		// Token: 0x06038693 RID: 231059 RVA: 0x00D64792 File Offset: 0x00D62992
+		// Token: 0x0602D590 RID: 185744 RVA: 0x00CB28E2 File Offset: 0x00CB0AE2
 		private void RefreshCurrentRole()
 		{
 			this.RefreshOpenRoleButton();
 		}
 
-		// Token: 0x06038694 RID: 231060 RVA: 0x00D6479C File Offset: 0x00D6299C
+		// Token: 0x0602D591 RID: 185745 RVA: 0x00CB28EC File Offset: 0x00CB0AEC
 		private void RefreshMaterialList()
 		{
 			this.MaterialHorizontal.RebuildLayoutByDataNew<ISingleItemInfo>(CommonManager.Instance.GetManufactureMaterialList(this.ItemId), null);
 		}
 
-		// Token: 0x06038695 RID: 231061 RVA: 0x00D647D0 File Offset: 0x00D629D0
+		// Token: 0x0602D592 RID: 185746 RVA: 0x00CB2920 File Offset: 0x00CB0B20
 		private void RefreshMaterialNeedNum()
 		{
 			foreach (MaterialItem materialItem in this.MaterialHorizontal.GetLayoutItemMap().Values)
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x06038696 RID: 231062 RVA: 0x00D64830 File Offset: 0x00D62A30
+		// Token: 0x0602D593 RID: 185747 RVA: 0x00CB2980 File Offset: 0x00CB0B80
 		private void RefreshConfirmButton()
 		{
 			UUIInteractionGroup uuiinteractionGroup = (base.GetButton(3).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			auibaseActor.GetUIItem().SetUIActive(!valueOrDefault);
 		}
 
-		// Token: 0x06038697 RID: 231063 RVA: 0x00D648A2 File Offset: 0x00D62AA2
+		// Token: 0x0602D594 RID: 185748 RVA: 0x00CB29F2 File Offset: 0x00CB0BF2
 		private void RefreshAmountItem()
 		{
 			if (this.AmountItem == null)
@@ -248,41 +248,41 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.AmountItem.RefreshAddAndDelButton();
 		}
 
-		// Token: 0x06038698 RID: 231064 RVA: 0x00D648C3 File Offset: 0x00D62AC3
+		// Token: 0x0602D595 RID: 185749 RVA: 0x00CB2A13 File Offset: 0x00CB0C13
 		private void OpenHelpRoleView()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.OpenHelpRole, this.ItemId);
 		}
 
-		// Token: 0x06038699 RID: 231065 RVA: 0x00D648DB File Offset: 0x00D62ADB
+		// Token: 0x0602D596 RID: 185750 RVA: 0x00CB2A2B File Offset: 0x00CB0C2B
 		private void OnConfirm()
 		{
 			CommonManager.Instance.SendManufacture(this.ItemId, this.Count);
 		}
 
-		// Token: 0x0603869A RID: 231066 RVA: 0x00D648F3 File Offset: 0x00D62AF3
+		// Token: 0x0602D597 RID: 185751 RVA: 0x00CB2A43 File Offset: 0x00CB0C43
 		private void OnDisable()
 		{
 			GenericPromptController.Instance.ShowPromptByCode("MaterialShort", Array.Empty<object>());
 		}
 
-		// Token: 0x0603869B RID: 231067 RVA: 0x00D64909 File Offset: 0x00D62B09
+		// Token: 0x0602D598 RID: 185752 RVA: 0x00CB2A59 File Offset: 0x00CB0C59
 		private void OnClickMaterial(ISingleItemInfo itemData)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null, false);
 		}
 
-		// Token: 0x0603869C RID: 231068 RVA: 0x00D6491D File Offset: 0x00D62B1D
+		// Token: 0x0602D599 RID: 185753 RVA: 0x00CB2A6E File Offset: 0x00CB0C6E
 		private void OnForgingOpenRewardPopView()
 		{
 		}
 
-		// Token: 0x0603869D RID: 231069 RVA: 0x00D6491F File Offset: 0x00D62B1F
+		// Token: 0x0602D59A RID: 185754 RVA: 0x00CB2A70 File Offset: 0x00CB0C70
 		private void OnComposeOpenRewardPopView()
 		{
 		}
 
-		// Token: 0x0603869E RID: 231070 RVA: 0x00D64924 File Offset: 0x00D62B24
+		// Token: 0x0602D59B RID: 185755 RVA: 0x00CB2A74 File Offset: 0x00CB0C74
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			};
 		}
 
-		// Token: 0x0401DA1E RID: 121374
+		// Token: 0x040184A9 RID: 99497
 		[Nullable(new byte[]
 		{
 			2,
@@ -310,50 +310,50 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 		})]
 		private GenericLayoutNew<MaterialItem> MaterialHorizontal;
 
-		// Token: 0x0401DA1F RID: 121375
+		// Token: 0x040184AA RID: 99498
 		[Nullable(2)]
 		private OpenHelpRoleButton OpenHelpRoleButton;
 
-		// Token: 0x0401DA20 RID: 121376
+		// Token: 0x040184AB RID: 99499
 		[Nullable(2)]
 		private AmountItem AmountItem;
 
-		// Token: 0x0401DA21 RID: 121377
+		// Token: 0x040184AC RID: 99500
 		[Nullable(2)]
 		private IconItem IconItem;
 
-		// Token: 0x0401DA22 RID: 121378
+		// Token: 0x040184AD RID: 99501
 		private bool IsFirstShow = true;
 
-		// Token: 0x0401DA23 RID: 121379
+		// Token: 0x040184AE RID: 99502
 		private int ItemId;
 
-		// Token: 0x0401DA24 RID: 121380
+		// Token: 0x040184AF RID: 99503
 		private int Count = 1;
 
-		// Token: 0x0200B85A RID: 47194
+		// Token: 0x0200A282 RID: 41602
 		[NullableContext(0)]
 		private class EManufactureViewDefine
 		{
-			// Token: 0x04037CCA RID: 228554
+			// Token: 0x040326E7 RID: 206567
 			public const int ManufactureNameText = 0;
 
-			// Token: 0x04037CCB RID: 228555
+			// Token: 0x040326E8 RID: 206568
 			public const int ManufactureIconItem = 1;
 
-			// Token: 0x04037CCC RID: 228556
+			// Token: 0x040326E9 RID: 206569
 			public const int ManufactureMaterialHorizontalLayout = 2;
 
-			// Token: 0x04037CCD RID: 228557
+			// Token: 0x040326EA RID: 206570
 			public const int ManufactureConfirmButton = 3;
 
-			// Token: 0x04037CCE RID: 228558
+			// Token: 0x040326EB RID: 206571
 			public const int ManufactureRoleItem = 4;
 
-			// Token: 0x04037CCF RID: 228559
+			// Token: 0x040326EC RID: 206572
 			public const int AmountItem = 5;
 
-			// Token: 0x04037CD0 RID: 228560
+			// Token: 0x040326ED RID: 206573
 			public const int ManufactureDefaultButton = 6;
 		}
 	}

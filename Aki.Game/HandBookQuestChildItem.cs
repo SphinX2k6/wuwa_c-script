@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E10 RID: 7696
+// Token: 0x020012D2 RID: 4818
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 {
-	// Token: 0x0600EA10 RID: 59920 RVA: 0x00376454 File Offset: 0x00374654
+	// Token: 0x0600BE2F RID: 48687 RVA: 0x0038215C File Offset: 0x0038035C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		};
 	}
 
-	// Token: 0x0600EA11 RID: 59921 RVA: 0x00376540 File Offset: 0x00374740
+	// Token: 0x0600BE30 RID: 48688 RVA: 0x00382248 File Offset: 0x00380448
 	[NullableContext(1)]
 	public override void Refresh(HandBookCommonItemData data, bool isSelected, int gridIndex)
 	{
@@ -94,7 +94,7 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		text2.SetUIActive(false);
 	}
 
-	// Token: 0x0600EA12 RID: 59922 RVA: 0x003766DC File Offset: 0x003748DC
+	// Token: 0x0600BE31 RID: 48689 RVA: 0x003823E4 File Offset: 0x003805E4
 	private void OnTextureToggleClick(EToggleState toggleState)
 	{
 		HandBookCommonItemData handBookCommonItemData = this.HandBookCommonItemData;
@@ -111,19 +111,19 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		this.OnPressPhoto(photographHandBook.Value.Type);
 	}
 
-	// Token: 0x0600EA13 RID: 59923 RVA: 0x00376747 File Offset: 0x00374947
+	// Token: 0x0600BE32 RID: 48690 RVA: 0x0038244F File Offset: 0x0038064F
 	public HandBookCommonItemData GetData()
 	{
 		return this.HandBookCommonItemData;
 	}
 
-	// Token: 0x0600EA14 RID: 59924 RVA: 0x0037674F File Offset: 0x0037494F
+	// Token: 0x0600BE33 RID: 48691 RVA: 0x00382457 File Offset: 0x00380657
 	public void SetNewState(bool isNew)
 	{
 		base.GetItem(2).SetUIActive(isNew);
 	}
 
-	// Token: 0x0600EA15 RID: 59925 RVA: 0x0037675E File Offset: 0x0037495E
+	// Token: 0x0600BE34 RID: 48692 RVA: 0x00382466 File Offset: 0x00380666
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(3).SetToggleStateForce(state, false, true, false);
@@ -133,7 +133,7 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		}
 	}
 
-	// Token: 0x0600EA16 RID: 59926 RVA: 0x0037677C File Offset: 0x0037497C
+	// Token: 0x0600BE35 RID: 48693 RVA: 0x00382484 File Offset: 0x00380684
 	private void ReadHandBook()
 	{
 		if (this.HandBookCommonItemData.IsNew)
@@ -149,25 +149,25 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		}
 	}
 
-	// Token: 0x0600EA17 RID: 59927 RVA: 0x00376807 File Offset: 0x00374A07
+	// Token: 0x0600BE36 RID: 48694 RVA: 0x0038250F File Offset: 0x0038070F
 	protected override void OnBeforeDestroy()
 	{
 		this.HandBookCommonItemData = null;
 	}
 
-	// Token: 0x0600EA18 RID: 59928 RVA: 0x00376810 File Offset: 0x00374A10
+	// Token: 0x0600BE37 RID: 48695 RVA: 0x00382518 File Offset: 0x00380718
 	public UUIExtendToggle GetTog()
 	{
 		return base.GetExtendToggle(3);
 	}
 
-	// Token: 0x0600EA19 RID: 59929 RVA: 0x00376819 File Offset: 0x00374A19
+	// Token: 0x0600BE38 RID: 48696 RVA: 0x00382521 File Offset: 0x00380721
 	public bool GetIsUnlock()
 	{
 		return this.HandBookCommonItemData != null && !this.HandBookCommonItemData.IsLock;
 	}
 
-	// Token: 0x0600EA1A RID: 59930 RVA: 0x00376834 File Offset: 0x00374A34
+	// Token: 0x0600BE39 RID: 48697 RVA: 0x0038253C File Offset: 0x0038073C
 	private void OnPressPhoto(int subType)
 	{
 		this.ReadHandBook();
@@ -215,7 +215,7 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		UiManager.Instance.OpenView(EUiViewName.HandBookPhotoView, handBookPhotoData, null);
 	}
 
-	// Token: 0x0600EA1B RID: 59931 RVA: 0x003769E4 File Offset: 0x00374BE4
+	// Token: 0x0600BE3A RID: 48698 RVA: 0x003826EC File Offset: 0x003808EC
 	private void OnPressQuest(int subType)
 	{
 		this.ReadHandBook();
@@ -253,15 +253,15 @@ public class HandBookQuestChildItem : GridProxyAbstract<HandBookCommonItemData>
 		UiManager.Instance.OpenView(EUiViewName.HandBookQuestPlotView, handBookQuestViewOpenParam, null);
 	}
 
-	// Token: 0x0600EA1C RID: 59932 RVA: 0x00376B46 File Offset: 0x00374D46
+	// Token: 0x0600BE3B RID: 48699 RVA: 0x0038284E File Offset: 0x00380A4E
 	private int SortIndex(PhotographHandBook a, PhotographHandBook b)
 	{
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x04006CA2 RID: 27810
+	// Token: 0x04006D83 RID: 28035
 	private HandBookCommonItemData HandBookCommonItemData;
 
-	// Token: 0x04006CA3 RID: 27811
+	// Token: 0x04006D84 RID: 28036
 	private int GirdIndex;
 }

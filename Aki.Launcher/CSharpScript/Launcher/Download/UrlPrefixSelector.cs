@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x020001F8 RID: 504
+	// Token: 0x020001FD RID: 509
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UrlPrefixSelector : Singleton
 	{
-		// Token: 0x06000D04 RID: 3332 RVA: 0x0004EF7C File Offset: 0x0004D17C
+		// Token: 0x06000D45 RID: 3397 RVA: 0x00051A68 File Offset: 0x0004FC68
 		public void Init()
 		{
 			if (this.PrimaryUrlList != null)
@@ -22,7 +22,7 @@ namespace CSharpScript.Launcher.Download
 			this.InitInternal(this.ManagePrimary(), (BaseConfigController.Instance.GetSpeedRatio() != null) ? BaseConfigController.Instance.GetSpeedRatio().Value : 0.8f, (BaseConfigController.Instance.GetPriceRatio() != null) ? BaseConfigController.Instance.GetPriceRatio().Value : 0.2f);
 		}
 
-		// Token: 0x06000D05 RID: 3333 RVA: 0x0004EFF8 File Offset: 0x0004D1F8
+		// Token: 0x06000D46 RID: 3398 RVA: 0x00051AE4 File Offset: 0x0004FCE4
 		private Dictionary<string, int> ManagePrimary()
 		{
 			Dictionary<string, int> dictionary = new Dictionary<string, int>();
@@ -40,7 +40,7 @@ namespace CSharpScript.Launcher.Download
 			return dictionary;
 		}
 
-		// Token: 0x06000D06 RID: 3334 RVA: 0x0004F050 File Offset: 0x0004D250
+		// Token: 0x06000D47 RID: 3399 RVA: 0x00051B3C File Offset: 0x0004FD3C
 		public unsafe void SetUrl(string primaryUrl, float speedRatio, float priceRatio)
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -81,7 +81,7 @@ namespace CSharpScript.Launcher.Download
 			this.InitInternal(dictionary, speedRatio, priceRatio);
 		}
 
-		// Token: 0x06000D07 RID: 3335 RVA: 0x0004F1B0 File Offset: 0x0004D3B0
+		// Token: 0x06000D48 RID: 3400 RVA: 0x00051C9C File Offset: 0x0004FE9C
 		private void InitInternal(Dictionary<string, int> primaryUrlMap, float speedRatio, float priceRatio)
 		{
 			if (primaryUrlMap.Count > 0)
@@ -116,7 +116,7 @@ namespace CSharpScript.Launcher.Download
 			this.PriceRatio = ((priceRatio != 0f) ? priceRatio : 0.2f);
 		}
 
-		// Token: 0x06000D08 RID: 3336 RVA: 0x0004F2C8 File Offset: 0x0004D4C8
+		// Token: 0x06000D49 RID: 3401 RVA: 0x00051DB4 File Offset: 0x0004FFB4
 		public void Reset()
 		{
 			if (this.PrimaryUrlList == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Launcher.Download
 			}
 		}
 
-		// Token: 0x06000D09 RID: 3337 RVA: 0x0004F344 File Offset: 0x0004D544
+		// Token: 0x06000D4A RID: 3402 RVA: 0x00051E30 File Offset: 0x00050030
 		public unsafe void Evaluated(long remainKb, int remainFileCount)
 		{
 			if (this.PrimaryUrlList == null)
@@ -202,13 +202,13 @@ namespace CSharpScript.Launcher.Download
 			}
 		}
 
-		// Token: 0x06000D0A RID: 3338 RVA: 0x0004F59D File Offset: 0x0004D79D
+		// Token: 0x06000D4B RID: 3403 RVA: 0x00052089 File Offset: 0x00050289
 		public string GetLastFormulaName()
 		{
 			return this.LastFormulaName;
 		}
 
-		// Token: 0x06000D0B RID: 3339 RVA: 0x0004F5A8 File Offset: 0x0004D7A8
+		// Token: 0x06000D4C RID: 3404 RVA: 0x00052094 File Offset: 0x00050294
 		public double? GetLastRawValue(string address)
 		{
 			double value;
@@ -219,7 +219,7 @@ namespace CSharpScript.Launcher.Download
 			return new double?(value);
 		}
 
-		// Token: 0x06000D0C RID: 3340 RVA: 0x0004F5D8 File Offset: 0x0004D7D8
+		// Token: 0x06000D4D RID: 3405 RVA: 0x000520C4 File Offset: 0x000502C4
 		[NullableContext(2)]
 		private unsafe void ReportCdnScoreSelection(string usedCandidate, [Nullable(1)] string reason, bool usedConfiguredFormula, long remainKb, int remainFileCount, string order)
 		{
@@ -251,11 +251,11 @@ namespace CSharpScript.Launcher.Download
 					usedCandidate
 				}
 			};
-			hotPatchLog.s_step_result = LauncherJson.Stringify<Dictionary<string, object>>(value, null);
+			hotPatchLog.s_step_result = LauncherJson.Stringify(value, null);
 			HotPatchLogReport.Instance.Report(hotPatchLog);
 		}
 
-		// Token: 0x06000D0D RID: 3341 RVA: 0x0004F724 File Offset: 0x0004D924
+		// Token: 0x06000D4E RID: 3406 RVA: 0x00052210 File Offset: 0x00050410
 		[return: Nullable(2)]
 		private string ApplyCdnScoreFormula(ICdnScoreFormula formula, long remainKb, int remainFileCount)
 		{
@@ -321,7 +321,7 @@ namespace CSharpScript.Launcher.Download
 			return null;
 		}
 
-		// Token: 0x06000D0E RID: 3342 RVA: 0x0004F8B6 File Offset: 0x0004DAB6
+		// Token: 0x06000D4F RID: 3407 RVA: 0x000523A2 File Offset: 0x000505A2
 		public List<UrlPrefixInfo> GetPrimaryPrefixList()
 		{
 			if (this.PrimaryUrlList == null)
@@ -332,7 +332,7 @@ namespace CSharpScript.Launcher.Download
 			return this.PrimaryUrlList;
 		}
 
-		// Token: 0x06000D0F RID: 3343 RVA: 0x0004F8D8 File Offset: 0x0004DAD8
+		// Token: 0x06000D50 RID: 3408 RVA: 0x000523C4 File Offset: 0x000505C4
 		public List<string> GetAllPrefixList(bool bSorted = false)
 		{
 			if (this.PrimaryUrlList == null)
@@ -363,13 +363,13 @@ namespace CSharpScript.Launcher.Download
 			return list;
 		}
 
-		// Token: 0x06000D10 RID: 3344 RVA: 0x0004F98B File Offset: 0x0004DB8B
+		// Token: 0x06000D51 RID: 3409 RVA: 0x00052477 File Offset: 0x00050677
 		public float CalculateUrlPoint(int price, float downloadSpeed)
 		{
 			return downloadSpeed * this.SpeedRatio - (float)price * this.PriceRatio;
 		}
 
-		// Token: 0x06000D11 RID: 3345 RVA: 0x0004F9A0 File Offset: 0x0004DBA0
+		// Token: 0x06000D52 RID: 3410 RVA: 0x0005248C File Offset: 0x0005068C
 		[NullableContext(2)]
 		private IEvalNetworkConfig GetEvalNetworkConfig()
 		{
@@ -385,14 +385,14 @@ namespace CSharpScript.Launcher.Download
 			return cdnEvalCfg.Cellular;
 		}
 
-		// Token: 0x06000D12 RID: 3346 RVA: 0x0004F9D4 File Offset: 0x0004DBD4
+		// Token: 0x06000D53 RID: 3411 RVA: 0x000524C0 File Offset: 0x000506C0
 		public bool IsEvalShuffle()
 		{
 			IEvalNetworkConfig evalNetworkConfig = this.GetEvalNetworkConfig();
 			return ((evalNetworkConfig != null) ? evalNetworkConfig.Shuffle : null).GetValueOrDefault(true);
 		}
 
-		// Token: 0x06000D13 RID: 3347 RVA: 0x0004FA04 File Offset: 0x0004DC04
+		// Token: 0x06000D54 RID: 3412 RVA: 0x000524F0 File Offset: 0x000506F0
 		public float GetEvalTime()
 		{
 			IEvalNetworkConfig evalNetworkConfig = this.GetEvalNetworkConfig();
@@ -404,7 +404,7 @@ namespace CSharpScript.Launcher.Download
 			return num.Value;
 		}
 
-		// Token: 0x06000D14 RID: 3348 RVA: 0x0004FA50 File Offset: 0x0004DC50
+		// Token: 0x06000D55 RID: 3413 RVA: 0x0005253C File Offset: 0x0005073C
 		public float GetSkipEvalSizeMb()
 		{
 			IEvalNetworkConfig evalNetworkConfig = this.GetEvalNetworkConfig();
@@ -416,7 +416,7 @@ namespace CSharpScript.Launcher.Download
 			return num.Value;
 		}
 
-		// Token: 0x06000D15 RID: 3349 RVA: 0x0004FA9C File Offset: 0x0004DC9C
+		// Token: 0x06000D56 RID: 3414 RVA: 0x00052588 File Offset: 0x00050788
 		private void ShuffleOrSortByOrigin(List<UrlPrefixInfo> list)
 		{
 			if (this.IsEvalShuffle())
@@ -430,8 +430,8 @@ namespace CSharpScript.Launcher.Download
 			}
 		}
 
-		// Token: 0x17000140 RID: 320
-		// (get) Token: 0x06000D16 RID: 3350 RVA: 0x0004FADB File Offset: 0x0004DCDB
+		// Token: 0x17000146 RID: 326
+		// (get) Token: 0x06000D57 RID: 3415 RVA: 0x000525C7 File Offset: 0x000507C7
 		public static UrlPrefixSelector Instance
 		{
 			get
@@ -445,12 +445,12 @@ namespace CSharpScript.Launcher.Download
 			}
 		}
 
-		// Token: 0x06000D17 RID: 3351 RVA: 0x0004FAFE File Offset: 0x0004DCFE
+		// Token: 0x06000D58 RID: 3416 RVA: 0x000525EA File Offset: 0x000507EA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000D18 RID: 3352 RVA: 0x0004FB00 File Offset: 0x0004DD00
+		// Token: 0x06000D59 RID: 3417 RVA: 0x000525EC File Offset: 0x000507EC
 		public static void ResetStaticDefaultValue()
 		{
 			UrlPrefixSelector instance = UrlPrefixSelector._instance;
@@ -461,28 +461,28 @@ namespace CSharpScript.Launcher.Download
 			UrlPrefixSelector._instance = null;
 		}
 
-		// Token: 0x06000D19 RID: 3353 RVA: 0x0004FB19 File Offset: 0x0004DD19
+		// Token: 0x06000D5A RID: 3418 RVA: 0x00052605 File Offset: 0x00050805
 		static UrlPrefixSelector()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UrlPrefixSelector.CreateStaticDefaultValue), new Action(UrlPrefixSelector.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000819 RID: 2073
+		// Token: 0x04000859 RID: 2137
 		private const float INLINE_SPEED_RATIO = 0.8f;
 
-		// Token: 0x0400081A RID: 2074
+		// Token: 0x0400085A RID: 2138
 		private const float INLINE_PRICE_RATIO = 0.2f;
 
-		// Token: 0x0400081B RID: 2075
+		// Token: 0x0400085B RID: 2139
 		private const float TEST_TIME = 5f;
 
-		// Token: 0x0400081C RID: 2076
+		// Token: 0x0400085C RID: 2140
 		private const long BigIntZero = 0L;
 
-		// Token: 0x0400081D RID: 2077
+		// Token: 0x0400085D RID: 2141
 		private const long BigIntKb = 1024L;
 
-		// Token: 0x0400081E RID: 2078
+		// Token: 0x0400085E RID: 2142
 		[Nullable(new byte[]
 		{
 			2,
@@ -490,19 +490,19 @@ namespace CSharpScript.Launcher.Download
 		})]
 		private List<UrlPrefixInfo> PrimaryUrlList;
 
-		// Token: 0x0400081F RID: 2079
+		// Token: 0x0400085F RID: 2143
 		private float SpeedRatio;
 
-		// Token: 0x04000820 RID: 2080
+		// Token: 0x04000860 RID: 2144
 		private float PriceRatio;
 
-		// Token: 0x04000821 RID: 2081
+		// Token: 0x04000861 RID: 2145
 		private string LastFormulaName = "client_builtin";
 
-		// Token: 0x04000822 RID: 2082
+		// Token: 0x04000862 RID: 2146
 		private readonly Dictionary<string, double> LastRawValueMap = new Dictionary<string, double>();
 
-		// Token: 0x04000823 RID: 2083
+		// Token: 0x04000863 RID: 2147
 		[Nullable(2)]
 		private static UrlPrefixSelector _instance;
 	}

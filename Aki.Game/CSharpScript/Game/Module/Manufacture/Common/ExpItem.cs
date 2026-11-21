@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200569E RID: 22174
+	// Token: 0x02004674 RID: 18036
 	public class ExpItem : UiPanelBase
 	{
-		// Token: 0x060386D2 RID: 231122 RVA: 0x00D659F2 File Offset: 0x00D63BF2
+		// Token: 0x0602D5CF RID: 185807 RVA: 0x00CB3B43 File Offset: 0x00CB1D43
 		[NullableContext(1)]
 		public ExpItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x060386D3 RID: 231123 RVA: 0x00D65A08 File Offset: 0x00D63C08
+		// Token: 0x0602D5D0 RID: 185808 RVA: 0x00CB3B58 File Offset: 0x00CB1D58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060386D4 RID: 231124 RVA: 0x00D65AB4 File Offset: 0x00D63CB4
+		// Token: 0x0602D5D1 RID: 185809 RVA: 0x00CB3C04 File Offset: 0x00CB1E04
 		public void SetExpSprite(int last, int sum)
 		{
 			double num = MathUtils.Instance.GetFloatPointFloor((double)last / (double)sum, 3);
@@ -43,37 +43,37 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetSprite(0).SetFillAmount((float)num);
 		}
 
-		// Token: 0x060386D5 RID: 231125 RVA: 0x00D65AF9 File Offset: 0x00D63CF9
+		// Token: 0x0602D5D2 RID: 185810 RVA: 0x00CB3C49 File Offset: 0x00CB1E49
 		public void SetAddText(int add)
 		{
 			base.GetText(1).SetText(add.ToString(), true);
 		}
 
-		// Token: 0x060386D6 RID: 231126 RVA: 0x00D65B0F File Offset: 0x00D63D0F
+		// Token: 0x0602D5D3 RID: 185811 RVA: 0x00CB3C5F File Offset: 0x00CB1E5F
 		public void SetLastText(int last)
 		{
 			base.GetText(2).SetText(last.ToString(), true);
 		}
 
-		// Token: 0x060386D7 RID: 231127 RVA: 0x00D65B25 File Offset: 0x00D63D25
+		// Token: 0x0602D5D4 RID: 185812 RVA: 0x00CB3C75 File Offset: 0x00CB1E75
 		public void SetSumText(int sum)
 		{
 			base.GetText(3).SetText(sum.ToString(), true);
 		}
 
-		// Token: 0x0200B862 RID: 47202
+		// Token: 0x0200A28A RID: 41610
 		private class EExpItemDefine
 		{
-			// Token: 0x04037CF0 RID: 228592
+			// Token: 0x0403270D RID: 206605
 			public const int ExpSprite = 0;
 
-			// Token: 0x04037CF1 RID: 228593
+			// Token: 0x0403270E RID: 206606
 			public const int AddText = 1;
 
-			// Token: 0x04037CF2 RID: 228594
+			// Token: 0x0403270F RID: 206607
 			public const int LastText = 2;
 
-			// Token: 0x04037CF3 RID: 228595
+			// Token: 0x04032710 RID: 206608
 			public const int SumText = 3;
 		}
 	}

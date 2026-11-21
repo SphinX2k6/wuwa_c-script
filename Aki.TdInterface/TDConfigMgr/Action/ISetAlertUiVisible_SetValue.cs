@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E07 RID: 7687
+	// Token: 0x0200203A RID: 8250
 	public class ISetAlertUiVisible_SetValue
 	{
-		// Token: 0x0400627B RID: 25211
+		// Token: 0x04006852 RID: 26706
 		public EAlertSystemOption Type;
 
-		// Token: 0x0400627C RID: 25212
+		// Token: 0x04006853 RID: 26707
 		public int AreaId;
 
-		// Token: 0x0400627D RID: 25213
+		// Token: 0x04006854 RID: 26708
 		public bool IsVisible;
 	}
 }

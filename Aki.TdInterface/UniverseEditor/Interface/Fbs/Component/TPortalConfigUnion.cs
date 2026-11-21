@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C88 RID: 23688
+	// Token: 0x020062B9 RID: 25273
 	public class TPortalConfigUnion
 	{
-		// Token: 0x1700B238 RID: 45624
-		// (get) Token: 0x0602893B RID: 166203 RVA: 0x00594170 File Offset: 0x00592370
-		// (set) Token: 0x0602893C RID: 166204 RVA: 0x00594178 File Offset: 0x00592378
+		// Token: 0x1700BB92 RID: 48018
+		// (get) Token: 0x0602AF81 RID: 176001 RVA: 0x005DC8A8 File Offset: 0x005DAAA8
+		// (set) Token: 0x0602AF82 RID: 176002 RVA: 0x005DC8B0 File Offset: 0x005DAAB0
 		public TPortalConfig Type { get; set; }
 
-		// Token: 0x1700B239 RID: 45625
-		// (get) Token: 0x0602893D RID: 166205 RVA: 0x00594181 File Offset: 0x00592381
-		// (set) Token: 0x0602893E RID: 166206 RVA: 0x00594189 File Offset: 0x00592389
+		// Token: 0x1700BB93 RID: 48019
+		// (get) Token: 0x0602AF83 RID: 176003 RVA: 0x005DC8B9 File Offset: 0x005DAAB9
+		// (set) Token: 0x0602AF84 RID: 176004 RVA: 0x005DC8C1 File Offset: 0x005DAAC1
 		public object Value { get; set; }
 
-		// Token: 0x0602893F RID: 166207 RVA: 0x00594192 File Offset: 0x00592392
+		// Token: 0x0602AF85 RID: 176005 RVA: 0x005DC8CA File Offset: 0x005DAACA
 		public TPortalConfigUnion()
 		{
 			this.Type = TPortalConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028940 RID: 166208 RVA: 0x005941A8 File Offset: 0x005923A8
+		// Token: 0x0602AF86 RID: 176006 RVA: 0x005DC8E0 File Offset: 0x005DAAE0
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028941 RID: 166209 RVA: 0x005941BA File Offset: 0x005923BA
+		// Token: 0x0602AF87 RID: 176007 RVA: 0x005DC8F2 File Offset: 0x005DAAF2
 		public IDynamicPortalT AsIDynamicPortal()
 		{
 			return this.As<IDynamicPortalT>();
 		}
 
-		// Token: 0x06028942 RID: 166210 RVA: 0x005941C2 File Offset: 0x005923C2
+		// Token: 0x0602AF88 RID: 176008 RVA: 0x005DC8FA File Offset: 0x005DAAFA
 		public static TPortalConfigUnion FromIDynamicPortal(IDynamicPortalT _idynamicportal)
 		{
 			return new TPortalConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028943 RID: 166211 RVA: 0x005941D7 File Offset: 0x005923D7
+		// Token: 0x0602AF89 RID: 176009 RVA: 0x005DC90F File Offset: 0x005DAB0F
 		public IStaticPortalT AsIStaticPortal()
 		{
 			return this.As<IStaticPortalT>();
 		}
 
-		// Token: 0x06028944 RID: 166212 RVA: 0x005941DF File Offset: 0x005923DF
+		// Token: 0x0602AF8A RID: 176010 RVA: 0x005DC917 File Offset: 0x005DAB17
 		public static TPortalConfigUnion FromIStaticPortal(IStaticPortalT _istaticportal)
 		{
 			return new TPortalConfigUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028945 RID: 166213 RVA: 0x005941F4 File Offset: 0x005923F4
+		// Token: 0x0602AF8B RID: 176011 RVA: 0x005DC92C File Offset: 0x005DAB2C
 		public static int Pack(FlatBufferBuilder builder, TPortalConfigUnion _o)
 		{
 			TPortalConfig type = _o.Type;

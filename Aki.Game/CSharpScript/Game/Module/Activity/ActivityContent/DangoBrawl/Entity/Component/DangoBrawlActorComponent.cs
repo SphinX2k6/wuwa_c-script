@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
@@ -10,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Component
 {
-	// Token: 0x02006895 RID: 26773
+	// Token: 0x020057E5 RID: 22501
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,23 +18,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 	})]
 	public class DangoBrawlActorComponent : ActivityGameplayComponentBase<IDangoBrawlEntityData>
 	{
-		// Token: 0x170097B9 RID: 38841
-		// (get) Token: 0x06042D16 RID: 273686 RVA: 0x01043AAE File Offset: 0x01041CAE
+		// Token: 0x17006AF9 RID: 27385
+		// (get) Token: 0x0603786E RID: 227438 RVA: 0x00F8502C File Offset: 0x00F8322C
 		[Nullable(1)]
-		public new static List<Type> Dependencies
+		public override Type[] Dependencies
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new List<Type>
+				return new Type[]
 				{
 					typeof(DangoBrawlDataComponent)
 				};
 			}
 		}
 
-		// Token: 0x170097BA RID: 38842
-		// (get) Token: 0x06042D17 RID: 273687 RVA: 0x01043AC5 File Offset: 0x01041CC5
+		// Token: 0x17006AFA RID: 27386
+		// (get) Token: 0x0603786F RID: 227439 RVA: 0x00F85041 File Offset: 0x00F83241
 		public ACharacter SpawnedActor
 		{
 			get
@@ -44,12 +43,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x170097BB RID: 38843
-		// (get) Token: 0x06042D18 RID: 273688 RVA: 0x01043ACD File Offset: 0x01041CCD
-		// (set) Token: 0x06042D19 RID: 273689 RVA: 0x01043AD5 File Offset: 0x01041CD5
+		// Token: 0x17006AFB RID: 27387
+		// (get) Token: 0x06037870 RID: 227440 RVA: 0x00F85049 File Offset: 0x00F83249
+		// (set) Token: 0x06037871 RID: 227441 RVA: 0x00F85051 File Offset: 0x00F83251
 		public bool IsAnimationReady { get; private set; }
 
-		// Token: 0x06042D1A RID: 273690 RVA: 0x01043ADE File Offset: 0x01041CDE
+		// Token: 0x06037872 RID: 227442 RVA: 0x00F8505A File Offset: 0x00F8325A
 		public USkeletalMeshComponent GetBodyMesh()
 		{
 			ACharacter actor = this.Actor;
@@ -60,13 +59,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return actor.Mesh;
 		}
 
-		// Token: 0x06042D1B RID: 273691 RVA: 0x01043AF1 File Offset: 0x01041CF1
+		// Token: 0x06037873 RID: 227443 RVA: 0x00F8506D File Offset: 0x00F8326D
 		public double GetBornLocationZ()
 		{
 			return this.BornLocationZ;
 		}
 
-		// Token: 0x06042D1C RID: 273692 RVA: 0x01043AF9 File Offset: 0x01041CF9
+		// Token: 0x06037874 RID: 227444 RVA: 0x00F85075 File Offset: 0x00F83275
 		public double GetActorLocationZ()
 		{
 			if (this.Actor == null)
@@ -76,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return this.Actor.D_K2_GetActorLocation().Z;
 		}
 
-		// Token: 0x06042D1D RID: 273693 RVA: 0x01043B1C File Offset: 0x01041D1C
+		// Token: 0x06037875 RID: 227445 RVA: 0x00F85098 File Offset: 0x00F83298
 		public FVectorDouble GetActorWorldLocation(double zOffset = 0.0)
 		{
 			if (this.Actor == null)
@@ -88,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return result;
 		}
 
-		// Token: 0x06042D1E RID: 273694 RVA: 0x01043B6C File Offset: 0x01041D6C
+		// Token: 0x06037876 RID: 227446 RVA: 0x00F850E8 File Offset: 0x00F832E8
 		public void SetActorLocationZ(double z)
 		{
 			if (this.Actor == null)
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.Actor.D_K2_SetActorLocation(newLocation, false, ref fhitResult, true);
 		}
 
-		// Token: 0x06042D1F RID: 273695 RVA: 0x01043BAC File Offset: 0x01041DAC
+		// Token: 0x06037877 RID: 227447 RVA: 0x00F85128 File Offset: 0x00F83328
 		public FTransformDouble? GetRootBoneTransform()
 		{
 			ACharacter actor = this.Actor;
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return new FTransformDouble?(uskeletalMeshComponent.D_GetSocketTransform(FNameUtil.GetDynamicFName("Root").Value, ERelativeTransformSpace.RTS_World));
 		}
 
-		// Token: 0x06042D20 RID: 273696 RVA: 0x01043BF8 File Offset: 0x01041DF8
+		// Token: 0x06037878 RID: 227448 RVA: 0x00F85174 File Offset: 0x00F83374
 		public UAnimInstance GetAnimInstance()
 		{
 			if (this.Actor == null)
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return uanimInstance;
 		}
 
-		// Token: 0x06042D21 RID: 273697 RVA: 0x01043C4C File Offset: 0x01041E4C
+		// Token: 0x06037879 RID: 227449 RVA: 0x00F851C8 File Offset: 0x00F833C8
 		public UniTask SpawnAsync()
 		{
 			DangoBrawlActorComponent.<>c__DisplayClass20_0 CS$<>8__locals1 = new DangoBrawlActorComponent.<>c__DisplayClass20_0();
@@ -285,7 +284,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return CS$<>8__locals1.tcs.Task;
 		}
 
-		// Token: 0x06042D22 RID: 273698 RVA: 0x01043F85 File Offset: 0x01042185
+		// Token: 0x0603787A RID: 227450 RVA: 0x00F85501 File Offset: 0x00F83701
 		protected override void OnEnd()
 		{
 			this.IsDisposed = true;
@@ -298,19 +297,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x04022C4A RID: 142410
+		// Token: 0x0401D4A6 RID: 119974
 		private ACharacter Actor;
 
-		// Token: 0x04022C4B RID: 142411
+		// Token: 0x0401D4A7 RID: 119975
 		private UniTaskCompletionSource SpawnSource;
 
-		// Token: 0x04022C4C RID: 142412
+		// Token: 0x0401D4A8 RID: 119976
 		private bool IsDisposed;
 
-		// Token: 0x04022C4D RID: 142413
+		// Token: 0x0401D4A9 RID: 119977
 		private CharRenderingComponent RenderComp;
 
-		// Token: 0x04022C4E RID: 142414
+		// Token: 0x0401D4AA RID: 119978
 		private double BornLocationZ;
 	}
 }

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x02005683 RID: 22147
+	// Token: 0x02004659 RID: 18009
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposePopupView : UiViewBase
 	{
-		// Token: 0x060385AB RID: 230827 RVA: 0x00D60971 File Offset: 0x00D5EB71
+		// Token: 0x0602D4A8 RID: 185512 RVA: 0x00CAEAC1 File Offset: 0x00CACCC1
 		public ComposePopupView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060385AC RID: 230828 RVA: 0x00D6097C File Offset: 0x00D5EB7C
+		// Token: 0x0602D4A9 RID: 185513 RVA: 0x00CAEACC File Offset: 0x00CACCCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060385AD RID: 230829 RVA: 0x00D60B0A File Offset: 0x00D5ED0A
+		// Token: 0x0602D4AA RID: 185514 RVA: 0x00CAEC5A File Offset: 0x00CACE5A
 		private void OnToggleClick(EToggleState state)
 		{
 			this.CachedUseGift = (state == EToggleState.ETT_Checked);
 			this.RefreshView();
 		}
 
-		// Token: 0x060385AE RID: 230830 RVA: 0x00D60B1C File Offset: 0x00D5ED1C
+		// Token: 0x0602D4AB RID: 185515 RVA: 0x00CAEC6C File Offset: 0x00CACE6C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComposePopupView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060385AF RID: 230831 RVA: 0x00D60B60 File Offset: 0x00D5ED60
+		// Token: 0x0602D4AC RID: 185516 RVA: 0x00CAECB0 File Offset: 0x00CACEB0
 		protected override void OnStart()
 		{
 			this.ItemScrollView = new GenericScrollViewNew<ComposePopupGridItem, IComposePopupGridItemData>(base.GetScrollViewWithScrollbar(2), new Func<ComposePopupGridItem>(this.InitRewardItem), null, false, null);
@@ -109,13 +109,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			base.GetExtendToggle(5).SetToggleStateForce(this.CachedUseGift ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060385B0 RID: 230832 RVA: 0x00D60C77 File Offset: 0x00D5EE77
+		// Token: 0x0602D4AD RID: 185517 RVA: 0x00CAEDC7 File Offset: 0x00CACFC7
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x060385B1 RID: 230833 RVA: 0x00D60C80 File Offset: 0x00D5EE80
+		// Token: 0x0602D4AE RID: 185518 RVA: 0x00CAEDD0 File Offset: 0x00CACFD0
 		protected override void OnAfterHide()
 		{
 			GenericScrollViewNew<ComposePopupGridItem, IComposePopupGridItemData> itemScrollView = this.ItemScrollView;
@@ -129,19 +129,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x060385B2 RID: 230834 RVA: 0x00D60CE4 File Offset: 0x00D5EEE4
+		// Token: 0x0602D4AF RID: 185519 RVA: 0x00CAEE34 File Offset: 0x00CAD034
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnItemCountChanged));
 		}
 
-		// Token: 0x060385B3 RID: 230835 RVA: 0x00D60D02 File Offset: 0x00D5EF02
+		// Token: 0x0602D4B0 RID: 185520 RVA: 0x00CAEE52 File Offset: 0x00CAD052
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnItemCountChanged));
 		}
 
-		// Token: 0x060385B4 RID: 230836 RVA: 0x00D60D20 File Offset: 0x00D5EF20
+		// Token: 0x0602D4B1 RID: 185521 RVA: 0x00CAEE70 File Offset: 0x00CAD070
 		private void OnItemCountChanged(int i, int i1)
 		{
 			if (this.IgnoreEvent)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.RefreshView();
 		}
 
-		// Token: 0x060385B5 RID: 230837 RVA: 0x00D60D34 File Offset: 0x00D5EF34
+		// Token: 0x0602D4B2 RID: 185522 RVA: 0x00CAEE84 File Offset: 0x00CAD084
 		private void RefreshView()
 		{
 			foreach (ISelectedData selectedData in this.CachedSelectedItemList)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.RefreshGiftToggleVisible();
 		}
 
-		// Token: 0x060385B6 RID: 230838 RVA: 0x00D60DD0 File Offset: 0x00D5EFD0
+		// Token: 0x0602D4B3 RID: 185523 RVA: 0x00CAEF20 File Offset: 0x00CAD120
 		private void RefreshScrollView(List<IComposePopupGridItemData> gridDataList)
 		{
 			List<IComposePopupGridItemData> list = this.SortGridDataList(gridDataList);
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			itemScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060385B7 RID: 230839 RVA: 0x00D60DFF File Offset: 0x00D5EFFF
+		// Token: 0x0602D4B4 RID: 185524 RVA: 0x00CAEF4F File Offset: 0x00CAD14F
 		private void RefreshConfirmButton(bool isEnough)
 		{
 			ButtonItem confirmButton = this.ConfirmButton;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			confirmButton2.SetShowText(isEnough ? "AutoSynthesis_LevelUpBtn_Text" : "AutoSynthesis_MaterialMissingBtn_Text");
 		}
 
-		// Token: 0x060385B8 RID: 230840 RVA: 0x00D60E34 File Offset: 0x00D5F034
+		// Token: 0x0602D4B5 RID: 185525 RVA: 0x00CAEF84 File Offset: 0x00CAD184
 		private void RefreshGiftToggleVisible()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(5);
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			extendToggle.RootUIComp.Get().SetUIActive(ComposePopupModel.Instance.IsComposeGiftShouldShow(this.CachedSelectedItemList));
 		}
 
-		// Token: 0x060385B9 RID: 230841 RVA: 0x00D60E6F File Offset: 0x00D5F06F
+		// Token: 0x0602D4B6 RID: 185526 RVA: 0x00CAEFBF File Offset: 0x00CAD1BF
 		private ComposePopupGridItem InitRewardItem()
 		{
 			return new ComposePopupGridItem
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			};
 		}
 
-		// Token: 0x060385BA RID: 230842 RVA: 0x00D60E84 File Offset: 0x00D5F084
+		// Token: 0x0602D4B7 RID: 185527 RVA: 0x00CAEFD4 File Offset: 0x00CAD1D4
 		private void OnClickConfirm(int _)
 		{
 			if (this.CachedGridDataList == null)
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.SynthesisItemBatchRequest();
 		}
 
-		// Token: 0x060385BB RID: 230843 RVA: 0x00D60FD8 File Offset: 0x00D5F1D8
+		// Token: 0x0602D4B8 RID: 185528 RVA: 0x00CAF128 File Offset: 0x00CAD328
 		private void SynthesisItemBatchRequest()
 		{
 			ButtonItem confirmButton = this.ConfirmButton;
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.SynthesisItemBatchRequestAsync().Forget();
 		}
 
-		// Token: 0x060385BC RID: 230844 RVA: 0x00D61008 File Offset: 0x00D5F208
+		// Token: 0x0602D4B9 RID: 185529 RVA: 0x00CAF158 File Offset: 0x00CAD358
 		private UniTask SynthesisItemBatchRequestAsync()
 		{
 			ComposePopupView.<SynthesisItemBatchRequestAsync>d__28 <SynthesisItemBatchRequestAsync>d__;
@@ -287,13 +287,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return <SynthesisItemBatchRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060385BD RID: 230845 RVA: 0x00D6104B File Offset: 0x00D5F24B
+		// Token: 0x0602D4BA RID: 185530 RVA: 0x00CAF19B File Offset: 0x00CAD39B
 		private void OnClickCancel(int _)
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060385BE RID: 230846 RVA: 0x00D61054 File Offset: 0x00D5F254
+		// Token: 0x0602D4BB RID: 185531 RVA: 0x00CAF1A4 File Offset: 0x00CAD3A4
 		[return: TupleElementNames(new string[]
 		{
 			"Result",
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return new ValueTuple<EDefaultCheckResult, List<IComposePopupGridItemData>>(EDefaultCheckResult.CannotComposeAll, valueTuple2.Item2);
 		}
 
-		// Token: 0x060385BF RID: 230847 RVA: 0x00D610B3 File Offset: 0x00D5F2B3
+		// Token: 0x0602D4BC RID: 185532 RVA: 0x00CAF203 File Offset: 0x00CAD403
 		private List<ISelectedData> SortSelectedDataList(List<ISelectedData> selectedDataList)
 		{
 			selectedDataList.Sort(delegate(ISelectedData a, ISelectedData b)
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return selectedDataList;
 		}
 
-		// Token: 0x060385C0 RID: 230848 RVA: 0x00D610DC File Offset: 0x00D5F2DC
+		// Token: 0x0602D4BD RID: 185533 RVA: 0x00CAF22C File Offset: 0x00CAD42C
 		private List<IComposePopupGridItemData> SortGridDataList(List<IComposePopupGridItemData> gridDataList)
 		{
 			List<IComposePopupGridItemData> list = new List<IComposePopupGridItemData>();
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list5;
 		}
 
-		// Token: 0x0401D9D9 RID: 121305
+		// Token: 0x04018464 RID: 99428
 		[Nullable(new byte[]
 		{
 			2,
@@ -410,15 +410,15 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 		})]
 		private GenericScrollViewNew<ComposePopupGridItem, IComposePopupGridItemData> ItemScrollView;
 
-		// Token: 0x0401D9DA RID: 121306
+		// Token: 0x04018465 RID: 99429
 		[Nullable(2)]
 		private ButtonItem CancelButton;
 
-		// Token: 0x0401D9DB RID: 121307
+		// Token: 0x04018466 RID: 99430
 		[Nullable(2)]
 		private ButtonItem ConfirmButton;
 
-		// Token: 0x0401D9DC RID: 121308
+		// Token: 0x04018467 RID: 99431
 		[Nullable(new byte[]
 		{
 			2,
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 		})]
 		private List<ISelectedData> CachedSelectedItemList;
 
-		// Token: 0x0401D9DD RID: 121309
+		// Token: 0x04018468 RID: 99432
 		[Nullable(new byte[]
 		{
 			2,
@@ -434,52 +434,52 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 		})]
 		private List<IComposePopupGridItemData> CachedGridDataList;
 
-		// Token: 0x0401D9DE RID: 121310
+		// Token: 0x04018469 RID: 99433
 		private bool CachedUseGift;
 
-		// Token: 0x0401D9DF RID: 121311
+		// Token: 0x0401846A RID: 99434
 		[Nullable(2)]
 		private Action ClickConfirm;
 
-		// Token: 0x0401D9E0 RID: 121312
+		// Token: 0x0401846B RID: 99435
 		[Nullable(2)]
 		private Action BeforeCompose;
 
-		// Token: 0x0401D9E1 RID: 121313
+		// Token: 0x0401846C RID: 99436
 		private EUiViewName? CachedBelongView;
 
-		// Token: 0x0401D9E2 RID: 121314
+		// Token: 0x0401846D RID: 99437
 		private bool IgnoreEvent;
 
-		// Token: 0x0200B84B RID: 47179
+		// Token: 0x0200A273 RID: 41587
 		[NullableContext(0)]
 		public class EComp
 		{
-			// Token: 0x04037C7E RID: 228478
+			// Token: 0x0403269B RID: 206491
 			public const int TxtTitle = 0;
 
-			// Token: 0x04037C7F RID: 228479
+			// Token: 0x0403269C RID: 206492
 			public const int TxtTips = 1;
 
-			// Token: 0x04037C80 RID: 228480
+			// Token: 0x0403269D RID: 206493
 			public const int ItemScroll = 2;
 
-			// Token: 0x04037C81 RID: 228481
+			// Token: 0x0403269E RID: 206494
 			public const int Content = 3;
 
-			// Token: 0x04037C82 RID: 228482
+			// Token: 0x0403269F RID: 206495
 			public const int SynthesisItem = 4;
 
-			// Token: 0x04037C83 RID: 228483
+			// Token: 0x040326A0 RID: 206496
 			public const int TogConsent = 5;
 
-			// Token: 0x04037C84 RID: 228484
+			// Token: 0x040326A1 RID: 206497
 			public const int TxtConsent = 6;
 
-			// Token: 0x04037C85 RID: 228485
+			// Token: 0x040326A2 RID: 206498
 			public const int BtnConfirmL = 7;
 
-			// Token: 0x04037C86 RID: 228486
+			// Token: 0x040326A3 RID: 206499
 			public const int BtnConfirmR = 8;
 		}
 	}

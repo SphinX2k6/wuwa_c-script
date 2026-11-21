@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -13,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x0200578F RID: 22415
+	// Token: 0x02004766 RID: 18278
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoNormalRewardView : UiViewBase
 	{
-		// Token: 0x06038EF4 RID: 233204 RVA: 0x00D88703 File Offset: 0x00D86903
+		// Token: 0x0602DE04 RID: 187908 RVA: 0x00CD745F File Offset: 0x00CD565F
 		public KurotatoNormalRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038EF5 RID: 233205 RVA: 0x00D88720 File Offset: 0x00D86920
+		// Token: 0x0602DE05 RID: 187909 RVA: 0x00CD747C File Offset: 0x00CD567C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -39,19 +38,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038EF6 RID: 233206 RVA: 0x00D887AA File Offset: 0x00D869AA
+		// Token: 0x0602DE06 RID: 187910 RVA: 0x00CD7506 File Offset: 0x00CD5706
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnRefreshKurotatoNormalRewardData, new Action(this.RefreshView));
 		}
 
-		// Token: 0x06038EF7 RID: 233207 RVA: 0x00D887C8 File Offset: 0x00D869C8
+		// Token: 0x0602DE07 RID: 187911 RVA: 0x00CD7524 File Offset: 0x00CD5724
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshKurotatoNormalRewardData, new Action(this.RefreshView));
 		}
 
-		// Token: 0x06038EF8 RID: 233208 RVA: 0x00D887E8 File Offset: 0x00D869E8
+		// Token: 0x0602DE08 RID: 187912 RVA: 0x00CD7544 File Offset: 0x00CD5744
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoNormalRewardView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -62,19 +61,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038EF9 RID: 233209 RVA: 0x00D8882B File Offset: 0x00D86A2B
+		// Token: 0x0602DE09 RID: 187913 RVA: 0x00CD7587 File Offset: 0x00CD5787
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x06038EFA RID: 233210 RVA: 0x00D88833 File Offset: 0x00D86A33
+		// Token: 0x0602DE0A RID: 187914 RVA: 0x00CD758F File Offset: 0x00CD578F
 		private void InitQuestScroll()
 		{
 			this.QuestScroll = new GenericLayout<KurotatoRewardItem, KurotatoRewardItemData>(base.GetVerticalLayout(1), new Func<KurotatoRewardItem>(this.CreateQuestItem), null, false, true);
 		}
 
-		// Token: 0x06038EFB RID: 233211 RVA: 0x00D88858 File Offset: 0x00D86A58
+		// Token: 0x0602DE0B RID: 187915 RVA: 0x00CD75B4 File Offset: 0x00CD57B4
 		private void RefreshQuestScroll()
 		{
 			List<KurotatoNormalRewardItemData> normalRewardDataList = KurotatoActivityController.Instance.GetActivityData().GetNormalRewardDataList();
@@ -84,10 +83,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			{
 				return;
 			}
-			questScroll.RefreshByData(normalRewardDataList.Cast<KurotatoRewardItemData>().ToList<KurotatoRewardItemData>(), null, true);
+			questScroll.RefreshByData(normalRewardDataList, null, true);
 		}
 
-		// Token: 0x06038EFC RID: 233212 RVA: 0x00D888A4 File Offset: 0x00D86AA4
+		// Token: 0x0602DE0C RID: 187916 RVA: 0x00CD75F6 File Offset: 0x00CD57F6
 		private KurotatoRewardItem CreateQuestItem()
 		{
 			KurotatoRewardItem kurotatoRewardItem = new KurotatoRewardItem();
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			return kurotatoRewardItem;
 		}
 
-		// Token: 0x06038EFD RID: 233213 RVA: 0x00D888C0 File Offset: 0x00D86AC0
+		// Token: 0x0602DE0D RID: 187917 RVA: 0x00CD7610 File Offset: 0x00CD5810
 		private void OnClickTaskReceive()
 		{
 			List<int> normalRewardCanClaimableIdList = KurotatoActivityController.Instance.GetActivityData().GetNormalRewardCanClaimableIdList();
@@ -106,23 +105,23 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			KurotatoActivityController.Instance.RequestNormalReward(normalRewardCanClaimableIdList);
 		}
 
-		// Token: 0x06038EFE RID: 233214 RVA: 0x00D888F2 File Offset: 0x00D86AF2
+		// Token: 0x0602DE0E RID: 187918 RVA: 0x00CD7642 File Offset: 0x00CD5842
 		private void RefreshView()
 		{
 			this.RefreshQuestScroll();
 		}
 
-		// Token: 0x06038EFF RID: 233215 RVA: 0x00D888FA File Offset: 0x00D86AFA
+		// Token: 0x0602DE0F RID: 187919 RVA: 0x00CD764A File Offset: 0x00CD584A
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DD82 RID: 122242
+		// Token: 0x04018818 RID: 100376
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401DD83 RID: 122243
+		// Token: 0x04018819 RID: 100377
 		[Nullable(new byte[]
 		{
 			2,
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 		})]
 		private GenericLayout<KurotatoRewardItem, KurotatoRewardItemData> QuestScroll;
 
-		// Token: 0x0401DD84 RID: 122244
+		// Token: 0x0401881A RID: 100378
 		private readonly EKurotatoRewardStatus[] StatusOrder = new EKurotatoRewardStatus[]
 		{
 			EKurotatoRewardStatus.CanReceive,
@@ -139,15 +138,15 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			EKurotatoRewardStatus.Taken
 		};
 
-		// Token: 0x0200B9B6 RID: 47542
+		// Token: 0x0200A3CC RID: 41932
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403826C RID: 229996
+			// Token: 0x04032C5D RID: 207965
 			Caption,
-			// Token: 0x0403826D RID: 229997
+			// Token: 0x04032C5E RID: 207966
 			QuestScroll,
-			// Token: 0x0403826E RID: 229998
+			// Token: 0x04032C5F RID: 207967
 			QuestItem
 		}
 	}

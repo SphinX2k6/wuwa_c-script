@@ -5,18 +5,18 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070C0 RID: 28864
+	// Token: 0x02006324 RID: 25380
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HookPointUtils
 	{
-		// Token: 0x06046622 RID: 288290 RVA: 0x011A5BB8 File Offset: 0x011A3DB8
+		// Token: 0x0603D700 RID: 251648 RVA: 0x011C5348 File Offset: 0x011C3548
 		public static bool HookPointEqual(HookPointInfo a, HookPointInfo b)
 		{
 			return a.Point == b.Point && a.PortalPairId == b.PortalPairId && a.PortalA2B == b.PortalA2B;
 		}
 
-		// Token: 0x06046623 RID: 288291 RVA: 0x011A5BE6 File Offset: 0x011A3DE6
+		// Token: 0x0603D701 RID: 251649 RVA: 0x011C5376 File Offset: 0x011C3576
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return HookPointUtils.HookPointSetAdd(container, pointPathway.Point, pointPathway.PortalPairId, pointPathway.PortalA2B);
 		}
 
-		// Token: 0x06046624 RID: 288292 RVA: 0x011A5C00 File Offset: 0x011A3E00
+		// Token: 0x0603D702 RID: 251650 RVA: 0x011C5390 File Offset: 0x011C3590
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return container;
 		}
 
-		// Token: 0x06046625 RID: 288293 RVA: 0x011A5C6B File Offset: 0x011A3E6B
+		// Token: 0x0603D703 RID: 251651 RVA: 0x011C53FB File Offset: 0x011C35FB
 		public static bool HookPointSetHas([Nullable(new byte[]
 		{
 			1,
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return HookPointUtils.HookPointSetHas(container, pointPathway.Point, pointPathway.PortalPairId, pointPathway.PortalA2B);
 		}
 
-		// Token: 0x06046626 RID: 288294 RVA: 0x011A5C88 File Offset: 0x011A3E88
+		// Token: 0x0603D704 RID: 251652 RVA: 0x011C5418 File Offset: 0x011C3618
 		public static bool HookPointSetHas([Nullable(new byte[]
 		{
 			1,
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return container.TryGetValue(point, out list) && list.FindIndex((ValueTuple<long, bool> value) => value.Item1 == portalPairId && value.Item2 == portalA2B) != -1;
 		}
 
-		// Token: 0x06046627 RID: 288295 RVA: 0x011A5CCE File Offset: 0x011A3ECE
+		// Token: 0x0603D705 RID: 251653 RVA: 0x011C545E File Offset: 0x011C365E
 		public static bool HookPointSetDelete([Nullable(new byte[]
 		{
 			1,
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return HookPointUtils.HookPointSetDelete(container, pointPathway.Point, pointPathway.PortalPairId, pointPathway.PortalA2B);
 		}
 
-		// Token: 0x06046628 RID: 288296 RVA: 0x011A5CE8 File Offset: 0x011A3EE8
+		// Token: 0x0603D706 RID: 251654 RVA: 0x011C5478 File Offset: 0x011C3678
 		public static bool HookPointSetDelete([Nullable(new byte[]
 		{
 			1,
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return num != -1;
 		}
 
-		// Token: 0x06046629 RID: 288297 RVA: 0x011A5D4C File Offset: 0x011A3F4C
+		// Token: 0x0603D707 RID: 251655 RVA: 0x011C54DC File Offset: 0x011C36DC
 		public static void HookPointSetForEach([Nullable(new byte[]
 		{
 			2,
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x04024E26 RID: 151078
+		// Token: 0x04020964 RID: 133476
 		[TupleElementNames(new string[]
 		{
 			"point",

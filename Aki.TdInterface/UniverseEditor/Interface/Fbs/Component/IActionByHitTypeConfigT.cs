@@ -5,30 +5,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E45 RID: 20037
+	// Token: 0x02005356 RID: 21334
 	public class IActionByHitTypeConfigT
 	{
-		// Token: 0x17008F67 RID: 36711
-		// (get) Token: 0x0601F722 RID: 128802 RVA: 0x00461981 File Offset: 0x0045FB81
-		// (set) Token: 0x0601F723 RID: 128803 RVA: 0x00461989 File Offset: 0x0045FB89
+		// Token: 0x170096A0 RID: 38560
+		// (get) Token: 0x0602136D RID: 136045 RVA: 0x00495999 File Offset: 0x00493B99
+		// (set) Token: 0x0602136E RID: 136046 RVA: 0x004959A1 File Offset: 0x00493BA1
 		public THitBulletTypeUnion HitBullets { get; set; }
 
-		// Token: 0x17008F68 RID: 36712
-		// (get) Token: 0x0601F724 RID: 128804 RVA: 0x00461992 File Offset: 0x0045FB92
-		// (set) Token: 0x0601F725 RID: 128805 RVA: 0x0046199A File Offset: 0x0045FB9A
+		// Token: 0x170096A1 RID: 38561
+		// (get) Token: 0x0602136F RID: 136047 RVA: 0x004959AA File Offset: 0x00493BAA
+		// (set) Token: 0x06021370 RID: 136048 RVA: 0x004959B2 File Offset: 0x00493BB2
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17008F69 RID: 36713
-		// (get) Token: 0x0601F726 RID: 128806 RVA: 0x004619A3 File Offset: 0x0045FBA3
-		// (set) Token: 0x0601F727 RID: 128807 RVA: 0x004619AB File Offset: 0x0045FBAB
+		// Token: 0x170096A2 RID: 38562
+		// (get) Token: 0x06021371 RID: 136049 RVA: 0x004959BB File Offset: 0x00493BBB
+		// (set) Token: 0x06021372 RID: 136050 RVA: 0x004959C3 File Offset: 0x00493BC3
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17008F6A RID: 36714
-		// (get) Token: 0x0601F728 RID: 128808 RVA: 0x004619B4 File Offset: 0x0045FBB4
-		// (set) Token: 0x0601F729 RID: 128809 RVA: 0x004619BC File Offset: 0x0045FBBC
+		// Token: 0x170096A3 RID: 38563
+		// (get) Token: 0x06021373 RID: 136051 RVA: 0x004959CC File Offset: 0x00493BCC
+		// (set) Token: 0x06021374 RID: 136052 RVA: 0x004959D4 File Offset: 0x00493BD4
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601F72A RID: 128810 RVA: 0x004619C5 File Offset: 0x0045FBC5
+		// Token: 0x06021375 RID: 136053 RVA: 0x004959DD File Offset: 0x00493BDD
 		public IActionByHitTypeConfigT()
 		{
 			this.HitBullets = null;

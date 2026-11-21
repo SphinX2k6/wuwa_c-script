@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CA5 RID: 7333
+	// Token: 0x0200053E RID: 1342
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSDKLoginDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C756 RID: 116566 RVA: 0x002A0EF2 File Offset: 0x0029F0F2
+		// Token: 0x06007C93 RID: 31891 RVA: 0x000B88A6 File Offset: 0x000B6AA6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSDKLoginDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C757 RID: 116567 RVA: 0x002A0EFE File Offset: 0x0029F0FE
+		// Token: 0x06007C94 RID: 31892 RVA: 0x000B88B2 File Offset: 0x000B6AB2
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSDKLoginDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FSDKLoginDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601C758 RID: 116568 RVA: 0x002A0F21 File Offset: 0x0029F121
+		// Token: 0x06007C95 RID: 31893 RVA: 0x000B88D5 File Offset: 0x000B6AD5
 		public FSDKLoginDelegate()
 		{
 		}
 
-		// Token: 0x0601C759 RID: 116569 RVA: 0x002A0F29 File Offset: 0x0029F129
+		// Token: 0x06007C96 RID: 31894 RVA: 0x000B88DD File Offset: 0x000B6ADD
 		[NullableContext(2)]
 		public FSDKLoginDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C75A RID: 116570 RVA: 0x002A0F33 File Offset: 0x0029F133
+		// Token: 0x06007C97 RID: 31895 RVA: 0x000B88E7 File Offset: 0x000B6AE7
 		public FSDKLoginDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C75B RID: 116571 RVA: 0x002A0F3E File Offset: 0x0029F13E
+		// Token: 0x06007C98 RID: 31896 RVA: 0x000B88F2 File Offset: 0x000B6AF2
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FLoginStruct>) ?? ((Action<FLoginStruct>)Delegate.CreateDelegate(typeof(Action<FLoginStruct>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C75C RID: 116572 RVA: 0x002A0F70 File Offset: 0x0029F170
+		// Token: 0x06007C99 RID: 31897 RVA: 0x000B8924 File Offset: 0x000B6B24
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FLoginStruct> Callback)
 		{
 			if (FSDKLoginDelegate.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FSDKLoginDelegate.RegisterId);
 		}
 
-		// Token: 0x0601C75D RID: 116573 RVA: 0x002A0FAA File Offset: 0x0029F1AA
+		// Token: 0x06007C9A RID: 31898 RVA: 0x000B895E File Offset: 0x000B6B5E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FLoginStruct> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C75E RID: 116574 RVA: 0x002A0FB4 File Offset: 0x0029F1B4
+		// Token: 0x06007C9B RID: 31899 RVA: 0x000B8968 File Offset: 0x000B6B68
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FLoginStruct LoginInfo)
 		{
 			FSDKLoginDelegate.__FSDKLoginDelegate_DelegateParams* ptr = stackalloc FSDKLoginDelegate.__FSDKLoginDelegate_DelegateParams[(UIntPtr)103] + 15L / (long)sizeof(FSDKLoginDelegate.__FSDKLoginDelegate_DelegateParams) & -16L;
@@ -91,10 +88,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FSDKLoginDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C75F RID: 116575 RVA: 0x002A101C File Offset: 0x0029F21C
+		// Token: 0x06007C9C RID: 31900 RVA: 0x000B89D0 File Offset: 0x000B6BD0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FLoginStruct> action = target as Action<FLoginStruct>;
@@ -106,31 +102,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400F4D0 RID: 62672
+		// Token: 0x0400353A RID: 13626
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F4D1 RID: 62673
+		// Token: 0x0400353B RID: 13627
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSDK.SDKLoginDelegate__DelegateSignature";
 
-		// Token: 0x0400F4D2 RID: 62674
+		// Token: 0x0400353C RID: 13628
 		private static int RegisterId;
 
-		// Token: 0x0200327C RID: 12924
+		// Token: 0x02000CF1 RID: 3313
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 88)]
-		protected ref struct __FSDKLoginDelegate_DelegateParams
+		private ref struct __FSDKLoginDelegate_DelegateParams
 		{
-			// Token: 0x04017104 RID: 94468
+			// Token: 0x04005F78 RID: 24440
 			[FieldOffset(0)]
 			public byte LoginInfo;
 		}
 
-		// Token: 0x0200327D RID: 12925
+		// Token: 0x02000CF2 RID: 3314
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017105 RID: 94469
+			// Token: 0x04005F79 RID: 24441
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

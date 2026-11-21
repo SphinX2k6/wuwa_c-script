@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200280A RID: 10250
+// Token: 0x02001D85 RID: 7557
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemData>
 {
-	// Token: 0x06015085 RID: 86149 RVA: 0x00553238 File Offset: 0x00551438
+	// Token: 0x06012A85 RID: 76421 RVA: 0x0057E00C File Offset: 0x0057C20C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 		};
 	}
 
-	// Token: 0x06015086 RID: 86150 RVA: 0x005532A8 File Offset: 0x005514A8
+	// Token: 0x06012A86 RID: 76422 RVA: 0x0057E07C File Offset: 0x0057C27C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevPhantomSuitItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015087 RID: 86151 RVA: 0x005532EC File Offset: 0x005514EC
+	// Token: 0x06012A87 RID: 76423 RVA: 0x0057E0C0 File Offset: 0x0057C2C0
 	private UniTask InitItems()
 	{
 		RoleDevPhantomSuitItem.<InitItems>d__6 <InitItems>d__;
@@ -49,7 +49,7 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 		return <InitItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015088 RID: 86152 RVA: 0x00553330 File Offset: 0x00551530
+	// Token: 0x06012A88 RID: 76424 RVA: 0x0057E104 File Offset: 0x0057C304
 	public override void Refresh(RoleDevPhantomSuitItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentRoleId = data.RoleId;
@@ -67,7 +67,7 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 		this.RefreshVisionSuitItems(data);
 	}
 
-	// Token: 0x06015089 RID: 86153 RVA: 0x005533AC File Offset: 0x005515AC
+	// Token: 0x06012A89 RID: 76425 RVA: 0x0057E180 File Offset: 0x0057C380
 	private void RefreshElementIcon(RoleDevPhantomSuitItemData data)
 	{
 		UUIItem item = base.GetItem(0);
@@ -82,7 +82,7 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 		}
 	}
 
-	// Token: 0x0601508A RID: 86154 RVA: 0x00553410 File Offset: 0x00551610
+	// Token: 0x06012A8A RID: 76426 RVA: 0x0057E1E4 File Offset: 0x0057C3E4
 	private void RefreshVisionSuitItems(RoleDevPhantomSuitItemData data)
 	{
 		List<RoleDevPhantomVisionSuitItemData> list = new List<RoleDevPhantomVisionSuitItemData>();
@@ -103,19 +103,19 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 		visionSuitItemLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0601508B RID: 86155 RVA: 0x005534B4 File Offset: 0x005516B4
+	// Token: 0x06012A8B RID: 76427 RVA: 0x0057E288 File Offset: 0x0057C488
 	public override object GetKey(RoleDevPhantomSuitItemData data, int gridIndex)
 	{
 		return data.SuitId;
 	}
 
-	// Token: 0x0601508C RID: 86156 RVA: 0x005534C1 File Offset: 0x005516C1
+	// Token: 0x06012A8C RID: 76428 RVA: 0x0057E295 File Offset: 0x0057C495
 	private RoleDevPhantomVisionSuitItem CreateVisionSuitItem()
 	{
 		return new RoleDevPhantomVisionSuitItem();
 	}
 
-	// Token: 0x04009E1A RID: 40474
+	// Token: 0x0400A203 RID: 41475
 	[Nullable(new byte[]
 	{
 		2,
@@ -124,24 +124,24 @@ public class RoleDevPhantomSuitItem : GridProxyAbstract<RoleDevPhantomSuitItemDa
 	})]
 	private GenericLayout<RoleDevPhantomVisionSuitItem, RoleDevPhantomVisionSuitItemData> VisionSuitItemLayout;
 
-	// Token: 0x04009E1B RID: 40475
+	// Token: 0x0400A204 RID: 41476
 	[Nullable(2)]
 	private VisionFetterSuitItem ElementSuitItem;
 
-	// Token: 0x04009E1C RID: 40476
+	// Token: 0x0400A205 RID: 41477
 	private int CurrentRoleId;
 
-	// Token: 0x02008E4D RID: 36429
+	// Token: 0x02008095 RID: 32917
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E290 RID: 189072
+		// Token: 0x0402998C RID: 170380
 		PanelElementIcon,
-		// Token: 0x0402E291 RID: 189073
+		// Token: 0x0402998D RID: 170381
 		TxtSuitName,
-		// Token: 0x0402E292 RID: 189074
+		// Token: 0x0402998E RID: 170382
 		TxtUseRate,
-		// Token: 0x0402E293 RID: 189075
+		// Token: 0x0402998F RID: 170383
 		PanelVisionSuitLayout
 	}
 }

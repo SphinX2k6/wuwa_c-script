@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item;
 
-// Token: 0x02001893 RID: 6291
+// Token: 0x02000D4C RID: 3404
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballWeaponEquipSort : CommonSort<EPinballWeaponEquipSortWayType>
 {
-	// Token: 0x0600B851 RID: 47185 RVA: 0x0029CDBC File Offset: 0x0029AFBC
+	// Token: 0x06008C3A RID: 35898 RVA: 0x002A74D4 File Offset: 0x002A56D4
 	private int SortId(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IMultiTemplateGridData multiTemplateGridData = (IMultiTemplateGridData)a;
@@ -29,7 +29,7 @@ public class PinballWeaponEquipSort : CommonSort<EPinballWeaponEquipSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B852 RID: 47186 RVA: 0x0029CE48 File Offset: 0x0029B048
+	// Token: 0x06008C3B RID: 35899 RVA: 0x002A7560 File Offset: 0x002A5760
 	private int SortQuality(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IMultiTemplateGridData multiTemplateGridData = (IMultiTemplateGridData)a;
@@ -45,7 +45,7 @@ public class PinballWeaponEquipSort : CommonSort<EPinballWeaponEquipSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B853 RID: 47187 RVA: 0x0029CE98 File Offset: 0x0029B098
+	// Token: 0x06008C3C RID: 35900 RVA: 0x002A75B0 File Offset: 0x002A57B0
 	private int SortEquipState(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IMultiTemplateGridData multiTemplateGridData = (IMultiTemplateGridData)a;
@@ -75,7 +75,7 @@ public class PinballWeaponEquipSort : CommonSort<EPinballWeaponEquipSortWayType>
 		return num * (isAscending ? 1 : -1);
 	}
 
-	// Token: 0x0600B854 RID: 47188 RVA: 0x0029CF20 File Offset: 0x0029B120
+	// Token: 0x06008C3D RID: 35901 RVA: 0x002A7638 File Offset: 0x002A5838
 	protected override void OnInitSortMap()
 	{
 		this.SortMap[EPinballWeaponEquipSortWayType.Id] = new TSortResult(this.SortId);

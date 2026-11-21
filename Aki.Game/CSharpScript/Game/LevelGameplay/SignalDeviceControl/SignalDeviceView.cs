@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 {
-	// Token: 0x02006A51 RID: 27217
+	// Token: 0x02005BAE RID: 23470
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SignalDeviceView : UiViewBase
 	{
-		// Token: 0x06043AF0 RID: 277232 RVA: 0x0108EE56 File Offset: 0x0108D056
+		// Token: 0x06039B3E RID: 236350 RVA: 0x0103367A File Offset: 0x0103187A
 		[NullableContext(1)]
 		public SignalDeviceView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043AF1 RID: 277233 RVA: 0x0108EE78 File Offset: 0x0108D078
+		// Token: 0x06039B3F RID: 236351 RVA: 0x0103369C File Offset: 0x0103189C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			};
 		}
 
-		// Token: 0x06043AF2 RID: 277234 RVA: 0x0108F008 File Offset: 0x0108D208
+		// Token: 0x06039B40 RID: 236352 RVA: 0x0103382C File Offset: 0x01031A2C
 		protected override UniTask OnCreateAsync()
 		{
 			SignalDeviceView.<OnCreateAsync>d__13 <OnCreateAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043AF3 RID: 277235 RVA: 0x0108F04C File Offset: 0x0108D24C
+		// Token: 0x06039B41 RID: 236353 RVA: 0x01033870 File Offset: 0x01031A70
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			AudioSystem.Instance.PostEvent("play_amb_interact_signal_ui_open");
 		}
 
-		// Token: 0x06043AF4 RID: 277236 RVA: 0x0108F13C File Offset: 0x0108D33C
+		// Token: 0x06039B42 RID: 236354 RVA: 0x01033960 File Offset: 0x01031B60
 		private void InitTemp()
 		{
 			EventSystem.Instance.Add(EEventName.OnSignalDeviceLinking, new Action<bool, int, bool, int, bool>(this.OnSignalDeviceLinking));
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			base.GetText(7).SetText(TextConfig.Instance.GetTextById("SignalDeviceResetText") ?? "???", true);
 		}
 
-		// Token: 0x06043AF5 RID: 277237 RVA: 0x0108F290 File Offset: 0x0108D490
+		// Token: 0x06039B43 RID: 236355 RVA: 0x01033AB4 File Offset: 0x01031CB4
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSignalDeviceLinking, new Action<bool, int, bool, int, bool>(this.OnSignalDeviceLinking));
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			EventSystem.Instance.Remove(EEventName.OnSignalDeviceFinish, new Action(this.OnSignalDeviceFinish));
 		}
 
-		// Token: 0x06043AF6 RID: 277238 RVA: 0x0108F310 File Offset: 0x0108D510
+		// Token: 0x06039B44 RID: 236356 RVA: 0x01033B34 File Offset: 0x01031D34
 		private void OnBtnBackClicked()
 		{
 			if (!this.NeedTipExit)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06043AF7 RID: 277239 RVA: 0x0108F368 File Offset: 0x0108D568
+		// Token: 0x06039B45 RID: 236357 RVA: 0x01033B8C File Offset: 0x01031D8C
 		private void OnBtnResetClicked()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ButtonReset);
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06043AF8 RID: 277240 RVA: 0x0108F3A1 File Offset: 0x0108D5A1
+		// Token: 0x06039B46 RID: 236358 RVA: 0x01033BC5 File Offset: 0x01031DC5
 		private void OnBtnHelpClicked()
 		{
 			UiManager.Instance.OpenView(EUiViewName.SignalDeviceGuideView, null, null);
 		}
 
-		// Token: 0x06043AF9 RID: 277241 RVA: 0x0108F3B4 File Offset: 0x0108D5B4
+		// Token: 0x06039B47 RID: 236359 RVA: 0x01033BD8 File Offset: 0x01031DD8
 		private void LoadDotNode(int index, EPieceColorType color)
 		{
 			UUIItem uuiitem = LguiUtil.Instance.CopyItem(this.LinkingDotItem.GetRootItem(), this.GridUiItemList[index]);
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			this.GridToggleList[index].SetDotData(uuiitem, color);
 		}
 
-		// Token: 0x06043AFA RID: 277242 RVA: 0x0108F400 File Offset: 0x0108D600
+		// Token: 0x06039B48 RID: 236360 RVA: 0x01033C24 File Offset: 0x01031E24
 		private unsafe void OnSignalDeviceLinking(bool isAdd, int from, bool isFromDot, int to, bool isToDot)
 		{
 			this.SetDotUpper(isAdd, from, isFromDot, to, isToDot);
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AFB RID: 277243 RVA: 0x0108F6E0 File Offset: 0x0108D8E0
+		// Token: 0x06039B49 RID: 236361 RVA: 0x01033F04 File Offset: 0x01032104
 		private void SetDotUpper(bool isAdd, int from, bool isFromDot, int to, bool isToDot)
 		{
 			if (isAdd)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AFC RID: 277244 RVA: 0x0108F76C File Offset: 0x0108D96C
+		// Token: 0x06039B4A RID: 236362 RVA: 0x01033F90 File Offset: 0x01032190
 		private bool IsCornerLeftOrRight(int beforeIndex, bool isBeforeDot, int from, int to, bool isToDot)
 		{
 			if (isBeforeDot)
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AFD RID: 277245 RVA: 0x0108F84C File Offset: 0x0108DA4C
+		// Token: 0x06039B4B RID: 236363 RVA: 0x01034070 File Offset: 0x01032270
 		[NullableContext(1)]
 		private void OnSignalDeviceLinkingCheck(bool isSuccess, IReadOnlyList<int> indexArray)
 		{
@@ -301,20 +301,20 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AFE RID: 277246 RVA: 0x0108F86E File Offset: 0x0108DA6E
+		// Token: 0x06039B4C RID: 236364 RVA: 0x01034092 File Offset: 0x01032292
 		private void OnSignalDeviceReset()
 		{
 			AudioSystem.Instance.PostEvent("play_amb_interact_signal_ui_reset");
 		}
 
-		// Token: 0x06043AFF RID: 277247 RVA: 0x0108F880 File Offset: 0x0108DA80
+		// Token: 0x06039B4D RID: 236365 RVA: 0x010340A4 File Offset: 0x010322A4
 		private void OnSignalDeviceFinish()
 		{
 			base.GetButton(0).SetSelfInteractive(false);
 			this.SetBgFx(true);
 		}
 
-		// Token: 0x06043B00 RID: 277248 RVA: 0x0108F898 File Offset: 0x0108DA98
+		// Token: 0x06039B4E RID: 236366 RVA: 0x010340BC File Offset: 0x010322BC
 		private UniTask SetBgFx(bool isOpen)
 		{
 			SignalDeviceView.<SetBgFx>d__27 <SetBgFx>d__;
@@ -326,28 +326,28 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return <SetBgFx>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04023569 RID: 144745
+		// Token: 0x0401E75B RID: 124763
 		private LinkingDotItem LinkingDotItem;
 
-		// Token: 0x0402356A RID: 144746
+		// Token: 0x0401E75C RID: 124764
 		private LinkingLineItem LinkingLineCorner;
 
-		// Token: 0x0402356B RID: 144747
+		// Token: 0x0401E75D RID: 124765
 		private LinkingLineItem LinkingLineStraight;
 
-		// Token: 0x0402356C RID: 144748
+		// Token: 0x0401E75E RID: 124766
 		private LinkingLineItem LinkingLineWithDotCornerLeft;
 
-		// Token: 0x0402356D RID: 144749
+		// Token: 0x0401E75F RID: 124767
 		private LinkingLineItem LinkingLineWithDotCornerRight;
 
-		// Token: 0x0402356E RID: 144750
+		// Token: 0x0401E760 RID: 124768
 		private LinkingLineItem LinkingLineWithDotStraight;
 
-		// Token: 0x0402356F RID: 144751
+		// Token: 0x0401E761 RID: 124769
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04023570 RID: 144752
+		// Token: 0x0401E762 RID: 124770
 		[Nullable(new byte[]
 		{
 			2,
@@ -355,15 +355,15 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 		})]
 		private List<IColorPiece> Config;
 
-		// Token: 0x04023571 RID: 144753
+		// Token: 0x0401E763 RID: 124771
 		[Nullable(1)]
 		private readonly List<UUIItem> GridUiItemList = new List<UUIItem>();
 
-		// Token: 0x04023572 RID: 144754
+		// Token: 0x0401E764 RID: 124772
 		[Nullable(1)]
 		private readonly List<LinkingEmptyToggle> GridToggleList = new List<LinkingEmptyToggle>();
 
-		// Token: 0x04023573 RID: 144755
+		// Token: 0x0401E765 RID: 124773
 		private bool NeedTipExit;
 	}
 }

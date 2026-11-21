@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A1 RID: 1185
+	// Token: 0x020004FA RID: 1274
 	public class IItemLockingConfig_SetValue
 	{
-		// Token: 0x040011C8 RID: 4552
-		[Nullable(1)]
+		// Token: 0x040012EA RID: 4842
 		public string EffectPath;
 
-		// Token: 0x040011C9 RID: 4553
+		// Token: 0x040012EB RID: 4843
 		public ETeleControlLockingPerform? TeleControlPerform;
 	}
 }

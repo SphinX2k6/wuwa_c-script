@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x02004912 RID: 18706
+	// Token: 0x02004DAD RID: 19885
 	public class ILoopTeleportClientScreenEffectT
 	{
-		// Token: 0x1700879E RID: 34718
-		// (get) Token: 0x0601D3EE RID: 119790 RVA: 0x004200D3 File Offset: 0x0041E2D3
-		// (set) Token: 0x0601D3EF RID: 119791 RVA: 0x004200DB File Offset: 0x0041E2DB
+		// Token: 0x17008E41 RID: 36417
+		// (get) Token: 0x0601ED87 RID: 126343 RVA: 0x0044F833 File Offset: 0x0044DA33
+		// (set) Token: 0x0601ED88 RID: 126344 RVA: 0x0044F83B File Offset: 0x0044DA3B
 		public ELoopTeleportClientEffectType Type { get; set; }
 
-		// Token: 0x1700879F RID: 34719
-		// (get) Token: 0x0601D3F0 RID: 119792 RVA: 0x004200E4 File Offset: 0x0041E2E4
-		// (set) Token: 0x0601D3F1 RID: 119793 RVA: 0x004200EC File Offset: 0x0041E2EC
+		// Token: 0x17008E42 RID: 36418
+		// (get) Token: 0x0601ED89 RID: 126345 RVA: 0x0044F844 File Offset: 0x0044DA44
+		// (set) Token: 0x0601ED8A RID: 126346 RVA: 0x0044F84C File Offset: 0x0044DA4C
 		public string Path { get; set; }
 
-		// Token: 0x0601D3F2 RID: 119794 RVA: 0x004200F5 File Offset: 0x0041E2F5
+		// Token: 0x0601ED8B RID: 126347 RVA: 0x0044F855 File Offset: 0x0044DA55
 		public ILoopTeleportClientScreenEffectT()
 		{
 			this.Type = ELoopTeleportClientEffectType.ScreenEffect;

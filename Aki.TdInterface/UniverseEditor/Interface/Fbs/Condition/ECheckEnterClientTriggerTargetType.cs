@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004925 RID: 18725
+	// Token: 0x02004DD8 RID: 19928
 	public enum ECheckEnterClientTriggerTargetType : byte
 	{
-		// Token: 0x0400CFC8 RID: 53192
+		// Token: 0x0400DA77 RID: 55927
 		Player,
-		// Token: 0x0400CFC9 RID: 53193
+		// Token: 0x0400DA78 RID: 55928
 		DrivingVehicle
 	}
 }

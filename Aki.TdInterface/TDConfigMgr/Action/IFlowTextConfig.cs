@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AA3 RID: 6819
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C3C RID: 7228
 	public class IFlowTextConfig
 	{
-		// Token: 0x0600923E RID: 37438 RVA: 0x00154108 File Offset: 0x00152308
+		// Token: 0x060099BE RID: 39358 RVA: 0x001642F4 File Offset: 0x001624F4
 		private IFlowTextConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600923F RID: 37439 RVA: 0x00154140 File Offset: 0x00152340
+		// Token: 0x060099BF RID: 39359 RVA: 0x0016432C File Offset: 0x0016252C
 		public static IFlowTextConfig Create([Nullable(2)] IFlowTextConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009240 RID: 37440 RVA: 0x00154153 File Offset: 0x00152353
+		// Token: 0x060099C0 RID: 39360 RVA: 0x0016433F File Offset: 0x0016253F
 		public static IFlowTextConfig CreateFromSetValue([Nullable(2)] IFlowTextConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009241 RID: 37441 RVA: 0x00154168 File Offset: 0x00152368
+		// Token: 0x060099C1 RID: 39361 RVA: 0x00164354 File Offset: 0x00162554
 		public IFlowTextConfig_SetValue ToSetValue()
 		{
 			return new IFlowTextConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E80 RID: 11904
-		// (get) Token: 0x06009242 RID: 37442 RVA: 0x001541B6 File Offset: 0x001523B6
-		// (set) Token: 0x06009243 RID: 37443 RVA: 0x001541E1 File Offset: 0x001523E1
+		// Token: 0x17003092 RID: 12434
+		// (get) Token: 0x060099C2 RID: 39362 RVA: 0x001643A2 File Offset: 0x001625A2
+		// (set) Token: 0x060099C3 RID: 39363 RVA: 0x001643CD File Offset: 0x001625CD
 		public virtual string Text
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E81 RID: 11905
-		// (get) Token: 0x06009244 RID: 37444 RVA: 0x001541EF File Offset: 0x001523EF
-		// (set) Token: 0x06009245 RID: 37445 RVA: 0x00154216 File Offset: 0x00152416
+		// Token: 0x17003093 RID: 12435
+		// (get) Token: 0x060099C4 RID: 39364 RVA: 0x001643DB File Offset: 0x001625DB
+		// (set) Token: 0x060099C5 RID: 39365 RVA: 0x00164402 File Offset: 0x00162602
 		[Nullable(2)]
 		public virtual string PlotLineKey
 		{
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E82 RID: 11906
-		// (get) Token: 0x06009246 RID: 37446 RVA: 0x00154224 File Offset: 0x00152424
-		// (set) Token: 0x06009247 RID: 37447 RVA: 0x0015424F File Offset: 0x0015244F
+		// Token: 0x17003094 RID: 12436
+		// (get) Token: 0x060099C6 RID: 39366 RVA: 0x00164410 File Offset: 0x00162610
+		// (set) Token: 0x060099C7 RID: 39367 RVA: 0x0016443B File Offset: 0x0016263B
 		public virtual string StringKey
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E83 RID: 11907
-		// (get) Token: 0x06009248 RID: 37448 RVA: 0x0015425D File Offset: 0x0015245D
-		// (set) Token: 0x06009249 RID: 37449 RVA: 0x00154288 File Offset: 0x00152488
+		// Token: 0x17003095 RID: 12437
+		// (get) Token: 0x060099C8 RID: 39368 RVA: 0x00164449 File Offset: 0x00162649
+		// (set) Token: 0x060099C9 RID: 39369 RVA: 0x00164474 File Offset: 0x00162674
 		public virtual int FlowListId
 		{
 			get
@@ -159,9 +157,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E84 RID: 11908
-		// (get) Token: 0x0600924A RID: 37450 RVA: 0x00154298 File Offset: 0x00152498
-		// (set) Token: 0x0600924B RID: 37451 RVA: 0x001542D2 File Offset: 0x001524D2
+		// Token: 0x17003096 RID: 12438
+		// (get) Token: 0x060099CA RID: 39370 RVA: 0x00164484 File Offset: 0x00162684
+		// (set) Token: 0x060099CB RID: 39371 RVA: 0x001644BE File Offset: 0x001626BE
 		public virtual bool? IsNoPlotText
 		{
 			get
@@ -183,11 +181,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A11 RID: 23057
+		// Token: 0x04005E81 RID: 24193
 		[Nullable(2)]
 		protected IFlowTextConfig FbInstance;
 
-		// Token: 0x04005A12 RID: 23058
+		// Token: 0x04005E82 RID: 24194
 		[Nullable(2)]
 		protected IFlowTextConfig_SetValue PocoInterface;
 	}

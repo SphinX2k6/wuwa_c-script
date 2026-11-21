@@ -11,12 +11,12 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Ui;
 using Google.Protobuf.Collections;
 
-// Token: 0x020011E7 RID: 4583
+// Token: 0x0200069B RID: 1691
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityCollectionData : ActivityBaseData
 {
-	// Token: 0x06007A38 RID: 31288 RVA: 0x0019B630 File Offset: 0x00199830
+	// Token: 0x06004DCF RID: 19919 RVA: 0x001A42DC File Offset: 0x001A24DC
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.RefreshRewardData();
@@ -51,13 +51,13 @@ public class ActivityCollectionData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007A39 RID: 31289 RVA: 0x0019B77C File Offset: 0x0019997C
+	// Token: 0x06004DD0 RID: 19920 RVA: 0x001A4428 File Offset: 0x001A2628
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.IsHasRewardRedPoint() || this.IsHasNewQuestRedDot();
 	}
 
-	// Token: 0x06007A3A RID: 31290 RVA: 0x0019B790 File Offset: 0x00199990
+	// Token: 0x06004DD1 RID: 19921 RVA: 0x001A443C File Offset: 0x001A263C
 	public bool IsHasRewardRedPoint()
 	{
 		foreach (KeyValuePair<int, ICollectionQuestState> keyValuePair in this.QuestStateMap)
@@ -70,7 +70,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007A3B RID: 31291 RVA: 0x0019B800 File Offset: 0x00199A00
+	// Token: 0x06004DD2 RID: 19922 RVA: 0x001A44AC File Offset: 0x001A26AC
 	public bool IsHasNewQuestRedDot()
 	{
 		foreach (KeyValuePair<int, ICollectionQuestState> keyValuePair in this.QuestStateMap)
@@ -88,13 +88,13 @@ public class ActivityCollectionData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007A3C RID: 31292 RVA: 0x0019B890 File Offset: 0x00199A90
+	// Token: 0x06004DD3 RID: 19923 RVA: 0x001A453C File Offset: 0x001A273C
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x06007A3D RID: 31293 RVA: 0x0019B894 File Offset: 0x00199A94
+	// Token: 0x06004DD4 RID: 19924 RVA: 0x001A4540 File Offset: 0x001A2740
 	public IActivityRewardViewData GetAllRewardQuestDataList()
 	{
 		this.RefreshRewardData();
@@ -114,7 +114,7 @@ public class ActivityCollectionData : ActivityBaseData
 		};
 	}
 
-	// Token: 0x06007A3E RID: 31294 RVA: 0x0019B8FC File Offset: 0x00199AFC
+	// Token: 0x06004DD5 RID: 19925 RVA: 0x001A45A8 File Offset: 0x001A27A8
 	private int SortReward(IActivityRewardData a, IActivityRewardData b)
 	{
 		ICollectionQuestState collectionQuestState;
@@ -132,7 +132,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return item - item2;
 	}
 
-	// Token: 0x06007A3F RID: 31295 RVA: 0x0019B9A0 File Offset: 0x00199BA0
+	// Token: 0x06004DD6 RID: 19926 RVA: 0x001A464C File Offset: 0x001A284C
 	public ECollectionState GetProgressState()
 	{
 		ValueTuple<int, bool> currentProgress = this.GetCurrentProgress();
@@ -150,7 +150,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return ECollectionState.PreQuest;
 	}
 
-	// Token: 0x06007A40 RID: 31296 RVA: 0x0019B9D4 File Offset: 0x00199BD4
+	// Token: 0x06004DD7 RID: 19927 RVA: 0x001A4680 File Offset: 0x001A2880
 	[NullableContext(0)]
 	public ValueTuple<int, bool> GetCurrentProgress()
 	{
@@ -174,7 +174,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return new ValueTuple<int, bool>(num, item);
 	}
 
-	// Token: 0x06007A41 RID: 31297 RVA: 0x0019BA50 File Offset: 0x00199C50
+	// Token: 0x06004DD8 RID: 19928 RVA: 0x001A46FC File Offset: 0x001A28FC
 	public int GetCurrentProgressQuestId()
 	{
 		foreach (KeyValuePair<int, ICollectionQuestState> keyValuePair in this.QuestStateMap)
@@ -187,7 +187,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return 0;
 	}
 
-	// Token: 0x06007A42 RID: 31298 RVA: 0x0019BAB8 File Offset: 0x00199CB8
+	// Token: 0x06004DD9 RID: 19929 RVA: 0x001A4764 File Offset: 0x001A2964
 	public int GetTotalProgress()
 	{
 		if (this.TotalProgress == -1)
@@ -198,7 +198,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return this.TotalProgress;
 	}
 
-	// Token: 0x06007A43 RID: 31299 RVA: 0x0019BAEC File Offset: 0x00199CEC
+	// Token: 0x06004DDA RID: 19930 RVA: 0x001A4798 File Offset: 0x001A2998
 	public void RefreshRewardData()
 	{
 		IEnumerable<GatherActivity> allActivityCollectionConfig = ActivityCollectionConfig.Instance.GetAllActivityCollectionConfig();
@@ -256,7 +256,7 @@ public class ActivityCollectionData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007A44 RID: 31300 RVA: 0x0019BD6C File Offset: 0x00199F6C
+	// Token: 0x06004DDB RID: 19931 RVA: 0x001A4A18 File Offset: 0x001A2C18
 	private long GetQuestUnlockStamp(long startTime, int index)
 	{
 		DateTime utcDateTime = DateTimeOffset.FromUnixTimeSeconds(startTime).UtcDateTime;
@@ -264,7 +264,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return new DateTimeOffset(utcDateTime, TimeSpan.Zero).ToUnixTimeSeconds() + (long)(index * TimeUtil.Instance.OneDaySeconds);
 	}
 
-	// Token: 0x06007A45 RID: 31301 RVA: 0x0019BDE8 File Offset: 0x00199FE8
+	// Token: 0x06004DDC RID: 19932 RVA: 0x001A4A94 File Offset: 0x001A2C94
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -298,7 +298,7 @@ public class ActivityCollectionData : ActivityBaseData
 		return new ValueTuple<EActivityRewardState, string, int>(item, text, item2);
 	}
 
-	// Token: 0x06007A46 RID: 31302 RVA: 0x0019BE58 File Offset: 0x0019A058
+	// Token: 0x06004DDD RID: 19933 RVA: 0x001A4B04 File Offset: 0x001A2D04
 	private List<TItem> GetDropRewardList(int dropId)
 	{
 		DropPackage? dropPackage;
@@ -316,15 +316,15 @@ public class ActivityCollectionData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x04003812 RID: 14354
+	// Token: 0x040038AB RID: 14507
 	public readonly Dictionary<int, int> TaskIdToQuestIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04003813 RID: 14355
+	// Token: 0x040038AC RID: 14508
 	public readonly Dictionary<int, ICollectionQuestState> QuestStateMap = new Dictionary<int, ICollectionQuestState>();
 
-	// Token: 0x04003814 RID: 14356
+	// Token: 0x040038AD RID: 14509
 	private readonly Dictionary<int, IActivityRewardData> CollectionQuestDataMap = new Dictionary<int, IActivityRewardData>();
 
-	// Token: 0x04003815 RID: 14357
+	// Token: 0x040038AE RID: 14510
 	private int TotalProgress = -1;
 }

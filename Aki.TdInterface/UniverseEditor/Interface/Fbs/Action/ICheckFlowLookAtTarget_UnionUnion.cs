@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200636B RID: 25451
+	// Token: 0x020069DC RID: 27100
 	public class ICheckFlowLookAtTarget_UnionUnion
 	{
-		// Token: 0x1700BDDC RID: 48604
-		// (get) Token: 0x0602C071 RID: 180337 RVA: 0x0060CAD5 File Offset: 0x0060ACD5
-		// (set) Token: 0x0602C072 RID: 180338 RVA: 0x0060CADD File Offset: 0x0060ACDD
+		// Token: 0x1700C764 RID: 51044
+		// (get) Token: 0x0602E7DB RID: 190427 RVA: 0x00657C29 File Offset: 0x00655E29
+		// (set) Token: 0x0602E7DC RID: 190428 RVA: 0x00657C31 File Offset: 0x00655E31
 		public ICheckFlowLookAtTarget_Union Type { get; set; }
 
-		// Token: 0x1700BDDD RID: 48605
-		// (get) Token: 0x0602C073 RID: 180339 RVA: 0x0060CAE6 File Offset: 0x0060ACE6
-		// (set) Token: 0x0602C074 RID: 180340 RVA: 0x0060CAEE File Offset: 0x0060ACEE
+		// Token: 0x1700C765 RID: 51045
+		// (get) Token: 0x0602E7DD RID: 190429 RVA: 0x00657C3A File Offset: 0x00655E3A
+		// (set) Token: 0x0602E7DE RID: 190430 RVA: 0x00657C42 File Offset: 0x00655E42
 		public object Value { get; set; }
 
-		// Token: 0x0602C075 RID: 180341 RVA: 0x0060CAF7 File Offset: 0x0060ACF7
+		// Token: 0x0602E7DF RID: 190431 RVA: 0x00657C4B File Offset: 0x00655E4B
 		public ICheckFlowLookAtTarget_UnionUnion()
 		{
 			this.Type = ICheckFlowLookAtTarget_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C076 RID: 180342 RVA: 0x0060CB0D File Offset: 0x0060AD0D
+		// Token: 0x0602E7E0 RID: 190432 RVA: 0x00657C61 File Offset: 0x00655E61
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C077 RID: 180343 RVA: 0x0060CB1F File Offset: 0x0060AD1F
+		// Token: 0x0602E7E1 RID: 190433 RVA: 0x00657C73 File Offset: 0x00655E73
 		public ICheckFlowLookAtTargetT AsICheckFlowLookAtTarget()
 		{
 			return this.As<ICheckFlowLookAtTargetT>();
 		}
 
-		// Token: 0x0602C078 RID: 180344 RVA: 0x0060CB27 File Offset: 0x0060AD27
+		// Token: 0x0602E7E2 RID: 190434 RVA: 0x00657C7B File Offset: 0x00655E7B
 		public static ICheckFlowLookAtTarget_UnionUnion FromICheckFlowLookAtTarget(ICheckFlowLookAtTargetT _icheckflowlookattarget)
 		{
 			return new ICheckFlowLookAtTarget_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C079 RID: 180345 RVA: 0x0060CB3C File Offset: 0x0060AD3C
+		// Token: 0x0602E7E3 RID: 190435 RVA: 0x00657C90 File Offset: 0x00655E90
 		public ICheckFlowLookAtEntityT AsICheckFlowLookAtEntity()
 		{
 			return this.As<ICheckFlowLookAtEntityT>();
 		}
 
-		// Token: 0x0602C07A RID: 180346 RVA: 0x0060CB44 File Offset: 0x0060AD44
+		// Token: 0x0602E7E4 RID: 190436 RVA: 0x00657C98 File Offset: 0x00655E98
 		public static ICheckFlowLookAtTarget_UnionUnion FromICheckFlowLookAtEntity(ICheckFlowLookAtEntityT _icheckflowlookatentity)
 		{
 			return new ICheckFlowLookAtTarget_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C07B RID: 180347 RVA: 0x0060CB59 File Offset: 0x0060AD59
+		// Token: 0x0602E7E5 RID: 190437 RVA: 0x00657CAD File Offset: 0x00655EAD
 		public ICheckFlowLookAtPlayerT AsICheckFlowLookAtPlayer()
 		{
 			return this.As<ICheckFlowLookAtPlayerT>();
 		}
 
-		// Token: 0x0602C07C RID: 180348 RVA: 0x0060CB61 File Offset: 0x0060AD61
+		// Token: 0x0602E7E6 RID: 190438 RVA: 0x00657CB5 File Offset: 0x00655EB5
 		public static ICheckFlowLookAtTarget_UnionUnion FromICheckFlowLookAtPlayer(ICheckFlowLookAtPlayerT _icheckflowlookatplayer)
 		{
 			return new ICheckFlowLookAtTarget_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C07D RID: 180349 RVA: 0x0060CB78 File Offset: 0x0060AD78
+		// Token: 0x0602E7E7 RID: 190439 RVA: 0x00657CCC File Offset: 0x00655ECC
 		public static int Pack(FlatBufferBuilder builder, ICheckFlowLookAtTarget_UnionUnion _o)
 		{
 			switch (_o.Type)

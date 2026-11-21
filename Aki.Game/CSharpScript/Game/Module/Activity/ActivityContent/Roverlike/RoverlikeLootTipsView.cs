@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200614A RID: 24906
+	// Token: 0x020050C8 RID: 20680
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLootTipsView : UiViewBase
 	{
-		// Token: 0x0603EF53 RID: 257875 RVA: 0x00F355AB File Offset: 0x00F337AB
+		// Token: 0x06033C13 RID: 211987 RVA: 0x00E7C48B File Offset: 0x00E7A68B
 		public RoverlikeLootTipsView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EF54 RID: 257876 RVA: 0x00F355B4 File Offset: 0x00F337B4
+		// Token: 0x06033C14 RID: 211988 RVA: 0x00E7C494 File Offset: 0x00E7A694
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EF55 RID: 257877 RVA: 0x00F356E0 File Offset: 0x00F338E0
+		// Token: 0x06033C15 RID: 211989 RVA: 0x00E7C5C0 File Offset: 0x00E7A7C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeLootTipsView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EF56 RID: 257878 RVA: 0x00F35724 File Offset: 0x00F33924
+		// Token: 0x06033C16 RID: 211990 RVA: 0x00E7C604 File Offset: 0x00E7A804
 		protected override void OnStart()
 		{
 			AUIBaseActor gridActor = base.GetItem(3).GetOwner() as AUIBaseActor;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.AfterStarLayout = new GenericLayout<RoverlikeLootTipsStarItem, bool>(base.GetHorizontalLayout(2), new Func<RoverlikeLootTipsStarItem>(this.CreateStarItem), gridActor, false, true);
 		}
 
-		// Token: 0x0603EF57 RID: 257879 RVA: 0x00F35788 File Offset: 0x00F33988
+		// Token: 0x06033C17 RID: 211991 RVA: 0x00E7C668 File Offset: 0x00E7A868
 		protected override void OnBeforeShow()
 		{
 			RoverlikeLootGainEntry roverlikeLootGainEntry = this.OpenParam as RoverlikeLootGainEntry;
@@ -80,19 +80,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshTips(roverlikeLootGainEntry);
 		}
 
-		// Token: 0x0603EF58 RID: 257880 RVA: 0x00F357AC File Offset: 0x00F339AC
+		// Token: 0x06033C18 RID: 211992 RVA: 0x00E7C68C File Offset: 0x00E7A88C
 		protected override void OnFinishShow()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603EF59 RID: 257881 RVA: 0x00F357B5 File Offset: 0x00F339B5
+		// Token: 0x06033C19 RID: 211993 RVA: 0x00E7C695 File Offset: 0x00E7A895
 		private void OnBtnSelfClick()
 		{
 			RoverlikeController.Instance.OpenGameInfoView(new EUiTabViewName?(EUiTabViewName.RoverlikeDetailRoleTabView));
 		}
 
-		// Token: 0x0603EF5A RID: 257882 RVA: 0x00F357CC File Offset: 0x00F339CC
+		// Token: 0x06033C1A RID: 211994 RVA: 0x00E7C6AC File Offset: 0x00E7A8AC
 		private void RefreshTips(RoverlikeLootGainEntry entry)
 		{
 			RoverRogueLoot? lootConfig = RoverlikeConfig.Instance.GetLootConfig(entry.ConfigId);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			afterStarLayout.RefreshByData(this.BuildStars(entry.LootLv, lootConfig.Value.MaxLevel), null, false);
 		}
 
-		// Token: 0x0603EF5B RID: 257883 RVA: 0x00F35898 File Offset: 0x00F33A98
+		// Token: 0x06033C1B RID: 211995 RVA: 0x00E7C778 File Offset: 0x00E7A978
 		private List<bool> BuildStars(int level, int maxLevel)
 		{
 			int num = Math.Max(0, level);
@@ -131,13 +131,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603EF5C RID: 257884 RVA: 0x00F358CA File Offset: 0x00F33ACA
+		// Token: 0x06033C1C RID: 211996 RVA: 0x00E7C7AA File Offset: 0x00E7A9AA
 		private RoverlikeLootTipsStarItem CreateStarItem()
 		{
 			return new RoverlikeLootTipsStarItem();
 		}
 
-		// Token: 0x04020DB9 RID: 134585
+		// Token: 0x0401B6E6 RID: 112358
 		[Nullable(new byte[]
 		{
 			2,
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeLootTipsStarItem, bool> BeforeStarLayout;
 
-		// Token: 0x04020DBA RID: 134586
+		// Token: 0x0401B6E7 RID: 112359
 		[Nullable(new byte[]
 		{
 			2,
@@ -153,30 +153,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeLootTipsStarItem, bool> AfterStarLayout;
 
-		// Token: 0x04020DBB RID: 134587
+		// Token: 0x0401B6E8 RID: 112360
 		[Nullable(2)]
 		private RoverlikeLootTipsIconItem IconItem;
 
-		// Token: 0x0200C3A9 RID: 50089
+		// Token: 0x0200AD90 RID: 44432
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B0A2 RID: 241826
+			// Token: 0x04035A03 RID: 219651
 			public const int TxtName = 0;
 
-			// Token: 0x0403B0A3 RID: 241827
+			// Token: 0x04035A04 RID: 219652
 			public const int StarLayoutBefore = 1;
 
-			// Token: 0x0403B0A4 RID: 241828
+			// Token: 0x04035A05 RID: 219653
 			public const int StarLayoutAfter = 2;
 
-			// Token: 0x0403B0A5 RID: 241829
+			// Token: 0x04035A06 RID: 219654
 			public const int StarTemplate = 3;
 
-			// Token: 0x0403B0A6 RID: 241830
+			// Token: 0x04035A07 RID: 219655
 			public const int IconContainer = 4;
 
-			// Token: 0x0403B0A7 RID: 241831
+			// Token: 0x04035A08 RID: 219656
 			public const int BtnSelf = 5;
 		}
 	}

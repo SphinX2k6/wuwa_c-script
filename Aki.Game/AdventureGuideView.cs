@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001695 RID: 5781
+// Token: 0x02000B4D RID: 2893
 [NullableContext(1)]
 [Nullable(0)]
 public class AdventureGuideView : UiViewBase
 {
-	// Token: 0x0600A4FA RID: 42234 RVA: 0x0024CBC7 File Offset: 0x0024ADC7
+	// Token: 0x060078DA RID: 30938 RVA: 0x00256F4B File Offset: 0x0025514B
 	public AdventureGuideView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A4FB RID: 42235 RVA: 0x0024CBDC File Offset: 0x0024ADDC
+	// Token: 0x060078DB RID: 30939 RVA: 0x00256F60 File Offset: 0x00255160
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -54,7 +54,7 @@ public class AdventureGuideView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A4FC RID: 42236 RVA: 0x0024CD4C File Offset: 0x0024AF4C
+	// Token: 0x060078DC RID: 30940 RVA: 0x002570D0 File Offset: 0x002552D0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.AdventureHelpBtn, new Action<int>(this.AdventureHelpBtn));
@@ -63,7 +63,7 @@ public class AdventureGuideView : UiViewBase
 		EventSystem.Instance.Add<AdventureGuideViewOpenData>(EEventName.SwitchAdventureGuideViewTab, new Action<AdventureGuideViewOpenData>(this.SwitchAdventureGuideViewTab));
 	}
 
-	// Token: 0x0600A4FD RID: 42237 RVA: 0x0024CDC4 File Offset: 0x0024AFC4
+	// Token: 0x060078DD RID: 30941 RVA: 0x00257148 File Offset: 0x00255348
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.AdventureHelpBtn, new Action<int>(this.AdventureHelpBtn));
@@ -72,7 +72,7 @@ public class AdventureGuideView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.SwitchAdventureGuideViewTab, new Action<AdventureGuideViewOpenData>(this.SwitchAdventureGuideViewTab));
 	}
 
-	// Token: 0x0600A4FE RID: 42238 RVA: 0x0024CE3C File Offset: 0x0024B03C
+	// Token: 0x060078DE RID: 30942 RVA: 0x002571C0 File Offset: 0x002553C0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AdventureGuideView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -83,7 +83,7 @@ public class AdventureGuideView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A4FF RID: 42239 RVA: 0x0024CE7F File Offset: 0x0024B07F
+	// Token: 0x060078DF RID: 30943 RVA: 0x00257203 File Offset: 0x00255403
 	protected override void OnBeforeShow()
 	{
 		TabComponentWithCaptionItem<CommonTabItem> tabComponent = this.TabComponent;
@@ -94,7 +94,7 @@ public class AdventureGuideView : UiViewBase
 		tabComponent.SelectToggleByIndex(this.CurSelectTabIndex, true);
 	}
 
-	// Token: 0x0600A500 RID: 42240 RVA: 0x0024CE98 File Offset: 0x0024B098
+	// Token: 0x060078E0 RID: 30944 RVA: 0x0025721C File Offset: 0x0025541C
 	private int GetIndexByTabViewName(EUiTabViewName viewName)
 	{
 		int num = this.TabDataList.Length;
@@ -108,7 +108,7 @@ public class AdventureGuideView : UiViewBase
 		return 0;
 	}
 
-	// Token: 0x0600A501 RID: 42241 RVA: 0x0024CEDC File Offset: 0x0024B0DC
+	// Token: 0x060078E1 RID: 30945 RVA: 0x00257260 File Offset: 0x00255460
 	protected UniTask InitTabComponent()
 	{
 		AdventureGuideView.<InitTabComponent>d__16 <InitTabComponent>d__;
@@ -119,13 +119,13 @@ public class AdventureGuideView : UiViewBase
 		return <InitTabComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A502 RID: 42242 RVA: 0x0024CF1F File Offset: 0x0024B11F
+	// Token: 0x060078E2 RID: 30946 RVA: 0x002572A3 File Offset: 0x002554A3
 	private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x0600A503 RID: 42243 RVA: 0x0024CF28 File Offset: 0x0024B128
+	// Token: 0x060078E3 RID: 30947 RVA: 0x002572AC File Offset: 0x002554AC
 	private void ToggleCallBack(int index)
 	{
 		this.LastClickTime = new double?(Time.Instance.Now);
@@ -153,7 +153,7 @@ public class AdventureGuideView : UiViewBase
 		this.RefreshIntroductionBtn();
 	}
 
-	// Token: 0x0600A504 RID: 42244 RVA: 0x0024D040 File Offset: 0x0024B240
+	// Token: 0x060078E4 RID: 30948 RVA: 0x002573C4 File Offset: 0x002555C4
 	private void RefreshIntroductionBtn()
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[this.CurSelectTabIndex];
@@ -166,14 +166,14 @@ public class AdventureGuideView : UiViewBase
 		button.RootUIComp.Get().SetUIActive(FunctionModel.Instance.IsOpen(10097) && left == EUiTabViewName.NewSoundAreaView);
 	}
 
-	// Token: 0x0600A505 RID: 42245 RVA: 0x0024D0AC File Offset: 0x0024B2AC
+	// Token: 0x060078E5 RID: 30949 RVA: 0x00257430 File Offset: 0x00255630
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x0600A506 RID: 42246 RVA: 0x0024D0E4 File Offset: 0x0024B2E4
+	// Token: 0x060078E6 RID: 30950 RVA: 0x00257468 File Offset: 0x00255668
 	protected UniTask RebuildTabItem()
 	{
 		AdventureGuideView.<RebuildTabItem>d__21 <RebuildTabItem>d__;
@@ -184,7 +184,7 @@ public class AdventureGuideView : UiViewBase
 		return <RebuildTabItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A507 RID: 42247 RVA: 0x0024D128 File Offset: 0x0024B328
+	// Token: 0x060078E7 RID: 30951 RVA: 0x002574AC File Offset: 0x002556AC
 	protected bool CanToggleChange(int index, bool? state)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -205,7 +205,7 @@ public class AdventureGuideView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600A508 RID: 42248 RVA: 0x0024D1E4 File Offset: 0x0024B3E4
+	// Token: 0x060078E8 RID: 30952 RVA: 0x00257568 File Offset: 0x00255768
 	private void SwitchAdventureGuideViewTab(AdventureGuideViewOpenData data)
 	{
 		this.TabViewOpenData = data;
@@ -218,7 +218,7 @@ public class AdventureGuideView : UiViewBase
 		AdventureGuideModel.Instance.CurrentGuideTabName = data.OpenTabViewName;
 	}
 
-	// Token: 0x0600A509 RID: 42249 RVA: 0x0024D24C File Offset: 0x0024B44C
+	// Token: 0x060078E9 RID: 30953 RVA: 0x002575D0 File Offset: 0x002557D0
 	private void SwitchTabView(EUiTabViewName tabViewName, int? param)
 	{
 		AdventureGuideViewOpenData tabViewOpenData = new AdventureGuideViewOpenData
@@ -236,7 +236,7 @@ public class AdventureGuideView : UiViewBase
 		AdventureGuideModel.Instance.CurrentGuideTabName = new EUiTabViewName?(tabViewName);
 	}
 
-	// Token: 0x0600A50A RID: 42250 RVA: 0x0024D2AE File Offset: 0x0024B4AE
+	// Token: 0x060078EA RID: 30954 RVA: 0x00257632 File Offset: 0x00255832
 	private void ShowCountDownPanel(bool bVisible)
 	{
 		if (bVisible)
@@ -251,7 +251,7 @@ public class AdventureGuideView : UiViewBase
 		this.TimePanelShowFlag = bVisible;
 	}
 
-	// Token: 0x0600A50B RID: 42251 RVA: 0x0024D2DD File Offset: 0x0024B4DD
+	// Token: 0x060078EB RID: 30955 RVA: 0x00257661 File Offset: 0x00255861
 	public void SetTabViewOpenData(AdventureGuideViewOpenData data)
 	{
 		this.TabViewOpenData = data;
@@ -261,7 +261,7 @@ public class AdventureGuideView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A50C RID: 42252 RVA: 0x0024D30C File Offset: 0x0024B50C
+	// Token: 0x060078EC RID: 30956 RVA: 0x00257690 File Offset: 0x00255890
 	private void SetCountDownText(string textParam, string textId)
 	{
 		if (!StringUtils.IsEmpty(textParam) || !StringUtils.IsEmpty(textId))
@@ -281,13 +281,13 @@ public class AdventureGuideView : UiViewBase
 		text.SetText("", true);
 	}
 
-	// Token: 0x0600A50D RID: 42253 RVA: 0x0024D368 File Offset: 0x0024B568
+	// Token: 0x060078ED RID: 30957 RVA: 0x002576EC File Offset: 0x002558EC
 	private void OnBackBtnClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.AdventureGuideView, null);
 	}
 
-	// Token: 0x0600A50E RID: 42254 RVA: 0x0024D37C File Offset: 0x0024B57C
+	// Token: 0x060078EE RID: 30958 RVA: 0x00257700 File Offset: 0x00255900
 	private void OnIntroductionBtnClick()
 	{
 		int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -299,7 +299,7 @@ public class AdventureGuideView : UiViewBase
 		ChannelController.Instance.OpenGameIntroductionByRoleId(devTargetRoleId);
 	}
 
-	// Token: 0x0600A50F RID: 42255 RVA: 0x0024D3B8 File Offset: 0x0024B5B8
+	// Token: 0x060078EF RID: 30959 RVA: 0x0025773C File Offset: 0x0025593C
 	protected override void OnBeforeDestroy()
 	{
 		AdventureGuideModel.Instance.CurrentGuideTabName = null;
@@ -316,13 +316,13 @@ public class AdventureGuideView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A510 RID: 42256 RVA: 0x0024D411 File Offset: 0x0024B611
+	// Token: 0x060078F0 RID: 30960 RVA: 0x00257795 File Offset: 0x00255995
 	protected void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600A511 RID: 42257 RVA: 0x0024D41C File Offset: 0x0024B61C
+	// Token: 0x060078F1 RID: 30961 RVA: 0x002577A0 File Offset: 0x002559A0
 	private void AdventureHelpBtn(int helpId)
 	{
 		UUIButtonComponent button = base.GetButton(3);
@@ -336,7 +336,7 @@ public class AdventureGuideView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A512 RID: 42258 RVA: 0x0024D460 File Offset: 0x0024B660
+	// Token: 0x060078F2 RID: 30962 RVA: 0x002577E4 File Offset: 0x002559E4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -383,11 +383,11 @@ public class AdventureGuideView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x04004AA7 RID: 19111
+	// Token: 0x04004B4E RID: 19278
 	[Nullable(2)]
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x04004AA8 RID: 19112
+	// Token: 0x04004B4F RID: 19279
 	[Nullable(new byte[]
 	{
 		2,
@@ -395,43 +395,43 @@ public class AdventureGuideView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-	// Token: 0x04004AA9 RID: 19113
+	// Token: 0x04004B50 RID: 19280
 	[Nullable(2)]
 	private UUIExtendButtonComponent HelpBtn;
 
-	// Token: 0x04004AAA RID: 19114
+	// Token: 0x04004B51 RID: 19281
 	private int CurSelectTabIndex;
 
-	// Token: 0x04004AAB RID: 19115
+	// Token: 0x04004B52 RID: 19282
 	protected UiDynamicTab[] TabDataList = new UiDynamicTab[0];
 
-	// Token: 0x04004AAC RID: 19116
+	// Token: 0x04004B53 RID: 19283
 	[Nullable(2)]
 	private AdventureGuideViewOpenData TabViewOpenData;
 
-	// Token: 0x04004AAD RID: 19117
+	// Token: 0x04004B54 RID: 19284
 	private double? LastClickTime;
 
-	// Token: 0x04004AAE RID: 19118
+	// Token: 0x04004B55 RID: 19285
 	private bool TimePanelShowFlag;
 
-	// Token: 0x02007C6E RID: 31854
+	// Token: 0x02006DF3 RID: 28147
 	[NullableContext(0)]
 	private enum ENodeDefine
 	{
-		// Token: 0x04028D32 RID: 167218
+		// Token: 0x0402405B RID: 147547
 		BackBtn,
-		// Token: 0x04028D33 RID: 167219
+		// Token: 0x0402405C RID: 147548
 		TabComponent,
-		// Token: 0x04028D34 RID: 167220
+		// Token: 0x0402405D RID: 147549
 		TabRootItem,
-		// Token: 0x04028D35 RID: 167221
+		// Token: 0x0402405E RID: 147550
 		HelpBtn,
-		// Token: 0x04028D36 RID: 167222
+		// Token: 0x0402405F RID: 147551
 		PanelTime,
-		// Token: 0x04028D37 RID: 167223
+		// Token: 0x04024060 RID: 147552
 		TextTime,
-		// Token: 0x04028D38 RID: 167224
+		// Token: 0x04024061 RID: 147553
 		IntroductionBtn
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200263C RID: 9788
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028FC RID: 10492
 	public class GetItem : ActionParams
 	{
-		// Token: 0x0600DBA2 RID: 56226 RVA: 0x0020B122 File Offset: 0x00209322
+		// Token: 0x0600E970 RID: 59760 RVA: 0x002278EE File Offset: 0x00225AEE
 		public static GetItem Create(IGetItem? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040EC RID: 16620
-		// (get) Token: 0x0600DBA3 RID: 56227 RVA: 0x0020B144 File Offset: 0x00209344
+		// Token: 0x17004426 RID: 17446
+		// (get) Token: 0x0600E971 RID: 59761 RVA: 0x00227910 File Offset: 0x00225B10
 		public virtual List<IItemData> Items
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040ED RID: 16621
-		// (get) Token: 0x0600DBA4 RID: 56228 RVA: 0x0020B1B0 File Offset: 0x002093B0
+		// Token: 0x17004427 RID: 17447
+		// (get) Token: 0x0600E972 RID: 59762 RVA: 0x0022797C File Offset: 0x00225B7C
 		public virtual EItemGetUiType? UiType
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040EE RID: 16622
-		// (get) Token: 0x0600DBA5 RID: 56229 RVA: 0x0020B1E6 File Offset: 0x002093E6
+		// Token: 0x17004428 RID: 17448
+		// (get) Token: 0x0600E973 RID: 59763 RVA: 0x002279B2 File Offset: 0x00225BB2
 		[Nullable(2)]
 		public virtual IItemGetUiConfigSpecialQuest UiConfig
 		{
@@ -76,20 +74,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A0C RID: 31244
+		// Token: 0x040080A8 RID: 32936
 		private IGetItem Instance;
 
-		// Token: 0x04007A0D RID: 31245
+		// Token: 0x040080A9 RID: 32937
 		private List<IItemData> _ItemsCache;
 
-		// Token: 0x04007A0E RID: 31246
+		// Token: 0x040080AA RID: 32938
 		private bool _ItemsInited;
 
-		// Token: 0x04007A0F RID: 31247
+		// Token: 0x040080AB RID: 32939
 		[Nullable(2)]
 		private IItemGetUiConfigSpecialQuest _UiConfigCache;
 
-		// Token: 0x04007A10 RID: 31248
+		// Token: 0x040080AC RID: 32940
 		private bool _UiConfigInited;
 	}
 }

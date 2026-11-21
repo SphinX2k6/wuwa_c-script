@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006CE RID: 1742
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200076F RID: 1903
 	public class ISingleBtnQte : IQteType
 	{
-		// Token: 0x0600256C RID: 9580 RVA: 0x00064C38 File Offset: 0x00062E38
+		// Token: 0x0600288C RID: 10380 RVA: 0x0006BCA8 File Offset: 0x00069EA8
 		private ISingleBtnQte_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600256D RID: 9581 RVA: 0x00064C70 File Offset: 0x00062E70
+		// Token: 0x0600288D RID: 10381 RVA: 0x0006BCE0 File Offset: 0x00069EE0
 		public static ISingleBtnQte Create([Nullable(2)] ISingleBtnQte instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600256E RID: 9582 RVA: 0x00064C83 File Offset: 0x00062E83
+		// Token: 0x0600288E RID: 10382 RVA: 0x0006BCF3 File Offset: 0x00069EF3
 		public static ISingleBtnQte CreateFromSetValue([Nullable(2)] ISingleBtnQte_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600256F RID: 9583 RVA: 0x00064C96 File Offset: 0x00062E96
+		// Token: 0x0600288F RID: 10383 RVA: 0x0006BD06 File Offset: 0x00069F06
 		public new ISingleBtnQte_SetValue ToSetValue()
 		{
 			return new ISingleBtnQte_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009E0 RID: 2528
-		// (get) Token: 0x06002570 RID: 9584 RVA: 0x00064CCD File Offset: 0x00062ECD
-		// (set) Token: 0x06002571 RID: 9585 RVA: 0x00064CF8 File Offset: 0x00062EF8
+		// Token: 0x17000A9E RID: 2718
+		// (get) Token: 0x06002890 RID: 10384 RVA: 0x0006BD3D File Offset: 0x00069F3D
+		// (set) Token: 0x06002891 RID: 10385 RVA: 0x0006BD68 File Offset: 0x00069F68
 		public override EQteType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009E1 RID: 2529
-		// (get) Token: 0x06002572 RID: 9586 RVA: 0x00064D06 File Offset: 0x00062F06
-		// (set) Token: 0x06002573 RID: 9587 RVA: 0x00064D31 File Offset: 0x00062F31
+		// Token: 0x17000A9F RID: 2719
+		// (get) Token: 0x06002892 RID: 10386 RVA: 0x0006BD76 File Offset: 0x00069F76
+		// (set) Token: 0x06002893 RID: 10387 RVA: 0x0006BDA1 File Offset: 0x00069FA1
 		public override int QteId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009E2 RID: 2530
-		// (get) Token: 0x06002574 RID: 9588 RVA: 0x00064D40 File Offset: 0x00062F40
-		// (set) Token: 0x06002575 RID: 9589 RVA: 0x00064DA1 File Offset: 0x00062FA1
+		// Token: 0x17000AA0 RID: 2720
+		// (get) Token: 0x06002894 RID: 10388 RVA: 0x0006BDB0 File Offset: 0x00069FB0
+		// (set) Token: 0x06002895 RID: 10389 RVA: 0x0006BE11 File Offset: 0x0006A011
 		public virtual IQteCallback SuccessCallback
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009E3 RID: 2531
-		// (get) Token: 0x06002576 RID: 9590 RVA: 0x00064DB8 File Offset: 0x00062FB8
-		// (set) Token: 0x06002577 RID: 9591 RVA: 0x00064E19 File Offset: 0x00063019
+		// Token: 0x17000AA1 RID: 2721
+		// (get) Token: 0x06002896 RID: 10390 RVA: 0x0006BE28 File Offset: 0x0006A028
+		// (set) Token: 0x06002897 RID: 10391 RVA: 0x0006BE89 File Offset: 0x0006A089
 		public virtual IQteCallback FailureCallback
 		{
 			get
@@ -168,24 +166,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400198C RID: 6540
+		// Token: 0x04001B8B RID: 7051
 		[Nullable(2)]
 		protected new ISingleBtnQte FbInstance;
 
-		// Token: 0x0400198D RID: 6541
+		// Token: 0x04001B8C RID: 7052
 		[Nullable(2)]
 		protected new ISingleBtnQte_SetValue PocoInterface;
 
-		// Token: 0x0400198E RID: 6542
+		// Token: 0x04001B8D RID: 7053
 		private IQteCallback _SuccessCallbackCache;
 
-		// Token: 0x0400198F RID: 6543
+		// Token: 0x04001B8E RID: 7054
 		private bool _SuccessCallbackInited;
 
-		// Token: 0x04001990 RID: 6544
+		// Token: 0x04001B8F RID: 7055
 		private IQteCallback _FailureCallbackCache;
 
-		// Token: 0x04001991 RID: 6545
+		// Token: 0x04001B90 RID: 7056
 		private bool _FailureCallbackInited;
 	}
 }

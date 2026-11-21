@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020017A0 RID: 6048
+// Token: 0x02000C59 RID: 3161
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatContentBase : UiPanelBase
 {
-	// Token: 0x0600B044 RID: 45124 RVA: 0x0027D111 File Offset: 0x0027B311
+	// Token: 0x0600842C RID: 33836 RVA: 0x002876A9 File Offset: 0x002858A9
 	public ChatContentBase(string resourceId, UUIItem parentItem, ChatContentData chatContentData, [Nullable(new byte[]
 	{
 		2,
@@ -29,10 +29,10 @@ public class ChatContentBase : UiPanelBase
 		});
 	}
 
-	// Token: 0x04005015 RID: 20501
+	// Token: 0x040050BF RID: 20671
 	protected readonly ChatContentData ChatContentData;
 
-	// Token: 0x04005016 RID: 20502
+	// Token: 0x040050C0 RID: 20672
 	[Nullable(new byte[]
 	{
 		2,

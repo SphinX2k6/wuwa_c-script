@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006429 RID: 25641
+	// Token: 0x020053A7 RID: 21415
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightLevelDetailView : UiViewBase
 	{
-		// Token: 0x06040782 RID: 264066 RVA: 0x00F99C4A File Offset: 0x00F97E4A
+		// Token: 0x06035443 RID: 218179 RVA: 0x00EE0BEA File Offset: 0x00EDEDEA
 		public MotorFightLevelDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040783 RID: 264067 RVA: 0x00F99C54 File Offset: 0x00F97E54
+		// Token: 0x06035444 RID: 218180 RVA: 0x00EE0BF4 File Offset: 0x00EDEDF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040784 RID: 264068 RVA: 0x00F99FA0 File Offset: 0x00F981A0
+		// Token: 0x06035445 RID: 218181 RVA: 0x00EE0F40 File Offset: 0x00EDF140
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightLevelDetailView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040785 RID: 264069 RVA: 0x00F99FE4 File Offset: 0x00F981E4
+		// Token: 0x06035446 RID: 218182 RVA: 0x00EE0F84 File Offset: 0x00EDF184
 		protected override void OnHandleLoadScene()
 		{
 			MotorcycleUiModelUtil.Instance.CreateMotor(EUiModelUseWay.MotorTakeRole);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			MotorcycleUiModelUtil.Instance.LoadEquippedMotorAndRole(roleDataById.GetRoleId(), roleDataById.GetRoleSkinId(), null);
 		}
 
-		// Token: 0x06040786 RID: 264070 RVA: 0x00F9A044 File Offset: 0x00F98244
+		// Token: 0x06035447 RID: 218183 RVA: 0x00EE0FE4 File Offset: 0x00EDF1E4
 		protected override void OnBeforeShow()
 		{
 			MotorcycleUiModelUtil.Instance.ShowMotor(true);
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			item.SetUIActive(this.ViewModel.ActivityData.IsRoleHasRedDot());
 		}
 
-		// Token: 0x06040787 RID: 264071 RVA: 0x00F9A22C File Offset: 0x00F9842C
+		// Token: 0x06035448 RID: 218184 RVA: 0x00EE11CC File Offset: 0x00EDF3CC
 		private void RefreshRoleInfo()
 		{
 			int selectedRoleId = this.ViewModel.SelectedRoleId;
@@ -165,13 +165,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			MotorcycleUiModelUtil.Instance.RefreshRoleInMotor(roleDataById.GetRoleId(), roleDataById.GetRoleSkinId(), motorFightRoleData.AnimPath);
 		}
 
-		// Token: 0x06040788 RID: 264072 RVA: 0x00F9A2DB File Offset: 0x00F984DB
+		// Token: 0x06035449 RID: 218185 RVA: 0x00EE127B File Offset: 0x00EDF47B
 		protected override void OnHandleReleaseScene()
 		{
 			MotorcycleUiModelUtil.Instance.DestroyMotor();
 		}
 
-		// Token: 0x06040789 RID: 264073 RVA: 0x00F9A2E7 File Offset: 0x00F984E7
+		// Token: 0x0603544A RID: 218186 RVA: 0x00EE1287 File Offset: 0x00EDF487
 		private CommonItemSmallItemGrid CreateItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -180,35 +180,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x0604078A RID: 264074 RVA: 0x00F9A300 File Offset: 0x00F98500
+		// Token: 0x0603544B RID: 218187 RVA: 0x00EE12A0 File Offset: 0x00EDF4A0
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604078B RID: 264075 RVA: 0x00F9A309 File Offset: 0x00F98509
+		// Token: 0x0603544C RID: 218188 RVA: 0x00EE12A9 File Offset: 0x00EDF4A9
 		private void OnChangeRoleBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightRoleSelectView, this.ViewModel, null);
 		}
 
-		// Token: 0x0604078C RID: 264076 RVA: 0x00F9A321 File Offset: 0x00F98521
+		// Token: 0x0603544D RID: 218189 RVA: 0x00EE12C1 File Offset: 0x00EDF4C1
 		private void OnGotoBtnClick()
 		{
 			MotorFightController.Instance.EnterMotorFightDungeonDirectly(this.LevelData.Id, this.ViewModel.SelectedRoleId, false);
 		}
 
-		// Token: 0x04021844 RID: 137284
+		// Token: 0x0401C173 RID: 115059
 		private MotorFightLevelData LevelData;
 
-		// Token: 0x04021845 RID: 137285
+		// Token: 0x0401C174 RID: 115060
 		private MotorFightLevelDetailViewModel ViewModel;
 
-		// Token: 0x04021846 RID: 137286
+		// Token: 0x0401C175 RID: 115061
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021847 RID: 137287
+		// Token: 0x0401C176 RID: 115062
 		[Nullable(new byte[]
 		{
 			2,
@@ -216,71 +216,71 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0200C65E RID: 50782
+		// Token: 0x0200B045 RID: 45125
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BE22 RID: 245282
+			// Token: 0x0403677F RID: 223103
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BE23 RID: 245283
+			// Token: 0x04036780 RID: 223104
 			public const int TextRoleName = 1;
 
-			// Token: 0x0403BE24 RID: 245284
+			// Token: 0x04036781 RID: 223105
 			public const int TextBuffDesc = 2;
 
-			// Token: 0x0403BE25 RID: 245285
+			// Token: 0x04036782 RID: 223106
 			public const int BtnChangeRole = 3;
 
-			// Token: 0x0403BE26 RID: 245286
+			// Token: 0x04036783 RID: 223107
 			public const int TextureBg = 4;
 
-			// Token: 0x0403BE27 RID: 245287
+			// Token: 0x04036784 RID: 223108
 			public const int TextureInfoBg = 5;
 
-			// Token: 0x0403BE28 RID: 245288
+			// Token: 0x04036785 RID: 223109
 			public const int TextureTitleBg = 6;
 
-			// Token: 0x0403BE29 RID: 245289
+			// Token: 0x04036786 RID: 223110
 			public const int SpriteTitleLight = 7;
 
-			// Token: 0x0403BE2A RID: 245290
+			// Token: 0x04036787 RID: 223111
 			public const int TextLevelName = 8;
 
-			// Token: 0x0403BE2B RID: 245291
+			// Token: 0x04036788 RID: 223112
 			public const int ItemNumberPanel = 9;
 
-			// Token: 0x0403BE2C RID: 245292
+			// Token: 0x04036789 RID: 223113
 			public const int ArtNumber = 10;
 
-			// Token: 0x0403BE2D RID: 245293
+			// Token: 0x0403678A RID: 223114
 			public const int SpriteNumberBg = 11;
 
-			// Token: 0x0403BE2E RID: 245294
+			// Token: 0x0403678B RID: 223115
 			public const int SpriteEndlessIcon = 12;
 
-			// Token: 0x0403BE2F RID: 245295
+			// Token: 0x0403678C RID: 223116
 			public const int ItemRewardPanel = 13;
 
-			// Token: 0x0403BE30 RID: 245296
+			// Token: 0x0403678D RID: 223117
 			public const int TextLevelDesc = 14;
 
-			// Token: 0x0403BE31 RID: 245297
+			// Token: 0x0403678E RID: 223118
 			public const int LayoutReward = 15;
 
-			// Token: 0x0403BE32 RID: 245298
+			// Token: 0x0403678F RID: 223119
 			public const int ItemReward = 16;
 
-			// Token: 0x0403BE33 RID: 245299
+			// Token: 0x04036790 RID: 223120
 			public const int TextScore = 17;
 
-			// Token: 0x0403BE34 RID: 245300
+			// Token: 0x04036791 RID: 223121
 			public const int BtnGoto = 18;
 
-			// Token: 0x0403BE35 RID: 245301
+			// Token: 0x04036792 RID: 223122
 			public const int TextBuffName = 19;
 
-			// Token: 0x0403BE36 RID: 245302
+			// Token: 0x04036793 RID: 223123
 			public const int ItemChangeBtnRedDot = 20;
 		}
 	}

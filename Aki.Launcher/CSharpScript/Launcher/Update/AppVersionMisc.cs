@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x02000086 RID: 134
+	// Token: 0x02000089 RID: 137
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class AppVersionMisc
 	{
-		// Token: 0x060004C3 RID: 1219 RVA: 0x0002E3DC File Offset: 0x0002C5DC
+		// Token: 0x060004DA RID: 1242 RVA: 0x0002F944 File Offset: 0x0002DB44
 		public void Init(UObject worldContext)
 		{
 			this.PackageVersion = UKuroLauncherLibrary.GetAppVersion();
@@ -47,7 +47,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x060004C4 RID: 1220 RVA: 0x0002E55C File Offset: 0x0002C75C
+		// Token: 0x060004DB RID: 1243 RVA: 0x0002FAC4 File Offset: 0x0002DCC4
 		protected unsafe void SetVersions(string resVersion, string resSaveVersion, string latestVersion, Dictionary<string, string> sha1Map)
 		{
 			List<string> list = new List<string>(resVersion.Split(',', StringSplitOptions.None));
@@ -198,31 +198,31 @@ namespace CSharpScript.Launcher.Update
 			this.HasUpdatedResource = ((this.LatestVersion == this.PackageVersion) ? (!this.BasePackageNeedDownloadRes) : (this.LocalResourceVersion == this.LatestVersion));
 		}
 
-		// Token: 0x060004C5 RID: 1221 RVA: 0x0002EAA4 File Offset: 0x0002CCA4
+		// Token: 0x060004DC RID: 1244 RVA: 0x0003000C File Offset: 0x0002E20C
 		public bool NeedRevert()
 		{
 			return this.NeedRevertVersion;
 		}
 
-		// Token: 0x060004C6 RID: 1222 RVA: 0x0002EAAC File Offset: 0x0002CCAC
+		// Token: 0x060004DD RID: 1245 RVA: 0x00030014 File Offset: 0x0002E214
 		public HashSet<string> GetRevertVersions()
 		{
 			return this.RevertVersions;
 		}
 
-		// Token: 0x060004C7 RID: 1223 RVA: 0x0002EAB4 File Offset: 0x0002CCB4
+		// Token: 0x060004DE RID: 1246 RVA: 0x0003001C File Offset: 0x0002E21C
 		public bool HasNewResourceVersionBaseOnPackage()
 		{
 			return this.PackageVersion != this.LatestVersion;
 		}
 
-		// Token: 0x060004C8 RID: 1224 RVA: 0x0002EAC7 File Offset: 0x0002CCC7
+		// Token: 0x060004DF RID: 1247 RVA: 0x0003002F File Offset: 0x0002E22F
 		public bool IsBasePackageSplited()
 		{
 			return this.BasePackageNeedDownloadRes;
 		}
 
-		// Token: 0x060004C9 RID: 1225 RVA: 0x0002EACF File Offset: 0x0002CCCF
+		// Token: 0x060004E0 RID: 1248 RVA: 0x00030037 File Offset: 0x0002E237
 		public bool IsFirstUpdateResources()
 		{
 			if (!(this.LatestVersion == this.PackageVersion))
@@ -232,25 +232,25 @@ namespace CSharpScript.Launcher.Update
 			return this.BasePackageNeedDownloadRes;
 		}
 
-		// Token: 0x060004CA RID: 1226 RVA: 0x0002EAFC File Offset: 0x0002CCFC
+		// Token: 0x060004E1 RID: 1249 RVA: 0x00030064 File Offset: 0x0002E264
 		public virtual bool NeedCheckAppRestart()
 		{
 			return true;
 		}
 
-		// Token: 0x060004CB RID: 1227 RVA: 0x0002EAFF File Offset: 0x0002CCFF
+		// Token: 0x060004E2 RID: 1250 RVA: 0x00030067 File Offset: 0x0002E267
 		public bool HasUpdated()
 		{
 			return this.HasUpdatedResource;
 		}
 
-		// Token: 0x060004CC RID: 1228 RVA: 0x0002EB07 File Offset: 0x0002CD07
+		// Token: 0x060004E3 RID: 1251 RVA: 0x0003006F File Offset: 0x0002E26F
 		public string GetLatestVersion()
 		{
 			return this.LatestVersion;
 		}
 
-		// Token: 0x060004CD RID: 1229 RVA: 0x0002EB10 File Offset: 0x0002CD10
+		// Token: 0x060004E4 RID: 1252 RVA: 0x00030078 File Offset: 0x0002E278
 		public void UpdateVersion(UObject worldContext, bool bNewPackage = false)
 		{
 			if (bNewPackage)
@@ -272,7 +272,7 @@ namespace CSharpScript.Launcher.Update
 			LauncherStorageLib.Instance.SetDeviceSavedString(this.GetUpdateVersionKey(), value2);
 		}
 
-		// Token: 0x060004CE RID: 1230 RVA: 0x0002EBC8 File Offset: 0x0002CDC8
+		// Token: 0x060004E5 RID: 1253 RVA: 0x00030130 File Offset: 0x0002E330
 		public unsafe void UpdateSavedVersion(UObject worldContext, bool bNewPackage = false)
 		{
 			if (bNewPackage)
@@ -306,7 +306,7 @@ namespace CSharpScript.Launcher.Update
 			LauncherStorageLib.Instance.SetDeviceSavedString(this.GetSaveUpdateVersionKey(), text2);
 		}
 
-		// Token: 0x060004CF RID: 1231 RVA: 0x0002ED28 File Offset: 0x0002CF28
+		// Token: 0x060004E6 RID: 1254 RVA: 0x00030290 File Offset: 0x0002E490
 		public virtual void ClearAllPatchVersion(UObject worldContext)
 		{
 			LauncherStorageLib.Instance.DeleteDeviceSavedString(this.GetUpdateVersionKey());
@@ -317,26 +317,26 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x060004D0 RID: 1232 RVA: 0x0002ED7C File Offset: 0x0002CF7C
+		// Token: 0x060004E7 RID: 1255 RVA: 0x000302E4 File Offset: 0x0002E4E4
 		public List<PatchFileInfo> ReadPatchFileInfoList()
 		{
 			AppPathMisc pathMisc = new AppPathMisc();
 			return ResourceUpdate.ReadPatchInfoList(this.GetIndexSavePaths(pathMisc), this.UpdatePreVersionNodes, this, pathMisc).Item2;
 		}
 
-		// Token: 0x060004D1 RID: 1233 RVA: 0x0002EDA8 File Offset: 0x0002CFA8
+		// Token: 0x060004E8 RID: 1256 RVA: 0x00030310 File Offset: 0x0002E510
 		public string GetPackageVersion()
 		{
 			return this.PackageVersion;
 		}
 
-		// Token: 0x060004D2 RID: 1234 RVA: 0x0002EDB0 File Offset: 0x0002CFB0
+		// Token: 0x060004E9 RID: 1257 RVA: 0x00030318 File Offset: 0x0002E518
 		public List<string> GetIndexSha1s()
 		{
 			return this.IndexSha1s;
 		}
 
-		// Token: 0x060004D3 RID: 1235 RVA: 0x0002EDB8 File Offset: 0x0002CFB8
+		// Token: 0x060004EA RID: 1258 RVA: 0x00030320 File Offset: 0x0002E520
 		public List<string> GetIndexSavePaths(AppPathMisc pathMisc)
 		{
 			List<string> list = new List<string>();
@@ -355,13 +355,13 @@ namespace CSharpScript.Launcher.Update
 			return list;
 		}
 
-		// Token: 0x060004D4 RID: 1236 RVA: 0x0002EE68 File Offset: 0x0002D068
+		// Token: 0x060004EB RID: 1259 RVA: 0x000303D0 File Offset: 0x0002E5D0
 		public List<string> GetUpdatePreVersions()
 		{
 			return this.UpdatePreVersionNodes;
 		}
 
-		// Token: 0x060004D5 RID: 1237 RVA: 0x0002EE70 File Offset: 0x0002D070
+		// Token: 0x060004EC RID: 1260 RVA: 0x000303D8 File Offset: 0x0002E5D8
 		public List<string> GetIndexFileNames()
 		{
 			List<string> list = new List<string>();
@@ -372,7 +372,7 @@ namespace CSharpScript.Launcher.Update
 			return list;
 		}
 
-		// Token: 0x060004D6 RID: 1238 RVA: 0x0002EEDC File Offset: 0x0002D0DC
+		// Token: 0x060004ED RID: 1261 RVA: 0x00030444 File Offset: 0x0002E644
 		public string GetMountFilePath()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 3);
@@ -384,34 +384,34 @@ namespace CSharpScript.Launcher.Update
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060004D7 RID: 1239
+		// Token: 0x060004EE RID: 1262
 		protected abstract string GetMountFileName();
 
-		// Token: 0x060004D8 RID: 1240
+		// Token: 0x060004EF RID: 1263
 		public abstract string GetResType();
 
-		// Token: 0x060004D9 RID: 1241
+		// Token: 0x060004F0 RID: 1264
 		protected abstract string GetUpdateVersionKey();
 
-		// Token: 0x060004DA RID: 1242
+		// Token: 0x060004F1 RID: 1265
 		protected abstract string GetSaveUpdateVersionKey();
 
-		// Token: 0x060004DB RID: 1243
+		// Token: 0x060004F2 RID: 1266
 		protected abstract string GetIndexFilePrefix();
 
-		// Token: 0x060004DC RID: 1244
+		// Token: 0x060004F3 RID: 1267
 		protected abstract string GetRemoteVersion();
 
-		// Token: 0x060004DD RID: 1245
+		// Token: 0x060004F4 RID: 1268
 		protected abstract Dictionary<string, string> GetRemoteSha1Map();
 
-		// Token: 0x040002D1 RID: 721
+		// Token: 0x040002FF RID: 767
 		protected string PackageVersion = "";
 
-		// Token: 0x040002D2 RID: 722
+		// Token: 0x04000300 RID: 768
 		protected string LocalResourceVersion = "";
 
-		// Token: 0x040002D3 RID: 723
+		// Token: 0x04000301 RID: 769
 		[Nullable(new byte[]
 		{
 			2,
@@ -419,10 +419,10 @@ namespace CSharpScript.Launcher.Update
 		})]
 		protected List<string> LocalResourceVersions;
 
-		// Token: 0x040002D4 RID: 724
+		// Token: 0x04000302 RID: 770
 		protected string LocalSaveResourceVersion = "";
 
-		// Token: 0x040002D5 RID: 725
+		// Token: 0x04000303 RID: 771
 		[Nullable(new byte[]
 		{
 			2,
@@ -430,13 +430,13 @@ namespace CSharpScript.Launcher.Update
 		})]
 		protected List<string> LocalSaveResourceVersions;
 
-		// Token: 0x040002D6 RID: 726
+		// Token: 0x04000304 RID: 772
 		protected string LatestVersion = "";
 
-		// Token: 0x040002D7 RID: 727
+		// Token: 0x04000305 RID: 773
 		protected bool HasUpdatedResource;
 
-		// Token: 0x040002D8 RID: 728
+		// Token: 0x04000306 RID: 774
 		[Nullable(new byte[]
 		{
 			2,
@@ -444,7 +444,7 @@ namespace CSharpScript.Launcher.Update
 		})]
 		protected List<string> IndexSha1s;
 
-		// Token: 0x040002D9 RID: 729
+		// Token: 0x04000307 RID: 775
 		[Nullable(new byte[]
 		{
 			2,
@@ -452,7 +452,7 @@ namespace CSharpScript.Launcher.Update
 		})]
 		protected List<string> UpdateVersionNodes;
 
-		// Token: 0x040002DA RID: 730
+		// Token: 0x04000308 RID: 776
 		[Nullable(new byte[]
 		{
 			2,
@@ -460,13 +460,13 @@ namespace CSharpScript.Launcher.Update
 		})]
 		protected List<string> UpdatePreVersionNodes;
 
-		// Token: 0x040002DB RID: 731
+		// Token: 0x04000309 RID: 777
 		private bool BasePackageNeedDownloadRes;
 
-		// Token: 0x040002DC RID: 732
+		// Token: 0x0400030A RID: 778
 		private bool NeedRevertVersion;
 
-		// Token: 0x040002DD RID: 733
+		// Token: 0x0400030B RID: 779
 		private readonly HashSet<string> RevertVersions = new HashSet<string>();
 	}
 }

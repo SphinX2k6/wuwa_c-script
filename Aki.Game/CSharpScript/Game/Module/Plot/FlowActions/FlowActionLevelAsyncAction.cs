@@ -6,10 +6,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C0 RID: 20672
+	// Token: 0x02004090 RID: 16528
 	public class FlowActionLevelAsyncAction : FlowActionBase
 	{
-		// Token: 0x06034EEB RID: 216811 RVA: 0x00C89998 File Offset: 0x00C87B98
+		// Token: 0x06029DE4 RID: 171492 RVA: 0x00BD6C80 File Offset: 0x00BD4E80
 		protected unsafe override void OnExecute()
 		{
 			this.IncId++;
@@ -34,26 +34,26 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			});
 		}
 
-		// Token: 0x06034EEC RID: 216812 RVA: 0x00C89A3D File Offset: 0x00C87C3D
+		// Token: 0x06029DE5 RID: 171493 RVA: 0x00BD6D25 File Offset: 0x00BD4F25
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034EED RID: 216813 RVA: 0x00C89A45 File Offset: 0x00C87C45
+		// Token: 0x06029DE6 RID: 171494 RVA: 0x00BD6D2D File Offset: 0x00BD4F2D
 		protected override void OnInterruptExecute()
 		{
 			this.IncId++;
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EEE RID: 216814 RVA: 0x00C89A5D File Offset: 0x00C87C5D
+		// Token: 0x06029DE7 RID: 171495 RVA: 0x00BD6D45 File Offset: 0x00BD4F45
 		protected virtual void OnActionFinish(bool result)
 		{
 			base.FinishExecute(result, true);
 		}
 
-		// Token: 0x0401C308 RID: 115464
+		// Token: 0x04016D39 RID: 93497
 		private int IncId;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000799 RID: 1945
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200083A RID: 2106
 	public class ITrafficBulletLogic : ICustomBulletLogic
 	{
-		// Token: 0x06002A28 RID: 10792 RVA: 0x0006EC54 File Offset: 0x0006CE54
+		// Token: 0x06002D50 RID: 11600 RVA: 0x00075EFC File Offset: 0x000740FC
 		private ITrafficBulletLogic_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A29 RID: 10793 RVA: 0x0006EC8C File Offset: 0x0006CE8C
+		// Token: 0x06002D51 RID: 11601 RVA: 0x00075F34 File Offset: 0x00074134
 		public static ITrafficBulletLogic Create([Nullable(2)] ITrafficBulletLogic instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A2A RID: 10794 RVA: 0x0006EC9F File Offset: 0x0006CE9F
+		// Token: 0x06002D52 RID: 11602 RVA: 0x00075F47 File Offset: 0x00074147
 		public static ITrafficBulletLogic CreateFromSetValue([Nullable(2)] ITrafficBulletLogic_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A2B RID: 10795 RVA: 0x0006ECB2 File Offset: 0x0006CEB2
+		// Token: 0x06002D53 RID: 11603 RVA: 0x00075F5A File Offset: 0x0007415A
 		public new ITrafficBulletLogic_SetValue ToSetValue()
 		{
 			return new ITrafficBulletLogic_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B10 RID: 2832
-		// (get) Token: 0x06002A2C RID: 10796 RVA: 0x0006ECD1 File Offset: 0x0006CED1
-		// (set) Token: 0x06002A2D RID: 10797 RVA: 0x0006ECFC File Offset: 0x0006CEFC
+		// Token: 0x17000BD2 RID: 3026
+		// (get) Token: 0x06002D54 RID: 11604 RVA: 0x00075F79 File Offset: 0x00074179
+		// (set) Token: 0x06002D55 RID: 11605 RVA: 0x00075FA4 File Offset: 0x000741A4
 		public override ECustomBulletLogic Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B11 RID: 2833
-		// (get) Token: 0x06002A2E RID: 10798 RVA: 0x0006ED0A File Offset: 0x0006CF0A
-		// (set) Token: 0x06002A2F RID: 10799 RVA: 0x0006ED39 File Offset: 0x0006CF39
+		// Token: 0x17000BD3 RID: 3027
+		// (get) Token: 0x06002D56 RID: 11606 RVA: 0x00075FB2 File Offset: 0x000741B2
+		// (set) Token: 0x06002D57 RID: 11607 RVA: 0x00075FE1 File Offset: 0x000741E1
 		public virtual float MinSpeed
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C31 RID: 7217
+		// Token: 0x04001E3A RID: 7738
 		[Nullable(2)]
 		protected new ITrafficBulletLogic FbInstance;
 
-		// Token: 0x04001C32 RID: 7218
+		// Token: 0x04001E3B RID: 7739
 		[Nullable(2)]
 		protected new ITrafficBulletLogic_SetValue PocoInterface;
 	}

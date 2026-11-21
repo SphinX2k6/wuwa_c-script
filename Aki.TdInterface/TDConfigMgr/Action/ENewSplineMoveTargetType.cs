@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001652 RID: 5714
+	// Token: 0x020017BF RID: 6079
 	[EnumExtensions]
 	public enum ENewSplineMoveTargetType
 	{
-		// Token: 0x04004C89 RID: 19593
+		// Token: 0x0400507D RID: 20605
 		Player,
-		// Token: 0x04004C8A RID: 19594
+		// Token: 0x0400507E RID: 20606
 		Npc,
-		// Token: 0x04004C8B RID: 19595
+		// Token: 0x0400507F RID: 20607
 		SceneItem,
-		// Token: 0x04004C8C RID: 19596
+		// Token: 0x04005080 RID: 20608
 		Vehicle
 	}
 }

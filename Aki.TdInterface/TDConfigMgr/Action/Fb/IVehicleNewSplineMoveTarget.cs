@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200272A RID: 10026
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029F4 RID: 10740
 	public class IVehicleNewSplineMoveTarget : INewSplineMoveTarget
 	{
-		// Token: 0x0600DF91 RID: 57233 RVA: 0x0021203E File Offset: 0x0021023E
+		// Token: 0x0600ED89 RID: 60809 RVA: 0x0022EACE File Offset: 0x0022CCCE
 		public static IVehicleNewSplineMoveTarget Create(IVehicleNewSplineMoveTarget? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042FF RID: 17151
-		// (get) Token: 0x0600DF92 RID: 57234 RVA: 0x0021205D File Offset: 0x0021025D
+		// Token: 0x1700464F RID: 17999
+		// (get) Token: 0x0600ED8A RID: 60810 RVA: 0x0022EAED File Offset: 0x0022CCED
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004300 RID: 17152
-		// (get) Token: 0x0600DF93 RID: 57235 RVA: 0x0021206A File Offset: 0x0021026A
+		// Token: 0x17004650 RID: 18000
+		// (get) Token: 0x0600ED8B RID: 60811 RVA: 0x0022EAFA File Offset: 0x0022CCFA
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004301 RID: 17153
-		// (get) Token: 0x0600DF94 RID: 57236 RVA: 0x0021209C File Offset: 0x0021029C
+		// Token: 0x17004651 RID: 18001
+		// (get) Token: 0x0600ED8C RID: 60812 RVA: 0x0022EB2C File Offset: 0x0022CD2C
 		public virtual bool? IsLookDir
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C12 RID: 31762
+		// Token: 0x040082BC RID: 33468
 		private IVehicleNewSplineMoveTarget Instance;
 
-		// Token: 0x04007C13 RID: 31763
+		// Token: 0x040082BD RID: 33469
 		private ITargetVehicle _TargetVehicleCache;
 
-		// Token: 0x04007C14 RID: 31764
+		// Token: 0x040082BE RID: 33470
 		private bool _TargetVehicleInited;
 	}
 }

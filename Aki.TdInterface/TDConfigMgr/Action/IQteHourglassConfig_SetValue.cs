@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D7D RID: 7549
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F8E RID: 8078
 	public class IQteHourglassConfig_SetValue
 	{
-		// Token: 0x04006148 RID: 24904
+		// Token: 0x040066C4 RID: 26308
 		public int QteId;
 
-		// Token: 0x04006149 RID: 24905
+		// Token: 0x040066C5 RID: 26309
 		public float TrailTime;
 
-		// Token: 0x0400614A RID: 24906
+		// Token: 0x040066C6 RID: 26310
 		public string TrailCurveX;
 
-		// Token: 0x0400614B RID: 24907
+		// Token: 0x040066C7 RID: 26311
 		public string TrailCurveY;
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x02001CFD RID: 7421
+// Token: 0x020011BF RID: 4543
 public interface IPinballBattleLevelStartTipsParam : IPinballBattleTipsBaseParam
 {
-	// Token: 0x1700120C RID: 4620
-	// (get) Token: 0x0600E0A8 RID: 57512
+	// Token: 0x17001236 RID: 4662
+	// (get) Token: 0x0600B4C5 RID: 46277
 	int CurWave { get; }
 
-	// Token: 0x1700120D RID: 4621
-	// (get) Token: 0x0600E0A9 RID: 57513
+	// Token: 0x17001237 RID: 4663
+	// (get) Token: 0x0600B4C6 RID: 46278
 	int MaxWave { get; }
 }

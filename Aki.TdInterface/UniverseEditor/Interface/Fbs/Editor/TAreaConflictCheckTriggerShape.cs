@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048E0 RID: 18656
+	// Token: 0x02004D45 RID: 19781
 	public enum TAreaConflictCheckTriggerShape : byte
 	{
-		// Token: 0x0400CEEB RID: 52971
+		// Token: 0x0400D924 RID: 55588
 		NONE,
-		// Token: 0x0400CEEC RID: 52972
+		// Token: 0x0400D925 RID: 55589
 		Aki_UniverseEditor_Interface_Fbs_Shape_IBoxTriggerShape,
-		// Token: 0x0400CEED RID: 52973
+		// Token: 0x0400D926 RID: 55590
 		Aki_UniverseEditor_Interface_Fbs_Shape_ICylinderTriggerShape,
-		// Token: 0x0400CEEE RID: 52974
+		// Token: 0x0400D927 RID: 55591
 		Aki_UniverseEditor_Interface_Fbs_Shape_ISphereTriggerShape
 	}
 }

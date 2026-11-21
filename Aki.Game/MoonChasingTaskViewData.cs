@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001367 RID: 4967
+// Token: 0x0200081B RID: 2075
 public class MoonChasingTaskViewData
 {
-	// Token: 0x06008A7E RID: 35454 RVA: 0x001D98C0 File Offset: 0x001D7AC0
+	// Token: 0x06005E19 RID: 24089 RVA: 0x001E271C File Offset: 0x001E091C
 	public MoonChasingTaskViewData(EMoonChasingTaskType taskType, int taskId, bool isLastTask)
 	{
 		this.TaskType = taskType;
@@ -11,12 +11,12 @@ public class MoonChasingTaskViewData
 		this.IsLastTask = isLastTask;
 	}
 
-	// Token: 0x04003DB1 RID: 15793
+	// Token: 0x04003E49 RID: 15945
 	public EMoonChasingTaskType TaskType = EMoonChasingTaskType.MainLine;
 
-	// Token: 0x04003DB2 RID: 15794
+	// Token: 0x04003E4A RID: 15946
 	public int TargetTaskId;
 
-	// Token: 0x04003DB3 RID: 15795
+	// Token: 0x04003E4B RID: 15947
 	public bool IsLastTask;
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004DF RID: 1247
+	// Token: 0x020004F5 RID: 1269
 	public class ConfigLinkParamById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D45 RID: 7493 RVA: 0x000FEAE8 File Offset: 0x000FCCE8
+		// Token: 0x06001DC9 RID: 7625 RVA: 0x0010523C File Offset: 0x0010343C
 		static ConfigLinkParamById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLinkParamById.CreateStaticDefaultValue), new Action(ConfigLinkParamById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D46 RID: 7494 RVA: 0x000FEB08 File Offset: 0x000FCD08
+		// Token: 0x06001DCA RID: 7626 RVA: 0x0010525C File Offset: 0x0010345C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLinkParamById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D47 RID: 7495 RVA: 0x000FEB87 File Offset: 0x000FCD87
+		// Token: 0x06001DCB RID: 7627 RVA: 0x001052DB File Offset: 0x001034DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLinkParamById.LogPair = null;
 			ConfigLinkParamById.HandleId = 0;
 		}
 
-		// Token: 0x06001D48 RID: 7496 RVA: 0x000FEB95 File Offset: 0x000FCD95
+		// Token: 0x06001DCC RID: 7628 RVA: 0x001052E9 File Offset: 0x001034E9
 		public static void Init()
 		{
 			ConfigLinkParamById.HandleId = ConfigCommon.InitDataStatement(ConfigLinkParamById.HandleId, "db_link.db", "select BinData from `LinkParam` where Id=?");
 		}
 
-		// Token: 0x06001D49 RID: 7497 RVA: 0x000FEBB0 File Offset: 0x000FCDB0
+		// Token: 0x06001DCD RID: 7629 RVA: 0x00105304 File Offset: 0x00103504
 		public static LinkParam? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLinkParamById.HandleId, ConfigLinkParamById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LinkParam?(rootAsLinkParam);
 		}
 
-		// Token: 0x040021FD RID: 8701
+		// Token: 0x04002297 RID: 8855
 		private const string DB = "db_link.db";
 
-		// Token: 0x040021FE RID: 8702
+		// Token: 0x04002298 RID: 8856
 		private const string FILE = "l.Link功能.xlsx";
 
-		// Token: 0x040021FF RID: 8703
+		// Token: 0x04002299 RID: 8857
 		private const string TABLE = "LinkParam";
 
-		// Token: 0x04002200 RID: 8704
+		// Token: 0x0400229A RID: 8858
 		private const string COMMAND = "select BinData from `LinkParam` where Id=?";
 
-		// Token: 0x04002201 RID: 8705
+		// Token: 0x0400229B RID: 8859
 		private const string KEY_PREFIX = "LinkParamById";
 
-		// Token: 0x04002202 RID: 8706
+		// Token: 0x0400229C RID: 8860
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002203 RID: 8707
+		// Token: 0x0400229D RID: 8861
 		private static int HandleId;
 	}
 }

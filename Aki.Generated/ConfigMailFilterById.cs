@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000501 RID: 1281
+	// Token: 0x02000517 RID: 1303
 	public class ConfigMailFilterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E11 RID: 7697 RVA: 0x00103277 File Offset: 0x00101477
+		// Token: 0x06001E95 RID: 7829 RVA: 0x001099CB File Offset: 0x00107BCB
 		static ConfigMailFilterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMailFilterById.CreateStaticDefaultValue), new Action(ConfigMailFilterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E12 RID: 7698 RVA: 0x00103298 File Offset: 0x00101498
+		// Token: 0x06001E96 RID: 7830 RVA: 0x001099EC File Offset: 0x00107BEC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMailFilterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E13 RID: 7699 RVA: 0x00103317 File Offset: 0x00101517
+		// Token: 0x06001E97 RID: 7831 RVA: 0x00109A6B File Offset: 0x00107C6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMailFilterById.LogPair = null;
 			ConfigMailFilterById.HandleId = 0;
 		}
 
-		// Token: 0x06001E14 RID: 7700 RVA: 0x00103325 File Offset: 0x00101525
+		// Token: 0x06001E98 RID: 7832 RVA: 0x00109A79 File Offset: 0x00107C79
 		public static void Init()
 		{
 			ConfigMailFilterById.HandleId = ConfigCommon.InitDataStatement(ConfigMailFilterById.HandleId, "db_mail.db", "select BinData from `MailFilter` where Id=?");
 		}
 
-		// Token: 0x06001E15 RID: 7701 RVA: 0x00103340 File Offset: 0x00101540
+		// Token: 0x06001E99 RID: 7833 RVA: 0x00109A94 File Offset: 0x00107C94
 		public static MailFilter? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMailFilterById.HandleId, ConfigMailFilterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MailFilter?(rootAsMailFilter);
 		}
 
-		// Token: 0x040022EB RID: 8939
+		// Token: 0x04002385 RID: 9093
 		private const string DB = "db_mail.db";
 
-		// Token: 0x040022EC RID: 8940
+		// Token: 0x04002386 RID: 9094
 		private const string FILE = "y.邮件.xlsx";
 
-		// Token: 0x040022ED RID: 8941
+		// Token: 0x04002387 RID: 9095
 		private const string TABLE = "MailFilter";
 
-		// Token: 0x040022EE RID: 8942
+		// Token: 0x04002388 RID: 9096
 		private const string COMMAND = "select BinData from `MailFilter` where Id=?";
 
-		// Token: 0x040022EF RID: 8943
+		// Token: 0x04002389 RID: 9097
 		private const string KEY_PREFIX = "MailFilterById";
 
-		// Token: 0x040022F0 RID: 8944
+		// Token: 0x0400238A RID: 9098
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040022F1 RID: 8945
+		// Token: 0x0400238B RID: 9099
 		private static int HandleId;
 	}
 }

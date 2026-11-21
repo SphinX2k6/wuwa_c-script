@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008AC RID: 2220
+	// Token: 0x020008C8 RID: 2248
 	public class ConfigRoleInfluenceAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600341B RID: 13339 RVA: 0x0017FCF9 File Offset: 0x0017DEF9
+		// Token: 0x060034C3 RID: 13507 RVA: 0x00186FE1 File Offset: 0x001851E1
 		static ConfigRoleInfluenceAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleInfluenceAll.CreateStaticDefaultValue), new Action(ConfigRoleInfluenceAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600341C RID: 13340 RVA: 0x0017FD18 File Offset: 0x0017DF18
+		// Token: 0x060034C4 RID: 13508 RVA: 0x00187000 File Offset: 0x00185200
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleInfluenceAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600341D RID: 13341 RVA: 0x0017FD97 File Offset: 0x0017DF97
+		// Token: 0x060034C5 RID: 13509 RVA: 0x0018707F File Offset: 0x0018527F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleInfluenceAll.LogPair = null;
 			ConfigRoleInfluenceAll.HandleId = 0;
 		}
 
-		// Token: 0x0600341E RID: 13342 RVA: 0x0017FDA5 File Offset: 0x0017DFA5
+		// Token: 0x060034C6 RID: 13510 RVA: 0x0018708D File Offset: 0x0018528D
 		public static void Init()
 		{
 			ConfigRoleInfluenceAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleInfluenceAll.HandleId, "db_roleinfluence.db", "select BinData from `RoleInfluence`");
 		}
 
-		// Token: 0x0600341F RID: 13343 RVA: 0x0017FDC0 File Offset: 0x0017DFC0
+		// Token: 0x060034C7 RID: 13511 RVA: 0x001870A8 File Offset: 0x001852A8
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleInfluence> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003C9A RID: 15514
+		// Token: 0x04003D5E RID: 15710
 		private const string DB = "db_roleinfluence.db";
 
-		// Token: 0x04003C9B RID: 15515
+		// Token: 0x04003D5F RID: 15711
 		private const string FILE = "j.角色势力.xlsx";
 
-		// Token: 0x04003C9C RID: 15516
+		// Token: 0x04003D60 RID: 15712
 		private const string TABLE = "RoleInfluence";
 
-		// Token: 0x04003C9D RID: 15517
+		// Token: 0x04003D61 RID: 15713
 		private const string COMMAND = "select BinData from `RoleInfluence`";
 
-		// Token: 0x04003C9E RID: 15518
+		// Token: 0x04003D62 RID: 15714
 		private const string KEY_PREFIX = "RoleInfluenceAll";
 
-		// Token: 0x04003C9F RID: 15519
+		// Token: 0x04003D63 RID: 15715
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003CA0 RID: 15520
+		// Token: 0x04003D64 RID: 15716
 		private static int HandleId;
 	}
 }

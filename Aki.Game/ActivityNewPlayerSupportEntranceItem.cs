@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020013B9 RID: 5049
+// Token: 0x0200086D RID: 2157
 public class ActivityNewPlayerSupportEntranceItem : UiPanelBase
 {
-	// Token: 0x06008E6F RID: 36463 RVA: 0x001EBBA4 File Offset: 0x001E9DA4
+	// Token: 0x06006204 RID: 25092 RVA: 0x001F46C4 File Offset: 0x001F28C4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class ActivityNewPlayerSupportEntranceItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008E70 RID: 36464 RVA: 0x001EBC21 File Offset: 0x001E9E21
+	// Token: 0x06006205 RID: 25093 RVA: 0x001F4741 File Offset: 0x001F2941
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RedDotName != null)
@@ -32,21 +32,21 @@ public class ActivityNewPlayerSupportEntranceItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008E71 RID: 36465 RVA: 0x001EBC59 File Offset: 0x001E9E59
+	// Token: 0x06006206 RID: 25094 RVA: 0x001F4779 File Offset: 0x001F2979
 	[NullableContext(1)]
 	public void SetEntranceFunc(Action func)
 	{
 		this.EntranceFunc = func;
 	}
 
-	// Token: 0x06008E72 RID: 36466 RVA: 0x001EBC62 File Offset: 0x001E9E62
+	// Token: 0x06006207 RID: 25095 RVA: 0x001F4782 File Offset: 0x001F2982
 	public void BindRedDot(ERedDotName redDotName)
 	{
 		this.RedDotName = new ERedDotName?(redDotName);
 		RedDotController.Instance.BindRedDot(redDotName, base.GetItem(2), null, 0);
 	}
 
-	// Token: 0x06008E73 RID: 36467 RVA: 0x001EBC84 File Offset: 0x001E9E84
+	// Token: 0x06006208 RID: 25096 RVA: 0x001F47A4 File Offset: 0x001F29A4
 	private void OnEntranceBtnClick()
 	{
 		Action entranceFunc = this.EntranceFunc;
@@ -57,23 +57,23 @@ public class ActivityNewPlayerSupportEntranceItem : UiPanelBase
 		entranceFunc();
 	}
 
-	// Token: 0x04003F0C RID: 16140
+	// Token: 0x04003FA4 RID: 16292
 	[Nullable(2)]
 	private Action EntranceFunc;
 
-	// Token: 0x04003F0D RID: 16141
+	// Token: 0x04003FA5 RID: 16293
 	private ERedDotName? RedDotName;
 
-	// Token: 0x02007A30 RID: 31280
+	// Token: 0x02006BB6 RID: 27574
 	private static class EEntranceComponentType
 	{
-		// Token: 0x04028384 RID: 164740
+		// Token: 0x040236A1 RID: 145057
 		public const int EntranceBtn = 0;
 
-		// Token: 0x04028385 RID: 164741
+		// Token: 0x040236A2 RID: 145058
 		public const int EntranceText = 1;
 
-		// Token: 0x04028386 RID: 164742
+		// Token: 0x040236A3 RID: 145059
 		public const int RedDotItem = 2;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054CD RID: 21709
+	// Token: 0x02005A53 RID: 23123
 	public struct ILevelAiCycleModeType : IFlatbufferObject
 	{
-		// Token: 0x17009FFA RID: 40954
-		// (get) Token: 0x06023C72 RID: 146546 RVA: 0x004F236E File Offset: 0x004F056E
+		// Token: 0x1700A834 RID: 43060
+		// (get) Token: 0x06025D2A RID: 154922 RVA: 0x0052F3E2 File Offset: 0x0052D5E2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023C73 RID: 146547 RVA: 0x004F237B File Offset: 0x004F057B
+		// Token: 0x06025D2B RID: 154923 RVA: 0x0052F3EF File Offset: 0x0052D5EF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023C74 RID: 146548 RVA: 0x004F2384 File Offset: 0x004F0584
+		// Token: 0x06025D2C RID: 154924 RVA: 0x0052F3F8 File Offset: 0x0052D5F8
 		public static ILevelAiCycleModeType GetRootAsILevelAiCycleModeType(ByteBuffer _bb)
 		{
 			return ILevelAiCycleModeType.GetRootAsILevelAiCycleModeType(_bb, default(ILevelAiCycleModeType));
 		}
 
-		// Token: 0x06023C75 RID: 146549 RVA: 0x004F23A0 File Offset: 0x004F05A0
+		// Token: 0x06025D2D RID: 154925 RVA: 0x0052F414 File Offset: 0x0052D614
 		public static ILevelAiCycleModeType GetRootAsILevelAiCycleModeType(ByteBuffer _bb, ILevelAiCycleModeType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023C76 RID: 146550 RVA: 0x004F23BD File Offset: 0x004F05BD
+		// Token: 0x06025D2E RID: 154926 RVA: 0x0052F431 File Offset: 0x0052D631
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023C77 RID: 146551 RVA: 0x004F23CC File Offset: 0x004F05CC
+		// Token: 0x06025D2F RID: 154927 RVA: 0x0052F440 File Offset: 0x0052D640
 		public ILevelAiCycleModeType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009FFB RID: 40955
-		// (get) Token: 0x06023C78 RID: 146552 RVA: 0x004F23DC File Offset: 0x004F05DC
+		// Token: 0x1700A835 RID: 43061
+		// (get) Token: 0x06025D30 RID: 154928 RVA: 0x0052F450 File Offset: 0x0052D650
 		public ELevelAiCycleMode Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023C79 RID: 146553 RVA: 0x004F2418 File Offset: 0x004F0618
+		// Token: 0x06025D31 RID: 154929 RVA: 0x0052F48C File Offset: 0x0052D68C
 		public static Offset<ILevelAiCycleModeType> CreateILevelAiCycleModeType(FlatBufferBuilder builder, ELevelAiCycleMode Type = ELevelAiCycleMode.Loop)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAiCycleModeType.EndILevelAiCycleModeType(builder);
 		}
 
-		// Token: 0x06023C7A RID: 146554 RVA: 0x004F242E File Offset: 0x004F062E
+		// Token: 0x06025D32 RID: 154930 RVA: 0x0052F4A2 File Offset: 0x0052D6A2
 		public static void StartILevelAiCycleModeType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06023C7B RID: 146555 RVA: 0x004F2437 File Offset: 0x004F0637
+		// Token: 0x06025D33 RID: 154931 RVA: 0x0052F4AB File Offset: 0x0052D6AB
 		public static void AddType(FlatBufferBuilder builder, ELevelAiCycleMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023C7C RID: 146556 RVA: 0x004F2442 File Offset: 0x004F0642
+		// Token: 0x06025D34 RID: 154932 RVA: 0x0052F4B6 File Offset: 0x0052D6B6
 		public static Offset<ILevelAiCycleModeType> EndILevelAiCycleModeType(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelAiCycleModeType>(builder.EndTable());
 		}
 
-		// Token: 0x06023C7D RID: 146557 RVA: 0x004F2450 File Offset: 0x004F0650
+		// Token: 0x06025D35 RID: 154933 RVA: 0x0052F4C4 File Offset: 0x0052D6C4
 		public ILevelAiCycleModeTypeT UnPack()
 		{
 			ILevelAiCycleModeTypeT levelAiCycleModeTypeT = new ILevelAiCycleModeTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelAiCycleModeTypeT;
 		}
 
-		// Token: 0x06023C7E RID: 146558 RVA: 0x004F246B File Offset: 0x004F066B
+		// Token: 0x06025D36 RID: 154934 RVA: 0x0052F4DF File Offset: 0x0052D6DF
 		public void UnPackTo(ILevelAiCycleModeTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06023C7F RID: 146559 RVA: 0x004F247C File Offset: 0x004F067C
+		// Token: 0x06025D37 RID: 154935 RVA: 0x0052F4F0 File Offset: 0x0052D6F0
 		public static Offset<ILevelAiCycleModeType> Pack(FlatBufferBuilder builder, ILevelAiCycleModeTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAiCycleModeType.CreateILevelAiCycleModeType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E78B RID: 59275
+		// Token: 0x0400F3BC RID: 62396
 		private Table __p;
 	}
 }

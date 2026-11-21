@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AAC RID: 19116
+	// Token: 0x02004F7B RID: 20347
 	public class ICheckItemsT
 	{
-		// Token: 0x17008A8F RID: 35471
-		// (get) Token: 0x0601E00C RID: 122892 RVA: 0x004362CD File Offset: 0x004344CD
-		// (set) Token: 0x0601E00D RID: 122893 RVA: 0x004362D5 File Offset: 0x004344D5
+		// Token: 0x1700917C RID: 37244
+		// (get) Token: 0x0601FAF5 RID: 129781 RVA: 0x00467AED File Offset: 0x00465CED
+		// (set) Token: 0x0601FAF6 RID: 129782 RVA: 0x00467AF5 File Offset: 0x00465CF5
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A90 RID: 35472
-		// (get) Token: 0x0601E00E RID: 122894 RVA: 0x004362DE File Offset: 0x004344DE
-		// (set) Token: 0x0601E00F RID: 122895 RVA: 0x004362E6 File Offset: 0x004344E6
+		// Token: 0x1700917D RID: 37245
+		// (get) Token: 0x0601FAF7 RID: 129783 RVA: 0x00467AFE File Offset: 0x00465CFE
+		// (set) Token: 0x0601FAF8 RID: 129784 RVA: 0x00467B06 File Offset: 0x00465D06
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008A91 RID: 35473
-		// (get) Token: 0x0601E010 RID: 122896 RVA: 0x004362EF File Offset: 0x004344EF
-		// (set) Token: 0x0601E011 RID: 122897 RVA: 0x004362F7 File Offset: 0x004344F7
+		// Token: 0x1700917E RID: 37246
+		// (get) Token: 0x0601FAF9 RID: 129785 RVA: 0x00467B0F File Offset: 0x00465D0F
+		// (set) Token: 0x0601FAFA RID: 129786 RVA: 0x00467B17 File Offset: 0x00465D17
 		public List<IItemConfigT> Items { get; set; }
 
-		// Token: 0x0601E012 RID: 122898 RVA: 0x00436300 File Offset: 0x00434500
+		// Token: 0x0601FAFB RID: 129787 RVA: 0x00467B20 File Offset: 0x00465D20
 		public ICheckItemsT()
 		{
 			this.Type = ECondition.CompareVar;

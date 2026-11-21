@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EDB RID: 3803
+	// Token: 0x02000FF1 RID: 4081
 	public class IBindCrossSceneSyncKillMonster_SetValue
 	{
-		// Token: 0x040032D3 RID: 13011
-		[Nullable(1)]
+		// Token: 0x040035E0 RID: 13792
 		public List<int> EntityBundleIds;
 	}
 }

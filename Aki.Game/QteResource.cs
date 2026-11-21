@@ -3,38 +3,38 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data;
 using UnrealEngine;
 
-// Token: 0x02002629 RID: 9769
+// Token: 0x02001B14 RID: 6932
 [NullableContext(2)]
 [Nullable(0)]
 public class QteResource : IQteResource
 {
-	// Token: 0x17001968 RID: 6504
-	// (get) Token: 0x06013F65 RID: 81765 RVA: 0x00505393 File Offset: 0x00503593
-	// (set) Token: 0x06013F66 RID: 81766 RVA: 0x0050539B File Offset: 0x0050359B
+	// Token: 0x170019A0 RID: 6560
+	// (get) Token: 0x06011447 RID: 70727 RVA: 0x00514257 File Offset: 0x00512457
+	// (set) Token: 0x06011448 RID: 70728 RVA: 0x0051425F File Offset: 0x0051245F
 	public ULGUITexturePackerSpriteData Icon { get; set; }
 
-	// Token: 0x17001969 RID: 6505
-	// (get) Token: 0x06013F67 RID: 81767 RVA: 0x005053A4 File Offset: 0x005035A4
-	// (set) Token: 0x06013F68 RID: 81768 RVA: 0x005053AC File Offset: 0x005035AC
+	// Token: 0x170019A1 RID: 6561
+	// (get) Token: 0x06011449 RID: 70729 RVA: 0x00514268 File Offset: 0x00512468
+	// (set) Token: 0x0601144A RID: 70730 RVA: 0x00514270 File Offset: 0x00512470
 	public EffectScreenPlayData_C ScreenEffect1 { get; set; }
 
-	// Token: 0x1700196A RID: 6506
-	// (get) Token: 0x06013F69 RID: 81769 RVA: 0x005053B5 File Offset: 0x005035B5
-	// (set) Token: 0x06013F6A RID: 81770 RVA: 0x005053BD File Offset: 0x005035BD
+	// Token: 0x170019A2 RID: 6562
+	// (get) Token: 0x0601144B RID: 70731 RVA: 0x00514279 File Offset: 0x00512479
+	// (set) Token: 0x0601144C RID: 70732 RVA: 0x00514281 File Offset: 0x00512481
 	public EffectModelPostProcess ScreenEffect2 { get; set; }
 
-	// Token: 0x1700196B RID: 6507
-	// (get) Token: 0x06013F6B RID: 81771 RVA: 0x005053C6 File Offset: 0x005035C6
-	// (set) Token: 0x06013F6C RID: 81772 RVA: 0x005053CE File Offset: 0x005035CE
+	// Token: 0x170019A3 RID: 6563
+	// (get) Token: 0x0601144D RID: 70733 RVA: 0x0051428A File Offset: 0x0051248A
+	// (set) Token: 0x0601144E RID: 70734 RVA: 0x00514292 File Offset: 0x00512492
 	public UClass CameraShake { get; set; }
 
-	// Token: 0x1700196C RID: 6508
-	// (get) Token: 0x06013F6D RID: 81773 RVA: 0x005053D7 File Offset: 0x005035D7
-	// (set) Token: 0x06013F6E RID: 81774 RVA: 0x005053DF File Offset: 0x005035DF
+	// Token: 0x170019A4 RID: 6564
+	// (get) Token: 0x0601144F RID: 70735 RVA: 0x0051429B File Offset: 0x0051249B
+	// (set) Token: 0x06011450 RID: 70736 RVA: 0x005142A3 File Offset: 0x005124A3
 	public UKuroForceFeedbackEffect GamepadShake { get; set; }
 
-	// Token: 0x1700196D RID: 6509
-	// (get) Token: 0x06013F6F RID: 81775 RVA: 0x005053E8 File Offset: 0x005035E8
-	// (set) Token: 0x06013F70 RID: 81776 RVA: 0x005053F0 File Offset: 0x005035F0
+	// Token: 0x170019A5 RID: 6565
+	// (get) Token: 0x06011451 RID: 70737 RVA: 0x005142AC File Offset: 0x005124AC
+	// (set) Token: 0x06011452 RID: 70738 RVA: 0x005142B4 File Offset: 0x005124B4
 	public UCurveFloat ScaleCurve { get; set; }
 }

@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000356 RID: 854
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200039F RID: 927
 	public class IExploreSkillPullGiant : IExploreSkillInteractType
 	{
-		// Token: 0x060010F3 RID: 4339 RVA: 0x0003A0C4 File Offset: 0x000382C4
+		// Token: 0x06001237 RID: 4663 RVA: 0x0003D3A8 File Offset: 0x0003B5A8
 		private IExploreSkillPullGiant_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060010F4 RID: 4340 RVA: 0x0003A0FC File Offset: 0x000382FC
+		// Token: 0x06001238 RID: 4664 RVA: 0x0003D3E0 File Offset: 0x0003B5E0
 		public static IExploreSkillPullGiant Create([Nullable(2)] IExploreSkillPullGiant instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010F5 RID: 4341 RVA: 0x0003A10F File Offset: 0x0003830F
+		// Token: 0x06001239 RID: 4665 RVA: 0x0003D3F3 File Offset: 0x0003B5F3
 		public static IExploreSkillPullGiant CreateFromSetValue([Nullable(2)] IExploreSkillPullGiant_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010F6 RID: 4342 RVA: 0x0003A122 File Offset: 0x00038322
+		// Token: 0x0600123A RID: 4666 RVA: 0x0003D406 File Offset: 0x0003B606
 		public new IExploreSkillPullGiant_SetValue ToSetValue()
 		{
 			return new IExploreSkillPullGiant_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004D6 RID: 1238
-		// (get) Token: 0x060010F7 RID: 4343 RVA: 0x0003A14D File Offset: 0x0003834D
-		// (set) Token: 0x060010F8 RID: 4344 RVA: 0x0003A178 File Offset: 0x00038378
+		// Token: 0x1700052A RID: 1322
+		// (get) Token: 0x0600123B RID: 4667 RVA: 0x0003D431 File Offset: 0x0003B631
+		// (set) Token: 0x0600123C RID: 4668 RVA: 0x0003D45C File Offset: 0x0003B65C
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004D7 RID: 1239
-		// (get) Token: 0x060010F9 RID: 4345 RVA: 0x0003A186 File Offset: 0x00038386
-		// (set) Token: 0x060010FA RID: 4346 RVA: 0x0003A1B5 File Offset: 0x000383B5
+		// Token: 0x1700052B RID: 1323
+		// (get) Token: 0x0600123D RID: 4669 RVA: 0x0003D46A File Offset: 0x0003B66A
+		// (set) Token: 0x0600123E RID: 4670 RVA: 0x0003D499 File Offset: 0x0003B699
 		public virtual float PullTime
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004D8 RID: 1240
-		// (get) Token: 0x060010FB RID: 4347 RVA: 0x0003A1C4 File Offset: 0x000383C4
-		// (set) Token: 0x060010FC RID: 4348 RVA: 0x0003A257 File Offset: 0x00038457
+		// Token: 0x1700052C RID: 1324
+		// (get) Token: 0x0600123F RID: 4671 RVA: 0x0003D4A8 File Offset: 0x0003B6A8
+		// (set) Token: 0x06001240 RID: 4672 RVA: 0x0003D53B File Offset: 0x0003B73B
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -148,18 +146,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E1B RID: 3611
+		// Token: 0x04000F12 RID: 3858
 		[Nullable(2)]
 		protected new IExploreSkillPullGiant FbInstance;
 
-		// Token: 0x04000E1C RID: 3612
+		// Token: 0x04000F13 RID: 3859
 		[Nullable(2)]
 		protected new IExploreSkillPullGiant_SetValue PocoInterface;
 
-		// Token: 0x04000E1D RID: 3613
+		// Token: 0x04000F14 RID: 3860
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04000E1E RID: 3614
+		// Token: 0x04000F15 RID: 3861
 		private bool _ActionsInited;
 	}
 }

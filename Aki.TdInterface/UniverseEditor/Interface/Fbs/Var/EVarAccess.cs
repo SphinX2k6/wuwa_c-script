@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A00 RID: 14848
+	// Token: 0x02003DDB RID: 15835
 	public enum EVarAccess : byte
 	{
-		// Token: 0x0400AE52 RID: 44626
+		// Token: 0x0400B774 RID: 46964
 		Private,
-		// Token: 0x0400AE53 RID: 44627
+		// Token: 0x0400B775 RID: 46965
 		Public,
-		// Token: 0x0400AE54 RID: 44628
+		// Token: 0x0400B776 RID: 46966
 		Global
 	}
 }

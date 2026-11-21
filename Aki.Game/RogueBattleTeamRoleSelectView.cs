@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002778 RID: 10104
+// Token: 0x02001C63 RID: 7267
 [NullableContext(1)]
 [Nullable(0)]
 public class RogueBattleTeamRoleSelectView : UiViewBase
 {
-	// Token: 0x06014B59 RID: 84825 RVA: 0x0053DD1C File Offset: 0x0053BF1C
+	// Token: 0x0601203C RID: 73788 RVA: 0x0054CB2C File Offset: 0x0054AD2C
 	public RogueBattleTeamRoleSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014B5A RID: 84826 RVA: 0x0053DD54 File Offset: 0x0053BF54
+	// Token: 0x0601203D RID: 73789 RVA: 0x0054CB64 File Offset: 0x0054AD64
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +42,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014B5B RID: 84827 RVA: 0x0053DE60 File Offset: 0x0053C060
+	// Token: 0x0601203E RID: 73790 RVA: 0x0054CC70 File Offset: 0x0054AE70
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RogueBattleTeamRoleSelectView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -54,7 +53,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014B5C RID: 84828 RVA: 0x0053DEA4 File Offset: 0x0053C0A4
+	// Token: 0x0601203F RID: 73791 RVA: 0x0054CCB4 File Offset: 0x0054AEB4
 	protected override void OnStart()
 	{
 		RogueResFormation formationDataByIndex = RogueBattleModel.Instance.GetFormationDataByIndex(this.FormationIndex);
@@ -81,7 +80,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		RogueBattleModel.Instance.SetRogueResNewRoleFlag(false);
 	}
 
-	// Token: 0x06014B5D RID: 84829 RVA: 0x0053DF9C File Offset: 0x0053C19C
+	// Token: 0x06012040 RID: 73792 RVA: 0x0054CDAC File Offset: 0x0054AFAC
 	private void OnBtnClose()
 	{
 		if (this.WaitClose)
@@ -92,7 +91,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014B5E RID: 84830 RVA: 0x0053DFB8 File Offset: 0x0053C1B8
+	// Token: 0x06012041 RID: 73793 RVA: 0x0054CDC8 File Offset: 0x0054AFC8
 	private void OnClickConfirm(int _)
 	{
 		if (this.WaitClose)
@@ -115,7 +114,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014B5F RID: 84831 RVA: 0x0053E024 File Offset: 0x0053C224
+	// Token: 0x06012042 RID: 73794 RVA: 0x0054CE34 File Offset: 0x0054B034
 	private unsafe void OnClickRoleDetail(int _)
 	{
 		if (this.WaitClose)
@@ -148,19 +147,19 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		instance.OpenRoleMainView(agentType, selectRoleId, list, new EUiTabViewName?(EUiTabViewName.RoleSkillTabView), null);
 	}
 
-	// Token: 0x06014B60 RID: 84832 RVA: 0x0053E0BD File Offset: 0x0053C2BD
+	// Token: 0x06012043 RID: 73795 RVA: 0x0054CECD File Offset: 0x0054B0CD
 	private RogueBattleFilterDropDownItem CreateDropDownItem(UUIItem uiItem, RoleBondInfo data)
 	{
 		return new RogueBattleFilterDropDownItem(uiItem);
 	}
 
-	// Token: 0x06014B61 RID: 84833 RVA: 0x0053E0C5 File Offset: 0x0053C2C5
+	// Token: 0x06012044 RID: 73796 RVA: 0x0054CED5 File Offset: 0x0054B0D5
 	private RogueBattleFilterDropDownTitle CreateTitleItem(UUIItem uiItem)
 	{
 		return new RogueBattleFilterDropDownTitle(uiItem);
 	}
 
-	// Token: 0x06014B62 RID: 84834 RVA: 0x0053E0D0 File Offset: 0x0053C2D0
+	// Token: 0x06012045 RID: 73797 RVA: 0x0054CEE0 File Offset: 0x0054B0E0
 	private void InitDropDown()
 	{
 		this.CurrentBondInfoList.Clear();
@@ -187,20 +186,20 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		this.CommonDropDown.SetSelectedIndex(this.CurrentSelectBondIndex, true);
 	}
 
-	// Token: 0x06014B63 RID: 84835 RVA: 0x0053E1B2 File Offset: 0x0053C3B2
+	// Token: 0x06012046 RID: 73798 RVA: 0x0054CFC2 File Offset: 0x0054B1C2
 	private void OnDropDownSelectCall(int index, object _)
 	{
 		this.CurrentSelectBondIndex = index;
 		this.RefreshRoleList();
 	}
 
-	// Token: 0x06014B64 RID: 84836 RVA: 0x0053E1C1 File Offset: 0x0053C3C1
+	// Token: 0x06012047 RID: 73799 RVA: 0x0054CFD1 File Offset: 0x0054B1D1
 	private RoleBondInfo GetDropDownTextId(object data)
 	{
 		return (RoleBondInfo)data;
 	}
 
-	// Token: 0x06014B65 RID: 84837 RVA: 0x0053E1CC File Offset: 0x0053C3CC
+	// Token: 0x06012048 RID: 73800 RVA: 0x0054CFDC File Offset: 0x0054B1DC
 	private List<int> GetCurrentSelectRoleList()
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -216,7 +215,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06014B66 RID: 84838 RVA: 0x0053E210 File Offset: 0x0053C410
+	// Token: 0x06012049 RID: 73801 RVA: 0x0054D020 File Offset: 0x0054B220
 	private List<IRogueBattleTeamRoleGridInfo> GetRoleListInfo()
 	{
 		List<IRogueBattleTeamRoleGridInfo> list = new List<IRogueBattleTeamRoleGridInfo>();
@@ -225,18 +224,35 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		{
 			int dataId = roleDataBase.GetDataId();
 			RoleBondInfo roleBondInfo = this.CurrentBondInfoList[this.CurrentSelectBondIndex];
-			if (RoleSelectModel.Instance.GetRoleIndex(dataId) != 0 || roleBondInfo.ConfigId <= 0 || RogueBattleConfig.Instance.GetRogueResBondRole(roleDataBase.GetRoleId()).Value.BondIdsIter().Contains(roleBondInfo.ConfigId))
+			if (RoleSelectModel.Instance.GetRoleIndex(dataId) == 0 && roleBondInfo.ConfigId > 0)
 			{
-				RogueResRole roleInfoById = RogueBattleModel.Instance.GetRoleInfoById(dataId);
-				RogueBattleTeamRoleGridInfo item = new RogueBattleTeamRoleGridInfo
+				RogueResBondRole? rogueResBondRole = RogueBattleConfig.Instance.GetRogueResBondRole(roleDataBase.GetRoleId());
+				bool flag = false;
+				using (IEnumerator<int> enumerator2 = rogueResBondRole.Value.BondIdsIter().GetEnumerator())
 				{
-					RoleData = roleDataBase,
-					RoleStarLv = roleInfoById.Level,
-					FormationIndex = this.FormationIndex,
-					IsLinkOn = recommendBondLinkRole.Contains(dataId)
-				};
-				list.Add(item);
+					while (enumerator2.MoveNext())
+					{
+						if (enumerator2.Current == roleBondInfo.ConfigId)
+						{
+							flag = true;
+							break;
+						}
+					}
+				}
+				if (!flag)
+				{
+					continue;
+				}
 			}
+			RogueResRole roleInfoById = RogueBattleModel.Instance.GetRoleInfoById(dataId);
+			RogueBattleTeamRoleGridInfo item = new RogueBattleTeamRoleGridInfo
+			{
+				RoleData = roleDataBase,
+				RoleStarLv = roleInfoById.Level,
+				FormationIndex = this.FormationIndex,
+				IsLinkOn = recommendBondLinkRole.Contains(dataId)
+			};
+			list.Add(item);
 		}
 		int noPositionSort = 4;
 		list.Sort(delegate(IRogueBattleTeamRoleGridInfo a, IRogueBattleTeamRoleGridInfo b)
@@ -260,7 +276,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06014B67 RID: 84839 RVA: 0x0053E344 File Offset: 0x0053C544
+	// Token: 0x0601204A RID: 73802 RVA: 0x0054D18C File Offset: 0x0054B38C
 	private int GetIndexByRoleData(List<IRogueBattleTeamRoleGridInfo> infoList, RoleDataBase roleData)
 	{
 		for (int i = 0; i < infoList.Count; i++)
@@ -273,7 +289,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return -1;
 	}
 
-	// Token: 0x06014B68 RID: 84840 RVA: 0x0053E374 File Offset: 0x0053C574
+	// Token: 0x0601204B RID: 73803 RVA: 0x0054D1BC File Offset: 0x0054B3BC
 	private void RefreshRoleList()
 	{
 		List<IRogueBattleTeamRoleGridInfo> newRoleListInfo = this.GetRoleListInfo();
@@ -320,7 +336,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		}, true);
 	}
 
-	// Token: 0x06014B69 RID: 84841 RVA: 0x0053E3B9 File Offset: 0x0053C5B9
+	// Token: 0x0601204C RID: 73804 RVA: 0x0054D201 File Offset: 0x0054B401
 	private RogueBattleTeamRoleGrid OnGridProxyCreate()
 	{
 		RogueBattleTeamRoleGrid rogueBattleTeamRoleGrid = new RogueBattleTeamRoleGrid();
@@ -329,7 +345,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return rogueBattleTeamRoleGrid;
 	}
 
-	// Token: 0x06014B6A RID: 84842 RVA: 0x0053E3E4 File Offset: 0x0053C5E4
+	// Token: 0x0601204D RID: 73805 RVA: 0x0054D22C File Offset: 0x0054B42C
 	private void ToggleFunction(MediumItemGridExtendCallback param)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -370,7 +386,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		this.OnRoleSelect(roleData);
 	}
 
-	// Token: 0x06014B6B RID: 84843 RVA: 0x0053E504 File Offset: 0x0053C704
+	// Token: 0x0601204E RID: 73806 RVA: 0x0054D34C File Offset: 0x0054B54C
 	[NullableContext(2)]
 	private bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 	{
@@ -390,7 +406,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06014B6C RID: 84844 RVA: 0x0053E544 File Offset: 0x0053C744
+	// Token: 0x0601204F RID: 73807 RVA: 0x0054D38C File Offset: 0x0054B58C
 	public void OnRoleSelect(RoleDataBase roleData)
 	{
 		this.CurSelectRole = roleData;
@@ -398,7 +414,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		this.RefreshFetterIconList(roleData);
 	}
 
-	// Token: 0x06014B6D RID: 84845 RVA: 0x0053E57B File Offset: 0x0053C77B
+	// Token: 0x06012050 RID: 73808 RVA: 0x0054D3C3 File Offset: 0x0054B5C3
 	private RogueBattleRoleSelectFetterItem InitFetterIcon()
 	{
 		return new RogueBattleRoleSelectFetterItem
@@ -407,7 +423,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014B6E RID: 84846 RVA: 0x0053E594 File Offset: 0x0053C794
+	// Token: 0x06012051 RID: 73809 RVA: 0x0054D3DC File Offset: 0x0054B5DC
 	private void OnFetterIconToggleSelect(RoleBondInfo bondInfo)
 	{
 		this.FetterIconLayout.DeselectCurrentGridProxy();
@@ -415,7 +431,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		this.RefreshFetterDescList(bondInfo.ConfigId);
 	}
 
-	// Token: 0x06014B6F RID: 84847 RVA: 0x0053E5C4 File Offset: 0x0053C7C4
+	// Token: 0x06012052 RID: 73810 RVA: 0x0054D40C File Offset: 0x0054B60C
 	private void RefreshFetterIconList(RoleDataBase roleData)
 	{
 		RoleBondInfo roleBondInfo = this.CurrentBondInfoList[this.CurrentSelectBondIndex];
@@ -452,19 +468,19 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06014B70 RID: 84848 RVA: 0x0053E6DC File Offset: 0x0053C8DC
+	// Token: 0x06012053 RID: 73811 RVA: 0x0054D524 File Offset: 0x0054B724
 	private RogueBattleMapFetterInfoItem InitFetter()
 	{
 		return new RogueBattleMapFetterInfoItem();
 	}
 
-	// Token: 0x06014B71 RID: 84849 RVA: 0x0053E6E4 File Offset: 0x0053C8E4
+	// Token: 0x06012054 RID: 73812 RVA: 0x0054D52C File Offset: 0x0054B72C
 	private void RefreshFetterDescList(int bondId)
 	{
 		RoleBondInfo roleBondDataById = RogueBattleModel.Instance.GetRoleBondDataById(bondId);
 		RogueResBond? rogueResBond = RogueBattleConfig.Instance.GetRogueResBond(bondId);
 		List<IRogueBattleMapFetterInfo> list = new List<IRogueBattleMapFetterInfo>();
-		List<DicIntInt> list2 = rogueResBond.Value.StarMapIter().ToList<DicIntInt>();
+		List<DicIntInt> list2 = new List<DicIntInt>(rogueResBond.Value.StarMapIter());
 		list2.Sort((DicIntInt a, DicIntInt b) => a.Key - b.Key);
 		if (list2.Count > 0)
 		{
@@ -486,7 +502,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		this.FetterLayout.SetActive(false);
 	}
 
-	// Token: 0x06014B72 RID: 84850 RVA: 0x0053E7F4 File Offset: 0x0053C9F4
+	// Token: 0x06012055 RID: 73813 RVA: 0x0054D63C File Offset: 0x0054B83C
 	private List<int> GetRecommendBondLinkRole()
 	{
 		List<int> list = new List<int>();
@@ -543,7 +559,22 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		{
 			int dataId = roleDataBase.GetDataId();
 			RogueResBondRole? rogueResBondRole = RogueBattleConfig.Instance.GetRogueResBondRole(roleDataBase.GetRoleId());
-			if (rogueResBondRole != null && rogueResBondRole.Value.BondIdsIter().Contains(num))
+			bool flag = false;
+			if (rogueResBondRole != null)
+			{
+				using (IEnumerator<int> enumerator3 = rogueResBondRole.Value.BondIdsIter().GetEnumerator())
+				{
+					while (enumerator3.MoveNext())
+					{
+						if (enumerator3.Current == num)
+						{
+							flag = true;
+							break;
+						}
+					}
+				}
+			}
+			if (flag)
 			{
 				RogueResRole roleInfoById = RogueBattleModel.Instance.GetRoleInfoById(dataId);
 				<RogueBattleTeamRoleSelectView>F80CE81D4B03EE93209CC78036A5B3988832147CE112EDE2DFB122AA61A0AD205__RecommendRoleIdInfo item2 = new <RogueBattleTeamRoleSelectView>F80CE81D4B03EE93209CC78036A5B3988832147CE112EDE2DFB122AA61A0AD205__RecommendRoleIdInfo
@@ -564,7 +595,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06014B73 RID: 84851 RVA: 0x0053EA58 File Offset: 0x0053CC58
+	// Token: 0x06012056 RID: 73814 RVA: 0x0054D8D8 File Offset: 0x0054BAD8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -594,7 +625,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06014B74 RID: 84852 RVA: 0x0053EABC File Offset: 0x0053CCBC
+	// Token: 0x06012057 RID: 73815 RVA: 0x0054D93C File Offset: 0x0054BB3C
 	[NullableContext(2)]
 	private UUIItem GetScrollItemByRoleId(int roleId)
 	{
@@ -612,7 +643,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x04009BD4 RID: 39892
+	// Token: 0x04009D2C RID: 40236
 	[Nullable(new byte[]
 	{
 		2,
@@ -621,19 +652,19 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 	})]
 	private CommonDropDown<RoleBondInfo, RoleBondInfo> CommonDropDown;
 
-	// Token: 0x04009BD5 RID: 39893
+	// Token: 0x04009D2D RID: 40237
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009BD6 RID: 39894
+	// Token: 0x04009D2E RID: 40238
 	[Nullable(2)]
 	private ButtonItem ButtonConfirm;
 
-	// Token: 0x04009BD7 RID: 39895
+	// Token: 0x04009D2F RID: 40239
 	[Nullable(2)]
 	private ButtonItem ButtonRoleDetail;
 
-	// Token: 0x04009BD8 RID: 39896
+	// Token: 0x04009D30 RID: 40240
 	[Nullable(new byte[]
 	{
 		2,
@@ -642,7 +673,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 	})]
 	private LoopScrollView<RogueBattleTeamRoleGrid, IRogueBattleTeamRoleGridInfo> RoleScrollView;
 
-	// Token: 0x04009BD9 RID: 39897
+	// Token: 0x04009D31 RID: 40241
 	[Nullable(new byte[]
 	{
 		2,
@@ -651,7 +682,7 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 	})]
 	private GenericLayout<RogueBattleRoleSelectFetterItem, RoleBondInfo> FetterIconLayout;
 
-	// Token: 0x04009BDA RID: 39898
+	// Token: 0x04009D32 RID: 40242
 	[Nullable(new byte[]
 	{
 		2,
@@ -660,26 +691,26 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 	})]
 	private GenericLayout<RogueBattleMapFetterInfoItem, IRogueBattleMapFetterInfo> FetterLayout;
 
-	// Token: 0x04009BDB RID: 39899
+	// Token: 0x04009D33 RID: 40243
 	private int FormationIndex = -1;
 
-	// Token: 0x04009BDC RID: 39900
+	// Token: 0x04009D34 RID: 40244
 	private int CurrentSelectBondIndex = -1;
 
-	// Token: 0x04009BDD RID: 39901
+	// Token: 0x04009D35 RID: 40245
 	private List<RoleBondInfo> CurrentBondInfoList = new List<RoleBondInfo>();
 
-	// Token: 0x04009BDE RID: 39902
+	// Token: 0x04009D36 RID: 40246
 	private List<RoleDataBase> RoleList = new List<RoleDataBase>();
 
-	// Token: 0x04009BDF RID: 39903
+	// Token: 0x04009D37 RID: 40247
 	private List<IRogueBattleTeamRoleGridInfo> RoleGridInfoList = new List<IRogueBattleTeamRoleGridInfo>();
 
-	// Token: 0x04009BE0 RID: 39904
+	// Token: 0x04009D38 RID: 40248
 	[Nullable(2)]
 	private RoleDataBase CurSelectRole;
 
-	// Token: 0x04009BE1 RID: 39905
+	// Token: 0x04009D39 RID: 40249
 	[Nullable(new byte[]
 	{
 		2,
@@ -687,14 +718,14 @@ public class RogueBattleTeamRoleSelectView : UiViewBase
 	})]
 	private Func<List<int>, UniTask> OnConfirm;
 
-	// Token: 0x04009BE2 RID: 39906
+	// Token: 0x04009D3A RID: 40250
 	private bool WaitClose;
 
-	// Token: 0x02008DDD RID: 36317
+	// Token: 0x02007F64 RID: 32612
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402E085 RID: 188549
+		// Token: 0x04029399 RID: 168857
 		[Nullable(new byte[]
 		{
 			0,

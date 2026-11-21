@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DD0 RID: 19920
+	// Token: 0x020052D4 RID: 21204
 	public enum EModelType : byte
 	{
-		// Token: 0x0400DA3F RID: 55871
+		// Token: 0x0400E58F RID: 58767
 		LevelPrefab,
-		// Token: 0x0400DA40 RID: 55872
+		// Token: 0x0400E590 RID: 58768
 		ModelId,
-		// Token: 0x0400DA41 RID: 55873
+		// Token: 0x0400E591 RID: 58769
 		Npc,
-		// Token: 0x0400DA42 RID: 55874
+		// Token: 0x0400E592 RID: 58770
 		Animal
 	}
 }

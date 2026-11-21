@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000882 RID: 2178
+	// Token: 0x02000925 RID: 2341
 	public class RollBlockItemComponent_SetValue
 	{
-		// Token: 0x04001FD2 RID: 8146
+		// Token: 0x040021E4 RID: 8676
 		public bool? Disabled;
 
-		// Token: 0x04001FD3 RID: 8147
+		// Token: 0x040021E5 RID: 8677
 		public bool? EdIsLocked;
 	}
 }

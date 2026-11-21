@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029BB RID: 10683
+	// Token: 0x02002CA8 RID: 11432
 	public class IExitVehicleType
 	{
-		// Token: 0x0600EC42 RID: 60482 RVA: 0x00228297 File Offset: 0x00226497
-		[NullableContext(1)]
+		// Token: 0x0600FAD9 RID: 64217 RVA: 0x00245C1B File Offset: 0x00243E1B
 		public static IExitVehicleType Create(IExitVehicleType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A8E RID: 19086
-		// (get) Token: 0x0600EC43 RID: 60483 RVA: 0x002282B6 File Offset: 0x002264B6
+		// Token: 0x17004E37 RID: 20023
+		// (get) Token: 0x0600FADA RID: 64218 RVA: 0x00245C3A File Offset: 0x00243E3A
 		public virtual EExitVehicleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008213 RID: 33299
+		// Token: 0x04008904 RID: 35076
 		private IExitVehicleType Instance;
 	}
 }

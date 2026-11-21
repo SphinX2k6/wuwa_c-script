@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C84 RID: 23684
+	// Token: 0x02004C64 RID: 19556
 	public enum EBattleUiCountType
 	{
-		// Token: 0x0401F301 RID: 127745
+		// Token: 0x04019DB6 RID: 105910
 		AimisiRoleCount
 	}
 }

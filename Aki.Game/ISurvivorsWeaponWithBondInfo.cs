@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002AF5 RID: 10997
+// Token: 0x02002071 RID: 8305
 [NullableContext(1)]
 public interface ISurvivorsWeaponWithBondInfo
 {
-	// Token: 0x17001E89 RID: 7817
-	// (get) Token: 0x06016E08 RID: 93704
+	// Token: 0x17001EE1 RID: 7905
+	// (get) Token: 0x06014839 RID: 84025
 	SurvivorsWeaponGainData WeaponData { get; }
 
-	// Token: 0x17001E8A RID: 7818
-	// (get) Token: 0x06016E09 RID: 93705
+	// Token: 0x17001EE2 RID: 7906
+	// (get) Token: 0x0601483A RID: 84026
 	int BondPosition { get; }
 }

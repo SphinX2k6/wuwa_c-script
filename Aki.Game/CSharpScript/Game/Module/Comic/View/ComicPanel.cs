@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Comic.View
 {
-	// Token: 0x02005B8E RID: 23438
+	// Token: 0x02004B6E RID: 19310
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ComicPanel : UiPanelBase
 	{
-		// Token: 0x0603B4BA RID: 242874 RVA: 0x00E217FC File Offset: 0x00E1F9FC
+		// Token: 0x06030407 RID: 197639 RVA: 0x00D71D68 File Offset: 0x00D6FF68
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B4BB RID: 242875 RVA: 0x00E21908 File Offset: 0x00E1FB08
+		// Token: 0x06030408 RID: 197640 RVA: 0x00D71E74 File Offset: 0x00D70074
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComicPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B4BC RID: 242876 RVA: 0x00E2194C File Offset: 0x00E1FB4C
+		// Token: 0x06030409 RID: 197641 RVA: 0x00D71EB8 File Offset: 0x00D700B8
 		public void NextPage()
 		{
 			if (this.CurPageIndex + 1 >= this.ItemList.Count)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			this.ItemList[this.CurPageIndex].SetUIActive(true);
 		}
 
-		// Token: 0x0603B4BD RID: 242877 RVA: 0x00E219AB File Offset: 0x00E1FBAB
+		// Token: 0x0603040A RID: 197642 RVA: 0x00D71F17 File Offset: 0x00D70117
 		public void Skip()
 		{
 			Action onSkip = this.OnSkip;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			onSkip();
 		}
 
-		// Token: 0x0603B4BE RID: 242878 RVA: 0x00E219BD File Offset: 0x00E1FBBD
+		// Token: 0x0603040B RID: 197643 RVA: 0x00D71F29 File Offset: 0x00D70129
 		public void Complete()
 		{
 			Action onComplete = this.OnComplete;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Comic.View
 			onComplete();
 		}
 
-		// Token: 0x0603B4BF RID: 242879 RVA: 0x00E219CF File Offset: 0x00E1FBCF
+		// Token: 0x0603040C RID: 197644 RVA: 0x00D71F3B File Offset: 0x00D7013B
 		private void OnNextPageButtonClick()
 		{
 			if (this.CurPageIndex + 1 >= this.ItemList.Count)
@@ -102,45 +102,45 @@ namespace CSharpScript.Game.Module.Comic.View
 			nextPageDelegate();
 		}
 
-		// Token: 0x0603B4C0 RID: 242880 RVA: 0x00E219FD File Offset: 0x00E1FBFD
+		// Token: 0x0603040D RID: 197645 RVA: 0x00D71F69 File Offset: 0x00D70169
 		private void OnSkipButtonClick()
 		{
 			this.Skip();
 		}
 
-		// Token: 0x0401EE7F RID: 126591
+		// Token: 0x04019930 RID: 104752
 		private int ComicConfigId;
 
-		// Token: 0x0401EE80 RID: 126592
+		// Token: 0x04019931 RID: 104753
 		private int CurPageIndex;
 
-		// Token: 0x0401EE81 RID: 126593
+		// Token: 0x04019932 RID: 104754
 		[Nullable(1)]
 		private readonly List<UUIItem> ItemList = new List<UUIItem>();
 
-		// Token: 0x0401EE82 RID: 126594
+		// Token: 0x04019933 RID: 104755
 		private Action OnSkip;
 
-		// Token: 0x0401EE83 RID: 126595
+		// Token: 0x04019934 RID: 104756
 		private Action OnComplete;
 
-		// Token: 0x0401EE84 RID: 126596
+		// Token: 0x04019935 RID: 104757
 		public Action NextPageDelegate;
 
-		// Token: 0x0200BD93 RID: 48531
+		// Token: 0x0200A79D RID: 42909
 		[NullableContext(0)]
 		private static class EComDefine
 		{
-			// Token: 0x040392D8 RID: 234200
+			// Token: 0x04033CA6 RID: 212134
 			public const int ContentRootItem = 0;
 
-			// Token: 0x040392D9 RID: 234201
+			// Token: 0x04033CA7 RID: 212135
 			public const int NextPageButton = 1;
 
-			// Token: 0x040392DA RID: 234202
+			// Token: 0x04033CA8 RID: 212136
 			public const int SkipButton = 2;
 
-			// Token: 0x040392DB RID: 234203
+			// Token: 0x04033CA9 RID: 212137
 			public const int NextPageItem = 3;
 		}
 	}

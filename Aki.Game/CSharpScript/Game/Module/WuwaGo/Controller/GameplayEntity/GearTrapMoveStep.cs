@@ -3,25 +3,25 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004770 RID: 18288
+	// Token: 0x020036A1 RID: 13985
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class GearTrapMoveStep : IGearTrapMoveStep
 	{
-		// Token: 0x1700776A RID: 30570
-		// (get) Token: 0x0602FCE7 RID: 195815 RVA: 0x00B136EC File Offset: 0x00B118EC
-		// (set) Token: 0x0602FCE8 RID: 195816 RVA: 0x00B136F4 File Offset: 0x00B118F4
+		// Token: 0x17004A26 RID: 18982
+		// (get) Token: 0x060244B1 RID: 148657 RVA: 0x00A436AC File Offset: 0x00A418AC
+		// (set) Token: 0x060244B2 RID: 148658 RVA: 0x00A436B4 File Offset: 0x00A418B4
 		[RequiredMember]
 		public Vector Direction { get; set; }
 
-		// Token: 0x1700776B RID: 30571
-		// (get) Token: 0x0602FCE9 RID: 195817 RVA: 0x00B136FD File Offset: 0x00B118FD
-		// (set) Token: 0x0602FCEA RID: 195818 RVA: 0x00B13705 File Offset: 0x00B11905
+		// Token: 0x17004A27 RID: 18983
+		// (get) Token: 0x060244B3 RID: 148659 RVA: 0x00A436BD File Offset: 0x00A418BD
+		// (set) Token: 0x060244B4 RID: 148660 RVA: 0x00A436C5 File Offset: 0x00A418C5
 		[RequiredMember]
 		public Vector TargetCoordinate { get; set; }
 
-		// Token: 0x0602FCEB RID: 195819 RVA: 0x00B1370E File Offset: 0x00B1190E
+		// Token: 0x060244B5 RID: 148661 RVA: 0x00A436CE File Offset: 0x00A418CE
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public GearTrapMoveStep()

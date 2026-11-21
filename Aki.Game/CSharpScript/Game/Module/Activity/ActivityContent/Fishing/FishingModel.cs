@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,13 +10,13 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006618 RID: 26136
+	// Token: 0x02005596 RID: 21910
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class FishingModel : ModelBase
 	{
-		// Token: 0x060417EB RID: 268267 RVA: 0x00FDE07B File Offset: 0x00FDC27B
+		// Token: 0x060364B0 RID: 222384 RVA: 0x00F2510F File Offset: 0x00F2330F
 		public void SetFishingLevelUpInfo(FishingLevelUpData data)
 		{
 			if (this.LastFishingLevelUpDataInternal == null)
@@ -28,20 +27,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.LastFishingLevelUpDataInternal.CurrentLevel = data.CurrentLevel;
 		}
 
-		// Token: 0x060417EC RID: 268268 RVA: 0x00FDE09E File Offset: 0x00FDC29E
+		// Token: 0x060364B1 RID: 222385 RVA: 0x00F25132 File Offset: 0x00F23332
 		[NullableContext(2)]
 		public FishingLevelUpData GetFishingLevelUpInfo()
 		{
 			return this.LastFishingLevelUpDataInternal;
 		}
 
-		// Token: 0x060417ED RID: 268269 RVA: 0x00FDE0A6 File Offset: 0x00FDC2A6
+		// Token: 0x060364B2 RID: 222386 RVA: 0x00F2513A File Offset: 0x00F2333A
 		public void ClearLastFishingExp()
 		{
 			this.LastFishingLevelUpDataInternal = null;
 		}
 
-		// Token: 0x060417EE RID: 268270 RVA: 0x00FDE0B0 File Offset: 0x00FDC2B0
+		// Token: 0x060364B3 RID: 222387 RVA: 0x00F25144 File Offset: 0x00F23344
 		protected override bool OnInit()
 		{
 			this.FishingReputationItemId = ConfigCommonParamById.GetIntConfig("FishingSailingExpItemId").Value;
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x060417EF RID: 268271 RVA: 0x00FDE154 File Offset: 0x00FDC354
+		// Token: 0x060364B4 RID: 222388 RVA: 0x00F251E8 File Offset: 0x00F233E8
 		private void InitTechNodeMap()
 		{
 			foreach (FishingTech fishingTech in FishingConfig.Instance.GetFishingTechList())
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060417F0 RID: 268272 RVA: 0x00FDE2AC File Offset: 0x00FDC4AC
+		// Token: 0x060364B5 RID: 222389 RVA: 0x00F25340 File Offset: 0x00F23540
 		public int GetFishingReputationLevelByItemCount(int itemCount)
 		{
 			IEnumerable<FishingReputation> allFishingReputation = FishingConfig.Instance.GetAllFishingReputation();
@@ -112,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return num;
 		}
 
-		// Token: 0x060417F1 RID: 268273 RVA: 0x00FDE318 File Offset: 0x00FDC518
+		// Token: 0x060364B6 RID: 222390 RVA: 0x00F253AC File Offset: 0x00F235AC
 		public int GetConfigMaxFishingReputationLevel()
 		{
 			IEnumerable<FishingReputation> allFishingReputation = FishingConfig.Instance.GetAllFishingReputation();
@@ -127,8 +126,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return num;
 		}
 
-		// Token: 0x060417F2 RID: 268274 RVA: 0x00FDE378 File Offset: 0x00FDC578
-		private void SetCageData(int sceneId, List<OneFishCage> cages)
+		// Token: 0x060364B7 RID: 222391 RVA: 0x00F2540C File Offset: 0x00F2360C
+		private void SetCageData(int sceneId, IEnumerable<OneFishCage> cages)
 		{
 			Dictionary<int, DockyardCageData> dictionary;
 			if (!this.CageDataMapMap.TryGetValue(sceneId, out dictionary))
@@ -143,18 +142,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.CageDataMapMap[sceneId] = dictionary;
 		}
 
-		// Token: 0x060417F3 RID: 268275 RVA: 0x00FDE3F8 File Offset: 0x00FDC5F8
+		// Token: 0x060364B8 RID: 222392 RVA: 0x00F25484 File Offset: 0x00F23684
 		public void SetCageDataMapFromServer(Dictionary<int, SceneFishCageInfo> dataMap)
 		{
 			this.CageDataMapMap.Clear();
 			foreach (int num in dataMap.Keys)
 			{
 				RepeatedField<OneFishCage> cages = dataMap[num].Cages;
-				this.SetCageData(num, cages.ToList<OneFishCage>());
+				this.SetCageData(num, cages);
 			}
 		}
 
-		// Token: 0x060417F4 RID: 268276 RVA: 0x00FDE46C File Offset: 0x00FDC66C
+		// Token: 0x060364B9 RID: 222393 RVA: 0x00F254F0 File Offset: 0x00F236F0
 		public void AddCageDataFromServer(int sceneId, OneFishCage cageInfo)
 		{
 			Dictionary<int, DockyardCageData> dictionary;
@@ -166,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.CageDataMapMap[sceneId] = dictionary;
 		}
 
-		// Token: 0x060417F5 RID: 268277 RVA: 0x00FDE4B0 File Offset: 0x00FDC6B0
+		// Token: 0x060364BA RID: 222394 RVA: 0x00F25534 File Offset: 0x00F23734
 		[NullableContext(2)]
 		public DockyardItemBlockOriginalData GetDataByCage(int configId, int uniqueId)
 		{
@@ -178,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return cageDataByConfigId.GetData(uniqueId);
 		}
 
-		// Token: 0x060417F6 RID: 268278 RVA: 0x00FDE4D4 File Offset: 0x00FDC6D4
+		// Token: 0x060364BB RID: 222395 RVA: 0x00F25558 File Offset: 0x00F23758
 		[NullableContext(2)]
 		public DockyardCageData GetCageDataByConfigId(int configId)
 		{
@@ -196,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x060417F7 RID: 268279 RVA: 0x00FDE520 File Offset: 0x00FDC720
+		// Token: 0x060364BC RID: 222396 RVA: 0x00F255A4 File Offset: 0x00F237A4
 		public List<DockyardItemBlockOriginalData> GetCageDataList(int entityId)
 		{
 			DockyardCageData cageDataByConfigId = this.GetCageDataByConfigId(entityId);
@@ -207,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return cageDataByConfigId.GetDataList();
 		}
 
-		// Token: 0x060417F8 RID: 268280 RVA: 0x00FDE544 File Offset: 0x00FDC744
+		// Token: 0x060364BD RID: 222397 RVA: 0x00F255C8 File Offset: 0x00F237C8
 		private void CreateInteractData(HandInInfo data)
 		{
 			Dictionary<int, DockyardItemBlockOriginalData> dictionary;
@@ -223,8 +222,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.InteractDataMapMap[data.Id] = dictionary;
 		}
 
-		// Token: 0x060417F9 RID: 268281 RVA: 0x00FDE5CC File Offset: 0x00FDC7CC
-		public void SetInteractData(List<HandInInfo> dataList)
+		// Token: 0x060364BE RID: 222398 RVA: 0x00F25650 File Offset: 0x00F23850
+		public void SetInteractData(IEnumerable<HandInInfo> dataList)
 		{
 			foreach (HandInInfo data in dataList)
 			{
@@ -232,7 +231,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060417FA RID: 268282 RVA: 0x00FDE61C File Offset: 0x00FDC81C
+		// Token: 0x060364BF RID: 222399 RVA: 0x00F25698 File Offset: 0x00F23898
 		public void UpdateInteractData(HandInInfo data)
 		{
 			Dictionary<int, DockyardItemBlockOriginalData> dictionary;
@@ -249,7 +248,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.InteractDataMapMap[data.Id] = dictionary;
 		}
 
-		// Token: 0x060417FB RID: 268283 RVA: 0x00FDE6A8 File Offset: 0x00FDC8A8
+		// Token: 0x060364C0 RID: 222400 RVA: 0x00F25724 File Offset: 0x00F23924
 		[NullableContext(2)]
 		public DockyardItemBlockOriginalData GetDataByInteract(int configId, int uniqueId)
 		{
@@ -266,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x060417FC RID: 268284 RVA: 0x00FDE6D8 File Offset: 0x00FDC8D8
+		// Token: 0x060364C1 RID: 222401 RVA: 0x00F25754 File Offset: 0x00F23954
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -282,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x060417FD RID: 268285 RVA: 0x00FDE6F8 File Offset: 0x00FDC8F8
+		// Token: 0x060364C2 RID: 222402 RVA: 0x00F25774 File Offset: 0x00F23974
 		public void SetAllFishingPointData(Dictionary<int, SceneFishPointInfo> dataMap)
 		{
 			this.ClearAllFishingPointData();
@@ -307,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060417FE RID: 268286 RVA: 0x00FDE80C File Offset: 0x00FDCA0C
+		// Token: 0x060364C3 RID: 222403 RVA: 0x00F25888 File Offset: 0x00F23A88
 		private void ClearAllFishingPointData()
 		{
 			this.FishingPointDataPbEntityIdMap.Clear();
@@ -316,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TempFishingPointDataMap.Clear();
 		}
 
-		// Token: 0x060417FF RID: 268287 RVA: 0x00FDE83C File Offset: 0x00FDCA3C
+		// Token: 0x060364C4 RID: 222404 RVA: 0x00F258B8 File Offset: 0x00F23AB8
 		public void RefreshFishingPointData(int sceneId, OneFishPointInfo fishPoint)
 		{
 			HashSet<int> hashSet;
@@ -328,7 +327,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetOneFishingPointData(sceneId, hashSet, fishPoint);
 		}
 
-		// Token: 0x06041800 RID: 268288 RVA: 0x00FDE878 File Offset: 0x00FDCA78
+		// Token: 0x060364C5 RID: 222405 RVA: 0x00F258F4 File Offset: 0x00F23AF4
 		private void SetOneFishingPointData(int sceneId, HashSet<int> pbEntityIdSet, OneFishPointInfo fishPoint)
 		{
 			int entityConfigId = fishPoint.EntityConfigId;
@@ -345,7 +344,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshFishPointEntity(entityConfigId, fishingPointData);
 		}
 
-		// Token: 0x06041801 RID: 268289 RVA: 0x00FDE8E0 File Offset: 0x00FDCAE0
+		// Token: 0x060364C6 RID: 222406 RVA: 0x00F2595C File Offset: 0x00F23B5C
 		public void RemoveOneFishingPointData(int sceneId, OneFishPointInfo fishPoint)
 		{
 			int entityConfigId = fishPoint.EntityConfigId;
@@ -366,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041802 RID: 268290 RVA: 0x00FDE94C File Offset: 0x00FDCB4C
+		// Token: 0x060364C7 RID: 222407 RVA: 0x00F259C8 File Offset: 0x00F23BC8
 		private void RefreshFishPointEntity(int pbEntityId, FishingPointData fishData)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbEntityId);
@@ -381,7 +380,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041803 RID: 268291 RVA: 0x00FDE988 File Offset: 0x00FDCB88
+		// Token: 0x060364C8 RID: 222408 RVA: 0x00F25A04 File Offset: 0x00F23C04
 		[NullableContext(2)]
 		public FishingPointData GetFishingPointDataById(int configId)
 		{
@@ -398,7 +397,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x06041804 RID: 268292 RVA: 0x00FDE9BC File Offset: 0x00FDCBBC
+		// Token: 0x060364C9 RID: 222409 RVA: 0x00F25A38 File Offset: 0x00F23C38
 		public int GetFishingPointEntityIdByConfigId(int configId)
 		{
 			int result;
@@ -409,7 +408,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return 0;
 		}
 
-		// Token: 0x06041805 RID: 268293 RVA: 0x00FDE9DC File Offset: 0x00FDCBDC
+		// Token: 0x060364CA RID: 222410 RVA: 0x00F25A58 File Offset: 0x00F23C58
 		public bool GetFishingPointHaveFinishingIdByConfigId(int configId)
 		{
 			int key;
@@ -417,7 +416,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return !this.FishingPointId2EntityId.TryGetValue(configId, out key) || !this.FishingPointDataPbEntityIdMap.TryGetValue(key, out fishingPointData) || fishingPointData.CurrentCount <= 0;
 		}
 
-		// Token: 0x06041806 RID: 268294 RVA: 0x00FDEA1C File Offset: 0x00FDCC1C
+		// Token: 0x060364CB RID: 222411 RVA: 0x00F25A98 File Offset: 0x00F23C98
 		[NullableContext(2)]
 		public FishingPointData GetFishingPointDataByPbEntityId(int pbEntityId)
 		{
@@ -429,7 +428,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x06041807 RID: 268295 RVA: 0x00FDEA3C File Offset: 0x00FDCC3C
+		// Token: 0x060364CC RID: 222412 RVA: 0x00F25AB8 File Offset: 0x00F23CB8
 		public List<FishingPointData> GetAllFishingPointDataBySceneId(int sceneId)
 		{
 			List<FishingPointData> list = new List<FishingPointData>();
@@ -449,7 +448,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x06041808 RID: 268296 RVA: 0x00FDEAB4 File Offset: 0x00FDCCB4
+		// Token: 0x060364CD RID: 222413 RVA: 0x00F25B30 File Offset: 0x00F23D30
 		public void SetTempFishingPointData(int sceneId, TempFishPointInfo fishPoint)
 		{
 			long entityId = fishPoint.EntityId;
@@ -463,14 +462,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			tempFishingPointData.Refresh(fishPoint);
 		}
 
-		// Token: 0x06041809 RID: 268297 RVA: 0x00FDEAFC File Offset: 0x00FDCCFC
+		// Token: 0x060364CE RID: 222414 RVA: 0x00F25B78 File Offset: 0x00F23D78
 		public void RemoveTempFishingPointData(TempFishPointInfo fishPoint)
 		{
 			long entityId = fishPoint.EntityId;
 			this.TempFishingPointDataMap.Remove(entityId);
 		}
 
-		// Token: 0x0604180A RID: 268298 RVA: 0x00FDEB20 File Offset: 0x00FDCD20
+		// Token: 0x060364CF RID: 222415 RVA: 0x00F25B9C File Offset: 0x00F23D9C
 		[NullableContext(2)]
 		public TempFishingPointData GetTempFishingPointDataByCreatureDataId(long creatureDataId)
 		{
@@ -482,20 +481,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x0604180B RID: 268299 RVA: 0x00FDEB40 File Offset: 0x00FDCD40
+		// Token: 0x060364D0 RID: 222416 RVA: 0x00F25BBC File Offset: 0x00F23DBC
 		public int GetTempFishingPointLimit()
 		{
 			return this.TempFishingPointLimit;
 		}
 
-		// Token: 0x0604180C RID: 268300 RVA: 0x00FDEB48 File Offset: 0x00FDCD48
+		// Token: 0x060364D1 RID: 222417 RVA: 0x00F25BC4 File Offset: 0x00F23DC4
 		public int GetTempFishingPointNum()
 		{
 			return this.TempFishingPointDataMap.Count;
 		}
 
-		// Token: 0x0604180D RID: 268301 RVA: 0x00FDEB58 File Offset: 0x00FDCD58
-		public void SetFishingTechData(List<FishingTechInfo> dataList)
+		// Token: 0x060364D2 RID: 222418 RVA: 0x00F25BD4 File Offset: 0x00F23DD4
+		public void SetFishingTechData(IEnumerable<FishingTechInfo> dataList)
 		{
 			this.FishingTechDataMap.Clear();
 			foreach (FishingTechInfo fishingTechInfo in dataList)
@@ -522,21 +521,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<EFishingTechNodeType>(EEventName.OnFishingRoleTechRefresh, EFishingTechNodeType.Phoebe);
 		}
 
-		// Token: 0x0604180E RID: 268302 RVA: 0x00FDECB8 File Offset: 0x00FDCEB8
+		// Token: 0x060364D3 RID: 222419 RVA: 0x00F25D2C File Offset: 0x00F23F2C
 		public void UpdateFishingTechData(FishingTechInfo data)
 		{
 			this.FishingTechDataMap[data.NodeId] = data;
 			EventSystem.Instance.Emit<int>(EEventName.OnFishingTechNodeRefresh, data.NodeId);
 		}
 
-		// Token: 0x0604180F RID: 268303 RVA: 0x00FDECE4 File Offset: 0x00FDCEE4
+		// Token: 0x060364D4 RID: 222420 RVA: 0x00F25D58 File Offset: 0x00F23F58
 		public bool GetFishingTechUnlock(int techId)
 		{
 			FishingTechInfo valueOrDefault = this.FishingTechDataMap.GetValueOrDefault(techId);
 			return (FishingConfig.Instance.GetFishingTechById(techId).UnlockCondition <= 0 || (valueOrDefault != null && valueOrDefault.Unlock)) && ((valueOrDefault != null) ? valueOrDefault.Level : 0) > 0;
 		}
 
-		// Token: 0x06041810 RID: 268304 RVA: 0x00FDED38 File Offset: 0x00FDCF38
+		// Token: 0x060364D5 RID: 222421 RVA: 0x00F25DAC File Offset: 0x00F23FAC
 		public bool GetFishingTechUnlockByEffectType(EFishingTechType type)
 		{
 			IReadOnlyList<FishingTech> fishingTechList = FishingConfig.Instance.GetFishingTechList();
@@ -548,7 +547,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			int id = fishingTechEffectByType[0].Id;
 			foreach (FishingTech fishingTech in fishingTechList)
 			{
-				if (fishingTech.Effect().Contains(id))
+				if (Array.IndexOf<int>(fishingTech.Effect(), id) >= 0)
 				{
 					return this.GetFishingTechUnlock(fishingTech.Id);
 				}
@@ -556,7 +555,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x06041811 RID: 268305 RVA: 0x00FDEDD8 File Offset: 0x00FDCFD8
+		// Token: 0x060364D6 RID: 222422 RVA: 0x00F25E4C File Offset: 0x00F2404C
 		public int GetFishingCurrentLevelTechEffectByEffectType(EFishingTechType type)
 		{
 			IReadOnlyList<FishingTech> fishingTechList = FishingConfig.Instance.GetFishingTechList();
@@ -568,7 +567,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			int id = fishingTechEffectByType[0].Id;
 			foreach (FishingTech fishingTech in fishingTechList)
 			{
-				if (fishingTech.Effect().Contains(id))
+				if (Array.IndexOf<int>(fishingTech.Effect(), id) >= 0)
 				{
 					FishingTechInfo fishingTechInfo;
 					this.FishingTechDataMap.TryGetValue(fishingTech.Id, out fishingTechInfo);
@@ -583,8 +582,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return 0;
 		}
 
-		// Token: 0x17009600 RID: 38400
-		// (get) Token: 0x06041812 RID: 268306 RVA: 0x00FDEEA4 File Offset: 0x00FDD0A4
+		// Token: 0x17006962 RID: 26978
+		// (get) Token: 0x060364D7 RID: 222423 RVA: 0x00F25F18 File Offset: 0x00F24118
 		public int UnlockFishingTechCount
 		{
 			get
@@ -604,8 +603,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x17009601 RID: 38401
-		// (get) Token: 0x06041813 RID: 268307 RVA: 0x00FDEF04 File Offset: 0x00FDD104
+		// Token: 0x17006963 RID: 26979
+		// (get) Token: 0x060364D8 RID: 222424 RVA: 0x00F25F78 File Offset: 0x00F24178
 		public int AllFishingTechCount
 		{
 			get
@@ -614,7 +613,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041814 RID: 268308 RVA: 0x00FDEF18 File Offset: 0x00FDD118
+		// Token: 0x060364D9 RID: 222425 RVA: 0x00F25F8C File Offset: 0x00F2418C
 		public bool GetTechNodeCanLevelUp(int nodeId)
 		{
 			FishingTech fishingTechById = FishingConfig.Instance.GetFishingTechById(nodeId);
@@ -635,7 +634,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x06041815 RID: 268309 RVA: 0x00FDEFE0 File Offset: 0x00FDD1E0
+		// Token: 0x060364DA RID: 222426 RVA: 0x00F26054 File Offset: 0x00F24254
 		public bool GetRoleTechNodeCanLevelUp(EFishingTechNodeType type)
 		{
 			foreach (KeyValuePair<int, FishingTechInfo> keyValuePair in this.FishingTechDataMap)
@@ -658,7 +657,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x06041816 RID: 268310 RVA: 0x00FDF0F4 File Offset: 0x00FDD2F4
+		// Token: 0x060364DB RID: 222427 RVA: 0x00F26168 File Offset: 0x00F24368
 		public void RefreshTechCanLevelUp()
 		{
 			foreach (KeyValuePair<int, FishingTechInfo> keyValuePair in this.FishingTechDataMap)
@@ -682,7 +681,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<EFishingTechNodeType>(EEventName.OnFishingRoleTechRefresh, EFishingTechNodeType.Phoebe);
 		}
 
-		// Token: 0x06041817 RID: 268311 RVA: 0x00FDF228 File Offset: 0x00FDD428
+		// Token: 0x060364DC RID: 222428 RVA: 0x00F2629C File Offset: 0x00F2449C
 		public int GetTechNodeCurrentLevel(int nodeId)
 		{
 			FishingTechInfo fishingTechInfo;
@@ -694,13 +693,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return fishingTechInfo.Level;
 		}
 
-		// Token: 0x06041818 RID: 268312 RVA: 0x00FDF250 File Offset: 0x00FDD450
+		// Token: 0x060364DD RID: 222429 RVA: 0x00F262C4 File Offset: 0x00F244C4
 		public int GetTechNodeMaxLevel(int nodeId)
 		{
 			return FishingConfig.Instance.GetFishingTechById(nodeId).EffectLength;
 		}
 
-		// Token: 0x06041819 RID: 268313 RVA: 0x00FDF270 File Offset: 0x00FDD470
+		// Token: 0x060364DE RID: 222430 RVA: 0x00F262E4 File Offset: 0x00F244E4
 		[NullableContext(2)]
 		public IFishingTechNode GetFirstNode()
 		{
@@ -713,7 +712,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list[0];
 		}
 
-		// Token: 0x0604181A RID: 268314 RVA: 0x00FDF2B4 File Offset: 0x00FDD4B4
+		// Token: 0x060364DF RID: 222431 RVA: 0x00F26328 File Offset: 0x00F24528
 		[NullableContext(2)]
 		public IFishingTechNode GetLastNode()
 		{
@@ -726,7 +725,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list[0];
 		}
 
-		// Token: 0x0604181B RID: 268315 RVA: 0x00FDF2F8 File Offset: 0x00FDD4F8
+		// Token: 0x060364E0 RID: 222432 RVA: 0x00F2636C File Offset: 0x00F2456C
 		public IFishingTechNode GetFirstUnlockNode()
 		{
 			IFishingTechNode result = null;
@@ -749,7 +748,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return result;
 		}
 
-		// Token: 0x0604181C RID: 268316 RVA: 0x00FDF3B8 File Offset: 0x00FDD5B8
+		// Token: 0x060364E1 RID: 222433 RVA: 0x00F2642C File Offset: 0x00F2462C
 		[NullableContext(2)]
 		public IFishingTechNode GetNormalTechNodeById(int nodeId)
 		{
@@ -766,7 +765,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x0604181D RID: 268317 RVA: 0x00FDF450 File Offset: 0x00FDD650
+		// Token: 0x060364E2 RID: 222434 RVA: 0x00F264C4 File Offset: 0x00F246C4
 		[NullableContext(2)]
 		public IFishingTechNode GetRoleTechNodeById(int nodeId)
 		{
@@ -783,7 +782,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x0604181E RID: 268318 RVA: 0x00FDF4E8 File Offset: 0x00FDD6E8
+		// Token: 0x060364E3 RID: 222435 RVA: 0x00F2655C File Offset: 0x00F2475C
 		public bool GetNodePreNodeUnlock(int nodeId)
 		{
 			FishingTech fishingTechById = FishingConfig.Instance.GetFishingTechById(nodeId);
@@ -800,7 +799,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return fishingTechInfo != null && fishingTechInfo.Unlock;
 		}
 
-		// Token: 0x0604181F RID: 268319 RVA: 0x00FDF54C File Offset: 0x00FDD74C
+		// Token: 0x060364E4 RID: 222436 RVA: 0x00F265C0 File Offset: 0x00F247C0
 		public bool GetNodeLevelUpItemEnough(int nodeId)
 		{
 			FishingTech fishingTechById = FishingConfig.Instance.GetFishingTechById(nodeId);
@@ -825,8 +824,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x17009602 RID: 38402
-		// (get) Token: 0x06041820 RID: 268320 RVA: 0x00FDF60C File Offset: 0x00FDD80C
+		// Token: 0x17006964 RID: 26980
+		// (get) Token: 0x060364E5 RID: 222437 RVA: 0x00F26680 File Offset: 0x00F24880
 		public bool IsInDock
 		{
 			get
@@ -835,9 +834,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x17009603 RID: 38403
-		// (get) Token: 0x06041821 RID: 268321 RVA: 0x00FDF617 File Offset: 0x00FDD817
-		// (set) Token: 0x06041822 RID: 268322 RVA: 0x00FDF61F File Offset: 0x00FDD81F
+		// Token: 0x17006965 RID: 26981
+		// (get) Token: 0x060364E6 RID: 222438 RVA: 0x00F2668B File Offset: 0x00F2488B
+		// (set) Token: 0x060364E7 RID: 222439 RVA: 0x00F26693 File Offset: 0x00F24893
 		public int DockId
 		{
 			get
@@ -851,19 +850,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041823 RID: 268323 RVA: 0x00FDF63E File Offset: 0x00FDD83E
+		// Token: 0x060364E8 RID: 222440 RVA: 0x00F266B2 File Offset: 0x00F248B2
 		public FishingShipData GetShipData()
 		{
 			return this.ShipData;
 		}
 
-		// Token: 0x06041824 RID: 268324 RVA: 0x00FDF646 File Offset: 0x00FDD846
+		// Token: 0x060364E9 RID: 222441 RVA: 0x00F266BA File Offset: 0x00F248BA
 		public void SaveLocalSailingIsFix(bool isAutoFix)
 		{
 			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.SailingIsFix, isAutoFix);
 		}
 
-		// Token: 0x06041825 RID: 268325 RVA: 0x00FDF654 File Offset: 0x00FDD854
+		// Token: 0x060364EA RID: 222442 RVA: 0x00F266C8 File Offset: 0x00F248C8
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -877,7 +876,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return new ValueTuple<int, int>(backpackUseSize, backpackSize);
 		}
 
-		// Token: 0x06041826 RID: 268326 RVA: 0x00FDF67C File Offset: 0x00FDD87C
+		// Token: 0x060364EB RID: 222443 RVA: 0x00F266F0 File Offset: 0x00F248F0
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -903,7 +902,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return new ValueTuple<int, int>(count, maxCount);
 		}
 
-		// Token: 0x06041827 RID: 268327 RVA: 0x00FDF6EC File Offset: 0x00FDD8EC
+		// Token: 0x060364EC RID: 222444 RVA: 0x00F26760 File Offset: 0x00F24960
 		public long GetShipCageNextHarvestTimeStamp(int configId)
 		{
 			DockyardCageData cageDataByConfigId = this.GetCageDataByConfigId(configId);
@@ -920,7 +919,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return cageDataByConfigId.Data.NextUpdateTime;
 		}
 
-		// Token: 0x06041828 RID: 268328 RVA: 0x00FDF744 File Offset: 0x00FDD944
+		// Token: 0x060364ED RID: 222445 RVA: 0x00F267B8 File Offset: 0x00F249B8
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -945,7 +944,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return new ValueTuple<int, int>(currentCount, maxCount);
 		}
 
-		// Token: 0x06041829 RID: 268329 RVA: 0x00FDF7A8 File Offset: 0x00FDD9A8
+		// Token: 0x060364EE RID: 222446 RVA: 0x00F2681C File Offset: 0x00F24A1C
 		public unsafe string GetFishingPointAppearTimeLocalKey(int entityId)
 		{
 			int showItem = FishingConfig.Instance.GetFishingPointConfigByEntityId(entityId).Value.ShowItem;
@@ -974,21 +973,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return string.Empty;
 		}
 
-		// Token: 0x0604182A RID: 268330 RVA: 0x00FDF890 File Offset: 0x00FDDA90
+		// Token: 0x060364EF RID: 222447 RVA: 0x00F26904 File Offset: 0x00F24B04
 		public string GetFishingPointNameLocalKey(int entityId)
 		{
 			int showItem = FishingConfig.Instance.GetFishingPointConfigByEntityId(entityId).Value.ShowItem;
 			return FishingConfig.Instance.GetFishingItemConfig(showItem).Value.Name;
 		}
 
-		// Token: 0x0604182B RID: 268331 RVA: 0x00FDF8D8 File Offset: 0x00FDDAD8
+		// Token: 0x060364F0 RID: 222448 RVA: 0x00F2694C File Offset: 0x00F24B4C
 		public string GetFishingPointTechNameLocalKey(int entityId)
 		{
 			int unlockTech = FishingConfig.Instance.GetFishingPointConfigByEntityId(entityId).Value.UnlockTech;
 			return FishingConfig.Instance.GetFishingTagConfig(unlockTech).Value.Name;
 		}
 
-		// Token: 0x0604182C RID: 268332 RVA: 0x00FDF920 File Offset: 0x00FDDB20
+		// Token: 0x060364F1 RID: 222449 RVA: 0x00F26994 File Offset: 0x00F24B94
 		public bool IsOnShipVehicle()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -997,7 +996,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return characterDriveVehicleComponent != null && characterDriveVehicleComponent.IsOnVehicle;
 		}
 
-		// Token: 0x0604182D RID: 268333 RVA: 0x00FDF95C File Offset: 0x00FDDB5C
+		// Token: 0x060364F2 RID: 222450 RVA: 0x00F269D0 File Offset: 0x00F24BD0
 		public void SetHandBookData(FishingIllustratedInfo info)
 		{
 			foreach (OneFishingIllustratedInfo oneFishingIllustratedInfo in info.IllustratedList)
@@ -1026,10 +1025,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				this.FishingItemHandBookRewardMap[fishingIllustratedRewardInfo.Id] = value2;
 			}
 			EventSystem.Instance.Emit(EEventName.FishingRefreshHandBookRewardView);
-			FishingModel.Instance.FishingItemHandBookUnlockTraceList = info.UnlockDetections.ToList<int>();
+			FishingModel.Instance.FishingItemHandBookUnlockTraceList = new List<int>(info.UnlockDetections);
 		}
 
-		// Token: 0x0604182E RID: 268334 RVA: 0x00FDFAA0 File Offset: 0x00FDDCA0
+		// Token: 0x060364F3 RID: 222451 RVA: 0x00F26B14 File Offset: 0x00F24D14
 		public void RefreshHandBookData(OneFishingIllustratedInfo data)
 		{
 			if (data.Id <= 0)
@@ -1045,7 +1044,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.FishingItemHandBookDataMap[data.Id] = value;
 		}
 
-		// Token: 0x0604182F RID: 268335 RVA: 0x00FDFAF4 File Offset: 0x00FDDCF4
+		// Token: 0x060364F4 RID: 222452 RVA: 0x00F26B68 File Offset: 0x00F24D68
 		public List<int> GetFishingItemIdList()
 		{
 			List<int> list = new List<int>();
@@ -1059,7 +1058,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x06041830 RID: 268336 RVA: 0x00FDFB5C File Offset: 0x00FDDD5C
+		// Token: 0x060364F5 RID: 222453 RVA: 0x00F26BD0 File Offset: 0x00F24DD0
 		public List<IFishingHandBookItemData> GetFishingItemList()
 		{
 			List<IFishingHandBookItemData> list = new List<IFishingHandBookItemData>();
@@ -1071,8 +1070,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 					{
 						Id = fishingItem.Id,
 						Type = fishingItem.Category,
-						Area = fishingItem.Area().ToList<int>(),
-						Tech = fishingItem.Tech().ToList<int>(),
+						Area = new List<int>(fishingItem.Area()),
+						Tech = new List<int>(fishingItem.Tech()),
 						Time = fishingItem.Time,
 						HandBookId = fishingItem.IllustratedNum
 					};
@@ -1082,8 +1081,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x17009604 RID: 38404
-		// (get) Token: 0x06041831 RID: 268337 RVA: 0x00FDFC1C File Offset: 0x00FDDE1C
+		// Token: 0x17006966 RID: 26982
+		// (get) Token: 0x060364F6 RID: 222454 RVA: 0x00F26C90 File Offset: 0x00F24E90
 		public int AllFishingItemCount
 		{
 			get
@@ -1100,8 +1099,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x17009605 RID: 38405
-		// (get) Token: 0x06041832 RID: 268338 RVA: 0x00FDFC78 File Offset: 0x00FDDE78
+		// Token: 0x17006967 RID: 26983
+		// (get) Token: 0x060364F7 RID: 222455 RVA: 0x00F26CEC File Offset: 0x00F24EEC
 		public int UnLockFishingItemCount
 		{
 			get
@@ -1110,7 +1109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041833 RID: 268339 RVA: 0x00FDFC88 File Offset: 0x00FDDE88
+		// Token: 0x060364F8 RID: 222456 RVA: 0x00F26CFC File Offset: 0x00F24EFC
 		public List<EFishingSize> GetSizeIsGoldSize(int itemId)
 		{
 			List<EFishingSize> list = new List<EFishingSize>();
@@ -1137,7 +1136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x06041834 RID: 268340 RVA: 0x00FDFD34 File Offset: 0x00FDDF34
+		// Token: 0x060364F9 RID: 222457 RVA: 0x00F26DA8 File Offset: 0x00F24FA8
 		public int GetHandBookRewardHaveTakenCount()
 		{
 			int num = 0;
@@ -1154,7 +1153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return num;
 		}
 
-		// Token: 0x06041835 RID: 268341 RVA: 0x00FDFD94 File Offset: 0x00FDDF94
+		// Token: 0x060364FA RID: 222458 RVA: 0x00F26E08 File Offset: 0x00F25008
 		public void RefreshHandBookDataReward(FishingIllustratedRewardInfo data)
 		{
 			FishingReward value = new FishingReward
@@ -1169,7 +1168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit(EEventName.FishingRefreshHandBookRewardView);
 		}
 
-		// Token: 0x06041836 RID: 268342 RVA: 0x00FDFE08 File Offset: 0x00FDE008
+		// Token: 0x060364FB RID: 222459 RVA: 0x00F26E7C File Offset: 0x00F2507C
 		public bool GetHandBookRewardRedDotState()
 		{
 			foreach (IFishingReward fishingReward in this.FishingItemHandBookRewardMap.Values)
@@ -1182,7 +1181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return false;
 		}
 
-		// Token: 0x06041837 RID: 268343 RVA: 0x00FDFE70 File Offset: 0x00FDE070
+		// Token: 0x060364FC RID: 222460 RVA: 0x00F26EE4 File Offset: 0x00F250E4
 		public bool IsAllHandBookRewardTaken()
 		{
 			using (Dictionary<int, IFishingReward>.ValueCollection.Enumerator enumerator = this.FishingItemHandBookRewardMap.Values.GetEnumerator())
@@ -1198,8 +1197,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x17009606 RID: 38406
-		// (get) Token: 0x06041838 RID: 268344 RVA: 0x00FDFED0 File Offset: 0x00FDE0D0
+		// Token: 0x17006968 RID: 26984
+		// (get) Token: 0x060364FD RID: 222461 RVA: 0x00F26F44 File Offset: 0x00F25144
 		public static FishingModel Instance
 		{
 			get
@@ -1208,7 +1207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041839 RID: 268345 RVA: 0x00FDFED7 File Offset: 0x00FDE0D7
+		// Token: 0x060364FE RID: 222462 RVA: 0x00F26F4B File Offset: 0x00F2514B
 		public static FishingModel GetOrCreateInstance()
 		{
 			if (FishingModel._Instance == null)
@@ -1218,7 +1217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return FishingModel._Instance;
 		}
 
-		// Token: 0x0604183A RID: 268346 RVA: 0x00FDFEEB File Offset: 0x00FDE0EB
+		// Token: 0x060364FF RID: 222463 RVA: 0x00F26F5F File Offset: 0x00F2515F
 		public static bool CreateInstance()
 		{
 			if (FishingModel._Instance != null)
@@ -1229,113 +1228,113 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return true;
 		}
 
-		// Token: 0x0604183B RID: 268347 RVA: 0x00FDFF01 File Offset: 0x00FDE101
+		// Token: 0x06036500 RID: 222464 RVA: 0x00F26F75 File Offset: 0x00F25175
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604183C RID: 268348 RVA: 0x00FDFF03 File Offset: 0x00FDE103
+		// Token: 0x06036501 RID: 222465 RVA: 0x00F26F77 File Offset: 0x00F25177
 		public static void ResetStaticDefaultValue()
 		{
 			FishingModel._Instance = null;
 		}
 
-		// Token: 0x0604183D RID: 268349 RVA: 0x00FDFF0B File Offset: 0x00FDE10B
+		// Token: 0x06036502 RID: 222466 RVA: 0x00F26F7F File Offset: 0x00F2517F
 		static FishingModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FishingModel.CreateStaticDefaultValue), new Action(FishingModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022150 RID: 139600
+		// Token: 0x0401CA81 RID: 117377
 		public int FishingReputationItemId;
 
-		// Token: 0x04022151 RID: 139601
+		// Token: 0x0401CA82 RID: 117378
 		public int FishingShipFixItem;
 
-		// Token: 0x04022152 RID: 139602
+		// Token: 0x0401CA83 RID: 117379
 		public int FishingShipFixCost;
 
-		// Token: 0x04022153 RID: 139603
+		// Token: 0x0401CA84 RID: 117380
 		public Dictionary<int, List<IFishingTechNode>> NormalTechNodeMap = new Dictionary<int, List<IFishingTechNode>>();
 
-		// Token: 0x04022154 RID: 139604
+		// Token: 0x0401CA85 RID: 117381
 		public Dictionary<int, List<IFishingTechNode>> RoleTechNodeMap = new Dictionary<int, List<IFishingTechNode>>();
 
-		// Token: 0x04022155 RID: 139605
+		// Token: 0x0401CA86 RID: 117382
 		[Nullable(2)]
 		private FishingLevelUpData LastFishingLevelUpDataInternal;
 
-		// Token: 0x04022156 RID: 139606
+		// Token: 0x0401CA87 RID: 117383
 		public int FishingSlotCountTech;
 
-		// Token: 0x04022157 RID: 139607
+		// Token: 0x0401CA88 RID: 117384
 		public int FishingBagRedPercentage;
 
-		// Token: 0x04022158 RID: 139608
+		// Token: 0x0401CA89 RID: 117385
 		private Dictionary<int, Dictionary<int, DockyardCageData>> CageDataMapMap = new Dictionary<int, Dictionary<int, DockyardCageData>>();
 
-		// Token: 0x04022159 RID: 139609
+		// Token: 0x0401CA8A RID: 117386
 		private Dictionary<int, Dictionary<int, DockyardItemBlockOriginalData>> InteractDataMapMap = new Dictionary<int, Dictionary<int, DockyardItemBlockOriginalData>>();
 
-		// Token: 0x0402215A RID: 139610
+		// Token: 0x0401CA8B RID: 117387
 		private Dictionary<int, FishingPointData> FishingPointDataPbEntityIdMap = new Dictionary<int, FishingPointData>();
 
-		// Token: 0x0402215B RID: 139611
+		// Token: 0x0401CA8C RID: 117388
 		private Dictionary<int, HashSet<int>> FishingPointSceneId2PbEntityId = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0402215C RID: 139612
+		// Token: 0x0401CA8D RID: 117389
 		private Dictionary<int, int> FishingPointId2EntityId = new Dictionary<int, int>();
 
-		// Token: 0x0402215D RID: 139613
+		// Token: 0x0401CA8E RID: 117390
 		private int TempFishingPointLimit;
 
-		// Token: 0x0402215E RID: 139614
+		// Token: 0x0401CA8F RID: 117391
 		private Dictionary<long, TempFishingPointData> TempFishingPointDataMap = new Dictionary<long, TempFishingPointData>();
 
-		// Token: 0x0402215F RID: 139615
+		// Token: 0x0401CA90 RID: 117392
 		private Dictionary<int, FishingTechInfo> FishingTechDataMap = new Dictionary<int, FishingTechInfo>();
 
-		// Token: 0x04022160 RID: 139616
+		// Token: 0x0401CA91 RID: 117393
 		private HashSet<int> NeedCheckEffectType = new HashSet<int>(new int[]
 		{
 			11,
 			10
 		});
 
-		// Token: 0x04022161 RID: 139617
+		// Token: 0x0401CA92 RID: 117394
 		public Dictionary<int, HashSet<int>> EffectType2TechIdsMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04022162 RID: 139618
+		// Token: 0x0401CA93 RID: 117395
 		private int DockIdInternal;
 
-		// Token: 0x04022163 RID: 139619
+		// Token: 0x0401CA94 RID: 117396
 		private FishingShipData ShipData = new FishingShipData();
 
-		// Token: 0x04022164 RID: 139620
+		// Token: 0x0401CA95 RID: 117397
 		public ESailTime LocalSailingTime;
 
-		// Token: 0x04022165 RID: 139621
+		// Token: 0x0401CA96 RID: 117398
 		public Dictionary<int, IFishingHandBook> FishingItemHandBookDataMap = new Dictionary<int, IFishingHandBook>();
 
-		// Token: 0x04022166 RID: 139622
+		// Token: 0x0401CA97 RID: 117399
 		public Dictionary<int, IFishingReward> FishingItemHandBookRewardMap = new Dictionary<int, IFishingReward>();
 
-		// Token: 0x04022167 RID: 139623
+		// Token: 0x0401CA98 RID: 117400
 		public List<int> FishingItemHandBookUnlockTraceList = new List<int>();
 
-		// Token: 0x04022168 RID: 139624
+		// Token: 0x0401CA99 RID: 117401
 		public List<int> RoleTalkIds;
 
-		// Token: 0x04022169 RID: 139625
+		// Token: 0x0401CA9A RID: 117402
 		public List<int> UnlockPort = new List<int>();
 
-		// Token: 0x0402216A RID: 139626
+		// Token: 0x0401CA9B RID: 117403
 		public int CurrentShipSkin;
 
-		// Token: 0x0402216B RID: 139627
+		// Token: 0x0401CA9C RID: 117404
 		public List<int> UnlockShipSkin = new List<int>();
 
-		// Token: 0x0402216C RID: 139628
+		// Token: 0x0401CA9D RID: 117405
 		[Nullable(2)]
 		private static FishingModel _Instance;
 	}

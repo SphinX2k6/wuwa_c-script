@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014FE RID: 5374
+	// Token: 0x02001659 RID: 5721
 	public class ClientFollowShooterLeisureInteract_SetValue
 	{
-		// Token: 0x040046CB RID: 18123
+		// Token: 0x04004A6A RID: 19050
 		public int Id;
 
-		// Token: 0x040046CC RID: 18124
-		[Nullable(1)]
+		// Token: 0x04004A6B RID: 19051
 		public IClientFollowShooterLeisureInteractType InteractType;
 	}
 }

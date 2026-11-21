@@ -4,7 +4,7 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x02004610 RID: 17936
+	// Token: 0x02003539 RID: 13625
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 	})]
 	public class OpeningState : StateBase<GuideGroupInfo, EGuideGroupState>
 	{
-		// Token: 0x0602E3AD RID: 189357 RVA: 0x00AB0C0A File Offset: 0x00AAEE0A
+		// Token: 0x06022AA2 RID: 141986 RVA: 0x009DD2FE File Offset: 0x009DB4FE
 		public OpeningState(GuideGroupInfo owner, EGuideGroupState state, [Nullable(new byte[]
 		{
 			2,
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 		{
 		}
 
-		// Token: 0x0602E3AE RID: 189358 RVA: 0x00AB0C18 File Offset: 0x00AAEE18
+		// Token: 0x06022AA3 RID: 141987 RVA: 0x009DD30C File Offset: 0x009DB50C
 		protected override void OnEnter(EGuideGroupState? lastState)
 		{
 			if (this.Entered)
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			EventSystem.Instance.Emit<int, bool>(EEventName.GuideGroupOpening, this.Owner.Id, ifPreExecute);
 		}
 
-		// Token: 0x0602E3AF RID: 189359 RVA: 0x00AB0CA5 File Offset: 0x00AAEEA5
+		// Token: 0x06022AA4 RID: 141988 RVA: 0x009DD399 File Offset: 0x009DB599
 		protected override void OnExit(EGuideGroupState nextState)
 		{
 			this.Entered = false;
 		}
 
-		// Token: 0x04018D18 RID: 101656
+		// Token: 0x04013357 RID: 78679
 		private bool Entered;
 	}
 }

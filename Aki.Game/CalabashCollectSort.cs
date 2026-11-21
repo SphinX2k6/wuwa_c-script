@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001876 RID: 6262
+// Token: 0x02000D2F RID: 3375
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashCollectSort : CommonSort<ECalabashCollectWayType>
 {
-	// Token: 0x0600B7C0 RID: 47040 RVA: 0x00299674 File Offset: 0x00297874
+	// Token: 0x06008BA9 RID: 35753 RVA: 0x002A3D8C File Offset: 0x002A1F8C
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -34,7 +34,7 @@ public class CalabashCollectSort : CommonSort<ECalabashCollectWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7C1 RID: 47041 RVA: 0x002996E8 File Offset: 0x002978E8
+	// Token: 0x06008BAA RID: 35754 RVA: 0x002A3E00 File Offset: 0x002A2000
 	private int SortSortId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -60,7 +60,7 @@ public class CalabashCollectSort : CommonSort<ECalabashCollectWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7C2 RID: 47042 RVA: 0x00299740 File Offset: 0x00297940
+	// Token: 0x06008BAB RID: 35755 RVA: 0x002A3E58 File Offset: 0x002A2058
 	private int SortMonsterId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -86,7 +86,7 @@ public class CalabashCollectSort : CommonSort<ECalabashCollectWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7C3 RID: 47043 RVA: 0x00299798 File Offset: 0x00297998
+	// Token: 0x06008BAC RID: 35756 RVA: 0x002A3EB0 File Offset: 0x002A20B0
 	private int SortExperience(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -114,7 +114,7 @@ public class CalabashCollectSort : CommonSort<ECalabashCollectWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7C4 RID: 47044 RVA: 0x0029980C File Offset: 0x00297A0C
+	// Token: 0x06008BAD RID: 35757 RVA: 0x002A3F24 File Offset: 0x002A2124
 	private int SortSkin(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -144,7 +144,7 @@ public class CalabashCollectSort : CommonSort<ECalabashCollectWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7C5 RID: 47045 RVA: 0x00299894 File Offset: 0x00297A94
+	// Token: 0x06008BAE RID: 35758 RVA: 0x002A3FAC File Offset: 0x002A21AC
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(ECalabashCollectWayType.Quality, new TSortResult(this.SortQuality));

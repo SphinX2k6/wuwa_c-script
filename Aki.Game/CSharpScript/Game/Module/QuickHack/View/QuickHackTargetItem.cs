@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack.View
 {
-	// Token: 0x02004F94 RID: 20372
+	// Token: 0x02003F5D RID: 16221
 	public class QuickHackTargetItem : UiPanelBase
 	{
-		// Token: 0x060342B5 RID: 213685 RVA: 0x00C3F7EC File Offset: 0x00C3D9EC
+		// Token: 0x06029123 RID: 168227 RVA: 0x00B88F98 File Offset: 0x00B87198
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,17 +22,17 @@ namespace CSharpScript.Game.Module.QuickHack.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060342B6 RID: 213686 RVA: 0x00C3F834 File Offset: 0x00C3DA34
+		// Token: 0x06029124 RID: 168228 RVA: 0x00B88FE0 File Offset: 0x00B871E0
 		[NullableContext(1)]
 		public void RefreshTitle(string title)
 		{
 			base.GetText(3).SetText(title, true);
 		}
 
-		// Token: 0x0200B0A8 RID: 45224
+		// Token: 0x02009AD8 RID: 39640
 		private class ETargetItemComponentType
 		{
-			// Token: 0x04035A0F RID: 219663
+			// Token: 0x0403043A RID: 197690
 			public const int TitleText = 3;
 		}
 	}

@@ -10,7 +10,7 @@ using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020028B8 RID: 10424
+// Token: 0x02001E33 RID: 7731
 [Nullable(new byte[]
 {
 	0,
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 {
-	// Token: 0x060157F0 RID: 88048 RVA: 0x0056B97C File Offset: 0x00569B7C
+	// Token: 0x060131F0 RID: 78320 RVA: 0x005967C4 File Offset: 0x005949C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,7 +32,7 @@ public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060157F1 RID: 88049 RVA: 0x0056B9E8 File Offset: 0x00569BE8
+	// Token: 0x060131F1 RID: 78321 RVA: 0x00596830 File Offset: 0x00594A30
 	[NullableContext(1)]
 	public override void Refresh(IRoleSkillInputParam skillInputInfo, bool isSelected, int gridIndex)
 	{
@@ -59,7 +59,7 @@ public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 		}
 	}
 
-	// Token: 0x060157F2 RID: 88050 RVA: 0x0056BA7C File Offset: 0x00569C7C
+	// Token: 0x060131F2 RID: 78322 RVA: 0x005968C4 File Offset: 0x00594AC4
 	private void SetBgActive(bool bActive)
 	{
 		UUIItem item = base.GetItem(1);
@@ -72,7 +72,7 @@ public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 		}
 	}
 
-	// Token: 0x060157F3 RID: 88051 RVA: 0x0056BAAC File Offset: 0x00569CAC
+	// Token: 0x060131F3 RID: 78323 RVA: 0x005968F4 File Offset: 0x00594AF4
 	protected void HandlePcInputText(SkillInput skillInputConfig)
 	{
 		List<string> list = new List<string>();
@@ -112,7 +112,7 @@ public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), skillInputConfig.Description, list.ToArray());
 	}
 
-	// Token: 0x060157F4 RID: 88052 RVA: 0x0056BBD0 File Offset: 0x00569DD0
+	// Token: 0x060131F4 RID: 78324 RVA: 0x00596A18 File Offset: 0x00594C18
 	protected void HandleGamepadInputText(SkillInput skillInputConfig)
 	{
 		List<string> list = new List<string>();
@@ -154,7 +154,7 @@ public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), skillInputConfig.Description, list.ToArray());
 	}
 
-	// Token: 0x060157F5 RID: 88053 RVA: 0x0056BCE8 File Offset: 0x00569EE8
+	// Token: 0x060131F5 RID: 78325 RVA: 0x00596B30 File Offset: 0x00594D30
 	protected void HandleMobileInputText(SkillInput skillInputConfig)
 	{
 		List<string> list = new List<string>();
@@ -197,15 +197,15 @@ public class RoleSkillInputItem : GridProxyAbstract<IRoleSkillInputParam>
 		}, "js_undefined");
 	}
 
-	// Token: 0x0400A038 RID: 41016
+	// Token: 0x0400A421 RID: 42017
 	private int SkillInputId;
 
-	// Token: 0x02008EB7 RID: 36535
+	// Token: 0x020080FE RID: 33022
 	private enum EComponent
 	{
-		// Token: 0x0402E470 RID: 189552
+		// Token: 0x04029B6D RID: 170861
 		NameText,
-		// Token: 0x0402E471 RID: 189553
+		// Token: 0x04029B6E RID: 170862
 		BgItem
 	}
 }

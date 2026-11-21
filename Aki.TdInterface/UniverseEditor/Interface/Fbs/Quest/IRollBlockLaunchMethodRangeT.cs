@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040EF RID: 16623
+	// Token: 0x02004530 RID: 17712
 	public class IRollBlockLaunchMethodRangeT
 	{
-		// Token: 0x1700752B RID: 29995
-		// (get) Token: 0x060183A5 RID: 99237 RVA: 0x0037CFB8 File Offset: 0x0037B1B8
-		// (set) Token: 0x060183A6 RID: 99238 RVA: 0x0037CFC0 File Offset: 0x0037B1C0
+		// Token: 0x17007B31 RID: 31537
+		// (get) Token: 0x06019A46 RID: 105030 RVA: 0x003A6F08 File Offset: 0x003A5108
+		// (set) Token: 0x06019A47 RID: 105031 RVA: 0x003A6F10 File Offset: 0x003A5110
 		public ERollBlockLaunchMethod Type { get; set; }
 
-		// Token: 0x1700752C RID: 29996
-		// (get) Token: 0x060183A7 RID: 99239 RVA: 0x0037CFC9 File Offset: 0x0037B1C9
-		// (set) Token: 0x060183A8 RID: 99240 RVA: 0x0037CFD1 File Offset: 0x0037B1D1
+		// Token: 0x17007B32 RID: 31538
+		// (get) Token: 0x06019A48 RID: 105032 RVA: 0x003A6F19 File Offset: 0x003A5119
+		// (set) Token: 0x06019A49 RID: 105033 RVA: 0x003A6F21 File Offset: 0x003A5121
 		public int TargetId { get; set; }
 
-		// Token: 0x060183A9 RID: 99241 RVA: 0x0037CFDA File Offset: 0x0037B1DA
+		// Token: 0x06019A4A RID: 105034 RVA: 0x003A6F2A File Offset: 0x003A512A
 		public IRollBlockLaunchMethodRangeT()
 		{
 			this.Type = ERollBlockLaunchMethod.Interact;

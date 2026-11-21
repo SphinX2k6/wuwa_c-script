@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C7B RID: 7291
+	// Token: 0x02001E80 RID: 7808
 	public class INpcNewSplineStopTarget_SetValue
 	{
-		// Token: 0x04005ECF RID: 24271
+		// Token: 0x04006422 RID: 25634
 		public ENewSplineMoveTargetType Type;
 
-		// Token: 0x04005ED0 RID: 24272
+		// Token: 0x04006423 RID: 25635
 		public int NpcId;
 	}
 }

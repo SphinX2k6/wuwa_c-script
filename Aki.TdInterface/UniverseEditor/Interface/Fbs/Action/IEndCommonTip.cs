@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200669F RID: 26271
+	// Token: 0x02006D19 RID: 27929
 	public struct IEndCommonTip : IFlatbufferObject
 	{
-		// Token: 0x1700C339 RID: 49977
-		// (get) Token: 0x0602DA91 RID: 187025 RVA: 0x0063F9C5 File Offset: 0x0063DBC5
+		// Token: 0x1700CCEA RID: 52458
+		// (get) Token: 0x060302AE RID: 197294 RVA: 0x0068CC79 File Offset: 0x0068AE79
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA92 RID: 187026 RVA: 0x0063F9D2 File Offset: 0x0063DBD2
+		// Token: 0x060302AF RID: 197295 RVA: 0x0068CC86 File Offset: 0x0068AE86
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DA93 RID: 187027 RVA: 0x0063F9DC File Offset: 0x0063DBDC
+		// Token: 0x060302B0 RID: 197296 RVA: 0x0068CC90 File Offset: 0x0068AE90
 		public static IEndCommonTip GetRootAsIEndCommonTip(ByteBuffer _bb)
 		{
 			return IEndCommonTip.GetRootAsIEndCommonTip(_bb, default(IEndCommonTip));
 		}
 
-		// Token: 0x0602DA94 RID: 187028 RVA: 0x0063F9F8 File Offset: 0x0063DBF8
+		// Token: 0x060302B1 RID: 197297 RVA: 0x0068CCAC File Offset: 0x0068AEAC
 		public static IEndCommonTip GetRootAsIEndCommonTip(ByteBuffer _bb, IEndCommonTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DA95 RID: 187029 RVA: 0x0063FA15 File Offset: 0x0063DC15
+		// Token: 0x060302B2 RID: 197298 RVA: 0x0068CCC9 File Offset: 0x0068AEC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DA96 RID: 187030 RVA: 0x0063FA24 File Offset: 0x0063DC24
+		// Token: 0x060302B3 RID: 197299 RVA: 0x0068CCD8 File Offset: 0x0068AED8
 		public IEndCommonTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C33A RID: 49978
-		// (get) Token: 0x0602DA97 RID: 187031 RVA: 0x0063FA34 File Offset: 0x0063DC34
+		// Token: 0x1700CCEB RID: 52459
+		// (get) Token: 0x060302B4 RID: 197300 RVA: 0x0068CCE8 File Offset: 0x0068AEE8
 		public string Token
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DA98 RID: 187032 RVA: 0x0063FA6B File Offset: 0x0063DC6B
+		// Token: 0x060302B5 RID: 197301 RVA: 0x0068CD1F File Offset: 0x0068AF1F
 		public Span<byte> GetTokenBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602DA99 RID: 187033 RVA: 0x0063FA7A File Offset: 0x0063DC7A
+		// Token: 0x060302B6 RID: 197302 RVA: 0x0068CD2E File Offset: 0x0068AF2E
 		public byte[] GetTokenArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x0602DA9A RID: 187034 RVA: 0x0063FA88 File Offset: 0x0063DC88
+		// Token: 0x060302B7 RID: 197303 RVA: 0x0068CD3C File Offset: 0x0068AF3C
 		public static Offset<IEndCommonTip> CreateIEndCommonTip(FlatBufferBuilder builder, StringOffset TokenOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEndCommonTip.EndIEndCommonTip(builder);
 		}
 
-		// Token: 0x0602DA9B RID: 187035 RVA: 0x0063FA9E File Offset: 0x0063DC9E
+		// Token: 0x060302B8 RID: 197304 RVA: 0x0068CD52 File Offset: 0x0068AF52
 		public static void StartIEndCommonTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602DA9C RID: 187036 RVA: 0x0063FAA7 File Offset: 0x0063DCA7
+		// Token: 0x060302B9 RID: 197305 RVA: 0x0068CD5B File Offset: 0x0068AF5B
 		public static void AddToken(FlatBufferBuilder builder, StringOffset tokenOffset)
 		{
 			builder.AddOffset(0, tokenOffset.Value, 0);
 		}
 
-		// Token: 0x0602DA9D RID: 187037 RVA: 0x0063FAB7 File Offset: 0x0063DCB7
+		// Token: 0x060302BA RID: 197306 RVA: 0x0068CD6B File Offset: 0x0068AF6B
 		public static Offset<IEndCommonTip> EndIEndCommonTip(FlatBufferBuilder builder)
 		{
 			return new Offset<IEndCommonTip>(builder.EndTable());
 		}
 
-		// Token: 0x0602DA9E RID: 187038 RVA: 0x0063FAC4 File Offset: 0x0063DCC4
+		// Token: 0x060302BB RID: 197307 RVA: 0x0068CD78 File Offset: 0x0068AF78
 		public IEndCommonTipT UnPack()
 		{
 			IEndCommonTipT endCommonTipT = new IEndCommonTipT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return endCommonTipT;
 		}
 
-		// Token: 0x0602DA9F RID: 187039 RVA: 0x0063FADF File Offset: 0x0063DCDF
+		// Token: 0x060302BC RID: 197308 RVA: 0x0068CD93 File Offset: 0x0068AF93
 		public void UnPackTo(IEndCommonTipT _o)
 		{
 			_o.Token = this.Token;
 		}
 
-		// Token: 0x0602DAA0 RID: 187040 RVA: 0x0063FAF0 File Offset: 0x0063DCF0
+		// Token: 0x060302BD RID: 197309 RVA: 0x0068CDA4 File Offset: 0x0068AFA4
 		public static Offset<IEndCommonTip> Pack(FlatBufferBuilder builder, IEndCommonTipT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEndCommonTip.CreateIEndCommonTip(builder, tokenOffset);
 		}
 
-		// Token: 0x04010D59 RID: 68953
+		// Token: 0x04011B7F RID: 72575
 		private Table __p;
 	}
 }

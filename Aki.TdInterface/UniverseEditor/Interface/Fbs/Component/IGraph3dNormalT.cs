@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200531F RID: 21279
+	// Token: 0x020058A5 RID: 22693
 	public class IGraph3dNormalT
 	{
-		// Token: 0x17009C3F RID: 39999
-		// (get) Token: 0x06022C4C RID: 142412 RVA: 0x004D1254 File Offset: 0x004CF454
-		// (set) Token: 0x06022C4D RID: 142413 RVA: 0x004D125C File Offset: 0x004CF45C
+		// Token: 0x1700A477 RID: 42103
+		// (get) Token: 0x06024D00 RID: 150784 RVA: 0x0050E128 File Offset: 0x0050C328
+		// (set) Token: 0x06024D01 RID: 150785 RVA: 0x0050E130 File Offset: 0x0050C330
 		public EGraph3dType Type { get; set; }
 
-		// Token: 0x17009C40 RID: 40000
-		// (get) Token: 0x06022C4E RID: 142414 RVA: 0x004D1265 File Offset: 0x004CF465
-		// (set) Token: 0x06022C4F RID: 142415 RVA: 0x004D126D File Offset: 0x004CF46D
+		// Token: 0x1700A478 RID: 42104
+		// (get) Token: 0x06024D02 RID: 150786 RVA: 0x0050E139 File Offset: 0x0050C339
+		// (set) Token: 0x06024D03 RID: 150787 RVA: 0x0050E141 File Offset: 0x0050C341
 		public List<IGraph3dNodeBaseT> Nodes { get; set; }
 
-		// Token: 0x17009C41 RID: 40001
-		// (get) Token: 0x06022C50 RID: 142416 RVA: 0x004D1276 File Offset: 0x004CF476
-		// (set) Token: 0x06022C51 RID: 142417 RVA: 0x004D127E File Offset: 0x004CF47E
+		// Token: 0x1700A479 RID: 42105
+		// (get) Token: 0x06024D04 RID: 150788 RVA: 0x0050E14A File Offset: 0x0050C34A
+		// (set) Token: 0x06024D05 RID: 150789 RVA: 0x0050E152 File Offset: 0x0050C352
 		public List<IGraph3dEdgeBaseT> Edges { get; set; }
 
-		// Token: 0x06022C52 RID: 142418 RVA: 0x004D1287 File Offset: 0x004CF487
+		// Token: 0x06024D06 RID: 150790 RVA: 0x0050E15B File Offset: 0x0050C35B
 		public IGraph3dNormalT()
 		{
 			this.Type = EGraph3dType.Normal;

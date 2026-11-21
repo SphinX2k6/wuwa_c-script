@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CEF RID: 23791
+	// Token: 0x02006323 RID: 25379
 	public enum EFishingMechanismType : byte
 	{
-		// Token: 0x0400F629 RID: 63017
+		// Token: 0x04010378 RID: 66424
 		FishingPoint,
-		// Token: 0x0400F62A RID: 63018
+		// Token: 0x04010379 RID: 66425
 		DynamicFishingPoint
 	}
 }

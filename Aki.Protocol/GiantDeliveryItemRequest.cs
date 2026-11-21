@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020006D7 RID: 1751
+	// Token: 0x020006C3 RID: 1731
 	[NetMessage(EMessageId.GiantDeliveryItemRequest)]
 	public sealed class GiantDeliveryItemRequest : IMessage<GiantDeliveryItemRequest>, IMessage, IEquatable<GiantDeliveryItemRequest>, IDeepCloneable<GiantDeliveryItemRequest>, IBufferMessage
 	{
-		// Token: 0x06009FE3 RID: 40931 RVA: 0x00183435 File Offset: 0x00181635
+		// Token: 0x06009E8D RID: 40589 RVA: 0x00180A01 File Offset: 0x0017EC01
 		[NullableContext(1)]
 		public static GiantDeliveryItemRequest Create()
 		{
 			return new GiantDeliveryItemRequest();
 		}
 
-		// Token: 0x1700201B RID: 8219
-		// (get) Token: 0x06009FE4 RID: 40932 RVA: 0x0018343C File Offset: 0x0018163C
+		// Token: 0x17001FD1 RID: 8145
+		// (get) Token: 0x06009E8E RID: 40590 RVA: 0x00180A08 File Offset: 0x0017EC08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700201C RID: 8220
-		// (get) Token: 0x06009FE5 RID: 40933 RVA: 0x0018343F File Offset: 0x0018163F
+		// Token: 0x17001FD2 RID: 8146
+		// (get) Token: 0x06009E8F RID: 40591 RVA: 0x00180A0B File Offset: 0x0017EC0B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009FE6 RID: 40934 RVA: 0x00183446 File Offset: 0x00181646
+		// Token: 0x06009E90 RID: 40592 RVA: 0x00180A12 File Offset: 0x0017EC12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GiantDeliveryItemRequest()
 		{
 		}
 
-		// Token: 0x06009FE7 RID: 40935 RVA: 0x00183459 File Offset: 0x00181659
+		// Token: 0x06009E91 RID: 40593 RVA: 0x00180A25 File Offset: 0x0017EC25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GiantDeliveryItemRequest(GiantDeliveryItemRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06009FE8 RID: 40936 RVA: 0x0018348F File Offset: 0x0018168F
+		// Token: 0x06009E92 RID: 40594 RVA: 0x00180A5B File Offset: 0x0017EC5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GiantDeliveryItemRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new GiantDeliveryItemRequest(this);
 		}
 
-		// Token: 0x1700201D RID: 8221
-		// (get) Token: 0x06009FE9 RID: 40937 RVA: 0x00183497 File Offset: 0x00181697
-		// (set) Token: 0x06009FEA RID: 40938 RVA: 0x0018349F File Offset: 0x0018169F
+		// Token: 0x17001FD3 RID: 8147
+		// (get) Token: 0x06009E93 RID: 40595 RVA: 0x00180A63 File Offset: 0x0017EC63
+		// (set) Token: 0x06009E94 RID: 40596 RVA: 0x00180A6B File Offset: 0x0017EC6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GiantEcoNetType GiantEcoType
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700201E RID: 8222
-		// (get) Token: 0x06009FEB RID: 40939 RVA: 0x001834A8 File Offset: 0x001816A8
+		// Token: 0x17001FD4 RID: 8148
+		// (get) Token: 0x06009E95 RID: 40597 RVA: 0x00180A74 File Offset: 0x0017EC74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapField<int, int> ItemInfos
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009FEC RID: 40940 RVA: 0x001834B0 File Offset: 0x001816B0
+		// Token: 0x06009E96 RID: 40598 RVA: 0x00180A7C File Offset: 0x0017EC7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GiantDeliveryItemRequest);
 		}
 
-		// Token: 0x06009FED RID: 40941 RVA: 0x001834C0 File Offset: 0x001816C0
+		// Token: 0x06009E97 RID: 40599 RVA: 0x00180A8C File Offset: 0x0017EC8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GiantDeliveryItemRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.GiantEcoType == other.GiantEcoType && this.ItemInfos.Equals(other.ItemInfos) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06009FEE RID: 40942 RVA: 0x00183510 File Offset: 0x00181710
+		// Token: 0x06009E98 RID: 40600 RVA: 0x00180ADC File Offset: 0x0017ECDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009FEF RID: 40943 RVA: 0x00183563 File Offset: 0x00181763
+		// Token: 0x06009E99 RID: 40601 RVA: 0x00180B2F File Offset: 0x0017ED2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06009FF0 RID: 40944 RVA: 0x00183570 File Offset: 0x00181770
+		// Token: 0x06009E9A RID: 40602 RVA: 0x00180B3C File Offset: 0x0017ED3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009FF1 RID: 40945 RVA: 0x0018357C File Offset: 0x0018177C
+		// Token: 0x06009E9B RID: 40603 RVA: 0x00180B48 File Offset: 0x0017ED48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.itemInfos_.WriteTo(ref output, GiantDeliveryItemRequest._map_itemInfos_codec);
 			if (this.GiantEcoType != GiantEcoNetType.Fire)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(56);
 				output.WriteEnum((int)this.GiantEcoType);
 			}
+			this.itemInfos_.WriteTo(ref output, GiantDeliveryItemRequest._map_itemInfos_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06009FF2 RID: 40946 RVA: 0x001835CC File Offset: 0x001817CC
+		// Token: 0x06009E9C RID: 40604 RVA: 0x00180B98 File Offset: 0x0017ED98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009FF3 RID: 40947 RVA: 0x00183620 File Offset: 0x00181820
+		// Token: 0x06009E9D RID: 40605 RVA: 0x00180BEC File Offset: 0x0017EDEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GiantDeliveryItemRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009FF4 RID: 40948 RVA: 0x0018366D File Offset: 0x0018186D
+		// Token: 0x06009E9E RID: 40606 RVA: 0x00180C39 File Offset: 0x0017EE39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009FF5 RID: 40949 RVA: 0x00183678 File Offset: 0x00181878
+		// Token: 0x06009E9F RID: 40607 RVA: 0x00180C44 File Offset: 0x0017EE44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 42U)
+				if (num != 56U)
 				{
-					if (num != 88U)
+					if (num != 122U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.GiantEcoType = (GiantEcoNetType)input.ReadEnum();
+						this.itemInfos_.AddEntriesFrom(ref input, GiantDeliveryItemRequest._map_itemInfos_codec);
 					}
 				}
 				else
 				{
-					this.itemInfos_.AddEntriesFrom(ref input, GiantDeliveryItemRequest._map_itemInfos_codec);
+					this.GiantEcoType = (GiantEcoNetType)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04004A86 RID: 19078
+		// Token: 0x04004A7F RID: 19071
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004A87 RID: 19079
-		public const int GiantEcoTypeFieldNumber = 11;
+		// Token: 0x04004A80 RID: 19072
+		public const int GiantEcoTypeFieldNumber = 7;
 
-		// Token: 0x04004A88 RID: 19080
+		// Token: 0x04004A81 RID: 19073
 		private GiantEcoNetType giantEcoType_;
 
-		// Token: 0x04004A89 RID: 19081
-		public const int ItemInfosFieldNumber = 5;
+		// Token: 0x04004A82 RID: 19074
+		public const int ItemInfosFieldNumber = 15;
 
-		// Token: 0x04004A8A RID: 19082
-		private static readonly MapField<int, int>.Codec _map_itemInfos_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 42U);
+		// Token: 0x04004A83 RID: 19075
+		private static readonly MapField<int, int>.Codec _map_itemInfos_codec = new MapField<int, int>.Codec(FieldCodec.ForInt32(8U, 0), FieldCodec.ForInt32(16U, 0), 122U);
 
-		// Token: 0x04004A8B RID: 19083
+		// Token: 0x04004A84 RID: 19076
 		private readonly MapField<int, int> itemInfos_ = new MapField<int, int>();
 	}
 }

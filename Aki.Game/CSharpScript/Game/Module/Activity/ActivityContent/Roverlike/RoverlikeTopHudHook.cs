@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200614F RID: 24911
+	// Token: 0x020050CD RID: 20685
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeTopHudHook : IBattleTopPanelHook
 	{
-		// Token: 0x0603EF8B RID: 257931 RVA: 0x00F36DF0 File Offset: 0x00F34FF0
+		// Token: 0x06033C4B RID: 212043 RVA: 0x00E7DCC4 File Offset: 0x00E7BEC4
 		public UniTask OnInitAsync(TopPanel topPanel)
 		{
 			RoverlikeTopHudHook.<OnInitAsync>d__2 <OnInitAsync>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnInitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EF8C RID: 257932 RVA: 0x00F36E3B File Offset: 0x00F3503B
+		// Token: 0x06033C4C RID: 212044 RVA: 0x00E7DD0F File Offset: 0x00E7BF0F
 		public void OnShow(TopPanel topPanel)
 		{
 			if (this.HudPanel == null)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.HudPanel.StartShow();
 		}
 
-		// Token: 0x0603EF8D RID: 257933 RVA: 0x00F36E58 File Offset: 0x00F35058
+		// Token: 0x06033C4D RID: 212045 RVA: 0x00E7DD2C File Offset: 0x00E7BF2C
 		public void OnHide(TopPanel topPanel)
 		{
 			RoverlikeBattleTopPanel hudPanel = this.HudPanel;
@@ -48,30 +48,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			hudPanel.EndShow();
 		}
 
-		// Token: 0x0603EF8E RID: 257934 RVA: 0x00F36E6A File Offset: 0x00F3506A
+		// Token: 0x06033C4E RID: 212046 RVA: 0x00E7DD3E File Offset: 0x00E7BF3E
 		public void OnAddEventListener(TopPanel topPanel)
 		{
 		}
 
-		// Token: 0x0603EF8F RID: 257935 RVA: 0x00F36E6C File Offset: 0x00F3506C
+		// Token: 0x06033C4F RID: 212047 RVA: 0x00E7DD40 File Offset: 0x00E7BF40
 		public void OnRemoveEventListener(TopPanel topPanel)
 		{
 		}
 
-		// Token: 0x0603EF90 RID: 257936 RVA: 0x00F36E6E File Offset: 0x00F3506E
+		// Token: 0x06033C50 RID: 212048 RVA: 0x00E7DD42 File Offset: 0x00E7BF42
 		public void OnRefresh(TopPanel topPanel)
 		{
 			this.ApplyHide(true);
 		}
 
-		// Token: 0x0603EF91 RID: 257937 RVA: 0x00F36E77 File Offset: 0x00F35077
+		// Token: 0x06033C51 RID: 212049 RVA: 0x00E7DD4B File Offset: 0x00E7BF4B
 		public void OnReset(TopPanel topPanel)
 		{
 			this.ApplyHide(false);
 			this.HudPanel = null;
 		}
 
-		// Token: 0x0603EF92 RID: 257938 RVA: 0x00F36E88 File Offset: 0x00F35088
+		// Token: 0x06033C52 RID: 212050 RVA: 0x00E7DD5C File Offset: 0x00E7BF5C
 		private void ApplyHide(bool hide)
 		{
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EF93 RID: 257939 RVA: 0x00F36EF4 File Offset: 0x00F350F4
+		// Token: 0x06033C53 RID: 212051 RVA: 0x00E7DDC8 File Offset: 0x00E7BFC8
 		public unsafe RoverlikeTopHudHook()
 		{
 			int num = 7;
@@ -110,11 +110,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base..ctor();
 		}
 
-		// Token: 0x04020DCE RID: 134606
+		// Token: 0x0401B6FB RID: 112379
 		[Nullable(2)]
 		private RoverlikeBattleTopPanel HudPanel;
 
-		// Token: 0x04020DCF RID: 134607
+		// Token: 0x0401B6FC RID: 112380
 		private readonly List<EBattleUiChild> HideChildren;
 	}
 }

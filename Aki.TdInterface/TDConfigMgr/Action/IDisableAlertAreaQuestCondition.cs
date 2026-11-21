@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019A0 RID: 6560
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B27 RID: 6951
 	public class IDisableAlertAreaQuestCondition : IDisableAlertAreaCondition
 	{
-		// Token: 0x06008C61 RID: 35937 RVA: 0x0014965C File Offset: 0x0014785C
+		// Token: 0x06009385 RID: 37765 RVA: 0x00158E6C File Offset: 0x0015706C
 		private IDisableAlertAreaQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C62 RID: 35938 RVA: 0x00149694 File Offset: 0x00147894
+		// Token: 0x06009386 RID: 37766 RVA: 0x00158EA4 File Offset: 0x001570A4
 		public static IDisableAlertAreaQuestCondition Create([Nullable(2)] IDisableAlertAreaQuestCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C63 RID: 35939 RVA: 0x001496A7 File Offset: 0x001478A7
+		// Token: 0x06009387 RID: 37767 RVA: 0x00158EB7 File Offset: 0x001570B7
 		public static IDisableAlertAreaQuestCondition CreateFromSetValue([Nullable(2)] IDisableAlertAreaQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C64 RID: 35940 RVA: 0x001496BA File Offset: 0x001478BA
+		// Token: 0x06009388 RID: 37768 RVA: 0x00158ECA File Offset: 0x001570CA
 		public new IDisableAlertAreaQuestCondition_SetValue ToSetValue()
 		{
 			return new IDisableAlertAreaQuestCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D15 RID: 11541
-		// (get) Token: 0x06008C65 RID: 35941 RVA: 0x001496D9 File Offset: 0x001478D9
-		// (set) Token: 0x06008C66 RID: 35942 RVA: 0x00149704 File Offset: 0x00147904
+		// Token: 0x17002F14 RID: 12052
+		// (get) Token: 0x06009389 RID: 37769 RVA: 0x00158EE9 File Offset: 0x001570E9
+		// (set) Token: 0x0600938A RID: 37770 RVA: 0x00158F14 File Offset: 0x00157114
 		public override EDisableAlertAreaCondition Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D16 RID: 11542
-		// (get) Token: 0x06008C67 RID: 35943 RVA: 0x00149712 File Offset: 0x00147912
-		// (set) Token: 0x06008C68 RID: 35944 RVA: 0x0014973D File Offset: 0x0014793D
+		// Token: 0x17002F15 RID: 12053
+		// (get) Token: 0x0600938B RID: 37771 RVA: 0x00158F22 File Offset: 0x00157122
+		// (set) Token: 0x0600938C RID: 37772 RVA: 0x00158F4D File Offset: 0x0015714D
 		public virtual int RelatedQuestId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005764 RID: 22372
+		// Token: 0x04005BAD RID: 23469
 		[Nullable(2)]
 		protected new IDisableAlertAreaQuestCondition FbInstance;
 
-		// Token: 0x04005765 RID: 22373
+		// Token: 0x04005BAE RID: 23470
 		[Nullable(2)]
 		protected new IDisableAlertAreaQuestCondition_SetValue PocoInterface;
 	}

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF4 RID: 27380
+	// Token: 0x02005C6C RID: 23660
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventAdjustPlayerCameraGravity : LevelEventBase
 	{
-		// Token: 0x0604400B RID: 278539 RVA: 0x010B1AF1 File Offset: 0x010AFCF1
+		// Token: 0x0603A15D RID: 237917 RVA: 0x0105B36D File Offset: 0x0105956D
 		public LevelEventAdjustPlayerCameraGravity(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604400C RID: 278540 RVA: 0x010B1AFC File Offset: 0x010AFCFC
+		// Token: 0x0603A15E RID: 237918 RVA: 0x0105B378 File Offset: 0x01059578
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			AdjustPlayerCameraGravity adjustPlayerCameraGravity = inParams as AdjustPlayerCameraGravity;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.Execute().Forget();
 		}
 
-		// Token: 0x0604400D RID: 278541 RVA: 0x010B1B4C File Offset: 0x010AFD4C
+		// Token: 0x0603A15F RID: 237919 RVA: 0x0105B3C8 File Offset: 0x010595C8
 		private UniTask Execute()
 		{
 			LevelEventAdjustPlayerCameraGravity.<Execute>d__4 <Execute>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <Execute>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604400E RID: 278542 RVA: 0x010B1B90 File Offset: 0x010AFD90
+		// Token: 0x0603A160 RID: 237920 RVA: 0x0105B40C File Offset: 0x0105960C
 		private UniTask WaitForResource()
 		{
 			LevelEventAdjustPlayerCameraGravity.<WaitForResource>d__5 <WaitForResource>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <WaitForResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604400F RID: 278543 RVA: 0x010B1BD4 File Offset: 0x010AFDD4
+		// Token: 0x0603A161 RID: 237921 RVA: 0x0105B450 File Offset: 0x01059650
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadCurveFloat>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044010 RID: 278544 RVA: 0x010B1C18 File Offset: 0x010AFE18
+		// Token: 0x0603A162 RID: 237922 RVA: 0x0105B494 File Offset: 0x01059694
 		private void ApplyCameraGravity()
 		{
 			FightCamera fightCamera = CameraModel.Instance.MainModel.FightCamera;
@@ -120,17 +120,17 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			fightCameraLogicComponent.SetCameraGravityModeByConfig(CameraGravityController.TempCameraGravityConfig);
 		}
 
-		// Token: 0x06044011 RID: 278545 RVA: 0x010B1D64 File Offset: 0x010AFF64
+		// Token: 0x0603A163 RID: 237923 RVA: 0x0105B5E0 File Offset: 0x010597E0
 		protected override void OnReset()
 		{
 			this.LoadedCurveFloat = null;
 		}
 
-		// Token: 0x040238A2 RID: 145570
+		// Token: 0x0401EB44 RID: 125764
 		[Nullable(2)]
 		public AdjustPlayerCameraGravity Params;
 
-		// Token: 0x040238A3 RID: 145571
+		// Token: 0x0401EB45 RID: 125765
 		[Nullable(2)]
 		private UCurveFloat LoadedCurveFloat;
 	}

@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001079 RID: 4217
+// Token: 0x0200052D RID: 1325
 public class GuessJokerSkillItem : UiPanelBase
 {
-	// Token: 0x06006CF6 RID: 27894 RVA: 0x0016125D File Offset: 0x0015F45D
+	// Token: 0x0600408B RID: 16523 RVA: 0x00169B91 File Offset: 0x00167D91
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class GuessJokerSkillItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006CF7 RID: 27895 RVA: 0x00161280 File Offset: 0x0015F480
+	// Token: 0x0600408C RID: 16524 RVA: 0x00169BB4 File Offset: 0x00167DB4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GuessJokerSkillItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -29,7 +29,7 @@ public class GuessJokerSkillItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006CF8 RID: 27896 RVA: 0x001612C3 File Offset: 0x0015F4C3
+	// Token: 0x0600408D RID: 16525 RVA: 0x00169BF7 File Offset: 0x00167DF7
 	protected override void OnStart()
 	{
 		this.ActionItem.SetFunction(delegate(bool? b)
@@ -43,32 +43,32 @@ public class GuessJokerSkillItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06006CF9 RID: 27897 RVA: 0x001612DC File Offset: 0x0015F4DC
+	// Token: 0x0600408E RID: 16526 RVA: 0x00169C10 File Offset: 0x00167E10
 	[NullableContext(1)]
 	public void BindClickCallback(Action callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x06006CFA RID: 27898 RVA: 0x001612E5 File Offset: 0x0015F4E5
+	// Token: 0x0600408F RID: 16527 RVA: 0x00169C19 File Offset: 0x00167E19
 	[NullableContext(1)]
 	public void SetText(string text)
 	{
 		this.ActionItem.SetToggleText(text);
 	}
 
-	// Token: 0x04003274 RID: 12916
+	// Token: 0x0400330D RID: 13069
 	[Nullable(2)]
 	private ToggleActionItem ActionItem;
 
-	// Token: 0x04003275 RID: 12917
+	// Token: 0x0400330E RID: 13070
 	[Nullable(2)]
 	private Action ClickCallback;
 
-	// Token: 0x02007674 RID: 30324
+	// Token: 0x02006808 RID: 26632
 	private static class EComponentDefine
 	{
-		// Token: 0x04027183 RID: 160131
+		// Token: 0x040224CE RID: 140494
 		public const int Interaction = 0;
 	}
 }

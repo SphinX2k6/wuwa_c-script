@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200298B RID: 10635
+	// Token: 0x02002C72 RID: 11378
 	public class PerformerAiSplineMove : ActionParams
 	{
-		// Token: 0x0600EB83 RID: 60291 RVA: 0x00227224 File Offset: 0x00225424
-		[NullableContext(1)]
+		// Token: 0x0600FA01 RID: 64001 RVA: 0x002449B0 File Offset: 0x00242BB0
 		public static PerformerAiSplineMove Create(IPerformerAiSplineMove? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A2F RID: 18991
-		// (get) Token: 0x0600EB84 RID: 60292 RVA: 0x00227244 File Offset: 0x00225444
+		// Token: 0x17004DCB RID: 19915
+		// (get) Token: 0x0600FA02 RID: 64002 RVA: 0x002449D0 File Offset: 0x00242BD0
 		public virtual int? SplineEntityId
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081B5 RID: 33205
+		// Token: 0x0400889A RID: 34970
 		private IPerformerAiSplineMove Instance;
 	}
 }

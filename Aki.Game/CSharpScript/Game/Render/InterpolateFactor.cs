@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045B3 RID: 17843
+	// Token: 0x020034DB RID: 13531
 	public class InterpolateFactor
 	{
-		// Token: 0x17007597 RID: 30103
-		// (get) Token: 0x0602E04C RID: 188492 RVA: 0x00A9938C File Offset: 0x00A9758C
-		// (set) Token: 0x0602E04D RID: 188493 RVA: 0x00A99394 File Offset: 0x00A97594
+		// Token: 0x1700484E RID: 18510
+		// (get) Token: 0x06022736 RID: 141110 RVA: 0x009C55AC File Offset: 0x009C37AC
+		// (set) Token: 0x06022737 RID: 141111 RVA: 0x009C55B4 File Offset: 0x009C37B4
 		public EInterpolateRangeType Type
 		{
 			get
@@ -23,10 +23,10 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018924 RID: 100644
+		// Token: 0x04012F5F RID: 77663
 		private EInterpolateRangeType TypeInternal;
 
-		// Token: 0x04018925 RID: 100645
+		// Token: 0x04012F60 RID: 77664
 		public float Factor;
 	}
 }

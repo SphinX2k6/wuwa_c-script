@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005309 RID: 21257
+	// Token: 0x020042D9 RID: 17113
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueDungeonEntryConfirm : UiPanelBase
 	{
-		// Token: 0x06036613 RID: 222739 RVA: 0x00CDD8A8 File Offset: 0x00CDBAA8
+		// Token: 0x0602B50F RID: 177423 RVA: 0x00C2B278 File Offset: 0x00C29478
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036614 RID: 222740 RVA: 0x00CDD970 File Offset: 0x00CDBB70
+		// Token: 0x0602B510 RID: 177424 RVA: 0x00C2B340 File Offset: 0x00C29540
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueDungeonEntryConfirm.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036615 RID: 222741 RVA: 0x00CDD9B3 File Offset: 0x00CDBBB3
+		// Token: 0x0602B511 RID: 177425 RVA: 0x00C2B383 File Offset: 0x00C29583
 		private void ExtraButtonFunction()
 		{
 			EventSystem.Instance.Emit(EEventName.RogueResEnterInstClicked);
@@ -52,32 +52,32 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			ActivityPermanentRogueModel.Instance.SetCurrentSelectedInst(this.DungeonId);
 		}
 
-		// Token: 0x06036616 RID: 222742 RVA: 0x00CDD9EC File Offset: 0x00CDBBEC
+		// Token: 0x0602B512 RID: 177426 RVA: 0x00C2B3BC File Offset: 0x00C295BC
 		[NullableContext(1)]
 		public void SetLockTextByTextId(string textId, params string[] args)
 		{
 			this.PanelLock.SetTextByTextId(textId, args);
 		}
 
-		// Token: 0x06036617 RID: 222743 RVA: 0x00CDD9FB File Offset: 0x00CDBBFB
+		// Token: 0x0602B513 RID: 177427 RVA: 0x00C2B3CB File Offset: 0x00C295CB
 		public void SetLockSpriteVisible(bool bVisible)
 		{
 			this.PanelLock.SetSpriteVisible(bVisible);
 		}
 
-		// Token: 0x06036618 RID: 222744 RVA: 0x00CDDA09 File Offset: 0x00CDBC09
+		// Token: 0x0602B514 RID: 177428 RVA: 0x00C2B3D9 File Offset: 0x00C295D9
 		public void SetPanelConditionVisible(bool bVisible)
 		{
 			base.GetItem(0).SetUIActive(bVisible);
 		}
 
-		// Token: 0x06036619 RID: 222745 RVA: 0x00CDDA18 File Offset: 0x00CDBC18
+		// Token: 0x0602B515 RID: 177429 RVA: 0x00C2B3E8 File Offset: 0x00C295E8
 		public void SetLockConditionButtonVisible(bool bVisible)
 		{
 			this.PanelLock.SetButtonVisible(bVisible);
 		}
 
-		// Token: 0x0603661A RID: 222746 RVA: 0x00CDDA28 File Offset: 0x00CDBC28
+		// Token: 0x0602B516 RID: 177430 RVA: 0x00C2B3F8 File Offset: 0x00C295F8
 		public void Refresh(int dungeonId)
 		{
 			this.DungeonId = dungeonId;
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			functionButton.SetUiActive(flag);
 		}
 
-		// Token: 0x0401CBA5 RID: 117669
+		// Token: 0x040175DB RID: 95707
 		protected int DungeonId;
 
-		// Token: 0x0401CBA6 RID: 117670
+		// Token: 0x040175DC RID: 95708
 		public ActivityButtonItem FunctionButton;
 
-		// Token: 0x0401CBA7 RID: 117671
+		// Token: 0x040175DD RID: 95709
 		public FunctionalPanelConditionLock PanelLock;
 	}
 }

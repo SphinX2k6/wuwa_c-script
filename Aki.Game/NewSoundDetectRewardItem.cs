@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x0200169A RID: 5786
+// Token: 0x02000B52 RID: 2898
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,7 +12,7 @@ using CSharpScript.Game.Module.Item;
 })]
 public class NewSoundDetectRewardItem : LoopScrollSmallItemGrid<INewSoundDetectRewardItemData>
 {
-	// Token: 0x0600A544 RID: 42308 RVA: 0x0024EABC File Offset: 0x0024CCBC
+	// Token: 0x06007924 RID: 31012 RVA: 0x00258ED8 File Offset: 0x002570D8
 	protected override void OnRefresh(INewSoundDetectRewardItemData data, bool isSelected, int gridIndex)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData.ItemData;
@@ -39,18 +39,18 @@ public class NewSoundDetectRewardItem : LoopScrollSmallItemGrid<INewSoundDetectR
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x0600A545 RID: 42309 RVA: 0x0024EB4E File Offset: 0x0024CD4E
+	// Token: 0x06007925 RID: 31013 RVA: 0x00258F6A File Offset: 0x0025716A
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A546 RID: 42310 RVA: 0x0024EB51 File Offset: 0x0024CD51
+	// Token: 0x06007926 RID: 31014 RVA: 0x00258F6D File Offset: 0x0025716D
 	protected override void OnExtendToggleClicked()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 	}
 
-	// Token: 0x04004ACA RID: 19146
+	// Token: 0x04004B71 RID: 19313
 	private int ConfigId = -1;
 }

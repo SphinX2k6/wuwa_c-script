@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace CSharpScript.Core.Common
 {
-	// Token: 0x02000170 RID: 368
+	// Token: 0x02000175 RID: 373
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +16,7 @@ namespace CSharpScript.Core.Common
 	})]
 	public class HashSetJsonConverter<[Nullable(2)] T> : JsonConverter<HashSet<T>>
 	{
-		// Token: 0x06000CA0 RID: 3232 RVA: 0x0003B290 File Offset: 0x00039490
+		// Token: 0x06000CFB RID: 3323 RVA: 0x0003BF54 File Offset: 0x0003A154
 		public override HashSet<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			if (reader.TokenType != JsonTokenType.StartArray)
@@ -39,10 +38,12 @@ namespace CSharpScript.Core.Common
 			return hashSet;
 		}
 
-		// Token: 0x06000CA1 RID: 3233 RVA: 0x0003B308 File Offset: 0x00039508
+		// Token: 0x06000CFC RID: 3324 RVA: 0x0003BFCC File Offset: 0x0003A1CC
 		public override void Write(Utf8JsonWriter writer, HashSet<T> value, JsonSerializerOptions options)
 		{
-			JsonSerializer.Serialize<T[]>(writer, value.ToArray<T>(), options);
+			T[] array = new T[value.Count];
+			value.CopyTo(array);
+			JsonSerializer.Serialize<T[]>(writer, array, options);
 		}
 	}
 }

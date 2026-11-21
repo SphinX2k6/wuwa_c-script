@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001972 RID: 6514
+// Token: 0x02000E2F RID: 3631
 internal enum EChildType
 {
-	// Token: 0x040055C7 RID: 21959
+	// Token: 0x04005674 RID: 22132
 	TargetTexture
 }

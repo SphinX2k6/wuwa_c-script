@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022EC RID: 8940
+// Token: 0x020017D0 RID: 6096
 [NullableContext(1)]
 [Nullable(0)]
 public class OnlineChallengeStateView : UiTickViewBase
 {
-	// Token: 0x060119D4 RID: 72148 RVA: 0x00451B66 File Offset: 0x0044FD66
+	// Token: 0x0600EE6C RID: 61036 RVA: 0x0045E832 File Offset: 0x0045CA32
 	public OnlineChallengeStateView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060119D5 RID: 72149 RVA: 0x00451B88 File Offset: 0x0044FD88
+	// Token: 0x0600EE6D RID: 61037 RVA: 0x0045E854 File Offset: 0x0045CA54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -35,7 +35,7 @@ public class OnlineChallengeStateView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060119D6 RID: 72150 RVA: 0x00451C34 File Offset: 0x0044FE34
+	// Token: 0x0600EE6E RID: 61038 RVA: 0x0045E900 File Offset: 0x0045CB00
 	protected override void OnStart()
 	{
 		this.CountDownNumber = (float)OnlineModel.Instance.ApplyCd;
@@ -44,19 +44,19 @@ public class OnlineChallengeStateView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x060119D7 RID: 72151 RVA: 0x00451C86 File Offset: 0x0044FE86
+	// Token: 0x0600EE6F RID: 61039 RVA: 0x0045E952 File Offset: 0x0045CB52
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, EContinuingChallenge>(EEventName.PlayerChallengeStateChange, new Action<int, EContinuingChallenge>(this.OnlineTeamPlayerAccept));
 	}
 
-	// Token: 0x060119D8 RID: 72152 RVA: 0x00451CA4 File Offset: 0x0044FEA4
+	// Token: 0x0600EE70 RID: 61040 RVA: 0x0045E970 File Offset: 0x0045CB70
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PlayerChallengeStateChange, new Action<int, EContinuingChallenge>(this.OnlineTeamPlayerAccept));
 	}
 
-	// Token: 0x060119D9 RID: 72153 RVA: 0x00451CC2 File Offset: 0x0044FEC2
+	// Token: 0x0600EE71 RID: 61041 RVA: 0x0045E98E File Offset: 0x0045CB8E
 	protected override void OnBeforeDestroy()
 	{
 		this.CountDownBar = null;
@@ -64,7 +64,7 @@ public class OnlineChallengeStateView : UiTickViewBase
 		this.PlayerStateItemList = new List<OnlineChallengePlayerStateItem>();
 	}
 
-	// Token: 0x060119DA RID: 72154 RVA: 0x00451CE4 File Offset: 0x0044FEE4
+	// Token: 0x0600EE72 RID: 61042 RVA: 0x0045E9B0 File Offset: 0x0045CBB0
 	protected override void OnTick(float delta)
 	{
 		this.CountDownNumber -= delta * (float)TimeUtil.Instance.Millisecond;
@@ -76,7 +76,7 @@ public class OnlineChallengeStateView : UiTickViewBase
 		this.CountDownBar.SetFillAmount(this.CountDownNumber / (float)OnlineModel.Instance.ApplyCd);
 	}
 
-	// Token: 0x060119DB RID: 72155 RVA: 0x00451D40 File Offset: 0x0044FF40
+	// Token: 0x0600EE73 RID: 61043 RVA: 0x0045EA0C File Offset: 0x0045CC0C
 	public void RefreshView()
 	{
 		OnlineTeamData currentTeamListById = OnlineModel.Instance.GetCurrentTeamListById(OnlineModel.Instance.OwnerId);
@@ -100,7 +100,7 @@ public class OnlineChallengeStateView : UiTickViewBase
 		this.PlayerLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x060119DC RID: 72156 RVA: 0x00451E50 File Offset: 0x00450050
+	// Token: 0x0600EE74 RID: 61044 RVA: 0x0045EB1C File Offset: 0x0045CD1C
 	private OnlineChallengePlayerStateItem InitPlayerItem()
 	{
 		OnlineChallengePlayerStateItem onlineChallengePlayerStateItem = new OnlineChallengePlayerStateItem();
@@ -108,7 +108,7 @@ public class OnlineChallengeStateView : UiTickViewBase
 		return onlineChallengePlayerStateItem;
 	}
 
-	// Token: 0x060119DD RID: 72157 RVA: 0x00451E70 File Offset: 0x00450070
+	// Token: 0x0600EE75 RID: 61045 RVA: 0x0045EB3C File Offset: 0x0045CD3C
 	private void OnlineTeamPlayerAccept(int playerId, EContinuingChallenge state)
 	{
 		if (state == EContinuingChallenge.Leave)
@@ -122,10 +122,10 @@ public class OnlineChallengeStateView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x040085B5 RID: 34229
+	// Token: 0x040086F3 RID: 34547
 	private float CountDownNumber = -1f;
 
-	// Token: 0x040085B6 RID: 34230
+	// Token: 0x040086F4 RID: 34548
 	[Nullable(new byte[]
 	{
 		2,
@@ -133,24 +133,24 @@ public class OnlineChallengeStateView : UiTickViewBase
 	})]
 	private GenericLayout<OnlineChallengePlayerStateItem, int> PlayerLayout;
 
-	// Token: 0x040085B7 RID: 34231
+	// Token: 0x040086F5 RID: 34549
 	[Nullable(2)]
 	private UUISprite CountDownBar;
 
-	// Token: 0x040085B8 RID: 34232
+	// Token: 0x040086F6 RID: 34550
 	private List<OnlineChallengePlayerStateItem> PlayerStateItemList = new List<OnlineChallengePlayerStateItem>();
 
-	// Token: 0x02008862 RID: 34914
+	// Token: 0x020079E6 RID: 31206
 	[NullableContext(0)]
 	private enum EOnlineChallengeStateView
 	{
-		// Token: 0x0402C50C RID: 181516
+		// Token: 0x0402780E RID: 161806
 		TitleText,
-		// Token: 0x0402C50D RID: 181517
+		// Token: 0x0402780F RID: 161807
 		PlayerLayout,
-		// Token: 0x0402C50E RID: 181518
+		// Token: 0x04027810 RID: 161808
 		TeamLeaderText,
-		// Token: 0x0402C50F RID: 181519
+		// Token: 0x04027811 RID: 161809
 		CountDownProgressBar
 	}
 }

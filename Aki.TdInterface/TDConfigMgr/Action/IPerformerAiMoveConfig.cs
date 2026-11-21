@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CCE RID: 7374
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001ED5 RID: 7893
 	public class IPerformerAiMoveConfig
 	{
-		// Token: 0x06009E57 RID: 40535 RVA: 0x0016A30C File Offset: 0x0016850C
+		// Token: 0x0600A805 RID: 43013 RVA: 0x0017DF6C File Offset: 0x0017C16C
 		private IPerformerAiMoveConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E58 RID: 40536 RVA: 0x0016A344 File Offset: 0x00168544
+		// Token: 0x0600A806 RID: 43014 RVA: 0x0017DFA4 File Offset: 0x0017C1A4
 		public static IPerformerAiMoveConfig Create([Nullable(2)] IPerformerAiMoveConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E59 RID: 40537 RVA: 0x0016A357 File Offset: 0x00168557
+		// Token: 0x0600A807 RID: 43015 RVA: 0x0017DFB7 File Offset: 0x0017C1B7
 		public static IPerformerAiMoveConfig CreateFromSetValue([Nullable(2)] IPerformerAiMoveConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E5A RID: 40538 RVA: 0x0016A36A File Offset: 0x0016856A
+		// Token: 0x0600A808 RID: 43016 RVA: 0x0017DFCA File Offset: 0x0017C1CA
 		public IPerformerAiMoveConfig_SetValue ToSetValue()
 		{
 			return new IPerformerAiMoveConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700314D RID: 12621
-		// (get) Token: 0x06009E5B RID: 40539 RVA: 0x0016A37D File Offset: 0x0016857D
-		// (set) Token: 0x06009E5C RID: 40540 RVA: 0x0016A3A8 File Offset: 0x001685A8
+		// Token: 0x170033D1 RID: 13265
+		// (get) Token: 0x0600A809 RID: 43017 RVA: 0x0017DFDD File Offset: 0x0017C1DD
+		// (set) Token: 0x0600A80A RID: 43018 RVA: 0x0017E008 File Offset: 0x0017C208
 		public virtual EPerformerAiMoveToType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FB4 RID: 24500
+		// Token: 0x04006510 RID: 25872
 		[Nullable(2)]
 		protected IPerformerAiMoveConfig FbInstance;
 
-		// Token: 0x04005FB5 RID: 24501
+		// Token: 0x04006511 RID: 25873
 		[Nullable(2)]
 		protected IPerformerAiMoveConfig_SetValue PocoInterface;
 	}

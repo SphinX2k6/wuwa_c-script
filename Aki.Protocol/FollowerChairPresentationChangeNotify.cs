@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000617 RID: 1559
+	// Token: 0x02000602 RID: 1538
 	[NetMessage(EMessageId.FollowerChairPresentationChangeNotify)]
 	public sealed class FollowerChairPresentationChangeNotify : IMessage<FollowerChairPresentationChangeNotify>, IMessage, IEquatable<FollowerChairPresentationChangeNotify>, IDeepCloneable<FollowerChairPresentationChangeNotify>, IBufferMessage
 	{
-		// Token: 0x06008FEC RID: 36844 RVA: 0x0015C588 File Offset: 0x0015A788
+		// Token: 0x06008E84 RID: 36484 RVA: 0x00159980 File Offset: 0x00157B80
 		[NullableContext(1)]
 		public static FollowerChairPresentationChangeNotify Create()
 		{
 			return new FollowerChairPresentationChangeNotify();
 		}
 
-		// Token: 0x17001C90 RID: 7312
-		// (get) Token: 0x06008FED RID: 36845 RVA: 0x0015C58F File Offset: 0x0015A78F
+		// Token: 0x17001C43 RID: 7235
+		// (get) Token: 0x06008E85 RID: 36485 RVA: 0x00159987 File Offset: 0x00157B87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C91 RID: 7313
-		// (get) Token: 0x06008FEE RID: 36846 RVA: 0x0015C592 File Offset: 0x0015A792
+		// Token: 0x17001C44 RID: 7236
+		// (get) Token: 0x06008E86 RID: 36486 RVA: 0x0015998A File Offset: 0x00157B8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008FEF RID: 36847 RVA: 0x0015C599 File Offset: 0x0015A799
+		// Token: 0x06008E87 RID: 36487 RVA: 0x00159991 File Offset: 0x00157B91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FollowerChairPresentationChangeNotify()
 		{
 		}
 
-		// Token: 0x06008FF0 RID: 36848 RVA: 0x0015C5A4 File Offset: 0x0015A7A4
+		// Token: 0x06008E88 RID: 36488 RVA: 0x0015999C File Offset: 0x00157B9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FollowerChairPresentationChangeNotify(FollowerChairPresentationChangeNotify other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06008FF1 RID: 36849 RVA: 0x0015C624 File Offset: 0x0015A824
+		// Token: 0x06008E89 RID: 36489 RVA: 0x00159A1C File Offset: 0x00157C1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FollowerChairPresentationChangeNotify Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new FollowerChairPresentationChangeNotify(this);
 		}
 
-		// Token: 0x17001C92 RID: 7314
-		// (get) Token: 0x06008FF2 RID: 36850 RVA: 0x0015C62C File Offset: 0x0015A82C
-		// (set) Token: 0x06008FF3 RID: 36851 RVA: 0x0015C634 File Offset: 0x0015A834
+		// Token: 0x17001C45 RID: 7237
+		// (get) Token: 0x06008E8A RID: 36490 RVA: 0x00159A24 File Offset: 0x00157C24
+		// (set) Token: 0x06008E8B RID: 36491 RVA: 0x00159A2C File Offset: 0x00157C2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C93 RID: 7315
-		// (get) Token: 0x06008FF4 RID: 36852 RVA: 0x0015C63D File Offset: 0x0015A83D
-		// (set) Token: 0x06008FF5 RID: 36853 RVA: 0x0015C645 File Offset: 0x0015A845
+		// Token: 0x17001C46 RID: 7238
+		// (get) Token: 0x06008E8C RID: 36492 RVA: 0x00159A35 File Offset: 0x00157C35
+		// (set) Token: 0x06008E8D RID: 36493 RVA: 0x00159A3D File Offset: 0x00157C3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityId
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C94 RID: 7316
-		// (get) Token: 0x06008FF6 RID: 36854 RVA: 0x0015C64E File Offset: 0x0015A84E
-		// (set) Token: 0x06008FF7 RID: 36855 RVA: 0x0015C656 File Offset: 0x0015A856
+		// Token: 0x17001C47 RID: 7239
+		// (get) Token: 0x06008E8E RID: 36494 RVA: 0x00159A46 File Offset: 0x00157C46
+		// (set) Token: 0x06008E8F RID: 36495 RVA: 0x00159A4E File Offset: 0x00157C4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsShow
@@ -121,9 +121,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C95 RID: 7317
-		// (get) Token: 0x06008FF8 RID: 36856 RVA: 0x0015C65F File Offset: 0x0015A85F
-		// (set) Token: 0x06008FF9 RID: 36857 RVA: 0x0015C667 File Offset: 0x0015A867
+		// Token: 0x17001C48 RID: 7240
+		// (get) Token: 0x06008E90 RID: 36496 RVA: 0x00159A57 File Offset: 0x00157C57
+		// (set) Token: 0x06008E91 RID: 36497 RVA: 0x00159A5F File Offset: 0x00157C5F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Vector Location
@@ -138,9 +138,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001C96 RID: 7318
-		// (get) Token: 0x06008FFA RID: 36858 RVA: 0x0015C670 File Offset: 0x0015A870
-		// (set) Token: 0x06008FFB RID: 36859 RVA: 0x0015C678 File Offset: 0x0015A878
+		// Token: 0x17001C49 RID: 7241
+		// (get) Token: 0x06008E92 RID: 36498 RVA: 0x00159A68 File Offset: 0x00157C68
+		// (set) Token: 0x06008E93 RID: 36499 RVA: 0x00159A70 File Offset: 0x00157C70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public Rotator Rotation
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008FFC RID: 36860 RVA: 0x0015C681 File Offset: 0x0015A881
+		// Token: 0x06008E94 RID: 36500 RVA: 0x00159A79 File Offset: 0x00157C79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FollowerChairPresentationChangeNotify);
 		}
 
-		// Token: 0x06008FFD RID: 36861 RVA: 0x0015C690 File Offset: 0x0015A890
+		// Token: 0x06008E95 RID: 36501 RVA: 0x00159A88 File Offset: 0x00157C88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FollowerChairPresentationChangeNotify other)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && this.EntityId == other.EntityId && this.IsShow == other.IsShow && object.Equals(this.Location, other.Location) && object.Equals(this.Rotation, other.Rotation) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06008FFE RID: 36862 RVA: 0x0015C714 File Offset: 0x0015A914
+		// Token: 0x06008E96 RID: 36502 RVA: 0x00159B0C File Offset: 0x00157D0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008FFF RID: 36863 RVA: 0x0015C7B1 File Offset: 0x0015A9B1
+		// Token: 0x06008E97 RID: 36503 RVA: 0x00159BA9 File Offset: 0x00157DA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06009000 RID: 36864 RVA: 0x0015C7BE File Offset: 0x0015A9BE
+		// Token: 0x06008E98 RID: 36504 RVA: 0x00159BB6 File Offset: 0x00157DB6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -220,35 +220,35 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06009001 RID: 36865 RVA: 0x0015C7C8 File Offset: 0x0015A9C8
+		// Token: 0x06008E99 RID: 36505 RVA: 0x00159BC0 File Offset: 0x00157DC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.location_ != null)
+			if (this.IsShow)
 			{
-				output.WriteRawTag(42);
-				output.WriteMessage(this.Location);
+				output.WriteRawTag(8);
+				output.WriteBool(this.IsShow);
 			}
 			if (this.PlayerId != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.PlayerId);
 			}
 			if (this.rotation_ != null)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(50);
 				output.WriteMessage(this.Rotation);
-			}
-			if (this.IsShow)
-			{
-				output.WriteRawTag(88);
-				output.WriteBool(this.IsShow);
 			}
 			if (this.EntityId != 0L)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(112);
 				output.WriteInt64(this.EntityId);
+			}
+			if (this.location_ != null)
+			{
+				output.WriteRawTag(122);
+				output.WriteMessage(this.Location);
 			}
 			if (this._unknownFields != null)
 			{
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06009002 RID: 36866 RVA: 0x0015C878 File Offset: 0x0015AA78
+		// Token: 0x06008E9A RID: 36506 RVA: 0x00159C6C File Offset: 0x00157E6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06009003 RID: 36867 RVA: 0x0015C90C File Offset: 0x0015AB0C
+		// Token: 0x06008E9B RID: 36507 RVA: 0x00159D00 File Offset: 0x00157F00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FollowerChairPresentationChangeNotify other)
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06009004 RID: 36868 RVA: 0x0015C9C8 File Offset: 0x0015ABC8
+		// Token: 0x06008E9C RID: 36508 RVA: 0x00159DBC File Offset: 0x00157FBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -337,7 +337,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06009005 RID: 36869 RVA: 0x0015C9D4 File Offset: 0x0015ABD4
+		// Token: 0x06008E9D RID: 36509 RVA: 0x00159DC8 File Offset: 0x00157FC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -349,18 +349,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 56U)
+				if (num <= 40U)
 				{
-					if (num == 42U)
+					if (num == 8U)
 					{
-						if (this.location_ == null)
-						{
-							this.Location = new Vector();
-						}
-						input.ReadMessage(this.Location);
+						this.IsShow = input.ReadBool();
 						continue;
 					}
-					if (num == 56U)
+					if (num == 40U)
 					{
 						this.PlayerId = input.ReadInt32();
 						continue;
@@ -368,7 +364,7 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 82U)
+					if (num == 50U)
 					{
 						if (this.rotation_ == null)
 						{
@@ -377,14 +373,18 @@ namespace Aki.Protocol
 						input.ReadMessage(this.Rotation);
 						continue;
 					}
-					if (num == 88U)
-					{
-						this.IsShow = input.ReadBool();
-						continue;
-					}
-					if (num == 96U)
+					if (num == 112U)
 					{
 						this.EntityId = input.ReadInt64();
+						continue;
+					}
+					if (num == 122U)
+					{
+						if (this.location_ == null)
+						{
+							this.Location = new Vector();
+						}
+						input.ReadMessage(this.Location);
 						continue;
 					}
 				}
@@ -392,37 +392,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040045BF RID: 17855
+		// Token: 0x040045B5 RID: 17845
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040045C0 RID: 17856
-		public const int PlayerIdFieldNumber = 7;
+		// Token: 0x040045B6 RID: 17846
+		public const int PlayerIdFieldNumber = 5;
 
-		// Token: 0x040045C1 RID: 17857
+		// Token: 0x040045B7 RID: 17847
 		private int playerId_;
 
-		// Token: 0x040045C2 RID: 17858
-		public const int EntityIdFieldNumber = 12;
+		// Token: 0x040045B8 RID: 17848
+		public const int EntityIdFieldNumber = 14;
 
-		// Token: 0x040045C3 RID: 17859
+		// Token: 0x040045B9 RID: 17849
 		private long entityId_;
 
-		// Token: 0x040045C4 RID: 17860
-		public const int IsShowFieldNumber = 11;
+		// Token: 0x040045BA RID: 17850
+		public const int IsShowFieldNumber = 1;
 
-		// Token: 0x040045C5 RID: 17861
+		// Token: 0x040045BB RID: 17851
 		private bool isShow_;
 
-		// Token: 0x040045C6 RID: 17862
-		public const int LocationFieldNumber = 5;
+		// Token: 0x040045BC RID: 17852
+		public const int LocationFieldNumber = 15;
 
-		// Token: 0x040045C7 RID: 17863
+		// Token: 0x040045BD RID: 17853
 		private Vector location_;
 
-		// Token: 0x040045C8 RID: 17864
-		public const int RotationFieldNumber = 10;
+		// Token: 0x040045BE RID: 17854
+		public const int RotationFieldNumber = 6;
 
-		// Token: 0x040045C9 RID: 17865
+		// Token: 0x040045BF RID: 17855
 		private Rotator rotation_;
 	}
 }

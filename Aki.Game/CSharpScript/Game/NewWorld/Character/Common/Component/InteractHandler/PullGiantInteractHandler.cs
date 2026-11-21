@@ -5,16 +5,16 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007114 RID: 28948
+	// Token: 0x02006342 RID: 25410
 	public class PullGiantInteractHandler : ManipulateInteractHandlerBase
 	{
-		// Token: 0x06046ABC RID: 289468 RVA: 0x011CA3E6 File Offset: 0x011C85E6
+		// Token: 0x0603D901 RID: 252161 RVA: 0x011D31EA File Offset: 0x011D13EA
 		[NullableContext(1)]
 		public PullGiantInteractHandler(IManipulateInteractContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06046ABD RID: 289469 RVA: 0x011CA3F0 File Offset: 0x011C85F0
+		// Token: 0x0603D902 RID: 252162 RVA: 0x011D31F4 File Offset: 0x011D13F4
 		public override bool Start()
 		{
 			if (!this.Context.CheckBeforeInteract(EExploreSkillInteractType.PullGiant))
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return true;
 		}
 
-		// Token: 0x06046ABE RID: 289470 RVA: 0x011CA480 File Offset: 0x011C8680
+		// Token: 0x0603D903 RID: 252163 RVA: 0x011D3284 File Offset: 0x011D1484
 		public override void End()
 		{
 			this.Context.Interacting = false;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.Context.RequestInteractAction();
 		}
 
-		// Token: 0x04025189 RID: 151945
+		// Token: 0x04020A69 RID: 133737
 		private const int BUFF_REMOVE_DELAY_MS = 200;
 	}
 }

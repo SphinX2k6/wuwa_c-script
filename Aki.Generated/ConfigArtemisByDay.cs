@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000B2 RID: 178
+	// Token: 0x020000BA RID: 186
 	public class ConfigArtemisByDay : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600042D RID: 1069 RVA: 0x00071503 File Offset: 0x0006F703
+		// Token: 0x0600045D RID: 1117 RVA: 0x00075DB7 File Offset: 0x00073FB7
 		static ConfigArtemisByDay()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigArtemisByDay.CreateStaticDefaultValue), new Action(ConfigArtemisByDay.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600042E RID: 1070 RVA: 0x00071524 File Offset: 0x0006F724
+		// Token: 0x0600045E RID: 1118 RVA: 0x00075DD8 File Offset: 0x00073FD8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigArtemisByDay.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600042F RID: 1071 RVA: 0x000715A3 File Offset: 0x0006F7A3
+		// Token: 0x0600045F RID: 1119 RVA: 0x00075E57 File Offset: 0x00074057
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigArtemisByDay.LogPair = null;
 			ConfigArtemisByDay.HandleId = 0;
 		}
 
-		// Token: 0x06000430 RID: 1072 RVA: 0x000715B1 File Offset: 0x0006F7B1
+		// Token: 0x06000460 RID: 1120 RVA: 0x00075E65 File Offset: 0x00074065
 		public static void Init()
 		{
 			ConfigArtemisByDay.HandleId = ConfigCommon.InitDataStatement(ConfigArtemisByDay.HandleId, "db_artemis.db", "select BinData from `Artemis` where ActivityId=? AND UnlockDay=?");
 		}
 
-		// Token: 0x06000431 RID: 1073 RVA: 0x000715CC File Offset: 0x0006F7CC
+		// Token: 0x06000461 RID: 1121 RVA: 0x00075E80 File Offset: 0x00074080
 		public static Artemis? GetConfig(int p0ActivityId, int p1UnlockDay, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigArtemisByDay.HandleId, ConfigArtemisByDay.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new Artemis?(rootAsArtemis);
 		}
 
-		// Token: 0x040004C2 RID: 1218
+		// Token: 0x040004FA RID: 1274
 		private const string DB = "db_artemis.db";
 
-		// Token: 0x040004C3 RID: 1219
+		// Token: 0x040004FB RID: 1275
 		private const string FILE = "a.爱弥斯预热签到活动.xlsx";
 
-		// Token: 0x040004C4 RID: 1220
+		// Token: 0x040004FC RID: 1276
 		private const string TABLE = "Artemis";
 
-		// Token: 0x040004C5 RID: 1221
+		// Token: 0x040004FD RID: 1277
 		private const string COMMAND = "select BinData from `Artemis` where ActivityId=? AND UnlockDay=?";
 
-		// Token: 0x040004C6 RID: 1222
+		// Token: 0x040004FE RID: 1278
 		private const string KEY_PREFIX = "ArtemisByDay";
 
-		// Token: 0x040004C7 RID: 1223
+		// Token: 0x040004FF RID: 1279
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040004C8 RID: 1224
+		// Token: 0x04000500 RID: 1280
 		private static int HandleId;
 	}
 }

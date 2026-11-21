@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071D2 RID: 29138
+	// Token: 0x02006287 RID: 25223
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PathDrivenTrackRuntimeBuilder : IClear
 	{
-		// Token: 0x060474EC RID: 292076 RVA: 0x01221DE0 File Offset: 0x0121FFE0
+		// Token: 0x0603CDEE RID: 249326 RVA: 0x0117BC14 File Offset: 0x01179E14
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return <BuildTrackSetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060474ED RID: 292077 RVA: 0x01221E56 File Offset: 0x01220056
+		// Token: 0x0603CDEF RID: 249327 RVA: 0x0117BC8A File Offset: 0x01179E8A
 		public void CancelBuild()
 		{
 			this.BuildToken++;
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.CancelPendingCurveLoads();
 		}
 
-		// Token: 0x060474EE RID: 292078 RVA: 0x01221E77 File Offset: 0x01220077
+		// Token: 0x0603CDF0 RID: 249328 RVA: 0x0117BCAB File Offset: 0x01179EAB
 		public bool ClearObject()
 		{
 			this.CancelBuild();
 			return true;
 		}
 
-		// Token: 0x060474EF RID: 292079 RVA: 0x01221E80 File Offset: 0x01220080
+		// Token: 0x0603CDF1 RID: 249329 RVA: 0x0117BCB4 File Offset: 0x01179EB4
 		private List<IPathDrivenSplinePrepareData> BuildTrackPrepareDataList(int? ownerPbDataId, IReadOnlyList<int> splineEntityIds, bool allowClosedLoopTrack, bool isFollowSplineDir)
 		{
 			List<IPathDrivenSplinePrepareData> list = new List<IPathDrivenSplinePrepareData>();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return list;
 		}
 
-		// Token: 0x060474F0 RID: 292080 RVA: 0x01221EC4 File Offset: 0x012200C4
+		// Token: 0x0603CDF2 RID: 249330 RVA: 0x0117BCF8 File Offset: 0x01179EF8
 		[NullableContext(2)]
 		private unsafe IPathDrivenSplinePrepareData BuildSingleTrackPrepareData(int? ownerPbDataId, int splineEntityId, bool allowClosedLoopTrack, bool isFollowSplineDir)
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			};
 		}
 
-		// Token: 0x060474F1 RID: 292081 RVA: 0x012221A0 File Offset: 0x012203A0
+		// Token: 0x0603CDF3 RID: 249331 RVA: 0x0117BFD4 File Offset: 0x0117A1D4
 		[return: Nullable(2)]
 		private unsafe IPathDrivenSplineRuntimeData BuildSingleTrackRuntimeData(int ownerEntityId, int? ownerPbDataId, IPathDrivenSplinePrepareData trackPrepareData)
 		{
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			};
 		}
 
-		// Token: 0x060474F2 RID: 292082 RVA: 0x012223DC File Offset: 0x012205DC
+		// Token: 0x0603CDF4 RID: 249332 RVA: 0x0117C210 File Offset: 0x0117A410
 		[return: Nullable(2)]
 		private SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam CreateMoveParamFromConfig(USplineComponent splineComponent, ISceneItemSplineMoveConfig splineMoveConfig, [Nullable(new byte[]
 		{
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return sceneItemSplineMoveAtConstantTimeParam;
 		}
 
-		// Token: 0x060474F3 RID: 292083 RVA: 0x01222408 File Offset: 0x01220608
+		// Token: 0x0603CDF5 RID: 249333 RVA: 0x0117C23C File Offset: 0x0117A43C
 		private List<string> CollectCurvePathsForConfig(ISceneItemSplineMoveConfig splineMoveConfig)
 		{
 			HashSet<string> hashSet = new HashSet<string>();
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return list;
 		}
 
-		// Token: 0x060474F4 RID: 292084 RVA: 0x012224E0 File Offset: 0x012206E0
+		// Token: 0x0603CDF6 RID: 249334 RVA: 0x0117C314 File Offset: 0x0117A514
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return dictionary;
 		}
 
-		// Token: 0x060474F5 RID: 292085 RVA: 0x012225B8 File Offset: 0x012207B8
+		// Token: 0x0603CDF7 RID: 249335 RVA: 0x0117C3EC File Offset: 0x0117A5EC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return request.Promise.Promise;
 		}
 
-		// Token: 0x060474F6 RID: 292086 RVA: 0x012226F8 File Offset: 0x012208F8
+		// Token: 0x0603CDF8 RID: 249336 RVA: 0x0117C52C File Offset: 0x0117A72C
 		private void CancelPendingCurveLoads()
 		{
 			List<IPathDrivenCurveLoadRequest> list = new List<IPathDrivenCurveLoadRequest>();
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x060474F7 RID: 292087 RVA: 0x012227AC File Offset: 0x012209AC
+		// Token: 0x0603CDF9 RID: 249337 RVA: 0x0117C5E0 File Offset: 0x0117A7E0
 		private void ReleaseSingleSpline(int ownerEntityId, int splineEntityId)
 		{
 			GameSplineModel instance = GameSplineModel.Instance;
@@ -384,10 +384,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			instance.ReleaseSpline(splineEntityId, (long)ownerEntityId, EIdType.EntityId);
 		}
 
-		// Token: 0x040257F4 RID: 153588
+		// Token: 0x04020463 RID: 132195
 		private int BuildToken;
 
-		// Token: 0x040257F5 RID: 153589
+		// Token: 0x04020464 RID: 132196
 		[Nullable(new byte[]
 		{
 			1,
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 		})]
 		private readonly Dictionary<string, UCurveFloat> CurveCache = new Dictionary<string, UCurveFloat>();
 
-		// Token: 0x040257F6 RID: 153590
+		// Token: 0x04020465 RID: 132197
 		private readonly Dictionary<string, IPathDrivenCurveLoadRequest> CurveLoadRequestMap = new Dictionary<string, IPathDrivenCurveLoadRequest>();
 	}
 }

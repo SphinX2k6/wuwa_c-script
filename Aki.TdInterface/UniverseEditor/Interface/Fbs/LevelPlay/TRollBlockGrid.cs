@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004614 RID: 17940
+	// Token: 0x02004A7C RID: 19068
 	public enum TRollBlockGrid : byte
 	{
-		// Token: 0x0400C72B RID: 50987
+		// Token: 0x0400D15A RID: 53594
 		NONE,
-		// Token: 0x0400C72C RID: 50988
+		// Token: 0x0400D15B RID: 53595
 		IRollBlockGridBreakTrigger,
-		// Token: 0x0400C72D RID: 50989
+		// Token: 0x0400D15C RID: 53596
 		IRollBlockGridEmpty,
-		// Token: 0x0400C72E RID: 50990
+		// Token: 0x0400D15D RID: 53597
 		IRollBlockGridFallFloor,
-		// Token: 0x0400C72F RID: 50991
+		// Token: 0x0400D15E RID: 53598
 		IRollBlockGridFloor,
-		// Token: 0x0400C730 RID: 50992
+		// Token: 0x0400D15F RID: 53599
 		IRollBlockGridGoal,
-		// Token: 0x0400C731 RID: 50993
+		// Token: 0x0400D160 RID: 53600
 		IRollBlockGridJumpFloor,
-		// Token: 0x0400C732 RID: 50994
+		// Token: 0x0400D161 RID: 53601
 		IRollBlockGridLaser,
-		// Token: 0x0400C733 RID: 50995
+		// Token: 0x0400D162 RID: 53602
 		IRollBlockGridLinkGoal,
-		// Token: 0x0400C734 RID: 50996
+		// Token: 0x0400D163 RID: 53603
 		IRollBlockGridQuantum
 	}
 }

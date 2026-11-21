@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000506 RID: 1286
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200056D RID: 1389
 	public class IMonsterGachaSlot
 	{
-		// Token: 0x06001A22 RID: 6690 RVA: 0x0004C864 File Offset: 0x0004AA64
+		// Token: 0x06001C1E RID: 7198 RVA: 0x00051620 File Offset: 0x0004F820
 		private IMonsterGachaSlot_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A23 RID: 6691 RVA: 0x0004C89C File Offset: 0x0004AA9C
+		// Token: 0x06001C1F RID: 7199 RVA: 0x00051658 File Offset: 0x0004F858
 		public static IMonsterGachaSlot Create([Nullable(2)] IMonsterGachaSlot instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A24 RID: 6692 RVA: 0x0004C8AF File Offset: 0x0004AAAF
+		// Token: 0x06001C20 RID: 7200 RVA: 0x0005166B File Offset: 0x0004F86B
 		public static IMonsterGachaSlot CreateFromSetValue([Nullable(2)] IMonsterGachaSlot_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A25 RID: 6693 RVA: 0x0004C8C2 File Offset: 0x0004AAC2
+		// Token: 0x06001C21 RID: 7201 RVA: 0x0005167E File Offset: 0x0004F87E
 		public IMonsterGachaSlot_SetValue ToSetValue()
 		{
 			return new IMonsterGachaSlot_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006E7 RID: 1767
-		// (get) Token: 0x06001A26 RID: 6694 RVA: 0x0004C8D8 File Offset: 0x0004AAD8
-		// (set) Token: 0x06001A27 RID: 6695 RVA: 0x0004C939 File Offset: 0x0004AB39
+		// Token: 0x1700076A RID: 1898
+		// (get) Token: 0x06001C22 RID: 7202 RVA: 0x00051694 File Offset: 0x0004F894
+		// (set) Token: 0x06001C23 RID: 7203 RVA: 0x000516F5 File Offset: 0x0004F8F5
 		public virtual VectorInfo Pos
 		{
 			get
@@ -90,18 +88,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001303 RID: 4867
+		// Token: 0x0400146D RID: 5229
 		[Nullable(2)]
 		protected IMonsterGachaSlot FbInstance;
 
-		// Token: 0x04001304 RID: 4868
+		// Token: 0x0400146E RID: 5230
 		[Nullable(2)]
 		protected IMonsterGachaSlot_SetValue PocoInterface;
 
-		// Token: 0x04001305 RID: 4869
+		// Token: 0x0400146F RID: 5231
 		private VectorInfo _PosCache;
 
-		// Token: 0x04001306 RID: 4870
+		// Token: 0x04001470 RID: 5232
 		private bool _PosInited;
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AD0 RID: 15056
+	// Token: 0x02003ED2 RID: 16082
 	public class ISelfVarRefT
 	{
-		// Token: 0x17006749 RID: 26441
-		// (get) Token: 0x060147BD RID: 83901 RVA: 0x002FBE55 File Offset: 0x002FA055
-		// (set) Token: 0x060147BE RID: 83902 RVA: 0x002FBE5D File Offset: 0x002FA05D
+		// Token: 0x17006CE4 RID: 27876
+		// (get) Token: 0x06015C67 RID: 89191 RVA: 0x003220E5 File Offset: 0x003202E5
+		// (set) Token: 0x06015C68 RID: 89192 RVA: 0x003220ED File Offset: 0x003202ED
 		public EVar Type { get; set; }
 
-		// Token: 0x1700674A RID: 26442
-		// (get) Token: 0x060147BF RID: 83903 RVA: 0x002FBE66 File Offset: 0x002FA066
-		// (set) Token: 0x060147C0 RID: 83904 RVA: 0x002FBE6E File Offset: 0x002FA06E
+		// Token: 0x17006CE5 RID: 27877
+		// (get) Token: 0x06015C69 RID: 89193 RVA: 0x003220F6 File Offset: 0x003202F6
+		// (set) Token: 0x06015C6A RID: 89194 RVA: 0x003220FE File Offset: 0x003202FE
 		public EVarRefSource Source { get; set; }
 
-		// Token: 0x1700674B RID: 26443
-		// (get) Token: 0x060147C1 RID: 83905 RVA: 0x002FBE77 File Offset: 0x002FA077
-		// (set) Token: 0x060147C2 RID: 83906 RVA: 0x002FBE7F File Offset: 0x002FA07F
+		// Token: 0x17006CE6 RID: 27878
+		// (get) Token: 0x06015C6B RID: 89195 RVA: 0x00322107 File Offset: 0x00320307
+		// (set) Token: 0x06015C6C RID: 89196 RVA: 0x0032210F File Offset: 0x0032030F
 		public string Name { get; set; }
 
-		// Token: 0x060147C3 RID: 83907 RVA: 0x002FBE88 File Offset: 0x002FA088
+		// Token: 0x06015C6D RID: 89197 RVA: 0x00322118 File Offset: 0x00320318
 		public ISelfVarRefT()
 		{
 			this.Type = EVar.Boolean;

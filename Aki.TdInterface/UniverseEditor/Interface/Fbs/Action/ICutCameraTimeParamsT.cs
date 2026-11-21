@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006520 RID: 25888
+	// Token: 0x02006B8E RID: 27534
 	public class ICutCameraTimeParamsT
 	{
-		// Token: 0x1700C07D RID: 49277
-		// (get) Token: 0x0602CE8D RID: 183949 RVA: 0x0062ADB2 File Offset: 0x00628FB2
-		// (set) Token: 0x0602CE8E RID: 183950 RVA: 0x0062ADBA File Offset: 0x00628FBA
+		// Token: 0x1700CA0F RID: 51727
+		// (get) Token: 0x0602F62B RID: 194091 RVA: 0x0067725E File Offset: 0x0067545E
+		// (set) Token: 0x0602F62C RID: 194092 RVA: 0x00677266 File Offset: 0x00675466
 		public float CutStayTime { get; set; }
 
-		// Token: 0x0602CE8F RID: 183951 RVA: 0x0062ADC3 File Offset: 0x00628FC3
+		// Token: 0x0602F62D RID: 194093 RVA: 0x0067726F File Offset: 0x0067546F
 		public ICutCameraTimeParamsT()
 		{
 			this.CutStayTime = 0f;

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200297E RID: 10622
+	// Token: 0x02002C64 RID: 11364
 	public class IResetEntityConfig
 	{
-		// Token: 0x0600EB56 RID: 60246 RVA: 0x00226D12 File Offset: 0x00224F12
-		[NullableContext(1)]
+		// Token: 0x0600F9D1 RID: 63953 RVA: 0x0024446A File Offset: 0x0024266A
 		public static IResetEntityConfig Create(IResetEntityConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A1C RID: 18972
-		// (get) Token: 0x0600EB57 RID: 60247 RVA: 0x00226D31 File Offset: 0x00224F31
+		// Token: 0x17004DB7 RID: 19895
+		// (get) Token: 0x0600F9D2 RID: 63954 RVA: 0x00244489 File Offset: 0x00242689
 		public virtual EResetEntityType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400819A RID: 33178
+		// Token: 0x0400887E RID: 34942
 		private IResetEntityConfig Instance;
 	}
 }

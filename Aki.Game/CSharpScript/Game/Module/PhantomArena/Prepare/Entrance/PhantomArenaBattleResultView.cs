@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200515A RID: 20826
+	// Token: 0x0200412A RID: 16682
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleResultView : UiViewBase
 	{
-		// Token: 0x060353DA RID: 218074 RVA: 0x00C9ADF2 File Offset: 0x00C98FF2
+		// Token: 0x0602A2D6 RID: 172758 RVA: 0x00BE82F2 File Offset: 0x00BE64F2
 		public PhantomArenaBattleResultView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060353DB RID: 218075 RVA: 0x00C9ADFC File Offset: 0x00C98FFC
+		// Token: 0x0602A2D7 RID: 172759 RVA: 0x00BE82FC File Offset: 0x00BE64FC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x060353DC RID: 218076 RVA: 0x00C9B014 File Offset: 0x00C99214
+		// Token: 0x0602A2D8 RID: 172760 RVA: 0x00BE8514 File Offset: 0x00BE6714
 		protected override void OnStart()
 		{
 			BattleResultViewOpenParam battleResultViewOpenParam = this.OpenParam as BattleResultViewOpenParam;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.ExpTweenComponent = new ExpTweenComponent(base.GetSprite(16), base.GetSprite(10), base.GetSprite(17), null, null);
 		}
 
-		// Token: 0x060353DD RID: 218077 RVA: 0x00C9B096 File Offset: 0x00C99296
+		// Token: 0x0602A2D9 RID: 172761 RVA: 0x00BE8596 File Offset: 0x00BE6796
 		protected override void OnBeforeShow()
 		{
 			UUIItem item = base.GetItem(19);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshAll();
 		}
 
-		// Token: 0x060353DE RID: 218078 RVA: 0x00C9B0B4 File Offset: 0x00C992B4
+		// Token: 0x0602A2DA RID: 172762 RVA: 0x00BE85B4 File Offset: 0x00BE67B4
 		protected override void OnAfterShow()
 		{
 			PhantomBattleBoardSettleNotify result = this.Result;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.UiViewSequence.PlaySequence(sequenceName, false, null);
 		}
 
-		// Token: 0x060353DF RID: 218079 RVA: 0x00C9B130 File Offset: 0x00C99330
+		// Token: 0x0602A2DB RID: 172763 RVA: 0x00BE8630 File Offset: 0x00BE6830
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ExpTweenComponent != null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.UiViewSequence.RemoveSequenceFinishEvent(sequenceName, new Action<string>(this.OnSequenceShowFinish));
 		}
 
-		// Token: 0x060353E0 RID: 218080 RVA: 0x00C9B199 File Offset: 0x00C99399
+		// Token: 0x0602A2DC RID: 172764 RVA: 0x00BE8699 File Offset: 0x00BE6899
 		private void RefreshAll()
 		{
 			this.RefreshViewTitle();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshPointsSkill();
 		}
 
-		// Token: 0x060353E1 RID: 218081 RVA: 0x00C9B1B0 File Offset: 0x00C993B0
+		// Token: 0x0602A2DD RID: 172765 RVA: 0x00BE86B0 File Offset: 0x00BE68B0
 		private void RefreshViewTitle()
 		{
 			PhantomBattleBoardSettleNotify result = this.Result;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060353E2 RID: 218082 RVA: 0x00C9B2B8 File Offset: 0x00C994B8
+		// Token: 0x0602A2DE RID: 172766 RVA: 0x00BE87B8 File Offset: 0x00BE69B8
 		private void RefreshLevelTitle()
 		{
 			int beforeLv = this.Result.Reward.BeforeLv;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetText(9).SetText(newText2, true);
 		}
 
-		// Token: 0x060353E3 RID: 218083 RVA: 0x00C9B4A8 File Offset: 0x00C996A8
+		// Token: 0x0602A2DF RID: 172767 RVA: 0x00BE89A8 File Offset: 0x00BE6BA8
 		private void RefreshPointsSkill()
 		{
 			int beforeLv = this.Result.Reward.BeforeLv;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			base.GetItem(11).SetUIActive(beforeLv != afterLv);
 		}
 
-		// Token: 0x060353E4 RID: 218084 RVA: 0x00C9B604 File Offset: 0x00C99804
+		// Token: 0x0602A2E0 RID: 172768 RVA: 0x00BE8B04 File Offset: 0x00BE6D04
 		private void PlayExpTween()
 		{
 			if (this.Result.Reward.AddExp <= 0)
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.ExpTweenComponent.PlayExpTween(num2, num, 0f, LTweenEase.InOutSine);
 		}
 
-		// Token: 0x060353E5 RID: 218085 RVA: 0x00C9B6C2 File Offset: 0x00C998C2
+		// Token: 0x0602A2E1 RID: 172769 RVA: 0x00BE8BC2 File Offset: 0x00BE6DC2
 		private void OnSequenceShowFinish(string _)
 		{
 			this.PlayExpTween();
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.PlayTitleSequence();
 		}
 
-		// Token: 0x060353E6 RID: 218086 RVA: 0x00C9B6D8 File Offset: 0x00C998D8
+		// Token: 0x0602A2E2 RID: 172770 RVA: 0x00BE8BD8 File Offset: 0x00BE6DD8
 		private void PlayUnlockSequence()
 		{
 			int beforeLv = this.Result.Reward.BeforeLv;
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.UiViewSequence.PlaySequence("Unlock", false, null);
 		}
 
-		// Token: 0x060353E7 RID: 218087 RVA: 0x00C9B724 File Offset: 0x00C99924
+		// Token: 0x0602A2E3 RID: 172771 RVA: 0x00BE8C24 File Offset: 0x00BE6E24
 		private void PlayTitleSequence()
 		{
 			int beforeLv = this.Result.Reward.BeforeLv;
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.UiViewSequence.PlaySequence("NameChange", false, null);
 		}
 
-		// Token: 0x060353E8 RID: 218088 RVA: 0x00C9B7A0 File Offset: 0x00C999A0
+		// Token: 0x0602A2E4 RID: 172772 RVA: 0x00BE8CA0 File Offset: 0x00BE6EA0
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
 			int afterLv = this.Result.Reward.AfterLv;
@@ -283,89 +283,89 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060353E9 RID: 218089 RVA: 0x00C9B853 File Offset: 0x00C99A53
+		// Token: 0x0602A2E5 RID: 172773 RVA: 0x00BE8D53 File Offset: 0x00BE6F53
 		private void OnClickClose()
 		{
 			base.CloseMe(this.CallbackOnClose);
 		}
 
-		// Token: 0x0401C54B RID: 116043
+		// Token: 0x04016F80 RID: 94080
 		[Nullable(2)]
 		private ExpTweenComponent ExpTweenComponent;
 
-		// Token: 0x0401C54C RID: 116044
+		// Token: 0x04016F81 RID: 94081
 		[Nullable(2)]
 		private PhantomBattleBoardSettleNotify Result;
 
-		// Token: 0x0401C54D RID: 116045
+		// Token: 0x04016F82 RID: 94082
 		[Nullable(2)]
 		private Action<bool> CallbackOnClose;
 
-		// Token: 0x0200B2BB RID: 45755
+		// Token: 0x02009CF4 RID: 40180
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04036249 RID: 221769
+			// Token: 0x04030C9E RID: 199838
 			public const int TextViewTitle = 0;
 
-			// Token: 0x0403624A RID: 221770
+			// Token: 0x04030C9F RID: 199839
 			public const int BtnClose = 1;
 
-			// Token: 0x0403624B RID: 221771
+			// Token: 0x04030CA0 RID: 199840
 			public const int TextLevel = 2;
 
-			// Token: 0x0403624C RID: 221772
+			// Token: 0x04030CA1 RID: 199841
 			public const int PanelLevelUp = 3;
 
-			// Token: 0x0403624D RID: 221773
+			// Token: 0x04030CA2 RID: 199842
 			public const int TextLevelBofore = 4;
 
-			// Token: 0x0403624E RID: 221774
+			// Token: 0x04030CA3 RID: 199843
 			public const int TextLevelAfter = 5;
 
-			// Token: 0x0403624F RID: 221775
+			// Token: 0x04030CA4 RID: 199844
 			public const int PanelPlayerTitle = 6;
 
-			// Token: 0x04036250 RID: 221776
+			// Token: 0x04030CA5 RID: 199845
 			public const int TextPlayerTitle = 7;
 
-			// Token: 0x04036251 RID: 221777
+			// Token: 0x04030CA6 RID: 199846
 			public const int TextExpUp = 8;
 
-			// Token: 0x04036252 RID: 221778
+			// Token: 0x04030CA7 RID: 199847
 			public const int TextExpAll = 9;
 
-			// Token: 0x04036253 RID: 221779
+			// Token: 0x04030CA8 RID: 199848
 			public const int SpriteNextExp = 10;
 
-			// Token: 0x04036254 RID: 221780
+			// Token: 0x04030CA9 RID: 199849
 			public const int PanelUnlock = 11;
 
-			// Token: 0x04036255 RID: 221781
+			// Token: 0x04030CAA RID: 199850
 			public const int TextUnlock = 12;
 
-			// Token: 0x04036256 RID: 221782
+			// Token: 0x04030CAB RID: 199851
 			public const int PanelPoints = 13;
 
-			// Token: 0x04036257 RID: 221783
+			// Token: 0x04030CAC RID: 199852
 			public const int TextPointsOld = 14;
 
-			// Token: 0x04036258 RID: 221784
+			// Token: 0x04030CAD RID: 199853
 			public const int TextPointsNew = 15;
 
-			// Token: 0x04036259 RID: 221785
+			// Token: 0x04030CAE RID: 199854
 			public const int SpriteCurrExp = 16;
 
-			// Token: 0x0403625A RID: 221786
+			// Token: 0x04030CAF RID: 199855
 			public const int SpriteAddExp = 17;
 
-			// Token: 0x0403625B RID: 221787
+			// Token: 0x04030CB0 RID: 199856
 			public const int TextPointsAdd = 18;
 
-			// Token: 0x0403625C RID: 221788
+			// Token: 0x04030CB1 RID: 199857
 			public const int ItemScorePanel = 19;
 
-			// Token: 0x0403625D RID: 221789
+			// Token: 0x04030CB2 RID: 199858
 			public const int TextWinReason = 20;
 		}
 	}

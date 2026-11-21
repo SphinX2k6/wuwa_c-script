@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000337 RID: 823
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200037E RID: 894
 	public class IEntityStateAudioConfig
 	{
-		// Token: 0x06001036 RID: 4150 RVA: 0x00038544 File Offset: 0x00036744
+		// Token: 0x06001168 RID: 4456 RVA: 0x0003B510 File Offset: 0x00039710
 		private IEntityStateAudioConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001037 RID: 4151 RVA: 0x0003857C File Offset: 0x0003677C
+		// Token: 0x06001169 RID: 4457 RVA: 0x0003B548 File Offset: 0x00039748
 		public static IEntityStateAudioConfig Create([Nullable(2)] IEntityStateAudioConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001038 RID: 4152 RVA: 0x0003858F File Offset: 0x0003678F
+		// Token: 0x0600116A RID: 4458 RVA: 0x0003B55B File Offset: 0x0003975B
 		public static IEntityStateAudioConfig CreateFromSetValue([Nullable(2)] IEntityStateAudioConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001039 RID: 4153 RVA: 0x000385A4 File Offset: 0x000367A4
+		// Token: 0x0600116B RID: 4459 RVA: 0x0003B570 File Offset: 0x00039770
 		public IEntityStateAudioConfig_SetValue ToSetValue()
 		{
 			return new IEntityStateAudioConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004A5 RID: 1189
-		// (get) Token: 0x0600103A RID: 4154 RVA: 0x000385F2 File Offset: 0x000367F2
-		// (set) Token: 0x0600103B RID: 4155 RVA: 0x0003861D File Offset: 0x0003681D
+		// Token: 0x170004F3 RID: 1267
+		// (get) Token: 0x0600116C RID: 4460 RVA: 0x0003B5BE File Offset: 0x000397BE
+		// (set) Token: 0x0600116D RID: 4461 RVA: 0x0003B5E9 File Offset: 0x000397E9
 		public virtual string State
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A6 RID: 1190
-		// (get) Token: 0x0600103C RID: 4156 RVA: 0x0003862B File Offset: 0x0003682B
-		// (set) Token: 0x0600103D RID: 4157 RVA: 0x00038656 File Offset: 0x00036856
+		// Token: 0x170004F4 RID: 1268
+		// (get) Token: 0x0600116E RID: 4462 RVA: 0x0003B5F7 File Offset: 0x000397F7
+		// (set) Token: 0x0600116F RID: 4463 RVA: 0x0003B622 File Offset: 0x00039822
 		public virtual string AkEvent
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A7 RID: 1191
-		// (get) Token: 0x0600103E RID: 4158 RVA: 0x00038664 File Offset: 0x00036864
-		// (set) Token: 0x0600103F RID: 4159 RVA: 0x0003868B File Offset: 0x0003688B
+		// Token: 0x170004F5 RID: 1269
+		// (get) Token: 0x06001170 RID: 4464 RVA: 0x0003B630 File Offset: 0x00039830
+		// (set) Token: 0x06001171 RID: 4465 RVA: 0x0003B657 File Offset: 0x00039857
 		[Nullable(2)]
 		public virtual string LeaveAkEvent
 		{
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A8 RID: 1192
-		// (get) Token: 0x06001040 RID: 4160 RVA: 0x0003869C File Offset: 0x0003689C
-		// (set) Token: 0x06001041 RID: 4161 RVA: 0x000386FD File Offset: 0x000368FD
+		// Token: 0x170004F6 RID: 1270
+		// (get) Token: 0x06001172 RID: 4466 RVA: 0x0003B668 File Offset: 0x00039868
+		// (set) Token: 0x06001173 RID: 4467 RVA: 0x0003B6C9 File Offset: 0x000398C9
 		[Nullable(2)]
 		public virtual IAudioFade AudioFade
 		{
@@ -169,9 +167,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A9 RID: 1193
-		// (get) Token: 0x06001042 RID: 4162 RVA: 0x00038714 File Offset: 0x00036914
-		// (set) Token: 0x06001043 RID: 4163 RVA: 0x0003874E File Offset: 0x0003694E
+		// Token: 0x170004F7 RID: 1271
+		// (get) Token: 0x06001174 RID: 4468 RVA: 0x0003B6E0 File Offset: 0x000398E0
+		// (set) Token: 0x06001175 RID: 4469 RVA: 0x0003B71A File Offset: 0x0003991A
 		public virtual bool? IsBanVehicleRadio
 		{
 			get
@@ -193,18 +191,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DA6 RID: 3494
+		// Token: 0x04000E91 RID: 3729
 		[Nullable(2)]
 		protected IEntityStateAudioConfig FbInstance;
 
-		// Token: 0x04000DA7 RID: 3495
+		// Token: 0x04000E92 RID: 3730
 		[Nullable(2)]
 		protected IEntityStateAudioConfig_SetValue PocoInterface;
 
-		// Token: 0x04000DA8 RID: 3496
+		// Token: 0x04000E93 RID: 3731
 		private IAudioFade _AudioFadeCache;
 
-		// Token: 0x04000DA9 RID: 3497
+		// Token: 0x04000E94 RID: 3732
 		private bool _AudioFadeInited;
 	}
 }

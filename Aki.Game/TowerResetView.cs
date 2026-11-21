@@ -7,16 +7,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002C01 RID: 11265
+// Token: 0x0200217C RID: 8572
 public class TowerResetView : UiViewBase
 {
-	// Token: 0x0601765F RID: 95839 RVA: 0x005F5067 File Offset: 0x005F3267
+	// Token: 0x06015090 RID: 86160 RVA: 0x00621B8F File Offset: 0x0061FD8F
 	[NullableContext(1)]
 	public TowerResetView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017660 RID: 95840 RVA: 0x005F5078 File Offset: 0x005F3278
+	// Token: 0x06015091 RID: 86161 RVA: 0x00621BA0 File Offset: 0x0061FDA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -45,19 +45,19 @@ public class TowerResetView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06017661 RID: 95841 RVA: 0x005F51A4 File Offset: 0x005F33A4
+	// Token: 0x06015092 RID: 86162 RVA: 0x00621CCC File Offset: 0x0061FECC
 	protected override void OnStart()
 	{
 		this.InitView();
 	}
 
-	// Token: 0x06017662 RID: 95842 RVA: 0x005F51AC File Offset: 0x005F33AC
+	// Token: 0x06015093 RID: 86163 RVA: 0x00621CD4 File Offset: 0x0061FED4
 	protected override void OnBeforeDestroy()
 	{
 		this.RoleLayout = null;
 	}
 
-	// Token: 0x06017663 RID: 95843 RVA: 0x005F51B8 File Offset: 0x005F33B8
+	// Token: 0x06015094 RID: 86164 RVA: 0x00621CE0 File Offset: 0x0061FEE0
 	private void InitView()
 	{
 		this.TowerId = (int)this.OpenParam;
@@ -84,30 +84,30 @@ public class TowerResetView : UiViewBase
 		base.GetText(2).SetText((difficultyStars - floorData.Star).ToString(), true);
 	}
 
-	// Token: 0x06017664 RID: 95844 RVA: 0x005F52E4 File Offset: 0x005F34E4
+	// Token: 0x06015095 RID: 86165 RVA: 0x00621E0C File Offset: 0x0062000C
 	[NullableContext(1)]
 	private TowerResetItem RefreshItem()
 	{
 		return new TowerResetItem();
 	}
 
-	// Token: 0x06017665 RID: 95845 RVA: 0x005F52EB File Offset: 0x005F34EB
+	// Token: 0x06015096 RID: 86166 RVA: 0x00621E13 File Offset: 0x00620013
 	private void OnClickCancelButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06017666 RID: 95846 RVA: 0x005F52F4 File Offset: 0x005F34F4
+	// Token: 0x06015097 RID: 86167 RVA: 0x00621E1C File Offset: 0x0062001C
 	private void OnClickConfirmButton()
 	{
 		TowerController.Instance.TowerResetRequest(this.TowerId);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400AF0A RID: 44810
+	// Token: 0x0400B30F RID: 45839
 	private int TowerId = -1;
 
-	// Token: 0x0400AF0B RID: 44811
+	// Token: 0x0400B310 RID: 45840
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,18 +115,18 @@ public class TowerResetView : UiViewBase
 	})]
 	private GenericLayout<TowerResetItem, int> RoleLayout;
 
-	// Token: 0x020091C8 RID: 37320
+	// Token: 0x0200840B RID: 33803
 	private enum EChildType
 	{
-		// Token: 0x0402F2B7 RID: 193207
+		// Token: 0x0402A9B8 RID: 174520
 		RoleLayout,
-		// Token: 0x0402F2B8 RID: 193208
+		// Token: 0x0402A9B9 RID: 174521
 		CurrentStarText,
-		// Token: 0x0402F2B9 RID: 193209
+		// Token: 0x0402A9BA RID: 174522
 		ChangeToStarText,
-		// Token: 0x0402F2BA RID: 193210
+		// Token: 0x0402A9BB RID: 174523
 		CancelButton,
-		// Token: 0x0402F2BB RID: 193211
+		// Token: 0x0402A9BC RID: 174524
 		ConfirmButton
 	}
 }

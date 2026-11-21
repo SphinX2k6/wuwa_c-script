@@ -1,10 +1,10 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02002515 RID: 9493
+// Token: 0x020019FC RID: 6652
 public class PhoneMsgInputTimeData
 {
-	// Token: 0x06013150 RID: 78160 RVA: 0x004BACBB File Offset: 0x004B8EBB
+	// Token: 0x0601060F RID: 67087 RVA: 0x004C8A1F File Offset: 0x004C6C1F
 	public PhoneMsgInputTimeData(PhoneInputTime config)
 	{
 		this.DelayTime = config.DelayTime;
@@ -12,7 +12,7 @@ public class PhoneMsgInputTimeData
 		this.MaxChatNum = config.EndChatNum;
 	}
 
-	// Token: 0x06013151 RID: 78161 RVA: 0x004BACEA File Offset: 0x004B8EEA
+	// Token: 0x06010610 RID: 67088 RVA: 0x004C8A4E File Offset: 0x004C6C4E
 	public int GetDelayTime(int chatNum)
 	{
 		if (this.MinChatNum <= chatNum && (this.MaxChatNum == 0 || chatNum < this.MaxChatNum))
@@ -22,12 +22,12 @@ public class PhoneMsgInputTimeData
 		return -1;
 	}
 
-	// Token: 0x04008FF3 RID: 36851
+	// Token: 0x04009147 RID: 37191
 	public int DelayTime;
 
-	// Token: 0x04008FF4 RID: 36852
+	// Token: 0x04009148 RID: 37192
 	public int MinChatNum;
 
-	// Token: 0x04008FF5 RID: 36853
+	// Token: 0x04009149 RID: 37193
 	public int MaxChatNum;
 }

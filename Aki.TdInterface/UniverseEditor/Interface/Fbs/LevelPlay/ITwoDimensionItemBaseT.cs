@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045DC RID: 17884
+	// Token: 0x02004A44 RID: 19012
 	public class ITwoDimensionItemBaseT
 	{
-		// Token: 0x17007F27 RID: 32551
-		// (get) Token: 0x0601B123 RID: 110883 RVA: 0x003DBA35 File Offset: 0x003D9C35
-		// (set) Token: 0x0601B124 RID: 110884 RVA: 0x003DBA3D File Offset: 0x003D9C3D
+		// Token: 0x17008568 RID: 34152
+		// (get) Token: 0x0601C8F8 RID: 116984 RVA: 0x00407CD1 File Offset: 0x00405ED1
+		// (set) Token: 0x0601C8F9 RID: 116985 RVA: 0x00407CD9 File Offset: 0x00405ED9
 		public int Id { get; set; }
 
-		// Token: 0x17007F28 RID: 32552
-		// (get) Token: 0x0601B125 RID: 110885 RVA: 0x003DBA46 File Offset: 0x003D9C46
-		// (set) Token: 0x0601B126 RID: 110886 RVA: 0x003DBA4E File Offset: 0x003D9C4E
+		// Token: 0x17008569 RID: 34153
+		// (get) Token: 0x0601C8FA RID: 116986 RVA: 0x00407CE2 File Offset: 0x00405EE2
+		// (set) Token: 0x0601C8FB RID: 116987 RVA: 0x00407CEA File Offset: 0x00405EEA
 		public ETwoDimensionLevelType Type { get; set; }
 
-		// Token: 0x17007F29 RID: 32553
-		// (get) Token: 0x0601B127 RID: 110887 RVA: 0x003DBA57 File Offset: 0x003D9C57
-		// (set) Token: 0x0601B128 RID: 110888 RVA: 0x003DBA5F File Offset: 0x003D9C5F
+		// Token: 0x1700856A RID: 34154
+		// (get) Token: 0x0601C8FC RID: 116988 RVA: 0x00407CF3 File Offset: 0x00405EF3
+		// (set) Token: 0x0601C8FD RID: 116989 RVA: 0x00407CFB File Offset: 0x00405EFB
 		public ITwoDimensionTransformT Transform { get; set; }
 
-		// Token: 0x0601B129 RID: 110889 RVA: 0x003DBA68 File Offset: 0x003D9C68
+		// Token: 0x0601C8FE RID: 116990 RVA: 0x00407D04 File Offset: 0x00405F04
 		public ITwoDimensionItemBaseT()
 		{
 			this.Id = 0;

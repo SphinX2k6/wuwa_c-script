@@ -4,12 +4,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020018DB RID: 6363
+// Token: 0x02000D94 RID: 3476
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsCharacterData : ItemTipsData
 {
-	// Token: 0x0600BAA4 RID: 47780 RVA: 0x002A4A6C File Offset: 0x002A2C6C
+	// Token: 0x06008E8D RID: 36493 RVA: 0x002AF1E8 File Offset: 0x002AD3E8
 	public TipsCharacterData(ItemTipsParam data) : base(data)
 	{
 		this.ItemType = EItemTipsType.Character;
@@ -27,39 +27,39 @@ public class TipsCharacterData : ItemTipsData
 		this.RoleIntroduction = roleConfig.Value.Introduction;
 	}
 
-	// Token: 0x0600BAA5 RID: 47781 RVA: 0x002A4B3C File Offset: 0x002A2D3C
+	// Token: 0x06008E8E RID: 36494 RVA: 0x002AF2B8 File Offset: 0x002AD4B8
 	public string GetRoleName()
 	{
 		return this.RoleName;
 	}
 
-	// Token: 0x0600BAA6 RID: 47782 RVA: 0x002A4B44 File Offset: 0x002A2D44
+	// Token: 0x06008E8F RID: 36495 RVA: 0x002AF2C0 File Offset: 0x002AD4C0
 	public ElementInfo GetElementConfig()
 	{
 		return this.ElementConfig.Value;
 	}
 
-	// Token: 0x0600BAA7 RID: 47783 RVA: 0x002A4B51 File Offset: 0x002A2D51
+	// Token: 0x06008E90 RID: 36496 RVA: 0x002AF2CD File Offset: 0x002AD4CD
 	public string GetHeadTexutePath()
 	{
 		return this.RoleHeadTexturePath;
 	}
 
-	// Token: 0x0600BAA8 RID: 47784 RVA: 0x002A4B59 File Offset: 0x002A2D59
+	// Token: 0x06008E91 RID: 36497 RVA: 0x002AF2D5 File Offset: 0x002AD4D5
 	public string GetRoleIntroduction()
 	{
 		return this.RoleIntroduction;
 	}
 
-	// Token: 0x040054C6 RID: 21702
+	// Token: 0x04005571 RID: 21873
 	private readonly string RoleName = "";
 
-	// Token: 0x040054C7 RID: 21703
+	// Token: 0x04005572 RID: 21874
 	private readonly ElementInfo? ElementConfig;
 
-	// Token: 0x040054C8 RID: 21704
+	// Token: 0x04005573 RID: 21875
 	private readonly string RoleHeadTexturePath = "";
 
-	// Token: 0x040054C9 RID: 21705
+	// Token: 0x04005574 RID: 21876
 	private readonly string RoleIntroduction = "";
 }

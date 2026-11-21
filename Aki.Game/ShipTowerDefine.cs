@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002994 RID: 10644
+// Token: 0x02001F0F RID: 7951
 public class ShipTowerDefine
 {
-	// Token: 0x0400A40F RID: 41999
+	// Token: 0x0400A7F9 RID: 43001
 	public const int SHIP_TOWER_MARK_ID = 302001;
 
-	// Token: 0x0400A410 RID: 42000
+	// Token: 0x0400A7FA RID: 43002
 	public const int SHIP_TOWER_ZERO_SEASON = 0;
 
-	// Token: 0x0400A411 RID: 42001
+	// Token: 0x0400A7FB RID: 43003
 	public const int SHIP_TOWER_HELP_ID = 201;
 
-	// Token: 0x0400A412 RID: 42002
+	// Token: 0x0400A7FC RID: 43004
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<string, ShipTowerScoreGrade> shipTowerScoreGradeMap = new Dictionary<string, ShipTowerScoreGrade>

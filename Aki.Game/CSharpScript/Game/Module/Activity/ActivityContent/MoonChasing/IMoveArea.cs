@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006470 RID: 25712
+	// Token: 0x020053EE RID: 21486
 	public interface IMoveArea
 	{
-		// Token: 0x17009491 RID: 38033
-		// (get) Token: 0x060409BE RID: 264638
-		// (set) Token: 0x060409BF RID: 264639
+		// Token: 0x170067F3 RID: 26611
+		// (get) Token: 0x0603567F RID: 218751
+		// (set) Token: 0x06035680 RID: 218752
 		double MinX { get; set; }
 
-		// Token: 0x17009492 RID: 38034
-		// (get) Token: 0x060409C0 RID: 264640
-		// (set) Token: 0x060409C1 RID: 264641
+		// Token: 0x170067F4 RID: 26612
+		// (get) Token: 0x06035681 RID: 218753
+		// (set) Token: 0x06035682 RID: 218754
 		double MaxX { get; set; }
 
-		// Token: 0x17009493 RID: 38035
-		// (get) Token: 0x060409C2 RID: 264642
-		// (set) Token: 0x060409C3 RID: 264643
+		// Token: 0x170067F5 RID: 26613
+		// (get) Token: 0x06035683 RID: 218755
+		// (set) Token: 0x06035684 RID: 218756
 		double MinY { get; set; }
 
-		// Token: 0x17009494 RID: 38036
-		// (get) Token: 0x060409C4 RID: 264644
-		// (set) Token: 0x060409C5 RID: 264645
+		// Token: 0x170067F6 RID: 26614
+		// (get) Token: 0x06035685 RID: 218757
+		// (set) Token: 0x06035686 RID: 218758
 		double MaxY { get; set; }
 	}
 }

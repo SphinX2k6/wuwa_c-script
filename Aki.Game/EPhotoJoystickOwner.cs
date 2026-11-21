@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020025A2 RID: 9634
+// Token: 0x02001A8D RID: 6797
 public enum EPhotoJoystickOwner
 {
-	// Token: 0x0400934A RID: 37706
+	// Token: 0x040094A2 RID: 38050
 	CameraMove,
-	// Token: 0x0400934B RID: 37707
+	// Token: 0x040094A3 RID: 38051
 	Navigation,
-	// Token: 0x0400934C RID: 37708
+	// Token: 0x040094A4 RID: 38052
 	Sticker,
-	// Token: 0x0400934D RID: 37709
+	// Token: 0x040094A5 RID: 38053
 	Cursor
 }

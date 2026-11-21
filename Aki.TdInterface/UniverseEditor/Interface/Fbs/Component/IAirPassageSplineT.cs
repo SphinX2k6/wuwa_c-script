@@ -3,70 +3,70 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E8A RID: 20106
+	// Token: 0x0200539B RID: 21403
 	public class IAirPassageSplineT
 	{
-		// Token: 0x1700901F RID: 36895
-		// (get) Token: 0x0601FA04 RID: 129540 RVA: 0x00467B70 File Offset: 0x00465D70
-		// (set) Token: 0x0601FA05 RID: 129541 RVA: 0x00467B78 File Offset: 0x00465D78
+		// Token: 0x17009758 RID: 38744
+		// (get) Token: 0x0602164F RID: 136783 RVA: 0x0049BB88 File Offset: 0x00499D88
+		// (set) Token: 0x06021650 RID: 136784 RVA: 0x0049BB90 File Offset: 0x00499D90
 		public ESplineType Type { get; set; }
 
-		// Token: 0x17009020 RID: 36896
-		// (get) Token: 0x0601FA06 RID: 129542 RVA: 0x00467B81 File Offset: 0x00465D81
-		// (set) Token: 0x0601FA07 RID: 129543 RVA: 0x00467B89 File Offset: 0x00465D89
+		// Token: 0x17009759 RID: 38745
+		// (get) Token: 0x06021651 RID: 136785 RVA: 0x0049BB99 File Offset: 0x00499D99
+		// (set) Token: 0x06021652 RID: 136786 RVA: 0x0049BBA1 File Offset: 0x00499DA1
 		public string MiddleLineEffect { get; set; }
 
-		// Token: 0x17009021 RID: 36897
-		// (get) Token: 0x0601FA08 RID: 129544 RVA: 0x00467B92 File Offset: 0x00465D92
-		// (set) Token: 0x0601FA09 RID: 129545 RVA: 0x00467B9A File Offset: 0x00465D9A
+		// Token: 0x1700975A RID: 38746
+		// (get) Token: 0x06021653 RID: 136787 RVA: 0x0049BBAA File Offset: 0x00499DAA
+		// (set) Token: 0x06021654 RID: 136788 RVA: 0x0049BBB2 File Offset: 0x00499DB2
 		public string TailCircleEffect { get; set; }
 
-		// Token: 0x17009022 RID: 36898
-		// (get) Token: 0x0601FA0A RID: 129546 RVA: 0x00467BA3 File Offset: 0x00465DA3
-		// (set) Token: 0x0601FA0B RID: 129547 RVA: 0x00467BAB File Offset: 0x00465DAB
+		// Token: 0x1700975B RID: 38747
+		// (get) Token: 0x06021655 RID: 136789 RVA: 0x0049BBBB File Offset: 0x00499DBB
+		// (set) Token: 0x06021656 RID: 136790 RVA: 0x0049BBC3 File Offset: 0x00499DC3
 		public string MiddleCircleEffect { get; set; }
 
-		// Token: 0x17009023 RID: 36899
-		// (get) Token: 0x0601FA0C RID: 129548 RVA: 0x00467BB4 File Offset: 0x00465DB4
-		// (set) Token: 0x0601FA0D RID: 129549 RVA: 0x00467BBC File Offset: 0x00465DBC
+		// Token: 0x1700975C RID: 38748
+		// (get) Token: 0x06021657 RID: 136791 RVA: 0x0049BBCC File Offset: 0x00499DCC
+		// (set) Token: 0x06021658 RID: 136792 RVA: 0x0049BBD4 File Offset: 0x00499DD4
 		public string MiddleCircleOverlyingEffect { get; set; }
 
-		// Token: 0x17009024 RID: 36900
-		// (get) Token: 0x0601FA0E RID: 129550 RVA: 0x00467BC5 File Offset: 0x00465DC5
-		// (set) Token: 0x0601FA0F RID: 129551 RVA: 0x00467BCD File Offset: 0x00465DCD
+		// Token: 0x1700975D RID: 38749
+		// (get) Token: 0x06021659 RID: 136793 RVA: 0x0049BBDD File Offset: 0x00499DDD
+		// (set) Token: 0x0602165A RID: 136794 RVA: 0x0049BBE5 File Offset: 0x00499DE5
 		public float MiddleCircleSpace { get; set; }
 
-		// Token: 0x17009025 RID: 36901
-		// (get) Token: 0x0601FA10 RID: 129552 RVA: 0x00467BD6 File Offset: 0x00465DD6
-		// (set) Token: 0x0601FA11 RID: 129553 RVA: 0x00467BDE File Offset: 0x00465DDE
+		// Token: 0x1700975E RID: 38750
+		// (get) Token: 0x0602165B RID: 136795 RVA: 0x0049BBEE File Offset: 0x00499DEE
+		// (set) Token: 0x0602165C RID: 136796 RVA: 0x0049BBF6 File Offset: 0x00499DF6
 		public float MiddleCircleRadius { get; set; }
 
-		// Token: 0x17009026 RID: 36902
-		// (get) Token: 0x0601FA12 RID: 129554 RVA: 0x00467BE7 File Offset: 0x00465DE7
-		// (set) Token: 0x0601FA13 RID: 129555 RVA: 0x00467BEF File Offset: 0x00465DEF
+		// Token: 0x1700975F RID: 38751
+		// (get) Token: 0x0602165D RID: 136797 RVA: 0x0049BBFF File Offset: 0x00499DFF
+		// (set) Token: 0x0602165E RID: 136798 RVA: 0x0049BC07 File Offset: 0x00499E07
 		public float MovableRadius { get; set; }
 
-		// Token: 0x17009027 RID: 36903
-		// (get) Token: 0x0601FA14 RID: 129556 RVA: 0x00467BF8 File Offset: 0x00465DF8
-		// (set) Token: 0x0601FA15 RID: 129557 RVA: 0x00467C00 File Offset: 0x00465E00
+		// Token: 0x17009760 RID: 38752
+		// (get) Token: 0x0602165F RID: 136799 RVA: 0x0049BC10 File Offset: 0x00499E10
+		// (set) Token: 0x06021660 RID: 136800 RVA: 0x0049BC18 File Offset: 0x00499E18
 		public float Resistance { get; set; }
 
-		// Token: 0x17009028 RID: 36904
-		// (get) Token: 0x0601FA16 RID: 129558 RVA: 0x00467C09 File Offset: 0x00465E09
-		// (set) Token: 0x0601FA17 RID: 129559 RVA: 0x00467C11 File Offset: 0x00465E11
+		// Token: 0x17009761 RID: 38753
+		// (get) Token: 0x06021661 RID: 136801 RVA: 0x0049BC21 File Offset: 0x00499E21
+		// (set) Token: 0x06021662 RID: 136802 RVA: 0x0049BC29 File Offset: 0x00499E29
 		public float SpeedLimit { get; set; }
 
-		// Token: 0x17009029 RID: 36905
-		// (get) Token: 0x0601FA18 RID: 129560 RVA: 0x00467C1A File Offset: 0x00465E1A
-		// (set) Token: 0x0601FA19 RID: 129561 RVA: 0x00467C22 File Offset: 0x00465E22
+		// Token: 0x17009762 RID: 38754
+		// (get) Token: 0x06021663 RID: 136803 RVA: 0x0049BC32 File Offset: 0x00499E32
+		// (set) Token: 0x06021664 RID: 136804 RVA: 0x0049BC3A File Offset: 0x00499E3A
 		public float SprintSpeedLimit { get; set; }
 
-		// Token: 0x1700902A RID: 36906
-		// (get) Token: 0x0601FA1A RID: 129562 RVA: 0x00467C2B File Offset: 0x00465E2B
-		// (set) Token: 0x0601FA1B RID: 129563 RVA: 0x00467C33 File Offset: 0x00465E33
+		// Token: 0x17009763 RID: 38755
+		// (get) Token: 0x06021665 RID: 136805 RVA: 0x0049BC43 File Offset: 0x00499E43
+		// (set) Token: 0x06021666 RID: 136806 RVA: 0x0049BC4B File Offset: 0x00499E4B
 		public List<ICommonSplinePointT> Points { get; set; }
 
-		// Token: 0x0601FA1C RID: 129564 RVA: 0x00467C3C File Offset: 0x00465E3C
+		// Token: 0x06021667 RID: 136807 RVA: 0x0049BC54 File Offset: 0x00499E54
 		public IAirPassageSplineT()
 		{
 			this.Type = ESplineType.Common;

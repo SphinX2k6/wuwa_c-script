@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200090D RID: 2317
+	// Token: 0x020009BA RID: 2490
 	public class EColorChangeStrategyOfSplineEffectJsonConverter : JsonConverter<EColorChangeStrategyOfSplineEffect>
 	{
-		// Token: 0x0600346D RID: 13421 RVA: 0x00085CB4 File Offset: 0x00083EB4
+		// Token: 0x060037D9 RID: 14297 RVA: 0x0008D7C0 File Offset: 0x0008B9C0
 		public override EColorChangeStrategyOfSplineEffect Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EColorChangeStrategyOfSplineEffectExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600346E RID: 13422 RVA: 0x00085CD8 File Offset: 0x00083ED8
+		// Token: 0x060037DA RID: 14298 RVA: 0x0008D7E4 File Offset: 0x0008B9E4
 		public override void Write(Utf8JsonWriter writer, EColorChangeStrategyOfSplineEffect value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

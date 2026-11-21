@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003D7 RID: 983
+	// Token: 0x0200042E RID: 1070
 	public class IGazePerformance_SetValue
 	{
-		// Token: 0x04000FAE RID: 4014
+		// Token: 0x040010C7 RID: 4295
 		public float FadeInTime;
 
-		// Token: 0x04000FAF RID: 4015
+		// Token: 0x040010C8 RID: 4296
 		public float StayTime;
 
-		// Token: 0x04000FB0 RID: 4016
+		// Token: 0x040010C9 RID: 4297
 		public float? FadeOutTime;
 
-		// Token: 0x04000FB1 RID: 4017
+		// Token: 0x040010CA RID: 4298
 		public bool? LockCamera;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001043 RID: 4163
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001171 RID: 4465
 	public class IPhotographSubTargetAnyRole : IPhotographSubTarget
 	{
-		// Token: 0x06005D42 RID: 23874 RVA: 0x000E1DF0 File Offset: 0x000DFFF0
+		// Token: 0x06006334 RID: 25396 RVA: 0x000EEDC4 File Offset: 0x000ECFC4
 		private IPhotographSubTargetAnyRole_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D43 RID: 23875 RVA: 0x000E1E28 File Offset: 0x000E0028
+		// Token: 0x06006335 RID: 25397 RVA: 0x000EEDFC File Offset: 0x000ECFFC
 		public static IPhotographSubTargetAnyRole Create([Nullable(2)] IPhotographSubTargetAnyRole instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D44 RID: 23876 RVA: 0x000E1E3B File Offset: 0x000E003B
+		// Token: 0x06006336 RID: 25398 RVA: 0x000EEE0F File Offset: 0x000ED00F
 		public static IPhotographSubTargetAnyRole CreateFromSetValue([Nullable(2)] IPhotographSubTargetAnyRole_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D45 RID: 23877 RVA: 0x000E1E4E File Offset: 0x000E004E
+		// Token: 0x06006337 RID: 25399 RVA: 0x000EEE22 File Offset: 0x000ED022
 		public new IPhotographSubTargetAnyRole_SetValue ToSetValue()
 		{
 			return new IPhotographSubTargetAnyRole_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EBE RID: 7870
-		// (get) Token: 0x06005D46 RID: 23878 RVA: 0x000E1E79 File Offset: 0x000E0079
-		// (set) Token: 0x06005D47 RID: 23879 RVA: 0x000E1EA4 File Offset: 0x000E00A4
+		// Token: 0x1700206D RID: 8301
+		// (get) Token: 0x06006338 RID: 25400 RVA: 0x000EEE4D File Offset: 0x000ED04D
+		// (set) Token: 0x06006339 RID: 25401 RVA: 0x000EEE78 File Offset: 0x000ED078
 		public override EPhotographSubTargetType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EBF RID: 7871
-		// (get) Token: 0x06005D48 RID: 23880 RVA: 0x000E1EB2 File Offset: 0x000E00B2
-		// (set) Token: 0x06005D49 RID: 23881 RVA: 0x000E1EDD File Offset: 0x000E00DD
+		// Token: 0x1700206E RID: 8302
+		// (get) Token: 0x0600633A RID: 25402 RVA: 0x000EEE86 File Offset: 0x000ED086
+		// (set) Token: 0x0600633B RID: 25403 RVA: 0x000EEEB1 File Offset: 0x000ED0B1
 		public virtual EOnCameraCheckType OnCameraCheckType
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EC0 RID: 7872
-		// (get) Token: 0x06005D4A RID: 23882 RVA: 0x000E1EEC File Offset: 0x000E00EC
-		// (set) Token: 0x06005D4B RID: 23883 RVA: 0x000E1F4D File Offset: 0x000E014D
+		// Token: 0x1700206F RID: 8303
+		// (get) Token: 0x0600633C RID: 25404 RVA: 0x000EEEC0 File Offset: 0x000ED0C0
+		// (set) Token: 0x0600633D RID: 25405 RVA: 0x000EEF21 File Offset: 0x000ED121
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400382B RID: 14379
+		// Token: 0x04003B73 RID: 15219
 		[Nullable(2)]
 		protected new IPhotographSubTargetAnyRole FbInstance;
 
-		// Token: 0x0400382C RID: 14380
+		// Token: 0x04003B74 RID: 15220
 		[Nullable(2)]
 		protected new IPhotographSubTargetAnyRole_SetValue PocoInterface;
 
-		// Token: 0x0400382D RID: 14381
+		// Token: 0x04003B75 RID: 15221
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400382E RID: 14382
+		// Token: 0x04003B76 RID: 15222
 		private bool _ConditionInited;
 	}
 }

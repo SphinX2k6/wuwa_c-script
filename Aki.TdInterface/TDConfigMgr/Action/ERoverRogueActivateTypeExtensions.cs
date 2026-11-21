@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F9 RID: 9209
+	// Token: 0x02002690 RID: 9872
 	public static class ERoverRogueActivateTypeExtensions
 	{
-		// Token: 0x0600C85F RID: 51295 RVA: 0x001D5314 File Offset: 0x001D3514
+		// Token: 0x0600D4E2 RID: 54498 RVA: 0x001EEAC0 File Offset: 0x001ECCC0
 		public static string ToEnumString(this ERoverRogueActivateType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C860 RID: 51296 RVA: 0x001D5368 File Offset: 0x001D3568
+		// Token: 0x0600D4E3 RID: 54499 RVA: 0x001EEB14 File Offset: 0x001ECD14
 		public static ERoverRogueActivateType FromString(string name)
 		{
 			ERoverRogueActivateType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C861 RID: 51297 RVA: 0x001D5394 File Offset: 0x001D3594
+		// Token: 0x0600D4E4 RID: 54500 RVA: 0x001EEB40 File Offset: 0x001ECD40
 		public static bool TryFromString(string name, out ERoverRogueActivateType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C862 RID: 51298 RVA: 0x001D53FC File Offset: 0x001D35FC
+		// Token: 0x0600D4E5 RID: 54501 RVA: 0x001EEBA8 File Offset: 0x001ECDA8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C863 RID: 51299 RVA: 0x001D5424 File Offset: 0x001D3624
+		// Token: 0x0600D4E6 RID: 54502 RVA: 0x001EEBD0 File Offset: 0x001ECDD0
 		public static ERoverRogueActivateType[] GetValues()
 		{
 			return new ERoverRogueActivateType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C864 RID: 51300 RVA: 0x001D5437 File Offset: 0x001D3637
+		// Token: 0x0600D4E7 RID: 54503 RVA: 0x001EEBE3 File Offset: 0x001ECDE3
 		public static string[] GetNames()
 		{
 			return new string[]

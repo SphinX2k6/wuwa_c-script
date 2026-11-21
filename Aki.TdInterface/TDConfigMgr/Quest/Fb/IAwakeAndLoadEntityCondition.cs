@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C8 RID: 5064
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200151F RID: 5407
 	public class IAwakeAndLoadEntityCondition : IQuestCondition
 	{
-		// Token: 0x060073A3 RID: 29603 RVA: 0x001156AE File Offset: 0x001138AE
+		// Token: 0x06007A64 RID: 31332 RVA: 0x00124093 File Offset: 0x00122293
 		public static IAwakeAndLoadEntityCondition Create(IAwakeAndLoadEntityCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025E6 RID: 9702
-		// (get) Token: 0x060073A4 RID: 29604 RVA: 0x001156CD File Offset: 0x001138CD
+		// Token: 0x170027C8 RID: 10184
+		// (get) Token: 0x06007A65 RID: 31333 RVA: 0x001240B2 File Offset: 0x001222B2
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025E7 RID: 9703
-		// (get) Token: 0x060073A5 RID: 29605 RVA: 0x001156DA File Offset: 0x001138DA
+		// Token: 0x170027C9 RID: 10185
+		// (get) Token: 0x06007A66 RID: 31334 RVA: 0x001240BF File Offset: 0x001222BF
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025E8 RID: 9704
-		// (get) Token: 0x060073A6 RID: 29606 RVA: 0x00115710 File Offset: 0x00113910
+		// Token: 0x170027CA RID: 10186
+		// (get) Token: 0x06007A67 RID: 31335 RVA: 0x001240F4 File Offset: 0x001222F4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025E9 RID: 9705
-		// (get) Token: 0x060073A7 RID: 29607 RVA: 0x00115774 File Offset: 0x00113974
+		// Token: 0x170027CB RID: 10187
+		// (get) Token: 0x06007A68 RID: 31336 RVA: 0x00124158 File Offset: 0x00122358
 		public virtual bool? IsWaitForShow
 		{
 			get
@@ -87,20 +85,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042F2 RID: 17138
+		// Token: 0x04004683 RID: 18051
 		private IAwakeAndLoadEntityCondition Instance;
 
-		// Token: 0x040042F3 RID: 17139
+		// Token: 0x04004684 RID: 18052
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042F4 RID: 17140
+		// Token: 0x04004685 RID: 18053
 		private bool _PreConditionsInited;
 
-		// Token: 0x040042F5 RID: 17141
+		// Token: 0x04004686 RID: 18054
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x040042F6 RID: 17142
+		// Token: 0x04004687 RID: 18055
 		private bool _EntityIdsInited;
 	}
 }

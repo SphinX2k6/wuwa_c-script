@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DE7 RID: 7655
+// Token: 0x020012A9 RID: 4777
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class HandBookCommonItem : LoopScrollSmallItemGrid<HandBookCommonItemData>
 {
-	// Token: 0x0600E91A RID: 59674 RVA: 0x003734B0 File Offset: 0x003716B0
+	// Token: 0x0600BD39 RID: 48441 RVA: 0x0037F1B8 File Offset: 0x0037D3B8
 	[NullableContext(1)]
 	protected override void OnRefresh(HandBookCommonItemData data, bool isSelected, int gridIndex)
 	{
@@ -27,24 +27,24 @@ public class HandBookCommonItem : LoopScrollSmallItemGrid<HandBookCommonItemData
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x0600E91B RID: 59675 RVA: 0x00373525 File Offset: 0x00371725
+	// Token: 0x0600BD3A RID: 48442 RVA: 0x0037F22D File Offset: 0x0037D42D
 	public HandBookCommonItemData GetData()
 	{
 		return this.HandBookCommonItemData;
 	}
 
-	// Token: 0x0600E91C RID: 59676 RVA: 0x0037352D File Offset: 0x0037172D
+	// Token: 0x0600BD3B RID: 48443 RVA: 0x0037F235 File Offset: 0x0037D435
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x0600E91D RID: 59677 RVA: 0x00373537 File Offset: 0x00371737
+	// Token: 0x0600BD3C RID: 48444 RVA: 0x0037F23F File Offset: 0x0037D43F
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x04006C0C RID: 27660
+	// Token: 0x04006CED RID: 27885
 	protected HandBookCommonItemData HandBookCommonItemData;
 }

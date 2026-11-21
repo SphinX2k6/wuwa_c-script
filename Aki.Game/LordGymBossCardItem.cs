@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.AutoAttach;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020012C0 RID: 4800
+// Token: 0x02000774 RID: 1908
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymBossCardItem : AutoAttachItem<int>
 {
-	// Token: 0x060083D8 RID: 33752 RVA: 0x001C1400 File Offset: 0x001BF600
+	// Token: 0x06005773 RID: 22387 RVA: 0x001CA25C File Offset: 0x001C845C
 	[NullableContext(2)]
 	public LordGymBossCardItem(AActor uiItem = null) : base(uiItem)
 	{
 	}
 
-	// Token: 0x060083D9 RID: 33753 RVA: 0x001C1414 File Offset: 0x001BF614
+	// Token: 0x06005774 RID: 22388 RVA: 0x001CA270 File Offset: 0x001C8470
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -40,19 +40,19 @@ public class LordGymBossCardItem : AutoAttachItem<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060083DA RID: 33754 RVA: 0x001C1501 File Offset: 0x001BF701
+	// Token: 0x06005775 RID: 22389 RVA: 0x001CA35D File Offset: 0x001C855D
 	private LordGymLordStarItem CreateStarItem()
 	{
 		return new LordGymLordStarItem();
 	}
 
-	// Token: 0x060083DB RID: 33755 RVA: 0x001C1508 File Offset: 0x001BF708
+	// Token: 0x06005776 RID: 22390 RVA: 0x001CA364 File Offset: 0x001C8564
 	public void BindOnSelected(Action<int> onSelected)
 	{
 		this.OnSelectedCallback = onSelected;
 	}
 
-	// Token: 0x060083DC RID: 33756 RVA: 0x001C1511 File Offset: 0x001BF711
+	// Token: 0x06005777 RID: 22391 RVA: 0x001CA36D File Offset: 0x001C856D
 	public override void OnSelect()
 	{
 		if (this.OnSelectedCallback != null)
@@ -61,17 +61,17 @@ public class LordGymBossCardItem : AutoAttachItem<int>
 		}
 	}
 
-	// Token: 0x060083DD RID: 33757 RVA: 0x001C152C File Offset: 0x001BF72C
+	// Token: 0x06005778 RID: 22392 RVA: 0x001CA388 File Offset: 0x001C8588
 	protected override void OnUnSelect()
 	{
 	}
 
-	// Token: 0x060083DE RID: 33758 RVA: 0x001C152E File Offset: 0x001BF72E
+	// Token: 0x06005779 RID: 22393 RVA: 0x001CA38A File Offset: 0x001C858A
 	protected override void OnMoveItem()
 	{
 	}
 
-	// Token: 0x060083DF RID: 33759 RVA: 0x001C1530 File Offset: 0x001BF730
+	// Token: 0x0600577A RID: 22394 RVA: 0x001CA38C File Offset: 0x001C858C
 	protected override void OnRefreshItem(int id)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(id);
@@ -109,7 +109,7 @@ public class LordGymBossCardItem : AutoAttachItem<int>
 		this.StarLayout.RefreshByData(this.StarDataList, null, false);
 	}
 
-	// Token: 0x04003B56 RID: 15190
+	// Token: 0x04003BEE RID: 15342
 	[Nullable(new byte[]
 	{
 		2,
@@ -117,33 +117,33 @@ public class LordGymBossCardItem : AutoAttachItem<int>
 	})]
 	private GenericLayout<LordGymLordStarItem, bool> StarLayout;
 
-	// Token: 0x04003B57 RID: 15191
+	// Token: 0x04003BEF RID: 15343
 	private List<bool> StarDataList = new List<bool>();
 
-	// Token: 0x04003B58 RID: 15192
+	// Token: 0x04003BF0 RID: 15344
 	[Nullable(2)]
 	private Action<int> OnSelectedCallback;
 
-	// Token: 0x020078DA RID: 30938
+	// Token: 0x02006A64 RID: 27236
 	[NullableContext(0)]
 	private class ECardComponent
 	{
-		// Token: 0x04027D0C RID: 163084
+		// Token: 0x0402303A RID: 143418
 		public const int Btn = 0;
 
-		// Token: 0x04027D0D RID: 163085
+		// Token: 0x0402303B RID: 143419
 		public const int Monster = 1;
 
-		// Token: 0x04027D0E RID: 163086
+		// Token: 0x0402303C RID: 143420
 		public const int Name = 2;
 
-		// Token: 0x04027D0F RID: 163087
+		// Token: 0x0402303D RID: 143421
 		public const int StarLayout = 3;
 
-		// Token: 0x04027D10 RID: 163088
+		// Token: 0x0402303E RID: 143422
 		public const int Star = 4;
 
-		// Token: 0x04027D11 RID: 163089
+		// Token: 0x0402303F RID: 143423
 		public const int New = 5;
 	}
 }

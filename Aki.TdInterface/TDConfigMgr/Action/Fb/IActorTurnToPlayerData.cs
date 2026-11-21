@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025AA RID: 9642
+	// Token: 0x02002859 RID: 10329
 	public class IActorTurnToPlayerData : IActorTurnToData
 	{
-		// Token: 0x0600D8EE RID: 55534 RVA: 0x00205F53 File Offset: 0x00204153
-		[NullableContext(1)]
+		// Token: 0x0600E668 RID: 58984 RVA: 0x00221C27 File Offset: 0x0021FE27
 		public static IActorTurnToPlayerData Create(IActorTurnToPlayerData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F5C RID: 16220
-		// (get) Token: 0x0600D8EF RID: 55535 RVA: 0x00205F72 File Offset: 0x00204172
+		// Token: 0x17004264 RID: 16996
+		// (get) Token: 0x0600E669 RID: 58985 RVA: 0x00221C46 File Offset: 0x0021FE46
 		public override EActorTurnToMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007886 RID: 30854
+		// Token: 0x04007EED RID: 32493
 		private IActorTurnToPlayerData Instance;
 	}
 }

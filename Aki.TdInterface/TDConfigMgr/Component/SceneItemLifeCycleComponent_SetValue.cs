@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000892 RID: 2194
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000935 RID: 2357
 	public class SceneItemLifeCycleComponent_SetValue
 	{
-		// Token: 0x0400202F RID: 8239
+		// Token: 0x04002241 RID: 8769
 		public bool? Disabled;
 
-		// Token: 0x04002030 RID: 8240
+		// Token: 0x04002242 RID: 8770
 		public bool? EdIsLocked;
 
-		// Token: 0x04002031 RID: 8241
+		// Token: 0x04002243 RID: 8771
 		public ICreateStageConfig CreateStageConfig;
 
-		// Token: 0x04002032 RID: 8242
+		// Token: 0x04002244 RID: 8772
 		public IDestroyStageConfig DestroyStageConfig;
 	}
 }

@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA2 RID: 19106
+	// Token: 0x02003A4A RID: 14922
 	public class ITrapDefenseStarInfo
 	{
-		// Token: 0x17007ADE RID: 31454
-		// (get) Token: 0x0603183C RID: 202812 RVA: 0x00B7AC2D File Offset: 0x00B78E2D
-		// (set) Token: 0x0603183D RID: 202813 RVA: 0x00B7AC35 File Offset: 0x00B78E35
+		// Token: 0x17004E8B RID: 20107
+		// (get) Token: 0x060265CC RID: 157132 RVA: 0x00ABEBE1 File Offset: 0x00ABCDE1
+		// (set) Token: 0x060265CD RID: 157133 RVA: 0x00ABEBE9 File Offset: 0x00ABCDE9
 		public bool IsAchieve { get; set; }
 
-		// Token: 0x17007ADF RID: 31455
-		// (get) Token: 0x0603183E RID: 202814 RVA: 0x00B7AC3E File Offset: 0x00B78E3E
-		// (set) Token: 0x0603183F RID: 202815 RVA: 0x00B7AC46 File Offset: 0x00B78E46
+		// Token: 0x17004E8C RID: 20108
+		// (get) Token: 0x060265CE RID: 157134 RVA: 0x00ABEBF2 File Offset: 0x00ABCDF2
+		// (set) Token: 0x060265CF RID: 157135 RVA: 0x00ABEBFA File Offset: 0x00ABCDFA
 		public bool IsNew { get; set; }
 
-		// Token: 0x17007AE0 RID: 31456
-		// (get) Token: 0x06031840 RID: 202816 RVA: 0x00B7AC4F File Offset: 0x00B78E4F
-		// (set) Token: 0x06031841 RID: 202817 RVA: 0x00B7AC57 File Offset: 0x00B78E57
+		// Token: 0x17004E8D RID: 20109
+		// (get) Token: 0x060265D0 RID: 157136 RVA: 0x00ABEC03 File Offset: 0x00ABCE03
+		// (set) Token: 0x060265D1 RID: 157137 RVA: 0x00ABEC0B File Offset: 0x00ABCE0B
 		public bool HasPlayed { get; set; }
 
-		// Token: 0x17007AE1 RID: 31457
-		// (get) Token: 0x06031842 RID: 202818 RVA: 0x00B7AC60 File Offset: 0x00B78E60
-		// (set) Token: 0x06031843 RID: 202819 RVA: 0x00B7AC68 File Offset: 0x00B78E68
+		// Token: 0x17004E8E RID: 20110
+		// (get) Token: 0x060265D2 RID: 157138 RVA: 0x00ABEC14 File Offset: 0x00ABCE14
+		// (set) Token: 0x060265D3 RID: 157139 RVA: 0x00ABEC1C File Offset: 0x00ABCE1C
 		public int PlayDelay { get; set; }
 	}
 }

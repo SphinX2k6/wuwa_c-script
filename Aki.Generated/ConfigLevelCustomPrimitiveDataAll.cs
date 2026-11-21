@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004CA RID: 1226
+	// Token: 0x020004E0 RID: 1248
 	public class ConfigLevelCustomPrimitiveDataAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CC7 RID: 7367 RVA: 0x000FBCE8 File Offset: 0x000F9EE8
+		// Token: 0x06001D4B RID: 7499 RVA: 0x0010243C File Offset: 0x0010063C
 		static ConfigLevelCustomPrimitiveDataAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLevelCustomPrimitiveDataAll.CreateStaticDefaultValue), new Action(ConfigLevelCustomPrimitiveDataAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CC8 RID: 7368 RVA: 0x000FBD08 File Offset: 0x000F9F08
+		// Token: 0x06001D4C RID: 7500 RVA: 0x0010245C File Offset: 0x0010065C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLevelCustomPrimitiveDataAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CC9 RID: 7369 RVA: 0x000FBD87 File Offset: 0x000F9F87
+		// Token: 0x06001D4D RID: 7501 RVA: 0x001024DB File Offset: 0x001006DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLevelCustomPrimitiveDataAll.LogPair = null;
 			ConfigLevelCustomPrimitiveDataAll.HandleId = 0;
 		}
 
-		// Token: 0x06001CCA RID: 7370 RVA: 0x000FBD95 File Offset: 0x000F9F95
+		// Token: 0x06001D4E RID: 7502 RVA: 0x001024E9 File Offset: 0x001006E9
 		public static void Init()
 		{
 			ConfigLevelCustomPrimitiveDataAll.HandleId = ConfigCommon.InitDataStatement(ConfigLevelCustomPrimitiveDataAll.HandleId, "db_levelcustomprimitivedata.db", "select BinData from `LevelCustomPrimitiveData`");
 		}
 
-		// Token: 0x06001CCB RID: 7371 RVA: 0x000FBDB0 File Offset: 0x000F9FB0
+		// Token: 0x06001D4F RID: 7503 RVA: 0x00102504 File Offset: 0x00100704
 		[NullableContext(2)]
 		public static IReadOnlyList<LevelCustomPrimitiveData> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400216A RID: 8554
+		// Token: 0x04002204 RID: 8708
 		private const string DB = "db_levelcustomprimitivedata.db";
 
-		// Token: 0x0400216B RID: 8555
+		// Token: 0x04002205 RID: 8709
 		private const string FILE = "UniverseEditor/LevelPlay/CustomPrimitiveData_*";
 
-		// Token: 0x0400216C RID: 8556
+		// Token: 0x04002206 RID: 8710
 		private const string TABLE = "LevelCustomPrimitiveData";
 
-		// Token: 0x0400216D RID: 8557
+		// Token: 0x04002207 RID: 8711
 		private const string COMMAND = "select BinData from `LevelCustomPrimitiveData`";
 
-		// Token: 0x0400216E RID: 8558
+		// Token: 0x04002208 RID: 8712
 		private const string KEY_PREFIX = "LevelCustomPrimitiveDataAll";
 
-		// Token: 0x0400216F RID: 8559
+		// Token: 0x04002209 RID: 8713
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002170 RID: 8560
+		// Token: 0x0400220A RID: 8714
 		private static int HandleId;
 	}
 }

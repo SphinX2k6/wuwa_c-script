@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001566 RID: 5478
+	// Token: 0x020015DC RID: 5596
 	public enum TimeHandleType
 	{
-		// Token: 0x0400A643 RID: 42563
+		// Token: 0x0400AAD0 RID: 43728
 		[OriginalName("Lock")]
 		Lock,
-		// Token: 0x0400A644 RID: 42564
+		// Token: 0x0400AAD1 RID: 43729
 		[OriginalName("Unlock")]
 		Unlock
 	}

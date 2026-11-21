@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001386 RID: 4998
+	// Token: 0x020014D7 RID: 5335
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IReadMailCondition : IQuestCondition
 	{
-		// Token: 0x0600725E RID: 29278 RVA: 0x00113232 File Offset: 0x00111432
-		[NullableContext(1)]
+		// Token: 0x06007904 RID: 30980 RVA: 0x001218B6 File Offset: 0x0011FAB6
+		[NullableContext(0)]
 		public static IReadMailCondition Create(IReadMailCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002525 RID: 9509
-		// (get) Token: 0x0600725F RID: 29279 RVA: 0x00113251 File Offset: 0x00111451
+		// Token: 0x170026F8 RID: 9976
+		// (get) Token: 0x06007905 RID: 30981 RVA: 0x001218D5 File Offset: 0x0011FAD5
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002526 RID: 9510
-		// (get) Token: 0x06007260 RID: 29280 RVA: 0x0011325E File Offset: 0x0011145E
+		// Token: 0x170026F9 RID: 9977
+		// (get) Token: 0x06007906 RID: 30982 RVA: 0x001218E2 File Offset: 0x0011FAE2
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002527 RID: 9511
-		// (get) Token: 0x06007261 RID: 29281 RVA: 0x00113292 File Offset: 0x00111492
+		// Token: 0x170026FA RID: 9978
+		// (get) Token: 0x06007907 RID: 30983 RVA: 0x00121916 File Offset: 0x0011FB16
 		public virtual int MailId
 		{
 			get
@@ -60,13 +60,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400421A RID: 16922
+		// Token: 0x0400459B RID: 17819
 		private IReadMailCondition Instance;
 
-		// Token: 0x0400421B RID: 16923
+		// Token: 0x0400459C RID: 17820
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400421C RID: 16924
+		// Token: 0x0400459D RID: 17821
 		private bool _PreConditionsInited;
 	}
 }

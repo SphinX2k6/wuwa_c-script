@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C37 RID: 23607
+	// Token: 0x02004C17 RID: 19479
 	public class FlagChallengeOccupiedSuccessViewParams
 	{
-		// Token: 0x0401F0D6 RID: 127190
+		// Token: 0x04019B87 RID: 105351
 		public int ActivityId;
 
-		// Token: 0x0401F0D7 RID: 127191
+		// Token: 0x04019B88 RID: 105352
 		public int StrongholdId;
 	}
 }

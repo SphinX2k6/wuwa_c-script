@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002881 RID: 10369
+// Token: 0x02001DFC RID: 7676
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,20 +14,20 @@ using UnrealEngine;
 })]
 public class RoleLevelUpCostItem : GridProxyAbstract<ISelectedData>
 {
-	// Token: 0x0601556D RID: 87405 RVA: 0x00563023 File Offset: 0x00561223
+	// Token: 0x06012F6B RID: 77675 RVA: 0x0058DD7F File Offset: 0x0058BF7F
 	private int GetConfigId()
 	{
 		return this.ItemGridVariantSelect.GetConfigId();
 	}
 
-	// Token: 0x0601556E RID: 87406 RVA: 0x00563030 File Offset: 0x00561230
+	// Token: 0x06012F6C RID: 77676 RVA: 0x0058DD8C File Offset: 0x0058BF8C
 	[NullableContext(1)]
 	public override void Refresh(ISelectedData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshBySelectedData(data);
 	}
 
-	// Token: 0x0601556F RID: 87407 RVA: 0x00563039 File Offset: 0x00561239
+	// Token: 0x06012F6D RID: 77677 RVA: 0x0058DD95 File Offset: 0x0058BF95
 	public RoleLevelUpCostItem(UUIItem uiItem = null, Action<int> onItemClickCallBack = null, Action<int> onItemReduceCallBack = null, Func<int, bool> canItemLongPress = null, Func<int, bool> canItemReduceLongPress = null, EUiViewName? belongView = null)
 	{
 		this.OnItemClickCallBack = onItemClickCallBack;
@@ -41,7 +41,7 @@ public class RoleLevelUpCostItem : GridProxyAbstract<ISelectedData>
 		}
 	}
 
-	// Token: 0x06015570 RID: 87408 RVA: 0x00563078 File Offset: 0x00561278
+	// Token: 0x06012F6E RID: 77678 RVA: 0x0058DDD4 File Offset: 0x0058BFD4
 	protected override void OnStart()
 	{
 		this.ItemGridVariantSelect = new ItemGridVariantSelect(this.RootItem.GetOwner(), null, this.BelongView);
@@ -91,7 +91,7 @@ public class RoleLevelUpCostItem : GridProxyAbstract<ISelectedData>
 		this.ItemGridVariantSelect.RefreshItemShowState(true);
 	}
 
-	// Token: 0x06015571 RID: 87409 RVA: 0x00563182 File Offset: 0x00561382
+	// Token: 0x06012F6F RID: 77679 RVA: 0x0058DEDE File Offset: 0x0058C0DE
 	[NullableContext(1)]
 	public void RefreshBySelectedData(ISelectedData data)
 	{
@@ -99,7 +99,7 @@ public class RoleLevelUpCostItem : GridProxyAbstract<ISelectedData>
 		this.RefreshCountBySelectedData(data);
 	}
 
-	// Token: 0x06015572 RID: 87410 RVA: 0x0056319C File Offset: 0x0056139C
+	// Token: 0x06012F70 RID: 77680 RVA: 0x0058DEF8 File Offset: 0x0058C0F8
 	[NullableContext(1)]
 	public void RefreshCountBySelectedData(ISelectedData data)
 	{
@@ -115,14 +115,14 @@ public class RoleLevelUpCostItem : GridProxyAbstract<ISelectedData>
 		this.ItemGridVariantSelect.GetReduceButton().RootUIComp.Get().SetUIActive(selectedCount > 0);
 	}
 
-	// Token: 0x06015573 RID: 87411 RVA: 0x00563210 File Offset: 0x00561410
+	// Token: 0x06012F71 RID: 77681 RVA: 0x0058DF6C File Offset: 0x0058C16C
 	protected override void OnBeforeDestroy()
 	{
 		this.ItemLongPressButton.Clear();
 		this.ReduceLongPressButton.Clear();
 	}
 
-	// Token: 0x06015574 RID: 87412 RVA: 0x00563228 File Offset: 0x00561428
+	// Token: 0x06012F72 RID: 77682 RVA: 0x0058DF84 File Offset: 0x0058C184
 	[NullableContext(1)]
 	public UUIItem GetUiItemForGuide()
 	{
@@ -140,27 +140,27 @@ public class RoleLevelUpCostItem : GridProxyAbstract<ISelectedData>
 		return obj as UUIItem;
 	}
 
-	// Token: 0x04009F85 RID: 40837
+	// Token: 0x0400A36E RID: 41838
 	private ItemGridVariantSelect ItemGridVariantSelect;
 
-	// Token: 0x04009F86 RID: 40838
+	// Token: 0x0400A36F RID: 41839
 	private LongPressButtonItem ItemLongPressButton;
 
-	// Token: 0x04009F87 RID: 40839
+	// Token: 0x0400A370 RID: 41840
 	private LongPressButtonItem ReduceLongPressButton;
 
-	// Token: 0x04009F88 RID: 40840
+	// Token: 0x0400A371 RID: 41841
 	private readonly Action<int> OnItemClickCallBack;
 
-	// Token: 0x04009F89 RID: 40841
+	// Token: 0x0400A372 RID: 41842
 	private readonly Action<int> OnItemReduceCallBack;
 
-	// Token: 0x04009F8A RID: 40842
+	// Token: 0x0400A373 RID: 41843
 	private readonly Func<int, bool> CanItemLongPress;
 
-	// Token: 0x04009F8B RID: 40843
+	// Token: 0x0400A374 RID: 41844
 	private readonly Func<int, bool> CanItemReduceLongPress;
 
-	// Token: 0x04009F8C RID: 40844
+	// Token: 0x0400A375 RID: 41845
 	public EUiViewName? BelongView;
 }

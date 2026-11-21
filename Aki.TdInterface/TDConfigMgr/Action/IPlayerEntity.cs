@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D00 RID: 7424
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F11 RID: 7953
 	public class IPlayerEntity : ITargetEntityType
 	{
-		// Token: 0x06009F5D RID: 40797 RVA: 0x0016C1CC File Offset: 0x0016A3CC
+		// Token: 0x0600A947 RID: 43335 RVA: 0x0018056C File Offset: 0x0017E76C
 		private IPlayerEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F5E RID: 40798 RVA: 0x0016C204 File Offset: 0x0016A404
+		// Token: 0x0600A948 RID: 43336 RVA: 0x001805A4 File Offset: 0x0017E7A4
 		public static IPlayerEntity Create([Nullable(2)] IPlayerEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F5F RID: 40799 RVA: 0x0016C217 File Offset: 0x0016A417
+		// Token: 0x0600A949 RID: 43337 RVA: 0x001805B7 File Offset: 0x0017E7B7
 		public static IPlayerEntity CreateFromSetValue([Nullable(2)] IPlayerEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F60 RID: 40800 RVA: 0x0016C22A File Offset: 0x0016A42A
+		// Token: 0x0600A94A RID: 43338 RVA: 0x001805CA File Offset: 0x0017E7CA
 		public new IPlayerEntity_SetValue ToSetValue()
 		{
 			return new IPlayerEntity_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003185 RID: 12677
-		// (get) Token: 0x06009F61 RID: 40801 RVA: 0x0016C249 File Offset: 0x0016A449
-		// (set) Token: 0x06009F62 RID: 40802 RVA: 0x0016C274 File Offset: 0x0016A474
+		// Token: 0x17003418 RID: 13336
+		// (get) Token: 0x0600A94B RID: 43339 RVA: 0x001805E9 File Offset: 0x0017E7E9
+		// (set) Token: 0x0600A94C RID: 43340 RVA: 0x00180614 File Offset: 0x0017E814
 		public override ETargetEntityType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003186 RID: 12678
-		// (get) Token: 0x06009F63 RID: 40803 RVA: 0x0016C284 File Offset: 0x0016A484
-		// (set) Token: 0x06009F64 RID: 40804 RVA: 0x0016C2BE File Offset: 0x0016A4BE
+		// Token: 0x17003419 RID: 13337
+		// (get) Token: 0x0600A94D RID: 43341 RVA: 0x00180624 File Offset: 0x0017E824
+		// (set) Token: 0x0600A94E RID: 43342 RVA: 0x0018065E File Offset: 0x0017E85E
 		public virtual EPlayerTargetType? PlayerTargetType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006034 RID: 24628
+		// Token: 0x040065AD RID: 26029
 		[Nullable(2)]
 		protected new IPlayerEntity FbInstance;
 
-		// Token: 0x04006035 RID: 24629
+		// Token: 0x040065AE RID: 26030
 		[Nullable(2)]
 		protected new IPlayerEntity_SetValue PocoInterface;
 	}

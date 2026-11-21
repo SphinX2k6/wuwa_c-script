@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BED RID: 7149
+// Token: 0x020010AC RID: 4268
 [NullableContext(2)]
 [Nullable(0)]
 public class BattleRoleData
 {
-	// Token: 0x0600D518 RID: 54552 RVA: 0x003113E2 File Offset: 0x0030F5E2
+	// Token: 0x0600A92B RID: 43307 RVA: 0x0031C626 File Offset: 0x0031A826
 	public void Init(int playerId, int configId, int skinId, int? onlineIndex, string playerName, int level, bool isSelf, bool isReady)
 	{
 		this.PlayerId = playerId;
@@ -21,14 +21,14 @@ public class BattleRoleData
 		this.IsReady = isReady;
 	}
 
-	// Token: 0x0600D519 RID: 54553 RVA: 0x00311421 File Offset: 0x0030F621
+	// Token: 0x0600A92C RID: 43308 RVA: 0x0031C665 File Offset: 0x0031A865
 	public void SetReady(bool bReady)
 	{
 		this.IsReady = bReady;
 	}
 
-	// Token: 0x1700118D RID: 4493
-	// (get) Token: 0x0600D51A RID: 54554 RVA: 0x0031142C File Offset: 0x0030F62C
+	// Token: 0x170011B2 RID: 4530
+	// (get) Token: 0x0600A92D RID: 43309 RVA: 0x0031C670 File Offset: 0x0031A870
 	[Nullable(1)]
 	public string Name
 	{
@@ -47,8 +47,8 @@ public class BattleRoleData
 		}
 	}
 
-	// Token: 0x1700118E RID: 4494
-	// (get) Token: 0x0600D51B RID: 54555 RVA: 0x00311464 File Offset: 0x0030F664
+	// Token: 0x170011B3 RID: 4531
+	// (get) Token: 0x0600A92E RID: 43310 RVA: 0x0031C6A8 File Offset: 0x0031A8A8
 	public TrialRoleInfo? TrialRoleConfig
 	{
 		get
@@ -67,30 +67,30 @@ public class BattleRoleData
 		}
 	}
 
-	// Token: 0x04006190 RID: 24976
+	// Token: 0x0400625F RID: 25183
 	public int ConfigId;
 
-	// Token: 0x04006191 RID: 24977
+	// Token: 0x04006260 RID: 25184
 	public int SkinId;
 
-	// Token: 0x04006192 RID: 24978
+	// Token: 0x04006261 RID: 25185
 	public int? OnlineIndex;
 
-	// Token: 0x04006193 RID: 24979
+	// Token: 0x04006262 RID: 25186
 	public string PlayerName;
 
-	// Token: 0x04006194 RID: 24980
+	// Token: 0x04006263 RID: 25187
 	public int Level;
 
-	// Token: 0x04006195 RID: 24981
+	// Token: 0x04006264 RID: 25188
 	public bool IsSelf;
 
-	// Token: 0x04006196 RID: 24982
+	// Token: 0x04006265 RID: 25189
 	public bool IsReady;
 
-	// Token: 0x04006197 RID: 24983
+	// Token: 0x04006266 RID: 25190
 	public int PlayerId;
 
-	// Token: 0x04006198 RID: 24984
+	// Token: 0x04006267 RID: 25191
 	public string ThirdPartyOnlineId;
 }

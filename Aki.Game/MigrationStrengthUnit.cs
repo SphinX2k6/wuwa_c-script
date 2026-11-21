@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F50 RID: 8016
+// Token: 0x02001412 RID: 5138
 [NullableContext(1)]
 [Nullable(0)]
 public class MigrationStrengthUnit : HudUnitBase
 {
-	// Token: 0x0600F80C RID: 63500 RVA: 0x003BFD7D File Offset: 0x003BDF7D
+	// Token: 0x0600CC2B RID: 52267 RVA: 0x003CB869 File Offset: 0x003C9A69
 	public void InitData(int strengthLineCount)
 	{
 		this.StrengthItemCount = strengthLineCount;
@@ -20,7 +20,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		this.RefreshSingleStrengthItemVisible(this.StrengthItemCount);
 	}
 
-	// Token: 0x0600F80D RID: 63501 RVA: 0x003BFDA0 File Offset: 0x003BDFA0
+	// Token: 0x0600CC2C RID: 52268 RVA: 0x003CB88C File Offset: 0x003C9A8C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -52,7 +52,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F80E RID: 63502 RVA: 0x003BFF38 File Offset: 0x003BE138
+	// Token: 0x0600CC2D RID: 52269 RVA: 0x003CBA24 File Offset: 0x003C9C24
 	protected override void OnStart()
 	{
 		this.RootItem.SetAnchorAlign(UIAnchorHorizontalAlign.Center, UIAnchorVerticalAlign.Middle);
@@ -65,13 +65,13 @@ public class MigrationStrengthUnit : HudUnitBase
 		this.InitAllTweenAnim();
 	}
 
-	// Token: 0x0600F80F RID: 63503 RVA: 0x003BFF83 File Offset: 0x003BE183
+	// Token: 0x0600CC2E RID: 52270 RVA: 0x003CBA6F File Offset: 0x003C9C6F
 	protected override void OnAfterShow()
 	{
 		this.PlayStartAnim();
 	}
 
-	// Token: 0x0600F810 RID: 63504 RVA: 0x003BFF8C File Offset: 0x003BE18C
+	// Token: 0x0600CC2F RID: 52271 RVA: 0x003CBA78 File Offset: 0x003C9C78
 	protected override UniTask OnBeforeHideAsync()
 	{
 		MigrationStrengthUnit.<OnBeforeHideAsync>d__34 <OnBeforeHideAsync>d__;
@@ -82,7 +82,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F811 RID: 63505 RVA: 0x003BFFCF File Offset: 0x003BE1CF
+	// Token: 0x0600CC30 RID: 52272 RVA: 0x003CBABB File Offset: 0x003C9CBB
 	protected override void OnBeforeDestroy()
 	{
 		this.RefreshEntity(null);
@@ -90,7 +90,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F812 RID: 63506 RVA: 0x003BFFE4 File Offset: 0x003BE1E4
+	// Token: 0x0600CC31 RID: 52273 RVA: 0x003CBAD0 File Offset: 0x003C9CD0
 	public void SetNormal(bool bNormal)
 	{
 		if (this.IsNormalState == bNormal)
@@ -108,7 +108,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F813 RID: 63507 RVA: 0x003C0090 File Offset: 0x003BE290
+	// Token: 0x0600CC32 RID: 52274 RVA: 0x003CBB7C File Offset: 0x003C9D7C
 	private void RefreshSingleStrengthItemRotation(int count)
 	{
 		float num = 360f / (float)count;
@@ -126,7 +126,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F814 RID: 63508 RVA: 0x003C00F8 File Offset: 0x003BE2F8
+	// Token: 0x0600CC33 RID: 52275 RVA: 0x003CBBE4 File Offset: 0x003C9DE4
 	private void RefreshSingleStrengthItemVisible(int count)
 	{
 		for (int i = 0; i < this.StrengthSingleLineActorList.Count; i++)
@@ -140,7 +140,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F815 RID: 63509 RVA: 0x003C0140 File Offset: 0x003BE340
+	// Token: 0x0600CC34 RID: 52276 RVA: 0x003CBC2C File Offset: 0x003C9E2C
 	private UUIItem AddSingleStrengthItem(bool isFirst = false)
 	{
 		UUIItem item = base.GetItem(4);
@@ -160,13 +160,13 @@ public class MigrationStrengthUnit : HudUnitBase
 		return uuiitem;
 	}
 
-	// Token: 0x0600F816 RID: 63510 RVA: 0x003C01C6 File Offset: 0x003BE3C6
+	// Token: 0x0600CC35 RID: 52277 RVA: 0x003CBCB2 File Offset: 0x003C9EB2
 	private UUIItem GetSingleStrengthItem(int index)
 	{
 		return this.StrengthSingleLineActorList[index];
 	}
 
-	// Token: 0x0600F817 RID: 63511 RVA: 0x003C01D4 File Offset: 0x003BE3D4
+	// Token: 0x0600CC36 RID: 52278 RVA: 0x003CBCC0 File Offset: 0x003C9EC0
 	[NullableContext(2)]
 	public void RefreshEntity(BattleUiRoleData roleData)
 	{
@@ -180,7 +180,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		this.ActorComponent = roleData.EntityHandle.Entity.GetComponent<CharacterActorComponent>();
 	}
 
-	// Token: 0x0600F818 RID: 63512 RVA: 0x003C020C File Offset: 0x003BE40C
+	// Token: 0x0600CC37 RID: 52279 RVA: 0x003CBCF8 File Offset: 0x003C9EF8
 	public void SetStrengthPercent(float strength, float maxStrength)
 	{
 		float num = (maxStrength <= 0f) ? 0f : (strength / maxStrength);
@@ -202,7 +202,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		this.SetNormal(num >= 0.2f);
 	}
 
-	// Token: 0x0600F819 RID: 63513 RVA: 0x003C02A0 File Offset: 0x003BE4A0
+	// Token: 0x0600CC38 RID: 52280 RVA: 0x003CBD8C File Offset: 0x003C9F8C
 	public void SetRecoverState(bool isRecover)
 	{
 		if (this.IsRecover == isRecover)
@@ -227,7 +227,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		texture.SetUIActive(false);
 	}
 
-	// Token: 0x0600F81A RID: 63514 RVA: 0x003C0334 File Offset: 0x003BE534
+	// Token: 0x0600CC39 RID: 52281 RVA: 0x003CBE20 File Offset: 0x003CA020
 	public void TickRecoverAnim(float delta)
 	{
 		if (this.TargetStrengthPercent > this.CurStrengthPercent)
@@ -276,7 +276,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F81B RID: 63515 RVA: 0x003C04AC File Offset: 0x003BE6AC
+	// Token: 0x0600CC3A RID: 52282 RVA: 0x003CBF98 File Offset: 0x003CA198
 	public void RefreshTargetPosition(float delta)
 	{
 		if (!base.GetActive())
@@ -319,7 +319,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		base.SetAnchorOffset(this.OffsetX, this.OffsetY);
 	}
 
-	// Token: 0x0600F81C RID: 63516 RVA: 0x003C05F8 File Offset: 0x003BE7F8
+	// Token: 0x0600CC3B RID: 52283 RVA: 0x003CC0E4 File Offset: 0x003CA2E4
 	private float GetSpeed(float delta, float target, float cur, float lastSpeed)
 	{
 		float num = target - cur;
@@ -349,7 +349,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		return MathUtils.Instance.Lerp(lastSpeed, num2, 0.5f);
 	}
 
-	// Token: 0x0600F81D RID: 63517 RVA: 0x003C065A File Offset: 0x003BE85A
+	// Token: 0x0600CC3C RID: 52284 RVA: 0x003CC146 File Offset: 0x003CA346
 	private void InitAllTweenAnim()
 	{
 		base.InitTweenAnim(7);
@@ -358,13 +358,13 @@ public class MigrationStrengthUnit : HudUnitBase
 		base.InitTweenAnim(10);
 	}
 
-	// Token: 0x0600F81E RID: 63518 RVA: 0x003C067A File Offset: 0x003BE87A
+	// Token: 0x0600CC3D RID: 52285 RVA: 0x003CC166 File Offset: 0x003CA366
 	private void PlayStartAnim()
 	{
 		base.PlayTweenAnim(7);
 	}
 
-	// Token: 0x0600F81F RID: 63519 RVA: 0x003C0684 File Offset: 0x003BE884
+	// Token: 0x0600CC3E RID: 52286 RVA: 0x003CC170 File Offset: 0x003CA370
 	private UniTask PlayCloseAnim()
 	{
 		MigrationStrengthUnit.<PlayCloseAnim>d__49 <PlayCloseAnim>d__;
@@ -375,7 +375,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		return <PlayCloseAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F820 RID: 63520 RVA: 0x003C06C7 File Offset: 0x003BE8C7
+	// Token: 0x0600CC3F RID: 52287 RVA: 0x003CC1B3 File Offset: 0x003CA3B3
 	private void DestroyCloseAnimTimer()
 	{
 		if (this.CloseAnimTimer != null)
@@ -385,54 +385,54 @@ public class MigrationStrengthUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F821 RID: 63521 RVA: 0x003C06E9 File Offset: 0x003BE8E9
+	// Token: 0x0600CC40 RID: 52288 RVA: 0x003CC1D5 File Offset: 0x003CA3D5
 	private void PlayRecoverInAnim()
 	{
 		base.StopTweenAnim(10);
 		base.PlayTweenAnim(9);
 	}
 
-	// Token: 0x0600F822 RID: 63522 RVA: 0x003C06FB File Offset: 0x003BE8FB
+	// Token: 0x0600CC41 RID: 52289 RVA: 0x003CC1E7 File Offset: 0x003CA3E7
 	private void PlayRecoverOutAnim()
 	{
 		base.StopTweenAnim(9);
 		base.PlayTweenAnim(10);
 	}
 
-	// Token: 0x04007305 RID: 29445
+	// Token: 0x040073E6 RID: 29670
 	private const float NORMAL_PERCENT = 0.2f;
 
-	// Token: 0x04007306 RID: 29446
+	// Token: 0x040073E7 RID: 29671
 	private const int PRELOAD_SINGLE_STRENGTH_ITEM_COUNT = 4;
 
-	// Token: 0x04007307 RID: 29447
+	// Token: 0x040073E8 RID: 29672
 	private const float MAX_DELTA_TIME = 200f;
 
-	// Token: 0x04007308 RID: 29448
+	// Token: 0x040073E9 RID: 29673
 	private const float MIN_DELTA_OFFSET = 0.5f;
 
-	// Token: 0x04007309 RID: 29449
+	// Token: 0x040073EA RID: 29674
 	private const float RECOVER_ANIM_TIME = 250f;
 
-	// Token: 0x0400730A RID: 29450
+	// Token: 0x040073EB RID: 29675
 	private const float RECOVER_STAY_TIME = 1400f;
 
-	// Token: 0x0400730B RID: 29451
+	// Token: 0x040073EC RID: 29676
 	private const float CLOSE_ANIM_TIME = 250f;
 
-	// Token: 0x0400730C RID: 29452
+	// Token: 0x040073ED RID: 29677
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x0400730D RID: 29453
+	// Token: 0x040073EE RID: 29678
 	private readonly List<UUIItem> StrengthSingleLineActorList = new List<UUIItem>();
 
-	// Token: 0x0400730E RID: 29454
+	// Token: 0x040073EF RID: 29679
 	private readonly List<UUISprite> StrengthSingleLineSpriteList = new List<UUISprite>();
 
-	// Token: 0x0400730F RID: 29455
+	// Token: 0x040073F0 RID: 29680
 	private FRotator RotationCache = new FRotator(0f, 0f, 0f);
 
-	// Token: 0x04007310 RID: 29456
+	// Token: 0x040073F1 RID: 29681
 	[StaticVariableRuleIgnore]
 	private static readonly FColor[] BarColor = new FColor[]
 	{
@@ -440,7 +440,7 @@ public class MigrationStrengthUnit : HudUnitBase
 		FColor.FromHex("#cb3d55")
 	};
 
-	// Token: 0x04007311 RID: 29457
+	// Token: 0x040073F2 RID: 29682
 	[StaticVariableRuleIgnore]
 	private static readonly FColor[] LineColor = new FColor[]
 	{
@@ -448,82 +448,82 @@ public class MigrationStrengthUnit : HudUnitBase
 		FColor.FromHex("#633323")
 	};
 
-	// Token: 0x04007312 RID: 29458
+	// Token: 0x040073F3 RID: 29683
 	[Nullable(2)]
 	public EntityHandle EntityHandle;
 
-	// Token: 0x04007313 RID: 29459
+	// Token: 0x040073F4 RID: 29684
 	[Nullable(2)]
 	public CharacterActorComponent ActorComponent;
 
-	// Token: 0x04007314 RID: 29460
+	// Token: 0x040073F5 RID: 29685
 	private float TargetStrengthPercent = -1f;
 
-	// Token: 0x04007315 RID: 29461
+	// Token: 0x040073F6 RID: 29686
 	private float CurStrengthPercent;
 
-	// Token: 0x04007316 RID: 29462
+	// Token: 0x040073F7 RID: 29687
 	private bool IsRecover;
 
-	// Token: 0x04007317 RID: 29463
+	// Token: 0x040073F8 RID: 29688
 	private int RecoverAnimState;
 
-	// Token: 0x04007318 RID: 29464
+	// Token: 0x040073F9 RID: 29689
 	private float RecoverAnimStayTime;
 
-	// Token: 0x04007319 RID: 29465
+	// Token: 0x040073FA RID: 29690
 	private float RecoverPercentAnimSpeed;
 
-	// Token: 0x0400731A RID: 29466
+	// Token: 0x040073FB RID: 29691
 	private float RecoverBottomLimitPercent;
 
-	// Token: 0x0400731B RID: 29467
+	// Token: 0x040073FC RID: 29692
 	private int StrengthItemCount = 1;
 
-	// Token: 0x0400731C RID: 29468
+	// Token: 0x040073FD RID: 29693
 	private bool IsNormalState;
 
-	// Token: 0x0400731D RID: 29469
+	// Token: 0x040073FE RID: 29694
 	private float OffsetX;
 
-	// Token: 0x0400731E RID: 29470
+	// Token: 0x040073FF RID: 29695
 	private float OffsetY;
 
-	// Token: 0x0400731F RID: 29471
+	// Token: 0x04007400 RID: 29696
 	private float SpeedX;
 
-	// Token: 0x04007320 RID: 29472
+	// Token: 0x04007401 RID: 29697
 	private float SpeedY;
 
-	// Token: 0x04007321 RID: 29473
+	// Token: 0x04007402 RID: 29698
 	[Nullable(2)]
 	private TimerHandle CloseAnimTimer;
 
-	// Token: 0x0200854B RID: 34123
+	// Token: 0x020076D0 RID: 30416
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B655 RID: 177749
+		// Token: 0x04026979 RID: 158073
 		BgTextureNormal,
-		// Token: 0x0402B656 RID: 177750
+		// Token: 0x0402697A RID: 158074
 		BgTextureLow,
-		// Token: 0x0402B657 RID: 177751
+		// Token: 0x0402697B RID: 158075
 		EffectTexture,
-		// Token: 0x0402B658 RID: 177752
+		// Token: 0x0402697C RID: 158076
 		BarTexture,
-		// Token: 0x0402B659 RID: 177753
+		// Token: 0x0402697D RID: 158077
 		StrengthLineItem,
-		// Token: 0x0402B65A RID: 177754
+		// Token: 0x0402697E RID: 158078
 		StrengthSingleLineItem,
-		// Token: 0x0402B65B RID: 177755
+		// Token: 0x0402697F RID: 158079
 		LightTexture,
-		// Token: 0x0402B65C RID: 177756
+		// Token: 0x04026980 RID: 158080
 		AnimStart,
-		// Token: 0x0402B65D RID: 177757
+		// Token: 0x04026981 RID: 158081
 		AnimClose,
-		// Token: 0x0402B65E RID: 177758
+		// Token: 0x04026982 RID: 158082
 		AnimRecoverIn,
-		// Token: 0x0402B65F RID: 177759
+		// Token: 0x04026983 RID: 158083
 		AnimRecoverOut
 	}
 }

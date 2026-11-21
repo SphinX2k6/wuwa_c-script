@@ -1,34 +1,34 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200337B RID: 13179
+// Token: 0x020028ED RID: 10477
 public class RedDotDangoFormationRole : RedDotBase
 {
-	// Token: 0x0601CA76 RID: 117366 RVA: 0x00806358 File Offset: 0x00804558
+	// Token: 0x0601A76E RID: 108398 RVA: 0x0082C91C File Offset: 0x0082AB1C
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RedDotDangoFormation);
 	}
 
-	// Token: 0x0601CA77 RID: 117367 RVA: 0x00806364 File Offset: 0x00804564
+	// Token: 0x0601A76F RID: 108399 RVA: 0x0082C928 File Offset: 0x0082AB28
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CA78 RID: 117368 RVA: 0x00806367 File Offset: 0x00804567
+	// Token: 0x0601A770 RID: 108400 RVA: 0x0082C92B File Offset: 0x0082AB2B
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshAbyssDangoRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CA79 RID: 117369 RVA: 0x00806385 File Offset: 0x00804585
+	// Token: 0x0601A771 RID: 108401 RVA: 0x0082C949 File Offset: 0x0082AB49
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshAbyssDangoRedDot, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CA7A RID: 117370 RVA: 0x008063A3 File Offset: 0x008045A3
+	// Token: 0x0601A772 RID: 108402 RVA: 0x0082C967 File Offset: 0x0082AB67
 	protected override bool OnCheck(int uId = 0)
 	{
 		return DangoAbyssModel.Instance.GetDangoFormationNewRoleRedDot(uId);

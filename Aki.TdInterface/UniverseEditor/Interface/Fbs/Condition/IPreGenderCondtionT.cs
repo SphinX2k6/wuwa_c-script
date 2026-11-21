@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C95 RID: 19605
+	// Token: 0x0200518E RID: 20878
 	public class IPreGenderCondtionT
 	{
-		// Token: 0x17008E5A RID: 36442
-		// (get) Token: 0x0601F18F RID: 127375 RVA: 0x004585B4 File Offset: 0x004567B4
-		// (set) Token: 0x0601F190 RID: 127376 RVA: 0x004585BC File Offset: 0x004567BC
+		// Token: 0x17009588 RID: 38280
+		// (get) Token: 0x06020DB1 RID: 134577 RVA: 0x0048C104 File Offset: 0x0048A304
+		// (set) Token: 0x06020DB2 RID: 134578 RVA: 0x0048C10C File Offset: 0x0048A30C
 		public EAccessQuestCondition Type { get; set; }
 
-		// Token: 0x17008E5B RID: 36443
-		// (get) Token: 0x0601F191 RID: 127377 RVA: 0x004585C5 File Offset: 0x004567C5
-		// (set) Token: 0x0601F192 RID: 127378 RVA: 0x004585CD File Offset: 0x004567CD
+		// Token: 0x17009589 RID: 38281
+		// (get) Token: 0x06020DB3 RID: 134579 RVA: 0x0048C115 File Offset: 0x0048A315
+		// (set) Token: 0x06020DB4 RID: 134580 RVA: 0x0048C11D File Offset: 0x0048A31D
 		public EGender Gender { get; set; }
 
-		// Token: 0x0601F193 RID: 127379 RVA: 0x004585D6 File Offset: 0x004567D6
+		// Token: 0x06020DB5 RID: 134581 RVA: 0x0048C126 File Offset: 0x0048A326
 		public IPreGenderCondtionT()
 		{
 			this.Type = EAccessQuestCondition.ExploreLevel;

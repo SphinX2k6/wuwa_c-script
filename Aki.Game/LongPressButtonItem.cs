@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017EF RID: 6127
+// Token: 0x02000CA8 RID: 3240
 [NullableContext(2)]
 [Nullable(0)]
 public class LongPressButtonItem
 {
-	// Token: 0x0600B342 RID: 45890 RVA: 0x00288120 File Offset: 0x00286320
+	// Token: 0x0600872C RID: 34604 RVA: 0x002927F4 File Offset: 0x002909F4
 	[NullableContext(1)]
 	public LongPressButtonItem([Nullable(new byte[]
 	{
@@ -29,7 +29,7 @@ public class LongPressButtonItem
 		}
 	}
 
-	// Token: 0x0600B343 RID: 45891 RVA: 0x00288180 File Offset: 0x00286380
+	// Token: 0x0600872D RID: 34605 RVA: 0x00292854 File Offset: 0x00290A54
 	public void Initialize([Nullable(new byte[]
 	{
 		0,
@@ -123,7 +123,7 @@ public class LongPressButtonItem
 		this.BindAudioEvent();
 	}
 
-	// Token: 0x0600B344 RID: 45892 RVA: 0x002882A0 File Offset: 0x002864A0
+	// Token: 0x0600872E RID: 34606 RVA: 0x00292974 File Offset: 0x00290B74
 	public void Activate(LongPressButtonItem.ELongPressConfigId configId)
 	{
 		this.Config = CommonConfig.Instance.GetLongPressConfig((int)configId);
@@ -132,7 +132,7 @@ public class LongPressButtonItem
 		this.IsPress = false;
 	}
 
-	// Token: 0x0600B345 RID: 45893 RVA: 0x002882F6 File Offset: 0x002864F6
+	// Token: 0x0600872F RID: 34607 RVA: 0x002929CA File Offset: 0x00290BCA
 	public void Deactivate()
 	{
 		this.IsPress = false;
@@ -143,13 +143,13 @@ public class LongPressButtonItem
 		}
 	}
 
-	// Token: 0x0600B346 RID: 45894 RVA: 0x00288320 File Offset: 0x00286520
+	// Token: 0x06008730 RID: 34608 RVA: 0x002929F4 File Offset: 0x00290BF4
 	public bool IsActivate()
 	{
 		return this.TickId != -1 && TickSystem.Instance.Has(this.TickId);
 	}
 
-	// Token: 0x0600B347 RID: 45895 RVA: 0x0028833D File Offset: 0x0028653D
+	// Token: 0x06008731 RID: 34609 RVA: 0x00292A11 File Offset: 0x00290C11
 	private void InteractiveChangeEvent(bool selfInteractive)
 	{
 		if (!selfInteractive)
@@ -158,7 +158,7 @@ public class LongPressButtonItem
 		}
 	}
 
-	// Token: 0x0600B348 RID: 45896 RVA: 0x0028834C File Offset: 0x0028654C
+	// Token: 0x06008732 RID: 34610 RVA: 0x00292A20 File Offset: 0x00290C20
 	private void BindAudioEvent()
 	{
 		if (!this.LongPressComponent.HasValue)
@@ -180,7 +180,7 @@ public class LongPressButtonItem
 		UiComponentUtil.BindAudioEvent(this.LongPressComponent.IsT1 ? this.LongPressComponent.AsT1 : this.LongPressComponent.AsT2);
 	}
 
-	// Token: 0x0600B349 RID: 45897 RVA: 0x002883DE File Offset: 0x002865DE
+	// Token: 0x06008733 RID: 34611 RVA: 0x00292AB2 File Offset: 0x00290CB2
 	private void StopAudioEvent()
 	{
 		if (!StringUtils.IsBlank(this.ComponentName))
@@ -189,14 +189,14 @@ public class LongPressButtonItem
 		}
 	}
 
-	// Token: 0x0600B34A RID: 45898 RVA: 0x002883F8 File Offset: 0x002865F8
+	// Token: 0x06008734 RID: 34612 RVA: 0x00292ACC File Offset: 0x00290CCC
 	private bool CheckTickCondition()
 	{
 		Func<bool> tickConditionDelegate = this.TickConditionDelegate;
 		return tickConditionDelegate == null || tickConditionDelegate();
 	}
 
-	// Token: 0x0600B34B RID: 45899 RVA: 0x0028840C File Offset: 0x0028660C
+	// Token: 0x06008735 RID: 34613 RVA: 0x00292AE0 File Offset: 0x00290CE0
 	private bool CheckDragging()
 	{
 		this.SubVector.DeepCopy(LguiEventSystemManager.Instance.GetPointerEventDataPosition(0));
@@ -204,7 +204,7 @@ public class LongPressButtonItem
 		return this.SubVector.SizeSquared() >= 40000.0;
 	}
 
-	// Token: 0x0600B34C RID: 45900 RVA: 0x00288465 File Offset: 0x00286665
+	// Token: 0x06008736 RID: 34614 RVA: 0x00292B39 File Offset: 0x00290D39
 	private void Tick(float delta)
 	{
 		if (this.TickPreEnterLongPress(delta))
@@ -215,7 +215,7 @@ public class LongPressButtonItem
 		this.TickAudioEvent(delta);
 	}
 
-	// Token: 0x0600B34D RID: 45901 RVA: 0x00288480 File Offset: 0x00286680
+	// Token: 0x06008737 RID: 34615 RVA: 0x00292B54 File Offset: 0x00290D54
 	private bool TickPreEnterLongPress(float delta)
 	{
 		int? num;
@@ -272,7 +272,7 @@ public class LongPressButtonItem
 		return false;
 	}
 
-	// Token: 0x0600B34E RID: 45902 RVA: 0x0028862C File Offset: 0x0028682C
+	// Token: 0x06008738 RID: 34616 RVA: 0x00292D00 File Offset: 0x00290F00
 	private void TickLongPressAction(float delta)
 	{
 		this.TickTime += delta;
@@ -290,7 +290,7 @@ public class LongPressButtonItem
 		pointClickAction(false);
 	}
 
-	// Token: 0x0600B34F RID: 45903 RVA: 0x0028867C File Offset: 0x0028687C
+	// Token: 0x06008739 RID: 34617 RVA: 0x00292D50 File Offset: 0x00290F50
 	private void TickAudioEvent(float delta)
 	{
 		if (!this.ShouldPlayLongPressSound)
@@ -306,7 +306,7 @@ public class LongPressButtonItem
 		}
 	}
 
-	// Token: 0x0600B350 RID: 45904 RVA: 0x00288700 File Offset: 0x00286900
+	// Token: 0x0600873A RID: 34618 RVA: 0x00292DD4 File Offset: 0x00290FD4
 	private int GetTriggerTime()
 	{
 		if (this.Config == null)
@@ -329,14 +329,14 @@ public class LongPressButtonItem
 		return 1000 / num5;
 	}
 
-	// Token: 0x0600B351 RID: 45905 RVA: 0x00288812 File Offset: 0x00286A12
+	// Token: 0x0600873B RID: 34619 RVA: 0x00292EE6 File Offset: 0x002910E6
 	[NullableContext(1)]
 	public void SetTickConditionDelegate(Func<bool> @delegate)
 	{
 		this.TickConditionDelegate = @delegate;
 	}
 
-	// Token: 0x0600B352 RID: 45906 RVA: 0x0028881B File Offset: 0x00286A1B
+	// Token: 0x0600873C RID: 34620 RVA: 0x00292EEF File Offset: 0x002910EF
 	public void SetInteractive(bool value)
 	{
 		if (!this.LongPressComponent.HasValue)
@@ -351,7 +351,7 @@ public class LongPressButtonItem
 		selectableComp.SetSelfInteractive(value);
 	}
 
-	// Token: 0x0600B353 RID: 45907 RVA: 0x0028883C File Offset: 0x00286A3C
+	// Token: 0x0600873D RID: 34621 RVA: 0x00292F10 File Offset: 0x00291110
 	public void SetActive(bool value)
 	{
 		if (!this.LongPressComponent.HasValue)
@@ -371,7 +371,7 @@ public class LongPressButtonItem
 		uuiitem.SetUIActive(value);
 	}
 
-	// Token: 0x0600B354 RID: 45908 RVA: 0x0028887C File Offset: 0x00286A7C
+	// Token: 0x0600873E RID: 34622 RVA: 0x00292F50 File Offset: 0x00291150
 	public void Clear()
 	{
 		this.Deactivate();
@@ -401,7 +401,7 @@ public class LongPressButtonItem
 		this.OnReleaseCallback = null;
 	}
 
-	// Token: 0x0600B355 RID: 45909 RVA: 0x00288950 File Offset: 0x00286B50
+	// Token: 0x0600873F RID: 34623 RVA: 0x00293024 File Offset: 0x00291224
 	private UUISelectableComponent GetSelectableComp()
 	{
 		if (!this.LongPressComponent.HasValue)
@@ -419,7 +419,7 @@ public class LongPressButtonItem
 		return null;
 	}
 
-	// Token: 0x04005123 RID: 20771
+	// Token: 0x040051CE RID: 20942
 	[Nullable(new byte[]
 	{
 		0,
@@ -428,80 +428,80 @@ public class LongPressButtonItem
 	})]
 	private OneOf<UUIButtonComponent, UUIExtendToggle> LongPressComponent;
 
-	// Token: 0x04005124 RID: 20772
+	// Token: 0x040051CF RID: 20943
 	private LongPressConfig? Config;
 
-	// Token: 0x04005125 RID: 20773
+	// Token: 0x040051D0 RID: 20944
 	private bool IsPress;
 
-	// Token: 0x04005126 RID: 20774
+	// Token: 0x040051D1 RID: 20945
 	private int TickId = -1;
 
-	// Token: 0x04005127 RID: 20775
+	// Token: 0x040051D2 RID: 20946
 	private float PressTime;
 
-	// Token: 0x04005128 RID: 20776
+	// Token: 0x040051D3 RID: 20947
 	private float TickTime;
 
-	// Token: 0x04005129 RID: 20777
+	// Token: 0x040051D4 RID: 20948
 	private float AudioTickTime;
 
-	// Token: 0x0400512A RID: 20778
+	// Token: 0x040051D5 RID: 20949
 	private bool IsInFirstStage;
 
-	// Token: 0x0400512B RID: 20779
+	// Token: 0x040051D6 RID: 20950
 	public string OverriddenLongPressAudioEvent;
 
-	// Token: 0x0400512C RID: 20780
+	// Token: 0x040051D7 RID: 20951
 	public bool ShouldPlayLongPressSound;
 
-	// Token: 0x0400512D RID: 20781
+	// Token: 0x040051D8 RID: 20952
 	private Action<bool> PointClickAction;
 
-	// Token: 0x0400512E RID: 20782
+	// Token: 0x040051D9 RID: 20953
 	private Action OnPressCallback;
 
-	// Token: 0x0400512F RID: 20783
+	// Token: 0x040051DA RID: 20954
 	private Action OnReleaseCallback;
 
-	// Token: 0x04005130 RID: 20784
+	// Token: 0x040051DB RID: 20955
 	private Action OnCancelCallback;
 
-	// Token: 0x04005131 RID: 20785
+	// Token: 0x040051DC RID: 20956
 	private Func<bool> TickConditionDelegate;
 
-	// Token: 0x04005132 RID: 20786
+	// Token: 0x040051DD RID: 20957
 	[Nullable(1)]
 	private readonly global::Vector FirstPointDownPos = global::Vector.Create();
 
-	// Token: 0x04005133 RID: 20787
+	// Token: 0x040051DE RID: 20958
 	[Nullable(1)]
 	private readonly global::Vector SubVector = global::Vector.Create();
 
-	// Token: 0x04005134 RID: 20788
+	// Token: 0x040051DF RID: 20959
 	private string ComponentName;
 
-	// Token: 0x04005135 RID: 20789
+	// Token: 0x040051E0 RID: 20960
 	private const int DRAG_TOLERANCE = 200;
 
-	// Token: 0x04005136 RID: 20790
+	// Token: 0x040051E1 RID: 20961
 	private const int ONE_SECOND_TO_MILLISECOND = 1000;
 
-	// Token: 0x04005137 RID: 20791
+	// Token: 0x040051E2 RID: 20962
 	[Nullable(1)]
 	private const string LONG_PRESS_AUDIO_EVENT = "play_ui_com_slider_tick";
 
-	// Token: 0x02007DDD RID: 32221
+	// Token: 0x02006F63 RID: 28515
 	[NullableContext(0)]
 	public enum ELongPressConfigId
 	{
-		// Token: 0x0402931F RID: 168735
+		// Token: 0x0402464A RID: 149066
 		LongPressOne = 1,
-		// Token: 0x04029320 RID: 168736
+		// Token: 0x0402464B RID: 149067
 		LongPressSecond,
-		// Token: 0x04029321 RID: 168737
+		// Token: 0x0402464C RID: 149068
 		LongPressThird,
-		// Token: 0x04029322 RID: 168738
+		// Token: 0x0402464D RID: 149069
 		LongPressFourth
 	}
 }

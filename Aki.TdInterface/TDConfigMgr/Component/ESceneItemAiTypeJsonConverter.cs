@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A01 RID: 2561
+	// Token: 0x02000AC6 RID: 2758
 	public class ESceneItemAiTypeJsonConverter : JsonConverter<ESceneItemAiType>
 	{
-		// Token: 0x060038B7 RID: 14519 RVA: 0x00092B44 File Offset: 0x00090D44
+		// Token: 0x06003C8F RID: 15503 RVA: 0x0009B434 File Offset: 0x00099634
 		public override ESceneItemAiType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ESceneItemAiTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060038B8 RID: 14520 RVA: 0x00092B68 File Offset: 0x00090D68
+		// Token: 0x06003C90 RID: 15504 RVA: 0x0009B458 File Offset: 0x00099658
 		public override void Write(Utf8JsonWriter writer, ESceneItemAiType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

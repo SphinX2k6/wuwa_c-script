@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018FB RID: 6395
+	// Token: 0x02001A82 RID: 6786
 	public class ICommonBtClientOverrideData_SetValue
 	{
-		// Token: 0x040055EC RID: 21996
+		// Token: 0x04005A36 RID: 23094
 		public int TaskId;
 
-		// Token: 0x040055ED RID: 21997
-		[Nullable(1)]
+		// Token: 0x04005A37 RID: 23095
 		public string Data;
 	}
 }

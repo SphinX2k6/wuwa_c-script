@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200240A RID: 9226
+// Token: 0x020018EF RID: 6383
 public enum ELevelUpViewType
 {
-	// Token: 0x04008B7B RID: 35707
+	// Token: 0x04008CC2 RID: 36034
 	LevelUp,
-	// Token: 0x04008B7C RID: 35708
+	// Token: 0x04008CC3 RID: 36035
 	Equip
 }

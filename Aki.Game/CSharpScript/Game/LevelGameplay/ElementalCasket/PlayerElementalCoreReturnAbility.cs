@@ -5,29 +5,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E6F RID: 28271
+	// Token: 0x02005FF0 RID: 24560
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalCoreReturnAbility : PlayerElementalCoreFollowAbilityBase
 	{
-		// Token: 0x06044E3B RID: 282171 RVA: 0x01102000 File Offset: 0x01100200
+		// Token: 0x0603AFCE RID: 241614 RVA: 0x010AC56C File Offset: 0x010AA76C
 		public PlayerElementalCoreReturnAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044E3C RID: 282172 RVA: 0x011020E7 File Offset: 0x011002E7
+		// Token: 0x0603AFCF RID: 241615 RVA: 0x010AC653 File Offset: 0x010AA853
 		public override bool ShouldActivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().ElementalCoreState == EPlayerElementalCoreState.Returning;
 		}
 
-		// Token: 0x06044E3D RID: 282173 RVA: 0x011020F7 File Offset: 0x011002F7
+		// Token: 0x0603AFD0 RID: 241616 RVA: 0x010AC663 File Offset: 0x010AA863
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().ElementalCoreState != EPlayerElementalCoreState.Returning;
 		}
 
-		// Token: 0x06044E3E RID: 282174 RVA: 0x0110210C File Offset: 0x0110030C
+		// Token: 0x0603AFD1 RID: 241617 RVA: 0x010AC678 File Offset: 0x010AA878
 		public override void OnActivated(Entity entity)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E3F RID: 282175 RVA: 0x01102210 File Offset: 0x01100410
+		// Token: 0x0603AFD2 RID: 241618 RVA: 0x010AC77C File Offset: 0x010AA97C
 		public override void OnDeactivated(Entity entity)
 		{
 			this.Timer = 0f;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.TempRotation.Reset();
 		}
 
-		// Token: 0x06044E40 RID: 282176 RVA: 0x0110228C File Offset: 0x0110048C
+		// Token: 0x0603AFD3 RID: 241619 RVA: 0x010AC7F8 File Offset: 0x010AA9F8
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -114,34 +114,44 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			elementalCoreActor.D_K2_SetActorLocationAndRotation(this.TempLocation.ToUeVector(false), this.TempRotation.ToUeRotator(), false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x04023DE4 RID: 146916
+		// Token: 0x17006F6D RID: 28525
+		// (get) Token: 0x0603AFD4 RID: 241620 RVA: 0x010AC9C7 File Offset: 0x010AABC7
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F099 RID: 127129
 		private float Timer;
 
-		// Token: 0x04023DE5 RID: 146917
+		// Token: 0x0401F09A RID: 127130
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x04023DE6 RID: 146918
+		// Token: 0x0401F09B RID: 127131
 		private readonly Quat StartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023DE7 RID: 146919
+		// Token: 0x0401F09C RID: 127132
 		private readonly Vector TargetLocation = Vector.Create();
 
-		// Token: 0x04023DE8 RID: 146920
+		// Token: 0x0401F09D RID: 127133
 		private readonly Rotator TargetRotation = Rotator.Create();
 
-		// Token: 0x04023DE9 RID: 146921
+		// Token: 0x0401F09E RID: 127134
 		private readonly Quat TargetQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023DEA RID: 146922
+		// Token: 0x0401F09F RID: 127135
 		private readonly Vector TempTargetLocation = Vector.Create();
 
-		// Token: 0x04023DEB RID: 146923
+		// Token: 0x0401F0A0 RID: 127136
 		private readonly Vector TempLocation = Vector.Create();
 
-		// Token: 0x04023DEC RID: 146924
+		// Token: 0x0401F0A1 RID: 127137
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04023DED RID: 146925
+		// Token: 0x0401F0A2 RID: 127138
 		private readonly Rotator TempRotation = Rotator.Create();
 	}
 }

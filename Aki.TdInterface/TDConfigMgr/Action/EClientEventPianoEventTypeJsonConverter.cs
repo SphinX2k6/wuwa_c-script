@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022DE RID: 8926
+	// Token: 0x0200254D RID: 9549
 	public class EClientEventPianoEventTypeJsonConverter : JsonConverter<EClientEventPianoEventType>
 	{
-		// Token: 0x0600C367 RID: 50023 RVA: 0x001C8CFC File Offset: 0x001C6EFC
+		// Token: 0x0600CF36 RID: 53046 RVA: 0x001E0B04 File Offset: 0x001DED04
 		public override EClientEventPianoEventType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EClientEventPianoEventTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C368 RID: 50024 RVA: 0x001C8D20 File Offset: 0x001C6F20
+		// Token: 0x0600CF37 RID: 53047 RVA: 0x001E0B28 File Offset: 0x001DED28
 		public override void Write(Utf8JsonWriter writer, EClientEventPianoEventType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

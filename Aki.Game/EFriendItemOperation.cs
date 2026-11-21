@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001C2D RID: 7213
+// Token: 0x020010EC RID: 4332
 public enum EFriendItemOperation
 {
-	// Token: 0x040062D7 RID: 25303
+	// Token: 0x040063A9 RID: 25513
 	Default,
-	// Token: 0x040062D8 RID: 25304
+	// Token: 0x040063AA RID: 25514
 	SendApply,
-	// Token: 0x040062D9 RID: 25305
+	// Token: 0x040063AB RID: 25515
 	Approve,
-	// Token: 0x040062DA RID: 25306
+	// Token: 0x040063AC RID: 25516
 	Refuse
 }

@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071E5 RID: 29157
+	// Token: 0x0200629A RID: 25242
 	public class SceneItemManipulableChantState : SceneItemManipulableBaseState
 	{
-		// Token: 0x060475DD RID: 292317 RVA: 0x01225FE4 File Offset: 0x012241E4
+		// Token: 0x0603CEDF RID: 249567 RVA: 0x0117FE1C File Offset: 0x0117E01C
 		[NullableContext(1)]
 		public SceneItemManipulableChantState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SubCameraTag = new FGameplayTag?(subCameraTag);
 		}
 
-		// Token: 0x060475DE RID: 292318 RVA: 0x01226005 File Offset: 0x01224205
+		// Token: 0x0603CEE0 RID: 249568 RVA: 0x0117FE3D File Offset: 0x0117E03D
 		protected override void OnEnter()
 		{
 			base.StartCameraShake(this.CameraShake);
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.NeedRemoveControllerId = true;
 		}
 
-		// Token: 0x060475DF RID: 292319 RVA: 0x0122603A File Offset: 0x0122423A
+		// Token: 0x0603CEE1 RID: 249569 RVA: 0x0117FE72 File Offset: 0x0117E072
 		protected override void OnExit()
 		{
 			base.StopCameraShake();
 			EventSystem.Instance.Emit<FGameplayTag>(EEventName.RemoveSubCameraTag, this.SubCameraTag.Value);
 		}
 
-		// Token: 0x04025868 RID: 153704
+		// Token: 0x040204D7 RID: 132311
 		[Nullable(new byte[]
 		{
 			0,
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		private readonly TSubclassOf<UCameraShakeBase>? CameraShake;
 
-		// Token: 0x04025869 RID: 153705
+		// Token: 0x040204D8 RID: 132312
 		private readonly FGameplayTag? SubCameraTag;
 	}
 }

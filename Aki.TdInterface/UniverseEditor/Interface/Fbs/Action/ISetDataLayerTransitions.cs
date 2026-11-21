@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FD7 RID: 28631
+	// Token: 0x020077A0 RID: 30624
 	public struct ISetDataLayerTransitions : IFlatbufferObject
 	{
-		// Token: 0x1700D48C RID: 54412
-		// (get) Token: 0x060329B1 RID: 207281 RVA: 0x006D3EEC File Offset: 0x006D20EC
+		// Token: 0x1700E060 RID: 57440
+		// (get) Token: 0x06035C17 RID: 220183 RVA: 0x00733B30 File Offset: 0x00731D30
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060329B2 RID: 207282 RVA: 0x006D3EF9 File Offset: 0x006D20F9
+		// Token: 0x06035C18 RID: 220184 RVA: 0x00733B3D File Offset: 0x00731D3D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060329B3 RID: 207283 RVA: 0x006D3F00 File Offset: 0x006D2100
+		// Token: 0x06035C19 RID: 220185 RVA: 0x00733B44 File Offset: 0x00731D44
 		public static ISetDataLayerTransitions GetRootAsISetDataLayerTransitions(ByteBuffer _bb)
 		{
 			return ISetDataLayerTransitions.GetRootAsISetDataLayerTransitions(_bb, default(ISetDataLayerTransitions));
 		}
 
-		// Token: 0x060329B4 RID: 207284 RVA: 0x006D3F1C File Offset: 0x006D211C
+		// Token: 0x06035C1A RID: 220186 RVA: 0x00733B60 File Offset: 0x00731D60
 		public static ISetDataLayerTransitions GetRootAsISetDataLayerTransitions(ByteBuffer _bb, ISetDataLayerTransitions obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060329B5 RID: 207285 RVA: 0x006D3F39 File Offset: 0x006D2139
+		// Token: 0x06035C1B RID: 220187 RVA: 0x00733B7D File Offset: 0x00731D7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060329B6 RID: 207286 RVA: 0x006D3F48 File Offset: 0x006D2148
+		// Token: 0x06035C1C RID: 220188 RVA: 0x00733B8C File Offset: 0x00731D8C
 		public ISetDataLayerTransitions __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D48D RID: 54413
-		// (get) Token: 0x060329B7 RID: 207287 RVA: 0x006D3F58 File Offset: 0x006D2158
+		// Token: 0x1700E061 RID: 57441
+		// (get) Token: 0x06035C1D RID: 220189 RVA: 0x00733B9C File Offset: 0x00731D9C
 		public IActorRef? VolumeActor
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D48E RID: 54414
-		// (get) Token: 0x060329B8 RID: 207288 RVA: 0x006D3FB8 File Offset: 0x006D21B8
+		// Token: 0x1700E062 RID: 57442
+		// (get) Token: 0x06035C1E RID: 220190 RVA: 0x00733BFC File Offset: 0x00731DFC
 		public string MaterialDataForEnable
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060329B9 RID: 207289 RVA: 0x006D3FEF File Offset: 0x006D21EF
+		// Token: 0x06035C1F RID: 220191 RVA: 0x00733C33 File Offset: 0x00731E33
 		public Span<byte> GetMaterialDataForEnableBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060329BA RID: 207290 RVA: 0x006D3FFE File Offset: 0x006D21FE
+		// Token: 0x06035C20 RID: 220192 RVA: 0x00733C42 File Offset: 0x00731E42
 		public byte[] GetMaterialDataForEnableArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D48F RID: 54415
-		// (get) Token: 0x060329BB RID: 207291 RVA: 0x006D400C File Offset: 0x006D220C
+		// Token: 0x1700E063 RID: 57443
+		// (get) Token: 0x06035C21 RID: 220193 RVA: 0x00733C50 File Offset: 0x00731E50
 		public string MaterialDataForDisable
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060329BC RID: 207292 RVA: 0x006D4043 File Offset: 0x006D2243
+		// Token: 0x06035C22 RID: 220194 RVA: 0x00733C87 File Offset: 0x00731E87
 		public Span<byte> GetMaterialDataForDisableBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060329BD RID: 207293 RVA: 0x006D4052 File Offset: 0x006D2252
+		// Token: 0x06035C23 RID: 220195 RVA: 0x00733C96 File Offset: 0x00731E96
 		public byte[] GetMaterialDataForDisableArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700D490 RID: 54416
-		// (get) Token: 0x060329BE RID: 207294 RVA: 0x006D4060 File Offset: 0x006D2260
+		// Token: 0x1700E064 RID: 57444
+		// (get) Token: 0x06035C24 RID: 220196 RVA: 0x00733CA4 File Offset: 0x00731EA4
 		public string VolumeEnterSeq
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060329BF RID: 207295 RVA: 0x006D4098 File Offset: 0x006D2298
+		// Token: 0x06035C25 RID: 220197 RVA: 0x00733CDC File Offset: 0x00731EDC
 		public Span<byte> GetVolumeEnterSeqBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060329C0 RID: 207296 RVA: 0x006D40A8 File Offset: 0x006D22A8
+		// Token: 0x06035C26 RID: 220198 RVA: 0x00733CEC File Offset: 0x00731EEC
 		public byte[] GetVolumeEnterSeqArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700D491 RID: 54417
-		// (get) Token: 0x060329C1 RID: 207297 RVA: 0x006D40B8 File Offset: 0x006D22B8
+		// Token: 0x1700E065 RID: 57445
+		// (get) Token: 0x06035C27 RID: 220199 RVA: 0x00733CFC File Offset: 0x00731EFC
 		public string VolumeOutSeq
 		{
 			get
@@ -159,19 +159,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060329C2 RID: 207298 RVA: 0x006D40F0 File Offset: 0x006D22F0
+		// Token: 0x06035C28 RID: 220200 RVA: 0x00733D34 File Offset: 0x00731F34
 		public Span<byte> GetVolumeOutSeqBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x060329C3 RID: 207299 RVA: 0x006D4100 File Offset: 0x006D2300
+		// Token: 0x06035C29 RID: 220201 RVA: 0x00733D44 File Offset: 0x00731F44
 		public byte[] GetVolumeOutSeqArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x060329C4 RID: 207300 RVA: 0x006D410F File Offset: 0x006D230F
+		// Token: 0x06035C2A RID: 220202 RVA: 0x00733D53 File Offset: 0x00731F53
 		public static Offset<ISetDataLayerTransitions> CreateISetDataLayerTransitions(FlatBufferBuilder builder, Offset<IActorRef> VolumeActorOffset = default(Offset<IActorRef>), StringOffset MaterialDataForEnableOffset = default(StringOffset), StringOffset MaterialDataForDisableOffset = default(StringOffset), StringOffset VolumeEnterSeqOffset = default(StringOffset), StringOffset VolumeOutSeqOffset = default(StringOffset))
 		{
 			builder.StartTable(5);
@@ -183,49 +183,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetDataLayerTransitions.EndISetDataLayerTransitions(builder);
 		}
 
-		// Token: 0x060329C5 RID: 207301 RVA: 0x006D4143 File Offset: 0x006D2343
+		// Token: 0x06035C2B RID: 220203 RVA: 0x00733D87 File Offset: 0x00731F87
 		public static void StartISetDataLayerTransitions(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060329C6 RID: 207302 RVA: 0x006D414C File Offset: 0x006D234C
+		// Token: 0x06035C2C RID: 220204 RVA: 0x00733D90 File Offset: 0x00731F90
 		public static void AddVolumeActor(FlatBufferBuilder builder, Offset<IActorRef> volumeActorOffset)
 		{
 			builder.AddOffset(0, volumeActorOffset.Value, 0);
 		}
 
-		// Token: 0x060329C7 RID: 207303 RVA: 0x006D415C File Offset: 0x006D235C
+		// Token: 0x06035C2D RID: 220205 RVA: 0x00733DA0 File Offset: 0x00731FA0
 		public static void AddMaterialDataForEnable(FlatBufferBuilder builder, StringOffset materialDataForEnableOffset)
 		{
 			builder.AddOffset(1, materialDataForEnableOffset.Value, 0);
 		}
 
-		// Token: 0x060329C8 RID: 207304 RVA: 0x006D416C File Offset: 0x006D236C
+		// Token: 0x06035C2E RID: 220206 RVA: 0x00733DB0 File Offset: 0x00731FB0
 		public static void AddMaterialDataForDisable(FlatBufferBuilder builder, StringOffset materialDataForDisableOffset)
 		{
 			builder.AddOffset(2, materialDataForDisableOffset.Value, 0);
 		}
 
-		// Token: 0x060329C9 RID: 207305 RVA: 0x006D417C File Offset: 0x006D237C
+		// Token: 0x06035C2F RID: 220207 RVA: 0x00733DC0 File Offset: 0x00731FC0
 		public static void AddVolumeEnterSeq(FlatBufferBuilder builder, StringOffset volumeEnterSeqOffset)
 		{
 			builder.AddOffset(3, volumeEnterSeqOffset.Value, 0);
 		}
 
-		// Token: 0x060329CA RID: 207306 RVA: 0x006D418C File Offset: 0x006D238C
+		// Token: 0x06035C30 RID: 220208 RVA: 0x00733DD0 File Offset: 0x00731FD0
 		public static void AddVolumeOutSeq(FlatBufferBuilder builder, StringOffset volumeOutSeqOffset)
 		{
 			builder.AddOffset(4, volumeOutSeqOffset.Value, 0);
 		}
 
-		// Token: 0x060329CB RID: 207307 RVA: 0x006D419C File Offset: 0x006D239C
+		// Token: 0x06035C31 RID: 220209 RVA: 0x00733DE0 File Offset: 0x00731FE0
 		public static Offset<ISetDataLayerTransitions> EndISetDataLayerTransitions(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetDataLayerTransitions>(builder.EndTable());
 		}
 
-		// Token: 0x060329CC RID: 207308 RVA: 0x006D41AC File Offset: 0x006D23AC
+		// Token: 0x06035C32 RID: 220210 RVA: 0x00733DF0 File Offset: 0x00731FF0
 		public ISetDataLayerTransitionsT UnPack()
 		{
 			ISetDataLayerTransitionsT setDataLayerTransitionsT = new ISetDataLayerTransitionsT();
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setDataLayerTransitionsT;
 		}
 
-		// Token: 0x060329CD RID: 207309 RVA: 0x006D41C8 File Offset: 0x006D23C8
+		// Token: 0x06035C33 RID: 220211 RVA: 0x00733E0C File Offset: 0x0073200C
 		public void UnPackTo(ISetDataLayerTransitionsT _o)
 		{
 			_o.VolumeActor = ((this.VolumeActor != null) ? this.VolumeActor.Value.UnPack() : null);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.VolumeOutSeq = this.VolumeOutSeq;
 		}
 
-		// Token: 0x060329CE RID: 207310 RVA: 0x006D4234 File Offset: 0x006D2434
+		// Token: 0x06035C34 RID: 220212 RVA: 0x00733E78 File Offset: 0x00732078
 		public static Offset<ISetDataLayerTransitions> Pack(FlatBufferBuilder builder, ISetDataLayerTransitionsT _o)
 		{
 			if (_o == null)
@@ -258,7 +258,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetDataLayerTransitions.CreateISetDataLayerTransitions(builder, volumeActorOffset, materialDataForEnableOffset, materialDataForDisableOffset, volumeEnterSeqOffset, volumeOutSeqOffset);
 		}
 
-		// Token: 0x040119E2 RID: 72162
+		// Token: 0x040129C7 RID: 76231
 		private Table __p;
 	}
 }

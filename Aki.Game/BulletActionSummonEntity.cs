@@ -2,15 +2,15 @@
 using Aki.Protocol;
 using Aki.Protocol.Summon;
 
-// Token: 0x02002D98 RID: 11672
+// Token: 0x020022F2 RID: 8946
 public class BulletActionSummonEntity : BulletActionBase
 {
-	// Token: 0x06018850 RID: 100432 RVA: 0x00642DC0 File Offset: 0x00640FC0
+	// Token: 0x060160F4 RID: 90356 RVA: 0x00668B7C File Offset: 0x00666D7C
 	public BulletActionSummonEntity(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018851 RID: 100433 RVA: 0x00642DCC File Offset: 0x00640FCC
+	// Token: 0x060160F5 RID: 90357 RVA: 0x00668B88 File Offset: 0x00666D88
 	protected override void OnExecute()
 	{
 		Entity attacker = this.BulletInfo.Attacker;

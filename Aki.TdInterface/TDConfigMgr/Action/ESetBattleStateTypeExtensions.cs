@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002401 RID: 9217
+	// Token: 0x020026A0 RID: 9888
 	public static class ESetBattleStateTypeExtensions
 	{
-		// Token: 0x0600C883 RID: 51331 RVA: 0x001D581C File Offset: 0x001D3A1C
+		// Token: 0x0600D52A RID: 54570 RVA: 0x001EF418 File Offset: 0x001ED618
 		public static string ToEnumString(this ESetBattleStateType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C884 RID: 51332 RVA: 0x001D5864 File Offset: 0x001D3A64
+		// Token: 0x0600D52B RID: 54571 RVA: 0x001EF460 File Offset: 0x001ED660
 		public static ESetBattleStateType FromString(string name)
 		{
 			ESetBattleStateType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C885 RID: 51333 RVA: 0x001D5890 File Offset: 0x001D3A90
+		// Token: 0x0600D52C RID: 54572 RVA: 0x001EF48C File Offset: 0x001ED68C
 		public static bool TryFromString(string name, out ESetBattleStateType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C886 RID: 51334 RVA: 0x001D58E6 File Offset: 0x001D3AE6
+		// Token: 0x0600D52D RID: 54573 RVA: 0x001EF4E2 File Offset: 0x001ED6E2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C887 RID: 51335 RVA: 0x001D5906 File Offset: 0x001D3B06
+		// Token: 0x0600D52E RID: 54574 RVA: 0x001EF502 File Offset: 0x001ED702
 		public static ESetBattleStateType[] GetValues()
 		{
 			return new ESetBattleStateType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C888 RID: 51336 RVA: 0x001D5916 File Offset: 0x001D3B16
+		// Token: 0x0600D52F RID: 54575 RVA: 0x001EF512 File Offset: 0x001ED712
 		public static string[] GetNames()
 		{
 			return new string[]

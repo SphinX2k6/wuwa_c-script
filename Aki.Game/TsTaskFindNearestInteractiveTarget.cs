@@ -16,9 +16,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskFindNearestInteractiveTarget.TsTaskFindNearestInteractiveTarget_C")]
 public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000DE RID: 222
-	// (get) Token: 0x06000563 RID: 1379 RVA: 0x00019CF7 File Offset: 0x00017EF7
-	// (set) Token: 0x06000564 RID: 1380 RVA: 0x00019D07 File Offset: 0x00017F07
+	// Token: 0x170000E0 RID: 224
+	// (get) Token: 0x06000567 RID: 1383 RVA: 0x0001A7BF File Offset: 0x000189BF
+	// (set) Token: 0x06000568 RID: 1384 RVA: 0x0001A7CF File Offset: 0x000189CF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float SearchRange
 	{
@@ -32,9 +32,9 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		}
 	}
 
-	// Token: 0x170000DF RID: 223
-	// (get) Token: 0x06000565 RID: 1381 RVA: 0x00019D18 File Offset: 0x00017F18
-	// (set) Token: 0x06000566 RID: 1382 RVA: 0x00019D2C File Offset: 0x00017F2C
+	// Token: 0x170000E1 RID: 225
+	// (get) Token: 0x06000569 RID: 1385 RVA: 0x0001A7E0 File Offset: 0x000189E0
+	// (set) Token: 0x0600056A RID: 1386 RVA: 0x0001A7F4 File Offset: 0x000189F4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string SaveTargetBlackboardKey
 	{
@@ -48,7 +48,7 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		}
 	}
 
-	// Token: 0x06000567 RID: 1383 RVA: 0x00019D41 File Offset: 0x00017F41
+	// Token: 0x0600056B RID: 1387 RVA: 0x0001A809 File Offset: 0x00018A09
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -59,30 +59,27 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		}
 	}
 
-	// Token: 0x06000568 RID: 1384 RVA: 0x00019D74 File Offset: 0x00017F74
+	// Token: 0x0600056C RID: 1388 RVA: 0x0001A83C File Offset: 0x00018A3C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFindNearestInteractiveTarget) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskFindNearestInteractiveTarget.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000569 RID: 1385 RVA: 0x00019E10 File Offset: 0x00018010
+	// Token: 0x0600056D RID: 1389 RVA: 0x0001A8EC File Offset: 0x00018AEC
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -109,7 +106,7 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		base.FinishExecute(false);
 	}
 
-	// Token: 0x0600056A RID: 1386 RVA: 0x00019EB0 File Offset: 0x000180B0
+	// Token: 0x0600056E RID: 1390 RVA: 0x0001A98C File Offset: 0x00018B8C
 	private long? GetNearestInteractiveEntity(CharacterActorComponent self, float searchRange)
 	{
 		CreatureModel.Instance.GetEntitiesInRangeWithLocation(this.NowLocation, this.TsSearchRange, EEntityTypeQuery.SceneItemOrCharacter, this.TmpHandles, true);
@@ -141,7 +138,7 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		return result;
 	}
 
-	// Token: 0x0600056B RID: 1387 RVA: 0x00019FD8 File Offset: 0x000181D8
+	// Token: 0x0600056F RID: 1391 RVA: 0x0001AAB4 File Offset: 0x00018CB4
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskFindNearestInteractiveTarget._ClassPtr == IntPtr.Zero)
@@ -151,22 +148,22 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		return TsTaskFindNearestInteractiveTarget._ClassPtr;
 	}
 
-	// Token: 0x0600056C RID: 1388 RVA: 0x00019FFC File Offset: 0x000181FC
+	// Token: 0x06000570 RID: 1392 RVA: 0x0001AAD8 File Offset: 0x00018CD8
 	public TsTaskFindNearestInteractiveTarget() : this(BuiltinUtils.AllocNativeUObject(TsTaskFindNearestInteractiveTarget.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600056D RID: 1389 RVA: 0x0001A024 File Offset: 0x00018224
+	// Token: 0x06000571 RID: 1393 RVA: 0x0001AB00 File Offset: 0x00018D00
 	public TsTaskFindNearestInteractiveTarget(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFindNearestInteractiveTarget.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600056E RID: 1390 RVA: 0x0001A057 File Offset: 0x00018257
+	// Token: 0x06000572 RID: 1394 RVA: 0x0001AB33 File Offset: 0x00018D33
 	protected TsTaskFindNearestInteractiveTarget(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600056F RID: 1391 RVA: 0x0001A06C File Offset: 0x0001826C
+	// Token: 0x06000573 RID: 1395 RVA: 0x0001AB48 File Offset: 0x00018D48
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -175,11 +172,11 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040003DD RID: 989
+	// Token: 0x040003E1 RID: 993
 	[Nullable(2)]
 	private global::Vector NowLocation;
 
-	// Token: 0x040003DE RID: 990
+	// Token: 0x040003E2 RID: 994
 	[Nullable(new byte[]
 	{
 		2,
@@ -187,27 +184,27 @@ public class TsTaskFindNearestInteractiveTarget : TsTaskAbortImmediatelyBase, IU
 	})]
 	private List<EntityHandle> TmpHandles;
 
-	// Token: 0x040003DF RID: 991
+	// Token: 0x040003E3 RID: 995
 	private bool IsInitTsVariables;
 
-	// Token: 0x040003E0 RID: 992
+	// Token: 0x040003E4 RID: 996
 	private float TsSearchRange;
 
-	// Token: 0x040003E1 RID: 993
+	// Token: 0x040003E5 RID: 997
 	private string TsSaveTargetBlackboardKey = "";
 
-	// Token: 0x040003E2 RID: 994
+	// Token: 0x040003E6 RID: 998
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskFindNearestInteractiveTarget.TsTaskFindNearestInteractiveTarget_C";
 
-	// Token: 0x040003E3 RID: 995
+	// Token: 0x040003E7 RID: 999
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040003E4 RID: 996
+	// Token: 0x040003E8 RID: 1000
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040003E5 RID: 997
+	// Token: 0x040003E9 RID: 1001
 	private static int __PropertyOffset_SearchRange;
 
-	// Token: 0x040003E6 RID: 998
+	// Token: 0x040003EA RID: 1002
 	private static int __PropertyOffset_SaveTargetBlackboardKey;
 }

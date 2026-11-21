@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C34 RID: 27700
+	// Token: 0x0200739B RID: 29595
 	public class IOpenSplineMoveT
 	{
-		// Token: 0x1700CE15 RID: 52757
-		// (get) Token: 0x06030BF9 RID: 199673 RVA: 0x0069ED37 File Offset: 0x0069CF37
-		// (set) Token: 0x06030BFA RID: 199674 RVA: 0x0069ED3F File Offset: 0x0069CF3F
+		// Token: 0x1700D930 RID: 55600
+		// (get) Token: 0x06033B51 RID: 211793 RVA: 0x006F919F File Offset: 0x006F739F
+		// (set) Token: 0x06033B52 RID: 211794 RVA: 0x006F91A7 File Offset: 0x006F73A7
 		public ESplineMoveConfigType Type { get; set; }
 
-		// Token: 0x1700CE16 RID: 52758
-		// (get) Token: 0x06030BFB RID: 199675 RVA: 0x0069ED48 File Offset: 0x0069CF48
-		// (set) Token: 0x06030BFC RID: 199676 RVA: 0x0069ED50 File Offset: 0x0069CF50
+		// Token: 0x1700D931 RID: 55601
+		// (get) Token: 0x06033B53 RID: 211795 RVA: 0x006F91B0 File Offset: 0x006F73B0
+		// (set) Token: 0x06033B54 RID: 211796 RVA: 0x006F91B8 File Offset: 0x006F73B8
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x1700CE17 RID: 52759
-		// (get) Token: 0x06030BFD RID: 199677 RVA: 0x0069ED59 File Offset: 0x0069CF59
-		// (set) Token: 0x06030BFE RID: 199678 RVA: 0x0069ED61 File Offset: 0x0069CF61
+		// Token: 0x1700D932 RID: 55602
+		// (get) Token: 0x06033B55 RID: 211797 RVA: 0x006F91C1 File Offset: 0x006F73C1
+		// (set) Token: 0x06033B56 RID: 211798 RVA: 0x006F91C9 File Offset: 0x006F73C9
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x1700CE18 RID: 52760
-		// (get) Token: 0x06030BFF RID: 199679 RVA: 0x0069ED6A File Offset: 0x0069CF6A
-		// (set) Token: 0x06030C00 RID: 199680 RVA: 0x0069ED72 File Offset: 0x0069CF72
+		// Token: 0x1700D933 RID: 55603
+		// (get) Token: 0x06033B57 RID: 211799 RVA: 0x006F91D2 File Offset: 0x006F73D2
+		// (set) Token: 0x06033B58 RID: 211800 RVA: 0x006F91DA File Offset: 0x006F73DA
 		public TSplineMovePatternUnion Pattern { get; set; }
 
-		// Token: 0x06030C01 RID: 199681 RVA: 0x0069ED7B File Offset: 0x0069CF7B
+		// Token: 0x06033B59 RID: 211801 RVA: 0x006F91E3 File Offset: 0x006F73E3
 		public IOpenSplineMoveT()
 		{
 			this.Type = ESplineMoveConfigType.Open;

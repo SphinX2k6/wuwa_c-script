@@ -9,12 +9,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02003FEC RID: 16364
+	// Token: 0x02003255 RID: 12885
 	[UnrealObjectPath("/Game/Aki/Core/Fight/BPL_Fight.BPL_Fight_C")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class BPL_Fight_C : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029F00 RID: 171776 RVA: 0x009D0F7F File Offset: 0x009CF17F
+		// Token: 0x060202FB RID: 131835 RVA: 0x0093F4D8 File Offset: 0x0093D6D8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BPL_Fight_C._ClassPtr == IntPtr.Zero)
@@ -24,21 +24,20 @@ namespace AkiClient.Game.Aki.Core.Fight
 			return BPL_Fight_C._ClassPtr;
 		}
 
-		// Token: 0x06029F01 RID: 171777 RVA: 0x009D0FA4 File Offset: 0x009CF1A4
+		// Token: 0x060202FC RID: 131836 RVA: 0x0093F4FC File Offset: 0x0093D6FC
 		public BPL_Fight_C() : this(BuiltinUtils.AllocNativeUObject(BPL_Fight_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06029F02 RID: 171778 RVA: 0x009D0FCC File Offset: 0x009CF1CC
+		// Token: 0x060202FD RID: 131837 RVA: 0x0093F524 File Offset: 0x0093D724
 		[NullableContext(1)]
 		public BPL_Fight_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BPL_Fight_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06029F03 RID: 171779 RVA: 0x009D1000 File Offset: 0x009CF200
+		// Token: 0x060202FE RID: 131838 RVA: 0x0093F558 File Offset: 0x0093D758
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 反应伤害倍率计算(float 角色1反应精通, float 角色2反应精通, UObject __WorldContext, ref float Result)
 		{
 			BPL_Fight_C.StaticClass();
@@ -52,10 +51,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			Result = ptr->Result;
 		}
 
-		// Token: 0x06029F04 RID: 171780 RVA: 0x009D1078 File Offset: 0x009CF278
+		// Token: 0x060202FF RID: 131839 RVA: 0x0093F5D0 File Offset: 0x0093D7D0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 删除材质效果(TsBaseCharacter 设置对象_, int Handle_, bool PlayWithEnd, UObject __WorldContext)
 		{
 			BPL_Fight_C.StaticClass();
@@ -68,10 +66,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			UnrealReflectionUtils.CallVirtualUFunction(BPL_Fight_C._ClassDefaultObjectPtr, BPL_Fight_C.__删除材质效果_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06029F05 RID: 171781 RVA: 0x009D10F8 File Offset: 0x009CF2F8
+		// Token: 0x06020300 RID: 131840 RVA: 0x0093F650 File Offset: 0x0093D850
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 设置材质效果(TsBaseCharacter 设置对象, PD_CharacterControllerData_C 材质配置, UObject __WorldContext, ref int Handle)
 		{
 			BPL_Fight_C.StaticClass();
@@ -85,53 +82,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			Handle = ptr->Handle;
 		}
 
-		// Token: 0x06029F06 RID: 171782 RVA: 0x009D1190 File Offset: 0x009CF390
+		// Token: 0x06020301 RID: 131841 RVA: 0x0093F6E8 File Offset: 0x0093D8E8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 使用GE(TsBaseCharacter 使用者, TsBaseCharacter 目标, int GE的等级, FGameplayTagContainer 添加AssetTags, FGameplayTagContainer 添加GrantedTags, int 层数, float Duration, [Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<UGameplayEffect> GE的类型, FKuroGameplayParameterContainer GE的参数, UObject __WorldContext, ref FActiveGameplayEffectHandle ActiveHandle)
-		{
-			BPL_Fight_C.__使用GE_FunctionParams* ptr = stackalloc BPL_Fight_C.__使用GE_FunctionParams[(UIntPtr)479] + 15L / (long)sizeof(BPL_Fight_C.__使用GE_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BPL_Fight_C.__使用GE_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->使用者 = ((使用者 != null) ? 使用者.NativePtr : IntPtr.Zero);
-			ptr->目标 = ((目标 != null) ? 目标.NativePtr : IntPtr.Zero);
-			ptr->GE的等级 = GE的等级;
-			if (添加AssetTags != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), &ptr->添加AssetTags, 添加AssetTags.NativePtr, 1, false);
-			}
-			if (添加GrantedTags != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), &ptr->添加GrantedTags, 添加GrantedTags.NativePtr, 1, false);
-			}
-			ptr->层数 = 层数;
-			ptr->Duration = Duration;
-			ptr->GE的类型 = GE的类型;
-			if (GE的参数 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroGameplayParameterContainer.StaticStruct(), &ptr->GE的参数, GE的参数.NativePtr, 1, false);
-			}
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			if (ActiveHandle != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FActiveGameplayEffectHandle.StaticStruct(), &ptr->ActiveHandle, ActiveHandle.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BPL_Fight_C.__使用GE_NativeFunctionPtr, (void*)ptr);
-			if (ActiveHandle != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FActiveGameplayEffectHandle.StaticStruct(), ActiveHandle.NativePtr, &ptr->ActiveHandle, 1, false);
-			}
-			UnrealReflectionUtils.DestroyStruct(BPL_Fight_C.__使用GE_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x06029F07 RID: 171783 RVA: 0x009D1300 File Offset: 0x009CF500
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 获取目标周围坐标点(FRotator 目标旋转, FVectorDouble 目标坐标, float 旋转, float 仰角, float 长度, UObject __WorldContext, ref FVectorDouble 坐标点)
 		{
 			BPL_Fight_C.StaticClass();
@@ -148,10 +101,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			坐标点 = ptr->坐标点;
 		}
 
-		// Token: 0x06029F08 RID: 171784 RVA: 0x009D13A0 File Offset: 0x009CF5A0
+		// Token: 0x06020302 RID: 131842 RVA: 0x0093F788 File Offset: 0x0093D988
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 计算向量曲线值(float 已经经过时间, float 总时间, UCurveVector 向量曲线, UObject __WorldContext, ref FVector 向量值)
 		{
 			BPL_Fight_C.StaticClass();
@@ -166,10 +118,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			向量值 = ptr->向量值;
 		}
 
-		// Token: 0x06029F09 RID: 171785 RVA: 0x009D1438 File Offset: 0x009CF638
+		// Token: 0x06020303 RID: 131843 RVA: 0x0093F820 File Offset: 0x0093DA20
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 计算曲线值(float 已经过时间, float 总时间, UCurveFloat 曲线, UObject __WorldContext, ref float 百分比)
 		{
 			BPL_Fight_C.StaticClass();
@@ -184,10 +135,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			百分比 = ptr->百分比;
 		}
 
-		// Token: 0x06029F0A RID: 171786 RVA: 0x009D14C8 File Offset: 0x009CF6C8
+		// Token: 0x06020304 RID: 131844 RVA: 0x0093F8B0 File Offset: 0x0093DAB0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 角度转化(float Input, UObject __WorldContext, ref float Output)
 		{
 			BPL_Fight_C.StaticClass();
@@ -200,10 +150,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			Output = ptr->Output;
 		}
 
-		// Token: 0x06029F0B RID: 171787 RVA: 0x009D153C File Offset: 0x009CF73C
+		// Token: 0x06020305 RID: 131845 RVA: 0x0093F924 File Offset: 0x0093DB24
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool 射线检测(UObject Context, FVectorDouble Start, FVectorDouble End, ETraceTypeQuery TraceChannel, bool bTraceComplex, EDrawDebugTrace DrawDebugType, bool bIgnoreSelf, FLinearColor TraceColor, FLinearColor TraceHitColor, float DrawTime, UObject __WorldContext, ref FHitResult OutHit)
 		{
 			BPL_Fight_C.StaticClass();
@@ -232,10 +181,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			return ptr->__Result;
 		}
 
-		// Token: 0x06029F0C RID: 171788 RVA: 0x009D1654 File Offset: 0x009CF854
+		// Token: 0x06020306 RID: 131846 RVA: 0x0093FA3C File Offset: 0x0093DC3C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 获取Actor周围坐标点(AActor Actor, float 旋转, float 仰角, float 长度, UObject __WorldContext, ref FVectorDouble 坐标点)
 		{
 			BPL_Fight_C.StaticClass();
@@ -251,27 +199,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			坐标点 = ptr->坐标点;
 		}
 
-		// Token: 0x06029F0D RID: 171789 RVA: 0x009D16F8 File Offset: 0x009CF8F8
+		// Token: 0x06020307 RID: 131847 RVA: 0x0093FAE0 File Offset: 0x0093DCE0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe static void 获取游戏实例(UObject __WorldContext, ref BP_MainGameInstance_C AsBP_Main_Game_Instance)
-		{
-			BPL_Fight_C.StaticClass();
-			BPL_Fight_C.__获取游戏实例_FunctionParams* ptr = stackalloc BPL_Fight_C.__获取游戏实例_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(BPL_Fight_C.__获取游戏实例_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(BPL_Fight_C.__获取游戏实例_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->__WorldContext = ((__WorldContext != null) ? __WorldContext.NativePtr : IntPtr.Zero);
-			ref BPL_Fight_C.__获取游戏实例_FunctionParams ptr2 = ref *ptr;
-			BP_MainGameInstance_C bp_MainGameInstance_C = AsBP_Main_Game_Instance;
-			ptr2.AsBP_Main_Game_Instance = ((bp_MainGameInstance_C != null) ? bp_MainGameInstance_C.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallVirtualUFunction(BPL_Fight_C._ClassDefaultObjectPtr, BPL_Fight_C.__获取游戏实例_NativeFunctionPtr, (void*)ptr);
-			AsBP_Main_Game_Instance = BuiltinUtils.GetOrCreateUObjectByNativePointer<BP_MainGameInstance_C>(ptr->AsBP_Main_Game_Instance);
-		}
-
-		// Token: 0x06029F0E RID: 171790 RVA: 0x009D1778 File Offset: 0x009CF978
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool 是否有标签(TsBaseCharacter 角色, FGameplayTag 标签, UObject __WorldContext)
 		{
 			BPL_Fight_C.StaticClass();
@@ -284,10 +214,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			return ptr->__Result;
 		}
 
-		// Token: 0x06029F0F RID: 171791 RVA: 0x009D17F8 File Offset: 0x009CF9F8
+		// Token: 0x06020308 RID: 131848 RVA: 0x0093FB60 File Offset: 0x0093DD60
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 清除标签(TsBaseCharacter 角色, FGameplayTag 标签, UObject __WorldContext)
 		{
 			BPL_Fight_C.StaticClass();
@@ -299,10 +228,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			UnrealReflectionUtils.CallVirtualUFunction(BPL_Fight_C._ClassDefaultObjectPtr, BPL_Fight_C.__清除标签_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06029F10 RID: 171792 RVA: 0x009D1870 File Offset: 0x009CFA70
+		// Token: 0x06020309 RID: 131849 RVA: 0x0093FBD8 File Offset: 0x0093DDD8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void 添加标签(TsBaseCharacter 角色, FGameplayTag 标签, UObject __WorldContext)
 		{
 			BPL_Fight_C.StaticClass();
@@ -314,444 +242,369 @@ namespace AkiClient.Game.Aki.Core.Fight
 			UnrealReflectionUtils.CallVirtualUFunction(BPL_Fight_C._ClassDefaultObjectPtr, BPL_Fight_C.__添加标签_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06029F11 RID: 171793 RVA: 0x009D18E7 File Offset: 0x009CFAE7
+		// Token: 0x0602030A RID: 131850 RVA: 0x0093FC4F File Offset: 0x0093DE4F
 		protected BPL_Fight_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040158C3 RID: 88259
+		// Token: 0x04011543 RID: 70979
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Core/Fight/BPL_Fight.BPL_Fight_C";
 
-		// Token: 0x040158C4 RID: 88260
+		// Token: 0x04011544 RID: 70980
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040158C5 RID: 88261
+		// Token: 0x04011545 RID: 70981
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040158C6 RID: 88262
+		// Token: 0x04011546 RID: 70982
 		private static IntPtr __反应伤害倍率计算_NativeFunctionPtr;
 
-		// Token: 0x040158C7 RID: 88263
+		// Token: 0x04011547 RID: 70983
 		private static IntPtr __删除材质效果_NativeFunctionPtr;
 
-		// Token: 0x040158C8 RID: 88264
+		// Token: 0x04011548 RID: 70984
 		private static IntPtr __设置材质效果_NativeFunctionPtr;
 
-		// Token: 0x040158C9 RID: 88265
-		private static IntPtr __使用GE_NativeFunctionPtr;
-
-		// Token: 0x040158CA RID: 88266
+		// Token: 0x04011549 RID: 70985
 		private static IntPtr __获取目标周围坐标点_NativeFunctionPtr;
 
-		// Token: 0x040158CB RID: 88267
+		// Token: 0x0401154A RID: 70986
 		private static IntPtr __计算向量曲线值_NativeFunctionPtr;
 
-		// Token: 0x040158CC RID: 88268
+		// Token: 0x0401154B RID: 70987
 		private static IntPtr __计算曲线值_NativeFunctionPtr;
 
-		// Token: 0x040158CD RID: 88269
+		// Token: 0x0401154C RID: 70988
 		private static IntPtr __角度转化_NativeFunctionPtr;
 
-		// Token: 0x040158CE RID: 88270
+		// Token: 0x0401154D RID: 70989
 		private static IntPtr __射线检测_NativeFunctionPtr;
 
-		// Token: 0x040158CF RID: 88271
+		// Token: 0x0401154E RID: 70990
 		private static IntPtr __获取Actor周围坐标点_NativeFunctionPtr;
 
-		// Token: 0x040158D0 RID: 88272
-		private static IntPtr __获取游戏实例_NativeFunctionPtr;
-
-		// Token: 0x040158D1 RID: 88273
+		// Token: 0x0401154F RID: 70991
 		private static IntPtr __是否有标签_NativeFunctionPtr;
 
-		// Token: 0x040158D2 RID: 88274
+		// Token: 0x04011550 RID: 70992
 		private static IntPtr __清除标签_NativeFunctionPtr;
 
-		// Token: 0x040158D3 RID: 88275
+		// Token: 0x04011551 RID: 70993
 		private static IntPtr __添加标签_NativeFunctionPtr;
 
-		// Token: 0x0200A30D RID: 41741
+		// Token: 0x02008F2D RID: 36653
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __反应伤害倍率计算_FunctionParams
 		{
-			// Token: 0x04032084 RID: 204932
+			// Token: 0x0402CC69 RID: 183401
 			[FieldOffset(0)]
 			public float 角色1反应精通;
 
-			// Token: 0x04032085 RID: 204933
+			// Token: 0x0402CC6A RID: 183402
 			[FieldOffset(4)]
 			public float 角色2反应精通;
 
-			// Token: 0x04032086 RID: 204934
+			// Token: 0x0402CC6B RID: 183403
 			[FieldOffset(8)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x04032087 RID: 204935
+			// Token: 0x0402CC6C RID: 183404
 			[FieldOffset(16)]
 			public float Result;
 		}
 
-		// Token: 0x0200A30E RID: 41742
+		// Token: 0x02008F2E RID: 36654
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __删除材质效果_FunctionParams
 		{
-			// Token: 0x04032088 RID: 204936
+			// Token: 0x0402CC6D RID: 183405
 			[FieldOffset(0)]
 			public IntPtr 设置对象_;
 
-			// Token: 0x04032089 RID: 204937
+			// Token: 0x0402CC6E RID: 183406
 			[FieldOffset(8)]
 			public int Handle_;
 
-			// Token: 0x0403208A RID: 204938
+			// Token: 0x0402CC6F RID: 183407
 			[FieldOffset(12)]
 			public bool PlayWithEnd;
 
-			// Token: 0x0403208B RID: 204939
+			// Token: 0x0402CC70 RID: 183408
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 		}
 
-		// Token: 0x0200A30F RID: 41743
+		// Token: 0x02008F2F RID: 36655
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __设置材质效果_FunctionParams
 		{
-			// Token: 0x0403208C RID: 204940
+			// Token: 0x0402CC71 RID: 183409
 			[FieldOffset(0)]
 			public IntPtr 设置对象;
 
-			// Token: 0x0403208D RID: 204941
+			// Token: 0x0402CC72 RID: 183410
 			[FieldOffset(8)]
 			public IntPtr 材质配置;
 
-			// Token: 0x0403208E RID: 204942
+			// Token: 0x0402CC73 RID: 183411
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x0403208F RID: 204943
+			// Token: 0x0402CC74 RID: 183412
 			[FieldOffset(24)]
 			public int Handle;
 		}
 
-		// Token: 0x0200A310 RID: 41744
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 464)]
-		protected ref struct __使用GE_FunctionParams
-		{
-			// Token: 0x04032090 RID: 204944
-			[FieldOffset(0)]
-			public IntPtr 使用者;
-
-			// Token: 0x04032091 RID: 204945
-			[FieldOffset(8)]
-			public IntPtr 目标;
-
-			// Token: 0x04032092 RID: 204946
-			[FieldOffset(16)]
-			public int GE的等级;
-
-			// Token: 0x04032093 RID: 204947
-			[FieldOffset(24)]
-			public byte 添加AssetTags;
-
-			// Token: 0x04032094 RID: 204948
-			[FieldOffset(56)]
-			public byte 添加GrantedTags;
-
-			// Token: 0x04032095 RID: 204949
-			[FieldOffset(88)]
-			public int 层数;
-
-			// Token: 0x04032096 RID: 204950
-			[FieldOffset(92)]
-			public float Duration;
-
-			// Token: 0x04032097 RID: 204951
-			[Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			[FieldOffset(96)]
-			public TSubclassOf<UGameplayEffect> GE的类型;
-
-			// Token: 0x04032098 RID: 204952
-			[FieldOffset(104)]
-			public byte GE的参数;
-
-			// Token: 0x04032099 RID: 204953
-			[FieldOffset(120)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x0403209A RID: 204954
-			[FieldOffset(128)]
-			public byte ActiveHandle;
-		}
-
-		// Token: 0x0200A311 RID: 41745
+		// Token: 0x02008F30 RID: 36656
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 192)]
 		protected ref struct __获取目标周围坐标点_FunctionParams
 		{
-			// Token: 0x0403209B RID: 204955
+			// Token: 0x0402CC75 RID: 183413
 			[FieldOffset(0)]
 			public FRotator 目标旋转;
 
-			// Token: 0x0403209C RID: 204956
+			// Token: 0x0402CC76 RID: 183414
 			[FieldOffset(16)]
 			public FVectorDouble 目标坐标;
 
-			// Token: 0x0403209D RID: 204957
+			// Token: 0x0402CC77 RID: 183415
 			[FieldOffset(40)]
 			public float 旋转;
 
-			// Token: 0x0403209E RID: 204958
+			// Token: 0x0402CC78 RID: 183416
 			[FieldOffset(44)]
 			public float 仰角;
 
-			// Token: 0x0403209F RID: 204959
+			// Token: 0x0402CC79 RID: 183417
 			[FieldOffset(48)]
 			public float 长度;
 
-			// Token: 0x040320A0 RID: 204960
+			// Token: 0x0402CC7A RID: 183418
 			[FieldOffset(56)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320A1 RID: 204961
+			// Token: 0x0402CC7B RID: 183419
 			[FieldOffset(64)]
 			public FVectorDouble 坐标点;
 		}
 
-		// Token: 0x0200A312 RID: 41746
+		// Token: 0x02008F31 RID: 36657
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __计算向量曲线值_FunctionParams
 		{
-			// Token: 0x040320A2 RID: 204962
+			// Token: 0x0402CC7C RID: 183420
 			[FieldOffset(0)]
 			public float 已经经过时间;
 
-			// Token: 0x040320A3 RID: 204963
+			// Token: 0x0402CC7D RID: 183421
 			[FieldOffset(4)]
 			public float 总时间;
 
-			// Token: 0x040320A4 RID: 204964
+			// Token: 0x0402CC7E RID: 183422
 			[FieldOffset(8)]
 			public IntPtr 向量曲线;
 
-			// Token: 0x040320A5 RID: 204965
+			// Token: 0x0402CC7F RID: 183423
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320A6 RID: 204966
+			// Token: 0x0402CC80 RID: 183424
 			[FieldOffset(24)]
 			public FVector 向量值;
 		}
 
-		// Token: 0x0200A313 RID: 41747
+		// Token: 0x02008F32 RID: 36658
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __计算曲线值_FunctionParams
 		{
-			// Token: 0x040320A7 RID: 204967
+			// Token: 0x0402CC81 RID: 183425
 			[FieldOffset(0)]
 			public float 已经过时间;
 
-			// Token: 0x040320A8 RID: 204968
+			// Token: 0x0402CC82 RID: 183426
 			[FieldOffset(4)]
 			public float 总时间;
 
-			// Token: 0x040320A9 RID: 204969
+			// Token: 0x0402CC83 RID: 183427
 			[FieldOffset(8)]
 			public IntPtr 曲线;
 
-			// Token: 0x040320AA RID: 204970
+			// Token: 0x0402CC84 RID: 183428
 			[FieldOffset(16)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320AB RID: 204971
+			// Token: 0x0402CC85 RID: 183429
 			[FieldOffset(24)]
 			public float 百分比;
 		}
 
-		// Token: 0x0200A314 RID: 41748
+		// Token: 0x02008F33 RID: 36659
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __角度转化_FunctionParams
 		{
-			// Token: 0x040320AC RID: 204972
+			// Token: 0x0402CC86 RID: 183430
 			[FieldOffset(0)]
 			public float Input;
 
-			// Token: 0x040320AD RID: 204973
+			// Token: 0x0402CC87 RID: 183431
 			[FieldOffset(8)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320AE RID: 204974
+			// Token: 0x0402CC88 RID: 183432
 			[FieldOffset(16)]
 			public float Output;
 		}
 
-		// Token: 0x0200A315 RID: 41749
+		// Token: 0x02008F34 RID: 36660
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 424)]
 		protected ref struct __射线检测_FunctionParams
 		{
-			// Token: 0x040320AF RID: 204975
+			// Token: 0x0402CC89 RID: 183433
 			[FieldOffset(0)]
 			public IntPtr Context;
 
-			// Token: 0x040320B0 RID: 204976
+			// Token: 0x0402CC8A RID: 183434
 			[FieldOffset(8)]
 			public FVectorDouble Start;
 
-			// Token: 0x040320B1 RID: 204977
+			// Token: 0x0402CC8B RID: 183435
 			[FieldOffset(32)]
 			public FVectorDouble End;
 
-			// Token: 0x040320B2 RID: 204978
+			// Token: 0x0402CC8C RID: 183436
 			[FieldOffset(56)]
 			public TEnumAsByte<ETraceTypeQuery> TraceChannel;
 
-			// Token: 0x040320B3 RID: 204979
+			// Token: 0x0402CC8D RID: 183437
 			[FieldOffset(57)]
 			public bool bTraceComplex;
 
-			// Token: 0x040320B4 RID: 204980
+			// Token: 0x0402CC8E RID: 183438
 			[FieldOffset(58)]
 			public TEnumAsByte<EDrawDebugTrace> DrawDebugType;
 
-			// Token: 0x040320B5 RID: 204981
+			// Token: 0x0402CC8F RID: 183439
 			[FieldOffset(59)]
 			public bool bIgnoreSelf;
 
-			// Token: 0x040320B6 RID: 204982
+			// Token: 0x0402CC90 RID: 183440
 			[FieldOffset(60)]
 			public FLinearColor TraceColor;
 
-			// Token: 0x040320B7 RID: 204983
+			// Token: 0x0402CC91 RID: 183441
 			[FieldOffset(76)]
 			public FLinearColor TraceHitColor;
 
-			// Token: 0x040320B8 RID: 204984
+			// Token: 0x0402CC92 RID: 183442
 			[FieldOffset(92)]
 			public float DrawTime;
 
-			// Token: 0x040320B9 RID: 204985
+			// Token: 0x0402CC93 RID: 183443
 			[FieldOffset(96)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320BA RID: 204986
+			// Token: 0x0402CC94 RID: 183444
 			[FieldOffset(104)]
 			public byte OutHit;
 
-			// Token: 0x040320BB RID: 204987
+			// Token: 0x0402CC95 RID: 183445
 			[FieldOffset(252)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A316 RID: 41750
+		// Token: 0x02008F35 RID: 36661
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 192)]
 		protected ref struct __获取Actor周围坐标点_FunctionParams
 		{
-			// Token: 0x040320BC RID: 204988
+			// Token: 0x0402CC96 RID: 183446
 			[FieldOffset(0)]
 			public IntPtr Actor;
 
-			// Token: 0x040320BD RID: 204989
+			// Token: 0x0402CC97 RID: 183447
 			[FieldOffset(8)]
 			public float 旋转;
 
-			// Token: 0x040320BE RID: 204990
+			// Token: 0x0402CC98 RID: 183448
 			[FieldOffset(12)]
 			public float 仰角;
 
-			// Token: 0x040320BF RID: 204991
+			// Token: 0x0402CC99 RID: 183449
 			[FieldOffset(16)]
 			public float 长度;
 
-			// Token: 0x040320C0 RID: 204992
+			// Token: 0x0402CC9A RID: 183450
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320C1 RID: 204993
+			// Token: 0x0402CC9B RID: 183451
 			[FieldOffset(32)]
 			public FVectorDouble 坐标点;
 		}
 
-		// Token: 0x0200A317 RID: 41751
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __获取游戏实例_FunctionParams
-		{
-			// Token: 0x040320C2 RID: 204994
-			[FieldOffset(0)]
-			public IntPtr __WorldContext;
-
-			// Token: 0x040320C3 RID: 204995
-			[FieldOffset(8)]
-			public IntPtr AsBP_Main_Game_Instance;
-		}
-
-		// Token: 0x0200A318 RID: 41752
+		// Token: 0x02008F36 RID: 36662
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __是否有标签_FunctionParams
 		{
-			// Token: 0x040320C4 RID: 204996
+			// Token: 0x0402CC9C RID: 183452
 			[FieldOffset(0)]
 			public IntPtr 角色;
 
-			// Token: 0x040320C5 RID: 204997
+			// Token: 0x0402CC9D RID: 183453
 			[FieldOffset(8)]
 			public FGameplayTag 标签;
 
-			// Token: 0x040320C6 RID: 204998
+			// Token: 0x0402CC9E RID: 183454
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 
-			// Token: 0x040320C7 RID: 204999
+			// Token: 0x0402CC9F RID: 183455
 			[FieldOffset(32)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200A319 RID: 41753
+		// Token: 0x02008F37 RID: 36663
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __清除标签_FunctionParams
 		{
-			// Token: 0x040320C8 RID: 205000
+			// Token: 0x0402CCA0 RID: 183456
 			[FieldOffset(0)]
 			public IntPtr 角色;
 
-			// Token: 0x040320C9 RID: 205001
+			// Token: 0x0402CCA1 RID: 183457
 			[FieldOffset(8)]
 			public FGameplayTag 标签;
 
-			// Token: 0x040320CA RID: 205002
+			// Token: 0x0402CCA2 RID: 183458
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 		}
 
-		// Token: 0x0200A31A RID: 41754
+		// Token: 0x02008F38 RID: 36664
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __添加标签_FunctionParams
 		{
-			// Token: 0x040320CB RID: 205003
+			// Token: 0x0402CCA3 RID: 183459
 			[FieldOffset(0)]
 			public IntPtr 角色;
 
-			// Token: 0x040320CC RID: 205004
+			// Token: 0x0402CCA4 RID: 183460
 			[FieldOffset(8)]
 			public FGameplayTag 标签;
 
-			// Token: 0x040320CD RID: 205005
+			// Token: 0x0402CCA5 RID: 183461
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 		}

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042F6 RID: 17142
+	// Token: 0x02004755 RID: 18261
 	public enum TProgressBarLeftType : byte
 	{
-		// Token: 0x0400C053 RID: 49235
+		// Token: 0x0400CA6B RID: 51819
 		NONE,
-		// Token: 0x0400C054 RID: 49236
+		// Token: 0x0400CA6C RID: 51820
 		IUseCount,
-		// Token: 0x0400C055 RID: 49237
+		// Token: 0x0400CA6D RID: 51821
 		IUseVar
 	}
 }

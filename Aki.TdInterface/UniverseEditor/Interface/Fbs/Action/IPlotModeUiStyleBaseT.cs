@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D57 RID: 27991
+	// Token: 0x020074D2 RID: 29906
 	public class IPlotModeUiStyleBaseT
 	{
-		// Token: 0x1700D0C1 RID: 53441
-		// (get) Token: 0x060316CC RID: 202444 RVA: 0x006B3A52 File Offset: 0x006B1C52
-		// (set) Token: 0x060316CD RID: 202445 RVA: 0x006B3A5A File Offset: 0x006B1C5A
+		// Token: 0x1700DC09 RID: 56329
+		// (get) Token: 0x060346C8 RID: 214728 RVA: 0x0070F13A File Offset: 0x0070D33A
+		// (set) Token: 0x060346C9 RID: 214729 RVA: 0x0070F142 File Offset: 0x0070D342
 		public EPlotModeUiStyleType Type { get; set; }
 
-		// Token: 0x060316CE RID: 202446 RVA: 0x006B3A63 File Offset: 0x006B1C63
+		// Token: 0x060346CA RID: 214730 RVA: 0x0070F14B File Offset: 0x0070D34B
 		public IPlotModeUiStyleBaseT()
 		{
 			this.Type = EPlotModeUiStyleType.LevelD;

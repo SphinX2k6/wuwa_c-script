@@ -5,24 +5,24 @@ using CSharpScript.Game.NewWorld.Character.Common.Component;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.StackableChess
 {
-	// Token: 0x020068F8 RID: 26872
+	// Token: 0x02005848 RID: 22600
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StackableChessManager : IChessManager
 	{
-		// Token: 0x06043054 RID: 274516 RVA: 0x01052FCB File Offset: 0x010511CB
+		// Token: 0x06037BAC RID: 228268 RVA: 0x00F945F3 File Offset: 0x00F927F3
 		public ChessboardPoint CreateChessboardPoint()
 		{
 			return new StackableChessboardPoint();
 		}
 
-		// Token: 0x06043055 RID: 274517 RVA: 0x01052FD2 File Offset: 0x010511D2
+		// Token: 0x06037BAD RID: 228269 RVA: 0x00F945FA File Offset: 0x00F927FA
 		public ChessItem CreateChessItem()
 		{
 			return new StackableChessItem();
 		}
 
-		// Token: 0x06043056 RID: 274518 RVA: 0x01052FDC File Offset: 0x010511DC
+		// Token: 0x06037BAE RID: 228270 RVA: 0x00F94604 File Offset: 0x00F92804
 		[NullableContext(2)]
 		public IChessAgent GetChessAgent(EChessAgentType type, EntityHandle entityHandle = null)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.Stacka
 			return null;
 		}
 
-		// Token: 0x06043057 RID: 274519 RVA: 0x0105300C File Offset: 0x0105120C
+		// Token: 0x06037BAF RID: 228271 RVA: 0x00F94634 File Offset: 0x00F92834
 		public void BatchTeleportItemsToPointSorted(List<IChessTransmitData> transmitDataList)
 		{
 			Dictionary<int, List<IChessTransmitData>> dictionary = new Dictionary<int, List<IChessTransmitData>>();

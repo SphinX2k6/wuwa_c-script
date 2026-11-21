@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008BB RID: 2235
+	// Token: 0x020008D7 RID: 2263
 	public class ConfigRolePropertyGrowthByLevelAndBreachLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003475 RID: 13429 RVA: 0x00181B2B File Offset: 0x0017FD2B
+		// Token: 0x0600351D RID: 13597 RVA: 0x00188E13 File Offset: 0x00187013
 		static ConfigRolePropertyGrowthByLevelAndBreachLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRolePropertyGrowthByLevelAndBreachLevel.CreateStaticDefaultValue), new Action(ConfigRolePropertyGrowthByLevelAndBreachLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003476 RID: 13430 RVA: 0x00181B4C File Offset: 0x0017FD4C
+		// Token: 0x0600351E RID: 13598 RVA: 0x00188E34 File Offset: 0x00187034
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRolePropertyGrowthByLevelAndBreachLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003477 RID: 13431 RVA: 0x00181BCB File Offset: 0x0017FDCB
+		// Token: 0x0600351F RID: 13599 RVA: 0x00188EB3 File Offset: 0x001870B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRolePropertyGrowthByLevelAndBreachLevel.LogPair = null;
 			ConfigRolePropertyGrowthByLevelAndBreachLevel.HandleId = 0;
 		}
 
-		// Token: 0x06003478 RID: 13432 RVA: 0x00181BD9 File Offset: 0x0017FDD9
+		// Token: 0x06003520 RID: 13600 RVA: 0x00188EC1 File Offset: 0x001870C1
 		public static void Init()
 		{
 			ConfigRolePropertyGrowthByLevelAndBreachLevel.HandleId = ConfigCommon.InitDataStatement(ConfigRolePropertyGrowthByLevelAndBreachLevel.HandleId, "db_property.db", "select BinData from `RolePropertyGrowth` where Level = ? AND BreachLevel = ?");
 		}
 
-		// Token: 0x06003479 RID: 13433 RVA: 0x00181BF4 File Offset: 0x0017FDF4
+		// Token: 0x06003521 RID: 13601 RVA: 0x00188EDC File Offset: 0x001870DC
 		public static RolePropertyGrowth? GetConfig(int p0Level, int p1BreachLevel, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRolePropertyGrowthByLevelAndBreachLevel.HandleId, ConfigRolePropertyGrowthByLevelAndBreachLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RolePropertyGrowth?(rootAsRolePropertyGrowth);
 		}
 
-		// Token: 0x04003D03 RID: 15619
+		// Token: 0x04003DC7 RID: 15815
 		private const string DB = "db_property.db";
 
-		// Token: 0x04003D04 RID: 15620
+		// Token: 0x04003DC8 RID: 15816
 		private const string FILE = "s.属性.xlsx";
 
-		// Token: 0x04003D05 RID: 15621
+		// Token: 0x04003DC9 RID: 15817
 		private const string TABLE = "RolePropertyGrowth";
 
-		// Token: 0x04003D06 RID: 15622
+		// Token: 0x04003DCA RID: 15818
 		private const string COMMAND = "select BinData from `RolePropertyGrowth` where Level = ? AND BreachLevel = ?";
 
-		// Token: 0x04003D07 RID: 15623
+		// Token: 0x04003DCB RID: 15819
 		private const string KEY_PREFIX = "RolePropertyGrowthByLevelAndBreachLevel";
 
-		// Token: 0x04003D08 RID: 15624
+		// Token: 0x04003DCC RID: 15820
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D09 RID: 15625
+		// Token: 0x04003DCD RID: 15821
 		private static int HandleId;
 	}
 }

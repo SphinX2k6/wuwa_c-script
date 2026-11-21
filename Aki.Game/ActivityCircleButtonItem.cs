@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200154E RID: 5454
+// Token: 0x02000A06 RID: 2566
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityCircleButtonItem : UiPanelBase
 {
-	// Token: 0x06009BEB RID: 39915 RVA: 0x0021BF4C File Offset: 0x0021A14C
+	// Token: 0x06006FC9 RID: 28617 RVA: 0x00225CFC File Offset: 0x00223EFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,25 +33,25 @@ public class ActivityCircleButtonItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009BEC RID: 39916 RVA: 0x0021C013 File Offset: 0x0021A213
+	// Token: 0x06006FCA RID: 28618 RVA: 0x00225DC3 File Offset: 0x00223FC3
 	public void SetOnClick(Action onClick)
 	{
 		this.OnClickInternal = onClick;
 	}
 
-	// Token: 0x06009BED RID: 39917 RVA: 0x0021C01C File Offset: 0x0021A21C
+	// Token: 0x06006FCB RID: 28619 RVA: 0x00225DCC File Offset: 0x00223FCC
 	public void SetSubText(string text)
 	{
 		base.GetText(1).SetText(text, true);
 	}
 
-	// Token: 0x06009BEE RID: 39918 RVA: 0x0021C02C File Offset: 0x0021A22C
+	// Token: 0x06006FCC RID: 28620 RVA: 0x00225DDC File Offset: 0x00223FDC
 	public void SetRedDotVisible(bool value)
 	{
 		base.GetItem(2).SetUIActive(value);
 	}
 
-	// Token: 0x06009BEF RID: 39919 RVA: 0x0021C03C File Offset: 0x0021A23C
+	// Token: 0x06006FCD RID: 28621 RVA: 0x00225DEC File Offset: 0x00223FEC
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		UUIItem item = base.GetItem(2);
@@ -67,7 +67,7 @@ public class ActivityCircleButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BF0 RID: 39920 RVA: 0x0021C084 File Offset: 0x0021A284
+	// Token: 0x06006FCE RID: 28622 RVA: 0x00225E34 File Offset: 0x00224034
 	public void BindGivenUid(ERedDotName redDotName, int uId)
 	{
 		UUIItem item = base.GetItem(2);
@@ -82,7 +82,7 @@ public class ActivityCircleButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BF1 RID: 39921 RVA: 0x0021C0C4 File Offset: 0x0021A2C4
+	// Token: 0x06006FCF RID: 28623 RVA: 0x00225E74 File Offset: 0x00224074
 	public void UnBindGivenUid(int uId)
 	{
 		if (this.RedDotName != null)
@@ -91,7 +91,7 @@ public class ActivityCircleButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BF2 RID: 39922 RVA: 0x0021C0F0 File Offset: 0x0021A2F0
+	// Token: 0x06006FD0 RID: 28624 RVA: 0x00225EA0 File Offset: 0x002240A0
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -101,31 +101,31 @@ public class ActivityCircleButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BF3 RID: 39923 RVA: 0x0021C120 File Offset: 0x0021A320
+	// Token: 0x06006FD1 RID: 28625 RVA: 0x00225ED0 File Offset: 0x002240D0
 	private void OnClick()
 	{
 		this.OnClickInternal();
 	}
 
-	// Token: 0x04004470 RID: 17520
+	// Token: 0x04004516 RID: 17686
 	private Action OnClickInternal = delegate()
 	{
 	};
 
-	// Token: 0x04004471 RID: 17521
+	// Token: 0x04004517 RID: 17687
 	private ERedDotName? RedDotName;
 
-	// Token: 0x02007B83 RID: 31619
+	// Token: 0x02006D0E RID: 27918
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040289B0 RID: 166320
+		// Token: 0x04023CEB RID: 146667
 		public const int BtnCircle = 0;
 
-		// Token: 0x040289B1 RID: 166321
+		// Token: 0x04023CEC RID: 146668
 		public const int TextSub = 1;
 
-		// Token: 0x040289B2 RID: 166322
+		// Token: 0x04023CED RID: 146669
 		public const int ItemRedDot = 2;
 	}
 }

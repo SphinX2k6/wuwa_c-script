@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x0200690E RID: 26894
+	// Token: 0x0200585E RID: 22622
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 	})]
 	internal class BossRushMainViewScrollItem : GridProxyAbstract<BossRushLevelDetailInfo>
 	{
-		// Token: 0x060430FA RID: 274682 RVA: 0x01056D0C File Offset: 0x01054F0C
+		// Token: 0x06037C52 RID: 228434 RVA: 0x00F98338 File Offset: 0x00F96538
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060430FB RID: 274683 RVA: 0x01056E78 File Offset: 0x01055078
+		// Token: 0x06037C53 RID: 228435 RVA: 0x00F984A4 File Offset: 0x00F966A4
 		private void OnClickButton()
 		{
 			BossRushLevelDetailInfo currentData = this.CurrentData;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			EventSystem.Instance.Emit<EUiTabViewName>(EEventName.RequestChangeBossRushView, EUiTabViewName.BossRushLevelDetailView);
 		}
 
-		// Token: 0x060430FC RID: 274684 RVA: 0x01056F10 File Offset: 0x01055110
+		// Token: 0x06037C54 RID: 228436 RVA: 0x00F9853C File Offset: 0x00F9673C
 		public override void Refresh(BossRushLevelDetailInfo data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshMonsterTexture(data);
 		}
 
-		// Token: 0x060430FD RID: 274685 RVA: 0x01056F38 File Offset: 0x01055138
+		// Token: 0x06037C55 RID: 228437 RVA: 0x00F98564 File Offset: 0x00F96764
 		private void RefreshMonsterTexture(BossRushLevelDetailInfo data)
 		{
 			base.SetTextureByPath(data.GetMonsterTexturePath(), base.GetTexture(0), null, null);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.SetTextureByPath(data.GetMonsterTexturePath(), texture, null, null);
 		}
 
-		// Token: 0x060430FE RID: 274686 RVA: 0x01056F90 File Offset: 0x01055190
+		// Token: 0x06037C56 RID: 228438 RVA: 0x00F985BC File Offset: 0x00F967BC
 		private void RefreshLockState(BossRushLevelDetailInfo data)
 		{
 			bool unLockState = data.GetUnLockState();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.GetItem(2).SetUIActive(!unLockState);
 		}
 
-		// Token: 0x060430FF RID: 274687 RVA: 0x01056FC4 File Offset: 0x010551C4
+		// Token: 0x06037C57 RID: 228439 RVA: 0x00F985F0 File Offset: 0x00F967F0
 		private void RefreshScore(BossRushLevelDetailInfo data)
 		{
 			if (data.GetUnLockState())
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043100 RID: 274688 RVA: 0x01057010 File Offset: 0x01055210
+		// Token: 0x06037C58 RID: 228440 RVA: 0x00F9863C File Offset: 0x00F9683C
 		private void RefreshUnlockTime(BossRushLevelDetailInfo data)
 		{
 			if (!data.GetUnLockState())
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043101 RID: 274689 RVA: 0x01057030 File Offset: 0x01055230
+		// Token: 0x06037C59 RID: 228441 RVA: 0x00F9865C File Offset: 0x00F9685C
 		public UUIItem GetButtonItem()
 		{
 			UUIButtonComponent button = base.GetButton(5);
@@ -130,36 +130,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x04022E8B RID: 142987
+		// Token: 0x0401D6E7 RID: 120551
 		[Nullable(2)]
 		private BossRushLevelDetailInfo CurrentData;
 
-		// Token: 0x0200CABD RID: 51901
+		// Token: 0x0200B485 RID: 46213
 		[NullableContext(0)]
 		private class EBossRushMainViewScrollItemComponent
 		{
-			// Token: 0x0403D45D RID: 250973
+			// Token: 0x04037D37 RID: 228663
 			public const int MonsterTexture = 0;
 
-			// Token: 0x0403D45E RID: 250974
+			// Token: 0x04037D38 RID: 228664
 			public const int LockPanelItem = 1;
 
-			// Token: 0x0403D45F RID: 250975
+			// Token: 0x04037D39 RID: 228665
 			public const int UnLockPanelItem = 2;
 
-			// Token: 0x0403D460 RID: 250976
+			// Token: 0x04037D3A RID: 228666
 			public const int ScoreText = 3;
 
-			// Token: 0x0403D461 RID: 250977
+			// Token: 0x04037D3B RID: 228667
 			public const int UnlockTime = 4;
 
-			// Token: 0x0403D462 RID: 250978
+			// Token: 0x04037D3C RID: 228668
 			public const int Button = 5;
 
-			// Token: 0x0403D463 RID: 250979
+			// Token: 0x04037D3D RID: 228669
 			public const int LockTexture = 6;
 
-			// Token: 0x0403D464 RID: 250980
+			// Token: 0x04037D3E RID: 228670
 			public const int UnFinishItem = 7;
 		}
 	}

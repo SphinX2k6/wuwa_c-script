@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002AC5 RID: 10949
+// Token: 0x02002041 RID: 8257
 public class SurvivorsRogueCardComponent : UiPanelBase
 {
-	// Token: 0x06016CA7 RID: 93351 RVA: 0x005C9A16 File Offset: 0x005C7C16
+	// Token: 0x060146D8 RID: 83672 RVA: 0x005F656A File Offset: 0x005F476A
 	public void Refresh([Nullable(new byte[]
 	{
 		1,
@@ -15,20 +15,20 @@ public class SurvivorsRogueCardComponent : UiPanelBase
 		this.OnRefresh(params_);
 	}
 
-	// Token: 0x06016CA8 RID: 93352 RVA: 0x005C9A1F File Offset: 0x005C7C1F
+	// Token: 0x060146D9 RID: 83673 RVA: 0x005F6573 File Offset: 0x005F4773
 	[NullableContext(1)]
 	public string GetResourceId()
 	{
 		return this.OnGetResourceId() ?? "";
 	}
 
-	// Token: 0x06016CA9 RID: 93353 RVA: 0x005C9A30 File Offset: 0x005C7C30
+	// Token: 0x060146DA RID: 83674 RVA: 0x005F6584 File Offset: 0x005F4784
 	public virtual ECardMountPos GetLayoutLevel()
 	{
 		return ECardMountPos.Center;
 	}
 
-	// Token: 0x06016CAA RID: 93354 RVA: 0x005C9A34 File Offset: 0x005C7C34
+	// Token: 0x060146DB RID: 83675 RVA: 0x005F6588 File Offset: 0x005F4788
 	protected virtual void OnRefresh([Nullable(new byte[]
 	{
 		1,
@@ -43,7 +43,7 @@ public class SurvivorsRogueCardComponent : UiPanelBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016CAB RID: 93355 RVA: 0x005C9A78 File Offset: 0x005C7C78
+	// Token: 0x060146DC RID: 83676 RVA: 0x005F65CC File Offset: 0x005F47CC
 	[NullableContext(2)]
 	protected virtual string OnGetResourceId()
 	{
@@ -56,7 +56,7 @@ public class SurvivorsRogueCardComponent : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x06016CAC RID: 93356 RVA: 0x005C9ABA File Offset: 0x005C7CBA
+	// Token: 0x060146DD RID: 83677 RVA: 0x005F660E File Offset: 0x005F480E
 	public override void SetActive(bool visibility)
 	{
 		base.SetActive(visibility);
@@ -68,7 +68,7 @@ public class SurvivorsRogueCardComponent : UiPanelBase
 		onComponentVisibleChanged(this, visibility);
 	}
 
-	// Token: 0x0400A94D RID: 43341
+	// Token: 0x0400AD53 RID: 44371
 	[Nullable(new byte[]
 	{
 		2,

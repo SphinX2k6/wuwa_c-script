@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001931 RID: 6449
+// Token: 0x02000DEB RID: 3563
 public class MediumItemGridRoleRightBottomTag : MediumItemGridComponent
 {
-	// Token: 0x0600BCAF RID: 48303 RVA: 0x002AB2AC File Offset: 0x002A94AC
+	// Token: 0x060090A0 RID: 37024 RVA: 0x002B5BA4 File Offset: 0x002B3DA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,14 +22,14 @@ public class MediumItemGridRoleRightBottomTag : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BCB0 RID: 48304 RVA: 0x002AB315 File Offset: 0x002A9515
+	// Token: 0x060090A1 RID: 37025 RVA: 0x002B5C0D File Offset: 0x002B3E0D
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemTeanTag";
 	}
 
-	// Token: 0x0600BCB1 RID: 48305 RVA: 0x002AB31C File Offset: 0x002A951C
+	// Token: 0x060090A2 RID: 37026 RVA: 0x002B5C14 File Offset: 0x002B3E14
 	[NullableContext(2)]
 	protected override void OnRefresh(object obj)
 	{
@@ -51,13 +51,13 @@ public class MediumItemGridRoleRightBottomTag : MediumItemGridComponent
 		this.SetActive(mediumRoleRightBottomTag.IsRecommendRole || mediumRoleRightBottomTag.IsTrialRole);
 	}
 
-	// Token: 0x02007E96 RID: 32406
+	// Token: 0x0200701F RID: 28703
 	private class EChildType
 	{
-		// Token: 0x04029673 RID: 169587
+		// Token: 0x040249A5 RID: 149925
 		public const int ItemRecommend = 0;
 
-		// Token: 0x04029674 RID: 169588
+		// Token: 0x040249A6 RID: 149926
 		public const int ItemTrial = 1;
 	}
 }

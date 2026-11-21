@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util.Layout
 {
-	// Token: 0x020048E5 RID: 18661
+	// Token: 0x0200385C RID: 14428
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GenericLayoutNew<TGenericLayoutNewItem> : IGridPreserver
 	{
-		// Token: 0x1700799B RID: 31131
-		// (get) Token: 0x06030C96 RID: 199830 RVA: 0x00B543A1 File Offset: 0x00B525A1
+		// Token: 0x17004D03 RID: 19715
+		// (get) Token: 0x060257C3 RID: 153539 RVA: 0x00A8F211 File Offset: 0x00A8D411
 		public UUIItem TempOriginalItem
 		{
 			get
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030C97 RID: 199831 RVA: 0x00B543AC File Offset: 0x00B525AC
+		// Token: 0x060257C4 RID: 153540 RVA: 0x00A8F21C File Offset: 0x00A8D41C
 		[NullableContext(1)]
 		public GenericLayoutNew(UUILayoutBase layout, [Nullable(new byte[]
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			this.GridsController.RegisterAnimController();
 		}
 
-		// Token: 0x06030C98 RID: 199832 RVA: 0x00B54428 File Offset: 0x00B52628
+		// Token: 0x060257C5 RID: 153541 RVA: 0x00A8F298 File Offset: 0x00A8D498
 		private void ClearItemList()
 		{
 			foreach (TGenericLayoutNewItem tgenericLayoutNewItem in this.ItemMap.Values)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			this.ItemList.Clear();
 		}
 
-		// Token: 0x06030C99 RID: 199833 RVA: 0x00B544A4 File Offset: 0x00B526A4
+		// Token: 0x060257C6 RID: 153542 RVA: 0x00A8F314 File Offset: 0x00A8D514
 		private void SaveOriginalItem(UUIItem originalItem)
 		{
 			if (this.OriginalItem == null)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030C9A RID: 199834 RVA: 0x00B544FD File Offset: 0x00B526FD
+		// Token: 0x060257C7 RID: 153543 RVA: 0x00A8F36D File Offset: 0x00A8D56D
 		[NullableContext(1)]
 		public void SetScrollView(UUIScrollViewWithScrollbarComponent scrollView)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			gridsController.RegisterAnimController();
 		}
 
-		// Token: 0x06030C9B RID: 199835 RVA: 0x00B54520 File Offset: 0x00B52720
+		// Token: 0x060257C8 RID: 153544 RVA: 0x00A8F390 File Offset: 0x00A8D590
 		public void PreLoadCopyItem(int preLoadNum)
 		{
 			for (int i = 0; i < preLoadNum; i++)
@@ -100,19 +100,19 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030C9C RID: 199836 RVA: 0x00B54545 File Offset: 0x00B52745
+		// Token: 0x060257C9 RID: 153545 RVA: 0x00A8F3B5 File Offset: 0x00A8D5B5
 		public UUIItem GetRootUiItem()
 		{
 			return this.ProxyLayout.RootUIComp;
 		}
 
-		// Token: 0x06030C9D RID: 199837 RVA: 0x00B54557 File Offset: 0x00B52757
+		// Token: 0x060257CA RID: 153546 RVA: 0x00A8F3C7 File Offset: 0x00A8D5C7
 		private UUIItem GetRootParentUiItem()
 		{
 			return this.GetRootUiItem().GetParentAsUIItem();
 		}
 
-		// Token: 0x06030C9E RID: 199838 RVA: 0x00B54564 File Offset: 0x00B52764
+		// Token: 0x060257CB RID: 153547 RVA: 0x00A8F3D4 File Offset: 0x00A8D5D4
 		private void RecycleToPool()
 		{
 			if (this.CopyItemList.Count > 0)
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030C9F RID: 199839 RVA: 0x00B545C0 File Offset: 0x00B527C0
+		// Token: 0x060257CC RID: 153548 RVA: 0x00A8F430 File Offset: 0x00A8D630
 		[NullableContext(1)]
 		private UUIItem CreateCopyItem()
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			return uuiitem;
 		}
 
-		// Token: 0x06030CA0 RID: 199840 RVA: 0x00B545F4 File Offset: 0x00B527F4
+		// Token: 0x060257CD RID: 153549 RVA: 0x00A8F464 File Offset: 0x00A8D664
 		private void AddFromPool()
 		{
 			if (this.PoolItemList.Count > 0)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			this.CreateCopyItem().SetUIActive(true);
 		}
 
-		// Token: 0x06030CA1 RID: 199841 RVA: 0x00B5465B File Offset: 0x00B5285B
+		// Token: 0x060257CE RID: 153550 RVA: 0x00A8F4CB File Offset: 0x00A8D6CB
 		private void ResetOriginalActor()
 		{
 			if (this.OriginalItem != null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030CA2 RID: 199842 RVA: 0x00B5468C File Offset: 0x00B5288C
+		// Token: 0x060257CF RID: 153551 RVA: 0x00A8F4FC File Offset: 0x00A8D6FC
 		private void Clear()
 		{
 			for (int i = 0; i < this.PoolItemList.Count; i++)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			this.ClearGridController();
 		}
 
-		// Token: 0x06030CA3 RID: 199843 RVA: 0x00B5474D File Offset: 0x00B5294D
+		// Token: 0x060257D0 RID: 153552 RVA: 0x00A8F5BD File Offset: 0x00A8D7BD
 		public void ClearGridController()
 		{
 			if (this.GridsController != null)
@@ -194,13 +194,13 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030CA4 RID: 199844 RVA: 0x00B54769 File Offset: 0x00B52969
+		// Token: 0x060257D1 RID: 153553 RVA: 0x00A8F5D9 File Offset: 0x00A8D7D9
 		public void SetNeedAnim(bool value)
 		{
 			this.NeedAnim = value;
 		}
 
-		// Token: 0x06030CA5 RID: 199845 RVA: 0x00B54774 File Offset: 0x00B52974
+		// Token: 0x060257D2 RID: 153554 RVA: 0x00A8F5E4 File Offset: 0x00A8D7E4
 		public void RebuildLayoutByDataNew<T>([Nullable(new byte[]
 		{
 			2,
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			}
 		}
 
-		// Token: 0x06030CA6 RID: 199846 RVA: 0x00B54928 File Offset: 0x00B52B28
+		// Token: 0x060257D3 RID: 153555 RVA: 0x00A8F798 File Offset: 0x00A8D998
 		public UUIItem GetItemByIndex(int index)
 		{
 			if (this.ProxyLayout != null)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			return null;
 		}
 
-		// Token: 0x06030CA7 RID: 199847 RVA: 0x00B5495C File Offset: 0x00B52B5C
+		// Token: 0x060257D4 RID: 153556 RVA: 0x00A8F7CC File Offset: 0x00A8D9CC
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public TGenericLayoutNewItem GetLayoutItemByKey(object key)
@@ -284,21 +284,21 @@ namespace CSharpScript.Game.Module.Util.Layout
 			return default(TGenericLayoutNewItem);
 		}
 
-		// Token: 0x06030CA8 RID: 199848 RVA: 0x00B54984 File Offset: 0x00B52B84
+		// Token: 0x060257D5 RID: 153557 RVA: 0x00A8F7F4 File Offset: 0x00A8D9F4
 		[NullableContext(1)]
 		public Dictionary<object, TGenericLayoutNewItem> GetLayoutItemMap()
 		{
 			return this.ItemMap;
 		}
 
-		// Token: 0x06030CA9 RID: 199849 RVA: 0x00B5498C File Offset: 0x00B52B8C
+		// Token: 0x060257D6 RID: 153558 RVA: 0x00A8F7FC File Offset: 0x00A8D9FC
 		[NullableContext(1)]
 		public List<TGenericLayoutNewItem> GetLayoutItemList()
 		{
 			return this.ItemList;
 		}
 
-		// Token: 0x06030CAA RID: 199850 RVA: 0x00B54994 File Offset: 0x00B52B94
+		// Token: 0x060257D7 RID: 153559 RVA: 0x00A8F804 File Offset: 0x00A8DA04
 		public TGenericLayoutNewItem GetLayoutItemByIndex(int index)
 		{
 			if (index >= 0 && index < this.ItemList.Count)
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.Util.Layout
 			return default(TGenericLayoutNewItem);
 		}
 
-		// Token: 0x06030CAB RID: 199851 RVA: 0x00B549C9 File Offset: 0x00B52BC9
+		// Token: 0x060257D8 RID: 153560 RVA: 0x00A8F839 File Offset: 0x00A8DA39
 		public void ClearChildren()
 		{
 			if (this.IsClear)
@@ -322,86 +322,86 @@ namespace CSharpScript.Game.Module.Util.Layout
 			this.ResetOriginalActor();
 		}
 
-		// Token: 0x06030CAC RID: 199852 RVA: 0x00B54A00 File Offset: 0x00B52C00
+		// Token: 0x060257D9 RID: 153561 RVA: 0x00A8F870 File Offset: 0x00A8DA70
 		public void SetActive(bool bActive)
 		{
 			this.ProxyLayout.RootUIComp.Get().SetUIActive(bActive);
 		}
 
-		// Token: 0x06030CAD RID: 199853 RVA: 0x00B54A26 File Offset: 0x00B52C26
+		// Token: 0x060257DA RID: 153562 RVA: 0x00A8F896 File Offset: 0x00A8DA96
 		public int GetDisplayGridNum()
 		{
 			return this.DisplayGridNum;
 		}
 
-		// Token: 0x06030CAE RID: 199854 RVA: 0x00B54A2E File Offset: 0x00B52C2E
+		// Token: 0x060257DB RID: 153563 RVA: 0x00A8F89E File Offset: 0x00A8DA9E
 		public int GetPreservedGridNum()
 		{
 			return this.CopyItemList.Count;
 		}
 
-		// Token: 0x06030CAF RID: 199855 RVA: 0x00B54A3B File Offset: 0x00B52C3B
+		// Token: 0x060257DC RID: 153564 RVA: 0x00A8F8AB File Offset: 0x00A8DAAB
 		public int GetDisplayGridStartIndex()
 		{
 			return 0;
 		}
 
-		// Token: 0x06030CB0 RID: 199856 RVA: 0x00B54A3E File Offset: 0x00B52C3E
+		// Token: 0x060257DD RID: 153565 RVA: 0x00A8F8AE File Offset: 0x00A8DAAE
 		public int GetDisplayGridEndIndex()
 		{
 			return this.DisplayGridNum - 1;
 		}
 
-		// Token: 0x06030CB1 RID: 199857 RVA: 0x00B54A48 File Offset: 0x00B52C48
+		// Token: 0x060257DE RID: 153566 RVA: 0x00A8F8B8 File Offset: 0x00A8DAB8
 		public float GetGridAnimationInterval()
 		{
 			return this.ProxyLayout.GetGridAnimationInterval();
 		}
 
-		// Token: 0x06030CB2 RID: 199858 RVA: 0x00B54A55 File Offset: 0x00B52C55
+		// Token: 0x060257DF RID: 153567 RVA: 0x00A8F8C5 File Offset: 0x00A8DAC5
 		public float GetGridAnimationStartTime()
 		{
 			return this.ProxyLayout.GetGridAnimationStartTime();
 		}
 
-		// Token: 0x06030CB3 RID: 199859 RVA: 0x00B54A62 File Offset: 0x00B52C62
+		// Token: 0x060257E0 RID: 153568 RVA: 0x00A8F8D2 File Offset: 0x00A8DAD2
 		public UUIItem GetGrid(int gridIndex)
 		{
 			return this.GetItemByIndex(gridIndex % this.DisplayGridNum);
 		}
 
-		// Token: 0x06030CB4 RID: 199860 RVA: 0x00B54A72 File Offset: 0x00B52C72
+		// Token: 0x060257E1 RID: 153569 RVA: 0x00A8F8E2 File Offset: 0x00A8DAE2
 		public UUIItem GetGridByDisplayIndex(int displayIndex)
 		{
 			return this.GetItemByIndex(displayIndex);
 		}
 
-		// Token: 0x06030CB5 RID: 199861 RVA: 0x00B54A7B File Offset: 0x00B52C7B
+		// Token: 0x060257E2 RID: 153570 RVA: 0x00A8F8EB File Offset: 0x00A8DAEB
 		[NullableContext(1)]
 		public void BindLateUpdate(Action<float> callBack)
 		{
 			this.ProxyLayout.OnLateUpdate.Bind(callBack);
 		}
 
-		// Token: 0x06030CB6 RID: 199862 RVA: 0x00B54A8E File Offset: 0x00B52C8E
+		// Token: 0x060257E3 RID: 153571 RVA: 0x00A8F8FE File Offset: 0x00A8DAFE
 		public void UnBindLateUpdate()
 		{
 			this.ProxyLayout.OnLateUpdate.Unbind();
 		}
 
-		// Token: 0x06030CB7 RID: 199863 RVA: 0x00B54AA0 File Offset: 0x00B52CA0
+		// Token: 0x060257E4 RID: 153572 RVA: 0x00A8F910 File Offset: 0x00A8DB10
 		public void NotifyAnimationStart()
 		{
 			this.ProxyLayout.SetInAnimation(true);
 		}
 
-		// Token: 0x06030CB8 RID: 199864 RVA: 0x00B54AAE File Offset: 0x00B52CAE
+		// Token: 0x060257E5 RID: 153573 RVA: 0x00A8F91E File Offset: 0x00A8DB1E
 		public void NotifyAnimationEnd()
 		{
 			this.ProxyLayout.SetInAnimation(false);
 		}
 
-		// Token: 0x06030CB9 RID: 199865 RVA: 0x00B54ABC File Offset: 0x00B52CBC
+		// Token: 0x060257E6 RID: 153574 RVA: 0x00A8F92C File Offset: 0x00A8DB2C
 		public UUIInturnAnimController GetUiAnimController()
 		{
 			if (this.IsUseByLayout)
@@ -414,35 +414,35 @@ namespace CSharpScript.Game.Module.Util.Layout
 			return ((auibaseActor != null) ? auibaseActor.GetComponentByClass(UUIInturnAnimController.StaticClass()) : null) as UUIInturnAnimController;
 		}
 
-		// Token: 0x0401A321 RID: 107297
+		// Token: 0x04014B94 RID: 84884
 		private GridAppearAnimationBase GridsController;
 
-		// Token: 0x0401A322 RID: 107298
+		// Token: 0x04014B95 RID: 84885
 		private readonly UUILayoutBase ProxyLayout;
 
-		// Token: 0x0401A323 RID: 107299
+		// Token: 0x04014B96 RID: 84886
 		private UUIScrollViewWithScrollbarComponent ScrollView;
 
-		// Token: 0x0401A324 RID: 107300
+		// Token: 0x04014B97 RID: 84887
 		[Nullable(1)]
 		private readonly List<UUIItem> CopyItemList = new List<UUIItem>();
 
-		// Token: 0x0401A325 RID: 107301
+		// Token: 0x04014B98 RID: 84888
 		[Nullable(1)]
 		private readonly List<UUIItem> PoolItemList = new List<UUIItem>();
 
-		// Token: 0x0401A326 RID: 107302
+		// Token: 0x04014B99 RID: 84889
 		private UUIItem OriginalItem;
 
-		// Token: 0x0401A327 RID: 107303
+		// Token: 0x04014B9A RID: 84890
 		[Nullable(1)]
 		private readonly Dictionary<object, TGenericLayoutNewItem> ItemMap = new Dictionary<object, TGenericLayoutNewItem>();
 
-		// Token: 0x0401A328 RID: 107304
+		// Token: 0x04014B9B RID: 84891
 		[Nullable(1)]
 		private List<TGenericLayoutNewItem> ItemList = new List<TGenericLayoutNewItem>();
 
-		// Token: 0x0401A329 RID: 107305
+		// Token: 0x04014B9C RID: 84892
 		[Nullable(new byte[]
 		{
 			2,
@@ -450,19 +450,19 @@ namespace CSharpScript.Game.Module.Util.Layout
 		})]
 		private readonly TLayoutRefresh<TGenericLayoutNewItem> RefreshFunction;
 
-		// Token: 0x0401A32A RID: 107306
+		// Token: 0x04014B9D RID: 84893
 		private int DisplayGridNum;
 
-		// Token: 0x0401A32B RID: 107307
+		// Token: 0x04014B9E RID: 84894
 		private bool IsClear;
 
-		// Token: 0x0401A32C RID: 107308
+		// Token: 0x04014B9F RID: 84895
 		private string DisplayName;
 
-		// Token: 0x0401A32D RID: 107309
+		// Token: 0x04014BA0 RID: 84896
 		private bool NeedAnim = true;
 
-		// Token: 0x0401A32E RID: 107310
+		// Token: 0x04014BA1 RID: 84897
 		private bool IsUseByLayout = true;
 	}
 }

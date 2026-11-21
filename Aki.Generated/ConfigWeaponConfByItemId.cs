@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A7B RID: 2683
+	// Token: 0x02000B50 RID: 2896
 	public class ConfigWeaponConfByItemId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003EF6 RID: 16118 RVA: 0x001BE217 File Offset: 0x001BC417
+		// Token: 0x060043F4 RID: 17396 RVA: 0x001DD5AB File Offset: 0x001DB7AB
 		static ConfigWeaponConfByItemId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponConfByItemId.CreateStaticDefaultValue), new Action(ConfigWeaponConfByItemId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003EF7 RID: 16119 RVA: 0x001BE238 File Offset: 0x001BC438
+		// Token: 0x060043F5 RID: 17397 RVA: 0x001DD5CC File Offset: 0x001DB7CC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponConfByItemId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003EF8 RID: 16120 RVA: 0x001BE2B7 File Offset: 0x001BC4B7
+		// Token: 0x060043F6 RID: 17398 RVA: 0x001DD64B File Offset: 0x001DB84B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponConfByItemId.LogPair = null;
 			ConfigWeaponConfByItemId.HandleId = 0;
 		}
 
-		// Token: 0x06003EF9 RID: 16121 RVA: 0x001BE2C5 File Offset: 0x001BC4C5
+		// Token: 0x060043F7 RID: 17399 RVA: 0x001DD659 File Offset: 0x001DB859
 		public static void Init()
 		{
 			ConfigWeaponConfByItemId.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponConfByItemId.HandleId, "db_weapon.db", "select BinData from `WeaponConf` where ItemId = ?");
 		}
 
-		// Token: 0x06003EFA RID: 16122 RVA: 0x001BE2E0 File Offset: 0x001BC4E0
+		// Token: 0x060043F8 RID: 17400 RVA: 0x001DD674 File Offset: 0x001DB874
 		public static WeaponConf? GetConfig(int p0ItemId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeaponConfByItemId.HandleId, ConfigWeaponConfByItemId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WeaponConf?(rootAsWeaponConf);
 		}
 
-		// Token: 0x04004943 RID: 18755
+		// Token: 0x04004F16 RID: 20246
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x04004944 RID: 18756
+		// Token: 0x04004F17 RID: 20247
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x04004945 RID: 18757
+		// Token: 0x04004F18 RID: 20248
 		private const string TABLE = "WeaponConf";
 
-		// Token: 0x04004946 RID: 18758
+		// Token: 0x04004F19 RID: 20249
 		private const string COMMAND = "select BinData from `WeaponConf` where ItemId = ?";
 
-		// Token: 0x04004947 RID: 18759
+		// Token: 0x04004F1A RID: 20250
 		private const string KEY_PREFIX = "WeaponConfByItemId";
 
-		// Token: 0x04004948 RID: 18760
+		// Token: 0x04004F1B RID: 20251
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004949 RID: 18761
+		// Token: 0x04004F1C RID: 20252
 		private static int HandleId;
 	}
 }

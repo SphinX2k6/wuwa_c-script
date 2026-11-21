@@ -7,15 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B88 RID: 27528
+	// Token: 0x02005D00 RID: 23808
 	public class LevelEventSpawnEffect : LevelEventBase
 	{
-		// Token: 0x06044285 RID: 279173 RVA: 0x010CB2BA File Offset: 0x010C94BA
+		// Token: 0x0603A3D7 RID: 238551 RVA: 0x01074F52 File Offset: 0x01073152
 		public LevelEventSpawnEffect(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044286 RID: 279174 RVA: 0x010CB2C4 File Offset: 0x010C94C4
+		// Token: 0x0603A3D8 RID: 238552 RVA: 0x01074F5C File Offset: 0x0107315C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

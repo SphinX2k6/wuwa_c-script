@@ -2,90 +2,90 @@
 
 namespace CSharpScript.Game.Module.GenericPrompt
 {
-	// Token: 0x02005993 RID: 22931
+	// Token: 0x0200496C RID: 18796
 	public enum EPromptSubViewType
 	{
-		// Token: 0x0401E5A5 RID: 124325
+		// Token: 0x04019043 RID: 102467
 		EventHintPrompt,
-		// Token: 0x0401E5A6 RID: 124326
+		// Token: 0x04019044 RID: 102468
 		BottomPrompt1,
-		// Token: 0x0401E5A7 RID: 124327
+		// Token: 0x04019045 RID: 102469
 		BottomPrompt2,
-		// Token: 0x0401E5A8 RID: 124328
+		// Token: 0x04019046 RID: 102470
 		DungeonOKPrompt,
-		// Token: 0x0401E5A9 RID: 124329
+		// Token: 0x04019047 RID: 102471
 		EventNoPrompt,
-		// Token: 0x0401E5AA RID: 124330
+		// Token: 0x04019048 RID: 102472
 		EventYesPrompt,
-		// Token: 0x0401E5AB RID: 124331
+		// Token: 0x04019049 RID: 102473
 		TaskBeginPrompt,
-		// Token: 0x0401E5AC RID: 124332
+		// Token: 0x0401904A RID: 102474
 		TaskDonePrompt,
-		// Token: 0x0401E5AD RID: 124333
+		// Token: 0x0401904B RID: 102475
 		CountDownPrompt,
-		// Token: 0x0401E5AE RID: 124334
+		// Token: 0x0401904C RID: 102476
 		FloatLinePrompt,
-		// Token: 0x0401E5AF RID: 124335
+		// Token: 0x0401904D RID: 102477
 		ChapterBeginPrompt,
-		// Token: 0x0401E5B0 RID: 124336
+		// Token: 0x0401904E RID: 102478
 		ChapterEndPrompt,
-		// Token: 0x0401E5B1 RID: 124337
+		// Token: 0x0401904F RID: 102479
 		DailyTaskEndPrompt,
-		// Token: 0x0401E5B2 RID: 124338
+		// Token: 0x04019050 RID: 102480
 		PrepareCountdownPrompt,
-		// Token: 0x0401E5B3 RID: 124339
+		// Token: 0x04019051 RID: 102481
 		ComboTeachingPrompt,
-		// Token: 0x0401E5B4 RID: 124340
+		// Token: 0x04019052 RID: 102482
 		RoguelikePrompt,
-		// Token: 0x0401E5B5 RID: 124341
+		// Token: 0x04019053 RID: 102483
 		FlowChapterStartPrompt,
-		// Token: 0x0401E5B6 RID: 124342
+		// Token: 0x04019054 RID: 102484
 		FlowChapterEndPrompt,
-		// Token: 0x0401E5B7 RID: 124343
+		// Token: 0x04019055 RID: 102485
 		RemainStarWarning,
-		// Token: 0x0401E5B8 RID: 124344
+		// Token: 0x04019056 RID: 102486
 		TowerDefenseWave,
-		// Token: 0x0401E5B9 RID: 124345
+		// Token: 0x04019057 RID: 102487
 		RogueSilentArea,
-		// Token: 0x0401E5BA RID: 124346
+		// Token: 0x04019058 RID: 102488
 		MowingRiskBuff,
-		// Token: 0x0401E5BB RID: 124347
+		// Token: 0x04019059 RID: 102489
 		WhiteCatWarning,
-		// Token: 0x0401E5BC RID: 124348
+		// Token: 0x0401905A RID: 102490
 		BlackCatWarning,
-		// Token: 0x0401E5BD RID: 124349
+		// Token: 0x0401905B RID: 102491
 		ChapterBattleDeclarationTipsRed,
-		// Token: 0x0401E5BE RID: 124350
+		// Token: 0x0401905C RID: 102492
 		ChapterBattleDeclarationTipsWhite,
-		// Token: 0x0401E5BF RID: 124351
+		// Token: 0x0401905D RID: 102493
 		ChapterA,
-		// Token: 0x0401E5C0 RID: 124352
+		// Token: 0x0401905E RID: 102494
 		TeamTeleportCountDown,
-		// Token: 0x0401E5C1 RID: 124353
+		// Token: 0x0401905F RID: 102495
 		DangoAbyssActivityOpen,
-		// Token: 0x0401E5C2 RID: 124354
+		// Token: 0x04019060 RID: 102496
 		BadDangoTip,
-		// Token: 0x0401E5C3 RID: 124355
+		// Token: 0x04019061 RID: 102497
 		RogueResOpen,
-		// Token: 0x0401E5C4 RID: 124356
+		// Token: 0x04019062 RID: 102498
 		MoralePrompt,
-		// Token: 0x0401E5C5 RID: 124357
+		// Token: 0x04019063 RID: 102499
 		NightmareLord,
-		// Token: 0x0401E5C6 RID: 124358
+		// Token: 0x04019064 RID: 102500
 		NightmareSpawnPoint,
-		// Token: 0x0401E5C7 RID: 124359
+		// Token: 0x04019065 RID: 102501
 		PhantomArenaOpen,
-		// Token: 0x0401E5C8 RID: 124360
+		// Token: 0x04019066 RID: 102502
 		PlotChapterA,
-		// Token: 0x0401E5C9 RID: 124361
+		// Token: 0x04019067 RID: 102503
 		FightPhotoEventTip,
-		// Token: 0x0401E5CA RID: 124362
+		// Token: 0x04019068 RID: 102504
 		VisionSettlementPoint,
-		// Token: 0x0401E5CB RID: 124363
+		// Token: 0x04019069 RID: 102505
 		FlagChallengePrompt,
-		// Token: 0x0401E5CC RID: 124364
+		// Token: 0x0401906A RID: 102506
 		ChallengeWantedAchieve,
-		// Token: 0x0401E5CD RID: 124365
+		// Token: 0x0401906B RID: 102507
 		TowerDefenseStrengthenTips
 	}
 }

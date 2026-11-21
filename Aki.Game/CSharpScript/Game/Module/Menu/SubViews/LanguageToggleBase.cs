@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200541D RID: 21533
+	// Token: 0x02004400 RID: 17408
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LanguageToggleBase : UiPanelBase
 	{
-		// Token: 0x06037068 RID: 225384 RVA: 0x00D0A133 File Offset: 0x00D08333
+		// Token: 0x0602BFB1 RID: 180145 RVA: 0x00C59553 File Offset: 0x00C57753
 		public void Initialize(UUIItem toggleItem, int index, bool isToggled)
 		{
 			this.Index = index;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.CreateThenShowByActor(toggleItem.GetOwner(), null);
 		}
 
-		// Token: 0x06037069 RID: 225385 RVA: 0x00D0A150 File Offset: 0x00D08350
+		// Token: 0x0602BFB2 RID: 180146 RVA: 0x00C59570 File Offset: 0x00C57770
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x0603706A RID: 225386 RVA: 0x00D0A1CD File Offset: 0x00D083CD
+		// Token: 0x0602BFB3 RID: 180147 RVA: 0x00C595ED File Offset: 0x00C577ED
 		protected override void OnStart()
 		{
 			if (this.PreToggled)
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.MainText = base.GetText(1);
 		}
 
-		// Token: 0x0603706B RID: 225387 RVA: 0x00D0A1F5 File Offset: 0x00D083F5
+		// Token: 0x0602BFB4 RID: 180148 RVA: 0x00C59615 File Offset: 0x00C57815
 		protected override void OnBeforeDestroyImplement()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Unbind();
 			this.ProgressBuilder.Clear();
 		}
 
-		// Token: 0x0603706C RID: 225388 RVA: 0x00D0A214 File Offset: 0x00D08414
+		// Token: 0x0602BFB5 RID: 180149 RVA: 0x00C59634 File Offset: 0x00C57834
 		private void DoSelected(EToggleState state)
 		{
 			Action<LanguageToggleBase, EToggleState> selectedCallBack = this.SelectedCallBack;
@@ -63,57 +63,57 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.OnSelected();
 		}
 
-		// Token: 0x0603706D RID: 225389 RVA: 0x00D0A22F File Offset: 0x00D0842F
+		// Token: 0x0602BFB6 RID: 180150 RVA: 0x00C5964F File Offset: 0x00C5784F
 		public void SetSelectedCallBack(Action<LanguageToggleBase, EToggleState> callBack)
 		{
 			this.SelectedCallBack = callBack;
 		}
 
-		// Token: 0x0603706E RID: 225390 RVA: 0x00D0A238 File Offset: 0x00D08438
+		// Token: 0x0602BFB7 RID: 180151 RVA: 0x00C59658 File Offset: 0x00C57858
 		public void SetMainText(string textId)
 		{
 			this.MainText.ShowTextNew(textId);
 		}
 
-		// Token: 0x0603706F RID: 225391 RVA: 0x00D0A246 File Offset: 0x00D08446
+		// Token: 0x0602BFB8 RID: 180152 RVA: 0x00C59666 File Offset: 0x00C57866
 		public string GetMainText()
 		{
 			return this.MainText.text;
 		}
 
-		// Token: 0x06037070 RID: 225392 RVA: 0x00D0A253 File Offset: 0x00D08453
+		// Token: 0x0602BFB9 RID: 180153 RVA: 0x00C59673 File Offset: 0x00C57873
 		public int GetIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x06037071 RID: 225393 RVA: 0x00D0A25B File Offset: 0x00D0845B
+		// Token: 0x0602BFBA RID: 180154 RVA: 0x00C5967B File Offset: 0x00C5787B
 		public void UnSelect()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 			this.OnUnSelected();
 		}
 
-		// Token: 0x06037072 RID: 225394 RVA: 0x00D0A274 File Offset: 0x00D08474
+		// Token: 0x0602BFBB RID: 180155 RVA: 0x00C59694 File Offset: 0x00C57894
 		protected virtual void OnSelected()
 		{
 		}
 
-		// Token: 0x06037073 RID: 225395 RVA: 0x00D0A276 File Offset: 0x00D08476
+		// Token: 0x0602BFBC RID: 180156 RVA: 0x00C59696 File Offset: 0x00C57896
 		protected virtual void OnUnSelected()
 		{
 		}
 
-		// Token: 0x0401D07A RID: 118906
+		// Token: 0x04017B13 RID: 97043
 		protected readonly StringBuilder ProgressBuilder = new StringBuilder();
 
-		// Token: 0x0401D07B RID: 118907
+		// Token: 0x04017B14 RID: 97044
 		protected int Index;
 
-		// Token: 0x0401D07C RID: 118908
+		// Token: 0x04017B15 RID: 97045
 		protected bool PreToggled;
 
-		// Token: 0x0401D07D RID: 118909
+		// Token: 0x04017B16 RID: 97046
 		[Nullable(new byte[]
 		{
 			2,
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 		})]
 		protected Action<LanguageToggleBase, EToggleState> SelectedCallBack;
 
-		// Token: 0x0401D07E RID: 118910
+		// Token: 0x04017B17 RID: 97047
 		[Nullable(2)]
 		protected UUIText MainText;
 	}

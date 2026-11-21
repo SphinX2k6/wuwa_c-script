@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001EF RID: 495
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000218 RID: 536
 	public class IBattleVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x06000816 RID: 2070 RVA: 0x000262C4 File Offset: 0x000244C4
+		// Token: 0x06000896 RID: 2198 RVA: 0x00027C18 File Offset: 0x00025E18
 		private IBattleVehicleFeature_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000817 RID: 2071 RVA: 0x000262FC File Offset: 0x000244FC
+		// Token: 0x06000897 RID: 2199 RVA: 0x00027C50 File Offset: 0x00025E50
 		public static IBattleVehicleFeature Create([Nullable(2)] IBattleVehicleFeature instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000818 RID: 2072 RVA: 0x0002630F File Offset: 0x0002450F
+		// Token: 0x06000898 RID: 2200 RVA: 0x00027C63 File Offset: 0x00025E63
 		public static IBattleVehicleFeature CreateFromSetValue([Nullable(2)] IBattleVehicleFeature_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000819 RID: 2073 RVA: 0x00026322 File Offset: 0x00024522
+		// Token: 0x06000899 RID: 2201 RVA: 0x00027C76 File Offset: 0x00025E76
 		public new IBattleVehicleFeature_SetValue ToSetValue()
 		{
 			return new IBattleVehicleFeature_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000282 RID: 642
-		// (get) Token: 0x0600081A RID: 2074 RVA: 0x00026335 File Offset: 0x00024535
-		// (set) Token: 0x0600081B RID: 2075 RVA: 0x00026360 File Offset: 0x00024560
+		// Token: 0x170002A4 RID: 676
+		// (get) Token: 0x0600089A RID: 2202 RVA: 0x00027C89 File Offset: 0x00025E89
+		// (set) Token: 0x0600089B RID: 2203 RVA: 0x00027CB4 File Offset: 0x00025EB4
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008F8 RID: 2296
+		// Token: 0x04000989 RID: 2441
 		[Nullable(2)]
 		protected new IBattleVehicleFeature FbInstance;
 
-		// Token: 0x040008F9 RID: 2297
+		// Token: 0x0400098A RID: 2442
 		[Nullable(2)]
 		protected new IBattleVehicleFeature_SetValue PocoInterface;
 	}

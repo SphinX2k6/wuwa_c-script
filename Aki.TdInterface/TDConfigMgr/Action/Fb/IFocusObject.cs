@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200284A RID: 10314
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B1D RID: 11037
 	public class IFocusObject
 	{
-		// Token: 0x0600E4A0 RID: 58528 RVA: 0x0021A4D6 File Offset: 0x002186D6
+		// Token: 0x0600F2C5 RID: 62149 RVA: 0x0023733A File Offset: 0x0023553A
 		public static IFocusObject Create(IFocusObject? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045CE RID: 17870
-		// (get) Token: 0x0600E4A1 RID: 58529 RVA: 0x0021A4F5 File Offset: 0x002186F5
+		// Token: 0x17004939 RID: 18745
+		// (get) Token: 0x0600F2C6 RID: 62150 RVA: 0x00237359 File Offset: 0x00235559
 		public virtual IFocusObjectRotationConfig RotationConfig
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045CF RID: 17871
-		// (get) Token: 0x0600E4A2 RID: 58530 RVA: 0x0021A529 File Offset: 0x00218729
+		// Token: 0x1700493A RID: 18746
+		// (get) Token: 0x0600F2C7 RID: 62151 RVA: 0x0023738D File Offset: 0x0023558D
 		public virtual IFocusObjectCameraConfig CameraConfig
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045D0 RID: 17872
-		// (get) Token: 0x0600E4A3 RID: 58531 RVA: 0x0021A560 File Offset: 0x00218760
+		// Token: 0x1700493B RID: 18747
+		// (get) Token: 0x0600F2C8 RID: 62152 RVA: 0x002373C4 File Offset: 0x002355C4
 		public virtual int? LeaveIndex
 		{
 			get
@@ -68,21 +66,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E7A RID: 32378
+		// Token: 0x04008537 RID: 34103
 		private IFocusObject Instance;
 
-		// Token: 0x04007E7B RID: 32379
+		// Token: 0x04008538 RID: 34104
 		[Nullable(2)]
 		private IFocusObjectRotationConfig _RotationConfigCache;
 
-		// Token: 0x04007E7C RID: 32380
+		// Token: 0x04008539 RID: 34105
 		private bool _RotationConfigInited;
 
-		// Token: 0x04007E7D RID: 32381
+		// Token: 0x0400853A RID: 34106
 		[Nullable(2)]
 		private IFocusObjectCameraConfig _CameraConfigCache;
 
-		// Token: 0x04007E7E RID: 32382
+		// Token: 0x0400853B RID: 34107
 		private bool _CameraConfigInited;
 	}
 }

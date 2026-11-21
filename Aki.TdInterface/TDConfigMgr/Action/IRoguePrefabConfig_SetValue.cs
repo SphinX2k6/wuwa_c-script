@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC5 RID: 7621
+	// Token: 0x02001FDC RID: 8156
 	public class IRoguePrefabConfig_SetValue
 	{
-		// Token: 0x040061E5 RID: 25061
+		// Token: 0x0400676D RID: 26477
 		public ECreatePrefabType Type;
 
-		// Token: 0x040061E6 RID: 25062
+		// Token: 0x0400676E RID: 26478
 		public int Index;
 	}
 }

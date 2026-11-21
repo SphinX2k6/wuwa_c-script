@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E16 RID: 3606
+	// Token: 0x02000EFB RID: 3835
 	public struct MonsterHandBookType : IFlatbufferObject
 	{
-		// Token: 0x17001F73 RID: 8051
-		// (get) Token: 0x06009514 RID: 38164 RVA: 0x00287A41 File Offset: 0x00285C41
+		// Token: 0x17001FD8 RID: 8152
+		// (get) Token: 0x06009B34 RID: 39732 RVA: 0x002A5809 File Offset: 0x002A3A09
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009515 RID: 38165 RVA: 0x00287A4E File Offset: 0x00285C4E
+		// Token: 0x06009B35 RID: 39733 RVA: 0x002A5816 File Offset: 0x002A3A16
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009516 RID: 38166 RVA: 0x00287A58 File Offset: 0x00285C58
+		// Token: 0x06009B36 RID: 39734 RVA: 0x002A5820 File Offset: 0x002A3A20
 		public static MonsterHandBookType GetRootAsMonsterHandBookType(ByteBuffer _bb)
 		{
 			return MonsterHandBookType.GetRootAsMonsterHandBookType(_bb, default(MonsterHandBookType));
 		}
 
-		// Token: 0x06009517 RID: 38167 RVA: 0x00287A74 File Offset: 0x00285C74
+		// Token: 0x06009B37 RID: 39735 RVA: 0x002A583C File Offset: 0x002A3A3C
 		public static MonsterHandBookType GetRootAsMonsterHandBookType(ByteBuffer _bb, MonsterHandBookType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009518 RID: 38168 RVA: 0x00287A91 File Offset: 0x00285C91
+		// Token: 0x06009B38 RID: 39736 RVA: 0x002A5859 File Offset: 0x002A3A59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009519 RID: 38169 RVA: 0x00287AA0 File Offset: 0x00285CA0
+		// Token: 0x06009B39 RID: 39737 RVA: 0x002A5868 File Offset: 0x002A3A68
 		public MonsterHandBookType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001F74 RID: 8052
-		// (get) Token: 0x0600951A RID: 38170 RVA: 0x00287AB0 File Offset: 0x00285CB0
+		// Token: 0x17001FD9 RID: 8153
+		// (get) Token: 0x06009B3A RID: 39738 RVA: 0x002A5878 File Offset: 0x002A3A78
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F75 RID: 8053
-		// (get) Token: 0x0600951B RID: 38171 RVA: 0x00287AEC File Offset: 0x00285CEC
+		// Token: 0x17001FDA RID: 8154
+		// (get) Token: 0x06009B3B RID: 39739 RVA: 0x002A58B4 File Offset: 0x002A3AB4
 		public string Descrtption
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600951C RID: 38172 RVA: 0x00287B23 File Offset: 0x00285D23
+		// Token: 0x06009B3C RID: 39740 RVA: 0x002A58EB File Offset: 0x002A3AEB
 		public Span<byte> GetDescrtptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600951D RID: 38173 RVA: 0x00287B32 File Offset: 0x00285D32
+		// Token: 0x06009B3D RID: 39741 RVA: 0x002A58FA File Offset: 0x002A3AFA
 		public byte[] GetDescrtptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004EBB RID: 20155
+		// Token: 0x040054A0 RID: 21664
 		private Table __p;
 	}
 }

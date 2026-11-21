@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000279 RID: 633
+	// Token: 0x0200028D RID: 653
 	public class ConfigEntityOwnerDataByGuid : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000EDB RID: 3803 RVA: 0x000AD729 File Offset: 0x000AB929
+		// Token: 0x06000F53 RID: 3923 RVA: 0x000B39ED File Offset: 0x000B1BED
 		static ConfigEntityOwnerDataByGuid()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntityOwnerDataByGuid.CreateStaticDefaultValue), new Action(ConfigEntityOwnerDataByGuid.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000EDC RID: 3804 RVA: 0x000AD748 File Offset: 0x000AB948
+		// Token: 0x06000F54 RID: 3924 RVA: 0x000B3A0C File Offset: 0x000B1C0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntityOwnerDataByGuid.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000EDD RID: 3805 RVA: 0x000AD7C7 File Offset: 0x000AB9C7
+		// Token: 0x06000F55 RID: 3925 RVA: 0x000B3A8B File Offset: 0x000B1C8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntityOwnerDataByGuid.LogPair = null;
 			ConfigEntityOwnerDataByGuid.HandleId = 0;
 		}
 
-		// Token: 0x06000EDE RID: 3806 RVA: 0x000AD7D5 File Offset: 0x000AB9D5
+		// Token: 0x06000F56 RID: 3926 RVA: 0x000B3A99 File Offset: 0x000B1C99
 		public static void Init()
 		{
 			ConfigEntityOwnerDataByGuid.HandleId = ConfigCommon.InitDataStatement(ConfigEntityOwnerDataByGuid.HandleId, "db_entityownerdata.db", "select BinData from `EntityOwnerData` where Guid=?");
 		}
 
-		// Token: 0x06000EDF RID: 3807 RVA: 0x000AD7F0 File Offset: 0x000AB9F0
+		// Token: 0x06000F57 RID: 3927 RVA: 0x000B3AB4 File Offset: 0x000B1CB4
 		public static EntityOwnerData? GetConfig(string p0Guid, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntityOwnerDataByGuid.HandleId, ConfigEntityOwnerDataByGuid.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new EntityOwnerData?(rootAsEntityOwnerData);
 		}
 
-		// Token: 0x04001133 RID: 4403
+		// Token: 0x040011BF RID: 4543
 		private const string DB = "db_entityownerdata.db";
 
-		// Token: 0x04001134 RID: 4404
+		// Token: 0x040011C0 RID: 4544
 		private const string FILE = "UniverseEditor/EntityOwnerConfig/EntityOwner.csv";
 
-		// Token: 0x04001135 RID: 4405
+		// Token: 0x040011C1 RID: 4545
 		private const string TABLE = "EntityOwnerData";
 
-		// Token: 0x04001136 RID: 4406
+		// Token: 0x040011C2 RID: 4546
 		private const string COMMAND = "select BinData from `EntityOwnerData` where Guid=?";
 
-		// Token: 0x04001137 RID: 4407
+		// Token: 0x040011C3 RID: 4547
 		private const string KEY_PREFIX = "EntityOwnerDataByGuid";
 
-		// Token: 0x04001138 RID: 4408
+		// Token: 0x040011C4 RID: 4548
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001139 RID: 4409
+		// Token: 0x040011C5 RID: 4549
 		private static int HandleId;
 	}
 }

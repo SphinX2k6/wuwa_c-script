@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000382 RID: 898
+	// Token: 0x02000398 RID: 920
 	public class ConfigGatherActivityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001512 RID: 5394 RVA: 0x000D0C33 File Offset: 0x000CEE33
+		// Token: 0x06001596 RID: 5526 RVA: 0x000D7387 File Offset: 0x000D5587
 		static ConfigGatherActivityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGatherActivityById.CreateStaticDefaultValue), new Action(ConfigGatherActivityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001513 RID: 5395 RVA: 0x000D0C54 File Offset: 0x000CEE54
+		// Token: 0x06001597 RID: 5527 RVA: 0x000D73A8 File Offset: 0x000D55A8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGatherActivityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001514 RID: 5396 RVA: 0x000D0CD3 File Offset: 0x000CEED3
+		// Token: 0x06001598 RID: 5528 RVA: 0x000D7427 File Offset: 0x000D5627
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGatherActivityById.LogPair = null;
 			ConfigGatherActivityById.HandleId = 0;
 		}
 
-		// Token: 0x06001515 RID: 5397 RVA: 0x000D0CE1 File Offset: 0x000CEEE1
+		// Token: 0x06001599 RID: 5529 RVA: 0x000D7435 File Offset: 0x000D5635
 		public static void Init()
 		{
 			ConfigGatherActivityById.HandleId = ConfigCommon.InitDataStatement(ConfigGatherActivityById.HandleId, "db_collectionactivity.db", "select BinData from `GatherActivity` where Id=?");
 		}
 
-		// Token: 0x06001516 RID: 5398 RVA: 0x000D0CFC File Offset: 0x000CEEFC
+		// Token: 0x0600159A RID: 5530 RVA: 0x000D7450 File Offset: 0x000D5650
 		public static GatherActivity? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGatherActivityById.HandleId, ConfigGatherActivityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GatherActivity?(rootAsGatherActivity);
 		}
 
-		// Token: 0x04001872 RID: 6258
+		// Token: 0x0400190C RID: 6412
 		private const string DB = "db_collectionactivity.db";
 
-		// Token: 0x04001873 RID: 6259
+		// Token: 0x0400190D RID: 6413
 		private const string FILE = "s.收集活动.xlsx";
 
-		// Token: 0x04001874 RID: 6260
+		// Token: 0x0400190E RID: 6414
 		private const string TABLE = "GatherActivity";
 
-		// Token: 0x04001875 RID: 6261
+		// Token: 0x0400190F RID: 6415
 		private const string COMMAND = "select BinData from `GatherActivity` where Id=?";
 
-		// Token: 0x04001876 RID: 6262
+		// Token: 0x04001910 RID: 6416
 		private const string KEY_PREFIX = "GatherActivityById";
 
-		// Token: 0x04001877 RID: 6263
+		// Token: 0x04001911 RID: 6417
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001878 RID: 6264
+		// Token: 0x04001912 RID: 6418
 		private static int HandleId;
 	}
 }

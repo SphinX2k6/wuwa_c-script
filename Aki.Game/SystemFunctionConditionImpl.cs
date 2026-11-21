@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002A70 RID: 10864
+// Token: 0x02001FEB RID: 8171
 public class SystemFunctionConditionImpl : ISkipSystemFunctionCondition, ISkipCondition<ESkipConditionType>
 {
-	// Token: 0x17001E0D RID: 7693
-	// (get) Token: 0x06016A0F RID: 92687 RVA: 0x005BC15D File Offset: 0x005BA35D
-	// (set) Token: 0x06016A10 RID: 92688 RVA: 0x005BC165 File Offset: 0x005BA365
+	// Token: 0x17001E65 RID: 7781
+	// (get) Token: 0x06014430 RID: 82992 RVA: 0x005E82E5 File Offset: 0x005E64E5
+	// (set) Token: 0x06014431 RID: 82993 RVA: 0x005E82ED File Offset: 0x005E64ED
 	public ESkipConditionType ConditionType { get; set; }
 
-	// Token: 0x17001E0E RID: 7694
-	// (get) Token: 0x06016A11 RID: 92689 RVA: 0x005BC16E File Offset: 0x005BA36E
-	// (set) Token: 0x06016A12 RID: 92690 RVA: 0x005BC176 File Offset: 0x005BA376
+	// Token: 0x17001E66 RID: 7782
+	// (get) Token: 0x06014432 RID: 82994 RVA: 0x005E82F6 File Offset: 0x005E64F6
+	// (set) Token: 0x06014433 RID: 82995 RVA: 0x005E82FE File Offset: 0x005E64FE
 	public EFunctionType FunctionType { get; set; }
 }

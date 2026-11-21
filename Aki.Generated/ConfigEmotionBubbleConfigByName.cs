@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000269 RID: 617
+	// Token: 0x0200027D RID: 637
 	public class ConfigEmotionBubbleConfigByName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E7A RID: 3706 RVA: 0x000AB2A7 File Offset: 0x000A94A7
+		// Token: 0x06000EF2 RID: 3826 RVA: 0x000B156B File Offset: 0x000AF76B
 		static ConfigEmotionBubbleConfigByName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEmotionBubbleConfigByName.CreateStaticDefaultValue), new Action(ConfigEmotionBubbleConfigByName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E7B RID: 3707 RVA: 0x000AB2C8 File Offset: 0x000A94C8
+		// Token: 0x06000EF3 RID: 3827 RVA: 0x000B158C File Offset: 0x000AF78C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEmotionBubbleConfigByName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E7C RID: 3708 RVA: 0x000AB347 File Offset: 0x000A9547
+		// Token: 0x06000EF4 RID: 3828 RVA: 0x000B160B File Offset: 0x000AF80B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEmotionBubbleConfigByName.LogPair = null;
 			ConfigEmotionBubbleConfigByName.HandleId = 0;
 		}
 
-		// Token: 0x06000E7D RID: 3709 RVA: 0x000AB355 File Offset: 0x000A9555
+		// Token: 0x06000EF5 RID: 3829 RVA: 0x000B1619 File Offset: 0x000AF819
 		public static void Init()
 		{
 			ConfigEmotionBubbleConfigByName.HandleId = ConfigCommon.InitDataStatement(ConfigEmotionBubbleConfigByName.HandleId, "db_emotionbubbleconfig.db", "select BinData from `EmotionBubbleConfig` where EmotionName=?");
 		}
 
-		// Token: 0x06000E7E RID: 3710 RVA: 0x000AB370 File Offset: 0x000A9570
+		// Token: 0x06000EF6 RID: 3830 RVA: 0x000B1634 File Offset: 0x000AF834
 		public static EmotionBubbleConfig? GetConfig(string p0EmotionName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEmotionBubbleConfigByName.HandleId, ConfigEmotionBubbleConfigByName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new EmotionBubbleConfig?(rootAsEmotionBubbleConfig);
 		}
 
-		// Token: 0x040010C3 RID: 4291
+		// Token: 0x0400114F RID: 4431
 		private const string DB = "db_emotionbubbleconfig.db";
 
-		// Token: 0x040010C4 RID: 4292
+		// Token: 0x04001150 RID: 4432
 		private const string FILE = "k.可视化编辑/c.Csv/b.表情气泡/*.csv*";
 
-		// Token: 0x040010C5 RID: 4293
+		// Token: 0x04001151 RID: 4433
 		private const string TABLE = "EmotionBubbleConfig";
 
-		// Token: 0x040010C6 RID: 4294
+		// Token: 0x04001152 RID: 4434
 		private const string COMMAND = "select BinData from `EmotionBubbleConfig` where EmotionName=?";
 
-		// Token: 0x040010C7 RID: 4295
+		// Token: 0x04001153 RID: 4435
 		private const string KEY_PREFIX = "EmotionBubbleConfigByName";
 
-		// Token: 0x040010C8 RID: 4296
+		// Token: 0x04001154 RID: 4436
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040010C9 RID: 4297
+		// Token: 0x04001155 RID: 4437
 		private static int HandleId;
 	}
 }

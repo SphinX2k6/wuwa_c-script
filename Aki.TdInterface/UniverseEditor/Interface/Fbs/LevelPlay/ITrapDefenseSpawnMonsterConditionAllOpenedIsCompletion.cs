@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045BD RID: 17853
+	// Token: 0x02004A25 RID: 18981
 	public struct ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion : IFlatbufferObject
 	{
-		// Token: 0x17007EEC RID: 32492
-		// (get) Token: 0x0601B00D RID: 110605 RVA: 0x003D99B8 File Offset: 0x003D7BB8
+		// Token: 0x1700852D RID: 34093
+		// (get) Token: 0x0601C7E2 RID: 116706 RVA: 0x00405C54 File Offset: 0x00403E54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B00E RID: 110606 RVA: 0x003D99C5 File Offset: 0x003D7BC5
+		// Token: 0x0601C7E3 RID: 116707 RVA: 0x00405C61 File Offset: 0x00403E61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B00F RID: 110607 RVA: 0x003D99CC File Offset: 0x003D7BCC
+		// Token: 0x0601C7E4 RID: 116708 RVA: 0x00405C68 File Offset: 0x00403E68
 		public static ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion GetRootAsITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(ByteBuffer _bb)
 		{
 			return ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion.GetRootAsITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(_bb, default(ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion));
 		}
 
-		// Token: 0x0601B010 RID: 110608 RVA: 0x003D99E8 File Offset: 0x003D7BE8
+		// Token: 0x0601C7E5 RID: 116709 RVA: 0x00405C84 File Offset: 0x00403E84
 		public static ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion GetRootAsITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(ByteBuffer _bb, ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B011 RID: 110609 RVA: 0x003D9A05 File Offset: 0x003D7C05
+		// Token: 0x0601C7E6 RID: 116710 RVA: 0x00405CA1 File Offset: 0x00403EA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B012 RID: 110610 RVA: 0x003D9A14 File Offset: 0x003D7C14
+		// Token: 0x0601C7E7 RID: 116711 RVA: 0x00405CB0 File Offset: 0x00403EB0
 		public ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007EED RID: 32493
-		// (get) Token: 0x0601B013 RID: 110611 RVA: 0x003D9A24 File Offset: 0x003D7C24
+		// Token: 0x1700852E RID: 34094
+		// (get) Token: 0x0601C7E8 RID: 116712 RVA: 0x00405CC0 File Offset: 0x00403EC0
 		public ETrapDefenseSpawnMonsterCondition Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B014 RID: 110612 RVA: 0x003D9A60 File Offset: 0x003D7C60
+		// Token: 0x0601C7E9 RID: 116713 RVA: 0x00405CFC File Offset: 0x00403EFC
 		public static Offset<ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion> CreateITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(FlatBufferBuilder builder, ETrapDefenseSpawnMonsterCondition Type = ETrapDefenseSpawnMonsterCondition.Completed)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion.EndITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(builder);
 		}
 
-		// Token: 0x0601B015 RID: 110613 RVA: 0x003D9A76 File Offset: 0x003D7C76
+		// Token: 0x0601C7EA RID: 116714 RVA: 0x00405D12 File Offset: 0x00403F12
 		public static void StartITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B016 RID: 110614 RVA: 0x003D9A7F File Offset: 0x003D7C7F
+		// Token: 0x0601C7EB RID: 116715 RVA: 0x00405D1B File Offset: 0x00403F1B
 		public static void AddType(FlatBufferBuilder builder, ETrapDefenseSpawnMonsterCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B017 RID: 110615 RVA: 0x003D9A8A File Offset: 0x003D7C8A
+		// Token: 0x0601C7EC RID: 116716 RVA: 0x00405D26 File Offset: 0x00403F26
 		public static Offset<ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion> EndITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion>(builder.EndTable());
 		}
 
-		// Token: 0x0601B018 RID: 110616 RVA: 0x003D9A98 File Offset: 0x003D7C98
+		// Token: 0x0601C7ED RID: 116717 RVA: 0x00405D34 File Offset: 0x00403F34
 		public ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT UnPack()
 		{
 			ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT trapDefenseSpawnMonsterConditionAllOpenedIsCompletionT = new ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return trapDefenseSpawnMonsterConditionAllOpenedIsCompletionT;
 		}
 
-		// Token: 0x0601B019 RID: 110617 RVA: 0x003D9AB3 File Offset: 0x003D7CB3
+		// Token: 0x0601C7EE RID: 116718 RVA: 0x00405D4F File Offset: 0x00403F4F
 		public void UnPackTo(ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B01A RID: 110618 RVA: 0x003D9AC4 File Offset: 0x003D7CC4
+		// Token: 0x0601C7EF RID: 116719 RVA: 0x00405D60 File Offset: 0x00403F60
 		public static Offset<ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion> Pack(FlatBufferBuilder builder, ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion.CreateITrapDefenseSpawnMonsterConditionAllOpenedIsCompletion(builder, _o.Type);
 		}
 
-		// Token: 0x0400C68B RID: 50827
+		// Token: 0x0400D0BA RID: 53434
 		private Table __p;
 	}
 }

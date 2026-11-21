@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007C7 RID: 1991
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200086A RID: 2154
 	public class IVisibleConditionGroup
 	{
-		// Token: 0x06002B29 RID: 11049 RVA: 0x00070AC4 File Offset: 0x0006ECC4
+		// Token: 0x06002E59 RID: 11865 RVA: 0x00077E28 File Offset: 0x00076028
 		private IVisibleConditionGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002B2A RID: 11050 RVA: 0x00070AFC File Offset: 0x0006ECFC
+		// Token: 0x06002E5A RID: 11866 RVA: 0x00077E60 File Offset: 0x00076060
 		public static IVisibleConditionGroup Create([Nullable(2)] IVisibleConditionGroup instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B2B RID: 11051 RVA: 0x00070B0F File Offset: 0x0006ED0F
+		// Token: 0x06002E5B RID: 11867 RVA: 0x00077E73 File Offset: 0x00076073
 		public static IVisibleConditionGroup CreateFromSetValue([Nullable(2)] IVisibleConditionGroup_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002B2C RID: 11052 RVA: 0x00070B22 File Offset: 0x0006ED22
+		// Token: 0x06002E5C RID: 11868 RVA: 0x00077E86 File Offset: 0x00076086
 		public IVisibleConditionGroup_SetValue ToSetValue()
 		{
 			return new IVisibleConditionGroup_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B4D RID: 2893
-		// (get) Token: 0x06002B2D RID: 11053 RVA: 0x00070B35 File Offset: 0x0006ED35
-		// (set) Token: 0x06002B2E RID: 11054 RVA: 0x00070B5C File Offset: 0x0006ED5C
+		// Token: 0x17000C10 RID: 3088
+		// (get) Token: 0x06002E5D RID: 11869 RVA: 0x00077E99 File Offset: 0x00076099
+		// (set) Token: 0x06002E5E RID: 11870 RVA: 0x00077EC0 File Offset: 0x000760C0
 		public virtual List<IVisibleCondition> Conditions
 		{
 			get
@@ -85,11 +83,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001CAB RID: 7339
+		// Token: 0x04001EB7 RID: 7863
 		[Nullable(2)]
 		protected IVisibleConditionGroup FbInstance;
 
-		// Token: 0x04001CAC RID: 7340
+		// Token: 0x04001EB8 RID: 7864
 		[Nullable(2)]
 		protected IVisibleConditionGroup_SetValue PocoInterface;
 	}

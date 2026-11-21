@@ -8,14 +8,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000EDC RID: 3804
-[NullableContext(1)]
-[Nullable(0)]
+// Token: 0x02000391 RID: 913
 [UClass("/Game/Aki/TypeScript/Game/LevelGamePlay/Common/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/LevelGamePlay/Common/TsGameSplineActor.TsGameSplineActor_C")]
 public class TsGameSplineActor : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06005EE9 RID: 24297 RVA: 0x0011ADD4 File Offset: 0x00118FD4
+	// Token: 0x06003280 RID: 12928 RVA: 0x00122B20 File Offset: 0x00120D20
 	public float GetPatrolSpeedByIndex(int index)
 	{
 		IPatrolSpline patrolSpline = this.SplineData as IPatrolSpline;
@@ -27,7 +25,7 @@ public class TsGameSplineActor : AActor, IUnrealUObject, IUnrealObject
 		return (float)patrolSpline.Points[index].MoveSpeed;
 	}
 
-	// Token: 0x06005EEA RID: 24298 RVA: 0x0011AE24 File Offset: 0x00119024
+	// Token: 0x06003281 RID: 12929 RVA: 0x00122B70 File Offset: 0x00120D70
 	public FRotator GetPointRotatorByIndex(int index)
 	{
 		VectorInfo vectorInfo = null;
@@ -144,7 +142,7 @@ public class TsGameSplineActor : AActor, IUnrealUObject, IUnrealObject
 		return result;
 	}
 
-	// Token: 0x06005EEB RID: 24299 RVA: 0x0011B07A File Offset: 0x0011927A
+	// Token: 0x06003282 RID: 12930 RVA: 0x00122DC6 File Offset: 0x00120FC6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsGameSplineActor._ClassPtr == IntPtr.Zero)
@@ -154,33 +152,24 @@ public class TsGameSplineActor : AActor, IUnrealUObject, IUnrealObject
 		return TsGameSplineActor._ClassPtr;
 	}
 
-	// Token: 0x06005EEC RID: 24300 RVA: 0x0011B0A0 File Offset: 0x001192A0
+	// Token: 0x06003283 RID: 12931 RVA: 0x00122DEC File Offset: 0x00120FEC
 	public TsGameSplineActor() : this(BuiltinUtils.AllocNativeUObject(TsGameSplineActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06005EED RID: 24301 RVA: 0x0011B0C8 File Offset: 0x001192C8
+	// Token: 0x06003284 RID: 12932 RVA: 0x00122E14 File Offset: 0x00121014
+	[NullableContext(1)]
 	public TsGameSplineActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsGameSplineActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06005EEE RID: 24302 RVA: 0x0011B0FB File Offset: 0x001192FB
+	// Token: 0x06003285 RID: 12933 RVA: 0x00122E47 File Offset: 0x00121047
 	protected TsGameSplineActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x1700074A RID: 1866
-	// (get) Token: 0x06005EEF RID: 24303 RVA: 0x0011B104 File Offset: 0x00119304
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsGameSplineActor.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x1700074B RID: 1867
-	// (get) Token: 0x06005EF0 RID: 24304 RVA: 0x0011B114 File Offset: 0x00119314
+	// Token: 0x1700076E RID: 1902
+	// (get) Token: 0x06003286 RID: 12934 RVA: 0x00122E50 File Offset: 0x00121050
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -191,22 +180,20 @@ public class TsGameSplineActor : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x04002B16 RID: 11030
+	// Token: 0x04002BB1 RID: 11185
 	[Nullable(2)]
 	public ISplineType SplineData;
 
-	// Token: 0x04002B17 RID: 11031
+	// Token: 0x04002BB2 RID: 11186
+	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/LevelGamePlay/Common/TsGameSplineActor.TsGameSplineActor_C";
 
-	// Token: 0x04002B18 RID: 11032
+	// Token: 0x04002BB3 RID: 11187
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04002B19 RID: 11033
+	// Token: 0x04002BB4 RID: 11188
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04002B1A RID: 11034
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x04002B1B RID: 11035
+	// Token: 0x04002BB5 RID: 11189
 	private static int __PropertyOffset_DefaultSceneRoot;
 }

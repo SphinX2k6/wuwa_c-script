@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074FC RID: 29948
+	// Token: 0x02007CF2 RID: 31986
 	public enum IVehicleControlType_Union : byte
 	{
-		// Token: 0x040123D9 RID: 74713
+		// Token: 0x0401340A RID: 78858
 		NONE,
-		// Token: 0x040123DA RID: 74714
+		// Token: 0x0401340B RID: 78859
 		IVehicleControlType,
-		// Token: 0x040123DB RID: 74715
+		// Token: 0x0401340C RID: 78860
 		IVehicleEnterPathMove,
-		// Token: 0x040123DC RID: 74716
+		// Token: 0x0401340D RID: 78861
 		IVehicleExitPathMove
 	}
 }

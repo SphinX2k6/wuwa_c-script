@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD9 RID: 7385
+	// Token: 0x02001EE0 RID: 7904
 	public class IPermanentRogueRandomEvent_SetValue
 	{
-		// Token: 0x04005FCE RID: 24526
+		// Token: 0x0400652A RID: 25898
 		public ESystemOptionType Type;
 
-		// Token: 0x04005FCF RID: 24527
-		[Nullable(1)]
+		// Token: 0x0400652B RID: 25899
 		public List<ISystemOption> SystemOptions;
 
-		// Token: 0x04005FD0 RID: 24528
+		// Token: 0x0400652C RID: 25900
 		public bool? KeepPreTalkItem;
 
-		// Token: 0x04005FD1 RID: 24529
+		// Token: 0x0400652D RID: 25901
 		public int EventId;
 	}
 }

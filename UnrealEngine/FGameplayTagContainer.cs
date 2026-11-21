@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020013DE RID: 5086
+	// Token: 0x020002C8 RID: 712
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/GameplayTags.GameplayTagContainer")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FGameplayTagContainer : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06012998 RID: 76184 RVA: 0x001B5F3B File Offset: 0x001B413B
+		// Token: 0x06004DC4 RID: 19908 RVA: 0x0006CA8A File Offset: 0x0006AC8A
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGameplayTagContainer._ScriptStructPtr != 0) ? FGameplayTagContainer._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/GameplayTags.GameplayTagContainer", ref FGameplayTagContainer._ScriptStructPtr);
 		}
 
-		// Token: 0x1700481C RID: 18460
-		// (get) Token: 0x06012999 RID: 76185 RVA: 0x001B5F60 File Offset: 0x001B4160
-		// (set) Token: 0x0601299A RID: 76186 RVA: 0x001B5FA3 File Offset: 0x001B41A3
+		// Token: 0x17000EEB RID: 3819
+		// (get) Token: 0x06004DC5 RID: 19909 RVA: 0x0006CAB0 File Offset: 0x0006ACB0
+		// (set) Token: 0x06004DC6 RID: 19910 RVA: 0x0006CAF3 File Offset: 0x0006ACF3
 		public TArray<FGameplayTag> GameplayTags
 		{
 			get
@@ -39,9 +39,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700481D RID: 18461
-		// (get) Token: 0x0601299B RID: 76187 RVA: 0x001B5FB4 File Offset: 0x001B41B4
-		// (set) Token: 0x0601299C RID: 76188 RVA: 0x001B5FF7 File Offset: 0x001B41F7
+		// Token: 0x17000EEC RID: 3820
+		// (get) Token: 0x06004DC7 RID: 19911 RVA: 0x0006CB04 File Offset: 0x0006AD04
+		// (set) Token: 0x06004DC8 RID: 19912 RVA: 0x0006CB47 File Offset: 0x0006AD47
 		public TArray<FGameplayTag> ParentTags
 		{
 			get
@@ -60,64 +60,57 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601299D RID: 76189 RVA: 0x001B6005 File Offset: 0x001B4205
+		// Token: 0x06004DC9 RID: 19913 RVA: 0x0006CB55 File Offset: 0x0006AD55
 		public FGameplayTagContainer()
 		{
 		}
 
-		// Token: 0x0601299E RID: 76190 RVA: 0x001B600D File Offset: 0x001B420D
-		public FGameplayTagContainer(TArray<FGameplayTag> GameplayTags, TArray<FGameplayTag> ParentTags)
-		{
-			this.GameplayTags = GameplayTags;
-			this.ParentTags = ParentTags;
-		}
-
-		// Token: 0x0601299F RID: 76191 RVA: 0x001B6023 File Offset: 0x001B4223
+		// Token: 0x06004DCA RID: 19914 RVA: 0x0006CB5D File Offset: 0x0006AD5D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FGameplayTagContainer.StaticStruct();
 		}
 
-		// Token: 0x060129A0 RID: 76192 RVA: 0x001B602F File Offset: 0x001B422F
+		// Token: 0x06004DCB RID: 19915 RVA: 0x0006CB69 File Offset: 0x0006AD69
 		[NullableContext(2)]
 		public FGameplayTagContainer(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060129A1 RID: 76193 RVA: 0x001B6039 File Offset: 0x001B4239
+		// Token: 0x06004DCC RID: 19916 RVA: 0x0006CB73 File Offset: 0x0006AD73
 		public FGameplayTagContainer(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060129A2 RID: 76194 RVA: 0x001B6044 File Offset: 0x001B4244
+		// Token: 0x06004DCD RID: 19917 RVA: 0x0006CB7E File Offset: 0x0006AD7E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FGameplayTagContainer(Pointer, false, true);
 		}
 
-		// Token: 0x060129A3 RID: 76195 RVA: 0x001B604E File Offset: 0x001B424E
+		// Token: 0x06004DCE RID: 19918 RVA: 0x0006CB88 File Offset: 0x0006AD88
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FGameplayTagContainer(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04009F04 RID: 40708
+		// Token: 0x04001F07 RID: 7943
 		public const string __ObjectPath = "/Script/GameplayTags.GameplayTagContainer";
 
-		// Token: 0x04009F05 RID: 40709
+		// Token: 0x04001F08 RID: 7944
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04009F06 RID: 40710
+		// Token: 0x04001F09 RID: 7945
 		internal static int __PropertyOffset_GameplayTags;
 
-		// Token: 0x04009F07 RID: 40711
+		// Token: 0x04001F0A RID: 7946
 		[Nullable(2)]
 		private TArray<FGameplayTag> _GameplayTags;
 
-		// Token: 0x04009F08 RID: 40712
+		// Token: 0x04001F0B RID: 7947
 		internal static int __PropertyOffset_ParentTags;
 
-		// Token: 0x04009F09 RID: 40713
+		// Token: 0x04001F0C RID: 7948
 		[Nullable(2)]
 		private TArray<FGameplayTag> _ParentTags;
 	}

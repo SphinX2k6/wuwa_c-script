@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200096C RID: 2412
+	// Token: 0x02000A1F RID: 2591
 	public static class EInhalationPerformanceTypeExtensions
 	{
-		// Token: 0x06003617 RID: 13847 RVA: 0x0008D2F8 File Offset: 0x0008B4F8
+		// Token: 0x0600399E RID: 14750 RVA: 0x00095264 File Offset: 0x00093464
 		public static string ToEnumString(this EInhalationPerformanceType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003618 RID: 13848 RVA: 0x0008D330 File Offset: 0x0008B530
+		// Token: 0x0600399F RID: 14751 RVA: 0x0009529C File Offset: 0x0009349C
 		public static EInhalationPerformanceType FromString(string name)
 		{
 			EInhalationPerformanceType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003619 RID: 13849 RVA: 0x0008D359 File Offset: 0x0008B559
+		// Token: 0x060039A0 RID: 14752 RVA: 0x000952C5 File Offset: 0x000934C5
 		public static bool TryFromString(string name, out EInhalationPerformanceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600361A RID: 13850 RVA: 0x0008D392 File Offset: 0x0008B592
+		// Token: 0x060039A1 RID: 14753 RVA: 0x000952FE File Offset: 0x000934FE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600361B RID: 13851 RVA: 0x0008D3AA File Offset: 0x0008B5AA
+		// Token: 0x060039A2 RID: 14754 RVA: 0x00095316 File Offset: 0x00093516
 		public static EInhalationPerformanceType[] GetValues()
 		{
 			return new EInhalationPerformanceType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600361C RID: 13852 RVA: 0x0008D3B6 File Offset: 0x0008B5B6
+		// Token: 0x060039A3 RID: 14755 RVA: 0x00095322 File Offset: 0x00093522
 		public static string[] GetNames()
 		{
 			return new string[]

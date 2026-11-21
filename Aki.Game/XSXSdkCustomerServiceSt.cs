@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E60 RID: 3680
+// Token: 0x02000315 RID: 789
 [NullableContext(1)]
 [Nullable(0)]
 public class XSXSdkCustomerServiceSt
 {
-	// Token: 0x040028DE RID: 10462
+	// Token: 0x04002979 RID: 10617
 	public string data = "";
 
-	// Token: 0x040028DF RID: 10463
+	// Token: 0x0400297A RID: 10618
 	public int error;
 
-	// Token: 0x040028E0 RID: 10464
+	// Token: 0x0400297B RID: 10619
 	public string type = "";
 }

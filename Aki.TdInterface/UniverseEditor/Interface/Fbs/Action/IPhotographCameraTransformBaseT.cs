@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CBB RID: 27835
+	// Token: 0x02007431 RID: 29745
 	public class IPhotographCameraTransformBaseT
 	{
-		// Token: 0x1700CF3C RID: 53052
-		// (get) Token: 0x060310E1 RID: 200929 RVA: 0x006A85E6 File Offset: 0x006A67E6
-		// (set) Token: 0x060310E2 RID: 200930 RVA: 0x006A85EE File Offset: 0x006A67EE
+		// Token: 0x1700DA79 RID: 55929
+		// (get) Token: 0x060340B8 RID: 213176 RVA: 0x0070381A File Offset: 0x00701A1A
+		// (set) Token: 0x060340B9 RID: 213177 RVA: 0x00703822 File Offset: 0x00701A22
 		public EPhotographCameraTransform Type { get; set; }
 
-		// Token: 0x060310E3 RID: 200931 RVA: 0x006A85F7 File Offset: 0x006A67F7
+		// Token: 0x060340BA RID: 213178 RVA: 0x0070382B File Offset: 0x00701A2B
 		public IPhotographCameraTransformBaseT()
 		{
 			this.Type = EPhotographCameraTransform.Absolute;

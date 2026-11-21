@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006775 RID: 26485
+	// Token: 0x020056C5 RID: 22213
 	public enum EDangoBrawlFsmState
 	{
-		// Token: 0x04022799 RID: 141209
+		// Token: 0x0401CFF6 RID: 118774
 		None,
-		// Token: 0x0402279A RID: 141210
+		// Token: 0x0401CFF7 RID: 118775
 		GameStart,
-		// Token: 0x0402279B RID: 141211
+		// Token: 0x0401CFF8 RID: 118776
 		ShopState,
-		// Token: 0x0402279C RID: 141212
+		// Token: 0x0401CFF9 RID: 118777
 		TrashTalkState,
-		// Token: 0x0402279D RID: 141213
+		// Token: 0x0401CFFA RID: 118778
 		LoadingBattle,
-		// Token: 0x0402279E RID: 141214
+		// Token: 0x0401CFFB RID: 118779
 		FightingState,
-		// Token: 0x0402279F RID: 141215
+		// Token: 0x0401CFFC RID: 118780
 		RoundSettle,
-		// Token: 0x040227A0 RID: 141216
+		// Token: 0x0401CFFD RID: 118781
 		FinalSettle,
-		// Token: 0x040227A1 RID: 141217
+		// Token: 0x0401CFFE RID: 118782
 		GameExit
 	}
 }

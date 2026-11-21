@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002680 RID: 9856
+	// Token: 0x02002943 RID: 10563
 	public class IClaimDynamicTrafficReward : IClaimDynamicEntityRewardType
 	{
-		// Token: 0x0600DCCC RID: 56524 RVA: 0x0020D531 File Offset: 0x0020B731
-		[NullableContext(1)]
+		// Token: 0x0600EAA3 RID: 60067 RVA: 0x00229CCF File Offset: 0x00227ECF
 		public static IClaimDynamicTrafficReward Create(IClaimDynamicTrafficReward? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700418E RID: 16782
-		// (get) Token: 0x0600DCCD RID: 56525 RVA: 0x0020D550 File Offset: 0x0020B750
+		// Token: 0x170044CB RID: 17611
+		// (get) Token: 0x0600EAA4 RID: 60068 RVA: 0x00229CEE File Offset: 0x00227EEE
 		public override EDynamicEntityRewardType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AB0 RID: 31408
+		// Token: 0x0400814D RID: 33101
 		private IClaimDynamicTrafficReward Instance;
 	}
 }

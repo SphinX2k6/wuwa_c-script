@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game;
 
-// Token: 0x02002935 RID: 10549
+// Token: 0x02001EB0 RID: 7856
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteInputTouch : RouletteInputBase
 {
-	// Token: 0x06015C38 RID: 89144 RVA: 0x0057D4F0 File Offset: 0x0057B6F0
+	// Token: 0x0601363D RID: 79421 RVA: 0x005A8530 File Offset: 0x005A6730
 	[NullableContext(2)]
 	public RouletteInputTouch(Vector2D pos = null, ERouletteViewType? rouletteViewType = null, int? touchId = null, float? limit = null) : base(pos, rouletteViewType, touchId, null)
 	{
 		this.TouchId = touchId.GetValueOrDefault(-1);
 	}
 
-	// Token: 0x06015C39 RID: 89145 RVA: 0x0057D550 File Offset: 0x0057B750
+	// Token: 0x0601363E RID: 79422 RVA: 0x005A8590 File Offset: 0x005A6790
 	public unsafe override void OnInit()
 	{
 		if (this.BeginPos == null)
@@ -44,13 +44,13 @@ public class RouletteInputTouch : RouletteInputBase
 		this.SubtractVectorPos.Set(0.0, 0.0, 0.0);
 	}
 
-	// Token: 0x06015C3A RID: 89146 RVA: 0x0057D68F File Offset: 0x0057B88F
+	// Token: 0x0601363F RID: 79423 RVA: 0x005A86CF File Offset: 0x005A68CF
 	protected override void OnDestroy()
 	{
 		this.IsInTouch = false;
 	}
 
-	// Token: 0x06015C3B RID: 89147 RVA: 0x0057D698 File Offset: 0x0057B898
+	// Token: 0x06013640 RID: 79424 RVA: 0x005A86D8 File Offset: 0x005A68D8
 	protected override void InputTick(float delta)
 	{
 		if (this.RouletteViewType == ERouletteViewType.Assembly)
@@ -89,21 +89,21 @@ public class RouletteInputTouch : RouletteInputBase
 		this.AreaIndex = AngleCalculator.AngleToAreaIndex((double)this.Angle);
 	}
 
-	// Token: 0x0400A227 RID: 41511
+	// Token: 0x0400A612 RID: 42514
 	private readonly Vector SubtractVectorPos = Vector.Create();
 
-	// Token: 0x0400A228 RID: 41512
+	// Token: 0x0400A613 RID: 42515
 	private readonly Vector BeginVectorPos = Vector.Create();
 
-	// Token: 0x0400A229 RID: 41513
+	// Token: 0x0400A614 RID: 42516
 	private readonly Vector TempVectorPos = Vector.Create();
 
-	// Token: 0x0400A22A RID: 41514
+	// Token: 0x0400A615 RID: 42517
 	private readonly Vector CheckVectorPos = Vector.Create();
 
-	// Token: 0x0400A22B RID: 41515
+	// Token: 0x0400A616 RID: 42518
 	private readonly int TouchId = -1;
 
-	// Token: 0x0400A22C RID: 41516
+	// Token: 0x0400A617 RID: 42519
 	private bool IsInTouch;
 }

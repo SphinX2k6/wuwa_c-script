@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200187E RID: 6270
+	// Token: 0x020003A7 RID: 935
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplayUI.DamageInfo")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class FDamageInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601718E RID: 94606 RVA: 0x0021A980 File Offset: 0x00218B80
+		// Token: 0x06005C90 RID: 23696 RVA: 0x00082644 File Offset: 0x00080844
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FDamageInfo._ScriptStructPtr != 0) ? FDamageInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplayUI.DamageInfo", ref FDamageInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17005CED RID: 23789
-		// (get) Token: 0x0601718F RID: 94607 RVA: 0x0021A9A4 File Offset: 0x00218BA4
-		// (set) Token: 0x06017190 RID: 94608 RVA: 0x0021A9B4 File Offset: 0x00218BB4
+		// Token: 0x1700124B RID: 4683
+		// (get) Token: 0x06005C91 RID: 23697 RVA: 0x00082668 File Offset: 0x00080868
+		// (set) Token: 0x06005C92 RID: 23698 RVA: 0x00082678 File Offset: 0x00080878
 		public unsafe int Damage
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CEE RID: 23790
-		// (get) Token: 0x06017191 RID: 94609 RVA: 0x0021A9C5 File Offset: 0x00218BC5
-		// (set) Token: 0x06017192 RID: 94610 RVA: 0x0021A9D5 File Offset: 0x00218BD5
+		// Token: 0x1700124C RID: 4684
+		// (get) Token: 0x06005C93 RID: 23699 RVA: 0x00082689 File Offset: 0x00080889
+		// (set) Token: 0x06005C94 RID: 23700 RVA: 0x00082699 File Offset: 0x00080899
 		public unsafe int DamageConfigId
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CEF RID: 23791
-		// (get) Token: 0x06017193 RID: 94611 RVA: 0x0021A9E6 File Offset: 0x00218BE6
-		// (set) Token: 0x06017194 RID: 94612 RVA: 0x0021A9FA File Offset: 0x00218BFA
+		// Token: 0x1700124D RID: 4685
+		// (get) Token: 0x06005C95 RID: 23701 RVA: 0x000826AA File Offset: 0x000808AA
+		// (set) Token: 0x06005C96 RID: 23702 RVA: 0x000826BE File Offset: 0x000808BE
 		public unsafe FVectorDouble DamagePosition
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF0 RID: 23792
-		// (get) Token: 0x06017195 RID: 94613 RVA: 0x0021AA0F File Offset: 0x00218C0F
-		// (set) Token: 0x06017196 RID: 94614 RVA: 0x0021AA1F File Offset: 0x00218C1F
+		// Token: 0x1700124E RID: 4686
+		// (get) Token: 0x06005C97 RID: 23703 RVA: 0x000826D3 File Offset: 0x000808D3
+		// (set) Token: 0x06005C98 RID: 23704 RVA: 0x000826E3 File Offset: 0x000808E3
 		public unsafe bool bOwnPlayer
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF1 RID: 23793
-		// (get) Token: 0x06017197 RID: 94615 RVA: 0x0021AA30 File Offset: 0x00218C30
-		// (set) Token: 0x06017198 RID: 94616 RVA: 0x0021AA40 File Offset: 0x00218C40
+		// Token: 0x1700124F RID: 4687
+		// (get) Token: 0x06005C99 RID: 23705 RVA: 0x000826F4 File Offset: 0x000808F4
+		// (set) Token: 0x06005C9A RID: 23706 RVA: 0x00082704 File Offset: 0x00080904
 		public unsafe bool bCrit
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF2 RID: 23794
-		// (get) Token: 0x06017199 RID: 94617 RVA: 0x0021AA51 File Offset: 0x00218C51
-		// (set) Token: 0x0601719A RID: 94618 RVA: 0x0021AA61 File Offset: 0x00218C61
+		// Token: 0x17001250 RID: 4688
+		// (get) Token: 0x06005C9B RID: 23707 RVA: 0x00082715 File Offset: 0x00080915
+		// (set) Token: 0x06005C9C RID: 23708 RVA: 0x00082725 File Offset: 0x00080925
 		public unsafe bool bCure
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF3 RID: 23795
-		// (get) Token: 0x0601719B RID: 94619 RVA: 0x0021AA72 File Offset: 0x00218C72
-		// (set) Token: 0x0601719C RID: 94620 RVA: 0x0021AA86 File Offset: 0x00218C86
+		// Token: 0x17001251 RID: 4689
+		// (get) Token: 0x06005C9D RID: 23709 RVA: 0x00082736 File Offset: 0x00080936
+		// (set) Token: 0x06005C9E RID: 23710 RVA: 0x0008274A File Offset: 0x0008094A
 		public unsafe string DamageText
 		{
 			get
@@ -123,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF4 RID: 23796
-		// (get) Token: 0x0601719D RID: 94621 RVA: 0x0021AA9B File Offset: 0x00218C9B
-		// (set) Token: 0x0601719E RID: 94622 RVA: 0x0021AAAB File Offset: 0x00218CAB
+		// Token: 0x17001252 RID: 4690
+		// (get) Token: 0x06005C9F RID: 23711 RVA: 0x0008275F File Offset: 0x0008095F
+		// (set) Token: 0x06005CA0 RID: 23712 RVA: 0x0008276F File Offset: 0x0008096F
 		public unsafe float ExpiredTime
 		{
 			get
@@ -138,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF5 RID: 23797
-		// (get) Token: 0x0601719F RID: 94623 RVA: 0x0021AABC File Offset: 0x00218CBC
-		// (set) Token: 0x060171A0 RID: 94624 RVA: 0x0021AACC File Offset: 0x00218CCC
+		// Token: 0x17001253 RID: 4691
+		// (get) Token: 0x06005CA1 RID: 23713 RVA: 0x00082780 File Offset: 0x00080980
+		// (set) Token: 0x06005CA2 RID: 23714 RVA: 0x00082790 File Offset: 0x00080990
 		public unsafe bool bUseLGUIPos
 		{
 			get
@@ -153,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CF6 RID: 23798
-		// (get) Token: 0x060171A1 RID: 94625 RVA: 0x0021AADD File Offset: 0x00218CDD
-		// (set) Token: 0x060171A2 RID: 94626 RVA: 0x0021AAF1 File Offset: 0x00218CF1
+		// Token: 0x17001254 RID: 4692
+		// (get) Token: 0x06005CA3 RID: 23715 RVA: 0x000827A1 File Offset: 0x000809A1
+		// (set) Token: 0x06005CA4 RID: 23716 RVA: 0x000827B5 File Offset: 0x000809B5
 		public unsafe FVector2D LGUIPos
 		{
 			get
@@ -168,89 +168,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060171A3 RID: 94627 RVA: 0x0021AB06 File Offset: 0x00218D06
+		// Token: 0x06005CA5 RID: 23717 RVA: 0x000827CA File Offset: 0x000809CA
 		public FDamageInfo()
 		{
 		}
 
-		// Token: 0x060171A4 RID: 94628 RVA: 0x0021AB10 File Offset: 0x00218D10
-		public FDamageInfo(int Damage, int DamageConfigId, FVectorDouble DamagePosition, bool bOwnPlayer, bool bCrit, bool bCure, string DamageText, float ExpiredTime, bool bUseLGUIPos, FVector2D LGUIPos)
-		{
-			this.Damage = Damage;
-			this.DamageConfigId = DamageConfigId;
-			this.DamagePosition = DamagePosition;
-			this.bOwnPlayer = bOwnPlayer;
-			this.bCrit = bCrit;
-			this.bCure = bCure;
-			this.DamageText = DamageText;
-			this.ExpiredTime = ExpiredTime;
-			this.bUseLGUIPos = bUseLGUIPos;
-			this.LGUIPos = LGUIPos;
-		}
-
-		// Token: 0x060171A5 RID: 94629 RVA: 0x0021AB70 File Offset: 0x00218D70
+		// Token: 0x06005CA6 RID: 23718 RVA: 0x000827D2 File Offset: 0x000809D2
 		protected override IntPtr GetUStructPtr()
 		{
 			return FDamageInfo.StaticStruct();
 		}
 
-		// Token: 0x060171A6 RID: 94630 RVA: 0x0021AB7C File Offset: 0x00218D7C
+		// Token: 0x06005CA7 RID: 23719 RVA: 0x000827DE File Offset: 0x000809DE
 		[NullableContext(2)]
 		public FDamageInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060171A7 RID: 94631 RVA: 0x0021AB86 File Offset: 0x00218D86
+		// Token: 0x06005CA8 RID: 23720 RVA: 0x000827E8 File Offset: 0x000809E8
 		public FDamageInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060171A8 RID: 94632 RVA: 0x0021AB91 File Offset: 0x00218D91
+		// Token: 0x06005CA9 RID: 23721 RVA: 0x000827F3 File Offset: 0x000809F3
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FDamageInfo(Pointer, false, true);
 		}
 
-		// Token: 0x060171A9 RID: 94633 RVA: 0x0021AB9B File Offset: 0x00218D9B
+		// Token: 0x06005CAA RID: 23722 RVA: 0x000827FD File Offset: 0x000809FD
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FDamageInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400C884 RID: 51332
+		// Token: 0x04002698 RID: 9880
 		public const string __ObjectPath = "/Script/KuroGameplayUI.DamageInfo";
 
-		// Token: 0x0400C885 RID: 51333
+		// Token: 0x04002699 RID: 9881
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400C886 RID: 51334
+		// Token: 0x0400269A RID: 9882
 		internal static int __PropertyOffset_Damage;
 
-		// Token: 0x0400C887 RID: 51335
+		// Token: 0x0400269B RID: 9883
 		internal static int __PropertyOffset_DamageConfigId;
 
-		// Token: 0x0400C888 RID: 51336
+		// Token: 0x0400269C RID: 9884
 		internal static int __PropertyOffset_DamagePosition;
 
-		// Token: 0x0400C889 RID: 51337
+		// Token: 0x0400269D RID: 9885
 		internal static int __PropertyOffset_bOwnPlayer;
 
-		// Token: 0x0400C88A RID: 51338
+		// Token: 0x0400269E RID: 9886
 		internal static int __PropertyOffset_bCrit;
 
-		// Token: 0x0400C88B RID: 51339
+		// Token: 0x0400269F RID: 9887
 		internal static int __PropertyOffset_bCure;
 
-		// Token: 0x0400C88C RID: 51340
+		// Token: 0x040026A0 RID: 9888
 		internal static int __PropertyOffset_DamageText;
 
-		// Token: 0x0400C88D RID: 51341
+		// Token: 0x040026A1 RID: 9889
 		internal static int __PropertyOffset_ExpiredTime;
 
-		// Token: 0x0400C88E RID: 51342
+		// Token: 0x040026A2 RID: 9890
 		internal static int __PropertyOffset_bUseLGUIPos;
 
-		// Token: 0x0400C88F RID: 51343
+		// Token: 0x040026A3 RID: 9891
 		internal static int __PropertyOffset_LGUIPos;
 	}
 }

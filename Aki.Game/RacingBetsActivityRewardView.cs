@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002723 RID: 10019
+// Token: 0x02001C0E RID: 7182
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsActivityRewardView : UiViewBase
 {
-	// Token: 0x06014880 RID: 84096 RVA: 0x0052F17E File Offset: 0x0052D37E
+	// Token: 0x06011D62 RID: 73058 RVA: 0x0053DE9A File Offset: 0x0053C09A
 	public RacingBetsActivityRewardView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06014881 RID: 84097 RVA: 0x0052F188 File Offset: 0x0052D388
+	// Token: 0x06011D63 RID: 73059 RVA: 0x0053DEA4 File Offset: 0x0053C0A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,21 +39,21 @@ public class RacingBetsActivityRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014882 RID: 84098 RVA: 0x0052F275 File Offset: 0x0052D475
+	// Token: 0x06011D64 RID: 73060 RVA: 0x0053DF91 File Offset: 0x0053C191
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRacingBetsRewardRefresh, new Action(this.RefreshView));
 		EventSystem.Instance.Add<RacingBetsSeasonData>(EEventName.OnRacingBetsDataRefresh, new Action<RacingBetsSeasonData>(this.RefreshView));
 	}
 
-	// Token: 0x06014883 RID: 84099 RVA: 0x0052F2AF File Offset: 0x0052D4AF
+	// Token: 0x06011D65 RID: 73061 RVA: 0x0053DFCB File Offset: 0x0053C1CB
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsRewardRefresh, new Action(this.RefreshView));
 		EventSystem.Instance.Remove<RacingBetsSeasonData>(EEventName.OnRacingBetsDataRefresh, new Action<RacingBetsSeasonData>(this.RefreshView));
 	}
 
-	// Token: 0x06014884 RID: 84100 RVA: 0x0052F2EC File Offset: 0x0052D4EC
+	// Token: 0x06011D66 RID: 73062 RVA: 0x0053E008 File Offset: 0x0053C208
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsActivityRewardView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -64,13 +64,13 @@ public class RacingBetsActivityRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014885 RID: 84101 RVA: 0x0052F32F File Offset: 0x0052D52F
+	// Token: 0x06011D67 RID: 73063 RVA: 0x0053E04B File Offset: 0x0053C24B
 	private void RefreshView()
 	{
 		this.RefreshView(null);
 	}
 
-	// Token: 0x06014886 RID: 84102 RVA: 0x0052F338 File Offset: 0x0052D538
+	// Token: 0x06011D68 RID: 73064 RVA: 0x0053E054 File Offset: 0x0053C254
 	private void RefreshView(RacingBetsSeasonData data)
 	{
 		if (this.CurGroupRewardData == null)
@@ -85,13 +85,13 @@ public class RacingBetsActivityRewardView : UiViewBase
 		this.RewardLayout.RefreshByData(rewardDataList, null, false);
 	}
 
-	// Token: 0x06014887 RID: 84103 RVA: 0x0052F3B0 File Offset: 0x0052D5B0
+	// Token: 0x06011D69 RID: 73065 RVA: 0x0053E0CC File Offset: 0x0053C2CC
 	private RacingBetsActivityRewardItem RewardItemProxyCreate()
 	{
 		return new RacingBetsActivityRewardItem();
 	}
 
-	// Token: 0x06014888 RID: 84104 RVA: 0x0052F3B7 File Offset: 0x0052D5B7
+	// Token: 0x06011D6A RID: 73066 RVA: 0x0053E0D3 File Offset: 0x0053C2D3
 	private RacingBetsRewardTabItem TabItemProxyCreate()
 	{
 		RacingBetsRewardTabItem racingBetsRewardTabItem = new RacingBetsRewardTabItem();
@@ -99,7 +99,7 @@ public class RacingBetsActivityRewardView : UiViewBase
 		return racingBetsRewardTabItem;
 	}
 
-	// Token: 0x06014889 RID: 84105 RVA: 0x0052F3D0 File Offset: 0x0052D5D0
+	// Token: 0x06011D6B RID: 73067 RVA: 0x0053E0EC File Offset: 0x0053C2EC
 	private void OnClickTabToggle(RacingBetsGroupRewardData groupData)
 	{
 		if (this.CurGroupRewardData == groupData)
@@ -113,48 +113,48 @@ public class RacingBetsActivityRewardView : UiViewBase
 		this.RewardLayout.RefreshByData(rewardDataList, null, false);
 	}
 
-	// Token: 0x0601488A RID: 84106 RVA: 0x0052F444 File Offset: 0x0052D644
+	// Token: 0x06011D6C RID: 73068 RVA: 0x0053E160 File Offset: 0x0053C360
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009A65 RID: 39525
+	// Token: 0x04009BBD RID: 39869
 	[Nullable(2)]
 	private RacingBetsGroupRewardData CurGroupRewardData;
 
-	// Token: 0x04009A66 RID: 39526
+	// Token: 0x04009BBE RID: 39870
 	private List<RacingBetsGroupRewardData> GroupDataList;
 
-	// Token: 0x04009A67 RID: 39527
+	// Token: 0x04009BBF RID: 39871
 	private GenericLayout<RacingBetsRewardTabItem, RacingBetsGroupRewardData> TabLayout;
 
-	// Token: 0x04009A68 RID: 39528
+	// Token: 0x04009BC0 RID: 39872
 	private GenericLayout<RacingBetsActivityRewardItem, RacingBetsRewardData> RewardLayout;
 
-	// Token: 0x02008D78 RID: 36216
+	// Token: 0x02007F01 RID: 32513
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DE6C RID: 188012
+		// Token: 0x04029183 RID: 168323
 		public const int CloseBtn = 0;
 
-		// Token: 0x0402DE6D RID: 188013
+		// Token: 0x04029184 RID: 168324
 		public const int TogLayout = 1;
 
-		// Token: 0x0402DE6E RID: 188014
+		// Token: 0x04029185 RID: 168325
 		public const int RewardLayout = 2;
 
-		// Token: 0x0402DE6F RID: 188015
+		// Token: 0x04029186 RID: 168326
 		public const int ContentItem = 3;
 
-		// Token: 0x0402DE70 RID: 188016
+		// Token: 0x04029187 RID: 168327
 		public const int TimeText = 4;
 
-		// Token: 0x0402DE71 RID: 188017
+		// Token: 0x04029188 RID: 168328
 		public const int MaskButton = 5;
 
-		// Token: 0x0402DE72 RID: 188018
+		// Token: 0x04029189 RID: 168329
 		public const int TitleText = 6;
 	}
 }

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200227C RID: 8828
+// Token: 0x02001760 RID: 5984
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyPresetIconItem : GridProxyAbstract<string>
 {
-	// Token: 0x060113E0 RID: 70624 RVA: 0x004353F0 File Offset: 0x004335F0
+	// Token: 0x0600E876 RID: 59510 RVA: 0x00441FFC File Offset: 0x004401FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -25,17 +25,17 @@ public class MotorcycleDiyPresetIconItem : GridProxyAbstract<string>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060113E1 RID: 70625 RVA: 0x00435438 File Offset: 0x00433638
+	// Token: 0x0600E877 RID: 59511 RVA: 0x00442044 File Offset: 0x00440244
 	[NullableContext(1)]
 	public override void Refresh(string data, bool isSelected, int gridIndex)
 	{
 		base.SetTextureByPath(data, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x020087C1 RID: 34753
+	// Token: 0x0200794A RID: 31050
 	private class EMotorDiyPresetIconComponent
 	{
-		// Token: 0x0402C1EB RID: 180715
+		// Token: 0x04027503 RID: 161027
 		public const int TexIcon = 0;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200037A RID: 890
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003C3 RID: 963
 	public class IFanStateEffect
 	{
-		// Token: 0x060011AB RID: 4523 RVA: 0x0003B530 File Offset: 0x00039730
+		// Token: 0x060012EF RID: 4847 RVA: 0x0003E814 File Offset: 0x0003CA14
 		private IFanStateEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011AC RID: 4524 RVA: 0x0003B568 File Offset: 0x00039768
+		// Token: 0x060012F0 RID: 4848 RVA: 0x0003E84C File Offset: 0x0003CA4C
 		public static IFanStateEffect Create([Nullable(2)] IFanStateEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011AD RID: 4525 RVA: 0x0003B57B File Offset: 0x0003977B
+		// Token: 0x060012F1 RID: 4849 RVA: 0x0003E85F File Offset: 0x0003CA5F
 		public static IFanStateEffect CreateFromSetValue([Nullable(2)] IFanStateEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011AE RID: 4526 RVA: 0x0003B58E File Offset: 0x0003978E
+		// Token: 0x060012F2 RID: 4850 RVA: 0x0003E872 File Offset: 0x0003CA72
 		public IFanStateEffect_SetValue ToSetValue()
 		{
 			return new IFanStateEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004FC RID: 1276
-		// (get) Token: 0x060011AF RID: 4527 RVA: 0x0003B5AD File Offset: 0x000397AD
-		// (set) Token: 0x060011B0 RID: 4528 RVA: 0x0003B5D8 File Offset: 0x000397D8
+		// Token: 0x17000550 RID: 1360
+		// (get) Token: 0x060012F3 RID: 4851 RVA: 0x0003E891 File Offset: 0x0003CA91
+		// (set) Token: 0x060012F4 RID: 4852 RVA: 0x0003E8BC File Offset: 0x0003CABC
 		public virtual string EntityState
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004FD RID: 1277
-		// (get) Token: 0x060011B1 RID: 4529 RVA: 0x0003B5E8 File Offset: 0x000397E8
-		// (set) Token: 0x060011B2 RID: 4530 RVA: 0x0003B649 File Offset: 0x00039849
+		// Token: 0x17000551 RID: 1361
+		// (get) Token: 0x060012F5 RID: 4853 RVA: 0x0003E8CC File Offset: 0x0003CACC
+		// (set) Token: 0x060012F6 RID: 4854 RVA: 0x0003E92D File Offset: 0x0003CB2D
 		public virtual IFanEffectConfig EffectConfig
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E6F RID: 3695
+		// Token: 0x04000F66 RID: 3942
 		[Nullable(2)]
 		protected IFanStateEffect FbInstance;
 
-		// Token: 0x04000E70 RID: 3696
+		// Token: 0x04000F67 RID: 3943
 		[Nullable(2)]
 		protected IFanStateEffect_SetValue PocoInterface;
 
-		// Token: 0x04000E71 RID: 3697
+		// Token: 0x04000F68 RID: 3944
 		private IFanEffectConfig _EffectConfigCache;
 
-		// Token: 0x04000E72 RID: 3698
+		// Token: 0x04000F69 RID: 3945
 		private bool _EffectConfigInited;
 	}
 }

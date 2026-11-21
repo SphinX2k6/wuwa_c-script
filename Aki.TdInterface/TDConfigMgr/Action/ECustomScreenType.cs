@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015BC RID: 5564
+	// Token: 0x0200171B RID: 5915
 	[EnumExtensions]
 	public enum ECustomScreenType
 	{
-		// Token: 0x04004A2E RID: 18990
+		// Token: 0x04004DE6 RID: 19942
 		Spine,
-		// Token: 0x04004A2F RID: 18991
+		// Token: 0x04004DE7 RID: 19943
 		BackgroundImage,
-		// Token: 0x04004A30 RID: 18992
+		// Token: 0x04004DE8 RID: 19944
 		Loading
 	}
 }

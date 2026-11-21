@@ -5,9 +5,9 @@ namespace Aki.Protocol
 	// Token: 0x02000010 RID: 16
 	public enum ENoEncrypt
 	{
-		// Token: 0x04001EC9 RID: 7881
+		// Token: 0x04001F1F RID: 7967
 		False,
-		// Token: 0x04001ECA RID: 7882
+		// Token: 0x04001F20 RID: 7968
 		True = 16
 	}
 }

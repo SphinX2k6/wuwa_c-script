@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000469 RID: 1129
+	// Token: 0x020004C2 RID: 1218
 	public class IInitStateBirth_SetValue
 	{
-		// Token: 0x04001142 RID: 4418
+		// Token: 0x04001264 RID: 4708
 		public EInitStateType Type;
 
-		// Token: 0x04001143 RID: 4419
-		[Nullable(1)]
+		// Token: 0x04001265 RID: 4709
 		public string BirthTag;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A1 RID: 9121
+	// Token: 0x0200262C RID: 9772
 	public static class EMovieBackgroundTypeExtensions
 	{
-		// Token: 0x0600C6D3 RID: 50899 RVA: 0x001D1D7C File Offset: 0x001CFF7C
+		// Token: 0x0600D320 RID: 54048 RVA: 0x001EAF1C File Offset: 0x001E911C
 		public static string ToEnumString(this EMovieBackgroundType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6D4 RID: 50900 RVA: 0x001D1DB4 File Offset: 0x001CFFB4
+		// Token: 0x0600D321 RID: 54049 RVA: 0x001EAF54 File Offset: 0x001E9154
 		public static EMovieBackgroundType FromString(string name)
 		{
 			EMovieBackgroundType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6D5 RID: 50901 RVA: 0x001D1DDD File Offset: 0x001CFFDD
+		// Token: 0x0600D322 RID: 54050 RVA: 0x001EAF7D File Offset: 0x001E917D
 		public static bool TryFromString(string name, out EMovieBackgroundType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C6D6 RID: 50902 RVA: 0x001D1E16 File Offset: 0x001D0016
+		// Token: 0x0600D323 RID: 54051 RVA: 0x001EAFB6 File Offset: 0x001E91B6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6D7 RID: 50903 RVA: 0x001D1E2E File Offset: 0x001D002E
+		// Token: 0x0600D324 RID: 54052 RVA: 0x001EAFCE File Offset: 0x001E91CE
 		public static EMovieBackgroundType[] GetValues()
 		{
 			return new EMovieBackgroundType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6D8 RID: 50904 RVA: 0x001D1E3A File Offset: 0x001D003A
+		// Token: 0x0600D325 RID: 54053 RVA: 0x001EAFDA File Offset: 0x001E91DA
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007AF RID: 1967
+	// Token: 0x020007C9 RID: 1993
 	public class ConfigRandomPlotTriggerByTriggerGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E2C RID: 11820 RVA: 0x0015E504 File Offset: 0x0015C704
+		// Token: 0x06002EC8 RID: 11976 RVA: 0x00165410 File Offset: 0x00163610
 		static ConfigRandomPlotTriggerByTriggerGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRandomPlotTriggerByTriggerGroupId.CreateStaticDefaultValue), new Action(ConfigRandomPlotTriggerByTriggerGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E2D RID: 11821 RVA: 0x0015E524 File Offset: 0x0015C724
+		// Token: 0x06002EC9 RID: 11977 RVA: 0x00165430 File Offset: 0x00163630
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRandomPlotTriggerByTriggerGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E2E RID: 11822 RVA: 0x0015E5A3 File Offset: 0x0015C7A3
+		// Token: 0x06002ECA RID: 11978 RVA: 0x001654AF File Offset: 0x001636AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRandomPlotTriggerByTriggerGroupId.LogPair = null;
 			ConfigRandomPlotTriggerByTriggerGroupId.HandleId = 0;
 		}
 
-		// Token: 0x06002E2F RID: 11823 RVA: 0x0015E5B1 File Offset: 0x0015C7B1
+		// Token: 0x06002ECB RID: 11979 RVA: 0x001654BD File Offset: 0x001636BD
 		public static void Init()
 		{
 			ConfigRandomPlotTriggerByTriggerGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigRandomPlotTriggerByTriggerGroupId.HandleId, "db_randomplot.db", "select BinData from `RandomPlotTrigger` where TriggerGroupId=?");
 		}
 
-		// Token: 0x06002E30 RID: 11824 RVA: 0x0015E5CC File Offset: 0x0015C7CC
+		// Token: 0x06002ECC RID: 11980 RVA: 0x001654D8 File Offset: 0x001636D8
 		[NullableContext(2)]
 		public static IReadOnlyList<RandomPlotTrigger> GetConfigList(int p0TriggerGroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040035AF RID: 13743
+		// Token: 0x04003665 RID: 13925
 		private const string DB = "db_randomplot.db";
 
-		// Token: 0x040035B0 RID: 13744
+		// Token: 0x04003666 RID: 13926
 		private const string FILE = "x.系统随机剧情.xlsx";
 
-		// Token: 0x040035B1 RID: 13745
+		// Token: 0x04003667 RID: 13927
 		private const string TABLE = "RandomPlotTrigger";
 
-		// Token: 0x040035B2 RID: 13746
+		// Token: 0x04003668 RID: 13928
 		private const string COMMAND = "select BinData from `RandomPlotTrigger` where TriggerGroupId=?";
 
-		// Token: 0x040035B3 RID: 13747
+		// Token: 0x04003669 RID: 13929
 		private const string KEY_PREFIX = "RandomPlotTriggerByTriggerGroupId";
 
-		// Token: 0x040035B4 RID: 13748
+		// Token: 0x0400366A RID: 13930
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040035B5 RID: 13749
+		// Token: 0x0400366B RID: 13931
 		private static int HandleId;
 	}
 }

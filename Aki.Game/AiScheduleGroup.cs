@@ -9,8 +9,8 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiScheduleGroup : IStaticVariableResetter
 {
-	// Token: 0x17000266 RID: 614
-	// (get) Token: 0x06000ED4 RID: 3796 RVA: 0x0005528E File Offset: 0x0005348E
+	// Token: 0x17000269 RID: 617
+	// (get) Token: 0x06000EDA RID: 3802 RVA: 0x0005615E File Offset: 0x0005435E
 	private static List<AiScheduleGroup.AiAndScore> ScoreArray
 	{
 		get
@@ -19,8 +19,8 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000267 RID: 615
-	// (get) Token: 0x06000ED5 RID: 3797 RVA: 0x00055295 File Offset: 0x00053495
+	// Token: 0x1700026A RID: 618
+	// (get) Token: 0x06000EDB RID: 3803 RVA: 0x00056165 File Offset: 0x00054365
 	private static Dictionary<AiController, double> AngleMap
 	{
 		get
@@ -29,8 +29,8 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000268 RID: 616
-	// (get) Token: 0x06000ED6 RID: 3798 RVA: 0x0005529C File Offset: 0x0005349C
+	// Token: 0x1700026B RID: 619
+	// (get) Token: 0x06000EDC RID: 3804 RVA: 0x0005616C File Offset: 0x0005436C
 	private static Dictionary<AiController, double> DistanceMap
 	{
 		get
@@ -39,8 +39,8 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x17000269 RID: 617
-	// (get) Token: 0x06000ED7 RID: 3799 RVA: 0x000552A3 File Offset: 0x000534A3
+	// Token: 0x1700026C RID: 620
+	// (get) Token: 0x06000EDD RID: 3805 RVA: 0x00056173 File Offset: 0x00054373
 	private static HashSet<AiController> NotDistributeAi
 	{
 		get
@@ -49,8 +49,8 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700026A RID: 618
-	// (get) Token: 0x06000ED8 RID: 3800 RVA: 0x000552AA File Offset: 0x000534AA
+	// Token: 0x1700026D RID: 621
+	// (get) Token: 0x06000EDE RID: 3806 RVA: 0x0005617A File Offset: 0x0005437A
 	private static List<AiController> TmpDeleteArray
 	{
 		get
@@ -59,7 +59,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000ED9 RID: 3801 RVA: 0x000552B4 File Offset: 0x000534B4
+	// Token: 0x06000EDF RID: 3807 RVA: 0x00056184 File Offset: 0x00054384
 	public AiScheduleGroup(AiTeam aiTeam, EntityHandle target)
 	{
 		this.AiTeam = aiTeam;
@@ -73,7 +73,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		this.TargetActorComp = ((entity != null) ? entity.GetComponent<CharacterActorComponent>() : null);
 	}
 
-	// Token: 0x06000EDA RID: 3802 RVA: 0x0005539C File Offset: 0x0005359C
+	// Token: 0x06000EE0 RID: 3808 RVA: 0x0005626C File Offset: 0x0005446C
 	[return: Nullable(2)]
 	public AiAreaMemberData GetMemberData(AiController ai)
 	{
@@ -85,7 +85,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06000EDB RID: 3803 RVA: 0x000553BC File Offset: 0x000535BC
+	// Token: 0x06000EE1 RID: 3809 RVA: 0x0005628C File Offset: 0x0005448C
 	public bool TryAdd(AiController ai)
 	{
 		if (this.MemberDataMap.ContainsKey(ai))
@@ -97,7 +97,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06000EDC RID: 3804 RVA: 0x000553E8 File Offset: 0x000535E8
+	// Token: 0x06000EE2 RID: 3810 RVA: 0x000562B8 File Offset: 0x000544B8
 	public bool Remove(AiController ai)
 	{
 		if (!this.MemberDataMap.Remove(ai))
@@ -115,18 +115,18 @@ public class AiScheduleGroup : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06000EDD RID: 3805 RVA: 0x00055458 File Offset: 0x00053658
+	// Token: 0x06000EE3 RID: 3811 RVA: 0x00056328 File Offset: 0x00054528
 	public bool IsEmpty()
 	{
 		return this.MemberDataMap.Count == 0;
 	}
 
-	// Token: 0x1700026B RID: 619
-	// (get) Token: 0x06000EDE RID: 3806 RVA: 0x00055468 File Offset: 0x00053668
-	// (set) Token: 0x06000EDF RID: 3807 RVA: 0x00055470 File Offset: 0x00053670
+	// Token: 0x1700026E RID: 622
+	// (get) Token: 0x06000EE4 RID: 3812 RVA: 0x00056338 File Offset: 0x00054538
+	// (set) Token: 0x06000EE5 RID: 3813 RVA: 0x00056340 File Offset: 0x00054540
 	public EntityHandle Target { get; set; }
 
-	// Token: 0x06000EE0 RID: 3808 RVA: 0x0005547C File Offset: 0x0005367C
+	// Token: 0x06000EE6 RID: 3814 RVA: 0x0005634C File Offset: 0x0005454C
 	public void CheckTargetAndRemove()
 	{
 		foreach (AiController aiController in new List<AiController>(this.MemberDataMap.Keys))
@@ -148,7 +148,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000EE1 RID: 3809 RVA: 0x00055544 File Offset: 0x00053744
+	// Token: 0x06000EE7 RID: 3815 RVA: 0x00056414 File Offset: 0x00054614
 	public void ScheduleGroup()
 	{
 		if ((double)this.NextScheduleMoveTime < Time.Instance.WorldTime || this.HasNewMember)
@@ -163,7 +163,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		this.HasNewMember = false;
 	}
 
-	// Token: 0x06000EE2 RID: 3810 RVA: 0x0005557C File Offset: 0x0005377C
+	// Token: 0x06000EE8 RID: 3816 RVA: 0x0005644C File Offset: 0x0005464C
 	private void ScheduleMove()
 	{
 		AiTeamLevelNew? aiTeamLevel = this.AiTeam.AiTeamLevel;
@@ -180,7 +180,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		AiScheduleGroup.DistanceMap.Clear();
 	}
 
-	// Token: 0x06000EE3 RID: 3811 RVA: 0x00055648 File Offset: 0x00053848
+	// Token: 0x06000EE9 RID: 3817 RVA: 0x00056518 File Offset: 0x00054718
 	private unsafe void DistributeArea(global::Vector targetLocation, float controllerYaw)
 	{
 		AiScheduleGroup.NotDistributeAi.Clear();
@@ -283,7 +283,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000EE4 RID: 3812 RVA: 0x00055C00 File Offset: 0x00053E00
+	// Token: 0x06000EEA RID: 3818 RVA: 0x00056AD0 File Offset: 0x00054CD0
 	private void DistributeAngleAndDistance(float targetRadius)
 	{
 		int num = 0;
@@ -344,7 +344,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000EE5 RID: 3813 RVA: 0x00055E98 File Offset: 0x00054098
+	// Token: 0x06000EEB RID: 3819 RVA: 0x00056D68 File Offset: 0x00054F68
 	private float DistributeAngleAndDistanceOneSide(int areaIndex, int startIndex, int endIndex, float startDegree, float endDegree, float maxAnglePerOneRadius, AiScheduleGroup.EDistributeRule distributeRule, bool inZone, float distanceCenter, float maxDistanceOffset, float prevInZoneUsedAngle = 0f)
 	{
 		List<AiController> list = this.AreaAiList[areaIndex];
@@ -382,7 +382,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		return 0f;
 	}
 
-	// Token: 0x06000EE6 RID: 3814 RVA: 0x00055FE4 File Offset: 0x000541E4
+	// Token: 0x06000EEC RID: 3820 RVA: 0x00056EB4 File Offset: 0x000550B4
 	private void RefreshAreaEntityLocation()
 	{
 		global::Vector vector = null;
@@ -412,7 +412,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000EE7 RID: 3815 RVA: 0x00056158 File Offset: 0x00054358
+	// Token: 0x06000EED RID: 3821 RVA: 0x00057028 File Offset: 0x00055228
 	private void ScheduleAttack()
 	{
 		CharacterActorComponent targetActorComp = this.TargetActorComp;
@@ -424,7 +424,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		AiScheduleGroup.AiAndScore.ReleaseArray(AiScheduleGroup.ScoreArray);
 	}
 
-	// Token: 0x06000EE8 RID: 3816 RVA: 0x000561B0 File Offset: 0x000543B0
+	// Token: 0x06000EEE RID: 3822 RVA: 0x00057080 File Offset: 0x00055280
 	private int DeleteAttackersAndCollectWatchers()
 	{
 		AiTeamLevelNew? aiTeamLevel = this.AiTeam.AiTeamLevel;
@@ -526,7 +526,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06000EE9 RID: 3817 RVA: 0x00056824 File Offset: 0x00054A24
+	// Token: 0x06000EEF RID: 3823 RVA: 0x000576F4 File Offset: 0x000558F4
 	private void SelectNewAttackers(int newAttackerCount)
 	{
 		List<AiScheduleGroup.AiAndScore> scoreArray = AiScheduleGroup.ScoreArray;
@@ -619,7 +619,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000EEA RID: 3818 RVA: 0x00056BEC File Offset: 0x00054DEC
+	// Token: 0x06000EF0 RID: 3824 RVA: 0x00057ABC File Offset: 0x00055CBC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -648,13 +648,13 @@ public class AiScheduleGroup : IStaticVariableResetter
 		return new ValueTuple<global::Vector, float, float>(targetActorComp.ActorLocationProxy, item, targetActorComp.ScaledRadius);
 	}
 
-	// Token: 0x06000EEB RID: 3819 RVA: 0x00056CD7 File Offset: 0x00054ED7
+	// Token: 0x06000EF1 RID: 3825 RVA: 0x00057BA7 File Offset: 0x00055DA7
 	static AiScheduleGroup()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiScheduleGroup.CreateStaticDefaultValue), new Action(AiScheduleGroup.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000EEC RID: 3820 RVA: 0x00056D0A File Offset: 0x00054F0A
+	// Token: 0x06000EF2 RID: 3826 RVA: 0x00057BDA File Offset: 0x00055DDA
 	public static void CreateStaticDefaultValue()
 	{
 		AiScheduleGroup._scoreArray = new List<AiScheduleGroup.AiAndScore>();
@@ -664,7 +664,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 		AiScheduleGroup._tmpDeleteArray = new List<AiController>();
 	}
 
-	// Token: 0x06000EED RID: 3821 RVA: 0x00056D3E File Offset: 0x00054F3E
+	// Token: 0x06000EF3 RID: 3827 RVA: 0x00057C0E File Offset: 0x00055E0E
 	public static void ResetStaticDefaultValue()
 	{
 		AiScheduleGroup._scoreArray = null;
@@ -674,59 +674,59 @@ public class AiScheduleGroup : IStaticVariableResetter
 		AiScheduleGroup._tmpDeleteArray = null;
 	}
 
-	// Token: 0x04000BBD RID: 3005
+	// Token: 0x04000BC5 RID: 3013
 	private const string BLACKBOARD_KEY_AREA_INDEX = "TeamIndex";
 
-	// Token: 0x04000BBE RID: 3006
+	// Token: 0x04000BC6 RID: 3014
 	private const string BLACKBOARD_KEY_ATTACKER = "TeamAttacker";
 
-	// Token: 0x04000BBF RID: 3007
+	// Token: 0x04000BC7 RID: 3015
 	private const float MAX_OUT_ZONE_ANGLE_PER_ONE_RADIUS = 0.333f;
 
-	// Token: 0x04000BC0 RID: 3008
+	// Token: 0x04000BC8 RID: 3016
 	private const float MAX_IN_ZONE_ANGLE_PER_ONE_RADIUS = 2f;
 
-	// Token: 0x04000BC1 RID: 3009
+	// Token: 0x04000BC9 RID: 3017
 	private const int MAX_ELITE_TYPE = 3;
 
-	// Token: 0x04000BC2 RID: 3010
+	// Token: 0x04000BCA RID: 3018
 	private const int MAX_CHAR_TYPE = 6;
 
-	// Token: 0x04000BC3 RID: 3011
+	// Token: 0x04000BCB RID: 3019
 	private const float MIN_RADIUS = 30f;
 
-	// Token: 0x04000BC4 RID: 3012
+	// Token: 0x04000BCC RID: 3020
 	private const float MAX_RADIUS = 100f;
 
-	// Token: 0x04000BC5 RID: 3013
+	// Token: 0x04000BCD RID: 3021
 	private const float MINUS_HALF_CIRCLE = -180f;
 
-	// Token: 0x04000BC6 RID: 3014
+	// Token: 0x04000BCE RID: 3022
 	private readonly Dictionary<AiController, AiAreaMemberData> MemberDataMap = new Dictionary<AiController, AiAreaMemberData>();
 
-	// Token: 0x04000BC7 RID: 3015
+	// Token: 0x04000BCF RID: 3023
 	[Nullable(2)]
 	private readonly CharacterActorComponent TargetActorComp;
 
-	// Token: 0x04000BC8 RID: 3016
+	// Token: 0x04000BD0 RID: 3024
 	private readonly HashSet<AiController> Attackers = new HashSet<AiController>();
 
-	// Token: 0x04000BC9 RID: 3017
+	// Token: 0x04000BD1 RID: 3025
 	private bool HasNewMember;
 
-	// Token: 0x04000BCA RID: 3018
+	// Token: 0x04000BD2 RID: 3026
 	private float NextScheduleMoveTime;
 
-	// Token: 0x04000BCB RID: 3019
+	// Token: 0x04000BD3 RID: 3027
 	private readonly List<List<AiController>> AreaAiList = new List<List<AiController>>();
 
-	// Token: 0x04000BCC RID: 3020
+	// Token: 0x04000BD4 RID: 3028
 	public readonly Quat GravityQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04000BCD RID: 3021
+	// Token: 0x04000BD5 RID: 3029
 	public readonly Quat InverseGravityQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04000BCE RID: 3022
+	// Token: 0x04000BD6 RID: 3030
 	[Nullable(new byte[]
 	{
 		2,
@@ -734,7 +734,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 	})]
 	private static List<AiScheduleGroup.AiAndScore> _scoreArray;
 
-	// Token: 0x04000BCF RID: 3023
+	// Token: 0x04000BD7 RID: 3031
 	[Nullable(new byte[]
 	{
 		2,
@@ -742,7 +742,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 	})]
 	private static Dictionary<AiController, double> _angleMap;
 
-	// Token: 0x04000BD0 RID: 3024
+	// Token: 0x04000BD8 RID: 3032
 	[Nullable(new byte[]
 	{
 		2,
@@ -750,7 +750,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 	})]
 	private static Dictionary<AiController, double> _distanceMap;
 
-	// Token: 0x04000BD1 RID: 3025
+	// Token: 0x04000BD9 RID: 3033
 	[Nullable(new byte[]
 	{
 		2,
@@ -758,7 +758,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 	})]
 	private static HashSet<AiController> _notDistributeAi;
 
-	// Token: 0x04000BD2 RID: 3026
+	// Token: 0x04000BDA RID: 3034
 	[Nullable(new byte[]
 	{
 		2,
@@ -766,35 +766,35 @@ public class AiScheduleGroup : IStaticVariableResetter
 	})]
 	private static List<AiController> _tmpDeleteArray;
 
-	// Token: 0x04000BD3 RID: 3027
+	// Token: 0x04000BDB RID: 3035
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpCtrlForward = global::Vector.Create();
 
-	// Token: 0x04000BD4 RID: 3028
+	// Token: 0x04000BDC RID: 3036
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x04000BD5 RID: 3029
+	// Token: 0x04000BDD RID: 3037
 	private readonly AiTeam AiTeam;
 
-	// Token: 0x020073B8 RID: 29624
+	// Token: 0x0200653B RID: 25915
 	[NullableContext(0)]
 	private enum EDistributeRule
 	{
-		// Token: 0x04026668 RID: 157288
+		// Token: 0x0402195E RID: 137566
 		RightFirst,
-		// Token: 0x04026669 RID: 157289
+		// Token: 0x0402195F RID: 137567
 		MiddleFirst,
-		// Token: 0x0402666A RID: 157290
+		// Token: 0x04021960 RID: 137568
 		LeftFirst
 	}
 
-	// Token: 0x020073B9 RID: 29625
+	// Token: 0x0200653C RID: 25916
 	[Nullable(0)]
 	public class AiAndScore : IStaticVariableResetter
 	{
-		// Token: 0x17009FA7 RID: 40871
-		// (get) Token: 0x06048756 RID: 296790 RVA: 0x012A1F18 File Offset: 0x012A0118
+		// Token: 0x17007745 RID: 30533
+		// (get) Token: 0x0603EBA4 RID: 256932 RVA: 0x01244A14 File Offset: 0x01242C14
 		private static List<AiScheduleGroup.AiAndScore> Pool
 		{
 			get
@@ -803,7 +803,7 @@ public class AiScheduleGroup : IStaticVariableResetter
 			}
 		}
 
-		// Token: 0x06048757 RID: 296791 RVA: 0x012A1F1F File Offset: 0x012A011F
+		// Token: 0x0603EBA5 RID: 256933 RVA: 0x01244A1B File Offset: 0x01242C1B
 		[NullableContext(2)]
 		public static AiScheduleGroup.AiAndScore Get()
 		{
@@ -817,14 +817,14 @@ public class AiScheduleGroup : IStaticVariableResetter
 			return result;
 		}
 
-		// Token: 0x06048758 RID: 296792 RVA: 0x012A1F5B File Offset: 0x012A015B
+		// Token: 0x0603EBA6 RID: 256934 RVA: 0x01244A57 File Offset: 0x01242C57
 		public static void Release(AiScheduleGroup.AiAndScore item)
 		{
 			item.Ai = null;
 			AiScheduleGroup.AiAndScore.Pool.Add(item);
 		}
 
-		// Token: 0x06048759 RID: 296793 RVA: 0x012A1F70 File Offset: 0x012A0170
+		// Token: 0x0603EBA7 RID: 256935 RVA: 0x01244A6C File Offset: 0x01242C6C
 		public static void ReleaseArray(List<AiScheduleGroup.AiAndScore> array)
 		{
 			foreach (AiScheduleGroup.AiAndScore aiAndScore in array)
@@ -835,36 +835,36 @@ public class AiScheduleGroup : IStaticVariableResetter
 			array.Clear();
 		}
 
-		// Token: 0x0604875A RID: 296794 RVA: 0x012A1FD0 File Offset: 0x012A01D0
+		// Token: 0x0603EBA8 RID: 256936 RVA: 0x01244ACC File Offset: 0x01242CCC
 		private AiAndScore()
 		{
 		}
 
-		// Token: 0x0604875B RID: 296795 RVA: 0x012A1FD8 File Offset: 0x012A01D8
+		// Token: 0x0603EBA9 RID: 256937 RVA: 0x01244AD4 File Offset: 0x01242CD4
 		public static int Compare(AiScheduleGroup.AiAndScore a, AiScheduleGroup.AiAndScore b)
 		{
 			return a.Score.CompareTo(b.Score);
 		}
 
-		// Token: 0x0604875C RID: 296796 RVA: 0x012A1FEB File Offset: 0x012A01EB
+		// Token: 0x0603EBAA RID: 256938 RVA: 0x01244AE7 File Offset: 0x01242CE7
 		static AiAndScore()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AiScheduleGroup.AiAndScore.CreateStaticDefaultValue), new Action(AiScheduleGroup.AiAndScore.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604875D RID: 296797 RVA: 0x012A200A File Offset: 0x012A020A
+		// Token: 0x0603EBAB RID: 256939 RVA: 0x01244B06 File Offset: 0x01242D06
 		public static void CreateStaticDefaultValue()
 		{
 			AiScheduleGroup.AiAndScore._pool = new List<AiScheduleGroup.AiAndScore>();
 		}
 
-		// Token: 0x0604875E RID: 296798 RVA: 0x012A2016 File Offset: 0x012A0216
+		// Token: 0x0603EBAC RID: 256940 RVA: 0x01244B12 File Offset: 0x01242D12
 		public static void ResetStaticDefaultValue()
 		{
 			AiScheduleGroup.AiAndScore._pool = null;
 		}
 
-		// Token: 0x0402666B RID: 157291
+		// Token: 0x04021961 RID: 137569
 		[Nullable(new byte[]
 		{
 			2,
@@ -872,19 +872,19 @@ public class AiScheduleGroup : IStaticVariableResetter
 		})]
 		private static List<AiScheduleGroup.AiAndScore> _pool;
 
-		// Token: 0x0402666C RID: 157292
+		// Token: 0x04021962 RID: 137570
 		[Nullable(2)]
 		public AiController Ai;
 
-		// Token: 0x0402666D RID: 157293
+		// Token: 0x04021963 RID: 137571
 		public double Score;
 	}
 
-	// Token: 0x020073BA RID: 29626
+	// Token: 0x0200653D RID: 25917
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402666E RID: 157294
+		// Token: 0x04021964 RID: 137572
 		[Nullable(new byte[]
 		{
 			0,

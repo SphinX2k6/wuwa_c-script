@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007729 RID: 30505
+	// Token: 0x02007F52 RID: 32594
 	public class TMoveDriveModeUnion
 	{
-		// Token: 0x1700E65F RID: 58975
-		// (get) Token: 0x0603770C RID: 227084 RVA: 0x00781A52 File Offset: 0x0077FC52
-		// (set) Token: 0x0603770D RID: 227085 RVA: 0x00781A5A File Offset: 0x0077FC5A
+		// Token: 0x1700F2AF RID: 62127
+		// (get) Token: 0x0603AC47 RID: 240711 RVA: 0x007E69E2 File Offset: 0x007E4BE2
+		// (set) Token: 0x0603AC48 RID: 240712 RVA: 0x007E69EA File Offset: 0x007E4BEA
 		public TMoveDriveMode Type { get; set; }
 
-		// Token: 0x1700E660 RID: 58976
-		// (get) Token: 0x0603770E RID: 227086 RVA: 0x00781A63 File Offset: 0x0077FC63
-		// (set) Token: 0x0603770F RID: 227087 RVA: 0x00781A6B File Offset: 0x0077FC6B
+		// Token: 0x1700F2B0 RID: 62128
+		// (get) Token: 0x0603AC49 RID: 240713 RVA: 0x007E69F3 File Offset: 0x007E4BF3
+		// (set) Token: 0x0603AC4A RID: 240714 RVA: 0x007E69FB File Offset: 0x007E4BFB
 		public object Value { get; set; }
 
-		// Token: 0x06037710 RID: 227088 RVA: 0x00781A74 File Offset: 0x0077FC74
+		// Token: 0x0603AC4B RID: 240715 RVA: 0x007E6A04 File Offset: 0x007E4C04
 		public TMoveDriveModeUnion()
 		{
 			this.Type = TMoveDriveMode.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037711 RID: 227089 RVA: 0x00781A8A File Offset: 0x0077FC8A
+		// Token: 0x0603AC4C RID: 240716 RVA: 0x007E6A1A File Offset: 0x007E4C1A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037712 RID: 227090 RVA: 0x00781A9C File Offset: 0x0077FC9C
+		// Token: 0x0603AC4D RID: 240717 RVA: 0x007E6A2C File Offset: 0x007E4C2C
 		public IInputDrivenMoveDriveModeT AsIInputDrivenMoveDriveMode()
 		{
 			return this.As<IInputDrivenMoveDriveModeT>();
 		}
 
-		// Token: 0x06037713 RID: 227091 RVA: 0x00781AA4 File Offset: 0x0077FCA4
+		// Token: 0x0603AC4E RID: 240718 RVA: 0x007E6A34 File Offset: 0x007E4C34
 		public static TMoveDriveModeUnion FromIInputDrivenMoveDriveMode(IInputDrivenMoveDriveModeT _iinputdrivenmovedrivemode)
 		{
 			return new TMoveDriveModeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037714 RID: 227092 RVA: 0x00781AB9 File Offset: 0x0077FCB9
+		// Token: 0x0603AC4F RID: 240719 RVA: 0x007E6A49 File Offset: 0x007E4C49
 		public IPositionDrivenMoveDriveModeT AsIPositionDrivenMoveDriveMode()
 		{
 			return this.As<IPositionDrivenMoveDriveModeT>();
 		}
 
-		// Token: 0x06037715 RID: 227093 RVA: 0x00781AC1 File Offset: 0x0077FCC1
+		// Token: 0x0603AC50 RID: 240720 RVA: 0x007E6A51 File Offset: 0x007E4C51
 		public static TMoveDriveModeUnion FromIPositionDrivenMoveDriveMode(IPositionDrivenMoveDriveModeT _ipositiondrivenmovedrivemode)
 		{
 			return new TMoveDriveModeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037716 RID: 227094 RVA: 0x00781AD8 File Offset: 0x0077FCD8
+		// Token: 0x0603AC51 RID: 240721 RVA: 0x007E6A68 File Offset: 0x007E4C68
 		public static int Pack(FlatBufferBuilder builder, TMoveDriveModeUnion _o)
 		{
 			TMoveDriveMode type = _o.Type;

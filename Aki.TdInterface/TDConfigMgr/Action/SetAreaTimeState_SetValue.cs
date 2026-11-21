@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200219A RID: 8602
+	// Token: 0x02002403 RID: 9219
 	public class SetAreaTimeState_SetValue
 	{
-		// Token: 0x040070C6 RID: 28870
-		[Nullable(1)]
+		// Token: 0x04007708 RID: 30472
 		public ISetAreaTimeBase SetAreaTimeConfig;
 	}
 }

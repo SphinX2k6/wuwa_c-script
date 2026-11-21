@@ -3,82 +3,82 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004673 RID: 18035
+	// Token: 0x020035A4 RID: 13732
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputAxisHandle : InputDistributeHandle<float>
 	{
-		// Token: 0x0602E8A0 RID: 190624 RVA: 0x00AC64C2 File Offset: 0x00AC46C2
+		// Token: 0x06022FEA RID: 143338 RVA: 0x009F4022 File Offset: 0x009F2222
 		public InputAxisHandle(string inputDistributeTag, string name) : base(inputDistributeTag, name)
 		{
 		}
 
-		// Token: 0x0602E8A1 RID: 190625 RVA: 0x00AC64CC File Offset: 0x00AC46CC
+		// Token: 0x06022FEB RID: 143339 RVA: 0x009F402C File Offset: 0x009F222C
 		public void BindAxis(TInputHandle<float> axisCallback)
 		{
 			base.Bind(axisCallback);
 		}
 
-		// Token: 0x0602E8A2 RID: 190626 RVA: 0x00AC64D5 File Offset: 0x00AC46D5
+		// Token: 0x06022FEC RID: 143340 RVA: 0x009F4035 File Offset: 0x009F2235
 		public void UnBindAxis(TInputHandle<float> axisCallback)
 		{
 			base.UnBind(axisCallback);
 		}
 
-		// Token: 0x0602E8A3 RID: 190627 RVA: 0x00AC64DE File Offset: 0x00AC46DE
+		// Token: 0x06022FED RID: 143341 RVA: 0x009F403E File Offset: 0x009F223E
 		public void BindAxisIgnoreLimit(TInputHandle<float> axisCallback)
 		{
 			base.BindIgnoreLimit(axisCallback);
 		}
 
-		// Token: 0x0602E8A4 RID: 190628 RVA: 0x00AC64E7 File Offset: 0x00AC46E7
+		// Token: 0x06022FEE RID: 143342 RVA: 0x009F4047 File Offset: 0x009F2247
 		public void UnBindAxisIgnoreLimit(TInputHandle<float> axisCallback)
 		{
 			base.UnBindIgnoreLimit(axisCallback);
 		}
 
-		// Token: 0x0602E8A5 RID: 190629 RVA: 0x00AC64F0 File Offset: 0x00AC46F0
+		// Token: 0x06022FEF RID: 143343 RVA: 0x009F4050 File Offset: 0x009F2250
 		public void InputAxis(float value)
 		{
 			this.InputCacheAxisValue(value);
 			base.Call(value);
 		}
 
-		// Token: 0x0602E8A6 RID: 190630 RVA: 0x00AC6500 File Offset: 0x00AC4700
+		// Token: 0x06022FF0 RID: 143344 RVA: 0x009F4060 File Offset: 0x009F2260
 		public void InputAxisIgnoreLimit(float value)
 		{
 			this.InputCacheAxisValueIgnoreLimit(value);
 			base.CallIgnoreLimit(value);
 		}
 
-		// Token: 0x0602E8A7 RID: 190631 RVA: 0x00AC6510 File Offset: 0x00AC4710
+		// Token: 0x06022FF1 RID: 143345 RVA: 0x009F4070 File Offset: 0x009F2270
 		public void InputCacheAxisValue(float value)
 		{
 			this.CacheAxisValue = value;
 		}
 
-		// Token: 0x0602E8A8 RID: 190632 RVA: 0x00AC6519 File Offset: 0x00AC4719
+		// Token: 0x06022FF2 RID: 143346 RVA: 0x009F4079 File Offset: 0x009F2279
 		public void InputCacheAxisValueIgnoreLimit(float value)
 		{
 			this.CacheAxisValueIgnoreLimit = value;
 		}
 
-		// Token: 0x0602E8A9 RID: 190633 RVA: 0x00AC6522 File Offset: 0x00AC4722
+		// Token: 0x06022FF3 RID: 143347 RVA: 0x009F4082 File Offset: 0x009F2282
 		public float GetCacheAxisValue()
 		{
 			return this.CacheAxisValue;
 		}
 
-		// Token: 0x0602E8AA RID: 190634 RVA: 0x00AC652A File Offset: 0x00AC472A
+		// Token: 0x06022FF4 RID: 143348 RVA: 0x009F408A File Offset: 0x009F228A
 		public float GetCacheAxisValueIgnoreLimit()
 		{
 			return this.CacheAxisValueIgnoreLimit;
 		}
 
-		// Token: 0x04019516 RID: 103702
+		// Token: 0x04013BBD RID: 80829
 		private float CacheAxisValue;
 
-		// Token: 0x04019517 RID: 103703
+		// Token: 0x04013BBE RID: 80830
 		private float CacheAxisValueIgnoreLimit;
 	}
 }

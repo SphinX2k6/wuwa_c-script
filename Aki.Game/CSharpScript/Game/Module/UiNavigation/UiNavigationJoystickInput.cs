@@ -5,19 +5,19 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048EF RID: 18671
+	// Token: 0x02003866 RID: 14438
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationJoystickInput : IStaticVariableResetter
 	{
-		// Token: 0x06030D44 RID: 200004 RVA: 0x00B56F24 File Offset: 0x00B55124
+		// Token: 0x06025871 RID: 153713 RVA: 0x00A91D94 File Offset: 0x00A8FF94
 		static UiNavigationJoystickInput()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationJoystickInput.CreateStaticDefaultValue), new Action(UiNavigationJoystickInput.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170079A3 RID: 31139
-		// (get) Token: 0x06030D45 RID: 200005 RVA: 0x00B56FB8 File Offset: 0x00B551B8
+		// Token: 0x17004D0B RID: 19723
+		// (get) Token: 0x06025872 RID: 153714 RVA: 0x00A91E28 File Offset: 0x00A90028
 		private static Dictionary<Action<ENavigationDirectionType>, bool> LeftJoystickFunctionMap
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079A4 RID: 31140
-		// (get) Token: 0x06030D46 RID: 200006 RVA: 0x00B56FBF File Offset: 0x00B551BF
+		// Token: 0x17004D0C RID: 19724
+		// (get) Token: 0x06025873 RID: 153715 RVA: 0x00A91E2F File Offset: 0x00A9002F
 		private static IReadOnlyDictionary<string, ENavigationDirectionType> TypeMap
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D47 RID: 200007 RVA: 0x00B56FC6 File Offset: 0x00B551C6
+		// Token: 0x06025874 RID: 153716 RVA: 0x00A91E36 File Offset: 0x00A90036
 		public static void Tick(float delta)
 		{
 			UiNavigationJoystickInput.TickAxis(delta);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationJoystickInput.TickAction(delta);
 		}
 
-		// Token: 0x06030D48 RID: 200008 RVA: 0x00B56FDC File Offset: 0x00B551DC
+		// Token: 0x06025875 RID: 153717 RVA: 0x00A91E4C File Offset: 0x00A9004C
 		private static void TickAxis(float delta)
 		{
 			if (UiNavigationJoystickInput.IsTickRepeatAction)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationJoystickInput.IsPress = true;
 		}
 
-		// Token: 0x06030D49 RID: 200009 RVA: 0x00B5707E File Offset: 0x00B5527E
+		// Token: 0x06025876 RID: 153718 RVA: 0x00A91EEE File Offset: 0x00A900EE
 		private static void TickFirstAction(float delta)
 		{
 			if (!UiNavigationJoystickInput.IsTickFirstAction)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D4A RID: 200010 RVA: 0x00B570B9 File Offset: 0x00B552B9
+		// Token: 0x06025877 RID: 153719 RVA: 0x00A91F29 File Offset: 0x00A90129
 		private static void TickAction(float delta)
 		{
 			if (!UiNavigationJoystickInput.IsTickRepeatAction)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationJoystickInput.RepeatPressHandle(UiNavigationJoystickInput.InputActionName, delta);
 		}
 
-		// Token: 0x06030D4B RID: 200011 RVA: 0x00B570D0 File Offset: 0x00B552D0
+		// Token: 0x06025878 RID: 153720 RVA: 0x00A91F40 File Offset: 0x00A90140
 		private static void HandleDirectionPress(float leftJoystickX, float leftJoystickY)
 		{
 			bool flag = UiNavigationJoystickInput.IsSmallerThenPressThreshold(leftJoystickX);
@@ -135,19 +135,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationJoystickInput.DirectionPress("UI方向左");
 		}
 
-		// Token: 0x06030D4C RID: 200012 RVA: 0x00B571A5 File Offset: 0x00B553A5
+		// Token: 0x06025879 RID: 153721 RVA: 0x00A92015 File Offset: 0x00A90215
 		private static bool IsSmallerThenPressThreshold(float value)
 		{
 			return Math.Abs(value) < 0.7f;
 		}
 
-		// Token: 0x06030D4D RID: 200013 RVA: 0x00B571B4 File Offset: 0x00B553B4
+		// Token: 0x0602587A RID: 153722 RVA: 0x00A92024 File Offset: 0x00A90224
 		private static bool IsSmallerThenReleaseThreshold(float value)
 		{
 			return Math.Abs(value) < 0.2f;
 		}
 
-		// Token: 0x06030D4E RID: 200014 RVA: 0x00B571C4 File Offset: 0x00B553C4
+		// Token: 0x0602587B RID: 153723 RVA: 0x00A92034 File Offset: 0x00A90234
 		private static void DirectionPress(string direction)
 		{
 			if (direction == UiNavigationJoystickInput.Direction)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationLogic.ExecuteInputNavigation(UiNavigationJoystickInput.Direction, InputDistributeDefine.EActionType.Press);
 		}
 
-		// Token: 0x06030D4F RID: 200015 RVA: 0x00B57218 File Offset: 0x00B55418
+		// Token: 0x0602587C RID: 153724 RVA: 0x00A92088 File Offset: 0x00A90288
 		private static void DirectionRelease()
 		{
 			if (string.IsNullOrEmpty(UiNavigationJoystickInput.Direction))
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationLogic.ExecuteInputNavigation(direction, InputDistributeDefine.EActionType.Release);
 		}
 
-		// Token: 0x06030D50 RID: 200016 RVA: 0x00B5726C File Offset: 0x00B5546C
+		// Token: 0x0602587D RID: 153725 RVA: 0x00A920DC File Offset: 0x00A902DC
 		private static void RepeatPressHandle(string actionName, float delta)
 		{
 			if (string.IsNullOrEmpty(actionName))
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D51 RID: 200017 RVA: 0x00B57320 File Offset: 0x00B55520
+		// Token: 0x0602587E RID: 153726 RVA: 0x00A92190 File Offset: 0x00A90390
 		private static void HandleCanTriggerTag(float leftJoystickX, float leftJoystickY)
 		{
 			float num;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D52 RID: 200018 RVA: 0x00B57388 File Offset: 0x00B55588
+		// Token: 0x0602587F RID: 153727 RVA: 0x00A921F8 File Offset: 0x00A903F8
 		private static void TriggerLeftJoystickFunction()
 		{
 			if (UiNavigationJoystickInput.IsCanTrigger)
@@ -252,19 +252,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D53 RID: 200019 RVA: 0x00B57460 File Offset: 0x00B55660
+		// Token: 0x06025880 RID: 153728 RVA: 0x00A922D0 File Offset: 0x00A904D0
 		public static void RegisterLeftJoystickFunction(Action<ENavigationDirectionType> callback)
 		{
 			UiNavigationJoystickInput.LeftJoystickFunctionMap[callback] = UiNavigationJoystickInput.IsPress;
 		}
 
-		// Token: 0x06030D54 RID: 200020 RVA: 0x00B57472 File Offset: 0x00B55672
+		// Token: 0x06025881 RID: 153729 RVA: 0x00A922E2 File Offset: 0x00A904E2
 		public static void UnRegisterLeftJoystickFunction(Action<ENavigationDirectionType> callback)
 		{
 			UiNavigationJoystickInput.LeftJoystickFunctionMap.Remove(callback);
 		}
 
-		// Token: 0x06030D55 RID: 200021 RVA: 0x00B57480 File Offset: 0x00B55680
+		// Token: 0x06025882 RID: 153730 RVA: 0x00A922F0 File Offset: 0x00A904F0
 		public static void TriggerActionInputTick(string actionName, InputDistributeDefine.EActionType actionType)
 		{
 			if (UiNavigationJoystickInput.IsPress)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationJoystickInput.TargetActionType = new InputDistributeDefine.EActionType?(InputDistributeDefine.EActionType.Press);
 		}
 
-		// Token: 0x06030D56 RID: 200022 RVA: 0x00B57518 File Offset: 0x00B55718
+		// Token: 0x06025883 RID: 153731 RVA: 0x00A92388 File Offset: 0x00A90588
 		public static void ResetJoystickActionInput()
 		{
 			if (!string.IsNullOrEmpty(UiNavigationJoystickInput.InputActionName))
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D57 RID: 200023 RVA: 0x00B57588 File Offset: 0x00B55788
+		// Token: 0x06025884 RID: 153732 RVA: 0x00A923F8 File Offset: 0x00A905F8
 		public static void CreateStaticDefaultValue()
 		{
 			UiNavigationJoystickInput.TempVector = new Vector();
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			};
 		}
 
-		// Token: 0x06030D58 RID: 200024 RVA: 0x00B575E4 File Offset: 0x00B557E4
+		// Token: 0x06025885 RID: 153733 RVA: 0x00A92454 File Offset: 0x00A90654
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationJoystickInput.Direction = "";
@@ -354,65 +354,65 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationJoystickInput._typeMap = null;
 		}
 
-		// Token: 0x0401A37E RID: 107390
+		// Token: 0x04014BF1 RID: 84977
 		private const float PressThreshold = 0.7f;
 
-		// Token: 0x0401A37F RID: 107391
+		// Token: 0x04014BF2 RID: 84978
 		private const float ReleaseThreshold = 0.2f;
 
-		// Token: 0x0401A380 RID: 107392
+		// Token: 0x04014BF3 RID: 84979
 		private const float ReleaseDistance = 0.2f;
 
-		// Token: 0x0401A381 RID: 107393
+		// Token: 0x04014BF4 RID: 84980
 		private const float FirstPressInterval = 500f;
 
-		// Token: 0x0401A382 RID: 107394
+		// Token: 0x04014BF5 RID: 84981
 		private const float RepeatPressInterval = 100f;
 
-		// Token: 0x0401A383 RID: 107395
+		// Token: 0x04014BF6 RID: 84982
 		private const float ReleaseInterval = 100f;
 
-		// Token: 0x0401A384 RID: 107396
+		// Token: 0x04014BF7 RID: 84983
 		private static string Direction = "";
 
-		// Token: 0x0401A385 RID: 107397
+		// Token: 0x04014BF8 RID: 84984
 		private static float PressInterval = 0f;
 
-		// Token: 0x0401A386 RID: 107398
+		// Token: 0x04014BF9 RID: 84985
 		private static float RepeatPressTime = 0f;
 
-		// Token: 0x0401A387 RID: 107399
+		// Token: 0x04014BFA RID: 84986
 		private static InputDistributeDefine.EActionType? TargetActionType = null;
 
-		// Token: 0x0401A388 RID: 107400
+		// Token: 0x04014BFB RID: 84987
 		[Nullable(2)]
 		private static Vector TempVector;
 
-		// Token: 0x0401A389 RID: 107401
+		// Token: 0x04014BFC RID: 84988
 		private static bool IsPress = false;
 
-		// Token: 0x0401A38A RID: 107402
+		// Token: 0x04014BFD RID: 84989
 		private static string InputActionName = "";
 
-		// Token: 0x0401A38B RID: 107403
+		// Token: 0x04014BFE RID: 84990
 		private static InputDistributeDefine.EActionType? InputActionType = null;
 
-		// Token: 0x0401A38C RID: 107404
+		// Token: 0x04014BFF RID: 84991
 		private static bool IsTickRepeatAction = false;
 
-		// Token: 0x0401A38D RID: 107405
+		// Token: 0x04014C00 RID: 84992
 		private static bool IsTickFirstAction = false;
 
-		// Token: 0x0401A38E RID: 107406
+		// Token: 0x04014C01 RID: 84993
 		private static float LastLeftJoystickX = 0f;
 
-		// Token: 0x0401A38F RID: 107407
+		// Token: 0x04014C02 RID: 84994
 		private static float LastLeftJoystickY = 0f;
 
-		// Token: 0x0401A390 RID: 107408
+		// Token: 0x04014C03 RID: 84995
 		private static bool IsCanTrigger = false;
 
-		// Token: 0x0401A391 RID: 107409
+		// Token: 0x04014C04 RID: 84996
 		[Nullable(new byte[]
 		{
 			2,
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private static Dictionary<Action<ENavigationDirectionType>, bool> _leftJoystickFunctionMap;
 
-		// Token: 0x0401A392 RID: 107410
+		// Token: 0x04014C05 RID: 84997
 		[Nullable(new byte[]
 		{
 			2,

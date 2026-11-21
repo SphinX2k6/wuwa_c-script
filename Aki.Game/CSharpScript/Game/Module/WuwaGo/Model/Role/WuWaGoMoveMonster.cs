@@ -5,18 +5,18 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 {
-	// Token: 0x0200473E RID: 18238
+	// Token: 0x0200366F RID: 13935
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoMoveMonster : WuWaGoRole
 	{
-		// Token: 0x0602FA9F RID: 195231 RVA: 0x00B0C3A8 File Offset: 0x00B0A5A8
+		// Token: 0x06024269 RID: 148073 RVA: 0x00A3C374 File Offset: 0x00A3A574
 		public WuWaGoMoveMonster(Vector coordinate, Rotator rotator) : base(EWuWaGoRoleType.DiffractionEnemy, coordinate, rotator)
 		{
 		}
 
-		// Token: 0x17007716 RID: 30486
-		// (get) Token: 0x0602FAA0 RID: 195232 RVA: 0x00B0C3BE File Offset: 0x00B0A5BE
+		// Token: 0x170049D2 RID: 18898
+		// (get) Token: 0x0602426A RID: 148074 RVA: 0x00A3C38A File Offset: 0x00A3A58A
 		public override bool Actionable
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007717 RID: 30487
-		// (get) Token: 0x0602FAA1 RID: 195233 RVA: 0x00B0C3C1 File Offset: 0x00B0A5C1
+		// Token: 0x170049D3 RID: 18899
+		// (get) Token: 0x0602426B RID: 148075 RVA: 0x00A3C38D File Offset: 0x00A3A58D
 		public override bool MoveAbility
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007718 RID: 30488
-		// (get) Token: 0x0602FAA2 RID: 195234 RVA: 0x00B0C3C4 File Offset: 0x00B0A5C4
+		// Token: 0x170049D4 RID: 18900
+		// (get) Token: 0x0602426C RID: 148076 RVA: 0x00A3C390 File Offset: 0x00A3A590
 		public IReadOnlyList<WuWaGoGrid> Footprints
 		{
 			get
@@ -45,29 +45,29 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007719 RID: 30489
-		// (get) Token: 0x0602FAA3 RID: 195235 RVA: 0x00B0C3CC File Offset: 0x00B0A5CC
-		// (set) Token: 0x0602FAA4 RID: 195236 RVA: 0x00B0C3D4 File Offset: 0x00B0A5D4
+		// Token: 0x170049D5 RID: 18901
+		// (get) Token: 0x0602426D RID: 148077 RVA: 0x00A3C398 File Offset: 0x00A3A598
+		// (set) Token: 0x0602426E RID: 148078 RVA: 0x00A3C3A0 File Offset: 0x00A3A5A0
 		public bool IsTracking { get; private set; }
 
-		// Token: 0x1700771A RID: 30490
-		// (get) Token: 0x0602FAA5 RID: 195237 RVA: 0x00B0C3DD File Offset: 0x00B0A5DD
-		// (set) Token: 0x0602FAA6 RID: 195238 RVA: 0x00B0C3E5 File Offset: 0x00B0A5E5
+		// Token: 0x170049D6 RID: 18902
+		// (get) Token: 0x0602426F RID: 148079 RVA: 0x00A3C3A9 File Offset: 0x00A3A5A9
+		// (set) Token: 0x06024270 RID: 148080 RVA: 0x00A3C3B1 File Offset: 0x00A3A5B1
 		public int LastSeenPlayerGridId { get; private set; }
 
-		// Token: 0x1700771B RID: 30491
-		// (get) Token: 0x0602FAA7 RID: 195239 RVA: 0x00B0C3EE File Offset: 0x00B0A5EE
-		// (set) Token: 0x0602FAA8 RID: 195240 RVA: 0x00B0C3F6 File Offset: 0x00B0A5F6
+		// Token: 0x170049D7 RID: 18903
+		// (get) Token: 0x06024271 RID: 148081 RVA: 0x00A3C3BA File Offset: 0x00A3A5BA
+		// (set) Token: 0x06024272 RID: 148082 RVA: 0x00A3C3C2 File Offset: 0x00A3A5C2
 		public bool HasObservedPlayer { get; private set; }
 
-		// Token: 0x0602FAA9 RID: 195241 RVA: 0x00B0C3FF File Offset: 0x00B0A5FF
+		// Token: 0x06024273 RID: 148083 RVA: 0x00A3C3CB File Offset: 0x00A3A5CB
 		public void PushFootprint(WuWaGoGrid grid)
 		{
 			base.MarkRollbackDirty();
 			this.FootprintsInner.Add(grid);
 		}
 
-		// Token: 0x0602FAAA RID: 195242 RVA: 0x00B0C413 File Offset: 0x00B0A613
+		// Token: 0x06024274 RID: 148084 RVA: 0x00A3C3DF File Offset: 0x00A3A5DF
 		public void ClearFootprints()
 		{
 			if (this.FootprintsInner.Count == 0)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.FootprintsInner.Clear();
 		}
 
-		// Token: 0x0602FAAB RID: 195243 RVA: 0x00B0C434 File Offset: 0x00B0A634
+		// Token: 0x06024275 RID: 148085 RVA: 0x00A3C400 File Offset: 0x00A3A600
 		[NullableContext(2)]
 		public WuWaGoGrid ShiftFootprint()
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			return result;
 		}
 
-		// Token: 0x0602FAAC RID: 195244 RVA: 0x00B0C463 File Offset: 0x00B0A663
+		// Token: 0x06024276 RID: 148086 RVA: 0x00A3C42F File Offset: 0x00A3A62F
 		public void SetIsTracking(bool value)
 		{
 			if (this.IsTracking == value)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.IsTracking = value;
 		}
 
-		// Token: 0x0602FAAD RID: 195245 RVA: 0x00B0C47C File Offset: 0x00B0A67C
+		// Token: 0x06024277 RID: 148087 RVA: 0x00A3C448 File Offset: 0x00A3A648
 		public void SetLastSeenPlayerGridId(int value)
 		{
 			if (this.LastSeenPlayerGridId == value)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.LastSeenPlayerGridId = value;
 		}
 
-		// Token: 0x0602FAAE RID: 195246 RVA: 0x00B0C495 File Offset: 0x00B0A695
+		// Token: 0x06024278 RID: 148088 RVA: 0x00A3C461 File Offset: 0x00A3A661
 		public void SetHasObservedPlayer(bool value)
 		{
 			if (this.HasObservedPlayer == value)
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.HasObservedPlayer = value;
 		}
 
-		// Token: 0x0602FAAF RID: 195247 RVA: 0x00B0C4AE File Offset: 0x00B0A6AE
+		// Token: 0x06024279 RID: 148089 RVA: 0x00A3C47A File Offset: 0x00A3A67A
 		public override IRollbackCapture CaptureRollback()
 		{
 			return new MoveMonsterRollbackCapture(this);
 		}
 
-		// Token: 0x04019BCD RID: 105421
+		// Token: 0x0401427D RID: 82557
 		private readonly List<WuWaGoGrid> FootprintsInner = new List<WuWaGoGrid>();
 	}
 }

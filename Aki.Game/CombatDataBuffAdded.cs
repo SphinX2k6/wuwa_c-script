@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EDB RID: 11995
+// Token: 0x0200242E RID: 9262
 public class CombatDataBuffAdded : CombatDataBase
 {
-	// Token: 0x060199F5 RID: 104949 RVA: 0x006A7AF2 File Offset: 0x006A5CF2
+	// Token: 0x060172F4 RID: 94964 RVA: 0x006CDC96 File Offset: 0x006CBE96
 	public CombatDataBuffAdded(int attackerId, long buffId, int targetId = 0) : base(attackerId, targetId)
 	{
 		this.BuffId = buffId;
 	}
 
-	// Token: 0x060199F6 RID: 104950 RVA: 0x006A7B04 File Offset: 0x006A5D04
+	// Token: 0x060172F5 RID: 94965 RVA: 0x006CDCA8 File Offset: 0x006CBEA8
 	[NullableContext(1)]
 	public override string ParseToString()
 	{
@@ -25,6 +25,6 @@ public class CombatDataBuffAdded : CombatDataBase
 		});
 	}
 
-	// Token: 0x0400BFE6 RID: 49126
+	// Token: 0x0400C381 RID: 50049
 	public readonly long BuffId;
 }

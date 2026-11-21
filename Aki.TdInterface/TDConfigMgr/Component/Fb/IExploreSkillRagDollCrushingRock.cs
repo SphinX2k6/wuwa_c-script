@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB1 RID: 3249
+	// Token: 0x02000D93 RID: 3475
 	public class IExploreSkillRagDollCrushingRock : IExploreSkillInteractType
 	{
-		// Token: 0x06004A5D RID: 19037 RVA: 0x000BA28D File Offset: 0x000B848D
-		[NullableContext(1)]
+		// Token: 0x06004F0B RID: 20235 RVA: 0x000C4C9D File Offset: 0x000C2E9D
 		public static IExploreSkillRagDollCrushingRock Create(IExploreSkillRagDollCrushingRock? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016B8 RID: 5816
-		// (get) Token: 0x06004A5E RID: 19038 RVA: 0x000BA2AC File Offset: 0x000B84AC
+		// Token: 0x170017E0 RID: 6112
+		// (get) Token: 0x06004F0C RID: 20236 RVA: 0x000C4CBC File Offset: 0x000C2EBC
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A70 RID: 10864
+		// Token: 0x04002CEA RID: 11498
 		private IExploreSkillRagDollCrushingRock Instance;
 	}
 }

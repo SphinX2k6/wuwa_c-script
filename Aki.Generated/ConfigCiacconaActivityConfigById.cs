@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000161 RID: 353
+	// Token: 0x02000171 RID: 369
 	public class ConfigCiacconaActivityConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000847 RID: 2119 RVA: 0x00088428 File Offset: 0x00086628
+		// Token: 0x060008A7 RID: 2215 RVA: 0x0008DF84 File Offset: 0x0008C184
 		static ConfigCiacconaActivityConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCiacconaActivityConfigById.CreateStaticDefaultValue), new Action(ConfigCiacconaActivityConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000848 RID: 2120 RVA: 0x00088448 File Offset: 0x00086648
+		// Token: 0x060008A8 RID: 2216 RVA: 0x0008DFA4 File Offset: 0x0008C1A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCiacconaActivityConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000849 RID: 2121 RVA: 0x000884C7 File Offset: 0x000866C7
+		// Token: 0x060008A9 RID: 2217 RVA: 0x0008E023 File Offset: 0x0008C223
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCiacconaActivityConfigById.LogPair = null;
 			ConfigCiacconaActivityConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600084A RID: 2122 RVA: 0x000884D5 File Offset: 0x000866D5
+		// Token: 0x060008AA RID: 2218 RVA: 0x0008E031 File Offset: 0x0008C231
 		public static void Init()
 		{
 			ConfigCiacconaActivityConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigCiacconaActivityConfigById.HandleId, "db_ciacconagal.db", "select BinData from `CiacconaActivityConfig` where Id=?");
 		}
 
-		// Token: 0x0600084B RID: 2123 RVA: 0x000884F0 File Offset: 0x000866F0
+		// Token: 0x060008AB RID: 2219 RVA: 0x0008E04C File Offset: 0x0008C24C
 		public static CiacconaActivityConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCiacconaActivityConfigById.HandleId, ConfigCiacconaActivityConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CiacconaActivityConfig?(rootAsCiacconaActivityConfig);
 		}
 
-		// Token: 0x0400098B RID: 2443
+		// Token: 0x040009FB RID: 2555
 		private const string DB = "db_ciacconagal.db";
 
-		// Token: 0x0400098C RID: 2444
+		// Token: 0x040009FC RID: 2556
 		private const string FILE = "x.夏空活动.xlsx";
 
-		// Token: 0x0400098D RID: 2445
+		// Token: 0x040009FD RID: 2557
 		private const string TABLE = "CiacconaActivityConfig";
 
-		// Token: 0x0400098E RID: 2446
+		// Token: 0x040009FE RID: 2558
 		private const string COMMAND = "select BinData from `CiacconaActivityConfig` where Id=?";
 
-		// Token: 0x0400098F RID: 2447
+		// Token: 0x040009FF RID: 2559
 		private const string KEY_PREFIX = "CiacconaActivityConfigById";
 
-		// Token: 0x04000990 RID: 2448
+		// Token: 0x04000A00 RID: 2560
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000991 RID: 2449
+		// Token: 0x04000A01 RID: 2561
 		private static int HandleId;
 	}
 }

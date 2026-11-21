@@ -6,132 +6,132 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced
 {
-	// Token: 0x02006A99 RID: 27289
+	// Token: 0x02005BF6 RID: 23542
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlacedExploreInteractPoint : EntitySceneInteractPointBase, ISceneInteractTag, ISceneInteractDebugPoint
 	{
-		// Token: 0x06043CCD RID: 277709 RVA: 0x0109868C File Offset: 0x0109688C
+		// Token: 0x06039D1B RID: 236827 RVA: 0x0103CED4 File Offset: 0x0103B0D4
 		public PlacedExploreInteractPoint(PlacedExploreInteractSkillPointContext Context)
 		{
 			this.Context = Context;
 			this.InteractTagId = Context.GetInteractTagId().GetValueOrDefault();
 		}
 
-		// Token: 0x06043CCE RID: 277710 RVA: 0x010986C5 File Offset: 0x010968C5
+		// Token: 0x06039D1C RID: 236828 RVA: 0x0103CF0D File Offset: 0x0103B10D
 		public override ESceneInteractSearchStrategyType? GetPointStrategyType()
 		{
 			return new ESceneInteractSearchStrategyType?(ESceneInteractSearchStrategyType.PlacedExploreInteractPoint);
 		}
 
-		// Token: 0x06043CCF RID: 277711 RVA: 0x010986CD File Offset: 0x010968CD
+		// Token: 0x06039D1D RID: 236829 RVA: 0x0103CF15 File Offset: 0x0103B115
 		public override ESceneInteractType GetInteractType()
 		{
 			return this.Context.GetInteractType();
 		}
 
-		// Token: 0x06043CD0 RID: 277712 RVA: 0x010986DA File Offset: 0x010968DA
+		// Token: 0x06039D1E RID: 236830 RVA: 0x0103CF22 File Offset: 0x0103B122
 		public override void Clear()
 		{
 			this.Context.Dispose();
 			base.Clear();
 		}
 
-		// Token: 0x06043CD1 RID: 277713 RVA: 0x010986ED File Offset: 0x010968ED
+		// Token: 0x06039D1F RID: 236831 RVA: 0x0103CF35 File Offset: 0x0103B135
 		public override EntityHandle GetEntityHandle()
 		{
 			return this.Context.GetEntityHandle();
 		}
 
-		// Token: 0x06043CD2 RID: 277714 RVA: 0x010986FA File Offset: 0x010968FA
+		// Token: 0x06039D20 RID: 236832 RVA: 0x0103CF42 File Offset: 0x0103B142
 		[NullableContext(2)]
 		public override AActor GetOwnerActor()
 		{
 			return this.Context.GetOwnerActor();
 		}
 
-		// Token: 0x06043CD3 RID: 277715 RVA: 0x01098707 File Offset: 0x01096907
+		// Token: 0x06039D21 RID: 236833 RVA: 0x0103CF4F File Offset: 0x0103B14F
 		[NullableContext(2)]
 		public override Vector GetLocation()
 		{
 			return this.LandingResolver.GetResolvedLocation() ?? this.Context.GetLocation();
 		}
 
-		// Token: 0x06043CD4 RID: 277716 RVA: 0x01098723 File Offset: 0x01096923
+		// Token: 0x06039D22 RID: 236834 RVA: 0x0103CF6B File Offset: 0x0103B16B
 		public string BuildLockWeightDebugText(Vector charLoc)
 		{
 			return this.Context.BuildLockWeightDebugText(this.GetLocation(), charLoc);
 		}
 
-		// Token: 0x06043CD5 RID: 277717 RVA: 0x01098737 File Offset: 0x01096937
+		// Token: 0x06039D23 RID: 236835 RVA: 0x0103CF7F File Offset: 0x0103B17F
 		public bool CheckEntityCondition()
 		{
 			return this.Context.CheckEntityCondition(this.GetOwnerActor());
 		}
 
-		// Token: 0x06043CD6 RID: 277718 RVA: 0x0109874A File Offset: 0x0109694A
+		// Token: 0x06039D24 RID: 236836 RVA: 0x0103CF92 File Offset: 0x0103B192
 		public double GetLockWeight(Vector charLoc)
 		{
 			return this.Context.GetLockWeight(this.GetLocation(), charLoc);
 		}
 
-		// Token: 0x06043CD7 RID: 277719 RVA: 0x0109875E File Offset: 0x0109695E
+		// Token: 0x06039D25 RID: 236837 RVA: 0x0103CFA6 File Offset: 0x0103B1A6
 		public bool UseTwoPhaseBlockCheck()
 		{
 			return this.Context.UseTwoPhaseBlockCheck();
 		}
 
-		// Token: 0x06043CD8 RID: 277720 RVA: 0x0109876B File Offset: 0x0109696B
+		// Token: 0x06039D26 RID: 236838 RVA: 0x0103CFB3 File Offset: 0x0103B1B3
 		public int GetInteractTagId()
 		{
 			return this.InteractTagId;
 		}
 
-		// Token: 0x06043CD9 RID: 277721 RVA: 0x01098773 File Offset: 0x01096973
+		// Token: 0x06039D27 RID: 236839 RVA: 0x0103CFBB File Offset: 0x0103B1BB
 		public int GetEnableRangeId()
 		{
 			return this.Context.GetEnableRangeId();
 		}
 
-		// Token: 0x06043CDA RID: 277722 RVA: 0x01098780 File Offset: 0x01096980
+		// Token: 0x06039D28 RID: 236840 RVA: 0x0103CFC8 File Offset: 0x0103B1C8
 		public int GetDisableRangeId()
 		{
 			return this.Context.GetDisableRangeId();
 		}
 
-		// Token: 0x06043CDB RID: 277723 RVA: 0x0109878D File Offset: 0x0109698D
+		// Token: 0x06039D29 RID: 236841 RVA: 0x0103CFD5 File Offset: 0x0103B1D5
 		public bool CheckPointCondition()
 		{
 			AActor ownerActor = this.GetOwnerActor();
 			return ownerActor != null && ownerActor.IsValid();
 		}
 
-		// Token: 0x06043CDC RID: 277724 RVA: 0x010987A9 File Offset: 0x010969A9
+		// Token: 0x06039D2A RID: 236842 RVA: 0x0103CFF1 File Offset: 0x0103B1F1
 		[NullableContext(2)]
 		public Vector GetRaycastDestLocation()
 		{
 			return this.Context.GetRaycastDestLocation() ?? this.GetLocation();
 		}
 
-		// Token: 0x06043CDD RID: 277725 RVA: 0x010987C0 File Offset: 0x010969C0
+		// Token: 0x06039D2B RID: 236843 RVA: 0x0103D008 File Offset: 0x0103B208
 		public void ClearResolvedSplineLanding()
 		{
 			this.LandingResolver.Clear();
 		}
 
-		// Token: 0x06043CDE RID: 277726 RVA: 0x010987CD File Offset: 0x010969CD
+		// Token: 0x06039D2C RID: 236844 RVA: 0x0103D015 File Offset: 0x0103B215
 		public void TryResolveSplineLanding(ISceneInteractSearchParams @params)
 		{
 			this.LandingResolver.TryResolve(this.Context.TryGetLandingSpline(), this.Context.GetLocation(), @params, this.Context.GetOwnerActor());
 		}
 
-		// Token: 0x040236C2 RID: 145090
+		// Token: 0x0401E8B4 RID: 125108
 		private readonly PlacedExploreInteractSkillPointContext Context;
 
-		// Token: 0x040236C3 RID: 145091
+		// Token: 0x0401E8B5 RID: 125109
 		private readonly int InteractTagId;
 
-		// Token: 0x040236C4 RID: 145092
+		// Token: 0x0401E8B6 RID: 125110
 		private readonly SplineLandingResolver LandingResolver = new SplineLandingResolver();
 	}
 }

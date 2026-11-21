@@ -8,15 +8,15 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000085 RID: 133
+	// Token: 0x0200006A RID: 106
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.SoftObject, PropertiesSize = 48)]
 	public class FSoftObjectPtr : UnrealProxyObject, IEqualityOperators<FSoftObjectPtr, FSoftObjectPtr, bool>, IEquatable<FSoftObjectPtr>, IUnrealStructProxy<FSoftObjectPtr>
 	{
-		// Token: 0x170004BD RID: 1213
-		// (get) Token: 0x06000F08 RID: 3848 RVA: 0x0001691C File Offset: 0x00014B1C
+		// Token: 0x170000C5 RID: 197
+		// (get) Token: 0x06000A9B RID: 2715 RVA: 0x00011650 File Offset: 0x0000F850
 		[Nullable(0)]
 		private unsafe FSoftObjectPtr.FSoftObjectPtrView* View
 		{
@@ -27,73 +27,73 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000F09 RID: 3849 RVA: 0x00016924 File Offset: 0x00014B24
+		// Token: 0x06000A9C RID: 2716 RVA: 0x00011658 File Offset: 0x0000F858
 		public FSoftObjectPtr()
 		{
 		}
 
-		// Token: 0x06000F0A RID: 3850 RVA: 0x0001692C File Offset: 0x00014B2C
+		// Token: 0x06000A9D RID: 2717 RVA: 0x00011660 File Offset: 0x0000F860
 		public FSoftObjectPtr(IntPtr OtherNativePtr, bool bWithMoveAssign = false, bool bWithCopyAssignIfCannotMove = true) : base(OtherNativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06000F0B RID: 3851 RVA: 0x00016937 File Offset: 0x00014B37
+		// Token: 0x06000A9E RID: 2718 RVA: 0x0001166B File Offset: 0x0000F86B
 		[NullableContext(2)]
 		public FSoftObjectPtr(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06000F0C RID: 3852 RVA: 0x00016941 File Offset: 0x00014B41
+		// Token: 0x06000A9F RID: 2719 RVA: 0x00011675 File Offset: 0x0000F875
 		public FSoftObjectPtr(UClassStackOnlyPtr Class)
 		{
 			this.Set(Class);
 		}
 
-		// Token: 0x06000F0D RID: 3853 RVA: 0x00016950 File Offset: 0x00014B50
+		// Token: 0x06000AA0 RID: 2720 RVA: 0x00011684 File Offset: 0x0000F884
 		[NullableContext(2)]
 		public FSoftObjectPtr(UnrealUObject Object)
 		{
 			this.Set(Object);
 		}
 
-		// Token: 0x06000F0E RID: 3854 RVA: 0x0001695F File Offset: 0x00014B5F
+		// Token: 0x06000AA1 RID: 2721 RVA: 0x00011693 File Offset: 0x0000F893
 		public FSoftObjectPtr(string ObjectPath)
 		{
 			this.Set(new FSoftObjectPath(ObjectPath));
 		}
 
-		// Token: 0x06000F0F RID: 3855 RVA: 0x00016973 File Offset: 0x00014B73
+		// Token: 0x06000AA2 RID: 2722 RVA: 0x000116A7 File Offset: 0x0000F8A7
 		public FSoftObjectPtr(FSoftObjectPath ObjectPath)
 		{
 			this.Set(ObjectPath);
 		}
 
-		// Token: 0x06000F10 RID: 3856 RVA: 0x00016982 File Offset: 0x00014B82
+		// Token: 0x06000AA3 RID: 2723 RVA: 0x000116B6 File Offset: 0x0000F8B6
 		public new bool IsValid()
 		{
 			return base.IsValid() && this.Get() != null;
 		}
 
-		// Token: 0x06000F11 RID: 3857 RVA: 0x00016997 File Offset: 0x00014B97
+		// Token: 0x06000AA4 RID: 2724 RVA: 0x000116CB File Offset: 0x0000F8CB
 		[NullableContext(2)]
 		public UnrealUObject Get()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer(this.GetNativePtr());
 		}
 
-		// Token: 0x06000F12 RID: 3858 RVA: 0x000169A4 File Offset: 0x00014BA4
+		// Token: 0x06000AA5 RID: 2725 RVA: 0x000116D8 File Offset: 0x0000F8D8
 		public IntPtr GetNativePtr()
 		{
 			return FSoftObjectPtr.Get(this._NativePtr);
 		}
 
-		// Token: 0x06000F13 RID: 3859 RVA: 0x000169B1 File Offset: 0x00014BB1
+		// Token: 0x06000AA6 RID: 2726 RVA: 0x000116E5 File Offset: 0x0000F8E5
 		public unsafe FSoftObjectPath ToSoftObjectPath()
 		{
 			return this.View->SoftObjectPath;
 		}
 
-		// Token: 0x06000F14 RID: 3860 RVA: 0x000169C4 File Offset: 0x00014BC4
+		// Token: 0x06000AA7 RID: 2727 RVA: 0x000116F8 File Offset: 0x0000F8F8
 		public string ToAssetPathName()
 		{
 			FName assetPathName = this.GetAssetPathName();
@@ -104,19 +104,19 @@ namespace UnrealEngine
 			return string.Empty;
 		}
 
-		// Token: 0x06000F15 RID: 3861 RVA: 0x000169F8 File Offset: 0x00014BF8
+		// Token: 0x06000AA8 RID: 2728 RVA: 0x0001172C File Offset: 0x0000F92C
 		public unsafe FName GetAssetPathName()
 		{
 			return this.View->SoftObjectPath.AssetPathName;
 		}
 
-		// Token: 0x06000F16 RID: 3862 RVA: 0x00016A0A File Offset: 0x00014C0A
+		// Token: 0x06000AA9 RID: 2729 RVA: 0x0001173E File Offset: 0x0000F93E
 		public string GetAssetFullPath()
 		{
 			return this.ToString();
 		}
 
-		// Token: 0x06000F17 RID: 3863 RVA: 0x00016A14 File Offset: 0x00014C14
+		// Token: 0x06000AAA RID: 2730 RVA: 0x00011748 File Offset: 0x0000F948
 		[NullableContext(2)]
 		public unsafe static bool operator ==(FSoftObjectPtr Left, FSoftObjectPtr Right)
 		{
@@ -141,21 +141,21 @@ namespace UnrealEngine
 			return view.SoftObjectPath == view2->SoftObjectPath;
 		}
 
-		// Token: 0x06000F18 RID: 3864 RVA: 0x00016A78 File Offset: 0x00014C78
+		// Token: 0x06000AAB RID: 2731 RVA: 0x000117AC File Offset: 0x0000F9AC
 		[NullableContext(2)]
 		public static bool operator !=(FSoftObjectPtr Left, FSoftObjectPtr Right)
 		{
 			return !(Left == Right);
 		}
 
-		// Token: 0x06000F19 RID: 3865 RVA: 0x00016A84 File Offset: 0x00014C84
+		// Token: 0x06000AAC RID: 2732 RVA: 0x000117B8 File Offset: 0x0000F9B8
 		[NullableContext(2)]
 		public bool Equals(FSoftObjectPtr Other)
 		{
 			return this == Other;
 		}
 
-		// Token: 0x06000F1A RID: 3866 RVA: 0x00016A90 File Offset: 0x00014C90
+		// Token: 0x06000AAD RID: 2733 RVA: 0x000117C4 File Offset: 0x0000F9C4
 		[NullableContext(2)]
 		public override bool Equals(object Obj)
 		{
@@ -163,7 +163,7 @@ namespace UnrealEngine
 			return fsoftObjectPtr != null && this.Equals(fsoftObjectPtr);
 		}
 
-		// Token: 0x06000F1B RID: 3867 RVA: 0x00016AB0 File Offset: 0x00014CB0
+		// Token: 0x06000AAE RID: 2734 RVA: 0x000117E4 File Offset: 0x0000F9E4
 		public unsafe override string ToString()
 		{
 			if (this._NativePtr == IntPtr.Zero)
@@ -173,65 +173,65 @@ namespace UnrealEngine
 			return this.View->SoftObjectPath.ToString();
 		}
 
-		// Token: 0x06000F1C RID: 3868 RVA: 0x00016ADB File Offset: 0x00014CDB
+		// Token: 0x06000AAF RID: 2735 RVA: 0x0001180F File Offset: 0x0000FA0F
 		public unsafe override int GetHashCode()
 		{
 			return this.View->SoftObjectPath.GetHashCode();
 		}
 
-		// Token: 0x06000F1D RID: 3869 RVA: 0x00016AF3 File Offset: 0x00014CF3
+		// Token: 0x06000AB0 RID: 2736 RVA: 0x00011827 File Offset: 0x0000FA27
 		[NullableContext(2)]
 		public void Set(UnrealUObject UObject)
 		{
 			FSoftObjectPtr.SetFromUObject(base.NativePtr, (UObject != null) ? UObject.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06000F1E RID: 3870 RVA: 0x00016B10 File Offset: 0x00014D10
+		// Token: 0x06000AB1 RID: 2737 RVA: 0x00011844 File Offset: 0x0000FA44
 		public void Set(UClassStackOnlyPtr UClass)
 		{
 			FSoftObjectPtr.SetFromUObject(base.NativePtr, UClass.NativePtr);
 		}
 
-		// Token: 0x06000F1F RID: 3871 RVA: 0x00016B24 File Offset: 0x00014D24
+		// Token: 0x06000AB2 RID: 2738 RVA: 0x00011858 File Offset: 0x0000FA58
 		public void Set(FSoftObjectPath ObjectPath)
 		{
 			FSoftObjectPtr.SetFromSoftObjectPath(base.NativePtr, ObjectPath.NativePtr);
 		}
 
-		// Token: 0x06000F20 RID: 3872 RVA: 0x00016B37 File Offset: 0x00014D37
+		// Token: 0x06000AB3 RID: 2739 RVA: 0x0001186B File Offset: 0x0000FA6B
 		public void Reset()
 		{
 			FSoftObjectPtr.Reset(base.NativePtr);
 		}
 
-		// Token: 0x06000F21 RID: 3873 RVA: 0x00016B44 File Offset: 0x00014D44
+		// Token: 0x06000AB4 RID: 2740 RVA: 0x00011878 File Offset: 0x0000FA78
 		public void ResetWeakPtr()
 		{
 			FSoftObjectPtr.ResetWeakPtr(base.NativePtr);
 		}
 
-		// Token: 0x06000F22 RID: 3874
+		// Token: 0x06000AB5 RID: 2741
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		internal static extern IntPtr Get(IntPtr Self);
 
-		// Token: 0x06000F23 RID: 3875
+		// Token: 0x06000AB6 RID: 2742
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetFromUObject(IntPtr Self, IntPtr UObject);
 
-		// Token: 0x06000F24 RID: 3876
+		// Token: 0x06000AB7 RID: 2743
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void SetFromSoftObjectPath(IntPtr Self, IntPtr ObjectPath);
 
-		// Token: 0x06000F25 RID: 3877
+		// Token: 0x06000AB8 RID: 2744
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Reset(IntPtr Self);
 
-		// Token: 0x06000F26 RID: 3878
+		// Token: 0x06000AB9 RID: 2745
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void ResetWeakPtr(IntPtr Self);
 
-		// Token: 0x170004BE RID: 1214
-		// (get) Token: 0x06000F27 RID: 3879 RVA: 0x00016B51 File Offset: 0x00014D51
+		// Token: 0x170000C6 RID: 198
+		// (get) Token: 0x06000ABA RID: 2746 RVA: 0x00011885 File Offset: 0x0000FA85
 		public static int Size
 		{
 			get
@@ -240,8 +240,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004BF RID: 1215
-		// (get) Token: 0x06000F28 RID: 3880 RVA: 0x00016B55 File Offset: 0x00014D55
+		// Token: 0x170000C7 RID: 199
+		// (get) Token: 0x06000ABB RID: 2747 RVA: 0x00011889 File Offset: 0x0000FA89
 		public static int MinAlignment
 		{
 			get
@@ -250,35 +250,35 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000F29 RID: 3881 RVA: 0x00016B58 File Offset: 0x00014D58
+		// Token: 0x06000ABC RID: 2748 RVA: 0x0001188C File Offset: 0x0000FA8C
 		public static FSoftObjectPtr Create(IntPtr Src)
 		{
 			return new FSoftObjectPtr(Src, false, true);
 		}
 
-		// Token: 0x06000F2A RID: 3882 RVA: 0x00016B62 File Offset: 0x00014D62
+		// Token: 0x06000ABD RID: 2749 RVA: 0x00011896 File Offset: 0x0000FA96
 		public static FSoftObjectPtr Create(IntPtr Src, [Nullable(2)] UnrealObject MemoryOwner)
 		{
 			return new FSoftObjectPtr(Src, MemoryOwner);
 		}
 
-		// Token: 0x06000F2B RID: 3883
+		// Token: 0x06000ABE RID: 2750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void NativeConstruct(IntPtr Pointer, int ArrDim = 1);
 
-		// Token: 0x06000F2C RID: 3884
+		// Token: 0x06000ABF RID: 2751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void NativeDestruct(IntPtr Pointer, int ArrDim = 1);
 
-		// Token: 0x06000F2D RID: 3885
+		// Token: 0x06000AC0 RID: 2752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void NativeCopy(IntPtr Dest, IntPtr Src, int ArrDim = 1);
 
-		// Token: 0x06000F2E RID: 3886
+		// Token: 0x06000AC1 RID: 2753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern int NativeFindIndex(IntPtr Pointer, int ArrDim, IntPtr Value);
 
-		// Token: 0x06000F2F RID: 3887 RVA: 0x00016B6B File Offset: 0x00014D6B
+		// Token: 0x06000AC2 RID: 2754 RVA: 0x0001189F File Offset: 0x0000FA9F
 		protected unsafe override IntPtr AllocNativePtr()
 		{
 			void* ptr = BuiltinUtils.Malloc((UIntPtr)((IntPtr)FSoftObjectPtr.Size), (uint)FSoftObjectPtr.MinAlignment);
@@ -286,15 +286,15 @@ namespace UnrealEngine
 			return ptr;
 		}
 
-		// Token: 0x06000F30 RID: 3888 RVA: 0x00016B84 File Offset: 0x00014D84
+		// Token: 0x06000AC3 RID: 2755 RVA: 0x000118B8 File Offset: 0x0000FAB8
 		protected override void DeallocNativePtr()
 		{
 			FSoftObjectPtr.NativeDestruct(this._NativePtr, 1);
 			BuiltinUtils.Free(this._NativePtr);
 		}
 
-		// Token: 0x170004C0 RID: 1216
-		// (get) Token: 0x06000F31 RID: 3889 RVA: 0x00016B9D File Offset: 0x00014D9D
+		// Token: 0x170000C8 RID: 200
+		// (get) Token: 0x06000AC4 RID: 2756 RVA: 0x000118D1 File Offset: 0x0000FAD1
 		public override bool AllowMoveAssign
 		{
 			get
@@ -303,8 +303,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004C1 RID: 1217
-		// (get) Token: 0x06000F32 RID: 3890 RVA: 0x00016BA0 File Offset: 0x00014DA0
+		// Token: 0x170000C9 RID: 201
+		// (get) Token: 0x06000AC5 RID: 2757 RVA: 0x000118D4 File Offset: 0x0000FAD4
 		public override bool AllowCopyAssign
 		{
 			get
@@ -313,38 +313,38 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000F33 RID: 3891 RVA: 0x00016BA3 File Offset: 0x00014DA3
+		// Token: 0x06000AC6 RID: 2758 RVA: 0x000118D7 File Offset: 0x0000FAD7
 		public override void CopyAssign(IntPtr FromNativePtr)
 		{
 			FSoftObjectPtr.NativeCopy(this._NativePtr, FromNativePtr, 1);
 		}
 
-		// Token: 0x06000F34 RID: 3892 RVA: 0x00016BB2 File Offset: 0x00014DB2
+		// Token: 0x06000AC7 RID: 2759 RVA: 0x000118E6 File Offset: 0x0000FAE6
 		public override void CopyTo(IntPtr DestPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr))
 		{
 			FSoftObjectPtr.NativeCopy(DestPtr, this._NativePtr, 1);
 		}
 
-		// Token: 0x040001D4 RID: 468
+		// Token: 0x0400018D RID: 397
 		public const int __Size = 48;
 
-		// Token: 0x040001D5 RID: 469
+		// Token: 0x0400018E RID: 398
 		public const int __Pack = 8;
 
-		// Token: 0x02002B26 RID: 11046
+		// Token: 0x020008D4 RID: 2260
 		[NullableContext(0)]
 		[StructLayout(LayoutKind.Explicit, Pack = 8, Size = 48)]
 		internal struct FSoftObjectPtrView
 		{
-			// Token: 0x0401637C RID: 91004
+			// Token: 0x04005792 RID: 22418
 			[FieldOffset(0)]
 			internal readonly FWeakObjectPtr WeakObjectPtr;
 
-			// Token: 0x0401637D RID: 91005
+			// Token: 0x04005793 RID: 22419
 			[FieldOffset(8)]
 			internal readonly int TagAtLastTest;
 
-			// Token: 0x0401637E RID: 91006
+			// Token: 0x04005794 RID: 22420
 			[FieldOffset(16)]
 			internal readonly FSoftObjectPathStruct SoftObjectPath;
 		}

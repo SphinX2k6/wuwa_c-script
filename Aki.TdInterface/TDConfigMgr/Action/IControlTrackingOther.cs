@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200193A RID: 6458
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AC3 RID: 6851
 	public class IControlTrackingOther : IControlTrackingType
 	{
-		// Token: 0x06008A75 RID: 35445 RVA: 0x001462A0 File Offset: 0x001444A0
+		// Token: 0x060091A1 RID: 37281 RVA: 0x00155BE0 File Offset: 0x00153DE0
 		private IControlTrackingOther_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A76 RID: 35446 RVA: 0x001462D8 File Offset: 0x001444D8
+		// Token: 0x060091A2 RID: 37282 RVA: 0x00155C18 File Offset: 0x00153E18
 		public static IControlTrackingOther Create([Nullable(2)] IControlTrackingOther instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A77 RID: 35447 RVA: 0x001462EB File Offset: 0x001444EB
+		// Token: 0x060091A3 RID: 37283 RVA: 0x00155C2B File Offset: 0x00153E2B
 		public static IControlTrackingOther CreateFromSetValue([Nullable(2)] IControlTrackingOther_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A78 RID: 35448 RVA: 0x001462FE File Offset: 0x001444FE
+		// Token: 0x060091A4 RID: 37284 RVA: 0x00155C3E File Offset: 0x00153E3E
 		public new IControlTrackingOther_SetValue ToSetValue()
 		{
 			return new IControlTrackingOther_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CB8 RID: 11448
-		// (get) Token: 0x06008A79 RID: 35449 RVA: 0x0014631D File Offset: 0x0014451D
-		// (set) Token: 0x06008A7A RID: 35450 RVA: 0x00146348 File Offset: 0x00144548
+		// Token: 0x17002EB8 RID: 11960
+		// (get) Token: 0x060091A5 RID: 37285 RVA: 0x00155C5D File Offset: 0x00153E5D
+		// (set) Token: 0x060091A6 RID: 37286 RVA: 0x00155C88 File Offset: 0x00153E88
 		public override EControlTrackingType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CB9 RID: 11449
-		// (get) Token: 0x06008A7B RID: 35451 RVA: 0x00146356 File Offset: 0x00144556
-		// (set) Token: 0x06008A7C RID: 35452 RVA: 0x0014637D File Offset: 0x0014457D
+		// Token: 0x17002EB9 RID: 11961
+		// (get) Token: 0x060091A7 RID: 37287 RVA: 0x00155C96 File Offset: 0x00153E96
+		// (set) Token: 0x060091A8 RID: 37288 RVA: 0x00155CBD File Offset: 0x00153EBD
 		public virtual List<int> Entities
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400568D RID: 22157
+		// Token: 0x04005ADD RID: 23261
 		[Nullable(2)]
 		protected new IControlTrackingOther FbInstance;
 
-		// Token: 0x0400568E RID: 22158
+		// Token: 0x04005ADE RID: 23262
 		[Nullable(2)]
 		protected new IControlTrackingOther_SetValue PocoInterface;
 	}

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C80 RID: 3200
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D5F RID: 3423
 	public class IPointAttachTarget : IAttachTarget
 	{
-		// Token: 0x06004946 RID: 18758 RVA: 0x000B7D0F File Offset: 0x000B5F0F
+		// Token: 0x06004DE5 RID: 19941 RVA: 0x000C2513 File Offset: 0x000C0713
 		public static IPointAttachTarget Create(IPointAttachTarget? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001603 RID: 5635
-		// (get) Token: 0x06004947 RID: 18759 RVA: 0x000B7D2E File Offset: 0x000B5F2E
+		// Token: 0x17001722 RID: 5922
+		// (get) Token: 0x06004DE6 RID: 19942 RVA: 0x000C2532 File Offset: 0x000C0732
 		public override EAttachType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001604 RID: 5636
-		// (get) Token: 0x06004948 RID: 18760 RVA: 0x000B7D3B File Offset: 0x000B5F3B
+		// Token: 0x17001723 RID: 5923
+		// (get) Token: 0x06004DE7 RID: 19943 RVA: 0x000C253F File Offset: 0x000C073F
 		public virtual VectorInfo RelativePoint
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029CD RID: 10701
+		// Token: 0x04002C3A RID: 11322
 		private IPointAttachTarget Instance;
 
-		// Token: 0x040029CE RID: 10702
+		// Token: 0x04002C3B RID: 11323
 		[Nullable(2)]
 		private VectorInfo _RelativePointCache;
 
-		// Token: 0x040029CF RID: 10703
+		// Token: 0x04002C3C RID: 11324
 		private bool _RelativePointInited;
 	}
 }

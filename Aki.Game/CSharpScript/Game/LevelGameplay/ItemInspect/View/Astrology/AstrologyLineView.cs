@@ -4,17 +4,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DEC RID: 28140
+	// Token: 0x02005F6B RID: 24427
 	public class AstrologyLineView : UiPanelBase
 	{
-		// Token: 0x06044A8A RID: 281226 RVA: 0x010F2CB2 File Offset: 0x010F0EB2
+		// Token: 0x0603ABEE RID: 240622 RVA: 0x0109CEFE File Offset: 0x0109B0FE
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.SequenceEnd));
 		}
 
-		// Token: 0x06044A8B RID: 281227 RVA: 0x010F2CDC File Offset: 0x010F0EDC
+		// Token: 0x0603ABEF RID: 240623 RVA: 0x0109CF28 File Offset: 0x0109B128
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06044A8C RID: 281228 RVA: 0x010F2CF6 File Offset: 0x010F0EF6
+		// Token: 0x0603ABF0 RID: 240624 RVA: 0x0109CF42 File Offset: 0x0109B142
 		[NullableContext(1)]
 		private void SequenceEnd(string sequenceName)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A8D RID: 281229 RVA: 0x010F2D0C File Offset: 0x010F0F0C
+		// Token: 0x0603ABF1 RID: 240625 RVA: 0x0109CF58 File Offset: 0x0109B158
 		public void SetLineActive(bool isActive)
 		{
 			if (isActive == this.IsActive)
@@ -53,11 +53,11 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer.PlaySequencePurely("Close", false, false);
 		}
 
-		// Token: 0x04023B85 RID: 146309
+		// Token: 0x0401EE27 RID: 126503
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023B86 RID: 146310
+		// Token: 0x0401EE28 RID: 126504
 		private bool IsActive;
 	}
 }

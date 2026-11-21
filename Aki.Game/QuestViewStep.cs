@@ -6,15 +6,15 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002668 RID: 9832
+// Token: 0x02001B53 RID: 6995
 public class QuestViewStep : StepBaseItem
 {
-	// Token: 0x0601420E RID: 82446 RVA: 0x00515D0F File Offset: 0x00513F0F
+	// Token: 0x060116F0 RID: 71408 RVA: 0x005249C7 File Offset: 0x00522BC7
 	public QuestViewStep(EMissionItemView viewId, int stepId) : base(viewId, stepId)
 	{
 	}
 
-	// Token: 0x0601420F RID: 82447 RVA: 0x00515D24 File Offset: 0x00513F24
+	// Token: 0x060116F1 RID: 71409 RVA: 0x005249DC File Offset: 0x00522BDC
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -23,7 +23,7 @@ public class QuestViewStep : StepBaseItem
 		this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(4, typeof(UUIItem)));
 	}
 
-	// Token: 0x06014210 RID: 82448 RVA: 0x00515D88 File Offset: 0x00513F88
+	// Token: 0x060116F2 RID: 71410 RVA: 0x00524A40 File Offset: 0x00522C40
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestViewStep.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -34,12 +34,12 @@ public class QuestViewStep : StepBaseItem
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014211 RID: 82449 RVA: 0x00515DCB File Offset: 0x00513FCB
+	// Token: 0x060116F3 RID: 71411 RVA: 0x00524A83 File Offset: 0x00522C83
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x06014212 RID: 82450 RVA: 0x00515DD0 File Offset: 0x00513FD0
+	// Token: 0x060116F4 RID: 71412 RVA: 0x00524A88 File Offset: 0x00522C88
 	[NullableContext(2)]
 	public UniTask Update(BehaviorTreeViewShowData showData)
 	{
@@ -52,7 +52,7 @@ public class QuestViewStep : StepBaseItem
 		return <Update>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014213 RID: 82451 RVA: 0x00515E1C File Offset: 0x0051401C
+	// Token: 0x060116F5 RID: 71413 RVA: 0x00524AD4 File Offset: 0x00522CD4
 	[return: TupleElementNames(new string[]
 	{
 		"Count",
@@ -74,20 +74,20 @@ public class QuestViewStep : StepBaseItem
 		return <UpdateChildSteps>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040097AE RID: 38830
+	// Token: 0x04009906 RID: 39174
 	[Nullable(1)]
 	private readonly List<QuestViewChildStep> ChildSteps = new List<QuestViewChildStep>();
 
-	// Token: 0x02008CAC RID: 36012
+	// Token: 0x02007E35 RID: 32309
 	private static class EChildComponent
 	{
-		// Token: 0x0402DA86 RID: 187014
+		// Token: 0x04028D9D RID: 167325
 		public const int ChildStep = 2;
 
-		// Token: 0x0402DA87 RID: 187015
+		// Token: 0x04028D9E RID: 167326
 		public const int HorizontalNode = 3;
 
-		// Token: 0x0402DA88 RID: 187016
+		// Token: 0x04028D9F RID: 167327
 		public const int PanelLine = 4;
 	}
 }

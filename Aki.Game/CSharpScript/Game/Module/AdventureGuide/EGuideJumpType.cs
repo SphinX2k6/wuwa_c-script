@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EC7 RID: 24263
+	// Token: 0x02004EAC RID: 20140
 	public enum EGuideJumpType
 	{
-		// Token: 0x04020344 RID: 131908
+		// Token: 0x0401AE0B RID: 110091
 		Mission,
-		// Token: 0x04020345 RID: 131909
+		// Token: 0x0401AE0C RID: 110092
 		Map,
-		// Token: 0x04020346 RID: 131910
+		// Token: 0x0401AE0D RID: 110093
 		View,
-		// Token: 0x04020347 RID: 131911
+		// Token: 0x0401AE0E RID: 110094
 		RoleTabView,
-		// Token: 0x04020348 RID: 131912
+		// Token: 0x0401AE0F RID: 110095
 		CalabashTabView,
-		// Token: 0x04020349 RID: 131913
+		// Token: 0x0401AE10 RID: 110096
 		ShopTabView,
-		// Token: 0x0402034A RID: 131914
+		// Token: 0x0401AE11 RID: 110097
 		ActiveView,
-		// Token: 0x0402034B RID: 131915
+		// Token: 0x0401AE12 RID: 110098
 		AdventureTabView,
-		// Token: 0x0402034C RID: 131916
+		// Token: 0x0401AE13 RID: 110099
 		DisposableChallengeTabView
 	}
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000535 RID: 1333
+	// Token: 0x02000520 RID: 1312
 	[NetMessage(EMessageId.FeiXuePreheatInfoUpdateNotify)]
 	public sealed class FeiXuePreheatInfoUpdateNotify : IMessage<FeiXuePreheatInfoUpdateNotify>, IMessage, IEquatable<FeiXuePreheatInfoUpdateNotify>, IDeepCloneable<FeiXuePreheatInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06007CD2 RID: 31954 RVA: 0x0012E3C1 File Offset: 0x0012C5C1
+		// Token: 0x06007B6A RID: 31594 RVA: 0x0012B7BD File Offset: 0x001299BD
 		[NullableContext(1)]
 		public static FeiXuePreheatInfoUpdateNotify Create()
 		{
 			return new FeiXuePreheatInfoUpdateNotify();
 		}
 
-		// Token: 0x17001839 RID: 6201
-		// (get) Token: 0x06007CD3 RID: 31955 RVA: 0x0012E3C8 File Offset: 0x0012C5C8
+		// Token: 0x170017EC RID: 6124
+		// (get) Token: 0x06007B6B RID: 31595 RVA: 0x0012B7C4 File Offset: 0x001299C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700183A RID: 6202
-		// (get) Token: 0x06007CD4 RID: 31956 RVA: 0x0012E3CB File Offset: 0x0012C5CB
+		// Token: 0x170017ED RID: 6125
+		// (get) Token: 0x06007B6C RID: 31596 RVA: 0x0012B7C7 File Offset: 0x001299C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007CD5 RID: 31957 RVA: 0x0012E3D2 File Offset: 0x0012C5D2
+		// Token: 0x06007B6D RID: 31597 RVA: 0x0012B7CE File Offset: 0x001299CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x06007CD6 RID: 31958 RVA: 0x0012E3E5 File Offset: 0x0012C5E5
+		// Token: 0x06007B6E RID: 31598 RVA: 0x0012B7E1 File Offset: 0x001299E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatInfoUpdateNotify(FeiXuePreheatInfoUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06007CD7 RID: 31959 RVA: 0x0012E40F File Offset: 0x0012C60F
+		// Token: 0x06007B6F RID: 31599 RVA: 0x0012B80B File Offset: 0x00129A0B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FeiXuePreheatInfoUpdateNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new FeiXuePreheatInfoUpdateNotify(this);
 		}
 
-		// Token: 0x1700183B RID: 6203
-		// (get) Token: 0x06007CD8 RID: 31960 RVA: 0x0012E417 File Offset: 0x0012C617
+		// Token: 0x170017EE RID: 6126
+		// (get) Token: 0x06007B70 RID: 31600 RVA: 0x0012B813 File Offset: 0x00129A13
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FeiXuePreheatInfo> FeiXuePreheatInfos
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007CD9 RID: 31961 RVA: 0x0012E41F File Offset: 0x0012C61F
+		// Token: 0x06007B71 RID: 31601 RVA: 0x0012B81B File Offset: 0x00129A1B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FeiXuePreheatInfoUpdateNotify);
 		}
 
-		// Token: 0x06007CDA RID: 31962 RVA: 0x0012E42D File Offset: 0x0012C62D
+		// Token: 0x06007B72 RID: 31602 RVA: 0x0012B829 File Offset: 0x00129A29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FeiXuePreheatInfoUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.feiXuePreheatInfos_.Equals(other.feiXuePreheatInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007CDB RID: 31963 RVA: 0x0012E460 File Offset: 0x0012C660
+		// Token: 0x06007B73 RID: 31603 RVA: 0x0012B85C File Offset: 0x00129A5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007CDC RID: 31964 RVA: 0x0012E494 File Offset: 0x0012C694
+		// Token: 0x06007B74 RID: 31604 RVA: 0x0012B890 File Offset: 0x00129A90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007CDD RID: 31965 RVA: 0x0012E4A1 File Offset: 0x0012C6A1
+		// Token: 0x06007B75 RID: 31605 RVA: 0x0012B89D File Offset: 0x00129A9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007CDE RID: 31966 RVA: 0x0012E4AA File Offset: 0x0012C6AA
+		// Token: 0x06007B76 RID: 31606 RVA: 0x0012B8A6 File Offset: 0x00129AA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007CDF RID: 31967 RVA: 0x0012E4D4 File Offset: 0x0012C6D4
+		// Token: 0x06007B77 RID: 31607 RVA: 0x0012B8D0 File Offset: 0x00129AD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007CE0 RID: 31968 RVA: 0x0012E50D File Offset: 0x0012C70D
+		// Token: 0x06007B78 RID: 31608 RVA: 0x0012B909 File Offset: 0x00129B09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FeiXuePreheatInfoUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06007CE1 RID: 31969 RVA: 0x0012E53B File Offset: 0x0012C73B
+		// Token: 0x06007B79 RID: 31609 RVA: 0x0012B937 File Offset: 0x00129B37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06007CE2 RID: 31970 RVA: 0x0012E544 File Offset: 0x0012C744
+		// Token: 0x06007B7A RID: 31610 RVA: 0x0012B940 File Offset: 0x00129B40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003F88 RID: 16264
+		// Token: 0x04003F7E RID: 16254
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003F89 RID: 16265
+		// Token: 0x04003F7F RID: 16255
 		public const int FeiXuePreheatInfosFieldNumber = 6;
 
-		// Token: 0x04003F8A RID: 16266
+		// Token: 0x04003F80 RID: 16256
 		private static readonly FieldCodec<FeiXuePreheatInfo> _repeated_feiXuePreheatInfos_codec = FieldCodec.ForMessage<FeiXuePreheatInfo>(50U, FeiXuePreheatInfo.Parser);
 
-		// Token: 0x04003F8B RID: 16267
+		// Token: 0x04003F81 RID: 16257
 		private readonly RepeatedField<FeiXuePreheatInfo> feiXuePreheatInfos_ = new RepeatedField<FeiXuePreheatInfo>();
 	}
 }

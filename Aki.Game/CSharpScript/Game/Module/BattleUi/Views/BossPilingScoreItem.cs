@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DB6 RID: 23990
+	// Token: 0x02004D9A RID: 19866
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingScoreItem : BaseScoreItem
 	{
-		// Token: 0x0603CF14 RID: 249620 RVA: 0x00EA4834 File Offset: 0x00EA2A34
+		// Token: 0x06031E8B RID: 204427 RVA: 0x00DF5710 File Offset: 0x00DF3910
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CF15 RID: 249621 RVA: 0x00EA4900 File Offset: 0x00EA2B00
+		// Token: 0x06031E8C RID: 204428 RVA: 0x00DF57DC File Offset: 0x00DF39DC
 		protected override UniTask OnCreateAsync()
 		{
 			BossPilingScoreItem.<OnCreateAsync>d__19 <OnCreateAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF16 RID: 249622 RVA: 0x00EA4944 File Offset: 0x00EA2B44
+		// Token: 0x06031E8D RID: 204429 RVA: 0x00DF5820 File Offset: 0x00DF3A20
 		private UniTask LoadResource(string path, int index, [Nullable(new byte[]
 		{
 			1,
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return promise.Promise;
 		}
 
-		// Token: 0x0603CF17 RID: 249623 RVA: 0x00EA499C File Offset: 0x00EA2B9C
+		// Token: 0x06031E8E RID: 204430 RVA: 0x00DF5878 File Offset: 0x00DF3A78
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitScore();
 		}
 
-		// Token: 0x0603CF18 RID: 249624 RVA: 0x00EA4A51 File Offset: 0x00EA2C51
+		// Token: 0x06031E8F RID: 204431 RVA: 0x00DF592D File Offset: 0x00DF3B2D
 		protected override void OnBeforeDestroy()
 		{
 			this.LevelSequencePlayer.Clear();
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603CF19 RID: 249625 RVA: 0x00EA4A78 File Offset: 0x00EA2C78
+		// Token: 0x06031E90 RID: 204432 RVA: 0x00DF5954 File Offset: 0x00DF3B54
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			BossPilingScoreItem.<OnShowAsyncImplementImplement>d__23 <OnShowAsyncImplementImplement>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF1A RID: 249626 RVA: 0x00EA4ABC File Offset: 0x00EA2CBC
+		// Token: 0x06031E91 RID: 204433 RVA: 0x00DF5998 File Offset: 0x00DF3B98
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			BossPilingScoreItem.<OnHideAsyncImplementImplement>d__24 <OnHideAsyncImplementImplement>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF1B RID: 249627 RVA: 0x00EA4B00 File Offset: 0x00EA2D00
+		// Token: 0x06031E92 RID: 204434 RVA: 0x00DF59DC File Offset: 0x00DF3BDC
 		[NullableContext(0)]
 		private ValueTuple<int, int> GetValidScoreId()
 		{
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<int, int>(0, 0);
 		}
 
-		// Token: 0x0603CF1C RID: 249628 RVA: 0x00EA4BE8 File Offset: 0x00EA2DE8
+		// Token: 0x06031E93 RID: 204435 RVA: 0x00DF5AC4 File Offset: 0x00DF3CC4
 		private void InitScore()
 		{
 			ValueTuple<int, int> validScoreId = this.GetValidScoreId();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnTick(0f);
 		}
 
-		// Token: 0x0603CF1D RID: 249629 RVA: 0x00EA4C5A File Offset: 0x00EA2E5A
+		// Token: 0x06031E94 RID: 204436 RVA: 0x00DF5B36 File Offset: 0x00DF3D36
 		private void RemoveTimer()
 		{
 			if (this.TimeoutHd != null)
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF1E RID: 249630 RVA: 0x00EA4C7C File Offset: 0x00EA2E7C
+		// Token: 0x06031E95 RID: 204437 RVA: 0x00DF5B58 File Offset: 0x00DF3D58
 		private void ShowScoreOnWorldDone()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 5000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603CF1F RID: 249631 RVA: 0x00EA4CCE File Offset: 0x00EA2ECE
+		// Token: 0x06031E96 RID: 204438 RVA: 0x00DF5BAA File Offset: 0x00DF3DAA
 		private void OnWorldDoneAndCloseLoading()
 		{
 			this.RemoveEvent();
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF20 RID: 249632 RVA: 0x00EA4D07 File Offset: 0x00EA2F07
+		// Token: 0x06031E97 RID: 204439 RVA: 0x00DF5BE3 File Offset: 0x00DF3DE3
 		private void RemoveEvent()
 		{
 			if (EventSystem.Instance.Has(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading)))
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF21 RID: 249633 RVA: 0x00EA4D42 File Offset: 0x00EA2F42
+		// Token: 0x06031E98 RID: 204440 RVA: 0x00DF5C1E File Offset: 0x00DF3E1E
 		protected override void OnBattleScoreChanged(int scoreId, int score)
 		{
 			if (base.IsHideOrHiding)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF22 RID: 249634 RVA: 0x00EA4D80 File Offset: 0x00EA2F80
+		// Token: 0x06031E99 RID: 204441 RVA: 0x00DF5C5C File Offset: 0x00DF3E5C
 		private void UpdateScoreValue(float score, BattleScoreLevelConf? scoreLevelConfig)
 		{
 			this.InstScoreMachine.UpdateTargetScore(score, scoreLevelConfig);
@@ -238,13 +238,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}));
 		}
 
-		// Token: 0x0603CF23 RID: 249635 RVA: 0x00EA4DFC File Offset: 0x00EA2FFC
+		// Token: 0x06031E9A RID: 204442 RVA: 0x00DF5CD8 File Offset: 0x00DF3ED8
 		private bool IsMaxScore(float score)
 		{
 			return score >= this.ScoreMaxValue;
 		}
 
-		// Token: 0x0603CF24 RID: 249636 RVA: 0x00EA4E0C File Offset: 0x00EA300C
+		// Token: 0x06031E9B RID: 204443 RVA: 0x00DF5CE8 File Offset: 0x00DF3EE8
 		private float GetNextPhaseScore(BattleScoreLevelConf? lvCfg)
 		{
 			if (lvCfg != null && lvCfg.Value.Level > 0 && lvCfg.Value.Level - 1 < this.ScorePhaseValues.Count)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return 0f;
 		}
 
-		// Token: 0x0603CF25 RID: 249637 RVA: 0x00EA4E74 File Offset: 0x00EA3074
+		// Token: 0x06031E9C RID: 204444 RVA: 0x00DF5D50 File Offset: 0x00DF3F50
 		private void OnUpdateScore(float value, BattleScoreLevelConf? scoreCfg)
 		{
 			if (this.CurScoreValue == value)
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF26 RID: 249638 RVA: 0x00EA503C File Offset: 0x00EA323C
+		// Token: 0x06031E9D RID: 204445 RVA: 0x00DF5F18 File Offset: 0x00DF4118
 		private void SetLevelSprite(int level)
 		{
 			ULGUISpriteData_BaseObject ulguispriteData_BaseObject = this.BarSpriteDataList[level - 1];
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF27 RID: 249639 RVA: 0x00EA506C File Offset: 0x00EA326C
+		// Token: 0x06031E9E RID: 204446 RVA: 0x00DF5F48 File Offset: 0x00DF4148
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "Sequence_Grade_Change" && this.NextScoreLevelConfig != null)
@@ -333,12 +333,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF28 RID: 249640 RVA: 0x00EA50AC File Offset: 0x00EA32AC
+		// Token: 0x06031E9F RID: 204447 RVA: 0x00DF5F88 File Offset: 0x00DF4188
 		private void PlayUpAnim()
 		{
 		}
 
-		// Token: 0x0603CF29 RID: 249641 RVA: 0x00EA50B0 File Offset: 0x00EA32B0
+		// Token: 0x06031EA0 RID: 204448 RVA: 0x00DF5F8C File Offset: 0x00DF418C
 		private void SetPercent(float percent)
 		{
 			this.BarSprite.SetFillAmount(percent);
@@ -353,20 +353,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF2A RID: 249642 RVA: 0x00EA5141 File Offset: 0x00EA3341
+		// Token: 0x06031EA1 RID: 204449 RVA: 0x00DF601D File Offset: 0x00DF421D
 		public override void OnTick(float delta)
 		{
 			this.InstScoreMachine.Tick(delta);
 		}
 
-		// Token: 0x0603CF2B RID: 249643 RVA: 0x00EA5150 File Offset: 0x00EA3350
+		// Token: 0x06031EA2 RID: 204450 RVA: 0x00DF602C File Offset: 0x00DF422C
 		public override bool IsValidScore(int scoreId)
 		{
 			BattleScoreConf? scoreConfig = BattleScoreModel.Instance.GetScoreConfig(scoreId, false);
 			return scoreConfig != null && scoreConfig.Value.Type == 10;
 		}
 
-		// Token: 0x0603CF2C RID: 249644 RVA: 0x00EA5189 File Offset: 0x00EA3389
+		// Token: 0x06031EA3 RID: 204451 RVA: 0x00DF6065 File Offset: 0x00DF4265
 		public override void ShowScore()
 		{
 			base.ShowScore();
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Show(null);
 		}
 
-		// Token: 0x0603CF2D RID: 249645 RVA: 0x00EA51AA File Offset: 0x00EA33AA
+		// Token: 0x06031EA4 RID: 204452 RVA: 0x00DF6086 File Offset: 0x00DF4286
 		public override void HideScore()
 		{
 			base.HideScore();
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Hide(null);
 		}
 
-		// Token: 0x0603CF2E RID: 249646 RVA: 0x00EA51D0 File Offset: 0x00EA33D0
+		// Token: 0x06031EA5 RID: 204453 RVA: 0x00DF60AC File Offset: 0x00DF42AC
 		public override void OnShowFirstTime()
 		{
 			if (this.IsScoreEnable && this.CurScoreValue > 0f)
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF2F RID: 249647 RVA: 0x00EA51F0 File Offset: 0x00EA33F0
+		// Token: 0x06031EA6 RID: 204454 RVA: 0x00DF60CC File Offset: 0x00DF42CC
 		private void UpdateScoreConfig(int scoreId, float score)
 		{
 			BattleScoreConf? scoreConfig = BattleScoreModel.Instance.GetScoreConfig(scoreId, false);
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF30 RID: 249648 RVA: 0x00EA5430 File Offset: 0x00EA3630
+		// Token: 0x06031EA7 RID: 204455 RVA: 0x00DF630C File Offset: 0x00DF450C
 		private void ResetScore()
 		{
 			this.CurScoreValue = -1f;
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastScoreLevelConfig = null;
 		}
 
-		// Token: 0x0401FBCE RID: 129998
+		// Token: 0x0401A68B RID: 108171
 		[StaticVariableRuleIgnore]
 		private static readonly string[] scoreSpritePathList = new string[]
 		{
@@ -476,46 +476,46 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/BossPiling/Game/SP_BossPilingGameScoreSS.SP_BossPilingGameScoreSS"
 		};
 
-		// Token: 0x0401FBCF RID: 129999
+		// Token: 0x0401A68C RID: 108172
 		private float CurScoreValue = -1f;
 
-		// Token: 0x0401FBD0 RID: 130000
+		// Token: 0x0401A68D RID: 108173
 		private int CurScoreGroupId = -1;
 
-		// Token: 0x0401FBD1 RID: 130001
+		// Token: 0x0401A68E RID: 108174
 		private BattleScoreLevelConf? LastScoreLevelConfig;
 
-		// Token: 0x0401FBD2 RID: 130002
+		// Token: 0x0401A68F RID: 108175
 		private BattleScoreLevelConf? NextScoreLevelConfig;
 
-		// Token: 0x0401FBD3 RID: 130003
+		// Token: 0x0401A690 RID: 108176
 		private readonly List<float> ScorePhaseValues = new List<float>();
 
-		// Token: 0x0401FBD4 RID: 130004
+		// Token: 0x0401A691 RID: 108177
 		private float ScoreMaxValue;
 
-		// Token: 0x0401FBD5 RID: 130005
+		// Token: 0x0401A692 RID: 108178
 		private int ScoreMaxLevel;
 
-		// Token: 0x0401FBD6 RID: 130006
+		// Token: 0x0401A693 RID: 108179
 		private RogueScoreMachine InstScoreMachine = new RogueScoreMachine();
 
-		// Token: 0x0401FBD7 RID: 130007
+		// Token: 0x0401A694 RID: 108180
 		private UUISprite BarSprite;
 
-		// Token: 0x0401FBD8 RID: 130008
+		// Token: 0x0401A695 RID: 108181
 		private UUISprite BarBgSprite;
 
-		// Token: 0x0401FBD9 RID: 130009
+		// Token: 0x0401A696 RID: 108182
 		private UUITexture BarWhite;
 
-		// Token: 0x0401FBDA RID: 130010
+		// Token: 0x0401A697 RID: 108183
 		private UUISprite IconSprite;
 
-		// Token: 0x0401FBDB RID: 130011
+		// Token: 0x0401A698 RID: 108184
 		private UUIText ValueText;
 
-		// Token: 0x0401FBDC RID: 130012
+		// Token: 0x0401A699 RID: 108185
 		[Nullable(new byte[]
 		{
 			1,
@@ -523,49 +523,49 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private readonly ULGUISpriteData_BaseObject[] BarSpriteDataList = new ULGUISpriteData_BaseObject[BossPilingScoreItem.scoreSpritePathList.Length];
 
-		// Token: 0x0401FBDD RID: 130013
+		// Token: 0x0401A69A RID: 108186
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FBDE RID: 130014
+		// Token: 0x0401A69B RID: 108187
 		private bool IsPlayingMaxLevel;
 
-		// Token: 0x0401FBDF RID: 130015
+		// Token: 0x0401A69C RID: 108188
 		[Nullable(2)]
 		private TimerHandle TimeoutHd;
 
-		// Token: 0x0401FBE0 RID: 130016
+		// Token: 0x0401A69D RID: 108189
 		private static readonly FName P1Name = new FName("MainTexRotate");
 
-		// Token: 0x0401FBE1 RID: 130017
+		// Token: 0x0401A69E RID: 108190
 		private static readonly FName P2Name = new FName("MaskAngle");
 
-		// Token: 0x0401FBE2 RID: 130018
+		// Token: 0x0401A69F RID: 108191
 		private FLinearColor P1Color = new FLinearColor(0.5f, 0.5f, 0.5f, 1f);
 
-		// Token: 0x0401FBE3 RID: 130019
+		// Token: 0x0401A6A0 RID: 108192
 		private float LastMaskValue = -1f;
 
-		// Token: 0x0401FBE4 RID: 130020
+		// Token: 0x0401A6A1 RID: 108193
 		[Nullable(2)]
 		private IReadOnlyList<BattleScoreLevelConf> ScoreLevelConfigList;
 
-		// Token: 0x0401FBE5 RID: 130021
+		// Token: 0x0401A6A2 RID: 108194
 		private BattleScoreLevelConf? ScoreLevelConfigMax;
 
-		// Token: 0x0200C097 RID: 49303
+		// Token: 0x0200AAA0 RID: 43680
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A1E5 RID: 238053
+			// Token: 0x04034BB7 RID: 215991
 			SprProgress,
-			// Token: 0x0403A1E6 RID: 238054
+			// Token: 0x04034BB8 RID: 215992
 			SprProgressLight,
-			// Token: 0x0403A1E7 RID: 238055
+			// Token: 0x04034BB9 RID: 215993
 			TextureWhite,
-			// Token: 0x0403A1E8 RID: 238056
+			// Token: 0x04034BBA RID: 215994
 			SprScoreIcon,
-			// Token: 0x0403A1E9 RID: 238057
+			// Token: 0x04034BBB RID: 215995
 			ValueText
 		}
 	}

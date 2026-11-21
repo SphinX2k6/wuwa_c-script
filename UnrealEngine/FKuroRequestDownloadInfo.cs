@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020016AF RID: 5807
+	// Token: 0x0200031C RID: 796
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroBackgroundDownload.KuroRequestDownloadInfo")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class FKuroRequestDownloadInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06015100 RID: 86272 RVA: 0x001EF4A5 File Offset: 0x001ED6A5
+		// Token: 0x060053F9 RID: 21497 RVA: 0x000757E1 File Offset: 0x000739E1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroRequestDownloadInfo._ScriptStructPtr != 0) ? FKuroRequestDownloadInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroBackgroundDownload.KuroRequestDownloadInfo", ref FKuroRequestDownloadInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x1700535B RID: 21339
-		// (get) Token: 0x06015101 RID: 86273 RVA: 0x001EF4C9 File Offset: 0x001ED6C9
-		// (set) Token: 0x06015102 RID: 86274 RVA: 0x001EF4DD File Offset: 0x001ED6DD
+		// Token: 0x17001095 RID: 4245
+		// (get) Token: 0x060053FA RID: 21498 RVA: 0x00075805 File Offset: 0x00073A05
+		// (set) Token: 0x060053FB RID: 21499 RVA: 0x00075819 File Offset: 0x00073A19
 		public unsafe string FileName
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700535C RID: 21340
-		// (get) Token: 0x06015103 RID: 86275 RVA: 0x001EF4F2 File Offset: 0x001ED6F2
-		// (set) Token: 0x06015104 RID: 86276 RVA: 0x001EF506 File Offset: 0x001ED706
+		// Token: 0x17001096 RID: 4246
+		// (get) Token: 0x060053FC RID: 21500 RVA: 0x0007582E File Offset: 0x00073A2E
+		// (set) Token: 0x060053FD RID: 21501 RVA: 0x00075842 File Offset: 0x00073A42
 		public unsafe string Url
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700535D RID: 21341
-		// (get) Token: 0x06015105 RID: 86277 RVA: 0x001EF51B File Offset: 0x001ED71B
-		// (set) Token: 0x06015106 RID: 86278 RVA: 0x001EF52F File Offset: 0x001ED72F
+		// Token: 0x17001097 RID: 4247
+		// (get) Token: 0x060053FE RID: 21502 RVA: 0x00075857 File Offset: 0x00073A57
+		// (set) Token: 0x060053FF RID: 21503 RVA: 0x0007586B File Offset: 0x00073A6B
 		public unsafe string SavePath
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700535E RID: 21342
-		// (get) Token: 0x06015107 RID: 86279 RVA: 0x001EF544 File Offset: 0x001ED744
-		// (set) Token: 0x06015108 RID: 86280 RVA: 0x001EF554 File Offset: 0x001ED754
+		// Token: 0x17001098 RID: 4248
+		// (get) Token: 0x06005400 RID: 21504 RVA: 0x00075880 File Offset: 0x00073A80
+		// (set) Token: 0x06005401 RID: 21505 RVA: 0x00075890 File Offset: 0x00073A90
 		public unsafe long Size
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700535F RID: 21343
-		// (get) Token: 0x06015109 RID: 86281 RVA: 0x001EF565 File Offset: 0x001ED765
-		// (set) Token: 0x0601510A RID: 86282 RVA: 0x001EF579 File Offset: 0x001ED779
+		// Token: 0x17001099 RID: 4249
+		// (get) Token: 0x06005402 RID: 21506 RVA: 0x000758A1 File Offset: 0x00073AA1
+		// (set) Token: 0x06005403 RID: 21507 RVA: 0x000758B5 File Offset: 0x00073AB5
 		public unsafe string HashString
 		{
 			get
@@ -93,69 +93,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601510B RID: 86283 RVA: 0x001EF58E File Offset: 0x001ED78E
+		// Token: 0x06005404 RID: 21508 RVA: 0x000758CA File Offset: 0x00073ACA
 		public FKuroRequestDownloadInfo()
 		{
 		}
 
-		// Token: 0x0601510C RID: 86284 RVA: 0x001EF596 File Offset: 0x001ED796
-		public FKuroRequestDownloadInfo(string FileName, string Url, string SavePath, long Size, string HashString)
-		{
-			this.FileName = FileName;
-			this.Url = Url;
-			this.SavePath = SavePath;
-			this.Size = Size;
-			this.HashString = HashString;
-		}
-
-		// Token: 0x0601510D RID: 86285 RVA: 0x001EF5C3 File Offset: 0x001ED7C3
+		// Token: 0x06005405 RID: 21509 RVA: 0x000758D2 File Offset: 0x00073AD2
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroRequestDownloadInfo.StaticStruct();
 		}
 
-		// Token: 0x0601510E RID: 86286 RVA: 0x001EF5CF File Offset: 0x001ED7CF
+		// Token: 0x06005406 RID: 21510 RVA: 0x000758DE File Offset: 0x00073ADE
 		[NullableContext(2)]
 		public FKuroRequestDownloadInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601510F RID: 86287 RVA: 0x001EF5D9 File Offset: 0x001ED7D9
+		// Token: 0x06005407 RID: 21511 RVA: 0x000758E8 File Offset: 0x00073AE8
 		public FKuroRequestDownloadInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06015110 RID: 86288 RVA: 0x001EF5E4 File Offset: 0x001ED7E4
+		// Token: 0x06005408 RID: 21512 RVA: 0x000758F3 File Offset: 0x00073AF3
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroRequestDownloadInfo(Pointer, false, true);
 		}
 
-		// Token: 0x06015111 RID: 86289 RVA: 0x001EF5EE File Offset: 0x001ED7EE
+		// Token: 0x06005409 RID: 21513 RVA: 0x000758FD File Offset: 0x00073AFD
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroRequestDownloadInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400B76C RID: 46956
+		// Token: 0x0400224C RID: 8780
 		public const string __ObjectPath = "/Script/KuroBackgroundDownload.KuroRequestDownloadInfo";
 
-		// Token: 0x0400B76D RID: 46957
+		// Token: 0x0400224D RID: 8781
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400B76E RID: 46958
+		// Token: 0x0400224E RID: 8782
 		internal static int __PropertyOffset_FileName;
 
-		// Token: 0x0400B76F RID: 46959
+		// Token: 0x0400224F RID: 8783
 		internal static int __PropertyOffset_Url;
 
-		// Token: 0x0400B770 RID: 46960
+		// Token: 0x04002250 RID: 8784
 		internal static int __PropertyOffset_SavePath;
 
-		// Token: 0x0400B771 RID: 46961
+		// Token: 0x04002251 RID: 8785
 		internal static int __PropertyOffset_Size;
 
-		// Token: 0x0400B772 RID: 46962
+		// Token: 0x04002252 RID: 8786
 		internal static int __PropertyOffset_HashString;
 	}
 }

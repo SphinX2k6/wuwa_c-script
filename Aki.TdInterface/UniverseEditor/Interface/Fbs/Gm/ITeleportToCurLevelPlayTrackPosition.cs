@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046B7 RID: 18103
+	// Token: 0x02004B1F RID: 19231
 	public struct ITeleportToCurLevelPlayTrackPosition : IFlatbufferObject
 	{
-		// Token: 0x17008094 RID: 32916
-		// (get) Token: 0x0601B821 RID: 112673 RVA: 0x003E7830 File Offset: 0x003E5A30
+		// Token: 0x170086D5 RID: 34517
+		// (get) Token: 0x0601CFF6 RID: 118774 RVA: 0x00413ACC File Offset: 0x00411CCC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B822 RID: 112674 RVA: 0x003E783D File Offset: 0x003E5A3D
+		// Token: 0x0601CFF7 RID: 118775 RVA: 0x00413AD9 File Offset: 0x00411CD9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B823 RID: 112675 RVA: 0x003E7844 File Offset: 0x003E5A44
+		// Token: 0x0601CFF8 RID: 118776 RVA: 0x00413AE0 File Offset: 0x00411CE0
 		public static ITeleportToCurLevelPlayTrackPosition GetRootAsITeleportToCurLevelPlayTrackPosition(ByteBuffer _bb)
 		{
 			return ITeleportToCurLevelPlayTrackPosition.GetRootAsITeleportToCurLevelPlayTrackPosition(_bb, default(ITeleportToCurLevelPlayTrackPosition));
 		}
 
-		// Token: 0x0601B824 RID: 112676 RVA: 0x003E7860 File Offset: 0x003E5A60
+		// Token: 0x0601CFF9 RID: 118777 RVA: 0x00413AFC File Offset: 0x00411CFC
 		public static ITeleportToCurLevelPlayTrackPosition GetRootAsITeleportToCurLevelPlayTrackPosition(ByteBuffer _bb, ITeleportToCurLevelPlayTrackPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B825 RID: 112677 RVA: 0x003E787D File Offset: 0x003E5A7D
+		// Token: 0x0601CFFA RID: 118778 RVA: 0x00413B19 File Offset: 0x00411D19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B826 RID: 112678 RVA: 0x003E788C File Offset: 0x003E5A8C
+		// Token: 0x0601CFFB RID: 118779 RVA: 0x00413B28 File Offset: 0x00411D28
 		public ITeleportToCurLevelPlayTrackPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008095 RID: 32917
-		// (get) Token: 0x0601B827 RID: 112679 RVA: 0x003E789C File Offset: 0x003E5A9C
+		// Token: 0x170086D6 RID: 34518
+		// (get) Token: 0x0601CFFC RID: 118780 RVA: 0x00413B38 File Offset: 0x00411D38
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008096 RID: 32918
-		// (get) Token: 0x0601B828 RID: 112680 RVA: 0x003E78D8 File Offset: 0x003E5AD8
+		// Token: 0x170086D7 RID: 34519
+		// (get) Token: 0x0601CFFD RID: 118781 RVA: 0x00413B74 File Offset: 0x00411D74
 		public int LevelPlayId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008097 RID: 32919
-		// (get) Token: 0x0601B829 RID: 112681 RVA: 0x003E7914 File Offset: 0x003E5B14
+		// Token: 0x170086D8 RID: 34520
+		// (get) Token: 0x0601CFFE RID: 118782 RVA: 0x00413BB0 File Offset: 0x00411DB0
 		public int NodeId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008098 RID: 32920
-		// (get) Token: 0x0601B82A RID: 112682 RVA: 0x003E7950 File Offset: 0x003E5B50
+		// Token: 0x170086D9 RID: 34521
+		// (get) Token: 0x0601CFFF RID: 118783 RVA: 0x00413BEC File Offset: 0x00411DEC
 		public int NodeIndex
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008099 RID: 32921
-		// (get) Token: 0x0601B82B RID: 112683 RVA: 0x003E7990 File Offset: 0x003E5B90
+		// Token: 0x170086DA RID: 34522
+		// (get) Token: 0x0601D000 RID: 118784 RVA: 0x00413C2C File Offset: 0x00411E2C
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B82C RID: 112684 RVA: 0x003E79CD File Offset: 0x003E5BCD
+		// Token: 0x0601D001 RID: 118785 RVA: 0x00413C69 File Offset: 0x00411E69
 		public static Offset<ITeleportToCurLevelPlayTrackPosition> CreateITeleportToCurLevelPlayTrackPosition(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, int LevelPlayId = 0, int NodeId = 0, int NodeIndex = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ITeleportToCurLevelPlayTrackPosition.EndITeleportToCurLevelPlayTrackPosition(builder);
 		}
 
-		// Token: 0x0601B82D RID: 112685 RVA: 0x003E7A01 File Offset: 0x003E5C01
+		// Token: 0x0601D002 RID: 118786 RVA: 0x00413C9D File Offset: 0x00411E9D
 		public static void StartITeleportToCurLevelPlayTrackPosition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601B82E RID: 112686 RVA: 0x003E7A0A File Offset: 0x003E5C0A
+		// Token: 0x0601D003 RID: 118787 RVA: 0x00413CA6 File Offset: 0x00411EA6
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B82F RID: 112687 RVA: 0x003E7A15 File Offset: 0x003E5C15
+		// Token: 0x0601D004 RID: 118788 RVA: 0x00413CB1 File Offset: 0x00411EB1
 		public static void AddLevelPlayId(FlatBufferBuilder builder, int levelPlayId)
 		{
 			builder.AddInt(1, levelPlayId, 0);
 		}
 
-		// Token: 0x0601B830 RID: 112688 RVA: 0x003E7A20 File Offset: 0x003E5C20
+		// Token: 0x0601D005 RID: 118789 RVA: 0x00413CBC File Offset: 0x00411EBC
 		public static void AddNodeId(FlatBufferBuilder builder, int nodeId)
 		{
 			builder.AddInt(2, nodeId, 0);
 		}
 
-		// Token: 0x0601B831 RID: 112689 RVA: 0x003E7A2B File Offset: 0x003E5C2B
+		// Token: 0x0601D006 RID: 118790 RVA: 0x00413CC7 File Offset: 0x00411EC7
 		public static void AddNodeIndex(FlatBufferBuilder builder, int nodeIndex)
 		{
 			builder.AddInt(3, nodeIndex, 0);
 		}
 
-		// Token: 0x0601B832 RID: 112690 RVA: 0x003E7A36 File Offset: 0x003E5C36
+		// Token: 0x0601D007 RID: 118791 RVA: 0x00413CD2 File Offset: 0x00411ED2
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601B833 RID: 112691 RVA: 0x003E7A41 File Offset: 0x003E5C41
+		// Token: 0x0601D008 RID: 118792 RVA: 0x00413CDD File Offset: 0x00411EDD
 		public static Offset<ITeleportToCurLevelPlayTrackPosition> EndITeleportToCurLevelPlayTrackPosition(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportToCurLevelPlayTrackPosition>(builder.EndTable());
 		}
 
-		// Token: 0x0601B834 RID: 112692 RVA: 0x003E7A50 File Offset: 0x003E5C50
+		// Token: 0x0601D009 RID: 118793 RVA: 0x00413CEC File Offset: 0x00411EEC
 		public ITeleportToCurLevelPlayTrackPositionT UnPack()
 		{
 			ITeleportToCurLevelPlayTrackPositionT teleportToCurLevelPlayTrackPositionT = new ITeleportToCurLevelPlayTrackPositionT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return teleportToCurLevelPlayTrackPositionT;
 		}
 
-		// Token: 0x0601B835 RID: 112693 RVA: 0x003E7A6B File Offset: 0x003E5C6B
+		// Token: 0x0601D00A RID: 118794 RVA: 0x00413D07 File Offset: 0x00411F07
 		public void UnPackTo(ITeleportToCurLevelPlayTrackPositionT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601B836 RID: 112694 RVA: 0x003E7AAC File Offset: 0x003E5CAC
+		// Token: 0x0601D00B RID: 118795 RVA: 0x00413D48 File Offset: 0x00411F48
 		public static Offset<ITeleportToCurLevelPlayTrackPosition> Pack(FlatBufferBuilder builder, ITeleportToCurLevelPlayTrackPositionT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return ITeleportToCurLevelPlayTrackPosition.CreateITeleportToCurLevelPlayTrackPosition(builder, _o.Type, _o.LevelPlayId, _o.NodeId, _o.NodeIndex, _o.NullMask);
 		}
 
-		// Token: 0x0400C882 RID: 51330
+		// Token: 0x0400D2B1 RID: 53937
 		private Table __p;
 	}
 }

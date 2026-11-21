@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002652 RID: 9810
+// Token: 0x02001B3D RID: 6973
 public enum ERequestTrackQuestFlag
 {
-	// Token: 0x04009767 RID: 38759
+	// Token: 0x040098BF RID: 39103
 	Track = 1,
-	// Token: 0x04009768 RID: 38760
+	// Token: 0x040098C0 RID: 39104
 	UnTrack
 }

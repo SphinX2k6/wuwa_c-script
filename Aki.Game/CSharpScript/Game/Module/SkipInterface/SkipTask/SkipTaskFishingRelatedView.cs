@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BAB RID: 19371
+	// Token: 0x02003B55 RID: 15189
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkipTaskFishingRelatedView : SkipTask
 	{
-		// Token: 0x060322D5 RID: 205525 RVA: 0x00BA8B28 File Offset: 0x00BA6D28
+		// Token: 0x06027066 RID: 159846 RVA: 0x00AECD9C File Offset: 0x00AEAF9C
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -61,20 +61,20 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			base.Finish();
 		}
 
-		// Token: 0x060322D6 RID: 205526 RVA: 0x00BA8BEC File Offset: 0x00BA6DEC
+		// Token: 0x06027067 RID: 159847 RVA: 0x00AECE60 File Offset: 0x00AEB060
 		protected bool CheckMainViewOpen()
 		{
 			return UiManager.Instance.GetViewByName(EUiViewName.FishingDockView) != null;
 		}
 
-		// Token: 0x060322D7 RID: 205527 RVA: 0x00BA8C00 File Offset: 0x00BA6E00
+		// Token: 0x06027068 RID: 159848 RVA: 0x00AECE74 File Offset: 0x00AEB074
 		protected bool CheckIsInSailing()
 		{
 			FishingShipData shipData = FishingModel.Instance.GetShipData();
 			return shipData != null && shipData.IsShipDriving();
 		}
 
-		// Token: 0x060322D8 RID: 205528 RVA: 0x00BA8C18 File Offset: 0x00BA6E18
+		// Token: 0x06027069 RID: 159849 RVA: 0x00AECE8C File Offset: 0x00AEB08C
 		protected void SkipToMap()
 		{
 			int num = FishingModel.Instance.GetShipData().GetLastPortId();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 		}
 
-		// Token: 0x060322D9 RID: 205529 RVA: 0x00BA8C75 File Offset: 0x00BA6E75
+		// Token: 0x0602706A RID: 159850 RVA: 0x00AECEE9 File Offset: 0x00AEB0E9
 		private void OpenViewInMainView(Action openViewFunc)
 		{
 			if (this.CheckMainViewOpen())
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			this.SkipToMap();
 		}
 
-		// Token: 0x060322DA RID: 205530 RVA: 0x00BA8C8C File Offset: 0x00BA6E8C
+		// Token: 0x0602706B RID: 159851 RVA: 0x00AECF00 File Offset: 0x00AEB100
 		private void OpenViewInMainViewAndSailing(Action openViewFunc)
 		{
 			if (this.CheckMainViewOpen() || this.CheckIsInSailing())
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			this.SkipToMap();
 		}
 
-		// Token: 0x060322DB RID: 205531 RVA: 0x00BA8CAB File Offset: 0x00BA6EAB
+		// Token: 0x0602706C RID: 159852 RVA: 0x00AECF1F File Offset: 0x00AEB11F
 		private bool CheckViewExistAndReset(EUiViewName viewName)
 		{
 			if (UiManager.Instance.IsViewOpen(viewName))
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			return false;
 		}
 
-		// Token: 0x060322DC RID: 205532 RVA: 0x00BA8CDC File Offset: 0x00BA6EDC
+		// Token: 0x0602706D RID: 159853 RVA: 0x00AECF50 File Offset: 0x00AEB150
 		public SkipTaskFishingRelatedView()
 		{
 			this.OpenQuestView = delegate()
@@ -173,39 +173,39 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			};
 		}
 
-		// Token: 0x0401AB85 RID: 109445
+		// Token: 0x040154DA RID: 87258
 		private const int DEFAULT_PORT_ID = 1;
 
-		// Token: 0x0401AB86 RID: 109446
+		// Token: 0x040154DB RID: 87259
 		private readonly Action OpenQuestView;
 
-		// Token: 0x0401AB87 RID: 109447
+		// Token: 0x040154DC RID: 87260
 		private readonly Action OpenHandBookView;
 
-		// Token: 0x0401AB88 RID: 109448
+		// Token: 0x040154DD RID: 87261
 		private readonly Action OpenDockyardView;
 
-		// Token: 0x0401AB89 RID: 109449
+		// Token: 0x040154DE RID: 87262
 		private readonly Action OpenShopShopBuyView;
 
-		// Token: 0x0401AB8A RID: 109450
+		// Token: 0x040154DF RID: 87263
 		private readonly Action OpenShopSellView;
 
-		// Token: 0x0200ADCE RID: 44494
+		// Token: 0x020097ED RID: 38893
 		[NullableContext(0)]
 		private enum EFishingViewDefine
 		{
-			// Token: 0x04034C9C RID: 216220
+			// Token: 0x0402F643 RID: 194115
 			Quest = 1,
-			// Token: 0x04034C9D RID: 216221
+			// Token: 0x0402F644 RID: 194116
 			HandBook,
-			// Token: 0x04034C9E RID: 216222
+			// Token: 0x0402F645 RID: 194117
 			TechView,
-			// Token: 0x04034C9F RID: 216223
+			// Token: 0x0402F646 RID: 194118
 			WareHouse,
-			// Token: 0x04034CA0 RID: 216224
+			// Token: 0x0402F647 RID: 194119
 			ShopBuy,
-			// Token: 0x04034CA1 RID: 216225
+			// Token: 0x0402F648 RID: 194120
 			ShopSell
 		}
 	}

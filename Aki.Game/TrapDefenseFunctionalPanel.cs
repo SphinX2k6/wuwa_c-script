@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.TrapDefense;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D37 RID: 7479
+// Token: 0x020011F9 RID: 4601
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseFunctionalPanel : BattleChildViewPanel
 {
-	// Token: 0x0600E298 RID: 58008 RVA: 0x00353D30 File Offset: 0x00351F30
+	// Token: 0x0600B6B5 RID: 46773 RVA: 0x0035F760 File Offset: 0x0035D960
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,25 +30,25 @@ public class TrapDefenseFunctionalPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E299 RID: 58009 RVA: 0x00353E0C File Offset: 0x0035200C
+	// Token: 0x0600B6B6 RID: 46774 RVA: 0x0035F83C File Offset: 0x0035DA3C
 	private void OnBuffDetailBtnClicked()
 	{
 		TrapDefenseModel.Instance.OpenViewBdSum(null, null, null);
 	}
 
-	// Token: 0x0600E29A RID: 58010 RVA: 0x00353E40 File Offset: 0x00352040
+	// Token: 0x0600B6B7 RID: 46775 RVA: 0x0035F870 File Offset: 0x0035DA70
 	private void OnMonsterTipsBtnClicked()
 	{
 		TrapDefenseModel.Instance.OpenViewMonster(null, new ETrapDefenseMonsterTabType?(ETrapDefenseMonsterTabType.MonsterWave), null);
 	}
 
-	// Token: 0x0600E29B RID: 58011 RVA: 0x00353E6F File Offset: 0x0035206F
+	// Token: 0x0600B6B8 RID: 46776 RVA: 0x0035F89F File Offset: 0x0035DA9F
 	private void OnExitBtnClicked()
 	{
 		TrapDefenseController.Instance.OpenPauseView();
 	}
 
-	// Token: 0x0600E29C RID: 58012 RVA: 0x00353E7C File Offset: 0x0035207C
+	// Token: 0x0600B6B9 RID: 46777 RVA: 0x0035F8AC File Offset: 0x0035DAAC
 	public override void InitializeTemp()
 	{
 		this.TipsItem = base.GetItem(3);
@@ -58,7 +58,7 @@ public class TrapDefenseFunctionalPanel : BattleChildViewPanel
 		this.UpdateBdSumState();
 	}
 
-	// Token: 0x0600E29D RID: 58013 RVA: 0x00353ED0 File Offset: 0x003520D0
+	// Token: 0x0600B6BA RID: 46778 RVA: 0x0035F900 File Offset: 0x0035DB00
 	private void OnEndSequenceEvent(string sequenceName)
 	{
 		if (sequenceName == "Close")
@@ -67,13 +67,13 @@ public class TrapDefenseFunctionalPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E29E RID: 58014 RVA: 0x00353EEB File Offset: 0x003520EB
+	// Token: 0x0600B6BB RID: 46779 RVA: 0x0035F91B File Offset: 0x0035DB1B
 	protected override void OnBeforeDestroy()
 	{
 		this.Sequence.Clear();
 	}
 
-	// Token: 0x0600E29F RID: 58015 RVA: 0x00353EF8 File Offset: 0x003520F8
+	// Token: 0x0600B6BC RID: 46780 RVA: 0x0035F928 File Offset: 0x0035DB28
 	public void SetTips(string tips)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), tips, Array.Empty<object>());
@@ -81,14 +81,14 @@ public class TrapDefenseFunctionalPanel : BattleChildViewPanel
 		this.Sequence.PlaySequencePurely("Start", false, false);
 	}
 
-	// Token: 0x0600E2A0 RID: 58016 RVA: 0x00353F2F File Offset: 0x0035212F
+	// Token: 0x0600B6BD RID: 46781 RVA: 0x0035F95F File Offset: 0x0035DB5F
 	public void HideTips()
 	{
 		this.Sequence.StopSequenceByKey("Start", false, true);
 		this.Sequence.PlaySequencePurely("Close", false, false);
 	}
 
-	// Token: 0x0600E2A1 RID: 58017 RVA: 0x00353F58 File Offset: 0x00352158
+	// Token: 0x0600B6BE RID: 46782 RVA: 0x0035F988 File Offset: 0x0035DB88
 	public void UpdateBdSumState()
 	{
 		bool curInstIsRogue = TrapDefenseModel.Instance.GetCurInstIsRogue();
@@ -100,29 +100,29 @@ public class TrapDefenseFunctionalPanel : BattleChildViewPanel
 		button.RootUIComp.Get().SetUIActive(curInstIsRogue);
 	}
 
-	// Token: 0x040068C6 RID: 26822
+	// Token: 0x040069A5 RID: 27045
 	protected UiSequencePlayer Sequence;
 
-	// Token: 0x040068C7 RID: 26823
+	// Token: 0x040069A6 RID: 27046
 	protected UUIItem TipsItem;
 
-	// Token: 0x02008343 RID: 33603
+	// Token: 0x020074CC RID: 29900
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402ACCE RID: 175310
+		// Token: 0x04025FF6 RID: 155638
 		public const int BuffDetailBtn = 0;
 
-		// Token: 0x0402ACCF RID: 175311
+		// Token: 0x04025FF7 RID: 155639
 		public const int MonsterTipsBtn = 1;
 
-		// Token: 0x0402ACD0 RID: 175312
+		// Token: 0x04025FF8 RID: 155640
 		public const int ExitBtn = 2;
 
-		// Token: 0x0402ACD1 RID: 175313
+		// Token: 0x04025FF9 RID: 155641
 		public const int TipsItem = 3;
 
-		// Token: 0x0402ACD2 RID: 175314
+		// Token: 0x04025FFA RID: 155642
 		public const int Tips = 4;
 	}
 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005283 RID: 21123
+	// Token: 0x020057EB RID: 22507
 	public class IFlowerPollutionPointLightConfigT
 	{
-		// Token: 0x17009ADB RID: 39643
-		// (get) Token: 0x06022681 RID: 140929 RVA: 0x004C5114 File Offset: 0x004C3314
-		// (set) Token: 0x06022682 RID: 140930 RVA: 0x004C511C File Offset: 0x004C331C
+		// Token: 0x1700A2D9 RID: 41689
+		// (get) Token: 0x0602461B RID: 149019 RVA: 0x004FFC84 File Offset: 0x004FDE84
+		// (set) Token: 0x0602461C RID: 149020 RVA: 0x004FFC8C File Offset: 0x004FDE8C
 		public List<int> PointLightEntityIds { get; set; }
 
-		// Token: 0x17009ADC RID: 39644
-		// (get) Token: 0x06022683 RID: 140931 RVA: 0x004C5125 File Offset: 0x004C3325
-		// (set) Token: 0x06022684 RID: 140932 RVA: 0x004C512D File Offset: 0x004C332D
+		// Token: 0x1700A2DA RID: 41690
+		// (get) Token: 0x0602461D RID: 149021 RVA: 0x004FFC95 File Offset: 0x004FDE95
+		// (set) Token: 0x0602461E RID: 149022 RVA: 0x004FFC9D File Offset: 0x004FDE9D
 		public List<IPointLightOperationsT> PointLightConfig { get; set; }
 
-		// Token: 0x06022685 RID: 140933 RVA: 0x004C5136 File Offset: 0x004C3336
+		// Token: 0x0602461F RID: 149023 RVA: 0x004FFCA6 File Offset: 0x004FDEA6
 		public IFlowerPollutionPointLightConfigT()
 		{
 			this.PointLightEntityIds = null;

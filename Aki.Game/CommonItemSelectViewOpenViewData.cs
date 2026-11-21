@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020017F6 RID: 6134
+// Token: 0x02000CAF RID: 3247
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonItemSelectViewOpenViewData<T> : UiPopViewData
 {
-	// Token: 0x04005153 RID: 20819
+	// Token: 0x040051FE RID: 20990
 	[Nullable(new byte[]
 	{
 		2,
@@ -16,7 +16,7 @@ public class CommonItemSelectViewOpenViewData<T> : UiPopViewData
 	})]
 	public List<T> ItemDataBaseList;
 
-	// Token: 0x04005154 RID: 20820
+	// Token: 0x040051FF RID: 20991
 	[Nullable(new byte[]
 	{
 		2,
@@ -24,18 +24,18 @@ public class CommonItemSelectViewOpenViewData<T> : UiPopViewData
 	})]
 	public List<ISelectedData> SelectedDataList;
 
-	// Token: 0x04005155 RID: 20821
+	// Token: 0x04005200 RID: 20992
 	public SelectableComponentData SelectableComponentData;
 
-	// Token: 0x04005156 RID: 20822
+	// Token: 0x04005201 RID: 20993
 	public CommonIntensifyPropExpData ExpData;
 
-	// Token: 0x04005157 RID: 20823
+	// Token: 0x04005202 RID: 20994
 	public ESelectableComponentType SelectableComponentType;
 
-	// Token: 0x04005158 RID: 20824
+	// Token: 0x04005203 RID: 20995
 	public EFilterSortGroupId UseWayId;
 
-	// Token: 0x04005159 RID: 20825
+	// Token: 0x04005204 RID: 20996
 	public bool InitSortToggleState;
 }

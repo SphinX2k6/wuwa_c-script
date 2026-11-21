@@ -4,40 +4,40 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A5E RID: 2654
+	// Token: 0x020001E0 RID: 480
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EEasingFunc")]
 	public enum EEasingFunc
 	{
-		// Token: 0x0400473F RID: 18239
+		// Token: 0x04000BD9 RID: 3033
 		Linear,
-		// Token: 0x04004740 RID: 18240
+		// Token: 0x04000BDA RID: 3034
 		Step,
-		// Token: 0x04004741 RID: 18241
+		// Token: 0x04000BDB RID: 3035
 		SinusoidalIn,
-		// Token: 0x04004742 RID: 18242
+		// Token: 0x04000BDC RID: 3036
 		SinusoidalOut,
-		// Token: 0x04004743 RID: 18243
+		// Token: 0x04000BDD RID: 3037
 		SinusoidalInOut,
-		// Token: 0x04004744 RID: 18244
+		// Token: 0x04000BDE RID: 3038
 		EaseIn,
-		// Token: 0x04004745 RID: 18245
+		// Token: 0x04000BDF RID: 3039
 		EaseOut,
-		// Token: 0x04004746 RID: 18246
+		// Token: 0x04000BE0 RID: 3040
 		EaseInOut,
-		// Token: 0x04004747 RID: 18247
+		// Token: 0x04000BE1 RID: 3041
 		ExpoIn,
-		// Token: 0x04004748 RID: 18248
+		// Token: 0x04000BE2 RID: 3042
 		ExpoOut,
-		// Token: 0x04004749 RID: 18249
+		// Token: 0x04000BE3 RID: 3043
 		ExpoInOut,
-		// Token: 0x0400474A RID: 18250
+		// Token: 0x04000BE4 RID: 3044
 		CircularIn,
-		// Token: 0x0400474B RID: 18251
+		// Token: 0x04000BE5 RID: 3045
 		CircularOut,
-		// Token: 0x0400474C RID: 18252
+		// Token: 0x04000BE6 RID: 3046
 		CircularInOut,
-		// Token: 0x0400474D RID: 18253
+		// Token: 0x04000BE7 RID: 3047
 		EEasingFunc_MAX
 	}
 }

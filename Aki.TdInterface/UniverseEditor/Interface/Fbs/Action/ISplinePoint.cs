@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007196 RID: 29078
+	// Token: 0x0200796B RID: 31083
 	public struct ISplinePoint : IFlatbufferObject
 	{
-		// Token: 0x1700D7F7 RID: 55287
-		// (get) Token: 0x060338D8 RID: 211160 RVA: 0x006F1814 File Offset: 0x006EFA14
+		// Token: 0x1700E3EE RID: 58350
+		// (get) Token: 0x06036BD4 RID: 224212 RVA: 0x00752AA2 File Offset: 0x00750CA2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060338D9 RID: 211161 RVA: 0x006F1821 File Offset: 0x006EFA21
+		// Token: 0x06036BD5 RID: 224213 RVA: 0x00752AAF File Offset: 0x00750CAF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060338DA RID: 211162 RVA: 0x006F1828 File Offset: 0x006EFA28
+		// Token: 0x06036BD6 RID: 224214 RVA: 0x00752AB8 File Offset: 0x00750CB8
 		public static ISplinePoint GetRootAsISplinePoint(ByteBuffer _bb)
 		{
 			return ISplinePoint.GetRootAsISplinePoint(_bb, default(ISplinePoint));
 		}
 
-		// Token: 0x060338DB RID: 211163 RVA: 0x006F1844 File Offset: 0x006EFA44
+		// Token: 0x06036BD7 RID: 224215 RVA: 0x00752AD4 File Offset: 0x00750CD4
 		public static ISplinePoint GetRootAsISplinePoint(ByteBuffer _bb, ISplinePoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060338DC RID: 211164 RVA: 0x006F1861 File Offset: 0x006EFA61
+		// Token: 0x06036BD8 RID: 224216 RVA: 0x00752AF1 File Offset: 0x00750CF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060338DD RID: 211165 RVA: 0x006F1870 File Offset: 0x006EFA70
+		// Token: 0x06036BD9 RID: 224217 RVA: 0x00752B00 File Offset: 0x00750D00
 		public ISplinePoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D7F8 RID: 55288
-		// (get) Token: 0x060338DE RID: 211166 RVA: 0x006F1880 File Offset: 0x006EFA80
+		// Token: 0x1700E3EF RID: 58351
+		// (get) Token: 0x06036BDA RID: 224218 RVA: 0x00752B10 File Offset: 0x00750D10
 		public string Spline
 		{
 			get
@@ -64,19 +64,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060338DF RID: 211167 RVA: 0x006F18B7 File Offset: 0x006EFAB7
+		// Token: 0x06036BDB RID: 224219 RVA: 0x00752B47 File Offset: 0x00750D47
 		public Span<byte> GetSplineBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x060338E0 RID: 211168 RVA: 0x006F18C6 File Offset: 0x006EFAC6
+		// Token: 0x06036BDC RID: 224220 RVA: 0x00752B56 File Offset: 0x00750D56
 		public byte[] GetSplineArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x060338E1 RID: 211169 RVA: 0x006F18D4 File Offset: 0x006EFAD4
+		// Token: 0x06036BDD RID: 224221 RVA: 0x00752B64 File Offset: 0x00750D64
 		public IVectorInfo? Points(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -87,8 +87,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700D7F9 RID: 55289
-		// (get) Token: 0x060338E2 RID: 211170 RVA: 0x006F1934 File Offset: 0x006EFB34
+		// Token: 0x1700E3F0 RID: 58352
+		// (get) Token: 0x06036BDE RID: 224222 RVA: 0x00752BC4 File Offset: 0x00750DC4
 		public int PointsLength
 		{
 			get
@@ -102,7 +102,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060338E3 RID: 211171 RVA: 0x006F195F File Offset: 0x006EFB5F
+		// Token: 0x06036BDF RID: 224223 RVA: 0x00752BEF File Offset: 0x00750DEF
 		public static Offset<ISplinePoint> CreateISplinePoint(FlatBufferBuilder builder, StringOffset SplineOffset = default(StringOffset), VectorOffset PointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -111,25 +111,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISplinePoint.EndISplinePoint(builder);
 		}
 
-		// Token: 0x060338E4 RID: 211172 RVA: 0x006F197C File Offset: 0x006EFB7C
+		// Token: 0x06036BE0 RID: 224224 RVA: 0x00752C0C File Offset: 0x00750E0C
 		public static void StartISplinePoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060338E5 RID: 211173 RVA: 0x006F1985 File Offset: 0x006EFB85
+		// Token: 0x06036BE1 RID: 224225 RVA: 0x00752C15 File Offset: 0x00750E15
 		public static void AddSpline(FlatBufferBuilder builder, StringOffset splineOffset)
 		{
 			builder.AddOffset(0, splineOffset.Value, 0);
 		}
 
-		// Token: 0x060338E6 RID: 211174 RVA: 0x006F1995 File Offset: 0x006EFB95
+		// Token: 0x06036BE2 RID: 224226 RVA: 0x00752C25 File Offset: 0x00750E25
 		public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset)
 		{
 			builder.AddOffset(1, pointsOffset.Value, 0);
 		}
 
-		// Token: 0x060338E7 RID: 211175 RVA: 0x006F19A8 File Offset: 0x006EFBA8
+		// Token: 0x06036BE3 RID: 224227 RVA: 0x00752C38 File Offset: 0x00750E38
 		public static VectorOffset CreatePointsVector(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060338E8 RID: 211176 RVA: 0x006F19E8 File Offset: 0x006EFBE8
+		// Token: 0x06036BE4 RID: 224228 RVA: 0x00752C78 File Offset: 0x00750E78
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060338E9 RID: 211177 RVA: 0x006F1A02 File Offset: 0x006EFC02
+		// Token: 0x06036BE5 RID: 224229 RVA: 0x00752C92 File Offset: 0x00750E92
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVectorInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060338EA RID: 211178 RVA: 0x006F1A20 File Offset: 0x006EFC20
+		// Token: 0x06036BE6 RID: 224230 RVA: 0x00752CB0 File Offset: 0x00750EB0
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -164,19 +164,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x060338EB RID: 211179 RVA: 0x006F1A39 File Offset: 0x006EFC39
+		// Token: 0x06036BE7 RID: 224231 RVA: 0x00752CC9 File Offset: 0x00750EC9
 		public static void StartPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060338EC RID: 211180 RVA: 0x006F1A44 File Offset: 0x006EFC44
+		// Token: 0x06036BE8 RID: 224232 RVA: 0x00752CD4 File Offset: 0x00750ED4
 		public static Offset<ISplinePoint> EndISplinePoint(FlatBufferBuilder builder)
 		{
 			return new Offset<ISplinePoint>(builder.EndTable());
 		}
 
-		// Token: 0x060338ED RID: 211181 RVA: 0x006F1A54 File Offset: 0x006EFC54
+		// Token: 0x06036BE9 RID: 224233 RVA: 0x00752CE4 File Offset: 0x00750EE4
 		public ISplinePointT UnPack()
 		{
 			ISplinePointT splinePointT = new ISplinePointT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return splinePointT;
 		}
 
-		// Token: 0x060338EE RID: 211182 RVA: 0x006F1A70 File Offset: 0x006EFC70
+		// Token: 0x06036BEA RID: 224234 RVA: 0x00752D00 File Offset: 0x00750F00
 		public void UnPackTo(ISplinePointT _o)
 		{
 			_o.Spline = this.Spline;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060338EF RID: 211183 RVA: 0x006F1ADC File Offset: 0x006EFCDC
+		// Token: 0x06036BEB RID: 224235 RVA: 0x00752D6C File Offset: 0x00750F6C
 		public static Offset<ISplinePoint> Pack(FlatBufferBuilder builder, ISplinePointT _o)
 		{
 			if (_o == null)
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISplinePoint.CreateISplinePoint(builder, splineOffset, pointsOffset);
 		}
 
-		// Token: 0x04011C58 RID: 72792
+		// Token: 0x04012C58 RID: 76888
 		private Table __p;
 	}
 }

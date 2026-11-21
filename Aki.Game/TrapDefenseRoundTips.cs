@@ -7,16 +7,16 @@ using CSharpScript.Game.Module.TrapDefense;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D4A RID: 7498
+// Token: 0x0200120C RID: 4620
 public class TrapDefenseRoundTips : UiViewBase
 {
-	// Token: 0x0600E372 RID: 58226 RVA: 0x0035701E File Offset: 0x0035521E
+	// Token: 0x0600B78F RID: 46991 RVA: 0x00362A4E File Offset: 0x00360C4E
 	[NullableContext(1)]
 	public TrapDefenseRoundTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E373 RID: 58227 RVA: 0x00357028 File Offset: 0x00355228
+	// Token: 0x0600B790 RID: 46992 RVA: 0x00362A58 File Offset: 0x00360C58
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class TrapDefenseRoundTips : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E374 RID: 58228 RVA: 0x00357084 File Offset: 0x00355284
+	// Token: 0x0600B791 RID: 46993 RVA: 0x00362AB4 File Offset: 0x00360CB4
 	protected override void OnStart()
 	{
 		this.Data = (this.OpenParam as ITrapDefenseRoundTipsData);
@@ -50,7 +50,7 @@ public class TrapDefenseRoundTips : UiViewBase
 		this.StartTimer();
 	}
 
-	// Token: 0x0600E375 RID: 58229 RVA: 0x0035712C File Offset: 0x0035532C
+	// Token: 0x0600B792 RID: 46994 RVA: 0x00362B5C File Offset: 0x00360D5C
 	protected override void OnBeforeDestroy()
 	{
 		ITrapDefenseRoundTipsData data = this.Data;
@@ -62,7 +62,7 @@ public class TrapDefenseRoundTips : UiViewBase
 		this.StopTimer();
 	}
 
-	// Token: 0x0600E376 RID: 58230 RVA: 0x0035715B File Offset: 0x0035535B
+	// Token: 0x0600B793 RID: 46995 RVA: 0x00362B8B File Offset: 0x00360D8B
 	private void StartTimer()
 	{
 		this.TimerHandle = TimerSystem.Instance.Delay(delegate(float delta)
@@ -72,7 +72,7 @@ public class TrapDefenseRoundTips : UiViewBase
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600E377 RID: 58231 RVA: 0x00357186 File Offset: 0x00355386
+	// Token: 0x0600B794 RID: 46996 RVA: 0x00362BB6 File Offset: 0x00360DB6
 	private void StopTimer()
 	{
 		if (this.TimerHandle != null)
@@ -82,24 +82,24 @@ public class TrapDefenseRoundTips : UiViewBase
 		}
 	}
 
-	// Token: 0x04006901 RID: 26881
+	// Token: 0x040069E0 RID: 27104
 	[Nullable(2)]
 	protected ITrapDefenseRoundTipsData Data;
 
-	// Token: 0x04006902 RID: 26882
+	// Token: 0x040069E1 RID: 27105
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x02008364 RID: 33636
+	// Token: 0x020074ED RID: 29933
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AD51 RID: 175441
+		// Token: 0x04026079 RID: 155769
 		public const int CurrentRoundNum = 0;
 
-		// Token: 0x0402AD52 RID: 175442
+		// Token: 0x0402607A RID: 155770
 		public const int EnemyItem = 1;
 
-		// Token: 0x0402AD53 RID: 175443
+		// Token: 0x0402607B RID: 155771
 		public const int WarningTips = 2;
 	}
 }

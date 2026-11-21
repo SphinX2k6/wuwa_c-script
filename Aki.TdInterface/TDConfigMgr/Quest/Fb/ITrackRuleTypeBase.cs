@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200130F RID: 4879
+	// Token: 0x0200145F RID: 5215
 	public class ITrackRuleTypeBase
 	{
-		// Token: 0x06007010 RID: 28688 RVA: 0x0010ED8C File Offset: 0x0010CF8C
-		[NullableContext(1)]
+		// Token: 0x060076B0 RID: 30384 RVA: 0x0011D2F8 File Offset: 0x0011B4F8
 		public static ITrackRuleTypeBase Create(ITrackRuleTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023C5 RID: 9157
-		// (get) Token: 0x06007011 RID: 28689 RVA: 0x0010EDAB File Offset: 0x0010CFAB
+		// Token: 0x17002594 RID: 9620
+		// (get) Token: 0x060076B1 RID: 30385 RVA: 0x0011D317 File Offset: 0x0011B517
 		public virtual ETrackRuleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040A5 RID: 16549
+		// Token: 0x04004421 RID: 17441
 		private ITrackRuleTypeBase Instance;
 	}
 }

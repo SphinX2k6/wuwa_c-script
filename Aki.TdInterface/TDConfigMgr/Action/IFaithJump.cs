@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A5D RID: 6749
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BF2 RID: 7154
 	public class IFaithJump : ILeisureInteractType
 	{
-		// Token: 0x06009078 RID: 36984 RVA: 0x00150BF0 File Offset: 0x0014EDF0
+		// Token: 0x060097E2 RID: 38882 RVA: 0x00160B1C File Offset: 0x0015ED1C
 		private IFaithJump_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009079 RID: 36985 RVA: 0x00150C28 File Offset: 0x0014EE28
+		// Token: 0x060097E3 RID: 38883 RVA: 0x00160B54 File Offset: 0x0015ED54
 		public static IFaithJump Create([Nullable(2)] IFaithJump instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600907A RID: 36986 RVA: 0x00150C3B File Offset: 0x0014EE3B
+		// Token: 0x060097E4 RID: 38884 RVA: 0x00160B67 File Offset: 0x0015ED67
 		public static IFaithJump CreateFromSetValue([Nullable(2)] IFaithJump_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600907B RID: 36987 RVA: 0x00150C4E File Offset: 0x0014EE4E
+		// Token: 0x060097E5 RID: 38885 RVA: 0x00160B7A File Offset: 0x0015ED7A
 		public new IFaithJump_SetValue ToSetValue()
 		{
 			return new IFaithJump_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E06 RID: 11782
-		// (get) Token: 0x0600907C RID: 36988 RVA: 0x00150C61 File Offset: 0x0014EE61
-		// (set) Token: 0x0600907D RID: 36989 RVA: 0x00150C8C File Offset: 0x0014EE8C
+		// Token: 0x17003013 RID: 12307
+		// (get) Token: 0x060097E6 RID: 38886 RVA: 0x00160B8D File Offset: 0x0015ED8D
+		// (set) Token: 0x060097E7 RID: 38887 RVA: 0x00160BB8 File Offset: 0x0015EDB8
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005937 RID: 22839
+		// Token: 0x04005D9C RID: 23964
 		[Nullable(2)]
 		protected new IFaithJump FbInstance;
 
-		// Token: 0x04005938 RID: 22840
+		// Token: 0x04005D9D RID: 23965
 		[Nullable(2)]
 		protected new IFaithJump_SetValue PocoInterface;
 	}

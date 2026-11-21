@@ -6,41 +6,41 @@ using CSharpScript.Game.Module.RoleUi.RoleDevelop.View;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 {
-	// Token: 0x02004D5E RID: 19806
+	// Token: 0x02003D27 RID: 15655
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopProjectProspectData : RoleDevelopProjectBaseData
 	{
-		// Token: 0x06033301 RID: 209665 RVA: 0x00BF0B3A File Offset: 0x00BEED3A
+		// Token: 0x0602816D RID: 164205 RVA: 0x00B39CF0 File Offset: 0x00B37EF0
 		public RoleDevelopProjectProspectData(int id, RoleDevelopRoleBaseData developRoleData) : base(id, developRoleData)
 		{
 		}
 
-		// Token: 0x06033302 RID: 209666 RVA: 0x00BF0B44 File Offset: 0x00BEED44
+		// Token: 0x0602816E RID: 164206 RVA: 0x00B39CFA File Offset: 0x00B37EFA
 		public override ERoleDevelopRoleType GetRoleType()
 		{
 			return ERoleDevelopRoleType.Prospect;
 		}
 
-		// Token: 0x06033303 RID: 209667 RVA: 0x00BF0B47 File Offset: 0x00BEED47
+		// Token: 0x0602816F RID: 164207 RVA: 0x00B39CFD File Offset: 0x00B37EFD
 		public IRoleDevProsProjectConfig GetProsProjectConfig()
 		{
 			return RoleDevConfig.Instance.GetRoleDevProsProjectConfig(this.Id);
 		}
 
-		// Token: 0x06033304 RID: 209668 RVA: 0x00BF0B59 File Offset: 0x00BEED59
+		// Token: 0x06028170 RID: 164208 RVA: 0x00B39D0F File Offset: 0x00B37F0F
 		public override int GetRoleTargetLevel()
 		{
 			return this.GetProsProjectConfig().RoleGoalLevel;
 		}
 
-		// Token: 0x06033305 RID: 209669 RVA: 0x00BF0B66 File Offset: 0x00BEED66
+		// Token: 0x06028171 RID: 164209 RVA: 0x00B39D1C File Offset: 0x00B37F1C
 		public override int GetRoleUpgradeExp()
 		{
 			return this.GetProsProjectConfig().RoleExperience;
 		}
 
-		// Token: 0x06033306 RID: 209670 RVA: 0x00BF0B74 File Offset: 0x00BEED74
+		// Token: 0x06028172 RID: 164210 RVA: 0x00B39D2C File Offset: 0x00B37F2C
 		public override List<RoleDevelopNeedItem> GetRoleUpgradeNeedItems()
 		{
 			List<RoleDevelopNeedItem> list = new List<RoleDevelopNeedItem>();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return RoleDevelopUtil.CalcUpgradeNeedItems(this.GetRoleUpgradeExp(), list, (int itemId) => RoleModel.Instance.GetRoleExpItemExp(itemId).GetValueOrDefault(0));
 		}
 
-		// Token: 0x06033307 RID: 209671 RVA: 0x00BF0C14 File Offset: 0x00BEEE14
+		// Token: 0x06028173 RID: 164211 RVA: 0x00B39DCC File Offset: 0x00B37FCC
 		public override List<RoleDevelopNeedItem> GetRoleBreachNeedItems()
 		{
 			List<RoleDevelopNeedItem> list = new List<RoleDevelopNeedItem>();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x06033308 RID: 209672 RVA: 0x00BF0D10 File Offset: 0x00BEEF10
+		// Token: 0x06028174 RID: 164212 RVA: 0x00B39EC8 File Offset: 0x00B380C8
 		public override List<RoleDevelopNeedItem> GetRoleDevelopNeedItems()
 		{
 			Dictionary<int, RoleDevelopNeedItem> dictionary = new Dictionary<int, RoleDevelopNeedItem>();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return new List<RoleDevelopNeedItem>(dictionary.Values);
 		}
 
-		// Token: 0x06033309 RID: 209673 RVA: 0x00BF0E68 File Offset: 0x00BEF068
+		// Token: 0x06028175 RID: 164213 RVA: 0x00B3A020 File Offset: 0x00B38220
 		public override List<RoleDevelopProjectMaterialItemData> GetRoleDevelopProjectViewItems()
 		{
 			List<RoleDevelopProjectMaterialItemData> list = new List<RoleDevelopProjectMaterialItemData>();
@@ -139,25 +139,25 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x0603330A RID: 209674 RVA: 0x00BF0F00 File Offset: 0x00BEF100
+		// Token: 0x06028176 RID: 164214 RVA: 0x00B3A0B8 File Offset: 0x00B382B8
 		public override int GetWeaponType()
 		{
 			return this.GetProsProjectConfig().WeaponType;
 		}
 
-		// Token: 0x0603330B RID: 209675 RVA: 0x00BF0F0D File Offset: 0x00BEF10D
+		// Token: 0x06028177 RID: 164215 RVA: 0x00B3A0C5 File Offset: 0x00B382C5
 		public override int GetWeaponTargetLevel()
 		{
 			return this.GetProsProjectConfig().WeaponGoalLevel;
 		}
 
-		// Token: 0x0603330C RID: 209676 RVA: 0x00BF0F1A File Offset: 0x00BEF11A
+		// Token: 0x06028178 RID: 164216 RVA: 0x00B3A0D2 File Offset: 0x00B382D2
 		public override int GetWeaponUpgradeExp()
 		{
 			return this.GetProsProjectConfig().WeaponExperience;
 		}
 
-		// Token: 0x0603330D RID: 209677 RVA: 0x00BF0F28 File Offset: 0x00BEF128
+		// Token: 0x06028179 RID: 164217 RVA: 0x00B3A0E0 File Offset: 0x00B382E0
 		public override List<RoleDevelopNeedItem> GetWeaponUpgradeNeedItems()
 		{
 			List<RoleDevelopNeedItem> list = new List<RoleDevelopNeedItem>();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return RoleDevelopUtil.CalcUpgradeNeedItems(this.GetWeaponUpgradeExp(), list, (int itemId) => WeaponModel.Instance.GetWeaponItemExp(0, itemId));
 		}
 
-		// Token: 0x0603330E RID: 209678 RVA: 0x00BF0FC8 File Offset: 0x00BEF1C8
+		// Token: 0x0602817A RID: 164218 RVA: 0x00B3A180 File Offset: 0x00B38380
 		public override List<RoleDevelopNeedItem> GetWeaponBreachNeedItems()
 		{
 			IRoleDevProsProjectConfig prosProjectConfig = this.GetProsProjectConfig();
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x0603330F RID: 209679 RVA: 0x00BF10D0 File Offset: 0x00BEF2D0
+		// Token: 0x0602817B RID: 164219 RVA: 0x00B3A288 File Offset: 0x00B38488
 		public override List<RoleDevelopProjectMaterialItemData> GetWeaponDevelopProjectViewItems()
 		{
 			List<RoleDevelopProjectMaterialItemData> list = new List<RoleDevelopProjectMaterialItemData>();
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x06033310 RID: 209680 RVA: 0x00BF1168 File Offset: 0x00BEF368
+		// Token: 0x0602817C RID: 164220 RVA: 0x00B3A320 File Offset: 0x00B38520
 		public override List<RoleDevelopSkillData> GetSkillDevelopData()
 		{
 			int[] canLevelUpSkillNodeIndexList = RoleDevConfig.Instance.GetCanLevelUpSkillNodeIndexList();
@@ -237,13 +237,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x06033311 RID: 209681 RVA: 0x00BF11CB File Offset: 0x00BEF3CB
+		// Token: 0x0602817D RID: 164221 RVA: 0x00B3A383 File Offset: 0x00B38583
 		public override bool IsSkillPlanFinished()
 		{
 			return false;
 		}
 
-		// Token: 0x06033312 RID: 209682 RVA: 0x00BF11D0 File Offset: 0x00BEF3D0
+		// Token: 0x0602817E RID: 164222 RVA: 0x00B3A388 File Offset: 0x00B38588
 		public override List<RoleDevelopNeedItem> GetSkillPlanNeedItems()
 		{
 			IRoleDevProsProjectConfig prosProjectConfig = this.GetProsProjectConfig();
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x06033313 RID: 209683 RVA: 0x00BF12D8 File Offset: 0x00BEF4D8
+		// Token: 0x0602817F RID: 164223 RVA: 0x00B3A490 File Offset: 0x00B38690
 		public override List<RoleDevelopProjectMaterialItemData> GetSkillDevelopProjectViewItems()
 		{
 			List<RoleDevelopProjectMaterialItemData> list = new List<RoleDevelopProjectMaterialItemData>();
@@ -285,49 +285,55 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return list;
 		}
 
-		// Token: 0x06033314 RID: 209684 RVA: 0x00BF1358 File Offset: 0x00BEF558
+		// Token: 0x06028180 RID: 164224 RVA: 0x00B3A510 File Offset: 0x00B38710
 		public override bool IsShowUpgradeHint(ERoleDevelopCategoryType categoryType)
 		{
 			return false;
 		}
 
-		// Token: 0x06033315 RID: 209685 RVA: 0x00BF135B File Offset: 0x00BEF55B
+		// Token: 0x06028181 RID: 164225 RVA: 0x00B3A513 File Offset: 0x00B38713
 		public override bool IsShowFinishHint(ERoleDevelopCategoryType categoryType)
 		{
 			return false;
 		}
 
-		// Token: 0x06033316 RID: 209686 RVA: 0x00BF135E File Offset: 0x00BEF55E
+		// Token: 0x06028182 RID: 164226 RVA: 0x00B3A516 File Offset: 0x00B38716
+		public override bool IsShowCanImproveHint(ERoleDevelopCategoryType categoryType)
+		{
+			return false;
+		}
+
+		// Token: 0x06028183 RID: 164227 RVA: 0x00B3A519 File Offset: 0x00B38719
 		public override bool IsRoleDevelopFinished()
 		{
 			return false;
 		}
 
-		// Token: 0x06033317 RID: 209687 RVA: 0x00BF1361 File Offset: 0x00BEF561
+		// Token: 0x06028184 RID: 164228 RVA: 0x00B3A51C File Offset: 0x00B3871C
 		public override bool IsWeaponDevelopFinished()
 		{
 			return false;
 		}
 
-		// Token: 0x06033318 RID: 209688 RVA: 0x00BF1364 File Offset: 0x00BEF564
+		// Token: 0x06028185 RID: 164229 RVA: 0x00B3A51F File Offset: 0x00B3871F
 		public override bool IsRoleReachTargetLevel()
 		{
 			return false;
 		}
 
-		// Token: 0x06033319 RID: 209689 RVA: 0x00BF1367 File Offset: 0x00BEF567
+		// Token: 0x06028186 RID: 164230 RVA: 0x00B3A522 File Offset: 0x00B38722
 		public override bool IsRoleReachBreachLevel()
 		{
 			return false;
 		}
 
-		// Token: 0x0603331A RID: 209690 RVA: 0x00BF136A File Offset: 0x00BEF56A
+		// Token: 0x06028187 RID: 164231 RVA: 0x00B3A525 File Offset: 0x00B38725
 		public override bool IsWeaponReachTargetLevel()
 		{
 			return false;
 		}
 
-		// Token: 0x0603331B RID: 209691 RVA: 0x00BF136D File Offset: 0x00BEF56D
+		// Token: 0x06028188 RID: 164232 RVA: 0x00B3A528 File Offset: 0x00B38728
 		public override bool IsWeaponReachBreachLevel()
 		{
 			return false;

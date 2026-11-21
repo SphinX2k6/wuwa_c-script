@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E10 RID: 3600
+	// Token: 0x02000F0C RID: 3852
 	public class IWuWaGoHintStepInteract : IWuWaGoHintStepBase
 	{
-		// Token: 0x06005172 RID: 20850 RVA: 0x000C8E64 File Offset: 0x000C7064
-		[NullableContext(1)]
+		// Token: 0x06005699 RID: 22169 RVA: 0x000D472C File Offset: 0x000D292C
 		public static IWuWaGoHintStepInteract Create(IWuWaGoHintStepInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B0F RID: 6927
-		// (get) Token: 0x06005173 RID: 20851 RVA: 0x000C8E83 File Offset: 0x000C7083
+		// Token: 0x17001C7C RID: 7292
+		// (get) Token: 0x0600569A RID: 22170 RVA: 0x000D474B File Offset: 0x000D294B
 		public override EWuWaGoHintStepType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EE7 RID: 12007
+		// Token: 0x040031AF RID: 12719
 		private IWuWaGoHintStepInteract Instance;
 	}
 }

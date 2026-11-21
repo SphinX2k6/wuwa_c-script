@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001056 RID: 4182
+	// Token: 0x0200113E RID: 4414
 	public struct RolePropertyGrowth : IFlatbufferObject
 	{
-		// Token: 0x170032E5 RID: 13029
-		// (get) Token: 0x0600C9BF RID: 51647 RVA: 0x002FD329 File Offset: 0x002FB529
+		// Token: 0x17003361 RID: 13153
+		// (get) Token: 0x0600D00F RID: 53263 RVA: 0x0031901F File Offset: 0x0031721F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C9C0 RID: 51648 RVA: 0x002FD336 File Offset: 0x002FB536
+		// Token: 0x0600D010 RID: 53264 RVA: 0x0031902C File Offset: 0x0031722C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C9C1 RID: 51649 RVA: 0x002FD340 File Offset: 0x002FB540
+		// Token: 0x0600D011 RID: 53265 RVA: 0x00319034 File Offset: 0x00317234
 		public static RolePropertyGrowth GetRootAsRolePropertyGrowth(ByteBuffer _bb)
 		{
 			return RolePropertyGrowth.GetRootAsRolePropertyGrowth(_bb, default(RolePropertyGrowth));
 		}
 
-		// Token: 0x0600C9C2 RID: 51650 RVA: 0x002FD35C File Offset: 0x002FB55C
+		// Token: 0x0600D012 RID: 53266 RVA: 0x00319050 File Offset: 0x00317250
 		public static RolePropertyGrowth GetRootAsRolePropertyGrowth(ByteBuffer _bb, RolePropertyGrowth obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C9C3 RID: 51651 RVA: 0x002FD379 File Offset: 0x002FB579
+		// Token: 0x0600D013 RID: 53267 RVA: 0x0031906D File Offset: 0x0031726D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C9C4 RID: 51652 RVA: 0x002FD388 File Offset: 0x002FB588
+		// Token: 0x0600D014 RID: 53268 RVA: 0x0031907C File Offset: 0x0031727C
 		public RolePropertyGrowth __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170032E6 RID: 13030
-		// (get) Token: 0x0600C9C5 RID: 51653 RVA: 0x002FD398 File Offset: 0x002FB598
+		// Token: 0x17003362 RID: 13154
+		// (get) Token: 0x0600D015 RID: 53269 RVA: 0x0031908C File Offset: 0x0031728C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170032E7 RID: 13031
-		// (get) Token: 0x0600C9C6 RID: 51654 RVA: 0x002FD3D4 File Offset: 0x002FB5D4
+		// Token: 0x17003363 RID: 13155
+		// (get) Token: 0x0600D016 RID: 53270 RVA: 0x003190C8 File Offset: 0x003172C8
 		public int Level
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170032E8 RID: 13032
-		// (get) Token: 0x0600C9C7 RID: 51655 RVA: 0x002FD410 File Offset: 0x002FB610
+		// Token: 0x17003364 RID: 13156
+		// (get) Token: 0x0600D017 RID: 53271 RVA: 0x00319104 File Offset: 0x00317304
 		public int BreachLevel
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170032E9 RID: 13033
-		// (get) Token: 0x0600C9C8 RID: 51656 RVA: 0x002FD44C File Offset: 0x002FB64C
+		// Token: 0x17003365 RID: 13157
+		// (get) Token: 0x0600D018 RID: 53272 RVA: 0x00319140 File Offset: 0x00317340
 		public int LifeMaxRatio
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170032EA RID: 13034
-		// (get) Token: 0x0600C9C9 RID: 51657 RVA: 0x002FD48C File Offset: 0x002FB68C
+		// Token: 0x17003366 RID: 13158
+		// (get) Token: 0x0600D019 RID: 53273 RVA: 0x00319180 File Offset: 0x00317380
 		public int AtkRatio
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170032EB RID: 13035
-		// (get) Token: 0x0600C9CA RID: 51658 RVA: 0x002FD4CC File Offset: 0x002FB6CC
+		// Token: 0x17003367 RID: 13159
+		// (get) Token: 0x0600D01A RID: 53274 RVA: 0x003191C0 File Offset: 0x003173C0
 		public int DefRatio
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005157 RID: 20823
+		// Token: 0x0400573F RID: 22335
 		private Table __p;
 	}
 }

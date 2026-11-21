@@ -5,16 +5,16 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 {
-	// Token: 0x02005452 RID: 21586
+	// Token: 0x02004435 RID: 17461
 	public class BasicGraphicSettingData : IStaticVariableResetter
 	{
-		// Token: 0x060371CF RID: 225743 RVA: 0x00D103B0 File Offset: 0x00D0E5B0
+		// Token: 0x0602C118 RID: 180504 RVA: 0x00C5F7C8 File Offset: 0x00C5D9C8
 		static BasicGraphicSettingData()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BasicGraphicSettingData.CreateStaticDefaultValue), new Action(BasicGraphicSettingData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060371D0 RID: 225744 RVA: 0x00D103CF File Offset: 0x00D0E5CF
+		// Token: 0x0602C119 RID: 180505 RVA: 0x00C5F7E7 File Offset: 0x00C5D9E7
 		public static void CreateStaticDefaultValue()
 		{
 			BasicGraphicSettingData.BasicGraphicFunctionIds = new EFunction[]
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			};
 		}
 
-		// Token: 0x060371D1 RID: 225745 RVA: 0x00D103E7 File Offset: 0x00D0E5E7
+		// Token: 0x0602C11A RID: 180506 RVA: 0x00C5F7FF File Offset: 0x00C5D9FF
 		public static void ResetStaticDefaultValue()
 		{
 			BasicGraphicSettingData.BasicGraphicFunctionIds = null;
 		}
 
-		// Token: 0x060371D2 RID: 225746 RVA: 0x00D103F0 File Offset: 0x00D0E5F0
+		// Token: 0x0602C11B RID: 180507 RVA: 0x00C5F808 File Offset: 0x00C5DA08
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static BasicGraphicSettingSliderData CreateBasicGraphicSettingSliderData(MenuData metaData)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			return new BasicGraphicSettingSliderContrastData(metaData);
 		}
 
-		// Token: 0x060371D3 RID: 225747 RVA: 0x00D10430 File Offset: 0x00D0E630
+		// Token: 0x0602C11C RID: 180508 RVA: 0x00C5F848 File Offset: 0x00C5DA48
 		[NullableContext(1)]
 		public static List<BasicGraphicSettingSliderData> GetBasicGraphicSettingSliderDataList()
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			return list;
 		}
 
-		// Token: 0x0401D13B RID: 119099
+		// Token: 0x04017BD4 RID: 97236
 		[Nullable(2)]
 		private static EFunction[] BasicGraphicFunctionIds;
 	}

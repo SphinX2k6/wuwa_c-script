@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x0200510A RID: 20746
+	// Token: 0x020040DA RID: 16602
 	public enum ECardFaceType
 	{
-		// Token: 0x0401C41B RID: 115739
+		// Token: 0x04016E50 RID: 93776
 		Texture,
-		// Token: 0x0401C41C RID: 115740
+		// Token: 0x04016E51 RID: 93777
 		Spine
 	}
 }

@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043A6 RID: 17318
+	// Token: 0x020033C4 RID: 13252
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/ECameraModifier_Settings_ArmLengthDynamicValueType.ECameraModifier_Settings_ArmLengthDynamicValueType")]
 	public enum ECameraModifier_Settings_ArmLengthDynamicValueType : byte
 	{
-		// Token: 0x04017AE2 RID: 96994
+		// Token: 0x04012654 RID: 75348
 		None,
-		// Token: 0x04017AE3 RID: 96995
+		// Token: 0x04012655 RID: 75349
 		技能Id,
-		// Token: 0x04017AE4 RID: 96996
+		// Token: 0x04012656 RID: 75350
 		ECameraModifier_Settings_MAX
 	}
 }

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x020031C0 RID: 12736
+// Token: 0x0200272F RID: 10031
 [NullableContext(2)]
 [Nullable(0)]
 public class MonsterFlowComponent : CharacterFlowComponent
 {
-	// Token: 0x0601B737 RID: 112439 RVA: 0x007831D1 File Offset: 0x007813D1
+	// Token: 0x0601926B RID: 103019 RVA: 0x007AB3DD File Offset: 0x007A95DD
 	protected override bool OnStart()
 	{
 		this.UnifiedStateComp = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -16,7 +16,7 @@ public class MonsterFlowComponent : CharacterFlowComponent
 		return true;
 	}
 
-	// Token: 0x0601B738 RID: 112440 RVA: 0x007831FD File Offset: 0x007813FD
+	// Token: 0x0601926C RID: 103020 RVA: 0x007AB409 File Offset: 0x007A9609
 	protected override bool InitFlowLogicRange(float? enterRange, float? leaveRange, IBubbleRangeCylinderConfig config)
 	{
 		if (!base.InitFlowLogicRange(enterRange, leaveRange, config))
@@ -31,7 +31,7 @@ public class MonsterFlowComponent : CharacterFlowComponent
 		return true;
 	}
 
-	// Token: 0x0601B739 RID: 112441 RVA: 0x0078322C File Offset: 0x0078142C
+	// Token: 0x0601926D RID: 103021 RVA: 0x007AB438 File Offset: 0x007A9638
 	protected override bool CheckCondition()
 	{
 		if (!base.CheckCondition())
@@ -55,7 +55,7 @@ public class MonsterFlowComponent : CharacterFlowComponent
 		return true;
 	}
 
-	// Token: 0x0601B73A RID: 112442 RVA: 0x00783278 File Offset: 0x00781478
+	// Token: 0x0601926E RID: 103022 RVA: 0x007AB484 File Offset: 0x007A9684
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -64,34 +64,68 @@ public class MonsterFlowComponent : CharacterFlowComponent
 			return false;
 		}
 		MonsterFlowComponent monsterFlowComponent = (MonsterFlowComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SensoryComp"))
+		if (monsterFlowComponent.SensoryComp == null)
 		{
-			if (monsterFlowComponent.SensoryComp == null)
-			{
-				this.SensoryComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.SensoryComp), "SensoryComp"))
-			{
-				return false;
-			}
+			this.SensoryComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SensoryComp), "SensoryComp"))
 		{
-			if (monsterFlowComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (monsterFlowComponent.UnifiedStateComp == null)
+		{
+			this.UnifiedStateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400D74D RID: 55117
+	// Token: 0x170027FE RID: 10238
+	// (get) Token: 0x0601926F RID: 103023 RVA: 0x007AB4FA File Offset: 0x007A96FA
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027FF RID: 10239
+	// (get) Token: 0x06019270 RID: 103024 RVA: 0x007AB4FD File Offset: 0x007A96FD
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002800 RID: 10240
+	// (get) Token: 0x06019271 RID: 103025 RVA: 0x007AB500 File Offset: 0x007A9700
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002801 RID: 10241
+	// (get) Token: 0x06019272 RID: 103026 RVA: 0x007AB503 File Offset: 0x007A9703
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DBD4 RID: 56276
 	private PawnSensoryInfoComponent SensoryComp;
 
-	// Token: 0x0400D74E RID: 55118
+	// Token: 0x0400DBD5 RID: 56277
 	private CharacterUnifiedStateComponent UnifiedStateComp;
 }

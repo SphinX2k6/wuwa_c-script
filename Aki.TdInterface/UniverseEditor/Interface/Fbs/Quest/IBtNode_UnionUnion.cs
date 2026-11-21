@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D3E RID: 15678
+	// Token: 0x02004155 RID: 16725
 	public class IBtNode_UnionUnion
 	{
-		// Token: 0x17006B8D RID: 27533
-		// (get) Token: 0x06015A85 RID: 88709 RVA: 0x003201AE File Offset: 0x0031E3AE
-		// (set) Token: 0x06015A86 RID: 88710 RVA: 0x003201B6 File Offset: 0x0031E3B6
+		// Token: 0x17007147 RID: 28999
+		// (get) Token: 0x06016FBD RID: 94141 RVA: 0x00347426 File Offset: 0x00345626
+		// (set) Token: 0x06016FBE RID: 94142 RVA: 0x0034742E File Offset: 0x0034562E
 		public IBtNode_Union Type { get; set; }
 
-		// Token: 0x17006B8E RID: 27534
-		// (get) Token: 0x06015A87 RID: 88711 RVA: 0x003201BF File Offset: 0x0031E3BF
-		// (set) Token: 0x06015A88 RID: 88712 RVA: 0x003201C7 File Offset: 0x0031E3C7
+		// Token: 0x17007148 RID: 29000
+		// (get) Token: 0x06016FBF RID: 94143 RVA: 0x00347437 File Offset: 0x00345637
+		// (set) Token: 0x06016FC0 RID: 94144 RVA: 0x0034743F File Offset: 0x0034563F
 		public object Value { get; set; }
 
-		// Token: 0x06015A89 RID: 88713 RVA: 0x003201D0 File Offset: 0x0031E3D0
+		// Token: 0x06016FC1 RID: 94145 RVA: 0x00347448 File Offset: 0x00345648
 		public IBtNode_UnionUnion()
 		{
 			this.Type = IBtNode_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06015A8A RID: 88714 RVA: 0x003201E6 File Offset: 0x0031E3E6
+		// Token: 0x06016FC2 RID: 94146 RVA: 0x0034745E File Offset: 0x0034565E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06015A8B RID: 88715 RVA: 0x003201F8 File Offset: 0x0031E3F8
+		// Token: 0x06016FC3 RID: 94147 RVA: 0x00347470 File Offset: 0x00345670
 		public IBtNodeT AsIBtNode()
 		{
 			return this.As<IBtNodeT>();
 		}
 
-		// Token: 0x06015A8C RID: 88716 RVA: 0x00320200 File Offset: 0x0031E400
+		// Token: 0x06016FC4 RID: 94148 RVA: 0x00347478 File Offset: 0x00345678
 		public static IBtNode_UnionUnion FromIBtNode(IBtNodeT _ibtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A8D RID: 88717 RVA: 0x00320215 File Offset: 0x0031E415
+		// Token: 0x06016FC5 RID: 94149 RVA: 0x0034748D File Offset: 0x0034568D
 		public IStartBtNodeT AsIStartBtNode()
 		{
 			return this.As<IStartBtNodeT>();
 		}
 
-		// Token: 0x06015A8E RID: 88718 RVA: 0x0032021D File Offset: 0x0031E41D
+		// Token: 0x06016FC6 RID: 94150 RVA: 0x00347495 File Offset: 0x00345695
 		public static IBtNode_UnionUnion FromIStartBtNode(IStartBtNodeT _istartbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A8F RID: 88719 RVA: 0x00320232 File Offset: 0x0031E432
+		// Token: 0x06016FC7 RID: 94151 RVA: 0x003474AA File Offset: 0x003456AA
 		public IQuestSucceedBtNodeT AsIQuestSucceedBtNode()
 		{
 			return this.As<IQuestSucceedBtNodeT>();
 		}
 
-		// Token: 0x06015A90 RID: 88720 RVA: 0x0032023A File Offset: 0x0031E43A
+		// Token: 0x06016FC8 RID: 94152 RVA: 0x003474B2 File Offset: 0x003456B2
 		public static IBtNode_UnionUnion FromIQuestSucceedBtNode(IQuestSucceedBtNodeT _iquestsucceedbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A91 RID: 88721 RVA: 0x0032024F File Offset: 0x0031E44F
+		// Token: 0x06016FC9 RID: 94153 RVA: 0x003474C7 File Offset: 0x003456C7
 		public IQuestFailedBtNodeT AsIQuestFailedBtNode()
 		{
 			return this.As<IQuestFailedBtNodeT>();
 		}
 
-		// Token: 0x06015A92 RID: 88722 RVA: 0x00320257 File Offset: 0x0031E457
+		// Token: 0x06016FCA RID: 94154 RVA: 0x003474CF File Offset: 0x003456CF
 		public static IBtNode_UnionUnion FromIQuestFailedBtNode(IQuestFailedBtNodeT _iquestfailedbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A93 RID: 88723 RVA: 0x0032026C File Offset: 0x0031E46C
+		// Token: 0x06016FCB RID: 94155 RVA: 0x003474E4 File Offset: 0x003456E4
 		public IAlwaysTrueBtNodeT AsIAlwaysTrueBtNode()
 		{
 			return this.As<IAlwaysTrueBtNodeT>();
 		}
 
-		// Token: 0x06015A94 RID: 88724 RVA: 0x00320274 File Offset: 0x0031E474
+		// Token: 0x06016FCC RID: 94156 RVA: 0x003474EC File Offset: 0x003456EC
 		public static IBtNode_UnionUnion FromIAlwaysTrueBtNode(IAlwaysTrueBtNodeT _ialwaystruebtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A95 RID: 88725 RVA: 0x00320289 File Offset: 0x0031E489
+		// Token: 0x06016FCD RID: 94157 RVA: 0x00347501 File Offset: 0x00345701
 		public IAlwaysFalseBtNodeT AsIAlwaysFalseBtNode()
 		{
 			return this.As<IAlwaysFalseBtNodeT>();
 		}
 
-		// Token: 0x06015A96 RID: 88726 RVA: 0x00320291 File Offset: 0x0031E491
+		// Token: 0x06016FCE RID: 94158 RVA: 0x00347509 File Offset: 0x00345709
 		public static IBtNode_UnionUnion FromIAlwaysFalseBtNode(IAlwaysFalseBtNodeT _ialwaysfalsebtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A97 RID: 88727 RVA: 0x003202A6 File Offset: 0x0031E4A6
+		// Token: 0x06016FCF RID: 94159 RVA: 0x0034751E File Offset: 0x0034571E
 		public IRepeaterBtNodeT AsIRepeaterBtNode()
 		{
 			return this.As<IRepeaterBtNodeT>();
 		}
 
-		// Token: 0x06015A98 RID: 88728 RVA: 0x003202AE File Offset: 0x0031E4AE
+		// Token: 0x06016FD0 RID: 94160 RVA: 0x00347526 File Offset: 0x00345726
 		public static IBtNode_UnionUnion FromIRepeaterBtNode(IRepeaterBtNodeT _irepeaterbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A99 RID: 88729 RVA: 0x003202C3 File Offset: 0x0031E4C3
+		// Token: 0x06016FD1 RID: 94161 RVA: 0x0034753B File Offset: 0x0034573B
 		public ILogicBtNodeT AsILogicBtNode()
 		{
 			return this.As<ILogicBtNodeT>();
 		}
 
-		// Token: 0x06015A9A RID: 88730 RVA: 0x003202CB File Offset: 0x0031E4CB
+		// Token: 0x06016FD2 RID: 94162 RVA: 0x00347543 File Offset: 0x00345743
 		public static IBtNode_UnionUnion FromILogicBtNode(ILogicBtNodeT _ilogicbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A9B RID: 88731 RVA: 0x003202E0 File Offset: 0x0031E4E0
+		// Token: 0x06016FD3 RID: 94163 RVA: 0x00347558 File Offset: 0x00345758
 		public ISequenceBtNodeT AsISequenceBtNode()
 		{
 			return this.As<ISequenceBtNodeT>();
 		}
 
-		// Token: 0x06015A9C RID: 88732 RVA: 0x003202E8 File Offset: 0x0031E4E8
+		// Token: 0x06016FD4 RID: 94164 RVA: 0x00347560 File Offset: 0x00345760
 		public static IBtNode_UnionUnion FromISequenceBtNode(ISequenceBtNodeT _isequencebtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A9D RID: 88733 RVA: 0x003202FE File Offset: 0x0031E4FE
+		// Token: 0x06016FD5 RID: 94165 RVA: 0x00347576 File Offset: 0x00345776
 		public ISelectBtNodeT AsISelectBtNode()
 		{
 			return this.As<ISelectBtNodeT>();
 		}
 
-		// Token: 0x06015A9E RID: 88734 RVA: 0x00320306 File Offset: 0x0031E506
+		// Token: 0x06016FD6 RID: 94166 RVA: 0x0034757E File Offset: 0x0034577E
 		public static IBtNode_UnionUnion FromISelectBtNode(ISelectBtNodeT _iselectbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015A9F RID: 88735 RVA: 0x0032031C File Offset: 0x0031E51C
+		// Token: 0x06016FD7 RID: 94167 RVA: 0x00347594 File Offset: 0x00345794
 		public IParallelSelectBtNodeT AsIParallelSelectBtNode()
 		{
 			return this.As<IParallelSelectBtNodeT>();
 		}
 
-		// Token: 0x06015AA0 RID: 88736 RVA: 0x00320324 File Offset: 0x0031E524
+		// Token: 0x06016FD8 RID: 94168 RVA: 0x0034759C File Offset: 0x0034579C
 		public static IBtNode_UnionUnion FromIParallelSelectBtNode(IParallelSelectBtNodeT _iparallelselectbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015AA1 RID: 88737 RVA: 0x0032033A File Offset: 0x0031E53A
+		// Token: 0x06016FD9 RID: 94169 RVA: 0x003475B2 File Offset: 0x003457B2
 		public IConditionSelectorBtNodeT AsIConditionSelectorBtNode()
 		{
 			return this.As<IConditionSelectorBtNodeT>();
 		}
 
-		// Token: 0x06015AA2 RID: 88738 RVA: 0x00320342 File Offset: 0x0031E542
+		// Token: 0x06016FDA RID: 94170 RVA: 0x003475BA File Offset: 0x003457BA
 		public static IBtNode_UnionUnion FromIConditionSelectorBtNode(IConditionSelectorBtNodeT _iconditionselectorbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -221,13 +221,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015AA3 RID: 88739 RVA: 0x00320358 File Offset: 0x0031E558
+		// Token: 0x06016FDB RID: 94171 RVA: 0x003475D0 File Offset: 0x003457D0
 		public IConditionBtNodeT AsIConditionBtNode()
 		{
 			return this.As<IConditionBtNodeT>();
 		}
 
-		// Token: 0x06015AA4 RID: 88740 RVA: 0x00320360 File Offset: 0x0031E560
+		// Token: 0x06016FDC RID: 94172 RVA: 0x003475D8 File Offset: 0x003457D8
 		public static IBtNode_UnionUnion FromIConditionBtNode(IConditionBtNodeT _iconditionbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -237,13 +237,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015AA5 RID: 88741 RVA: 0x00320376 File Offset: 0x0031E576
+		// Token: 0x06016FDD RID: 94173 RVA: 0x003475EE File Offset: 0x003457EE
 		public IChildQuestBtNodeT AsIChildQuestBtNode()
 		{
 			return this.As<IChildQuestBtNodeT>();
 		}
 
-		// Token: 0x06015AA6 RID: 88742 RVA: 0x0032037E File Offset: 0x0031E57E
+		// Token: 0x06016FDE RID: 94174 RVA: 0x003475F6 File Offset: 0x003457F6
 		public static IBtNode_UnionUnion FromIChildQuestBtNode(IChildQuestBtNodeT _ichildquestbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -253,13 +253,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015AA7 RID: 88743 RVA: 0x00320394 File Offset: 0x0031E594
+		// Token: 0x06016FDF RID: 94175 RVA: 0x0034760C File Offset: 0x0034580C
 		public IActionBtNodeT AsIActionBtNode()
 		{
 			return this.As<IActionBtNodeT>();
 		}
 
-		// Token: 0x06015AA8 RID: 88744 RVA: 0x0032039C File Offset: 0x0031E59C
+		// Token: 0x06016FE0 RID: 94176 RVA: 0x00347614 File Offset: 0x00345814
 		public static IBtNode_UnionUnion FromIActionBtNode(IActionBtNodeT _iactionbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -269,13 +269,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015AA9 RID: 88745 RVA: 0x003203B2 File Offset: 0x0031E5B2
+		// Token: 0x06016FE1 RID: 94177 RVA: 0x0034762A File Offset: 0x0034582A
 		public IActionWithResultBtNodeT AsIActionWithResultBtNode()
 		{
 			return this.As<IActionWithResultBtNodeT>();
 		}
 
-		// Token: 0x06015AAA RID: 88746 RVA: 0x003203BA File Offset: 0x0031E5BA
+		// Token: 0x06016FE2 RID: 94178 RVA: 0x00347632 File Offset: 0x00345832
 		public static IBtNode_UnionUnion FromIActionWithResultBtNode(IActionWithResultBtNodeT _iactionwithresultbtnode)
 		{
 			return new IBtNode_UnionUnion
@@ -285,7 +285,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015AAB RID: 88747 RVA: 0x003203D0 File Offset: 0x0031E5D0
+		// Token: 0x06016FE3 RID: 94179 RVA: 0x00347648 File Offset: 0x00345848
 		public static int Pack(FlatBufferBuilder builder, IBtNode_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005644 RID: 22084
+	// Token: 0x02005BE2 RID: 23522
 	public struct INpcRideInGongduolaPerform : IFlatbufferObject
 	{
-		// Token: 0x1700A39B RID: 41883
-		// (get) Token: 0x06024B63 RID: 150371 RVA: 0x00511169 File Offset: 0x0050F369
+		// Token: 0x1700AC25 RID: 44069
+		// (get) Token: 0x06026D82 RID: 159106 RVA: 0x00551A8D File Offset: 0x0054FC8D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024B64 RID: 150372 RVA: 0x00511176 File Offset: 0x0050F376
+		// Token: 0x06026D83 RID: 159107 RVA: 0x00551A9A File Offset: 0x0054FC9A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024B65 RID: 150373 RVA: 0x00511180 File Offset: 0x0050F380
+		// Token: 0x06026D84 RID: 159108 RVA: 0x00551AA4 File Offset: 0x0054FCA4
 		public static INpcRideInGongduolaPerform GetRootAsINpcRideInGongduolaPerform(ByteBuffer _bb)
 		{
 			return INpcRideInGongduolaPerform.GetRootAsINpcRideInGongduolaPerform(_bb, default(INpcRideInGongduolaPerform));
 		}
 
-		// Token: 0x06024B66 RID: 150374 RVA: 0x0051119C File Offset: 0x0050F39C
+		// Token: 0x06026D85 RID: 159109 RVA: 0x00551AC0 File Offset: 0x0054FCC0
 		public static INpcRideInGongduolaPerform GetRootAsINpcRideInGongduolaPerform(ByteBuffer _bb, INpcRideInGongduolaPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024B67 RID: 150375 RVA: 0x005111B9 File Offset: 0x0050F3B9
+		// Token: 0x06026D86 RID: 159110 RVA: 0x00551ADD File Offset: 0x0054FCDD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024B68 RID: 150376 RVA: 0x005111C8 File Offset: 0x0050F3C8
+		// Token: 0x06026D87 RID: 159111 RVA: 0x00551AEC File Offset: 0x0054FCEC
 		public INpcRideInGongduolaPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A39C RID: 41884
-		// (get) Token: 0x06024B69 RID: 150377 RVA: 0x005111D8 File Offset: 0x0050F3D8
+		// Token: 0x1700AC26 RID: 44070
+		// (get) Token: 0x06026D88 RID: 159112 RVA: 0x00551AFC File Offset: 0x0054FCFC
 		public EVehicleType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A39D RID: 41885
-		// (get) Token: 0x06024B6A RID: 150378 RVA: 0x00511214 File Offset: 0x0050F414
+		// Token: 0x1700AC27 RID: 44071
+		// (get) Token: 0x06026D89 RID: 159113 RVA: 0x00551B38 File Offset: 0x0054FD38
 		public string Montage
 		{
 			get
@@ -78,19 +78,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024B6B RID: 150379 RVA: 0x0051124B File Offset: 0x0050F44B
+		// Token: 0x06026D8A RID: 159114 RVA: 0x00551B6F File Offset: 0x0054FD6F
 		public Span<byte> GetMontageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06024B6C RID: 150380 RVA: 0x0051125A File Offset: 0x0050F45A
+		// Token: 0x06026D8B RID: 159115 RVA: 0x00551B7E File Offset: 0x0054FD7E
 		public byte[] GetMontageArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06024B6D RID: 150381 RVA: 0x00511268 File Offset: 0x0050F468
+		// Token: 0x06026D8C RID: 159116 RVA: 0x00551B8C File Offset: 0x0054FD8C
 		public static Offset<INpcRideInGongduolaPerform> CreateINpcRideInGongduolaPerform(FlatBufferBuilder builder, EVehicleType Type = EVehicleType.Gongduola, StringOffset MontageOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcRideInGongduolaPerform.EndINpcRideInGongduolaPerform(builder);
 		}
 
-		// Token: 0x06024B6E RID: 150382 RVA: 0x00511285 File Offset: 0x0050F485
+		// Token: 0x06026D8D RID: 159117 RVA: 0x00551BA9 File Offset: 0x0054FDA9
 		public static void StartINpcRideInGongduolaPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06024B6F RID: 150383 RVA: 0x0051128E File Offset: 0x0050F48E
+		// Token: 0x06026D8E RID: 159118 RVA: 0x00551BB2 File Offset: 0x0054FDB2
 		public static void AddType(FlatBufferBuilder builder, EVehicleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06024B70 RID: 150384 RVA: 0x00511299 File Offset: 0x0050F499
+		// Token: 0x06026D8F RID: 159119 RVA: 0x00551BBD File Offset: 0x0054FDBD
 		public static void AddMontage(FlatBufferBuilder builder, StringOffset montageOffset)
 		{
 			builder.AddOffset(1, montageOffset.Value, 0);
 		}
 
-		// Token: 0x06024B71 RID: 150385 RVA: 0x005112A9 File Offset: 0x0050F4A9
+		// Token: 0x06026D90 RID: 159120 RVA: 0x00551BCD File Offset: 0x0054FDCD
 		public static Offset<INpcRideInGongduolaPerform> EndINpcRideInGongduolaPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcRideInGongduolaPerform>(builder.EndTable());
 		}
 
-		// Token: 0x06024B72 RID: 150386 RVA: 0x005112B8 File Offset: 0x0050F4B8
+		// Token: 0x06026D91 RID: 159121 RVA: 0x00551BDC File Offset: 0x0054FDDC
 		public INpcRideInGongduolaPerformT UnPack()
 		{
 			INpcRideInGongduolaPerformT npcRideInGongduolaPerformT = new INpcRideInGongduolaPerformT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcRideInGongduolaPerformT;
 		}
 
-		// Token: 0x06024B73 RID: 150387 RVA: 0x005112D3 File Offset: 0x0050F4D3
+		// Token: 0x06026D92 RID: 159122 RVA: 0x00551BF7 File Offset: 0x0054FDF7
 		public void UnPackTo(INpcRideInGongduolaPerformT _o)
 		{
 			_o.Type = this.Type;
 			_o.Montage = this.Montage;
 		}
 
-		// Token: 0x06024B74 RID: 150388 RVA: 0x005112F0 File Offset: 0x0050F4F0
+		// Token: 0x06026D93 RID: 159123 RVA: 0x00551C14 File Offset: 0x0054FE14
 		public static Offset<INpcRideInGongduolaPerform> Pack(FlatBufferBuilder builder, INpcRideInGongduolaPerformT _o)
 		{
 			if (_o == null)
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcRideInGongduolaPerform.CreateINpcRideInGongduolaPerform(builder, _o.Type, montageOffset);
 		}
 
-		// Token: 0x0400E9EB RID: 59883
+		// Token: 0x0400F650 RID: 63056
 		private Table __p;
 	}
 }

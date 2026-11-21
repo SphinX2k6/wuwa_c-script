@@ -2,47 +2,57 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x02002CE9 RID: 11497
+// Token: 0x02002243 RID: 8771
 [NullableContext(2)]
 public interface IShowVideoCgConfig
 {
-	// Token: 0x17002085 RID: 8325
-	// (get) Token: 0x06018209 RID: 98825
-	// (set) Token: 0x0601820A RID: 98826
+	// Token: 0x170020D8 RID: 8408
+	// (get) Token: 0x06015A88 RID: 88712
+	// (set) Token: 0x06015A89 RID: 88713
 	IMovieBackgroundFadeData BackgroundFade { get; set; }
 
-	// Token: 0x17002086 RID: 8326
-	// (get) Token: 0x0601820B RID: 98827
-	// (set) Token: 0x0601820C RID: 98828
+	// Token: 0x170020D9 RID: 8409
+	// (get) Token: 0x06015A8A RID: 88714
+	// (set) Token: 0x06015A8B RID: 88715
 	bool? RemainViewWhenEnd { get; set; }
 
-	// Token: 0x17002087 RID: 8327
-	// (get) Token: 0x0601820D RID: 98829
-	// (set) Token: 0x0601820E RID: 98830
+	// Token: 0x170020DA RID: 8410
+	// (get) Token: 0x06015A8C RID: 88716
+	// (set) Token: 0x06015A8D RID: 88717
 	bool? InPlot { get; set; }
 
-	// Token: 0x17002088 RID: 8328
-	// (get) Token: 0x0601820F RID: 98831
-	// (set) Token: 0x06018210 RID: 98832
+	// Token: 0x170020DB RID: 8411
+	// (get) Token: 0x06015A8E RID: 88718
+	// (set) Token: 0x06015A8F RID: 88719
 	IProgramSpecialConfigBase ProgramSpecialConfig { get; set; }
 
-	// Token: 0x17002089 RID: 8329
-	// (get) Token: 0x06018211 RID: 98833
-	// (set) Token: 0x06018212 RID: 98834
+	// Token: 0x170020DC RID: 8412
+	// (get) Token: 0x06015A90 RID: 88720
+	// (set) Token: 0x06015A91 RID: 88721
 	float? Mp4FadeOutTime { get; set; }
 
-	// Token: 0x1700208A RID: 8330
-	// (get) Token: 0x06018213 RID: 98835
-	// (set) Token: 0x06018214 RID: 98836
+	// Token: 0x170020DD RID: 8413
+	// (get) Token: 0x06015A92 RID: 88722
+	// (set) Token: 0x06015A93 RID: 88723
 	float? BlackBorderFadeOutTime { get; set; }
 
-	// Token: 0x1700208B RID: 8331
-	// (get) Token: 0x06018215 RID: 98837
-	// (set) Token: 0x06018216 RID: 98838
+	// Token: 0x170020DE RID: 8414
+	// (get) Token: 0x06015A94 RID: 88724
+	// (set) Token: 0x06015A95 RID: 88725
 	SetBlendAnim Mp4BlendAnim { get; set; }
 
-	// Token: 0x1700208C RID: 8332
-	// (get) Token: 0x06018217 RID: 98839
-	// (set) Token: 0x06018218 RID: 98840
+	// Token: 0x170020DF RID: 8415
+	// (get) Token: 0x06015A96 RID: 88726
+	// (set) Token: 0x06015A97 RID: 88727
 	bool? SeamlessEndOnTick { get; set; }
+
+	// Token: 0x170020E0 RID: 8416
+	// (get) Token: 0x06015A98 RID: 88728
+	// (set) Token: 0x06015A99 RID: 88729
+	EVideoSkipType SkipType { get; set; }
+
+	// Token: 0x170020E1 RID: 8417
+	// (get) Token: 0x06015A9A RID: 88730
+	// (set) Token: 0x06015A9B RID: 88731
+	Action SkipCallback { get; set; }
 }

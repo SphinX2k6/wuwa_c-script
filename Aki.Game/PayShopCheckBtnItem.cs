@@ -5,24 +5,24 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200237F RID: 9087
+// Token: 0x02001864 RID: 6244
 [NullableContext(2)]
 [Nullable(0)]
 public class PayShopCheckBtnItem : UiPanelBase
 {
-	// Token: 0x1700179D RID: 6045
-	// (get) Token: 0x06012293 RID: 74387 RVA: 0x004775D5 File Offset: 0x004757D5
-	// (set) Token: 0x06012294 RID: 74388 RVA: 0x004775DD File Offset: 0x004757DD
+	// Token: 0x170017D7 RID: 6103
+	// (get) Token: 0x0600F743 RID: 63299 RVA: 0x00484755 File Offset: 0x00482955
+	// (set) Token: 0x0600F744 RID: 63300 RVA: 0x0048475D File Offset: 0x0048295D
 	public Action Callback { get; set; }
 
-	// Token: 0x06012295 RID: 74389 RVA: 0x004775E6 File Offset: 0x004757E6
+	// Token: 0x0600F745 RID: 63301 RVA: 0x00484766 File Offset: 0x00482966
 	[NullableContext(1)]
 	public void SetCallback(Action callback)
 	{
 		this.Callback = callback;
 	}
 
-	// Token: 0x06012296 RID: 74390 RVA: 0x004775F0 File Offset: 0x004757F0
+	// Token: 0x0600F746 RID: 63302 RVA: 0x00484770 File Offset: 0x00482970
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -41,7 +41,7 @@ public class PayShopCheckBtnItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012297 RID: 74391 RVA: 0x00477675 File Offset: 0x00475875
+	// Token: 0x0600F747 RID: 63303 RVA: 0x004847F5 File Offset: 0x004829F5
 	private void OnClickCheck()
 	{
 		Action callback = this.Callback;
@@ -52,11 +52,11 @@ public class PayShopCheckBtnItem : UiPanelBase
 		callback();
 	}
 
-	// Token: 0x02008922 RID: 35106
+	// Token: 0x02007AAC RID: 31404
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402C92E RID: 182574
+		// Token: 0x04027C46 RID: 162886
 		BtnCheck
 	}
 }

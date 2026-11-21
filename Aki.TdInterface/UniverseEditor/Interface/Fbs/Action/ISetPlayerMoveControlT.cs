@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200704D RID: 28749
+	// Token: 0x02007819 RID: 30745
 	public class ISetPlayerMoveControlT
 	{
-		// Token: 0x1700D58D RID: 54669
-		// (get) Token: 0x06032E09 RID: 208393 RVA: 0x006DCD50 File Offset: 0x006DAF50
-		// (set) Token: 0x06032E0A RID: 208394 RVA: 0x006DCD58 File Offset: 0x006DAF58
+		// Token: 0x1700E16E RID: 57710
+		// (get) Token: 0x060360A6 RID: 221350 RVA: 0x0073D278 File Offset: 0x0073B478
+		// (set) Token: 0x060360A7 RID: 221351 RVA: 0x0073D280 File Offset: 0x0073B480
 		public int Left { get; set; }
 
-		// Token: 0x1700D58E RID: 54670
-		// (get) Token: 0x06032E0B RID: 208395 RVA: 0x006DCD61 File Offset: 0x006DAF61
-		// (set) Token: 0x06032E0C RID: 208396 RVA: 0x006DCD69 File Offset: 0x006DAF69
+		// Token: 0x1700E16F RID: 57711
+		// (get) Token: 0x060360A8 RID: 221352 RVA: 0x0073D289 File Offset: 0x0073B489
+		// (set) Token: 0x060360A9 RID: 221353 RVA: 0x0073D291 File Offset: 0x0073B491
 		public int Right { get; set; }
 
-		// Token: 0x1700D58F RID: 54671
-		// (get) Token: 0x06032E0D RID: 208397 RVA: 0x006DCD72 File Offset: 0x006DAF72
-		// (set) Token: 0x06032E0E RID: 208398 RVA: 0x006DCD7A File Offset: 0x006DAF7A
+		// Token: 0x1700E170 RID: 57712
+		// (get) Token: 0x060360AA RID: 221354 RVA: 0x0073D29A File Offset: 0x0073B49A
+		// (set) Token: 0x060360AB RID: 221355 RVA: 0x0073D2A2 File Offset: 0x0073B4A2
 		public int Forward { get; set; }
 
-		// Token: 0x1700D590 RID: 54672
-		// (get) Token: 0x06032E0F RID: 208399 RVA: 0x006DCD83 File Offset: 0x006DAF83
-		// (set) Token: 0x06032E10 RID: 208400 RVA: 0x006DCD8B File Offset: 0x006DAF8B
+		// Token: 0x1700E171 RID: 57713
+		// (get) Token: 0x060360AC RID: 221356 RVA: 0x0073D2AB File Offset: 0x0073B4AB
+		// (set) Token: 0x060360AD RID: 221357 RVA: 0x0073D2B3 File Offset: 0x0073B4B3
 		public int Back { get; set; }
 
-		// Token: 0x06032E11 RID: 208401 RVA: 0x006DCD94 File Offset: 0x006DAF94
+		// Token: 0x060360AE RID: 221358 RVA: 0x0073D2BC File Offset: 0x0073B4BC
 		public ISetPlayerMoveControlT()
 		{
 			this.Left = 0;

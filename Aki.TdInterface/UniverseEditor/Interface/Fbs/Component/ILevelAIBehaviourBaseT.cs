@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054BF RID: 21695
+	// Token: 0x02005A45 RID: 23109
 	public class ILevelAIBehaviourBaseT
 	{
-		// Token: 0x17009FE0 RID: 40928
-		// (get) Token: 0x06023C06 RID: 146438 RVA: 0x004F1746 File Offset: 0x004EF946
-		// (set) Token: 0x06023C07 RID: 146439 RVA: 0x004F174E File Offset: 0x004EF94E
+		// Token: 0x1700A81A RID: 43034
+		// (get) Token: 0x06025CBE RID: 154814 RVA: 0x0052E7BA File Offset: 0x0052C9BA
+		// (set) Token: 0x06025CBF RID: 154815 RVA: 0x0052E7C2 File Offset: 0x0052C9C2
 		public ELevelAIBehaviourType Type { get; set; }
 
-		// Token: 0x06023C08 RID: 146440 RVA: 0x004F1757 File Offset: 0x004EF957
+		// Token: 0x06025CC0 RID: 154816 RVA: 0x0052E7CB File Offset: 0x0052C9CB
 		public ILevelAIBehaviourBaseT()
 		{
 			this.Type = ELevelAIBehaviourType.Spline;

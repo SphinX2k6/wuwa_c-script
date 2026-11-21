@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006629 RID: 26153
+	// Token: 0x020055A7 RID: 21927
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class FishingTechLevelUpItem : LoopScrollMediumItemGrid<IFishingTechLevelUpItem>
 	{
-		// Token: 0x06041905 RID: 268549 RVA: 0x00FE68DC File Offset: 0x00FE4ADC
+		// Token: 0x060365CA RID: 222666 RVA: 0x00F2D990 File Offset: 0x00F2BB90
 		protected override void OnRefresh(IFishingTechLevelUpItem data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data.ItemId;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06041906 RID: 268550 RVA: 0x00FE69FB File Offset: 0x00FE4BFB
+		// Token: 0x060365CB RID: 222667 RVA: 0x00F2DAAF File Offset: 0x00F2BCAF
 		protected override void OnExtendToggleClicked()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 		}
 
-		// Token: 0x040221C9 RID: 139721
+		// Token: 0x0401CAFA RID: 117498
 		private int ItemId;
 	}
 }

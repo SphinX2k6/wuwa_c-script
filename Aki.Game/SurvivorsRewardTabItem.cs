@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B1C RID: 11036
+// Token: 0x02002098 RID: 8344
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class SurvivorsRewardTabItem : GridProxyAbstract<SurvivorRewardTaskTabData>
 {
-	// Token: 0x06016ED1 RID: 93905 RVA: 0x005D1878 File Offset: 0x005CFA78
+	// Token: 0x06014902 RID: 84226 RVA: 0x005FE3F4 File Offset: 0x005FC5F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,20 +28,20 @@ public class SurvivorsRewardTabItem : GridProxyAbstract<SurvivorRewardTaskTabDat
 		};
 	}
 
-	// Token: 0x06016ED2 RID: 93906 RVA: 0x005D18F8 File Offset: 0x005CFAF8
+	// Token: 0x06014903 RID: 84227 RVA: 0x005FE474 File Offset: 0x005FC674
 	public void SetToggleState(bool bSelect, bool bFire)
 	{
 		EToggleState state = bSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06016ED3 RID: 93907 RVA: 0x005D191E File Offset: 0x005CFB1E
+	// Token: 0x06014904 RID: 84228 RVA: 0x005FE49A File Offset: 0x005FC69A
 	private void SetRedDotVisible(bool bVisible)
 	{
 		base.GetItem(2).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06016ED4 RID: 93908 RVA: 0x005D1930 File Offset: 0x005CFB30
+	// Token: 0x06014905 RID: 84229 RVA: 0x005FE4AC File Offset: 0x005FC6AC
 	public void RefreshRedDot()
 	{
 		SurvivorRewardTaskTabData tabData = this.TabData;
@@ -60,7 +60,7 @@ public class SurvivorsRewardTabItem : GridProxyAbstract<SurvivorRewardTaskTabDat
 		this.SetRedDotVisible(valueOrDefault);
 	}
 
-	// Token: 0x06016ED5 RID: 93909 RVA: 0x005D1986 File Offset: 0x005CFB86
+	// Token: 0x06014906 RID: 84230 RVA: 0x005FE502 File Offset: 0x005FC702
 	public override void Refresh(SurvivorRewardTaskTabData data, bool isSelected, int gridIndex)
 	{
 		this.TabData = data;
@@ -75,7 +75,7 @@ public class SurvivorsRewardTabItem : GridProxyAbstract<SurvivorRewardTaskTabDat
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06016ED6 RID: 93910 RVA: 0x005D19B5 File Offset: 0x005CFBB5
+	// Token: 0x06014907 RID: 84231 RVA: 0x005FE531 File Offset: 0x005FC731
 	private void OnTabToggle(EToggleState state)
 	{
 		SurvivorRewardTaskTabData tabData = this.TabData;
@@ -91,13 +91,13 @@ public class SurvivorsRewardTabItem : GridProxyAbstract<SurvivorRewardTaskTabDat
 		clickedCallback(this.TabData);
 	}
 
-	// Token: 0x06016ED7 RID: 93911 RVA: 0x005D19D7 File Offset: 0x005CFBD7
+	// Token: 0x06014908 RID: 84232 RVA: 0x005FE553 File Offset: 0x005FC753
 	public override object GetKey(SurvivorRewardTaskTabData data, int displayIndex)
 	{
 		return data.Type;
 	}
 
-	// Token: 0x0400AA8B RID: 43659
+	// Token: 0x0400AE91 RID: 44689
 	[Nullable(2)]
 	private SurvivorRewardTaskTabData TabData;
 }

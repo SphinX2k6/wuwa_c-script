@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001332 RID: 4914
+	// Token: 0x02001482 RID: 5250
 	public class INumberWordArtEffectiveTargetType : IWordArtEffectiveTargetType
 	{
-		// Token: 0x060070AA RID: 28842 RVA: 0x0010FDC8 File Offset: 0x0010DFC8
-		[NullableContext(1)]
+		// Token: 0x0600774A RID: 30538 RVA: 0x0011E334 File Offset: 0x0011C534
 		public static INumberWordArtEffectiveTargetType Create(INumberWordArtEffectiveTargetType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002419 RID: 9241
-		// (get) Token: 0x060070AB RID: 28843 RVA: 0x0010FDE7 File Offset: 0x0010DFE7
+		// Token: 0x170025E8 RID: 9704
+		// (get) Token: 0x0600774B RID: 30539 RVA: 0x0011E353 File Offset: 0x0011C553
 		public override EWordArtEffectiveTargetType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700241A RID: 9242
-		// (get) Token: 0x060070AC RID: 28844 RVA: 0x0010FDF4 File Offset: 0x0010DFF4
+		// Token: 0x170025E9 RID: 9705
+		// (get) Token: 0x0600774C RID: 30540 RVA: 0x0011E360 File Offset: 0x0011C560
 		public virtual bool? ShowUiMotion
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040FE RID: 16638
+		// Token: 0x0400447A RID: 17530
 		private INumberWordArtEffectiveTargetType Instance;
 	}
 }

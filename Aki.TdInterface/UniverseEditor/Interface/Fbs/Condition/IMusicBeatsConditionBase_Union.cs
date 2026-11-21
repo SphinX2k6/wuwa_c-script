@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C5B RID: 19547
+	// Token: 0x02005154 RID: 20820
 	public enum IMusicBeatsConditionBase_Union : byte
 	{
-		// Token: 0x0400D605 RID: 54789
+		// Token: 0x0400E12C RID: 57644
 		NONE,
-		// Token: 0x0400D606 RID: 54790
+		// Token: 0x0400E12D RID: 57645
 		IMusicBeatsConditionBase,
-		// Token: 0x0400D607 RID: 54791
+		// Token: 0x0400E12E RID: 57646
 		ICheckHcMusicBeats,
-		// Token: 0x0400D608 RID: 54792
+		// Token: 0x0400E12F RID: 57647
 		ICheckFlForestMusicBeats
 	}
 }

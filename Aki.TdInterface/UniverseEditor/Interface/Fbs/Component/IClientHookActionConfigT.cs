@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FAA RID: 20394
+	// Token: 0x02005506 RID: 21766
 	public class IClientHookActionConfigT
 	{
-		// Token: 0x170093AF RID: 37807
-		// (get) Token: 0x0602074B RID: 132939 RVA: 0x00484053 File Offset: 0x00482253
-		// (set) Token: 0x0602074C RID: 132940 RVA: 0x0048405B File Offset: 0x0048225B
+		// Token: 0x17009B87 RID: 39815
+		// (get) Token: 0x0602263F RID: 140863 RVA: 0x004BD537 File Offset: 0x004BB737
+		// (set) Token: 0x06022640 RID: 140864 RVA: 0x004BD53F File Offset: 0x004BB73F
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x170093B0 RID: 37808
-		// (get) Token: 0x0602074D RID: 132941 RVA: 0x00484064 File Offset: 0x00482264
-		// (set) Token: 0x0602074E RID: 132942 RVA: 0x0048406C File Offset: 0x0048226C
+		// Token: 0x17009B88 RID: 39816
+		// (get) Token: 0x06022641 RID: 140865 RVA: 0x004BD548 File Offset: 0x004BB748
+		// (set) Token: 0x06022642 RID: 140866 RVA: 0x004BD550 File Offset: 0x004BB750
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x170093B1 RID: 37809
-		// (get) Token: 0x0602074F RID: 132943 RVA: 0x00484075 File Offset: 0x00482275
-		// (set) Token: 0x06020750 RID: 132944 RVA: 0x0048407D File Offset: 0x0048227D
+		// Token: 0x17009B89 RID: 39817
+		// (get) Token: 0x06022643 RID: 140867 RVA: 0x004BD559 File Offset: 0x004BB759
+		// (set) Token: 0x06022644 RID: 140868 RVA: 0x004BD561 File Offset: 0x004BB761
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x170093B2 RID: 37810
-		// (get) Token: 0x06020751 RID: 132945 RVA: 0x00484086 File Offset: 0x00482286
-		// (set) Token: 0x06020752 RID: 132946 RVA: 0x0048408E File Offset: 0x0048228E
+		// Token: 0x17009B8A RID: 39818
+		// (get) Token: 0x06022645 RID: 140869 RVA: 0x004BD56A File Offset: 0x004BB76A
+		// (set) Token: 0x06022646 RID: 140870 RVA: 0x004BD572 File Offset: 0x004BB772
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020753 RID: 132947 RVA: 0x00484097 File Offset: 0x00482297
+		// Token: 0x06022647 RID: 140871 RVA: 0x004BD57B File Offset: 0x004BB77B
 		public IClientHookActionConfigT()
 		{
 			this.HookActions = null;

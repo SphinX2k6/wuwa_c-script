@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002638 RID: 9784
+	// Token: 0x020028F8 RID: 10488
 	public class GuideTrigger : ActionParams
 	{
-		// Token: 0x0600DB90 RID: 56208 RVA: 0x0020AF73 File Offset: 0x00209173
-		[NullableContext(1)]
+		// Token: 0x0600E95E RID: 59742 RVA: 0x0022773F File Offset: 0x0022593F
 		public static GuideTrigger Create(IGuideTrigger? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040E2 RID: 16610
-		// (get) Token: 0x0600DB91 RID: 56209 RVA: 0x0020AF92 File Offset: 0x00209192
+		// Token: 0x1700441C RID: 17436
+		// (get) Token: 0x0600E95F RID: 59743 RVA: 0x0022775E File Offset: 0x0022595E
 		public virtual EGuideTriggerType Type
 		{
 			get
@@ -33,19 +32,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040E3 RID: 16611
-		// (get) Token: 0x0600DB92 RID: 56210 RVA: 0x0020AF9F File Offset: 0x0020919F
+		// Token: 0x1700441D RID: 17437
+		// (get) Token: 0x0600E960 RID: 59744 RVA: 0x0022776B File Offset: 0x0022596B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ICondition2> Conditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -63,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040E4 RID: 16612
-		// (get) Token: 0x0600DB93 RID: 56211 RVA: 0x0020AFDF File Offset: 0x002091DF
+		// Token: 0x1700441E RID: 17438
+		// (get) Token: 0x0600E961 RID: 59745 RVA: 0x002277AB File Offset: 0x002259AB
 		public virtual int GuideId
 		{
 			get
@@ -73,18 +72,18 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A04 RID: 31236
+		// Token: 0x040080A0 RID: 32928
 		private IGuideTrigger Instance;
 
-		// Token: 0x04007A05 RID: 31237
+		// Token: 0x040080A1 RID: 32929
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ICondition2> _ConditionsCache;
 
-		// Token: 0x04007A06 RID: 31238
+		// Token: 0x040080A2 RID: 32930
 		private bool _ConditionsInited;
 	}
 }

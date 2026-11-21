@@ -12,9 +12,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskChangeInteractionState.TsTaskChangeInteractionState_C")]
 public class TsTaskChangeInteractionState : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000121 RID: 289
-	// (get) Token: 0x06000733 RID: 1843 RVA: 0x00024385 File Offset: 0x00022585
-	// (set) Token: 0x06000734 RID: 1844 RVA: 0x00024395 File Offset: 0x00022595
+	// Token: 0x17000123 RID: 291
+	// (get) Token: 0x06000737 RID: 1847 RVA: 0x0002509D File Offset: 0x0002329D
+	// (set) Token: 0x06000738 RID: 1848 RVA: 0x000250AD File Offset: 0x000232AD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool InteractionState
 	{
@@ -28,27 +28,21 @@ public class TsTaskChangeInteractionState : TsTaskAbortImmediatelyBase, IUnrealU
 		}
 	}
 
-	// Token: 0x06000735 RID: 1845 RVA: 0x000243A8 File Offset: 0x000225A8
+	// Token: 0x06000739 RID: 1849 RVA: 0x000250C0 File Offset: 0x000232C0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void InitTsVariables()
+	protected virtual void InitTsVariables()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InitTsVariables"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskChangeInteractionState) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InitTsVariables"), TsTaskChangeInteractionState.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.InitTsVariables_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06000736 RID: 1846 RVA: 0x00024418 File Offset: 0x00022618
+	// Token: 0x0600073A RID: 1850 RVA: 0x00025119 File Offset: 0x00023319
 	protected void InitTsVariables_Implementation()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -58,30 +52,27 @@ public class TsTaskChangeInteractionState : TsTaskAbortImmediatelyBase, IUnrealU
 		}
 	}
 
-	// Token: 0x06000737 RID: 1847 RVA: 0x0002443C File Offset: 0x0002263C
+	// Token: 0x0600073B RID: 1851 RVA: 0x00025140 File Offset: 0x00023340
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskChangeInteractionState) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskChangeInteractionState.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000738 RID: 1848 RVA: 0x000244D8 File Offset: 0x000226D8
+	// Token: 0x0600073C RID: 1852 RVA: 0x000251F0 File Offset: 0x000233F0
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -117,7 +108,7 @@ public class TsTaskChangeInteractionState : TsTaskAbortImmediatelyBase, IUnrealU
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000739 RID: 1849 RVA: 0x000245F0 File Offset: 0x000227F0
+	// Token: 0x0600073D RID: 1853 RVA: 0x00025308 File Offset: 0x00023508
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskChangeInteractionState._ClassPtr == IntPtr.Zero)
@@ -127,29 +118,29 @@ public class TsTaskChangeInteractionState : TsTaskAbortImmediatelyBase, IUnrealU
 		return TsTaskChangeInteractionState._ClassPtr;
 	}
 
-	// Token: 0x0600073A RID: 1850 RVA: 0x00024614 File Offset: 0x00022814
+	// Token: 0x0600073E RID: 1854 RVA: 0x0002532C File Offset: 0x0002352C
 	public TsTaskChangeInteractionState() : this(BuiltinUtils.AllocNativeUObject(TsTaskChangeInteractionState.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600073B RID: 1851 RVA: 0x0002463C File Offset: 0x0002283C
+	// Token: 0x0600073F RID: 1855 RVA: 0x00025354 File Offset: 0x00023554
 	[NullableContext(1)]
 	public TsTaskChangeInteractionState(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskChangeInteractionState.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600073C RID: 1852 RVA: 0x0002466F File Offset: 0x0002286F
+	// Token: 0x06000740 RID: 1856 RVA: 0x00025387 File Offset: 0x00023587
 	protected TsTaskChangeInteractionState(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600073D RID: 1853 RVA: 0x00024678 File Offset: 0x00022878
+	// Token: 0x06000741 RID: 1857 RVA: 0x00025390 File Offset: 0x00023590
 	protected virtual void __CPPCALL_InitTsVariables_Implementation()
 	{
 		this.InitTsVariables_Implementation();
 	}
 
-	// Token: 0x0600073E RID: 1854 RVA: 0x00024680 File Offset: 0x00022880
+	// Token: 0x06000742 RID: 1858 RVA: 0x00025398 File Offset: 0x00023598
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -157,22 +148,22 @@ public class TsTaskChangeInteractionState : TsTaskAbortImmediatelyBase, IUnrealU
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400054B RID: 1355
+	// Token: 0x0400054F RID: 1359
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400054C RID: 1356
+	// Token: 0x04000550 RID: 1360
 	private bool TsInteractionState;
 
-	// Token: 0x0400054D RID: 1357
+	// Token: 0x04000551 RID: 1361
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskChangeInteractionState.TsTaskChangeInteractionState_C";
 
-	// Token: 0x0400054E RID: 1358
+	// Token: 0x04000552 RID: 1362
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400054F RID: 1359
+	// Token: 0x04000553 RID: 1363
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000550 RID: 1360
+	// Token: 0x04000554 RID: 1364
 	private static int __PropertyOffset_InteractionState;
 }

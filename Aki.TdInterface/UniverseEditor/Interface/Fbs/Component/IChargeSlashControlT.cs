@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F89 RID: 20361
+	// Token: 0x020054B8 RID: 21688
 	public class IChargeSlashControlT
 	{
-		// Token: 0x17009331 RID: 37681
-		// (get) Token: 0x06020561 RID: 132449 RVA: 0x0047FA81 File Offset: 0x0047DC81
-		// (set) Token: 0x06020562 RID: 132450 RVA: 0x0047FA89 File Offset: 0x0047DC89
+		// Token: 0x17009AAA RID: 39594
+		// (get) Token: 0x060222B3 RID: 139955 RVA: 0x004B5A71 File Offset: 0x004B3C71
+		// (set) Token: 0x060222B4 RID: 139956 RVA: 0x004B5A79 File Offset: 0x004B3C79
 		public ECurveControlType Type { get; set; }
 
-		// Token: 0x17009332 RID: 37682
-		// (get) Token: 0x06020563 RID: 132451 RVA: 0x0047FA92 File Offset: 0x0047DC92
-		// (set) Token: 0x06020564 RID: 132452 RVA: 0x0047FA9A File Offset: 0x0047DC9A
+		// Token: 0x17009AAB RID: 39595
+		// (get) Token: 0x060222B5 RID: 139957 RVA: 0x004B5A82 File Offset: 0x004B3C82
+		// (set) Token: 0x060222B6 RID: 139958 RVA: 0x004B5A8A File Offset: 0x004B3C8A
 		public int UpHeight { get; set; }
 
-		// Token: 0x17009333 RID: 37683
-		// (get) Token: 0x06020565 RID: 132453 RVA: 0x0047FAA3 File Offset: 0x0047DCA3
-		// (set) Token: 0x06020566 RID: 132454 RVA: 0x0047FAAB File Offset: 0x0047DCAB
+		// Token: 0x17009AAC RID: 39596
+		// (get) Token: 0x060222B7 RID: 139959 RVA: 0x004B5A93 File Offset: 0x004B3C93
+		// (set) Token: 0x060222B8 RID: 139960 RVA: 0x004B5A9B File Offset: 0x004B3C9B
 		public string UpCurvePath { get; set; }
 
-		// Token: 0x06020567 RID: 132455 RVA: 0x0047FAB4 File Offset: 0x0047DCB4
+		// Token: 0x060222B9 RID: 139961 RVA: 0x004B5AA4 File Offset: 0x004B3CA4
 		public IChargeSlashControlT()
 		{
 			this.Type = ECurveControlType.ChargeSlash;

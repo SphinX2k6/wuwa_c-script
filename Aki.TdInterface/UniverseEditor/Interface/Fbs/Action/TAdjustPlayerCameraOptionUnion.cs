@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200763C RID: 30268
+	// Token: 0x02007E4A RID: 32330
 	public class TAdjustPlayerCameraOptionUnion
 	{
-		// Token: 0x1700E5BB RID: 58811
-		// (get) Token: 0x060371EE RID: 225774 RVA: 0x00779878 File Offset: 0x00777A78
-		// (set) Token: 0x060371EF RID: 225775 RVA: 0x00779880 File Offset: 0x00777A80
+		// Token: 0x1700F1F9 RID: 61945
+		// (get) Token: 0x0603A693 RID: 239251 RVA: 0x007DD974 File Offset: 0x007DBB74
+		// (set) Token: 0x0603A694 RID: 239252 RVA: 0x007DD97C File Offset: 0x007DBB7C
 		public TAdjustPlayerCameraOption Type { get; set; }
 
-		// Token: 0x1700E5BC RID: 58812
-		// (get) Token: 0x060371F0 RID: 225776 RVA: 0x00779889 File Offset: 0x00777A89
-		// (set) Token: 0x060371F1 RID: 225777 RVA: 0x00779891 File Offset: 0x00777A91
+		// Token: 0x1700F1FA RID: 61946
+		// (get) Token: 0x0603A695 RID: 239253 RVA: 0x007DD985 File Offset: 0x007DBB85
+		// (set) Token: 0x0603A696 RID: 239254 RVA: 0x007DD98D File Offset: 0x007DBB8D
 		public object Value { get; set; }
 
-		// Token: 0x060371F2 RID: 225778 RVA: 0x0077989A File Offset: 0x00777A9A
+		// Token: 0x0603A697 RID: 239255 RVA: 0x007DD996 File Offset: 0x007DBB96
 		public TAdjustPlayerCameraOptionUnion()
 		{
 			this.Type = TAdjustPlayerCameraOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060371F3 RID: 225779 RVA: 0x007798B0 File Offset: 0x00777AB0
+		// Token: 0x0603A698 RID: 239256 RVA: 0x007DD9AC File Offset: 0x007DBBAC
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060371F4 RID: 225780 RVA: 0x007798C2 File Offset: 0x00777AC2
+		// Token: 0x0603A699 RID: 239257 RVA: 0x007DD9BE File Offset: 0x007DBBBE
 		public IAdjustAxisLockCameraT AsIAdjustAxisLockCamera()
 		{
 			return this.As<IAdjustAxisLockCameraT>();
 		}
 
-		// Token: 0x060371F5 RID: 225781 RVA: 0x007798CA File Offset: 0x00777ACA
+		// Token: 0x0603A69A RID: 239258 RVA: 0x007DD9C6 File Offset: 0x007DBBC6
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustAxisLockCamera(IAdjustAxisLockCameraT _iadjustaxislockcamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060371F6 RID: 225782 RVA: 0x007798DF File Offset: 0x00777ADF
+		// Token: 0x0603A69B RID: 239259 RVA: 0x007DD9DB File Offset: 0x007DBBDB
 		public IAdjustBasicCameraT AsIAdjustBasicCamera()
 		{
 			return this.As<IAdjustBasicCameraT>();
 		}
 
-		// Token: 0x060371F7 RID: 225783 RVA: 0x007798E7 File Offset: 0x00777AE7
+		// Token: 0x0603A69C RID: 239260 RVA: 0x007DD9E3 File Offset: 0x007DBBE3
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustBasicCamera(IAdjustBasicCameraT _iadjustbasiccamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060371F8 RID: 225784 RVA: 0x007798FC File Offset: 0x00777AFC
+		// Token: 0x0603A69D RID: 239261 RVA: 0x007DD9F8 File Offset: 0x007DBBF8
 		public IAdjustDialogCameraT AsIAdjustDialogCamera()
 		{
 			return this.As<IAdjustDialogCameraT>();
 		}
 
-		// Token: 0x060371F9 RID: 225785 RVA: 0x00779904 File Offset: 0x00777B04
+		// Token: 0x0603A69E RID: 239262 RVA: 0x007DDA00 File Offset: 0x007DBC00
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustDialogCamera(IAdjustDialogCameraT _iadjustdialogcamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060371FA RID: 225786 RVA: 0x00779919 File Offset: 0x00777B19
+		// Token: 0x0603A69F RID: 239263 RVA: 0x007DDA15 File Offset: 0x007DBC15
 		public IAdjustFirstPersonCameraT AsIAdjustFirstPersonCamera()
 		{
 			return this.As<IAdjustFirstPersonCameraT>();
 		}
 
-		// Token: 0x060371FB RID: 225787 RVA: 0x00779921 File Offset: 0x00777B21
+		// Token: 0x0603A6A0 RID: 239264 RVA: 0x007DDA1D File Offset: 0x007DBC1D
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustFirstPersonCamera(IAdjustFirstPersonCameraT _iadjustfirstpersoncamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060371FC RID: 225788 RVA: 0x00779936 File Offset: 0x00777B36
+		// Token: 0x0603A6A1 RID: 239265 RVA: 0x007DDA32 File Offset: 0x007DBC32
 		public IAdjustFixedCameraT AsIAdjustFixedCamera()
 		{
 			return this.As<IAdjustFixedCameraT>();
 		}
 
-		// Token: 0x060371FD RID: 225789 RVA: 0x0077993E File Offset: 0x00777B3E
+		// Token: 0x0603A6A2 RID: 239266 RVA: 0x007DDA3A File Offset: 0x007DBC3A
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustFixedCamera(IAdjustFixedCameraT _iadjustfixedcamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060371FE RID: 225790 RVA: 0x00779953 File Offset: 0x00777B53
+		// Token: 0x0603A6A3 RID: 239267 RVA: 0x007DDA4F File Offset: 0x007DBC4F
 		public IAdjustFixedLookAtCameraT AsIAdjustFixedLookAtCamera()
 		{
 			return this.As<IAdjustFixedLookAtCameraT>();
 		}
 
-		// Token: 0x060371FF RID: 225791 RVA: 0x0077995B File Offset: 0x00777B5B
+		// Token: 0x0603A6A4 RID: 239268 RVA: 0x007DDA57 File Offset: 0x007DBC57
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustFixedLookAtCamera(IAdjustFixedLookAtCameraT _iadjustfixedlookatcamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037200 RID: 225792 RVA: 0x00779970 File Offset: 0x00777B70
+		// Token: 0x0603A6A5 RID: 239269 RVA: 0x007DDA6C File Offset: 0x007DBC6C
 		public IAdjustFixedSurveillanceCameraT AsIAdjustFixedSurveillanceCamera()
 		{
 			return this.As<IAdjustFixedSurveillanceCameraT>();
 		}
 
-		// Token: 0x06037201 RID: 225793 RVA: 0x00779978 File Offset: 0x00777B78
+		// Token: 0x0603A6A6 RID: 239270 RVA: 0x007DDA74 File Offset: 0x007DBC74
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustFixedSurveillanceCamera(IAdjustFixedSurveillanceCameraT _iadjustfixedsurveillancecamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037202 RID: 225794 RVA: 0x0077998D File Offset: 0x00777B8D
+		// Token: 0x0603A6A7 RID: 239271 RVA: 0x007DDA89 File Offset: 0x007DBC89
 		public IAdjustHorizontalCameraT AsIAdjustHorizontalCamera()
 		{
 			return this.As<IAdjustHorizontalCameraT>();
 		}
 
-		// Token: 0x06037203 RID: 225795 RVA: 0x00779995 File Offset: 0x00777B95
+		// Token: 0x0603A6A8 RID: 239272 RVA: 0x007DDA91 File Offset: 0x007DBC91
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustHorizontalCamera(IAdjustHorizontalCameraT _iadjusthorizontalcamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037204 RID: 225796 RVA: 0x007799AA File Offset: 0x00777BAA
+		// Token: 0x0603A6A9 RID: 239273 RVA: 0x007DDAA6 File Offset: 0x007DBCA6
 		public IAdjustZoneFollowCameraT AsIAdjustZoneFollowCamera()
 		{
 			return this.As<IAdjustZoneFollowCameraT>();
 		}
 
-		// Token: 0x06037205 RID: 225797 RVA: 0x007799B2 File Offset: 0x00777BB2
+		// Token: 0x0603A6AA RID: 239274 RVA: 0x007DDAAE File Offset: 0x007DBCAE
 		public static TAdjustPlayerCameraOptionUnion FromIAdjustZoneFollowCamera(IAdjustZoneFollowCameraT _iadjustzonefollowcamera)
 		{
 			return new TAdjustPlayerCameraOptionUnion
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037206 RID: 225798 RVA: 0x007799C8 File Offset: 0x00777BC8
+		// Token: 0x0603A6AB RID: 239275 RVA: 0x007DDAC4 File Offset: 0x007DBCC4
 		public static int Pack(FlatBufferBuilder builder, TAdjustPlayerCameraOptionUnion _o)
 		{
 			switch (_o.Type)

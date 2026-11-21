@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A8C RID: 2700
+	// Token: 0x02000B56 RID: 2902
 	public class IInitStateMagneticStorm : IInitState
 	{
-		// Token: 0x06003E2B RID: 15915 RVA: 0x0009F4BE File Offset: 0x0009D6BE
-		[NullableContext(1)]
+		// Token: 0x06004254 RID: 16980 RVA: 0x000A8A76 File Offset: 0x000A6C76
 		public static IInitStateMagneticStorm Create(IInitStateMagneticStorm? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000ED0 RID: 3792
-		// (get) Token: 0x06003E2C RID: 15916 RVA: 0x0009F4DD File Offset: 0x0009D6DD
+		// Token: 0x17000FA3 RID: 4003
+		// (get) Token: 0x06004255 RID: 16981 RVA: 0x000A8A95 File Offset: 0x000A6C95
 		public override EInitStateType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022A5 RID: 8869
+		// Token: 0x040024C1 RID: 9409
 		private IInitStateMagneticStorm Instance;
 	}
 }

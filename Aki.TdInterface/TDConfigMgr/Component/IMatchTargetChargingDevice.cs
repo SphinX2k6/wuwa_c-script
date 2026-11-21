@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004DE RID: 1246
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000537 RID: 1335
 	public class IMatchTargetChargingDevice : IProgressBarControl
 	{
-		// Token: 0x0600194A RID: 6474 RVA: 0x0004AD60 File Offset: 0x00048F60
+		// Token: 0x06001AE4 RID: 6884 RVA: 0x0004EAA8 File Offset: 0x0004CCA8
 		private IMatchTargetChargingDevice_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600194B RID: 6475 RVA: 0x0004AD98 File Offset: 0x00048F98
+		// Token: 0x06001AE5 RID: 6885 RVA: 0x0004EAE0 File Offset: 0x0004CCE0
 		public static IMatchTargetChargingDevice Create([Nullable(2)] IMatchTargetChargingDevice instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600194C RID: 6476 RVA: 0x0004ADAB File Offset: 0x00048FAB
+		// Token: 0x06001AE6 RID: 6886 RVA: 0x0004EAF3 File Offset: 0x0004CCF3
 		public static IMatchTargetChargingDevice CreateFromSetValue([Nullable(2)] IMatchTargetChargingDevice_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600194D RID: 6477 RVA: 0x0004ADC0 File Offset: 0x00048FC0
+		// Token: 0x06001AE7 RID: 6887 RVA: 0x0004EB08 File Offset: 0x0004CD08
 		public new IMatchTargetChargingDevice_SetValue ToSetValue()
 		{
 			return new IMatchTargetChargingDevice_SetValue
@@ -68,9 +66,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006B7 RID: 1719
-		// (get) Token: 0x0600194E RID: 6478 RVA: 0x0004AE3E File Offset: 0x0004903E
-		// (set) Token: 0x0600194F RID: 6479 RVA: 0x0004AE69 File Offset: 0x00049069
+		// Token: 0x1700071E RID: 1822
+		// (get) Token: 0x06001AE8 RID: 6888 RVA: 0x0004EB86 File Offset: 0x0004CD86
+		// (set) Token: 0x06001AE9 RID: 6889 RVA: 0x0004EBB1 File Offset: 0x0004CDB1
 		public override EProgressBarControlType Type
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006B8 RID: 1720
-		// (get) Token: 0x06001950 RID: 6480 RVA: 0x0004AE77 File Offset: 0x00049077
-		// (set) Token: 0x06001951 RID: 6481 RVA: 0x0004AEA2 File Offset: 0x000490A2
+		// Token: 0x1700071F RID: 1823
+		// (get) Token: 0x06001AEA RID: 6890 RVA: 0x0004EBBF File Offset: 0x0004CDBF
+		// (set) Token: 0x06001AEB RID: 6891 RVA: 0x0004EBEA File Offset: 0x0004CDEA
 		public override int MaxValue
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006B9 RID: 1721
-		// (get) Token: 0x06001952 RID: 6482 RVA: 0x0004AEB0 File Offset: 0x000490B0
-		// (set) Token: 0x06001953 RID: 6483 RVA: 0x0004AEDB File Offset: 0x000490DB
+		// Token: 0x17000720 RID: 1824
+		// (get) Token: 0x06001AEC RID: 6892 RVA: 0x0004EBF8 File Offset: 0x0004CDF8
+		// (set) Token: 0x06001AED RID: 6893 RVA: 0x0004EC23 File Offset: 0x0004CE23
 		public override int InitValue
 		{
 			get
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006BA RID: 1722
-		// (get) Token: 0x06001954 RID: 6484 RVA: 0x0004AEEC File Offset: 0x000490EC
-		// (set) Token: 0x06001955 RID: 6485 RVA: 0x0004AF26 File Offset: 0x00049126
+		// Token: 0x17000721 RID: 1825
+		// (get) Token: 0x06001AEE RID: 6894 RVA: 0x0004EC34 File Offset: 0x0004CE34
+		// (set) Token: 0x06001AEF RID: 6895 RVA: 0x0004EC6E File Offset: 0x0004CE6E
 		public override int? ProgressPerformanceAttribute
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006BB RID: 1723
-		// (get) Token: 0x06001956 RID: 6486 RVA: 0x0004AF34 File Offset: 0x00049134
-		// (set) Token: 0x06001957 RID: 6487 RVA: 0x0004AF95 File Offset: 0x00049195
+		// Token: 0x17000722 RID: 1826
+		// (get) Token: 0x06001AF0 RID: 6896 RVA: 0x0004EC7C File Offset: 0x0004CE7C
+		// (set) Token: 0x06001AF1 RID: 6897 RVA: 0x0004ECDD File Offset: 0x0004CEDD
 		public virtual IEntityMatch Match
 		{
 			get
@@ -191,9 +189,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006BC RID: 1724
-		// (get) Token: 0x06001958 RID: 6488 RVA: 0x0004AFAA File Offset: 0x000491AA
-		// (set) Token: 0x06001959 RID: 6489 RVA: 0x0004AFD5 File Offset: 0x000491D5
+		// Token: 0x17000723 RID: 1827
+		// (get) Token: 0x06001AF2 RID: 6898 RVA: 0x0004ECF2 File Offset: 0x0004CEF2
+		// (set) Token: 0x06001AF3 RID: 6899 RVA: 0x0004ED1D File Offset: 0x0004CF1D
 		public virtual int IncreaseSpeed
 		{
 			get
@@ -214,9 +212,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006BD RID: 1725
-		// (get) Token: 0x0600195A RID: 6490 RVA: 0x0004AFE3 File Offset: 0x000491E3
-		// (set) Token: 0x0600195B RID: 6491 RVA: 0x0004B00E File Offset: 0x0004920E
+		// Token: 0x17000724 RID: 1828
+		// (get) Token: 0x06001AF4 RID: 6900 RVA: 0x0004ED2B File Offset: 0x0004CF2B
+		// (set) Token: 0x06001AF5 RID: 6901 RVA: 0x0004ED56 File Offset: 0x0004CF56
 		public virtual int DecreaseSpeed
 		{
 			get
@@ -237,9 +235,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006BE RID: 1726
-		// (get) Token: 0x0600195C RID: 6492 RVA: 0x0004B01C File Offset: 0x0004921C
-		// (set) Token: 0x0600195D RID: 6493 RVA: 0x0004B056 File Offset: 0x00049256
+		// Token: 0x17000725 RID: 1829
+		// (get) Token: 0x06001AF6 RID: 6902 RVA: 0x0004ED64 File Offset: 0x0004CF64
+		// (set) Token: 0x06001AF7 RID: 6903 RVA: 0x0004ED9E File Offset: 0x0004CF9E
 		public virtual bool? RayCastCheck
 		{
 			get
@@ -261,9 +259,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006BF RID: 1727
-		// (get) Token: 0x0600195E RID: 6494 RVA: 0x0004B064 File Offset: 0x00049264
-		// (set) Token: 0x0600195F RID: 6495 RVA: 0x0004B0C5 File Offset: 0x000492C5
+		// Token: 0x17000726 RID: 1830
+		// (get) Token: 0x06001AF8 RID: 6904 RVA: 0x0004EDAC File Offset: 0x0004CFAC
+		// (set) Token: 0x06001AF9 RID: 6905 RVA: 0x0004EE0D File Offset: 0x0004D00D
 		[Nullable(2)]
 		public virtual VectorInfo RayCastCenter
 		{
@@ -294,24 +292,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001293 RID: 4755
+		// Token: 0x040013B5 RID: 5045
 		[Nullable(2)]
 		protected new IMatchTargetChargingDevice FbInstance;
 
-		// Token: 0x04001294 RID: 4756
+		// Token: 0x040013B6 RID: 5046
 		[Nullable(2)]
 		protected new IMatchTargetChargingDevice_SetValue PocoInterface;
 
-		// Token: 0x04001295 RID: 4757
+		// Token: 0x040013B7 RID: 5047
 		private IEntityMatch _MatchCache;
 
-		// Token: 0x04001296 RID: 4758
+		// Token: 0x040013B8 RID: 5048
 		private bool _MatchInited;
 
-		// Token: 0x04001297 RID: 4759
+		// Token: 0x040013B9 RID: 5049
 		private VectorInfo _RayCastCenterCache;
 
-		// Token: 0x04001298 RID: 4760
+		// Token: 0x040013BA RID: 5050
 		private bool _RayCastCenterInited;
 	}
 }

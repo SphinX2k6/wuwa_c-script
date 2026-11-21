@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FDC RID: 12252
-// (Invoke) Token: 0x06019F86 RID: 106374
+// Token: 0x02002531 RID: 9521
+// (Invoke) Token: 0x060178B9 RID: 96441
 public delegate void TTriggerCallback([Nullable(new byte[]
 {
 	2,

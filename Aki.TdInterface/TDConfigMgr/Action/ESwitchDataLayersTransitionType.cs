@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016BB RID: 5819
+	// Token: 0x02001835 RID: 6197
 	[EnumExtensions]
 	public enum ESwitchDataLayersTransitionType
 	{
-		// Token: 0x04004E18 RID: 19992
+		// Token: 0x04005237 RID: 21047
 		Sequence
 	}
 }

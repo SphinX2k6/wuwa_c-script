@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200048B RID: 1163
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004E4 RID: 1252
 	public class IInteractScreenDetectShapeBase
 	{
-		// Token: 0x06001764 RID: 5988 RVA: 0x00046ED8 File Offset: 0x000450D8
+		// Token: 0x060018FE RID: 6398 RVA: 0x0004AC20 File Offset: 0x00048E20
 		private IInteractScreenDetectShapeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001765 RID: 5989 RVA: 0x00046F10 File Offset: 0x00045110
+		// Token: 0x060018FF RID: 6399 RVA: 0x0004AC58 File Offset: 0x00048E58
 		public static IInteractScreenDetectShapeBase Create([Nullable(2)] IInteractScreenDetectShapeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001766 RID: 5990 RVA: 0x00046F23 File Offset: 0x00045123
+		// Token: 0x06001900 RID: 6400 RVA: 0x0004AC6B File Offset: 0x00048E6B
 		public static IInteractScreenDetectShapeBase CreateFromSetValue([Nullable(2)] IInteractScreenDetectShapeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001767 RID: 5991 RVA: 0x00046F36 File Offset: 0x00045136
+		// Token: 0x06001901 RID: 6401 RVA: 0x0004AC7E File Offset: 0x00048E7E
 		public IInteractScreenDetectShapeBase_SetValue ToSetValue()
 		{
 			return new IInteractScreenDetectShapeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000640 RID: 1600
-		// (get) Token: 0x06001768 RID: 5992 RVA: 0x00046F49 File Offset: 0x00045149
-		// (set) Token: 0x06001769 RID: 5993 RVA: 0x00046F74 File Offset: 0x00045174
+		// Token: 0x170006A7 RID: 1703
+		// (get) Token: 0x06001902 RID: 6402 RVA: 0x0004AC91 File Offset: 0x00048E91
+		// (set) Token: 0x06001903 RID: 6403 RVA: 0x0004ACBC File Offset: 0x00048EBC
 		public virtual EInteractScreenDetectShape Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400118B RID: 4491
+		// Token: 0x040012AD RID: 4781
 		[Nullable(2)]
 		protected IInteractScreenDetectShapeBase FbInstance;
 
-		// Token: 0x0400118C RID: 4492
+		// Token: 0x040012AE RID: 4782
 		[Nullable(2)]
 		protected IInteractScreenDetectShapeBase_SetValue PocoInterface;
 	}

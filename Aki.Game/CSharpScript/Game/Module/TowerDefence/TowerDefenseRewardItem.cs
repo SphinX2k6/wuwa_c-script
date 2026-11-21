@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B63 RID: 19299
+	// Token: 0x02003B0B RID: 15115
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseRewardItem : GridProxyAbstract<IActivityRewardData>
 	{
-		// Token: 0x06031F72 RID: 204658 RVA: 0x00B98904 File Offset: 0x00B96B04
+		// Token: 0x06026D01 RID: 158977 RVA: 0x00ADCB40 File Offset: 0x00ADAD40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031F73 RID: 204659 RVA: 0x00B98A94 File Offset: 0x00B96C94
+		// Token: 0x06026D02 RID: 158978 RVA: 0x00ADCCD0 File Offset: 0x00ADAED0
 		protected override void OnStart()
 		{
 			UUIHorizontalLayout horizontalLayout = base.GetHorizontalLayout(2);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06031F74 RID: 204660 RVA: 0x00B98B14 File Offset: 0x00B96D14
+		// Token: 0x06026D03 RID: 158979 RVA: 0x00ADCD50 File Offset: 0x00ADAF50
 		public override void Refresh(IActivityRewardData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshState(data);
 		}
 
-		// Token: 0x06031F75 RID: 204661 RVA: 0x00B98B39 File Offset: 0x00B96D39
+		// Token: 0x06026D04 RID: 158980 RVA: 0x00ADCD75 File Offset: 0x00ADAF75
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06031F76 RID: 204662 RVA: 0x00B98B40 File Offset: 0x00B96D40
+		// Token: 0x06026D05 RID: 158981 RVA: 0x00ADCD7C File Offset: 0x00ADAF7C
 		private void RefreshTitle(IActivityRewardData data)
 		{
 			UUIText text = base.GetText(0);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			text.SetText(data.NameText, true);
 		}
 
-		// Token: 0x06031F77 RID: 204663 RVA: 0x00B98B94 File Offset: 0x00B96D94
+		// Token: 0x06026D06 RID: 158982 RVA: 0x00ADCDD0 File Offset: 0x00ADAFD0
 		private void RefreshDesc(IActivityRewardData data)
 		{
 			UUIText text = base.GetText(1);
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			text.SetText(data.ProgressText ?? "", true);
 		}
 
-		// Token: 0x06031F78 RID: 204664 RVA: 0x00B98BCC File Offset: 0x00B96DCC
+		// Token: 0x06026D07 RID: 158983 RVA: 0x00ADCE08 File Offset: 0x00ADB008
 		private void RefreshRewardList(IActivityRewardData data)
 		{
 			if (this.ItemLayout == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ItemLayout.RefreshByData(array, null, false);
 		}
 
-		// Token: 0x06031F79 RID: 204665 RVA: 0x00B98C18 File Offset: 0x00B96E18
+		// Token: 0x06026D08 RID: 158984 RVA: 0x00ADCE54 File Offset: 0x00ADB054
 		private void RefreshState(IActivityRewardData data)
 		{
 			EActivityRewardState rewardState = data.RewardState;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F7A RID: 204666 RVA: 0x00B98D09 File Offset: 0x00B96F09
+		// Token: 0x06026D09 RID: 158985 RVA: 0x00ADCF45 File Offset: 0x00ADB145
 		private void OnClickReceiveBtn()
 		{
 			if (this.Data == null)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			clickFunction();
 		}
 
-		// Token: 0x06031F7B RID: 204667 RVA: 0x00B98D38 File Offset: 0x00B96F38
+		// Token: 0x06026D0A RID: 158986 RVA: 0x00ADCF74 File Offset: 0x00ADB174
 		private void OnClickJumpBtn()
 		{
 			if (this.Data == null)
@@ -229,11 +229,11 @@ namespace CSharpScript.Game.Module.TowerDefence
 			clickFunction();
 		}
 
-		// Token: 0x0401AA3D RID: 109117
+		// Token: 0x0401538F RID: 86927
 		[Nullable(2)]
 		private IActivityRewardData Data;
 
-		// Token: 0x0401AA3E RID: 109118
+		// Token: 0x04015390 RID: 86928
 		[Nullable(new byte[]
 		{
 			2,
@@ -241,39 +241,39 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-		// Token: 0x0401AA3F RID: 109119
+		// Token: 0x04015391 RID: 86929
 		[Nullable(2)]
 		private ButtonItem ReceiveButton;
 
-		// Token: 0x0200ACF4 RID: 44276
+		// Token: 0x02009713 RID: 38675
 		[NullableContext(0)]
 		private class ERewardComponent
 		{
-			// Token: 0x040348D0 RID: 215248
+			// Token: 0x0402F279 RID: 193145
 			public const int TitleTxt = 0;
 
-			// Token: 0x040348D1 RID: 215249
+			// Token: 0x0402F27A RID: 193146
 			public const int DescTxt = 1;
 
-			// Token: 0x040348D2 RID: 215250
+			// Token: 0x0402F27B RID: 193147
 			public const int RewardLayout = 2;
 
-			// Token: 0x040348D3 RID: 215251
+			// Token: 0x0402F27C RID: 193148
 			public const int RewardItem = 3;
 
-			// Token: 0x040348D4 RID: 215252
+			// Token: 0x0402F27D RID: 193149
 			public const int ReceiveBtn = 4;
 
-			// Token: 0x040348D5 RID: 215253
+			// Token: 0x0402F27E RID: 193150
 			public const int InProgressTxt = 5;
 
-			// Token: 0x040348D6 RID: 215254
+			// Token: 0x0402F27F RID: 193151
 			public const int ReceivedSprite = 6;
 
-			// Token: 0x040348D7 RID: 215255
+			// Token: 0x0402F280 RID: 193152
 			public const int RedDotItem = 7;
 
-			// Token: 0x040348D8 RID: 215256
+			// Token: 0x0402F281 RID: 193153
 			public const int JumpBtn = 8;
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AB7 RID: 23223
+	// Token: 0x020060C4 RID: 24772
 	public struct ITimeStopComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AEE0 RID: 44768
-		// (get) Token: 0x06027906 RID: 162054 RVA: 0x005711F2 File Offset: 0x0056F3F2
+		// Token: 0x1700B81C RID: 47132
+		// (get) Token: 0x06029E8C RID: 171660 RVA: 0x005B84DA File Offset: 0x005B66DA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027907 RID: 162055 RVA: 0x005711FF File Offset: 0x0056F3FF
+		// Token: 0x06029E8D RID: 171661 RVA: 0x005B84E7 File Offset: 0x005B66E7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027908 RID: 162056 RVA: 0x00571208 File Offset: 0x0056F408
+		// Token: 0x06029E8E RID: 171662 RVA: 0x005B84F0 File Offset: 0x005B66F0
 		public static ITimeStopComponent GetRootAsITimeStopComponent(ByteBuffer _bb)
 		{
 			return ITimeStopComponent.GetRootAsITimeStopComponent(_bb, default(ITimeStopComponent));
 		}
 
-		// Token: 0x06027909 RID: 162057 RVA: 0x00571224 File Offset: 0x0056F424
+		// Token: 0x06029E8F RID: 171663 RVA: 0x005B850C File Offset: 0x005B670C
 		public static ITimeStopComponent GetRootAsITimeStopComponent(ByteBuffer _bb, ITimeStopComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602790A RID: 162058 RVA: 0x00571241 File Offset: 0x0056F441
+		// Token: 0x06029E90 RID: 171664 RVA: 0x005B8529 File Offset: 0x005B6729
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602790B RID: 162059 RVA: 0x00571250 File Offset: 0x0056F450
+		// Token: 0x06029E91 RID: 171665 RVA: 0x005B8538 File Offset: 0x005B6738
 		public ITimeStopComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AEE1 RID: 44769
-		// (get) Token: 0x0602790C RID: 162060 RVA: 0x00571260 File Offset: 0x0056F460
+		// Token: 0x1700B81D RID: 47133
+		// (get) Token: 0x06029E92 RID: 171666 RVA: 0x005B8548 File Offset: 0x005B6748
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AEE2 RID: 44770
-		// (get) Token: 0x0602790D RID: 162061 RVA: 0x005712A0 File Offset: 0x0056F4A0
+		// Token: 0x1700B81E RID: 47134
+		// (get) Token: 0x06029E93 RID: 171667 RVA: 0x005B8588 File Offset: 0x005B6788
 		public string ActiveState
 		{
 			get
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602790E RID: 162062 RVA: 0x005712D7 File Offset: 0x0056F4D7
+		// Token: 0x06029E94 RID: 171668 RVA: 0x005B85BF File Offset: 0x005B67BF
 		public Span<byte> GetActiveStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602790F RID: 162063 RVA: 0x005712E6 File Offset: 0x0056F4E6
+		// Token: 0x06029E95 RID: 171669 RVA: 0x005B85CE File Offset: 0x005B67CE
 		public byte[] GetActiveStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700AEE3 RID: 44771
-		// (get) Token: 0x06027910 RID: 162064 RVA: 0x005712F4 File Offset: 0x0056F4F4
+		// Token: 0x1700B81F RID: 47135
+		// (get) Token: 0x06029E96 RID: 171670 RVA: 0x005B85DC File Offset: 0x005B67DC
 		public int StopTime
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AEE4 RID: 44772
-		// (get) Token: 0x06027911 RID: 162065 RVA: 0x00571330 File Offset: 0x0056F530
+		// Token: 0x1700B820 RID: 47136
+		// (get) Token: 0x06029E97 RID: 171671 RVA: 0x005B8618 File Offset: 0x005B6818
 		public ITimeStopTarget? Target
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AEE5 RID: 44773
-		// (get) Token: 0x06027912 RID: 162066 RVA: 0x00571390 File Offset: 0x0056F590
+		// Token: 0x1700B821 RID: 47137
+		// (get) Token: 0x06029E98 RID: 171672 RVA: 0x005B8678 File Offset: 0x005B6878
 		public byte NullMask
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027913 RID: 162067 RVA: 0x005713CD File Offset: 0x0056F5CD
+		// Token: 0x06029E99 RID: 171673 RVA: 0x005B86B5 File Offset: 0x005B68B5
 		public static Offset<ITimeStopComponent> CreateITimeStopComponent(FlatBufferBuilder builder, bool Disabled = false, StringOffset ActiveStateOffset = default(StringOffset), int StopTime = 0, Offset<ITimeStopTarget> TargetOffset = default(Offset<ITimeStopTarget>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeStopComponent.EndITimeStopComponent(builder);
 		}
 
-		// Token: 0x06027914 RID: 162068 RVA: 0x00571401 File Offset: 0x0056F601
+		// Token: 0x06029E9A RID: 171674 RVA: 0x005B86E9 File Offset: 0x005B68E9
 		public static void StartITimeStopComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06027915 RID: 162069 RVA: 0x0057140A File Offset: 0x0056F60A
+		// Token: 0x06029E9B RID: 171675 RVA: 0x005B86F2 File Offset: 0x005B68F2
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06027916 RID: 162070 RVA: 0x00571415 File Offset: 0x0056F615
+		// Token: 0x06029E9C RID: 171676 RVA: 0x005B86FD File Offset: 0x005B68FD
 		public static void AddActiveState(FlatBufferBuilder builder, StringOffset activeStateOffset)
 		{
 			builder.AddOffset(1, activeStateOffset.Value, 0);
 		}
 
-		// Token: 0x06027917 RID: 162071 RVA: 0x00571425 File Offset: 0x0056F625
+		// Token: 0x06029E9D RID: 171677 RVA: 0x005B870D File Offset: 0x005B690D
 		public static void AddStopTime(FlatBufferBuilder builder, int stopTime)
 		{
 			builder.AddInt(2, stopTime, 0);
 		}
 
-		// Token: 0x06027918 RID: 162072 RVA: 0x00571430 File Offset: 0x0056F630
+		// Token: 0x06029E9E RID: 171678 RVA: 0x005B8718 File Offset: 0x005B6918
 		public static void AddTarget(FlatBufferBuilder builder, Offset<ITimeStopTarget> targetOffset)
 		{
 			builder.AddOffset(3, targetOffset.Value, 0);
 		}
 
-		// Token: 0x06027919 RID: 162073 RVA: 0x00571440 File Offset: 0x0056F640
+		// Token: 0x06029E9F RID: 171679 RVA: 0x005B8728 File Offset: 0x005B6928
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602791A RID: 162074 RVA: 0x0057144B File Offset: 0x0056F64B
+		// Token: 0x06029EA0 RID: 171680 RVA: 0x005B8733 File Offset: 0x005B6933
 		public static Offset<ITimeStopComponent> EndITimeStopComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeStopComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602791B RID: 162075 RVA: 0x00571458 File Offset: 0x0056F658
+		// Token: 0x06029EA1 RID: 171681 RVA: 0x005B8740 File Offset: 0x005B6940
 		public ITimeStopComponentT UnPack()
 		{
 			ITimeStopComponentT timeStopComponentT = new ITimeStopComponentT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return timeStopComponentT;
 		}
 
-		// Token: 0x0602791C RID: 162076 RVA: 0x00571474 File Offset: 0x0056F674
+		// Token: 0x06029EA2 RID: 171682 RVA: 0x005B875C File Offset: 0x005B695C
 		public void UnPackTo(ITimeStopComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602791D RID: 162077 RVA: 0x005714E0 File Offset: 0x0056F6E0
+		// Token: 0x06029EA3 RID: 171683 RVA: 0x005B87C8 File Offset: 0x005B69C8
 		public static Offset<ITimeStopComponent> Pack(FlatBufferBuilder builder, ITimeStopComponentT _o)
 		{
 			if (_o == null)
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITimeStopComponent.CreateITimeStopComponent(builder, _o.Disabled, activeStateOffset, _o.StopTime, targetOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F17D RID: 61821
+		// Token: 0x0400FE76 RID: 65142
 		private Table __p;
 	}
 }

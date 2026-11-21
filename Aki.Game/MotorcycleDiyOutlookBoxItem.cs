@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002279 RID: 8825
+// Token: 0x0200175D RID: 5981
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutlookBoxItemData>
 {
-	// Token: 0x060113C9 RID: 70601 RVA: 0x004348A4 File Offset: 0x00432AA4
+	// Token: 0x0600E85F RID: 59487 RVA: 0x004414B0 File Offset: 0x0043F6B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		};
 	}
 
-	// Token: 0x060113CA RID: 70602 RVA: 0x00434964 File Offset: 0x00432B64
+	// Token: 0x0600E860 RID: 59488 RVA: 0x00441570 File Offset: 0x0043F770
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiyOutlookBoxItemData data, bool isSelected, int gridIndex)
 	{
@@ -58,7 +58,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		}
 	}
 
-	// Token: 0x060113CB RID: 70603 RVA: 0x004349BC File Offset: 0x00432BBC
+	// Token: 0x0600E861 RID: 59489 RVA: 0x004415C8 File Offset: 0x0043F7C8
 	private void RefreshStickerPartBoxItem()
 	{
 		MotorStickerPart? motorStickerPartConfig = MotorDiyConfig.Instance.GetMotorStickerPartConfig(this.Data.JumpIndex + 1);
@@ -93,7 +93,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		}
 	}
 
-	// Token: 0x060113CC RID: 70604 RVA: 0x00434B28 File Offset: 0x00432D28
+	// Token: 0x0600E862 RID: 59490 RVA: 0x00441734 File Offset: 0x0043F934
 	private void RefreshDecorationPartBoxItem()
 	{
 		MotorDecorationsPart? motorDecorationPartConfig = MotorDiyConfig.Instance.GetMotorDecorationPartConfig(this.Data.JumpIndex + 1);
@@ -128,7 +128,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		}
 	}
 
-	// Token: 0x060113CD RID: 70605 RVA: 0x00434C94 File Offset: 0x00432E94
+	// Token: 0x0600E863 RID: 59491 RVA: 0x004418A0 File Offset: 0x0043FAA0
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.Data == null || this.Data.JumpIndex == -1)
@@ -153,7 +153,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		}
 	}
 
-	// Token: 0x060113CE RID: 70606 RVA: 0x00434D08 File Offset: 0x00432F08
+	// Token: 0x0600E864 RID: 59492 RVA: 0x00441914 File Offset: 0x0043FB14
 	private void OnClickFrameToggle()
 	{
 		OpenMotorcycleDiyRootViewData param = new OpenMotorcycleDiyRootViewData
@@ -164,7 +164,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleDiyRootView, param, null);
 	}
 
-	// Token: 0x060113CF RID: 70607 RVA: 0x00434D48 File Offset: 0x00432F48
+	// Token: 0x0600E865 RID: 59493 RVA: 0x00441954 File Offset: 0x0043FB54
 	private void OnClickStickerToggle(int index)
 	{
 		OpenMotorcycleDiyRootViewData param = new OpenMotorcycleDiyRootViewData
@@ -177,7 +177,7 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060113D0 RID: 70608 RVA: 0x00434DA8 File Offset: 0x00432FA8
+	// Token: 0x0600E866 RID: 59494 RVA: 0x004419B4 File Offset: 0x0043FBB4
 	private void OnClickDecorationToggle(int index)
 	{
 		OpenMotorcycleDiyRootViewData param = new OpenMotorcycleDiyRootViewData
@@ -190,29 +190,29 @@ public class MotorcycleDiyOutlookBoxItem : GridProxyAbstract<MotorcycleDiyOutloo
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04008325 RID: 33573
+	// Token: 0x04008463 RID: 33891
 	[Nullable(2)]
 	private MotorcycleDiyOutlookBoxItemData Data;
 
-	// Token: 0x020087BD RID: 34749
+	// Token: 0x02007946 RID: 31046
 	private class EOutlookBoxItemComponent
 	{
-		// Token: 0x0402C1D7 RID: 180695
+		// Token: 0x040274EF RID: 161007
 		public const int TogItem = 0;
 
-		// Token: 0x0402C1D8 RID: 180696
+		// Token: 0x040274F0 RID: 161008
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C1D9 RID: 180697
+		// Token: 0x040274F1 RID: 161009
 		public const int ItemEmpty = 2;
 
-		// Token: 0x0402C1DA RID: 180698
+		// Token: 0x040274F2 RID: 161010
 		public const int TexPart = 3;
 
-		// Token: 0x0402C1DB RID: 180699
+		// Token: 0x040274F3 RID: 161011
 		public const int ItemNone = 4;
 
-		// Token: 0x0402C1DC RID: 180700
+		// Token: 0x040274F4 RID: 161012
 		public const int SprQuality = 5;
 	}
 }

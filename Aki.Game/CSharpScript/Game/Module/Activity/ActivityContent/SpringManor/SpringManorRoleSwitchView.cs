@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006074 RID: 24692
+	// Token: 0x02004FF2 RID: 20466
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorRoleSwitchView : UiViewBase
 	{
-		// Token: 0x0603E710 RID: 255760 RVA: 0x00F15DAC File Offset: 0x00F13FAC
+		// Token: 0x060333D4 RID: 209876 RVA: 0x00E5CB70 File Offset: 0x00E5AD70
 		public SpringManorRoleSwitchView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E711 RID: 255761 RVA: 0x00F15DB8 File Offset: 0x00F13FB8
+		// Token: 0x060333D5 RID: 209877 RVA: 0x00E5CB7C File Offset: 0x00E5AD7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E712 RID: 255762 RVA: 0x00F16038 File Offset: 0x00F14238
+		// Token: 0x060333D6 RID: 209878 RVA: 0x00E5CDFC File Offset: 0x00E5AFFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorRoleSwitchView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E713 RID: 255763 RVA: 0x00F1607C File Offset: 0x00F1427C
+		// Token: 0x060333D7 RID: 209879 RVA: 0x00E5CE40 File Offset: 0x00E5B040
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(5);
@@ -112,13 +112,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.LoadingSequencePlayer = new UiSequencePlayer(base.GetItem(13));
 		}
 
-		// Token: 0x0603E714 RID: 255764 RVA: 0x00F1615E File Offset: 0x00F1435E
+		// Token: 0x060333D8 RID: 209880 RVA: 0x00E5CF22 File Offset: 0x00E5B122
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x0603E715 RID: 255765 RVA: 0x00F16168 File Offset: 0x00F14368
+		// Token: 0x060333D9 RID: 209881 RVA: 0x00E5CF2C File Offset: 0x00E5B12C
 		private void RefreshView()
 		{
 			FormationData currentFormationData = FormationModel.Instance.CurrentFormationData;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			btn.SetSelfInteractive(this.SelectedRoleId != 0 && !flag);
 		}
 
-		// Token: 0x0603E716 RID: 255766 RVA: 0x00F161D8 File Offset: 0x00F143D8
+		// Token: 0x060333DA RID: 209882 RVA: 0x00E5CF9C File Offset: 0x00E5B19C
 		private void ConfirmClick(int __)
 		{
 			if (this.SelectedRoleId == 0)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			SpringManorController.Instance.ChangeRoleRequest(this.SelectedRoleId).ContinueWith(new Action(this.TryCloseMe));
 		}
 
-		// Token: 0x0603E717 RID: 255767 RVA: 0x00F162B0 File Offset: 0x00F144B0
+		// Token: 0x060333DB RID: 209883 RVA: 0x00E5D074 File Offset: 0x00E5B274
 		private void ShowLoading()
 		{
 			if (this.DelayLoadingTimer == null)
@@ -203,13 +203,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E718 RID: 255768 RVA: 0x00F1632F File Offset: 0x00F1452F
+		// Token: 0x060333DC RID: 209884 RVA: 0x00E5D0F3 File Offset: 0x00E5B2F3
 		private void BackClick()
 		{
 			this.TryCloseMe();
 		}
 
-		// Token: 0x0603E719 RID: 255769 RVA: 0x00F16338 File Offset: 0x00F14538
+		// Token: 0x060333DD RID: 209885 RVA: 0x00E5D0FC File Offset: 0x00E5B2FC
 		protected override void OnBeforeDestroy()
 		{
 			if (this.DelayLoadingTimer != null)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			UiLayer.Instance.SetShowMaskLayer("SpringManorRoleSwitchViewLoading", false);
 		}
 
-		// Token: 0x0603E71A RID: 255770 RVA: 0x00F163B9 File Offset: 0x00F145B9
+		// Token: 0x060333DE RID: 209886 RVA: 0x00E5D17D File Offset: 0x00E5B37D
 		private void TryCloseMe()
 		{
 			if (this.IsClosed)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E71B RID: 255771 RVA: 0x00F163D4 File Offset: 0x00F145D4
+		// Token: 0x060333DF RID: 209887 RVA: 0x00E5D198 File Offset: 0x00E5B398
 		private void UpdateRoleList(List<RoleDataBase> list, bool isShowText, EFilterSortType OperationType)
 		{
 			List<RoleDataBase> list2 = new List<RoleDataBase>();
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, false);
 		}
 
-		// Token: 0x0603E71C RID: 255772 RVA: 0x00F1649E File Offset: 0x00F1469E
+		// Token: 0x060333E0 RID: 209888 RVA: 0x00E5D262 File Offset: 0x00E5B462
 		private SpringManorRoleGridItem OnGridProxyCreate()
 		{
 			SpringManorRoleGridItem springManorRoleGridItem = new SpringManorRoleGridItem();
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return springManorRoleGridItem;
 		}
 
-		// Token: 0x0603E71D RID: 255773 RVA: 0x00F164CC File Offset: 0x00F146CC
+		// Token: 0x060333E1 RID: 209889 RVA: 0x00E5D290 File Offset: 0x00E5B490
 		protected void ToggleFunction(MediumItemGridExtendCallback parameters)
 		{
 			RoleDataBase roleDataBase = parameters.Data as RoleDataBase;
@@ -314,16 +314,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshView();
 		}
 
-		// Token: 0x0603E71E RID: 255774 RVA: 0x00F1651B File Offset: 0x00F1471B
+		// Token: 0x060333E2 RID: 209890 RVA: 0x00E5D2DF File Offset: 0x00E5B4DF
 		protected bool CanExecuteChange(object data, bool isForceSelected, EToggleState state)
 		{
 			return state != EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x04020A60 RID: 133728
+		// Token: 0x0401B38D RID: 111501
 		private int SelectedRoleId;
 
-		// Token: 0x04020A61 RID: 133729
+		// Token: 0x0401B38E RID: 111502
 		[Nullable(new byte[]
 		{
 			2,
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		protected LoopScrollView<SpringManorRoleGridItem, RoleDataBase> RoleScrollView;
 
-		// Token: 0x04020A62 RID: 133730
+		// Token: 0x0401B38F RID: 111503
 		[Nullable(new byte[]
 		{
 			2,
@@ -340,26 +340,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		protected FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-		// Token: 0x04020A63 RID: 133731
+		// Token: 0x0401B390 RID: 111504
 		[Nullable(2)]
 		protected TimerHandle DelayLoadingTimer;
 
-		// Token: 0x04020A64 RID: 133732
+		// Token: 0x0401B391 RID: 111505
 		[Nullable(2)]
 		protected TimerHandle AutoCloseTimer;
 
-		// Token: 0x04020A65 RID: 133733
+		// Token: 0x0401B392 RID: 111506
 		[Nullable(2)]
 		protected UiSequencePlayer LoadingSequencePlayer;
 
-		// Token: 0x04020A66 RID: 133734
+		// Token: 0x0401B393 RID: 111507
 		[Nullable(2)]
 		private ButtonItem ConfirmButton;
 
-		// Token: 0x04020A67 RID: 133735
+		// Token: 0x0401B394 RID: 111508
 		private bool IsClosed;
 
-		// Token: 0x04020A68 RID: 133736
+		// Token: 0x0401B395 RID: 111509
 		private const string ROLE_LOADING_MASK_TAG = "SpringManorRoleSwitchViewLoading";
 	}
 }

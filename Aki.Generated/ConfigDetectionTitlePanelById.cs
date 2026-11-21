@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000202 RID: 514
+	// Token: 0x02000214 RID: 532
 	public class ConfigDetectionTitlePanelById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C0F RID: 3087 RVA: 0x0009DD50 File Offset: 0x0009BF50
+		// Token: 0x06000C7B RID: 3195 RVA: 0x000A3C88 File Offset: 0x000A1E88
 		static ConfigDetectionTitlePanelById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDetectionTitlePanelById.CreateStaticDefaultValue), new Action(ConfigDetectionTitlePanelById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C10 RID: 3088 RVA: 0x0009DD70 File Offset: 0x0009BF70
+		// Token: 0x06000C7C RID: 3196 RVA: 0x000A3CA8 File Offset: 0x000A1EA8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDetectionTitlePanelById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C11 RID: 3089 RVA: 0x0009DDEF File Offset: 0x0009BFEF
+		// Token: 0x06000C7D RID: 3197 RVA: 0x000A3D27 File Offset: 0x000A1F27
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDetectionTitlePanelById.LogPair = null;
 			ConfigDetectionTitlePanelById.HandleId = 0;
 		}
 
-		// Token: 0x06000C12 RID: 3090 RVA: 0x0009DDFD File Offset: 0x0009BFFD
+		// Token: 0x06000C7E RID: 3198 RVA: 0x000A3D35 File Offset: 0x000A1F35
 		public static void Init()
 		{
 			ConfigDetectionTitlePanelById.HandleId = ConfigCommon.InitDataStatement(ConfigDetectionTitlePanelById.HandleId, "db_adventure_detect.db", "select BinData from `DetectionTitlePanel` where Id=?");
 		}
 
-		// Token: 0x06000C13 RID: 3091 RVA: 0x0009DE18 File Offset: 0x0009C018
+		// Token: 0x06000C7F RID: 3199 RVA: 0x000A3D50 File Offset: 0x000A1F50
 		public static DetectionTitlePanel? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDetectionTitlePanelById.HandleId, ConfigDetectionTitlePanelById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DetectionTitlePanel?(rootAsDetectionTitlePanel);
 		}
 
-		// Token: 0x04000DF2 RID: 3570
+		// Token: 0x04000E70 RID: 3696
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04000DF3 RID: 3571
+		// Token: 0x04000E71 RID: 3697
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x04000DF4 RID: 3572
+		// Token: 0x04000E72 RID: 3698
 		private const string TABLE = "DetectionTitlePanel";
 
-		// Token: 0x04000DF5 RID: 3573
+		// Token: 0x04000E73 RID: 3699
 		private const string COMMAND = "select BinData from `DetectionTitlePanel` where Id=?";
 
-		// Token: 0x04000DF6 RID: 3574
+		// Token: 0x04000E74 RID: 3700
 		private const string KEY_PREFIX = "DetectionTitlePanelById";
 
-		// Token: 0x04000DF7 RID: 3575
+		// Token: 0x04000E75 RID: 3701
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DF8 RID: 3576
+		// Token: 0x04000E76 RID: 3702
 		private static int HandleId;
 	}
 }

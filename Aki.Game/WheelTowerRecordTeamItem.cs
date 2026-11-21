@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015A9 RID: 5545
+// Token: 0x02000A61 RID: 2657
 public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009DA3 RID: 40355 RVA: 0x00223AB0 File Offset: 0x00221CB0
+	// Token: 0x06007181 RID: 29057 RVA: 0x0022D860 File Offset: 0x0022BA60
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,13 +33,13 @@ public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009DA4 RID: 40356 RVA: 0x00223B98 File Offset: 0x00221D98
+	// Token: 0x06007182 RID: 29058 RVA: 0x0022D948 File Offset: 0x0022BB48
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x06009DA5 RID: 40357 RVA: 0x00223BA8 File Offset: 0x00221DA8
+	// Token: 0x06007183 RID: 29059 RVA: 0x0022D958 File Offset: 0x0022BB58
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		int num = gridIndex + 1;
@@ -70,7 +70,7 @@ public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "WheelTower_Team_Score", new <>z__ReadOnlySingleElementList<object>(data));
 	}
 
-	// Token: 0x06009DA6 RID: 40358 RVA: 0x00223CAC File Offset: 0x00221EAC
+	// Token: 0x06007184 RID: 29060 RVA: 0x0022DA5C File Offset: 0x0022BC5C
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIText text = base.GetText(1);
@@ -84,7 +84,7 @@ public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x06009DA7 RID: 40359 RVA: 0x00223D00 File Offset: 0x00221F00
+	// Token: 0x06007185 RID: 29061 RVA: 0x0022DAB0 File Offset: 0x0022BCB0
 	public override void OnDeselected(bool fireEvent)
 	{
 		if (this.NumberFirst == 0)
@@ -111,7 +111,7 @@ public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x06009DA8 RID: 40360 RVA: 0x00223DB1 File Offset: 0x00221FB1
+	// Token: 0x06007186 RID: 29062 RVA: 0x0022DB61 File Offset: 0x0022BD61
 	private void OnToggleClick(EToggleState state)
 	{
 		Action<int> onToggleClickCallback = this.OnToggleClickCallback;
@@ -122,7 +122,7 @@ public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 		onToggleClickCallback(base.GridIndex);
 	}
 
-	// Token: 0x06009DA9 RID: 40361 RVA: 0x00223DC9 File Offset: 0x00221FC9
+	// Token: 0x06007187 RID: 29063 RVA: 0x0022DB79 File Offset: 0x0022BD79
 	public void SetToggleState(bool state)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -133,13 +133,13 @@ public class WheelTowerRecordTeamItem : GridProxyAbstract<int>
 		extendToggle.SetToggleState(state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04004592 RID: 17810
+	// Token: 0x04004638 RID: 17976
 	private int NumberFirst;
 
-	// Token: 0x04004593 RID: 17811
+	// Token: 0x04004639 RID: 17977
 	private int NumberSecond;
 
-	// Token: 0x04004594 RID: 17812
+	// Token: 0x0400463A RID: 17978
 	[Nullable(2)]
 	public Action<int> OnToggleClickCallback;
 }

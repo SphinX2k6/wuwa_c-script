@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001206 RID: 4614
+// Token: 0x020006BA RID: 1722
 internal enum <CumulativeShopTaskView>FC1E4A757DB6FB54BC74BD591BB25ECEF8BD38BDBA218907656FF15BA6DE19D51__EComponentDefine
 {
-	// Token: 0x04003892 RID: 14482
+	// Token: 0x0400392B RID: 14635
 	CaptionItem,
-	// Token: 0x04003893 RID: 14483
+	// Token: 0x0400392C RID: 14636
 	TaskLoopScrollView,
-	// Token: 0x04003894 RID: 14484
+	// Token: 0x0400392D RID: 14637
 	TaskItem,
-	// Token: 0x04003895 RID: 14485
+	// Token: 0x0400392E RID: 14638
 	RefreshTimeText,
-	// Token: 0x04003896 RID: 14486
+	// Token: 0x0400392F RID: 14639
 	TabScrollView
 }

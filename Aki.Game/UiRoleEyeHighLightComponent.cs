@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002CAD RID: 11437
+// Token: 0x02002206 RID: 8710
 public class UiRoleEyeHighLightComponent : UiModelComponentBase
 {
-	// Token: 0x06017E5E RID: 97886 RVA: 0x00613323 File Offset: 0x00611523
+	// Token: 0x060156D2 RID: 87762 RVA: 0x00638EA7 File Offset: 0x006370A7
 	protected override void OnInit()
 	{
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 	}
 
-	// Token: 0x06017E5F RID: 97887 RVA: 0x00613336 File Offset: 0x00611536
+	// Token: 0x060156D3 RID: 87763 RVA: 0x00638EBA File Offset: 0x006370BA
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
 	}
 
-	// Token: 0x06017E60 RID: 97888 RVA: 0x0061335A File Offset: 0x0061155A
+	// Token: 0x060156D4 RID: 87764 RVA: 0x00638EDE File Offset: 0x006370DE
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
 	}
 
-	// Token: 0x06017E61 RID: 97889 RVA: 0x0061337E File Offset: 0x0061157E
+	// Token: 0x060156D5 RID: 87765 RVA: 0x00638F02 File Offset: 0x00637102
 	public void OnRoleMeshLoadComplete()
 	{
 		this.DisableEyeHighLight();
 	}
 
-	// Token: 0x06017E62 RID: 97890 RVA: 0x00613388 File Offset: 0x00611588
+	// Token: 0x060156D6 RID: 87766 RVA: 0x00638F0C File Offset: 0x0063710C
 	public void DisableEyeHighLight()
 	{
 		FName[] slotNameList = new FName[]
@@ -43,7 +43,7 @@ public class UiRoleEyeHighLightComponent : UiModelComponentBase
 		this.DisableEyeHighLightByMeshComp(mainMeshComponent, slotNameList, lightDisableSwitch);
 	}
 
-	// Token: 0x06017E63 RID: 97891 RVA: 0x006133E0 File Offset: 0x006115E0
+	// Token: 0x060156D7 RID: 87767 RVA: 0x00638F64 File Offset: 0x00637164
 	[NullableContext(1)]
 	private void DisableEyeHighLightByMeshComp(USkeletalMeshComponent skeletalMeshComp, FName[] slotNameList, FName lightDisableSwitch)
 	{
@@ -62,7 +62,7 @@ public class UiRoleEyeHighLightComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x0400B22A RID: 45610
+	// Token: 0x0400B595 RID: 46485
 	[Nullable(2)]
 	private UiModelActorComponent ActorComponent;
 }

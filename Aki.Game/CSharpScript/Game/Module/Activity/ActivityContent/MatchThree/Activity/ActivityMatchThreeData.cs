@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,12 +8,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 {
-	// Token: 0x02006542 RID: 25922
+	// Token: 0x020054C0 RID: 21696
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityMatchThreeData : ActivityBaseData
 	{
-		// Token: 0x06040F83 RID: 266115 RVA: 0x00FBE398 File Offset: 0x00FBC598
+		// Token: 0x06035C48 RID: 220232 RVA: 0x00F05380 File Offset: 0x00F03580
 		protected override void PhraseEx(ActivityData data)
 		{
 			MatchThreeActivityInfo matchThreeActivityInfo = data.MatchThreeActivityInfo;
@@ -31,27 +30,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			this.InvalidateChapterCache();
 		}
 
-		// Token: 0x06040F84 RID: 266116 RVA: 0x00FBE414 File Offset: 0x00FBC614
+		// Token: 0x06035C49 RID: 220233 RVA: 0x00F053FC File Offset: 0x00F035FC
 		private void InvalidateChapterCache()
 		{
 			this.CachedRegularChaptersComplete = null;
 		}
 
-		// Token: 0x06040F85 RID: 266117 RVA: 0x00FBE424 File Offset: 0x00FBC624
+		// Token: 0x06035C4A RID: 220234 RVA: 0x00F0540C File Offset: 0x00F0360C
 		public bool CheckChallengeComplete(int challengeId)
 		{
 			MatchThreeLevelInfo matchThreeLevelInfo;
 			return this.ChallengeState.TryGetValue(challengeId, out matchThreeLevelInfo) && matchThreeLevelInfo.FirstPass;
 		}
 
-		// Token: 0x06040F86 RID: 266118 RVA: 0x00FBE44C File Offset: 0x00FBC64C
+		// Token: 0x06035C4B RID: 220235 RVA: 0x00F05434 File Offset: 0x00F03634
 		public bool CheckChallengeIsOpen(int challengeId)
 		{
 			MatchThreeLevelInfo matchThreeLevelInfo;
 			return this.ChallengeState.TryGetValue(challengeId, out matchThreeLevelInfo) && TimeUtil.Instance.GetServerTime() >= (double)matchThreeLevelInfo.UnlockTime;
 		}
 
-		// Token: 0x06040F87 RID: 266119 RVA: 0x00FBE484 File Offset: 0x00FBC684
+		// Token: 0x06035C4C RID: 220236 RVA: 0x00F0546C File Offset: 0x00F0366C
 		[NullableContext(2)]
 		public MatchThreeLevelInfo GetLevelInfo(int challengeId)
 		{
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return result;
 		}
 
-		// Token: 0x06040F88 RID: 266120 RVA: 0x00FBE4A4 File Offset: 0x00FBC6A4
+		// Token: 0x06035C4D RID: 220237 RVA: 0x00F0548C File Offset: 0x00F0368C
 		public int GetCompleteChallengeCount()
 		{
 			int num = 0;
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return num;
 		}
 
-		// Token: 0x06040F89 RID: 266121 RVA: 0x00FBE514 File Offset: 0x00FBC714
+		// Token: 0x06035C4E RID: 220238 RVA: 0x00F054FC File Offset: 0x00F036FC
 		public int GetDisplayChallengeCount()
 		{
 			int num = 0;
@@ -88,21 +87,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return num;
 		}
 
-		// Token: 0x06040F8A RID: 266122 RVA: 0x00FBE578 File Offset: 0x00FBC778
+		// Token: 0x06035C4F RID: 220239 RVA: 0x00F05560 File Offset: 0x00F03760
 		private bool IsChallengeCountedInProgress(int challengeId)
 		{
 			MatchThreeLevel? levelConfig = this.GetLevelConfig(challengeId);
 			return levelConfig != null && (!levelConfig.Value.EndLess || this.IsEndlessLevelVisible(levelConfig.Value));
 		}
 
-		// Token: 0x06040F8B RID: 266123 RVA: 0x00FBE5B8 File Offset: 0x00FBC7B8
+		// Token: 0x06035C50 RID: 220240 RVA: 0x00F055A0 File Offset: 0x00F037A0
 		protected override bool GetExDataFinishShowState()
 		{
 			int displayChallengeCount = this.GetDisplayChallengeCount();
 			return displayChallengeCount > 0 && this.GetCompleteChallengeCount() == displayChallengeCount;
 		}
 
-		// Token: 0x06040F8C RID: 266124 RVA: 0x00FBE5DC File Offset: 0x00FBC7DC
+		// Token: 0x06035C51 RID: 220241 RVA: 0x00F055C4 File Offset: 0x00F037C4
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!base.GetPreGuideQuestFinishState())
@@ -119,21 +118,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return false;
 		}
 
-		// Token: 0x06040F8D RID: 266125 RVA: 0x00FBE63C File Offset: 0x00FBC83C
+		// Token: 0x06035C52 RID: 220242 RVA: 0x00F05624 File Offset: 0x00F03824
 		public IReadOnlyList<int> GetAllLevelIds()
 		{
-			return (from id in this.ChallengeState.Keys
-			orderby id
-			select id).ToList<int>();
+			List<int> list = new List<int>(this.ChallengeState.Keys);
+			list.Sort();
+			return list;
 		}
 
-		// Token: 0x06040F8E RID: 266126 RVA: 0x00FBE672 File Offset: 0x00FBC872
+		// Token: 0x06035C53 RID: 220243 RVA: 0x00F0563C File Offset: 0x00F0383C
 		public MatchThreeLevel? GetLevelConfig(int levelId)
 		{
 			return ActivityMatchThreeConfig.Instance.GetLevelConfig(levelId);
 		}
 
-		// Token: 0x06040F8F RID: 266127 RVA: 0x00FBE680 File Offset: 0x00FBC880
+		// Token: 0x06035C54 RID: 220244 RVA: 0x00F0564C File Offset: 0x00F0384C
 		public IReadOnlyList<MatchThreeChapterSelectData> GetChapterSelectDataList()
 		{
 			if (this.BuildingChapterSelectDataList)
@@ -169,14 +168,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return result;
 		}
 
-		// Token: 0x06040F90 RID: 266128 RVA: 0x00FBE734 File Offset: 0x00FBC934
+		// Token: 0x06035C55 RID: 220245 RVA: 0x00F05700 File Offset: 0x00F03900
 		public bool IsRoleUnlocked(int roleId)
 		{
 			MatchThreeRole? roleConfig = ActivityMatchThreeConfig.Instance.GetRoleConfig(roleId);
 			return roleConfig != null && this.IsRoleUnlocked(roleConfig.Value);
 		}
 
-		// Token: 0x06040F91 RID: 266129 RVA: 0x00FBE768 File Offset: 0x00FBC968
+		// Token: 0x06035C56 RID: 220246 RVA: 0x00F05734 File Offset: 0x00F03934
 		public bool IsRoleUnlocked(MatchThreeRole roleConfig)
 		{
 			if (roleConfig.PreLevel <= 0)
@@ -192,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return chapter > 0 && this.IsChapterUnlocked(chapter);
 		}
 
-		// Token: 0x06040F92 RID: 266130 RVA: 0x00FBE7B8 File Offset: 0x00FBC9B8
+		// Token: 0x06035C57 RID: 220247 RVA: 0x00F05784 File Offset: 0x00F03984
 		public bool IsChapterUnlocked(int chapter)
 		{
 			if (chapter <= 0)
@@ -209,7 +208,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return false;
 		}
 
-		// Token: 0x06040F93 RID: 266131 RVA: 0x00FBE828 File Offset: 0x00FBCA28
+		// Token: 0x06035C58 RID: 220248 RVA: 0x00F057F4 File Offset: 0x00F039F4
 		public int ResolvePreferredRoleId(int levelId)
 		{
 			MatchThreeLevel? levelConfig = this.GetLevelConfig(levelId);
@@ -234,13 +233,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return 0;
 		}
 
-		// Token: 0x06040F94 RID: 266132 RVA: 0x00FBE8FC File Offset: 0x00FBCAFC
+		// Token: 0x06035C59 RID: 220249 RVA: 0x00F058C8 File Offset: 0x00F03AC8
 		public int GetCachedSelectedRoleId(int chapter)
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 2, chapter, 0);
 		}
 
-		// Token: 0x06040F95 RID: 266133 RVA: 0x00FBE912 File Offset: 0x00FBCB12
+		// Token: 0x06035C5A RID: 220250 RVA: 0x00F058DE File Offset: 0x00F03ADE
 		public void SaveSelectedRoleId(int chapter, int roleId)
 		{
 			if (chapter <= 0 || roleId <= 0)
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			ActivityModel.Instance.SaveActivityData(base.Id, 2, chapter, 0, roleId);
 		}
 
-		// Token: 0x06040F96 RID: 266134 RVA: 0x00FBE934 File Offset: 0x00FBCB34
+		// Token: 0x06035C5B RID: 220251 RVA: 0x00F05900 File Offset: 0x00F03B00
 		public IReadOnlyList<int> GetPendingUnlockTipRoleIds()
 		{
 			List<int> list = new List<int>();
@@ -264,13 +263,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return list;
 		}
 
-		// Token: 0x06040F97 RID: 266135 RVA: 0x00FBE9B4 File Offset: 0x00FBCBB4
+		// Token: 0x06035C5C RID: 220252 RVA: 0x00F05980 File Offset: 0x00F03B80
 		private bool HasShownRoleUnlockTip(int roleId)
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 3, roleId, 0) > 0;
 		}
 
-		// Token: 0x06040F98 RID: 266136 RVA: 0x00FBE9CD File Offset: 0x00FBCBCD
+		// Token: 0x06035C5D RID: 220253 RVA: 0x00F05999 File Offset: 0x00F03B99
 		public void MarkRoleUnlockTipShown(int roleId)
 		{
 			if (roleId <= 0)
@@ -282,13 +281,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			EventSystem.Instance.Emit(EEventName.OnMatchThreeRoleNewRedDotUpdate);
 		}
 
-		// Token: 0x06040F99 RID: 266137 RVA: 0x00FBE9FE File Offset: 0x00FBCBFE
+		// Token: 0x06035C5E RID: 220254 RVA: 0x00F059CA File Offset: 0x00F03BCA
 		public bool HasNewRoleRedDot(int roleId)
 		{
 			return roleId > 0 && this.IsRoleUnlocked(roleId) && this.HasShownRoleUnlockTip(roleId) && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 4, roleId, 0) <= 0;
 		}
 
-		// Token: 0x06040F9A RID: 266138 RVA: 0x00FBEA34 File Offset: 0x00FBCC34
+		// Token: 0x06035C5F RID: 220255 RVA: 0x00F05A00 File Offset: 0x00F03C00
 		public bool HasAnyNewRoleRedDot()
 		{
 			foreach (MatchThreeRole matchThreeRole in ActivityMatchThreeConfig.Instance.GetAllRoleConfigs())
@@ -301,7 +300,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return false;
 		}
 
-		// Token: 0x06040F9B RID: 266139 RVA: 0x00FBEA94 File Offset: 0x00FBCC94
+		// Token: 0x06035C60 RID: 220256 RVA: 0x00F05A60 File Offset: 0x00F03C60
 		public void MarkNewRoleRedDotClicked(int roleId)
 		{
 			if (roleId <= 0 || !this.HasNewRoleRedDot(roleId))
@@ -312,19 +311,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			EventSystem.Instance.Emit(EEventName.OnMatchThreeRoleNewRedDotUpdate);
 		}
 
-		// Token: 0x06040F9C RID: 266140 RVA: 0x00FBEAC8 File Offset: 0x00FBCCC8
+		// Token: 0x06035C61 RID: 220257 RVA: 0x00F05A94 File Offset: 0x00F03C94
 		public bool HasSelectRoleBtnRedDot()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 5, 0, 0) > 0;
 		}
 
-		// Token: 0x06040F9D RID: 266141 RVA: 0x00FBEAE1 File Offset: 0x00FBCCE1
+		// Token: 0x06035C62 RID: 220258 RVA: 0x00F05AAD File Offset: 0x00F03CAD
 		public void ActivateSelectRoleBtnRedDot()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 5, 0, 0, 1);
 		}
 
-		// Token: 0x06040F9E RID: 266142 RVA: 0x00FBEAF7 File Offset: 0x00FBCCF7
+		// Token: 0x06035C63 RID: 220259 RVA: 0x00F05AC3 File Offset: 0x00F03CC3
 		public void MarkSelectRoleBtnRedDotClicked()
 		{
 			if (!this.HasSelectRoleBtnRedDot())
@@ -335,7 +334,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			EventSystem.Instance.Emit(EEventName.OnMatchThreeRoleNewRedDotUpdate);
 		}
 
-		// Token: 0x06040F9F RID: 266143 RVA: 0x00FBEB28 File Offset: 0x00FBCD28
+		// Token: 0x06035C64 RID: 220260 RVA: 0x00F05AF4 File Offset: 0x00F03CF4
 		public bool IsEndlessChapterVisible(MatchThreeChapterSelectData chapterData)
 		{
 			if (!chapterData.IsEndless)
@@ -346,13 +345,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return levelConfig != null && this.IsEndlessLevelVisible(levelConfig.Value);
 		}
 
-		// Token: 0x06040FA0 RID: 266144 RVA: 0x00FBEB64 File Offset: 0x00FBCD64
+		// Token: 0x06035C65 RID: 220261 RVA: 0x00F05B30 File Offset: 0x00F03D30
 		public bool IsEndlessLevelVisible(MatchThreeLevel levelConfig)
 		{
 			return !levelConfig.EndLess || (this.AreAllRegularChaptersComplete() && this.CheckChallengeIsOpen(levelConfig.Id));
 		}
 
-		// Token: 0x06040FA1 RID: 266145 RVA: 0x00FBEB88 File Offset: 0x00FBCD88
+		// Token: 0x06035C66 RID: 220262 RVA: 0x00F05B54 File Offset: 0x00F03D54
 		public bool AreAllRegularChaptersComplete()
 		{
 			if (this.CachedRegularChaptersComplete != null)
@@ -389,7 +388,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return true;
 		}
 
-		// Token: 0x06040FA2 RID: 266146 RVA: 0x00FBECB8 File Offset: 0x00FBCEB8
+		// Token: 0x06035C67 RID: 220263 RVA: 0x00F05C84 File Offset: 0x00F03E84
 		public bool CheckChapterNormalComplete(int chapter)
 		{
 			if (chapter <= 0)
@@ -412,7 +411,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return matchThreeLevel != null && this.CheckChallengeComplete(matchThreeLevel.Value.Id);
 		}
 
-		// Token: 0x06040FA3 RID: 266147 RVA: 0x00FBEDA0 File Offset: 0x00FBCFA0
+		// Token: 0x06035C68 RID: 220264 RVA: 0x00F05D6C File Offset: 0x00F03F6C
 		public bool CheckChapterAllDifficultiesComplete(int chapter)
 		{
 			if (chapter <= 0)
@@ -439,7 +438,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return result;
 		}
 
-		// Token: 0x06040FA4 RID: 266148 RVA: 0x00FBEE48 File Offset: 0x00FBD048
+		// Token: 0x06035C69 RID: 220265 RVA: 0x00F05E14 File Offset: 0x00F04014
 		public bool CheckChapterTimeUnlocked(MatchThreeChapterSelectData chapterData)
 		{
 			foreach (int challengeId in chapterData.LevelIds)
@@ -452,7 +451,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return false;
 		}
 
-		// Token: 0x06040FA5 RID: 266149 RVA: 0x00FBEEA4 File Offset: 0x00FBD0A4
+		// Token: 0x06035C6A RID: 220266 RVA: 0x00F05E70 File Offset: 0x00F04070
 		public bool CheckChapterPreUnlocked(MatchThreeChapterSelectData chapterData)
 		{
 			MatchThreeLevel? levelConfig = this.GetLevelConfig(chapterData.PrimaryLevelId);
@@ -460,7 +459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return this.CheckChapterNormalComplete(chapter);
 		}
 
-		// Token: 0x06040FA6 RID: 266150 RVA: 0x00FBEEF0 File Offset: 0x00FBD0F0
+		// Token: 0x06035C6B RID: 220267 RVA: 0x00F05EBC File Offset: 0x00F040BC
 		public bool CheckPreChallengeComplete(int challengeId)
 		{
 			MatchThreeLevel? levelConfig = this.GetLevelConfig(challengeId);
@@ -472,7 +471,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return this.CheckChapterNormalComplete(chapter) && (levelConfig.Value.Difficulty <= 0 || levelConfig.Value.EndLess || this.CheckChapterNormalComplete(levelConfig.Value.Chapter));
 		}
 
-		// Token: 0x06040FA7 RID: 266151 RVA: 0x00FBEF90 File Offset: 0x00FBD190
+		// Token: 0x06035C6C RID: 220268 RVA: 0x00F05F5C File Offset: 0x00F0415C
 		public EMatchThreeChapterLockReason GetChapterLockReason(MatchThreeChapterSelectData chapterData)
 		{
 			if (!this.CheckChapterTimeUnlocked(chapterData))
@@ -486,7 +485,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return EMatchThreeChapterLockReason.None;
 		}
 
-		// Token: 0x06040FA8 RID: 266152 RVA: 0x00FBEFAC File Offset: 0x00FBD1AC
+		// Token: 0x06035C6D RID: 220269 RVA: 0x00F05F78 File Offset: 0x00F04178
 		public EMatchThreeChapterState GetChapterState(MatchThreeChapterSelectData chapterData)
 		{
 			EMatchThreeChapterLockReason chapterLockReason = this.GetChapterLockReason(chapterData);
@@ -508,7 +507,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x06040FA9 RID: 266153 RVA: 0x00FBEFD8 File Offset: 0x00FBD1D8
+		// Token: 0x06035C6E RID: 220270 RVA: 0x00F05FA4 File Offset: 0x00F041A4
 		public bool IsChapterFullyComplete(MatchThreeChapterSelectData chapterData)
 		{
 			foreach (int challengeId in chapterData.LevelIds)
@@ -521,7 +520,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return chapterData.LevelIds.Count > 0;
 		}
 
-		// Token: 0x06040FAA RID: 266154 RVA: 0x00FBF044 File Offset: 0x00FBD244
+		// Token: 0x06035C6F RID: 220271 RVA: 0x00F06010 File Offset: 0x00F04210
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -530,10 +529,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 		})]
 		public ValueTuple<int, int> GetChapterProgress([Nullable(1)] MatchThreeChapterSelectData chapterData)
 		{
-			return new ValueTuple<int, int>(chapterData.LevelIds.Count(new Func<int, bool>(this.CheckChallengeComplete)), chapterData.LevelIds.Count);
+			int num = 0;
+			for (int i = 0; i < chapterData.LevelIds.Count; i++)
+			{
+				if (this.CheckChallengeComplete(chapterData.LevelIds[i]))
+				{
+					num++;
+				}
+			}
+			return new ValueTuple<int, int>(num, chapterData.LevelIds.Count);
 		}
 
-		// Token: 0x06040FAB RID: 266155 RVA: 0x00FBF070 File Offset: 0x00FBD270
+		// Token: 0x06035C70 RID: 220272 RVA: 0x00F06060 File Offset: 0x00F04260
 		public int GetEndlessBestScore(MatchThreeChapterSelectData chapterData)
 		{
 			if (!chapterData.IsEndless)
@@ -551,7 +558,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return 0;
 		}
 
-		// Token: 0x06040FAC RID: 266156 RVA: 0x00FBF0F0 File Offset: 0x00FBD2F0
+		// Token: 0x06035C71 RID: 220273 RVA: 0x00F060E0 File Offset: 0x00F042E0
 		public int GetEndlessBestScore(int levelId)
 		{
 			MatchThreeLevelInfo levelInfo = this.GetLevelInfo(levelId);
@@ -562,7 +569,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return levelInfo.Score;
 		}
 
-		// Token: 0x06040FAD RID: 266157 RVA: 0x00FBF118 File Offset: 0x00FBD318
+		// Token: 0x06035C72 RID: 220274 RVA: 0x00F06108 File Offset: 0x00F04308
 		public string GetUnlockDesc(int challengeId)
 		{
 			MatchThreeLevelInfo matchThreeLevelInfo;
@@ -591,7 +598,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			});
 		}
 
-		// Token: 0x06040FAE RID: 266158 RVA: 0x00FBF1A4 File Offset: 0x00FBD3A4
+		// Token: 0x06035C73 RID: 220275 RVA: 0x00F06194 File Offset: 0x00F04394
 		public bool CheckChapterRedPointShow(MatchThreeChapterSelectData chapterData)
 		{
 			EMatchThreeChapterState chapterState = this.GetChapterState(chapterData);
@@ -599,13 +606,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return !flag && !this.IsChapterFullyComplete(chapterData) && !this.CheckChapterClicked(chapterData.Chapter);
 		}
 
-		// Token: 0x06040FAF RID: 266159 RVA: 0x00FBF1E4 File Offset: 0x00FBD3E4
+		// Token: 0x06035C74 RID: 220276 RVA: 0x00F061D4 File Offset: 0x00F043D4
 		public bool CheckChapterClicked(int chapter)
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, chapter, 0) == 1;
 		}
 
-		// Token: 0x06040FB0 RID: 266160 RVA: 0x00FBF1FD File Offset: 0x00FBD3FD
+		// Token: 0x06035C75 RID: 220277 RVA: 0x00F061ED File Offset: 0x00F043ED
 		public void MarkChapterClicked(int chapter)
 		{
 			if (chapter <= 0 || this.CheckChapterClicked(chapter))
@@ -616,7 +623,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040FB1 RID: 266161 RVA: 0x00FBF238 File Offset: 0x00FBD438
+		// Token: 0x06035C76 RID: 220278 RVA: 0x00F06228 File Offset: 0x00F04428
 		public int GetAutoFocusChapterIndex(IReadOnlyList<MatchThreeChapterSelectData> chapterList)
 		{
 			if (chapterList.Count == 0)
@@ -663,7 +670,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x06040FB2 RID: 266162 RVA: 0x00FBF2D8 File Offset: 0x00FBD4D8
+		// Token: 0x06035C77 RID: 220279 RVA: 0x00F062C8 File Offset: 0x00F044C8
 		private int FindEarliestUnlockedIncompleteSimpleIndex(IReadOnlyList<MatchThreeChapterSelectData> chapterList)
 		{
 			for (int i = 0; i < chapterList.Count; i++)
@@ -677,7 +684,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return -1;
 		}
 
-		// Token: 0x06040FB3 RID: 266163 RVA: 0x00FBF32C File Offset: 0x00FBD52C
+		// Token: 0x06035C78 RID: 220280 RVA: 0x00F0631C File Offset: 0x00F0451C
 		private int FindEarliestUnlockedIncompleteHardIndex(IReadOnlyList<MatchThreeChapterSelectData> chapterList)
 		{
 			for (int i = 0; i < chapterList.Count; i++)
@@ -691,7 +698,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return -1;
 		}
 
-		// Token: 0x06040FB4 RID: 266164 RVA: 0x00FBF394 File Offset: 0x00FBD594
+		// Token: 0x06035C79 RID: 220281 RVA: 0x00F06384 File Offset: 0x00F04584
 		private int FindUnlockedEndlessIndex(IReadOnlyList<MatchThreeChapterSelectData> chapterList)
 		{
 			for (int i = 0; i < chapterList.Count; i++)
@@ -705,7 +712,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return -1;
 		}
 
-		// Token: 0x06040FB5 RID: 266165 RVA: 0x00FBF3D0 File Offset: 0x00FBD5D0
+		// Token: 0x06035C7A RID: 220282 RVA: 0x00F063C0 File Offset: 0x00F045C0
 		private int FindLastUnlockedIndex(IReadOnlyList<MatchThreeChapterSelectData> chapterList)
 		{
 			for (int i = chapterList.Count - 1; i >= 0; i--)
@@ -718,7 +725,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return -1;
 		}
 
-		// Token: 0x06040FB6 RID: 266166 RVA: 0x00FBF404 File Offset: 0x00FBD604
+		// Token: 0x06035C7B RID: 220283 RVA: 0x00F063F4 File Offset: 0x00F045F4
 		public void UpdateChallengeFirstPass(int challengeId, bool firstPass)
 		{
 			MatchThreeLevelInfo matchThreeLevelInfo;
@@ -731,7 +738,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			EventSystem.Instance.Emit<int>(EEventName.OnMatchThreeChallengeStateUpdate, challengeId);
 		}
 
-		// Token: 0x06040FB7 RID: 266167 RVA: 0x00FBF440 File Offset: 0x00FBD640
+		// Token: 0x06035C7C RID: 220284 RVA: 0x00F06430 File Offset: 0x00F04630
 		public void UpdateEndlessScore(int challengeId, int score)
 		{
 			MatchThreeLevelInfo matchThreeLevelInfo;
@@ -743,7 +750,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			EventSystem.Instance.Emit<int>(EEventName.OnMatchThreeChallengeStateUpdate, challengeId);
 		}
 
-		// Token: 0x06040FB8 RID: 266168 RVA: 0x00FBF478 File Offset: 0x00FBD678
+		// Token: 0x06035C7D RID: 220285 RVA: 0x00F06468 File Offset: 0x00F04668
 		public int GmUnlockAllLevels()
 		{
 			if (this.ChallengeState.Count == 0)
@@ -761,7 +768,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return this.ChallengeState.Count;
 		}
 
-		// Token: 0x06040FB9 RID: 266169 RVA: 0x00FBF520 File Offset: 0x00FBD720
+		// Token: 0x06035C7E RID: 220286 RVA: 0x00F06510 File Offset: 0x00F04710
 		public bool GmUnlockLevel(int levelId)
 		{
 			if (levelId <= 0)
@@ -794,13 +801,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return true;
 		}
 
-		// Token: 0x04021E11 RID: 138769
+		// Token: 0x0401C742 RID: 116546
 		private readonly Dictionary<int, MatchThreeLevelInfo> ChallengeState = new Dictionary<int, MatchThreeLevelInfo>();
 
-		// Token: 0x04021E12 RID: 138770
+		// Token: 0x0401C743 RID: 116547
 		private bool BuildingChapterSelectDataList;
 
-		// Token: 0x04021E13 RID: 138771
+		// Token: 0x0401C744 RID: 116548
 		private bool? CachedRegularChaptersComplete;
 	}
 }

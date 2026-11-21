@@ -13,18 +13,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020025B1 RID: 9649
+// Token: 0x02001A9C RID: 6812
 [NullableContext(2)]
 [Nullable(0)]
 public class FightPhotoSaveView : UiViewBase
 {
-	// Token: 0x060138F6 RID: 80118 RVA: 0x004E372E File Offset: 0x004E192E
+	// Token: 0x06010DD6 RID: 69078 RVA: 0x004F232E File Offset: 0x004F052E
 	[NullableContext(1)]
 	public FightPhotoSaveView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060138F7 RID: 80119 RVA: 0x004E3744 File Offset: 0x004E1944
+	// Token: 0x06010DD7 RID: 69079 RVA: 0x004F2344 File Offset: 0x004F0544
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class FightPhotoSaveView : UiViewBase
 		};
 	}
 
-	// Token: 0x060138F8 RID: 80120 RVA: 0x004E38BC File Offset: 0x004E1ABC
+	// Token: 0x06010DD8 RID: 69080 RVA: 0x004F24BC File Offset: 0x004F06BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoSaveView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ public class FightPhotoSaveView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060138F9 RID: 80121 RVA: 0x004E3900 File Offset: 0x004E1B00
+	// Token: 0x06010DD9 RID: 69081 RVA: 0x004F2500 File Offset: 0x004F0700
 	private void RefreshSaveButton()
 	{
 		bool flag = Info.Instance.IsXSXPlatform();
@@ -73,7 +73,7 @@ public class FightPhotoSaveView : UiViewBase
 		button.RootUIComp.Get().SetUIActive(!flag);
 	}
 
-	// Token: 0x060138FA RID: 80122 RVA: 0x004E393C File Offset: 0x004E1B3C
+	// Token: 0x06010DDA RID: 69082 RVA: 0x004F253C File Offset: 0x004F073C
 	private UniTask CaptureForPreviewAndMissionAsync()
 	{
 		FightPhotoSaveView.<CaptureForPreviewAndMissionAsync>d__11 <CaptureForPreviewAndMissionAsync>d__;
@@ -84,14 +84,14 @@ public class FightPhotoSaveView : UiViewBase
 		return <CaptureForPreviewAndMissionAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060138FB RID: 80123 RVA: 0x004E397F File Offset: 0x004E1B7F
+	// Token: 0x06010DDB RID: 69083 RVA: 0x004F257F File Offset: 0x004F077F
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
 		PhotographController.OnFightPhotoSaveViewClose();
 	}
 
-	// Token: 0x060138FC RID: 80124 RVA: 0x004E398C File Offset: 0x004E1B8C
+	// Token: 0x06010DDC RID: 69084 RVA: 0x004F258C File Offset: 0x004F078C
 	private void RefreshPhotoPanel()
 	{
 		UUIItem item = base.GetItem(3);
@@ -101,7 +101,7 @@ public class FightPhotoSaveView : UiViewBase
 		item.SetHeight(viewportSize.Y / (viewportScale * 1.5f));
 	}
 
-	// Token: 0x060138FD RID: 80125 RVA: 0x004E39E0 File Offset: 0x004E1BE0
+	// Token: 0x06010DDD RID: 69085 RVA: 0x004F25E0 File Offset: 0x004F07E0
 	protected override void OnAfterShow()
 	{
 		PhotoSaveMarkItem markItem = this.MarkItem;
@@ -117,7 +117,7 @@ public class FightPhotoSaveView : UiViewBase
 		uiViewSequence.PlaySequence("ScreenShot", true, null);
 	}
 
-	// Token: 0x060138FE RID: 80126 RVA: 0x004E3A24 File Offset: 0x004E1C24
+	// Token: 0x06010DDE RID: 69086 RVA: 0x004F2624 File Offset: 0x004F0824
 	private void OnClickedConfirmButton()
 	{
 		Log.Instance.Info(ELogModule.FightPhotograph, ELogAuthor.CXJ, "点击保存截图按钮", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -145,7 +145,7 @@ public class FightPhotoSaveView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060138FF RID: 80127 RVA: 0x004E3AD4 File Offset: 0x004E1CD4
+	// Token: 0x06010DDF RID: 69087 RVA: 0x004F26D4 File Offset: 0x004F08D4
 	private unsafe void TakeScreenshot(bool isSaveFile, [Nullable(new byte[]
 	{
 		1,
@@ -218,7 +218,7 @@ public class FightPhotoSaveView : UiViewBase
 		}, null, null);
 	}
 
-	// Token: 0x06013900 RID: 80128 RVA: 0x004E3B9C File Offset: 0x004E1D9C
+	// Token: 0x06010DE0 RID: 69088 RVA: 0x004F279C File Offset: 0x004F099C
 	private unsafe void OnTakePhoto(int width, int height, TArray<FColor> colors)
 	{
 		this.CurrentTakeWidth = width;
@@ -315,7 +315,7 @@ public class FightPhotoSaveView : UiViewBase
 		this.ClosePhotoSaveView();
 	}
 
-	// Token: 0x06013901 RID: 80129 RVA: 0x004E3ED0 File Offset: 0x004E20D0
+	// Token: 0x06010DE1 RID: 69089 RVA: 0x004F2AD0 File Offset: 0x004F0CD0
 	private unsafe void OnIOSPhotoLibraryAuthorizationCompleted(bool isGranted)
 	{
 		Log instance = Log.Instance;
@@ -346,7 +346,7 @@ public class FightPhotoSaveView : UiViewBase
 		this.ClosePhotoSaveView();
 	}
 
-	// Token: 0x06013902 RID: 80130 RVA: 0x004E3FFC File Offset: 0x004E21FC
+	// Token: 0x06010DE2 RID: 69090 RVA: 0x004F2BFC File Offset: 0x004F0DFC
 	private void OnPhotoPermissionDenied()
 	{
 		ESourcePlatformType platformType = Info.Instance.PlatformType;
@@ -364,7 +364,7 @@ public class FightPhotoSaveView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013903 RID: 80131 RVA: 0x004E4048 File Offset: 0x004E2248
+	// Token: 0x06010DE3 RID: 69091 RVA: 0x004F2C48 File Offset: 0x004F0E48
 	private void OnPhotoCompressed(TArray<byte> compressedBitmap)
 	{
 		Log.Instance.Info(ELogModule.FightPhotograph, ELogAuthor.CXJ, "PS Test OnPhotoCompressed", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -375,7 +375,7 @@ public class FightPhotoSaveView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013904 RID: 80132 RVA: 0x004E4091 File Offset: 0x004E2291
+	// Token: 0x06010DE4 RID: 69092 RVA: 0x004F2C91 File Offset: 0x004F0E91
 	private void OnRequestPermissionCallback(bool isAllowed)
 	{
 		if (isAllowed)
@@ -386,7 +386,7 @@ public class FightPhotoSaveView : UiViewBase
 		this.OnPhotoPermissionDenied();
 	}
 
-	// Token: 0x06013905 RID: 80133 RVA: 0x004E40C0 File Offset: 0x004E22C0
+	// Token: 0x06010DE5 RID: 69093 RVA: 0x004F2CC0 File Offset: 0x004F0EC0
 	private int GetFightSafeMultiplierScale(FVector2D viewportSize)
 	{
 		int num = 1;
@@ -418,7 +418,7 @@ public class FightPhotoSaveView : UiViewBase
 		return Math.Max(1, Math.Min(4, num));
 	}
 
-	// Token: 0x06013906 RID: 80134 RVA: 0x004E41C8 File Offset: 0x004E23C8
+	// Token: 0x06010DE6 RID: 69094 RVA: 0x004F2DC8 File Offset: 0x004F0FC8
 	[NullableContext(1)]
 	private string GetPhotoName()
 	{
@@ -426,20 +426,20 @@ public class FightPhotoSaveView : UiViewBase
 		return TimeUtil.Instance.DateFormatString2(serverTime) + ".png";
 	}
 
-	// Token: 0x06013907 RID: 80135 RVA: 0x004E41F5 File Offset: 0x004E23F5
+	// Token: 0x06010DE7 RID: 69095 RVA: 0x004F2DF5 File Offset: 0x004F0FF5
 	[NullableContext(1)]
 	private string GetRelativeShotPath(string photoName)
 	{
 		return PhotographModel.Instance.SavePath + photoName;
 	}
 
-	// Token: 0x06013908 RID: 80136 RVA: 0x004E4207 File Offset: 0x004E2407
+	// Token: 0x06010DE8 RID: 69096 RVA: 0x004F2E07 File Offset: 0x004F1007
 	private void ClosePhotoSaveView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013909 RID: 80137 RVA: 0x004E4210 File Offset: 0x004E2410
+	// Token: 0x06010DE9 RID: 69097 RVA: 0x004F2E10 File Offset: 0x004F1010
 	private void OnClickPersonalInfoShow(EToggleState toggleState)
 	{
 		LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.PhotoAndShareShowPlayerName, toggleState == EToggleState.ETT_Checked);
@@ -452,13 +452,13 @@ public class FightPhotoSaveView : UiViewBase
 		markItem.SetUiActive(toggleState == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0601390A RID: 80138 RVA: 0x004E423C File Offset: 0x004E243C
+	// Token: 0x06010DEA RID: 69098 RVA: 0x004F2E3C File Offset: 0x004F103C
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601390B RID: 80139 RVA: 0x004E4248 File Offset: 0x004E2448
+	// Token: 0x06010DEB RID: 69099 RVA: 0x004F2E48 File Offset: 0x004F1048
 	private void EnterCaptureMode(bool showMark)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -471,7 +471,7 @@ public class FightPhotoSaveView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnPreparePhotoScreenShot, false);
 	}
 
-	// Token: 0x0601390C RID: 80140 RVA: 0x004E4299 File Offset: 0x004E2499
+	// Token: 0x06010DEC RID: 69100 RVA: 0x004F2E99 File Offset: 0x004F1099
 	private void ExitCaptureMode()
 	{
 		EventSystem.Instance.Emit<bool, bool>(EEventName.OnPhotographViewCaptureMode, false, false);
@@ -484,7 +484,7 @@ public class FightPhotoSaveView : UiViewBase
 		rootItem.SetUIActive(true);
 	}
 
-	// Token: 0x0601390D RID: 80141 RVA: 0x004E42D0 File Offset: 0x004E24D0
+	// Token: 0x06010DED RID: 69101 RVA: 0x004F2ED0 File Offset: 0x004F10D0
 	private UniTask waitForNextTick()
 	{
 		FightPhotoSaveView.<waitForNextTick>d__30 <waitForNextTick>d__;
@@ -494,52 +494,52 @@ public class FightPhotoSaveView : UiViewBase
 		return <waitForNextTick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040093B6 RID: 37814
+	// Token: 0x0400950C RID: 38156
 	[Nullable(1)]
 	private string RelativeShotPath = "";
 
-	// Token: 0x040093B7 RID: 37815
+	// Token: 0x0400950D RID: 38157
 	private bool IsShowPlayerName;
 
-	// Token: 0x040093B8 RID: 37816
+	// Token: 0x0400950E RID: 38158
 	private int CurrentTakeWidth;
 
-	// Token: 0x040093B9 RID: 37817
+	// Token: 0x0400950F RID: 38159
 	private int CurrentTakeHeight;
 
-	// Token: 0x040093BA RID: 37818
+	// Token: 0x04009510 RID: 38160
 	private TArray<FColor> CurrentTakeColors;
 
-	// Token: 0x040093BB RID: 37819
+	// Token: 0x04009511 RID: 38161
 	private PhotoSaveMarkItem MarkItem;
 
-	// Token: 0x02008BB1 RID: 35761
+	// Token: 0x02007D39 RID: 32057
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D576 RID: 185718
+		// Token: 0x0402888B RID: 166027
 		BtnClose,
-		// Token: 0x0402D577 RID: 185719
+		// Token: 0x0402888C RID: 166028
 		ToggleShowPersonalInfo,
-		// Token: 0x0402D578 RID: 185720
+		// Token: 0x0402888D RID: 166029
 		BtnSave,
-		// Token: 0x0402D579 RID: 185721
+		// Token: 0x0402888E RID: 166030
 		ItemPhoto,
-		// Token: 0x0402D57A RID: 185722
+		// Token: 0x0402888F RID: 166031
 		TexturePhoto,
-		// Token: 0x0402D57B RID: 185723
+		// Token: 0x04028890 RID: 166032
 		ItemPersonalInfo,
-		// Token: 0x0402D57C RID: 185724
+		// Token: 0x04028891 RID: 166033
 		ItemLeftTop,
-		// Token: 0x0402D57D RID: 185725
+		// Token: 0x04028892 RID: 166034
 		ItemRightBottom,
-		// Token: 0x0402D57E RID: 185726
+		// Token: 0x04028893 RID: 166035
 		TextFinished,
-		// Token: 0x0402D57F RID: 185727
+		// Token: 0x04028894 RID: 166036
 		TextureHideUi,
-		// Token: 0x0402D580 RID: 185728
+		// Token: 0x04028895 RID: 166037
 		ItemHideUi,
-		// Token: 0x0402D581 RID: 185729
+		// Token: 0x04028896 RID: 166038
 		ItemHideBtn
 	}
 }

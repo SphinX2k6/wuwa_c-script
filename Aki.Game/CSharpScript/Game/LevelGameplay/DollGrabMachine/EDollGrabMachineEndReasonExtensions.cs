@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006ED2 RID: 28370
+	// Token: 0x02006052 RID: 24658
 	public static class EDollGrabMachineEndReasonExtensions
 	{
-		// Token: 0x060451E4 RID: 283108 RVA: 0x011177A8 File Offset: 0x011159A8
+		// Token: 0x0603B38D RID: 242573 RVA: 0x010C1538 File Offset: 0x010BF738
 		public static string ToEnumString(this EDollGrabMachineEndReason value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return result;
 		}
 
-		// Token: 0x060451E5 RID: 283109 RVA: 0x011177FC File Offset: 0x011159FC
+		// Token: 0x0603B38E RID: 242574 RVA: 0x010C158C File Offset: 0x010BF78C
 		public static EDollGrabMachineEndReason FromString(string name)
 		{
 			EDollGrabMachineEndReason result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return result;
 		}
 
-		// Token: 0x060451E6 RID: 283110 RVA: 0x01117828 File Offset: 0x01115A28
+		// Token: 0x0603B38F RID: 242575 RVA: 0x010C15B8 File Offset: 0x010BF7B8
 		public static bool TryFromString(string name, out EDollGrabMachineEndReason value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x060451E7 RID: 283111 RVA: 0x01117890 File Offset: 0x01115A90
+		// Token: 0x0603B390 RID: 242576 RVA: 0x010C1620 File Offset: 0x010BF820
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			};
 		}
 
-		// Token: 0x060451E8 RID: 283112 RVA: 0x011178B8 File Offset: 0x01115AB8
+		// Token: 0x0603B391 RID: 242577 RVA: 0x010C1648 File Offset: 0x010BF848
 		public static EDollGrabMachineEndReason[] GetValues()
 		{
 			return new EDollGrabMachineEndReason[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			};
 		}
 
-		// Token: 0x060451E9 RID: 283113 RVA: 0x011178CB File Offset: 0x01115ACB
+		// Token: 0x0603B392 RID: 242578 RVA: 0x010C165B File Offset: 0x010BF85B
 		public static string[] GetNames()
 		{
 			return new string[]

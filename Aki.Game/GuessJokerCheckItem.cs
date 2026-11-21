@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200106F RID: 4207
+// Token: 0x02000523 RID: 1315
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerCheckItem : UiPanelBase
 {
-	// Token: 0x06006C9E RID: 27806 RVA: 0x0015F39A File Offset: 0x0015D59A
+	// Token: 0x06004033 RID: 16435 RVA: 0x00167CCE File Offset: 0x00165ECE
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,19 +18,19 @@ public class GuessJokerCheckItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006C9F RID: 27807 RVA: 0x0015F3BD File Offset: 0x0015D5BD
+	// Token: 0x06004034 RID: 16436 RVA: 0x00167CF1 File Offset: 0x00165EF1
 	protected override void OnBeforeShow()
 	{
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x06006CA0 RID: 27808 RVA: 0x0015F3C6 File Offset: 0x0015D5C6
+	// Token: 0x06004035 RID: 16437 RVA: 0x00167CFA File Offset: 0x00165EFA
 	protected override void OnStart()
 	{
 		this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.UpdateMoveProgress));
 	}
 
-	// Token: 0x06006CA1 RID: 27809 RVA: 0x0015F3DF File Offset: 0x0015D5DF
+	// Token: 0x06004036 RID: 16438 RVA: 0x00167D13 File Offset: 0x00165F13
 	protected override void OnBeforeDestroy()
 	{
 		this.StopMove();
@@ -41,7 +41,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CA2 RID: 27810 RVA: 0x0015F408 File Offset: 0x0015D608
+	// Token: 0x06004037 RID: 16439 RVA: 0x00167D3C File Offset: 0x00165F3C
 	public void ShowAndMoveToCards(List<GuessJokerCardItem> cardItemList, [Nullable(2)] Action onComplete = null)
 	{
 		if (cardItemList.Count == 0)
@@ -95,7 +95,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CA3 RID: 27811 RVA: 0x0015F4F0 File Offset: 0x0015D6F0
+	// Token: 0x06004038 RID: 16440 RVA: 0x00167E24 File Offset: 0x00166024
 	private void StayAndMoveToNext(List<GuessJokerCardItem> cardItemList, int currentIndex, [Nullable(2)] Action onComplete = null)
 	{
 		this.ClearStayTimer();
@@ -105,7 +105,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}, (float)GuessJokerUtils.GetJokerParamConfig(EGuessJokerParamKey.GuessJokerCheckItemStayTime.ToString()), null, null, true, 1f);
 	}
 
-	// Token: 0x06006CA4 RID: 27812 RVA: 0x0015F560 File Offset: 0x0015D760
+	// Token: 0x06004039 RID: 16441 RVA: 0x00167E94 File Offset: 0x00166094
 	private void MoveToNextCard(List<GuessJokerCardItem> cardItemList, int currentIndex, [Nullable(2)] Action onComplete = null)
 	{
 		if (currentIndex >= cardItemList.Count)
@@ -135,7 +135,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}, (float)GuessJokerUtils.GetJokerParamConfig(EGuessJokerParamKey.GuessJokerCheckItemMoveTime.ToString()));
 	}
 
-	// Token: 0x06006CA5 RID: 27813 RVA: 0x0015F69C File Offset: 0x0015D89C
+	// Token: 0x0600403A RID: 16442 RVA: 0x00167FD0 File Offset: 0x001661D0
 	private void SmoothMoveTo(Vector2D targetPosition, [Nullable(2)] Action onComplete = null, float duration = 0f)
 	{
 		if (duration == 0f)
@@ -166,7 +166,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CA6 RID: 27814 RVA: 0x0015F7C4 File Offset: 0x0015D9C4
+	// Token: 0x0600403B RID: 16443 RVA: 0x001680F8 File Offset: 0x001662F8
 	private void UpdateMoveProgress(float progress)
 	{
 		if (this.RootItem != null)
@@ -177,7 +177,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CA7 RID: 27815 RVA: 0x0015F838 File Offset: 0x0015DA38
+	// Token: 0x0600403C RID: 16444 RVA: 0x0016816C File Offset: 0x0016636C
 	private void StayAndComplete(GuessJokerCardItem cardItem, [Nullable(2)] Action onComplete = null)
 	{
 		this.ClearStayTimer();
@@ -206,7 +206,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		}, (float)GuessJokerUtils.GetJokerParamConfig(EGuessJokerParamKey.GuessJokerCheckItemStayTime.ToString()), null, null, true, 1f);
 	}
 
-	// Token: 0x06006CA8 RID: 27816 RVA: 0x0015F8C5 File Offset: 0x0015DAC5
+	// Token: 0x0600403D RID: 16445 RVA: 0x001681F9 File Offset: 0x001663F9
 	private void OnMoveComplete()
 	{
 		this.IsMoving = false;
@@ -218,7 +218,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		moveCompleteCallback();
 	}
 
-	// Token: 0x06006CA9 RID: 27817 RVA: 0x0015F8DE File Offset: 0x0015DADE
+	// Token: 0x0600403E RID: 16446 RVA: 0x00168212 File Offset: 0x00166412
 	public void StopMove()
 	{
 		if (this.CurrentTweener != null)
@@ -231,7 +231,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		this.MoveCompleteCallback = null;
 	}
 
-	// Token: 0x06006CAA RID: 27818 RVA: 0x0015F919 File Offset: 0x0015DB19
+	// Token: 0x0600403F RID: 16447 RVA: 0x0016824D File Offset: 0x0016644D
 	private FVector2D GetCurrentPosition()
 	{
 		if (this.RootItem != null)
@@ -241,7 +241,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		return new FVector2D(0f, 0f);
 	}
 
-	// Token: 0x06006CAB RID: 27819 RVA: 0x0015F93E File Offset: 0x0015DB3E
+	// Token: 0x06004040 RID: 16448 RVA: 0x00168272 File Offset: 0x00166472
 	public void HideItem()
 	{
 		this.StopMove();
@@ -249,7 +249,7 @@ public class GuessJokerCheckItem : UiPanelBase
 		base.SetUiActive(false);
 	}
 
-	// Token: 0x06006CAC RID: 27820 RVA: 0x0015F953 File Offset: 0x0015DB53
+	// Token: 0x06004041 RID: 16449 RVA: 0x00168287 File Offset: 0x00166487
 	private void ClearStayTimer()
 	{
 		if (this.StayTimerHandle != null)
@@ -262,28 +262,28 @@ public class GuessJokerCheckItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400324C RID: 12876
+	// Token: 0x040032E5 RID: 13029
 	[Nullable(2)]
 	private ULTweener CurrentTweener;
 
-	// Token: 0x0400324D RID: 12877
+	// Token: 0x040032E6 RID: 13030
 	[Nullable(2)]
 	private TimerHandle StayTimerHandle;
 
-	// Token: 0x0400324E RID: 12878
+	// Token: 0x040032E7 RID: 13031
 	private bool IsMoving;
 
-	// Token: 0x0400324F RID: 12879
+	// Token: 0x040032E8 RID: 13032
 	[Nullable(2)]
 	private Action MoveCompleteCallback;
 
-	// Token: 0x04003250 RID: 12880
+	// Token: 0x040032E9 RID: 13033
 	[Nullable(2)]
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x04003251 RID: 12881
+	// Token: 0x040032EA RID: 13034
 	private FVector2D StartPosition = new FVector2D();
 
-	// Token: 0x04003252 RID: 12882
+	// Token: 0x040032EB RID: 13035
 	private FVector2D TargetPosition = new FVector2D();
 }

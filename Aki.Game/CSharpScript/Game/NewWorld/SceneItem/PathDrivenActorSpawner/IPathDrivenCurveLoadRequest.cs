@@ -4,17 +4,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071CF RID: 29135
+	// Token: 0x02006284 RID: 25220
 	public interface IPathDrivenCurveLoadRequest
 	{
-		// Token: 0x17009DE9 RID: 40425
-		// (get) Token: 0x060474E0 RID: 292064
-		// (set) Token: 0x060474E1 RID: 292065
+		// Token: 0x17007340 RID: 29504
+		// (get) Token: 0x0603CDE2 RID: 249314
+		// (set) Token: 0x0603CDE3 RID: 249315
 		int HandleId { get; set; }
 
-		// Token: 0x17009DEA RID: 40426
-		// (get) Token: 0x060474E2 RID: 292066
-		// (set) Token: 0x060474E3 RID: 292067
+		// Token: 0x17007341 RID: 29505
+		// (get) Token: 0x0603CDE4 RID: 249316
+		// (set) Token: 0x0603CDE5 RID: 249317
 		[Nullable(new byte[]
 		{
 			1,

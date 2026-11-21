@@ -3,63 +3,63 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057B6 RID: 22454
+	// Token: 0x0200478D RID: 18317
 	[NullableContext(2)]
 	public interface ICommonRewardInfo : IRewardInfo
 	{
-		// Token: 0x1700892A RID: 35114
-		// (get) Token: 0x06039153 RID: 233811
-		// (set) Token: 0x06039154 RID: 233812
+		// Token: 0x17005CF2 RID: 23794
+		// (get) Token: 0x0602E063 RID: 188515
+		// (set) Token: 0x0602E064 RID: 188516
 		ERewardInfoType Type { get; set; }
 
-		// Token: 0x1700892B RID: 35115
-		// (get) Token: 0x06039155 RID: 233813
-		// (set) Token: 0x06039156 RID: 233814
+		// Token: 0x17005CF3 RID: 23795
+		// (get) Token: 0x0602E065 RID: 188517
+		// (set) Token: 0x0602E066 RID: 188518
 		string Title { get; set; }
 
-		// Token: 0x1700892C RID: 35116
-		// (get) Token: 0x06039157 RID: 233815
-		// (set) Token: 0x06039158 RID: 233816
+		// Token: 0x17005CF4 RID: 23796
+		// (get) Token: 0x0602E067 RID: 188519
+		// (set) Token: 0x0602E068 RID: 188520
 		string ContinueText { get; set; }
 
-		// Token: 0x1700892D RID: 35117
-		// (get) Token: 0x06039159 RID: 233817
-		// (set) Token: 0x0603915A RID: 233818
+		// Token: 0x17005CF5 RID: 23797
+		// (get) Token: 0x0602E069 RID: 188521
+		// (set) Token: 0x0602E06A RID: 188522
 		bool IsItemVisible { get; set; }
 
-		// Token: 0x1700892E RID: 35118
-		// (get) Token: 0x0603915B RID: 233819
-		// (set) Token: 0x0603915C RID: 233820
+		// Token: 0x17005CF6 RID: 23798
+		// (get) Token: 0x0602E06B RID: 188523
+		// (set) Token: 0x0602E06C RID: 188524
 		Action OnCloseCallback { get; set; }
 
-		// Token: 0x1700892F RID: 35119
-		// (get) Token: 0x0603915D RID: 233821
-		// (set) Token: 0x0603915E RID: 233822
+		// Token: 0x17005CF7 RID: 23799
+		// (get) Token: 0x0602E06D RID: 188525
+		// (set) Token: 0x0602E06E RID: 188526
 		string LeftBtnTextId { get; set; }
 
-		// Token: 0x17008930 RID: 35120
-		// (get) Token: 0x0603915F RID: 233823
-		// (set) Token: 0x06039160 RID: 233824
+		// Token: 0x17005CF8 RID: 23800
+		// (get) Token: 0x0602E06F RID: 188527
+		// (set) Token: 0x0602E070 RID: 188528
 		string RightBtnTextId { get; set; }
 
-		// Token: 0x17008931 RID: 35121
-		// (get) Token: 0x06039161 RID: 233825
-		// (set) Token: 0x06039162 RID: 233826
+		// Token: 0x17005CF9 RID: 23801
+		// (get) Token: 0x0602E071 RID: 188529
+		// (set) Token: 0x0602E072 RID: 188530
 		Action LeftAction { get; set; }
 
-		// Token: 0x17008932 RID: 35122
-		// (get) Token: 0x06039163 RID: 233827
-		// (set) Token: 0x06039164 RID: 233828
+		// Token: 0x17005CFA RID: 23802
+		// (get) Token: 0x0602E073 RID: 188531
+		// (set) Token: 0x0602E074 RID: 188532
 		Action RightAction { get; set; }
 
-		// Token: 0x17008933 RID: 35123
-		// (get) Token: 0x06039165 RID: 233829
-		// (set) Token: 0x06039166 RID: 233830
+		// Token: 0x17005CFB RID: 23803
+		// (get) Token: 0x0602E075 RID: 188533
+		// (set) Token: 0x0602E076 RID: 188534
 		bool? DisableMaskClose { get; set; }
 
-		// Token: 0x17008934 RID: 35124
-		// (get) Token: 0x06039167 RID: 233831
-		// (set) Token: 0x06039168 RID: 233832
+		// Token: 0x17005CFC RID: 23804
+		// (get) Token: 0x0602E077 RID: 188535
+		// (set) Token: 0x0602E078 RID: 188536
 		bool? TipsCanSkip { get; set; }
 	}
 }

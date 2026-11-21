@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200585E RID: 22622
+	// Token: 0x02004836 RID: 18486
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractionTipsView : UiPanelBase
 	{
-		// Token: 0x06039840 RID: 235584 RVA: 0x00DA7DF0 File Offset: 0x00DA5FF0
+		// Token: 0x0602E75D RID: 190301 RVA: 0x00CF6B18 File Offset: 0x00CF4D18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039841 RID: 235585 RVA: 0x00DA7E5C File Offset: 0x00DA605C
+		// Token: 0x0602E75E RID: 190302 RVA: 0x00CF6B84 File Offset: 0x00CF4D84
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.AddTick();
 		}
 
-		// Token: 0x06039842 RID: 235586 RVA: 0x00DA7EA9 File Offset: 0x00DA60A9
+		// Token: 0x0602E75F RID: 190303 RVA: 0x00CF6BD1 File Offset: 0x00CF4DD1
 		protected override void OnBeforeShow()
 		{
 			if (this.TickId != -1)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.TweenAnimPlayer.PlayTweenAnim(0);
 		}
 
-		// Token: 0x06039843 RID: 235587 RVA: 0x00DA7EE0 File Offset: 0x00DA60E0
+		// Token: 0x0602E760 RID: 190304 RVA: 0x00CF6C08 File Offset: 0x00CF4E08
 		protected override UniTask OnBeforeHideAsync()
 		{
 			InteractionTipsView.<OnBeforeHideAsync>d__11 <OnBeforeHideAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039844 RID: 235588 RVA: 0x00DA7F23 File Offset: 0x00DA6123
+		// Token: 0x0602E761 RID: 190305 RVA: 0x00CF6C4B File Offset: 0x00CF4E4B
 		protected override void OnAfterHide()
 		{
 			if (this.TickId != -1)
@@ -74,26 +74,26 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039845 RID: 235589 RVA: 0x00DA7F3F File Offset: 0x00DA613F
+		// Token: 0x0602E762 RID: 190306 RVA: 0x00CF6C67 File Offset: 0x00CF4E67
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTick();
 		}
 
-		// Token: 0x06039846 RID: 235590 RVA: 0x00DA7F47 File Offset: 0x00DA6147
+		// Token: 0x0602E763 RID: 190307 RVA: 0x00CF6C6F File Offset: 0x00CF4E6F
 		public void SetEnable(bool b)
 		{
 			this.IsEnable = b;
 			this.Update();
 		}
 
-		// Token: 0x06039847 RID: 235591 RVA: 0x00DA7F56 File Offset: 0x00DA6156
+		// Token: 0x0602E764 RID: 190308 RVA: 0x00CF6C7E File Offset: 0x00CF4E7E
 		private void AddTick()
 		{
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.OnTick), "InteractionTipsView", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x06039848 RID: 235592 RVA: 0x00DA7F82 File Offset: 0x00DA6182
+		// Token: 0x0602E765 RID: 190309 RVA: 0x00CF6CAA File Offset: 0x00CF4EAA
 		private void RemoveTick()
 		{
 			if (this.TickId != -1)
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039849 RID: 235593 RVA: 0x00DA7FA5 File Offset: 0x00DA61A5
+		// Token: 0x0602E766 RID: 190310 RVA: 0x00CF6CCD File Offset: 0x00CF4ECD
 		private void OnTick(float delta)
 		{
 			this.Update();
 		}
 
-		// Token: 0x0603984A RID: 235594 RVA: 0x00DA7FB0 File Offset: 0x00DA61B0
+		// Token: 0x0602E767 RID: 190311 RVA: 0x00CF6CD8 File Offset: 0x00CF4ED8
 		private void Update()
 		{
 			if (this.OwnerActor == null || !this.IsEnable)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603984B RID: 235595 RVA: 0x00DA811B File Offset: 0x00DA631B
+		// Token: 0x0602E768 RID: 190312 RVA: 0x00CF6E43 File Offset: 0x00CF5043
 		[NullableContext(2)]
 		public void SetOwnerEntity(Entity entity)
 		{
@@ -184,13 +184,13 @@ namespace CSharpScript.Game.Module.Interaction
 			this.OwnerActor = ownerActor;
 		}
 
-		// Token: 0x0603984C RID: 235596 RVA: 0x00DA8142 File Offset: 0x00DA6342
+		// Token: 0x0602E769 RID: 190313 RVA: 0x00CF6E6A File Offset: 0x00CF506A
 		public void SetOffset(Vector offset)
 		{
 			this.Offset.DeepCopy(offset);
 		}
 
-		// Token: 0x0603984D RID: 235597 RVA: 0x00DA8150 File Offset: 0x00DA6350
+		// Token: 0x0602E76A RID: 190314 RVA: 0x00CF6E78 File Offset: 0x00CF5078
 		public void DestroySelf(Action callback = null)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -201,40 +201,40 @@ namespace CSharpScript.Game.Module.Interaction
 			base.Destroy(callback);
 		}
 
-		// Token: 0x0401E12A RID: 123178
+		// Token: 0x04018BC7 RID: 101319
 		[Nullable(2)]
 		private AActor OwnerActor;
 
-		// Token: 0x0401E12B RID: 123179
+		// Token: 0x04018BC8 RID: 101320
 		[Nullable(2)]
 		private Entity OwnerEntity;
 
-		// Token: 0x0401E12C RID: 123180
+		// Token: 0x04018BC9 RID: 101321
 		private readonly BattleUiTweenAnimPlayer TweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0401E12D RID: 123181
+		// Token: 0x04018BCA RID: 101322
 		private readonly Vector Offset = Vector.Create();
 
-		// Token: 0x0401E12E RID: 123182
+		// Token: 0x04018BCB RID: 101323
 		protected readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401E12F RID: 123183
+		// Token: 0x04018BCC RID: 101324
 		private readonly Vector2D LastScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401E130 RID: 123184
+		// Token: 0x04018BCD RID: 101325
 		private bool IsEnable;
 
-		// Token: 0x0401E131 RID: 123185
+		// Token: 0x04018BCE RID: 101326
 		private int TickId = -1;
 
-		// Token: 0x0200BA87 RID: 47751
+		// Token: 0x0200A49E RID: 42142
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403861A RID: 230938
+			// Token: 0x04033011 RID: 208913
 			public const int AniIn = 0;
 
-			// Token: 0x0403861B RID: 230939
+			// Token: 0x04033012 RID: 208914
 			public const int AniOut = 1;
 		}
 	}

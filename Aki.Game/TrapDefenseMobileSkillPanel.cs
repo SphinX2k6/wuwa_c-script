@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D3B RID: 7483
+// Token: 0x020011FD RID: 4605
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 {
-	// Token: 0x0600E2D0 RID: 58064 RVA: 0x00354F60 File Offset: 0x00353160
+	// Token: 0x0600B6ED RID: 46829 RVA: 0x00360990 File Offset: 0x0035EB90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		};
 	}
 
-	// Token: 0x0600E2D1 RID: 58065 RVA: 0x00355014 File Offset: 0x00353214
+	// Token: 0x0600B6EE RID: 46830 RVA: 0x00360A44 File Offset: 0x0035EC44
 	public override UniTask InitializeAsync()
 	{
 		TrapDefenseMobileSkillPanel.<InitializeAsync>d__7 <InitializeAsync>d__;
@@ -39,7 +39,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E2D2 RID: 58066 RVA: 0x00355058 File Offset: 0x00353258
+	// Token: 0x0600B6EF RID: 46831 RVA: 0x00360A88 File Offset: 0x0035EC88
 	protected override void OnChildStart()
 	{
 		bool flag = RouletteModel.Instance.IsExploreRouletteOpen(false);
@@ -48,7 +48,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		((TrapDefenseBattleSkillItem)this.BattleSkillItemList[5]).SetIsBanLongPress(true);
 	}
 
-	// Token: 0x0600E2D3 RID: 58067 RVA: 0x003550A0 File Offset: 0x003532A0
+	// Token: 0x0600B6F0 RID: 46832 RVA: 0x00360AD0 File Offset: 0x0035ECD0
 	private UniTask NewAllBattleSkillItems()
 	{
 		TrapDefenseMobileSkillPanel.<NewAllBattleSkillItems>d__9 <NewAllBattleSkillItems>d__;
@@ -59,7 +59,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		return <NewAllBattleSkillItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E2D4 RID: 58068 RVA: 0x003550E4 File Offset: 0x003532E4
+	// Token: 0x0600B6F1 RID: 46833 RVA: 0x00360B14 File Offset: 0x0035ED14
 	private void RefreshSkillItemActive(int index, bool active)
 	{
 		TrapDefenseBattleSkillData trapDefenseBattleSkillData;
@@ -70,7 +70,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		this.BattleSkillItemList[index].RefreshVisible();
 	}
 
-	// Token: 0x0600E2D5 RID: 58069 RVA: 0x0035511C File Offset: 0x0035331C
+	// Token: 0x0600B6F2 RID: 46834 RVA: 0x00360B4C File Offset: 0x0035ED4C
 	private void RefreshSkillItemEnable(int index, bool enable)
 	{
 		TrapDefenseBattleSkillData trapDefenseBattleSkillData;
@@ -81,13 +81,13 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		this.BattleSkillItemList[index].RefreshEnable(false);
 	}
 
-	// Token: 0x0600E2D6 RID: 58070 RVA: 0x00355152 File Offset: 0x00353352
+	// Token: 0x0600B6F3 RID: 46835 RVA: 0x00360B82 File Offset: 0x0035ED82
 	public void SetRecyclePrice(int recyclePrice)
 	{
 		this.RecyclePriceItem.UpdatePrice(recyclePrice);
 	}
 
-	// Token: 0x0600E2D7 RID: 58071 RVA: 0x00355160 File Offset: 0x00353360
+	// Token: 0x0600B6F4 RID: 46836 RVA: 0x00360B90 File Offset: 0x0035ED90
 	public void RefreshButtonByTipsType(ETrapDefenseBuildTipsType type)
 	{
 		this.Type = type;
@@ -96,7 +96,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		this.RefreshAttackAndRotate();
 	}
 
-	// Token: 0x0600E2D8 RID: 58072 RVA: 0x00355190 File Offset: 0x00353390
+	// Token: 0x0600B6F5 RID: 46837 RVA: 0x00360BC0 File Offset: 0x0035EDC0
 	private void RefreshAttackAndRotate()
 	{
 		bool flag = !this.IsInBuild;
@@ -108,7 +108,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		this.RefreshSkillItemEnable(0, flag || flag2);
 	}
 
-	// Token: 0x0600E2D9 RID: 58073 RVA: 0x003551F3 File Offset: 0x003533F3
+	// Token: 0x0600B6F6 RID: 46838 RVA: 0x00360C23 File Offset: 0x0035EE23
 	public void SetIsInBuild(bool isInBuild)
 	{
 		this.IsInBuild = isInBuild;
@@ -119,7 +119,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		this.RefreshAttackAndRotate();
 	}
 
-	// Token: 0x0600E2DA RID: 58074 RVA: 0x0035521C File Offset: 0x0035341C
+	// Token: 0x0600B6F7 RID: 46839 RVA: 0x00360C4C File Offset: 0x0035EE4C
 	private void RefreshBuildData()
 	{
 		TrapDefenseBattleSkillData trapDefenseBattleSkillData;
@@ -134,7 +134,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		}
 	}
 
-	// Token: 0x0600E2DB RID: 58075 RVA: 0x00355264 File Offset: 0x00353464
+	// Token: 0x0600B6F8 RID: 46840 RVA: 0x00360C94 File Offset: 0x0035EE94
 	private void RefreshBuildIcon()
 	{
 		BattleSkillItem battleSkillItem = this.BattleSkillItemList[0];
@@ -160,7 +160,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		}
 	}
 
-	// Token: 0x0600E2DC RID: 58076 RVA: 0x003552B4 File Offset: 0x003534B4
+	// Token: 0x0600B6F9 RID: 46841 RVA: 0x00360CE4 File Offset: 0x0035EEE4
 	private void RefreshSkillName()
 	{
 		BattleSkillItem battleSkillItem = this.BattleSkillItemList[0];
@@ -176,13 +176,13 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		battleSkillItem2.RefreshSkillName();
 	}
 
-	// Token: 0x0600E2DD RID: 58077 RVA: 0x003552ED File Offset: 0x003534ED
+	// Token: 0x0600B6FA RID: 46842 RVA: 0x00360D1D File Offset: 0x0035EF1D
 	protected override string[] GetActionNameList()
 	{
 		return TrapDefenseMobileSkillPanel.actionNameList;
 	}
 
-	// Token: 0x0600E2DE RID: 58078 RVA: 0x003552F4 File Offset: 0x003534F4
+	// Token: 0x0600B6FB RID: 46843 RVA: 0x00360D24 File Offset: 0x0035EF24
 	public void RefreshMachineCdState()
 	{
 		TrapDefenseBattleSkillItem trapDefenseBattleSkillItem = this.BattleSkillItemList[0] as TrapDefenseBattleSkillItem;
@@ -201,7 +201,7 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		trapDefenseBattleSkillItem2.RefreshTrapDefenseSkillCoolDown();
 	}
 
-	// Token: 0x040068D5 RID: 26837
+	// Token: 0x040069B4 RID: 27060
 	[StaticVariableRuleIgnore]
 	private static readonly string[] actionNameList = new string[]
 	{
@@ -214,42 +214,42 @@ public class TrapDefenseMobileSkillPanel : TrapDefenseSkillPanelBase
 		"塔防回收机关"
 	};
 
-	// Token: 0x040068D6 RID: 26838
+	// Token: 0x040069B5 RID: 27061
 	private const string BUILD_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconT62.SP_IconT62";
 
-	// Token: 0x040068D7 RID: 26839
+	// Token: 0x040069B6 RID: 27062
 	protected bool IsInBuild;
 
-	// Token: 0x040068D8 RID: 26840
+	// Token: 0x040069B7 RID: 27063
 	protected ETrapDefenseBuildTipsType Type;
 
-	// Token: 0x040068D9 RID: 26841
+	// Token: 0x040069B8 RID: 27064
 	[Nullable(2)]
 	private TrapDefenseRecyclePriceItem RecyclePriceItem;
 
-	// Token: 0x0200834D RID: 33613
+	// Token: 0x020074D6 RID: 29910
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402ACF4 RID: 175348
+		// Token: 0x0402601C RID: 155676
 		public const int AttackOrBuild = 0;
 
-		// Token: 0x0402ACF5 RID: 175349
+		// Token: 0x0402601D RID: 155677
 		public const int Rotate = 1;
 
-		// Token: 0x0402ACF6 RID: 175350
+		// Token: 0x0402601E RID: 155678
 		public const int Explore = 2;
 
-		// Token: 0x0402ACF7 RID: 175351
+		// Token: 0x0402601F RID: 155679
 		public const int Run = 3;
 
-		// Token: 0x0402ACF8 RID: 175352
+		// Token: 0x04026020 RID: 155680
 		public const int Jump = 4;
 
-		// Token: 0x0402ACF9 RID: 175353
+		// Token: 0x04026021 RID: 155681
 		public const int SubAttack = 5;
 
-		// Token: 0x0402ACFA RID: 175354
+		// Token: 0x04026022 RID: 155682
 		public const int Recover = 6;
 	}
 }

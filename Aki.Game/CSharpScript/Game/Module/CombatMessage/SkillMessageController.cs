@@ -8,25 +8,25 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.CombatMessage
 {
-	// Token: 0x02005BB0 RID: 23472
+	// Token: 0x02004B90 RID: 19344
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillMessageController : ControllerBase
 	{
-		// Token: 0x0603B5CC RID: 243148 RVA: 0x00E28975 File Offset: 0x00E26B75
+		// Token: 0x06030519 RID: 197913 RVA: 0x00D78CD9 File Offset: 0x00D76ED9
 		public void AddSkillMessageId(long message)
 		{
 			this.SkillCombatMessageSet.Add(message);
 		}
 
-		// Token: 0x0603B5CD RID: 243149 RVA: 0x00E28984 File Offset: 0x00E26B84
+		// Token: 0x0603051A RID: 197914 RVA: 0x00D78CE8 File Offset: 0x00D76EE8
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.DebugFightErrInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.GetDebugFightErrInfo));
 			return true;
 		}
 
-		// Token: 0x0603B5CE RID: 243150 RVA: 0x00E289A3 File Offset: 0x00E26BA3
+		// Token: 0x0603051B RID: 197915 RVA: 0x00D78D07 File Offset: 0x00D76F07
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.DebugFightErrInfoNotify);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B5CF RID: 243151 RVA: 0x00E289C4 File Offset: 0x00E26BC4
+		// Token: 0x0603051C RID: 197916 RVA: 0x00D78D28 File Offset: 0x00D76F28
 		[NullableContext(2)]
 		[CombatPreprocess(ENotifyMessageId.UseSkillNotify)]
 		public static bool PreUseSkillNotify(Entity entity, [Nullable(1)] UseSkillNotify notify, CombatCommon combatCommon = null)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B5D0 RID: 243152 RVA: 0x00E28A00 File Offset: 0x00E26C00
+		// Token: 0x0603051D RID: 197917 RVA: 0x00D78D64 File Offset: 0x00D76F64
 		[NullableContext(2)]
 		[CombatListen(ENotifyMessageId.UseSkillNotify, true, true)]
 		public static void UseSkillNotify(Entity entity, UseSkillNotify data, CombatCommon combatCommon = null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5D1 RID: 243153 RVA: 0x00E28AAC File Offset: 0x00E26CAC
+		// Token: 0x0603051E RID: 197918 RVA: 0x00D78E10 File Offset: 0x00D77010
 		[NullableContext(2)]
 		[CombatListen(ENotifyMessageId.SkillNotify, true, true)]
 		public static void SkillNotify(Entity entity, [Nullable(1)] SkillNotify data, CombatCommon combatCommon = null)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5D2 RID: 243154 RVA: 0x00E28B90 File Offset: 0x00E26D90
+		// Token: 0x0603051F RID: 197919 RVA: 0x00D78EF4 File Offset: 0x00D770F4
 		[NullableContext(2)]
 		[CombatListen(ENotifyMessageId.EndSkillNotify, true, true)]
 		public static void EndSkillNotify(Entity entity, EndSkillNotify data, CombatCommon combatCommon = null)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			baseSkillComponent.SimulateEndSkill((int)data.UseSkillInfo.SkillId);
 		}
 
-		// Token: 0x0603B5D3 RID: 243155 RVA: 0x00E28BFC File Offset: 0x00E26DFC
+		// Token: 0x06030520 RID: 197920 RVA: 0x00D78F60 File Offset: 0x00D77160
 		public bool UseSkillRequest(Entity entity, Skill skill, int targetId)
 		{
 			BaseSkillComponent skillComp = entity.GetComponent<BaseSkillComponent>();
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B5D4 RID: 243156 RVA: 0x00E28DB8 File Offset: 0x00E26FB8
+		// Token: 0x06030521 RID: 197921 RVA: 0x00D7911C File Offset: 0x00D7731C
 		public bool EndSkillRequest(Entity entity, int skillId, EndSkillInfo endSkillInfo)
 		{
 			if (entity == null)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B5D5 RID: 243157 RVA: 0x00E28E88 File Offset: 0x00E27088
+		// Token: 0x06030522 RID: 197922 RVA: 0x00D791EC File Offset: 0x00D773EC
 		public unsafe void MontageRequest(Entity entity, int subProtocol, int skillId, long targetId, int montageIndex, float speedRatio = 1f, string startSection = "", float startTimeSeconds = 0f, long? preCombatMessageId = null, long? combatMessageId = null)
 		{
 			UseSkillInformation useSkillInfo = new UseSkillInformation
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}, preCombatMessageId, combatMessageId, null, null);
 		}
 
-		// Token: 0x0603B5D6 RID: 243158 RVA: 0x00E28F54 File Offset: 0x00E27154
+		// Token: 0x06030523 RID: 197923 RVA: 0x00D792B8 File Offset: 0x00D774B8
 		public void AnimNotifyRequest(Entity entity, int skillId, int montageIndex, int animNotifyIndex, long? preCombatMessageId = null, long? combatMessageId = null)
 		{
 			ANStartPush message = new ANStartPush
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			CombatNet.Instance.Send(EPushMessageId.ANStartPush, entity, message, preCombatMessageId, combatMessageId, null);
 		}
 
-		// Token: 0x0603B5D7 RID: 243159 RVA: 0x00E28FA0 File Offset: 0x00E271A0
+		// Token: 0x06030524 RID: 197924 RVA: 0x00D79304 File Offset: 0x00D77504
 		public unsafe long PassiveSkillAddRequest(Entity entity, long skillId, long? preCombatMessageId = null)
 		{
 			CombatLog instance = CombatLog.Instance;
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0603B5D8 RID: 243160 RVA: 0x00E290FC File Offset: 0x00E272FC
+		// Token: 0x06030525 RID: 197925 RVA: 0x00D79460 File Offset: 0x00D77660
 		public void PassiveSkillRemoveRequest(Entity entity, long skillId, long? preCombatMessageId = null, long? combatMessageId = null)
 		{
 			CombatLog instance = CombatLog.Instance;
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			CombatNet.Instance.Send(EPushMessageId.PassiveSkillRemovePush, entity, message2, preCombatMessageId, combatMessageId, null);
 		}
 
-		// Token: 0x0603B5D9 RID: 243161 RVA: 0x00E29178 File Offset: 0x00E27378
+		// Token: 0x06030526 RID: 197926 RVA: 0x00D794DC File Offset: 0x00D776DC
 		[NullableContext(2)]
 		private void GetDebugFightErrInfo(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			this.PrintDebugFightErrInfo("未支持的ErrorCode", debugFightErrInfoNotify.ExtraInfo ?? "");
 		}
 
-		// Token: 0x0603B5DA RID: 243162 RVA: 0x00E292DC File Offset: 0x00E274DC
+		// Token: 0x06030527 RID: 197927 RVA: 0x00D79640 File Offset: 0x00D77840
 		private void PrintDebugFightErrInfo(string reason, string info)
 		{
 			if (this.ClosePrintDebugFightErrInfo)
@@ -424,8 +424,8 @@ namespace CSharpScript.Game.Module.CombatMessage
 			instance.Error(flag, entity, reason, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x17008CFA RID: 36090
-		// (get) Token: 0x0603B5DB RID: 243163 RVA: 0x00E29314 File Offset: 0x00E27514
+		// Token: 0x170060CC RID: 24780
+		// (get) Token: 0x06030528 RID: 197928 RVA: 0x00D79678 File Offset: 0x00D77878
 		public static SkillMessageController Instance
 		{
 			get
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5DC RID: 243164 RVA: 0x00E2931B File Offset: 0x00E2751B
+		// Token: 0x06030529 RID: 197929 RVA: 0x00D7967F File Offset: 0x00D7787F
 		public static SkillMessageController GetOrCreateInstance()
 		{
 			if (SkillMessageController._Instance == null)
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return SkillMessageController._Instance;
 		}
 
-		// Token: 0x0603B5DD RID: 243165 RVA: 0x00E2932F File Offset: 0x00E2752F
+		// Token: 0x0603052A RID: 197930 RVA: 0x00D79693 File Offset: 0x00D77893
 		public static bool CreateInstance()
 		{
 			if (SkillMessageController._Instance != null)
@@ -455,36 +455,36 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B5DE RID: 243166 RVA: 0x00E29345 File Offset: 0x00E27545
+		// Token: 0x0603052B RID: 197931 RVA: 0x00D796A9 File Offset: 0x00D778A9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B5DF RID: 243167 RVA: 0x00E29347 File Offset: 0x00E27547
+		// Token: 0x0603052C RID: 197932 RVA: 0x00D796AB File Offset: 0x00D778AB
 		public static void ResetStaticDefaultValue()
 		{
 			SkillMessageController._Instance = null;
 		}
 
-		// Token: 0x0603B5E0 RID: 243168 RVA: 0x00E2934F File Offset: 0x00E2754F
+		// Token: 0x0603052D RID: 197933 RVA: 0x00D796B3 File Offset: 0x00D778B3
 		static SkillMessageController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkillMessageController.CreateStaticDefaultValue), new Action(SkillMessageController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EEFE RID: 126718
+		// Token: 0x040199AF RID: 104879
 		private const int SKILL_PLAY_MONTAGE = 1;
 
-		// Token: 0x0401EEFF RID: 126719
+		// Token: 0x040199B0 RID: 104880
 		public bool CloseMonsterServerLogic;
 
-		// Token: 0x0401EF00 RID: 126720
+		// Token: 0x040199B1 RID: 104881
 		public bool ClosePrintDebugFightErrInfo = true;
 
-		// Token: 0x0401EF01 RID: 126721
+		// Token: 0x040199B2 RID: 104882
 		private readonly HashSet<long> SkillCombatMessageSet = new HashSet<long>();
 
-		// Token: 0x0401EF02 RID: 126722
+		// Token: 0x040199B3 RID: 104883
 		[Nullable(2)]
 		private static SkillMessageController _Instance;
 	}

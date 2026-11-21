@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A38 RID: 23096
+	// Token: 0x02004A14 RID: 18964
 	public interface IFlagChallengeSettleInfo
 	{
-		// Token: 0x17008BEA RID: 35818
-		// (get) Token: 0x0603A96C RID: 239980
-		// (set) Token: 0x0603A96D RID: 239981
+		// Token: 0x17005FB8 RID: 24504
+		// (get) Token: 0x0602F8B5 RID: 194741
+		// (set) Token: 0x0602F8B6 RID: 194742
 		int Level { get; set; }
 
-		// Token: 0x17008BEB RID: 35819
-		// (get) Token: 0x0603A96E RID: 239982
-		// (set) Token: 0x0603A96F RID: 239983
+		// Token: 0x17005FB9 RID: 24505
+		// (get) Token: 0x0602F8B7 RID: 194743
+		// (set) Token: 0x0602F8B8 RID: 194744
 		int CacheLevel { get; set; }
 
-		// Token: 0x17008BEC RID: 35820
-		// (get) Token: 0x0603A970 RID: 239984
-		// (set) Token: 0x0603A971 RID: 239985
+		// Token: 0x17005FBA RID: 24506
+		// (get) Token: 0x0602F8B9 RID: 194745
+		// (set) Token: 0x0602F8BA RID: 194746
 		int BoxLevel { get; set; }
 	}
 }

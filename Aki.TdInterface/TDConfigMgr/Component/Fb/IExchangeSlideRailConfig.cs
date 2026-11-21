@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D94 RID: 3476
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E90 RID: 3728
 	public class IExchangeSlideRailConfig
 	{
-		// Token: 0x06004F09 RID: 20233 RVA: 0x000C3F42 File Offset: 0x000C2142
+		// Token: 0x0600542E RID: 21550 RVA: 0x000CF792 File Offset: 0x000CD992
 		public static IExchangeSlideRailConfig Create(IExchangeSlideRailConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700199E RID: 6558
-		// (get) Token: 0x06004F0A RID: 20234 RVA: 0x000C3F64 File Offset: 0x000C2164
+		// Token: 0x17001B09 RID: 6921
+		// (get) Token: 0x0600542F RID: 21551 RVA: 0x000CF7B4 File Offset: 0x000CD9B4
 		public virtual int? MaxExchangeDistance
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700199F RID: 6559
-		// (get) Token: 0x06004F0B RID: 20235 RVA: 0x000C3F9C File Offset: 0x000C219C
+		// Token: 0x17001B0A RID: 6922
+		// (get) Token: 0x06005430 RID: 21552 RVA: 0x000CF7EC File Offset: 0x000CD9EC
 		public virtual int? MaxExchangeHigh
 		{
 			get
@@ -51,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019A0 RID: 6560
-		// (get) Token: 0x06004F0C RID: 20236 RVA: 0x000C3FD4 File Offset: 0x000C21D4
+		// Token: 0x17001B0B RID: 6923
+		// (get) Token: 0x06005431 RID: 21553 RVA: 0x000CF824 File Offset: 0x000CDA24
 		public virtual List<INextSlideRail> NextRails
 		{
 			get
@@ -72,13 +69,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D6D RID: 11629
+		// Token: 0x04003033 RID: 12339
 		private IExchangeSlideRailConfig Instance;
 
-		// Token: 0x04002D6E RID: 11630
+		// Token: 0x04003034 RID: 12340
 		private List<INextSlideRail> _NextRailsCache;
 
-		// Token: 0x04002D6F RID: 11631
+		// Token: 0x04003035 RID: 12341
 		private bool _NextRailsInited;
 	}
 }

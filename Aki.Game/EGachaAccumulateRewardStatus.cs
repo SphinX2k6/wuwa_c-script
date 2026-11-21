@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001C52 RID: 7250
+// Token: 0x02001111 RID: 4369
 public enum EGachaAccumulateRewardStatus
 {
-	// Token: 0x04006408 RID: 25608
+	// Token: 0x040064DA RID: 25818
 	NotReached,
-	// Token: 0x04006409 RID: 25609
+	// Token: 0x040064DB RID: 25819
 	CanClaim,
-	// Token: 0x0400640A RID: 25610
+	// Token: 0x040064DC RID: 25820
 	Claimed
 }

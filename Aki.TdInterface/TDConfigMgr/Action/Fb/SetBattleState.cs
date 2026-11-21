@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E3 RID: 9955
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029A7 RID: 10663
 	public class SetBattleState : ActionParams
 	{
-		// Token: 0x0600DE67 RID: 56935 RVA: 0x0020FF62 File Offset: 0x0020E162
+		// Token: 0x0600EC43 RID: 60483 RVA: 0x0022C7A2 File Offset: 0x0022A9A2
 		public static SetBattleState Create(ISetBattleState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004263 RID: 16995
-		// (get) Token: 0x0600DE68 RID: 56936 RVA: 0x0020FF81 File Offset: 0x0020E181
+		// Token: 0x170045A3 RID: 17827
+		// (get) Token: 0x0600EC44 RID: 60484 RVA: 0x0022C7C1 File Offset: 0x0022A9C1
 		public virtual ISendBattleStateType StateOption
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B73 RID: 31603
+		// Token: 0x04008213 RID: 33299
 		private ISetBattleState Instance;
 
-		// Token: 0x04007B74 RID: 31604
+		// Token: 0x04008214 RID: 33300
 		private ISendBattleStateType _StateOptionCache;
 
-		// Token: 0x04007B75 RID: 31605
+		// Token: 0x04008215 RID: 33301
 		private bool _StateOptionInited;
 	}
 }

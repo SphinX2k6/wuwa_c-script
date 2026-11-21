@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F6A RID: 28522
+	// Token: 0x0200772D RID: 30509
 	public class ISendBattleStateTypeT
 	{
-		// Token: 0x1700D3E8 RID: 54248
-		// (get) Token: 0x06032649 RID: 206409 RVA: 0x006CD88A File Offset: 0x006CBA8A
-		// (set) Token: 0x0603264A RID: 206410 RVA: 0x006CD892 File Offset: 0x006CBA92
+		// Token: 0x1700DFB4 RID: 57268
+		// (get) Token: 0x06035887 RID: 219271 RVA: 0x0072D0CA File Offset: 0x0072B2CA
+		// (set) Token: 0x06035888 RID: 219272 RVA: 0x0072D0D2 File Offset: 0x0072B2D2
 		public ESetBattleStateType Type { get; set; }
 
-		// Token: 0x0603264B RID: 206411 RVA: 0x006CD89B File Offset: 0x006CBA9B
+		// Token: 0x06035889 RID: 219273 RVA: 0x0072D0DB File Offset: 0x0072B2DB
 		public ISendBattleStateTypeT()
 		{
 			this.Type = ESetBattleStateType.SetBattleTag;

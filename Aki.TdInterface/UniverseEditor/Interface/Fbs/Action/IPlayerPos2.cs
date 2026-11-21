@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D0B RID: 27915
+	// Token: 0x02007486 RID: 29830
 	public struct IPlayerPos2 : IFlatbufferObject
 	{
-		// Token: 0x1700CFDF RID: 53215
-		// (get) Token: 0x06031396 RID: 201622 RVA: 0x006AD59D File Offset: 0x006AB79D
+		// Token: 0x1700DB23 RID: 56099
+		// (get) Token: 0x0603438A RID: 213898 RVA: 0x00708ACD File Offset: 0x00706CCD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031397 RID: 201623 RVA: 0x006AD5AA File Offset: 0x006AB7AA
+		// Token: 0x0603438B RID: 213899 RVA: 0x00708ADA File Offset: 0x00706CDA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031398 RID: 201624 RVA: 0x006AD5B4 File Offset: 0x006AB7B4
+		// Token: 0x0603438C RID: 213900 RVA: 0x00708AE4 File Offset: 0x00706CE4
 		public static IPlayerPos2 GetRootAsIPlayerPos2(ByteBuffer _bb)
 		{
 			return IPlayerPos2.GetRootAsIPlayerPos2(_bb, default(IPlayerPos2));
 		}
 
-		// Token: 0x06031399 RID: 201625 RVA: 0x006AD5D0 File Offset: 0x006AB7D0
+		// Token: 0x0603438D RID: 213901 RVA: 0x00708B00 File Offset: 0x00706D00
 		public static IPlayerPos2 GetRootAsIPlayerPos2(ByteBuffer _bb, IPlayerPos2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603139A RID: 201626 RVA: 0x006AD5ED File Offset: 0x006AB7ED
+		// Token: 0x0603438E RID: 213902 RVA: 0x00708B1D File Offset: 0x00706D1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603139B RID: 201627 RVA: 0x006AD5FC File Offset: 0x006AB7FC
+		// Token: 0x0603438F RID: 213903 RVA: 0x00708B2C File Offset: 0x00706D2C
 		public IPlayerPos2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CFE0 RID: 53216
-		// (get) Token: 0x0603139C RID: 201628 RVA: 0x006AD60C File Offset: 0x006AB80C
+		// Token: 0x1700DB24 RID: 56100
+		// (get) Token: 0x06034390 RID: 213904 RVA: 0x00708B3C File Offset: 0x00706D3C
 		public EPos2 Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CFE1 RID: 53217
-		// (get) Token: 0x0603139D RID: 201629 RVA: 0x006AD648 File Offset: 0x006AB848
+		// Token: 0x1700DB25 RID: 56101
+		// (get) Token: 0x06034391 RID: 213905 RVA: 0x00708B78 File Offset: 0x00706D78
 		public IVectorInfo? Offset
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603139E RID: 201630 RVA: 0x006AD6A5 File Offset: 0x006AB8A5
+		// Token: 0x06034392 RID: 213906 RVA: 0x00708BD5 File Offset: 0x00706DD5
 		public static Offset<IPlayerPos2> CreateIPlayerPos2(FlatBufferBuilder builder, EPos2 Type = EPos2.Player, Offset<IVectorInfo> OffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayerPos2.EndIPlayerPos2(builder);
 		}
 
-		// Token: 0x0603139F RID: 201631 RVA: 0x006AD6C2 File Offset: 0x006AB8C2
+		// Token: 0x06034393 RID: 213907 RVA: 0x00708BF2 File Offset: 0x00706DF2
 		public static void StartIPlayerPos2(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060313A0 RID: 201632 RVA: 0x006AD6CB File Offset: 0x006AB8CB
+		// Token: 0x06034394 RID: 213908 RVA: 0x00708BFB File Offset: 0x00706DFB
 		public static void AddType(FlatBufferBuilder builder, EPos2 type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060313A1 RID: 201633 RVA: 0x006AD6D6 File Offset: 0x006AB8D6
+		// Token: 0x06034395 RID: 213909 RVA: 0x00708C06 File Offset: 0x00706E06
 		public static void AddOffset(FlatBufferBuilder builder, Offset<IVectorInfo> offsetOffset)
 		{
 			builder.AddOffset(1, offsetOffset.Value, 0);
 		}
 
-		// Token: 0x060313A2 RID: 201634 RVA: 0x006AD6E6 File Offset: 0x006AB8E6
+		// Token: 0x06034396 RID: 213910 RVA: 0x00708C16 File Offset: 0x00706E16
 		public static Offset<IPlayerPos2> EndIPlayerPos2(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayerPos2>(builder.EndTable());
 		}
 
-		// Token: 0x060313A3 RID: 201635 RVA: 0x006AD6F4 File Offset: 0x006AB8F4
+		// Token: 0x06034397 RID: 213911 RVA: 0x00708C24 File Offset: 0x00706E24
 		public IPlayerPos2T UnPack()
 		{
 			IPlayerPos2T playerPos2T = new IPlayerPos2T();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playerPos2T;
 		}
 
-		// Token: 0x060313A4 RID: 201636 RVA: 0x006AD710 File Offset: 0x006AB910
+		// Token: 0x06034398 RID: 213912 RVA: 0x00708C40 File Offset: 0x00706E40
 		public void UnPackTo(IPlayerPos2T _o)
 		{
 			_o.Type = this.Type;
 			_o.Offset = ((this.Offset != null) ? this.Offset.Value.UnPack() : null);
 		}
 
-		// Token: 0x060313A5 RID: 201637 RVA: 0x006AD758 File Offset: 0x006AB958
+		// Token: 0x06034399 RID: 213913 RVA: 0x00708C88 File Offset: 0x00706E88
 		public static Offset<IPlayerPos2> Pack(FlatBufferBuilder builder, IPlayerPos2T _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayerPos2.CreateIPlayerPos2(builder, _o.Type, offsetOffset);
 		}
 
-		// Token: 0x04011687 RID: 71303
+		// Token: 0x04012601 RID: 75265
 		private Table __p;
 	}
 }

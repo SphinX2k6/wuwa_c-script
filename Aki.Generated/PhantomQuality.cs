@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EF5 RID: 3829
+	// Token: 0x02000FDA RID: 4058
 	public struct PhantomQuality : IFlatbufferObject
 	{
-		// Token: 0x1700273B RID: 10043
-		// (get) Token: 0x0600A9E9 RID: 43497 RVA: 0x002B6309 File Offset: 0x002B4509
+		// Token: 0x170027A1 RID: 10145
+		// (get) Token: 0x0600B00A RID: 45066 RVA: 0x002D3185 File Offset: 0x002D1385
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9EA RID: 43498 RVA: 0x002B6316 File Offset: 0x002B4516
+		// Token: 0x0600B00B RID: 45067 RVA: 0x002D3192 File Offset: 0x002D1392
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A9EB RID: 43499 RVA: 0x002B6320 File Offset: 0x002B4520
+		// Token: 0x0600B00C RID: 45068 RVA: 0x002D319C File Offset: 0x002D139C
 		public static PhantomQuality GetRootAsPhantomQuality(ByteBuffer _bb)
 		{
 			return PhantomQuality.GetRootAsPhantomQuality(_bb, default(PhantomQuality));
 		}
 
-		// Token: 0x0600A9EC RID: 43500 RVA: 0x002B633C File Offset: 0x002B453C
+		// Token: 0x0600B00D RID: 45069 RVA: 0x002D31B8 File Offset: 0x002D13B8
 		public static PhantomQuality GetRootAsPhantomQuality(ByteBuffer _bb, PhantomQuality obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A9ED RID: 43501 RVA: 0x002B6359 File Offset: 0x002B4559
+		// Token: 0x0600B00E RID: 45070 RVA: 0x002D31D5 File Offset: 0x002D13D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A9EE RID: 43502 RVA: 0x002B6368 File Offset: 0x002B4568
+		// Token: 0x0600B00F RID: 45071 RVA: 0x002D31E4 File Offset: 0x002D13E4
 		public PhantomQuality __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700273C RID: 10044
-		// (get) Token: 0x0600A9EF RID: 43503 RVA: 0x002B6378 File Offset: 0x002B4578
+		// Token: 0x170027A2 RID: 10146
+		// (get) Token: 0x0600B010 RID: 45072 RVA: 0x002D31F4 File Offset: 0x002D13F4
 		public int Quality
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700273D RID: 10045
-		// (get) Token: 0x0600A9F0 RID: 43504 RVA: 0x002B63B4 File Offset: 0x002B45B4
+		// Token: 0x170027A3 RID: 10147
+		// (get) Token: 0x0600B011 RID: 45073 RVA: 0x002D3230 File Offset: 0x002D1430
 		public int LevelLimit
 		{
 			get
@@ -81,7 +81,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9F1 RID: 43505 RVA: 0x002B63F0 File Offset: 0x002B45F0
+		// Token: 0x0600B012 RID: 45074 RVA: 0x002D326C File Offset: 0x002D146C
 		public int SlotUnlockLevel(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -92,8 +92,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700273E RID: 10046
-		// (get) Token: 0x0600A9F2 RID: 43506 RVA: 0x002B6430 File Offset: 0x002B4630
+		// Token: 0x170027A4 RID: 10148
+		// (get) Token: 0x0600B013 RID: 45075 RVA: 0x002D32AC File Offset: 0x002D14AC
 		public int SlotUnlockLevelLength
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9F3 RID: 43507 RVA: 0x002B645B File Offset: 0x002B465B
+		// Token: 0x0600B014 RID: 45076 RVA: 0x002D32D7 File Offset: 0x002D14D7
 		public Span<int> GetSlotUnlockLevelBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600A9F4 RID: 43508 RVA: 0x002B646A File Offset: 0x002B466A
+		// Token: 0x0600B015 RID: 45077 RVA: 0x002D32E6 File Offset: 0x002D14E6
 		public int[] GetSlotUnlockLevelArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A9F5 RID: 43509 RVA: 0x002B6484 File Offset: 0x002B4684
+		// Token: 0x0600B016 RID: 45078 RVA: 0x002D3300 File Offset: 0x002D1500
 		public DicIntInt? IdentifyCost(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -130,8 +130,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700273F RID: 10047
-		// (get) Token: 0x0600A9F6 RID: 43510 RVA: 0x002B64E8 File Offset: 0x002B46E8
+		// Token: 0x170027A5 RID: 10149
+		// (get) Token: 0x0600B017 RID: 45079 RVA: 0x002D3364 File Offset: 0x002D1564
 		public int IdentifyCostLength
 		{
 			get
@@ -145,8 +145,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002740 RID: 10048
-		// (get) Token: 0x0600A9F7 RID: 43511 RVA: 0x002B6514 File Offset: 0x002B4714
+		// Token: 0x170027A6 RID: 10150
+		// (get) Token: 0x0600B018 RID: 45080 RVA: 0x002D3390 File Offset: 0x002D1590
 		public int IdentifyCoin
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002741 RID: 10049
-		// (get) Token: 0x0600A9F8 RID: 43512 RVA: 0x002B6554 File Offset: 0x002B4754
+		// Token: 0x170027A7 RID: 10151
+		// (get) Token: 0x0600B019 RID: 45081 RVA: 0x002D33D0 File Offset: 0x002D15D0
 		public string QualitySprite
 		{
 			get
@@ -175,54 +175,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9F9 RID: 43513 RVA: 0x002B658C File Offset: 0x002B478C
+		// Token: 0x0600B01A RID: 45082 RVA: 0x002D3408 File Offset: 0x002D1608
 		public Span<byte> GetQualitySpriteBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600A9FA RID: 43514 RVA: 0x002B659C File Offset: 0x002B479C
+		// Token: 0x0600B01B RID: 45083 RVA: 0x002D3418 File Offset: 0x002D1618
 		public byte[] GetQualitySpriteArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600A9FB RID: 43515 RVA: 0x002B65B4 File Offset: 0x002B47B4
+		// Token: 0x0600B01C RID: 45084 RVA: 0x002D3430 File Offset: 0x002D1630
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用IdentifyCostFrozenDict()缓存字典，遍历请使用IdentifyCostIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> IdentifyCost()
+		public Dictionary<int, int> IdentifyCost()
 		{
 			return this.IdentifyCostIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A9FC RID: 43516 RVA: 0x002B660A File Offset: 0x002B480A
+		// Token: 0x0600B01D RID: 45085 RVA: 0x002D3486 File Offset: 0x002D1686
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> IdentifyCostIter()
+		public IEnumerable<DicIntInt> IdentifyCostIter()
 		{
 			PhantomQuality.<IdentifyCostIter>d__27 <IdentifyCostIter>d__ = new PhantomQuality.<IdentifyCostIter>d__27(-2);
 			<IdentifyCostIter>d__.<>3__<>4__this = this;
 			return <IdentifyCostIter>d__;
 		}
 
-		// Token: 0x0600A9FD RID: 43517 RVA: 0x002B6620 File Offset: 0x002B4820
+		// Token: 0x0600B01E RID: 45086 RVA: 0x002D349B File Offset: 0x002D169B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SlotUnlockLevelIter()或GetSlotUnlockLevelBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SlotUnlockLevel()
+		public int[] SlotUnlockLevel()
 		{
-			PhantomQuality phantomQuality = this;
-			return phantomQuality.GetSlotUnlockLevelArray() ?? Array.Empty<int>();
+			return this.GetSlotUnlockLevelArray();
 		}
 
-		// Token: 0x0600A9FE RID: 43518 RVA: 0x002B6644 File Offset: 0x002B4844
+		// Token: 0x0600B01F RID: 45087 RVA: 0x002D34A3 File Offset: 0x002D16A3
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SlotUnlockLevelIter()
+		public IEnumerable<int> SlotUnlockLevelIter()
 		{
 			PhantomQuality.<SlotUnlockLevelIter>d__29 <SlotUnlockLevelIter>d__ = new PhantomQuality.<SlotUnlockLevelIter>d__29(-2);
 			<SlotUnlockLevelIter>d__.<>3__<>4__this = this;
 			return <SlotUnlockLevelIter>d__;
 		}
 
-		// Token: 0x0600A9FF RID: 43519 RVA: 0x002B665C File Offset: 0x002B485C
+		// Token: 0x0600B020 RID: 45088 RVA: 0x002D34B8 File Offset: 0x002D16B8
 		public int? GetIdentifyCost(int key)
 		{
 			this.EnsureIdentifyCostCacheIfNeeded();
@@ -234,7 +231,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600AA00 RID: 43520 RVA: 0x002B6690 File Offset: 0x002B4890
+		// Token: 0x0600B021 RID: 45089 RVA: 0x002D34EC File Offset: 0x002D16EC
 		private void EnsureIdentifyCostCacheIfNeeded()
 		{
 			if (this.IdentifyCostCache != null)
@@ -244,18 +241,18 @@ namespace Aki.Config
 			this.IdentifyCostCache = this.IdentifyCostIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600AA01 RID: 43521 RVA: 0x002B66F6 File Offset: 0x002B48F6
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetIdentifyCostFrozenDict(int key)
+		// Token: 0x0600B022 RID: 45090 RVA: 0x002D3552 File Offset: 0x002D1752
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetIdentifyCostFrozenDict()
 		{
 			this.EnsureIdentifyCostCacheIfNeeded();
 			return this.IdentifyCostCache;
 		}
 
-		// Token: 0x04004FBA RID: 20410
+		// Token: 0x0400559F RID: 21919
 		private Table __p;
 
-		// Token: 0x04004FBB RID: 20411
+		// Token: 0x040055A0 RID: 21920
 		[Nullable(2)]
 		private FrozenDictionary<int, int> IdentifyCostCache;
 	}

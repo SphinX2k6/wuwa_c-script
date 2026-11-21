@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000442 RID: 1090
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200049B RID: 1179
 	public class IHookLockScreenDetectTypeFullScreen : IHookLockScreenDetectTypeBase
 	{
-		// Token: 0x06001603 RID: 5635 RVA: 0x000445D4 File Offset: 0x000427D4
+		// Token: 0x0600179D RID: 6045 RVA: 0x0004831C File Offset: 0x0004651C
 		private IHookLockScreenDetectTypeFullScreen_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001604 RID: 5636 RVA: 0x0004460C File Offset: 0x0004280C
+		// Token: 0x0600179E RID: 6046 RVA: 0x00048354 File Offset: 0x00046554
 		public static IHookLockScreenDetectTypeFullScreen Create([Nullable(2)] IHookLockScreenDetectTypeFullScreen instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001605 RID: 5637 RVA: 0x0004461F File Offset: 0x0004281F
+		// Token: 0x0600179F RID: 6047 RVA: 0x00048367 File Offset: 0x00046567
 		public static IHookLockScreenDetectTypeFullScreen CreateFromSetValue([Nullable(2)] IHookLockScreenDetectTypeFullScreen_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001606 RID: 5638 RVA: 0x00044632 File Offset: 0x00042832
+		// Token: 0x060017A0 RID: 6048 RVA: 0x0004837A File Offset: 0x0004657A
 		public new IHookLockScreenDetectTypeFullScreen_SetValue ToSetValue()
 		{
 			return new IHookLockScreenDetectTypeFullScreen_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005FC RID: 1532
-		// (get) Token: 0x06001607 RID: 5639 RVA: 0x00044645 File Offset: 0x00042845
-		// (set) Token: 0x06001608 RID: 5640 RVA: 0x00044670 File Offset: 0x00042870
+		// Token: 0x17000663 RID: 1635
+		// (get) Token: 0x060017A1 RID: 6049 RVA: 0x0004838D File Offset: 0x0004658D
+		// (set) Token: 0x060017A2 RID: 6050 RVA: 0x000483B8 File Offset: 0x000465B8
 		public override EHookLockScreenDetectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010E3 RID: 4323
+		// Token: 0x04001205 RID: 4613
 		[Nullable(2)]
 		protected new IHookLockScreenDetectTypeFullScreen FbInstance;
 
-		// Token: 0x040010E4 RID: 4324
+		// Token: 0x04001206 RID: 4614
 		[Nullable(2)]
 		protected new IHookLockScreenDetectTypeFullScreen_SetValue PocoInterface;
 	}

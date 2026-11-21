@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006237 RID: 25143
+	// Token: 0x020051B5 RID: 20917
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,25 +18,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 	})]
 	public class RhythmShipQuickSelectLevelGirdItemTitleData : MultiTemplateGridDataBase<RhythmShipQuickSelectLevelData, RhythmShipQuickSelectLevelGirdItemTitle>
 	{
-		// Token: 0x0603F60E RID: 259598 RVA: 0x00F52666 File Offset: 0x00F50866
+		// Token: 0x060342CF RID: 213711 RVA: 0x00E995C2 File Offset: 0x00E977C2
 		public RhythmShipQuickSelectLevelGirdItemTitleData(RhythmShipQuickSelectLevelData data)
 		{
 			base.Data = data;
 		}
 
-		// Token: 0x0603F60F RID: 259599 RVA: 0x00F52675 File Offset: 0x00F50875
+		// Token: 0x060342D0 RID: 213712 RVA: 0x00E995D1 File Offset: 0x00E977D1
 		public override int GetTemplateIndex()
 		{
 			return 0;
 		}
 
-		// Token: 0x0603F610 RID: 259600 RVA: 0x00F52678 File Offset: 0x00F50878
+		// Token: 0x060342D1 RID: 213713 RVA: 0x00E995D4 File Offset: 0x00E977D4
 		public override RhythmShipQuickSelectLevelGirdItemTitle CreateProxy()
 		{
 			return new RhythmShipQuickSelectLevelGirdItemTitle();
 		}
 
-		// Token: 0x0200C442 RID: 50242
+		// Token: 0x0200AE29 RID: 44585
 		[NullableContext(2)]
 		[Nullable(new byte[]
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		public class RhythmShipQuickSelectLevelGirdItemLevel : SyncGridProxyAbstract<RhythmShipQuickSelectLevelData>
 		{
-			// Token: 0x0605099C RID: 330140 RVA: 0x015B4425 File Offset: 0x015B2625
+			// Token: 0x06046E84 RID: 290436 RVA: 0x0156C111 File Offset: 0x0156A311
 			protected override void OnRegisterComponent()
 			{
 				this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				};
 			}
 
-			// Token: 0x0605099D RID: 330141 RVA: 0x015B4448 File Offset: 0x015B2648
+			// Token: 0x06046E85 RID: 290437 RVA: 0x0156C134 File Offset: 0x0156A334
 			protected override void OnStart()
 			{
 				this.RhythmShipQuickSelectLevelGirdItemLevelPanel = new RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectLevelGirdItemLevelPanel();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				this.RhythmShipQuickSelectLevelGirdItemLevelPanel.OnClickButtonCallBack = this.OnClickButtonCallBack;
 			}
 
-			// Token: 0x0605099E RID: 330142 RVA: 0x015B447E File Offset: 0x015B267E
+			// Token: 0x06046E86 RID: 290438 RVA: 0x0156C16A File Offset: 0x0156A36A
 			[NullableContext(1)]
 			public override void Refresh(RhythmShipQuickSelectLevelData data)
 			{
@@ -74,14 +74,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				rhythmShipQuickSelectLevelGirdItemLevelPanel.RefreshPanelByLevelId(data.LevelConfig);
 			}
 
-			// Token: 0x0403B399 RID: 242585
+			// Token: 0x04035CFB RID: 220411
 			public Action<int> OnClickButtonCallBack;
 
-			// Token: 0x0403B39A RID: 242586
+			// Token: 0x04035CFC RID: 220412
 			private RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectLevelGirdItemLevelPanel RhythmShipQuickSelectLevelGirdItemLevelPanel;
 		}
 
-		// Token: 0x0200C443 RID: 50243
+		// Token: 0x0200AE2A RID: 44586
 		[Nullable(new byte[]
 		{
 			0,
@@ -90,19 +90,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		public class RhythmShipQuickSelectLevelGirdItemLevelData : MultiTemplateGridDataBase<RhythmShipQuickSelectLevelData, RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectLevelGirdItemLevel>
 		{
-			// Token: 0x060509A0 RID: 330144 RVA: 0x015B449E File Offset: 0x015B269E
+			// Token: 0x06046E88 RID: 290440 RVA: 0x0156C18A File Offset: 0x0156A38A
 			public RhythmShipQuickSelectLevelGirdItemLevelData(RhythmShipQuickSelectLevelData data)
 			{
 				base.Data = data;
 			}
 
-			// Token: 0x060509A1 RID: 330145 RVA: 0x015B44AD File Offset: 0x015B26AD
+			// Token: 0x06046E89 RID: 290441 RVA: 0x0156C199 File Offset: 0x0156A399
 			public override int GetTemplateIndex()
 			{
 				return 1;
 			}
 
-			// Token: 0x060509A2 RID: 330146 RVA: 0x015B44B0 File Offset: 0x015B26B0
+			// Token: 0x06046E8A RID: 290442 RVA: 0x0156C19C File Offset: 0x0156A39C
 			public override RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectLevelGirdItemLevel CreateProxy()
 			{
 				return new RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectLevelGirdItemLevel
@@ -111,16 +111,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				};
 			}
 
-			// Token: 0x0403B39B RID: 242587
+			// Token: 0x04035CFD RID: 220413
 			[Nullable(2)]
 			public Action<int> OnClickButtonCallBack;
 		}
 
-		// Token: 0x0200C444 RID: 50244
+		// Token: 0x0200AE2B RID: 44587
 		[NullableContext(0)]
 		public class RhythmShipQuickSelectLevelGirdItemLevelPanel : UiPanelBase
 		{
-			// Token: 0x060509A3 RID: 330147 RVA: 0x015B44C4 File Offset: 0x015B26C4
+			// Token: 0x06046E8B RID: 290443 RVA: 0x0156C1B0 File Offset: 0x0156A3B0
 			protected override void OnRegisterComponent()
 			{
 				this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				};
 			}
 
-			// Token: 0x060509A4 RID: 330148 RVA: 0x015B45DC File Offset: 0x015B27DC
+			// Token: 0x06046E8C RID: 290444 RVA: 0x0156C2C8 File Offset: 0x0156A4C8
 			protected override void OnStart()
 			{
 				RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectStarItem rhythmShipQuickSelectStarItem = new RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectStarItem();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				});
 			}
 
-			// Token: 0x060509A5 RID: 330149 RVA: 0x015B4654 File Offset: 0x015B2854
+			// Token: 0x06046E8D RID: 290445 RVA: 0x0156C340 File Offset: 0x0156A540
 			public void RefreshPanelByLevelId(int levelId)
 			{
 				this.LevelId = levelId;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				base.GetItem(9).SetUIActive(!levelIsUnlock);
 			}
 
-			// Token: 0x060509A6 RID: 330150 RVA: 0x015B480E File Offset: 0x015B2A0E
+			// Token: 0x06046E8E RID: 290446 RVA: 0x0156C4FA File Offset: 0x0156A6FA
 			private void OnClickButton()
 			{
 				Action<int> onClickButtonCallBack = this.OnClickButtonCallBack;
@@ -212,23 +212,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				onClickButtonCallBack(this.LevelId);
 			}
 
-			// Token: 0x0403B39C RID: 242588
+			// Token: 0x04035CFE RID: 220414
 			[Nullable(2)]
 			public Action<int> OnClickButtonCallBack;
 
-			// Token: 0x0403B39D RID: 242589
+			// Token: 0x04035CFF RID: 220415
 			private int LevelId;
 
-			// Token: 0x0403B39E RID: 242590
+			// Token: 0x04035D00 RID: 220416
 			[Nullable(1)]
 			private readonly List<RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectStarItem> StarItemList = new List<RhythmShipQuickSelectLevelGirdItemTitleData.RhythmShipQuickSelectStarItem>();
 		}
 
-		// Token: 0x0200C445 RID: 50245
+		// Token: 0x0200AE2C RID: 44588
 		[NullableContext(0)]
 		private class RhythmShipQuickSelectStarItem : UiPanelBase
 		{
-			// Token: 0x060509A8 RID: 330152 RVA: 0x015B4839 File Offset: 0x015B2A39
+			// Token: 0x06046E90 RID: 290448 RVA: 0x0156C525 File Offset: 0x0156A725
 			protected override void OnRegisterComponent()
 			{
 				this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 				};
 			}
 
-			// Token: 0x060509A9 RID: 330153 RVA: 0x015B485C File Offset: 0x015B2A5C
+			// Token: 0x06046E91 RID: 290449 RVA: 0x0156C548 File Offset: 0x0156A748
 			public void SetLight(bool value)
 			{
 				base.GetItem(1).SetUIActive(value);

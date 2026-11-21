@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200079E RID: 1950
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200083F RID: 2111
 	public class ITrampleTipType
 	{
-		// Token: 0x06002A48 RID: 10824 RVA: 0x0006F014 File Offset: 0x0006D214
+		// Token: 0x06002D70 RID: 11632 RVA: 0x000762BC File Offset: 0x000744BC
 		private ITrampleTipType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A49 RID: 10825 RVA: 0x0006F04C File Offset: 0x0006D24C
+		// Token: 0x06002D71 RID: 11633 RVA: 0x000762F4 File Offset: 0x000744F4
 		public static ITrampleTipType Create([Nullable(2)] ITrampleTipType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A4A RID: 10826 RVA: 0x0006F05F File Offset: 0x0006D25F
+		// Token: 0x06002D72 RID: 11634 RVA: 0x00076307 File Offset: 0x00074507
 		public static ITrampleTipType CreateFromSetValue([Nullable(2)] ITrampleTipType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A4B RID: 10827 RVA: 0x0006F072 File Offset: 0x0006D272
+		// Token: 0x06002D73 RID: 11635 RVA: 0x0007631A File Offset: 0x0007451A
 		public ITrampleTipType_SetValue ToSetValue()
 		{
 			return new ITrampleTipType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B19 RID: 2841
-		// (get) Token: 0x06002A4C RID: 10828 RVA: 0x0006F085 File Offset: 0x0006D285
-		// (set) Token: 0x06002A4D RID: 10829 RVA: 0x0006F0B0 File Offset: 0x0006D2B0
+		// Token: 0x17000BDB RID: 3035
+		// (get) Token: 0x06002D74 RID: 11636 RVA: 0x0007632D File Offset: 0x0007452D
+		// (set) Token: 0x06002D75 RID: 11637 RVA: 0x00076358 File Offset: 0x00074558
 		public virtual ETrampleTipType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C41 RID: 7233
+		// Token: 0x04001E4A RID: 7754
 		[Nullable(2)]
 		protected ITrampleTipType FbInstance;
 
-		// Token: 0x04001C42 RID: 7234
+		// Token: 0x04001E4B RID: 7755
 		[Nullable(2)]
 		protected ITrampleTipType_SetValue PocoInterface;
 	}

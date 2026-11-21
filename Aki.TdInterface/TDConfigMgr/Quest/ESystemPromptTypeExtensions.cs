@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200129A RID: 4762
+	// Token: 0x020013DC RID: 5084
 	public static class ESystemPromptTypeExtensions
 	{
-		// Token: 0x06006B5C RID: 27484 RVA: 0x00101F94 File Offset: 0x00100194
+		// Token: 0x060071B8 RID: 29112 RVA: 0x0010FD6C File Offset: 0x0010DF6C
 		public static string ToEnumString(this ESystemPromptType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B5D RID: 27485 RVA: 0x00101FBC File Offset: 0x001001BC
+		// Token: 0x060071B9 RID: 29113 RVA: 0x0010FD94 File Offset: 0x0010DF94
 		public static ESystemPromptType FromString(string name)
 		{
 			ESystemPromptType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B5E RID: 27486 RVA: 0x00101FE5 File Offset: 0x001001E5
+		// Token: 0x060071BA RID: 29114 RVA: 0x0010FDBD File Offset: 0x0010DFBD
 		public static bool TryFromString(string name, out ESystemPromptType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006B5F RID: 27487 RVA: 0x0010200A File Offset: 0x0010020A
+		// Token: 0x060071BB RID: 29115 RVA: 0x0010FDE2 File Offset: 0x0010DFE2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B60 RID: 27488 RVA: 0x0010201A File Offset: 0x0010021A
+		// Token: 0x060071BC RID: 29116 RVA: 0x0010FDF2 File Offset: 0x0010DFF2
 		public static ESystemPromptType[] GetValues()
 		{
 			return new ESystemPromptType[1];
 		}
 
-		// Token: 0x06006B61 RID: 27489 RVA: 0x00102022 File Offset: 0x00100222
+		// Token: 0x060071BD RID: 29117 RVA: 0x0010FDFA File Offset: 0x0010DFFA
 		public static string[] GetNames()
 		{
 			return new string[]

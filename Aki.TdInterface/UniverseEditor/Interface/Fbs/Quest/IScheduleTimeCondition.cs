@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004106 RID: 16646
+	// Token: 0x02004547 RID: 17735
 	public struct IScheduleTimeCondition : IFlatbufferObject
 	{
-		// Token: 0x17007552 RID: 30034
-		// (get) Token: 0x06018451 RID: 99409 RVA: 0x0037E37F File Offset: 0x0037C57F
+		// Token: 0x17007B58 RID: 31576
+		// (get) Token: 0x06019AF2 RID: 105202 RVA: 0x003A82CF File Offset: 0x003A64CF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018452 RID: 99410 RVA: 0x0037E38C File Offset: 0x0037C58C
+		// Token: 0x06019AF3 RID: 105203 RVA: 0x003A82DC File Offset: 0x003A64DC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018453 RID: 99411 RVA: 0x0037E394 File Offset: 0x0037C594
+		// Token: 0x06019AF4 RID: 105204 RVA: 0x003A82E4 File Offset: 0x003A64E4
 		public static IScheduleTimeCondition GetRootAsIScheduleTimeCondition(ByteBuffer _bb)
 		{
 			return IScheduleTimeCondition.GetRootAsIScheduleTimeCondition(_bb, default(IScheduleTimeCondition));
 		}
 
-		// Token: 0x06018454 RID: 99412 RVA: 0x0037E3B0 File Offset: 0x0037C5B0
+		// Token: 0x06019AF5 RID: 105205 RVA: 0x003A8300 File Offset: 0x003A6500
 		public static IScheduleTimeCondition GetRootAsIScheduleTimeCondition(ByteBuffer _bb, IScheduleTimeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018455 RID: 99413 RVA: 0x0037E3CD File Offset: 0x0037C5CD
+		// Token: 0x06019AF6 RID: 105206 RVA: 0x003A831D File Offset: 0x003A651D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018456 RID: 99414 RVA: 0x0037E3DC File Offset: 0x0037C5DC
+		// Token: 0x06019AF7 RID: 105207 RVA: 0x003A832C File Offset: 0x003A652C
 		public IScheduleTimeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007553 RID: 30035
-		// (get) Token: 0x06018457 RID: 99415 RVA: 0x0037E3EC File Offset: 0x0037C5EC
+		// Token: 0x17007B59 RID: 31577
+		// (get) Token: 0x06019AF8 RID: 105208 RVA: 0x003A833C File Offset: 0x003A653C
 		public EChildQuest Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007554 RID: 30036
-		// (get) Token: 0x06018458 RID: 99416 RVA: 0x0037E428 File Offset: 0x0037C628
+		// Token: 0x17007B5A RID: 31578
+		// (get) Token: 0x06019AF9 RID: 105209 RVA: 0x003A8378 File Offset: 0x003A6578
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007555 RID: 30037
-		// (get) Token: 0x06018459 RID: 99417 RVA: 0x0037E488 File Offset: 0x0037C688
+		// Token: 0x17007B5B RID: 31579
+		// (get) Token: 0x06019AFA RID: 105210 RVA: 0x003A83D8 File Offset: 0x003A65D8
 		public IBaseTime? StartTime
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007556 RID: 30038
-		// (get) Token: 0x0601845A RID: 99418 RVA: 0x0037E4E8 File Offset: 0x0037C6E8
+		// Token: 0x17007B5C RID: 31580
+		// (get) Token: 0x06019AFB RID: 105211 RVA: 0x003A8438 File Offset: 0x003A6638
 		public IBaseTime? EndTime
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007557 RID: 30039
-		// (get) Token: 0x0601845B RID: 99419 RVA: 0x0037E548 File Offset: 0x0037C748
+		// Token: 0x17007B5D RID: 31581
+		// (get) Token: 0x06019AFC RID: 105212 RVA: 0x003A8498 File Offset: 0x003A6698
 		public int Day
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007558 RID: 30040
-		// (get) Token: 0x0601845C RID: 99420 RVA: 0x0037E588 File Offset: 0x0037C788
+		// Token: 0x17007B5E RID: 31582
+		// (get) Token: 0x06019AFD RID: 105213 RVA: 0x003A84D8 File Offset: 0x003A66D8
 		public byte NullMask
 		{
 			get
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601845D RID: 99421 RVA: 0x0037E5C5 File Offset: 0x0037C7C5
+		// Token: 0x06019AFE RID: 105214 RVA: 0x003A8515 File Offset: 0x003A6715
 		public static Offset<IScheduleTimeCondition> CreateIScheduleTimeCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), Offset<IBaseTime> StartTimeOffset = default(Offset<IBaseTime>), Offset<IBaseTime> EndTimeOffset = default(Offset<IBaseTime>), int Day = 0, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -152,55 +152,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IScheduleTimeCondition.EndIScheduleTimeCondition(builder);
 		}
 
-		// Token: 0x0601845E RID: 99422 RVA: 0x0037E601 File Offset: 0x0037C801
+		// Token: 0x06019AFF RID: 105215 RVA: 0x003A8551 File Offset: 0x003A6751
 		public static void StartIScheduleTimeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601845F RID: 99423 RVA: 0x0037E60A File Offset: 0x0037C80A
+		// Token: 0x06019B00 RID: 105216 RVA: 0x003A855A File Offset: 0x003A675A
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018460 RID: 99424 RVA: 0x0037E615 File Offset: 0x0037C815
+		// Token: 0x06019B01 RID: 105217 RVA: 0x003A8565 File Offset: 0x003A6765
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06018461 RID: 99425 RVA: 0x0037E625 File Offset: 0x0037C825
+		// Token: 0x06019B02 RID: 105218 RVA: 0x003A8575 File Offset: 0x003A6775
 		public static void AddStartTime(FlatBufferBuilder builder, Offset<IBaseTime> startTimeOffset)
 		{
 			builder.AddOffset(2, startTimeOffset.Value, 0);
 		}
 
-		// Token: 0x06018462 RID: 99426 RVA: 0x0037E635 File Offset: 0x0037C835
+		// Token: 0x06019B03 RID: 105219 RVA: 0x003A8585 File Offset: 0x003A6785
 		public static void AddEndTime(FlatBufferBuilder builder, Offset<IBaseTime> endTimeOffset)
 		{
 			builder.AddOffset(3, endTimeOffset.Value, 0);
 		}
 
-		// Token: 0x06018463 RID: 99427 RVA: 0x0037E645 File Offset: 0x0037C845
+		// Token: 0x06019B04 RID: 105220 RVA: 0x003A8595 File Offset: 0x003A6795
 		public static void AddDay(FlatBufferBuilder builder, int day)
 		{
 			builder.AddInt(4, day, 0);
 		}
 
-		// Token: 0x06018464 RID: 99428 RVA: 0x0037E650 File Offset: 0x0037C850
+		// Token: 0x06019B05 RID: 105221 RVA: 0x003A85A0 File Offset: 0x003A67A0
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06018465 RID: 99429 RVA: 0x0037E65B File Offset: 0x0037C85B
+		// Token: 0x06019B06 RID: 105222 RVA: 0x003A85AB File Offset: 0x003A67AB
 		public static Offset<IScheduleTimeCondition> EndIScheduleTimeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IScheduleTimeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06018466 RID: 99430 RVA: 0x0037E668 File Offset: 0x0037C868
+		// Token: 0x06019B07 RID: 105223 RVA: 0x003A85B8 File Offset: 0x003A67B8
 		public IScheduleTimeConditionT UnPack()
 		{
 			IScheduleTimeConditionT scheduleTimeConditionT = new IScheduleTimeConditionT();
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return scheduleTimeConditionT;
 		}
 
-		// Token: 0x06018467 RID: 99431 RVA: 0x0037E684 File Offset: 0x0037C884
+		// Token: 0x06019B08 RID: 105224 RVA: 0x003A85D4 File Offset: 0x003A67D4
 		public void UnPackTo(IScheduleTimeConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06018468 RID: 99432 RVA: 0x0037E744 File Offset: 0x0037C944
+		// Token: 0x06019B09 RID: 105225 RVA: 0x003A8694 File Offset: 0x003A6894
 		public static Offset<IScheduleTimeCondition> Pack(FlatBufferBuilder builder, IScheduleTimeConditionT _o)
 		{
 			if (_o == null)
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IScheduleTimeCondition.CreateIScheduleTimeCondition(builder, _o.Type, preConditionsOffset, startTimeOffset, endTimeOffset, _o.Day, _o.NullMask);
 		}
 
-		// Token: 0x0400BCA9 RID: 48297
+		// Token: 0x0400C692 RID: 50834
 		private Table __p;
 	}
 }

@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001832 RID: 6194
+// Token: 0x02000CEB RID: 3307
 [NullableContext(1)]
 [Nullable(0)]
 public class FilterTypeFunctionLibrary
 {
-	// Token: 0x0600B597 RID: 46487 RVA: 0x00290C60 File Offset: 0x0028EE60
+	// Token: 0x06008982 RID: 35202 RVA: 0x0029B380 File Offset: 0x00299580
 	public static FilterItemData[] GetElementFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -23,7 +23,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B598 RID: 46488 RVA: 0x00290CEC File Offset: 0x0028EEEC
+	// Token: 0x06008983 RID: 35203 RVA: 0x0029B40C File Offset: 0x0029960C
 	public static FilterItemData[] GetWeaponFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -38,7 +38,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B599 RID: 46489 RVA: 0x00290D80 File Offset: 0x0028EF80
+	// Token: 0x06008984 RID: 35204 RVA: 0x0029B4A0 File Offset: 0x002996A0
 	public static FilterItemData[] GetPhantomFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -54,7 +54,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B59A RID: 46490 RVA: 0x00290E20 File Offset: 0x0028F020
+	// Token: 0x06008985 RID: 35205 RVA: 0x0029B540 File Offset: 0x00299740
 	public static FilterItemData[] GetDetectFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -67,7 +67,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B59B RID: 46491 RVA: 0x00290E70 File Offset: 0x0028F070
+	// Token: 0x06008986 RID: 35206 RVA: 0x0029B590 File Offset: 0x00299790
 	public static FilterItemData[] GetCookMenuFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -80,7 +80,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B59C RID: 46492 RVA: 0x00290EC0 File Offset: 0x0028F0C0
+	// Token: 0x06008987 RID: 35207 RVA: 0x0029B5E0 File Offset: 0x002997E0
 	public static FilterItemData[] GetCookTypeFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -94,7 +94,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B59D RID: 46493 RVA: 0x00290F2C File Offset: 0x0028F12C
+	// Token: 0x06008988 RID: 35208 RVA: 0x0029B64C File Offset: 0x0029984C
 	public static FilterItemData[] GetComposeFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -107,7 +107,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B59E RID: 46494 RVA: 0x00290F7C File Offset: 0x0028F17C
+	// Token: 0x06008989 RID: 35209 RVA: 0x0029B69C File Offset: 0x0029989C
 	public static FilterItemData[] GetPhantomRarityFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -121,7 +121,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B59F RID: 46495 RVA: 0x00290FE0 File Offset: 0x0028F1E0
+	// Token: 0x0600898A RID: 35210 RVA: 0x0029B700 File Offset: 0x00299900
 	public static FilterItemData[] GetPhantomFettersEquipFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -136,7 +136,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5A0 RID: 46496 RVA: 0x0029105C File Offset: 0x0028F25C
+	// Token: 0x0600898B RID: 35211 RVA: 0x0029B77C File Offset: 0x0029997C
 	public static FilterItemData[] GetPhantomFettersHasFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -151,13 +151,13 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5A1 RID: 46497 RVA: 0x002910D5 File Offset: 0x0028F2D5
+	// Token: 0x0600898C RID: 35212 RVA: 0x0029B7F5 File Offset: 0x002999F5
 	public static FilterItemData[] GetPhantomRarityZeroFilterData(int[] idList)
 	{
 		return FilterTypeFunctionLibrary.GetPhantomRarityFilterDataByRare(idList, 0);
 	}
 
-	// Token: 0x0600B5A2 RID: 46498 RVA: 0x002910E0 File Offset: 0x0028F2E0
+	// Token: 0x0600898D RID: 35213 RVA: 0x0029B800 File Offset: 0x00299A00
 	private static FilterItemData[] GetPhantomRarityFilterDataByRare(int[] idList, int rare)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -177,25 +177,25 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5A3 RID: 46499 RVA: 0x002911CC File Offset: 0x0028F3CC
+	// Token: 0x0600898E RID: 35214 RVA: 0x0029B8EC File Offset: 0x00299AEC
 	public static FilterItemData[] GetPhantomRarityOneFilterData(int[] idList)
 	{
 		return FilterTypeFunctionLibrary.GetPhantomRarityFilterDataByRare(idList, 1);
 	}
 
-	// Token: 0x0600B5A4 RID: 46500 RVA: 0x002911D5 File Offset: 0x0028F3D5
+	// Token: 0x0600898F RID: 35215 RVA: 0x0029B8F5 File Offset: 0x00299AF5
 	public static FilterItemData[] GetPhantomRarityTwoFilterData(int[] idList)
 	{
 		return FilterTypeFunctionLibrary.GetPhantomRarityFilterDataByRare(idList, 2);
 	}
 
-	// Token: 0x0600B5A5 RID: 46501 RVA: 0x002911DE File Offset: 0x0028F3DE
+	// Token: 0x06008990 RID: 35216 RVA: 0x0029B8FE File Offset: 0x00299AFE
 	public static FilterItemData[] GetPhantomRarityThreeFilterData(int[] idList)
 	{
 		return FilterTypeFunctionLibrary.GetPhantomRarityFilterDataByRare(idList, 3);
 	}
 
-	// Token: 0x0600B5A6 RID: 46502 RVA: 0x002911E8 File Offset: 0x0028F3E8
+	// Token: 0x06008991 RID: 35217 RVA: 0x0029B908 File Offset: 0x00299B08
 	public static FilterItemData[] GetItemQualityFilterData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -208,7 +208,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5A7 RID: 46503 RVA: 0x00291264 File Offset: 0x0028F464
+	// Token: 0x06008992 RID: 35218 RVA: 0x0029B984 File Offset: 0x00299B84
 	public static FilterItemData[] GetVisionDestroyCostData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -227,7 +227,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5A8 RID: 46504 RVA: 0x002912FC File Offset: 0x0028F4FC
+	// Token: 0x06008993 RID: 35219 RVA: 0x0029BA1C File Offset: 0x00299C1C
 	public static FilterItemData[] GetVisionDestroyQualityData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -240,7 +240,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5A9 RID: 46505 RVA: 0x00291378 File Offset: 0x0028F578
+	// Token: 0x06008994 RID: 35220 RVA: 0x0029BA98 File Offset: 0x00299C98
 	public static FilterItemData[] GetVisionDestroyFetterGroupData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -253,7 +253,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5AA RID: 46506 RVA: 0x002913D8 File Offset: 0x0028F5D8
+	// Token: 0x06008995 RID: 35221 RVA: 0x0029BAF8 File Offset: 0x00299CF8
 	public static FilterItemData[] GetVisionDestroyAttribute(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -267,7 +267,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5AB RID: 46507 RVA: 0x00291440 File Offset: 0x0028F640
+	// Token: 0x06008996 RID: 35222 RVA: 0x0029BB60 File Offset: 0x00299D60
 	public static FilterItemData[] GetRoleTagFilterList(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -280,7 +280,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5AC RID: 46508 RVA: 0x002914B0 File Offset: 0x0028F6B0
+	// Token: 0x06008997 RID: 35223 RVA: 0x0029BBD0 File Offset: 0x00299DD0
 	public static FilterItemData[] GetItemDeprecateFilterList(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -307,7 +307,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5AD RID: 46509 RVA: 0x0029154C File Offset: 0x0028F74C
+	// Token: 0x06008998 RID: 35224 RVA: 0x0029BC6C File Offset: 0x00299E6C
 	public static FilterItemData[] GetVisionGroupAttributeFilterList(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -323,7 +323,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5AE RID: 46510 RVA: 0x002915E4 File Offset: 0x0028F7E4
+	// Token: 0x06008999 RID: 35225 RVA: 0x0029BD04 File Offset: 0x00299F04
 	public static FilterItemData[] GetFishingTechData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -336,7 +336,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5AF RID: 46511 RVA: 0x00291640 File Offset: 0x0028F840
+	// Token: 0x0600899A RID: 35226 RVA: 0x0029BD60 File Offset: 0x00299F60
 	public static FilterItemData[] GetFishingTimeData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -349,7 +349,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B0 RID: 46512 RVA: 0x00291694 File Offset: 0x0028F894
+	// Token: 0x0600899B RID: 35227 RVA: 0x0029BDB4 File Offset: 0x00299FB4
 	public static FilterItemData[] GetFishingAreaData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -362,7 +362,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B1 RID: 46513 RVA: 0x002916F4 File Offset: 0x0028F8F4
+	// Token: 0x0600899C RID: 35228 RVA: 0x0029BE14 File Offset: 0x0029A014
 	public static FilterItemData[] GetFishingTypeData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -375,7 +375,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B2 RID: 46514 RVA: 0x00291748 File Offset: 0x0028F948
+	// Token: 0x0600899D RID: 35229 RVA: 0x0029BE68 File Offset: 0x0029A068
 	public static FilterItemData[] GetDangoAbyssPluginQualityData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -389,7 +389,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B3 RID: 46515 RVA: 0x002917CC File Offset: 0x0028F9CC
+	// Token: 0x0600899E RID: 35230 RVA: 0x0029BEEC File Offset: 0x0029A0EC
 	public static FilterItemData[] GetDangoAbyssPluginPropData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -403,7 +403,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B4 RID: 46516 RVA: 0x00291844 File Offset: 0x0028FA44
+	// Token: 0x0600899F RID: 35231 RVA: 0x0029BF64 File Offset: 0x0029A164
 	public static FilterItemData[] GetDangoAbyssPluginTagData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -417,7 +417,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B5 RID: 46517 RVA: 0x002918BC File Offset: 0x0028FABC
+	// Token: 0x060089A0 RID: 35232 RVA: 0x0029BFDC File Offset: 0x0029A1DC
 	public static FilterItemData[] GetDangoAbyssPluginLockStateData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -431,7 +431,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B6 RID: 46518 RVA: 0x00291918 File Offset: 0x0028FB18
+	// Token: 0x060089A1 RID: 35233 RVA: 0x0029C038 File Offset: 0x0029A238
 	public static FilterItemData[] GetPhantomManageFirstMainPropData(int[] sortRuleIdList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -445,7 +445,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B7 RID: 46519 RVA: 0x00291980 File Offset: 0x0028FB80
+	// Token: 0x060089A2 RID: 35234 RVA: 0x0029C0A0 File Offset: 0x0029A2A0
 	public static FilterItemData[] GetPhantomManageCostData(int[] costList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -463,7 +463,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B8 RID: 46520 RVA: 0x002919F8 File Offset: 0x0028FBF8
+	// Token: 0x060089A3 RID: 35235 RVA: 0x0029C118 File Offset: 0x0029A318
 	public static FilterItemData[] GetPinballRoleBdData(int[] bdIdList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -477,7 +477,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5B9 RID: 46521 RVA: 0x00291A7C File Offset: 0x0028FC7C
+	// Token: 0x060089A4 RID: 35236 RVA: 0x0029C19C File Offset: 0x0029A39C
 	public static FilterItemData[] GetPinballRoleClassData(int[] classIdList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -491,7 +491,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5BA RID: 46522 RVA: 0x00291B00 File Offset: 0x0028FD00
+	// Token: 0x060089A5 RID: 35237 RVA: 0x0029C220 File Offset: 0x0029A420
 	public static FilterItemData[] GetPinballWeaponTypeData(int[] typeIdList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -505,7 +505,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5BB RID: 46523 RVA: 0x00291B84 File Offset: 0x0028FD84
+	// Token: 0x060089A6 RID: 35238 RVA: 0x0029C2A4 File Offset: 0x0029A4A4
 	public static FilterItemData[] GetPinballWeaponQualityData(int[] qualityIdList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();
@@ -521,7 +521,7 @@ public class FilterTypeFunctionLibrary
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B5BC RID: 46524 RVA: 0x00291C04 File Offset: 0x0028FE04
+	// Token: 0x060089A7 RID: 35239 RVA: 0x0029C324 File Offset: 0x0029A524
 	public static FilterItemData[] GetRoleLangCustomData(int[] idList)
 	{
 		List<FilterItemData> list = new List<FilterItemData>();

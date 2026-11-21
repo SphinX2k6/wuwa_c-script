@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018D0 RID: 6352
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001A61 RID: 6753
 	public class IClientTpToStreamingTargetSuccessEffect
 	{
-		// Token: 0x0600883F RID: 34879 RVA: 0x00142700 File Offset: 0x00140900
-		[NullableContext(1)]
+		// Token: 0x06008F87 RID: 36743 RVA: 0x00152278 File Offset: 0x00150478
 		private IClientTpToStreamingTargetSuccessEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008840 RID: 34880 RVA: 0x00142738 File Offset: 0x00140938
-		[NullableContext(1)]
+		// Token: 0x06008F88 RID: 36744 RVA: 0x001522B0 File Offset: 0x001504B0
 		public static IClientTpToStreamingTargetSuccessEffect Create([Nullable(2)] IClientTpToStreamingTargetSuccessEffect instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008841 RID: 34881 RVA: 0x0014274B File Offset: 0x0014094B
-		[NullableContext(1)]
+		// Token: 0x06008F89 RID: 36745 RVA: 0x001522C3 File Offset: 0x001504C3
 		public static IClientTpToStreamingTargetSuccessEffect CreateFromSetValue([Nullable(2)] IClientTpToStreamingTargetSuccessEffect_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008842 RID: 34882 RVA: 0x0014275E File Offset: 0x0014095E
-		[NullableContext(1)]
+		// Token: 0x06008F8A RID: 36746 RVA: 0x001522D6 File Offset: 0x001504D6
 		public IClientTpToStreamingTargetSuccessEffect_SetValue ToSetValue()
 		{
 			return new IClientTpToStreamingTargetSuccessEffect_SetValue
@@ -63,11 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C3C RID: 11324
-		// (get) Token: 0x06008843 RID: 34883 RVA: 0x00142771 File Offset: 0x00140971
-		// (set) Token: 0x06008844 RID: 34884 RVA: 0x00142798 File Offset: 0x00140998
+		// Token: 0x17002E3E RID: 11838
+		// (get) Token: 0x06008F8B RID: 36747 RVA: 0x001522E9 File Offset: 0x001504E9
+		// (set) Token: 0x06008F8C RID: 36748 RVA: 0x00152310 File Offset: 0x00150510
+		[Nullable(2)]
 		public virtual string SceneEffectDaPath
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -81,16 +77,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.SceneEffectDaPath;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().SceneEffectDaPath = value;
 			}
 		}
 
-		// Token: 0x0400559B RID: 21915
+		// Token: 0x040059F5 RID: 23029
+		[Nullable(2)]
 		protected IClientTpToStreamingTargetSuccessEffect FbInstance;
 
-		// Token: 0x0400559C RID: 21916
+		// Token: 0x040059F6 RID: 23030
+		[Nullable(2)]
 		protected IClientTpToStreamingTargetSuccessEffect_SetValue PocoInterface;
 	}
 }

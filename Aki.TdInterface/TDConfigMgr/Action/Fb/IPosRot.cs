@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025F6 RID: 9718
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028B6 RID: 10422
 	public class IPosRot
 	{
-		// Token: 0x0600DA5E RID: 55902 RVA: 0x00208B1B File Offset: 0x00206D1B
+		// Token: 0x0600E82B RID: 59435 RVA: 0x0022526F File Offset: 0x0022346F
 		public static IPosRot Create(IPosRot? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004034 RID: 16436
-		// (get) Token: 0x0600DA5F RID: 55903 RVA: 0x00208B3A File Offset: 0x00206D3A
+		// Token: 0x1700436D RID: 17261
+		// (get) Token: 0x0600E82C RID: 59436 RVA: 0x0022528E File Offset: 0x0022348E
 		public virtual VectorInfo Pos
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004035 RID: 16437
-		// (get) Token: 0x0600DA60 RID: 55904 RVA: 0x00208B6E File Offset: 0x00206D6E
+		// Token: 0x1700436E RID: 17262
+		// (get) Token: 0x0600E82D RID: 59437 RVA: 0x002252C2 File Offset: 0x002234C2
 		public virtual VectorInfo Rot
 		{
 			get
@@ -55,21 +53,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400793A RID: 31034
+		// Token: 0x04007FD4 RID: 32724
 		private IPosRot Instance;
 
-		// Token: 0x0400793B RID: 31035
+		// Token: 0x04007FD5 RID: 32725
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x0400793C RID: 31036
+		// Token: 0x04007FD6 RID: 32726
 		private bool _PosInited;
 
-		// Token: 0x0400793D RID: 31037
+		// Token: 0x04007FD7 RID: 32727
 		[Nullable(2)]
 		private VectorInfo _RotCache;
 
-		// Token: 0x0400793E RID: 31038
+		// Token: 0x04007FD8 RID: 32728
 		private bool _RotInited;
 	}
 }

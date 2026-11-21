@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E63 RID: 3683
+// Token: 0x02000318 RID: 792
 [NullableContext(1)]
 [Nullable(0)]
 public class XSXSdkProductContentSt
 {
-	// Token: 0x040028E6 RID: 10470
+	// Token: 0x04002981 RID: 10625
 	public string channelGoodsId = "";
 
-	// Token: 0x040028E7 RID: 10471
+	// Token: 0x04002982 RID: 10626
 	public string currency = "";
 
-	// Token: 0x040028E8 RID: 10472
+	// Token: 0x04002983 RID: 10627
 	public string currencyCode = "";
 
-	// Token: 0x040028E9 RID: 10473
+	// Token: 0x04002984 RID: 10628
 	public string goodsId = "";
 
-	// Token: 0x040028EA RID: 10474
+	// Token: 0x04002985 RID: 10629
 	public string name = "";
 
-	// Token: 0x040028EB RID: 10475
+	// Token: 0x04002986 RID: 10630
 	public float price;
 }

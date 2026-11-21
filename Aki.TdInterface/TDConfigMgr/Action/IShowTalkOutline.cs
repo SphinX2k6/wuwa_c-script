@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E68 RID: 7784
+	// Token: 0x0200209D RID: 8349
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IShowTalkOutline
 	{
-		// Token: 0x0600A69D RID: 42653 RVA: 0x00179014 File Offset: 0x00177214
-		[NullableContext(1)]
+		// Token: 0x0600B155 RID: 45397 RVA: 0x0018ED14 File Offset: 0x0018CF14
+		[NullableContext(0)]
 		private IShowTalkOutline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A69E RID: 42654 RVA: 0x0017904C File Offset: 0x0017724C
-		[NullableContext(1)]
+		// Token: 0x0600B156 RID: 45398 RVA: 0x0018ED4C File Offset: 0x0018CF4C
+		[NullableContext(0)]
 		public static IShowTalkOutline Create([Nullable(2)] IShowTalkOutline instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A69F RID: 42655 RVA: 0x0017905F File Offset: 0x0017725F
-		[NullableContext(1)]
+		// Token: 0x0600B157 RID: 45399 RVA: 0x0018ED5F File Offset: 0x0018CF5F
+		[NullableContext(0)]
 		public static IShowTalkOutline CreateFromSetValue([Nullable(2)] IShowTalkOutline_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6A0 RID: 42656 RVA: 0x00179072 File Offset: 0x00177272
-		[NullableContext(1)]
+		// Token: 0x0600B158 RID: 45400 RVA: 0x0018ED72 File Offset: 0x0018CF72
+		[NullableContext(0)]
 		public IShowTalkOutline_SetValue ToSetValue()
 		{
 			return new IShowTalkOutline_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003309 RID: 13065
-		// (get) Token: 0x0600A6A1 RID: 42657 RVA: 0x0017909D File Offset: 0x0017729D
-		// (set) Token: 0x0600A6A2 RID: 42658 RVA: 0x001790C8 File Offset: 0x001772C8
+		// Token: 0x170035CD RID: 13773
+		// (get) Token: 0x0600B159 RID: 45401 RVA: 0x0018ED9D File Offset: 0x0018CF9D
+		// (set) Token: 0x0600B15A RID: 45402 RVA: 0x0018EDC8 File Offset: 0x0018CFC8
 		public virtual int TextId
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700330A RID: 13066
-		// (get) Token: 0x0600A6A3 RID: 42659 RVA: 0x001790D6 File Offset: 0x001772D6
-		// (set) Token: 0x0600A6A4 RID: 42660 RVA: 0x001790FD File Offset: 0x001772FD
+		// Token: 0x170035CE RID: 13774
+		// (get) Token: 0x0600B15B RID: 45403 RVA: 0x0018EDD6 File Offset: 0x0018CFD6
+		// (set) Token: 0x0600B15C RID: 45404 RVA: 0x0018EDFD File Offset: 0x0018CFFD
 		public virtual string TidOutline
 		{
 			get
@@ -112,9 +112,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700330B RID: 13067
-		// (get) Token: 0x0600A6A5 RID: 42661 RVA: 0x0017910B File Offset: 0x0017730B
-		// (set) Token: 0x0600A6A6 RID: 42662 RVA: 0x00179132 File Offset: 0x00177332
+		// Token: 0x170035CF RID: 13775
+		// (get) Token: 0x0600B15D RID: 45405 RVA: 0x0018EE0B File Offset: 0x0018D00B
+		// (set) Token: 0x0600B15E RID: 45406 RVA: 0x0018EE32 File Offset: 0x0018D032
 		public virtual string PlotLineKey
 		{
 			get
@@ -136,10 +136,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006384 RID: 25476
+		// Token: 0x04006968 RID: 26984
 		protected IShowTalkOutline FbInstance;
 
-		// Token: 0x04006385 RID: 25477
+		// Token: 0x04006969 RID: 26985
 		protected IShowTalkOutline_SetValue PocoInterface;
 	}
 }

@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.SkillInteract
 {
-	// Token: 0x02005284 RID: 21124
+	// Token: 0x02004254 RID: 16980
 	public enum EPhantomArenaBuffEffectType
 	{
-		// Token: 0x0401C9A4 RID: 117156
+		// Token: 0x040173D9 RID: 95193
 		AddFightBuff = 1,
-		// Token: 0x0401C9A5 RID: 117157
+		// Token: 0x040173DA RID: 95194
 		AddCardBuff,
-		// Token: 0x0401C9A6 RID: 117158
+		// Token: 0x040173DB RID: 95195
 		DrawCard,
-		// Token: 0x0401C9A7 RID: 117159
+		// Token: 0x040173DC RID: 95196
 		ModifyCardValue,
-		// Token: 0x0401C9A8 RID: 117160
+		// Token: 0x040173DD RID: 95197
 		ModifyGamerAttr,
-		// Token: 0x0401C9A9 RID: 117161
+		// Token: 0x040173DE RID: 95198
 		ModifyGamerValue,
-		// Token: 0x0401C9AA RID: 117162
+		// Token: 0x040173DF RID: 95199
 		ChooseCard,
-		// Token: 0x0401C9AB RID: 117163
+		// Token: 0x040173E0 RID: 95200
 		CopyCard = 21,
-		// Token: 0x0401C9AC RID: 117164
+		// Token: 0x040173E1 RID: 95201
 		GetAttr = 23,
-		// Token: 0x0401C9AD RID: 117165
+		// Token: 0x040173E2 RID: 95202
 		ActiveFactors,
-		// Token: 0x0401C9AE RID: 117166
+		// Token: 0x040173E3 RID: 95203
 		AddAttrsByMultipleSelect,
-		// Token: 0x0401C9AF RID: 117167
+		// Token: 0x040173E4 RID: 95204
 		ReconstructCard = 27
 	}
 }

@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056C1 RID: 22209
+	// Token: 0x02004698 RID: 18072
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CloseLoadingProcess : PendingProcess<EProcessType>
 	{
-		// Token: 0x060387D9 RID: 231385 RVA: 0x00D6B234 File Offset: 0x00D69434
+		// Token: 0x0602D6E0 RID: 186080 RVA: 0x00CB937C File Offset: 0x00CB757C
 		public CloseLoadingProcess(ELoadingReason reason, Action callback, float? duration = null, [Nullable(2)] string context = null) : base(EProcessType.CloseLoading)
 		{
 			this.Reason = reason;
@@ -17,16 +17,16 @@ namespace CSharpScript.Game.Module.LevelLoading
 			this.Context = context;
 		}
 
-		// Token: 0x0401DAB5 RID: 121525
+		// Token: 0x04018542 RID: 99650
 		public ELoadingReason Reason;
 
-		// Token: 0x0401DAB6 RID: 121526
+		// Token: 0x04018543 RID: 99651
 		public Action Callback;
 
-		// Token: 0x0401DAB7 RID: 121527
+		// Token: 0x04018544 RID: 99652
 		public float Duration;
 
-		// Token: 0x0401DAB8 RID: 121528
+		// Token: 0x04018545 RID: 99653
 		[Nullable(2)]
 		public string Context;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023BB RID: 9147
+	// Token: 0x0200264E RID: 9806
 	public static class EOverrideAudioLevelExtensions
 	{
-		// Token: 0x0600C748 RID: 51016 RVA: 0x001D2C8C File Offset: 0x001D0E8C
+		// Token: 0x0600D3B9 RID: 54201 RVA: 0x001EC248 File Offset: 0x001EA448
 		public static string ToEnumString(this EOverrideAudioLevel value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C749 RID: 51017 RVA: 0x001D2CE0 File Offset: 0x001D0EE0
+		// Token: 0x0600D3BA RID: 54202 RVA: 0x001EC29C File Offset: 0x001EA49C
 		public static EOverrideAudioLevel FromString(string name)
 		{
 			EOverrideAudioLevel result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C74A RID: 51018 RVA: 0x001D2D0C File Offset: 0x001D0F0C
+		// Token: 0x0600D3BB RID: 54203 RVA: 0x001EC2C8 File Offset: 0x001EA4C8
 		public static bool TryFromString(string name, out EOverrideAudioLevel value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C74B RID: 51019 RVA: 0x001D2D74 File Offset: 0x001D0F74
+		// Token: 0x0600D3BC RID: 54204 RVA: 0x001EC330 File Offset: 0x001EA530
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C74C RID: 51020 RVA: 0x001D2D9C File Offset: 0x001D0F9C
+		// Token: 0x0600D3BD RID: 54205 RVA: 0x001EC358 File Offset: 0x001EA558
 		public static EOverrideAudioLevel[] GetValues()
 		{
 			return new EOverrideAudioLevel[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C74D RID: 51021 RVA: 0x001D2DAF File Offset: 0x001D0FAF
+		// Token: 0x0600D3BE RID: 54206 RVA: 0x001EC36B File Offset: 0x001EA56B
 		public static string[] GetNames()
 		{
 			return new string[]

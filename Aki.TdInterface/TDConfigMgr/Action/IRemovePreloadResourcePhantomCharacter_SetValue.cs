@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D9D RID: 7581
+	// Token: 0x02001FB2 RID: 8114
 	public class IRemovePreloadResourcePhantomCharacter_SetValue
 	{
-		// Token: 0x04006195 RID: 24981
+		// Token: 0x04006719 RID: 26393
 		public ERemovePreloadResourceObjectType Type;
 
-		// Token: 0x04006196 RID: 24982
+		// Token: 0x0400671A RID: 26394
 		public int Id;
 
-		// Token: 0x04006197 RID: 24983
+		// Token: 0x0400671B RID: 26395
 		[Nullable(2)]
 		public IDelayRemoveAfterSkillFinish DelayReMove;
 	}

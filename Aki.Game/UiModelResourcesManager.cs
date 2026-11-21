@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002C5D RID: 11357
+// Token: 0x020021B6 RID: 8630
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelResourcesManager : Singleton
 {
-	// Token: 0x17001FD7 RID: 8151
-	// (get) Token: 0x06017B5E RID: 97118 RVA: 0x006071BC File Offset: 0x006053BC
+	// Token: 0x17002028 RID: 8232
+	// (get) Token: 0x060153D2 RID: 86994 RVA: 0x0062CC80 File Offset: 0x0062AE80
 	private int UiModelHandleId
 	{
 		get
@@ -24,7 +24,7 @@ public class UiModelResourcesManager : Singleton
 		}
 	}
 
-	// Token: 0x06017B5F RID: 97119 RVA: 0x006071DA File Offset: 0x006053DA
+	// Token: 0x060153D3 RID: 86995 RVA: 0x0062CC9E File Offset: 0x0062AE9E
 	public UiModelResourcesManager()
 	{
 		this.LoadUiModelHandleMap = new Dictionary<int, int[]>();
@@ -32,7 +32,7 @@ public class UiModelResourcesManager : Singleton
 		this.InvalidValue = 0;
 	}
 
-	// Token: 0x06017B60 RID: 97120 RVA: 0x006071FC File Offset: 0x006053FC
+	// Token: 0x060153D4 RID: 86996 RVA: 0x0062CCC0 File Offset: 0x0062AEC0
 	public int LoadUiModelResources(List<string> paths, [Nullable(new byte[]
 	{
 		2,
@@ -115,7 +115,7 @@ public class UiModelResourcesManager : Singleton
 		return modelHandleId;
 	}
 
-	// Token: 0x06017B61 RID: 97121 RVA: 0x00607370 File Offset: 0x00605570
+	// Token: 0x060153D5 RID: 86997 RVA: 0x0062CE34 File Offset: 0x0062B034
 	public int LoadUiRoleAllResourceByRoleConfigId(int roleId, [Nullable(new byte[]
 	{
 		2,
@@ -130,7 +130,7 @@ public class UiModelResourcesManager : Singleton
 		return this.LoadUiModelResources(list, callback);
 	}
 
-	// Token: 0x06017B62 RID: 97122 RVA: 0x006073A8 File Offset: 0x006055A8
+	// Token: 0x060153D6 RID: 86998 RVA: 0x0062CE6C File Offset: 0x0062B06C
 	public void CancelUiModelResourceLoad(int handleId)
 	{
 		if (handleId == this.InvalidValue)
@@ -152,7 +152,7 @@ public class UiModelResourcesManager : Singleton
 		}
 	}
 
-	// Token: 0x06017B63 RID: 97123 RVA: 0x00607408 File Offset: 0x00605608
+	// Token: 0x060153D7 RID: 86999 RVA: 0x0062CECC File Offset: 0x0062B0CC
 	public List<string> GetRoleResourcesPath(int roleConfigId)
 	{
 		List<string> list = new List<string>();
@@ -171,7 +171,7 @@ public class UiModelResourcesManager : Singleton
 		return list;
 	}
 
-	// Token: 0x06017B64 RID: 97124 RVA: 0x0060749C File Offset: 0x0060569C
+	// Token: 0x060153D8 RID: 87000 RVA: 0x0062CF60 File Offset: 0x0062B160
 	public unsafe List<string> GetWeaponResourcesPath(int weaponId)
 	{
 		List<string> list = new List<string>();
@@ -199,7 +199,7 @@ public class UiModelResourcesManager : Singleton
 		return list;
 	}
 
-	// Token: 0x06017B65 RID: 97125 RVA: 0x00607554 File Offset: 0x00605754
+	// Token: 0x060153D9 RID: 87001 RVA: 0x0062D018 File Offset: 0x0062B218
 	public string[] GetHuluResourcesPath(int huluId)
 	{
 		List<string> list = new List<string>();
@@ -217,8 +217,8 @@ public class UiModelResourcesManager : Singleton
 		return list.ToArray();
 	}
 
-	// Token: 0x17001FD8 RID: 8152
-	// (get) Token: 0x06017B66 RID: 97126 RVA: 0x006075A8 File Offset: 0x006057A8
+	// Token: 0x17002029 RID: 8233
+	// (get) Token: 0x060153DA RID: 87002 RVA: 0x0062D06C File Offset: 0x0062B26C
 	public static UiModelResourcesManager Instance
 	{
 		get
@@ -232,12 +232,12 @@ public class UiModelResourcesManager : Singleton
 		}
 	}
 
-	// Token: 0x06017B67 RID: 97127 RVA: 0x006075CB File Offset: 0x006057CB
+	// Token: 0x060153DB RID: 87003 RVA: 0x0062D08F File Offset: 0x0062B28F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017B68 RID: 97128 RVA: 0x006075CD File Offset: 0x006057CD
+	// Token: 0x060153DC RID: 87004 RVA: 0x0062D091 File Offset: 0x0062B291
 	public static void ResetStaticDefaultValue()
 	{
 		UiModelResourcesManager instance = UiModelResourcesManager._instance;
@@ -248,22 +248,22 @@ public class UiModelResourcesManager : Singleton
 		UiModelResourcesManager._instance = null;
 	}
 
-	// Token: 0x06017B69 RID: 97129 RVA: 0x006075E6 File Offset: 0x006057E6
+	// Token: 0x060153DD RID: 87005 RVA: 0x0062D0AA File Offset: 0x0062B2AA
 	static UiModelResourcesManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiModelResourcesManager.CreateStaticDefaultValue), new Action(UiModelResourcesManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B0A9 RID: 45225
+	// Token: 0x0400B415 RID: 46101
 	private readonly Dictionary<int, int[]> LoadUiModelHandleMap;
 
-	// Token: 0x0400B0AA RID: 45226
+	// Token: 0x0400B416 RID: 46102
 	private int UiModelHandleIdInternal;
 
-	// Token: 0x0400B0AB RID: 45227
+	// Token: 0x0400B417 RID: 46103
 	public readonly int InvalidValue;
 
-	// Token: 0x0400B0AC RID: 45228
+	// Token: 0x0400B418 RID: 46104
 	[Nullable(2)]
 	private static UiModelResourcesManager _instance;
 }

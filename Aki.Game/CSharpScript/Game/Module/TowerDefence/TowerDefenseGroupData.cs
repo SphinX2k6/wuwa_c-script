@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B4F RID: 19279
+	// Token: 0x02003AF7 RID: 15095
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseGroupData
 	{
-		// Token: 0x0401A9F4 RID: 109044
+		// Token: 0x04015346 RID: 86854
 		public int GroupId;
 
-		// Token: 0x0401A9F5 RID: 109045
+		// Token: 0x04015347 RID: 86855
 		public List<int> SubStageIds = new List<int>();
 
-		// Token: 0x0401A9F6 RID: 109046
+		// Token: 0x04015348 RID: 86856
 		public Action<int> OnClickSubLevel = delegate(int _)
 		{
 		};
 
-		// Token: 0x0401A9F7 RID: 109047
+		// Token: 0x04015349 RID: 86857
 		public Func<int, bool> IsSelectedGetter = (int _) => false;
 	}
 }

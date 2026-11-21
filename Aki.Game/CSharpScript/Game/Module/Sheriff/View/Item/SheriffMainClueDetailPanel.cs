@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C6A RID: 19562
+	// Token: 0x02003C1B RID: 15387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainClueDetailPanel : UiTabViewBase
 	{
-		// Token: 0x0603291D RID: 207133 RVA: 0x00BC91C4 File Offset: 0x00BC73C4
+		// Token: 0x060276D0 RID: 161488 RVA: 0x00B0DE28 File Offset: 0x00B0C028
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603291E RID: 207134 RVA: 0x00BC9398 File Offset: 0x00BC7598
+		// Token: 0x060276D1 RID: 161489 RVA: 0x00B0DFFC File Offset: 0x00B0C1FC
 		protected override void OnStart()
 		{
 			this.Proxy = (this.ExtraParams as SheriffMainProxy);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603291F RID: 207135 RVA: 0x00BC9414 File Offset: 0x00BC7614
+		// Token: 0x060276D2 RID: 161490 RVA: 0x00B0E078 File Offset: 0x00B0C278
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshClueDetail();
 		}
 
-		// Token: 0x06032920 RID: 207136 RVA: 0x00BC9494 File Offset: 0x00BC7694
+		// Token: 0x060276D3 RID: 161491 RVA: 0x00B0E0F8 File Offset: 0x00B0C2F8
 		protected void RefreshClueDetail()
 		{
 			bool uiactive = this.CurIndex > 0;
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.GetText(7).ShowTextNew(value.Desc);
 		}
 
-		// Token: 0x06032921 RID: 207137 RVA: 0x00BC9612 File Offset: 0x00BC7812
+		// Token: 0x060276D4 RID: 161492 RVA: 0x00B0E276 File Offset: 0x00B0C476
 		private SheriffMainCluePagePoint CreatePagePointItem()
 		{
 			return new SheriffMainCluePagePoint();
 		}
 
-		// Token: 0x06032922 RID: 207138 RVA: 0x00BC961C File Offset: 0x00BC781C
+		// Token: 0x060276D5 RID: 161493 RVA: 0x00B0E280 File Offset: 0x00B0C480
 		private void OnClickBtnPageRight()
 		{
 			if (this.CurIndex >= this.DataList.Count - 1)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshClueDetail();
 		}
 
-		// Token: 0x06032923 RID: 207139 RVA: 0x00BC968C File Offset: 0x00BC788C
+		// Token: 0x060276D6 RID: 161494 RVA: 0x00B0E2F0 File Offset: 0x00B0C4F0
 		private void OnClickBtnPageLeft()
 		{
 			if (this.CurIndex <= 0)
@@ -158,27 +158,27 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshClueDetail();
 		}
 
-		// Token: 0x06032924 RID: 207140 RVA: 0x00BC96F0 File Offset: 0x00BC78F0
+		// Token: 0x060276D7 RID: 161495 RVA: 0x00B0E354 File Offset: 0x00B0C554
 		private void OnClickBtnBackB2()
 		{
 			this.Proxy.CloseClueDetail();
 		}
 
-		// Token: 0x0401AE90 RID: 110224
+		// Token: 0x040157ED RID: 88045
 		[Nullable(2)]
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AE91 RID: 110225
+		// Token: 0x040157EE RID: 88046
 		[Nullable(2)]
 		protected SheriffAnomalyInfo AnomalyInfo;
 
-		// Token: 0x0401AE92 RID: 110226
+		// Token: 0x040157EF RID: 88047
 		protected List<int> DataList = new List<int>();
 
-		// Token: 0x0401AE93 RID: 110227
+		// Token: 0x040157F0 RID: 88048
 		protected int CurIndex;
 
-		// Token: 0x0401AE94 RID: 110228
+		// Token: 0x040157F1 RID: 88049
 		[Nullable(new byte[]
 		{
 			2,
@@ -186,38 +186,38 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericLayout<SheriffMainCluePagePoint, bool> PagePointLayout;
 
-		// Token: 0x0401AE95 RID: 110229
+		// Token: 0x040157F2 RID: 88050
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AE1D RID: 44573
+		// Token: 0x0200983B RID: 38971
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034E13 RID: 216595
+			// Token: 0x0402F7B8 RID: 194488
 			public const int BtnPageArrowRight = 0;
 
-			// Token: 0x04034E14 RID: 216596
+			// Token: 0x0402F7B9 RID: 194489
 			public const int BtnPageArrowLeft = 1;
 
-			// Token: 0x04034E15 RID: 216597
+			// Token: 0x0402F7BA RID: 194490
 			public const int TexIcon = 2;
 
-			// Token: 0x04034E16 RID: 216598
+			// Token: 0x0402F7BB RID: 194491
 			public const int TxtLock = 3;
 
-			// Token: 0x04034E17 RID: 216599
+			// Token: 0x0402F7BC RID: 194492
 			public const int PanelPage = 4;
 
-			// Token: 0x04034E18 RID: 216600
+			// Token: 0x0402F7BD RID: 194493
 			public const int ItemPoint = 5;
 
-			// Token: 0x04034E19 RID: 216601
+			// Token: 0x0402F7BE RID: 194494
 			public const int TxtName = 6;
 
-			// Token: 0x04034E1A RID: 216602
+			// Token: 0x0402F7BF RID: 194495
 			public const int TxtInfo = 7;
 
-			// Token: 0x04034E1B RID: 216603
+			// Token: 0x0402F7C0 RID: 194496
 			public const int BtnBackB2 = 8;
 		}
 	}

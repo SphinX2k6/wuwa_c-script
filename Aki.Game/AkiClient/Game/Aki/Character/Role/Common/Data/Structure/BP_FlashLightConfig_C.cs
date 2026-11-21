@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 {
-	// Token: 0x020040A9 RID: 16553
+	// Token: 0x020032A0 RID: 12960
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/Data/Structure/BP_FlashLightConfig.BP_FlashLightConfig_C")]
 	[UnrealStructLayout(256, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 252)]
 	public class BP_FlashLightConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602AB92 RID: 174994 RVA: 0x009E9FB0 File Offset: 0x009E81B0
+		// Token: 0x0602090F RID: 133391 RVA: 0x00949F80 File Offset: 0x00948180
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_FlashLightConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,462 +24,462 @@ namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 			return BP_FlashLightConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602AB93 RID: 174995 RVA: 0x009E9FD4 File Offset: 0x009E81D4
+		// Token: 0x06020910 RID: 133392 RVA: 0x00949FA4 File Offset: 0x009481A4
 		public BP_FlashLightConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_FlashLightConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602AB94 RID: 174996 RVA: 0x009E9FFC File Offset: 0x009E81FC
+		// Token: 0x06020911 RID: 133393 RVA: 0x00949FCC File Offset: 0x009481CC
 		[NullableContext(1)]
 		public BP_FlashLightConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_FlashLightConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700691A RID: 26906
-		// (get) Token: 0x0602AB95 RID: 174997 RVA: 0x009EA02F File Offset: 0x009E822F
-		// (set) Token: 0x0602AB96 RID: 174998 RVA: 0x009EA043 File Offset: 0x009E8243
+		// Token: 0x17003FBD RID: 16317
+		// (get) Token: 0x06020912 RID: 133394 RVA: 0x00949FFF File Offset: 0x009481FF
+		// (set) Token: 0x06020913 RID: 133395 RVA: 0x0094A013 File Offset: 0x00948213
 		public unsafe FTransform RelativeTrans
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_RelativeTrans);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_RelativeTrans) = value;
 			}
 		}
 
-		// Token: 0x1700691B RID: 26907
-		// (get) Token: 0x0602AB97 RID: 174999 RVA: 0x009EA058 File Offset: 0x009E8258
-		// (set) Token: 0x0602AB98 RID: 175000 RVA: 0x009EA068 File Offset: 0x009E8268
+		// Token: 0x17003FBE RID: 16318
+		// (get) Token: 0x06020914 RID: 133396 RVA: 0x0094A028 File Offset: 0x00948228
+		// (set) Token: 0x06020915 RID: 133397 RVA: 0x0094A038 File Offset: 0x00948238
 		public unsafe float Intensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_Intensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_Intensity) = value;
 			}
 		}
 
-		// Token: 0x1700691C RID: 26908
-		// (get) Token: 0x0602AB99 RID: 175001 RVA: 0x009EA079 File Offset: 0x009E8279
-		// (set) Token: 0x0602AB9A RID: 175002 RVA: 0x009EA089 File Offset: 0x009E8289
+		// Token: 0x17003FBF RID: 16319
+		// (get) Token: 0x06020916 RID: 133398 RVA: 0x0094A049 File Offset: 0x00948249
+		// (set) Token: 0x06020917 RID: 133399 RVA: 0x0094A059 File Offset: 0x00948259
 		public unsafe float AttenuationRadius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_AttenuationRadius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_AttenuationRadius) = value;
 			}
 		}
 
-		// Token: 0x1700691D RID: 26909
-		// (get) Token: 0x0602AB9B RID: 175003 RVA: 0x009EA09A File Offset: 0x009E829A
-		// (set) Token: 0x0602AB9C RID: 175004 RVA: 0x009EA0AA File Offset: 0x009E82AA
+		// Token: 0x17003FC0 RID: 16320
+		// (get) Token: 0x06020918 RID: 133400 RVA: 0x0094A06A File Offset: 0x0094826A
+		// (set) Token: 0x06020919 RID: 133401 RVA: 0x0094A07A File Offset: 0x0094827A
 		public unsafe float InnerConeAngle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_InnerConeAngle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_InnerConeAngle) = value;
 			}
 		}
 
-		// Token: 0x1700691E RID: 26910
-		// (get) Token: 0x0602AB9D RID: 175005 RVA: 0x009EA0BB File Offset: 0x009E82BB
-		// (set) Token: 0x0602AB9E RID: 175006 RVA: 0x009EA0CB File Offset: 0x009E82CB
+		// Token: 0x17003FC1 RID: 16321
+		// (get) Token: 0x0602091A RID: 133402 RVA: 0x0094A08B File Offset: 0x0094828B
+		// (set) Token: 0x0602091B RID: 133403 RVA: 0x0094A09B File Offset: 0x0094829B
 		public unsafe float OuterConeAngle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_OuterConeAngle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_OuterConeAngle) = value;
 			}
 		}
 
-		// Token: 0x1700691F RID: 26911
-		// (get) Token: 0x0602AB9F RID: 175007 RVA: 0x009EA0DC File Offset: 0x009E82DC
-		// (set) Token: 0x0602ABA0 RID: 175008 RVA: 0x009EA0EC File Offset: 0x009E82EC
+		// Token: 0x17003FC2 RID: 16322
+		// (get) Token: 0x0602091C RID: 133404 RVA: 0x0094A0AC File Offset: 0x009482AC
+		// (set) Token: 0x0602091D RID: 133405 RVA: 0x0094A0BC File Offset: 0x009482BC
 		public unsafe float SpecularScale
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_SpecularScale);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_SpecularScale) = value;
 			}
 		}
 
-		// Token: 0x17006920 RID: 26912
-		// (get) Token: 0x0602ABA1 RID: 175009 RVA: 0x009EA0FD File Offset: 0x009E82FD
-		// (set) Token: 0x0602ABA2 RID: 175010 RVA: 0x009EA111 File Offset: 0x009E8311
+		// Token: 0x17003FC3 RID: 16323
+		// (get) Token: 0x0602091E RID: 133406 RVA: 0x0094A0CD File Offset: 0x009482CD
+		// (set) Token: 0x0602091F RID: 133407 RVA: 0x0094A0E1 File Offset: 0x009482E1
 		public unsafe FLinearColor LightColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LightColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LightColor) = value;
 			}
 		}
 
-		// Token: 0x17006921 RID: 26913
-		// (get) Token: 0x0602ABA3 RID: 175011 RVA: 0x009EA126 File Offset: 0x009E8326
-		// (set) Token: 0x0602ABA4 RID: 175012 RVA: 0x009EA136 File Offset: 0x009E8336
+		// Token: 0x17003FC4 RID: 16324
+		// (get) Token: 0x06020920 RID: 133408 RVA: 0x0094A0F6 File Offset: 0x009482F6
+		// (set) Token: 0x06020921 RID: 133409 RVA: 0x0094A106 File Offset: 0x00948306
 		public unsafe bool UseCameraPitch
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_UseCameraPitch) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_UseCameraPitch) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006922 RID: 26914
-		// (get) Token: 0x0602ABA5 RID: 175013 RVA: 0x009EA147 File Offset: 0x009E8347
-		// (set) Token: 0x0602ABA6 RID: 175014 RVA: 0x009EA157 File Offset: 0x009E8357
+		// Token: 0x17003FC5 RID: 16325
+		// (get) Token: 0x06020922 RID: 133410 RVA: 0x0094A117 File Offset: 0x00948317
+		// (set) Token: 0x06020923 RID: 133411 RVA: 0x0094A127 File Offset: 0x00948327
 		public unsafe bool UsePitchLerp
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_UsePitchLerp) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_UsePitchLerp) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006923 RID: 26915
-		// (get) Token: 0x0602ABA7 RID: 175015 RVA: 0x009EA168 File Offset: 0x009E8368
-		// (set) Token: 0x0602ABA8 RID: 175016 RVA: 0x009EA178 File Offset: 0x009E8378
+		// Token: 0x17003FC6 RID: 16326
+		// (get) Token: 0x06020924 RID: 133412 RVA: 0x0094A138 File Offset: 0x00948338
+		// (set) Token: 0x06020925 RID: 133413 RVA: 0x0094A148 File Offset: 0x00948348
 		public unsafe float MinTurnSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_MinTurnSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_MinTurnSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006924 RID: 26916
-		// (get) Token: 0x0602ABA9 RID: 175017 RVA: 0x009EA189 File Offset: 0x009E8389
-		// (set) Token: 0x0602ABAA RID: 175018 RVA: 0x009EA199 File Offset: 0x009E8399
+		// Token: 0x17003FC7 RID: 16327
+		// (get) Token: 0x06020926 RID: 133414 RVA: 0x0094A159 File Offset: 0x00948359
+		// (set) Token: 0x06020927 RID: 133415 RVA: 0x0094A169 File Offset: 0x00948369
 		public unsafe float MaxTurnSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_MaxTurnSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_MaxTurnSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006925 RID: 26917
-		// (get) Token: 0x0602ABAB RID: 175019 RVA: 0x009EA1AA File Offset: 0x009E83AA
-		// (set) Token: 0x0602ABAC RID: 175020 RVA: 0x009EA1BA File Offset: 0x009E83BA
+		// Token: 0x17003FC8 RID: 16328
+		// (get) Token: 0x06020928 RID: 133416 RVA: 0x0094A17A File Offset: 0x0094837A
+		// (set) Token: 0x06020929 RID: 133417 RVA: 0x0094A18A File Offset: 0x0094838A
 		public unsafe float LerpBeginDeg
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LerpBeginDeg);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LerpBeginDeg) = value;
 			}
 		}
 
-		// Token: 0x17006926 RID: 26918
-		// (get) Token: 0x0602ABAD RID: 175021 RVA: 0x009EA1CB File Offset: 0x009E83CB
-		// (set) Token: 0x0602ABAE RID: 175022 RVA: 0x009EA1DB File Offset: 0x009E83DB
+		// Token: 0x17003FC9 RID: 16329
+		// (get) Token: 0x0602092A RID: 133418 RVA: 0x0094A19B File Offset: 0x0094839B
+		// (set) Token: 0x0602092B RID: 133419 RVA: 0x0094A1AB File Offset: 0x009483AB
 		public unsafe float LerpPow
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LerpPow);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LerpPow) = value;
 			}
 		}
 
-		// Token: 0x17006927 RID: 26919
-		// (get) Token: 0x0602ABAF RID: 175023 RVA: 0x009EA1EC File Offset: 0x009E83EC
-		// (set) Token: 0x0602ABB0 RID: 175024 RVA: 0x009EA200 File Offset: 0x009E8400
+		// Token: 0x17003FCA RID: 16330
+		// (get) Token: 0x0602092C RID: 133420 RVA: 0x0094A1BC File Offset: 0x009483BC
+		// (set) Token: 0x0602092D RID: 133421 RVA: 0x0094A1D0 File Offset: 0x009483D0
 		public unsafe UCurveFloat LerpCurve
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_13);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_LerpCurve);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_13, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_LerpCurve, value);
 			}
 		}
 
-		// Token: 0x17006928 RID: 26920
-		// (get) Token: 0x0602ABB1 RID: 175025 RVA: 0x009EA215 File Offset: 0x009E8415
-		// (set) Token: 0x0602ABB2 RID: 175026 RVA: 0x009EA225 File Offset: 0x009E8425
+		// Token: 0x17003FCB RID: 16331
+		// (get) Token: 0x0602092E RID: 133422 RVA: 0x0094A1E5 File Offset: 0x009483E5
+		// (set) Token: 0x0602092F RID: 133423 RVA: 0x0094A1F5 File Offset: 0x009483F5
 		public unsafe float ToonIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonIntensity) = value;
 			}
 		}
 
-		// Token: 0x17006929 RID: 26921
-		// (get) Token: 0x0602ABB3 RID: 175027 RVA: 0x009EA236 File Offset: 0x009E8436
-		// (set) Token: 0x0602ABB4 RID: 175028 RVA: 0x009EA246 File Offset: 0x009E8446
+		// Token: 0x17003FCC RID: 16332
+		// (get) Token: 0x06020930 RID: 133424 RVA: 0x0094A206 File Offset: 0x00948406
+		// (set) Token: 0x06020931 RID: 133425 RVA: 0x0094A216 File Offset: 0x00948416
 		public unsafe float ToonShadowColorIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonShadowColorIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonShadowColorIntensity) = value;
 			}
 		}
 
-		// Token: 0x1700692A RID: 26922
-		// (get) Token: 0x0602ABB5 RID: 175029 RVA: 0x009EA257 File Offset: 0x009E8457
-		// (set) Token: 0x0602ABB6 RID: 175030 RVA: 0x009EA267 File Offset: 0x009E8467
+		// Token: 0x17003FCD RID: 16333
+		// (get) Token: 0x06020932 RID: 133426 RVA: 0x0094A227 File Offset: 0x00948427
+		// (set) Token: 0x06020933 RID: 133427 RVA: 0x0094A237 File Offset: 0x00948437
 		public unsafe float ToonRealTimeShadowIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonRealTimeShadowIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonRealTimeShadowIntensity) = value;
 			}
 		}
 
-		// Token: 0x1700692B RID: 26923
-		// (get) Token: 0x0602ABB7 RID: 175031 RVA: 0x009EA278 File Offset: 0x009E8478
-		// (set) Token: 0x0602ABB8 RID: 175032 RVA: 0x009EA28C File Offset: 0x009E848C
+		// Token: 0x17003FCE RID: 16334
+		// (get) Token: 0x06020934 RID: 133428 RVA: 0x0094A248 File Offset: 0x00948448
+		// (set) Token: 0x06020935 RID: 133429 RVA: 0x0094A25C File Offset: 0x0094845C
 		public unsafe FLinearColor LightToonColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LightToonColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LightToonColor) = value;
 			}
 		}
 
-		// Token: 0x1700692C RID: 26924
-		// (get) Token: 0x0602ABB9 RID: 175033 RVA: 0x009EA2A1 File Offset: 0x009E84A1
-		// (set) Token: 0x0602ABBA RID: 175034 RVA: 0x009EA2B1 File Offset: 0x009E84B1
+		// Token: 0x17003FCF RID: 16335
+		// (get) Token: 0x06020936 RID: 133430 RVA: 0x0094A271 File Offset: 0x00948471
+		// (set) Token: 0x06020937 RID: 133431 RVA: 0x0094A281 File Offset: 0x00948481
 		public unsafe float ToonPointLightFallOff
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonPointLightFallOff);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonPointLightFallOff) = value;
 			}
 		}
 
-		// Token: 0x1700692D RID: 26925
-		// (get) Token: 0x0602ABBB RID: 175035 RVA: 0x009EA2C2 File Offset: 0x009E84C2
-		// (set) Token: 0x0602ABBC RID: 175036 RVA: 0x009EA2D2 File Offset: 0x009E84D2
+		// Token: 0x17003FD0 RID: 16336
+		// (get) Token: 0x06020938 RID: 133432 RVA: 0x0094A292 File Offset: 0x00948492
+		// (set) Token: 0x06020939 RID: 133433 RVA: 0x0094A2A2 File Offset: 0x009484A2
 		public unsafe float ToonDistanceBlendIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonDistanceBlendIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonDistanceBlendIntensity) = value;
 			}
 		}
 
-		// Token: 0x1700692E RID: 26926
-		// (get) Token: 0x0602ABBD RID: 175037 RVA: 0x009EA2E3 File Offset: 0x009E84E3
-		// (set) Token: 0x0602ABBE RID: 175038 RVA: 0x009EA2F3 File Offset: 0x009E84F3
+		// Token: 0x17003FD1 RID: 16337
+		// (get) Token: 0x0602093A RID: 133434 RVA: 0x0094A2B3 File Offset: 0x009484B3
+		// (set) Token: 0x0602093B RID: 133435 RVA: 0x0094A2C3 File Offset: 0x009484C3
 		public unsafe int ToonLightingPriority
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonLightingPriority);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_ToonLightingPriority) = value;
 			}
 		}
 
-		// Token: 0x1700692F RID: 26927
-		// (get) Token: 0x0602ABBF RID: 175039 RVA: 0x009EA304 File Offset: 0x009E8504
-		// (set) Token: 0x0602ABC0 RID: 175040 RVA: 0x009EA314 File Offset: 0x009E8514
+		// Token: 0x17003FD2 RID: 16338
+		// (get) Token: 0x0602093C RID: 133436 RVA: 0x0094A2D4 File Offset: 0x009484D4
+		// (set) Token: 0x0602093D RID: 133437 RVA: 0x0094A2E4 File Offset: 0x009484E4
 		public unsafe float LightFalloffExponent
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LightFalloffExponent);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_LightFalloffExponent) = value;
 			}
 		}
 
-		// Token: 0x17006930 RID: 26928
-		// (get) Token: 0x0602ABC1 RID: 175041 RVA: 0x009EA325 File Offset: 0x009E8525
-		// (set) Token: 0x0602ABC2 RID: 175042 RVA: 0x009EA339 File Offset: 0x009E8539
+		// Token: 0x17003FD3 RID: 16339
+		// (get) Token: 0x0602093E RID: 133438 RVA: 0x0094A2F5 File Offset: 0x009484F5
+		// (set) Token: 0x0602093F RID: 133439 RVA: 0x0094A309 File Offset: 0x00948509
 		public unsafe UTextureLightProfile IESTexture
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UTextureLightProfile>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_22);
+				return BuiltinUtils.ObjectPropertyGetter<UTextureLightProfile>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_IESTexture);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_22, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FlashLightConfig_C.__PropertyOffset_IESTexture, value);
 			}
 		}
 
-		// Token: 0x17006931 RID: 26929
-		// (get) Token: 0x0602ABC3 RID: 175043 RVA: 0x009EA34E File Offset: 0x009E854E
-		// (set) Token: 0x0602ABC4 RID: 175044 RVA: 0x009EA35E File Offset: 0x009E855E
+		// Token: 0x17003FD4 RID: 16340
+		// (get) Token: 0x06020940 RID: 133440 RVA: 0x0094A31E File Offset: 0x0094851E
+		// (set) Token: 0x06020941 RID: 133441 RVA: 0x0094A32E File Offset: 0x0094852E
 		public unsafe float VolumetricScatteringIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_VolumetricScatteringIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)BP_FlashLightConfig_C.__PropertyOffset_VolumetricScatteringIntensity) = value;
 			}
 		}
 
-		// Token: 0x0602ABC5 RID: 175045 RVA: 0x009EA36F File Offset: 0x009E856F
+		// Token: 0x06020942 RID: 133442 RVA: 0x0094A33F File Offset: 0x0094853F
 		protected BP_FlashLightConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040161C9 RID: 90569
+		// Token: 0x040119A7 RID: 72103
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Role/Common/Data/Structure/BP_FlashLightConfig.BP_FlashLightConfig_C";
 
-		// Token: 0x040161CA RID: 90570
+		// Token: 0x040119A8 RID: 72104
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040161CB RID: 90571
+		// Token: 0x040119A9 RID: 72105
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040161CC RID: 90572
-		internal static int __PropertyOffset_0;
+		// Token: 0x040119AA RID: 72106
+		internal static int __PropertyOffset_RelativeTrans;
 
-		// Token: 0x040161CD RID: 90573
-		internal static int __PropertyOffset_1;
+		// Token: 0x040119AB RID: 72107
+		internal static int __PropertyOffset_Intensity;
 
-		// Token: 0x040161CE RID: 90574
-		internal static int __PropertyOffset_2;
+		// Token: 0x040119AC RID: 72108
+		internal static int __PropertyOffset_AttenuationRadius;
 
-		// Token: 0x040161CF RID: 90575
-		internal static int __PropertyOffset_3;
+		// Token: 0x040119AD RID: 72109
+		internal static int __PropertyOffset_InnerConeAngle;
 
-		// Token: 0x040161D0 RID: 90576
-		internal static int __PropertyOffset_4;
+		// Token: 0x040119AE RID: 72110
+		internal static int __PropertyOffset_OuterConeAngle;
 
-		// Token: 0x040161D1 RID: 90577
-		internal static int __PropertyOffset_5;
+		// Token: 0x040119AF RID: 72111
+		internal static int __PropertyOffset_SpecularScale;
 
-		// Token: 0x040161D2 RID: 90578
-		internal static int __PropertyOffset_6;
+		// Token: 0x040119B0 RID: 72112
+		internal static int __PropertyOffset_LightColor;
 
-		// Token: 0x040161D3 RID: 90579
-		internal static int __PropertyOffset_7;
+		// Token: 0x040119B1 RID: 72113
+		internal static int __PropertyOffset_UseCameraPitch;
 
-		// Token: 0x040161D4 RID: 90580
-		internal static int __PropertyOffset_8;
+		// Token: 0x040119B2 RID: 72114
+		internal static int __PropertyOffset_UsePitchLerp;
 
-		// Token: 0x040161D5 RID: 90581
-		internal static int __PropertyOffset_9;
+		// Token: 0x040119B3 RID: 72115
+		internal static int __PropertyOffset_MinTurnSpeed;
 
-		// Token: 0x040161D6 RID: 90582
-		internal static int __PropertyOffset_10;
+		// Token: 0x040119B4 RID: 72116
+		internal static int __PropertyOffset_MaxTurnSpeed;
 
-		// Token: 0x040161D7 RID: 90583
-		internal static int __PropertyOffset_11;
+		// Token: 0x040119B5 RID: 72117
+		internal static int __PropertyOffset_LerpBeginDeg;
 
-		// Token: 0x040161D8 RID: 90584
-		internal static int __PropertyOffset_12;
+		// Token: 0x040119B6 RID: 72118
+		internal static int __PropertyOffset_LerpPow;
 
-		// Token: 0x040161D9 RID: 90585
-		internal static int __PropertyOffset_13;
+		// Token: 0x040119B7 RID: 72119
+		internal static int __PropertyOffset_LerpCurve;
 
-		// Token: 0x040161DA RID: 90586
-		internal static int __PropertyOffset_14;
+		// Token: 0x040119B8 RID: 72120
+		internal static int __PropertyOffset_ToonIntensity;
 
-		// Token: 0x040161DB RID: 90587
-		internal static int __PropertyOffset_15;
+		// Token: 0x040119B9 RID: 72121
+		internal static int __PropertyOffset_ToonShadowColorIntensity;
 
-		// Token: 0x040161DC RID: 90588
-		internal static int __PropertyOffset_16;
+		// Token: 0x040119BA RID: 72122
+		internal static int __PropertyOffset_ToonRealTimeShadowIntensity;
 
-		// Token: 0x040161DD RID: 90589
-		internal static int __PropertyOffset_17;
+		// Token: 0x040119BB RID: 72123
+		internal static int __PropertyOffset_LightToonColor;
 
-		// Token: 0x040161DE RID: 90590
-		internal static int __PropertyOffset_18;
+		// Token: 0x040119BC RID: 72124
+		internal static int __PropertyOffset_ToonPointLightFallOff;
 
-		// Token: 0x040161DF RID: 90591
-		internal static int __PropertyOffset_19;
+		// Token: 0x040119BD RID: 72125
+		internal static int __PropertyOffset_ToonDistanceBlendIntensity;
 
-		// Token: 0x040161E0 RID: 90592
-		internal static int __PropertyOffset_20;
+		// Token: 0x040119BE RID: 72126
+		internal static int __PropertyOffset_ToonLightingPriority;
 
-		// Token: 0x040161E1 RID: 90593
-		internal static int __PropertyOffset_21;
+		// Token: 0x040119BF RID: 72127
+		internal static int __PropertyOffset_LightFalloffExponent;
 
-		// Token: 0x040161E2 RID: 90594
-		internal static int __PropertyOffset_22;
+		// Token: 0x040119C0 RID: 72128
+		internal static int __PropertyOffset_IESTexture;
 
-		// Token: 0x040161E3 RID: 90595
-		internal static int __PropertyOffset_23;
+		// Token: 0x040119C1 RID: 72129
+		internal static int __PropertyOffset_VolumetricScatteringIntensity;
 	}
 }

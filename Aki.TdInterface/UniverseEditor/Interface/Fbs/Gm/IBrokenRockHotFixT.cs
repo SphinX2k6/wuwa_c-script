@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200463D RID: 17981
+	// Token: 0x02004AA5 RID: 19109
 	public class IBrokenRockHotFixT
 	{
-		// Token: 0x17007F98 RID: 32664
-		// (get) Token: 0x0601B3C5 RID: 111557 RVA: 0x003E0632 File Offset: 0x003DE832
-		// (set) Token: 0x0601B3C6 RID: 111558 RVA: 0x003E063A File Offset: 0x003DE83A
+		// Token: 0x170085D9 RID: 34265
+		// (get) Token: 0x0601CB9A RID: 117658 RVA: 0x0040C8CE File Offset: 0x0040AACE
+		// (set) Token: 0x0601CB9B RID: 117659 RVA: 0x0040C8D6 File Offset: 0x0040AAD6
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x0601B3C7 RID: 111559 RVA: 0x003E0643 File Offset: 0x003DE843
+		// Token: 0x0601CB9C RID: 117660 RVA: 0x0040C8DF File Offset: 0x0040AADF
 		public IBrokenRockHotFixT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

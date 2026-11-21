@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020029F3 RID: 10739
+// Token: 0x02001F6E RID: 8046
 public class ShopUtils
 {
-	// Token: 0x0601645A RID: 91226 RVA: 0x005A1D10 File Offset: 0x0059FF10
+	// Token: 0x06013E61 RID: 81505 RVA: 0x005CCCF0 File Offset: 0x005CAEF0
 	public static int GetResource(int id)
 	{
 		if (id == 1)
@@ -40,7 +40,7 @@ public class ShopUtils
 		}
 	}
 
-	// Token: 0x0601645B RID: 91227 RVA: 0x005A1D94 File Offset: 0x0059FF94
+	// Token: 0x06013E62 RID: 81506 RVA: 0x005CCD74 File Offset: 0x005CAF74
 	[NullableContext(1)]
 	public static string FormatTime(int seconds)
 	{
@@ -77,12 +77,12 @@ public class ShopUtils
 		});
 	}
 
-	// Token: 0x0400A5AD RID: 42413
+	// Token: 0x0400A997 RID: 43415
 	private const int EXP_ID = 1;
 
-	// Token: 0x0400A5AE RID: 42414
+	// Token: 0x0400A998 RID: 43416
 	private const int GOLD_ID = 2;
 
-	// Token: 0x0400A5AF RID: 42415
+	// Token: 0x0400A999 RID: 43417
 	private const int DIAMOND_ID = 3;
 }

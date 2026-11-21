@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200178B RID: 6027
+// Token: 0x02000C44 RID: 3140
 public enum EChatRoomType
 {
-	// Token: 0x04004FB7 RID: 20407
+	// Token: 0x04005061 RID: 20577
 	None,
-	// Token: 0x04004FB8 RID: 20408
+	// Token: 0x04005062 RID: 20578
 	Private,
-	// Token: 0x04004FB9 RID: 20409
+	// Token: 0x04005063 RID: 20579
 	Team,
-	// Token: 0x04004FBA RID: 20410
+	// Token: 0x04005064 RID: 20580
 	World
 }

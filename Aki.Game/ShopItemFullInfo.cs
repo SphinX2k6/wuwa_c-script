@@ -5,12 +5,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x020029F7 RID: 10743
+// Token: 0x02001F72 RID: 8050
 [NullableContext(1)]
 [Nullable(0)]
 public class ShopItemFullInfo
 {
-	// Token: 0x06016485 RID: 91269 RVA: 0x005A2F8C File Offset: 0x005A118C
+	// Token: 0x06013E8C RID: 81548 RVA: 0x005CDF64 File Offset: 0x005CC164
 	public ShopItemFullInfo(ItemConfig itemInfo, ShopItemInfoNew boughtInfo, int shopId)
 	{
 		this.ItemInfo = itemInfo;
@@ -53,8 +53,8 @@ public class ShopItemFullInfo
 		this.SortIndex = boughtInfo.SortIndex;
 	}
 
-	// Token: 0x17001DC2 RID: 7618
-	// (get) Token: 0x06016486 RID: 91270 RVA: 0x005A3150 File Offset: 0x005A1350
+	// Token: 0x17001E1B RID: 7707
+	// (get) Token: 0x06013E8D RID: 81549 RVA: 0x005CE128 File Offset: 0x005CC328
 	public string LockInfo
 	{
 		get
@@ -103,25 +103,25 @@ public class ShopItemFullInfo
 		}
 	}
 
-	// Token: 0x06016487 RID: 91271 RVA: 0x005A3272 File Offset: 0x005A1472
+	// Token: 0x06013E8E RID: 81550 RVA: 0x005CE24A File Offset: 0x005CC44A
 	public bool IsUnlocked()
 	{
 		return (this.BeginTime <= 0U || this.BeginTime <= TimeUtil.Instance.GetServerTime()) && !this.IsLocked;
 	}
 
-	// Token: 0x06016488 RID: 91272 RVA: 0x005A329C File Offset: 0x005A149C
+	// Token: 0x06013E8F RID: 81551 RVA: 0x005CE274 File Offset: 0x005CC474
 	public bool InSellTime()
 	{
 		return this.EndTime <= 0U || (TimeUtil.Instance.GetServerTime() >= this.BeginTime && this.EndTime > TimeUtil.Instance.GetServerTime());
 	}
 
-	// Token: 0x06016489 RID: 91273 RVA: 0x005A32D3 File Offset: 0x005A14D3
+	// Token: 0x06013E90 RID: 81552 RVA: 0x005CE2AB File Offset: 0x005CC4AB
 	public bool IsAffordable(int count = 1)
 	{
 		return this.DefaultPrice != null && ShopUtils.GetResource(this.DefaultPrice.CoinId) >= this.DefaultPrice.CoinPrice * count;
 	}
 
-	// Token: 0x0601648A RID: 91274 RVA: 0x005A3304 File Offset: 0x005A1504
+	// Token: 0x06013E91 RID: 81553 RVA: 0x005CE2DC File Offset: 0x005CC4DC
 	public int GetMaxBuyCount()
 	{
 		if (this.DefaultPrice == null)
@@ -136,19 +136,19 @@ public class ShopItemFullInfo
 		return num;
 	}
 
-	// Token: 0x0601648B RID: 91275 RVA: 0x005A335D File Offset: 0x005A155D
+	// Token: 0x06013E92 RID: 81554 RVA: 0x005CE335 File Offset: 0x005CC535
 	public bool IsOutOfDate()
 	{
 		return this.EndTime > 0U && this.EndTime < TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x0601648C RID: 91276 RVA: 0x005A337F File Offset: 0x005A157F
+	// Token: 0x06013E93 RID: 81555 RVA: 0x005CE357 File Offset: 0x005CC557
 	public bool IsSoldOut()
 	{
 		return this.BuyLimit > 0 && this.BoughtCount == this.BuyLimit;
 	}
 
-	// Token: 0x0601648D RID: 91277 RVA: 0x005A339C File Offset: 0x005A159C
+	// Token: 0x06013E94 RID: 81556 RVA: 0x005CE374 File Offset: 0x005CC574
 	public bool InSaleTime()
 	{
 		if (this.BeginTime > 0U && this.EndTime > 0U)
@@ -159,19 +159,19 @@ public class ShopItemFullInfo
 		return false;
 	}
 
-	// Token: 0x0601648E RID: 91278 RVA: 0x005A33E0 File Offset: 0x005A15E0
+	// Token: 0x06013E95 RID: 81557 RVA: 0x005CE3B8 File Offset: 0x005CC5B8
 	public bool IsOutOfStock()
 	{
 		return (this.BuyLimit > 0 && this.BoughtCount == this.BuyLimit) || (this.EndTime > 0U && this.EndTime < TimeUtil.Instance.GetServerTime());
 	}
 
-	// Token: 0x0601648F RID: 91279 RVA: 0x005A341B File Offset: 0x005A161B
+	// Token: 0x06013E96 RID: 81558 RVA: 0x005CE3F3 File Offset: 0x005CC5F3
 	public bool IsInteractive()
 	{
 		return this.IsUnlocked() && !this.IsOutOfStock();
 	}
 
-	// Token: 0x06016490 RID: 91280 RVA: 0x005A3430 File Offset: 0x005A1630
+	// Token: 0x06013E97 RID: 81559 RVA: 0x005CE408 File Offset: 0x005CC608
 	public int GetMoneyId()
 	{
 		if (this.DefaultPrice == null)
@@ -181,7 +181,7 @@ public class ShopItemFullInfo
 		return this.DefaultPrice.CoinId;
 	}
 
-	// Token: 0x06016491 RID: 91281 RVA: 0x005A3447 File Offset: 0x005A1647
+	// Token: 0x06013E98 RID: 81560 RVA: 0x005CE41F File Offset: 0x005CC61F
 	public int GetDefaultPrice()
 	{
 		if (this.DefaultPrice == null)
@@ -191,7 +191,7 @@ public class ShopItemFullInfo
 		return this.DefaultPrice.CoinPrice;
 	}
 
-	// Token: 0x06016492 RID: 91282 RVA: 0x005A3460 File Offset: 0x005A1660
+	// Token: 0x06013E99 RID: 81561 RVA: 0x005CE438 File Offset: 0x005CC638
 	public int GetPrice(int moneyId)
 	{
 		if (this.Price == null || this.Price.Count == 0)
@@ -206,7 +206,7 @@ public class ShopItemFullInfo
 		return 0;
 	}
 
-	// Token: 0x06016493 RID: 91283 RVA: 0x005A349C File Offset: 0x005A169C
+	// Token: 0x06013E9A RID: 81562 RVA: 0x005CE474 File Offset: 0x005CC674
 	public int GetOriginalPrice()
 	{
 		if (this.DefaultPrice == null)
@@ -216,55 +216,55 @@ public class ShopItemFullInfo
 		return this.DefaultPrice.OriginalPrice;
 	}
 
-	// Token: 0x0400A5BF RID: 42431
+	// Token: 0x0400A9A9 RID: 43433
 	public ItemConfig ItemInfo;
 
-	// Token: 0x0400A5C0 RID: 42432
+	// Token: 0x0400A9AA RID: 43434
 	public readonly int ItemId;
 
-	// Token: 0x0400A5C1 RID: 42433
+	// Token: 0x0400A9AB RID: 43435
 	public int BoughtCount;
 
-	// Token: 0x0400A5C2 RID: 42434
+	// Token: 0x0400A9AC RID: 43436
 	public int BuyLimit;
 
-	// Token: 0x0400A5C3 RID: 42435
+	// Token: 0x0400A9AD RID: 43437
 	public int StackSize;
 
-	// Token: 0x0400A5C4 RID: 42436
+	// Token: 0x0400A9AE RID: 43438
 	[Nullable(2)]
 	public ItemPrice DefaultPrice;
 
-	// Token: 0x0400A5C5 RID: 42437
+	// Token: 0x0400A9AF RID: 43439
 	public Dictionary<int, ItemPrice> Price = new Dictionary<int, ItemPrice>();
 
-	// Token: 0x0400A5C6 RID: 42438
+	// Token: 0x0400A9B0 RID: 43440
 	public uint BeginTime;
 
-	// Token: 0x0400A5C7 RID: 42439
+	// Token: 0x0400A9B1 RID: 43441
 	public uint EndTime;
 
-	// Token: 0x0400A5C8 RID: 42440
+	// Token: 0x0400A9B2 RID: 43442
 	public bool IsLocked;
 
-	// Token: 0x0400A5C9 RID: 42441
+	// Token: 0x0400A9B3 RID: 43443
 	public string ConditionText = "";
 
-	// Token: 0x0400A5CA RID: 42442
+	// Token: 0x0400A9B4 RID: 43444
 	public int Id;
 
-	// Token: 0x0400A5CB RID: 42443
+	// Token: 0x0400A9B5 RID: 43445
 	public int ShopId;
 
-	// Token: 0x0400A5CC RID: 42444
+	// Token: 0x0400A9B6 RID: 43446
 	public string Label;
 
-	// Token: 0x0400A5CD RID: 42445
+	// Token: 0x0400A9B7 RID: 43447
 	public string SwitchText;
 
-	// Token: 0x0400A5CE RID: 42446
+	// Token: 0x0400A9B8 RID: 43448
 	public string PurchaseText;
 
-	// Token: 0x0400A5CF RID: 42447
+	// Token: 0x0400A9B9 RID: 43449
 	public int SortIndex;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001158 RID: 4440
+// Token: 0x0200060C RID: 1548
 [NullableContext(2)]
 [Nullable(0)]
 public class BabelTowerSvBuffItem : UiPanelBase
 {
-	// Token: 0x060074D3 RID: 29907 RVA: 0x0017FB78 File Offset: 0x0017DD78
+	// Token: 0x0600486A RID: 18538 RVA: 0x001886C4 File Offset: 0x001868C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -60,7 +59,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060074D4 RID: 29908 RVA: 0x0017FD90 File Offset: 0x0017DF90
+	// Token: 0x0600486B RID: 18539 RVA: 0x001888DC File Offset: 0x00186ADC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerSvBuffItem.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -71,7 +70,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060074D5 RID: 29909 RVA: 0x0017FDD4 File Offset: 0x0017DFD4
+	// Token: 0x0600486C RID: 18540 RVA: 0x00188920 File Offset: 0x00186B20
 	public void SetLevelId(int levelId)
 	{
 		this.LevelId = levelId;
@@ -91,7 +90,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		this.RefreshStarNum();
 	}
 
-	// Token: 0x060074D6 RID: 29910 RVA: 0x0017FE6C File Offset: 0x0017E06C
+	// Token: 0x0600486D RID: 18541 RVA: 0x001889B8 File Offset: 0x00186BB8
 	public void RefreshBuffList([Nullable(new byte[]
 	{
 		2,
@@ -107,7 +106,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		buffScrollView.RefreshByData(data, null, false);
 	}
 
-	// Token: 0x060074D7 RID: 29911 RVA: 0x0017FE98 File Offset: 0x0017E098
+	// Token: 0x0600486E RID: 18542 RVA: 0x001889E4 File Offset: 0x00186BE4
 	public void SetActionButtonsVisible(bool visible, bool? showQuickSelect = null)
 	{
 		UUIButtonComponent button = base.GetButton(5);
@@ -126,7 +125,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074D8 RID: 29912 RVA: 0x0017FEF3 File Offset: 0x0017E0F3
+	// Token: 0x0600486F RID: 18543 RVA: 0x00188A3F File Offset: 0x00186C3F
 	public void SetQuickSelectPanelVisible(bool visible)
 	{
 		this.IsQuickSelectPanelOpen = visible;
@@ -143,7 +142,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		applyButton.SetUiActive(visible);
 	}
 
-	// Token: 0x060074D9 RID: 29913 RVA: 0x0017FF20 File Offset: 0x0017E120
+	// Token: 0x06004870 RID: 18544 RVA: 0x00188A6C File Offset: 0x00186C6C
 	public void SetQuickSelectComponentsOpacity(int quickIndex)
 	{
 		bool flag = this.IsQuickSelectMode();
@@ -162,13 +161,13 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		item.SetUIItemAlpha(uiitemAlpha);
 	}
 
-	// Token: 0x060074DA RID: 29914 RVA: 0x0017FF80 File Offset: 0x0017E180
+	// Token: 0x06004871 RID: 18545 RVA: 0x00188ACC File Offset: 0x00186CCC
 	public bool IsQuickSelectMode()
 	{
 		return this.IsQuickSelectPanelOpen;
 	}
 
-	// Token: 0x060074DB RID: 29915 RVA: 0x0017FF88 File Offset: 0x0017E188
+	// Token: 0x06004872 RID: 18546 RVA: 0x00188AD4 File Offset: 0x00186CD4
 	public MutexGroupItem FindMutexGroupItemByDeTermId(int deTermId)
 	{
 		GenericScrollViewNew<MutexGroupItem, IBabelTowerMutexGroupData> buffScrollView = this.BuffScrollView;
@@ -186,7 +185,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x060074DC RID: 29916 RVA: 0x0017FFF0 File Offset: 0x0017E1F0
+	// Token: 0x06004873 RID: 18547 RVA: 0x00188B3C File Offset: 0x00186D3C
 	public void ScrollToDeTerm(int deTermId)
 	{
 		GenericScrollViewNew<MutexGroupItem, IBabelTowerMutexGroupData> buffScrollView = this.BuffScrollView;
@@ -206,7 +205,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074DD RID: 29917 RVA: 0x0018006C File Offset: 0x0017E26C
+	// Token: 0x06004874 RID: 18548 RVA: 0x00188BB8 File Offset: 0x00186DB8
 	public void RefreshStarNum()
 	{
 		int currentDeTermStar = BabelTowerModel.Instance.GetCurrentDeTermStar();
@@ -221,7 +220,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		onRefreshStarNum(currentDeTermStar);
 	}
 
-	// Token: 0x060074DE RID: 29918 RVA: 0x001800B0 File Offset: 0x0017E2B0
+	// Token: 0x06004875 RID: 18549 RVA: 0x00188BFC File Offset: 0x00186DFC
 	private void SetStarNumText(int selectedCount)
 	{
 		UUIText text = base.GetText(7);
@@ -231,7 +230,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074DF RID: 29919 RVA: 0x001800E4 File Offset: 0x0017E2E4
+	// Token: 0x06004876 RID: 18550 RVA: 0x00188C30 File Offset: 0x00186E30
 	private void RefreshDifficultyColor(int currentStar)
 	{
 		BabelTowerLevel? config = ConfigBabelTowerLevelById.GetConfig(this.LevelId, true);
@@ -254,7 +253,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		sprite.SetColor(color);
 	}
 
-	// Token: 0x060074E0 RID: 29920 RVA: 0x0018015C File Offset: 0x0017E35C
+	// Token: 0x06004877 RID: 18551 RVA: 0x00188CA8 File Offset: 0x00186EA8
 	[NullableContext(1)]
 	private List<IBabelTowerMutexGroupData> BuildMutexGroupDataList()
 	{
@@ -322,7 +321,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		return new List<IBabelTowerMutexGroupData>();
 	}
 
-	// Token: 0x060074E1 RID: 29921 RVA: 0x00180338 File Offset: 0x0017E538
+	// Token: 0x06004878 RID: 18552 RVA: 0x00188E84 File Offset: 0x00187084
 	[NullableContext(1)]
 	private List<int> GetMergedDeTermListByMutexId(BabelTowerDeTermMutex mutexConfig)
 	{
@@ -330,15 +329,19 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		for (int i = 0; i < mutexConfig.MutexDeTermGroupLength; i++)
 		{
 			int id = mutexConfig.MutexDeTermGroup(i);
-			List<BabelTowerDeTerm> list2 = BabelTowerConfig.Instance.GetBabelTowerDeTermByGroupId(id).ToList<BabelTowerDeTerm>();
+			List<BabelTowerDeTerm> list2 = new List<BabelTowerDeTerm>(BabelTowerConfig.Instance.GetBabelTowerDeTermByGroupId(id));
 			list2.Sort((BabelTowerDeTerm a, BabelTowerDeTerm b) => a.Star - b.Star);
-			int star2;
-			int star;
-			for (star = 1; star <= 3; star = star2 + 1)
+			for (int j = 1; j <= 3; j++)
 			{
-				BabelTowerDeTerm? babelTowerDeTerm = (from config in list2
-				where config.Star == star
-				select new BabelTowerDeTerm?(config)).FirstOrDefault<BabelTowerDeTerm?>();
+				BabelTowerDeTerm? babelTowerDeTerm = null;
+				for (int k = 0; k < list2.Count; k++)
+				{
+					if (list2[k].Star == j)
+					{
+						babelTowerDeTerm = new BabelTowerDeTerm?(list2[k]);
+						break;
+					}
+				}
 				if (babelTowerDeTerm != null)
 				{
 					list.Add(babelTowerDeTerm.GetValueOrDefault().Id);
@@ -347,13 +350,12 @@ public class BabelTowerSvBuffItem : UiPanelBase
 				{
 					list.Add(0);
 				}
-				star2 = star;
 			}
 		}
 		return list;
 	}
 
-	// Token: 0x060074E2 RID: 29922 RVA: 0x0018043B File Offset: 0x0017E63B
+	// Token: 0x06004879 RID: 18553 RVA: 0x00188F6A File Offset: 0x0018716A
 	[NullableContext(1)]
 	private MutexGroupItem CreateMutexGroupItem()
 	{
@@ -363,7 +365,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		return mutexGroupItem;
 	}
 
-	// Token: 0x060074E3 RID: 29923 RVA: 0x0018045C File Offset: 0x0017E65C
+	// Token: 0x0600487A RID: 18554 RVA: 0x00188F8C File Offset: 0x0018718C
 	private void OnBuffItemClick(int deTermId, UUIExtendToggle toggle)
 	{
 		if (deTermId <= 0)
@@ -386,7 +388,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074E4 RID: 29924 RVA: 0x00180498 File Offset: 0x0017E698
+	// Token: 0x0600487B RID: 18555 RVA: 0x00188FC8 File Offset: 0x001871C8
 	private void OnClickLookBtn()
 	{
 		int levelId = this.LevelId;
@@ -409,7 +411,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074E5 RID: 29925 RVA: 0x00180512 File Offset: 0x0017E712
+	// Token: 0x0600487C RID: 18556 RVA: 0x00189042 File Offset: 0x00187242
 	private void OnClickQuickSelectBtn()
 	{
 		Action onQuickSelectClick = this.OnQuickSelectClick;
@@ -420,7 +422,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		onQuickSelectClick();
 	}
 
-	// Token: 0x060074E6 RID: 29926 RVA: 0x00180524 File Offset: 0x0017E724
+	// Token: 0x0600487D RID: 18557 RVA: 0x00189054 File Offset: 0x00187254
 	private void OnClickDelBtn()
 	{
 		Action onClearClick = this.OnClearClick;
@@ -431,7 +433,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		onClearClick();
 	}
 
-	// Token: 0x060074E7 RID: 29927 RVA: 0x00180536 File Offset: 0x0017E736
+	// Token: 0x0600487E RID: 18558 RVA: 0x00189066 File Offset: 0x00187266
 	private void OnClickConfirmBtn(int data)
 	{
 		Action onConfirmClick = this.OnConfirmClick;
@@ -442,13 +444,13 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		onConfirmClick();
 	}
 
-	// Token: 0x060074E8 RID: 29928 RVA: 0x00180548 File Offset: 0x0017E748
+	// Token: 0x0600487F RID: 18559 RVA: 0x00189078 File Offset: 0x00187278
 	public IBabelTowerSelectInfo GetSelectInfoByDeTerm(int deTermId)
 	{
 		return BabelTowerModel.Instance.GetDeTermSelectInfo(deTermId);
 	}
 
-	// Token: 0x060074E9 RID: 29929 RVA: 0x00180555 File Offset: 0x0017E755
+	// Token: 0x06004880 RID: 18560 RVA: 0x00189085 File Offset: 0x00187285
 	public void NotifyDeTermToggle(int deTermId)
 	{
 		Action<int> onDeTermToggle = this.OnDeTermToggle;
@@ -459,7 +461,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		onDeTermToggle(deTermId);
 	}
 
-	// Token: 0x060074EA RID: 29930 RVA: 0x00180568 File Offset: 0x0017E768
+	// Token: 0x06004881 RID: 18561 RVA: 0x00189098 File Offset: 0x00187298
 	public void ClearAllSelect()
 	{
 		foreach (KeyValuePair<int, IBabelTowerSelectInfo> keyValuePair in BabelTowerModel.Instance.DeTermSelectInfo)
@@ -475,7 +477,7 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		this.RefreshStarNum();
 	}
 
-	// Token: 0x060074EB RID: 29931 RVA: 0x001805E8 File Offset: 0x0017E7E8
+	// Token: 0x06004882 RID: 18562 RVA: 0x00189118 File Offset: 0x00187318
 	[NullableContext(1)]
 	public void ApplyQuickSelectDeTerms(List<int> buffGroup)
 	{
@@ -515,10 +517,10 @@ public class BabelTowerSvBuffItem : UiPanelBase
 		this.RefreshStarNum();
 	}
 
-	// Token: 0x040035B8 RID: 13752
+	// Token: 0x04003651 RID: 13905
 	private const int MAX_STAR_NUM = 3;
 
-	// Token: 0x040035B9 RID: 13753
+	// Token: 0x04003652 RID: 13906
 	[Nullable(new byte[]
 	{
 		2,
@@ -527,71 +529,71 @@ public class BabelTowerSvBuffItem : UiPanelBase
 	})]
 	private GenericScrollViewNew<MutexGroupItem, IBabelTowerMutexGroupData> BuffScrollView;
 
-	// Token: 0x040035BA RID: 13754
+	// Token: 0x04003653 RID: 13907
 	private int LevelId;
 
-	// Token: 0x040035BB RID: 13755
+	// Token: 0x04003654 RID: 13908
 	private bool IsQuickSelectPanelOpen;
 
-	// Token: 0x040035BC RID: 13756
+	// Token: 0x04003655 RID: 13909
 	private ButtonItem ApplyButton;
 
-	// Token: 0x040035BD RID: 13757
+	// Token: 0x04003656 RID: 13910
 	public Action<int, int> OnBuffClick;
 
-	// Token: 0x040035BE RID: 13758
+	// Token: 0x04003657 RID: 13911
 	public Action<int> OnDeTermToggle;
 
-	// Token: 0x040035BF RID: 13759
+	// Token: 0x04003658 RID: 13912
 	public Action<int> OnDesRightRefresh;
 
-	// Token: 0x040035C0 RID: 13760
+	// Token: 0x04003659 RID: 13913
 	public Action OnQuickSelectClick;
 
-	// Token: 0x040035C1 RID: 13761
+	// Token: 0x0400365A RID: 13914
 	public Action OnClearClick;
 
-	// Token: 0x040035C2 RID: 13762
+	// Token: 0x0400365B RID: 13915
 	public Action OnConfirmClick;
 
-	// Token: 0x040035C3 RID: 13763
+	// Token: 0x0400365C RID: 13916
 	public Action<int> OnRefreshStarNum;
 
-	// Token: 0x02007716 RID: 30486
+	// Token: 0x020068A5 RID: 26789
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402748C RID: 160908
+		// Token: 0x040227CD RID: 141261
 		public const int ColorFrameSprite = 0;
 
-		// Token: 0x0402748D RID: 160909
+		// Token: 0x040227CE RID: 141262
 		public const int BtnLook = 1;
 
-		// Token: 0x0402748E RID: 160910
+		// Token: 0x040227CF RID: 141263
 		public const int DeBuffTopTips = 2;
 
-		// Token: 0x0402748F RID: 160911
+		// Token: 0x040227D0 RID: 141264
 		public const int DeBuffItemScroll = 3;
 
-		// Token: 0x04027490 RID: 160912
+		// Token: 0x040227D1 RID: 141265
 		public const int UiItemDeBuffItemGroup = 4;
 
-		// Token: 0x04027491 RID: 160913
+		// Token: 0x040227D2 RID: 141266
 		public const int BtnFunctionDel = 5;
 
-		// Token: 0x04027492 RID: 160914
+		// Token: 0x040227D3 RID: 141267
 		public const int BtnQuickSelect = 6;
 
-		// Token: 0x04027493 RID: 160915
+		// Token: 0x040227D4 RID: 141268
 		public const int TxtDeBuffValue = 7;
 
-		// Token: 0x04027494 RID: 160916
+		// Token: 0x040227D5 RID: 141269
 		public const int BtnApply = 8;
 
-		// Token: 0x04027495 RID: 160917
+		// Token: 0x040227D6 RID: 141270
 		public const int TitleNameText = 9;
 
-		// Token: 0x04027496 RID: 160918
+		// Token: 0x040227D7 RID: 141271
 		public const int ApplyBtnGroupItem = 10;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022ED RID: 8941
+	// Token: 0x0200255C RID: 9564
 	public static class EControlElementalBoxTypeExtensions
 	{
-		// Token: 0x0600C3A9 RID: 50089 RVA: 0x001C948C File Offset: 0x001C768C
+		// Token: 0x0600CF78 RID: 53112 RVA: 0x001E12D8 File Offset: 0x001DF4D8
 		public static string ToEnumString(this EControlElementalBoxType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3AA RID: 50090 RVA: 0x001C94C4 File Offset: 0x001C76C4
+		// Token: 0x0600CF79 RID: 53113 RVA: 0x001E1310 File Offset: 0x001DF510
 		public static EControlElementalBoxType FromString(string name)
 		{
 			EControlElementalBoxType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3AB RID: 50091 RVA: 0x001C94ED File Offset: 0x001C76ED
+		// Token: 0x0600CF7A RID: 53114 RVA: 0x001E1339 File Offset: 0x001DF539
 		public static bool TryFromString(string name, out EControlElementalBoxType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C3AC RID: 50092 RVA: 0x001C9526 File Offset: 0x001C7726
+		// Token: 0x0600CF7B RID: 53115 RVA: 0x001E1372 File Offset: 0x001DF572
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3AD RID: 50093 RVA: 0x001C953E File Offset: 0x001C773E
+		// Token: 0x0600CF7C RID: 53116 RVA: 0x001E138A File Offset: 0x001DF58A
 		public static EControlElementalBoxType[] GetValues()
 		{
 			return new EControlElementalBoxType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3AE RID: 50094 RVA: 0x001C954A File Offset: 0x001C774A
+		// Token: 0x0600CF7D RID: 53117 RVA: 0x001E1396 File Offset: 0x001DF596
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F8 RID: 1272
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000559 RID: 1369
 	public class IMismatchCastConfig
 	{
-		// Token: 0x060019E6 RID: 6630 RVA: 0x0004C24C File Offset: 0x0004A44C
+		// Token: 0x06001BC8 RID: 7112 RVA: 0x00050D90 File Offset: 0x0004EF90
 		private IMismatchCastConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060019E7 RID: 6631 RVA: 0x0004C284 File Offset: 0x0004A484
+		// Token: 0x06001BC9 RID: 7113 RVA: 0x00050DC8 File Offset: 0x0004EFC8
 		public static IMismatchCastConfig Create([Nullable(2)] IMismatchCastConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060019E8 RID: 6632 RVA: 0x0004C297 File Offset: 0x0004A497
+		// Token: 0x06001BCA RID: 7114 RVA: 0x00050DDB File Offset: 0x0004EFDB
 		public static IMismatchCastConfig CreateFromSetValue([Nullable(2)] IMismatchCastConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060019E9 RID: 6633 RVA: 0x0004C2AA File Offset: 0x0004A4AA
+		// Token: 0x06001BCB RID: 7115 RVA: 0x00050DEE File Offset: 0x0004EFEE
 		public IMismatchCastConfig_SetValue ToSetValue()
 		{
 			return new IMismatchCastConfig_SetValue
@@ -60,20 +58,20 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006DE RID: 1758
-		// (get) Token: 0x060019EA RID: 6634 RVA: 0x0004C2C0 File Offset: 0x0004A4C0
-		// (set) Token: 0x060019EB RID: 6635 RVA: 0x0004C353 File Offset: 0x0004A553
+		// Token: 0x1700075D RID: 1885
+		// (get) Token: 0x06001BCC RID: 7116 RVA: 0x00050E04 File Offset: 0x0004F004
+		// (set) Token: 0x06001BCD RID: 7117 RVA: 0x00050E97 File Offset: 0x0004F097
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMismatchSequence> MismatchSequence
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -104,7 +102,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -113,23 +111,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012EA RID: 4842
+		// Token: 0x0400144A RID: 5194
 		[Nullable(2)]
 		protected IMismatchCastConfig FbInstance;
 
-		// Token: 0x040012EB RID: 4843
+		// Token: 0x0400144B RID: 5195
 		[Nullable(2)]
 		protected IMismatchCastConfig_SetValue PocoInterface;
 
-		// Token: 0x040012EC RID: 4844
+		// Token: 0x0400144C RID: 5196
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMismatchSequence> _MismatchSequenceCache;
 
-		// Token: 0x040012ED RID: 4845
+		// Token: 0x0400144D RID: 5197
 		private bool _MismatchSequenceInited;
 	}
 }

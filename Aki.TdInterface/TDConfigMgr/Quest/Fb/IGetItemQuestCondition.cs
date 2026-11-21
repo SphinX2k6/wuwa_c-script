@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200135B RID: 4955
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014AB RID: 5291
 	public class IGetItemQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007173 RID: 29043 RVA: 0x00111675 File Offset: 0x0010F875
+		// Token: 0x06007813 RID: 30739 RVA: 0x0011FBE1 File Offset: 0x0011DDE1
 		public static IGetItemQuestCondition Create(IGetItemQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002490 RID: 9360
-		// (get) Token: 0x06007174 RID: 29044 RVA: 0x00111694 File Offset: 0x0010F894
+		// Token: 0x1700265F RID: 9823
+		// (get) Token: 0x06007814 RID: 30740 RVA: 0x0011FC00 File Offset: 0x0011DE00
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002491 RID: 9361
-		// (get) Token: 0x06007175 RID: 29045 RVA: 0x001116A1 File Offset: 0x0010F8A1
+		// Token: 0x17002660 RID: 9824
+		// (get) Token: 0x06007815 RID: 30741 RVA: 0x0011FC0D File Offset: 0x0011DE0D
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002492 RID: 9362
-		// (get) Token: 0x06007176 RID: 29046 RVA: 0x001116D8 File Offset: 0x0010F8D8
+		// Token: 0x17002661 RID: 9825
+		// (get) Token: 0x06007816 RID: 30742 RVA: 0x0011FC44 File Offset: 0x0011DE44
 		public virtual List<IItemConfig> Items
 		{
 			get
@@ -73,20 +71,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004187 RID: 16775
+		// Token: 0x04004503 RID: 17667
 		private IGetItemQuestCondition Instance;
 
-		// Token: 0x04004188 RID: 16776
+		// Token: 0x04004504 RID: 17668
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004189 RID: 16777
+		// Token: 0x04004505 RID: 17669
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400418A RID: 16778
+		// Token: 0x04004506 RID: 17670
 		private List<IItemConfig> _ItemsCache;
 
-		// Token: 0x0400418B RID: 16779
+		// Token: 0x04004507 RID: 17671
 		private bool _ItemsInited;
 	}
 }

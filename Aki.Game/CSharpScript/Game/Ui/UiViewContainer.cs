@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200465A RID: 18010
+	// Token: 0x0200358B RID: 13707
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class UiViewContainer
 	{
-		// Token: 0x0602E7E5 RID: 190437 RVA: 0x00ABDD88 File Offset: 0x00ABBF88
+		// Token: 0x06022F2F RID: 143151 RVA: 0x009EB408 File Offset: 0x009E9608
 		protected UniTask OpenViewImplementAsync(UiViewBase view)
 		{
 			UiViewContainer.<OpenViewImplementAsync>d__1 <OpenViewImplementAsync>d__;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenViewImplementAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E7E6 RID: 190438 RVA: 0x00ABDDD4 File Offset: 0x00ABBFD4
+		// Token: 0x06022F30 RID: 143152 RVA: 0x009EB454 File Offset: 0x009E9654
 		[NullableContext(0)]
 		protected UniTask<bool> CloseViewImplementAsync([Nullable(1)] UiViewBase view)
 		{
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Ui
 			return <CloseViewImplementAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E7E7 RID: 190439 RVA: 0x00ABDE17 File Offset: 0x00ABC017
+		// Token: 0x06022F31 RID: 143153 RVA: 0x009EB497 File Offset: 0x009E9697
 		protected bool IsIgnoreOpenViewMask(UiViewBase view)
 		{
 			return (UiConfig.Instance.TryGetViewInfo(view.ViewInfo.Name).Type & (ELayerType.Float | ELayerType.Guide)) > (ELayerType)0;
 		}
 
-		// Token: 0x0602E7E8 RID: 190440 RVA: 0x00ABDE3C File Offset: 0x00ABC03C
+		// Token: 0x06022F32 RID: 143154 RVA: 0x009EB4BC File Offset: 0x009E96BC
 		protected void OnContainerOpenView(UiViewBase view)
 		{
 			UiPopViewData uiPopViewData = view.OpenParam as UiPopViewData;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E7E9 RID: 190441 RVA: 0x00ABDE7C File Offset: 0x00ABC07C
+		// Token: 0x06022F33 RID: 143155 RVA: 0x009EB4FC File Offset: 0x009E96FC
 		protected unsafe void TryCatchViewDestroyCompatible(UiViewBase view)
 		{
 			try
@@ -80,29 +80,29 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E7EA RID: 190442
+		// Token: 0x06022F34 RID: 143156
 		[NullableContext(0)]
 		public abstract UniTask<bool> OpenViewAsync([Nullable(1)] UiViewBase view);
 
-		// Token: 0x0602E7EB RID: 190443
+		// Token: 0x06022F35 RID: 143157
 		public abstract UniTask PreOpenViewAsync(UiViewBase view);
 
-		// Token: 0x0602E7EC RID: 190444
+		// Token: 0x06022F36 RID: 143158
 		public abstract UniTask OpenViewAfterPreOpenedAsync(UiViewBase view);
 
-		// Token: 0x0602E7ED RID: 190445
+		// Token: 0x06022F37 RID: 143159
 		public abstract UniTask CloseViewAsync(UiViewBase view);
 
-		// Token: 0x0602E7EE RID: 190446
+		// Token: 0x06022F38 RID: 143160
 		public abstract void ClearContainer(bool isSeamlessTravel);
 
-		// Token: 0x0602E7EF RID: 190447 RVA: 0x00ABDF40 File Offset: 0x00ABC140
+		// Token: 0x06022F39 RID: 143161 RVA: 0x009EB5C0 File Offset: 0x009E97C0
 		public virtual UniTask BeforeClearContainerAsync(bool isSeamlessTravel)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x04018E36 RID: 101942
+		// Token: 0x0401348F RID: 78991
 		protected UiMask OpenViewMask = new UiMask();
 	}
 }

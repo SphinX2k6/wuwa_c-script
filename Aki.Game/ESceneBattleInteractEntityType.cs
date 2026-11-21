@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002944 RID: 10564
+// Token: 0x02001EBF RID: 7871
 public enum ESceneBattleInteractEntityType
 {
-	// Token: 0x0400A26B RID: 41579
+	// Token: 0x0400A655 RID: 42581
 	Player,
-	// Token: 0x0400A26C RID: 41580
+	// Token: 0x0400A656 RID: 42582
 	Summoned,
-	// Token: 0x0400A26D RID: 41581
+	// Token: 0x0400A657 RID: 42583
 	Weapon = 3
 }

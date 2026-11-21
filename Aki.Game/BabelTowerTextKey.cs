@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200114C RID: 4428
+// Token: 0x02000600 RID: 1536
 [NullableContext(1)]
 [Nullable(0)]
 public static class BabelTowerTextKey
 {
-	// Token: 0x04003586 RID: 13702
+	// Token: 0x0400361F RID: 13855
 	public const string RoleList = "GhostShipRoleList_Text";
 
-	// Token: 0x04003587 RID: 13703
+	// Token: 0x04003620 RID: 13856
 	public const string UseTeam = "GhostShipPreTeam_Text";
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000950 RID: 2384
+	// Token: 0x02000A03 RID: 2563
 	public static class EGearHitAffectTypeExtensions
 	{
-		// Token: 0x06003599 RID: 13721 RVA: 0x0008BD3C File Offset: 0x00089F3C
+		// Token: 0x06003920 RID: 14624 RVA: 0x00093C90 File Offset: 0x00091E90
 		public static string ToEnumString(this EGearHitAffectType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600359A RID: 13722 RVA: 0x0008BD64 File Offset: 0x00089F64
+		// Token: 0x06003921 RID: 14625 RVA: 0x00093CB8 File Offset: 0x00091EB8
 		public static EGearHitAffectType FromString(string name)
 		{
 			EGearHitAffectType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600359B RID: 13723 RVA: 0x0008BD8D File Offset: 0x00089F8D
+		// Token: 0x06003922 RID: 14626 RVA: 0x00093CE1 File Offset: 0x00091EE1
 		public static bool TryFromString(string name, out EGearHitAffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600359C RID: 13724 RVA: 0x0008BDB2 File Offset: 0x00089FB2
+		// Token: 0x06003923 RID: 14627 RVA: 0x00093D06 File Offset: 0x00091F06
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600359D RID: 13725 RVA: 0x0008BDC2 File Offset: 0x00089FC2
+		// Token: 0x06003924 RID: 14628 RVA: 0x00093D16 File Offset: 0x00091F16
 		public static EGearHitAffectType[] GetValues()
 		{
 			return new EGearHitAffectType[1];
 		}
 
-		// Token: 0x0600359E RID: 13726 RVA: 0x0008BDCA File Offset: 0x00089FCA
+		// Token: 0x06003925 RID: 14629 RVA: 0x00093D1E File Offset: 0x00091F1E
 		public static string[] GetNames()
 		{
 			return new string[]

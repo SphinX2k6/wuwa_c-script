@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020010E3 RID: 4323
+// Token: 0x02000597 RID: 1431
 public class AnniversaryCelebrationTitleIcon : ActivityCaptionDecorationTagBase
 {
-	// Token: 0x06007093 RID: 28819 RVA: 0x0016F96D File Offset: 0x0016DB6D
+	// Token: 0x06004429 RID: 17449 RVA: 0x00178329 File Offset: 0x00176529
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,7 +15,7 @@ public class AnniversaryCelebrationTitleIcon : ActivityCaptionDecorationTagBase
 		};
 	}
 
-	// Token: 0x06007094 RID: 28820 RVA: 0x0016F990 File Offset: 0x0016DB90
+	// Token: 0x0600442A RID: 17450 RVA: 0x0017834C File Offset: 0x0017654C
 	public override UniTask OnCaptionTagRefresh(int activityId)
 	{
 		string resourceId = (LanguageSystem.Instance.PackageLanguage == "zh-Hans") ? "T_AnniversaryCelebrationLogo_CN" : "T_AnniversaryCelebrationLogo_EN";
@@ -24,10 +24,10 @@ public class AnniversaryCelebrationTitleIcon : ActivityCaptionDecorationTagBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x020076A9 RID: 30377
+	// Token: 0x0200683D RID: 26685
 	private class EComponents
 	{
-		// Token: 0x04027298 RID: 160408
+		// Token: 0x040225E1 RID: 140769
 		public const int TexIcon = 0;
 	}
 }

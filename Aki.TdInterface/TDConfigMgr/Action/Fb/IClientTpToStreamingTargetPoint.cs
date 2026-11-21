@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026C0 RID: 9920
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002984 RID: 10628
 	public class IClientTpToStreamingTargetPoint : IClientTeleportConfig
 	{
-		// Token: 0x0600DDE0 RID: 56800 RVA: 0x0020F014 File Offset: 0x0020D214
-		[NullableContext(1)]
+		// Token: 0x0600EBBC RID: 60348 RVA: 0x0022B854 File Offset: 0x00229A54
 		public static IClientTpToStreamingTargetPoint Create(IClientTpToStreamingTargetPoint? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004222 RID: 16930
-		// (get) Token: 0x0600DDE1 RID: 56801 RVA: 0x0020F033 File Offset: 0x0020D233
+		// Token: 0x17004562 RID: 17762
+		// (get) Token: 0x0600EBBD RID: 60349 RVA: 0x0022B873 File Offset: 0x00229A73
 		public override EClientTeleportType Type
 		{
 			get
@@ -34,12 +31,10 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004223 RID: 16931
-		// (get) Token: 0x0600DDE2 RID: 56802 RVA: 0x0020F040 File Offset: 0x0020D240
-		[Nullable(1)]
+		// Token: 0x17004563 RID: 17763
+		// (get) Token: 0x0600EBBE RID: 60350 RVA: 0x0022B880 File Offset: 0x00229A80
 		public virtual IClientTpToStreamingTargetSuccessEffect StreamingSuccessEffect
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._StreamingSuccessEffectInited)
@@ -52,12 +47,10 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004224 RID: 16932
-		// (get) Token: 0x0600DDE3 RID: 56803 RVA: 0x0020F074 File Offset: 0x0020D274
-		[Nullable(1)]
+		// Token: 0x17004564 RID: 17764
+		// (get) Token: 0x0600EBBF RID: 60351 RVA: 0x0022B8B4 File Offset: 0x00229AB4
 		public virtual ITeleportTransitionType StreamingTimeoutEffect
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._StreamingTimeoutEffectInited)
@@ -70,10 +63,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004225 RID: 16933
-		// (get) Token: 0x0600DDE4 RID: 56804 RVA: 0x0020F0A3 File Offset: 0x0020D2A3
+		// Token: 0x17004565 RID: 17765
+		// (get) Token: 0x0600EBC0 RID: 60352 RVA: 0x0022B8E3 File Offset: 0x00229AE3
+		[Nullable(2)]
 		public virtual VectorInfo LocationOffset
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._LocationOffsetInited)
@@ -86,10 +81,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004226 RID: 16934
-		// (get) Token: 0x0600DDE5 RID: 56805 RVA: 0x0020F0D7 File Offset: 0x0020D2D7
+		// Token: 0x17004566 RID: 17766
+		// (get) Token: 0x0600EBC1 RID: 60353 RVA: 0x0022B917 File Offset: 0x00229B17
+		[Nullable(2)]
 		public virtual VectorInfo RotationOffset
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._RotationOffsetInited)
@@ -102,32 +99,34 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B2C RID: 31532
+		// Token: 0x040081CC RID: 33228
 		private IClientTpToStreamingTargetPoint Instance;
 
-		// Token: 0x04007B2D RID: 31533
+		// Token: 0x040081CD RID: 33229
+		[Nullable(2)]
 		private IClientTpToStreamingTargetSuccessEffect _StreamingSuccessEffectCache;
 
-		// Token: 0x04007B2E RID: 31534
+		// Token: 0x040081CE RID: 33230
 		private bool _StreamingSuccessEffectInited;
 
-		// Token: 0x04007B2F RID: 31535
-		[Nullable(1)]
+		// Token: 0x040081CF RID: 33231
 		private ITeleportTransitionType _StreamingTimeoutEffectCache;
 
-		// Token: 0x04007B30 RID: 31536
+		// Token: 0x040081D0 RID: 33232
 		private bool _StreamingTimeoutEffectInited;
 
-		// Token: 0x04007B31 RID: 31537
+		// Token: 0x040081D1 RID: 33233
+		[Nullable(2)]
 		private VectorInfo _LocationOffsetCache;
 
-		// Token: 0x04007B32 RID: 31538
+		// Token: 0x040081D2 RID: 33234
 		private bool _LocationOffsetInited;
 
-		// Token: 0x04007B33 RID: 31539
+		// Token: 0x040081D3 RID: 33235
+		[Nullable(2)]
 		private VectorInfo _RotationOffsetCache;
 
-		// Token: 0x04007B34 RID: 31540
+		// Token: 0x040081D4 RID: 33236
 		private bool _RotationOffsetInited;
 	}
 }

@@ -4,23 +4,23 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B45 RID: 27461
+	// Token: 0x02005CBD RID: 23741
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventOpenChapterUi : LevelEventBase
 	{
-		// Token: 0x06044176 RID: 278902 RVA: 0x010BFCFB File Offset: 0x010BDEFB
+		// Token: 0x0603A2C8 RID: 238280 RVA: 0x01069777 File Offset: 0x01067977
 		public LevelEventOpenChapterUi(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044177 RID: 278903 RVA: 0x010BFD04 File Offset: 0x010BDF04
+		// Token: 0x0603A2C9 RID: 238281 RVA: 0x01069780 File Offset: 0x01067980
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044178 RID: 278904 RVA: 0x010BFD10 File Offset: 0x010BDF10
+		// Token: 0x0603A2CA RID: 238282 RVA: 0x0106978C File Offset: 0x0106798C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			PromptQuestChapterUI promptQuestChapterUI = inParams as PromptQuestChapterUI;

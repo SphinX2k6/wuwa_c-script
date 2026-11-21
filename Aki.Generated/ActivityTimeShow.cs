@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000ACF RID: 2767
+	// Token: 0x02000BA9 RID: 2985
 	public struct ActivityTimeShow : IFlatbufferObject
 	{
-		// Token: 0x1700018C RID: 396
-		// (get) Token: 0x06004411 RID: 17425 RVA: 0x001CDA29 File Offset: 0x001CBC29
+		// Token: 0x170001A3 RID: 419
+		// (get) Token: 0x06004958 RID: 18776 RVA: 0x001ED5B1 File Offset: 0x001EB7B1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004412 RID: 17426 RVA: 0x001CDA36 File Offset: 0x001CBC36
+		// Token: 0x06004959 RID: 18777 RVA: 0x001ED5BE File Offset: 0x001EB7BE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004413 RID: 17427 RVA: 0x001CDA40 File Offset: 0x001CBC40
+		// Token: 0x0600495A RID: 18778 RVA: 0x001ED5C8 File Offset: 0x001EB7C8
 		public static ActivityTimeShow GetRootAsActivityTimeShow(ByteBuffer _bb)
 		{
 			return ActivityTimeShow.GetRootAsActivityTimeShow(_bb, default(ActivityTimeShow));
 		}
 
-		// Token: 0x06004414 RID: 17428 RVA: 0x001CDA5C File Offset: 0x001CBC5C
+		// Token: 0x0600495B RID: 18779 RVA: 0x001ED5E4 File Offset: 0x001EB7E4
 		public static ActivityTimeShow GetRootAsActivityTimeShow(ByteBuffer _bb, ActivityTimeShow obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004415 RID: 17429 RVA: 0x001CDA79 File Offset: 0x001CBC79
+		// Token: 0x0600495C RID: 18780 RVA: 0x001ED601 File Offset: 0x001EB801
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004416 RID: 17430 RVA: 0x001CDA88 File Offset: 0x001CBC88
+		// Token: 0x0600495D RID: 18781 RVA: 0x001ED610 File Offset: 0x001EB810
 		public ActivityTimeShow __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700018D RID: 397
-		// (get) Token: 0x06004417 RID: 17431 RVA: 0x001CDA98 File Offset: 0x001CBC98
+		// Token: 0x170001A4 RID: 420
+		// (get) Token: 0x0600495E RID: 18782 RVA: 0x001ED620 File Offset: 0x001EB820
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004418 RID: 17432 RVA: 0x001CDAD4 File Offset: 0x001CBCD4
+		// Token: 0x0600495F RID: 18783 RVA: 0x001ED65C File Offset: 0x001EB85C
 		public int RedInterval(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700018E RID: 398
-		// (get) Token: 0x06004419 RID: 17433 RVA: 0x001CDB14 File Offset: 0x001CBD14
+		// Token: 0x170001A5 RID: 421
+		// (get) Token: 0x06004960 RID: 18784 RVA: 0x001ED69C File Offset: 0x001EB89C
 		public int RedIntervalLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600441A RID: 17434 RVA: 0x001CDB3F File Offset: 0x001CBD3F
+		// Token: 0x06004961 RID: 18785 RVA: 0x001ED6C7 File Offset: 0x001EB8C7
 		public Span<int> GetRedIntervalBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600441B RID: 17435 RVA: 0x001CDB4E File Offset: 0x001CBD4E
+		// Token: 0x06004962 RID: 18786 RVA: 0x001ED6D6 File Offset: 0x001EB8D6
 		public int[] GetRedIntervalArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600441C RID: 17436 RVA: 0x001CDB68 File Offset: 0x001CBD68
+		// Token: 0x06004963 RID: 18787 RVA: 0x001ED6F0 File Offset: 0x001EB8F0
 		public int YellowInterval(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700018F RID: 399
-		// (get) Token: 0x0600441D RID: 17437 RVA: 0x001CDBA8 File Offset: 0x001CBDA8
+		// Token: 0x170001A6 RID: 422
+		// (get) Token: 0x06004964 RID: 18788 RVA: 0x001ED730 File Offset: 0x001EB930
 		public int YellowIntervalLength
 		{
 			get
@@ -128,19 +128,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600441E RID: 17438 RVA: 0x001CDBD3 File Offset: 0x001CBDD3
+		// Token: 0x06004965 RID: 18789 RVA: 0x001ED75B File Offset: 0x001EB95B
 		public Span<int> GetYellowIntervalBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600441F RID: 17439 RVA: 0x001CDBE2 File Offset: 0x001CBDE2
+		// Token: 0x06004966 RID: 18790 RVA: 0x001ED76A File Offset: 0x001EB96A
 		public int[] GetYellowIntervalArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004420 RID: 17440 RVA: 0x001CDBFC File Offset: 0x001CBDFC
+		// Token: 0x06004967 RID: 18791 RVA: 0x001ED784 File Offset: 0x001EB984
 		public int WhiteInterval(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -151,8 +151,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000190 RID: 400
-		// (get) Token: 0x06004421 RID: 17441 RVA: 0x001CDC3C File Offset: 0x001CBE3C
+		// Token: 0x170001A7 RID: 423
+		// (get) Token: 0x06004968 RID: 18792 RVA: 0x001ED7C4 File Offset: 0x001EB9C4
 		public int WhiteIntervalLength
 		{
 			get
@@ -166,73 +166,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004422 RID: 17442 RVA: 0x001CDC68 File Offset: 0x001CBE68
+		// Token: 0x06004969 RID: 18793 RVA: 0x001ED7F0 File Offset: 0x001EB9F0
 		public Span<int> GetWhiteIntervalBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06004423 RID: 17443 RVA: 0x001CDC78 File Offset: 0x001CBE78
+		// Token: 0x0600496A RID: 18794 RVA: 0x001ED800 File Offset: 0x001EBA00
 		public int[] GetWhiteIntervalArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004424 RID: 17444 RVA: 0x001CDC90 File Offset: 0x001CBE90
+		// Token: 0x0600496B RID: 18795 RVA: 0x001ED818 File Offset: 0x001EBA18
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RedIntervalIter()或GetRedIntervalBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RedInterval()
+		public int[] RedInterval()
 		{
-			ActivityTimeShow activityTimeShow = this;
-			return activityTimeShow.GetRedIntervalArray() ?? Array.Empty<int>();
+			return this.GetRedIntervalArray();
 		}
 
-		// Token: 0x06004425 RID: 17445 RVA: 0x001CDCB4 File Offset: 0x001CBEB4
+		// Token: 0x0600496C RID: 18796 RVA: 0x001ED820 File Offset: 0x001EBA20
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RedIntervalIter()
+		public IEnumerable<int> RedIntervalIter()
 		{
 			ActivityTimeShow.<RedIntervalIter>d__26 <RedIntervalIter>d__ = new ActivityTimeShow.<RedIntervalIter>d__26(-2);
 			<RedIntervalIter>d__.<>3__<>4__this = this;
 			return <RedIntervalIter>d__;
 		}
 
-		// Token: 0x06004426 RID: 17446 RVA: 0x001CDCCC File Offset: 0x001CBECC
+		// Token: 0x0600496D RID: 18797 RVA: 0x001ED835 File Offset: 0x001EBA35
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WhiteIntervalIter()或GetWhiteIntervalBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WhiteInterval()
+		public int[] WhiteInterval()
 		{
-			ActivityTimeShow activityTimeShow = this;
-			return activityTimeShow.GetWhiteIntervalArray() ?? Array.Empty<int>();
+			return this.GetWhiteIntervalArray();
 		}
 
-		// Token: 0x06004427 RID: 17447 RVA: 0x001CDCF0 File Offset: 0x001CBEF0
+		// Token: 0x0600496E RID: 18798 RVA: 0x001ED83D File Offset: 0x001EBA3D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WhiteIntervalIter()
+		public IEnumerable<int> WhiteIntervalIter()
 		{
 			ActivityTimeShow.<WhiteIntervalIter>d__28 <WhiteIntervalIter>d__ = new ActivityTimeShow.<WhiteIntervalIter>d__28(-2);
 			<WhiteIntervalIter>d__.<>3__<>4__this = this;
 			return <WhiteIntervalIter>d__;
 		}
 
-		// Token: 0x06004428 RID: 17448 RVA: 0x001CDD08 File Offset: 0x001CBF08
+		// Token: 0x0600496F RID: 18799 RVA: 0x001ED852 File Offset: 0x001EBA52
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用YellowIntervalIter()或GetYellowIntervalBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] YellowInterval()
+		public int[] YellowInterval()
 		{
-			ActivityTimeShow activityTimeShow = this;
-			return activityTimeShow.GetYellowIntervalArray() ?? Array.Empty<int>();
+			return this.GetYellowIntervalArray();
 		}
 
-		// Token: 0x06004429 RID: 17449 RVA: 0x001CDD2C File Offset: 0x001CBF2C
+		// Token: 0x06004970 RID: 18800 RVA: 0x001ED85A File Offset: 0x001EBA5A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> YellowIntervalIter()
+		public IEnumerable<int> YellowIntervalIter()
 		{
 			ActivityTimeShow.<YellowIntervalIter>d__30 <YellowIntervalIter>d__ = new ActivityTimeShow.<YellowIntervalIter>d__30(-2);
 			<YellowIntervalIter>d__.<>3__<>4__this = this;
 			return <YellowIntervalIter>d__;
 		}
 
-		// Token: 0x04004AAC RID: 19116
+		// Token: 0x04005086 RID: 20614
 		private Table __p;
 	}
 }

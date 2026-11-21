@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB8 RID: 3256
+	// Token: 0x02000D9A RID: 3482
 	public class IMechascoutDragLongPress : IMechascoutDragTypeBase
 	{
-		// Token: 0x06004A77 RID: 19063 RVA: 0x000BA559 File Offset: 0x000B8759
-		[NullableContext(1)]
+		// Token: 0x06004F25 RID: 20261 RVA: 0x000C4F69 File Offset: 0x000C3169
 		public static IMechascoutDragLongPress Create(IMechascoutDragLongPress? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016C4 RID: 5828
-		// (get) Token: 0x06004A78 RID: 19064 RVA: 0x000BA578 File Offset: 0x000B8778
+		// Token: 0x170017EC RID: 6124
+		// (get) Token: 0x06004F26 RID: 20262 RVA: 0x000C4F88 File Offset: 0x000C3188
 		public override EMechascoutDragType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016C5 RID: 5829
-		// (get) Token: 0x06004A79 RID: 19065 RVA: 0x000BA585 File Offset: 0x000B8785
+		// Token: 0x170017ED RID: 6125
+		// (get) Token: 0x06004F27 RID: 20263 RVA: 0x000C4F95 File Offset: 0x000C3195
 		public virtual float LongPressDuration
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A7D RID: 10877
+		// Token: 0x04002CF7 RID: 11511
 		private IMechascoutDragLongPress Instance;
 	}
 }

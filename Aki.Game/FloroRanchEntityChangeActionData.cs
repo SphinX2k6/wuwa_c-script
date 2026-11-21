@@ -5,12 +5,12 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE3 RID: 6883
+// Token: 0x02000FA2 RID: 4002
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchEntityChangeActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC18 RID: 52248 RVA: 0x002E935C File Offset: 0x002E755C
+	// Token: 0x0600A029 RID: 41001 RVA: 0x002F44F0 File Offset: 0x002F26F0
 	public void InitActionData(FRUnitOperateActionGroup actionDataList)
 	{
 		this.ActionDataList.Clear();
@@ -21,13 +21,13 @@ public class FloroRanchEntityChangeActionData : FloroRanchActionDataBase
 		}
 	}
 
-	// Token: 0x0600CC19 RID: 52249 RVA: 0x002E93CC File Offset: 0x002E75CC
+	// Token: 0x0600A02A RID: 41002 RVA: 0x002F4560 File Offset: 0x002F2760
 	public FloroRanchEntityChangeActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.ActionData = actionData;
 	}
 
-	// Token: 0x0600CC1A RID: 52250 RVA: 0x002E93E8 File Offset: 0x002E75E8
+	// Token: 0x0600A02B RID: 41003 RVA: 0x002F457C File Offset: 0x002F277C
 	public override UniTask OnExecute()
 	{
 		FloroRanchEntityChangeActionData.<OnExecute>d__4 <OnExecute>d__;
@@ -38,7 +38,7 @@ public class FloroRanchEntityChangeActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC1B RID: 52251 RVA: 0x002E942C File Offset: 0x002E762C
+	// Token: 0x0600A02C RID: 41004 RVA: 0x002F45C0 File Offset: 0x002F27C0
 	private UniTask ExecuteEntityAction(FloroRanchEntityActionData actionData)
 	{
 		FloroRanchEntityChangeActionData.<ExecuteEntityAction>d__5 <ExecuteEntityAction>d__;
@@ -50,9 +50,9 @@ public class FloroRanchEntityChangeActionData : FloroRanchActionDataBase
 		return <ExecuteEntityAction>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DD1 RID: 24017
+	// Token: 0x04005EA0 RID: 24224
 	private readonly FloroRanchUnitActionMsg ActionData;
 
-	// Token: 0x04005DD2 RID: 24018
+	// Token: 0x04005EA1 RID: 24225
 	private readonly List<FloroRanchEntityActionData> ActionDataList = new List<FloroRanchEntityActionData>();
 }

@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005948 RID: 22856
+	// Token: 0x02004921 RID: 18721
 	[NullableContext(1)]
 	public interface IHonamiStoryAttrData
 	{
-		// Token: 0x17008B08 RID: 35592
-		// (get) Token: 0x0603A023 RID: 237603
-		// (set) Token: 0x0603A024 RID: 237604
+		// Token: 0x17005ED4 RID: 24276
+		// (get) Token: 0x0602EF46 RID: 192326
+		// (set) Token: 0x0602EF47 RID: 192327
 		string Name { get; set; }
 
-		// Token: 0x17008B09 RID: 35593
-		// (get) Token: 0x0603A025 RID: 237605
-		// (set) Token: 0x0603A026 RID: 237606
+		// Token: 0x17005ED5 RID: 24277
+		// (get) Token: 0x0602EF48 RID: 192328
+		// (set) Token: 0x0602EF49 RID: 192329
 		string IconPath { get; set; }
 
-		// Token: 0x17008B0A RID: 35594
-		// (get) Token: 0x0603A027 RID: 237607
-		// (set) Token: 0x0603A028 RID: 237608
+		// Token: 0x17005ED6 RID: 24278
+		// (get) Token: 0x0602EF4A RID: 192330
+		// (set) Token: 0x0602EF4B RID: 192331
 		int OldValue { get; set; }
 
-		// Token: 0x17008B0B RID: 35595
-		// (get) Token: 0x0603A029 RID: 237609
-		// (set) Token: 0x0603A02A RID: 237610
+		// Token: 0x17005ED7 RID: 24279
+		// (get) Token: 0x0602EF4C RID: 192332
+		// (set) Token: 0x0602EF4D RID: 192333
 		int NewValue { get; set; }
 
-		// Token: 0x17008B0C RID: 35596
-		// (get) Token: 0x0603A02B RID: 237611
-		// (set) Token: 0x0603A02C RID: 237612
+		// Token: 0x17005ED8 RID: 24280
+		// (get) Token: 0x0602EF4E RID: 192334
+		// (set) Token: 0x0602EF4F RID: 192335
 		bool IsPercent { get; set; }
 	}
 }

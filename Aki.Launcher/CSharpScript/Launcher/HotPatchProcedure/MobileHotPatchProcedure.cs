@@ -10,20 +10,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchProcedure
 {
-	// Token: 0x020001D7 RID: 471
+	// Token: 0x020001DB RID: 475
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class MobileHotPatchProcedure : BaseHotPatchProcedure
 	{
-		// Token: 0x06000C7F RID: 3199 RVA: 0x0004C951 File Offset: 0x0004AB51
+		// Token: 0x06000CB6 RID: 3254 RVA: 0x0004F165 File Offset: 0x0004D365
 		[NullableContext(1)]
 		public MobileHotPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 			this.IsAllowCellDownload = false;
 		}
 
-		// Token: 0x1700013E RID: 318
-		// (get) Token: 0x06000C80 RID: 3200 RVA: 0x0004C969 File Offset: 0x0004AB69
+		// Token: 0x17000144 RID: 324
+		// (get) Token: 0x06000CB7 RID: 3255 RVA: 0x0004F17D File Offset: 0x0004D37D
 		[Nullable(1)]
 		protected UKuroNetworkChange NetworkListener
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			}
 		}
 
-		// Token: 0x06000C81 RID: 3201 RVA: 0x0004C984 File Offset: 0x0004AB84
+		// Token: 0x06000CB8 RID: 3256 RVA: 0x0004F198 File Offset: 0x0004D398
 		[NullableContext(0)]
 		public override UniTask<bool> UpdateResource(bool bUseBgDownload, [Nullable(1)] params ResourceUpdate[] updates)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <UpdateResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C82 RID: 3202 RVA: 0x0004C9D8 File Offset: 0x0004ABD8
+		// Token: 0x06000CB9 RID: 3257 RVA: 0x0004F1EC File Offset: 0x0004D3EC
 		[NullableContext(0)]
 		protected override UniTask<bool> DownloadFiles(bool bUseBgDownload, [Nullable(1)] params ResourceUpdate[] updates)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <DownloadFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C83 RID: 3203 RVA: 0x0004CA2C File Offset: 0x0004AC2C
+		// Token: 0x06000CBA RID: 3258 RVA: 0x0004F240 File Offset: 0x0004D440
 		[NullableContext(0)]
 		private UniTask<bool> DownloadRestrictByNetwork([Nullable(new byte[]
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <DownloadRestrictByNetwork>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C84 RID: 3204 RVA: 0x0004CA80 File Offset: 0x0004AC80
+		// Token: 0x06000CBB RID: 3259 RVA: 0x0004F294 File Offset: 0x0004D494
 		[NullableContext(1)]
 		[return: TupleElementNames(new string[]
 		{
@@ -121,40 +121,40 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return tcs.Task;
 		}
 
-		// Token: 0x040007D8 RID: 2008
+		// Token: 0x04000815 RID: 2069
 		protected long? UpdateSize;
 
-		// Token: 0x040007D9 RID: 2009
+		// Token: 0x04000816 RID: 2070
 		private long? DownSize;
 
-		// Token: 0x040007DA RID: 2010
+		// Token: 0x04000817 RID: 2071
 		private long? NeedSpace;
 
-		// Token: 0x040007DB RID: 2011
+		// Token: 0x04000818 RID: 2072
 		private bool IsAllowCellDownload;
 
-		// Token: 0x040007DC RID: 2012
+		// Token: 0x04000819 RID: 2073
 		private UrlPrefixDownload PrefixDownloader;
 
-		// Token: 0x040007DD RID: 2013
+		// Token: 0x0400081A RID: 2074
 		private UKuroBgPrefixDownload BgDownloader;
 
-		// Token: 0x040007DE RID: 2014
+		// Token: 0x0400081B RID: 2075
 		private UKuroNetworkChange NetworkListenerInternal;
 
-		// Token: 0x040007DF RID: 2015
+		// Token: 0x0400081C RID: 2076
 		private ENetworkType LastNetworkType = ENetworkType.None;
 
-		// Token: 0x040007E0 RID: 2016
+		// Token: 0x0400081D RID: 2077
 		private bool CanceledByNetworkChange;
 
-		// Token: 0x040007E1 RID: 2017
+		// Token: 0x0400081E RID: 2078
 		private bool UserAnsweredDialog;
 
-		// Token: 0x040007E2 RID: 2018
+		// Token: 0x0400081F RID: 2079
 		private Action<bool> DialogCb;
 
-		// Token: 0x040007E3 RID: 2019
+		// Token: 0x04000820 RID: 2080
 		private Action<byte> OnChangeNetworkType;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044C7 RID: 17607
+	// Token: 0x0200492F RID: 18735
 	public struct IFindSunSpiritLevelConfig : IFlatbufferObject
 	{
-		// Token: 0x17007C43 RID: 31811
-		// (get) Token: 0x0601A4F8 RID: 107768 RVA: 0x003C1C34 File Offset: 0x003BFE34
+		// Token: 0x17008282 RID: 33410
+		// (get) Token: 0x0601BCC9 RID: 113865 RVA: 0x003EDE40 File Offset: 0x003EC040
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A4F9 RID: 107769 RVA: 0x003C1C41 File Offset: 0x003BFE41
+		// Token: 0x0601BCCA RID: 113866 RVA: 0x003EDE4D File Offset: 0x003EC04D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A4FA RID: 107770 RVA: 0x003C1C48 File Offset: 0x003BFE48
+		// Token: 0x0601BCCB RID: 113867 RVA: 0x003EDE54 File Offset: 0x003EC054
 		public static IFindSunSpiritLevelConfig GetRootAsIFindSunSpiritLevelConfig(ByteBuffer _bb)
 		{
 			return IFindSunSpiritLevelConfig.GetRootAsIFindSunSpiritLevelConfig(_bb, default(IFindSunSpiritLevelConfig));
 		}
 
-		// Token: 0x0601A4FB RID: 107771 RVA: 0x003C1C64 File Offset: 0x003BFE64
+		// Token: 0x0601BCCC RID: 113868 RVA: 0x003EDE70 File Offset: 0x003EC070
 		public static IFindSunSpiritLevelConfig GetRootAsIFindSunSpiritLevelConfig(ByteBuffer _bb, IFindSunSpiritLevelConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A4FC RID: 107772 RVA: 0x003C1C81 File Offset: 0x003BFE81
+		// Token: 0x0601BCCD RID: 113869 RVA: 0x003EDE8D File Offset: 0x003EC08D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A4FD RID: 107773 RVA: 0x003C1C90 File Offset: 0x003BFE90
+		// Token: 0x0601BCCE RID: 113870 RVA: 0x003EDE9C File Offset: 0x003EC09C
 		public IFindSunSpiritLevelConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007C44 RID: 31812
-		// (get) Token: 0x0601A4FE RID: 107774 RVA: 0x003C1CA0 File Offset: 0x003BFEA0
+		// Token: 0x17008283 RID: 33411
+		// (get) Token: 0x0601BCCF RID: 113871 RVA: 0x003EDEAC File Offset: 0x003EC0AC
 		public IFindSunSpiritGridConfig? GridConfig
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C45 RID: 31813
-		// (get) Token: 0x0601A4FF RID: 107775 RVA: 0x003C1D00 File Offset: 0x003BFF00
+		// Token: 0x17008284 RID: 33412
+		// (get) Token: 0x0601BCD0 RID: 113872 RVA: 0x003EDF0C File Offset: 0x003EC10C
 		public int MaxJumpHeight
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C46 RID: 31814
-		// (get) Token: 0x0601A500 RID: 107776 RVA: 0x003C1D3C File Offset: 0x003BFF3C
+		// Token: 0x17008285 RID: 33413
+		// (get) Token: 0x0601BCD1 RID: 113873 RVA: 0x003EDF48 File Offset: 0x003EC148
 		public int MaxTimes
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C47 RID: 31815
-		// (get) Token: 0x0601A501 RID: 107777 RVA: 0x003C1D78 File Offset: 0x003BFF78
+		// Token: 0x17008286 RID: 33414
+		// (get) Token: 0x0601BCD2 RID: 113874 RVA: 0x003EDF84 File Offset: 0x003EC184
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A502 RID: 107778 RVA: 0x003C1DB5 File Offset: 0x003BFFB5
+		// Token: 0x0601BCD3 RID: 113875 RVA: 0x003EDFC1 File Offset: 0x003EC1C1
 		public static Offset<IFindSunSpiritLevelConfig> CreateIFindSunSpiritLevelConfig(FlatBufferBuilder builder, Offset<IFindSunSpiritGridConfig> GridConfigOffset = default(Offset<IFindSunSpiritGridConfig>), int MaxJumpHeight = 0, int MaxTimes = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IFindSunSpiritLevelConfig.EndIFindSunSpiritLevelConfig(builder);
 		}
 
-		// Token: 0x0601A503 RID: 107779 RVA: 0x003C1DE1 File Offset: 0x003BFFE1
+		// Token: 0x0601BCD4 RID: 113876 RVA: 0x003EDFED File Offset: 0x003EC1ED
 		public static void StartIFindSunSpiritLevelConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601A504 RID: 107780 RVA: 0x003C1DEA File Offset: 0x003BFFEA
+		// Token: 0x0601BCD5 RID: 113877 RVA: 0x003EDFF6 File Offset: 0x003EC1F6
 		public static void AddGridConfig(FlatBufferBuilder builder, Offset<IFindSunSpiritGridConfig> gridConfigOffset)
 		{
 			builder.AddOffset(0, gridConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0601A505 RID: 107781 RVA: 0x003C1DFA File Offset: 0x003BFFFA
+		// Token: 0x0601BCD6 RID: 113878 RVA: 0x003EE006 File Offset: 0x003EC206
 		public static void AddMaxJumpHeight(FlatBufferBuilder builder, int maxJumpHeight)
 		{
 			builder.AddInt(1, maxJumpHeight, 0);
 		}
 
-		// Token: 0x0601A506 RID: 107782 RVA: 0x003C1E05 File Offset: 0x003C0005
+		// Token: 0x0601BCD7 RID: 113879 RVA: 0x003EE011 File Offset: 0x003EC211
 		public static void AddMaxTimes(FlatBufferBuilder builder, int maxTimes)
 		{
 			builder.AddInt(2, maxTimes, 0);
 		}
 
-		// Token: 0x0601A507 RID: 107783 RVA: 0x003C1E10 File Offset: 0x003C0010
+		// Token: 0x0601BCD8 RID: 113880 RVA: 0x003EE01C File Offset: 0x003EC21C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0601A508 RID: 107784 RVA: 0x003C1E1B File Offset: 0x003C001B
+		// Token: 0x0601BCD9 RID: 113881 RVA: 0x003EE027 File Offset: 0x003EC227
 		public static Offset<IFindSunSpiritLevelConfig> EndIFindSunSpiritLevelConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFindSunSpiritLevelConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601A509 RID: 107785 RVA: 0x003C1E28 File Offset: 0x003C0028
+		// Token: 0x0601BCDA RID: 113882 RVA: 0x003EE034 File Offset: 0x003EC234
 		public IFindSunSpiritLevelConfigT UnPack()
 		{
 			IFindSunSpiritLevelConfigT findSunSpiritLevelConfigT = new IFindSunSpiritLevelConfigT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return findSunSpiritLevelConfigT;
 		}
 
-		// Token: 0x0601A50A RID: 107786 RVA: 0x003C1E44 File Offset: 0x003C0044
+		// Token: 0x0601BCDB RID: 113883 RVA: 0x003EE050 File Offset: 0x003EC250
 		public void UnPackTo(IFindSunSpiritLevelConfigT _o)
 		{
 			_o.GridConfig = ((this.GridConfig != null) ? this.GridConfig.Value.UnPack() : null);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601A50B RID: 107787 RVA: 0x003C1EA4 File Offset: 0x003C00A4
+		// Token: 0x0601BCDC RID: 113884 RVA: 0x003EE0B0 File Offset: 0x003EC2B0
 		public static Offset<IFindSunSpiritLevelConfig> Pack(FlatBufferBuilder builder, IFindSunSpiritLevelConfigT _o)
 		{
 			if (_o == null)
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IFindSunSpiritLevelConfig.CreateIFindSunSpiritLevelConfig(builder, gridConfigOffset, _o.MaxJumpHeight, _o.MaxTimes, _o.NullMask);
 		}
 
-		// Token: 0x0400C4DD RID: 50397
+		// Token: 0x0400CF0B RID: 53003
 		private Table __p;
 	}
 }

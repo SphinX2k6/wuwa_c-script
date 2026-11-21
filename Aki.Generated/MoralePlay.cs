@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E2B RID: 3627
+	// Token: 0x02000F10 RID: 3856
 	public struct MoralePlay : IFlatbufferObject
 	{
-		// Token: 0x17001FF0 RID: 8176
-		// (get) Token: 0x06009667 RID: 38503 RVA: 0x0028A525 File Offset: 0x00288725
+		// Token: 0x17002055 RID: 8277
+		// (get) Token: 0x06009C87 RID: 40071 RVA: 0x002A8239 File Offset: 0x002A6439
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009668 RID: 38504 RVA: 0x0028A532 File Offset: 0x00288732
+		// Token: 0x06009C88 RID: 40072 RVA: 0x002A8246 File Offset: 0x002A6446
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009669 RID: 38505 RVA: 0x0028A53C File Offset: 0x0028873C
+		// Token: 0x06009C89 RID: 40073 RVA: 0x002A8250 File Offset: 0x002A6450
 		public static MoralePlay GetRootAsMoralePlay(ByteBuffer _bb)
 		{
 			return MoralePlay.GetRootAsMoralePlay(_bb, default(MoralePlay));
 		}
 
-		// Token: 0x0600966A RID: 38506 RVA: 0x0028A558 File Offset: 0x00288758
+		// Token: 0x06009C8A RID: 40074 RVA: 0x002A826C File Offset: 0x002A646C
 		public static MoralePlay GetRootAsMoralePlay(ByteBuffer _bb, MoralePlay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600966B RID: 38507 RVA: 0x0028A575 File Offset: 0x00288775
+		// Token: 0x06009C8B RID: 40075 RVA: 0x002A8289 File Offset: 0x002A6489
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600966C RID: 38508 RVA: 0x0028A584 File Offset: 0x00288784
+		// Token: 0x06009C8C RID: 40076 RVA: 0x002A8298 File Offset: 0x002A6498
 		public MoralePlay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001FF1 RID: 8177
-		// (get) Token: 0x0600966D RID: 38509 RVA: 0x0028A594 File Offset: 0x00288794
+		// Token: 0x17002056 RID: 8278
+		// (get) Token: 0x06009C8D RID: 40077 RVA: 0x002A82A8 File Offset: 0x002A64A8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001FF2 RID: 8178
-		// (get) Token: 0x0600966E RID: 38510 RVA: 0x0028A5D0 File Offset: 0x002887D0
+		// Token: 0x17002057 RID: 8279
+		// (get) Token: 0x06009C8E RID: 40078 RVA: 0x002A82E4 File Offset: 0x002A64E4
 		public int BattleScoreId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600966F RID: 38511 RVA: 0x0028A60C File Offset: 0x0028880C
+		// Token: 0x06009C8F RID: 40079 RVA: 0x002A8320 File Offset: 0x002A6520
 		public int ExpItemId(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001FF3 RID: 8179
-		// (get) Token: 0x06009670 RID: 38512 RVA: 0x0028A64C File Offset: 0x0028884C
+		// Token: 0x17002058 RID: 8280
+		// (get) Token: 0x06009C90 RID: 40080 RVA: 0x002A8360 File Offset: 0x002A6560
 		public int ExpItemIdLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009671 RID: 38513 RVA: 0x0028A677 File Offset: 0x00288877
+		// Token: 0x06009C91 RID: 40081 RVA: 0x002A838B File Offset: 0x002A658B
 		public Span<int> GetExpItemIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06009672 RID: 38514 RVA: 0x0028A686 File Offset: 0x00288886
+		// Token: 0x06009C92 RID: 40082 RVA: 0x002A839A File Offset: 0x002A659A
 		public int[] GetExpItemIdArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009673 RID: 38515 RVA: 0x0028A6A0 File Offset: 0x002888A0
+		// Token: 0x06009C93 RID: 40083 RVA: 0x002A83B1 File Offset: 0x002A65B1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ExpItemIdIter()或GetExpItemIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ExpItemId()
+		public int[] ExpItemId()
 		{
-			MoralePlay moralePlay = this;
-			return moralePlay.GetExpItemIdArray() ?? Array.Empty<int>();
+			return this.GetExpItemIdArray();
 		}
 
-		// Token: 0x06009674 RID: 38516 RVA: 0x0028A6C4 File Offset: 0x002888C4
+		// Token: 0x06009C94 RID: 40084 RVA: 0x002A83B9 File Offset: 0x002A65B9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ExpItemIdIter()
+		public IEnumerable<int> ExpItemIdIter()
 		{
 			MoralePlay.<ExpItemIdIter>d__18 <ExpItemIdIter>d__ = new MoralePlay.<ExpItemIdIter>d__18(-2);
 			<ExpItemIdIter>d__.<>3__<>4__this = this;
 			return <ExpItemIdIter>d__;
 		}
 
-		// Token: 0x04004ED0 RID: 20176
+		// Token: 0x040054B5 RID: 21685
 		private Table __p;
 	}
 }

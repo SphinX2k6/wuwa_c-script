@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A2C RID: 18988
+	// Token: 0x020039D4 RID: 14804
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class TrapDefenseLevelModeDataBase : ITrapDefenseLevelModeData<TrapDefenseLevelModeDataBase>
 	{
-		// Token: 0x17007A31 RID: 31281
-		// (get) Token: 0x060314C9 RID: 201929 RVA: 0x00B6F67C File Offset: 0x00B6D87C
-		// (set) Token: 0x060314CA RID: 201930 RVA: 0x00B6F684 File Offset: 0x00B6D884
+		// Token: 0x17004DDE RID: 19934
+		// (get) Token: 0x06026259 RID: 156249 RVA: 0x00AB3620 File Offset: 0x00AB1820
+		// (set) Token: 0x0602625A RID: 156250 RVA: 0x00AB3628 File Offset: 0x00AB1828
 		public int ActivityId { get; set; }
 
-		// Token: 0x060314CB RID: 201931
+		// Token: 0x0602625B RID: 156251
 		protected abstract void Init();
 
-		// Token: 0x060314CC RID: 201932 RVA: 0x00B6F68D File Offset: 0x00B6D88D
+		// Token: 0x0602625C RID: 156252 RVA: 0x00AB3631 File Offset: 0x00AB1831
 		public static T Create<[Nullable(0)] T>(int activityId) where T : TrapDefenseLevelModeDataBase, new()
 		{
 			T t = Activator.CreateInstance<T>();
@@ -30,23 +33,18 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return t;
 		}
 
-		// Token: 0x060314CD RID: 201933 RVA: 0x00B6F6B6 File Offset: 0x00B6D8B6
+		// Token: 0x0602625D RID: 156253 RVA: 0x00AB365A File Offset: 0x00AB185A
 		public virtual void InitLocalData()
 		{
-			this.CacheReachOpenTimeLevels = (LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.TrapDefenseLevelReachOpenTime, null) ?? new HashSet<int>());
+			ServerStorageUtil.OverrideLocalSetToServerSet(ELocalStoragePlayerKey.TrapDefenseLevelReachOpenTime, EClientStorageSystemIdType.TrapDefenseLevelReachOpenTime, true);
 		}
 
-		// Token: 0x060314CE RID: 201934 RVA: 0x00B6F6D2 File Offset: 0x00B6D8D2
+		// Token: 0x0602625E RID: 156254 RVA: 0x00AB366A File Offset: 0x00AB186A
 		public void SaveCacheReachOpenTimeLevels()
 		{
-			if (this.IsChangeCacheLevels)
-			{
-				LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.TrapDefenseLevelReachOpenTime, this.CacheReachOpenTimeLevels);
-				this.IsChangeCacheLevels = false;
-			}
 		}
 
-		// Token: 0x060314CF RID: 201935 RVA: 0x00B6F6F4 File Offset: 0x00B6D8F4
+		// Token: 0x0602625F RID: 156255 RVA: 0x00AB366C File Offset: 0x00AB186C
 		public TrapDefenseLevelData AddLevelConfig(TrapDefenseActivity config)
 		{
 			TrapDefenseLevelData trapDefenseLevelData = TrapDefenseLevelData.Create(config);
@@ -54,7 +52,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseLevelData;
 		}
 
-		// Token: 0x060314D0 RID: 201936 RVA: 0x00B6F718 File Offset: 0x00B6D918
+		// Token: 0x06026260 RID: 156256 RVA: 0x00AB3690 File Offset: 0x00AB1890
 		public void SortLevelDataList()
 		{
 			this.LevelDataList.Sort(delegate(TrapDefenseLevelData a, TrapDefenseLevelData b)
@@ -81,14 +79,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060314D1 RID: 201937 RVA: 0x00B6F779 File Offset: 0x00B6D979
+		// Token: 0x06026261 RID: 156257 RVA: 0x00AB36F1 File Offset: 0x00AB18F1
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetModeStarProgress()
 		{
 			return new ValueTuple<int, int>(this.GetModeAllGetStarNum(), this.GetModeTotalStar());
 		}
 
-		// Token: 0x060314D2 RID: 201938 RVA: 0x00B6F78C File Offset: 0x00B6D98C
+		// Token: 0x06026262 RID: 156258 RVA: 0x00AB3704 File Offset: 0x00AB1904
 		public int GetModeAllGetStarNum()
 		{
 			int num = 0;
@@ -99,7 +97,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return num;
 		}
 
-		// Token: 0x060314D3 RID: 201939 RVA: 0x00B6F7EC File Offset: 0x00B6D9EC
+		// Token: 0x06026263 RID: 156259 RVA: 0x00AB3764 File Offset: 0x00AB1964
 		public int GetModeTotalStar()
 		{
 			int num = 0;
@@ -110,7 +108,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return num;
 		}
 
-		// Token: 0x060314D4 RID: 201940 RVA: 0x00B6F84C File Offset: 0x00B6DA4C
+		// Token: 0x06026264 RID: 156260 RVA: 0x00AB37C4 File Offset: 0x00AB19C4
 		public TrapDefenseLevelData GetNextChallengeData()
 		{
 			int num = this.LevelDataList.FindIndex((TrapDefenseLevelData data) => !data.IsUnlock);
@@ -132,12 +130,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060314D5 RID: 201941 RVA: 0x00B6F8D0 File Offset: 0x00B6DAD0
+		// Token: 0x06026265 RID: 156261 RVA: 0x00AB3848 File Offset: 0x00AB1A48
 		public bool RedDotLevelReachOpenTime()
 		{
+			ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.TrapDefenseLevelReachOpenTime) as ServerStorageSet;
 			foreach (TrapDefenseLevelData trapDefenseLevelData in this.LevelDataList)
 			{
-				if (!this.CacheReachOpenTimeLevels.Contains(trapDefenseLevelData.Id) && trapDefenseLevelData.IsReachOpenTimeIgnoreZero())
+				if (!serverStorageSet.Has(trapDefenseLevelData.Id) && trapDefenseLevelData.IsReachOpenTimeIgnoreZero())
 				{
 					return true;
 				}
@@ -145,15 +144,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x060314D6 RID: 201942 RVA: 0x00B6F940 File Offset: 0x00B6DB40
+		// Token: 0x06026266 RID: 156262 RVA: 0x00AB38C4 File Offset: 0x00AB1AC4
 		public bool CheckLevelReachOpenTimeRedDotState(TrapDefenseLevelData data)
 		{
 			if (!this.GetLevelReachOpenTimeRedDotState(data))
 			{
 				return false;
 			}
-			this.IsChangeCacheLevels = true;
-			this.CacheReachOpenTimeLevels.Add(data.Id);
+			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.TrapDefenseLevelReachOpenTime) as ServerStorageSet).Add(data.Id);
 			EventSystem.Instance.Emit<int>(this.GetLevelReachOpenTimeRedDotEventName(), data.Id);
 			ActivityTrapDefenseController instance = ActivityTrapDefenseController.Instance;
 			if (instance != null)
@@ -163,25 +161,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x060314D7 RID: 201943 RVA: 0x00B6F999 File Offset: 0x00B6DB99
+		// Token: 0x06026267 RID: 156263 RVA: 0x00AB3920 File Offset: 0x00AB1B20
 		public bool GetLevelReachOpenTimeRedDotState(TrapDefenseLevelData data)
 		{
-			return !this.CacheReachOpenTimeLevels.Contains(data.Id) && data.IsReachOpenTimeIgnoreZero();
+			return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.TrapDefenseLevelReachOpenTime) as ServerStorageSet).Has(data.Id) && data.IsReachOpenTimeIgnoreZero();
 		}
 
-		// Token: 0x060314D8 RID: 201944 RVA: 0x00B6F9B6 File Offset: 0x00B6DBB6
+		// Token: 0x06026268 RID: 156264 RVA: 0x00AB3948 File Offset: 0x00AB1B48
 		protected virtual EEventName GetLevelReachOpenTimeRedDotEventName()
 		{
 			return EEventName.RedDotUpdateTrapDefenseLevelModeLevelReachOpenTime;
 		}
 
-		// Token: 0x0401A5A0 RID: 107936
+		// Token: 0x04014EF7 RID: 85751
 		public readonly List<TrapDefenseLevelData> LevelDataList = new List<TrapDefenseLevelData>();
-
-		// Token: 0x0401A5A1 RID: 107937
-		public HashSet<int> CacheReachOpenTimeLevels = new HashSet<int>();
-
-		// Token: 0x0401A5A2 RID: 107938
-		public bool IsChangeCacheLevels;
 	}
 }

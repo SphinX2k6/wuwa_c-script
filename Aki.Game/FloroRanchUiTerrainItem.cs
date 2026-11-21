@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BAC RID: 7084
+// Token: 0x0200106B RID: 4203
 public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 {
-	// Token: 0x0600D31E RID: 54046 RVA: 0x00308A04 File Offset: 0x00306C04
+	// Token: 0x0600A72F RID: 42799 RVA: 0x00313AE4 File Offset: 0x00311CE4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,14 +32,14 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D31F RID: 54047 RVA: 0x00308ACB File Offset: 0x00306CCB
+	// Token: 0x0600A730 RID: 42800 RVA: 0x00313BAB File Offset: 0x00311DAB
 	[NullableContext(1)]
 	public void BindClickPosCallback(Action callback)
 	{
 		this.OnClickPosCallback = callback;
 	}
 
-	// Token: 0x0600D320 RID: 54048 RVA: 0x00308AD4 File Offset: 0x00306CD4
+	// Token: 0x0600A731 RID: 42801 RVA: 0x00313BB4 File Offset: 0x00311DB4
 	public void OnClickPos(EToggleState toggleState)
 	{
 		Action onClickPosCallback = this.OnClickPosCallback;
@@ -50,7 +50,7 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		onClickPosCallback();
 	}
 
-	// Token: 0x0600D321 RID: 54049 RVA: 0x00308AE8 File Offset: 0x00306CE8
+	// Token: 0x0600A732 RID: 42802 RVA: 0x00313BC8 File Offset: 0x00311DC8
 	public override UniTask RefreshItem()
 	{
 		FloroRanchUiTerrainItem.<RefreshItem>d__5 <RefreshItem>d__;
@@ -61,13 +61,13 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		return <RefreshItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D322 RID: 54050 RVA: 0x00308B2B File Offset: 0x00306D2B
+	// Token: 0x0600A733 RID: 42803 RVA: 0x00313C0B File Offset: 0x00311E0B
 	public override FTransform? GetRewardPopTransform()
 	{
 		return new FTransform?(base.GetRootActor().GetTransform());
 	}
 
-	// Token: 0x0600D323 RID: 54051 RVA: 0x00308B40 File Offset: 0x00306D40
+	// Token: 0x0600A734 RID: 42804 RVA: 0x00313C20 File Offset: 0x00311E20
 	public override UniTask PlayShowAnim()
 	{
 		FloroRanchUiTerrainItem.<PlayShowAnim>d__7 <PlayShowAnim>d__;
@@ -78,7 +78,7 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D324 RID: 54052 RVA: 0x00308B84 File Offset: 0x00306D84
+	// Token: 0x0600A735 RID: 42805 RVA: 0x00313C64 File Offset: 0x00311E64
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchUiTerrainItem.<PlayHideAnim>d__8 <PlayHideAnim>d__;
@@ -89,7 +89,7 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D325 RID: 54053 RVA: 0x00308BC7 File Offset: 0x00306DC7
+	// Token: 0x0600A736 RID: 42806 RVA: 0x00313CA7 File Offset: 0x00311EA7
 	public void SetSelectState(bool isSelect)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -100,7 +100,7 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		extendToggle.SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600D326 RID: 54054 RVA: 0x00308BE5 File Offset: 0x00306DE5
+	// Token: 0x0600A737 RID: 42807 RVA: 0x00313CC5 File Offset: 0x00311EC5
 	public void SetInteractive(bool isInteractive)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -111,22 +111,22 @@ public class FloroRanchUiTerrainItem : FloroRanchUiItemBase
 		extendToggle.SetSelfInteractive(isInteractive);
 	}
 
-	// Token: 0x040060B4 RID: 24756
+	// Token: 0x04006183 RID: 24963
 	[Nullable(1)]
 	private Action OnClickPosCallback = delegate()
 	{
 	};
 
-	// Token: 0x02008164 RID: 33124
+	// Token: 0x020072F2 RID: 29426
 	private class EItemComponentDefine
 	{
-		// Token: 0x0402A39F RID: 172959
+		// Token: 0x040256D3 RID: 153299
 		public const int ItemToggle = 0;
 
-		// Token: 0x0402A3A0 RID: 172960
+		// Token: 0x040256D4 RID: 153300
 		public const int TerrainNormalSprite = 1;
 
-		// Token: 0x0402A3A1 RID: 172961
+		// Token: 0x040256D5 RID: 153301
 		public const int TerrainChangeTexture = 2;
 	}
 }

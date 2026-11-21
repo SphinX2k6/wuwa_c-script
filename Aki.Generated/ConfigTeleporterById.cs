@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009C7 RID: 2503
+	// Token: 0x02000A9C RID: 2716
 	public class ConfigTeleporterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003ABE RID: 15038 RVA: 0x001A5F2C File Offset: 0x001A412C
+		// Token: 0x06003FBC RID: 16316 RVA: 0x001C52C0 File Offset: 0x001C34C0
 		static ConfigTeleporterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTeleporterById.CreateStaticDefaultValue), new Action(ConfigTeleporterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003ABF RID: 15039 RVA: 0x001A5F4C File Offset: 0x001A414C
+		// Token: 0x06003FBD RID: 16317 RVA: 0x001C52E0 File Offset: 0x001C34E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTeleporterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003AC0 RID: 15040 RVA: 0x001A5FCB File Offset: 0x001A41CB
+		// Token: 0x06003FBE RID: 16318 RVA: 0x001C535F File Offset: 0x001C355F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTeleporterById.LogPair = null;
 			ConfigTeleporterById.HandleId = 0;
 		}
 
-		// Token: 0x06003AC1 RID: 15041 RVA: 0x001A5FD9 File Offset: 0x001A41D9
+		// Token: 0x06003FBF RID: 16319 RVA: 0x001C536D File Offset: 0x001C356D
 		public static void Init()
 		{
 			ConfigTeleporterById.HandleId = ConfigCommon.InitDataStatement(ConfigTeleporterById.HandleId, "db_teleporter.db", "select BinData from `Teleporter` where Id = ?");
 		}
 
-		// Token: 0x06003AC2 RID: 15042 RVA: 0x001A5FF4 File Offset: 0x001A41F4
+		// Token: 0x06003FC0 RID: 16320 RVA: 0x001C5388 File Offset: 0x001C3588
 		public static Teleporter? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTeleporterById.HandleId, ConfigTeleporterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Teleporter?(rootAsTeleporter);
 		}
 
-		// Token: 0x04004457 RID: 17495
+		// Token: 0x04004A2A RID: 18986
 		private const string DB = "db_teleporter.db";
 
-		// Token: 0x04004458 RID: 17496
+		// Token: 0x04004A2B RID: 18987
 		private const string FILE = "c.传送.xlsx";
 
-		// Token: 0x04004459 RID: 17497
+		// Token: 0x04004A2C RID: 18988
 		private const string TABLE = "Teleporter";
 
-		// Token: 0x0400445A RID: 17498
+		// Token: 0x04004A2D RID: 18989
 		private const string COMMAND = "select BinData from `Teleporter` where Id = ?";
 
-		// Token: 0x0400445B RID: 17499
+		// Token: 0x04004A2E RID: 18990
 		private const string KEY_PREFIX = "TeleporterById";
 
-		// Token: 0x0400445C RID: 17500
+		// Token: 0x04004A2F RID: 18991
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400445D RID: 17501
+		// Token: 0x04004A30 RID: 18992
 		private static int HandleId;
 	}
 }

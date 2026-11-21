@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A0D RID: 6669
+	// Token: 0x0200048F RID: 1167
 	public sealed class FTestUdpResultDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018B54 RID: 101204 RVA: 0x002474AF File Offset: 0x002456AF
+		// Token: 0x06006D91 RID: 28049 RVA: 0x000A05EA File Offset: 0x0009E7EA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FTestUdpResultDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018B55 RID: 101205 RVA: 0x002474BB File Offset: 0x002456BB
+		// Token: 0x06006D92 RID: 28050 RVA: 0x000A05F6 File Offset: 0x0009E7F6
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FTestUdpResultDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FTestUdpResultDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018B56 RID: 101206 RVA: 0x002474DE File Offset: 0x002456DE
+		// Token: 0x06006D93 RID: 28051 RVA: 0x000A0619 File Offset: 0x0009E819
 		public FTestUdpResultDelegate()
 		{
 		}
 
-		// Token: 0x06018B57 RID: 101207 RVA: 0x002474E6 File Offset: 0x002456E6
+		// Token: 0x06006D94 RID: 28052 RVA: 0x000A0621 File Offset: 0x0009E821
 		[NullableContext(2)]
 		public FTestUdpResultDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018B58 RID: 101208 RVA: 0x002474F0 File Offset: 0x002456F0
+		// Token: 0x06006D95 RID: 28053 RVA: 0x000A062B File Offset: 0x0009E82B
 		public FTestUdpResultDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018B59 RID: 101209 RVA: 0x002474FB File Offset: 0x002456FB
+		// Token: 0x06006D96 RID: 28054 RVA: 0x000A0636 File Offset: 0x0009E836
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018B5A RID: 101210 RVA: 0x0024752D File Offset: 0x0024572D
+		// Token: 0x06006D97 RID: 28055 RVA: 0x000A0668 File Offset: 0x0009E868
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, int> Callback)
 		{
 			if (FTestUdpResultDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FTestUdpResultDelegate.RegisterId);
 		}
 
-		// Token: 0x06018B5B RID: 101211 RVA: 0x00247568 File Offset: 0x00245768
+		// Token: 0x06006D98 RID: 28056 RVA: 0x000A06A4 File Offset: 0x0009E8A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int SuccessCount, int ErrorCode)
 		{
 			FTestUdpResultDelegate.__FTestUdpResultDelegate_DelegateParams* ptr = stackalloc FTestUdpResultDelegate.__FTestUdpResultDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FTestUdpResultDelegate.__FTestUdpResultDelegate_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06018B5C RID: 101212 RVA: 0x002475AC File Offset: 0x002457AC
+		// Token: 0x06006D99 RID: 28057 RVA: 0x000A06E8 File Offset: 0x0009E8E8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -91,35 +88,35 @@ namespace UnrealEngine
 			action(((FTestUdpResultDelegate.__FTestUdpResultDelegate_DelegateParams*)__Parameters)->SuccessCount, ((FTestUdpResultDelegate.__FTestUdpResultDelegate_DelegateParams*)__Parameters)->ErrorCode);
 		}
 
-		// Token: 0x0400D57B RID: 54651
+		// Token: 0x04002EBE RID: 11966
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D57C RID: 54652
+		// Token: 0x04002EBF RID: 11967
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.TestUdpResultDelegate__DelegateSignature";
 
-		// Token: 0x0400D57D RID: 54653
+		// Token: 0x04002EC0 RID: 11968
 		private static int RegisterId;
 
-		// Token: 0x020030C3 RID: 12483
+		// Token: 0x02000BA0 RID: 2976
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FTestUdpResultDelegate_DelegateParams
+		private ref struct __FTestUdpResultDelegate_DelegateParams
 		{
-			// Token: 0x04016E1F RID: 93727
+			// Token: 0x04005D25 RID: 23845
 			[FieldOffset(0)]
 			public int SuccessCount;
 
-			// Token: 0x04016E20 RID: 93728
+			// Token: 0x04005D26 RID: 23846
 			[FieldOffset(4)]
 			public int ErrorCode;
 		}
 
-		// Token: 0x020030C4 RID: 12484
+		// Token: 0x02000BA1 RID: 2977
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E21 RID: 93729
+			// Token: 0x04005D27 RID: 23847
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

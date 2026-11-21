@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005B4 RID: 1460
+	// Token: 0x020005CB RID: 1483
 	public class ConfigMotorOnlineRoleSkinByRoleSkinId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002245 RID: 8773 RVA: 0x0011B520 File Offset: 0x00119720
+		// Token: 0x060022CF RID: 8911 RVA: 0x00121E08 File Offset: 0x00120008
 		static ConfigMotorOnlineRoleSkinByRoleSkinId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorOnlineRoleSkinByRoleSkinId.CreateStaticDefaultValue), new Action(ConfigMotorOnlineRoleSkinByRoleSkinId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002246 RID: 8774 RVA: 0x0011B540 File Offset: 0x00119740
+		// Token: 0x060022D0 RID: 8912 RVA: 0x00121E28 File Offset: 0x00120028
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorOnlineRoleSkinByRoleSkinId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002247 RID: 8775 RVA: 0x0011B5BF File Offset: 0x001197BF
+		// Token: 0x060022D1 RID: 8913 RVA: 0x00121EA7 File Offset: 0x001200A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorOnlineRoleSkinByRoleSkinId.LogPair = null;
 			ConfigMotorOnlineRoleSkinByRoleSkinId.HandleId = 0;
 		}
 
-		// Token: 0x06002248 RID: 8776 RVA: 0x0011B5CD File Offset: 0x001197CD
+		// Token: 0x060022D2 RID: 8914 RVA: 0x00121EB5 File Offset: 0x001200B5
 		public static void Init()
 		{
 			ConfigMotorOnlineRoleSkinByRoleSkinId.HandleId = ConfigCommon.InitDataStatement(ConfigMotorOnlineRoleSkinByRoleSkinId.HandleId, "db.onlinemotor.db", "select BinData from `MotorOnlineRoleSkin` where RoleSkinId=?");
 		}
 
-		// Token: 0x06002249 RID: 8777 RVA: 0x0011B5E8 File Offset: 0x001197E8
+		// Token: 0x060022D3 RID: 8915 RVA: 0x00121ED0 File Offset: 0x001200D0
 		public static MotorOnlineRoleSkin? GetConfig(int p0RoleSkinId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorOnlineRoleSkinByRoleSkinId.HandleId, ConfigMotorOnlineRoleSkinByRoleSkinId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorOnlineRoleSkin?(rootAsMotorOnlineRoleSkin);
 		}
 
-		// Token: 0x040027D0 RID: 10192
+		// Token: 0x04002871 RID: 10353
 		private const string DB = "db.onlinemotor.db";
 
-		// Token: 0x040027D1 RID: 10193
+		// Token: 0x04002872 RID: 10354
 		private const string FILE = "l.联机摩托跑酷.xlsx";
 
-		// Token: 0x040027D2 RID: 10194
+		// Token: 0x04002873 RID: 10355
 		private const string TABLE = "MotorOnlineRoleSkin";
 
-		// Token: 0x040027D3 RID: 10195
+		// Token: 0x04002874 RID: 10356
 		private const string COMMAND = "select BinData from `MotorOnlineRoleSkin` where RoleSkinId=?";
 
-		// Token: 0x040027D4 RID: 10196
+		// Token: 0x04002875 RID: 10357
 		private const string KEY_PREFIX = "MotorOnlineRoleSkinByRoleSkinId";
 
-		// Token: 0x040027D5 RID: 10197
+		// Token: 0x04002876 RID: 10358
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040027D6 RID: 10198
+		// Token: 0x04002877 RID: 10359
 		private static int HandleId;
 	}
 }

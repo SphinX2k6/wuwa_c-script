@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015FC RID: 5628
+	// Token: 0x0200175E RID: 5982
 	public enum EInstrumentType
 	{
-		// Token: 0x04004B22 RID: 19234
+		// Token: 0x04004EE8 RID: 20200
 		ChineseZither
 	}
 }

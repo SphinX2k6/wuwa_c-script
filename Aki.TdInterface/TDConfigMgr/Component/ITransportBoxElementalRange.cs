@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007A0 RID: 1952
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000841 RID: 2113
 	public class ITransportBoxElementalRange : IElementalRangeTypeBase
 	{
-		// Token: 0x06002A50 RID: 10832 RVA: 0x0006F0D0 File Offset: 0x0006D2D0
+		// Token: 0x06002D78 RID: 11640 RVA: 0x00076378 File Offset: 0x00074578
 		private ITransportBoxElementalRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A51 RID: 10833 RVA: 0x0006F108 File Offset: 0x0006D308
+		// Token: 0x06002D79 RID: 11641 RVA: 0x000763B0 File Offset: 0x000745B0
 		public static ITransportBoxElementalRange Create([Nullable(2)] ITransportBoxElementalRange instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A52 RID: 10834 RVA: 0x0006F11B File Offset: 0x0006D31B
+		// Token: 0x06002D7A RID: 11642 RVA: 0x000763C3 File Offset: 0x000745C3
 		public static ITransportBoxElementalRange CreateFromSetValue([Nullable(2)] ITransportBoxElementalRange_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A53 RID: 10835 RVA: 0x0006F12E File Offset: 0x0006D32E
+		// Token: 0x06002D7B RID: 11643 RVA: 0x000763D6 File Offset: 0x000745D6
 		public new ITransportBoxElementalRange_SetValue ToSetValue()
 		{
 			return new ITransportBoxElementalRange_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B1A RID: 2842
-		// (get) Token: 0x06002A54 RID: 10836 RVA: 0x0006F141 File Offset: 0x0006D341
-		// (set) Token: 0x06002A55 RID: 10837 RVA: 0x0006F16C File Offset: 0x0006D36C
+		// Token: 0x17000BDC RID: 3036
+		// (get) Token: 0x06002D7C RID: 11644 RVA: 0x000763E9 File Offset: 0x000745E9
+		// (set) Token: 0x06002D7D RID: 11645 RVA: 0x00076414 File Offset: 0x00074614
 		public override EElementalRangeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C44 RID: 7236
+		// Token: 0x04001E4D RID: 7757
 		[Nullable(2)]
 		protected new ITransportBoxElementalRange FbInstance;
 
-		// Token: 0x04001C45 RID: 7237
+		// Token: 0x04001E4E RID: 7758
 		[Nullable(2)]
 		protected new ITransportBoxElementalRange_SetValue PocoInterface;
 	}

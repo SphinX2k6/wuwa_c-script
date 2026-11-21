@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000083 RID: 131
+	// Token: 0x02000068 RID: 104
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,7 +15,7 @@ namespace UnrealEngine
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FSoftObjectPath : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06000EEA RID: 3818 RVA: 0x00016594 File Offset: 0x00014794
+		// Token: 0x06000A7E RID: 2686 RVA: 0x00011307 File Offset: 0x0000F507
 		public FSoftObjectPath(string Path)
 		{
 			if (!string.IsNullOrEmpty(Path))
@@ -24,22 +24,27 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EEB RID: 3819 RVA: 0x000165AC File Offset: 0x000147AC
+		// Token: 0x06000A7F RID: 2687 RVA: 0x0001131E File Offset: 0x0000F51E
 		[NullableContext(2)]
 		public FSoftObjectPath(UObject Object)
 		{
-			string text = (Object != null) ? Object.GetPathName() : null;
-			this..ctor((text != null) ? text : FName.NAME_None, string.Empty);
+			if (Object != null)
+			{
+				this.AssetPathName = Object.GetPathName();
+			}
 		}
 
-		// Token: 0x06000EEC RID: 3820 RVA: 0x000165E4 File Offset: 0x000147E4
+		// Token: 0x06000A80 RID: 2688 RVA: 0x0001133A File Offset: 0x0000F53A
 		public FSoftObjectPath([Nullable(2)] UObject Object, string SubPath)
 		{
-			string text = (Object != null) ? Object.GetPathName() : null;
-			this..ctor((text != null) ? text : FName.NAME_None, SubPath);
+			if (Object != null)
+			{
+				this.AssetPathName = Object.GetPathName();
+			}
+			this.SubPathString = SubPath;
 		}
 
-		// Token: 0x06000EED RID: 3821 RVA: 0x00016618 File Offset: 0x00014818
+		// Token: 0x06000A81 RID: 2689 RVA: 0x00011360 File Offset: 0x0000F560
 		[NullableContext(2)]
 		public unsafe void SetPath(string Path)
 		{
@@ -70,32 +75,32 @@ namespace UnrealEngine
 			char* ptr2 = null;
 		}
 
-		// Token: 0x06000EEE RID: 3822 RVA: 0x00016670 File Offset: 0x00014870
+		// Token: 0x06000A82 RID: 2690 RVA: 0x000113B8 File Offset: 0x0000F5B8
 		public void Reset()
 		{
 			FSoftObjectPath.Internal_Reset(base.NativePtr);
 		}
 
-		// Token: 0x06000EEF RID: 3823 RVA: 0x0001667D File Offset: 0x0001487D
+		// Token: 0x06000A83 RID: 2691 RVA: 0x000113C5 File Offset: 0x0000F5C5
 		[NullableContext(2)]
 		public UObject ResolveObject()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer(FSoftObjectPath.Internal_ResolveObject(base.NativePtr)) as UObject;
 		}
 
-		// Token: 0x06000EF0 RID: 3824
+		// Token: 0x06000A84 RID: 2692
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetPath(IntPtr This, in FCSharpStringView Path);
 
-		// Token: 0x06000EF1 RID: 3825
+		// Token: 0x06000A85 RID: 2693
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Reset(IntPtr This);
 
-		// Token: 0x06000EF2 RID: 3826
+		// Token: 0x06000A86 RID: 2694
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr Internal_ResolveObject(IntPtr This);
 
-		// Token: 0x06000EF3 RID: 3827 RVA: 0x00016694 File Offset: 0x00014894
+		// Token: 0x06000A87 RID: 2695 RVA: 0x000113DC File Offset: 0x0000F5DC
 		public override string ToString()
 		{
 			StringBuilder stringBuilder = new StringBuilder(128);
@@ -113,7 +118,7 @@ namespace UnrealEngine
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x06000EF4 RID: 3828 RVA: 0x000166F8 File Offset: 0x000148F8
+		// Token: 0x06000A88 RID: 2696 RVA: 0x00011440 File Offset: 0x0000F640
 		public string GetAssetPathString()
 		{
 			FName assetPathName = this.AssetPathName;
@@ -124,15 +129,15 @@ namespace UnrealEngine
 			return string.Empty;
 		}
 
-		// Token: 0x06000EF5 RID: 3829 RVA: 0x00016728 File Offset: 0x00014928
+		// Token: 0x06000A89 RID: 2697 RVA: 0x00011470 File Offset: 0x0000F670
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSoftObjectPath._ScriptStructPtr != 0) ? FSoftObjectPath._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.SoftObjectPath", ref FSoftObjectPath._ScriptStructPtr);
 		}
 
-		// Token: 0x170004BB RID: 1211
-		// (get) Token: 0x06000EF6 RID: 3830 RVA: 0x0001674C File Offset: 0x0001494C
-		// (set) Token: 0x06000EF7 RID: 3831 RVA: 0x00016760 File Offset: 0x00014960
+		// Token: 0x170000C3 RID: 195
+		// (get) Token: 0x06000A8A RID: 2698 RVA: 0x00011494 File Offset: 0x0000F694
+		// (set) Token: 0x06000A8B RID: 2699 RVA: 0x000114A8 File Offset: 0x0000F6A8
 		public unsafe FName AssetPathName
 		{
 			get
@@ -145,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004BC RID: 1212
-		// (get) Token: 0x06000EF8 RID: 3832 RVA: 0x00016775 File Offset: 0x00014975
-		// (set) Token: 0x06000EF9 RID: 3833 RVA: 0x00016789 File Offset: 0x00014989
+		// Token: 0x170000C4 RID: 196
+		// (get) Token: 0x06000A8C RID: 2700 RVA: 0x000114BD File Offset: 0x0000F6BD
+		// (set) Token: 0x06000A8D RID: 2701 RVA: 0x000114D1 File Offset: 0x0000F6D1
 		public unsafe string SubPathString
 		{
 			get
@@ -160,57 +165,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000EFA RID: 3834 RVA: 0x0001679E File Offset: 0x0001499E
+		// Token: 0x06000A8E RID: 2702 RVA: 0x000114E6 File Offset: 0x0000F6E6
 		public FSoftObjectPath()
 		{
 		}
 
-		// Token: 0x06000EFB RID: 3835 RVA: 0x000167A6 File Offset: 0x000149A6
-		public FSoftObjectPath(FName AssetPathName, string SubPathString)
-		{
-			this.AssetPathName = AssetPathName;
-			this.SubPathString = SubPathString;
-		}
-
-		// Token: 0x06000EFC RID: 3836 RVA: 0x000167BC File Offset: 0x000149BC
+		// Token: 0x06000A8F RID: 2703 RVA: 0x000114EE File Offset: 0x0000F6EE
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSoftObjectPath.StaticStruct();
 		}
 
-		// Token: 0x06000EFD RID: 3837 RVA: 0x000167C8 File Offset: 0x000149C8
+		// Token: 0x06000A90 RID: 2704 RVA: 0x000114FA File Offset: 0x0000F6FA
 		[NullableContext(2)]
 		public FSoftObjectPath(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06000EFE RID: 3838 RVA: 0x000167D2 File Offset: 0x000149D2
+		// Token: 0x06000A91 RID: 2705 RVA: 0x00011504 File Offset: 0x0000F704
 		public FSoftObjectPath(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06000EFF RID: 3839 RVA: 0x000167DD File Offset: 0x000149DD
+		// Token: 0x06000A92 RID: 2706 RVA: 0x0001150F File Offset: 0x0000F70F
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSoftObjectPath(Pointer, false, true);
 		}
 
-		// Token: 0x06000F00 RID: 3840 RVA: 0x000167E7 File Offset: 0x000149E7
+		// Token: 0x06000A93 RID: 2707 RVA: 0x00011519 File Offset: 0x0000F719
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSoftObjectPath(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040001CE RID: 462
+		// Token: 0x04000187 RID: 391
 		public const string __ObjectPath = "/Script/CoreUObject.SoftObjectPath";
 
-		// Token: 0x040001CF RID: 463
+		// Token: 0x04000188 RID: 392
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040001D0 RID: 464
+		// Token: 0x04000189 RID: 393
 		internal static int __PropertyOffset_AssetPathName;
 
-		// Token: 0x040001D1 RID: 465
+		// Token: 0x0400018A RID: 394
 		internal static int __PropertyOffset_SubPathString;
 	}
 }

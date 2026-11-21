@@ -8,12 +8,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200025A RID: 602
+// Token: 0x0200025E RID: 606
 [UClass("/Game/Aki/TypeScript/Game/Controller/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Controller/TsStartupPlayerController.TsStartupPlayerController_C")]
 public class TsStartupPlayerController : TsBasePlayerController, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06002507 RID: 9479 RVA: 0x000E019C File Offset: 0x000DE39C
+	// Token: 0x060025BE RID: 9662 RVA: 0x000E65D8 File Offset: 0x000E47D8
 	protected override void BindActionHandle()
 	{
 		base.BindActionHandle();
@@ -23,7 +23,7 @@ public class TsStartupPlayerController : TsBasePlayerController, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x06002508 RID: 9480 RVA: 0x000E01FC File Offset: 0x000DE3FC
+	// Token: 0x060025BF RID: 9663 RVA: 0x000E6638 File Offset: 0x000E4838
 	protected override void BindAxisHandle()
 	{
 		base.BindAxisHandle();
@@ -33,7 +33,7 @@ public class TsStartupPlayerController : TsBasePlayerController, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x06002509 RID: 9481 RVA: 0x000E025C File Offset: 0x000DE45C
+	// Token: 0x060025C0 RID: 9664 RVA: 0x000E6698 File Offset: 0x000E4898
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsStartupPlayerController._ClassPtr == IntPtr.Zero)
@@ -43,29 +43,29 @@ public class TsStartupPlayerController : TsBasePlayerController, IUnrealUObject,
 		return TsStartupPlayerController._ClassPtr;
 	}
 
-	// Token: 0x0600250A RID: 9482 RVA: 0x000E0280 File Offset: 0x000DE480
+	// Token: 0x060025C1 RID: 9665 RVA: 0x000E66BC File Offset: 0x000E48BC
 	public TsStartupPlayerController() : this(BuiltinUtils.AllocNativeUObject(TsStartupPlayerController.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600250B RID: 9483 RVA: 0x000E02A8 File Offset: 0x000DE4A8
+	// Token: 0x060025C2 RID: 9666 RVA: 0x000E66E4 File Offset: 0x000E48E4
 	[NullableContext(1)]
 	public TsStartupPlayerController(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsStartupPlayerController.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600250C RID: 9484 RVA: 0x000E02DB File Offset: 0x000DE4DB
+	// Token: 0x060025C3 RID: 9667 RVA: 0x000E6717 File Offset: 0x000E4917
 	protected TsStartupPlayerController(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x040023FD RID: 9213
+	// Token: 0x0400247B RID: 9339
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Controller/TsStartupPlayerController.TsStartupPlayerController_C";
 
-	// Token: 0x040023FE RID: 9214
+	// Token: 0x0400247C RID: 9340
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040023FF RID: 9215
+	// Token: 0x0400247D RID: 9341
 	private static IntPtr _ClassDefaultObjectPtr;
 }

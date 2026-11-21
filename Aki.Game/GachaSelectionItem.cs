@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C87 RID: 7303
+// Token: 0x02001146 RID: 4422
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 {
-	// Token: 0x0600DC57 RID: 56407 RVA: 0x00335DD8 File Offset: 0x00333FD8
+	// Token: 0x0600B06D RID: 45165 RVA: 0x00341304 File Offset: 0x0033F504
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -56,7 +56,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DC58 RID: 56408 RVA: 0x00335FAB File Offset: 0x003341AB
+	// Token: 0x0600B06E RID: 45166 RVA: 0x003414D7 File Offset: 0x0033F6D7
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		Action<int> toggleCallBack = this.ToggleCallBack;
@@ -67,7 +67,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		toggleCallBack(base.GridIndex);
 	}
 
-	// Token: 0x0600DC59 RID: 56409 RVA: 0x00335FC4 File Offset: 0x003341C4
+	// Token: 0x0600B06F RID: 45167 RVA: 0x003414F0 File Offset: 0x0033F6F0
 	private void OnPreviewBtnClick()
 	{
 		int itemId = this.PoolConfig.Value.ShowIdList()[0];
@@ -95,7 +95,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x0600DC5A RID: 56410 RVA: 0x0033608A File Offset: 0x0033428A
+	// Token: 0x0600B070 RID: 45168 RVA: 0x003415B6 File Offset: 0x0033F7B6
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetHorizontalLayout(4));
@@ -107,7 +107,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		extendToggle.CanExecuteChange.Bind(() => this.CanToggleChange == null || this.CanToggleChange(base.GridIndex));
 	}
 
-	// Token: 0x0600DC5B RID: 56411 RVA: 0x003360C0 File Offset: 0x003342C0
+	// Token: 0x0600B071 RID: 45169 RVA: 0x003415EC File Offset: 0x0033F7EC
 	[NullableContext(1)]
 	public override void Refresh(GachaPoolData data, bool isSelected, int gridIndex)
 	{
@@ -161,7 +161,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		}
 	}
 
-	// Token: 0x0600DC5C RID: 56412 RVA: 0x003361F3 File Offset: 0x003343F3
+	// Token: 0x0600B072 RID: 45170 RVA: 0x0034171F File Offset: 0x0033F91F
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -172,7 +172,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x0600DC5D RID: 56413 RVA: 0x0033620B File Offset: 0x0033440B
+	// Token: 0x0600B073 RID: 45171 RVA: 0x00341737 File Offset: 0x0033F937
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -183,7 +183,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600DC5E RID: 56414 RVA: 0x00336224 File Offset: 0x00334424
+	// Token: 0x0600B074 RID: 45172 RVA: 0x00341750 File Offset: 0x0033F950
 	private void HandleRole()
 	{
 		int itemId = this.PoolConfig.Value.ShowIdList()[0];
@@ -205,7 +205,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		starLayout.RebuildLayout(qualityId);
 	}
 
-	// Token: 0x0600DC5F RID: 56415 RVA: 0x003362F4 File Offset: 0x003344F4
+	// Token: 0x0600B075 RID: 45173 RVA: 0x00341820 File Offset: 0x0033FA20
 	private void HandleWeapon()
 	{
 		GachaViewInfo value = this.PoolConfig.Value;
@@ -234,7 +234,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		starLayout.RebuildLayout(qualityId);
 	}
 
-	// Token: 0x0600DC60 RID: 56416 RVA: 0x003363F4 File Offset: 0x003345F4
+	// Token: 0x0600B076 RID: 45174 RVA: 0x00341920 File Offset: 0x0033FB20
 	public void RefreshLeftTime(float delta)
 	{
 		if (this.TimerHandle != null)
@@ -269,7 +269,7 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		}
 	}
 
-	// Token: 0x0600DC61 RID: 56417 RVA: 0x003364F3 File Offset: 0x003346F3
+	// Token: 0x0600B077 RID: 45175 RVA: 0x00341A1F File Offset: 0x0033FC1F
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerHandle != null)
@@ -279,50 +279,50 @@ public class GachaSelectionItem : GridProxyAbstract<GachaPoolData>
 		}
 	}
 
-	// Token: 0x04006514 RID: 25876
+	// Token: 0x040065E6 RID: 26086
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x04006515 RID: 25877
+	// Token: 0x040065E7 RID: 26087
 	private GachaPoolData Data;
 
-	// Token: 0x04006516 RID: 25878
+	// Token: 0x040065E8 RID: 26088
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04006517 RID: 25879
+	// Token: 0x040065E9 RID: 26089
 	private GachaViewInfo? PoolConfig;
 
-	// Token: 0x04006518 RID: 25880
+	// Token: 0x040065EA RID: 26090
 	private bool IsRole;
 
-	// Token: 0x04006519 RID: 25881
+	// Token: 0x040065EB RID: 26091
 	public Action<int> ToggleCallBack;
 
-	// Token: 0x0400651A RID: 25882
+	// Token: 0x040065EC RID: 26092
 	public Func<int, bool> CanToggleChange;
 
-	// Token: 0x0200825E RID: 33374
+	// Token: 0x020073E6 RID: 29670
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A891 RID: 174225
+		// Token: 0x04025BB2 RID: 154546
 		Toggle,
-		// Token: 0x0402A892 RID: 174226
+		// Token: 0x04025BB3 RID: 154547
 		MainTexture,
-		// Token: 0x0402A893 RID: 174227
+		// Token: 0x04025BB4 RID: 154548
 		ElementItem,
-		// Token: 0x0402A894 RID: 174228
+		// Token: 0x04025BB5 RID: 154549
 		ElementTexture,
-		// Token: 0x0402A895 RID: 174229
+		// Token: 0x04025BB6 RID: 154550
 		StarLayout,
-		// Token: 0x0402A896 RID: 174230
+		// Token: 0x04025BB7 RID: 154551
 		PoolTitleText,
-		// Token: 0x0402A897 RID: 174231
+		// Token: 0x04025BB8 RID: 154552
 		LeftTimeText,
-		// Token: 0x0402A898 RID: 174232
+		// Token: 0x04025BB9 RID: 154553
 		CardNameText,
-		// Token: 0x0402A899 RID: 174233
+		// Token: 0x04025BBA RID: 154554
 		PreviewBtn,
-		// Token: 0x0402A89A RID: 174234
+		// Token: 0x04025BBB RID: 154555
 		CurrentItem
 	}
 }

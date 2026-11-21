@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity
 {
-	// Token: 0x02006893 RID: 26771
+	// Token: 0x020057E3 RID: 22499
 	public class IDangoBrawlEntityData
 	{
-		// Token: 0x04022C48 RID: 142408
+		// Token: 0x0401D4A4 RID: 119972
 		public int DangoId;
 
-		// Token: 0x04022C49 RID: 142409
+		// Token: 0x0401D4A5 RID: 119973
 		public EDangoBrawlSide Identity;
 	}
 }

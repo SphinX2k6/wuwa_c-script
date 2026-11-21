@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200074B RID: 1867
+	// Token: 0x02000763 RID: 1891
 	public class ConfigPlotHandBookConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BD3 RID: 11219 RVA: 0x00151334 File Offset: 0x0014F534
+		// Token: 0x06002C63 RID: 11363 RVA: 0x00157DB0 File Offset: 0x00155FB0
 		static ConfigPlotHandBookConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlotHandBookConfigAll.CreateStaticDefaultValue), new Action(ConfigPlotHandBookConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BD4 RID: 11220 RVA: 0x00151354 File Offset: 0x0014F554
+		// Token: 0x06002C64 RID: 11364 RVA: 0x00157DD0 File Offset: 0x00155FD0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlotHandBookConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BD5 RID: 11221 RVA: 0x001513D3 File Offset: 0x0014F5D3
+		// Token: 0x06002C65 RID: 11365 RVA: 0x00157E4F File Offset: 0x0015604F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlotHandBookConfigAll.LogPair = null;
 			ConfigPlotHandBookConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06002BD6 RID: 11222 RVA: 0x001513E1 File Offset: 0x0014F5E1
+		// Token: 0x06002C66 RID: 11366 RVA: 0x00157E5D File Offset: 0x0015605D
 		public static void Init()
 		{
 			ConfigPlotHandBookConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigPlotHandBookConfigAll.HandleId, "db_plothandbook.db", "select BinData from `PlotHandBookConfig`");
 		}
 
-		// Token: 0x06002BD7 RID: 11223 RVA: 0x001513FC File Offset: 0x0014F5FC
+		// Token: 0x06002C67 RID: 11367 RVA: 0x00157E78 File Offset: 0x00156078
 		[NullableContext(2)]
 		public static IReadOnlyList<PlotHandBookConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040032F3 RID: 13043
+		// Token: 0x0400339B RID: 13211
 		private const string DB = "db_plothandbook.db";
 
-		// Token: 0x040032F4 RID: 13044
+		// Token: 0x0400339C RID: 13212
 		private const string FILE = "UniverseEditor/PlotHandBook/剧情图鉴_Json_PlotHandBook.csv";
 
-		// Token: 0x040032F5 RID: 13045
+		// Token: 0x0400339D RID: 13213
 		private const string TABLE = "PlotHandBookConfig";
 
-		// Token: 0x040032F6 RID: 13046
+		// Token: 0x0400339E RID: 13214
 		private const string COMMAND = "select BinData from `PlotHandBookConfig`";
 
-		// Token: 0x040032F7 RID: 13047
+		// Token: 0x0400339F RID: 13215
 		private const string KEY_PREFIX = "PlotHandBookConfigAll";
 
-		// Token: 0x040032F8 RID: 13048
+		// Token: 0x040033A0 RID: 13216
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032F9 RID: 13049
+		// Token: 0x040033A1 RID: 13217
 		private static int HandleId;
 	}
 }

@@ -9,20 +9,20 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001772 RID: 6002
+// Token: 0x02000C2B RID: 3115
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItemData>
 {
-	// Token: 0x0600AE0E RID: 44558 RVA: 0x00273923 File Offset: 0x00271B23
+	// Token: 0x060081F5 RID: 33269 RVA: 0x0027DDE7 File Offset: 0x0027BFE7
 	public VisionRefineSlotItem(Action<bool, int> callBack = null)
 	{
 		this.ClickCallBack = callBack;
 	}
 
-	// Token: 0x17000E74 RID: 3700
-	// (get) Token: 0x0600AE0F RID: 44559 RVA: 0x00273932 File Offset: 0x00271B32
-	// (set) Token: 0x0600AE10 RID: 44560 RVA: 0x0027393A File Offset: 0x00271B3A
+	// Token: 0x17000E97 RID: 3735
+	// (get) Token: 0x060081F6 RID: 33270 RVA: 0x0027DDF6 File Offset: 0x0027BFF6
+	// (set) Token: 0x060081F7 RID: 33271 RVA: 0x0027DDFE File Offset: 0x0027BFFE
 	[Nullable(new byte[]
 	{
 		2,
@@ -44,17 +44,17 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		1
 	})] set; }
 
-	// Token: 0x17000E75 RID: 3701
-	// (get) Token: 0x0600AE11 RID: 44561 RVA: 0x00273943 File Offset: 0x00271B43
-	// (set) Token: 0x0600AE12 RID: 44562 RVA: 0x0027394B File Offset: 0x00271B4B
+	// Token: 0x17000E98 RID: 3736
+	// (get) Token: 0x060081F8 RID: 33272 RVA: 0x0027DE07 File Offset: 0x0027C007
+	// (set) Token: 0x060081F9 RID: 33273 RVA: 0x0027DE0F File Offset: 0x0027C00F
 	public int GridIndex { get; set; }
 
-	// Token: 0x17000E76 RID: 3702
-	// (get) Token: 0x0600AE13 RID: 44563 RVA: 0x00273954 File Offset: 0x00271B54
-	// (set) Token: 0x0600AE14 RID: 44564 RVA: 0x0027395C File Offset: 0x00271B5C
+	// Token: 0x17000E99 RID: 3737
+	// (get) Token: 0x060081FA RID: 33274 RVA: 0x0027DE18 File Offset: 0x0027C018
+	// (set) Token: 0x060081FB RID: 33275 RVA: 0x0027DE20 File Offset: 0x0027C020
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600AE15 RID: 44565 RVA: 0x00273965 File Offset: 0x00271B65
+	// Token: 0x060081FC RID: 33276 RVA: 0x0027DE29 File Offset: 0x0027C029
 	[NullableContext(1)]
 	public void Refresh(VisionRefineSlotItemData data, bool isSelected, int gridIndex)
 	{
@@ -66,7 +66,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		this.RefreshByData(data.ItemData, data.IsConfirm, data.Cost);
 	}
 
-	// Token: 0x0600AE16 RID: 44566 RVA: 0x0027398E File Offset: 0x00271B8E
+	// Token: 0x060081FD RID: 33277 RVA: 0x0027DE52 File Offset: 0x0027C052
 	[NullableContext(1)]
 	public UniTask RefreshAsync(VisionRefineSlotItemData data, bool isSelected, int gridIndex)
 	{
@@ -74,22 +74,22 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600AE17 RID: 44567 RVA: 0x0027399E File Offset: 0x00271B9E
+	// Token: 0x060081FE RID: 33278 RVA: 0x0027DE62 File Offset: 0x0027C062
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600AE18 RID: 44568 RVA: 0x002739A0 File Offset: 0x00271BA0
+	// Token: 0x060081FF RID: 33279 RVA: 0x0027DE64 File Offset: 0x0027C064
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600AE19 RID: 44569 RVA: 0x002739A2 File Offset: 0x00271BA2
+	// Token: 0x06008200 RID: 33280 RVA: 0x0027DE66 File Offset: 0x0027C066
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600AE1A RID: 44570 RVA: 0x002739A4 File Offset: 0x00271BA4
+	// Token: 0x06008201 RID: 33281 RVA: 0x0027DE68 File Offset: 0x0027C068
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public object GetKey(VisionRefineSlotItemData data, int gridIndex)
@@ -97,7 +97,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		return data;
 	}
 
-	// Token: 0x0600AE1B RID: 44571 RVA: 0x002739A8 File Offset: 0x00271BA8
+	// Token: 0x06008202 RID: 33282 RVA: 0x0027DE6C File Offset: 0x0027C06C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -123,7 +123,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		};
 	}
 
-	// Token: 0x0600AE1C RID: 44572 RVA: 0x00273B20 File Offset: 0x00271D20
+	// Token: 0x06008203 RID: 33283 RVA: 0x0027DFE4 File Offset: 0x0027C1E4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRefineSlotItem.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -134,7 +134,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE1D RID: 44573 RVA: 0x00273B64 File Offset: 0x00271D64
+	// Token: 0x06008204 RID: 33284 RVA: 0x0027E028 File Offset: 0x0027C228
 	protected override void OnStart()
 	{
 		bool enable = this.ClickCallBack != null;
@@ -147,7 +147,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600AE1E RID: 44574 RVA: 0x00273B9C File Offset: 0x00271D9C
+	// Token: 0x06008205 RID: 33285 RVA: 0x0027E060 File Offset: 0x0027C260
 	public void RefreshEmpty()
 	{
 		base.GetItem(1).SetUIActive(true);
@@ -174,7 +174,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		item3.SetUIActive(false);
 	}
 
-	// Token: 0x0600AE1F RID: 44575 RVA: 0x00273C40 File Offset: 0x00271E40
+	// Token: 0x06008206 RID: 33286 RVA: 0x0027E104 File Offset: 0x0027C304
 	[NullableContext(1)]
 	public void RefreshByData(PhantomItemData itemData, bool isConfirm, int cost)
 	{
@@ -279,7 +279,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		});
 	}
 
-	// Token: 0x0600AE20 RID: 44576 RVA: 0x00273D13 File Offset: 0x00271F13
+	// Token: 0x06008207 RID: 33287 RVA: 0x0027E1D7 File Offset: 0x0027C3D7
 	private void OnClickAddButton()
 	{
 		if (this.ClickCallBack != null)
@@ -288,7 +288,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		}
 	}
 
-	// Token: 0x0600AE21 RID: 44577 RVA: 0x00273D2F File Offset: 0x00271F2F
+	// Token: 0x06008208 RID: 33288 RVA: 0x0027E1F3 File Offset: 0x0027C3F3
 	private void OnClickRemoveButton()
 	{
 		if (this.ClickCallBack != null)
@@ -297,7 +297,7 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		}
 	}
 
-	// Token: 0x0600AE22 RID: 44578 RVA: 0x00273D4B File Offset: 0x00271F4B
+	// Token: 0x06008209 RID: 33289 RVA: 0x0027E20F File Offset: 0x0027C40F
 	public void SetBtnInteractive(bool interActive)
 	{
 		UUIButtonComponent button = base.GetButton(4);
@@ -305,47 +305,47 @@ public class VisionRefineSlotItem : UiPanelBase, IGridProxy<VisionRefineSlotItem
 		button.SetSelfInteractive(interActive);
 	}
 
-	// Token: 0x04004F15 RID: 20245
+	// Token: 0x04004FBF RID: 20415
 	private VisionFetterSuitItem ElementItemUp;
 
-	// Token: 0x04004F16 RID: 20246
+	// Token: 0x04004FC0 RID: 20416
 	private readonly Action<bool, int> ClickCallBack;
 
-	// Token: 0x04004F17 RID: 20247
+	// Token: 0x04004FC1 RID: 20417
 	public Func<int?> OnGetMainPropItemIdCallback;
 
-	// Token: 0x04004F18 RID: 20248
+	// Token: 0x04004FC2 RID: 20418
 	public Func<bool> OnIsShouldElementItemDownCallback;
 
-	// Token: 0x02007D67 RID: 32103
+	// Token: 0x02006EED RID: 28397
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402910B RID: 168203
+		// Token: 0x04024436 RID: 148534
 		ChooseTransition,
-		// Token: 0x0402910C RID: 168204
+		// Token: 0x04024437 RID: 148535
 		EmptyItem,
-		// Token: 0x0402910D RID: 168205
+		// Token: 0x04024438 RID: 148536
 		Icon,
-		// Token: 0x0402910E RID: 168206
+		// Token: 0x04024439 RID: 148537
 		QualitySprite,
-		// Token: 0x0402910F RID: 168207
+		// Token: 0x0402443A RID: 148538
 		AddVisionButton,
-		// Token: 0x04029110 RID: 168208
+		// Token: 0x0402443B RID: 148539
 		RemoveButton,
-		// Token: 0x04029111 RID: 168209
+		// Token: 0x0402443C RID: 148540
 		ElementItemUp,
-		// Token: 0x04029112 RID: 168210
+		// Token: 0x0402443D RID: 148541
 		CostPanel,
-		// Token: 0x04029113 RID: 168211
+		// Token: 0x0402443E RID: 148542
 		CostText,
-		// Token: 0x04029114 RID: 168212
+		// Token: 0x0402443F RID: 148543
 		LockItem,
-		// Token: 0x04029115 RID: 168213
+		// Token: 0x04024440 RID: 148544
 		MarkDeleteItem,
-		// Token: 0x04029116 RID: 168214
+		// Token: 0x04024441 RID: 148545
 		WarningItem,
-		// Token: 0x04029117 RID: 168215
+		// Token: 0x04024442 RID: 148546
 		ElementItemDown
 	}
 }

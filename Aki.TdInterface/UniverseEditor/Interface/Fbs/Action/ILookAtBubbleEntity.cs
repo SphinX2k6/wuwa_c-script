@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A56 RID: 27222
+	// Token: 0x02007178 RID: 29048
 	public struct ILookAtBubbleEntity : IFlatbufferObject
 	{
-		// Token: 0x1700C9F1 RID: 51697
-		// (get) Token: 0x0602FA9E RID: 195230 RVA: 0x0067CAFC File Offset: 0x0067ACFC
+		// Token: 0x1700D49C RID: 54428
+		// (get) Token: 0x060327C4 RID: 206788 RVA: 0x006D2BBC File Offset: 0x006D0DBC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FA9F RID: 195231 RVA: 0x0067CB09 File Offset: 0x0067AD09
+		// Token: 0x060327C5 RID: 206789 RVA: 0x006D2BC9 File Offset: 0x006D0DC9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FAA0 RID: 195232 RVA: 0x0067CB10 File Offset: 0x0067AD10
+		// Token: 0x060327C6 RID: 206790 RVA: 0x006D2BD0 File Offset: 0x006D0DD0
 		public static ILookAtBubbleEntity GetRootAsILookAtBubbleEntity(ByteBuffer _bb)
 		{
 			return ILookAtBubbleEntity.GetRootAsILookAtBubbleEntity(_bb, default(ILookAtBubbleEntity));
 		}
 
-		// Token: 0x0602FAA1 RID: 195233 RVA: 0x0067CB2C File Offset: 0x0067AD2C
+		// Token: 0x060327C7 RID: 206791 RVA: 0x006D2BEC File Offset: 0x006D0DEC
 		public static ILookAtBubbleEntity GetRootAsILookAtBubbleEntity(ByteBuffer _bb, ILookAtBubbleEntity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FAA2 RID: 195234 RVA: 0x0067CB49 File Offset: 0x0067AD49
+		// Token: 0x060327C8 RID: 206792 RVA: 0x006D2C09 File Offset: 0x006D0E09
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FAA3 RID: 195235 RVA: 0x0067CB58 File Offset: 0x0067AD58
+		// Token: 0x060327C9 RID: 206793 RVA: 0x006D2C18 File Offset: 0x006D0E18
 		public ILookAtBubbleEntity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C9F2 RID: 51698
-		// (get) Token: 0x0602FAA4 RID: 195236 RVA: 0x0067CB68 File Offset: 0x0067AD68
+		// Token: 0x1700D49D RID: 54429
+		// (get) Token: 0x060327CA RID: 206794 RVA: 0x006D2C28 File Offset: 0x006D0E28
 		public EDefaultLookAtType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FAA5 RID: 195237 RVA: 0x0067CBA4 File Offset: 0x0067ADA4
+		// Token: 0x060327CB RID: 206795 RVA: 0x006D2C64 File Offset: 0x006D0E64
 		public ILookAtBubbleEntityConfig? BubbleEntityConfig(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new ILookAtBubbleEntityConfig?(default(ILookAtBubbleEntityConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700C9F3 RID: 51699
-		// (get) Token: 0x0602FAA6 RID: 195238 RVA: 0x0067CC04 File Offset: 0x0067AE04
+		// Token: 0x1700D49E RID: 54430
+		// (get) Token: 0x060327CC RID: 206796 RVA: 0x006D2CC4 File Offset: 0x006D0EC4
 		public int BubbleEntityConfigLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FAA7 RID: 195239 RVA: 0x0067CC2F File Offset: 0x0067AE2F
+		// Token: 0x060327CD RID: 206797 RVA: 0x006D2CEF File Offset: 0x006D0EEF
 		public static Offset<ILookAtBubbleEntity> CreateILookAtBubbleEntity(FlatBufferBuilder builder, EDefaultLookAtType Type = EDefaultLookAtType.LookAtBubbleEntity, VectorOffset BubbleEntityConfigOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILookAtBubbleEntity.EndILookAtBubbleEntity(builder);
 		}
 
-		// Token: 0x0602FAA8 RID: 195240 RVA: 0x0067CC4C File Offset: 0x0067AE4C
+		// Token: 0x060327CE RID: 206798 RVA: 0x006D2D0C File Offset: 0x006D0F0C
 		public static void StartILookAtBubbleEntity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602FAA9 RID: 195241 RVA: 0x0067CC55 File Offset: 0x0067AE55
+		// Token: 0x060327CF RID: 206799 RVA: 0x006D2D15 File Offset: 0x006D0F15
 		public static void AddType(FlatBufferBuilder builder, EDefaultLookAtType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FAAA RID: 195242 RVA: 0x0067CC60 File Offset: 0x0067AE60
+		// Token: 0x060327D0 RID: 206800 RVA: 0x006D2D20 File Offset: 0x006D0F20
 		public static void AddBubbleEntityConfig(FlatBufferBuilder builder, VectorOffset bubbleEntityConfigOffset)
 		{
 			builder.AddOffset(1, bubbleEntityConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602FAAB RID: 195243 RVA: 0x0067CC70 File Offset: 0x0067AE70
+		// Token: 0x060327D1 RID: 206801 RVA: 0x006D2D30 File Offset: 0x006D0F30
 		public static VectorOffset CreateBubbleEntityConfigVector(FlatBufferBuilder builder, Offset<ILookAtBubbleEntityConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FAAC RID: 195244 RVA: 0x0067CCB0 File Offset: 0x0067AEB0
+		// Token: 0x060327D2 RID: 206802 RVA: 0x006D2D70 File Offset: 0x006D0F70
 		public static VectorOffset CreateBubbleEntityConfigVectorBlock(FlatBufferBuilder builder, Offset<ILookAtBubbleEntityConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FAAD RID: 195245 RVA: 0x0067CCCA File Offset: 0x0067AECA
+		// Token: 0x060327D3 RID: 206803 RVA: 0x006D2D8A File Offset: 0x006D0F8A
 		public static VectorOffset CreateBubbleEntityConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ILookAtBubbleEntityConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FAAE RID: 195246 RVA: 0x0067CCE8 File Offset: 0x0067AEE8
+		// Token: 0x060327D4 RID: 206804 RVA: 0x006D2DA8 File Offset: 0x006D0FA8
 		public static VectorOffset CreateBubbleEntityConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FAAF RID: 195247 RVA: 0x0067CD01 File Offset: 0x0067AF01
+		// Token: 0x060327D5 RID: 206805 RVA: 0x006D2DC1 File Offset: 0x006D0FC1
 		public static void StartBubbleEntityConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602FAB0 RID: 195248 RVA: 0x0067CD0C File Offset: 0x0067AF0C
+		// Token: 0x060327D6 RID: 206806 RVA: 0x006D2DCC File Offset: 0x006D0FCC
 		public static Offset<ILookAtBubbleEntity> EndILookAtBubbleEntity(FlatBufferBuilder builder)
 		{
 			return new Offset<ILookAtBubbleEntity>(builder.EndTable());
 		}
 
-		// Token: 0x0602FAB1 RID: 195249 RVA: 0x0067CD1C File Offset: 0x0067AF1C
+		// Token: 0x060327D7 RID: 206807 RVA: 0x006D2DDC File Offset: 0x006D0FDC
 		public ILookAtBubbleEntityT UnPack()
 		{
 			ILookAtBubbleEntityT lookAtBubbleEntityT = new ILookAtBubbleEntityT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return lookAtBubbleEntityT;
 		}
 
-		// Token: 0x0602FAB2 RID: 195250 RVA: 0x0067CD38 File Offset: 0x0067AF38
+		// Token: 0x060327D8 RID: 206808 RVA: 0x006D2DF8 File Offset: 0x006D0FF8
 		public void UnPackTo(ILookAtBubbleEntityT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FAB3 RID: 195251 RVA: 0x0067CDA4 File Offset: 0x0067AFA4
+		// Token: 0x060327D9 RID: 206809 RVA: 0x006D2E64 File Offset: 0x006D1064
 		public static Offset<ILookAtBubbleEntity> Pack(FlatBufferBuilder builder, ILookAtBubbleEntityT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILookAtBubbleEntity.CreateILookAtBubbleEntity(builder, _o.Type, bubbleEntityConfigOffset);
 		}
 
-		// Token: 0x04011275 RID: 70261
+		// Token: 0x0401216D RID: 74093
 		private Table __p;
 	}
 }

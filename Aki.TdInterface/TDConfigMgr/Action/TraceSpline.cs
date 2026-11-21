@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002250 RID: 8784
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024BD RID: 9405
 	public class TraceSpline : ActionParams
 	{
-		// Token: 0x0600C0B2 RID: 49330 RVA: 0x001BA808 File Offset: 0x001B8A08
+		// Token: 0x0600CC78 RID: 52344 RVA: 0x001D1F8C File Offset: 0x001D018C
 		private TraceSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0B3 RID: 49331 RVA: 0x001BA840 File Offset: 0x001B8A40
+		// Token: 0x0600CC79 RID: 52345 RVA: 0x001D1FC4 File Offset: 0x001D01C4
 		public static TraceSpline Create([Nullable(2)] TraceSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0B4 RID: 49332 RVA: 0x001BA853 File Offset: 0x001B8A53
+		// Token: 0x0600CC7A RID: 52346 RVA: 0x001D1FD7 File Offset: 0x001D01D7
 		public static TraceSpline CreateFromSetValue([Nullable(2)] TraceSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0B5 RID: 49333 RVA: 0x001BA866 File Offset: 0x001B8A66
+		// Token: 0x0600CC7B RID: 52347 RVA: 0x001D1FEA File Offset: 0x001D01EA
 		public TraceSpline_SetValue ToSetValue()
 		{
 			return new TraceSpline_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A4E RID: 14926
-		// (get) Token: 0x0600C0B6 RID: 49334 RVA: 0x001BA891 File Offset: 0x001B8A91
-		// (set) Token: 0x0600C0B7 RID: 49335 RVA: 0x001BA8BC File Offset: 0x001B8ABC
+		// Token: 0x17003D45 RID: 15685
+		// (get) Token: 0x0600CC7C RID: 52348 RVA: 0x001D2015 File Offset: 0x001D0215
+		// (set) Token: 0x0600CC7D RID: 52349 RVA: 0x001D2040 File Offset: 0x001D0240
 		public virtual string EffectPath
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A4F RID: 14927
-		// (get) Token: 0x0600C0B8 RID: 49336 RVA: 0x001BA8CA File Offset: 0x001B8ACA
-		// (set) Token: 0x0600C0B9 RID: 49337 RVA: 0x001BA8F5 File Offset: 0x001B8AF5
+		// Token: 0x17003D46 RID: 15686
+		// (get) Token: 0x0600CC7E RID: 52350 RVA: 0x001D204E File Offset: 0x001D024E
+		// (set) Token: 0x0600CC7F RID: 52351 RVA: 0x001D2079 File Offset: 0x001D0279
 		public virtual int Duration
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A50 RID: 14928
-		// (get) Token: 0x0600C0BA RID: 49338 RVA: 0x001BA903 File Offset: 0x001B8B03
-		// (set) Token: 0x0600C0BB RID: 49339 RVA: 0x001BA92E File Offset: 0x001B8B2E
+		// Token: 0x17003D47 RID: 15687
+		// (get) Token: 0x0600CC80 RID: 52352 RVA: 0x001D2087 File Offset: 0x001D0287
+		// (set) Token: 0x0600CC81 RID: 52353 RVA: 0x001D20B2 File Offset: 0x001D02B2
 		public virtual int SplineEntityId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072DE RID: 29406
+		// Token: 0x0400792B RID: 31019
 		[Nullable(2)]
 		protected new TraceSpline FbInstance;
 
-		// Token: 0x040072DF RID: 29407
+		// Token: 0x0400792C RID: 31020
 		[Nullable(2)]
 		protected TraceSpline_SetValue PocoInterface;
 	}

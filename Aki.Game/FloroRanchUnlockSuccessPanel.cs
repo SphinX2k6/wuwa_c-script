@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BAE RID: 7086
+// Token: 0x0200106D RID: 4205
 [NullableContext(2)]
 [Nullable(0)]
 public class FloroRanchUnlockSuccessPanel : UiPanelBase
 {
-	// Token: 0x17001168 RID: 4456
-	// (get) Token: 0x0600D335 RID: 54069 RVA: 0x003090EC File Offset: 0x003072EC
-	// (set) Token: 0x0600D336 RID: 54070 RVA: 0x003090F4 File Offset: 0x003072F4
+	// Token: 0x1700118D RID: 4493
+	// (get) Token: 0x0600A746 RID: 42822 RVA: 0x003141CC File Offset: 0x003123CC
+	// (set) Token: 0x0600A747 RID: 42823 RVA: 0x003141D4 File Offset: 0x003123D4
 	public UiBehaviorLevelSequence UiLevelSequence { get; set; }
 
-	// Token: 0x0600D337 RID: 54071 RVA: 0x00309100 File Offset: 0x00307300
+	// Token: 0x0600A748 RID: 42824 RVA: 0x003141E0 File Offset: 0x003123E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -36,14 +36,14 @@ public class FloroRanchUnlockSuccessPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D338 RID: 54072 RVA: 0x003091A6 File Offset: 0x003073A6
+	// Token: 0x0600A749 RID: 42825 RVA: 0x00314286 File Offset: 0x00312486
 	protected override void OnBeforeCreate()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiLevelSequence);
 	}
 
-	// Token: 0x0600D339 RID: 54073 RVA: 0x003091C0 File Offset: 0x003073C0
+	// Token: 0x0600A74A RID: 42826 RVA: 0x003142A0 File Offset: 0x003124A0
 	[NullableContext(1)]
 	public void RefreshPanel(string textId)
 	{
@@ -57,7 +57,7 @@ public class FloroRanchUnlockSuccessPanel : UiPanelBase
 		uiLevelSequence.PlaySequence("Start", false, null);
 	}
 
-	// Token: 0x0600D33A RID: 54074 RVA: 0x0030920C File Offset: 0x0030740C
+	// Token: 0x0600A74B RID: 42827 RVA: 0x003142EC File Offset: 0x003124EC
 	private void OnCloseBtnClick()
 	{
 		UiBehaviorLevelSequence uiLevelSequence = this.UiLevelSequence;
@@ -68,14 +68,14 @@ public class FloroRanchUnlockSuccessPanel : UiPanelBase
 		uiLevelSequence.PlaySequence("Close", false, null);
 	}
 
-	// Token: 0x02008171 RID: 33137
+	// Token: 0x020072FF RID: 29439
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A3DD RID: 173021
+		// Token: 0x04025711 RID: 153361
 		public const int BtnClose = 0;
 
-		// Token: 0x0402A3DE RID: 173022
+		// Token: 0x04025712 RID: 153362
 		public const int TextDes = 1;
 	}
 }

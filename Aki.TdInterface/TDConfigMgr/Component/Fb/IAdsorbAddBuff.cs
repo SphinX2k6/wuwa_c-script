@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C05 RID: 3077
+	// Token: 0x02000CD5 RID: 3285
 	public class IAdsorbAddBuff : IAddBuffMode
 	{
-		// Token: 0x060046A7 RID: 18087 RVA: 0x000B2636 File Offset: 0x000B0836
-		[NullableContext(1)]
+		// Token: 0x06004B0A RID: 19210 RVA: 0x000BC802 File Offset: 0x000BAA02
 		public static IAdsorbAddBuff Create(IAdsorbAddBuff? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700145A RID: 5210
-		// (get) Token: 0x060046A8 RID: 18088 RVA: 0x000B2655 File Offset: 0x000B0855
+		// Token: 0x1700155B RID: 5467
+		// (get) Token: 0x06004B0B RID: 19211 RVA: 0x000BC821 File Offset: 0x000BAA21
 		public override EBuffProducerMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700145B RID: 5211
-		// (get) Token: 0x060046A9 RID: 18089 RVA: 0x000B2662 File Offset: 0x000B0862
+		// Token: 0x1700155C RID: 5468
+		// (get) Token: 0x06004B0C RID: 19212 RVA: 0x000BC82E File Offset: 0x000BAA2E
 		public virtual int Speed
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002830 RID: 10288
+		// Token: 0x04002A7C RID: 10876
 		private IAdsorbAddBuff Instance;
 	}
 }

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ACC RID: 19148
+	// Token: 0x02003A74 RID: 14964
 	public class TrapDefenseShopCheckBuffItem : UiPanelBase
 	{
-		// Token: 0x060319A7 RID: 203175 RVA: 0x00B810C4 File Offset: 0x00B7F2C4
+		// Token: 0x06026737 RID: 157495 RVA: 0x00AC5078 File Offset: 0x00AC3278
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060319A8 RID: 203176 RVA: 0x00B81254 File Offset: 0x00B7F454
+		// Token: 0x06026738 RID: 157496 RVA: 0x00AC5208 File Offset: 0x00AC3408
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseShopCheckBuffItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060319A9 RID: 203177 RVA: 0x00B81298 File Offset: 0x00B7F498
+		// Token: 0x06026739 RID: 157497 RVA: 0x00AC524C File Offset: 0x00AC344C
 		protected override void OnStart()
 		{
 			base.GetItem(2).SetUIActive(false);
@@ -66,40 +66,40 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), ETrapDefenseTextKey.ShopBuffViewEntry.ToString(), Array.Empty<object>());
 		}
 
-		// Token: 0x060319AA RID: 203178 RVA: 0x00B812F4 File Offset: 0x00B7F4F4
+		// Token: 0x0602673A RID: 157498 RVA: 0x00AC52A8 File Offset: 0x00AC34A8
 		private void OnBtnSelfClicked()
 		{
 			TrapDefenseModel.Instance.OpenViewBdSum(null, null, null);
 		}
 
-		// Token: 0x0200AC3F RID: 44095
+		// Token: 0x0200965F RID: 38495
 		private class EComponentDefine
 		{
-			// Token: 0x04034566 RID: 214374
+			// Token: 0x0402EF17 RID: 192279
 			public const int TextureIcon = 0;
 
-			// Token: 0x04034567 RID: 214375
+			// Token: 0x0402EF18 RID: 192280
 			public const int TextNum = 1;
 
-			// Token: 0x04034568 RID: 214376
+			// Token: 0x0402EF19 RID: 192281
 			public const int BtnAdd = 2;
 
-			// Token: 0x04034569 RID: 214377
+			// Token: 0x0402EF1A RID: 192282
 			public const int BtnSelf = 3;
 
-			// Token: 0x0403456A RID: 214378
+			// Token: 0x0402EF1B RID: 192283
 			public const int TextureIconTrans = 4;
 
-			// Token: 0x0403456B RID: 214379
+			// Token: 0x0402EF1C RID: 192284
 			public const int Item = 5;
 
-			// Token: 0x0403456C RID: 214380
+			// Token: 0x0402EF1D RID: 192285
 			public const int SpriteFill = 6;
 
-			// Token: 0x0403456D RID: 214381
+			// Token: 0x0402EF1E RID: 192286
 			public const int SpriteIcon = 7;
 
-			// Token: 0x0403456E RID: 214382
+			// Token: 0x0402EF1F RID: 192287
 			public const int SpriteMax = 8;
 		}
 	}

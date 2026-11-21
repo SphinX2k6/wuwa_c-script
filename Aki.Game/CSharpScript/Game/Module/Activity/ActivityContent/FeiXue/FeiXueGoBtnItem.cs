@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006643 RID: 26179
+	// Token: 0x020055C1 RID: 21953
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FeiXueGoBtnItem : UiPanelBase
 	{
-		// Token: 0x060419B5 RID: 268725 RVA: 0x00FE9504 File Offset: 0x00FE7704
+		// Token: 0x0603667A RID: 222842 RVA: 0x00F305BC File Offset: 0x00F2E7BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419B6 RID: 268726 RVA: 0x00FE95C3 File Offset: 0x00FE77C3
+		// Token: 0x0603667B RID: 222843 RVA: 0x00F3067B File Offset: 0x00F2E87B
 		protected override void OnStart()
 		{
 			this.GoBtnInteraction = (base.GetButton(0).GetOwner().GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup);
 		}
 
-		// Token: 0x060419B7 RID: 268727 RVA: 0x00FE95EB File Offset: 0x00FE77EB
+		// Token: 0x0603667C RID: 222844 RVA: 0x00F306A3 File Offset: 0x00F2E8A3
 		protected override void OnBeforeDestroy()
 		{
 			this.TryDisableRefreshTimer();
 		}
 
-		// Token: 0x060419B8 RID: 268728 RVA: 0x00FE95F4 File Offset: 0x00FE77F4
+		// Token: 0x0603667D RID: 222845 RVA: 0x00F306AC File Offset: 0x00F2E8AC
 		[NullableContext(1)]
 		public void RefreshBtnView(FeiXuePreheatTaskData data, ActivityFeiXuePreheatData activityData)
 		{
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			base.GetItem(5).SetUIActive(this.ActivityData.IsFirstDoingTaskIsUnClick());
 		}
 
-		// Token: 0x060419B9 RID: 268729 RVA: 0x00FE96D8 File Offset: 0x00FE78D8
+		// Token: 0x0603667E RID: 222846 RVA: 0x00F30790 File Offset: 0x00F2E990
 		private void TryEnableRefreshTimer()
 		{
 			if (this.RefreshTimer != null)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.RefreshRemainTimeText), (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 		}
 
-		// Token: 0x060419BA RID: 268730 RVA: 0x00FE9712 File Offset: 0x00FE7912
+		// Token: 0x0603667F RID: 222847 RVA: 0x00F307CA File Offset: 0x00F2E9CA
 		private void TryDisableRefreshTimer()
 		{
 			if (this.RefreshTimer == null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			this.RefreshTimer = null;
 		}
 
-		// Token: 0x060419BB RID: 268731 RVA: 0x00FE9738 File Offset: 0x00FE7938
+		// Token: 0x06036680 RID: 222848 RVA: 0x00F307F0 File Offset: 0x00F2E9F0
 		public void RefreshRemainTimeText(float delta)
 		{
 			double num = Math.Max(0.0, (double)(this.Data.UnlockTime / (long)TimeUtil.Instance.InverseMillisecond) - TimeUtil.Instance.GetServerTime());
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			base.GetText(1).SetText(multiText + countDownText, true);
 		}
 
-		// Token: 0x060419BC RID: 268732 RVA: 0x00FE983C File Offset: 0x00FE7A3C
+		// Token: 0x06036681 RID: 222849 RVA: 0x00F308F4 File Offset: 0x00F2EAF4
 		private void OnClickGoButton()
 		{
 			if (this.Data == null)
@@ -135,16 +135,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			});
 		}
 
-		// Token: 0x04022227 RID: 139815
+		// Token: 0x0401CB58 RID: 117592
 		private UUIInteractionGroup GoBtnInteraction;
 
-		// Token: 0x04022228 RID: 139816
+		// Token: 0x0401CB59 RID: 117593
 		private ActivityFeiXuePreheatData ActivityData;
 
-		// Token: 0x04022229 RID: 139817
+		// Token: 0x0401CB5A RID: 117594
 		private FeiXuePreheatTaskData Data;
 
-		// Token: 0x0402222A RID: 139818
+		// Token: 0x0401CB5B RID: 117595
 		private TimerHandle RefreshTimer;
 	}
 }

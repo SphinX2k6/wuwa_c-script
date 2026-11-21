@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006206 RID: 25094
+	// Token: 0x02006877 RID: 26743
 	public struct IBlendAnimTargetBase : IFlatbufferObject
 	{
-		// Token: 0x1700BB10 RID: 47888
-		// (get) Token: 0x0602B425 RID: 177189 RVA: 0x005F5A31 File Offset: 0x005F3C31
+		// Token: 0x1700C496 RID: 50326
+		// (get) Token: 0x0602DB7E RID: 187262 RVA: 0x0064061D File Offset: 0x0063E81D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B426 RID: 177190 RVA: 0x005F5A3E File Offset: 0x005F3C3E
+		// Token: 0x0602DB7F RID: 187263 RVA: 0x0064062A File Offset: 0x0063E82A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B427 RID: 177191 RVA: 0x005F5A48 File Offset: 0x005F3C48
+		// Token: 0x0602DB80 RID: 187264 RVA: 0x00640634 File Offset: 0x0063E834
 		public static IBlendAnimTargetBase GetRootAsIBlendAnimTargetBase(ByteBuffer _bb)
 		{
 			return IBlendAnimTargetBase.GetRootAsIBlendAnimTargetBase(_bb, default(IBlendAnimTargetBase));
 		}
 
-		// Token: 0x0602B428 RID: 177192 RVA: 0x005F5A64 File Offset: 0x005F3C64
+		// Token: 0x0602DB81 RID: 187265 RVA: 0x00640650 File Offset: 0x0063E850
 		public static IBlendAnimTargetBase GetRootAsIBlendAnimTargetBase(ByteBuffer _bb, IBlendAnimTargetBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B429 RID: 177193 RVA: 0x005F5A81 File Offset: 0x005F3C81
+		// Token: 0x0602DB82 RID: 187266 RVA: 0x0064066D File Offset: 0x0063E86D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B42A RID: 177194 RVA: 0x005F5A90 File Offset: 0x005F3C90
+		// Token: 0x0602DB83 RID: 187267 RVA: 0x0064067C File Offset: 0x0063E87C
 		public IBlendAnimTargetBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BB11 RID: 47889
-		// (get) Token: 0x0602B42B RID: 177195 RVA: 0x005F5AA0 File Offset: 0x005F3CA0
+		// Token: 0x1700C497 RID: 50327
+		// (get) Token: 0x0602DB84 RID: 187268 RVA: 0x0064068C File Offset: 0x0063E88C
 		public EBlendAnimTarget Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B42C RID: 177196 RVA: 0x005F5ADC File Offset: 0x005F3CDC
+		// Token: 0x0602DB85 RID: 187269 RVA: 0x006406C8 File Offset: 0x0063E8C8
 		public static Offset<IBlendAnimTargetBase> CreateIBlendAnimTargetBase(FlatBufferBuilder builder, EBlendAnimTarget Type = EBlendAnimTarget.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBlendAnimTargetBase.EndIBlendAnimTargetBase(builder);
 		}
 
-		// Token: 0x0602B42D RID: 177197 RVA: 0x005F5AF2 File Offset: 0x005F3CF2
+		// Token: 0x0602DB86 RID: 187270 RVA: 0x006406DE File Offset: 0x0063E8DE
 		public static void StartIBlendAnimTargetBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B42E RID: 177198 RVA: 0x005F5AFB File Offset: 0x005F3CFB
+		// Token: 0x0602DB87 RID: 187271 RVA: 0x006406E7 File Offset: 0x0063E8E7
 		public static void AddType(FlatBufferBuilder builder, EBlendAnimTarget type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B42F RID: 177199 RVA: 0x005F5B06 File Offset: 0x005F3D06
+		// Token: 0x0602DB88 RID: 187272 RVA: 0x006406F2 File Offset: 0x0063E8F2
 		public static Offset<IBlendAnimTargetBase> EndIBlendAnimTargetBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IBlendAnimTargetBase>(builder.EndTable());
 		}
 
-		// Token: 0x0602B430 RID: 177200 RVA: 0x005F5B14 File Offset: 0x005F3D14
+		// Token: 0x0602DB89 RID: 187273 RVA: 0x00640700 File Offset: 0x0063E900
 		public IBlendAnimTargetBaseT UnPack()
 		{
 			IBlendAnimTargetBaseT blendAnimTargetBaseT = new IBlendAnimTargetBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return blendAnimTargetBaseT;
 		}
 
-		// Token: 0x0602B431 RID: 177201 RVA: 0x005F5B2F File Offset: 0x005F3D2F
+		// Token: 0x0602DB8A RID: 187274 RVA: 0x0064071B File Offset: 0x0063E91B
 		public void UnPackTo(IBlendAnimTargetBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602B432 RID: 177202 RVA: 0x005F5B40 File Offset: 0x005F3D40
+		// Token: 0x0602DB8B RID: 187275 RVA: 0x0064072C File Offset: 0x0063E92C
 		public static Offset<IBlendAnimTargetBase> Pack(FlatBufferBuilder builder, IBlendAnimTargetBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBlendAnimTargetBase.CreateIBlendAnimTargetBase(builder, _o.Type);
 		}
 
-		// Token: 0x04010740 RID: 67392
+		// Token: 0x04011554 RID: 70996
 		private Table __p;
 	}
 }
